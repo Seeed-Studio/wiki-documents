@@ -17,7 +17,7 @@ last_update:
   author: Jancee
 ---
 
-云服务是一个重要组件，能够实现来自计算板的处理数据管理，并为用户提供实时操作。本页面介绍了 Seeed 的工业级 SenseCraft 云服务，以及其他针对多样化工业物联网需求定制的云服务应用。通过强大的云基础设施，Seeed 使用户能够安全地存储、分析和利用处理后的数据，促进数据驱动的决策制定，并提高各个领域的运营效率。
+云服务是一个重要组件，能够实现来自计算板的处理数据管理，并为用户提供实时操作。本页面介绍 Seeed 的工业级 SenseCraft 云服务，以及为各种工业物联网需求量身定制的其他云服务应用。通过强大的云基础设施，Seeed 使用户能够安全地存储、分析和利用处理后的数据，促进数据驱动的决策制定，并提高各个领域的运营效率。
 
 ## SenseCraft 云服务
 
@@ -67,11 +67,11 @@ last_update:
             <br/>
             <a href="/cn/sensecraft-data-platform/tutorials/device-management#sensor-node-management" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>SenseCAP 传感器节点</strong> - 查看 EUI、名称、状态、数据类型等。</font></span></a>
             <br/>
-            <a href="/cn/sensecraft-data-platform/tutorials/device-management#general-information" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>通用设备信息</strong> - 电池状态、最近在线记录等。</font></span></a>
+            <a href="/cn/sensecraft-data-platform/tutorials/device-management#general-information" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>设备通用信息</strong> - 电池状态、最近在线记录等。</font></span></a>
             <br/>
             <a href="/cn/sensecraft-data-platform/tutorials/device-management#settings" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>设置</strong> - 调整数据收集频率和其他设置。</font></span></a>
             <br/>
-            <a href="/cn/sensecraft-data-platform/tutorials/device-management#location" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>设备位置</strong></font></span></a> 
+            <a href="/cn/sensecraft-data-platform/tutorials/device-management#location" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>设备位置</strong></font></span></a>
             /
             <a href="/cn/sensecraft-data-platform/tutorials/device-management#bind-device" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>设备绑定</strong></font></span></a>
             /
@@ -81,23 +81,23 @@ last_update:
     </div>
 </div>
 
-### SenseCAP HotSpot APP
+### SenseCAP 热点应用
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP MX Blockchain App</font></div>
-            <p>SenseCAP HotSpot App 用于在手机上管理 LoRaWAN 热点。</p>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP MX 区块链应用</font></div>
+            <p>SenseCAP 热点应用用于手机上管理 LoRaWAN 热点。</p>
             <br/>
             > <a href="/cn/sensecraft-blockchain/sensecraft-hotspot-app/download-app" target="_blank"><span><font color={'FFFFFF'} size={"3"}>下载</font></span></a> / <a href="/cn/sensecraft-blockchain/sensecraft-hotspot-app/hotspot-management" target="_blank"><span><font color={'FFFFFF'} size={"3"}>热点管理</font></span></a> / <a href="/cn/sensecraft-blockchain/sensecraft-hotspot-app/remote-reboot" target="_blank"><span><font color={'FFFFFF'} size={"3"}>远程重启</font></span></a> / <a href="/cn/sensecraft-blockchain/sensecraft-hotspot-app/hotspot-onboarding" target="_blank"><span><font color={'FFFFFF'} size={"3"}>热点入网</font></span></a>
     </div>
 </div>
 
-### SenseCraft APP
+### SenseCraft 应用
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft App</font></div>
-            <p>SenseCraft App 用于在手机上配置、构建和管理传感器，并显示来自 SenseCraft 数据平台的数据。</p>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft 应用</font></div>
+            <p>SenseCraft 应用用于手机上配置、构建和管理传感器，并显示来自 SenseCraft 数据平台的数据。</p>
             <br/>
             > <a href="/cn/sensecraft-app/overview#download" target="_blank"><span><font color={'FFFFFF'} size={"3"}>下载</font></span></a> / <a href="/cn/sensecraft-app/overview#config" target="_blank"><span><font color={'FFFFFF'} size={"3"}>绑定设备</font></span></a> / <a href="/cn/sensecraft-app/overview#account" target="_blank"><span><font color={'FFFFFF'} size={"3"}>账户</font></span></a> / <a href="/cn/sensecraft-app/overview#user" target="_blank"><span><font color={'FFFFFF'} size={"3"}>用户</font></span></a>
     </div>
@@ -108,18 +108,18 @@ last_update:
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft AI</font></div>
-            <p>SenseCraft AI 可以在 SenseCraft 数据平台和 SenseCraft App 上访问。</p>
+            <p>SenseCraft AI 可以在 SenseCraft 数据平台和 SenseCraft 应用上访问。</p>
             <br/>
-            > <a href="/cn/sensecraft-data-platform/applications/ai-advisor" target="_blank"><span><font color={'FFFFFF'} size={"3"}>入门指南</font></span></a> 
+            > <a href="/cn/sensecraft-data-platform/applications/ai-advisor" target="_blank"><span><font color={'FFFFFF'} size={"3"}>入门指南</font></span></a>
             > <a href="/cn/sensecraft-data-platform/applications/planting-advice" target="_blank"><span><font color={'FFFFFF'} size={"3"}>连接 XIAO ESP32C3</font></span></a>
     </div>
 </div>
 
-### SenseCAP Data Platform - API
+### SenseCAP 数据平台 - API
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft Data Platform - API</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft 数据平台 - API</font></div>
             <p>SenseCraft 数据平台 API 支持设备和数据管理。</p>
             <br/>
             > <a href="https://sensecap-docs.seeed.cc/pdf/sensecap_opanapi_document_en.pdf" target="_blank"><span><font color={'FFFFFF'} size={"3"}>下载 PDF</font></span></a> / <a href="/cn/sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api" target="_blank"><span><font color={'FFFFFF'} size={"3"}>API 介绍</font></span></a> / <a href="/cn/sensecraft-fee/sensecraft-data-platform-api-pricing" target="_blank"><span><font color={'FFFFFF'} size={"3"}>API 定价</font></span></a>

@@ -14,8 +14,7 @@ This wiki introduces the various different hardware and interfaces on the reComp
 
 ## Disassemble reComputer Industrial
 
-First of all,it is better to disassemble the outer enclosure to access all the interfaces
-. Unscrew the 4 screws located at the back as follows in order to disassemble reComputer Industrial
+First of all,it is better to disassemble the outer enclosure to access all the interfaces. Unscrew the 4 screws located at the back as follows in order to disassemble reComputer Industrial
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/98.png"/></div>
 
@@ -92,7 +91,7 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/124.jpg"/></div>
 
-You can use CSI cameras in 2 different methods. Follow the below commands according to the camera connector 
+You can use CSI cameras in 2 different methods. Follow the below commands according to the camera connector
 
 - Method 1:
 
@@ -162,7 +161,7 @@ Connect a **3V CR2302 coin cell battery with JST connector** to the 2-pin 1.25mm
 If you have not connected to internet via Ethernet, you can manually set the date/ time here
 :::
 
-- **Step 4:** Open a terminal window, and execute the below command to check the hardware clock time 
+- **Step 4:** Open a terminal window, and execute the below command to check the hardware clock time
 
 ```sh
 sudo hwclock
@@ -178,13 +177,13 @@ You will see the output something like below which is not the correct date/ time
 sudo hwclock --systohc
 ```
 
-- **Step 6:** Remove any Ethernet cables connected to make sure it will not grab the time from the internet and reboot the board 
+- **Step 6:** Remove any Ethernet cables connected to make sure it will not grab the time from the internet and reboot the board
 
 ```sh
 sudo reboot
 ```
 
-- **Step 7:** Check hardware clock time to verify that the date/ time stays the same eventhough the device was powered off 
+- **Step 7:** Check hardware clock time to verify that the date/ time stays the same eventhough the device was powered off
 
 Now we will create a script to always sync the system clock from the hardware clock in each boot.
 
@@ -214,7 +213,7 @@ sudo chmod +x /usr/bin/hwtosys.sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
 
-- **Step 12:** Add the following inside the file 
+- **Step 12:** Add the following inside the file
 
 ```sh
 [Unit]
@@ -246,13 +245,13 @@ sudo systemctl start hwtosys.service
 sudo systemctl status hwtosys.service
 ```
 
-- **Step 16:** Reboot the board and you will the system clock is now in sync with the hardware clock 
+- **Step 16:** Reboot the board and you will the system clock is now in sync with the hardware clock
 
 ## M.2 Key M
 
 Out of the box, reComputer Industrial includes a 128GB SSD connected to the M.2 Key M slot, which is pre-installed with JetPack system.
 
-### Connection Overview 
+### Connection Overview
 
 If you want to remove the included SSD and install a new one, you can follow the steps below. Here we only recommend to use Seeed SSDs with [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html) and [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) storage because we have only tested those SSDs. Further this interface supports PCIe Gen4.0 SSDs.
 
@@ -268,7 +267,7 @@ If you want to remove the included SSD and install a new one, you can follow the
 
 ### Usage
 
-We will explain how to do a simple benchmark on the connected SSD 
+We will explain how to do a simple benchmark on the connected SSD
 
 - **Step 1:** Check the write speed by executing the below command
 
@@ -285,7 +284,7 @@ sudo dd if=/home/nvidia/test of=/dev/null bs=1M count=512
 
 ## mini PCIe
 
-reComputer Industrial comes with a mini PCIe connector that supports 4G and LoRa modules. However, you can only connect either a 4G module or a LoRa module at once. 
+reComputer Industrial comes with a mini PCIe connector that supports 4G and LoRa modules. However, you can only connect either a 4G module or a LoRa module at once.
 
 ### 4G Module Connection Overview
 
@@ -351,7 +350,7 @@ sudo apt install minicom -y
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-- **Step 4:** Press **Ctrl+A** and then press **E** to turn on local echo 
+- **Step 4:** Press **Ctrl+A** and then press **E** to turn on local echo
 
 - **Step 5:** Enter the command **"AT"** and press enter. If you see the response as "OK", the 4G module is working properly
 
@@ -361,7 +360,7 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/23.png"/></div>
 
-- **Step 7:** To test the module, enter the below command to call another phone number 
+- **Step 7:** To test the module, enter the below command to call another phone number
 
 ```sh
 ATD<phone_number>;
@@ -377,7 +376,7 @@ If the entered phone number can receive the call, the module is working as expec
 
 #### EC25 module
 
-If you are using the EC25 module, follow the below steps 
+If you are using the EC25 module, follow the below steps
 
 - **Step 1:** After opening the serial console of the 4G module as explained above (4G Module Usage - Test Dialing section), execute the following command to connect to the internet. Here replace **YOUR_APN** with the APN of your network provider
 
@@ -499,6 +498,7 @@ To stop transmitting, you can press **CTRL + C** on the keyboard.
 Now we will connect to TTN (The Things Network) and use the reComputer Industrial as a TTN LoRaWAN gateway
 
 - **Step 1:** Enter the below to make the packet forwarder ready
+
 ```sh
 cd ..
 cd packet_forwarder
@@ -548,7 +548,6 @@ After running the above command, you will see the below output with last line sh
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/84.jpg"/></div>
 
-
 - **Step 8:** Enter the **Frequency plan** according to the LoRa module you are using. Here we are using US915 verison of the module and therefore have selected **United Stated 902-928 MHz, FSB 2 (used by TTN)**. After that click **Register gateway**
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/85.jpg"/></div>
@@ -561,7 +560,7 @@ The **Gateway ID** has been filled automatically for you. However, you can chang
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/86.jpg"/></div>
 
-- **Step 9:** On the reTerminal Industrial, edit the **global_conf_json** file that we used along with the **lora_pkt_fwd** command. Here you need to change the **gateway_ID**, **server_address**, **serv_port_up** and **serv_port_down** options as follows 
+- **Step 9:** On the reTerminal Industrial, edit the **global_conf_json** file that we used along with the **lora_pkt_fwd** command. Here you need to change the **gateway_ID**, **server_address**, **serv_port_up** and **serv_port_down** options as follows
 
   - gateway_ID: Concentrator EUI from device
   - server_address: Gateway Server Address from TTN
@@ -637,7 +636,7 @@ echo out > direction
 echo 0 > value
 ```
 
-Once the above is executed, LED2 will light up in green as below 
+Once the above is executed, LED2 will light up in green as below
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/117.jpg"/></div>
 
@@ -662,8 +661,7 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/108.png"/></div>
 
-
-- **Step 7:** To test the module, enter the below command to call another phone number 
+- **Step 7:** To test the module, enter the below command to call another phone number
 
 ```sh
 ATD<phone_number>;
@@ -677,7 +675,7 @@ And you will see the below output
 
 Coming soon
 
-## DI/ DO 
+## DI/ DO
 
 reComputer Industrial supports 4 digital input and 4 digital output channels, all of which are optically isolated to effectively protect the mainboard from voltage spikes or other electrical disturbances. There is also a CAN interface on this same connector which we will discuss later in this wiki
 
@@ -962,7 +960,7 @@ sudo ip link set can0 type can bitrate 125000
 sudo ip link set can0 up
 ```
 
-- **Step 5:** If you type **ifconfig** on both devices, you will see the CAN interfaces are enabled 
+- **Step 5:** If you type **ifconfig** on both devices, you will see the CAN interfaces are enabled
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/41.png"/></div>
 
@@ -996,7 +994,7 @@ You can see the DIP switch panel as below:
 Make sure to remove the yellow plastic cover before using the DIP switch panel
 :::
 
-And the below table explains the different modes based on the DIP switch positions 
+And the below table explains the different modes based on the DIP switch positions
 
 <table>
   <thead>
@@ -1093,7 +1091,7 @@ And the below table explains the different modes based on the DIP switch positio
 Out of the box, the default mode of the switches will be set to RS485 with 010 from factory
 :::
 
-The above table takes into account the first three switches of the DIP switch panel. However, the fourth switch is responsible to toggle the slew rate which is directly related to the data rate 
+The above table takes into account the first three switches of the DIP switch panel. However, the fourth switch is responsible to toggle the slew rate which is directly related to the data rate
 
 <table>
   <thead>
@@ -1119,7 +1117,7 @@ The above table takes into account the first three switches of the DIP switch pa
 
 Here we will be using USB to RS232, RS485 and RS422 adapters in order to test the interfaces. So before moving on, you need to install a serial terminal application on your PC. Here we recommend you to install **Putty** which is easy to setup and use.
 
-- **Step 1:** Visit [this website](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and download Putty according to your PC architecture 
+- **Step 1:** Visit [this website](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and download Putty according to your PC architecture
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/60.png"/></div>
 
@@ -1206,7 +1204,7 @@ You can refer to the pin numbering of DB9 connector and the table to make the co
   </tbody>
 </table>
 
-### RS232 Connection Overview 
+### RS232 Connection Overview
 
 Here you can use a USB to RS232 adapter to test the interface. We have used [UGREEN USB to RS232 Adapter](https://www.amazon.com/UGREEN-Converter-Adapter-Chipset-Windows/dp/B00QUZY4UG?th=1) for our testing.
 
@@ -1216,7 +1214,7 @@ Here you can use a USB to RS232 adapter to test the interface. We have used [UGR
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/64.png"/></div>
 
-- **Step 3:** Connect the USB to RS232 adapter to the DB9 connector. Here we have connected the adapter that we have mentioned above 
+- **Step 3:** Connect the USB to RS232 adapter to the DB9 connector. Here we have connected the adapter that we have mentioned above
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/68.jpg"/></div>
 
@@ -1230,7 +1228,7 @@ Here you can use a USB to RS232 adapter to test the interface. We have used [UGR
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/67.jpg"/></div>
 
-- **Step 2:** If you cannot see the adapter, you need to install the driver according to the adapter that you are using. You can generally find these drivers on the manufacturer website. For the adapter that we are using, you can [this page](https://www.ugreen.com/pages/download), search for **20201** as the model number and download the driver accordingly 
+- **Step 2:** If you cannot see the adapter, you need to install the driver according to the adapter that you are using. You can generally find these drivers on the manufacturer website. For the adapter that we are using, you can [this page](https://www.ugreen.com/pages/download), search for **20201** as the model number and download the driver accordingly
 
 - **Step 3:** Open Putty on the PC, select the **Terminal** section set the following
 
@@ -1264,7 +1262,7 @@ sudo cat /dev/ttyTHS0
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/73.png"/></div>
 
-### RS422 Connection Overview 
+### RS422 Connection Overview
 
 Here you can use a USB to RS422 adapter to test the interface. We have used [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) for our testing.
 
@@ -1274,7 +1272,7 @@ Here you can use a USB to RS422 adapter to test the interface. We have used [DTe
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/65.png"/></div>
 
-- **Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above 
+- **Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/74.png"/></div>
 
@@ -1318,7 +1316,7 @@ sudo cat /dev/ttyTHS0
 
 - **Step 6:** On Putty, type anything, press **ENTER** and it will be displayed on the reComputer Industrial terminal window
 
-### RS485 Connection Overview 
+### RS485 Connection Overview
 
 Here you can use a USB to RS422 adapter to test the interface. We have used [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) for our testing.
 
@@ -1328,7 +1326,7 @@ Here you can use a USB to RS422 adapter to test the interface. We have used [DTe
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/66.png"/></div>
 
-- **Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above 
+- **Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/77.png"/></div>
 
@@ -1388,7 +1386,7 @@ cat /dev/ttyTHS0
 There are two Gigabit Ethernet (10/100/1000M) Connectors on the reComputer Industrial and they function in different ways
 
 - The leftmost connector is directy connected to the Jetson module and is able to provide PoE functionality with **PSE 802.3 af, 15W** specification. This means you can connect a PoE IP camera or any other PoE device to this port to provide power to the connected device.
-- The other connector is connected via a PCIe to Ethernet (LAN7430-I/Y9X) module 
+- The other connector is connected via a PCIe to Ethernet (LAN7430-I/Y9X) module
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/36.png"/></div>
 
@@ -1400,15 +1398,15 @@ There are 2 LEDs (green and yellow) on each Ethernet port which indicates the fo
 ## USB
 
 reComputer Industrial comes with 3x USB3.2 connectors onboard and has the following features:
+
 - On the dual stacked USB connectors, the upper and lower USB ports share a current-limiting IC, with a total power supply capacity of 2.1A maximum output current (single can also be 2.1A). If over 2.1A, it will enter the over-current protection state.
 - On the single USB connector next to the dual stacked USB connectors, it has a total power supply capacity of 2.1A maximum output current. If over 2.1A, it will enter the over-current protection state.
-- Orin NX module comes with 3 USB3.2, only one of which is used in reComputer and converted to 3 ways. (USB3.1 TYPE-A x2 - J4 and USB3.1 TYPE-A
-x1 -J3).
+- Orin NX module comes with 3 USB3.2, only one of which is used in reComputer and converted to 3 ways. (USB3.1 TYPE-A x2 - J4 and USB3.1 TYPE-Ax1 -J3).
 - Only supports USB Host, not Device mode
 - Provide 5V 2.1A
 - Hot-swappable
 
-### Usage 
+### Usage
 
 We will explain how to do a simple benchmark on a connected USB flash drive
 
@@ -1431,7 +1429,7 @@ There is a Green color LED located on the board as shown below. By default it is
 
 <div align="center"><img width ="250" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/21.png"/></div>
 
-### Usage 
+### Usage
 
 - **Step 1:** Enter the following commands on a terminal window to access the Green color LED
 
@@ -1464,14 +1462,14 @@ echo 318 > unexport
 
 ## Monitor System Performance
 
-We can use **jetson stats** application to monitor the temperatures of the system components and check other system details such as 
+We can use **jetson stats** application to monitor the temperatures of the system components and check other system details such as
 
 - View CPU, GPU, RAM utilizations
 - Change power modes
-- Set to max clocks 
+- Set to max clocks
 - Check JetPack information
 
-- **Step 1:** On the reComputer Industrial terminal windows, type the following 
+- **Step 1:** On the reComputer Industrial terminal windows, type the following
 
 ```sh
 sudo apt update
@@ -1499,9 +1497,9 @@ Now **jtop** application will open as follows
 
 ## WiFi and Bluetooth
 
-reComputer Industrial does not come with WiFi and Bluetooth out-of-the-box. But there is a reserved section on the PCB so that a WiFi/ Bluetooth module can be soldered to the board. Here we have reserved the space to support a **BL-M8723DU1** module. 
+reComputer Industrial does not come with WiFi and Bluetooth out-of-the-box. But there is a reserved section on the PCB so that a WiFi/ Bluetooth module can be soldered to the board. Here we have reserved the space to support a **BL-M8723DU1** module.
 
-### Connection Overview 
+### Connection Overview
 
 - **Step 1:** If you want to solder the **BL-M8723DU1** module by yourself, you can solder it. But we do not recommend this because if you damage the board in the process, the warranty will be void. What we recommend is to use our professional service to help you solder this module onto the board and you can send an email to order@seeed.cc with your request.
 
@@ -1527,9 +1525,9 @@ reComputer Industrial comes with a TPM interface to connect an external TPM modu
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/114.jpg"/></div>
 
-### Connection Overview 
+### Connection Overview
 
-Connect the TPM module to the TPM connector as shown below 
+Connect the TPM module to the TPM connector as shown below
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/115.jpg"/></div>
 
@@ -1548,9 +1546,9 @@ And you will see the output as follows
 
 ## Max Performance on reComputer Industrial
 
-If you want to enable maximum performance on the reComputer Industrial, please follow the below instructions 
+If you want to enable maximum performance on the reComputer Industrial, please follow the below instructions
 
-- **Step 1:** Enter the below command to enable the maximum power mode 
+- **Step 1:** Enter the below command to enable the maximum power mode
 
 ```sh
 sudo nvpmodel -m 0
@@ -1560,13 +1558,13 @@ sudo nvpmodel -m 0
 
 Here it will ask to type **YES** in order to reboot the board  
 
-- **Step 2:** Once the board is booted, enter the following command to set the CPU clocks to the maximum frequency 
+- **Step 2:** Once the board is booted, enter the following command to set the CPU clocks to the maximum frequency
 
 ```sh
 sudo jetson_clocks
 ```
 
-## GPIO Table 
+## GPIO Table
 
 You can access the GPIO table of the reComputer Industrial to get familiar with all the pin mappings.
 

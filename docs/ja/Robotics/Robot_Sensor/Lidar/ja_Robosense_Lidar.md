@@ -1,5 +1,5 @@
 ---
-description: このWikiは、reComputer J30/40上でROSを使用してRoboSense LiDARをインストールおよび設定するためのステップバイステップガイドを提供します。
+description: このwikiは、ROSを使用してreComputer J30/40にRoboSense LiDARをインストールし、セットアップするためのステップバイステップガイドを提供します。
 title: RoboSense Lidar with ROS
 keywords:
 - Jetson Nano
@@ -10,20 +10,15 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/robosense_lidar
 last_update:
-  date: 05/15/2025
+  date: 05/7/2024
   author: ZhuYaoHui
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
-
 # reComputerでRoboSense LiDARを使用する方法
 
 ## はじめに
-RoboSense LiDARセンサーは、さまざまなアプリケーション向けに高精度な3Dポイントクラウドデータを提供します。このガイドでは、ROS Noeticを実行する[reComputer J30/40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)デバイス上でRS32モデルを設定する方法に焦点を当てています。
+RoboSense LiDARセンサーは、様々なアプリケーション向けに高精度な3Dポイントクラウドデータを提供します。このガイドでは、ROS NoeticをランニングしているreComputer J30/40デバイスでRS32モデルをセットアップすることに焦点を当てています。
 
-このWikiは、[reComputer J30/40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) Jetson上でRoboSense LiDARをインストールおよび設定し、ポイントクラウドデータを可視化するためのステップバイステップガイドを提供します。
+このwikiは、ROSを使用してreComputer J30/40 JetsonにRoboSense LiDARをインストールし、セットアップし、ポイントクラウドデータを可視化するためのステップバイステップガイドを提供します。
 <div align="center">
     <img width={700} 
      src="https://files.seeedstudio.com/wiki/robotics/hardware/robosense/fig1.gif" />
@@ -31,16 +26,16 @@ RoboSense LiDARセンサーは、さまざまなアプリケーション向け�
 
 
 ## 前提条件
-- __[reComputer J30/40シリーズ](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)__: チュートリアルに従って[JetPack 5.x](/ja/reComputer_J4012_Flash_Jetpack)システムおよび[ROS Noetic環境](/ja/installing_ros1)のインストールを完了していること。
+- __[reComputer J30/40シリーズ](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)__: チュートリアルに従って、すでに[JetPack 5.xシステムのインストール](/reComputer_J4012_Flash_Jetpack)と[ROS Noetic環境](/installing_ros1)のインストールが完了していること。
 
-- __RoboSense全シリーズLiDAR__
+- __RoboSense全シリーズlidar__
 
 <div align="center">
     <img width={700} 
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recomputerj4012.jpg" />
 </div>
 
-## 始めましょう
+## はじめに
 
 ### Robosense SDKのインストール
 - **ステップ1:** 基本的な依存関係をインストール
@@ -60,14 +55,14 @@ RoboSense LiDARセンサーは、さまざまなアプリケーション向け�
   git submodule init
   git submodule update
   ```
-- **ステップ4:** **_catkin_ws/src/rslidar_sdk/CMakeLists.txt_**にある**CMakeLists.txt**ファイルを開き、ファイルの上部にある変数**_COMPILE_METHOD_**を**_CATKIN_**に変更します。
+- **ステップ4:** **_catkin_ws/src/rslidar_sdk/CMakeLists.txt_** にある **CMakeLists.txt** ファイルを開き、ファイルの上部にある変数 **_COMPILE_METHOD_** を **_CATKIN_** に変更します。
 
   <div align="center">
       <img width={500} 
       src="https://files.seeedstudio.com/wiki/robotics/hardware/robosense/fig3.png" />
   </div>
 
-- **ステップ4:** **_catkin_ws/src/rslidar_sdk/_**ディレクトリにある既存の**package.xml**ファイルを削除し、**package_ros1.xml**ファイルを**package.xml**にリネームします。
+- **ステップ4:** **_catkin_ws/src/rslidar_sdk/ ディレクトリ_** にある既存の **package.xml** ファイルを削除し、**package_ros1.xml** ファイルを **package.xml** にリネームします。
   <div align="center">
       <img width={500} 
       src="https://files.seeedstudio.com/wiki/robotics/hardware/robosense/fig4.png" />
@@ -82,27 +77,27 @@ RoboSense LiDARセンサーは、さまざまなアプリケーション向け�
   catkin_make
   ```
 ### ハードウェアの接続
-- **ステップ1:** 電源、Robosense RS32 LiDAR、インターフェースボックス、イーサネットケーブルを以下のようにreComputer J4012に接続します。
+- **ステップ1:** 以下の説明に従って、電源、Robosense RS32 LiDAR、インターフェースボックス、およびイーサネットケーブルをreComputer J4012に接続します：
 <div align="center">
     <img width={500} 
     src="https://files.seeedstudio.com/wiki/robotics/hardware/robosense/fig5.gif" />
 </div>
 
-- **ステップ2:** **_/catkin_ws/src/rslidar_sdk/config/config.yaml_**にあるconfig.yamlファイルを開き、**10行目**の**lidar_type**を**RS32**に変更します。ファイルを保存して閉じます。デバイスに応じて正しいLiDARモデルを記入してください。
+- **ステップ2:** **_/catkin_ws/src/rslidar_sdk/config/config.yaml_** にあるconfig.yamlファイルを開き、**10行目** の **lidar_type** を **RS32** に変更します。ファイルを保存して閉じます。お使いのデバイスに応じて正しいLiDARモデルを入力してください。
 <div align="center">
     <img width={400} 
     src="https://files.seeedstudio.com/wiki/robotics/hardware/robosense/fig6.png" />
 </div>
 
-### reComputerのIPアドレスを設定
-Robosense RS32 LiDARのデフォルトIPアドレスは**_192.168.1.200_**、ターゲットホストマシンのIPアドレスは**_192.168.1.102_**、MSOPパケットポート番号は6699、DIFOPパケットポート番号は7788です。ハードウェアを接続した後、reComputerのIPアドレスを手動で設定する必要があります。
+### reComputer IPアドレスの設定
+Robosense RS32 LiDARのデフォルトIPアドレスは **_192.168.1.200_**、ターゲットホストマシンのIPアドレスは **_192.168.1.102_**、MSOPパケットポート番号は6699、DIFOPパケットポート番号は7788です。ハードウェアを接続した後、reComputerのIPアドレスを手動で設定する必要があります。
 
 - **ステップ1:** イーサネット設定を開きます。
   <div align="center">
       <img width={500} 
       src="https://files.seeedstudio.com/wiki/robotics/hardware/robosense/fig7.png" />
   </div>
-- **ステップ2:** IPv4フィールドで手動設定を選択し、IPアドレス**192.168.1.102**とマスク**255.255.255.0**を入力します。
+- **ステップ2:** IPv4フィールドで手動設定を選択し、IPアドレス **192.168.1.102** とマスク **255.255.255.0** を入力します。
   <div align="center">
       <img width={500} 
       src="https://files.seeedstudio.com/wiki/robotics/hardware/robosense/fig8.png" />
@@ -115,9 +110,9 @@ Robosense RS32 LiDARのデフォルトIPアドレスは**_192.168.1.200_**、タ
       <img width={500} 
       src="https://files.seeedstudio.com/wiki/robotics/hardware/robosense/fig9.png" />
   </div>
-  LiDARからデータを受信した場合、接続が成功したことを示します。
+  LiDARからデータを受信できれば、接続が成功したことを示します。
 
-### LiDARコードの実行
+### Lidarコードの実行
   ```bash
   cd ~/catkin_ws/
   source devel/setup.bash
@@ -129,9 +124,9 @@ Robosense RS32 LiDARのデフォルトIPアドレスは**_192.168.1.200_**、タ
   </div>
 
   
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます！お客様の製品体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

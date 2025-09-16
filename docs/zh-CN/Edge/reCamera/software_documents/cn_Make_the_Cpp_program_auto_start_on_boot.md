@@ -1,10 +1,10 @@
 ---
-description: 本文档演示如何设置程序在启动时自动运行。
-title: 使 C++ 程序在启动时自动运行。
+description: 本wiki演示如何设置程序在启动时自动启动。
+title: 使C++程序在启动时自动启动。
 keywords:
   - reCamera
   - C++
-  - 自动启动
+  - Auto-start
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/make_the_cpp_program_auto_start_on_boot
 last_update:
@@ -15,18 +15,21 @@ no_comments: false
 
 ---
 
-# 使 C++ 程序在启动时自动运行
+# 使C++程序在启动时自动启动
 
-本文档演示如何设置程序在启动时自动运行。
+本文档演示如何设置程序在启动时自动启动。
 
-## 方法 1：编写启动脚本
+## 方法1：编写启动脚本
 
-ReCamera 使用轻量级的 **SysVinit 系统**，通过 **/etc/inittab** 进行初始化。当 ReCamera 开机时，它会读取 **inittab** 的内容，并通过以下代码启动 **/etc/init.d/rcS**：
+ReCamera使用轻量级的**SysVinit系统**，并通过**/etc/inittab**执行初始化。当recamera上电时，它读取**inittab**的内容，该文件启动**/etc/init.d/rcS**，代码如下：
+
 ```
 # now run any rc scripts
 ::sysinit:/etc/init.d/rcS
 ```
-**rcS** 文件定义了程序将按顺序启动以 "S??" 开头的脚本：
+
+The **rcS** file defines that the program will sequentially start scripts beginning with "S??":
+
 ```
 for i in /etc/init.d/S??* ;do
 
@@ -34,45 +37,48 @@ for i in /etc/init.d/S??* ;do
      [ ! -f "$i" ] && continue
 
      case "$i" in
-	*.sh)
-	    # Source shell script for speed.
-	    (
-		trap - INT QUIT TSTP
-		set start
-		. $i
-	    )
-	    ;;
-	*)
-	    # No sh extension, so fork subprocess.
-	    $i start
-	    ;;
+ *.sh)
+     # Source shell script for speed.
+     (
+  trap - INT QUIT TSTP
+  set start
+  . $i
+     )
+     ;;
+ *)
+     # No sh extension, so fork subprocess.
+     $i start
+     ;;
     esac
 done
 ```
-在 **/etc/init.d** 目录中，您可以添加程序的自动启动脚本。（脚本以 "S" 开头，后跟数字，数字决定了启动时的执行顺序。）
 
-命名示例：
-- **S10network**: 提早启动（数字越小，启动越早）
-- **S99myprogram**: 延迟启动（数字越大，启动越晚）
+在 **/etc/init.d** 目录中，您可以添加程序的自启动脚本。（以"S"开头后跟数字的脚本，数字决定它们的启动执行顺序。）
 
-自动启动脚本的内容必须包括：
+名称示例：
+
+- **S10network**：早期启动（数字越小 = 执行越早）
+- **S99myprogram**：晚期启动（数字越大 = 执行越晚）
+
+自启动脚本的内容必须包括：
 
 - 变量定义部分
-  - 定义服务运行所需的配置参数。
+  - 它定义服务运行所需的配置参数。
   - 关键变量：
-    - **DAEMON**: 可执行文件的路径
-    - **PIDFILE**: 进程 ID 记录文件的位置
-    - **LD_LIBRARY_PATH**: 自定义库路径
+    - **DAEMON**：可执行文件的路径
+    - **PIDFILE**：进程ID记录文件的位置
+    - **LD_LIBRARY_PATH**：自定义库路径
 - 功能函数部分
-  - 包括四个主要函数：
-    - **start()**: 启动服务
-    - **stop()**: 停止服务
-    - **restart()**: 重启服务
-    - **status()**: 检查服务状态
+  - 它包括四个主要函数：
+    - **start()**：启动服务
+    - **stop()**：停止服务
+    - **restart()**：重启服务
+    - **status()**：检查服务状态
 - 主控制逻辑
-  - 根据输入参数调用相应的函数。
+  - 它根据输入参数调用相应的函数。
 
 您可以参考现有脚本来编写自己的脚本。以下是 **sccma-node** 的示例供参考：
+
 ```
 #!/bin/sh
 
@@ -170,45 +176,53 @@ esac
 
 exit 0
 ```
-然后，为脚本授予可执行权限：
+
+Then, grant executable permissions to your script:
+
 ```
 sudo chmod +x {your script}
 ls -l
 ```
-将程序的可执行文件放置在指定路径，通常为：**/usr/local/bin**：
+
+Place your program's executable file in the specified path, typically: **/usr/local/bin**:
+
 ```
 sudo scp {your program} /usr/local/bin
 sudo chmod +x {your program}
 ls -l
 ```
-测试脚本和程序是否可以正常启动：
+
+Test whether the script and program can start normally:
+
 ```
 sudo /etc/init.d/{your script} start
 cd /usr/local/bin
 sudo {your program}
 ```
-如果成功，重启您的 ReCamera。
+
+如果成功，请重启您的 recamera。
 
 ## 方法 2：使用 opkg 安装 C++ 项目
 
-您还可以在 C++ 项目中预先配置自动启动脚本，然后将其安装到 recamera 上。
+您也可以在 C++ 项目中预配置自动启动脚本，然后将其安装到 recamera 上。
 
 **添加 Control 目录**
 
-在您的项目中，需要包含以下 **control** 脚本：
+在您的项目中，您需要包含以下 **control** 脚本：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Make_the_Cpp_program_auto_start_on_boot/1.png" /></div>
 
 - **preinst**（预安装脚本）
-  - 它在软件包安装之前执行。此脚本的功能包括：
+  - 它在软件包安装之前执行。此脚本的功能是：
     - 检查系统是否满足安装要求
     - 停止将被替换的旧版本服务
-    - 备份现有的配置文件
-    - 验证依赖项是否满足
+    - 备份现有配置文件
+    - 验证依赖关系是否满足
     - 创建必要的系统用户/组
-    - 执行时机：在执行 `dpkg -i` 或 `apt install` 时运行，文件部署之前。
+    - 执行时机：在 dpkg -i 或 apt install 期间运行，在文件部署之前。
 
-示例：
+例如：
+
 ```
 #!/bin/sh
 set -e
@@ -220,17 +234,18 @@ fi
 exit 0
 ```
 
-- **postinst**（后安装脚本）
-  - 它在软件包完全安装后执行。此脚本的功能包括：
+- **postinst**（安装后脚本）
+  - 在软件包完全安装后执行。此脚本的功能是：
     - 启动新安装的服务
-    - 更新系统缓存或数据库（例如 `ldconfig`、`update-rc.d`）
-    - 执行初始配置步骤
+    - 更新系统缓存或数据库（例如，ldconfig、update-rc.d）
+    - 运行初始配置步骤
     - 设置文件权限/所有权
-    - 更新替代系统（例如 `update-alternatives`）
-    - 显示后安装说明
-    - 执行时机：在执行 `dpkg -i` 或 `apt install` 时运行，所有文件部署之后。
+    - 更新替代系统（例如，update-alternatives）
+    - 显示安装后说明
+    - 执行时机：在 dpkg -i 或 apt install 期间运行，在所有文件部署完成后。
 
-示例：
+例如：
+
 ```
 #!/bin/sh
 set -e
@@ -239,18 +254,20 @@ if [ -f /etc/init.d/S93sscma-supervisor ]; then
     /etc/init.d/S93sscma-supervisor start   
 fi
 
+
 exit 0
 ```
 
-- **prerm**（预移除脚本）
-  - 它在软件包卸载之前执行。此脚本的功能包括：
+- **prerm**（预删除脚本）
+  - 在软件包卸载之前执行。此脚本的功能是：
     - 优雅地停止相关服务
     - 检查是否有进程正在使用该软件（防止强制删除）
     - 在删除前备份用户数据
     - 清理临时文件或运行时资源
-    - 执行时机：在执行 `dpkg -r` 或 `apt remove` 时运行，文件删除之前。
+    - 执行时机：在 dpkg -r 或 apt remove 期间，文件被删除之前运行。
 
-示例：
+例如：
+
 ```
 #!/bin/sh
 set -e
@@ -264,17 +281,18 @@ exit 0
 
 **添加 rootfs 目录**
 
-然后将自动启动脚本放入对应的路径：
+然后将自启动脚本放入相应路径：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Make_the_Cpp_program_auto_start_on_boot/2.png" /></div>
 
-将整个项目放入 Linux 交叉编译环境中进行编译和打包。在打包之前，必须检查文件是否为 Linux 兼容的 LF 换行格式。如果发现是 CRLF 格式（Windows 风格），请先进行转换。
+将整个项目放入 Linux 交叉编译环境中进行编译和打包。在打包之前，必须检查文件是否为 Linux 兼容的 LF 行结束符格式。如果发现 CRLF 格式（Windows 风格），请先进行转换。
 
 ```
 dos2unix {your files}
 ```
 
-然后执行以下命令：
+Then,
+
 ```
 cd {your project}
 cmake -B build -DCMAKE_BUILD_TYPE=Release .
@@ -283,28 +301,38 @@ cd build && cpack
 scp {your project.deb} recamera@192.168.42.1:/tmp/
 ```
 
-在 recamera 终端中，使用 opkg 安装：
+In the recamera terminal,use opkg to install:
+
 ```
 sudo opkg install /tmp/{your project.deb}
 ```
 
-如果您的项目之前已安装，请先卸载：
+If your project was previously installed, uninstall it first.
+
 ```
 sudo opkg remove {your program}
 
 sudo opkg install /tmp/{your project.deb}
 ```
 
+有关更多详细信息，请参考我们的 [GitHub 仓库](https://github.com/Seeed-Studio/OSHW-reCamera-Series)。
+
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/Seeed-Studio/OSHW-reCamera-Series" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div><br />
+
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们致力于为您提供多种支持，以确保您使用我们的产品时能够获得尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

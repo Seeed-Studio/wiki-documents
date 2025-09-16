@@ -1,6 +1,6 @@
 ---
 description: This wiki provides tutorial for Damiao series motors.
-title: Damiao Series Motors Getting Start
+title: Damiao Series Motors
 keywords:
 - actuator
 - motor
@@ -133,11 +133,8 @@ A good practice is to set the ​Master ID higher than the ​CAN_ID by ​0x10 
 **1. MIT Torque Control Mode:**
 
 1. In the Set Parameters section, click ​Read Param to display current motor parameters.
-
 2. Set the ​Control Mode to MIT Mode.
-
 3. Verify the configured ​CAN ID.
-
 4. Click ​Write Param to save all settings.
 
 <div align="center">
@@ -146,11 +143,9 @@ A good practice is to set the ​Master ID higher than the ​CAN_ID by ​0x10 
 </div>
 
 5. In the ​Test tab, click the ​**"Enable Motor"** button (Ente).
-
 6. In the ​MIT Control section:
-
-- Set ​Torque (Nm) to ​1.
-- Click ​Update → ​Send.
+    - Set ​Torque (Nm) to ​1.
+    - Click ​Update → ​Send.
 
 The motor will start rotating.
 
@@ -169,50 +164,40 @@ You can also copy the CAN data (in hexadecimal format) and use a serial port deb
 **2. MIT Speed Control Mode:**
 
 1. In the ​Test tab, click the ​**"Enable Motor"** button (Ente).
-
 2. In the ​MIT Control section:
-
-- Set Vel (rad/s) to ​5.
-- Set KD (N*s/r) to ​1.
-- Click ​Update → ​Send.
+    - Set Vel (rad/s) to ​5.
+    - Set KD (N*s/r) to ​1.
+    - Click ​Update → ​Send.
 
 <div align="center">
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/9.png" />
 </div>
 
-The motor will start rotating.
-You can also copy the CAN data (in hexadecimal format) and use a serial port debugging tool to drive the motor.
+The motor will start rotating. You can also copy the CAN data (in hexadecimal format) and use a serial port debugging tool to drive the motor.
 
 **3. MIT Position Control Mode:**
 
 1. In the ​Test tab, click the ​**"Enable Motor"** button (Ente).
-
 2. You can use ​**"SaveZero"** to set the current position as the zero point.
-
 3. In the ​MIT Control section:
-
-- Set Pos (rad) to 3.14.
-- Set KP (N/r) to ​2.
-- Set KD (N*s/r) to ​1.
-- Click ​Update → ​Send.
+    - Set Pos (rad) to 3.14.
+    - Set KP (N/r) to ​2.
+    - Set KD (N*s/r) to ​1.
+    - Click ​Update → ​Send.
 
 <div align="center">
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/10.png" />
 </div>
 
-The motor will start rotating.
-You can also copy the CAN data (in hexadecimal format) and use a serial port debugging tool to drive the motor.
+The motor will start rotating. You can also copy the CAN data (in hexadecimal format) and use a serial port debugging tool to drive the motor.
 
 ### Speed Control Mode
 
 1. In the Set Parameters section, click ​Read Param to display current motor parameters.
-
 2. Set the ​Control Mode to Vel Mode.
-
 3. Verify the configured ​CAN ID.
-
 4. Click ​Write Param to save all settings.
 
 <div align="center">
@@ -221,28 +206,22 @@ You can also copy the CAN data (in hexadecimal format) and use a serial port deb
 </div>
 
 5. In the ​Test tab, click the ​**"Enable Motor"** button (Ente).
-
 6. In the Vel Control section:
-
-- Set Vel (rad/s) to 5.
-- Click ​Update → ​Send.
+    - Set Vel (rad/s) to 5.
+    - Click ​Update → ​Send.
 
 <div align="center">
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/12.png" />
 </div>
 
-The motor will start rotating.
-You can also copy the CAN data (in hexadecimal format) and use a serial port debugging tool to drive the motor.
+The motor will start rotating. You can also copy the CAN data (in hexadecimal format) and use a serial port debugging tool to drive the motor.
 
 ### Position Control Mode
 
 1. In the Set Parameters section, click ​Read Param to display current motor parameters.
-
 2. Set the ​Control Mode to Pos Mode.
-
 3. Verify the configured ​CAN ID.
-
 4. Click ​Write Param to save all settings.
 
 <div align="center">
@@ -251,22 +230,19 @@ You can also copy the CAN data (in hexadecimal format) and use a serial port deb
 </div>
 
 5. In the ​Test tab, click the ​**"Enable Motor"** button (Ente).
-
 6. In the Pos Control section:
-
-- Set Pos to 3.14.
-- Set Vel (rad/s) to 5.
-- Click ​Update → ​Send.
+    - Set Pos to 3.14.
+    - Set Vel (rad/s) to 5.
+    - Click ​Update → ​Send.
 
 <div align="center">
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/14.png" />
 </div>
 
-The motor will start rotating.
-You can also copy the CAN data (in hexadecimal format) and use a serial port debugging tool to drive the motor.
+The motor will start rotating. You can also copy the CAN data (in hexadecimal format) and use a serial port debugging tool to drive the motor.
 
-## Control the Motor Using the [​reComputer Mini Jetson Orin.](/recomputer_jetson_mini_getting_started)
+## Control the Motor Using the [​reComputer Mini Jetson Orin](/recomputer_jetson_mini_getting_started)
 
 Currently, the most common CAN communication interfaces for motors in the market use **XT30 (2+2)** and **JST connectors**. Our **reComputer Mini Jetson Orin** and **reComputer Robotics** device is equipped with **dual XT30 (2+2) ports** and **JST-based CAN interfaces**, providing seamless compatibility.  
 
@@ -372,6 +348,7 @@ make
 #### Usage  
 
 1. **Check CAN Devices**  
+
 Open a terminal and run:  
 
 ```shell
@@ -379,6 +356,7 @@ ip -brief link | grep can
 ```  
 
 2. **Run the Program**  
+
 In the `build` folder, execute:  
 
 ```shell
@@ -517,7 +495,6 @@ class MotorControl:
 
         #print("can is open")
         
-
 
     def controlMIT(self, DM_Motor, kp: float, kd: float, q: float, dq: float, tau: float):
         """
@@ -730,9 +707,6 @@ class MotorControl:
             # 飯田：Debug print
             print(hex(CANID),hex(CMD))
             print(hex(data_recv.data[0]),hex(data_recv.data[1]),hex(data_recv.data[2]),hex(data_recv.data[3]),hex(data_recv.data[4]),hex(data_recv.data[5]),hex(data_recv.data[6]),hex(data_recv.data[7]))
-    
-
-
 
     def __process_packet(self, data, CANID, CMD):
         if CMD == 0x11:
@@ -823,11 +797,6 @@ class MotorControl:
 
         msg =can.Message(is_extended_id=False,arbitration_id=motor_id,data=data,is_remote_frame = False)
         self.canbus.send(msg)
-
-
-
-
-
 
     def __read_RID_param(self, Motor, RID):             # 飯田：修正の必要あり?
         can_id_l = Motor.SlaveID & 0xff #id low 8 bits

@@ -1,6 +1,6 @@
 ---
 description: This wiki provides the assembly and debugging tutorial for the SO ARM100 and realizes data collection and training within the latest version of Lerobot framework. 
-title: How to use the SO10xArm robotic arm in the latest version of Lerobot
+title: SoArm in Lerobot
 keywords:
 - Lerobot
 - Huggingface

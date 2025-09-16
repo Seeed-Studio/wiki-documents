@@ -27,7 +27,7 @@ import JetsonIOStepper from '@site/src/components/robotics/JetsonIOStepper'
 
 export const steps = [
   {
-    title: 'Jetson 24ピン CSI コネクタを設定',
+    title: 'Jetson 24pin CSI コネクタを設定',
     src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Configure_24pin_CSI.webp",
   },
   {
@@ -56,7 +56,8 @@ export const steps = [
 
 <ProductBanner 
   imageUrl="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-101090101-3mp-gmsl2-camera-module-190-degree.jpg" 
-  linkUrl="https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html" 
+  linkUrl="https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html"
+  lang="ja"
 />
 
 様々な解像度、転送速度などをカバーする異なるGMSL2カメラを提供しています。これらのカメラは多くの分野のアプリケーションで使用できます。例えば：
@@ -72,21 +73,21 @@ export const steps = [
 ## 仕様
 
 
-<SensingGMSLCamTable />
+<SensingGMSLCamTable lang="ja" />
 
 
-## 入門ガイド
+## はじめに
 
 デモンストレーションにはreComputer Robotics J4012を使用します。必要なものは以下の通りです：
 
-+ SENSING GMSL2 カメラ
-+ [Mini-Fakra ケーブル](https://www.seeedstudio.com/Mini-fakra-Coaxial-Cable-4-in-1-0-5m-Female-to-Female-p-6484.html)
-+ [reComputer Robotics GMSL2 拡張ボード](https://www.seeedstudio.com/reComputer-Robotics-GMSL-board-p-6511.html)
++ SENSING GMSL2カメラ
++ [Mini-Fakraケーブル](https://www.seeedstudio.com/Mini-fakra-Coaxial-Cable-4-in-1-0-5m-Female-to-Female-p-6484.html)
++ [reComputer Robotics GMSL2拡張ボード](https://www.seeedstudio.com/reComputer-Robotics-GMSL-board-p-6511.html)
 
 
 ### デバイスのセットアップ
 
-Mini Fakra ケーブルをカメラに接続します。reComputer Robotics J30/J40には4つのチャンネルがあり、`SG3S-ISX031C-GMSL2-F`カメラを使用して**'1'**チャンネル（シルクスクリーン文字**'B'**）に接続しました。
+Mini Fakraケーブルをカメラに接続します。reComputer Robotics J30/J40には4つのチャンネルがあり、`SG3S-ISX031C-GMSL2-F`カメラを使用して**'1'**チャンネル（シルクスクリーン文字**'B'**）に接続しました。
 
 <Flex justify="center" style={{ 
   margin: '24px 0',
@@ -98,7 +99,7 @@ Mini Fakra ケーブルをカメラに接続します。reComputer Robotics J30/
   src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/Sensing_Camera_Connection.webp" />
 </Flex>
 
-始める前に、後の設定で使用するため4つのチャンネルについて理解しておきましょう。
+始める前に、後の設定で使用するため、4つのチャンネルについて理解しておきましょう。
 
 <Flex justify="center" style={{ 
   margin: '24px 0',
@@ -110,28 +111,28 @@ Mini Fakra ケーブルをカメラに接続します。reComputer Robotics J30/
   src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/reComputer_Robotics_Top_Panel.webp" />
 </Flex>
 
-これらの4つのチャンネルはデバイス上で**'A'**、**'B'**、**'C'**、**'D'**とラベル付けされており、
-お客様にはアルファベット順でカメラを接続することをお勧めします。
-その場合、ビデオデバイスはJetson Linux上で対応する**'/dev/video0'**、**'/dev/video1'**、**'/dev/video2'**、**'/dev/video3'**としてマップされます。
+これらの4つのチャンネルはデバイス上で**'A'**、**'B'**、**'C'**、**'D'**とラベル付けされています。
+お客様には指定されたアルファベット順でカメラを接続することをお勧めします。
+この場合、ビデオデバイスはJetson Linux上でそれぞれ**'/dev/video0'**、**'/dev/video1'**、**'/dev/video2'**、**'/dev/video3'**としてマッピングされます。
 
 ただし、カメラが1台のみ接続されている場合は、'video0'のみが表示されます。
 
-次に、Jetson IOでデバイスツリーオーバーレイを設定してデバイスを有効にします（設定して再起動するまで**'/dev'**フォルダ下にビデオノードは表示されません）。
+次に、Jetson IOを使用してデバイスツリーオーバーレイを設定し、デバイスを有効にします（設定して再起動するまで、**'/dev'**フォルダの下にビデオノードは表示されません）。
 
-### Jetson IO の設定
+### Jetson IOの設定
 
-以下のコマンドでJetsonIOを起動します：
+以下のコマンドでJetsonIOを起動します 
 
 ``` sh
 sudo /opt/nvidia/jetson-io/jetson-io.py
 ```
 
-以下の設定を段階的に実行してください：
+以下の設定に従ってステップバイステップで進めてください
 
-<JetsonIOStepper steps={steps}/>
+<JetsonIOStepper steps={steps} lang="ja" />
 
 :::note
-上記の手順で、6Gbpsカメラを使用している場合は、ステップ3で**'Seeed GMSL 1X4 6G'**オーバーレイを選択してください。6Gbpsカメラは以下の通りです：
+上記のステップで、6Gbpsカメラを使用している場合は、ステップ3で**'Seeed GMSL 1X4 6G'**オーバーレイを選択してください。6Gbpsカメラは以下の通りです：
 
 + SG3S-ISX031C-GMSL2-H
 + SG8S-AR0820C-5300-G2A-H
@@ -142,21 +143,21 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 
 ### ビデオ情報の設定
 
-`v4l-utils`をインストールしていない場合：
+`v4l-utils`をまだインストールしていない場合
 
 ``` sh
 sudo apt-get update 
 sudo apt-get install v4l-utils -y
 ```
 
-+ フレーム同期
++ Frame Synchronization
 
 ``` sh
 v4l2-ctl -d /dev/video0 --set-ctrl=trig_mode=1
 ```
 
 :::note
-**'trig_mode=0'**に切り替えてフレーム同期を無効にできます。または複数のカメラが接続されている場合は**'trig_mode=1'**を使用してフレーム同期を有効にします。
+**'trig_mode=0'** を切り替えてフレーム同期を無効にできます。または、複数のカメラが接続されている場合は **'trig_mode=1'** を使用してフレーム同期を有効にします。
 :::
 
 
@@ -167,14 +168,13 @@ v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0  -d /dev/vid
 ```
 
 :::note
-使用しているカメラによって、ここで事前定義された異なる'sensor_mode'がある場合があります。主に：
+使用しているカメラによって、ここで事前定義されている異なる'sensor_mode'がある可能性があります。主に：
 
-|センサーモード|フレームタイプ|
+|Sensor Mode|Frame Type|
 |   :----:  | :----:   |
 |0|YUYV8_1X16/1920x1536|
 |1|YUYV8_1X16/1920x1080|
 |2|YUYV8_1X16/3840x2160|
-
 
 
 :::
@@ -188,7 +188,7 @@ v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0  -d /dev/vid
 
 ### Gst Launch
 
-`gst-launch-1.0`でビューアーを起動します：
+`gst-launch-1.0`でビューアーを起動する
 
 ``` sh
 gst-launch-1.0 v4l2src device=/dev/video0 ! \
@@ -218,6 +218,6 @@ gst-launch-1.0 v4l2src device=/dev/video0 ! \
 + [SG2-IMX390C-5200-G2A-H](https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/datasheet/SG2-IMX390C-5200-G2A-H_Datasheet.pdf)
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！最新ニュースとサポートを受けるため、以下のプラットフォームでフォローしてください。
+弊社製品をお選びいただき、ありがとうございます！最新ニュースとサポートを受けるために、以下のプラットフォームで私たちをフォローしてください。
 
-<RoboticsFooter />
+<RoboticsFooter lang="ja" />

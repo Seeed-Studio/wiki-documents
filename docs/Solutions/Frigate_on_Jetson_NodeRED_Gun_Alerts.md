@@ -612,7 +612,7 @@ http://<JETSON_IP>:1880/
 
 > ⚠️ **Reminder:** Be sure to modify to match your own machine’s `JETSON_IP`.  
 
-## 🔵 3.4 Running Effect
+### 🔵 3.4 Running Effect
 
 Access the following URL in your browser:
 
@@ -622,9 +622,9 @@ http://JETSON_IP:1880/dashboard/frigate
 
 <div style={{textAlign:'center'}}><img  alt="Configuration" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/frigateevents.png"/></div>
 
-# 🟣 4. Function Description
+## 🟣 4. Function Description
 
-## 4.1 Real-time Gun Detection
+### 4.1 Real-time Gun Detection
 
 - Frigate detects guns in camera footage based on the YOLOv4-tiny-288 model  
 - Detection threshold: `0.3`  
@@ -635,7 +635,7 @@ http://JETSON_IP:1880/dashboard/frigate
 
 ---
 
-## 4.2 Alerts and Notifications
+### 4.2 Alerts and Notifications
 
 - Display the latest captured frame  
 - Historical alert records (including time, camera, screenshot)  
@@ -644,13 +644,13 @@ http://JETSON_IP:1880/dashboard/frigate
 
 ---
 
-## 4.3 History Records and Counting
+### 4.3 History Records and Counting
 
 - Record the latest 10 alert events  
 - Accumulative counting of alerts  
 - One-click data clearing  
 
-# 🟤 5. Application Scenarios
+## 🟤 5. Application Scenarios
 
 - Campus security area gun threat monitoring  
 - Protection in shopping malls / subways / transportation hubs  

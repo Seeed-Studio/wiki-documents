@@ -13,29 +13,36 @@ last_update:
   author: ShuishengPeng
 ---
 
-## 简介
-我们发现一些用户在使用 reComputer R1000 V1.0 的 Modbus 功能时，遇到了 DE 引脚控制的问题。为了提升用户体验，我们对引脚分配进行了修改，使 RS485 更加易用，并对整体产品进行了部分调整。
+## 介绍
+我们发现一些用户在使用 reComputer R1000 V1.0 的 modbus 功能时，在 DE 引脚控制方面遇到了问题。为了提供更好的用户体验，我们修改了引脚分配，使 RS485 更加易用。同时对整体产品进行了一些调整。
+
 
 ## 变更说明
-1. 增加了一个新的天线孔。如以下图所示，现在共有 3 个天线孔。接口丝印也进行了相应调整。
+1 新增一个天线孔。如下图所示。现在有 3 个天线孔。接口丝印也相应进行了调整。
 
 <div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/PCN/before_after.png" /></div>
 
-2. PCBA 版本从 V1.0 更改为 V1.1。
 
-3. DSI 接口调整：从 DSI0 修改为 DSI1。
+2 PCBA 版本从 V1.0 更改为 V1.1。
 
-4. 删除了内部扬声器连接器。
+
+3 DSI 接口调整：从 DSI0 修改为 DSI1。
+
+
+4 删除内置扬声器连接器。
+
 
 <div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/PCN/delete.png" /></div>
 
-5. 所有三个 RS485 组的 DE 收发方向控制引脚更改为支持 RTS 功能的引脚。
 
-6. 其他一些引脚调整。请参考 [reComputer R1000 v1.1 引脚分配](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_v1_1_Pin_Assignment.xlsx)。
+5 所有三个 RS485 组的 DE 收发器方向控制引脚都更改为支持 RTS 功能的引脚。
+
+
+6 其他一些引脚调整。请参考 [reComputer R1000 v1.1 引脚分配](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_v1_1_Pin_Assignment.xlsx)。
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们致力于为您提供多种支持，以确保您使用我们的产品时体验顺畅。我们提供多个沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

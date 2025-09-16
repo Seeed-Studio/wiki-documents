@@ -1,7 +1,7 @@
 ---
 title: Seeed Studio XIAO nRF54L15 Sense BLE使用方法
 description: |
-  XIAO nRF54L15 SenseでBluetooth Low Energy (BLE)を使用するための完全ガイド。アドバタイジング、接続、GATTサービス、電力最適化を含む。
+  XIAO nRF54L15 SenseでBluetooth Low Energy（BLE）を使用するための完全ガイド。アドバタイジング、接続、GATTサービス、電力最適化を含みます。
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.webp
 slug: /ja/xiao_nrf54l15_sense_bluetooth_usage
 keywords:
@@ -14,13 +14,22 @@ last_update:
   date: 7/2/2025
   author: Jason
 sidebar_position: 3
---- 
+---
+
+以下のサンプルコードはPlatformIO用に設計されていますが、nRF Connect SDKとも互換性があります。
+
+:::tip
+VS Codeベースで、nRF Connect SDKで以下のケースを使用したい場合は、提供されたリンクを参照して、app.overlayファイルを追加し、prj.confの内容を変更してください。
+
+[XIAO nRF54L15 オーバーレイファイルの追加とconfファイルの変更](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/)。
+
+:::
 
 ## BLE Observer
 
-Bluetooth Low Energy Observerロール機能を実演するシンプルなアプリケーションです。このアプリケーションは定期的に近くのデバイスをスキャンします。デバイスが見つかった場合、デバイスのアドレス、RSSI値、アドバタイジングタイプ、アドバタイジングデータ長をコンソールに出力します。
+Bluetooth Low Energy Observerロール機能を実演するシンプルなアプリケーションです。アプリケーションは定期的に近くのデバイスをスキャンします。デバイスが見つかった場合、デバイスのアドレス、RSSI値、アドバタイジングタイプ、アドバタイジングデータ長をコンソールに出力します。
 
-使用するBluetooth Low Energyコントローラーが拡張スキャンをサポートしている場合、プロジェクト設定ファイル`prj.conf`で`CONFIG_BT_EXT_ADV`を有効にできます。詳細についてはプロジェクト設定ファイルを参照してください。
+使用するBluetooth Low Energy ControllerがExtended Scanningをサポートしている場合、プロジェクト設定ファイル`prj.conf`で`CONFIG_BT_EXT_ADV`を有効にできます。詳細については、プロジェクト設定ファイルを参照してください。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/obersever.png" alt="XIAO nRF54L15 Observer" style={{width:900, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
@@ -29,7 +38,7 @@ Bluetooth Low Energy Observerロール機能を実演するシンプルなアプ
 
 ### XIAO nRF54L15ボードの追加
 
-XIAO nRF54L15(Sense)ボードをNCS（nRF Connect SDK）に追加するには、Seeed Studio Wikiの["Getting Started"](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/)ガイドを参照してください。このガイドでは、プロセスの詳細な手順を提供します。
+XIAO nRF54L15（Sense）ボードをNCS（nRF Connect SDK）に追加するには、Seeed Studio Wikiの[「Getting Started」](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_getting_started/)ガイドを参照してください。このガイドでは、プロセスの詳細な手順を提供します。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -74,11 +83,11 @@ int main(void)
 
 :::note
 
-- `main.c:` Bluetoothサブシステムを初期化し、オブザーバーデモを開始します。
+- `main.c:` Bluetoothサブシステムを初期化し、observerデモを開始します。
 
 - `bt_enable(NULL):` Bluetoothサブシステムを初期化します。
 
-- `observer_start():` オブザーバーを開始する関数を呼び出します。
+- `observer_start():` observerを開始する関数を呼び出します。
 
 - `printk("Exiting %s thread.\n", __func__):` main関数が終了する際にメッセージを出力します。
 
@@ -196,23 +205,23 @@ int observer_start(void)
 
 :::note
 
-- `device_found:`スキャン中にデバイスが見つかった際に呼び出されるコールバック関数。デバイスのアドレス、RSSI、タイプ、ADデータ長を出力します。
+- `device_found:`スキャン中にデバイスが見つかった際に呼び出されるコールバック関数です。デバイスのアドレス、RSSI、タイプ、ADデータ長を出力します。
 
-- `scan_recv:` 拡張アドバタイジング用のコールバック関数で、受信したアドバタイズメントパケットの詳細情報（デバイスアドレス、Tx電力、RSSI、アドバタイズメントデータを含む）を出力します。
+- `scan_recv:` 拡張アドバタイジング用のコールバック関数で、受信したアドバタイジングパケットの詳細情報（デバイスアドレス、Tx電力、RSSI、アドバタイジングデータ）を出力します。
 
-- `data_cb:`bt_data_parseによって使用されるコールバック関数で、アドバタイズメントデータからデバイス名を抽出します。短縮名と完全名の両方を処理します。
+- `data_cb:`bt_data_parseで使用されるコールバック関数で、アドバタイジングデータからデバイス名を抽出します。短縮名と完全名の両方を処理します。
 
-- `phy2str:` PHY（物理層）値を人間が読める文字列（例："LE 1M"、"LE 2M"など）に変換するヘルパー関数。
+- `phy2str:` PHY（物理層）値を人間が読める文字列（例：「LE 1M」、「LE 2M」など）に変換するヘルパー関数です。
 
-- `observer_start:`オブザーバーを開始するメイン関数。スキャンパラメータを定義し、スキャンプロセスを開始します。
+- `observer_start:`observerを開始するメイン関数です。スキャンパラメータを定義し、スキャンプロセスを開始します。
 
-- `bt_le_scan_start:` 指定されたパラメータとデバイスが見つかった際のコールバック関数でBLEスキャンを開始する関数。
+- `bt_le_scan_start:` 指定されたパラメータとデバイスが見つかった際のコールバック関数でBLEスキャンを開始する関数です。
 
 :::
 
-## BLEアドバタイジング
+## BLE Advertising
 
-このBluetoothアドバタイジングチュートリアルは、Nordic Connect SDKで動作するように修正された公式[サンプル](https://academy.nordicsemi.com/courses/bluetooth-low-energy-fundamentals/lessons/lesson-2-bluetooth-le-advertising/topic/blefund-lesson-2-exercise-1/)コードに基づいています。私たちの開発ボードと公式ドキュメントを組み合わせることで、より多くのBluetooth[アプリケーション](https://academy.nordicsemi.com/courses/bluetooth-low-energy-fundamentals/)に取り組むことができます。
+このBluetoothアドバタイジングチュートリアルは、Nordic Connect SDKで動作するように変更された公式[サンプル](https://academy.nordicsemi.com/courses/bluetooth-low-energy-fundamentals/lessons/lesson-2-bluetooth-le-advertising/topic/blefund-lesson-2-exercise-1/)コードに基づいています。開発ボードと公式ドキュメントを組み合わせることで、より多くのBluetooth[アプリケーション](https://academy.nordicsemi.com/courses/bluetooth-low-energy-fundamentals/)に取り組むことができます。
 
 スマートフォンがXIAO nRF54L15に接続されていない間、オンボードインジケータは常時点灯したままです。スマートフォンが正常に接続されると、インジケータが点滅を開始し、接続が確立されたことを示します。
 
@@ -221,17 +230,16 @@ int observer_start(void)
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>携帯電話接続 XIAO nRF54L15</em></p>
 </div>
 
-### BLEアドバタイジングソフトウェアのインストール
+### BLE Advertisingソフトウェアのインストール
 
 この例では、携帯電話に公式Bluetoothテスト[アプリ](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-mobile)であるnRF Connectをダウンロードする必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrfconnect_app.png" style={{width:600, height:'auto'}}/></div>
-
-XIAO nRF54L15 Senseボードにプログラムをフラッシュしたら、nRF Connectアプリのメインページを開いて操作できます。
+XIAO nRF54L15 Senseボードにプログラムをフラッシュした後、nRF Connectアプリのメインページを開いて操作できます。
 
 - ステップ1. nRF Connectアプリで、右上角のスキャンボタンをクリックしてBluetoothデバイスのスキャンを開始します。
 
-- ステップ2. 次に、「Name」フィールドにXIAO nRF54L15 Senseデバイスの名前を入力します。これにより、デバイスをフィルタリングして素早く見つけることができます。
+- ステップ2. 次に、XIAO nRF54L15 Senseデバイスの名前を「Name」フィールドに入力します。これにより、デバイスをフィルタリングして素早く見つけることができます。
 
 - ステップ3. スキャン結果エリアで、XIAO nRF54L15 Senseデバイスを見つけて、その横にある「Connect」ボタンをクリックします。
 
@@ -246,17 +254,17 @@ XIAO nRF54L15 Senseボードにプログラムをフラッシュしたら、nRF 
  </table>
 </div>
 
-### XIAO nRF54L15 ボードの追加
+### XIAO nRF54L15ボードの追加
 
-XIAO nRF54L15(Sense) ボードを NCS (nRF Connect SDK) に追加するには、Seeed Studio Wiki の ["Getting Started"](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/) ガイドを参照してください。このガイドでは、プロセスの詳細な手順を提供します。
+XIAO nRF54L15(Sense)ボードをNCS（nRF Connect SDK）に追加するには、Seeed Studio Wikiの[「Getting Started」](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_getting_started/)ガイドを参照してください。このガイドでは、プロセスの詳細な手順を提供します。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
-### BLE アドバタイジングコード
+### BLEアドバタイジングコード
 
 ```c
 #include <zephyr/kernel.h>
@@ -368,43 +376,43 @@ int main(void)
 
 :::note
 
-- `ad:` 広告データを定義します。一般的な発見可能フラグとBR/EDRサポートなしフラグ、および完全なデバイス名を含みます。
+- `ad:` アドバタイジングデータを定義し、一般的な発見可能フラグとBR/EDRサポートなしフラグ、および完全なデバイス名を含みます。
 
-- `sd:` スキャン応答データを定義します。URI（Uniform Resource Identifier）を含みます。
+- `sd:` スキャン応答データを定義し、URI（Uniform Resource Identifier）を含みます。
 
 - `connected:` このコールバック関数は、Bluetoothデバイスが正常に接続されたときに実行されます。device_connectedフラグをtrueに設定します。
 
-- `disconnected:` このコールバック関数は、Bluetoothデバイスが切断されたときに実行されます。device_connectedフラグをfalseに設定し、新しい接続を許可するために広告を再開します。
+- `disconnected:` このコールバック関数は、Bluetoothデバイスが切断されたときに実行されます。device_connectedフラグをfalseに設定し、新しい接続を許可するためにアドバタイジングを再開します。
 
 - `conn_callbacks:` 接続コールバックを定義する構造体で、connectedおよびdisconnected関数をそれぞれのイベントに割り当てます。
 
-- `main:` プログラムのメイン関数です。
+- `main:` プログラムのメイン関数。
 
 - `gpio_is_ready_dt:` LED GPIOデバイスが準備完了かどうかをチェックします。
 
-- `gpio_pin_configure_dt:` LEDピンを出力として設定し、初期状態は非アクティブに設定されます。
+- `gpio_pin_configure_dt:` LEDピンを出力として設定し、初期状態を非アクティブに設定します。
 
 - `bt_enable(NULL):` Bluetoothサブシステムを初期化します。
 
-- `bt_le_adv_start:` Bluetooth広告を開始します。このコードはadおよびsdデータを使用して接続可能な広告を開始します。
+- `bt_le_adv_start:` Bluetoothアドバタイジングを開始します。このコードは、adおよびsdデータを使用して接続可能なアドバタイジングを開始します。
 
-- `while (1):`接続状態に基づいてLEDの動作を制御する無限ループです。
+- `while (1):` 接続状態に基づいてLEDの動作を制御する無限ループ。
 
-- `gpio_pin_toggle_dt:`LEDのオン/オフを切り替えます。
+- `gpio_pin_toggle_dt:` LEDのオン/オフを切り替えます。
 
-- `k_sleep:`指定された時間だけスレッドをスリープ状態にします。
+- `k_sleep:` 指定された時間だけスレッドをスリープ状態にします。
 
-- `device_connected:`接続状態を追跡するブール値フラグです。デバイスが接続されているときはLEDが500ms間隔で点滅します。デバイスが接続されていないときは、LEDがオフになり、プログラムは1000msスリープします。
+- `device_connected:` 接続状態を追跡するブール値フラグ。デバイスが接続されているときはLEDが500ms間隔で点滅します。デバイスが接続されていないときは、LEDがオフになり、プログラムは1000msスリープします。
 
-- `LOG_INF, LOG_ERR:`情報とエラーをログ出力する関数です。
+- `LOG_INF, LOG_ERR:` 情報とエラーをログ出力する関数。
 
 :::
 
 ## BLE Central/GATT Write
 
-これらのコードファイルは、Bluetooth Low Energy（BLE）Centralデバイスを実装しています。Centralは近くのBluetoothペリフェラルを継続的にスキャンし、特定のデバイス（RSSI が -50 より大きい）を見つけると自動的に接続を確立します。接続が確立されると、データ転送効率を最適化するためにGATT（Generic Attribute Profile）MTU（Maximum Transmission Unit）交換を実行します。
+これらのコードファイルは、Bluetooth Low Energy（BLE）Centralデバイスを実装しています。Centralは継続的に近くのBluetoothペリフェラルをスキャンし、特定のデバイス（RSSIが-50より大きい）を見つけると自動的に接続を確立します。接続が確立されると、データ転送効率を最適化するためにGATT（Generic Attribute Profile）MTU（Maximum Transmission Unit）交換を実行します。
 
-プログラムの中核機能は、接続されたペリフェラルに対してGATT Write Without Responseコマンドを継続的に送信することです。これは、例えばBluetoothコネクションのデータスループットや書き込み速度を測定するなど、パフォーマンステストによく使用されます。
+プログラムの中核機能は、接続されたペリフェラルに対してGATT Write Without Responseコマンドを継続的に送信することです。これは、Bluetooth接続のデータスループットや書き込み速度を測定するなど、パフォーマンステストによく使用されます。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/gatt.png" alt="XIAO nRF54L15 gatt" style={{width:900, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
@@ -413,11 +421,11 @@ int main(void)
 
 ### XIAO nRF54L15ボードの追加
 
-XIAO nRF54L15(Sense)ボードをNCS（nRF Connect SDK）に追加するには、Seeed Studio Wikiの["Getting Started"](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/)ガイドを参照してください。このガイドでは、プロセスの詳細な手順を提供します。
+XIAO nRF54L15(Sense)ボードをNCS（nRF Connect SDK）に追加するには、Seeed Studio Wikiの[「Getting Started」](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_getting_started/)ガイドを参照してください。このガイドでは、プロセスの詳細な手順を提供します。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -425,10 +433,9 @@ XIAO nRF54L15(Sense)ボードをNCS（nRF Connect SDK）に追加するには、
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/bluetooth/central_gatt_write" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
-
 **Main.c**
 
 ```cpp
@@ -588,7 +595,7 @@ uint32_t central_gatt_write(uint32_t count)
 
 :::note
 
-- `device_found:` スキャン中に新しいデバイスが見つかったときにトリガーされるコールバック関数。見つかったデバイスの情報を出力し、接続可能で近距離にある（RSSIが-50より大きい）デバイスへの接続を試行します。接続を作成する前にスキャンプロセスを停止します。
+- `device_found:` スキャン中に新しいデバイスが見つかったときにトリガーされるコールバック関数。見つかったデバイスの情報を出力し、接続可能で近距離（RSSI が -50 より大きい）のデバイスに接続を試みます。接続を作成する前にスキャンプロセスを停止します。
 
 - `start_scan:` 見つかったデバイスのコールバックとして`device_found`を使用してアクティブBLEスキャンを開始する関数。
 
@@ -596,7 +603,7 @@ uint32_t central_gatt_write(uint32_t count)
 
 - `gatt_callbacks:` GATTイベントのコールバックとして`mtu_updated`関数を登録する構造体。
 
-- `central_gatt_write:` セントラルデバイスアプリケーションのメイン関数。Bluetoothサブシステムを初期化し、GATTコールバックを登録し、デバイスのスキャンを開始します。その後ループに入り、接続を待機してwrite_cmdを繰り返し呼び出してGATT書き込みを実行します。ループは特定の回数または無期限に実行するよう設定できます。
+- `central_gatt_write:` セントラルデバイスアプリケーションのメイン関数。Bluetoothサブシステムを初期化し、GATTコールバックを登録し、デバイスのスキャンを開始します。その後ループに入り、接続を待機し、GATT書き込みを実行するためにwrite_cmdを繰り返し呼び出します。ループは特定の回数実行するか、無限に実行するように設定できます。
 
 :::
 
@@ -839,29 +846,28 @@ int write_cmd(struct bt_conn *conn)
 
 :::note
 
-- `write_cmd_cb:`GATT書き込み応答なし（bt_gatt_write_without_response_cb）のコールバック関数。書き込み回数、長さ、および1秒あたりのビット数（bps）でのデータレートを計算して表示します。最後にデータを受信してから1秒を超えた場合、これらのメトリクスをリセットします。
+- `write_cmd_cb:` bt_gatt_write_without_response_cbのコールバック関数。書き込み回数、長さ、およびビット毎秒（bps）でのデータレートを計算して出力します。最後にデータが受信されてからの時間が1秒を超えた場合、これらのメトリクスをリセットします。
 
-- `mtu_exchange_cb:`MTU（Maximum Transmission Unit）交換手順後に呼び出されるコールバック関数。交換が成功したか失敗したかを表示し、新しいMTUサイズを表示します。
+- `mtu_exchange_cb:` MTU（最大転送単位）交換手順後に呼び出されるコールバック関数。交換が成功したか失敗したかを出力し、新しいMTUサイズを表示します。
+- `mtu_exchange:`MTU交換手順を開始します。まず現在のMTUを印刷し、その後mtu_exchange_cbをコールバックとして使用してMTU交換を試行します。
 
-- `mtu_exchange:`MTU交換手順を開始します。まず現在のMTUを表示し、その後mtu_exchange_cbをコールバックとして使用して交換を試行します。
+- `connected:`接続が確立されたときに実行されるコールバック関数です。接続されたデバイスのアドレスとその役割を印刷します。その後、接続への参照を保存し、MTU交換を開始します。セキュリティが有効な場合、セキュリティレベルの設定を試行します。
 
-- `connected:`接続が確立されたときに実行されるコールバック関数。接続されたデバイスのアドレスとその役割を表示します。その後、接続への参照を保存し、MTU交換を開始します。セキュリティが有効な場合、セキュリティレベルの設定を試行します。
+- `disconnected:`接続が終了したときに実行されるコールバック関数です。切断されたデバイスのアドレス、その役割、および切断の理由を印刷します。接続参照をクリアし、デバイスがセントラルだった場合はスキャンを再開します。
 
-- `disconnected:`接続が終了したときに実行されるコールバック関数。切断されたデバイスのアドレス、その役割、および切断の理由を表示します。接続参照をクリアし、デバイスがセントラルだった場合はスキャンを再開します。
+- `le_param_req:` ペリフェラルからのLE接続パラメータ更新要求を処理するコールバック関数です。要求されたパラメータ（間隔、レイテンシ、タイムアウト）を印刷します。
 
-- `le_param_req:` ペリフェラルからのLE接続パラメータ更新要求を処理するコールバック関数。要求されたパラメータ（間隔、レイテンシ、タイムアウト）を表示します。
+- `le_param_updated:` 接続パラメータが正常に更新されたときに呼び出されるコールバック関数です。新しい間隔、レイテンシ、タイムアウト値を印刷します。
 
-- `le_param_updated:` 接続パラメータが正常に更新されたときに呼び出されるコールバック関数。新しい間隔、レイテンシ、タイムアウト値を表示します。
+- `security_changed:`接続のセキュリティレベルが変更されたときに呼び出されるコールバック関数です。
 
-- `security_changed:`接続のセキュリティレベルが変更されたときに呼び出されるコールバック関数。
-
-- `write_cmd:` 応答なしのGATT書き込みコマンドを準備して送信する関数。現在のMTUに基づいて最大データ長を決定し、ハンドル0x0001にデータを送信します。write_cmd_cbをコールバックとして使用します。
+- `write_cmd:` 応答なしのGATT書き込みコマンドを準備して送信する関数です。現在のMTUに基づいて最大データ長を決定し、ハンドル0x0001にデータを送信します。write_cmd_cbをコールバックとして使用します。
 
 :::
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品でのご体験ができる限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます！弊社製品でのご体験ができる限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

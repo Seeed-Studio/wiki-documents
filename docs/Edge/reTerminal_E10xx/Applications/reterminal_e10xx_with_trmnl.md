@@ -116,7 +116,7 @@ Please use **FW x.x.x** or newer firmware for Seeed compatibility.
 
 1. **Clone the Firmware Repository**
 
-  - Visit the [official firmware repository](https://github.com/usetrmnl/trmnl-firmware) and clone it:
+- Visit the [official firmware repository](https://github.com/usetrmnl/trmnl-firmware) and clone it:
 
     ```
     git clone https://github.com/usetrmnl/trmnl-firmware.git
@@ -126,11 +126,12 @@ Please use **FW x.x.x** or newer firmware for Seeed compatibility.
 
 There are times when we update our code and need to submit PR to TRMNL and review it before it is displayed, if you want to be the first to use the latest firmware version, you can also use the TRMNL repository under Seeed Project.
 
-  - Visit the [Seeed repository](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project) and clone it:
+- Visit the [Seeed repository](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project) and clone it:
 
     ```
     git clone https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project.git
     ```
+
 :::
 
 2. **Install PlatformIO**
@@ -143,11 +144,11 @@ There are times when we update our code and need to submit PR to TRMNL and revie
 
 4. **Select the Correct Environment**
 
-  - In `platformio.ini`, 
+- In `platformio.ini`,
   
-    - If you are using reTerminal E1001, select the `seeed_reTerminal_E1001` environment.
+  - If you are using reTerminal E1001, select the `seeed_reTerminal_E1001` environment.
 
-    - If you are using reTerminal E1002, select the `seeed_reTerminal_E1002` environment.
+  - If you are using reTerminal E1002, select the `seeed_reTerminal_E1002` environment.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/26.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -166,7 +167,6 @@ There are times when we update our code and need to submit PR to TRMNL and revie
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/215.png" style={{width:1000, height:'auto'}}/></div>
 
    - The firmware will be compiled and uploaded to your device.
-
 
 ## Configure Wi-Fi and Send Playlists to TRMNL
 
@@ -212,6 +212,7 @@ To use your reTerminal E Series ePaper Display with TRMNL and send playlists, yo
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/219.png" style={{width:800, height:'auto'}}/></div>
 
 > ⚠️ **Note:** The MAC address is only visible in the captive portal for 1-2 seconds. If you miss it, you can also:
+>
 > - Retrieve it from the VS Code > PlatformIO build/upload logs.
 > - Use the [usetrmnl.com/flash](https://usetrmnl.com/flash) method and check the Chrome/Edge/Firefox developer console for the MAC address during flashing.
 > - Find it in your router or Mesh network app's list of connected devices.
@@ -271,12 +272,14 @@ Always keep both options disabled to ensure stable operation of your reTerminal 
 The TRMNL Playlist feature allows you to control exactly what is displayed on your reTerminal E Series ePaper Display and when. Here's a breakdown of the main sections and controls, as shown in the screenshot above:
 
 ### Playlist Overview
+
 - **Playlist Title**: At the top, you see the name of your TRMNL device (e.g., "MengDu's TRMNL").
 - **Display Time Range**: You can set the time range for when the playlist is active (e.g., from 00:00 to 23:45).
 - **Update Interval**: Choose how often the display updates (e.g., every 5 minutes).
 - **Add a Group / Add a Plugin**: Use these buttons to organize your playlist into groups or add new content plugins (such as weather, calendar, or custom text).
 
 ### Playlist Items
+
 Each row in the playlist represents a screen or widget that will be shown on your reTerminal E Series ePaper Display (for reference only):
 
 1. **Weather**
@@ -290,12 +293,14 @@ Each row in the playlist represents a screen or widget that will be shown on you
    - Also shows when it was last updated.
 
 For each item, you have several controls:
+
 - **Settings (gear icon)**: Configure the plugin's options.
 - **Delete (X icon)**: Remove the item from your playlist.
 - **Preview (eye icon)**: Preview what the screen will look like.
 - **Reorder (bars icon)**: Drag to change the order in which screens are displayed.
 
 ### Smart Playlist
+
 - **Smart Playlist Option**: At the bottom, you can choose whether to automatically skip screens whose content hasn't changed (e.g., "Never skip screens").
 
 > 📖 Want to learn more? Read the [Smart Playlists blog post](https://usetrmnl.com/blog/smart-playlists) for advanced tips and details.
@@ -315,6 +320,7 @@ Plugins are individual content blocks that can show things like weather, calenda
 ### Connected Plugins
 
 At the top of the Plugins page, you'll see all the plugins you've already connected to your TRMNL account. These are ready to be added to your playlist and displayed on your reTerminal E Series. Examples include:
+
 - **Weather**: Show current weather conditions.
 - **Days Left This Year**: Countdown to the end of the year.
 - **Stock Price**: Track your favorite stocks.
@@ -335,14 +341,11 @@ Developers can even create and publish their own plugins for others to use, maki
 
 If you have any questions about using TRMNL or want to explore more advanced features, you are welcome to read the official TRMNL documentation for more information: [https://docs.usetrmnl.com/go](https://docs.usetrmnl.com/go)
 
-
-
 ## Special Thanks
 
 Special thanks to the entire **TRMNL team** for their strong support and invaluable help with this project. In particular, we would like to thank **Bogdan**, **Ryan Kulp**, **Fr3d** and all other team members for their dedication and assistance throughout the development and documentation process.
 
 Your expertise and commitment have made this integration possible and greatly improved the user experience for the reTerminal E Series ePaper Display community.
-
 
 ## Tech Support & Product Discussion
 
@@ -350,13 +353,12 @@ Thank you for choosing our products! We are here to provide you with different s
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>
-

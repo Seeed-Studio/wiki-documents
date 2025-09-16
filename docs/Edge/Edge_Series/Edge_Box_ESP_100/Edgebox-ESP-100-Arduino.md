@@ -54,15 +54,15 @@ This portable box comes with rugged hardware, an electrical design, and an alumi
 >
 > **Old Version SNs**:
 >
->  - All serial numbers with `2437` or **earlier**
->  - Example: `102991735243700001`, `102991735243700093`
+> - All serial numbers with `2437` or **earlier**
+> - Example: `102991735243700001`, `102991735243700093`
 > - `2437` = produced in **Week 37 of 2024**
 >
 > **New Version SNs**:
+>
 > - All serial numbers with `2438` or **later**
->  - Example: `102991735243800001`, `102991735243800093`
+> - Example: `102991735243800001`, `102991735243800093`
 > - `2438` = produced from **Week 38 of 2024 onwards**
-
 
 - Multi-Fieldbus Support: CAN, RS485, Ethernet
 - Multi-wireless Capability: On-chip Wifi, BLE connectivity; built-in Cellular 4G LTE module
@@ -320,14 +320,14 @@ This portable box comes with rugged hardware, an electrical design, and an alumi
 3. CAN bus and RS485 Port
 4. Multi-Func phoenix connector
 
-#### LED Indicator:
+#### LED Indicator
 
 <div align="center"><img style={{background: 'rgb(255, 255, 255)', border: '10px solid transparent'}} width={300}src="https://files.seeedstudio.com/wiki/edge_box_esp/LED.png" /></div>
 
 <div class="table-center">
 
 | LED Name | Signal        | Description            |
-|  :---:   |  :---:        |    :---:               | 
+|  :---:   |  :---:        |    :---:               |
 |   PWR    | Power Status  |                        |
 | Cellular | 4G/LTE        |                        |
 |   ACT    | Serial TX status | Multiplexed with U0TXD |
@@ -335,15 +335,14 @@ This portable box comes with rugged hardware, an electrical design, and an alumi
 
 </div>
 
-#### Ethernet Port:
+#### Ethernet Port
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/eth.png" alt="pir" width={300} height="auto" /></div>
-
 
 <div class="table-center">
 
 | PIN#          |  Signal      | Description                               |
-|  :---:        |  :---:       |    :---:                                  | 
+|  :---:        |  :---:       |    :---:                                  |
 |      1        |      TXP     |                                           |
 |      2        |      TXN     |                                           |
 |      3        |      RXP     |                                           |
@@ -357,14 +356,14 @@ This portable box comes with rugged hardware, an electrical design, and an alumi
 
 </div>
 
-#### CAN bus and RS485 Port:
+#### CAN bus and RS485 Port
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/eth.png" alt="pir" width={300} height="auto" /></div>
 
 <div class="table-center">
 
 | PIN#          |  Signal      | Description                               |
-|  :---:        |  :---:       |    :---:                                  | 
+|  :---:        |  :---:       |    :---:                                  |
 |      1        |      N.C.     |                                           |
 |      2        |      N.C.     |                                           |
 |      3        |      N.C.     |                                           |
@@ -389,7 +388,6 @@ This portable box comes with rugged hardware, an electrical design, and an alumi
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/multi-func-connector.png" alt="pir" width={500} height="auto" /></div>
 
-
 <div class="table-center">
 
 | Fucntion  | PIN No.  |  PIN No. | Fucntion  |
@@ -405,7 +403,7 @@ This portable box comes with rugged hardware, an electrical design, and an alumi
 |  AI2      | 18 | 17 | AO0  |
 |  AI3      | 20 | 29 | AO1  |
 |  AGND     | 22 | 21 | AGND  |
-|  GND      | 24 | 23 | +24V  | 
+|  GND      | 24 | 23 | +24V  |
 
 </div>
 
@@ -421,14 +419,14 @@ This portable box comes with rugged hardware, an electrical design, and an alumi
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/connector_top.png" alt="pir" width={500} height="auto" /></div>
 
-
 1. Wi-Fi Antenna Port (SMA Female)
-2. SIM CARD 
+2. SIM CARD
 3. Reset
 4. USB PORT (5V power output only)
 5. 4G/LTE Antenna Port (SMA Female)
 
 ### GPIO Multiplex
+
 <div class="table-center">
 <table className="tg">
   <thead>
@@ -627,14 +625,11 @@ This portable box comes with rugged hardware, an electrical design, and an alumi
 </table>
 </div>
 
-
 #### Programming/Debug port
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/programming_port.png" alt="pir" width={300} height="auto" /></div>
 
-
 <div class="table-center">
-
 
 | Debug port | ESP32 IO | Other Function |
 | :---:      | :---:    | :---:          |
@@ -645,19 +640,18 @@ This portable box comes with rugged hardware, an electrical design, and an alumi
 
 </div>
 
-
 :::note
 
 The GIPIO0 is also connected to the Reset Button. And the RXD, TXD of UART0 are used in download mode.
-These allow the users to develop the EdgeBox-ESP-100 in bare meta. 
+These allow the users to develop the EdgeBox-ESP-100 in bare meta.
 
 :::
 
 ### Built-in Devices
 
-#### I2C PIN Map & Built-in I2C Devices 
+#### I2C PIN Map & Built-in I2C Devices
 
-* I2C PIN Map:
+- I2C PIN Map:
 
 <div class="table-center">
 
@@ -669,7 +663,7 @@ These allow the users to develop the EdgeBox-ESP-100 in bare meta.
 
 </div>
 
-* Built-in I2C Devices and Address:
+- Built-in I2C Devices and Address:
 
 <div class="table-center">
 
@@ -777,23 +771,23 @@ You need to prepare the following:
 
 ### Preparation
 
-#### Hardware 
+#### Hardware
 
-* STEP 1: Remove the case and locate the Programming port
+- STEP 1: Remove the case and locate the Programming port
 
-* STEP 1-1: Please locate and remove the two black allen socket head screws
+- STEP 1-1: Please locate and remove the two black allen socket head screws
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/remove_case.png" alt="pir" width={500} height="auto" /></div>
 
-* STEP 1-2: Then remove the 3 M.3 PH2 Phillips head screws.
+- STEP 1-2: Then remove the 3 M.3 PH2 Phillips head screws.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/remove_PH.png" alt="pir" width={500} height="auto" /></div>
 
-* STEP 1-3: Now you should be able to locate the Programming port.
+- STEP 1-3: Now you should be able to locate the Programming port.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/programming_port.png" alt="pir" width={300} height="auto" /></div>
 
-* STEP 2: connect the USB-to-Serial to the Edgebox-ESP-100
+- STEP 2: connect the USB-to-Serial to the Edgebox-ESP-100
 
 The connection should follow as below
 
@@ -837,18 +831,17 @@ Make sure the connection is right, Edgebox-ESP-100 is powered off during the con
 </table>
 </div>
 
-
 #### Software
 
-* STEP 1: Download the Ardunio IDE 2.0.X from the [Arduino offical website](https://www.arduino.cc/en/software) and then install it. 
+- STEP 1: Download the Ardunio IDE 2.0.X from the [Arduino offical website](https://www.arduino.cc/en/software) and then install it.
 
-* STEP 2: Find and Install ESP32 from the board manager. 
+- STEP 2: Find and Install ESP32 from the board manager.
 
-* STEP 2-1: Open the Arduino IDE and click the `Board Tab` (Second tab) to open the `Board Manager`
+- STEP 2-1: Open the Arduino IDE and click the `Board Tab` (Second tab) to open the `Board Manager`
   
-* STEP 2-2: In the Search Bar please type in **`ESP32`** and press enter, now you should be able to see the esp32 board library listed.
+- STEP 2-2: In the Search Bar please type in **`ESP32`** and press enter, now you should be able to see the esp32 board library listed.
 
-* STEP 2-3: Select the latest Version from the verion dropdown manu, e.g. at the time this wiki is written the latest verion is **`version 2.0.7`**
+- STEP 2-3: Select the latest Version from the verion dropdown manu, e.g. at the time this wiki is written the latest verion is **`version 2.0.7`**
 
 :::note
 
@@ -856,10 +849,9 @@ Please install version >= **`2.0.7`** of the esp32 board library.
 
 :::
 
-* STEP 2-4: Click `Install` 
+- STEP 2-4: Click `Install`
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/download_board.png" alt="pir" width="auto" height="auto" /></div>
-
 
 ### Edgebox-ESP-100 Controlling Solenoid with Arduino
 
@@ -911,7 +903,7 @@ void loop() {
 
 #### Upload code
 
-* STEP 1: Now please plug-in the USB-To-Serial adptor your PC and the connection of Edgebox-ESP-100 with USB-To-Serial convertor should set to download program mode.
+- STEP 1: Now please plug-in the USB-To-Serial adptor your PC and the connection of Edgebox-ESP-100 with USB-To-Serial convertor should set to download program mode.
 
 :::note
 
@@ -919,23 +911,23 @@ Do not Power Up the Edgebox-ESP-100 until next step
 
 :::
 
-* STEP 2: Power up the Edgebox-ESP-100
+- STEP 2: Power up the Edgebox-ESP-100
 
-* STEP 3: Select Board and PORTS
+- STEP 3: Select Board and PORTS
 
-* STEP 3-1: Open the Board and Port selection window
- 
+- STEP 3-1: Open the Board and Port selection window
+
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/select_boardandport.png" alt="pir" width="auto" height="auto" /></div>
 
-* STEP 3: Select Boards and PORTS from the `Board and Port selection window` in this case we can put edgebox into the search bar and select Edgebox-ESP-100 as the board, and select Port according to your USB-to-Serial adaptor. Then press **`OK`** to comfirm.
+- STEP 3: Select Boards and PORTS from the `Board and Port selection window` in this case we can put edgebox into the search bar and select Edgebox-ESP-100 as the board, and select Port according to your USB-to-Serial adaptor. Then press **`OK`** to comfirm.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/selectboard.png" alt="pir" width="auto" height="auto" /></div>
 
-* STEP 4: Press upload code button to upload the code.
+- STEP 4: Press upload code button to upload the code.
   
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/uploadcode.png" alt="pir" width="auto" height="auto" /></div>
 
-* STEP 5: reset Power to monitor the Edgebox-ESP-100 controlling Solenoid.
+- STEP 5: reset Power to monitor the Edgebox-ESP-100 controlling Solenoid.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/demo.gif" alt="pir" width="auto" height="auto" /></div>
 
@@ -944,11 +936,11 @@ Do not Power Up the Edgebox-ESP-100 until next step
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -43,7 +43,6 @@ It is equipped with rich scalability and hybrid connectivity, supporting CAN bus
 ## Specifications
 
 <div class="table-center">
-
 <table >
   <tbody>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -779,8 +778,7 @@ except KeyboardInterrupt:
 The reTerminal DM features a CAN interface that supports the CAN FD (Controller Area Network Flexible Data-Rate) protocol. The CAN interface is isolated using capacitive isolation, which provides excellent EMI protection and ensures reliable communication in industrial and automation applications. A terminal resistor of 120Ω has been installed by default.
 
 :::note
-The CAN interface uses an isolated power supply, which means that the ground signal for external devices connected to the CAN interface should be connected
-to the GND_ISO pin
+The CAN interface uses an isolated power supply, which means that the ground signal for external devices connected to the CAN interface should be connected to the GND_ISO pin
 :::
 
 To test and interface with CAN bus:
@@ -860,8 +858,7 @@ USB Type-C is a USB 2.0 port used for serial debugging or flashing OS image depe
 The reTerminal DM uses a standard-size SIM card slot commonly found in industrial applications, which requires a standard SIM card with dimensions of 25mm x 15mm.
 
 :::note
-Please note that the standard version of reTerminal DM does not come with a 4G module. If you require 4G functionality, an additional 4G module must be
-purchased separately, Therefore this SIM card slot only works if you placed the supported version of 4G module in the 4G PCIe slot.
+Please note that the standard version of reTerminal DM does not come with a 4G module. If you require 4G functionality, an additional 4G module must be purchased separately, Therefore this SIM card slot only works if you placed the supported version of 4G module in the 4G PCIe slot.
 :::
 
 ### Reset button

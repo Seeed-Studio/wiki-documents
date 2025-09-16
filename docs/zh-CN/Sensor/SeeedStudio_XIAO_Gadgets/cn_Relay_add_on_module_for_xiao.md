@@ -29,7 +29,7 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
 | 继电器寿命              | 100,000 次   |
 | 最大开关电压    | 250VAC       |
 | 最大开关电流    | 10A             |
-| 电气耐久性    | 1.5x10^4 次操作 (10A 250VAC，阻性负载，85°C 下，1秒开 9秒关)|
+| 电气耐久性    | 1.5x10^4 次操作 (10A 250VAC，阻性负载，85°C，1秒开9秒关)|
 
 更多信息，[点击此处下载 PDF 文件](https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/relay_module.pdf)。
 
@@ -49,18 +49,18 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
  <tr>
     <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
         </a>
     </div></td>
     <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Relay-add-on-module-for-XIAO-p-6310.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
         </a>
     </div></td>
  </tr>
 </table>
 
-本教程的内容将大致包含以下步骤。
+本教程的内容将大致经过以下步骤。
 
 1. [选择您的 Home Assistant 环境](#select-your-home-assistant-environment)
 2. 在 Home Assistant 中安装和配置 ESPHome
@@ -69,11 +69,11 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
 
 ### 快速刷写固件
 
-我们为 XIAO 创建了一个快速刷写固件页面，您可以直接使用下面的网站为您拥有的 XIAO 刷写继电器固件，无需编程。该网站将自动检测您连接的 XIAO 芯片，无需选择，直接刷写对应 ESP32 芯片的 XIAO 固件版本。
+我们为 XIAO 创建了一个快速刷写固件页面，您可以直接使用下面的网站为您拥有的 XIAO 刷写继电器固件，无需编程。该网站将自动检测您连接的 XIAO 芯片，无需选择，直接刷写与 ESP32 芯片对应的 XIAO 固件版本。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>固件刷写工具 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>固件刷写器 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -87,11 +87,11 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
 
 根据上表，安装 **Home Assistant OS** 和 **Home Assistant Supervised** 是最合适的，这将为您省去很多麻烦。如果您在 OpenWRT 上使用 Docker 运行 Home Assistant（例如使用 LinkStar H68K），请不要担心，我们也会为您提供详细的参考说明。
 
-我们还为 Seeed Studio 的一些产品编写了如何安装 Home Assistant 的教程，请参考它们。
+我们还为一些 Seeed Studio 产品编写了如何安装 Home Assistant 的教程，请参考它们。
 
-- [在 ODYSSEY-X86 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/ODYSSEY-X86-Home-Assistant/)
-- [在 reTerminal 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/reTerminal_Home_Assistant/)
-- [在 LinkStar H68K/reRouter CM4 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/h68k-ha-esphome/)
+- [在 ODYSSEY-X86 上开始使用 Home Assistant](https://wiki.seeedstudio.com/ODYSSEY-X86-Home-Assistant/)
+- [在 reTerminal 上开始使用 Home Assistant](https://wiki.seeedstudio.com/reTerminal_Home_Assistant/)
+- [在 LinkStar H68K/reRouter CM4 上开始使用 Home Assistant](https://wiki.seeedstudio.com/h68k-ha-esphome/)
 
 ## 步骤 1. 安装 ESPHome
 
@@ -99,14 +99,13 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/79.png" /></div>
 
-
 在附加组件商店中，您可以搜索并安装 ESPHome。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/80.png" /></div>
 
 ## 步骤 2. 将固件上传到 XIAO ESP32C3
 
-我们为 XIAO 创建了一个快速刷写固件页面，您可以直接使用下面的网站为您拥有的 XIAO 刷写继电器固件，无需编程。该网站将自动检测您连接的 XIAO 的芯片，无需选择，直接刷写与 ESP32 芯片对应的 XIAO 固件版本。
+我们为 XIAO 创建了一个快速刷写固件页面，您可以直接使用下面的网站为您拥有的 XIAO 刷写继电器固件，无需编程。该网站将自动检测您连接的 XIAO 芯片，无需选择，直接刷写与 ESP32 芯片对应的 XIAO 固件版本。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/" target="_blank" rel="noopener noreferrer">
@@ -122,7 +121,7 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/5.png" /></div>
 
-在 **已发现** 区域，您将找到 XIAO，点击 **配置**
+在 **已发现** 区域中，您将找到 XIAO，点击 **配置**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/2.png" /></div>
 
@@ -153,7 +152,8 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/11.png" /></div>
 
 ### 步骤 7. 使用继电器模块控制台灯
-我们可以点击开关来查看继电器是否工作正常。如果您在点击开关时看到板上的小绿灯亮起，说明工作正常！
+
+我们可以点击开关来查看继电器是否工作正常。如果您在点击开关时看到板子上的小绿灯亮起，说明工作正常！
 
 <div class="table-center">
 <iframe width="800" height="450" src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/relay.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -163,7 +163,7 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
 我用这个继电器模块改造了我的小台灯。切断正极线并将其插入继电器模块的两个端口中。您可以在下面的视频中看到效果。这个继电器模块无法为 XIAO 供电，所以请记住使用电池或 USB 线缆为 XIAO 供电。
 
 :::warning
-请注意用电安全，通电期间不要触摸继电器。
+请注意用电安全，通电期间请勿触摸继电器。
 :::
 
 <div class="table-center">
@@ -172,18 +172,18 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/6.png" style={{width:1000, height:'auto'}}/></div>
 
-恭喜您成功完成了 XIAO 继电器模块的学习之旅！让我们做更多有趣的改造吧！
+恭喜您成功完成了 XIAO 继电器模块的学习之旅！让我们进行更多有趣的改造吧！
 
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

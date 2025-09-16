@@ -1,25 +1,25 @@
 ---
-description: 本维基提供了在 NVIDIA Jetson 设备上部署 Dia 文本转语音模型的分步指南，展示其令人印象深刻的实时语音合成功能。内容涵盖依赖项安装、配置调整，并通过使用搭载 Jetson Orin NX 的 reComputer J4012 进行实际演示，展示高质量音频生成。
-title: 在 reComputer Jetson 上部署 Dia
+description: 本wiki提供了在NVIDIA Jetson设备上部署Dia文本转语音模型的分步说明，展示了其令人印象深刻的实时语音合成能力。它涵盖了依赖项安装、配置调整，并包含了使用配备Jetson Orin NX的reComputer J4012展示高质量音频生成的实际演示。
+title: 在reComputer Jetson上部署Dia
 keywords:
 - reComputer
 - Jetson
 - LLM
 - Dia
-- 音频
+- Audio
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/mlc/deploy_deepseek.webp
 slug: /cn/deploy_dia_on_jetson
 last_update:
-  date: 2025/05/16
+  date: 05/16/2025
   author: Youjiang
 ---
 
-# 在 reComputer Jetson 上部署 Dia
+# 在reComputer Jetson上部署Dia
 
-## 简介
+## 介绍
 
 <div style={{textAlign: 'justify', textJustify: 'inter-word'}}>
-    随着 AI 驱动的语音合成技术的快速发展，高质量、实时的文本转语音（TTS）应用已广泛应用于各个领域。在这些技术中，Dia 脱颖而出，作为一种高效且富有表现力的神经语音生成模型，能够以极低的计算开销生成自然的音频。这使得它特别适合部署在边缘设备上，例如 NVIDIA Jetson 系列，这些设备因其性能与能效的平衡而广泛应用于嵌入式 AI 应用。
+    AI驱动的语音合成技术的快速发展使得高质量、实时的文本转语音（TTS）应用能够在各个领域中得到应用。在这些技术中，Dia作为一个高效且富有表现力的神经语音生成模型脱颖而出，能够以最小的计算开销产生自然的音频。这使得它特别适合部署在边缘设备上，例如NVIDIA Jetson系列，由于其性能和功耗效率的平衡，这些设备在嵌入式AI应用中被广泛使用。
 </div>
 
 <div align="center">
@@ -28,17 +28,17 @@ last_update:
 </div>
 
 <div style={{textAlign: 'justify', textJustify: 'inter-word'}}>
-    在本文中，我们将探讨如何在 Jetson 设备上部署 Dia TTS 模型，并展示其推理过程中的性能表现。
+    在本文中，我们探索了在Jetson设备上部署Dia TTS模型的过程，并演示了其在推理过程中的性能。
 </div>
 
 
-## 前置条件
+## 先决条件
 
-- 内存大于 8GB 的 Jetson 设备。
-- Jetson 设备需要预先刷入 Jetpack [6.1](https://wiki.seeedstudio.com/cn/reComputer_Intro/) 操作系统或更高版本。
+- 具有超过8GB内存的Jetson设备。
+- Jetson设备需要预先刷入jetpack [6.1](https://wiki.seeedstudio.com/reComputer_Intro/)操作系统或更高版本。
 
 :::note
-在本维基中，我们将使用 [reComputer J4012 - Edge AI Computer with NVIDIA® Jetson™ Orin™ NX 16GB](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6InJlQ29tcHV0ZXIgSjQwMTIiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjo0LCJjX3RvdGFsX3Jlc3VsdHMiOjUyLCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0gJiYgcXVhbnRpdHlfYW5kX3N0b2NrX3N0YXR1czpbMV0ifQ%3D%3D) 完成以下任务，但您也可以尝试使用其他 Jetson 设备。
+在本wiki中，我们将使用[reComputer J4012 - 配备NVIDIA® Jetson™ Orin™ NX 16GB的边缘AI计算机](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6InJlQ29tcHV0ZXIgSjQwMTIiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjo0LCJjX3RvdGFsX3Jlc3VsdHMiOjUyLCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0gJiYgcXVhbnRpdHlfYW5kX3N0b2NrX3N0YXR1czpbMV0ifQ%3D%3D)来完成以下任务，但您也可以尝试使用其他Jetson设备。
 :::
 
 <div align="center">
@@ -52,7 +52,7 @@ last_update:
     </a>
 </div>
 
-## 入门指南
+## 开始使用
 
 ### 硬件连接
 - 将 Jetson 设备连接到网络、鼠标、键盘和显示器。
@@ -63,14 +63,14 @@ last_update:
 
 ### 安装依赖项
 
-1. 请从[这里](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ER_DifB_INZLnzTPyz6rqP8BESl1LiGtttOSojNM4G3jHA?e=AmDZv0)下载并解压适合您的 Jetson 设备的依赖项。
+1. 请从[这里](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ER_DifB_INZLnzTPyz6rqP8BESl1LiGtttOSojNM4G3jHA?e=AmDZv0)下载并解压适合您的 Jetson 设备的相应依赖项。
 
 <div align="center">
     <img width={900} 
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/dia/dependencies.png" />
 </div>
 
-2. 在 Jetson 设备上，在终端中执行以下命令进行安装：
+2. 在您的 Jetson 设备上，在终端中执行以下命令进行安装：
 
 ```bash
 pip install torch-2.7.0-cp310-cp310-linux_aarch64.whl
@@ -78,9 +78,9 @@ pip install torchaudio-2.7.0-cp310-cp310-linux_aarch64.whl
 pip install triton-3.3.0-cp310-cp310-linux_aarch64.whl
 ```
 
-### 下载并安装 Dia
+### Download and Install Dia
 
-1. 使用以下终端命令在 Jetson 设备上克隆 Dia 的源代码：
+1. Clone Dia's source code on your Jetson device using this terminal command:
 
 ```bash
 git clone https://github.com/nari-labs/dia.git
@@ -89,7 +89,7 @@ git clone https://github.com/nari-labs/dia.git
 2. 编辑安装文件。
 
 <div style={{textAlign: 'justify', textJustify: 'inter-word'}}>
-    注释掉与 torch、torchaudio 和 triton 相关的设置。使用 Vim 打开 pyproject.toml 并禁用第 19–22 行。
+    注释掉 torch、torchaudio 和 triton 相关的设置。使用 Vim 打开 pyproject.toml 并禁用第 19-22 行。
 </div>
 
 ```bash
@@ -103,10 +103,10 @@ vim pyproject.toml
 </div>
 
 :::note
-记得在退出前保存更改。
+记住在退出前保存更改。
 :::
 
-3. 安装 Dia 的运行环境。
+3. 安装 dia 的运行环境。
 
 ```bash
 pip install -e .
@@ -126,27 +126,27 @@ python app.py
 </div>
 
 :::info
-为了方便远程访问 Gradio WebUI，我重新配置了 GRADIO_SERVER_NAME 环境变量。
+为了便于远程访问 Gradio WebUI，我重新配置了 GRADIO_SERVER_NAME 环境变量。
 :::
 
 
 ## 演示
 
-在演示视频中，我使用 DeepSeek 生成了一段介绍 Seeed Studio 的对话，然后直接将文本输入到 DIA 中生成音频。尽管我的提示没有使用任何特殊技巧，但生成的音频质量仍然令人印象深刻。
+在演示视频中，我使用 DeepSeek 生成了一段介绍 Seeed Studio 的对话，然后直接将文本输入到 DIA 中生成音频。尽管我的提示词没有使用任何特殊技巧，生成的音频质量仍然令人印象深刻。
 
 ```txt
-[S1] 嘿，你听说过 Seeed Studio 吗？
-[S2] 当然！这是一家专注于开源硬件的公司，对吧？
-[S1] 没错！他们提供各种开发板、传感器模块和边缘计算设备，非常适合创客、工程师和开发者快速实现他们的想法。
-[S2] 是的，他们的 Grove 生态系统非常有名——模块化设计让硬件连接变得超级简单，不需要复杂的焊接或布线。
-[S1] 确实如此！他们还运营 Seeed Fusion，提供小批量 PCB 制造和组装服务，这对初创公司和硬件创业者来说非常棒。
-[S2] 此外，他们的社区和文档非常完善，许多项目都是开源的，对初学者非常友好！
-[S1] 总之，如果你对 DIY 智能硬件或物联网项目感兴趣，Seeed Studio 是一个很棒的选择！
-[S2] 完全同意！
+[S1] Hey, have you heard of Seeed Studio?
+[S2] Of course! It's a company focused on open-source hardware right?
+[S1] Exactly! They offer a wide range of development boards, sensor modules, and edge computing devices, perfect for makers, engineers, and developers to quickly bring their ideas to life.
+[S2] Yeah, and their Grove ecosystem is really famous—its modular design makes hardware connections super easy, no messy soldering or wiring needed.
+[S1] True! They also run Seeed Fusion, providing small-batch PCB manufacturing and assembly services, which is great for startups and hardware entrepreneurs.
+[S2] Plus, their community and documentation are well-developed, and many of their projects are open-source, making them beginner-friendly!
+[S1] In short, if you're into DIY smart hardware or IoT projects, Seeed Studio is an awesome choice!
+[S2] Couldn’t agree more!
 ```
 
 <div align="center">
-    <iframe width="900" height="506" src="https://www.youtube.com/embed/g9jQzwnsHr0" title="在 reComputer Jetson 上部署 Dia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="900" height="506" src="https://www.youtube.com/embed/g9jQzwnsHr0" title="Deploy Dia on reComputer Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## 参考资料
@@ -157,7 +157,7 @@ python app.py
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们致力于为您提供多种支持，确保您使用我们的产品时能够获得尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

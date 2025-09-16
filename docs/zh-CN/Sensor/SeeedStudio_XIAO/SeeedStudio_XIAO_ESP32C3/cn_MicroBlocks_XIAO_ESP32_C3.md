@@ -12,7 +12,7 @@ last_update:
 
 ## MicroBlocks
 
-MicroBlocks 是一种积木式编程语言，让初学者（9 岁到成人）能够轻松地为微控制器编程。尽管看起来简单，MicroBlocks 实际上是一种功能强大的编程语言，性能比 MicroPython 更好；能够控制 GPIO 引脚并通过 I2C、SPI 和串口与外设接口；拥有近 200 个扩展库。事实上，一些硬件设计师更喜欢使用 MicroBlocks 进行快速原型设计和测试，因为它具有快速、交互式的开发周期。
+MicroBlocks 是一种积木式编程语言，让初学者（9岁到成人）能够轻松地为微控制器编程。尽管看起来简单，MicroBlocks 实际上是一种功能强大的编程语言，性能比 MicroPython 更好；能够控制 GPIO 引脚并通过 I2C、SPI 和串口与外设接口；拥有近 200 个扩展库。事实上，一些硬件设计师更喜欢使用 MicroBlocks 进行快速原型设计和测试，因为它具有快速、交互式的开发周期。
 
 ### XIAO ESP32C3 引脚图和硬件特性
 
@@ -25,7 +25,7 @@ MicroBlocks 是一种积木式编程语言，让初学者（9 岁到成人）能
 该开发板有 11 个 GPIO 引脚（引脚 0..10）。引脚 0..3 可以作为模拟输入。
 
 该开发板**没有**内置用户 LED；
-请在引脚 10 和地之间连接外部 LED 以使用 MicroBlocks 的"设置用户 LED"积木。
+要使用 MicroBlocks 的"设置用户 LED"积木块，请在引脚 10 和地之间连接一个外部 LED。
 
 ### 安装 MicroBlocks 固件
 
@@ -39,11 +39,11 @@ MicroBlocks 是一种积木式编程语言，让初学者（9 岁到成人）能
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/set-advanced-mode.png" style={{width:400, height:'auto'}}/></div>
 
-从展开的齿轮菜单中选择**从 microblocks.fun 安装 ESP 固件**：
+从扩展的齿轮菜单中选择**从 microblocks.fun 安装 ESP 固件**：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/install-esp-firmware.png" style={{width:400, height:'auto'}}/></div>
 
-选择**xiao_esp32_c3**：
+选择 **xiao_esp32_c3**：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/install-c3.png" style={{width:200, height:'auto'}}/></div>
 
@@ -51,16 +51,15 @@ MicroBlocks 是一种积木式编程语言，让初学者（9 岁到成人）能
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/download-progress.png" style={{width:200, height:'auto'}}/></div>
 
-固件安装需要 30 到 60 秒。在完成之前请不要切换浏览器标签页。
+固件安装需要 30 到 60 秒。在完成之前不要切换浏览器标签页。
 
-固件安装完成后，您就可以将开发板连接到 MicroBlocks 并开始编程了！
+固件安装完成后，您可以将开发板连接到 MicroBlocks 并开始编程！
 
 ## 引导加载程序模式
 
 在 ESP32 开发板上安装 MicroBlocks 固件时，通常不需要手动进入引导加载程序模式。
 
-如果需要进入引导加载程序模式，请按住 B（引导）按钮
-同时按下并释放 R（复位）按钮。
+如果需要进入引导加载程序模式，请在按下并释放 R（复位）按钮的同时按住 B（引导）按钮。
 您也可以在按住 B 按钮的同时将开发板连接到计算机。
 
 ## 将开发板连接到 MicroBlocks
@@ -76,7 +75,7 @@ MicroBlocks 是一种积木式编程语言，让初学者（9 岁到成人）能
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-menu.png" style={{width:200, height:'auto'}}/></div>
 
-**注意：**您也可以通过在连接菜单中选择**连接（BLE）**来无线连接。
+**注意：** 您也可以通过在连接菜单中选择**连接（BLE）**来无线连接。
 
 从对话框中选择您的开发板并点击**连接**按钮：
 
@@ -89,16 +88,15 @@ MicroBlocks 是一种积木式编程语言，让初学者（9 岁到成人）能
 ## 在 MicroBlocks 中编程
 
 MicroBlocks 是一个**实时**编程环境，因此您可以边编程边测试。
-点击积木和脚本来运行它们。
-将积木拖到脚本面板中并组装它们来创建脚本。
+点击积木块和脚本来运行它们。
+将积木块拖到脚本面板中并组装它们来创建脚本。
 
-您的代码存储在持久闪存中，即使开发板
-未连接到 MicroBlocks 编辑器也可以运行。
-**当启动时**积木下的脚本会在开发板通电时运行。
+您的代码存储在持久闪存中，即使开发板未连接到 MicroBlocks 编辑器也可以运行。
+**当启动时**积木块下的脚本会在开发板通电时运行。
 
 MicroBlocks 支持并发。最多可以同时运行十个脚本。
 
-除了许多内置积木外，MicroBlocks 还有近 200 个库
+除了许多内置积木块外，MicroBlocks 还有近 200 个库
 支持额外的功能和外设。
 点击**添加库**按钮来添加库。
 
@@ -109,7 +107,7 @@ MicroBlocks 支持并发。最多可以同时运行十个脚本。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-blink.png" style={{width:200, height:'auto'}}/></div>
 
-[积木参考](https://wiki.microblocks.fun/en/reference_manual)
+[积木块参考](https://wiki.microblocks.fun/en/reference_manual)
 包含许多其他示例。
 
 ## 特别感谢
@@ -122,7 +120,7 @@ MicroBlocks 支持并发。最多可以同时运行十个脚本。
 
 - [用户指南](https://wiki.microblocks.fun/en/ide)
 
-- [积木参考](https://wiki.microblocks.fun/en/reference_manual)
+- [积木块参考](https://wiki.microblocks.fun/en/reference_manual)
 
 - [库参考](https://wiki.microblocks.fun/en/libraries)
 

@@ -80,9 +80,9 @@ Use `sudo systemctl disable nodered.service`to disable autostart on boot <br />
 
 Now please open your favorite Web Browser and enter the url described as below:
 
-- Option 1: Use http://127.0.0.1:1880 , if the web browser is running locally on your Edgebox via VNC.
+- Option 1: Use `http://127.0.0.1:1880` , if the web browser is running locally on your Edgebox via VNC.
 
-- Option 2: Use http://\{EdgeBox_IP_ADDRESS\}:1880, if the web browser is running remotely on a host computer, please replace the \{EdgeBox_IP_ADDRESS\} with the ip address of EdgeBox.
+- Option 2: Use `http://{EdgeBox_IP_ADDRESS}:1880`, if the web browser is running remotely on a host computer, please replace the `{EdgeBox_IP_ADDRESS}` with the ip address of EdgeBox.
 
 ## Getting familiar with Node-RED
 

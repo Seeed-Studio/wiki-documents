@@ -1,7 +1,7 @@
 ---
 description: Using XIAO ESP32-S3 on MicroBlocks.
 title: MicroBlocks
-image: https://files.seeedstudio.com/wiki/microblocks/microblocks.png
+image: https://files.seeedstudio.com/wiki/microblocks/microblocks.webp
 slug: /xiao_esp32s3_microblocks
 last_update:
   date: 09/09/2025
@@ -64,8 +64,7 @@ Once the firmware is installed, you can connect to the board to MicroBlocks and 
 
 It is usually not necessary to manually enter bootloader mode when installing MicroBlocks firmware on ESP32 boards.
 
-To enter bootloader mode, if needed, hold down the B (boot) button
-while pressing and releasing the R (reset) button.
+To enter bootloader mode, if needed, hold down the B (boot) button while pressing and releasing the R (reset) button.
 You can also connect the board to your computer while holding down the B button.
 
 **The tiny B and R buttons on either side of the USB connector are tricky;
@@ -100,8 +99,7 @@ MicroBlocks is a **live** coding environment so you can test as you code.
 Click on blocks and scripts to run them.
 Drag blocks into the scripting pane and assemble them to create scripts.
 
-Your code is stored in persistent flash memory and can run even when the board is
-not connected to the MicroBlocks editor.
+Your code is stored in persistent flash memory and can run even when the board is not connected to the MicroBlocks editor.
 Scripts under a **when started** block run when the board is powered.
 
 MicroBlocks supports concurrency. Up to ten scripts can run at the same time.

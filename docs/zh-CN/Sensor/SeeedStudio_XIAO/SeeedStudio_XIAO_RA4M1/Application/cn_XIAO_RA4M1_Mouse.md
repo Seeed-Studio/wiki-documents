@@ -23,7 +23,7 @@ last_update:
   <tbody><tr>
       <th>Seeed Studio XIAO RA4M1</th>
       <th>Grove 拇指摇杆</th>
-      <th>Grove 线缆</th>
+      <th>Grove 连接线</th>
     </tr>
     <tr>
       <td><div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:200, height:'auto'}}/></div></td>
@@ -49,17 +49,17 @@ last_update:
     </tr>
   </tbody></table>
 
-## 前期准备
+## 初步准备
 
 ### 点亮 XIAO RA4M1 的内置 LED
 
-如果您之前从未使用过 XIAO RA4M1，[请点击这里](https://wiki.seeedstudio.com/cn/getting_started_xiao_ra4m1/)学习如何点亮内置 LED，这可以确保您的开发环境正常工作。
+如果您之前从未使用过 XIAO RA4M1，[请点击这里](https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/)学习如何点亮内置 LED，这可以确保您的开发环境正常工作。
 
 ### 读取 Grove 摇杆的 X 和 Y 轴数据
 
 #### 步骤 1. 连接设备
 
-首先，您需要按照以下表格通过引脚将 XIAO RA4M1 和摇杆连接在一起。
+首先，您需要按照下表通过引脚将 XIAO RA4M1 和摇杆连接在一起。
 
 | XIAO RA4M1      | Grove - 拇指摇杆 |
 |-----------------|-------------------------|
@@ -68,7 +68,7 @@ last_update:
 | A0              | 白色                   |
 | A1              | 黄色                  |
 
-现在使用 Grove 线缆按照以下图片连接它们。
+现在使用 Grove 线缆按照下图连接它们。
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/xiao_ra4m1_mouse_image/4.png" style={{width:600, height:'auto'}}/></div>
 
@@ -98,9 +98,9 @@ void loop()
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_ra4m1_mouse_image/2.png" style={{width:1000, height:'auto'}}/></div>
 
-现在您移动摇杆，轴数据将同时改变。这意味着 XIAO RA4M1 和摇杆工作完美。
+现在你移动摇杆，轴数据会同时改变。这意味着 XIAO RA4M1 和摇杆工作完美。
 
-## 使用 XIAO RA4M1 构建鼠标
+## 使用 XIAO RA4M1 制作鼠标
 
 ### 步骤 3. 上传鼠标控制器程序
 
@@ -109,12 +109,12 @@ void loop()
 
 const int xaxis = A0;
 const int yaxis = A1;
-const int sensitivity = 5;//调整鼠标灵敏度
+const int sensitivity = 5;//adjust the mouse sensetive
 
 void setup()
 {
     Mouse.begin();
-    delay(1000);//至少需要1000ms来初始化
+    delay(1000);//at least 1000ms to initilize
     Serial.begin(9600);
 }
 
@@ -124,48 +124,48 @@ void loop()
   int yValue = analogRead(yaxis);
 
   /*
-  当你点击Grove摇杆的中央按钮时，xValue将等于1023，
-  所以当xValue < 1000时，我们移动鼠标；当xValue>1000时，我们点击鼠标
+  when you click the central button of Grove joystick, xValue will equal to 1023,
+  so when xValue < 1000, we move the mouse; when xValue>1000, we click the mouse
   */
   if(xValue<1000){
   
-    //定义鼠标移动距离
+    //define mouse move distance
     int xDistance;
     int yDistance;
 
     /*
-    摇杆读取x和y值时以500作为坐标轴的中心，
-    所以我们需要通过减去500来处理数据，同时也消除一些轻微的振动。
+    The joystick reads the x and y values with 500 as the center of the coordinate axis, 
+    so we need to process the data by subtracting 500, while also eliminating some minor vibrations.
     */
-    //消除X轴轻微振动。
+    //Eliminate X minor vibrations.
     if(abs(xValue-500)<10){
       xDistance = 0;
     }else{
       xDistance = (xValue - 500);
     }
-    //消除Y轴轻微振动。
+    //Eliminate X minor vibrations.
     if(abs(yValue-500)<10){
       yDistance = 0;
     }else{
       yDistance = (yValue - 500);
     }
-    //从摇杆读取值
+    //read value from joystick
     Serial.print("value: ");
     Serial.print(xValue);
     Serial.print(",");
     Serial.println(yValue);
     Serial.println(" ");
-    //读取鼠标将要移动的距离
+    //read distance the mouse will move
     Serial.print("distance: ");
     Serial.print(xDistance);
     Serial.print(",");
     Serial.println(yDistance);
     Serial.println(" ");
 
-    //使鼠标不那么敏感
+    //make the mouse not so sensetive
     Mouse.move(xDistance/sensitivity,-yDistance/sensitivity,0);
   }else{
-    //当xValue>1000时，鼠标点击
+    //when xValue>1000, mouse click
     Mouse.click();
   }
     delay(100);
@@ -178,17 +178,16 @@ void loop()
 
 恭喜！你成功构建了这个简单的小鼠标。还有更多有趣的HID（人机接口设备）功能等待你通过XIAO RA4M1来探索。[想了解更多？请点击这里跳转～](https://docs.arduino.cc/tutorials/uno-r4-minima/usb-hid/)
 
-
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

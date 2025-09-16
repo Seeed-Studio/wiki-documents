@@ -17,16 +17,18 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 ## Introduction
+
 Phospho is how ML engineers make real robots intelligent. We provide the hardware, libraries, and remote control capabilities so developers can collect data, train AI models and deploy applications to real robots in minutes instead of months.
 
 In this wiki, we will demonstrate SO Arm 100 robotic arm motion control using phospho.
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/phospho/phospho_1.png" />
 </div>
 
 ## Prerequisites
+
 - SO Arm 100/101
 - Computer with Mac/Windows/Linux OS
 
@@ -37,11 +39,12 @@ You can purchase a ready-to-use robotic arm from [phospho](https://robots.phosph
 ## Getting Started
 
 ### Prepare the Robotic Arm
+
 1. If you purchased the robotic arm kit from Seeedstudio, you will need to refer to [this link](https://wiki.seeedstudio.com/lerobot_so100m/#assembly) to assemble your robotic arm.
 2. If you bought it from [Phospho](https://robots.phospho.ai/), you will receive a ready-to-use device that allows you to skip the assembly process entirely.
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/lerobot/so_arm_100.jpg" />
 </div>
 
@@ -61,6 +64,7 @@ The installation of phospho software are very user-friendly, requiring no compli
 ```bash
 curl -fsSL https://raw.githubusercontent.com/phospho-app/phosphobot/main/install.sh | bash
 ```
+
 </TabItem>
 <TabItem value="Linux" label="Linux">
 
@@ -78,7 +82,6 @@ powershell -ExecutionPolicy ByPass -Command "irm https://raw.githubusercontent.c
 </TabItem>
 </Tabs>
 
-
 Then, fire up the the server:
 
 ```bash
@@ -91,23 +94,23 @@ It can take up to 15 seconds for the server to start.
 
 Once the service is fully started, you can access the UI interface in your browser at http://0.0.0.0:8020/.
 <div align="center">
-    <img width={900} 
+    <img width={900}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/phospho/webui.png" />
 </div>
 
-### Connect the Robotic Arm.
+### Connect the Robotic Arm
 
 After the WebUI starts, it will automatically discover and recognize the robotic arm. If recognition fails, you may manually initiate a connection.
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/phospho/connection.png" />
 </div>
 
 Before operating the robotic arm, we need to perform the second calibration. You may refer to the following video tutorial for the calibration procedure.
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/phospho/calibration.png" />
 </div>
 
@@ -117,8 +120,10 @@ Before operating the robotic arm, we need to perform the second calibration. You
 
 :::info
 The Lerobot SO Arm 100/101 typically requires two calibration stages:
+
 1. During assembly: Zero-position initialization must be performed for each servo motor.
 2. During software operation: Recalibration is required to compensate for assembly errors.
+
 :::
 
 ### Control Robotic Arm by Phospho
@@ -126,7 +131,7 @@ The Lerobot SO Arm 100/101 typically requires two calibration stages:
 Unlike the Lerobot repository, Phospho not only supports teleoperation via Leader, but also provides multiple control methods: keyboard/mouse control, manual drag-and-drop control, and VR-based control. This design will significantly enrich our data collection methodologies.
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/phospho/control.png" />
 </div>
 
@@ -137,6 +142,7 @@ If everything went smoothly, you should now be able to control the robotic arm's
 :::note
 Beyond remote control of robotic arms, phospho offers many other exciting features waiting to be explored! Try it out now!
 :::
+
 ## Effect Demonstration
 
 Here we experiment with VR-based robotic arm control. After installing the phospho teleop app in VR, the system can discover the robotic arm via local network. As demonstrated in the video, the VR interface enables remarkably smooth remote operation of the robotic arm's movements.
@@ -147,7 +153,7 @@ Here we experiment with VR-based robotic arm control. After installing the phosp
 
 ## References
 
-- [https://phospho.ai/](https://phospho.ai/) 
+- [https://phospho.ai/](https://phospho.ai/)
 - [https://docs.phospho.ai/welcome](https://docs.phospho.ai/welcome)
 - [https://github.com/phospho-app/phosphobot](https://github.com/phospho-app/phosphobot)
 - [https://wiki.seeedstudio.com/lerobot_so100m](https://wiki.seeedstudio.com/lerobot_so100m/)
@@ -157,11 +163,11 @@ Here we experiment with VR-based robotic arm control. After installing the phosp
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

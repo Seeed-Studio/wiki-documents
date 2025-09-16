@@ -10,7 +10,7 @@ last_update:
 
 # 项目概述
 
-此 wiki 已更新：https://wiki.seeedstudio.com/cn/xiao_esp32s3_with_micropython/
+此 wiki 已更新：https://wiki.seeedstudio.com/xiao_esp32s3_with_micropython/
 
 CircuitPython 是 XIAO ESP32S3 的理想编程语言，因为它简化了物理计算项目。基于 Python，它具有初学者友好的语法，并包含用于访问传感器和显示器等硬件的模块。由于 CircuitPython 已经支持 ESP32S3 芯片，本项目尝试在 Seeed Studio XIAO ESP32S3 开发板上编译 CircuitPython。
 
@@ -20,13 +20,13 @@ CircuitPython 是 XIAO ESP32S3 的理想编程语言，因为它简化了物理�
 
 ### 硬件准备
 
-我在这里使用 Seeed Studio XIAO ESPS3 和 Seeed Studio Grove OLED 显示屏 0.96 作为硬件。
+我在这里使用 Seeed Studio XIAO ESPS3 和 Seeed Studio Grove OLED Display 0.96 作为硬件。
 
 <div class="table-center">
   <table align="center">
     <tr>
         <th>Seeed Studio XIAO ESP32S3</th>
-        <th>Seeed Studio Grove OLED 显示屏 0.96</th>
+        <th>Seeed Studio Grove OLED Display 0.96</th>
     </tr>
     <tr>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -49,7 +49,7 @@ CircuitPython 是 XIAO ESP32S3 的理想编程语言，因为它简化了物理�
 
 ### 软件准备
 
-我使用 Thonny IDE 软件（Windows）和一些相关的库和文件。
+我使用的是 Thonny IDE 软件（Windows）以及一些相关的库和文件。
 
 <div class="table-center">
   <table align="center">
@@ -60,12 +60,12 @@ CircuitPython 是 XIAO ESP32S3 的理想编程语言，因为它简化了物理�
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://thonny.org/" target="_blank" rel="noopener noreferrer">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 下载 ⏬</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Download ⏬</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/related-mpy.zip" target="_blank" rel="noopener noreferrer">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 下载 ⏬</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Download ⏬</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -74,43 +74,41 @@ CircuitPython 是 XIAO ESP32S3 的理想编程语言，因为它简化了物理�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg" style={{width:500, height:'auto'}}/></div>
 
+### 入门指南
 
-### 开始使用
+#### 下载 XIAO ESP32S3 CircuitPython 固件
 
-#### 下载 XIAO ESP32S3 Circuitpython 固件
-
-[XIAO ESP32S3 Sense 的 Circuitpython 固件 9.1.1 和 9.20 Alpha](https://github.com/djairjr/Seeed_Xiao_ESPS3_Sense_Circuitpython/tree/main/seeed_xiao_esp32s3_sense/seeed_xiao_esp32s3_sense)
-
+[XIAO ESP32S3 Sense 的 CircuitPython 固件 9.1.1 和 9.20 Alpha](https://github.com/djairjr/Seeed_Xiao_ESPS3_Sense_Circuitpython/tree/main/seeed_xiao_esp32s3_sense/seeed_xiao_esp32s3_sense)
 
 #### 在 BootLoader 模式下将 XIAO ESP32S3 开发板连接到 PC
 
-具体方法是：
+具体方法如下：
 
 - **步骤 1**. 按住 XIAO ESP32S3 上的 BOOT 按钮不松开。
 
 - **步骤 2**. 保持按住 BOOT 按钮，然后通过数据线连接到计算机。连接到计算机后松开 BOOT 按钮。
 
-- **步骤 3**. 上传 **Blink** 程序来检查 XIAO ESP32S3 的运行情况。
+- **步骤 3**. 上传 **Blink** 程序来检查 XIAO ESP32S3 的运行状态。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/15.gif" style={{width:500, height:'auto'}}/></div>
 
 #### 打开 Thonny 并配置选项
 
-1. 运行 Thonny 后，导航到"Tools -> Options"并点击"Options"选择
+1. 运行 Thonny 后，导航到"工具 -> 选项"并点击"选项"选择
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/03.png" /></div>
 
-2. 选择"Interpreter"选项并点击"CircuitPython (generic)"选择
+2. 选择"解释器"选项并点击"CircuitPython (generic)"选择
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/04.png" /></div>
 
-### 将 CircuitPython 固件刷写到 XIAO ESP32S3 开发板
+### 将 CircuitPython 固件刷入 XIAO ESP32S3 开发板
 
-1. 在 Thonny 中点击"(esptool)"。它会提示您下载最新的 CircuitPython 固件并将其刷写到开发板。
+1. 在 Thonny 中点击"(esptool)"。它会提示您下载最新的 CircuitPython 固件并将其刷入开发板。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/06.png" /></div>
 
-2. Thonny 中的"(esptool)"如下所示，首先选择正确的"Target port"。
+2. Thonny 中的"(esptool)"如下所示，首先选择正确的"目标端口"。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/07.png" /></div>
 
@@ -119,15 +117,15 @@ CircuitPython 是 XIAO ESP32S3 的理想编程语言，因为它简化了物理�
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/08.png" /></div>
 
-4. Thonny 将填充重置，您现在可以点击"Install"。
+4. Thonny 将填充重置，现在您可以点击"安装"。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/09.png" /></div>
 
-5. 一段时间后显示"Done"，窗口可以关闭。
+5. 显示"完成"后，可以关闭窗口。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/10.png" /></div>
 
-6. PC上会出现一个"CIRCUITPY"驱动器，这表明开发板已成功刷入固件。
+6. PC 上会出现一个"CIRCUITPY"驱动器，这表明开发板已成功刷入固件。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/11.png" /></div>
 
@@ -137,16 +135,15 @@ CircuitPython 是 XIAO ESP32S3 的理想编程语言，因为它简化了物理�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/12.png" /></div>
 
-
 :::note
-使用"Seeed Studio Grove OLED显示屏0.96"时，"adafruit_ssd1306.mpy"文件和"adafruit_framebuf.mpy"文件是必需的
+使用"Seeed Studio Grove OLED Display 0.96"时，"adafruit_ssd1306.mpy"文件和"adafruit_framebuf.mpy"文件是必需的
 
-adafruit_framebuf库使用名为font5x8.bin的字体文件来渲染文本。此文件需要在执行代码的环境中可访问。
+adafruit_framebuf 库使用名为 font5x8.bin 的字体文件来渲染文本。此文件需要在执行代码的环境中可访问。
 :::
 
-#### 编写代码（IIC）并上传以实现OLED显示
+#### 编写代码（IIC）并上传以实现 OLED 显示
 
-1. 添加文件后，我现在可以使用命令import adafruit_ssd1306将adafruit_ssd1306库导入到代码中，环境现在已配置为驱动OLED显示屏。代码如下所示：
+1. 添加文件后，我现在可以使用命令 import adafruit_ssd1306 将 adafruit_ssd1306 库导入到代码中，环境现在已配置为驱动 OLED 显示器。代码如下所示：
 
 ```python
 from board import *
@@ -169,7 +166,7 @@ display.text('Code by CircuitPython!', 0, 20 , 2)
 display.show()
 ```
 
-2. 点击"运行"按钮上传代码
+2. 点击"Run"按钮上传代码
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/14.png" /></div>
 
@@ -177,8 +174,7 @@ display.show()
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/13.jpg" /></div>
 
-
-## XIAO ESP32S3 Sense与圆形显示屏配合使用Sense摄像头
+## XIAO ESP32S3 Sense 配合 XIAO 圆形显示屏和 Sense 摄像头使用
 
 ### 硬件准备
 
@@ -186,7 +182,7 @@ display.show()
   <table align="center">
     <tr>
         <th>Seeed Studio XIAO ESP32S3 Sense</th>
-        <th>Round Display for XIAO</th>
+        <th>XIAO 圆形显示屏</th>
     </tr>
     <tr>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -209,7 +205,7 @@ display.show()
 
 ### 软件准备
 
-1. 为XIAO ESP32S3 Sense安装固件。
+1. 将固件安装到 XIAO ESP32S3 Sense。
 
 <div className="table-center">
   <table align="center">
@@ -232,7 +228,7 @@ display.show()
 
 2. 安装必要的模块和依赖项。
 
-您始终可以使用Adafruit的工具[circup](https://learn.adafruit.com/keep-your-circuitpython-libraries-on-devices-up-to-date-with-circup/install-circup)来安装CircuitPython库。安装后，您只需输入以下命令即可安装任何库。
+您始终可以使用 Adafruit 的工具 [circup](https://learn.adafruit.com/keep-your-circuitpython-libraries-on-devices-up-to-date-with-circup/install-circup) 来安装 CircuitPython 库。安装后，您只需输入命令即可安装任何库。
 
 ```linux
 # install circup
@@ -243,9 +239,9 @@ pip install --upgrade circup
 circup install gc9a01 adafruit_ticks 
 ```
 
-### 入门指南
+### 开始使用
 
-安装所有必需的库后，只需将下面的代码输入到CIRCUITPY的code.py或main.py中，即可在圆形显示屏上查看摄像头画面。
+安装所有需要的库后，只需将代码输入到 CIRCIUTPY 的 code.py 或 main.py 中，如下所示，即可在圆形显示屏上查看摄像头画面。
 
 ```python
 import board
@@ -314,8 +310,8 @@ while True:
 
 ## ✨ 贡献者项目
 
-- 此项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
-- 感谢 [Isaac 的努力](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35178340)，您的工作将被[展示](https://wiki.seeedstudio.com/cn/Honorary-Contributors/)。
+- 本项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
+- 感谢 [Isaac 的努力](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35178340)，您的工作将被[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)。
 - 以及 [Djair Guilherme](https://github.com/Seeed-Studio/wiki-documents/issues/1237#issuecomment-2295415274)。
 
 ## 技术支持与产品讨论
@@ -323,11 +319,11 @@ while True:
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

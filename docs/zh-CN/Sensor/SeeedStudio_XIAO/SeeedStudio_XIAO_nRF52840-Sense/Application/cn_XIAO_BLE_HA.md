@@ -47,8 +47,8 @@ last_update:
 
 Grove DHT20 传感器使用 I2C 进行通信。我们需要将其连接到 XIAO nRF52840 Sense 的 I2C 引脚：
 
-- 我们可以使用 XIAO Grove 扩展板配合通用 4 针无扣线缆
-- 使用 4 针母头跳线转 Grove 4 针转换线缆直接将 DHT20 传感器连接到 XIAO nRF52840 Sense
+- 我们可以使用 XIAO Grove 扩展板和通用 4 针非锁定电缆
+- 使用 4 针母头跳线转 Grove 4 针转换电缆将 DHT20 传感器直接连接到 XIAO nRF52840 Sense
 
 #### 以下是 XIAO nRF52840 Sense 和 XIAO Grove 扩展板的引脚图
 
@@ -57,7 +57,7 @@ Grove DHT20 传感器使用 I2C 进行通信。我们需要将其连接到 XIAO 
 
 ### 硬件设置
 
-接线很简单。无论是否使用扩展板，以下 Fritzing 原理图都展示了如何将组件连接在一起。
+接线很简单。无论是否使用扩展板，以下 Fritzing 原理图显示了如何将组件连接在一起。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/wiring.jpg" alt="Wiring" width={600} height="auto" /></p>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/XIAO_Shield_wiring.jpg" alt="Wiring" width={600} height="auto" /></p>
@@ -65,11 +65,11 @@ Grove DHT20 传感器使用 I2C 进行通信。我们需要将其连接到 XIAO 
 
 ## 软件准备
 
-我们将使用 Thonny IDE 软件（Linux）和一些相关的库和文件。以下是我们要执行的步骤：
+我们将使用 Thonny IDE 软件（Linux）和一些相关的库和文件。以下是我们要采取的步骤：
 
 1. 在 XIAO nRF52840 Sense 上安装 CircuitPython
 2. 安装必要的库
-3. 使用 BTHome 协议编写我们的传感器代码
+3. 使用 BTHome 协议编写传感器代码
 4. 配置 Home Assistant
 
 ### 步骤 1 - 安装 CircuitPython
@@ -79,51 +79,51 @@ Grove DHT20 传感器使用 I2C 进行通信。我们需要将其连接到 XIAO 
 前往 <a  href="https://circuitpython.org/" target="_blank"><span>CircuitPython</span></a> 并下载适用于 XIAO nRF52840 Sense 的版本。
 选择 Downloads，在搜索字段中开始输入 XIAO nRF52840，直到结果显示该传感器。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython1.png" alt="CircuitPython 下载" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython1.png" alt="CircuitPython Download" width={600} height="auto" /></p>
 
 接下来，按下载按钮获取我们设备的文件。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython2.png" alt="CircuitPython 下载" width="{600}" height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython2.png" alt="CircuitPython Download" width="{600}" height="auto" /></p>
 
 您应该有一个 .uf2 文件。要安装它，我们需要进入引导加载程序模式。将 XIAO nRF52840 Sense 连接到您的计算机并按两次复位按钮。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/functional2b.jpg" alt="CircuitPython 下载" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/functional2b.jpg" alt="CircuitPython Download" width={600} height="auto" /></p>
 
 您的计算机上应该出现一个名为 XIAO-SENSE 的新驱动器。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython3.png" alt="XIAO nRF52840 Sense 驱动器" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython3.png" alt="XIAO nRF52840 Sense drive" width={600} height="auto" /></p>
 
 接下来，将下载的文件复制到驱动器中。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython4.png" alt="XIAO nRF52840 Sense 驱动器" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython4.png" alt="XIAO nRF52840 Sense drive" width={600} height="auto" /></p>
 
 过一会儿，会出现一个名为 CIRCUITPY 的新驱动器。我们已经在微控制器上安装了 CircuitPython。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython5.png" alt="XIAO nRF52840 Sense 驱动器" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython5.png" alt="XIAO nRF52840 Sense drive" width={600} height="auto" /></p>
 
 ### 步骤 2 - 安装库
 
-要使用我们的 Grove 温湿度传感器 V2.0（DHT20），我们需要 <a  href="https://learn.adafruit.com/adafruit-aht20/python-circuitpython" target="_blank"><span> Adafruit 的 AHT20 库</span></a>。
+要使用我们的 Grove 温湿度传感器 V2.0 (DHT20)，我们需要 <a  href="https://learn.adafruit.com/adafruit-aht20/python-circuitpython" target="_blank"><span> Adafruit 的 AHT20 库</span></a>。
 
 前面的网站有关于如何安装库的说明。
 
 安装后，我们应该有以下文件（这些是我们的 DHT20 传感器所需的）：
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython6.png" alt="XIAO nRF52840 Sense 驱动器" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/circuitpython6.png" alt="XIAO nRF52840 Sense drive" width={600} height="auto" /></p>
 
 ### 步骤 3 - 上传代码
 
 在编写代码之前，我们需要了解什么是 BTHome。
 
-<p style={{textAlign: 'center'}}><img src="https://bthome.io/images/logo.png" alt="BTHome 标志" width="25%" height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://bthome.io/images/logo.png" alt="BTHome logo" width="25%" height="auto" /></p>
 
 #### BTHome
 
-BTHome 是一个开放标准，用于通过低功耗蓝牙（BLE）广播传感器数据和按钮按压。它被设计为节能、灵活和安全。BTHome 开箱即用地支持流行的家庭自动化平台，如 Home Assistant。
+BTHome 是一个开放标准，用于通过低功耗蓝牙 (BLE) 广播传感器数据和按钮按压。它被设计为节能、灵活和安全。BTHome 开箱即用地支持流行的家庭自动化平台，如 Home Assistant。
 
 BTHome 的一些优点：
 
 - 是一个开放标准，因此不同制造商的设备可以协同工作。
-- 设备被设计为节能，因此它们可以用单个电池长时间运行。
+- 设备被设计为节能，因此它们可以用一块电池长时间运行。
 - 数据是加密的，因此可以防止未经授权的访问。
 - 是一种灵活的格式，因此可以用于传输各种传感器数据和按钮按压。
 
@@ -140,44 +140,44 @@ BTHome 是一个多功能且强大的标准，用于通过 BLE 广播传感器�
 
 ```python
 # BTHome with DHT20
-# 此代码基于 Koen Vervloesem 的优秀代码
+# This code is based on the excelent code by Koen Vervloesem
 # https://github.com/koenvervloesem/BTHome-Inertial-Sensor-in-CircuitPython
-# 我们不使用深度睡眠，因为它在 XIAO nRF52840 Sense 上无法正常工作
-# 这很遗憾。
+# We don't use deep sleep because it just doesn't work
+# on the XIAO nRF52840 Sense. It's a pitty. 
 
 from _bleio import adapter
 from time import sleep
 import board
-# 用于 Grove 传感器
+# for the Grove sensor
 import adafruit_ahtx0
 
 
-# 名称的大小很重要。
+# The size of the name is important. 
 DEVICE_NAME = "XIAO nRF52840 Sense"
 INTERVAL = 0.1
 
-# 因为这只是延迟 0.1 秒 - 100 毫秒，我们不需要每次都读取传感器
-# 值。这是过度的 - 让我们每 5 分钟读取一次。
-# 让我们创建一个计时器，每个 INTERVAL 都会增加
-# 当它达到 30 时 - 将是 5 分钟过去了
-# 然后我们读取传感器
-# INTERVAL * 60 秒 * 5 分钟
-# 将 0.1ms 转换为秒 * 60s * 分钟 = 300
+# Because this is delaying just 0.1s - 100 milliseconds, we don't need to read the sensor
+# values everytime. It's overkill - let's just read every 5 minutes. 
+# Let's create a timer that will add every INTERVAL
+# when it reaches 30 - it will be 5 minutes passed
+# then we read the sensor
+# INTERVAL * 60 seconds * 5 minutes
+# CONVERTING 0.1ms to seconds * 60s * minutes = 300
 MINUTES_PER_READING = 5
 readTimer = INTERVAL * 10 * 60 * MINUTES_PER_READING
 
 
-# 将测量值转换为 BTHome 格式
+# convert the measurement value to the BTHome format
 def value_to_little_endian (measurement):
     
-    # 通过将温度除以因子来计算整数值
+    # Calculate the integer value by dividing the temperature by the factor
     integer_value = int(measurement / 0.01)
 
-    # 提取小端表示的低字节和高字节
+    # Extract the lower and upper bytes for little-endian representation
     lower_byte = integer_value & 0xFF
     upper_byte = (integer_value >> 8) & 0xFF
 
-    # 反转字节顺序
+    # Reverse the order of the bytes
     little_endian_bytes = bytes([upper_byte, lower_byte])
     return little_endian_bytes
 
@@ -199,16 +199,16 @@ class BTHomeAdvertisement:
     def adv_data(self, temperature, humidity):
         adv_data = bytearray(self._ADV_FLAGS)
         adv_svc_data = bytearray(self._ADV_SVC_DATA)
-        # 温度
-        # 根据情况更改值 - 
+        # temperature
+        # change values according - 
         temp = value_to_little_endian (temperature)
-        # 返回值是列表
+        # returned value is list
         adv_svc_data[6] = temp[1]
         adv_svc_data[7]= temp[0]
-        # 湿度
-        # 根据情况更改值 - 
+        # humidity
+        # change values according - 
         hum = value_to_little_endian (humidity)
-        # 返回值是列表
+        # returned value is list
         adv_svc_data[9] = hum[1]
         adv_svc_data[10]= hum[0]
         adv_data.extend(adv_svc_data)
@@ -219,14 +219,14 @@ class BTHomeAdvertisement:
 # BTHome
 bthome = BTHomeAdvertisement(DEVICE_NAME)
 
-# 创建传感器对象
+# Create sensor object
 sensor = adafruit_ahtx0.AHTx0(board.I2C())
 
-# 因为我们想要初始读取
-# 让我们用 readTimer 变量初始化
-# 这样我们强制脚本读取值
+# because we want a initial reading
+# let's initialize with the readTimer variable
+# so we force the script to read the values
 currentTimer = 0
-# 初始读取
+# inital reading
 temp = sensor.temperature
 hum = sensor.relative_humidity
 
@@ -241,15 +241,15 @@ while True:
     )
     sleep(INTERVAL)
     adapter.stop_advertising()
-    # 增加 currentTimer
+    # increase currentTimer
     currentTimer += INTERVAL
     #print (f"Current timer: {currentTimer}")
     if (currentTimer >= readTimer):
         #print (f'Read new values')
-        # 读取新值
+        # Read new values
         temp = sensor.temperature
         hum = sensor.relative_humidity
-        #重置计数器
+        #reset counter
         currentTimer = 0
 
 
@@ -264,7 +264,7 @@ while True:
 #### 代码解释
 
 - 代码中有大量注释来解释其功能。
-- 基本上，它每 0.2 秒广播一次来自 DHT20 传感器的温度和湿度数据。
+- 基本上，每 0.2 秒它会广播来自 DHT20 传感器的温度和湿度。
 - 因为我们不想过度使用传感器并每 0.2 秒读取一次数值，所以我们设置了一个定时器。它只会每 5 分钟读取一次数值。这个时间由 `MINUTES_PER_READING` 变量控制。
 
 ### 步骤 4 - 在 Home Assistant 上显示数据
@@ -273,11 +273,11 @@ while True:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/home-assistant-icon-flat.png" alt="Home Assistant Logo" width="15%" height="auto" /></p>
 
-Home Assistant 是一个免费开源的家庭自动化软件。它被设计为智能家居设备的中央控制系统，专注于本地控制和隐私保护。
+Home Assistant 是一个免费的开源家庭自动化软件。它被设计为智能家居设备的中央控制系统，专注于本地控制和隐私保护。
 
-Home Assistant 通过将不同的设备和服务组合在一个地方并将它们集成为实体，充当中央智能家居控制器中心。提供的基于规则的自动化系统允许基于触发事件、条件和动作（包括脚本）创建自定义例程。这些功能可以构建自动化、安全警报的警报管理和视频监控用于家庭安全系统，以及能源测量设备的监控。
+Home Assistant 通过将不同的设备和服务组合在一个地方并将它们集成为实体，充当中央智能家居控制器中心。提供的基于规则的自动化系统允许基于触发事件、条件和动作（包括脚本）创建自定义例程。这些功能可以构建自动化、安全警报的警报管理和家庭安全系统的视频监控，以及能源测量设备的监控。
 
-您可以在<a href="https://www.home-assistant.io/" target="_blank"><span>官方网站</span></a>上了解更多信息。
+您可以在<a  href="https://www.home-assistant.io/" target="_blank"><span>官方网站</span></a>上了解更多信息。
 
 #### 要求
 
@@ -315,36 +315,36 @@ Home Assistant 通过将不同的设备和服务组合在一个地方并将它�
 如果我们点击实体，我们会得到一个新页面，可以查看所有实体。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/12_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
 
-如果我们点击设备，我们会得到设备页面，包含所有选项以及当前数值。使用这个页面，我们可以将其添加到仪表板。
+如果我们点击设备，我们会得到设备页面，包含所有选项以及当前值。使用此页面，我们可以将其添加到仪表板。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/13_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
 通过按"添加到仪表板"，我们可以选择要放置它的视图。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/14_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
 
-之后，我们会看到卡片的预览。只需按"添加到仪表板"将其添加到仪表板。
+之后，我们会看到卡片的预览。只需按"添加到仪表板"即可将其添加到仪表板。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/15_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
 
 如果我们转到仪表板，我们新添加的卡片会显示由 XIAO nRF52840 Sense 广播的温度和湿度。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/17_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
 
-## 更多内容 - 深度睡眠功能
+## 更多功能 - 深度睡眠功能
 
 我无法让它正常工作。如果有人有解决方案，请留下评论。您可以在 [GitHub](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237) 分享您的想法
 
 ## ✨ 贡献者项目
 
 - 此项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) 支持。
-- 感谢 [Bruno 的努力](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237)，您的工作将被[展示](https://wiki.seeedstudio.com/cn/Honorary-Contributors/)。
+- 感谢 [Bruno 的努力](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237)，您的工作将被[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)。
 
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

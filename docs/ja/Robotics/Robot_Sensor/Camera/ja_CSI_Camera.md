@@ -1,27 +1,22 @@
 ---
-description: このウィキでは、ROSを使用してreComputerで複数のCSIカメラを使用するためのステップバイステップガイドを提供します。
-title: ROSでCSIカメラを使用する
+description: このwikiは、reComputer上でROSを使用して複数のCSIカメラを使用するためのステップバイステップガイドを提供します。
+title: ROSでのCSIカメラ
 keywords:
 - Jetson Nano
 - reComputer
 - CSI
-- カメラ
+- Camera
 - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/csi_camera_on_ros
 last_update:
-  date: 05/15/2025
+  date: 05/7/2024
   author: ZhuYaoHui
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
-
-# ROSを使用してreComputerで複数のCSIカメラを使用する方法
+# reComputerでROSを使用して複数のCSIカメラを使用する方法
 
 ## はじめに
-このチュートリアルでは、[reComputer J30/J40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)シリーズデバイスでROSを使用して複数のCSIカメラの画像データを読み取り、画像トピックをRVIZの可視化インターフェースに表示する方法をステップバイステップで説明します。
+このチュートリアルでは、[reComputer J30/J40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)シリーズデバイス上でROSを通じて複数のCSIカメラの画像データを読み取り、画像トピックを公開してRVIZ可視化インターフェースに表示する方法について、ステップバイステップのガイドを提供します。
 
 <div align="center">
     <img width={700} 
@@ -29,9 +24,9 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 </div>
 
 ## 前提条件
-- __[reComputer J30/40シリーズ](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)__: 提供されたチュートリアルに従って[JetPack 5.x](/ja/reComputer_J4012_Flash_Jetpack)システムと[ROS Noetic環境](/ja/installing_ros1)のインストールを完了してください。
+- __[reComputer J30/40シリーズ](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)__：提供されたチュートリアルに従って[JetPack 5.xシステムのインストール](/reComputer_J4012_Flash_Jetpack)と[ROS Noetic環境](/installing_ros1)のセットアップが完了していることを確認してください。
 
-- __サポートされているカメラは以下の通りです:__
+- __サポートされているカメラは以下の通りです：__
 
   - IMX219カメラ
 
@@ -55,7 +50,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 ## はじめに
 ### カメラの接続
-このチュートリアルに従って[CSIカメラの接続とテスト](/ja/J401_carrierboard_Hardware_Interfaces_Usage)を完了し、システムに[ROSがすでにインストールされている](/ja/installing_ros1)ことを確認してください。
+このチュートリアルに従って[CSIカメラの接続とテスト](/J401_carrierboard_Hardware_Interfaces_Usage)を完了し、システムに[ROSがすでにインストール](/installing_ros1)されていることを確認してください。
 
 <div align="center">
       <img width={700} 
@@ -63,56 +58,56 @@ https://github.com/Seeed-Studio/wiki-documents/issues
   </div>
 
 ### インストール
-- **ステップ1:** reComputerでターミナルを開き、ワークスペース用のディレクトリを作成します:
+- **ステップ1：** reComputer上でターミナルを開き、ワークスペース用のディレクトリを作成します：
   ```bash
   mkdir -p ~/catkin_ws/src
   cd ~/catkin_ws/src
   ```
-- **ステップ2:** 必要なROSパッケージをクローンします:
+- **ステップ2：** 必要なROSパッケージをクローンします：
   ```bash
   git clone https://github.com/ZhuYaoHui1998/csi_camera_reader.git
   ```
 
-- **ステップ3:** ワークスペースをビルドします:
+- **ステップ3：** ワークスペースをビルドします：
   ```bash
   cd ~/catkin_ws/
   catkin_make
   ```
 
-- **ステップ4:** 環境を更新するためにセットアップファイルを再度ソースします:
+- **ステップ4：** 環境を更新するために、再度セットアップファイルをソースします：
   ```bash
   source devel/setup.bash
   ```
 
 ### 使用方法
-- カメラストリームをROSトピック /csi_cam_0/image_raw に公開するには、ターミナルで以下のコマンドを使用します:
+- 1つのカメラストリームをROSトピック /csi_cam_0/image_raw に公開するには、ターミナルで次のコマンドを使用します：
   ```bash
   roslaunch csi_camera_reader csi_camera.launch sensor_id:=0
   ```
 
-- sensor_id を1に変更してインターフェースに合わせることもできます:
+- sensor_idを1に変更してインターフェースに合わせることもできます：
   ```bash
   roslaunch csi_camera_reader csi_camera.launch sensor_id:=1
   ```
 
-- 2つのCSIカメラを同時に開き、ROSにトピックを公開したい場合は、以下のコマンドを実行します:
+- 2つのCSIカメラを同時に開いてROSにトピックを公開したい場合は、次のコマンドを実行できます：
 
   ```bash
   roslaunch csi_camera_reader dual_camera.launch
   ```
-  ターミナルで "**rostopic list**" コマンドを入力すると、カメラが公開している画像トピックを確認できます。
+  ターミナルで「**rostopic list**」コマンドを入力すると、カメラによって公開された画像トピックを確認できます。
   <div align="center">
       <img width={700} 
       src="https://files.seeedstudio.com/wiki/robotics/hardware/csi_camera/fig1.png" />
   </div>
-    また、RVIZ可視化ツールを使用して画像トピックを購読し、視覚情報を表示することもできます。
+    RVIZ可視化ツールを使用して画像トピックを購読し、視覚情報を表示することもできます。
       <div align="center">
       <img width={700} 
       src="https://files.seeedstudio.com/wiki/robotics/hardware/csi_camera/fig2.png" />
   </div>
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

@@ -11,7 +11,7 @@ last_update:
 ---
 # **Seeed Studio XIAO nRF52840 与 CircuitPython**
 
-CircuitPython 是一种编程语言，旨在简化在低成本微控制器板上进行实验和学习编程。它让入门变得前所未有的简单，无需预先下载桌面软件。一旦设置好开发板，打开任何文本编辑器，就可以开始编辑代码。就是这么简单。
+CircuitPython 是一种编程语言，旨在简化在低成本微控制器板上进行实验和学习编程。它让入门变得比以往任何时候都更容易，无需预先下载桌面软件。一旦设置好您的开发板，打开任何文本编辑器，就可以开始编辑代码。就是这么简单。
 
 ## **入门指南**
 
@@ -19,7 +19,7 @@ CircuitPython 是一种编程语言，旨在简化在低成本微控制器板上
 
 **步骤 1** 进入引导加载程序模式
 
-在将 CircuitPython 安装到 Seeed Studio XIAO nRF52840 之前，需要进入引导加载程序模式。我们可以通过双击复位按钮进入引导加载程序模式：
+在我们将 CircuitPython 安装到 Seeed Studio XIAO nRF52840 之前，需要进入引导加载程序模式。我们可以通过双击复位按钮进入引导加载程序模式：
 
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-BLE/functional2b.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/functional2b.jpg" alt="pir" width={600} height="auto" /></p>
@@ -41,7 +41,7 @@ CircuitPython 是一种编程语言，旨在简化在低成本微控制器板上
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040tu2.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040tu2.png" alt="pir" width={600} height="auto" /></p>
 
-现在您已成功将 CircuitPython 安装到 Seeed Studio XIAO nRF52840 开发板上。
+现在您已经成功将 CircuitPython 安装到 Seeed Studio XIAO nRF52840 开发板上。
 
 ### 应用
 

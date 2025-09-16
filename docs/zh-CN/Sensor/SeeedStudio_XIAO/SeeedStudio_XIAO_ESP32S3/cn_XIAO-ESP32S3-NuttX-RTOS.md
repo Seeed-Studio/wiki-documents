@@ -15,7 +15,7 @@ last_update:
 
 ## 介绍
 
-[NuttX](https://nuttx.apache.org/) 是一个成熟的实时操作系统（RTOS），因其标准合规性和小占用空间而广受认可。NuttX 的主要特性之一是其可扩展性，这使得它可以在从 8 位微控制器到 64 位系统的环境中使用。这种灵活性是通过遵循 POSIX 和 ANSI 标准实现的，使您能够在来自不同架构、系列和半导体供应商的各种芯片上体验类似的 NuttX 功能。
+[NuttX](https://nuttx.apache.org/) 是一个成熟的实时操作系统（RTOS），以其标准合规性和小占用空间而广受认可。NuttX 的主要特性之一是其可扩展性，这使得它可以在从 8 位微控制器到 64 位系统的各种环境中使用。这种灵活性是通过遵循 POSIX 和 ANSI 标准实现的，使您能够在来自不同架构、系列和半导体供应商的各种芯片上体验类似的 NuttX 功能。
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/nuttx.svg"/></div>
 
@@ -29,7 +29,7 @@ NuttX 支持大量且不断扩展的开发板。[官方文档](https://nuttx.apa
 
 Nuttx 文档为不同平台提供了[指南](https://nuttx.apache.org/docs/latest/quickstart/install.html)。对于 Seeed Studio XIAO ESP32S3，请按照以下步骤操作：
 
-1. 下载 Espressif esptool(https://docs.espressif.com/projects/esptool/en/latest/esp32/)：
+1. 下载 Espressif esptool(https://docs.espressif.com/projects/esptool/en/latest/esp32/):
 
     ```bash
     ~/nuttxspace/nuttx$ esptool.py version
@@ -64,7 +64,7 @@ Apache Nuttx 分为两个项目：
 ./tools/configurate.sh board_name:your_application
 ```
 
-也可以通过运行命令检查支持的开发板列表：
+Also it's possible to check the list of board-supported a running the command:
 
 ```bash
 ./tools/configurate.sh -L
@@ -78,6 +78,7 @@ Apache Nuttx 分为两个项目：
     ./tools/configure.sh xiao-esp32s3:nsh
     make V=1
     ```
+
 5. RESET 和 BOOT 按钮可用于进入"Bootloader"模式，方法是在上电时按住 BOOT 键，然后按一次 RESET 键。
 
 6. 使用 esptool.py 加载固件：
@@ -88,11 +89,11 @@ Apache Nuttx 分为两个项目：
 
 ## 实践操作
 
-现在是时候实际探索 NuttX 了。在本节中，有两个可用的应用程序：USBNSH 和 COMBO。
+现在是实际探索 NuttX 的时候了。在本节中，有两个应用程序可用：USBNSH 和 COMBO。
 
 ### NSH
 
-NuttShell(NSH) 是一个在 NuttX 中使用的 shell 系统，类似于 bash 和其他类似选项。它支持丰富的内置命令集、脚本编写以及将您自己的应用程序作为"内置"（同一个 NuttX 二进制文件的一部分）运行的能力。NSH 配置使用 115200 bps 在 USB 上启用控制台。
+NuttShell(NSH) 是在 NuttX 中使用的 shell 系统，类似于 bash 和其他类似选项。它支持丰富的内置命令集、脚本编写以及将您自己的应用程序作为"内置"（同一个 NuttX 二进制文件的一部分）运行的能力。NSH 配置使用 115200 bps 在 USB 上启用控制台。
 
 我们可以通过清除之前的配置来开始构建过程
 
@@ -101,26 +102,25 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-现在我们为 xiao-esp32s3 开发板选择 NSH 配置：
+Now we select the NSH configuration to the xiao-esp32s3 board:
 
 ```bash
 ./tools/configurate.sh xiao-esp32s3:usbnsh
 ```
 
-编译源代码。
+Compile the source code.
 
 ```bash
 make -j
 ```
 
-将固件加载到您的开发板中，重启开发板并使用
-CDC/ACM 串行接口通过 USB 连接 NuttShell (NSH) 控制台：
+将固件加载到您的开发板中，重启开发板并通过 USB 使用 CDC/ACM 串行接口连接 NuttShell (NSH) 控制台：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
 ```
 
-访问 NuttShell 控制台：
+Access the NuttShell console:
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -129,7 +129,7 @@ NuttX 12.8.0 2c845426da-dirty Apr  6 2025 22:53:57 xtensa esp32s3-xiao
 nsh> 
 ```
 
-输入 `?`，您将访问命令和内置应用程序的可用选项。
+Typing `?`, you will access the available options for commands and built-in applications.
 
 ```bash
 nsh> ?
@@ -160,26 +160,26 @@ Hello, World!!
 
 ### COMBO
 
-此配置启用三个示例应用程序：gpio 和 leds。通用输入/输出 (GPIO) 是微控制器最基本的部分，允许它连接到外部世界。这样我们将使用 NSH 来访问和配置这些引脚。但首先，让我们清除之前的配置。
+此配置启用了三个示例应用程序：gpio 和 leds。通用输入/输出（GPIO）是微控制器最基本的部分，允许它连接到外部世界。这样我们将使用 NSH 来访问和配置这些引脚。但首先，让我们清除之前的配置。
 
 ```bash
 cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-为 xiao-esp32s3 开发板选择 combo 配置。
+Select the combo configuration to the xiao-esp32s3 board.
 
 ```bash
 ./tools/configurate.sh xiao-esp32s3:combo
 ```
 
-编译源代码。
+Compile de the source code.
 
 ```bash
 make -j
 ```
 
-将固件加载到您的开发板中，运行串行通信程序，如 minicon 或 picocom：
+Load the firmware into you board, run a serial communication program such as minicon or picocom:
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
@@ -190,7 +190,7 @@ NuttShell (NSH) NuttX-12.8.0
 nsh>
 ```
 
-要检查与此应用程序交互接受哪些选项，输入 `gpio -h`，它将返回参数列表。
+要查看与此应用程序交互时接受哪些选项，请输入 `gpio -h`，它将返回参数列表。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -217,11 +217,11 @@ IO_INPUT_PIN_PULLDOWN
  10: GPIO_INTERRUPT_BOTH_PIN
 ```
 
-要确认 GPIO 设备文件已创建，输入 `ls/dev`。输入后，您可以看到一些 gpio 被声明定义在 boards/arm/ra/xiao-esp32s3/include/board.h 中，它们代表：
+要确认 GPIO 设备文件已创建，请输入 `ls/dev`。输入后，您可以看到一些 gpio 已在 boards/arm/ra/xiao-esp32s3/include/board.h 中声明定义，它们代表：
 
 - 板载 LED：
   - 黄色            -> GPIO21
- 
+
 - GPIO
   - 1 个输入           -> GPIO1
   - 1 个带 IRQ 的输入    -> GPIO3
@@ -242,8 +242,7 @@ nsh> ls /dev
 nsh> 
 ```
 
-按照这些命令读取 GPIO1(/dev/gpio1) 和 GPIO3(/dev/gpio2)（带中断）
-并写入 GPIO2(/dev/gpio0)。
+按照以下命令读取 GPIO1(/dev/gpio1) 和 GPIO3(/dev/gpio2)（带中断）并写入 GPIO2(/dev/gpio0)。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -276,9 +275,9 @@ Driver: /dev/gpio2
   Verify:        Value=1
 ```
 
-USERLEDS 是一个允许通过单一操作控制 LED 的子系统。此外，您可以使用类似 printf 的命令行。在此演示中，我们将每 1 秒打开和关闭板载黄色 LED。
+USERLEDS 是一个子系统，允许通过单个操作来控制 LED。此外，您可以使用类似 printf 的命令行。在这个演示中，我们将每隔 1 秒钟打开和关闭板载的黄色 LED。
 
-输入 `leds`，您观察到 LED 同时闪烁。
+输入 `leds`，您会观察到 LED 同时闪烁。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -300,7 +299,7 @@ led_daemon: LED set 0x00
 
 ```
 
-查看下面的 gpio 和 leds 演示视频：
+查看下面的 gpio 和 led 演示视频：
 
 <div style={{ maxWidth: '100%', textAlign: 'center' }}>
   <video style={{ width: '100%', height: 'auto' }} controls>
@@ -308,17 +307,16 @@ led_daemon: LED set 0x00
   </video>
 </div>
 
-
 有关 NuttX RTOS 的更多信息，请访问 [NuttX 文档](https://nuttx.apache.org/docs/latest/index.html)
 
 ## ✨ 贡献者项目
 
-- 本项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
+- 此项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) 支持。
 - 特别感谢 [Rodrigo](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=92947609) 的专注努力。您的工作将被[展示](https://wiki.seeedstudio.com/contributors/)。
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多个沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

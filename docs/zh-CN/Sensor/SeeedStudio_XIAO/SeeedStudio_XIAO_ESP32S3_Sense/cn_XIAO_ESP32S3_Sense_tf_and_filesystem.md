@@ -14,12 +14,12 @@ last_update:
   author: Priyanshu Roy
 ---
 
-# 文件系统和 XIAO ESP32S3 Sense
+# 文件系统与 XIAO ESP32S3 Sense
 
 在本教程中，我们将重点介绍 XIAO ESP32S3 文件系统的使用，主要是 Sense 版本的 microSD 卡插槽的使用。同时，我们还将介绍官方的 ESP 文件系统 SPIFFS、芯片内置的 Flash 等。
 
 :::tip
-本教程的 microSD 卡部分**仅**适用于 **XIAO ESP32S3 Sense**，其余内容适用于 ESP32-S3 芯片，因此除了 microSD 卡部分外，您可以在 XIAO ESP32S3 上运行这些示例。
+本教程的 microSD 卡部分**仅**适用于 **XIAO ESP32S3 Sense**，其余内容适用于 ESP32-S3 芯片，因此除了 microSD 卡之外，您可以在 XIAO ESP32S3 上运行这些示例。
 :::
 
 <div class="table-center">
@@ -49,7 +49,7 @@ last_update:
 
 ## 入门指南
 
-由于本教程将使用 microSD 卡，我们需要提前安装 Sense 扩展板并准备 microSD 卡。
+由于本教程将使用 microSD 卡，我们需要提前安装 Sense 扩展板并准备好 microSD 卡。
 
 ### 扩展板安装（适用于 Sense）
 
@@ -63,7 +63,7 @@ XIAO ESP32S3 Sense 支持最大 **32GB** 的 microSD 卡，因此如果您准备
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/67.png" style={{width:250, height:'auto'}}/></div>
 
-格式化后，您可以将 microSD 卡插入 microSD 卡插槽。请注意插入方向，金手指一面应朝内。
+格式化后，您可以将 microSD 卡插入 microSD 卡槽。请注意插入方向，金手指一面应朝内。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/66.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -91,7 +91,7 @@ Card Mount Failed
 
 - 此过程将比快速格式化花费更长的时间。
 
-- 如果您重复使用之前用于其他目的的 microSD 卡（即重复使用包含 Linux 操作系统的 microSD 卡时），就会出现这些情况。
+- 当您重复使用之前用于其他目的的 microSD 卡时会出现这些情况（即当包含 Linux 操作系统的 microSD 卡被重复使用时）。
 
 :::
 
@@ -124,25 +124,25 @@ XIAO ESP32S3 Sense 卡槽占用 ESP32-S3 的 4 个 GPIO，占用的引脚详细�
     </table>
 </div>
 
-这也意味着如果您选择使用扩展板的 microSD 卡功能，就不能同时使用 XIAO ESP32S3 的 SPI 功能。您可以通过连接/切断 J3 的焊盘来开启/关闭 microSD 卡功能。
+这也意味着如果您选择使用扩展板的microSD卡功能，就不能同时使用XIAO ESP32S3的SPI功能。您可以通过连接/切断J3焊盘来开启/关闭microSD卡功能。
 
 <table align="center">
-	<tr>
-	    <th>如果您想使用 SPI 引脚 / 禁用扩展板的 SD 卡</th>
-	    <th>如果您想启用扩展板上的 SD 卡 / 禁用 SPI 引脚</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/33.png" style={{width:300, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/36.JPG" style={{width:300, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+     <th>如果您想使用SPI引脚 / 禁用扩展板的SD卡</th>
+     <th>如果您想启用扩展板上的SD卡 / 禁用SPI引脚</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/33.png" style={{width:300, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/36.JPG" style={{width:300, height:'auto'}}/></div></td>
+ </tr>
   <tr>
-    <td>沿着白色细线切割以断开焊盘连接。</td>
+    <td>沿着白色细线切断以断开焊盘连接。</td>
     <td>将两个焊盘焊接在一起。</td>
   </tr>
 </table>
 
 :::tip
-默认情况下，安装扩展板后 microSD 卡功能是启用的。
+默认情况下，安装扩展板后会启用 microSD 卡功能。
 :::
 
 ## 修改 microSD 卡中的文件
@@ -161,30 +161,30 @@ Arduino IDE 中有几个示例展示了如何使用 XIAO ESP32S3 处理 microSD 
 #include "SPI.h"
 
 void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
-    Serial.printf("列出目录: %s\n", dirname);
+    Serial.printf("Listing directory: %s\n", dirname);
 
     File root = fs.open(dirname);
     if(!root){
-        Serial.println("打开目录失败");
+        Serial.println("Failed to open directory");
         return;
     }
     if(!root.isDirectory()){
-        Serial.println("不是目录");
+        Serial.println("Not a directory");
         return;
     }
 
     File file = root.openNextFile();
     while(file){
         if(file.isDirectory()){
-            Serial.print("  目录 : ");
+            Serial.print("  DIR : ");
             Serial.println(file.name());
             if(levels){
                 listDir(fs, file.path(), levels -1);
             }
         } else {
-            Serial.print("  文件: ");
+            Serial.print("  FILE: ");
             Serial.print(file.name());
-            Serial.print("  大小: ");
+            Serial.print("  SIZE: ");
             Serial.println(file.size());
         }
         file = root.openNextFile();
@@ -192,33 +192,33 @@ void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
 }
 
 void createDir(fs::FS &fs, const char * path){
-    Serial.printf("创建目录: %s\n", path);
+    Serial.printf("Creating Dir: %s\n", path);
     if(fs.mkdir(path)){
-        Serial.println("目录已创建");
+        Serial.println("Dir created");
     } else {
-        Serial.println("创建目录失败");
+        Serial.println("mkdir failed");
     }
 }
 
 void removeDir(fs::FS &fs, const char * path){
-    Serial.printf("删除目录: %s\n", path);
+    Serial.printf("Removing Dir: %s\n", path);
     if(fs.rmdir(path)){
-        Serial.println("目录已删除");
+        Serial.println("Dir removed");
     } else {
-        Serial.println("删除目录失败");
+        Serial.println("rmdir failed");
     }
 }
 
 void readFile(fs::FS &fs, const char * path){
-    Serial.printf("读取文件: %s\n", path);
+    Serial.printf("Reading file: %s\n", path);
 
     File file = fs.open(path);
     if(!file){
-        Serial.println("打开文件进行读取失败");
+        Serial.println("Failed to open file for reading");
         return;
     }
 
-    Serial.print("从文件读取: ");
+    Serial.print("Read from file: ");
     while(file.available()){
         Serial.write(file.read());
     }
@@ -226,52 +226,52 @@ void readFile(fs::FS &fs, const char * path){
 }
 
 void writeFile(fs::FS &fs, const char * path, const char * message){
-    Serial.printf("写入文件: %s\n", path);
+    Serial.printf("Writing file: %s\n", path);
 
     File file = fs.open(path, FILE_WRITE);
     if(!file){
-        Serial.println("打开文件进行写入失败");
+        Serial.println("Failed to open file for writing");
         return;
     }
     if(file.print(message)){
-        Serial.println("文件已写入");
+        Serial.println("File written");
     } else {
-        Serial.println("写入失败");
+        Serial.println("Write failed");
     }
     file.close();
 }
 
 void appendFile(fs::FS &fs, const char * path, const char * message){
-    Serial.printf("追加到文件: %s\n", path);
+    Serial.printf("Appending to file: %s\n", path);
 
     File file = fs.open(path, FILE_APPEND);
     if(!file){
-        Serial.println("打开文件进行追加失败");
+        Serial.println("Failed to open file for appending");
         return;
     }
     if(file.print(message)){
-        Serial.println("消息已追加");
+        Serial.println("Message appended");
     } else {
-        Serial.println("追加失败");
+        Serial.println("Append failed");
     }
     file.close();
 }
 
 void renameFile(fs::FS &fs, const char * path1, const char * path2){
-    Serial.printf("重命名文件 %s 为 %s\n", path1, path2);
+    Serial.printf("Renaming file %s to %s\n", path1, path2);
     if (fs.rename(path1, path2)) {
-        Serial.println("文件已重命名");
+        Serial.println("File renamed");
     } else {
-        Serial.println("重命名失败");
+        Serial.println("Rename failed");
     }
 }
 
 void deleteFile(fs::FS &fs, const char * path){
-    Serial.printf("删除文件: %s\n", path);
+    Serial.printf("Deleting file: %s\n", path);
     if(fs.remove(path)){
-        Serial.println("文件已删除");
+        Serial.println("File deleted");
     } else {
-        Serial.println("删除失败");
+        Serial.println("Delete failed");
     }
 }
 
@@ -294,16 +294,16 @@ void testFileIO(fs::FS &fs, const char * path){
             len -= toRead;
         }
         end = millis() - start;
-        Serial.printf("读取 %u 字节用时 %u 毫秒\n", flen, end);
+        Serial.printf("%u bytes read for %u ms\n", flen, end);
         file.close();
     } else {
-        Serial.println("打开文件进行读取失败");
+        Serial.println("Failed to open file for reading");
     }
 
 
     file = fs.open(path, FILE_WRITE);
     if(!file){
-        Serial.println("打开文件进行写入失败");
+        Serial.println("Failed to open file for writing");
         return;
     }
 
@@ -313,7 +313,7 @@ void testFileIO(fs::FS &fs, const char * path){
         file.write(buf, 512);
     }
     end = millis() - start;
-    Serial.printf("写入 %u 字节用时 %u 毫秒\n", 2048 * 512, end);
+    Serial.printf("%u bytes written for %u ms\n", 2048 * 512, end);
     file.close();
 }
 
@@ -321,17 +321,17 @@ void setup(){
     Serial.begin(115200);
     while(!Serial);
     if(!SD.begin(21)){
-        Serial.println("SD卡挂载失败");
+        Serial.println("Card Mount Failed");
         return;
     }
     uint8_t cardType = SD.cardType();
 
     if(cardType == CARD_NONE){
-        Serial.println("未连接SD卡");
+        Serial.println("No SD card attached");
         return;
     }
 
-    Serial.print("SD卡类型: ");
+    Serial.print("SD Card Type: ");
     if(cardType == CARD_MMC){
         Serial.println("MMC");
     } else if(cardType == CARD_SD){
@@ -339,11 +339,11 @@ void setup(){
     } else if(cardType == CARD_SDHC){
         Serial.println("SDHC");
     } else {
-        Serial.println("未知");
+        Serial.println("UNKNOWN");
     }
 
     uint64_t cardSize = SD.cardSize() / (1024 * 1024);
-    Serial.printf("SD卡大小: %lluMB\n", cardSize);
+    Serial.printf("SD Card Size: %lluMB\n", cardSize);
 
     listDir(SD, "/", 0);
     createDir(SD, "/mydir");
@@ -357,8 +357,8 @@ void setup(){
     renameFile(SD, "/hello.txt", "/foo.txt");
     readFile(SD, "/foo.txt");
     testFileIO(SD, "/test.txt");
-    Serial.printf("总空间: %lluMB\n", SD.totalBytes() / (1024 * 1024));
-    Serial.printf("已用空间: %lluMB\n", SD.usedBytes() / (1024 * 1024));
+    Serial.printf("Total space: %lluMB\n", SD.totalBytes() / (1024 * 1024));
+    Serial.printf("Used space: %lluMB\n", SD.usedBytes() / (1024 * 1024));
 }
 
 void loop(){
@@ -367,7 +367,7 @@ void loop(){
 ```
 
 :::caution
-请注意，您不能直接使用示例程序，您需要对程序进行小的修改以确保其正常工作。修改是在 `Setup()` 函数中将原始代码从 `SD.begin()` 更改为 `SD.begin(21)`。指定用于初始化的引脚号。
+请注意，您不能直接使用示例程序，您需要对程序进行轻微修改以确保其正常工作。修改是在 `Setup()` 函数中将原始代码从 `SD.begin()` 更改为 `SD.begin(21)`。指定用于初始化的引脚号。
 :::
 
 将程序上传到 XIAO ESP32S3 Sense，打开串口监视器，您将看到文件创建过程和写入过程。您也可以使用 microSD 转 USB 通过计算机访问新创建的文件和内容。
@@ -385,9 +385,9 @@ void loop(){
 
 首先，您需要包含以下库：**FS.h** 用于处理文件，**SD.h** 用于与 microSD 卡接口，**SPI.h** 用于使用 SPI 通信协议。
 
-1. 在 `setup()` 中，以下行使用 `SD.begin(21)` 初始化 microSD 卡。在这里，我们需要为 `SD.begin()` 传递一个参数，即 CS 引脚。对于扩展板的 microSD 卡设计，CS 引脚连接到 **GPIO 21**。如果您使用的是 XIAO 的圆形显示屏，那么传入的参数应该是 **D2**。
+1. 在 `setup()` 中，以下代码行使用 `SD.begin(21)` 初始化 microSD 卡。这里，我们需要为 `SD.begin()` 传递一个参数，即 CS 引脚。对于扩展板的 microSD 卡设计，CS 引脚连接到 **GPIO 21**。如果您使用的是 Round Display for XIAO，那么传入的参数应该是 **D2**。
 
-2. 以下行在串口监视器上打印 microSD 卡类型。
+2. 以下代码行在串口监视器上打印 microSD 卡类型。
 
 ```c
 uint8_t cardType = SD.cardType();
@@ -409,7 +409,7 @@ if(cardType == CARD_MMC){
 }
 ```
 
-3. 您可以通过调用 `cardSize()` 方法来获取 microSD 卡的大小：
+3. You can get the microSDcard size by calling the `cardSize()` method:
 
 ```c
 uint64_t cardSize = SD.cardSize() / (1024 * 1024);
@@ -418,7 +418,7 @@ Serial.printf("SD Card Size: %lluMB\n", cardSize);
 
 **该示例提供了几个函数来处理microSD卡上的文件。**
 
-4. `listDir()` 函数列出SD卡上的目录。该函数接受文件系统(SD)、主目录名称和进入目录的层级作为参数。
+4. `listDir()` 函数列出SD卡上的目录。该函数接受文件系统（SD）、主目录名称和进入目录的级别作为参数。
 
    以下是如何调用此函数的示例。`/` 对应microSD卡的根目录。
 
@@ -438,13 +438,13 @@ createDir(SD, "/mydir");
 removeDir(SD, "/mydir");
 ```
 
-7. `readFile()` 函数读取文件内容并在串口监视器中打印内容。与之前的函数一样，传递 `SD` 文件系统和文件路径作为参数。例如，以下代码行读取 `hello.txt` 文件的内容。
+7. `readFile()` 函数读取文件内容并在串口监视器中打印内容。与之前的函数一样，传递 `SD` 文件系统和文件路径作为参数。例如，以下行读取 `hello.txt` 文件的内容。
 
 ```c
 readFile(SD, "/hello.txt")
 ```
 
-8. 要向文件写入内容，您可以使用 `writeFile()` 函数。传递 `SD` 文件系统、文件路径和消息作为参数。以下代码行在 `hello.txt` 文件中写入 `Hello`。
+8. 要向文件写入内容，您可以使用 `writeFile()` 函数。传递 `SD` 文件系统、文件路径和消息作为参数。以下行在 `hello.txt` 文件中写入 `Hello`。
 
 ```c
 writeFile(SD, "/hello.txt", "Hello ");
@@ -480,45 +480,45 @@ testFileIO(SD, "/test.txt");
 本节仅适用于XIAO ESP32S3 Sense。
 :::
 
-本项目展示了如何使用XIAO ESP32S3 Sense将带有时间戳的数据记录到TF卡中。作为示例，我们将每10分钟记录一次来自多通道气体传感器的温度读数。XIAO ESP32S3将在每次读数之间处于深度睡眠模式，并使用网络时间协议(NTP)请求日期和时间。
+本项目展示了如何使用XIAO ESP32S3 Sense将带有时间戳的数据记录到TF卡中。作为示例，我们将每10分钟记录一次来自多通道气体传感器的温度读数。XIAO ESP32S3在每次读数之间将处于深度睡眠模式，并且它将使用网络时间协议(NTP)请求日期和时间。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/72.jpg" style={{width:800, height:'auto'}}/></div>
 
 要完成此项目，您需要提前准备以下硬件。
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO ESP32S3 Sense</th>
+ <tr>
+     <th>Seeed Studio XIAO ESP32S3 Sense</th>
         <th>Seeed Studio XIAO扩展底板配Grove OLED</th>
-        <th>Grove - 多通道气体传感器 v2</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
+        <th>Grove - 多通道气体传感器v2</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:250, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/04.png" style={{width:250, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
-对于软件，您需要提前为Arduino IDE安装以下库。
+对于软件，您需要提前为 Arduino IDE 安装以下库。
 
-- Taranais分支的NTPClient库
+- Taranais 分支的 NTPClient 库
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/taranais/NTPClient" target="_blank" rel="noopener noreferrer">
@@ -538,58 +538,58 @@ testFileIO(SD, "/test.txt");
 
 <br />
 
-以下是完整的示例程序。在程序中我们需要使用网络配对时间，因此您需要将程序中的WiFi名称和密码更改为您的。
+以下是完整的示例程序。在程序中我们需要使用网络对时功能，因此您需要将程序中的 WiFi 名称和密码更改为您的。
 
 ```cpp
 #include "FS.h"
 #include "SD.h"
 #include <SPI.h>
 
-//多通道气体传感器库
+//multichannel gas libraries
 #include <Multichannel_Gas_GMXXX.h>
 #include <Wire.h>
 
-// 从NTP服务器获取时间的库
+// Libraries to get time from NTP Server
 #include <NTPClient.h>
 #include <WiFiUdp.h>
 
 #include "WiFi.h"
 
-// 定义深度睡眠选项
-uint64_t uS_TO_S_FACTOR = 1000000;  // 微秒到秒的转换因子
-// 睡眠10分钟 = 600秒
+// Define deep sleep options
+uint64_t uS_TO_S_FACTOR = 1000000;  // Conversion factor for micro seconds to seconds
+// Sleep for 10 minutes = 600 seconds
 uint64_t TIME_TO_SLEEP = 600;
 
-// 替换为您的网络凭据
+// Replace with your network credentials
 const char* ssid     = "REPLACE_WITH_YOUR_SSID";
 const char* password = "REPLACE_WITH_YOUR_PASSWORD";
 
-// 为SD卡模块定义CS引脚
+// Define CS pin for the SD card module
 #define SD_CS 21
 
-// 在RTC内存中保存读取编号
+// Save reading number on RTC memory
 RTC_DATA_ATTR int readingID = 0;
 
 String dataMessage;
 
-// 气体传感器变量
+// Gas Sensor variables
 int NO2_val, C2H5CH_val, VOC_val, CO_val;
 GAS_GMXXX<TwoWire> gas;
 
-// 定义NTP客户端以获取时间
+// Define NTP Client to get time
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP);
 
-// 保存日期和时间的变量
+// Variables to save date and time
 String formattedDate;
 String dayStamp;
 String timeStamp;
 
 void setup() {
-  // 启动串行通信用于调试
+  // Start serial communication for debugging purposes
   Serial.begin(115200);
 
-  // 使用SSID和密码连接到Wi-Fi网络
+  // Connect to Wi-Fi network with SSID and password
   Serial.print("Connecting to ");
   Serial.println(ssid);
   WiFi.begin(ssid, password);
@@ -600,16 +600,16 @@ void setup() {
   Serial.println("");
   Serial.println("WiFi connected.");
 
-  // 初始化NTP客户端以获取时间
+  // Initialize a NTPClient to get time
   timeClient.begin();
-  // 设置时区偏移时间（秒），例如：
+  // Set offset time in seconds to adjust for your timezone, for example:
   // GMT +1 = 3600
   // GMT +8 = 28800
   // GMT -1 = -3600
   // GMT 0 = 0
   timeClient.setTimeOffset(3600);
 
-  // 初始化SD卡
+  // Initialize SD card
   SD.begin(SD_CS);
   if(!SD.begin(SD_CS)) {
     Serial.println("Card Mount Failed");
@@ -623,11 +623,11 @@ void setup() {
   Serial.println("Initializing SD card...");
   if (!SD.begin(SD_CS)) {
     Serial.println("ERROR - SD card initialization failed!");
-    return;    // 初始化失败
+    return;    // init failed
   }
 
-  // 如果data.txt文件不存在
-  // 在SD卡上创建文件并写入数据标签
+  // If the data.txt file doesn't exist
+  // Create a file on the SD card and write the data labels
   File file = SD.open("/data.txt");
   if(!file) {
     Serial.println("File doens't exist");
@@ -639,38 +639,38 @@ void setup() {
   }
   file.close();
 
-  // 启动气体传感器
-  gas.begin(Wire, 0x08); // 使用硬件I2C
+  // Start the gas sensor
+  gas.begin(Wire, 0x08); // use the hardware I2C
 
   getReadings();
   getTimeStamp();
   logSDCard();
 
-  // 每次新读取时递增readingID
+  // Increment readingID on every new reading
   readingID++;
 
-  // 开始深度睡眠
+  // Start deep sleep
   Serial.println("DONE! Going to sleep now.");
 
-  // 启用定时器唤醒
+  // Enable Timer wake_up
   esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
   esp_deep_sleep_start();
 }
 
 void loop() {
-  // ESP32将处于深度睡眠状态
-  // 永远不会到达loop()
+  // The ESP32 will be in deep sleep
+  // it never reaches the loop()
 }
 
-// 获取温度的函数
+// Function to get temperature
 void getReadings(){
-  // GM102B NO2传感器 ppm
+  // GM102B NO2 sensor ppm
   NO2_val = gas.getGM102B();
-  // GM302B C2H5CH传感器 ppm
+  // GM302B C2H5CH sensor ppm
   C2H5CH_val = gas.getGM302B();
-  // GM502B VOC传感器
+  // GM502B VOC sensor
   VOC_val = gas.getGM502B();
-  // GM702B CO传感器
+  // GM702B CO sensor
   CO_val = gas.getGM702B();
 
   Serial.print("NO2 Value is: ");
@@ -686,27 +686,27 @@ void getReadings(){
   Serial.println(CO_val);
 }
 
-// 从NTP客户端获取日期和时间的函数
+// Function to get date and time from NTPClient
 void getTimeStamp() {
   while(!timeClient.update()) {
     timeClient.forceUpdate();
   }
-  // formattedDate具有以下格式：
+  // The formattedDate comes with the following format:
   // 2018-05-28T16:00:13Z
-  // 我们需要提取日期和时间
+  // We need to extract date and time
   formattedDate = timeClient.getFormattedDate();
   Serial.println(formattedDate);
 
-  // 提取日期
+  // Extract date
   int splitT = formattedDate.indexOf("T");
   dayStamp = formattedDate.substring(0, splitT);
   Serial.println(dayStamp);
-  // 提取时间
+  // Extract time
   timeStamp = formattedDate.substring(splitT+1, formattedDate.length()-1);
   Serial.println(timeStamp);
 }
 
-// 将传感器读数写入SD卡
+// Write the sensor readings on the SD card
 void logSDCard() {
   dataMessage = String(readingID) + "," + String(dayStamp) + "," + String(timeStamp) + "," +
                 String(NO2_val) + "," + String(C2H5CH_val) + "," + String(VOC_val) + "," +
@@ -716,7 +716,7 @@ void logSDCard() {
   appendFile(SD, "/data.txt", dataMessage.c_str());
 }
 
-// 写入SD卡（不要修改此函数）
+// Write to the SD card (DON'T MODIFY THIS FUNCTION)
 void writeFile(fs::FS &fs, const char * path, const char * message) {
   Serial.printf("Writing file: %s\n", path);
 
@@ -733,7 +733,7 @@ void writeFile(fs::FS &fs, const char * path, const char * message) {
   file.close();
 }
 
-// 向SD卡追加数据（不要修改此函数）
+// Append data to the SD card (DON'T MODIFY THIS FUNCTION)
 void appendFile(fs::FS &fs, const char * path, const char * message) {
   Serial.printf("Appending to file: %s\n", path);
 
@@ -760,7 +760,7 @@ void appendFile(fs::FS &fs, const char * path, const char * message) {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/71.png" style={{width:500, height:'auto'}}/></div>
 
 :::note
-为了便于测试，效果显示为每分钟保存一次数据，实际提供的示例代码是每十分钟保存一次数据。
+为了便于测试，演示效果显示每分钟保存一次数据，实际提供的示例代码是每十分钟保存一次数据。
 :::
 
 :::caution
@@ -768,13 +768,14 @@ void appendFile(fs::FS &fs, const char * path, const char * message) {
 
 1. 多通道气体传感器需要一段预热时间才能获得准确的数值。因此，如果误差较大，可以考虑丢弃前几组记录的数据。
 2. 串口监视器只会输出一次保存信息，因为这个示例使用了深度睡眠功能，相当于唤醒后重置，也就是说您需要重新打开Arduino的串口才能看到下一次的调试信息。但请放心，如果卡没有问题，传感器数据会在您设定的时间准时采集。
+
    :::
 
 ### 程序注释
 
 在这个示例中，XIAO ESP32S3在每次读取之间都处于深度睡眠模式。在深度睡眠模式下，您的所有代码都应该放在`setup()`函数中，因为XIAO ESP32S3永远不会到达`loop()`。
 
-这个示例使用了从微秒到秒的转换因子，这样您就可以在`TIME_TO_SLEEP`变量中以秒为单位设置睡眠时间。在这种情况下，我们将XIAO ESP32S3设置为睡眠10分钟（600秒）。如果您希望XIAO ESP32S3睡眠不同的时间段，您只需要在`TIME_TO_SLEEP`变量中输入深度睡眠的秒数。
+这个示例使用了从微秒到秒的转换因子，这样您就可以在`TIME_TO_SLEEP`变量中以秒为单位设置睡眠时间。在这种情况下，我们设置XIAO ESP32S3睡眠10分钟（600秒）。如果您希望XIAO ESP32S3睡眠不同的时间段，您只需要在`TIME_TO_SLEEP`变量中输入深度睡眠的秒数。
 
 ```c
 // Define deep sleep options
@@ -783,7 +784,7 @@ uint64_t uS_TO_S_FACTOR = 1000000; // Conversion factor for micro seconds to sec
 uint64_t TIME_TO_SLEEP = 600;
 ```
 
-接下来，定义 microSD 卡的 CS 引脚。在这种情况下，它被设置为 **GPIO 21**。
+Next, define the microSD card CS pin. In this case, it is set to **GPIO 21**.
 
 ```c
 #define SD_CS 21
@@ -817,7 +818,7 @@ esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
 esp_deep_sleep_start();
 ```
 
-我们建议您将这两个函数一起使用。确保 XIAO 在设置唤醒时间后能够尽快进入深度睡眠模式。
+我们建议您将这两个功能一起使用。确保 XIAO 在设置唤醒时间后能够尽快进入深度睡眠模式。
 
 ## 串行外设接口闪存文件系统 (SPIFFS)
 
@@ -835,8 +836,8 @@ SPIFFS 让您可以像在计算机上的普通文件系统中一样访问闪存�
 
 - 创建带有设置的配置文件
 - 永久保存数据
-- 创建文件以保存少量数据，而不是使用 microSD 卡
-- 保存 HTML 和 CSS 文件以构建 Web 服务器
+- 创建文件来保存少量数据，而不是使用 microSD 卡
+- 保存 HTML 和 CSS 文件来构建 Web 服务器
 - 保存图像、图形和图标
 
 ### 安装 Arduino ESP32 文件系统上传器
@@ -905,7 +906,7 @@ SPIFFS 让您可以像在计算机上的普通文件系统中一样访问闪存�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/79.png" style={{width:400, height:'auto'}}/></div>
 
-**步骤 9.** data 文件夹内是您应该放置要保存到 ESP32 文件系统中的文件的地方。作为示例，创建一个包含一些文本的 _.txt_ 文件，名为 **test_example**。
+**步骤 9.** 在 data 文件夹内是您应该放置要保存到 ESP32 文件系统中的文件的地方。作为示例，创建一个包含一些文本的 _.txt_ 文件，名为 **test_example**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/80.png" style={{width:700, height:'auto'}}/></div>
 
@@ -921,7 +922,7 @@ SPIFFS 让您可以像在计算机上的普通文件系统中一样访问闪存�
 
 ### 测试上传器
 
-现在，让我们检查文件是否真的保存到了 ESP32 文件系统中。只需将以下代码上传到您的 ESP32 开发板。
+现在，让我们检查文件是否实际保存到了 ESP32 文件系统中。只需将以下代码上传到您的 ESP32 开发板。
 
 ```cpp
 #include "SPIFFS.h"
@@ -954,56 +955,56 @@ void loop() {
 }
 ```
 
-上传后，以 115200 波特率打开串口监视器。它应该在串口监视器上打印您的 _.txt_ 文件的内容。
+上传后，以115200的波特率打开串口监视器。它应该会在串口监视器上打印你的_.txt_文件的内容。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/82.png" style={{width:800, height:'auto'}}/></div>
 
-## 闪存数据存储
+## Flash数据存储
 
 :::caution
-本节适用于 XIAO ESP32C3、XIAO ESP32S3 或 XIAO ESP32S3 Sense。
+本节适用于XIAO ESP32C3、XIAO ESP32S3或XIAO ESP32S3 Sense。
 :::
 
 当我们使用开发板时，许多人都希望能够使用芯片上的闪存来存储一些重要数据。这需要一种存储方法，确保即使在开发板异常情况下也不会丢失数据。
 
-本教程将介绍如何通过以下两种不同的存储方法在 XIAO ESP32 闪存上存储重要数据：
+本教程将介绍如何通过以下两种不同的存储方法在XIAO ESP32闪存上存储重要数据：
 
-1. 第一个指南展示如何使用 Preferences.h 库在 ESP32 闪存上永久保存数据。保存在闪存中的数据在重置或断电后仍然存在。使用 Preferences.h 库对于保存网络凭据、API 密钥、阈值或甚至 GPIO 的最后状态等数据很有用。您将学习如何从闪存保存和读取数据。
+1. 第一个指南展示如何使用Preferences.h库在ESP32闪存上永久保存数据。存储在闪存中的数据在重置或断电后仍然保持。使用Preferences.h库对于保存网络凭据、API密钥、阈值或甚至GPIO的最后状态等数据很有用。你将学习如何从闪存中保存和读取数据。
 
-2. 第二个指南解释什么是 XIAO ESP32C3 EEPROM 以及它的用途。我们还将向您展示如何从 EEPROM 写入和读取数据，并构建一个项目示例来将学到的概念付诸实践。
+2. 第二个指南解释了什么是XIAO ESP32C3 EEPROM以及它的用途。我们还将向你展示如何从EEPROM写入和读取数据，并构建一个项目示例来将所学概念付诸实践。
 
-本节是为 XIAO ESP32C3 编写的，与新的 XIAO ESP32S3 完全兼容，因此您可以直接使用这里的例程，所以我们不会在这里再次详述。
+本节是为XIAO ESP32C3编写的，完全兼容新的XIAO ESP32S3，所以你可以直接使用这里的例程，因此我们不会在这里重复介绍。
 
-- [XIAO ESP32C3 以不同方式永久存储数据](https://wiki.seeedstudio.com/cn/xiaoesp32c3-flash-storage/)
+- [XIAO ESP32C3以不同方式永久存储数据](https://wiki.seeedstudio.com/xiaoesp32c3-flash-storage/)
 
 ## 故障排除
 
-## 引用和参考
+## 引用与参考
 
-本文借鉴了 **[Random Nerd Tutorials](https://randomnerdtutorials.com/)** 关于 ESP32 文件系统的内容，并在 Seeed Studio XIAO ESP32S3 Sense 上进行了验证使用。
+本文借鉴了**[Random Nerd Tutorials](https://randomnerdtutorials.com/)**关于ESP32的文件系统内容，并在Seeed Studio XIAO ESP32S3 Sense上进行了验证使用。
 
-特别感谢 **Random Nerd Tutorials** 的作者们的辛勤工作！
+特别感谢**Random Nerd Tutorials**作者们的辛勤工作！
 
-以下是原文的参考链接，欢迎您通过以下原文链接了解更多关于 ESP32 文件系统的内容。
+以下是原文的参考链接，欢迎通过以下原文链接了解更多关于ESP32文件系统的内容。
 
 - [ESP32: Guide for MicroSD Card Module using Arduino IDE](https://randomnerdtutorials.com/esp32-microsd-card-arduino/)
 - [ESP32 Data Logging Temperature to MicroSD Card](https://randomnerdtutorials.com/esp32-data-logging-temperature-to-microsd-card/)
 - [Install ESP32 Filesystem Uploader in Arduino IDE](https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/)
 
-有关使用 ESP32 开发板的更多信息，请阅读 Random Nerd Tutorials 的官方网站。
+有关使用ESP32开发板的更多信息，请阅读Random Nerd Tutorials官方网站。
 
 - [Random Nerd Tutorials](https://randomnerdtutorials.com/)
 
-## 技术支持和产品讨论
+## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

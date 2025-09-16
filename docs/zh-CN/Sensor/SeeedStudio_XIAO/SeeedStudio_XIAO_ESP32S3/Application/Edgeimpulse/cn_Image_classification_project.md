@@ -16,7 +16,7 @@ last_update:
 
 ## 工作原理
 
-我们在 XIAO 上运行机器学习模型并向其提供摄像头数据流。然后 XIAO 推理结果并在我们实现的板载神经网络的帮助下进行预测。让我们构建一个。
+我们在 XIAO 上运行机器学习模型并向其提供摄像头流。然后 XIAO 推理结果并在我们实现的板载神经网络的帮助下进行预测。让我们构建一个。
 
 <div style={{textAlign:'center'}}><img src="https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/digram.png?raw=true" style={{width:1000, height:'auto'}}/></div>
 
@@ -52,7 +52,7 @@ last_update:
 
 通过将扩展板与 XIAO ESP32S3 Sense 安装，您可以使用扩展板上的功能。
 
-安装扩展板非常简单，您只需要将扩展板上的连接器与 XIAO ESP32S3 上的 B2B 连接器对齐，用力按压并听到"咔嗒"声，安装就完成了。
+安装扩展板非常简单，您只需要将扩展板上的连接器与 XIAO ESP32S3 上的 B2B 连接器对齐，用力按下并听到"咔嗒"声，安装就完成了。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -169,55 +169,60 @@ XIAO ESP32S3 的板载包至少需要版本 **2.0.8** 才能使用。
 
 ## 步骤 3. 运行示例代码
 
-尽管 Edge Impulse 尚未发布使用 ESP NN 加速器的 ESP32S3 SDK，但感谢 Dmitry Maslov，我们可以恢复并修复其针对 ESP32-S3 的汇编优化。这个解决方案目前还不是官方版本，EI 将在修复与其他开发板的冲突后将其包含在 EI SDK 中。
+<!-- 尽管 Edge Impulse 尚未发布使用 ESP NN 加速器的 ESP32S3 SDK，但感谢 Dmitry Maslov，我们可以恢复并修复其针对 ESP32-S3 的汇编优化。这个解决方案目前还不是官方的，EI 将在修复与其他开发板的冲突后将其包含在 EI SDK 中。
 
 :::caution
-目前，这仅适用于非 EON 版本。因此，您还应该保持 **Enable EON Compiler** 选项未选中状态。
+目前，这仅适用于非 EON 版本。因此，您还应该保持 **Enable EON Compiler** 选项未选中。
 :::
 
 当选择 Build 按钮时，将创建一个 Zip 文件并下载到您的计算机。
 
-在我们使用下载的库之前，我们需要启用 **ESP NN** 加速器。为此，您可以从 [项目 GitHub](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/blob/main/ESP-NN.zip) 下载一个预览版本，解压缩它，并在您的 Arduino 库文件夹中用它替换 ESP NN 文件夹：`src/edge-impulse-sdk/porting/espressif/ESP-NN`。
+在我们使用下载的库之前，我们需要启用 **ESP NN** 加速器。为此，您可以从 [项目 GitHub](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/blob/main/ESP-NN.zip) 下载一个初步版本，解压缩它，并在您的 Arduino 库文件夹中用它替换 ESP NN 文件夹：`src/edge-impulse-sdk/porting/espressif/ESP-NN`。
 
 :::warning 注意
 
-- 记住要替换 ESP-NN 文件夹，不要保留现有文件夹或更改其名称来恢复它。直接删除即可。
+- 记住要替换 ESP-NN 文件夹，不要保留现有文件夹或更改其名称来恢复它。只需删除它即可。
 - 头文件的顺序可能会影响编译，因此请确保保持头文件的正确顺序。
 
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/10.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/10.png" style={{width:800, height:'auto'}}/></div> -->
 
 复制下面的推理代码并粘贴到您的 Arduino IDE 中。
 
 ```cpp
-/* Edge Impulse Arduino 示例
- * 版权所有 (c) 2022 EdgeImpulse Inc.
+/* Edge Impulse Arduino examples
+ * Copyright (c) 2022 EdgeImpulse Inc.
  *
- * 特此免费授予任何获得本软件及相关文档文件（"软件"）副本的人
- * 不受限制地处理软件的权限，包括但不限于使用、复制、修改、合并、
- * 发布、分发、再许可和/或销售软件副本的权利，并允许向其提供软件的
- * 人员这样做，但须符合以下条件：
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  *
- * 上述版权声明和本许可声明应包含在软件的所有副本或重要部分中。
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
  *
- * 软件按"原样"提供，不提供任何形式的明示或暗示保证，包括但不限于
- * 适销性、特定用途适用性和非侵权性的保证。在任何情况下，作者或
- * 版权持有人均不对任何索赔、损害或其他责任负责，无论是在合同诉讼、
- * 侵权行为还是其他方面，由软件或软件的使用或其他交易引起、产生或
- * 与之相关。
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
  */
 
-/* 包含文件 ---------------------------------------------------------------- */
+/* Includes ---------------------------------------------------------------- */
 #include <XIAO_esp32S3_CatDog2_inferencing.h>
 #include "edge-impulse-sdk/dsp/image/image.hpp"
 
 #include "esp_camera.h"
 
-// 选择摄像头型号 - 在 camera_pins.h 文件中查找更多摄像头型号
+// Select camera model - find more camera models in camera_pins.h file here
 // https://github.com/espressif/arduino-esp32/blob/master/libraries/ESP32/examples/Camera/CameraWebServer/camera_pins.h
 
-#define CAMERA_MODEL_XIAO_ESP32S3 // 具有 PSRAM
+#define CAMERA_MODEL_XIAO_ESP32S3 // Has PSRAM
 
 #define PWDN_GPIO_NUM     -1
 #define RESET_GPIO_NUM    -1
@@ -240,15 +245,15 @@ XIAO ESP32S3 的板载包至少需要版本 **2.0.8** 才能使用。
 #define LED_GPIO_NUM      21
 
 
-/* 常量定义 -------------------------------------------------------- */
+/* Constant defines -------------------------------------------------------- */
 #define EI_CAMERA_RAW_FRAME_BUFFER_COLS           320
 #define EI_CAMERA_RAW_FRAME_BUFFER_ROWS           240
 #define EI_CAMERA_FRAME_BYTE_SIZE                 3
 
-/* 私有变量 ------------------------------------------------------- */
-static bool debug_nn = false; // 将此设置为 true 以查看例如从原始信号生成的特征
+/* Private variables ------------------------------------------------------- */
+static bool debug_nn = false; // Set this to true to see e.g. features generated from the raw signal
 static bool is_initialised = false;
-uint8_t *snapshot_buf; //指向捕获输出的指针
+uint8_t *snapshot_buf; //points to the output of the capture
 
 static camera_config_t camera_config = {
     .pin_pwdn = PWDN_GPIO_NUM,
@@ -269,64 +274,64 @@ static camera_config_t camera_config = {
     .pin_href = HREF_GPIO_NUM,
     .pin_pclk = PCLK_GPIO_NUM,
 
-    //XCLK 20MHz 或 10MHz 用于 OV2640 双倍 FPS（实验性）
+    //XCLK 20MHz or 10MHz for OV2640 double FPS (Experimental)
     .xclk_freq_hz = 20000000,
     .ledc_timer = LEDC_TIMER_0,
     .ledc_channel = LEDC_CHANNEL_0,
 
     .pixel_format = PIXFORMAT_JPEG, //YUV422,GRAYSCALE,RGB565,JPEG
-    .frame_size = FRAMESIZE_QVGA,    //QQVGA-UXGA 非 JPEG 时不要使用 QVGA 以上的尺寸
+    .frame_size = FRAMESIZE_QVGA,    //QQVGA-UXGA Do not use sizes above QVGA when not JPEG
 
-    .jpeg_quality = 12, //0-63 数字越小质量越高
-    .fb_count = 1,       //如果超过一个，i2s 以连续模式运行。仅与 JPEG 一起使用
+    .jpeg_quality = 12, //0-63 lower number means higher quality
+    .fb_count = 1,       //if more than one, i2s runs in continuous mode. Use only with JPEG
     .fb_location = CAMERA_FB_IN_PSRAM,
     .grab_mode = CAMERA_GRAB_WHEN_EMPTY,
 };
 
-/* 函数定义 ------------------------------------------------------- */
+/* Function definitions ------------------------------------------------------- */
 bool ei_camera_init(void);
 void ei_camera_deinit(void);
 bool ei_camera_capture(uint32_t img_width, uint32_t img_height, uint8_t *out_buf) ;
 
 /**
-* @brief      Arduino 设置函数
+* @brief      Arduino setup function
 */
 void setup()
 {
-    // 将您的设置代码放在这里，运行一次：
+    // put your setup code here, to run once:
     Serial.begin(115200);
-    //注释掉下面的行以在上传后立即开始推理
+    //comment out the below line to start inference immediately after upload
     while (!Serial);
-    Serial.println("Edge Impulse 推理演示");
+    Serial.println("Edge Impulse Inferencing Demo");
     if (ei_camera_init() == false) {
-        ei_printf("摄像头初始化失败！\r\n");
+        ei_printf("Failed to initialize Camera!\r\n");
     }
     else {
-        ei_printf("摄像头已初始化\r\n");
+        ei_printf("Camera initialized\r\n");
     }
 
-    ei_printf("\n2秒后开始连续推理...\n");
+    ei_printf("\nStarting continious inference in 2 seconds...\n");
     ei_sleep(2000);
 }
 
 /**
-* @brief      获取数据并运行推理
+* @brief      Get data and run inferencing
 *
-* @param[in]  debug  如果为 true 则获取调试信息
+* @param[in]  debug  Get debug info if true
 */
 void loop()
 {
 
-    // 我们将等待信号而不是 wait_ms，这允许线程取消我们...
+    // instead of wait_ms, we'll wait on the signal, this allows threads to cancel us...
     if (ei_sleep(5) != EI_IMPULSE_OK) {
         return;
     }
 
     snapshot_buf = (uint8_t*)malloc(EI_CAMERA_RAW_FRAME_BUFFER_COLS * EI_CAMERA_RAW_FRAME_BUFFER_ROWS * EI_CAMERA_FRAME_BYTE_SIZE);
 
-    // 检查分配是否成功
+    // check if allocation was successful
     if(snapshot_buf == nullptr) {
-        ei_printf("错误：快照缓冲区分配失败！\n");
+        ei_printf("ERR: Failed to allocate snapshot buffer!\n");
         return;
     }
 
@@ -335,22 +340,22 @@ void loop()
     signal.get_data = &ei_camera_get_data;
 
     if (ei_camera_capture((size_t)EI_CLASSIFIER_INPUT_WIDTH, (size_t)EI_CLASSIFIER_INPUT_HEIGHT, snapshot_buf) == false) {
-        ei_printf("图像捕获失败\r\n");
+        ei_printf("Failed to capture image\r\n");
         free(snapshot_buf);
         return;
     }
 
-    // 运行分类器
+    // Run the classifier
     ei_impulse_result_t result = { 0 };
 
     EI_IMPULSE_ERROR err = run_classifier(&signal, &result, debug_nn);
     if (err != EI_IMPULSE_OK) {
-        ei_printf("错误：分类器运行失败 (%d)\n", err);
+        ei_printf("ERR: Failed to run classifier (%d)\n", err);
         return;
     }
 
-    // 打印预测结果
-    ei_printf("预测结果 (DSP: %d ms., 分类: %d ms., 异常: %d ms.): \n",
+    // print the predictions
+    ei_printf("Predictions (DSP: %d ms., Classification: %d ms., Anomaly: %d ms.): \n",
                 result.timing.dsp, result.timing.classification, result.timing.anomaly);
 
 #if EI_CLASSIFIER_OBJECT_DETECTION == 1
@@ -363,7 +368,7 @@ void loop()
         ei_printf("    %s (%f) [ x: %u, y: %u, width: %u, height: %u ]\n", bb.label, bb.value, bb.x, bb.y, bb.width, bb.height);
     }
     if (!bb_found) {
-        ei_printf("    未找到对象\n");
+        ei_printf("    No objects found\n");
     }
 #else
     for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
@@ -373,7 +378,7 @@ void loop()
 #endif
 
 #if EI_CLASSIFIER_HAS_ANOMALY == 1
-        ei_printf("    异常分数: %.3f\n", result.anomaly);
+        ei_printf("    anomaly score: %.3f\n", result.anomaly);
 #endif
 
 
@@ -382,9 +387,9 @@ void loop()
 }
 
 /**
- * @brief   设置图像传感器并开始流式传输
+ * @brief   Setup image sensor & start streaming
  *
- * @retval  如果初始化失败则返回 false
+ * @retval  false if initialisation failed
  */
 bool ei_camera_init(void) {
 
@@ -395,19 +400,19 @@ bool ei_camera_init(void) {
   pinMode(14, INPUT_PULLUP);
 #endif
 
-    //初始化摄像头
+    //initialize the camera
     esp_err_t err = esp_camera_init(&camera_config);
     if (err != ESP_OK) {
-      Serial.printf("摄像头初始化失败，错误代码 0x%x\n", err);
+      Serial.printf("Camera init failed with error 0x%x\n", err);
       return false;
     }
 
     sensor_t * s = esp_camera_sensor_get();
-    // 初始传感器垂直翻转，颜色有点饱和
+    // initial sensors are flipped vertically and colors are a bit saturated
     if (s->id.PID == OV3660_PID) {
-      s->set_vflip(s, 1); // 翻转回来
-      s->set_brightness(s, 1); // 稍微提高亮度
-      s->set_saturation(s, 0); // 降低饱和度
+      s->set_vflip(s, 1); // flip it back
+      s->set_brightness(s, 1); // up the brightness just a bit
+      s->set_saturation(s, 0); // lower the saturation
     }
 
 #if defined(CAMERA_MODEL_M5STACK_WIDE)
@@ -424,16 +429,16 @@ bool ei_camera_init(void) {
 }
 
 /**
- * @brief      停止传感器数据流式传输
+ * @brief      Stop streaming of sensor data
  */
 void ei_camera_deinit(void) {
 
-    //反初始化摄像头
+    //deinitialize the camera
     esp_err_t err = esp_camera_deinit();
 
     if (err != ESP_OK)
     {
-        ei_printf("摄像头反初始化失败\n");
+        ei_printf("Camera deinit failed\n");
         return;
     }
 
@@ -443,29 +448,28 @@ void ei_camera_deinit(void) {
 
 
 /**
- * @brief      捕获、重新缩放和裁剪图像
+ * @brief      Capture, rescale and crop image
  *
- * @param[in]  img_width     输出图像宽度
- * @param[in]  img_height    输出图像高度
- * @param[in]  out_buf       存储输出图像的指针，如果要使用
- *                           ei_camera_frame_buffer 进行捕获和调整大小/裁剪，
- *                           则可以使用 NULL。
+ * @param[in]  img_width     width of output image
+ * @param[in]  img_height    height of output image
+ * @param[in]  out_buf       pointer to store output image, NULL may be used
+ *                           if ei_camera_frame_buffer is to be used for capture and resize/cropping.
  *
- * @retval     如果未初始化、图像捕获、重新缩放或裁剪失败则返回 false
+ * @retval     false if not initialised, image captured, rescaled or cropped failed
  *
  */
 bool ei_camera_capture(uint32_t img_width, uint32_t img_height, uint8_t *out_buf) {
     bool do_resize = false;
 
     if (!is_initialised) {
-        ei_printf("错误：摄像头未初始化\r\n");
+        ei_printf("ERR: Camera is not initialized\r\n");
         return false;
     }
 
     camera_fb_t *fb = esp_camera_fb_get();
 
     if (!fb) {
-        ei_printf("摄像头捕获失败\n");
+        ei_printf("Camera capture failed\n");
         return false;
     }
 
@@ -474,7 +478,7 @@ bool ei_camera_capture(uint32_t img_width, uint32_t img_height, uint8_t *out_buf
    esp_camera_fb_return(fb);
 
    if(!converted){
-       ei_printf("转换失败\n");
+       ei_printf("Conversion failed\n");
        return false;
    }
 
@@ -499,7 +503,7 @@ bool ei_camera_capture(uint32_t img_width, uint32_t img_height, uint8_t *out_buf
 
 static int ei_camera_get_data(size_t offset, size_t length, float *out_ptr)
 {
-    // 我们已经有一个 RGB888 缓冲区，所以重新计算偏移量到像素索引
+    // we already have a RGB888 buffer, so recalculate offset into pixel index
     size_t pixel_ix = offset * 3;
     size_t pixels_left = length;
     size_t out_ptr_ix = 0;
@@ -507,17 +511,17 @@ static int ei_camera_get_data(size_t offset, size_t length, float *out_ptr)
     while (pixels_left != 0) {
         out_ptr[out_ptr_ix] = (snapshot_buf[pixel_ix] << 16) + (snapshot_buf[pixel_ix + 1] << 8) + snapshot_buf[pixel_ix + 2];
 
-        // 转到下一个像素
+        // go to the next pixel
         out_ptr_ix++;
         pixel_ix+=3;
         pixels_left--;
     }
-    // 完成！
+    // and done!
     return 0;
 }
 
 #if !defined(EI_CLASSIFIER_SENSOR) || EI_CLASSIFIER_SENSOR != EI_CLASSIFIER_SENSOR_CAMERA
-#error "当前传感器的模型无效"
+#error "Invalid model for current sensor"
 #endif
 ```
 
@@ -545,7 +549,6 @@ static int ei_camera_get_data(size_t offset, size_t length, float *out_ptr)
 
 <!-- - **[STEP]** [Seeed Studio XIAO ESP32S3 3D Model]() -->
 
-
 ### Seeed Studio XIAO ESP32S3 Sense
 
 - **[PDF]** [Seeed Studio XIAO ESP32S3 Sense 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH.pdf)
@@ -564,14 +567,13 @@ static int ei_camera_get_data(size_t offset, size_t length, float *out_ptr)
 
 <!-- - **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D Model]() -->
 
-
 ### 其他
 
 - **[STP]** [XIAO ESP32S3 Sense 外壳设计（顶部）](<https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(top).stp>)
 
 - **[STP]** [XIAO ESP32S3 Sense 外壳设计（底部）](<https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(bottom).stp>)
 
-_其余开源资料正在整理中，敬请期待！_
+*其余开源资料正在整理中，敬请期待！*
 
 ## 技术支持与产品讨论
 

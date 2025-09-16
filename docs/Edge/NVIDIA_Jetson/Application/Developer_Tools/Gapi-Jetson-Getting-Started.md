@@ -40,6 +40,7 @@ A Micro Service is a process that runs some wrapper python scripts that integrat
 - [Gapi Hosted Demo](https://genaigapi.com/)
 
 ## Requirements
+
 - Any NVIDIA Jetson Orin
 - Docker
 - Sufficient Storage Space: 1.3GB
@@ -47,6 +48,7 @@ A Micro Service is a process that runs some wrapper python scripts that integrat
 ## Install Gapi on Jetson
 
 **Run These Steps to install Gapi on Jetson:**
+
 ```bash
 mkdir ~/gapiData && cd ~/gapiData
 curl -L https://raw.githubusercontent.com/genai-nerds/Gapi/main/gapiConfigs.zip -o gapiConfigs.zip
@@ -56,6 +58,7 @@ echo "You may need to hit Enter now. Afterwards the Docker container 'gapi' s
 ```
 
 **Log In**
+
 - Browse in: http://[host-device-ip]:8090
 - User: root
 - Pass: !gapi2024
@@ -63,7 +66,7 @@ echo "You may need to hit Enter now. Afterwards the Docker container 'gapi' s
 
 ## Workflows
 
-Workflows visually connect the execution and flow of data between Nodes. 
+Workflows visually connect the execution and flow of data between Nodes.
 
 <div align="center"><img width ="800" src="https://genainerds.com/assets/img/gapi-diagram-pic.png"/></div>
 
@@ -100,12 +103,14 @@ Think of a Micro Service as a simple wrapper to some code or model you have. It 
 ## Running the Community Micro Services
 
 **Requirements for Community Micro Services**
+
 1. Any NVIDIA Jetson Orin
 2. Sufficient Storage Space:
     - Literally 4KB for your own Micro Service
     - Anywhere from ~4GB to ~10GB for each Community Micro Service
 
 **Steps:**
+
 1. Login and go to the Micro Services tab
 2. Follow the instructions in the blue box on that page to download your custom configuration
 3. Then follow the instructions below that for installing the Micro Service you want
@@ -114,18 +119,16 @@ Think of a Micro Service as a simple wrapper to some code or model you have. It 
 
 <div align="center"><img width ="1000" src="https://genainerds.com/assets/img/WorkflowsHome.png"/></div>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

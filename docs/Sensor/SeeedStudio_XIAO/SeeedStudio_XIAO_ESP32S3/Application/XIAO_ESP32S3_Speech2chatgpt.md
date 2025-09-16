@@ -333,6 +333,7 @@ Please make a note of your IP address as we will need to use it later.
 In the project folder **[XIAOESP32S3-RECORD-UPLOAD](https://github.com/limengdu/XIAO-ESP32S3Sense-Speech2ChatGPT/blob/main/XIAOESP32S3-RECORD-UPLOAD/XIAOESP32S3-RECORD-UPLOAD.ino)** we have prepared the program for the examples in this section.
 
 <details>
+
 <summary>If your ESP32 version is 2.0.x. Click here to preview the full program</summary>
 
 ```cpp
@@ -555,6 +556,7 @@ void uploadFile(){
 </details>
 
 <details>
+
 <summary>If your ESP32 version is 3.0.x. Click here to preview the full program</summary>
 
 ```cpp
@@ -801,6 +803,7 @@ Next we increase the difficulty. Continue adding ChatGPT calls to the code.
 In the project folder **[XIAOESP32S3-SPEECH-TO-CHATGPT](https://github.com/limengdu/XIAO-ESP32S3Sense-Speech2ChatGPT/blob/main/XIAOESP32S3-SPEECH-TO-CHATGPT/XIAOESP32S3-SPEECH-TO-CHATGPT.ino)** we have prepared the program for the examples in this section.
 
 <details>
+
 <summary>If your ESP32 version is 2.0.x. Click here to preview the full program</summary>
 
 ```cpp
@@ -1070,6 +1073,7 @@ bool uploadFile(){
 </details>
 
 <details>
+
 <summary>If your ESP32 version is 3.0.x. Click here to preview the full program</summary>
 
 ```cpp
@@ -1376,6 +1380,7 @@ We recommend you to use the **v1.2.3** version of SquareLine Studio. After testi
 The final complete project code is in the **[XIAOESP32S3-SPEECH-CHATGPT-COMPLETE](https://github.com/limengdu/XIAO-ESP32S3Sense-Speech2ChatGPT/blob/main/XIAOESP32S3-SPEECH-CHATGPT-COMPLETE/XIAOESP32S3-SPEECH-CHATGPT-COMPLETE.ino)** folder.
 
 <details>
+
 <summary>If your ESP32 version is 2.0.x. Click here to preview the full program</summary>
 
 ```cpp
@@ -1790,6 +1795,7 @@ void wifiConnect(void *pvParameters){
 </details>
 
 <details>
+
 <summary>If your ESP32 version is 3.0.x. Click here to preview the full program</summary>
 
 ```cpp

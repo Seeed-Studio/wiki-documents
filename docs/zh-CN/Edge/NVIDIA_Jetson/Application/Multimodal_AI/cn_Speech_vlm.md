@@ -1,69 +1,69 @@
 ---
-description: 本文档提供了在 reComputer AGX Orin 64G 上运行带语音交互的视觉语言模型的教程。
-title: 使用语音交互运行 VLM
+description: 本wiki提供了如何在reComputer AGX Orin 64G上运行带语音交互的视觉语言模型的教程。
+title: 运行带语音交互的VLM
 keywords:
-- 多模态
+- Multimodal 
 - NanoVLM
 - TTS
 - STT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/speech_vlm
 last_update:
-  date: 2024/08/23
+  date: 08/23/2024
   author: YaoHui Zhu
 ---
 
-# 如何在 reComputer Jetson 上运行带语音交互的 VLM
+# 如何在reComputer Jetson上运行带语音交互的VLM
 
-## 简介
+## 介绍
 
-本指南详细介绍了如何在 reComputer Nvidia Jetson 设备上运行带语音交互的多模态视觉语言模型（VLM）。该模型结合了 Nvidia Jetson 平台的强大计算能力、阿里巴巴开源的语音转文字模型 SenseVoice 和 coqui-ai 的文字转语音（TTS）模型，用于执行复杂的多模态任务。通过本指南，您将能够成功安装并运行该系统，使其具备视觉识别和语音交互功能，从而为您的项目提供更智能的解决方案。
+本指南详细说明了如何在reComputer Nvidia Jetson设备上运行带语音交互的多模态视觉语言模型（VLM）。该模型利用官方Nvidia Jetson平台的强大计算能力，结合阿里巴巴开源的语音转文本模型SenseVoice和coqui-ai的文本转语音（TTS）模型，来执行复杂的多模态任务。通过遵循本指南，您将能够成功安装和操作此系统，使其具备视觉识别和语音交互能力，从而为您的项目提供更智能的解决方案。
 
-### [VLM（视觉语言模型）简介](https://docs.nvidia.com/jetson/jps/inference-services/vlm.html)
+### [VLM（视觉语言模型）介绍](https://docs.nvidia.com/jetson/jps/inference-services/vlm.html)
 
-视觉语言模型（VLM）是一种针对 Nvidia Jetson 平台优化的多模态模型。它结合了视觉和语言处理能力，可处理复杂任务，例如对象识别和生成描述性语言。VLM 可应用于自动驾驶、智能监控和智能家居等领域，提供智能且直观的解决方案。
+视觉语言模型（VLM）是为Nvidia Jetson平台优化的多模态模型。它结合了视觉和语言处理来处理复杂任务，如物体识别和生成描述性语言。VLM适用于自动驾驶、智能监控和智能家居等领域，提供智能直观的解决方案。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/audio_vlm/vlmgif.gif" />
 </div>
 
-### [SenseVoice 简介](https://github.com/FunAudioLLM/SenseVoice/tree/main)
+### [SenseVoice介绍](https://github.com/FunAudioLLM/SenseVoice/tree/main)
 
-SenseVoice 是一个专注于高精度多语言语音识别、语音情感识别和音频事件检测的开源模型。该模型基于超过 40 万小时的数据训练，支持 50 多种语言，并在性能上超越了 Whisper 模型。SenseVoice-Small 模型具有超低延迟，仅需 70 毫秒即可处理 10 秒的音频。它还提供便捷的微调功能，并支持 Python、C++、HTML、Java 和 C# 等多种语言的部署。
+SenseVoice是一个专注于高精度多语言语音识别、语音情感识别和音频事件检测的开源模型。它在超过40万小时的数据上进行训练，支持50多种语言，性能超越Whisper模型。SenseVoice-Small模型提供超低延迟，仅需70毫秒即可处理10秒音频。它还提供便捷的微调功能，支持多种语言部署，包括Python、C++、HTML、Java和C#。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/audio_vlm/sensevoice2.png" />
 </div>
 
-### [TTS（文字转语音）简介](https://github.com/coqui-ai/TTS)
+### [TTS（文本转语音）介绍](https://github.com/coqui-ai/TTS)
 
-TTS 模型是一种用于文字转语音任务的高性能深度学习模型。它包括 Tacotron2 等多种模型以及 MelGAN 和 WaveRNN 等声码器。TTS 模型支持多说话人 TTS、高效训练，并提供数据集整理和模型测试工具。其模块化代码库便于实现新功能。
+TTS模型是用于文本转语音任务的高性能深度学习模型。它包含各种模型，如Tacotron2和声码器，如MelGAN和WaveRNN。TTS模型支持多说话人TTS、高效训练，并提供数据集整理和模型测试工具。其模块化代码库允许轻松实现新功能。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://raw.githubusercontent.com/coqui-ai/TTS/main/images/coqui-log-green-TTS.png" />
 </div>
 
-## 前置条件
+## 先决条件
 
-- 配备 16GB 或以上内存的 reComputer Jetson AGX Orin 64G 或 reComputer Jetson J4012 16G 设备。
-- USB 即插即用扬声器麦克风。
-- 一台能够输出 RTSP 流地址的 IP 摄像头。我们还提供了使用 [NVIDIA Nvstreamer](/cn/getting_started_with_nvstreamer) 工具将本地视频转换为 RTSP 流的说明。
+- 具有16GB以上内存的reComputer Jetson AGX Orin 64G或reComputer Jetson J4012 16G设备。
+- USB免驱动扬声器麦克风
+- 能够输出RTSP流地址的IP摄像头。我们还包含了[如何使用NVIDIA Nvstreamer](/getting_started_with_nvstreamer)工具将本地视频转换为RTSP流的说明。
 
 :::note
-我们已经在 reComputer [Orin NX 16GB](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) 和 [AGX Orin 64GB](https://www.seeedstudio.com/NVIDIArJetson-AGX-Orintm-64GB-Developer-Kit-p-5641.html) 开发套件上测试了本教程的可行性。
+我们已经在reComputer [Orin NX 16GB](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)和[AGX Orin 64GB](https://www.seeedstudio.com/NVIDIArJetson-AGX-Orintm-64GB-Developer-Kit-p-5641.html)开发套件上测试了本wiki的可行性。
 :::
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/agx_orin.png" />
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html?queryID=a07376a957f072a4f755e1832fa0e544&objectID=5569&indexName=bazaar_retailer_products" target="_blank">
-      <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+      <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -71,43 +71,46 @@ TTS 模型是一种用于文字转语音任务的高性能深度学习模型。�
 
 ### 初始化系统环境
 
-1. 在使用 JP6 安装初始系统后，需要检查 `CUDA` 和其他库的安装情况。可以通过运行以下命令验证并安装它们：
-    ```bash
-    sudo apt-get install nvidia-jetpack
-    ```
+1. 使用 JP6 安装初始系统后，您需要检查 `CUDA` 和其他库的安装情况。您可以通过运行 `sudo apt-get install nvidia-jetpack` 来验证和安装它们。
 
 2. 安装 `python3-pip`、`jtop` 和 `docker-ce`。
-3. 通过以下命令安装必要的依赖项：
+3. 通过运行以下命令安装必要的依赖项：
+
     ```bash
     sudo apt-get install libportaudio2 libportaudiocpp0 portaudio19-dev
     sudo pip3 install pyaudio playsound subprocess wave keyboard
     sudo pip3 --upgrade setuptools
     sudo pip3 install sudachipy==0.5.2
     ```
-4. 检查音频输入输出以及 USB 扬声器麦克风是否正常工作，并确保网络连接稳定。
+
+4. 检查音频输入和输出以及 USB 扬声器麦克风是否正常工作，并确保网络连接稳定。
 
 ### 安装 VLM
 
-本项目的核心功能是视觉语言模型（VLM）。我们提供了[如何在 reComputer Nvidia Jetson 上运行 VLM 的指南](/cn/run_vlm_on_recomputer)。请参考此链接获取安装和使用说明。在继续以下步骤之前，请确保您完全理解如何使用 VLM 进行文本描述推理。
+本项目的核心功能是视觉语言模型（VLM）。我们提供了一个关于[如何在 reComputer Nvidia Jetson 上使用 VLM](/run_vlm_on_recomputer) 的指南。请参考此链接获取安装和使用说明。在继续以下步骤之前，请确保您完全了解如何在 VLM 中使用文本描述进行推理。
 
-### 安装 Pytorch 和 Torchaudio
+### 安装 Pytorch Torchaudio
 
-我们为初学者提供了 Nvidia Jetson AI 课程，其中包含[如何安装 PyTorch、Torchaudio 和 Torchvision 的说明](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md)。请根据您的系统环境下载并安装这些包。
+我们为初学者提供了 Nvidia Jetson AI 课程，其中包括[如何安装 PyTorch、Torchaudio 和 Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md) 的说明。请根据您的系统环境下载并安装这些包。
 
 ### 安装 Speech_vlm（基于 SenseVoice）
 
 1. 克隆 Speech_vlm 包：
+
     ```bash
     cd ~/
     git clone https://github.com/ZhuYaoHui1998/speech_vlm.git
     ```
+
 2. 安装 Speech_vlm 环境：
+
     ```bash
     cd ~/speech_vlm
     sudo pip3 install -r requement.txt
     ```
 
 ### 安装 TTS（基于 Coqui-ai）
+
 ```bash
 cd ~/speech_vlm/TTS
 sudo pip3 install .[all]
@@ -115,38 +118,40 @@ sudo pip3 install .[all]
 
 ## 使用方法
 
-Speech_vlm 仓库的结构如下：
+speech_vlm 仓库的结构如下：
+
 ```bash
 speech_vlm/
-├── /TTS   # Coqui-ai TTS 程序
-├── config # VLM 配置
-├── README.md    # 项目介绍
-├── requirements.txt   # SenseVoice 所需环境库
-├── compose.yaml   # VLM Docker Compose 启动文件
-├── delete_id.sh     # 删除摄像头 ID 脚本
-├── example_1.wav     # 音频反馈音调模板（可替换）
-├── model.py     # SenseVoice 主程序
-├── set_alerts.sh     # 设置摄像头警报
-├── set_describe.sh     # 文本输入以让 VLM 描述当前场景
-├── set_streamer_id.sh  # 添加 RTSP 摄像头到 VLM
-├── view_rtsp.py  # 使用 opencv 查看 RTSP 流
-└── vlm_voice.py  # 多模态主程序
+├── /TTS   # Coqui-ai TTS program
+├── config # VLM config
+├── README.md    #Project Introduction
+├── requirements.txt   #SenseVoice required environment libraries
+├── compose.yaml   #VLM Docker Compose startup file
+├── delete_id.sh     #Delete camera ID script
+├── example_1.wav     #Audio feedback sound tone template (replaceable)
+├── model.py     #SenseVoice main program
+├── set_alerts.sh     #Set up camera alerts
+├── set_describe.sh     #Text input to have the VLM describe the current scene
+├── set_streamer_id.sh  #Add RTSP camera to VLM
+├── view_rtsp.py  # View RTSP stream by opencv
+└── vlm_voice.py  # multimodal main program
 ```
 
 1. 启动 VLM
+
     ```bash
     cd ~/speech_vlm
     sudo docker compose up -d
     ```
 
     <div align="center">
-        <img width={800} 
+        <img width={800}
         src="https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/audio_vlm/dockerps.png" />
     </div>
 
-2. 添加 RTSP 流到 VLM
+2. 将 RTSP 流添加到 VLM
 
-查看 `speech_vlm` 仓库下的 `set_streamer_id.sh` 内容：
+查看 `speech_vlm` 仓库下 `set_streamer_id.sh` 的内容：
 
 ```sh
 #!/bin/bash
@@ -154,42 +159,46 @@ curl --location 'http://0.0.0.0:5010/api/v1/live-stream' \
 --header 'Content-Type: application/json' \
 --data '{"liveStreamUrl": "RTSP stream address"}'
 ```
-将 `0.0.0.0` 替换为 Jetson 设备的 IP 地址，并将 `RTSP stream address` 替换为摄像头的 RTSP 流地址。
+
+将 `0.0.0.0` 替换为 Jetson 设备的 IP 地址，将 `RTSP stream address` 替换为摄像头的 RTSP 流地址。
 例如：
+
 ```sh
 #!/bin/bash
 curl --location 'http://192.168.49.227:5010/api/v1/live-stream' \
 --header 'Content-Type: application/json' \
 --data '{"liveStreamUrl": "rtsp://admin:IHFXnM8k@192.168.49.15:554//Streaming/Channels/1"}'
 ```
+
 :::note
-如果您没有 RTSP 摄像头，我们提供了[如何使用 NVStreamer 将本地视频流式传输为 RTSP](/cn/getting_started_with_nvstreamer)以及[将其添加到 VLM](/cn/run_vlm_on_recomputer)的说明。
+如果您没有 RTSP 摄像头，我们提供了关于[如何使用 NVStreamer 将本地视频流式传输为 RTSP](/getting_started_with_nvstreamer) 以及[将它们添加到 VLM](/run_vlm_on_recomputer) 的说明。
 :::
 
 运行 set_streamer_id.sh
+
 ```bash
 cd ~/speech_vlm
 sudo chmod +x ./set_streamer_id.sh
 ./set_streamer_id.sh
 ```
 
-我们将获得一个摄像头 ID，此 ID 非常重要，需要记录下来，如下所示：
+我们将获得一个摄像头ID，这个ID非常重要，需要记录下来，如下所示：
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/audio_vlm/set_id.png" />
 </div>
 
 3. 运行 vlm_voice.py
 
-您需要替换以下 Python 代码中的 `0.0.0.0`：
+您需要在以下两行Python代码中替换 `0.0.0.0`：
 
 ```python
-API_URL = 'http://0.0.0.0:5010/api/v1/chat/completions'  # API 端点
-REQUEST_ID = ""  # 请求 ID
+API_URL = 'http://0.0.0.0:5010/api/v1/chat/completions'  # API endpoint
+REQUEST_ID = ""  # Request ID
 ```
 
-将其替换为 Jetson 的 IP 地址，并将步骤 2 返回的摄像头 ID 填入 `REQUEST_ID`。
+使用 Jetson IP 地址并填入从步骤 2 返回的摄像头 ID 来替换 `REQUEST_ID`。
 
 <details>
 <summary>vlm_voice.py</summary>
@@ -206,32 +215,32 @@ import time
 import torch
 from TTS.api import TTS
 import os
-# 获取设备
+# Get device
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-# 初始化 TTS
+# Init TTS
 api = TTS("tts_models/en/ljspeech/glow-tts").to(device)
 
-# 配置参数
-FORMAT = pyaudio.paInt16  # 16 位分辨率
-CHANNELS = 1  # 单声道
-CHUNK = 1024  # 每块样本数
-OUTPUT_FILENAME = "output.wav"  # 输出文件名
-API_URL = 'http://192.168.49.227:5010/api/v1/chat/completions'  # API 端点
-REQUEST_ID = "1388b691-3b9f-4bda-9d70-0ff0696f80f4"  # 请求 ID
+# Configuration parameters 
+FORMAT = pyaudio.paInt16  # 16-bit resolution
+CHANNELS = 1  # Mono channel
+CHUNK = 1024  # Number of samples per chunk
+OUTPUT_FILENAME = "output.wav"  # Output file name
+API_URL = 'http://192.168.49.227:5010/api/v1/chat/completions'  # API endpoint
+REQUEST_ID = "1388b691-3b9f-4bda-9d70-0ff0696f80f4"  # Request ID
 
-# 初始化 PyAudio
+# Initialize PyAudio
 audio = pyaudio.PyAudio()
-# 准备存储录音数据的列表
+# Prepare the list to store recording data
 frames = []
 
-# 初始化麦克风采样率
-print("可用的音频输入设备：")
+# Initialize Micphone Rate
+print("Available audio input devices:")
 for i in range(audio.get_device_count()):
     info = audio.get_device_info_by_index(i)
-    print(f"设备 {i}: {info['name']} - {info['maxInputChannels']} 通道")
+    print(f"Device {i}: {info['name']} - {info['maxInputChannels']} channels")
 
-device_index = int(input("请选择 USB 麦克风的设备索引："))
+device_index = int(input("Please select the device index for your USB microphone: "))
 
 device_info = audio.get_device_info_by_index(device_index)
 supported_sample_rates = [8000, 16000, 32000, 44100, 48000]
@@ -243,12 +252,12 @@ for rate in supported_sample_rates:
                                      input_channels=1,
                                      input_format=pyaudio.paInt16):
             supported_rate=rate
-            print(f"{rate} Hz 是支持的。")
+            print(f"{rate} Hz is supported.")
     except ValueError:
-        print(f"{rate} Hz 不支持。")
+        print(f"{rate} Hz is not supported.")
 
 
-# 初始化模型
+# Initialize the model
 model = "./SenseVoiceSmall"
 model = AutoModel(
     model=model,
@@ -259,23 +268,22 @@ model = AutoModel(
 )
 
 
-
 def extract_content(json_response):
     try:
-        # 解析 JSON 字符串
+        # 解析JSON字符串
         data = json.loads(json_response)
         
-        # 提取 content 部分
+        # 提取content部分
         content = data["choices"][0]["message"]["content"]
         
         print(f"{content}")
         return content
     except KeyError as e:
-        print(f"键错误: {e}")
+        print(f"Key error: {e}")
     except json.JSONDecodeError as e:
-        print(f"JSON 解码错误: {e}")
+        print(f"JSON decode error: {e}")
     except Exception as e:
-        print(f"发生了意外错误: {e}")
+        print(f"An unexpected error occurred: {e}")
 
 def start_recording():
     global frames
@@ -285,11 +293,11 @@ def start_recording():
         stream = audio.open(format=FORMAT, channels=CHANNELS,
                             rate=supported_rate, input=True,
                             frames_per_buffer=CHUNK, input_device_index=device_index)
-        print("录音开始... 按 '2' 停止录音。")
+        print("Recording started... Press '2' to stop recording.")
     
         while True:
             if keyboard.is_pressed('2'):
-                print("录音停止。")
+                print("Recording stopped.")
                 break
             data = stream.read(CHUNK)
             frames.append(data)
@@ -298,7 +306,7 @@ def start_recording():
         stream.close()
     
     except Exception as e:
-        print(f"录音过程中发生错误: {e}")
+        print(f"An error occurred during recording: {e}")
 
 def save_recording():
     try:
@@ -308,12 +316,12 @@ def save_recording():
         waveFile.setframerate(supported_rate)
         waveFile.writeframes(b''.join(frames))
         waveFile.close()
-        print(f"录音已保存为 {OUTPUT_FILENAME}")
+        print(f"Recording saved as {OUTPUT_FILENAME}")
     except Exception as e:
-        print(f"保存录音时发生错误: {e}")
+        print(f"An error occurred while saving the recording: {e}")
 
 def send_alert(text):
-    # 构造 JSON 负载
+    # Construct the JSON payload
     payload = {
         "messages": [
             {
@@ -340,10 +348,10 @@ def send_alert(text):
         "max_tokens": 128
     }
     
-    # 将负载转换为 JSON 字符串
+    # Convert the payload to a JSON string
     json_payload = json.dumps(payload)
     
-    # 使用 subprocess 执行 curl 命令
+    # Execute the curl command using subprocess
     curl_command = [
         'curl', '--location', API_URL,
         '--header', 'Content-Type: application/json',
@@ -352,7 +360,7 @@ def send_alert(text):
     
     try:
         result = subprocess.run(curl_command, check=True, capture_output=True, text=True)
-        ## 获取内容
+        ##Get words
         content_result=extract_content(result.stdout)
         # TTS 
         api.tts_to_file(
@@ -360,9 +368,9 @@ def send_alert(text):
             speaker_wav="./example_1.wav",
             file_path="speech.wav"
         )
-        # 转换音频采样率
+        # Convert audio rate
         subprocess.run(['ffmpeg', '-i', 'speech.wav', '-ar',str(supported_rate), 'speech1.wav','-y'])
-        # 播放音频
+        # Play audio
         wf = wave.open('./speech1.wav', 'rb')
         stream = audio.open(format=pyaudio.paInt16,
                         channels=1,
@@ -373,33 +381,33 @@ def send_alert(text):
         while data:
             stream.write(data)
             data = wf.readframes(1024)
-        # 播放音频
+        # Play audio
         os.remove('speech.wav')
         os.remove('speech1.wav')
         stream.stop_stream()
         stream.close()
-        wf.close()  # 同时关闭 wave 文件
+        wf.close()  # Close the wave file as well
 
-        #print(f"警报发送成功: {result.stdout}")
+        #print(f"Alert sent successfully: {result.stdout}")
     except subprocess.CalledProcessError as e:
-        print(f"发送警报时发生错误: {e.stderr}")
+        print(f"An error occurred while sending the alert: {e.stderr}")
     finally:
-        # 即使发生错误，也尝试关闭流
+        # Even if an error occurs, try to close the stream
         if stream.is_active():
             stream.stop_stream()
             os.remove('speech.wav')
             os.remove('speech1.wav')
             stream.close()
-print("欢迎使用录音和语音转文本系统！")
-print("按 '1' 开始录音，按 '2' 停止录音。")
+print("Welcome to the Recording and Speech-to-Text System!")
+print("Press '1' to start recording, '2' to stop recording.")
 
 while True:
     if keyboard.is_pressed('1'):
-        print("准备开始录音...")
+        print("Preparing to start recording...")
         start_recording()
         save_recording()
         
-        print("正在处理录音文件，请稍候...")
+        print("Processing the recording file, please wait...")
         try:
             res = model.generate(
                 input=f"./{OUTPUT_FILENAME}",
@@ -411,33 +419,36 @@ while True:
                 merge_length_s=15,
             )
             text = rich_transcription_postprocess(res[0]["text"])
-            print(f"语音转文本结果：\n{text}")
+            print(f"Speech-to-Text Result:\n{text}")
             
-            # 将转录结果作为警报发送
+            # Send the transcription result as an alert
             send_alert(text)
             
         except Exception as e:
-            print(f"处理录音时发生错误: {e}")
+            print(f"An error occurred while processing the recording: {e}")
         
-    time.sleep(0.1)  # 减少 CPU 使用率
+    time.sleep(0.1)  # Reduce CPU usage
 ```
+
 </details>
 
-运行 Python：
+Run python:
+
 ```bash
 cd ~/speech_vlm
 sudo python3 vlm_voice.py
 ```
-程序启动后，它将扫描所有音频输入和输出设备。您需要手动选择所需音频设备的索引 ID。程序即将开始工作，然后按 `1` 进行录音，按 `2` 发送。
+
+程序启动后，它将扫描所有音频输入和输出设备。您需要手动选择所需音频设备的索引ID。程序即将开始工作，然后按 `1` 录音，按 `2` 发送。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/audio_vlm/select_mic.png" />
 </div>
 
 4. 查看结果
 
-我们准备了一个 `view_rtsp.py` 脚本来查看输出结果。您需要将 `rtsp_url = "rtsp://0.0.0.0:5011/out"` 中的 IP 部分替换为您的 Jetson 设备的 IP 地址。
+我们准备了一个 `view_rtsp.py` 脚本来查看输出结果。您需要将 `rtsp_url = "rtsp://0.0.0.0:5011/out"` 中的IP部分替换为您的Jetson设备的IP地址。
 
 <details>
 <summary>viwe_rtsp.py</summary>
@@ -450,20 +461,20 @@ rtsp_url = "rtsp://192.168.49.227:5011/out"
 cap = cv2.VideoCapture(rtsp_url)
 
 if not cap.isOpened():
-    print("无法打开 RTSP 流")
+    print("Cannot open RTSP stream")
     exit()
 
 while True:
     ret, frame = cap.read()
     if not ret:
-        print("无法检索帧")
+        print("Failed to retrieve frame")
         break
 
     height, width = frame.shape[:2]
 
     frame_resized = cv2.resize(frame, (int(width // 1.1), int(height // 1.1)))
 
-    cv2.imshow('RTSP 流', frame_resized)
+    cv2.imshow('RTSP Stream', frame_resized)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
@@ -471,6 +482,7 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 ```
+
 </details>
 
 ```bash
@@ -480,26 +492,26 @@ sudo python3 view_rtsp.py
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/audio_vlm/view_result.png" />
 </div>
 
 ### 演示
 
 <div align="center">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/eYaA9WGXh4Y" title="在 Jetson 上运行带语音交互的 VLM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/eYaA9WGXh4Y" title="Run VLM with Speech Interaction on Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您使用我们的产品时体验顺畅。我们提供多个沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

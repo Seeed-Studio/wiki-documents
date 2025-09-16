@@ -1,5 +1,5 @@
 ---
-description: 60GHz mmWave 呼吸和心跳检测传感器套件与 XIAO ESP32C6 (MR60BHA2) 入门指南
+description: 60GHz 毫米波呼吸心跳检测传感器套件与 XIAO ESP32C6 (MR60BHA2) 入门指南
 title: MR60BHA2 入门指南
 keywords:
 - mmwave
@@ -13,7 +13,7 @@ last_update:
   author: Spencer
 ---
 
-# 60GHz mmWave 呼吸和心跳检测传感器套件与 XIAO ESP32C6 (MR60BHA2) 入门指南
+# 60GHz 毫米波呼吸心跳检测传感器套件与 XIAO ESP32C6 (MR60BHA2) 入门指南
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -23,17 +23,17 @@ last_update:
     <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong></a>
 </div><br />
 
-介绍我们为 XIAO 设计的先进 **mmWave 传感器模块**，旨在为[跌倒检测](https://wiki.seeedstudio.com/cn/getting_started_with_mr60fda2_mmwave_kit/)和心跳监测提供前沿的监控解决方案。这些模块由强大的 XIAO ESP32 微控制器驱动，内置 Wi-Fi 和蓝牙连接功能，提供精确可靠的检测能力。无论您需要实时监测跌倒还是以敏感精度跟踪心跳，我们的模块都配备了最先进的技术，包括可定制的 RGB LED 和环境光感应。通过 Grove GPIO 端口的便捷扩展选项，这些多功能模块非常适合广泛的应用，从智能家居集成到医疗保健监测。
+介绍我们为 XIAO 设计的先进**毫米波传感器模块**，旨在为[跌倒检测](https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/)和心跳监测提供前沿的监控解决方案。这些模块由强大的 XIAO ESP32 微控制器驱动，内置 Wi-Fi 和蓝牙连接功能，提供精确可靠的检测能力。无论您需要实时监测跌倒还是以敏感精度跟踪心跳，我们的模块都配备了最先进的技术，包括可定制的 RGB LED 和环境光感应。通过 Grove GPIO 端口的便捷扩展选项，这些多功能模块非常适合广泛的应用场景，从智能家居集成到医疗保健监测。
 
 ## 特性
 
-- **Wi-Fi 和蓝牙支持**：两个模块都由预刷 ESPHome 固件的 XIAO ESP32 驱动，确保快速设置和定制。
-<!-- - **Fall Detection Module**:
-  - **Precise Fall Detection**: Covers a 3x3x3 meter area with a 100° x 40° detection angle.
-  - **Static Presence Detection**: Monitors stationary individuals up to 6 meters away. -->
+- **Wi-Fi 和蓝牙功能**：两个模块都由 XIAO ESP32 驱动，预装 ESPHome 固件，确保快速设置和定制。
+<!-- - **跌倒检测模块**：
+  - **精确跌倒检测**：覆盖 3x3x3 米区域，检测角度为 100° x 40°。
+  - **静态存在检测**：监测最远 6 米的静止个体。 -->
 - **心跳检测模块**：
   - **敏感心跳监测**：可检测最远 1.5 米的心跳。
-  - **静态存在检测**：监测最远 6 米的静止人员。
+  - **静态存在检测**：监测最远 6 米的静止个体。
 - **环境感应**：
   - **BH1750 光传感器**：测量 1 到 65,535 勒克斯的环境光。
   - **WS2812 RGB LED**：可定制 LED，用于视觉反馈和 DIY 项目。
@@ -42,25 +42,25 @@ last_update:
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/human-caring.jpg" style={{height:'auto', "border-radius": '3.8px'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/environmental-inductor.jpg" style={{height:'auto', "border-radius": '3.8px'}}/></div> -->
 
-## 规格参数
+## 规格
 
 | **通用参数**   |                                      |
 | ------------------------ | ------------------------------------ |
-| **mmWave 固件**      | 呼吸和心跳检测 |
-| **检测范围**      | 人体静态存在检测：最远 6 米<br />呼吸和心跳检测：1.5 米|
+| **毫米波固件**      | 呼吸和心跳检测 |
+| **检测范围**      | 人体静态存在检测：最远6米<br />呼吸和心跳检测：1.5米|
 | **MCU**                  | Seeed Studio XIAO ESP32C6 |
 | **LED**                  | WS2812 RGB LED |
 | **按钮**               | 复位 |
-| **光传感器**         | BH1750 范围：1 到 65,535 勒克斯，可调测量高达 100,000 勒克斯 |
-| **连接性**         | 1 个 GPIO 端口 (D0, D10) |
-| **引脚间距**   | 2.54mm |
-| **电源供应**         | 5V/1A 输入 |
-| **功耗**    | 0.5w：待机模式<br />0.8w：激活模式<br />1.4w：与 Grove 继电器状态一起工作 |
+| **光传感器**         | BH1750 范围：1至65,535勒克斯，可调测量范围最高达100,000勒克斯 |
+| **连接性**         | 1个GPIO端口（D0、D10） |
+| **排针间距**   | 2.54mm |
+| **电源供应**         | 5V/1A输入 |
+| **功耗**    | 0.5w：待机模式<br />0.8w：激活模式<br />1.4w：与Grove继电器状态配合工作 |
 
 ## 应用
 
-- 安防系统
-- 医疗保健监测
+- 安全系统
+- 健康监测
 - 智能家居自动化
 - 老年护理
 
@@ -76,41 +76,41 @@ last_update:
 
 ### 安装方法和感应范围
 
-**方法 1.** 侧装，建议雷达安装高度与被测人员胸部高度一致，模块位置与胸部位置 ≤ 1.5m
+**方法1.** 侧面安装，建议雷达安装高度与被测人员胸部高度一致，模块位置与胸部位置距离≤1.5m
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/side_mounting.png" style={{width:600, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/side_detect_distance.png" style={{width:600, height:'auto'}}/></div>
 
-**方法 2.** 倾斜安装。对于睡眠呼吸和心率检测需求，可采用倾斜安装方式。要求雷达安装在床头正上方 1m 高度，向床中央下倾 45°，雷达与胸腔距离控制在 1.5m 以内。雷达法线方向对准主要检测位置，确保雷达能够检测到呼吸和心跳数据。
+**方法2.** 倾斜安装。对于睡眠呼吸和心率检测需求，可以采用倾斜安装方式。要求雷达安装在床头正上方1m高度处，向下倾斜45°朝向床的中央，控制雷达与胸腔的距离在1.5m以内。雷达法线方向对准主要检测位置，确保雷达能够检测到呼吸和心跳数据。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/tilt_installation.png" style={{width:600, height:'auto'}}/></div>
 
 :::note
-请在开放空间使用此模块，并在检测范围内避免以下情况，以防止对模块造成干扰：
+请在开放空间中使用此模块，并在检测范围内避免以下场景，以防止对模块造成干扰：
 
-- 多个雷达安装距离过近  
+- 多个雷达安装距离过近
 - 风吹动窗帘和摇摆植物
-- 水流和水膜  
-- 大面积金属和镜面反射  
-- 透过玻璃和薄木板检测  
-- 安装位置容易产生振动  
-- 使用劣质电源  
+- 水流和水膜
+- 大面积金属和镜面反射
+- 透过玻璃和薄木板检测
+- 安装位置容易产生振动
+- 使用劣质电源
 
 :::
 
-### 软件准备 (Arduino)
+### 软件准备（Arduino）
 
 :::info 注意
 
-默认情况下，MR60BHA2 预装了 [XIAO ESP32C6](/cn/xiao_esp32c6_getting_started)，但它与各种其他微控制器兼容，用于通信和集成。
+默认情况下，MR60BHA2 预装了 [XIAO ESP32C6](/xiao_esp32c6_getting_started)，但它兼容各种其他微控制器进行通信和集成。
 
 :::
 
-如果这是您第一次在 XIAO 系列中使用 Arduino，请按照适合您开发板的设置指南：
+如果这是您第一次在 XIAO 系列中使用 Arduino，请按照适合您开发板的设置指南进行操作：
 
-- **XIAO ESP32S3**：参考 [XIAO ESP32S3 入门指南](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/)。
-- **XIAO ESP32C3**：按照 [Seeed Studio XIAO ESP32C3 入门指南](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/)。
-- **XIAO ESP32C6**：按照 [Seeed Studio XIAO ESP32C6 入门指南](https://wiki.seeedstudio.com/cn/xiao_esp32c6_getting_started/)。
+- **XIAO ESP32S3**：参考 [XIAO ESP32S3 入门指南](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)。
+- **XIAO ESP32C3**：按照 [Seeed Studio XIAO ESP32C3 入门指南](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/) 进行操作。
+- **XIAO ESP32C6**：按照 [Seeed Studio XIAO ESP32C6 入门指南](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/) 进行操作。
 
 设置好开发板后，请按照以下步骤操作：
 
@@ -136,7 +136,7 @@ last_update:
    - 选择心跳检测的相关示例。
    - 查看代码并进行必要的调整。
 5. **上传代码**：
-   - 点击 **上传** 将代码刷入您的 XIAO 开发板。
+   - 点击 **上传** 将代码烧录到您的 XIAO 开发板。
    - 在 Arduino IDE 中打开 **串口监视器** 查看实时传感器数据。
 
 <!-- ## Hardware Connections -->
@@ -147,7 +147,7 @@ last_update:
 
 #### 呼吸模块
 
-此示例演示如何使用 **MR60BHA2** 传感器监测呼吸和心跳。
+此示例演示如何使用 **MR60BHA2** 传感器进行呼吸和心跳监测。
 
 ```cpp
 #include <Arduino.h>
@@ -193,21 +193,20 @@ if (mmWave.update(100)) {
  }
 }
 }
-
 ```
 
 Arduino 串口监视器的输出如下：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/breathing_and_heartbeat_detection_resize.png" style={{width:700, height:'auto'}}/></div>
 
-如果返回的数据不是 `0`，表示检测范围内存在生物。
+如果返回的数据不是 `0`，则表示在检测范围内存在生物。
 
 #### 人体检测
 
 此示例演示如何使用 **MR60BHA2** 传感器进行人体检测。
 
 :::caution
-请确保您已将 MR60BHA2 模块的[固件升级](#模块固件升级)到最新版本。  
+请确保您已将 MR60BHA2 模块的[固件升级](#module-firmware-upgrade)到最新版本。  
 最新固件添加了人体存在检测和人体对象相关功能。
 :::
 
@@ -258,13 +257,13 @@ void loop() {
 }
 ```
 
-Arduino 串口监视器的输出如下：
+Arduino串口监视器的输出如下：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/people-counting-target-info.png" style={{width:700, height:'auto'}}/></div>
 
 :::note
-呼吸和心率可在 1.5 米范围内检测，存在检测可在 1.5 到 6 米范围内进行。  
-当 1.5 米范围内有人时，模块将进入心跳和呼吸检测模式。   
+呼吸和心率可在1.5米范围内检测到，存在检测范围为1.5到6米。  
+当1.5米范围内有人时，模块将进入心跳和呼吸检测模式。   
 在此模式下，人体检测功能的灵敏度可能会降低。  
 :::
 
@@ -341,15 +340,15 @@ if (mmWave.update(100)) {
 }
 ``` -->
 
-#### 闪烁 RGB LED
+#### Blink RGB LED
 
-此示例演示如何使用 NeoPixel 库控制 RGB LED。
+This example demonstrates how to control an RGB LED using the NeoPixel library.
 
-- **步骤 1.** 下载 `Adafruit_NeoPixel` 库
+- **Step 1.** Download the `Adafruit_NeoPixel` library
 
-导航到 **Sketch > Include Liarbry > Manage Libraries...**，搜索 **Adafruit_NeoPixel**，安装最新版本。
+Navigate to **Sketch > Include Liarbry > Manage Libraries...**, and search **Adafruit_NeoPixel**, install the lastest version.
 
-- **步骤 2.** 将以下代码复制到新的草图中：
+- **Step 2.** Copy following code to a new sketch:
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
@@ -384,19 +383,19 @@ for (int i = 255; i >= 0; i--) {
 }
 ```
 
-- **步骤 3.** 选择正确的开发板和端口号上传程序。
+- **步骤 3.** 选择正确的开发板和端口号来上传程序。
 
-程序成功上传后，您将看到毫米波传感器模块右侧的 RGB LED 闪烁。
+程序成功上传后，您将看到毫米波传感器模块右侧的RGB LED开始闪烁。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/blink_rgb_led.gif" style={{width:700, height:'auto'}}/></div>
 
 #### 光传感器 (BH1750)
 
-此示例展示如何使用 BH1750 传感器读取光强度值。
+此示例展示如何使用BH1750传感器读取光强度值。
 
 - **步骤 1.** 下载 `hp_BH1750` 库
 
-导航到 **Sketch > Include Liarbry > Manage Libraries...**，搜索 **hp_BH1750**，安装最新版本。
+导航到 **Sketch > Include Library > Manage Libraries...**，搜索 **hp_BH1750**，安装最新版本。
 
 - **步骤 2.** 将以下代码复制到新的草图中：
 
@@ -430,7 +429,7 @@ if (BH1750.hasValue()) {
 }
 ```
 
-- **步骤 3.** 选择正确的开发板和端口号上传程序。
+- **步骤 3.** 选择正确的开发板和端口号来上传程序。
 
 Arduino 串口监视器的输出如下：
 
@@ -440,47 +439,47 @@ Arduino 串口监视器的输出如下：
 
 ## 呼吸模块 API
 
-此示例使用 `SEEED_MR60BHA2` 类与 MR60BHA2 传感器接口进行心率和呼吸监测。以下是每个关键函数的作用：
+此示例使用 `SEEED_MR60BHA2` 类与 MR60BHA2 传感器进行接口通信，用于心率和呼吸监测。以下是每个关键函数的功能：
 
-- **`mmWave.begin(&mmWaveSerial)`**:
+- **`mmWave.begin(&mmWaveSerial)`**：
   - 使用指定的串口接口初始化传感器通信。它建立 XIAO 开发板与 MR60BHA2 传感器之间的连接。
 
-- **`mmWave.update(100)`**:
+- **`mmWave.update(100)`**：
   - 更新传感器数据。参数 `100` 是以毫秒为单位的超时值，指定等待传感器提供新数据的时间。如果在此时间范围内有新数据可用，函数返回 `true`。
 
-- **`mmWave.getHeartBreathPhases(float &total_phase, float &breath_phase, float &heart_phase)`**:
-  - 检索与心脏和呼吸活动相关的相位信息。
-  - `total_phase` 表示整体相位偏移，而 `breath_phase` 和 `heart_phase` 分别特定于呼吸和心跳活动。
+- **`mmWave.getHeartBreathPhases(float &total_phase, float &breath_phase, float &heart_phase)`**：
+  - 检索与心率和呼吸活动相关的相位信息。
+  - `total_phase` 表示总体相位偏移，而 `breath_phase` 和 `heart_phase` 分别特定于呼吸和心跳活动。
 
-- **`mmWave.getBreathRate(float &rate)`**:
-  - 获取传感器检测到的当前呼吸频率。频率在引用变量 `rate` 中返回。
+- **`mmWave.getBreathRate(float &rate)`**：
+  - 获取传感器检测到的当前呼吸频率。频率通过引用变量 `rate` 返回。
 
-- **`mmWave.getHeartRate(float &rate)`**:
-  - 检索传感器检测到的当前心率。心率在引用变量 `rate` 中返回。
+- **`mmWave.getHeartRate(float &rate)`**：
+  - 检索传感器检测到的当前心率。心率通过引用变量 `rate` 返回。
 
-- **`mmWave.getDistance(float &distance)`**:
-  - 获取从传感器到检测对象（例如人体）的距离。此函数对于了解检测信号的范围很有用。
+- **`mmWave.getDistance(float &distance)`**：
+  - 获取从传感器到检测对象（例如人体）的距离。此函数对于理解检测信号的范围很有用。
 
-- **`mmWave.getPeopleCountingPointCloud(PeopleCounting& point_cloud)`**:
+- **`mmWave.getPeopleCountingPointCloud(PeopleCounting& point_cloud)`**：
   - 检索点云信息。它只是实现了消息类型的接收，没有数据是正常的。
   - `PeopleCounting` 结构包含检测到的目标向量。每个目标包括以下属性：
-    - `x_point` : 目标的 X 坐标（以米为单位）。
-    - `y_point` : 目标的 Y 坐标（以米为单位）。
-    - `dop_index` : 多普勒指数，表示目标的速度。
+    - `x_point`：目标的 X 坐标（以米为单位）。
+    - `y_point`：目标的 Y 坐标（以米为单位）。
+    - `dop_index`：多普勒指数，表示目标的速度。
       - 实际移动速度（以 cm/s 为单位）可以计算为：`dop_index * RANGE_STEP`，其中 `RANGE_STEP` 是速度分辨率。
-    - `cluster_index` : 目标的集群 ID，用于识别场景中的单个目标。
+    - `cluster_index`：目标的簇 ID，用于识别场景中的单个目标。
 
-- **`mmWave.getPeopleCountingTartgetInfo(PeopleCounting& target_info)`**:
+- **`mmWave.getPeopleCountingTartgetInfo(PeopleCounting& target_info)`**：
   - 检索检测到的目标信息。
   - `PeopleCounting` 结构包含检测到的目标向量。每个目标包括以下属性：
-    - `x_point` : 目标的 X 坐标（以米为单位）。
-    - `y_point` : 目标的 Y 坐标（以米为单位）。
-    - `dop_index` : 多普勒指数，表示目标的速度。
+    - `x_point`：目标的 X 坐标（以米为单位）。
+    - `y_point`：目标的 Y 坐标（以米为单位）。
+    - `dop_index`：多普勒指数，表示目标的速度。
       - 实际移动速度（以 cm/s 为单位）可以计算为：`dop_index * RANGE_STEP`，其中 `RANGE_STEP` 是速度分辨率。
-    - `cluster_index` : 目标的集群 ID，用于识别场景中的单个目标。
+    - `cluster_index`：目标的簇 ID，用于识别场景中的单个目标。
 
-- **`mmWave.isHumanDetected()`**:
-  - 返回是否检测到人体。
+- **`mmWave.isHumanDetected()`**：
+  - 返回是否检测到人类。
 
 <!-- 
 ### Fall Module API
@@ -493,28 +492,27 @@ This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sens
 - **`mmWave.setInstallationHeight(float height)`**:
   - Sets the installation height of the radar, which is crucial for accurate fall detection. The `height` parameter specifies the height (in meters) at which the sensor is installed, with a valid range typically between 1 and 5 meters.
 
-
 - **`mmWave.setThreshold(float threshold)`**:
-  - 设置跌倒检测阈值。该值根据传感器的高度和距离确定雷达检测跌倒的灵敏度。
+  - Sets the fall detection threshold. This value determines the sensitivity of the radar in terms of detecting falls based on the height and distance from the sensor.
 
 - **`mmWave.setSensitivity(uint32_t sensitivity)`**:
-  - 调整雷达跌倒检测的灵敏度。灵敏度值通常范围为 3 到 10，数值越高，传感器对潜在跌倒的响应越敏感。
+  - Adjusts the sensitivity of the radar for fall detection. The sensitivity value typically ranges from 3 to 10, with higher values making the sensor more responsive to potential falls.
 
 - **`mmWave.getRadarParameters(float &height, float &threshold, uint32_t &sensitivity)`**:
-  - 获取雷达的当前配置参数，包括安装高度、跌倒检测阈值和灵敏度设置。这些参数通过引用变量返回。
+  - Retrieves the current configuration parameters of the radar, including installation height, fall detection threshold, and sensitivity settings. These parameters are returned via the reference variables.
 
 - **`mmWave.getHuman()`**:
-  - 检查雷达是否检测到人体存在。如果检测到人体则返回`true`，否则返回`false`。
+  - Checks if a human presence is detected by the radar. Returns `true` if a human is detected, and `false` otherwise.
 
 - **`mmWave.getFall()`**:
-  - 确定是否检测到跌倒。如果检测到跌倒，该函数返回`true`，否则返回`false`。-->
+  - Determines whether a fall has been detected. This function returns `true` if a fall is detected and `false` if not.-->
 
 ## 模块固件升级
 
 :::caution
-修改雷达固件是一项有风险的操作，因此请务必仔细阅读本节内容，然后仔细按照每个步骤操作。请注意，如果某个步骤执行不正确，雷达可能会变砖或无法使用。
+修改雷达固件是一项有风险的操作，因此请务必仔细阅读本节内容，然后谨慎地按照每个步骤进行操作。请注意，如果某个步骤执行不正确，雷达可能会变砖或无法使用。
 
-**特别注意，如果您购买的是跌倒雷达 MR60FDA2，请不要通过以下方式非法刷写固件，这肯定会使您的设备变砖！！！！**
+**特别注意，如果您购买的是跌倒雷达 MR60FDA2，请不要通过以下方式非法刷写固件，这肯定会导致您的设备变砖！！！！**
 :::
 
 首先，将 XIAO ESP32C6 和 MR60BHA2 模块连接在一起。然后使用以下代码对 XIAO 进行编程。
@@ -587,7 +585,7 @@ void loop() {
 
 :::note
 固件 1.6.4 有以下更新：
-1. 优化了呼吸和心率检测功能，修复了小幅身体运动导致数据丢失的错误。  
+1. 优化了呼吸和心率检测功能，修复了身体小幅运动导致数据丢失的错误。  
 2. 增强了 3D 存在检测功能：可在 1.5 米内检测呼吸和心率，在 1.5 到 6 米范围内检测存在。  
 3. 增加了人员检测功能，能够在 6 米范围内检测多达三个人。
 :::
@@ -625,32 +623,36 @@ void loop() {
 6. 升级完成后，您需要重新刷写 XIAO ESP32C6 的固件。
 
 :::tip
-如果在上述步骤中您操作不当导致异常发生，无法再次尝试烧录固件且雷达无法正常工作，那么雷达可能由于固件损坏而变砖。尝试恢复设备的唯一方法是参考**[此处](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)**的文件和文档。但是，请理解我们不为因操作不当而变砖的设备提供技术支持和协助。
+如果在上述步骤中您操作不当导致异常发生，并且一直无法尝试重新烧录固件且雷达无法正常工作，那么雷达可能由于固件损坏而变砖。尝试恢复设备的唯一方法是参考**[此处](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)**的文件和文档。但是，请理解我们不为因操作不当而变砖的设备提供技术支持和协助。
 :::
 
-## 开放定制
+## 开放定制化
 
-想要定制套件以适应您的独特应用吗？
+想要定制套件以适应您的独特应用？
 
-有关定制 mmWave 模块时的 3D 点云数据生成和干扰区域配置的更多信息。Seeed 提供一站式研发定制和制造服务，用于从概念到生产的快速开发。请联系我们：[iot@seeed.cc](mailto:iot@seeed.cc)了解更多信息。
+有关定制毫米波模块时的3D点云数据生成和干扰区域配置的更多信息。Seeed提供一站式研发定制和制造服务，助力从概念到生产的快速开发。请联系我们：[iot@seeed.cc](mailto:iot@seeed.cc) 了解更多信息。
+
+:::danger 定制服务说明
+雷达的固件和算法不开源，雷达的复杂参数如3D点云、检测距离、范围等需要定制服务，可能涉及额外的定制费用和最小起订量。
+:::
 
 ## 资源
 
-- **STL**: [mmWave 3D 外壳](https://files.seeedstudio.com/wiki/mmwave-for-xiao/Seeed_Studio_60GHz_mmWave_Human_Fall_Breating_and_Heartbeat_Detection_Sensor-MR60FDA2_MR60BHA2_Enclosure.stl)
-- **GitHub 仓库**: 在[Seeed mmWave 库 GitHub 页面](https://github.com/Love4yzp/Seeed-mmWave-library)访问完整的代码库和文档。
-- **ESPHome 文档**: 有关进一步定制和集成，请参考[ESPHome 文档](https://esphome.io/)。
-- **MR60BHA2 固件升级工具**: [MR60BHA2_OTA.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_OTA.zip)
-- **MR60BHA2 固件 v1.6.5**: [MR60BHA2_eeprom_1.6.5.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.5.bin)
-- **MR60BHA2 GUI 软件**: [Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip)
-- **mmWave 传感器原理图 V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
-- **MR60BHA2 模块技术规格**: [MR60BHA2_Breathing_and_Heartbeat_Module.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/MR60BHA2_Breathing_and_Heartbeat_Module.pdf)
-- **MR60BHA2 Tiny Frame 接口手册**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)
-- **通过 Jlink 的雷达固件恢复方法**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
+- **STL**: [毫米波3D外壳](https://files.seeedstudio.com/wiki/mmwave-for-xiao/Seeed_Studio_60GHz_mmWave_Human_Fall_Breating_and_Heartbeat_Detection_Sensor-MR60FDA2_MR60BHA2_Enclosure.stl)
+- **GitHub仓库**: 在[Seeed毫米波库GitHub页面](https://github.com/Love4yzp/Seeed-mmWave-library)访问完整代码库和文档。
+- **ESPHome文档**: 有关进一步定制和集成，请参考[ESPHome文档](https://esphome.io/)。
+- **MR60BHA2固件升级工具**: [MR60BHA2_OTA.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_OTA.zip)
+- **MR60BHA2固件v1.6.5**: [MR60BHA2_eeprom_1.6.5.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.5.bin)
+- **MR60BHA2 GUI软件**: [Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip)
+- **毫米波传感器原理图V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
+- **MR60BHA2模块技术规格**: [MR60BHA2_Breathing_and_Heartbeat_Module.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/MR60BHA2_Breathing_and_Heartbeat_Module.pdf)
+- **MR60BHA2 Tiny Frame接口手册**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)
+- **通过Jlink的雷达固件恢复方法**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
 
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在此为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="table-center">
   <div class="button_tech_support_container">

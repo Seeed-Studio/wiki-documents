@@ -1,6 +1,6 @@
 ---
 description: Este wiki proporciona un tutorial para los motores de la serie Myactuator.
-title: Introducción a los Motores de la Serie MyActuator
+title: Motores de la Serie MyActuator
 keywords:
 - actuator
 - motor
@@ -30,7 +30,7 @@ Este artículo presentará cómo comenzar con los motores de la serie MyActuator
 
 ## Especificaciones
 
-Aquí está la tabla completa con todos los parámetros completados para todos los modelos de motores:
+Aquí está la tabla completa con todos los parámetros completados para todos los modelos de motor:
 
 <table>
   <thead>
@@ -45,7 +45,7 @@ Aquí está la tabla completa con todos los parámetros completados para todos l
     </tr>
   </thead>
   <tbody>
-    <tr><td>Relación de Engranaje</td><td>28.17</td><td>12.6</td><td>36</td><td>19.61</td><td>20</td><td>20.25</td></tr>
+    <tr><td>Relación de Engranajes</td><td>28.17</td><td>12.6</td><td>36</td><td>19.61</td><td>20</td><td>20.25</td></tr>
     <tr><td>Voltaje de Entrada (V)</td><td>24</td><td>24</td><td>24</td><td>48</td><td>48</td><td>72</td></tr>
     <tr><td>Velocidad Sin Carga (RPM)</td><td>178</td><td>317</td><td>111</td><td>158</td><td>125</td><td>108</td></tr>
     <tr><td>Corriente de Entrada Sin Carga (A)</td><td>1</td><td>1</td><td>0.9</td><td>1.6</td><td>2.7</td><td>3.5</td></tr>
@@ -65,7 +65,7 @@ Aquí está la tabla completa con todos los parámetros completados para todos l
     <tr><td>Par de Retroceso (N.m)</td><td>0.4</td><td>0.8</td><td>1.14</td><td>3.21</td><td>3.8</td><td>4</td></tr>
     <tr><td>Holgura (Arcmin)</td><td>12</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td></tr>
     <tr><td>Tipo de Rodamiento de Salida</td><td colspan="2">Rodamientos de Bolas de Ranura Profunda</td><td colspan="4">Rodamientos de Rodillos Cruzados</td></tr>
-    <tr><td>Resistencia Axial (KN)</td><td>0.25</td><td>1.2</td><td>1.3</td><td>4</td><td>4.5</td><td>5.4</td></tr>
+    <tr><td>Carga Axial (KN)</td><td>0.25</td><td>1.2</td><td>1.3</td><td>4</td><td>4.5</td><td>5.4</td></tr>
     <tr><td>Esfuerzo Axial (KN)</td><td>0.25</td><td>1.2</td><td>1.3</td><td>1</td><td>4.5</td><td>5.4</td></tr>
     <tr><td>Carga Radial (KN)</td><td>1</td><td>1.2</td><td>1.5</td><td>4.5</td><td>5</td><td>6</td></tr>
     <tr><td>Inercia (Kg.cm²)</td><td>0.17</td><td>0.25</td><td>0.3</td><td>1.5</td><td>12.9</td><td>31.6</td></tr>
@@ -80,9 +80,9 @@ Aquí está la tabla completa con todos los parámetros completados para todos l
 ## Convenciones de Nomenclatura de la Serie RMD-X V4
 
 - **RMD**: Nombre de Marca R-Reductor M-Motor D-Accionamiento
-- **X2**: X Representa el Nombre de la Serie: Actuador Planetario Integrado, 2 representa el número de modelo del motor ej:X2 X4 X6 X8 etc
-- **P28**: Relación de engranaje planetario ej:P12 P28 P32 etc
-- **7**: Torque máximo 7N.m
+- **X2**: X Representa el Nombre de la Serie: Actuador Planetario Integrado, 2 representa el número de modelo del motor ej: X2 X4 X6 X8 etc
+- **P28**: Relación de engranajes planetarios ej: P12 P28 P32 etc
+- **7**: Par máximo 7N.m
 - **E**: Comunicación E: CAN BUS & EtherCAT
 
 ## Características Principales
@@ -90,17 +90,17 @@ Aquí está la tabla completa con todos los parámetros completados para todos l
 1. **CAN BUS & EtherCAT**
 2. **Rodamientos de Rodillos Cruzados**
 3. **Codificador Dual**
-4. **Alta Densidad de Torque**
+4. **Alta Densidad de Par**
 5. **Alta Precisión**
 6. **Diseño Hueco**
 
-## Comenzar
+## Introducción
 
 ### Preparación del Entorno Antes del Uso
 
 **Sistema Windows en PC**
 
-- Descarga el [Descarga el manual del producto correspondiente](https://www.myactuator.com/_files/archives/cab28a_b3f2a1c77d4645a08052a923690b40fc.zip?dn=MYACTUATOR_Setup%20Software_V4.0_20250206.zip).
+- Descarga el [manual del producto correspondiente](https://www.myactuator.com/_files/archives/cab28a_b3f2a1c77d4645a08052a923690b40fc.zip?dn=MYACTUATOR_Setup%20Software_V4.0_20250206.zip).
 - Descarga el [MYACTUATOR_Setup Software_V4.0.zip](https://www.myactuator.com/_files/archives/cab28a_b3f2a1c77d4645a08052a923690b40fc.zip?dn=MYACTUATOR_Setup%20Software_V4.0_20250206.zip)
 
 - Extrae `MYACTUATOR_Setup Software_V4.0.zip` e instala lo siguiente:
@@ -147,23 +147,23 @@ Aquí hemos seleccionado el motor X4-36, y su diagrama de interfaz se muestra a 
   </tr>
   <tr>
     <td>⑦ T+</td>
-    <td>Maestro envía comandos de control al módulo</td>
+    <td>El maestro envía comandos de control al módulo</td>
   </tr>
   <tr>
     <td>⑧ T-</td>
-    <td>Módulo envía retroalimentación de estado al maestro</td>
+    <td>El módulo envía retroalimentación de estado al maestro</td>
   </tr>
   <tr>
     <td>⑨ R+</td>
-    <td>Maestro refleja datos de estado del módulo</td>
+    <td>El maestro refleja los datos de estado del módulo</td>
   </tr>
   <tr>
     <td>⑩ R-</td>
-    <td>Módulo refleja comandos de control del maestro</td>
+    <td>El módulo refleja los comandos de control del maestro</td>
   </tr>
 </table>
 
-Aquí, utilizamos el método de comunicación CAN, que requiere una interfaz USB-CAN adicional para la depuración a través de una computadora superior en Windows.
+Aquí, utilizamos el método de comunicación CAN, que requiere una interfaz USB-CAN adicional para depuración a través de una computadora superior en Windows.
 
 <div align="center">
     <img width={500}
@@ -172,18 +172,18 @@ Aquí, utilizamos el método de comunicación CAN, que requiere una interfaz USB
 
 Aquí, necesitas proporcionar una fuente de alimentación de 24V separada para el motor y conectar el USB a tu computadora.
 
-### Usa el `MYACTUATOR Setup Software 250206.exe` para Probar el Motor
+### Usar el `MYACTUATOR Setup Software 250206.exe` para Probar el Motor
 
-| **Establecer ID y Conexión** | **Leer Información del Motor** | **Calibrar el motor** | **Calibrar el motor** |**Ejecutar una prueba de rotación del motor.** |
+| **Configurar ID y Conexión** | **Leer Información del Motor** | **Calibrar el motor** | **Calibrar el motor** |**Ejecutar una prueba de rotación del motor.** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/1.png) | ![fig2](https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/2.png) | ![fig3](https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/3.png) | ![fig4](https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/4.png) |![fig5](https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/5.png) |
 | El ID predeterminado del motor es 1. Ingresa ID como 1 y haz clic en "Connect". | Después de conectar, haz clic en "Read" para recuperar la información actual del motor.|Para el primer uso, haz clic en "Calibrate Motor" para realizar la calibración.|Después de la calibración, haz clic en "Read" y "Save". |Ahora puedes probar diferentes modos de control del motor en la sección Motor Running. |
 
-Para más características detalladas, consulte el **Manual de Instrucciones del Software de Configuración - V3.0.pdf** incluido en el archivo [MYACTUATOR_Setup Software_V4.0.zip](https://www.myactuator.com/_files/archives/cab28a_b3f2a1c77d4645a08052a923690b40fc.zip?dn=MYACTUATOR_Setup%20Software_V4.0_20250206.zip).
+Para más características detalladas, consulta el **Setup Software Instruction Manual - V3.0.pdf** incluido en el archivo [MYACTUATOR_Setup Software_V4.0.zip](https://www.myactuator.com/_files/archives/cab28a_b3f2a1c77d4645a08052a923690b40fc.zip?dn=MYACTUATOR_Setup%20Software_V4.0_20250206.zip).
 
-## Controlar el Motor Usando el [​reComputer Mini Jetson Orin.](/es/recomputer_jetson_mini_getting_started)
+## Controlar el Motor Usando el [reComputer Mini Jetson Orin.](/es/recomputer_jetson_mini_getting_started)
 
-Actualmente, las interfaces de comunicación CAN más comunes para motores en el mercado utilizan **XT30 (2+2)** y **conectores JST**. Nuestro dispositivo **reComputer Mini Jetson Orin** y **reComputer Robotics** está equipado con **puertos XT30 (2+2) duales** e **interfaces CAN basadas en JST**, proporcionando compatibilidad perfecta.
+Actualmente, las interfaces de comunicación CAN más comunes para motores en el mercado utilizan **XT30 (2+2)** y **conectores JST**. Nuestro dispositivo **reComputer Mini Jetson Orin** y **reComputer Robotics** está equipado con **puertos duales XT30 (2+2)** e **interfaces CAN basadas en JST**, proporcionando compatibilidad perfecta.
 
 **reComputer Mini:**
 <div align="center">
@@ -195,18 +195,18 @@ Actualmente, las interfaces de comunicación CAN más comunes para motores en el
   <img width ="800" src="https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/hexfellow/fig5.jpg"/>  
 </div>
 
-Para más detalles sobre el uso de CAN, puede consultar esta [wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_mini_hardware_interfaces_usage/#can ).
+Para más detalles sobre el uso de CAN, puedes consultar este [wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_mini_hardware_interfaces_usage/#can ).
 
 ### Habilitar Interfaces CAN
 
-**Paso1:** Antes de usar CAN0 y CAN1, retire la cubierta inferior y configure ambas resistencias de terminación de 120Ω en la posición ON.
+**Paso1:** Antes de usar CAN0 y CAN1, por favor retira la cubierta inferior y configura ambas resistencias de terminación de 120Ω en la posición ON.
 
 <div align="center">
     <img width={300}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/7.png" />
 </div>
 
-**Paso2:** Conecte el motor directamente al CAN0 del reComputer Mini a través de la interfaz XT30 (2+2).
+**Paso2:** Conecta el motor directamente al CAN0 del reComputer Mini a través de la interfaz XT30 (2+2).
 
 Esta es la interfaz CAN0 para reComputer Mini
 
@@ -219,8 +219,7 @@ Esta es la interfaz CAN0 para reComputer Mini
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/8.jpg" />
 </div>
 
-:::danger
-Esta fuente de alimentación es solo para aprendizaje y pruebas de un solo motor. Para múltiples motores, diseñe una placa de alimentación separada y aísle la fuente de alimentación del Jetson de la fuente de alimentación del motor para evitar que pase alta corriente directamente a través del Jetson.
+:::dangerEsta fuente de alimentación es solo para el aprendizaje y pruebas de un solo motor. Para múltiples motores, por favor diseñe una placa de alimentación separada y aísle la fuente de alimentación del Jetson de la fuente de alimentación del motor para evitar que pase alta corriente directamente a través del Jetson.
 :::
 
 #### Habilitar comunicación CAN del Jetson
@@ -231,13 +230,13 @@ Abra una terminal e ingrese el siguiente comando para poner el pin GPIO en alto 
 gpioset --mode=wait 0 43=0
 ```
 
-Si estás usando la interfaz JST CAN1, pon el pin 106 en alto.
+Si está usando la interfaz JST CAN1, ponga el pin 106 en alto.
 
 ```bash
 gpioset --mode=wait 0 106=0
 ```
 
-Mantén esta terminal abierta, abre una nueva terminal y configura CAN0.
+Mantenga esta terminal abierta, lance una nueva terminal y configure CAN0.
 
 ```bash
 sudo modprobe mttcan
@@ -245,7 +244,7 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-### Construir el Entorno de Python y C++
+### Construir Entorno Python y C++
 
 **Paso1:** Clonar el SDK con Git.
 
@@ -253,24 +252,24 @@ sudo ip link set can0 up
 git clone https://github.com/ZhuYaoHui1998/myactuator_rmd.git
 ```
 
-**Paso 2:** Este SDK del controlador requiere que se instalen las siguientes dependencias. Para Debian Linux se pueden instalar a través de apt de la siguiente manera:
+**Paso2:** Este SDK del controlador requiere que se instalen las siguientes dependencias. Para Debian Linux se pueden instalar a través de apt de la siguiente manera:
 
 ```bash
 sudo apt-get install -y build-essential cmake
 sudo apt install linux-modules-extra-5.15.0-1025-nvidia-tegra # For Jetson Jetpack 6.0
 ```
 
-En caso de que quieras usar los enlaces de Python, tendrás que instalar adicionalmente Python 3, pip y pybind11:
+En caso de que quiera usar los enlaces de Python tendrá que instalar adicionalmente Python 3, pip y pybind11:
 
 ```bash
 sudo apt-get install -y python3 python3-pip python3-pybind11 python3-setuptools
 ```
 
-Después de haber instalado sus dependencias, tendrás que instalar el SDK del controlador ya sea como una biblioteca de C++ o un paquete de Python como se describe en los siguientes pasos. Ambos usarán CMake para compilar el código de C++.
+Después de haber instalado sus dependencias tendrá que instalar el SDK del controlador ya sea como una biblioteca C++ o paquete Python como se describe en los siguientes pasos. Ambos usarán CMake para compilar el código C++.
 
-#### Compilando la Biblioteca de C++
+#### Construir la Biblioteca C++
 
-Para compilar el SDK del controlador de C++, abre una nueva terminal dentro de esta carpeta y ejecuta los siguientes comandos. En versiones más antiguas de Linux, la compilación podría fallar con el mensaje de error error: 'const struct can_frame' has no member named 'len' y tendrás que aplicar la modificación de código discutida en [issue 5](https://github.com/2b-t/myactuator_rmd/issues/5).
+Para construir el SDK del controlador C++ abra una nueva terminal dentro de esta carpeta y ejecute los siguientes comandos. En versiones más antiguas de Linux la construcción podría fallar con el mensaje de error error: 'const struct can_frame' has no member named 'len' y tendrá que aplicar la modificación de código discutida en [issue 5](https://github.com/2b-t/myactuator_rmd/issues/5).
 
 ```bash
 cd ~/myactuator_rmd
@@ -281,25 +280,25 @@ make -j $(nproc)
 sudo make install
 ```
 
-La bandera PYTHON_BINDINGS (por defecto desactivada) construye los enlaces de Python adicionalmente a la biblioteca de C++. En caso de que solo estés interesado en usar la biblioteca de C++, siéntete libre de dejarla desactivada. Cuando construyas los enlaces de Python de esta manera, se compilarán a una biblioteca compartida pero no se instalarán. Esto significa que tendrás que instalar la biblioteca manualmente o solo podrás importarlos localmente dentro de la carpeta de construcción.
+La bandera PYTHON_BINDINGS (por defecto desactivada) construye los enlaces de Python adicionalmente a la biblioteca C++. En caso de que solo esté interesado en usar la biblioteca C++ siéntase libre de dejarla desactivada. Cuando construya los enlaces de Python de esta manera serán compilados a una biblioteca compartida pero no serán instalados. Esto significa que tendrá que instalar la biblioteca manualmente o solo podrá importarlos localmente dentro de la carpeta de construcción.
 
-Para desinstalar el paquete nuevamente puedes usar el siguiente comando `xargs rm < install_manifest.txt`.
+Para desinstalar el paquete nuevamente puede usar el siguiente comando `xargs rm < install_manifest.txt`.
 
-#### Construyendo la Biblioteca de Python
+#### Construir la Biblioteca Python
 
-Para construir e instalar los enlaces de Python para este SDK, abre una nueva terminal dentro de la carpeta principal y ejecuta el siguiente comando:
+Para construir e instalar los enlaces de Python para este SDK abra una nueva terminal dentro de la carpeta principal y ejecute el siguiente comando:
 
 ```bash
 cd ~/myactuator_rmd
 pip3 install .
 ```
 
-Esto utilizará el setup.py para invocar CMake e instalar los enlaces como una biblioteca de C++. Si deseas eliminarlos nuevamente, simplemente ejecuta `pip3 uninstall myactuator-rmd-py`.
+Esto usará el setup.py para invocar CMake e instalar los enlaces como una biblioteca C++. Si quiere removerlos nuevamente simplemente invoque `pip3 uninstall myactuator-rmd-py`.
 
 ### Control Usando C++
 
-1. Crear la estructura del directorio del proyecto  
-Crea tu directorio de proyecto bajo el directorio src del código, por ejemplo, nómbralo `myactuator_example`, y crea una carpeta src bajo el subdirectorio.
+1. Crear estructura de directorio del proyecto  
+Cree su directorio de proyecto bajo el directorio src del código, por ejemplo, nómbrelo `myactuator_example`, y cree una carpeta src bajo el subdirectorio.
 
 ```bash  
 cd ~/myactuator_rmd
@@ -382,10 +381,10 @@ sudo ./myactuator_node
 
 **Prerrequisitos**  
 
-- La interfaz CAN `can0` debe estar configurada correctamente (asegúrese de que su motor y el bus CAN estén conectados correctamente).  
+- La interfaz CAN `can0` debe estar configurada correctamente (asegúrese de que su motor y bus CAN estén conectados correctamente).  
 - La biblioteca `myactuator_rmd` debe estar instalada correctamente (si no, instálela primero).
 
-Para más detalles de implementación en C++, consulte todo el contenido en `myactuator_rmd.hpp`. Proporcionaremos una introducción detallada a los métodos de uso de Python.
+Para más detalles de implementación en C++, por favor consulte todo el contenido en `myactuator_rmd.hpp`. Proporcionaremos una introducción detallada a los métodos de uso de Python.
 
 ### Control Usando Python
 
@@ -398,7 +397,7 @@ mkdir scripts
 
 #### **Obtener número de versión**
 
-Crea un script personalizado de Python llamado `test.py` bajo el directorio scripts y llénalo con el siguiente código.
+Cree un script de Python personalizado llamado `test.py` bajo el directorio scripts y llénelo con el siguiente código.
 
 ```python
 import myactuator_rmd_py as rmd
@@ -417,7 +416,7 @@ print("Version number:", actuator.getVersionDate())
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/8.png" />
 </div>
 
-Carga la biblioteca y continúa creando un controlador para una interfaz de red particular (aquí can0) y unidad (aquí 1 correspondiente a la dirección CAN 0x140 + 1 = 0x141).
+Cargue la biblioteca y continúe para crear un controlador para una interfaz de red particular (aquí can0) y unidad (aquí 1 correspondiente a la dirección CAN 0x140 + 1 = 0x141).
 
 #### **Obtener Estado del Motor**
 
@@ -468,7 +467,7 @@ def get_normalized_torque(actuator):
     # Get current value
     status = actuator.getMotorStatus2()
     current = status.current
-    
+
     # Calculate normalized torque (current/rated)
     torque_ratio = current / X4_24.rated_current
     actual_torque = torque_ratio * X4_24.rated_torque
@@ -539,7 +538,7 @@ actuator.shutdownMotor()
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/11.png" />
 </div>
 
-Verás que tu motor gira a la posición de 180 grados.
+Verá su motor rotar a la posición de 180 grados.
 
 - **Control de Posición Relativa**
 
@@ -566,7 +565,7 @@ actuator.shutdownMotor()
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/12.png" />
 </div>
 
-Observarás que el motor gira 90 grados en sentido antihorario.
+Observará el motor rotando 90 grados en sentido antihorario.
 
 - **Control de Velocidad**
 
@@ -589,8 +588,7 @@ angle = actuator.getMultiTurnAngle()
 print(f"Current position: {angle}°")
 
 mode = actuator.getControlMode()
-print(f"Current control mode: {mode}")
-```
+print(f"Current control mode: {mode}")```
 
 <div align="center">
     <img width={800}
@@ -642,12 +640,12 @@ feedback = actuator.sendPositionAbsoluteSetpoint(180.0, 100.0)
 time.sleep(5)
 print(feedback)
 
-    
+
 # Velocity control with feedback
 feedback = actuator.sendVelocitySetpoint(20.0)
 time.sleep(5)
 print(feedback)
-    
+
 # Torque control with feedback
 torque_constant = 0.32  # Set according to motor model
 feedback = actuator.sendTorqueSetpoint(1.5, torque_constant)
@@ -694,9 +692,9 @@ actuator.shutdownMotor()
 print("Motor powered off")
 ```
 
-#### Funciones del Codificador
+#### Funciones del Encoder
 
-- **Obtener Posición del Codificador Multi-vuelta**
+- **Obtener Posición del Encoder Multi-vuelta**
 
 ```python
 # -*- coding: gbk -*-
@@ -708,7 +706,7 @@ encoder_pos = actuator.getMultiTurnEncoderPosition()
 print(f"Multi-turn encoder position: {encoder_pos}")
 ```
 
-- **Establecer la Posición Actual como Punto Cero (Requiere Reinicio)**
+- **Establecer Posición Actual como Punto Cero (Requiere Reinicio)**
 
 ```python
 # -*- coding: gbk -*-
@@ -779,7 +777,7 @@ actuator.setAcceleration(1000, AccelerationType.VELOCITY_PLANNING_DECELERATION)
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

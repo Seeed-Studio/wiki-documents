@@ -58,6 +58,25 @@ After formatting, you can insert the microSD card into the microSD card slot. Pl
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/66.jpg" style={{width:500, height:'auto'}}/></div>
 
+### Understanding Pins
+
+<div class="table-center">
+	<table align="center">
+    <tr>
+			<th>Pin Number</th>
+			<th>Function Description</th>
+		</tr>
+		<tr>
+			<td align="center">GPIO 41</td>
+			<td align="center">PDM Microphone DATA</td>
+		</tr>
+		<tr>
+			<td align="center">GPIO 42</td>
+			<td align="center">PDM Microphone CLK</td>
+		</tr>
+	</table>
+</div>
+
 ## Detection of sound loudness
 
 For the first project case, let's detect the noise in the environment and show the ambient loudness detected by the microphone using the Arduino IDE's serial port waveform graph.
@@ -427,8 +446,6 @@ For example, in the figure below, there is a problem with the card reading and w
 If there are no problems with the card and the recording is quite successful. Then you need to check if the software supports audio playback in WAV format. We recommend using special music playing software to play audio, try not to use video player to play. After actual testing, there are many video players (although they support WAV format) that are unable to play it.
 
 ## Tech Support & Product Discussion
-
-.
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

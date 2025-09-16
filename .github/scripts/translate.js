@@ -43,7 +43,7 @@ const PRESERVE_TERMS = {
     'ReSpeaker': 'ReSpeaker',
     'LinkStar': 'LinkStar',
     'reTerminal': 'reTerminal',
-    'reserver': 'reserver',
+    'reServer': 'reServer',
     'BeagleBone': 'BeagleBone',
     'SenseCraft': 'SenseCraft',
     'Home Assistant': 'Home Assistant'
@@ -818,7 +818,7 @@ async function translateCategoryFile(filePath, targetLang) {
     
     console.log(`✅ Category文件翻译完成: ${targetPath}`);
     translationStatus.completed++;
-    return { success: true, path: targetPath, fileType: 'category' };
+    return { success: true, path: targetPath, fileType: 'category', action: 'translated' };
     
   } catch (error) {
     console.error(`❌ Category文件翻译失败 ${filePath}:`, error.message);
@@ -938,7 +938,7 @@ async function translateFile(filePath, targetLang) {
     
     console.log(`✅ 文件翻译完成: ${targetPath}`);
     translationStatus.completed++;
-    return { success: true, path: targetPath };
+    return { success: true, path: targetPath, action: 'translated' };
     
   } catch (error) {
     console.error(`❌ 文件翻译失败 ${filePath}: ${error.message}`);
@@ -953,7 +953,7 @@ async function detectFileOperations(baseSha) {
     console.log(`🔍 检测文件操作 (基于 ${baseSha})...`);
     
     const statusOutput = execSync(
-      `git diff --name-status ${baseSha}..HEAD -- docs/`,
+      `git diff --name-status -M90 ${baseSha}..HEAD -- docs/`,
       { encoding: 'utf8' }
     );
     
@@ -1210,8 +1210,13 @@ async function main() {
   
   await fs.writeFile('/tmp/translation-report.md', report, 'utf8');
   
-  const hasChanges = allResults.some(r => r.success && 
-    (r.action === 'translated' || r.action === 'renamed_and_retranslated' || !r.action));
+  const hasChanges = allResults.some(r => r.success && (
+    r.action === 'translated' ||
+    r.action === 'renamed_and_retranslated' ||
+    r.action === 'moved' ||
+    r.action === 'deleted' ||
+    (!r.action)  // 兼容旧返回（最好配合 B 改动后可去掉）
+  ) && r.action !== 'skipped' && r.action !== 'protected');
   
   if (hasChanges) {
     console.log('\n🚀 设置触发其他工作流标志...');

@@ -604,14 +604,15 @@ http://<JETSON_IP>:1880/
   "modules": {
     "@flowfuse/node-red-dashboard": "1.26.0"
   }
-}]```
+}]
+```
 
 - **Dirección del Broker MQTT** (por defecto: `172.17.0.1:1883`)  
 - **Dirección del Servicio Frigate** (por defecto: `http://192.168.118.111:5000`)  
 
 > ⚠️ **Recordatorio:** Asegúrate de modificar para que coincida con la `JETSON_IP` de tu propia máquina.  
 
-## 🔵 3.4 Efecto de Ejecución
+### 🔵 3.4 Efecto de Ejecución
 
 Accede a la siguiente URL en tu navegador:
 
@@ -621,9 +622,9 @@ http://JETSON_IP:1880/dashboard/frigate
 
 <div style={{textAlign:'center'}}><img  alt="Configuration" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/frigateevents.png"/></div>
 
-# 🟣 4. Descripción de Funciones
+## 🟣 4. Descripción de Funciones
 
-## 4.1 Detección de Armas en Tiempo Real
+### 4.1 Detección de Armas en Tiempo Real
 
 - Frigate detecta armas en las imágenes de la cámara basándose en el modelo YOLOv4-tiny-288  
 - Umbral de detección: `0.3`  
@@ -634,7 +635,7 @@ http://JETSON_IP:1880/dashboard/frigate
 
 ---
 
-## 4.2 Alertas y Notificaciones
+### 4.2 Alertas y Notificaciones
 
 - Mostrar el último fotograma capturado  
 - Registros históricos de alertas (incluyendo hora, cámara, captura de pantalla)  
@@ -643,13 +644,13 @@ http://JETSON_IP:1880/dashboard/frigate
 
 ---
 
-## 4.3 Registros Históricos y Conteo
+### 4.3 Registros Históricos y Conteo
 
 - Registrar los últimos 10 eventos de alerta  
 - Conteo acumulativo de alertas  
 - Limpieza de datos con un clic  
 
-# 🟤 5. Escenarios de Aplicación
+## 🟤 5. Escenarios de Aplicación
 
 - Monitoreo de amenazas de armas en áreas de seguridad del campus  
 - Protección en centros comerciales / metros / centros de transporte  

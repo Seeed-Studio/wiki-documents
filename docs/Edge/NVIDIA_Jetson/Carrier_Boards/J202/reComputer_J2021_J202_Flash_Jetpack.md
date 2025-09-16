@@ -17,7 +17,6 @@ no_comments: false # for Disqus
 
 # Getting Started with reComputer J202
 
-
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J202/carrier_board-Photoroom.png"/>
 </div>
@@ -30,7 +29,7 @@ no_comments: false # for Disqus
 
 reComputer J202 has nearly the same design and function as NVIDIA® Jetson Xavier NX™ carrier board, perfectly works with Jetson Nano/Xavier NX/TX2 NX module, and consists of 4x USB 3.2 gen 2 ports, M.2 key E for WIFI, M.2 Key M for SSD, RTC, CAN, Raspberry Pi GPIO 40-pin, and so on.
 
-## Features 
+## Features
 
 - **Perfectly Suited:** Design for Jetson Nano/Xavier NX/TX2 NX (260-pin SODIMM).
 - **Rich Peripherals:** Higher performance stability consists of USB 3.1 ports(4x), M.2 key E for WIFI, M.2 Key M for SSD, RTC, CAN, Raspberry Pi GPIO 40-pin, and so on.
@@ -44,8 +43,8 @@ Since the Jetson Nano has only one PCIe lane, if the module uses the Jetson Nano
 
 :::
 
-
 ## Specifications
+
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <tbody>
@@ -112,19 +111,17 @@ Since the Jetson Nano has only one PCIe lane, if the module uses the Jetson Nano
 </table>
 </div>
 
-## Hardware Overview 
+## Hardware Overview
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J202/J202_1.jpg"/></div>
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J202/J202_2.jpg"/></div>
-
 
 ## Supported Module
 
 - [NVIDIA® Jetson Nano™ 4GB](https://www.seeedstudio.com/NVIDIAr-Jetson-Nanotm-Module-1.html)
 - [NVIDIA® Jetson Xavier™ NX 8GB](https://www.seeedstudio.com/NVIDIAr-Jetson-Xaviertm-NX-Module-1.html)
 - [NVIDIA® Jetson Xavier™ NX 16GB](https://www.seeedstudio.com/NVIDIAr-Jetson-Xaviertm-NX-Module-16GB-1.html)
-
 
 ## Flash JetPack
 
@@ -212,8 +209,10 @@ Before we can move on to the installation steps, we need to make sure that our r
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/5.png" /></div>
 
 :::note
+
 - For NVIDIA® Jetson Nano™: 0955:7f21 NVidia Corp
 - For NVIDIA® Jetson Xavier™ NX: 0955:7e19 NVidia Corp
+
 :::
 
 :::caution
@@ -303,7 +302,6 @@ If you want to check how to solve the problem of insufficient capacity, please r
 
 https://wiki.seeedstudio.com/reComputer_Jetson_Series_Initiation/#q1-the-remaining-space-in-the-emmc-in-the-received-recomputer-jetson-is-only-about-2gb-how-can-i-solve-the-problem-of-insufficient-space .
 :::
- 
 
 If you want SDK Manager to download all the files to a location other than the default path, go to the Download & Install Options located at the bottom of the screen, then select the path you wish to use.
 
@@ -431,7 +429,6 @@ At this moment, we can unplug the jumper and then power up the reComputer again 
 
 </TabItem>
 
-
 <TabItem value="With Seeed BSP (nano)" label="With Seeed BSP (nano)">
 
 :::info
@@ -441,6 +438,7 @@ Recently, NVIDIA has updated the DRAM model, and Seeed has currently released a 
 If, during the process of flashing the official NVIDIA image, the system freezes due to the DP signal (manifested as an inability to flash and getting stuck on the NVIDIA interface), it proves that you have purchased the updated module. In this case, you need to flash the factory image we currently provide.
 
 The current differences between this factory image and the original one are as follows:
+
 1. The DP configuration has been modified (to prevent the system from freezing due to the DP signal on some modules).
 2. The SD card slot is set to the available state by default, and there is no need to additionally modify the device tree to enable the SD card slot function.
 3. The image contains Jetpack4.6.6.
@@ -523,18 +521,19 @@ Here we will install Jetpack 5.1.3 on the reComputer.
 </div>
 
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
 :::
 
 **Step 2:** Extract the downloaded image file:
+
 ```bash
 sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**Step 3:** Navigate to the unzipped directory and execute the following command to flash jetpack system to the NVMe SSD: 
+**Step 3:** Navigate to the unzipped directory and execute the following command to flash jetpack system to the NVMe SSD:
 
 ```bash
 cd mfi_xxxx
@@ -554,13 +553,11 @@ The flash command may run for 2-10 minutes.
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
-
 :::info
 Please complete the **System Configuration** according to your needs.
 :::
 
 </TabItem>
-
 
 </Tabs>
 
@@ -624,17 +621,16 @@ If more storage space is needed, we can use SD card to expand the capacity, or b
 
 [Seeed Jetson Devices One Page](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

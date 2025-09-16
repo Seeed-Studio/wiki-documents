@@ -14,7 +14,16 @@ last_update:
   date: 7/2/2025
   author: Jason
 sidebar_position: 3
---- 
+---
+
+The following sample code is designed for PlatformIO, but it is also compatible with the nRF Connect SDK.
+
+:::tip
+Based on VS Code, if you want to use the following case on the nRF Connect SDK, please refer to the provided connection, add the app.overlay file and modify the contents in prj.conf
+
+[XIAO nRF54L15 Add overlay file and modify conf file](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/).
+
+:::
 
 ## BLE Oberver
 

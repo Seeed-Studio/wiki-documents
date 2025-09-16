@@ -25,15 +25,15 @@ last_update:
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/nuttx.svg"/></div>
 
-此外，NuttX 提供了许多先进和有用的功能，如 USB、以太网、音频和图形子系统。这些特性使 NuttX 成为寻求能够在各种类型硬件上运行的多功能、强大 RTOS 的开发者的有吸引力的选择。
+此外，NuttX 提供了许多先进且有用的功能，如 USB、以太网、音频和图形子系统。这些特性使 NuttX 成为寻求多功能、强大的 RTOS 且能够在各种类型硬件上运行的开发者的有吸引力的选择。
 
-NuttX 支持大量且不断扩展的开发板。[官方文档](https://nuttx.apache.org/docs/latest/platforms/) 提供了按架构和片上系统（SoC）系列组织的支持开发板的完整列表。
+NuttX 支持大量且不断扩展的开发板。[官方文档](https://nuttx.apache.org/docs/latest/platforms/) 提供了支持的开发板的完整列表，按架构和片上系统（SoC）系列组织。
 
 例如，NuttX 文档中的 [Seeed Studio XIAO RP2350](https://nuttx.apache.org/docs/latest/platforms/arm/rp23xx/boards/xiao-rp2350/index.html) 页面提供了每个支持功能的详细描述和如何使用它们的说明。此外，NuttX 文档中还有一个专门针对 [Raspberry Pi RP2350](https://nuttx.apache.org/docs/latest/platforms/arm/rp23xx/index.html) 系列芯片的页面。
 
 ## 安装
 
-Nuttx 文档为不同平台提供了[指南](https://nuttx.apache.org/docs/latest/quickstart/install.html)。对于 Seeed Studio XIAO RP2350，请按照以下步骤操作：
+Nuttx 文档提供了针对不同平台的[指南](https://nuttx.apache.org/docs/latest/quickstart/install.html)。对于 Seeed Studio XIAO RP2350，请按照以下步骤操作：
 
 1. 下载 picotool 工具（可选）：
 
@@ -74,7 +74,7 @@ Apache Nuttx 分为两个项目：
 ./tools/configure.sh board_name:your_application
 ```
 
-也可以通过运行命令检查支持的开发板列表：
+Also it's possible to check the list of board-supported a running the command:
 
 ```bash
 ./tools/configure.sh -L
@@ -95,11 +95,11 @@ Apache Nuttx 分为两个项目：
     picotool load nuttx -t elf
     ```
 
-6. RESET 和 BOOT 按钮可用于进入引导加载程序模式，方法是按住 BOOT 按钮，然后按下并释放 RESET 按钮。然后，开发板将作为存储设备枚举到通过 USB 连接的计算机。将 .UF2 文件保存到此设备将替换 RP2350 上的 Flash ROM 内容。
+6. 可以使用 RESET 和 BOOT 按钮进入引导加载程序模式，方法是按住 BOOT 按钮，然后按下并释放 RESET 按钮。然后，开发板将作为存储设备枚举到通过 USB 连接的计算机。将 .UF2 文件保存到此设备将替换 RP2350 上的 Flash ROM 内容。
 
 ## 实践操作
 
-现在是时候实际探索 NuttX 了。在本节中，提供了三个应用程序：NSH、USBNSH 和 COMBO。
+现在是实际探索 NuttX 的时候了。在本节中，提供了三个应用程序：NSH、USBNSH 和 COMBO。
 
 ### NSH
 
@@ -112,32 +112,32 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-现在我们为 xiao-rp2350 开发板选择 NSH 配置：
+Now we select the NSH configuration to the xiao-rp2350 board:
 
 ```bash
 ./tools/configure.sh xiao-rp2350:nsh
 ```
 
-编译源代码。
+Compile the source code.
 
 ```bash
 make -j
 ```
 
-将固件加载到您的开发板中，并将 USB 转串口连接到 TX 和 RX 引脚，然后运行串口通信程序，如 minicon 或 picocom：
+将固件加载到您的开发板中，并将USB转串口连接到TX和RX引脚，然后运行串口通信程序，如minicon或picocom：
 
 ```bash
 picocom -b 115200 /dev/ttyUSB0
 ```
 
-访问 NuttShell 控制台：
+Access the NuttShell console:
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
 nsh> 
 ```
 
-输入 `?`，您将访问命令和内置应用程序的可用选项。
+Typing `?`, you will access the available options for commands and built-in applications.
 
 ```bash
 nsh> ?
@@ -168,7 +168,7 @@ Hello, World!!
 
 ### USBNSH
 
-与 NSH 配置类似，但使用 CDC/ACM 串口（在 USB 端口启用控制台，115200 bps）。
+类似于 NSH 配置，但使用 CDC/ACM 串口（控制台在 USB 端口启用，波特率为 115200 bps）。
 
 我们可以通过清除之前的配置来开始构建过程
 
@@ -177,25 +177,25 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-现在我们为 xiao-rp2350 开发板选择 NSH 配置：
+Now we select the NSH configuration to the xiao-rp2350 board:
 
 ```bash
 ./tools/configure.sh xiao-rp2350:usbnsh
 ```
 
-编译源代码。
+Compile the source code.
 
 ```bash
 make -j
 ```
 
-将固件加载到您的开发板中，运行串口通信程序，如 minicon 或 picocom：
+Load the firmware into you board, run a serial communication program such as minicon or picocom:
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
 ```
 
-您必须按 Enter 键 3 次，然后此消息将在终端中显示。
+You must to press Enter 3 times, and then this message will show in the terminal.
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -204,26 +204,26 @@ nsh>
 
 ### COMBO
 
-此配置启用三个示例应用程序：gpio、leds 和 ws2812。通用输入/输出（GPIO）是微控制器最基本的部分，允许它连接到外部世界。这样我们将使用 NSH 来访问和配置这些引脚。但首先，让我们清除之前的配置。
+此配置启用了三个示例应用程序：gpio、leds 和 ws2812。通用输入/输出（GPIO）是微控制器最基本的部分，允许它连接到外部世界。这样我们将使用 NSH 来访问和配置这些引脚。但首先，让我们清除之前的配置。
 
 ```bash
 cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-为 xiao-rp2350 开发板选择 combo 配置。
+Select the combo configuration to the xiao-rp2350 board.
 
 ```bash
 ./tools/configure.sh xiao-rp2350:combo
 ```
 
-编译源代码。
+Compile de the source code.
 
 ```bash
 make -j
 ```
 
-将固件加载到您的开发板中，运行串口通信程序，如 minicon 或 picocom：
+Load the firmware into you board, run a serial communication program such as minicon or picocom:
 
 ```bash
 picocom -b 115200 /dev/ttyUSB0
@@ -234,7 +234,7 @@ NuttShell (NSH) NuttX-12.8.0
 nsh>
 ```
 
-要检查与此应用程序交互接受哪些选项，输入 `gpio -h`，它将返回参数列表。
+要查看与此应用程序交互时接受哪些选项，请输入 `gpio -h`，它将返回参数列表。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -261,12 +261,12 @@ IO_INPUT_PIN_PULLDOWN
  10: GPIO_INTERRUPT_BOTH_PIN
 ```
 
-要确认 GPIO 设备文件已创建，输入 `ls/dev`。输入后，您可以看到一些 gpio 被声明定义在 boards/arm/rp23xx/xiao-rp2350/include/board.h 中，它们代表：
+要确认 GPIO 设备文件已创建，请输入 `ls/dev`。输入后，您可以看到一些 gpio 已在 boards/arm/rp23xx/xiao-rp2350/include/board.h 中声明定义，它们代表：
 
 - 板载 LED：
   - 黄色            -> GPIO25
  
-- GPIO
+- GPIO：
   - 1 个输入           -> GPIO27
   - 1 个中断输入 -> GPIO26
   - 1 个输出          -> GPIO28
@@ -286,7 +286,7 @@ nsh> ls /dev
 nsh> 
 ```
 
-按照这些命令读取 gpio27 和 gpio26（带中断）并写入 gpio28。
+Following these commands to read gpio27 and gpio26 (with interruption) and write at gpio28.
 
 ```bash
 nsh> gpio -w 1 /dev/gpio26
@@ -311,9 +311,9 @@ Driver: /dev/gpio28
   Verify:        Value=0
 ```
 
-USERLEDS 是一个子系统，允许通过单个操作控制 LED。此外，您可以使用类似 printf 的命令行。在此演示中，我们将每 1 秒打开和关闭板载黄色 LED。
+USERLEDS 是一个子系统，允许通过单个操作来控制 LED。此外，您可以使用类似 printf 的命令行。在这个演示中，我们将每隔 1 秒钟打开和关闭板载的黄色 LED。
 
-输入 `leds`，您观察到 LED 同时闪烁。
+输入 `leds`，您会观察到 LED 同时闪烁。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -332,14 +332,14 @@ led_daemon: LED set 0x01
 led_daemon: LED set 0x00
 ```
 
-Seeed Studio XIAO RP2350 还有一个 WS2812 可寻址 LED，可以使用 ws2812 应用程序进行测试：
+The Seeed Studio XIAO RP2350 also has a WS2812 addressable LED that can be tested using ws2812 application:
 ```bash
 NuttShell (NSH) NuttX-12.8.0
 nsh> ws2812
 ```
 
 
-查看下面的视频，了解 gpio、leds 和 ws2812 示例的演示：
+查看下面的视频演示，包含 gpio、leds 和 ws2812 示例：
 
 <div style={{ maxWidth: '100%', textAlign: 'center' }}>
   <video style={{ width: '100%', height: 'auto' }} controls>

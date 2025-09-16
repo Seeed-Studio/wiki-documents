@@ -296,7 +296,8 @@ void loop() {
         Serial.print("Received data: "); // Print label for received data
         Serial.println(receivedData); // Directly print the received data
     }
-}```
+}
+```
 
 ### コード詳細機能
 

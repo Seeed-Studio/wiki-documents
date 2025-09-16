@@ -14,7 +14,7 @@ last_update:
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" /></div>
 
-这是一款为 Seeed Studio XIAO 设计的功能强大的扩展板，尺寸仅为树莓派 4 的一半。它能够以简单快速的方式构建原型和项目。凭借其丰富的外设，包括 OLED、RTC、可扩展存储器、无源蜂鸣器、复位/用户按钮、5V 舵机连接器、多种数据接口等，您可以探索 Seeed Studio XIAO 的无限可能性。该板还很好地支持 [Circuitpython](https://circuitpython.org/)。
+这是一款专为 Seeed Studio XIAO 设计的功能强大的扩展板，尺寸仅为树莓派 4 的一半。它能够以简单快速的方式构建原型和项目。凭借其丰富的外设，包括 OLED、RTC、可扩展存储器、无源蜂鸣器、复位/用户按钮、5V 舵机连接器、多种数据接口等，您可以探索 Seeed Studio XIAO 的无限可能性。该板还很好地支持 [Circuitpython](https://circuitpython.org/)。
 
 作为 Seeed Studio XIAO 外形规格，所有 Seeed Studio XIAO 板都支持 [Grove Shield for Seeed Studio XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) 和 [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)。引脚之间存在细微差异，参考引脚图可以轻松管理。
 
@@ -33,7 +33,7 @@ Seeed Studio XIAO SAMD21、Seeed Studio XIAO RP2040 和 Seeed Studio XIAO nRF528
 - **丰富的外设：** OLED 显示屏、RTC、可扩展存储空间、无源蜂鸣器、用户按钮、板载电池管理芯片。
 - **无需焊接：** 所有引脚均已引出。便捷的即插即用 Grove 连接器支持多种数据协议，包括 IIC、UART、模拟/数字。
 - **支持 Circuit Python：** 很好地支持 circuit python。MicroSD 卡槽可扩展存储空间，使得在原型制作和项目构建中分配更多所需库成为可能。
-- **小型尺寸：** 紧凑优雅，仅为树莓派 4 的一半大小，特别适合需要小型尺寸的项目。
+- **小巧尺寸：** 紧凑优雅，仅为树莓派 4 的一半大小，特别适合需要小尺寸的项目。
 
 ## 规格参数
 
@@ -92,7 +92,7 @@ Seeed Studio XIAO SAMD21、Seeed Studio XIAO RP2040 和 Seeed Studio XIAO nRF528
 |Seeed Studio XIAO 扩展底板  | *1 |
 
 :::note
-本产品不包含 Seeed Studio XIAO 和电池，Seeed Studio XIAO 正在不断推出新产品。要了解该系列的最新产品开发动态，请访问 [XIAO 系列主页](https://www.seeedstudio.com/xiao-series-page)。
+本产品不包含 Seeed Studio XIAO 和电池，Seeed Studio XIAO 正在不断推出新产品。要了解该系列的最新产品动态，请访问 [XIAO 系列主页](https://www.seeedstudio.com/xiao-series-page)。
 
 <!-- please click this link to get [**Seeed Studio XIAO SAMD21**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html?gclid=Cj0KCQjwufn8BRCwARIsAKzP695mYBI8wwzrR8rXiJgv9QBK5DeTJGCU9bzXvzGUheFVZxqHcuw0SgYaAqDqEALw_wcB) -->
 
@@ -111,7 +111,7 @@ Seeed Studio XIAO SAMD21、Seeed Studio XIAO RP2040 和 Seeed Studio XIAO nRF528
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/2222222222222222222222222222221.jpg" /></div>
 
-有一个外部 MicroSD 卡插槽和 RTC 电池座，MicroSD 卡主要用于保存和运行 `python.py` 文件，RTC 用于跟踪当前时间，可用于在特定时间编程执行操作。
+板上有一个外部 MicroSD 卡槽和 RTC 电池座，MicroSD 卡主要用于保存和运行 `python.py` 文件，RTC 用于跟踪当前时间，可用于在特定时间编程执行操作。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/1111111111111111111111110.jpg" /></div>
 
@@ -131,18 +131,18 @@ Seeed Studio XIAO Grove 扩展板的外部接头引脚描述。
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO-to-board.png" /></div>
 
 :::note
-请先将 Seeed Studio XIAO 插在扩展板上，然后插入 Type-C，记住将 Seeed Studio XIAO 插入**两个母头连接器的中间**，否则会损坏 Seeed Studio XIAO 和扩展板。
+请先将 Seeed Studio XIAO 插在扩展板上，然后再插 Type-C，记住要将 Seeed Studio XIAO 插入**两个母头连接器的中间**，否则会损坏 Seeed Studio XIAO 和扩展板。
 :::
 
 ## 电池使用
 
-Seeed Studio XIAO 扩展底板可以由电池供电，所以如果您做一些需要移动的演示，电池将帮助您解决电源供应问题。当您插入电池时，请注意正负极，按照图片连接电池以免损坏电路板。
+Seeed Studio XIAO 扩展底板可以用电池供电，所以如果你做一些需要移动的演示，电池将帮助你解决电源供应问题。当你插入电池时，请注意正负极，按照图片连接电池，以免损坏板子。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/battery-board.png" /></div>
 
-此外，当您插入电池线和 type-C 线并将开关按钮切换到开启时，电路板会给电池充电。
+此外，当你插入电池线和 type-C 线并将开关拨到开启位置时，板子会给电池充电。
 
-如下图所示，如果 LED 闪烁，表示电池没有充电或电路板没有连接电池；如果 LED 持续亮起，表示电池正在充电。
+如下图所示，如果 LED 闪烁，表示电池没有充电或板子没有连接电池；如果 LED 持续亮着，表示电池正在充电。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO_flash_light.png" /></div>
 
@@ -152,7 +152,7 @@ Seeed Studio XIAO 扩展底板可以由电池供电，所以如果您做一些�
 
 - **OLED显示屏：** 无需连接PC即可进行可视化数据显示，能够更高效地进行调试，并构建传感器集线器、数据监控系统等应用。
 
-- **复位按钮：** 无需跳线和短路，一键轻松复位。
+- **RESET按钮：** 无需跳线和短路，一键轻松复位。
 
 - **SWD调试：** SWD引脚引出为公头排针，使调试器连接和固件下载更加容易。
 
@@ -160,9 +160,9 @@ Seeed Studio XIAO 扩展底板可以由电池供电，所以如果您做一些�
 
 - **可扩展存储：** 背面配有MicroSD卡槽，添加库和使用circuit python时不再担心内存限制。
 
-- **用户按钮：** 除了复位按钮外，还提供另一个用户自定义按钮。
+- **用户按钮：** 除了RESET按钮外，还提供另一个用户自定义按钮。
 
-- **无源蜂鸣器：** 您可以改变PWM频率来产生不同的蜂鸣声，制作"蜂鸣器音乐"。
+- **无源蜂鸣器：** 您可以改变PWM频率来产生不同的蜂鸣声，获得"蜂鸣器音乐"。
 
 - **Grove连接器：** 所有引脚引出，即插即用的grove连接器支持常见数据协议（Grove IIC*2，Grove UART*1，A0/D0 Grove*1）
 
@@ -180,7 +180,7 @@ Seeed Studio XIAO 扩展底板可以由电池供电，所以如果您做一些�
 
 **步骤1**. 将Seeed Studio XIAO SAMD21安装到扩展板上，然后连接Type-C线缆。
 
-**步骤2**. 安装[**u8g2**](https://github.com/olikraus/U8g2_Arduino)库，这是[**如何安装库**](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library/)的指南。
+**步骤2**. 安装[**u8g2**](https://github.com/olikraus/U8g2_Arduino)库，这是[**如何安装库**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)的指南。
 
 **步骤3**. 复制代码并粘贴到Arduino IDE中，然后上传。
 
@@ -218,27 +218,27 @@ void loop(void) {
 **代码**
 
 ```cpp
-const int buttonPin = 1;     // 按钮引脚的编号
-int buttonState = 0;         // 用于读取按钮状态的变量
+const int buttonPin = 1;     // the number of the pushbutton pin
+int buttonState = 0;         // variable for reading the pushbutton status
 
 void setup() {
-  // 将LED引脚初始化为输出：
+  // initialize the LED pin as an output:
   pinMode(LED_BUILTIN, OUTPUT);
-  // 将按钮引脚初始化为输入：
+  // initialize the pushbutton pin as an input:
   pinMode(buttonPin, INPUT_PULLUP);
 
 }
 
 void loop() {
-  // 读取按钮的状态值：
+  // read the state of the pushbutton value:
   buttonState = digitalRead(buttonPin);
 
-  // 检查按钮是否被按下。如果是，buttonState为HIGH：
+  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
   if (buttonState == HIGH) {
-    // 点亮LED：
+    // turn LED on:
     digitalWrite(LED_BUILTIN, HIGH);
   } else {
-    // 熄灭LED：
+    // turn LED off:
     digitalWrite(LED_BUILTIN, LOW);
   }
 
@@ -247,7 +247,7 @@ void loop() {
 
 ### 蜂鸣器
 
-蜂鸣器默认连接到引脚 A3，如果您想要移除蜂鸣器功能，只需按照下图所示，切断连线。
+蜂鸣器默认连接到引脚 A3，如果您想移除蜂鸣器功能，只需按照下图所示，切断连接线。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/111123232325.png" /></div>
 
@@ -320,16 +320,14 @@ void loop() {
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/rotary_servo.gif" /></div>
 
-**步骤 1**. 将 Seeed Studio XIAO SAMD21 安装到扩展底板上，然后连接 Type-C 数据线。
+**步骤 1**. 将 Seeed Studio XIAO SAMD21 安装到扩展板上，然后连接 Type-C 线缆。
 
 **步骤 2**. 将舵机线缆连接到 **I2C** 端口，将旋转角度传感器连接到 **D0**。
 
 **步骤 3**. 打开 Arduino IDE，复制代码并粘贴到 Arduino IDE 中，然后上传。
 
 :::tip
-如果您的开发板是 **XIAO ESP32 系列**。在运行以下代码之前，您需要先在 **Arduino 库管理器** 中安装 ESP32Servo 库，并将以下代码从
-
-```#include <Servo.h>``` 更改为 ```#include <ESP32Servo.h>```。
+如果您的开发板是 **XIAO ESP32 系列**。在运行以下代码之前，您需要先在 **Arduino 库管理器** 中安装 ESP32Servo 库，并将以下代码从 ```#include <Servo.h>``` 更改为 ```#include <ESP32Servo.h>```。
 :::
 
 ```cpp
@@ -338,19 +336,19 @@ void loop() {
 #include <Wire.h>
 
 #define ROTARY_ANGLE_SENSOR A0
-#define ADC_REF 3 //ADC的参考电压是3v。如果seeeduino上的Vcc开关
-#define GROVE_VCC 3 //grove接口的VCC通常是3v
-#define FULL_ANGLE 300 //旋转角度的满值是300度
+#define ADC_REF 3 //reference voltage of ADC is 3v.If the Vcc switch on the seeeduino
+#define GROVE_VCC 3 //VCC of the grove interface is normally 3v
+#define FULL_ANGLE 300 //full value of the rotary angle is 300 degrees
 
-Servo myservo;  // 创建舵机对象来控制舵机
-// 在大多数板子上可以创建十二个舵机对象
+Servo myservo;  // create servo object to control a servo
+// twelve servo objects can be created on most boards
 
-int pos = 0;    // 存储舵机位置的变量
+int pos = 0;    // variable to store the servo position
 
 void setup() {
   Serial.begin(9600);
   pinMode(ROTARY_ANGLE_SENSOR, INPUT);
-  myservo.attach(5);  // 将引脚5上的舵机连接到舵机对象
+  myservo.attach(5);  // attaches the servo on pin 9 to the servo object
 }
 
 void loop() {
@@ -359,25 +357,24 @@ void loop() {
   int sensor_value = analogRead(ROTARY_ANGLE_SENSOR);
   voltage = (float)sensor_value * ADC_REF / 1023;
   float degrees = (voltage * FULL_ANGLE) / GROVE_VCC;
-  Serial.println("标记与起始位置之间的角度：");
+  Serial.println("The angle between the mark and the starting position:");
   Serial.println(degrees);
   delay(50);
   myservo.write(degrees);
 }
-
 ```
 
-### RTC时钟显示
+### RTC 时钟显示
 
-此示例使用RTC在OLED上显示时钟。
+此示例使用 RTC 在 OLED 上显示时钟。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/time_clock.gif" /></div>
 
-**步骤1**. 将Seeed Studio XIAO SAMD21安装在扩展板上，然后连接Type-C线缆。
+**步骤 1**. 将 Seeed Studio XIAO SAMD21 安装在扩展板上，然后连接 Type-C 线缆。
 
-**步骤2**. 安装[**u8g2**](https://github.com/olikraus/U8g2_Arduino)和[**PCF8563**](https://github.com/Bill2462/PCF8563-Arduino-Library)库，这是[**如何安装库**](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library/)的指南。
+**步骤 2**. 安装 [**u8g2**](https://github.com/olikraus/U8g2_Arduino) 和 [**PCF8563**](https://github.com/Bill2462/PCF8563-Arduino-Library) 库，这是 [**如何安装库**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) 的指南。
 
-**步骤3**. 复制代码并粘贴到Arduino IDE中，然后上传。
+**步骤 3**. 复制代码并粘贴到 Arduino IDE 中，然后上传。
 
 ```cpp
 #include <Arduino.h>
@@ -386,27 +383,27 @@ void loop() {
 PCF8563 pcf;
 #include <Wire.h>
 
-U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // 无复位引脚的OLED显示屏
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
 
 void setup() {
   Serial.begin(115200);
   u8x8.begin();
   u8x8.setFlipMode(1);
   Wire.begin();
-  pcf.init();//初始化时钟
-  pcf.stopClock();//停止时钟
-  pcf.setYear(20);//设置年份
-  pcf.setMonth(10);//设置月份
-  pcf.setDay(23);//设置日期
-  pcf.setHour(17);//设置小时
-  pcf.setMinut(33);//设置分钟
-  pcf.setSecond(0);//设置秒
-  pcf.startClock();//启动时钟
+  pcf.init();//initialize the clock
+  pcf.stopClock();//stop the clock
+  pcf.setYear(20);//set year
+  pcf.setMonth(10);//set month
+  pcf.setDay(23);//set dat
+  pcf.setHour(17);//set hour
+  pcf.setMinut(33);//set minut
+  pcf.setSecond(0);//set second
+  pcf.startClock();//start the clock
 }
 
 void loop() {
-  Time nowTime = pcf.getTime();//获取当前时间
-  u8x8.setFont(u8x8_font_chroma48medium8_r);   // 选择合适的字体
+  Time nowTime = pcf.getTime();//get current time
+  u8x8.setFont(u8x8_font_chroma48medium8_r);   // choose a suitable font
 
   u8x8.setCursor(0, 0);
   u8x8.print(nowTime.day);
@@ -423,7 +420,6 @@ void loop() {
   u8x8.println(nowTime.second);
   delay(1000);
 }
-
 ```
 
 ### SD卡功能
@@ -444,12 +440,12 @@ File myFile;
 void setup() {
   // Open serial communications and wait for port to open:
   Serial.begin(115200);
-  while(!Serial);              // 打开串口监视器后执行
+  while(!Serial);              // Execute after turning on the serial monitor
   delay(500);
 
   Serial.print("Initializing SD card...");
 
-  pinMode(D2, OUTPUT);          // 修改此处的引脚以适配您使用的SD卡的CS引脚。
+  pinMode(D2, OUTPUT);          // Modify the pins here to fit the CS pins of the SD card you are using.
   if (!SD.begin(D2)) {
     Serial.println("initialization failed!");
     return;
@@ -458,7 +454,7 @@ void setup() {
 
   // open the file. note that only one file can be open at a time,
   // so you have to close this one before opening another.
-  myFile = SD.open("/test.txt", FILE_WRITE);          // 读写文件的路径需要以"/"开头
+  myFile = SD.open("/test.txt", FILE_WRITE);          // The path to read and write files needs to start with "/"
 
   // if the file opened okay, write to it:
   if (myFile) {
@@ -473,7 +469,7 @@ void setup() {
   }
 
   // re-open the file for reading:
-  myFile = SD.open("/test.txt");                       // 读写文件的路径需要以"/"开头
+  myFile = SD.open("/test.txt");                       // The path to read and write files needs to start with "/"
   if (myFile) {
     Serial.println("test.txt:");
 
@@ -495,7 +491,7 @@ void loop() {
 
 ```
 
-如果您使用的是XIAO nRF52840系列，那么您可能需要单独下载[SdFat库](https://github.com/greiman/SdFat)才能使用SD卡功能。
+如果您使用的是 XIAO nRF52840 系列，那么您可能需要单独下载 [SdFat 库](https://github.com/greiman/SdFat) 以便使用 SD 卡功能。
 
 ```cpp
 #include <SPI.h>
@@ -506,58 +502,57 @@ SdFat SD;
 File myFile;
 
 void setup() {
-  // 打开串口通信并等待端口打开：
+  // Open serial communications and wait for port to open:
   Serial.begin(9600);
   while (!Serial) {
-    ; // 等待串口连接。仅对原生USB端口需要
+    ; // wait for serial port to connect. Needed for native USB port only
   }
 
 
-  Serial.print("正在初始化SD卡...");
+  Serial.print("Initializing SD card...");
 
   if (!SD.begin(SD_CS_PIN)) {
-    Serial.println("初始化失败！");
+    Serial.println("initialization failed!");
     return;
   }
-  Serial.println("初始化完成。");
+  Serial.println("initialization done.");
 
-  // 打开文件。注意一次只能打开一个文件，
-  // 所以在打开另一个文件之前必须先关闭这个文件。
+  // open the file. note that only one file can be open at a time,
+  // so you have to close this one before opening another.
   myFile = SD.open("/test.txt", FILE_WRITE);
 
-  // 如果文件打开成功，写入数据：
+  // if the file opened okay, write to it:
   if (myFile) {
-    Serial.print("正在写入test.txt...");
+    Serial.print("Writing to test.txt...");
     myFile.println("testing 1, 2, 3.");
-    // 关闭文件：
+    // close the file:
     myFile.close();
-    Serial.println("完成。");
+    Serial.println("done.");
   } else {
-    // 如果文件没有打开，打印错误信息：
-    Serial.println("打开test.txt时出错");
+    // if the file didn't open, print an error:
+    Serial.println("error opening test.txt");
   }
 
-  // 重新打开文件进行读取：
+  // re-open the file for reading:
   myFile = SD.open("test.txt");
   if (myFile) {
     Serial.println("test.txt:");
 
-    // 从文件中读取数据直到没有更多内容：
+    // read from the file until there's nothing else in it:
     while (myFile.available()) {
       Serial.write(myFile.read());
     }
-    // 关闭文件：
+    // close the file:
     myFile.close();
   } else {
-    // 如果文件没有打开，打印错误信息：
-    Serial.println("打开test.txt时出错");
+    // if the file didn't open, print an error:
+    Serial.println("error opening test.txt");
   }
 }
 
 void loop() {
-  // setup后什么都不会发生
+  // nothing happens after setup
 }
-
 ```
 
 ## Seeed Studio XIAO 扩展底板亚克力外壳
@@ -566,7 +561,7 @@ void loop() {
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/XIAO-p-4812.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border={0} /></a></p>
 
-我们为保护 Seeed Studio XIAO 扩展底板制作了这个[**亚克力外壳**](https://www.seeedstudio.com/XIAO-p-4812.html)，这些是亚克力外壳组件。
+我们为 Seeed Studio XIAO 扩展底板制作了这个[**亚克力外壳**](https://www.seeedstudio.com/XIAO-p-4812.html)，用于保护 Seeed Studio XIAO 扩展底板，这些是亚克力外壳组件。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Acrylic_Case/componets.png" /></div>
 
@@ -574,15 +569,15 @@ void loop() {
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Acrylic_Case/board_compare.png" /></div>
 
-这个亚克力外壳易于组装，还能让外壳看起来更整洁。
+这个亚克力外壳易于组装，还可以让外壳看起来更整洁。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Acrylic_Case/build_up.gif" /></div>
 
 ## 在带扩展板的 Seeed Studio XIAO SAMD21 上运行 CircuitPython
 
-本教程介绍如何在[**Seeed Studio XIAO SAMD21 开发板**](https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html)上安装和运行 Adafruit Industries 官方的[**CircuitPython**](https://circuitpython.org/)！
+本教程介绍如何在[**Seeed Studio XIAO SAMD21 开发板**](https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html)上安装和运行由 Adafruit Industries 开发的官方[**CircuitPython**](https://circuitpython.org/)！
 
-CircuitPython 是一种编程语言，旨在简化在低成本微控制器板上的实验和编程学习。它让入门变得前所未有的简单，无需预先下载桌面软件。一旦设置好开发板，打开任何文本编辑器就可以开始编辑代码。更多信息请参考[**这里**](https://learn.adafruit.com/welcome-to-circuitpython/what-is-circuitpython)。
+CircuitPython 是一种编程语言，旨在简化在低成本微控制器板上的实验和编程学习。它让入门变得前所未有的简单，无需预先下载桌面软件。一旦设置好开发板，打开任何文本编辑器，就可以开始编辑代码。更多信息，请参考[**这里**](https://learn.adafruit.com/welcome-to-circuitpython/what-is-circuitpython)。
 
 ## 安装 CircuitPython
 
@@ -628,12 +623,12 @@ CircuitPython 是一种编程语言，旨在简化在低成本微控制器板上
 >>> dir(board)
 ```
 
-您将看到板上所有可用于代码中的引脚列表。每个板子会根据可用引脚数量略有不同。
+您将看到板子上所有可用于代码中使用的引脚列表。每个板子会根据可用引脚数量的不同而略有差异。
 ![image.png](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/zh-CN/Seeeduino-XIAO-Expansion-Board12.png)
 
-您看到 YELLOW_LED_INVERTED 了吗？这就是您用来闪烁橙色 LED 的引脚！
+您看到 YELLOW_LED_INVERTED 了吗？那就是您用来闪烁橙色 LED 的引脚！
 
-**步骤 3** 将代码粘贴到 `main` 文件中然后保存，您将看到 Seeed Studio XIAO SAMD21 板上的橙色 LED 闪烁。
+**步骤 3** 将代码粘贴到 `main` 文件中然后保存，您将看到 Seeed Studio XIAO SAMD21 板子上的橙色 LED 开始闪烁。
 
 **代码**
 
@@ -650,7 +645,6 @@ while True:
     time.sleep(1)
     led.value = False
     time.sleep(1)
-
 ```
 
 ### 用于 CircuitPython 的 MicroSD 卡
@@ -662,7 +656,7 @@ MicroSD 卡系统格式为 FAT 或 exFAT。如果您使用其他 MicroSD 卡系�
 :::
 **步骤 1.** 准备一张 micro SD 卡插入 Seeed Studio XIAO SAMD21 扩展板。
 
-**步骤 2.** 假设您尚未下载 [**CircuitPython 文件**](https://circuitpython.org/board/seeeduino_xiao/)，请参考 [**安装 CircuitPython**](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-Expansion-Board/#installing-circuitpython) 章节。
+**步骤 2.** 假设您尚未下载 [**CircuitPython 文件**](https://circuitpython.org/board/seeeduino_xiao/)，请参考 [**安装 CircuitPython**](https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board/#installing-circuitpython) 章节。
 
 **步骤 3.** 下载 [**lib**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/lib.zip) 解压文件，然后用新的 lib 替换 `CIRCUITPY` 中的 lib。
 
@@ -674,7 +668,7 @@ MicroSD 卡系统格式为 FAT 或 exFAT。如果您使用其他 MicroSD 卡系�
 
 ```cpp
 import sd
-f = open("/sd/hello.txt", "r")   ## 从SD卡读取文件
+f = open("/sd/hello.txt", "r")   ## read the file from SD card
 print(f.read())
 ```
 
@@ -691,14 +685,14 @@ import digitalio
 import storage
 import sys
 
-# 连接到卡并为 Seeed Studio XIAO 挂载文件系统。
+# Connect to the card and mount the filesystem for Seeed Studio XIAO .
 spi = busio.SPI(board.SCK, board.MOSI, board.MISO)
 cs = digitalio.DigitalInOut(board.D2)
 sdcard = adafruit_sdcard.SDCard(spi, cs)
 vfs = storage.VfsFat(sdcard)
 storage.mount(vfs, "/sd")
 sys.path.append("/sd")
-sys.path.append("/sd/lib")  ## 切换到 SD 卡的路径
+sys.path.append("/sd/lib")  ## switch to the path to SD card
 ```
 
 **蜂鸣器示例**
@@ -716,10 +710,10 @@ sys.path.append("/sd/lib")  ## 切换到 SD 卡的路径
 **步骤 3.** 在 main.py 文件中添加 `import buzzer`。
 <div align="center"><img width={650} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/add_buzzer.png" /></div>
 
-当您完成所有步骤后，蜂鸣器将开始工作。如果您要运行 MicroSD 卡中的其他 python 文件，请模仿此示例。
+当您完成所有步骤后，蜂鸣器将开始工作。如果您想在 MicroSD 卡中运行其他 python 文件，请模仿此示例。
 
 :::note
-如果您想返回 Arduino 模式，只需在 Arduino IDE 上上传任何程序即可。
+如果您想回到 Arduino 模式，您只需要在 Arduino IDE 上上传任何程序。
 :::
 
 ## 演示
@@ -738,17 +732,17 @@ sys.path.append("/sd/lib")  ## 切换到 SD 卡的路径
 
 **所需组件**
 
-- [**Seeed Studio XIAO SAMD21**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
+- [**Seeed Studio XIAO SAMD21 **](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
 - [**Seeed Studio Expansion Base for XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
-- [**Grove 迷你风扇**](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1.html)
-- [**Grove-舵机**](https://www.seeedstudio.com/Grove-Servo.html)
-- [**Grove - IR (红外) 接收器**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
+- [**Grove mini fan**](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1.html)
+- [**Grove-Servo**](https://www.seeedstudio.com/Grove-Servo.html)
+- [**Grove - IR (Infrared) Receiver**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
 
 **硬件连接**
 
-请按照相同颜色的线将每个传感器连接到板上。请将风扇 grove 线缆连接到 D0，舵机 grove 线缆连接到 **I2C**，IR grove 线缆连接到 **D7**。
+请按照相同颜色的线将每个传感器连接到板上。请将风扇 grove 线缆连接到 D0，舵机 grove 线缆连接到 **I2C**，红外 grove 线缆连接到 **D7**。
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/remote_fan_pic.png" /></div>
 
@@ -756,7 +750,7 @@ sys.path.append("/sd/lib")  ## 切换到 SD 卡的路径
 
 **步骤 1**. 按照连接图将所有传感器连接到板上。
 
-**步骤 2**. 安装 [**Arduino-IRremote**](https://github.com/Seeed-Studio/Seeed_Arduino_IRSendRev) 库，这是 [**如何安装库**](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library/) 的指南。
+**步骤 2**. 安装 [**Arduino-IRremote**](https://github.com/Seeed-Studio/Seeed_Arduino_IRSendRev) 库，这是 [**如何安装库**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) 的指南。
 
 **步骤 3**. 复制代码粘贴到 Arduino IDE 中然后上传。
 
@@ -768,32 +762,32 @@ sys.path.append("/sd/lib")  ## 切换到 SD 卡的路径
 #include <IRremote.h>
 #include <Servo.h>
 
-Servo myservo;  // 创建舵机对象来控制舵机
-int RECV_PIN = 7; // 设置引脚2为红外控制
+Servo myservo;  // create servo object to control a servo
+int RECV_PIN = 7; // set pin 2 as IR control
 
 IRrecv irrecv(RECV_PIN);
 
 decode_results results;
 
-int pos = 90;    // 存储舵机位置的变量
-int fanPin = 0;  // 设置D6为控制开关
+int pos = 90;    // variable to store the servo position
+int fanPin = 0;  // set D6 as control switch
 int fanState = LOW;
 int IO = 0;
 
 void setup()
 {
   Serial.begin(9600);
-  Serial.println("Enabling IRin");  // 提醒启用红外
-  irrecv.enableIRIn(); // 启动接收器
+  Serial.println("Enabling IRin");  // remind enabling IR
+  irrecv.enableIRIn(); // Start the receiver
   Serial.println("Enabled IRin");
-  myservo.attach(5);  // 将引脚2上的舵机连接到舵机对象
+  myservo.attach(5);  // attaches the servo on pin 2 to the servo object
   pinMode(fanPin, OUTPUT);
 
 }
 
 void loop() {
-  if (irrecv.decode(&results)) { //检查红外信号
-    if (results.value == 2155829415) {    // 电源关闭/开启
+  if (irrecv.decode(&results)) { //checking IR signal
+    if (results.value == 2155829415) {    // Power off/on
       IO++;
       if (IO % 2 == 0) {
         fanState = HIGH;
@@ -807,12 +801,12 @@ void loop() {
       }
     }
 
-    if (results.value == 2155821255 ) {    // 风扇向左摆动
-      for (pos; pos <= 89; pos += 1) { // 从0度到90度
-        // 以1度为步长
-        myservo.write(pos);              // 告诉舵机转到变量'pos'中的位置
+    if (results.value == 2155821255 ) {    // fan swing to left
+      for (pos; pos <= 89; pos += 1) { // goes from 0 degrees to 90 degrees
+        // in steps of 1 degree
+        myservo.write(pos);              // tell servo to go to position in variable 'pos'
 
-        delay(40);                       // 等待15ms让舵机到达位置
+        delay(40);                       // waits 15ms for the servo to reach the position
         if (irrecv.decode(&results)) {
           irrecv.resume();
           if (results.value == 2155870215)
@@ -821,10 +815,10 @@ void loop() {
       }
     }
 
-    if (results.value == 2155870215 ) {    // 风扇向右摆动
-      for (pos; pos >= 1; pos -= 1) { // 从90度到0度
-        myservo.write(pos);              // 告诉舵机转到变量'pos'中的位置
-        delay(40);                       // 等待15ms让舵机到达位置
+    if (results.value == 2155870215 ) {    // fan swing to right
+      for (pos; pos >= 1; pos -= 1) { // goes from 90 degrees to 0 degrees
+        myservo.write(pos);              // tell servo to go to position in variable 'pos'
+        delay(40);                       // waits 15ms for the servo to reach the position
 
         if (irrecv.decode(&results)) {
           irrecv.resume();
@@ -836,24 +830,23 @@ void loop() {
     Serial.println(pos);
     Serial.println(results.value, HEX);
     Serial.println(results.value);
-    irrecv.resume();                    //接收下一个指令
+    irrecv.resume();                    //recive next intrustion
   }
   delay(100);
 }
-
 ```
 
-### 项目2 - 遥控小车
+### 项目 2 - 遥控小车
 
 **概述**
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/remote_control_car.gif" /></div>
 
-本教程介绍如何制作遥控小车。
+本教程介绍如何制作一个遥控小车。
 
 **特点**
 
-- 迷你尺寸小车，易于穿越狭窄道路
+- 迷你尺寸的小车，易于穿越狭窄道路
 
 **所需组件**
 
@@ -867,19 +860,19 @@ void loop() {
 
 **硬件连接**
 
-请按照相同颜色的线将每个传感器连接到板上。请将红外传感器grove线缆连接到D0，Mini Motor Driver grove线缆连接到I2C。
+请按照相同颜色的线将每个传感器连接到板上。请将红外传感器的grove线缆连接到D0，Mini Motor Driver的grove线缆连接到I2C。
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/remote_car.jpg" /></div>
 
 **Arduino说明**
 
-**步骤1**. 按照连接图将所有传感器连接到板上。
+**步骤 1**. 按照连接图将所有传感器连接到板上。
 
-**步骤2**. 下载[**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
+**步骤 2**. 下载 [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**步骤3**. 安装[**Arduino-IRremote**](https://github.com/Seeed-Studio/Seeed_Arduino_IRSendRev)和[**Motor driver**](https://github.com/Seeed-Studio/Drv8830_Motor_Driver)库，这是[**如何安装库**](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library/)的指南。
+**步骤 3**. 安装 [**Arduino-IRremote**](https://github.com/Seeed-Studio/Seeed_Arduino_IRSendRev) 和 [**Motor driver**](https://github.com/Seeed-Studio/Drv8830_Motor_Driver) 库，这是 [**如何安装库**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) 的指南。
 
-**步骤4**. 复制代码粘贴到Aruino IDE中然后上传。
+**步骤 4**. 复制代码粘贴到Arduino IDE中然后上传。
 
 **代码**
 
@@ -887,63 +880,63 @@ void loop() {
 #include <Arduino.h>
 #include <U8g2lib.h>
 #include <IRremote.h>
-#include <SparkFunMiniMoto.h>  // 包含 MiniMoto 库
-// 创建两个 MiniMoto 实例，使用不同的地址设置。
+#include <SparkFunMiniMoto.h>  // Include the MiniMoto library
+// Create two MiniMoto instances, with different address settings.
 MiniMoto motor0(0xC4); // A1 = 1, A0 = clear
-MiniMoto motor1(0xC0); // A1 = 1, A0 = 1 (默认)
+MiniMoto motor1(0xC0); // A1 = 1, A0 = 1 (default)
 
-#define FAULTn  1     // 用于故障检测的引脚。
+#define FAULTn  1     // Pin used for fault detection.
 
-int RECV_PIN = 0; // 设置引脚 2 作为红外控制
+int RECV_PIN = 0; // set pin 2 as IR control
 IRrecv irrecv(RECV_PIN);
 decode_results results;
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("Enabling IRin");  // 提醒启用红外
-  irrecv.enableIRIn(); // 启动接收器
+  Serial.println("Enabling IRin");  // remind enabling IR
+  irrecv.enableIRIn(); // Start the receiver
   pinMode(FAULTn, INPUT);
 }
 
 void loop() {
-  if (irrecv.decode(&results)) { //检查红外信号
+  if (irrecv.decode(&results)) { //checking IR signal
     if (results.value == 2155862055) {
-      //前进  2155862055
+      //Forward  2155862055
       motor0.drive(-600);
       motor1.drive(600);
       delayUntil(20);
     }
     if (results.value == 2155813095) {
-      //刹车   2155813095
+      //Brake   2155813095
       motor0.brake();
       motor1.brake();
       delay(100);
     }
     if (results.value == 2155823295) {
-      //后退  2155823295
+      //backward  2155823295
       motor0.drive(600);
       motor1.drive(-600);
       delayUntil(20);
     }
     if (results.value == 2155829415) {
-      //停止  2155829415
+      //Stop  2155829415
       motor0.stop();
       motor1.stop();
       delay(100);
     }
     if (results.value == 2155821255) {
-      //右转   2155821255
+      //turn right   2155821255
       motor0.drive(600);
       motor1.drive(600);
       delayUntil(20);
     }
     if (results.value == 2155837575) {
-      //左转    2155837575
+      //turn left    2155837575
       motor0.drive(-600);
       motor1.drive(-600);
       delayUntil(20);
     }
-    irrecv.resume();                    //接收下一个指令
+    irrecv.resume();                    //recive next intrustion
 
   }
   delay(100);
@@ -966,7 +959,7 @@ void delayUntil(unsigned long elapsedTime) {
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/fingerprint_open.gif" /></div>
 
-这个盒子可以存放您的重要物品，您不用担心有人会拿走您的东西，该盒子具有指纹功能来保护您的物品，如果指纹验证失败，蜂鸣器会报警，LED环会显示红色，只有在开始时在板上注册了您的指纹，然后将您的手指放在板上，当指纹通过验证时，LED环会显示绿色。
+这个盒子可以存放您的重要物品，您不用担心有人会拿走您的东西，该盒子具有指纹功能来保护您的物品，如果指纹验证失败，蜂鸣器会报警，LED环会显示红色，只有在开始时在板上注册了您的手指，然后将手指放在板上，当指纹通过验证时，LED环会显示绿色。
 
 **特点**
 
@@ -1001,9 +994,9 @@ void delayUntil(unsigned long elapsedTime) {
 
 **步骤 1**. 按照连接图将所有传感器连接到板上。
 
-**步骤 2**. 下载[**Arduino IDE**](https://www.arduino.cc/en/Main/software)
+**步骤 2**. 下载 [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**步骤 3**. 安装[**u8g2**](https://github.com/olikraus/U8g2_Arduino)、[**Servo**](https://github.com/arduino-libraries/Servo)、[**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202)和[**Seeed_LED_Ring**](https://github.com/Seeed-Studio/Seeed_LED_Ring)库，这是[**如何安装库**](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library/)的指南。
+**步骤 3**. 安装 [**u8g2**](https://github.com/olikraus/U8g2_Arduino)、[**Servo**](https://github.com/arduino-libraries/Servo)、[**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202) 和 [**Seeed_LED_Ring**](https://github.com/Seeed-Studio/Seeed_LED_Ring) 库，这是 [**如何安装库**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) 的指南。
 
 **步骤 4**. 复制代码粘贴到Arduino IDE中然后上传。
 
@@ -1011,7 +1004,7 @@ void delayUntil(unsigned long elapsedTime) {
 
 1. 记录您的指纹
 
-屏幕开始时会显示指纹记录，您只需要将手指放在指纹设备上，之后程序会分析您的指纹，然后完成注册。
+屏幕会在开始时显示指纹记录，您只需要将手指放在指纹设备上，之后程序会分析您的指纹，然后完成注册。
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/fingerprint_record.gif" /></div>
 
@@ -1038,7 +1031,7 @@ void delayUntil(unsigned long elapsedTime) {
 #include "KCT202.h"
 #include "Adafruit_NeoPixel.h"
 
-#define PIXEL_PIN    2    // 连接到NeoPixels的数字IO引脚
+#define PIXEL_PIN    2    // Digital IO pin connected to the NeoPixels.
 #define PIXEL_COUNT 24
 #define debug SerialUSB
 #define uart  Serial1
@@ -1062,7 +1055,7 @@ void setup(void) {
   Serial.begin(115200);
   strip.setBrightness(255);
   strip.begin();
-  strip.show(); // 将所有像素初始化为'关闭'状态
+  strip.show(); // Initialize all pixels to 'off'
   colorWipe(strip.Color(125, 0, 125), 50);
   u8x8.begin();
   u8x8.setFlipMode(0);
@@ -1140,12 +1133,12 @@ void loop(void) {
       Serial.println(pos);
       Serial.println(buttonState);
       if (buttonState == LOW && pos == 91) {
-        for (pos = 91; pos >= 0; pos -= 1) { // 从180度到0度
+        for (pos = 91; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
           u8x8.setFont(u8x8_font_chroma48medium8_r);
           u8x8.setCursor(0, 3);
           u8x8.print("Lock closing    ");
-          myservo.write(pos);              // 告诉舵机转到变量'pos'的位置
-          delay(15);                       // 等待15ms让舵机到达位置
+          myservo.write(pos);              // tell servo to go to position in variable 'pos'
+          delay(15);                       // waits 15ms for the servo to reach the position
         }
         colorWipe(strip.Color(255, 0, 0), 50);
         break;
@@ -1187,7 +1180,7 @@ void colorWipe(uint32_t c, uint8_t wait) {
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/mjolnir/humer1.png" /></div>
 
-这个锤子是模拟雷神之锤 Mjolnir，你需要在这个设备上记录你的指纹，然后你就会成为它的主人。锤子需要磁铁吸附在 Grove - 电磁铁上，直到它的主人通过指纹解锁，锤子才能被拿走。
+这个锤子是模拟雷神之锤，你需要在这个设备上记录你的指纹，然后你就会成为它的主人。锤子需要磁铁吸附在 Grove - 电磁铁上，直到它的主人通过指纹解锁，锤子才能被拿走。
 
 **所需组件**
 
@@ -1201,17 +1194,17 @@ void colorWipe(uint32_t c, uint8_t wait) {
 
 **硬件连接**
 
-请用 Grove 线将扩展底板和所需模块连接，将 Grove 电磁铁模块连接到 D0 端口，将指纹模块连接到 I2C 端口。
+请用 Grove 线将扩展底板和所需模块连接起来，将 Grove 电磁铁模块连接到 D0 端口，将指纹模块连接到 I2C 端口。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/mjolnir/66666.png" /></div>
 
 **Arduino 说明**
 
-**步骤 1**. 按照连接图将所有传感器连接到板上。
+**步骤 1**. 按照连接图将所有传感器连接到板子上。
 
 **步骤 2**. 下载 [**Arduino IDE**](https://www.arduino.cc/en/Main/software)
 
-**步骤 3**. 安装 [**u8g2**](https://github.com/olikraus/U8g2_Arduino) 和 [**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202) 库，这是 [**如何安装库**](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library/) 的指南。
+**步骤 3**. 安装 [**u8g2**](https://github.com/olikraus/U8g2_Arduino) 和 [**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202) 库，这是 [**如何安装库**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) 的指南。
 
 **步骤 4**. 复制代码粘贴到 Arduino IDE 中然后上传。
 
@@ -1236,15 +1229,15 @@ int Electromagnet = 0;
 
 U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
 
-// 设置程序在按下重置键时运行一次:
+// the setup routine runs once when you press reset:
 void setup() {
-  // 将数字引脚初始化为输出。
+  // initialize the digital pin as an output.
 
   u8x8.begin();
   u8x8.setFlipMode(0);
   debug.begin(115200);
   pinMode(Electromagnet, OUTPUT);
-  digitalWrite(Electromagnet, HIGH);  // 打开电磁铁 (HIGH是电压电平)
+  digitalWrite(Electromagnet, HIGH);  // turn the Electromagnet on (HIGH is the voltage level)
   kct202.begin(uart, debug);
   kct202.autoRegisterFingerPrint(1, 4, LED_OFF_AFTER_GET_GRAGH | PRETREATMENT_GRAGH | NOT_RET_FOR_EVERY_STEP | OVERRIDE_CURR_FINGER_PRINT);
   u8x8.setFont(u8x8_font_chroma48medium8_r);
@@ -1271,7 +1264,7 @@ void setup() {
 
 }
 
-  // 循环程序永远重复运行:
+  // the loop routine runs over and over again forever:
   void loop() {
 
     uint16_t finger_num = 0;
@@ -1285,7 +1278,7 @@ void setup() {
       u8x8.setCursor(0, 3);
       u8x8.print("Identity comfirm");
       delay(800);
-      digitalWrite(Electromagnet, LOW);  // 打开电磁铁 (HIGH是电压电平)
+      digitalWrite(Electromagnet, LOW);  // turn the Electromagnet on (HIGH is the voltage level)
       delay(5000);
       digitalWrite(Electromagnet, HIGH);
     }
@@ -1300,7 +1293,7 @@ void setup() {
       u8x8.setCursor(0, 3);
       u8x8.print("  Please retry  ");
       delay(1500);
-      digitalWrite(Electromagnet, HIGH);  // 打开电磁铁 (HIGH是电压电平)
+      digitalWrite(Electromagnet, HIGH);  // turn the Electromagnet on (HIGH is the voltage level)
 
     }
   }
@@ -1334,11 +1327,11 @@ void setup() {
 
 **Arduino 说明**
 
-**步骤 1**. 按照连接图将所有传感器连接到板上。
+**步骤 1**. 按照连接图将所有传感器连接到板子上。
 
 **步骤 2**. 下载 [**Arduino IDE**](https://www.arduino.cc/en/Main/software)
 
-**步骤 3**. 安装 [**u8g2**](https://github.com/olikraus/U8g2_Arduino)、[**Seeed_PM2_5_sensor_HM3301**](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301) 和 [**Seeed_SCD30**](https://github.com/Seeed-Studio/Seeed_SCD30) 库，这是 [**如何安装库**](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library/) 的指南。
+**步骤 3**. 安装 [**u8g2**](https://github.com/olikraus/U8g2_Arduino)、[**Seeed_PM2_5_sensor_HM3301**](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301) 和 [**Seeed_SCD30**](https://github.com/Seeed-Studio/Seeed_SCD30) 库，这是 [**如何安装库**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) 的指南。
 
 **步骤 4**. 复制代码粘贴到 Arduino IDE 中然后上传。
 
@@ -1356,7 +1349,7 @@ void setup() {
 int pin = 7;
 unsigned long duration;
 unsigned long starttime;
-unsigned long sampletime_ms = 5000;//采样 30s ;
+unsigned long sampletime_ms = 5000;//sampe 30s ;
 unsigned long lowpulseoccupancy = 0;
 float ratio = 0;
 float concentration = 0;
@@ -1369,17 +1362,17 @@ U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
 HM330X sensor;
 uint8_t buf[30];
 
-const char* str[] = {"传感器编号: ", "PM1.0浓度(CF=1,标准颗粒物,单位:ug/m3): ",
-                     "PM2.5浓度(CF=1,标准颗粒物,单位:ug/m3): ",
-                     "PM10浓度(CF=1,标准颗粒物,单位:ug/m3): ",
-                     "PM1.0浓度(大气环境,单位:ug/m3): ",
-                     "PM2.5浓度(大气环境,单位:ug/m3): ",
-                     "PM10浓度(大气环境,单位:ug/m3): ",
+const char* str[] = {"sensor num: ", "PM1.0 concentration(CF=1,Standard particulate matter,unit:ug/m3): ",
+                     "PM2.5 concentration(CF=1,Standard particulate matter,unit:ug/m3): ",
+                     "PM10 concentration(CF=1,Standard particulate matter,unit:ug/m3): ",
+                     "PM1.0 concentration(Atmospheric environment,unit:ug/m3): ",
+                     "PM2.5 concentration(Atmospheric environment,unit:ug/m3): ",
+                     "PM10 concentration(Atmospheric environment,unit:ug/m3): ",
                     };
 
 
 ///////////////////////////////////////////////////////////////////
-//PM2.5浓度(大气环境,单位:ug/m3): 数值
+//PM2.5 concentration(Atmospheric environment,unit:ug/m3): value
 ///////////////////////////////////////////////////////////////////
 HM330XErrorCode print_result(const char* str, uint16_t value) {
   if (NULL == str) {
@@ -1413,7 +1406,7 @@ HM330XErrorCode print_result_1(const char* str, uint16_t value) {
   return NO_ERROR;
 }
 
-/*解析包含29个uint8_t数据的缓冲区*/
+/*parse buf with 29 uint8_t-data*/
 HM330XErrorCode parse_result(uint8_t* data) {
   uint16_t value = 0;
   if (NULL == data) {
@@ -1446,7 +1439,7 @@ void setup() {
   scd30.initialize();
   pinMode(pin, INPUT);
   pinMode(buttonPin, INPUT_PULLUP);
-  starttime = millis();//获取当前时间;
+  starttime = millis();//get the current time;
 
 }
 
@@ -1479,15 +1472,15 @@ void loop() {
   }
 
   if (sensor.read_sensor_value(buf, 29) && memu == 0) {
-    SERIAL_OUTPUT.println("HM330X读取结果失败!!!");
+    SERIAL_OUTPUT.println("HM330X read result failed!!!");
   }
   if(memu == 0){
   parse_result(buf);
   }
 
   if ((millis() - starttime) > sampletime_ms  && memu == 0) {
-    ratio = lowpulseoccupancy / (sampletime_ms * 10.0); // 整数百分比 0=>100
-    concentration = 1.1 * pow(ratio, 3) - 3.8 * pow(ratio, 2) + 520 * ratio + 0.62; // 使用规格表曲线
+    ratio = lowpulseoccupancy / (sampletime_ms * 10.0); // Integer percentage 0=>100
+    concentration = 1.1 * pow(ratio, 3) - 3.8 * pow(ratio, 2) + 520 * ratio + 0.62; // using spec sheet curve
 
     u8x8.setFont(u8x8_font_chroma48medium8_r);
     u8x8.setCursor(0, 6);
@@ -1526,7 +1519,7 @@ void loop() {
   }
 
   if (sensor.read_sensor_value(buf, 29) && memu == 1) {
-    SERIAL_OUTPUT.println("HM330X读取结果失败!!!");
+    SERIAL_OUTPUT.println("HM330X read result failed!!!");
   }
   if(memu == 1){
   parse_result2(buf);
@@ -1540,7 +1533,7 @@ void loop() {
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Heartrate_Monitor_Watch/heartRate.gif" /></div>
 
-这个基于 Seeed Studio XIAO 扩展底板的简单且低成本的项目可以报告心率。
+这个简单且成本低廉的项目基于 Seeed Studio XIAO 扩展底板来报告心率。
 所使用的设备具有 I2C 双线接口，因此将接线保持在最少。
 
 **所需组件**
@@ -1563,7 +1556,7 @@ void loop() {
 
 **步骤 2**. 下载 [**Arduino IDE**](https://www.arduino.cc/en/Main/software)
 
-**步骤 3**. 安装 [**u8g2**](https://github.com/olikraus/U8g2_Arduino) 库，这是 [**如何安装库**](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library/) 的指南。
+**步骤 3**. 安装 [**u8g2**](https://github.com/olikraus/U8g2_Arduino) 库，这是 [**如何安装库**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) 的指南。
 
 **步骤 4**. 复制代码粘贴到 Arduino IDE 中然后上传。
 
@@ -1586,9 +1579,9 @@ void setup() {
   Wire.begin();
 }
 void loop() {
-  Wire.requestFrom(0xA0 >> 1, 1);    // 从从设备请求 1 字节
-  while (Wire.available()) {         // 从设备可能发送少于请求的数据
-    unsigned char c = Wire.read();   // 接收心率值（一个字节）
+  Wire.requestFrom(0xA0 >> 1, 1);    // request 1 bytes from slave device
+  while (Wire.available()) {         // slave may send less than requested
+    unsigned char c = Wire.read();   // receive heart rate value (a byte)
     u8x8.setFont(u8x8_font_chroma48medium8_r);
 //    u8x8.setCursor(0, 3);
 //    u8x8.print("blood detecting ");
@@ -1613,15 +1606,15 @@ void loop() {
 - **[PDF]**[**ETA3410**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/ETA3410.pdf)
 - **[PDF]**[**ETA6003**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/ETA6003.pdf)
 - **[PDF]**[**PCF8563T**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/PCF8563T.pdf)
-- **[PDF]**[**Seeed Studio XIAO 扩展底板_v1.0_SCH_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_SCH_200824.pdf)
-- **[SCH]**[**Seeed Studio XIAO 扩展底板_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.sch)
-- **[BRD]**[**Seeed Studio XIAO 扩展底板_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.brd)
+- **[PDF]**[**Seeed Studio Expansion Base for XIAO_v1.0_SCH_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_SCH_200824.pdf)
+- **[SCH]**[**Seeed Studio Expansion Base for XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.sch)
+- **[BRD]**[**Seeed Studio Expansion Base for XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.brd)
 
 ## 常见问题
 
 ### Q1: XIAO 扩展板上的 PMIC 是否在 5V 引脚上输出电源？
 
-PMIC 不输出电源；5V 直接来自 USB。5V 引脚上提供的电流等于 USB 连接可用的电流。
+PMIC 不输出电源；5V 直接来自 USB。5V 引脚上提供的电流等同于 USB 连接可提供的电流。
 
 ## 技术支持与产品讨论
 

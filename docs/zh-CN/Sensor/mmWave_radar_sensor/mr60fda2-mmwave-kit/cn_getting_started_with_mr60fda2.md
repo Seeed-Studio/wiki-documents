@@ -1,5 +1,5 @@
 ---
-description: 60GHz 毫米波跌倒检测传感器套件与 XIAO ESP32C6 (MR60FDA2) 入门指南
+description: 开始使用 60GHz 毫米波跌倒检测传感器套件与 XIAO ESP32C6 (MR60FDA2)
 title: MR60FDA2 入门指南
 keywords:
 - mmwave
@@ -13,26 +13,26 @@ last_update:
   author: Spencer
 ---
 
-# 60GHz 毫米波跌倒检测传感器套件与 XIAO ESP32C6 (MR60FDA2) 入门指南
+# 开始使用 60GHz 毫米波跌倒检测传感器套件与 XIAO ESP32C6 (MR60FDA2)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60fda2.jpg" style={{width:500, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
 </div><br />
 
-介绍我们为 XIAO 设计的先进**毫米波传感器模块**，旨在为跌倒检测和[心跳](https://wiki.seeedstudio.com/cn/getting_started_with_mr60bha2_mmwave_kit/)监测提供前沿的监控解决方案。这些模块由强大的 XIAO ESP32 微控制器驱动，内置 Wi-Fi 和蓝牙连接功能，提供精确可靠的检测能力。无论您需要实时监测跌倒还是以敏感精度跟踪心跳，我们的模块都配备了最先进的技术，包括可定制的 RGB LED 和环境光感应。通过 Grove GPIO 端口的便捷扩展选项，这些多功能模块非常适合广泛的应用，从智能家居集成到医疗保健监测。
+介绍我们先进的 **毫米波传感器模块** for XIAO，旨在为跌倒检测和[心跳](https://wiki.seeedstudio.com/getting_started_with_mr60bha2_mmwave_kit/)监测提供前沿的监控解决方案。由强大的 XIAO ESP32 微控制器驱动，内置 Wi-Fi 和蓝牙连接功能，这些模块提供精确可靠的检测能力。无论您需要实时监测跌倒还是以敏感精度跟踪心跳，我们的模块都配备了最先进的技术，包括可定制的 RGB LED 和环境光感应。通过 Grove GPIO 端口的简易扩展选项，这些多功能模块非常适合广泛的应用，从智能家居集成到医疗保健监测。
 
 ## 特性
 
-- **Wi-Fi 和蓝牙功能**：两个模块都由 XIAO ESP32 驱动，预装 ESPHome 固件，确保快速设置和定制。
+- **Wi-Fi 和蓝牙功能**：两个模块都由 XIAO ESP32 驱动，预刷入 ESPHome 固件，确保快速设置和定制。
 - **跌倒检测模块**：
   - **精确跌倒检测**：覆盖 3x3x3 米区域，检测角度为 100° x 40°。
-  - **静态存在检测**：监测最远 6 米的静止人员。
+  - **静态存在检测**：监测最远 6 米的静止个体。
 
 <!-- - **心跳检测模块**：
-  - **敏感心跳监测**：可检测最远 1.5 米的心跳。
-  - **静态存在检测**：监测最远 6 米的静止人员。 -->
+  - **敏感心跳监测**：从最远 1.5 米检测心跳。
+  - **静态存在检测**：监测最远 6 米的静止个体。 -->
   
 - **环境感应**：
   - **BH1750 光传感器**：测量 1 到 65,535 勒克斯的环境光。
@@ -42,7 +42,7 @@ last_update:
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/human-caring.jpg" style={{height:'auto', "border-radius": '3.8px'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/environmental-inductor.jpg" style={{height:'auto', "border-radius": '3.8px'}}/></div> -->
 
-## 规格参数
+## 规格
 
 | **通用参数**   |                                      |
 | ------------------------ | ------------------------------------ |
@@ -53,7 +53,7 @@ last_update:
 | **按钮**               | 复位 |
 | **光传感器**         | BH1750 范围：1 到 65,535 勒克斯，可调测量高达 100,000 勒克斯 |
 | **连接性**         | 1 个 GPIO 端口 (D0, D10) |
-| **排针间距**   | 2.54mm |
+| **引脚间距**   | 2.54mm |
 | **电源供应**         | 5V/1A 输入 |
 | **功耗**    | 0.5w：待机模式<br />0.8w：激活模式<br />1.4w：与 Grove 继电器状态一起工作 |
 
@@ -76,7 +76,7 @@ last_update:
 
 ### 安装方法和感应范围
 
-顶部安装悬挂高度2.2-3.0米，最大感应半径2米，毫米波传感器一侧需要对准检测方向。
+顶装悬挂高度2.2-3.0m，最大感应半径2m，毫米波传感器一侧需要对准检测方向。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/top_installation.png" style={{width:600, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/top_detect_distant.png" style={{width:600, height:'auto'}}/></div>
@@ -98,47 +98,47 @@ last_update:
 
 :::info 注意
 
-默认情况下，MR60BHA2预装了[XIAO ESP32C6](/cn/xiao_esp32c6_getting_started)，但它兼容各种其他微控制器进行通信和集成。
+默认情况下，MR60BHA2 预装了 [XIAO ESP32C6](/xiao_esp32c6_getting_started)，但它也兼容各种其他微控制器进行通信和集成。
 
 :::
 
-如果这是您第一次在XIAO系列上使用Arduino，请按照适合您开发板的设置指南进行操作：
+如果这是您第一次在 XIAO 系列上使用 Arduino，请按照适合您开发板的设置指南进行操作：
 
-- **XIAO ESP32S3**：参考[XIAO ESP32S3入门指南](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/)。
-- **XIAO ESP32C3**：按照[Seeed Studio XIAO ESP32C3入门指南](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/)进行操作。
-- **XIAO ESP32C6**：按照[Seeed Studio XIAO ESP32C6入门指南](https://wiki.seeedstudio.com/cn/xiao_esp32c6_getting_started/)进行操作。
+- **XIAO ESP32S3**：参考 [XIAO ESP32S3 入门指南](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)。
+- **XIAO ESP32C3**：按照 [Seeed Studio XIAO ESP32C3 入门指南](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/) 进行操作。
+- **XIAO ESP32C6**：按照 [Seeed Studio XIAO ESP32C6 入门指南](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/) 进行操作。
 
 设置好开发板后，请按照以下步骤操作：
 
-1. **下载Seeed毫米波库**：
-   - 从GitHub下载[Seeed毫米波库](https://github.com/Love4yzp/Seeed-mmWave-library)。
+1. **下载 Seeed mmWave 库**：
+   - 从 GitHub 下载 [Seeed mmWave 库](https://github.com/Love4yzp/Seeed-mmWave-library)。
 
   <div class="github_container" style={{textAlign: 'center'}}>
       <a class="github_item" href="https://github.com/Love4yzp/Seeed-mmWave-library" target="_blank" rel="noopener noreferrer">
       <strong><span><font color={'FFFFFF'} size={"4"}> 下载代码</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
       </a>
   </div>
-2. **在Arduino IDE中安装库**：
-   - 打开Arduino IDE。
-   - 导航到**项目 > 加载库 > 添加.ZIP库...**。
-   - 选择下载的`.zip`文件来安装库。
-3. **连接您的XIAO开发板**：
-   - 通过USB将XIAO开发板插入计算机。
-   - 在Arduino IDE中，转到**工具 > 开发板**并选择您的XIAO开发板型号。
-   - 在**工具 > 端口**下选择正确的端口。
+2. **在 Arduino IDE 中安装库**：
+   - 打开 Arduino IDE。
+   - 导航到 **项目 > 加载库 > 添加 .ZIP 库...**。
+   - 选择下载的 `.zip` 文件来安装库。
+3. **连接您的 XIAO 开发板**：
+   - 通过 USB 将您的 XIAO 开发板连接到计算机。
+   - 在 Arduino IDE 中，转到 **工具 > 开发板** 并选择您的 XIAO 开发板型号。
+   - 在 **工具 > 端口** 下选择正确的端口。
 4. **加载示例代码**：
-   - 转到**文件 > 示例 > Seeed Arduino mmWave**。
+   - 转到 **文件 > 示例 > Seeed Arduino mmWave**。
    - 选择跌倒检测的相关示例。
    - 查看代码并进行必要的调整。
 5. **上传代码**：
-   - 点击**上传**将代码烧录到XIAO开发板。
-   - 在Arduino IDE中打开**串口监视器**查看实时传感器数据。
+   - 点击 **上传** 将代码烧录到您的 XIAO 开发板。
+   - 在 Arduino IDE 中打开 **串口监视器** 查看实时传感器数据。
 
 <!-- ## Hardware Connections -->
 
 ### 使用方法
 
-本节提供示例代码片段，帮助您快速开始使用Seeed Arduino毫米波库的各种功能，包括跌倒检测、RGB LED控制和光感应。
+本节提供示例代码片段，帮助您快速开始使用 Seeed Arduino mmWave 库的各种功能，包括跌倒检测、RGB LED 控制和光感应。
 
 <!-- 
 ### Breath Module
@@ -149,7 +149,7 @@ This example demonstrates how to use the **MR60BHA2** sensor for monitoring brea
 #include <Arduino.h>
 #include "Seeed_Arduino_mmWave.h"
 
-// 根据开发板类型设置串口通信
+// Set up serial communication depending on the board type
 #ifdef ESP32
 #  include <HardwareSerial.h>
 HardwareSerial mmWaveSerial(0);
@@ -191,14 +191,14 @@ if (mmWave.update(100)) {
 }
 ``` -->
 
-#### 跌倒模块
+#### Fall Module
 
-此示例展示如何使用 **MR60FDA2** 传感器进行跌倒检测。
+This example shows how to use the **MR60FDA2** sensor for fall detection.
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
 #include <Arduino.h>
-#include <hp_BH1750.h>  //包含库文件
+#include <hp_BH1750.h>  //inlude the library
 #include "Seeed_Arduino_mmWave.h"
 
 #ifdef ESP32
@@ -210,22 +210,22 @@ HardwareSerial mmwaveSerial(0);
 
 #define LIGHT_GPIO D0
 
-/****** 实例 ******/
+/****** instance ******/
 
-hp_BH1750 BH1750;  // 创建传感器对象
+hp_BH1750 BH1750;  // create the sensor object
 
 SEEED_MR60FDA2 mmWave;
 
 Adafruit_NeoPixel pixels =
     Adafruit_NeoPixel(1, /* pixelPin */ D1, NEO_GRB + NEO_KHZ800);
 
-/****** 函数 ******/
+/****** funtions ******/
 
 void relay_init();
 void relay_on();
 void relay_off();
 
-/****** 变量 ******/
+/****** variables ******/
 uint32_t sensitivity = 15;
 float height = 2.8, threshold = 1.0;
 float rect_XL, rect_XR, rect_ZF, rect_ZB;
@@ -236,46 +236,46 @@ void setup() {
   bool result;
   Serial.begin(115200);
   mmWave.begin(&mmwaveSerial);
-  /* 初始化继电器设备*/
+  /* init relay device*/
   relay_init();
 
-  /* 初始化RGB LED */
+  /* init RGB LED */
   pixels.begin();
   pixels.clear();
   pixels.setBrightness(8);
   pixels.show();
   pixels.setPixelColor(0, pixels.Color(125, 125, 125));
-  /* 初始化内置光环境光传感器 */
-  BH1750.begin(BH1750_TO_GROUND);  // 如果未找到传感器将返回false
-                                   // | 已连接到I2C
+  /* init built-in light ambient light sensor */
+  BH1750.begin(BH1750_TO_GROUND);  // will be false no sensor found
+                                   // | already connected to I2C
   BH1750.calibrateTiming();
   BH1750.start(BH1750_QUALITY_HIGH2,
-               254);  // 在setup中开始第一次测量
-  /* 设置毫米波跌倒参数 */
+               254);  // start the first measurement in setup
+  /* set mmwave-fall parameters */
   mmWave.setUserLog(0);
 
-  /** 设置安装高度 **/
+  /** set the height of the installation **/
   if (mmWave.setInstallationHeight(height)) {
     Serial.printf("setInstallationHeight success: %.2f\n", height);
   } else {
     Serial.println("setInstallationHeight failed");
   }
 
-  /** 设置阈值 **/
+  /** Set threshold **/
   if (mmWave.setThreshold(threshold)) {
     Serial.printf("setThreshold success: %.2f\n", threshold);
   } else {
     Serial.println("setThreshold failed");
   }
 
-  /** 设置灵敏度 **/
+  /** Set sensitivity **/
   if (mmWave.setSensitivity(sensitivity)) {
     Serial.printf("setSensitivity success %d\n", sensitivity);
   } else {
     Serial.println("setSensitivity failed");
   }
 
-  /** 获取毫米波的新参数 **/
+  /** get new parameters of mmwave **/
   if (mmWave.getRadarParameters(height, threshold, sensitivity, rect_XL,
                                 rect_XR, rect_ZF, rect_ZB)) {
     Serial.printf("height: %.2f\tthreshold: %.2f\tsensitivity: %d\n", height,
@@ -297,59 +297,59 @@ typedef enum {
 MMWAVE_STATUS status = NO_PEOPLE, last_status = NO_PEOPLE;
 float lux = 100;
 void loop() {
-  /* 获取状态 */
+  /* get status */
   if (mmWave.update(100)) {
     bool is_human, is_fall;
-    // 获取人体检测状态
+    // Get the human detection status
     if (mmWave.getHuman(is_human)) {
-      // 获取跌倒检测状态
+      // Get the fall detection status
       if (mmWave.getFall(is_fall)) {
-        // 根据人体和跌倒检测确定状态
+        // Determine the status based on human and fall detection
         if (!is_human && !is_fall) {
-          status = NO_PEOPLE;  // 未检测到人体和跌倒
+          status = NO_PEOPLE;  // No human and no fall detected
         } else if (is_fall) {
-          status = PEOPLE_FALL;  // 检测到跌倒
+          status = PEOPLE_FALL;  // Fall detected
         } else {
-          status = EXIST_PEOPLE;  // 检测到人体但未跌倒
+          status = EXIST_PEOPLE;  // Human detected without fall
         }
       }
     }
-    // 获取人体检测状态
+    // Get the human detection status
     if (!mmWave.getHuman(is_human) && !mmWave.getFall(is_fall)) {
-      status = NO_PEOPLE;  // 未检测到人体和跌倒
+      status = NO_PEOPLE;  // No human and no fall detected
     } else if (is_fall) {
-      status = PEOPLE_FALL;  // 检测到跌倒
+      status = PEOPLE_FALL;  // Fall detected
     } else {
-      status = EXIST_PEOPLE;  // 检测到人体但未跌倒
+      status = EXIST_PEOPLE;  // Human detected without fall
     }
   }
 
   switch (status) {
     case NO_PEOPLE:
-      Serial.printf("等待人员");
+      Serial.printf("Waiting for people");
       break;
     case EXIST_PEOPLE:
-      Serial.printf("有人 !!!");
+      Serial.printf("PEOPLE !!!");
       break;
     case PEOPLE_FALL:
-      Serial.printf("跌倒 !!!");
+      Serial.printf("FALL !!!");
       break;
     default:
       break;
   }
   Serial.print("\n");
 
-  /* 改变交互式灯光*/
-  if (status != last_status) {  // 切换LED
+  /* change interactive Light*/
+  if (status != last_status) {  // switching LED
     switch (status) {
       case NO_PEOPLE:
-        pixels.setPixelColor(0, pixels.Color(0, 0, 255));  // 蓝色
+        pixels.setPixelColor(0, pixels.Color(0, 0, 255));  // BLUE
         break;
       case EXIST_PEOPLE:
-        pixels.setPixelColor(0, pixels.Color(0, 255, 0));  // 绿色
+        pixels.setPixelColor(0, pixels.Color(0, 255, 0));  // GREEN
         break;
       case PEOPLE_FALL:
-        pixels.setPixelColor(0, pixels.Color(255, 0, 0));  // 红色
+        pixels.setPixelColor(0, pixels.Color(255, 0, 0));  // RED
         break;
       default:
         break;
@@ -358,7 +358,7 @@ void loop() {
     last_status = status;
   }
 
-  /* 更新照度值 */
+  /* update lux value */
   if (BH1750.hasValue() == true) {
     lux = BH1750.getLux();
     BH1750.start(BH1750_QUALITY_HIGH2, 254);
@@ -386,19 +386,19 @@ void relay_off() {
 }
 ```
 
-Arduino串口监视器的输出如下：
+Arduino 串口监视器的输出如下：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/fall_detection.png" style={{width:700, height:'auto'}}/></div>
 
-#### 闪烁RGB LED
+#### 闪烁 RGB LED
 
-此示例演示如何使用NeoPixel库控制RGB LED。
+此示例演示如何使用 NeoPixel 库控制 RGB LED。
 
-- **步骤1.** 下载`Adafruit_NeoPixel`库
+- **步骤 1.** 下载 `Adafruit_NeoPixel` 库
 
-导航到**Sketch > Include Liarbry > Manage Libraries...**，搜索**Adafruit_NeoPixel**，安装最新版本。
+导航到 **Sketch > Include Library > Manage Libraries...**，搜索 **Adafruit_NeoPixel**，安装最新版本。
 
-- **步骤2.** 将以下代码复制到新的草图中：
+- **步骤 2.** 将以下代码复制到新的草图中：
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
@@ -445,7 +445,7 @@ for (int i = 255; i >= 0; i--) {
 
 - **步骤 1.** 下载 `hp_BH1750` 库
 
-导航到 **Sketch > Include Liarbry > Manage Libraries...**，搜索 **hp_BH1750**，安装最新版本。
+导航到 **Sketch > Include Library > Manage Libraries...**，搜索 **hp_BH1750**，安装最新版本。
 
 - **步骤 2.** 将以下代码复制到新的草图中：
 
@@ -525,7 +525,7 @@ This example uses the `SEEED_MR60BHA2` class to interface with the MR60BHA2 sens
   - 设置跌倒检测阈值。雷达的默认跌倒阈值为 `0.6 m`。此值根据距离传感器的高度和距离确定雷达检测跌倒的灵敏度。
 
 - **`mmWave.setSensitivity(uint32_t sensitivity)`**：
-  - 调整雷达跌倒检测的灵敏度。灵敏度初始值为 `3`，表示 3 帧数据的平均值。通常值范围从 3 到 10，较高的值使传感器对潜在跌倒更加敏感。
+  - 调整雷达跌倒检测的灵敏度。灵敏度初始值为 `3`，表示 3 帧数据的平均值。典型值范围从 3 到 10，数值越高使传感器对潜在跌倒的响应越敏感。
 
 - **`mmWave.getRadarParameters(float &height, float &threshold, uint32_t &sensitivity)`**：
   - 检索雷达的当前配置参数，包括安装高度、跌倒检测阈值和灵敏度设置。这些参数通过引用变量返回。
@@ -539,7 +539,7 @@ This example uses the `SEEED_MR60BHA2` class to interface with the MR60BHA2 sens
 ## 模块固件升级
 
 :::caution
-修改雷达固件是一项有风险的操作，因此请务必仔细阅读本节，然后仔细按照每个步骤操作。请注意，如果某个步骤执行不正确，雷达可能会变砖或无法使用。
+修改雷达固件是一项有风险的操作，因此请务必仔细阅读本节内容，然后仔细按照每个步骤进行操作。请注意，如果某个步骤执行不正确，雷达可能会变砖或无法使用。
 
 **特别注意，如果您购买的是雷达 MR60BHA2，请不要通过以下方式非法刷写固件，这肯定会使您的设备变砖！！！！**
 :::
@@ -604,7 +604,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware-update/1-check-and-connect-serial.png" style={{width:700, height:'auto'}}/></div>
 
-2. 点击"REQUEST UPDATE"进入升级模式：
+2. 点击 "REQUEST UPDATE" 进入升级模式：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware-update/2-request-update.png" style={{width:700, height:'auto'}}/></div>
 
@@ -612,7 +612,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware-update/4-baudrate-confirm.png" style={{width:700, height:'auto'}}/></div>
 
-3. 如果打印出"C"或"43"，表示模块已进入升级模式。
+3. 如果打印出 "C" 或 "43"，表示模块已进入升级模式。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware-update/5-module-enter-upgrade-mode.png" style={{width:700, height:'auto'}}/></div>
 
@@ -631,7 +631,7 @@ void loop() {
 6. 升级完成后，您需要重新刷写 XIAO ESP32C6 的固件。
 
 :::tip
-如果在上述步骤中您操作不当导致异常发生，并且一直无法尝试重新烧录固件且雷达无法正常工作，那么雷达可能由于固件损坏而变砖。尝试恢复设备的唯一方法是参考**[此处](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)**的文件和文档。但是，请理解我们不为因操作不当而变砖的设备提供技术支持和协助。
+如果在上述步骤中您操作不当导致异常发生，并且一直无法尝试重新烧录固件且雷达无法正常工作，那么雷达可能由于固件损坏而变砖。尝试恢复设备的唯一方法是参考**[此处](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)**的文件和文档。但是，请理解我们不为因操作不当而导致的设备变砖提供技术支持和协助。
 :::
 
 ## 开放定制化
@@ -640,10 +640,14 @@ void loop() {
 
 有关定制毫米波模块时的3D点云数据生成和干扰区域配置的更多信息。Seeed提供一站式研发定制和制造服务，助力从概念到生产的快速开发。请联系我们：[iot@seeed.cc](mailto:iot@seeed.cc) 了解更多信息。
 
+:::danger 定制服务说明
+雷达的固件和算法不开源，雷达的复杂参数如跌倒高度设置、安装位置设置等需要定制服务，这可能涉及额外的定制费用和最小起订量。
+:::
+
 ## 资源
 
 - **STL**: [毫米波3D外壳](https://files.seeedstudio.com/wiki/mmwave-for-xiao/Seeed_Studio_60GHz_mmWave_Human_Fall_Breating_and_Heartbeat_Detection_Sensor-MR60FDA2_MR60BHA2_Enclosure.stl)
-- **GitHub仓库**: 在[Seeed毫米波库GitHub页面](https://github.com/Love4yzp/Seeed-mmWave-library)访问完整的代码库和文档。
+- **GitHub仓库**: 在[Seeed毫米波库GitHub页面](https://github.com/Love4yzp/Seeed-mmWave-library)访问完整代码库和文档。
 - **ESPHome文档**: 有关进一步定制和集成，请参考[ESPHome文档](https://esphome.io/)。
 - **MR60FDA2固件升级工具**: [MR60FDA2_OTA.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60FDA2_OTA.zip)
 - **MR60FDA2固件v4.0.18**: [MR60FDA2_eeprom_v4.0.18.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60FDA2_eeprom_v4.0.18.bin)

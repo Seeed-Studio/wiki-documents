@@ -1,6 +1,6 @@
 ---
-description: Este wiki proporciona el tutorial de depuración para el Brazo Robótico StarAI y realiza la recolección de datos y entrenamiento dentro del framework Lerobot.
-title: Comenzando con el Brazo Robótico StarAI con LeRobot
+description: Este wiki proporciona el tutorial de depuración para el Brazo Robótico StarAI y realiza la recolección de datos y entrenamiento dentro del marco de trabajo Lerobot.
+title: Brazo StarAI en LeRobot
 keywords:
 - Lerobot
 - Huggingface
@@ -30,37 +30,34 @@ last_update:
 
 ## Introducción del Producto
 
-1.  **Código Abierto y Fácil para Desarrollo Secundario**
-    Esta serie de servomotores, proporcionada por [Fashion Star Robotics](https://fashionrobo.com/), ofrece una solución de brazo robótico de código abierto y fácilmente personalizable de 6+1 grados de libertad.
+1. **Código Abierto y Fácil para Desarrollo Secundario**
+    Esta serie de servomotores, proporcionada por [Fashion Star Robotics](https://fashionrobo.com/), ofrece una solución de brazo robótico de código abierto y fácilmente personalizable con 6+1 grados de libertad.
 
-2. **Sistemas de Doble Brazo con Varias Cargas Útiles** 
-    El Violin sirve como el brazo robótico líder. Cuando está al 70% de su alcance del brazo, el brazo seguidor Viola tiene una carga útil operativa de 300g, mientras que el brazo seguidor Cello tiene una carga útil operativa de 750g.
+2. **Sistemas de Doble Brazo con Varias Cargas Útiles**
+    El Violin sirve como el brazo robótico líder. Cuando está al 70% de su alcance, el brazo seguidor Viola tiene una carga útil operativa de 300g, mientras que el brazo seguidor Cello tiene una carga útil operativa de 750g.
 
 3. **Compatible con ROS2, Moveit2 e Isaac Sim**
-    Soporta ROS2 para publicar y suscribirse a temas de datos del brazo robótico y controlar el brazo robótico, y también soporta MoveIt2 para cálculo de cinemática inversa, así como simulación en Isaac Sim.
+    Es compatible con ROS2 para publicar y suscribirse a temas de datos del brazo robótico y controlar el brazo robótico, y también es compatible con MoveIt2 para el cálculo de cinemática inversa, así como simulación en Isaac Sim.
 
-4.  **Soporte de Integración con la Plataforma LeRobot**
-    Está específicamente diseñado para integración con la [plataforma LeRobot](https://github.com/huggingface/lerobot). Esta plataforma proporciona modelos PyTorch, conjuntos de datos y herramientas para aprendizaje por imitación en tareas robóticas del mundo real, incluyendo recolección de datos, simulación, entrenamiento y despliegue.
+4. **Soporte de Integración con la Plataforma LeRobot**
+    Está específicamente diseñado para la integración con la [plataforma LeRobot](https://github.com/huggingface/lerobot). Esta plataforma proporciona modelos PyTorch, conjuntos de datos y herramientas para el aprendizaje por imitación en tareas robóticas del mundo real, incluyendo recolección de datos, simulación, entrenamiento y despliegue.
 
 5. **SDK de Código Abierto**
-     Soporta desarrollo de SDK en Python y C++
+     Compatible con desarrollo SDK en Python y C++
 
 6. **Botón de Flotación**
-    Simula compensación de gravedad, permitiendo que el brazo robótico flote en cualquier posición mediante un botón.
+    Simula la compensación de gravedad, permitiendo que el brazo robótico flote en cualquier posición mediante un botón.
 
-7. **Efector Final Modular** 
+7. **Efector Final Modular**
     Permite reemplazo DIY rápido.
 
-8.  **Abundantes Recursos de Aprendizaje**
+8. **Abundantes Recursos de Aprendizaje**
     Ofrecemos recursos de aprendizaje de código abierto integrales, incluyendo configuración de entorno, guías de instalación y depuración, y ejemplos de tareas de agarre personalizadas para ayudar a los usuarios a comenzar rápidamente y desarrollar aplicaciones robóticas.
 
-9.  **Compatibilidad con Plataforma Nvidia**
+9. **Compatibilidad con Plataforma Nvidia**
     El despliegue es compatible a través de la plataforma Nvidia Jetson.
 
-
-
 ## Especificaciones
-
 
 | Elemento                 | Brazo Seguidor \| Viola                             | Brazo Líder \|Violin                                |    Brazo Seguidor \|Cello    |
 | -------------------- | ------------------------------------------------- | ------------------------------------------------- |-----------------|
@@ -78,10 +75,10 @@ last_update:
 | Funciona con ROS 2     | ✅                                                 | ✅                                                | ✅|
 | Funciona con MoveIt2    | ✅                                                 | ✅                                               |✅ |
 | Funciona con Gazebo    | ✅                                                 |✅                                              |✅ |
-| Hub de Comunicación    | UC-01                                             | UC-01                                             |	UC-01 |
+| Hub de Comunicación    | UC-01                                             | UC-01                                             | UC-01 |
 | Fuente de Alimentación         | 12V10A/120w XT30                                   | 12V10A/120w XT30                                 |12V25A/300w XT60  |
 
-Para más información sobre servomotores, por favor visita el siguiente enlace.
+Para más información sobre servomotores, por favor visite el siguiente enlace.
 
 [RA8-U25H-M](https://fashionrobo.com/actuator-u25/23396/)
 
@@ -89,18 +86,17 @@ Para más información sobre servomotores, por favor visita el siguiente enlace.
 
 [RX8-U50H-M](https://fashionrobo.com/actuator-u50/136/)
 
-
-
-
 ## Configuración inicial del entorno
 
 **Para Ubuntu x86:**
+
 - Ubuntu 22.04  
 - CUDA 12+  
 - Python 3.10  
 - Torch 2.6  
 
 **Para Jetson Orin:**
+
 - Jetson JetPack 6.0+  
 - Python 3.10  
 - Torch 2.6  
@@ -109,7 +105,8 @@ Para más información sobre servomotores, por favor visita el siguiente enlace.
 
 ### Instalar LeRobot
 
-Entornos como pytorch y torchvision necesitan ser instalados basándose en tu CUDA.
+Los entornos como pytorch y torchvision necesitan ser instalados basándose en su CUDA.
+
 1. Instalar Miniconda:
 Para Jetson:
 
@@ -121,6 +118,7 @@ source ~/.bashrc
 ```
 
 O, Para X86 Ubuntu 22.04:
+
 ```bash
 mkdir -p ~/miniconda3
 cd miniconda3
@@ -143,19 +141,22 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 git clone https://github.com/servodevelop/lerobot-starai.git
 ```
 
-4. Cuando uses miniconda, instala ffmpeg en tu entorno:
+4. Cuando use miniconda, instale ffmpeg en su entorno:
 
 ```bash
 conda install ffmpeg -c conda-forge
 ```
 
 :::tip
-Esto usualmente instala ffmpeg 7.X para tu plataforma compilado con el codificador libsvtav1. Si libsvtav1 no es compatible (verifica codificadores compatibles con ffmpeg -encoders), puedes:
+Esto usualmente instala ffmpeg 7.X para su plataforma compilado con el codificador libsvtav1. Si libsvtav1 no es compatible (verifique los codificadores compatibles con ffmpeg -encoders), puede:
+
 - [En cualquier plataforma] Instalar explícitamente ffmpeg 7.X usando:
+
 ```bash
 conda install ffmpeg=7.1.1 -c conda-forge
 ```
-- [Solo en Linux] Instalar dependencias de compilación de ffmpeg y compilar ffmpeg desde el código fuente con libsvtav1, y asegúrate de usar el binario ffmpeg correspondiente a tu instalación con which ffmpeg.
+
+- [Solo en Linux] Instalar dependencias de compilación de ffmpeg y compilar ffmpeg desde el código fuente con libsvtav1, y asegúrese de usar el binario ffmpeg correspondiente a su instalación con which ffmpeg.
 
 :::
 
@@ -165,8 +166,7 @@ conda install ffmpeg=7.1.1 -c conda-forge
 cd ~/lerobot-starai && pip install -e ".[feetech]"
 ```
 
-
-Para dispositivos Jetson Jetpack (por favor asegúrate de instalar [Pytorch-gpu y Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) desde el paso 5 antes de ejecutar este paso):
+Para dispositivos Jetson Jetpack (por favor asegúrese de instalar [Pytorch-gpu y Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) desde el paso 5 antes de ejecutar este paso):
 
 ```bash
 conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
@@ -177,26 +177,22 @@ conda uninstall numpy
 pip3 install numpy==1.26.0  # This should match torchvision
 ```
 
-
 6. Verificar Pytorch y Torchvision
 
-Dado que instalar el entorno lerobot vía pip desinstalará el Pytorch y Torchvision originales e instalará las versiones CPU de Pytorch y Torchvision, necesitas realizar una verificación en Python.
+Dado que instalar el entorno lerobot a través de pip desinstalará el Pytorch y Torchvision originales e instalará las versiones CPU de Pytorch y Torchvision, necesita realizar una verificación en Python.
 
 ```python
 import torch
 print(torch.cuda.is_available())
 ```
 
-Si el resultado impreso es False, necesitas reinstalar Pytorch y Torchvision según el [tutorial del sitio web oficial](https://pytorch.org/index.html).
+Si el resultado impreso es False, necesita reinstalar Pytorch y Torchvision según el [tutorial del sitio web oficial](https://pytorch.org/index.html).
 
-Si estás usando un dispositivo Jetson, instala Pytorch y Torchvision según [este tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson).
+Si está usando un dispositivo Jetson, instale Pytorch y Torchvision según [este tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson).
 
+### Desembalaje del Brazo Robótico
 
-
-
-### Desempaquetado del Brazo Robótico 
-
-El Kit de Brazo Robótico Incluye
+El Kit del Brazo Robótico Incluye
 
 - Brazo líder
 - Brazo seguidor
@@ -204,7 +200,7 @@ El Kit de Brazo Robótico Incluye
 - Pinza paralela
 - Herramientas de instalación (tornillos, llave hexagonal)
 - Fuente de alimentación ×2
-- Abrazadera C ×2
+- Abrazadera en C ×2
 - Placa de depuración UC-01 ×2
 
 Interruptor de la placa de depuración UC-01：
@@ -216,26 +212,26 @@ Interruptor de la placa de depuración UC-01：
 
 ### Configurar Puerto del Brazo
 
-Ejecuta el siguiente comando en la terminal para encontrar puertos USB asociados a tus brazos：
+Ejecute el siguiente comando en la terminal para encontrar puertos USB asociados a sus brazos：
 
 ```bash
 python lerobot/scripts/find_motors_bus_port.py
 ```
 
 :::tip
-Recuerda quitar el usb, de lo contrario la interfaz no será detectada.
+Recuerde quitar el usb, de lo contrario la interfaz no será detectada.
 :::
 
 Por ejemplo：
 
 1. Salida de ejemplo al identificar el puerto del brazo líder (ej., `/dev/tty.usbmodem575E0031751` en Mac, o posiblemente `/dev/ttyACM0` en Linux):
 2. Salida de ejemplo al identificar el puerto del brazo seguidor (ej., `/dev/tty.usbmodem575E0032081`en Mac, o posiblemente `/dev/ttyACM1` en Linux):
-Es posible que necesites dar acceso a los puertos USB ejecutando:
+
+Podría necesitar dar acceso a los puertos USB ejecutando:
 
 ```bash
 sudo chmod 666 /dev/ttyACM0
-sudo chmod 666 /dev/ttyACM1
-```
+sudo chmod 666 /dev/ttyACM1```
 
 :::tip
 
@@ -279,12 +275,12 @@ Finalmente, usa el comando chmod.
 ```sh
 sudo chmod 666 /dev/ttyUSB0
 ```
-:::
 
+:::
 
 Abre el archivo `lerobot-starai\lerobot\common\robot_devices\robots\configs.py`
 
-Usa Ctrl+F para buscar starai y localizar el siguiente código. Luego, necesitas modificar la configuración de puerto de follower_arms y leader_arms para que coincida con la configuración de puerto real.
+Usa Ctrl+F para buscar starai y localiza el siguiente código. Luego, necesitas modificar la configuración de puerto de follower_arms y leader_arms para que coincida con la configuración de puerto real.
 
 ```python
 @RobotConfig.register_subclass("starai")
@@ -297,7 +293,7 @@ class StaraiRobotConfig(ManipulatorRobotConfig):
         default_factory=lambda: {
             "main": StaraiMotorsBusConfig(
                 port="/dev/ttyUSB1",  #<-------- UPDATE HEARE
-                interval = 100,								
+                interval = 100,        
                 motors={
                     # name: (index, model)
                     "joint1": [0, "rx8-u50"],
@@ -316,7 +312,7 @@ class StaraiRobotConfig(ManipulatorRobotConfig):
         default_factory=lambda: {
             "main": StaraiMotorsBusConfig(
                 port="/dev/ttyUSB0",  #<-------- UPDATE HEARE
-                interval = 100,								
+                interval = 100,        
                 motors={
                     # name: (index, model)
                     "joint1": [0, "rx8-u50"],
@@ -336,7 +332,7 @@ class StaraiRobotConfig(ManipulatorRobotConfig):
 
 Abre el archivo `lerobot-starai\lerobot\common\robot_devices\robots\configs.py`
 
-Usa Ctrl + F para buscar starai y localizar el siguiente código. Luego, necesitas modificar la configuración de intervalo de follower_arms.
+Usa Ctrl + F para buscar starai y localiza el siguiente código. Luego, necesitas modificar la configuración de intervalo de follower_arms.
 
 - Descripción: El seguidor responde más rápido cuando el intervalo de tiempo se vuelve menor, y funciona de manera más estable cuando el intervalo de tiempo se vuelve mayor.
 - Rango de Valores: Entero, mayor que 50 y menor que 2000.
@@ -354,7 +350,7 @@ class StaraiRobotConfig(ManipulatorRobotConfig):
         default_factory=lambda: {
             "main": StaraiMotorsBusConfig(
                 port="/dev/ttyUSB1",
-                interval = 100, 	#<-------- UPDATE HEARE							
+                interval = 100,  #<-------- UPDATE HEARE       
                 motors={
                     # name: (index, model)
                     "joint1": [0, "rx8-u50"],
@@ -373,7 +369,7 @@ class StaraiRobotConfig(ManipulatorRobotConfig):
         default_factory=lambda: {
             "main": StaraiMotorsBusConfig(
                 port="/dev/ttyUSB0",
-                interval = 100, 	#<-------- UPDATE HEARE
+                interval = 100,  #<-------- UPDATE HEARE
                 motors={
                     # name: (index, model)
                     "joint1": [0, "rx8-u50"],
@@ -393,7 +389,6 @@ class StaraiRobotConfig(ManipulatorRobotConfig):
 ### Calibrar
 
 Normalmente, el brazo robótico está pre-calibrado en fábrica y no requiere recalibración. Si se encuentra que un motor de articulación permanece en una posición límite durante un período prolongado, por favor contáctanos para obtener el archivo de calibración y realizar la recalibración nuevamente.
-
 
 ## Teleoperar
 
@@ -419,8 +414,6 @@ python lerobot/scripts/control_robot.py \
 ```
 
 Después de que el programa inicie, el botón Hold permanece funcional.
-
-
 
 ## Agregar cámaras
 
@@ -459,7 +452,6 @@ Puedes encontrar las imágenes tomadas por cada cámara en el directorio `output
     <img width={400}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/camera.png" />
 </div>
-
 
 ```python
 @RobotConfig.register_subclass("starai")
@@ -534,7 +526,7 @@ echo $HF_USER
 ```
 
 :::tip
-Si no deseas usar la función de carga de conjuntos de datos del Hub de Hugging Face, puedes optar por `--control.push_to_hub=false`. Además, reemplaza `--control.repo_id=${HF_USER}/starai` con un nombre de carpeta local personalizado, como `--control.repo_id=starai/starai`. Los datos se almacenarán en el directorio `~/.cache/huggingface/lerobot` bajo el directorio home del sistema.
+Si no deseas usar la función de carga de conjuntos de datos de Hugging Face Hub, puedes optar por `--control.push_to_hub=false`. Además, reemplaza `--control.repo_id=${HF_USER}/starai` con un nombre de carpeta local personalizado, como `--control.repo_id=starai/starai`. Los datos se almacenarán en el directorio `~/.cache/huggingface/lerobot` bajo el directorio home del sistema.
 :::
 
 Graba 20 episodios y sube tu conjunto de datos al hub:
@@ -556,7 +548,7 @@ python lerobot/scripts/control_robot.py \
 ```
 
 No subir al Hub:
-**(Recomendado, los siguientes tutoriales se enfocarán principalmente en datos locales)** 
+**(Recomendado, los siguientes tutoriales se enfocarán principalmente en datos locales)**
 
 ```bash
 python lerobot/scripts/control_robot.py \
@@ -575,6 +567,7 @@ python lerobot/scripts/control_robot.py \
 ```
 
 Verás datos similares a los siguientes:
+
 ```bash
 INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)
 ```
@@ -590,7 +583,7 @@ Parameter Explanations
 
 :::tip
 
-- **Nuevamente**: "Si quieres guardar los datos localmente (`--control.push_to_hub=false`), reemplaza `--control.repo_id=${HF_USER}/starai` con un nombre de carpeta local personalizado, como `--control.repo_id=starai/starai`. Entonces se almacenará en el directorio home del sistema en `~/.cache/huggingface/lerobot`."
+- **De nuevo**: "Si quieres guardar los datos localmente (`--control.push_to_hub=false`), reemplaza `--control.repo_id=${HF_USER}/starai` con un nombre de carpeta local personalizado, como `--control.repo_id=starai/starai`. Entonces se almacenará en el directorio home del sistema en `~/.cache/huggingface/lerobot`."
 
 - Nota: Puedes reanudar la grabación agregando `--control.resume=true`. También si aún no has subido tu conjunto de datos, agrega `--control.local_files_only=true`. Necesitarás eliminar manualmente el directorio del conjunto de datos si quieres empezar a grabar desde cero.
 
@@ -611,7 +604,6 @@ Parameter Explanations
 - En Linux, si las teclas de flecha izquierda y derecha y la tecla escape no tienen ningún efecto durante la grabación de datos, asegúrate de haber configurado la variable de entorno $DISPLAY. Ver [limitaciones de pynput](https://pynput.readthedocs.io/en/latest/limitations.html#linux).
 
 :::
-
 
 ## Visualizar el conjunto de datos
 
@@ -660,7 +652,7 @@ Vamos a explicarlo:
 
 1. Usamos nuestro conjunto de datos local como argumento `--dataset.repo_id=starai/starai`.
 2. Proporcionamos la política usando `policy.type=act`, que cargará la configuración desde [`lerobot-starai/lerobot/common/policies/act/configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/common/policies/act/configuration_act.py). Actualmente, ACT ha sido probado, pero también puedes probar otras políticas como diffusion, pi0, pi0fast, tdmpc y vqbet.
-3. Proporcionamos policy.device=cuda ya que estamos entrenando en una GPU Nvidia, pero podrías usar policy.device=mps para entrenar en silicio de Apple.
+3. Proporcionamos policy.device=cuda ya que estamos entrenando en una GPU Nvidia, pero podrías usar policy.device=mps para entrenar en silicon de Apple.
 4. Proporcionamos `wandb.enable=true` para usar [Weights and Biases](https://docs.wandb.ai/quickstart) para visualizar gráficos de entrenamiento. Esto es opcional pero si lo usas, asegúrate de estar conectado ejecutando `wandb login`.
 
 Si quieres entrenar en un conjunto de datos local, asegúrate de que el `repo_id` coincida con el usado durante la recolección de datos. El entrenamiento debería tomar varias horas. Encontrarás checkpoints en `outputs/train/act_starai/checkpoints`.
@@ -711,6 +703,7 @@ Si subes tu checkpoint de modelo al Hub, también puedes usar el repositorio del
 - Si estás siguiendo esta documentación/tutorial, por favor clona el repositorio de GitHub recomendado `git clone https://github.com/servodevelop/lerobot-starai.git`.
 
 - Si encuentras el siguiente error, necesitas verificar si el brazo robótico conectado al puerto correspondiente está encendido y si los servos del bus tienen cables sueltos o desconectados.
+
   ```bash
   ConnectionError: Read failed due to comunication eror on port /dev/ttyACM0 for group key Present_Position_Shoulder_pan_Shoulder_lift_elbow_flex_wrist_flex_wrist_roll_griper: [TxRxResult] There is no status packet!
   ```
@@ -719,6 +712,7 @@ Si subes tu checkpoint de modelo al Hub, también puedes usar el repositorio del
 - Si el control remoto funciona normalmente pero el control remoto con cámara no logra mostrar la interfaz de imagen, puedes encontrar [aquí](https://github.com/huggingface/lerobot/pull/757/files)
 
 - Si encuentras problemas con libtiff durante la operación remota del conjunto de datos, por favor actualiza la versión de libtiff.
+
   ```bash
   conda install libtiff==4.5.0  #for Ubuntu 22.04 is libtiff==4.5.1
   ```
@@ -731,12 +725,14 @@ Si subes tu checkpoint de modelo al Hub, también puedes usar el repositorio del
 
   ```bash
   [vost#0:0 @ 0x13207240] Unknown encoder 'libsvtav1' [vost#0:0 @ 0x13207240] Error selecting an encoder Error opening output file /home/han/.cache/huggingface/lerobot/lyhhan/so100_test/videos/chunk-000/observation.images.laptop/episode_000000.mp4. Error opening output files: Encoder not found
-  ``` 
+  ```
 
 - ¡¡¡Importante!!! Si durante la ejecución el cable del servo se afloja, por favor restaura el servo a su posición inicial y luego reconecta el cable del servo. También puedes calibrar individualmente un servo usando el [Comando de Inicialización del Servo](https://wiki.seeedstudio.com/es/lerobot_so100m/#configure-the-motors), asegurándote de que solo un cable esté conectado entre el servo y la placa del controlador durante la calibración individual. Si encuentras
+
   ```bash
   Auto-correct calibration of motor 'wrist roll' by shifting value by 1 full turns, from '-270 < -312.451171875 < 270degrees' to'-270<-312.451171875 < 270 degrees'.
   ```
+
   u otros errores durante el proceso de calibración del brazo robótico relacionados con ángulos y exceder valores límite, este método sigue siendo aplicable.
 
 - Entrenar 50 conjuntos de datos ACT en una laptop 3060 de 8G toma aproximadamente 6 horas, mientras que en una computadora 4090 o A100, entrenar 50 conjuntos de datos toma alrededor de 2–3 horas.
@@ -754,9 +750,8 @@ pip3 install rerun-sdk==0.23
 ```
 
 :::tip
-Si encuentras problemas de software o problemas de dependencias del entorno que no se pueden resolver, además de revisar la sección FAQ al final de este tutorial, por favor reporta el problema oportunamente a la [plataforma LeRobot](https://github.com/huggingface/lerobot) o al [canal Discord de LeRobot](https://discord.gg/8TnwDdjFGU).
+Si encuentras problemas de software o problemas de dependencias del entorno que no se pueden resolver, además de verificar la sección de FAQ al final de este tutorial, por favor reporta el problema oportunamente a la [plataforma LeRobot](https://github.com/huggingface/lerobot) o al [canal Discord de LeRobot](https://discord.gg/8TnwDdjFGU).
 :::
-
 
 ## Cita
 
@@ -780,7 +775,6 @@ Diffusion Policy: [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)
 
 TD-MPC: [TD-MPC](https://www.nicklashansen.com/td-mpc/)
 
-
 ## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
@@ -794,5 +788,3 @@ TD-MPC: [TD-MPC](https://www.nicklashansen.com/td-mpc/)
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

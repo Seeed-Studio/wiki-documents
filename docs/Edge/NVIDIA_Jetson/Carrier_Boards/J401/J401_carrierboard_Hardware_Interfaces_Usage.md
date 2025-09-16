@@ -42,24 +42,25 @@ If the connection is correct, when you connect your power adapter, you will see 
 
 ## M.2 Key M
 
-M.2 Key M is a specification for the physical and electrical layout of an M.2 connector that supports high-speed data transfer using the PCIe (Peripheral Component Interconnect Express) interface. M.2 Key M connectors are commonly used for connecting solid-state drives (SSDs) and other high-performance expansion cards to a motherboard or other host device. The "Key M" designation refers to the specific pin configuration and keying of the M.2 connector, which determines the type of devices that can be connected to it. 
+M.2 Key M is a specification for the physical and electrical layout of an M.2 connector that supports high-speed data transfer using the PCIe (Peripheral Component Interconnect Express) interface. M.2 Key M connectors are commonly used for connecting solid-state drives (SSDs) and other high-performance expansion cards to a motherboard or other host device. The "Key M" designation refers to the specific pin configuration and keying of the M.2 connector, which determines the type of devices that can be connected to it.
 
-### Supported SSD are as follows:
+### Supported SSD are as follows
+
 - [128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
 - [256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
 - [512GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
 - [1TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
 - [2TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-2TB-p-6265.html)
 
-### Connection Overview 
+### Connection Overview
 
-If you want to remove the included SSD and install a new one, you can follow the steps below. 
+If you want to remove the included SSD and install a new one, you can follow the steps below.
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-Install-new-ssd.gif"/></div>
 
 ### Usage
 
-We will explain how to do a simple benchmark on the connected SSD. 
+We will explain how to do a simple benchmark on the connected SSD.
 
 - **Step 1:** Check the write speed by executing the below command.
 
@@ -113,7 +114,7 @@ paired-devices #show all paired devices
 
 CSI stands for Camera Serial Interface. It is a specification that describes a serial communication interface for transferring video data from image sensors to a host processor. CSI is commonly used in mobile devices, cameras, and embedded systems to enable high-speed and efficient transfer of image and video data for processing and analysis.
 
-### Supported cameras are as follows:
+### Supported cameras are as follows
 
 - IMX219 cameras
 
@@ -142,6 +143,7 @@ Here the 2 CSI camera connectors are marked as **CAM0 and CAM1**. You can either
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/camera-connect-J401.gif"/></div>
 
 ### Usage
+
 Open your terminal(Ctrl+Alt+T) and input command like below:
 
 ```sh
@@ -150,13 +152,11 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-cameral.gif" /></div>
 
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
 <TabItem value="Method 1" label="Method 1">
-
 
 For CAM0 port
 
@@ -233,7 +233,7 @@ Connect a **3V CR2302 coin cell battery with JST connector** to the 2-pin 1.25mm
 If you have not connected to internet via Ethernet, you can manually set the date/time here.
 :::
 
-- **Step 4:** Open a terminal window, and execute the below command to check the hardware clock time. 
+- **Step 4:** Open a terminal window, and execute the below command to check the hardware clock time.
 
 ```sh
 sudo hwclock
@@ -245,17 +245,17 @@ You will see the output something like below which is not the correct date/time.
 
 - **Step 5:** Change the hardware clock time to the current system clock time by entering the below command.
 
-```sh 
+```sh
 sudo hwclock --systohc
 ```
 
-- **Step 6:** Remove any Ethernet cables connected to make sure it will not grab the time from the internet and reboot the board. 
+- **Step 6:** Remove any Ethernet cables connected to make sure it will not grab the time from the internet and reboot the board.
 
 ```sh
 sudo reboot
 ```
 
-- **Step 7:** Check hardware clock time to verify that the date/ time stays the same eventhough the device was powered off. 
+- **Step 7:** Check hardware clock time to verify that the date/ time stays the same eventhough the device was powered off.
 
 - **Step 8:** Create a new shell script using any text editor of your preference. Here we use **vi** text editor.
 
@@ -315,7 +315,7 @@ sudo systemctl start hwtosys.service
 sudo systemctl status hwtosys.service
 ```
 
-- **Step 16:** Reboot the board and you will the system clock is now in sync with the hardware clock. 
+- **Step 16:** Reboot the board and you will the system clock is now in sync with the hardware clock.
 
 ## Fan control
 
@@ -338,11 +338,12 @@ If you want to change  nvfancontrol.conf make sure you have read [it](https://do
 sudo systemctl stop nvfancontrol
 ```
 
-- **Step 2:** Change nvfancontrol.conf. 
+- **Step 2:** Change nvfancontrol.conf.
 
 ```
 vi /etc/nvfancontrol.conf 
 ```
+
 :::note
 After you change nvfancontrol.conf, print `Ese` and `:q` to quit
 :::
@@ -358,6 +359,7 @@ sudo rm /var/lib/nvfancontrol/status
 ```
 sudo systemctl restart nvfancontrol
 ```
+
 </TabItem>
 
 <TabItem value="Method 2" label="Method 2">
@@ -379,6 +381,7 @@ sudo systemctl stop nvfancontrol
 ```
 echo 100 > /sys/devices/platform/pwm-fan/hwmon/hwmon3/pwm1
 ```
+
 :::note
 The larger of value, the faster of fan speed. PWM value should between 0 to 255, maybe **hwmon3** is not your pathword so check your own pathword
 :::
@@ -388,6 +391,7 @@ The larger of value, the faster of fan speed. PWM value should between 0 to 255,
 ```
 cat /sys/class/hwmon/hwmon0/rpm
 ```
+
 </TabItem>
 </Tabs>
 
@@ -955,17 +959,16 @@ You will see the result as below, before connecting to the I2C, no I2C device wa
 If you want to use general IO pins for logic control, please refer to [this wiki](/reComputer_Jetson_GPIO).
 :::
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

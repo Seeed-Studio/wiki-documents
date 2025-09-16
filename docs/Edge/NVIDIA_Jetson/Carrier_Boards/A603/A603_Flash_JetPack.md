@@ -23,10 +23,11 @@ last_update:
 A603 Carrier Board is a powerful extension board that supports Jetson Orin™ NX/Nano modules. It features 1 GbE port, M.2 Key M for SSD, M.2 Key E for WiFi/BlueTooth, CSI, and HDMI for high-quality video capture and display. It also contains 4x USB ports, fan, RTC, flexible 9-20V power supply. By the compact design, it can be flexible and easy to integrate into a variety of edge computing applications. In this wiki, we will show you how to flash [Jetpack](https://developer.nvidia.com/embedded/jetpack) to an NVMe SSD and a USB Flash drive connected to the A603 Carrier Board.
 
 ## Supported Module
-- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html) 
-- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer) 
-- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html) 
-- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html) 
+
+- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
+- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
+- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
+- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
 
 ## Prerequisites
 
@@ -140,21 +141,20 @@ First of all, you need to install the peripheral drivers for this board. These a
 </div>
 
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided [here](https://seeedstudio88-my.sharepoint.com/:x:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EXljqlpW3ZNNplIPBwJuyvsBdkW92geUmV7_7VN4SDlggA?e=Xea32u), it confirms that the firmware you downloaded is complete and intact.
 :::
 
 **Note:** Currently we provide the above drivers. We will keep updating the drivers in the future with the release of new JetPack versions.
 
-## Flash to Jetson 
+## Flash to Jetson
 
 Here is a video for flashing JetPack 6.1 onto the A603 carrier board + Orin Nx 16GB module. You can refer to the video and the detailed steps below to flash your device.
 
 <div align="center">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/qN4GxscUGW0" title="A603 JetPack6.1 Installation Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
 
 :::note
 Before moving onto flashing, it should be noted that Jetson Orin NX module only supports JetPack 5.1 and above, while Jetson Orin Nano module only supports JetPack 5.1.1 and above.
@@ -341,7 +341,6 @@ You will see the following output if the flashing process is successful.
 
 </TabItem>
 
-
 <TabItem value="JP5.1.4" label="JP5.1.4">
 
 Here we will install **Jetpack 5.1.4** on the A603 Carrier Board with Jetson Orin module.
@@ -387,13 +386,17 @@ sudo ./tools/l4t_flash_prerequisites.sh
 
 1. If you flashed the system onto the SSD, run the following commands:
    - To backup the image (requires recovery mode):
+
      ```bash
      sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -b jetson-orin-nano-devkit
      ```
+
    - To flash using the backup image (requires recovery mode):
+
      ```bash
      sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r jetson-orin-nano-devkit
      ```
+
    Once completed, the device can boot into the system.
 
 </TabItem>
@@ -424,8 +427,8 @@ cd ..
 sudo apt install unzip 
 sudo unzip A603-JP6.0.zip
 ```
-Then, copy the three folders `(bootloader, kernel, rootfs in A603-JP6.0.zip)` to Linux_for_Tegra folder.
 
+Then, copy the three folders `(bootloader, kernel, rootfs in A603-JP6.0.zip)` to Linux_for_Tegra folder.
 
 **Step 5:** Apply the changes and install the necessary prerequisites
 
@@ -505,14 +508,19 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 Backup the System and Flash Using the Backup Image
 
 If you flashed the system onto the SSD, run the following commands:
-   - To backup the image (requires recovery mode):
+
+- To backup the image (requires recovery mode):
+
      ```bash
      sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -b jetson-orin-nano-devkit
      ```
-   - To flash using the backup image (requires recovery mode):
+
+- To flash using the backup image (requires recovery mode):
+
      ```bash
      sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r jetson-orin-nano-devkit
      ```
+
    Once completed, the device can boot into the system.
 :::
 
@@ -568,14 +576,19 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
 Tips: Backup the System and Flash Using the Backup Image
 
 If you flashed the system onto the SSD, run the following commands:
-   - To backup the image (requires recovery mode):
+
+- To backup the image (requires recovery mode):
+
      ```bash
      sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -b jetson-orin-nano-devkit-super
      ```
-   - To flash using the backup image (requires recovery mode):
+
+- To flash using the backup image (requires recovery mode):
+
      ```bash
      sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r jetson-orin-nano-devkit-super
      ```
+
    Once completed, the device can boot into the system.
 :::
 
@@ -583,44 +596,53 @@ If you flashed the system onto the SSD, run the following commands:
 
 </Tabs>
 
-
 ## CAN Interfaces
 
-Since there is a CAN transceiver on A603 carrier board, you don’t extra transceiver like dev kit. 
+Since there is a CAN transceiver on A603 carrier board, you don’t extra transceiver like dev kit.
 
 **Step1.** Install `devmem2` to write values to registers:
+
 ```sh
 sudo apt-get install devmem2
 ```
+
 **Step2.** Write values according to [here](https://docs.nvidia.com/jetson/archives/r36.4/DeveloperGuide/HR/ControllerAreaNetworkCan.html#jetson-platform-details).
+
 ```sh
 sudo devmem2 0x0c303010 w 0xc400
 sudo devmem2 0x0c303018 w 0xc458
 ```
+
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/send1.png"/>
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/send2.png"/>
 </div>
 
 **Step3.** Load Kernel modules:
+
 ```bash
 sudo modprobe can
 sudo modprobe can_raw
 sudo modprobe mttcan
 ```
+
 After loading these modules, you should be able to see these logs in `sudo dmesg`:
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/check_can.png"/>
 </div>
 
 **Step4.** Bring up can0 interface:
+
 ```sh
 sudo ip link set can0 type can bitrate 500000
 ```
+
 Optionally, you can change the bitrate to 1000000. Then, bring up can0:
+
 ```sh
 sudo ip link set can0 up
 ```
+
 Check the interface with `ifconfig`:
 
 <div align="center">
@@ -651,11 +673,11 @@ Run `candump can0` on jetson terminal:
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -195,13 +195,11 @@ git clone https://github.com/limengdu/XIAO-ESP32S3Sense-Speech2ChatGPT.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3sense-speech2chatgpt/19.png" style={{width:600, height:'auto'}}/></div>
 
-
 ### 步骤 7. 设置您的身份验证环境变量
 
 为了设置您的 **GOOGLE_APPLICATION_CREDENTIALS**，您必须拥有与您的项目关联的服务账户，并且能够访问该服务账户的 JSON 密钥。
 
 通过设置环境变量 **GOOGLE_APPLICATION_CREDENTIALS** 为您的应用程序代码提供身份验证凭据。
-
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -232,7 +230,6 @@ set GOOGLE_APPLICATION_CREDENTIALS=KEY_PATH
 将 **KEY_PATH** 替换为包含您的服务账户密钥的 JSON 文件路径。
 
 </TabItem>
-
 
 <TabItem value="MacOS or Linux" label="MacOS or Linux">
 
@@ -307,7 +304,6 @@ node ./speechAPIServer.js
 
 因为 XIAO 录制的文件需要通过主机的端口号上传到 Google Cloud 服务，我们需要知道您计算机主机的 IP 地址。
 
-
 <Tabs>
 <TabItem value="Windows" label="Windows">
 
@@ -348,14 +344,14 @@ ifconfig
 #include "SD.h"
 #include "SPI.h"
 
-//录音程序中使用的变量，为了获得最佳效果请不要更改
+//Variables to be used in the recording program, do not change for best
 #define SAMPLE_RATE 16000U
 #define SAMPLE_BITS 16
 #define WAV_HEADER_SIZE 44
 #define VOLUME_GAIN 2
-#define RECORD_TIME 10      // 秒，最大值为240
+#define RECORD_TIME 10      // seconds, The maximum value is 240
 
-// 录音缓冲区所需的字节数
+// Number of bytes required for the recording buffer
 uint32_t record_size = (SAMPLE_RATE * SAMPLE_BITS / 8) * RECORD_TIME;
 
 File file;
@@ -364,20 +360,20 @@ const char filename[] = "/recording.wav";
 bool isWIFIConnected;
 
 void setup() {
-  // 将您的设置代码放在这里，只运行一次：
+  // put your setup code here, to run once:
   Serial.begin(115200);
   while (!Serial) ;
   
   I2S.setAllPins(-1, 42, 41, -1, -1);
   
-  //传输模式为PDM_MONO_MODE，这意味着使用PDM（脉冲密度调制）单声道模式进行传输
+  //The transmission mode is PDM_MONO_MODE, which means that PDM (pulse density modulation) mono mode is used for transmission
   if (!I2S.begin(PDM_MONO_MODE, SAMPLE_RATE, SAMPLE_BITS)) {
-    Serial.println("初始化I2S失败！");
+    Serial.println("Failed to initialize I2S!");
     while (1) ;
   }
 
   if(!SD.begin(D2)){
-    Serial.println("挂载SD卡失败！");
+    Serial.println("Failed to mount SD Card!");
     while (1) ;
   }
   
@@ -387,63 +383,63 @@ void setup() {
 }
 
 void loop() {
-  // 将您的主代码放在这里，重复运行：
+  // put your main code here, to run repeatedly:
 }
 
 void i2s_adc(void *arg)
 {
   uint32_t sample_size = 0;
 
-  //此变量将用于指向实际的录音缓冲区
+  //This variable will be used to point to the actual recording buffer
   uint8_t *rec_buffer = NULL;
-  Serial.printf("准备开始录音...\n");
+  Serial.printf("Ready to start recording ...\n");
 
   File file = SD.open(filename, FILE_WRITE);
 
-  // 将头部写入WAV文件
+  // Write the header to the WAV file
   uint8_t wav_header[WAV_HEADER_SIZE];
 
-  //将WAV文件头信息写入wav_header数组
+  //Write the WAV file header information to the wav_header array
   generate_wav_header(wav_header, record_size, SAMPLE_RATE);
 
-  //调用file.write()函数将wav_header数组中的数据写入新创建的WAV文件
+  //Call the file.write() function to write the data in the wav_header array to the newly created WAV file
   file.write(wav_header, WAV_HEADER_SIZE);
 
-  // 此代码使用ESP32的PSRAM（外部缓存内存）动态分配一段内存来存储录音数据。
+  // This code uses the ESP32's PSRAM (external cache memory) to dynamically allocate a section of memory to store the recording data.
   rec_buffer = (uint8_t *)ps_malloc(record_size);
   if (rec_buffer == NULL) {
-    Serial.printf("内存分配失败！\n");
+    Serial.printf("malloc failed!\n");
     while(1) ;
   }
-  Serial.printf("缓冲区：%d 字节\n", ESP.getPsramSize() - ESP.getFreePsram());
+  Serial.printf("Buffer: %d bytes\n", ESP.getPsramSize() - ESP.getFreePsram());
 
-  // 开始录音
-  // I2S端口号（在这种情况下为I2S_NUM_0），
-  // 指向要写入数据的缓冲区的指针（即rec_buffer），
-  // 要读取的数据大小（即record_size），
-  // 指向指向正在读取的数据实际大小的变量的指针（即&sample_size），
-  // 以及等待数据读取的最大时间（在这种情况下为portMAX_DELAY，表示无限等待时间）。
+  // Start recording
+  // I2S port number (in this case I2S_NUM_0), 
+  // a pointer to the buffer to which the data is to be written (i.e. rec_buffer),
+  // the size of the data to be read (i.e. record_size),
+  // a pointer to a variable that points to the actual size of the data being read (i.e. &sample_size),
+  // and the maximum time to wait for the data to be read (in this case portMAX_DELAY, indicating an infinite wait time).
   esp_i2s::i2s_read(esp_i2s::I2S_NUM_0, rec_buffer, record_size, &sample_size, portMAX_DELAY);
   if (sample_size == 0) {
-    Serial.printf("录音失败！\n");
+    Serial.printf("Record Failed!\n");
   } else {
-    Serial.printf("录音 %d 字节\n", sample_size);
+    Serial.printf("Record %d bytes\n", sample_size);
   }
 
-  // 增加音量
+  // Increase volume
   for (uint32_t i = 0; i < sample_size; i += SAMPLE_BITS/8) {
     (*(uint16_t *)(rec_buffer+i)) <<= VOLUME_GAIN;
   }
 
-  // 将数据写入WAV文件
-  Serial.printf("正在写入文件...\n");
+  // Write data to the WAV file
+  Serial.printf("Writing to the file ...\n");
   if (file.write(rec_buffer, record_size) != record_size)
-    Serial.printf("写入文件失败！\n");
+    Serial.printf("Write file Failed!\n");
 
   free(rec_buffer);
   rec_buffer = NULL;
   file.close();
-  Serial.printf("录音结束。\n");
+  Serial.printf("The recording is over.\n");
     
   listDir(SD, "/", 0);
 
@@ -457,7 +453,7 @@ void i2s_adc(void *arg)
 
 void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample_rate)
 {
-  // 参考资料请见：http://soundfile.sapp.org/doc/WaveFormat/
+  // See this for reference: http://soundfile.sapp.org/doc/WaveFormat/
   uint32_t file_size = wav_size + WAV_HEADER_SIZE - 8;
   uint32_t byte_rate = SAMPLE_RATE * SAMPLE_BITS / 8;
   const uint8_t set_wav_header[] = {
@@ -465,13 +461,13 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
     file_size, file_size >> 8, file_size >> 16, file_size >> 24, // ChunkSize
     'W', 'A', 'V', 'E', // Format
     'f', 'm', 't', ' ', // Subchunk1ID
-    0x10, 0x00, 0x00, 0x00, // Subchunk1Size (PCM为16)
-    0x01, 0x00, // AudioFormat (PCM为1)
-    0x01, 0x00, // NumChannels (1声道)
+    0x10, 0x00, 0x00, 0x00, // Subchunk1Size (16 for PCM)
+    0x01, 0x00, // AudioFormat (1 for PCM)
+    0x01, 0x00, // NumChannels (1 channel)
     sample_rate, sample_rate >> 8, sample_rate >> 16, sample_rate >> 24, // SampleRate
     byte_rate, byte_rate >> 8, byte_rate >> 16, byte_rate >> 24, // ByteRate
     0x02, 0x00, // BlockAlign
-    0x10, 0x00, // BitsPerSample (16位)
+    0x10, 0x00, // BitsPerSample (16 bits)
     'd', 'a', 't', 'a', // Subchunk2ID
     wav_size, wav_size >> 8, wav_size >> 16, wav_size >> 24, // Subchunk2Size
   };
@@ -480,30 +476,30 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
 
 
 void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
-    Serial.printf("列出目录：%s\n", dirname);
+    Serial.printf("Listing directory: %s\n", dirname);
 
     File root = fs.open(dirname);
     if(!root){
-        Serial.println("打开目录失败");
+        Serial.println("Failed to open directory");
         return;
     }
     if(!root.isDirectory()){
-        Serial.println("不是目录");
+        Serial.println("Not a directory");
         return;
     }
 
     File file = root.openNextFile();
     while(file){
         if(file.isDirectory()){
-            Serial.print("  目录：");
+            Serial.print("  DIR : ");
             Serial.println(file.name());
             if(levels){
                 listDir(fs, file.path(), levels -1);
             }
         } else {
-            Serial.print("  文件：");
+            Serial.print("  FILE: ");
             Serial.print(file.name());
-            Serial.print("  大小：");
+            Serial.print("  SIZE: ");
             Serial.println(file.size());
         }
         file = root.openNextFile();
@@ -514,14 +510,14 @@ void wifiConnect(void *pvParameters){
   isWIFIConnected = false;
   char* ssid = "wifi-ssid";
   char* password = "wifi-password";
-  Serial.print("尝试连接到 ");
+  Serial.print("Try to connect to ");
   Serial.println(ssid);
   WiFi.begin(ssid, password);
   while(WiFi.status() != WL_CONNECTED){
     vTaskDelay(500);
     Serial.print(".");
   }
-  Serial.println("Wi-Fi已连接！");
+  Serial.println("Wi-Fi Connected!");
   isWIFIConnected = true;
   while(true){
     vTaskDelay(1000);
@@ -531,26 +527,26 @@ void wifiConnect(void *pvParameters){
 void uploadFile(){
   file = SD.open(filename, FILE_READ);
   if(!file){
-    Serial.println("文件不可用！");
+    Serial.println("FILE IS NOT AVAILABLE!");
     return;
   }
 
-  Serial.println("===> 上传文件到Node.js服务器");
+  Serial.println("===> Upload FILE to Node.js Server");
 
   HTTPClient client;
   client.begin("http://192.168.1.208:8888/uploadAudio");
   client.addHeader("Content-Type", "audio/wav");
   int httpResponseCode = client.sendRequest("POST", &file, file.size());
-  Serial.print("httpResponseCode：");
+  Serial.print("httpResponseCode : ");
   Serial.println(httpResponseCode);
 
   if(httpResponseCode == 200){
     String response = client.getString();
-    Serial.println("==================== 转录 ====================");
+    Serial.println("==================== Transcription ====================");
     Serial.println(response);
-    Serial.println("====================  结束  ====================");
+    Serial.println("====================      End      ====================");
   }else{
-    Serial.println("错误");
+    Serial.println("Error");
   }
   file.close();
   client.end();
@@ -571,17 +567,17 @@ void uploadFile(){
 #include "SD.h"
 #include "SPI.h"
 
-//录音程序中使用的变量，为了最佳效果请不要更改
+//Variables to be used in the recording program, do not change for best
 #define SAMPLE_RATE 16000U
 #define SAMPLE_BITS 16
 #define WAV_HEADER_SIZE 44
 #define VOLUME_GAIN 2
-#define RECORD_TIME 10      // 秒，最大值为240
+#define RECORD_TIME 10      // seconds, The maximum value is 240
 
-//定义I2S
+//define I2S
 I2SClass I2S;
 
-// 录音缓冲区所需的字节数
+// Number of bytes required for the recording buffer
 uint32_t record_size = (SAMPLE_RATE * SAMPLE_BITS / 8) * RECORD_TIME;
 
 File file;
@@ -590,21 +586,21 @@ const char filename[] = "/recording.wav";
 bool isWIFIConnected;
 
 void setup() {
-  // 将您的设置代码放在这里，只运行一次：
+  // put your setup code here, to run once:
   Serial.begin(115200);
   while (!Serial) ;
   
-  // 设置42号PDM时钟引脚和41号PDM数据引脚
+  // setup 42 PDM clock and 41 PDM data pins
   I2S.setPinsPdmRx(42, 41);
 
-  //传输模式为PDM_MONO_MODE，这意味着使用PDM（脉冲密度调制）单声道模式进行传输
+  //The transmission mode is PDM_MONO_MODE, which means that PDM (pulse density modulation) mono mode is used for transmission
   if (!I2S.begin(I2S_MODE_PDM_RX, 16000, I2S_DATA_BIT_WIDTH_16BIT, I2S_SLOT_MODE_MONO)) {
-    Serial.println("初始化I2S失败！");
+    Serial.println("Failed to initialize I2S!");
     while (1) ;
   }
 
   if(!SD.begin(D2)){
-    Serial.println("挂载SD卡失败！");
+    Serial.println("Failed to mount SD Card!");
     while (1) ;
   }
   
@@ -614,63 +610,63 @@ void setup() {
 }
 
 void loop() {
-  // 将您的主要代码放在这里，重复运行：
+  // put your main code here, to run repeatedly:
 }
 
 void i2s_adc(void *arg)
 {
   uint32_t sample_size = 0;
 
-  //此变量将用于指向实际的录音缓冲区
+  //This variable will be used to point to the actual recording buffer
   uint8_t *rec_buffer = NULL;
-  Serial.printf("准备开始录音...\n");
+  Serial.printf("Ready to start recording ...\n");
 
   File file = SD.open(filename, FILE_WRITE);
 
-  // 将头部写入WAV文件
+  // Write the header to the WAV file
   uint8_t wav_header[WAV_HEADER_SIZE];
 
-  //将WAV文件头信息写入wav_header数组
+  //Write the WAV file header information to the wav_header array
   generate_wav_header(wav_header, record_size, SAMPLE_RATE);
 
-  //调用file.write()函数将wav_header数组中的数据写入新创建的WAV文件
+  //Call the file.write() function to write the data in the wav_header array to the newly created WAV file
   file.write(wav_header, WAV_HEADER_SIZE);
 
-  // 此代码使用ESP32的PSRAM（外部缓存内存）动态分配一段内存来存储录音数据。
+  // This code uses the ESP32's PSRAM (external cache memory) to dynamically allocate a section of memory to store the recording data.
   rec_buffer = (uint8_t *)ps_malloc(record_size);
   if (rec_buffer == NULL) {
-    Serial.printf("内存分配失败！\n");
+    Serial.printf("malloc failed!\n");
     while(1) ;
   }
-  Serial.printf("缓冲区：%d 字节\n", ESP.getPsramSize() - ESP.getFreePsram());
+  Serial.printf("Buffer: %d bytes\n", ESP.getPsramSize() - ESP.getFreePsram());
 
-  // 开始录音
-  // I2S端口号（在这种情况下是I2S_NUM_0），
-  // 指向要写入数据的缓冲区的指针（即rec_buffer），
-  // 要读取的数据大小（即record_size），
-  // 指向指示实际读取数据大小的变量的指针（即&sample_size），
-  // 以及等待数据读取的最大时间（在这种情况下是portMAX_DELAY，表示无限等待时间）。
+  // Start recording
+  // I2S port number (in this case I2S_NUM_0), 
+  // a pointer to the buffer to which the data is to be written (i.e. rec_buffer),
+  // the size of the data to be read (i.e. record_size),
+  // a pointer to a variable that points to the actual size of the data being read (i.e. &sample_size),
+  // and the maximum time to wait for the data to be read (in this case portMAX_DELAY, indicating an infinite wait time).
   esp_i2s::i2s_read(esp_i2s::I2S_NUM_0, rec_buffer, record_size, &sample_size, portMAX_DELAY);
   if (sample_size == 0) {
-    Serial.printf("录音失败！\n");
+    Serial.printf("Record Failed!\n");
   } else {
-    Serial.printf("录音 %d 字节\n", sample_size);
+    Serial.printf("Record %d bytes\n", sample_size);
   }
 
-  // 增加音量
+  // Increase volume
   for (uint32_t i = 0; i < sample_size; i += SAMPLE_BITS/8) {
     (*(uint16_t *)(rec_buffer+i)) <<= VOLUME_GAIN;
   }
 
-  // 将数据写入WAV文件
-  Serial.printf("正在写入文件...\n");
+  // Write data to the WAV file
+  Serial.printf("Writing to the file ...\n");
   if (file.write(rec_buffer, record_size) != record_size)
-    Serial.printf("写入文件失败！\n");
+    Serial.printf("Write file Failed!\n");
 
   free(rec_buffer);
   rec_buffer = NULL;
   file.close();
-  Serial.printf("录音结束。\n");
+  Serial.printf("The recording is over.\n");
     
   listDir(SD, "/", 0);
 
@@ -684,7 +680,7 @@ void i2s_adc(void *arg)
 
 void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample_rate)
 {
-  // 参考资料请见：http://soundfile.sapp.org/doc/WaveFormat/
+  // See this for reference: http://soundfile.sapp.org/doc/WaveFormat/
   uint32_t file_size = wav_size + WAV_HEADER_SIZE - 8;
   uint32_t byte_rate = SAMPLE_RATE * SAMPLE_BITS / 8;
   const uint8_t set_wav_header[] = {
@@ -692,13 +688,13 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
     file_size, file_size >> 8, file_size >> 16, file_size >> 24, // ChunkSize
     'W', 'A', 'V', 'E', // Format
     'f', 'm', 't', ' ', // Subchunk1ID
-    0x10, 0x00, 0x00, 0x00, // Subchunk1Size (PCM为16)
-    0x01, 0x00, // AudioFormat (PCM为1)
-    0x01, 0x00, // NumChannels (1声道)
+    0x10, 0x00, 0x00, 0x00, // Subchunk1Size (16 for PCM)
+    0x01, 0x00, // AudioFormat (1 for PCM)
+    0x01, 0x00, // NumChannels (1 channel)
     sample_rate, sample_rate >> 8, sample_rate >> 16, sample_rate >> 24, // SampleRate
     byte_rate, byte_rate >> 8, byte_rate >> 16, byte_rate >> 24, // ByteRate
     0x02, 0x00, // BlockAlign
-    0x10, 0x00, // BitsPerSample (16位)
+    0x10, 0x00, // BitsPerSample (16 bits)
     'd', 'a', 't', 'a', // Subchunk2ID
     wav_size, wav_size >> 8, wav_size >> 16, wav_size >> 24, // Subchunk2Size
   };
@@ -707,30 +703,30 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
 
 
 void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
-    Serial.printf("列出目录：%s\n", dirname);
+    Serial.printf("Listing directory: %s\n", dirname);
 
     File root = fs.open(dirname);
     if(!root){
-        Serial.println("打开目录失败");
+        Serial.println("Failed to open directory");
         return;
     }
     if(!root.isDirectory()){
-        Serial.println("不是目录");
+        Serial.println("Not a directory");
         return;
     }
 
     File file = root.openNextFile();
     while(file){
         if(file.isDirectory()){
-            Serial.print("  目录：");
+            Serial.print("  DIR : ");
             Serial.println(file.name());
             if(levels){
                 listDir(fs, file.path(), levels -1);
             }
         } else {
-            Serial.print("  文件：");
+            Serial.print("  FILE: ");
             Serial.print(file.name());
-            Serial.print("  大小：");
+            Serial.print("  SIZE: ");
             Serial.println(file.size());
         }
         file = root.openNextFile();
@@ -741,14 +737,14 @@ void wifiConnect(void *pvParameters){
   isWIFIConnected = false;
   char* ssid = "wifi-ssid";
   char* password = "wifi-password";
-  Serial.print("尝试连接到 ");
+  Serial.print("Try to connect to ");
   Serial.println(ssid);
   WiFi.begin(ssid, password);
   while(WiFi.status() != WL_CONNECTED){
     vTaskDelay(500);
     Serial.print(".");
   }
-  Serial.println("Wi-Fi已连接！");
+  Serial.println("Wi-Fi Connected!");
   isWIFIConnected = true;
   while(true){
     vTaskDelay(1000);
@@ -758,26 +754,26 @@ void wifiConnect(void *pvParameters){
 void uploadFile(){
   file = SD.open(filename, FILE_READ);
   if(!file){
-    Serial.println("文件不可用！");
+    Serial.println("FILE IS NOT AVAILABLE!");
     return;
   }
 
-  Serial.println("===> 上传文件到Node.js服务器");
+  Serial.println("===> Upload FILE to Node.js Server");
 
   HTTPClient client;
   client.begin("http://192.168.1.208:8888/uploadAudio");
   client.addHeader("Content-Type", "audio/wav");
   int httpResponseCode = client.sendRequest("POST", &file, file.size());
-  Serial.print("httpResponseCode：");
+  Serial.print("httpResponseCode : ");
   Serial.println(httpResponseCode);
 
   if(httpResponseCode == 200){
     String response = client.getString();
-    Serial.println("==================== 转录 ====================");
+    Serial.println("==================== Transcription ====================");
     Serial.println(response);
-    Serial.println("====================  结束  ====================");
+    Serial.println("====================      End      ====================");
   }else{
-    Serial.println("错误");
+    Serial.println("Error");
   }
   file.close();
   client.end();
@@ -797,7 +793,6 @@ void uploadFile(){
 一旦您根据需要更改了程序并上传后，您可以打开串口监视器并开始准备录制您想说的内容。在十秒录音后，Google Cloud将分析您的录音文件并将识别结果返回给您。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3sense-speech2chatgpt/15.png" style={{width:1000, height:'auto'}}/></div>
-
 
 ## 在XIAO ESP32S3 Sense上部署ChatGPT
 
@@ -822,18 +817,18 @@ void uploadFile(){
 #include "SD.h"
 #include "SPI.h"
 
-// 录音程序中使用的变量，为了最佳效果请不要更改
+// Variables to be used in the recording program, do not change for best
 #define SAMPLE_RATE 16000U
 #define SAMPLE_BITS 16
 #define WAV_HEADER_SIZE 44
 #define VOLUME_GAIN 2
-#define RECORD_TIME 5  // 秒，最大值为240
+#define RECORD_TIME 5  // seconds, The maximum value is 240
 
 const char* ssid = "wifi-ssid";
 const char* password = "wifi-password";
 
 
-// 录音缓冲区所需的字节数
+// Number of bytes required for the recording buffer
 uint32_t record_size = (SAMPLE_RATE * SAMPLE_BITS / 8) * RECORD_TIME;
 
 File file;
@@ -846,23 +841,23 @@ TaskHandle_t chatgpt_handle;
 WiFiClientSecure client;
 ChatGPT<WiFiClientSecure> chat_gpt(&client, "v1", "OpenAI-TOKEN");
 
-//*****************************************Arduino基础******************************************//
+//*****************************************Arduino Base******************************************//
 
 void setup() {
-  // 将您的设置代码放在这里，运行一次：
+  // put your setup code here, to run once:
   Serial.begin(115200);
   while (!Serial) ;
   
   I2S.setAllPins(-1, 42, 41, -1, -1);
   
-  // 传输模式为PDM_MONO_MODE，这意味着使用PDM（脉冲密度调制）单声道模式进行传输
+  // The transmission mode is PDM_MONO_MODE, which means that PDM (pulse density modulation) mono mode is used for transmission
   if (!I2S.begin(PDM_MONO_MODE, SAMPLE_RATE, SAMPLE_BITS)) {
-    Serial.println("初始化I2S失败！");
+    Serial.println("Failed to initialize I2S!");
     while (1) ;
   }
 
   if(!SD.begin(D2)){
-    Serial.println("挂载SD卡失败！");
+    Serial.println("Failed to mount SD Card!");
     while (1) ;
   }
 
@@ -873,66 +868,66 @@ void setup() {
 }
 
 void loop() {
-  // 将您的主代码放在这里，重复运行：
+  // put your main code here, to run repeatedly:
 }
 
-//*****************************************RTOS任务******************************************//
+//*****************************************RTOS TASK******************************************//
 
 void i2s_adc(void *arg)
 {
   while(1){
     uint32_t sample_size = 0;
   
-    // 此变量将用于指向实际的录音缓冲区
+    // This variable will be used to point to the actual recording buffer
     uint8_t *rec_buffer = NULL;
-    Serial.printf("准备开始录音...\n");
+    Serial.printf("Ready to start recording ...\n");
   
     File file = SD.open(filename, FILE_WRITE);
   
-    // 将头部写入WAV文件
+    // Write the header to the WAV file
     uint8_t wav_header[WAV_HEADER_SIZE];
   
-    // 将WAV文件头信息写入wav_header数组
+    // Write the WAV file header information to the wav_header array
     generate_wav_header(wav_header, record_size, SAMPLE_RATE);
   
-    // 调用file.write()函数将wav_header数组中的数据写入新创建的WAV文件
+    // Call the file.write() function to write the data in the wav_header array to the newly created WAV file
     file.write(wav_header, WAV_HEADER_SIZE);
   
-    // 此代码使用ESP32的PSRAM（外部缓存内存）动态分配一段内存来存储录音数据
+    // This code uses the ESP32's PSRAM (external cache memory) to dynamically allocate a section of memory to store the recording data
     rec_buffer = (uint8_t *)ps_malloc(record_size);
     if (rec_buffer == NULL) {
-      Serial.printf("内存分配失败！\n");
+      Serial.printf("malloc failed!\n");
       while(1) ;
     }
-    Serial.printf("缓冲区：%d字节\n", ESP.getPsramSize() - ESP.getFreePsram());
+    Serial.printf("Buffer: %d bytes\n", ESP.getPsramSize() - ESP.getFreePsram());
   
-    // 开始录音
-    // I2S端口号（在这种情况下为I2S_NUM_0），
-    // 指向要写入数据的缓冲区的指针（即rec_buffer），
-    // 要读取的数据大小（即record_size），
-    // 指向指向正在读取的数据实际大小的变量的指针（即&sample_size），
-    // 以及等待数据读取的最大时间（在这种情况下为portMAX_DELAY，表示无限等待时间）。
+    // Start recording
+    // I2S port number (in this case I2S_NUM_0), 
+    // a pointer to the buffer to which the data is to be written (i.e. rec_buffer),
+    // the size of the data to be read (i.e. record_size),
+    // a pointer to a variable that points to the actual size of the data being read (i.e. &sample_size),
+    // and the maximum time to wait for the data to be read (in this case portMAX_DELAY, indicating an infinite wait time).
     esp_i2s::i2s_read(esp_i2s::I2S_NUM_0, rec_buffer, record_size, &sample_size, portMAX_DELAY);
     if (sample_size == 0) {
-      Serial.printf("录音失败！\n");
+      Serial.printf("Record Failed!\n");
     } else {
-      Serial.printf("录音%d字节\n", sample_size);
+      Serial.printf("Record %d bytes\n", sample_size);
     }
   
-    // 增加音量
+    // Increase volume
     for (uint32_t i = 0; i < sample_size; i += SAMPLE_BITS/8) {
       (*(uint16_t *)(rec_buffer+i)) <<= VOLUME_GAIN;
     }
   
-    // 将数据写入WAV文件
-    Serial.printf("正在写入文件...\n");
+    // Write data to the WAV file
+    Serial.printf("Writing to the file ...\n");
     if (file.write(rec_buffer, record_size) != record_size)
-      Serial.printf("写入文件失败！\n");
+      Serial.printf("Write file Failed!\n");
   
     free(rec_buffer);
     rec_buffer = NULL;
     file.close();
-    Serial.printf("录音结束。\n");
+    Serial.printf("The recording is over.\n");
       
     listDir(SD, "/", 0);
 
@@ -944,23 +939,23 @@ void i2s_adc(void *arg)
     
     if(uploadStatus)
       xTaskNotifyGive(chatgpt_handle);
-    vTaskDelay(10000);       // 每次录音间隔10秒
+    vTaskDelay(10000);       // Each recording is spaced 10s apart
   }
 //  vTaskDelete(NULL);
 }
 
 void wifiConnect(void *pvParameters){
   isWIFIConnected = false;
-  Serial.print("尝试连接到 ");
+  Serial.print("Try to connect to ");
   Serial.println(ssid);
   WiFi.begin(ssid, password);
   while(WiFi.status() != WL_CONNECTED){
     vTaskDelay(500);
     Serial.print(".");
   }
-  Serial.println("Wi-Fi已连接！");
+  Serial.println("Wi-Fi Connected!");
   isWIFIConnected = true;
-  // 忽略SSL证书验证
+  // Ignore SSL certificate validation
   client.setInsecure();
   while(true){
     vTaskDelay(1000);
@@ -969,26 +964,26 @@ void wifiConnect(void *pvParameters){
 
 void chatgpt(void *pvParameters){
   while(1){
-    // 等待来自任务1的通知信号
+    // Waiting for notification signal from Task 1
     ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
 
     String result;
     if (chat_gpt.simple_message("gpt-3.5-turbo-0301", "user", chatgpt_Q, result)) {
-      Serial.println("===成功===");
+      Serial.println("===OK===");
       Serial.println(result);
     } else {
-      Serial.println("===错误===");
+      Serial.println("===ERROR===");
       Serial.println(result);
     }
 
   }
 }
 
-//*****************************************音频处理******************************************//
+//*****************************************Audio Process******************************************//
 
 void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample_rate)
 {
-  // 参考：http://soundfile.sapp.org/doc/WaveFormat/
+  // See this for reference: http://soundfile.sapp.org/doc/WaveFormat/
   uint32_t file_size = wav_size + WAV_HEADER_SIZE - 8;
   uint32_t byte_rate = SAMPLE_RATE * SAMPLE_BITS / 8;
   const uint8_t set_wav_header[] = {
@@ -996,46 +991,46 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
     file_size, file_size >> 8, file_size >> 16, file_size >> 24, // ChunkSize
     'W', 'A', 'V', 'E', // Format
     'f', 'm', 't', ' ', // Subchunk1ID
-    0x10, 0x00, 0x00, 0x00, // Subchunk1Size（PCM为16）
-    0x01, 0x00, // AudioFormat（PCM为1）
-    0x01, 0x00, // NumChannels（1声道）
+    0x10, 0x00, 0x00, 0x00, // Subchunk1Size (16 for PCM)
+    0x01, 0x00, // AudioFormat (1 for PCM)
+    0x01, 0x00, // NumChannels (1 channel)
     sample_rate, sample_rate >> 8, sample_rate >> 16, sample_rate >> 24, // SampleRate
     byte_rate, byte_rate >> 8, byte_rate >> 16, byte_rate >> 24, // ByteRate
     0x02, 0x00, // BlockAlign
-    0x10, 0x00, // BitsPerSample（16位）
+    0x10, 0x00, // BitsPerSample (16 bits)
     'd', 'a', 't', 'a', // Subchunk2ID
     wav_size, wav_size >> 8, wav_size >> 16, wav_size >> 24, // Subchunk2Size
   };
   memcpy(wav_header, set_wav_header, sizeof(set_wav_header));
 }
 
-//*****************************************文件处理******************************************//
+//*****************************************File Process******************************************//
 
 void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
-    Serial.printf("列出目录：%s\n", dirname);
+    Serial.printf("Listing directory: %s\n", dirname);
 
     File root = fs.open(dirname);
     if(!root){
-        Serial.println("打开目录失败");
+        Serial.println("Failed to open directory");
         return;
     }
     if(!root.isDirectory()){
-        Serial.println("不是目录");
+        Serial.println("Not a directory");
         return;
     }
 
     File file = root.openNextFile();
     while(file){
         if(file.isDirectory()){
-            Serial.print("  目录：");
+            Serial.print("  DIR : ");
             Serial.println(file.name());
             if(levels){
                 listDir(fs, file.path(), levels -1);
             }
         } else {
-            Serial.print("  文件：");
+            Serial.print("  FILE: ");
             Serial.print(file.name());
-            Serial.print("  大小：");
+            Serial.print("  SIZE: ");
             Serial.println(file.size());
         }
         file = root.openNextFile();
@@ -1045,30 +1040,30 @@ void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
 bool uploadFile(){
   file = SD.open(filename, FILE_READ);
   if(!file){
-    Serial.println("文件不可用！");
+    Serial.println("FILE IS NOT AVAILABLE!");
     return false;
   }
 
-  Serial.println("===> 上传文件到Node.js服务器");
+  Serial.println("===> Upload FILE to Node.js Server");
 
   HTTPClient client;
   client.begin("http://192.168.1.208:8888/uploadAudio");
   client.addHeader("Content-Type", "audio/wav");
   int httpResponseCode = client.sendRequest("POST", &file, file.size());
-  Serial.print("httpResponseCode：");
+  Serial.print("httpResponseCode : ");
   Serial.println(httpResponseCode);
 
   if(httpResponseCode == 200){
     String response = client.getString();
-    Serial.println("==================== 转录 ====================");
+    Serial.println("==================== Transcription ====================");
     Serial.println(response);
     chatgpt_Q = response;
-    Serial.println("====================  结束  ====================");
+    Serial.println("====================      End      ====================");
     file.close();
     client.end();
     return true;
   }else{
-    Serial.println("错误");
+    Serial.println("Error");
     return false;
   }
   
@@ -1092,21 +1087,21 @@ bool uploadFile(){
 #include "SD.h"
 #include "SPI.h"
 
-// 录音程序中使用的变量，为了最佳效果请不要更改
+// Variables to be used in the recording program, do not change for best
 #define SAMPLE_RATE 16000U
 #define SAMPLE_BITS 16
 #define WAV_HEADER_SIZE 44
 #define VOLUME_GAIN 2
-#define RECORD_TIME 5  // 秒，最大值为240
+#define RECORD_TIME 5  // seconds, The maximum value is 240
 
 const char* ssid = "wifi-ssid";
 const char* password = "wifi-password";
 
-//定义I2S
+//define I2S
 I2SClass I2S;
 
 
-// 录音缓冲区所需的字节数
+// Number of bytes required for the recording buffer
 uint32_t record_size = (SAMPLE_RATE * SAMPLE_BITS / 8) * RECORD_TIME;
 
 File file;
@@ -1119,24 +1114,24 @@ TaskHandle_t chatgpt_handle;
 WiFiClientSecure client;
 ChatGPT<WiFiClientSecure> chat_gpt(&client, "v1", "OpenAI-TOKEN");
 
-//*****************************************Arduino基础******************************************//
+//*****************************************Arduino Base******************************************//
 
 void setup() {
-  // 将您的设置代码放在这里，运行一次：
+  // put your setup code here, to run once:
   Serial.begin(115200);
   while (!Serial) ;
   
-  // 设置42号PDM时钟引脚和41号PDM数据引脚
+  // setup 42 PDM clock and 41 PDM data pins
   I2S.setPinsPdmRx(42, 41);
 
-  // 传输模式为PDM_MONO_MODE，这意味着使用PDM（脉冲密度调制）单声道模式进行传输
+  // The transmission mode is PDM_MONO_MODE, which means that PDM (pulse density modulation) mono mode is used for transmission
   if (!I2S.begin(I2S_MODE_PDM_RX, 16000, I2S_DATA_BIT_WIDTH_16BIT, I2S_SLOT_MODE_MONO)) {
-    Serial.println("初始化I2S失败！");
+    Serial.println("Failed to initialize I2S!");
     while (1) ;
   }
 
   if(!SD.begin(D2)){
-    Serial.println("挂载SD卡失败！");
+    Serial.println("Failed to mount SD Card!");
     while (1) ;
   }
 
@@ -1147,66 +1142,66 @@ void setup() {
 }
 
 void loop() {
-  // 将您的主代码放在这里，重复运行：
+  // put your main code here, to run repeatedly:
 }
 
-//*****************************************RTOS任务******************************************//
+//*****************************************RTOS TASK******************************************//
 
 void i2s_adc(void *arg)
 {
   while(1){
     uint32_t sample_size = 0;
   
-    // 此变量将用于指向实际的录音缓冲区
+    // This variable will be used to point to the actual recording buffer
     uint8_t *rec_buffer = NULL;
-    Serial.printf("准备开始录音...\n");
+    Serial.printf("Ready to start recording ...\n");
   
     File file = SD.open(filename, FILE_WRITE);
   
-    // 将头部写入WAV文件
+    // Write the header to the WAV file
     uint8_t wav_header[WAV_HEADER_SIZE];
   
-    // 将WAV文件头信息写入wav_header数组
+    // Write the WAV file header information to the wav_header array
     generate_wav_header(wav_header, record_size, SAMPLE_RATE);
   
-    // 调用file.write()函数将wav_header数组中的数据写入新创建的WAV文件
+    // Call the file.write() function to write the data in the wav_header array to the newly created WAV file
     file.write(wav_header, WAV_HEADER_SIZE);
   
-    // 此代码使用ESP32的PSRAM（外部缓存内存）动态分配一段内存来存储录音数据
+    // This code uses the ESP32's PSRAM (external cache memory) to dynamically allocate a section of memory to store the recording data
     rec_buffer = (uint8_t *)ps_malloc(record_size);
     if (rec_buffer == NULL) {
-      Serial.printf("内存分配失败！\n");
+      Serial.printf("malloc failed!\n");
       while(1) ;
     }
-    Serial.printf("缓冲区：%d字节\n", ESP.getPsramSize() - ESP.getFreePsram());
+    Serial.printf("Buffer: %d bytes\n", ESP.getPsramSize() - ESP.getFreePsram());
   
-    // 开始录音
-    // I2S端口号（在这种情况下是I2S_NUM_0），
-    // 指向要写入数据的缓冲区的指针（即rec_buffer），
-    // 要读取的数据大小（即record_size），
-    // 指向指向实际读取数据大小的变量的指针（即&sample_size），
-    // 以及等待数据读取的最大时间（在这种情况下是portMAX_DELAY，表示无限等待时间）。
+    // Start recording
+    // I2S port number (in this case I2S_NUM_0), 
+    // a pointer to the buffer to which the data is to be written (i.e. rec_buffer),
+    // the size of the data to be read (i.e. record_size),
+    // a pointer to a variable that points to the actual size of the data being read (i.e. &sample_size),
+    // and the maximum time to wait for the data to be read (in this case portMAX_DELAY, indicating an infinite wait time).
     esp_i2s::i2s_read(esp_i2s::I2S_NUM_0, rec_buffer, record_size, &sample_size, portMAX_DELAY);
     if (sample_size == 0) {
-      Serial.printf("录音失败！\n");
+      Serial.printf("Record Failed!\n");
     } else {
-      Serial.printf("录音%d字节\n", sample_size);
+      Serial.printf("Record %d bytes\n", sample_size);
     }
   
-    // 增加音量
+    // Increase volume
     for (uint32_t i = 0; i < sample_size; i += SAMPLE_BITS/8) {
       (*(uint16_t *)(rec_buffer+i)) <<= VOLUME_GAIN;
     }
   
-    // 将数据写入WAV文件
-    Serial.printf("正在写入文件...\n");
+    // Write data to the WAV file
+    Serial.printf("Writing to the file ...\n");
     if (file.write(rec_buffer, record_size) != record_size)
-      Serial.printf("写入文件失败！\n");
+      Serial.printf("Write file Failed!\n");
   
     free(rec_buffer);
     rec_buffer = NULL;
     file.close();
-    Serial.printf("录音结束。\n");
+    Serial.printf("The recording is over.\n");
       
     listDir(SD, "/", 0);
 
@@ -1218,23 +1213,23 @@ void i2s_adc(void *arg)
     
     if(uploadStatus)
       xTaskNotifyGive(chatgpt_handle);
-    vTaskDelay(10000);       // 每次录音间隔10秒
+    vTaskDelay(10000);       // Each recording is spaced 10s apart
   }
 //  vTaskDelete(NULL);
 }
 
 void wifiConnect(void *pvParameters){
   isWIFIConnected = false;
-  Serial.print("尝试连接到 ");
+  Serial.print("Try to connect to ");
   Serial.println(ssid);
   WiFi.begin(ssid, password);
   while(WiFi.status() != WL_CONNECTED){
     vTaskDelay(500);
     Serial.print(".");
   }
-  Serial.println("Wi-Fi已连接！");
+  Serial.println("Wi-Fi Connected!");
   isWIFIConnected = true;
-  // 忽略SSL证书验证
+  // Ignore SSL certificate validation
   client.setInsecure();
   while(true){
     vTaskDelay(1000);
@@ -1243,26 +1238,26 @@ void wifiConnect(void *pvParameters){
 
 void chatgpt(void *pvParameters){
   while(1){
-    // 等待来自任务1的通知信号
+    // Waiting for notification signal from Task 1
     ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
 
     String result;
     if (chat_gpt.simple_message("gpt-3.5-turbo-0301", "user", chatgpt_Q, result)) {
-      Serial.println("===成功===");
+      Serial.println("===OK===");
       Serial.println(result);
     } else {
-      Serial.println("===错误===");
+      Serial.println("===ERROR===");
       Serial.println(result);
     }
 
   }
 }
 
-//*****************************************音频处理******************************************//
+//*****************************************Audio Process******************************************//
 
 void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample_rate)
 {
-  // 参考：http://soundfile.sapp.org/doc/WaveFormat/
+  // See this for reference: http://soundfile.sapp.org/doc/WaveFormat/
   uint32_t file_size = wav_size + WAV_HEADER_SIZE - 8;
   uint32_t byte_rate = SAMPLE_RATE * SAMPLE_BITS / 8;
   const uint8_t set_wav_header[] = {
@@ -1270,46 +1265,46 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
     file_size, file_size >> 8, file_size >> 16, file_size >> 24, // ChunkSize
     'W', 'A', 'V', 'E', // Format
     'f', 'm', 't', ' ', // Subchunk1ID
-    0x10, 0x00, 0x00, 0x00, // Subchunk1Size (PCM为16)
-    0x01, 0x00, // AudioFormat (PCM为1)
-    0x01, 0x00, // NumChannels (1声道)
+    0x10, 0x00, 0x00, 0x00, // Subchunk1Size (16 for PCM)
+    0x01, 0x00, // AudioFormat (1 for PCM)
+    0x01, 0x00, // NumChannels (1 channel)
     sample_rate, sample_rate >> 8, sample_rate >> 16, sample_rate >> 24, // SampleRate
     byte_rate, byte_rate >> 8, byte_rate >> 16, byte_rate >> 24, // ByteRate
     0x02, 0x00, // BlockAlign
-    0x10, 0x00, // BitsPerSample (16位)
+    0x10, 0x00, // BitsPerSample (16 bits)
     'd', 'a', 't', 'a', // Subchunk2ID
     wav_size, wav_size >> 8, wav_size >> 16, wav_size >> 24, // Subchunk2Size
   };
   memcpy(wav_header, set_wav_header, sizeof(set_wav_header));
 }
 
-//*****************************************文件处理******************************************//
+//*****************************************File Process******************************************//
 
 void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
-    Serial.printf("列出目录：%s\n", dirname);
+    Serial.printf("Listing directory: %s\n", dirname);
 
     File root = fs.open(dirname);
     if(!root){
-        Serial.println("打开目录失败");
+        Serial.println("Failed to open directory");
         return;
     }
     if(!root.isDirectory()){
-        Serial.println("不是目录");
+        Serial.println("Not a directory");
         return;
     }
 
     File file = root.openNextFile();
     while(file){
         if(file.isDirectory()){
-            Serial.print("  目录：");
+            Serial.print("  DIR : ");
             Serial.println(file.name());
             if(levels){
                 listDir(fs, file.path(), levels -1);
             }
         } else {
-            Serial.print("  文件：");
+            Serial.print("  FILE: ");
             Serial.print(file.name());
-            Serial.print("  大小：");
+            Serial.print("  SIZE: ");
             Serial.println(file.size());
         }
         file = root.openNextFile();
@@ -1319,30 +1314,30 @@ void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
 bool uploadFile(){
   file = SD.open(filename, FILE_READ);
   if(!file){
-    Serial.println("文件不可用！");
+    Serial.println("FILE IS NOT AVAILABLE!");
     return false;
   }
 
-  Serial.println("===> 上传文件到Node.js服务器");
+  Serial.println("===> Upload FILE to Node.js Server");
 
   HTTPClient client;
   client.begin("http://192.168.1.208:8888/uploadAudio");
   client.addHeader("Content-Type", "audio/wav");
   int httpResponseCode = client.sendRequest("POST", &file, file.size());
-  Serial.print("httpResponseCode：");
+  Serial.print("httpResponseCode : ");
   Serial.println(httpResponseCode);
 
   if(httpResponseCode == 200){
     String response = client.getString();
-    Serial.println("==================== 转录 ====================");
+    Serial.println("==================== Transcription ====================");
     Serial.println(response);
     chatgpt_Q = response;
-    Serial.println("====================  结束  ====================");
+    Serial.println("====================      End      ====================");
     file.close();
     client.end();
     return true;
   }else{
-    Serial.println("错误");
+    Serial.println("Error");
     return false;
   }
   
@@ -1361,7 +1356,6 @@ bool uploadFile(){
 修改完成后，上传程序并打开串口监视器。录音后，您将看到ChatGPT对您问题的回答。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3sense-speech2chatgpt/16.png" style={{width:1000, height:'auto'}}/></div>
-
 
 ## 屏幕显示内容设计与程序集成
 
@@ -1383,7 +1377,7 @@ SquareLine Studio是由LVGL开发的GUI设计工具，LVGL是一个用于嵌入�
 
 ### 步骤14. 程序集成
 
-最终完整的项目代码位于**[XIAOESP32S3-SPEECH-CHATGPT-COMPLETE](https://github.com/limengdu/XIAO-ESP32S3Sense-Speech2ChatGPT/blob/main/XIAOESP32S3-SPEECH-CHATGPT-COMPLETE/XIAOESP32S3-SPEECH-CHATGPT-COMPLETE.ino)**文件夹中。
+最终完整的项目代码位于 **[XIAOESP32S3-SPEECH-CHATGPT-COMPLETE](https://github.com/limengdu/XIAO-ESP32S3Sense-Speech2ChatGPT/blob/main/XIAOESP32S3-SPEECH-CHATGPT-COMPLETE/XIAOESP32S3-SPEECH-CHATGPT-COMPLETE.ino)** 文件夹中。
 
 <details>
 
@@ -1404,50 +1398,50 @@ SquareLine Studio是由LVGL开发的GUI设计工具，LVGL是一个用于嵌入�
 #include "SPI.h"
 
 
-// 导入圆形显示屏库并定义用作TFT显示屏框架的框架
+// Import the library for the round display and define the frame used as the TFT display frame
 #define USE_TFT_ESPI_LIBRARY
 #include "lv_xiao_round_screen.h"
 
 
-/*更改为您的屏幕分辨率*/
+/*Change to your screen resolution*/
 static const uint16_t screenWidth  = 240;
 static const uint16_t screenHeight = 240;
 
 
-// 录音程序中要使用的变量，为了最佳效果请勿更改
+// Variables to be used in the recording program, do not change for best
 #define SAMPLE_RATE 16000U
 #define SAMPLE_BITS 16
 #define WAV_HEADER_SIZE 44
 #define VOLUME_GAIN 2
-#define RECORD_TIME 5  // 秒，最大值为240
+#define RECORD_TIME 5  // seconds, The maximum value is 240
 
 
-// 录音缓冲区所需的字节数
+// Number of bytes required for the recording buffer
 uint32_t record_size = (SAMPLE_RATE * SAMPLE_BITS / 8) * RECORD_TIME;
 
 
-// 保存录音的文件名
+// Name of the file in which the recording is saved
 File file;
 const char filename[] = "/recording.wav";
 
 
-// 网络连接状态标志
+// Network connection status flag
 bool isWIFIConnected;
 
 
-// chatgpt回复的问题答案
+// Answers to the questions chatgpt replied to
 String response;
 
 
-// 不同任务启动的标志
+// Flags for different task starts
 bool recordTask = false;
 bool chatgptTask = false;
 
 WiFiClientSecure client;
-ChatGPT<WiFiClientSecure> chat_gpt(&client, "v1", "OpenAI-TOKEN");   // 请填入您的OpenAI密钥
+ChatGPT<WiFiClientSecure> chat_gpt(&client, "v1", "OpenAI-TOKEN");   // Please fill in your OpenAI key
 
 
-// 请更改为您的网络
+// Please change to your network
 const char* ssid = "wifi-ssid";
 const char* password = "wifi-password";
 
@@ -1458,7 +1452,7 @@ static lv_color_t buf[ screenWidth * screenHeight / 10 ];
 //****************************************LVGL****************************************************//
 
 #if LV_USE_LOG != 0
-/* 串口调试 */
+/* Serial debugging */
 void my_print(const char * buf)
 {
     Serial.printf(buf);
@@ -1466,7 +1460,7 @@ void my_print(const char * buf)
 }
 #endif
 
-/* 显示刷新 */
+/* Display flushing */
 void my_disp_flush( lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color_p )
 {
     uint32_t w = ( area->x2 - area->x1 + 1 );
@@ -1480,7 +1474,7 @@ void my_disp_flush( lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *colo
     lv_disp_flush_ready( disp );
 }
 
-/*读取触摸板*/
+/*Read the touchpad*/
 void my_touchpad_read( lv_indev_drv_t * indev_driver, lv_indev_data_t * data )
 {
     // uint16_t touchX = 0, touchY = 0;
@@ -1498,7 +1492,7 @@ void my_touchpad_read( lv_indev_drv_t * indev_driver, lv_indev_data_t * data )
     {
         data->state = LV_INDEV_STATE_PR;
 
-        /*设置坐标*/
+        /*Set the coordinates*/
         data->point.x = touchX;
         data->point.y = touchY;
 
@@ -1508,7 +1502,7 @@ void my_touchpad_read( lv_indev_drv_t * indev_driver, lv_indev_data_t * data )
 //        Serial.print( "Data y " );
 //        Serial.println( touchY );
 
-        // 您也可以通过取消注释并通过点击徽标进行配置来开始录音
+        // You can also start recording by uncommenting and configuring by clicking on the logo
 //        if((touchX < 240 && touchX > 230) && (touchY < 120 && touchY > 100)){
           recordTask = true;
 //        }
@@ -1519,7 +1513,7 @@ void my_touchpad_read( lv_indev_drv_t * indev_driver, lv_indev_data_t * data )
 
 void setup()
 {
-    Serial.begin( 115200 ); /* 为可能的串口调试做准备 */
+    Serial.begin( 115200 ); /* prepare for possible serial debug */
 //    while(!Serial);
 
     pinMode(TOUCH_INT, INPUT_PULLUP);
@@ -1534,25 +1528,25 @@ void setup()
     lv_init();
 
 #if LV_USE_LOG != 0
-    lv_log_register_print_cb( my_print ); /* 注册调试打印函数 */
+    lv_log_register_print_cb( my_print ); /* register print function for debugging */
 #endif
 
-    tft.begin();          /* TFT初始化 */
-    tft.setRotation( 0 ); /* 横向方向，翻转 */
+    tft.begin();          /* TFT init */
+    tft.setRotation( 0 ); /* Landscape orientation, flipped */
 
     lv_disp_draw_buf_init( &draw_buf, buf, NULL, screenWidth * screenHeight / 10 );
 
-    /*初始化显示屏*/
+    /*Initialize the display*/
     static lv_disp_drv_t disp_drv;
     lv_disp_drv_init( &disp_drv );
-    /*将以下行更改为您的显示分辨率*/
+    /*Change the following line to your display resolution*/
     disp_drv.hor_res = screenWidth;
     disp_drv.ver_res = screenHeight;
     disp_drv.flush_cb = my_disp_flush;
     disp_drv.draw_buf = &draw_buf;
     lv_disp_drv_register( &disp_drv );
 
-    /*初始化（虚拟）输入设备驱动程序*/
+    /*Initialize the (dummy) input device driver*/
     static lv_indev_drv_t indev_drv;
     lv_indev_drv_init( &indev_drv );
     indev_drv.type = LV_INDEV_TYPE_POINTER;
@@ -1563,7 +1557,7 @@ void setup()
 
     I2S.setAllPins(-1, 42, 41, -1, -1);
   
-    //传输模式为PDM_MONO_MODE，这意味着使用PDM（脉冲密度调制）单声道模式进行传输
+    //The transmission mode is PDM_MONO_MODE, which means that PDM (pulse density modulation) mono mode is used for transmission
     if (!I2S.begin(PDM_MONO_MODE, SAMPLE_RATE, SAMPLE_BITS)) {
         Serial.println("Failed to initialize I2S!");
         while (1) ;
@@ -1576,13 +1570,13 @@ void setup()
 
     Serial.println( "Setup done" );
 
-    // 创建一个FreeRTOS任务来定期检查网络的连接状态。
+    // Create a FreeRTOS task to check the connection status of the network at regular intervals.
     xTaskCreate(wifiConnect, "wifi_Connect", 4096, NULL, 0, NULL);
 }
 
 void loop()
 {
-    lv_timer_handler(); /* 让GUI执行其工作 */
+    lv_timer_handler(); /* let the GUI do its work */
     record();
     chatgpt();
     delay(5);
@@ -1592,7 +1586,7 @@ void loop()
 
 void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample_rate)
 {
-  // 参考资料请见：http://soundfile.sapp.org/doc/WaveFormat/
+  // See this for reference: http://soundfile.sapp.org/doc/WaveFormat/
   uint32_t file_size = wav_size + WAV_HEADER_SIZE - 8;
   uint32_t byte_rate = SAMPLE_RATE * SAMPLE_BITS / 8;
   const uint8_t set_wav_header[] = {
@@ -1600,13 +1594,13 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
     file_size, file_size >> 8, file_size >> 16, file_size >> 24, // ChunkSize
     'W', 'A', 'V', 'E', // Format
     'f', 'm', 't', ' ', // Subchunk1ID
-    0x10, 0x00, 0x00, 0x00, // Subchunk1Size (PCM为16)
-    0x01, 0x00, // AudioFormat (PCM为1)
-    0x01, 0x00, // NumChannels (1声道)
+    0x10, 0x00, 0x00, 0x00, // Subchunk1Size (16 for PCM)
+    0x01, 0x00, // AudioFormat (1 for PCM)
+    0x01, 0x00, // NumChannels (1 channel)
     sample_rate, sample_rate >> 8, sample_rate >> 16, sample_rate >> 24, // SampleRate
     byte_rate, byte_rate >> 8, byte_rate >> 16, byte_rate >> 24, // ByteRate
     0x02, 0x00, // BlockAlign
-    0x10, 0x00, // BitsPerSample (16位)
+    0x10, 0x00, // BitsPerSample (16 bits)
     'd', 'a', 't', 'a', // Subchunk2ID
     wav_size, wav_size >> 8, wav_size >> 16, wav_size >> 24, // Subchunk2Size
   };
@@ -1693,22 +1687,22 @@ void record(){
     lv_timer_handler();
     uint32_t sample_size = 0;
     
-    // 此变量将用于指向实际的录音缓冲区
+    // This variable will be used to point to the actual recording buffer
     uint8_t *rec_buffer = NULL;
     Serial.printf("Ready to start recording ...\n");
   
     File file = SD.open(filename, FILE_WRITE);
   
-    // 将头部写入WAV文件
+    // Write the header to the WAV file
     uint8_t wav_header[WAV_HEADER_SIZE];
   
-    // 将WAV文件头信息写入wav_header数组
+    // Write the WAV file header information to the wav_header array
     generate_wav_header(wav_header, record_size, SAMPLE_RATE);
   
-    // 调用file.write()函数将wav_header数组中的数据写入新创建的WAV文件
+    // Call the file.write() function to write the data in the wav_header array to the newly created WAV file
     file.write(wav_header, WAV_HEADER_SIZE);
   
-    // 此代码使用ESP32的PSRAM（外部缓存内存）动态分配一段内存来存储录音数据。
+    // This code uses the ESP32's PSRAM (external cache memory) to dynamically allocate a section of memory to store the recording data.
     rec_buffer = (uint8_t *)ps_malloc(record_size);
     if (rec_buffer == NULL) {
       Serial.printf("malloc failed!\n");
@@ -1716,12 +1710,12 @@ void record(){
     }
     Serial.printf("Buffer: %d bytes\n", ESP.getPsramSize() - ESP.getFreePsram());
   
-    // 开始录音
-    // I2S端口号（在这种情况下为I2S_NUM_0），
-    // 指向要写入数据的缓冲区的指针（即rec_buffer），
-    // 要读取的数据大小（即record_size），
-    // 指向指向正在读取的数据实际大小的变量的指针（即&sample_size），
-    // 以及等待数据读取的最大时间（在这种情况下为portMAX_DELAY，表示无限等待时间）。
+    // Start recording
+    // I2S port number (in this case I2S_NUM_0), 
+    // a pointer to the buffer to which the data is to be written (i.e. rec_buffer),
+    // the size of the data to be read (i.e. record_size),
+    // a pointer to a variable that points to the actual size of the data being read (i.e. &sample_size),
+    // and the maximum time to wait for the data to be read (in this case portMAX_DELAY, indicating an infinite wait time).
     esp_i2s::i2s_read(esp_i2s::I2S_NUM_0, rec_buffer, record_size, &sample_size, portMAX_DELAY);
     if (sample_size == 0) {
       Serial.printf("Record Failed!\n");
@@ -1729,12 +1723,12 @@ void record(){
       Serial.printf("Record %d bytes\n", sample_size);
     }
   
-    // 增加音量
+    // Increase volume
     for (uint32_t i = 0; i < sample_size; i += SAMPLE_BITS/8) {
       (*(uint16_t *)(rec_buffer+i)) <<= VOLUME_GAIN;
     }
   
-    // 将数据写入WAV文件
+    // Write data to the WAV file
     Serial.printf("Writing to the file ...\n");
     if (file.write(rec_buffer, record_size) != record_size)
       Serial.printf("Write file Failed!\n");
@@ -1790,7 +1784,7 @@ void wifiConnect(void *pvParameters){
   }
   Serial.println("Wi-Fi Connected!");
   isWIFIConnected = true;
-  // 忽略SSL证书验证
+  // Ignore SSL certificate validation
   client.setInsecure();
   while(true){
     vTaskDelay(1000);
@@ -1819,52 +1813,52 @@ void wifiConnect(void *pvParameters){
 #include "SPI.h"
 
 
-// 导入圆形显示屏库并定义用作TFT显示屏框架的框架
+// Import the library for the round display and define the frame used as the TFT display frame
 #define USE_TFT_ESPI_LIBRARY
 #include "lv_xiao_round_screen.h"
 
 
-/*更改为您的屏幕分辨率*/
+/*Change to your screen resolution*/
 static const uint16_t screenWidth  = 240;
 static const uint16_t screenHeight = 240;
 
 
-// 录音程序中要使用的变量，为了最佳效果请勿更改
+// Variables to be used in the recording program, do not change for best
 #define SAMPLE_RATE 16000U
 #define SAMPLE_BITS 16
 #define WAV_HEADER_SIZE 44
 #define VOLUME_GAIN 2
-#define RECORD_TIME 5  // 秒，最大值为240
+#define RECORD_TIME 5  // seconds, The maximum value is 240
 
 
-// 录音缓冲区所需的字节数
+// Number of bytes required for the recording buffer
 uint32_t record_size = (SAMPLE_RATE * SAMPLE_BITS / 8) * RECORD_TIME;
 
-//定义I2S
+//define I2S
 I2SClass I2S;
 
-// 保存录音的文件名
+// Name of the file in which the recording is saved
 File file;
 const char filename[] = "/recording.wav";
 
 
-// 网络连接状态标志
+// Network connection status flag
 bool isWIFIConnected;
 
 
-// chatgpt回复的问题答案
+// Answers to the questions chatgpt replied to
 String response;
 
 
-// 不同任务启动的标志
+// Flags for different task starts
 bool recordTask = false;
 bool chatgptTask = false;
 
 WiFiClientSecure client;
-ChatGPT<WiFiClientSecure> chat_gpt(&client, "v1", "OpenAI-TOKEN");   // 请填入您的OpenAI密钥
+ChatGPT<WiFiClientSecure> chat_gpt(&client, "v1", "OpenAI-TOKEN");   // Please fill in your OpenAI key
 
 
-// 请更改为您的网络
+// Please change to your network
 const char* ssid = "wifi-ssid";
 const char* password = "wifi-password";
 
@@ -1875,7 +1869,7 @@ static lv_color_t buf[ screenWidth * screenHeight / 10 ];
 //****************************************LVGL****************************************************//
 
 #if LV_USE_LOG != 0
-/* 串口调试 */
+/* Serial debugging */
 void my_print(const char * buf)
 {
     Serial.printf(buf);
@@ -1883,7 +1877,7 @@ void my_print(const char * buf)
 }
 #endif
 
-/* 显示刷新 */
+/* Display flushing */
 void my_disp_flush( lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color_p )
 {
     uint32_t w = ( area->x2 - area->x1 + 1 );
@@ -1897,7 +1891,7 @@ void my_disp_flush( lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *colo
     lv_disp_flush_ready( disp );
 }
 
-/*读取触摸板*/
+/*Read the touchpad*/
 void my_touchpad_read( lv_indev_drv_t * indev_driver, lv_indev_data_t * data )
 {
     // uint16_t touchX = 0, touchY = 0;
@@ -1915,7 +1909,7 @@ void my_touchpad_read( lv_indev_drv_t * indev_driver, lv_indev_data_t * data )
     {
         data->state = LV_INDEV_STATE_PR;
 
-        /*设置坐标*/
+        /*Set the coordinates*/
         data->point.x = touchX;
         data->point.y = touchY;
 
@@ -1925,7 +1919,7 @@ void my_touchpad_read( lv_indev_drv_t * indev_driver, lv_indev_data_t * data )
 //        Serial.print( "Data y " );
 //        Serial.println( touchY );
 
-        // 您也可以通过取消注释并通过点击徽标进行配置来开始录音
+        // You can also start recording by uncommenting and configuring by clicking on the logo
 //        if((touchX < 240 && touchX > 230) && (touchY < 120 && touchY > 100)){
           recordTask = true;
 //        }
@@ -1936,7 +1930,7 @@ void my_touchpad_read( lv_indev_drv_t * indev_driver, lv_indev_data_t * data )
 
 void setup()
 {
-    Serial.begin( 115200 ); /* 为可能的串口调试做准备 */
+    Serial.begin( 115200 ); /* prepare for possible serial debug */
 //    while(!Serial);
 
     pinMode(TOUCH_INT, INPUT_PULLUP);
@@ -1951,25 +1945,25 @@ void setup()
     lv_init();
 
 #if LV_USE_LOG != 0
-    lv_log_register_print_cb( my_print ); /* 注册调试打印函数 */
+    lv_log_register_print_cb( my_print ); /* register print function for debugging */
 #endif
 
-    tft.begin();          /* TFT初始化 */
-    tft.setRotation( 0 ); /* 横向方向，翻转 */
+    tft.begin();          /* TFT init */
+    tft.setRotation( 0 ); /* Landscape orientation, flipped */
 
     lv_disp_draw_buf_init( &draw_buf, buf, NULL, screenWidth * screenHeight / 10 );
 
-    /*初始化显示屏*/
+    /*Initialize the display*/
     static lv_disp_drv_t disp_drv;
     lv_disp_drv_init( &disp_drv );
-    /*将以下行更改为您的显示分辨率*/
+    /*Change the following line to your display resolution*/
     disp_drv.hor_res = screenWidth;
     disp_drv.ver_res = screenHeight;
     disp_drv.flush_cb = my_disp_flush;
     disp_drv.draw_buf = &draw_buf;
     lv_disp_drv_register( &disp_drv );
 
-    /*初始化（虚拟）输入设备驱动程序*/
+    /*Initialize the (dummy) input device driver*/
     static lv_indev_drv_t indev_drv;
     lv_indev_drv_init( &indev_drv );
     indev_drv.type = LV_INDEV_TYPE_POINTER;
@@ -1978,10 +1972,10 @@ void setup()
 
     ui_init();
 
-    // 设置42号PDM时钟和41号PDM数据引脚
+    // setup 42 PDM clock and 41 PDM data pins
     I2S.setPinsPdmRx(42, 41);  
 
-    //传输模式为PDM_MONO_MODE，意味着使用PDM（脉冲密度调制）单声道模式进行传输
+    //The transmission mode is PDM_MONO_MODE, which means that PDM (pulse density modulation) mono mode is used for transmission
     if (!I2S.begin(I2S_MODE_PDM_RX, 16000, I2S_DATA_BIT_WIDTH_16BIT, I2S_SLOT_MODE_MONO)) {
         Serial.println("Failed to initialize I2S!");
         while (1) ;
@@ -1994,13 +1988,13 @@ void setup()
 
     Serial.println( "Setup done" );
 
-    // 创建一个FreeRTOS任务来定期检查网络的连接状态。
+    // Create a FreeRTOS task to check the connection status of the network at regular intervals.
     xTaskCreate(wifiConnect, "wifi_Connect", 4096, NULL, 0, NULL);
 }
 
 void loop()
 {
-    lv_timer_handler(); /* 让GUI执行其工作 */
+    lv_timer_handler(); /* let the GUI do its work */
     record();
     chatgpt();
     delay(5);
@@ -2010,7 +2004,7 @@ void loop()
 
 void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample_rate)
 {
-  // 参考资料请见：http://soundfile.sapp.org/doc/WaveFormat/
+  // See this for reference: http://soundfile.sapp.org/doc/WaveFormat/
   uint32_t file_size = wav_size + WAV_HEADER_SIZE - 8;
   uint32_t byte_rate = SAMPLE_RATE * SAMPLE_BITS / 8;
   const uint8_t set_wav_header[] = {
@@ -2018,13 +2012,13 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
     file_size, file_size >> 8, file_size >> 16, file_size >> 24, // ChunkSize
     'W', 'A', 'V', 'E', // Format
     'f', 'm', 't', ' ', // Subchunk1ID
-    0x10, 0x00, 0x00, 0x00, // Subchunk1Size (PCM为16)
-    0x01, 0x00, // AudioFormat (PCM为1)
-    0x01, 0x00, // NumChannels (1声道)
+    0x10, 0x00, 0x00, 0x00, // Subchunk1Size (16 for PCM)
+    0x01, 0x00, // AudioFormat (1 for PCM)
+    0x01, 0x00, // NumChannels (1 channel)
     sample_rate, sample_rate >> 8, sample_rate >> 16, sample_rate >> 24, // SampleRate
     byte_rate, byte_rate >> 8, byte_rate >> 16, byte_rate >> 24, // ByteRate
     0x02, 0x00, // BlockAlign
-    0x10, 0x00, // BitsPerSample (16位)
+    0x10, 0x00, // BitsPerSample (16 bits)
     'd', 'a', 't', 'a', // Subchunk2ID
     wav_size, wav_size >> 8, wav_size >> 16, wav_size >> 24, // Subchunk2Size
   };
@@ -2111,22 +2105,22 @@ void record(){
     lv_timer_handler();
     uint32_t sample_size = 0;
     
-    // 此变量将用于指向实际的录音缓冲区
+    // This variable will be used to point to the actual recording buffer
     uint8_t *rec_buffer = NULL;
     Serial.printf("Ready to start recording ...\n");
   
     File file = SD.open(filename, FILE_WRITE);
   
-    // 将头部写入WAV文件
+    // Write the header to the WAV file
     uint8_t wav_header[WAV_HEADER_SIZE];
   
-    // 将WAV文件头信息写入wav_header数组
+    // Write the WAV file header information to the wav_header array
     generate_wav_header(wav_header, record_size, SAMPLE_RATE);
   
-    // 调用file.write()函数将wav_header数组中的数据写入新创建的WAV文件
+    // Call the file.write() function to write the data in the wav_header array to the newly created WAV file
     file.write(wav_header, WAV_HEADER_SIZE);
   
-    // 此代码使用ESP32的PSRAM（外部缓存内存）动态分配一段内存来存储录音数据。
+    // This code uses the ESP32's PSRAM (external cache memory) to dynamically allocate a section of memory to store the recording data.
     rec_buffer = (uint8_t *)ps_malloc(record_size);
     if (rec_buffer == NULL) {
       Serial.printf("malloc failed!\n");
@@ -2134,12 +2128,12 @@ void record(){
     }
     Serial.printf("Buffer: %d bytes\n", ESP.getPsramSize() - ESP.getFreePsram());
   
-    // 开始录音
-    // I2S端口号（在这种情况下为I2S_NUM_0），
-    // 指向要写入数据的缓冲区的指针（即rec_buffer），
-    // 要读取的数据大小（即record_size），
-    // 指向指向正在读取的数据实际大小的变量的指针（即&sample_size），
-    // 以及等待数据读取的最大时间（在这种情况下为portMAX_DELAY，表示无限等待时间）。
+    // Start recording
+    // I2S port number (in this case I2S_NUM_0), 
+    // a pointer to the buffer to which the data is to be written (i.e. rec_buffer),
+    // the size of the data to be read (i.e. record_size),
+    // a pointer to a variable that points to the actual size of the data being read (i.e. &sample_size),
+    // and the maximum time to wait for the data to be read (in this case portMAX_DELAY, indicating an infinite wait time).
     esp_i2s::i2s_read(esp_i2s::I2S_NUM_0, rec_buffer, record_size, &sample_size, portMAX_DELAY);
     if (sample_size == 0) {
       Serial.printf("Record Failed!\n");
@@ -2147,12 +2141,12 @@ void record(){
       Serial.printf("Record %d bytes\n", sample_size);
     }
   
-    // 增加音量
+    // Increase volume
     for (uint32_t i = 0; i < sample_size; i += SAMPLE_BITS/8) {
       (*(uint16_t *)(rec_buffer+i)) <<= VOLUME_GAIN;
     }
   
-    // 将数据写入WAV文件
+    // Write data to the WAV file
     Serial.printf("Writing to the file ...\n");
     if (file.write(rec_buffer, record_size) != record_size)
       Serial.printf("Write file Failed!\n");
@@ -2208,7 +2202,7 @@ void wifiConnect(void *pvParameters){
   }
   Serial.println("Wi-Fi Connected!");
   isWIFIConnected = true;
-  // 忽略SSL证书验证
+  // Ignore SSL certificate validation
   client.setInsecure();
   while(true){
     vTaskDelay(1000);
@@ -2229,17 +2223,16 @@ void wifiConnect(void *pvParameters){
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3sense-speech2chatgpt/22.jpg" style={{width:600, height:'auto'}}/></div>
 
-
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

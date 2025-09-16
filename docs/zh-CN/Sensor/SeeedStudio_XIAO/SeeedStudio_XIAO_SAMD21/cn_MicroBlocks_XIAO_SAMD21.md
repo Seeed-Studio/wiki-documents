@@ -12,57 +12,56 @@ last_update:
 
 ## MicroBlocks
 
-MicroBlocks 是一种积木式编程语言，让初学者（9 岁到成人）能够轻松地为微控制器编程。尽管看起来简单，MicroBlocks 实际上是一种功能强大的编程语言，性能比 MicroPython 更好；能够控制 GPIO 引脚并通过 I2C、SPI 和串口与外设接口；拥有近 200 个扩展库。事实上，一些硬件设计师更喜欢使用 MicroBlocks 进行快速原型设计和测试，因为它具有快速、交互式的开发周期。
+MicroBlocks 是一种积木式编程语言，让初学者（9岁到成人）能够轻松地对微控制器进行编程。尽管看起来简单，MicroBlocks 实际上是一种功能强大的编程语言，性能比 MicroPython 更好；能够控制 GPIO 引脚并通过 I2C、SPI 和串口与外设接口；拥有近200个扩展库。事实上，一些硬件设计师更喜欢使用 MicroBlocks 进行快速原型设计和测试，因为它具有快速、交互式的开发周期。
 
 ### XIAO SAMD21 引脚图和硬件特性
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-pinout-samd21.jpg" style={{width:600, height:'auto'}}/></div>
 
-与所有 XIAO 开发板一样，这块开发板有 11 个 GPIO 引脚，引脚 0..10。所有引脚都可以用于模拟输入和数字及模拟输出。
-引脚 1..10 支持脉宽调制（PWM）输出，与其他 Xiao 开发板相同。
+与所有 XIAO 开发板一样，这块开发板有11个 GPIO 引脚，引脚0..10。所有引脚都可以用于模拟输入和数字及模拟输出。
+引脚1..10支持脉宽调制（PWM）输出，与其他 Xiao 开发板相同。
 
-与其他开发板不同，这块开发板上的引脚 0 是一个 **10 位数模转换器**（DAC）。将引脚 0 设置为 0 到 1023 之间的数字，可以使引脚输出 0 到 3.3 伏之间的稳定电压。（相比之下，PWM 输出一系列数字脉冲，其中数字决定脉冲宽度。）DAC 引脚可用于生成音频或其他模拟信号。
+与其他开发板不同，这块开发板上的引脚0是一个**10位数模转换器**（DAC）。将引脚0设置为0到1023之间的数字，可以使引脚输出0到3.3伏之间的稳定电压。（相比之下，PWM输出一系列数字脉冲，其中数字决定脉冲宽度。）DAC引脚可用于生成音频或其他模拟信号。
 
-这块开发板有一个黄色用户 LED（引脚 13）和蓝色 RX/TX LED（引脚 11 和 12）。
-所有 LED 都是反向的：将相关引脚设置为 LOW 以点亮 LED。
+这块开发板有一个黄色用户LED（引脚13）和蓝色RX/TX LED（引脚11和12）。
+所有LED都是反向的：将相关引脚设置为LOW来点亮LED。
 
-RX/TX LED 可以被 MicroBlocks 使用，但有一个注意事项。
-MicroBlocks 不断与开发板交换数据，
-所以在使用 MicroBlocks 编辑器时，RX/TX LED 会明亮地闪烁。
-由于这种闪烁会分散注意力，RX/TX LED 默认被禁用，
+RX/TX LED可以被MicroBlocks使用，但有一个注意事项。
+MicroBlocks不断与开发板交换数据，
+所以在使用MicroBlocks编辑器时，RX/TX LED会闪烁得很亮。
+由于这种闪烁会分散注意力，RX/TX LED默认是禁用的，
 只有当脚本设置相关引脚时才会启用。
-考虑到这一点，当 IDE 未连接时，RX/TX LED 可能很有用。
+考虑到这一点，当IDE未连接时，RX/TX LED可能很有用。
 
 ## 安装 MicroBlocks 固件
 
-在这块开发板上进入引导加载程序模式比较棘手，因为没有启动按钮。使用导线快速短接 USB 端口左侧的两个 RST 引脚触点两次：
+在这块开发板上进入引导加载程序模式比较棘手，因为没有启动按钮。使用导线快速短接USB端口左侧的两个RST引脚触点两次：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif" style={{width:400, height:'auto'}}/></div>
 
-成功时，黄色用户 LED 灯会缓慢地淡入淡出，
-并且会出现一个名为 **Arduino** 的虚拟 USB 驱动器。
+成功时，黄色用户LED灯会缓慢地淡入淡出，
+并且会出现一个名为**Arduino**的虚拟USB驱动器。
 
-从 MicroBlocks [固件文件夹](https://microblocks.fun/downloads/latest/vm)
-下载[固件文件](https://microblocks.fun/downloads/latest/vm/vm_xiao_samd21.uf2)，
-然后将文件拖到虚拟 USB 驱动器上。
+从MicroBlocks [固件文件夹](https://microblocks.fun/downloads/latest/vm)下载[固件文件](https://microblocks.fun/downloads/latest/vm/vm_xiao_samd21.uf2)，
+然后将文件拖到虚拟USB驱动器上。
 
-固件将安装，几秒钟后，虚拟 USB 驱动器将消失。
+固件将安装，几秒钟后，虚拟USB驱动器将消失。
 您可以忽略任何关于磁盘未正确弹出的警告。
 
 ## 将开发板连接到 MicroBlocks
 
-使用数据 USB 线（**不是**仅供电线）将开发板连接到您的计算机。
+使用数据USB线（**不是**仅供电线）将开发板连接到您的计算机。
 
-在 Chrome 或 Edge 浏览器中运行 [MicroBlocks 编辑器](https://microblocks.fun/run/microblocks.html)。
-点击 **连接**（插头图标）按钮：
+在Chrome或Edge浏览器中运行[MicroBlocks编辑器](https://microblocks.fun/run/microblocks.html)。
+点击**连接**（插头图标）按钮：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-button.png" style={{width:300, height:'auto'}}/></div>
 
-从菜单中选择 **连接（USB）**：
+从菜单中选择**连接（USB）**：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-menu.png" style={{width:300, height:'auto'}}/></div>
 
-从对话框中选择您的开发板并点击 **连接** 按钮：
+从对话框中选择您的开发板并点击**连接**按钮：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-dialog-samd21.png" style={{width:400, height:'auto'}}/></div>
 
@@ -72,32 +71,31 @@ MicroBlocks 不断与开发板交换数据，
 
 ## 在 MicroBlocks 中编程
 
-MicroBlocks 是一个 **实时** 编程环境，所以您可以边编程边测试。
+MicroBlocks 是一个**实时**编程环境，所以您可以边编程边测试。
 点击积木块和脚本来运行它们。
 将积木块拖到脚本面板中并组装它们来创建脚本。
 
-您的代码存储在持久闪存中，即使开发板
-未连接到 MicroBlocks 编辑器也可以运行。
-**启动时** 积木块下的脚本在开发板通电时运行。
+您的代码存储在持久闪存中，即使开发板未连接到MicroBlocks编辑器也可以运行。
+**当启动时**积木块下的脚本在开发板通电时运行。
 
-MicroBlocks 支持并发。最多十个脚本可以同时运行。
+MicroBlocks支持并发。最多可以同时运行十个脚本。
 
-除了许多内置积木块外，MicroBlocks 还有近 200 个库
+除了许多内置积木块外，MicroBlocks还有近200个库
 支持额外的功能和外设。
-点击 **添加库** 按钮来添加库。
+点击**添加库**按钮来添加库。
 
 ## 示例
 
-这个脚本将闪烁黄色用户 LED：
+这个脚本将闪烁黄色用户LED：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-blink.png" style={{width:200, height:'auto'}}/></div>
 
 [积木块参考](https://wiki.microblocks.fun/en/reference_manual)
-包含许多其他示例。
+包含许多额外的示例。
 
 ## 特别感谢
 
-特别感谢 MicroBlocks 的 John 撰写本文。
+特别感谢MicroBlocks的John撰写本文。
 
 ## MicroBlocks 资源
 

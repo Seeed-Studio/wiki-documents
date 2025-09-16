@@ -59,6 +59,7 @@ export const steps = [
 <ProductBanner
   imageUrl="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/Orbbec_Gemini-335Lg_Front.webp" 
   linkUrl=""
+  lang="zh"
 />
 
 Gemini 335Lg 是 Gemini 330 系列中的杰出型号，作为业界验证的 Gemini 335L 的 GMSL2/FAKRA 版本。
@@ -67,7 +68,7 @@ GMSL2 串行器结合 FAKRA 连接器确保了在复杂环境中导航的自主�
 
 ## 规格参数
 
-<Orbbec335LgTable />
+<Orbbec335LgTable lang="zh" />
 
 <p>[1] 理论最大深度范围可达 65 米；</p>
 <p>[2] 工厂校准期间测量的数据；</p>
@@ -202,7 +203,7 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 
 并逐步配置设备树覆盖层：
 
-<JetsonIOStepper steps={steps} />
+<JetsonIOStepper steps={steps}  lang="zh"/>
 
 
 重启 Jetson 设备，在 Jetson 固件页面上，您可能需要根据提示选择正确的条目，在我们的情况下，我们按 **'1'** 来使用 `Custom Header Config`。
@@ -254,7 +255,6 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 :::
 
 
-
 ## 其他资源
 
 
@@ -268,5 +268,4 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 
 感谢您选择我们的产品！请确保在以下平台关注我们，以获取最新消息和支持。
 
-<RoboticsFooter />
-
+<RoboticsFooter lang="zh" />

@@ -14,47 +14,46 @@ last_update:
 
 由于 Zigbee 的低功耗、可靠性和易用性，将 Zigbee 设备集成到智能家居生态系统中变得越来越受欢迎。在本教程中，我们将指导您通过 Zigbee 功能将 **XIAO ESP32C6** 连接到 **Home Assistant**。在本指南结束时，您将拥有一个工作演示，其中 XIAO ESP32C6 充当 Zigbee 设备，可以直接从 Home Assistant 的仪表板进行控制。
 
-本教程重点介绍了 Espressif 的 Zigbee SDK (Arduino) 的使用，并演示了如何开发和集成您自己的 Zigbee 设备到 Home Assistant 中。
-
+本教程重点介绍了 Espressif 的 Zigbee SDK（Arduino）的使用，并演示了如何开发和集成您自己的 Zigbee 设备到 Home Assistant 中。
 
 ## 所需材料
 
 要跟随本指南，您需要以下物品：
 
 1. **Home Assistant Green**：用于管理智能家居的专用 Home Assistant 硬件设备。
-2. **Home Assistant Connect ZBT-1**：用于启用 Zigbee 网络创建和通信的 Zigbee 协调器。
+2. **Home Assistant Connect ZBT-1**：一个 Zigbee 协调器，用于启用 Zigbee 网络创建和通信。
 3. **XIAO ESP32C6**：通过 Espressif SDK 启用 Zigbee 功能的开发板。
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Home Assistant Connect ZBT-1</th>
-			<th>XIAO ESP32C6</th>
-			<th>Home Assistant Green</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/ZBT-1.png" style={{width:240, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:240, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/ha.png" style={{width:210, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-SkyConnect-p-5479.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Home Assistant Connect ZBT-1</th>
+   <th>XIAO ESP32C6</th>
+   <th>Home Assistant Green</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/ZBT-1.png" style={{width:240, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:240, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/ha.png" style={{width:210, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-SkyConnect-p-5479.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## 分步指南
@@ -73,18 +72,18 @@ last_update:
 USB 3.0 端口和 USB 3.0 设备可能会对 2.4 GHz 协议造成干扰，包括 Home Assistant Connect ZBT-1 提供的协议。使用 USB 延长线并将 Home Assistant Connect ZBT-1 远离可能的干扰源非常重要。
 :::
 
-1. 在 Home Assistant 界面中导航到**设置**。
-2. 转到**设备和服务**并找到 Zigbee 集成。
+1. 在 Home Assistant 界面中导航到 **设置**。
+2. 转到 **设备与服务** 并找到 Zigbee 集成。
 3. Connect ZBT-1 现在应该已被发现。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/2.png" style={{width:1000, height:'auto'}}/></div>
 
-4. 选择**添加**。
+4. 选择 **添加**。
 5. 在对话框中，选择 **Zigbee**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/3.png" style={{width:600, height:'auto'}}/></div>
 
-6. 选择**提交**以完成 Connect ZBT-1 集成的设置。
+6. 选择 **提交** 以完成 Connect ZBT-1 集成的设置。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/4.png" style={{width:600, height:'auto'}}/></div>
 
@@ -92,17 +91,17 @@ USB 3.0 端口和 USB 3.0 设备可能会对 2.4 GHz 协议造成干扰，包括
 
 ### 步骤 2. 使用 Connect ZBT-1 创建新的 Zigbee 网络
 
-1. 在 Home Assistant 界面中导航到**设置**。  
-2. 转到**设备和服务**并找到 Zigbee 集成。  
-3. Connect ZBT-1 将显示在您的 Zigbee 家庭自动化集成中。选择**添加**。
+1. 在 Home Assistant 界面中导航到 **设置**。  
+2. 转到 **设备与服务** 并找到 Zigbee 集成。  
+3. Connect ZBT-1 将显示在您的 Zigbee Home Automation 集成中。选择 **添加**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/5.png" style={{width:1000, height:'auto'}}/></div>
 
-4. 要确认，请选择**提交**。
+4. 确认后，选择 **提交**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/6.png" style={{width:400, height:'auto'}}/></div>
 
-5. 选择**创建网络**。
+5. 选择 **创建网络**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/7.png" style={{width:350, height:'auto'}}/></div>
 
@@ -119,7 +118,7 @@ USB 3.0 端口和 USB 3.0 设备可能会对 2.4 GHz 协议造成干扰，包括
 :::note
 如果您是第一次使用 XIAO ESP32C6，请阅读下面的 wiki 链接以正确添加开发板。
 
-[XIAO ESP32C6 入门指南](https://wiki.seeedstudio.com/cn/xiao_esp32c6_getting_started/)
+[XIAO ESP32C6 入门指南](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/)
 :::
 
 2. **加载 Zigbee_On_Off_Light 示例**：
@@ -155,7 +154,7 @@ USB 3.0 端口和 USB 3.0 设备可能会对 2.4 GHz 协议造成干扰，包括
 
 ### 步骤 4. 在 Home Assistant 中发现 XIAO ESP32C6
 
-1. 在 Home Assistant 界面中，导航到**设置 -> 设备和服务**。  
+1. 在 Home Assistant 界面中，导航到 **设置 -> 设备与服务**。  
 2. 选择 Zigbee 集成（名称：ZHA）。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/13.png" style={{width:800, height:'auto'}}/></div>
@@ -164,7 +163,7 @@ USB 3.0 端口和 USB 3.0 设备可能会对 2.4 GHz 协议造成干扰，包括
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/14.png" style={{width:1000, height:'auto'}}/></div>
 
-4. 在 Connect ZBT-1 的设备详情页面内，您可以看到**通过此设备添加设备**，请点击它以转到 Zigbee 的设备查找和配对页面。
+4. 在 Connect ZBT-1 的设备详情页面内，您可以看到 **通过此设备添加设备**，请点击它进入 Zigbee 的设备查找和配对页面。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/15.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -174,23 +173,22 @@ USB 3.0 端口和 USB 3.0 设备可能会对 2.4 GHz 协议造成干扰，包括
 
 您可以在此页面为其设置名称和位置。
 
-6. 然后您可以在ZHA的设备页面上找到此设备，并将其实体添加到仪表板中。
+6. 然后您可以在 ZHA 的设备页面上找到此设备，并将其实体添加到仪表板中。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/17.png" style={{width:1000, height:'auto'}}/></div>
 
-### 步骤5. 将XIAO ESP32C6添加到仪表板
+### 步骤 5. 将 XIAO ESP32C6 添加到仪表板
 
-1. 一旦XIAO ESP32C6被发现，将其添加到您的Home Assistant仪表板中。  
-2. 现在您可以直接从Home Assistant控制XIAO ESP32C6（例如，切换板载LED）。  
+1. 一旦发现 XIAO ESP32C6，将其添加到您的 Home Assistant 仪表板中。  
+2. 现在您可以直接从 Home Assistant 控制 XIAO ESP32C6（例如，切换板载 LED）。  
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/18.png" style={{width:1000, height:'auto'}}/></div>
 
 ## 结论
 
-Espressif提供了多样化的Zigbee设备类型和广泛的Zigbee SDK，使开发者能够轻松创建自己的Zigbee设备。通过遵循本教程，您已经学会了如何使用Zigbee将XIAO ESP32C6集成到Home Assistant中，为您的智能家居生态系统添加自定义设备。  
+Espressif 提供了多样化的 Zigbee 设备类型和广泛的 Zigbee SDK，使开发者能够轻松创建自己的 Zigbee 设备。通过遵循本教程，您已经学会了如何使用 Zigbee 将 XIAO ESP32C6 集成到 Home Assistant 中，为您的智能家居生态系统添加自定义设备。  
 
-凭借Espressif Zigbee SDK的灵活性，您可以开始为各种应用和功能构建自己的Zigbee设备，并将它们无缝添加到Home Assistant中进行集中控制。祝您构建愉快！
-
+凭借 Espressif Zigbee SDK 的灵活性，您可以开始为各种应用和功能构建自己的 Zigbee 设备，并将它们无缝添加到 Home Assistant 中进行集中控制。祝您构建愉快！
 
 ## 技术支持与产品讨论
 

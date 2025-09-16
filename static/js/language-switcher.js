@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-09-08 14:10:38 (北京时间)
-// 多语言页面: 1997 个
+// 生成时间: 2025-09-16 10:09:14 (北京时间)
+// 多语言页面: 2012 个
 
 (function() {
   'use strict';
@@ -530,6 +530,12 @@
     "es",
     "ja"
   ],
+  "/getting_started_with_seeedstudio_beaglebone_green_eco": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/BeagleBone_Green_Wireless": [
     "cn",
     "en",
@@ -629,7 +635,8 @@
   "/multiple_cameras_with_jetson": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/reComputer_Jetson_Series_Projects": [
     "cn",
@@ -658,7 +665,8 @@
   "/yolov11_with_depth_camera": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/YOLOv5-Object-Detection-Jetson": [
     "cn",
@@ -720,10 +728,17 @@
     "es",
     "ja"
   ],
+  "/recomputer_ethercat_communication": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/install_torch_on_recomputer": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/Jetson-AI-developer-tools": [
     "cn",
@@ -774,8 +789,10 @@
     "ja"
   ],
   "/control_motor_by_voice_llm_on_jetson": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/deploy_deepseek_on_jetson_with_mlc": [
     "cn",
@@ -786,7 +803,8 @@
   "/deploy_dia_on_jetson": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/local_ai_ssistant": [
     "cn",
@@ -813,8 +831,10 @@
     "ja"
   ],
   "/deploy_gptoss_on_jetson": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson": [
     "cn",
@@ -859,6 +879,12 @@
     "ja"
   ],
   "/Real Time Subtitle Recoder on Nvidia Jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Whisper_on_Jetson_for_Real_Time_Speech_to_Text": [
     "cn",
     "en",
     "es",
@@ -993,7 +1019,8 @@
   "/enable_spi_interface_on_jetsonnano": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/get_the_system_log_of_recomputer_j30_and_j40": [
     "cn",
@@ -1002,8 +1029,10 @@
     "ja"
   ],
   "/how_to_build_the_source_code_project_for_seeed_jetson_bsp": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/upgrade_software_packages_for_jetson": [
     "cn",
@@ -1012,8 +1041,10 @@
     "ja"
   ],
   "/issue_of_jetpack5_failing_to_boot_from_certain_ssd": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/Jetson_FAQ": [
     "cn",
@@ -1024,7 +1055,8 @@
   "/overview_of_the_relationship_between_jetpack_and_jetson": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera": [
     "cn",
@@ -1053,7 +1085,8 @@
   "/flash/jetpack_to_selected_product": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/update_orin_nano_developer_kit_to_super_kit": [
     "cn",
@@ -1242,12 +1275,16 @@
     "ja"
   ],
   "/recomputer_robotics_j401_getting_started": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/recomputer_robotics_j401_hardware_interfaces_usage": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/recomputer_jetson_super_getting_started": [
     "cn",
@@ -1258,17 +1295,20 @@
   "/recomputer_jetson_super_hardware_interfaces_usage": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/recomputer_jetson_super_performance": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/replace_the_thermal_conductive_paste_for_recomputer": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/reServer_Industrial_Getting_Started": [
     "cn",
@@ -1510,6 +1550,30 @@
     "es",
     "ja"
   ],
+  "/recomputer_r1000_install_codesys": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_r1000_use_modbus_rtu_with_codesys": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reTerminal-DM-edgeimpulse": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reTerminal_ML_Edgeimpulse": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/reComputer_r1000_install_fin": [
     "cn",
     "en",
@@ -1607,6 +1671,24 @@
     "ja"
   ],
   "/reTerminal_Home_Assistant": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Edgebox-rpi-200-ignition-edge": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reTerminal-DM-Getting-Started-with-Ignition-Edge": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reTerminal-DM-Ignition-Edge-Panel-Builder": [
     "cn",
     "en",
     "es",
@@ -1828,12 +1910,6 @@
     "es",
     "ja"
   ],
-  "/Edgebox-rpi-200-ignition-edge": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/Mender-Client-reTerminal": [
     "cn",
     "en",
@@ -1846,43 +1922,7 @@
     "es",
     "ja"
   ],
-  "/recomputer_r1000_install_codesys": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/recomputer_r1000_thingsboard_ce": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/recomputer_r1000_thingsboard_dashboard": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/recomputer_r1000_use_modbus_rtu_with_codesys": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/recomputer_use_ups": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/reTerminal-DM-Getting-Started-with-Ignition-Edge": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/reTerminal-DM-Ignition-Edge-Panel-Builder": [
     "cn",
     "en",
     "es",
@@ -1895,6 +1935,18 @@
     "ja"
   ],
   "/reTerminalDM_Introduction_Jedi_MachineChat": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_r1000_thingsboard_ce": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_r1000_thingsboard_dashboard": [
     "cn",
     "en",
     "es",
@@ -1942,32 +1994,17 @@
     "es",
     "ja"
   ],
-  "/clip_application_on_rpi5_with_ai_kit": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/convert_model_to_edge_tpu_tflite_format_for_google_coral": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/install_m2_coral_to_rpi5": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/firearm_detection_with_frigate_nvr_on_r2000": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/r2000_series_frigate_and_home_assistant": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/frigate_nvr_with_raspberrypi_5": [
     "cn",
@@ -1987,7 +2024,7 @@
     "es",
     "ja"
   ],
-  "/reTerminal_DM_Face-tracking": [
+  "/zoneminder_on_recomputer": [
     "cn",
     "en",
     "es",
@@ -2011,13 +2048,37 @@
     "es",
     "ja"
   ],
+  "/reTerminal_DM_Shape_detection": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reTerminal_DM_Face-tracking": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/reTerminal_DM_opencv": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/reTerminal_DM_Shape_detection": [
+  "/clip_application_on_rpi5_with_ai_kit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/convert_model_to_edge_tpu_tflite_format_for_google_coral": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/install_m2_coral_to_rpi5": [
     "cn",
     "en",
     "es",
@@ -2030,29 +2091,6 @@
     "ja"
   ],
   "/real-time-ocr": [
-    "cn",
-    "en",
-    "es"
-  ],
-  "/reTerminal-DM-edgeimpulse": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/reTerminal-DM-Yolo5": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/reTerminal_ML_Edgeimpulse": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/reTerminal_ML_MediaPipe": [
     "cn",
     "en",
     "es",
@@ -2070,10 +2108,23 @@
     "es",
     "ja"
   ],
+  "/reTerminal_ML_MediaPipe": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reTerminal-DM-Yolo5": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/yolov8_on_ai_box_for_fall_climbing_tracking": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l": [
     "cn",
@@ -2090,12 +2141,14 @@
   "/use_docekr_on_recomputer": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/use_uv_to_build_package_on_recomputer": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/deploy_deepseek_on_raspberry_pi_ai_box": [
     "cn",
@@ -2448,7 +2501,8 @@
   "/make_the_cpp_program_auto_start_on_boot": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/recamera_os_structure": [
     "cn",
@@ -2465,12 +2519,14 @@
   "/real_time_yolo_object_detection_using_recamera_based_on_cpp": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/recamera_connects_to_xiao_via_http": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/reServer-Getting-Started": [
     "cn",
@@ -2493,17 +2549,20 @@
   "/reterminal_e10xx_with_esphome": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/reterminal_e10xx_with_esphome_advanced": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/reterminal_e10xx_trmnl": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/getting_started_with_reterminal_e1001": [
     "cn",
@@ -2520,12 +2579,14 @@
   "/reterminal_e10xx_firmware": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/reterminal_e10xx_main_page": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/Edge_Computing": [
     "cn",
@@ -3058,12 +3119,14 @@
   "/get_started_with_meshtastic_wio_tracker_l1": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/wio_tracker_l1_node": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/flash_meshtastic_kit": [
     "cn",
@@ -3774,19 +3837,34 @@
   "/damiao_series": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/feetech_servo": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/hightorque_series": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/myactuator_series": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/hand_amazinghand": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor": [
     "cn",
     "en",
     "es",
@@ -3813,22 +3891,26 @@
   "/lerobot_so100m_new": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/lerobot_starai_arm": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sound_follow_robot": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/starai_arm_ros_moveit": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/csi_camera_on_ros": [
     "cn",
@@ -3869,7 +3951,8 @@
   "/hexfellow_y200": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/a_loam": [
     "cn",
@@ -3892,14 +3975,10 @@
   "/slamtec": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/control_robotic_arm_via_phospho": [
-    "cn",
-    "en",
-    "es"
-  ],
-  "/recomputer_ethercat_communication": [
     "cn",
     "en",
     "es",
@@ -3914,19 +3993,23 @@
   "/simulate_soarm101_by_leisaac": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/training_soarm101_policy_with_isaacLab": [
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/control_px4_with_recomputer_jetson": [
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/object_tracking_with_reComputer_jetson_and_pX4": [
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/installing_ros1": [
     "cn",
@@ -3960,7 +4043,8 @@
   ],
   "/control_robotic_arm_via_gr00t": [
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/Air602_Firmware_Programming_Manual": [
     "cn",
@@ -7949,6 +8033,12 @@
     "es",
     "ja"
   ],
+  "/xiao_esp32c3_microblocks": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_esp32c3_nuttx": [
     "cn",
     "en",
@@ -8159,6 +8249,12 @@
     "es",
     "ja"
   ],
+  "/xiao_esp32s3_microblocks": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao-esp32s3-freertos": [
     "cn",
     "en",
@@ -8288,7 +8384,8 @@
   "/led_driver_board": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/round_display_christmas_ball": [
     "cn",
@@ -8439,6 +8536,12 @@
     "es",
     "ja"
   ],
+  "/xiao_ble_microblocks": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/XIAO-BLE-Sense-IMU-Usage": [
     "cn",
     "en",
@@ -8502,12 +8605,14 @@
   "/xiao_nrf54l15_sense_bluetooth_usage": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/xiao_nrf54l15_sense_built_in_sensor": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/xiao_nrf54l15_sense_getting_started": [
     "cn",
@@ -8518,12 +8623,20 @@
   "/xiao_nrf54l15_sense_pin_multiplexing": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/xiao_nrf54l15_with_platform_io": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
+  ],
+  "/xiao_nrf54l15_sense_power_consumptions": [
+    "cn",
+    "en",
+    "es",
+    "ja"
   ],
   "/xiao_ra4m1_clock": [
     "cn",
@@ -8562,6 +8675,12 @@
     "ja"
   ],
   "/XIAO-RP2040-EI": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_rp2040_microblocks": [
     "cn",
     "en",
     "es",
@@ -8609,6 +8728,12 @@
     "es",
     "ja"
   ],
+  "/xiao_rp2350_microblocks": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_rp2350_nuttx": [
     "cn",
     "en",
@@ -8646,6 +8771,12 @@
     "ja"
   ],
   "/Seeeduino-XIAO-TinyML": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_samd21_microblocks": [
     "cn",
     "en",
     "es",
@@ -8768,20 +8899,26 @@
   "/trmnl_7inch5_diy_kit_main_page": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/ogdiy_kit_works_with_arduino": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/ogdiy_kit_works_with_esphome": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/ogdiy_kit_works_with_trmnl": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/xiao_075inch_epaper_panel_arduino": [
     "cn",
@@ -8792,42 +8929,50 @@
   "/xiao_075inch_epaper_panel_esphome": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/xiao_7_5_inch_epaper_panel_with_trmnl": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
-  "/xiao_7_5_inch_epaper_panel_main_page": [
+  "/xiao_075inch_epaper_panel": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/xiao_bus_servo_adapter": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/XIAO_IR_Mate_Smart_IR_Remote": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/xiao_midi_synthesizer": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/xiao_soil_moisture_sensor": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/xiao_w5500_ethernet_adapter": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/Driver_for_Seeeduino": [
     "cn",
@@ -9414,7 +9559,8 @@
   "/how_to_connect_sensecap_s210x_to_datacake_via_ttn": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction": [
     "cn",
@@ -9449,7 +9595,8 @@
   "/benchmark_labs_forecast_integration_for_seeed_weather_stations": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/SenseCAP-ONE-Compact-Weather-Station-Introduction": [
     "cn",
@@ -10662,6 +10809,12 @@
     "es",
     "ja"
   ],
+  "/solutions/frigate-on-jetson-nodered-gun-alerts": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/solutions/jetson-crowd-tracking": [
     "cn",
     "en",
@@ -10680,6 +10833,12 @@
     "es",
     "ja"
   ],
+  "/crowd-flow-monitoring": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/non_invasive_ct_energy_consumption": [
     "cn",
     "en",
@@ -10687,6 +10846,12 @@
     "ja"
   ],
   "/ha_dify_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/solutions/indoor-positioning-bluetooth-lorawan-tracker": [
     "cn",
     "en",
     "es",

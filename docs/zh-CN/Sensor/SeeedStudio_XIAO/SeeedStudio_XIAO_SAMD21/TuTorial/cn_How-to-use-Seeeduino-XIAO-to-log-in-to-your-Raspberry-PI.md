@@ -51,7 +51,7 @@ enable_uart=1
 
 ### 配置 Seeed Studio XIAO SAMD21
 
-- **步骤 1.** 打开 [Arduino IDE](https://www.arduino.cc/en/Main/Software) 并按照[此链接](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/#software)添加 Seeed Studio XIAO SAMD21。
+- **步骤 1.** 打开 [Arduino IDE](https://www.arduino.cc/en/Main/Software) 并按照[此链接](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software)添加 Seeed Studio XIAO SAMD21。
 
 - **步骤 2.** 将以下代码复制到 Arduino IDE 并将代码上传到 Seeed Studio XIAO SAMD21。
 

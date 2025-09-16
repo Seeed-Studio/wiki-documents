@@ -14,20 +14,29 @@ last_update:
   date: 7/2/2025
   author: Jason
 sidebar_position: 3
---- 
+---
 
-## Observador BLE
+El siguiente código de ejemplo está diseñado para PlatformIO, pero también es compatible con el nRF Connect SDK.
 
-Una aplicación simple que demuestra la funcionalidad del rol de Observador de Bluetooth Low Energy. La aplicación escaneará periódicamente dispositivos cercanos. Si encuentra alguno, imprime la dirección del dispositivo, el valor RSSI, el tipo de Publicidad y la longitud de datos de Publicidad en la consola.
+:::tip
+Basado en VS Code, si deseas usar el siguiente caso en el nRF Connect SDK, consulta la conexión proporcionada, agrega el archivo app.overlay y modifica el contenido en prj.conf
 
-Si el Controlador de Bluetooth Low Energy utilizado soporta Escaneo Extendido, puedes habilitar `CONFIG_BT_EXT_ADV` en el archivo de configuración del proyecto `prj.conf`. Consulta el archivo de configuración del proyecto para más detalles.
+[XIAO nRF54L15 Agregar archivo overlay y modificar archivo conf](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/).
+
+:::
+
+## BLE Oberver
+
+Una aplicación simple que demuestra la funcionalidad del rol Observer de Bluetooth Low Energy. La aplicación escaneará periódicamente dispositivos cercanos. Si encuentra alguno, imprime la dirección del dispositivo, el valor RSSI, el tipo de publicidad y la longitud de los datos de publicidad en la consola.
+
+Si el controlador Bluetooth Low Energy utilizado soporta escaneo extendido, puedes habilitar `CONFIG_BT_EXT_ADV` en el archivo de configuración del proyecto `prj.conf`. Consulta el archivo de configuración del proyecto para más detalles.
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/obersever.png" alt="XIAO nRF54L15 Observer" style={{width:900, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Resultado del Escaneo</em></p>
 </div>
 
-### Agregar la Placa XIAO nRF54L15
+### Agregar Placa XIAO nRF54L15
 
 Para agregar la placa XIAO nRF54L15(Sense) al NCS (nRF Connect SDK), puedes consultar la guía ["Primeros Pasos"](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/) en el Wiki de Seeed Studio. Esta guía proporcionará instrucciones detalladas sobre el proceso.
 
@@ -37,7 +46,7 @@ Para agregar la placa XIAO nRF54L15(Sense) al NCS (nRF Connect SDK), puedes cons
     </a>
 </div>
 
-### Código del Observador BLE
+### Código BLE Observer
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/bluetooth/observer" target="_blank" rel="noopener noreferrer">
@@ -74,11 +83,11 @@ int main(void)
 
 :::note
 
-- `main.c:` Inicializa el subsistema Bluetooth e inicia la demostración del observador.
+- `main.c:` Inicializa el subsistema Bluetooth e inicia la demostración del observer.
 
 - `bt_enable(NULL):` Inicializa el Subsistema Bluetooth.
 
-- `observer_start():` Llama a la función que inicia el observador.
+- `observer_start():` Llama a la función que inicia el observer.
 
 - `printk("Exiting %s thread.\n", __func__):` Imprime un mensaje cuando la función principal está saliendo.
 
@@ -198,44 +207,43 @@ int observer_start(void)
 
 - `device_found:`Función de callback que se llama cuando se encuentra un dispositivo durante un escaneo. Imprime la dirección del dispositivo, RSSI, tipo y longitud de datos AD.
 
-- `scan_recv:` Función de callback para publicidad extendida que imprime información detallada sobre el paquete de anuncio recibido, incluyendo la dirección del dispositivo, potencia Tx, RSSI y datos de anuncio.
+- `scan_recv:` Función de callback para publicidad extendida que imprime información detallada sobre el paquete de publicidad recibido, incluyendo la dirección del dispositivo, potencia Tx, RSSI y datos de publicidad.
 
-- `data_cb:`Función de callback utilizada por bt_data_parse para extraer el nombre del dispositivo de los datos de anuncio. Maneja tanto nombres abreviados como completos.
+- `data_cb:`Función de callback utilizada por bt_data_parse para extraer el nombre del dispositivo de los datos de publicidad. Maneja tanto nombres abreviados como completos.
 
-- `phy2str:` Función auxiliar que convierte el valor PHY (Capa Física) a una cadena legible por humanos (ej., "LE 1M", "LE 2M", etc.).
+- `phy2str:` Función auxiliar que convierte el valor PHY (Capa Física) a una cadena legible (ej. "LE 1M", "LE 2M", etc.).
 
-- `observer_start:`La función principal para iniciar el observador. Define los parámetros de escaneo e inicia el proceso de escaneo.
+- `observer_start:`La función principal para iniciar el observer. Define los parámetros de escaneo e inicia el proceso de escaneo.
 
 - `bt_le_scan_start:` Función que inicia el escaneo BLE con los parámetros especificados y una función de callback para cuando se encuentren dispositivos.
 
 :::
 
-## Publicidad BLE
+## BLE Advertising
 
-Este tutorial de publicidad Bluetooth está basado en el código [ejemplo](https://academy.nordicsemi.com/courses/bluetooth-low-energy-fundamentals/lessons/lesson-2-bluetooth-le-advertising/topic/blefund-lesson-2-exercise-1/) oficial modificado para ejecutarse en el Nordic Connect SDK. Con nuestra placa de desarrollo combinada con la documentación oficial, puedes profundizar en más [aplicaciones](https://academy.nordicsemi.com/courses/bluetooth-low-energy-fundamentals/) Bluetooth.
+Este tutorial de publicidad Bluetooth está basado en el código de [ejemplo](https://academy.nordicsemi.com/courses/bluetooth-low-energy-fundamentals/lessons/lesson-2-bluetooth-le-advertising/topic/blefund-lesson-2-exercise-1/) oficial modificado para ejecutarse en el Nordic Connect SDK. Con nuestra placa de desarrollo combinada con la documentación oficial, puedes profundizar en más [aplicaciones](https://academy.nordicsemi.com/courses/bluetooth-low-energy-fundamentals/) Bluetooth.
 
 Mientras el teléfono no esté conectado al XIAO nRF54L15, el indicador a bordo permanecerá encendido permanentemente. Una vez que el teléfono se conecte exitosamente, el indicador comenzará a parpadear para indicar que se ha establecido una conexión.
 
 <div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/BLE.gif" alt="XIAO nRF54L15 Ultra-low Power Consumption in System Off Mode" style={{width:900, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
+    <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/BLE.gif" alt="XIAO nRF54L15 Consumo Ultra-bajo de Energía en Modo System Off" style={{width:900, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Conexión de Teléfono Celular XIAO nRF54L15</em></p>
 </div>
 
-### Instalación de Software de Publicidad BLE
+### Instalación de Software BLE Advertising
 
 Para este ejemplo, necesitarás descargar la [aplicación](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-mobile) oficial de pruebas Bluetooth, nRF Connect, en tu teléfono móvil.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrfconnect_app.png" style={{width:600, height:'auto'}}/></div>
+Una vez que hayas flasheado el programa en tu placa XIAO nRF54L15 Sense, puedes abrir la página principal de la aplicación nRF Connect para interactuar con ella.
 
-Una vez que hayas cargado el programa en tu placa XIAO nRF54L15 Sense, puedes abrir la página principal de la aplicación nRF Connect para interactuar con ella.
+- Paso 1. En la aplicación nRF Connect, haz clic en el botón de escaneo en la esquina superior derecha para comenzar a escanear dispositivos Bluetooth.
 
-- Paso 1 . en la aplicación nRF Connect, haz clic en el botón de escaneo en la esquina superior derecha para comenzar a escanear dispositivos Bluetooth.
+- Paso 2. A continuación, ingresa el nombre de tu dispositivo XIAO nRF54L15 Sense en el campo "Nombre". Esto te ayudará a filtrar y localizar rápidamente tu dispositivo.
 
-- Paso 2 .A continuación, ingresa el nombre de tu dispositivo XIAO nRF54L15 Sense en el campo "Name". Esto te ayudará a filtrar y localizar rápidamente tu dispositivo.
+- Paso 3. En el área de resultados del escaneo, encuentra tu dispositivo XIAO nRF54L15 Sense y haz clic en el botón "Conectar" junto a él.
 
-- Paso 3 .En el área de resultados de escaneo, encuentra tu dispositivo XIAO nRF54L15 Sense y haz clic en el botón "Connect" junto a él .
-
-Al conectarse exitosamente, serás dirigido a la página de detalles del dispositivo. En esta página, puedes observar la distribución de la intensidad de señal Bluetooth (RSSI) en diferentes períodos de tiempo , lo que te ayuda a entender la estabilidad de la conexión del dispositivo.
+Al conectarse exitosamente, serás dirigido a la página de detalles del dispositivo. En esta página, puedes observar la distribución de la intensidad de la señal Bluetooth (RSSI) en diferentes períodos de tiempo, lo que te ayuda a entender la estabilidad de la conexión del dispositivo.
 
 <div class="table-center">
  <table align="center">
@@ -248,7 +256,7 @@ Al conectarse exitosamente, serás dirigido a la página de detalles del disposi
 
 ### Agregar la Placa XIAO nRF54L15
 
-Para agregar la placa XIAO nRF54L15(Sense) al NCS (nRF Connect SDK), puedes consultar la guía ["Getting Started"](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/) en el Wiki de Seeed Studio. Esta guía proporcionará instrucciones detalladas sobre el proceso.
+Para agregar la placa XIAO nRF54L15(Sense) al NCS (nRF Connect SDK), puedes consultar la guía ["Primeros Pasos"](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/) en el Wiki de Seeed Studio. Esta guía proporcionará instrucciones detalladas sobre el proceso.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -372,37 +380,37 @@ int main(void)
 
 - `sd:` Define los datos de respuesta de escaneo, que contienen un URI (Identificador de Recurso Uniforme).
 
-- `connected:` Esta función de callback se ejecuta cuando un dispositivo Bluetooth se conecta exitosamente. Establece la bandera device_connected en true.
+- `connected:` Esta función de callback se ejecuta cuando un dispositivo Bluetooth se conecta exitosamente. Establece la bandera device_connected en verdadero.
 
-- `disconnected:` Esta función de callback se ejecuta cuando un dispositivo Bluetooth se desconecta. Establece la bandera device_connected en false y reinicia la publicidad para permitir nuevas conexiones.
+- `disconnected:` Esta función de callback se ejecuta cuando un dispositivo Bluetooth se desconecta. Establece la bandera device_connected en falso y reinicia la publicidad para permitir nuevas conexiones.
 
 - `conn_callbacks:` Una estructura que define los callbacks de conexión, asignando las funciones connected y disconnected a sus respectivos eventos.
 
 - `main:` La función principal del programa.
 
-- `gpio_is_ready_dt:` Verifica si el dispositivo LED GPIO está listo.
+- `gpio_is_ready_dt:` Verifica si el dispositivo GPIO del LED está listo.
 
-- `gpio_pin_configure_dt:` Configura el pin LED como salida, inicialmente establecido como inactivo.
+- `gpio_pin_configure_dt:` Configura el pin del LED como salida, inicialmente establecido como inactivo.
 
 - `bt_enable(NULL):` Inicializa el subsistema Bluetooth.
 
-- `bt_le_adv_start:` Inicia la publicidad Bluetooth. Este código inicia publicidad conectable usando los datos ad y sd.
+- `bt_le_adv_start:` Inicia la publicidad Bluetooth. Este código inicia la publicidad conectable usando los datos ad y sd.
 
-- `while (1):`Un bucle infinito que controla el comportamiento del LED basado en el estado de conexión.
+- `while (1):` Un bucle infinito que controla el comportamiento del LED basado en el estado de conexión.
 
-- `gpio_pin_toggle_dt:`Alterna el LED entre encendido y apagado.
+- `gpio_pin_toggle_dt:` Alterna el LED entre encendido y apagado.
 
-- `k_sleep:`Pone el hilo en suspensión por una cantidad específica de tiempo.
+- `k_sleep:` Pone el hilo en suspensión por una cantidad específica de tiempo.
 
-- `device_connected:`Una bandera booleana que rastrea el estado de conexión. El LED parpadea en intervalos de 500ms cuando un dispositivo está conectado. Cuando un dispositivo no está conectado, el LED se apaga y el programa duerme por 1000ms.
+- `device_connected:` Una bandera booleana que rastrea el estado de conexión. El LED parpadea en intervalos de 500ms cuando un dispositivo está conectado. Cuando un dispositivo no está conectado, el LED se apaga y el programa duerme por 1000ms.
 
-- `LOG_INF, LOG_ERR:`Funciones para registrar información y errores.
+- `LOG_INF, LOG_ERR:` Funciones para registrar información y errores.
 
 :::
 
 ## BLE Central/GATT Write
 
-En conjunto, estos archivos de código implementan un dispositivo Central de Bluetooth Low Energy (BLE). El Central escanea continuamente periféricos Bluetooth cercanos y establece automáticamente una conexión cuando encuentra un dispositivo específico (RSSI mayor a -50). Una vez que se establece la conexión, realiza un intercambio GATT (Generic Attribute Profile) MTU (Maximum Transmission Unit) para optimizar la eficiencia de transferencia de datos.
+En conjunto, estos archivos de código implementan un dispositivo Central de Bluetooth Low Energy (BLE). El Central escanea continuamente periféricos Bluetooth cercanos y establece automáticamente una conexión cuando encuentra un dispositivo específico (RSSI mayor a -50). Una vez establecida la conexión, realiza un intercambio de MTU (Unidad Máxima de Transmisión) GATT (Perfil de Atributo Genérico) para optimizar la eficiencia de transferencia de datos.
 
 La función principal del programa es enviar continuamente comandos GATT Write Without Response al periférico conectado. Esto se usa frecuentemente para pruebas de rendimiento, por ejemplo para medir el rendimiento de datos o la tasa de escritura de una conexión Bluetooth.
 
@@ -413,7 +421,7 @@ La función principal del programa es enviar continuamente comandos GATT Write W
 
 ### Agregar la Placa XIAO nRF54L15
 
-Para agregar la placa XIAO nRF54L15(Sense) al NCS (nRF Connect SDK), puedes consultar la guía ["Getting Started"](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/) en el Wiki de Seeed Studio. Esta guía proporcionará instrucciones detalladas sobre el proceso.
+Para agregar la placa XIAO nRF54L15(Sense) al NCS (nRF Connect SDK), puedes consultar la guía ["Primeros Pasos"](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/) en el Wiki de Seeed Studio. Esta guía proporcionará instrucciones detalladas sobre el proceso.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -428,7 +436,6 @@ Para agregar la placa XIAO nRF54L15(Sense) al NCS (nRF Connect SDK), puedes cons
     <strong><span><font color={'FFFFFF'} size={"4"}> Descargar las Librerías</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
-
 **Main.c**
 
 ```cpp
@@ -588,15 +595,15 @@ uint32_t central_gatt_write(uint32_t count)
 
 :::note
 
-- `device_found:` Función de callback que se activa cuando se encuentra un nuevo dispositivo durante un escaneo. Imprime información sobre el dispositivo encontrado e intenta conectarse a dispositivos que son tanto conectables como están en proximidad cercana (RSSI mayor que -50). Detiene el proceso de escaneo antes de crear una conexión.
+- `device_found:` Función de callback que se activa cuando se encuentra un nuevo dispositivo durante un escaneo. Imprime información sobre el dispositivo encontrado e intenta conectarse a dispositivos que sean conectables y estén en proximidad cercana (RSSI mayor a -50). Detiene el proceso de escaneo antes de crear una conexión.
 
-- `start_scan:` Función que inicia un escaneo BLE activo con `device_found` como el callback para dispositivos encontrados.
+- `start_scan:` Función que inicia un escaneo BLE activo con `device_found` como callback para dispositivos encontrados.
 
 - `mtu_updated:` Función de callback para actualizaciones de MTU GATT que imprime los nuevos tamaños de MTU TX y RX.
 
-- `gatt_callbacks:` Una estructura que registra la función `mtu_updated` como el callback para eventos GATT.
+- `gatt_callbacks:` Una estructura que registra la función `mtu_updated` como callback para eventos GATT.
 
-- `central_gatt_write:` La función principal de la aplicación del dispositivo central. Inicializa el subsistema Bluetooth, registra los callbacks GATT, e inicia el escaneo de dispositivos. Luego entra en un bucle, donde espera por una conexión y llama repetidamente a write_cmd para realizar escrituras GATT. El bucle puede configurarse para ejecutarse un número específico de veces o indefinidamente.
+- `central_gatt_write:` La función principal de la aplicación del dispositivo central. Inicializa el subsistema Bluetooth, registra los callbacks GATT e inicia el escaneo de dispositivos. Luego entra en un bucle, donde espera una conexión y llama repetidamente a write_cmd para realizar escrituras GATT. El bucle puede configurarse para ejecutarse un número específico de veces o indefinidamente.
 
 :::
 
@@ -839,27 +846,26 @@ int write_cmd(struct bt_conn *conn)
 
 :::note
 
-- `write_cmd_cb:`Una función de callback para bt_gatt_write_without_response_cb. Calcula e imprime el conteo de escritura, la longitud y la velocidad de datos en bits por segundo (bps). Reinicia estas métricas si el tiempo transcurrido desde que se recibieron los últimos datos excede un segundo.
+- `write_cmd_cb:` Una función de callback para bt_gatt_write_without_response_cb. Calcula e imprime el conteo de escrituras, la longitud y la velocidad de datos en bits por segundo (bps). Reinicia estas métricas si el tiempo transcurrido desde que se recibieron los últimos datos excede un segundo.
 
-- `mtu_exchange_cb:`Una función de callback que se llama después de un procedimiento de intercambio de MTU (Unidad Máxima de Transmisión). Imprime si el intercambio fue exitoso o falló y muestra el nuevo tamaño de MTU.
-
+- `mtu_exchange_cb:` Una función de callback que se llama después de un procedimiento de intercambio de MTU (Unidad Máxima de Transmisión). Imprime si el intercambio fue exitoso o falló y muestra el nuevo tamaño de MTU.
 - `mtu_exchange:`Inicia un procedimiento de intercambio de MTU. Primero imprime el MTU actual y luego intenta intercambiarlo, usando mtu_exchange_cb como callback.
 
-- `connected:`Una función de callback ejecutada cuando se establece una conexión. Imprime la dirección del dispositivo conectado y su rol. Luego almacena una referencia a la conexión e inicia un intercambio de MTU. Si la seguridad está habilitada, intenta establecer el nivel de seguridad.
+- `connected:`Una función callback ejecutada cuando se establece una conexión. Imprime la dirección del dispositivo conectado y su rol. Luego almacena una referencia a la conexión e inicia un intercambio de MTU. Si la seguridad está habilitada, intenta establecer el nivel de seguridad.
 
-- `disconnected:`Una función de callback ejecutada cuando se termina una conexión. Imprime la dirección del dispositivo desconectado, su rol y la razón de la desconexión. Limpia la referencia de conexión y, si el dispositivo era un central, reinicia el escaneo.
+- `disconnected:`Una función callback ejecutada cuando se termina una conexión. Imprime la dirección del dispositivo desconectado, su rol y la razón de la desconexión. Limpia la referencia de conexión y, si el dispositivo era un central, reinicia el escaneo.
 
-- `le_param_req:` Una función de callback para manejar solicitudes de actualización de parámetros de conexión LE desde el periférico. Imprime los parámetros solicitados (intervalo, latencia y timeout).
+- `le_param_req:` Una función callback para manejar solicitudes de actualización de parámetros de conexión LE desde el periférico. Imprime los parámetros solicitados (intervalo, latencia y timeout).
 
-- `le_param_updated:` Una función de callback que se llama cuando los parámetros de conexión se actualizan exitosamente. Imprime los nuevos valores de intervalo, latencia y timeout.
+- `le_param_updated:` Una función callback que se llama cuando los parámetros de conexión se actualizan exitosamente. Imprime los nuevos valores de intervalo, latencia y timeout.
 
-- `security_changed:`Una función de callback que se llama cuando el nivel de seguridad de una conexión cambia.
+- `security_changed:`Una función callback que se llama cuando el nivel de seguridad de una conexión cambia.
 
 - `write_cmd:` Una función que prepara y envía un comando de escritura GATT sin respuesta. Determina la longitud máxima de datos basada en el MTU actual y envía los datos al handle 0x0001. Usa write_cmd_cb como callback.
 
 :::
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

@@ -30,10 +30,22 @@ export const OneDriveLink = ({ lang = 'en' }) => {
             file: "File",
             sha256: "SHA256"
         },
-        cn: {
-            missingSelection: "请先完成选择，或相应信息缺失。",
+        zh: {
+            missingSelection: "请先完成选择，否则缺失相关信息。",
             link: "链接",
             file: "文件",
+            sha256: "SHA256"
+        },
+        ja: {
+            missingSelection: "まず選択を完了してください。対応する情報が不足しています。",
+            link: "リンク",
+            file: "ファイル",
+            sha256: "SHA256"
+        },
+        es: {
+            missingSelection: "Primero complete la selección o falta la información correspondiente.",
+            link: "Enlace",
+            file: "Archivo",
             sha256: "SHA256"
         }
     };
@@ -73,7 +85,6 @@ export const OneDriveLink = ({ lang = 'en' }) => {
                 <Col><span>{obj.sha256}</span></Col>
             </Row>
         </div>
-
     );
 }
 

@@ -34,7 +34,7 @@ and foundation models like CLIP and SAM.
 - [reComputer Jetson](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) or any other NVIDIA Jetson device
 
 :::note
-This wiki has been tested and verified on a [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) and [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) powered by NVIDIA Jetson Orin NX 16GB module 
+This wiki has been tested and verified on a [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) and [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) powered by NVIDIA Jetson Orin NX 16GB module
 :::
 
 ## Flash JetPack to Jetson
@@ -42,6 +42,7 @@ This wiki has been tested and verified on a [reComputer J4012](https://www.seeed
 Now you need to make sure that the Jetson device is flashed with a [JetPack](https://developer.nvidia.com/embedded/jetpack) system. You can either use NVIDIA SDK Manager or command-line to flash JetPack to the device.
 
 For Seeed Jetson-powered devices flashing guides, please refer to the below links:
+
 - [reComputer J2021 | J202](https://wiki.seeedstudio.com/reComputer_J2021_J202_Flash_Jetpack)
 - [reComputer J1020 | A206](https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack)
 - [reComputer J4012 | J401](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack)
@@ -56,7 +57,7 @@ For Seeed Jetson-powered devices flashing guides, please refer to the below link
 - [reServer Industrial](https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started/#flash-jetpack)
 
 :::note
-Make sure to Flash JetPack version 5.1.1 because that is the version we have verified for this wiki 
+Make sure to Flash JetPack version 5.1.1 because that is the version we have verified for this wiki
 :::
 
 ## Tap into 50,000+ Models at Roboflow Universe
@@ -74,7 +75,7 @@ Roboflow offers 50,000+ ready-to-use AI models for everyone to get started with 
 
 Now we need to obtain a Roboflow API key for the Roboflow inference server to work.
 
-- **Step 1:** [Sign up](https://app.roboflow.com) for a new Roboflow account by entering your credentials 
+- **Step 1:** [Sign up](https://app.roboflow.com) for a new Roboflow account by entering your credentials
 
 - **Step 2:** Sign in to the account, navigate to `Projects > Workspaces > <your_workspace_name> > Roboflow API`, and click **Copy** next to "Private API Key" section
 
@@ -87,7 +88,7 @@ Keep this private key because we will be needing it later.
 
 You can get started with Roboflow inference on NVIDIA Jetson in 3 different ways.
 
-1. **Using pip package** - Using pip package will be the fastest way to get started, however you will need to install SDK components (CUDA, cuDNN, TensorRT) along with JetPack. 
+1. **Using pip package** - Using pip package will be the fastest way to get started, however you will need to install SDK components (CUDA, cuDNN, TensorRT) along with JetPack.
 2. **Using Docker hub** - Using Docker hub will be a little slow because it will first pull a Docker image which is around 19GB. however you do not need to install SDK components because the Docker image will already have those.
 3. **Using local Docker build** - Using local Docker build is an extension of Docker hub method where you can change the source code for the Docker image according to your desired application (such as enable TensorRT precision with INT8).
 
@@ -109,7 +110,6 @@ import TabItem from '@theme/TabItem';
 sudo apt update
 sudo apt install nvidia-jetpack -y
 ```
-
 
 - **Step 2:** Execute the below commands on the terminal to install Roboflow inference server pip package
 
@@ -246,7 +246,7 @@ sudo docker ps
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/5.png
 " style={{width:1000, height:'auto'}}/></div>
 
-- **Step 4:** Start a Docker container based on the Docker image that you just built 
+- **Step 4:** Start a Docker container based on the Docker image that you just built
 
 ```sh
 docker run --privileged --net=host --runtime=nvidia roboflow/roboflow-inference-server-jetson-5.1.1:seeed1
@@ -332,8 +332,7 @@ The model can be selected in the roboflow universe
 
 #### Enable TensorRT
 
-By default, Roboflow inference server is using CUDA runtime. However, if you want to change to TensorRT runtime to increase the inference speed, you can add the following inside the file "inference/docker/dockerfiles
-/Dockerfile.onnx.jetson.5.1.1" and build the Docker image
+By default, Roboflow inference server is using CUDA runtime. However, if you want to change to TensorRT runtime to increase the inference speed, you can add the following inside the file "inference/docker/dockerfiles/Dockerfile.onnx.jetson.5.1.1" and build the Docker image
 
 ```sh
 ENV ONNXRUNTIME_EXECUTION_PROVIDERS=TensorrtExecutionProvider
@@ -355,11 +354,11 @@ Roboflow offers very detailed and comprehensive documentation. So it is highly r
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -32,7 +32,7 @@ last_update:
 
 通过为XIAO ESP32S3 Sense安装扩展板，您可以使用扩展板上的麦克风。
 
-安装扩展板非常简单，您只需将扩展板上的连接器与XIAO ESP32S3上的B2B连接器对齐，用力按压并听到"咔嗒"声，安装就完成了。
+安装扩展板非常简单，您只需将扩展板上的连接器与XIAO ESP32S3上的B2B连接器对齐，用力按压并听到"咔嗒"声，安装即完成。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -40,7 +40,7 @@ XIAO ESP32S3 Sense支持最大**32GB**的microSD卡，因此如果您准备为XI
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/67.png" style={{width:250, height:'auto'}}/></div>
 
-格式化后，您可以将microSD卡插入microSD卡槽。请注意插入方向，有金手指的一面应朝内。
+格式化后，您可以将microSD卡插入microSD卡槽。请注意插入方向，金手指一面应朝内。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/66.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -48,12 +48,12 @@ XIAO ESP32S3 Sense支持最大**32GB**的microSD卡，因此如果您准备为XI
 
 如果这是您第一次使用XIAO ESP32S3 Sense，那么在开始之前，我们建议您阅读以下两个Wiki来学习如何使用它。
 
-- [Seeed Studio XIAO ESP32S3 (Sense)入门指南](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/)
-- [Seeed Studio XIAO ESP32S3麦克风使用方法](https://wiki.seeedstudio.com/cn/xiao_esp32s3_sense_mic/)
+- [Seeed Studio XIAO ESP32S3 (Sense)入门指南](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+- [Seeed Studio XIAO ESP32S3麦克风使用方法](https://wiki.seeedstudio.com/xiao_esp32s3_sense_mic/)
 
 ## 捕获（离线）音频数据
 
-### 步骤1. 将录制的声音样本保存为.wav音频文件到microSD卡。
+### 步骤1. 将录制的声音样本保存为.wav音频文件到microSD卡
 
 让我们使用板载SD卡读卡器来保存.wav音频文件，我们需要首先启用XIAO PSRAM。
 
@@ -67,17 +67,17 @@ XIAO ESP32S3 Sense支持最大**32GB**的microSD卡，因此如果您准备为XI
 
 <details>
 
-<summary>如果您的ESP32版本是2.0.x。点击这里预览完整程序</summary>
+<summary>如果您的ESP32版本是2.0.x。点击此处预览完整程序</summary>
 
 ```cpp
 /* 
- * 适用于 Seeed XIAO ESP32S3 Sense 的 WAV 录音器
+ * WAV Recorder for Seeed XIAO ESP32S3 Sense 
  * 
- * 注意：要执行此代码，我们需要使用 ESP-32 芯片的 PSRAM 
- * 功能，所以请在上传前打开它。
- * 工具>PSRAM: "OPI PSRAM"
+ * NOTE: To execute this code, we will need to use the PSRAM 
+ * function of the ESP-32 chip, so please turn it on before uploading.
+ * Tools>PSRAM: "OPI PSRAM"
  * 
- * 由 M.Rovai @May23 从原始 Seeed 代码改编
+ * Adapted by M.Rovai @May23 from original Seeed code
 */
 
 #include <I2S.h>
@@ -85,11 +85,11 @@ XIAO ESP32S3 Sense支持最大**32GB**的microSD卡，因此如果您准备为XI
 #include "SD.h"
 #include "SPI.h"
 
-// 根据需要进行更改
-#define RECORD_TIME   10  // 秒，最大值为 240
+// make changes as needed
+#define RECORD_TIME   10  // seconds, The maximum value is 240
 #define WAV_FILE_NAME "data"
 
-// 为了最佳效果请勿更改
+// do not change for best
 #define SAMPLE_RATE 16000U
 #define SAMPLE_BITS 16
 #define WAV_HEADER_SIZE 44
@@ -105,14 +105,14 @@ void setup() {
   
   I2S.setAllPins(-1, 42, 41, -1, -1);
   if (!I2S.begin(PDM_MONO_MODE, SAMPLE_RATE, SAMPLE_BITS)) {
-    Serial.println("初始化 I2S 失败！");
+    Serial.println("Failed to initialize I2S!");
     while (1) ;
   }
   if(!SD.begin(21)){
-    Serial.println("挂载 SD 卡失败！");
+    Serial.println("Failed to mount SD Card!");
     while (1) ;
   }
-  Serial.printf("输入标签名称\n");
+  Serial.printf("Enter with the label name\n");
   //record_wav();
 }
 
@@ -124,15 +124,15 @@ void loop() {
       isRecording = true;
     } else {
       baseFileName = command;
-      fileNumber = 1; // 每次设置新的基础文件名时重置文件编号
-      Serial.printf("发送 rec 开始录制标签 \n");
+      fileNumber = 1; // reset file number each time a new base file name is set
+      Serial.printf("Send rec for starting recording label \n");
     }
   }
   if (isRecording && baseFileName != "") {
     String fileName = "/" + baseFileName + "." + String(fileNumber) + ".wav";
     fileNumber++;
     record_wav(fileName);
-    delay(1000); // 延迟以避免一次录制多个文件
+    delay(1000); // delay to avoid recording multiple files at once
     isRecording = false;
   }
 }
@@ -142,49 +142,49 @@ void record_wav(String fileName)
   uint32_t sample_size = 0;
   uint32_t record_size = (SAMPLE_RATE * SAMPLE_BITS / 8) * RECORD_TIME;
   uint8_t *rec_buffer = NULL;
-  Serial.printf("开始录音 ...\n");
+  Serial.printf("Start recording ...\n");
    
   File file = SD.open(fileName.c_str(), FILE_WRITE);
-  // 将头部写入 WAV 文件
+  // Write the header to the WAV file
   uint8_t wav_header[WAV_HEADER_SIZE];
   generate_wav_header(wav_header, record_size, SAMPLE_RATE);
   file.write(wav_header, WAV_HEADER_SIZE);
 
-  // 为录音分配 PSRAM 内存
+  // PSRAM malloc for recording
   rec_buffer = (uint8_t *)ps_malloc(record_size);
   if (rec_buffer == NULL) {
-    Serial.printf("内存分配失败！\n");
+    Serial.printf("malloc failed!\n");
     while(1) ;
   }
-  Serial.printf("缓冲区：%d 字节\n", ESP.getPsramSize() - ESP.getFreePsram());
+  Serial.printf("Buffer: %d bytes\n", ESP.getPsramSize() - ESP.getFreePsram());
 
-  // 开始录音
+  // Start recording
   esp_i2s::i2s_read(esp_i2s::I2S_NUM_0, rec_buffer, record_size, &sample_size, portMAX_DELAY);
   if (sample_size == 0) {
-    Serial.printf("录音失败！\n");
+    Serial.printf("Record Failed!\n");
   } else {
-    Serial.printf("录制了 %d 字节\n", sample_size);
+    Serial.printf("Record %d bytes\n", sample_size);
   }
 
-  // 增加音量
+  // Increase volume
   for (uint32_t i = 0; i < sample_size; i += SAMPLE_BITS/8) {
     (*(uint16_t *)(rec_buffer+i)) <<= VOLUME_GAIN;
   }
 
-  // 将数据写入 WAV 文件
-  Serial.printf("正在写入文件 ...\n");
+  // Write data to the WAV file
+  Serial.printf("Writing to the file ...\n");
   if (file.write(rec_buffer, record_size) != record_size)
-    Serial.printf("写入文件失败！\n");
+    Serial.printf("Write file Failed!\n");
 
   free(rec_buffer);
   file.close();
-  Serial.printf("录音完成：\n");
-  Serial.printf("发送 rec 录制新样本或输入新标签\n\n");
+  Serial.printf("Recording complete: \n");
+  Serial.printf("Send rec for a new sample or enter a new label\n\n");
 }
 
 void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample_rate)
 {
-  // 参考资料请见：http://soundfile.sapp.org/doc/WaveFormat/
+  // See this for reference: http://soundfile.sapp.org/doc/WaveFormat/
   uint32_t file_size = wav_size + WAV_HEADER_SIZE - 8;
   uint32_t byte_rate = SAMPLE_RATE * SAMPLE_BITS / 8;
   const uint8_t set_wav_header[] = {
@@ -192,13 +192,13 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
     file_size, file_size >> 8, file_size >> 16, file_size >> 24, // ChunkSize
     'W', 'A', 'V', 'E', // Format
     'f', 'm', 't', ' ', // Subchunk1ID
-    0x10, 0x00, 0x00, 0x00, // Subchunk1Size (PCM 为 16)
-    0x01, 0x00, // AudioFormat (PCM 为 1)
-    0x01, 0x00, // NumChannels (1 声道)
+    0x10, 0x00, 0x00, 0x00, // Subchunk1Size (16 for PCM)
+    0x01, 0x00, // AudioFormat (1 for PCM)
+    0x01, 0x00, // NumChannels (1 channel)
     sample_rate, sample_rate >> 8, sample_rate >> 16, sample_rate >> 24, // SampleRate
     byte_rate, byte_rate >> 8, byte_rate >> 16, byte_rate >> 24, // ByteRate
     0x02, 0x00, // BlockAlign
-    0x10, 0x00, // BitsPerSample (16 位)
+    0x10, 0x00, // BitsPerSample (16 bits)
     'd', 'a', 't', 'a', // Subchunk2ID
     wav_size, wav_size >> 8, wav_size >> 16, wav_size >> 24, // Subchunk2Size
   };
@@ -210,17 +210,17 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
 
 <details>
 
-<summary>如果您的 ESP32 版本是 3.0.x，请点击此处预览完整程序</summary>
+<summary>If your ESP32 version is 3.0.x. Click here to preview the full program</summary>
 
 ```cpp
 /* 
- * 适用于 Seeed XIAO ESP32S3 Sense 的 WAV 录音器
+ * WAV Recorder for Seeed XIAO ESP32S3 Sense 
  * 
- * 注意：要执行此代码，我们需要使用 ESP-32 芯片的 PSRAM 
- * 功能，所以请在上传前打开它。
- * 工具>PSRAM: "OPI PSRAM"
+ * NOTE: To execute this code, we will need to use the PSRAM 
+ * function of the ESP-32 chip, so please turn it on before uploading.
+ * Tools>PSRAM: "OPI PSRAM"
  * 
- * 由 M.Rovai @May23 从原始 Seeed 代码改编
+ * Adapted by M.Rovai @May23 from original Seeed code
 */
 
 #include <ESP_I2S.h>
@@ -228,11 +228,11 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
 #include "SD.h"
 #include "SPI.h"
 
-// 根据需要进行更改
-#define RECORD_TIME   10  // 秒，最大值为 240
+// make changes as needed
+#define RECORD_TIME   10  // seconds, The maximum value is 240
 #define WAV_FILE_NAME "data"
 
-// 为了最佳效果请勿更改
+// do not change for best
 #define SAMPLE_RATE 16000U
 #define SAMPLE_BITS 16
 #define WAV_HEADER_SIZE 44
@@ -248,17 +248,17 @@ void setup() {
   Serial.begin(115200);
   while (!Serial) ;
   
-  // 设置 42 PDM 时钟和 41 PDM 数据引脚
+  // setup 42 PDM clock and 41 PDM data pins
   I2S.setPinsPdmRx(42, 41);
   if (!I2S.begin(I2S_MODE_PDM_RX, 16000, I2S_DATA_BIT_WIDTH_16BIT, I2S_SLOT_MODE_MONO)) {
-    Serial.println("初始化 I2S 失败！");
+    Serial.println("Failed to initialize I2S!");
     while (1) ;
   }
   if(!SD.begin(21)){
-    Serial.println("挂载 SD 卡失败！");
+    Serial.println("Failed to mount SD Card!");
     while (1) ;
   }
-  Serial.printf("输入标签名称\n");
+  Serial.printf("Enter with the label name\n");
   //record_wav();
 }
 
@@ -270,15 +270,15 @@ void loop() {
       isRecording = true;
     } else {
       baseFileName = command;
-      fileNumber = 1; // 每次设置新的基础文件名时重置文件编号
-      Serial.printf("发送 rec 开始录制标签 \n");
+      fileNumber = 1; // reset file number each time a new base file name is set
+      Serial.printf("Send rec for starting recording label \n");
     }
   }
   if (isRecording && baseFileName != "") {
     String fileName = "/" + baseFileName + "." + String(fileNumber) + ".wav";
     fileNumber++;
     record_wav(fileName);
-    delay(1000); // 延迟以避免一次录制多个文件
+    delay(1000); // delay to avoid recording multiple files at once
     isRecording = false;
   }
 }
@@ -288,49 +288,49 @@ void record_wav(String fileName)
   uint32_t sample_size = 0;
   uint32_t record_size = (SAMPLE_RATE * SAMPLE_BITS / 8) * RECORD_TIME;
   uint8_t *rec_buffer = NULL;
-  Serial.printf("开始录音 ...\n");
+  Serial.printf("Start recording ...\n");
    
   File file = SD.open(fileName.c_str(), FILE_WRITE);
-  // 将头部写入 WAV 文件
+  // Write the header to the WAV file
   uint8_t wav_header[WAV_HEADER_SIZE];
   generate_wav_header(wav_header, record_size, SAMPLE_RATE);
   file.write(wav_header, WAV_HEADER_SIZE);
 
-  // PSRAM malloc 用于录音
+  // PSRAM malloc for recording
   rec_buffer = (uint8_t *)ps_malloc(record_size);
   if (rec_buffer == NULL) {
-    Serial.printf("malloc 失败！\n");
+    Serial.printf("malloc failed!\n");
     while(1) ;
   }
-  Serial.printf("缓冲区：%d 字节\n", ESP.getPsramSize() - ESP.getFreePsram());
+  Serial.printf("Buffer: %d bytes\n", ESP.getPsramSize() - ESP.getFreePsram());
 
-  // 开始录音
+  // Start recording
   esp_i2s::i2s_read(esp_i2s::I2S_NUM_0, rec_buffer, record_size, &sample_size, portMAX_DELAY);
   if (sample_size == 0) {
-    Serial.printf("录音失败！\n");
+    Serial.printf("Record Failed!\n");
   } else {
-    Serial.printf("录制 %d 字节\n", sample_size);
+    Serial.printf("Record %d bytes\n", sample_size);
   }
 
-  // 增加音量
+  // Increase volume
   for (uint32_t i = 0; i < sample_size; i += SAMPLE_BITS/8) {
     (*(uint16_t *)(rec_buffer+i)) <<= VOLUME_GAIN;
   }
 
-  // 将数据写入 WAV 文件
-  Serial.printf("写入文件 ...\n");
+  // Write data to the WAV file
+  Serial.printf("Writing to the file ...\n");
   if (file.write(rec_buffer, record_size) != record_size)
-    Serial.printf("写入文件失败！\n");
+    Serial.printf("Write file Failed!\n");
 
   free(rec_buffer);
   file.close();
-  Serial.printf("录音完成：\n");
-  Serial.printf("发送 rec 录制新样本或输入新标签\n\n");
+  Serial.printf("Recording complete: \n");
+  Serial.printf("Send rec for a new sample or enter a new label\n\n");
 }
 
 void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample_rate)
 {
-  // 参考：http://soundfile.sapp.org/doc/WaveFormat/
+  // See this for reference: http://soundfile.sapp.org/doc/WaveFormat/
   uint32_t file_size = wav_size + WAV_HEADER_SIZE - 8;
   uint32_t byte_rate = SAMPLE_RATE * SAMPLE_BITS / 8;
   const uint8_t set_wav_header[] = {
@@ -338,13 +338,13 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
     file_size, file_size >> 8, file_size >> 16, file_size >> 24, // ChunkSize
     'W', 'A', 'V', 'E', // Format
     'f', 'm', 't', ' ', // Subchunk1ID
-    0x10, 0x00, 0x00, 0x00, // Subchunk1Size (PCM 为 16)
-    0x01, 0x00, // AudioFormat (PCM 为 1)
-    0x01, 0x00, // NumChannels (1 声道)
+    0x10, 0x00, 0x00, 0x00, // Subchunk1Size (16 for PCM)
+    0x01, 0x00, // AudioFormat (1 for PCM)
+    0x01, 0x00, // NumChannels (1 channel)
     sample_rate, sample_rate >> 8, sample_rate >> 16, sample_rate >> 24, // SampleRate
     byte_rate, byte_rate >> 8, byte_rate >> 16, byte_rate >> 24, // ByteRate
     0x02, 0x00, // BlockAlign
-    0x10, 0x00, // BitsPerSample (16 位)
+    0x10, 0x00, // BitsPerSample (16 bits)
     'd', 'a', 't', 'a', // Subchunk2ID
     wav_size, wav_size >> 8, wav_size >> 16, wav_size >> 24, // Subchunk2Size
   };
@@ -378,7 +378,7 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
 
 并将它们上传到 Studio（您可以自动将数据分割为训练/测试）。对所有类别和所有原始数据重复此操作。
 
-数据集中的所有数据长度为 1 秒，但在前面部分录制的样本长度为 10 秒，必须分割为 1 秒样本才能兼容。点击样本名称后的三个点，选择 **Split sample**。
+数据集中的所有数据长度为 1 秒，但在前面部分录制的样本长度为 10 秒，必须分割为 1 秒样本以保持兼容。点击样本名称后的三个点并选择 **Split sample**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/5.png" style={{width:600, height:'auto'}}/></div>
 
@@ -394,7 +394,7 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/6.png" style={{width:1000, height:'auto'}}/></div>
 
-首先，我们将使用 1 秒窗口获取数据点，增强数据，每 500 毫秒滑动该窗口。注意设置了 **zero-pad data** 选项。这对于用零填充小于 1 秒的样本很重要（在某些情况下，我在 **split tool** 中减少了 1000 毫秒窗口以避免噪音和尖峰）。
+首先，我们将使用 1 秒窗口获取数据点，增强数据，每 500 毫秒滑动该窗口。注意 **zero-pad data** 选项已设置。这对于用零填充小于 1 秒的样本很重要（在某些情况下，我在 **split tool** 中减少了 1000 毫秒窗口以避免噪音和尖峰）。
 
 每个 1 秒音频样本应该被预处理并转换为图像（例如，13 x 49 x 1）。我们将使用 MFCC，它使用梅尔频率倒谱系数从音频信号中提取特征，这对人声很有效。
 
@@ -402,7 +402,7 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
 
 ### 步骤 4. 预处理（MFCC）
 
-下一步是创建要在下一阶段训练的图像。我们可以保持默认参数值，或利用 DSP **Autotuneparameters option**，我们将这样做。
+下一步是创建要在下一阶段训练的图像。我们可以保持默认参数值或利用 DSP **Autotuneparameters option**，我们将这样做。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/7.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -415,7 +415,6 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
 作为超参数，我们将使用 0.005 的学习率和一个将训练 100 个 epoch 的模型。我们还将包括数据增强，如一些噪声。结果看起来不错。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/8.png" style={{width:600, height:'auto'}}/></div>
-
 
 ## 部署到 XIAO ESP32S3 Sense
 
@@ -450,42 +449,47 @@ Edge Impulse 将打包所有需要的库、预处理函数和训练好的模型�
 <summary>如果您的 ESP32 版本是 2.0.x。点击这里预览完整程序</summary>
 
 ```cpp
-/* Edge Impulse Arduino 示例
- * 版权所有 (c) 2022 EdgeImpulse Inc.
+/* Edge Impulse Arduino examples
+ * Copyright (c) 2022 EdgeImpulse Inc.
  *
- * 特此免费授予任何获得本软件及相关文档文件（"软件"）副本的人
- * 不受限制地处理软件的权限，包括但不限于使用、复制、修改、合并、
- * 发布、分发、再许可和/或销售软件副本的权利，并允许向其提供软件的
- * 人员这样做，但须符合以下条件：
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  *
- * 上述版权声明和本许可声明应包含在软件的所有副本或重要部分中。
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
  *
- * 软件按"原样"提供，不提供任何形式的明示或暗示保证，包括但不限于
- * 适销性、特定用途适用性和非侵权性的保证。在任何情况下，作者或
- * 版权持有人均不对任何索赔、损害或其他责任负责，无论是在合同诉讼、
- * 侵权行为还是其他方面，由软件或软件的使用或其他交易引起、产生或
- * 与之相关。
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
  */
 
-// 如果您的目标设备内存有限，请删除此宏以节省 10K RAM
+// If your target is limited in memory remove this macro to save 10K RAM
 #define EIDSP_QUANTIZE_FILTERBANK   0
 
 /*
- ** 注意：如果您遇到 TFLite 内存分配问题。
+ ** NOTE: If you run into TFLite arena allocation issue.
  **
- ** 这可能是由于动态内存碎片化造成的。
- ** 尝试在 boards.local.txt 中定义 "-DEI_CLASSIFIER_ALLOCATION_STATIC"（如果不存在则创建）
- ** 并将此文件复制到
- ** `<ARDUINO_CORE_INSTALL_PATH>/arduino/hardware/<mbed_core>/<core_version>/`。
+ ** This may be due to may dynamic memory fragmentation.
+ ** Try defining "-DEI_CLASSIFIER_ALLOCATION_STATIC" in boards.local.txt (create
+ ** if it doesn't exist) and copy this file to
+ ** `<ARDUINO_CORE_INSTALL_PATH>/arduino/hardware/<mbed_core>/<core_version>/`.
  **
- ** 请参阅
+ ** See
  ** (https://support.arduino.cc/hc/en-us/articles/360012076960-Where-are-the-installed-cores-located-)
- ** 查找 Arduino 在您的机器上安装核心的位置。
+ ** to find where Arduino installs cores on your machine.
  **
- ** 如果问题仍然存在，则说明此模型和应用程序的内存不足。
+ ** If the problem persists then there's not enough memory for this model and application.
  */
 
-/* 包含文件 ---------------------------------------------------------------- */
+/* Includes ---------------------------------------------------------------- */
 #include <XIAO-ESP32S3-KWS_inferencing.h>
 
 #include <I2S.h>
@@ -494,7 +498,7 @@ Edge Impulse 将打包所有需要的库、预处理函数和训练好的模型�
 
 #define LED_BUILT_IN 21 
 
-/** 音频缓冲区、指针和选择器 */
+/** Audio buffers, pointers and selectors */
 typedef struct {
     int16_t *buffer;
     uint8_t buf_ready;
@@ -505,57 +509,57 @@ typedef struct {
 static inference_t inference;
 static const uint32_t sample_buffer_size = 2048;
 static signed short sampleBuffer[sample_buffer_size];
-static bool debug_nn = false; // 将此设置为 true 以查看例如从原始信号生成的特征
+static bool debug_nn = false; // Set this to true to see e.g. features generated from the raw signal
 static bool record_status = true;
 
 /**
- * @brief      Arduino 设置函数
+ * @brief      Arduino setup function
  */
 void setup()
 {
-    // 将您的设置代码放在这里，只运行一次：
+    // put your setup code here, to run once:
     Serial.begin(115200);
-    // 注释掉下面的行以取消等待 USB 连接（原生 USB 需要）
+    // comment out the below line to cancel the wait for USB connection (needed for native USB)
     while (!Serial);
-    Serial.println("Edge Impulse 推理演示");
+    Serial.println("Edge Impulse Inferencing Demo");
 
-    pinMode(LED_BUILT_IN, OUTPUT); // 将引脚设置为输出
-    digitalWrite(LED_BUILT_IN, HIGH); //关闭
+    pinMode(LED_BUILT_IN, OUTPUT); // Set the pin as output
+    digitalWrite(LED_BUILT_IN, HIGH); //Turn off
     
     I2S.setAllPins(-1, 42, 41, -1, -1);
     if (!I2S.begin(PDM_MONO_MODE, SAMPLE_RATE, SAMPLE_BITS)) {
-      Serial.println("初始化 I2S 失败！");
+      Serial.println("Failed to initialize I2S!");
     while (1) ;
   }
     
-    // 推理设置摘要（来自 model_metadata.h）
-    ei_printf("推理设置：\n");
-    ei_printf("\t间隔：");
+    // summary of inferencing settings (from model_metadata.h)
+    ei_printf("Inferencing settings:\n");
+    ei_printf("\tInterval: ");
     ei_printf_float((float)EI_CLASSIFIER_INTERVAL_MS);
-    ei_printf(" 毫秒。\n");
-    ei_printf("\t帧大小：%d\n", EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE);
-    ei_printf("\t采样长度：%d 毫秒。\n", EI_CLASSIFIER_RAW_SAMPLE_COUNT / 16);
-    ei_printf("\t类别数：%d\n", sizeof(ei_classifier_inferencing_categories) / sizeof(ei_classifier_inferencing_categories[0]));
+    ei_printf(" ms.\n");
+    ei_printf("\tFrame size: %d\n", EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE);
+    ei_printf("\tSample length: %d ms.\n", EI_CLASSIFIER_RAW_SAMPLE_COUNT / 16);
+    ei_printf("\tNo. of classes: %d\n", sizeof(ei_classifier_inferencing_categories) / sizeof(ei_classifier_inferencing_categories[0]));
 
-    ei_printf("\n2 秒后开始连续推理...\n");
+    ei_printf("\nStarting continious inference in 2 seconds...\n");
     ei_sleep(2000);
 
     if (microphone_inference_start(EI_CLASSIFIER_RAW_SAMPLE_COUNT) == false) {
-        ei_printf("错误：无法分配音频缓冲区（大小 %d），这可能是由于您的模型的窗口长度\r\n", EI_CLASSIFIER_RAW_SAMPLE_COUNT);
+        ei_printf("ERR: Could not allocate audio buffer (size %d), this could be due to the window length of your model\r\n", EI_CLASSIFIER_RAW_SAMPLE_COUNT);
         return;
     }
 
-    ei_printf("录音中...\n");
+    ei_printf("Recording...\n");
 }
 
 /**
- * @brief      Arduino 主函数。运行推理循环。
+ * @brief      Arduino main function. Runs the inferencing loop.
  */
 void loop()
 {
     bool m = microphone_inference_record();
     if (!m) {
-        ei_printf("错误：录音失败...\n");
+        ei_printf("ERR: Failed to record audio...\n");
         return;
     }
 
@@ -566,18 +570,18 @@ void loop()
 
     EI_IMPULSE_ERROR r = run_classifier(&signal, &result, debug_nn);
     if (r != EI_IMPULSE_OK) {
-        ei_printf("错误：运行分类器失败 (%d)\n", r);
+        ei_printf("ERR: Failed to run classifier (%d)\n", r);
         return;
     }
 
-    int pred_index = 0;     // 初始化 pred_index
-    float pred_value = 0;   // 初始化 pred_value
+    int pred_index = 0;     // Initialize pred_index
+    float pred_value = 0;   // Initialize pred_value
 
-    // 打印预测结果
-    ei_printf("预测 ");
-    ei_printf("(DSP: %d 毫秒，分类：%d 毫秒，异常：%d 毫秒)",
+    // print the predictions
+    ei_printf("Predictions ");
+    ei_printf("(DSP: %d ms., Classification: %d ms., Anomaly: %d ms.)",
         result.timing.dsp, result.timing.classification, result.timing.anomaly);
-    ei_printf("：\n");
+    ei_printf(": \n");
     for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
         ei_printf("    %s: ", result.classification[ix].label);
         ei_printf_float(result.classification[ix].value);
@@ -588,17 +592,17 @@ void loop()
            pred_value = result.classification[ix].value;
       }
     }
-    // 显示推理结果
+    // Display inference result
     if (pred_index == 3){
-      digitalWrite(LED_BUILT_IN, LOW); //打开
+      digitalWrite(LED_BUILT_IN, LOW); //Turn on
     }
     else{
-      digitalWrite(LED_BUILT_IN, HIGH); //关闭
+      digitalWrite(LED_BUILT_IN, HIGH); //Turn off
     }
 
     
 #if EI_CLASSIFIER_HAS_ANOMALY == 1
-    ei_printf("    异常分数：");
+    ei_printf("    anomaly score: ");
     ei_printf_float(result.anomaly);
     ei_printf("\n");
 #endif
@@ -623,19 +627,19 @@ static void capture_samples(void* arg) {
 
   while (record_status) {
 
-    /* 一次性从 i2s 读取数据 - 为 XIAO ESP2S3 Sense 和 I2S.h 库修改 */
+    /* read data at once from i2s - Modified for XIAO ESP2S3 Sense and I2S.h library */
     // i2s_read((i2s_port_t)1, (void*)sampleBuffer, i2s_bytes_to_read, &bytes_read, 100);
     esp_i2s::i2s_read(esp_i2s::I2S_NUM_0, (void*)sampleBuffer, i2s_bytes_to_read, &bytes_read, 100);
 
     if (bytes_read <= 0) {
-      ei_printf("I2S 读取错误：%d", bytes_read);
+      ei_printf("Error in I2S read : %d", bytes_read);
     }
     else {
         if (bytes_read < i2s_bytes_to_read) {
-        ei_printf("I2S 部分读取");
+        ei_printf("Partial I2S read");
         }
 
-        // 缩放数据（否则声音太小）
+        // scale the data (otherwise the sound is too quiet)
         for (int x = 0; x < i2s_bytes_to_read/2; x++) {
             sampleBuffer[x] = (int16_t)(sampleBuffer[x]) * 8;
         }
@@ -652,11 +656,11 @@ static void capture_samples(void* arg) {
 }
 
 /**
- * @brief      初始化推理结构并设置/启动 PDM
+ * @brief      Init inferencing struct and setup/start PDM
  *
- * @param[in]  n_samples  采样数
+ * @param[in]  n_samples  The n samples
  *
- * @return     { 返回值描述 }
+ * @return     { description_of_the_return_value }
  */
 static bool microphone_inference_start(uint32_t n_samples)
 {
@@ -671,7 +675,7 @@ static bool microphone_inference_start(uint32_t n_samples)
     inference.buf_ready  = 0;
 
 //    if (i2s_init(EI_CLASSIFIER_FREQUENCY)) {
-//        ei_printf("启动 I2S 失败！");
+//        ei_printf("Failed to start I2S!");
 //    }
 
     ei_sleep(100);
@@ -684,9 +688,9 @@ static bool microphone_inference_start(uint32_t n_samples)
 }
 
 /**
- * @brief      等待新数据
+ * @brief      Wait on new data
  *
- * @return     完成时返回 True
+ * @return     True when finished
  */
 static bool microphone_inference_record(void)
 {
@@ -701,7 +705,7 @@ static bool microphone_inference_record(void)
 }
 
 /**
- * 获取原始音频信号数据
+ * Get raw audio signal data
  */
 static int microphone_audio_signal_get_data(size_t offset, size_t length, float *out_ptr)
 {
@@ -711,7 +715,7 @@ static int microphone_audio_signal_get_data(size_t offset, size_t length, float 
 }
 
 /**
- * @brief      停止 PDM 并释放缓冲区
+ * @brief      Stop PDM and release buffers
  */
 static void microphone_inference_end(void)
 {
@@ -720,7 +724,7 @@ static void microphone_inference_end(void)
 }
 
 #if !defined(EI_CLASSIFIER_SENSOR) || EI_CLASSIFIER_SENSOR != EI_CLASSIFIER_SENSOR_MICROPHONE
-#error "当前传感器的模型无效。"
+#error "Invalid model for current sensor."
 #endif
 ```
 
@@ -728,45 +732,50 @@ static void microphone_inference_end(void)
 
 <details>
 
-<summary>如果您的 ESP32 版本是 3.0.x，点击这里预览完整程序</summary>
+<summary>If your ESP32 version is 3.0.x. Click here to preview the full program</summary>
 
 ```cpp
-/* Edge Impulse Arduino 示例
- * 版权所有 (c) 2022 EdgeImpulse Inc.
+/* Edge Impulse Arduino examples
+ * Copyright (c) 2022 EdgeImpulse Inc.
  *
- * 特此免费授予任何获得本软件及相关文档文件（"软件"）副本的人
- * 不受限制地处理软件的权限，包括但不限于使用、复制、修改、合并、
- * 发布、分发、再许可和/或销售软件副本的权利，并允许向其提供软件的
- * 人员这样做，但须符合以下条件：
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  *
- * 上述版权声明和本许可声明应包含在软件的所有副本或重要部分中。
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
  *
- * 软件按"原样"提供，不提供任何形式的明示或暗示保证，包括但不限于
- * 适销性、特定用途适用性和非侵权性的保证。在任何情况下，作者或
- * 版权持有人均不对任何索赔、损害或其他责任负责，无论是在合同诉讼、
- * 侵权行为还是其他方面，由软件或软件的使用或其他交易引起、产生或
- * 与之相关。
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
  */
 
-// 如果您的目标设备内存有限，请删除此宏以节省 10K RAM
+// If your target is limited in memory remove this macro to save 10K RAM
 #define EIDSP_QUANTIZE_FILTERBANK   0
 
 /*
- ** 注意：如果您遇到 TFLite 内存分配问题。
+ ** NOTE: If you run into TFLite arena allocation issue.
  **
- ** 这可能是由于动态内存碎片化造成的。
- ** 尝试在 boards.local.txt 中定义 "-DEI_CLASSIFIER_ALLOCATION_STATIC"（如果不存在则创建）
- ** 并将此文件复制到
- ** `<ARDUINO_CORE_INSTALL_PATH>/arduino/hardware/<mbed_core>/<core_version>/`。
+ ** This may be due to may dynamic memory fragmentation.
+ ** Try defining "-DEI_CLASSIFIER_ALLOCATION_STATIC" in boards.local.txt (create
+ ** if it doesn't exist) and copy this file to
+ ** `<ARDUINO_CORE_INSTALL_PATH>/arduino/hardware/<mbed_core>/<core_version>/`.
  **
- ** 请参阅
+ ** See
  ** (https://support.arduino.cc/hc/en-us/articles/360012076960-Where-are-the-installed-cores-located-)
- ** 查找 Arduino 在您的机器上安装核心的位置。
+ ** to find where Arduino installs cores on your machine.
  **
- ** 如果问题仍然存在，则说明此模型和应用程序的内存不足。
+ ** If the problem persists then there's not enough memory for this model and application.
  */
 
-/* 包含文件 ---------------------------------------------------------------- */
+/* Includes ---------------------------------------------------------------- */
 #include <XIAO-ESP32S3-KWS_inferencing.h>
 #include <ESP_I2S.h>
 I2SClass I2S;
@@ -776,7 +785,7 @@ I2SClass I2S;
 
 #define LED_BUILT_IN 21 
 
-/** 音频缓冲区、指针和选择器 */
+/** Audio buffers, pointers and selectors */
 typedef struct {
     int16_t *buffer;
     uint8_t buf_ready;
@@ -787,58 +796,58 @@ typedef struct {
 static inference_t inference;
 static const uint32_t sample_buffer_size = 2048;
 static signed short sampleBuffer[sample_buffer_size];
-static bool debug_nn = false; // 将此设置为 true 以查看例如从原始信号生成的特征
+static bool debug_nn = false; // Set this to true to see e.g. features generated from the raw signal
 static bool record_status = true;
 
 /**
- * @brief      Arduino 设置函数
+ * @brief      Arduino setup function
  */
 void setup()
 {
-    // 将您的设置代码放在这里，只运行一次：
+    // put your setup code here, to run once:
     Serial.begin(115200);
-    // 注释掉下面的行以取消等待 USB 连接（原生 USB 需要）
+    // comment out the below line to cancel the wait for USB connection (needed for native USB)
     while (!Serial);
-    Serial.println("Edge Impulse 推理演示");
+    Serial.println("Edge Impulse Inferencing Demo");
 
-    pinMode(LED_BUILT_IN, OUTPUT); // 将引脚设置为输出
-    digitalWrite(LED_BUILT_IN, HIGH); //关闭
+    pinMode(LED_BUILT_IN, OUTPUT); // Set the pin as output
+    digitalWrite(LED_BUILT_IN, HIGH); //Turn off
     
-    // 设置 42 PDM 时钟和 41 PDM 数据引脚
+    // setup 42 PDM clock and 41 PDM data pins
     I2S.setPinsPdmRx(42, 41);
     if (!I2S.begin(I2S_MODE_PDM_RX, 16000, I2S_DATA_BIT_WIDTH_16BIT, I2S_SLOT_MODE_MONO)) {
-      Serial.println("初始化 I2S 失败！");
+      Serial.println("Failed to initialize I2S!");
     while (1) ;
   }
     
-    // 推理设置摘要（来自 model_metadata.h）
-    ei_printf("推理设置：\n");
-    ei_printf("\t间隔：");
+    // summary of inferencing settings (from model_metadata.h)
+    ei_printf("Inferencing settings:\n");
+    ei_printf("\tInterval: ");
     ei_printf_float((float)EI_CLASSIFIER_INTERVAL_MS);
-    ei_printf(" 毫秒。\n");
-    ei_printf("\t帧大小：%d\n", EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE);
-    ei_printf("\t采样长度：%d 毫秒。\n", EI_CLASSIFIER_RAW_SAMPLE_COUNT / 16);
-    ei_printf("\t类别数：%d\n", sizeof(ei_classifier_inferencing_categories) / sizeof(ei_classifier_inferencing_categories[0]));
+    ei_printf(" ms.\n");
+    ei_printf("\tFrame size: %d\n", EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE);
+    ei_printf("\tSample length: %d ms.\n", EI_CLASSIFIER_RAW_SAMPLE_COUNT / 16);
+    ei_printf("\tNo. of classes: %d\n", sizeof(ei_classifier_inferencing_categories) / sizeof(ei_classifier_inferencing_categories[0]));
 
-    ei_printf("\n2 秒后开始连续推理...\n");
+    ei_printf("\nStarting continious inference in 2 seconds...\n");
     ei_sleep(2000);
 
     if (microphone_inference_start(EI_CLASSIFIER_RAW_SAMPLE_COUNT) == false) {
-        ei_printf("错误：无法分配音频缓冲区（大小 %d），这可能是由于您的模型的窗口长度\r\n", EI_CLASSIFIER_RAW_SAMPLE_COUNT);
+        ei_printf("ERR: Could not allocate audio buffer (size %d), this could be due to the window length of your model\r\n", EI_CLASSIFIER_RAW_SAMPLE_COUNT);
         return;
     }
 
-    ei_printf("录音中...\n");
+    ei_printf("Recording...\n");
 }
 
 /**
- * @brief      Arduino 主函数。运行推理循环。
+ * @brief      Arduino main function. Runs the inferencing loop.
  */
 void loop()
 {
     bool m = microphone_inference_record();
     if (!m) {
-        ei_printf("错误：录音失败...\n");
+        ei_printf("ERR: Failed to record audio...\n");
         return;
     }
 
@@ -849,18 +858,18 @@ void loop()
 
     EI_IMPULSE_ERROR r = run_classifier(&signal, &result, debug_nn);
     if (r != EI_IMPULSE_OK) {
-        ei_printf("错误：运行分类器失败 (%d)\n", r);
+        ei_printf("ERR: Failed to run classifier (%d)\n", r);
         return;
     }
 
-    int pred_index = 0;     // 初始化 pred_index
-    float pred_value = 0;   // 初始化 pred_value
+    int pred_index = 0;     // Initialize pred_index
+    float pred_value = 0;   // Initialize pred_value
 
-    // 打印预测结果
-    ei_printf("预测 ");
-    ei_printf("(DSP: %d 毫秒，分类：%d 毫秒，异常：%d 毫秒)",
+    // print the predictions
+    ei_printf("Predictions ");
+    ei_printf("(DSP: %d ms., Classification: %d ms., Anomaly: %d ms.)",
         result.timing.dsp, result.timing.classification, result.timing.anomaly);
-    ei_printf("：\n");
+    ei_printf(": \n");
     for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
         ei_printf("    %s: ", result.classification[ix].label);
         ei_printf_float(result.classification[ix].value);
@@ -871,17 +880,17 @@ void loop()
            pred_value = result.classification[ix].value;
       }
     }
-    // 显示推理结果
+    // Display inference result
     if (pred_index == 3){
-      digitalWrite(LED_BUILT_IN, LOW); //打开
+      digitalWrite(LED_BUILT_IN, LOW); //Turn on
     }
     else{
-      digitalWrite(LED_BUILT_IN, HIGH); //关闭
+      digitalWrite(LED_BUILT_IN, HIGH); //Turn off
     }
 
     
 #if EI_CLASSIFIER_HAS_ANOMALY == 1
-    ei_printf("    异常分数：");
+    ei_printf("    anomaly score: ");
     ei_printf_float(result.anomaly);
     ei_printf("\n");
 #endif
@@ -906,19 +915,19 @@ static void capture_samples(void* arg) {
 
   while (record_status) {
 
-    /* 一次性从 i2s 读取数据 - 为 XIAO ESP2S3 Sense 和 I2S.h 库修改 */
+    /* read data at once from i2s - Modified for XIAO ESP2S3 Sense and I2S.h library */
     // i2s_read((i2s_port_t)1, (void*)sampleBuffer, i2s_bytes_to_read, &bytes_read, 100);
     esp_i2s::i2s_read(esp_i2s::I2S_NUM_0, (void*)sampleBuffer, i2s_bytes_to_read, &bytes_read, 100);
 
     if (bytes_read <= 0) {
-      ei_printf("I2S 读取错误：%d", bytes_read);
+      ei_printf("Error in I2S read : %d", bytes_read);
     }
     else {
         if (bytes_read < i2s_bytes_to_read) {
-        ei_printf("I2S 部分读取");
+        ei_printf("Partial I2S read");
         }
 
-        // 缩放数据（否则声音太小）
+        // scale the data (otherwise the sound is too quiet)
         for (int x = 0; x < i2s_bytes_to_read/2; x++) {
             sampleBuffer[x] = (int16_t)(sampleBuffer[x]) * 8;
         }
@@ -935,11 +944,11 @@ static void capture_samples(void* arg) {
 }
 
 /**
- * @brief      初始化推理结构并设置/启动 PDM
+ * @brief      Init inferencing struct and setup/start PDM
  *
- * @param[in]  n_samples  采样数
+ * @param[in]  n_samples  The n samples
  *
- * @return     { 返回值描述 }
+ * @return     { description_of_the_return_value }
  */
 static bool microphone_inference_start(uint32_t n_samples)
 {
@@ -954,7 +963,7 @@ static bool microphone_inference_start(uint32_t n_samples)
     inference.buf_ready  = 0;
 
 //    if (i2s_init(EI_CLASSIFIER_FREQUENCY)) {
-//        ei_printf("启动 I2S 失败！");
+//        ei_printf("Failed to start I2S!");
 //    }
 
     ei_sleep(100);
@@ -967,9 +976,9 @@ static bool microphone_inference_start(uint32_t n_samples)
 }
 
 /**
- * @brief      等待新数据
+ * @brief      Wait on new data
  *
- * @return     完成时返回 True
+ * @return     True when finished
  */
 static bool microphone_inference_record(void)
 {
@@ -984,7 +993,7 @@ static bool microphone_inference_record(void)
 }
 
 /**
- * 获取原始音频信号数据
+ * Get raw audio signal data
  */
 static int microphone_audio_signal_get_data(size_t offset, size_t length, float *out_ptr)
 {
@@ -994,7 +1003,7 @@ static int microphone_audio_signal_get_data(size_t offset, size_t length, float 
 }
 
 /**
- * @brief      停止 PDM 并释放缓冲区
+ * @brief      Stop PDM and release buffers
  */
 static void microphone_inference_end(void)
 {
@@ -1003,7 +1012,7 @@ static void microphone_inference_end(void)
 }
 
 #if !defined(EI_CLASSIFIER_SENSOR) || EI_CLASSIFIER_SENSOR != EI_CLASSIFIER_SENSOR_MICROPHONE
-#error "当前传感器的模型无效。"
+#error "Invalid model for current sensor."
 #endif
 ```
 
@@ -1031,17 +1040,16 @@ MJRoBot 还有很多关于 XIAO ESP32S3 的有趣项目。
 - **[GITHUB]** [项目 Github](https://github.com/Mjrovai/XIAO-ESP32S3-Sense)
 - **[EDGE-IMPULSE]** [edge impulse 演示](https://studio.edgeimpulse.com/public/256022/latest)
 
-
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

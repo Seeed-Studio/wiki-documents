@@ -1,6 +1,6 @@
 ---
-description: 学习如何使用 Cursor 的 AI 驱动聊天功能来开发基于 XIAO ESP32C6 和传感器的 Zigbee 应用程序
-title: 使用 Cursor 创建基于 XIAO ESP32C6 的 Zigbee 项目
+description: 学习如何使用 Cursor 的 AI 驱动聊天功能，结合 XIAO ESP32C6 和传感器开发 Zigbee 应用程序
+title: 使用 Cursor 创建 XIAO ESP32C6 的 Zigbee 项目
 image: https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/13.webp
 slug: /cn/use_cursor_create_zigbee_prj
 last_update:
@@ -11,9 +11,9 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 使用 Cursor 创建基于 XIAO ESP32C6 的 Zigbee 项目
+# 使用 Cursor 创建 XIAO ESP32C6 的 Zigbee 项目
 
-本指南将引导您使用 Cursor 的 AI 驱动聊天功能来开发基于 XIAO ESP32C6 和传感器的 Zigbee 应用程序。在本教程结束时，您将能够独立使用 Cursor 的聊天功能来开发基于 XIAO 开发板和传感器的 Zigbee 应用程序。
+本指南将引导您使用 Cursor 的 AI 驱动聊天功能，结合 XIAO ESP32C6 和传感器开发 Zigbee 应用程序。在本教程结束时，您将能够独立使用 Cursor 的聊天功能，结合您的 XIAO 开发板和传感器开发 Zigbee 应用程序。
 
 ## 什么是 Cursor？
 
@@ -29,7 +29,7 @@ Cursor 为嵌入式软件开发提供了几个优势：
 2. **上下文感知辅助**：Cursor 理解您的项目结构，可以提供相关建议。
 3. **调试帮助**：Cursor 可以帮助识别和修复代码中的错误。
 4. **学习工具**：对于初学者，Cursor 可以解释复杂概念并提供教育见解。
-5. **效率**：Cursor 可以帮助您导航大型代码库并快速理解不熟悉的库。
+5. **效率**：Cursor 可以帮助您快速导航大型代码库并理解不熟悉的库。
 
 对于像 XIAO ESP32C6 这样的嵌入式系统，Cursor 可以帮助您理解硬件特定的 API，为传感器交互生成样板代码，并解决硬件-软件集成问题。
 
@@ -38,38 +38,37 @@ Cursor 为嵌入式软件开发提供了几个优势：
 本教程需要以下材料：
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO ESP32C6</th>
-			<th>Grove DHT11 温湿度传感器</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>XIAO ESP32C6</th>
+   <th>Grove DHT11 温湿度传感器</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
-
-- Grove 连接线
-- USB-C 数据线
+- Grove 线缆
+- USB-C 线缆
 - 安装了 Arduino IDE 的计算机
 - Cursor 应用程序（我们将在下一节中安装）
 
 :::tip
-本教程使用 DHT11 温湿度传感器作为示例。如果您有其他传感器，也可以随意尝试。为了获得最佳体验，我们建议使用当前受 [ESP Zigbee SDK](https://github.com/espressif/esp-zigbee-sdk) 支持的传感器类型。这将确保兼容性，并在构建 Zigbee 项目时实现更流畅的实现。
+本教程以 DHT11 温湿度传感器为例。如果您有其他传感器，也可以随意尝试。为了获得最佳体验，我们建议使用 [ESP Zigbee SDK](https://github.com/espressif/esp-zigbee-sdk) 当前支持的传感器类型。这将确保兼容性，并在构建您的 Zigbee 项目时实现更流畅的实施。
 :::
 
 ## 安装 Cursor
@@ -83,7 +82,7 @@ Cursor 为嵌入式软件开发提供了几个优势：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/windows_download_cursor.png" style={{width:1000, height:'auto'}}/></div>
 
-2. 点击 "Windows"。
+2. 点击"Windows"。
 3. 运行下载的安装程序。
 4. 按照屏幕上的说明完成安装。
 
@@ -94,14 +93,13 @@ Cursor 为嵌入式软件开发提供了几个优势：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/mac_download_cursor.png" style={{width:1000, height:'auto'}}/></div>
 
-2. 点击 "MacOS"。
+2. 点击"MacOS"。
 3. 打开下载的 .dmg 文件。
-4. 将 Cursor 应用拖拽到您的应用程序文件夹。
-5. 从应用程序文件夹打开 Cursor。
+4. 将 Cursor 应用程序拖拽到您的应用程序文件夹。
+5. 从应用程序文件夹中打开 Cursor。
 
 </TabItem>
 </Tabs>
-
 
 ## Cursor 订阅
 
@@ -112,6 +110,7 @@ Cursor 提供不同的订阅层级以满足各种用户需求：
 **免费爱好者计划**
 
 Cursor 可以通过爱好者计划免费下载和使用，包括：
+
 - 2000 次补全
 - 50 次慢速高级请求
 - 两周的专业版功能试用
@@ -138,7 +137,7 @@ Cursor 可以通过爱好者计划免费下载和使用，包括：
 
 您可以在 [Cursor 定价页面](https://www.cursor.com/pricing) 查看完整的定价详情。
 
-需要注意的是，无论您使用哪个计划，在 Cursor 中生成的所有代码都属于您，可以按您的意愿使用，包括商业用途。
+重要的是要注意，无论您使用哪个计划，在 Cursor 中生成的所有代码都属于您，可以按您的意愿使用，包括用于商业目的。
 
 ## 设置 Cursor
 
@@ -152,38 +151,40 @@ Cursor 可以通过爱好者计划免费下载和使用，包括：
 
 ## 打开 Zigbee 示例
 
-当使用 Cursor 为您的项目生成代码时，提供示例代码可以显著提高生成项目的准确性。示例作为 Cursor 的参考点，让它能够理解项目的结构、语法和特定要求。通过分析这些示例，Cursor 可以生成更精确和相关的代码，量身定制以满足您的需求。
+在使用 Cursor 为您的项目生成代码时，提供示例代码可以显著提高生成项目的准确性。示例作为 Cursor 的参考点，让它能够理解您项目的结构、语法和特定要求。通过分析这些示例，Cursor 可以生成更精确和相关的代码，满足您的需求。
 
-在我们的 Zigbee 项目上下文中，找到合适的示例有助于 Cursor：
+在我们的 Zigbee 项目中，找到合适的示例有助于 Cursor：
+
 - 理解所需的特定功能
 - 识别要使用的适当库和函数
 - 生成与您使用的硬件和接口兼容的代码
 
-通过提供相关示例，您确保生成的代码更有可能正确工作并满足您项目的要求，为您节省调试和修改的时间和精力。
+通过提供相关示例，您可以确保生成的代码更有可能正常工作并满足项目要求，从而节省调试和修改的时间和精力。
 
 现在，让我们定位并打开 ESP32 Arduino 包提供的 Zigbee 示例：
 
 1. 首先，确保您已在 Arduino IDE 中安装了**最新的 ESP32 开发板包**：
-  - 打开 Arduino IDE
-  - 转到**工具 > 开发板 > 开发板管理器**
-  - 搜索 **esp32**
-  - 找到 **esp32 by Espressif Systems**
-  - 点击**安装**或**更新**以获取最新版本
-  - 等待安装完成
+
+- 打开 Arduino IDE
+- 转到 **Tools > Board > Boards Manager**
+- 搜索 **esp32**
+- 找到 **esp32 by Espressif Systems**
+- 点击 **Install** 或 **Update** 获取最新版本
+- 等待安装完成
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/3.png" style={{width:1000, height:'auto'}}/></div>
 
 2. 导航到 Zigbee 示例目录：
 
-以下路径使用 ESP32 开发板包版本 3.1.3 作为示例。如果版本不同，请将 `3.1.3` 替换为您安装的版本号：
-   
+以下路径以 ESP32 开发板包版本 3.1.3 为例。如果版本不同，请将 `3.1.3` 替换为您安装的版本号：
+
 - 在 Windows 上：
 
 ```
 C:\Users\[YourUsername]\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.1.3\libraries\Zigbee\
 ```
 
-- 在 macOS 上：
+- On macOS:
 
 ```
 /Users/[YourUsername]/Library/Arduino15/packages/esp32/hardware/esp32/3.1.3/libraries/Zigbee/
@@ -194,7 +195,6 @@ C:\Users\[YourUsername]\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.
 4. 导航到步骤 2 中的 Zigbee 目录路径并点击 **Open**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/4.png" style={{width:1000, height:'auto'}}/></div>
-
 
 ## 选择合适的示例
 
@@ -212,7 +212,7 @@ Zigbee 设备通常分为两个主要类别，理解这一点对于选择正确�
    - **示例**：
      - 温度传感器：测量周围温度
      - 湿度传感器：测量空气中的湿度水平
-     - 光线传感器：检测环境光强度
+     - 光传感器：检测环境光强度
      - 运动传感器：检测附近是否有物体移动
      - 气体传感器：检测特定气体的浓度
 
@@ -260,10 +260,10 @@ DHT11 使用简单的 GPIO 接口，只有一条数据线。
 3. 了解您的设备类型可用的功能
 
 如果您的设备类型未列出，您可能需要：
+
 - 选择符合您需求的类似支持设备类型
 - 考虑实现自定义设备类型（高级）
 - 联系 ESP 支持寻求指导
-
 
 ### 找到最接近的示例
 
@@ -276,7 +276,7 @@ DHT11 使用简单的 GPIO 接口，只有一条数据线。
 幸运的是，ESP 在其 Zigbee 示例中提供了"Zigbee_Temp_Hum_Sensor_Sleepy"示例，这完全符合我们创建温湿度传感器项目的需求。此示例演示了：
 
 - 如何实现温湿度传感器设备
-- 如何将设备配置为睡眠终端设备以节省电力
+- 如何将设备配置为休眠终端设备以节省电力
 - 如何定期报告传感器读数
 - 如何处理 Zigbee 网络和数据传输
 
@@ -287,113 +287,109 @@ DHT11 使用简单的 GPIO 接口，只有一条数据线。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/5.png" style={{width:1000, height:'auto'}}/></div>
 
-
 ## 确定引脚连接
 
 对于 XIAO ESP32C6 和 DHT11 传感器，我们需要决定使用哪些引脚：
 
 1. DHT11 传感器需要一个数据引脚。
 
-2. 我们将其连接到 XIAO ESP32C6 上的引脚 D0 (GPIO1)。
+2. 我们将其连接到 XIAO ESP32C6 的 D0 引脚（GPIO1）。
 
 :::tip
-对于 XIAO 示例，只有 GPIO（数字/模拟）和 SPI 协议设备需要手动引脚配置。对于 I2C 和 UART 设备，引脚定义已在 XIAO 的板包中预配置，因此您可以跳过此步骤。
+对于 XIAO 示例，只有 GPIO（数字/模拟）和 SPI 协议设备需要手动配置引脚。对于 I2C 和 UART 设备，引脚定义已在 XIAO 的板级包中预配置，因此您可以跳过此步骤。
 :::
-
 
 ## 收集技术文档
 
+拥有传感器的技术文档至关重要。如果您使用的是 Seeed 的产品，您可以在 **[Seeed Studio 官方 Wiki](https://wiki.seeedstudio.com/)** 上找到传感器或执行器的详细文档和资源。Wiki 的资源部分还包含您可以提供给 Cursor 的 Grove 产品数据表。例如，对于本项目中使用的 DHT11 传感器：
 
-拥有传感器的技术文档至关重要。如果您使用的是 Seeed 的产品，您可以在 **[Seeed Studio 官方 Wiki](https://wiki.seeedstudio.com/cn/)** 上找到传感器或执行器的详细文档和资源。Wiki 的资源部分还包含您可以提供给 Cursor 的 Grove 产品数据表。例如，对于本项目中使用的 DHT11 传感器：
-
-- [Grove DHT11 Wiki 页面](https://wiki.seeedstudio.com/cn/Grove-TemperatureAndHumidity_Sensor/)
+- [Grove DHT11 Wiki 页面](https://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/)
 
 如果您使用的是其他制造商的传感器，请直接联系他们以获取必要的技术文档。
 
-
 ## 使用 Cursor 的聊天功能生成代码
 
-现在我们有了所有必要的信息，可以使用 Cursor 的聊天功能生成我们的 Zigbee 应用程序代码。
+现在我们拥有了所有必要的信息，可以使用 Cursor 的聊天功能来生成我们的 Zigbee 应用程序代码。
 
-这里您需要为 Cursor 的聊天功能创建一个提示。
+在这里您需要为 Cursor 的聊天功能创建一个提示。
 
 ### 传感器项目模板
 
-如果您像我一样选择使用传感器作为设备，您可以参考以下提示。
+如果您像我一样选择使用传感器作为设备，可以参考以下提示。
 
 ```
-请参考代码，然后使用ESP32-C6和Zigbee协议创建一个Arduino传感器项目。
+Please refer to the code and then create an Arduino sensor project with ESP32-C6 using Zigbee protocol.
 
-项目名称：[项目名称]
+Project name: [project name]
 
-传感器详情：
-- 类型：[传感器型号]
-- 连接：[引脚连接]
+Sensor details:
+- Type: [sensor model]
+- Connections: [pin connections]
 
-传感规格：
-- 测量参数：[测量值]
-- 传输频率：[发送间隔]
+Sensing specifications:
+- Parameters to measure: [measurement values]
+- Transmission frequency: [sending interval]
 
-参考资料：
-- 文档：[文档链接]
+Reference materials:
+- Documentation: [documentation links]
 
-在Example目录中生成一个完整的项目。将主文件命名为[项目名称用下划线替换空格].ino，并包含详细的代码注释。
+Generate a complete project in the Example directory. Name the main file [project name with spaces replaced by underscores].ino with comprehensive code comments.
 ```
 
-让我们分解如何填写提示模板，并使用 DHT11 传感器提供一个示例：
+让我们详细了解如何填写提示模板，并使用 DHT11 传感器提供一个示例：
 
-1. **项目名称**：为您的项目选择一个描述性名称
+1. **项目名称**：为您的项目选择一个描述性的名称
 2. **传感器详细信息**：
    - 类型：指定确切的传感器型号
-   - 连接：列出传感器和 XIAO ESP32C6 之间的所有引脚连接
-3. **传感规格**： 
+   - 连接：列出传感器与 XIAO ESP32C6 之间的所有引脚连接
+3. **传感规格**：
    - 参数：列出您想要测量的内容（温度、湿度等）
-   - 传输频率：您想要发送数据的频率（例如，每 5 秒）
-4. **参考资料**：包含数据表或文档的链接
+   - 传输频率：您希望发送数据的频率（例如，每 5 秒一次）
+4. **参考资料**：包含数据手册或文档的链接
 
-以下是 DHT11 温湿度传感器项目的完整提示：
+以下是 DHT11 温湿度传感器项目的完整提示示例：
 
 ```
-请参考代码，然后使用 Zigbee 协议创建一个基于 ESP32-C6 的 Arduino 传感器项目。
+Please refer to the code and then create an Arduino sensor project with ESP32-C6 using Zigbee protocol.
 
-项目名称：Zigbee_DHT11_XIAO
+Project name: Zigbee_DHT11_XIAO
 
-传感器详细信息：
-- 类型：DHT11 温湿度传感器
-- 连接：DHT11 数据引脚连接到 XIAO ESP32C6 的 D2
+Sensor details:
+- Type: DHT11 Temperature and Humidity Sensor
+- Connections: DHT11 data pin connected to D2 of XIAO ESP32C6
 
-传感规格：
-- 测量参数：温度（°C）和相对湿度（%）
-- 传输频率：每 1 小时
+Sensing specifications:
+- Parameters to measure: Temperature (°C) and Relative Humidity (%)
+- Transmission frequency: Every 1 hour
 
-参考资料：
-- 文档： 
-  - DHT11 传感器：https://wiki.seeedstudio.com/cn/Grove-TemperatureAndHumidity_Sensor/
-  - XIAO ESP32C6：https://wiki.seeedstudio.com/cn/xiao_pin_multiplexing_esp33c6/
+Reference materials:
+- Documentation: 
+  - DHT11 Sensor: https://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/
+  - XIAO ESP32C6: https://wiki.seeedstudio.com/xiao_pin_multiplexing_esp33c6/
 
-在 Example 目录中生成一个完整的项目。将主文件命名为 [项目名称，空格替换为下划线].ino，并包含全面的代码注释。
+Generate a complete project in the Example directory. Name the main file [project name with spaces replaced by underscores].ino with comprehensive code comments.
 ```
 
 ### 执行器项目模板
 
-如果您想使用执行器，可以使用以下提示模板。让我们看看如何为执行器项目构建提示：
+如果您想要使用执行器，可以使用以下提示模板。让我们看看如何为执行器项目构建提示：
 
 ```
-请参考代码，然后使用 ESP32-C6 和 Zigbee 协议创建一个 Arduino 执行器项目。
+Please refer to the code and then create an Arduino actuator project with ESP32-C6 using Zigbee protocol.
 
-项目名称：[项目名称]
+Project name: [project name]
 
-执行器详细信息：
-- 类型：[执行器型号]
-- 连接：[引脚连接]
+Actuator details:
+- Type: [actuator model]
+- Connections: [pin connections]
 
-控制规格：
-- 默认行为：[启动状态]
+Control specifications:
+- Default behavior: [startup state]
 
-参考资料：
-- 文档：[文档链接]
+Reference materials:
+- Documentation: [documentation links]
 
-在 Example 目录中生成一个完整的项目。将主文件命名为 [项目名称，空格替换为下划线].ino，并包含全面的代码注释。
+Generate a complete project in the Example directory. Name the main file [project name with spaces replaced by underscores].ino with comprehensive code comments.
 ```
 
 :::tip
@@ -434,6 +430,7 @@ DHT11 使用简单的 GPIO 接口，只有一条数据线。
 2. 功能检查
 
 将生成的代码与您的需求进行比较：
+
 - 是否实现了所有请求的功能？
 
 例如，在它提供给我的程序中，引脚是按照 GPIO 编号定义的，这可能需要阅读 wiki，然后检查 XIAO 的 A/D 编号是否与正确的 GPIO 编号匹配，这比较麻烦。为此，我们可以要求 Cursor 以与 A/D 相同的方式使用引脚。
@@ -444,155 +441,155 @@ DHT11 使用简单的 GPIO 接口，只有一条数据线。
 
 ```cpp
 /**
- * @brief 带有Zigbee功能的DHT11温湿度传感器，适用于XIAO ESP32C6
+ * @brief DHT11 Temperature and Humidity Sensor with Zigbee for XIAO ESP32C6
  * 
- * 此示例演示如何创建一个Zigbee终端设备，使用DHT11传感器测量温度
- * 和湿度，并每小时报告一次数据。
+ * This example demonstrates how to create a Zigbee end device that measures temperature
+ * and humidity using a DHT11 sensor and reports the data every hour.
  * 
- * 硬件要求：
- * - XIAO ESP32C6开发板
- * - DHT11温湿度传感器
+ * Hardware Requirements:
+ * - XIAO ESP32C6 board
+ * - DHT11 Temperature and Humidity Sensor
  * 
- * 连接方式：
- * - DHT11数据引脚 -> XIAO ESP32C6的D2 (GPIO8)
+ * Connections:
+ * - DHT11 Data Pin -> D2 (GPIO8) of XIAO ESP32C6
  * - DHT11 VCC -> 3.3V
  * - DHT11 GND -> GND
  * 
- * 该设备作为Zigbee终端设备运行，在测量间隔期间进入深度睡眠
- * 以节省电力。
+ * The device operates as a Zigbee end device and goes into deep sleep between measurements
+ * to conserve power.
  */
 
 #ifndef ZIGBEE_MODE_ED
-#error "未在工具->Zigbee模式中选择Zigbee终端设备模式"
+#error "Zigbee end device mode is not selected in Tools->Zigbee mode"
 #endif
 
 #include "Zigbee.h"
 #include "DHT.h"
 
-/* 引脚定义 */
-#define DHT_PIN 8  // XIAO ESP32C6上的D2
-#define BOOT_BUTTON 9  // XIAO ESP32C6上的启动按钮
+/* Pin Definitions */
+#define DHT_PIN 8  // D2 on XIAO ESP32C6
+#define BOOT_BUTTON 9  // Boot button on XIAO ESP32C6
 
-/* DHT11传感器配置 */
+/* DHT11 Sensor Configuration */
 #define DHT_TYPE DHT11
 DHT dht(DHT_PIN, DHT_TYPE);
 
-/* Zigbee配置 */
+/* Zigbee Configuration */
 #define TEMP_SENSOR_ENDPOINT_NUMBER 10
 
-/* 睡眠配置 */
-#define uS_TO_S_FACTOR 1000000ULL  // 微秒到秒的转换因子
-#define TIME_TO_SLEEP  3600        // 睡眠1小时（3600秒）
+/* Sleep Configuration */
+#define uS_TO_S_FACTOR 1000000ULL  // Conversion factor for micro seconds to seconds
+#define TIME_TO_SLEEP  3600        // Sleep for 1 hour (3600 seconds)
 
-/* 全局变量 */
+/* Global Variables */
 ZigbeeTempSensor zbTempSensor = ZigbeeTempSensor(TEMP_SENSOR_ENDPOINT_NUMBER);
 
-/************************ 传感器函数 *****************************/
+/************************ Sensor Functions *****************************/
 void measureAndSleep() {
-  // 从DHT11读取温度和湿度
+  // Read temperature and humidity from DHT11
   float temperature = dht.readTemperature();
   float humidity = dht.readHumidity();
 
-  // 检查读数是否有效
+  // Check if readings are valid
   if (isnan(temperature) || isnan(humidity)) {
-    Serial.println("从DHT11传感器读取失败！");
+    Serial.println("Failed to read from DHT11 sensor!");
     delay(1000);
     return;
   }
 
-  // 在温度传感器EP中更新温度和湿度值
+  // Update temperature and humidity values in Temperature sensor EP
   zbTempSensor.setTemperature(temperature);
   zbTempSensor.setHumidity(humidity);
 
-  // 报告温度和湿度值
+  // Report temperature and humidity values
   zbTempSensor.report();
-  Serial.printf("已报告温度：%.2f°C，湿度：%.2f%%\r\n", temperature, humidity);
+  Serial.printf("Reported temperature: %.2f°C, Humidity: %.2f%%\r\n", temperature, humidity);
 
-  // 添加小延迟以允许数据在进入睡眠前发送
+  // Add small delay to allow the data to be sent before going to sleep
   delay(100);
 
-  // 使设备进入深度睡眠
-  // Serial.println("进入睡眠1小时");
+  // Put device to deep sleep
+  // Serial.println("Going to sleep for 1 hour");
   // esp_deep_sleep_start();
 }
 
-/********************* Arduino设置 **************************/
+/********************* Arduino Setup **************************/
 void setup() {
   Serial.begin(115200);
   
-  // 初始化DHT11传感器
+  // Initialize DHT11 sensor
   dht.begin();
 
-  // 初始化按钮开关
+  // Init button switch
   pinMode(BOOT_BUTTON, INPUT_PULLUP);
 
-  // 配置唤醒源
+  // Configure the wake up source
   // esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
 
-  // 设置Zigbee设备信息
+  // Set Zigbee device information
   zbTempSensor.setManufacturerAndModel("Seeed", "XIAO_DHT11_Sensor");
 
-  // 设置温度测量范围（DHT11为-20°C到60°C）
+  // Set temperature measurement range (-20°C to 60°C for DHT11)
   zbTempSensor.setMinMaxValue(-20, 60);
 
-  // 设置温度测量容差（DHT11精度为±2°C）
+  // Set tolerance for temperature measurement (±2°C accuracy for DHT11)
   zbTempSensor.setTolerance(2);
 
-  // 配置湿度传感器（DHT11范围20-90% RH，精度±5% RH）
+  // Configure humidity sensor (20-90% RH range for DHT11, ±5% RH accuracy)
   zbTempSensor.addHumiditySensor(20, 90, 5);
 
-  // 设置电源为电池（假设电池供电操作）
+  // Set power source to battery (assuming battery-powered operation)
   zbTempSensor.setPowerSource(ZB_POWER_SOURCE_BATTERY, 100);
 
-  // 将端点添加到Zigbee核心
+  // Add endpoint to Zigbee Core
   Zigbee.addEndpoint(&zbTempSensor);
 
-  // 为终端设备创建Zigbee配置
+  // Create Zigbee configuration for End Device
   esp_zb_cfg_t zigbeeConfig = ZIGBEE_DEFAULT_ED_CONFIG();
-  zigbeeConfig.nwk_cfg.zed_cfg.keep_alive = 60000; // 60秒保活
+  zigbeeConfig.nwk_cfg.zed_cfg.keep_alive = 60000; // 60 second keep-alive
 
-  // 启动Zigbee
+  // Start Zigbee
   if (!Zigbee.begin(&zigbeeConfig, false)) {
-    Serial.println("Zigbee启动失败！");
-    Serial.println("重启中...");
+    Serial.println("Zigbee failed to start!");
+    Serial.println("Rebooting...");
     ESP.restart();
   }
 
-  Serial.println("连接到Zigbee网络");
+  Serial.println("Connecting to Zigbee network");
   while (!Zigbee.connected()) {
     Serial.print(".");
     delay(100);
   }
-  Serial.println("\n成功连接到Zigbee网络");
+  Serial.println("\nSuccessfully connected to Zigbee network");
 
-  // 为连接建立留出时间
+  // Allow time for connection establishment
   delay(1000);
 }
 
-/********************* Arduino循环 **************************/
+/********************* Arduino Loop **************************/
 void loop() {
-  // 检查启动按钮以进行恢复出厂设置
+  // Check boot button for factory reset
   if (digitalRead(BOOT_BUTTON) == LOW) {
-    delay(100); // 消抖
+    delay(100); // Debounce
     int startTime = millis();
     while (digitalRead(BOOT_BUTTON) == LOW) {
       delay(50);
       if ((millis() - startTime) > 3000) {
-        Serial.println("恢复出厂设置已启动。1秒后重启...");
+        Serial.println("Factory reset initiated. Rebooting in 1s...");
         delay(1000);
         Zigbee.factoryReset();
       }
     }
   }
 
-  // 测量传感器数据并进入睡眠
+  // Measure sensor data and go to sleep
   measureAndSleep();
 } 
 ```
 
 </details>
 
-您只需要选择要更改的部分，输入提示词，然后按回车键即可。
+您只需要选择想要更改的部分，输入提示词，然后按回车键即可。
 
 <div class="table-center">
 <iframe width="800" height="500" src="https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/11.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -600,13 +597,13 @@ void loop() {
 
 ## 验证并上传程序
 
-现在 Cursor 已经生成了我们的 Zigbee 项目代码，我们需要验证它是否正常工作。最好的方法是使用 Arduino IDE，它为编译代码并将其上传到我们的 XIAO ESP32C6 开发板提供了优秀的工具。让我们切换到 Arduino IDE 并完成验证过程：
+现在 Cursor 已经生成了我们的 Zigbee 项目代码，我们需要验证它是否能正常工作。最好的方法是使用 Arduino IDE，它为编译代码并将其上传到我们的 XIAO ESP32C6 开发板提供了优秀的工具。让我们切换到 Arduino IDE 并完成验证过程：
 
 1. 在 Arduino IDE 中打开主文件。
 2. 从开发板菜单中选择 **XIAO ESP32C6** 开发板。
 3. 选择适当的端口。
 4. 点击 **验证** 来编译代码。
-5. 如果有任何错误，返回 Cursor 的聊天界面并请求帮助修复它们。
+5. 如果有任何错误，返回 Cursor 的聊天界面并寻求帮助修复它们。
 6. 一旦代码成功编译，将其上传到您的 XIAO ESP32C6。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/10.png" style={{width:1000, height:'auto'}}/></div>
@@ -621,12 +618,12 @@ void loop() {
 
 1. 描述您面临的具体错误或问题
 2. 包含来自 Arduino IDE 的任何错误消息
-3. 请求 Cursor 建议修复或改进方案
+3. 要求 Cursor 建议修复或改进方案
 4. 实施建议的更改并再次测试
 
-Cursor 的 AI 在调试方面特别出色，通常能够识别手动难以发现的问题。
+Cursor 的 AI 在调试方面特别出色，通常能识别出手动难以发现的问题。
 
-例如，如果您是第一次使用 Zigbee 功能或遇到编译错误，如
+例如，如果您是第一次使用 Zigbee 功能或遇到编译错误，比如
 
 ```
 #error Zigbee end device mode is not selected in Tools->Zigbee mode
@@ -652,14 +649,13 @@ Cursor 可能会建议检查 Arduino IDE 中的工具菜单并选择适当的 Zi
 
 只需在提示中清楚地描述问题，Cursor 就会提供相关的建议和解决方案。
 
-
 ## 使用 Cursor 增强您的程序
 
 在基本的 Zigbee 功能正常工作后，您可以使用 Cursor 为程序添加更多功能和改进。让我们看一个如何通过添加串口初始化检查来增强代码的示例。
 
 这在开发和调试过程中特别有用，因为它确保您不会错过任何串口输出，在继续设置之前等待串口准备就绪。
 
-1. 在 Cursor 中打开您的项目，并在代码中找到 `setup()` 函数。
+1. 在 Cursor 中打开您的项目并在代码中找到 `setup()` 函数。
 
 2. 在聊天面板中，描述您想要添加的内容。例如：
    "添加代码以在继续设置之前等待串口准备就绪"
@@ -668,16 +664,15 @@ Cursor 可能会建议检查 Arduino IDE 中的工具菜单并选择适当的 Zi
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/13.png" style={{width:1000, height:'auto'}}/></div>
 
-除了这些小的增强功能，我们可以通过在基本功能之上实现节能功能来最大化 Zigbee 的价值。Zigbee 的关键优势之一是其低功耗能力，可以通过正确实现睡眠模式进一步优化。
+除了这些小的增强功能外，我们可以通过在基本功能之上实现节能功能来最大化 Zigbee 的价值。Zigbee 的关键优势之一是其低功耗能力，可以通过正确实现睡眠模式进一步优化。
 
-以下是您如何要求 Cursor 为传感器项目添加深度睡眠功能：
+以下是您可以要求 Cursor 为传感器项目添加深度睡眠功能的方法：
 
 1. 打开聊天面板并请求深度睡眠实现：
 
 ***修改程序，使温度和湿度值每三小时报告一次。其余时间深度睡眠以节省电力。***
 
-
-2. Cursor 会建议包括以下内容的代码修改：
+2. Cursor 会建议包含以下内容的代码修改：
 
 - 更新睡眠持续时间
 - 更新睡眠消息以获得更好的反馈
@@ -688,28 +683,26 @@ Cursor 可能会建议检查 Arduino IDE 中的工具菜单并选择适当的 Zi
 
 这种功耗优化对于电池供电的传感器节点特别有价值，根据报告频率和传感器类型，可能将电池寿命从几天延长到几个月甚至几年。
 
-Cursor 可以帮助您实现所有这些功能 - 在寻求帮助时，只需在您的要求中具体说明即可。
-
+Cursor 可以帮助您实现所有这些功能 - 在寻求帮助时只需在您的要求中具体说明即可。
 
 ## 结论
 
-您现在已经学会了如何使用 Cursor 的 AI 驱动聊天为 XIAO ESP32C6 开发带传感器的 Zigbee 应用程序。这种方法可以显著加快您的开发过程并帮助您克服技术挑战。
+您现在已经学会了如何使用 Cursor 的 AI 驱动聊天功能为 XIAO ESP32C6 开发 Zigbee 应用程序。这种方法可以显著加快您的开发过程，并帮助您克服技术挑战。
 
-随着您对 Cursor 越来越熟悉，您将发现为嵌入式项目利用其功能的其他方法。请记住，提示的质量很大程度上影响生成代码的质量，因此在描述您的要求时要具体和详细。
+随着您对 Cursor 越来越熟悉，您将发现更多利用其功能进行嵌入式项目开发的方法。请记住，提示的质量很大程度上影响生成代码的质量，因此在描述您的需求时要具体和详细。
 
-本教程代表了使嵌入式开发更易于访问的重要一步。通过将 Cursor 等 AI 工具与 XIAO ESP32C6 等强大硬件相结合，我们正在降低物联网和传感器网络开发的入门门槛。这对以下人群特别有价值：
+本教程代表了使嵌入式开发更易于访问的重要进步。通过将 Cursor 等 AI 工具与 XIAO ESP32C6 等强大硬件相结合，我们正在降低物联网和传感器网络开发的准入门槛。这对以下人群特别有价值：
 
 - 刚开始嵌入式系统之旅的初学者
-- 希望加速原型开发过程的经验丰富的开发人员
+- 希望加速原型开发过程的经验丰富的开发者
 - 教授物联网和无线通信概念的教育工作者
-- 想要创建智能家居解决方案的制造商和爱好者
+- 想要创建智能家居解决方案的创客和爱好者
 
 AI 辅助开发工具与 Zigbee 技术的集成为创建节能、可靠的无线传感器网络开辟了新的可能性。这种技术组合能够实现更快的开发周期，同时保持高代码质量，最终有助于推动物联网领域的创新。
 
 :::tip
 本文由 Citric 在 Cursor 的协助下撰写。
 :::
-
 
 ## 技术支持与产品讨论
 

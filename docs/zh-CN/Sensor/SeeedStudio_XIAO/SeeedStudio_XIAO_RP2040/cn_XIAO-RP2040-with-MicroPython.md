@@ -62,7 +62,7 @@ last_update:
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk3.png" /></div>
 
-- **步骤 3**. 将以下代码复制到 Thonny。
+- **步骤 3**. 将以下代码复制到 Thonny 中。
 
 ```cpp
 from machine import Pin, Timer
@@ -81,31 +81,31 @@ tim = Timer(-1)
 tim.init(period=1000, mode=Timer.PERIODIC, callback=fun)
 ```
 
-- **步骤 4**. 通过点击 "Run current script" 按钮上传代码。第一次时，Thonny 会询问您想要将代码文件保存在哪里。**This Computer** 和 **Raspberry Pi Pico** 都可以。
+- **步骤 4**. 点击"运行当前脚本"按钮上传代码。第一次运行时，Thonny 会询问您想要将代码文件保存在哪里。选择**本计算机**或**Raspberry Pi Pico**都可以。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
-如果工作正常，您会看到 LED 灯每秒闪烁一次。递增数字的输出也会在 Shell 中显示。
+如果运行正常，您将看到 LED 灯每秒闪烁一次。同时，递增的数字输出也会显示在 Shell 中。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_13.png" /></div>
 
-连接完成，现在我们可以继续进行其他项目。
+连接已完成，现在我们可以继续进行其他项目。
 
-## **在 Seeed Studio XIAO RP2040 上点亮 RGB LED**
+## **点亮 Seeed Studio XIAO RP2040 上的 RGB LED**
 
 Seeed Studio XIAO RP2040 配备了一个 RGB LED，我们将使用 MicroPython 来点亮它。这需要一个第三方库，所以我们需要先添加一个额外的库。
 
 - **步骤 1**. 下载 [ws2812.py](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/ws2812.py) 库并用 Thonny 打开它。
 
-- **步骤 2**. 点击 "File-->Save as" 并保存库文件。
+- **步骤 2**. 点击"文件-->另存为"并保存库文件。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk4.png" /></div>
 
-选择 "Raspberry Pi Pico" 作为我们保存的位置。
+选择"Raspberry Pi Pico"作为保存位置。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk5.png" /></div>
 
-确保保存的文件名是 "ws2812.py"，否则将无法工作。
+确保保存的文件名为"ws2812.py"，否则将无法正常工作。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk6.png" /></div>
 
@@ -137,33 +137,33 @@ while True:
         utime.sleep(0.2)
 ```
 
-- **步骤 4**. 通过点击 "Run current script" 按钮上传代码。第一次运行时，Thonny 会询问您想要将代码文件保存在哪里。**This Computer** 和 **Raspberry Pi Pico** 都可以。
+- **步骤 4**. 点击"运行当前脚本"按钮上传代码。第一次运行时，Thonny 会询问您想要将代码文件保存在哪里。选择**本计算机**或**Raspberry Pi Pico**都可以。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
-如果工作正常，您将看到 RGB LED 灯光转换并闪烁。同时文本 "Beautiful Color" 的输出也会在 Shell 中显示。
+如果运行正常，您将看到 RGB LED 灯变换并闪烁。同时，文本"Beautiful Color"的输出也会显示在 Shell 中。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_14.png" /></div>
 
 ## **通过 IIC 连接 Seeed Studio XIAO RP2040 与显示屏**
 
-在这个项目中，我们将通过 IIC 接口连接 [Grove - OLED Display 0.96" (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html) 来演示 Seeed Studio XIAO RP2040 上的 IIC 功能。
+在这个项目中，我们将通过 IIC 接口连接[Grove - OLED Display 0.96" (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html)，以演示 Seeed Studio XIAO RP2040 上的 IIC 功能。
 
 **硬件连接**
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_15.png" /></div>
 
-- **步骤 1**. 下载 [ssd1306.py](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/ssd1306.py) 库并用 Thonny 打开它。
+- **步骤 1**. 下载 [ssd1306.py](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/ssd1306.py) 库文件并用 Thonny 打开。
 
-- **步骤 2**. 点击 "File-->Save as" 并将库保存在 "Raspberry Pi Pico" 中
+- **步骤 2**. 点击"文件-->另存为"并将库文件保存到"Raspberry Pi Pico"中
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk4.png" /></div>
 
-选择 "Raspberry Pi Pico" 作为我们保存的位置。
+选择"Raspberry Pi Pico"作为保存位置。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk5.png" /></div>
 
-确保保存的文件名是 "ssd1306.py"，否则将无法工作。
+确保保存的文件名为"ssd1306.py"，否则将无法正常工作。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk8.png" /></div>
 
@@ -184,11 +184,11 @@ while True:
     #sleep(0.5)
 ```
 
-- **步骤 4**. 通过点击 "Run current script" 按钮上传代码。第一次运行时，Thonny 会询问您想要将代码文件保存在哪里。**This Computer** 和 **Raspberry Pi Pico** 都可以。
+- **步骤 4**. 点击"运行当前脚本"按钮上传代码。第一次使用时，Thonny 会询问您想要将代码文件保存在哪里。选择**本计算机**和**Raspberry Pi Pico**都可以。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
-如果工作正常，您将看到文本 "Hello,World!" 显示在屏幕上。
+如果运行正常，您将看到屏幕上显示"Hello,World!"文本。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_16.png" /></div>
 
@@ -200,7 +200,7 @@ while True:
 
 ## 其他资源
 
-一些额外的库和示例代码在这里：
+这里有一些额外的库和示例代码：
 
 - **[ZIP]** [XIAO-RP2040-MicroPython-Grove.zip](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/XIAO-RP2040-MicroPython-Grove.zip)
 
@@ -209,11 +209,11 @@ while True:
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

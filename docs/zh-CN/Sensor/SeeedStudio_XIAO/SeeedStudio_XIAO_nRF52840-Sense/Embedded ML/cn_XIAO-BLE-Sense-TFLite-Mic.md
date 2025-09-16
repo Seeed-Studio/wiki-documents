@@ -17,11 +17,11 @@ last_update:
 
 本教程将演示如何在 Seeed Studio XIAO nRF52840 Sense 上使用 TensorFlow Lite，并使用板载麦克风进行语音识别。
 
-> 对于嵌入式 AI 应用，我们强烈推荐使用"Seeed nrf52 mbed-enabled Boards Library"。
+> 对于嵌入式 AI 应用，我们强烈推荐使用 "Seeed nrf52 mbed-enabled Boards Library"。
 
 ## 软件设置
 
-请确保首先按照["Seeed Studio XIAO nRF52840 (Sense) 入门指南"](https://wiki.seeedstudio.com/cn/XIAO_BLE/)教程完成初始硬件和软件设置。
+请确保首先按照 ["Seeed Studio XIAO nRF52840 (Sense) 入门指南"](https://wiki.seeedstudio.com/XIAO_BLE/) 教程完成初始硬件和软件设置。
 
 现在让我们继续进行其余的软件设置。
 
@@ -93,7 +93,7 @@ last_update:
 const int g_model_len = 26720;
 ```
 
-- **步骤 4.** 打开 **micro_speech** 文件夹内的 **micro_features_micro_model_settings.cpp**，添加我们在训练过程中定义的所有单词。这里我们使用了 **yes,no,up,down**
+- **步骤 4.** 打开 **micro_speech** 文件夹内的 **micro_features_micro_model_settings.cpp** 文件，并添加我们在训练过程中定义的所有单词。这里我们使用了 **yes,no,up,down**
 
 ```cpp
 #include "micro_features_micro_model_settings.h"
@@ -108,15 +108,15 @@ const char* kCategoryLabels[kCategoryCount] = {
 };
 ```
 
-- **步骤 5.** 打开 **micro_speech** 文件夹内的 **micro_features_micro_model_settings.h**，根据定义的类别数量更改 **constexpr int kCategoryCount**。这里我们有 6 个类别
+- **步骤 5.** 打开 **micro_speech** 文件夹内的 **micro_features_micro_model_settings.h** 文件，并根据定义的类别数量更改 **constexpr int kCategoryCount**。这里我们有 6 个类别
 
 ```cpp
 constexpr int kCategoryCount = 6;
 ```
 
-- **步骤 6.** 打开 **micro_speech** 文件夹内的 **micro_speech.ino**，将代码上传到 Seeed Studio XIAO nRF52840 Sense
+- **步骤 6.** 打开 **micro_speech** 文件夹内的 **micro_speech.ino** 文件，并将代码上传到 Seeed Studio XIAO nRF52840 Sense
 
-- **步骤 7.** 打开**串口监视器窗口**，大声说出我们之前定义的单词。您将看到串口监视器在识别后输出正确的说话单词。
+- **步骤 7.** 打开**串口监视器窗口**，大声说出我们之前定义的单词。您将看到串口监视器在识别后输出正确的语音单词。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/TFLite/pics/mic-capture.png" alt="pir" width={300} height="auto" /></p>
 

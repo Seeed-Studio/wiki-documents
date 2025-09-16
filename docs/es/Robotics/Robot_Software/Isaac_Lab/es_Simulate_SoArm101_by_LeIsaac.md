@@ -1,6 +1,6 @@
 ---
 description: Este tutorial demuestra cómo teleoperar y entrenar el brazo robótico SOArm101 en Isaac Lab usando LeIsaac, incluyendo recolección de datos, ajuste fino del modelo con NVIDIA Isaac GR00T, y despliegue.
-title: Comenzar con Lightwheel LeIsaac
+title: Lightwheel LeIsaac
 keywords:
 - NVIDIA
 - Isaac Lab
@@ -11,17 +11,19 @@ last_update:
   author: Youjiang
 ---
 
-# Comenzar con Lightwheel LeIsaac — ¡Flujo de trabajo de código abierto que combina Hugging Face LeRobot x GR00T N1.5 x Isaac Sim!
+# Comenzar con Lightwheel LeIsaac — Flujo de trabajo de código abierto que combina Hugging Face LeRobot x GR00T N1.5 x Isaac Sim
 
 ## Introducción
 
-Este wiki seguirá la documentación de leisaac, mostrando cómo teleoperar el brazo robot SoArm101 en IsaacLab mediante leisaac. Adicionalmente, demostraremos el despliegue del modelo NVIDIA Isaac GR00T N1.5 ajustado finamente dentro del entorno de simulación Isaac Lab, usando datos recolectados de Isaac Lab. Proyectos principales empleados en este wiki:
-- [LeIsaac](https://github.com/LightwheelAI/leisaac) proporciona funcionalidad de teleoperación en IsaacLab usando el SO101Leader (LeRobot), incluyendo recolección de datos, conversión de datos, y entrenamiento de políticas posterior.
-- [NVIDIA Isaac™ Lab](https://developer.nvidia.com/isaac/lab) es un marco unificado de código abierto para aprendizaje robótico diseñado para ayudar a entrenar políticas de robots.
+Este wiki seguirá la documentación de leisaac, mostrando cómo teleoperar el brazo robótico SoArm101 en IsaacLab mediante leisaac. Además, demostraremos el despliegue del modelo Nvidia Isaac GR00T N1.5 ajustado finamente dentro del entorno de simulación Isaac Lab, usando datos recolectados de Isaac Lab. Proyectos principales empleados en este wiki:
+
+- [LeIsaac](https://github.com/LightwheelAI/leisaac) proporciona funcionalidad de teleoperación en IsaacLab usando el SO101Leader (LeRobot), incluyendo recolección de datos, conversión de datos y entrenamiento de políticas posterior.
+- [NVIDIA Isaac™ Lab](https://developer.nvidia.com/isaac/lab) es un marco unificado de código abierto para el aprendizaje robótico diseñado para ayudar a entrenar políticas de robots.
 - [SO-ARM101](https://github.com/TheRobotStudio/SO-ARM100) es un kit de brazo robótico imprimible en 3D de bajo costo y código abierto. Diseñado para funcionar perfectamente con la biblioteca LeRobot de código abierto.
 - [NVIDIA Isaac GR00T N1.5](https://github.com/NVIDIA/Isaac-GR00T) es un modelo fundacional abierto para razonamiento y habilidades generalizadas de robots humanoides.
 
 ## Requisitos
+
 - PC Ubuntu
 - Brazo Líder SoArm101
 
@@ -59,7 +61,7 @@ git checkout v2.1.0
 ```
 
 :::note
-Si tu computadora no tiene conda instalado, consulta [esta guía](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) para la instalación.
+Si tu computadora no tiene conda instalado, por favor consulta [esta guía](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) para la instalación.
 :::
 
 :::info
@@ -67,7 +69,8 @@ Si estás usando GPU de la serie 50, recomendamos usar isaacsim5.0 e isaaclab co
 :::
 
 ## Instalar LeIsaac
-Clona el repositorio de LeIsaac e instálalo como dependencia.
+
+Clona el repositorio LeIsaac e instálalo como dependencia.
 
 ```bash
 cd ..
@@ -78,12 +81,12 @@ pip install pynput pyserial deepdiff feetech-servo-sdk
 ```
 
 :::note
-Por favor, asegúrate de instalar dentro del entorno virtual conda `leisaac`.
+Por favor asegúrate de instalar dentro del entorno virtual conda `leisaac`.
 :::
 
-## Preparación de Recursos
+## Preparación de Activos
 
-LeIsaac proporciona un recurso USD de ejemplo—una escena de cocina. Podemos descargar la escena relacionada [aquí](https://github.com/LightwheelAI/leisaac/releases/tag/v0.1.0) y extraerla en el directorio de recursos. La estructura del directorio debería verse así:
+LeIsaac proporciona un activo USD de ejemplo—una escena de cocina. Podemos descargar la escena relacionada [aquí](https://github.com/LightwheelAI/leisaac/releases/tag/v0.1.0) y extraerla en el directorio de activos. La estructura del directorio debería verse así:
 
 ```txt
 <assets>
@@ -100,7 +103,7 @@ LeIsaac proporciona un recurso USD de ejemplo—una escena de cocina. Podemos de
             └── Plate
 ```
 
-## Recopilar Conjunto de Datos
+## Recolectar Conjunto de Datos
 
 Conecta el líder SO-ARM101 a una computadora Ubuntu mediante cable USB, luego usa comandos para otorgar permisos del puerto serie.
 
@@ -112,11 +115,11 @@ sudo chmod 666 /dev/ttyACM0
 Si todo funciona correctamente, deberías ver una salida de registro similar.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/leisaac/connect_arm.png" />
 </div>
 
-Ejecuta tareas de teleoperación con el siguiente script para recopilar el conjunto de datos:
+Ejecuta tareas de teleoperación con el siguiente script para recolectar el conjunto de datos:
 
 ```bash
 python scripts/environments/teleoperation/teleop_se3_agent.py \
@@ -140,9 +143,9 @@ Después de entrar en la ventana de IsaacLab, presiona la tecla `b` en tu teclad
 <iframe width="800" height="400" src="https://www.youtube.com/embed/XkgBY4aa8AE" title="Teleoperate SoArm101 by LeIsaac" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Reproducción del Dataset
+## Reproducción del Conjunto de Datos
 
-Después de la teleoperación, puedes reproducir el dataset recopilado en el entorno de simulación usando el siguiente script:
+Después de la teleoperación, puedes reproducir el conjunto de datos recolectado en el entorno de simulación usando el siguiente script:
 
 ```bash
 python scripts/environments/teleoperation/replay.py \
@@ -160,9 +163,9 @@ python scripts/environments/teleoperation/replay.py \
 
 ## Conversión de Datos
 
-Los datos de teleoperación recopilados se almacenan en formato HDF5 en el directorio especificado. Si se utilizan estos datos para entrenar un modelo proxy, el conjunto de datos debe convertirse al formato compatible con LeRobot utilizando los scripts de conversión de LeIsaac.
+Los datos de teleoperación recolectados se almacenan en formato HDF5 en el directorio especificado. Si usas estos datos para entrenar un modelo proxy, el conjunto de datos debe convertirse al formato compatible con LeRobot usando los scripts de conversión de LeIsaac.
 
-Este script debe ejecutarse dentro del entorno virtual de LeRobot. Por favor, crea un nuevo entorno de LeRobot siguiendo los pasos en esta [wiki](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#install-lerobot).
+Este script debe ejecutarse dentro del entorno virtual LeRobot. Por favor crea un nuevo entorno LeRobot siguiendo los pasos en este [wiki](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#install-lerobot).
 
 ```bash
 cd ..
@@ -181,7 +184,7 @@ python scripts/convert/isaaclab2lerobot.py
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/leisaac/data_conversion.png" />
 </div>
 
@@ -189,7 +192,7 @@ python scripts/convert/isaaclab2lerobot.py
 Si modificaste la ruta de almacenamiento del conjunto de datos durante la recolección de datos, debes actualizar la ruta correspondiente en el script de conversión antes de la ejecución.
 :::
 
-Después de que el programa complete la ejecución, el conjunto de datos convertido se puede encontrar en: `~/.cache/huggingface/lerobot/`. 
+Después de que el programa complete la ejecución, el conjunto de datos convertido se puede encontrar en: `~/.cache/huggingface/lerobot/`.
 
 También podemos inspeccionar los datos convertidos usando el kit de herramientas de visualización de conjuntos de datos integrado de LeRobot.
 
@@ -202,9 +205,9 @@ python -m lerobot.scripts.visualize_dataset --repo-id EverNorif/so101_test_orang
 <iframe width="900" height="450" src="https://www.youtube.com/embed/LPSxPMoP-pk" title="Simulate SoArm101 by LeIsaac (2)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
 ## Entrenamiento de Políticas
-En esta wiki, ajustaremos finamente NVIDIA Isaac GR00T N1.5. Comencemos configurando el entorno virtual Isaac-GR00T:
+
+En este wiki, ajustaremos finamente NVIDIA Isaac GR00T N1.5. Comencemos configurando el entorno virtual Isaac-GR00T:
 
 ```bash
 cd ..
@@ -218,10 +221,10 @@ pip install --no-build-isolation flash-attn==2.7.1.post4
 ```
 
 :::info
-La instalación de flash-attn implica compilación de paquetes, lo cual puede ser extremadamente lento. Se recomienda [descargar](https://github.com/Dao-AILab/flash-attention/releases/tag/v2.7.1.post4) la versión del paquete precompilado que coincida con tu entorno del sistema e instalarlo localmente usando el comando: pip install ./nombre_del_paquete.
+La instalación de flash-attn involucra compilación de paquetes, lo cual puede ser extremadamente lento. Se recomienda [descargar](https://github.com/Dao-AILab/flash-attention/releases/tag/v2.7.1.post4) la versión del paquete precompilado que coincida con tu entorno del sistema e instalarlo localmente usando el comando: pip install ./nombre_del_paquete.
 :::
 
-Ejecuta el siguiente comando en la terminal para iniciar el entrenamiento:
+Ejecuta el siguiente comando en la terminal para lanzar el entrenamiento:
 
 ```bash
 cd <path-to-Isaac-GR00T>
@@ -237,16 +240,17 @@ python scripts/gr00t_finetune.py \
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/leisaac/train.png" />
 </div>
 
 ## Inferencia de Políticas
 
-En esta etapa, podemos desplegar nuestro modelo NVIDIA Isaac GR00T N1.5 ajustado para controlar el brazo robótico SO-ARM101 en Isaac Lab.
-La arquitectura de despliegue de Isaac-GR00T adopta un diseño desacoplado entre el endpoint de inferencia y el endpoint de control:
-- Endpoint de Inferencia (Servidor): Dedicado únicamente a ejecutar tareas de inferencia del modelo.
-- Endpoint de Control (Cliente): Responsable de adquirir los estados del brazo robótico y orquestar el control de movimiento.
+En esta etapa, podemos desplegar nuestro modelo NVIDIA Isaac GR00T N1.5 ajustado finamente para controlar el brazo robótico SO-ARM101 en Isaac Lab.
+La arquitectura de despliegue de Isaac-GR00T adopta un diseño desacoplado entre el punto final de inferencia y el punto final de control:
+
+- Punto Final de Inferencia (Servidor): Dedicado únicamente a ejecutar tareas de inferencia del modelo.
+- Punto Final de Control (Cliente): Responsable de adquirir estados del brazo robótico y orquestar el control de movimiento.
 
 **Servidor**
 Abre una nueva ventana de terminal y ejecuta:
@@ -258,8 +262,7 @@ python scripts/inference_service.py --server --model_path  ./so101-orange-checkp
 ```
 
 <div align="center">
-    <img width={800} 
-    src="https://files.seeedstudio.com/wiki/reComputer-Jetson/leisaac/server.png" />
+    <img width={800}    src="https://files.seeedstudio.com/wiki/reComputer-Jetson/leisaac/server.png" />
 </div>
 
 **Cliente**
@@ -288,18 +291,18 @@ Si encuentras errores relacionados con ZMQ, ejecuta `pip install pyzmq` para res
 <iframe width="900" height="450" src="https://www.youtube.com/embed/GRzFK7o3lOQ" title="Simulate SoArm101 by LeIsaac (3)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-El modelo entrenado final falló en controlar el brazo robótico SOArm101 para recoger la naranja. Esto se debe a que solo recolecté tres conjuntos de datos durante el experimento. Si se pudieran recopilar más datos, ¡la precisión del modelo mejoraría significativamente!
+El modelo entrenado final falló en controlar el brazo robótico SOArm101 para recoger la naranja. Esto se debe a que solo recopilé tres conjuntos de datos durante el experimento. ¡Si se pudieran recopilar más datos, la precisión del modelo mejoraría significativamente!
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

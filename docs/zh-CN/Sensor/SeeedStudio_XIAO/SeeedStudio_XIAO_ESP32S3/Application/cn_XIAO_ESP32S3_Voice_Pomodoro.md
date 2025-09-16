@@ -1,5 +1,5 @@
 ---
-description: 使用语音命令和 Seeed Studio XIAO ESP32S3 Sense 配合圆形 LCD 显示屏构建一个紧凑的、CircuitPython 驱动的番茄钟计时器。
+description: 使用语音命令和 Seeed Studio XIAO ESP32S3 Sense 以及圆形 LCD 显示屏构建一个紧凑的、CircuitPython 驱动的番茄钟计时器。
 title: 使用 XIAO ESP32S3 和 CircuitPython 构建语音激活番茄钟计时器
 keywords:
   - XIAO
@@ -80,24 +80,24 @@ XIAO ESP32S3 Sense 包含板载麦克风，使其非常适合语音控制应用�
 
 - **语音检测**：板载麦克风监听超过阈值的声音
 - **命令模拟**：对于演示版本，命令在预设列表中循环
-- **计时器逻辑**：跟踪工作时段、短休息和长休息
-- **视觉反馈**：圆形显示屏显示时段类型和剩余时间
-- **进度指示器**：发光弧形显示当前时段的进度
+- **计时器逻辑**：跟踪工作会话、短休息和长休息
+- **视觉反馈**：圆形显示屏显示会话类型和剩余时间
+- **进度指示器**：发光弧形显示当前会话的进度
 
 AskLou.io 番茄钟计时器响应以下语音命令：
 
-- "Start timer" - 开始25分钟工作时段
-- "Pause timer" - 暂停当前时段
-- "Start short break" - 开始5分钟休息
-- "Start long break" - 开始15分钟休息
+- "Start timer" - 开始 25 分钟工作会话
+- "Pause timer" - 暂停当前会话
+- "Start short break" - 开始 5 分钟休息
+- "Start long break" - 开始 15 分钟休息
 
 ## 自定义选项
 
 您可以通过多种方式自定义您的 AskLou.io 番茄钟计时器：
 
-- **时段持续时间**：修改 session_durations 字典来更改工作或休息时长
+- **会话持续时间**：修改 session_durations 字典来更改工作或休息时长
 - **语音灵敏度**：根据您的环境调整 LOUD_THRESHOLD 值
-- **视觉主题**：为不同时段类型更改弧形颜色
+- **视觉主题**：为不同会话类型更改弧形颜色
 - **命令词**：更新 voice_commands 列表以使用不同的短语
 
 ## 未来增强功能
@@ -105,8 +105,8 @@ AskLou.io 番茄钟计时器响应以下语音命令：
 未来版本的潜在改进：
 
 - 改进语音识别以实现更可靠的命令检测
-- 时段结束时的触觉或音频反馈
-- 与生产力应用程序的连接以记录时段
+- 会话结束时的触觉或音频反馈
+- 与生产力应用程序的连接以记录会话
 - 用于音频通知的小扬声器
 - 电池供电以实现便携性
 
@@ -114,8 +114,8 @@ AskLou.io 番茄钟计时器响应以下语音命令：
 
 - [GitHub 仓库](https://github.com/AskLou-io/Pomodoro_Circuit_Python/blob/main/README.md)
 - [Hackster.io 项目](https://www.hackster.io/peter-machona/asklou-io-pomodoro-timer-a7a1f2)
-- [XIAO ESP32S3 文档](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/)
-- [圆形显示屏文档](https://wiki.seeedstudio.com/cn/get_start_round_display/)
+- [XIAO ESP32S3 文档](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+- [圆形显示屏文档](https://wiki.seeedstudio.com/get_start_round_display/)
 
 ## 致谢
 
@@ -132,7 +132,7 @@ AskLou.io 番茄钟计时器响应以下语音命令：
 
 在以下条款下：
 
-- **署名** — 您必须给出适当的署名，提供许可证链接，并指出是否进行了更改。您可以以任何合理的方式这样做，但不得以任何方式暗示许可方认可您或您的使用。
+- **署名** — 您必须给出适当的署名，提供许可证链接，并指出是否进行了更改。您可以以任何合理的方式这样做，但不得以任何方式暗示许可人认可您或您的使用。
 - **非商业性使用** — 您不得将材料用于商业目的。
 
 ---

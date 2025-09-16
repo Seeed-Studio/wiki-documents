@@ -1,13 +1,13 @@
 ---
-description: 在 reTerminal 上安装 Mender 客户端
-title: 在 reTerminal 上安装 Mender 客户端
+description: reTerminal 上的 Mender 客户端
+title: reTerminal 上的 Mender 客户端
 keywords:
-  - 边缘
-  - reTerminal 应用
+  - Edge
+  - reTerminal Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Mender-Client-reTerminal
 last_update:
-  date: 2023/1/31
+  date: 1/31/2023
   author: jianjing Huang
 ---
 
@@ -15,20 +15,20 @@ last_update:
 
 我们可以在 reTerminal 上设置 Mender 客户端，然后从托管或自托管的 Mender 服务器接收 OTA 更新。
 
-本指南重点介绍使用通过 Yocto 项目编译的自定义 Linux 系统运行的 reTerminal。
+本指南重点介绍如何在运行使用 Yocto 项目编译的自定义 Linux 系统的 reTerminal 上进行设置。
 
 ## 测试结果
 
-下表中的 Yocto 项目版本已由 Mender 社区测试。如果您在其他 [Yocto 项目版本](https://wiki.yoctoproject.org/wiki/Releases?target=_blank) 上测试了此集成，请更新此表：
+下表中的 Yocto 项目版本已经过 Mender 社区测试。如果您已在其他 [Yocto 项目版本](https://wiki.yoctoproject.org/wiki/Releases?target=_blank) 上测试了此集成，请更新此表：
 
-| Yocto 项目 | 构建 | 运行时 |
+| Yocto Project | 构建 | 运行时 |
 |---|---|---|
 | dunfell (3.1 / 5.3.0) | 测试通过 | 测试通过 |
 
-**构建** 表示使用此 Mender 集成构建的 Yocto 项目能够无错误完成并输出镜像。
-**运行时** 表示已验证 Mender 在板上正常工作。对于基于 U-Boot 的板，已验证 [集成检查表](https://docs.mender.io/devices/integrating-with-u-boot/integration-checklist?target=_blank)。
+**构建** 意味着使用此 Mender 集成的 Yocto 项目构建能够无错误完成并输出镜像。
+**运行时** 意味着 Mender 已经在开发板上验证可以工作。对于基于 U-Boot 的开发板，[集成检查清单](https://docs.mender.io/devices/integrating-with-u-boot/integration-checklist?target=_blank) 已经得到验证。
 
-## 前提条件
+## 先决条件
 
 - 在您的工作站/笔记本电脑上安装支持的 Linux 发行版和依赖项，如 [Yocto Mega Manual](https://www.yoctoproject.org/docs/current/mega-manual/mega-manual.html#detailed-supported-distros) 中所述
   - 注意：说明取决于您打算使用的 Yocto 版本。
@@ -38,13 +38,13 @@ last_update:
 
 ### 设置 Yocto 环境
 
-创建一个目录以存放您的 `mender-reterminal` 设置，并克隆元信息。
+为您的 `mender-reterminal` 设置创建一个目录，并克隆元信息。
 
 ```
 mkdir mender-reterminal && cd mender-reterminal
 ```
 
-获取所有必要的层：
+Get all of necessary layers:
 
 ```
 git clone -b master git://git.yoctoproject.org/poky layers/poky
@@ -55,7 +55,7 @@ git clone -b dunfell https://github.com/openembedded/meta-openembedded.git layer
 git clone -b dunfell git://github.com/mendersoftware/meta-mender layers/meta-mender
 ```
 
-为了与 meta-raspberrypi 兼容，将 poky 的 gstreamer 版本更改为最新版本：
+In order to be compatible with meta-raspberrypi, change the gstreamer version of poky to the latest
 
 ```
 cd layers/poky
@@ -66,7 +66,7 @@ cp -r ../gstreamer/ meta/recipes-multimedia/
 rm -r ../gstreamer/
 ```
 
-修改 meta-raspberrypi 以避免编译错误：
+Modify the meta-raspberrypi to avoid compile error
 
 ```
 cd layers/meta-raspberrypi
@@ -75,7 +75,7 @@ sed -i '/^LAYERSERIES_COMPAT_raspberrypi/s/= .*$/= "honister dunfell"/g' conf/la
 sed -i 's/arm\/armv8a\///g' conf/machine/raspberrypi4-64.conf
 ```
 
-修改 meta-mender 以避免编译错误：
+Modify the meta-mender to avoid compile error
 
 ```
 cd layers/meta-mender
@@ -84,7 +84,7 @@ sed -i 's/"0x4000"/"0x1f000"/g' meta-mender-raspberrypi/recipes-bsp/u-boot/u-boo
 sed -i 's/bootfiles/rpi-bootfiles/g' meta-mender-core/classes/mender-part-images.bbclass
 ```
 
-修改 meta-seeed-cm4 以避免编译错误：
+Modify the meta-seeed-cm4 to avoid compile error
 
 ```
 cd layers/meta-seeed-cm4
@@ -99,7 +99,7 @@ sed -i 's/eudev/udev/g' recipes-lvgl/lvgl/lvgl_demo_git.bb
 source layers/poky/oe-init-build-env 
 ```
 
-添加 Yocto 项目层：
+Add yocto project layers:
 
 ```
 bitbake-layers add-layer ../layers/meta-raspberrypi
@@ -114,75 +114,77 @@ bitbake-layers add-layer ../layers/meta-mender/meta-mender-demo
 
 ### 配置 Mender 服务器 URL（可选）
 
-此部分不是成功构建所必需的，但默认生成的镜像仅适用于 [独立部署](https://docs.mender.io/architecture/standalone-deployments?target=_blank) 中的 Mender 客户端，因为缺乏服务器配置。
+此部分对于成功构建不是必需的，但默认生成的镜像仅适用于在[独立部署](https://docs.mender.io/architecture/standalone-deployments?target=_blank)中使用 Mender 客户端，因为缺少服务器配置。
 
-您可以编辑 `conf/local.conf` 文件以提供您的 Mender 服务器配置，确保生成的镜像和 Mender Artifact 能够连接到您使用的 Mender 服务器。生成的 `conf/local.conf` 文件中应该已经有一个注释部分，您可以简单地取消注释相关配置选项并为其分配适当的值。
+您可以编辑 `conf/local.conf` 文件来提供您的 Mender 服务器配置，确保生成的镜像和 Mender Artifacts 连接到您正在使用的 Mender 服务器。在生成的 `conf/local.conf` 文件中应该已经有一个注释部分，您可以简单地取消注释相关的配置选项并为它们分配适当的值。
 
-针对托管 Mender 构建：
+为托管 Mender 构建：
 
 ```
-# 获取您的租户令牌：
-#    - 登录 https://hosted.mender.io
-#    - 点击右上角的您的邮箱，然后选择“我的组织”
-#    - 按下“复制到剪贴板”
-#    - 将剪贴板内容分配给 MENDER_TENANT_TOKEN
+# To get your tenant token:
+#    - log in to https://hosted.mender.io
+#    - click your email at the top right and then "My organization"
+#    - press the "COPY TO CLIPBOARD"
+#    - assign content of clipboard to MENDER_TENANT_TOKEN
 #
 MENDER_SERVER_URL = "https://hosted.mender.io"
-MENDER_TENANT_TOKEN = "<复制令牌到此处>"
+MENDER_TENANT_TOKEN = "<copy token here>"
 ```
 
-针对 Mender 演示服务器构建：
+Build for Mender Demo Server:
 
 ```
 # https://docs.mender.io/administration/demo-installation
 #
-MENDER_DEMO_HOST_IP_ADDRESS = "<Mender 演示服务器的 IP 地址>"
+MENDER_DEMO_HOST_IP_ADDRESS = "<IP address of Mender demo server>"
 ```
 
-针对 Mender 生产/自托管（本地部署）构建：
+Build for Mender Production/ Self-Hosted (on-prem):
 
 ```
 # https://docs.mender.io/3.1/system-updates-yocto-project/build-for-production
 #
-# 取消注释以下内容并更新 URL 以匹配您的配置域名，并提供生成的 server.crt 文件的路径。
+# Uncomment below and update the URL to match your configured domain
+# name and provide the path to the generated server.crt file.
 #
-# 注意：仅当您使用自签名证书时才需要自定义 server.crt 文件。
+# Note that a custom server.crt file is only necessary if you are using
+# self-signed certificates.
 #
-# 注意！建议您在自定义 Yocto 层中提供以下信息，这仅用于演示目的。有关更多信息，请参阅链接文档。
-MENDER_SERVER_URL = "<自托管 Mender 服务器的 URL>"
-FILESEXTRAPATHS_prepend_pn-mender-client := "<包含 server.crt 的目录>:"
+# NOTE! It is recommend that you provide below information in your custom
+# Yocto layer and this is only for demo purposes. See linked documentation
+# for additional information.
+MENDER_SERVER_URL = "<URL of Self-Hosted Mender Server>"
+FILESEXTRAPATHS_prepend_pn-mender-client := "<DIRECTORY-CONTAINING-server.crt>:"
 SRC_URI_append_pn-mender-client = " file://server.crt"
 ```
 
 ## 构建镜像
 
-现在可以开始构建镜像：
+现在您可以继续构建镜像：
 
 ```
 MACHINE="seeed-reterminal-mender" bitbake rpi-test-image
 ```
 
-将 `rpi-test-image` 替换为您想要的镜像目标。
+将 `rpi-test-image` 替换为您所需的镜像目标。
 
 ## 使用构建输出
 
-构建成功后，生成的镜像和构建工件位于：
+成功构建后，镜像和构建产物位于：
 
 - `build/tmp/deploy/images/seeed-reterminal-mender/rpi-test-image-seeed-reterminal-mender.sdimg.bz2`
 
-如果您的设备上已经运行了 Mender，并希望使用此构建部署 rootfs 更新，则应使用 [Mender Artifact](https://docs.mender.io/architecture/mender-artifacts?target=_blank) 文件，这些文件具有 `.mender` 后缀。您可以通过以下两种方式部署此 Artifact：
-- 在托管模式下通过 Mender 服务器（在服务器 UI 中将其上传到 Releases 下）。
-- 或者仅使用 Mender 客户端进行 [独立部署](https://docs.mender.io/architecture/standalone-deployments?target=_blank)。
+如果您的设备上已经运行了 Mender 并且想要使用此构建部署 rootfs 更新，您应该使用带有 `.mender` 后缀的 [Mender Artifact](https://docs.mender.io/architecture/mender-artifacts?target=_blank) 文件。您可以通过 Mender 服务器在托管模式下部署此 Artifact（在服务器 UI 的 Releases 下上传），或者仅使用 Mender 客户端进行[独立部署](https://docs.mender.io/architecture/standalone-deployments?target=_blank)。
 
-## 刷写说明
+## 烧录说明
 
-请参考 [此 Wiki 指南](https://wiki.seeedstudio.com/cn/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc) 了解如何将上述镜像刷写到 reTerminal 的 eMMC 上。
+请按照[此 wiki 指南](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)了解如何将上述镜像烧录到 reTerminal 的 eMMC 中。
 
-刷写完成后，当您打开 reTerminal 时，它将从编译的镜像启动。
+烧录完成后，当您打开 reTerminal 时，它将从编译的镜像启动。
 
 ## 启动成功
 
-如果您从 UART 看到以下日志，则表示系统已成功启动：
+如果您从 UART 看到以下日志，这意味着系统已成功启动
 
 ```
 [  OK  ] Started Kernel Logging Service.
@@ -223,7 +225,7 @@ root@seeed-reterminal-mender:~#
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们为您提供多种支持渠道，以确保您使用我们的产品时体验顺畅。我们提供多种沟通方式，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

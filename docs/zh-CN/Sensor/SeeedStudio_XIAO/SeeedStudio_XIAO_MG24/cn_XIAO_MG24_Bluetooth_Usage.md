@@ -1,6 +1,6 @@
 ---
 description: 使用 Seeed Studio XIAO MG24 的蓝牙功能。
-title: Seeed Studio XIAO MG24 蓝牙使用指南
+title: Seeed Studio XIAO MG24 蓝牙使用
 keywords:
 - MG24
 - xiao
@@ -38,28 +38,28 @@ last_update:
 			</div></td>
 		</tr>
 	</table>
+
 </div>
 
-Seeed Studio XIAO MG24 是一款强大的开发板，支持蓝牙 LE 5.3 和蓝牙网格，使其成为需要无线连接的各种物联网应用的理想选择。凭借其卓越的射频性能，XIAO MG24 可在各种距离上提供可靠、高速的无线通信，使其成为短距离和长距离应用的多功能解决方案。在本教程中，我们将探索 XIAO MG24 蓝牙功能的基本特性，包括如何扫描附近的蓝牙设备、建立蓝牙连接以及通过该连接传输和接收数据。
+Seeed Studio XIAO MG24 是一款强大的开发板，支持蓝牙 LE 5.3 和蓝牙网格，使其成为需要无线连接的各种物联网应用的理想选择。凭借其卓越的射频性能，XIAO MG24 可在各种距离上提供可靠的高速无线通信，使其成为短距离和长距离应用的多功能解决方案。在本教程中，我们将探索 XIAO MG24 蓝牙功能的基本特性，包括如何扫描附近的蓝牙设备、建立蓝牙连接以及通过该连接传输和接收数据。
 
 ## 天线切换方法
 
-Seeed Studio XIAO MG24 有两种天线选项：内置天线和外置天线。为了方便起见，您可以选择使用内置天线，而为了增强信号强度，您可以选择外置天线。以下是在两种天线之间切换的方法。
+Seeed Studio XIAO MG24 有两种天线选项：内置天线和外置天线。为了方便起见，您可以选择使用内置天线，为了增强信号强度，您可以选择外置天线。以下是在两种天线之间切换的方法。
 
-PB04 用于选择使用内置天线还是外置天线。在此之前，您需要将 PB05 设置为高电平以开启此功能。如果 PB04 设置为低电平，则使用内置天线；如果设置为高电平，则使用外置天线。默认为低电平。如果您想将其设置为高电平，可以参考以下代码。
-
+PB04 用于选择使用内置天线还是外置天线。在此之前，您需要将 PB05 设置为高电平以开启此功能。如果 PB04 设置为低电平，则使用内置天线；如果设置为高电平，则使用外置天线。默认为低电平。如果您想将其设置为高电平，可以参考下面的代码。
 ```cpp
 #define RF_SW_PW_PIN PB5
 #define RF_SW_PIN PB4
 
 void setup() {
-  // 开启天线功能
+  // turn on this antenna function
   pinMode(RF_SW_PW_PIN, OUTPUT);  
   digitalWrite(RF_SW_PW_PIN, HIGH);
 
   delay(100);
 
-  // HIGH -> 使用外置天线 / LOW -> 使用内置天线
+  // HIGH -> Use external antenna / LOW -> Use built-in antenna
   pinMode(RF_SW_PIN, OUTPUT);  
   digitalWrite(RF_SW_PIN, HIGH);
 ```
@@ -111,7 +111,7 @@ ATT 命令，正式名称为 ATT PDU（协议数据单元）。它包括 4 个�
 
 服务和特征在 GATT 层中定义。服务端提供服务，服务就是数据，数据就是属性，服务和特征是数据的逻辑表示，或者说用户可以看到的数据最终都转换为服务和特征。
 
-让我们从移动设备的角度看看服务和特征是什么样子的。nRF Connect 是一个应用程序，它非常直观地向我们展示了每个数据包应该是什么样子。
+让我们从移动设备的角度来看看服务和特征是什么样子的。nRF Connect 是一个应用程序，它非常直观地向我们展示了每个数据包应该是什么样子。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/62.png" style={{width:400, height:'auto'}}/></div>
 
@@ -139,15 +139,15 @@ ea094cbd-3695-4205-b32d-70c1dea93c35
 
 ```cpp
 /*
-   BLE 扫描示例
+   BLE scan example
 
-   该示例扫描其他 BLE 设备，并为每个找到的设备打印出地址、RSSI、信道和名称。
+   The example scans for other BLE devices and prints out the address, RSSI, channel and name for each found device.
 
-   在以下链接了解更多关于 Silabs BLE API 的使用：https://docs.silabs.com/bluetooth/latest/bluetooth-stack-api/
+   Find out more on the Silabs BLE API usage at: https://docs.silabs.com/bluetooth/latest/bluetooth-stack-api/
 
-   此示例仅适用于 'BLE (Silabs)' 协议栈变体。
+   This example only works with the 'BLE (Silabs)' protocol stack variant.
 
-   兼容的开发板：
+   Compatible boards:
    - Arduino Nano Matter
    - SparkFun Thing Plus MGM240P
    - xG27 DevKit
@@ -157,7 +157,7 @@ ea094cbd-3695-4205-b32d-70c1dea93c35
    - Ezurio Lyra 24P 20dBm Dev Kit
    - Seeed Studio XIAO MG24 (Sense)
 
-   作者：Tamas Jozsi (Silicon Labs)
+   Author: Tamas Jozsi (Silicon Labs)
  */
 #define RF_SW_PW_PIN PB5
 #define RF_SW_PIN PB4
@@ -173,50 +173,50 @@ void loop() {
 static String get_complete_local_name_from_ble_advertisement(sl_bt_evt_scanner_legacy_advertisement_report_t* response);
 
 /**************************************************************************/ /**
- * 蓝牙协议栈事件处理程序
- * 当 BLE 协议栈上发生事件时调用
+ * Bluetooth stack event handler
+ * Called when an event happens on BLE the stack
  *
- * @param[in] evt 来自蓝牙协议栈的事件
+ * @param[in] evt Event coming from the Bluetooth stack
  *****************************************************************************/
 void sl_bt_on_event(sl_bt_msg_t* evt) {
   static uint32_t scan_report_num = 0u;
   sl_status_t sc;
 
   switch (SL_BT_MSG_ID(evt->header)) {
-    // 当 BLE 设备成功启动时接收到此事件
+    // This event is received when the BLE device has successfully booted
     case sl_bt_evt_system_boot_id:
-      // 打印欢迎消息
+      // Print a welcome message
       Serial.begin(115200);
 
-      // 开启此天线功能
+      // turn on this antenna function
       pinMode(RF_SW_PW_PIN, OUTPUT); 
       digitalWrite(RF_SW_PW_PIN, HIGH);
 
       delay(100);
-      // HIGH -> 使用外部天线 / LOW -> 使用内置天线
+      // HIGH -> Use external antenna / LOW -> Use built-in antenna
       pinMode(RF_SW_PIN, OUTPUT); 
       digitalWrite(RF_SW_PIN, HIGH);
 
       Serial.println();
-      Serial.println("Silicon Labs BLE 扫描示例");
-      Serial.println("BLE 协议栈已启动");
-      // 开始扫描其他 BLE 设备
-      sc = sl_bt_scanner_set_parameters(sl_bt_scanner_scan_mode_active,  // 模式
-                                        16,                              // 间隔 (值 * 0.625 ms)
-                                        16);                             // 窗口 (值 * 0.625 ms)
+      Serial.println("Silicon Labs BLE scan example");
+      Serial.println("BLE stack booted");
+      // Start scanning for other BLE devices
+      sc = sl_bt_scanner_set_parameters(sl_bt_scanner_scan_mode_active,  // mode
+                                        16,                              // interval (value * 0.625 ms)
+                                        16);                             // window (value * 0.625 ms)
       app_assert_status(sc);
       sc = sl_bt_scanner_start(sl_bt_scanner_scan_phy_1m,
                                sl_bt_scanner_discover_generic);
       app_assert_status(sc);
-      Serial.println("开始扫描...");
+      Serial.println("Started scanning...");
       break;
 
-    // 当我们扫描到另一个 BLE 设备的广播时接收到此事件
+    // This event is received when we scan the advertisement of another BLE device
     case sl_bt_evt_scanner_legacy_advertisement_report_id:
       scan_report_num++;
       Serial.print(" -> #");
       Serial.print(scan_report_num);
-      Serial.print(" | 地址: ");
+      Serial.print(" | Address: ");
       for (int i = 5; i >= 0; i--) {
         Serial.printf("%02x", evt->data.evt_scanner_legacy_advertisement_report.address.addr[i]);
         if (i > 0) {
@@ -226,61 +226,61 @@ void sl_bt_on_event(sl_bt_msg_t* evt) {
       Serial.print(" | RSSI: ");
       Serial.print(evt->data.evt_scanner_legacy_advertisement_report.rssi);
       Serial.print(" dBm");
-      Serial.print(" | 信道: ");
+      Serial.print(" | Channel: ");
       Serial.print(evt->data.evt_scanner_legacy_advertisement_report.channel);
-      Serial.print(" | 名称: ");
+      Serial.print(" | Name: ");
       Serial.println(get_complete_local_name_from_ble_advertisement(&(evt->data.evt_scanner_legacy_advertisement_report)));
       break;
 
-    // 默认事件处理程序
+    // Default event handler
     default:
-      Serial.print("BLE 事件: 0x");
+      Serial.print("BLE event: 0x");
       Serial.println(SL_BT_MSG_ID(evt->header), HEX);
       break;
   }
 }
 
 /**************************************************************************/ /**
- * 在 BLE 广播中查找完整本地名称
+ * Finds the complete local name in BLE advertisements
  *
- * @param[in] response 从扫描接收到的 BLE 响应事件
+ * @param[in] response BLE response event received from scanning
  *
- * @return 如果找到则返回完整本地名称，否则返回 "N/A"
+ * @return The complete local name if found, "N/A" otherwise
  *****************************************************************************/
 static String get_complete_local_name_from_ble_advertisement(sl_bt_evt_scanner_legacy_advertisement_report_t* response) {
   int i = 0;
-  // 遍历响应数据
+  // Go through the response data
   while (i < (response->data.len - 1)) {
     uint8_t advertisement_length = response->data.data[i];
     uint8_t advertisement_type = response->data.data[i + 1];
 
-    // 如果长度超过最大可能的设备名称长度
+    // If the length exceeds the maximum possible device name length
     if (advertisement_length > 29) {
       continue;
     }
 
-    // 类型 0x09 = 完整本地名称，0x08 缩短名称
-    // 如果字段类型匹配完整本地名称
+    // Type 0x09 = Complete Local Name, 0x08 Shortened Name
+    // If the field type matches the Complete Local Name
     if (advertisement_type == 0x09) {
-      // 复制设备名称
+      // Copy the device name
       char device_name[advertisement_length + 1];
       memcpy(device_name, response->data.data + i + 2, advertisement_length);
       device_name[advertisement_length] = '\0';
       return String(device_name);
     }
-    // 跳转到下一个广播记录
+    // Jump to next advertisement record
     i = i + advertisement_length + 1;
   }
   return "N/A";
 }
 
 #ifndef BLE_STACK_SILABS
-#error "此示例仅与 Silicon Labs BLE 协议栈兼容。请在 'Tools > Protocol stack' 中选择 'BLE (Silabs)'。"
+#error "This example is only compatible with the Silicon Labs BLE stack. Please select 'BLE (Silabs)' in 'Tools > Protocol stack'."
 #endif
 ```
 
 :::tip
-需要注意的是，在编译之前需要在 'Tools > Protocol stack' 中选择 'BLE (Silabs)'。
+需要注意的是，在编译之前需要在"工具 > 协议栈"中选择"BLE (Silabs)"。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Bluetooth/tool_select.png" style={{width:800, height:'auto'}}/></div>
 :::
 
@@ -298,14 +298,14 @@ static String get_complete_local_name_from_ble_advertisement(sl_bt_evt_scanner_l
 
 当扫描过程检测到来自 BLE 设备的广播报告时，会触发 `sl_bt_evt_scanner_legacy_advertisement_report_id` 分支。在这种情况下，函数为每个检测到的设备递增计数器，并提取关键信息，包括设备的地址、RSSI、信道和本地名称。它利用辅助函数 `get_complete_local_name_from_ble_advertisement` 从广播数据中检索设备的完整名称，然后将其打印到串行输出。
 
-辅助函数 `get_complete_local_name_from_ble_advertisement` 遍历广播数据以定位完整本地名称字段。它检查每个广播记录的类型是否对应于完整本地名称，并将其作为字符串返回。如果未找到完整名称，函数返回 "N/A"。这种系统化方法允许应用程序有效地发现和识别附近的 BLE 设备，在扫描过程中提供有价值的信息。
+辅助函数 `get_complete_local_name_from_ble_advertisement` 遍历广播数据以定位完整本地名称字段。它检查每个广播记录的类型是否对应于完整本地名称，并将其作为字符串返回。如果未找到完整名称，函数返回"N/A"。这种系统化方法允许应用程序有效地发现和识别附近的 BLE 设备，在扫描过程中提供有价值的信息。
 
 ### BLE 服务器/客户端
 
-如前所述，XIAO MG24 可以同时充当服务器和客户端。让我们看看作为服务器的程序以及如何使用它。将以下程序上传到 XIAO 后，它将充当服务器并向连接到 XIAO 的所有蓝牙设备发送 "Hello World" 消息。
+如前所述，XIAO MG24 可以同时充当服务器和客户端。让我们看看作为服务器的程序以及如何使用它。将以下程序上传到 XIAO 后，它将充当服务器并向连接到 XIAO 的所有蓝牙设备发送"Hello World"消息。
 
 ```cpp
-//服务器代码
+//Server Code
 #define RF_SW_PW_PIN PB5
 #define RF_SW_PIN PB4
 
@@ -315,22 +315,22 @@ void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, LED_BUILTIN_INACTIVE);
   Serial.begin(115200);
-  Serial.println("Silicon Labs BLE 发送 hello world 示例");
+  Serial.println("Silicon Labs BLE send hello world example");
 
-  // 开启天线功能
+  // turn on the antenna function
   pinMode(RF_SW_PW_PIN, OUTPUT);
   digitalWrite(RF_SW_PW_PIN, HIGH);
 
   delay(100);
 
-  // HIGH -> 使用外部天线 / LOW -> 使用内置天线
+  // HIGH -> Use external antenna / LOW -> Use built-in antenna
   pinMode(RF_SW_PIN, OUTPUT);
   digitalWrite(RF_SW_PIN, LOW);
 }
 
 void loop() {
   if (notification_enabled) {
-    // 每两秒发送一次通知，消息内容为 'hello world'
+    // Send a notification every two seconds with the message 'hello world'
     send_helloworld_notification();
   }
   delay(2000);
@@ -339,7 +339,7 @@ void loop() {
 static void ble_initialize_gatt_db();
 static void ble_start_advertising();
 
-static const uint8_t advertised_name[] = "XIAO_MG24 Server";  // 您的 BLE 设备名称
+static const uint8_t advertised_name[] = "XIAO_MG24 Server";  // Name of your BLE device
 static uint16_t gattdb_session_id;
 static uint16_t generic_access_service_handle;
 static uint16_t name_characteristic_handle;
@@ -348,95 +348,95 @@ static uint16_t led_control_characteristic_handle;
 static uint16_t notify_characteristic_handle;
 
 /**************************************************************************/ /**
- * 蓝牙协议栈事件处理程序
- * 当 BLE 协议栈上发生事件时调用
+ * Bluetooth stack event handler
+ * Called when an event happens on BLE the stack
  *
- * @param[in] evt 来自蓝牙协议栈的事件
+ * @param[in] evt Event coming from the Bluetooth stack
  *****************************************************************************/
 void sl_bt_on_event(sl_bt_msg_t *evt) {
   switch (SL_BT_MSG_ID(evt->header)) {
     // -------------------------------
-    // 此事件表示设备已启动且无线电已就绪。
-    // 在接收到此启动事件之前，请勿调用任何协议栈命令！
+    // This event indicates the device has started and the radio is ready.
+    // Do not call any stack command before receiving this boot event!
     case sl_bt_evt_system_boot_id:
       {
-        Serial.println("BLE 协议栈已启动");
+        Serial.println("BLE stack booted");
 
-        // 初始化应用程序特定的 GATT 表
+        // Initialize the application specific GATT table
         ble_initialize_gatt_db();
 
-        // 开始广播
+        // Start advertising
         ble_start_advertising();
-        Serial.println("BLE 广播已启动");
+        Serial.println("BLE advertisement started");
       }
       break;
 
     // -------------------------------
-    // 此事件表示已打开新连接
+    // This event indicates that a new connection was opened
     case sl_bt_evt_connection_opened_id:
-      Serial.println("BLE 连接已打开");
+      Serial.println("BLE connection opened");
       break;
 
     // -------------------------------
-    // 此事件表示连接已关闭
+    // This event indicates that a connection was closed
     case sl_bt_evt_connection_closed_id:
-      Serial.println("BLE 连接已关闭");
-      // 重新启动广播
+      Serial.println("BLE connection closed");
+      // Restart the advertisement
       ble_start_advertising();
-      Serial.println("BLE 广播已重新启动");
+      Serial.println("BLE advertisement restarted");
       break;
 
     // -------------------------------
-    // 此事件表示本地 GATT 数据库中属性的值
-    // 被远程 GATT 客户端更改
+    // This event indicates that the value of an attribute in the local GATT
+    // database was changed by a remote GATT client
     case sl_bt_evt_gatt_server_attribute_value_id:
-      // 检查更改的特征是否为 LED 控制
+      // Check if the changed characteristic is the LED control
       if (led_control_characteristic_handle == evt->data.evt_gatt_server_attribute_value.attribute) {
-        Serial.println("已接收到 LED 控制特征数据");
-        // 检查接收数据的长度
+        Serial.println("LED control characteristic data received");
+        // Check the length of the received data
         if (evt->data.evt_gatt_server_attribute_value.value.len == 0) {
           break;
         }
-        // 获取接收到的字节
+        // Get the received byte
         uint8_t received_data = evt->data.evt_gatt_server_attribute_value.value.data[0];
-        // 根据接收到的数据打开/关闭 LED
-        // 如果我们接收到 '0' - 关闭 LED
-        // 如果我们接收到 '1' - 打开 LED
+        // Turn the LED on/off according to the received data
+        // If we receive a '0' - turn the LED off
+        // If we receive a '1' - turn the LED on
         if (received_data == 0x00) {
           digitalWrite(LED_BUILTIN, LED_BUILTIN_INACTIVE);
-          Serial.println("LED 关闭");
+          Serial.println("LED off");
         } else if (received_data == 0x01) {
-          Serial.println("LED 打开");
+          Serial.println("LED on");
           digitalWrite(LED_BUILTIN, LED_BUILTIN_ACTIVE);
         }
       }
       break;
 
     // -------------------------------
-    // 当 GATT 特征状态发生变化时接收此事件
+    // This event is received when a GATT characteristic status changes
     case sl_bt_evt_gatt_server_characteristic_status_id:
-      // 如果 'Notify' 特征已更改
+      // If the 'Notify' characteristic has been changed
       if (evt->data.evt_gatt_server_characteristic_status.characteristic == notify_characteristic_handle) {
-        // 客户端刚刚启用了通知 - 发送当前状态的通知
+        // The client just enabled the notification - send notification of the current state
         if (evt->data.evt_gatt_server_characteristic_status.client_config_flags & sl_bt_gatt_notification) {
-          Serial.println("更改通知已启用");
+          Serial.println("change notification enabled");
           notification_enabled = true;
         } else {
-          Serial.println("更改通知已禁用");
+          Serial.println("change notification disabled");
           notification_enabled = false;
         }
       }
       break;
 
     // -------------------------------
-    // 默认事件处理程序
+    // Default event handler
     default:
       break;
   }
 }
 
 /**************************************************************************/ /**
- * 如果启用了通知，则向客户端发送 BLE 通知
+ * Sends a BLE notification the the client if notifications are enabled 
  *****************************************************************************/
 static void send_helloworld_notification() {
   uint8_t str[12] = "Hello World";
@@ -444,13 +444,13 @@ static void send_helloworld_notification() {
                                                 sizeof(str),
                                                 (const uint8_t *)&str);
   if (sc == SL_STATUS_OK) {
-    Serial.println("发送通知！");
+    Serial.println("Send notification!");
   }
 }
 
 /**************************************************************************/ /**
- * 启动 BLE 广播
- * 如果是第一次调用则初始化广播
+ * Starts BLE advertisement
+ * Initializes advertising if it's called for the first time
  *****************************************************************************/
 static void ble_start_advertising() {
   static uint8_t advertising_set_handle = 0xff;
@@ -458,42 +458,42 @@ static void ble_start_advertising() {
   sl_status_t sc;
 
   if (init) {
-    // 创建广播集
+    // Create an advertising set
     sc = sl_bt_advertiser_create_set(&advertising_set_handle);
     app_assert_status(sc);
 
-    // 将广播间隔设置为 100ms
+    // Set advertising interval to 100ms
     sc = sl_bt_advertiser_set_timing(
       advertising_set_handle,
-      160,  // 最小广播间隔（毫秒 * 1.6）
-      160,  // 最大广播间隔（毫秒 * 1.6）
-      0,    // 广播持续时间
-      0);   // 最大广播事件数
+      160,  // minimum advertisement interval (milliseconds * 1.6)
+      160,  // maximum advertisement interval (milliseconds * 1.6)
+      0,    // advertisement duration
+      0);   // maximum number of advertisement events
     app_assert_status(sc);
 
     init = false;
   }
 
-  // 生成广播数据
+  // Generate data for advertising
   sc = sl_bt_legacy_advertiser_generate_data(advertising_set_handle, sl_bt_advertiser_general_discoverable);
   app_assert_status(sc);
 
-  // 开始广播并启用连接
+  // Start advertising and enable connections
   sc = sl_bt_legacy_advertiser_start(advertising_set_handle, sl_bt_advertiser_connectable_scannable);
   app_assert_status(sc);
 }
 
 /**************************************************************************/ /**
- * 初始化 GATT 数据库
- * 创建新的 GATT 会话并添加特定服务和特征
+ * Initializes the GATT database
+ * Creates a new GATT session and adds certain services and characteristics
  *****************************************************************************/
 static void ble_initialize_gatt_db() {
   sl_status_t sc;
-  // 创建新的 GATT 数据库
+  // Create a new GATT database
   sc = sl_bt_gattdb_new_session(&gattdb_session_id);
   app_assert_status(sc);
 
-  // 将通用访问服务添加到 GATT DB
+  // Add the Generic Access service to the GATT DB
   const uint8_t generic_access_service_uuid[] = { 0x00, 0x18 };
   sc = sl_bt_gattdb_add_service(gattdb_session_id,
                                 sl_bt_gattdb_primary_service,
@@ -503,8 +503,8 @@ static void ble_initialize_gatt_db() {
                                 &generic_access_service_handle);
   app_assert_status(sc);
 
-  // 将设备名称特征添加到通用访问服务
-  // 设备名称特征的值将被广播
+  // Add the Device Name characteristic to the Generic Access service
+  // The value of the Device Name characteristic will be advertised
   const sl_bt_uuid_16_t device_name_characteristic_uuid = { .data = { 0x00, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               generic_access_service_handle,
@@ -519,11 +519,11 @@ static void ble_initialize_gatt_db() {
                                               &name_characteristic_handle);
   app_assert_status(sc);
 
-  // 启动通用访问服务
+  // Start the Generic Access service
   sc = sl_bt_gattdb_start_service(gattdb_session_id, generic_access_service_handle);
   app_assert_status(sc);
 
-  // 将我的 BLE 服务添加到 GATT DB
+  // Add my BLE service to the GATT DB
   // UUID: de8a5aac-a99b-c315-0c80-60d4cbb51224
   const uuid_128 my_service_uuid = {
     .data = { 0x24, 0x12, 0xb5, 0xcb, 0xd4, 0x60, 0x80, 0x0c, 0x15, 0xc3, 0x9b, 0xa9, 0xac, 0x5a, 0x8a, 0xde }
@@ -536,7 +536,7 @@ static void ble_initialize_gatt_db() {
                                 &my_service_handle);
   app_assert_status(sc);
 
-  // 将 'LED 控制' 特征添加到 Blinky 服务
+  // Add the 'LED Control' characteristic to the Blinky service
   // UUID: 5b026510-4088-c297-46d8-be6c736a087a
   const uuid_128 led_control_characteristic_uuid = {
     .data = { 0x7a, 0x08, 0x6a, 0x73, 0x6c, 0xbe, 0xd8, 0x46, 0x97, 0xc2, 0x88, 0x40, 0x10, 0x65, 0x02, 0x5b }
@@ -549,16 +549,16 @@ static void ble_initialize_gatt_db() {
                                                0x00,
                                                led_control_characteristic_uuid,
                                                sl_bt_gattdb_fixed_length_value,
-                                               1,                            // 最大长度
-                                               sizeof(led_char_init_value),  // 初始值长度
-                                               &led_char_init_value,         // 初始值
+                                               1,                            // max length
+                                               sizeof(led_char_init_value),  // initial value length
+                                               &led_char_init_value,         // initial value
                                                &led_control_characteristic_handle);
 
-  // 启动 Blinky 服务
+  // Start the Blinky service
   sc = sl_bt_gattdb_start_service(gattdb_session_id, my_service_handle);
   app_assert_status(sc);
 
-  // 将 'Notify' 特征添加到我的 BLE 服务
+  // Add the 'Notify' characteristic to my BLE service
   // UUID: 61a885a4-41c3-60d0-9a53-6d652a70d29c
   const uuid_128 btn_report_characteristic_uuid = {
     .data = { 0x9c, 0xd2, 0x70, 0x2a, 0x65, 0x6d, 0x53, 0x9a, 0xd0, 0x60, 0xc3, 0x41, 0xa4, 0x85, 0xa8, 0x61 }
@@ -571,22 +571,22 @@ static void ble_initialize_gatt_db() {
                                                0x00,
                                                btn_report_characteristic_uuid,
                                                sl_bt_gattdb_fixed_length_value,
-                                               1,                               // 最大长度
-                                               sizeof(notify_char_init_value),  // 初始值长度
-                                               &notify_char_init_value,         // 初始值
+                                               1,                               // max length
+                                               sizeof(notify_char_init_value),  // initial value length
+                                               &notify_char_init_value,         // initial value
                                                &notify_characteristic_handle);
 
-  // 启动我的 BLE 服务
+  // Start my BLE service
   sc = sl_bt_gattdb_start_service(gattdb_session_id, my_service_handle);
   app_assert_status(sc);
 
-  // 提交 GATT DB 更改
+  // Commit the GATT DB changes
   sc = sl_bt_gattdb_commit(gattdb_session_id);
   app_assert_status(sc);
 }
 
 #ifndef BLE_STACK_SILABS
-#error "此示例仅与 Silicon Labs BLE 协议栈兼容。请在 'Tools > Protocol stack' 中选择 'BLE (Silabs)'。"
+#error "This example is only compatible with the Silicon Labs BLE stack. Please select 'BLE (Silabs)' in 'Tools > Protocol stack'."
 #endif
 ```
 
@@ -606,14 +606,15 @@ static void ble_initialize_gatt_db() {
 	</tr>
 </table>
 
+
 如果您想使用另一个 XIAO MG24 作为客户端来接收来自服务器的消息，那么您可以为客户端 XIAO 使用以下程序。
 
 ```cpp
-// 客户端代码
+// Client Code
 #define RF_SW_PW_PIN PB5
 #define RF_SW_PIN PB4
 
-// 连接状态
+// Connection states
 enum conn_state_t {
   ST_BOOT,
   ST_SCAN,
@@ -629,49 +630,49 @@ uint32_t blinky_service_handle = __UINT32_MAX__;
 uint16_t led_control_char_handle = __UINT16_MAX__;
 bool gatt_procedure_in_progress = false;
 
-// 如果没有内置按钮，设置一个连接按钮的引脚
+// If there's no built-in button set a pin where a button is connected
 #ifndef BTN_BUILTIN
 #define BTN_BUILTIN D0
 #endif
 
 void setup() {
-  // 将内置LED设置为输出
+  // Set the built-in LED as output
   pinMode(LED_BUILTIN, OUTPUT);
-  // 关闭内置LED
+  // Turn the built-in LED off
   digitalWrite(LED_BUILTIN, LED_BUILTIN_INACTIVE);
-  // 将内置按钮设置为输入
+  // Set the built-in button as input
   pinMode(BTN_BUILTIN, INPUT);
-  // 启动串口
+  // Start Serial
   Serial.begin(115200);
 
-  // 开启天线功能
+  // turn on the antenna function
   pinMode(RF_SW_PW_PIN, OUTPUT);
   digitalWrite(RF_SW_PW_PIN, HIGH);
 
   delay(100);
 
-  // HIGH -> 使用外部天线 / LOW -> 使用内置天线
+  // HIGH -> Use external antenna / LOW -> Use built-in antenna
   pinMode(RF_SW_PIN, OUTPUT);
   digitalWrite(RF_SW_PIN, LOW);
 }
 
 void loop() {
-  // 用于记住按钮上一个状态的静态变量
+  // Static variable for remembering the previous state of the button
   static uint8_t btn_state_prev = LOW;
-  // 如果连接已完全建立且没有正在进行的GATT程序
+  // If the connection is fully established and we don't have any ongoing GATT procedures
   if (connection_state == ST_READY && !gatt_procedure_in_progress) {
-    // 读取按钮的当前状态
+    // Read the current state of the button
     uint8_t btn_state = digitalRead(BTN_BUILTIN);
-    // 如果当前状态与上一个状态不同
+    // If the current state is different than the previous state
     if (btn_state_prev != btn_state) {
-      // 更新上一个状态
+      // Update the previous state
       btn_state_prev = btn_state;
-      // 反转状态（SL板按钮按下时为0，释放时为1）
+      // Invert the state (the SL board buttons give a 0 when pressed and 1 when released)
       uint8_t btn_state_inv = !btn_state;
-      // 记录状态变化
-      Serial.print("发送按钮状态: ");
+      // Log the state change
+      Serial.print("Sending button state: ");
       Serial.println(btn_state_inv);
-      // 通过写入其他设备的LED控制特征值，通过BLE发送新状态
+      // Send the new state over BLE by writing the other device's LED Control characteristic
       sl_status_t sc = sl_bt_gatt_write_characteristic_value(connection_handle, led_control_char_handle, sizeof(uint8_t), &btn_state_inv);
       app_assert_status(sc);
       gatt_procedure_in_progress = true;
@@ -679,13 +680,13 @@ void loop() {
   }
 }
 
-// Blinky服务
+// Blinky service
 // UUID: de8a5aac-a99b-c315-0c80-60d4cbb51224
 const uuid_128 blinky_service_uuid = {
   .data = { 0x24, 0x12, 0xb5, 0xcb, 0xd4, 0x60, 0x80, 0x0c, 0x15, 0xc3, 0x9b, 0xa9, 0xac, 0x5a, 0x8a, 0xde }
 };
 
-// LED控制特征值
+// LED Control characteristic
 // UUID: 5b026510-4088-c297-46d8-be6c736a087a
 const uuid_128 led_control_characteristic_uuid = {
   .data = { 0x7a, 0x08, 0x6a, 0x73, 0x6c, 0xbe, 0xd8, 0x46, 0x97, 0xc2, 0x88, 0x40, 0x10, 0x65, 0x02, 0x5b }
@@ -695,38 +696,38 @@ const uint8_t advertised_name[] = "XIAO_MG24 Server";
 static bool find_complete_local_name_in_advertisement(sl_bt_evt_scanner_legacy_advertisement_report_t* response);
 
 /**************************************************************************/ /**
- * 蓝牙协议栈事件处理程序
- * 当BLE协议栈发生事件时调用
+ * Bluetooth stack event handler
+ * Called when an event happens on BLE the stack
  *
- * @param[in] evt 来自蓝牙协议栈的事件
+ * @param[in] evt Event coming from the Bluetooth stack
  *****************************************************************************/
 void sl_bt_on_event(sl_bt_msg_t* evt) {
   static uint32_t scan_report_num = 0u;
   sl_status_t sc;
 
   switch (SL_BT_MSG_ID(evt->header)) {
-    // 当BLE设备成功启动时接收此事件
+    // This event is received when the BLE device has successfully booted
     case sl_bt_evt_system_boot_id:
-      // 打印欢迎消息
+      // Print a welcome message
       Serial.println();
-      Serial.println("Silicon Labs BLE灯光开关客户端示例");
-      Serial.println("BLE协议栈已启动");
-      // 开始扫描其他BLE设备
+      Serial.println("Silicon Labs BLE light switch client example");
+      Serial.println("BLE stack booted");
+      // Start scanning for other BLE devices
       sc = sl_bt_scanner_set_parameters(sl_bt_scanner_scan_mode_active, 16, 16);
       app_assert_status(sc);
       sc = sl_bt_scanner_start(sl_bt_scanner_scan_phy_1m,
                                sl_bt_scanner_discover_generic);
       app_assert_status(sc);
-      Serial.println("开始扫描...");
+      Serial.println("Started scanning...");
       connection_state = ST_SCAN;
       break;
 
-    // 当我们扫描到另一个BLE设备的广播时接收此事件
+    // This event is received when we scan the advertisement of another BLE device
     case sl_bt_evt_scanner_legacy_advertisement_report_id:
       scan_report_num++;
       Serial.print(" -> #");
       Serial.print(scan_report_num);
-      Serial.print(" | 地址: ");
+      Serial.print(" | Address: ");
       for (int i = 5; i >= 0; i--) {
         Serial.printf("%02x", evt->data.evt_scanner_legacy_advertisement_report.address.addr[i]);
         if (i > 0) {
@@ -736,15 +737,15 @@ void sl_bt_on_event(sl_bt_msg_t* evt) {
       Serial.print(" | RSSI: ");
       Serial.print(evt->data.evt_scanner_legacy_advertisement_report.rssi);
       Serial.print(" dBm");
-      Serial.print(" | 信道: ");
+      Serial.print(" | Channel: ");
       Serial.print(evt->data.evt_scanner_legacy_advertisement_report.channel);
-      Serial.print(" | 名称: ");
+      Serial.print(" | Name: ");
       Serial.println(find_complete_local_name_in_advertisement(&(evt->data.evt_scanner_legacy_advertisement_report)));
 
-      // 如果我们找到其他设备的名称
+      // If we find the other devices's name
       if (find_complete_local_name_in_advertisement(&(evt->data.evt_scanner_legacy_advertisement_report))) {
-        Serial.println("找到目标设备！");
-        Serial.print("正在连接到 ");
+        Serial.println("Target device found!");
+        Serial.print("Forming a connection to ");
         for (int i = 5; i >= 0; i--) {
           Serial.printf("%02x", evt->data.evt_scanner_legacy_advertisement_report.address.addr[i]);
           if (i > 0) {
@@ -753,10 +754,10 @@ void sl_bt_on_event(sl_bt_msg_t* evt) {
         }
         Serial.println(" ");
 
-        // 停止扫描
+        // Stop scanning
         sc = sl_bt_scanner_stop();
         app_assert_status(sc);
-        // 连接到设备
+        // Connect to the device
         sc = sl_bt_connection_open(evt->data.evt_scanner_legacy_advertisement_report.address,
                                    evt->data.evt_scanner_legacy_advertisement_report.address_type,
                                    sl_bt_gap_phy_1m,
@@ -764,16 +765,16 @@ void sl_bt_on_event(sl_bt_msg_t* evt) {
         // app_assert_status(sc);
         connection_state = ST_CONNECT;
 
-        Serial.println("我们现在已连接到BLE服务器");
+        Serial.println("We are now connected to the BLE Server");
       }
       break;
 
-    // 当BLE连接已打开时接收此事件
+    // This event is received when a BLE connection has been opened
     case sl_bt_evt_connection_opened_id:
-      Serial.println("连接已打开");
+      Serial.println("Connection opened");
       digitalWrite(LED_BUILTIN, LED_BUILTIN_ACTIVE);
       connection_handle = evt->data.evt_connection_opened.connection;
-      // 在连接的设备上发现Health Thermometer服务
+      // Discover Health Thermometer service on the connected device
       sc = sl_bt_gatt_discover_primary_services_by_uuid(connection_handle,
                                                         sizeof(blinky_service_uuid),
                                                         blinky_service_uuid.data);
@@ -782,41 +783,41 @@ void sl_bt_on_event(sl_bt_msg_t* evt) {
       connection_state = ST_SERVICE_DISCOVER;
       break;
 
-    // 当BLE连接已关闭时接收此事件
+    // This event is received when a BLE connection has been closed
     case sl_bt_evt_connection_closed_id:
-      Serial.println("连接已关闭");
+      Serial.println("Connection closed");
       digitalWrite(LED_BUILTIN, LED_BUILTIN_INACTIVE);
       connection_handle = __UINT8_MAX__;
-      // 重新开始扫描
+      // Restart scanning
       sc = sl_bt_scanner_start(sl_bt_scanner_scan_phy_1m,
                                sl_bt_scanner_discover_generic);
       app_assert_status(sc);
-      Serial.println("重新开始扫描...");
+      Serial.println("Restarted scanning...");
       connection_state = ST_SCAN;
       break;
 
-    // 当发现新服务时生成此事件
+    // This event is generated when a new service is discovered
     case sl_bt_evt_gatt_service_id:
-      Serial.println("发现GATT服务");
-      // 存储发现的Thermometer服务的句柄
+      Serial.println("GATT service discovered");
+      // Store the handle of the discovered Thermometer Service
       blinky_service_handle = evt->data.evt_gatt_service.service;
       break;
 
-    // 当发现新特征值时生成此事件
+    // This event is generated when a new characteristic is discovered
     case sl_bt_evt_gatt_characteristic_id:
-      Serial.println("发现GATT特征值");
-      // 存储发现的Temperature Measurement特征值的句柄
+      Serial.println("GATT charactersitic discovered");
+      // Store the handle of the discovered Temperature Measurement characteristic
       led_control_char_handle = evt->data.evt_gatt_characteristic.characteristic;
       break;
 
-    // 当GATT程序完成时接收此事件
+    // This event is received when a GATT procedure completes
     case sl_bt_evt_gatt_procedure_completed_id:
-      Serial.println("GATT程序完成");
+      Serial.println("GATT procedure completed");
       gatt_procedure_in_progress = false;
 
       if (connection_state == ST_SERVICE_DISCOVER) {
-        Serial.println("GATT服务发现完成");
-        // 在连接的设备上发现温度计特征值
+        Serial.println("GATT service discovery finished");
+        // Discover thermometer characteristic on the connected device
         sc = sl_bt_gatt_discover_characteristics_by_uuid(evt->data.evt_gatt_procedure_completed.connection,
                                                          blinky_service_handle,
                                                          sizeof(led_control_characteristic_uuid.data),
@@ -828,53 +829,53 @@ void sl_bt_on_event(sl_bt_msg_t* evt) {
       }
 
       if (connection_state == ST_CHAR_DISCOVER) {
-        Serial.println("GATT特征值发现完成");
+        Serial.println("GATT characteristic discovery finished");
         connection_state = ST_READY;
         break;
       }
       break;
 
-    // 默认事件处理程序
+    // Default event handler
     default:
-      Serial.print("BLE事件: 0x");
+      Serial.print("BLE event: 0x");
       Serial.println(SL_BT_MSG_ID(evt->header), HEX);
       break;
   }
 }
 
 /**************************************************************************/ /**
- * 在BLE广播中查找配置的名称
+ * Finds a configured name in BLE advertisements
  *
- * @param[in] response 从扫描接收的BLE响应事件
+ * @param[in] response BLE response event received from scanning
  *
- * @return 如果找到返回true，否则返回false
+ * @return true if found, false otherwise
  *****************************************************************************/
 static bool find_complete_local_name_in_advertisement(sl_bt_evt_scanner_legacy_advertisement_report_t* response) {
   int i = 0;
   bool found = false;
 
-  // 遍历响应数据
+  // Go through the response data
   while (i < (response->data.len - 1)) {
     uint8_t advertisement_length = response->data.data[i];
     uint8_t advertisement_type = response->data.data[i + 1];
 
-    // 类型 0x09 = 完整本地名称，0x08 缩短名称
-    // 如果字段类型匹配完整本地名称
+    // Type 0x09 = Complete Local Name, 0x08 Shortened Name
+    // If the field type matches the Complete Local Name
     if (advertisement_type == 0x09) {
-      // 检查设备名称是否匹配
+      // Check if device name matches
       if (memcmp(response->data.data + i + 2, advertised_name, strlen((const char*)advertised_name)) == 0) {
         found = true;
         break;
       }
     }
-    // 跳转到下一个广播记录
+    // Jump to next advertisement record
     i = i + advertisement_length + 1;
   }
   return found;
 }
 
 #ifndef BLE_STACK_SILABS
-#error "此示例仅与Silicon Labs BLE协议栈兼容。请在'工具 > 协议栈'中选择'BLE (Silabs)'。"
+#error "This example is only compatible with the Silicon Labs BLE stack. Please select 'BLE (Silabs)' in 'Tools > Protocol stack'."
 #endif
 ```
 
@@ -904,15 +905,15 @@ const uuid_128 btn_report_characteristic_uuid = {
 
 您可以保留默认的UUID，或者可以访问 [uuidgenerator.net](https://www.uuidgenerator.net/) 为您的服务和特征创建随机UUID。
 
-然后，您创建一个名为"XIAO_MG24 Server"的BLE设备。您可以将此名称更改为您喜欢的任何名称。在下一行中，您将BLE设备设置为服务器。之后，您使用之前定义的UUID为BLE服务器创建一个服务。
+然后，您创建一个名为"XIAO_MG24 Server"的BLE设备。您可以将此名称更改为任何您喜欢的名称。在下一行中，您将BLE设备设置为服务器。之后，您使用之前定义的UUID为BLE服务器创建一个服务。
 
 ```c
 sl_status_t sc;
-// 创建一个新的 GATT 数据库
+// Create a new GATT database
 sc = sl_bt_gattdb_new_session(&gattdb_session_id);
 app_assert_status(sc);
 
-// 将通用访问服务添加到 GATT 数据库
+// Add the Generic Access service to the GATT DB
 const uint8_t generic_access_service_uuid[] = { 0x00, 0x18 };
 sc = sl_bt_gattdb_add_service(gattdb_session_id,
                               sl_bt_gattdb_primary_service,
@@ -922,8 +923,8 @@ sc = sl_bt_gattdb_add_service(gattdb_session_id,
                               &generic_access_service_handle);
 app_assert_status(sc);
 
-// 将设备名称特征添加到通用访问服务
-// 设备名称特征的值将被广播
+// Add the Device Name characteristic to the Generic Access service
+// The value of the Device Name characteristic will be advertised
 const sl_bt_uuid_16_t device_name_characteristic_uuid = { .data = { 0x00, 0x2A } };
 sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                             generic_access_service_handle,
@@ -938,11 +939,11 @@ sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                             &name_characteristic_handle);
 app_assert_status(sc);
 
-// 启动通用访问服务
+// Start the Generic Access service
 sc = sl_bt_gattdb_start_service(gattdb_session_id, generic_access_service_handle);
 app_assert_status(sc);
 
-// 将我的 BLE 服务添加到 GATT 数据库
+// Add my BLE service to the GATT DB
 // UUID: de8a5aac-a99b-c315-0c80-60d4cbb51224
 const uuid_128 my_service_uuid = {
   .data = { 0x24, 0x12, 0xb5, 0xcb, 0xd4, 0x60, 0x80, 0x0c, 0x15, 0xc3, 0x9b, 0xa9, 0xac, 0x5a, 0x8a, 0xde }
@@ -956,7 +957,7 @@ sc = sl_bt_gattdb_add_service(gattdb_session_id,
 app_assert_status(sc);
 ```
 
-然后，您为该服务设置特征。如您所见，您还使用了之前定义的 UUID，并且需要传递特征的属性作为参数。在这种情况下，它是：READ 和 NOTIFY。
+然后，您为该服务设置特征。如您所见，您还使用了之前定义的 UUID，并且需要将特征的属性作为参数传递。在这种情况下，它们是：READ 和 NOTIFY。
 
 ```c
 // Add the 'Notify' characteristic to my BLE service
@@ -988,7 +989,7 @@ app_assert_status(sc);
 
 创建特征后，您可以使用 `sl_bt_gatt_server_notify_all()` 方法设置其值。在这种情况下，我们将值设置为文本"Hello World"。您可以将此文本更改为任何您喜欢的内容。在未来的项目中，此文本可以是传感器读数或灯的状态等。
 
-最后，您可以启动服务和广播，以便其他BLE设备可以扫描并找到此BLE设备。
+最后，您可以启动服务和广播，以便其他 BLE 设备可以扫描并找到此 BLE 设备。
 
 ```c
 // Start advertising
@@ -1009,29 +1010,29 @@ ble_start_advertising();
 - 第四，显示实时温度。
 
 ```c
-// 服务器
+// server
 
 /*
-   BLE 健康温度计示例
+   BLE health thermometer example
 
-   该示例实现了一个最小的 BLE 健康温度计配置文件，通过 BLE 提供温度测量
+   The example implements a minimal BLE Health Thermometer profile to provide temperature measurements over BLE
 
-   启动时，草图将使用配置的名称开始 BLE 广播，然后
-   它将接受任何传入的连接。当设备连接并为
-   健康温度计特征启用指示时，设备将发送其 CPU 温度读数作为温度计数据。
-   使用 EFR Connect 应用程序，您可以通过转到"演示"选项卡并选择"健康温度计"来测试此功能。
-   或者，您可以通过将另一个 BLE 板刷写 'ble_health_thermometer_client' 演示来测试此示例
-   并让两个板通过 BLE 交换温度测量值。
+   On startup the sketch will start a BLE advertisement with the configured name, then
+   it will accept any incoming connection. When a device is connected and enables indications for the
+   health thermometer characteristic, then the device will send it's CPU temperature readings as thermometer data.
+   With the EFR Connect app you can test this functionality by going to the "Demo" tab and selecting "Health Thermometer".
+   Alternatively, you can test this example by flashing an other BLE board with the 'ble_health_thermometer_client' demo
+   and have the two boards exchange the temperature measurements over BLE.
 
-   在以下网址了解更多 API 使用信息：https://docs.silabs.com/bluetooth/latest/bluetooth-stack-api/
+   Find out more on the API usage at: https://docs.silabs.com/bluetooth/latest/bluetooth-stack-api/
 
-   此示例仅适用于 'BLE (Silabs)' 协议栈变体。
+   This example only works with the 'BLE (Silabs)' protocol stack variant.
 
-   您可以使用 EFR Connect 应用程序测试温度计设备：
+   You can test the thermometer device with the EFR Connect app:
     - https://play.google.com/store/apps/details?id=com.siliconlabs.bledemo
     - https://apps.apple.com/us/app/efr-connect-ble-mobile-app/id1030932759
 
-   兼容板：
+   Compatible boards:
    - Arduino Nano Matter
    - SparkFun Thing Plus MGM240P
    - xG27 DevKit
@@ -1041,7 +1042,7 @@ ble_start_advertising();
    - Ezurio Lyra 24P 20dBm Dev Kit
    - Seeed Studio XIAO MG24 (Sense)
 
-   作者：Tamas Jozsi (Silicon Labs)
+   Author: Tamas Jozsi (Silicon Labs)
  */
  
 #define RF_SW_PW_PIN PB5
@@ -1062,13 +1063,13 @@ void setup()
   digitalWrite(LED_BUILTIN, LED_BUILTIN_INACTIVE);
   Serial.begin(115200);
   
-  // 开启此天线功能
+  // turn on this antenna function
   pinMode(RF_SW_PW_PIN, OUTPUT);  
   digitalWrite(RF_SW_PW_PIN, HIGH);
 
   delay(100);
 
-  // HIGH -> 使用外部天线 / LOW -> 使用内置天线
+  // HIGH -> Use external antenna / LOW -> Use built-in antenna
   pinMode(RF_SW_PIN, OUTPUT);  
   digitalWrite(RF_SW_PIN, LOW);
 }
@@ -1079,19 +1080,20 @@ void loop()
 }
 
 /**************************************************************************//**
- * 如果启用，向连接的设备发送带有当前温度的 BLE 指示，然后等待一秒钟
+ * Sends a BLE indication with the current temperature to the connected device
+ * if enabled, then waits for a second
  *****************************************************************************/
 static void handle_temperature_indication()
 {
-  // 如果未启用指示，立即返回
+  // Return immediately if indications are not enabled
   if (!indication_enabled) {
     return;
   }
 
-  // 获取当前 CPU 温度
+  // Get the current CPU temperature
   float temperature = getCPUTemp();
 
-  // 将温度转换为 IEEE 11073 浮点值
+  // Convert the temperature to an IEEE 11073 float value
   int32_t millicelsius = (int32_t)(temperature * 1000);
   uint8_t buffer[5];
   uint32_t tmp_value = ((uint32_t)millicelsius & 0x00ffffffu) | ((uint32_t)(-3) << 24);
@@ -1101,92 +1103,92 @@ static void handle_temperature_indication()
   buffer[3] = (tmp_value >> 16) & 0xff;
   buffer[4] = (tmp_value >> 24) & 0xff;
 
-  // 发送指示
+  // Send the indication
   sl_bt_gatt_server_send_indication(connection_handle, temp_measurement_characteristic_handle, sizeof(buffer), buffer);
 
-  // 记录温度
-  Serial.print("温度指示已发送 - 当前温度：");
+  // Log the temperature
+  Serial.print("Temperature indication sent - current temperature: ");
   Serial.print(temperature);
   Serial.println(" C");
 
-  // 等待一秒钟
+  // Wait for a second
   delay(1000);
 }
 
 /**************************************************************************//**
- * 蓝牙栈事件处理程序
- * 当 BLE 栈上发生事件时调用
+ * Bluetooth stack event handler
+ * Called when an event happens on BLE the stack
  *
- * @param[in] evt 来自蓝牙栈的事件
+ * @param[in] evt Event coming from the Bluetooth stack
  *****************************************************************************/
 void sl_bt_on_event(sl_bt_msg_t *evt)
 {
   switch (SL_BT_MSG_ID(evt->header)) {
-    // 当 BLE 设备成功启动时接收此事件
+    // This event is received when the BLE device has successfully booted
     case sl_bt_evt_system_boot_id:
     {
-      // 打印欢迎消息
+      // Print a welcome message
       Serial.begin(115200);
       Serial.println();
-      Serial.println("Silicon Labs BLE 健康温度计示例");
-      Serial.println("BLE 栈已启动");
-      // 初始化应用程序特定的 GATT DB
+      Serial.println("Silicon Labs BLE health thermometer example");
+      Serial.println("BLE stack booted");
+      // Initialize the application specific GATT DB
       ble_initialize_gatt_db();
-      // 开始广播
+      // Start advertising
       ble_start_advertising();
     }
     break;
 
-    // 当 BLE 连接已打开时接收此事件
+    // This event is received when a BLE connection has been opened
     case sl_bt_evt_connection_opened_id:
-      // 存储连接句柄，发送指示时需要
+      // Store the connection handle which will be needed for sending indications
       connection_handle = evt->data.evt_connection_opened.connection;
-      Serial.println("连接已打开");
+      Serial.println("Connection opened");
       digitalWrite(LED_BUILTIN, LED_BUILTIN_ACTIVE);
       break;
 
-    // 当 BLE 连接已关闭时接收此事件
+    // This event is received when a BLE connection has been closed
     case sl_bt_evt_connection_closed_id:
-      // 重置存储的值
+      // Reset stored values
       connection_handle = 0u;
       indication_enabled = false;
-      Serial.println("连接已关闭");
+      Serial.println("Connection closed");
       digitalWrite(LED_BUILTIN, LED_BUILTIN_INACTIVE);
-      // 重新开始广播
+      // Restart the advertisement
       ble_start_advertising();
       break;
 
-    // 当 GATT 特征状态改变时接收此事件
+    // This event is received when a GATT characteristic status changes
     case sl_bt_evt_gatt_server_characteristic_status_id:
     {
-      // 如果温度测量特征已更改
+      // If the temperature measurement characteristic has been changed
       if (evt->data.evt_gatt_server_characteristic_status.characteristic == temp_measurement_characteristic_handle) {
         uint16_t client_config_flags = evt->data.evt_gatt_server_characteristic_status.client_config_flags;
         uint8_t status_flags = evt->data.evt_gatt_server_characteristic_status.status_flags;
         if ((client_config_flags == 0x02) && (status_flags == 0x01)) {
-          // 如果在客户端配置标志中启用了指示 (0x02)，并且状态标志显示这是一个更改
-          Serial.println("温度指示已启用");
+          // If indication was enabled (0x02) in the client config flags, and the status flag shows that it's a change
+          Serial.println("Temperature indication enabled");
           indication_enabled = true;
         } else if ((client_config_flags == 0x00) && (status_flags == 0x01)) {
-          // 如果在客户端配置标志中禁用了指示 (0x00)，并且状态标志显示这是一个更改
-          Serial.println("温度指示已禁用");
+          // If indication was disabled (0x00) in the client config flags, and the status flag shows that it's a change
+          Serial.println("Temperature indication disabled");
           indication_enabled = false;
         }
       }
     }
     break;
 
-    // 默认事件处理程序
+    // Default event handler
     default:
-      Serial.print("BLE 事件：0x");
+      Serial.print("BLE event: 0x");
       Serial.println(SL_BT_MSG_ID(evt->header), HEX);
       break;
   }
 }
 
 /**************************************************************************//**
- * 开始 BLE 广播
- * 如果是第一次调用，则初始化广播
+ * Starts BLE advertisement
+ * Initializes advertising if it's called for the first time
  *****************************************************************************/
 static void ble_start_advertising()
 {
@@ -1195,38 +1197,38 @@ static void ble_start_advertising()
   sl_status_t sc;
 
   if (init) {
-    // 创建广播集
+    // Create an advertising set
     sc = sl_bt_advertiser_create_set(&advertising_set_handle);
     app_assert_status(sc);
 
-    // 将广播间隔设置为 100ms
+    // Set advertising interval to 100ms
     sc = sl_bt_advertiser_set_timing(
       advertising_set_handle,
-      160,   // 最小广播间隔（毫秒 * 1.6）
-      160,   // 最大广播间隔（毫秒 * 1.6）
-      0,     // 广播持续时间
-      0);    // 最大广播事件数
+      160,   // minimum advertisement interval (milliseconds * 1.6)
+      160,   // maximum advertisement interval (milliseconds * 1.6)
+      0,     // advertisement duration
+      0);    // maximum number of advertisement events
     app_assert_status(sc);
 
     init = false;
   }
 
-  // 为广播生成数据
+  // Generate data for advertising
   sc = sl_bt_legacy_advertiser_generate_data(advertising_set_handle, sl_bt_advertiser_general_discoverable);
   app_assert_status(sc);
 
-  // 开始广播并启用连接
+  // Start advertising and enable connections
   sc = sl_bt_legacy_advertiser_start(advertising_set_handle, sl_bt_advertiser_connectable_scannable);
   app_assert_status(sc);
 
-  Serial.print("开始广播为 '");
+  Serial.print("Started advertising as '");
   Serial.print((const char*)advertised_name);
   Serial.println("'...");
 }
 
 /**************************************************************************//**
- * 初始化 GATT 数据库
- * 创建新的 GATT 会话并添加某些服务和特征
+ * Initializes the GATT database
+ * Creates a new GATT session and adds certain services and characteristics
  *****************************************************************************/
 static void ble_initialize_gatt_db()
 {
@@ -1236,11 +1238,11 @@ static void ble_initialize_gatt_db()
   uint16_t device_name_characteristic_handle;
   uint16_t temp_type_characteristic_handle;
 
-  // 创建新的 GATT 数据库
+  // Create a new GATT database
   sc = sl_bt_gattdb_new_session(&gattdb_session_id);
   app_assert_status(sc);
 
-  // 通用访问服务
+  // Generic Access service
   const uint8_t generic_access_service_uuid[] = { 0x00, 0x18 };
   sc = sl_bt_gattdb_add_service(gattdb_session_id,
                                 sl_bt_gattdb_primary_service,
@@ -1250,7 +1252,7 @@ static void ble_initialize_gatt_db()
                                 &service_handle);
   app_assert_status(sc);
 
-  // 设备名称特征
+  // Device Name characteristic
   const sl_bt_uuid_16_t device_name_characteristic_uuid = { .data = { 0x00, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service_handle,
@@ -1268,7 +1270,7 @@ static void ble_initialize_gatt_db()
   sc = sl_bt_gattdb_start_service(gattdb_session_id, service_handle);
   app_assert_status(sc);
 
-  // 健康温度计服务
+  // Health Thermometer service
   const uint8_t thermometer_service_uuid[] = { 0x09, 0x18 };
   sc = sl_bt_gattdb_add_service(gattdb_session_id,
                                 sl_bt_gattdb_primary_service,
@@ -1278,7 +1280,7 @@ static void ble_initialize_gatt_db()
                                 &service_handle);
   app_assert_status(sc);
 
-  // 温度测量特征
+  // Temperature Measurement characteristic
   const sl_bt_uuid_16_t temp_measurement_characteristic_uuid = { .data = { 0x1C, 0x2A } };
   uint8_t temp_initial_value[5] = { 0, 0, 0, 0, 0 };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -1294,9 +1296,9 @@ static void ble_initialize_gatt_db()
                                               &temp_measurement_characteristic_handle);
   app_assert_status(sc);
 
-  // 温度类型特征
+  // Temperature Type characteristic
   const sl_bt_uuid_16_t temp_type_characteristic_uuid = { .data = { 0x1D, 0x2A } };
-  // 温度类型：身体 (2)
+  // Temperature type: body (2)
   uint8_t temp_type_initial_value = 2;
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service_handle,
@@ -1311,45 +1313,45 @@ static void ble_initialize_gatt_db()
                                               &temp_type_characteristic_handle);
   app_assert_status(sc);
 
-  // 启动健康温度计服务
+  // Start the Health Thermometer service
   sc = sl_bt_gattdb_start_service(gattdb_session_id, service_handle);
   app_assert_status(sc);
 
-  // 提交 GATT DB 更改
+  // Commit the GATT DB changes
   sc = sl_bt_gattdb_commit(gattdb_session_id);
   app_assert_status(sc);
 }
 
 #ifndef BLE_STACK_SILABS
-  #error "此示例仅与 Silicon Labs BLE 栈兼容。请在 'Tools > Protocol stack' 中选择 'BLE (Silabs)'。"
+  #error "This example is only compatible with the Silicon Labs BLE stack. Please select 'BLE (Silabs)' in 'Tools > Protocol stack'."
 #endif
 ```
 
-为其中一个 XIAO 上传程序后，如果程序运行顺利，那么你可以拿出手机并使用 nRF Connect APP 搜索名为 **XIAOMG24_BLE** 的蓝牙设备，连接它，并点击下面显示的按钮，你将收到温度数据信息。
+为其中一个 XIAO 上传程序后，如果程序运行顺利，那么您可以拿出手机并使用 nRF Connect APP 搜索名为 **XIAOMG24_BLE** 的蓝牙设备，连接它，然后点击下面显示的按钮，您将收到温度数据信息。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Bluetooth/BLEServer-5.jpg" style={{width:300, height:'auto'}}/></div>
 
-接下来，我们需要拿出另一个 XIAO，它作为客户端来收集和显示我们的数据。
+接下来，我们需要拿出另一个 XIAO，它充当客户端来收集和显示我们的数据。
 
 ```c
-// 客户端
+// client
 
 /*
-   BLE 健康温度计客户端示例
+   BLE health thermometer client example
 
-   该示例连接到运行"BLE 健康温度计"示例的另一块开发板，并通过 BLE 读取温度
+   The example connects to another board running the 'BLE Health Thermometer' example and reads the temperature through BLE
 
-   启动时，该程序将开始扫描运行"ble_health_thermometer"示例并
-   广播为"Thermometer Example"的另一块开发板。一旦找到另一块开发板，它会建立连接，
-   发现其服务和特征，然后订阅温度测量。
-   订阅后，该示例开始定期从另一块开发板接收温度数据，
-   并将其打印到串口。
+   On startup the sketch will start a scanning for the other board running the 'ble_health_thermometer' example and
+   advertising as "Thermometer Example". Once the other board is found, it establishes a connection,
+   discovers it's services and characteristics, then subscribes to the temperature measurements.
+   After the subscription the example starts receiving the temperature data from the other board periodically,
+   and prints it to Serial.
 
-   在以下网址了解更多 API 使用信息：https://docs.silabs.com/bluetooth/latest/bluetooth-stack-api/
+   Find out more on the API usage at: https://docs.silabs.com/bluetooth/latest/bluetooth-stack-api/
 
-   此示例仅适用于"BLE (Silabs)"协议栈变体。
+   This example only works with the 'BLE (Silabs)' protocol stack variant.
 
-   兼容的开发板：
+   Compatible boards:
    - Arduino Nano Matter
    - SparkFun Thing Plus MGM240P
    - xG27 DevKit
@@ -1359,7 +1361,7 @@ static void ble_initialize_gatt_db()
    - Ezurio Lyra 24P 20dBm Dev Kit
    - Seeed Studio XIAO MG24 (Sense)
 
-   作者：Tamas Jozsi (Silicon Labs)
+   Author: Tamas Jozsi (Silicon Labs)
  */
 
 #define RF_SW_PW_PIN PB5
@@ -1371,13 +1373,13 @@ void setup()
   digitalWrite(LED_BUILTIN, LED_BUILTIN_INACTIVE);
   Serial.begin(115200);
 
-  // 开启此天线功能
+  // turn on this antenna function
   pinMode(RF_SW_PW_PIN, OUTPUT);  
   digitalWrite(RF_SW_PW_PIN, HIGH);
 
   delay(100);
 
-  // HIGH -> 使用外部天线 / LOW -> 使用内置天线
+  // HIGH -> Use external antenna / LOW -> Use built-in antenna
   pinMode(RF_SW_PIN, OUTPUT);  
   digitalWrite(RF_SW_PIN, LOW);
 }
@@ -1386,7 +1388,7 @@ void loop()
 {
 }
 
-// 连接状态
+// Connection states
 enum conn_state_t {
   ST_BOOT,
   ST_SCAN,
@@ -1397,7 +1399,7 @@ enum conn_state_t {
   ST_RECEIVE_DATA
 };
 
-// IEEE 11073 浮点结构
+// IEEE 11073 float structure
 typedef struct {
   uint8_t mantissa_l;
   uint8_t mantissa_m;
@@ -1417,42 +1419,42 @@ uint16_t temp_measurement_char_handle = __UINT16_MAX__;
 conn_state_t connection_state = ST_BOOT;
 
 /**************************************************************************//**
- * 蓝牙协议栈事件处理程序
- * 当 BLE 协议栈上发生事件时调用
+ * Bluetooth stack event handler
+ * Called when an event happens on BLE the stack
  *
- * @param[in] evt 来自蓝牙协议栈的事件
+ * @param[in] evt Event coming from the Bluetooth stack
  *****************************************************************************/
 void sl_bt_on_event(sl_bt_msg_t *evt)
 {
   sl_status_t sc;
 
   switch (SL_BT_MSG_ID(evt->header)) {
-    // 当 BLE 设备成功启动时接收此事件
+    // This event is received when the BLE device has successfully booted
     case sl_bt_evt_system_boot_id:
-      // 打印欢迎消息
+      // Print a welcome message
       Serial.println();
-      Serial.println("Silicon Labs BLE 健康温度计客户端示例");
-      Serial.println("BLE 协议栈已启动");
-      // 开始扫描其他 BLE 设备
+      Serial.println("Silicon Labs BLE health thermometer client example");
+      Serial.println("BLE stack booted");
+      // Start scanning for other BLE devices
       sc = sl_bt_scanner_set_parameters(sl_bt_scanner_scan_mode_active, 16, 16);
       app_assert_status(sc);
       sc = sl_bt_scanner_start(sl_bt_scanner_scan_phy_1m,
                                sl_bt_scanner_discover_generic);
       app_assert_status(sc);
-      Serial.println("开始扫描...");
+      Serial.println("Started scanning...");
       connection_state = ST_SCAN;
       break;
 
-    // 当我们扫描到另一个 BLE 设备的广播时接收此事件
+    // This event is received when we scan the advertisement of another BLE device
     case sl_bt_evt_scanner_legacy_advertisement_report_id:
-      Serial.println("接收到 BLE 扫描报告");
-      // 如果我们找到其他设备的名称
+      Serial.println("BLE scan report received");
+      // If we find the other devices's name
       if (find_complete_local_name_in_advertisement(&(evt->data.evt_scanner_legacy_advertisement_report))) {
-        Serial.println("找到目标设备");
-        // 停止扫描
+        Serial.println("Target device found");
+        // Stop scanning
         sc = sl_bt_scanner_stop();
         app_assert_status(sc);
-        // 连接到设备
+        // Connect to the device
         sc = sl_bt_connection_open(evt->data.evt_scanner_legacy_advertisement_report.address,
                                    evt->data.evt_scanner_legacy_advertisement_report.address_type,
                                    sl_bt_gap_phy_1m,
@@ -1462,11 +1464,11 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
       }
       break;
 
-    // 当 BLE 连接已打开时接收此事件
+    // This event is received when a BLE connection has been opened
     case sl_bt_evt_connection_opened_id:
-      Serial.println("连接已打开");
+      Serial.println("Connection opened");
       digitalWrite(LED_BUILTIN, LED_BUILTIN_ACTIVE);
-      // 在连接的设备上发现健康温度计服务
+      // Discover Health Thermometer service on the connected device
       sc = sl_bt_gatt_discover_primary_services_by_uuid(evt->data.evt_connection_opened.connection,
                                                         sizeof(thermometer_service_uuid),
                                                         thermometer_service_uuid);
@@ -1474,39 +1476,39 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
       connection_state = ST_SERVICE_DISCOVER;
       break;
 
-    // 当 BLE 连接已关闭时接收此事件
+    // This event is received when a BLE connection has been closed
     case sl_bt_evt_connection_closed_id:
-      Serial.println("连接已关闭");
+      Serial.println("Connection closed");
       digitalWrite(LED_BUILTIN, LED_BUILTIN_INACTIVE);
-      // 重新开始扫描
+      // Restart scanning
       sc = sl_bt_scanner_start(sl_bt_scanner_scan_phy_1m,
                                sl_bt_scanner_discover_generic);
       app_assert_status(sc);
-      Serial.println("重新开始扫描...");
+      Serial.println("Restarted scanning...");
       connection_state = ST_SCAN;
       break;
 
-    // 当发现新服务时生成此事件
+    // This event is generated when a new service is discovered
     case sl_bt_evt_gatt_service_id:
-      Serial.println("发现 GATT 服务");
-      // 存储发现的温度计服务的句柄
+      Serial.println("GATT service discovered");
+      // Store the handle of the discovered Thermometer Service
       thermometer_service_handle = evt->data.evt_gatt_service.service;
       break;
 
-    // 当发现新特征时生成此事件
+    // This event is generated when a new characteristic is discovered
     case sl_bt_evt_gatt_characteristic_id:
-      Serial.println("发现 GATT 特征");
-      // 存储发现的温度测量特征的句柄
+      Serial.println("GATT charactersitic discovered");
+      // Store the handle of the discovered Temperature Measurement characteristic
       temp_measurement_char_handle = evt->data.evt_gatt_characteristic.characteristic;
       break;
 
-    // 当 GATT 过程完成时接收此事件
+    // This event is received when a GATT procedure completes
     case sl_bt_evt_gatt_procedure_completed_id:
-      Serial.println("GATT 过程完成");
+      Serial.println("GATT procedure completed");
 
       if (connection_state == ST_SERVICE_DISCOVER) {
-        Serial.println("GATT 服务发现完成");
-        // 在连接的设备上发现温度计特征
+        Serial.println("GATT service discovery finished");
+        // Discover thermometer characteristic on the connected device
         sc = sl_bt_gatt_discover_characteristics_by_uuid(evt->data.evt_gatt_procedure_completed.connection,
                                                          thermometer_service_handle,
                                                          sizeof(temp_measurement_characteristic_uuid.data),
@@ -1517,8 +1519,8 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
       }
 
       if (connection_state == ST_CHAR_DISCOVER) {
-        Serial.println("GATT 特征发现完成");
-        // 启用温度测量指示
+        Serial.println("GATT characteristic discovery finished");
+        // Enable temperature measurement indications
         sc = sl_bt_gatt_set_characteristic_notification(evt->data.evt_gatt_procedure_completed.connection,
                                                         temp_measurement_char_handle,
                                                         sl_bt_gatt_indication);
@@ -1528,21 +1530,21 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
       }
 
       if (connection_state == ST_REQUEST_INDICATION) {
-        Serial.println("温度测量指示已启用");
+        Serial.println("Temperature measurement indications enabled");
         connection_state = ST_RECEIVE_DATA;
       }
       break;
 
-    // 当接收到特征值时接收此事件（如指示）
+    // This event is received when a characteristic value was received (like an indication)
     case sl_bt_evt_gatt_characteristic_value_id:
     {
-      Serial.println("接收到 GATT 数据");
-      // 从事件中获取接收到的数据
+      Serial.println("GATT data received");
+      // Get the received data from the event
       uint8_t* char_value = &(evt->data.evt_gatt_characteristic_value.value.data[0]);
-      // 将其转换回浮点数
+      // Convert it back to float
       float temperature = translate_IEEE_11073_temperature_to_float((IEEE_11073_float *)(char_value + 1));
-      // 打印到串口
-      Serial.print("接收到的温度：");
+      // Print to Serial
+      Serial.print("Received temperature: ");
       Serial.print(temperature);
       Serial.println(" C");
 
@@ -1551,52 +1553,52 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
     }
     break;
 
-    // 默认事件处理程序
+    // Default event handler
     default:
-      Serial.print("BLE 事件：0x");
+      Serial.print("BLE event: 0x");
       Serial.println(SL_BT_MSG_ID(evt->header), HEX);
       break;
   }
 }
 
 /**************************************************************************//**
- * 在 BLE 广播中查找配置的名称
+ * Finds a configured name in BLE advertisements
  *
- * @param[in] response 从扫描接收到的 BLE 响应事件
+ * @param[in] response BLE response event received from scanning
  *
- * @return 如果找到则返回 true，否则返回 false
+ * @return true if found, false otherwise
  *****************************************************************************/
 static bool find_complete_local_name_in_advertisement(sl_bt_evt_scanner_legacy_advertisement_report_t *response)
 {
   int i = 0;
   bool found = false;
 
-  // 遍历响应数据
+  // Go through the response data
   while (i < (response->data.len - 1)) {
     uint8_t advertisement_length = response->data.data[i];
     uint8_t advertisement_type = response->data.data[i + 1];
 
-    // 类型 0x09 = 完整本地名称，0x08 缩短名称
-    // 如果字段类型匹配完整本地名称
+    // Type 0x09 = Complete Local Name, 0x08 Shortened Name
+    // If the field type matches the Complete Local Name
     if (advertisement_type == 0x09) {
-      // 检查设备名称是否匹配
+      // Check if device name matches
       if (memcmp(response->data.data + i + 2, advertised_name, strlen((const char*)advertised_name)) == 0) {
         found = true;
         break;
       }
     }
-    // 跳转到下一个广播记录
+    // Jump to next advertisement record
     i = i + advertisement_length + 1;
   }
   return found;
 }
 
 /**************************************************************************//**
- * 将 IEEE-11073 温度值转换为浮点数
+ * Translates a IEEE-11073 temperature value to float
  *
- * @param[in] IEEE_11073_value 要转换的 IEEE 11073 浮点值
+ * @param[in] IEEE_11073_value the IEEE 11073 float value to convert
  *
- * @return 转换后的浮点值，失败时返回 NAN
+ * @return the converted value in float, NAN on failure
  *****************************************************************************/
 static float translate_IEEE_11073_temperature_to_float(IEEE_11073_float const *IEEE_11073_value)
 {
@@ -1606,23 +1608,23 @@ static float translate_IEEE_11073_temperature_to_float(IEEE_11073_float const *I
   int8_t mantissa_h;
   int8_t exponent;
 
-  // 错误参数：传递了 NULL 指针
+  // Wrong Argument: NULL pointer is passed
   if (!IEEE_11073_value) {
     return NAN;
   }
 
-  // 缓存字段
+  // Caching Fields
   mantissa_l = IEEE_11073_value->mantissa_l;
   mantissa_m = IEEE_11073_value->mantissa_m;
   mantissa_h = IEEE_11073_value->mantissa_h;
   exponent =  IEEE_11073_value->exponent;
 
-  // 传递了 IEEE-11073 标准 NaN 值
+  // IEEE-11073 Standard NaN Value Passed
   if ((mantissa_l == 0xFF) && (mantissa_m == 0xFF) && (mantissa_h == 0x7F) && (exponent == 0x00)) {
     return NAN;
   }
 
-  // 将 24 位有符号值转换为 32 位有符号值
+  // Converting a 24bit Signed Value to a 32bit Signed Value
   mantissa |= mantissa_h;
   mantissa <<= 8;
   mantissa |= mantissa_m;
@@ -1635,7 +1637,7 @@ static float translate_IEEE_11073_temperature_to_float(IEEE_11073_float const *I
 }
 
 #ifndef BLE_STACK_SILABS
-  #error "此示例仅与 Silicon Labs BLE 协议栈兼容。请在'工具 > 协议栈'中选择'BLE (Silabs)'。"
+  #error "This example is only compatible with the Silicon Labs BLE stack. Please select 'BLE (Silabs)' in 'Tools > Protocol stack'."
 #endif
 ```
 
@@ -1647,13 +1649,13 @@ static float translate_IEEE_11073_temperature_to_float(IEEE_11073_float const *I
 
 对于上述程序，我们将挑选更重要的部分进行解释。我们将从服务器程序开始。
 
-在程序开始时，我们定义蓝牙服务器的名称，这个名称可以是您设置的名称，但您需要记住它，因为您需要依靠这个名称来搜索这个蓝牙设备。
+在程序开始时，我们定义了蓝牙服务器的名称，这个名称可以是您设置的名称，但您需要记住它，因为您需要依靠这个名称来搜索这个蓝牙设备。
 
 ```c
 const uint8_t advertised_name[] = "XIAOMG24_BLE";
 ```
 
-在教程的前面部分，我们已经讨论过在服务器下会有特征值，在特征值下会有数值和其他内容。所以我们在创建广告时需要遵循这一原则。
+在本教程的前面部分，我们已经讨论过在服务器下会有特征值，在特征值下会有数值和其余内容。所以我们在创建广告时需要遵循这一原则。
 
 ```c
 // Health Thermometer service
@@ -1683,15 +1685,15 @@ sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
 app_assert_status(sc);
 ```
 
-在上面的程序中，你可以看到 `sl_bt_gattdb_add_service()` 用于创建服务器。参数是一个特定的 UUID：**0x1809**。在 GATT 规则中，**0x1809** 表示温度计类型数据，相同 Characteristic 的 UUID：**0x2A1C** 也有特殊含义。在 GATT 中，它表示温度测量。这符合我们温度值的情况，所以这里我将其定义为这样。你可以在[这里](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/GATT.pdf)阅读 GATT 为我们准备的一些特定 UUID 的含义。
+在上述程序中，您可以看到 `sl_bt_gattdb_add_service()` 用于创建服务器。参数是一个特定的 UUID：**0x1809**。在 GATT 规则中，**0x1809** 表示温度计类型数据，相同特征的 UUID：**0x2A1C** 也有特殊含义。在 GATT 中，它表示温度测量。这符合我们温度值的情况，所以我在这里将其定义为这样。您可以在[这里](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/GATT.pdf)阅读 GATT 为我们准备的一些特定 UUID 的含义。
 
-当然，你也可以不遵循 GATT 标准来设置 UUID，你只需要确保这两个值是唯一的，不会影响客户端通过识别这些 UUID 来找到值的能力。你可以访问 [uuidgenerator.net](https://www.uuidgenerator.net/) 为你的服务和特征创建随机 UUID。
+当然，您也可以不遵循 GATT 标准来设置 UUID，您只需要确保这两个值是唯一的，并且不会影响您的客户端通过识别这些 UUID 来找到值的能力。您可以访问 [uuidgenerator.net](https://www.uuidgenerator.net/) 为您的服务和特征创建随机 UUID。
 
 最后，我们在 `loop` 中每秒测量并广播一次 MCU 的温度值。
 
 下一步是客户端程序，这看起来会复杂得多。
 
-在程序开始时，仍然是非常熟悉的内容。你需要确保这些内容与你在服务器端配置的内容一致。
+在程序开始时，仍然是非常熟悉的内容。您需要确保此内容与您在服务器端配置的内容一致。
 
 ```c
 const uint8_t thermometer_service_uuid[] = { 0x09, 0x18 };
@@ -1711,7 +1713,7 @@ const uint8_t advertised_name[] = "XIAOMG24_BLE";
 void sl_bt_on_event(sl_bt_msg_t *evt)
 ```
 
-以下过程是在服务器中查找温度值的关键。首先，在我们成功定位服务器UUID并找到服务器下的特征UUID后，我们将处理获得的数据，如以下代码片段所示。最后，通过串口打印出处理后的数据。这种解析方法与蓝牙的数据结构一一对应。
+以下过程是在服务器中查找温度值的关键。首先，在我们成功定位服务器UUID并找到服务器下的特征UUID后，我们将处理获得的数据，如下面的代码片段所示。最后，通过串口打印出处理后的数据。这种解析方法与蓝牙的数据结构是一一对应的。
 
 ```c
 void sl_bt_on_event(sl_bt_msg_t *evt)
@@ -1746,8 +1748,9 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
 }
 ```
 
+
 :::tip
-上述示例给出了单个传感器单个值的最简单示例，来源于Silicon Labs。如果您想更深入地了解SiliconLabs BLE API的使用方法，我们建议阅读这里的教程。
+上面的示例给出了来自Silicon Labs的单个传感器单个值的最简单示例。如果您想更深入地了解SiliconLabs BLE API的使用方法，我们建议您阅读这里的教程。
 
 - [SiliconLabs Bluetooth Stack API Reference](https://docs.silabs.com/bluetooth/latest/bluetooth-stack-api/)
 :::

@@ -118,96 +118,84 @@ LED Driver Board for XIAO is a compact yet powerful solution supporting both 5V 
 <div class="table-center">
  <table style={{textAlign:'center'}}>
   <tr>
-            <th>Product</th>
-            <th>Name</th>
-            <th>Operating Voltage</th>
-            <th>Connect via</th>
+    <th>Product</th>
+    <th>Name</th>
+    <th>Operating Voltage</th>
+    <th>Connect via</th>
   </tr>
-        <tr>
-            <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-WS2813-Mini.png
-            " style={{width:150, height:'auto'}}/></td>
-            <td><a href="https://www.seeedstudio.com/Grove-RGB-LED-WS2813-Mini-p-4269.html">Grove - RGB LED (WS2813 Mini)</a></td>
-            <td>5V</td>
-            <td>Grove</td>
-        </tr>
-        <tr>
-            <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-Stick-10-WS2813-Mini.png
-            " style={{width:150, height:'auto'}}/></td>
-            <td><a href="https://www.seeedstudio.com/Grove-RGB-LED-Stick-10-WS2813-Mini.html">Grove - RGB LED Stick (10-WS2813 Mini)</a></td>
-            <td>5V</td>
-            <td>Grove</td>
-        </tr>
-        <tr>
-            <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-Stick-15-WS2813-Mini.png
-            " style={{width:150, height:'auto'}}/></td>
-            <td><a href="https://www.seeedstudio.com/Grove-RGB-LED-Stick-15-WS2813-Mini-p-4270.html">Grove - RGB LED Stick (15-WS2813 Mini)</a></td>
-            <td>5V</td>
-            <td>Grove</td>
-        </tr>
-        <tr>
-            <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-Stick-20-WS2813-Mini.png
-            " style={{width:150, height:'auto'}}/></td>
-            <td><a href="https://www.seeedstudio.com/Grove-RGB-LED-Stick-20-WS2813-Mini-p-4271.html">Grove - RGB LED Stick (20-WS2813 Mini)</a></td>
-            <td>5V</td>
-            <td>Grove</td>
-        </tr>
-        <tr>
-            <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-Ring-16-WS2813-Mini.png
-            " style={{width:150, height:'auto'}}/></td>
-            <td><a href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-16-WS2813-Mini-p-4201.html">Grove - RGB LED Ring (16-WS2813 Mini)</a></td>
-            <td>5V</td>
-            <td>Grove</td>
-        </tr>
-        <tr>
-            <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-Ring-20-WS2813-Mini.png
-            " style={{width:150, height:'auto'}}/></td>
-            <td><a href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Mini.html">Grove - RGB LED Ring (20-WS2813 Mini)</a></td>
-            <td>5V</td>
-            <td>Grove</td>
-        </tr>
-        <tr>
-            <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-Ring-24-WS2813-Mini.png
-            " style={{width:150, height:'auto'}}/></td>
-            <td><a href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-24-WS2813-Mini-p-4202.html">Grove - RGB LED Ring (24-WS2813 Mini)</a></td>
-            <td>5V</td>
-            <td>Grove</td>
-        </tr>
-        <tr>
-            <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-Ultimate-RGB-LED-Ring.png
-            " style={{width:150, height:'auto'}}/></td>
-            <td><a href="https://www.seeedstudio.com/Grove-Ultimate-RGB-LED-Ring-p-4203.html">Grove - Ultimate RGB LED Ring</a></td>
-            <td>5V</td>
-            <td>Grove</td>
-        </tr>
-        <tr>
-            <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Digital-RGB-LED-Flexi-Strip-30-LED-1-Meter.png
-            " style={{width:150, height:'auto'}}/></td>
-            <td><a href="https://www.seeedstudio.com/Digital-RGB-LED-Flexi-Strip-30-LED-1-Meter-p-1665.html">Grove - WS2813B RGB LED Flexi-Strip 30 LED/m - 1m</a></td>
-            <td>5V</td>
-            <td>Terminal Block</td>
-        </tr>
-        <tr>
-            <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Digital-RGB-LED-Flexi-Strip-60-LED-1-Meter.png
-            " style={{width:150, height:'auto'}}/></td>
-            <td><a href="https://www.seeedstudio.com/WS2813B-Digital-RGB-LED-Flexi-Strip-60-LED-1-Meter-p-2817.html">Grove - WS2813B RGB LED Flexi-Strip 60 LED/m - 1m</a></td>
-            <td>5V</td>
-            <td>Terminal Block</td>
-        </tr>
-        <tr>
-            <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/RGB-LED-Strip-Waterproof-30-LED-m-1m.png
-            " style={{width:150, height:'auto'}}/></td>
-            <td><a href="https://www.seeedstudio.com/Grove-WS2813-RGB-LED-Strip-Waterproof-30-LED-m-1m.html">Grove - WS2813 RGB LED Strip Waterproof - 30 LED/m - 1m</a></td>
-            <td>5V</td>
-            <td>Grove</td>
-        </tr>
-        <tr>
-            <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/RGB-LED-Strip-Waterproof-60-LED-m-1m.png
-            " style={{width:150, height:'auto'}}/></td>
-            <td><a href="https://www.seeedstudio.com/Grove-WS2813-RGB-LED-Strip-Waterproof-60-LED-m-1m.html">Grove - WS2813 RGB LED Strip Waterproof - 60 LED/m - 1m</a></td>
-            <td>5V</td>
-            <td>Grove</td>
-        </tr>  
- </table>
+  <tr>
+      <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-WS2813-Mini.png" style={{width:150, height:'auto'}}/></td>
+      <td><a href="https://www.seeedstudio.com/Grove-RGB-LED-WS2813-Mini-p-4269.html">Grove - RGB LED (WS2813 Mini)</a></td>
+      <td>5V</td>
+      <td>Grove</td>
+  </tr>
+  <tr>
+      <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-Stick-10-WS2813-Mini.png" style={{width:150, height:'auto'}}/></td>
+      <td><a href="https://www.seeedstudio.com/Grove-RGB-LED-Stick-10-WS2813-Mini.html">Grove - RGB LED Stick (10-WS2813 Mini)</a></td>
+      <td>5V</td>
+      <td>Grove</td>
+  </tr>
+  <tr>
+      <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-Stick-15-WS2813-Mini.png" style={{width:150, height:'auto'}}/></td>
+      <td><a href="https://www.seeedstudio.com/Grove-RGB-LED-Stick-15-WS2813-Mini-p-4270.html">Grove - RGB LED Stick (15-WS2813 Mini)</a></td>
+      <td>5V</td>
+      <td>Grove</td>
+  </tr>
+  <tr>
+      <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-Stick-20-WS2813-Mini.png" style={{width:150, height:'auto'}}/></td>
+      <td><a href="https://www.seeedstudio.com/Grove-RGB-LED-Stick-20-WS2813-Mini-p-4271.html">Grove - RGB LED Stick (20-WS2813 Mini)</a></td>
+      <td>5V</td>
+      <td>Grove</td>
+  </tr>
+  <tr>
+      <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-Ring-16-WS2813-Mini.png" style={{width:150, height:'auto'}}/></td>
+      <td><a href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-16-WS2813-Mini-p-4201.html">Grove - RGB LED Ring (16-WS2813 Mini)</a></td>
+      <td>5V</td>
+      <td>Grove</td>
+  </tr>
+  <tr>
+      <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-Ring-20-WS2813-Mini.png" style={{width:150, height:'auto'}}/></td>
+      <td><a href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Mini.html">Grove - RGB LED Ring (20-WS2813 Mini)</a></td>
+      <td>5V</td>
+      <td>Grove</td>
+  </tr>
+  <tr>
+      <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-Ring-24-WS2813-Mini.png" style={{width:150, height:'auto'}}/></td>
+      <td><a href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-24-WS2813-Mini-p-4202.html">Grove - RGB LED Ring (24-WS2813 Mini)</a></td>
+      <td>5V</td>
+      <td>Grove</td>
+    </tr>
+    <tr>
+      <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-Ultimate-RGB-LED-Ring.png" style={{width:150, height:'auto'}}/></td>
+      <td><a href="https://www.seeedstudio.com/Grove-Ultimate-RGB-LED-Ring-p-4203.html">Grove - Ultimate RGB LED Ring</a></td>
+      <td>5V</td>
+      <td>Grove</td>
+    </tr>
+    <tr>
+      <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Digital-RGB-LED-Flexi-Strip-30-LED-1-Meter.png" style={{width:150, height:'auto'}}/></td>
+      <td><a href="https://www.seeedstudio.com/Digital-RGB-LED-Flexi-Strip-30-LED-1-Meter-p-1665.html">Grove - WS2813B RGB LED Flexi-Strip 30 LED/m - 1m</a></td>
+      <td>5V</td>
+      <td>Terminal Block</td>
+    </tr>
+    <tr>
+      <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Digital-RGB-LED-Flexi-Strip-60-LED-1-Meter.png" style={{width:150, height:'auto'}}/></td>
+      <td><a href="https://www.seeedstudio.com/WS2813B-Digital-RGB-LED-Flexi-Strip-60-LED-1-Meter-p-2817.html">Grove - WS2813B RGB LED Flexi-Strip 60 LED/m - 1m</a></td>
+      <td>5V</td>
+      <td>Terminal Block</td>
+    </tr>
+    <tr>
+      <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/RGB-LED-Strip-Waterproof-30-LED-m-1m.png" style={{width:150, height:'auto'}}/></td>
+      <td><a href="https://www.seeedstudio.com/Grove-WS2813-RGB-LED-Strip-Waterproof-30-LED-m-1m.html">Grove - WS2813 RGB LED Strip Waterproof - 30 LED/m - 1m</a></td>
+      <td>5V</td>
+      <td>Grove</td>
+    </tr>
+    <tr>
+      <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/RGB-LED-Strip-Waterproof-60-LED-m-1m.png" style={{width:150, height:'auto'}}/></td>
+      <td><a href="https://www.seeedstudio.com/Grove-WS2813-RGB-LED-Strip-Waterproof-60-LED-m-1m.html">Grove - WS2813 RGB LED Strip Waterproof - 60 LED/m - 1m</a></td>
+      <td>5V</td>
+      <td>Grove</td>
+    </tr>  
+  </table>
 </div>
 
 ## Getting Started

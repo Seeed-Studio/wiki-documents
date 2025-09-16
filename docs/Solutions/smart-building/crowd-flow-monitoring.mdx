@@ -1,0 +1,183 @@
+---
+description: "Want to visualize the flow of people in a space? You can easily achieve this with Home Assistant combined with a floorplan heatmap. This solution allows you to overlay person-hour data on a floor plan, giving you an at-a-glance understanding of space utilization."
+keywords:
+    - Home Assistant
+    - Flow statistics
+    - heat map
+image: https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/result_visualize.png
+slug: /crowd-flow-monitoring
+sidebar_position: 4
+last_update:
+  date: 08/11/2025
+  author: Spencer
+---
+
+import Steppers from '@site/src/components/utils/Stepper';
+
+# Crowd Flow Heatmap with Home Assistant
+
+Want a clear view of how people move through a space? With **Home Assistant** and a **Floorplan Heatmap**, you can do just that. This solution lets you overlay person-hour data onto your floor plan, making it easy to see how the space is being used at a glance.
+
+Home Assistant not only collects and manages data from various devices but also seamlessly connects with other platforms through its powerful integration features. By integrating a heatmap plugin, you can **directly use existing device data.** If your devices are already connected to Home Assistant, you can easily incorporate their data into a visual chart. This simplifies the setup process and maximizes the utility of your existing smart home ecosystem.
+
+:::note
+
+A Floorplan Heatmap is a technique that visualizes data on top of a building floor plan or indoor layout. It uses a color scale from cool (like blue, green) to warm (like yellow, red) to show the intensity, density, or frequency of data in specific areas. For example, it can show how frequently a room is occupied or the temperature distribution in a particular area.
+
+:::
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/result_visualize.png" alt="Heatmap Visualization"/>
+</div>
+
+## Person-Hour Statistics Example
+
+You will need:
+
+- A Node-RED platform
+- A Home Assistant system
+- A [Grove Vision AI V2](https://www.seeedstudio.com/XIAO-Vision-AI-Camera-p-6450.html) camera kit
+
+### Grove Vision AI V2
+
+1. Go to the [SenseCraft AI](https://sensecraft.seeed.cc/) platform, log in, and under "Vision Workspace," click on "Grove Vision AI V2" and select **Connect**.
+2. In the pop-up window, choose the Grove Vision AI V2 device you want to connect.
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/connect-grove-vision-v2.png" alt="Connect Grove Vision V2"/>
+</div>
+
+### Flashing the Model
+
+Select an appropriate model. If you are not doing face or person detection, you might need to flash a model that can recognize human features. For example, select **Face Detection** and confirm to deploy it.
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/sensecraft-model-face-detection.png" alt="SenseCraft AI Model Face Detection"/>
+</div>
+
+Double-click the model and confirm to flash and deploy it.
+
+### Configure Network Information
+
+1. On the main panel, click **Network Configuration** on the right.
+2. Enter your Home Assistant's Wi-Fi information and the MQTT server address (usually *HA address*:1883).
+3. Click **Save**.
+
+:::note
+
+Be sure to note down the Client ID (you can customize it) for later use.
+
+:::
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/sensecraft-wifi-configuration.png" alt="SenseCraft Wi-Fi Configuration"/>
+</div>
+
+## Node-RED
+
+Since the Grove Vision AI V2 is a non-standard device, we currently need to use Node-RED to handle device registration and data display.
+
+First, you need to import the [person-hour-statistics.json](https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/vision-v2-crowd-flow.json) file into Node-RED, then continue with the steps below:
+
+<Steppers>
+
+### Confirm MQTT Configuration
+
+Modify the service information in the "**Publish HA Data & Discovery**" node to your Home Assistant address (e.g., `192.168.101.160`). If you are using the built-in Node-RED add-on in Home Assistant, connect to `mqtt://localhost`.
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/nodered-mqtt-out-config.png" alt="Node-RED MQTT Out Config"/>
+</div>
+
+### Modify Device ID
+
+In the "**Know Camera IDs**" node, modify the payload JSON and add multiple client IDs if you have more than one device.
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/nodered-heatmap-device-ids.png" alt="Node-RED Heatmap Device IDs"/>
+</div>
+
+### Register Device
+
+Click "**Trigger HA Discovery for Known Devices**" to register the device. You should then see an unavailable device entity on the overview page.
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/ha-heatmap-device-added.png" alt="Home Assistant Heatmap Device Added"/>
+</div>
+
+### View Data
+
+Set the `msg.topic` of the "**Start**" node to `grove_vision_ai_v2_61003e7c`, then click **Start**. Once done, you can view the data in Home Assistant.
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/ha-heatmap-device-worked.png" alt="Home Assistant Heatmap Device Worked"/>
+</div>
+
+</Steppers>
+
+## Home Assistant
+
+### Install Plugin (HACS)
+
+Go to your HACS page, for example, [http://homeassistant.local:8123/hacs/dashboard](http://homeassistant.local:8123/hacs/dashboard):
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/hacs-custom-repositories.png" alt="HACS Custom Repositories"/>
+</div>
+
+In HACS, add a `Custom repository` and enter the following address:
+
+```shell
+https://github.com/Seeed-Solution/lovelace-heatmap-card
+```
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/hacs-add-repositories.png" alt="HACS Add Repository"/>
+</div>
+
+Search for "**Heatmap Card**" and download the plugin:
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/hacs-search-download.png" alt="HACS Search and Download"/>
+</div>
+
+After installation, you will need to reload your browser. Click `RELOAD` in the prompt.
+
+### Add Card to Dashboard
+
+In any dashboard, add your heatmap card. For example, let's edit a dashboard named `Person-Hour Statistics`.
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/ha-edit-panel.png" alt="Home Assistant Edit Panel"/>
+</div>
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/ha-add-card.png" alt="Home Assistant Add Card"/>
+</div>
+
+Click "Add Card," scroll down to the custom cards section, find `Heatmap Card`, and click to add it.
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/ha-choose-card.png" alt="Home Assistant Choose Card"/>
+</div>
+
+### Connect Data
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/lovelace-heatmap-card-config.png" alt="Lovelace Heatmap Card Config"/>
+</div>
+
+The plugin has four configuration sections:
+
+- Color Style (Radius, Blur)
+- Points - Coordinates and information for different points
+- Display Options - Show data legend
+- Show Point Labels - Show labels for each point
+
+In the card configuration, set the `entity_id` for one of the Points to your device entity ID (e.g., `sensor.grove_vision_ai_v2_61003e7c_current_people_count`).
+
+Once done, click Save.
+
+---
+
+After completing these steps, you will be able to see the heatmap data dynamically displayed in Home Assistant.

@@ -20,7 +20,7 @@ last_update:
     </a>
 </div><br />
 
-介绍"XIAO 6x10 RGB 矩阵" - 这是 Seeed Studio XIAO 产品系列的一个令人眼花缭乱的新成员。现在，有了 6x10 RGB 矩阵，您拥有了用色彩光谱照亮项目的力量。该矩阵由 60 个精心排列的 WS2812 LED 组成，不仅仅是为了美观；它是将您的创意愿景变为现实的工具。无论您是在制作交互式艺术作品、设计动态通知系统，还是只是希望为您的创作增添一抹色彩，这个矩阵都是您的画布。专为与 XIAO 主控制器无缝集成而定制，其适应性通过包含 VCC、GND 和 DIN 焊接焊盘得到进一步突出，确保在众多场景中的灵活性。
+介绍"XIAO 6x10 RGB 矩阵" - 这是 Seeed Studio XIAO 产品系列的一个令人眼花缭乱的新成员。现在，有了 6x10 RGB 矩阵，您拥有了用色彩光谱照亮项目的能力。该矩阵由 60 个精心排列的 WS2812 LED 组成，不仅仅是为了美观；它是将您的创意愿景变为现实的工具。无论您是在制作交互式艺术作品、设计动态通知系统，还是只是希望为您的创作增添一抹色彩，这个矩阵都是您的画布。专为与 XIAO 主控制器无缝集成而定制，其适应性通过包含 VCC、GND 和 DIN 焊接焊盘得到进一步突出，确保在众多场景中的灵活性。
 
 ## 介绍
 
@@ -71,7 +71,7 @@ last_update:
 
 本教程将使用 XIAO RP2040 作为主控，如果您是第一次使用 XIAO RP2040，请阅读其入门 Wiki。
 
-- [Seeed Studio XIAO RP2040 with Arduino](https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/)
+- [Seeed Studio XIAO RP2040 with Arduino](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/)
 
 同时，本教程提供的所有示例程序也适用于其他 XIAO，您也可以根据您使用的 XIAO 提前配置 Arduino 开发环境。
 
@@ -79,67 +79,67 @@ last_update:
 
 :::tip
 
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 ### 功能
 
-在开始开发代码之前，让我们先了解一下库的可用功能。
+在我们开始开发代码之前，让我们先了解一下库的可用功能。
 
 - `Adafruit_NeoPixel(uint16_t n, int16_t pin = 6, neoPixelType type = NEO_GRB + NEO_KHZ800);` —— 当长度、引脚和像素类型在编译时已知时的 NeoPixel 构造函数。
 
   **输入参数**：
 
   - `n`：灯带中 NeoPixel 的数量。
-  - `p`：驱动 NeoPixel 数据输入的 Arduino 引脚号。
+  - `p`：驱动 NeoPixel 数据输入的 Arduino 引脚编号。
   - `t`：像素类型 -- 将 Adafruit_NeoPixel.h 中定义的 NEO_* 常量相加，例如 `NEO_GRB+NEO_KHZ800` 用于期望 800 KHz（相对于 400 KHz）数据流的 NeoPixel，每个像素的颜色字节按绿、红、蓝顺序表示。
 
-  **返回值**：Adafruit_NeoPixel 对象。使用前请调用 `begin()` 函数。
+  **返回值**：Adafruit_NeoPixel 对象。使用前调用 `begin()` 函数。
 
 - `void begin(void)` —— 配置 NeoPixel 引脚为输出。
 
 - `void show(void)` —— 将 RAM 中的像素数据传输到 NeoPixel。
 
-- `void setPin(int16_t p)` —— 设置/更改 NeoPixel 输出引脚号。如果有的话，之前的引脚将设置为 INPUT，新引脚设置为 OUTPUT。
+- `void setPin(int16_t p)` —— 设置/更改 NeoPixel 输出引脚编号。如果有的话，之前的引脚设置为 INPUT，新引脚设置为 OUTPUT。
 
   **输入参数**：
 
-  - `p`：Arduino 引脚号（-1 = 无引脚）。
+  - `p`：Arduino 引脚编号（-1 = 无引脚）。
 
 - `void setPixelColor(uint16_t n, uint8_t r, uint8_t g, uint8_t b, uint8_t w)` —— 使用单独的红、绿、蓝和白色分量设置像素颜色（仅适用于 RGBW NeoPixel）。
 
   **输入参数**：
 
   - `n`：像素索引，从 0 开始。
-  - `r`：红色亮度，0 = 最小值（关闭），255 = 最大值。
-  - `g`：绿色亮度，0 = 最小值（关闭），255 = 最大值。
-  - `b`：蓝色亮度，0 = 最小值（关闭），255 = 最大值。
-  - `w`（可选）：白色亮度，0 = 最小值（关闭），255 = 最大值，如果使用 RGB 像素则忽略。
+  - `r`：红色亮度，0 = 最小（关闭），255 = 最大。
+  - `g`：绿色亮度，0 = 最小（关闭），255 = 最大。
+  - `b`：蓝色亮度，0 = 最小（关闭），255 = 最大。
+  - `w`（可选）：白色亮度，0 = 最小（关闭），255 = 最大，使用 RGB 像素时忽略。
 
 - `void setPixelColor(uint16_t n, uint32_t c)` —— 使用 32 位"打包"RGB 或 RGBW 值设置像素颜色。
 
   **输入参数**：
 
   - `n`：像素索引，从 0 开始。
-  - `c`：32 位颜色值。最高有效字节是白色（对于 RGBW 像素）或被忽略（对于 RGB 像素），接下来是红色，然后是绿色，最低有效字节是蓝色。
+  - `c`：32 位颜色值。最高有效字节是白色（对于 RGBW 像素）或忽略（对于 RGB 像素），接下来是红色，然后是绿色，最低有效字节是蓝色。
 
 - `void fill(uint32_t c = 0, uint16_t first = 0, uint16_t count = 0)` —— 用颜色填充 NeoPixel 灯带的全部或部分。
 
   **输入参数**：
 
-  - `c`：32 位颜色值。最高有效字节是白色（对于 RGBW 像素）或被忽略（对于 RGB 像素），接下来是红色，然后是绿色，最低有效字节是蓝色。如果所有参数都未指定，这将是 0（关闭）。
+  - `c`：32 位颜色值。最高有效字节是白色（对于 RGBW 像素）或忽略（对于 RGB 像素），接下来是红色，然后是绿色，最低有效字节是蓝色。如果所有参数都未指定，这将是 0（关闭）。
   - `first`：要填充的第一个像素的索引，从 0 开始。必须在范围内，不执行裁剪。如果未指定则为 0。
-  - `count`：要填充的像素数量，作为正值。传递 0 或不指定将填充到灯带末尾。
+  - `count`：要填充的像素数量，作为正值。传递 0 或未指定将填充到灯带末尾。
 
 - `void setBrightness(uint8_t b)` —— 调整输出亮度。不会立即影响当前在 LED 上显示的内容。下次调用 `show()` 将以此级别刷新 LED。
 
   **输入参数**：
 
-  - `b`：亮度设置，0=最小值（关闭），255=最亮。
+  - `b`：亮度设置，0=最小（关闭），255=最亮。
 
 - `void clear(void)` —— 用 0 / 黑色 / 关闭填充整个 NeoPixel 灯带。
 
-- `void updateLength(uint16_t n)` —— 更改先前声明的 Adafruit_NeoPixel 灯带对象的长度。旧数据被释放，新数据被清除。引脚号和像素格式保持不变。
+- `void updateLength(uint16_t n)` —— 更改先前声明的 Adafruit_NeoPixel 灯带对象的长度。旧数据被释放，新数据被清除。引脚编号和像素格式保持不变。
 
   **输入参数**：
 
@@ -185,7 +185,7 @@ last_update:
 
 ## 演示：流水灯
 
-以下示例程序用于实现流水灯效果，灯珠将依次逐个点亮。此程序兼容所有XIAO。
+以下示例程序用于实现流水灯效果，其中LED灯珠将依次逐个点亮。此程序与所有XIAO兼容。
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
@@ -236,7 +236,7 @@ void loop() {
 }
 ```
 
-上传程序，如果一切顺利，您可以看到灯珠逐个点亮。
+上传程序，如果一切顺利，你可以看到灯珠逐个点亮。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-rgb-matrix/5.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -246,12 +246,12 @@ void loop() {
 
 ## 多个灯板拼接
 
-XIAO RGB MATRIX支持在保证电源供应的情况下进行多个拼接扩展。您可以按照下图所示的说明依次拼接多个灯板。
+XIAO RGB MATRIX 支持在保证电源供应的情况下进行多个拼接扩展。您可以按照下图所示的说明依次拼接多个灯板。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-rgb-matrix/6.jpg" style={{width:800, height:'auto'}}/></div>
 
 :::caution
-当多个灯板拼接在一起时，它们可能会发热并出现供电不足的情况。此时，灯板可能会显示异常，这时请为灯板额外供电，以确保每个灯板都能有稳定的5V输入。
+当多个灯板拼接在一起时，它们可能会发热并出现供电不足的情况。此时，灯板可能会显示异常，这时请为灯板提供额外的电源，以确保每个灯板都能有稳定的 5V 输入。
 :::
 
 ## 资源

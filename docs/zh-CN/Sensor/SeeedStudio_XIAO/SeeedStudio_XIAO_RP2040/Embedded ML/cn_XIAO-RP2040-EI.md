@@ -32,7 +32,7 @@ last_update:
 
 ### 软件
 
-所需的库列在下面。强烈建议使用这里的代码来检查硬件是否正常工作。如果您在安装库时遇到问题，请参考[这里](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library/)。
+所需的库列在下面。强烈建议使用这里的代码来检查硬件是否正常工作。如果您在安装库时遇到问题，请参考[这里](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)。
 
 - [Seeed_Arduino_LSM6DS3-master](https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Seeed_Arduino_LSM6DS3-master.zip)
 
@@ -42,7 +42,7 @@ last_update:
 
 ### 检查电路连接和加速度计
 
-打开 Arduino IDE，导航到 Sketch -> Include Library -> Manage Libraries... 并在库管理器中搜索并安装 `U8g2 library`。
+打开 Arduino IDE，导航到 Sketch -> Include Library -> Manage Libraries...，在库管理器中搜索并安装 `U8g2 library`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition29.png" alt="pir" width={400} height="auto" /></p>
 
@@ -117,7 +117,7 @@ sudo edge-impulse-data-forwarder
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/05.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **步骤 7.** 上下摆动 [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/cn/XIAO-RP2040/)，保持运动 20 秒。您可以看到采集显示如下：
+- **步骤 7.** 上下摆动 [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/XIAO-RP2040/)，保持动作 20 秒。您可以看到采集显示如下：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/06.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -125,10 +125,10 @@ sudo edge-impulse-data-forwarder
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/07.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **步骤 9.** 重复**步骤 7.** 和**步骤 8.**，用不同的名称标记数据以点击不同的运动数据，如 `circle` 和 `line` 等。提供的示例是分类上下、左右和圆圈。您可以根据需要在此处更改。
+- **步骤 9.** 重复**步骤 7.** 和**步骤 8.**，用不同的名称标记数据以点击不同的动作数据，如 `circle` 和 `line` 等。提供的示例是分类上下、左右和圆圈。您可以根据需要在这里进行更改。
 
 :::note
-在步骤 8 中，分割时间为 1 秒，这意味着您在步骤 7 中至少要在一秒内完成一次上下摆动。否则，结果将不准确。同时，您可以根据自己的运动速度调整分割时间。
+在步骤 8 中，分割时间是 1 秒，这意味着您在步骤 7 中至少要在一秒内完成一次上下摆动。否则，结果将不准确。同时，您可以根据自己的动作速度调整分割时间。
 :::
 
 - **步骤 10.** 创建脉冲
@@ -181,7 +181,7 @@ sudo edge-impulse-data-forwarder
 复制下面的代码，如果 edgeimpluse 上的项目名称是自定义的，那么 zip 存档文本将是相同的名称。您可以将 include 的第一行更改为您的头文件。
 
 ```c
-#include <XIAO_RP2040_inferencing.h> // 自定义名称需要将此头文件更改为您自己的文件名
+#include <XIAO_RP2040_inferencing.h> // customed name need change this header file to your own file name
 #include <Wire.h>
 #include "MMA7660.h"
 MMA7660 accelemeter;
@@ -195,7 +195,7 @@ void setup()
 {
     Serial.begin(115200);
     while (!Serial);
-    Serial.println("Edge Impulse 推理演示");
+    Serial.println("Edge Impulse Inferencing Demo");
     accelemeter.init();
 }
 
@@ -205,17 +205,17 @@ float ei_get_sign(float number) {
 
 void loop()
 {
-    ei_printf("\n2秒后开始推理...\n");
+    ei_printf("\nStarting inferencing in 2 seconds...\n");
 
     delay(2000);
 
-    ei_printf("采样中...\n");
+    ei_printf("Sampling...\n");
 
-    // 在此为我们将从IMU读取的值分配缓冲区
+    // Allocate a buffer here for the values we'll read from the IMU
     float buffer[EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE] = { 0 };
 
     for (size_t ix = 0; ix < EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE; ix += 3) {
-        // 确定下一个时钟周期（然后稍后休眠）
+        // Determine the next tick (and then sleep later)
         uint64_t next_tick = micros() + (EI_CLASSIFIER_INTERVAL_MS * 1000);
         accelemeter.getAcceleration(&buffer[ix], &buffer[ix + 1], &buffer[ix + 2]);
 
@@ -232,33 +232,33 @@ void loop()
         delayMicroseconds(next_tick - micros());
     }
 
-    // 将原始缓冲区转换为我们可以分类的信号
+    // Turn the raw buffer in a signal which we can the classify
     signal_t signal;
     int err = numpy::signal_from_buffer(buffer, EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE, &signal);
     if (err != 0) {
-        ei_printf("从缓冲区创建信号失败 (%d)\n", err);
+        ei_printf("Failed to create signal from buffer (%d)\n", err);
         return;
     }
 
-    // 运行分类器
+    // Run the classifier
     ei_impulse_result_t result = { 0 };
 
     err = run_classifier(&signal, &result, debug_nn);
     if (err != EI_IMPULSE_OK) {
-        ei_printf("错误：运行分类器失败 (%d)\n", err);
+        ei_printf("ERR: Failed to run classifier (%d)\n", err);
         return;
     }
 
-    // 打印预测结果
-    ei_printf("预测结果 ");
-    ei_printf("(DSP: %d ms., 分类: %d ms., 异常: %d ms.)",
+    // print the predictions
+    ei_printf("Predictions ");
+    ei_printf("(DSP: %d ms., Classification: %d ms., Anomaly: %d ms.)",
         result.timing.dsp, result.timing.classification, result.timing.anomaly);
     ei_printf(": \n");
     for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
         ei_printf("    %s: %.5f\n", result.classification[ix].label, result.classification[ix].value);
     }
 #if EI_CLASSIFIER_HAS_ANOMALY == 1
-    ei_printf("    异常分数: %.3f\n", result.anomaly);
+    ei_printf("    anomaly score: %.3f\n", result.anomaly);
 #endif
 
 }
@@ -271,7 +271,7 @@ void loop()
 
 点击 Arduino 右上角的监视器。
 
-当您将 Seeed Studio XIAO RP2040 按**圆圈和直线**方向移动时：
+当您将 Seeed Studio XIAO RP2040 沿着**圆形和直线**方向移动时：
 
 监视器将输出类似以下内容：
 
@@ -285,11 +285,11 @@ void loop()
 15:45:48.439 -> 
 ```
 
-恭喜！您已经完成了项目的最后部分。建议您可以尝试更多方向并检查哪一个会产生最佳输出。
+恭喜！您已完成项目的最后阶段。建议您可以尝试更多方向，并检查哪一个能产生最佳输出。
 
 ## 资源
 
-- [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/cn/XIAO-RP2040/)
+- [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/XIAO-RP2040/)
 - [Edge Impluse CLI](https://docs.edgeimpulse.com/docs/edge-impulse-cli/cli-installation)
 
 ## 技术支持与产品讨论

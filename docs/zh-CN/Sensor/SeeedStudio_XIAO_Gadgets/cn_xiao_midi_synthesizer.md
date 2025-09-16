@@ -31,7 +31,7 @@ last_update:
 
 - 零门槛创作，非常适合音乐初学者
 - 一体化 MIDI + 节拍器 -- 更智能、更流畅的工作流程
-- 为高级演奏者提供专业级性能
+- 专业级性能，适合高级演奏者
 - 超便携且完全可定制
 
 ## 硬件概述
@@ -66,12 +66,12 @@ XIAO MIDI 合成器集成了以下组件：
       <th colspan="2">接口和连接</th>
     </tr>
     <tr>
-      <td>3.5mm 音频插孔</td>
-      <td>用于连接外部音频设备（如扬声器或耳机）<br />具有插入线缆时自动禁用 D 类放大器，拔出时重新启用的功能</td>
+      <td>3.5mm 音频接口</td>
+      <td>用于连接外部音频设备（如扬声器或耳机）<br />具有插入线缆时自动禁用 D 类放大器、拔出时重新启用的功能</td>
     </tr>
     <tr>
-      <td>物理按钮</td>
-      <td>四个侧面安装的物理按钮用于用户交互</td>
+      <td>物理按键</td>
+      <td>四个侧面安装的物理按键用于用户交互</td>
     </tr>
     <tr>
       <td>XIAO 插座</td>
@@ -105,7 +105,7 @@ XIAO MIDI 合成器集成了以下组件：
 
 ### 出厂固件使用
 
-XIAO MIDI 合成器预装了多功能的出厂固件，让您可以开箱即用地探索多种声音和节拍功能。以下是默认功能和按键操作的快速指南。
+XIAO MIDI 合成器预装了多功能的出厂固件，让您可以开箱即用地探索多种声音和节奏功能。以下是默认功能和按键操作的快速指南。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/7.png" style={{width:600, height:'auto'}}/></div>
 
@@ -113,8 +113,8 @@ XIAO MIDI 合成器预装了多功能的出厂固件，让您可以开箱即用�
 
 - **声音测试（默认模式）：**
   - **🎵0**：循环切换 128 种预设乐器声音。每次按下切换到下一个声音。
-  - **🎵1**：提高音符音高（例如，从 C4 到 D4）。
-  - **🎵2**：降低音符音高（例如，从 C4 到 B3）。
+  - **🎵1**：提高音符音高（例如从 C4 到 D4）。
+  - **🎵2**：降低音符音高（例如从 C4 到 B3）。
   - **🎵3**：点击开始/停止节拍器。
 
 - **节拍器模式：**
@@ -130,6 +130,7 @@ XIAO MIDI 合成器预装了多功能的出厂固件，让您可以开箱即用�
   - **🎵3**：播放轨道 4
 
 **长按功能（任何模式）：**
+
 - **🎵1**（长按 2 秒）：音量增加
 - **🎵2**（长按 2 秒）：音量减少
 - **🎵3**（长按 2 秒）：切换到下一个模式（循环切换：声音测试 → 节拍器 → 多轨播放 → ...）
@@ -137,7 +138,6 @@ XIAO MIDI 合成器预装了多功能的出厂固件，让您可以开箱即用�
 :::tip
 您可以在无需任何额外设置的情况下体验所有功能。如需高级自定义或重新刷写固件，请参阅 **[StateMachine 示例代码](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster/blob/main/examples/StateMachine/StateMachine.ino)**。
 :::
-
 
 ### 引导加载器模式
 
@@ -150,7 +150,7 @@ XIAO MIDI 合成器预装了多功能的出厂固件，让您可以开箱即用�
 
 #### 如何进入 BOOT 模式
 
-首先，打开迷你合成器的后盖以访问 XIAO ESP32-C3 模块上的 BOOT 和 RESET 按钮。有两种方法：
+首先，打开迷你合成器的后盖，以访问 XIAO ESP32-C3 模块上的 BOOT 和 RESET 按钮。有两种方法：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/5.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -167,14 +167,14 @@ XIAO MIDI 合成器预装了多功能的出厂固件，让您可以开箱即用�
 
 进入 BOOT 模式后，设备将准备好通过 Arduino IDE 或其他工具进行固件上传。
 
-### 复位
+### 重置
 
-要复位设备，只需按下 XIAO ESP32-C3 模块上的 **RESET** 按钮。设备将重新启动。
+要重置设备，只需按下 XIAO ESP32-C3 模块上的 **RESET** 按钮。设备将重新启动。
 
 ## Arduino 库概述
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 XIAO MIDI 合成器由 [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster) 库支持，该库提供全面的 MIDI 控制和声音合成功能。
@@ -185,116 +185,115 @@ XIAO MIDI 合成器由 [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studi
     </a>
 </div><br />
 
+### 函数
 
-### 功能
-
-在我们开始开发代码之前，让我们先了解一下库的可用功能。
-
+在我们开始开发代码之前，让我们先了解一下库的可用函数。
 
 `static SAM2695Synth& getInstance()` – 返回 SAM2695Synth 类的单例实例。
--  **输入参数**：无。
--  **返回值**：对单例 SAM2695Synth 对象的引用。
 
+- **输入参数**：无。
+- **返回值**：SAM2695Synth 对象的引用。
 
 `void begin(T& serial, int baud)` – 使用指定的串行接口和波特率初始化合成器。
--  **输入参数**：
-    - `T& serial`：用于 MIDI 通信的串行端口对象（硬件或软件串行）。
-    - `int baud`：MIDI 通信的波特率（标准 MIDI 通常为 31250）。
--  **返回值**：无。
 
+- **输入参数**：
+  - `T& serial`：用于 MIDI 通信的串行端口对象（硬件或软件串行）。
+  - `int baud`：MIDI 通信的波特率（标准 MIDI 通常为 31250）。
+- **返回值**：无。
 
 `void setInstrument(uint8_t bank, uint8_t channel, uint8_t value)` – 为特定的 MIDI 通道和音色库设置乐器（音色）。
--  **输入参数**：
-    - `uint8_t bank`：乐器音色库编号（0–127）。
-    - `uint8_t channel`：MIDI 通道编号（0–15）。
-    - `uint8_t value`：乐器（程序）编号（0–127）。
--  **返回值**：无。
 
+- **输入参数**：
+  - `uint8_t bank`：乐器音色库编号（0–127）。
+  - `uint8_t channel`：MIDI 通道编号（0–15）。
+  - `uint8_t value`：乐器（程序）编号（0–127）。
+- **返回值**：无。
 
 `void setNoteOn(uint8_t channel, uint8_t pitch, uint8_t velocity)` – 在指定通道上触发音符开启事件，使用给定的音高和力度。
--  **输入参数**：
-    - `uint8_t channel`：MIDI 通道编号（0–15）。
-    - `uint8_t pitch`：MIDI 音符编号（0–127）。
-    - `uint8_t velocity`：音符的力度（音量）（0–127）。
--  **返回值**：无。
 
+- **输入参数**：
+  - `uint8_t channel`：MIDI 通道编号（0–15）。
+  - `uint8_t pitch`：MIDI 音符编号（0–127）。
+  - `uint8_t velocity`：音符的力度（音量）（0–127）。
+- **返回值**：无。
 
 `void setNoteOff(uint8_t channel, uint8_t pitch)` – 在指定通道上为给定音高触发音符关闭事件。
--  **输入参数**：
-    - `uint8_t channel`：MIDI 通道编号（0–15）。
-    - `uint8_t pitch`：MIDI 音符编号（0–127）。
--  **返回值**：无。
 
+- **输入参数**：
+  - `uint8_t channel`：MIDI 通道编号（0–15）。
+  - `uint8_t pitch`：MIDI 音符编号（0–127）。
+- **返回值**：无。
 
-`void setAllNotesOff(uint8_t channel)` – 关闭指定通道上当前播放的所有音符。
--  **输入参数**：
-    - `uint8_t channel`：MIDI 通道编号（0–15）。
--  **返回值**：无。
+`void setAllNotesOff(uint8_t channel)` – 关闭指定通道上当前正在播放的所有音符。
 
+- **输入参数**：
+  - `uint8_t channel`：MIDI 通道编号（0–15）。
+- **返回值**：无。
 
 `void playChord(const musicData& chord)` – 通过为提供的和弦结构中的所有音符发送音符开启事件来播放和弦。
--  **输入参数**：
-    - `const musicData& chord`：包含和弦的通道、音符、力度和时间信息的结构。
--  **返回值**：无。
 
+- **输入参数**：
+  - `const musicData& chord`：包含和弦的通道、音符、力度和时间信息的结构。
+- **返回值**：无。
 
 `void setPitch(uint8_t pitch)` – 为后续音符事件设置默认音高值。
--  **输入参数**：
-    - `uint8_t pitch`：要设置为默认音高的 MIDI 音符编号（0–127）。
--  **返回值**：无。
 
+- **输入参数**：
+  - `uint8_t pitch`：要设置为默认音高的 MIDI 音符编号（0–127）。
+- **返回值**：无。
 
 `uint8_t getPitch() const` – 获取当前默认音高值。
--  **输入参数**：无。
--  **返回值**：当前默认 MIDI 音符编号（0–127）。
 
+- **输入参数**：无。
+- **返回值**：当前默认 MIDI 音符编号（0–127）。
 
 `void setVolume(uint8_t channel, uint8_t level)` – 为特定 MIDI 通道设置音量。
--  **输入参数**：
-    - `uint8_t channel`：MIDI 通道编号（0–15）。
-    - `uint8_t level`：音量级别（0–127）。
--  **返回值**：无。
 
+- **输入参数**：
+  - `uint8_t channel`：MIDI 通道编号（0–15）。
+  - `uint8_t level`：音量级别（0–127）。
+- **返回值**：无。
 
 `void increasePitch()` – 将默认音高值增加一个半音。
--  **输入参数**：无。
--  **返回值**：无。
 
+- **输入参数**：无。
+- **返回值**：无。
 
 `void decreasePitch()` – 将默认音高值减少一个半音。
--  **输入参数**：无。
--  **返回值**：无。
 
+- **输入参数**：无。
+- **返回值**：无。
 
 `void increaseVelocity()` – 增加音符事件的默认力度（音量）。
--  **输入参数**：无。
--  **返回值**：无。
 
+- **输入参数**：无。
+- **返回值**：无。
 
 `void decreaseVelocity()` – 减少音符事件的默认力度（音量）。
--  **输入参数**：无。
--  **返回值**：无。
 
-`void increaseBpm()` – 将当前节拍（每分钟节拍数）按预定义步长增加。
--  **输入参数**：无。
--  **返回值**：无。
+- **输入参数**：无。
+- **返回值**：无。
 
+`void increaseBpm()` – 按预定义步长增加当前节拍（每分钟节拍数）。
 
-`void decreaseBpm()` – 将当前节拍（每分钟节拍数）按预定义步长减少。
--  **输入参数**：无。
--  **返回值**：无。
+- **输入参数**：无。
+- **返回值**：无。
 
+`void decreaseBpm()` – 按预定义步长减少当前节拍（每分钟节拍数）。
+
+- **输入参数**：无。
+- **返回值**：无。
 
 `void setBpm(uint8_t bpm)` – 将节拍（每分钟节拍数）设置为指定值。
--  **输入参数**：
-    - `uint8_t bpm`：所需的每分钟节拍数（通常为 40–240）。
--  **返回值**：无。
 
+- **输入参数**：
+  - `uint8_t bpm`：所需的每分钟节拍数（通常为 40–240）。
+- **返回值**：无。
 
 `uint8_t getBpm() const` – 获取当前节拍（每分钟节拍数）。
--  **输入参数**：无。
--  **返回值**：当前 BPM 值。
 
+- **输入参数**：无。
+- **返回值**：当前 BPM 值。
 
 ### 默认变量
 
@@ -305,36 +304,37 @@ XIAO MIDI 合成器由 [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studi
 <summary>点击此处预览完整代码</summary>
 
 ```cpp
-#define MIDI_SERIAL_BAUD_RATE           31250   //MIDI串口波特率
-#define USB_SERIAL_BAUD_RATE            115200  //USB串口波特率
-#define MIDI_COMMAND_ON                 0x90    //MIDI控制开关 - 开
-#define MIDI_COMMAND_OFF                0x80    //MIDI控制开关 - 关
-#define BPM_DEFAULT                     120     //默认bpm
-#define BPM_MIN                         40      //最小bpm
-#define BPM_MAX                         240     //最大bpm
-#define BPM_STEP                        10      //bpm步长
+#define MIDI_SERIAL_BAUD_RATE           31250   //MIDI serial baud rate
+#define USB_SERIAL_BAUD_RATE            115200  //USB  serial baud rate
+#define MIDI_COMMAND_ON                 0x90    //MIDI Control Switch - On
+#define MIDI_COMMAND_OFF                0x80    //MIDI Control Switch - Off
+#define BPM_DEFAULT                     120     //default bpm
+#define BPM_MIN                         40      //min bpm
+#define BPM_MAX                         240     //max bpm
+#define BPM_STEP                        10      //step of bpm
 #define MIDI_CMD_CONTROL_CHANGE \
-0xB0                              // 控制变化（或通道模式消息）
-#define MIDI_CMD_PROGRAM_CHANGE 0xC0  // 程序变化
+0xB0                              // Control Change (or Channel Mode
+                                      // Message)
+#define MIDI_CMD_PROGRAM_CHANGE 0xC0  // Program Change
 
-#define VELOCITY_MIN                    0       //最小力度(0~127) 0
-#define VELOCITY_MAX                    127     //最大力度(0~127) 127
-#define VELOCITY_STEP                   10      //力度步长
-#define VELOCITY_DEFAULT                64      //默认力度(0~127) 64
-#define BASIC_TIME                      60000   //1分钟对应的毫秒数
-#define QUATER_NOTE                     0       //四分音符
-#define EIGHTH_NOTE                     1       //八分音符
-#define SIXTEENTH_NOTE                  2       //十六分音符
-#define BEATS_BAR_DEFAULT               4       //默认节拍 - 4/4拍
-#define BEATES_BAR_2                    2       //2/4拍
-#define BEATS_BAR_3                     3       //3/4拍
-#define BEATS_BAR_4                     4       //4/4拍
-#define NOTE_COUNT_DEFAULT              4       //默认音符数量
-#define NOTE_COUNT_MIN                  1       //最小音符数量
-#define NOTE_COUNT_MAX                  16      //最大音符数量
+#define VELOCITY_MIN                    0       //min velocity(0~127) 0
+#define VELOCITY_MAX                    127     //max velocity(0~127) 127
+#define VELOCITY_STEP                   10      //step velocity
+#define VELOCITY_DEFAULT                64      //default velocity(0~127) 64
+#define BASIC_TIME                      60000   //The number of milliseconds corresponding to 1 minute
+#define QUATER_NOTE                     0       //Quarter note
+#define EIGHTH_NOTE                     1       //Eighth note
+#define SIXTEENTH_NOTE                  2       //sixteenth note
+#define BEATS_BAR_DEFAULT               4       //default beat - 4/4 beat
+#define BEATES_BAR_2                    2       //2/4 beat
+#define BEATS_BAR_3                     3       //3/4 beat
+#define BEATS_BAR_4                     4       //4/4 beat
+#define NOTE_COUNT_DEFAULT              4       //default note count
+#define NOTE_COUNT_MIN                  1       //min note count
+#define NOTE_COUNT_MAX                  16      //max note count
 
 
-/* 定义通道开始 */
+/* define channel begin */
 #define CHANNEL_0                       0
 #define CHANNEL_1                       1
 #define CHANNEL_2                       2
@@ -581,7 +581,7 @@ typedef enum {
 
 ### 安装
 
-步骤 1. 下载 [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster) 库作为 ZIP 文件。
+步骤 1. 下载 [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster) 库的 ZIP 文件。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="ttps://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster" target="_blank" rel="noopener noreferrer">
@@ -589,8 +589,7 @@ typedef enum {
     </a>
 </div><br />
 
-
-步骤 2. 在 Arduino IDE 中，点击 **Sketch > Include Library > Add .ZIP Library** 并选择下载的 ZIP 文件。
+步骤 2. 在 Arduino IDE 中，点击 **Sketch > Include Library > Add .ZIP Library**，然后选择下载的 ZIP 文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:800, height:'auto'}}/></div>
 
@@ -606,9 +605,9 @@ typedef enum {
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>下载 Arduino IDE</font></span></strong></a>
 </div>
 
-**步骤 2.** 选择您的开发板型号并将其添加到 Arduino IDE。
+**步骤 2.** 选择您的开发板型号并将其添加到 Arduino IDE 中。
 
-- XIAO MIDI 合成器内置 **XIAO ESP32-C3**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/)** 完成添加。
+- XIAO MIDI 合成器内置 **XIAO ESP32-C3**，请参考 **[此教程](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/)** 完成添加。
 
 ### 演示 1：基本 MIDI 音符播放
 
@@ -617,21 +616,21 @@ typedef enum {
 #### 所需材料
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO MIDI 合成器</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>XIAO MIDI 合成器</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 #### 参考程序
@@ -685,9 +684,9 @@ typedef enum {
 
 void setup()
 {
-  //串口初始化到 USB
+  //serial init to usb
   SHOW_SERIAL.begin(USB_SERIAL_BAUD_RATE);
-  // 合成器初始化。由于这里使用硬件串口，软件串口被注释掉。
+  // Synth initialization. Since a hardware serial port is used here, the software serial port is commented out.
   synth.begin(COM_SERIAL, MIDI_SERIAL_BAUD_RATE);
   synth.setInstrument(0,CHANNEL_0,unit_synth_instrument_t::GrandPiano_1);
   delay(1000);
@@ -702,21 +701,21 @@ void loop()
 }
 ```
 
-> 这段代码将在内置合成器上播放 E4 音符，每秒交替开关。您可以根据需要更改音符、乐器或时序。
+> 这段代码将在内置合成器上播放E4音符，每秒交替开启和关闭。您可以根据需要更改音符、乐器或时序。
 
 #### 程序注释
 
-这段代码代表了 XIAO MIDI 合成器的核心功能，这是一个基于 SAM2695 合成器芯片的紧凑型音频合成解决方案。软件实现演示了合成器如何通过不同的串行通信方法与各种 XIAO 平台变体进行接口。
+这段代码代表了XIAO MIDI合成器的核心功能，这是一个基于SAM2695合成器芯片的紧凑型音频合成解决方案。软件实现演示了合成器如何通过不同的串行通信方法与各种XIAO平台变体进行接口。
 
-XIAO MIDI 合成器通过条件编译支持 XIAO 生态系统中的多个微控制器平台：
+XIAO MIDI合成器通过条件编译支持XIAO生态系统中的多个微控制器平台：
 
-- **基于 AVR 的开发板**：利用 SoftwareSerial 与合成器芯片通信
-- **RP2040/RP2350 和 XIAO RA4M1**：在指定引脚（D7、D6）上实现 SoftwareSerial
-- **ESP32 变体**：通过 Serial0 利用原生硬件串口功能
-- **基于 SAMD 的开发板**（包括 XIAO M0）：使用硬件 UART 接口
-- **nRF52840**：实现 UART 通信，可选支持 TinyUSB
+- **基于AVR的开发板**：利用SoftwareSerial与合成器芯片通信
+- **RP2040/RP2350和XIAO RA4M1**：在指定引脚（D7、D6）上实现SoftwareSerial
+- **ESP32变体**：通过Serial0利用原生硬件串口功能
+- **基于SAMD的开发板**（包括XIAO M0）：使用硬件UART接口
+- **nRF52840**：实现UART通信，可选支持TinyUSB
 
-这种多功能方法确保合成器模块在整个 XIAO 产品系列中都能一致工作。
+这种多样化的方法确保合成器模块在整个XIAO产品系列中都能一致工作。
 
 合成器实现建立了两个通信路径：
 
@@ -730,7 +729,7 @@ XIAO MIDI 合成器通过条件编译支持 XIAO 生态系统中的多个微控�
 
 在启动期间，XIAO MIDI 合成器：
 
-1. 在适当的波特率下建立串行通信
+1. 以适当的波特率建立串行通信
 2. 初始化 SAM2695 合成器引擎
 3. 在通道 0 上配置默认乐器（大钢琴）
 
@@ -738,9 +737,9 @@ XIAO MIDI 合成器通过条件编译支持 XIAO 生态系统中的多个微控�
   synth.setInstrument(0,CHANNEL_0,unit_synth_instrument_t::GrandPiano_1);
 ```
 
-4. 允许通过时间延迟进行稳定
+4. 允许通过时序延迟进行稳定
 
-演示循环通过以下方式展示了基本的声音生成能力：
+演示循环通过以下方式展示基本的声音生成能力：
 
 ```cpp
 void loop()
@@ -766,21 +765,21 @@ void loop()
 #### 所需材料
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO MIDI 合成器</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>XIAO MIDI 合成器</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 #### 参考程序
@@ -848,32 +847,32 @@ void loop()
     #define BUTTON_B_PIN 2
     #define BUTTON_C_PIN 1 
     #define BUTTON_D_PIN 0
-#else //您需要参考相应的手册...
-    #define BUTTON_A_PIN 0 //您需要参考相应的手册...
-    #define BUTTON_B_PIN 1 //您需要参考相应的手册...
-    #define BUTTON_C_PIN 2 //您需要参考相应的手册...
-    #define BUTTON_D_PIN 3 //您需要参考相应的手册...
+#else //You need to refer to the corresponding manual...
+    #define BUTTON_A_PIN 0 //You need to refer to the corresponding manual...
+    #define BUTTON_B_PIN 1 //You need to refer to the corresponding manual...
+    #define BUTTON_C_PIN 2 //You need to refer to the corresponding manual...
+    #define BUTTON_D_PIN 3 //You need to refer to the corresponding manual...
 #endif
 
-//定义按钮所需的结构
+//Define the structure needed for the button
 BtnState btnA = {HIGH, HIGH, 0, 0, false};
 BtnState btnB = {HIGH, HIGH, 0, 0, false};
 BtnState btnC = {HIGH, HIGH, 0, 0, false};
 
 
 bool music_on_off_flag = false;
-int bpm = BPM_DEFAULT;                            // 初始化BPM，BPM_DEFAULT = 120
-int beatsPerBar = BEATS_BAR_DEFAULT;              // 每小节的拍数，可以是2、3或4
-int noteType = QUATER_NOTE;                       // 音符类型选择：0（四分音符）、1（八分音符）、2（十六分音符）
-int beatCount = 0;                                // 拍子计数器
-unsigned long previousMillis = 0;                 // 记录上次发送MIDI信号的时间
+int bpm = BPM_DEFAULT;                            // init BPM，BPM_DEFAULT = 120
+int beatsPerBar = BEATS_BAR_DEFAULT;              // Beats per measure, which can be 2, 3, or 4
+int noteType = QUATER_NOTE;                       // Note type selection: 0 (quarter note), 1 (eighth note), 2 (sixteenth note)
+int beatCount = 0;                                // Beat counter
+unsigned long previousMillis = 0;                 // Record the time of the last MIDI signal sent
 
 
 void setup()
 {
-    //串口初始化到USB
+    //serial init to usb
     SHOW_SERIAL.begin(USB_SERIAL_BAUD_RATE);
-    // 合成器初始化。由于这里使用硬件串口，软件串口被注释掉。
+    // Synth initialization. Since a hardware serial port is used here, the software serial port is commented out.
     synth.begin(COM_SERIAL, MIDI_SERIAL_BAUD_RATE);
     synth.setInstrument(0,CHANNEL_0,unit_synth_instrument_t::GrandPiano_1);
     initButtons(BUTTON_A_PIN);
@@ -905,9 +904,9 @@ void loop()
 
 void play()
 {
-    // 计算每拍（四分音符）之间的间隔（毫秒）
-    // 60,000毫秒等于1分钟
-    // 根据音符类型调整间隔
+    // Calculate the interval between each beat (quarter note) in milliseconds
+    // 60,000 milliseconds equals 1 minute
+    // Adjust interval based on note type
     unsigned long interval = (BASIC_TIME / synth.getBpm()) / (noteType + 1); 
 
     if(music_on_off_flag)
@@ -921,13 +920,13 @@ void play()
             else
                 synth.setNoteOn(CHANNEL_9, NOTE_C2, VELOCITY_DEFAULT);
     
-            // 增加拍子计数
+            // Increment beat count
             beatCount++;
     
-            // 每四拍，表示一小节结束
+            // Every four beats, indicating the end of a measure
             if (beatCount >= beatsPerBar)
             {
-                // 重置计数
+                // Reset count
                 beatCount = 0;
             }
         }
@@ -935,47 +934,48 @@ void play()
 }
 ```
 
-> 这段代码演示了一个简单的节拍音序器。按钮A切换节拍的开/关，按钮B增加节拍（BPM），按钮C减少节拍。音序器使用第9通道的MIDI音符播放基本的鼓点模式。您可以扩展这个示例来添加更复杂的节拍或额外的按钮功能。
+> 这段代码演示了一个简单的节拍音序器。按钮 A 切换节拍的开/关，按钮 B 增加节拍（BPM），按钮 C 减少节拍。音序器使用第 9 通道的 MIDI 音符播放基本的鼓点模式。您可以扩展这个示例来添加更复杂的节拍或额外的按钮功能。
 
 #### 程序注释
 
-这个程序在基本MIDI音符演示的基础上，通过物理按钮引入了实时用户交互。代码使用三个按钮：
+这个程序在基本 MIDI 音符演示的基础上，通过物理按钮引入了实时用户交互。代码使用三个按钮：
 
-- **按钮A**：开始/停止节拍序列
-- **按钮B**：增加节拍（BPM）
-- **按钮C**：减少节拍（BPM）
+- **按钮 A**：开始/停止节拍序列
+- **按钮 B**：增加节拍（BPM）
+- **按钮 C**：减少节拍（BPM）
 
-`play()` 函数根据当前BPM和音符类型计算节拍间隔，并在重复模式中触发鼓声（使用第9通道的MIDI音符D2和C2）。节拍计数每小节重置，创建一个简单的节拍器或鼓机效果。
+`play()` 函数根据当前 BPM 和音符类型计算节拍间隔，并在重复模式中触发鼓声（使用第 9 通道的 MIDI 音符 D2 和 C2）。节拍计数每小节重置，创建一个简单的节拍器或鼓机效果。
 
 这个示例演示了如何：
+
 - 集成按钮输入进行实时控制
 - 动态调整节拍和播放状态
-- 将XIAO MIDI合成器用作可编程节拍生成器
+- 将 XIAO MIDI 合成器用作可编程节拍生成器
 
 您可以通过添加更多按钮、支持不同的鼓声或实现更高级的音序器逻辑来进一步增强这个演示。
 
-### 演示3：带按钮控制的多轨和弦播放
+### 演示 3：带按钮控制的多轨和弦播放
 
-这个演示展示了如何使用XIAO MIDI合成器播放多轨和弦，每个和弦由按钮触发。您可以使用两个物理按钮独立地开始/停止两种不同的和弦模式。
+这个演示展示了如何使用 XIAO MIDI 合成器播放多轨和弦，每个和弦由按钮触发。您可以使用两个物理按钮独立地开始/停止两种不同的和弦模式。
 
 #### 所需材料
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO MIDI合成器</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>XIAO MIDI 合成器</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 #### 参考程序
@@ -1042,62 +1042,62 @@ void play()
     #define BUTTON_B_PIN 2
     #define BUTTON_C_PIN 1 
     #define BUTTON_D_PIN 0
-#else //您需要参考相应的手册...
-    #define BUTTON_A_PIN 0 //您需要参考相应的手册...
-    #define BUTTON_B_PIN 1 //您需要参考相应的手册...
-    #define BUTTON_C_PIN 2 //您需要参考相应的手册...
-    #define BUTTON_D_PIN 3 //您需要参考相应的手册...
+#else //You need to refer to the corresponding manual...
+    #define BUTTON_A_PIN 0 //You need to refer to the corresponding manual...
+    #define BUTTON_B_PIN 1 //You need to refer to the corresponding manual...
+    #define BUTTON_C_PIN 2 //You need to refer to the corresponding manual...
+    #define BUTTON_D_PIN 3 //You need to refer to the corresponding manual...
 #endif
 
-//定义按钮所需的结构
+//Define the structure needed for the button
 BtnState btnA = {HIGH, HIGH, 0, 0, false};
 BtnState btnB = {HIGH, HIGH, 0, 0, false};
 
-//多轨和弦数据定义示例
-// 此结构控制在通道9上播放，只播放两个音符。 
-// 声音设置为默认声音，持续时间可根据需要调整。
+//Example of multi-track chord data definition
+// This structure controls playback on channel 9, with only two notes being played. 
+// The sound is set to the default sound, and the duration can be adjusted as needed.
 const musicData chordTwoNotes =
 {
-    CHANNEL_1,                          //在通道9上播放
+    CHANNEL_1,                          //play on channel 9
     {
-        {NOTE_C2, true},                //NOTE_C2 开启
-        {NOTE_FS2, true},               //NOTE_FS2 开启
-        {NOTE_E6, false},               //NOTE_E6 关闭
-        {NOTE_CS5, false},              //NOTE_CS5 关闭
+        {NOTE_C2, true},                //NOTE_C2 on
+        {NOTE_FS2, true},               //NOTE_FS2 on
+        {NOTE_E6, false},               //NOTE_E6 off
+        {NOTE_CS5, false},              //NOTE_CS5 off
     },
-    VELOCITY_DEFAULT ,                  //默认力度(64)
-    0,                                  // 索引 此处未使用
-    BPM_DEFAULT*8,                      //间隔时间
+    VELOCITY_DEFAULT ,                  //default velocity(64)
+    0,                                  // index Not used here
+    BPM_DEFAULT*8,                      //interval time
 };
 
 const musicData chordFourNotes =
 {
-    CHANNEL_2,                          // 在通道0上播放
+    CHANNEL_2,                          // play on channel 0
     {
-        {NOTE_F2, true},                // NOTE_F2 开启
-        {NOTE_B2, true},                // NOTE_B2 开启
-        {NOTE_E6, true},                // NOTE_E6 开启
-        {NOTE_CS5, true},               // NOTE_CS5 开启
+        {NOTE_F2, true},                // NOTE_F2 on
+        {NOTE_B2, true},                // NOTE_B2 on
+        {NOTE_E6, true},                // NOTE_E6 on
+        {NOTE_CS5, true},               // NOTE_CS5 on
     },
-    VELOCITY_DEFAULT ,                  // 默认力度(64)
-    0,                                  // 索引 此处未使用
-    BPM_DEFAULT*4,                      // 间隔时间
+    VELOCITY_DEFAULT ,                  // default velocity(64)
+    0,                                  // index Not used here
+    BPM_DEFAULT*4,                      // interval time
 };
 
-bool chordTwoNotesFlag = false;         // 开启或关闭 chord_twoNotes
-bool chordFourNotesFlag = false;        // 开启或关闭 chord_fourNotes
-unsigned long preMillisTwoNotes = 0;    // 记录在chord_twoNotes上最后一次发送MIDI信号的时间
-unsigned long preMillisFourNotes= 0;    // 记录在const musicData chord_fourNotes上最后一次发送MIDI信号的时间
+bool chordTwoNotesFlag = false;         // on or off chord_twoNotes
+bool chordFourNotesFlag = false;        // on or off chord_fourNotes
+unsigned long preMillisTwoNotes = 0;    // Record the time of the last MIDI signal sent on chord_twoNotes
+unsigned long preMillisFourNotes= 0;    // Record the time of the last MIDI signal sent on const musicData chord_fourNotes =
 
 
 void setup()
 {
-    //串口初始化到usb
+    //serial init to usb
     SHOW_SERIAL.begin(USB_SERIAL_BAUD_RATE);
-    // 合成器初始化。由于这里使用硬件串口，软件串口被注释掉。
+    // Synth initialization. Since a hardware serial port is used here, the software serial port is commented out.
     synth.begin(COM_SERIAL, MIDI_SERIAL_BAUD_RATE);
     synth.setInstrument(0,CHANNEL_0,unit_synth_instrument_t::GrandPiano_1);
-    // 初始化您正在使用的按钮。
+    // Initialize the buttons you are using.
     initButtons(BUTTON_A_PIN);
     initButtons(BUTTON_B_PIN);
 
@@ -1144,18 +1144,19 @@ void play()
 }
 ```
 
-> 这段代码演示了如何使用两个按钮触发两种不同的多音符和弦。按钮A切换两音符和弦的播放，按钮B切换四音符和弦的播放。每个和弦在不同的MIDI通道上播放，并具有自己的时序。
+> 这段代码演示了如何使用两个不同的按钮触发两种不同的多音符和弦。按钮A切换两音符和弦的播放，按钮B切换四音符和弦的播放。每个和弦在不同的MIDI通道上播放，并具有自己的时序。
 
 #### 程序注释
 
 这个程序演示了带有实时按钮控制的多轨和弦播放。代码定义了两个和弦模式（`chordTwoNotes` 和 `chordFourNotes`），每个都有自己的MIDI通道、音符和时序。使用两个按钮：
 
-- **按钮A**：开始/停止两音符和弦序列
-- **按钮B**：开始/停止四音符和弦序列
+- **按钮A**：启动/停止两音符和弦序列
+- **按钮B**：启动/停止四音符和弦序列
 
 `play()` 函数检查每个和弦的时序，如果相应的标志被启用，则触发播放。这允许不同和弦模式的独立、重叠播放，模拟一个简单的多轨音序器。
 
 这个示例演示了如何：
+
 - 定义和播放自定义和弦结构
 - 使用多个按钮进行独立的音乐控制
 - 使用XIAO MIDI合成器构建更复杂、分层的音乐表演
@@ -1164,26 +1165,26 @@ void play()
 
 ### 演示4：播放完整的旋律序列
 
-此演示展示了如何使用XIAO MIDI合成器通过将音符、持续时间和延迟数据存储在数组中来播放完整的旋律序列（如歌曲）。该示例演示了如何使用内置的小提琴乐器播放预编程的旋律。
+这个演示展示了如何使用XIAO MIDI合成器通过在数组中存储音符、持续时间和延迟数据来播放完整的旋律序列（如一首歌曲）。该示例演示了如何使用内置的小提琴乐器播放预编程的旋律。
 
 #### 所需材料
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO MIDI合成器</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>XIAO MIDI合成器</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 #### 参考程序
@@ -1234,7 +1235,7 @@ void play()
     SAM2695Synth<Uart> synth = SAM2695Synth<Uart>::getInstance();
 #endif
 
-// 可以移动到头文件中，例如 notes.h
+// Can be moved in header file i.e notes.h
 #define ARRAY_LEN(array) (sizeof(array) / sizeof(array[0]))
 
 const int midi1[453][3] = {
@@ -1709,30 +1710,30 @@ const int midi1[453][3] = {
 
 void playMidi(const int notes[][3], size_t len) {
     for (int i = 0; i < len; i++) {
-        // 播放音符
+        // Play note
         synth.setNoteOn(CHANNEL_0, notes[i][0], 110);
         delay(notes[i][1]);
-        // 停止音符
+        // Stop note
         synth.setNoteOff(CHANNEL_0, notes[i][0]);
         delay(notes[i][2]);
     }
 }
 
 void setup() {
-    // 初始化USB串口
+    // Initialize USB serial port
     SHOW_SERIAL.begin(USB_SERIAL_BAUD_RATE);
-    // 初始化MIDI合成器
+    // Initialize MIDI synthesizer
     synth.begin(COM_SERIAL, MIDI_SERIAL_BAUD_RATE);
-    // 将乐器声音设置为小提琴
+    // Set instrument sound to Violin
     synth.setInstrument(0, CHANNEL_0, unit_synth_instrument_t::Violin);
     delay(1000);
     
-    // 播放MIDI音符
+    // Play MIDI notes
     playMidi(midi1, ARRAY_LEN(midi1));
 }
 
 void loop() {
-    // 主循环为空，因为音乐只播放一次
+    // Main loop is empty because the music only plays once
 }
 ```
 
@@ -1741,12 +1742,14 @@ void loop() {
 #### 程序注释
 
 这个程序演示了如何：
+
 - 将完整的旋律存储为音符、持续时间和延迟值的数组
 - 使用辅助函数（`playMidi`）遍历旋律并按顺序播放每个音符
 - 选择特定的乐器（小提琴）进行播放
 - 在启动时自动播放歌曲
 
 您可以通过以下方式扩展此演示：
+
 - 更改乐器或音符数据以播放不同的歌曲
 - 添加按钮控制来启动/停止或重复播放
 - 实现多轨或复音播放以获得更高级的音乐效果
@@ -1756,7 +1759,6 @@ void loop() {
 
 :::
 
-
 ## 资源
 
 - **[PDF]** [XIAO MIDI合成器原理图](https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/res/202004281_XIAO_MIDI_Synthesizer_v1.0_SCH&PDF_250421.pdf)
@@ -1765,9 +1767,9 @@ void loop() {
 
 ## 故障排除
 
-### Q1：如何将MIDI文件转换为XIAO MIDI合成器的Arduino代码？
+### Q1: 如何将MIDI文件转换为XIAO MIDI合成器的Arduino代码？
 
-要将MIDI文件转换为可用于XIAO MIDI合成器的Arduino代码，您可以按照以下步骤操作：
+要将MIDI文件转换为可与XIAO MIDI合成器一起使用的Arduino代码，您可以按照以下步骤操作：
 
 1. 获取MIDI文件
 
@@ -1794,9 +1796,11 @@ void loop() {
 
     1. 将您的MIDI文本文件（例如`1.txt`）放在与脚本相同的目录中。
     2. 在终端中运行脚本：
+
     ```sh
     python change_fast.py
     ```
+
     这将生成一个包含音符数组的头文件（例如`track_from_miditext.h`）。
 
     3. 将生成的数组复制到您的Arduino草图中，替换旋律数据。
@@ -1812,19 +1816,18 @@ void loop() {
     - 将其粘贴到您的Arduino项目中，替换现有的旋律数组。
     - 如果需要，更新您的播放逻辑以匹配新的数组结构。
 
+## 技术支持与产品讨论
 
-## 技术支持和产品讨论
-
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您对我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>

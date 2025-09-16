@@ -1,6 +1,6 @@
 ---
 description: 本维基提供 SO ARM100/101 的组装和调试教程，并在 Lerobot 框架内实现数据收集和训练。
-title: 如何在 Lerobot 中使用 SO100/101Arm 机器人手臂
+title: Lerobot 中使用 SO100/101Arm 机器人手臂
 keywords:
 - Lerobot
 - Huggingface

@@ -1,6 +1,6 @@
 ---
-description: XIAO nRF52840(sense) 与 NuttX(RTOS)
-title: XIAO nRF52840(sense) 与 NuttX(RTOS)
+description: XIAO nRF52840(sense) With NuttX(RTOS)
+title: XIAO nRF52840(sense) With NuttX(RTOS)
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nuttx.webp
@@ -14,19 +14,19 @@ last_update:
 
 ## 介绍
 
-[NuttX](https://nuttx.apache.org/) 是一个成熟的实时操作系统（RTOS），因其标准合规性和小占用空间而广受认可。NuttX 的主要特性之一是其可扩展性，这使得它可以在从 8 位微控制器到 64 位系统的各种环境中使用。这种灵活性是通过遵循 POSIX 和 ANSI 标准实现的，使您能够在来自不同架构、系列和半导体供应商的各种芯片上体验类似的 NuttX 功能。
+[NuttX](https://nuttx.apache.org/) 是一个成熟的实时操作系统（RTOS），以其标准合规性和小占用空间而广受认可。NuttX 的主要特性之一是其可扩展性，使其能够在从 8 位微控制器到 64 位系统的各种环境中使用。这种灵活性通过遵循 POSIX 和 ANSI 标准来实现，使您能够在来自不同架构、系列和半导体供应商的各种芯片上体验类似的 NuttX 功能。
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nuttx.svg"/></div>
 
-此外，NuttX 提供了许多先进且有用的功能，如 USB、以太网、音频和图形子系统。这些特性使 NuttX 成为寻求多功能、强大的 RTOS 且能够在各种类型硬件上运行的开发者的有吸引力的选择。
+此外，NuttX 提供了许多先进且有用的功能，如 USB、以太网、音频和图形子系统。这些特性使 NuttX 成为寻求能够在各种类型硬件上运行的多功能、强大 RTOS 的开发者的有吸引力的选择。
 
-NuttX 支持大量且不断扩展的开发板。[官方文档](https://nuttx.apache.org/docs/latest/platforms/) 提供了支持的开发板的完整列表，按架构和片上系统（SoC）系列组织。
+NuttX 支持大量且不断扩展的开发板。[官方文档](https://nuttx.apache.org/docs/latest/platforms/) 提供了按架构和片上系统（SoC）系列组织的支持开发板的完整列表。
 
 例如，NuttX 文档中的 [Seeed Studio Xiao nRF52840](https://nuttx.apache.org/docs/latest/platforms/arm/nrf52/boards/xiao-nrf52840/index.html) 页面提供了每个支持功能的详细描述和如何使用它们的说明。此外，NuttX 文档中还有一个专门针对 [Nordic Semiconductor nRF52](https://nuttx.apache.org/docs/latest/platforms/arm/nrf52/index.html) 系列芯片的页面。
 
 ## 工具设置
 
-在 XIAO nRF52840 上开始使用 NuttX 的第一步是安装 UF2 工具，该工具用于将 hex 文件格式转换为 uf2，然后下载 NuttX 源代码本身。Nuttx 提供了针对不同平台的[指南](https://nuttx.apache.org/docs/latest/quickstart/install.html)。按照以下步骤操作：
+在 XIAO nRF52840 上开始使用 NuttX 的第一步是安装 UF2 工具，该工具用于将 hex 文件格式转换为 uf2，然后下载 NuttX 源代码本身。Nuttx 为不同平台提供了一个[指南](https://nuttx.apache.org/docs/latest/quickstart/install.html)。按照以下步骤操作：
 
 1. 下载 UF2 工具：
 
@@ -61,7 +61,7 @@ Apache Nuttx 分为两个项目：
 ./tools/configurate.sh board_name:your_application
 ```
 
-也可以通过运行命令检查支持的开发板列表：
+Also it's possible to check the list of board-supported a running the command:
 
 ```bash
 ./tools/configurate.sh -L
@@ -82,15 +82,15 @@ Apache Nuttx 分为两个项目：
     python3 uf2/utils/uf2conv.py -c -f 0xADA52840 -i nuttx.hex -o nuttx.uf2
     ```
 
-6. 连接 Seeed Studio XIAO nRF52840，并通过快速双击进入引导加载程序模式。开发板将被检测为 USB 大容量存储设备。然后将 "nuttx.uf2" 复制到设备中。
+6. 连接 Seeed Studio XIAO nRF52840，通过快速双击进入引导加载程序模式。开发板将被检测为 USB 大容量存储设备。然后将 "nuttx.uf2" 复制到设备中。
 
 ## 实践操作
 
-现在是时候实际探索 NuttX 了。在本节中，有三个可用的应用程序：NSH、USBNSH 和 JUMBO。
+现在是实际探索 NuttX 的时候了。在本节中，提供了三个应用程序：NSH、USBNSH 和 JUMBO。
 
 ### NSH
 
-NuttShell(NSH) 是一个在 NuttX 中使用的 shell 系统，类似于 bash 和其他类似选项。它支持丰富的内置命令集、脚本编写以及将您自己的应用程序作为"内置"（同一个 NuttX 二进制文件的一部分）运行的能力。NSH 配置在 UART0 上启用控制台，使用 115200 bps。
+NuttShell(NSH) 是用于 NuttX 的 shell 系统，类似于 bash 和其他类似选项。它支持丰富的内置命令集、脚本编写以及将您自己的应用程序作为"内置"（同一个 NuttX 二进制文件的一部分）运行的能力。NSH 配置使用 115200 bps 在 UART0 启用控制台。
 
 我们可以通过清除之前的配置来开始构建过程
 
@@ -99,38 +99,38 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-现在我们为 xiao-nrf5200 板选择 NSH 配置：
+Now we select the NSH configuration to the xiao-nrf5200 board:
 
 ```bash
 ./tools/configurate.sh xiao-nrf52840:nsh
 ```
 
-编译源代码。
+Compile the source code.
 
 ```bash
 make -j
 ```
 
-使用 U2F 工具将 nuttx.hex 转换为 UF2 格式：
+Convert nuttx.hex to UF2 format using U2F Tools:
 
 ```bash
 python3 uf2/utils/uf2conv.py -c -f 0xADA52840 -i nuttx.hex -o nuttx.uf2
 ```
 
-将固件加载到您的板子中，并将 USB 转串口连接到 TX 和 RX 引脚，然后运行串口通信程序，如 minicon 或 picocom：
+将固件加载到您的开发板中，并将USB转串口连接到TX和RX引脚，然后运行串口通信程序，如minicon或picocom：
 
 ```bash
 picocom -b 115200 /dev/ttyUSB0
 ```
 
-访问 NuttShell 控制台：
+Access the NuttShell console:
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
 nsh> 
 ```
 
-输入 `?`，您将访问命令和内置应用程序的可用选项。
+Typing `?`, you will access the available options for commands and built-in applications.
 
 ```bash
 nsh> ?
@@ -161,7 +161,7 @@ Hello, World!!
 
 ### USBNSH
 
-类似于 NSH 配置，但使用 CDC/ACM 串口（在 USB 端口启用控制台，115200 bps）。
+类似于 NSH 配置，但使用 CDC/ACM 串口（控制台在 USB 端口启用，波特率为 115200 bps）。
 
 我们可以通过清除之前的配置来开始构建过程
 
@@ -170,31 +170,31 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-现在我们为 xiao-nrf5200 板选择 NSH 配置：
+Now we select the NSH configuration to the xiao-nrf5200 board:
 
 ```bash
 ./tools/configurate.sh xiao-nrf52840:usbnsh
 ```
 
-编译源代码。
+Compile the source code.
 
 ```bash
 make -j
 ```
 
-使用 U2F 工具将 nuttx.hex 转换为 UF2 格式：
+Convert nuttx.hex to UF2 format using U2F Tools:
 
 ```bash
 python3 uf2/utils/uf2conv.py -c -f 0xADA52840 -i nuttx.hex -o nuttx.uf2
 ```
 
-将固件加载到您的板子中，运行串口通信程序，如 minicon 或 picocom：
+Load the firmware into you board, run a serial communication program such as minicon or picocom:
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
 ```
 
-您必须按 Enter 键 3 次，然后此消息将在终端中显示。
+You must to press Enter 3 times, and then this message will show in the terminal.
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -203,39 +203,39 @@ nsh>
 
 ### JUMBO
 
-此配置启用两个示例应用程序：gpio 和 leds。通用输入/输出（GPIO）是微控制器最基本的部分，允许它连接到外部世界。这样我们将使用 NSH 来访问和配置这些引脚。但首先，让我们清除之前的配置。
+此配置启用了两个示例应用程序：gpio 和 leds。通用输入/输出（GPIO）是微控制器最基本的部分，允许它连接到外部世界。这样我们将使用 NSH 来访问和配置这些引脚。但首先，让我们清除之前的配置。
 
 ```bash
 cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-为 xiao-nrf52840 板选择 jumbo 配置。
+Select the jumbo configuration to the xiao-nrf52840 board.
 
 ```bash
 ./tools/configurate.sh xiao-nrf52840:jumbo
 ```
 
-编译源代码。
+Compile de the source code.
 
 ```bash
 make -j
 ```
 
-将固件加载到您的板子中，运行串口通信程序，如 minicon 或 picocom：
+Load the firmware into you board, run a serial communication program such as minicon or picocom:
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
 ```
 
-您必须按 Enter 键 3 次，然后此消息将在终端中显示。
+You must to press Enter 3 times, and then this message will show in the terminal.
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
 nsh>
 ```
 
-要检查与此应用程序交互接受哪些选项，输入 `gpio -h`，它将返回参数列表。
+要查看与此应用程序交互时接受哪些选项，请输入 `gpio -h`，它将返回参数列表。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -262,7 +262,7 @@ IO_INPUT_PIN_PULLDOWN
  10: GPIO_INTERRUPT_BOTH_PIN
 ```
 
-要确认 GPIO 设备文件已创建，输入 `ls/dev`。输入后，您可以看到一些 gpio 被声明定义在 [xiao-nrf52840.h](https://github.com/apache/nuttx/blob/5b9d535ce6d7089a55742a748d7111f31ec74204/boards/arm/nrf52/xiao-nrf52840/src/xiao-nrf52840.h#L61) 中，它们代表：
+要确认 GPIO 设备文件已创建，请输入 `ls/dev`。输入后，您可以看到一些 gpio 在 [xiao-nrf52840.h](https://github.com/apache/nuttx/blob/5b9d535ce6d7089a55742a748d7111f31ec74204/boards/arm/nrf52/xiao-nrf52840/src/xiao-nrf52840.h#L61) 中被声明定义，它们代表：
 
 - 板载 RGB LED：
 
@@ -270,7 +270,7 @@ IO_INPUT_PIN_PULLDOWN
   - RGB_GREEN -> P0.30
   - RGB_BLUE  -> P0.06
 
-- GPIOs
+- GPIO
   - 1 个输入          - P0.02(/dev/gpio0)
   - 1 个中断输入 - P0.03(/dev/gpio2)
   - 1 个输出          - P0.28(/dev/gpio1)
@@ -289,7 +289,7 @@ nsh> ls /dev
 nsh> 
 ```
 
-按照这些命令读取 gpio0 和 gpio2（带中断）并写入 gpio1。
+按照以下命令读取 gpio0 和 gpio2（带中断）并写入 gpio1。
 
 ```bash
 nsh> gpio /dev/gpio0
@@ -311,7 +311,7 @@ Driver: /dev/gpio2
   Verify:        Value=1
 ```
 
-USERLEDS 是一个允许通过单一操作控制 LED 的子系统。此外，您可以使用像 printf 这样的命令行。在此演示中，我们将每 1 秒打开和关闭板载 RGB LED。
+USERLEDS 是一个子系统，允许通过单个操作来控制 LED。此外，您可以使用类似 printf 的命令行。在这个演示中，我们将每隔 1 秒钟打开和关闭板载 RGB LED。
 
 输入 `leds`，您会观察到 LED 同时闪烁。
 

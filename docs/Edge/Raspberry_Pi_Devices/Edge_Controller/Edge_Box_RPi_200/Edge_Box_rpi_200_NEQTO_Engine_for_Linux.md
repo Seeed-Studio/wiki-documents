@@ -36,7 +36,7 @@ Devices installed with NEQTO can be managed through API or the ready-to-use NEQT
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 - (Any Linux machine)
 

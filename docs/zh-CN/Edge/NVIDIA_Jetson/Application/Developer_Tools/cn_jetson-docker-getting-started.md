@@ -1,9 +1,9 @@
 ---
-description: 入门 Docker
-title: 入门 Docker
+description: Docker 入门指南
+title: Docker 入门指南
 keywords:
   - Edge
-  - reComputer 应用
+  - reComputer Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/jetson-docker-getting-started
 last_update:
@@ -11,36 +11,36 @@ last_update:
   author: w0x7ce
 ---
 
-# 入门 Docker
+# Docker 入门指南
 
-> 本文转载自 [Ajeet](https://collabnix.com/author/ajeetraina) 在 [collabnix.com](https://collabnix.com) 上撰写的[博客](https://collabnix.com/getting-started-with-docker-on-seeed-studios-recomputer-powered-by-nvidia-jetson)。所有版权归作者所有。
+> 这是 [Ajeet](https://collabnix.com/author/ajeetraina) 在 [collabnix.com](https://collabnix.com) 上撰写的[博客](https://collabnix.com/getting-started-with-docker-on-seeed-studios-recomputer-powered-by-nvidia-jetson)的转载。所有功劳归于他。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/jetson-docker/1.jpeg" /></div>
 
-上周，我有幸首次接触到最新的 Seeed Studio [reComputer J1020](https://www.seeedstudio.com/Jetson-10-1-H0-p-5335.html) 边缘 AI 设备。reComputer J1020 基于 Jetson Nano 开发套件，是一款小型、手掌大小的强大计算机，为嵌入式开发者带来了现代 AI 的强大功能。这款售价 259 美元的小型设备基于 NVIDIA Jetson Nano 系统模块构建，专为边缘 AI 应用设计。该设备可以并行运行多个神经网络，用于图像分类、目标检测、分割和语音处理等应用。凭借丰富的扩展模块、工业外设和热管理功能，reComputer J1020 准备帮助您通过部署流行的 DNN 模型和 ML 框架到边缘并进行高性能推理，加速和扩展下一代 AI 产品，用于实时分类、目标检测、姿态估计、语义分割和自然语言处理（NLP）等任务。
+上周，我很幸运地第一次接触到了 Seeed Studio 最新的 [reComputer J1020](https://www.seeedstudio.com/Jetson-10-1-H0-p-5335.html) 边缘 AI 设备。reComputer J1020 由 Jetson Nano 开发套件驱动。它是一台小巧的、手掌大小的强大计算机，为嵌入式开发者带来了现代 AI 的力量。这台售价 259 美元的小型设备围绕 NVIDIA Jetson Nano 系统模块构建，专为边缘 AI 应用而设计。该设备让您能够并行运行多个神经网络，用于图像分类、目标检测、分割和语音处理等应用。凭借丰富的扩展模块、工业外设和热管理，reComputer J1020 已准备好帮助您通过将流行的 DNN 模型和 ML 框架部署到边缘并进行高性能推理，来加速和扩展下一代 AI 产品，用于实时分类和目标检测、姿态估计、语义分割和自然语言处理 (NLP) 等任务。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/jetson-docker/2.jpg" /></div>
 
 ## reComputer J1020 的独特之处是什么？
 
-[Seeed Studio reComputer J1020](https://wiki.seeedstudio.com/cn/reComputer_Jetson_Series_Introduction/#recomputer-j1020) 提供了构建基于 AI 应用所需的一切。与 NVIDIA 提供的 Jetson Nano 开发套件相比，它无需从头开始在 SD 卡上刷写操作系统。它预装了 Ubuntu 操作系统在 16 GB eMMC 上。reComputer 预装的 Jetpack 4.6 包括板级支持包（BSP）、Linux 操作系统、NVIDIA CUDA、cuDNN 和 TensorRT 软件库，用于深度学习、计算机视觉、GPU 计算、多媒体处理等。它支持整个 [Jetson 软件栈](https://developer.nvidia.com/embedded/develop/software) 和各种 [开发工具](https://wiki.seeedstudio.com/cn/Jetson-AI-developer-tools)，这些工具由 Seeed Edge AI 合作伙伴提供，用于[构建快速且强大的 AI 应用](https://wiki.seeedstudio.com/cn/Jetson-AI-developer-tools)。
+[Seeed Studio reComputer J1020](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Introduction/#recomputer-j1020) 提供了开始构建基于 AI 应用程序所需的一切。与 NVIDIA 提供的 Jetson Nano 开发套件相比，它不需要从头开始在 SD 卡上刷写操作系统。它在 16 GB eMMC 上预装了 Ubuntu 操作系统。reComputer 预装的 Jetpack 4.6 包括板级支持包 (BSP)、Linux 操作系统、NVIDIA CUDA、cuDNN 和用于深度学习、计算机视觉、GPU 计算、多媒体处理等的 TensorRT 软件库。它支持整个 [Jetson 软件栈](https://developer.nvidia.com/embedded/develop/software)和 Seeed 边缘 AI 合作伙伴提供的各种[开发者工具](https://wiki.seeedstudio.com/Jetson-AI-developer-tools)，用于[构建快速且强大的 AI 应用程序](https://wiki.seeedstudio.com/Jetson-AI-developer-tools)。
 
-## 一些显著特点包括
+## 几个值得注意的特性包括
 
-- 128 个 NVIDIA CUDA® 核心 – 提供 0.5 TFLOPs (FP16) 的性能，用于运行图像分类、目标检测、分割和语音处理等应用的 AI 框架和模型。
+- 128 个 NVIDIA CUDA® 核心 – 提供 0.5 TFLOPs (FP16) 来运行 AI 框架和模型，用于图像分类、目标检测、分割和语音处理等应用。
 - 配备 Armv8 处理器
-- 集成 NVIDIA Tegra X1 (nvgpu)
-- 16GB 磁盘容量
+- 配备 NVIDIA Tegra X1(nvgpu)/集成
+- 磁盘大小为 16GB
 - 4GB 内存
 - 64 位操作系统类型
 - Ubuntu 18.04.5
 - Seeed Studio reComputer 预装了 JetPack 4.6 系统
-- 无需刷写 SD 卡，操作系统已预装
+- 您无需刷写 SD 卡，它预装了操作系统
 - 支持 CUDA 10.2.300
 - CUDA 架构：5.3
 - OpenCV 版本：4.1.1
 
-[了解更多关于 reComputer 的硬件布局](https://wiki.seeedstudio.com/cn/reComputer_Jetson_Series_Hardware_Layout)
+[了解更多关于 reComputer 的硬件布局](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Hardware_Layout)
 
 ## reComputer 的组件
 
@@ -48,31 +48,31 @@ last_update:
 
 - NVIDIA Jetson Nano x1
 - Seed 参考载板 x1
-- 被动式铝制散热片 x1
+- 被动式铝制散热器 x1
 - 铝制外壳 x1
 - 12V 电源适配器 x1
-- 4 个 USB 3.0 接口
-- 2 个 HDMI 接口
+- 4x USB 3.0 端口
+- 2x HDMI 端口
 - MIPI-CSI 摄像头连接器
-- 控制和 UART 接口
-- 40 针扩展接口（GPIO、I2C、接口）
+- 控制和 UART 接头
+- 40 针扩展接头(GPIO, I2C, Header)
 - 260 针 SODIMM
 - MicroUSB
-- 千兆以太网接口
+- 千兆以太网端口
 - LED 指示灯
 
 ## 硬件设置
 
-开始之前，您需要以下基本连接器：
+要开始使用，您需要连接以下最基本的连接器：
 
 - 电源线
 - WiFi 模块 / 千兆以太网线
 - WiFi 键盘和鼠标的 USB 接收器
-- HDMI 显示器连接线
+- HDMI 连接到您的显示器
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/jetson-docker/3.jpg" /></div>
 
-## 运行 CUDA 的 deviceQuery
+## 运行 CUDA deviceQuery
 
 ```sh
 cd /usr/local/cuda/samples/1_Utilities/deviceQuery
@@ -80,7 +80,7 @@ sudo make
 ./deviceQuery
 ```
 
-以下是运行结果：
+Here’s the results:
 
 ```sh
 ./deviceQuery Starting...
@@ -132,11 +132,11 @@ Result = PASS
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/jetson-docker/4.png" /></div>
 
-[Docker](https://www.docker.com) 是一套用于创建、共享和运行独立容器的软件开发工具。它是一个容器化平台，将应用程序及其所有依赖项打包成一个 Docker 容器，以确保应用程序能够在任何环境中无缝运行。Docker 容器是一种标准化的单元，可以随时创建以部署特定的应用程序或环境。
+[Docker](https://www.docker.com) 是一套用于创建、共享和运行独立容器的软件开发工具。它是一个容器化平台，将您的应用程序及其所有依赖项打包在一个 docker 容器中，以确保您的应用程序在任何环境中都能无缝运行。Docker 容器是一个标准化单元，可以即时创建以部署特定的应用程序或环境。
 
-如今开发任何类型的应用程序都非常复杂，不仅仅是编写代码。开发过程中涉及多种编程语言、Web 框架、复杂的架构，以及每个生命周期阶段工具之间的不连续接口，这些都增加了开发的复杂性。Docker 简化并加速了您的工作流程，同时为开发人员提供了选择工具、应用程序栈和每个项目部署环境的自由。它使您能够将应用程序与基础设施分离，从而快速交付软件。
+如今开发任何类型的应用程序都很复杂。这远不止是编写代码。有众多的编程语言、Web 框架、复杂的架构，以及每个生命周期阶段工具之间不连续的接口，这造成了巨大的复杂性。Docker 简化并加速了您的工作流程，同时让开发人员能够自由地为每个项目选择工具、应用程序堆栈和部署环境进行创新。它使您能够将应用程序与基础设施分离，从而快速交付软件。
 
-Docker 在 reComputer J1020（一个基于 Jetson Nano 的开发套件）上获得官方支持。该套件默认预装了最新版本的 Docker。您可以通过运行以下命令验证 Docker 的版本：
+Docker 在 reComputer J1020（一个由 Jetson Nano 驱动的开发套件）上得到官方支持。该套件默认预装了最新版本的 Docker。您可以通过运行以下命令来验证 Docker 的版本：
 
 ```sh
 sudo docker version
@@ -175,7 +175,7 @@ Server: Docker Engine - Community
 
 ## 安装 Docker Compose
 
-reComputer Jetson 默认未安装 Docker Compose。您可以按照以下步骤在系统中安装 Docker Compose：
+reComputer Jetson 没有预装 Docker compose。您可以按照以下步骤在系统中安装 Docker Compose：
 
 ```sh
 export DOCKER_COMPOSE_VERSION=2.6.0
@@ -187,7 +187,7 @@ apt install python3-pip
 pip install docker-compose
 ```
 
-## 安装最新版本的 CUDA 工具包
+## Install the latest version of CUDA toolkit
 
 ```sh
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/sbsa/cuda-ubuntu1804.pin
@@ -199,7 +199,7 @@ sudo apt-get update
 sudo apt-get -y install cuda
 ```
 
-## 验证 Docker 运行时
+## Verify Docker runtime
 
 ```sh
 docker info | grep runtime
@@ -217,7 +217,7 @@ sudo docker run arm64v8/python:slim ls
 
 ## 使用 JTOP Docker 容器监控 CPU、GPU 和内存
 
-在本节中，您将学习如何设置一个系统监控工具来监控 CPU、RAM 和 GPU。我们将使用 JTOP 工具。JTOP 是一个运行在终端上的系统监控工具，可以实时查看和控制您的 reComputer Jetson Nano 套件的状态，包括 CPU、RAM、GPU 的状态和频率。您将学习如何将该工具容器化。让我们开始吧——
+在本节中，您将了解如何设置系统监控实用程序来监控 CPU、RAM 和 GPU。我们将使用 JTOP 实用程序。Jtop 是一个在终端上运行的系统监控实用程序，可以实时查看和控制您的 reComputer Jetson Nano 套件、CPU、RAM、GPU 状态和频率。您将了解如何将该实用程序容器化。让我们开始吧 –
 
 首先，创建一个包含以下内容的 Dockerfile：
 
@@ -233,11 +233,11 @@ RUN apk update \
     && rm -rf /var/cache/apk/*
 ```
 
-第一行表明我们选择了 python:3-alpine 作为基础镜像。第二行安装了 jetson-stats 和相关依赖包。
+第一行显示我们选择了 python:3-alpine 作为基础镜像。第二行安装了 jetson-stats 和依赖包
 
 ## 构建 JTOP Docker 镜像
 
-使用 docker build CLI 构建 Docker 镜像：
+使用 docker build CLI 来构建 Docker 镜像
 
 ```sh
 docker build -t ajeetraina/jetson-stats-nano .
@@ -245,7 +245,7 @@ docker build -t ajeetraina/jetson-stats-nano .
 
 ## 运行 JTOP Docker 容器
 
-现在是时候运行 Docker 容器了，通过传递 --gpus 参数并将其挂载到 jtop 套接字。
+现在是时候通过传递 –gpus 作为参数并将其挂载到 jtop socket 来运行 Docker 容器了。
 
 ```sh
 docker run --rm -it --gpus all -v /run/jtop.sock:/run/jtop.sock ajeetraina/jetson-stats-nano jtop
@@ -255,14 +255,14 @@ docker run --rm -it --gpus all -v /run/jtop.sock:/run/jtop.sock ajeetraina/jetso
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/jetson-docker/5.png" /></div>
 
-在我们的下一篇博客文章中，我们将看到如何使用运行在 Docker 容器中的 OpenDatacam 实现车辆识别。敬请期待！
+在我们的下一篇博客文章中，我们将看到如何使用运行在 Docker 容器内的 OpenDatacam 来实现车辆识别。敬请期待！
 
 请查看以下带有教程的应用示例！
 
-- [Edge Impulse 的行人检测](https://www.edgeimpulse.com/blog/recognizing-your-blind-spots-pedestrian-detection-system-with-nvidia-jetson-nano)
+- [Edge Impulse 行人检测](https://www.edgeimpulse.com/blog/recognizing-your-blind-spots-pedestrian-detection-system-with-nvidia-jetson-nano)
 - [安全帽检测](https://www.seeedstudio.com/blog/2022/03/03/deploy-hard-hat-detection-for-enforcing-workplace-safety) 并构建自定义 PPE 检测
-- [使用 alwaysAI 的姿态估计](https://alwaysai.co/blog/using-pose-estimation-on-the-jetson-nano-with-alwaysai)
-- [使用 NVIDIA Deepstream IoT 的视觉异常检测](https://developer.nvidia.com/gtc/2020/video/s22675-vid)
+- [使用 alwaysAI 进行姿态估计](https://alwaysai.co/blog/using-pose-estimation-on-the-jetson-nano-with-alwaysai)
+- [使用 NVIDIA Deepstream IoT 进行视觉异常检测](https://developer.nvidia.com/gtc/2020/video/s22675-vid)
 - [零售店商品检测](https://www.seeedstudio.com/blog/2022/06/08/retail-store-items-detection-using-yolov5-roboflow-and-node-red)
 - [野火检测](https://github.com/Seeed-Studio/node-red-contrib-ml)
 - [动物检测](https://github.com/Seeed-Studio/node-red-contrib-ml)
@@ -275,7 +275,7 @@ docker run --rm -it --gpus all -v /run/jtop.sock:/run/jtop.sock ajeetraina/jetso
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您使用我们的产品时体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
@@ -286,3 +286,4 @@ docker run --rm -it --gpus all -v /run/jtop.sock:/run/jtop.sock ajeetraina/jetso
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+

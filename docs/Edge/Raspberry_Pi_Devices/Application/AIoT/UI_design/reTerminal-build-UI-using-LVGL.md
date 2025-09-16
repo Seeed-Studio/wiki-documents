@@ -240,7 +240,7 @@ If you decide to follow our demo application closely when creating your first UI
 
 1) Initialize widgets on the screen(s)
 2) Create timer-based or event-based callback to obtain the data from sensors/system
-2) Change the content of widgets based on data - normally that is done using global variables declared at the top of the code
+3) Change the content of widgets based on data - normally that is done using global variables declared at the top of the code
 
 **assistant_create**
 We create a panel object for the tab and set its height.

@@ -24,8 +24,7 @@ import TabItem from '@theme/TabItem';
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong></a>
 </div>
 
-
-## Home Assistant 简介
+## Home Assistant 介绍
 
 Home Assistant 是一个功能强大的开源家庭自动化平台，允许您从一个统一的界面控制和监控智能家居设备。它充当智能家居的中央枢纽，使您能够自动化例程、监控传感器，并创建更智能的生活空间。
 
@@ -35,7 +34,7 @@ Home Assistant 是一个功能强大的开源家庭自动化平台，允许您�
 
 - **本地控制**：与许多基于云的解决方案不同，Home Assistant 在您的网络上本地运行，确保您的数据保持私密，即使没有互联网访问，您的自动化也能正常工作。
 
-- **广泛的设备支持**：Home Assistant 集成了数千种不同的智能家居设备和服务，使其具有高度的通用性和面向未来的特性。
+- **广泛的设备支持**：Home Assistant 与数千种不同的智能家居设备和服务集成，使其具有高度的通用性和面向未来的特性。
 
 - **强大的自动化**：创建复杂的自动化规则，可以响应各种触发器，如时间、设备状态、传感器读数等。
 
@@ -98,16 +97,16 @@ ESPHome 是一个专为 ESP8266/ESP32 设备设计的开源固件创建工具。
   </table>
 </div>
 
-Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方式。它提供轻松的设置，让您只需一个系统就能控制所有智能设备，默认情况下所有数据都存储在本地。这款主板受益于蓬勃发展的 Home Assistant 生态系统，并将通过开源每月得到改进。
+Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方式。它提供了轻松的设置，让您可以用一个系统控制所有智能设备，默认情况下所有数据都存储在本地。这块板子受益于蓬勃发展的 Home Assistant 生态系统，并且每个月都会通过开源得到改进。
 
 我们建议在本教程中使用 Home Assistant Green 作为 Home Assistant 主机，或者您可以使用任何带有 Supervisor 的 Home Assistant 主机。
 
 :::tip 安装 Home Assistant
 我们还为一些 Seeed Studio 产品编写了如何安装 Home Assistant 的教程，请参考它们。
 
-- **[在 ODYSSEY-X86 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/ODYSSEY-X86-Home-Assistant/)**
-- **[在 reTerminal 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/reTerminal_Home_Assistant/)**
-- **[在 LinkStar H68K/reRouter CM4 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/h68k-ha-esphome/)**
+- **[在 ODYSSEY-X86 上开始使用 Home Assistant](https://wiki.seeedstudio.com/ODYSSEY-X86-Home-Assistant/)**
+- **[在 reTerminal 上开始使用 Home Assistant](https://wiki.seeedstudio.com/reTerminal_Home_Assistant/)**
+- **[在 LinkStar H68K/reRouter CM4 上开始使用 Home Assistant](https://wiki.seeedstudio.com/h68k-ha-esphome/)**
 
 如果您没有使用 Seeed Studio 产品，您也可以在官方 Home Assistant 网站上查看并学习如何为其他产品安装 Home Assistant。
 
@@ -142,7 +141,7 @@ Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/06.png" style={{width:800, height:'auto'}}/></div>
 
-给设备起一个您喜欢的名称，然后点击 **NEXT**。
+给设备起一个您喜欢的名字，然后点击 **NEXT**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -155,7 +154,6 @@ Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/4.png" style={{width:800, height:'auto'}}/></div>
 
-
 ### 步骤 3. 安装固件
 
 这是一个非常基本的示例，将在显示屏上显示"Hello World!"。
@@ -166,7 +164,7 @@ Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方�
 
 <details>
 
-<summary>点击此处预览完整代码</summary>
+<summary>点击这里预览完整代码</summary>
 
 ```yaml
 
@@ -291,7 +289,6 @@ display:
 </TabItem>
 </Tabs>
 
-
 ## 基本用法
 
 ### 1. 显示形状
@@ -338,7 +335,6 @@ display:
 您也可以[点击这里](https://esphome.io/components/display/)查看更多用法。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/37.png" style={{width:600, height:'auto'}}/></div>
-
 
 ### 2. 在 HA 中显示信息
 
@@ -435,7 +431,6 @@ display:
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/14.png" style={{width:'100%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/34.png" style={{width:'80%', height:'auto'}}/></div>
 </div>
-
 
 ### 3. 显示图标 {#ttf}
 
@@ -578,19 +573,19 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.png" style={{width:600, height:'auto'}}/></div>
 
-## 演示 1. 将 Home Assistant 仪表板截图
+## 演示 1. 截取 Home Assistant 仪表板的屏幕截图
 
-此示例将在显示屏上显示 HA 的截图。
+此示例将在显示屏上显示 HA 的屏幕截图。
 
-首先，您需要安装一个截图插件 **Puppet**，[点击这里安装。](https://github.com/balloob/home-assistant-addons/tree/main/puppet)
+首先，您需要安装一个屏幕截图插件 **Puppet**，[点击此处安装。](https://github.com/balloob/home-assistant-addons/tree/main/puppet)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/83.jpg" style={{width:800, height:'auto'}}/></div>
 
-请注意版本应该**高于或等于 1.11.4**。安装后，进入**配置页面**。我们需要为此插件创建一个 access_token。
+请注意版本应该**高于或等于 1.11.4**。安装后，转到**配置页面**。我们需要为此插件创建一个 access_token。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/96.jpg" style={{width:800, height:'auto'}}/></div>
 
-请参阅下一步创建令牌并粘贴到这里。
+请参阅下一步创建令牌并粘贴到此处。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/88.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -602,35 +597,35 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/95.jpg" style={{width:800, height:'auto'}}/></div>
 
-启动插件将在端口 10000 上启动一个新服务器。您请求的任何路径都将返回该页面的截图。您需要指定所需的视口大小。
+启动插件将在端口 10000 上启动一个新服务器。您请求的任何路径都将返回该页面的屏幕截图。您需要指定所需的视口大小。
 
-例如，要获取默认仪表板的 1000px x 1000px 截图，请获取：
+例如，要获取默认仪表板的 1000px x 1000px 屏幕截图，请获取：
 
 ```python
-# http://192.168.1.191:10000/lovelace/0?viewport=1000x1000(我的地址)
+# http://192.168.1.191:10000/lovelace/0?viewport=1000x1000(My address)
 
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000
 ```
 
-为了减少 E Ink® 显示器的调色板，您可以添加 eink 参数。该值表示要使用的颜色数量（包括黑色）。例如，对于 2 色 E Ink® 显示器：
+为了减少 E Ink® 显示屏的调色板，您可以添加 eink 参数。该值表示要使用的颜色数量（包括黑色）。例如，对于 2 色 E Ink® 显示屏：
 
 ```python
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2
 ```
 
-如果您使用 eink=2，您还可以通过添加 invert 参数来反转颜色：
+If you are using eink=2, you can also invert the colors by adding the invert parameter:
 
 ```python
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2&invert
 ```
 
-此外，您还可以截取其他页面的屏幕截图，例如 HA 中的**待办事项列表**页面：
+Besides, you can also screenshot other page, for example **To-do lists** page in HA:
 
 ```python
 http://192.168.1.191:10000/todo?viewport=800x480&eink=2&invert
 ```
 
-您可以通过在浏览器中输入此链接来查看截图效果。
+您可以在浏览器中输入此链接查看截图效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/92.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -652,7 +647,7 @@ online_image:
     format: PNG
     type: BINARY
     buffer_size: 30000
-    url: http://192.168.1.191:10000/todo?viewport=800x480&eink=2&invert #将此链接更改为您的截图链接
+    url: http://192.168.1.191:10000/todo?viewport=800x480&eink=2&invert #change this link to your screenshot link
     update_interval: 30s
     on_download_finished:
       - delay: 0ms
@@ -704,19 +699,19 @@ display:
 globals:
   - id: sleep_counter
     type: int
-    restore_value: yes  # 关键参数，使用RTC存储
+    restore_value: yes  # key parameter, to use RTC storage
     initial_value: '0'
 
-# 这里是深度睡眠部分
+# Here is deep sleep part
 deep_sleep:
   id: deep_sleep_1
-  run_duration: 30s  # 设备唤醒并运行30秒（足够显示）
-  sleep_duration: 3min  # 深度睡眠3分钟
+  run_duration: 30s  # Device wake up and run 30s (enough to display)
+  sleep_duration: 3min  # deep sleep for 3min
 
 interval:
-  - interval: 29s  # 在run_duration结束前运行此命令
+  - interval: 29s  # run this command before the end of run_duration
     then:
-      - logger.log: "正在进入深度睡眠..."
+      - logger.log: "Entering deep sleep now..."
 
 font:
   - file: "gfonts://Inter@700"
@@ -739,8 +734,8 @@ display:
     update_interval: 3min
     lambda: |-
       id(sleep_counter) += 1;
-      ESP_LOGD("main", "唤醒次数: %d", id(sleep_counter));
-      it.printf(100, 100, id(font1), "唤醒次数: %d", id(sleep_counter));
+      ESP_LOGD("main", "Wakeup count: %d", id(sleep_counter));
+      it.printf(100, 100, id(font1), "Wakeup count: %d", id(sleep_counter));
 ```
 
 </details>
@@ -763,37 +758,37 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/24.png" style={{width:800, height:'auto'}}/></div>
 
-您也可以转到**开发者工具 -> 状态**来检查 HA 中是否有天气信息。这是您稍后将获得的信息。
+您也可以转到 **Developer Tools -> STATES** 来检查 HA 中是否有天气信息。这是您稍后将获得的信息。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/25.png" style={{width:800, height:'auto'}}/></div>
 
 其次，您需要在 HA 中安装日历组件。
 
-转到**设置** -> **设备和服务** -> **集成** -> **添加集成**
+转到 **Settings** -> **Devices & Services** -> **Integrations** -> **Add Integration**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/28.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/29.png" style={{width:800, height:'auto'}}/></div>
 
-选择**本地日历**并点击**提交**按钮。
+选择 **Local Calendar** 并点击 **SUBMIT** 按钮。
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/30.png" style={{width:'100%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/31.png" style={{width:'95%', height:'auto'}}/></div>
 </div>
 
-之后，您将在已配置部分和侧边栏中看到本地日历。
+之后，您将在 Configured 部分和侧边栏中看到 Local Calendar。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/32.png" style={{width:800, height:'auto'}}/></div>
 
-点击侧边栏中的日历并创建 3 个新日历，名称为**calendar**、**epaper_event**和**new_calendar**。您也可以使用其他名称，但请在稍后的代码中保持相同的名称。
+点击侧边栏中的 Calendar 并创建 3 个新日历，名称为 **calendar**、**epaper_event** 和 **new_calendar**。您也可以使用其他名称，但请在稍后的代码中保持相同的名称。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/27.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/26.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-在复制代码之前，请将 [wifi.jpg](#image)、[图标 ttf 文件和字体 ttf 文件](#ttf) 放入**image**文件夹和**fonts**文件夹中。
+在复制代码之前，请将 [wifi.jpg](#image)、[图标 ttf 文件和字体 ttf 文件](#ttf) 放入 **image** 文件夹和 **fonts** 文件夹中。
 :::
 
 <details>
@@ -811,10 +806,10 @@ esp32:
   framework:
     type: arduino
 
-# 启用日志记录
+# Enable logging
 logger:
 
-# 启用 Home Assistant API
+# Enable Home Assistant API
 api:
   encryption:
     key: "jBgx0v+Y9eKiQmYTk0SCnHgtDowNDZqgFU26Z2VTYzM="
@@ -823,7 +818,7 @@ ota:
   - platform: esphome
     password: "9f78b53ef216c5d689f7408bb1ebe728"
 
-# -------------------------------------- 保持上面的代码不变，修改下面的代码 --------------------------------------
+# -------------------------------------- Keep your code above, change your code below --------------------------------------
 
 globals:
   - id: wifi_status
@@ -850,11 +845,11 @@ wifi:
 
 captive_portal:
 
-# 这里是深度睡眠部分
+# Here is deep sleep part
 deep_sleep:
   id: deep_sleep_1
-  run_duration: 1min  # 设备唤醒并运行60秒（足够拉取数据和更新）
-  sleep_duration: 60min  # 深度睡眠1小时
+  run_duration: 1min  # Device wake up and run 60s (enough to pull data and update)
+  sleep_duration: 60min  # deep sleep for 1h
 
 script:
   - id: update_display
@@ -862,8 +857,8 @@ script:
       - component.update: my_display
 
 interval:
-  # 条件：wifi已连接 && 数据已获取 && 首次
-  - interval: 10s  # 每秒检查一次
+  # Condition: wifi connected && data retrieved && first time
+  - interval: 10s  # Check every second
     then:
       - if:
           condition:
@@ -873,12 +868,12 @@ interval:
               - lambda: "return !id(first_update_done);"
           then:
             - lambda: |-
-                ESP_LOGD("Display", "正在更新显示...");
-            - script.execute: update_display  # 立即刷新
+                ESP_LOGD("Display", "Updating Display...");
+            - script.execute: update_display  # Refresh immediately
             - lambda: "id(first_update_done) = true;"
-  - interval: 59s  # 在运行时间结束前1秒运行此命令
+  - interval: 59s  # run this command before 1s of run_duration end
     then:
-      - logger.log: "现在进入深度睡眠..."
+      - logger.log: "Entering deep sleep now..."
 
 
 image:
@@ -888,7 +883,7 @@ image:
     resize: 400x240
     invert_alpha: true
 
-# 连接到 Home Assistant 获取时间
+# Connect to Home Assistant to get time
 time:
   - platform: homeassistant
     id: homeassistant_time
@@ -968,24 +963,24 @@ font:
     id: font1
     size: 24
 
-  - file: 'fonts/materialdesignicons-webfont.ttf' # 保存ttf文件的目录
+  - file: 'fonts/materialdesignicons-webfont.ttf' # Directory to save ttf file
     id: font_mdi_large
     size: 200
     glyphs: &mdi-weather-glyphs # https://pictogrammers.com/library/mdi/
-      - "\U000F050F" # 温度计
-      - "\U000F058E" # 湿度
-      - "\U000F059D" # 风速
-      - "\U000F0D60" # 大气压力
-      - "\U000F0590" # 多云天气
-      - "\U000F0596" # 雨天天气
-      - "\U000F0598" # 雪天天气
-      - "\U000F0599" # 晴天天气
+      - "\U000F050F" # Thermometer
+      - "\U000F058E" # Humidity
+      - "\U000F059D" # Wind speed
+      - "\U000F0D60" # Atmospheric pressure
+      - "\U000F0590" # Cloudy weather
+      - "\U000F0596" # Rainy weather
+      - "\U000F0598" # Snowy weather
+      - "\U000F0599" # Sunny weather
   - file: 'fonts/materialdesignicons-webfont.ttf'
-    id: font_weather # 复制上面的图标并将大小改为40
+    id: font_weather # Copy the above icon and change the size to 40
     size: 200
     glyphs: *mdi-weather-glyphs
   - file: 'fonts/materialdesignicons-webfont.ttf'
-    id: img_font_sensor # 复制上面的图标并将大小改为40
+    id: img_font_sensor # Copy the above icon and change the size to 40
     size: 70
     glyphs: *mdi-weather-glyphs
 
@@ -1007,127 +1002,127 @@ display:
     lambda: |-
       if(id(wifi_status) == 0){
         it.image(180, 0, id(esphome_logo));
-        it.print(230, 300, id(data_font), "WI-FI 连接中");
+        it.print(230, 300, id(data_font), "WI-FI CONNECTING");
       }else{
-        // 在这里绘制天气图像
+        // Draw weather images here
         std::string weather_string = id(myWeather).state.c_str();
         if(weather_string == "rainy" || weather_string == "lightning" || weather_string == "pouring"){
-          // 绘制雨天天气图像
+          // Draw rainy weather image
           it.printf(120, 85, id(font_weather), TextAlign::CENTER, "\U000F0596");
         }else if(weather_string == "snowy"){
-          // 绘制雪天天气图像
+          // Draw snowy weather image
           it.printf(120, 85, id(font_weather), TextAlign::CENTER, "\U000F0598");
         }else if(weather_string == "sunny" || weather_string == "windy"){
-          // 绘制晴天天气图像
+          // Draw sunny weather image
           it.printf(120, 85, id(font_weather), TextAlign::CENTER, "\U000F0599");
         }else{
-          // 绘制多云天气图像
+          // Draw cloudy weather image
           it.printf(120, 85, id(font_weather), TextAlign::CENTER, "\U000F0590");
         }
 
         auto time_now = id(homeassistant_time).now();
-        // 月份转换
+        // Month conversion
         const char* months[] = {
-          "一月", "二月", "三月", "四月", "五月", "六月",
-          "七月", "八月", "九月", "十月", "十一月", "十二月"
+          "January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"
         };
-        const char* month_str = months[time_now.month - 1];  // 月份索引从0开始
-        // 获取日期
+        const char* month_str = months[time_now.month - 1];  // Month index starts from 0
+        // Get the day
         int day = time_now.day_of_month;
-        // 绘制日期
+        // Draw the date
         it.printf(250, 110, id(data_font), "%s %d", month_str, day);
-        // 获取星期几
-        const char* days[] = {"星期六", "星期日", "星期一", "星期二", "星期三", "星期四", "星期五"};
+        // Get the day of the week
+        const char* days[] = {"Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
         const char* day_of_week = days[time_now.day_of_week];
         it.printf(250, 70, id(data_font), "%s", day_of_week);
 
         int x = 20, y = 180, w = 180, h = 120, r = 10, thickness = 4;
-        // 绘制四个边框
-        it.filled_rectangle(x + r, y, w - 2 * r, thickness); // 顶部边框
-        it.filled_rectangle(x + r, y + h - thickness, w - 2 * r, thickness); // 底部边框
-        it.filled_rectangle(x, y + r, thickness, h - 2 * r); // 左边框
-        it.filled_rectangle(x + w - thickness, y + r, thickness, h - 2 * r); // 右边框
-        // 绘制四个圆角
-        it.filled_circle(x + r, y + r, r); // 左上角
-        it.filled_circle(x + w - r, y + r, r); // 右上角
-        it.filled_circle(x + r, y + h - r, r); // 左下角
-        it.filled_circle(x + w - r, y + h - r, r); // 右下角
-        // 用黑色填充内部形成边框
+        // Draw four borders
+        it.filled_rectangle(x + r, y, w - 2 * r, thickness); // Top border
+        it.filled_rectangle(x + r, y + h - thickness, w - 2 * r, thickness); // Bottom border
+        it.filled_rectangle(x, y + r, thickness, h - 2 * r); // Left border
+        it.filled_rectangle(x + w - thickness, y + r, thickness, h - 2 * r); // Right border
+        // Draw four rounded corners
+        it.filled_circle(x + r, y + r, r); // Top-left corner
+        it.filled_circle(x + w - r, y + r, r); // Top-right corner
+        it.filled_circle(x + r, y + h - r, r); // Bottom-left corner
+        it.filled_circle(x + w - r, y + h - r, r); // Bottom-right corner
+        // Fill the inside with black to form a border
         it.filled_rectangle(x + thickness, y + thickness, w - 2 * thickness, h - 2 * thickness, COLOR_OFF);
-        // 温度
-        it.printf(x+10, y+10, id(sensor_font), "温度");
+        // Temperature
+        it.printf(x+10, y+10, id(sensor_font), "Temperature");
         it.printf(x+45, y+75, id(img_font_sensor), TextAlign::CENTER, "\U000F050F");
-        // 获取温度数据
+        // Get temperature data
         it.printf(x+75,y+65, id(data_font), "%s°F", id(temp).state.c_str());
 
         x = 220;
         y = 180;
-        // 绘制四个边框
-        it.filled_rectangle(x + r, y, w - 2 * r, thickness); // 顶部边框
-        it.filled_rectangle(x + r, y + h - thickness, w - 2 * r, thickness); // 底部边框
-        it.filled_rectangle(x, y + r, thickness, h - 2 * r); // 左边框
-        it.filled_rectangle(x + w - thickness, y + r, thickness, h - 2 * r); // 右边框
-        // 绘制四个圆角
-        it.filled_circle(x + r, y + r, r); // 左上角
-        it.filled_circle(x + w - r, y + r, r); // 右上角
-        it.filled_circle(x + r, y + h - r, r); // 左下角
-        it.filled_circle(x + w - r, y + h - r, r); // 右下角
-        // 用黑色填充内部形成边框
+        // Draw four borders
+        it.filled_rectangle(x + r, y, w - 2 * r, thickness); // Top border
+        it.filled_rectangle(x + r, y + h - thickness, w - 2 * r, thickness); // Bottom border
+        it.filled_rectangle(x, y + r, thickness, h - 2 * r); // Left border
+        it.filled_rectangle(x + w - thickness, y + r, thickness, h - 2 * r); // Right border
+        // Draw four rounded corners
+        it.filled_circle(x + r, y + r, r); // Top-left corner
+        it.filled_circle(x + w - r, y + r, r); // Top-right corner
+        it.filled_circle(x + r, y + h - r, r); // Bottom-left corner
+        it.filled_circle(x + w - r, y + h - r, r); // Bottom-right corner
+        // Fill the inside with black to form a border
         it.filled_rectangle(x + thickness, y + thickness, w - 2 * thickness, h - 2 * thickness, COLOR_OFF);
-        // 湿度
-        it.printf(x+10, y+10, id(sensor_font), "湿度");
+        // Humidity
+        it.printf(x+10, y+10, id(sensor_font), "Humidity");
         it.printf(x+45, y+75, id(img_font_sensor), TextAlign::CENTER, "\U000F058E");
-        // 获取湿度数据
+        // Get humidity data
         it.printf(x+75,y+65, id(data_font), "%s%%", id(humi).state.c_str());
 
         x = 20;
         y = 320;
-        // 绘制四个边框
-        it.filled_rectangle(x + r, y, w - 2 * r, thickness); // 顶部边框
-        it.filled_rectangle(x + r, y + h - thickness, w - 2 * r, thickness); // 底部边框
-        it.filled_rectangle(x, y + r, thickness, h - 2 * r); // 左边框
-        it.filled_rectangle(x + w - thickness, y + r, thickness, h - 2 * r); // 右边框
-        // 绘制四个圆角
-        it.filled_circle(x + r, y + r, r); // 左上角
-        it.filled_circle(x + w - r, y + r, r); // 右上角
-        it.filled_circle(x + r, y + h - r, r); // 左下角
-        it.filled_circle(x + w - r, y + h - r, r); // 右下角
-        // 用黑色填充内部形成边框
+        // Draw four borders
+        it.filled_rectangle(x + r, y, w - 2 * r, thickness); // Top border
+        it.filled_rectangle(x + r, y + h - thickness, w - 2 * r, thickness); // Bottom border
+        it.filled_rectangle(x, y + r, thickness, h - 2 * r); // Left border
+        it.filled_rectangle(x + w - thickness, y + r, thickness, h - 2 * r); // Right border
+        // Draw four rounded corners
+        it.filled_circle(x + r, y + r, r); // Top-left corner
+        it.filled_circle(x + w - r, y + r, r); // Top-right corner
+        it.filled_circle(x + r, y + h - r, r); // Bottom-left corner
+        it.filled_circle(x + w - r, y + h - r, r); // Bottom-right corner
+        // Fill the inside with black to form a border
         it.filled_rectangle(x + thickness, y + thickness, w - 2 * thickness, h - 2 * thickness, COLOR_OFF);
-        // 气压
-        it.printf(x+10, y+10, id(sensor_font), "气压");
+        // Air Pressure
+        it.printf(x+10, y+10, id(sensor_font), "Air Pressure");
         it.printf(x+45, y+75, id(img_font_sensor), TextAlign::CENTER, "\U000F0D60");
-        // 获取大气压力数据
+        // Get atmospheric pressure data
         it.printf(x+85,y+50, id(data_font), "%s", id(press).state.c_str());
         it.printf(x+85,y+78, id(sensor_font), "inHg");
 
         x = 220;
         y = 320;
-        // 绘制四个边框
-        it.filled_rectangle(x + r, y, w - 2 * r, thickness); // 顶部边框
-        it.filled_rectangle(x + r, y + h - thickness, w - 2 * r, thickness); // 底部边框
-        it.filled_rectangle(x, y + r, thickness, h - 2 * r); // 左边框
-        it.filled_rectangle(x + w - thickness, y + r, thickness, h - 2 * r); // 右边框
-        // 绘制四个圆角
-        it.filled_circle(x + r, y + r, r); // 左上角
-        it.filled_circle(x + w - r, y + r, r); // 右上角
-        it.filled_circle(x + r, y + h - r, r); // 左下角
-        it.filled_circle(x + w - r, y + h - r, r); // 右下角
-        // 用黑色填充内部形成边框
+        // Draw four borders
+        it.filled_rectangle(x + r, y, w - 2 * r, thickness); // Top border
+        it.filled_rectangle(x + r, y + h - thickness, w - 2 * r, thickness); // Bottom border
+        it.filled_rectangle(x, y + r, thickness, h - 2 * r); // Left border
+        it.filled_rectangle(x + w - thickness, y + r, thickness, h - 2 * r); // Right border
+        // Draw four rounded corners
+        it.filled_circle(x + r, y + r, r); // Top-left corner
+        it.filled_circle(x + w - r, y + r, r); // Top-right corner
+        it.filled_circle(x + r, y + h - r, r); // Bottom-left corner
+        it.filled_circle(x + w - r, y + h - r, r); // Bottom-right corner
+        // Fill the inside with black to form a border
         it.filled_rectangle(x + thickness, y + thickness, w - 2 * thickness, h - 2 * thickness, COLOR_OFF);
-        // 风速
-        it.printf(x+10, y+10, id(sensor_font), "风速");
+        // Wind Speed
+        it.printf(x+10, y+10, id(sensor_font), "Wind Speed");
         it.printf(x+45, y+75, id(img_font_sensor), TextAlign::CENTER, "\U000F059D");
-        // 获取风速数据
+        // Get wind speed data
         it.printf(x+85,y+50, id(data_font), "%s", id(wind).state.c_str());
         it.printf(x+85,y+78, id(sensor_font), "mph");
 
-        // 绘制垂直线
+        // Draw a vertical line
         it.filled_rectangle(430, 30, 5, 430);
-        // 右侧部分
-        it.printf(540, 40, id(data_font), "日历");
+        // Right section
+        it.printf(540, 40, id(data_font), "Calendar");
 
-        // 定义事件结构
+        // Define event structure
         struct Event {
             std::string message;
             std::string start_time;
@@ -1135,55 +1130,55 @@ display:
             time_t start_timestamp;
         };
 
-        // 将时间字符串解析为time_t（UNIX时间戳）
+        // Parse time string to time_t (UNIX timestamp)
         auto parse_time = [](const std::string &time_str) -> time_t {
             struct tm timeinfo = {};
             if (strptime(time_str.c_str(), "%Y-%m-%d %H:%M:%S", &timeinfo) == nullptr) {
-                return 0;  // 无效时间
+                return 0;  // Invalid time
             }
             return mktime(&timeinfo);
         };
 
-        // 创建事件列表
+        // Create event list
         std::vector<Event> events = {
             {id(ha_calendar_event_1).state, id(ha_calendar_start_time_1).state, id(ha_calendar_end_time_1).state, parse_time(id(ha_calendar_start_time_1).state)},
             {id(ha_calendar_event_2).state, id(ha_calendar_start_time_2).state, id(ha_calendar_end_time_2).state, parse_time(id(ha_calendar_start_time_2).state)},
             {id(ha_calendar_event_3).state, id(ha_calendar_start_time_3).state, id(ha_calendar_end_time_3).state, parse_time(id(ha_calendar_start_time_3).state)}
         };
-        ESP_LOGD("myCalendar", "开始时间: %s -> %ld", id(ha_calendar_start_time_1).state.c_str(), parse_time(id(ha_calendar_start_time_1).state));
-        ESP_LOGD("myCalendar", "开始时间: %s -> %ld", id(ha_calendar_start_time_2).state.c_str(), parse_time(id(ha_calendar_start_time_2).state));
-        ESP_LOGD("myCalendar", "开始时间: %s -> %ld", id(ha_calendar_start_time_3).state.c_str(), parse_time(id(ha_calendar_start_time_3).state));
+        ESP_LOGD("myCalendar", "Start Time: %s -> %ld", id(ha_calendar_start_time_1).state.c_str(), parse_time(id(ha_calendar_start_time_1).state));
+        ESP_LOGD("myCalendar", "Start Time: %s -> %ld", id(ha_calendar_start_time_2).state.c_str(), parse_time(id(ha_calendar_start_time_2).state));
+        ESP_LOGD("myCalendar", "Start Time: %s -> %ld", id(ha_calendar_start_time_3).state.c_str(), parse_time(id(ha_calendar_start_time_3).state));
 
-        // 过滤无效事件（start_timestamp == 0）
+        // Filter invalid events (start_timestamp == 0)
         events.erase(std::remove_if(events.begin(), events.end(), [](const Event &e) { return e.start_timestamp == 0; }), events.end());
 
-        // 按`start_timestamp`排序（从早到晚）
+        // Sort by `start_timestamp` (earliest to latest)
         std::sort(events.begin(), events.end(), [](const Event &a, const Event &b) {
             return a.start_timestamp < b.start_timestamp;
         });
 
-        // 定义格式化时间的函数
+        // Define a function to format time
         auto format_time = [](std::string time_str) -> std::string {
             struct tm timeinfo;
             if (strptime(time_str.c_str(), "%Y-%m-%d %H:%M:%S", &timeinfo) == nullptr) {
-                return "无效";
+                return "Invalid";
             }
             char buffer[10];
-            strftime(buffer, sizeof(buffer), "%I:%M%p", &timeinfo); // 转换为12小时格式
+            strftime(buffer, sizeof(buffer), "%I:%M%p", &timeinfo); // Convert to 12-hour format
             return std::string(buffer);
         };
-        // 解析日期
+        // Parse date
         auto format_date = [](const std::string &time_str) -> std::string {
             struct tm timeinfo = {};
             if (strptime(time_str.c_str(), "%Y-%m-%d %H:%M:%S", &timeinfo) == nullptr) {
-                return "无效";
+                return "Invalid";
             }
-            char buffer[6];  // 需要存储"MM-DD\0"
+            char buffer[6];  // Need to store "MM-DD\0"
             strftime(buffer, sizeof(buffer), "%m-%d", &timeinfo);
             return std::string(buffer);
         };
 
-        // 绘制事件
+        // Draw events
         int even_x_start_offset = 460;
         int even_y_start_offset = 80;
         for (const auto &event : events) {
@@ -1191,21 +1186,21 @@ display:
             break;
           }
 
-          // 格式化时间
+          // Format time
           std::string formatted_date = format_date(event.start_time);
           std::string formatted_start_time = format_time(event.start_time);
           std::string formatted_end_time = format_time(event.end_time);
 
-          // 组合时间范围字符串
+          // Combine time range string
           std::string time_range = formatted_start_time + " - " + formatted_end_time;
           time_range = formatted_date + "  " + time_range;
-          if(formatted_start_time == "无效" || formatted_end_time == "无效"){
+          if(formatted_start_time == "Invalid" || formatted_end_time == "Invalid"){
             time_range.clear();
           }
-          // 显示时间范围，例如"10:00AM - 11:00AM"
+          // Display time range, e.g., "10:00AM - 11:00AM"
           it.printf(even_x_start_offset, even_y_start_offset, id(sensor_font), "%s", time_range.c_str());
           even_y_start_offset += 30;
-          // 显示事件名称
+          // Display event name
           it.printf(even_x_start_offset, even_y_start_offset, id(sensor_font), "%s", event.message.c_str());
           even_y_start_offset += 40;
         }
@@ -1216,10 +1211,9 @@ display:
 
 </details>
 
-当您看到如下图所示的反馈时，说明代码运行成功。
+当您看到如下图所示的反馈时，表示代码正在成功运行。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/38.png" style={{width:600, height:'auto'}}/></div>
-
 
 ## 常见问题
 
@@ -1230,16 +1224,15 @@ display:
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/100.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-在这种情况下，您应该转到设置 -> 设备和服务 -> 集成来**重新配置**设备。没有找到您的电子纸面板？尝试重启 HA。
+在这种情况下，您应该前往设置 -> 设备与服务 -> 集成来**重新配置**设备。没有找到您的电子纸面板？尝试重启 HA。
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
 #### Q2: 为什么我无法在《Home Assistant》中获取这些数据？ {#port}
 
-在这种情况下，您应该转到设置 -> 设备和服务 -> 集成来**添加**您的设备到 HA。
+在这种情况下，您应该前往设置 -> 设备与服务 -> 集成来**添加**您的设备到 HA。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
-
 
 #### <span id="deepmode">Q3</span>: 当设备处于深度睡眠模式时，如何上传新程序？
 
@@ -1256,7 +1249,7 @@ display:
 
 3. 之后，关闭电池开关并拔掉电源线。
 
-4. 最后，重新插入电缆并上传新程序。
+4. 最后，重新插入线缆并上传新程序。
 
 #### Q4: 电池能持续多长时间？
 
@@ -1280,9 +1273,8 @@ display:
 
 ## 资源
 
-- **[STP]**: [3D模型外壳](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3D_model.zip)
-- **[PDF]**: [电子纸驱动板原理图PDF](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/ePaper_Driver_Board.pdf)
-
+- **[STP]**: [3D 模型外壳](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3D_model.zip)
+- **[PDF]**: [电子纸驱动板原理图 PDF](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/ePaper_Driver_Board.pdf)
 
 ## 技术支持与产品讨论
 

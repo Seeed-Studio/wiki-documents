@@ -1,5 +1,5 @@
 ---
-description: XIAO ESP32-C3 iBeacon with BME680 Sensor Using ESP-IDF
+description: 使用 ESP-IDF 的 XIAO ESP32-C3 iBeacon 与 BME680 传感器
 title: 使用 ESP-IDF 的 XIAO ESP32-C3 iBeacon 与 BME680 传感器
 keywords:
   - ESP-IDF
@@ -13,7 +13,7 @@ last_update:
 
 # 使用 ESP-IDF 的 XIAO ESP32-C3 iBeacon 与 BME680 传感器
 
-在本教程中，我们将构建一个低功耗温度监测系统，使用蓝牙低功耗（BLE）以 iBeacon 格式广播环境数据。我们将使用 Seeed Studio XIAO ESP32-C3、XIAO 扩展板和 Grove BME680 环境传感器。本项目演示了如何使用 ESP-IDF（Espressif 官方开发框架）构建强大的嵌入式应用程序。
+在本教程中，我们将构建一个低功耗温度监测系统，使用蓝牙低功耗（BLE）以 iBeacon 格式广播环境数据。我们将使用 Seeed Studio XIAO ESP32-C3、XIAO 扩展板和 Grove BME680 环境传感器。本项目演示了如何使用 ESP-IDF（乐鑫官方开发框架）构建强大的嵌入式应用程序。
 
 ## 概述
 
@@ -66,7 +66,7 @@ last_update:
 
 ## 软件要求
 
-- [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/get-started/index.html)（v5.0 或更高版本）
+- [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/get-started/index.html) (v5.0 或更高版本)
 - Git
 - [项目 GitHub 仓库](https://github.com/Priyanshu0901/xiao_ibeacon)
 
@@ -76,21 +76,21 @@ last_update:
 
 1. **将 BME680 传感器连接到 XIAO 扩展板**：
 
-   - 将 Grove BME680 传感器连接到 XIAO 扩展板上的其中一个 I2C 端口。
-   - 传感器通过 I2C 通信，因此任何兼容 I2C 的 Grove 端口都可以使用。
+   - 将 Grove BME680 传感器连接到 XIAO 扩展板上的任一 I2C 端口。
+   - 该传感器通过 I2C 通信，因此任何兼容 I2C 的 Grove 端口都可以使用。
 
 2. **将 XIAO ESP32-C3 安装到扩展板上**：
 
    - 小心对齐并将 XIAO ESP32-C3 模块插入扩展板。
    - 确保引脚正确对齐，模块牢固就位。
 
-3. **连接到计算机**：
-   - 使用 USB Type-C 数据线将 XIAO 扩展板连接到计算机。
+3. **连接到您的计算机**：
+   - 使用 USB Type-C 数据线将 XIAO 扩展板连接到您的计算机。
 
 ## 步骤 2：设置开发环境
 
 1. **安装 ESP-IDF**：
-   按照适用于您操作系统的[官方安装说明](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/get-started/index.html)进行操作。
+   按照您操作系统的[官方安装说明](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/get-started/index.html)进行操作。
 
    对于 Linux，您可以使用：
 
@@ -103,7 +103,7 @@ last_update:
    . ./export.sh
    ```
 
-2. **克隆项目仓库**：
+2. **Clone the project repository**:
 
    ```bash
    cd ~/Desktop
@@ -112,7 +112,7 @@ last_update:
    ```
 
    :::caution
-   `--recurse-submodules` 标志至关重要，因为项目依赖于作为 Git 子模块包含的外部库。没有这个标志，编译将失败。
+   `--recurse-submodules` 标志至关重要，因为项目依赖于作为 Git 子模块包含的外部库。没有这个标志，编译将会失败。
 
    如果您已经在没有子模块的情况下克隆了仓库，请运行：
 
@@ -122,7 +122,7 @@ last_update:
 
    :::
 
-## 步骤 3：项目结构和理解组件
+## 步骤 3：项目结构和组件理解
 
 该项目由三个主要组件组成：
 
@@ -158,7 +158,7 @@ last_update:
    - `ADV_TIME_MS`：BLE 广告持续时间（500ms）
    - `POLL_INTERVAL_MS`：轮询传感器的频率（150ms）
    - `TIMEOUT_MS`：等待传感器读数的最大时间（2000ms）
-   - `SLEEP_TIME_MS`：测量之间的睡眠时间（约 29.3 秒）
+   - `SLEEP_TIME_MS`：测量之间的睡眠时长（约 29.3 秒）
 
 2. **传感器配置**（在 `components/sensor_t_a_h/Kconfig` 中）：
 
@@ -227,33 +227,33 @@ last_update:
 
 #### 使用 ESP-IDF 的 menuconfig 工具
 
-ESP-IDF 框架提供了一个强大的配置工具叫做 **menuconfig**，它为修改项目设置提供了基于文本的用户界面。该工具基于 Kconfig，这是 Linux 内核使用的同一配置系统。
+ESP-IDF 框架提供了一个强大的配置工具叫做 **menuconfig**，它提供了一个基于文本的用户界面来修改项目设置。这个工具基于 Kconfig，与 Linux 内核使用的配置系统相同。
 
-要启动配置界面：
+启动配置界面：
 
 ```bash
 idf.py menuconfig
 ```
 
-这将显示一个基于文本的用户界面，包含配置类别：
+This will display a text-based UI with configuration categories:
 
 ```
-    应用程序配置  --->
-    ESP-IDF 组件         --->
-    SDK 工具配置     --->
-    编译器选项          --->
-    组件配置          --->
-    引导加载程序配置     --->
-    串行烧录器配置     --->
+    Application Configuration  --->
+    ESP-IDF Components         --->
+    SDK tool configuration     --->
+    Compiler options          --->
+    Component config          --->
+    Bootloader config         --->
+    Serial flasher config     --->
 ```
 
 **在 menuconfig 中导航：**
 
 - 使用 `↑` 和 `↓` 箭头键导航
 - 按 `Enter` 进入子菜单
-- 按 `Esc` 返回
+- 按 `Esc` 返回上级菜单
 - 按 `Space` 切换选项
-- 在布尔选项上按 `Y` 表示 'Yes'，按 `N` 表示 'No'
+- 在布尔选项上按 `Y` 表示"是"，按 `N` 表示"否"
 - 按 `?` 查看当前选中选项的帮助
 - 按 `Q` 或多次按 `Esc` 退出，然后按 `Y` 保存更改
 
@@ -295,13 +295,13 @@ idf.py menuconfig
 
 ##### 高级配置选项
 
-对于高级用户，提供了额外的配置选项：
+对于高级用户，还有其他配置选项可用：
 
 1. **电源管理：**
 
    - 导航到：`Component config` → `Power Management`
    - 启用/禁用自动轻度睡眠
-   - 配置 DFS（动态频率缩放）
+   - 配置 DFS（动态频率调节）
 
 2. **Flash 加密：**
 
@@ -317,7 +317,7 @@ idf.py menuconfig
    - 导航到：`Component config` → `Log output`
    - 配置调试日志级别和输出目标
 
-进行更改后，按 `Q` 退出并按 `Y` 保存更改。然后使用以下命令重新构建项目：
+完成更改后，按 `Q` 退出并按 `Y` 保存更改。然后使用以下命令重新构建项目：
 
 ```bash
 idf.py build
@@ -349,14 +349,14 @@ idf.py build
    cd ~/Desktop/xiao_ibeacon
    ```
 
-2. **配置项目**：
+2. **Configure the project**:
 
    ```bash
    idf.py set-target esp32c3
    idf.py menuconfig
    ```
 
-   通过菜单导航检查或调整设置：
+   通过菜单导航来检查或调整设置：
 
    - Component Config → BME680 Sensor Settings
    - Component Config → BLE Beacon Settings
@@ -368,21 +368,21 @@ idf.py build
    idf.py build
    ```
 
-4. **将项目烧录到 XIAO ESP32-C3**：
+4. **Flash the project to XIAO ESP32-C3**:
 
    ```bash
    idf.py -p /dev/ttyUSB0 flash
    ```
 
-   注意：您的端口可能不同（Windows：COM3、COM4 等）
+   Note: Your port might be different (Windows: COM3, COM4, etc.)
 
-5. **监控输出**（可选）：
+5. **Monitor the output** (optional):
 
    ```bash
    idf.py -p /dev/ttyUSB0 monitor
    ```
 
-   按 Ctrl+] 退出监控。
+   按 Ctrl+] 退出监视器。
 
 ## 步骤 6：测试 iBeacon
 
@@ -394,14 +394,14 @@ idf.py build
 2. **打开应用并扫描 BLE 设备**：
 
    - 查找名为 "Xiao_TempSensor" 的设备
-   - 选择设备以查看其广播数据
+   - 选择该设备以查看其广播数据
 
 3. **理解广播数据**：
    BLE 广播包含：
 
-   - 温度（摄氏度，按 100 倍缩放）
-   - 湿度（百分比）
-   - 压力（hPa，按 10 倍缩放）
+   - 温度（以摄氏度为单位，按 100 倍缩放）
+   - 湿度（以百分比为单位）
+   - 压力（以 hPa 为单位，按 10 倍缩放）
 
 4. **预期行为**：
    - 设备大约每 30 秒唤醒一次
@@ -411,7 +411,7 @@ idf.py build
 
 ### Python 测试脚本
 
-项目包含 Python 脚本来帮助测试和验证 BLE 信标功能。让我们探索它们：
+该项目包含 Python 脚本来帮助测试和验证 BLE 信标功能。让我们来探索它们：
 
 #### 设置 Python 环境
 
@@ -421,42 +421,42 @@ idf.py build
    cd ~/Desktop/xiao_ibeacon/test_scripts
    ```
 
-2. 运行设置脚本创建和配置虚拟环境：
+2. Run the setup script to create and configure a virtual environment:
 
    ```bash
-   # 在 Linux/macOS 上
+   # On Linux/macOS
    chmod +x setup_venv.sh
    ./setup_venv.sh
 
-   # 在 Windows 上
+   # On Windows
    setup_venv.bat
    ```
 
-3. 激活虚拟环境：
+3. Activate the virtual environment:
 
    ```bash
-   # 在 Linux/macOS 上
+   # On Linux/macOS
    source venv/bin/activate
 
-   # 在 Windows 上
+   # On Windows
    venv\Scripts\activate
    ```
 
-设置脚本将安装所需的包：
+安装脚本将安装所需的包：
 
 - `bleak`：用于 BLE 通信
 - `colorama`：用于彩色终端输出
 
-#### 使用 BLE 扫描脚本
+#### 使用 BLE 扫描器脚本
 
-BLE 扫描脚本（`ble_beacon_scanner.py`）扫描 BLE 广播并显示来自我们信标的传感器数据。
+BLE 扫描器脚本（`ble_beacon_scanner.py`）扫描 BLE 广播并显示来自我们信标的传感器数据。
 
 扫描器的主要功能：
 
 - 查找名为 "Xiao_TempSensor" 的设备
 - 解码制造商特定数据以提取温度、湿度和压力
-- 在格式化的终端 UI 中显示值
-- 随着接收到新广播持续更新
+- 在格式化的终端 UI 中显示数值
+- 在接收到新广播时持续更新
 
 运行扫描器：
 
@@ -464,30 +464,28 @@ BLE 扫描脚本（`ble_beacon_scanner.py`）扫描 BLE 广播并显示来自我
 python ble_beacon_scanner.py
 ```
 
-脚本将显示格式良好的输出，包含最新的传感器读数：
+The script will display a nicely formatted output with the latest sensor readings:
 
 ```
-
 ╔═══════════════════════════════════════════════╗
-║ Xiao 温度传感器信标扫描器                      ║
+║ Xiao Temperature Sensor Beacon Scanner        ║
 ╠═══════════════════════════════════════════════╣
-║ 最后更新: 15:42:27                           ║
-║ 信号强度: -63 dBm                            ║
+║ Last Update: 15:42:27                         ║
+║ Signal Strength: -63 dBm                      ║
 ╠═══════════════════════════════════════════════╣
-║ 温度: 23.45 °C                               ║
-║ 湿度: 48 %                                   ║
-║ 压力: 1013.2 hPa                             ║
+║ Temperature: 23.45 °C                         ║
+║ Humidity: 48 %                                ║
+║ Pressure: 1013.2 hPa                          ║
 ╠═══════════════════════════════════════════════╣
-║ 按 Ctrl+C 退出                               ║
+║ Press Ctrl+C to exit                          ║
 ╚═══════════════════════════════════════════════╝
-
 ```
 
-如果您在脚本中通过设置 `DEBUG_MODE = True` 启用调试模式，您将看到有关 BLE 广播和数据解析的额外信息。
+如果您在脚本中通过设置 `DEBUG_MODE = True` 启用调试模式，您将看到关于 BLE 广播和数据解析的额外信息。
 
 #### 信标数据格式
 
-信标以压缩格式传输数据，以适应 BLE 广播限制：
+信标以压缩格式传输数据，以适应 BLE 广播的限制：
 
 1. 公司 ID：0x02E5（乐鑫系统）
 2. 温度：16 位有符号整数，按 100 缩放（除以 100 得到 °C）
@@ -504,9 +502,9 @@ Python 脚本解码此格式并显示实际值。
 
 ### 传感器初始化和读取
 
-BME680 传感器通过以下步骤初始化：
+BME680 传感器通过以下步骤进行初始化：
 
-1. **I2C 配置**：在适当的引脚上设置 I2C 通信（对于带扩展板的 XIAO ESP32-C3，GPIO6/GPIO7 用于 SDA/SCL）
+1. **I2C 配置**：在适当的引脚上设置 I2C 通信（对于带扩展板的 XIAO ESP32-C3，SDA/SCL 使用 GPIO6/GPIO7）
 2. **传感器初始化**：配置 BME680 传感器的温度、湿度、压力和气体测量设置
 3. **读取过程**：启动测量并等待数据准备就绪
 4. **数据处理**：将原始传感器值转换为人类可读的测量值
@@ -530,22 +528,22 @@ BLE 功能的工作原理如下：
 
 1. **深度睡眠配置**：使用 ESP-IDF 的睡眠 API（`esp_sleep_enable_timer_wakeup()`）配置唤醒定时器
 2. **唤醒源**：将定时器设置为唯一的唤醒源（系统将在指定持续时间后唤醒）
-3. **睡眠进入**：在使用 `esp_deep_sleep_start()` 进入深度睡眠之前安全关闭活动外设
-4. **唤醒过程**：当定时器到期时，系统执行重置并从头开始重新启动应用程序
+3. **进入睡眠**：在使用 `esp_deep_sleep_start()` 进入深度睡眠之前安全关闭活动外设
+4. **唤醒过程**：当定时器到期时，系统执行复位并从头开始重新启动应用程序
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-c3-ibeacon/7.png" style={{width:800, height:'auto'}}/></div>
 
 电源管理组件（`power_manager.c`）提供了一个简单的接口来处理睡眠模式：
 
 ```c
-// 初始化电源管理器
+// Initialize power manager
 power_manager_init();
 
-// 稍后，当需要进入睡眠时：
-power_manager_enter_deep_sleep(30000); // 睡眠30秒
+// Later, when it's time to sleep:
+power_manager_enter_deep_sleep(30000); // Sleep for 30 seconds
 ```
 
-当设备进入深度睡眠时，功耗会急剧下降（约10-20 μA），从而实现长电池续航。设备会完全关闭，并在定时器到期时重新启动，因此任何需要保留的状态都必须存储在RTC内存或非易失性存储中。
+当设备进入深度睡眠时，功耗急剧下降（约10-20 μA），从而实现长电池续航。设备完全关闭，当定时器到期时会重新启动，因此任何需要保留的状态都必须存储在RTC内存或非易失性存储中。
 
 ### 功耗配置文件
 
@@ -590,11 +588,11 @@ power_manager_enter_deep_sleep(30000); // 睡眠30秒
 
 1. **更改睡眠持续时间**：
 
-   - 编辑`main.c`中的`SLEEP_TIME_MS`来调整读取数据的频率
+   - 编辑`main.c`中的`SLEEP_TIME_MS`以调整读取频率
 
 2. **修改传感器设置**：
 
-   - 使用`idf.py menuconfig`来更改传感器采样率、滤波器等
+   - 使用`idf.py menuconfig`更改传感器采样率、滤波器等
 
 3. **调整BLE参数**：
 
@@ -610,7 +608,7 @@ power_manager_enter_deep_sleep(30000); // 睡眠30秒
 1. **创建新的传感器组件**：
 
    ```bash
-   # 创建组件目录结构
+   # Create component directory structure
    mkdir -p components/my_new_sensor/include
    touch components/my_new_sensor/CMakeLists.txt
    touch components/my_new_sensor/Kconfig
@@ -651,8 +649,8 @@ power_manager_enter_deep_sleep(30000); // 睡眠30秒
    esp_err_t my_sensor_read(my_sensor_data_t *data);
    ```
 
-3. **配置构建系统**：
-   示例 `CMakeLists.txt`：
+3. **Configure Build System**:
+   Example `CMakeLists.txt`:
 
    ```cmake
    idf_component_register(
@@ -691,8 +689,8 @@ power_manager_enter_deep_sleep(30000); // 睡眠30秒
 
 5. **扩展 BLE 广播数据**：
 
-   - 更新 BLE 信标组件，在广播中包含您的传感器数据
-   - 为您的新测量值分配适当的数据类型 ID
+   - 更新 BLE 信标组件以在广播中包含您的传感器数据
+   - 为您的新测量数据分配适当的数据类型 ID
 
 6. **更新配置**：
    - 在 `components/my_new_sensor/Kconfig` 中为您的传感器添加 Kconfig 选项
@@ -715,7 +713,7 @@ power_manager_enter_deep_sleep(30000); // 睡眠30秒
 2. 将您的刷写命令与短暂的活动期（当设备不在深度睡眠中时）同步
 3. 或者，按住复位按钮，启动刷写命令，然后在刷写开始时释放复位按钮
 
-**重新启用开发调试输出**  
+**重新启用调试输出用于开发**  
 在开发自己的模块或调试时，您可以重新启用串口输出：
 
 1. 运行 `idf.py menuconfig`
@@ -772,7 +770,7 @@ power_manager_enter_deep_sleep(30000); // 睡眠30秒
 2. **USB 连接**：
 
    - 验证 USB 连接稳定
-   - 尝试在刷写前按下 XIAO 扩展板上的复位按钮
+   - 在刷写前尝试按下 XIAO 扩展板上的复位按钮
 
 3. **端口问题**：
    - 使用 `ls /dev/tty*`（Linux/macOS）或设备管理器（Windows）识别正确的端口
@@ -785,7 +783,7 @@ power_manager_enter_deep_sleep(30000); // 睡眠30秒
 1. **传感器集成**：在 ESP-IDF 中使用 I2C 传感器
 2. **BLE 通信**：创建和管理 BLE 广播
 3. **电源管理**：实现深度睡眠以实现电池高效运行
-4. **ESP-IDF 开发**：使用 Espressif 官方框架进行 ESP32 开发
+4. **ESP-IDF 开发**：使用乐鑫官方框架进行 ESP32 开发
 
 ### 整体系统架构
 
@@ -796,13 +794,13 @@ power_manager_enter_deep_sleep(30000); // 睡眠30秒
 ## 资源
 
 - [ESP-IDF 编程指南](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/)
-- [XIAO ESP32-C3 Wiki](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/)
+- [XIAO ESP32-C3 Wiki](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/)
 - [BME680 数据手册](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/)
 - [项目 GitHub 仓库](https://github.com/Priyanshu0901/xiao_ibeacon)
 
 ## ✨ 贡献者项目
 
-- 此项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
+- 本项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
 - 特别感谢 [Priyanshu Roy](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=106309063&issue=Seeed-Studio%7Cwiki-documents%7C2422) 的专注努力。您的工作将被[展示](https://wiki.seeedstudio.com/contributors/)。
 
 ## 技术支持与产品讨论

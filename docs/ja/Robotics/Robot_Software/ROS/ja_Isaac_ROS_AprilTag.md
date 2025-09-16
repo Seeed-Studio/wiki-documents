@@ -1,5 +1,5 @@
 ---
-description: この Wiki は Isaac ROS AprilTag を使用するためのステップバイステップガイドを提供します。
+description: このwikiは、Isaac ROS AprilTagを使用するためのステップバイステップガイドを提供します。
 title: Isaac ROS AprilTag
 keywords:
 - NVIDIA
@@ -14,40 +14,35 @@ last_update:
 
 # Isaac ROS AprilTag  
 
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
-
 ## 前提条件  
-AprilTag をデプロイする前に、reComputer 上で Isaac ROS の基本環境が正常にセットアップされていることを確認してください。[インストールガイド](/ja/install_isaacros)。ROS2 がインストールされていない場合は、[こちらのドキュメント](/ja/install_ros2_humble)を参照してください。
+AprilTagをデプロイする前に、reComputerでIsaac ROSの基本環境が正常にセットアップされていることを確認してください [インストールガイド](/install_isaacros)。ROS2がインストールされていない場合は、[このドキュメント](/install_ros2_humble)を参照してください。  
 
-### Isaac ROS AprilTag パッケージのトピック  
-**購読されるトピック:**  
+### Isaac ROS AprilTagパッケージトピック  
+**購読トピック：**  
 
-| ROS トピック       | インターフェース                  | 説明                     |  
+| ROSトピック       | インターフェース                  | 説明                     |  
 |-----------------|----------------------------|---------------------------------|  
 | image         | sensor_msgs/Image        | 入力カメラストリーム。            |  
 | camera_info   | sensor_msgs/CameraInfo   | 入力カメラ内部パラメータストリーム。 |  
 
-**公開されるトピック:**  
+**配信トピック：**  
 
-| ROS トピック          | 型                                              | 説明                                      |  
+| ROSトピック          | タイプ                                              | 説明                                      |  
 |--------------------|---------------------------------------------------|--------------------------------------------------|  
-| tag_detections   | isaac_ros_apriltag_interfaces/AprilTagDetectionArray | AprilTag 検出メッセージの配列。           |  
-| tf              | tf2_msgs/TFMessage                             | 検出された AprilTag (TagFamily:ID) のカメラの frame_id に対するポーズ。 |  
+| tag_detections   | isaac_ros_apriltag_interfaces/AprilTagDetectionArray | AprilTag検出メッセージの配列。           |  
+| tf              | tf2_msgs/TFMessage                             | 検出されたAprilTag（TagFamily:ID）のカメラのframe_idに対する相対的な姿勢。 |  
 
 
-## 1. Isaac ROS AprilTag 環境セットアップ  
+## 1. Isaac ROS AprilTag環境セットアップ  
 
-### ワークスペースの作成 (既に作成済みの場合はスキップ)  
+### ワークスペースの作成（既に完了している場合はスキップ）  
 ```bash
 mkdir -p ~/workspaces/isaac_ros-dev/src
 echo "export ISAAC_ROS_WS=${HOME}/workspaces/isaac_ros-dev/" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-### パッケージと ROS Bag データのクローン  
+### パッケージとROSバッグデータのクローン  
 ```bash
 cd ${ISAAC_ROS_WS}/src
 git clone https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_apriltag.git
@@ -55,38 +50,38 @@ cd ${ISAAC_ROS_WS}/src/isaac_ros_apriltag && \
   git lfs pull -X "" -I "resources/rosbags/quickstart.bag"
 ```
 
-### Docker コンテナに入る  
+### Dockerコンテナに入る  
 ```bash
 cd ${ISAAC_ROS_WS}/src/isaac_ros_common && \
   ./scripts/run_dev.sh
 ```
 
 
-## 2. ROS Bag データでのテスト  
+## 2. ROSバッグデータでのテスト  
 
-### AprilTag パッケージのインストール (Docker 内)  
+### AprilTagパッケージのインストール（Docker内）  
 ```bash
 sudo apt-get install -y ros-humble-isaac-ros-apriltag
 ```
 
-### AprilTag ノードの起動  
+### AprilTagノードの起動  
 ```bash
 ros2 launch isaac_ros_apriltag isaac_ros_apriltag.launch.py
 ```
 
-### 新しいターミナルを開く (Docker 内)  
+### 新しいターミナルを開く（Docker内）  
 ```bash
 cd ${ISAAC_ROS_WS}/src/isaac_ros_common && \
   ./scripts/run_dev.sh
 ```
 
-### ROS Bag の再生  
+### ROSバッグの再生  
 ```bash
 ros2 bag play --loop src/isaac_ros_apriltag/resources/rosbags/quickstart.bag
 ```
 
-### RViz2 での可視化  
-ローカルターミナルで RViz2 を開き、**Image** と **TF** コンポーネントを追加します:  
+### RViz2での可視化  
+ローカルターミナルでRViz2を開き、**Image**と**TF**コンポーネントを追加します：  
 ```bash
 ros2 run rviz2 rviz2
 ```
@@ -97,18 +92,17 @@ ros2 run rviz2 rviz2
 </div>
 
 
+## 3. USBカメラでのテスト  
+ROS2がローカルにインストールされていることを確認してください。  
 
-## 3. USB カメラでのテスト  
-ROS2 がローカルにインストールされていることを確認してください。  
-
-### USB カメラワークスペースの作成  
+### USBカメラワークスペースの作成  
 ```bash
 cd ~/
 mkdir -p usbcam/src
 cd usbcam/src
 ```
 
-### `usb_cam` パッケージのクローンとビルド  
+### `usb_cam`パッケージのクローンとビルド  
 ```bash
 git clone https://github.com/ros-drivers/usb_cam.git
 cd ..
@@ -118,7 +112,7 @@ source ~/.bashrc
 ```
 
 ### カメラフォーマットの確認  
-カメラを接続し、そのデバイスパス (例: `/dev/video*`) を確認します。以下を使用してテストします:  
+カメラを接続し、デバイスパス（例：`/dev/video*`）を確認します。以下でテストします：  
 ```bash
 cd ~/usbcam
 ros2 run usb_cam usb_cam_node_exe
@@ -130,51 +124,51 @@ ros2 run usb_cam usb_cam_node_exe
 </div>
 
 
-#### サポートされるピクセルフォーマット:  
+#### サポートされているピクセルフォーマット：  
 `rgb8`, `yuyv`, `yuyv2rgb`, `uyvy`, `uyvy2rgb`, `m4202rgb`, `mono8`, `mono16`, `y102mono8`, `raw_mjpeg`  
 
 ### カメラの設定  
-1. `/usbcam/src/usb_cam/config/params_1.yaml` 内の `pixel_format` を変更します。  
+1. `/usbcam/src/usb_cam/config/params_1.yaml`の`pixel_format`を変更します。  
 
 <div align="center">
     <img width={800} 
     src="https://files.seeedstudio.com/wiki/robotics/software/apriltag/3.png" />
 </div>
 
-2. `frame_id` を調整します (デフォルト: `camera`)。  
-3. `/usbcam/src/usb_cam/launch/camera_config.py` の 58 行目と 62 行目でトピック名を AprilTag の要件 (`/image` と `/camera_info`) に合わせてリマップします。  
+2. `frame_id`を調整します（デフォルト：`camera`）。  
+3. `/usbcam/src/usb_cam/launch/camera_config.py`（58行目と62行目）でトピック名をAprilTagの要件（`/image`と`/camera_info`）に合わせてリマップします。  
 
 <div align="center">
     <img width={800} 
     src="https://files.seeedstudio.com/wiki/robotics/software/apriltag/4.png" />
 </div>
 
-### カメラの再ビルドと起動  
+### 再ビルドとカメラの起動  
 ```bash
 cd ~/usbcam
 colcon build
 ros2 launch usb_cam camera.launch.py
 ```
 
-### AprilTag ノードの実行 (Docker 内)  
+### AprilTagノードの実行（Docker内）  
 ```bash
 cd ${ISAAC_ROS_WS}/src/isaac_ros_common && \
   ./scripts/run_dev.sh
 ros2 launch isaac_ros_apriltag isaac_ros_apriltag.launch.py
 ```
 
-### RViz2 での可視化  
-**Fixed Frame** をカメラの `frame_id` に設定し、**Image** コンポーネントを `/image` にサブスクライブし、**TF** を有効にします。  
-*注: このテストでは 200mm × 200mm の AprilTag を使用します。*  
+### RViz2での可視化  
+**Fixed Frame**をカメラの`frame_id`に設定し、`/image`を購読する**Image**コンポーネントを追加し、**TF**を有効にします。  
+*注：このテストでは200mm × 200mmのAprilTagを使用しています。*  
 
 <div align="center">
     <img width={800} 
     src="https://files.seeedstudio.com/wiki/robotics/software/apriltag/5.png" />
 </div>
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なるニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

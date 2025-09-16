@@ -46,7 +46,8 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 ### Software Preparation
 
-* Python 3.11 may be incompatible with fuxa. If your Python version is 3.11, please consider changing to a different Python version.
+- Python 3.11 may be incompatible with fuxa. If your Python version is 3.11, please consider changing to a different Python version.
+
 - Using [fuxa](https://github.com/frangoteam/FUXA) on reComputer R1000.You can refer to the following steps to install fuxa on reComputer R1000
 
   ```shell
@@ -62,7 +63,8 @@ Before you start this project, you may need to prepare your hardware and softwar
     sudo fuxa
   ```
 
-* Regarding how to use fuxa to implement OPC-UA data interaction, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_opc_ua/).
+- Regarding how to use fuxa to implement OPC-UA data interaction, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_opc_ua/).
+
 - Regarding how to use fuxa to implement data interaction with mqtt client, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_mqtt_client/).Unlike this wiki, the data we publish in `node-red` is processed by the `function` module, and the `loop` module is used for continuous publishing.The code of the `function` module is as follows:
 
   ```java

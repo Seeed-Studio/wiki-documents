@@ -1,6 +1,6 @@
 ---
-description: Esta wiki proporciona un marco de implementación integral para equipar el Kit de Robot Lekiwi con capacidades de seguimiento de sonido utilizando ReSpeaker Mic Array v2.0 y reComputer Jetson Mini, cubriendo la integración de hardware, configuración del entorno y adaptación de software mientras demuestra la funcionalidad de seguimiento de fuente de audio en tiempo real.
-title: Un Robot Seguidor de Sonido Impulsado por reSpeaker y Lekiwi
+description: Este wiki proporciona un marco de implementación integral para equipar el Kit de Robot Lekiwi con capacidades de seguimiento de sonido utilizando ReSpeaker Mic Array v2.0 y reComputer Jetson Mini, cubriendo la integración de hardware, configuración del entorno y adaptación de software mientras demuestra la funcionalidad de seguimiento de fuente de audio en tiempo real.
+title: Lekiwi con Seguimiento de Sonido
 keywords:
 - Lerobot
 - Huggingface
@@ -76,12 +76,12 @@ El Kit de Robot Lewiki, integrado con el ReSpeaker Mic Array v2.0, obtiene capac
 - ReSpeaker Mic Array v2.0
 
 :::note
-Considerando futuras expansiones funcionales, este wiki utiliza el `reComputer Jetson Mini J4012` como dispositivo de control principal del robot. También puedes lograr todas las funcionalidades descritas en este wiki usando una `Raspberry Pi 5`.
+Considerando futuras expansiones funcionales, este wiki utiliza el `reComputer Jetson Mini J4012` como el dispositivo de control principal del robot. También puedes lograr todas las funcionalidades descritas en este wiki usando una `Raspberry Pi 5`.
 :::
 
 ## Conexión de Hardware
 
-1. Por favor consulta [este wiki](https://wiki.seeedstudio.com/es/lerobot_lekiwi/) para preparar el robot Lekiwi, incluyendo el ensamblaje de la estructura mecánica y la configuración de los motores.
+1. Por favor, consulta [este wiki](https://wiki.seeedstudio.com/es/lerobot_lekiwi/) para preparar el robot Lekiwi, incluyendo el ensamblaje de la estructura mecánica y la configuración de los motores.
 2. Usa conectores impresos en 3D para montar el reSpeaker en el Lekiwi.
 3. Usa cables USB para conectar el reSpeaker y el controlador de servo al reComputer.
 
@@ -94,7 +94,7 @@ Considerando futuras expansiones funcionales, este wiki utiliza el `reComputer J
 
 ### Entorno Virtual Lerobot
 
-Si ya has configurado el entorno virtual Lerobot en tu reComputer durante el proceso de ensamblaje del Lekiwi, puedes saltar a la siguiente sección.
+Si ya has configurado el entorno virtual Lerobot en tu reComputer durante el proceso de ensamblaje de Lekiwi, puedes saltar a la siguiente sección.
 De lo contrario, puedes configurar el entorno virtual Lerobot usando los siguientes comandos:
 
 **Paso1.** Instalar Miniconda
@@ -107,7 +107,7 @@ rm ~/miniconda3/miniconda.sh
 source ~/.bashrc
 ```
 
-**Paso 2.** Crear entorno conda para lerobot
+**Paso2.** Crear entorno conda para lerobot
 
 ```bash
 conda create -y -n lerobot python=3.10
@@ -119,7 +119,7 @@ cd ~/lerobot && pip install -e ".[feetech]"
 
 ### Dependencias de reSpeaker
 
-Instala las dependencias de reSpeaker en el entorno virtual de lerobot.
+Instala las dependencias de reSpeaker en el entorno virtual lerobot.
 
 **Paso1.** Instalar `pyusb`
 
@@ -127,7 +127,7 @@ Instala las dependencias de reSpeaker en el entorno virtual de lerobot.
 pip install pyusb==1.0.2
 ```
 
-**Paso2.** Configurar permisos de acceso al dispositivo USB
+**Paso2.** Configurar permisos de acceso a dispositivos USB
 
 ```bash
 echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="2886", MODE="0666"' | sudo tee /etc/udev/rules.d/51-mic-usb.rules
@@ -135,7 +135,7 @@ sudo chmod +x /etc/udev/rules.d/51-mic-usb.rules
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
-## Instalar el Software de la Aplicación
+## Instalar el Software de Aplicación
 
 Navega al directorio `lerobot/lerobot/common/robots/lekiwi/` y crea un nuevo script de Python llamado `sound_follow.py` en esta ubicación.
 Luego, copia el siguiente contenido en sound_follow.py.
@@ -299,10 +299,10 @@ class SoundFollowingRobot:
             return
 
         return Tuning(dev)
-    
+
     def get_sound_direction(self):
         return self.mic.read("DOAANGLE")
-        
+
     def robot_turn(self, speed):
         data = {'x.vel': 0.0, 'y.vel': 0.0, 'theta.vel': int(speed/self.scale_factor)}
         _action_sent = self.robot.send_action(data)
@@ -332,7 +332,7 @@ class SoundFollowingRobot:
             print(f"Exception occurred: {e}")
         finally:
             self.close()
-    
+
     def close(self):
         self.robot_turn(0)
         self.robot.disconnect()
@@ -342,7 +342,6 @@ class SoundFollowingRobot:
 if __name__ == "__main__":
     robot = SoundFollowingRobot()
     robot.run()
-
 ```
 
 </details>
@@ -401,7 +400,7 @@ def send_action(self, action: dict[str, Any]) -> dict[str, Any]:
     return {**base_goal_vel}
 ```
 
-## Ejecutar la Aplicación
+## Lanzar la Aplicación
 
 Ejecuta el siguiente comando para iniciar el robot:
 
@@ -424,7 +423,7 @@ Después de lanzar el programa, el robot rotará hacia las fuentes de sonido, al
 - https://wiki.seeedstudio.com/es/ReSpeaker_Mic_Array_v2.0/#version
 - https://github.com/respeaker/usb_4_mic_array
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

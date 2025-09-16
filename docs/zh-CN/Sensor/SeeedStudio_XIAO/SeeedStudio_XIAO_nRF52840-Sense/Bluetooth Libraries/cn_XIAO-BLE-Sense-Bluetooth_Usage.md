@@ -33,7 +33,7 @@ last_update:
 
 - **方法一**（此方法适用于上述两个代码库。）
 
-由于您已经下载了 zip 库文件，打开您的 Arduino IDE，点击 **Sketch > Include Library > Add .ZIP Library**。选择您刚刚下载的 zip 文件，如果库安装正确，您将在通知窗口中看到 **Library added to your libraries**。这意味着库已成功安装。
+由于您已经下载了 zip 库文件，请打开您的 Arduino IDE，点击 **Sketch > Include Library > Add .ZIP Library**。选择您刚刚下载的 zip 文件，如果库安装正确，您将在通知窗口中看到 **Library added to your libraries**。这意味着库已成功安装。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" /></div>
 
@@ -53,7 +53,7 @@ last_update:
 
 我们将在这里为您介绍蓝牙应用。
 
-### 无线连接 PC 键盘到手机
+### 将 PC 键盘无线连接到手机
 
 **步骤 1.** 启动 Arduino 应用程序。
 
@@ -62,7 +62,7 @@ last_update:
 
 **步骤 2.** 选择您的开发板型号并将其添加到 Arduino IDE。这里我们使用"Seeed nRF52 开发板库"。
 
-> 有关开发板库安装，请参考[此教程](https://wiki.seeedstudio.com/cn/XIAO_BLE/#software-setup)完成安装。
+> 有关开发板库安装，请参考[此教程](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)完成安装。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new.png" /></div>
 
@@ -72,12 +72,12 @@ last_update:
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new1.png" /></div>
 
 
-**步骤 4.** 点击"Upload"，然后打开 Arduino IDE 右上角的"monitor"。监视器将显示为：
+**步骤 4.** 点击"Upload"，然后打开 Arduino IDE 右上角的"monitor"。监视器将显示如下：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new3.png" /></div>
 
 
-**步骤 5.** 在您的手机上打开"nRF Connect for Mobile"应用或"LightBlue"应用，同时确保您的手机已连接蓝牙。过一会儿，您会发现一个名为"XIAO nRF52840"的设备被列出。
+**步骤 5.** 在您的手机上打开"nRF Connect for Mobile"应用或"LightBlue"应用，同时确保您的手机已连接蓝牙。稍等片刻，您将发现一个名为"XIAO nRF52840"的设备被列出。
 
 - 对于 **nRF Connect for Mobile APP**，应该是这样的：
 
@@ -89,7 +89,7 @@ last_update:
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new4.jpg" /></div>
 
 
-**步骤 6.** 简单点击设备，连接将自动完成。之后我们可以用 PC 键盘在监视器中输入字符，然后看看您的手机上发生了什么。
+**步骤 6.** 简单点击设备，连接将自动完成。之后我们可以用 PC 键盘在监视器中输入字符，然后看看您的手机上会发生什么。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new6.gif" /></div>
 

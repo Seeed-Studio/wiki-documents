@@ -22,7 +22,7 @@ last_update:
 
 ## 介绍
 
-毫米波雷达跌倒检测模块是一个独立的、隐私保护的、安全的毫米波模块，工作频率为24GHz。结合增强型英飞凌多普勒雷达和标准算法，该模块是老年人健康护理、智能家居和危险报警等个人应用的理想解决方案。
+毫米波雷达跌倒检测模块是一个自包含、隐私保护、安全的毫米波模块，工作频率为24GHz。结合增强型英飞凌多普勒雷达和标准算法，该模块是老年人健康护理、智能家居和危险报警等个人应用的理想解决方案。
 
 ### 应用
 
@@ -73,7 +73,7 @@ last_update:
 ### Arduino 库概述
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 本示例中使用的库代码可以通过点击下面的图标下载。
@@ -132,13 +132,13 @@ last_update:
 
 **步骤 3.** 选择您的开发板型号并将其添加到 Arduino IDE。
 
-- 如果您想在后续教程中使用 **Seeeduino V4.2**，请参考[此教程](https://wiki.seeedstudio.com/cn/Seeed_Arduino_Boards/)完成添加。
+- 如果您想在后续教程中使用 **Seeeduino V4.2**，请参考[此教程](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/)完成添加。
 
-- 如果您想在后续教程中使用 **Seeeduino XIAO**，请参考[此教程](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/#software)完成添加。
+- 如果您想在后续教程中使用 **Seeeduino XIAO**，请参考[此教程](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software)完成添加。
 
-- 如果您想在后续教程中使用 **XIAO RP2040**，请参考[此教程](https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/#software-setup)完成添加。
+- 如果您想在后续教程中使用 **XIAO RP2040**，请参考[此教程](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/#software-setup)完成添加。
 
-- 如果您想在后续教程中使用 **XIAO BLE**，请参考[此教程](https://wiki.seeedstudio.com/cn/XIAO_BLE/#software-setup)完成添加。
+- 如果您想在后续教程中使用 **XIAO BLE**，请参考[此教程](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)完成添加。
 
 **步骤 4.** 安装 Arduino 代码库。
 
@@ -221,15 +221,15 @@ void setup()
 
 void loop()
 {
- radar.recvRadarBytes();                       //接收雷达数据并开始处理
- if (radar.newData == true) {                  //数据已接收并传输到新列表 dataMsg[]
+ radar.recvRadarBytes();                       //Receive radar data and start processing
+ if (radar.newData == true) {                  //The data is received and transferred to the new list dataMsg[]
     byte dataMsg[radar.dataLen+1] = {0x00};
-    dataMsg[0] = 0x55;                         //添加帧头作为数组的第一个元素
-    for (byte n = 0; n < radar.dataLen; n++)dataMsg[n+1] = radar.Msg[n];  //逐帧传输
-    radar.newData = false;                     //保存完整的数据帧集
+    dataMsg[0] = 0x55;                         //Add the header frame as the first element of the array
+    for (byte n = 0; n < radar.dataLen; n++)dataMsg[n+1] = radar.Msg[n];  //Frame-by-frame transfer
+    radar.newData = false;                     //A complete set of data frames is saved
     
-    //radar.ShowData(dataMsg);                 //串口打印一组接收到的数据帧
-    radar.Fall_inf(dataMsg);                  //睡眠信息输出
+    //radar.ShowData(dataMsg);                 //Serial port prints a set of received data frames
+    radar.Fall_inf(dataMsg);                  //Sleep information output
   }
   
 }
@@ -241,23 +241,23 @@ void loop()
 radar.Situation_judgment(dataMsg);
 ```
 
-当完全获取到 dataMsg 列表时，它将作为 `Situation_judgment()` 函数的参数来完成环境监测数据的输出，输出结果将直接打印在串口监视器上。
+当 dataMsg 列表完全获取后，它将作为 `Situation_judgment()` 函数的参数来完成环境监测数据的输出，输出结果将直接打印在串口监视器上。
 
-上传程序。将串口监视器的波特率设置为 9600 应该会显示结果。输出应该类似于下图所示。
+上传程序。将串口监视器的波特率设置为 9600 并打开，应该会显示结果。输出应该类似于下图所示。
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/5.png"/></div>
 
 :::tip
 如果打开串口监视器后没有看到数据，这可能是正常的。雷达数据的获取取决于雷达监测范围内人体运动的变化。只有当范围内人员的运动发生变化时，雷达才会发送数据，只有这时数据才会被打印出来。
 
-如果您想查看雷达返回的数据，可以取消注释 `radar.ShowData(dataMsg);`，这将通过串口监视器输出接收到的完整数据帧集。
+如果您想查看雷达返回的数据，可以取消注释 `radar.ShowData(dataMsg);`，这将通过串口监视器输出接收到的完整数据帧集合。
 :::
 
 ### Demo2 使用特征参数分析获取人体运动
 
-在雷达返回的大量数据中，物理数据信息占据了大部分信息。有时，过度依赖雷达自身的算法在某些场景下可能产生不太令人满意的结果。那么，我们可以选择使用雷达返回的信息，根据实际应用场景进行适当的调整。
+在雷达返回的大量数据中，物理数据信息占据了大部分信息。有时，过度依赖雷达自身的算法在某些场景下可能产生不太令人满意的结果。这时，我们可以选择使用雷达返回的信息，根据实际应用场景进行适当的调整。
 
-此示例中的代码如下。
+本示例中的代码如下所示。
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/1.png"/></div>
 
@@ -278,15 +278,15 @@ void setup()
 
 void loop()
 {
- radar.recvRadarBytes();                       //接收雷达数据并开始处理
- if (radar.newData == true) {                  //数据被接收并传输到新列表 dataMsg[]
+ radar.recvRadarBytes();                       //Receive radar data and start processing
+ if (radar.newData == true) {                  //The data is received and transferred to the new list dataMsg[]
     byte dataMsg[radar.dataLen+1] = {0x00};
-    dataMsg[0] = 0x55;                         //添加帧头作为数组的第一个元素
-    for (byte n = 0; n < radar.dataLen; n++)dataMsg[n+1] = radar.Msg[n];  //逐帧传输
-    radar.newData = false;                     //保存完整的数据帧集
+    dataMsg[0] = 0x55;                         //Add the header frame as the first element of the array
+    for (byte n = 0; n < radar.dataLen; n++)dataMsg[n+1] = radar.Msg[n];  //Frame-by-frame transfer
+    radar.newData = false;                     //A complete set of data frames is saved
     
-    //radar.ShowData(dataMsg);                 //串口打印接收到的一组数据帧
-    radar.Bodysign_judgment(dataMsg, 1, 15); //使用符号参数输出人体运动
+    //radar.ShowData(dataMsg);                 //Serial port prints a set of received data frames
+    radar.Bodysign_judgment(dataMsg, 1, 15); //Output of human movement using sign parameters
   }
 }
 ```
@@ -297,11 +297,11 @@ radar.Bodysign_judgment(dataMsg, 1, 15);
 
 一旦获得了 dataMsg 数组，我们可以将该数组的数据作为第一个参数传递给 `Bodysign_judgment()` 函数，该函数解析体征参数。
 
-函数 `Bodysign_judgment()` 的第二个和第三个参数分别是判断无人和人体静止的临界值，以及人体静止和运动的临界值。
+函数 `Bodysign_judgment()` 的第二个和第三个参数分别是判断无人状态和人体静止状态的临界值，以及人体静止状态和运动状态的临界值。
 
-(1, 15) 意味着当计算出的体征值小于 1 时，输出环境中无人。当体征值大于或等于 1 且小于 15 时，输出当前环境中有人处于静止状态。当体征值大于或等于 35 时，输出环境中有人在移动。
+(1, 15) 意味着当计算出的体征值小于 1 时，输出环境中无人。当体征值大于或等于 1 且小于 15 时，输出当前环境中有人处于静止状态。当体征值大于或等于 35 时，输出环境中有人在运动。
 
-上传程序。将串口监视器的波特率设置为 9600 应该会显示结果。输出应该类似于下图。
+上传程序。将串口监视器的波特率设置为 9600 并打开，应该会显示结果。输出应该类似于下图。
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/2.png"/></div>
 
@@ -309,15 +309,15 @@ radar.Bodysign_judgment(dataMsg, 1, 15);
 输出数据帧后面的数值代表计算出的体征值。
 :::
 
-### 演示 3 向雷达发送数据
+### 示例 3 向雷达发送数据
 
-雷达为我们开放了大量的接口来获取信息以及设置雷达灵敏度或场景。本例程将指导用户如何使用用户手册向雷达发送数据消息来调整雷达参数或获取所需的数据信息。
+雷达为我们开放了大量的接口来获取信息以及设置雷达灵敏度或场景。本例程将指导用户如何使用用户手册向雷达发送数据消息，以调整雷达参数或获取所需的数据信息。
 
 **步骤 1.** 根据所需查询获取数据帧。
 
 在资源区域下载[用户手册](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-Sleep-monitorng-user-manual.pdf)，在**第 8.2 章**中，找到您需要查询或设置的帧内容，并整理它们。
 
-在此示例中，假设您想查询雷达设备的 ID，您应该能够获得所需的功能码、地址码 1 和地址码 2。
+在本示例中，假设您想要查询雷达设备的 ID，您应该能够获得所需的功能码、地址码 1 和地址码 2。
 
 <div align="center"><img width ="{500}" src="https://files.seeedstudio.com/wiki/60GHzradar/11.png"/></div>
 
@@ -325,7 +325,7 @@ radar.Bodysign_judgment(dataMsg, 1, 15);
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/9.png"/></div>
 
-此示例中的代码如下。
+本示例中的代码如下。
 
 ```c
 //CRC_Checksum_Generation.ino
@@ -376,16 +376,16 @@ void loop()
 unsigned char data[] = {0x55, 0x08, 0x00, 0x05, 0x01, 0x04, 0x03};
 ```
 
-我们需要修改的地方是第二个元素、第四个到最后一个元素。帧头 0x55 是固定的，不需要修改。第二帧是长度帧，请根据您发送的数据长度进行修改。第三帧固定为 0x00。第四帧是功能码，第五帧是地址码1，以此类推。
+我们需要修改的地方是第二个元素、第四个到最后一个元素。帧头 0x55 是固定的，不需要修改。第二帧是长度帧，请根据您发送的数据长度进行修改。第三帧固定为 0x00。第四帧是功能码，第五帧是地址码 1，以此类推。
 
 :::tip
 关于长度帧计算方法：
-    长度 = 数据长度 + 功能码 + 地址码1 + 地址码2 + 数据 + 校验和。（不计算帧头）
+    长度 = 数据长度 + 功能码 + 地址码 1 + 地址码 2 + 数据 + 校验和。（不计算帧头）
 
-有关帧格式和规则的更多信息，请参阅[用户手册](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-Sleep-monitorng-user-manual.pdf)第8章。
+有关帧格式和规则的更多信息，请参阅[用户手册](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-Sleep-monitorng-user-manual.pdf)第 8 章。
 :::
 
-上传程序。将串口监视器的波特率设置为9600应该会显示结果。输出应该类似于下图。
+上传程序。将串口监视器的波特率设置为 9600 应该会显示结果。输出应该类似于下图。
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/10.png"/></div>
 
@@ -393,7 +393,7 @@ unsigned char data[] = {0x55, 0x08, 0x00, 0x05, 0x01, 0x04, 0x03};
 
 **其他方法**
 
-如果您不想使用任何主控来生成完整的数据帧，您也可以将下面的代码粘贴到可以运行C程序的编辑器中。按照上述步骤，将数组数据填入您的帧内容。
+如果您不想使用任何主控来生成完整的数据帧，您也可以将下面的代码粘贴到可以运行 C 程序的编辑器中。按照上述步骤，将数组数据填入您的帧内容。
 
 ```c
 #include <stdio.h>
@@ -461,19 +461,19 @@ static unsigned short int us_CalculateCrc16(unsigned char *lpuc_Frame, unsigned 
 }
 
 int main() {
-    //请根据数据手册填入您要设置的数据帧（不包括2字节校验帧）
+    //Please fill in the data frame you want to set according to the datasheet(Excluding 2 Byte checksum frames)
     unsigned char data[] = {0x55, 0x07, 0x00, 0x01, 0x01, 0x01};
 
     unsigned short int crc_data = 0x0000;
     unsigned int length = sizeof(data)/sizeof(unsigned char);
     unsigned char datas[length + 2];
     for (int n = 0; n < length; n++)datas[n] = data[n];
-    printf("数据帧长度为：%d\n", length);
+    printf("The data frame length is: %d\n", length);
     crc_data = us_CalculateCrc16(data, length);
     datas[length] = (crc_data & 0xff00) >> 8;
     datas[length+1] = crc_data & 0xff;
-    printf("最后两位CRC校验位为：%04x\n", crc_data);
-    printf("发送给雷达的数据：");
+    printf("The last two CRC check digits are: %04x\n", crc_data);
+    printf("The datas send to the radar: ");
     for (int n = 0; n < length + 2; n++){
         printf("0x%02x ", datas[n]);
     }
@@ -526,7 +526,7 @@ int main() {
 <div align="center"><img width ="{300}" src="https://files.seeedstudio.com/wiki/60GHzradar/17.png"/></div>
 
 :::caution
-24GHz 雷达需要 5V 电源供电，否则雷达可能无法正常工作。
+24GHz雷达需要5V电源供电，否则雷达可能无法正常工作。
 :::
 
 连接成功后，您将看到雷达发送稳定的消息流。
@@ -537,42 +537,40 @@ int main() {
 
 <div align="center"><img width ="{800}" src="https://files.seeedstudio.com/wiki/60GHzradar/18.png"/></div>
 
-您可以查找第三个元素为 0x03 的返回数据组。这组数据是查询后获得的信息。如果您发送调整雷达参数的数据，它也会返回此类信息。
+您可以查找第三个元素为0x03的返回数据集。这组数据是查询后获得的信息。如果您发送调整雷达参数的数据，它也会返回此类信息。
 
 :::caution
-如果您选择 **ASCII** 作为发送数据的格式，每个数据组都需要加上前缀 **0x**。如果您选择 **HEX**，则每组数据不需要加上前缀 **0x**。
+如果您选择**ASCII**作为发送数据的格式，每个数据集都需要加上**0x**前缀。如果您选择**HEX**，则每组数据不需要加上**0x**前缀。
 :::
 
 ## 故障排除
 
-**FAQ1: 如何将代码应用到 Seeeduino（或 Arduino）？**
+**常见问题1：如何将代码应用到Seeeduino（或Arduino）？**
 
-> 由于硬件设计不同，XIAO 系列或 Wio Terminal 的串口命名为 Serial1，而 Seeeduino 或 Arduino 需要使用软串口。如果您想在 Seeeduino 上使用雷达，可以更改软串口或使用引脚 2 (RX) 和 3 (TX)。
+> 由于硬件设计不同，XIAO系列或Wio Terminal的串口命名为Serial1，而Seeeduino或Arduino需要使用软串口。如果您想在Seeeduino上使用雷达，可以更改软串口或使用引脚2（RX）和3（TX）。
 > <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/19.png"/></div>
 
-**FAQ2: 如果 XIAO BLE 和雷达长时间收集数据后无法上传代码该怎么办？**
+**常见问题2：如果XIAO BLE和雷达长时间收集数据后无法上传代码该怎么办？**
 
-> 此时，您可以用手指轻按 XIAO BLE 顶部的复位按钮来重新上传程序运行。
+> 此时，您可以用手指轻按XIAO BLE顶部的复位按钮来重新上传程序运行。
 
 ## 资源
 
 - **[PDF]** [睡眠呼吸雷达传感器数据手册](http://files.seeedstudio.com/wiki/mmWave-radar/MR24FDB1_Datasheet.pdf)
-- **[ZIP]** [24GHz 呼吸原理图](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-respiratory-schematic.zip)
+- **[ZIP]** [24GHz呼吸原理图](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-respiratory-schematic.zip)
 - **[PDF]** [用户手册](https://files.seeedstudio.com/wiki/mmWave-radar/MR24FDB1_User_manual.pdf)
-- **[PPTX]** [Seeed mmWave 传感器系列 V2.0](https://files.seeedstudio.com/wiki/mmWave-radar/Seeed-mmWave-sensor-series-V2.0.pptx)
+- **[PPTX]** [Seeed毫米波传感器系列V2.0](https://files.seeedstudio.com/wiki/mmWave-radar/Seeed-mmWave-sensor-series-V2.0.pptx)
 
 ## 技术支持与产品讨论
-
-
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

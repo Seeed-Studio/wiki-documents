@@ -27,9 +27,9 @@ The TRMNL 7.5" (OG) DIY Kit, co-developed by Seeed Studio and TRMNL, is a versat
 
 ### Features
 
-:::tip
+<!-- :::tip
 To celebrate the collaboration, Team TRMNL offers 30% off on TRMNL BYOD firmware access (35 dollar, usually for 50 dollar). Use code **trmnl-seeed-diy** at checkout (first 200 customers, 1 per customer). First come, first serve!
-:::
+::: -->
 
 - **TRMNL BYOD Compatibility**: Official kit for building TRMNL 7.5'' OG device with 375+ plugins and 8 no-code layouts (e.g., Calendar, Shopify, GitHub)
 - **7.5" E-Ink Display**: 800×480 monochrome display with partial refresh (0.34s) and full refresh (3.5s)
@@ -74,6 +74,8 @@ Align the FPC cable with the connector on the XIAO ePaper Display Board, then se
 
 :::tip
 The metal side of the FPC cable should face upwards, otherwise, no content will be displayed.
+
+Please follow the installation tutorial below, many people get it wrong.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/2.jpg" style={{width:600, height:'auto'}}/></div>

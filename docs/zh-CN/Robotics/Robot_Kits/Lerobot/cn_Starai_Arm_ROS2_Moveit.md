@@ -1,6 +1,6 @@
 ---
 description: 本维基提供的是 Starai Arm 机械臂ROS2 Moveit 使用教程。
-title: Starai Arm 机械臂ROS2 Moveit 使用教程
+title: StarAi 机械臂ROS2 Moveit
 keywords:
 - Moveit
 - ROS2

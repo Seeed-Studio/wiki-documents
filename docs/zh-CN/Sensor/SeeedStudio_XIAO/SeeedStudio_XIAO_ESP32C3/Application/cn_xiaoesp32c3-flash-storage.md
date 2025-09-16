@@ -16,7 +16,7 @@ last_update:
 
 本教程将介绍如何通过以下两种不同的存储方法在XIAO ESP32C3的闪存上存储重要数据：
 
-1. 第一个指南展示如何使用`Preferences.h`库在ESP32闪存上**永久保存数据**。存储在闪存中的数据在重启或断电后仍然保持。使用`Preferences.h`库对于保存网络凭据、API密钥、阈值或甚至GPIO的最后状态等数据非常有用。您将学习如何从闪存中保存和读取数据。
+1. 第一个指南展示如何使用`Preferences.h`库在ESP32闪存上**永久保存数据**。保存在闪存中的数据在重启或断电后仍然存在。使用`Preferences.h`库对于保存网络凭据、API密钥、阈值或甚至GPIO的最后状态等数据非常有用。您将学习如何从闪存中保存和读取数据。
 
 2. 第二个指南解释了什么是XIAO ESP32C3的**EEPROM**以及它的用途。我们还将向您展示如何从EEPROM写入和读取数据，并构建一个项目示例来将所学概念付诸实践。
 
@@ -48,37 +48,37 @@ last_update:
 
 以下是**Preferences.h库的有用函数**
 
-**函数1**. `begin()`方法使用定义的命名空间打开一个"存储空间"。false参数意味着我们将在读写模式下使用它。使用true以只读模式打开或创建命名空间。
+**函数1**. `begin()`方法打开一个具有定义命名空间的"存储空间"。false参数意味着我们将以读写模式使用它。使用true以只读模式打开或创建命名空间。
 
 ```c
 preferences.begin("my-app", false);
 ```
 
-在这种情况下，命名空间名称是my-app。命名空间名称限制为15个字符。
+在这种情况下，命名空间名称是 my-app。命名空间名称限制为 15 个字符。
 
-**函数2**. 使用`clear()`清除打开的命名空间下的所有首选项（它不会删除命名空间）：
+**功能 2**. 使用 `clear()` 清除已打开命名空间下的所有首选项（它不会删除命名空间）：
 
 ```c
 preferences.clear();
 ```
 
-**函数3**. 从打开的命名空间中删除一个键：
+**Func 3**. Remove a key from the opened namespace:
 
 ```c
 preferences.remove(key);
 ```
 
-**函数4**. 使用`end()`方法关闭打开的命名空间下的首选项：
+**Func 4**. Use the `end()` method to close the preferences under the opened namespace:
 
 ```c
 preferences.end();
 ```
 
-**函数5**. 您应该根据要保存的变量类型使用不同的方法。
+**功能 5**. 您应该根据要保存的变量类型使用不同的方法。
 
-使用`Preferences.h`库时，您应该定义要保存的数据类型。稍后，如果您想读取该数据，您必须知道保存的数据类型。换句话说，写入和读取的数据类型应该相同。
+使用 `Preferences.h` 库时，您应该定义要保存的数据类型。稍后，如果您想读取该数据，必须知道保存的数据类型。换句话说，写入和读取的数据类型应该相同。
 
-您可以使用`Preferences.h`保存以下数据类型：char、Uchar、short、Ushort、int、Uint、long、Ulong、long64、Ulong64、float、double、bool、string和bytes。
+您可以使用 `Preferences.h` 保存以下数据类型：char、Uchar、short、Ushort、int、Uint、long、Ulong、long64、Ulong64、float、double、bool、string 和 bytes。
 
 <table align="center">
   <tbody><tr>
@@ -143,7 +143,7 @@ preferences.end();
     </tr>
   </tbody></table>
 
-**功能 6**. 同样，您应该根据要获取的变量类型使用不同的方法。
+**Func 6**. 同样，您应该根据要获取的变量类型使用不同的方法。
 
 <table align="center">
     <tr>
@@ -212,16 +212,16 @@ preferences.end();
  </tr>
 </table>
 
-**功能 7**. 删除命名空间
+**Func 7**. 移除命名空间
 
-在 Preferences 的 Arduino 实现中，没有完全删除命名空间的方法。因此，在多个项目过程中，ESP32 非易失性存储 (nvs) Preferences 分区可能会变满。要完全擦除和重新格式化 Preferences 使用的 NVS 内存，请创建一个包含以下内容的程序：
+在 Arduino 的 Preferences 实现中，没有完全移除命名空间的方法。因此，在经过几个项目后，ESP32 非易失性存储 (nvs) Preferences 分区可能会变满。要完全擦除和重新格式化 Preferences 使用的 NVS 内存，请创建一个包含以下内容的草图：
 
 ```c
 #include <nvs_flash.h>
 
 void setup() {
-  nvs_flash_erase(); // 擦除 NVS 分区并...
-  nvs_flash_init(); // 初始化 NVS 分区。
+  nvs_flash_erase(); // erase the NVS partition and...
+  nvs_flash_init(); // initialize the NVS partition.
   while(true);
 }
 
@@ -230,31 +230,31 @@ void loop() {
 }
 ```
 
-运行上述程序后，您应该立即将新程序下载到您的开发板，否则每次上电时都会重新格式化 NVS 分区。
+您应该在运行上述代码后立即将新的程序下载到您的开发板上，否则每次上电时它都会重新格式化 NVS 分区。
 
-有关更多信息，您可以在[这里](https://github.com/espressif/arduino-esp32/blob/master/libraries/Preferences/src/Preferences.cpp)访问 Preferences.cpp 文件。
+如需更多信息，您可以在[这里](https://github.com/espressif/arduino-esp32/blob/master/libraries/Preferences/src/Preferences.cpp)访问 Preferences.cpp 文件。
 
 ### 使用 Preferences.h 库的一般方法
 
-**步骤 1.** 要使用 Preferences.h 库存储数据，首先需要在程序中包含它：
+**步骤 1.** 要使用 Preferences.h 库存储数据，首先需要在您的程序中包含它：
 
 ```c
 #include <Preferences.h>
 ```
 
-**步骤 2.** 然后，您必须创建 Preferences 库的实例。例如，您可以称其为 preferences：
+**Step 2.** Then, you must initiate an instance of the Preferences library. You can call it preferences, for example:
 
 ```c
 Preferences preferences;
 ```
 
-**步骤 3.** 在 `setup()` 中，以 115200 波特率初始化串行监视器。
+**Step 3.** In the `setup()`, initialize the Serial Monitor at a baud rate of 115200.
 
 ```c
 Serial.begin(115200);
 ```
 
-**步骤 4.** 在闪存中创建一个名为 `my-app` 的"存储空间"，以读/写模式运行。您可以给它任何其他名称。
+**步骤 4.** 在闪存中创建一个名为 `my-app` 的"存储空间"，设置为读/写模式。您可以给它起任何其他名称。
 
 ```c
 preferences.begin("my-app", false);
@@ -281,7 +281,7 @@ namespace {
 }
 ```
 
-您也可以有多个命名空间使用相同的键（但每个键都有其值）：
+You can also have multiple namespaces with the same key (but each key with its value):
 
 ```c
 namespace1{
@@ -292,19 +292,19 @@ namespace2{
 }
 ```
 
-例如，在"counter"键上存储新值：
+For example, store the new value on the “counter” key:
 
 ```c
 preferences.putUInt("counter", counter);
 ```
 
-然后，获取保存在 preferences 中的 `counter` 键的值。如果找不到任何值，默认返回 0（这在代码第一次运行时会发生）。
+然后，获取保存在首选项中的 `counter` 键的值。如果没有找到任何值，默认返回 0（这在代码第一次运行时会发生）。
 
 ```c
 unsigned int counter = preferences.getUInt("counter", 0);
 ```
 
-因此，您的数据结构如下：
+So, your data is structured in this way:
 
 ```c
 my-app{
@@ -316,13 +316,13 @@ my-app{
 
 以下代码使用 `Preferences.h` 将您的网络凭据永久保存在 ESP32 闪存中。
 
-创建一个名为 ssid 的键来保存您的 SSID 值（ssid 变量）- 使用 `putString()` 方法。
+创建一个名为 ssid 的键，用于保存您的 SSID 值（ssid 变量）– 使用 `putString()` 方法。
 
 ```c
 preferences.putString("ssid", ssid);
 ```
 
-添加另一个名为 password 的键来保存密码值（password 变量）：
+Add another key called password to save the password value (password variable):
 
 ```c
 preferences.putString("password", password);
@@ -344,15 +344,15 @@ String ssid = preferences.getString("ssid", "");
 String password = preferences.getString("password", "");
 ```
 
-作为 `getString()` 函数的第二个参数，我们传递了一个空字符串。这是在 preferences 中没有保存 `ssid` 或 `password` 键时的返回值。
+作为 `getString()` 函数的第二个参数，我们传递了一个空字符串。这是在首选项中没有保存 `ssid` 或 `password` 键时返回的值。
 
-**步骤 6.** 关闭 Preferences。
+**步骤 6.** 关闭首选项。
 
 ```c
 preferences.end();
 ```
 
-- 存储/获取键值对数据的完整过程如下所示。
+- The Store/get Key:value Pair data complete procedure is shown below.
 
 ```c
 #include <Preferences.h>
@@ -364,39 +364,39 @@ void setup() {
   delay(3000);
   Serial.println();
 
-  // 使用 my-app 命名空间打开 Preferences。每个应用程序模块、库等
-  // 都必须使用命名空间名称来防止键名冲突。我们将以
-  // RW 模式打开存储（第二个参数必须为 false）。
-  // 注意：命名空间名称限制为 15 个字符。
+  // Open Preferences with my-app namespace. Each application module, library, etc
+  // has to use a namespace name to prevent key name collisions. We will open storage in
+  // RW-mode (second parameter has to be false).
+  // Note: Namespace name is limited to 15 chars.
   preferences.begin("my-app", false);
 
-  // 删除打开的命名空间下的所有 preferences
+  // Remove all preferences under the opened namespace
   //preferences.clear();
 
-  // 或仅删除 counter 键
+  // Or remove the counter key only
   //preferences.remove("counter");
 
-  // 获取 counter 值，如果键不存在，返回默认值 0
-  // 注意：键名限制为 15 个字符。
+  // Get the counter value, if the key does not exist, return a default value of 0
+  // Note: Key name is limited to 15 chars.
   unsigned int counter = preferences.getUInt("counter", 0);
 
-  // counter 增加 1
+  // Increase counter by 1
   counter++;
 
-  // 将 counter 打印到串行监视器
+  // Print the counter to Serial Monitor
   Serial.printf("Current counter value: %u\n", counter);
 
-  // 将 counter 存储到 Preferences
+  // Store the counter to the Preferences
   preferences.putUInt("counter", counter);
 
-  // 关闭 Preferences
+  // Close the Preferences
   preferences.end();
 
-  // 等待 10 秒
+  // Wait 10 seconds
   Serial.println("Restarting in 10 seconds...");
   delay(10000);
 
-  // 重启 ESP
+  // Restart ESP
   ESP.restart();
 }
 
@@ -444,7 +444,7 @@ void loop() {
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-permanently-data/2.png"/></div>
 
-使用保存在 Preferences 中的网络凭据连接到 Wi-Fi。
+使用保存在首选项中的网络凭据连接到 Wi-Fi。
 
 ```c
 #include <Preferences.h>
@@ -490,7 +490,7 @@ void loop() {
 }
 ```
 
-在上一个代码之后将此代码上传到您的开发板（以确保您已保存凭据）。如果一切按预期进行，您应该在串口监视器中看到以下内容。
+在上传完前一个代码后，将此代码上传到您的开发板（以确保您已保存了凭据）。如果一切按预期进行，您应该在串行监视器中看到以下内容。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-permanently-data/3.png"/></div>
 
@@ -498,12 +498,12 @@ void loop() {
 
 ### 什么是 EEPROM？
 
-EEPROM 是 ESP32 微控制器的内部存储器，允许在重启开发板后将数据保留在内存中。在使用微控制器时，保持数据在内存中是很有意义的，特别是当开发板关闭时，无论是有意还是无意的，比如在断电的情况下。
+EEPROM 是 ESP32 微控制器的内部存储器，允许在重启开发板后将数据保留在内存中。在使用微控制器时，保持数据在内存中是很有意义的，特别是当开发板关闭时（无论是有意还是无意的），比如在断电的情况下。
 
-ESP32 微控制器有一个闪存区域，可以像 Arduino 的 EEPROM 一样进行接口操作，即使在开发板关闭后也能将数据保留在内存中。
+ESP32 微控制器有一个 Flash 存储器区域，可以像 Arduino 的 EEPROM 一样进行接口操作，即使在开发板关闭后也能将数据保留在内存中。
 
 :::caution
-需要注意的重要一点是，EEPROM 的大小和寿命是有限的。内存单元可以根据需要读取任意次数，但写入周期数限制为 **100,000** 次。建议密切关注存储数据的大小以及更新频率。EEPROM 内存可以存储 512 个从 0 到 255 的值，或 128 个 IP 地址或 RFID 标签。
+需要注意的重要一点是，EEPROM 的大小和寿命是有限的。存储单元可以根据需要读取任意次数，但写入周期的数量限制为 **100,000** 次。建议密切关注存储数据的大小以及更新频率。EEPROM 存储器可以存储 512 个从 0 到 255 的值，或 128 个 IP 地址或 RFID 标签。
 :::
 
 ESP32 上的微控制器具有 EEPROM（电可擦可编程只读存储器）。这是一个可以存储字节变量的小空间。存储在 EEPROM 中的变量会保留在那里，即使您重置或关闭 ESP32 电源也是如此。简单来说，EEPROM 是类似于计算机硬盘的永久存储。
@@ -526,89 +526,89 @@ EEPROM 可以电子方式读取、擦除和重写。在 Arduino 中，您可以�
 EEPROM.begin(EEPROM_SIZE);
 ```
 
-**函数 2**. Write & Put
+**函数 2**. 写入和存储
 
-要将数据写入 EEPROM，您使用 `EEPROM.write()` 函数，该函数接受两个参数。第一个是您要保存数据的 EEPROM 位置或地址，第二个是我们要保存的值：
+要将数据写入 EEPROM，您需要使用 `EEPROM.write()` 函数，该函数接受两个参数。第一个参数是您想要保存数据的 EEPROM 位置或地址，第二个参数是我们想要保存的值：
 
 ```c
 EEPROM.write(address, value);
 ```
 
-`EEPROM.write()` 等同于使用 `EEPROM.put()`。
+`EEPROM.write()` is equivalent to using `EEPROM.put()`.
 
 ```c
 EEPROM.put(address, value);
 ```
 
-例如，要在地址 0 写入 9，您将有：
+For example, to write 9 on address 0, you’ll have:
 
 ```c
 EEPROM.write(0, 9);
 ```
 
 :::tip
-如果我们想要存储浮点数据，我们通常使用 `EEPROM.put()` 方法而不是 `EEPROM.write()` 方法。如果您想使用 write() 方法存储它，那么您需要使用 `EEPROM.writeFloat()`。
+如果我们想要存储浮点数据，通常使用 `EEPROM.put()` 方法而不是 `EEPROM.write()` 方法。如果你想使用 write() 方法来存储，那么你需要使用 `EEPROM.writeFloat()`。
 :::
 
-**函数 3**. Read & Get
+**功能 3**. 读取 & 获取
 
-要从 EEPROM 读取一个字节，您使用 `EEPROM.read()` 函数。此函数将字节的地址作为参数。
+要从 EEPROM 中读取一个字节，你可以使用 `EEPROM.read()` 函数。这个函数将字节的地址作为参数。
 
 ```c
 EEPROM.read(address);
 ```
 
-`EEPROM.read()` 等同于使用 `EEPROM.get()`。
+`EEPROM.read()` is equivalent to using `EEPROM.get()`.
 
 ```c
 EEPROM.get(address);
 ```
 
-例如，要读取之前存储在地址 0 的字节：
+For example, to read the byte stored previously in address 0.:
 
 ```c
 EEPROM.read(0);
 ```
 
-这将返回 **9**，这是存储在该位置的值。
+这将返回 **9**，即存储在该位置的值。
 
 :::tip
-如果我们想要获取浮点数据，我们通常使用 `EEPROM.get()` 方法而不是 `EEPROM.read()` 方法。如果您想使用 read() 方法获取它，那么您需要使用 `EEPROM.readFloat()`。
+如果我们想要获取浮点数据，通常使用 `EEPROM.get()` 方法而不是 `EEPROM.read()` 方法。如果你想使用 read() 方法获取，那么你需要使用 `EEPROM.readFloat()`。
 :::
 
-**函数 4**. 更新值
+**功能 4**. 更新一个值
 
-`EEPROM.update()` 函数特别有用。它只有在写入的值与已保存的值不同时才会写入 EEPROM。
+`EEPROM.update()` 函数特别有用。它只有在要写入的值与已保存的值不同时才会写入 EEPROM。
 
-由于 EEPROM 由于有限的写入/擦除周期而具有有限的预期寿命，使用 `EEPROM.update()` 函数而不是 `EEPROM.write()` 可以节省周期。
+由于 EEPROM 的写入/擦除周期有限，因此寿命有限，使用 `EEPROM.update()` 函数而不是 `EEPROM.write()` 可以节省周期。
 
-您按如下方式使用 `EEPROM.update()` 函数：
+你可以按如下方式使用 `EEPROM.update()` 函数：
 
 ```c
 EEPROM.update(address, value);
 ```
 
-目前，我们在地址 0 中存储了 9。所以，如果我们调用：
+At the moment, we have 9 stored in the address 0. So, if we call:
 
 ```c
 EEPROM.update(0, 9);
 ```
 
-它不会再次写入 EEPROM，因为当前保存的值与我们要写入的值相同。
+它不会再次写入EEPROM，因为当前保存的值与我们要写入的值相同。
 
 :::note
-要了解更多关于 EEPROM 操作的信息，您可以阅读[官方 Arduino 文档](https://docs.arduino.cc/learn/programming/eeprom-guide#eeprom-clear)。
+要了解更多关于EEPROM操作的信息，您可以阅读[官方Arduino文档](https://docs.arduino.cc/learn/programming/eeprom-guide#eeprom-clear)。
 :::
 
-### 使用 EEPROM 的一般方法
+### 使用EEPROM的一般方法
 
-为了向您展示如何在 XIAO ESP32C3 闪存中保存数据，我们将保存输出的最后状态，在这种情况下是一个 LED。
+为了向您展示如何在XIAO ESP32C3闪存中保存数据，我们将保存输出的最后状态，在这种情况下是一个LED。
 
-按照以下原理图将 LED 连接到 XIAO ESP32C3。
+按照以下原理图将LED连接到XIAO ESP32C3。
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/XIAO_WiFi/connect-led-2.png"/></div>
 
-首先，您需要包含 EEPROM 库。
+首先，您需要包含EEPROM库。
 
 ```c
 #include <EEPROM.h>
@@ -620,7 +620,7 @@ EEPROM.update(0, 9);
 #define EEPROM_SIZE 1
 ```
 
-我们还定义了使此程序工作所需的其他变量。
+We also define other variables that are required to make this sketch work.
 
 ```c
 // constants won't change. They're used here to set pin numbers:
@@ -637,21 +637,21 @@ unsigned long previousMillis = 0;  // will store last time LED was updated
 const long interval = 10000;  // interval at which to blink (milliseconds)
 ```
 
-在 `setup()` 中，您使用预定义的大小初始化 EEPROM。
+In the `setup()` you initialize the EEPROM with the predefined size.
 
 ```c
 EEPROM.begin(EEPROM_SIZE);
 ```
 
-为了确保您的代码使用最新的 LED 状态初始化，在 `setup()` 中，您应该从闪存中读取最后的 LED 状态。它存储在地址零。
+为了确保您的代码使用最新的LED状态进行初始化，在`setup()`中，您应该从闪存中读取最后的LED状态。它存储在地址零处。
 
-然后，您只需要根据从闪存读取的值相应地打开或关闭 LED。
+然后，您只需要根据从闪存中读取的值相应地打开或关闭LED。
 
 ```c
 digitalWrite (ledPin, ledState);
 ```
 
-在 `loop()` 函数部分，我们需要做的就是在一段时间内翻转 LED 的状态。
+In the `loop()` function section, all we need to do is flip the state of the LED over a period of time.
 
 ```c
 // check to see if it's time to blink the LED; that is, if the difference
@@ -675,22 +675,22 @@ if (currentMillis - previousMillis >= interval) {
 }
 ```
 
-接下来，我们需要确定倒计时是否已结束，在结束后翻转 LED 的状态，并将其存储在闪存中。
+接下来，我们需要确定倒计时是否已经结束，在结束后翻转LED的状态，并将其存储在闪存中。
 
 ```c
 EEPROM.write(0, ledState);
 ```
 
-最后，我们使用 EEPROM.commit() 使更改生效。
+Finally, we use the EEPROM.commit() for the changes to take effect.
 
 ```c
 EEPROM.commit();
 ```
 
-以下是完整的程序。
+以下是完整的步骤。
 
 :::caution
-请注意，您**不应该**长时间运行此示例。在此示例中，我们将每十秒写入一次 EEPROM，长时间运行此示例将**大大缩短** EEPROM 的寿命。
+请注意，您**不应该**长时间运行此示例。在此示例中，我们将每十秒写入一次EEPROM，长时间运行此示例将**大大缩短**EEPROM的使用寿命。
 :::
 
 ```c
@@ -756,7 +756,7 @@ void loop() {
 }
 ```
 
-将代码上传到您的开发板，这是您应该在串口监视器上看到的内容：
+将代码上传到您的开发板，您应该在串口监视器中看到以下内容：
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-permanently-data/4.png"/></div>
 
@@ -765,11 +765,11 @@ void loop() {
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

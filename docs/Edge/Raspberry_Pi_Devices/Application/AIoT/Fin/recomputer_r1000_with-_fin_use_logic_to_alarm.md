@@ -15,7 +15,8 @@ last_update:
   author: ShuishengPeng
 ---
 
-## Introduction 
+## Introduction
+
 FIN Framework (FIN) is a software framework with application suites that can integrate, control, manage, analyze, visualize and connect. Its capabilities can be integrated by OEMs into a range of products and services.
 
 This article will show you how to use the `Logic Builder` of FIN Framwork, and to implement an alarm using the `Logic Builder`.We monitor the value of a Modbus device. When the value exceeds the critical value, FIN will alarm.
@@ -27,17 +28,17 @@ Before you start this project, you may need to prepare your hardware and softwar
 ### Hardware Preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
@@ -45,9 +46,11 @@ Before you start this project, you may need to prepare your hardware and softwar
     </div>
 
 ### Software Preparation
+
 * Regarding how to install FIN Framwork, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_install_fin/).
-* About reComputer R1000 using FIN for Modbus communication, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_use_rs485_modbus_rtu/).
-* Using [modbusmechanic](https://modbusmechanic.scifidryer.com/) on W10 PC.You can also use other modbus testing tools.
+- About reComputer R1000 using FIN for Modbus communication, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_use_rs485_modbus_rtu/).
+- Using [modbusmechanic](https://modbusmechanic.scifidryer.com/) on W10 PC.You can also use other modbus testing tools.
+
 ### Hardware Configuration
 
 For ModbusTCP, we use Ethernet cables to connect the W10 PC and reComputer R1000 to a switch to ensure that they are on the same network segment.
@@ -55,7 +58,9 @@ For ModbusTCP, we use Ethernet cables to connect the W10 PC and reComputer R1000
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/r1000_connection.png" alt="pir" width="500" height="auto" /></div>
 
 ## Steps of implement an alarm
+
 ### Create new Logic Builder program
+
 **Step 1**: First click the directory bar at the top to switch the system directory to the desired target location.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/Logic_path_location.png" /></center>
@@ -65,19 +70,21 @@ For ModbusTCP, we use Ethernet cables to connect the W10 PC and reComputer R1000
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/Logic_create_logic.png" /></center>
 
 To fill in the following parameters:
-  - **Name** - Name of the program
-  - **Description** - Description for what the program is for/does
-  - **Program On** -  Used to specify what the program will run on
-  - **Points** - Able to choose points from the equip to use
-  - **Tags** - Find tags used on equip or refs
-  - **Project Variables** - If other project variables exist on other programs, it provides a list of variables that can be used in the new program being create
-  - **Absolute Points** - Able to add hardcoded points based on their id
+
+- **Name** - Name of the program
+- **Description** - Description for what the program is for/does
+- **Program On** -  Used to specify what the program will run on
+- **Points** - Able to choose points from the equip to use
+- **Tags** - Find tags used on equip or refs
+- **Project Variables** - If other project variables exist on other programs, it provides a list of variables that can be used in the new program being create
+- **Absolute Points** - Able to add hardcoded points based on their id
   
 `Points` can enter multiple points, but we only entered one here. After filling in the information, click `OK` and click `Edit` in the pop-up window on the right to enter the Logic editing interface.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/LOGIC_1.gif" /></center>
 
 ### Configure Block logic
+
 **Step 1**: Add an `if` block. There are two ways to add blocks in the workspace. The first is to click on the port of a block to add it, as shown in the figure:
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/LOGIC_2.gif" /></center>
@@ -114,17 +121,16 @@ As shown in the figure, we added a variable named `Alarm_bool`, which also has `
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/LOGIC_9.gif" /></center>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

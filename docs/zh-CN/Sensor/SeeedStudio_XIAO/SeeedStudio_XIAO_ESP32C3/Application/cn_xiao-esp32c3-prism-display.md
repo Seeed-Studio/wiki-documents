@@ -18,12 +18,12 @@ last_update:
 
 ## 入门指南
 
-如果您想完整地跟随本教程，您需要准备以下物品。
+如果您想完整地学习本教程，您需要准备以下物品。
 
 <table align="center">
   <tbody><tr>
       <th>XIAO ESP32C3</th>
-      <th>Grove Shield for XIAO <br />带电池管理芯片</th>
+      <th>Grove XIAO 扩展板 <br />带电池管理芯片</th>
       <th>Grove 智能红外手势 <br />传感器 (PAJ7660)</th>
     </tr>
     <tr>
@@ -54,7 +54,7 @@ last_update:
     <img width={400} src="https://raw.githubusercontent.com/Timo614/xiao-prism-buddy/main/docs/photos/enclosure/assembled.jpg" />
 </div>
 
-本项目使用 ESP32C3 创建一个使用分光棱镜的三维显示器。本指南解释了构建外壳、连接相关电子元件和安装固件所需的步骤。还提供了更新跟踪的加密货币列表以及缩小和处理动画图像以在图像浏览器中使用的任务的附加文档。
+这个项目使用 ESP32C3 创建一个使用分光棱镜的三维显示器。本指南旨在解释构建外壳、连接相关电子元件和安装固件所需的步骤。还提供了更新跟踪的加密货币列表以及缩小和处理动画图像以在图像浏览器中使用的任务的附加文档。
 
 主要步骤
 
@@ -74,7 +74,7 @@ last_update:
     <img width={400} src="https://raw.githubusercontent.com/Timo614/xiao-prism-buddy/main/docs/photos/enclosure/3d-render-bottom.png" />
 </div>
 
-3D外壳由两个半部分组成，设计为在内部零件组装后压配合在一起。打印零件时应使用支撑，以确保结构正确组装。
+3D外壳由两个半部分组成，设计为在内部零件组装后压配在一起。打印零件时应使用支撑，以确保结构正确组装。
 
 零件可以在github仓库中找到，并可通过其STL查看器进行预览：<br />
 https://github.com/Timo614/xiao-prism-buddy/blob/main/docs/enclosure/xiao-prism-top.stl<br />
@@ -86,13 +86,13 @@ https://github.com/Timo614/xiao-prism-buddy/blob/main/docs/enclosure/xiao-prism-
     <img width={400} src="https://raw.githubusercontent.com/Timo614/xiao-prism-buddy/main/docs/photos/enclosure/xiao_screwed_in.jpg" />
 </div>
 
-Grove扩展板简化了棱镜显示器的设置，因为它允许使用简单的面包板线完成组装，无需焊接。Grove扩展板应将第二组母头焊接到Xiao引脚旁边的开放引脚中。此扩展板应拧入外壳上可用的两个螺丝孔中。这可能有点棘手，因此可以先放入螺丝，然后将扩展板放下并拧紧每个螺丝。
+Grove 扩展板简化了棱镜显示器的设置，因为它允许使用简单的面包板线完成组装，无需焊接。Grove 扩展板应将第二组母头焊接到与Xiao引脚相邻的开放引脚中。此扩展板应拧入外壳上可用的两个螺丝孔中。这可能有点棘手，因此先放入螺丝，然后将扩展板放下并拧紧每个螺丝会有所帮助。
 
 从这里有两个主要连接：
 - 到手势传感器的i2c连接
 - 到显示器的spi连接
 
-对于i2c连接，使用从扩展板到手势传感器的Grove 4针连接器。
+对于i2c连接，使用从扩展板到手势传感器的 Grove 4针连接器。
 
 <div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Timo614/xiao-prism-buddy/main/docs/photos/enclosure/inward_bend_install.jpg" style={{width:400, height:'auto'}}/></div>
 
@@ -100,22 +100,22 @@ Grove扩展板简化了棱镜显示器的设置，因为它允许使用简单的
 
 <div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Timo614/xiao-prism-buddy/main/docs/photos/enclosure/sensor_screwed_in.jpg" style={{width:400, height:'auto'}}/></div>
 
-spi连接更复杂一些，因为它需要更多引脚。
+spi连接更复杂一些，因为它需要更多的引脚。
 
 ```
-Xiao上的3V3连接到显示器的VCC引脚
-Xiao上的GND连接到显示器的GND引脚
-Xiao上的D0连接到显示器的CS引脚
-Xiao上的D1连接到显示器的BL引脚
-Xiao上的D2连接到显示器的DC引脚
-Xiao上的D3连接到显示器的RST引脚
-Xiao上的D8 (SCK)连接到显示器的SCL引脚
-Xiao上的D10 (MOSI)连接到显示器的SDA引脚
+3V3 on the Xiao is connected to the display's VCC Pin
+GND on the Xiao is connected to the display's GND Pin
+D0 on the Xiao is connected to the display's CS Pin
+D1 on the Xiao is connected to the display's BL Pin
+D2 on the Xiao is connected to the display's DC Pin
+D3 on the Xiao is connected to the display's RST Pin
+D8 (SCK) on the Xiao is connected to the display's SCL Pin
+D10 (MOSI) on the Xiao is connected to the display's SDA Pin
 ```
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pin_map-2.png" style={{width:700, height:'auto'}}/></div>
 
-将线缆连接到所有组件后，设备可以完全组装。外壳设置为在以相似公差打印时允许压配合闭合。
+将导线连接到所有组件后，设备就可以完全组装了。外壳设计为在以相似公差打印时允许压配合闭合。
 
 <div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Timo614/xiao-prism-buddy/main/docs/photos/enclosure/press_fit_close.jpg" style={{width:400, height:'auto'}}/></div>
 
@@ -130,12 +130,12 @@ Xiao上的D10 (MOSI)连接到显示器的SDA引脚
 - 安装 ESP-IDF 扩展
 - 安装 ESP-IDF 5.0.4
 - 将 ESP-IDF Espressif 设备目标设置为 esp32c3
-- 为您的 wifi 网络配置环境变量（参见下面的步骤）
-- 构建、烧录并监控您的设备
+- 为您的 wifi 网络配置环境变量（请参见下面的步骤）
+- 构建、烧录和监控您的设备
 
 ## 配置 XIAO ESP32C3
 
-准备应用程序的下一步是为 wifi 网络配置您的凭据。
+准备应用程序的下一步是配置您的 wifi 网络凭据。
 
 按 `Ctrl` + `Shift` + `P` 打开快速菜单并输入 `menuconfig`。这将过滤列表以包含 `ESP-IDF: SDK Configuration editor (Menuconfig)` 条目。
 
@@ -149,7 +149,7 @@ Xiao上的D10 (MOSI)连接到显示器的SDA引脚
 
 Xiao Prism Buddy 可以修改为显示不同的加密货币，因为它由 CoinGecko 提供支持。CoinGecko 为其 API 提供免费层级，允许用户在速率限制下访问。
 
-应用程序每 15 分钟访问一次 `/simple/price` 端点，更新一组配置的加密货币。调用使用的货币可通过 [仓库中的 `config.h` 文件](https://github.com/Timo614/xiao-prism-buddy/blob/main/main/config.h#L26) 配置，以及应用中显示的货币符号。可以参考 [api 文档](https://www.coingecko.com/api/documentation) 获取有关调用本身的更多信息。
+应用程序每 15 分钟访问一次 `/simple/price` 端点，更新一组配置的加密货币。调用使用的货币可通过 [仓库中的 `config.h` 文件](https://github.com/Timo614/xiao-prism-buddy/blob/main/main/config.h#L26) 配置，以及应用程序中显示的货币符号。可以参考 [api 文档](https://www.coingecko.com/api/documentation) 获取有关调用本身的更多信息。
 
 添加新加密货币的过程目前有点复杂，但可以通过以下步骤完成：
 
@@ -163,7 +163,7 @@ https://github.com/Timo614/xiao-prism-buddy/blob/main/main/model/prism_cryptocur
 
 ## 缩小和处理动画图像
 
-使用微控制器的一个限制是可用闪存的不足。GIF 文件占用相当大的闪存空间，这使得它们的包含变得更加困难。这里记录了一套用于转换应用程序中使用的图像的流程，以便其他人希望执行相同的步骤来将图像浏览器使用的图像更改为他们自己选择的图像时参考。
+使用微控制器的一个限制是可用闪存的不足。GIF 文件占用相当大的闪存空间，这使得它们的包含变得更加困难。为了转换应用程序中使用的图像，我们遵循了一套流程，这里记录了这些流程，以便其他人希望执行相同的步骤来将图像浏览器使用的图像更改为他们自己选择的图像。
 
 1. 选择一个合适的动画图像。理想情况下是透明的、设置为循环的、并且具有合适尺寸的图像。为了使过程更容易，我发现寻找 Lottie 文件特别有帮助。对于这个应用程序，我能够通过 https://lottiefiles.com/ 找到几个有用的图像
 2. 使用 Lottie 到 gif 转换器将 Lottie 文件转换为透明的 GIF 文件（例如 https://lottiefiles.com/lottie-to-gif）
@@ -192,9 +192,9 @@ https://github.com/Timo614/xiao-prism-buddy/blob/main/main/model/prism_cryptocur
 
 <div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Timo614/xiao-prism-buddy/main/docs/photos/gif-compression/compress.png" style={{width:400, height:'auto'}}/></div>
 
-4. 使用 [LVGL 在线图像转换器](https://lvgl.io/tools/imageconverter) 将 GIF 文件转换为 C 数组，按照 [LVGL 文档](https://docs.lvgl.io/8.3/libs/gif.html#convert-gif-files-to-c-array) 的说明。注意：`选择"Raw"颜色格式和"C array"输出格式。`
+4. 使用 [LVGL 在线图像转换器](https://lvgl.io/tools/imageconverter) 将 GIF 文件转换为 C 数组，按照 [LVGL 的文档](https://docs.lvgl.io/8.3/libs/gif.html#convert-gif-files-to-c-array) 进行操作。注意：`选择"Raw"颜色格式和"C array"输出格式。`
 
-按照这些步骤，您就有了一个文件大小减小但仍然有效的 GIF 图像，已处理用于在 Prism 设备上显示。最简单的方法是替换现有的火焰或西瓜图像进行测试。
+通过遵循这些步骤，您就有了一个文件大小减小但仍然有效的 GIF 图像，经过处理可在 Prism 设备上显示。最简单的方法是替换现有的火焰或西瓜图像进行测试。
 
 ## 技术支持与产品讨论
 
@@ -209,3 +209,5 @@ https://github.com/Timo614/xiao-prism-buddy/blob/main/main/model/prism_cryptocur
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+
+

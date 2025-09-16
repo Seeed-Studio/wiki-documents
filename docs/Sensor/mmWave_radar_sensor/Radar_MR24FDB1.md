@@ -57,8 +57,7 @@ The mmWave Radar fall detection module is a self-contained, privacy-protectively
 
 1. S1 output: high level - occupied, low level - unoccupied.
 2. S2 output: high level - active, low level - stationary
-3. GP1 to GP4 are parameter selection controls, which can be redefined
-according to user requirements.
+3. GP1 to GP4 are parameter selection controls, which can be redefined according to user requirements.
 4. The output signals of this interface are all at 3.3V level.
 
 :::caution  

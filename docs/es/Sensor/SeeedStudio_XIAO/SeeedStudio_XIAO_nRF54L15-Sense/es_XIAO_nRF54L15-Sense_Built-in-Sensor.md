@@ -1,5 +1,5 @@
 ---
-title: Seeed Studio XIAO nRF54L15 Sense sensor integrado
+title: Sensor integrado del Seeed Studio XIAO nRF54L15 Sense
 description: Este artículo describe cómo usar el micrófono en el XIAO MG24 Sense.
 image: https://files.seeedstudio.com/wiki/mg24_mic/mg24.jpg
 slug: /es/xiao_nrf54l15_sense_built_in_sensor
@@ -14,17 +14,28 @@ sidebar_position: 1
 
 # Uso del sensor integrado del Seeed Studio XIAO nRF54L15 Sense
 
-## XIAO nRF54L15 Sense IMU
+El siguiente código de ejemplo está diseñado para PlatformIO, pero también es compatible con el nRF Connect SDK.
+
+:::tip
+Basado en VS Code, si deseas usar el siguiente caso en el nRF Connect SDK, consulta la conexión proporcionada, agrega el archivo app.overlay y modifica el contenido en prj.conf
+
+[XIAO nRF54L15 Agregar archivo overlay y modificar archivo conf](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/).
+
+:::
+
+## IMU del XIAO nRF54L15 Sense
 
 Los sensores **IMU de 6 ejes (Unidad de Medición Inercial)** como el **LSM6DS3TR-C** integran acelerómetros y giroscopios para medir el movimiento y la orientación de un objeto en el espacio tridimensional. Específicamente, el LSM6DS3TR-C tiene las siguientes características:
 
 **Función del acelerómetro:**
+
 - Mide la aceleración de un objeto a lo largo de los ejes X, Y y Z. Es capaz de detectar el movimiento del objeto (por ejemplo, reposo, aceleración, desaceleración) y cambios de inclinación (por ejemplo, ángulo del objeto).
-- Se puede usar para detectar marcha, cambios de posición, vibraciones, etc.
+- Se puede usar para detectar la marcha, cambios de posición, vibraciones, etc.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/xyz1.5.jpg" style={{width:320, height:'auto'}}/></div>
 
 **Función del giroscopio:**
+
 - Mide la velocidad angular de un objeto alrededor de los ejes X, Y y Z, es decir, la rotación del objeto.
 - Se puede usar para detectar rotación, velocidad de rotación y cambio de dirección.
 
@@ -34,40 +45,36 @@ Los sensores **IMU de 6 ejes (Unidad de Medición Inercial)** como el **LSM6DS3T
 - El **ángulo del eje Y (Pitch)** es el ángulo en la dirección de rotación alrededor del eje Y.
 - El **ángulo del eje Z (Yaw)** es el ángulo en la dirección de rotación alrededor del eje Z.
 
-### Controlador del IMU
+### Controlador IMU
 
-Para simplificar tu experiencia de desarrollo y asegurar un inicio rápido con este programa de IMU, hemos aprovechado la plataforma PlatformIO para escribir el código de controlador necesario. PlatformIO ofrece un entorno integral y eficiente para el desarrollo embebido, convirtiéndolo en una opción ideal para el XIAO nRF54L15 Sense.
+Para simplificar tu experiencia de desarrollo y asegurar un inicio rápido con este programa IMU, hemos aprovechado la plataforma PlatformIO para escribir el código de controlador necesario. PlatformIO ofrece un entorno integral y eficiente para el desarrollo embebido, lo que lo convierte en una opción ideal para el XIAO nRF54L15 Sense.
 
-Antes de continuar, por favor asegúrate de que tu entorno de desarrollo esté configurado correctamente. Si aún no has añadido la placa de desarrollo Seeed Studio XIAO nRF54L15 a tu configuración de PlatformIO, por favor consulta este [enlace](http://localhost:3000/xiao_nrf54l15_with_platform_io/) para obtener instrucciones detalladas sobre cómo configurarla. Este paso crucial permitirá que PlatformIO reconozca y compile código para tu placa correctamente.
+Antes de continuar, asegúrate de que tu entorno de desarrollo esté configurado correctamente. Si aún no has agregado la placa de desarrollo Seeed Studio XIAO nRF54L15 a tu configuración de PlatformIO, consulta este [enlace](http://localhost:3000/xiao_nrf54l15_with_platform_io/) para obtener instrucciones detalladas sobre cómo configurarla. Este paso crucial permitirá que PlatformIO reconozca y compile correctamente el código para tu placa.
 
-- Una vez que tu entorno esté listo, el controlador del IMU te permitirá leer datos de sensor en bruto del LSM6DS3TR-C. Estos datos incluyen:
+- Una vez que tu entorno esté listo, el controlador IMU te permitirá leer datos de sensor sin procesar del LSM6DS3TR-C. Estos datos incluyen:
 
-- Valores en bruto del acelerómetro (accel raw): Representando la aceleración a lo largo de los ejes X, Y y Z.
+- Valores sin procesar del acelerómetro (accel raw): Representando la aceleración a lo largo de los ejes X, Y y Z.
 
-- Valores en bruto del giroscopio (gyro raw): Indicando la velocidad angular alrededor de los ejes X, Y y Z.
+- Valores sin procesar del giroscopio (gyro raw): Indicando la velocidad angular alrededor de los ejes X, Y y Z.
 
 Contador de activación (trig_cnt): Un contador que se incrementa con cada nueva muestra de datos.
 
-
 A continuación se muestra un ejemplo de la salida serie que puedes esperar ver del IMU, como se muestra en el Monitor de Dispositivo de PlatformIO. Esta salida proporciona lecturas en tiempo real de los datos del acelerómetro y giroscopio, que son fundamentales para entender el movimiento y la orientación de tu dispositivo.
-
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/imu_display.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em> Salida de datos del IMU en tiempo real desde el Monitor de Dispositivo de PlatformIO, mostrando lecturas en bruto del acelerómetro y giroscopio.</em></p>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em> Salida de datos IMU en tiempo real del Monitor de Dispositivo de PlatformIO, mostrando lecturas sin procesar del acelerómetro y giroscopio.</em></p>
 </div>
 
-
-Estos datos en bruto forman la base para varias aplicaciones, desde la detección simple de movimiento hasta el seguimiento complejo de orientación, aplicando algoritmos apropiados (por ejemplo, filtrado, fusión de sensores).
+Estos datos sin procesar forman la base para varias aplicaciones, desde la detección simple de movimiento hasta el seguimiento complejo de orientación, aplicando algoritmos apropiados (por ejemplo, filtrado, fusión de sensores).
 
 ---
- 
+
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-imu" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Librería</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
-
 
 ```cpp
 #include <stdio.h>
@@ -260,10 +267,9 @@ int main(void)
 }
 ```
 
-
 ## XIAO nRF54L15 Sense MIC
 
-El **MSM261DGT006** es un Micrófono Digital (DMIC) que produce datos de Modulación por Densidad de Pulsos (PDM), lo que lo hace adecuado para interfaz digital directa con microcontroladores como el XIAO nRF54L15 Sense. Nuestro controlador DMIC está específicamente diseñado para manejar esta salida PDM, convertirla en muestras de audio utilizables y procesarla para diversas aplicaciones.
+El **MSM261DGT006** es un Micrófono Digital (DMIC) que produce datos de Modulación de Densidad de Pulso (PDM), lo que lo hace adecuado para interfaz digital directa con microcontroladores como el XIAO nRF54L15 Sense. Nuestro controlador DMIC está específicamente diseñado para manejar esta salida PDM, convertirla en muestras de audio utilizables y procesarla para diversas aplicaciones.
 
 El controlador inicia el micrófono, establece la frecuencia de muestreo apropiada (por ejemplo, 16000 Hz para audio estándar) y configura la frecuencia del reloj PDM. Luego lee continuamente buffers de muestras del micrófono, permitiendo la captura de audio en tiempo real.
 
@@ -271,19 +277,19 @@ La salida del controlador DMIC, cuando se visualiza en el Monitor de Dispositivo
 
 - `DMIC sample=:` Indica el inicio del proceso de muestreo DMIC.
 
-- `PCM output rate:` 16000, channels: 1: Confirma la configuración de salida de audio, típicamente una frecuencia de muestreo de 16 kHz y un canal único (mono) de audio.
+- `PCM output rate:` 16000, channels: 1: Confirma la configuración de salida de audio, típicamente una frecuencia de muestreo de 16 kHz y audio de un solo canal (mono).
 
-- `dmic_nrf_pdm:` PDM clock frequency: 1280000, actual PCM rate: 16000: Muestra la frecuencia del reloj PDM interno y la frecuencia de muestreo de audio PCM resultante.
+- `dmic_nrf_pdm:` PDM clock frequency: 1280000, actual PCM rate: 16000: Muestra la frecuencia interna del reloj PDM y la frecuencia de muestreo de audio PCM resultante.
 
-- `got buffer 0x... of 3200 bytes:` Confirma que el controlador recibió exitosamente un buffer de datos de audio del micrófono. Se muestran la dirección hexadecimal (por ejemplo, 0x20004C8) y el tamaño en bytes (por ejemplo, 3200 bytes). Estos buffers contienen las muestras de audio en bruto que luego pueden ser procesadas o analizadas.
+- `got buffer 0x... of 3200 bytes:` Confirma que el controlador recibió exitosamente un buffer de datos de audio del micrófono. Se muestran la dirección hexadecimal (por ejemplo, 0x20004C8) y el tamaño en bytes (por ejemplo, 3200 bytes). Estos buffers contienen las muestras de audio sin procesar que luego pueden ser procesadas o analizadas.
 
 - `dmix_sample: Exiting:` Indica que el proceso de muestreo DMIC ha sido detenido.
 
-A continuación se muestra un ejemplo de la salida típica que puede esperar ver en el Monitor de Dispositivo de PlatformIO cuando el controlador DMIC está ejecutándose, ilustrando la captura y almacenamiento en buffer exitoso de datos de audio.
+A continuación se muestra un ejemplo de la salida típica que puede esperar ver en el Monitor de Dispositivo de PlatformIO cuando el controlador DMIC está funcionando, ilustrando la captura y almacenamiento en buffer exitoso de datos de audio.
 
 ### Controlador DMIC
 
-Estos datos de audio en bruto, una vez capturados, pueden ser utilizados para una amplia gama de aplicaciones, incluyendo comandos de voz, detección de eventos sonoros, monitoreo de ruido ambiental y tareas de procesamiento de audio más complejas.
+Estos datos de audio sin procesar, una vez capturados, pueden ser utilizados para una amplia gama de aplicaciones, incluyendo comandos de voz, detección de eventos sonoros, monitoreo de ruido ambiental y tareas de procesamiento de audio más complejas.
 
 El siguiente ejemplo de código demuestra cómo grabar audio usando el botón pulsador en la placa XIAO nRF54L15 y guardar el archivo WAV grabado en una computadora.
 
@@ -388,10 +394,10 @@ void uart_writer_thread(void *p1, void *p2, void *p3)
             send_packet_poll(packet_end, sizeof(packet_end));
             continue;
         }
-        
+
         uart_tx(console_dev, buffer, CHUNK_SIZE_BYTES, SYS_FOREVER_US);
         k_sem_take(&tx_done_sem, K_FOREVER);
-        
+
         k_mem_slab_free(&mem_slab, buffer);
     }
 }
@@ -488,14 +494,14 @@ int main(void)
 {
     int ret;
 
-	// Check if all required devices are ready
+ // Check if all required devices are ready
     if (!device_is_ready(dmic_dev) || !device_is_ready(led.port) || 
         !device_is_ready(button.port) || !device_is_ready(console_dev)) {
         LOG_ERR("A required device is not ready.");
         return -ENODEV;
     }
 
-	// Configure DMIC channel mapping
+ // Configure DMIC channel mapping
     dmic_config.channel.req_chan_map_lo = dmic_build_channel_map(0, 0, PDM_CHAN_LEFT);
 
     // Configure LED as output
@@ -529,34 +535,38 @@ int main(void)
 }
 ```
 
-A continuación, abre la terminal en el directorio de la carpeta scripts y realiza las siguientes operaciones, siempre que el programa ya haya sido grabado.
+A continuación, abra la terminal en el directorio de la carpeta scripts y realice las siguientes operaciones, siempre que el programa ya haya sido grabado.
 
 **Paso 1:**
+
 - `python3 -m pip install pyserial`
 
 **Paso 2:**
+
 - `python record.py -p /dev/cu.usbmodemA0CBDDC33 -o output.wav -b 921600`
 
 :::tip
-En este comando `python record.py -p **/dev/cu.usbmodemA0CBDDC33** -o output.wav -b 921600`, necesitas reemplazarlo con tu puerto serie para su uso.
+En este comando `python record.py -p **/dev/cu.usbmodemA0CBDDC33** -o output.wav -b 921600`, necesita reemplazarlo con su puerto serie para su uso.
 :::
 **Paso 3:**
-- Después de ejecutar el comando, se te pedirá que presiones el botón para grabar sonido.
+
+- Después de ejecutar el comando, se le pedirá que presione el botón para grabar sonido.
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/dmic_record1.jpg" style={{width:900, height:'auto'}}/></div>
 
 Después de grabar el audio, el archivo se guardará en scripts
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/dmic_record2.jpg" style={{width:500, height:'auto'}}/></div>
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

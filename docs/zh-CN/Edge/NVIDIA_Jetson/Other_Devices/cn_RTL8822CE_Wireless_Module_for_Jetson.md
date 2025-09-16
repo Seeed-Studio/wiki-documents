@@ -1,6 +1,6 @@
 ---
-description: 本文档介绍了 RTL8822CE 无线模块的功能和规格，这是一款兼容多种嵌入式设备（如 reComputer J4012）的双频 Wi-Fi 和蓝牙 v5.0 M.2 无线模块。文章详细说明了其技术规格、支持的设备、硬件安装步骤，以及通过桌面界面或命令行配置无线网络和蓝牙的方法。
-title: Jetson 的 RTL8822CE 无线模块
+description: 本wiki介绍了RTL8822CE无线模块的功能和规格，这是一款双频Wi-Fi和蓝牙v5.0 M.2无线模块，兼容各种嵌入式设备（如reComputer J4012）。文章提供了其技术规格、支持设备、硬件安装步骤以及通过桌面界面或命令行配置无线网络和蓝牙的方法的详细信息。
+title: 适用于Jetson的RTL8822CE无线模块
 keywords:
   - Edge
   - reComputer
@@ -10,7 +10,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/wifi/rtl8822ce.webp
 slug: /cn/rtl8822ce_wireless_module_for_jetson
 last_update:
-  date: 2024/12/3
+  date: 12/3/2024
   author: Youjiang
 ---
 
@@ -18,18 +18,19 @@ last_update:
   <img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/wifi/RTL8822CE_Wireless_NIC_for_Jetson.png"/>
 </div>
 
-<!-- 需要跳转按钮 -->
+<!-- Need to jump button  -->
 
-RTL8822CE 是一款紧凑型双频 WLAN+蓝牙组合 M.2 卡，集成了 2T2R 双频 WLAN 子系统（带 PCI Express 控制器）和支持 USB 的蓝牙 v5.0 子系统。兼容 IEEE 802.11 a/b/g/n/ac 标准，最高物理速率可达 867 Mbps，并支持蓝牙双模（v5.0/v4.2/v2.1）。非常适合嵌入式设备（如 [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)）的高性能无线和蓝牙连接。
+RTL8822CE是一款紧凑的双频WLAN+蓝牙组合M.2卡，集成了带PCI Express控制器的2T2R双频WLAN子系统和带USB支持的蓝牙v5.0子系统。兼容IEEE 802.11 a/b/g/n/ac标准，提供高达867 Mbps的最大PHY速率，支持蓝牙双模（v5.0/v4.2/v2.1）。非常适合为嵌入式设备（如[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)）提供高性能无线和蓝牙连接。
 
 ## 特性
-- 支持 2.4G/5GHz 双频
-- 无线物理速率最高可达 867Mbps
-- IEEE 标准：IEEE 802.11a/b/g/n/ac
-- 外形尺寸：M.2 2230 通用 A 键或 E 键
-- 通过 MHF4 接头连接外部天线
-- 电源：DC3.3V±0.2V 电源供电
-- 支持 Linux、Windows 10/11 等操作系统
+
+- 支持2.4G/5GHz双频
+- 无线PHY速率可达867Mbps
+- IEEE标准：IEEE 802.11a/b/g/n/ac
+- 外形规格：M.2 2230通用A键或E键
+- 通过MHF4连接器连接外部天线
+- 电源：DC3.3V±0.2V电源
+- 支持Linux、Windows 10/11等
 
 ## 规格
 
@@ -40,20 +41,20 @@ RTL8822CE 是一款紧凑型双频 WLAN+蓝牙组合 M.2 卡，集成了 2T2R �
       <td>**TRL8822CE-CG**</td>
     </tr>
     <tr>
-      <td>WLAN 标准</td>
+      <td>WLAN标准</td>
       <td>IEEE802.11a/b/g/n/ac</td>
     </tr>
     <tr>
       <td>蓝牙规格</td>
-      <td>蓝牙核心规范 v5.0/4.2/2.1</td>
+      <td>蓝牙核心规格v5.0/4.2/2.1</td>
     </tr>
     <tr>
       <td>主机接口</td>
-      <td>WLAN 使用 PCI Express 2.1，蓝牙使用 USB2.0 FS</td>
+      <td>WLAN使用PCI Express 2.1，蓝牙使用USB2.0 FS</td>
     </tr>
     <tr>
       <td>天线</td>
-      <td>通过 MHF4 接头连接外部天线</td>
+      <td>通过MHF4连接器连接外部天线</td>
     </tr>
     <tr>
       <td>尺寸</td>
@@ -84,15 +85,15 @@ RTL8822CE 是一款紧凑型双频 WLAN+蓝牙组合 M.2 卡，集成了 2T2R �
 ## 硬件连接
 
 :::danger
-在本文档中，我们将以 reComputer J4012 为例，演示如何在 Jetson 设备上安装和配置 RTL8822CE 无线模块。
+在本wiki中，我们将使用reComputer J4012作为示例，演示如何在Jetson设备上安装和配置RTL8822CE无线模块。
 :::
 
-步骤 1. 准备所有将使用的材料。
+步骤1. 准备所有将要使用的材料。
 
-- 配备 Jetpack 5.1.2 的 reComputer J4012
-- Infineon Wi-Fi 模块
+- 配备Jetpack 5.1.2的reComputer J4012
+- Infineon Wi-Fi模块
 
-步骤 2. 将无线模块插入 M.2 Key E 接口。
+步骤2. 将无线模块插入M.2 Key E端口。
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/wifi/rtl8822ce.jpg"/>
@@ -100,16 +101,16 @@ RTL8822CE 是一款紧凑型双频 WLAN+蓝牙组合 M.2 卡，集成了 2T2R �
 
 ## 配置无线模块
 
-我们可以直接通过 Jetson 桌面访问并通过 `设置` --> `WiFi` 连接到无线网络。
+我们可以直接访问Jetson桌面，通过`设置` --> `WiFi`连接到wifi网络。
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer/Hard_ware/Infineon_wifi_module/connect_to_wifi.png"/>
 </div>
 
-我们还可以通过 `设置` --> `蓝牙` 配置蓝牙。
+我们也可以通过`设置` --> `蓝牙`配置蓝牙。
 
 :::info
-此外，我们还可以通过命令行配置无线模块，例如使用 `bluetoothctl` 命令配置蓝牙设备。
+此外，我们可以通过命令行配置无线模块，例如使用`bluetoothctl`命令配置蓝牙设备。
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-bluetooth-test.png"/>
@@ -119,14 +120,14 @@ RTL8822CE 是一款紧凑型双频 WLAN+蓝牙组合 M.2 卡，集成了 2T2R �
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们为您提供多种支持渠道，以确保您在使用我们的产品时获得最佳体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

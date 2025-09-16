@@ -1,10 +1,10 @@
 position: 4 # float position is supported
-label: 'AI模型部署概览'
+label: 'AI模型部署概述'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
 className: recamera_ai_model_deployment
 link:
   type: generated-index
   slug: cn/recamera_ai_model_deployment
-  title: AI模型部署概览
-  description: 本节提供了关于reCamera的AI模型训练、微调和部署过程的简明概述。内容从模型选择开始，讨论了YOLO v5/v8/11等选项，以及根据不同场景选择适当模型的标准，包括当前典型模型和可用框架。然后涉及参数配置，接着是复杂的模型格式转换过程，包括模型适配和中间件翻译。随后介绍了模型量化和压缩。最后，讨论了部署和测试阶段，包括后处理的相关考虑。
+  title: AI模型部署概述
+  description: 本节简要概述了reCamera的AI模型训练、微调和部署过程。首先从模型选择开始，讨论YOLO v5/v8/v11等选项以及基于不同场景选择合适模型的标准，包括当前典型模型和可用框架。然后涉及参数配置，接着是复杂的模型格式转换过程，包括模型适配和中间件转换。随后涵盖模型量化和压缩。最后讨论部署和测试阶段，包括后处理的考虑因素。

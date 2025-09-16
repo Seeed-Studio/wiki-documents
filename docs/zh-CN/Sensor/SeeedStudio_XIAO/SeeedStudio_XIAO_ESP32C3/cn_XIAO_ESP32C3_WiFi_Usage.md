@@ -48,7 +48,7 @@ Seeed Studio XIAO ESP32C3 支持 IEEE 802.11b/g/n WiFi 连接。本教程将介�
 void setup() {
   Serial.begin(115200);
 
-  // 将 WiFi 设置为站点模式，如果之前连接过 AP 则断开连接
+  // Set WiFi to station mode and disconnect from an AP if it was previously connected
   WiFi.mode(WIFI_STA);
   WiFi.disconnect();
   delay(100);
@@ -59,7 +59,7 @@ void setup() {
 void loop() {
   Serial.println("scan start");
 
-  // WiFi.scanNetworks 将返回找到的网络数量
+  // WiFi.scanNetworks will return the number of networks found
   int n = WiFi.scanNetworks();
   Serial.println("scan done");
   if (n == 0) {
@@ -68,7 +68,7 @@ void loop() {
     Serial.print(n);
     Serial.println(" networks found");
     for (int i = 0; i < n; ++i) {
-      // 打印找到的每个网络的 SSID 和 RSSI
+      // Print SSID and RSSI for each network found
       Serial.print(i + 1);
       Serial.print(": ");
       Serial.print(WiFi.SSID(i));
@@ -81,26 +81,26 @@ void loop() {
   }
   Serial.println("");
 
-  // 再次扫描前等待一段时间
+  // Wait a bit before scanning again
   delay(5000);
 }
 ```
 
-</TabItem>
-<TabItem value="advan-wifi-scan" label="高级 Wi-Fi 扫描">
+  </TabItem>
+  <TabItem value="advan-wifi-scan" label="高级 Wi-Fi 扫描">
 
 ```cpp title="https://github.com/espressif/arduino-esp32/blob/master/libraries/WiFi/examples/WiFiScan/WiFiScan.ino"
 /*
- *  此示例演示如何扫描WiFi网络。
- *  该API基于Arduino WiFi Shield库，但由于支持更新的WiFi功能，因此有重大变化。
- *  例如，`encryptionType()`的返回值不同，因为支持更现代的加密方式。
+ *  This sketch demonstrates how to scan WiFi networks.
+ *  The API is based on the Arduino WiFi Shield library, but has significant changes as newer WiFi functions are supported.
+ *  E.g. the return value of `encryptionType()` different because more modern encryption is supported.
  */
 #include "WiFi.h"
 
 void setup() {
   Serial.begin(115200);
 
-  // 将WiFi设置为站点模式，如果之前连接过AP则断开连接。
+  // Set WiFi to station mode and disconnect from an AP if it was previously connected.
   WiFi.mode(WIFI_STA);
   WiFi.disconnect();
   delay(100);
@@ -111,7 +111,7 @@ void setup() {
 void loop() {
   Serial.println("Scan start");
 
-  // WiFi.scanNetworks将返回找到的网络数量。
+  // WiFi.scanNetworks will return the number of networks found.
   int n = WiFi.scanNetworks();
   Serial.println("Scan done");
   if (n == 0) {
@@ -121,7 +121,7 @@ void loop() {
     Serial.println(" networks found");
     Serial.println("Nr | SSID                             | RSSI | CH | Encryption");
     for (int i = 0; i < n; ++i) {
-      // 打印找到的每个网络的SSID和RSSI
+      // Print SSID and RSSI for each network found
       Serial.printf("%2d", i + 1);
       Serial.print(" | ");
       Serial.printf("%-32.32s", WiFi.SSID(i).c_str());
@@ -148,15 +148,15 @@ void loop() {
   }
   Serial.println("");
 
-  // 删除扫描结果以释放内存供下面的代码使用。
+  // Delete the scan result to free memory for code below.
   WiFi.scanDelete();
 
-  // 再次扫描前稍等一会儿。
+  // Wait a bit before scanning again.
   delay(5000);
 }
 ```
 
-</TabItem>
+  </TabItem>
 </Tabs>
 
 **步骤 2.** 上传代码并打开串口监视器开始扫描WiFi网络
@@ -182,7 +182,7 @@ void setup() {
   Serial.begin(115200);
   delay(10);
 
-  // 我们首先连接到WiFi网络
+  // We start by connecting to a WiFi network
   Serial.println();
   Serial.println();
   Serial.print("Connecting to ");
@@ -203,7 +203,7 @@ void setup() {
 void loop() {}
 ```
 
-</TabItem>
+  </TabItem>
   <TabItem value="advan-wifi-connect" label="高级 Wi-Fi 连接">
 
 ```cpp title="https://github.com/espressif/arduino-esp32/blob/master/libraries/WiFi/examples/WiFiClientConnect/WiFiClientConnect.ino"
@@ -216,15 +216,15 @@ void setup() {
   Serial.begin(115200);
   delay(10);
 
-  // 我们首先连接到 WiFi 网络
+  // We start by connecting to a WiFi network
   Serial.println();
   Serial.println();
-  Serial.print("正在连接到 ");
+  Serial.print("Connecting to ");
   Serial.println(ssid);
 
   WiFi.begin(ssid, password);
 
-  // 将尝试大约 10 秒（20 次 x 500ms）
+  // Will try for about 10 seconds (20x 500ms)
   int tryDelay = 500;
 
   while (WiFi.status() != WL_CONNECTED) {
@@ -234,30 +234,30 @@ void setup() {
 
   while (true) {
       switch (WiFi.status()) {
-        case WL_NO_SSID_AVAIL: Serial.println("[WiFi] 未找到 SSID"); break;
+        case WL_NO_SSID_AVAIL: Serial.println("[WiFi] SSID not found"); break;
         case WL_CONNECT_FAILED:
-          Serial.print("[WiFi] 失败 - WiFi 未连接！原因：");
+          Serial.print("[WiFi] Failed - WiFi not connected! Reason: ");
           return;
           break;
-        case WL_CONNECTION_LOST: Serial.println("[WiFi] 连接丢失"); break;
-        case WL_SCAN_COMPLETED:  Serial.println("[WiFi] 扫描完成"); break;
-        case WL_DISCONNECTED:    Serial.println("[WiFi] WiFi 已断开连接"); break;
+        case WL_CONNECTION_LOST: Serial.println("[WiFi] Connection was lost"); break;
+        case WL_SCAN_COMPLETED:  Serial.println("[WiFi] Scan is completed"); break;
+        case WL_DISCONNECTED:    Serial.println("[WiFi] WiFi is disconnected"); break;
         case WL_CONNECTED:
-          Serial.println("[WiFi] WiFi 已连接！");
-          Serial.print("[WiFi] IP 地址：");
+          Serial.println("[WiFi] WiFi is connected!");
+          Serial.print("[WiFi] IP address: ");
           Serial.println(WiFi.localIP());
           return;
           break;
         default:
-          Serial.print("[WiFi] WiFi 状态：");
+          Serial.print("[WiFi] WiFi Status: ");
           Serial.println(WiFi.status());
           break;
       }
           delay(tryDelay);
 
     if (numberOfTries <= 0) {
-      Serial.print("[WiFi] 连接 WiFi 失败！");
-      // 使用断开连接功能强制停止尝试连接
+      Serial.print("[WiFi] Failed to connect to WiFi!");
+      // Use disconnect function to force stop trying to connect
       WiFi.disconnect();
       return;
     } else {
@@ -266,25 +266,25 @@ void setup() {
   }
 
   Serial.println("");
-  Serial.println("WiFi 已连接");
-  Serial.println("IP 地址：");
+  Serial.println("WiFi connected");
+  Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
 }
 void loop() {}
 ```
 
-</TabItem>
+  </TabItem>
 </Tabs>
 
-**步骤 2.** 上传代码并打开串口监视器，检查开发板是否已连接到WiFi网络
+**步骤 2.** 上传代码并打开串口监视器，检查开发板是否已连接到 WiFi 网络
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-2.jpg" alt="pir" width={500} height="auto" /></div>
 
-## 模式 2：软AP模式（作为STA工作）- 用作接入点
+## 模式 2：软 AP 模式（作为 STA 工作）- 用作接入点
 
-在这个示例中，我们将使用XIAO ESP32C3作为WiFi接入点，其他设备可以连接到它。这类似于手机上的WiFi热点功能。
+在这个示例中，我们将使用 XIAO ESP32C3 作为 WiFi 接入点，其他设备可以连接到它。这类似于手机上的 WiFi 热点功能。
 
-- **步骤 1.** 将下面的代码复制并粘贴到Arduino IDE中
+- **步骤 1.** 将下面的代码复制并粘贴到 Arduino IDE 中
 
 ```cpp
 #include "WiFi.h"
@@ -324,7 +324,7 @@ void loop() {
 如果您的ESP32开发板版本已经更新到3.0.0，您需要将代码从```softAPIPv6()```更改为```softAPlinkLocalIPv6()```。
 :::
 
-**步骤 2.** 上传代码并打开串口监视器，查看WiFi接入点的更多详细信息
+**步骤 2.** 上传代码并打开串口监视器以查看有关WiFi接入点的更多详细信息
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-3.png" alt="pir" width={700} height="auto" /></div>
 
@@ -332,18 +332,18 @@ void loop() {
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-4.png" alt="pir" width="{300}" height="auto" /></div>
 
-现在您将看到串口监视器上的**Number of Host Connections**已更新为**1**
+现在您将看到串口监视器上的**主机连接数**已更新为**1**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-5.png" alt="pir" width={700} height="auto" /></div>
 
 ## XIAO ESP32C3 & Home Assistant
 
-我们很高兴地宣布，我们已经支持XIAO ESP32C3接入ESPHome和Home Assistant！
+我们很高兴地宣布，我们已经为XIAO ESP32C3提供了访问ESPHome和Home Assistant的支持！
 
 有关本节的更多信息，请参考相关教程。
 
-- [使用ESPHome将Grove模块连接到Home Assistant](https://wiki.seeedstudio.com/cn/Connect-Grove-to-Home-Assistant-ESPHome/)
-- [LinkStar Home Assistant](https://wiki.seeedstudio.com/cn/h68k-ha-esphome/)
+- [使用ESPHome将Grove模块连接到Home Assistant](https://wiki.seeedstudio.com/Connect-Grove-to-Home-Assistant-ESPHome/)
+- [LinkStar Home Assistant](https://wiki.seeedstudio.com/h68k-ha-esphome/)
 
 ## 参考资料
 
@@ -354,11 +354,11 @@ void loop() {
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

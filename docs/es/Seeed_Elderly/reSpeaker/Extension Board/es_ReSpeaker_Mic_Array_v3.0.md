@@ -783,7 +783,7 @@ R5: Por favor descarga el [nuevo firmware](https://files.seeedstudio.com/wiki/Re
 
 ## Recursos
 
-- **[PDF]** [Esquemático ReSpeaker MicArray v3.0](https://files.seeedstudio.com/products/107990053/ReSpeakerMicArrayv2.0.1Schematic.zip)
+- **[PDF]** [Esquemático ReSpeaker MicArray v3.0](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/img/v3/202004229_ReSpeakerMicArray_V3.0_SCH%26PCB_250427.zip)
 - **[PDF]** [Resumen del Producto ReSpeaker MicArray v3.0](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/ReSpeaker%20MicArray%20v2.0%20Product%20Brief.pdf)
 - **[PDF]** [Modelo 3D ReSpeaker MicArray v3.0](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/RESPEAKER%20MIC%20v2.0.pdf)
 - **[SKP]** [Modelo 3D ReSpeaker MicArray v3.0](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/Respeaker%20Microphone%20Array%20v2.0_20180316.skp.zip)

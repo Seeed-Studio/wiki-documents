@@ -23,13 +23,13 @@ import TabItem from '@theme/TabItem';
 </div><br />
 
 :::caution 固件更新提示
-我们建议您在收到产品后**[立即完成产品的固件更新](#preliminary)**，以获得最佳体验。
+我们建议您在收到产品后**[立即完成产品的固件更新](#preliminary)**以获得最佳体验。
 :::
 
 :::danger 屏幕寿命警告
 1. 如果您的 reTerminal 长时间闲置，您可以长按设备上的绿色按钮 5 秒钟来清除屏幕内容（使用出厂固件），这可以有效防止残影并延长屏幕寿命。
 
-2. 尽可能不要长时间（超过 1 天）显示同一画面，因为这可能会产生残影，建议至少每天刷新一次屏幕图像。如果设备长时间不使用，建议清除设备显示内容。
+2. 尽可能不要长时间（超过 1 天）显示同一画面，因为这可能会产生残影，建议屏幕图像至少每天刷新一次。如果设备长时间不使用，建议清除设备显示内容。
 
 3. 在使用和调试程序时，请尽可能减少屏幕刷新频率。长时间高速刷新屏幕也可能会降低屏幕的使用寿命。
 :::
@@ -52,7 +52,7 @@ reTerminal E1002 是一款 7.3 英寸开源全彩电子纸显示器，具有出�
 
 reTerminal E1002 硬件包括：
 
-1. **7.3 英寸全彩电子纸显示屏**：分辨率为 800×480 的全彩显示屏
+1. **7.3 英寸全彩电子纸显示屏**：800×480 分辨率的全彩显示屏
 2. **按钮**：位于设备顶部，用于手动屏幕操作
 3. **麦克风**
 4. **MicroSD 卡槽**：用于扩展存储
@@ -62,11 +62,11 @@ reTerminal E1002 硬件包括：
 8. **USB-C 端口**：用于充电和固件更新
 9. **扩展端口**：8 针扩展接头，提供 VDD、GND、I2C 和 GPIO 连接
 
-## 入门指南
+## 开始使用
 
 ### 准备工作
 
-**步骤 1.** 拆开您的 reTerminal E1002 包装，确保包含所有组件：
+**步骤 1.** 打开您的 reTerminal E1002 包装，确保包含所有组件：
 - reTerminal E1002 设备
 - USB-C 数据线
 - 快速入门指南
@@ -107,9 +107,9 @@ reTerminal E 系列电子纸显示器仅支持最大 64GB 的 Fat32 格式 Micro
     </a>
 </div><br />
 
-4. 导航到 **Workspace** 部分
+4. 导航到 **工作区** 部分
 
-5. 点击右上角的 **Device Flasher**
+5. 点击右上角的 **设备刷写器**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/9.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -119,19 +119,19 @@ reTerminal E 系列电子纸显示器仅支持最大 64GB 的 Fat32 格式 Micro
 
 7. 从下拉菜单中选择最新的固件版本
 
-8. 点击 **Flash** 并等待更新过程完成
+8. 点击 **刷写** 并等待更新过程完成
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/10.png" style={{width:800, height:'auto'}}/></div>
 
 :::note
 1. 更新固件可确保最佳性能并访问最新功能。建议在首次使用设备之前执行此更新。
 
-2. 当设备处于关机或睡眠状态时，无法正确刷写固件。如果您为设备选择了正确的端口但从未看到刷写固件进度，则可能需要通过按下设备顶部的绿色按钮来唤醒设备，然后重试。
+2. 当设备处于关机或睡眠状态时，无法正确刷写固件。如果您选择了设备的正确端口但从未看到刷写固件进度，则可能需要通过按下设备顶部的绿色按钮来唤醒设备，然后重试。
 :::
 
 ### 开机
 
-**步骤 1.** 将电源开关滑动到 **ON** 位置来开启设备。电源开关位于设备背面。
+**步骤 1.** 将电源开关滑动到 **ON** 位置以开启设备。电源开关位于设备背面。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/135.gif" style={{width:700, height:'auto'}}/></div>
 
@@ -141,7 +141,7 @@ reTerminal E 系列电子纸显示器仅支持最大 64GB 的 Fat32 格式 Micro
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/17.png" style={{width:600, height:'auto'}}/></div><br />
 
 
-**步骤 3.** 绿色用户 LED 将亮起约 30 秒，表示设备已开机并正在初始化。设备 30 秒无操作后，为了确保电源，设备将自动进入睡眠模式，LED 灯将自动关闭。
+**步骤 3.** 绿色用户 LED 将亮起约 30 秒，表示设备已开机并正在初始化。设备无操作 30 秒后，为了确保电源，设备将自动进入睡眠模式，LED 灯将自动关闭。
 
 :::tip
 因此，我们需要在此期间完成配置网络的后续步骤。当设备进入睡眠状态时，您将无法找到设备的热点。如果出现这种情况，您可以通过单击设备的绿色唤醒按钮来唤醒设备。
@@ -160,7 +160,7 @@ reTerminal E 系列电子纸显示器仅支持最大 64GB 的 Fat32 格式 Micro
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/6.png" style={{width:700, height:'auto'}}/></div><br />
 
-**步骤 3.** 选择您的本地 Wi-Fi 网络并输入密码，然后点击"Connect"。
+**步骤 3.** 选择您的本地 Wi-Fi 网络并输入密码，然后点击"连接"。
 
 :::note
 reTerminal E 系列电子纸显示器仅支持 2.4GHz WiFi 网络，不支持 5GHz 或其他频段。
@@ -180,12 +180,11 @@ reTerminal E 系列电子纸显示器仅支持 2.4GHz WiFi 网络，不支持 5G
     </a>
 </div><br />
 
-
-**步骤 2.** 导航到 **Workspace** 部分并点击 **Add Device**。
+**步骤 2.** 导航到 **工作区** 部分并点击 **添加设备**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/7.png" style={{width:1000, height:'auto'}}/></div>
 
-**步骤 3.** 为您的设备命名，输入设备屏幕上显示的配对码，然后点击 **Create**。
+**步骤 3.** 为您的设备命名，输入设备屏幕上显示的配对代码，然后点击 **创建**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/8.png" style={{width:600, height:'auto'}}/></div>
 
@@ -202,11 +201,11 @@ reTerminal E 系列电子纸显示器仅支持 2.4GHz WiFi 网络，不支持 5G
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft-app-download.seeed.cc" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Download APP 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 下载应用程序 🖱️</font></span></strong>
     </a>
 </div><br />
 
-**步骤 1.** 打开 SenseCraft 应用程序，登录您的账户，并导航到**用户**选项卡。点击**设备蓝牙配置**开始该过程。
+**步骤 1.** 打开 SenseCraft 应用程序，登录您的账户，导航到 **用户** 选项卡。点击 **设备蓝牙配置** 开始配置过程。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/151.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -214,11 +213,11 @@ reTerminal E 系列电子纸显示器仅支持 2.4GHz WiFi 网络，不支持 5G
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/152.png" style={{width:250, height:'auto'}}/></div><br />
 
-**步骤 3.** 按照屏幕上的说明将您的设备置于蓝牙广播模式。这通常通过同时按下**向上**和**向下**翻页按钮来完成。确保您手机的蓝牙已启用。点击**扫描**，应用程序将发现附近的设备。从列表中选择您的设备进行连接。
+**步骤 3.** 按照屏幕上的说明将您的设备置于蓝牙广播模式。通常通过同时按下 **向上** 和 **向下** 翻页按钮来完成。确保您手机的蓝牙已启用。点击 **扫描**，应用程序将发现附近的设备。从列表中选择您的设备进行连接。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/153.png" style={{width:250, height:'auto'}}/></div><br />
 
-**步骤 4.** 通过蓝牙连接后，应用程序将提示您设置 Wi-Fi 连接。从下拉列表中选择您的本地 2.4GHz Wi-Fi 网络，输入密码，然后点击**下一步**。
+**步骤 4.** 通过蓝牙连接后，应用程序将提示您设置 Wi-Fi 连接。从下拉列表中选择您的本地 2.4GHz Wi-Fi 网络，输入密码，然后点击 **下一步**。
 
 :::note
 设备只能通过 2.4G Wi-Fi 网络进行配置。
@@ -226,15 +225,15 @@ reTerminal E 系列电子纸显示器仅支持 2.4GHz WiFi 网络，不支持 5G
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/154.png" style={{width:250, height:'auto'}}/></div><br />
 
-**步骤 5.** 应用程序将把 Wi-Fi 凭据发送到设备并将其添加到您的 SenseCraft 账户。完成后将出现"设备添加成功"消息。您现在可以点击**开始探索！**继续。
+**步骤 5.** 应用程序将把 Wi-Fi 凭据发送到设备并将其添加到您的 SenseCraft 账户。完成后将出现"设备添加成功"消息。您现在可以点击 **开始探索！** 继续。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/155.png" style={{width:250, height:'auto'}}/></div><br />
 
-**步骤 6.** 您的 reTerminal 现在将出现在应用程序主**设备**选项卡的设备列表中，成功连接到您的 SenseCraft 账户。
+**步骤 6.** 您的 reTerminal 现在将出现在应用程序主 **设备** 选项卡的设备列表中，成功连接到您的 SenseCraft 账户。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/156.png" style={{width:250, height:'auto'}}/></div><br />
 
-**步骤 7.** 您可以点击列表中的设备查看其**设备详情**页面。从这里，您可以管理设备并上传照片。对于更复杂的仪表板和画布设计，系统将提示您使用 SenseCraft 的网页浏览器版本。
+**步骤 7.** 您可以点击列表中的设备查看其 **设备详情** 页面。从这里，您可以管理设备并上传照片。对于更复杂的仪表板和画布设计，系统将提示您使用 SenseCraft 的网页浏览器版本。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/157.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -243,13 +242,13 @@ reTerminal E 系列电子纸显示器仅支持 2.4GHz WiFi 网络，不支持 5G
 
 ## 创建仪表板
 
-reTerminal E1002 与 SenseCraft HMI 平台无缝集成，该平台为您的设备提供了强大的内容创建和自定义工具。我们不在这里详细介绍逐步操作，而是探索平台的关键功能，帮助您了解可能的应用。
+reTerminal E1002 与 SenseCraft HMI 平台无缝集成，该平台为您的设备提供了强大的内容创建和自定义工具。我们不在这里详细介绍逐步操作，而是探索平台的关键功能，帮助您了解可能实现的功能。
 
 ### SenseCraft HMI 功能
 
 **AI 生成器**
 
-让人工智能设计您的仪表板！只需描述您想要显示的信息，AI 生成器将自动创建一个美观、实用的布局。这非常适合快速生成天气显示、日历、待办事项列表或信息面板，无需手动设计工作。
+让人工智能为您设计仪表板！只需描述您想要显示的信息，AI 生成器将自动创建一个美观、实用的布局。这非常适合快速生成天气显示、日历、待办事项列表或信息面板，无需手动设计工作。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/12.png" style={{width:300, height:'auto'}}/></div>
 
@@ -286,16 +285,16 @@ reTerminal E1002 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 按照上一节中描述的方式将您的设备与 SenseCraft 平台配对后，您就可以创建您的第一个仪表板了。有关使用每个功能的详细说明，请参考相应的 Wiki 页面：
 
-- [SenseCraft HMI 概述](https://wiki.seeedstudio.com/cn/sensecraft_hmi_overview)
-- [AI 生成器指南](https://wiki.seeedstudio.com/cn/sensecraft_hmi_ai_generation)
-- [图库使用指南](https://wiki.seeedstudio.com/cn/sensecraft_hmi_gallery)
-- [画布设计工具](https://wiki.seeedstudio.com/cn/sensecraft_hmi_canvas)
-- [RSS 订阅配置](https://wiki.seeedstudio.com/cn/sensecraft_hmi_rss)
-- [网页内容显示](https://wiki.seeedstudio.com/cn/sensecraft_hmi_web)
+- [SenseCraft HMI 概述](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
+- [AI 生成器指南](https://wiki.seeedstudio.com/sensecraft_hmi_ai_generation)
+- [图库使用指南](https://wiki.seeedstudio.com/sensecraft_hmi_gallery)
+- [画布设计工具](https://wiki.seeedstudio.com/sensecraft_hmi_canvas)
+- [RSS 订阅配置](https://wiki.seeedstudio.com/sensecraft_hmi_rss)
+- [网页内容显示](https://wiki.seeedstudio.com/sensecraft_hmi_web)
 
-在 SenseCraft 平台中创建并保存您的仪表板后，只需点击"部署到设备"，选择您配对的 reTerminal E1002，您的自定义内容将无线传输到设备。电子纸显示屏将更新以显示您的仪表板，如果您创建了多个页面，您可以使用导航按钮在它们之间切换。
+在 SenseCraft 平台中创建并保存您的仪表板后，只需点击"部署到设备"，选择您已配对的 reTerminal E1002，您的自定义内容将无线传输到设备。电子纸显示屏将更新以显示您的仪表板，如果您创建了多个页面，可以使用导航按钮在它们之间切换。
 
-## 操作设备
+## 设备操作
 
 ### 刷新按钮
 
@@ -303,7 +302,7 @@ reTerminal E1002 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 设备顶部的刷新按钮具有多种功能：
 
-- **单击**：手动刷新显示屏并检查来自 SenseCraft 平台的新内容。蜂鸣器将响一次以确认操作。此按钮也常用于唤醒设备。当设备进入睡眠状态且仪表板刷新命令无法立即传达到设备时，您可以使用此按钮唤醒设备。
+- **单击**：手动刷新显示屏并检查来自 SenseCraft 平台的新内容。蜂鸣器会响一声以确认操作。此按钮通常也用于唤醒设备。当设备进入睡眠状态且仪表板刷新命令无法立即传达到设备时，您可以使用此按钮唤醒设备。
 
 - **长按**（未来功能）：将激活语音输入模式。
 
@@ -323,13 +322,13 @@ reTerminal E1002 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 **步骤 1.** 同时按住两个导航按钮（左和右）2 秒钟。
 
-**步骤 2.** 设备将进入 Wi-Fi 配置模式，您可以再次按照[网络设置](#网络设置)步骤连接到新网络。
+**步骤 2.** 设备将进入 Wi-Fi 配置模式，您可以再次按照[网络设置](#network-setup)步骤连接到新网络。
 
 ### LED 指示灯
 
 - **红色 LED**：
-  - 关闭：完全充电或未充电
-  - 常亮：充电中
+  - 熄灭：已充满电或未充电
+  - 常亮：正在充电
 
 - **绿色 LED**：
   - 启动时亮 30 秒：设备正在开机
@@ -338,9 +337,9 @@ reTerminal E1002 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 使用电池供电时：
 
-- 设备将在刷新之间自动进入低功耗模式
+- 设备将在刷新间隔期间自动进入低功耗模式
 
-- 电池寿命取决于刷新频率（在默认设置下，满电通常可使用 3 个月）
+- 电池寿命取决于刷新频率（在默认设置下，充满电通常可使用 3 个月）
 
 - 当电池电量低于 20% 时，设备将在右上角显示低电量图标
 
@@ -350,11 +349,11 @@ reTerminal E1002 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 ### 扩展引脚
 
-reTerminal E1002 具有一个 8 引脚扩展接头（J2），为添加外部传感器、模块或其他硬件以扩展设备功能提供连接选项。此扩展接头暴露了几个 ESP32-S3 GPIO 引脚和通信接口，使其成为您 DIY 项目的多功能连接点。
+reTerminal E1002 配备了一个 8 引脚扩展接头 (J2)，提供连接选项，用于添加外部传感器、模块或其他硬件来扩展设备功能。此扩展接头暴露了几个 ESP32-S3 GPIO 引脚和通信接口，使其成为您 DIY 项目的多功能连接点。
 
 #### 扩展接头引脚定义
 
-8 引脚扩展接头（J2）具有以下引脚定义：
+8 引脚扩展接头 (J2) 的引脚定义如下：
 
 <div class="table-center">
 	<table align="center">
@@ -394,7 +393,6 @@ reTerminal E1002 具有一个 8 引脚扩展接头（J2），为添加外部传�
 			<td>具有模拟输入功能的通用 I/O（ADC1 通道 4）</td>
 		</tr>
 		<tr>
-
 			<td>5</td>
 			<td>ESP_IO17/TX1</td>
 			<td>GPIO17</td>
@@ -423,6 +421,7 @@ reTerminal E1002 具有一个 8 引脚扩展接头（J2），为添加外部传�
 			<td>GPIO 或 I2C 数据信号</td>
 		</tr>
 	</table>
+
 </div>
 
 ## 设备放置
@@ -431,7 +430,7 @@ reTerminal E1002 配备了一个 3D 打印支撑架配件，可让您将设备�
 
 **步骤 1.** 找到包装中包含的 3D 打印支撑架。
 
-**步骤 2.** 将支撑架放置在 reTerminal E1002 底部背面的指定安装区域，该区域有嵌入式螺母。
+**步骤 2.** 将支撑架对准 reTerminal E1002 底部背面的指定安装区域，该区域有嵌入式螺母。
 
 **步骤 3.** 使用长螺丝刀将支撑架固定到设备上，将螺丝拧入 reTerminal E1002 背面的嵌入式螺母中。
 
@@ -440,9 +439,9 @@ reTerminal E1002 配备了一个 3D 打印支撑架配件，可让您将设备�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/139.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::note
-支撑架提供固定的观看角度，无法调节。这种固定定位设计旨在在大多数使用场景中提供最佳可见性。
+支撑架提供固定的观看角度，无法调节。这种固定定位设计旨在在大多数使用场景中提供最佳可视性。
 
-支撑架允许设备放置在桌子、台面或架子上，使其非常适合在各种环境中用作信息显示器、控制面板或数字相框。
+支撑架允许将设备放置在桌子、台面或架子上，使其非常适合在各种环境中用作信息显示器、控制面板或数字相框。
 :::
 
 ## 故障排除
@@ -461,10 +460,10 @@ reTerminal E1002 配备了一个 3D 打印支撑架配件，可让您将设备�
 - 检查您的 Wi-Fi 路由器是否支持 2.4GHz 网络（不支持 5GHz）
 - 尝试将设备移近 Wi-Fi 路由器
 
-### Q3：显示屏不更新
+### Q3：显示不更新
 
 - 按下刷新按钮手动触发更新
-- 验证设备是否连接到 Wi-Fi（角落没有断开连接图标）
+- 验证设备已连接到 Wi-Fi（角落没有断开连接图标）
 - 检查您的 SenseCraft 账户以确保仪表板已正确部署
 - 如果问题持续存在，尝试重启设备
 
@@ -478,9 +477,9 @@ reTerminal E1002 配备了一个 3D 打印支撑架配件，可让您将设备�
 
 - [reTerminal E1002 原理图 (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004321_reTerminal_E1002_V1.0_SCH_250805.pdf)
 - [ESP32-S3 数据手册](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
-- [SenseCraft HMI 平台文档](https://wiki.seeedstudio.com/cn/sensecraft_hmi_overview)
+- [SenseCraft HMI 平台文档](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
 - [外观整体 3D 模型 STP 文件](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reterminal_esp-250904.stp)
-<!-- - [GitHub Repository](/cn/getting_started_with_reterminal_e1002) -->
+<!-- - [GitHub Repository](/getting_started_with_reterminal_e1002) -->
 
 ## 技术支持与产品讨论
 

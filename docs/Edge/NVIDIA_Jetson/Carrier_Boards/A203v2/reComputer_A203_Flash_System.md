@@ -286,8 +286,6 @@ Now, we need to install the driver as well to make sure each component on the bo
   </tbody>
 </table>
 
-
-
 !!!Note
  There are two JetPack 5.0.2 drivers for A203 included in the downloaded files. Both work fine, except that one of them supports **IMX-219 camera** and the other one supports **IMX-477 camera**.
 
@@ -557,11 +555,11 @@ If you can't get into the system in **Flashing to eMMC with command-line -- Step
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

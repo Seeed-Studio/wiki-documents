@@ -21,6 +21,7 @@ You can securely manage NVIDIA® JetPack 4.6 onward versions with Cyber Security
 Allxon brings in-band and out-of-band remote device management services to all edge devices to help businesses save on time and cut out exponential labor costs. By simply navigating on an easy-to-use single cloud portal, businesses can effortlessly optimize and streamline their services.
 
 ## Hardware Supported
+
 - [Support all nvidia jetson devices](https://www.seeedstudio.com/tag/nvidia.html)
 
 ## Prerequisites
@@ -29,10 +30,10 @@ Allxon brings in-band and out-of-band remote device management services to all e
 - Latest Jetson OS already installed on the Jetson Device
 - Monitor, keyboard, mouse (optional)
 
-
 ## Getting Started
 
 Getting started with Allxon only takes a couple of minutes!
+
 - Hardware Wiring Introduction
 - Sign Up for Allxon Account
 - Install Allxon DMS Agent on Jetson Device
@@ -40,11 +41,11 @@ Getting started with Allxon only takes a couple of minutes!
 - Add Jetson Device to Allxon DMS Portal
 
 ### Hardware Wiring Introduction
-Pin Define for OOB Enabler main board and the corresponding color of 
+
+Pin Define for OOB Enabler main board and the corresponding color of
 the cable.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/writting-1.png" alt="pir" width="500" height="auto"/></p>
-Here, we will use the wiring diagram of OBB and Jetson Orin Nano as an example. The following information provides wiring examples for the NVIDIA® 
-Jetson™ Orin Nano Dev Kit.
+Here, we will use the wiring diagram of OBB and Jetson Orin Nano as an example. The following information provides wiring examples for the NVIDIA® Jetson™ Orin Nano Dev Kit.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/wiring-2.png" alt="pir" width="700" height="auto"/></p>
 We have also provided a schematic diagram of the wiring.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/wiring-3.png" alt="pir" width="1000" height="auto"/></p>
@@ -140,11 +141,11 @@ If you click on the device, you will see more information for your device. Now y
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

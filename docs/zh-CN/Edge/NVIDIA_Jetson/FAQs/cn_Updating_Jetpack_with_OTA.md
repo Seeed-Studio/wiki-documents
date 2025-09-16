@@ -1,33 +1,34 @@
 ---
 description: ... 
-title: 使用基于镜像的OTA更新Jetson Linux
+title: 使用基于镜像的空中升级更新 Jetson Linux
 keywords:
 - reComputer
 - OTA
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/updating_jetpack_with_ota
 last_update:
-  date: 2025/3/19
+  date: 3/19/2025
   author: Youjiang
 ---
 
-本教程将以 [reComputer J3010](https://www.seeedstudio.com/reComputer-J3010-p-5589.html) 为例，演示如何通过基于镜像的OTA方式将Jetson Linux从Jetpack 5.1.3更新到Jetpack 6.0。
 
-## 前置条件
+本教程将以 [reComputer J3010](https://www.seeedstudio.com/reComputer-J3010-p-5589.html) 为例，演示如何使用基于镜像的空中升级将 Jetson linux 从 jetpack5.1.3 更新到 jetpack6.0。
+
+## 前提条件
 
 - reComputer J4012/ J4011/ J3010 或 J3011
-- Ubuntu 20.04 主机电脑
+- Ubuntu 20.04 主机
 - USB Type-C 数据传输线
 
 :::info
-这里我们使用reComputer经典系列进行演示。其他系列的reComputer也可以按照本教程实现OTA固件升级。
+这里我们使用 reComputer 经典系列进行演示。其他系列的 reComputer 也可以按照本教程实现 OTA 固件升级。
 :::
 
-## 1 生成JP5.1.3的系统镜像
+## 1 生成 JP5.1.3 的系统镜像
 
-### 1.1 准备JP5.1.3 BSP
+### 1.1 准备 JP5.1.3 BSP
 
-首先，需要在**主机电脑**上打开终端窗口，并执行以下命令下载NVIDIA Jetpack 5.1.3版本的BSP。
+首先，您需要在**主机 PC** 上打开终端窗口，执行以下命令下载 NVIDIA Jetpack 5.1.3 版本 BSP。
 
 ```bash
 cd <root_dir>
@@ -35,6 +36,7 @@ mkdir jp5 && cd jp5
 wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v5.0/release/jetson_linux_r35.5.0_aarch64.tbz2
 wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v5.0/release/tegra_linux_sample-root-filesystem_r35.5.0_aarch64.tbz2
 ```
+
 :::note
 其中 `<root_dir>` 是项目的根目录。
 :::
@@ -43,9 +45,9 @@ wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v5.0/releas
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/ota/bsp_jp5.png"/>
 </div>
 
-### 1.2 构建JP5.1.3的系统镜像
+### 1.2 构建 JP5.1.3 系统镜像
 
-在主机电脑的终端窗口中运行以下命令以构建5.1.3系统镜像。
+在主机 PC 的终端窗口中运行以下命令来构建 5.1.3 系统镜像。
 
 ```bash
 tar xf jetson_linux_r35.5.0_aarch64.tbz2
@@ -103,19 +105,19 @@ sudo  BOARDID=<BOARDID> BOARDSKU=<BOARDSKU> FAB=<FAB>  BOARDREV=<BOARDREV> CHIP_
   </tbody>
 </table>
 
-请根据您使用的具体Jetson模块替换相应的变量。例如，对于reComputer J3010：
+请根据您使用的具体 Jetson 模块替换相应的变量。对于 reComputer J3010：
 `sudo  BOARDID=3767 BOARDSKU=0004 FAB=300  BOARDREV=N.2 CHIP_SKU=00:00:00:D6 ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_nvme.xml  -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml --no-systemimg" --no-flash  --massflash 5  --network usb0  jetson-orin-nano-devkit  external`
 :::
 
-编译成功后，将在 `Linux_for_Tegra` 目录中生成一个系统镜像包。
+编译成功后，将在 `Linux_for_Tegra` 目录中生成系统镜像包。
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/ota/build_jp5.png"/>
 </div>
 
-### 1.3 将JP5.1.3刷写到设备（可选）
+### 1.3 将 JP5.1.3 刷写到设备（可选）
 
-如果您想在Jetson设备上测试此固件，可以参考[此教程](https://wiki.seeedstudio.com/cn/reComputer_J4012_Flash_Jetpack/)将固件刷写到Jetson设备中。
+如果您想在 Jetson 设备上测试此固件，可以参考[此 wiki](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/) 将固件刷写到 Jetson 设备中。
 
 ```bash
 sudo tar xpf mfi_jetson-orin-nano-devkit.tar.gz
@@ -127,7 +129,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ### 2.1 准备 BSP
 
-您需要在 **主机 PC** 上打开一个终端窗口，并执行以下命令以下载 NVIDIA Jetpack 6.0 版本的 BSP。
+您需要在**主机 PC**上打开终端窗口并执行以下命令来下载 NVIDIA Jetpack 6.0 版本的 BSP。
 
 ```bash
 cd <root_dir>
@@ -141,9 +143,9 @@ wget https://developer.nvidia.com/downloads/embedded/l4t/r36_release_v3.0/releas
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/ota/bsp_jp6.png"/>
 </div>
 
-### 2.2 构建 JP6 的系统镜像
+### 2.2 构建 JP6 系统镜像
 
-请参考 [1.2](./#12-build-system-image-of-jp513) 中的步骤进行操作，并注意修改其中的变量。
+请参考 [1.2](./#12-build-system-image-of-jp513) 中的步骤进行执行，并注意修改其中的变量。
 
 ```bash
 tar xf jetson_linux_r36.3.0_aarch64.tbz2
@@ -157,7 +159,7 @@ sudo BOARDID=<BOARDID> BOARDSKU=<BOARDSKU> FAB=<FAB> BOARDREV=<BOARDREV> CHIP_SK
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/ota/build_jp6.png"/>
 </div>
 
-### 2.3 生成 OTA 负载包
+### 2.3 生成 OTA 载荷包
 
 在主机 PC 的终端窗口中执行以下命令。
 
@@ -168,13 +170,13 @@ cd Linux_for_Tegra
 sudo BASE_BSP=<root_dir>/jp5/Linux_for_Tegra ./tools/ota_tools/version_upgrade/l4t_generate_ota_package.sh --external-device nvme0n1 -S 80GiB jetson-orin-nano-devkit R35-5
 ```
 
-命令执行完成后，您将在 `Linux_for_Tegra/bootloader/jetson-orin-nano-devkit` 目录下获得 `ota_payload_package.tar.gz` 文件。
+命令完成后，您将在 Linux_for_Tegra/bootloader/jetson-orin-nano-devkit 目录中获得 `ota_payload_package.tar.gz` 文件。
 
 ## 3 在设备上应用 OTA 包
 
 ### 3.1 准备工作
 
-将生成的 OTA 包 (`ota_payload_package.tar.gz`) 复制到 Jetson 设备，并在 Jetson 设备的终端窗口中执行以下命令。
+将生成的 OTA 包（`ota_payload_package.tar.gz`）复制到 Jetson 设备上，并在 Jetson 设备的终端窗口中执行以下命令。
 
 ```bash
 scp <...>/jp6/Linux_for_Tegra/bootloader/jetson-orin-nano-devkit/ota_payload_package.tar.gz ~
@@ -184,26 +186,27 @@ sudo mv ~/ota_payload_package.tar.gz /ota
 tar xf ota_tools_R36.3.0_aarch64.tbz2
 ```
 
-### 3.2 应用 OTA
+### 3.2 Apply OTA
+
 ```bash
 cd ~/Linux_for_Tegra/tools/ota_tools/version_upgrade
 sudo ./nv_ota_start.sh /ota/ota_payload_package.tar.gz
 ```
 
-当此命令成功完成后，重启设备。
+此命令成功完成后，重启设备。
 
-最终，设备将从 5.1.3 成功升级到 6.0。
+最终，设备成功从 5.1.3 升级到 6.0。
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们为您提供多种支持渠道，以确保您在使用我们的产品时获得顺畅的体验。我们提供多种沟通方式，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在此为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

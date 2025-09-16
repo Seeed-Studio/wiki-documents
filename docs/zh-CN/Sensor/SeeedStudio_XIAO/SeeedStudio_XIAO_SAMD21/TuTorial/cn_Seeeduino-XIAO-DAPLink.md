@@ -11,7 +11,7 @@ last_update:
 ---
 # Seeed Studio XIAO SAMD 21 DAPLink
 
-现在，我们已经**开发了运行在您的 Arduino 开发板**（*SAMD 系列*）上的 DAPLink 固件，例如 [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) 和 [Seeeduino Xiao](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)，这样您就可以以最经济高效的方式上传和调试支持 DAPLink 的开发板！
+现在，我们已经**开发了运行在您的 Arduino 开发板**（*SAMD 系列*）上的 DAPLink 固件，例如 [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) 和 [Seeeduino Xiao](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)，这样您就可以以最具成本效益的方式上传和调试支持 DAPLink 的开发板！
 
 ## 特性
 
@@ -29,7 +29,7 @@ last_update:
 
 - 下载 [**simple_daplink_xiao**](http://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/simple_daplink_xiao.uf2) `uf2` 文件。
 
-通过快速滑动电源开关两次进入引导加载程序模式。更多参考信息，请参见[这里](https://wiki.seeedstudio.com/cn/Wio-Terminal-Getting-Started/#faq)。
+通过快速滑动电源开关两次进入引导加载程序模式。更多参考信息，请参见[这里](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/#faq)。
 
 您的 PC 中应该会出现一个名为 `Arduino` 的外部驱动器。将下载的 uf2 文件拖拽到 `Arduino` 驱动器中。
 

@@ -15,7 +15,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/2350image.png" style={{width:800, height:'auto'}}/></div>
 
-Seeed Studio XIAO RP2350 具有丰富的接口。它有 **19 个数字 I/O** 可用作 **PWM 引脚**，以及 **3 个模拟输入**可用作 **ADC 引脚**。它支持四种串行通信接口，如 **UART、I2C 和 SPI**。本教程将帮助您了解这些接口并在您的下一个项目中实现它们！
+Seeed Studio XIAO RP2350 具有丰富的接口。它有 **19 个数字 I/O** 引脚可用作 **PWM 引脚**，以及 **3 个模拟输入**引脚可用作 **ADC 引脚**。它支持四种串行通信接口，如 **UART、I2C 和 SPI**。本教程将帮助您了解这些接口并在您的下一个项目中实现它们！
 
 ## 准备工作
 
@@ -91,7 +91,6 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/1.gif" style={{width:500, height:'auto'}}/></div>
 
-
 ## 数字引脚作为PWM
 
 XIAO RP2350上的所有GPIO引脚都支持PWM输出。因此，您可以使用任何引脚输出PWM来调节灯光亮度、控制舵机和其他功能。
@@ -135,27 +134,27 @@ XIAO RP2350上的所有GPIO引脚都支持PWM输出。因此，您可以使用�
 在这个示例中，我们将演示如何使用PWM输出来控制灯光的亮度。
 
 ```cpp
-int LED_pin = D0;    // LED连接到数字引脚10
+int LED_pin = D0;    // LED connected to digital pin 10
 
 void setup() {
-  // 声明LED引脚为输出
+  // declaring LED pin as output
   pinMode(LED_pin, OUTPUT);
 }
 
 void loop() {
-  // 从最小值到最大值以5点增量淡入：
+  // fade in from min to max in increments of 5 points:
   for (int fadeValue = 0 ; fadeValue <= 255; fadeValue += 3) {
-    // 设置值（范围从0到255）：
+    // sets the value (range from 0 to 255):
     analogWrite(LED_pin, fadeValue);
-    // 等待30毫秒以查看调光效果
+    // wait for 30 milliseconds to see the dimming effect
     delay(30);
   }
 
-  // 从最大值到最小值以5点增量淡出：
+  // fade out from max to min in increments of 5 points:
   for (int fadeValue = 255 ; fadeValue >= 0; fadeValue -= 3) {
-    // 设置值（范围从0到255）：
+    // sets the value (range from 0 to 255):
     analogWrite(LED_pin, fadeValue);
-    // 等待30毫秒以查看调光效果
+    // wait for 30 milliseconds to see the dimming effect
     delay(30);
   }
 }
@@ -205,7 +204,6 @@ XIAO MG24(Sense) 开发板具有 12 位 ADC，可高分辨率读取模拟传感�
   </tr>
 </table>
 
-
 ### 软件实现
 
 ``` cpp
@@ -213,18 +211,19 @@ int loudness;
 
 void setup()
 {
-    Serial.begin(9600);// 初始化串口
+    Serial.begin(9600);// initialize Serial
 }
 
 void loop()
 {
-    loudness = analogRead(A0);// 从 A0 引脚读取模拟数据
+    loudness = analogRead(A0);// read analog data from A0 pin
     Serial.println(loudness);
     delay(200);
 }
 ```
 
 ### 效果
+
 如果一切顺利，上传程序后，您应该看到以下效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/5.png" style={{width:800, height:'auto'}}/></div>
@@ -233,7 +232,7 @@ void loop()
 
 在使用 Arduino IDE 时，串行通信是许多项目的重要组成部分。要在 Arduino IDE 中使用串行通信，您需要首先打开串行监视器窗口。这可以通过点击工具栏中的**串行监视器**图标或按**Ctrl+Shift+M**快捷键来完成。
 
-### 一般用法
+### 常规用法
 
 一些常用的串行函数包括：
 
@@ -322,7 +321,7 @@ XIAO RP2350 具有 I2C 接口，可用于许多传感器的数据传输和解析
 <table align="center">
   <tr>
         <th>Seeed Studio XIAO RP2350</th>
-        <th>Seeed Studio XIAO 扩展板配 Grove OLED</th>
+        <th>Seeed Studio XIAO 扩展底板配 Grove OLED</th>
         <th>Grove - DHT20 温湿度传感器</th>
   </tr>
   <tr>
@@ -349,17 +348,17 @@ XIAO RP2350 具有 I2C 接口，可用于许多传感器的数据传输和解析
   </tr>
 </table>
 
-DHT20 传感器使用 I2C 协议，因此我们可以使用 XIAO 扩展板上的 I2C 端口来获取传感器数据。
+DHT20传感器使用I2C协议，因此我们可以使用XIAO扩展板上的I2C端口来获取传感器数据。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/7.png" style={{width:500, height:'auto'}}/></div>
 
 ### 软件实现
 
-本示例介绍如何通过 Seeed Studio XIAO RP2350 扩展板获取 DHT20 传感器数据。
+本示例介绍如何通过Seeed Studio XIAO RP2350扩展底板获取DHT20传感器数据。
 
-步骤 1. 将 Seeed Studio XIAO RP2350 安装到扩展板上，然后连接 Type-C 线缆。
+步骤1. 将Seeed Studio XIAO RP2350安装到扩展板上，然后连接Type-C线缆。
 
-步骤 2. 安装 **Grove Temperature And Humidity Sensor** 库。
+步骤2. 安装**Grove温湿度传感器**库。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor" target="_blank" rel="noopener noreferrer">
@@ -367,39 +366,39 @@ DHT20 传感器使用 I2C 协议，因此我们可以使用 XIAO 扩展板上的
     </a>
 </div>
 
-步骤 3. 将库添加到 Arduino。
+步骤3. 将库添加到Arduino。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/10.png" style={{width:800, height:'auto'}}/></div>
 
-步骤 4. 从刚下载的库中打开 DHTtester 示例。
+步骤4. 从刚下载的库中打开DHTtester示例。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/11.png" style={{width:800, height:'auto'}}/></div>
 
-因为我们使用 DHT20，所以需要取消注释 DHT20 代码，如下面的代码所示。
+因为我们使用DHT20，所以需要取消注释DHT20代码，如下面的代码所示。
 
 ```c
-// 各种DHT湿度/温度传感器的示例测试代码
-// 由ladyada编写，公共领域
+// Example testing sketch for various DHT humidity/temperature sensors
+// Written by ladyada, public domain
 
 #include "Grove_Temperature_And_Humidity_Sensor.h"
 
-// 取消注释你正在使用的类型！
+// Uncomment whatever type you're using!
 //#define DHTTYPE DHT11   // DHT 11
 // #define DHTTYPE DHT22   // DHT 22  (AM2302)
 //#define DHTTYPE DHT21   // DHT 21 (AM2301)
 //#define DHTTYPE DHT10   // DHT 10
 #define DHTTYPE DHT20   // DHT 20
 
-/*注意：DHT10和DHT20与其他DHT*传感器不同，它使用i2c接口而不是单线接口*/
-/*所以它不需要引脚。*/
-// #define DHTPIN 2     // 我们连接到的引脚（DHT10和DHT20不需要定义它）
+/*Notice: The DHT10 and DHT20 is different from other DHT* sensor ,it uses i2c interface rather than one wire*/
+/*So it doesn't require a pin.*/
+// #define DHTPIN 2     // what pin we're connected to（DHT10 and DHT20 don't need define it）
 // DHT dht(DHTPIN, DHTTYPE);   //   DHT11 DHT21 DHT22
-DHT dht(DHTTYPE);         //   DHT10 DHT20不需要定义引脚
+DHT dht(DHTTYPE);         //   DHT10 DHT20 don't need to define Pin
 
-// 将传感器的引脚1（左侧）连接到+5V
-// 将传感器的引脚2连接到你的DHTPIN
-// 将传感器的引脚4（右侧）连接到地线
-// 从引脚2（数据）到引脚1（电源）连接一个10K电阻
+// Connect pin 1 (on the left) of the sensor to +5V
+// Connect pin 2 of the sensor to whatever your DHTPIN is
+// Connect pin 4 (on the right) of the sensor to GROUND
+// Connect a 10K resistor from pin 2 (data) to pin 1 (power) of the sensor
 
 
 #if defined(ARDUINO_ARCH_AVR)
@@ -414,10 +413,10 @@ DHT dht(DHTTYPE);         //   DHT10 DHT20不需要定义引脚
 void setup() {
 
     debug.begin(115200);
-    debug.println("DHTxx测试！");
+    debug.println("DHTxx test!");
     Wire.begin();
 
-    /*如果使用WIO link，必须拉高电源引脚。*/
+    /*if using WIO link,must pull up the power pin.*/
     // pinMode(PIN_GROVE_POWER, OUTPUT);
     // digitalWrite(PIN_GROVE_POWER, 1);
 
@@ -426,19 +425,19 @@ void setup() {
 
 void loop() {
     float temp_hum_val[2] = {0};
-    // 读取温度或湿度大约需要250毫秒！
-    // 传感器读数也可能有长达2秒的"延迟"（这是一个非常慢的传感器）
+    // Reading temperature or humidity takes about 250 milliseconds!
+    // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
 
 
     if (!dht.readTempAndHumidity(temp_hum_val)) {
-        debug.print("湿度: ");
+        debug.print("Humidity: ");
         debug.print(temp_hum_val[0]);
         debug.print(" %\t");
-        debug.print("温度: ");
+        debug.print("Temperature: ");
         debug.print(temp_hum_val[1]);
         debug.println(" *C");
     } else {
-        debug.println("获取温度和湿度值失败。");
+        debug.println("Failed to get temprature and humidity value.");
     }
 
     delay(1500);
@@ -458,31 +457,31 @@ XIAO RP2350 芯片集成了多个外设，包括一个 SPI 接口，可用于连
 ### 硬件准备
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO RP2350</th>
+ <tr>
+     <th>Seeed Studio XIAO RP2350</th>
       <th>Grove - OLED Display 1.12 (SH1107) V3.0 - SPI/IIC</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/2-102010550%20XIAO%20RP2350-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/2-102010550%20XIAO%20RP2350-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-OLED-Display-1.12-(SH1107)_V3.0/img/10402050_Main-02.png" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
-准备好上述硬件后，使用跳线将 XIAO 和 OLED 的 SPI 接口连接起来。请参考下表进行接线。
+在按照上述方式准备好硬件后，使用跳线将 XIAO 和 OLED 的 SPI 接口连接起来。请参考下表进行接线。
 
-|XIAO RP2350| OLED Display|
+|XIAO RP2350| OLED 显示屏|
 |-----------|-------------|
 |D8|SCL|
 |D10|SI|
@@ -494,13 +493,13 @@ XIAO RP2350 芯片集成了多个外设，包括一个 SPI 接口，可用于连
 
 ### 软件实现
 
-接下来，我们将以下面的程序为例，介绍如何使用 SPI 接口控制 OLED 屏幕显示。
+接下来，我们将以下面的程序为例，介绍如何使用 SPI 接口来控制 OLED 屏幕显示。
 
 安装 u8g2 库。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -528,30 +527,29 @@ void loop(void) {
 }
 ```
 
-在 `setup()` 函数中，使用适当的构造函数参数实例化 `U8G2_SH1107_128X128_1_4W_HW_SPI` 类，这些参数指定了用于片选 (cs)、数据/命令 (dc) 和复位的引脚。然后，调用 `u8g2.begin()` 函数来初始化显示器。
+在 `setup()` 函数中，`U8G2_SH1107_128X128_1_4W_HW_SPI` 类通过适当的构造函数参数进行实例化，这些参数指定了用于片选 (cs)、数据/命令 (dc) 和复位的引脚。然后，调用 `u8g2.begin()` 函数来初始化显示屏。
 
-在 `loop()` 函数中，使用 `u8g2.firstPage()`、`u8g2.setFont()` 和 `u8g2.drawStr()` 函数用新内容更新显示器。`u8g2.firstPage()` 函数设置显示缓冲区以供写入，而 `u8g2.nextPage()` 显示更新的内容。do-while 循环确保内容持续显示，直到程序停止。
+在 `loop()` 函数中，使用 `u8g2.firstPage()`、`u8g2.setFont()` 和 `u8g2.drawStr()` 函数更新显示屏的新内容。`u8g2.firstPage()` 函数设置显示缓冲区以供写入，而 `u8g2.nextPage()` 显示更新的内容。do-while 循环确保内容持续显示，直到程序停止。
 
-总的来说，这段代码演示了如何使用 U8g2 库控制 OLED 显示器并在其上显示文本。
+总的来说，这段代码演示了如何使用 U8g2 库来控制 OLED 显示屏并在其上显示文本。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/15.png" style={{width:700, height:'auto'}}/></div>
 
-
 ## 总结
-您已经学会了 XIAO RP2350 引脚的基本功能。现在，让我们开始享受使用它的乐趣吧~
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/6.png" style={{width:1000, height:'auto'}}/></div>
 
+您已经学会了 XIAO RP2350 引脚的基本功能。现在，让我们尽情享受它的乐趣吧~
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/6.png" style={{width:1000, height:'auto'}}/></div>
 
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

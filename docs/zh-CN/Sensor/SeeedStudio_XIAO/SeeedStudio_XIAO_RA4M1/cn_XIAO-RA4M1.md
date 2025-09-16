@@ -1,7 +1,7 @@
 ---
 title: Seeed Studio XIAO RA4M1 入门指南
 description: |
-  XIAO RA4M1 - 基于 32 位 Renesas RA4M1 的最小开发板，支持 Arduino IDE，19 个 GPIO，RGB LED，CAN BUS，USB 2.0
+  XIAO RA4M1 - 基于 32 位 Renesas RA4M1 的最小开发板，兼容 Arduino IDE，19 个 GPIO，RGB LED，CAN BUS，USB 2.0
 image: https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/1-102010551-Seeed-Studio-XIAO-RA4M1.jpg
 slug: /cn/getting_started_xiao_ra4m1
 keywords:
@@ -15,7 +15,6 @@ sidebar_position: 0
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
 
 <!-- Product Description -->
 
@@ -43,9 +42,8 @@ XIAO RA4M1 将 Renesas 的 RA4M1 芯片（32 位 ARM® Cortex®-M4 MCU，最高 
 - **强大的安全功能：** 内置硬件加密、安全启动、密钥存储等功能，确保应用安全。
 - **软件兼容性：** 完全兼容 Arduino IDE，实现无缝项目开发和原型制作。
 - **高效的电源设计：** 提供 4 种工作模式，深度睡眠功耗低至 45μA，支持锂电池充电管理。
-- **紧凑的拇指大小设计：** 尺寸为 21 x 17.8mm，采用 Seeed Studio 经典的 XIAO 外形尺寸，适用于空间受限的应用。
-- **生产友好：** 表面贴装器件（SMD）设计，所有元件位于正面，两侧设有邮票孔，便于高效批量生产。
-
+- **紧凑的拇指大小设计：** 尺寸为 21 x 17.8mm，采用 Seeed Studio 经典的 XIAO 外形尺寸，非常适合空间受限的应用。
+- **生产友好：** 表面贴装器件（SMD）设计，所有元件位于正面，两侧有邮票孔，便于高效批量生产。
 
 ### 规格参数
 
@@ -115,19 +113,19 @@ XIAO RA4M1 将 Renesas 的 RA4M1 芯片（32 位 ARM® Cortex®-M4 MCU，最高 
 
 ### 硬件概述
 
-在开始之前，了解产品的一些基本参数是非常重要的。下表提供了 Seeed Studio XIAO RA4M1 特性的相关信息。
+在一切开始之前，了解产品的一些基本参数是非常重要的。下表提供了 Seeed Studio XIAO RA4M1 特性的相关信息。
 
 <!-- 硬件相关 -->
 
 <!-- 引脚等的定义 -->
 <table>
-	<tr>
-	    <th>XIAO RA4M1 正面指示图</th>
-	</tr>
+ <tr>
+     <th>XIAO RA4M1 正面指示图</th>
+ </tr>
     <tr>
         <br />
         <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO-RA4M1-components.png" style={{width:380, height:'auto'}}/></div>
-        <br />        
+        <br />
     </tr>
     <tr>
         <th>XIAO RA4M1 引脚列表</th>
@@ -160,7 +158,7 @@ XIAO RA4M1 将 Renesas 的 RA4M1 芯片（32 位 ARM® Cortex®-M4 MCU，最高 
 XIAO RA4M1 推荐的编程工具是 Arduino IDE，因此作为软件准备的一部分，您需要完成 Arduino 的安装。
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 - **步骤 1.** 根据您的操作系统下载并安装稳定版本的 Arduino IDE。
@@ -173,19 +171,18 @@ XIAO RA4M1 推荐的编程工具是 Arduino IDE，因此作为软件准备的一
 
 - **步骤 3.** 将 RA4M1 开发板包添加到您的 Arduino IDE。
 
-    导航到 **File > Preferences**，在 **"Additional Boards Manager URLs"** 中填入以下网址：
+    导航到 **文件 > 首选项**，在 **"附加开发板管理器网址"** 中填入以下网址：
     *https://files.seeedstudio.com/arduino/package_renesas_1.2.0_index.json*
-    
+
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/arduino_preference.png" style={{width:800, height:'auto'}}/></div>
 
-    导航到 **Tools > Board > Boards Manager...**，在搜索框中输入关键词 **RA4M1**，选择最新版本的 **Seeed Renesas Board**，然后安装它。
+    导航到 **工具 > 开发板 > 开发板管理器...**，在搜索框中输入关键词 **RA4M1**，选择最新版本的 **Seeed Renesas Board**，并安装它。
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/board_manager.png" style={{width:600, height:'auto'}}/></div>
 - **步骤 4.** 选择您的开发板和端口。
 
-    在 Arduino IDE 顶部，您可以在左侧的开发板中搜索 **xiao**，选择 XIAO_RA4M1，然后直接选择端口。
+    在 Arduino IDE 顶部，您可以在左侧的开发板中搜索 **xiao**，选择 XIAO_RA4M1，并直接选择端口。
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/select_port.png" style={{width:800, height:'auto'}}/></div>
-
 
 ## BootLoader 模式
 
@@ -210,12 +207,14 @@ XIAO RA4M1 推荐的编程工具是 Arduino IDE，因此作为软件准备的一
 
 - **步骤 1.** 启动 Arduino 应用程序。
 - **步骤 2.** 导航到 **File > Examples > 01.Basics > Blink**，打开程序。
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/blink_code.png" style={{width:700, height:'auto'}}/></div>
 
 - **步骤 3.** 选择板型为 **XIAO RA4M1**，并选择正确的端口号来上传程序。
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/choose_board.png" style={{width:700, height:'auto'}}/></div>
 
-程序成功上传后，您将看到以下输出消息，并且可以观察到 XIAO RA4M1 右侧的橙色 LED 正在闪烁。
+程序成功上传后，您将看到以下输出信息，并且可以观察到 XIAO RA4M1 右侧的橙色 LED 正在闪烁。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/blink.gif" style={{width:700, height:'auto'}}/></div>
 
 恭喜，您已经学会了如何为 XIAO RA4M1 编写和上传程序！
@@ -224,6 +223,7 @@ XIAO RA4M1 推荐的编程工具是 Arduino IDE，因此作为软件准备的一
 :::
 
 ## 玩转 RGB LED
+
 XIAO RA4M1 配备了一个内置的 RGB LED，您可以控制它，以下是如何在红色、绿色和蓝色之间平滑改变 LED 颜色的示例。
 
 - **步骤 1.** 下载 `Adafruit_NeoPixel` 库
@@ -270,42 +270,43 @@ void loop() {
 }
 
 ```
-- **步骤 3.** 选择板型为 **XIAO RA4M1**，并选择正确的端口号来上传程序。
+
+- **步骤 3.** 选择开发板型号为 **XIAO RA4M1**，并选择正确的端口号来上传程序。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/rgb_led.gif" style={{width:600, height:'auto'}}/></div>
 
-## 电池和电源管理
+## 电池与电源管理
 
-是否可以在不使用额外组件的情况下读取电池电压？是的，使用 XIAO RA4M1，这比以往任何时候都更容易。在之前的 XIAO 系列成员中，例如 [XIAO ESP32C3](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)，读取电池电压需要手动连接到 A0 并使用电阻。
+是否可以在不使用额外组件的情况下读取电池电压？是的，使用 XIAO RA4M1，这比以往任何时候都更容易。在之前的 XIAO 系列产品中，例如 [XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)，读取电池电压需要手动连接到 A0 引脚并使用电阻。
 
 但是使用 XIAO RA4M1，这个过程得到了简化。您现在可以直接使用 `BAT_DET_PIN/P105` 引脚来读取电池电压水平，简化您的设计和开发。只需记住将 `BAT_READ_EN/P400` 引脚设置为高电平，因为这是启用电池电量读取所必需的。
 
 - **步骤 1.** 硬件准备
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO RA4M1</th>
+ <tr>
+     <th>Seeed Studio XIAO RA4M1</th>
         <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
-XIAO 扩展板上的 OLED 显示屏使用 I2C 协议，通过板上的 I2C 电路连接到 XIAO 的 I2C 接口。因此，我们可以直接将 XIAO 插入扩展板并对其进行编程以在屏幕上显示内容。
+XIAO 扩展板上的 OLED 显示屏使用 I2C 协议，通过板上的 I2C 电路连接到 XIAO 的 I2C 接口。因此，我们可以直接将 XIAO 插入扩展板并对其进行编程，以在屏幕上显示内容。
 
 - **步骤 2.** 安装 u8g2 库。
 
@@ -354,7 +355,8 @@ void loop() {
 }
 
 ```
-- **步骤 4.** 选择板型为 **XIAO RA4M1**，并选择正确的端口号来上传程序
+
+- **步骤 4.** 选择开发板型号为 **XIAO RA4M1**，并选择正确的端口号来上传程序
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/voltage.png" style={{width:600, height:'auto'}}/></div>
 
@@ -370,9 +372,7 @@ void loop() {
 <!-- - 📄 **[XLSX]** [Seeed Studio XIAO RA4M1 pinout sheet](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO-RP2040-pinout_sheet.xlsx) -->
 - 🔗 **[Kicad]** [Seeed Studio XIAO RA4M1 封装库](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-
 ## 故障排除
-
 
 ### Q1: 焊接引脚时应该注意什么
 
@@ -383,11 +383,11 @@ void loop() {
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -1,6 +1,6 @@
 ---
-description: Este wiki proporciona el tutorial de ensamblaje y depuración para el Lekiwi y realiza la recolección de datos y entrenamiento dentro del framework Lerobot.
-title: Cómo usar el Lekiwi en Lerobot
+description: Este wiki proporciona el tutorial de ensamblaje y depuración para el Lekiwi y realiza la recolección de datos y entrenamiento dentro del marco de trabajo Lerobot.
+title: Lekiwi en Lerobot
 keywords:
 - Lerobot
 - Huggingface
@@ -17,13 +17,13 @@ last_update:
 
 :::tip
 
-Este repositorio de tutorial mantiene la versión estable verificada de Lerobot al 5 de junio de 2025. Actualmente, ​Hugging Face​ ha lanzado una ​actualización importante​ a Lerobot, introduciendo muchas nuevas características. Si quieres experimentar los tutoriales más recientes, por favor sigue la [​documentación oficial​ para orientación](https://huggingface.co/docs/lerobot/index).
+Este repositorio de tutoriales mantiene la versión estable verificada de Lerobot al 5 de junio de 2025. Actualmente, ​Hugging Face​ ha lanzado una ​actualización importante​ a Lerobot, introduciendo muchas nuevas características. Si quieres experimentar los últimos tutoriales, por favor sigue la [​documentación oficial​ para orientación](https://huggingface.co/docs/lerobot/index).
 
 :::
 
 ## Introducción
 
-El [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi) es un proyecto de coche robótico completamente de código abierto lanzado por [SIGRobotics-UIUC](https://github.com/SIGRobotics-UIUC). Incluye archivos detallados de impresión 3D y guías de operación, diseñado para ser compatible con el framework de aprendizaje por imitación [LeRobot](https://github.com/huggingface/lerobot/tree/main). Soporta el brazo robótico SO101 para habilitar un pipeline completo de aprendizaje por imitación,
+El [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi) es un proyecto de coche robótico completamente de código abierto lanzado por [SIGRobotics-UIUC](https://github.com/SIGRobotics-UIUC). Incluye archivos detallados de impresión 3D y guías de operación, diseñado para ser compatible con el marco de trabajo de aprendizaje por imitación [LeRobot](https://github.com/huggingface/lerobot/tree/main). Soporta el brazo robótico SO101 para habilitar un pipeline completo de aprendizaje por imitación,
 
   <div align="center">
       <img width={800}
@@ -68,25 +68,25 @@ Seeed Studio solo es responsable de la calidad del hardware en sí. Los tutorial
 | Método de Comunicación| UART |
 | Método de Control | PC |
 
-## Lista de Materiales (BOM)
+## Lista de Materiales(BOM)
 
 | Parte | Cantidad | Incluido|
 |--|--|--|
-| Servomotores STS3215 1:345 12V | 3 | ✅ |
+| STS3215 1:345 12V Servomotores | 3 | ✅ |
 | Rueda omnidireccional/rueda universal | 3 | ✅ |
 | Carcasa impresa en 3D Lekiwi | 1 | ✅ |
 | Módulo de Alimentación Buck DC-DC - 24V/12V a 5V | 1 | ✅ |
 | Placa de Control de Motor | 1 | ✅ |
 | Cable Y DC Macho a Doble DC Macho 5521 | 1 | ✅ |
-| Cable USB;Tipo C 2.0 a Tipo C 2.0-Negro;L150mm| 1 | ✅ |
-| Cable USB 3.1 Tipo C a A de 0.5 Metros | 1 | ✅ |
-| Adaptador de Corriente con Enchufe;Negro-12V-2A AC/DC | 1 | ✅ |
+| Cable USB;Type C 2.0 a Type C 2.0-Negro;L150mm| 1 | ✅ |
+| Cable USB 3.1 Type C a A 0.5 Metro | 1 | ✅ |
+| Adaptador de Alimentación con Enchufe;Negro-12V-2A AC/DC | 1 | ✅ |
 | Tornillos Surtidos M2 M3 M4 | Suficientes | ✅ |
-| Raspberry pi | 1 | Opcional |
-| Cámara USB | 1 | Opcional |
-| Cámara de Profundidad | 2 | Opcional |
-| SO-ARM101 Pro | 1 | Opcional |
-| Paquete de Batería de Iones de Litio de Alta Capacidad 12V E326S| 1 | Opcional |
+| Raspberry pi | 1 | Opción |
+| Cámara USB | 1 | Opción |
+| Cámara de Profundidad | 2 | Opción |
+| SO-ARM101 Pro | 1 | Opción |
+| Paquete de Batería de Iones de Litio de Alta Capacidad 12V E326S| 1 | Opción |
 
 ## Entorno del Sistema Inicial
 
@@ -109,16 +109,16 @@ Seeed Studio solo es responsable de la calidad del hardware en sí. Los tutorial
 
 ## Guía de Impresión 3D
 
-### Piezas
+### Partes
 
-Proporcionamos archivos STL listos para imprimir para las piezas impresas en 3D que se muestran a continuación. Estas se pueden imprimir con filamento PLA genérico en impresoras FDM de grado de consumidor. Probamos en una impresora Bambu Lab P1S. Para todos los componentes, simplemente cargamos en bambuslicer, auto-rotamos y auto-organizamos, habilitamos cualquier soporte recomendado, e imprimimos.
+Proporcionamos archivos STL listos para imprimir para las partes impresas en 3D a continuación. Estas pueden imprimirse con filamento PLA genérico en impresoras FDM de grado consumidor. Probamos en una impresora Bambu Lab P1S. Para todos los componentes, simplemente cargamos en bambuslicer, auto-rotar y auto-organizar, habilitar cualquier soporte recomendado, e imprimir.
 
 | Artículo | Cantidad | Notas |
 |:---|:---:|:---:|
 | [Placa base Superior](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/base_plate_layer2.stl) | 1 | |
 | [Placa base Inferior](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/base_plate_layer1.stl) | 1 | |
-| [Soporte del motor de tracción](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/drive_motor_mount_v2.stl) | 3 | |
-| [Cubo de rueda del servo](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/servo_wheel_hub.stl) | 3 | Usar Soportes|
+| [Soporte de motor de tracción](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/drive_motor_mount_v2.stl) | 3 | |
+| [Cubo de rueda de servo](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/servo_wheel_hub.stl) | 3 | Usar Soportes|
 | [Carcasa RasPi Superior](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/pi_case_top.stl) | 1 | 2|
 | [Carcasa RasPi Inferior](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/pi_case_bottom.stl) | 1 | |
 | Arducam [soporte base](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/base_camera_mount.stl) y [Soporte de muñeca](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/wrist_camera_mount.stl)| 1 | **Compatible con [esta cámara](https://www.amazon.com/Arducam-Camera-Computer-Without-Microphone/dp/B0972KK7BC)** |
@@ -126,13 +126,13 @@ Proporcionamos archivos STL listos para imprimir para las piezas impresas en 3D 
 
 ### Parámetros de Impresión
 
-Los archivos STL proporcionados están listos para imprimir en muchas impresoras FDM. A continuación se muestran las configuraciones probadas y sugeridas, aunque otras pueden funcionar.
+Los archivos STL proporcionados están listos para imprimir en muchas impresoras FDM. A continuación están las configuraciones probadas y sugeridas aunque otras pueden funcionar.
 
 - Material: PLA+
 - Diámetro de Boquilla y Precisión: diámetro de boquilla de 0.2mm a altura de capa de 0.2mm
 - Densidad de Relleno: 15%  
 - Velocidad de Impresión: 150 mm/s
-- Si es necesario, sube el código G (archivo de corte) a la impresora e imprime
+- Si es necesario, subir código G (archivo de corte) a la impresora e imprimir
 
 ## Instalar LeRobot
 
@@ -151,13 +151,13 @@ rm ~/miniconda3/miniconda.sh
 
 Copia y pega en tu shell: `source ~/.bashrc` o para Mac: `source ~/.bash_profile` o `source ~/.zshrc` si estás usando zshell
 
-### 3. Crear y activar un entorno conda nuevo para lerobot
+### 3. Crear y activar un entorno conda fresco para lerobot
 
 ```bash
 conda create -y -n lerobot python=3.10
 ```
 
-Luego activa tu entorno conda (¡haz esto cada vez que abras una terminal para usar lerobot!):
+Luego activa tu entorno conda (¡haz esto cada vez que abras un shell para usar lerobot!):
 
 ```bash
 conda activate lerobot
@@ -169,7 +169,7 @@ conda activate lerobot
 git clone https://github.com/huggingface/lerobot.git ~/lerobot
 ```
 
-### 5. Instala ffmpeg en tu entorno
+### 5. Instalar ffmpeg en tu entorno
 
 Cuando uses `miniconda`, instala `ffmpeg` en tu entorno:
 
@@ -185,10 +185,10 @@ cd ~/lerobot && pip install -e ".[feetech]"
 
 ## Instalar LeRobot en laptop(PC)
 
-Si ya tienes instalado LeRobot en tu laptop puedes omitir este paso, de lo contrario por favor sigue adelante mientras hacemos los mismos pasos que hicimos en la Pi.
+Si ya has instalado LeRobot en tu laptop puedes omitir este paso, de lo contrario por favor sigue adelante mientras hacemos los mismos pasos que hicimos en el Pi.
 
 :::tip
-Usamos bastante el Símbolo del sistema (cmd). Si no te sientes cómodo usando el cmd o quieres repasar el uso de la línea de comandos puedes echar un vistazo aquí: [Curso intensivo de línea de comandos](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)
+Usamos el Símbolo del Sistema (cmd) bastante. Si no te sientes cómodo usando el cmd o quieres repasar el uso de la línea de comandos puedes echar un vistazo aquí: [Curso intensivo de línea de comandos](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)
 :::
 
 En tu computadora:
@@ -199,13 +199,13 @@ En tu computadora:
 
 Copia y pega en tu shell: `source ~/.bashrc` o para Mac: `source ~/.bash_profile` o `source ~/.zshrc` si estás usando zshell
 
-### 3. Crear y activar un entorno conda nuevo para lerobot
+### 3. Crear y activar un entorno conda fresco para lerobot
 
 ```bash
 conda create -y -n lerobot python=3.10
 ```
 
-Luego activa tu entorno conda (¡haz esto cada vez que abras una terminal para usar lerobot!):
+Luego activa tu entorno conda (¡haz esto cada vez que abras un shell para usar lerobot!):
 
 ```bash
 conda activate lerobot
@@ -217,7 +217,7 @@ conda activate lerobot
 git clone https://github.com/ZhuYaoHui1998/lerobot ~/lerobot
 ```
 
-### 5. Instala ffmpeg en tu entorno
+### 5. Instalar ffmpeg en tu entorno
 
 Cuando uses `miniconda`, instala `ffmpeg` en tu entorno:
 
@@ -245,7 +245,6 @@ cd ~/lerobot && pip install -e ".[feetech]"
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/62_JWFpvJyA?si=0YCwKUJgy0YVL-A0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/r0LtrTidWdA?si=MEdIJ5XzI8-wbpDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
@@ -262,7 +261,7 @@ cd ~/lerobot && pip install -e ".[feetech]"
 <iframe width="900" height="600" src="https://www.youtube.com/embed/q7zp4qIFdnM?si=fIYgI_3xbrWL7wUM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### Lo siguiente es un tutorial fotográfico
+### El siguiente es un tutorial fotográfico
 
 Puedes consultar el [tutorial de ensamblaje](https://github.com/SIGRobotics-UIUC/LeKiwi) oficial.
 
@@ -273,13 +272,13 @@ Al recibir las piezas impresas, todos los componentes impresos son como se muest
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/1.jpg" />
 </div>
 
-**A. Conecta el motor de accionamiento al soporte del motor usando 12 tornillos autorroscantes m2x6.**
+**A. Fija el motor de tracción al soporte del motor usando 12 tornillos autorroscantes m2x6.**
 
 | **Paso 1** | **Paso 2** |
 |:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/2.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/3.jpg) |
 
-**B. Atornilla el soporte del motor de accionamiento a la placa base inferior usando 12 tornillos de máquina m3x16.**
+**B. Atornilla el soporte del motor de tracción a la placa base inferior usando 12 tornillos de máquina m3x16.**
 
 :::tip
 Recuerda la disposición de ID: 8 representa la rueda trasera, mientras que 7 y 9 corresponden a las ruedas delantera izquierda y delantera derecha respectivamente.
@@ -289,7 +288,7 @@ Recuerda la disposición de ID: 8 representa la rueda trasera, mientras que 7 y 
 |:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/4.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/5.jpg) |
 
-**C. Conecta el cubo de la rueda a la rueda omnidireccional.**
+**C. Fija el cubo de la rueda a la rueda omnidireccional.**
 
 **Paso 1 y Paso 2**: Retira los tres tornillos.
 
@@ -297,25 +296,25 @@ Recuerda la disposición de ID: 8 representa la rueda trasera, mientras que 7 y 
 |:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/7.jpg) |
 
-**Paso 3 y Paso 4**: Conecta el cubo de la rueda a la rueda omnidireccional usando 9 tornillos de máquina m4x18.
+**Paso 3 y Paso 4**: Fija el cubo de la rueda a la rueda omnidireccional usando 9 tornillos de máquina m4x18.
 
 | **Paso 3** | **Paso 4** |
 |:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/8.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/9.jpg) |
 
-**D. Conecta el cuerno del servo al cubo de la rueda usando 6 tornillos de máquina m3x16.**
+**D. Fija el cuerno del servo al cubo de la rueda usando 6 tornillos de máquina m3x16.**
 
 | **Paso 1** | **Paso 2** |**Paso 3** |
 |:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/10.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/11.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/12.jpg) |
 
-**E. Conecta el cuerno del servo al motor de accionamiento usando 3 tornillos de máquina m3x10.**
+**E. Fija el cuerno del servo al motor de tracción usando 3 tornillos de máquina m3x10.**
 
 | **Paso 1** | **Paso 2** |**Paso 3** |
 |:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/13.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/14.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/15.jpg) |
 
-**H. Añade el controlador del servo y conecta todos los circuitos.**
+**H. Añade el controlador de servo y conecta todos los circuitos.**
 
 | **Paso 1** | **Paso 2** |**Paso 3** |**Paso 4** |
 |:---------:|:---------:|:---------:|:---------:|
@@ -325,11 +324,11 @@ Recuerda la disposición de ID: 8 representa la rueda trasera, mientras que 7 y 
 |:---------:|:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/20.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/20-1.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/21.jpg) | ![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/22.jpg) |
 
-El **Power IN** se conecta directamente a la fuente de alimentación, como en el Paso 8, mientras que el puerto **USB-C** proporciona alimentación de 5V al Raspberry Pi.
+La **Entrada de Alimentación** se conecta directamente a la fuente de alimentación, como en el Paso 8, mientras que el puerto **USB-C** proporciona alimentación de 5V al Raspberry Pi.  
 
-Para los **terminales adicionales de 2 pines (5V y 12V)**:
+Para los **terminales adicionales de 2 pines (5V y 12V)**:  
 
-- Si usas un **brazo robótico SO10x de 7.4V**, alimenta la **Placa de Servomotores** a través de la **salida de 5V**.
+- Si usas un **brazo robótico SO10x de 7.4V**, alimenta la **Placa de Servomotores** a través de la **salida de 5V**.  
 - Si usas un **brazo robótico de 12V**, alimenta la **Placa de Servomotores** directamente desde el **divisor de alimentación DC**, como en el Paso 8.
 
 <div align="center">
@@ -337,7 +336,7 @@ Para los **terminales adicionales de 2 pines (5V y 12V)**:
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/23.jpg" />
 </div>
 
-**I. Ahora puedes proceder a montar el Raspberry Pi en la placa superior de la segunda capa del vehículo. Antes de hacerlo, conecta tanto el **cable de alimentación USB-C** como el **cable de comunicación USB-C para servomotores**, luego pásalos a través del panel superior del vehículo.**
+**I. Ahora puedes proceder a montar el Raspberry Pi en la placa superior de la segunda capa del vehículo. Antes de hacerlo, conecta tanto el **cable de alimentación USB-C** como el **cable de comunicación USB-C del servomotor**, luego pásalos a través del panel superior del vehículo.**
 
 **Paso 1** Conecta el cable de alimentación a tu Raspberry Pi y pásalo a través de la abertura central del panel superior.
 
@@ -345,25 +344,25 @@ Para los **terminales adicionales de 2 pines (5V y 12V)**:
 |:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/24.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/25.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/26.jpg) |
 
-**Paso 2** Entre los tres servomotores del chasis, un servo tiene solo un cable conectado. Si necesitas instalar el brazo robótico SO10x, por favor: Retira el cable ID1 del brazo robótico. Conéctalo al motor del chasis. Pásalo a través del panel superior como cable reservado
+**Paso 2** Entre los tres servomotores del chasis, un servo tiene solo un cable conectado. Si necesitas instalar el brazo robótico SO10x, por favor: Retira el cable ID1 del brazo robótico. Conéctalo al motor del chasis. Pásalo a través del panel superior como cable de reserva
 
 |  | | |
 |:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/27.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/28.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/29.jpg) |
 
-**Paso 3** Ahora puedes conectar el USB-C de la placa controladora de servos al puerto USB de la Raspberry Pi.
+**Paso 3** Ahora puedes conectar el USB-C de la placa controladora de servo al puerto USB del Raspberry Pi.
 
 |  | |
 |:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/30.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/31.jpg) |
 
-**J. Ahora necesitas asegurar la Raspberry Pi y las partes restantes de la placa superior usando 12 tornillos M3×16.**
+**J. Ahora necesitas asegurar el Raspberry Pi y las partes restantes de la placa superior usando 12 tornillos M3×16.**
 
 |  |  |  |
 |:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/32.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/33.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/34.jpg) |
 
-**K. Ahora puedes instalar la cámara USB y el Brazo Seguidor usando 1 tornillo M3x16 y 4 tornillos M5×25**
+**K. Ahora puedes instalar la cámara USB y el Brazo Seguidor usando 1 M3x16 y 4 tornillos M5×25**
 
 |  |  |  |
 |:---------:|:---------:|:---------:|
@@ -409,9 +408,9 @@ The port of this MotorsBus is /dev/tty.usbmodem575E0032081
 Reconnect the USB cable.
 ```
 
-Ejemplo de salida al identificar el puerto (p. ej., `/dev/tty.usbmodem575E0031751` en Mac, o posiblemente `/dev/ttyACM0` en Linux):
+Ejemplo de salida al identificar el puerto (por ejemplo, `/dev/tty.usbmodem575E0031751` en Mac, o posiblemente `/dev/ttyACM0` en Linux):
 
-Ejemplo de salida al identificar el puerto (p. ej., `/dev/tty.usbmodem575E0032081`, o posiblemente `/dev/ttyACM1` en Linux):
+Ejemplo de salida al identificar el puerto (por ejemplo, `/dev/tty.usbmodem575E0032081`, o posiblemente `/dev/ttyACM1` en Linux):
 
 :::tip
 
@@ -421,7 +420,7 @@ Finding all available ports for the MotorBus.
 Remove the USB cable from your MotorsBus and press Enter when done.
 ```
 
-Recuerda quitar el usb, luego presiona Enter, de lo contrario la interfaz no será detectada.
+Recuerda retirar el usb, luego presiona Enter, de lo contrario la interfaz no será detectada.
 :::
 
 Solución de problemas: En Linux, es posible que necesites dar acceso a los puertos USB ejecutando:
@@ -430,7 +429,6 @@ Solución de problemas: En Linux, es posible que necesites dar acceso a los puer
 sudo chmod 666 /dev/ttyACM0
 sudo chmod 666 /dev/ttyACM1
 ```
-
 Conecta el cable USB desde tu computadora y la fuente de alimentación a la placa controladora del brazo líder. Luego, ejecuta el siguiente comando o ejecuta el ejemplo de API con el puerto que obtuviste del paso anterior. También necesitarás darle un nombre a tu brazo líder con el parámetro `id`.
 
 ```bash
@@ -445,9 +443,9 @@ Deberías ver la siguiente instrucción.
 Connect the controller board to the 'gripper' motor only and press enter.
 ```
 
-Como se indica, conecta el motor de la pinza. Asegúrate de que sea el único motor conectado a la placa, y que el motor en sí no esté aún conectado en cadena a ningún otro motor. Al presionar [Enter], el script establecerá automáticamente el id y la velocidad de baudios para ese motor.
+Como se indica, conecta el motor de la pinza. Asegúrate de que sea el único motor conectado a la placa, y que el motor en sí no esté aún conectado en cadena a ningún otro motor. Al presionar [Enter], el script configurará automáticamente el id y la velocidad de baudios para ese motor.
 
-Entonces deberías ver el siguiente mensaje:
+Luego deberías ver el siguiente mensaje:
 
 ```bash
 'gripper' motor id set to 6
@@ -462,10 +460,10 @@ Connect the controller board to the 'wrist_roll' motor only and press enter.
 Puedes desconectar el cable de 3 pines de la placa controladora, pero puedes dejarlo conectado al motor de la pinza en el otro extremo, ya que ya estará en el lugar correcto. Ahora, conecta otro cable de 3 pines al motor de rotación de la muñeca y conéctalo a la placa controladora. Como con el motor anterior, asegúrate de que sea el único motor conectado a la placa y que el motor en sí no esté conectado a ningún otro.
 
 :::caution
-Repite la operación para cada motor según las instrucciones.
+Repite la operación para cada motor según se indique.
 :::
 
-Verifica tu cableado en cada paso antes de presionar Enter. Por ejemplo, el cable de alimentación podría desconectarse mientras manipulas la placa.
+Verifica tu cableado en cada paso antes de presionar Enter. Por ejemplo, el cable de la fuente de alimentación podría desconectarse mientras manipulas la placa.
 
 Cuando hayas terminado, el script simplemente finalizará, momento en el cual los motores estarán listos para ser utilizados. Ahora puedes conectar el cable de 3 pines de cada motor al siguiente, y el cable del primer motor (el 'giro del hombro' con id=1) a la placa controladora, que ahora puede ser fijada a la base del brazo.
 
@@ -477,7 +475,7 @@ Cuando hayas terminado, el script simplemente finalizará, momento en el cual lo
 
 Debes seguir el comando anterior para encontrar el USB correcto y configurar los motores.
 
-Las instrucciones para configurar los motores se pueden encontrar en la [documentación](https://huggingface.co/docs/lerobot/so101#configure-the-motors) del SO101 (Igual que el brazo líder). Además de los ids para los motores del brazo, también necesitamos establecer los ids de los motores para la base móvil. Estos necesitan estar en un orden específico para funcionar. A continuación una imagen de los ids de los motores y las posiciones de montaje de los motores para la base móvil. Ten en cuenta que solo usamos una placa de Control de Motor en LeKiwi. Esto significa que los ids de los motores para las ruedas son 7, 8 y 9.
+Las instrucciones para configurar los motores se pueden encontrar en la [documentación](https://huggingface.co/docs/lerobot/so101#configure-the-motors) del SO101 (igual que el brazo líder). Además de los ids para los motores del brazo, también necesitamos configurar los ids de los motores para la base móvil. Estos necesitan estar en un orden específico para funcionar. A continuación una imagen de los ids de los motores y las posiciones de montaje de los motores para la base móvil. Ten en cuenta que solo usamos una placa de Control de Motor en LeKiwi. Esto significa que los ids de los motores para las ruedas son 7, 8 y 9.
 
 Puedes ejecutar este comando para configurar los motores para LeKiwi. Primero configurará los motores para el brazo (id 6..1) y luego configurará los motores para las ruedas (9,8,7).
 
@@ -512,13 +510,13 @@ Unificamos el método de calibración para la mayoría de robots, por lo tanto, 
 <iframe width="900" height="600" src="https://www.youtube.com/embed/22n6f5xH9Dk?si=2QTzn1CDbsSv6Y_H" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### Versión con cable
+### Versión cableada
 
-Si tienes la versión con cable LeKiwi, por favor ejecuta todos los comandos en tu laptop.
+Si tienes la versión cableada de LeKiwi, por favor ejecuta todos los comandos en tu laptop.
 
 ### Calibrar brazo líder
 
-Luego, para calibrar el brazo líder (que está conectado a la laptop/pc). Ejecuta el siguiente comando del ejemplo de API en tu laptop:
+Luego, para calibrar el brazo líder (que está conectado a la laptop/pc). Ejecuta el siguiente comando o ejemplo de API en tu laptop:
 
 ```bash
 python -m lerobot.calibrate \
@@ -533,13 +531,13 @@ python -m lerobot.calibrate \
 Si estás usando una Mac, es posible que necesites dar permiso a Terminal para acceder a tu teclado. Ve a Preferencias del Sistema > Seguridad y Privacidad > Monitoreo de Entrada y marca la casilla para Terminal.
 :::
 
-Para teleoperar, conéctate por SSH a tu Raspberry Pi, y ejecuta `conda activate lerobot` y este script:
+Para teleoperar, conéctate por SSH a tu Raspberry Pi, ejecuta `conda activate lerobot` y este script:
 
 ```bash
 python -m lerobot.robots.lekiwi.lekiwi_host --robot.id=my_awesome_kiwi
 ```
 
-Luego en tu laptop, también ejecuta `conda activate lerobot` y ejecuta el ejemplo de API, asegúrate de establecer el `remote_ip` y `port` correctos en `examples/lekiwi/teleoperate.py`.
+Luego en tu laptop, también ejecuta `conda activate lerobot` y ejecuta el ejemplo de API, asegúrate de configurar el `remote_ip` y `port` correctos en `examples/lekiwi/teleoperate.py`.
 
 <div align="center">
       <img width={800}
@@ -552,36 +550,36 @@ python examples/lekiwi/teleoperate.py
 
 Deberías ver en tu laptop algo como esto: ```[INFO] Connected to remote robot at tcp://172.17.133.91:5555 and video stream at tcp://172.17.133.91:5556.``` Ahora puedes mover el brazo líder y usar el teclado (w,a,s,d) para conducir hacia adelante, izquierda, atrás, derecha. Y usar (z,x) para girar a la izquierda o girar a la derecha. Puedes usar (r,f) para aumentar y disminuir la velocidad del robot móvil. Hay tres modos de velocidad, ver la tabla a continuación:
 
-| Modo de Velocidad | Velocidad Lineal (m/s) | Velocidad de Rotación (deg/s) |
-| ----------------- | ---------------------- | ----------------------------- |
-| Rápido            | 0.4                    | 90                            |
-| Medio             | 0.25                   | 60                            |
-| Lento             | 0.1                    | 30                            |
+| Modo de Velocidad | Velocidad Lineal (m/s) | Velocidad de Rotación (grados/s) |
+| ----------------- | ---------------------- | -------------------------------- |
+| Rápido            | 0.4                    | 90                               |
+| Medio             | 0.25                   | 60                               |
+| Lento             | 0.1                    | 30                               |
 
-| Tecla | Acción            |
-| ----- | ----------------- |
-| W     | Mover hacia adelante |
-| A     | Mover a la izquierda |
-| S     | Mover hacia atrás    |
-| D     | Mover a la derecha   |
-| Z     | Girar a la izquierda |
-| X     | Girar a la derecha   |
-| R     | Aumentar velocidad   |
-| F     | Disminuir velocidad  |
+| Tecla | Acción           |
+| ----- | ---------------- |
+| W     | Mover adelante   |
+| A     | Mover izquierda  |
+| S     | Mover atrás      |
+| D     | Mover derecha    |
+| Z     | Girar izquierda  |
+| X     | Girar derecha    |
+| R     | Aumentar velocidad |
+| F     | Disminuir velocidad |
 
 :::tip
 Si usas un teclado diferente puedes cambiar las teclas para cada comando en el `LeKiwiRobotConfig`.
 :::
 
-### Versión con cable
+### Versión cableada
 
-Si tienes la versión **con cable** de LeKiwi, por favor ejecuta todos los comandos incluyendo ambos comandos de teleoperación en tu laptop.
+Si tienes la versión **cableada** de LeKiwi, por favor ejecuta todos los comandos incluyendo ambos comandos de teleoperación en tu laptop.
 
 ## Solucionar problemas de comunicación
 
-Si tienes problemas conectándote al Mobile SO100, sigue estos pasos para diagnosticar y resolver el problema.
+Si tienes problemas conectándote al SO100 Móvil, sigue estos pasos para diagnosticar y resolver el problema.
 
-### 1. Verificar la configuración de la dirección IP
+### 1. Verificar configuración de dirección IP
 
 Asegúrate de que la IP correcta para la Pi esté configurada en el archivo de configuración. Para verificar la dirección IP de la Raspberry Pi, ejecuta (en la línea de comandos de la Pi):
 
@@ -589,7 +587,7 @@ Asegúrate de que la IP correcta para la Pi esté configurada en el archivo de c
 hostname -I
 ```
 
-### 2. Verificar si la Pi es accesible desde la laptop/pc
+### 2. Verificar si la Pi es accesible desde laptop/pc
 
 Intenta hacer ping a la Raspberry Pi desde tu laptop:
 
@@ -602,9 +600,9 @@ Si el ping falla:
 - Asegúrate de que la Pi esté encendida y conectada a la misma red.
 - Verifica si SSH está habilitado en la Pi.
 
-### 3. Probar conexión SSH
+### 3. Intentar conexión SSH
 
-Si no puedes conectarte por SSH a la Pi, podría no estar conectada correctamente. Usa:
+Si no puedes conectarte por SSH a la Pi, es posible que no esté conectada correctamente. Usa:
 
 ```bash
 ssh <your_pi_user_name>@<your_pi_ip_address>
@@ -618,19 +616,19 @@ Si obtienes un error de conexión:
   sudo raspi-config
   ```
 
-  Luego navega a: **Interfacing Options -> SSH** y habilítalo.
+  Luego navega a: **Opciones de Interfaz -> SSH** y habilítalo.
 
 ### 4. Mismo archivo de configuración
 
-Asegúrate de que el archivo de configuración en tu laptop/pc y en la Raspberry Pi sea el mismo.
+Asegúrate de que el archivo de configuración en tu laptop/pc y la Raspberry Pi sea el mismo.
 
 ## Grabar un conjunto de datos
 
 Una vez que estés familiarizado con la teleoperación, puedes grabar tu primer conjunto de datos con LeKiwi.
 
-Utilizamos las características del hub de Hugging Face para subir tu conjunto de datos. Si no has usado previamente el Hub, asegúrate de poder iniciar sesión a través de la cli usando un token de acceso de escritura, este token se puede generar desde la [configuración de Hugging Face](https://huggingface.co/settings/tokens).
+Usamos las características del hub de Hugging Face para subir tu conjunto de datos. Si no has usado previamente el Hub, asegúrate de poder iniciar sesión vía CLI usando un token de acceso de escritura, este token puede ser generado desde la [configuración de Hugging Face](https://huggingface.co/settings/tokens).
 
-Añade tu token a la CLI ejecutando este comando:
+Agrega tu token al CLI ejecutando este comando:
 
 ```bash
 huggingface-cli login --token ${HUGGINGFACE_TOKEN} --add-to-git-credential
@@ -643,7 +641,7 @@ HF_USER=$(huggingface-cli whoami | head -n 1)
 echo $HF_USER
 ```
 
-Ahora puedes grabar un conjunto de datos. Para grabar episodios y subir tu conjunto de datos al hub, ejecuta este ejemplo de API adaptado para LeKiwi. Asegúrate de adaptar primero el `remote_ip`, `repo_id`, `port` y `task` en el script. Si deseas ejecutar el script por más tiempo, puedes aumentar `NB_CYCLES_CLIENT_CONNECTION`.
+Ahora puedes grabar un conjunto de datos. Para grabar episodios y subir tu conjunto de datos al hub, ejecuta este ejemplo de API adaptado para LeKiwi. Asegúrate de adaptar primero el `remote_ip`, `repo_id`, `port` y `task` en el script. Si quisieras ejecutar el script por más tiempo puedes aumentar `NB_CYCLES_CLIENT_CONNECTION`.
 
 <div align="center">
       <img width={800}
@@ -654,49 +652,48 @@ Ahora puedes grabar un conjunto de datos. Para grabar episodios y subir tu conju
 python examples/lekiwi/record.py
 ```
 
-Carga del conjunto de datos
+Subida del conjunto de datos
 
-Localmente, tu conjunto de datos se almacena en esta carpeta: `~/.cache/huggingface/lerobot/{repo-id}`. Al final de la grabación de datos, tu conjunto de datos se cargará en tu página de Hugging Face (por ejemplo, https://huggingface.co/datasets/cadene/so101_test) que puedes obtener ejecutando:
+Localmente, tu conjunto de datos se almacena en esta carpeta: `~/.cache/huggingface/lerobot/{repo-id}`. Al final de la grabación de datos, tu conjunto de datos será subido a tu página de Hugging Face (ej. https://huggingface.co/datasets/cadene/so101_test) que puedes obtener ejecutando:
 
 ```bash
 echo https://huggingface.co/datasets/${HF_USER}/so101_test
 ```
+Su conjunto de datos será etiquetado automáticamente con `LeRobot` para que la comunidad lo encuentre fácilmente, y también puede agregar etiquetas personalizadas (en este caso `tutorial` por ejemplo).
 
-Tu conjunto de datos será etiquetado automáticamente con `LeRobot` para que la comunidad lo encuentre fácilmente, y también puedes añadir etiquetas personalizadas (en este caso `tutorial` por ejemplo).
-
-Puedes buscar otros conjuntos de datos de LeRobot en el hub buscando etiquetas de `LeRobot` [tags](https://huggingface.co/datasets?other=LeRobot).
+Puede buscar otros conjuntos de datos de LeRobot en el hub buscando [etiquetas](https://huggingface.co/datasets?other=LeRobot) `LeRobot`.
 
 :::tip
 
 ### Consejos para recopilar datos
 
-Una vez que te sientas cómodo con la grabación de datos, puedes crear un conjunto de datos más grande para entrenamiento. Una buena tarea inicial es agarrar un objeto en diferentes ubicaciones y colocarlo en un contenedor. Sugerimos grabar al menos 50 episodios, con 10 episodios por ubicación. Mantén las cámaras fijas y conserva un comportamiento de agarre consistente durante todas las grabaciones. También asegúrate de que el objeto que estás manipulando sea visible en las cámaras. Una buena regla general es que deberías poder hacer la tarea tú mismo mirando solo las imágenes de la cámara.
+Una vez que se sienta cómodo con la grabación de datos, puede crear un conjunto de datos más grande para el entrenamiento. Una buena tarea inicial es agarrar un objeto en diferentes ubicaciones y colocarlo en un contenedor. Sugerimos grabar al menos 50 episodios, con 10 episodios por ubicación. Mantenga las cámaras fijas y mantenga un comportamiento de agarre consistente durante las grabaciones. También asegúrese de que el objeto que está manipulando sea visible en las cámaras. Una buena regla general es que debería poder realizar la tarea usted mismo solo mirando las imágenes de la cámara.
 
-En las siguientes secciones, entrenarás tu red neuronal. Después de lograr un rendimiento de agarre confiable, puedes comenzar a introducir más variaciones durante la recopilación de datos, como ubicaciones de agarre adicionales, diferentes técnicas de agarre y alterar las posiciones de la cámara.
+En las siguientes secciones, entrenará su red neuronal. Después de lograr un rendimiento de agarre confiable, puede comenzar a introducir más variaciones durante la recopilación de datos, como ubicaciones de agarre adicionales, diferentes técnicas de agarre y alterar las posiciones de la cámara.
 
-Evita añadir demasiada variación muy rápidamente, ya que puede perjudicar tus resultados.
+Evite agregar demasiada variación demasiado rápido, ya que puede obstaculizar sus resultados.
 
-Si quieres profundizar en este tema importante, puedes consultar la [publicación](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) [del blog](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) que escribimos sobre qué hace un buen conjunto de datos.
+Si desea profundizar en este tema importante, puede consultar la [publicación](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) del [blog](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) que escribimos sobre qué hace un buen conjunto de datos.
 
 ### Solución de problemas
 
-En Linux, si las teclas de flecha izquierda y derecha y la tecla escape no tienen ningún efecto durante la grabación de datos, asegúrate de haber configurado la variable de entorno `$DISPLAY`. Ver [limitaciones de pynput](https://pynput.readthedocs.io/en/latest/limitations.html#linux).
+En Linux, si las teclas de flecha izquierda y derecha y la tecla escape no tienen ningún efecto durante la grabación de datos, asegúrese de haber configurado la variable de entorno `$DISPLAY`. Consulte las [limitaciones de pynput](https://pynput.readthedocs.io/en/latest/limitations.html#linux).
 
 :::
 
 ### Versión con cable
 
-Si tienes la versión **con cable** de LeKiwi, por favor ejecuta todos los comandos incluyendo ambos comandos de grabación de conjunto de datos en tu laptop.
+Si tiene la versión **con cable** de LeKiwi, ejecute todos los comandos, incluidos estos comandos de grabación de conjunto de datos, en su laptop.
 
 ## Visualizar el conjunto de datos
 
-Si subiste tu conjunto de datos al hub con `--dataset.push_to_hub=true`, puedes [visualizar tu conjunto de datos en línea](https://huggingface.co/spaces/lerobot/visualize_dataset) copiando y pegando tu id de repositorio dado por:
+Si subió su conjunto de datos al hub con `--dataset.push_to_hub=true`, puede [visualizar su conjunto de datos en línea](https://huggingface.co/spaces/lerobot/visualize_dataset) copiando y pegando su id de repositorio dado por:
 
 ```bash
 echo ${HF_USER}/lekiwi_test
 ```
 
-Si no subiste con `--dataset.push_to_hub=false`, también puedes visualizarlo localmente con (se puede abrir una ventana en el navegador `http://127.0.0.1:9090` con la herramienta de visualización):
+Si no subió con `--dataset.push_to_hub=false`, también puede visualizarlo localmente con (se puede abrir una ventana en el navegador `http://127.0.0.1:9090` con la herramienta de visualización):
 
 ```bash
 python -m lerobot.scripts.visualize_dataset_html \
@@ -706,14 +703,14 @@ python -m lerobot.scripts.visualize_dataset_html \
 
 ## Reproducir un episodio
 
-Para reproducir un episodio ejecuta el ejemplo de API a continuación, asegúrate de cambiar `remote_ip`, `port`, LeRobotDatasetId e índice del episodio. El archivo se encuentra en la ruta `examples/lekiwi/replay.py`.
+Para reproducir un episodio, ejecute el ejemplo de API a continuación, asegúrese de cambiar `remote_ip`, `port`, LeRobotDatasetId e índice de episodio. El archivo está en esa ruta `examples/lekiwi/replay.py`.
 
 <div align="center">
       <img width={800}
       src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/Replay an episode.png" />
 </div>
 
-Ejecuta el siguiente comando:
+Ejecute el siguiente comando:
 
 ```bash
 python examples/lekiwi/replay.py
@@ -721,7 +718,7 @@ python examples/lekiwi/replay.py
 
 ## Entrenar una política
 
-Para entrenar una política para controlar tu robot, usa el script `python lerobot/scripts/train.py`. Se requieren algunos argumentos. Aquí tienes un comando de ejemplo:
+Para entrenar una política para controlar su robot, use el script `python lerobot/scripts/train.py`. Se requieren algunos argumentos. Aquí hay un comando de ejemplo:
 
 ```bash
 python lerobot/scripts/train.py \
@@ -736,15 +733,15 @@ python lerobot/scripts/train.py \
 Vamos a explicarlo:
 
 1. Proporcionamos el conjunto de datos como argumento con `--dataset.repo_id=${HF_USER}/lekiwi_test`.
-2. Proporcionamos la política con `policy.type=act`. Esto carga configuraciones desde `configuration_act.py`. Importante, esta política se adaptará automáticamente al número de estados del motor, acciones del motor y cámaras de tu robot (por ejemplo, `laptop` y `phone`) que se han guardado en tu conjunto de datos.
-4. Proporcionamos `policy.device=cuda` ya que estamos entrenando en una GPU Nvidia, pero podrías usar `policy.device=mps` para entrenar en silicio de Apple.
-5. Proporcionamos `wandb.enable=true` para usar [Weights and Biases](https://docs.wandb.ai/quickstart) para visualizar gráficos de entrenamiento. Esto es opcional pero si lo usas, asegúrate de estar conectado ejecutando `wandb login`.
+2. Proporcionamos la política con `policy.type=act`. Esto carga configuraciones desde `configuration_act.py`. Importante, esta política se adaptará automáticamente al número de estados del motor, acciones del motor y cámaras de su robot (por ejemplo, `laptop` y `phone`) que se han guardado en su conjunto de datos.
+4. Proporcionamos `policy.device=cuda` ya que estamos entrenando en una GPU Nvidia, pero podría usar `policy.device=mps` para entrenar en silicio de Apple.
+5. Proporcionamos `wandb.enable=true` para usar [Weights and Biases](https://docs.wandb.ai/quickstart) para visualizar gráficos de entrenamiento. Esto es opcional, pero si lo usa, asegúrese de haber iniciado sesión ejecutando `wandb login`.
 
-El entrenamiento debería tomar varias horas. Encontrarás puntos de control en `outputs/train/act_lekiwi_test/checkpoints`.
+El entrenamiento debería tomar varias horas. Encontrará puntos de control en `outputs/train/act_lekiwi_test/checkpoints`.
 
-## Evalúa tu política
+## Evaluar su política
 
-Para evaluar tu política ejecuta el ejemplo de API `evaluate.py`, asegúrate de cambiar `remote_ip`, `port`, modelo..
+Para evaluar su política, ejecute el ejemplo de API `evaluate.py`, asegúrese de cambiar `remote_ip`, `port`, modelo..
 
 La ruta es `examples/lekiwi/evaluate.py`.
 <div align="center">
@@ -756,14 +753,14 @@ La ruta es `examples/lekiwi/evaluate.py`.
 python examples/lekiwi/evaluate.py
 ```
 
-Como puedes ver, es casi el mismo comando que se usó anteriormente para grabar tu conjunto de datos de entrenamiento. Dos cosas cambiaron:
+Como puede ver, es casi el mismo comando que se usó anteriormente para grabar su conjunto de datos de entrenamiento. Dos cosas cambiaron:
 
-1. Hay un argumento adicional `policy` que indica la ruta a tu checkpoint de política con (por ejemplo, `outputs/train/eval_act_lekiwi_test/checkpoints/last/pretrained_model`). También puedes usar el repositorio del modelo si subiste un checkpoint del modelo al hub (por ejemplo, `${HF_USER}/act_lekiwi_test`).
-2. El nombre del conjunto de datos comienza por `eval` para reflejar que estás ejecutando inferencia (por ejemplo, `${HF_USER}/eval_act_lekiwi_test`).
+1. Hay un argumento `policy` adicional que indica la ruta a su punto de control de política con (por ejemplo, `outputs/train/eval_act_lekiwi_test/checkpoints/last/pretrained_model`). También puede usar el repositorio del modelo si subió un punto de control del modelo al hub (por ejemplo, `${HF_USER}/act_lekiwi_test`).
+2. El nombre del conjunto de datos comienza con `eval` para reflejar que está ejecutando inferencia (por ejemplo, `${HF_USER}/eval_act_lekiwi_test`).
 
 ## Ayuda 🙋‍
 
-Para problemas de hardware, por favor contacta al servicio al cliente. Para preguntas de uso, únete a Discord.
+Para problemas de hardware, póngase en contacto con el servicio al cliente. Para preguntas de uso, únase a Discord.
 
 [Plataforma LeRobot](https://github.com/huggingface/lerobot)
 
@@ -771,7 +768,7 @@ Para problemas de hardware, por favor contacta al servicio al cliente. Para preg
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,5 +1,5 @@
 ---
-description: 如何使用 Langchain 在 Jetson 上格式化 LLM 的输出
+description: 如何在 Jetson 上使用 Langchain 格式化 LLM 的输出
 title: 使用 Langchain 格式化输出
 keywords:
 - reComputer
@@ -14,28 +14,31 @@ last_update:
 
 
 ## 介绍
-在现代家庭中，智能家居的趋势变得越来越普遍。通过连接智能设备、自动化和人工智能技术，您可以将家居转变为更智能、更便捷的生活空间。为此，我们计划将 LLM 集成到 HomeAssistant 中，以创建一个更智能的家庭助手。实现这一目标的第一步是使 LLM 能够输出可以管理智能家居设备的控制信号。
+
+在现代家庭中，智能家居的趋势变得越来越普遍。您可以通过连接智能设备、自动化和人工智能技术，将您的家庭转变为更智能、更便利的生活空间。为此，我们计划将 LLM 集成到 HomeAssistant 中，以创建更智能的家庭助手。实现这一目标的第一步是使 LLM 能够输出可以管理智能家居设备的控制信号。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Format_LLM_Opt/ai_assistant.png" />
 </div>
 
-
-在本教程中，您将学习如何使用 Langchain 格式化大型语言模型的输出并将其部署到边缘计算设备上。具体来说，利用大型语言模型的强大理解能力构建一个本地聊天机器人，然后使用 Langchain 工具修复大型模型的输出格式。
+在本教程中，您将学习如何使用 Langchain 来格式化大型语言模型的输出，并将其部署在边缘计算设备上。具体来说，利用大型语言模型强大的理解能力来构建本地聊天机器人，然后利用 Langchain 工具来固定大型模型的输出格式。
 
 ## 什么是 LLM？
-大型语言模型（LLM）是一种基于深度学习的人工智能模型，例如 GPT，它们在自然语言处理任务中表现出色。它们能够理解和生成文本，因此广泛应用于文本生成、翻译、问答系统等各种应用中。
+
+大型语言模型（LLM）是一种基于深度学习的人工智能模型，如 GPT，它们在自然语言处理任务中表现出色。它们能够理解和生成文本，因此被广泛应用于各种应用中，如文本生成、翻译、问答系统等。
 
 ## 为什么需要格式化 LLM 的输出？
-格式化大型语言模型（LLM）的输出对于使其更易于理解并适应特定应用程序至关重要。通常，LLM 生成的文本可能包含冗余信息、不必要的细节或格式不一致的内容。通过格式化输出，您可以确保文本符合特定标准，去除不需要的部分，并确保其符合应用程序的要求。这一过程对于将 LLM 输出有效地集成到各种系统和应用程序中至关重要，确保生成的内容既相关又有用。
+
+格式化大型语言模型（LLM）的输出对于使其更易理解并适应特定应用非常重要。通常，LLM 生成的文本可能包含冗余信息、不必要的细节或格式不一致的内容。通过格式化输出，您可以确保文本符合特定标准，删除不需要的部分，并确保它符合您应用程序的要求。这个过程对于将 LLM 输出有效集成到各种系统和应用程序中至关重要，确保生成的内容既相关又有用。
 
 ## 如何格式化 LLM 的输出？
-在这里，我们可以利用一个非常用户友好的工具——Langchain。它是一个强大的框架，旨在帮助开发人员使用语言模型构建端到端的应用程序。它提供了一组工具、组件和接口，简化了创建由大型语言模型和聊天模型支持的应用程序的过程。
 
-## 如何在边缘设备上部署？
+在这里，我们可以利用一个非常用户友好的工具——Langchain。它是一个强大的框架，旨在帮助开发人员使用语言模型构建端到端的应用程序。它提供了一套工具、组件和接口，简化了创建由大型语言模型和聊天模型支持的应用程序的过程。
 
-**步骤 1.** 您需要准备一台 Jetson 设备（[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?queryID=3d7dba9378be2accafeaff54420edb6a&objectID=5586&indexName=bazaar_retailer_products)），并安装 Jetpack 5.0+ 操作系统。
+## 如何在边缘设备中部署？
+
+**步骤 1.** 您需要准备一个配备 Jetpack 5.0+ 操作系统的 Jetson 设备（[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?queryID=3d7dba9378be2accafeaff54420edb6a&objectID=5586&indexName=bazaar_retailer_products)）。
 
 **步骤 2.** 打开终端并安装相应的依赖软件。
 
@@ -146,36 +149,35 @@ class ChatBot:
 if __name__ == '__main__':
     chatbot_ins = ChatBot("/home/nvidia/Mirror/llama-2-7b-chat.Q4_0.gguf")
     chatbot_ins.run_webui()
+
 ```
 
 </details>
 
-**步骤 4.** 在终端中输入 `python3 format_opt.py` 启动脚本，然后在浏览器中访问 `http://127.0.0.1:7861/` 打开 WebUI 并测试效果。
-
+**步骤 4.** 在终端中输入 python3 `format_opt.py` 启动脚本，然后在浏览器中访问 `http://127.0.0.1:7861/` 来访问 WebUI 并测试效果。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Format_LLM_Opt/format_llm_opt.gif" />
 </div>
 
-
 ## 下一步计划？
-- 集成 Nvidia Riva，用语音交互替代文本输入。
-- 连接到 Home Assistant，通过 LLM 的输出控制智能家居设备。
 
+- 集成 Nvidia Riva 以用语音交互替代文本输入。
+- 连接到 Home Assistant 以使用 LLM 的输出控制智能家居设备。
 
-<!-- 代码结束 -->
+<!-- Code END -->
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们为您提供多种支持渠道，确保您在使用我们的产品时获得顺畅的体验。我们提供多种沟通方式，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

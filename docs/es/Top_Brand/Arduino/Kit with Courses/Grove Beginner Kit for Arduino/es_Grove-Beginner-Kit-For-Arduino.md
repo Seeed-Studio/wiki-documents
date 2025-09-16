@@ -9,9 +9,10 @@ last_update:
   date: 2/14/2023
   author: hushuxu
 ---
+
 # Grove Kit para Principiantes para Arduino
 
-Grove Kit para Principiantes para Arduino es uno de los mejores Kits para Principiantes de Arduino para principiantes. Incluye una Placa compatible con Arduino y 10 sensores adicionales de Arduino, todo en un diseño de PCB de una sola pieza. **Todos los módulos han sido conectados al Seeeduino a través de los orificios de estampado del PCB, por lo que no se necesitan cables Grove para conectar**. Por supuesto, también puedes sacar los módulos y usar cables Grove para conectar los módulos. Puedes construir cualquier proyecto de Arduino que desees con este Grove Kit para Principiantes para Arduino.
+Grove Kit para Principiantes para Arduino es uno de los mejores Kits para Principiantes de Arduino para principiantes. Incluye una Placa compatible con Arduino y 10 sensores adicionales de Arduino, todo en un diseño de PCB de una sola pieza. **Todos los módulos han sido conectados al Seeeduino a través de los orificios de estampado de PCB, por lo que no se necesitan cables Grove para conectar**. Por supuesto, también puedes sacar los módulos y usar cables Grove para conectar los módulos. Puedes construir cualquier proyecto de Arduino que desees con este Grove Kit para Principiantes para Arduino.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html" target="_blank">
@@ -21,24 +22,38 @@ Grove Kit para Principiantes para Arduino es uno de los mejores Kits para Princi
 
 ## Descripción General del Hardware
 
-![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Parts.jpg)
+**Versión anterior** (Antes de octubre de 2025) ↓
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Parts.jpg" style={{width:1000, height:'auto'}}/></div>
+
+**Nueva Versión** (Después de octubre de 2025) ↓
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/1.png" style={{width:1000, height:'auto'}}/></div>
+
+:::tip Notas de Iteración de Versión Nueva y Antigua
+Comparado con la versión anterior, esta nueva versión actualiza ciertos sensores descontinuados. El sensor de temperatura y humedad DHT11 ha sido reemplazado con el sensor de temperatura y humedad DHT20; el sensor de presión barométrica BMP280 ha sido reemplazado con el sensor de presión barométrica SPA06-003.
+:::
 
 **Nota:** Dimensiones - 17.69 *11.64* 1.88cm
 
-1. **[Grove - LED](https://wiki.seeedstudio.com/es/Grove-Red_LED/):** Módulo LED simple
-2. **[Grove - Buzzer](https://wiki.seeedstudio.com/es/Grove-Buzzer/):** Zumbador Piezoeléctrico
-3. **[Grove - Pantalla OLED 0.96"](https://wiki.seeedstudio.com/es/Grove-OLED-Display-0.96-SSD1315/):** Resolución de puntos 128×64, alto brillo, autoemisión y alta relación de contraste. Pantalla grande en un diseño compacto. Bajo consumo de energía.
-4. **[Grove - Botón](https://wiki.seeedstudio.com/es/Grove-Button/):** Botón Pulsador Momentáneo
-5. **[Grove - Potenciómetro Rotativo](https://wiki.seeedstudio.com/es/Grove-Rotary_Angle_Sensor/):** Potenciómetro Ajustable
-6. **[Grove - Luz](https://wiki.seeedstudio.com/es/Grove-Light_Sensor/):** Detecta la intensidad de luz circundante
-7. **[Grove - Sonido](https://wiki.seeedstudio.com/es/Grove-Sound_Sensor/):** Detecta la intensidad de sonido circundante
-8. **[Grove - Sensor de Temperatura y Humedad](https://wiki.seeedstudio.com/es/Grove-TemperatureAndHumidity_Sensor/):** Detecta los valores de temperatura y humedad circundantes
-9. **[Grove - Sensor de Presión de Aire](https://wiki.seeedstudio.com/es/Grove-Barometer_Sensor-BMP280/):** Detecta la presión atmosférica circundante
-10. **[Grove - Acelerómetro de 3 Ejes](https://wiki.seeedstudio.com/es/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR):** Detecta la aceleración del objeto
-11. **[Seeeduino Lotus](https://wiki.seeedstudio.com/es/Seeeduino_Lotus/):** Placa Compatible con Arduino con Puertos Grove
+1. **[Grove - LED](https://wiki.seeedstudio.com/Grove-Red_LED/):** Módulo LED simple
+2. **[Grove - Buzzer](https://wiki.seeedstudio.com/Grove-Buzzer/):** Zumbador Piezoeléctrico
+3. **[Grove - Pantalla OLED 0.96"](https://wiki.seeedstudio.com/Grove-OLED-Display-0.96-SSD1315/):** Resolución de puntos 128×64 Alto brillo, auto-emisión y alta relación de contraste Pantalla grande en un diseño compacto Bajo consumo de energía.
+4. **[Grove - Botón](https://wiki.seeedstudio.com/Grove-Button/):** Botón Pulsador Momentáneo
+5. **[Grove - Potenciómetro Rotatorio](https://wiki.seeedstudio.com/Grove-Rotary_Angle_Sensor/):** Potenciómetro Ajustable
+6. **[Grove - Luz](https://wiki.seeedstudio.com/Grove-Light_Sensor/):** Detecta la intensidad de luz circundante
+7. **[Grove - Sonido](https://wiki.seeedstudio.com/Grove-Sound_Sensor/):** Detecta la intensidad de sonido circundante
+8. **[Grove - Sensor de Temperatura y Humedad](https://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/):** Detecta los valores de temperatura y humedad circundantes. La versión anterior usaba el sensor DHT11, mientras que las versiones posteriores a 2025.10 usan el sensor DHT20.
+9. **Grove - Sensor de Presión de Aire:** Detecta la presión atmosférica circundante
+
+- La versión anterior usaba el [BMP280](https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/).
+- La nueva versión fechada en octubre de 2025 usa [SPA06-003](https://wiki.seeedstudio.com/grove_barometer_sensor_spa06_003).
+
+10. **[Grove - Acelerómetro de 3 Ejes](https://wiki.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR):** Detecta la aceleración del objeto
+11. **[Seeeduino Lotus](https://wiki.seeedstudio.com/Seeeduino_Lotus/):** Placa Compatible con Arduino con Puertos Grove
 
 **Nota:**
-        Por defecto, los módulos Grove están conectados al Seeeduino a través de orificios de estampado del PCB. Esto significa que no necesitas usar cables Grove para conectar si no están separados. Los pines por defecto son los siguientes:
+        Por defecto, los módulos Grove están conectados al Seeeduino a través de orificios de estampado de PCB. Esto significa que no necesitas usar cables Grove para conectar si no están separados. Los pines por defecto son los siguientes:
 
 |Módulos|Interfaz|Pines/Dirección|
 |---|---|---|
@@ -46,7 +61,7 @@ Grove Kit para Principiantes para Arduino es uno de los mejores Kits para Princi
 |Buzzer|Digital|D5|
 |Pantalla OLED 0.96"|I2C|I2C, 0x78(por defecto)|
 |Botón|Digital|D6|
-|Potenciómetro Rotativo|Analógico|A0|
+|Potenciómetro Rotatorio|Analógico|A0|
 |Luz|Analógico|A6|
 |Sonido|Analógico|A2|
 |Sensor de Temperatura y Humedad|Digital|D3|
@@ -58,7 +73,7 @@ Grove Kit para Principiantes para Arduino es uno de los mejores Kits para Princi
 **Atención:**
     Ten cuidado de no cortarte las manos al usar un cuchillo
 
-Si prefieres usar los módulos en otro lugar, entonces simplemente puedes seguir los procedimientos para separar los módulos.
+Si prefieres usar los módulos en otro lugar, entonces puedes simplemente seguir los procedimientos para separar los módulos.
 
 **Paso 1**
 
@@ -160,7 +175,7 @@ void loop() {
 
 **Nota:** Si instalaste el IDE de Arduino portátil desde nuestro USB Drive, puedes encontrar todas las demostraciones de módulos en **Files** -> **Sketch Book**, así como todas las librerías de módulos, están preinstaladas con el IDE de Arduino!
 
-![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Sketchbook.png)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Sketchbook.png" style={{width:600, height:'auto'}}/></div>
 
 **Nota:**
         Todos los módulos están precableados en una sola placa de circuito, por lo que no se necesitan cables ni soldadura. Sin embargo, si separas los módulos y quieres conectarlos con cables Grove, por favor revisa amablemente la Guía de Separación.
@@ -328,7 +343,7 @@ El módulo LED estará 1 segundo encendido y 1 segundo apagado.
   <br />
 </div>
 
-En el módulo LED Grove, hay una **resistencia variable que puede ajustarse usando un destornillador.** ¡Gírala para hacer que el LED se ilumine más brillante!
+En el módulo LED Grove, hay una **resistencia variable que se puede ajustar usando un destornillador.** ¡Gírala para hacer que el LED se ilumine más brillante!
 
 Guía de Separación
 
@@ -409,7 +424,6 @@ Define el LED como la unidad de salida.
 pinMode(buttonPin, INPUT);
 ```
 
-  
 Define el botón como la unidad de entrada.
 
 ```cpp
@@ -473,7 +487,7 @@ Usa un cable Grove para conectar el LED Grove a la interfaz digital **D4** del S
 
 ### Lección 3: Controlando la Frecuencia del Parpadeo
 
-En la sección anterior, estudiamos que el botón solo tiene dos estados, estado ON/OFF correspondiente a 0V y 5V, pero en la práctica, a menudo nos encontramos con la necesidad de muchos estados, no solo 0V y 5V. ¡Entonces necesitas usar Señal Analógica! El Potenciómetro Rotatorio es un ejemplo clásico que usa una señal analógica.
+En la sección anterior, estudiamos que el botón solo tiene dos estados, estado ON/OFF correspondiente a 0V y 5V, pero en la práctica, a menudo encontramos la necesidad de muchos estados, no solo 0V y 5V. ¡Entonces necesitas usar Señal Analógica! El Potenciómetro Rotatorio es un ejemplo clásico que usa una señal analógica.
 
 Información de Contexto:
 
@@ -556,7 +570,7 @@ rotaryValue = analogRead(rotaryPin);
 
 **Descripción:**
 
-Lee el valor del pin analógico especificado. Las placas Arduino contienen un conversor analógico a digital multicanal de 10 bits. Esto significa que mapeará voltajes de entrada entre 0 y el voltaje de operación (5V o 3.3V) en valores enteros entre 0 y 1023. En un Arduino UNO, por ejemplo, esto produce una resolución entre lecturas de: 5 voltios / 1024 unidades o, 0.0049 voltios (4.9 mV) por unidad.
+Lee el valor del pin analógico especificado. Las placas Arduino contienen un convertidor analógico a digital multicanal de 10 bits. Esto significa que mapeará voltajes de entrada entre 0 y el voltaje de operación (5V o 3.3V) en valores enteros entre 0 y 1023. En un Arduino UNO, por ejemplo, esto produce una resolución entre lecturas de: 5 voltios / 1024 unidades o, 0.0049 voltios (4.9 mV) por unidad.
 
 **Sintaxis:**
 
@@ -566,7 +580,7 @@ analogRead(**pin**)
 
 **pin**: el nombre del pin de entrada analógica del cual leer (A0 a A5 en la mayoría de las placas).
 
-**Devuelve:** La lectura analógica en el pin. Aunque está limitada a la resolución del conversor analógico a digital (0-1023 para 10 bits o 0-4095 para 12 bits). Tipo de dato: int.
+**Devuelve:** La lectura analógica en el pin. Aunque está limitada a la resolución del convertidor analógico a digital (0-1023 para 10 bits o 0-4095 para 12 bits). Tipo de dato: int.
 
 Esta función se usa para leer el valor de los pines analógicos (la posición del sensor rotativo), el rango de valores es: 0 ~ 1023.
 
@@ -576,7 +590,7 @@ delay(rotaryValue);
 
 Función de retardo, La duración en milisegundos del retardo es el valor entre paréntesis. Debido a que el valor es el valor de la señal analógica del pin de la perilla que se está leyendo, el tiempo de retardo puede ser controlado por la perilla.
 
-**Efecto de la Demostración y Resultado de Impresión Serial:**
+**Efecto de la Demostración y Resultado de Impresión Serie:**
 
 Girar el Potenciómetro cambiará la frecuencia del parpadeo del LED.
 
@@ -584,27 +598,27 @@ Guía de Conexión
 
 Usa un cable Grove para conectar el LED a la interfaz digital **D4** del Seeeduino Lotus, y un cable Grove para conectar el Grove Rotary Switch a la interfaz de señal analógica **A0**.
 
-### Lección 4: Haciendo que el Buzzer haga BEEP
+### Lección 4: Haciendo que el Zumbador haga BEEP
 
-Al igual que el módulo LED, el Buzzer también es un módulo de salida, en lugar de encenderse produce un sonido de pitido. Esto puede ser usado para muchas situaciones con propósitos de indicación. ¡Aprendamos cómo generar sonido usando el buzzer!
+Al igual que el módulo LED, el Zumbador también es un módulo de salida, en lugar de encenderse produce un sonido de pitido. Esto puede ser usado para muchas situaciones con propósitos de indicación. ¡Aprendamos cómo generar sonido usando el zumbador!
 
 Información de Contexto:
 
-- **¿Cuál es la diferencia entre Buzzer Activo y Pasivo?**
+- **¿Cuál es la diferencia entre Zumbador Activo y Pasivo?**
 
- Hay dos tipos de buzzers, uno es **activo** y el otro es **pasivo**. Tanto los buzzers activos como pasivos se usan para hacer sonido en electrónicos.
+ Hay dos tipos de zumbadores, uno es **activo** y el otro es **pasivo**. Tanto los zumbadores activos como pasivos se usan para hacer sonido en la electrónica.
 
-  El **buzzer activo** tiene una fuente de oscilación interna que hace que el buzzer suene cada vez que se aplica energía. Los buzzers activos son ampliamente usados en computadoras, impresoras, copiadoras, alarmas, juguetes electrónicos, electrónicos de automóviles, teléfonos, temporizadores y otros dispositivos de sonido de productos electrónicos.
+  El **zumbador activo** tiene una fuente de oscilación interna que hace que el zumbador suene cada vez que se aplica energía. Los zumbadores activos son ampliamente usados en computadoras, impresoras, copiadoras, alarmas, juguetes electrónicos, electrónica automotriz, teléfonos, temporizadores y otros dispositivos de sonido de productos electrónicos.
 
-  Un **buzzer pasivo** no tiene fuente interna de oscilación y necesita ser controlado por **una onda cuadrada** y **una frecuencia diferente**. Actúa como un altavoz electromagnético, y la señal de entrada cambiante produce sonido, en lugar de un tono automáticamente.
+  Un **zumbador pasivo** no tiene fuente interna de oscilación y necesita ser controlado por **una onda cuadrada** y **una frecuencia diferente**. Actúa como un altavoz electromagnético, y la señal de entrada cambiante produce sonido, en lugar de un tono automáticamente.
 
  <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/buzzer-ap.jpg" /></div>
 
-En este kit, el **Grove-Buzzer es un buzzer pasivo** por lo que necesita una señal AC para controlarlo. Esto entonces lleva a la siguiente pregunta, ¡cómo generar Onda Cuadrada (señales AC) con Arduino! Bueno, una manera fácil es usar PWM.
+En este kit, el **Grove-Buzzer es un zumbador pasivo** por lo que necesita una señal AC para controlarlo. Esto entonces lleva a la siguiente pregunta, ¡cómo generar Onda Cuadrada (señales AC) con Arduino! Bueno, una manera fácil es usar PWM.
 
 - **¿Qué es PWM?**
 
-**Modulación por Ancho de Pulso, o PWM**, es una técnica para obtener resultados analógicos con medios digitales. El control digital se usa para crear una onda cuadrada, una señal conmutada entre encendido y apagado. Este patrón de encendido-apagado puede simular voltajes entre completamente encendido (5 Voltios) y apagado (0 Voltios) cambiando la porción del tiempo que la señal pasa encendida versus el tiempo que la señal pasa apagada. La duración del "tiempo encendido" se llama el ancho de pulso. Para obtener valores analógicos variables, cambias, o modulas, ese ancho de pulso. Si repites este patrón de encendido-apagado lo suficientemente rápido, el resultado es como si la señal fuera un voltaje constante entre 0 y 5v como una señal AC. *Referencia: [Arduino](https://www.arduino.cc/en/tutorial/PWM)*. Esta señal PWM puede entonces ser usada para controlar el buzzer pasivo con facilidad.
+**Modulación por Ancho de Pulso, o PWM**, es una técnica para obtener resultados analógicos con medios digitales. El control digital se usa para crear una onda cuadrada, una señal conmutada entre encendido y apagado. Este patrón de encendido-apagado puede simular voltajes entre completamente encendido (5 Voltios) y apagado (0 Voltios) cambiando la porción del tiempo que la señal pasa encendida versus el tiempo que la señal pasa apagada. La duración del "tiempo encendido" se llama el ancho de pulso. Para obtener valores analógicos variables, cambias, o modulas, ese ancho de pulso. Si repites este patrón de encendido-apagado lo suficientemente rápido, el resultado es como si la señal fuera un voltaje constante entre 0 y 5v como una señal AC. *Referencia: [Arduino](https://www.arduino.cc/en/tutorial/PWM)*. Esta señal PWM puede entonces ser usada para controlar el zumbador pasivo con facilidad.
 
 Para generar señales PWM en Arduino, puedes usar **`analogWrite()`**, en contraste con usar `digitalWrite()` para generar señales DC.
 
@@ -614,7 +628,7 @@ Componentes Involucrados
 
     1. Seeeduino Lotus
     2. Grove Buzzer
-    3. Cable Grove(Si está Separado)
+    3. Grove Cable(Si está Separado)
 
 ![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Buzzer.png)
 
@@ -760,9 +774,9 @@ Ajusta el potenciómetro para ajustar el brillo del LED.
 
 En resumen, cuando quieras usar la función PWM, asegúrate de seleccionar aquellos pines con un símbolo "~" delante de sus nombres.
 
-### Lección 5: Haciendo un LED Inductor de Luz
+### Lección 5: Haciendo un LED de Inducción de Luz
 
-El sensor de luz contiene una resistencia fotosensible para medir la intensidad de la luz. La resistencia de la resistencia fotosensible disminuye con el aumento de la intensidad de luz. El LED se encenderá si el entorno está oscuro, y permanece apagado si el entorno está brillante.
+El sensor de luz contiene una resistencia fotosensible para medir la intensidad de la luz. La resistencia de la resistencia fotosensible disminuye con el aumento de la intensidad de la luz. El LED se encenderá si el entorno está oscuro, y permanecerá apagado si el entorno está brillante.
 
 En las siguientes secciones, usaremos el Monitor Serial para observar resultados de nuestros sensores, ¡así que aquí viene la breve introducción!
 
@@ -802,7 +816,7 @@ Conexión de hardware
 Código de Software
 
     - Abre Arduino IDE.
-    - Copia el siguiente código, haz clic en Verify para verificar errores de sintaxis. Verifica que no haya errores, y puedes subir el código.
+    - Copia el siguiente código, haz clic en Verificar para comprobar errores de sintaxis. Verifica que no haya errores, y puedes subir el código.
 
 ```Cpp
 // Light Switch
@@ -884,25 +898,25 @@ El puerto serie imprime el valor del sensor de luz. Así que abres el **monitor 
 
 El módulo LED se encenderá si está oscuro y permanecerá apagado si está brillante.
 
-Guía de Breakout
+Guía de Conexión
 
-Usa el Cable Grove para conectar el Grove LED a la interfaz de señal digital **D4** del Seeeduino Lotus, conecta el Grove Light Sensor a la interfaz de señal analógica **A6** del Seeeduino Lotus.
+Usa el Cable Grove para conectar el Grove LED a la interfaz de señal digital **D4** del Seeeduino Lotus, conecta el Grove Sensor de Luz a la interfaz de señal analógica **A6** del Seeeduino Lotus.
 
 ### Lección 6: Luz LED Sensible al Sonido
 
-El sensor de sonido puede detectar la intensidad del sonido del ambiente, y su salida también es simulada. Estoy seguro de que todos han estado expuestos a las luces de control de sonido, pero ahora podemos hacer una nosotros mismos, y con los fundamentos, este experimento será fácil para ustedes. Aquí se usó Serial Plotter para visualizar resultados.
+El sensor de sonido puede detectar la intensidad del sonido del ambiente, y su salida también es simulada. Estoy seguro de que todos han estado expuestos a las luces de control de sonido, pero ahora podemos hacer una nosotros mismos, y con los fundamentos, este experimento será fácil para ustedes. Aquí se usó el Trazador Serie para visualizar los resultados.
 
 Información de Contexto:
 
-- **Qué es Serial Plotter**
+- **Qué es el Trazador Serie**
 
-Serial Plotter es similar a Serial Monitor, permitiéndote graficar nativamente datos serie de tu Arduino a tu computadora en tiempo real. Esto es muy útil cuando los datos necesitan ser visualizados.
+El Trazador Serie es similar al Monitor Serie, permitiéndote graficar nativamente datos serie desde tu Arduino a tu computadora en tiempo real. Esto es muy útil cuando los datos necesitan ser visualizados.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/SerialPlotter.png)
 
-Puedes abrir el Serial Plotter haciendo clic en **Tools** -> **Serial Plotter**.
+Puedes abrir el Trazador Serie haciendo clic en **Herramientas** -> **Trazador Serie**.
 
-![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/serialplot.jpg)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/serialplot.jpg" style={{width:400, height:'auto'}}/></div>
 
 - **Práctica:** Las luces LED se encienden cuando se hace sonido. Cuando no hay sonido y está muy silencioso, las luces LED se apagan.
 
@@ -910,21 +924,21 @@ Componentes Involucrados
 
     1. Seeeduino Lotus
     2. Grove LED
-    3. Grove Sound Sensor
+    3. Grove Sensor de Sonido
     4. Cable Grove(Si está separado)
 
 ![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Sound.png)
 
-Conexión de hardware
+Conexión de Hardware
 
-    - **Conexión del módulo:**
+    - **Conexión de módulos:**
         - Conexión predeterminada por orificio de estampado PCB.
     - El Seeeduino se conecta luego a la computadora a través de un cable USB.
 
 Código de Software
 
     - Abre Arduino IDE.
-    - Copia el siguiente código, haz clic en Verify para verificar errores de sintaxis. Verifica que no haya errores, y puedes subir el código.
+    - Copia el siguiente código, haz clic en Verificar para comprobar errores de sintaxis. Verifica que no haya errores, y puedes subir el código.
 
 ```Cpp
 //Sound Control Light
@@ -949,7 +963,7 @@ void loop(){
 }
 ```
 
-También puedes ver las lecturas de intensidad de luz desde el **Monitor Serie**, navega a **Herramientas** -> **Monitor Serie**.
+También puedes ver las lecturas de intensidad de luz desde el **Serial Plotter**, navega a **Tools** -> **Serial Plotter**.
 
 **Nota: También puedes ajustar el valor según la intensidad de luz de tu entorno.**
 
@@ -979,7 +993,7 @@ Serial.println(soundState);
 
 El puerto serie imprime el valor del sensor de sonido. Así que abres el **monitor serie** en la interfaz del IDE, y ves el valor del sensor de salida.
 
-**Efecto de la Demostración y Resultado de Impresión Serie:**
+**Efecto de la Demo y Resultado de Impresión Serie:**
 
 El módulo LED se encenderá si el entorno es lo suficientemente ruidoso.
 
@@ -997,9 +1011,9 @@ Información de Contexto:
 
 El entorno de Arduino puede extenderse mediante el uso de librerías, al igual que la mayoría de otras plataformas de programación. Las librerías proporcionan funcionalidades adicionales para usar en sketches, es decir, trabajar con hardware específico o manipular datos. Para usar una librería en un sketch, selecciónala desde **Sketch** ->**Include Library**.
 
-![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/zip.jpg)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/zip.jpg" style={{width:500, height:'auto'}}/></div>
 
-Para más información, por favor también visita [Cómo instalar Librerías de Arduino](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library/).
+Para más información, por favor visita también [Cómo instalar Librerías de Arduino](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 Componentes Involucrados
 
@@ -1012,7 +1026,7 @@ Componentes Involucrados
 Conexión de Hardware
 
     - **Conexión del módulo:**
-        - Conexión predeterminada por orificio de estampado PCB.
+        - Conexión por defecto mediante orificio de estampado PCB.
     - El Seeeduino se conecta luego a la computadora mediante un cable USB.
 
 Código de Software
@@ -1046,7 +1060,7 @@ void loop(void) {
 ```
 
 !!!Atención
-  Si separas todos los módulos y usas el OLED Grove por separado, es posible que no funcione con este código. Si encuentras este problema, consulta el final de esta sección: Guía de Separación.
+  Si separas todos los módulos y usas el OLED Grove por separado, puede que encuentres que no funciona con este código. Si encuentras tal problema, por favor consulta el final de esta sección: Guía de Separación.
 
 - **Análisis del código**
 
@@ -1096,7 +1110,7 @@ Procedimiento de configuración simplificado de la pantalla para el entorno Ardu
 
 u8x8.begin()
 
-Inicializar la biblioteca u8g2
+Inicializa la biblioteca u8g2
 
 ```cpp
 u8x8.setFlipMode(1);
@@ -1175,8 +1189,7 @@ Usa el cable Grove para conectar el OLED a la interfaz **I2C** del Seeeduino Lot
   Wire.setClock(u8x8->bus_clock);   // just delete or disable this line
   ```
 
-  
- Or you can set the bus lock to 100000 then add in the setup().
+ O puedes configurar el reloj del bus a 100000 y luego añadirlo en el setup().
 
 ```cpp
 void setup(void) {
@@ -1188,15 +1201,15 @@ void setup(void) {
 
 ### Lección 8: Detectando Temperatura y Humedad del Entorno
 
-¿Alguna vez te has preguntado sobre la temperatura y humedad de tu entorno? ¿Quieres conocer el número exacto? ¿Quieres usar una falda o un abrigo hoy dependiendo de la temperatura? ¡Hagamos un medidor de temperatura!
+¿Alguna vez te has preguntado sobre la temperatura y humedad de tu entorno? ¿Quieres saber el número exacto? ¿Quieres usar una falda o abrigo hoy dependiendo de la temperatura? ¡Hagamos un medidor de temperatura!
 
 Información de Contexto:
 
 - **¿Qué es la Señal de Protocolo (I2C)?**
 
-**Señal de protocolo:** la señal de protocolo que usamos es I2C, así que aquí hay una breve introducción a I2C. El bus I2C solo necesita dos cables en la transmisión de información de conexión entre los dispositivos: el SDA (Línea de Datos Serie) y SCL (Línea de Reloj Serie).
+**Señal de protocolo:** la señal de protocolo que usamos es I2C, así que aquí hay una breve introducción a I2C. El bus I2C solo necesita dos cables en la transmisión de información conectando entre los dispositivos: el SDA (Línea de Datos Serie) y SCL (Línea de Reloj Serie).
 
-Estas dos líneas son líneas I/O bidireccionales, el componente principal usado para iniciar la transferencia de datos del bus, y generar el reloj para abrir el dispositivo de transmisión, cualquier dispositivo que esté siendo direccionado en este momento se considera del dispositivo.
+Estas dos líneas son líneas I/O bidireccionales, el componente principal usado para iniciar la transferencia de datos del bus, y generar el reloj para abrir el dispositivo de transmisión, cualquier dispositivo que esté siendo direccionado en este momento es considerado desde el dispositivo.
 
 La relación entre maestro y esclavo (emisor y receptor) en el bus no es constante sino que depende de la dirección de transmisión de datos. Si el host quiere enviar datos al dispositivo esclavo, el host primero direcciona el dispositivo esclavo, luego envía activamente datos al dispositivo esclavo, y finalmente termina la transmisión de datos por el host. Si el host va a recibir datos del esclavo, el esclavo es primero direccionado por el maestro.
 
@@ -1215,7 +1228,7 @@ Componentes Involucrados
 
 Conexión de Hardware
 
-    - **Conexión del módulo:**
+    - **Conexión de módulo:**
         - Conexión predeterminada por orificio de estampado PCB.
     - El Seeeduino se conecta luego a la computadora vía un cable USB.
 
@@ -1226,8 +1239,8 @@ Algunos kits actualizados han sido equipados con DHT20. Si tu Detector de Humeda
 Código de Software(DHT11)
 
     - Abre Arduino IDE.
-    - Descarga e instala la [biblioteca](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor) requerida.
-    - Copia el siguiente código, haz clic en Verificar para comprobar errores de sintaxis. Verifica que no hay errores, y puedes subir el código.
+    - Descarga e instala la [librería](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor) requerida.
+    - Copia el siguiente código, haz clic en Verificar para revisar errores de sintaxis. Verifica que no hay errores, y puedes subir el código.
 
 ```Cpp
 //Temperature and Humidity Sensor
@@ -1362,17 +1375,17 @@ Llama a estas funciones para leer la temperatura y humedad y almacenarlas en var
 
 La temperatura y humedad del entorno aparecen en la pantalla OLED.
 
-Guía de Breakout
+Guía de Conexión
 
-Usa cable Grove para conectar el OLED a la interfaz **I2C** de Seeeduino Lotus (Nota: la dirección predeterminada de I2C es 0x78). Conecta el Sensor de Temperatura y Humedad Grove a la interfaz de señal digital **D3** de Seeeduino Lotus.
+Usa el cable Grove para conectar el OLED a la interfaz **I2C** del Seeeduino Lotus (Nota: La dirección predeterminada de I2C es 0x78). Conecta el Sensor de Temperatura y Humedad Grove a la interfaz de señal digital **D3** del Seeeduino Lotus.
 
 ### Lección 9: Midiendo la Presión del Aire Circundante
 
-El Sensor de Presión de Aire Grove(BMP280) es una placa breakout para el barómetro digital de alta precisión y bajo consumo Bosch BMP280. Este módulo puede usarse para medir temperatura y presión atmosférica con precisión. Como la presión atmosférica cambia con la altitud, también puede medir la altitud aproximada de un lugar.
+El Sensor de Presión de Aire Grove es una placa de conexión para medir la presión atmosférica. La versión anterior (antes de octubre de 2025) usaba el sensor BMP280, mientras que la nueva versión (después de octubre de 2025) usa el sensor SPA06-003. Ambos sensores pueden medir con precisión la temperatura y la presión atmosférica. Como la presión atmosférica cambia con la altitud, también pueden medir la altitud aproximada de un lugar.
 
 Componentes Involucrados
     1. Seeeduino Lotus
-    2. Sensor de Presión de Aire Grove
+    2. Sensor de Presión de Aire Grove (BMP280 o SPA06-003)
     3. Cable Grove(si está separado)
 
 ![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/AirPressure.png)
@@ -1380,19 +1393,21 @@ Componentes Involucrados
 Conexión de hardware
     - **Conexión del módulo:**
         - Conexión predeterminada por orificio de estampado PCB.
-    - El Seeeduino se conecta luego a la computadora mediante un cable USB.
+    - El Seeeduino se conecta luego a la computadora a través de un cable USB.
 
 Código de Software
 
+#### Para BMP280 (Versión anterior antes de octubre de 2025)
+
     - Abre Arduino IDE.
-    - Instala la librería **Sensor Barómetro Grove**: Navega a **Sketch** -> **Include Library** -> **Manage Libraries...** y Busca la palabra clave "**Grove BMP280**" en el **Library Manager**, luego instala.
+    - Instala la **biblioteca del Sensor Barómetro Grove**: Navega a **Sketch** -> **Include Library** -> **Manage Libraries...** y Busca la palabra clave "**Grove BMP280**" en el **Library Manager**, luego instala.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/BMP-lib.png)
 
 - Copia el siguiente código, haz clic en Verify para verificar errores de sintaxis. Verifica que no haya errores, y puedes subir el código.
-- En este programa, la información del sensor Barómetro se envía desde el sensor a Seeeduino vía bus I2C y luego Seeeduino las imprime en el monitor serial. Abre el **monitor serial** para verificar el resultado.
+- En este programa, la información del sensor Barómetro se envía desde el sensor al Seeeduino a través del bus I2C y luego el Seeeduino las imprime en el monitor serial. Abre el **monitor serial** para verificar el resultado.
 
-```Cpp
+```cpp
 //Air pressure detection
 #include "Seeed_BMP280.h"
 #include <Wire.h>
@@ -1509,11 +1524,86 @@ Imprime la amplitud.
 
 **Efecto de Demostración y Resultado de Impresión Serial:**
 
-Las lecturas de presión de aire se muestran en el Monitor Serial.
+Las lecturas de presión del aire se muestran en el Monitor Serial.
 
-Guía de Breakout
+Guía de Conexión
 
-Usa cable Grove para conectar el Sensor de Presión de Aire Grove a la interfaz **I2C** del Seeeduino Lotus usando un cable Grove (nota: la dirección I2C por defecto es 0x77 o 0x76).
+Usa un cable Grove para conectar el Sensor de Presión de Aire Grove a la interfaz **I2C** del Seeeduino Lotus usando un cable Grove (nota: la dirección I2C por defecto es 0x77 o 0x76).
+
+#### Para SPA06-003 (Nueva versión después de octubre de 2025)
+
+El SPA06-003 es un sensor de presión barométrica de alta precisión que puede medir tanto presión como temperatura. Aquí se explica cómo usarlo con Arduino:
+
+**Instalación de Librería:**
+
+- Descarga e instala la [librería SPL07-003](https://github.com/Seeed-Studio/Seeed_Arduino_SPA06) para Arduino
+
+- La librería proporciona funciones para leer presión, temperatura y calcular altitud
+
+**Descripción:** Este programa se interfaza con el sensor de presión y temperatura SPL07-003 para monitorear continuamente las condiciones atmosféricas. Inicializa el sensor con configuraciones de muestreo específicas (4Hz para presión con 32 muestras, 4Hz para temperatura con 1 muestra) y lee valores de presión, temperatura y altitud calculada en tiempo real, mostrando los resultados a través de comunicación serial.
+
+```cpp
+#include <Wire.h>
+#include "SPL07-003.h"
+
+// Define SPL07-006 I2C address
+#define SPL07_ADDR SPL07_ADDR_DEF // Default I2C address (SDO=high)
+// #define SPL07_ADDR SPL07_ADDR_ALT // Alternate I2C address (SDO=low)
+
+// Create SPL07-003 sensor instance
+SPL07_003 spl;
+
+//HardwareSerial SerialOut(PA10, PA9); //for STM32F103C8Tx
+
+// Runs at startup
+void setup() {
+
+  // Begin Serial
+  Serial.begin(115200);
+
+  // Configure & start I2C
+  //Wire.setSDA(PB7); //for STM32F103C8Tx
+  //Wire.setSCL(PB6); //for STM32F103C8Tx
+  Wire.begin();
+
+  // Connect to SPL07-003
+  if (spl.begin(SPL07_ADDR,&Wire) == false) {
+    Serial.println("Error initializing SPL07-003 :(");
+    while (1) {}
+  }//if
+  Serial.println("Connected to SPL07-003! :)");
+
+  // Set pressure & temperature sampling settings
+  spl.setPressureConfig(SPL07_4HZ, SPL07_32SAMPLES);
+  spl.setTemperatureConfig(SPL07_4HZ, SPL07_1SAMPLE);
+
+  // Set SPL07-003 to continuous measurements
+  spl.setMode(SPL07_CONT_PRES_TEMP);
+
+}//setup()
+
+
+// Runs continuously
+void loop() {
+
+  // Wait for available reading
+  if (spl.pressureAvailable() || spl.temperatureAvailable()) {
+    // Read latest values
+    double pres = spl.readPressure();
+    double temp = spl.readTemperature();
+    double altitude = spl.calcAltitude();
+    // Print to serial
+    Serial.print("Pres: ");
+    Serial.print(pres, 3);
+    Serial.print(" Pa, Temp: ");
+    Serial.print(temp, 3);
+    Serial.print(" C, Altitude: ");
+    Serial.print(altitude, 3);
+    Serial.println(" m");
+  }//if
+
+}//loop()
+```
 
 ### Lección 10: Detección de Movimiento
 
@@ -1524,23 +1614,23 @@ Este es el último sensor, el acelerómetro triaxial, y con este módulo, puedes
 Componentes Involucrados
 
     1. Seeeduino Lotus
-    2. Acelerómetro de 3 ejes Grove
+    2. Grove Acelerómetro de 3 ejes
     3. Cable Grove(si está separado)
 
 ![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Gyro.png)
 
-Conexión de Hardware
+Conexión de hardware
 
     - **Conexión del módulo:**
-        - Conexión por defecto mediante orificio de estampado PCB.
-    - El Seeeduino se conecta luego a la computadora mediante un cable USB.
+        - Conexión predeterminada por orificio de estampado PCB.
+    - El Seeeduino se conecta luego a la computadora a través de un cable USB.
 
 Código de Software
 
     - Abre Arduino IDE.
     - Descarga el [Acelerómetro Digital de 3 Ejes( ±2g a 16g)](https://github.com/Seeed-Studio/Seeed_Arduino_LIS3DHTR) desde Github. Haz clic en **Sketch** > **Include library** > **Add .ZIP library**, importa la librería al IDE.
     - Copia el siguiente código, haz clic en Verify para verificar errores de sintaxis. Verifica que no haya errores, y puedes subir el código.
-    - En este programa, la información de aceleración se envía desde el sensor al Seeeduino mediante bus I2C y luego Seeeduino los imprime en el monitor serial. Abre el **monitor serial** para verificar el resultado.
+    - En este programa, la información de aceleración se envía desde el sensor al Seeeduino a través del bus I2C y luego Seeeduino los imprime en el monitor serie. Abre el **monitor serie** para verificar el resultado.
 
 ```Cpp
 //Gravity Acceleration
@@ -1625,7 +1715,7 @@ Serial.print("z:"); Serial.println(LIS.getAccelerationZ());
 
 **Descripción:**
 
-Funciones a utilizar para leer el valor del eje X desde el sensor.
+Funciones que se utilizan para leer el valor del eje X del sensor.
 
 **Sintaxis:**
 
@@ -1633,7 +1723,7 @@ Funciones a utilizar para leer el valor del eje X desde el sensor.
 
 **Descripción:**
 
-Funciones a utilizar para leer el valor del eje Y desde el sensor.
+Funciones que se utilizan para leer el valor del eje Y del sensor.
 
 **Sintaxis:**
 
@@ -1641,7 +1731,7 @@ Funciones a utilizar para leer el valor del eje Y desde el sensor.
 
 **Descripción:**
 
-Funciones a utilizar para leer el valor del eje Z desde el sensor.
+Funciones que se utilizan para leer el valor del eje Z del sensor.
 
 **Sintaxis:**
 
@@ -1655,7 +1745,7 @@ Las lecturas del acelerómetro de 3 ejes se muestran en el Monitor Serie.
 
 Guía de Breakout
 
-Usa cable Grove para conectar el Acelerómetro de 3 ejes Grove a la interfaz **I2C** del Seeeduino Lotus usando un cable Grove (nota: la dirección I2C por defecto es 0x19).
+Usa un cable Grove para conectar el Acelerómetro de 3 ejes Grove a la interfaz **I2C** del Seeeduino Lotus usando un cable Grove (nota: la dirección I2C por defecto es 0x19).
 
 ## Proyectos Adicionales
 
@@ -1819,7 +1909,7 @@ delay(100*durt[x]);
 
 Controlar las luces LED encendidas y apagadas respectivamente.
 
-**Efecto de Demostración y Resultado de Impresión Serial:**
+**Efecto de Demostración y Resultado de Impresión Serie:**
 
 El zumbador emitirá una melodía mientras el módulo LED parpadeará con la misma frecuencia.
 
@@ -1902,7 +1992,7 @@ Conecta el LED Grove a la interfaz de señal digital **D4** del Seeeduino Lotus,
 
 ## Crea Tus Propios Módulos y Placas
 
-Después de este período de estudio, ya tienes un entendimiento sistemático de Arduino y hardware de código abierto, así que ¿por qué no ir más lejos y tratar de hacer tu propio módulo o placa de desarrollo?
+Después de este período de estudio, ya tienes una comprensión sistemática de Arduino y hardware de código abierto, así que ¿por qué no ir más lejos y tratar de hacer tu propio módulo o placa de desarrollo?
 
 ### EDA
 
@@ -1914,13 +2004,13 @@ Para diseñar tu propia placa, necesitarás diseñar los esquemáticos de tu pro
 
 - **Upverter**
 
-Si no quieres trabajar en esquemáticos o layout tú mismo, pero quieres convertir tu prototipo basado en los módulos de Seeed en un producto integrado, te recomendamos altamente que pruebes Upverter.
+Si no quieres trabajar en esquemáticos o layout tú mismo, pero quieres convertir tu prototipo basado en módulos de Seeed en un producto integrado, te recomendamos encarecidamente que pruebes Upverter.
 
-Por favor visita la [**Guía de Upverter del Kit para Principiantes Grove para Arduino**](https://wiki.seeedstudio.com/es/Grove-Beginner-Kit-for-Arduino-Upverter-Guide/) para más información.
+Por favor visita la [**Guía de Upverter del Kit para Principiantes Grove para Arduino**](https://wiki.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-Upverter-Guide/) para más información.
 
 ### Servicios de PCB
 
-Después de que hayas terminado con tu diseño, revisa el [servicio PCBA de Seeed Fusion](https://www.seeedstudio.com/fusion_pcb.html), que puede ayudar a traducir tus diseños en un dispositivo real que funcione.
+Después de que hayas terminado con tu diseño, echa un vistazo al [servicio PCBA de Seeed Fusion](https://www.seeedstudio.com/fusion_pcb.html), que puede ayudar a traducir tus diseños en un dispositivo real que funcione.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/Fusion.png)
 
@@ -1928,7 +2018,7 @@ Seeed Studio tiene su propia [Biblioteca de Partes Abiertas (OPL)](https://www.s
 
 ## FAQ
 
-### 1. ¿Cómo remover los módulos electrónicos individuales para uso?
+### 1. ¿Cómo remover los módulos electrónicos individuales para su uso?
 
 ![image.png](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/remove1.jpg)
 
@@ -1951,25 +2041,29 @@ Mirando de cerca el Kit para Principiantes Grove Para Arduino verás que hay 3 p
 
 ## Recursos
 
-1. [**Wiki del Kit para Principiantes Grove para Arduino [PDF]**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-For-ArduinoPDF.pdf)
+1. [**Grove Beginner Kit for Arduino Wiki [PDF]**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-For-ArduinoPDF.pdf)
 
-2. [**Archivos de Diseño Esquemático del Kit para Principiantes Grove para Arduino**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-for-Arduino-SCH-PCB.zip)
+2. Archivos de Diseño Esquemático
+
+    - [**Grove Beginner Kit for Arduino Archivos de Diseño Esquemático V1.0 Versión de Vista Previa**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-for-Arduino-SCH-PCB.zip)
+
+    - [**Grove Beginner Kit for Arduino Archivos de Diseño Esquemático V1.1 Nueva Versión**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove_Beginner_Kit_for_Arduino_v2.3_SCH&PCB_250812.zip)
 
 3. **Librerías de Módulos en Github:**
-      - [Pantalla OLED](https://github.com/olikraus/U8g2_Arduino)
-      - [Sensor de Temperatura y Humedad](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor)
-      - [Sensor de Presión de Aire](https://github.com/Seeed-Studio/Grove_BMP280)
-      - [Acelerómetro de 3 Ejes](https://github.com/Seeed-Studio/Seeed_Arduino_LIS3DHTR)
 
-4. [**Hoja de Datos del Sensor**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-beginner-kit-for-arduino-datasheet.zip)
+    - [Pantalla OLED](https://github.com/olikraus/U8g2_Arduino)
+    - [Sensor de Temperatura y Humedad](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor)
+    - [Sensor de Presión de Aire (BMP280)](https://github.com/Seeed-Studio/Grove_BMP280)
+    - [Sensor de Presión de Aire (SPA06-003)](https://github.com/Seeed-Studio/Seeed_Arduino_SPA06)
+    - [Acelerómetro de 3 Ejes](https://github.com/Seeed-Studio/Seeed_Arduino_LIS3DHTR)
 
-5. [**Demo del Firmware Inicial de Arduino**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/GroveBeginnerKitFirmwareFINAL.zip)
+4. [**Hoja de Datos de Sensores**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-beginner-kit-for-arduino-datasheet.zip)
 
-6. [**Recursos del Kit para Principiantes Grove para Arduino en uno [20200401] (7z)**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-For-Arduino-Resources-in-one(20200401).7z)
+5. [**Demo de Firmware Inicial de Arduino**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/GroveBeginnerKitFirmwareFINAL.zip)
 
-7. [**Certificados FCC + SDOC del Kit para Principiantes Grove para Arduino**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/FCC-SDOC-Certificates.zip)
+6. [**Grove Beginner Kit For Arduino Recursos en uno [20200401] (7z)**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-For-Arduino-Resources-in-one(20200401).7z)
 
-8. [**Curso de Programación Gráfica Codecraft del Kit para Principiantes Grove para Arduino web v7**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-For-Arduino-Codecraft-Graphical-Programming-Course-web-v7.pdf)
+7. [**Grove Beginner Kit For Arduino Curso de Programación Gráfica Codecraft web v7**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-For-Arduino-Codecraft-Graphical-Programming-Course-web-v7.pdf)
 
 ## Más Aprendizaje
 

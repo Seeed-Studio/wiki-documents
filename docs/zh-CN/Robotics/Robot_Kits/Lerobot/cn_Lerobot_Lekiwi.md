@@ -1,6 +1,6 @@
 ---
 description: 本维基提供了 Lekiwi 的组装和调试教程，并在 Lerobot 框架内实现数据收集和训练。
-title: 如何在 Lerobot 中使用 Lekiwi
+title: Lekiwi入门教程
 keywords:
 - Lerobot
 - Huggingface

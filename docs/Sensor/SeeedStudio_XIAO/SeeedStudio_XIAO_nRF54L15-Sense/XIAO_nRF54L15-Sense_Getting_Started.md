@@ -175,22 +175,22 @@ export const Highlight = ({children, color}) => (
 
 <table align="center">
   <tr>
-    <th>XIAO nRF54L15 Pin List</th>
-  </tr>
-  <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/definition.png" style={{width:800, height:'auto'}}/></div></td>
-  </tr>
-  <tr>
     <th>XIAO nRF54L15 front indication diagram</th>
   </tr>
   <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Font.png" style={{width:1000, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_nRF54L15_front.png" style={{width:680, height:'auto'}}/></div></td>
   </tr>
   <tr>
     <th>XIAO nRF54L15 back indication diagram</th>
   </tr>
   <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/newback8.png" style={{width:850, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/sense_newback.png" style={{width:600, height:'auto'}}/></div></td>
+  </tr>
+    <tr>
+    <th>XIAO nRF54L15 Pin List</th>
+  </tr>
+  <tr>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nr_definition.png" style={{width:800, height:'auto'}}/></div></td>
   </tr>
 </table>
 
@@ -199,22 +199,22 @@ export const Highlight = ({children, color}) => (
 
  <table align="center">
   <tr>
-    <th>XIAO nRF54L15 Sense Pin List</th>
-  </tr>
-  <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/sensedefinition.png" style={{width:800, height:'auto'}}/></div></td>
-  </tr>
-  <tr>
     <th>XIAO nRF54L15 Sense front indication diagram</th>
   </tr>
     <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_Font.png" style={{width:1000, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_nRF54L15_Sense_Font.png" style={{width:680, height:'auto'}}/></div></td>
   </tr>
   <tr>
     <th>XIAO nRF54L15 Sense back indication diagram</th>
   </tr>
   <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/newback8.png" style={{width:850, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/sense_newback.png" style={{width:600, height:'auto'}}/></div></td>
+  </tr>
+    <tr>
+    <th>XIAO nRF54L15 Sense Pin List</th>
+  </tr>
+  <tr>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_sensedefinition.png" style={{width:800, height:'auto'}}/></div></td>
   </tr>
  </table>
 
@@ -228,7 +228,7 @@ The nRF Connect SDK (NCS) is an extensible, unified software development kit fro
 
 NCS provides a rich ecosystem of off-the-shelf sample applications, protocol stacks, libraries and hardware drivers designed to simplify the development process and accelerate time-to-market. Its modular and configurable nature gives developers the flexibility to build size-optimized software for memory-constrained devices, as well as powerful functionality for more advanced and complex applications.NCS is an open-source project hosted on GitHub and offers excellent support for integrated development environments such as Visual Studio Code.
 
-### Install With Vscode
+### Using nRF Connect SDK on VSCode
 
 <details>
 
@@ -236,20 +236,13 @@ NCS provides a rich ecosystem of off-the-shelf sample applications, protocol sta
 
 This document details how to install the nRF Connect SDK development environment on a Windows 11 computer.The following is an overview of the tools that need to be installed
 
-- Visual Studio Code
+- Install VS Studio Code
+
+  [Visual Studio Code - Code Editing .Redefined](https://code.visualstudio.com/ )
+
 - nRF Command Line Tools
 - nRF Connect for Desktop
 - Git
-
-```cpp
-git --version
-```
-
-- Python
-
-```cpp
-python --version
-```
 
 - Ninja
 
@@ -305,13 +298,10 @@ You should see the following output:
 
 #### VScode configures the board and builds the burn-in file
 
-***1.install VS Studio Code***
-[Visual Studio Code - Code Editing .Redefined](https://code.visualstudio.com/ )
-
-2.Open VS Code and search for nRF Connect for VS Code Extension Pack in the Plugin Center. This plugin pack will automatically install other VS Code plugins required for nRF Connect.
+Open VS Code and search for nRF Connect for VS Code Extension Pack in the Plugin Center. This plugin pack will automatically install other VS Code plugins required for nRF Connect.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn8.png" style={{width:600, height:'auto'}}/></div>
-
+<br />
 The nRF Connect for VS Code extension enables developers to utilize the popular Visual Studio Code Integrated Development Environment (VS Code IDE) to develop, build, debug and deploy embedded applications based on Nordic's nRF Connect SDK (Software Development Kit). The extension includes useful development tools such as a compiler interface, linker, complete build system, RTOS-enabled debugger, seamless interfacing with the nRF Connect SDK, device tree visualization editor, and an integrated serial terminal.
 The nRF Connect extension package for VS Code includes the following components:
 
@@ -330,11 +320,9 @@ The toolchain is a collection of tools that work together to build nRF Connect S
 The first time you open nRF Connect for VS Code, you will be prompted to install the toolchain. This usually happens if the extension does not detect any installed toolchain on your computer.
 Click Install Toolchain and a list of toolchain versions will be listed that can be downloaded and installed on your computer. Select the version of the toolchain that matches the version of the nRF Connect SDK you plan to use. We always recommend using the latest tagged version of the nRF Connect SDK.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrfdown1.png" style={{width:600, height:'auto'}}/></div>
-
 By default, nRF Connect for VS Code only displays the Released tab (i.e., the stable version) of the toolchain. If you are evaluating a new feature and would like to use the Preview tab or another type of tab (e.g. Customer Sampling -cs), click on "Show all toolchain versions" as shown below:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrfdown2.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/toolchain2.png" style={{width:800, height:'auto'}}/></div>
 
 :::note
 **The ToolChain here is 3.0.1 or above**
@@ -345,7 +333,7 @@ By default, nRF Connect for VS Code only displays the Released tab (i.e., the st
 In the nRF Connect extension for VS Code, click on Manage SDK. from the Manage SDK menu, we can install or uninstall the nRF Connect SDK version. Since this is the first time we are using the extension, the interface will only show two options.
 
 Clicking Install SDK will list all available nRF Connect SDK versions that can be downloaded and installed locally. Select the version of the nRF Connect SDK that is required for the development of your project.
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrfdown3.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/install_sdk.png" style={{width:800, height:'auto'}}/></div>
 
 If you have opened the SDK folder in VS Code, instead of the Manage SDK menu option, you will see the Manage west workspace. To resolve this issue, open another window or folder in VS Code.
 
@@ -364,11 +352,11 @@ In this exercise we will write a simple application based on the blinky example 
 
 - In VS Code, click the nRF Connect extension icon. In the Welcome view, click Create New Application.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/blinky.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project1.png" style={{width:800, height:'auto'}}/></div>
 
 - Type blinky in the search bar and select the second Blinky sample (path zephyr/samples/basic/blinky), as shown below.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/blinky2.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project2.png" style={{width:800, height:'auto'}}/></div>
 
 The Blinky example will cause the LED1 on the development board to blink continuously.
 Our first application will be based on the Blinky example. The Blinky example is derived from the Zephyr mold block in the nRF Connect SDK, so you will see the zephyr name in the sample path: zephyr\samples\basic\blinky.
@@ -395,15 +383,13 @@ To configure your board for nRF Connect in VS Code, you can follow these steps:
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/config1.jpg" style={{width:600, height:'auto'}}/></div> -->
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/config_new.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/add_board1.png" style={{width:800, height:'auto'}}/></div>
 
 - In the application view, click Add Build Configuration below the application name .
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/config3.png" style={{width:600, height:'auto'}}/></div>
-
 - We can select the model of XIAO nRF54L15 in the Board target, and select the default prj.config file in the Base configuration files, and finally click `Generate and Build` to build the file.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/config2.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/add_board2.png" style={{width:800, height:'auto'}}/></div>
 
 #### Download Burn-in Plug-in
 
@@ -498,26 +484,106 @@ brew install openocd
 
 - Open the nRF terminal
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn12.png" style={{width:600, height:'auto'}}/></div>
-
 - Just enter the `west flash` command,To flash your device, simply enter the west flash command. The path highlighted in red indicates the location of your compiled .elf file. You can use this same path to find the corresponding .hex file, which is suitable for programming with a J-Link debugger.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn13.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/west_flash_1.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
 If the west flash error occurs, it means that there is a conflict with the CMake plugin in VS Code, and you need to remove the CMake plugin.
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/error.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/error.jpg" style={{width:800, height:'auto'}}/></div>
 :::
-
-#### Light up th LED
 
 When we successfully burned the program in the Seeed Studio XIAO nRF54L15 Sense, you can see the board above the user indicator in the non-stop blinking green light, if your hands are also the same rendering effect, it means that you have been successfully on it!🎊
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light3.gif" style={{width:400, height:'auto'}}/></div>
 
+#### Blinky program explation
+
+```cpp
+/*
+ * Copyright (c) 2016 Intel Corporation
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <stdio.h>
+#include <zephyr/kernel.h>
+#include <zephyr/drivers/gpio.h>
+
+/* 1000 msec = 1 sec */
+#define SLEEP_TIME_MS   1000
+
+/* The devicetree node identifier for the "led0" alias. */
+#define LED0_NODE DT_ALIAS(led0)
+
+/*
+ * A build error on this line means your board is unsupported.
+ * See the sample documentation for information on how to fix this.
+ */
+static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
+
+int main(void)
+{
+int ret;
+bool led_state = true;
+
+if (!gpio_is_ready_dt(&led)) {
+  return 0;
+}
+
+ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE);
+if (ret < 0) {
+  return 0;
+}
+
+while (1) {
+  ret = gpio_pin_toggle_dt(&led);
+  if (ret < 0) {
+    return 0;
+  }
+
+  led_state = !led_state;
+  printf("LED state: %s\n", led_state ? "ON" : "OFF");
+  k_msleep(SLEEP_TIME_MS);
+}
+return 0;
+}
+```
+
+**LED Device Definition**:
+
+- `#define LED0_NODE DT_ALIAS(led0)`: Retrieves the device tree node identifier for the "led0" alias, enabling hardware-agnostic reference to the LED.
+- `static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios)`: Creates a GPIO specification structure (`led`) using the device tree node, containing hardware details (pin, port) for the LED. A build error here indicates unsupported hardware.
+
+**main() Function Initialization**：
+
+- **Variable Setup**:
+  - `int ret`: Stores function return values to check operation success.
+  - `bool led_state = true`: Tracks LED status (initialized to "ON").
+
+- **GPIO Readiness Check**:
+  - `if (!gpio_is_ready_dt(&led)) { return 0; }`: Verifies if the LED's GPIO hardware is ready (e.g., driver loaded). Exits if not ready.
+
+- **GPIO Configuration**:
+  - `ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE)`: Configures the LED's GPIO pin as an active-high output.
+  - Exits on failure (`ret < 0`) to prevent invalid operations.
+
+**Main Loop**:
+Runs in an infinite `while (1)` loop to toggle the LED periodically:
+
+- **Toggle LED State**:
+  - `ret = gpio_pin_toggle_dt(&led)`: Flips the LED's GPIO output (ON ↔ OFF). Exits on failure.
+
+- **Update Status Tracking**:
+  - `led_state = !led_state`: Syncs the software status flag with hardware state.
+
+- **Log and Delay**:
+  - `printf("LED state: %s\n", led_state ? "ON" : "OFF")`: Prints current LED status via serial output.
+  - `k_msleep(SLEEP_TIME_MS)`: Pauses for 1000ms (1 second) using Zephyr's RTOS delay function, controlling the blink frequency.
+
 #### Deep Dive into nRF Connect SDK Internals
 
-To truly master the nRF Connect SDK, you need to understand its building blocks from the inside out. Jump into these courses to elevate your knowledge:
+If you want to have a deeper understanding of the internal principles of nRF Connect SDK, you can refer to the following courses:
 
 - [**nRF Connect SDK Fundamentals**](https://academy.nordicsemi.com/courses/nrf-connect-sdk-fundamentals/)
 
@@ -526,6 +592,39 @@ To truly master the nRF Connect SDK, you need to understand its building blocks 
 - [**nRF Connect Vscode**](https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html)
 
 </Steppers>
+
+## Acess The J-Link Pins For Burn a Program
+
+If you want to use JLink for programming, you can follow the steps below. However, we suggest that you use the serial port built-in on the Seeed Stduio XIAO nRF54L15 board for programming, which will be much more convenient.
+
+**Hardware Required**
+
+- [Seeed Studio XIAO nRF54L15](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html)
+- [Jlink](https://www.segger.com/downloads/jlink/)
+
+:::tip
+You need to download the latest version of J-Link to have the nRF54L15 model board support.
+:::
+
+**Software Required**
+
+It is required to download the [Segger](https://www.segger.com/downloads/jlink/) software from the website.
+
+- **Step 1.** Use Jlink to connect pins below:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link.png" alt="pir" width={250} height="auto" /></p>
+
+- **Step 2.** Start the J-Flash and search nRF54L15_M33, creating a new project:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link4.jpg" alt="pir" width={700} height="auto" /></p>
+
+- **Step 3.** Click "Target" and then select "Connect".
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link3.jpg" alt="pir" width={700} height="auto" /></p>
+
+- **Step 4.** Draw the bin or [hex file](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/zephyr.hex) to software. Then press F4 and F5 in that order. The reflashing is done.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link2.jpg" alt="pir" width={700} height="auto" /></p>
 
 ## Battery Powered Board
 
@@ -576,15 +675,309 @@ The following sample code is designed for PlatformIO, but it is also compatible 
 Using XIAO nRF54L15 in PlatformIO
 If you want to use XIAO nRF54L15 in PlatformIO, please refer to this tutorial to configure it: [XIAO nRF54L15 PlatformIO Configuration](https://wiki.seeedstudio.com/xiao_nrf54l15_with_platform_io/).
 
-Using the XIAO nRF54L15 in the nRF Connect SDK
-To use this code in the nRF Connect SDK, you need to port the following three files `main.c`,`prj.conf`,`app.overlay`
-[XIAO nRF54L15 PlatformIO Configuration](http://localhost:3000/xiao_nrf54l15_sense_getting_started/#power-consumpitons-code-example-for-xiao-nrf54l15-platformio)
 :::
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-battery" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
+
+### Add overlay and modify the conf file
+
+If you want to use this battery routine in the nRF Connect SDK, you need to add app.overlay and modify the prj.conf file.
+
+- Create a new file named `app.overlay` under the project directory. Then paste the following code into it, and  finally press Ctrl + S to save.
+
+  - The overlay file extends the hardware description layer and customizes the physical hardware connections through the device tree. It does not modify the code logic, but rather declares the actual hardware details to ensure that the driver can correctly initialize the physical device.
+<br />
+  <details>
+
+  <summary>app.overlay code</summary>
+
+  ```cpp
+  / {
+  /*
+    * @brief Device Tree Overlay for XIAO nRF54L15
+    *
+    * This file customizes the base board device tree to configure
+    * peripherals for a specific application, including:
+    * - User-defined ADC channels
+    * - PWM-controlled LED
+    * - Buttons and a relay
+    * - E-paper display (UC8179) via SPI
+    * - OLED display (SSD1306) via I2C
+    *
+    * To switch between the two displays, simply uncomment one and comment
+    * out the other in the "chosen" node below.
+    */
+
+  /************************************************************
+    * Aliases for easy access to devices in application code
+    ************************************************************/
+  aliases {
+    pwm-led = &pwm0_led0;
+    sw1 = &xiao_button0;
+    relay0 = &xiao_relay0;
+  };
+
+  /************************************************************
+    * Display selection (choose one if multiple)
+    ************************************************************/
+  chosen {
+    zephyr,display = &uc8179_7inch5_epaper_gdew075t7;
+    zephyr,display = &ssd1306_128x64;
+  };
+
+  /************************************************************
+    * PWM LED, Button, and Relay configuration
+    ************************************************************/
+  pwm_leds {
+    compatible = "pwm-leds";
+    pwm0_led0: my_pwm_led {
+      // PWM channel 0 on PWM instance 20
+      // PWM_MSEC(20) sets a period of 20ms
+      pwms = <&pwm20 0 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
+      status = "okay";
+    };
+  };
+
+  buttons {
+    compatible = "gpio-keys";
+    xiao_button0: button_0 {
+      // Connect to the XIAO nRF54L15 pin D1
+      // GPIO_PULL_UP ensures the pin is high when the button is not pressed
+      // GPIO_ACTIVE_LOW means the button press drives the pin low
+      gpios = <&xiao_d 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      zephyr,code = <INPUT_KEY_0>;
+    };
+  };
+
+  relay {
+    compatible = "gpio-leds";
+    xiao_relay0: relay_0 {
+      // Connect to the XIAO nRF54L15 pin D0
+      gpios = <&xiao_d 0 GPIO_ACTIVE_HIGH>;
+    };
+  };
+
+  /************************************************************
+    * Local nodes that don't modify existing ones
+    ************************************************************/
+  zephyr,user {
+    io-channels = <&adc 0>, <&adc 1>, <&adc 2>, <&adc 3>,
+            <&adc 4>, <&adc 5>, <&adc 6>, <&adc 7>;
+  };
+
+  // MIPI-DBI SPI interface for the E-paper display
+  mipi_dbi_xiao_epaper {
+    compatible = "zephyr,mipi-dbi-spi";
+    spi-dev = <&xiao_spi>;
+    // D3 pin for Data/Command control
+    dc-gpios = <&xiao_d 3 GPIO_ACTIVE_HIGH>;
+    // D0 pin for Reset
+    reset-gpios = <&xiao_d 0 GPIO_ACTIVE_LOW>;
+    write-only;
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    uc8179_7inch5_epaper_gdew075t7: uc8179@0 {
+      compatible = "gooddisplay,gdew075t7", "ultrachip,uc8179";
+      // Max SPI frequency for the display
+      mipi-max-frequency = <4000000>;
+      reg = <0>;
+      width = <800>;
+      height = <480>;
+      // D2 pin for Busy signal from the display
+      busy-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
+      softstart = [17 17 17 17];
+      full {
+        pwr = [07 07 3f 3f];
+        cdi = <07>;
+        tcon = <0x22>;
+      };
+    };
+  };
+  };
+
+  /************************************************************
+  * Device fragments (modifying nodes from the base board DTS)
+  ************************************************************/
+  // PWM instance 20
+  &pwm20 {
+  status = "okay";
+  pinctrl-0 = <&pwm20_default>;
+  pinctrl-1 = <&pwm20_sleep>;
+  pinctrl-names = "default", "sleep";
+  };
+
+  // GPIO pin control
+  &pinctrl {
+  pwm20_default: pwm20_default {
+    group1 {
+      // Configure PWM channel 0 on P1.04 pin (Pin D0)
+      psels = <NRF_PSEL(PWM_OUT0, 1, 4)>;
+    };
+  };
+
+  pwm20_sleep: pwm20_sleep {
+    group1 {
+      psels = <NRF_PSEL(PWM_OUT0, 1, 4)>;
+      low-power-enable;
+    };
+  };
+  };
+
+  // PDM instance 20 for DMIC
+  dmic_dev: &pdm20 {
+  status = "okay";
+  };
+
+  // Power configuration
+  &pdm_imu_pwr {
+  /delete-property/ regulator-boot-on;
+  };
+
+  // UART instance 20
+  &uart20 {
+  current-speed = <921600>;
+  };
+
+  // SPI peripheral
+  &xiao_spi {
+  status = "okay";
+  // D1 pin for Chip Select
+  cs-gpios = <&xiao_d 1 GPIO_ACTIVE_LOW>;
+  };
+
+  // I2C peripheral
+  &xiao_i2c {
+  status = "okay";
+  zephyr,concat-buf-size = <2048>;
+
+  ssd1306_128x64: ssd1306@3c {
+    compatible = "solomon,ssd1306fb";
+    reg = <0x3c>;
+    width = <128>;
+    height = <64>;
+    segment-offset = <0>;
+    page-offset = <0>;
+    display-offset = <0>;
+    multiplex-ratio = <63>;
+    segment-remap;
+    com-invdir;
+    prechargep = <0x22>;
+  };
+  };
+  ```
+
+  </details>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/add_overlay1.png" style={{width:800, height:'auto'}}/></div>
+
+- Add the following content under the prj.conf file
+
+  - prj.conf is the core configuration file of the Zephyr project. It is managed by the Kconfig system for the  selection of software functions during compilation. It determines which drivers (such as ADC, display, Bluetooth), middleware (such as LVGL), and system services (such as logging, memory management) are included in the firmware, and sets their behavior parameters (such as log level, heap size),finally press Ctrl + S to save.
+<br />
+  <details>
+
+  <summary>prj.conf code</summary>
+
+    ```python
+    # =========================================================
+    # Basic system configuration
+    # =========================================================
+    CONFIG_GPIO=y
+    CONFIG_I2C=y
+    CONFIG_ADC=y
+    CONFIG_ADC_ASYNC=y
+    CONFIG_PWM=y
+    CONFIG_SENSOR=y
+    CONFIG_INPUT=y
+
+    # =========================================================
+    # Power management
+    # =========================================================
+    CONFIG_PM_DEVICE=y
+    CONFIG_NRFX_POWER=y
+    CONFIG_POWEROFF=y
+    CONFIG_HWINFO=y
+    CONFIG_CRC=y
+
+    # =========================================================
+    # Serial port and console configuration
+    # =========================================================
+    CONFIG_SERIAL=y
+    CONFIG_CONSOLE=y
+    CONFIG_STDOUT_CONSOLE=y
+    CONFIG_UART_CONSOLE=y
+    CONFIG_UART_ASYNC_API=y
+    CONFIG_UART_INTERRUPT_DRIVEN=y
+    CONFIG_UART_NRFX_UARTE_ENHANCED_RX=y
+    CONFIG_CBPRINTF_FP_SUPPORT=y
+
+    # =========================================================
+    # Log and Debugging
+    # =========================================================
+    CONFIG_LOG=y
+    CONFIG_LOG_PRINTK=y
+    CONFIG_LOG_MODE_IMMEDIATE=y
+    CONFIG_LOG_DEFAULT_LEVEL=3
+    CONFIG_PWM_LOG_LEVEL_DBG=y
+    CONFIG_PRINTK=y
+
+    # =========================================================
+    #  Memory and Stack
+    # =========================================================
+    CONFIG_MAIN_STACK_SIZE=4096
+    CONFIG_HEAP_MEM_POOL_SIZE=16384
+    CONFIG_NEWLIB_LIBC=y
+    CONFIG_NEWLIB_LIBC_FLOAT_PRINTF=y
+
+    # =========================================================
+    # Bluetooth configuration
+    # =========================================================
+    CONFIG_BT=y
+    CONFIG_BT_PERIPHERAL=y
+    CONFIG_BT_DEVICE_NAME="zephyr-ble"
+
+    # =========================================================
+    # Audio configuration
+    # =========================================================
+    CONFIG_AUDIO=y
+    CONFIG_AUDIO_DMIC=y
+
+    # =========================================================
+    # Display and Graphics
+    # =========================================================
+    CONFIG_DISPLAY=y
+    CONFIG_MIPI_DBI_SPI=y
+    CONFIG_SSD1306=y
+    CONFIG_CHARACTER_FRAMEBUFFER=y
+
+    # LVGL Graphics Library
+    CONFIG_LVGL=y
+    CONFIG_LV_Z_MEM_POOL_SIZE=49152
+    CONFIG_LV_Z_SHELL=y
+    CONFIG_LV_USE_MONKEY=y
+    CONFIG_LV_USE_LABEL=y
+    CONFIG_LV_COLOR_DEPTH_1=y
+    CONFIG_LV_FONT_MONTSERRAT_12=y
+    CONFIG_LV_FONT_MONTSERRAT_14=y
+    CONFIG_LV_FONT_MONTSERRAT_16=y
+    CONFIG_LV_FONT_MONTSERRAT_18=y
+    CONFIG_LV_FONT_MONTSERRAT_24=y
+    CONFIG_LV_USE_FONT_COMPRESSED=y
+
+    # =========================================================
+    # Shell configuration
+    # =========================================================
+    CONFIG_SHELL=y
+    CONFIG_SHELL_BACKEND_DUMMY=y
+    ```
+
+  </details>
+
+  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/add_prj1.png" style={{width:800, height:'auto'}}/></div>
 
 ### Core Code
 
@@ -677,433 +1070,6 @@ int main(void)
  }
 
  regulator_disable(vbat_reg);
- return 0;
-}
-```
-
-## Acess The J-Link Pins For Burn a Program
-
-**Hardware Required**
-
-- [Seeed Studio XIAO nRF54L15](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html)
-- [Jlink](https://www.segger.com/downloads/jlink/)
-
-:::tip
-You need to download the latest version of J-Link to have the nRF54L15 model board support.
-:::
-
-**Software Required**
-
-It is required to download the [Segger](https://www.segger.com/downloads/jlink/) software from the website.
-
-- **Step 1.** Use Jlink to connect pins below:
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link.png" alt="pir" width={250} height="auto" /></p>
-
-- **Step 2.** Start the J-Flash and search nRF54L15_M33, creating a new project:
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link4.jpg" alt="pir" width={700} height="auto" /></p>
-
-- **Step 3.** Click "Target" and then select "Connect".
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link3.jpg" alt="pir" width={700} height="auto" /></p>
-
-- **Step 4.** Draw the bin or [hex file](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/zephyr.hex) to software. Then press F4 and F5 in that order. The reflashing is done.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link2.jpg" alt="pir" width={700} height="auto" /></p>
-
-## Onboard Keys
-
-XIAO nRF54L15(Sense) comes equipped with two important physical buttons that play crucial roles in device operation and firmware programming: the **Reset Button** and the **User Button**. Understanding their functions is essential for daily use and firmware updates.
-
----
-
-### Reset Button
-
-The Reset button is used to perform a hard reset operation on the device.
-
-- **Functionality:**
-  - **Forced Restart:** Pressing this button immediately interrupts all current device operations and causes it to restart, similar to a power cycle.
-  - **Resolving Stuck Programs:** When the device's running program crashes, enters an infinite loop, or becomes unresponsive, pressing the Reset button is the quickest way to force it back to a normal operating state.
-  - **No Firmware Impact:** A reset operation does not erase or alter the firmware already programmed into the device. It simply restarts the currently running application.
-- **Use Cases:**
-  - Quickly rerunning a program during development/debugging.
-  - When the device exhibits unexpected behavior or becomes stuck.
-
----
-
-### User Button
-
-The User button is a versatile, programmable input that offers flexible control within your applications.
-
-**Functionality:**
-
-- Customizable Input：Unlike the fixed function of the Reset button, the User button's action is entirely defined by your programmed firmware.
-
-- Event Triggering： It can be programmed to trigger specific events, control different functionalities, or act as a general-purpose input for your applications.
-
-**User Cases:**
-
-- Activating specific features or modes within your custom application.
-
-:::note
-The following sample code is designed for PlatformIO, but it is also compatible with the nRF Connect SDK.
-
-Using XIAO nRF54L15 in PlatformIO
-If you want to use XIAO nRF54L15 in PlatformIO, please refer to this tutorial to configure it: [XIAO nRF54L15 PlatformIO Configuration](https://wiki.seeedstudio.com/xiao_nrf54l15_with_platform_io/).
-
-Using the XIAO nRF54L15 in the nRF Connect SDK
-To use this code in the nRF Connect SDK, you need to port the following three files `main.c`,`prj.conf`,`app.overlay`
-[XIAO nRF54L15 PlatformIO Configuration](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/#power-consumpitons-code-example-for-xiao-nrf54l15-platformio)
-:::
-
-<div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-button" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
-
-The light comes on once every time you press a key
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/button.gif" style={{width:400, height:'auto'}}/></div>
-
-## Power-Consumptions Code Example for XIAO nRF54L15 (PlatformIO)
-
-The following sample code is designed for PlatformIO, but it is also compatible with the nRF Connect SDK.
-
-Using XIAO nRF54L15 in PlatformIO
-If you want to use XIAO nRF54L15 in PlatformIO, please refer to this tutorial to configure it: [XIAO nRF54L15 PlatformIO Configuration](https://wiki.seeedstudio.com/xiao_nrf54l15_with_platform_io/).
-
-Using the XIAO nRF54L15 in the nRF Connect SDK
-To use this code in the nRF Connect SDK, you need to port the following three files `main.c`,`prj.conf`,`app.overlay`
-
-**Porting main.c**
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/d1.jpg" style={{width:600, height:'auto'}}/></div>
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/f1.jpg" style={{width:600, height:'auto'}}/></div>
-
-**Porting prj.conf/app.overlay,You may see the following files when doing project configuration:**
-
-- prj.conf: this file is used to set the project's Kconfig configuration options, such as enabling specific peripherals or features.
-
-- app.overlay: This file is used to modify Device Tree settings, such as changing pin functions or adjusting hardware configurations.
-
-If the code example below contains these individual files, you will need to merge their contents into your nRF Connect SDK project.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/h1.jpg" style={{width:600, height:'auto'}}/></div>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/g1.jpg" style={{width:600, height:'auto'}}/></div>
-
-**Replacement position**
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/replace.jpg" style={{width:600, height:'auto'}}/></div>
-
-- `app.overlay file:` put it in your board folder.
-
-- `prj.conf file:` place it in your project root folder.
-
-- `main.c file:` place it in your src folder.
-
-### Bluetooth Connected
-
-This section details the power consumption characteristics of the device while it is actively advertising as a Bluetooth Low Energy (BLE) peripheral. The device implements a custom BLE service, allowing other central devices to connect and interact with it.
-
-The following graph illustrates the typical power consumption profile when the device is continuously advertising:
-
-<div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/new/7.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:900, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Device Power Consumption during BLE Advertising</em></p>
-</div>
-
-As shown in the graph, the device exhibits periodic current peaks corresponding to each advertising event, followed by periods of lower current consumption. The average power consumption during advertising is higher than in System Off mode, reflecting the active radio operations required for broadcasting.
-
----
-
-#### BLE Advertising Code Example
-
-<div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-ble" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
-
-Below is the code used to test the power consumption during BLE advertising:
-
-```c
-#include <stdio.h>
-
-#include <zephyr/bluetooth/bluetooth.h>
-#include <zephyr/bluetooth/hci.h>
-#include <zephyr/bluetooth/conn.h>
-#include <zephyr/bluetooth/uuid.h>
-#include <zephyr/bluetooth/gatt.h>
-
-// Custom 128-bit UUID for the ONOFF Service
-#define BT_UUID_ONOFF_VAL BT_UUID_128_ENCODE(0x8e7f1a23, 0x4b2c, 0x11ee, 0xbe56, 0x0242ac120002)
-#define BT_UUID_ONOFF     BT_UUID_DECLARE_128(BT_UUID_ONOFF_VAL)
-
-// Custom 128-bit UUID for the ONOFF Action Characteristic (Write)
-#define BT_UUID_ONOFF_ACTION_VAL \
-    BT_UUID_128_ENCODE(0x8e7f1a24, 0x4b2c, 0x11ee, 0xbe56, 0x0242ac120002)
-#define BT_UUID_ONOFF_ACTION BT_UUID_DECLARE_128(BT_UUID_ONOFF_ACTION_VAL)
-
-// Custom 128-bit UUID for the ONOFF Read Characteristic (Read)
-#define BT_UUID_ONOFF_READ_VAL \
-    BT_UUID_128_ENCODE(0x8e7f1a25, 0x4b2c, 0x11ee, 0xbe56, 0x0242ac120003)
-#define BT_UUID_ONOFF_READ BT_UUID_DECLARE_128(BT_UUID_ONOFF_READ_VAL)
-
-// Static flag to hold the on/off state, initialized to 0 (off)
-static uint8_t onoff_flag = 0;
-
-// Advertising data: flags and complete device name
-static const struct bt_data ad[] = {
- BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)), // General Discoverable, No BR/EDR
- BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME, sizeof(CONFIG_BT_DEVICE_NAME) - 1), // Device Name
-};
-
-// Scan response data: include the 128-bit UUID of our custom service
-static const struct bt_data sd[] = {
- BT_DATA_BYTES(BT_DATA_UUID128_ALL, BT_UUID_ONOFF_VAL), // Service UUID
-};
-
-/**
- * @brief GATT read callback for the ONOFF Read characteristic.
- *
- * This function is called when a connected central device attempts to read
- * the ONOFF Read characteristic. It returns the current value of onoff_flag.
- *
- * @param conn Pointer to the connection object.
- * @param attr Pointer to the GATT attribute being read.
- * @param buf Buffer to store the read value.
- * @param len Maximum length of the buffer.
- * @param offset Offset from which to read the attribute value.
- * @return Number of bytes read, or a negative error code.
- */
-static ssize_t read_onoff_val(struct bt_conn *conn, const struct bt_gatt_attr *attr,
-                  void *buf, uint16_t len, uint16_t offset)
-{
-    // The user_data field of the attribute points to onoff_flag
-    const uint8_t *value = attr->user_data;
-    // Perform the GATT attribute read operation
-    return bt_gatt_attr_read(conn, attr, buf, len, offset, value, sizeof(*value));
-}
-
-/**
- * @brief GATT write callback for the ONOFF Action characteristic.
- *
- * This function is called when a connected central device attempts to write
- * to the ONOFF Action characteristic. It updates the onoff_flag based on
- * the received value.
- *
- * @param conn Pointer to the connection object.
- * @param attr Pointer to the GATT attribute being written.
- * @param buf Buffer containing the value to be written.
- * @param len Length of the value in the buffer.
- * @param offset Offset at which to write the attribute value.
- * @param flags Flags for the write operation.
- * @return Number of bytes written, or a negative error code.
- */
-static ssize_t write_onoff_val(struct bt_conn *conn, const struct bt_gatt_attr *attr,
-          const void *buf, uint16_t len, uint16_t offset, uint8_t flags)
-{
- uint8_t val;
-
- // Ensure the length of the written data is 1 byte
- if (len != 1U) {
-  return BT_GATT_ERR(BT_ATT_ERR_INVALID_ATTRIBUTE_LEN);
- }
-
- // Ensure the write operation starts from offset 0
- if (offset != 0) {
-  return BT_GATT_ERR(BT_ATT_ERR_INVALID_OFFSET);
- }
-
- // Get the value from the buffer
- val = *((uint8_t *)buf);
-
- // Update onoff_flag based on the received value
- if (val == 0x00U) {
-  printf("Write: 0\n");
-  onoff_flag = 0; // Set to off
- } else if (val == 0x01U) {
-  printf("Write: 1\n");
-  onoff_flag = 1; // Set to on
- } else {
-  // Return error if value is not 0 or 1
-  return BT_GATT_ERR(BT_ATT_ERR_VALUE_NOT_ALLOWED);
- }
-
- return len; // Return number of bytes successfully written
-}
-
-// Define the custom GATT service and its characteristics
-BT_GATT_SERVICE_DEFINE(lbs_svc, 
-    BT_GATT_PRIMARY_SERVICE(BT_UUID_ONOFF), // Primary Service: ONOFF Service
-    BT_GATT_CHARACTERISTIC(BT_UUID_ONOFF_ACTION, BT_GATT_CHRC_WRITE, // Characteristic: ONOFF Action (Write)
-        BT_GATT_PERM_WRITE, NULL, write_onoff_val, NULL), // Permissions, callbacks
-    BT_GATT_CHARACTERISTIC(BT_UUID_ONOFF_READ, BT_GATT_CHRC_READ, // Characteristic: ONOFF Read (Read)
-        BT_GATT_PERM_READ, read_onoff_val, NULL, &onoff_flag), // Permissions, callbacks, user_data (onoff_flag)
-);
-
-/**
- * @brief Callback function for successful Bluetooth connection.
- *
- * @param conn Pointer to the connection object.
- * @param err Error code (0 if successful).
- */
-static void connected(struct bt_conn *conn, uint8_t err)
-{
- if (err != 0U) {
-  printf("Connection failed (%02x, %s)\n", err, bt_hci_err_to_str(err));
-  return;
- }
-
- printf("Connected\n");
-}
-
-/**
- * @brief Callback function for Bluetooth disconnection.
- *
- * @param conn Pointer to the connection object.
- * @param reason Reason for disconnection.
- */
-static void disconnected(struct bt_conn *conn, uint8_t reason)
-{
- printf("Disconnected (%02x, %s)\n", reason, bt_hci_err_to_str(reason));
-}
-
-// Define connection callbacks
-BT_CONN_CB_DEFINE(conn_callbacks) = {
- .connected = connected,
- .disconnected = disconnected,
-};
-
-/**
- * @brief Main function of the application.
- *
- * Initializes the Bluetooth stack, starts advertising, and enters the main loop.
- * @return 0 on success, negative error code on failure.
- */
-int main(void)
-{
- int err;
-
- // Enable the Bluetooth stack
- err = bt_enable(NULL);
- if (err < 0) {
-  printf("Bluetooth enable failed (err %d)", err);
-  return err;
- }
-
- // Start BLE advertising
- err = bt_le_adv_start(BT_LE_ADV_CONN_FAST_1, ad, ARRAY_SIZE(ad), sd, ARRAY_SIZE(sd));
- if (err < 0) {
-  printf("Advertising failed to start (err %d)", err);
-  return err;
- }
-
- printf("Bluetooth enabled");
- return 0;
-}
-```
-
-### Ultra-low Power State
-
-To achieve extremely low power consumption for the device, we conducted power consumption tests in **System Off** mode. System Off mode is a deep sleep mode provided by Zephyr OS, where most peripherals and the CPU are turned off, retaining only essential wake-up sources (such as GPIO interrupts) to minimize power consumption.
-
-The following graph illustrates the typical power consumption curve after the device enters System Off mode:
-
-<div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/new/6.png" alt="XIAO nRF54L15 Ultra-low Power Consumption in System Off Mode" style={{width:900, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Device Power Consumption in System Off Mode</em></p>
-</div>
-
-As shown in the graph, after entering System Off mode, the power consumption is significantly reduced, maintaining only microampere levels, which greatly extends battery life. When the `sw0` button is pressed, the device will wake up from System Off mode and restart.
-
----
-
-#### Power Consumption Code Example
-
-<div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-lowpower" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
-
-Below is the code used to test the power consumption in the System Off mode described above:
-
-```c
-/*
- * Copyright (c) 2019 Nordic Semiconductor ASA
- *
- * SPDX-License-Identifier: Apache-2.0
- */
-#include <inttypes.h>
-#include <stdio.h>
-
-#include <zephyr/device.h>
-#include <zephyr/drivers/gpio.h>
-#include <zephyr/drivers/hwinfo.h>
-#include <zephyr/drivers/comparator.h>
-#include <zephyr/kernel.h>
-#include <zephyr/pm/device.h>
-#include <zephyr/sys/poweroff.h>
-#include <zephyr/sys/util.h>
-
-static const struct gpio_dt_spec sw0 = GPIO_DT_SPEC_GET(DT_ALIAS(sw0), gpios);
-
-void print_reset_cause(void)
-{
- uint32_t reset_cause;
-
- hwinfo_get_reset_cause(&reset_cause);
- if (reset_cause & RESET_DEBUG) {
-  printf("Reset by debugger.\n");
- } else if (reset_cause & RESET_CLOCK) {
-  printf("Wakeup from System OFF by GRTC.\n");
- } else  {
-  printf("Other wake up cause 0x%08X.\n", reset_cause);
- }
-}
-
-int main(void)
-{
- int rc;
- const struct device *const cons = DEVICE_DT_GET(DT_CHOSEN(zephyr_console));
-
- if (!device_is_ready(cons)) {
-  printf("%s: device not ready.\n", cons->name);
-  return 0;
- }
-
- printf("\n%s system off demo\n", CONFIG_BOARD);
- print_reset_cause();
-
-
- /* configure sw0 as input, interrupt as level active to allow wake-up */
- rc = gpio_pin_configure_dt(&sw0, GPIO_INPUT);
- if (rc < 0) {
-  printf("Could not configure sw0 GPIO (%d)\n", rc);
-  return 0;
- }
-
- rc = gpio_pin_interrupt_configure_dt(&sw0, GPIO_INT_LEVEL_LOW);
- if (rc < 0) {
-  printf("Could not configure sw0 GPIO interrupt (%d)\n", rc);
-  return 0;
- }
-
- printf("Entering system off; press sw0 to restart\n");
-
-
- rc = pm_device_action_run(cons, PM_DEVICE_ACTION_SUSPEND);
- if (rc < 0) {
-  printf("Could not suspend console (%d)\n", rc);
-  return 0;
- }
-
- hwinfo_clear_reset_cause();
- sys_poweroff();
-
  return 0;
 }
 ```

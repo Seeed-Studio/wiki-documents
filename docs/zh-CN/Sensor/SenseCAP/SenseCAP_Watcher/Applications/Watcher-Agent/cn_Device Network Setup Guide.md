@@ -11,13 +11,16 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /cn/device_network_setup
 last_update:
-  date: 08/20/2025
+  date: 11/09/2025
   author: Twelve
 ---
 
 # 设备网络设置指南
 
-本文档将指导您完成 SenseCAP Watcher Agent 的网络配置过程。按照以下步骤轻松将您的设备连接到网络并开始使用。
+本文档将指导您完成 SenseCAP Watcher Agent 的网络配置过程。按照这些步骤，您可以轻松地将设备连接到网络并开始使用。
+
+以下视频是关于如何使用 Web 控制面板配置设备的分步教程。
+<div class="table-center"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6UDVsv953Tw?si=0yD96_pQq1cMjjAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 ## 前提条件
 
@@ -31,13 +34,14 @@ last_update:
 
 ### 初始设置
 
-步骤 1. 为设备供电
+步骤 1. 为设备通电
 - 将设备连接到电源，或按住右上角的滚轮按钮 5 秒钟然后松开。
 :::tip 注意
-如果在刷写固件后立即开始配置，请使用针轻轻按下重置按钮。
+如果在刷写固件后立即开始配置，请使用针轻轻按下复位按钮。
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish2.jpg" style={{width:200, height:'auto'}}/></div>
 :::
 - 设备将开机并进入 Wi-Fi 配置模式
+
 
 
 ### WiFi 配置
@@ -45,18 +49,18 @@ last_update:
 步骤 1. 连接到设备热点
 - 在您的移动设备或计算机上，查找名为"Watcher-XXXX"的 WiFi 网络
 - 连接到此网络
-- 等待几秒钟建立连接
+- 等待几秒钟以建立连接
 - 配置界面应该会在您的浏览器中自动打开
 :::note
 如果配置页面没有自动打开，请确保您仍然连接到"Watcher-XXXX"网络，并在网络浏览器中手动导航到 `http://192.168.4.1`。
 :::
 
 步骤 2. 配置 WiFi 连接
-- 等待大约 5 秒钟完成 WiFi 扫描
+- 等待大约 5 秒钟以完成 WiFi 扫描
 - 从可用的 2.4GHz 网络列表中，选择您的家庭 Wi-Fi 网络
 - SSID 将自动填入
 - 输入所选 WiFi 网络的密码
-- 点击"Connect"按钮提交
+- 点击"连接"按钮提交
 
 :::note
 仅支持 2.4GHz 网络
@@ -81,7 +85,7 @@ WiFi 扫描页面可能需要大约 5 秒钟加载 - 请不要关闭或取消页
 
 步骤 2. 注册设备
 - 访问 [SenseCraft AI-Watcher Agent 平台](https://sensecraft.seeed.cc/ai/watcher-agent)
-- 根据此 [WiKi](https://wiki.seeedstudio.com/Web_Control_Panel/) 配置您的 Agent
+- 根据此 [WiKi](https://wiki.seeedstudio.com/cn/Web_Control_Panel/) 配置您的 Agent
 
 ### 基本操作
 
@@ -93,13 +97,13 @@ WiFi 扫描页面可能需要大约 5 秒钟加载 - 请不要关闭或取消页
    - 按住滚轮 3 秒钟，然后松开
 
 3. 重启
-   - 使用针轻轻按下重置按钮
+   - 使用针轻轻按下复位按钮
 
 4. 恢复出厂设置
    - 按住滚轮 10 秒钟
 
 5. 重新进入网络配置模式
-   - 当设备显示"Scanning Wi-Fi"状态时
+   - 当设备显示"扫描 Wi-Fi"状态时
    - 按一次滚轮
    - 设备将重新进入网络配置模式
 
@@ -116,10 +120,10 @@ WiFi 扫描页面可能需要大约 5 秒钟加载 - 请不要关闭或取消页
 
 **问：为什么找不到 Watcher-XXXX 网络？**
 
-答：尝试使用针轻轻按下重置按钮重新启动设备并进入配置模式。
-如果您之前已配对到网络，请重启设备并在设备显示"Scanning Wi-Fi"时按一次滚轮以重新进入配对模式
+答：尝试使用针轻轻按下复位按钮重新启动设备并进入配置模式。
+如果您之前已配对到网络，请重启设备并在设备显示"扫描 Wi-Fi"时按一次滚轮以重新进入配对模式
 
-**问：如果配置页面没有自动加载该怎么办？**
+**问：如果配置页面没有自动加载，我应该怎么办？**
 
 答：在连接到 Watcher-XXXX 网络时，在网络浏览器中手动导航到 `http://192.168.4.1`。
 

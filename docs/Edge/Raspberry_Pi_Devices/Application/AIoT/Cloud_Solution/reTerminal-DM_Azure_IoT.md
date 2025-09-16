@@ -14,12 +14,9 @@ last_update:
 
 ## Introduction
 
-reTerminal DM is a Panel PC, HMI, PLC, IIoT Gateway all-in-one device powered by Raspberry Pi CM4, with
-10.1'' IP65 front panel and rich industrial interfaces, and natively integrated with Node-RED and supports
-Raspberry Pi-based software ecosystem.
+reTerminal DM is a Panel PC, HMI, PLC, IIoT Gateway all-in-one device powered by Raspberry Pi CM4, with 10.1'' IP65 front panel and rich industrial interfaces, and natively integrated with Node-RED and supports Raspberry Pi-based software ecosystem.
 
-This document describes how to connect reTerminal DM device running Debian 11 (ARM32v7) with Azure IoT
-Edge Runtime pre-installed and Device Management. This multi-step process includes:
+This document describes how to connect reTerminal DM device running Debian 11 (ARM32v7) with Azure IoT Edge Runtime pre-installed and Device Management. This multi-step process includes:
 
 - Configuring Azure IoT Hub
 - Registering your IoT device
@@ -55,8 +52,7 @@ armv7l
 ```
 
 :::tip
-If your OS is older than Debian 11 (Bullseye) or LOG_BIT is 64, please install latest Raspberry Pi OS 32-
-bit. Please refer to [Steps for Flashing Raspbian OS](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/#steps-for-flashing-raspbian-os).
+If your OS is older than Debian 11 (Bullseye) or LOG_BIT is 64, please install latest Raspberry Pi OS 32-bit. Please refer to [Steps for Flashing Raspbian OS](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/#steps-for-flashing-raspbian-os).
 :::
 
 :::tip
@@ -119,8 +115,7 @@ sudo iotedge system status
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Azure-IoT/reTerminal-DM-Azure-IoT-EDGE2.png" style={{width:900, height:'auto'}}/></div>
 
-Open the command prompt on your IoT Edge device, confirm that the module deployed from the cloud is
-running on your IoT Edge device
+Open the command prompt on your IoT Edge device, confirm that the module deployed from the cloud is running on your IoT Edge device
 
 ```
 sudo iotedge list

@@ -19,17 +19,17 @@ import TabItem from '@theme/TabItem';
 
 PlatformIO 是一个集成了多种类型开发板的开发平台，具有良好的可扩展性。如果平台没有您需要的类型，您可以手动添加开发板类型。您在 Arduino 上编写的代码可以使用它，只需添加相应的库即可。
 
-在本教程中，我们将介绍如何在 PlatformIO 中安装和运行示例代码。
+在本教程中，我们将介绍如何在 PlatformIO 中安装并运行示例代码。
 
 ## 在 XIAO RA4M1 上使用 PlatformIO
 
-### 步骤 1. 从[官方网站](https://platformio.org/platformio-ide)安装 PlatformIO
+### 步骤 1. 从官方网站安装 [PlatformIO](https://platformio.org/platformio-ide)
 
 如果您还没有安装 PlatformIO 软件，可以点击上面的链接。
 
 ### 步骤 2. 在 PlatformIO 中创建任意项目
 
-由于平台已经有我们的 XIAO ESP32S3 和 XIAO ESP32C3 开发板选项，我们可以选择其中一个来创建我们的文件。当然，其他文件也可以，没关系。项目名称也可以任意选择。
+由于平台已经有了我们的 XIAO ESP32S3 和 XIAO ESP32C3 开发板选项，我们可以选择其中一个来创建我们的文件。当然，其他文件也可以，没关系。项目名称也可以任意选择。
 
 <table align="center">
   <tr>
@@ -48,7 +48,7 @@ PlatformIO 是一个集成了多种类型开发板的开发平台，具有良好
 
 ### 步骤 3. 修改 platformio.ini 文件
 
-当您成功创建 PlatformIO 文件时，左侧栏会出现许多文件。我们可以看到一个名为 platform.ini 的文件。接下来，我们需要替换其中的内容。
+当您成功创建 PlatformIO 文件后，左侧栏会出现许多文件。我们可以看到一个名为 platform.ini 的文件。接下来，我们需要替换其中的内容。
 
 <table align="center">
   <tr>

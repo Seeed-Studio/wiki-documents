@@ -1,7 +1,7 @@
 ---
 description: This tutorial will guide on how to deploy Watcher's AI service locally off the SenseCraft service to use Watcher.
 title: Deploy Watcher's AI capabilities locally
-image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherAI.png
+image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherAI.webp
 slug: /watcher_local_deploy
 sidebar_position: 3
 last_update:

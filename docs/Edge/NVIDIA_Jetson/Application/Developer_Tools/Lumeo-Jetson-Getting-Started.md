@@ -67,7 +67,6 @@ If you see the below output, that means the installer has successfully completed
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Lumeo/2.png" /></div>
 
-
 **Step 2:** Type **Install** next to the prompt **Enter the command:** to install a new container which includes the gateway
 
 ```
@@ -119,7 +118,7 @@ If none of the connected cameras are detected, click Discover to start the auto 
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/Lumeo/18.png" /></div>
 
-Now you will see the camera successfully linked 
+Now you will see the camera successfully linked
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Lumeo/19.png" /></div>
 
@@ -151,8 +150,7 @@ Now you will see the template created for you in a block-based style which allow
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Lumeo/25.png" /></div>
 
-If the deployment is successful, you will see a green icon named **running**
-as follows
+If the deployment is successful, you will see a green icon named **running** as follows
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Lumeo/26.png" /></div>
 
@@ -162,7 +160,7 @@ as follows
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Lumeo/28.png" /></div>
 
-## Learn more 
+## Learn more
 
 Lumeo offers very detailed and comprehensive documentation. So it is highly recommended to check them [here](https://docs.lumeo.com).
 
@@ -171,11 +169,11 @@ Lumeo offers very detailed and comprehensive documentation. So it is highly reco
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

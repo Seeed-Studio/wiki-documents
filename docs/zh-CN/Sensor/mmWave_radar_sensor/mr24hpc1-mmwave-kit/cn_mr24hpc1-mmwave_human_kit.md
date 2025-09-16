@@ -28,13 +28,13 @@ last_update:
 
 ## 介绍
 
-由 Seeed Studio 的 XIAO ESP32C3 驱动，支持 WiFi/BLE 连接，并通过 mmWave 传感器提供精确的人体检测。无缝连接 grove 模块以获得附加功能。在 1-2 分钟内轻松设置 Home Assistant，配合便捷的无线空中升级 (OTA) 更新。通过可更换的 mmWave 传感器实现广泛的多功能性。非常适合定制智能家居自动化、检测入侵和监控老年人的健康状况。
+由 Seeed Studio 的 XIAO ESP32C3 驱动，支持 WiFi/BLE 连接，并通过 mmWave 传感器提供精确的人体检测。无缝连接 grove 模块以获得更多功能。在 1-2 分钟内轻松设置 Home Assistant，配合便捷的无线空中升级 (OTA) 更新。通过可更换的 mmWave 传感器实现广泛的多功能性。非常适合定制智能家居自动化、检测入侵和监控老年人的健康状况。
 
 ### 特性
 
 - **精确人体检测**：基于 FMCW 原理的板载 mmWave 传感器，提供准确的隐私保护人体检测。
-- **灵活定制**：板载人体存在传感器可替换为 Seeed 其他 mmWave 系列产品，用于心跳检测、跌倒检测等；通过 400+ 可选 Grove 传感器实现附加功能。
-- **简易设置，无线更新**：在 1-2 分钟内为 Home Assistant 进行无代码设置，支持无线空中升级 (OTA) 更新。
+- **灵活定制**：板载人体存在传感器可替换为 Seeed 其他 mmWave 系列产品，用于心跳检测、跌倒检测等；通过 400+ 可选 Grove 传感器实现额外功能。
+- **简易设置，无线更新**：无代码设置 Home Assistant，1-2 分钟完成，支持无线空中升级 (OTA) 更新。
 - **无缝连接**：由 XIAO ESP32C3 驱动，支持 WiFi/BLE，兼容智能家居系统
 - **可扩展解决方案**：通过可用的 OEM/ODM 服务根据您的需求进行定制，实现可扩展性。
 
@@ -43,7 +43,7 @@ last_update:
 - **智能家居自动化**：基于人体存在增强照明、暖通空调和安全系统。
 - **建筑安全**：检测入侵并触发警报以提高安全性。
 - **医疗监控**：监控患者活动并协助跌倒检测。
-- **自动门**：使门在人们接近时自动打开。
+- **自动门**：当人们接近时使门自动打开。
 - **老年护理**：监控老年人的健康状况并提供及时帮助。
 
 ## 硬件概述
@@ -57,47 +57,48 @@ last_update:
 
 1. XIAO ESP32C3 的网络功能需要使用天线。如果您想安装 Grove 模块，请尽量不要改变天线的位置。天线默认放置在底板背面，这确保了良好的信号并且不会干扰雷达工作。
 
-2. 套件外壳中预留的孔是通风孔，考虑到用户可能会将传感器模块用于某些气体而预留，它们不用作判断是否有人的标准，所以请不要担心隐私问题。
+2. 套件外壳中预留的孔是通风孔，考虑到用户可能会使用传感器模块检测某些气体而预留的，它们不用作判断是否有人的标准，所以请不要担心隐私问题。
+
 :::
 
 下表显示了毫米波雷达与 XIAO ESP32C3 之间的硬件连接。如有必要，您可以根据下表中的连接进行自己的后续开发。
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO ESP32C3</th>
-			<th>MR24HPC1</th>
-		</tr>
-		<tr>
-			<td>5V</td>
-			<td>VCC</td>
-		</tr>
-		<tr>
-			<td>GND</td>
-			<td>GND</td>
-		</tr>
+  <table align="center">
     <tr>
-      <td>GPIO4 (D2)</td>
-      <td>RX</td>
+    <th>XIAO ESP32C3</th>
+    <th>MR24HPC1</th>
     </tr>
     <tr>
-      <td>GPIO5 (D3)</td>
-      <td>TX</td>
+    <td>5V</td>
+    <td>VCC</td>
     </tr>
-	</table>
+    <tr>
+    <td>GND</td>
+    <td>GND</td>
+    </tr>
+      <tr>
+        <td>GPIO4 (D2)</td>
+        <td>RX</td>
+      </tr>
+      <tr>
+        <td>GPIO5 (D3)</td>
+        <td>TX</td>
+      </tr>
+  </table>
 </div>
 
-## 开始使用
+## 入门指南
 
 :::tip
-本教程的所有内容都专注于该套件在 Home Assistant 和 ESPHome 中的快速应用，如果您想将该套件用于二次开发，请参考教程的[定制化二次开发](#customized-secondary-development)部分。
+本教程的所有内容都专注于在 Home Assistant 和 ESPHome 中快速应用该套件，如果您想将套件用于二次开发，请参考教程的[定制化二次开发](#customized-secondary-development)部分。
 :::
 
 ### 软件准备
 
-在本例程中，我们不会详细介绍如何安装 Home Assistant 环境，我们假设您已经拥有一个正常工作的 Home Assistant 设备。
+在本教程中，我们不会详细介绍如何安装 Home Assistant 环境，我们假设您已经拥有一个正常工作的 Home Assistant 设备。
 
-如果您希望学习如何安装 Home Assistant，那么您可以参考[官方教程](https://www.home-assistant.io/installation/)。我们强烈建议您使用 x86 设备安装 Home Assistant，因为这是安装带有 Supervised 的 Home Assistant 最用户友好的方式。
+如果您希望学习如何安装 Home Assistant，那么您可以参考[官方教程](https://www.home-assistant.io/installation/)。我们强烈建议您使用 x86 设备安装 Home Assistant，因为这是安装带有 Supervised 功能的 Home Assistant 最用户友好的方式。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/77.png" /></div>
 
@@ -105,9 +106,9 @@ last_update:
 
 我们也为一些 Seeed Studio 产品编写了如何安装 Home Assistant 的教程，请参考它们。
 
-- [在 ODYSSEY-X86 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/ODYSSEY-X86-Home-Assistant/)
-- [在 reTerminal 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/reTerminal_Home_Assistant/)
-- [在 LinkStar H68K/reRouter CM4 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/h68k-ha-esphome/)
+- [在 ODYSSEY-X86 上开始使用 Home Assistant](https://wiki.seeedstudio.com/ODYSSEY-X86-Home-Assistant/)
+- [在 reTerminal 上开始使用 Home Assistant](https://wiki.seeedstudio.com/reTerminal_Home_Assistant/)
+- [在 LinkStar H68K/reRouter CM4 上开始使用 Home Assistant](https://wiki.seeedstudio.com/h68k-ha-esphome/)
 
 除此之外，XIAO ESP32C3 依赖开源项目 ESPHome 来接入 Home Assistant，所以您还需要在 **Add-Ons** 中安装 **ESPHome** 服务。
 
@@ -115,15 +116,15 @@ last_update:
 
 ## 开始使用 ESPHome
 
-出厂套件中，XIAO ESP32C3 已经刷入了可以直接上电使用的固件，我们能够在很短的时间内让套件在 Home Assistant 上工作。下面的视频将向您展示快速开始的确切步骤。
+出厂套件中，XIAO ESP32C3 已经刷入了可以直接上电使用的固件，我们能够在很短的时间内让套件在 Home Assistant 上工作。下面的视频将向您展示快速入门的确切步骤。
 
 <iframe class="youtube-video-r" src="https://files.seeedstudio.com/wiki/mmwave_kit/2.mp4" frameborder="0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
-以下是图文分步详细说明，请参考以下内容完成快速开始。
+以下是图文分步详细说明，请参考以下内容完成快速入门。
 
 ### 步骤 1. 为套件供电
 
-请通过 USB-C 类型电缆为套件供电。注意电源输入不要超过 5V/1A，否则产品可能会损坏。
+请通过 USB-C 类型线缆为套件供电。注意电源输入不要超过 5V/1A，否则可能损坏产品。
 
 ### 步骤 2. 连接到套件的热点 "seedstudio-mr24hpc1"
 
@@ -139,7 +140,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/4.png" style={{width:1000, height:'auto'}}/></div>
 
-然后，选择您希望套件连接的网络名称。请注意，您选择的网络需要与 Home Assitant 在同一局域网内，否则您的套件将不会被 Home Assitant 搜索识别。
+然后，选择您希望套件连接的网络名称。请注意，您选择的网络需要与 Home Assistant 在同一局域网内，否则您的套件将不会被 Home Assistant 搜索识别。
 
 :::caution
 如果您在页面上找不到想要连接的网络，很可能是 XIAO ESP32C3 不支持您的网络。请自行调整路由器以启用最大兼容性，并确保网络在 2.4GHz 频段上。XIAO 不支持 5GHz 频段的网络。
@@ -155,11 +156,11 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/41.png" style={{width:500, height:'auto'}}/></div>
 
-在菜单栏中点击 **Settings**，然后选择 **Devices & services**。
+在菜单栏中点击 **Settings** 并选择 **Devices & services**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/42.png" style={{width:1000, height:'auto'}}/></div>
 
-您应该看到设备出现在 **Discovered** 部分，点击 **CONFIGURE** 按钮。在随后弹出的窗口中选择 **SUBMIT**，并配置区域以正常使用设备。
+您应该看到设备出现在 **Discovered** 部分，点击 **CONFIGURE** 按钮。在随后弹出的窗口中选择 **SUBMIT** 并配置区域以正常使用设备。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/43.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -168,48 +169,48 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/44.png" style={{width:1000, height:'auto'}}/></div>
 
 :::note
-如果您家中有太多设备，您的设备有一定概率不会在 Discovered 中找到。那么，请从路由器控制台获取套件的 IP 地址，点击右下角的 **Add Integration** 按钮，手动输入 IP 地址来添加设备。
+如果您家中有太多设备，有一定概率您的设备不会在 Discovered 中找到。那么，请从路由器控制台获取套件的 IP 地址，点击右下角的 **Add Integration** 按钮，手动输入 IP 地址来添加设备。
 :::
 
 ### 步骤 4. 将组件添加到仪表板
 
-然后，我们点击添加的 **ESPHome** 卡片，这里的 **1 device**。
+然后，我们点击添加的 **ESPHome** 卡片，这里显示 **1 device**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/45.png" style={{width:1000, height:'auto'}}/></div>
 
 这将显示我们为套件编写的所有组件内容。让我们稍微向下滚动显示区域，将所有这些组件添加到仪表板中。
 
 :::caution
-如果您在此页面下没有找到显示的组件，请检查套件的电源和日志。如果您使用的是计算机功能，某些计算机可能没有提供足够电源支持的USB端口。如果您确认电源没有问题，请打开日志并将详细日志发送给Seeed Studio的技术支持。
+如果您在此页面下没有找到显示的组件，请检查套件的电源和日志。如果您使用的是计算机功能，某些计算机可能没有提供足够电源支持的USB端口。如果您确保电源没有问题，请打开日志并将详细日志发送给Seeed Studio的技术支持。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/46.png" style={{width:1000, height:'auto'}}/></div>
 
-然后我们可以在**Overview**中看到所有信息和内容。
+然后我们可以在 **Overview** 中看到所有信息和内容。
 
-### 步骤5. 编辑仪表板
+### 步骤 5. 编辑仪表板
 
-目前，仪表板组件的显示顺序是自动的，这可能不利于观察和执行设置操作，所以接下来我们需要编辑仪表板，使其显示更符合其功能。
+目前，仪表板组件的显示顺序是自动的，这可能不利于观察和执行设置操作，因此接下来我们需要编辑仪表板，使其显示更符合其功能。
 
-在Overview中，点击带三角形的三个点，然后点击**Edit Dashboard**。
+在 Overview 中，点击带有三角形的三个点，然后点击 **Edit Dashboard**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/12.png" style={{width:1000, height:'auto'}}/></div>
 
-在编辑页面，再次点击右上角的三个点选择**Raw Configuration Editor**。
+在编辑页面，再次点击右上角的三个点以选择 **Raw Configuration Editor**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/13.png" style={{width:1000, height:'auto'}}/></div>
 
-然后请清除原编辑器中的代码，复制下面的代码并保存。
+然后请清除原始编辑器中的代码，复制下面的代码并保存。
 
 :::tip
-新固件已根据ESPHome提供的文档进行修订，每个设备都有唯一的MAC名称。所以组件名称不会相同。如果您想使用下面的代码，请将代码中的所有`{$DEVICE}`替换为您设备的名称。您的设备名称可以在ESPHome的设备实体中看到。
+新固件已根据 ESPHome 提供的文档进行了修订，每个设备都有唯一的MAC名称。因此组件名称不会相同。如果您想使用下面的代码，请将代码中的所有 `{$DEVICE}` 替换为您设备的名称。您的设备名称可以在 ESPHome 的设备实体中看到。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/47.png" style={{width:1000, height:'auto'}}/></div>
 :::
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/mmwave-kit-external-components/blob/main/example/mr24hpc1-card.yaml" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 下载代码</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -228,85 +229,84 @@ views:
           - type: entities
             entities:
               - entity: button.{$DEVICE}_module_restart
-                name: 模块重启
+                name: Module Restart
               - entity: sensor.{$DEVICE}_hardware_model
-                name: 硬件型号
+                name: Hardware Model
               - entity: sensor.{$DEVICE}_hardware_version
-                name: 硬件版本
+                name: Hardware Version
               - entity: sensor.{$DEVICE}_heartbeat
-                name: 心跳
+                name: Heartbeat
               - entity: sensor.{$DEVICE}_product_id
-                name: 产品ID
+                name: Product ID
               - entity: sensor.{$DEVICE}_product_model
-                name: 产品型号
-            title: 设备信息
+                name: Product Model
+            title: DEVICE Information
       - type: vertical-stack
         cards:
           - type: entities
             entities:
               - entity: select.{$DEVICE}_scene
-                name: 场景
+                name: Scene
               - entity: number.{$DEVICE}_sensitivity
-                name: 灵敏度
+                name: Sensitivity
               - entity: select.{$DEVICE}_time_for_entering_no_person_state_standard_function
-                name: 进入无人状态时间设置（标准功能）
+                name: Time For Entering No Person State Setting (Standard Function)
               - entity: binary_sensor.{$DEVICE}_presence_information
-                name: 存在信息
+                name: Presence Information
               - entity: sensor.{$DEVICE}_motion_information
-                name: 运动信息
+                name: Motion Information
               - entity: sensor.{$DEVICE}_body_movement_parameter
-                name: 身体运动参数
+                name: Body Movement Parameter
               - entity: sensor.{$DEVICE}_active_reporting_of_proximity
-                name: 接近主动上报
-            title: 主动上报信息
+                name: Active Reporting Of Proximity
+            title: Unsolicited Information
       - type: horizontal-stack
         cards:
           - type: entities
             entities:
               - entity: switch.{$DEVICE}_underlying_open_function_info_output_switch
-                name: 底层开放功能信息输出开关
+                name: Underlying Open Function Info Output Switch
               - entity: sensor.{$DEVICE}_existence_energy
-                name: 存在能量
+                name: Existence Energy
               - entity: sensor.{$DEVICE}_motion_energy
-                name: 运动能量
+                name: Motion Energy
               - entity: sensor.{$DEVICE}_static_distance
-                name: 静态距离
+                name: Static Distance
               - entity: sensor.{$DEVICE}_motion_distance
-                name: 运动距离
+                name: Motion Distance
               - entity: sensor.{$DEVICE}_motion_speed
-                name: 运动速度
-            title: 底层开放功能
+                name: Motion Speed
+            title: Underlying Open Function
       - type: horizontal-stack
         cards:
           - type: entities
             entities: 
               - entity: sensor.{$DEVICE}_custom_mode_status
-                name: 自定义模式状态
+                name: Custom Mode Status
               - entity: number.{$DEVICE}_custom_mode
-                name: 自定义模式
+                name: Custom Mode
               - entity: sensor.{$DEVICE}_current_custom_mode
-                name: 当前自定义模式
+                name: Current Custom Mode
               - entity: button.{$DEVICE}_end_of_custom_mode_settings
-                name: 结束自定义模式设置
+                name: End Of Custom Mode Settings
               - entity: select.{$DEVICE}_existence_boundary
-                name: 存在边界
+                name: Existence Boundary
               - entity: select.{$DEVICE}_motion_boundary
-                name: 运动边界
+                name: Motion Boundary
               - entity: number.{$DEVICE}_existence_energy_threshold
-                name: 存在能量阈值
+                name: Existence Energy Threshold
               - entity: number.{$DEVICE}_motion_energy_threshold
-                name: 运动能量阈值
+                name: Motion Energy Threshold
               - entity: number.{$DEVICE}_motion_trigger_time
-                name: 运动触发时间
+                name: Motion Trigger Time
               - entity: number.{$DEVICE}_motion_to_rest_time
-                name: 运动到静止时间
+                name: Motion To Rest Time
               - entity: number.{$DEVICE}_time_for_entering_no_person_state_underlying_open_function
-                name: 进入无人状态时间（底层开放功能）
-            title: 自定义设置
+                name: Time For Entering No Person State (Underlying Open Function)
+            title: Custom Settings
 ```
 
 </details>
-
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/14.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -350,9 +350,9 @@ views:
 
 本套件主要面向智能家居方向，二次开发的内容我们不会过多详述，但我们会提供您可能需要的二次开发信息和内容，请参考。
 
-- 内置 MR24HPC1 模块的 Wiki：[24GHz mmWave Sensor - Human Static Presence Module Lite (MR24HPC1)](https://wiki.seeedstudio.com/cn/Radar_MR24HPC1)
+- 内置 MR24HPC1 模块的 Wiki：[24GHz mmWave Sensor - Human Static Presence Module Lite (MR24HPC1)](https://wiki.seeedstudio.com/Radar_MR24HPC1)
 
-- 内置 XIAO ESP32C3 开发资料和实践 Wiki：[Getting Started with Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/)
+- 内置 XIAO ESP32C3 开发资料和实践 Wiki：[Getting Started with Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/)
 
 ### ESPHome 二次开发
 
@@ -366,7 +366,7 @@ views:
 
 关于此代码框架的使用，您可以参考项目中 examples 文件夹下的 [**mr24hpc1.yaml**](https://github.com/limengdu/mmwave-kit-external-components/blob/main/example/mr24hpc1.yaml) 文件。该文件是 ESPHome 的示例 yaml 文件。
 
-如果您之前没有任何 ESPHome 使用经验，可以阅读[**这个 Wiki**](https://wiki.seeedstudio.com/cn/xiao-esp32c3-esphome/) 来学习使用。
+如果您之前没有任何 ESPHome 使用经验，可以阅读[**此 Wiki**](https://wiki.seeedstudio.com/xiao-esp32c3-esphome/) 来学习使用。
 
 ## 使用 ESPHome OTA 进行软件升级
 
@@ -406,37 +406,37 @@ views:
 
 ## 恢复出厂固件
 
-### 方法1：快速刷入最新固件
+### 方法 1：快速刷入最新固件
 
-如果您正在使用套件并发现与上述步骤和内容不一致，请在以下页面更新套件的固件以恢复出厂设置。
+如果您在使用套件时发现与上述步骤和内容不一致，请在以下页面更新套件的固件以恢复出厂设置。
 
-**步骤1.** 点击下方按钮进入刷入固件页面。然后通过USB-C类型线缆将套件连接到您的计算机。
+**步骤 1.** 点击下方按钮进入刷写固件页面。然后通过 USB-C 类型线缆将套件连接到您的计算机。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://limengdu.github.io/MR24HPC1_ESPHome_external_components/" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>刷入固件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>刷写固件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-**步骤2.** 点击连接按钮并选择名称中包含**JTAG**的端口号设备。
+**步骤 2.** 点击连接按钮并选择名称中包含 **JTAG** 的端口号设备。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/50.png" style={{width:1000, height:'auto'}}/></div>
 
-**步骤3.** 刷入固件。
+**步骤 3.** 刷写固件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/32.png" style={{width:500, height:'auto'}}/></div>
 
-只需点击**INSTALL SEEED STUDIO MMWAVE KIT**。
+只需点击 **INSTALL SEEED STUDIO MMWAVE KIT**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/33.png" style={{width:500, height:'auto'}}/></div>
 
-如果您看到下面的显示，则固件刷入完成。此时您可能需要重新上电以使程序运行。完成固件烧录后，您需要从头开始配置网络。
+如果您看到下面的显示，则固件刷写完成。此时您可能需要重新上电以使程序运行。完成固件烧录后，您需要从头开始配置网络。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/34.png" style={{width:500, height:'auto'}}/></div>
 
-### 方法2：借助ESPHome工具刷入固件
+### 方法 2：借助 ESPHome 工具刷写固件
 
-如果您的设备工作不正常，请尝试恢复出厂固件并重新将设备添加到Home Assistant。
+如果您的设备无法正常工作，请尝试恢复出厂固件并重新将设备添加到 Home Assistant。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/mmwave-kit-external-components/releases/" target="_blank" rel="noopener noreferrer">
@@ -444,36 +444,35 @@ views:
     </a>
 </div><br />
 
-- 选项1：使用[ESPhome Web工具](https://web.esphome.io/?dashboard_install)上传。
+- 选项 1：使用 [ESPhome Web 工具](https://web.esphome.io/?dashboard_install) 上传。
 
-使用Chrome或Edge网页浏览器打开[ESPhome Web工具](https://web.esphome.io/?dashboard_install)。
+使用 Chrome 或 Edge 网页浏览器打开 [ESPhome Web 工具](https://web.esphome.io/?dashboard_install)。
 
-点击**CONNECT**。
+点击 **CONNECT**。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/34.png" /></div>
 
-在弹出窗口中选择XIAO ESP32串口。
+在弹出窗口中选择 XIAO ESP32 串口。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/64.png" /></div>
 
-点击**INSTALL**，然后选择从上述步骤下载的`.bin`文件。
+点击 **INSTALL**，然后选择从上述步骤下载的 `.bin` 文件。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/35.png" /></div>
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/38.png" /></div>
 
-
-- 选项2：使用[esphome-flasher工具](https://github.com/esphome/esphome-flasher)。
+- 选项 2：使用 [esphome-flasher 工具](https://github.com/esphome/esphome-flasher)。
 
 如果在安装驱动程序和更换浏览器后仍无法使用方法一上传固件，那么您可以尝试使用方法二。具体的安装方法和说明请参考官方教程。
 
 :::tip
-如果您希望观察XIAO ESP32C3的日志消息，您也可以通过此软件的查看日志按钮来查看。
+如果您希望观察 XIAO ESP32C3 的日志消息，您也可以通过此软件的查看日志按钮来查看。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/41.png" /></div>
 :::
 
-固件成功上传后，您将能够看到名为**seeedstudio-mr24hpc1**的网络。请参考[三分钟开始使用ESPHome](#three-minutes-to-get-started-esphome)内容重新配置设备。
+固件成功上传后，您将能够看到名为 **seeedstudio-mr24hpc1** 的网络。请参考[三分钟快速上手 ESPHome](#three-minutes-to-get-started-esphome) 内容重新配置设备。
 
 ## 资源
 
@@ -483,10 +482,12 @@ views:
 - **[PDF]** [用户手册](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_User_Manual-V1.5.pdf)
 
 ### 版本 1
+
 - **[ZIP]** [PCB&SCH EAGLE 文件](https://files.seeedstudio.com/wiki/mmwave_kit/mmWare-kit_sch&pcb.zip)
 - **[PDF]** [SCH](https://files.seeedstudio.com/wiki/mmwave_kit/sch_mmware_kit.pdf)
 
 ### 版本 2
+
 - **[ZIP]** [PCB&SCH EAGLE 文件](https://files.seeedstudio.com/wiki/mmwave_kit/Human_Detection_Sensor_Board_V2.zip)
 - **[PDF]** [SCH](https://files.seeedstudio.com/wiki/mmwave_kit/mmwave_kit_sch_V2.pdf)
 
@@ -495,11 +496,11 @@ views:
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

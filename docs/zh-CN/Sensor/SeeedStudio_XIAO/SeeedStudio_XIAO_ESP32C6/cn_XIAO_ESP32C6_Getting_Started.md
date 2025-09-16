@@ -37,9 +37,9 @@ last_update:
 
 ## 介绍
 
-Seeed Studio XIAO ESP32C6 采用高度集成的 [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6)，基于**两个 32 位 RISC-V 处理器**构建，其中高性能 (HP) 处理器**运行频率高达 160 MHz**，低功耗 (LP) 32 位 RISC-V 处理器时钟频率可达 20 MHz。芯片内置**512KB SRAM 和 4 MB Flash**，提供更多编程空间，为物联网控制场景带来更多可能性。
+Seeed Studio XIAO ESP32C6 由高度集成的 [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6) 驱动，基于**两个 32 位 RISC-V 处理器**构建，其中包含一个**运行频率高达 160 MHz** 的高性能 (HP) 处理器，以及一个可时钟频率高达 20 MHz 的低功耗 (LP) 32 位 RISC-V 处理器。芯片上有 **512KB SRAM 和 4 MB Flash**，提供更多编程空间，为物联网控制场景带来更多可能性。
 
-XIAO ESP32C6 **凭借其增强的无线连接能力原生支持 Matter**。无线协议栈支持 **2.4 GHz WiFi 6、Bluetooth® 5.3、Zigbee 和 Thread (802.15.4)**。作为首个兼容 Thread 的 XIAO 系列成员，它非常适合构建符合 Matter 标准的项目，从而实现智能家居的互操作性。
+XIAO ESP32C6 **凭借其增强的无线连接能力，原生支持 Matter**。无线协议栈支持 **2.4 GHz WiFi 6、Bluetooth® 5.3、Zigbee 和 Thread (802.15.4)**。作为首个兼容 Thread 的 XIAO 系列成员，它非常适合构建符合 Matter 标准的项目，从而在智能家居中实现互操作性。
 
 export const Highlight = ({children, color}) => (
   <span
@@ -67,9 +67,9 @@ export const Highlight = ({children, color}) => (
     <tbody>
         <tr>
             <th colspan="2" rowspan="2">处理器</th>
-            <td>Espressif ESP32-C6 SoC</td>
-            <td>Espressif ESP32-C3 SoC</td>
-            <td>Espressif ESP32-S3R8</td>
+            <td>乐鑫 ESP32-C6 SoC</td>
+            <td>乐鑫 ESP32-C3 SoC</td>
+            <td>乐鑫 ESP32-S3R8</td>
         </tr>
         <tr>
             <td>两个 32 位 RISC-V 处理器，高性能处理器运行频率高达 160 MHz，低功耗处理器时钟频率高达 20 MHz</td>
@@ -77,14 +77,14 @@ export const Highlight = ({children, color}) => (
             <td>Xtensa LX7 双核，32 位处理器，运行频率高达 240 MHz</td>
         </tr>
         <tr>
-            <th colspan="2" rowspan="3">无线连接</th>
+            <th colspan="2" rowspan="3">无线</th>
             <td>完整的 2.4GHz <strong>Wi-Fi 6</strong> 子系统</td>
             <td colspan="2">完整的 2.4GHz Wi-Fi 子系统</td>
         </tr>
         <tr>
-            <td>BLE：Bluetooth 5.0，Bluetooth Mesh</td>
-            <td>BLE：Bluetooth 5.0，Bluetooth Mesh</td>
-            <td>BLE：Bluetooth 5.0，Bluetooth Mesh</td>
+            <td>BLE：蓝牙 5.0，蓝牙 Mesh</td>
+            <td>BLE：蓝牙 5.0，蓝牙 Mesh</td>
+            <td>BLE：蓝牙 5.0，蓝牙 Mesh</td>
         </tr>
         <tr>
             <td><strong>Zigbee，Thread，IEEE 802.15.4</strong></td>
@@ -92,19 +92,19 @@ export const Highlight = ({children, color}) => (
             <td>/</td>
         </tr>
         <tr>
-            <th colspan="2" rowspan="1" >片上存储</th>
+            <th colspan="2" rowspan="1" >片上存储器</th>
             <td>512KB SRAM &amp; 4MB Flash</td>
             <td>400KB SRAM &amp; 4MB Flash</td>
             <td>8M PSRAM &amp; 8MB Flash</td>
         </tr>
         <tr>
             <th colspan="2" rowspan="2" >接口</th>
-            <td>1x UART，1x LP_UART，1x IIC，1x LP_IIC，1x SPI，11x GPIO(PWM)，7x ADC，1xSDIO 2.0 Slave</td>
+            <td>1x UART，1x LP_UART，1x IIC，1x LP_IIC，1x SPI，11x GPIO(PWM)，7x ADC，1xSDIO 2.0 从设备</td>
             <td>1x UART，1x IIC，1x SPI，11x GPIO(PWM)，4x ADC</td>
             <td>1x UART，1x IIC，1x IIS，1x SPI，11x GPIO(PWM)，9x ADC，1x 用户 LED，1x 充电 LED</td>
         </tr>
         <tr>
-            <td colspan="3">1x 复位按钮，1x Boot 按钮</td>
+            <td colspan="3">1x 复位按钮，1x 启动按钮</td>
         </tr>
         <tr>
             <th colspan="2" rowspan="1">尺寸</th>
@@ -134,7 +134,7 @@ export const Highlight = ({children, color}) => (
             <td>~ 25 mA</td>
         </tr>
         <tr>
-            <th>轻度睡眠模式</th>
+            <th>浅睡眠模式</th>
             <td>~ 2.5 mA</td>
             <td>~ 3 mA</td>
             <td>~ 2 mA</td>
@@ -155,13 +155,13 @@ export const Highlight = ({children, color}) => (
 
 ### 特性
 
-- **增强的连接性**：集成 ***2.4*** GHz Wi-Fi 6 (802.11ax)、Bluetooth 5(LE) 和 IEEE 802.15.4 无线连接，支持 **Thread** 和 **Zigbee** 协议的应用。
+- **增强连接性**：集成 ***2.4*** GHz Wi-Fi 6 (802.11ax)、蓝牙 5(LE) 和 IEEE 802.15.4 无线连接，支持 **Thread** 和 **Zigbee** 协议的应用。
 - **Matter 原生支持**：支持构建符合 Matter 标准的智能家居项目，确保不同智能设备之间的互操作性。
 - **芯片级安全加密**：利用 ESP32-C6 提供安全启动、加密和可信执行环境 (TEE) 功能，增强智能家居项目的安全性。
-- **出色的射频性能**：配备板载天线，BLE/Wi-Fi 范围高达 *80m*，并提供连接外部 UFL 天线的接口，确保可靠的连接性。
-- **优化功耗**：提供四种工作模式，包括功耗低至 *15* μA 的深度睡眠模式，同时支持锂电池充电管理。
-- **双 RISC-V 处理器**：集成两个 32 位 RISC-V 处理器，高性能处理器运行频率高达 160 MHz，低功耗处理器高达 *20 MHz*。
-- **经典 XIAO 设计**：保持 21 x 17.8mm 的拇指大小外形和单面贴装设计，非常适合空间受限的项目，如可穿戴设备。
+- **出色的射频性能**：配备板载天线，BLE/Wi-Fi 范围可达 *80m*，并提供连接外部 UFL 天线的接口，确保可靠的连接性。
+- **优化功耗管理**：提供四种工作模式，包括功耗低至 *15* μA 的深度睡眠模式，同时支持锂电池充电管理。
+- **双 RISC-V 处理器**：集成两个 32 位 RISC-V 处理器，高性能处理器运行频率可达 160 MHz，低功耗处理器可达 *20 MHz*。
+- **经典 XIAO 设计**：保持 21 x 17.8mm 的拇指大小外形尺寸和单面贴装设计，非常适合空间受限的项目，如可穿戴设备。
 
 ## 硬件概述
 
@@ -187,17 +187,17 @@ export const Highlight = ({children, color}) => (
 - **GPIO14 低电平（默认设置）**：设备使用内置陶瓷天线。
 - **GPIO14 高电平**：设备切换到外部天线。
 
-默认情况下，`GPIO14` 设置为低电平，启用内置天线。要使用外部天线，请将 `GPIO14` 设置为高电平。请参考下面的示例代码，了解如何配置 `GPIO3` 和 `GPIO14` 来激活外部天线：
+默认情况下，`GPIO14` 设置为低电平，启用内置天线。要使用外部天线，请将 `GPIO14` 设置为高电平。请参考下面的示例代码，了解如何配置 `GPIO3` 和 `GPIO14` 以激活外部天线：
 
 ```cpp
 void setup() {
   pinMode(WIFI_ENABLE, OUTPUT); // pinMode(3, OUTPUT);
-  digitalWrite(WIFI_ENABLE, LOW); // digitalWrite(3, LOW); // 激活 RF 开关控制
+  digitalWrite(WIFI_ENABLE, LOW); // digitalWrite(3, LOW); // Activate RF switch control
 
   delay(100);
 
   pinMode(WIFI_ANT_CONFIG, OUTPUT); // pinMode(14, OUTPUT);
-  digitalWrite(WIFI_ANT_CONFIG, HIGH); // digitalWrite(14, HIGH); // 使用外部天线
+  digitalWrite(WIFI_ANT_CONFIG, HIGH); // digitalWrite(14, HIGH); // Use external antenna
 }
 ```
 
@@ -221,7 +221,7 @@ void setup() {
 
 #### 焊接排针
 
-XIAO ESP32C6 默认出货时不带排针，您需要自己准备排针并将其焊接到 XIAO 的相应引脚上，这样您就可以连接到扩展板或传感器。
+XIAO ESP32C6 默认出货时不带排针，您需要准备自己的排针并将其焊接到 XIAO 的相应引脚上，这样您就可以连接到扩展板或传感器。
 
 由于 XIAO ESP32C6 的微型尺寸，焊接排针时请小心，不要将不同的引脚粘在一起，也不要将焊料粘到屏蔽层或其他组件上。否则，可能会导致 XIAO 短路或无法正常工作，由此造成的后果将由用户承担。
 
@@ -246,10 +246,10 @@ XIAO ESP32C6 默认出货时不带排针，您需要自己准备排针并将其�
 
 ### 软件准备
 
-XIAO ESP32C6 推荐的编程工具是 Arduino IDE，因此您需要完成 Arduino 安装作为软件准备的一部分。
+XIAO ESP32C6 的推荐编程工具是 Arduino IDE，因此您需要完成 Arduino 安装作为软件准备的一部分。
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Getting Started with Arduino](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 
 并且 XIAO ESP32C6 的板载包至少需要 **2.0.8** 版本才可用。
 
@@ -258,7 +258,7 @@ XIAO ESP32C6 推荐的编程工具是 Arduino IDE，因此您需要完成 Arduin
 - **步骤 1.** 根据您的操作系统下载并安装稳定版本的 Arduino IDE。
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
-      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>下载 Arduino IDE</font></span></strong></a>
+      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
   </div>
 
   <br></br>
@@ -315,53 +315,53 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 ## 电池使用
 
-XIAO ESP32C6 系列具有内置电源管理芯片，允许其通过电池独立供电或通过其 USB 端口为电池充电。
+XIAO ESP32C6 系列具有内置电源管理芯片，允许其通过电池独立供电或通过USB端口为电池充电。
 
-为您的 XIAO 连接电池时，我们建议使用合格的可充电 3.7V 锂电池。焊接电池时，请仔细区分正负极。负极焊盘应位于靠近丝印标记"D8"的左侧，而正极焊盘应位于靠近丝印标记"D5"的右侧。
+为您的XIAO连接电池时，我们建议使用合格的可充电3.7V锂电池。焊接电池时，请仔细区分正负极。负极焊盘应位于左侧靠近丝印标记"D8"的位置，而正极焊盘应位于右侧靠近丝印标记"D5"的位置。
 
 :::caution
-使用电池供电时，5V 引脚上不会有电压。
+使用电池供电时，5V引脚上不会有电压。
 :::
 
 :::tip 红色指示灯
 
-XIAO ESP32C6 具有电池充电红色指示灯，类似于 [XIAO ESP32S3](/cn/xiao_esp32s3_getting_started/#battery-usage)：
+XIAO ESP32C6 具有电池充电红色指示灯，类似于 [XIAO ESP32S3](/xiao_esp32s3_getting_started/#battery-usage)：
 
 XIAO ESP32C6 的红灯行为如下：
 
-- 当没有连接电池时：
-  - 连接 Type-C 线缆时红灯亮起，30 秒后熄灭。
-- 当连接电池并插入 Type-C 线缆充电时：
+- 当未连接电池时：
+  - 连接Type-C线缆时红灯亮起，30秒后熄灭。
+- 当连接电池并插入Type-C线缆充电时：
   - 红灯闪烁。
-- 当电池通过 Type-C 连接充满电时：
+- 当电池通过Type-C连接完全充满时：
   - 红灯熄灭。
 
 :::
 
 ## 读取电池电压
 
-要监控 XIAO ESP32C6 上的电池电压，类似于 [XIAO ESP32C3](/cn/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)，您需要以 1:2 配置焊接一个 200k 电阻。这种设置将电压减半，允许通过 A0 模拟端口安全监控。
+要监控XIAO ESP32C6上的电池电压，类似于[XIAO ESP32C3](/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)，您需要焊接一个200k电阻以1:2配置。此设置将电压减半，允许通过A0模拟端口安全监控。
 
 ### 示例代码
 
-下面的代码初始化 A0 端口上的 ADC，并平均 16 次读数来计算电池电压，根据分压器的 1:2 衰减比进行调整。
+下面的代码初始化A0端口上的ADC并平均16次读数来计算电池电压，根据分压器的1:2衰减比进行调整。
 
 ```cpp
 #include <Arduino.h>
 
 void setup() {
   Serial.begin(115200);
-  pinMode(A0, INPUT);         // 将 A0 配置为 ADC 输入
+  pinMode(A0, INPUT);         // Configure A0 as ADC input
 }
 
 void loop() {
   uint32_t Vbatt = 0;
   for(int i = 0; i < 16; i++) {
-    Vbatt += analogReadMilliVolts(A0); // 读取并累积 ADC 电压
+    Vbatt += analogReadMilliVolts(A0); // Read and accumulate ADC voltage
   }
-  float Vbattf = 2 * Vbatt / 16 / 1000.0;     // 根据 1:2 分压器调整并转换为伏特
-  Serial.println(Vbattf, 3);                  // 输出电压到小数点后 3 位
-  delay(1000);                                // 等待 1 秒
+  float Vbattf = 2 * Vbatt / 16 / 1000.0;     // Adjust for 1:2 divider and convert to volts
+  Serial.println(Vbattf, 3);                  // Output voltage to 3 decimal places
+  delay(1000);                                // Wait for 1 second
 }
 ```
 
@@ -373,19 +373,20 @@ XIAO ESP32C6 具有完整的深度睡眠模式和唤醒功能。这里我们将�
 
 ### 示例1：使用外部唤醒的深度睡眠
 
-这段代码展示了如何使用深度睡眠和外部触发器作为唤醒源，以及如何在RTC内存中存储数据以便在重启后使用。
+这段代码展示了如何使用深度睡眠，以外部触发器作为唤醒源，以及如何在RTC内存中存储数据以便在重启后使用。
 
 ```cpp
 /*
-硬件连接
+Hardware Connections
 ======================
-按钮连接到 GPIO 0，通过 10K 欧姆电阻下拉
+Push Button to GPIO 0 pulled down with a 10K Ohm
+resistor
 
-注意：
+NOTE:
 ======
-将导致唤醒的 GPIO 编号的位掩码。只有具有 RTC 功能的 GPIO 
-才能在此位图中使用。
-对于不同的 SoC，相关的 GPIO 为：
+Bit mask of GPIO numbers which will cause wakeup. Only GPIOs
+which have RTC functionality can be used in this bit map.
+For different SoCs, the related GPIOs are:
 - ESP32: 0, 2, 4, 12-15, 25-27, 32-39
 - ESP32-S2: 0-21
 - ESP32-S3: 0-21
@@ -393,12 +394,13 @@ XIAO ESP32C6 具有完整的深度睡眠模式和唤醒功能。这里我们将�
 - ESP32-H2: 7-14
 */
 
-#define BUTTON_PIN_BITMASK (1ULL  GPIO_NUM_0) // ext1 的 <<GPIO 0 位掩码
+#define BUTTON_PIN_BITMASK (1ULL << GPIO_NUM_0) // GPIO 0 bitmask for ext1
 
 RTC_DATA_ATTR int bootCount = 0;
 
 /*
-打印 ESP32 从睡眠中被唤醒原因的方法
+Method to print the reason by which ESP32
+has been awaken from sleep
 */
 void print_wakeup_reason(){
   esp_sleep_wakeup_cause_t wakeup_reason;
@@ -407,70 +409,71 @@ void print_wakeup_reason(){
 
   switch(wakeup_reason)
   {
-    case ESP_SLEEP_WAKEUP_EXT0 : Serial.println("由使用 RTC_IO 的外部信号引起的唤醒"); break;
-    case ESP_SLEEP_WAKEUP_EXT1 : Serial.println("由使用 RTC_CNTL 的外部信号引起的唤醒"); break;
-    case ESP_SLEEP_WAKEUP_TIMER : Serial.println("由定时器引起的唤醒"); break;
-    case ESP_SLEEP_WAKEUP_TOUCHPAD : Serial.println("由触摸板引起的唤醒"); break;
-    case ESP_SLEEP_WAKEUP_ULP : Serial.println("由 ULP 程序引起的唤醒"); break;
-    default : Serial.printf("唤醒不是由深度睡眠引起的: %d\n",wakeup_reason); break;
+    case ESP_SLEEP_WAKEUP_EXT0 : Serial.println("Wakeup caused by external signal using RTC_IO"); break;
+    case ESP_SLEEP_WAKEUP_EXT1 : Serial.println("Wakeup caused by external signal using RTC_CNTL"); break;
+    case ESP_SLEEP_WAKEUP_TIMER : Serial.println("Wakeup caused by timer"); break;
+    case ESP_SLEEP_WAKEUP_TOUCHPAD : Serial.println("Wakeup caused by touchpad"); break;
+    case ESP_SLEEP_WAKEUP_ULP : Serial.println("Wakeup caused by ULP program"); break;
+    default : Serial.printf("Wakeup was not caused by deep sleep: %d\n",wakeup_reason); break;
   }
 }
 
 void setup(){
   Serial.begin(115200);
-  delay(1000); //花一些时间打开串口监视器
+  delay(1000); //Take some time to open up the Serial Monitor
 
-  //增加启动次数并在每次重启时打印
+  //Increment boot number and print it every reboot
   ++bootCount;
-  Serial.println("启动次数: " + String(bootCount));
+  Serial.println("Boot number: " + String(bootCount));
 
-  //打印 ESP32 的唤醒原因
+  //Print the wakeup reason for ESP32
   print_wakeup_reason();
 
   /*
-  首先我们配置唤醒源
-  我们设置 ESP32 通过外部触发器唤醒。
-  ESP32 有两种类型，ext0 和 ext1，ext0 
-  不支持 ESP32C6，所以我们使用 ext1。
+  First we configure the wake up source
+  We set our ESP32 to wake up for an external trigger.
+  There are two types for ESP32, ext0 and ext1, ext0 
+  don't support ESP32C6 so we use ext1.
   */
 
-  //如果你要使用 ext1，你可以这样使用
+  //If you were to use ext1, you would use it like
   esp_sleep_enable_ext1_wakeup(BUTTON_PIN_BITMASK,ESP_EXT1_WAKEUP_ANY_HIGH);
 
-  //现在进入睡眠
-  Serial.println("现在进入睡眠");
+  //Go to sleep now
+  Serial.println("Going to sleep now");
   esp_deep_sleep_start();
-  Serial.println("这永远不会被打印");
+  Serial.println("This will never be printed");
 }
 
 void loop(){
-  //这不会被调用
+  //This is not going to be called
 }
 ```
 
 ### 演示2：使用定时器唤醒的深度睡眠
 
-ESP32 提供深度睡眠模式以实现有效的功耗节省，因为功耗是物联网应用的重要因素。在此模式下，CPU、大部分 RAM 以及所有由 APB_CLK 时钟驱动的数字外设都会断电。芯片中唯一仍可保持供电的部分是：RTC 控制器、RTC 外设和 RTC 存储器。
+ESP32 提供了深度睡眠模式以实现有效的功耗节省，因为功耗是物联网应用的重要因素。在此模式下，CPU、大部分 RAM 以及所有由 APB_CLK 时钟驱动的数字外设都会断电。芯片中唯一仍可保持供电的部分是：RTC 控制器、RTC 外设和 RTC 存储器。
 
-此代码展示了最基本的深度睡眠，使用定时器唤醒，以及如何在 RTC 存储器中存储数据以在重启后使用。
+此代码展示了最基本的深度睡眠模式，使用定时器唤醒，以及如何在 RTC 存储器中存储数据以便在重启后使用。
 
 ```cpp
 /*
-简单的定时器唤醒深度睡眠
+Simple Deep Sleep with Timer Wake Up
 =====================================
-此代码基于公共领域许可证。
+This code is under Public Domain License.
 
-作者:
+Author:
 Pranav Cherukupalli <cherukupallip@gmail.com>
 */
 
-#define uS_TO_S_FACTOR 1000000ULL  /* 微秒到秒的转换因子 */
-#define TIME_TO_SLEEP  5        /* ESP32进入睡眠的时间（以秒为单位） */
+#define uS_TO_S_FACTOR 1000000ULL  /* Conversion factor for micro seconds to seconds */
+#define TIME_TO_SLEEP  5        /* Time ESP32 will go to sleep (in seconds) */
 
 RTC_DATA_ATTR int bootCount = 0;
 
 /*
-打印ESP32从睡眠中唤醒原因的方法
+Method to print the reason by which ESP32
+has been awaken from sleep
 */
 void print_wakeup_reason(){
   esp_sleep_wakeup_cause_t wakeup_reason;
@@ -479,66 +482,67 @@ void print_wakeup_reason(){
 
   switch(wakeup_reason)
   {
-    case ESP_SLEEP_WAKEUP_EXT0 : Serial.println("由使用RTC_IO的外部信号唤醒"); break;
-    case ESP_SLEEP_WAKEUP_EXT1 : Serial.println("由使用RTC_CNTL的外部信号唤醒"); break;
-    case ESP_SLEEP_WAKEUP_TIMER : Serial.println("由定时器唤醒"); break;
-    case ESP_SLEEP_WAKEUP_TOUCHPAD : Serial.println("由触摸板唤醒"); break;
-    case ESP_SLEEP_WAKEUP_ULP : Serial.println("由ULP程序唤醒"); break;
-    default : Serial.printf("唤醒不是由深度睡眠引起的: %d\n",wakeup_reason); break;
+    case ESP_SLEEP_WAKEUP_EXT0 : Serial.println("Wakeup caused by external signal using RTC_IO"); break;
+    case ESP_SLEEP_WAKEUP_EXT1 : Serial.println("Wakeup caused by external signal using RTC_CNTL"); break;
+    case ESP_SLEEP_WAKEUP_TIMER : Serial.println("Wakeup caused by timer"); break;
+    case ESP_SLEEP_WAKEUP_TOUCHPAD : Serial.println("Wakeup caused by touchpad"); break;
+    case ESP_SLEEP_WAKEUP_ULP : Serial.println("Wakeup caused by ULP program"); break;
+    default : Serial.printf("Wakeup was not caused by deep sleep: %d\n",wakeup_reason); break;
   }
 }
 
 void setup(){
   Serial.begin(115200);
-  delay(1000); //花一些时间打开串口监视器
+  delay(1000); //Take some time to open up the Serial Monitor
 
-  //增加启动次数并在每次重启时打印
+  //Increment boot number and print it every reboot
   ++bootCount;
-  Serial.println("启动次数: " + String(bootCount));
+  Serial.println("Boot number: " + String(bootCount));
 
-  //打印ESP32的唤醒原因
+  //Print the wakeup reason for ESP32
   print_wakeup_reason();
 
   /*
-  首先我们配置唤醒源
-  我们设置ESP32每5秒唤醒一次
+  First we configure the wake up source
+  We set our ESP32 to wake up every 5 seconds
   */
   esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
-  Serial.println("设置ESP32每 " + String(TIME_TO_SLEEP) +
-  " 秒睡眠一次");
+  Serial.println("Setup ESP32 to sleep for every " + String(TIME_TO_SLEEP) +
+  " Seconds");
 
   /*
-  接下来我们决定关闭/保持哪些外设
-  默认情况下，ESP32会自动关闭唤醒源不需要的外设，
-  但如果你想成为高级用户，这就是为你准备的。
-  详细信息请阅读API文档
+  Next we decide what all peripherals to shut down/keep on
+  By default, ESP32 will automatically power down the peripherals
+  not needed by the wakeup source, but if you want to be a poweruser
+  this is for you. Read in detail at the API docs
   http://esp-idf.readthedocs.io/en/latest/api-reference/system/deep_sleep.html
-  将该行注释作为如何配置外设的示例。
-  下面的行在深度睡眠中关闭所有RTC外设。
+  Left the line commented as an example of how to configure peripherals.
+  The line below turns off all RTC peripherals in deep sleep.
   */
   //esp_deep_sleep_pd_config(ESP_PD_DOMAIN_RTC_PERIPH, ESP_PD_OPTION_OFF);
-  //Serial.println("配置所有RTC外设在睡眠中断电");
+  //Serial.println("Configured all RTC Peripherals to be powered down in sleep");
 
   /*
-  现在我们已经设置了唤醒原因，如果需要的话还设置了
-  深度睡眠中的外设状态，我们现在可以开始进入
-  深度睡眠。
-  如果没有提供唤醒源但启动了深度睡眠，
-  它将永远睡眠，除非发生硬件复位。
+  Now that we have setup a wake cause and if needed setup the
+  peripherals state in deep sleep, we can now start going to
+  deep sleep.
+  In the case that no wake up sources were provided but deep
+  sleep was started, it will sleep forever unless hardware
+  reset occurs.
   */
-  Serial.println("现在进入睡眠");
+  Serial.println("Going to sleep now");
   Serial.flush(); 
   esp_deep_sleep_start();
-  Serial.println("这永远不会被打印");
+  Serial.println("This will never be printed");
 }
 
 void loop(){
-  //这不会被调用
+  //This is not going to be called
 }
 ```
 
 :::tip
-如果您想学习使用更多的深度睡眠模式和唤醒功能，您可以在Arduino IDE中找到ESP官方为该芯片编写的更多示例程序。
+如果您想学习使用更多的深度睡眠模式和唤醒功能，您可以在 Arduino IDE 中找到更多由 ESP 官方为该芯片编写的示例程序。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/16.png" style={{width:600, height:'auto'}}/></div>
 :::
@@ -547,25 +551,23 @@ void loop(){
 
 - **[PDF]** [ESP32C6 数据手册](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/esp32-c6_datasheet_en.pdf)
 
-- **[ZIP]** [Seeed Studio XIAO ESP32C6 KiCAD 库](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH&PCB_24028.zip)
+- **[ZIP]** [Seeed Studio XIAO ESP32C6 KiCAD 库文件](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH&PCB_24028.zip)
 
 - **[PDF]** [Seeed Studio XIAO ESP32C6 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH_PDF_24028.pdf)
 
-- **[XLSX]** [Seeed Studio XIAO ESP32C6 引脚图表](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
+- **[XLSX]** [Seeed Studio XIAO ESP32C6 引脚定义表](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
 
-
-- 🔗 **[Kicad]** [Seeed Studio XIAO ESP32C6 封装](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+- 🔗 **[Kicad]** [Seeed Studio XIAO ESP32C6 封装库](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
 - **[STEP]** [Seeed Studio XIAO ESP32C6 Step 文件](https://grabcad.com/library/seeed-studio-xiao-esp32-c6-1)
-
 
 ## 课程资源
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- **[电子书]** [XIAO: 大功率，小板子 掌握Arduino和TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[电子书]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
-## 技术支持和产品讨论
+## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 

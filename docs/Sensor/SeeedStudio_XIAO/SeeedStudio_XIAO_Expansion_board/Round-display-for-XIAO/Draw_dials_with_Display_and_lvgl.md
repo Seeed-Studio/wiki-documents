@@ -9,8 +9,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /using_lvgl_and_tft_on_round_display
 last_update:
-  date: 01/17/2024
-  author: Spencer
+  date: 09/12/2024
+  author: Citric
 ---
 
 # Using LVGL and TFT on the Seeed Studio Round Display for all XIAO series
@@ -25,7 +25,8 @@ last_update:
 
 <br></br>
 
-Thank you for purchased Seeed Studio Round Display products. In this section of the tutorial, we will focus on how to use the `TFT_eSPI` library and `LVGL` library to draw various rich and interesting dial patterns on the Round Display, and introduce the usage of some common functions of these two useful but complex libraries from simple to deep. Through the content of this tutorial, I hope you can use this product to draw your ideal dial pattern. Have a great learning experience!
+
+Thank you for purchased Seeed Studio Round Display products. In this section of the tutorial, we will focus on how to use the `Seeed_GFX` library and `LVGL` library to draw various rich and interesting dial patterns on the Round Display, and introduce the usage of some common functions of these two useful but complex libraries from simple to deep. Through the content of this tutorial, I hope you can use this product to draw your ideal dial pattern. Have a great learning experience!
 
 ## Getting Started
 
@@ -105,9 +106,9 @@ When installing the XIAO with Round Display, please let the XIAO's Type-C connec
 
 This part has been described in detail in the [Basic Wiki](https://wiki.seeedstudio.com/get_start_round_display#software-preparation), so you can jump directly to read it.
 
-## Drawing simple dials using the TFT_eSPI library
+## Drawing simple dials using the Seeed_GFX library
 
-TFT_eSPI is a feature rich Arduino IDE compatible graphics and fonts library for 32 bit processors. The TFT library provided by the XIAO Round Display is based on the library after the compatibility of XIAO and XIAO Round Display, which supports the use of the whole series of XIAO.
+[Seeed_GFX](https://github.com/Seeed-Studio/Seeed_GFX) (Based on modifications to the TFT_eSPI library, with deep support for Seeed's display products) is a feature rich Arduino IDE compatible graphics and fonts library for 32 bit processors. The TFT library provided by the XIAO Round Display is based on the library after the compatibility of XIAO and XIAO Round Display, which supports the use of the whole series of XIAO.
 
 ### Common Interfaces for TFT Library
 
@@ -333,7 +334,7 @@ void loop() {
 
 The general format for using the TFT_eSprite library is as follows.
 
-```c
+```cpp
 #include <TFT_eSPI.h>
 
 TFT_eSPI tft = TFT_eSPI();
@@ -360,19 +361,19 @@ In the above example code, when the program exits the `loop()` function, `spr.de
 
 For more information about the TFT library functions and its use, we recommend reading the **TFT_eSPI.h** and **TFT_eSPI.cpp** files in the library.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/1.png" style={{width:400, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/1.png" style={{width:300, height:'auto'}}/></div>
 
 ### About the TFT library customization options
 
-Sometimes we need to use some custom font libraries or some features that are not enabled to save space. At this point we will need to modify the contents of the **Setup66_Seeed_XIAO_RoundDisplay.h** file.
+Sometimes we need to use some custom font libraries or some features that are not enabled to save space. At this point we will need to modify the contents of the **Setup66_Seeed_XIAO_Round.h** file.
 
 - The default path for this file on **Windows** systems is:
 
-`C:\Users\{UserName}\Documents\Arduino\libraries\TFT_eSPI\User_Setups\Setup66_Seeed_XIAO_RoundDisplay.h`
+`C:\Users\{UserName}\Documents\Arduino\libraries\Seeed_GFX\User_Setups\Setup66_Seeed_XIAO_Round.h`
 
 - The default path for this file on **MacOS** systems is:
 
-`\Users\{UserName}\Documents\Arduino\libraries\TFT_eSPI\User_Setups\Setup66_Seeed_XIAO_RoundDisplay.h`
+`\Users\{UserName}\Documents\Arduino\libraries\Seeed_GFX\User_Setups\Setup66_Seeed_XIAO_Round.h`
 
 Please turn on or off some unnecessary functions according to the actual usage.
 For example, if you want to use custom fonts, then you should uncomment `#define SMOOTH_FONT`, otherwise, you will probably get errors when running.
@@ -416,12 +417,9 @@ We recommend you to use the **v1.5.1** version of SquareLine Studio. This is als
 
 Environment used in the preparation of this tutorial:
 
-1. **[SeeedStudio_TFT_eSPI library](https://github.com/Seeed-Projects/SeeedStudio_TFT_eSPI)** by Bodmer, modified by Seeed Studio, version: **2.5.43**
+1. **[Seeed_GFX library](https://github.com/Seeed-Studio/Seeed_GFX)** by Bodmer, modified by Seeed Studio.
 
-2. **[LVGL library](https://github.com/lvgl/lvgl/releases/tag/v8.3.11)** by kisvegabor, embeddedt, pete-pjb, version: **8.3.11**
-
-The **LVGL** libraries can be downloaded as version 8.3.11 by searching directly through the Library Version Manager. The **SeeedStudio_TFT_eSPI** library needs to be downloaded from Github and added to the Arduino IDE environment.
-
+2. **[SeeedStudio_lvgl library](https://github.com/Seeed-Projects/SeeedStudio_lvgl)** by kisvegabor, embeddedt, pete-pjb, modified by Seeed Studio.
 :::
 
 #### Step1. Download the SuqareLine Studio

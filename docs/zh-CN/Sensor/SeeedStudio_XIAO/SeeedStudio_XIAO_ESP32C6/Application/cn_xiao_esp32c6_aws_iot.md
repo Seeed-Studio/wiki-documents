@@ -12,9 +12,9 @@ last_update:
 
 # 为 XIAO ESP32C6 使用 AWS IoT Core 赋能 AI
 
-本 Wiki 作为部署先进物联网系统的综合指南，该系统利用 AWS 服务和 XIAO ESP32C6 微控制器的强大功能来监控和分析环境数据。从无缝收集传感器数据开始，本文档详细介绍了将这些信息传输并分别存储到 AWS IoT Core 和 AWS Analytics 的复杂过程。它深入探讨了如何利用 AWS Sagemaker 在正常环境模式下训练机器学习模型，强调系统学习和适应其操作环境的能力，以提高效率。
+本 Wiki 作为部署先进物联网系统的综合指南，该系统利用 AWS 服务和 XIAO ESP32C6 微控制器的强大功能来监控和分析环境数据。从无缝收集传感器数据开始，本文档详细介绍了将这些信息传输并分别存储到 AWS IoT Core 和 AWS Analytics 的复杂过程。它深入探讨了如何利用 AWS Sagemaker 在正常环境模式下训练机器学习模型，强调了系统学习和适应其操作环境以提高效率的能力。
 
-此外，本 Wiki 概述了使用 XIAO ESP32C6 实现实时异常检测的实施方案，这是一个关键组件，能够主动扫描偏离正常状态的情况并迅速触发警报。它涵盖了设置警报机制的端到端过程，该机制会通知利益相关者异常情况，确保及时关注和采取行动。
+此外，本 Wiki 概述了使用 XIAO ESP32C6 实现实时异常检测的方法，这是一个关键组件，能够主动扫描偏离正常状态的情况并迅速触发警报。它涵盖了设置警报机制的端到端过程，该机制会通知利益相关者异常情况，确保及时关注和采取行动。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/0.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -24,41 +24,41 @@ last_update:
 - [**XIAO ESP32C6 用于异常环境检测**](#xiao-esp32c6-for-abnormal-environment-detection)。
 - [**异常状态消息通知**](#abnormal-status-message-notification)。
 
-通过探索本 Wiki，用户将详细了解每个组件在创建智能、响应式和强大的环境监控系统中的作用，并获得配置和维护的实用见解。
+通过探索本 Wiki，用户将详细了解每个组件在创建智能、响应式和强大的环境监控系统中的作用，并获得配置和维护方面的实用见解。
 
 ## 所需材料
 
 本示例将介绍如何使用 XIAO ESP32C6 与 Grove DHT20 温湿度传感器来完成 AWS IoT Core 的 SageMaker 任务。以下是完成此例程所需的所有硬件设备。
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO ESP32C6</th>
-			<th>DHT20</th>
-			<th>扩展板</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Tem-humidity-sensor1.jpg" style={{width:250, height:'auto'}}/></div></td><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/extensionboard.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-				</a>
-			</div></td>
+ <table align="center">
+  <tr>
+   <th>XIAO ESP32C6</th>
+   <th>DHT20</th>
+   <th>扩展板</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Tem-humidity-sensor1.jpg" style={{width:250, height:'auto'}}/></div></td><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/extensionboard.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    </a>
+   </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## 将传感器数据捕获到 AWS IoT Core
@@ -77,7 +77,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/2.png" style={{width:1000, height:'auto'}}/></div>
 
-在 AWS IoT Core 仪表板中，点击左侧导航窗格中的**所有设备**以展开选项。点击**设备**。点击"设备"页面角落的**创建设备**按钮。
+在 AWS IoT Core 仪表板中，点击左侧导航窗格中的**所有设备**以展开选项。点击**设备**。在"设备"页面的角落点击**创建设备**按钮。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/3.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -93,13 +93,14 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/7.png" style={{width:1000, height:'auto'}}/></div>
 
-在**将策略附加到证书**页面上，如果您没有策略，您需要通过点击**创建策略**来创建一个。您将被带到一个新页面，在那里您可以创建一个定义您设备权限的策略。
+在**将策略附加到证书**页面上，如果您没有策略，需要通过点击**创建策略**来创建一个。您将被带到一个新页面，在那里您可以创建一个定义设备权限的策略。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/8.png" style={{width:1000, height:'auto'}}/></div>
 
 创建并命名您的策略后，通过选中策略名称旁边的复选框并点击**创建**，将其附加到您新创建的证书。
 
 我们需要以下权限：
+
 - **iot:Publish**
 - **iot:Connect**
 - **iot:Receive**
@@ -107,11 +108,9 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/9.png" style={{width:1000, height:'auto'}}/></div>
 
-
-注册您的设备后，您将被重定向到设备详细信息页面，在那里您可以查看您设备的信息。
+注册设备后，您将被重定向到设备详细信息页面，在那里您可以查看设备的信息。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/10.png" style={{width:1000, height:'auto'}}/></div>
-
 
 配置您的设备（在本例中为 XIAO_ESP32C6）以使用您在创建设备时下载的证书和私钥。您需要按照特定设备的说明来设置 AWS IoT SDK 并建立与 AWS IoT Core 的安全连接。
 
@@ -193,7 +192,7 @@ static const char AWS_CERT_PRIVATE[] PROGMEM = R"KEY(
 
 请将 Grove DHT20 传感器连接到 XIAO ESP32C6 的 IIC 接口。如果您想要便利性，我们建议您购买 [Grove Base for XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html)。
 
-然后，请在 Arduino 中创建一个新项目并将其保存到本地。将我们在**步骤 2** 中创建的 **secrets.h** 文件复制到与 .ino 文件相同的目录中。然后，请将下面的代码上传到 XIAO ESP32C6，数据将根据您提供的 AWS 凭据通过 MQTT 发送到指定的主题。
+然后，请在 Arduino 中创建一个新项目并将其保存到本地。将我们在**步骤 2** 中创建的 **secrets.h** 文件复制到与 .ino 文件相同的目录中。然后，请将下面的代码上传到 XIAO ESP32C6，数据将根据您提供的 AWS 凭据通过 MQTT 发送到指定主题。
 
 <details>
 <summary>点击此处预览完整代码</summary>
@@ -206,22 +205,22 @@ static const char AWS_CERT_PRIVATE[] PROGMEM = R"KEY(
 #include "WiFi.h"
 #include "Wire.h"
 
-//DHT设置
+//DHT setup
 #include "DHT.h"
 #define DHTTYPE DHT20   // DHT 20
-/*注意：DHT10和DHT20与其他DHT*传感器不同，它使用i2c接口而不是单线接口*/
-/*所以它不需要引脚。*/
-DHT dht(DHTTYPE);         //   DHT10 DHT20不需要定义引脚
+/*Notice: The DHT10 and DHT20 is different from other DHT* sensor ,it uses i2c interface rather than one wire*/
+/*So it doesn't require a pin.*/
+DHT dht(DHTTYPE);         //   DHT10 DHT20 don't need to define Pin
 
-//MQTT设置
+//MQTT setup
 #define AWS_IOT_PUBLISH_TOPIC   "xiao_esp32c6/pub"
 #define AWS_IOT_SUBSCRIBE_TOPIC "xiao_esp32c6/sub"
 
-//存储温度和湿度数据
+//store temp and humi data
 float h;
 float t;
 
-//网络设置
+//network setup
 WiFiClientSecure net = WiFiClientSecure();
 PubSubClient client(net);
 
@@ -239,7 +238,7 @@ void connectAWS()
   WiFi.mode(WIFI_STA);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
  
-  Serial.println("正在连接Wi-Fi");
+  Serial.println("Connecting to Wi-Fi");
  
   while (WiFi.status() != WL_CONNECTED)
   {
@@ -247,18 +246,18 @@ void connectAWS()
     Serial.print(".");
   }
  
-  // 配置WiFiClientSecure以使用AWS IoT设备凭证
+  // Configure WiFiClientSecure to use the AWS IoT device credentials
   net.setCACert(AWS_CERT_CA);
   net.setCertificate(AWS_CERT_CRT);
   net.setPrivateKey(AWS_CERT_PRIVATE);
  
-  // 连接到我们之前定义的AWS端点上的MQTT代理
+  // Connect to the MQTT broker on the AWS endpoint we defined earlier
   client.setServer(AWS_IOT_ENDPOINT, 8883);
  
-  // 创建消息处理程序
+  // Create a message handler
   client.setCallback(messageHandler);
  
-  Serial.println("正在连接AWS IOT");
+  Serial.println("Connecting to AWS IOT");
  
   while (!client.connect(THINGNAME))
   {
@@ -268,14 +267,14 @@ void connectAWS()
  
   if (!client.connected())
   {
-    Serial.println("AWS IoT超时！");
+    Serial.println("AWS IoT Timeout!");
     return;
   }
  
-  // 订阅主题
+  // Subscribe to a topic
   client.subscribe(AWS_IOT_SUBSCRIBE_TOPIC);
  
-  Serial.println("AWS IoT已连接！");
+  Serial.println("AWS IoT Connected!");
 }
 
 void publishMessage()
@@ -284,14 +283,14 @@ void publishMessage()
   doc["humidity"] = h;
   doc["temperature"] = t;
   char jsonBuffer[512];
-  serializeJson(doc, jsonBuffer); // 打印到客户端
+  serializeJson(doc, jsonBuffer); // print to client
  
   client.publish(AWS_IOT_PUBLISH_TOPIC, jsonBuffer);
 }
  
 void messageHandler(char* topic, byte* payload, unsigned int length)
 {
-  Serial.print("收到消息: ");
+  Serial.print("incoming: ");
   Serial.println(topic);
  
   StaticJsonDocument<200> doc;
@@ -303,7 +302,7 @@ void messageHandler(char* topic, byte* payload, unsigned int length)
 void setup() {
 
     debug.begin(115200);
-    debug.println("DHTxx测试！");
+    debug.println("DHTxx test!");
     Wire.begin();
 
     connectAWS();
@@ -314,15 +313,15 @@ void loop() {
     h = dht.readHumidity();
     t = dht.readTemperature();
 
-    if (isnan(h) || isnan(t) )  // 检查是否有读取失败并提前退出（以便重试）。
+    if (isnan(h) || isnan(t) )  // Check if any reads failed and exit early (to try again).
     {
-      Serial.println(F("从DHT传感器读取失败！"));
+      Serial.println(F("Failed to read from DHT sensor!"));
       return;
     }
   
-    Serial.print(F("湿度: "));
+    Serial.print(F("Humidity: "));
     Serial.print(h);
-    Serial.print(F("%  温度: "));
+    Serial.print(F("%  Temperature: "));
     Serial.print(t);
     Serial.println(F("°C "));
   
@@ -397,7 +396,7 @@ void loop() {
 
 ### 步骤 7. 存储传感器数据流
 
-导航到 AWS IoT Analytics 服务。在 AWS IoT Analytics 仪表板中，点击左侧边栏中的**数据集**选项。找到包含您要下载数据的数据集，点击其名称打开数据集详细信息页面。
+导航到 AWS IoT Analytics 服务。在 AWS IoT Analytics 仪表板中，点击左侧边栏中的**数据集**选项。找到包含您要下载数据的数据集，点击其名称打开数据集详情页面。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/25.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -407,7 +406,7 @@ void loop() {
 
 AWS IoT Analytics 将处理数据并根据指定的时间范围准备数据集内容。基于每秒报告一次传感器数据，我们建议在正常环境中数据收集时间至少大于或等于一小时。这确保了数据的准确性。
 
-等待数据集生成完成。您可以在数据集详细信息页面中监控进度。一旦状态变为"SUCCEEDED"，数据集内容就可以下载了。
+等待数据集生成完成。您可以在数据集详情页面中监控进度。一旦状态变为"SUCCEEDED"，数据集内容就准备好下载了。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/28.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -418,14 +417,14 @@ AWS IoT Analytics 将处理数据并根据指定的时间范围准备数据集�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/27.png" style={{width:500, height:'auto'}}/></div>
 
-在数据集详细信息页面中，您将看到有关数据集的信息，包括其名称、状态和最后更新时间。
+在数据集详情页面中，您将看到有关数据集的信息，包括其名称、状态和最后更新时间。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/24.png" style={{width:1000, height:'auto'}}/></div>
 :::
 
 ## 使用 AWS Sagemaker 在正常环境中训练数据
 
-通过 AWS Sagemaker，我们训练机器学习模型来识别指示正常环境的模式。Sagemaker 提供了一个综合平台，促进机器学习模型的开发、训练和部署，实现环境数据的智能处理。
+通过 AWS Sagemaker，我们训练机器学习模型来识别表明正常环境的模式。Sagemaker 提供了一个综合平台，促进机器学习模型的开发、训练和部署，实现环境数据的智能处理。
 
 ### 步骤 8. 创建新的笔记本实例
 
@@ -484,6 +483,7 @@ S3 用于存储训练数据集、测试数据集、模型工件等。在 SageMak
 1. **In[22]** 代码块中 **ENDPOINT_NAME** 的值是运行 **In[19]** 代码块后的结果。
 2. 请将 **In[3]** 和 **In[10]** 代码块的 **bucket_name** 设置为相同名称。
 3. 最后一个代码块的 **API_ENDPOINT**，请使用您自己的值。
+
 :::
 
 ### 步骤 10. 配置 AWS Lambda
@@ -610,7 +610,6 @@ def lambda_handler(event, context):
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/52.png" style={{width:1000, height:'auto'}}/></div>
 
-
 然后我们回到 Lambda 的代码，将代码中的 **TopicArn** 字段替换为 **SNS 中的 ARN 字段**。
 
 ### 步骤 12. 为 Lambda 授予 SNS 权限
@@ -619,7 +618,7 @@ def lambda_handler(event, context):
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/40.png" style={{width:1000, height:'auto'}}/></div>
 
-然后找到我们刚创建的 Lambda Function 的名称并点击它。
+然后找到我们刚创建的 Lambda 函数名称并点击它。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/41.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -648,7 +647,6 @@ def lambda_handler(event, context):
 为您的 API 提供一个名称，例如 "XIAO_ESP32C6_API"。为您的 API 选择 **Regional** 端点类型。点击 **Create API** 按钮创建您的 REST API。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/57.png" style={{width:1000, height:'auto'}}/></div>
-
 
 在 API Gateway 仪表板中，选择您新创建的 API。选择 **Create Resource**。
 

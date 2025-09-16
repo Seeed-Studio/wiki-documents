@@ -1,6 +1,6 @@
 ---
 description: This wiki provides tutorial for Feetech Servo motors.
-title: 飞特舵机使用文档
+title: 飞特舵机
 keywords:
 - actuator
 - motor

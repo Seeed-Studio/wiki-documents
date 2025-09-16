@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: xiao_rp2350_programming_language
 # link:
 #   type: generated-index
-#   slug: cn/Develop_with_SenseCAP_Indicator
-#   title: 使用 SenseCAP Indicator 进行开发
-#   description: 本教程将指导您完成使用 SenseCAP Indicator 进行开发的过程。
+#   slug: Develop_with_SenseCAP_Indicator
+#   title: Develop With SenseCAP Indicator
+#   description: This tutorial will guide you through the process of developing with SenseCAP Indicator.

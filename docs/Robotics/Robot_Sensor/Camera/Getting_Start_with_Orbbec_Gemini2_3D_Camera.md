@@ -1,6 +1,6 @@
 ---
 description: Show people how to use Orbbec Gemini 335Lg on reComputer Jetson platform.
-title: Getting Start with Orbbec Gemini2 3D Camera
+title: Orbbec Gemini2 3D Camera
 keywords:
 - Jetson
 - reComputer Robotics

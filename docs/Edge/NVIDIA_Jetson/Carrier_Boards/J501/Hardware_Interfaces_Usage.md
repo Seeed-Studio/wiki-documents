@@ -27,6 +27,7 @@ We need to combine the J501 carrier board with the [GMSL expansion board](https:
 </div>
 
 ### Compatible Cameras
+
 - [[3MP] SG3S-ISX031C-GMSL2F](https://www.sensing-world.com/en/pd.jsp?recommendFromPid=0&id=23&fromMid=1544)
 
 ### Hardware Connection
@@ -98,14 +99,15 @@ gst-launch-1.0 v4l2src device=/dev/video5  ! xvimagesink -ev
 gst-launch-1.0 v4l2src device=/dev/video6  ! xvimagesink -ev 
 gst-launch-1.0 v4l2src device=/dev/video7  ! xvimagesink -ev 
 ```
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/gmsl_result.png"/>
 </div>
 
-
 ## Gigabit Ethernet Connectors
 
 There are 2 Ethernet ports on the J501.
+
 - eth0: Standard Gigabit Ethernet port with 10/100/1000Mbps specification.
 - eth1: 10-Gigabit Ethernet port.
 
@@ -114,9 +116,9 @@ There are 2 Ethernet ports on the J501.
 </div>
 
 There are 2 LEDs (green and yellow) on each Ethernet port:
+
 - Green LED: ON only when connected to 1000M/10G network.
 - Yellow LED: Shows the network activity status.
-
 
 ## SATA Connectors
 
@@ -127,18 +129,19 @@ reServer J501 carrier board supports 2x SATA 2.5" HDD/SSD and comes with both SA
 </div>
 
 ### Usage Instruction
+
 After the Jetson device system boots up, you can verify the connected SATA drives by `lsblk`.
 
 <div align="center">
   <img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/lsblk.png"/>
 </div>
 
-
-## M.2 Key M 
+## M.2 Key M
 
 M.2 Key M is an interface designed for high-speed solid-state drives (SSDs), providing ultra-fast data transfer speeds, ideal for high-performance applications.
 
-### Supported SSD are as follows:
+### Supported SSD are as follows
+
 - [128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
 - [256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
 - [512GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
@@ -181,6 +184,7 @@ After installing the Wi-Fi module and powering on the device, we can configure t
 </div>
 
 Of course, we can also check the device's operating status using the following commands.
+
 ```bash
 ifconfig
 ```
@@ -199,7 +203,7 @@ bluetoothctl
 
 ## M.2 Key B
 
-The J501 carrier board comes with a M.2 Key B connector that supports 4G and 5G modules. Currently we have tested **SIM8202G-M2 5G module**. 
+The J501 carrier board comes with a M.2 Key B connector that supports 4G and 5G modules. Currently we have tested **SIM8202G-M2 5G module**.
 
 ### Hardware Connection
 
@@ -207,7 +211,6 @@ The J501 carrier board comes with a M.2 Key B connector that supports 4G and 5G 
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/5G_connection.png"/>
 </div>
   
-
 ## Mini PCIe
 
 J501 carrier board comes with a mini PCIe connector that supports 4G and LoRa modules. However, you can only connect either a 4G module or a LoRa module at once. Some of the 4G modules come embedded with GPS functionality. We will discuss this as well.
@@ -219,7 +222,6 @@ J501 carrier board comes with a mini PCIe connector that supports 4G and LoRa mo
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/minipcie_4g.jpeg"/>
 </div>
-
 
 - **Step1.** Add a jumper between **SIM_MUX_SEL** and **GND** pins on the 20Pin Header.
 
@@ -345,11 +347,13 @@ J501 carrier board supports 4 digital input and 4 digital output channels, all o
 </table>
 
 :::note
+
 - 12V Digital Input, ground signal needs to be connected to **GND_DI**.
 
 - Digital output, maximum withstand voltage 40V, ground signal needs to be connected to **GND_DO**.
 
 - CAN bus with standard differential signals, ground signal needs to be connected to **GND_ISO**.
+
 :::
 
 ### Connection Overview for DI
@@ -387,8 +391,7 @@ cat value
 
 If it outputs 0, that means there is 12V input. If it outputs 1, that means there is no input voltage.
 
-
-### Connection Overview for DO 
+### Connection Overview for DO
 
 We can make the connection for DO by following the diagram below. It is better to add a resistor in series for the DO line. Here we have tested with a 4.7kΩ resistor.
 
@@ -396,7 +399,7 @@ We can make the connection for DO by following the diagram below. It is better t
   <img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/dido_do.png"/>
 </div>
 
-### Usage Instruction for DO 
+### Usage Instruction for DO
 
 Here we need to connect a load as mentioned in the above diagram. The easiest way to test this would be to connect a multimeter if you have access to one, or else connect a load that requires less than 40V maximum voltage.
 
@@ -428,7 +431,7 @@ J501 carrier board features two CAN interfaces that supports the CAN FD (Control
 The CAN interface uses an isolated power supply, which means that the ground signal for external devices connected to the CAN interface should be connected to the **GND_ISO** pin.
 :::
 
-### Connection Overview with USB to CAN Adapter 
+### Connection Overview with USB to CAN Adapter
 
 To test and interface with CAN bus, connect a USB to CAN adapter to the CAN connectors on the board as shown below:
 
@@ -472,6 +475,7 @@ sudo ip link set can0 up
 sudo ip link set can1 up
 
 ```
+
 Then, run the file we just created in the Jetson terminal window:
 
 ```bash
@@ -563,7 +567,6 @@ Additionally, you can refer to [M.2 Key M](#m2-key-m) to test the read and write
 Please note, before testing, use the `cd` command to navigate to the folder where the USB storage device is mounted.
 :::
 
-
 ## RTC
 
 The J501 carrier board features RTC interfaces, providing accurate timekeeping even when the system is powered off.
@@ -577,7 +580,6 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 <TabItem value="RTC socket" label="RTC socket">
-
 
 Connect a 3V CR1220 coin cell battery to the RTC socket on the board as shown below. Make sure the **positive (+)** end of the battery is facing upwards.
 
@@ -702,7 +704,6 @@ sudo systemctl status hwtosys.service
 
 **Step16** Reboot the board and you will the system clock is now in sync with the hardware clock.
 
-
 ## Fan
 
 The onboard fan interface of the J501 board is managed by the nvfancontrol daemon, which adaptively adjusts the fan speed based on the operating status of the Jetson module. We can configure the working mode of the daemon through its configuration file `/etc/nvfancontrol.conf`.
@@ -717,20 +718,20 @@ Additionally, we can manually set the fan speed using the jtop tool.
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/jtop.png"/>
 </div>
 
-## HDMI 
-J501 is equipped with an HDMI 2.1 Type A port, which supports a resolution of 7680x4320. This allows for ultra-high-definition video output.
+## HDMI
 
+J501 is equipped with an HDMI 2.1 Type A port, which supports a resolution of 7680x4320. This allows for ultra-high-definition video output.
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

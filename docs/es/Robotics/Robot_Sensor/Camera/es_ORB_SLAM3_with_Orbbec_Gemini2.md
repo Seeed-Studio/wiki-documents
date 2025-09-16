@@ -1,6 +1,6 @@
 ---
-description: Esta wiki proporciona pasos detallados para configurar y ejecutar el algoritmo ORB-SLAM3 en reComputer Jetson usando una cámara RGB-D Orbbec Gemini2 para aplicaciones avanzadas de SLAM visual.
-title: ORB-SLAM3 con Orbbec Gemini2 en reComputer
+description: Este wiki proporciona pasos detallados para configurar y ejecutar el algoritmo ORB-SLAM3 en reComputer Jetson usando una cámara RGB-D Orbbec Gemini2 para aplicaciones avanzadas de SLAM visual.
+title: ORB-SLAM3 con Orbbec Gemini2
 keywords:
 - ORB-SLAM3
 - SLAM
@@ -9,7 +9,7 @@ keywords:
 - Orbbec Gemini2
 - RGB-D camera
 - Visual SLAM
-image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orbbec-gemini-2-3d-camera.webp 
+image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orb_slam3.webp
 slug: /es/orb_slam3_orbbec_gemini2
 last_update:
   date: 2025-08-21
@@ -22,7 +22,7 @@ last_update:
 </div>
 
 <div style={{ textAlign: "justify" }}>
-La Orbbec Gemini 2 es una cámara RGB-D de alto rendimiento que cuenta con un sensor de profundidad de luz estructurada de doble ojo y una IMU integrada de 6 ejes. Proporciona flujos de datos RGB y de profundidad completamente sincronizados, asegurando una alineación precisa de Profundidad a Color en tiempo real, lo cual es esencial para una percepción 3D precisa. Esta combinación de características hace que la Gemini 2 sea ideal para robótica, visión por computadora y otras aplicaciones 3D, permitiendo tareas como detección de objetos, mapeo, navegación y análisis espacial con alta confiabilidad y precisión. La cámara es compacta, fácil de configurar y completamente compatible con el SDK de Orbbec, haciéndola adecuada tanto para investigación como para implementaciones industriales.
+La Orbbec Gemini 2 es una cámara RGB-D de alto rendimiento que cuenta con un sensor de profundidad de luz estructurada de doble ojo y una IMU integrada de 6 ejes. Proporciona flujos de datos RGB y de profundidad completamente sincronizados, asegurando una alineación precisa en tiempo real de Profundidad a Color, lo cual es esencial para una percepción 3D precisa. Esta combinación de características hace que la Gemini 2 sea ideal para robótica, visión por computadora y otras aplicaciones 3D, permitiendo tareas como detección de objetos, mapeo, navegación y análisis espacial con alta confiabilidad y precisión. La cámara es compacta, fácil de configurar y completamente compatible con el SDK de Orbbec, lo que la hace adecuada tanto para despliegues de investigación como industriales.
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -33,7 +33,7 @@ La Orbbec Gemini 2 es una cámara RGB-D de alto rendimiento que cuenta con un se
 ## Introducción
 
 <div style={{ textAlign: "justify" }}>
-[ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) es un algoritmo avanzado de SLAM visual para cámaras monoculares, estéreo y RGB-D. Utiliza características ORB para seguimiento y mapeo robustos, soporta cierre de bucle y relocalización, y ofrece alta precisión y eficiencia para robótica, AR/VR y navegación autónoma. Esta wiki proporciona pasos completos para configurar y ejecutar ORB-SLAM3 en reComputer Jetson Series usando una cámara RGB-D Orbbec Gemini2 para aplicaciones avanzadas de SLAM visual.
+[ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) es un algoritmo avanzado de SLAM visual para cámaras monoculares, estéreo y RGB-D. Utiliza características ORB para seguimiento y mapeo robustos, soporta cierre de bucle y relocalización, y ofrece alta precisión y eficiencia para robótica, AR/VR y navegación autónoma. Este wiki proporciona pasos completos para configurar y ejecutar ORB-SLAM3 en la Serie reComputer Jetson usando una cámara RGB-D Orbbec Gemini2 para aplicaciones avanzadas de SLAM visual.
 </div>
 
 ## Prerrequisitos
@@ -59,7 +59,7 @@ wget https://github.com/orbbec/OrbbecSDK_v2/releases/download/v2.4.11/OrbbecSDK_
 unzip OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64.zip
 ```
 
-__Step 2.__ Build examples and test:
+__Paso 2.__ Compilar ejemplos y probar:
 
 ```bash
 # Install udev rules
@@ -78,7 +78,7 @@ cd ..
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/test_sdk.png" />
 </div>
 
-## Construyendo ORB-SLAM3
+## Compilando ORB-SLAM3
 
 __Paso 1.__ Instalar Dependencias del Sistema:
 
@@ -92,7 +92,7 @@ sudo apt update && sudo apt install -y \
     libepoxy-dev python3-dev libboost-serialization-dev
 ```
 
-__Paso 2.__ Instala Pangolin que es requerido para la visualización de ORB-SLAM3:
+__Paso 2.__ Instalar Pangolin que es requerido para la visualización de ORB-SLAM3:
 
 ```bash
 git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
@@ -144,7 +144,7 @@ git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git
 cd ORB_SLAM3
 ```
 
-ORB-SLAM3 puede tener problemas de compatibilidad con estándares de C++ más nuevos. Corrige el problema de `monotonic_clock`:
+ORB-SLAM3 puede tener problemas de compatibilidad con estándares C++ más nuevos. Corrige el problema de `monotonic_clock`:
 
 ```bash
 # Replace monotonic_clock with steady_clock in all source files
@@ -164,7 +164,7 @@ std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
 
 :::
 
-__Paso 4.__ Prueba si Pangolin está instalado correctamente:
+__Paso 4.__ Probar si Pangolin está instalado correctamente:
 
 ```bash
 ./examples/SimpleDisplay/SimpleDisplay
@@ -175,16 +175,17 @@ __Paso 4.__ Prueba si Pangolin está instalado correctamente:
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/v_tool.png" />
 </div>
 
-Si la instalación se realiza correctamente, la ventana como se muestra en la imagen anterior se puede abrir normalmente.
+Si la instalación se realizó correctamente, la ventana como se muestra en la imagen anterior se puede abrir normalmente.
 
 __Paso 5.__ Modificar CMakeLists.txt
 
-Modifica el archivo CMakeLists.txt para hacer que el proyecto sea compatible con el SDK de Orbbec. Copia directamente la siguiente configuración completa de CMakeList.txt:
+Modifica el archivo CMakeLists.txt para hacer el proyecto compatible con el SDK de Orbbec. Copia directamente la siguiente configuración completa de CMakeList.txt:
 :::info
 Necesitas modificar: `set(ORBBEC_SDK_PATH "/home/seeed/demo/OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64")` a la ruta donde instalaste tu propio SDK.
 :::
 <details>
 <summary> CMakeLists.txt </summary>
+
 ```cmake
 cmake_minimum_required(VERSION 2.8)
 project(ORB_SLAM3)
@@ -744,17 +745,17 @@ endif()
 # target_link_libraries(stereo_inertial_realsense_D435i_old ${PROJECT_NAME})
 
 # endif()
-
 ```
 
 </details>
- 
-**Paso 6.** Crear un script que use el adaptador Orbbec Gemini2 para el modo RGB-D de ORB-SLAM3
+
+__Paso 6.__ Crear un script que use el adaptador Orbbec Gemini2 para el modo RGB-D de ORB-SLAM3
 
 Crear un archivo llamado `rgbd_orbbec_gemini2_cpp.cc` bajo el directorio `Examples/RGB-D/` de la siguiente manera:
 
 <details>
 <summary> rgbd_orbbec_gemini2_cpp.cc </summary>
+
 ```c++
 /**
 * This file is part of ORB-SLAM3
@@ -774,25 +775,25 @@ Crear un archivo llamado `rgbd_orbbec_gemini2_cpp.cc` bajo el directorio `Exampl
 * If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <signal.h>
-#include <stdlib.h>
-#include <iostream>
-#include <algorithm>
-#include <fstream>
-#include <chrono>
-#include <ctime>
-#include <sstream>
+# include <signal.h>
+# include <stdlib.h>
+# include <iostream>
+# include <algorithm>
+# include <fstream>
+# include <chrono>
+# include <ctime>
+# include <sstream>
 
-#include <condition_variable>
-#include <mutex>
-#include <thread>
+# include <condition_variable>
+# include <mutex>
+# include <thread>
 
-#include <opencv2/core/core.hpp>
+# include <opencv2/core/core.hpp>
 
-#include <libobsensor/ObSensor.hpp>
-#include <libobsensor/h/ObTypes.h>
+# include <libobsensor/ObSensor.hpp>
+# include <libobsensor/h/ObTypes.h>
 
-#include <System.h>
+# include <System.h>
 
 using namespace std;
 
@@ -825,23 +826,23 @@ std::shared_ptr<ob::Config> config = nullptr;
 // Callback function for receiving frames from Orbbec Gemini 2
 void orbbec_frame_callback(std::shared_ptr<ob::FrameSet> frameSet) {
     std::unique_lock<std::mutex> lock(imu_mutex);
-    
+
     if (frameSet == nullptr) {
         return;
     }
-    
+
     count_im_buffer++;
-    
+
     // Get current timestamp
     double new_timestamp_image = std::chrono::duration_cast<std::chrono::milliseconds>(
         std::chrono::system_clock::now().time_since_epoch()).count() * 1e-3;
-    
+
     // Limit frame rate to 15 FPS to reduce processing load
     if (abs(timestamp_image - new_timestamp_image) < 0.067) { // 1/15 = 0.067 seconds
         count_im_buffer--;
         return;
     }
-    
+
     try {
                     // Process color frame
             auto colorFrame = frameSet->getFrame(OB_FRAME_COLOR);
@@ -850,7 +851,7 @@ void orbbec_frame_callback(std::shared_ptr<ob::FrameSet> frameSet) {
                 uint32_t width = videoFrame->getWidth();
                 uint32_t height = videoFrame->getHeight();
                 OBFormat format = videoFrame->getFormat();
-                
+
                 // Convert to OpenCV Mat
                 if (format == OB_FORMAT_RGB || format == OB_FORMAT_BGR) {
                     uint8_t* data = (uint8_t*)videoFrame->getData();
@@ -858,37 +859,37 @@ void orbbec_frame_callback(std::shared_ptr<ob::FrameSet> frameSet) {
                     if (format == OB_FORMAT_RGB) {
                         cv::cvtColor(imCV, imCV, cv::COLOR_RGB2BGR);
                     }
-                    
+
                     // Resize image for better performance (smaller size for faster processing)
                     cv::resize(imCV, imCV, cv::Size(640, 360));
-                    
+
                     // Add small delay to prevent overwhelming the system
                     std::this_thread::sleep_for(std::chrono::milliseconds(10));
                 }
             }
-        
+
         // Process depth frame
         auto depthFrame = frameSet->getFrame(OB_FRAME_DEPTH);
         if (depthFrame != nullptr) {
             auto videoFrame = depthFrame->as<ob::VideoFrame>();
             uint32_t width = videoFrame->getWidth();
             uint32_t height = videoFrame->getHeight();
-            
+
             uint8_t* data = (uint8_t*)videoFrame->getData();
             // Convert to OpenCV Mat (depth is 16-bit)
             depthCV = cv::Mat(height, width, CV_16U, data);
-            
+
             // Resize depth image for better performance (smaller size for faster processing)
             cv::resize(depthCV, depthCV, cv::Size(640, 360));
         }
-        
+
         timestamp_image = new_timestamp_image;
         image_ready = true;
-        
+
     } catch (const ob::Error& e) {
         std::cerr << "Error processing frames: " << e.what() << std::endl;
     }
-    
+
     lock.unlock();
     cond_image_rec.notify_all();
 }
@@ -917,7 +918,7 @@ int main(int argc, char **argv)
         // Create pipeline using C++ API
         pipeline = std::make_shared<ob::Pipeline>();
         cout << "✓ Pipeline created successfully" << endl;
-        
+
         // Get device info
         auto device = pipeline->getDevice();
         if (device) {
@@ -925,22 +926,22 @@ int main(int argc, char **argv)
             cout << "✓ Device name: " << deviceInfo->getName() << endl;
             cout << "✓ Device serial: " << deviceInfo->getSerialNumber() << endl;
         }
-        
+
         // Create config
         config = std::make_shared<ob::Config>();
-        
+
         // Enable color stream
         config->enableVideoStream(OB_STREAM_COLOR, OB_WIDTH_ANY, OB_HEIGHT_ANY, OB_FPS_ANY, OB_FORMAT_RGB);
         cout << "✓ Color stream enabled" << endl;
-        
+
         // Enable depth stream
         config->enableVideoStream(OB_STREAM_DEPTH, OB_WIDTH_ANY, OB_HEIGHT_ANY, OB_FPS_ANY, OB_FORMAT_Y16);
         cout << "✓ Depth stream enabled" << endl;
-        
+
         // Start pipeline with callback
         pipeline->start(config, orbbec_frame_callback);
         cout << "✓ Orbbec Gemini 2 pipeline started successfully!" << endl;
-        
+
     } catch (const ob::Error& e) {
         cerr << "Failed to initialize Orbbec SDK: " << e.what() << endl;
         return -1;
@@ -948,19 +949,19 @@ int main(int argc, char **argv)
         cerr << "Exception during initialization: " << e.what() << endl;
         return -1;
     }
-    
+
     // Create SLAM system
     ORB_SLAM3::System SLAM(argv[1], argv[2], ORB_SLAM3::System::RGBD, true, 0, "");
     float imageScale = SLAM.GetImageScale();
-    
+
     double timestamp;
     cv::Mat im, depth;
-    
+
     double t_resize = 0.f;
     double t_track = 0.f;
-    
+
     cout << "Starting SLAM system..." << endl;
-    
+
     // Main loop
     while (!SLAM.isShutDown())
     {
@@ -968,18 +969,18 @@ int main(int argc, char **argv)
             std::unique_lock<std::mutex> lk(imu_mutex);
             if (!image_ready)
                 cond_image_rec.wait(lk);
-            
+
             if (count_im_buffer > 1)
                 cout << count_im_buffer - 1 << " dropped frames\n";
             count_im_buffer = 0;
-            
+
             timestamp = timestamp_image;
             im = imCV.clone();
             depth = depthCV.clone();
-            
+
             image_ready = false;
         }
-        
+
         if (imageScale != 1.f)
         {
             int width = im.cols * imageScale;
@@ -987,19 +988,19 @@ int main(int argc, char **argv)
             cv::resize(im, im, cv::Size(width, height));
             cv::resize(depth, depth, cv::Size(width, height));
         }
-        
+
         // Pass the image to the SLAM system
         SLAM.TrackRGBD(im, depth, timestamp);
     }
-    
+
     cout << "System shutdown!" << endl;
-    
+
     // Cleanup
     if (pipeline) {
         pipeline->stop();
         cout << "✓ Pipeline stopped" << endl;
     }
-    
+
     return 0;
 }
 
@@ -1007,7 +1008,7 @@ int main(int argc, char **argv)
 
 </details>
 
-__Step 7.__ Build ORB-SLAM3
+__Paso 7.__ Compilar ORB-SLAM3
 
 ```bash
 chmod +x build.sh
@@ -1017,10 +1018,10 @@ chmod +x build.sh
 ## Calibración de Cámara
 
 <div style={{ textAlign: "justify" }}>
-Antes de ejecutar ORB-SLAM3, es necesario calibrar la Cámara para obtener la configuración de parámetros de la cámara. Aquí, demostramos el uso de la herramienta de calibración de cámara proporcionada por ROS para calibrar la cámara y obtener sus parámetros.
+Antes de ejecutar ORB-SLAM3, es necesario calibrar la cámara para obtener la configuración de parámetros de la cámara. Aquí, demostramos el uso de la herramienta de calibración de cámara proporcionada por ROS para calibrar la cámara y obtener sus parámetros.
 </div>
 
-__Paso 1.__ Instalar el Controlador ROS2 de Orbbec
+__Paso 1.__ Instalar el controlador ROS2 de Orbbec
 
 ```bash
 mkdir -p ~/ros2_ws/src
@@ -1056,19 +1057,17 @@ Puedes verificar si el nodo de la cámara puede iniciarse normalmente observando
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/camera_topic.png" />
 </div>
 :::
-
 __Paso 2.__ Instalar el Paquete de Calibración de Cámara
 
 ```bash
 sudo apt install ros-humble-camera-calibration
 ```
 
-__Paso 3.__ Descargar Tablero de Calibración
+__Paso 3.__ Descargar el Tablero de Calibración
 
-Descarga el tablero de calibración desde
-[Colección de Tableros](https://markhedleyjones.com/media/calibration-checkerboard-collection/Checkerboard-A4-25mm-8x6.pdf) e imprímelo.
+Descarga el tablero de calibración desde [Colección de Tableros de Calibración](https://markhedleyjones.com/media/calibration-checkerboard-collection/Checkerboard-A4-25mm-8x6.pdf) e imprímelo.
 
-__Paso 4.__ Ejecutar Calibración de Cámara
+__Paso 4.__ Ejecutar la Calibración de Cámara
 
 ```bash
 # For 8x6 checkerboard with 25mm squares
@@ -1078,7 +1077,7 @@ ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
 
 :::note
 
-- `--size 8x6` se refiere al número de esquinas interiores (8×6 = 48 esquinas para una cuadrícula de 9×7)
+- `--size 8x6` se refiere al número de esquinas internas (8×6 = 48 esquinas para una cuadrícula de 9×7)
 - `--square 0.025` se refiere al tamaño del cuadrado en metros (25mm)
 - Mueve la cámara alrededor para capturar imágenes desde diferentes ángulos
 
@@ -1097,10 +1096,11 @@ Recopila imágenes desde diferentes ángulos, calcula automáticamente los pará
 
 __Paso 5.__ Configurar el archivo YAML de la cámara
 
-Crea un archivo de configuración de parámetros llamado `Orbbec_Gemini2.yaml` para la cámara Orbbec Gemini2 bajo la carpeta `Examples/RGB-D/` en tu proyecto ORB-SLAM3.
+Crea un archivo de configuración de parámetros.yaml llamado `Orbbec_Gemini2.yaml` para la cámara Orbbec Gemini2 bajo la carpeta `Examples/RGB-D/` en tu proyecto ORB-SLAM3.
 
 <details>
 <summary> Orbbec_Gemini2.yaml </summary>
+
 ```yaml
 %YAML:1.0
 
@@ -1204,7 +1204,7 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 - [Driver ROS2 de Orbbec](https://github.com/orbbec/OrbbecSDK_ROS2)
 - [Repositorio ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

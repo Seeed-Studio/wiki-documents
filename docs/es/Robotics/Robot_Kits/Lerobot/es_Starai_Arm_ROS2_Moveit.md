@@ -1,6 +1,6 @@
 ---
-description: Este wiki proporciona la Guía de MoveIt ROS2 para el Manipulador de Brazo Starai.
-title: Manipulador de Brazo Starai - Guía de MoveIt ROS2
+description: Este wiki proporciona la Guía de Starai Arm Manipulator - ROS2 MoveIt.
+title: Starai Arm en ROS2 MoveIt
 keywords:
 - Moveit
 - ROS2
@@ -13,8 +13,7 @@ last_update:
   author: LiShanghang
 ---
 
-# Manipulador de Brazo Starai - Guía de MoveIt ROS2
-
+# Manipulador Starai Arm - Guía de ROS2 MoveIt
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/IJKTeBYAG7k?si=iS-jqT27fDjeI6yX" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -29,20 +28,19 @@ last_update:
             <strong><span><font color={'FFFFFF'} size={"4"}> ¡Consigue Uno Ahora!!! 🖱️</font></span></strong>
 </a></div>
 
-
 ## Introducción del Producto
 
-1.  **Código Abierto y Fácil para Desarrollo Secundario**
-    Esta serie de servomotores, proporcionada por [Fashion Star Robotics](https://fashionrobo.com/), ofrece una solución de brazo robótico de código abierto y fácilmente personalizable con 6+1 grados de libertad.
+1. **Código Abierto y Fácil para Desarrollo Secundario**
+    Esta serie de servomotores, proporcionada por [Fashion Star Robotics](https://fashionrobo.com/), ofrece una solución de brazo robótico de código abierto y fácilmente personalizable de 6+1 grados de libertad.
 
-2. **Sistemas de Doble Brazo con Varias Cargas Útiles** 
+2. **Sistemas de Doble Brazo con Varias Cargas Útiles**
     El Violin sirve como el brazo robótico líder. Cuando está al 70% de su alcance del brazo, el brazo seguidor Viola tiene una carga útil operativa de 300g, mientras que el brazo seguidor Cello tiene una carga útil operativa de 750g.
 
 3. **Compatible con ROS2, Moveit2 e Isaac Sim**
     Es compatible con ROS2 para publicar y suscribirse a temas de datos del brazo robótico y controlar el brazo robótico, y también es compatible con MoveIt2 para el cálculo de cinemática inversa, así como simulación en Isaac Sim.
 
-4.  **Soporte de Integración con la Plataforma LeRobot**
-    Está específicamente diseñado para la integración con la [plataforma LeRobot](https://github.com/huggingface/lerobot). Esta plataforma proporciona modelos PyTorch, conjuntos de datos y herramientas para el aprendizaje por imitación en tareas robóticas del mundo real, incluyendo recolección de datos, simulación, entrenamiento y despliegue.
+4. **Soporte de Integración con la Plataforma LeRobot**
+    Está específicamente diseñado para la integración con la [plataforma LeRobot](https://github.com/huggingface/lerobot). Esta plataforma proporciona modelos PyTorch, conjuntos de datos y herramientas para el aprendizaje por imitación en tareas de robótica del mundo real, incluyendo recolección de datos, simulación, entrenamiento y despliegue.
 
 5. **SDK de Código Abierto**
      Compatible con desarrollo SDK de Python y C++
@@ -50,19 +48,16 @@ last_update:
 6. **Botón de Flotación**
     Simula la compensación de gravedad, permitiendo que el brazo robótico flote en cualquier posición mediante un botón.
 
-7. **Efector Final Modular** 
+7. **Efector Final Modular**
     Permite un reemplazo DIY rápido.
 
-8.  **Abundantes Recursos de Aprendizaje**
+8. **Abundantes Recursos de Aprendizaje**
     Ofrecemos recursos de aprendizaje de código abierto integrales, incluyendo configuración del entorno, guías de instalación y depuración, y ejemplos de tareas de agarre personalizadas para ayudar a los usuarios a comenzar rápidamente y desarrollar aplicaciones robóticas.
 
-9.  **Compatibilidad con Plataforma Nvidia**
+9. **Compatibilidad con Plataforma Nvidia**
     El despliegue es compatible a través de la plataforma Nvidia Jetson.
 
-
-
 ## Especificaciones
-
 
 | Elemento                 | Brazo Seguidor \| Viola                             | Brazo Líder \|Violin                                |    Brazo Seguidor \|Cello    |
 | -------------------- | ------------------------------------------------- | ------------------------------------------------- |-----------------|
@@ -80,7 +75,7 @@ last_update:
 | Funciona con ROS 2     | ✅                                                 | ✅                                                | ✅|
 | Funciona con MoveIt2    | ✅                                                 | ✅                                               |✅ |
 | Funciona con Gazebo    | ✅                                                 |✅                                              |✅ |
-| Hub de Comunicación    | UC-01                                             | UC-01                                             |	UC-01 |
+| Hub de Comunicación    | UC-01                                             | UC-01                                             | UC-01 |
 | Fuente de Alimentación         | 12V10A/120w XT30                                   | 12V10A/120w XT30                                 |12V25A/300w XT60  |
 
 Para más información sobre servomotores, por favor visite el siguiente enlace.
@@ -90,9 +85,6 @@ Para más información sobre servomotores, por favor visite el siguiente enlace.
 [RX18-U100H-M](https://fashionrobo.com/actuator-u100/22853/)
 
 [RX8-U50H-M](https://fashionrobo.com/actuator-u50/136/)
-
-
-
 
 ## Entorno Dependiente
 
@@ -112,7 +104,6 @@ ROS2:           Humble
 
 [Instalación de ROS2 Humble](https://wiki.seeedstudio.com/es/install_ros2_humble/)
 
-
 ### Instalar Moveit2
 
 ```bash
@@ -126,7 +117,7 @@ sudo pip install pyserial
 sudo pip install fashionstar-uart-sdk
 ```
 
-### Crear un espacio de trabajo e Inicialización.
+### Crear un espacio de trabajo e Inicialización
 
 ```bash
 mkdir -p ~/starai_ws/src
@@ -134,7 +125,8 @@ cd ~/starai_ws
 colcon build
 ```
 
-### Clonar el Paquete ROS2 `starai-arm-moveit2`
+### Clonar el Paquete de ROS2 `starai-arm-moveit2`
+
 ```
 cd ~/starai_ws/src
 git clone https://github.com/Welt-liu/starai-arm-moveit2.git
@@ -144,13 +136,11 @@ echo "source ~/starai_ws/install/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-
-## Script de Simulación MoveIt2 del Brazo Starai
+## Script de Simulación MoveIt2 de Starai Arm
 
 ```bash
 ros2 launch viola_configure demo.launch.py 
 ```
-
 
 ## Usando un Brazo Robótico Real
 
@@ -178,10 +168,9 @@ ros2 launch viola_configure actual_robot_demo.launch.py
 <iframe width="900" height="600" src="https://www.youtube.com/embed/L82y7e9uk9Q?si=Fa8YorBPgbRszYGn" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
 ## FAQ
 
-- Si experimenta parpadeo en la interfaz RViz2, pruebe los siguientes comandos:
+- Si experimentas parpadeo en la interfaz de RViz2, prueba los siguientes comandos:
 
     ```bash
     export QT_AUTO_SCREEN_SCALE_FACTOR=0

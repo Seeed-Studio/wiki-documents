@@ -14,6 +14,15 @@ sidebar_position: 1
 
 # Seeed Studio XIAO nRF54L15 Sense 内蔵センサーの使用方法
 
+以下のサンプルコードはPlatformIO用に設計されていますが、nRF Connect SDKとも互換性があります。
+
+:::tip
+VS Codeベースで、nRF Connect SDKで以下のケースを使用したい場合は、提供されたリンクを参照し、app.overlayファイルを追加してprj.confの内容を変更してください
+
+[XIAO nRF54L15 オーバーレイファイルの追加とconfファイルの変更](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/)。
+
+:::
+
 ## XIAO nRF54L15 Sense IMU
 
 **6軸IMU（慣性測定ユニット）**センサーである**LSM6DS3TR-C**のようなセンサーは、加速度計とジャイロスコープを統合して、3次元空間における物体の動きと方向を測定します。具体的に、LSM6DS3TR-Cには以下の機能があります：
@@ -28,33 +37,33 @@ sidebar_position: 1
 **ジャイロスコープ機能：**
 
 - X、Y、Z軸周りの物体の角速度、つまり物体の回転を測定します。
-- 回転、回転速度、方向の変化を検出するために使用できます。
+- 回転、回転速度、方向の変化の検出に使用できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/xyz2.0.jpg" style={{width:320, height:'auto'}}/></div>
 
-- **X軸角度（Roll）**は、X軸周りの回転方向の角度です。
-- **Y軸角度（Pitch）**は、Y軸周りの回転方向の角度です。
-- **Z軸角度（Yaw）**は、Z軸周りの回転方向の角度です。
+- **X軸角度（ロール）**は、X軸周りの回転方向の角度です。
+- **Y軸角度（ピッチ）**は、Y軸周りの回転方向の角度です。
+- **Z軸角度（ヨー）**は、Z軸周りの回転方向の角度です。
 
-### IMUドライバー
+### IMU ドライバー
 
-開発体験を簡素化し、このIMUプログラムでの迅速な開始を確実にするため、必要なドライバーコードの記述にPlatformIOプラットフォームを活用しました。PlatformIOは組み込み開発のための包括的で効率的な環境を提供し、XIAO nRF54L15 Senseにとって理想的な選択肢となっています。
+開発体験を簡素化し、このIMUプログラムでの迅速なスタートを確実にするため、必要なドライバーコードの記述にPlatformIOプラットフォームを活用しました。PlatformIOは組み込み開発のための包括的で効率的な環境を提供し、XIAO nRF54L15 Senseにとって理想的な選択肢となっています。
 
 続行する前に、開発環境が正しく設定されていることを確認してください。まだSeeed Studio XIAO nRF54L15開発ボードをPlatformIO設定に追加していない場合は、設定方法の詳細な手順について、この[リンク](http://localhost:3000/xiao_nrf54l15_with_platform_io/)を参照してください。この重要なステップにより、PlatformIOがボードを適切に認識し、コードをコンパイルできるようになります。
 
 - 環境の準備ができたら、IMUドライバーによってLSM6DS3TR-Cから生のセンサーデータを読み取ることができます。このデータには以下が含まれます：
 
-- 加速度計生値（accel raw）：X、Y、Z軸に沿った加速度を表します。
+- 加速度計の生の値（accel raw）：X、Y、Z軸に沿った加速度を表します。
 
-- ジャイロスコープ生値（gyro raw）：X、Y、Z軸周りの角速度を示します。
+- ジャイロスコープの生の値（gyro raw）：X、Y、Z軸周りの角速度を示します。
 
 トリガーカウント（trig_cnt）：新しいデータサンプルごとに増加するカウンター。
 
-以下は、PlatformIOデバイスモニターに表示されるIMUからのシリアル出力の例です。この出力は、デバイスの動きと方向を理解するための基本となる加速度計とジャイロスコープデータのリアルタイム読み取り値を提供します。
+以下は、PlatformIO Device Monitorに表示されるIMUからのシリアル出力の例です。この出力は、デバイスの動きと方向を理解するための基本となる加速度計とジャイロスコープデータのリアルタイム読み取り値を提供します。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/imu_display.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>PlatformIOデバイスモニターからのリアルタイムIMUデータ出力、生の加速度計とジャイロスコープの読み取り値を表示。</em></p>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em> PlatformIO Device Monitorからのリアルタイム IMU データ出力、生の加速度計とジャイロスコープの読み取り値を表示。</em></p>
 </div>
 
 この生データは、適切なアルゴリズム（例：フィルタリング、センサーフュージョン）を適用することで、単純な動き検出から複雑な方向追跡まで、さまざまなアプリケーションの基礎となります。
@@ -260,29 +269,29 @@ int main(void)
 
 ## XIAO nRF54L15 Sense MIC
 
-**MSM261DGT006**は、パルス密度変調（PDM）データを出力するデジタルマイクロフォン（DMIC）で、XIAO nRF54L15 Senseのようなマイクロコントローラーとの直接デジタルインターフェースに適しています。私たちのDMICドライバーは、このPDM出力を処理し、使用可能なオーディオサンプルに変換し、様々なアプリケーション向けに処理するよう特別に設計されています。
+**MSM261DGT006**は、パルス密度変調（PDM）データを出力するデジタルマイクロフォン（DMIC）で、XIAO nRF54L15 Senseのようなマイクロコントローラとの直接デジタルインターフェースに適しています。私たちのDMICドライバーは、このPDM出力を処理し、使用可能なオーディオサンプルに変換し、さまざまなアプリケーション向けに処理するように特別に設計されています。
 
-ドライバーはマイクロフォンを初期化し、適切なサンプリングレート（例：標準オーディオ用の16000 Hz）を設定し、PDMクロック周波数を構成します。その後、マイクロフォンからサンプルバッファを継続的に読み取り、リアルタイムオーディオキャプチャを可能にします。
+ドライバーはマイクロフォンを初期化し、適切なサンプリングレート（標準オーディオの場合は16000 Hzなど）を設定し、PDMクロック周波数を構成します。その後、マイクロフォンからサンプルバッファを継続的に読み取り、リアルタイムオーディオキャプチャを可能にします。
 
-PlatformIOデバイスモニターで表示されるDMICドライバーからの出力は、マイクロフォンの動作と入力オーディオデータに関する重要な情報を提供します。観察される主要なメッセージには以下が含まれます：
+PlatformIO Device Monitorで表示されるDMICドライバーの出力は、マイクロフォンの動作と入力オーディオデータに関する重要な情報を提供します。観察される主要なメッセージには以下が含まれます：
 
-- `DMIC sample=:`：DMICサンプリングプロセスの開始を示します。
+- `DMIC sample=:` DMICサンプリングプロセスの開始を示します。
 
-- `PCM output rate:` 16000, channels: 1：オーディオ出力設定を確認し、通常は16 kHzのサンプルレートと単一チャンネル（モノ）オーディオです。
+- `PCM output rate:` 16000, channels: 1: オーディオ出力設定を確認し、通常は16 kHzのサンプルレートと単一チャンネル（モノ）オーディオです。
 
-- `dmic_nrf_pdm:` PDM clock frequency: 1280000, actual PCM rate: 16000：内部PDMクロック周波数と結果として得られるPCMオーディオサンプルレートを表示します。
+- `dmic_nrf_pdm:` PDM clock frequency: 1280000, actual PCM rate: 16000: 内部PDMクロック周波数と結果として得られるPCMオーディオサンプルレートを表示します。
 
-- `got buffer 0x... of 3200 bytes:`：ドライバーがマイクロフォンからオーディオデータのバッファを正常に受信したことを確認します。16進数アドレス（例：0x20004C8）とバイト単位のサイズ（例：3200バイト）が表示されます。これらのバッファには、処理や分析が可能な生のオーディオサンプルが含まれています。
+- `got buffer 0x... of 3200 bytes:` ドライバーがマイクロフォンからオーディオデータのバッファを正常に受信したことを確認します。16進アドレス（例：0x20004C8）とバイト単位のサイズ（例：3200バイト）が表示されます。これらのバッファには、処理または分析可能な生のオーディオサンプルが含まれています。
 
-- `dmix_sample: Exiting:`：DMICサンプリングプロセスが停止されたことを示します。
+- `dmix_sample: Exiting:` DMICサンプリングプロセスが停止されたことを示します。
 
-以下は、DMICドライバーが実行されているときにPlatformIOデバイスモニターで期待される典型的な出力の例で、オーディオデータの正常なキャプチャとバッファリングを示しています。
+以下は、DMICドライバーが実行されているときにPlatformIO Device Monitorで期待できる典型的な出力の例で、オーディオデータの正常なキャプチャとバッファリングを示しています。
 
 ### DMICドライバー
 
-この生のオーディオデータは、一度キャプチャされると、音声コマンド、音響イベント検出、環境騒音監視、より複雑なオーディオ処理タスクなど、幅広いアプリケーションに使用できます。
+キャプチャされたこの生のオーディオデータは、音声コマンド、音響イベント検出、環境騒音監視、より複雑なオーディオ処理タスクなど、幅広いアプリケーションに使用できます。
 
-以下のコード例は、XIAO nRF54L15ボード上のプッシュボタンを使用してオーディオを録音し、録音されたWAVファイルをコンピューターに保存する方法を示しています。
+以下のコード例は、XIAO nRF54L15ボードのプッシュボタンを使用してオーディオを録音し、録音されたWAVファイルをコンピューターに保存する方法を示しています。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-dmic-recorder">
@@ -385,10 +394,10 @@ void uart_writer_thread(void *p1, void *p2, void *p3)
             send_packet_poll(packet_end, sizeof(packet_end));
             continue;
         }
-        
+
         uart_tx(console_dev, buffer, CHUNK_SIZE_BYTES, SYS_FOREVER_US);
         k_sem_take(&tx_done_sem, K_FOREVER);
-        
+
         k_mem_slab_free(&mem_slab, buffer);
     }
 }
@@ -528,18 +537,18 @@ int main(void)
 
 次に、プログラムが既に書き込まれていることを前提として、scriptsフォルダディレクトリでターミナルを開き、以下の操作を実行します。
 
-**Setp 1:**
+**ステップ 1:**
 
 - `python3 -m pip install pyserial`
 
-**Setp 2:**
+**ステップ 2:**
 
 - `python record.py -p /dev/cu.usbmodemA0CBDDC33 -o output.wav -b 921600`
 
 :::tip
 このコマンド`python record.py -p **/dev/cu.usbmodemA0CBDDC33** -o output.wav -b 921600`では、使用するシリアルポートに置き換える必要があります。
 :::
-**Setp 3:**
+**ステップ 3:**
 
 - コマンドを実行すると、ボタンを押して音声を録音するよう促されます。
 
@@ -550,7 +559,7 @@ int main(void)
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

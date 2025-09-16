@@ -19,7 +19,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/0.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/cn/xiao_w5500_ethernet_adapter" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="/xiao_w5500_ethernet_adapter" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
 </a></div>
 
@@ -27,7 +27,7 @@ last_update:
 
 - **高性能微控制器**：基于 XIAO ESP32S3 Plus 平台构建，我们的开发板提供强大的处理能力和高效的无线连接，非常适合复杂的物联网和嵌入式应用。
 
-- **集成隔离式 PoE 和电源转换**：配备带内置隔离的强大 PoE 模块，开发板安全接受 12V 以太网电源输入。高效的 TPS563201 降压转换器将 12V 降压至稳定的 5V 电源轨，为 XIAO ESP32S3 Plus 提供最佳电源。
+- **集成 PoE 隔离和电源转换**：配备带内置隔离的强大 PoE 模块，开发板安全接受 12V 以太网电源输入。高效的 TPS563201 降压转换器将 12V 降至稳定的 5V 电源轨，为 XIAO ESP32S3 Plus 提供最佳电源。
 
 - **可靠的以太网连接**：配备板载 W5500 以太网芯片和标准 RJ45 接口，开发板确保稳定的有线网络访问，实现无缝数据传输和远程管理。
 
@@ -38,68 +38,68 @@ last_update:
 ### 规格参数
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>参数</th>
-			<th>描述</th>
-		</tr>
-		<tr>
-			<td>MCU</td>
-			<td>XIAO ESP32-S3 Plus</td>
-		</tr>
-		<tr>
-			<td>天线</td>
-			<td>2.4GHz 棒状天线 (2.81dBi)</td>
-		</tr>
-		<tr>
-			<td>USB Type-C</td>
-			<td>输入电压 (Type-C): 5V</td>
-		</tr>
-		<tr>
-			<td>PoE 芯片</td>
-			<td>MQ7813T120</td>
-		</tr>
-		<tr>
-			<td>PoE 电源</td>
-			<td>PoE IEEE802.3af<br />输出电流: 12V/1.1A<br />高效率 86% (输入 48V，负载 12V@1.1A)</td>
-		</tr>
-		<tr>
-			<td>以太网芯片</td>
-			<td>WIZnet W5500</td>
-		</tr>
-		<tr>
-			<td>以太网接口</td>
-			<td>RJ45<br />10 或 100Mbps 以太网</td>
-		</tr>
-		<tr>
-			<td>TCP/IP 协议</td>
-			<td>TCP, UDP, ICMP, IPv4, ARP, IGMP, PPPoE</td>
-		</tr>
-		<tr>
-			<td>LED 指示灯</td>
-			<td>电源 x 1<br />用户 x 1</td>
-		</tr>
-		<tr>
-			<td>按钮</td>
-			<td>复位</td>
-		</tr>
-		<tr>
-			<td>I/O 接口</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>产品尺寸</td>
-			<td>83 x 118 x 26 mm</td>
-		</tr>
-		<tr>
-			<td>产品重量</td>
-			<td>75g</td>
-		</tr>
-		<tr>
-			<td>外壳</td>
-			<td>白色 3D 打印</td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>参数</th>
+   <th>描述</th>
+  </tr>
+  <tr>
+   <td>MCU</td>
+   <td>XIAO ESP32-S3 Plus</td>
+  </tr>
+  <tr>
+   <td>天线</td>
+   <td>2.4GHz 棒状天线 (2.81dBi)</td>
+  </tr>
+  <tr>
+   <td>USB Type-C</td>
+   <td>输入电压 (Type-C): 5V</td>
+  </tr>
+  <tr>
+   <td>PoE 芯片</td>
+   <td>MQ7813T120</td>
+  </tr>
+  <tr>
+   <td>PoE 电源</td>
+   <td>PoE IEEE802.3af<br />输出电流: 12V/1.1A<br />高效率 86% (输入 48V, 负载 12V@1.1A)</td>
+  </tr>
+  <tr>
+   <td>以太网芯片</td>
+   <td>WIZnet W5500</td>
+  </tr>
+  <tr>
+   <td>以太网接口</td>
+   <td>RJ45<br />10 或 100Mbps 以太网</td>
+  </tr>
+  <tr>
+   <td>TCP/IP 协议</td>
+   <td>TCP, UDP, ICMP, IPv4, ARP, IGMP, PPPoE</td>
+  </tr>
+  <tr>
+   <td>LED 指示灯</td>
+   <td>电源 x 1<br />用户 x 1</td>
+  </tr>
+  <tr>
+   <td>按钮</td>
+   <td>复位</td>
+  </tr>
+  <tr>
+   <td>I/O 接口</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>产品尺寸</td>
+   <td>83 x 118 x 26 mm</td>
+  </tr>
+  <tr>
+   <td>产品重量</td>
+   <td>75g</td>
+  </tr>
+  <tr>
+   <td>外壳</td>
+   <td>白色 3D 打印</td>
+  </tr>
+ </table>
 </div>
 
 ## 硬件概述
@@ -127,9 +127,7 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-
 ## 入门指南
-
 
 ### 接线说明
 
@@ -140,19 +138,16 @@ import TabItem from '@theme/TabItem';
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/4.jpg" style={{width:600, height:'auto'}}/></div>
 
-
 2. **使用标准以太网线缆：**
    - 如果您使用的是普通以太网线缆（不支持 PoE），请将一端连接到您的网络，另一端连接到 XIAO W5500 以太网适配器。在这种情况下，您还必须通过 XIAO 板的 USB-C 端口提供稳定的 5V 电源，因为以太网线缆只能提供数据连接。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/6.jpg" style={{width:600, height:'auto'}}/></div>
 
-
 > **提示：** 确保您的以太网线缆长度足够满足您的设置需求，并且状态良好，以确保可靠的通信。
 
 ### 复位按钮
 
-XIAO W5500 以太网适配器配备了复位按钮。如果您的设备程序运行不正常或需要重启系统，只需按一次复位按钮。这将重启设备并重新初始化程序，有助于从意外状态或错误中恢复。
-
+XIAO W5500 以太网适配器配备了复位按钮。如果您的设备程序运行不正常或需要重启系统，只需按一次复位按钮即可。这将重启设备并重新初始化程序，有助于从意外状态或错误中恢复。
 
 ## ESP32 Arduino 以太网库
 
@@ -162,8 +157,7 @@ XIAO W5500 以太网适配器使用 ESP32 Arduino 以太网库进行网络连接
 
 ## XIAO 示例
 
-现在您已经安装了所需的库并了解了基本功能，让我们探索一些 XIAO W5500 以太网适配器的实际示例。这些演示将帮助您入门并展示如何为您自己的项目调整代码。
-
+现在您已经安装了所需的库并了解了基本功能，让我们探索一些 XIAO W5500 以太网适配器的实际示例。这些演示将帮助您入门，并展示如何为您自己的项目调整代码。
 
 **步骤 1.** 启动 Arduino 应用程序。
 
@@ -175,29 +169,28 @@ XIAO W5500 以太网适配器使用 ESP32 Arduino 以太网库进行网络连接
 
 **步骤 2.** 选择您的开发板型号并将其添加到 Arduino IDE 中。
 
-- 要在后续例程中使用 **Seeed Studio XIAO ESP32-S3 Plus**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started#software-preparation)** 完成添加。
+- 要在后续例程中使用 **Seeed Studio XIAO ESP32-S3 Plus**，请参考 **[此教程](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)** 完成添加。
 
 **步骤 3.** 所需材料
 
-要完成以下示例，您需要下面列出的硬件。除了 XIAO W5500 以太网适配器外，请确保您有一根长度足够的以太网电缆用于您的设置。您可以使用具有以太网供电 (PoE) 功能的电缆，或标准以太网电缆。如果您使用标准以太网电缆（不带 PoE），请确保您的 XIAO 开发板单独使用稳定的 5V 电源供电。
-
+要完成以下示例，您需要下面列出的硬件。除了 XIAO W5500 以太网适配器外，请确保您有一根长度足够的以太网电缆用于您的设置。您可以使用具有以太网供电 (PoE) 功能的电缆，或标准以太网电缆。如果您使用标准以太网电缆（不带 PoE），请确保您的 XIAO 板单独使用稳定的 5V 电源供电。
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO W5500 以太网适配器</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/5.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="/cn/xiao_w5500_ethernet_adapter" target="_blank" rel="noopener noreferrer">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>XIAO W5500 以太网适配器</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/5.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="/xiao_w5500_ethernet_adapter" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ### 演示 1：以太网事件记录器
@@ -223,31 +216,31 @@ static bool eth_connected = false;
 #define ETH_PHY_RST  -1
 #endif
 
-// SPI 引脚
+// SPI pins
 #define ETH_SPI_SCK  D8
 #define ETH_SPI_MISO D9
 #define ETH_SPI_MOSI D10
 
 
-// 响应以太网事件：
+// React to Ethernet events:
 void onEvent(arduino_event_id_t event, arduino_event_info_t info)
 {
   switch (event) {
 
     case ARDUINO_EVENT_ETH_START:
-      // 这将在设置期间发生，当以太网服务启动时
+      // This will happen during setup, when the Ethernet service starts
       Serial.println("ETH Started");
-      //在此设置以太网主机名
+      //set eth hostname here
       ETH.setHostname("esp32-ethernet");
       break;
 
     case ARDUINO_EVENT_ETH_CONNECTED:
-      // 这将在插入以太网电缆时发生
+      // This will happen when the Ethernet cable is plugged 
       Serial.println("ETH Connected");
       break;
 
     case ARDUINO_EVENT_ETH_GOT_IP:
-    // 这将在我们通过DHCP获得IP地址时发生：
+    // This will happen when we obtain an IP address through DHCP:
       Serial.print("Got an IP Address for ETH MAC: ");
       Serial.print(ETH.macAddress());
       Serial.print(", IPv4: ");
@@ -260,19 +253,19 @@ void onEvent(arduino_event_id_t event, arduino_event_info_t info)
       Serial.println("Mbps");
       eth_connected = true;
 
-      // 取消注释以自动与服务器建立测试连接：
+      // Uncomment to automatically make a test connection to a server:
       // testClient( "192.168.0.1", 80 );
 
       break;
 
     case ARDUINO_EVENT_ETH_DISCONNECTED:
-      // 这将在拔出以太网电缆时发生
+      // This will happen when the Ethernet cable is unplugged 
       Serial.println("ETH Disconnected");
       eth_connected = false;
       break;
 
     case ARDUINO_EVENT_ETH_STOP:
-      // 这将在ETH接口停止时发生，但这永远不会发生
+      // This will happen when the ETH interface is stopped but this never happens
       Serial.println("ETH Stopped");
       eth_connected = false;
       break;
@@ -282,7 +275,7 @@ void onEvent(arduino_event_id_t event, arduino_event_info_t info)
   }
 }
 
-// 尝试从网络服务器读取内容：
+// Try to read something from a webserver:
 void testClient(const char * host, uint16_t port)
 {
   Serial.print("\nConnecting to ");
@@ -305,20 +298,20 @@ void testClient(const char * host, uint16_t port)
   client.stop();
 }
 
-// 在启动/重置后初始化所有内容：
+// Initializing everything at start up / after reset:
 void setup()
 {
-  // 等待硬件初始化：
+  // Wait for the hardware to initialize:
   delay(500);
 
-  // 此示例将向串行控制台记录一些信息：
-  Serial.begin(115200); // 假设计算机将以115200波特率连接到串行端口
+  // This sketch will log some information to the serial console:
+  Serial.begin(115200); // Assuming computer will be connected to serial port at 115200 bauds
   Serial.println("Setup...");
   
   Serial.println("Registering event handler for ETH events...");
   Network.onEvent(onEvent);
   
-  // 启动以太网（这不会同时启动WiFi）
+  // Starth Ethernet (this does NOT start WiFi at the same time)
   Serial.println("Starting ETH interface...");
   SPI.begin(ETH_SPI_SCK, ETH_SPI_MISO, ETH_SPI_MOSI);
   ETH.begin(ETH_PHY_TYPE, ETH_PHY_ADDR, ETH_PHY_CS, ETH_PHY_IRQ, ETH_PHY_RST, SPI);
@@ -339,9 +332,10 @@ void loop()
 }
 ```
 
-在115200波特率下打开串口监视器查看以太网事件和IP信息。代码将每20秒尝试连接到"baidu.com"作为连接测试。
+在115200波特率下打开串口监视器以查看以太网事件和IP信息。代码将每20秒尝试连接到"baidu.com"作为连接测试。
 
 **自定义：**
+
 - 在`testClient("baidu.com", 80);`中更改测试服务器为您自己的服务器或本地网络设备。
 - 使用事件处理程序在网络事件发生时触发自定义操作。
 
@@ -367,7 +361,7 @@ void loop()
 #define ETH_PHY_RST  -1
 #endif
 
-// SPI 引脚
+// SPI pins
 #define ETH_SPI_SCK  D8
 #define ETH_SPI_MISO D9
 #define ETH_SPI_MOSI D10
@@ -375,19 +369,19 @@ void loop()
 static bool eth_connected = false;
 WebServer server(80);
 
-// ESP32-POE 没有板载 LED，所以如果你想使用 LED，你必须将其连接到 UEXT 或 10 引脚扩展之一的扩展引脚上。
-// 在这个例子中，默认值是 13，即 UEXT 引脚 6，或扩展 2 引脚 1。如果你想将 LED 连接到另一个引脚，你需要相应地更改此值。
+// ESP32-POE doesn't have an onboard LED so if you want to use a LED you have to attach one to the extended pins on either UEXT or one of the 10 pin extentions.
+// in this example the default value is 13 which is UEXT pin 6, or Extention 2 pin 1. If you want to attach the LED to another pin you need to change this value accordingly.
 const int led_pin = 21;
 
-// Web 服务器：处理对 /（服务器根目录）的请求
+// Web Server: handle a request to / (root of the server)
 void handleRoot() {
   digitalWrite(led_pin, 1);
   server.send(200, "text/plain", "hello from esp32!");
-  delay(100);    // 等待 x 毫秒，这样我们有时间看到 LED 闪烁
+  delay(100);    // Wait x ms so we have time to see the Led blinking
   digitalWrite(led_pin, 0);
 }
 
-// Web 服务器：处理对未知 URI（未知"文件"）的请求
+// Web Server: handle a request to an unknown URI (unknown "File")
 void handleNotFound() {
   digitalWrite(led_pin, 1);
   String message = "File Not Found\n\n";
@@ -402,28 +396,28 @@ void handleNotFound() {
     message += " " + server.argName(i) + ": " + server.arg(i) + "\n";
   }
   server.send(404, "text/plain", message);
-  // digitalWrite(led_pin, 0);  // 如果这行被注释掉，LED 将在 404 错误的情况下保持点亮
+  // digitalWrite(led_pin, 0);  // If this is commented out, the LED will stay on in case of 404 error
 }
 
-// 处理以太网事件：
+// Handle Ethernet Events:
 void onEvent(arduino_event_id_t event, arduino_event_info_t info)
 {
   switch (event) {
 
     case ARDUINO_EVENT_ETH_START:
-      // 这将在设置期间发生，当以太网服务启动时
+      // This will happen during setup, when the Ethernet service starts
       Serial.println("ETH Started");
-      //在这里设置 eth 主机名
+      //set eth hostname here
       ETH.setHostname("esp32-ethernet");
       break;
 
     case ARDUINO_EVENT_ETH_CONNECTED:
-      // 这将在插入以太网电缆时发生
+      // This will happen when the Ethernet cable is plugged 
       Serial.println("ETH Connected");
       break;
 
     case ARDUINO_EVENT_ETH_GOT_IP:
-    // 这将在我们通过 DHCP 获得 IP 地址时发生：
+    // This will happen when we obtain an IP address through DHCP:
       Serial.print("Got an IP Address for ETH MAC: ");
       Serial.print(ETH.macAddress());
       Serial.print(", IPv4: ");
@@ -436,19 +430,19 @@ void onEvent(arduino_event_id_t event, arduino_event_info_t info)
       Serial.println("Mbps");
       eth_connected = true;
 
-      // 取消注释以自动与服务器建立测试连接：
+      // Uncomment to automatically make a test connection to a server:
       // testClient( "192.168.0.1", 80 );
 
       break;
 
     case ARDUINO_EVENT_ETH_DISCONNECTED:
-      // 这将在拔出以太网电缆时发生
+      // This will happen when the Ethernet cable is unplugged 
       Serial.println("ETH Disconnected");
       eth_connected = false;
       break;
 
     case ARDUINO_EVENT_ETH_STOP:
-      // 这将在 ETH 接口停止时发生，但这永远不会发生
+      // This will happen when the ETH interface is stopped but this never happens
       Serial.println("ETH Stopped");
       eth_connected = false;
       break;
@@ -458,7 +452,7 @@ void onEvent(arduino_event_id_t event, arduino_event_info_t info)
   }
 }
 
-// 尝试从 Web 服务器读取内容：
+// Try to read something from a webserver:
 void testClient(const char * host, uint16_t port)
 {
   Serial.print("\nConnecting to ");
@@ -481,62 +475,62 @@ void testClient(const char * host, uint16_t port)
   client.stop();
 }
 
-// 在启动/重置后初始化所有内容：
+// Initializing everything at start up / after reset:
 void setup()
 {
-  // 等待硬件初始化：
+  // Wait for the hardware to initialize:
   delay(500);
 
-  // 此示例将向串行控制台记录一些信息：
+  // This sketch will log some information to the serial console:
 
 
-  Serial.begin(115200); // 假设计算机将以 115200 波特率连接到串行端口
+  Serial.begin(115200); // Assuming computer will be connected to serial port at 115200 bauds
   Serial.print("Setup...");
   
 
   Serial.print("Registering event handler for ETH events...");
   Network.onEvent(onEvent);
   
-  // 启动以太网（这不会同时启动 WiFi）
+  // Starth Ethernet (this does NOT start WiFi at the same time)
   Serial.print("Starting ETH interface...");
   SPI.begin(ETH_SPI_SCK, ETH_SPI_MISO, ETH_SPI_MOSI, ETH_PHY_CS);
   ETH.begin(ETH_PHY_TYPE, ETH_PHY_ADDR, ETH_PHY_CS, ETH_PHY_IRQ, ETH_PHY_RST, SPI);
 
   
-  // 多播 DNS (mDNS) 允许在没有 DNS 服务器的情况下将主机名解析为 IP 地址
-  if (MDNS.begin("esp32")) {  // 使用 mDNS 名称 "esp32"
+  // multicast DNS (mDNS) allows to resolve hostnames to IP addresses without a DNS server
+  if (MDNS.begin("esp32")) {  // using mDNS name "esp32"
     Serial.println("MDNS responder started");
   }
 
-  // Web 服务器处理程序：
-  // 处理对 /（服务器根目录）的请求
+  // Web Server handlers: 
+  // Handle a request to / (root of the server)
   server.on("/", handleRoot);
-  // 对另一个 URI 的最小化处理（LED 在这个上不会闪烁）：
+  // Minimalistic handling of another URI (LED will not flash on this one):
   server.on("/inline", []() {
     server.send(200, "text/plain", "this works as well");
   });
-  // 处理所有其他 URI：
+  // Handle all other URIs:
   server.onNotFound(handleNotFound);
 
   server.begin();
   Serial.println("HTTP server started");
   
-  pinMode( led_pin, OUTPUT);  // 将 LED 引脚初始化为数字输出（开/关）
+  pinMode( led_pin, OUTPUT);  // Initialize the LED pin as a digital output (on/off)
 }
 
 void loop ()
 {
   server.handleClient();
-  delay(2);//允许 CPU 切换到其他任务
+  delay(2);//allow the cpu to switch to other tasks
 }
 ```
 
 一旦设备获得IP地址（在串口监视器中显示），打开浏览器并导航到 `http://<your_device_ip>/`。根端点将响应"hello from esp32!"并闪烁LED。尝试访问 `/inline` 或任何其他路径以查看不同的响应。
 
 **自定义：**
+
 - 使用 `server.on("/yourpath", handlerFunction);` 添加更多端点。
 - 将传感器读数或设备控制集成到您的Web服务器响应中。
-
 
 ### 演示3：以太网摄像头流媒体服务器
 
@@ -550,7 +544,7 @@ void loop ()
 非常适合监控、远程监视或任何需要通过可靠有线连接进行实时图像流传输的项目。
 
 :::tip
-以下程序仅适用于.ino文件，编译此程序需要一些头文件。您可以通过以下链接获取项目的完整源代码。
+以下程序仅适用于.ino文件，编译此程序需要一些头文件。您可以通过下面的链接获取项目的完整源代码。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/XIAO_W5500_Ehernet_Adapter_Example/tree/main/XIAO_PoE_CameraWebServer" target="_blank" rel="noopener noreferrer">
@@ -562,17 +556,17 @@ void loop ()
 ```cpp
 #include "esp_camera.h"
 #include <ETH.h>
-#include <WiFi.h>  // 用于事件处理
+#include <WiFi.h>  // For event handling
 
-// 定义正在使用的摄像头模型
-#define CAMERA_MODEL_XIAO_ESP32S3  // 具有PSRAM
+// Define the camera model being used
+#define CAMERA_MODEL_XIAO_ESP32S3  // Has PSRAM
 
-// 包含摄像头引脚定义
+// Include camera pin definitions
 #include "camera_pins.h"
 
 #define USE_TWO_ETH_PORTS 0
 
-// 以太网PHY和SPI引脚定义（根据您的硬件进行调整）
+// Ethernet PHY and SPI pin definitions (adjust according to your hardware)
 #ifndef ETH_PHY_CS
 #define ETH_PHY_TYPE ETH_PHY_W5500
 #define ETH_PHY_ADDR 1
@@ -585,10 +579,10 @@ void loop ()
 #define ETH_SPI_MISO D9
 #define ETH_SPI_MOSI D10
 
-// 用于跟踪以太网连接状态的全局变量
+// Global variable to track Ethernet connection status
 static bool eth_connected = false;
 
-// 函数声明
+// Function declarations
 void startCameraServer();
 void setupLedFlash(int pin);
 void onEvent(arduino_event_id_t event, arduino_event_info_t info);
@@ -596,27 +590,27 @@ void onEvent(arduino_event_id_t event, arduino_event_info_t info);
 void setup() {
   Serial.begin(115200);
   delay(2000);
-  // 注册以太网事件处理程序
+  // Register Ethernet event handler
   Network.onEvent(onEvent);
 
-  // 初始化SPI和以太网
+  // Initialize SPI and Ethernet
   SPI.begin(ETH_SPI_SCK, ETH_SPI_MISO, ETH_SPI_MOSI, ETH_PHY_CS);
   ETH.begin(ETH_PHY_TYPE, ETH_PHY_ADDR, ETH_PHY_CS, ETH_PHY_IRQ, ETH_PHY_RST, SPI);
 
-  // 等待以太网连接
-  Serial.print("等待以太网连接");
+  // Wait for Ethernet connection
+  Serial.print("Waiting for Ethernet connection");
   while (!eth_connected) {
     delay(500);
     Serial.print(".");
   }
 
   Serial.println("");
-  Serial.println("以太网已连接");
+  Serial.println("Ethernet connected");
 
   Serial.setDebugOutput(true);
   Serial.println();
 
-  // 摄像头配置结构
+  // Camera configuration structure
   camera_config_t config;
   config.ledc_channel = LEDC_CHANNEL_0;
   config.ledc_timer = LEDC_TIMER_0;
@@ -638,13 +632,13 @@ void setup() {
   config.pin_reset = RESET_GPIO_NUM;
   config.xclk_freq_hz = 20000000;
   config.frame_size = FRAMESIZE_UXGA;
-  config.pixel_format = PIXFORMAT_JPEG;  // 使用JPEG进行流传输
+  config.pixel_format = PIXFORMAT_JPEG;  // Use JPEG for streaming
   config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
   config.fb_location = CAMERA_FB_IN_PSRAM;
   config.jpeg_quality = 12;
   config.fb_count = 1;
 
-  // 根据PSRAM可用性调整配置
+  // Adjust configuration based on PSRAM availability
   if (config.pixel_format == PIXFORMAT_JPEG) {
     if (psramFound()) {
       config.jpeg_quality = 10;
@@ -662,27 +656,27 @@ void setup() {
   }
 
 #if defined(CAMERA_MODEL_ESP_EYE)
-  // ESP-EYE的特殊引脚设置
+  // Special pin setup for ESP-EYE
   pinMode(13, INPUT_PULLUP);
   pinMode(14, INPUT_PULLUP);
 #endif
 
-  // 初始化摄像头
+  // Initialize the camera
   esp_err_t err = esp_camera_init(&config);
   if (err != ESP_OK) {
-    Serial.printf("摄像头初始化失败，错误代码 0x%x", err);
+    Serial.printf("Camera init failed with error 0x%x", err);
     return;
   }
 
-  // 为特定摄像头模块调整传感器设置
+  // Adjust sensor settings for specific camera modules
   sensor_t *s = esp_camera_sensor_get();
   if (s->id.PID == OV3660_PID) {
-    s->set_vflip(s, 1);        // 垂直翻转
-    s->set_brightness(s, 1);   // 增加亮度
-    s->set_saturation(s, -2);  // 降低饱和度
+    s->set_vflip(s, 1);        // Vertical flip
+    s->set_brightness(s, 1);   // Increase brightness
+    s->set_saturation(s, -2);  // Decrease saturation
   }
   if (config.pixel_format == PIXFORMAT_JPEG) {
-    s->set_framesize(s, FRAMESIZE_QVGA);  // 降低初始帧大小
+    s->set_framesize(s, FRAMESIZE_QVGA);  // Lower initial frame size
   }
 
 #if defined(CAMERA_MODEL_M5STACK_WIDE) || defined(CAMERA_MODEL_M5STACK_ESP32CAM)
@@ -694,51 +688,51 @@ void setup() {
   s->set_vflip(s, 1);
 #endif
 
-  // 如果定义了引脚，则设置LED闪光灯
+  // Setup LED flash if the pin is defined
 #if defined(LED_GPIO_NUM)
   setupLedFlash(LED_GPIO_NUM);
 #endif
 
-  // 启动摄像头Web服务器
+  // Start the camera web server
   startCameraServer();
 
-  // 将访问URL打印到串行监视器
-  Serial.print("摄像头就绪！使用 'http://");
+  // Print the access URL to the serial monitor
+  Serial.print("Camera Ready! Use 'http://");
   Serial.print(ETH.localIP());
-  Serial.println("' 进行连接");
+  Serial.println("' to connect");
 }
 
 void loop() {
-  // 不需要额外处理；摄像头服务器在另一个任务中运行
+  // No additional processing needed; camera server runs in another task
   delay(10000);
 }
 
-// 以太网事件处理程序
+// Ethernet event handler
 void onEvent(arduino_event_id_t event, arduino_event_info_t info) {
   switch (event) {
     case ARDUINO_EVENT_ETH_START:
-      Serial.println("ETH 已启动");
-      // 在此处设置以太网主机名
+      Serial.println("ETH Started");
+      // Set Ethernet hostname here
       ETH.setHostname("esp32-eth0");
       break;
     case ARDUINO_EVENT_ETH_CONNECTED:
-      Serial.println("ETH 已连接");
+      Serial.println("ETH Connected");
       break;
     case ARDUINO_EVENT_ETH_GOT_IP:
-      Serial.printf("ETH 获得IP: '%s'\n", esp_netif_get_desc(info.got_ip.esp_netif));
+      Serial.printf("ETH Got IP: '%s'\n", esp_netif_get_desc(info.got_ip.esp_netif));
       Serial.println(ETH);
       eth_connected = true;
       break;
     case ARDUINO_EVENT_ETH_LOST_IP:
-      Serial.println("ETH 丢失IP");
+      Serial.println("ETH Lost IP");
       eth_connected = false;
       break;
     case ARDUINO_EVENT_ETH_DISCONNECTED:
-      Serial.println("ETH 已断开连接");
+      Serial.println("ETH Disconnected");
       eth_connected = false;
       break;
     case ARDUINO_EVENT_ETH_STOP:
-      Serial.println("ETH 已停止");
+      Serial.println("ETH Stopped");
       eth_connected = false;
       break;
     default:
@@ -750,21 +744,54 @@ void onEvent(arduino_event_id_t event, arduino_event_info_t info) {
 打开串口监视器，在设备连接到网络后查找设备的IP地址。在浏览器中输入IP地址以访问摄像头流。
 
 **自定义：**
+
 - 在 `camera_config_t` 结构中调整摄像头设置（分辨率、质量、帧大小）。
 - 修改Web服务器代码以添加身份验证或其他端点。
 - 调整以太网引脚定义以匹配您的自定义硬件。
 
+## 常见问题
+
+### Q1: 为什么W5500适配器的网络信号较差？有什么解决方案吗？
+
+可以在所有使用WiFi的代码中添加一个用于调整功率的代码段，通过调整发射功率，可以显著改善信号强度。
+
+例如以下代码片段，在 `Setup()` 内添加调整功率的函数。
+
+```cpp
+    // 1. Set WiFi to Station mode
+    WiFi.mode(WIFI_STA);
+
+    // 2. Adjust WiFi transmit power (Key correction)
+    int8_t power_dbm = 15;
+    int8_t power_param = (int8_t)(power_dbm / 0.25);
+    esp_err_t err = esp_wifi_set_max_tx_power(power_param);
+    
+    if (err == ESP_OK) {
+        Serial.print("Successfully set WiFi TX Power to: ");
+        Serial.print(power_dbm);
+        Serial.println(" dBm");
+    } else {
+        Serial.println("Failed to set WiFi TX Power.");
+    }
+    
+    // 3. Start connecting to WiFi
+    WiFi.begin(ssid, password);
+
+    Serial.print("Connecting to WiFi network: ");
+    Serial.println(ssid);
+```
+
+已验证将功率设置为上述代码可获得最佳结果。
 
 ## 资源
 
 - **[PDF]** [W5500 数据手册](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/W5500_ds_datasheet.pdf)
 - **[PDF]** [XIAO W5500 以太网适配器原理图](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/XIAO_POE_RJ45_V20_SCH_20250422B.pdf)
-- **[STEP]** [XIAO W5500 以太网适配器 3D STEP](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/XIAO_POE_RJ45_V20.step)
-- **[STEP]** [XIAO W5500 以太网适配器外壳 3D STEP（无预钻摄像头孔）](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/xiao_w5500_eth_adapter_shell.stp)
-- **[STEP]** [XIAO W5500 以太网适配器盖板 3D STEP](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/xiao_w5500_eth_adapter_covers.stp)
-- **[KICAD]** [XIAO W5500 以太网适配器 PCB](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/XIAO_POE_RJ45_V20.kicad_pcb)
-- **[GITHUB]** [XIAO W5500 以太网适配器仓库](https://github.com/Seeed-Projects/XIAO_W5500_Ehernet_Adapter_Example)
-
+- **[STEP]** [XIAO W5500 以太网适配器 3D STEP 文件](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/XIAO_POE_RJ45_V20.step)
+- **[STEP]** [XIAO W5500 以太网适配器外壳 3D STEP 文件（无预钻摄像头孔）](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/xiao_w5500_eth_adapter_shell.stp)
+- **[STEP]** [XIAO W5500 以太网适配器盖板 3D STEP 文件](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/xiao_w5500_eth_adapter_covers.stp)
+- **[KICAD]** [XIAO W5500 以太网适配器 PCB 文件](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/XIAO_POE_RJ45_V20.kicad_pcb)
+- **[GITHUB]** [XIAO W5500 以太网适配器代码仓库](https://github.com/Seeed-Projects/XIAO_W5500_Ehernet_Adapter_Example)
 
 ## 技术支持与产品讨论
 
@@ -772,12 +799,12 @@ void onEvent(arduino_event_id_t event, arduino_event_info_t info) {
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>

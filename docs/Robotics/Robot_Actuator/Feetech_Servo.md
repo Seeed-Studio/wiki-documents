@@ -1,6 +1,6 @@
 ---
 description: This wiki provides tutorial for Feetech Servo motors.
-title: Feetech Servo Motors Getting Start
+title: Feetech Servo Motor
 keywords:
 - actuator
 - motor

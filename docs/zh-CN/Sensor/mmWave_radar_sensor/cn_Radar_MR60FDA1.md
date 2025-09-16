@@ -21,7 +21,7 @@ last_update:
 
 ## 介绍
 
-60GHz 毫米波雷达传感器 - 跌倒检测模块专业版采用 FMCW 检测理论，实现高精度的人体活动同步检测，包括移动、跌倒和静止状态，提供完全私密和安全的环境，不受其他噪声干扰的影响。它是私人财产监控、跌倒预警、老年人健康护理的标准生物雷达系统，在家庭、酒店以及医院中表现出色。在本 wiki 中，我们将向您介绍如何使用它。
+60GHz 毫米波雷达传感器 - 跌倒检测模块专业版采用 FMCW 检测理论，实现高精度同时检测人体活动，包括移动、跌倒和静止状态，提供完全私密和安全的环境，不受其他噪声干扰的影响。它是私人财产监控、跌倒预警、老年人健康护理的标准生物雷达系统，在家庭、酒店以及医院中表现出色。在本 wiki 中，我们将向您介绍如何使用它。
 
 ### 应用
 
@@ -38,7 +38,7 @@ last_update:
 - 完美隐私保护：应用 FMCW 监控技术提供无需身份识别的监控能力
 - 健康友好的工作状态：输出功率低至对人体无害
 - 高稳定性：不受温度、湿度、噪声、气流、灰尘、光线和其他环境因素影响
-- 高测量精度：跌倒检测精度高达 90%，存在感知功能精度高达 90%
+- 高测量精度：跌倒检测精度达到 90%，存在感知功能精度达到 90%
 - 高灵活性硬件设计雷达：支持二次开发，适应各种场景应用
 
 ### 规格
@@ -62,7 +62,7 @@ last_update:
 
 ## 硬件概述
 
-在开始之前，了解产品的一些基本参数是非常重要的。下表提供了60GHz毫米波传感器 - 跌倒检测专业版模块特性的信息。
+在一切开始之前，了解产品的一些基本参数是非常重要的。下表提供了60GHz毫米波传感器 - 跌倒检测专业版模块特性的信息。
 
 <div align="center"><img width ="300" src="https://files.seeedstudio.com/wiki/60GHzradar/pinout3.png"/></div>
 
@@ -73,7 +73,7 @@ last_update:
     - GP2输出：高电平 - 有人，低电平 - 无人。
     - GP1输出：高电平 - 活动，低电平 - 静止。
 - 接口2：
-  - 烧录固件引脚：GND/3.3V/SWD/SWC。
+  - 刷写固件引脚：GND/3.3V/SWD/SWC。
   - 预留输入/输出引脚：GP3~GP6。
 
 ## 入门指南
@@ -86,7 +86,7 @@ last_update:
 
 #### 通用方法 - 使用J-link烧录固件
 
-如果您遇到固件错误或雷达异常、固件故障等问题，使用此方法重新烧录固件是最有效的方式。
+如果您遇到固件错误或雷达异常、固件故障等问题，使用此方法重新刷写固件是最有效的方式。
 
 **最新固件下载**
 
@@ -97,9 +97,11 @@ last_update:
 | Jlink_MR60FDA1-V114.bin | [下载](https://files.seeedstudio.com/wiki/60GHzradar/Jlink_MR60FDA1-V114.bin) |
 
 :::caution
-1. 请仔细检查您产品的功能，请不要与其他毫米波传感器混用来烧录此固件，否则可能导致产品功能异常，后果需要您自行承担！
 
-2. 还请注意，不同的固件更新方式使用不同的固件内容，您下载的是通过**J-link**烧录的固件。
+1. 请仔细检查您产品的功能，请不要与其他毫米波传感器混用来刷写此固件，否则可能导致产品功能异常，后果需要您自行承担！
+
+2. 还请注意，不同的固件更新方式使用不同的固件内容，您正在下载的是通过**J-link**烧录的固件。
+
 :::
 
 **将您的雷达更新到最新版本**
@@ -139,7 +141,7 @@ last_update:
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/51.png"/></div>
 
-**步骤6.** 将雷达固件（.bin文件）拖放到此软件中，会弹出一个窗口，我们使用其默认起始地址0x8000000即可。
+**步骤6.** 将雷达固件（.bin文件）拖拽到此软件中，会弹出一个窗口，我们使用其默认起始地址0x8000000即可。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/52.png"/></div>
 
@@ -175,9 +177,10 @@ last_update:
 | UART_MR60FDA1-230915.bin | [下载](https://files.seeedstudio.com/wiki/60GHzradar/new_res/UART_MR60FDA1-230915.bin) |
 
 :::caution
-1. 请仔细检查您产品的功能，请不要与其他毫米波传感器混用来烧录此固件，否则可能导致产品功能异常，后果需要您自行承担！
 
-2. 请注意，不同的固件更新方式使用不同的固件内容，您下载的是通过 **UART** 烧录的固件。
+1. 请仔细检查您产品的功能，请不要与其他毫米波传感器混用来刷写此固件，否则可能导致产品功能异常，后果需要您自行承担！
+
+2. 还请注意，不同的固件更新方式使用不同的固件内容，您下载的是通过 **UART** 烧录的固件。
 
 3. 在使用 UART 升级固件之前，请确保您的雷达固件版本**至少为 G60FD1SYv010102 版本**，否则可能会导致雷达失效，此时您必须使用 J-link 烧录固件才能使用！
 
@@ -210,13 +213,13 @@ last_update:
 
 **步骤 4**. 连接传感器
 
-按照上述方式完成串口设置后，点击右上角第二个图标，如果端口选择正确，您将看到雷达的原始数据被打印出来。
+按照上述方法完成串口设置后，点击右上角第二个图标，如果端口选择正确，您将看到雷达的原始数据被打印出来。
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/12.png"/></div>
 
 **步骤 5**. 更新固件
 
-左键点击右上角最后一个图标，这将弹出一个选择固件的窗口。请选择您已下载的固件版本。
+用鼠标左键点击右上角最后一个图标，这将弹出一个选择固件的窗口。请选择您已下载的固件版本。
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/13.png"/></div>
 
@@ -224,7 +227,7 @@ last_update:
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/14.png"/></div>
 
-要升级固件，请左键双击软件左上角的最后一个图标，然后固件将开始下载到传感器。
+要升级固件，请用鼠标左键双击软件左上角的最后一个图标，然后固件将开始下载到传感器。
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/15.png"/></div>
 
@@ -267,7 +270,7 @@ last_update:
  </tr>
 </table>
 
-除了上述提到的串口软件外，您还可以直接使用专为雷达设计的[上位机软件](https://files.seeedstudio.com/wiki/60GHzradar/Fall_detection_radar.zip)。
+除了上述提到的串口软件，您还可以直接使用为雷达设计的[上位机软件](https://files.seeedstudio.com/wiki/60GHzradar/Fall_detection_radar.zip)。
 
 以下两个部分解释了软件各部分的作用。
 
@@ -279,17 +282,17 @@ last_update:
 
     **Station：** 显示是否有人存在、移动或静止。
 
-    **Fall state：** 跌倒状态将以人物动画的形式呈现。图中的状态是无跌倒，如果有人跌倒，将显示人物跌倒的动画图片。
+    **Fall state：** 跌倒状态将以人物动画的形式呈现。图中的状态为无跌倒，如果有人跌倒，将显示人物跌倒的动画图片。
 
-    **Settings：** 用于设置传感器连接到 PC 的端口号。通常，当传感器通过 UART 转 USB 连接到计算机时，您需要点击 **Refresh** 按钮刷新端口，然后选择新出现的端口号，接着点击 **Open** 按钮，最后点击 **Start** 按钮启用监控功能。
+    **Settings：** 用于设置传感器连接到PC的端口号。通常，当传感器通过UART转USB连接到计算机时，您需要点击**Refresh**按钮刷新端口，然后选择新出现的端口号，接着点击**Open**按钮，最后点击**Start**按钮启用监控功能。
 
-**安装高度/厘米：** 指安装高度。为确保跌倒检测的准确性，请按以下要求准确安装传感器。请安装在顶部！雷达应垂直安装，水平偏差角度≤5°，以确保雷达主波束覆盖检测区域；雷达安装高度建议为2m≤H≤3m。雷达前方无明显障碍物和遮挡物。受雷达安装高度和雷达波束范围影响，此安装模式下运动人体检测的最大半径为R3 ≈ 3米；静止人体检测的最大半径为R2 ≈ 2.25米；跌倒检测半径为R1 ≤ 2米。
+    **Installing height/cm：** 指安装高度。为确保跌倒检测的准确性，请按以下要求准确安装传感器。请安装在顶部！雷达应垂直安装，水平偏差角度≤5°，以确保雷达主波束覆盖检测区域；雷达安装高度建议为2m≤H≤3m。雷达前方无明显障碍物和遮挡物。受雷达安装高度和雷达波束范围影响，此安装模式下移动人体检测的最大半径为R3≈3米；静止人体检测的最大半径为R2≈2.25米；跌倒检测半径为R1≤2米。
 
-    例如，如果我的安装高度是2.6米，那么我应该填入260并点击**发送**按钮。
+    例如，如果我的安装高度是2.6米，那么我应该填入260并点击**Send**按钮。
 
 - **无效区域**
 
-    此区域目前不起作用，仅作为预留接口。
+    此区域目前不会工作，仅作为预留接口。
 
 :::caution
 此雷达目前不支持距离、速度或点云！
@@ -300,18 +303,18 @@ last_update:
 ### Arduino库概述
 
 :::tip
-如果这是您第一次使用Arduino，我们强烈建议您参考[Arduino入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用Arduino，我们强烈建议您参考[Arduino入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
-本示例中使用的库代码可通过点击下方图标下载。
+本示例中使用的库代码可以通过点击下面的图标下载。
 
 <p style={{textAlign: 'center'}}><a href="https://github.com/limengdu/Seeed-Studio-MR60FDA1-Sersor" target="_blank"><div align="center"><img width ="300" src="https://files.seeedstudio.com/wiki/seeed_logo/DOWNLOAD.png" /></div></a></p>
 
 ### 功能
 
-在开始开发代码之前，让我们先了解一下库的可用功能。
+在我们开始开发草图之前，让我们看看库的可用功能。
 
-- `void recvRadarBytes()` —— 此函数根据传感器数据协议中的帧头和帧尾，通过UART收集传感器报告的数据帧。与`showData()`函数配合使用，可以通过串口打印出收集到的数据信息。
+- `void recvRadarBytes()` —— 此函数根据传感器数据协议中的帧头和帧尾，通过UART收集传感器报告的数据帧。与`showData()`函数配合使用，可以通过串口打印出收集的数据信息。
 
   - **输入参数：** 无
 
@@ -333,7 +336,7 @@ last_update:
 
     - `int bodysign_val` —— 返回值表示人体运动参数的值。此值每秒报告一次。
 
-- `void Fall_Detection()` —— 此函数用于解析并返回跌倒检测结果。检测结果存储在变量sensor_report中。
+- `void Fall_Detection()` —— 此函数用于解析和返回跌倒检测。检测结果存储在变量sensor_report中。
 
   - **输入参数：** 无
 
@@ -343,9 +346,9 @@ last_update:
 
   - **输入参数：**
 
-    - `buff` —— 您要发送给传感器的数据帧。
+    - `buff` —— 您想要发送给传感器的数据帧。
 
-    - `len` —— 您要发送给传感器的数据帧长度。
+    - `len` —— 您想要发送给传感器的数据帧长度。
 
     - `cyclic` —— 循环发送开关。默认为false，如果您希望循环发送此数据帧，可以设置为**true**。
 
@@ -360,42 +363,42 @@ last_update:
 ### 默认变量
 
 ```c
-#define MESSAGE_HEAD1 0x53      //数据帧头1
-#define MESSAGE_HEAD2 0x59      //数据帧头2
+#define MESSAGE_HEAD1 0x53      //Data frame header1
+#define MESSAGE_HEAD2 0x59      //Data frame header2
 
-#define MESSAGE_END1  0x54      //数据帧结尾1
-#define MESSAGE_END2  0x43      //数据帧结尾2
+#define MESSAGE_END1  0x54      //End1 of data frame
+#define MESSAGE_END2  0x43      //End2 of data frame
 
-#define HUMAN_PSE_RADAR 0x80    //人体存在数据
+#define HUMAN_PSE_RADAR 0x80    //Human presence data
 
-#define PRESENCE_INF 0x01       //存在信息
-#define SOMEONE_HERE 0x01       //有人在此
-#define NOONE_HERE 0x00         //无人在此
+#define PRESENCE_INF 0x01       //Presence Information
+#define SOMEONE_HERE 0x01       //Someone here
+#define NOONE_HERE 0x00         //Noone here
 
-#define MOVE_INF 0x02           //运动信息
-#define PSE_NONE 0x00           //无
-#define STATIONARY 0x01         //人处于静止状态
-#define MOVEMENT 0x02           //人处于运动状态
+#define MOVE_INF 0x02           //Campaign Information
+#define PSE_NONE 0x00           //None
+#define STATIONARY 0x01         //A person is stationary
+#define MOVEMENT 0x02           //A person in motion
 
-#define BODY_SIG 0x03           //身体运动信息
+#define BODY_SIG 0x03           //Body movement information
 
-#define MOVE_DIS 0x0E           //确定发生运动的距离
+#define MOVE_DIS 0x0E           //Determine the distance at which the movement occurs
 
-#define FALL_DETECTION 0x83     //跌倒数据标记
+#define FALL_DETECTION 0x83     //Fall data markers
 
-#define FALL_STATE 0x01         //跌倒状态标记
-#define NO_FALL 0x00            //未检测到跌倒
-#define FALLING 0x01            //检测到跌倒
+#define FALL_STATE 0x01         //Fall status marker
+#define NO_FALL 0x00            //No falls detected
+#define FALLING 0x01            //Fall detected
 
-#define RESIDENT_STATE 0x05     //驻留状态
-#define NO_RESIDENT 0x00        //无静止驻留
-#define RESIDENT 0x01           //有静止驻留
+#define RESIDENT_STATE 0x05     //Resident status
+#define NO_RESIDENT 0x00        //No stationary residency
+#define RESIDENT 0x01           //There is a stationary residency
 
-#define reset_frame_len 10      //重置数据帧长度
-//重置数据帧
+#define reset_frame_len 10      //Reset data frame length
+//Reset data frame
 const unsigned char fall_reset_frame[10] = {0x53, 0x59, 0x01, 0x02, 0x00, 0x01, 0x0F, 0xBF, 0x54, 0x43};
 
-//返回状态，在arduino中使用
+//Return status, Use in arduino
 #define NOONE 0x01
 #define SOMEONE 0x02
 #define NONEPSE 0x03
@@ -424,15 +427,15 @@ unsigned int sensor_report = 0, bodysign_val = 0, total_detect = 0, height_0005 
 
 **步骤 3.** 选择您的开发板型号并将其添加到 Arduino IDE 中。
 
-- 如果您想在后续教程中使用 **Seeeduino V4.2**，请参考[此教程](https://wiki.seeedstudio.com/cn/Seeed_Arduino_Boards/)完成添加。
+- 如果您想在后续教程中使用 **Seeeduino V4.2**，请参考[此教程](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/)完成添加。
 
-- 如果您想在后续教程中使用 **Seeeduino XIAO**，请参考[此教程](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/#software)完成添加。
+- 如果您想在后续教程中使用 **Seeeduino XIAO**，请参考[此教程](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software)完成添加。
 
-- 如果您想在后续教程中使用 **XIAO RP2040**，请参考[此教程](https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/#software-setup)完成添加。
+- 如果您想在后续教程中使用 **XIAO RP2040**，请参考[此教程](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/#software-setup)完成添加。
 
-- 如果您想在后续教程中使用 **XIAO BLE**，请参考[此教程](https://wiki.seeedstudio.com/cn/XIAO_BLE/#software-setup)完成添加。
+- 如果您想在后续教程中使用 **XIAO BLE**，请参考[此教程](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)完成添加。
 
-- 如果您想在后续教程中使用 **XIAO ESP32C3**，请参考[此教程](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/#software-setup)完成添加。
+- 如果您想在后续教程中使用 **XIAO ESP32C3**，请参考[此教程](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#software-setup)完成添加。
 
 :::caution
 对于 **XIAO nRF52840**，请选择 **Seeed nRF52 mbed-enabled Boards**，否则运行程序时可能会报错。
@@ -493,7 +496,7 @@ unsigned int sensor_report = 0, bodysign_val = 0, total_detect = 0, height_0005 
  </tr>
 </table>
 
-**步骤 2.** 在 Arduino IDE 左上角的菜单栏中，选择 **tool**，选择您正在使用的开发板类型，并选择相应的串口。
+**步骤 2.** 在 Arduino IDE 左上角的菜单栏中，选择**工具**，选择您正在使用的开发板类型，并选择相应的串口。
 
 :::tip
 如果您使用的是 **MacOS**，设备的串口名称通常以 **/dev/cu.usbmodem xxx** 开头，以设备名称结尾。如果您使用的是 **Windows**，设备的串口名称通常以 **COM** 开头，同样以设备名称结尾。
@@ -501,71 +504,69 @@ unsigned int sensor_report = 0, bodysign_val = 0, total_detect = 0, height_0005 
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/60GHzradar/3.png"/></div>
 
-在此示例中，我们将演示雷达如何与我们的热门产品 XIAO BLE 配合工作。
+在这个示例中，我们将演示雷达如何与我们的热门产品 XIAO BLE 配合工作。
 
 ### 演示1 原始数据导出
 
-此示例将指导您完成通过串口打印传感器报告的原始数据的过程。
+这个示例将指导您完成通过串口打印传感器报告的原始数据的过程。
 
-以下示例程序位于库的 examples 文件夹中，名为 **MR60FDA1_print_rawdata**。
+以下示例程序位于库的示例文件夹中，名为 **MR60FDA1_print_rawdata**。
 
 ```c
 #include "Arduino.h"
 #include <60ghzfalldetection.h>
 
 //#include <SoftwareSerial.h>
-// 选择任意两个可以与SoftwareSerial一起用于RX和TX的引脚
+// Choose any two pins that can be used with SoftwareSerial to RX & TX
 //#define RX_Pin A2
 //#define TX_Pin A3
 
 //SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
 
-// 我们将使用软件串口
+// we'll be using software serial
 //FallDetection_60GHz radar = FallDetection_60GHz(&mySerial);
 
-// 也可以尝试硬件串口
+// can also try hardware serial with
 FallDetection_60GHz radar = FallDetection_60GHz(&Serial1);
 
 void setup() {
-  // 将你的设置代码放在这里，运行一次：
+  // put your setup code here, to run once:
   Serial.begin(115200);
   Serial1.begin(115200);
 
   //  mySerial.begin(115200);
 
-  while(!Serial);   //当串口打开时，程序开始执行。
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
 
   Serial.println("Readly");
 }
 
 void loop()
 {
-  // 将你的主要代码放在这里，重复运行：
-  radar.recvRadarBytes();           //接收雷达数据并开始处理
-  radar.showData();                 //串口打印一组接收到的数据帧
-  delay(200);                       //添加时间延迟以避免程序卡死
+  // put your main code here, to run repeatedly:
+  radar.recvRadarBytes();           //Receive radar data and start processing
+  radar.showData();                 //Serial port prints a set of received data frames
+  delay(200);                       //Add time delay to avoid program jam
 }
 ```
 
 :::tip
-如果您使用的是 XIAO ESP32 系列，并且毫米波雷达没有数据反馈。您可以尝试将上面的代码从
-
-```Serial1.begin(115200);``` 改为 ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```。
+如果您使用的是 XIAO ESP32 系列，并且毫米波雷达没有数据反馈。您可以尝试将上面的代码从 ```Serial1.begin(115200);``` 改为 ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```。
 :::
 
 在这个程序中，我们使用 XIAO nRF52840 的硬件 **Serial1** 端口连接到传感器，并使用硬件 **Serial** 端口 Serial 输出数据，因此我们需要在初始化函数 `Setup()` 中单独初始化这个串口。
 
 在主 `loop()` 函数中，我们使用函数 `recvRadarBytes()` 从传感器接收数据帧，然后使用 `showData()` 函数通过串口打印出接收到的数据帧。
 
-在这个程序中，需要注意的是，每两个数据帧的接收和输出之间都有一个间隔，以避免主板出现阻塞。这个时间应该不少于 **150ms**。
+在这个程序中，需要注意的是，每两个数据帧的接收和输出之间都有一个间隔，以避免主板出现阻塞。这个时间不应少于 **150ms**。
 
 这意味着主板无法接收传感器报告的所有数据帧，但由于传感器报告的帧数非常大且频繁，这不会影响使用传感器判断环境的准确性。
 
-上传程序。将串口监视器的波特率设置为 115200 应该会显示结果。输出应该类似于下图。
+上传程序。将串口监视器的波特率设置为 115200 应该会显示结果。输出应该类似于下图所示。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/7.png"/></div>
 
-### Demo2: 人体存在检测功能的使用
+### 演示2：人体存在检测功能的使用
 
 在这个示例中，我们将解释如何使用人体存在检测功能，并通过串口监视器打印出该功能中所有值的信息。
 
@@ -576,34 +577,34 @@ void loop()
 #include <60ghzfalldetection.h>
 
 //#include <SoftwareSerial.h>
-// 选择任意两个可以与SoftwareSerial一起用于RX和TX的引脚
+// Choose any two pins that can be used with SoftwareSerial to RX & TX
 //#define RX_Pin A2
 //#define TX_Pin A3
 
 //SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
 
-// 我们将使用软件串口
+// we'll be using software serial
 //FallDetection_60GHz radar = FallDetection_60GHz(&mySerial);
 
-// 也可以尝试硬件串口
+// can also try hardware serial with
 FallDetection_60GHz radar = FallDetection_60GHz(&Serial1);
 
 void setup() {
-  // 将您的设置代码放在这里，运行一次：
+  // put your setup code here, to run once:
   Serial.begin(115200);
   Serial1.begin(115200);
 
   //  mySerial.begin(115200);
 
-  while(!Serial);   //当串口打开时，程序开始执行。
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
 
   Serial.println("Readly");
 }
 
 void loop()
 {
-  // 将您的主代码放在这里，重复运行：
-  radar.HumanExis_Func();           //人体存在信息输出
+  // put your main code here, to run repeatedly:
+  radar.HumanExis_Func();           //Human existence information output
   if(radar.sensor_report != 0x00){
     switch(radar.sensor_report){
       case NOONE:
@@ -633,98 +634,96 @@ void loop()
         break;
     }
   }
-  delay(200);                       //添加时间延迟以避免程序卡死
+  delay(200);                       //Add time delay to avoid program jam
 }
-
-```
-
-:::tip
-如果您使用的是XIAO ESP32系列，并且毫米波雷达没有数据反馈。您可以尝试将上面的代码从```Serial1.begin(115200);```更改为```Serial1.begin(115200, SERIAL_8N1, D7, D6);```。
-:::
-
-在这个示例中，检测人体存在的功能由`HumanExis_Func()`函数实现。程序实现的基本逻辑是`HumanExis_Func()`函数将传感器报告的状态信息分配给`sensor_report`变量。基于`sensor_report`的值，我们然后通过串口打印出该状态下的所有值。
-
-请注意，`sensor_report`对应于缩进下串口的数据输出。例如，表示体征参数的`bodysign_val`变量仅在`sensor_report`为`BODYVAL`时有效，在传感器报告的其他`sensor_reports`中不存在。
-
-上传程序。将串口监视器的波特率设置为115200应该会显示结果。输出应该类似于下图。
-
-<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/8.png"/></div>
-
-### 示例3：人体跌倒检测
-
-在这个示例中，我们将使用`Fall_Detection()`函数来检测人体跌倒。
-
-:::tip
-跌倒状态输出的原理是只有当传感器检测到跌倒状态发生变化时才有内容输出。
-:::
-
-以下示例程序位于库的examples文件夹中，名为**MR60FDA1_Fall_detection**。
-
-```c
-#include "Arduino.h"
-#include <60ghzfalldetection.h>
-
-//#include <SoftwareSerial.h>
-// 选择任意两个可以与软件串口一起使用的引脚作为 RX 和 TX
-//#define RX_Pin A2
-//#define TX_Pin A3
-
-//SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
-
-// 我们将使用软件串口
-//FallDetection_60GHz radar = FallDetection_60GHz(&mySerial);
-
-// 也可以尝试硬件串口
-FallDetection_60GHz radar = FallDetection_60GHz(&Serial1);
-
-void setup() {
-  // 将您的设置代码放在这里，运行一次：
-  Serial.begin(115200);
-  Serial1.begin(115200);
-
-  //  mySerial.begin(115200);
-
-  while(!Serial);   //当串口打开时，程序开始执行。
-
-  Serial.println("Readly");
-}
-
-void loop()
-{
-  // 将您的主要代码放在这里，重复运行：
-  radar.Fall_Detection();           //接收雷达数据并开始处理
-  if(radar.sensor_report != 0x00){
-    switch(radar.sensor_report){
-        case NOFALL:
-            Serial.println("传感器检测到此动作不是跌倒。");
-            Serial.println("----------------------------");
-            break;
-        case FALL:
-            Serial.println("传感器检测到跌倒。");
-            Serial.println("----------------------------");
-            break;
-        case NORESIDENT:
-            Serial.println("传感器未检测到任何人停留在原地。");
-            Serial.println("----------------------------");
-            break;
-        case RESIDENCY:
-            Serial.println("传感器检测到有人停留在原地。");
-            Serial.println("----------------------------");
-            break;
-    }
-  }
-  delay(200); //添加时间延迟以避免程序卡死
-}
-
 ```
 
 :::tip
 如果您使用的是 XIAO ESP32 系列，并且毫米波雷达没有数据反馈。您可以尝试将上面的代码从 ```Serial1.begin(115200);``` 更改为 ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```。
 :::
 
-在跌倒检测功能中，还有一个驻留检测功能。该功能的主要作用是协助用户或传感器判断人体是否跌倒。当垂直方向加速度发生剧烈变化后（即停留在原地）一段时间内没有人体活动时，传感器很有可能判断有人跌倒并失去意识。
+在这个示例中，检测人体存在的功能由 `HumanExis_Func()` 函数实现。程序实现的基本逻辑是 `HumanExis_Func()` 函数将传感器报告的状态信息分配给 `sensor_report` 变量。基于 `sensor_report` 的值，我们然后通过串口打印出该状态下的所有值。
 
-### Demo4：向传感器发送数据
+请注意，`sensor_report` 对应于缩进下串口的数据输出。例如，代表符号参数的 `bodysign_val` 变量仅在 `sensor_report` 为 `BODYVAL` 时有效，在传感器报告的其他 `sensor_reports` 中不存在。
+
+上传程序。将串口监视器的波特率设置为 115200 应该会显示结果。输出应该类似于下面的图像。
+
+<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/8.png"/></div>
+
+### 示例3：人体跌倒检测
+
+在这个示例中，我们将使用 `Fall_Detection()` 函数来检测人体跌倒。
+
+:::tip
+跌倒状态输出的原理是只有当传感器检测到跌倒状态发生变化时才有内容输出。
+:::
+
+以下示例程序位于库的示例文件夹中，名为 **MR60FDA1_Fall_detection**。
+
+```c
+#include "Arduino.h"
+#include <60ghzfalldetection.h>
+
+//#include <SoftwareSerial.h>
+// Choose any two pins that can be used with SoftwareSerial to RX & TX
+//#define RX_Pin A2
+//#define TX_Pin A3
+
+//SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
+
+// we'll be using software serial
+//FallDetection_60GHz radar = FallDetection_60GHz(&mySerial);
+
+// can also try hardware serial with
+FallDetection_60GHz radar = FallDetection_60GHz(&Serial1);
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+  Serial1.begin(115200);
+
+  //  mySerial.begin(115200);
+
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
+
+  Serial.println("Readly");
+}
+
+void loop()
+{
+  // put your main code here, to run repeatedly:
+  radar.Fall_Detection();           //Receive radar data and start processing
+  if(radar.sensor_report != 0x00){
+    switch(radar.sensor_report){
+        case NOFALL:
+            Serial.println("The sensor detects this movement is not a fall.");
+            Serial.println("----------------------------");
+            break;
+        case FALL:
+            Serial.println("The sensor detects a fall.");
+            Serial.println("----------------------------");
+            break;
+        case NORESIDENT:
+            Serial.println("The sensors did not detect anyone staying in place.");
+            Serial.println("----------------------------");
+            break;
+        case RESIDENCY:
+            Serial.println("The sensor detects someone staying in place.");
+            Serial.println("----------------------------");
+            break;
+    }
+  }
+  delay(200); //Add time delay to avoid program jam
+}
+```
+
+:::tip
+如果您使用的是 XIAO ESP32 系列，并且毫米波雷达没有数据反馈。您可以尝试将上面的代码从 ```Serial1.begin(115200);``` 改为 ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```。
+:::
+
+在跌倒检测功能中，还有一个驻留检测功能。该功能的主要作用是辅助用户或传感器判断人体是否跌倒。当垂直方向加速度发生剧烈变化后，一段时间内没有人体活动（即停留在原地），传感器很有可能判断有人跌倒并失去意识。
+
+### Demo4: 向传感器发送数据
 
 根据用户手册中提供的详细信息，用户可以根据实际需要向传感器发送命令帧，以查询或设置传感器的某些状态或模式。
 
@@ -735,37 +734,37 @@ void loop()
 #include <60ghzfalldetection.h>
 
 //#include <SoftwareSerial.h>
-// 选择任意两个可以与SoftwareSerial一起用于RX和TX的引脚
+// Choose any two pins that can be used with SoftwareSerial to RX & TX
 //#define RX_Pin A2
 //#define TX_Pin A3
 
 //SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
 
-// 我们将使用软件串口
+// we'll be using software serial
 //FallDetection_60GHz radar = FallDetection_60GHz(&mySerial);
 
-// 也可以尝试硬件串口
+// can also try hardware serial with
 FallDetection_60GHz radar = FallDetection_60GHz(&Serial1);
 
 const unsigned char DevID_buff[10] = {0x53, 0x59, 0x02, 0xA1, 0x00, 0x01, 0x0F, 0x5F, 0x54, 0x43};
 
 void setup() {
-  // 将你的设置代码放在这里，只运行一次：
+  // put your setup code here, to run once:
   Serial.begin(115200);
   Serial1.begin(115200);
 
   //  mySerial.begin(115200);
 
-  while(!Serial);   //当串口打开时，程序开始执行。
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
 
   Serial.println("Readly");
 }
 
 void loop()
 {
-  // 将你的主要代码放在这里，重复运行：
+  // put your main code here, to run repeatedly:
   radar.send_func(DevID_buff, 10, false);
-  delay(50);                       //不要将延迟时间设置得太长，因为这可能会影响雷达返回的数据帧的接收。
+  delay(50);                       //Do not set the delay time too long, as this may affect the reception of the data frames returned by the radar.
 }
 ```
 
@@ -782,11 +781,11 @@ void loop()
 :::tip
 **关于校验位"sum"的计算。**
 
-所有数据帧都有一个校验位，以确保数据准确发送或接收。校验位通常在数据帧的倒数第二位。它是通过将校验位之前的所有位相加并取十六进制的低两位来计算的。
+所有数据帧都有一个校验位，以确保数据准确发送或接收。校验位通常在数据帧的倒数第二位。它是通过将校验位之前的所有位相加，然后取十六进制的低两位来计算的。
 让我们以查询设备 ID 的数据帧为例。
 <div align="center"><img width ="{800}" src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/6.png"/></div>
 
-可以看到校验位在整个数据帧的倒数第二位。然后我们开始将之前的所有十六进制数字相加。
+可以看到校验位在整个数据帧的倒数第二位。然后我们开始将之前所有的十六进制数字相加。
 
 `0x53 + 0x59 + 0x02 + 0xA2 + 0x00 + 0x01 + 0x0F = 0x0160`
 
@@ -796,7 +795,7 @@ void loop()
 
 :::
 
-上传程序。将串行监视器的波特率设置为 115200 应该会显示结果。输出应该类似于下图。
+上传程序。将串行监视器的波特率设置为 115200 应该会显示结果。输出应该类似于下面的图像。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/9.png"/></div>
 
@@ -809,7 +808,7 @@ void loop()
 
 ### Demo5: 重置传感器
 
-有时您的传感器可能出现检测异常问题，或者当您想清除传感器上的所有设置时，您可以根据此示例重置传感器。
+有时您的传感器可能会出现检测异常的问题，或者当您想清除传感器上的所有设置时，您可以根据此示例重置传感器。
 
 以下示例程序位于库的示例文件夹中，名为 **MR60FDA1_Reset_sensor**。
 
@@ -818,26 +817,26 @@ void loop()
 #include <60ghzfalldetection.h>
 
 //#include <SoftwareSerial.h>
-// 选择任意两个可以与SoftwareSerial一起用于RX和TX的引脚
+// Choose any two pins that can be used with SoftwareSerial to RX & TX
 //#define RX_Pin A2
 //#define TX_Pin A3
 
 //SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
 
-// 我们将使用软件串口
+// we'll be using software serial
 //FallDetection_60GHz radar = FallDetection_60GHz(&mySerial);
 
-// 也可以尝试硬件串口
+// can also try hardware serial with
 FallDetection_60GHz radar = FallDetection_60GHz(&Serial1);
 
 void setup() {
-  // 将您的设置代码放在这里，运行一次：
+  // put your setup code here, to run once:
   Serial.begin(115200);
   Serial1.begin(115200);
 
   //  mySerial.begin(115200);
 
-  while(!Serial);   //当串口打开时，程序开始执行。
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
 
   Serial.println("Readly");
 
@@ -846,21 +845,21 @@ void setup() {
 
 void loop()
 {
-  // 将您的主要代码放在这里，重复运行：
+  // put your main code here, to run repeatedly:
 }
 ```
 
 :::tip
-如果您使用的是 XIAO ESP32 系列，并且毫米波雷达没有数据反馈。您可以尝试将上面的代码从 ```Serial1.begin(115200);``` 改为 ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```。
+如果您使用的是 XIAO ESP32 系列，并且毫米波雷达没有数据反馈。您可以尝试将上面的代码从 ```Serial1.begin(115200);``` 更改为 ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```。
 :::
 
 重置传感器非常简单，您只需要调用 `reset_func()`。重置只需要**执行一次**，所以我们在 `Setup()` 函数中使用它。
 
-### 示例6：使用 Arduino/Seeeduino
+### Demo6: 使用 Arduino/Seeeduino
 
 我们的库兼容 Arduino，您也可以选择手头的 Arduino 来开发您的传感器项目。
 
-MR60FDA1 传感器使用 UART 串口通信，您只需要按照下面的接线将传感器连接到您的 Arduino。
+MR60FDA1 传感器使用 UART 串行端口进行通信，您只需要按照下面的接线将传感器连接到您的 Arduino。
 
 <table align="center">
  <tr>
@@ -890,30 +889,29 @@ MR60FDA1 传感器使用 UART 串口通信，您只需要按照下面的接线�
  </tr>
 </table>
 
-所有功能的应用方式与上面的示例1到示例5相同，所以我们不会在这个例子中重复它们。在这个例子中，我们将为您概述如何使用 Arduino 的软串口从传感器获取数据信息。
+所有功能的应用方式与上述 Demo1 到 Demo5 相同，因此我们不会在此示例中重复说明。在此示例中，我们将为您概述如何使用 Arduino 的软串口从传感器获取数据信息。
 
 :::tip
-有关 Arduino 软串口的注意事项，请参考 [Arduino 官方文档](https://docs.arduino.cc/learn/built-in-libraries/software-serial)。
+有关 Arduino 软串口的说明，请参考 [Arduino 官方文档](https://docs.arduino.cc/learn/built-in-libraries/software-serial)。
 :::
 
-为了避免使用 Serial 同时进行输出和数据传输造成的数据混乱，在 Arduino 端我们通常使用软串口。
+为了避免同时使用 Serial 进行输出和数据传输而导致的数据混乱，在 Arduino 端我们通常使用软串口。
 
 软串口库的导入和 RX、TX 引脚的定义需要在程序的早期完成。以下程序将 **A2** 和 **A3** 引脚定义为软串口的 **RX** 和 **TX** 引脚。
 
 ```c
 #include <SoftwareSerial.h>
-//选择任意两个可以与SoftwareSerial一起使用的引脚作为RX和TX
+//Choose any two pins that can be used with SoftwareSerial to RX & TX
 #define RX_Pin A2
 #define TX_Pin A3
 
 SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
 
-//我们将使用软件串口
+//we'll be using software serial
 FallDetection_60GHz radar = FallDetection_60GHz(&mySerial);
-
 ```
 
-另外，不要忘记在 `Setup()` 函数中设置软件串口的波特率。
+Also, don't forget to set the baud rate for the soft serial port in the `Setup()` function.
 
 ```c
 void setup() {
@@ -922,27 +920,26 @@ void setup() {
 
   mySerial.begin(115200);
 
-  while(!Serial);   //当串口打开时，程序开始执行。
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
 
   Serial.println("Readly");
 }
-
 ```
 
-以**Demo1**为例，如果您想使用Arduino打印传感器报告的数据帧，那么完整的程序如下。
+以 **Demo1** 为例，如果您想使用 Arduino 打印来自传感器的上报数据帧，那么完整的程序如下。
 
 ```c
 #include "Arduino.h"
 #include <60ghzfalldetection.h>
 
 #include <SoftwareSerial.h>
-// 选择任意两个可以与SoftwareSerial一起用于RX和TX的引脚
+// Choose any two pins that can be used with SoftwareSerial to RX & TX
 #define RX_Pin A2
 #define TX_Pin A3
 
 SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
 
-// 我们将使用软件串口
+// we'll be using software serial
 FallDetection_60GHz radar = FallDetection_60GHz(&mySerial);
 
 void setup() {
@@ -951,7 +948,7 @@ void setup() {
 
   mySerial.begin(115200);
 
-  while(!Serial);   //当串口打开时，程序开始执行。
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
 
   Serial.println("Readly");
 }
@@ -959,15 +956,15 @@ void setup() {
 void loop()
 {
   // put your main code here, to run repeatedly:
-  radar.recvRadarBytes();           //接收雷达数据并开始处理
-  radar.showData();                 //串口打印一组接收到的数据帧
-  delay(200);                       //添加时间延迟以避免程序卡死
+  radar.recvRadarBytes();           //Receive radar data and start processing
+  radar.showData();                 //Serial port prints a set of received data frames
+  delay(200);                       //Add time delay to avoid program jam
 }
 ```
 
-### Demo7: 直接连接PC获取数据
+### Demo7: 直接连接到PC获取数据
 
-如果您想使用为传感器设计的上位机，或者想使用串口软件获取完整的数据帧，可以参考此例程。
+如果您想使用专为传感器设计的上位机，或者想使用串口软件获取完整的数据帧，可以参考这个例程。
 
 通过**UART转USB**设备将传感器直接连接到计算机的USB端口。接线如下表所示。
 
@@ -1007,7 +1004,7 @@ void loop()
 <div align="center"><img width ="200" src="https://files.seeedstudio.com/wiki/60GHzradar/37.png"/></div>
 
 :::caution
-MR60FDA1传感器需要5V电源供电，否则传感器可能无法正常工作。
+MR60FDA1 传感器需要 5V 电源供电，否则传感器可能无法正常工作。
 :::
 
 连接成功后，您将看到传感器发送稳定的消息流。
@@ -1019,24 +1016,24 @@ MR60FDA1传感器需要5V电源供电，否则传感器可能无法正常工作�
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/40.png"/></div>
 
 :::caution
-如果您选择**ASCII**作为发送数据的格式，每组数据都需要加上**0x**前缀。如果您选择**HEX**，那么每组数据不需要加上**0x**前缀。
+如果您选择 **ASCII** 作为发送数据的格式，每个数据集都需要加上 **0x** 前缀。如果您选择 **HEX**，那么每组数据都不需要加上 **0x** 前缀。
 :::
 
 ## 故障排除
 
-### FAQ1: 这个传感器能否在同一环境中同时检测多个人？
+### 常见问题1：这个传感器能否在同一环境中同时检测多个人？
 
-> 答：不可以。此传感器只能用于单个生物体。如果监测范围内有多个人或动物，这将对监测结果产生影响。
+> 答：不可以。这个传感器只能用于单个生物体。如果监测范围内有多个人或动物，这将对监测结果产生影响。
 
-### FAQ2: 为什么我在XIAO ESP32C3的串口监视器中看不到任何内容？
+### 常见问题2：为什么我在 XIAO ESP32C3 的串口监视器中看不到任何内容？
 
-> XIAO ESP32C3串口功能与一般Arduino硬件不太一致，直接使用Serial1可能会导致USB串口无法工作。相关应用案例请参考[XIAO ESP32C3的串口章节](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Pin_Multiplexing/#serial)了解详情。
+> XIAO ESP32C3 串口功能与一般的 Arduino 硬件不太一致，直接使用 Serial1 可能会导致 USB 串口无法工作。相关应用案例请参考 [XIAO ESP32C3 的串口章节](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/#serial) 了解详情。
 
 ## 资源
 
 - **[PDF]** [通用协议](https://files.seeedstudio.com/wiki/60GHzradar/60GHz_mmWave_Sensor_Fall_Detection_Module_Pro-Universal_Protocol.pdf)
 - **[PDF]** [用户手册 V1.3](https://files.seeedstudio.com/wiki/60GHzradar/new_res/MR60FDA1_user_manual-V1.3.pdf)
-- **[PDF]** [Seeed Studio毫米波传感器外壳设计](https://files.seeedstudio.com/wiki/60GHzradar/Seeed_Studio_MMWave_Sensor-Case_Design.pdf)
+- **[PDF]** [Seeed Studio 毫米波传感器外壳设计](https://files.seeedstudio.com/wiki/60GHzradar/Seeed_Studio_MMWave_Sensor-Case_Design.pdf)
 - **[EXE]** [上位机软件](https://files.seeedstudio.com/wiki/60GHzradar/Fall_detection_radar.zip)
 
 ## 技术支持与产品讨论
@@ -1044,11 +1041,11 @@ MR60FDA1传感器需要5V电源供电，否则传感器可能无法正常工作�
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

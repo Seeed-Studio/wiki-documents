@@ -1,24 +1,24 @@
 ---
-description: 本维基展示了如何在树莓派 AI 盒上进行 DeepSeek 模型的分布式推理。
-title: 在树莓派 AI 盒上进行 DeepSeek 模型的分布式推理
+description: 本wiki演示了在树莓派AI盒子上进行deepseek模型的分布式推理。
+title: 在树莓派AI盒子上进行DeepSeek模型的分布式推理
 keywords:
-  - 树莓派 AI 盒
-  - DeepSeek
-  - 分布式推理
+  - RasberryPi Ai box
+  - Deepseek
+  - Distributed inference
 image: https://files.seeedstudio.com/wiki/distributed-inference/model_install.webp
 slug: /cn/distributed_inference_of_deepseek_model_on_raspberrypi
 last_update:
   date: 03/17/2025
   author: Jiahao
 
-no_comments: false # 用于 Disqus
+no_comments: false # for Disqus
 ---
 
-# 在树莓派 AI 盒上进行 DeepSeek 模型的分布式推理
+# 在树莓派上进行DeepSeek模型的分布式推理
 
-## 简介
+## 介绍
 
-本维基解释了如何使用 [distributed-llama](https://github.com/b4rtaz/distributed-llama) 在多个树莓派 AI 盒上部署 [DeepSeek](https://github.com/deepseek-ai/DeepSeek-LLM) 模型。在本维基中，我使用了一台 **8GB RAM 的树莓派**作为**根节点**，以及三台 **4GB RAM 的树莓派**作为**工作节点**来运行 **DeepSeek 8B 模型**。推理速度达到了 **6.06 tokens/秒**。
+本wiki解释了如何使用[distributed-llama](https://github.com/b4rtaz/distributed-llama)在多个树莓派AI盒子上部署[DeepSeek](https://github.com/deepseek-ai/DeepSeek-LLM)模型。在本wiki中，我使用了一个**8GB RAM的树莓派**作为**根节点**，**三个4GB RAM的树莓派**作为**工作节点**来运行**DeepSeek 8B模型**。推理速度达到了**每秒6.06个token**。
 
 ## 准备硬件
 
@@ -33,7 +33,7 @@ no_comments: false # 用于 Disqus
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
 				<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
 				</a>
 			</div></td>
 		</tr>
@@ -44,7 +44,7 @@ no_comments: false # 用于 Disqus
 
 ### 更新系统：
 
-打开一个终端，使用 `Ctrl+Alt+T`，然后输入以下命令：
+使用`Ctrl+Alt+T`打开一个终端并输入如下命令：
 
 ```
 sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
@@ -52,9 +52,9 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-### 在根节点和工作节点上安装 distributed llama
+### 在根节点和工作节点上安装distributed llama
 
-打开一个终端，使用 `Ctrl+Alt+T`，然后输入以下命令安装 [distributed-llama](https://github.com/b4rtaz/distributed-llama.git)：
+使用`Ctrl+Alt+T`打开一个终端并输入如下命令来安装[distributed-llama](https://github.com/b4rtaz/distributed-llama.git)：
 
 ```
 git clone https://github.com/b4rtaz/distributed-llama.git
@@ -65,7 +65,7 @@ make dllama-api
 
 ### 在工作节点上运行
 
-然后输入以下命令使工作节点开始工作：
+然后输入如下命令使工作节点开始工作：
 
 ```
 cd distributed-llama
@@ -74,7 +74,7 @@ sudo nice -n -20 ./dllama worker --port 9998 --nthreads 4
 
 ### 在根节点上运行
 
-#### 创建并激活 Python 虚拟环境
+#### 创建并激活python虚拟环境
 
 ```
 cd distributed-llama
@@ -92,7 +92,7 @@ pip install sentencepiece==0.1.99
 pip install transformers
 ```
 
-#### 安装 DeepSeek 8B Q40 模型
+#### 安装deepseek 8b q40模型
 
 ```
 git lfs install
@@ -101,7 +101,7 @@ git clone https://huggingface.co/b4rtaz/Llama-3_1-8B-Q40-Instruct-Distributed-Ll
 
 #### 在根节点上运行分布式推理
 
-> **注意：** `--workers 10.0.0.139:9998 10.0.0.175:9998 10.0.0.124:9998` 是工作节点的 IP 地址。
+> **注意：** `--workers 10.0.0.139:9998 10.0.0.175:9998 10.0.0.124:9998` 是工作节点的IP地址。
 
 ```
 cd ..
@@ -118,16 +118,18 @@ cd ..
 
 ## 结果
 
-以下是使用 4 台树莓派推理 [DeepSeek Llama 8b](https://huggingface.co/b4rtaz/Llama-3_1-8B-Q40-Instruct-Distributed-Llama) 模型的结果。
+以下是使用4个树莓派对[DeepSeek Llama 8b](https://huggingface.co/b4rtaz/Llama-3_1-8B-Q40-Instruct-Distributed-Llama)模型进行推理的结果。
+
 
 <div align="center">
     <img width={900} 
      src="https://files.seeedstudio.com/wiki/distributed-inference/distributed_llama.gif" />
 </div>
 
+
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们提供多种支持渠道，以确保您使用我们的产品时体验顺畅。我们提供多个沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

@@ -14,8 +14,9 @@ last_update:
   author: ShuishengPeng
 ---
 
-## Introduction 
-FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. With FUXA you can create modern process visualizations with individual designs for your machines and real-time data display.It supports Modbus RTU/TCP, Siemens S7 Protocol, OPC-UA, BACnet IP, MQTT, and other protocols. 
+## Introduction
+
+FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. With FUXA you can create modern process visualizations with individual designs for your machines and real-time data display.It supports Modbus RTU/TCP, Siemens S7 Protocol, OPC-UA, BACnet IP, MQTT, and other protocols.
 
 This article mainly introduces how to use fuxa for mqtt communication on reComputerR1000. This article uses mosquitto as the MQTT server agent, fuxa and node-red as the MQTT client, and introduces a ModbusTCP slave as the source of data published by fuxa. fuxa subscribes to a topic named /dev/fromNode_red and publishes a topic named /dev/fromfuxa. The data of this topic comes from the ModbusTCP slave; node-red subscribes to a topic named /dev/fromfuxa and publishes a topic named /dev/fromfuxa. /dev/fromNode_red topic. The communication framework is shown in the figure:
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/mqtt_global.png" /></center>
@@ -27,17 +28,17 @@ Before you start this project, you may need to prepare your hardware and softwar
 ### Hardware Preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
@@ -45,9 +46,11 @@ Before you start this project, you may need to prepare your hardware and softwar
 </div>
 
 ### Software Preparation
+
 * Python 3.11 may be incompatible with fuxa. If your Python version is 3.11, please consider changing to a different Python version.
-* Using [modbusmechanic](https://modbusmechanic.scifidryer.com/) on W10 PC.You can also use other modbus testing tools
-* Using [fuxa](https://github.com/frangoteam/FUXA) on reComputer R1000.You can refer to the following steps to install fuxa on reComputer R1000
+- Using [modbusmechanic](https://modbusmechanic.scifidryer.com/) on W10 PC.You can also use other modbus testing tools
+- Using [fuxa](https://github.com/frangoteam/FUXA) on reComputer R1000.You can refer to the following steps to install fuxa on reComputer R1000
+
   ```shell
     ## You need to have installed Node Version 14 || 16 || 18.
     wget https://nodejs.org/dist/v18.20.3/node-v18.20.3-linux-arm64.tar.xz
@@ -60,8 +63,9 @@ Before you start this project, you may need to prepare your hardware and softwar
     sudo npm install -g --unsafe-perm @frangoteam/fuxa
     sudo fuxa
   ```
+
 * Regarding how to use the modbusTCP function in fuxa, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_modbus_rtu_and_tcp/).
-* Regarding how to download and configure mosquitto, you can refer to this [tutorial](https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/).Here is also how to configure mqtt communication in node-red, you can also refer to it.
+- Regarding how to download and configure mosquitto, you can refer to this [tutorial](https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/).Here is also how to configure mqtt communication in node-red, you can also refer to it.
 
 ### Hardware Configuration
 
@@ -94,11 +98,11 @@ For ModbusTCP, we use Ethernet cables to connect the W10 PC and reComputer R1000
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

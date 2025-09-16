@@ -20,15 +20,13 @@ Seeed Studio XIAO ESP32C3 支持蓝牙 5 (LE) 连接。本教程将介绍在此�
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-6.png" alt="pir" width={130} height="auto" /></div>
 
-
 - **步骤 2.** 通过 USB Type-C 数据线将 XIAO ESP32C3 连接到您的计算机
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/cable-connect.png" alt="pir" width={120} height="auto" /></div>
 
-
 ## 扫描蓝牙设备
 
-在这个示例中，我们将使用 XIAO ESP32C3 扫描周围可用的蓝牙设备。
+在此示例中，我们将使用 XIAO ESP32C3 扫描周围可用的蓝牙设备。
 
 - **步骤 1.** 将下面的代码复制并粘贴到 Arduino IDE 中
 
@@ -71,15 +69,16 @@ void loop() {
 ```
 
 :::tip
-如果您已经将ESP32开发板升级到3.0.0版本以上，您需要更改一些代码以使其兼容。
-1. ```BLEScanResults foundDevices = pBLEScan->start(scanTime, false);``` 更改为 ```BLEScanResults* foundDevices = pBLEScan->start(scanTime, false);```
-2. ```Serial.println(foundDevices.getCount());``` 更改为 ```Serial.println(foundDevices->getCount());```
+如果您已经将ESP32开发板升级到3.0.0版本以上，您需要修改一些代码以使其兼容。
+
+1. ```BLEScanResults foundDevices = pBLEScan->start(scanTime, false);``` 改为 ```BLEScanResults* foundDevices = pBLEScan->start(scanTime, false);```
+2. ```Serial.println(foundDevices.getCount());``` 改为 ```Serial.println(foundDevices->getCount());```
+
 :::
 
 **步骤 2.** 上传代码并打开串口监视器开始扫描蓝牙设备
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-1.jpg" alt="pir" width={1000} height="auto" /></div>
-
 
 ## XIAO ESP32C3 作为蓝牙服务器
 
@@ -92,7 +91,7 @@ void loop() {
 #include <BLEUtils.h>
 #include <BLEServer.h>
 
-// 生成UUID请参考以下链接：
+// See the following for generating UUIDs:
 // https://www.uuidgenerator.net/
 
 #define SERVICE_UUID        "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
@@ -139,58 +138,52 @@ void setup() {
 }
 
 void loop() {
-  // 在这里放置您的主要代码，以便重复运行：
+  // put your main code here, to run repeatedly:
   delay(2000);
 }
 ```
 
 :::tip
 如果您已经将ESP32开发板升级到3.0.0版本以上，您需要更改一些代码以使其兼容。
-1.  ```std::string value = pCharacteristic->getValue();``` 更改为 ```String value = pCharacteristic->getValue();```
+
+1. ```std::string value = pCharacteristic->getValue();``` 更改为 ```String value = pCharacteristic->getValue();```
+
 :::
 
 - **步骤 2.** 上传代码并打开串口监视器
 
 - **步骤 3.** 在您的智能手机上下载并安装LightBlue应用
 
-
   - [LightBlue应用 (Android)](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=en_US&gl=US)
   - [LightBlue应用 (Apple)](https://apps.apple.com/us/app/lightblue/id557428110)
-
 
 - **步骤 4.** 打开手机蓝牙，将手机靠近XIAO ESP32C3，扫描设备并连接**MyESP32**设备
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-2.jpg" alt="pir" width={300} height="auto" /></div>
 
-
 - **步骤 5.** 打开LightBlue应用并点击**Bonded**选项卡
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-3.jpg" alt="pir" width={350} height="auto" /></div>
-
 
 - **步骤 6.** 点击**MyESP32**旁边的**CONNECT**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-4.jpg" alt="pir" width={350} height="auto" /></div>
 
-
 - **步骤 7.** 点击最底部显示**Readable, Writable**的部分
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-5.jpg" alt="pir" width={300} height="auto" /></div>
-
 
 - **步骤 8.** 在**Data format**下拉菜单中，选择**UTF-8 String**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-6.jpg" alt="pir" width={300} height="auto" /></div>
 
-
 - **步骤 9.** 在**WRITTEN VALUES**下输入"Hello"并点击**WRITE**
-<div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-7.jpg" alt="pir" width={300} height="auto" /></div>
 
+<div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-7.jpg" alt="pir" width={300} height="auto" /></div>
 
 您将在Arduino IDE的串口监视器上看到文本字符串"Hello"的输出
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-9.jpg" alt="pir" width={500} height="auto" /></div>
-
 
 ## NimBLE-Arduino
 
@@ -217,29 +210,29 @@ void loop() {
 
 #define ENDIAN_CHANGE_U16(x) ((((x) & 0xFF00) >> 8) + (((x) & 0xFF) << 8))
 
-int         scanTime = 5 * 1000; // 以毫秒为单位
+int         scanTime = 5 * 1000; // In milliseconds
 NimBLEScan* pBLEScan;
 
 class ScanCallbacks : public NimBLEScanCallbacks {
     void onResult(const NimBLEAdvertisedDevice* advertisedDevice) override {
         if (advertisedDevice->haveName()) {
-            Serial.print("设备名称: ");
+            Serial.print("Device name: ");
             Serial.println(advertisedDevice->getName().c_str());
             Serial.println("");
         }
 
         if (advertisedDevice->haveServiceUUID()) {
             NimBLEUUID devUUID = advertisedDevice->getServiceUUID();
-            Serial.print("发现 ServiceUUID: ");
+            Serial.print("Found ServiceUUID: ");
             Serial.println(devUUID.toString().c_str());
             Serial.println("");
         } else if (advertisedDevice->haveManufacturerData() == true) {
             std::string strManufacturerData = advertisedDevice->getManufacturerData();
             if (strManufacturerData.length() == 25 && strManufacturerData[0] == 0x4C && strManufacturerData[1] == 0x00) {
-                Serial.println("发现一个 iBeacon!");
+                Serial.println("Found an iBeacon!");
                 NimBLEBeacon oBeacon = NimBLEBeacon();
                 oBeacon.setData(reinterpret_cast<const uint8_t*>(strManufacturerData.data()), strManufacturerData.length());
-                Serial.printf("iBeacon 帧\n");
+                Serial.printf("iBeacon Frame\n");
                 Serial.printf("ID: %04X Major: %d Minor: %d UUID: %s Power: %d\n",
                               oBeacon.getManufacturerId(),
                               ENDIAN_CHANGE_U16(oBeacon.getMajor()),
@@ -247,7 +240,7 @@ class ScanCallbacks : public NimBLEScanCallbacks {
                               oBeacon.getProximityUUID().toString().c_str(),
                               oBeacon.getSignalPower());
             } else {
-                Serial.println("发现其他制造商的信标!");
+                Serial.println("Found another manufacturers beacon!");
                 Serial.printf("strManufacturerData: %d ", strManufacturerData.length());
                 for (int i = 0; i < strManufacturerData.length(); i++) {
                     Serial.printf("[%X]", strManufacturerData[i]);
@@ -262,17 +255,17 @@ class ScanCallbacks : public NimBLEScanCallbacks {
         if (advertisedDevice->getServiceUUID().equals(eddyUUID)) {
             std::string serviceData = advertisedDevice->getServiceData(eddyUUID);
             if (serviceData[0] == 0x20) {
-                Serial.println("发现一个 EddystoneTLM 信标!");
+                Serial.println("Found an EddystoneTLM beacon!");
                 NimBLEEddystoneTLM foundEddyTLM = NimBLEEddystoneTLM();
                 foundEddyTLM.setData(reinterpret_cast<const uint8_t*>(serviceData.data()), serviceData.length());
 
-                Serial.printf("报告的电池电压: %dmV\n", foundEddyTLM.getVolt());
-                Serial.printf("TLM 类报告的温度: %.2fC\n", (double)foundEddyTLM.getTemp());
+                Serial.printf("Reported battery voltage: %dmV\n", foundEddyTLM.getVolt());
+                Serial.printf("Reported temperature from TLM class: %.2fC\n", (double)foundEddyTLM.getTemp());
                 int   temp     = (int)serviceData[5] + (int)(serviceData[4] << 8);
                 float calcTemp = temp / 256.0f;
-                Serial.printf("数据报告的温度: %.2fC\n", calcTemp);
-                Serial.printf("报告的广播计数: %d\n", foundEddyTLM.getCount());
-                Serial.printf("报告的上次重启后时间: %ds\n", foundEddyTLM.getTime());
+                Serial.printf("Reported temperature from data: %.2fC\n", calcTemp);
+                Serial.printf("Reported advertise count: %d\n", foundEddyTLM.getCount());
+                Serial.printf("Reported time since last reboot: %ds\n", foundEddyTLM.getTime());
                 Serial.println("\n");
                 Serial.print(foundEddyTLM.toString().c_str());
                 Serial.println("\n");
@@ -283,7 +276,7 @@ class ScanCallbacks : public NimBLEScanCallbacks {
 
 void setup() {
     Serial.begin(115200);
-    Serial.println("扫描中...");
+    Serial.println("Scanning...");
 
     NimBLEDevice::init("Beacon-scanner");
     pBLEScan = BLEDevice::getScan();
@@ -295,27 +288,28 @@ void setup() {
 
 void loop() {
     NimBLEScanResults foundDevices = pBLEScan->getResults(scanTime, false);
-    Serial.print("发现的设备: ");
+    Serial.print("Devices found: ");
     Serial.println(foundDevices.getCount());
-    Serial.println("扫描完成!");
-    pBLEScan->clearResults(); // 删除扫描结果缓冲区以释放内存
+    Serial.println("Scan done!");
+    pBLEScan->clearResults(); // delete results scan buffer to release memory
     delay(2000);
 }
 ```
+
 **结果**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/NimBLE2.jpg" alt="pir" width={700} height="auto" /></div>
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多个沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -1,6 +1,6 @@
 ---
 description: 本wiki提供了一个全面的实现框架，用于为Lekiwi机器人套件配备声音追踪功能，使用ReSpeaker Mic Array v2.0和reComputer Jetson Mini。内容涵盖硬件集成、环境配置和软件适配，并演示实时音频源追踪功能。
-title: 由reSpeaker和Lekiwi驱动的声音追踪机器人
+title: Lekiwi声音追踪
 keywords:
 - Lerobot
 - Huggingface

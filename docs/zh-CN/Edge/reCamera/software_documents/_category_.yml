@@ -7,4 +7,4 @@ link:
   type: generated-index
   slug: cn/recamera_software_docs
   title: reCamera 软件开发文档
-  description: reCamera 是一款开机即用的设备，配备稳定的 reCamera OS，支持固件 OTA 更新。此外，设备集成了 Node-RED 和 Sensecraft AI 平台，提供更便捷的部署体验。这种集成为初学者提供了基于 Node-RED 节点的模块化编程体验。对于高级开发者，设备还支持基于 Linux 的深入开发以及 Python 编程，供您随心探索。我们热忱欢迎精通 JavaScript、C/C++、Python、Linux OS、buildroot 的开发者，以及极客、学生和初学者参与进一步开发并探索应用。
+  description: reCamera 是一款开机即用的设备。它配备了稳定的 reCamera OS，支持固件 OTA 更新。此外，设备还集成了 Node-RED 和 Sensecraft AI 平台，提供更便捷的部署体验。这种集成为新手开发者提供了基于 Node-RED 节点的模块化编程体验。对于高级开发者，还提供了深度的基于 Linux 的开发和 Python 支持，供您探索和使用。我们热烈欢迎精通 JavaScript、C/C++、Python、Linux OS、buildroot 的开发者，以及极客、学生和初学者，参与进一步的开发并探索应用。

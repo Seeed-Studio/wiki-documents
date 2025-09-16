@@ -24,188 +24,188 @@ reCamera is an open-source and tiny AI camera, programmable and customizable, po
 ## Specifications
 
 <table style={{width: '72.2022%'}}>
-            <tbody>
-                <tr></tr>
-                <tr>
-                    <td style={{width: '35.3932%'}} colspan="2" rowspan="1" width="208">
-                        <p><strong><span data-font-family='"Source Sans Pro", sans-serif'>reCamera 2002 Series</span></strong></p>
-                    </td>
-                    <td style={{width: '28.7153%'}} colspan="1" rowspan="1" width="169">
-                        <p><strong><span data-font-family='"Source Sans Pro", sans-serif'>reCamera 2002</span></strong></p>
-                    </td>
-                    <td style={{width: '35.7271%'}} colspan="1" rowspan="1" width="210">
-                        <p><strong><span data-font-family='"Source Sans Pro", sans-serif'>reCamera 2002w</span></strong></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '16.528%'}} colspan="1" rowspan="6" width="97">
-                        <p><span data-font-family="Montserrat">Processor System</span></p>
-                    </td>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">Al Performance</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">1TOPS@Int8</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">SOC</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">SG2002</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">CPU</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">C906@1GHz + C906@700MHz</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">MCU</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">8051@8KB SRAM</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">Memory</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">256MB</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">Video Encode</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">5MP @ 30Fps</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '35.3932%'}} colspan="2" rowspan="1" width="208">
-                        <p><span data-font-family="Montserrat">Camera Sensor</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">OV5647</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '16.528%'}} colspan="1" rowspan="2" width="97">
-                        <p><span data-font-family="Montserrat">Storage</span></p>
-                    </td>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">eMMC</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">(version1) 8GB (version2) 64GB</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">Expansion</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">removable TF card (up to 2TB, not included)</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '16.528%'}} colspan="1" rowspan="6" width="97">
-                        <p><span data-font-family="Montserrat">I/O</span></p>
-                    </td>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">Ethernet</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">100Mbps</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">Wireless</span></p>
-                    </td>
-                    <td style={{width: '28.7153%'}} colspan="1" rowspan="1" width="169">
-                        <p><span data-font-family="Montserrat">/</span></p>
-                    </td>
-                    <td style={{width: '35.7271%'}} colspan="1" rowspan="1" width="210">
-                        <p><span data-font-family="Montserrat">WIFI2.4G/5G BT4.2/5.0</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">USB</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">USB Type-C(2.0)</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">Button</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">1 Reset Button, 1 Boot Button</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">Fill Light</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">0.3w White Light</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">Status Light</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">1 Power Indicator, 2 IO Programmable</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '16.528%'}} colspan="1" rowspan="2" width="97">
-                        <p><span data-font-family="Montserrat">Audio</span></p>
-                    </td>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">Mic</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">On-board Mic</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
-                        <p><span data-font-family="Montserrat">Speaker</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">External Speaker</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '35.3932%'}} colspan="2" rowspan="1" width="208">
-                        <p><span data-font-family="Montserrat">Dimension</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="Montserrat">40x40x36.5mm</span></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{width: '35.3932%'}} colspan="2" rowspan="1" width="208">
-                        <p><span data-font-family="Montserrat">Power</span></p>
-                    </td>
-                    <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
-                        <p><span data-font-family="default">5V 1A</span></p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <tbody>
+        <tr></tr>
+        <tr>
+            <td style={{width: '35.3932%'}} colspan="2" rowspan="1" width="208">
+                <p><strong><span data-font-family='"Source Sans Pro", sans-serif'>reCamera 2002 Series</span></strong></p>
+            </td>
+            <td style={{width: '28.7153%'}} colspan="1" rowspan="1" width="169">
+                <p><strong><span data-font-family='"Source Sans Pro", sans-serif'>reCamera 2002</span></strong></p>
+            </td>
+            <td style={{width: '35.7271%'}} colspan="1" rowspan="1" width="210">
+                <p><strong><span data-font-family='"Source Sans Pro", sans-serif'>reCamera 2002w</span></strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '16.528%'}} colspan="1" rowspan="6" width="97">
+                <p><span data-font-family="Montserrat">Processor System</span></p>
+            </td>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">Al Performance</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">1TOPS@Int8</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">SOC</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">SG2002</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">CPU</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">C906@1GHz + C906@700MHz</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">MCU</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">8051@8KB SRAM</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">Memory</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">256MB</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">Video Encode</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">5MP @ 30Fps</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '35.3932%'}} colspan="2" rowspan="1" width="208">
+                <p><span data-font-family="Montserrat">Camera Sensor</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">OV5647</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '16.528%'}} colspan="1" rowspan="2" width="97">
+                <p><span data-font-family="Montserrat">Storage</span></p>
+            </td>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">eMMC</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">(version1) 8GB (version2) 64GB</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">Expansion</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">removable TF card (up to 2TB, not included)</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '16.528%'}} colspan="1" rowspan="6" width="97">
+                <p><span data-font-family="Montserrat">I/O</span></p>
+            </td>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">Ethernet</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">100Mbps</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">Wireless</span></p>
+            </td>
+            <td style={{width: '28.7153%'}} colspan="1" rowspan="1" width="169">
+                <p><span data-font-family="Montserrat">/</span></p>
+            </td>
+            <td style={{width: '35.7271%'}} colspan="1" rowspan="1" width="210">
+                <p><span data-font-family="Montserrat">WIFI2.4G/5G BT4.2/5.0</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">USB</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">USB Type-C(2.0)</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">Button</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">1 Reset Button, 1 Boot Button</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">Fill Light</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">0.3w White Light</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">Status Light</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">1 Power Indicator, 2 IO Programmable</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '16.528%'}} colspan="1" rowspan="2" width="97">
+                <p><span data-font-family="Montserrat">Audio</span></p>
+            </td>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">Mic</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">On-board Mic</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '18.8653%'}} colspan="1" rowspan="1" width="111">
+                <p><span data-font-family="Montserrat">Speaker</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">External Speaker</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '35.3932%'}} colspan="2" rowspan="1" width="208">
+                <p><span data-font-family="Montserrat">Dimension</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="Montserrat">40x40x36.5mm</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style={{width: '35.3932%'}} colspan="2" rowspan="1" width="208">
+                <p><span data-font-family="Montserrat">Power</span></p>
+            </td>
+            <td style={{width: '64.4424%'}} colspan="2" rowspan="1" width="379">
+                <p><span data-font-family="default">5V 1A</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## Hardware Overview
 

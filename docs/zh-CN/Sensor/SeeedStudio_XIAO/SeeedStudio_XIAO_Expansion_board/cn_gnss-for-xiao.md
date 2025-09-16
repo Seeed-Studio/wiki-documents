@@ -1,6 +1,6 @@
 ---
-description: XIAO L76-L GNSS 入门指南
-title: XIAO L76-L GNSS
+description: XIAO 的 L76-L GNSS 入门指南
+title: XIAO 的 L76-L GNSS
 keywords:
 - gps
 - gnss
@@ -11,7 +11,7 @@ last_update:
   author: Stephen Lo
 ---
 
-# XIAO L76-L GNSS
+# XIAO 的 L76-L GNSS
 
 :::danger
 此产品已暂停销售。
@@ -19,10 +19,10 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/XIAO_GPS/main/IMG/back.png" alt="pir" width={250} height="auto" /></p>
 
-欢迎了解 XIAO L76-L GNSS - Seeed Studio XIAO 产品系列的最新成员。这款 GNSS 模块不仅为您的项目提供精确的定位功能，而且与 XIAO 主控制器的无缝集成使其成为一个强大的工具。无论您是在设计移动应用程序、跟踪设备，还是只是希望为您的项目添加地理定位功能，这个模块都是您的首选。
+欢迎了解 XIAO 的 L76-L GNSS - Seeed Studio XIAO 产品系列的最新成员。这款 GNSS 模块不仅为您的项目提供精确的定位功能，而且与 XIAO 主控制器的无缝集成使其成为一个强大的工具。无论您是在设计移动应用程序、跟踪设备，还是只是希望为您的项目添加地理定位功能，这个模块都是您的首选。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/cn/gnss_for_xiao" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="/gnss_for_xiao" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>
@@ -34,7 +34,7 @@ last_update:
 - 多星座支持：支持 GPS、GLONASS、Galileo 和 QZSS。
 - 高性能：配备 33 个跟踪通道、99 个捕获通道和 210 个 PRN 通道。
 - XIAO 兼容性：专为与 XIAO 主控制器无缝集成而设计。
-- 灵活连接：除了与 XIAO 的连接外，还提供 VCC、GND 等焊盘以支持更广泛的应用。
+- 灵活连接：除了与 XIAO 的连接外，还提供 VCC、GND 等焊盘以供更广泛的应用。
 
 ### 规格
 
@@ -50,11 +50,9 @@ last_update:
 - 跟踪设备：设计和构建位置和跟踪设备。
 - 地理定位功能：为您的项目添加地理定位功能。
 
-
 ## 入门指南
 
-欢迎阅读 XIAO L76-L GNSS 的快速入门指南。本指南旨在帮助您设置新的 GPS 扩展板并与 XIAO nRF52840 主控制器配合使用。
-
+欢迎阅读 XIAO 的 L76-L GNSS 快速入门指南。本指南旨在帮助您设置新的 GPS 扩展板并与 XIAO nRF52840 主控制器配合使用。
 
 ### 硬件准备
 
@@ -102,7 +100,7 @@ last_update:
 
 ## XIAO nRF52840 示例
 
-L76-L 模块每秒通过串口输出 GPS 信息。在这个示例中，我们打印从串口接收到的内容。您将能够看到很多信息，包括时间、卫星以及经纬度。以下是代码。
+L76-L 模块每秒通过串口输出 GPS 信息。在这个示例中，我们打印从串口接收到的内容。您将能够看到很多信息，包括时间、卫星以及纬度和经度。以下是代码。
 
 ```cpp
 #include <TinyGPSPlus.h>
@@ -111,10 +109,10 @@ L76-L 模块每秒通过串口输出 GPS 信息。在这个示例中，我们打
 static const int RXPin = D3, TXPin = D2;
 static const uint32_t GPSBaud = 9600;
 
-// TinyGPSPlus 对象
+// The TinyGPSPlus object
 TinyGPSPlus gps;
 
-// 与GPS设备的串口连接
+// The serial connection to the GPS device
 SoftwareSerial ss(RXPin, TXPin);
 
 void setup()
@@ -123,29 +121,29 @@ void setup()
     ss.begin(GPSBaud);
 
     Serial.println(F("DeviceExample.ino"));
-    Serial.println(F("一个简单的TinyGPSPlus与连接的GPS模块的演示"));
-    Serial.print(F("测试TinyGPSPlus库版本 ")); Serial.println(TinyGPSPlus::libraryVersion());
-    Serial.println(F("作者：Mikal Hart"));
+    Serial.println(F("A simple demonstration of TinyGPSPlus with an attached GPS module"));
+    Serial.print(F("Testing TinyGPSPlus library v. ")); Serial.println(TinyGPSPlus::libraryVersion());
+    Serial.println(F("by Mikal Hart"));
     Serial.println();
 }
 
 void loop()
 {
-    // 这个程序在每次正确编码新句子时显示信息。
+    // This sketch displays information every time a new sentence is correctly encoded.
     while (ss.available() > 0)
     if (gps.encode(ss.read()))
     displayInfo();
 
     if (millis() > 5000 && gps.charsProcessed() < 10)
     {
-        Serial.println(F("未检测到GPS：请检查接线。"));
+        Serial.println(F("No GPS detected: check wiring."));
         while(true);
     }
 }
 
 void displayInfo()
 {
-    Serial.print(F("位置: "));
+    Serial.print(F("Location: "));
     if (gps.location.isValid())
     {
         Serial.print(gps.location.lat(), 6);
@@ -154,10 +152,10 @@ void displayInfo()
     }
     else
     {
-        Serial.print(F("无效"));
+        Serial.print(F("INVALID"));
     }
 
-    Serial.print(F("  日期/时间: "));
+    Serial.print(F("  Date/Time: "));
     if (gps.date.isValid())
     {
         Serial.print(gps.date.month());
@@ -168,7 +166,7 @@ void displayInfo()
     }
     else
     {
-        Serial.print(F("无效"));
+        Serial.print(F("INVALID"));
     }
 
     Serial.print(F(" "));
@@ -188,17 +186,16 @@ void displayInfo()
     }
     else
     {
-        Serial.print(F("无效"));
+        Serial.print(F("INVALID"));
     }
 
     Serial.println();
 }
 ```
 
-确保GPS模块在更开阔的位置使用，以便能够获得良好的GPS信号。在良好的GPS信号下，五分钟内，串口将看到GPS模块返回的纬度、经度和时间信息。
+确保GPS模块在更开阔的位置使用，以便获得良好的GPS信号。在良好的GPS信号下，五分钟内，串口将看到GPS模块返回的纬度、经度和时间信息。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/gnss-xiao/3.png" style={{width:700, height:'auto'}}/></div>
-
 
 ## 不使用XIAO工作
 
@@ -215,10 +212,8 @@ void displayInfo()
 
 ## 资源
 
-
-- **[Zip]** [Eagle文件](https://files.seeedstudio.com/wiki/gnss-xiao/XIAO_GPS_SCH&PCB.zip)
+- **[Zip]** [Eagle 文件](https://files.seeedstudio.com/wiki/gnss-xiao/XIAO_GPS_SCH&PCB.zip)
 - **[PDF]** [数据手册 - L76-L](https://files.seeedstudio.com/wiki/gnss-xiao/L76-L_doc.zip)
-
 
 ## 技术支持与产品讨论
 

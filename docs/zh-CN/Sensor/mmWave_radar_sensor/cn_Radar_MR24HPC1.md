@@ -21,10 +21,9 @@ last_update:
     </a>
 </div>
 
-
 ## 介绍
 
-24GHz 毫米波传感器 - 人体静态存在检测模块 Lite 是一款集成天线、对健康友好的毫米波雷达传感器，采用 FMCW 测距技术，工作频率为 24GHz，用于实现人体静态存在检测，不受环境影响。这也是一款个性化雷达，用户可以配置其底层参数来确定检测功能。
+24GHz 毫米波传感器 - 人体静态存在检测模块 Lite 是一款集成天线的健康友好型毫米波雷达传感器，采用 FMCW 测距技术，工作频率为 24GHz，用于实现人体静态存在检测，不受环境影响。这也是一款个性化雷达，用户可以配置其底层参数来确定检测功能。
 
 ### 应用
 
@@ -41,7 +40,7 @@ last_update:
 
 - 人体存在毫米波雷达：采用 FMCW 测距技术，工作频率为 24GHz，检测范围 5 米，用于检测感应区域内的人体行为
 - 个性化雷达检测：提供可配置的检测范围、运动触发、状态变化时间，以及可视化调试软件，满足各种场景需求
-- 对健康友好的工作状态：输出功率低至对人体无害
+- 健康友好的工作状态：输出功率低至对人体无害
 - 高抗干扰能力：输出数据不受温度、湿度、噪音、气流、灰尘、光线等环境影响
 - 支持 Arduino
 
@@ -54,7 +53,7 @@ last_update:
   S1 输出：高电平 - 有人，低电平 - 无人。
   S2 输出：高电平 - 活动，低电平 - 静止。
 3. 刷写固件引脚。
-4. 顶部输入/输出引脚。
+4. 预留输入/输出引脚。
 
 ## 入门指南
 
@@ -66,7 +65,7 @@ last_update:
 
 #### 通用方法 - 使用 J-link 烧录固件
 
-如果您遇到固件错误或雷达异常、固件故障等问题，使用此方法重新刷写固件是最有效的方法。
+如果您遇到固件错误或雷达异常、固件故障等问题，使用此方法重新刷写固件是最有效的方式。
 
 **最新固件下载**
 
@@ -75,16 +74,18 @@ last_update:
 | Jlink_MR24HPC1-20230302.bin | [下载](https://files.seeedstudio.com/wiki/60GHzradar/new_res/Jlink_MR24HPC1-20230302.bin) |
 
 :::caution
+
 1. 请仔细检查您产品的功能，请不要与其他毫米波传感器混用刷写此固件，否则可能导致产品功能异常，后果需要您自行承担！
 
 2. 还请注意，不同的固件更新方式使用不同的固件内容，您下载的是通过 **J-link** 烧录的固件。
+
 :::
 
 **将您的雷达更新到最新版本**
 
 **步骤 1.** 您需要准备一个 **Jlink** 和 **MR24HPC1** 24GHz 毫米波传感器。
 
-通过杜邦线将雷达和 Jlink 连接，如下图所示。
+按照下图所示，通过杜邦线将雷达和 Jlink 连接在一起。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/57.jpg"/></div>
 
@@ -106,7 +107,7 @@ last_update:
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/47.png"/></div>
 
 :::tip
-如果在向 JFlash 添加内容时遇到如下图所示的错误，您可以按照以下说明解决问题。
+如果您在向 JFlash 添加内容时遇到如下图所示的错误，可以按照以下说明解决问题。
 :::
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/arteryMcu.png"/></div>
@@ -117,7 +118,7 @@ last_update:
 
 2. 解压文件并打开
 
-3. 将 JLinkDevices.xml 从 C:\Program Files\SEGGER\JLink_V794 复制到 C:\Users[用户]\AppData\Roaming\SEGGER
+3. 将 JLinkDevices.xml 从 C:\Program Files\SEGGER\JLink_V794 复制到 C:\Users[用户名]\AppData\Roaming\SEGGER
 
 这样就解决了问题，我们可以使用 JFlash 或 JFlash Lite 软件进行刷写。
 
@@ -166,6 +167,7 @@ last_update:
 | UART_MR24HPC1-20230302.bin | [下载](https://files.seeedstudio.com/wiki/60GHzradar/new_res/UART_MR24HPC1-20230302.bin) |
 
 :::caution
+
 1. 请仔细检查您产品的功能，请不要与其他毫米波传感器混用来刷写此固件，否则可能导致产品功能异常，后果需要您自行承担！
 
 2. 还请注意，不同的固件更新方式使用不同的固件内容，您下载的是通过 **UART** 烧录的固件。
@@ -174,7 +176,7 @@ last_update:
 
 您可以通过向雷达发送命令 `0x53 0x59 0x02 0xA4 0x00 0x01 0x0F 0x62 0x54 0x43` 来查询固件版本号信息。然后雷达报告的数据以字符串形式显示，您将看到类似下图所示的效果。
 
-`G24VD1SYV000009` 是雷达报告的型号，其中 `000009` 是版本号。这意味着此传感器**不**支持 UART 升级。
+`G24VD1SYV000009` 是雷达上报告的型号，其中 `000009` 是版本号。这意味着此传感器**不**支持 UART 升级。
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/21.png"/></div>
 :::
@@ -183,7 +185,7 @@ last_update:
 
 **步骤 1**. 您需要准备一个 **UART 转 USB** 和 **MR24HPC1** 24GHz 毫米波传感器。
 
-通过杜邦线将雷达和 UART 转 USB 连接，如下图所示。
+通过杜邦线将雷达和 UART 转 USB 连接在一起，如下图所示。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/uart.png"/></div>
 
@@ -266,7 +268,7 @@ last_update:
 
 1. 端口
 
-    选择雷达连接到计算机的端口。通常需要在选择之前点击刷新按钮**刷新**端口。选择后请点击**打开**按钮。
+    选择雷达连接到计算机的端口。通常需要在选择之前点击刷新按钮来**刷新**端口。选择后请点击**打开**按钮。
 
 2. 波特率
 
@@ -282,7 +284,7 @@ last_update:
 
 5. 距离
 
-    **静止距离**：存在轻微运动区域时环境与雷达之间的直线距离。当空间中某个位置有人静止时，实时输出与雷达的直线距离。
+    **静止距离**：环境中存在轻微运动区域时与雷达之间的直线距离。当空间中某个位置有人静止时，实时输出与雷达的直线距离。
     **运动距离**：环境中运动位置与雷达之间的直线距离。当空间中某个位置有人在运动时，实时输出该位置与雷达的直线距离。
 
 <div align="center"><img width ="{800}" src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/9.png"/></div>
@@ -295,7 +297,7 @@ last_update:
 
 7. 查询
 
-    搜索当前参数设置。关于各个参数值的含义，由于篇幅原因请参考用户手册了解详情。
+    搜索当前参数设置。由于篇幅原因，各个参数值的含义请参考用户手册了解详情。
 
 8. 设置
 
@@ -314,7 +316,7 @@ last_update:
 ### Arduino库概述
 
 :::tip
-如果这是您第一次使用Arduino，我们强烈建议您参考[Arduino入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用Arduino，我们强烈建议您参考[Arduino入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 本示例中使用的库代码可以通过点击下面的图标下载。
@@ -339,7 +341,7 @@ last_update:
 
 - `void HumanStatic_func(bool bodysign /*=false*/)` —— 该函数负责解析传感器的数据帧，并输出人体存在状态的相关数据。
 
-  - **输入参数：** `bodysign` —— 该参数是控制是否输出人体运动参数的开关。如果为**true**，输出将包含大量人体征象参数数据，这可能会影响您查看数据的体验。默认情况下该参数为**false**，不显示身体征象参数信息。
+  - **输入参数：** `bodysign` —— 该参数是一个开关，控制是否输出人体运动参数。如果为**true**，输出将包含大量的人体征象参数数据，这可能会影响您查看数据的体验。默认情况下该参数为**false**，不显示身体征象参数信息。
 
   - <span id="function"><strong>返回值：</strong></span>
 
@@ -349,13 +351,13 @@ last_update:
 
     - `int static_val` —— 该值等同于**静态值**。该值的变化代表环境中的恒定静态噪声。当空间无人时退出能量较低，当空间中有静止的人时（胸部呼吸的轻微运动），整体退出能量会在较高值处波动。该值仅在打开底层消息时有效。
 
-- `int dynamic_val` —— 该值的变化代表环境中的恒定运动噪声。当空间中无人时运动能量较低，随着运动幅度和距离的增加，整体运动能量会变高。此值仅在开启底层消息时有效。
+- `int dynamic_val` —— 该值的变化代表环境中的恒定运动噪声。当空间中没有人时，运动能量较低，随着运动幅度和距离的增加，整体运动能量会变高。该值仅在开启底层消息时有效。
 
-    - `int dis_static` —— 存在轻微移动区域时环境与传感器之间的直线距离。当空间中某个位置有人静止时，会实时输出与传感器的直线距离。此值仅在开启底层消息时有效。
+    - `int dis_static` —— 存在轻微移动区域时环境与传感器之间的直线距离。当空间中某个位置有人静止时，会实时输出与传感器的直线距离。该值仅在开启底层消息时有效。
 
-    - `int dis_move` —— 环境中移动位置与传感器之间的直线距离。当空间中某个位置有人在运动时，会实时输出该位置与传感器的直线距离。此值仅在开启底层消息时有效。
+    - `int dis_move` —— 环境中移动位置与传感器之间的直线距离。当空间中某个位置有人在运动时，会实时输出该位置与传感器的直线距离。该值仅在开启底层消息时有效。
 
-    - `int speed` —— 该值表示移动物体的运动速度。该值仅供参考。此值仅在开启底层消息时有效。
+    - `int speed` —— 该值表示移动物体的运动速度。该值仅供参考。该值仅在开启底层消息时有效。
 
 - `void checkSetMode_func(const unsigned char* buff, int len, bool cyclic /*= false*/)` —— 该函数可用于向传感器发送数据帧。发送的数据帧和返回的数据帧都会通过串口打印出来。
 
@@ -378,48 +380,48 @@ last_update:
 #### 默认变量
 
 ```c
-#define MESSAGE_HEAD1 0x53       //数据帧头1
-#define MESSAGE_HEAD2 0x59       //数据帧头2
+#define MESSAGE_HEAD1 0x53       //Data frame header1
+#define MESSAGE_HEAD2 0x59       //Data frame header2
 
-#define MESSAGE_END1  0x54       //数据帧结束1
-#define MESSAGE_END2  0x43       //数据帧结束2
+#define MESSAGE_END1  0x54       //End1 of data frame
+#define MESSAGE_END2  0x43       //End2 of data frame
 
-#define HUMANSTATUS   0x80       //人体存在信息
-#define HUMANEXIST    0x01       //人体存在
-#define HUMANMOVE     0x02       //人体运动信息
-#define HUMANSIGN     0x03       //人体体征参数
-#define HUMANDIRECT   0x0B       //人体运动趋势
+#define HUMANSTATUS   0x80       //Human Presence Information
+#define HUMANEXIST    0x01       //Presence of the human body
+#define HUMANMOVE     0x02       //Human movement information
+#define HUMANSIGN     0x03       //Body Signs Parameters
+#define HUMANDIRECT   0x0B       //Human movement trends
 
-#define SOMEBODY      0x01       //有人移动
-#define NOBODY        0x00       //无人
+#define SOMEBODY      0x01       //Somebody move
+#define NOBODY        0x00       //No one here
 
 #define NONE          0x00
-#define SOMEBODY_STOP 0x01       //有人静止
-#define SOMEBODY_MOVE 0x02       //有人移动
+#define SOMEBODY_STOP 0x01       //Somebody stop
+#define SOMEBODY_MOVE 0x02       //Somebody move
 
-#define CA_CLOSE      0x01       //有人接近
-#define CA_AWAY       0x02       //有人远离
+#define CA_CLOSE      0x01       //Someone approaches
+#define CA_AWAY       0x02       //Some people stay away
 
 
-#define DETAILSTATUS  0x08       //人体状态底层参数
-#define DETAILINFO    0x01       //人体运动状态详细数据
-#define DETAILDIRECT  0x06       //人体运动趋势
-#define DETAILSIGN    0x07       //人体体征参数
+#define DETAILSTATUS  0x08       //Underlying parameters of the human state
+#define DETAILINFO    0x01       //Detailed data on the state of human movement
+#define DETAILDIRECT  0x06       //Human movement trends
+#define DETAILSIGN    0x07       //Body Signs Parameters
 
-//返回状态，在arduino中使用
-#define SOMEONE       0x01       //有人
-#define NOONE         0x02       //无人
-#define NOTHING       0x03       //无消息
-#define SOMEONE_STOP  0x04       //有人静止
-#define SOMEONE_MOVE  0x05       //有人移动
-#define HUMANPARA     0x06       //人体体征参数
-#define SOMEONE_CLOSE 0x07       //有人接近
-#define SOMEONE_AWAY  0x08       //有人远离
-#define DETAILMESSAGE 0x09       //人体状态底层参数
+//Return status, Use in arduino
+#define SOMEONE       0x01       //There are people
+#define NOONE         0x02       //No one
+#define NOTHING       0x03       //No message
+#define SOMEONE_STOP  0x04       //Somebody stop
+#define SOMEONE_MOVE  0x05       //Somebody move
+#define HUMANPARA     0x06       //Body Signs Parameters
+#define SOMEONE_CLOSE 0x07       //Someone approaches
+#define SOMEONE_AWAY  0x08       //Some people stay away
+#define DETAILMESSAGE 0x09       //Underlying parameters of the human state
 
-#define reset_frame_len 10       //重置数据帧长度
+#define reset_frame_len 10       //Reset data frame length
 
-//重置数据帧
+//Reset data frame
 const unsigned char reset_frame[10] = {0x53, 0x59, 0x01, 0x02, 0x00, 0x01, 0x0F, 0xBF, 0x54, 0x43};
 ```
 
@@ -435,15 +437,15 @@ const unsigned char reset_frame[10] = {0x53, 0x59, 0x01, 0x02, 0x00, 0x01, 0x0F,
 
 **步骤 3.** 选择您的开发板型号并将其添加到 Arduino IDE 中。
 
-- 如果您想在后续教程中使用 **Seeeduino V4.2**，请参考[此教程](https://wiki.seeedstudio.com/cn/Seeed_Arduino_Boards/)完成添加。
+- 如果您想在后续教程中使用 **Seeeduino V4.2**，请参考[此教程](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/)完成添加。
 
-- 如果您想在后续教程中使用 **Seeeduino XIAO**，请参考[此教程](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/#software)完成添加。
+- 如果您想在后续教程中使用 **Seeeduino XIAO**，请参考[此教程](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software)完成添加。
 
-- 如果您想在后续教程中使用 **XIAO RP2040**，请参考[此教程](https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/#software-setup)完成添加。
+- 如果您想在后续教程中使用 **XIAO RP2040**，请参考[此教程](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/#software-setup)完成添加。
 
-- 如果您想在后续教程中使用 **XIAO nRF52840**，请参考[此教程](https://wiki.seeedstudio.com/cn/XIAO_BLE/#software-setup)完成添加。
+- 如果您想在后续教程中使用 **XIAO nRF52840**，请参考[此教程](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)完成添加。
 
-- 如果您想在后续教程中使用 **XIAO ESP32C3**，请参考[此教程](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/#software-setup)完成添加。
+- 如果您想在后续教程中使用 **XIAO ESP32C3**，请参考[此教程](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#software-setup)完成添加。
 
 :::caution
 对于 **XIAO nRF52840**，请选择 **Seeed nRF52 mbed-enabled Boards**，否则运行程序时可能会报错。
@@ -504,7 +506,7 @@ const unsigned char reset_frame[10] = {0x53, 0x59, 0x01, 0x02, 0x00, 0x01, 0x0F,
     </tr>
   </tbody></table>
 
-**步骤 2.** 在 Arduino IDE 左上角的菜单栏中，选择 **tool**，选择您正在使用的开发板类型，并选择相应的串口。
+**步骤 2.** 在 Arduino IDE 左上角的菜单栏中，选择**工具**，选择您正在使用的开发板类型，并选择相应的串口。
 
 :::tip
 如果您使用的是 **MacOS**，设备的串口名称通常以 **/dev/cu.usbmodem xxx** 开头，以设备名称结尾。如果您使用的是 **Windows**，设备的串口名称通常以 **COM** 开头，同样以设备名称结尾。
@@ -512,70 +514,68 @@ const unsigned char reset_frame[10] = {0x53, 0x59, 0x01, 0x02, 0x00, 0x01, 0x0F,
 <div align="center"><img src="https://files.seeedstudio.com/wiki/60GHzradar/3.png" style={{width:600, height:'auto'}}/></div>
 :::
 
-在此示例中，我们将演示传感器如何与我们的热门产品 XIAO nRF52840 Sense 配合工作。
+在这个示例中，我们将演示传感器如何与我们的热门产品 XIAO nRF52840 Sense 配合工作。
 
-### 演示 1：串口打印传感器输出的原始数据帧 {#demo1}
+### 演示 1：从传感器输出的原始数据帧的串口打印 {#demo1}
 
-此示例将指导您完成通过串口打印传感器报告的原始数据的过程。
+这个示例将指导您完成通过串口打印传感器报告的原始数据的过程。
 
-以下示例程序位于库的 examples 文件夹中，名为 **MR24HPCB1_rawdata_print**。
+以下示例程序位于库的示例文件夹中，名为 **MR24HPCB1_rawdata_print**。
 
 ```c
 #include "Arduino.h"
 #include <humanstaticLite.h>
 
 //#include <SoftwareSerial.h>
-// 选择任意两个可以与SoftwareSerial一起用于RX和TX的引脚
+// Choose any two pins that can be used with SoftwareSerial to RX & TX
 //#define RX_Pin A2
 //#define TX_Pin A3
 
 //SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
 
-// 我们将使用软件串口
+// we'll be using software serial
 //HumanStaticLite radar = HumanStaticLite(&mySerial);
 
-// 也可以尝试硬件串口
+// can also try hardware serial with
 HumanStaticLite radar = HumanStaticLite(&Serial1);
 
 void setup() {
-  // 将您的设置代码放在这里，运行一次：
+  // put your setup code here, to run once:
   Serial.begin(115200);
   Serial1.begin(115200);
 
   //  mySerial.begin(115200);
 
-  while(!Serial);   //当串口打开时，程序开始执行。
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
 
   Serial.println("Ready");
 }
 
 void loop() {
-  // 将您的主要代码放在这里，重复运行：
-  radar.recvRadarBytes();           //接收雷达数据并开始处理
-  radar.showData();                 //串口打印一组接收到的数据帧
-  delay(200);                       //添加时间延迟以避免程序卡死
+  // put your main code here, to run repeatedly:
+  radar.recvRadarBytes();           //Receive radar data and start processing
+  radar.showData();                 //Serial port prints a set of received data frames
+  delay(200);                       //Add time delay to avoid program jam
 }
 ```
 
 :::tip
-如果您使用的是 XIAO ESP32 系列，并且毫米波雷达没有数据反馈。您可以尝试将上面的代码从
-
-```Serial1.begin(115200);``` 改为 ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```。
+如果您使用的是 XIAO ESP32 系列，并且毫米波雷达没有数据反馈。您可以尝试将上面的代码从 ```Serial1.begin(115200);``` 改为 ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```。
 :::
 
-在这个程序中，我们使用 XIAO nRF52840 的硬件 **Serial1** 端口连接到传感器，并使用硬件 **Serial** 端口来输出数据，因此我们需要在初始化函数 `Setup()` 中单独初始化这个串口。
+在这个程序中，我们使用 XIAO nRF52840 的硬件 **Serial1** 端口连接到传感器，并使用硬件 **Serial** 端口 Serial 输出数据，因此我们需要在初始化函数 `Setup()` 中单独初始化这个串口。
 
-在主 `loop()` 函数中，我们使用 `recvRadarBytes()` 函数从传感器接收数据帧，然后使用 `showData()` 函数通过串口打印出接收到的数据帧。
+在主 `loop()` 函数中，我们使用函数 `recvRadarBytes()` 从传感器接收数据帧，然后使用 `showData()` 函数通过串口打印出接收到的数据帧。
 
-在这个程序中，需要注意的是，每两个数据帧的接收和输出之间都有一个间隔，以避免主板出现阻塞。这个时间不应少于 **150ms**。
+在这个程序中，需要注意的是，每两个数据帧的接收和输出之间都有一个间隔，以避免主板出现阻塞。这个时间应该不少于 **150ms**。
 
 这意味着主板无法接收传感器报告的所有数据帧，但由于传感器报告的帧数非常大且频繁，这不会影响使用传感器判断环境的准确性。
 
-上传程序。将串口监视器的波特率设置为 115200 应该会显示结果。输出应该类似于下图。
+上传程序。将串口监视器的波特率设置为 115200 应该会显示结果。输出应该类似于下面的图像。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/1.png" style={{width:600, height:'auto'}}/></div>
 
-### 演示 2：解析人体存在信息的串口打印 {#demo2}
+### 演示 2：解析的人体存在信息的串口打印 {#demo2}
 
 在这个示例中，我们将使用库中的函数来解析接收到的数据帧，并通过串口打印出传感器主动报告的所有特征数据。
 
@@ -675,12 +675,12 @@ void loop() {
 ```
 
 :::tip
-如果您使用的是 XIAO ESP32 系列，并且毫米波雷达没有数据反馈。您可以尝试将上面的代码从 ```Serial1.begin(115200);``` 改为 ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```。
+如果您使用的是 XIAO ESP32 系列，并且毫米波雷达没有数据反馈。您可以尝试将上面的代码从 ```Serial1.begin(115200);``` 更改为 ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```。
 :::
 
 要实现数据解析功能，我们首先需要调用 `HumanStatic_func()` 函数。传入的参数可以是 `true` 或 `false`，用于控制是否启用人体运动参数的显示。
 
-如果您选择开启，即传入参数 `true`，您可能会在串口获得以下消息。
+如果您选择开启，即传入参数 `true`，您可能会在串口获得以下信息。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/2.png" style={{width:600, height:'auto'}}/></div>
 
@@ -694,14 +694,14 @@ void loop() {
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/3.png" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-您可能在较长时间内看不到串口监视器上打印的内容，这可能是正常的。传感器内置的算法是这样的，只有当被监控对象的运动状态发生变化时才会输出信息。如果您在上传程序后一直保持静止，您可能希望起身走动并观察效果。
+您可能在较长时间内看不到串口监视器上打印的内容，这可能是正常的。传感器内置的算法是这样的，只有当被监测对象的运动状态发生变化时才会输出信息。如果您在上传程序后一直保持静止，您可能希望起身走动并观察效果。
 :::
 
 还有一种可能是您接收到的数据与上面两张图片中显示的信息不同。那么您可能已经打开了底层消息输出开关。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/4.png"  style={{width:600, height:'auto'}}/></div>
 
-有关如何开启和关闭底层消息的更多信息，请参考 [Demo 3](#demo3) 的相关部分。简而言之，打开底层消息意味着导出更详细的数据。
+有关如何开启和关闭底层消息的更多信息，请参考 [Demo 3](#demo3) 的相关部分。简而言之，开启底层消息意味着导出更详细的数据。
 
 关于底层消息数据的含义，由于篇幅原因，请查阅本传感器的 [**功能**](#function) 部分或用户手册。
 
@@ -709,72 +709,68 @@ void loop() {
 
 MR24HPC1 提供了丰富的模式设置功能。本示例将以开关底层消息为例，说明如何发送数据帧的实现。
 
-以下示例程序位于库的示例文件夹中，名为 **MR24HPCB1_open_underlyingMes**。
+以下示例程序位于库的 examples 文件夹中，名为 **MR24HPCB1_open_underlyingMes**。
 
 ```c
 #include "Arduino.h"
 #include <humanstaticLite.h>
 
 //#include <SoftwareSerial.h>
-// 选择任意两个可以与SoftwareSerial一起用于RX和TX的引脚
+// Choose any two pins that can be used with SoftwareSerial to RX & TX
 //#define RX_Pin A2
 //#define TX_Pin A3
 
 //SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
 
-// 我们将使用软件串口
+// we'll be using software serial
 //HumanStaticLite radar = HumanStaticLite(&mySerial);
 
-// 也可以尝试硬件串口
+// can also try hardware serial with
 HumanStaticLite radar = HumanStaticLite(&Serial1);
 
-const unsigned char close_buff[10] = {0x53, 0x59, 0x08, 0x00, 0x00, 0x01, 0x00, 0xB5, 0x54, 0x43};  //关闭开放底层消息
-const unsigned char open_buff[10] = {0x53, 0x59, 0x08, 0x00, 0x00, 0x01, 0x01, 0xB6, 0x54, 0x43};   //开启开放底层消息
+const unsigned char close_buff[10] = {0x53, 0x59, 0x08, 0x00, 0x00, 0x01, 0x00, 0xB5, 0x54, 0x43};  //switch off Open Underlying Message
+const unsigned char open_buff[10] = {0x53, 0x59, 0x08, 0x00, 0x00, 0x01, 0x01, 0xB6, 0x54, 0x43};   //switch on Open Underlying Message
 
 void setup() {
-  // 将您的设置代码放在这里，只运行一次：
+  // put your setup code here, to run once:
   Serial.begin(115200);
   Serial1.begin(115200);
 
   //  mySerial.begin(115200);
 
-  while(!Serial);   //当串口打开时，程序开始执行。
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
 
   Serial.println("Ready");
 }
 
 void loop() {
-  // 将您的主要代码放在这里，重复运行：
+  // put your main code here, to run repeatedly:
   radar.checkSetMode_func(open_buff, 10, false);
-  delay(50);   //不要将延迟时间设置得太长，因为这可能会影响雷达返回的数据帧的接收。
+  delay(50);   //Do not set the delay time too long, as this may affect the reception of the data frames returned by the radar.
 }
-
 ```
 
 :::tip
-如果您使用的是XIAO ESP32系列，并且毫米波雷达没有数据反馈。您可以尝试将上面的代码从```Serial1.begin(115200);```更改为```Serial1.begin(115200, SERIAL_8N1, D7, D6);```。
+如果您使用的是 XIAO ESP32 系列，并且毫米波雷达没有数据反馈。您可以尝试将上面的代码从 ```Serial1.begin(115200);``` 改为 ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```。
 :::
 
 在向传感器发送数据之前，我们需要查阅用户手册，根据我们的需求获取要发送的完整数据帧，并在程序中定义一个数组来保存要发送的数据帧。
 
-在这个示例中，我们根据用户手册创建了两个数据帧数组。它们的功能是开启或关闭开放底层消息功能。
+在这个示例中，我们根据用户手册创建了两个数据帧数组。它们的功能是打开或关闭底层消息功能。
 
-```
-
-c
-const unsigned char close_buff[10] = {0x53, 0x59, 0x08, 0x00, 0x00, 0x01, 0x00, 0xB5, 0x54, 0x43};  //关闭开放底层消息
-const unsigned char open_buff[10] = {0x53, 0x59, 0x08, 0x00, 0x00, 0x01, 0x01, 0xB6, 0x54, 0x43};   //开启开放底层消息
-
+```c
+const unsigned char close_buff[10] = {0x53, 0x59, 0x08, 0x00, 0x00, 0x01, 0x00, 0xB5, 0x54, 0x43};  //switch off Open Underlying Message
+const unsigned char open_buff[10] = {0x53, 0x59, 0x08, 0x00, 0x00, 0x01, 0x01, 0xB6, 0x54, 0x43};   //switch on Open Underlying Message
 ```
 
 :::tip
 **关于校验位"sum"的计算。**
 
-所有数据帧都有一个校验位，以确保数据的发送或接收准确无误。校验位通常位于数据帧的倒数第二位。它通过将校验位之前的所有位相加并取十六进制的低两位来计算。
+所有数据帧都有一个校验和位，以确保数据的准确发送或接收。校验和位通常位于数据帧的倒数第二位。它通过将校验位之前的所有位相加并取十六进制的低两位来计算。
 让我们以查询设备ID的数据帧为例。
 <div align="center"><img width ="{800}" src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/6.png"/></div>
 
-可以看到校验位位于整个数据帧的倒数第二位。然后我们开始将之前的所有十六进制数相加。
+可以看到校验和位位于整个数据帧的倒数第二位。然后我们开始将之前的所有十六进制数相加。
 
 `0x53 + 0x59 + 0x02 + 0xA2 + 0x00 + 0x01 + 0x0F = 0x0160`
 
@@ -790,7 +786,7 @@ const unsigned char open_buff[10] = {0x53, 0x59, 0x08, 0x00, 0x00, 0x01, 0x01, 0
 radar.checkSetMode_func(open_buff, 10, false);
 ```
 
-上传程序。将串口监视器的波特率设置为 115200 应该会显示结果。输出应该类似于下面的图像。
+上传程序。将串口监视器的波特率设置为115200，应该会显示结果。输出应该类似于下面的图像。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/5.png" style={{width:600, height:'auto'}}/></div>
 
@@ -799,39 +795,39 @@ radar.checkSetMode_func(open_buff, 10, false);
 通常，我们的命令不需要重复发送给传感器，但由于传感器回复消息的速度非常快，我们无法确保能够接收到传感器返回的确切数据消息。这个问题有两种解决方案。
 
 - 多次重新上传上述程序。
-- 将 `checkSetMode_func()` 函数的第三个参数（循环发送）设置为 `true`。但是请注意，重复发送设置类型的数据帧**可能会导致传感器卡死**，因此请谨慎使用此功能。如果传感器卡死，请断开传感器的 5V 供电引脚，等待片刻后功能即可恢复。
+- 将 `checkSetMode_func()` 函数的第三个参数（循环发送）设置为 `true`。但是请注意，重复发送设置类型的数据帧**可能会导致传感器卡死**，因此请谨慎使用此功能。如果传感器卡死，请断开传感器的5V供电引脚，等待片刻让功能恢复。
 
 ### 演示 4：重置传感器 {#demo4}
 
 有时您可能遇到传感器检测异常的问题，或者想要清除传感器上的所有设置，那么您可以根据此示例重置传感器。
 
-以下示例程序位于库的示例文件夹中，名为 **MR24HPCB1_reset_radar**。
+以下示例程序位于库的examples文件夹中，名为**MR24HPCB1_reset_radar**。
 
 ```c
 #include "Arduino.h"
 #include <humanstaticLite.h>
 
 //#include <SoftwareSerial.h>
-// 选择任意两个可以与SoftwareSerial一起用于RX和TX的引脚
+// Choose any two pins that can be used with SoftwareSerial to RX & TX
 //#define RX_Pin A2
 //#define TX_Pin A3
 
 //SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
 
-// 我们将使用软件串口
+// we'll be using software serial
 //HumanStaticLite radar = HumanStaticLite(&mySerial);
 
-// 也可以尝试硬件串口
+// can also try hardware serial with
 HumanStaticLite radar = HumanStaticLite(&Serial1);
 
 void setup() {
-  // 将您的设置代码放在这里，运行一次：
+  // put your setup code here, to run once:
   Serial.begin(115200);
   Serial1.begin(115200);
 
   //  mySerial.begin(115200);
 
-  while(!Serial);   //当串口打开时，程序开始执行。
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
 
   Serial.println("Ready");
 
@@ -839,13 +835,13 @@ void setup() {
 }
 
 void loop() {
-  // 将您的主要代码放在这里，重复运行：
+  // put your main code here, to run repeatedly:
 
 }
 ```
 
 :::tip
-如果您使用的是 XIAO ESP32 系列，并且毫米波雷达没有数据反馈。您可以尝试将上面的代码从 ```Serial1.begin(115200);``` 改为 ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```。
+如果您使用的是 XIAO ESP32 系列，并且毫米波雷达没有数据反馈。您可以尝试将上面的代码从 ```Serial1.begin(115200);``` 更改为 ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```。
 :::
 
 重置传感器非常简单，您只需要调用 `reset_func()`。重置只需要**执行一次**，所以我们在 `Setup()` 函数中使用它。
@@ -854,7 +850,7 @@ void loop() {
 
 我们的库兼容 Arduino，您也可以选择手头的 Arduino 来开发您的传感器项目。
 
-MR24HPC1 传感器使用 UART 串口通信，您只需要按照下面的接线将传感器连接到您的 Arduino。
+MR24HPC1 传感器使用 UART 串行端口进行通信，您只需要按照下面的接线将传感器连接到您的 Arduino。
 
 <table align="center">
   <tbody><tr>
@@ -884,30 +880,29 @@ MR24HPC1 传感器使用 UART 串口通信，您只需要按照下面的接线�
     </tr>
   </tbody></table>
 
-所有功能的应用方式与上面的 `演示 1` 到 `演示 4` 相同，所以我们不会在这个例子中重复它们。在这个例子中，我们将为您概述如何使用 Arduino 的软串口从传感器获取数据信息。
+所有功能的应用方式与上述 `Demo 1` 到 `Demo 4` 相同，因此我们不会在此示例中重复说明。在此示例中，我们将为您概述如何使用 Arduino 的软串口从传感器获取数据信息。
 
 :::tip
 有关 Arduino 软串口的说明，请参考 [Arduino 官方文档](https://docs.arduino.cc/learn/built-in-libraries/software-serial)。
 :::
 
-为了避免使用 Serial 同时进行输出和数据传输造成的数据混乱，在 Arduino 端我们通常使用软串口。
+为了避免同时使用 Serial 进行输出和数据传输而导致的数据混乱，在 Arduino 端我们通常使用软串口。
 
 软串口库的导入和 RX、TX 引脚的定义需要在程序的早期完成。以下程序将 **A2** 和 **A3** 引脚定义为软串口的 **RX** 和 **TX** 引脚。
 
 ```c
 #include <SoftwareSerial.h>
-//选择任意两个可以与SoftwareSerial一起使用的引脚作为RX和TX
+//Choose any two pins that can be used with SoftwareSerial to RX & TX
 #define RX_Pin A2
 #define TX_Pin A3
 
 SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
 
-//我们将使用软件串口
+//we'll be using software serial
 HumanStaticLite radar = HumanStaticLite(&mySerial);
-
 ```
 
-另外，不要忘记在 `Setup()` 函数中设置软件串口的波特率。
+Also, don't forget to set the baud rate for the soft serial port in the `Setup()` function.
 
 ```c
 void setup() {
@@ -920,45 +915,44 @@ void setup() {
 
   Serial.println("Ready");
 }
-
 ```
 
-以**演示1**为例，如果您想使用Arduino打印来自传感器的上报数据帧，那么完整的程序如下所示。
+以 **Demo 1** 为例，如果您想使用 Arduino 打印来自传感器的上报数据帧，那么完整的程序如下。
 
 ```c
 #include "Arduino.h"
 #include <humanstaticLite.h>
 
 #include <SoftwareSerial.h>
-// 选择任意两个可以与SoftwareSerial一起用于RX和TX的引脚
+// Choose any two pins that can be used with SoftwareSerial to RX & TX
 #define RX_Pin A2
 #define TX_Pin A3
 
 SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
 
-// 我们将使用软件串口
+// we'll be using software serial
 HumanStaticLite radar = HumanStaticLite(&mySerial);
 
 void setup() {
-  // 将您的设置代码放在这里，只运行一次：
+  // put your setup code here, to run once:
   Serial.begin(115200);
 
   mySerial.begin(115200);
 
-  while(!Serial);   //当串口打开时，程序开始执行。
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
 
   Serial.println("Ready");
 }
 
 void loop() {
-  // 将您的主要代码放在这里，重复运行：
-  radar.recvRadarBytes();           //接收雷达数据并开始处理
-  radar.showData();                 //串口打印一组接收到的数据帧
-  delay(200);                       //添加时间延迟以避免程序卡死
+  // put your main code here, to run repeatedly:
+  radar.recvRadarBytes();           //Receive radar data and start processing
+  radar.showData();                 //Serial port prints a set of received data frames
+  delay(200);                       //Add time delay to avoid program jam
 }
 ```
 
-### 演示 6: 直接连接到 PC 获取数据 {#demo6}
+### 演示 6：直接连接到 PC 获取数据 {#demo6}
 
 如果您想使用专为传感器设计的上位机，或者想使用串口软件获取完整的数据帧，可以参考此例程。
 
@@ -1011,42 +1005,42 @@ MR24HPC1 传感器需要 5V 电源供电，否则传感器可能无法正常工�
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/60GHzradar/40.png" style={{width:600, height:'auto'}}/></div>
 
-### 演示 7: MR24HPBC1 & XIAO ESP32C3 & ESPHome & Home Assistant {#demo7}
+### 示例 7：MR24HPBC1 & XIAO ESP32C3 & ESPHome & Home Assistant {#demo7}
 
 我们为这款雷达和 XIAO ESP32C3 创建了连接到 ESPHome 和 Home Assistant 的教程，如果您感兴趣，可以参考这里的教程。
 
-- [XIAO ESP32C3 通过 ESPHome 服务访问 Home Assistant](https://wiki.seeedstudio.com/cn/xiao-esp32c3-esphome)
+- [XIAO ESP32C3 通过 ESPHome 服务接入 Home Assistant](https://wiki.seeedstudio.com/xiao-esp32c3-esphome)
 
-### 演示 8: 在 XIAO ESP32C3 中使用传感器 {#demo8}
+### 示例 8：在 XIAO ESP32C3 中使用传感器 {#demo8}
 
-由于 XIAO ESP32C3 硬件串口的[特殊设计](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Pin_Multiplexing/#special-way---use-usb-serial-and-uart0uart1-at-the-same-time)，为了使用 UART 与传感器发送和接收数据消息，您需要使用以下代码。
+由于 XIAO ESP32C3 硬件串口的[特殊设计](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/#special-way---use-usb-serial-and-uart0uart1-at-the-same-time)，为了使用 UART 与传感器发送和接收数据消息，您需要使用以下代码。
 
 ```cpp
 #include "Arduino.h"
 #include <humanstaticLite.h>
 #include <HardwareSerial.h>
 
-//HardwareSerial MySerial(0); // 如果您想使用 D6 和 D7 作为串口引脚，请取消注释此行并注释下面的行。
-HardwareSerial MySerial(1);   // 创建一个新的 HardwareSerial 类
+//HardwareSerial MySerial(0); // If you want to use D6 and D7 as serial pins, uncomment this line and comment the following line instead.
+HardwareSerial MySerial(1);   // Create a new HardwareSerial class
 
-// 也可以尝试硬件串口
+// can also try hardware serial with
 HumanStaticLite radar = HumanStaticLite(&MySerial);
 
 void setup() {
-  // 将您的设置代码放在这里，只运行一次：
+  // put your setup code here, to run once:
   Serial.begin(115200);
 
   /*
-   * 4, 5 表示 GPIO4 和 GPIO5，对应引脚 D2 和 D3。
-   * 如果您想直接使用 XIAO ESP32C3 的硬件 UART 引脚，可以将 4, 5 更改为 -1, -1。
+   * 4, 5 indicate GPIO4 and GPIO5, corresponding to pins D2 and D3. 
+   * If you want to use the hardware UART pins of the XIAO ESP32C3 directly, you can change 4, 5 to -1, -1.
    * MySerial.begin(115200, SERIAL_8N1, -1, -1);
    * 
-   * 除此之外，您还可以使用 D9 (GPIO9) 和 D10 (GPIO10) 引脚作为串口。
+   * In addition to this you can also use the D9 (GPIO9) and D10 (GPIO10) pins as serial ports.
    * MySerial1.begin(115200, SERIAL_8N1, 9, 10);
    */
   MySerial.begin(115200, SERIAL_8N1, 4, 5);
 
-  while(!Serial);   //当串口打开时，程序开始执行。
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
 
   delay(500);
 
@@ -1054,23 +1048,22 @@ void setup() {
 }
 
 void loop() {
-  // 将您的主要代码放在这里，重复运行：
-  radar.recvRadarBytes();           //接收雷达数据并开始处理
-  radar.showData();                 //串口打印一组接收到的数据帧
-  delay(200);                       //添加时间延迟以避免程序卡死
+  // put your main code here, to run repeatedly:
+  radar.recvRadarBytes();           //Receive radar data and start processing
+  radar.showData();                 //Serial port prints a set of received data frames
+  delay(200);                       //Add time delay to avoid program jam
 }
-
 ```
 
 ## 故障排除
 
 ### 常见问题 1：此传感器能否在同一环境中同时检测多个人？ {#faq1}
 
-> 答：不可以。此传感器只能用于单个生物体。如果监测范围内有多个人或动物，这将对监测结果产生影响。
+> 答：不可以。此传感器只能用于单个生物体。如果监测范围内有多个人或动物，这将影响监测结果。
 
 ### 常见问题 2：为什么我在 XIAO ESP32C3 的串口监视器中看不到任何内容？ {#faq2}
 
-> XIAO ESP32C3 串口功能与一般 Arduino 硬件不太一致，直接使用 Serial1 可能会导致 USB 串口无法工作。相关应用案例，请前往 [XIAO ESP32C3 的串口章节](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Pin_Multiplexing/#serial) 了解详情。
+> XIAO ESP32C3 串口功能与一般 Arduino 硬件不太一致，直接使用 Serial1 可能会导致 USB 串口无法工作。相关应用案例请参考 [XIAO ESP32C3 的串口章节](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/#serial) 了解详情。
 
 ### 常见问题 3：是否可以使用其他芯片代替 XIAO ESP32-C3 来使用该库？ {#faq3}
 
@@ -1082,25 +1075,24 @@ void loop() {
 #include <humanstaticLite.h>
 
 #include <SoftwareSerial.h>
-// 选择任意两个可以与 SoftwareSerial 一起用于 RX 和 TX 的引脚
+// Choose any two pins that can be used with SoftwareSerial to RX & TX
 #define RX_Pin A2
 #define TX_Pin A3
 
 SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
 
-// 我们将使用软件串口
+// we'll be using software serial
 HumanStaticLite radar = HumanStaticLite(&mySerial);
 
 void setup() {
-  // 将您的设置代码放在这里，只运行一次：
+  // put your setup code here, to run once:
   Serial.begin(115200);
   mySerial.begin(115200);
 }
 void loop() {
-  // 您的代码在这里
+  // Your code here
 }
 ```
-
 
 ## 资源
 
@@ -1108,18 +1100,18 @@ void loop() {
 - **[PDF]** [数据手册](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_Datasheet.pdf)
 - **[PDF]** [用户手册](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_User_Manual-V2.0.pdf)
 - **[EXE]** [上位机软件](https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/Human-Radar-Open-Protocol_2.0.exe)
-- **[ZIP]** [CE 认证文件](https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/101991030_CE.zip)
+- **[ZIP]** [CE认证文件](https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/101991030_CE.zip)
 
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

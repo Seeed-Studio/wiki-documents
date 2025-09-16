@@ -1,6 +1,6 @@
 ---
-description: Comenzar con SenseCAP Solar Node para Meshtastic y LoRa
-title: Comenzar con SenseCAP Solar Node
+description: Comience con SenseCAP Solar Node para Meshtastic y LoRa
+title:  Comience con SenseCAP Solar Node
 keywords:
 - Meshtastic
 - Solar
@@ -8,8 +8,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /es/get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 4/27/2025
-  author: Jessie
+  date: 11/9/2025
+  author: Michelle
 ---
 
 
@@ -36,7 +36,7 @@ Arrastre el archivo UF2 a la unidad DFU. El firmware debería flashearse despué
 ### Instalar Batería y Módulo GPS (Opcional)
 
 :::tip
-Batería Recomendada: Batería de Iones de Litio 18650 3.6V (Polo Positivo Plano).
+Batería Recomendada: Batería de Iones de Litio 18650 3.6V (Botón Superior).
 :::
 
 La versión P1-Pro tiene batería y módulo GPS integrados, para la versión P1, el usuario necesita instalar la batería y el módulo GPS manualmente si es necesario.
@@ -56,7 +56,7 @@ La versión P1-Pro tiene batería y módulo GPS integrados, para la versión P1,
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-Asegúrese de que la carcasa esté montada correctamente y los tornillos estén firmemente apretados para mantener la integridad impermeable del dispositivo.
+Asegúrese de que la carcasa esté correctamente montada y los tornillos estén firmemente apretados para mantener la integridad impermeable del dispositivo.
 :::
 
 ### Encender el dispositivo
@@ -70,9 +70,9 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="App IOS">
+<TabItem value="ios" label="IOS App">
 
-- Seleccione el dispositivo objetivo en el panel de Bluetooth.
+- Seleccione el dispositivo objetivo en el panel Bluetooth.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
@@ -82,7 +82,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="App Android">
+<TabItem value="android" label="Android App">
 
 - Haga clic en `+` y elija el dispositivo objetivo.
 
@@ -100,13 +100,13 @@ import TabItem from '@theme/TabItem';
 Para comenzar a comunicarse a través de la malla, debe establecer su región. Esta configuración controla qué rango de frecuencia usa su dispositivo y debe establecerse según su ubicación regional.
 
 <Tabs>
-<TabItem value="ios" label="App IOS">
+<TabItem value="ios" label="IOS App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="App Android">
+<TabItem value="android" label="Android App">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
@@ -120,64 +120,89 @@ Para comenzar a comunicarse a través de la malla, debe establecer su región. E
 |US|Estados Unidos|902.0 - 928.0|100|30|
 |EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
 
-Consulta [Región LoRa por País](https://meshtastic.org/docs/configuration/region-by-country/) para una lista más completa.
+Consulte [Región LoRa por País](https://meshtastic.org/docs/configuration/region-by-country/) para una lista más completa.
 
 :::info
-**EU_868** debe cumplir con una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto en una base móvil de 1 hora. Tu dispositivo dejará de transmitir si lo alcanzas, hasta que se permita nuevamente.
+**EU_868** debe adherirse a una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto en una base móvil de 1 hora. Su dispositivo dejará de transmitir si lo alcanza, hasta que se permita nuevamente.
 :::
 
-Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [Configuración LoRa](https://meshtastic.org/docs/configuration/radio/lora/) para satisfacer tus necesidades.
+Ahora que ha establecido la región LoRa en su dispositivo, puede continuar configurando cualquier [Configuración LoRa](https://meshtastic.org/docs/configuration/radio/lora/) para satisfacer sus necesidades.
 
 ## Instalación
 
 :::danger note
-Dado que el dispositivo se utilizará al aire libre durante períodos prolongados, evita instalar el panel en posición horizontal. Se recomienda una instalación inclinada o diagonal para prevenir la acumulación de agua. Además, asegúrate de que todos los tornillos estén bien apretados y la cubierta esté correctamente instalada. Para una protección impermeable mejorada, también puedes considerar aplicar medidas de sellado adicionales.
+Dado que el dispositivo se utilizará al aire libre durante períodos prolongados, evite instalar el panel en posición horizontal. Se recomienda una instalación inclinada o diagonal para prevenir la acumulación de agua. Además, asegúrese de que todos los tornillos estén bien apretados y la cubierta esté correctamente instalada. Para una protección impermeable mejorada, también puede considerar aplicar medidas de sellado adicionales.
 :::
 
 - **Lista de Partes**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/part-list.png" alt="pir" width={800} height="auto" /></p>
 
-- Paso 1: Conecta la parte 1 a la parte inferior del dispositivo usando arandelas y tornillos.
+### Guía de Instalación Paso a Paso
+- Paso1: Conecte la parte 1 a la parte inferior del dispositivo usando arandelas y tornillos.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Paso 2: Conecta la junta universal (parte 2) y el soporte (parte 3) con tornillos.
+- Paso2: Conecte la junta universal (parte 2) y el soporte (parte 3) con tornillos.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Paso 3: Conecta el cable RF (parte 4) y la antena (parte 5).
+- Paso3: Conecte el cable RF (parte 4) y la antena (parte 5).
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Paso 3: Instala el anillo de aro en la posición apropiada.
+- Paso4: Instale el anillo de aro en la posición apropiada.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/hoop-ring.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Paso 4: Conecta el soporte de la junta universal.
+- Paso5: Conecte el soporte de junta universal.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connector.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Paso 5: Afloja los tornillos, ajusta la junta universal a la posición apropiada, y luego aprieta los tornillos.
+- Paso6: Afloje los tornillos, ajuste la junta universal a la posición apropiada, y luego apriete los tornillos.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Paso 6: Conecta la antena al dispositivo.
+- Paso7: Conecte la antena al dispositivo.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+### Guía de instalación completa
+
+- Puede completar todo el proceso de instalación e inicialización a través de un video.
+
+<div class="table-center">
+<iframe width="730" height="500" src="https://www.youtube.com/embed/smQe7G0Bbsk?si=kcB8BdoxiwpZqB4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+### Agregar sensores al nodo solar (Opcional)
+
+- Puede instalar su sensor a través de este video.
+
+<div class="table-center">
+<iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+### Actualizar antena (Opcional)
+
+- Puede reemplazar la antena con una de fibra de vidrio viendo este video.
+
+<div class="table-center">
+<iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## FAQ
@@ -212,4 +237,4 @@ Las cifras a continuación son solo de referencia; el consumo real puede variar 
 |Corriente de Operación GPS|50 mA|
 |Corriente de Operación GPS_LED|1.02 mA|
 
-Para más detalles consulta [Tabla de Cálculo de Vida Útil de Batería del Nodo Solar](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Solar%20Node%20Battery%20Life%20Calculation%20Table.xlsx)
+Más detalles consulte [Tabla de Cálculo de Vida Útil de Batería del Nodo Solar](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Solar%20Node%20Battery%20Life%20Calculation%20Table.xlsx)

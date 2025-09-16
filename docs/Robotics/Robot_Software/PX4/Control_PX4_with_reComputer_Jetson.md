@@ -27,10 +27,10 @@ This setup enables complex onboard tasks like visual navigation, object tracking
 
 :::tip[What You'll Learn]
 
--   How to physically connect your Jetson to a Pixhawk.
--   The pros and cons of uXRCE-DDS, MAVSDK, and MAVROS.
--   Step-by-step setup instructions for all three communication methods.
--   How to verify the connection and troubleshoot common issues.
+- How to physically connect your Jetson to a Pixhawk.
+- The pros and cons of uXRCE-DDS, MAVSDK, and MAVROS.
+- Step-by-step setup instructions for all three communication methods.
+- How to verify the connection and troubleshoot common issues.
 
 :::
 
@@ -38,10 +38,10 @@ This setup enables complex onboard tasks like visual navigation, object tracking
 
 Before you begin, ensure you have the following:
 
--   **Hardware:** All devices listed in the "Lab Environment" table below.
--   **Software:** A fresh installation of Jetson Pack 6.2 and ROS 2 Humble.
--   **Tools:** `git` and `pip` installed on your Jetson.
--   **Knowledge:** Basic familiarity with the Linux command line, ROS 2 concepts (nodes, topics), and PX4 parameters in QGroundControl.
+- **Hardware:** All devices listed in the "Lab Environment" table below.
+- **Software:** A fresh installation of Jetson Pack 6.2 and ROS 2 Humble.
+- **Tools:** `git` and `pip` installed on your Jetson.
+- **Knowledge:** Basic familiarity with the Linux command line, ROS 2 concepts (nodes, topics), and PX4 parameters in QGroundControl.
 
 ## System Configuration
 
@@ -61,8 +61,8 @@ Before you begin, ensure you have the following:
 
 We strongly recommend using the Jetson's native UART for a robust connection that doesn't occupy a USB port.
 
--   **Wiring**: Use a 4-pin JST-GH cable to connect the **Pixhawk 4 Mini's `TELEM1`** port to the **Jetson Orin Nano's `UART1`** header.
--   **Device File**: This serial port corresponds to `/dev/ttyTHS1` in the Jetson's OS.
+- **Wiring**: Use a 4-pin JST-GH cable to connect the **Pixhawk 4 Mini's `TELEM1`** port to the **Jetson Orin Nano's `UART1`** header.
+- **Device File**: This serial port corresponds to `/dev/ttyTHS1` in the Jetson's OS.
 
 <details>
 <summary><strong>Pixhawk 4 Mini Port and Pinout Details (Click to expand)</strong></summary>
@@ -124,9 +124,9 @@ We strongly recommend using the Jetson's native UART for a robust connection tha
 ---
 **Footnotes:**
 
-* **`*` (UART & I2C B Port):** A spare port for connecting sensors supporting serial communication or I2C e.g. a second GPS module can be connected here.
-* **`*` (SBUS Signal):** Connect SBUS or DSM/Spektrum receiver's signal wire here.
-* **`**` **(RSSI Signal):** Sends the RC signal strength info to autopilot.
+- **`*` (UART & I2C B Port):** A spare port for connecting sensors supporting serial communication or I2C e.g. a second GPS module can be connected here.
+- **`*` (SBUS Signal):** Connect SBUS or DSM/Spektrum receiver's signal wire here.
+- **`**` **(RSSI Signal):** Sends the RC signal strength info to autopilot.
 
 </details>
 
@@ -154,7 +154,6 @@ Before diving in, understand the trade-offs. The right choice depends entirely o
 | **Flexibility** | **Excellent**. Provides direct access to all internal PX4 uORB topics. | **Limited**. Exposes common actions (takeoff, waypoints) but not raw data. | **Excellent**. Access to nearly all MAVLink messages, parameters, and services. |
 | **ROS Integration** | **Native ROS 2**. The official, future-proof method for ROS 2.       | **ROS Agnostic**. Can be used in any project, easily wrapped in a ROS node. | **ROS Centric**. The de-facto standard for ROS 1 and widely used in ROS 2.    |
 | **Use Case** | Performance-critical ROS 2 projects needing low-level data access. | Task-level scripting, rapid prototyping, non-ROS projects, and education. | Complex robotics systems integrated with ROS packages like Nav2 or MoveIt.    |
-
 
 ## Method 1: uXRCE-DDS (Native ROS 2 Integration)
 
@@ -191,7 +190,6 @@ sudo make install # Installs MicroXRCEAgent globally
   <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/03.png" alt="PX4_dev_03" />
   <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/04.png" alt="PX4_dev_04" />
 </div>
-
 
 ### Step 2: Build the `px4_msgs` ROS 2 Package
 
@@ -241,25 +239,24 @@ The `px4_msgs` branch **must** match your PX4 firmware version to ensure the mes
   <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/06.png" alt="PX4_dev_02" />
 </div>
 
-
 ### Step 3: Configure PX4 Firmware
 
 Connect to QGroundControl and set the following parameters:
 
-1.  **`UXRCE_DDS_CFG`**: Set to `TELEM1`. This activates the XRCE-DDS client on that port.
-2.  **`SER_TEL1_BAUD`**: Set to `921600 8N1`.
-3.  **`MAV_1_CONFIG`**: Set to `Disabled`. This is crucial to prevent MAVLink from conflicting on the same port.
-4.  Save parameters and reboot the flight controller.
+1. **`UXRCE_DDS_CFG`**: Set to `TELEM1`. This activates the XRCE-DDS client on that port.
+2. **`SER_TEL1_BAUD`**: Set to `921600 8N1`.
+3. **`MAV_1_CONFIG`**: Set to `Disabled`. This is crucial to prevent MAVLink from conflicting on the same port.
+4. Save parameters and reboot the flight controller.
 
 ### Step 4: Launch and Verify
 
-1.  **Start the Agent on the Jetson** (in one terminal):
+1. **Start the Agent on the Jetson** (in one terminal):
 
     ```bash title="Terminal 1: Run Agent"
     MicroXRCEAgent serial --dev /dev/ttyTHS1 -b 921600
     ```
 
-2.  **Verify ROS 2 Topics** (in a new terminal):
+2. **Verify ROS 2 Topics** (in a new terminal):
 
     ```bash title="Terminal 2: Verify Topics"
     # Source your workspace in every new terminal
@@ -281,7 +278,6 @@ Connect to QGroundControl and set the following parameters:
   <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/12.png" alt="PX4_dev_02" />
 </div>
 
-
 -----
 
 ## Method 2: MAVSDK (High-Level API)
@@ -292,11 +288,11 @@ MAVSDK provides a simple, modern API to control drones programmatically, abstrac
 
 In QGroundControl, switch the port configuration from DDS back to MAVLink mode.
 
-1.  **`UXRCE_DDS_CFG`**: Set back to `Disabled`.
-2.  **`MAV_1_CONFIG`**: Set to `TELEM 1` to assign the port to MAVLink.
-3.  **`MAV_1_MODE`**: Set to `Onboard` to specify the link is for a companion computer.
-4.  **`SER_TEL1_BAUD`**: Ensure this is still `921600 8N1`.
-5.  Save parameters and reboot the flight controller.
+1. **`UXRCE_DDS_CFG`**: Set back to `Disabled`.
+2. **`MAV_1_CONFIG`**: Set to `TELEM 1` to assign the port to MAVLink.
+3. **`MAV_1_MODE`**: Set to `Onboard` to specify the link is for a companion computer.
+4. **`SER_TEL1_BAUD`**: Ensure this is still `921600 8N1`.
+5. Save parameters and reboot the flight controller.
 
 ### Step 2: Install MAVSDK-Python
 
@@ -359,7 +355,7 @@ sudo bash /opt/ros/humble/lib/mavros/install_geographiclib_datasets.sh
 
 ### Step 3: Launch and Verify
 
-1.  **Launch the MAVROS node**:
+1. **Launch the MAVROS node**:
 
     ```bash title="Terminal 1: Launch MAVROS"
     source /opt/ros/humble/setup.bash
@@ -368,7 +364,7 @@ sudo bash /opt/ros/humble/lib/mavros/install_geographiclib_datasets.sh
     ros2 launch mavros px4.launch fcu_url:="serial:///dev/ttyTHS1:921600"
     ```
 
-2.  **Verify the Connection**:
+2. **Verify the Connection**:
 
     In a new terminal, echo the MAVROS state topic.
 
@@ -393,10 +389,10 @@ sudo bash /opt/ros/humble/lib/mavros/install_geographiclib_datasets.sh
 
 If you run into trouble, check these common issues first.
 
-  - **"Permission Denied" on Serial Port:** You forgot to add your user to the `dialout` group and reboot. See the "Hardware Connection" section.
-  - **"No such file or directory" for `/dev/ttyTHS1`:** Double-check your physical wiring. Is the flight controller powered on? Run `ls /dev/ttyTHS*` to confirm the device name.
-  - **MAVROS Crashes on Startup:** You likely missed the `install_geographiclib_dataset.sh` step. Run the command from Method 3.
-  - **`colcon build` Fails:** Make sure you have sourced the ROS 2 environment first (`source /opt/ros/humble/setup.bash`). For more complex dependency issues, you might need to run `rosdep install --from-paths src --ignore-src -r -y`.
+- **"Permission Denied" on Serial Port:** You forgot to add your user to the `dialout` group and reboot. See the "Hardware Connection" section.
+- **"No such file or directory" for `/dev/ttyTHS1`:** Double-check your physical wiring. Is the flight controller powered on? Run `ls /dev/ttyTHS*` to confirm the device name.
+- **MAVROS Crashes on Startup:** You likely missed the `install_geographiclib_dataset.sh` step. Run the command from Method 3.
+- **`colcon build` Fails:** Make sure you have sourced the ROS 2 environment first (`source /opt/ros/humble/setup.bash`). For more complex dependency issues, you might need to run `rosdep install --from-paths src --ignore-src -r -y`.
 
 ## Final Words
 
@@ -409,11 +405,11 @@ Happy flying\! 🚁
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

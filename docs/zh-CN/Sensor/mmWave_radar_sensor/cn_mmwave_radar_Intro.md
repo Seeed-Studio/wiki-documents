@@ -16,11 +16,11 @@ last_update:
 
 欢迎了解 Seeed Studio 的毫米波雷达传感器。本页面旨在成为一个全面的信息来源，指导您了解这些传感器的各个方面。
 
-在这里，您可以找到产品参数的详细信息，包括工作频率、发射功率、运动和存在检测范围以及检测角度。我们还介绍了简单的安装方法，如顶部安装、侧面安装和倾斜安装。此外，我们还探讨了汽车安全、智能家居和医疗保健等各种应用场景。我们的毫米波雷达传感器适用于广泛的项目，为您提供可靠的传感解决方案。
+在这里，您可以找到产品参数的详细信息，包括工作频率、发射功率、运动和存在检测范围以及检测角度。我们还介绍了简单直接的安装方法，如顶部安装、侧面安装和倾斜安装。此外，我们还探讨了汽车安全、智能家居和医疗保健等各种应用场景。我们的毫米波雷达传感器适用于广泛的项目，为您提供可靠的传感解决方案。
 
 ## 毫米波雷达原理
 
-毫米波（mmWave）雷达使用调频连续波（FMCW）雷达技术来检测物体及其速度、距离和角度。FMCW 雷达连续发射调频信号并接收来自物体的反射信号。通过分析发射和接收频率之间的差异，雷达可以确定物体的距离（范围）和相对速度（速度）。这一原理使毫米波雷达能够检测细微运动，提供高精度，并在雨、雾或灰尘等各种环境条件下有效工作。
+毫米波（mmWave）雷达使用调频连续波（FMCW）雷达技术来检测物体及其速度、距离和角度。FMCW 雷达连续发射调频信号，并接收来自物体的反射信号。通过分析发射和接收频率之间的差异，雷达可以确定物体的距离（范围）和相对速度（速度）。这一原理使毫米波雷达能够检测细微运动，提供高精度，并在雨、雾或灰尘等各种环境条件下有效工作。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/Principle.png" style={{width:'auto', height:'auto'}}/></div>
 
@@ -35,60 +35,59 @@ last_update:
 
 我们的毫米波雷达传感器系列如下所示，每种都具有不同的特性和功能。
 
-
 <table align="center">
-	<tr>
-		<th>XIAO 60GHz 毫米波人体跌倒检测传感器 MR60FDA2</th>
-		<th>XIAO 60GHz 毫米波人体呼吸心跳传感器 MR60BHA2</th>
-		<th>24Ghz 毫米波人体静态存在传感器 for XIAO</th>
-		<th>毫米波人体检测传感器套件 MR24HPC1</th>
+ <tr>
+  <th>XIAO 60GHz 毫米波人体跌倒检测传感器 MR60FDA2</th>
+  <th>XIAO 60GHz 毫米波人体呼吸心跳传感器 MR60BHA2</th>
+  <th>24Ghz 毫米波人体静态存在传感器 for XIAO</th>
+  <th>毫米波人体检测传感器套件 MR24HPC1</th>
         <th>24GHz 毫米波人体静态存在传感器模块 MR24HPC1 Lite</th>
-	</tr>
-	<tr>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg" style={{width:400, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-101010001-seeed-studio-24ghz-mmwave-for-xiao-45font_1.jpg" style={{width:500, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-human-detection-sensor-kit-45font.jpg" style={{width:450, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg" style={{width:400, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-101010001-seeed-studio-24ghz-mmwave-for-xiao-45font_1.jpg" style={{width:500, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-human-detection-sensor-kit-45font.jpg" style={{width:450, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-101991030-24ghz-mmwave-sensor-45font_1.jpg" style={{width:250, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html" target="_blank">
+      </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-24GHz-mmWave-for-XIAO-p-5830.html" target="_blank">
+      </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-24GHz-mmWave-for-XIAO-p-5830.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html" target="_blank">
+      </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
-				</a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
         </div></td>
-	</tr>
+ </tr>
 </table>
 
 <table align="center">
 <font size={"2"}>
     <tr>
         <th></th>
-        <th><a href="https://wiki.seeedstudio.com/cn/getting_started_with_mr60fda2_mmwave_kit/">XIAO 60GHz 毫米波人体跌倒检测传感器 <strong>MR60FDA2</strong></a></th>
-        <th><a href="https://wiki.seeedstudio.com/cn/getting_started_with_mr60bha2_mmwave_kit/">XIAO 60GHz 毫米波人体呼吸心跳传感器 <strong>MR60BHA2</strong></a></th>
-        <th><a href="https://wiki.seeedstudio.com/cn/mmwave_for_xiao/">24Ghz 毫米波人体静态存在传感器 for XIAO</a></th>
-        <th><a href="https://wiki.seeedstudio.com/cn/mmwave_human_detection_kit/">毫米波人体检测传感器套件 <strong>MR24HPC1</strong></a></th>
-        <th><a href="https://wiki.seeedstudio.com/cn/Radar_MR24HPC1/">24GHz 毫米波人体静态存在传感器模块 <strong>MR24HPC1 Lite</strong></a></th>
+        <th><a href="https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/">XIAO 60GHz 毫米波人体跌倒检测传感器 <strong>MR60FDA2</strong></a></th>
+        <th><a href="https://wiki.seeedstudio.com/getting_started_with_mr60bha2_mmwave_kit/">XIAO 60GHz 毫米波人体呼吸心跳传感器 <strong>MR60BHA2</strong></a></th>
+        <th><a href="https://wiki.seeedstudio.com/mmwave_for_xiao/">24Ghz 毫米波人体静态存在传感器 for XIAO</a></th>
+        <th><a href="https://wiki.seeedstudio.com/mmwave_human_detection_kit/">毫米波人体检测传感器套件 <strong>MR24HPC1</strong></a></th>
+        <th><a href="https://wiki.seeedstudio.com/Radar_MR24HPC1/">24GHz 毫米波人体静态存在传感器模块 <strong>MR24HPC1 Lite</strong></a></th>
     </tr>
     <tr>
         <th>主要功能</th>
@@ -182,25 +181,25 @@ last_update:
         <th>ESPHome 支持</th>
         <td><a href="https://github.com/limengdu/MR60FDA2_ESPHome_external_components">原生固件支持</a></td>
         <td><a href="https://github.com/limengdu/MR60BHA2_ESPHome_external_components">原生固件支持</a></td>
-        <td><a href="https://wiki.seeedstudio.com/cn/mmwave_for_xiao/">指南</a></td>
+        <td><a href="https://wiki.seeedstudio.com/mmwave_for_xiao/">指南</a></td>
         <td><a href="https://github.com/thefipster/esphome-mmwave-sensors">GitHub</a></td>
         <td><a href="https://github.com/thefipster/esphome-mmwave-sensors">GitHub</a></td>
     </tr>
     <tr>
        <th>类别</th>
-       <td>带有 XIAO ESP32C6 作为 MCU 的传感器</td>
-       <td>带有 XIAO ESP32C6 作为 MCU 的传感器</td>
+       <td>以 XIAO ESP32C6 为 MCU 的传感器</td>
+       <td>以 XIAO ESP32C6 为 MCU 的传感器</td>
        <td>模块，兼容 XIAO（引脚对引脚）</td>
-       <td>带有 XIAO ESP32C3 作为 MCU 的传感器</td>
+       <td>以 XIAO ESP32C3 为 MCU 的传感器</td>
        <td>模块，兼容 XIAO、Arduino（通过跳线）</td>
     </tr>
     <tr>
-        <th>可用性</th>
-        <td><a href="https://www.seeedstudio.com/"><strong>\$24.9</strong> 在 Seeed Studio</a></td>
-        <td><a href="https://www.seeedstudio.com/"><strong>\$24.9</strong> 在 Seeed Studio</a></td>
-        <td><a href="https://www.seeedstudio.com/Seeed-Studio-24GHz-mmWave-for-XIAO-p-5830.html"><strong>\$4.49</strong> 在 Seeed Studio</a></td>
-        <td><a href="https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html"><strong>\$26.99</strong> 在 Seeed Studio</a></td>
-        <td><a href="https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html"><strong>\$6.9</strong> 在 Seeed Studio</a></td>
+        <th>可购买性</th>
+        <td><a href="https://www.seeedstudio.com/">Seeed Studio <strong>\$24.9</strong></a></td>
+        <td><a href="https://www.seeedstudio.com/">Seeed Studio <strong>\$24.9</strong></a></td>
+        <td><a href="https://www.seeedstudio.com/Seeed-Studio-24GHz-mmWave-for-XIAO-p-5830.html">Seeed Studio <strong>\$4.49</strong></a></td>
+        <td><a href="https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html">Seeed Studio <strong>\$26.99</strong></a></td>
+        <td><a href="https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html">Seeed Studio <strong>\$6.9</strong></a></td>
     </tr>
 </font>
 </table>
@@ -212,7 +211,7 @@ last_update:
         <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg" style={{width:900, height:'auto'}}/>
     </div>
     <div class="xiao_topic_page_font1">
-        <font size={"2.1"}>MR60FDA2 传感器套件采用 60GHz mmWave 技术，可靠地进行跌倒检测和人体存在感应。它包括光照水平感应、可定制交互的 RGB LED，并支持额外的传感器和执行器以增强自动化功能。该套件由 XIAO ESP32C6 供电，具有预刷写的 ESPHome 固件和无线连接选项，包括 Wi-Fi、低功耗蓝牙 (BLE)、Zigbee 和 Thread。这种无代码、即插即用的 Home Assistant 集成允许用户轻松自定义检测区域，使其成为医疗监护、安全、老年护理和家庭自动化应用的理想选择。</font>
+        <font size={"2.1"}>MR60FDA2 传感器套件采用 60GHz mmWave 技术，可靠地进行跌倒检测和人体存在感知。它包含光照水平感知、可定制交互的 RGB LED，并支持额外的传感器和执行器以增强自动化功能。该套件由 XIAO ESP32C6 供电，具有预刷写的 ESPHome 固件和无线连接选项，包括 Wi-Fi、低功耗蓝牙 (BLE)、Zigbee 和 Thread。这种无代码、即插即用的 Home Assistant 集成允许用户轻松自定义检测区域，使其成为医疗监护、安全、老年护理和家庭自动化应用的理想选择。</font>
     </div> 
 </div>
 
@@ -221,7 +220,7 @@ last_update:
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即购买</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="/cn/getting_started_with_mr60fda2_mmwave_kit/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
+    <a class="get_one_now_item" href="/getting_started_with_mr60fda2_mmwave_kit/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
     </a>
 </div>
 
@@ -232,7 +231,7 @@ last_update:
         <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg" style={{width:900, height:'auto'}}/>
     </div>
     <div class="xiao_topic_page_font1">
-        <font size={"2.1"}>MR60BHA2 传感器套件采用 60GHz mmWave 技术，可靠地检测呼吸、心跳和人体存在。它具有光照水平感应、可定制的 RGB LED，并支持额外的传感器和执行器以增强自动化功能。该套件由 XIAO ESP32C6 供电，配备预刷写的 ESPHome 固件，允许使用 Wi-Fi、低功耗蓝牙 (BLE)、Zigbee 和 Thread 轻松实现与 Home Assistant 的即插即用集成。它是医疗监护、安全、老年护理和家庭自动化的理想解决方案，使用户能够在无需编码的情况下自定义检测区域。</font>
+        <font size={"2.1"}>MR60BHA2 传感器套件采用 60GHz mmWave 技术，可靠地检测呼吸、心跳和人体存在。它具有光照水平感知、可定制的 RGB LED，并支持额外的传感器和执行器以增强自动化功能。该套件由 XIAO ESP32C6 供电，配备预刷写的 ESPHome 固件，允许使用 Wi-Fi、低功耗蓝牙 (BLE)、Zigbee 和 Thread 轻松实现与 Home Assistant 的即插即用集成。它是医疗监护、安全、老年护理和家庭自动化的理想解决方案，使用户能够在无需编码的情况下自定义检测区域。</font>
     </div> 
 </div>
 
@@ -241,7 +240,7 @@ last_update:
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即购买</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="/cn/getting_started_with_mr60bha2_mmwave_kit/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
+    <a class="get_one_now_item" href="/getting_started_with_mr60bha2_mmwave_kit/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
     </a>
 </div>
 
@@ -261,7 +260,7 @@ last_update:
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即购买</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="/cn/mmwave_human_detection_kit/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
+    <a class="get_one_now_item" href="/mmwave_human_detection_kit/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
     </a>
 </div>
 
@@ -272,7 +271,7 @@ last_update:
         <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-101010001-seeed-studio-24ghz-mmwave-for-xiao-45font_1.jpg" style={{width:900, height:'auto'}}/>
     </div>
     <div class="xiao_topic_page_font1">
-        <font size={"2.1"}>24GHz mmWave Sensor for XIAO - Human Static Presence 是 Seeed Studio XIAO 系列的扩展板。它是一个集成天线的高灵敏度 mmWave 雷达传感器，基于 FMCW 原理。结合雷达信号处理和精确的人体感应算法，它可以识别运动和静止状态下的人体。</font>
+        <font size={"2.1"}>24GHz mmWave Sensor for XIAO - Human Static Presence 是 Seeed Studio XIAO 系列的扩展板。它是一个集成天线、高灵敏度的 mmWave 雷达传感器，基于 FMCW 原理。结合雷达信号处理和精确的人体感知算法，它可以识别运动和静止状态下的人体。</font>
     </div> 
 </div>
 
@@ -281,18 +280,18 @@ last_update:
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-24GHz-mmWave-for-XIAO-p-5830.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即购买</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="/cn/mmwave_for_xiao/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
+    <a class="get_one_now_item" href="/mmwave_for_xiao/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
     </a>
 </div>
 
-### 24GHz mmWave 传感器 - 人体静态存在模块精简版 (MR24HPC1)
+### 24GHz mmWave 传感器 - 人体静态存在模块 Lite (MR24HPC1)
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
         <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-101991030-24ghz-mmwave-sensor-45font_1.jpg" style={{width:900, height:'auto'}}/>
     </div>
     <div class="xiao_topic_page_font1">
-        <font size={"2.1"}>24GHz mmWave 传感器 - 人体静态存在模块精简版是一个集成天线的健康友好型 mmWave 雷达传感器，应用 FMCW 测距技术，工作在 24GHz 频段，用于实现不受环境影响的人体静态存在检测。这也是一个个性化雷达，用户可以配置其底层参数来确定检测功能。</font>
+        <font size={"2.1"}>24GHz mmWave 传感器 - 人体静态存在模块 Lite 是一个集成天线、健康友好的 mmWave 雷达传感器，应用 FMCW 测距技术，工作在 24GHz 频段，用于实现不受环境影响的人体静态存在检测。这也是一个个性化雷达，用户可以配置其底层参数来确定检测功能。</font>
     </div> 
 </div>
 
@@ -301,11 +300,11 @@ last_update:
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即获取</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="/cn/Radar_MR24HPC1/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
+    <a class="get_one_now_item" href="/Radar_MR24HPC1/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
     </a>
 </div> -->
 
-## 毫米波雷达传感器不同参数的比较
+## 不同参数毫米波雷达传感器的比较
 
 ### 毫米波雷达传感器与其他传感器在人体存在检测功能方面的比较
 
@@ -323,9 +322,9 @@ last_update:
         <th>隐私性</th>
         <th>非视觉检测，隐蔽信号频段，数据泄露风险低</th>
         <td>收集包含大量私人信息的图像，容易泄露</td>
-        <td>不涉及私人图像收集，但信号容易被检测</td>
+        <td>不涉及私人图像收集，但信号容易被检测到</td>
         <td>扫描数据可能暴露场景信息，存在泄露风险</td>
-        <td>不涉及私人图像收集，但信号容易被检测</td>
+        <td>不涉及私人图像收集，但信号容易被检测到</td>
     </tr>
     <tr>
         <th>成本</th>
@@ -354,12 +353,13 @@ last_update:
 </font>
 </table>
 
-比较表突出了毫米波雷达相对于摄像头、超声波传感器、激光雷达和PIR传感器的优势。它在各种环境中提供稳定的性能，使其在跌倒检测、呼吸和心率监测以及人体存在检测方面非常有效。此外，毫米波雷达通过不捕获可识别图像来保护隐私，确保用户机密性。
+比较表格突出了毫米波雷达相对于摄像头、超声波传感器、激光雷达和PIR传感器的优势。它在各种环境中提供稳定的性能，使其在跌倒检测、呼吸和心率监测以及人体存在检测方面非常有效。此外，毫米波雷达通过不捕获可识别图像来保护隐私，确保用户机密性。
 
 ### 24 GHz和60 GHz的比较
-24 GHz和60 GHz毫米波雷达在特性上有显著差异。24 GHz雷达具有强穿透力和更长的检测范围，使其在人体存在检测方面非常有效，特别是在汽车雷达系统中。相比之下，60 GHz雷达虽然穿透力较弱但角度分辨率更高，非常适合跌倒检测和心率监测等精确应用，常见于智能家居设备中。最终，选择合适的频率取决于具体的应用需求，包括检测范围和目标特性。
 
-### 毫米波雷达传感器之间人体存在检测功能的比较
+24 GHz和60 GHz毫米波雷达在特性上存在显著差异。24 GHz雷达具有强穿透力和更长的检测范围，使其在人体存在检测方面非常有效，特别是在汽车雷达系统中。相比之下，60 GHz雷达虽然穿透力较弱，但具有更高的角度分辨率，非常适合精确应用，如跌倒检测和心率监测，常见于智能家居设备中。最终，选择合适的频率取决于具体的应用需求，包括检测范围和目标特性。
+
+### 毫米波雷达传感器人体存在检测功能比较
 
 <table align="center">
 <font size={"2"}>
@@ -376,7 +376,7 @@ last_update:
     <tr>
         <th>MR24HPC1 Lite</th>
         <td>✅</td>
-        <td>该产品具有人体存在检测功能，允许具有动手能力的用户调整底层参数以在复杂场景中获得最佳性能。但是，直接操作时其检测精度略低于24GHz mmWave for XIAO</td>
+        <td>该产品具有人体存在检测功能，允许具有动手能力的用户调整底层参数，以在复杂场景中获得最佳性能。但是，其检测精度在直接操作时略低于24GHz mmWave for XIAO</td>
     </tr>
     <tr>
         <th>MR60FDA2</th>
@@ -391,36 +391,36 @@ last_update:
 </font>
 </table>
 
-**24GHz mmWave for XIAO** 专为寻求便利和快速访问的用户设计。它提供人体存在检测和运动检测等功能，全部可通过蓝牙移动应用程序控制。开箱即用，简化了设置过程，让用户能够快速受益于其功能。以下是蓝牙应用程序界面：
+**24GHz mmWave for XIAO** 专为寻求便利和快速访问的用户而设计。它提供人体存在检测和运动检测等功能，全部可通过蓝牙移动应用程序控制。开箱即用，简化了设置过程，让用户能够快速受益于其功能。以下是蓝牙应用程序界面：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/7.png" style={{width:400, height:'auto'}}/></div>
 
-**MR24HPC1 Lite** 专为动手能力强的用户设计，具有人体存在、运动和速度检测功能，重点是针对各种场景的可定制参数调整。用户可以通过调整正确的参数来实现最佳检测结果，但必须仔细阅读文档才能充分利用其定制选项。以下是其上位机的操作界面：
+**MR24HPC1 Lite** 专为动手能力强的用户设计，具有人体存在、运动和速度检测功能，专注于针对各种场景的可定制参数调整。用户可以通过调整正确的参数来实现最佳检测效果，但必须仔细阅读文档才能充分利用其定制选项。以下是其上位机的操作界面：
 
 <div align="center"><img width ="{800}" src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/7.png"/></div>
 
 ## 毫米波雷达传感器：我们生活中的典型应用场景
 
-毫米波雷达传感器在不同行业的各种创新项目中得到应用。以下是一些例子：
+毫米波雷达传感器在不同行业的各种创新项目中得到应用。以下是一些示例：
 
-- 汽车安全系统：通过自适应巡航控制、自动紧急制动和盲点检测等功能增强驾驶辅助系统。
-- 智能家居设备：使用雷达传感器进行手势识别、存在检测和无接触生命体征监测。
-- 工业自动化：实施雷达监测机械设备、检测危险区域内的人员存在，并提高自动化环境的安全性。
-- 医疗保健应用：监测患者生命体征、检测跌倒，并提供非侵入性诊断工具。
+- 汽车安全系统：通过自适应巡航控制、自动紧急制动和盲点检测等功能增强驾驶员辅助系统。
+- 智能家居设备：使用雷达传感器进行手势识别、存在检测和无物理接触的生命体征监测。
+- 工业自动化：实施雷达监测机械、检测危险区域中的人体存在，并提高自动化环境中的安全性。
+- 医疗保健应用：监测患者的生命体征、检测跌倒并提供非侵入性诊断工具。
 - 无人机导航：使无人机能够避开障碍物、自主导航并执行精确着陆。
 
-这些项目展示了毫米波雷达技术在通过改进传感和自动化能力来变革各个领域方面的多功能性和潜力。
+这些项目展示了毫米波雷达技术在通过改进传感和自动化能力来改变各个领域方面的多功能性和潜力。
 
 当然，您也可以将我们的毫米波雷达传感器模块连接到HomeAssistant。以下是一些使用示例：
 
-- [MR60FDA2 跌倒检测传感器与 Home Assistant](https://wiki.seeedstudio.com/cn/ha_with_mr60fda2/)
-- [MR60BHA2 呼吸心跳传感器与 Home Assistant](https://wiki.seeedstudio.com/cn/ha_with_mr60bha2/)
-- [mmWave Kit 和 Grove 连接到 ESPHome](https://wiki.seeedstudio.com/cn/mmWave_Kit_And_Grove_Connect_To_ESPHome/)
-- [mmWave for XIAO 通过蓝牙连接到 Home Assistant](https://wiki.seeedstudio.com/cn/mmwave_for_xiao_to_ha_bt/)
+- [MR60FDA2 跌倒检测传感器与 Home Assistant](https://wiki.seeedstudio.com/ha_with_mr60fda2/)
+- [MR60BHA2 呼吸心跳传感器与 Home Assistant](https://wiki.seeedstudio.com/ha_with_mr60bha2/)
+- [毫米波套件和 Grove 连接到 ESPHome](https://wiki.seeedstudio.com/mmWave_Kit_And_Grove_Connect_To_ESPHome/)
+- [mmWave for XIAO 通过蓝牙连接到 Home Assistant](https://wiki.seeedstudio.com/mmwave_for_xiao_to_ha_bt/)
 
 ## 毫米波雷达传感器的安装方法
 
-**方法1：顶部安装。** 顶部悬挂安装高度2.2-3.0m，最大感应半径2m，带有毫米波传感器的一面需要与检测方向对齐。
+**方法1：顶部安装。** 顶部安装悬挂高度2.2-3.0m，最大感应半径2m，带有毫米波传感器的一侧需要与检测方向对齐。
 
 适用于：MR60FDA2、MR24HPC1、24GHz mmWave XIAO
 
@@ -445,7 +445,7 @@ MR60FDA2的安装高度阈值在2.4到3.0米之间，检测跌倒的高度阈值
 :::note
 请在开放空间中使用此模块，并在检测范围内避免以下场景，以防止对模块造成干扰：
 
-- 多个雷达安装距离过近
+- 多个雷达安装得过于接近
 - 风吹动窗帘和摇摆植物
 - 水流和水膜
 - 大面积金属和镜面反射
@@ -455,50 +455,56 @@ MR60FDA2的安装高度阈值在2.4到3.0米之间，检测跌倒的高度阈值
 
 :::
 
-## 开源 Seeed Studio mmWave 雷达传感器
+## 开源 Seeed Studio 毫米波雷达传感器
 
-### Seeed Studio MR60FDA2 mmWave 套件开源资料
-- **STL**: [mmWave 3D 外壳](https://files.seeedstudio.com/wiki/mmwave-for-xiao/Seeed_Studio_60GHz_mmWave_Human_Fall_Breating_and_Heartbeat_Detection_Sensor-MR60FDA2_MR60BHA2_Enclosure.stl)
-- **GitHub 仓库**: 在 [Seeed mmWave 库 GitHub 页面](https://github.com/Love4yzp/Seeed-mmWave-library) 访问完整的代码库和文档。
-- **ESPHome 文档**: 有关进一步定制和集成，请参考 [ESPHome 文档](https://esphome.io/)。
+### Seeed Studio MR60FDA2 毫米波套件开源资料
+
+- **STL**: [毫米波 3D 外壳](https://files.seeedstudio.com/wiki/mmwave-for-xiao/Seeed_Studio_60GHz_mmWave_Human_Fall_Breating_and_Heartbeat_Detection_Sensor-MR60FDA2_MR60BHA2_Enclosure.stl)
+- **GitHub 仓库**: 在 [Seeed 毫米波库 GitHub 页面](https://github.com/Love4yzp/Seeed-mmWave-library) 访问完整代码库和文档。
+- **ESPHome 文档**: 如需进一步定制和集成，请参考 [ESPHome 文档](https://esphome.io/)。
 - **MR60FDA2 固件升级工具**: [MR60FDA2_OTA.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60FDA2_OTA.zip)
 - **MR60FDA2 固件 v4.0.18**: [MR60FDA2_eeprom_v4.0.18.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60FDA2_eeprom_v4.0.18.bin)
 - **MR60FDA2 GUI 软件**: [Seeed_Studio_mmWave_Sensor_MR60FDA2_GUI.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/Seeed_Studio_mmWave_Sensor_MR60FDA2_GUI.zip)
-- **mmWave 传感器原理图 V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
+- **毫米波传感器原理图 V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
 - **MR60FDA2 模块技术规格**: [MR60FDA2_Fall_Detection_Module_Datasheet.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/MR60FDA2_Fall_Detection_Module_Datasheet.pdf)
 - **MR60FDA2 Tiny Frame 接口手册**: [Seeed_Studio_TinyFrame_Interface_Fall_detection_V1.1.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_TinyFrame_Interface_Fall_detection_V1.1.pdf)
 
-### Seeed Studio MR60BHA2 mmWave 套件开源资料
-- **STL**: [mmWave 3D 外壳](https://files.seeedstudio.com/wiki/mmwave-for-xiao/Seeed_Studio_60GHz_mmWave_Human_Fall_Breating_and_Heartbeat_Detection_Sensor-MR60FDA2_MR60BHA2_Enclosure.stl)
-- **GitHub 仓库**: 在 [Seeed mmWave 库 GitHub 页面](https://github.com/Love4yzp/Seeed-mmWave-library) 访问完整的代码库和文档。
-- **ESPHome 文档**: 有关进一步定制和集成，请参考 [ESPHome 文档](https://esphome.io/)。
+### Seeed Studio MR60BHA2 毫米波套件开源资料
+
+- **STL**: [毫米波 3D 外壳](https://files.seeedstudio.com/wiki/mmwave-for-xiao/Seeed_Studio_60GHz_mmWave_Human_Fall_Breating_and_Heartbeat_Detection_Sensor-MR60FDA2_MR60BHA2_Enclosure.stl)
+- **GitHub 仓库**: 在 [Seeed 毫米波库 GitHub 页面](https://github.com/Love4yzp/Seeed-mmWave-library) 访问完整代码库和文档。
+- **ESPHome 文档**: 如需进一步定制和集成，请参考 [ESPHome 文档](https://esphome.io/)。
 - **MR60BHA2 固件升级工具**: [MR60BHA2_OTA.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_OTA.zip)
 - **MR60BHA2 固件 v1.6.4**: [MR60BHA2_eeprom_1.6.4.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.4.bin)
 - **MR60BHA2 GUI 软件**: [Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip)
-- **mmWave 传感器原理图 V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
+- **毫米波传感器原理图 V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
 - **MR60BHA2 模块技术规格**: [MR60BHA2_Breathing_and_Heartbeat_Module.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/MR60BHA2_Breathing_and_Heartbeat_Module.pdf)
 - **MR60BHA2 Tiny Frame 接口手册**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)
 
-### Seeed Studio 24GHz mmWave for XIAO 开源资料
-- **24GHz mmWave for XIAO 技术规格**: [24GHz_mmWave_for_XIAO-Datasheet-V1.00.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz_mmWave_for_XIAO-Datasheet-V1.00.pdf)
-- **24GHz mmWave for XIAO 用户手册**: [24GHz_mmWave_for_XIAO-Usermanual-V1.00.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz_mmWave_for_XIAO-Usermanual-V1.00.pdf)
-- **24GHz mmWave for XIAO 原理图**: [24GHz-mmWave-for-xiao-SCH.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz-mmWave-for-xiao-SCH.pdf)
+### Seeed Studio 24GHz 毫米波 for XIAO 开源资料
 
-### Seeed Studio MR24HPC1 mmWave 套件开源资料
-- **GitHub 仓库**: 在 [项目开源](https://github.com/limengdu/mmwave-kit-external-components) 访问完整的代码库和文档。
+- **24GHz 毫米波 for XIAO 技术规格**: [24GHz_mmWave_for_XIAO-Datasheet-V1.00.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz_mmWave_for_XIAO-Datasheet-V1.00.pdf)
+- **24GHz 毫米波 for XIAO 用户手册**: [24GHz_mmWave_for_XIAO-Usermanual-V1.00.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz_mmWave_for_XIAO-Usermanual-V1.00.pdf)
+- **24GHz 毫米波 for XIAO 原理图**: [24GHz-mmWave-for-xiao-SCH.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz-mmWave-for-xiao-SCH.pdf)
+
+### Seeed Studio MR24HPC1 毫米波套件开源资料
+
+- **GitHub 仓库**: 在 [项目开源](https://github.com/limengdu/mmwave-kit-external-components) 访问完整代码库和文档。
 - **MR24HPC1 模块快速设置模板**: [MR24HPC1_Quick_Setup_Template-V1.0.pdf](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_Quick_Setup_Template-V1.0.pdf)
 - **MR24HPC1 模块技术规格**: [24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_Datasheet.pdf](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_Datasheet.pdf)
 - **MR24HPC1 模块用户手册 V1.5**: [MR24HPC1_User_Manual-V1.5.pdf](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_User_Manual-V1.5.pdf)
 
 #### 版本 1
+
 - **MR24HPC1 模块原理图&PCB V1.0**: [mmWare-kit_sch&pcb.zip](https://files.seeedstudio.com/wiki/mmwave_kit/mmWare-kit_sch&pcb.zip)
 - **MR24HPC1 模块原理图 V1.0**: [sch_mmware_kit.pdf](https://files.seeedstudio.com/wiki/mmwave_kit/sch_mmware_kit.pdf)
 
 #### 版本 2
+
 - **MR24HPC1 模块原理图&PCB V2.0**: [Human_Detection_Sensor_Board_V2.zip](https://files.seeedstudio.com/wiki/mmwave_kit/Human_Detection_Sensor_Board_V2.zip)
 - **MR24HPC1 模块原理图 V2.0**: [mmwave_kit_sch_V2.pdf](https://files.seeedstudio.com/wiki/mmwave_kit/mmwave_kit_sch_V2.pdf)
 
-### Seeed Studio 24GHz mmWave 传感器 MR24HPC1 开源资料
+### Seeed Studio 24GHz 毫米波传感器 MR24HPC1 开源资料
 
 - **MR24HPC1 模块快速设置模板**: [MR24HPC1_Quick_Setup_Template-V1.0.pdf](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_Quick_Setup_Template-V1.0.pdf)
 - **MR24HPC1 模块技术规格**: [24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_Datasheet.pdf](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_Datasheet.pdf)
@@ -522,11 +528,11 @@ Seeed Studio 毫米波雷达传感器中的原始数据和算法是非开源的�
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

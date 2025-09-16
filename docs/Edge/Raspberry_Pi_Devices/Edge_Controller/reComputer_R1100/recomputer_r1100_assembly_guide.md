@@ -213,7 +213,6 @@ The reComputer R1100 supports **vertical wall mounting**, but **mounting bracket
 ## Accessories List
 
 <div class="table-center">
-
 <table >
   <tbody>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -348,7 +347,6 @@ The reComputer R1100 supports **vertical wall mounting**, but **mounting bracket
       <td><a href="https://www.seeedstudio.com/Power-Adapter-12V-2A-EU-p-5732.html" target="_blank" rel="noopener noreferrer">Power Adapter-European</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110061506</td>
     </tr>
-
   </tbody>
 </table>
 </div>

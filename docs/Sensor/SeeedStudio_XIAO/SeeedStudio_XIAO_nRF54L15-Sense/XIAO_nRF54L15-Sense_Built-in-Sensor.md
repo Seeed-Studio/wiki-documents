@@ -14,6 +14,15 @@ sidebar_position: 1
 
 # Usage of Seeed Studio XIAO nRF54L15 Sense built-in Sensor
 
+The following sample code is designed for PlatformIO, but it is also compatible with the nRF Connect SDK.
+
+:::tip
+Based on VS Code, if you want to use the following case on the nRF Connect SDK, please refer to the provided connection, add the app.overlay file and modify the contents in prj.conf
+
+[XIAO nRF54L15 Add overlay file and modify conf file](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/).
+
+:::
+
 ## XIAO nRF54L15 Sense IMU
 
 **6-Axis IMU (Inertial Measurement Unit)** Sensors like the **LSM6DS3TR-C** integrate accelerometers and gyroscopes to measure the motion and orientation of an object in three-dimensional space. Specifically, the LSM6DS3TR-C has the following features:

@@ -16,14 +16,14 @@ last_update:
     </a>
 </div><br />
 
-XIAO IO 扩展器是一款先进的扩展板，专为增强 Seeed Studio XIAO 系列的功能而设计。该板由 MCP23017 芯片驱动，提供额外的 16 个 IO 引脚，让用户能够不受限制地扩展项目。无论您是希望尝试更多组件的爱好者，还是寻求可靠 IO 扩展解决方案的专业人士，这款板都能满足您的需求。它与 XIAO 系列的兼容性确保了无缝集成，让您的开发过程更加顺畅和高效。
+XIAO IO 扩展器是一款先进的扩展板，专为增强 Seeed Studio XIAO 系列的功能而设计。该扩展板采用 MCP23017 芯片，提供额外的 16 个 IO 引脚，让用户能够不受限制地扩展项目。无论您是希望尝试更多组件的爱好者，还是寻求可靠 IO 扩展解决方案的专业人士，这款扩展板都能满足您的需求。它与 XIAO 系列的兼容性确保了无缝集成，让您的开发过程更加顺畅和高效。
 
 ## 特性
 
 - 与 XIAO 无缝集成：专为与 Seeed Studio XIAO 系列完美配合而设计。
-- 16 个额外 IO 引脚：由 MCP23017 驱动，为您的项目提供 16 个额外的 IO 引脚。
+- 16 个额外 IO 引脚：采用 MCP23017 芯片，为您的项目提供 16 个额外的 IO 引脚。
 - 可配置地址的 I2C 接口：默认 I2C 地址为 0x21，但可配置为 0x20。
-- 坚固设计：采用高质量材料制造，确保持久性和可靠性。
+- 坚固设计：采用高品质材料制造，确保持久性和可靠性。
 
 ## 规格
 
@@ -42,7 +42,7 @@ XIAO IO 扩展器用途广泛，可用于多种应用，包括但不限于：
 - 机器人技术：为机器人添加更多传感器、电机或其他组件，而不会用完 IO 引脚。
 - 游戏控制台：设计具有大量按钮和开关的自定义控制器或其他外设。
 - 工业控制系统：在工业设置中管理更多设备和传感器。
-- 教育项目：教授学生微控制器和电子学知识，而不受 IO 引脚数量限制。
+- 教育项目：在不受 IO 引脚数量限制的情况下，向学生教授微控制器和电子学知识。
 
 ## 硬件概述
 
@@ -70,7 +70,7 @@ J1 焊盘允许用户通过焊接决定是否将 MCP23017 的 RST、INTB 和 INT
 
 ### 4. MCP23017 输出引脚
 
-这些是来自 MCP23017 芯片的输出引脚。每个引脚的定义可以在板的背面看到。它们的范围从 PA0 到 PB7，总共提供 16 个 IO。
+这些是来自 MCP23017 芯片的输出引脚。每个引脚的定义可以在板子背面看到。它们的范围从 PA0 到 PB7，总共提供 16 个 IO。
 
 ### 5. Grove 焊盘
 
@@ -94,9 +94,9 @@ J1 焊盘允许用户通过焊接决定是否将 MCP23017 的 RST、INTB 和 INT
 
 ### 硬件准备
 
-使用这个扩展板有三种主要方式，
+使用这个扩展板有三种主要方式：
 
-**模式 1：SMD**
+**方式 1：SMD**
 
 如果您的 XIAO 没有焊接引脚，那么您可以选择直接 SMD 方法将 XIAO 和扩展板焊接到 PCB 板上来使用 GPIO 扩展功能。
 
@@ -106,30 +106,27 @@ J1 焊盘允许用户通过焊接决定是否将 MCP23017 的 RST、INTB 和 INT
 图中的 PCB 仅用于展示，截至本文发布时并未上架销售。
 :::
 
-**模式 2：XIAO 通过排针直接连接扩展板**
+**方式 2：XIAO 通过排针直接连接扩展板**
 
 在这种方法中，您可以选择直接将连接线焊接到 GPIO 扩展板上来连接您的目标设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/5.jpg" alt="pir" width={800} height="auto" /></p>
 
+**方式 3：XIAO 通过长排针连接扩展板，扩展板通过焊接排针进行扩展**
 
-**模式 3：XIAO 通过长排针连接扩展板，扩展板通过焊接排针进行扩展**
-
-使用这种连接方法，您可以自由地在 GPIO 扩展板上安装杜邦线。为您的应用提供便捷的接线。
+使用这种连接方法，您可以自由地在 GPIO 扩展板上安装杜邦线。方便您的应用接线。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/6.jpg" alt="pir" width={800} height="auto" /></p>
 
-
 焊接完成后，您可以继续将扩展板连接到 XIAO RP2040 主控制器。
 
-
-要对 XIAO RP2040 进行编程，您需要一根 TYPE-C USB 数据线。将一端连接到 XIAO RP2040，另一端连接到您的计算机。有关 XIAO RP2040 编程的详细指南，请参考此 [Wiki](https://wiki.seeedstudio.com/cn/XIAO-RP2040/)。
+要对 XIAO RP2040 进行编程，您需要一根 TYPE-C USB 数据线。将一端连接到 XIAO RP2040，另一端连接到您的计算机。有关 XIAO RP2040 编程的详细指南，请参考此 [Wiki](https://wiki.seeedstudio.com/XIAO-RP2040/)。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/3.jpg" alt="pir" width={600} height="auto" /></p>
 
 ### 软件准备
 
-在开始对板子进行编程之前，您需要一个专门用于 XIAO 的库。从此 [GitHub 链接](https://github.com/limengdu/Adafruit-MCP23017-Arduino-Library) 下载 MCP23017 库。下载完成后，在您的编程环境中安装该库。
+在开始对板子进行编程之前，您需要一个专门用于 XIAO 的库。从这个 [GitHub 链接](https://github.com/limengdu/Adafruit-MCP23017-Arduino-Library) 下载 MCP23017 库。下载完成后，在您的编程环境中安装该库。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/Adafruit-MCP23017-Arduino-Library" target="_blank" rel="noopener noreferrer">
@@ -137,7 +134,7 @@ J1 焊盘允许用户通过焊接决定是否将 MCP23017 的 RST、INTB 和 INT
     </a>
 </div><br />
 
-## 演示：IO 输出高电平和低电平
+## 演示：IO 输出高低电平
 
 在 Arduino IDE 中，打开一个新的草图并复制以下示例代码：
 
@@ -185,7 +182,7 @@ void loop() {
 将上述代码上传到您的 XIAO。代码成功上传后，您将看到除了 PB7 引脚外，所有引脚都是 3.3V 高电平。
 
 :::caution
-此扩展板只能使用数字输入和输出，不能使用 PWM 或模拟输入和输出功能。
+此扩展板只能使用数字输入和输出，不能使用 PWM 或模拟输入输出功能。
 :::
 
 ### 引脚寻址
@@ -211,16 +208,15 @@ void loop() {
 |       7        |   GPB6   |   14   |
 |       8        |   GPB7   |   15   |
 
-
 ## 常见问题
 
 ### 1. 为什么我的 XIAO IO 扩展器没有响应？
 
-**答案**：确保 XIAO 模块正确插入扩展板。同时，检查是否安装了必要的库，以及在 Arduino IDE 中是否选择了正确的开发板和端口。
+**答案**：确保 XIAO 模块正确插入扩展板。同时，检查是否已安装必要的库，以及在 Arduino IDE 中是否选择了正确的开发板和端口。
 
 ### 2. 我可以将 XIAO IO 扩展器与其他微控制器一起使用吗？
 
-**答案**：是的，IO 扩展器主要为 XIAO 模块设计，但它也可以与其他支持 I2C 通信的微控制器一起使用。您可能需要相应地调整代码和连接。
+**答案**：是的，IO 扩展器主要为 XIAO 模块设计，但也可以与其他支持 I2C 通信的微控制器一起使用。您可能需要相应地调整代码和连接。
 
 ### 3. 如何更改 XIAO IO 扩展器上 MCP23017 芯片的 I2C 地址？
 

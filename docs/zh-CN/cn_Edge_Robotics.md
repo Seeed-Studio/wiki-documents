@@ -50,25 +50,32 @@ last_update:
 <div class="category-group">
   <div class="category-card robot-kits">
 
-## 🤗 Lerobot
+## 🤗 SO-Arm
 
 <div className="card-container">
-    <a href="/cn/lerobot_starai_arm/" className="nav-item">
-      <span className="text">Starai 机械臂</span>
-      <span className="tag recommended">New</span>
-    </a>
-    <a href="/cn/starai_arm_ros_moveit/" className="nav-item">
-      <span className="text">Starai 机械臂 Moveit</span>
-      <span className="tag recommended">New</span>
-    </a>
     <a href="/cn/lerobot_so100m_new/" className="nav-item">
       <span className="text">SO100/101 机械臂</span>
-      <span className="tag stable">Update</span>
     </a>
     <a href="/cn/simulate_soarm101_by_leisaac/" className="nav-item">
       <span className="text">SO100 机械臂与 IsaacSim</span>
+    </a>
+    <a href="/cn/control_robotic_arm_via_phospho/" className="nav-item">
+      <span className="text">Phospho Lerobot</span>
+    </a>
+    <a href="//training_soarm101_policy_with_isaacLab/" className="nav-item">
+    <span className="text">So Arm 强化学习</span>
+    <span className="tag recommended">New</span>
+    </a>
+    <a href="/simulate_soarm101_by_leisaac/" className="nav-item">
+      <span className="text">SO100 Arm 导入Isaac Sim</span>
       <span className="tag recommended">New</span>
     </a>
+</div>
+
+
+## 🚗 Lekiwi
+
+<div className="card-container">
     <a href="/cn/lerobot_lekiwi/" className="nav-item">
       <span className="text">Lekiwi 移动底盘</span>
        <span className="tag recommended">New</span>
@@ -76,9 +83,30 @@ last_update:
     <a href="/cn/sound_follow_robot/" className="nav-item">
       <span className="text">Lekiwi 声音跟随</span>
     </a>
-    <a href="/cn/control_robotic_arm_via_phospho/" className="nav-item">
-      <span className="text">Phospho Lerobot</span>
-       <span className="tag recommended">New</span>
+</div>
+
+
+## 🦾 StarAI Arm
+
+<div className="card-container">
+    <a href="/cn/lerobot_starai_arm/" className="nav-item">
+      <span className="text">Starai 机械臂</span>
+    </a>
+    <a href="/cn/starai_arm_ros_moveit/" className="nav-item">
+      <span className="text">Starai 机械臂 Moveit</span>
+    </a>
+    <a href="/cn/control_robotic_arm_via_gr00t" className="nav-item">
+  <span className="text">Starai Arm 跑Isaac GR00T</span>
+    </a>
+</div>
+
+
+## 🖐️ Hand
+
+<div className="card-container">
+    <a href="/hand_amazinghand/" className="nav-item">
+      <span className="text">AmazingHand</span>
+      <span className="tag recommended">New</span>
     </a>
 </div>
 
@@ -91,16 +119,16 @@ last_update:
 
 <div className="card-container">
     <a href="/cn/myactuator_series/" className="nav-item">
-      <span className="text">MyActuator X 系列</span>
+      <span className="text">0️⃣脉塔 X 系列</span>
     </a>
     <a href="/cn/damiao_series/" className="nav-item">
-      <span className="text">达妙 DM43 系列</span>
+      <span className="text">1️⃣达妙 DM43 系列</span>
     </a>
     <a href="/cn/feetech_servo/" className="nav-item">
-      <span className="text">飞特 STS3215 舵机</span>
+      <span className="text">2️⃣飞特 STS3215 舵机</span>
     </a>
     <a href="/cn/hightorque_series/" className="nav-item">
-      <span className="text">高扭矩系列</span>
+      <span className="text">3️⃣高擎 系列</span>
     </a>
 </div>
 
@@ -111,7 +139,7 @@ last_update:
 <div class="category-group">
 <div className="category-card sensors">
 
-**激光雷达**  
+**📡激光雷达**  
 
 <div className="card-container">
     <a href="/cn/robosense_lidar/" className="nav-item">
@@ -129,7 +157,7 @@ last_update:
 </div>
 
 
-**摄像头**  
+**📷摄像头**  
 
 <div className="card-container">
     <a href="/cn/orbbec_gemini2/" className="nav-item">
@@ -154,7 +182,7 @@ last_update:
     </a>
 </div>
 
-**语音**  
+**🎤语音**  
 
 <div className="card-container">
     <a href="/cn/ReSpeaker_Core_v2.0/" className="nav-item">
@@ -165,7 +193,7 @@ last_update:
     </a>
 </div>
 
-**IMU**  
+**🧭IMU**  
 
 <div className="card-container">
     <a href="/cn/hexfellow_y200/" className="nav-item">
@@ -203,12 +231,12 @@ last_update:
 
 **PX4**  
 <div className="card-container">
-<a href="/cn/control_px4_with_recomputer_jetson/" className="nav-item">
+<a href="/control_px4_with_recomputer_jetson/" className="nav-item">
   <span className="text">PX4 与 Jetson</span>
   <span className="tag recommended">New</span>
 </a>
 
-<a href="/cn/object_tracking_with_reComputer_jetson_and_pX4/" className="nav-item">
+<a href="/object_tracking_with_reComputer_jetson_and_pX4/" className="nav-item">
   <span className="text">PX4 目标跟踪</span>
   <span className="tag recommended">New</span>
 </a>
@@ -225,13 +253,17 @@ last_update:
   <span className="text">SO100 机械臂与 IsaacSim</span>
   <span className="tag recommended">New</span>
 </a>
+    <a href="//training_soarm101_policy_with_isaacLab/" className="nav-item">
+    <span className="text">So Arm 强化学习</span>
+    <span className="tag recommended">New</span>
+    </a>
 </div>
 
 
 **VLA**  
 <div className="card-container">
 <a href="/cn/control_robotic_arm_via_gr00t" className="nav-item">
-  <span className="text">NVIDIA 的 GR00T</span>
+  <span className="text">Star Ai Arm 跑Isaac GR00T</span>
 </a>
 </div>
 

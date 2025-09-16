@@ -31,7 +31,7 @@ last_update:
 <table align="center">
   <tbody><tr>
       <th>Seeed Studio XIAO ESP32C3</th>
-      <th>Seeed Studio Expansion Board</th>
+      <th>Seeed Studio 扩展板</th>
       <th>Home Assistant 设备</th>
     </tr>
     <tr>
@@ -51,7 +51,7 @@ last_update:
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-            <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
+            <a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> 查看更多 🖱️</font></span></strong>
             </a>
         </div></td>
@@ -61,15 +61,15 @@ last_update:
 **Grove 传感器**
 
 - [Grove - 温湿度传感器 (BME680)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
-- [Grove - 智能空气质量传感器 (SGP41)](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html)
+- [Grove -智能空气质量传感器 (SGP41)](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html)
 - [Grove - 模拟麦克风](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)
-- [Grove - 数字 PIR 传感器](https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html)
+- [Grove - 数字PIR传感器](https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html)
 
 ## 软件准备
 
 ### 安装 Home Assistant
 
-确保您已经安装并运行了 Home Assistant。这里有多个介绍如何将 Home Assistant 刷入[产品](https://wiki.seeedstudio.com/cn/home_assistant_topic/#-devices-for-home-assistant-)的wiki。我使用的是由树莓派 CM4 供电的 reRouter，所以我可以[直接使用官方方法将操作系统刷入 reRouter](https://www.home-assistant.io/installation/raspberrypi)。
+确保您已经安装并运行了 Home Assistant。这里有多个介绍如何将 Home Assistant 刷入[产品](https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-)的wiki。我使用的是由Raspberry Pi CM4供电的reRouter，所以我可以[直接使用官方版本将操作系统刷入reRouter](https://www.home-assistant.io/installation/raspberrypi)。
 
 ### 在 Home Assistant 上安装 ESPHome
 
@@ -89,7 +89,6 @@ ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单�
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/5.png" style={{width:300, height:'auto'}}/></div> -->
 
 - **步骤 1.** 点击 **INSTALL**
-
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/2.png" style={{width:900, height:'auto'}}/></div>
 
@@ -119,7 +118,7 @@ ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/6.png" style={{width:900, height:'auto'}}/></div>
 
-- **步骤 3.** 为设备输入一个**名称**，并输入WiFi凭据，如**网络名称**和**密码**。然后点击 **NEXT**
+- **步骤 3.** 为设备输入一个**名称**，并输入 WiFi 凭据，如**网络名称**和**密码**。然后点击 **NEXT**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/7.png" style={{width:900, height:'auto'}}/></div>
 
@@ -137,7 +136,7 @@ ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单�
 
 - **步骤 7.** 这将打开一个 **YAML** 文件，该文件将用于设置所有开发板配置。按如下方式编辑 **esp32** 下的内容
 
-``` 
+```
 esphome:
   name: xiao-esp32c3
   platformio_options:
@@ -178,18 +177,15 @@ wifi:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/10-2.png" style={{width:900, height:'auto'}}/></div>
 
-- **步骤 9.** 将 USB Type-C 线缆的一端连接到 Seeed Studio XIAO ESP32C3，另一端连接到 reRouter CM4 1432 上的其中一个 USB 端口
+- **步骤 9.** 将 USB Type-C 线缆的一端连接到 Seeed Studio XIAO ESP32C3，另一端连接到 reRouter CM4 1432 的其中一个 USB 端口
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/17.png" style={{width:900, height:'auto'}}/></div>
-
 
 - **步骤 10.** 点击 **Plug into the computer running ESPHome Dashboard**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/12-1.png" style={{width:900, height:'auto'}}/></div>
 
-- **步骤 11.** 选择已连接的端口。它很可能是
-
-```/dev/ttyACM1 因为 /dev/ttyACM0``` 已连接到 reRouter CM4 1432
+- **步骤 11.** 选择已连接的端口。很可能是 ```/dev/ttyACM1```，因为 ```/dev/ttyACM0``` 已连接到 reRouter CM4 1432
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/13-1.png" style={{width:900, height:'auto'}}/></div>
 
@@ -197,11 +193,11 @@ wifi:
 最好使用 2.4GHz Wi-Fi
 :::
 
-现在它将下载所有必要的开发板包并将 ESPHome 固件刷入 XIAO ESP32C3。如果刷写成功，您将看到以下输出。如果您看到错误，请尝试重启您的 xiao esp32c3 或按住 BOOT 按钮进入引导加载程序模式并连接 XIAO ESP32C3。
+现在它将下载所有必要的开发板包并将 ESPHome 固件刷入 XIAO ESP32C3。如果刷写成功，您将看到以下输出。如果您看到错误，请尝试重启您的 xiao esp32c3 或通过按住 BOOT 按钮进入引导加载程序模式并连接 XIAO ESP32C3。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/20.png" style={{width:900, height:'auto'}}/></div>
 
-- **步骤 12.** 上面的窗口显示来自连接开发板的实时日志。点击 **STOP** 关闭它
+- **步骤 12.** 上面的窗口显示来自已连接开发板的实时日志。点击 **STOP** 关闭它
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/14.png" style={{width:900, height:'auto'}}/></div>
 
@@ -272,7 +268,6 @@ wifi:
 - **步骤 2.** 在我们之前创建的 **xiao-esp32c3.yaml** 文件中，更改文件并通过 OTA 推送到 XIAO ESP32C3
 
 ```
-
 esphome:
   name: xiao-esp32c3
   platformio_options:
@@ -285,7 +280,7 @@ esp32:
     type: arduino
     platform_version: 5.4.0
 
-# 启用日志记录
+# Enable logging
 logger:
  hardware_uart: UART0
 
@@ -299,14 +294,14 @@ wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
 
-  # 如果wifi连接失败，启用回退热点（强制门户）
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Xiao-Esp32C3 Fallback Hotspot"
     password: "YtpCwOqLoYlp"
 
 captive_portal:
 
-# 0x28 是 DHT20 的 I2C 地址
+# 0x28 is the I2C address of DHT20
 i2c:
   sda: GPIO6
   scl: GPIO7
@@ -320,15 +315,13 @@ sensor:
     humidity:
       name: "Living Room Humidity"
     update_interval: 60s
-
 ```
 
-您可以在[这里](https://esphome.io/components/sensor/aht10)了解更多关于 DHT20 组件的信息。这里我们添加了 I²C 总线组件，因为 DHT20 使用 I2C 协议进行通信。
-
+您可以在[这里](https://esphome.io/components/sensor/aht10)了解更多关于 [DHT20 组件](https://esphome.io/components/sensor/aht10) 的信息。这里我们添加了 I²C 总线组件，因为 DHT20 使用 I2C 协议进行通信。
 
 ##### 在仪表板上可视化
 
-- **步骤 1.** 在 Home Assistant 的概览页面上，点击 3 个点，然后点击 **Edit Dashboard**
+- **步骤 1.** 在 Home Assistant 的概览页面上，点击 3 个点并点击 **Edit Dashboard**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/35.png"style={{width:900, height:'auto'}}/></div>
 
@@ -341,16 +334,16 @@ sensor:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/37.png"style={{width:900, height:'auto'}}/></div>
 
 - **步骤 4.** 点击 **ADD TO DASHBOARD**
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/38.png"style={{width:900, height:'auto'}}/></div>
 
-- **步骤 5.** 您也可以将传感器数据可视化为仪表。在 **BY CARD** 下点击 **Gauge**
+- **步骤 5.** 您也可以将传感器数据可视化为仪表盘。在 **BY CARD** 下点击 **Gauge**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/37-1.png"style={{width:900, height:'auto'}}/></div>
 
 现在您的 Home Assistant 仪表板将如下所示
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/39.png"style={{width:900, height:'auto'}}/></div>
-
 
 #### Grove - 光传感器(LS06-S)
 
@@ -368,13 +361,13 @@ Grove - 光传感器 v1.2 是一个模拟模块，可以输出各种电信号，
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/41-1.png"style={{width:900, height:'auto'}}/></div>
 
-如果一切顺利，您将看到这个结果。
+如果一切顺利，您将看到此结果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/42.png"style={{width:900, height:'auto'}}/></div>
 
 ##### 在仪表板上可视化
 
-- **步骤 1.** 在 Home Assistant 的概览页面上，点击 3 个点，然后点击 **Edit Dashboard**
+- **步骤 1.** 在 Home Assistant 的概览页面上，点击 3 个点并点击 **Edit Dashboard**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/35.png"style={{width:900, height:'auto'}}/></div>
 
@@ -402,7 +395,6 @@ Grove - 光传感器 v1.2 是一个模拟模块，可以输出各种电信号，
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/47.png"style={{width:900, height:'auto'}}/></div>
 
-
 <!-- #### Grove - 温湿度传感器 (BME680)
 
 Grove-温度&湿度&压力&气体传感器(BME680) 是一个多功能传感器，可以同时测量温度、压力、湿度和气体。它基于 BME680 模块，您可以在 GPS、物联网设备或其他需要这四个参数的设备中使用此传感器。[点击这里](https://www.seeedstudio.com/Grove-Temperature%2C-Humidity%2C-Pressure-and-Gas-Sensor-(BME680)-p-3109.html)购买。
@@ -416,7 +408,6 @@ Grove-温度&湿度&压力&气体传感器(BME680) 是一个多功能传感器�
 - **步骤 2.** 在我们之前创建的 **xiao-esp32c3.yaml** 文件中，更改文件并通过 OTA 推送到 XIAO ESP32C3
 
 ```
-
 esphome:
   name: xiao-esp32c3
   platformio_options:
@@ -429,11 +420,11 @@ esp32:
     type: arduino
     platform_version: 5.4.0
 
-# 启用日志记录
+# Enable logging
 logger:
  hardware_uart: UART0
 
-# 启用 Home Assistant API
+# Enable Home Assistant API
 api:
   password: "Your password"
 
@@ -444,7 +435,7 @@ wifi:
   ssid: "UMASS fried chicken"
   password: "Zacharyloveschicken"
 
-  # 如果wifi连接失败，启用备用热点（强制门户）
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Xiao-Esp32C3 Fallback Hotspot"
     password: "MoLTqZUvHwWI"
@@ -468,11 +459,9 @@ sensor:
       name: "BME680 Gas Resistance"
     address: 0x76
     update_interval: 60s
-
 ```
 
 您可以在[这里](https://esphome.io/components/sensor/bme680)了解更多关于[BME680组件](https://esphome.io/components/sensor/bme680)的信息。它允许您使用基于BME280、BME680、BMP085、BMP280、AHT10、AHT20和AHT21的传感器。这里我们添加I²C总线组件，因为AHT20使用I2C协议进行通信。
-
 
 ##### 在仪表板上可视化
 
@@ -525,10 +514,9 @@ SGP41数字气体传感器使用Sensirion的CMOSens®技术，在单个芯片上
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/38.jpg"style={{width:900, height:'auto'}}/></div>
 
-- **步骤2.** 在我们之前创建的**xiao-esp32c3.yaml**文件中，更改文件并通过OTA推送到XIAO ESP32C3
+- **步骤2.** 在我们之前创建的**xiao-esp32c3.yaml**文件中，修改文件并通过OTA推送到XIAO ESP32C3
 
 ```
-
 esphome:
   name: xiao-esp32c3
   platformio_options:
@@ -541,11 +529,11 @@ esp32:
     type: arduino
     platform_version: 5.4.0
 
-# 启用日志记录
+# Enable logging
 logger:
  hardware_uart: UART0
 
-# 启用 Home Assistant API
+# Enable Home Assistant API
 api:
   password: "Your password"
 
@@ -556,7 +544,7 @@ wifi:
   ssid: "UMASS fried chicken"
   password: "Zacharyloveschicken"
 
-  # 如果wifi连接失败，启用回退热点（强制门户）
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Xiao-Esp32C3 Fallback Hotspot"
     password: "MoLTqZUvHwWI"
@@ -587,7 +575,6 @@ sensor:
 ``` 
 
 ```
-
 esphome:
   name: xiao-esp32c3
   platformio_options:
@@ -656,8 +643,8 @@ sensor:
     compensation:
       humidity_source: bme680_hum
       temperature_source: bme680_temp
-
 ```
+
 **注意：** 此传感器需要90个周期来收集足够的数据样本，目前无法避免警告。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/38.png"style={{width:700, height:'auto'}}/></div>
@@ -670,15 +657,14 @@ sensor:
 
 <!-- #### Grove - 模拟麦克风
 
-Grove - 模拟麦克风基于高性能SiSonic MEMS技术，为开源硬件行业提供极低噪声、低电流、可靠且小型的麦克风，在恶劣条件下具有改进的性能。[点击这里](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)购买。
+Grove - 模拟麦克风基于高性能SiSonic MEMS技术，为开源硬件行业提供极低噪声、低电流、可靠且小巧的麦克风，在恶劣条件下具有改进的性能。[点击这里](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)购买。
 
 ##### 设置配置
 
-- **步骤1.** 将Grove - [模拟麦克风](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)连接到Seeed Studio XIAO扩展底板上的A0连接器
+- **步骤1.** 将Grove - [模拟麦克风](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)连接到Seeed Studio XIAO扩展底板的A0连接器
 
 - **步骤2.** 在我们之前创建的**xiao-esp32c3.yaml**文件中，修改文件并通过OTA推送到XIAO ESP32C3
 ```
-
 esphome:
   name: xiao-esp32c3
   platformio_options:
@@ -728,7 +714,6 @@ binary_sensor:
     pin: GPIO2
     name: "Sound level"
     device_class: sound
-
 ```
 
 您可以查看更多关于[二进制传感器组件](https://esphome.io/components/binary_sensor/index.html#binary-sensor-component)的信息
@@ -745,14 +730,13 @@ PIR传感器是一种用于检测人体运动的红外传感器。这款Grove数
 
 ##### 设置配置
 
-- **步骤1.** 将[Grove - 数字PIR传感器](https://wiki.seeedstudio.com/cn/Grove-Digital-PIR-Sensor/)连接到XIAO扩展底板的D7连接器上
+- **步骤1.** 将[Grove - 数字PIR传感器](https://wiki.seeedstudio.com/Grove-Digital-PIR-Sensor/)连接到Seeed Studio XIAO扩展底板的D7连接器上
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/42.jpg"style={{width:700, height:'auto'}}/></div>
 
 - **步骤2.** 在我们之前创建的**xiao-esp32c3.yaml**文件中，修改文件并通过OTA推送到XIAO ESP32C3
 
 ```
-
 esphome:
   name: xiao-esp32c3
   platformio_options:
@@ -802,7 +786,6 @@ binary_sensor:
     pin: GPIO20
     name: "PIR Sensor"
     device_class: motion
-
 ```
 
 ##### 在仪表板上可视化
@@ -821,14 +804,13 @@ binary_sensor:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/44.png"style={{width:700, height:'auto'}}/></div>
 
-- **步骤 3.** 点击 **文件编辑器** >>> 输入路径：**config/esphome** >>> **上传** 您的字体文件
+- **步骤 3.** 点击 **文件编辑器** >>> 输入路径：**config/esphome** >>> **上传** 你的字体文件
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/45.png"style={{width:700, height:'auto'}}/></div>
 
 - **步骤 4.** 在我们之前创建的 **xiao-esp32c3.yaml** 文件中，修改文件并通过 OTA 推送到 XIAO ESP32C3
 
 ```
-
 esphome:
   name: xiao-esp32c3
   platformio_options:
@@ -915,25 +897,26 @@ binary_sensor:
     name: "Sound level"
     device_class: sound
 ```
- 您可以[点击这里](https://esphome.io/components/display/#display-engine)了解更多关于显示组件的 ESPHome 强大渲染和显示引擎。
+
+ 您可以通过[点击这里](https://esphome.io/components/display/#display-engine)探索更多关于显示组件的信息，该组件包含了ESPHome强大的渲染和显示引擎。
  
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/46.jpg"style={{width:700, height:'auto'}}/></div> -->
 
 ## ✨ 贡献者项目
 
 - 本项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
-- 感谢 [Zachary 的努力](https://github.com/Seeed-Studio/wiki-documents/issues/603)，您的工作将被[展示](https://wiki.seeedstudio.com/cn/Honorary-Contributors/)。
+- 感谢 [Zachary 的努力](https://github.com/Seeed-Studio/wiki-documents/issues/603)，您的工作将会被[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)。
 
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

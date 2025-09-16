@@ -1,5 +1,5 @@
 ---
-description: Descubre los servicios en la nube SenseCraft de Seeed — una plataforma potente de grado industrial diseñada para la gestión eficiente de datos, operaciones en tiempo real y aplicaciones IoT escalables. Aprende más sobre cómo SenseCraft apoya tu despliegue de IoT industrial en la nube.
+description: Descubre los servicios de SenseCraft Cloud de Seeed — una plataforma potente de grado industrial diseñada para la gestión eficiente de datos, operaciones en tiempo real y aplicaciones IoT escalables. Aprende más sobre cómo SenseCraft apoya tu implementación de IoT industrial en la nube.
 title: Nube
 keywords:
 - SenseCraft Matrix
@@ -17,9 +17,9 @@ last_update:
   author: Jancee
 ---
 
-Los servicios en la nube son un componente vital que permite la gestión de datos procesados desde placas de computación y proporciona a los usuarios operaciones en tiempo real. Esta página presenta los servicios en la nube SenseCraft de grado industrial de Seeed, junto con otras aplicaciones de servicios en la nube adaptadas para diversas necesidades de IoT industrial. A través de una infraestructura en la nube robusta, Seeed empodera a los usuarios para almacenar, analizar y aprovechar datos procesados de manera segura, facilitando la toma de decisiones basada en datos y mejorando la eficiencia operacional en varios dominios.
+Los servicios en la nube son un componente vital que permite la gestión de datos procesados desde placas de computación y proporciona a los usuarios operaciones en tiempo real. Esta página presenta los servicios en la nube SenseCraft de grado industrial de Seeed, junto con otras aplicaciones de servicios en la nube adaptadas para diversas necesidades de IoT industrial. A través de una infraestructura de nube robusta, Seeed empodera a los usuarios para almacenar, analizar y aprovechar datos procesados de forma segura, facilitando la toma de decisiones basada en datos y mejorando la eficiencia operacional en varios dominios.
 
-## Servicio en la Nube SenseCraft
+## Servicio SenseCraft Cloud
 
 <strong><font color={'8DC215'} size={"4"}>Esta sección destaca diferentes servicios en la nube ofrecidos por Seeed Studio, adaptados para varias aplicaciones de IoT industrial. Puedes explorar más en las siguientes áreas:</font></strong>
 
@@ -73,7 +73,7 @@ Los servicios en la nube son un componente vital que permite la gestión de dato
             <br/>
             <a href="/es/sensecraft-data-platform/tutorials/device-management#location" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Ubicación del Dispositivo</strong></font></span></a>
             /
-            <a href="/es/sensecraft-data-platform/tutorials/device-management#bind-device" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Vinculación de Dispositivo</strong></font></span></a>
+            <a href="/es/sensecraft-data-platform/tutorials/device-management#bind-device" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Vinculación de Dispositivos</strong></font></span></a>
             /
             <a href="/es/sensecraft-data-platform/tutorials/device-management#channel" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Canales del Dispositivo</strong></font></span></a>
             /
@@ -81,23 +81,23 @@ Los servicios en la nube son un componente vital que permite la gestión de dato
     </div>
 </div>
 
-### Aplicación SenseCAP HotSpot
+### APP SenseCAP HotSpot
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Aplicación Blockchain SenseCAP MX</font></div>
-            <p>La Aplicación SenseCAP HotSpot se usa en teléfonos móviles para gestionar hotspots LoRaWAN.</p>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>App Blockchain SenseCAP MX</font></div>
+            <p>La App SenseCAP HotSpot se usa en teléfonos móviles para gestionar hotspots LoRaWAN.</p>
             <br/>
             > <a href="/es/sensecraft-blockchain/sensecraft-hotspot-app/download-app" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Descargar</font></span></a> / <a href="/es/sensecraft-blockchain/sensecraft-hotspot-app/hotspot-management" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Gestión de Hotspot</font></span></a> / <a href="/es/sensecraft-blockchain/sensecraft-hotspot-app/remote-reboot" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Reinicio Remoto</font></span></a> / <a href="/es/sensecraft-blockchain/sensecraft-hotspot-app/hotspot-onboarding" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Incorporación de Hotspot</font></span></a>
     </div>
 </div>
 
-### SenseCraft APP
+### APP SenseCraft
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft App</font></div>
-            <p>SenseCraft App se utiliza en teléfonos móviles para configurar, construir y gestionar sensores, y mostrar datos de la Plataforma de Datos SenseCraft.</p>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>App SenseCraft</font></div>
+            <p>La App SenseCraft se usa en teléfonos móviles para configurar, construir y gestionar sensores, y mostrar datos de la Plataforma de Datos SenseCraft.</p>
             <br/>
             > <a href="/es/sensecraft-app/overview#download" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Descargar</font></span></a> / <a href="/es/sensecraft-app/overview#config" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Vincular Dispositivos</font></span></a> / <a href="/es/sensecraft-app/overview#account" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Cuenta</font></span></a> / <a href="/es/sensecraft-app/overview#user" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Usuario</font></span></a>
     </div>
@@ -115,11 +115,11 @@ Los servicios en la nube son un componente vital que permite la gestión de dato
     </div>
 </div>
 
-### SenseCAP Data Platform - API
+### Plataforma de Datos SenseCAP - API
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft Data Platform - API</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Plataforma de Datos SenseCraft - API</font></div>
             <p>La API de la Plataforma de Datos SenseCraft soporta gestión de dispositivos y datos.</p>
             <br/>
             > <a href="https://sensecap-docs.seeed.cc/pdf/sensecap_opanapi_document_en.pdf" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Descargar PDF</font></span></a> / <a href="/es/sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Introducción a la API</font></span></a> / <a href="/es/sensecraft-fee/sensecraft-data-platform-api-pricing" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Precios de la API</font></span></a>

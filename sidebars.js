@@ -1257,6 +1257,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Getting_Started',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Pin_Multiplexing',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Built-in-Sensor',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Power_Consumptions',
             {
               type: 'category',
               label: 'Wireless Connection',
@@ -3281,9 +3282,6 @@ const sidebars = {
                 type: 'category',
                 label: 'Cloud Solution',
                 items: [
-
-
-
                     {
                       type: 'category',
                       label: 'AWS IoT Core Integration (R1000 / reTerminal DM)',
@@ -3292,13 +3290,9 @@ const sidebars = {
                         'Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/reTerminal-DM_AWS_first',
                       ]
                     },
-
-
                   'Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/reTerminal-DM_Azure_IoT',
                 ]
               },
-
-
 
               {
                 type: 'category',
@@ -3391,7 +3385,6 @@ const sidebars = {
                   'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/weather-dashboard-with-Grafana-reTerminal',
                 ]
               },
-
               {
                 type: 'category',
                 label: 'Edge Impulse Object Detection',
@@ -3400,30 +3393,23 @@ const sidebars = {
                   'Edge/Raspberry_Pi_Devices/Application/AIoT/Edge_Impulse_Object_Detection/reTerminal-DM-edgeimpulse',
                 ]
               },
-
-
               {
-                    type: 'category',
-                    label: 'Ignition Edge (reComputer R1000 / reTerminal DM)',
-                    items: [
-                        'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal DM)/Edgebox-rpi-200-ignition-edge',
-                        'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal DM)/reTerminal-DM-Getting-Started-with-Ignition-Edge',
-                        'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal DM)/reTerminal-DM-Ignition-Edge-Panel-Builder',
-                    ]
+                type: 'category',
+                label: 'Ignition Edge (reComputer R1000 / reTerminal DM)',
+                items: [
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/Edgebox-rpi-200-ignition-edge',
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/reTerminal-DM-Getting-Started-with-Ignition-Edge',
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/reTerminal-DM-Ignition-Edge-Panel-Builder',
+                ]
               },
-
-
-
               {
-                    type: 'category',
-                    label: 'ThingsBoard Integration',
-                    items: [
-                        'Edge/Raspberry_Pi_Devices/Application/AIoT/ThingsBoard_Integration/recomputer_r1000_thingsboard_ce',
-                        'Edge/Raspberry_Pi_Devices/Application/AIoT/ThingsBoard_Integration/recomputer_r1000_thingsboard_dashboard',
-                    ]
+                type: 'category',
+                label: 'ThingsBoard Integration',
+                items: [
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/ThingsBoard_Integration/recomputer_r1000_thingsboard_ce',
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/ThingsBoard_Integration/recomputer_r1000_thingsboard_dashboard',
+                ]
               },
-
-
               {
                 type: 'category',
                 label: 'CODESYS with Modbus on R1000',
@@ -3432,8 +3418,6 @@ const sidebars = {
                      'Edge/Raspberry_Pi_Devices/Application/AIoT/CODESYS_with_Modbus_on_R1000/recomputer_r1000_with_codesys_use_modbus_rtu',
                 ]
               },
-
-
               {
                 type: 'category',
                 label: 'Others',
@@ -3459,49 +3443,40 @@ const sidebars = {
                   'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Benchmark/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit',
                 ]
               },
-            
-
               {
+                type: 'category',
+                label: 'OpenCV Demos (reTerminal & Pi Camera)',
+                items: [
+                  {
                     type: 'category',
-                    label: 'OpenCV Demos (reTerminal & Pi Camera)',
+                    label: 'Object/Face/Color/Shape Detection',
                     items: [
-
-
-                    {
-                      type: 'category',
-                      label: 'Object/Face/Color/Shape Detection',
-                      items: [
-                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Color_detection',
-                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Face_detection',
-                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Object_detection',
-                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Shape_detection',
-                      ]
-                    },
-
-                      'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/reTerminal_DM_opencv',
-                      'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/reTerminal_DM-tracking',
+                      'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Color_detection',
+                      'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Face_detection',
+                      'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Object_detection',
+                      'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Shape_detection',
                     ]
+                  },
+                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/reTerminal_DM_opencv',
+                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/reTerminal_DM-tracking',
+                ]
               },
-
-
               {
                 type: 'category',
                 label: 'YOLO-based Applications',
                 items: [
-                  
-                        {
-                      type: 'category',
-                      label: 'YOLOv8  Object Detection (Pi 5 / R1000 / AI Box)',
-                      items: [
-                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection',
-                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
-                      ]
-                    },
-                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/reTerminal-DM-Yolo5',
-                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
-                 ]
+                  {
+                    type: 'category',
+                    label: 'YOLOv8  Object Detection (Pi 5 / R1000 / AI Box)',
+                    items: [
+                      'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection',
+                      'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
+                    ]
+                  },
+                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/reTerminal-DM-Yolo5',
+                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
+                ]
               },
-
               {
                 type: 'category',
                 label: 'NVR',
@@ -3514,8 +3489,6 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/zoneminder_on_recomputer'
                 ]
               },
-
-
               {
                 type: 'category',
                 label: 'Other AI Applications',
@@ -3529,7 +3502,6 @@ const sidebars = {
                   'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
                  ]
               },
-
             ]
           },
           {
@@ -3894,6 +3866,8 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Roboflow-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Install_torch_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/vnc_for_reComputer',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/Implement_Ethercat_communication_on_reComputer',
+
                 
                 
 
@@ -3954,6 +3928,7 @@ const sidebars = {
         'Edge/Beagle_Bone/BeagleBone_Blue',
         'Edge/Beagle_Bone/BeagleBone_Green',
         'Edge/Beagle_Bone/BeagleBone_Green_Wireless',
+        'Edge/Beagle_Bone/BeagleBone_Green_Eco',
         'Edge/Beagle_Bone/BeagleBone-Green-Gateway',
         'Edge/Beagle_Bone/Beaglebone_Case',
         {
@@ -4153,14 +4128,26 @@ const sidebars = {
                 //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
                 // },
                 items: [
+                  //'Robotics/Robot_Kits/Lerobot/En_Hackathon_Thor',
+                  'Robotics/Robot_Kits/Lerobot/Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                   'Robotics/Robot_Kits/Lerobot/Lerobot_Starai_Arm',
                   'Robotics/Robot_Kits/Lerobot/Starai_Arm_ROS2_Moveit',
                   'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm_New',
                   //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
                   'Robotics/Robot_Kits/Lerobot/Lerobot_Lekiwi',
                   'Robotics/Robot_Kits/Lerobot/Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
-                  'Robotics/Robot_Kits/Lerobot/Lerobot_AmazingHand',
                     ]},
+
+                    {
+                      type: 'category',
+                      label: 'Hand',
+                        // link: {
+                        //   type: "doc",
+                        //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
+                        // },
+                        items: [
+                          'Robotics/Robot_Kits/Hand/AmazingHand',
+                            ]},
 
           ]
         },
@@ -4271,7 +4258,7 @@ const sidebars = {
                     ]},
             'Robotics/Robot_Software/VLA/control_robotic_arm_via_gr00t',
             'Robotics/Robot_Software/control_robotic_arm_via_phospho',
-            'Robotics/Robot_Software/Implement_Ethercat_communication_on_reComputer',
+            
           ]
 
     },
@@ -8061,8 +8048,14 @@ const sidebars = {
                   type: 'category',
                   label: '云解决方案',
                   items: [
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/cn_recomputer_r1000_aws',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/cn_reTerminal-DM_AWS_first',
+                    {
+                      type: 'category',
+                      label: 'AWS IoT Core 集成 (R1000 / reTerminal DM)',
+                      items: [
+                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/cn_recomputer_r1000_aws', 
+                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/cn_reTerminal-DM_AWS_first', 
+                      ]
+                    },
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/cn_reTerminal-DM_Azure_IoT',
                   ],
                 },
@@ -8159,20 +8152,46 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'Edge Impulse 目标检测',
+                  items: [
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Edge_Impulse_Object_Detection/cn_reTerminal_ML_Edgeimpulse',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Edge_Impulse_Object_Detection/cn_reTerminal-DM-edgeimpulse',
+                  ]
+                },
+                {
+                  type: 'category',
+                  label: 'Ignition Edge (reComputer R1000 / reTerminal DM)',
+                  items: [
+                      'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/cn_Edgebox-rpi-200-ignition-edge',
+                      'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/cn_reTerminal-DM-Getting-Started-with-Ignition-Edge',
+                      'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/cn_reTerminal-DM-Ignition-Edge-Panel-Builder',
+                  ]
+                },
+                {
+                  type: 'category',
+                  label: 'ThingsBoard 集成',
+                  items: [
+                      'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/ThingsBoard_Integration/cn_recomputer_r1000_thingsboard_ce',
+                      'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/ThingsBoard_Integration/cn_recomputer_r1000_thingsboard_dashboard',
+                  ]
+                },
+                {
+                  type: 'category',
+                  label: 'R1000 上的 CODESYS 与 Modbus',
+                  items: [
+                      'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/CODESYS_with_Modbus_on_R1000/cn_recomputer_r1000_install_codesys',
+                      'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/CODESYS_with_Modbus_on_R1000/cn_recomputer_r1000_with_codesys_use_modbus_rtu',
+                  ]
+                },
+                {
+                  type: 'category',
                   label: '其他',
                   items: [
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_Edgebox-rpi-200-ignition-edge',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_Mender-Client-reTerminal',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_recomputer_r1000_flowfuse_getting_start',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_recomputer_r1000_install_codesys',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_recomputer_r1000_thingsboard_ce',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_recomputer_r1000_thingsboard_dashboard',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_recomputer_r1000_with_codesys_use_modbus_rtu',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_reTerminal-DM_intro_machinechat_jedi',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_reTerminal-DM-Getting-Started-with-Ignition-Edge',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_reTerminal-DM-Ignition-Edge-Panel-Builder',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_reterminal-dm-sensecraft-edge-os-intro',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_recomputer_use_ups',
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_Mender-Client-reTerminal',
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_recomputer_r1000_flowfuse_getting_start',
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_reTerminal-DM_intro_machinechat_jedi',
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_reterminal-dm-sensecraft-edge-os-intro',
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_recomputer_use_ups'
                   ],
                 },
               ],
@@ -8189,18 +8208,40 @@ const sidebars = {
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Benchmark/cn_benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit',
                   ],
                 },
-                {
-                  type: 'category',
-                  label: 'OpenCV',
-                  items: [
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/cn_reTerminal_DM_Color_detection',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/cn_reTerminal_DM_Face_detection',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/cn_reTerminal_DM_Object_detection',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/cn_reTerminal_DM_opencv',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/cn_reTerminal_DM_Shape_detection',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/cn_reTerminal_DM-tracking',
-                  ],
-                },
+              {
+                type: 'category',
+                label: 'OpenCV Demos (reTerminal & Pi Camera)',
+                items: [
+                  {
+                    type: 'category',
+                    label: 'Object/Face/Color/Shape Detection',
+                    items: [
+                      'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/cn_reTerminal_DM_Color_detection',
+                      'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/cn_reTerminal_DM_Face_detection',
+                      'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/cn_reTerminal_DM_Object_detection',
+                      'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/cn_reTerminal_DM_Shape_detection',
+                    ]
+                  },
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/cn_reTerminal_DM_opencv',
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/cn_reTerminal_DM-tracking',
+                ]
+              },
+              {
+                type: 'category',
+                label: 'YOLO-based Applications',
+                items: [
+                  {
+                    type: 'category',
+                    label: 'YOLOv8  Object Detection (Pi 5 / R1000 / AI Box)',
+                    items: [
+                      'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/cn_Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection',
+                      'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/cn_yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
+                    ]
+                  },
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/cn_reTerminal-DM-Yolo5',
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/cn_yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
+                ]
+              },
               {
                 type: 'category',
                 label: 'NVR',
@@ -8211,19 +8252,19 @@ const sidebars = {
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_reterminal-DM-Frigate',
                 ]
               },
-                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/cn_clip_application_on_rpi_with_ai_kit',
-                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/cn_convert_model_to_edge_tpu_tflite_format_for_google_coral',
-                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/cn_install_m.2_coral_to_rpi5',
-                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/cn_pose_based_light_control_with_nodered_and_rpi_with_aikit',
-                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/cn_reTerminal_ML_Edgeimpulse',
-                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/cn_reTerminal_ML_TFLite',
-                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/cn_reTerminal-DM-edgeimpulse',
-                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/cn_reTerminal-DM-Yolo5',
-                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/cn_tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
-                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/cn_yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
-                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/cn_yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
-                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/cn_real-time-ocr',
-                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/cn_Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection',
+              {
+                type: 'category',
+                label: '其他 AI 应用',
+                items: [
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/cn_clip_application_on_rpi_with_ai_kit',
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/cn_convert_model_to_edge_tpu_tflite_format_for_google_coral',
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/cn_install_m.2_coral_to_rpi5',
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/cn_pose_based_light_control_with_nodered_and_rpi_with_aikit',
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/cn_real-time-ocr',
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/cn_reTerminal_ML_TFLite',
+                  'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/cn_tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
+                 ]
+              },
               ],
             },
             {
@@ -12931,8 +12972,14 @@ const sidebars = {
                 type: 'category',
                 label: 'Solución en la Nube',
                 items: [
-                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/es_recomputer_r1000_aws',
-                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/es_reTerminal-DM_AWS_first',
+                  { 
+                    type: 'category', 
+                    label: 'Integración con AWS IoT Core (R1000 / reTerminal DM)', 
+                    items: [ 
+                      'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/es_recomputer_r1000_aws', 
+                      'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/es_reTerminal-DM_AWS_first', 
+                    ] 
+                  },
                   'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/es_reTerminal-DM_Azure_IoT',
                 ]
               },
@@ -13027,22 +13074,48 @@ const sidebars = {
                   'es/Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/es_weather-dashboard-with-Grafana-reTerminal',
                 ]
               },
+              { 
+                type: 'category', 
+                label: 'Detección de Objetos con Edge Impulse', 
+                items: [ 
+                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Edge_Impulse_Object_Detection/es_reTerminal_ML_Edgeimpulse', 
+                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Edge_Impulse_Object_Detection/es_reTerminal-DM-edgeimpulse', 
+                ] 
+              }, 
+              { 
+                type: 'category', 
+                label: 'Ignition Edge (reComputer R1000 / reTerminal DM)', 
+                items: [ 
+                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/es_Edgebox-rpi-200-ignition-edge', 
+                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/es_reTerminal-DM-Getting-Started-with-Ignition-Edge', 
+                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/es_reTerminal-DM-Ignition-Edge-Panel-Builder', 
+                ] 
+              }, 
+              { 
+                type: 'category', 
+                label: 'Integración con ThingsBoard', 
+                items: [ 
+                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/ThingsBoard_Integration/es_recomputer_r1000_thingsboard_ce', 
+                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/ThingsBoard_Integration/es_recomputer_r1000_thingsboard_dashboard', 
+                ] 
+              }, 
+              { 
+                type: 'category', 
+                label: 'CODESYS con Modbus en R1000', 
+                items: [ 
+                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/CODESYS_with_Modbus_on_R1000/es_recomputer_r1000_install_codesys', 
+                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/CODESYS_with_Modbus_on_R1000/es_recomputer_r1000_with_codesys_use_modbus_rtu', 
+                ] 
+              },
               {
                 type: 'category',
                 label: 'Otros',
                 items: [
-                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_Edgebox-rpi-200-ignition-edge',
                   'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_Mender-Client-reTerminal',
                   'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_recomputer_r1000_flowfuse_getting_start',
-                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_recomputer_r1000_install_codesys',
-                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_recomputer_r1000_thingsboard_ce',
-                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_recomputer_r1000_thingsboard_dashboard',
-                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_recomputer_r1000_with_codesys_use_modbus_rtu',
                   'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_reTerminal-DM_intro_machinechat_jedi',
-                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_reTerminal-DM-Getting-Started-with-Ignition-Edge',
-                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_reTerminal-DM-Ignition-Edge-Panel-Builder',
                   'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_reterminal-dm-sensecraft-edge-os-intro',
-                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_recomputer_use_ups',
+                  'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_recomputer_use_ups'
                 ]
               },
             ]
@@ -13061,14 +13134,36 @@ const sidebars = {
               },
               {
                 type: 'category',
-                label: 'OpenCV',
+                label: 'Demos de OpenCV (reTerminal y Cámara Pi)',
                 items: [
-                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/es_reTerminal_DM_Color_detection',
-                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/es_reTerminal_DM_Face_detection',
-                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/es_reTerminal_DM_Object_detection',
-                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/es_reTerminal_DM_opencv',
-                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/es_reTerminal_DM_Shape_detection',
-                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/es_reTerminal_DM-tracking',
+                  {
+                    type: 'category',
+                    label: 'Detección de Objetos/Rostros/Colores/Formas',
+                    items: [
+                      'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/es_reTerminal_DM_Color_detection',
+                      'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/es_reTerminal_DM_Face_detection',
+                      'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/es_reTerminal_DM_Object_detection',
+                      'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/es_reTerminal_DM_Shape_detection',
+                    ]
+                  },
+                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/es_reTerminal_DM_opencv',
+                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/es_reTerminal_DM-tracking',
+                ]
+              },
+              {
+                type: 'category',
+                label: 'Aplicaciones basadas en YOLO',
+                items: [
+                  {
+                    type: 'category',
+                    label: 'Detección de Objetos con YOLOv8 (Pi 5 / R1000 / AI Box)',
+                    items: [
+                      'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/es_Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection',
+                      'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/es_yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
+                    ]
+                  },
+                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/es_reTerminal-DM-Yolo5',
+                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/es_yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
                 ]
               },
               {
@@ -13080,21 +13175,22 @@ const sidebars = {
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_frigate_nvr_with_raspberrypi_5',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_reterminal_frigate',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_reterminal-DM-Frigate',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_zoneminder_on_recomputer'
                 ]
               },
-              'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/es_clip_application_on_rpi_with_ai_kit',
-              'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/es_convert_model_to_edge_tpu_tflite_format_for_google_coral',
-              'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/es_install_m.2_coral_to_rpi5',
-              'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/es_pose_based_light_control_with_nodered_and_rpi_with_aikit',
-              'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/es_reTerminal_ML_Edgeimpulse', 
-              'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/es_reTerminal_ML_TFLite',
-              'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/es_reTerminal-DM-edgeimpulse',
-              'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/es_reTerminal-DM-Yolo5',
-              'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/es_tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
-              'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/es_yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
-              'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/es_yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
-              'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/es_real-time-ocr',
-              'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/es_Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection'
+              {
+                type: 'category',
+                label: 'Otras Aplicaciones de IA',
+                items: [
+                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/es_clip_application_on_rpi_with_ai_kit',
+                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/es_convert_model_to_edge_tpu_tflite_format_for_google_coral',
+                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/es_install_m.2_coral_to_rpi5',
+                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/es_pose_based_light_control_with_nodered_and_rpi_with_aikit',
+                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/es_real-time-ocr',
+                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/es_reTerminal_ML_TFLite',
+                  'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/es_tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
+                ]
+              },
             ]
           },
           {
@@ -17520,8 +17616,14 @@ const sidebars = {
                 type: 'category',
                 label: 'クラウドソリューション',
                 items: [
-                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/ja_recomputer_r1000_aws',
-                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/ja_reTerminal-DM_AWS_first',
+                  {
+                    type: 'category',
+                    label: 'AWS IoT Core 統合 (R1000 / reTerminal DM)',
+                    items: [
+                      'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/ja_recomputer_r1000_aws',
+                      'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/ja_reTerminal-DM_AWS_first',
+                    ]
+                  },
                   'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/ja_reTerminal-DM_Azure_IoT',
                 ]
               },
@@ -17618,18 +17720,44 @@ const sidebars = {
               },
               {
                 type: 'category',
+                label: 'Edge Impulse 物体検出',
+                items: [
+                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Edge_Impulse_Object_Detection/ja_reTerminal_ML_Edgeimpulse',
+                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Edge_Impulse_Object_Detection/ja_reTerminal-DM-edgeimpulse',
+                ]
+              },
+              {
+                type: 'category',
+                label: 'Ignition Edge (reComputer R1000 / reTerminal DM)',
+                items: [
+                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/ja_Edgebox-rpi-200-ignition-edge',
+                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/ja_reTerminal-DM-Getting-Started-with-Ignition-Edge',
+                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/ja_reTerminal-DM-Ignition-Edge-Panel-Builder',
+                ]
+              },
+              {
+                type: 'category',
+                label: 'ThingsBoard 統合',
+                items: [
+                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/ThingsBoard_Integration/ja_recomputer_r1000_thingsboard_ce',
+                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/ThingsBoard_Integration/ja_recomputer_r1000_thingsboard_dashboard',
+                ]
+              },
+              {
+                type: 'category',
+                label: 'R1000でのCODESYSとModbus',
+                items: [
+                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/CODESYS_with_Modbus_on_R1000/ja_recomputer_r1000_install_codesys',
+                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/CODESYS_with_Modbus_on_R1000/ja_recomputer_r1000_with_codesys_use_modbus_rtu',
+                ]
+              },
+              {
+                type: 'category',
                 label: 'その他',
                 items: [
-                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_Edgebox-rpi-200-ignition-edge',
                   'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_Mender-Client-reTerminal',
                   'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_recomputer_r1000_flowfuse_getting_start',
-                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_recomputer_r1000_install_codesys',
-                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_recomputer_r1000_thingsboard_ce',
-                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_recomputer_r1000_thingsboard_dashboard',
-                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_recomputer_r1000_with_codesys_use_modbus_rtu',
                   'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_reTerminal-DM_intro_machinechat_jedi',
-                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_reTerminal-DM-Getting-Started-with-Ignition-Edge',
-                  'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_reTerminal-DM-Ignition-Edge-Panel-Builder',
                   'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_reterminal-dm-sensecraft-edge-os-intro',
                   'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_recomputer_use_ups'
                 ]
@@ -17650,36 +17778,63 @@ const sidebars = {
               },
               {
                 type: 'category',
-                label: 'OpenCV',
+                label: 'OpenCV デモ (reTerminal & Pi カメラ)',
                 items: [
-                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/ja_reTerminal_DM_Color_detection',
-                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/ja_reTerminal_DM_Face_detection',
-                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/ja_reTerminal_DM_Object_detection',
-                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/ja_reTerminal_DM_opencv',
-                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/ja_reTerminal_DM_Shape_detection',
-                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/ja_reTerminal_DM-tracking',
+                  {
+                    type: 'category',
+                    label: '物体 / 顔 / 色 / 形状 検出',
+                    items: [
+                      'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/ja_reTerminal_DM_Color_detection',
+                      'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/ja_reTerminal_DM_Face_detection',
+                      'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/ja_reTerminal_DM_Object_detection',
+                      'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/ja_reTerminal_DM_Shape_detection',
+                    ]
+                  },
+                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/ja_reTerminal_DM_opencv',
+                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/ja_reTerminal_DM-tracking',
+                ]
+              },
+              {
+                type: 'category',
+                label: 'YOLO ベースのアプリケーション',
+                items: [
+                  {
+                    type: 'category',
+                    label: 'YOLOv8 物体検出 (Pi 5 / R1000 / AI Box)',
+                    items: [
+                      'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/ja_Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection',
+                      'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/ja_yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
+                    ]
+                  },
+                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/ja_reTerminal-DM-Yolo5',
+                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/ja_yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
                 ]
               },
               {
                 type: 'category',
                 label: 'NVR',
                 items:[
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_firearm_detection_with_frigate_nvr_on_r2000',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_frigate_home_assistant_recomputer_r2000',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_frigate_nvr_with_raspberrypi_5',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_reterminal_frigate',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_reterminal-DM-Frigate',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_zoneminder_on_recomputer'
                 ]
               },
-              'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/ja_clip_application_on_rpi_with_ai_kit',
-              'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/ja_convert_model_to_edge_tpu_tflite_format_for_google_coral',
-              'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/ja_install_m.2_coral_to_rpi5',
-              'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/ja_pose_based_light_control_with_nodered_and_rpi_with_aikit',
-              'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/ja_reTerminal_ML_Edgeimpulse',
-              'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/ja_reTerminal_ML_TFLite',
-              'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/ja_reTerminal-DM-edgeimpulse',
-              'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/ja_reTerminal-DM-Yolo5',
-              'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/ja_tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
-              'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/ja_yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
-              'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/ja_yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l'
+              {
+                type: 'category',
+                label: 'その他の AI アプリケーション',
+                items: [
+                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/ja_clip_application_on_rpi_with_ai_kit',
+                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/ja_convert_model_to_edge_tpu_tflite_format_for_google_coral',
+                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/ja_install_m.2_coral_to_rpi5',
+                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/ja_pose_based_light_control_with_nodered_and_rpi_with_aikit',
+                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/ja_real-time-ocr',
+                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/ja_reTerminal_ML_TFLite',
+                  'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/ja_tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
+                ]
+              },
             ]
           },
           {

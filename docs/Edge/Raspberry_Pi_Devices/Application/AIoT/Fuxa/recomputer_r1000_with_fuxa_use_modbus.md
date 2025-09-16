@@ -46,7 +46,8 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 ### Software Preparation
 
-* Python 3.11 may be incompatible with fuxa. If your Python version is 3.11, please consider changing to a different Python version.
+- Python 3.11 may be incompatible with fuxa. If your Python version is 3.11, please consider changing to a different Python version.
+
 - Using [modbusmechanic](https://modbusmechanic.scifidryer.com/) on W10 PC.You can also use other modbus testing tools
 - Using [fuxa](https://github.com/frangoteam/FUXA) on reComputer R1000.You can refer to the following steps to install fuxa on reComputer R1000
 
@@ -63,7 +64,7 @@ Before you start this project, you may need to prepare your hardware and softwar
     sudo fuxa
   ```
 
-* Regarding how to use the modbus function of reComputer R1000, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_use_rs485_modbus_rtu/).
+- Regarding how to use the modbus function of reComputer R1000, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_use_rs485_modbus_rtu/).
 
 ### Hardware Configuration
 

@@ -604,14 +604,15 @@ http://<JETSON_IP>:1880/
   "modules": {
     "@flowfuse/node-red-dashboard": "1.26.0"
   }
-}]```
+}]
+```
 
 - **MQTT Broker 地址** (默认: `172.17.0.1:1883`)  
 - **Frigate 服务地址** (默认: `http://192.168.118.111:5000`)  
 
 > ⚠️ **提醒：** 请务必修改为与您自己机器的 `JETSON_IP` 匹配。  
 
-## 🔵 3.4 运行效果
+### 🔵 3.4 运行效果
 
 在浏览器中访问以下 URL：
 
@@ -621,9 +622,9 @@ http://JETSON_IP:1880/dashboard/frigate
 
 <div style={{textAlign:'center'}}><img  alt="Configuration" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/frigateevents.png"/></div>
 
-# 🟣 4. 功能说明
+## 🟣 4. 功能说明
 
-## 4.1 实时枪支检测
+### 4.1 实时枪支检测
 
 - Frigate 基于 YOLOv4-tiny-288 模型检测摄像头画面中的枪支  
 - 检测阈值：`0.3`  
@@ -634,7 +635,7 @@ http://JETSON_IP:1880/dashboard/frigate
 
 ---
 
-## 4.2 警报和通知
+### 4.2 警报和通知
 
 - 显示最新捕获的画面  
 - 历史警报记录（包括时间、摄像头、截图）  
@@ -643,13 +644,13 @@ http://JETSON_IP:1880/dashboard/frigate
 
 ---
 
-## 4.3 历史记录和计数
+### 4.3 历史记录和计数
 
 - 记录最新的 10 个警报事件  
 - 警报累计计数  
 - 一键数据清除  
 
-# 🟤 5. 应用场景
+## 🟤 5. 应用场景
 
 - 校园安全区域枪支威胁监控  
 - 商场/地铁/交通枢纽防护  

@@ -5,13 +5,13 @@ sidebar_position: 2
 keywords:
   - SenseCAP
   - Watcher Agent
-  - Network Setup
-  - IoT Configuration
-  - WiFi Configuration
+  - Configuración de Red
+  - Configuración IoT
+  - Configuración WiFi
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /es/device_network_setup
 last_update:
-  date: 08/20/2025
+  date: 11/09/2025
   author: Twelve
 ---
 
@@ -19,7 +19,10 @@ last_update:
 
 Este documento te guiará a través del proceso de configuración de red para tu SenseCAP Watcher Agent. Sigue estos pasos para conectar fácilmente tu dispositivo a tu red y comenzar.
 
-## Requisitos Previos
+El siguiente video sirve como un tutorial paso a paso sobre cómo configurar tu dispositivo usando el Panel de Control Web.
+<div class="table-center"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6UDVsv953Tw?si=0yD96_pQq1cMjjAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+## Prerrequisitos
 
 Antes de comenzar la configuración, asegúrate de tener lo siguiente:
 
@@ -32,7 +35,7 @@ Antes de comenzar la configuración, asegúrate de tener lo siguiente:
 ### Configuración Inicial
 
 Paso 1. Enciende tu dispositivo
-- Conecta el dispositivo a una fuente de alimentación, o mantén presionado el botón de rueda de desplazamiento en la esquina superior derecha durante 5 segundos y luego suéltalo.
+- Conecta el dispositivo a una fuente de alimentación, o mantén presionado el botón de la rueda de desplazamiento en la esquina superior derecha durante 5 segundos y luego suéltalo.
 :::tip Nota
 Si la configuración comienza inmediatamente después de flashear el firmware, usa un alfiler para presionar suavemente el botón de reinicio.
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish2.jpg" style={{width:200, height:'auto'}}/></div>
@@ -40,9 +43,10 @@ Si la configuración comienza inmediatamente después de flashear el firmware, u
 - El dispositivo se encenderá y entrará en modo de configuración Wi-Fi
 
 
+
 ### Configuración WiFi
 
-Paso 1. Conectar al Hotspot del Dispositivo
+Paso 1. Conectar al Punto de Acceso del Dispositivo
 - En tu dispositivo móvil o computadora, busca una red WiFi llamada "Watcher-XXXX"
 - Conéctate a esta red
 - Espera unos segundos para que se establezca la conexión
@@ -56,11 +60,11 @@ Paso 2. Configurar Conexión WiFi
 - De la lista de redes de 2.4GHz disponibles, selecciona tu red Wi-Fi doméstica
 - El SSID se completará automáticamente
 - Ingresa la contraseña para tu red WiFi seleccionada
-- Haz clic en el botón "Connect" para enviar
+- Haz clic en el botón "Conectar" para enviar
 
 :::note
 Solo se admiten redes de 2.4GHz
-Si usas un hotspot de iPhone, habilita la opción "Compatibilidad Máxima"
+Si usas un punto de acceso de iPhone, habilita la opción "Compatibilidad Máxima"
 La página de escaneo WiFi puede tardar unos 5 segundos en cargar - por favor no cierres o canceles la página
 :::
 
@@ -86,11 +90,11 @@ Paso 2. Registrar Dispositivo
 ### Operaciones Básicas
 
 1. Encender
-   - Mantén presionada la rueda de desplazamiento durante 3-5 segundos, luego suelta
+   - Mantén presionada la rueda de desplazamiento durante 3-5 segundos, luego suéltala
 
 2. Apagar
    - Desconecta la fuente de alimentación
-   - Mantén presionada la rueda de desplazamiento durante 3 segundos, luego suelta
+   - Mantén presionada la rueda de desplazamiento durante 3 segundos, luego suéltala
 
 3. Reiniciar
    - Usa un alfiler para presionar suavemente el botón de reinicio
@@ -99,7 +103,7 @@ Paso 2. Registrar Dispositivo
    - Mantén presionada la rueda de desplazamiento durante 10 segundos
 
 5. Volver a entrar en Modo de Configuración de Red
-   - Cuando el dispositivo muestre el estado "Scanning Wi-Fi"
+   - Cuando el dispositivo muestre el estado "Escaneando Wi-Fi"
    - Presiona la rueda de desplazamiento una vez
    - El dispositivo volverá a entrar en modo de configuración de red
 
@@ -117,9 +121,9 @@ Si encuentras problemas de conexión:
 **P: ¿Por qué no puedo encontrar la red Watcher-XXXX?**
 
 R: Intenta usar un alfiler para presionar suavemente el botón de reinicio nuevamente para reiniciar el dispositivo y entrar en modo de configuración.
-Si previamente has emparejado con una red, reinicia el dispositivo y presiona la rueda de desplazamiento una vez mientras el dispositivo muestra "Scanning Wi-Fi" para volver a entrar en modo de emparejamiento
+Si previamente te has emparejado con una red, reinicia el dispositivo y presiona la rueda de desplazamiento una vez mientras el dispositivo muestra "Escaneando Wi-Fi" para volver a entrar en modo de emparejamiento
 
-**P: ¿Qué debo hacer si la página de configuración no carga automáticamente?**
+**P: ¿Qué debo hacer si la página de configuración no se carga automáticamente?**
 
 R: Navega manualmente a `http://192.168.4.1` en el navegador web mientras estés conectado a la red Watcher-XXXX.
 

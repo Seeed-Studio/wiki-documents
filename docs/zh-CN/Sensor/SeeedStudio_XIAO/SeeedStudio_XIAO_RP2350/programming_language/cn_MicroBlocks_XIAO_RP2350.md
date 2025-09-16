@@ -12,7 +12,7 @@ last_update:
 
 ### MicroBlocks
 
-MicroBlocks 是一种积木式编程语言，让初学者（9 岁到成人）能够轻松地为微控制器编程。尽管看起来简单，MicroBlocks 实际上是一种功能强大的编程语言，性能比 MicroPython 更好；能够控制 GPIO 引脚并通过 I2C、SPI 和串口与外设接口；拥有近 200 个扩展库。事实上，一些硬件设计师更喜欢使用 MicroBlocks 进行快速原型设计和测试，因为它具有快速、交互式的开发周期。
+MicroBlocks 是一种积木式编程语言，让初学者（9岁到成人）能够轻松地对微控制器进行编程。尽管看起来简单，MicroBlocks 实际上是一种功能强大的编程语言，性能比 MicroPython 更好；能够控制 GPIO 引脚并通过 I2C、SPI 和串口与外设接口通信；拥有近200个扩展库。实际上，一些硬件设计师更喜欢使用 MicroBlocks 进行快速原型设计和测试，因为它具有快速、交互式的开发周期。
 
 ### XIAO RP2350 引脚图和硬件特性
 
@@ -27,7 +27,6 @@ MicroBlocks 是一种积木式编程语言，让初学者（9 岁到成人）能
 要进入引导加载程序模式，按住小的 B（引导）按钮的同时点击 R（复位）按钮。将出现一个名为 **RP2350** 的虚拟 USB 驱动器。
 
 从 [vm 文件夹](https://microblocks.fun/downloads/latest/vm) 下载 [固件文件](https://microblocks.fun/downloads/latest/vm/vm_xiao_rp2350.uf2)，
-
 然后将文件拖到虚拟 USB 驱动器上。
 
 固件将安装，几秒钟后，虚拟 USB 驱动器将消失。
@@ -60,19 +59,18 @@ MicroBlocks 是一个 **实时** 编程环境，因此您可以边编程边测�
 点击积木块和脚本来运行它们。
 将积木块拖到脚本面板中并组装它们来创建脚本。
 
-您的代码存储在持久闪存中，即使板子
-未连接到 MicroBlocks 编辑器也可以运行。
+您的代码存储在持久闪存中，即使板子未连接到 MicroBlocks 编辑器也可以运行。
 **当启动时** 积木块下的脚本在板子通电时运行。
 
-MicroBlocks 支持并发。最多十个脚本可以同时运行。
+MicroBlocks 支持并发。最多可以同时运行十个脚本。
 
-除了许多内置积木块外，MicroBlocks 还有近 200 个库
+除了许多内置积木块外，MicroBlocks 还有近200个库
 支持额外的功能和外设。
 点击 **添加库** 按钮来添加库。
 
 ### 示例
 
-这个脚本将闪烁黄色用户 LED：
+这个脚本将使黄色用户 LED 闪烁：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-blink.png" style={{width:200, height:'auto'}}/></div>
 

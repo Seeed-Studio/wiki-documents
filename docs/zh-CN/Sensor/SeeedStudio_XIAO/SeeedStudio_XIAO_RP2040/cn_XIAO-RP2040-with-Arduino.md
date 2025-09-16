@@ -12,7 +12,7 @@ last_update:
 
 # **Seeed Studio XIAO RP2040 与 Arduino**
 
-这是我们将 Seeed Studio XIAO RP2040 连接到计算机并使用 Arduino 进行编程的页面。还将有几个关于引脚复用的项目。
+这是我们将 Seeed Studio XIAO RP2040 连接到计算机并使用 Arduino 进行编程的页面。还将包含几个关于引脚复用的项目。
 
 ## **入门指南**
 
@@ -27,7 +27,7 @@ last_update:
 - USB Type-C 数据线 x1
 
 :::tip
-一些 USB 数据线只能供电而不能传输数据。如果您没有 USB 数据线或不知道您的 USB 数据线是否可以传输数据，您可以查看 [seeed USB type C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)。
+一些 USB 数据线只能供电而无法传输数据。如果您没有 USB 数据线或不知道您的 USB 数据线是否可以传输数据，您可以查看 [seeed USB type C 支持 USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)。
 :::
 **硬件连接：**
 
@@ -76,13 +76,13 @@ last_update:
 
 **开发板**
 
-安装开发板包后，导航到 **Tools-> Board**，找到"**Seeed Studio XIAO RP2040**"并选择它。现在我们已经完成了为 Arduino IDE 设置 Seeed Studio XIAO RP2040。
+安装开发板包后，导航到 **Tools-> Board**，找到"**Seeed Studio XIAO RP2040**"并选择它。现在我们已经完成了为 Arduino IDE 设置 Seeed Studio XIAO RP2040 的工作。
 
 <div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/4.png"/></div>
 
 **端口**
 
-导航到 Tools > Port 并选择已连接的 Seeed Studio XIAO RP2040 的串行端口名称。这很可能是 COM3 或更高（**COM1** 和 **COM2** 通常保留给硬件串行端口）。已连接的 Seeed Studio XIAO RP2040 的串行端口通常包含写着"Seeed Studio XIAO RP2040"的括号。
+导航到 Tools > Port 并选择已连接的 Seeed Studio XIAO RP2040 的串行端口名称。这通常是 COM3 或更高（**COM1** 和 **COM2** 通常保留给硬件串行端口）。已连接的 Seeed Studio XIAO RP2040 的串行端口通常包含写着"Seeed Studio XIAO RP2040"的括号。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png"/></div>
 
@@ -96,13 +96,13 @@ last_update:
 如果上传 Arduino 程序失败，请尝试按住"BOOT"按钮，然后点击"RUN"按钮。此时，Seeed Studio XIAO RP2040 将进入引导模式（您的计算机将加载一个可移动磁盘），您将能够再次上传 Arduino 程序。
 :::
 
-## **Seeed Studio XIAO RP2040 的引脚复用**
+## **Seeed Studio XIAO RP2040 上的引脚复用**
 
-Seeed Studio XIAO RP2040 包含 11 个数字引脚、4 个模拟引脚、11 个 PWM 引脚、1 个 I2C 接口、1 个 UART 接口、1 个 SPI 接口、1 个 SWD 焊盘接口。我们将提供关于这些接口的教程，以帮助您的项目。
+Seeed Studio XIAO RP2040 包含 11 个数字引脚、4 个模拟引脚、11 个 PWM 引脚、1 个 I2C 接口、1 个 UART 接口、1 个 SPI 接口、1 个 SWD 焊盘接口。我们将提供关于这些接口的教程，以便对您的项目有所帮助。
 
-### **数字引脚**
+### **数字**
 
-将按钮连接到引脚 D0，将 LED 连接到引脚 25。然后上传以下代码，使用按钮控制 LED 的开/关。
+将一个按钮连接到引脚 D0，将一个 LED 连接到引脚 25。然后上传以下代码，使用按钮控制 LED 的开/关。
 
 :::warning
 请注意，Seeed Studio XIAO RP2040 的工作电压为 3.3V，如果您错误地将传感器连接到 5V，主板可能无法正常工作。
@@ -136,7 +136,7 @@ void loop() {
 }
 ```
 
-### **模拟引脚**
+### **模拟**
 
 将电位器连接到引脚 A0，将 LED 连接到引脚 25。然后上传以下代码，通过旋转电位器旋钮来控制 LED 的闪烁间隔。
 
@@ -163,9 +163,9 @@ int sensorValue = analogRead(sensorPin);
 }
 ```
 
-### **串口**
+### **Serial**
 
-使用引脚 D6 作为 UART 的 TX 引脚，引脚 D7 作为 UART 的 RX 引脚来发送"Hello World!"消息
+Use pin D6 as the TX pin of UART and pin D7 as RX pin of UART to send the "Hello World!" message
 
 ```cpp
 void setup() {
@@ -187,11 +187,11 @@ void loop() {
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
 
-在 Arduino 库管理器中输入关键词"Adafruit_NeoPixel"库并安装最新版本。
+在 Arduino 库管理器中输入关键词 "Adafruit_NeoPixel" 库并安装最新版本。
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/boardurl6.png" /></div>
 
-- **步骤 2.** 将代码复制到 Arduino 并点击**上传**按钮进行上传。
+- **步骤 2.** 将代码复制到 Arduino 中并点击 **Upload** 按钮进行上传。
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
@@ -239,11 +239,11 @@ RGB LED 将显示彩虹色。
 
 ### **I2C**
 
-这里我们将通过 IIC 连接 Seeed Studio XIAO RP2040 与 [Grove - OLED Display 0.96" (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html) 并显示"Hello world"。
+这里我们将通过 IIC 连接 Seeed Studio XIAO RP2040 与 [Grove - OLED Display 0.96" (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html)，并显示"Hello world"。
 
 **连接**：
 
-我们将使用引脚 5 作为 SCL 引脚，引脚 4 作为 SDA 引脚。
+我们将使用 PIN 5 作为 SCL 引脚，PIN 4 作为 SDA 引脚。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_15.png" /></div>
 
@@ -251,11 +251,11 @@ RGB LED 将显示彩虹色。
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
 
-在 Arduino 库管理器中输入关键词"U8G2"库并安装最新版本。
+在 Arduino 库管理器中输入关键词"U8G2"库，并安装最新版本。
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/boardurl7.png" /></div>
 
-- **步骤 2.** 将代码复制到 Arduino 并点击**上传**按钮进行上传。
+- **步骤 2.** 将代码复制到 Arduino 中，点击 **Upload** 按钮上传。
 
 ```cpp
 #include <Arduino.h>
@@ -285,14 +285,14 @@ void loop(void) {
 }
 ```
 
-结果如下所示：
+结果显示为：
 
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl8.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl8.png" alt="pir" width={600} height="auto" /></p>
 
 ### **SPI**
 
-这里我们将通过SPI连接[Grove - OLED黄蓝显示屏0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html)并显示"Hello World"。OLED显示屏支持IIC和SPI通信，但默认通信模式是IIC。在开始之前，必须[将IIC功能更改为SPI功能](https://wiki.seeedstudio.com/cn//Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0/)。
+这里我们将通过SPI连接[Grove - OLED黄蓝显示屏0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html)并显示"Hello World"。OLED显示屏支持IIC和SPI通信，但默认通信模式是IIC。在开始之前，必须[将IIC功能更改为SPI功能](https://wiki.seeedstudio.com//Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0/)。
 
 **连接**：
 
@@ -320,31 +320,31 @@ void loop(void) {
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
-#define SCREEN_WIDTH 128 // OLED显示屏宽度，以像素为单位
-#define SCREEN_HEIGHT 64 // OLED显示屏高度，以像素为单位
+#define SCREEN_WIDTH 128 // OLED display width, in pixels
+#define SCREEN_HEIGHT 64 // OLED display height, in pixels
 
-// 使用软件SPI连接的SSD1306显示屏声明（默认情况）：
-#define OLED_MOSI  MOSI   //连接SSD1315 D1
-#define OLED_CLK  SCK     //连接SSD1315 D0
-#define OLED_DC  D4      //连接SSD1315 D/C
-#define OLED_CS  SS      //连接SSD1315 CS
-#define OLED_RESET  D5   //连接SSD1315 RES
+// Declaration for SSD1306 display connected using software SPI (default case):
+#define OLED_MOSI  MOSI   //Connect SSD1315 D1
+#define OLED_CLK  SCK     //Connect SSD1315 D0
+#define OLED_DC  D4      //Connect SSD1315 D/C
+#define OLED_CS  SS      //Connect SSD1315 CS
+#define OLED_RESET  D5   //Connect SSD1315 RES
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT,
   OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
 
 void setup() {
   Serial.begin(9600);
   if(!display.begin(SSD1306_SWITCHCAPVCC)) {
-    Serial.println(F("SSD1306分配失败"));
-    for(;;); // 不继续，永远循环
+    Serial.println(F("SSD1306 allocation failed"));
+    for(;;); // Don't proceed, loop forever
   }
 }
 
 void loop() {
   display.clearDisplay();
-  display.setTextSize(1);             // 正常1:1像素比例
-  display.setTextColor(SSD1306_WHITE);        // 绘制白色文本
-  display.setCursor(0,3);             // 从左上角开始
+  display.setTextSize(1);             // Normal 1:1 pixel scale
+  display.setTextColor(SSD1306_WHITE);        // Draw white text
+  display.setCursor(0,3);             // Start at top-left corner
   display.println(F("Hello"));
   display.setTextSize(2); 
   display.setCursor(0,16);  
@@ -367,11 +367,11 @@ void loop() {
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

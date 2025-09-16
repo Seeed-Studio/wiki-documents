@@ -23,7 +23,7 @@ XIAO RA4M1 拥有多达 11 个常规 GPIO 引脚、6 个模拟引脚和 8 个可
   <tr>
       <th>Seeed Studio XIAO R4M1</th>
         <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
-        <th>Grove - 继电器</th>
+        <th>Grove - Relay</th>
   </tr>
   <tr>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -93,33 +93,33 @@ XIAO RA4M1上的所有GPIO引脚都支持PWM输出。因此，您可以使用任
 ### 硬件准备
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO RA4M1</th>
+ <tr>
+     <th>Seeed Studio XIAO RA4M1</th>
         <th>Seeed Studio XIAO扩展板配Grove OLED</th>
         <th>Grove - 可变色LED</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:500, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Variable_Color_LED/img/Variable_Color_LED1.jpg" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-p-852.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-p-852.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 请将XIAO RA4M1或Sense安装到扩展板上，然后使用Grove线缆将可变色LED连接到扩展板的A0/D0接口。最后，通过USB-C线缆将XIAO连接到您的计算机。
@@ -129,27 +129,27 @@ XIAO RA4M1上的所有GPIO引脚都支持PWM输出。因此，您可以使用任
 在这个示例中，我们将演示如何使用PWM输出来控制灯光的亮度。
 
 ```cpp
-int LED_pin = D0;    // LED连接到数字引脚10
+int LED_pin = D0;    // LED connected to digital pin 10
 
 void setup() {
-  // 声明LED引脚为输出
+  // declaring LED pin as output
   pinMode(LED_pin, OUTPUT);
 }
 
 void loop() {
-  // 从最小值渐变到最大值，每次增加5个点：
+  // fade in from min to max in increments of 5 points:
   for (int fadeValue = 0 ; fadeValue <= 255; fadeValue += 3) {
-    // 设置数值（范围从0到255）：
+    // sets the value (range from 0 to 255):
     analogWrite(LED_pin, fadeValue);
-    // 等待30毫秒以查看调光效果
+    // wait for 30 milliseconds to see the dimming effect
     delay(30);
   }
 
-  // 从最大值渐变到最小值，每次减少5个点：
+  // fade out from max to min in increments of 5 points:
   for (int fadeValue = 255 ; fadeValue >= 0; fadeValue -= 3) {
-    // 设置数值（范围从0到255）：
+    // sets the value (range from 0 to 255):
     analogWrite(LED_pin, fadeValue);
-    // 等待30毫秒以查看调光效果
+    // wait for 30 milliseconds to see the dimming effect
     delay(30);
   }
 }
@@ -164,6 +164,7 @@ void loop() {
 XIAO RA4M1 开发板具有高达 14 位的 ADC，可高分辨率读取模拟传感器值，它可以帮助我们读取更准确的值。XIAO RA4M1 开发板上的模数转换器(ADC)。默认情况下，分辨率设置为 10 位，可以设置为 12 位和 14 位分辨率，以提高模拟读数的精度。
 
 ADC 精度的详细数据
+
 - 10 位：0~1024
 - 12 位：0~4096
 - 14 位：0~16383
@@ -173,42 +174,41 @@ ADC 精度的详细数据
 ### 硬件准备
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO RA4M1</th>
+ <tr>
+     <th>Seeed Studio XIAO RA4M1</th>
       <th>Grove-可变色 LED</th>
-	    <th>Grove-旋转角度传感器</th>
-	    <th>Seeed Studio Grove Base for XIAO</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <th>Grove-旋转角度传感器</th>
+     <th>Seeed Studio Grove Base for XIAO</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Variable_Color_LED/img/Variable_Color_LED1.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/rotary.png" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/rotary.png" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-p-852.html" target="_blank">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-p-852.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
-
 
 ### 软件实现
 
@@ -217,18 +217,18 @@ ADC 精度的详细数据
 #define ADC_Bit_Twelve 12
 #define ADC_Bit_Ten 10
 
-const int analogInPin = A1;  // 电位器连接的模拟输入引脚
-const int analogOutPin = 9;  // LED 连接的模拟输出引脚
+const int analogInPin = A1;  // Analog input pin that the potentiometer is attached to
+const int analogOutPin = 9;  // Analog output pin that the LED is attached to
 
-int sensorValue = 0;  // 从电位器读取的值
-int outputValue = 0;  // 输出到 PWM 的值（模拟输出）
+int sensorValue = 0;  // value read from the pot
+int outputValue = 0;  // value output to the PWM (analog out)
 
 void setup() {
 
   Serial.begin(115200);
-  // Ten_Bite_ADC_Config(); // 10位
-  // Twelve_Bite_ADC_Config(); // 12位
-  Fourteen_Bite_ADC_Config(); // 14位
+  // Ten_Bite_ADC_Config(); // 10bit
+  // Twelve_Bite_ADC_Config(); // 12bit
+  Fourteen_Bite_ADC_Config(); // 14bit
   
 }
 
@@ -263,7 +263,7 @@ void Fourteen_Bite_ADC_Config() {
 
 ## 串口通信
 
-在使用 Arduino IDE 时，串口通信是许多项目的重要组成部分。要在 Arduino IDE 中使用串口通信，您需要首先打开串口监视器窗口。这可以通过点击工具栏中的**串口监视器**图标或按**Ctrl+Shift+M**快捷键来完成。
+在使用 Arduino IDE 时，串口通信是许多项目的重要组成部分。要在 Arduino IDE 中使用串口通信，您需要首先打开串口监视器窗口。这可以通过点击工具栏中的**串口监视器**图标或按下 **Ctrl+Shift+M** 快捷键来完成。
 
 ### 常规用法
 
@@ -329,7 +329,7 @@ void loop() {
 }
 ```
 
-### 软件串口的使用
+### Usage of Software Serial
 
 ```c
 #include <SoftwareSerial.h>
@@ -337,26 +337,26 @@ void loop() {
 SoftwareSerial mySerial(2, 3); // RX, TX
 
 void setup() {
-  // 初始化串口通信
+  // initialize serial communication
   Serial.begin(9600);
   while (!Serial);
 
-  // 初始化软件串口
+  // initialize software serial
   mySerial.begin(9600);
 }
 
 void loop() {
-  // 从软件串口读取数据
+  // read data from software serial
   if (mySerial.available()) {
     char data = mySerial.read();
-    Serial.print("接收到的数据: ");
+    Serial.print("Received data: ");
     Serial.println(data);
   }
 
-  // 向软件串口写入数据
+  // write data to software serial
   mySerial.print("Hello World!");
 
-  // 等待一秒钟后重复循环
+  // wait for a second before repeating the loop
   delay(1000);
 }
 ```
@@ -367,7 +367,7 @@ void loop() {
 
 在 `loop()` 函数中，我们使用 `mySerial.available()` 函数检查软件串口是否有可读取的数据。如果有，我们使用 `mySerial.read()` 函数读取传入的字节并将其存储在名为 data 的变量中。然后我们使用 `Serial.print()` 和 `Serial.println()` 函数向硬件串口打印"Received data: "，后跟 data 的值。
 
-我们还使用 `mySerial.print()` 函数向软件串口写入"Hello World!"。这将把数据从 XIAO 发送到连接到软件串口的设备。
+我们还使用 `mySerial.print()` 函数向软件串口写入"Hello World!"。这将把数据从 XIAO 发送到连接在软件串口的设备。
 
 最后，我们添加一个 `delay()` 函数，在重复循环之前等待一秒钟。
 
@@ -378,37 +378,37 @@ XIAO RA4M1 具有 I2C 接口，可用于许多传感器的数据传输和解析�
 ### 硬件准备
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO RA4M1</th>
-        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
+ <tr>
+     <th>Seeed Studio XIAO RA4M1</th>
+        <th>Seeed Studio XIAO 扩展底板配 Grove OLED</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
-XIAO 扩展板上的 OLED 显示屏使用 I2C 协议，通过板上的 I2C 电路连接到 XIAO 的 I2C 接口。因此，我们可以直接将 XIAO 插入扩展板并编程以在屏幕上显示内容。
+XIAO 扩展板上的 OLED 显示屏使用 I2C 协议，通过板上的 I2C 电路连接到 XIAO 的 I2C 接口。因此，我们可以直接将 XIAO 插入扩展板并对其进行编程，以在屏幕上显示内容。
 
 ### 软件实现
 
-此示例介绍如何使用 Seeed Studio Expansion Base for XIAO RA4M1 上的 OLED 显示屏。
+本示例介绍如何使用 Seeed Studio Expansion Base for XIAO RA4M1 上的 OLED 显示屏。
 
-#### 步骤 1. 将 Seeed Studio XIAO RA4M1 安装在扩展板上，然后连接 Type-C 线缆。
+#### 步骤 1. 将 Seeed Studio XIAO RA4M1 安装到扩展板上，然后连接 Type-C 线缆
 
-#### 步骤 2. 安装 u8g2 库。
+#### 步骤 2. 安装 u8g2 库
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino" target="_blank" rel="noopener noreferrer">
@@ -416,7 +416,7 @@ XIAO 扩展板上的 OLED 显示屏使用 I2C 协议，通过板上的 I2C 电�
     </a>
 </div>
 
-#### 步骤 3. 复制代码并粘贴到 Arduino IDE 中，然后上传。
+#### 步骤 3. 复制代码并粘贴到 Arduino IDE 中，然后上传
 
 ```c
 #include <Arduino.h>
@@ -454,30 +454,29 @@ RA4M1 芯片集成了多个外设，包括一个 SPI 接口，可用于连接外
 ### 硬件准备
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO RA4M1</th>
+ <tr>
+     <th>Seeed Studio XIAO RA4M1</th>
       <th>Grove - OLED Display 1.12 (SH1107) V3.0 - SPI/IIC</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-OLED-Display-1.12-(SH1107)_V3.0/img/10402050_Main-02.png" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
-准备好上述硬件后，使用跳线将 XIAO 和 OLED 的 SPI 接口连接起来。请参考以下图表了解接线方法。
-
+在按照上述方法准备好硬件后，使用跳线将 XIAO 和 OLED 的 SPI 接口连接起来。连接方法请参考下图。
 
 ### 软件实现
 
@@ -513,7 +512,7 @@ void loop(void) {
 }
 ```
 
-在 `setup()` 函数中，使用适当的构造函数参数实例化 `U8G2_SH1107_128X128_1_4W_HW_SPI` 类，这些参数指定了用于片选 (cs)、数据/命令 (dc) 和复位的引脚。然后，调用 `u8g2.begin()` 函数来初始化显示器。
+在 `setup()` 函数中，`U8G2_SH1107_128X128_1_4W_HW_SPI` 类通过适当的构造函数参数进行实例化，这些参数指定了用于片选 (cs)、数据/命令 (dc) 和复位的引脚。然后，调用 `u8g2.begin()` 函数来初始化显示器。
 
 在 `loop()` 函数中，使用 `u8g2.firstPage()`、`u8g2.setFont()` 和 `u8g2.drawStr()` 函数用新内容更新显示器。`u8g2.firstPage()` 函数设置显示缓冲区以供写入，而 `u8g2.nextPage()` 显示更新的内容。do-while 循环确保内容持续显示，直到程序停止。
 
@@ -521,36 +520,37 @@ void loop(void) {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/15.png" style={{width:700, height:'auto'}}/></div>
 
-
-## CAN
+## CAN(XIAO CAN Bus Expansion Board)
 
 ### 硬件准备
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO RA4M1</th>
-	    <th>XIAO CAN Bus 扩展板</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_can_bus_board/main.jpg" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+     <th>Seeed Studio XIAO RA4M1</th>
+     <th>XIAO CAN Bus Expansion Board</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_can_bus_board/main.jpg" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-CAN-Bus-Breakout-Board-for-XIAO-and-QT-Py-p-5702.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-CAN-Bus-Breakout-Board-for-XIAO-and-QT-Py-p-5702.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
-#### 步骤 1 . 准备两个 CAN Bus 分线板和 XIAO RA4M1
-#### 步骤 2 . 将这两个 XIAO RA4M1 分别插入 CAN Bus 分线板
+#### 步骤 1 . 准备两个 CAN 总线分线板和 XIAO RA4M1
+
+#### 步骤 2 . 将这两个 XIAO RA4M1 分别插入 CAN 总线分线板
+
 #### 步骤 3 . 准备杜邦线连接
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/36.png" style={{width:400, height:'auto'}}/></div>
@@ -577,16 +577,16 @@ void loop(void) {
 ### 软件实现
 
 :::tip
-不允许同时为两个 XIAO RA4M1 上电并下载程序，因为这会导致下载串口时出现错误。下载一个后，拔掉它，然后为另一个 XIAO RA4M1 上电以下载程序，最后同时上电以检查串口消息
+不允许同时为两个 XIAO RA4M1 上电并下载程序，因为这会导致下载串口时出现错误。下载完一个后，拔掉它，然后为另一个 XIAO RA4M1 上电以下载程序，最后同时上电以检查串口消息
 :::
 
 **CAN 写入代码**
 
 ```c
 
-/*  从 CAN 总线发送帧
+/*  send a frame from can bus
 
-    CAN 波特率,
+    CAN Baudrate,
     
     #define CAN_5KBPS           1
     #define CAN_10KBPS          2
@@ -611,7 +611,7 @@ void loop(void) {
 #include <mcp_can.h>
 #include <SPI.h>
 
-/* 请修改 SPI_CS_PIN 以适配您的开发板。
+/* Please modify SPI_CS_PIN to adapt to your board.
 
    CANBed V1        - 17
    CANBed M0        - 3
@@ -627,22 +627,22 @@ void loop(void) {
 
 #define SPI_CS_PIN  D7 
 
-MCP_CAN CAN(SPI_CS_PIN);                                    // 设置 CS 引脚
+MCP_CAN CAN(SPI_CS_PIN);                                    // Set CS pin
 
 void setup()
 {
     Serial.begin(115200);
     while(!Serial);
     
-    // 以下代码适用于 OBD-II GPS Dev Kit Atemga32U4 版本
+    // below code need for OBD-II GPS Dev Kit Atemga32U4 version
     // pinMode(A3, OUTPUT);
     // digitalWrite(A3, HIGH);
     
-    // 以下代码适用于 OBD-II GPS Dev Kit RP2040 版本
+    // below code need for OBD-II GPS Dev Kit RP2040 version
     // pinMode(12, OUTPUT);
     // digitalWrite(12, HIGH);
     
-    while (CAN_OK != CAN.begin(CAN_500KBPS))    // 初始化 CAN 总线：波特率 = 500k
+    while (CAN_OK != CAN.begin(CAN_500KBPS))    // init can bus : baudrate = 500k
     {
         Serial.println("CAN BUS FAIL!");
         delay(100);
@@ -654,18 +654,18 @@ unsigned char stmp[8] = {0, 1, 2, 3, 4, 5, 6, 7};
 void loop()
 {
     CAN.sendMsgBuf(0x00, 0, 8, stmp);
-    delay(100);                       // 每 100ms 发送数据
+    delay(100);                       // send data per 100ms
 }
 
 // END FILE
 ```
 
+**CAN Read Code**
 
-**CAN 读取代码**
 ```c
-/*  从CAN总线接收帧
+/*  receive a frame from can bus
 
-    CAN波特率,
+    CAN Baudrate,
     
     #define CAN_5KBPS           1
     #define CAN_10KBPS          2
@@ -695,7 +695,7 @@ void loop()
 #include <SPI.h>
 #include "mcp_can.h"
 
-/* 请修改SPI_CS_PIN以适配您的开发板。
+/* Please modify SPI_CS_PIN to adapt to your board.
 
    CANBed V1        - 17
    CANBed M0        - 3
@@ -712,7 +712,7 @@ void loop()
 
 #define SPI_CS_PIN  D7 
 
-MCP_CAN CAN(SPI_CS_PIN);                                    // 设置CS引脚
+MCP_CAN CAN(SPI_CS_PIN);                                    // Set CS pin
 
 
 void setup()
@@ -720,15 +720,15 @@ void setup()
     Serial.begin(115200);
     while(!Serial);
     
-    // 以下代码适用于OBD-II GPS Dev Kit Atemga32U4版本
+    // below code need for OBD-II GPS Dev Kit Atemga32U4 version
     // pinMode(A3, OUTPUT);
     // digitalWrite(A3, HIGH);
     
-    // 以下代码适用于OBD-II GPS Dev Kit RP2040版本
+    // below code need for OBD-II GPS Dev Kit RP2040 version
     // pinMode(12, OUTPUT);
     // digitalWrite(12, HIGH);
     
-    while (CAN_OK != CAN.begin(CAN_500KBPS))    // 初始化CAN总线：波特率 = 500k
+    while (CAN_OK != CAN.begin(CAN_500KBPS))    // init can bus : baudrate = 500k
     {
         Serial.println("CAN BUS FAIL!");
         delay(100);
@@ -742,9 +742,9 @@ void loop()
     unsigned char len = 0;
     unsigned char buf[8];
 
-    if(CAN_MSGAVAIL == CAN.checkReceive())            // 检查是否有数据到来
+    if(CAN_MSGAVAIL == CAN.checkReceive())            // check if data coming
     {
-        CAN.readMsgBuf(&len, buf);    // 读取数据，len：数据长度，buf：数据缓冲区
+        CAN.readMsgBuf(&len, buf);    // read data,  len: data length, buf: data buf
 
         unsigned long canId = CAN.getCanId();
         
@@ -752,7 +752,7 @@ void loop()
         Serial.print("Get data from ID: ");
         Serial.println(canId, HEX);
 
-        for(int i = 0; i<len; i++)    // 打印数据
+        for(int i = 0; i<len; i++)    // print the data
         {
             Serial.print(buf[i], HEX);
             Serial.print("\t");
@@ -766,28 +766,174 @@ void loop()
 ```
 
 :::tip
-在此示例中，您需要焊接CAN总线分线板终端引脚P1中的一个，只有这样才能使用任何速度，否则您只能使用125以下的CAN波特率
+在这个例子中，你需要焊接 CAN 总线分线板终端引脚 P1 中的一个，只有这样才能使用任何速度，否则你只能使用 125 以下的 CAN 波特率
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/30.png" style={{width:600, height:'auto'}}/></div>
 
+## CAN（其他收发器）
+
+我们要感谢 [Arduino](https://docs.arduino.cc/tutorials/uno-r4-minima/can/) 提供的教程和代码。
+
+### 硬件准备
+
+CAN 协议要求发送端必须接收到它发送的消息。仅仅连接 TX 和 RX 是不足以完成通信的；必须连接收发器才能进行通信。在这里，我们使用官方 Arduino **SN65HVD230 分线模块**。
+
+<table>
+    <thead>
+        <tr>
+            <th>3.3 V</th>
+            <th>GND</th>
+            <th>D9(CANRX0)</th>
+            <th>D10 (CANTX0)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>VCC</th>
+            <td>GND</td>
+            <th>CANRX</th>
+            <td>CANTX</td>
+        </tr>
+    </tbody>
+</table>
+
+### 软件准备
+
+**CAN 写入代码**
+
+```cpp
+/*
+  CANWrite
+
+  Write and send CAN Bus messages
+
+  See the full documentation here:
+  https://docs.arduino.cc/tutorials/uno-r4-wifi/can
+*/
+
+/**************************************************************************************
+ * INCLUDE
+ **************************************************************************************/
+
+#include <Arduino_CAN.h>
+
+/**************************************************************************************
+ * CONSTANTS
+ **************************************************************************************/
+
+static uint32_t const CAN_ID = 0x20;
+
+/**************************************************************************************
+ * SETUP/LOOP
+ **************************************************************************************/
+
+void setup()
+{
+  Serial.begin(115200);
+  while (!Serial) { }
+
+  if (!CAN.begin(CanBitRate::BR_250k))
+  {
+    Serial.println("CAN.begin(...) failed.");
+    for (;;) {}
+  }
+}
+
+static uint32_t msg_cnt = 0;
+
+void loop()
+{
+  /* Assemble a CAN message with the format of
+   * 0xCA 0xFE 0x00 0x00 [4 byte message counter]
+   */
+  uint8_t const msg_data[] = {0xCA,0xFE,0,0,0,0,0,0};
+  memcpy((void *)(msg_data + 4), &msg_cnt, sizeof(msg_cnt));
+  CanMsg const msg(CanStandardId(CAN_ID), sizeof(msg_data), msg_data);
+
+  /* Transmit the CAN message, capture and display an
+   * error core in case of failure.
+   */
+  if (int const rc = CAN.write(msg); rc < 0)
+  {
+    Serial.print  ("CAN.write(...) failed with error code ");
+    Serial.println(rc);
+    for (;;) { }
+  }
+
+  /* Increase the message counter. */
+  msg_cnt++;
+
+  /* Only send one message per second. */
+  delay(1000);
+}
+
+```
+
+**CAN Read Code**
+
+```cpp
+/*
+  CANRead
+
+  Receive and read CAN Bus messages
+
+  See the full documentation here:
+  https://docs.arduino.cc/tutorials/uno-r4-wifi/can
+*/
+
+/**************************************************************************************
+ * INCLUDE
+ **************************************************************************************/
+
+#include <Arduino_CAN.h>
+
+/**************************************************************************************
+ * SETUP/LOOP
+ **************************************************************************************/
+
+void setup()
+{
+  Serial.begin(115200);
+  while (!Serial) { }
+
+  if (!CAN.begin(CanBitRate::BR_250k))
+  {
+    Serial.println("CAN.begin(...) failed.");
+    for (;;) {}
+  }
+}
+
+void loop()
+{
+  if (CAN.available())
+  {
+    CanMsg const msg = CAN.read();
+    Serial.println(msg);
+  }
+}
+
+```
+
 ***什么时候需要连接终端电阻？***
+
 - 1. 长距离通信：如果CAN总线很长（例如超过1米），必须在总线两端连接终端电阻，以避免信号反射引起的通信问题。
-- 2. 多节点通信：如果多个节点连接到同一个CAN总线，终端电阻也是不可缺少的。它们确保总线的阻抗稳定性，从而防止信号失真。
+- 2. 多节点通信：如果多个节点连接到同一条CAN总线上，终端电阻也是不可缺少的。它们确保总线的阻抗稳定性，从而防止信号失真。
 
 ***什么时候可以断开终端电阻？***
+
 - 1. 短距离通信：在一些短距离应用中（通常小于1米），可以省略终端电阻，因为信号反射对通信的影响相对较小。
 - 2. 单节点通信：如果总线上只有一个节点（如在调试环境中）且距离很短，可以暂时断开终端电阻。
 
 <table align="center">
-	<tr>
-	    <th>发送端代码结果</th>
-	    <th>接收端代码结果</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/25.png" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/26.png" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+     <th>发送端代码结果</th>
+     <th>接收端代码结果</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/25.png" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/26.png" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
 </table>
 
 ## 技术支持与产品讨论
@@ -795,11 +941,11 @@ void loop()
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

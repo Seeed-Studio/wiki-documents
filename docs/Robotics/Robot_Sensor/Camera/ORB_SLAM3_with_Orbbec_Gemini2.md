@@ -1,6 +1,6 @@
 ---
 description: This wiki provides detailed steps to set up and run ORB-SLAM3 algorithm on reComputer Jetson using an Orbbec Gemini2 RGB-D camera for advanced visual SLAM applications.
-title: ORB-SLAM3 with Orbbec Gemini2 on reComputer
+title: ORB-SLAM3 with Orbbec Gemini2
 keywords:
 - ORB-SLAM3
 - SLAM
@@ -185,6 +185,7 @@ You need to modify: `set(ORBBEC_SDK_PATH "/home/seeed/demo/OrbbecSDK_v2.4.11_202
 :::
 <details>
 <summary> CMakeLists.txt </summary>
+
 ```cmake
 cmake_minimum_required(VERSION 2.8)
 project(ORB_SLAM3)
@@ -397,6 +398,7 @@ if(realsense2_FOUND)
 endif()
 
 # Stereo examples
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Stereo)
 
 add_executable(stereo_kitti
@@ -422,6 +424,7 @@ if(realsense2_FOUND)
 endif()
 
 # Monocular examples
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Monocular)
 
 add_executable(mono_tum
@@ -451,6 +454,7 @@ if(realsense2_FOUND)
 endif()
 
 # Monocular inertial examples
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Monocular-Inertial)
 
 add_executable(mono_inertial_euroc
@@ -472,6 +476,7 @@ if(realsense2_FOUND)
 endif()
 
 # Stereo Inertial examples
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Stereo-Inertial)
 
 add_executable(stereo_inertial_euroc
@@ -742,14 +747,16 @@ endif()
 # endif()
 
 ```
+
 </details>
- 
-**Step 6.** Create a script that uses the Orbbec Gemini2 adapter for the ORB-SLAM3 RGB-D mode
+
+__Step 6.__ Create a script that uses the Orbbec Gemini2 adapter for the ORB-SLAM3 RGB-D mode
 
 Create a file named `rgbd_orbbec_gemini2_cpp.cc` under the `Examples/RGB-D/` directory as follows:
 
 <details>
 <summary> rgbd_orbbec_gemini2_cpp.cc </summary>
+
 ```c++
 /**
 * This file is part of ORB-SLAM3
@@ -769,25 +776,25 @@ Create a file named `rgbd_orbbec_gemini2_cpp.cc` under the `Examples/RGB-D/` dir
 * If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <signal.h>
-#include <stdlib.h>
-#include <iostream>
-#include <algorithm>
-#include <fstream>
-#include <chrono>
-#include <ctime>
-#include <sstream>
+# include <signal.h>
+# include <stdlib.h>
+# include <iostream>
+# include <algorithm>
+# include <fstream>
+# include <chrono>
+# include <ctime>
+# include <sstream>
 
-#include <condition_variable>
-#include <mutex>
-#include <thread>
+# include <condition_variable>
+# include <mutex>
+# include <thread>
 
-#include <opencv2/core/core.hpp>
+# include <opencv2/core/core.hpp>
 
-#include <libobsensor/ObSensor.hpp>
-#include <libobsensor/h/ObTypes.h>
+# include <libobsensor/ObSensor.hpp>
+# include <libobsensor/h/ObTypes.h>
 
-#include <System.h>
+# include <System.h>
 
 using namespace std;
 
@@ -820,7 +827,7 @@ std::shared_ptr<ob::Config> config = nullptr;
 // Callback function for receiving frames from Orbbec Gemini 2
 void orbbec_frame_callback(std::shared_ptr<ob::FrameSet> frameSet) {
     std::unique_lock<std::mutex> lock(imu_mutex);
-    
+
     if (frameSet == nullptr) {
         return;
     }
@@ -1057,10 +1064,10 @@ __Step 2.__ Install Camera Calibration Package
 ```bash
 sudo apt install ros-humble-camera-calibration
 ```
+
 __Step 3.__ Download Calibration Checkerboard
 
-Download the calibration checkerboard from
-[Checkerboard Collection](https://markhedleyjones.com/media/calibration-checkerboard-collection/Checkerboard-A4-25mm-8x6.pdf) and print it out.
+Download the calibration checkerboard from [Checkerboard Collection](https://markhedleyjones.com/media/calibration-checkerboard-collection/Checkerboard-A4-25mm-8x6.pdf) and print it out.
 
 __Step 4.__ Run Camera Calibration
 
@@ -1095,6 +1102,7 @@ Create a parameter configuration.yaml file named `Orbbec_Gemini2.yaml` for the O
 
 <details>
 <summary> Orbbec_Gemini2.yaml </summary>
+
 ```yaml
 %YAML:1.0
 
@@ -1103,6 +1111,7 @@ Create a parameter configuration.yaml file named `Orbbec_Gemini2.yaml` for the O
 # Camera Parameters
 
 # --------------------------------------------------------------------------------------------
+
 File.version: "1.0"
 
 Camera.type: "PinHole"
@@ -1149,6 +1158,7 @@ RGBD.DepthMapFactor: 1000.0
 # ORB Parameters
 
 # --------------------------------------------------------------------------------------------
+
 ORBextractor.nFeatures: 800
 ORBextractor.scaleFactor: 1.2
 ORBextractor.nLevels: 6
@@ -1160,6 +1170,7 @@ ORBextractor.minThFAST: 7
 # Viewer Parameters
 
 # --------------------------------------------------------------------------------------------
+
 Viewer.KeyFrameSize: 0.05
 Viewer.KeyFrameLineWidth: 1.0
 Viewer.GraphLineWidth: 0.9
@@ -1176,7 +1187,6 @@ Viewer.ViewpointF: 500.0
 </details>
 
 ## Running ORB-SLAM3
-
 
 ```bash
 # Set Library Path

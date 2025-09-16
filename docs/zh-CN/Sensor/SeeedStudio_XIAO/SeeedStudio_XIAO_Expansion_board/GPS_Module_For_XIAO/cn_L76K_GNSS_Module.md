@@ -1,6 +1,6 @@
 ---
 title: Quectel L76K
-description: L76K GNSS模块XIAO入门指南
+description: L76K GNSS 模块 XIAO 入门指南
 keywords:
   - XIAO
   - Quectel L76K
@@ -13,7 +13,7 @@ last_update:
   author: Spencer
 ---
 
-# SeeedStudio XIAO L76K GNSS模块入门指南
+# SeeedStudio XIAO L76K GNSS 模块入门指南
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/1-L76K-GNSS-Module-for-Seeed-Studio-XIAO-45font.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -27,16 +27,16 @@ last_update:
 
 ## 介绍
 
-SeeedStudio XIAO L76K GNSS模块是一款与所有XIAO开发板兼容的多GNSS（全球导航卫星系统）模块，支持GPS、北斗（BDS）、GLONASS和QZSS系统，允许多系统组合或单系统独立定位。它还支持AGNSS功能，内置低噪声放大器和声表面滤波器，提供快速、准确、高性能的良好定位体验。
+SeeedStudio XIAO L76K GNSS 模块是一款与所有 XIAO 开发板兼容的多 GNSS（全球导航卫星系统）模块，支持 GPS、北斗（BDS）、GLONASS 和 QZSS 系统，允许多系统组合或单系统独立定位。它还支持 AGNSS 功能，内置低噪声放大器和声表面滤波器，提供快速、准确、高性能的良好定位体验。
 
-该模块配备高性能有源GNSS天线，旨在覆盖GPS L1 C/A、北斗B1和GLONASS L1频段。设计还包含一个微小的亮绿色LED，用于指示定位时的1PPS输出。
+该模块配备高性能有源 GNSS 天线，旨在覆盖 GPS L1 C/A、北斗 B1 和 GLONASS L1 频段。设计还包含一个微小的亮绿色 LED，用于指示定位时的 1PPS 输出。
 
 ### 特性
 
-- **增强接收能力：** 内置低噪声放大器和声表面滤波器，提高灵敏度并降低噪声
-- **高精度：** 32/72通道，-162dBm跟踪，-160dBm重新捕获灵敏度
-- **节能高效：** 41mA跟踪/捕获，360µA待机
-- **多GNSS系统：** 采用Quectel L76K芯片，支持GPS、北斗、GLONASS和QZSS
+- **增强接收：** 内置低噪声放大器和声表面波滤波器，提高灵敏度并降低噪声
+- **高精度：** 32/72 通道，-162dBm 跟踪，-160dBm 重新捕获灵敏度
+- **节能高效：** 41mA 跟踪/捕获，360µA 待机
+- **多 GNSS 系统：** 采用 Quectel L76K，支持 GPS、北斗、GLONASS 和 QZSS
 - **陶瓷天线：** 增强信号接收，优于传统天线。
 
 ### 规格参数
@@ -48,16 +48,16 @@ SeeedStudio XIAO L76K GNSS模块是一款与所有XIAO开发板兼容的多GNSS�
      <th>详细信息</th>
  </tr>
  <tr>
-     <th>GNSS频段</th>
-     <td>GPS L1 C/A: 1575.42MHz<br></br> GLONASS L1: 1602MHz<br></br> 北斗B1: 1561.098MHz</td>
+     <th>GNSS 频段</th>
+     <td>GPS L1 C/A: 1575.42MHz<br></br> GLONASS L1: 1602MHz<br></br> 北斗 B1: 1561.098MHz</td>
  </tr>
  <tr>
-     <th>通道数</th>
-     <td>32跟踪通道/72捕获通道</td>
+     <th>通道</th>
+     <td>32 跟踪通道/72 捕获通道</td>
  </tr>
   <tr>
      <th>TTFF（首次定位时间）</th>
-     <td>冷启动：30s（无AGNSS），5.5s（有AGNSS）<br></br> 热启动：5.5s（无AGNSS），2s（有AGNSS）</td>
+     <td>冷启动：30s（无 AGNSS），5.5s（有 GNSS）<br></br> 热启动：5.5s（无 AGNSS），2s（有 AGNSS）</td>
  </tr>
   <tr>
      <th>灵敏度</th>
@@ -68,12 +68,12 @@ SeeedStudio XIAO L76K GNSS模块是一款与所有XIAO开发板兼容的多GNSS�
      <td>位置：2.0m CEP<br></br> 速度：0.1m/s<br></br> 加速度：0.1m/s²<br></br> 时间：30ns</td>
  </tr>
   <tr>
-     <th>UART接口</th>
-     <td>波特率：9600~115200bps（默认9600bps）<br></br> 更新频率：1Hz（默认），5Hz（最大）<br></br> 协议：NMEA 0183，CASIC专有协议</td>
+     <th>UART 接口</th>
+     <td>波特率：9600~115200bps（默认 9600bps）<br></br> 更新频率：1Hz（默认），5Hz（最大）<br></br> 协议：NMEA 0183，CASIC 专有协议</td>
  </tr>
   <tr>
      <th>天线</th>
-     <td>类型：有源天线<br></br> 工作频率：1559–1606MHz<br></br> 同轴电缆：RF1.13 长度=10cm<br></br> 电缆连接器：U.FL插头直角</td>
+     <td>类型：有源天线<br></br> 工作频率：1559–1606MHz<br></br> 同轴电缆：RF1.13 长度=10cm<br></br> 电缆连接器：U.FL 插头 RA</td>
  </tr>
   <tr>
      <th>电流消耗（含有源天线）</th>
@@ -88,7 +88,7 @@ SeeedStudio XIAO L76K GNSS模块是一款与所有XIAO开发板兼容的多GNSS�
 
 ## 硬件概述
 
-在开始之前，我们可以参考以下图片来了解 SeeedStudio XIAO L76K GNSS 模块的引脚设计，以便于我们理解模块的功能。
+在开始之前，我们可以参考以下图片来了解 SeeedStudio XIAO L76K GNSS 模块的引脚设计，以便于我们理解该模块的功能。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/gnss-xiao-pinout.png" style={{width:800, height:'auto'}}/></div>
 
@@ -96,7 +96,7 @@ SeeedStudio XIAO L76K GNSS模块是一款与所有XIAO开发板兼容的多GNSS�
 
 ### 硬件准备
 
-为了充分体验 L76K GNSS 模块的功能，我们建议将其与我们 XIAO 系列的主板配对使用。*以下任何 XIAO 型号*都与 L76K GNSS 模块兼容。
+为了充分体验 L76K GNSS 模块的功能，我们建议将其与我们 XIAO 系列的主板配对使用。*以下任何一款 XIAO 型号*都与 L76K GNSS 模块兼容。
 
 <table align="center">
  <tr>
@@ -142,53 +142,53 @@ SeeedStudio XIAO L76K GNSS模块是一款与所有XIAO开发板兼容的多GNSS�
  </tr>
 </table>
 
-在 XIAO 主板上使用此模块之前，您需要在模块上安装排针插座，并将有源 GNSS 天线插到模块上。连接到 XIAO 时，请特别注意模块的安装方向，请不要反向插入，否则很可能会烧坏模块或 XIAO。
+在XIAO主板上使用此模块之前，您需要在模块上安装排针插座，并将有源GNSS天线插入模块。连接到XIAO时，请特别注意模块的安装方向，请不要反向插入，否则很可能烧毁模块或XIAO。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/gnss-xiao-assembled.png" style={{width:500, height:'auto'}}/></div>
 
 :::caution
-请特别注意模块的安装方向，请不要反向插入，否则很可能会烧坏模块或 XIAO。
+请特别注意模块的安装方向，请不要反向插入，否则很可能烧毁模块或XIAO。
 :::
 
 ### 软件准备
 
-要使用 SeeedStudio XIAO L76K GNSS 模块，我们需要对 XIAO 系列进行编程。推荐的编程工具是 Arduino IDE，您需要为 XIAO 配置 Arduino 环境并添加板载包。
+要使用SeeedStudio XIAO的L76K GNSS模块，我们需要对XIAO系列进行编程。推荐的编程工具是Arduino IDE，您需要为XIAO配置Arduino环境并添加板载包。
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用Arduino，我们强烈建议您参考[Arduino入门指南](/Getting_Started_with_Arduino/)。
 :::
 
-#### 步骤 1. 根据您的操作系统下载并安装稳定版本的 Arduino IDE
+#### 步骤1. 根据您的操作系统下载并安装稳定版本的Arduino IDE
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>下载 Arduino IDE</font></span></strong></a>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>下载Arduino IDE</font></span></strong></a>
 </div>
 
-#### 步骤 2. 启动 Arduino 应用程序
+#### 步骤2. 启动Arduino应用程序
 
-#### 步骤 3. 为您使用的 XIAO 配置 Arduino IDE
+#### 步骤3. 为您使用的XIAO配置Arduino IDE
 
-- 如果您想在后续教程中使用 **Seeed Studio XIAO SAMD21**，请参考**[此教程](/cn/Seeeduino-XIAO/#software)**完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO SAMD21**，请参考**[此教程](/Seeeduino-XIAO/#software)**完成添加。
 
-- 如果您想在后续教程中使用 **Seeed Studio XIAO RP2040**，请参考**[此教程](/cn/XIAO-RP2040-with-Arduino/#software-setup)**完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO RP2040**，请参考**[此教程](/XIAO-RP2040-with-Arduino/#software-setup)**完成添加。
 
-- 如果您想在后续教程中使用 **Seeed Studio XIAO nRF52840**，请参考**[此教程](/cn/XIAO_BLE/#software-setup)**完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO nRF52840**，请参考**[此教程](/XIAO_BLE/#software-setup)**完成添加。
 
-- 如果您想在后续教程中使用 **Seeed Studio XIAO ESP32C3**，请参考**[此教程](/cn/XIAO_ESP32C3_Getting_Started#software-setup)**完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO ESP32C3**，请参考**[此教程](/XIAO_ESP32C3_Getting_Started#software-setup)**完成添加。
 
-- 如果您想在后续教程中使用 **Seeed Studio XIAO ESP32S3**，请参考**[此教程](/cn/xiao_esp32s3_getting_started#software-preparation)**完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO ESP32S3**，请参考**[此教程](/xiao_esp32s3_getting_started#software-preparation)**完成添加。
 
-#### 步骤 4. 将 TinyGPSPlus 库添加到 Arduino
+#### 步骤4. 将TinyGPSPlus库添加到Arduino
 
-首先，您需要在 Arduino IDE 中搜索并下载最新版本的 **TinyGPSPlus** 库。
+首先，您需要在Arduino IDE中搜索并下载最新版本的**TinyGPSPlus**库。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/installing-tinygpsplus.png" style={{width:800, height:'auto'}}/></div>
 
 ## 应用演示
 
-### 示例 1：读取和显示 GNSS 数据
+### 示例1：读取和显示GNSS数据
 
-一旦硬件和软件准备就绪，我们开始上传第一个示例程序。L76K GNSS 模块在上电后每 1 秒通过串口打印 GNSS 信息。在这个示例中，我们将使用 **TinyGPSPlus** 库来解析从模块接收到的 NMEA 语句，并将包括纬度、经度和时间在内的结果打印到 Arduino IDE 的串口监视器。
+硬件和软件准备就绪后，我们开始上传第一个示例程序。L76K GNSS模块在上电后每1秒通过串口打印GNSS信息。在此示例中，我们将使用**TinyGPSPlus**库来解析从模块接收的NMEA语句，并将包括纬度、经度和时间在内的结果打印到Arduino IDE的串口监视器。
 
 以下是源代码：
 
@@ -196,15 +196,15 @@ SeeedStudio XIAO L76K GNSS模块是一款与所有XIAO开发板兼容的多GNSS�
 #include <TinyGPSPlus.h>
 #include <SoftwareSerial.h>
 /*
-   此示例代码演示了如何在SeeedStudio XIAO上使用L76K GNSS模块。
+   This sample sketch demonstrates how to use L76K GNSS Module on SeeedStudio XIAO.
 */
 static const int RXPin = D7, TXPin = D6;
 static const uint32_t GPSBaud = 9600;
 
-// TinyGPSPlus对象
+// The TinyGPSPlus object
 TinyGPSPlus gps;
 
-// 与GNSS模块的串口连接
+// The serial connection to the GNSS module
 SoftwareSerial ss(RXPin, TXPin);
 
 void setup() {
@@ -218,36 +218,36 @@ void setup() {
   ss.begin(GPSBaud);
 
   Serial.println(F("DeviceExample.ino"));
-  Serial.println(F("使用L76K GNSS模块的TinyGPSPlus简单演示"));
-  Serial.print(F("测试TinyGPSPlus库版本 "));
+  Serial.println(F("A simple demonstration of TinyGPSPlus with L76K GNSS Module"));
+  Serial.print(F("Testing TinyGPSPlus library v. "));
   Serial.println(TinyGPSPlus::libraryVersion());
-  Serial.println(F("作者：Mikal Hart"));
+  Serial.println(F("by Mikal Hart"));
   Serial.println();
 }
 
 void loop() {
-  // 此代码在每次正确编码新语句时显示信息。
+  // This sketch displays information every time a new sentence is correctly encoded.
   while (ss.available() > 0)
     if (gps.encode(ss.read()))
       displayInfo();
 
   if (millis() > 5000 && gps.charsProcessed() < 10) {
-    Serial.println(F("未检测到GPS：请检查接线。"));
+    Serial.println(F("No GPS detected: check wiring."));
     while (true);
   }
 }
 
 void displayInfo() {
-  Serial.print(F("位置："));
+  Serial.print(F("Location: "));
   if (gps.location.isValid()) {
     Serial.print(gps.location.lat(), 6);
     Serial.print(F(","));
     Serial.print(gps.location.lng(), 6);
   } else {
-    Serial.print(F("无效"));
+    Serial.print(F("INVALID"));
   }
 
-  Serial.print(F("  日期/时间："));
+  Serial.print(F("  Date/Time: "));
   if (gps.date.isValid()) {
     Serial.print(gps.date.month());
     Serial.print(F("/"));
@@ -255,7 +255,7 @@ void displayInfo() {
     Serial.print(F("/"));
     Serial.print(gps.date.year());
   } else {
-    Serial.print(F("无效"));
+    Serial.print(F("INVALID"));
   }
 
   Serial.print(F(" "));
@@ -272,7 +272,7 @@ void displayInfo() {
     if (gps.time.centisecond() < 10) Serial.print(F("0"));
     Serial.print(gps.time.centisecond());
   } else {
-    Serial.print(F("无效"));
+    Serial.print(F("INVALID"));
   }
 
   Serial.println();
@@ -285,13 +285,13 @@ void displayInfo() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/gnss-output.png" style={{width:800, height:'auto'}}/></div>
 
-此代码使用 TinyGPSPlus 库通过串口连接从 L76K GNSS 模块读取数据，并在串口监视器上显示有效的位置信息和日期/时间。
+此代码使用 TinyGPSPlus 库通过串行连接从 L76K GNSS 模块读取数据，并在串口监视器上显示有效的位置信息和日期/时间。
 
 ## 配置
 
 ### 示例 1：改变 LED 的行为
 
-本节演示如何通过串口通信发送特定的十六进制命令来使用 Arduino 控制绿色 LED。下面提供的示例展示了如何关闭 LED，然后将其恢复到正常闪烁状态。
+本节演示如何通过串行通信发送特定的十六进制命令来使用 Arduino 控制绿色 LED。下面提供的示例展示了如何关闭 LED，然后将其恢复到正常的闪烁状态。
 
 ```cpp
 static const int RXPin = D7, TXPin = D6;
@@ -301,7 +301,7 @@ SoftwareSerial SerialGNSS(RXPin, TXPin);
 void setup() {
   SerialGNSS.begin(GPSBaud);
 
-  // 定义用于关闭 LED 的字节数组
+  // Define the byte array to turn the LED off
   byte OffState[] = {0xBA, 0xCE, 0x10, 0x00, 0x06, 0x03, 0x40, 
                      0x42, 0x0F, 0x00, 0xA0, 0x86, 0x01, 0x00, 
                      // highlight-start
@@ -313,7 +313,7 @@ void setup() {
                     // highlight-end
                      0xC8, 0x17, 0x08};
 
-  // 定义用于恢复 LED 闪烁状态的字节数组
+  // Define the byte array to recover the LED blinking state
   byte RecoverState[] = {0xBA, 0xCE, 0x10, 0x00, 0x06, 0x03, 0x40, 
                          0x42, 0x0F, 0x00, 0xA0, 0x86, 0x01, 0x00, 
                          // highlight-start
@@ -325,11 +325,11 @@ void setup() {
                          // highlight-end
                          0xC8, 0x17, 0x08};
 
-  // 发送关闭 LED 的命令。
+  // Send the command to turn off the LED.
   SerialGNSS.write(OffState, sizeof(OffState));
-  // 等待 5 秒。
+  // Wait for 5 seconds.
   delay(5000);
-  // 发送命令使 LED 恢复闪烁。
+  // Send the command to return the LED to blinking.
   SerialGNSS.write(RecoverState, sizeof(RecoverState));
 }
 
@@ -337,7 +337,7 @@ void loop() {}
 ```
 
 :::info
-详情请参见 Quectel_L76K_GNSS 的 CASIC 协议消息。
+For details to see CASIC Protocol Messages of Quectel_L76K_GNSS.
 
 ```c
 struct CASIC_Messages {  
@@ -351,9 +351,11 @@ struct CASIC_Messages {
 } L76KStruct;
 ```
 
+:::
+
 ## 资源
 
-- **PDF**: [L76K GNSS Module for Seeed Studio XIAO 原理图](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/109100021-L76K-GNSS-Module-for-Seeed-Studio-XIAO-Schematic.pdf)
+- **PDF**: [L76K GNSS Module for Seeed Studio XIAO Schematic](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/109100021-L76K-GNSS-Module-for-Seeed-Studio-XIAO-Schematic.pdf)
 - **PDF**: [Quectel_L76K_GNSS_协议规范_V1.0](https://raw.githubusercontent.com/Seeed-Projects/Seeed_L76K-GNSS_for_XIAO/fb74b715224e0ac153c3884e578ee8e024ed8946/docs/Quectel_L76K_GNSS_协议规范_V1.0.pdf)
 - **PDF**: [Quectel_L76K_GNSS_Protocol_Specification_V1.1](https://raw.githubusercontent.com/Seeed-Projects/Seeed_L76K-GNSS_for_XIAO/fb74b715224e0ac153c3884e578ee8e024ed8946/docs/Quectel_L76K_GNSS_Protocol_Specification_V1.1.pdf)
 - **GitHub**: [Seeed_L76K-GNSS_for_XIAO](https://github.com/Seeed-Projects/Seeed_L76K-GNSS_for_XIAO)

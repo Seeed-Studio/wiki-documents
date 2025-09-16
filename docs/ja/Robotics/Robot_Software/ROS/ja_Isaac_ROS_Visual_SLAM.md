@@ -1,5 +1,5 @@
 ---
-description: このWikiは、Isaac ROS Visual SLAMの使用方法をステップバイステップで解説します。
+description: このwikiは、Isaac ROS Visual SLAMを使用するためのステップバイステップガイドを提供します。
 title: Isaac ROS Visual SLAM
 keywords:
 - NVIDIA
@@ -15,13 +15,8 @@ last_update:
 
 # Isaac ROS Visual SLAM デプロイメント  
 
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
-
 ## 前提条件  
-Visual SLAMをデプロイする前に、Isaac ROS環境がReComputer上で正しくセットアップされていることを確認してください。[インストールガイド](/ja/install_isaacros)を参照してください。ROS2がインストールされていない場合は、[こちらのドキュメント](/ja/install_ros2_humble)を参照してください。
+Visual SLAMをデプロイする前に、ReComputer上でIsaac ROS環境が適切にセットアップされていることを確認してください [インストールガイド](/install_isaacros)。ROS2がインストールされていない場合は、[このドキュメント](/install_ros2_humble)を参照してください。  
 
 
 ## 1. 環境設定  
@@ -45,7 +40,7 @@ cd ${ISAAC_ROS_WS}/src/isaac_ros_common && \
   ./scripts/run_dev.sh
 ```
 
-## 2. ROS Bagデータを使用したテスト  
+## 2. ROS Bagデータでのテスト  
 
 ### Visual SLAMパッケージのインストール（Docker内）  
 ```bash
@@ -57,21 +52,21 @@ sudo apt-get install -y ros-humble-isaac-ros-visual-slam
 ros2 launch isaac_ros_visual_slam isaac_ros_visual_slam.launch.py
 ```
 
-### RViz2を開いて可視化  
-**ローカルターミナル**（Docker外）で以下を実行：  
+### 可視化のためのRViz2を開く  
+**ローカルターミナル**（Docker外）で：  
 ```bash
 cd ${ISAAC_ROS_WS}/src
 rviz2 -d isaac_ros_visual_slam/isaac_ros_visual_slam/rviz/default.cfg.rviz
 ```
 
 ### ステレオカメラROS Bagの再生  
-**3つ目のターミナル**で以下を実行：  
+**3番目のターミナル**で：  
 ```bash
 cd ${ISAAC_ROS_WS}/src
 ros2 bag play isaac_ros_visual_slam/isaac_ros_visual_slam/test/test_cases/rosbags/small_pol_test/
 ```
 
-### 期待される出力:  
+### 期待される出力：  
 
 <div align="center">
     <img width={800} 
@@ -79,15 +74,15 @@ ros2 bag play isaac_ros_visual_slam/isaac_ros_visual_slam/test/test_cases/rosbag
 </div>
 
 
-### 注意事項:  
-1. ROS Bagには**ステレオカメラ画像**（左/右フレーム）が含まれている必要があります。  
-2. 必要に応じてRViz2の設定を調整してください（例：マップの可視化、軌跡設定）。  
+### 注意事項：  
+1. ROS bagに**ステレオカメラ画像**（左/右フレーム）が含まれていることを確認してください。  
+2. 必要に応じてRViz2設定を調整してください（例：マップ可視化、軌跡設定）。  
 
 トラブルシューティングについては、[公式ドキュメント](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_visual_slam)を参照してください。  
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

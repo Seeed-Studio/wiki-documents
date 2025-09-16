@@ -1,6 +1,6 @@
 ---
 description: reComputer Jetsonプラットフォームでの Orbbec Gemini 335Lg の使用方法を説明します。
-title: Orbbec Gemini2 3Dカメラの使用開始
+title: Orbbec Gemini2 3Dカメラ
 keywords:
 - Jetson
 - reComputer Robotics
@@ -20,7 +20,7 @@ last_update:
 ---
 
 <div align="center">
-    <img width={400} 
+    <img width={400}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orbbec-gemini-2-3d-camera.png" />
 </div>
 
@@ -30,11 +30,11 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
-
 ## 特徴
+
 - **Active Stereo IR** 深度出力にアクティブステレオIR技術を採用し、様々な照明条件で正確で信頼性の高いデータ出力を実現
 - **広いセンシング範囲** 0.15mから10mまでの高品質な深度データ出力を提供
 - **広いFOV** 水平91度、垂直66度の広い視野データを提供
@@ -42,6 +42,7 @@ last_update:
 - **USB接続** 電源と接続に単一のUSB 3.0 Type-Cケーブルを使用
 
 ## 仕様
+
 <div className="table-center">
   <table style={{ height: "700px" }}>
     <tbody>
@@ -120,21 +121,21 @@ last_update:
 ## ハードウェア概要
 
 <div align="center">
-    <img width={700} 
+    <img width={700}
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-1.png" />
 </div>
 
 <div align="center">
-    <img width={700} 
+    <img width={700}
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-2.png" />
 </div>
 
 <div align="center">
-    <img width={700} 
+    <img width={700}
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-3.png" />
 </div>
 
-## reComputerでの使用開始
+## reComputerでの開始方法
 
 **ステップ 1.** ARM64アーキテクチャ用のOrbbec SDKをダウンロードしてインストールします：
 
@@ -147,6 +148,7 @@ unzip OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64.zip
 ```
 
 **ステップ 2.** サンプルをビルドしてテストします：
+
 ```bash
 # Install udev rules
 cd OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64/shared/
@@ -159,9 +161,8 @@ cd ..
 ./setup.sh
 ```
 
-
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/test_sdk.png" />
 </div>
 
@@ -178,15 +179,14 @@ Gemini2を使用して私たちが開発したケースチュートリアルが�
 [距離測定](https://wiki.seeedstudio.com/ja/yolov11_with_depth_camera/)
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/distance.png" />
 </div>
-
 
 [ドローンでのオブジェクトトラッキング](https://wiki.seeedstudio.com/ja/object_tracking_with_reComputer_jetson_and_pX4/)
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/px4.png" />
 </div>
 
@@ -200,14 +200,14 @@ Gemini2を使用して私たちが開発したケースチュートリアルが�
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

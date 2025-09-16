@@ -74,6 +74,106 @@ Before we begin, let's review all the pins that the XIAO ESP32S3 has and its fun
 
 - GND - Power/data/signal ground
 
+Below is an overview of the functional pins for the XIAO ESP32S3.
+
+<div class="table-center">
+ <table align="center">
+  <tr>
+   <th>Pin Number</th>
+   <th>Function Description</th>
+  </tr>
+    <tr>
+   <th colspan="2">-- PDM Microphone Pins --</th>
+  </tr>
+  <tr>
+   <td align="center">GPIO 41</td>
+   <td align="center">PDM Microphone DATA</td>
+  </tr>
+  <tr>
+   <td align="center">GPIO 42</td>
+   <td align="center">PDM Microphone CLK</td>
+  </tr>
+    <tr>
+   <th colspan="2">-- MicrSD Card SPI Pins --</th>
+  </tr>
+  <tr>
+   <td align="center">GPIO 21</td>
+   <td align="center">MicroSD SPI CS</td>
+  </tr>
+  <tr>
+   <td align="center">D8 / A8 / Qt7 / GPIO7</td>
+   <td align="center">MicroSD SPI SCK</td>
+  </tr>
+  <tr>
+   <td align="center">D9 / A9 / Qt8 / GPIO8</td>
+   <td align="center">MicroSD SPI MISO</td>
+  </tr>
+  <tr>
+   <td align="center">D10 / A10 / Qt9 / GPIO9</td>
+   <td align="center">MicroSD SPI MOSI</td>
+  </tr>
+    <tr>
+   <th colspan="2">-- Camera Pins --</th>
+  </tr>
+    <tr>
+   <td align="center">GPIO 10</td>
+   <td align="center">XMCLK</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 11</td>
+   <td align="center">DVP_Y8</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 12</td>
+   <td align="center">DVP_Y7</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 13</td>
+   <td align="center">DVP_PCLK</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 14</td>
+   <td align="center">DVP_Y6</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 15</td>
+   <td align="center">DVP_Y2</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 16</td>
+   <td align="center">DVP_Y5</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 17</td>
+   <td align="center">DVP_Y3</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 18</td>
+   <td align="center">DVP_Y4</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 38</td>
+   <td align="center">DVP_VSYNC</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 39</td>
+   <td align="center">Camera SCL</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 40</td>
+   <td align="center">Camera SDA</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 47</td>
+   <td align="center">DVP_HREF</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 48</td>
+   <td align="center">DVP_Y9</td>
+  </tr>
+ </table>
+</div>
+
 ### Solder header
 
 To use the functions of each pin according to this tutorial, we recommend to solder the pins beforehand.
@@ -1093,8 +1193,6 @@ However, this method does not always work, in fact, the debug information of ESP
 In terms of SD card design, the correct circuit must have pull-up resistors to make the microSD card work properly. If you find that the pin level and card reading and writing are still normal after cutting J3, this may just be a lucky situation and we do not recommend you to read and write the card in this case, which may cause the problem of losing the written data. While D8 and D9 pins can be modified level by writing low level after cutting J3.
 
 ## Tech Support & Product Discussion
-
-.
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

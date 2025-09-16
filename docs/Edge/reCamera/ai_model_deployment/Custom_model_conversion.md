@@ -191,9 +191,7 @@ model_yolo11n
 
 The conversion from ONNX to `MLIR` is an intermediate step in the model transformation process. Before obtaining a model suitable for inference on reCamera, you need to first convert the ONNX model to the `MLIR` format. This `MLIR` file serves as a bridge to generate the final model optimized for reCamera's inference engine.
 
-If the input is image, we need to know the preprocessing of the model before transferring it. If
-the model uses preprocessed npz files as input, no preprocessing needs to be considered. The
-preprocessing process is formulated as follows ( `x` represents the input):
+If the input is image, we need to know the preprocessing of the model before transferring it. If the model uses preprocessed npz files as input, no preprocessing needs to be considered. The preprocessing process is formulated as follows ( `x` represents the input):
 
 <div align="center">
 
@@ -201,9 +199,7 @@ y = (x − mean) × scale
 
 </div>
 
-The normalization range of yolo11 is **[0, 1]**, and the image of the official yolo11 is RGB. Each value will be multiplied by **1/255**, respectively
-corresponding to **0.0, 0.0, 0.0** and **0.0039216, 0.0039216, 0.0039216** when it is converted into `mean`
-and `scale`. The parameters for `mean` and `scale` differ depending on the model, as they are determined by the normalization method used for each specific model.
+The normalization range of yolo11 is **[0, 1]**, and the image of the official yolo11 is RGB. Each value will be multiplied by **1/255**, respectively corresponding to **0.0, 0.0, 0.0** and **0.0039216, 0.0039216, 0.0039216** when it is converted into `mean` and `scale`. The parameters for `mean` and `scale` differ depending on the model, as they are determined by the normalization method used for each specific model.
 
 You can refer to the following model conversion command in terminal:
 
@@ -222,8 +218,7 @@ model_transform \
   --mlir yolo11n.mlir
 ```
 
-After converting to an `mlir` file, a `${model_name}_in_f32.npz` file will be generated, which
-is the input file for the subsequent models.
+After converting to an `mlir` file, a `${model_name}_in_f32.npz` file will be generated, which is the input file for the subsequent models.
 
 Regarding the selection of the `--output_names` parameter, the YOLO11 model conversion in this example does not choose the final output named output0. Instead, it selects the six outputs before the model's head as the parameter. You can import the `ONNX` file into [Netron](https://netron.app/) to view the model structure.
 
@@ -445,8 +440,7 @@ run_calibration \
   -o yolo11n_calib_table
 ```
 
-After running the command above, a file named `yolo11n_calib_table` will be generated, which
-is used as the input file for subsequent compilation of the **INT8** model.
+After running the command above, a file named `yolo11n_calib_table` will be generated, which is used as the input file for subsequent compilation of the **INT8** model.
 
 Description of Main Parameters for `run_calibration`:
 

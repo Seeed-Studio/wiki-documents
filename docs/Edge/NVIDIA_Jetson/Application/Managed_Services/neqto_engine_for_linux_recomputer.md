@@ -50,20 +50,22 @@ You can choose either one:
 - (Any Linux machine)
 
 :::tip
+
 - Supported Architectures: armv6l(32bit), armv7l(32bit), aarch64(64bit), x86_64(64bit)
 - Required disk space: ≥ 32 MB
 - Required RAM space: ≥ 4MB (In default settings)
 - Network Communication Interfaces: A physical network adapter must be on board.
 - Monitor, keyboard, mouse (optional)
+
 :::
 
 ## Getting Started
 
-### Sign Up for a NEQTO Account:
+### Sign Up for a NEQTO Account
 
 - Step 1. Visit the [official page](https://console.neqto.com/register) to sign up for a NEQTO account
 - Step 2. Enter your email address, create a password, and proceed
-- Step 3. Verify the account from the activation email you receive 
+- Step 3. Verify the account from the activation email you receive
 
 ### Installation of NEQTO Linux
 
@@ -102,7 +104,6 @@ Installer downloads successfully
 4. Change the execution permissions of the downloaded installer (`neqto-daemon-install.latest.sh`) with the chmod command before running the installation of NEQTO Engine for Linux.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/neqto_engine_for_linux_recomputer/65f00369ccae06004c6d94ab.png" alt="pir" width={600} height="auto" /></p>
-
 
 <!--<div style="page-break-before:always"></div>-->
 
@@ -236,12 +237,11 @@ And then click on `ADD NODE`
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

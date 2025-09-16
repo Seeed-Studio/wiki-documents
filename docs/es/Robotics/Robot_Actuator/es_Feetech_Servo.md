@@ -1,6 +1,6 @@
 ---
-description: Esta wiki proporciona un tutorial para los motores servo Feetech.
-title: Introducción a los Motores Servo Feetech
+description: Este wiki proporciona un tutorial para los motores servo Feetech.
+title: Motor Servo Feetech
 keywords:
 - actuator
 - motor
@@ -22,7 +22,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/STS3215-19kg-cm-7-4V-Serial-Servo-p-6338.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱</font></span></strong>
     </a>
 </div>
 
@@ -77,15 +77,15 @@ last_update:
 ## Ejemplos
 
   <a href="https://wiki.seeedstudio.com/es/bus_servo_driver_board/" className="nav-item">
-    <span className="text">Introducción a la Placa Controladora de Servo Bus / Adaptador de Servo Bus XIAO</span>
+    <span className="text">Primeros Pasos con la Placa Controladora de Servo Bus / Adaptador de Servo Bus XIAO</span>
   </a>
 
 </div>
 </div>
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
@@ -327,7 +327,7 @@ html[data-theme='dark'] .category-card:active {
   .nav-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .category-card {
     width: 100%;
     margin-top: 0.5rem; /* 卡片紧贴标题 */

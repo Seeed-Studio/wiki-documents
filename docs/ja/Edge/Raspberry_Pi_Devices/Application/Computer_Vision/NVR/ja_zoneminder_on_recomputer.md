@@ -25,8 +25,7 @@ no_comments: false # for Disqus
 
 ### ハードウェア要件
 
-<div class="table-center">
- <table align="center">
+<table align="center">
  <tr>
   <th>reComputer R1125</th>
   <th>reComputer AI R2130</th>
@@ -54,8 +53,7 @@ no_comments: false # for Disqus
     </a>
    </div></td>
   </tr>
- </table>
-</div>
+</table>
 
 ## Zoneminderのダウンロード
 

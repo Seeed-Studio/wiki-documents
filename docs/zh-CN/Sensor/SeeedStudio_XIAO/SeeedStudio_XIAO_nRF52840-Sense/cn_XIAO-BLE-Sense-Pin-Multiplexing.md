@@ -12,13 +12,13 @@ last_update:
 
 # Seeed Studio XIAO nRF52840 (Sense) 的引脚复用
 
-Seeed Studio XIAO nRF52840 (Sense) 具有丰富的接口。它有 **11 个数字 I/O** 可用作 **PWM 引脚**，以及 **6 个模拟输入**可用作 **ADC 引脚**。它支持所有三种常见的串行通信接口，如 **UART、I2C 和 SPI**。本 wiki 将帮助您了解这些接口并在您的下一个项目中实现它们！
+Seeed Studio XIAO nRF52840 (Sense) 具有丰富的接口。它有 **11 个数字 I/O** 可用作 **PWM 引脚**，以及 **6 个模拟输入** 可用作 **ADC 引脚**。它支持所有三种常见的串行通信接口，如 **UART、I2C 和 SPI**。本 wiki 将帮助您了解这些接口并在您的下一个项目中实现它们！
 
-> 这里的基本功能对于 Seeed Studio XIAO nRF52840 Arduino 库的两个版本都表现良好。
+> 这里的基本功能在两个 Seeed Studio XIAO nRF52840 Arduino 库中都表现良好。
 
 ## 数字
 
-将按钮连接到引脚 D6，将 LED 连接到引脚 D10。然后上传以下代码，使用按钮控制 LED 的开/关。
+将一个按钮连接到引脚 D6，将一个 LED 连接到引脚 D10。然后上传以下代码，使用按钮控制 LED 的开/关。
 
 ```cpp
 const int buttonPin = 6;     // pushbutton connected to digital pin 6
@@ -48,9 +48,9 @@ void loop() {
 }
 ```
 
-## 数字作为 PWM
+## Digital as PWM
 
-将 LED 连接到引脚 D10。然后上传以下代码，观察 LED 逐渐淡化的效果。
+Connect an LED to Pin D10. Then upload the following code to see the LED gradually fading.
 
 ```cpp
 int ledPin = 10;    // LED connected to digital pin 10
@@ -105,7 +105,8 @@ void loop() {
 }
 ```
 
-## 串口通信
+## 串口
+
 使用 Serial1 通过 GPIO 而不是 USB 来使用 UART。您也可以同时使用两者。
 使用引脚 D6 作为 UART 的 TX 引脚，引脚 D7 作为 UART 的 RX 引脚来发送 "Hello World!" 消息。
 
@@ -129,11 +130,10 @@ void loop() {
 |-----------|-----------|
 | GND       | GND       |
 | VCC       | 5V        |
-| SDA       | SDA       | 
+| SDA       | SDA       |
 | SCL       | SCL       |
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/OLED-I2C-2.png" alt="pir" width={1000} height="auto" /></p>
-
 
 - **步骤 2.** 打开 Arduino IDE，导航到 `Sketch > Include Library > Manage Libraries...`
 
@@ -141,8 +141,7 @@ void loop() {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/u8g2-install.png" alt="pir" width={600} height="auto" /></p>
 
-
-- **步骤 4.** 上传以下代码在 OLED 显示屏上显示文本字符串
+- **步骤 4.** 上传以下代码以在 OLED 显示屏上显示文本字符串
 
 ```cpp
 #include <Arduino.h>
@@ -168,13 +167,13 @@ void loop(void) {
 
 ## SPI
 
-- **步骤 1.** 按照以下硬件连接将 [Grove - OLED Display 1.12 (SH1107) V3.0](https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html) 连接到 Seeed Studio XIAO nRF52840 (Sense)。
+- **步骤 1.** 按照以下硬件连接方式，将 [Grove - OLED Display 1.12 (SH1107) V3.0](https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html) 连接到 Seeed Studio XIAO nRF52840 (Sense)。
 
 | Grove - OLED Display 1.12 (SH1107) | Seeed Studio XIAO nRF52840 (Sense) |
 |-----------|------------|
 | GND        | GND       |
 | 5V         | 5V        |
-| SCL        | SCK       | 
+| SCL        | SCK       |
 | SI         | MOSI      |
 | RES        | D3        |
 | D/C        | D4        |
@@ -182,12 +181,11 @@ void loop(void) {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/OLED-SPI.png" alt="pir" width={1000} height="auto" /></p>
 
-
-- **步骤 2.** 此 OLED 显示屏支持 I2C 和 SPI 通信，默认模式是 I2C。要使用 SPI 模式，您需要参考 [Grove - OLED Display 1.12 (SH1107) V3.0 wiki](https://wiki.seeedstudio.com/cn/Grove-OLED-Display-1.12-SH1107_V3.0/#software-i2c) 将 OLED 显示屏通信更改为 SPI，然后再继续进行
+- **步骤 2.** 这个 OLED 显示屏支持 I2C 和 SPI 通信，默认模式是 I2C。要使用 SPI 模式，您需要参考 [Grove - OLED Display 1.12 (SH1107) V3.0 wiki](https://wiki.seeedstudio.com/Grove-OLED-Display-1.12-SH1107_V3.0/#software-i2c) 将 OLED 显示屏的通信方式更改为 SPI，然后再继续进行
 
 **注意：** 确保已从前面的步骤中安装了 U8g2 库。
 
-- **步骤 3.** 上传以下代码在 OLED 显示屏上显示文本字符串
+- **步骤 3.** 上传以下代码以在 OLED 显示屏上显示文本字符串
 
 ```cpp
 #include <Arduino.h>

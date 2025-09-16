@@ -1,5 +1,5 @@
 ---
-description: Discover Seeed’s SenseCraft cloud services — a powerful, industrial-grade platform designed for efficient data management, real-time operations, and scalable IoT applications. Learn more about how SenseCraft supports your industrial IoT cloud deployment.
+description: Discover Seeed’s SenseCraft Cloud services — a powerful, industrial-grade platform designed for efficient data management, real-time operations, and scalable IoT applications. Learn more about how SenseCraft supports your industrial IoT cloud deployment.
 title: Cloud
 keywords:
 - SenseCraft Matrix

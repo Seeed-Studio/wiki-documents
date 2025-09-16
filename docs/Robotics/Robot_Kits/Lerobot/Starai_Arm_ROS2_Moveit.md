@@ -1,6 +1,6 @@
 ---
 description: This wiki provides the Starai Arm Manipulator - ROS2 MoveIt Guide.
-title: Starai Arm Manipulator - ROS2 MoveIt Guide
+title: Starai Arm in ROS2 MoveIt
 keywords:
 - Moveit
 - ROS2
@@ -15,7 +15,6 @@ last_update:
 
 # Starai Arm Manipulator - ROS2 MoveIt Guide
 
-
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/IJKTeBYAG7k?si=iS-jqT27fDjeI6yX" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
@@ -29,19 +28,18 @@ last_update:
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now!!! 🖱️</font></span></strong>
 </a></div>
 
-
 ## Product Introduction
 
-1.  **Open-Source & Easy for Secondary Development**
+1. **Open-Source & Easy for Secondary Development**
     This series of servo motors, provided by [Fashion Star Robotics](https://fashionrobo.com/), offers an open-source, easily customizable 6+1 degrees of freedom robotic arm solution.
 
-2. **Dual-Arm Systems with Various Payloads** 
+2. **Dual-Arm Systems with Various Payloads**
     The Violin serves as the leader robotic arm. When at 70% of its arm span, the follower arm Viola has an operating payload of 300g, while the follower arm Cello has an operating payload of 750g.
 
 3. **Supported ROS2, Moveit2 and Isaac Sim**
     It supports ROS2 for publishing and subscribing to robotic arm data topics and controlling the robotic arm, and also supports MoveIt2 for inverse kinematics calculation, as well as simulation in Isaac Sim.
 
-4.  **LeRobot Platform Integration Support**
+4. **LeRobot Platform Integration Support**
     It's specifically designed for integration with the [LeRobot platform](https://github.com/huggingface/lerobot). This platform provides PyTorch models, datasets, and tools for imitation learning in real-world robotics tasks, including data collection, simulation, training, and deployment.
 
 5. **Open-Source SDK**
@@ -50,19 +48,16 @@ last_update:
 6. **Button Hover**
     Simulates gravity compensation, allowing the robotic arm to hover at any position via a button.
 
-7. **Modular End Effector** 
+7. **Modular End Effector**
     Enables quick DIY replacement.
 
-8.  **Abundant Learning Resources**
+8. **Abundant Learning Resources**
     We offer comprehensive open-source learning resources, including environment setup, installation and debugging guides, and custom grasping task examples to help users quickly get started and develop robotic applications.
- 
-9.  **Nvidia Platform Compatibility**
+
+9. **Nvidia Platform Compatibility**
     Deployment is supported via the Nvidia Jetson platform.
 
-
-
 ## Specifications
-
 
 | Item                 | Follower Arm \| Viola                             | Leder Arm \|Violin                                |    Follower Arm \|Cello    |
 | -------------------- | ------------------------------------------------- | ------------------------------------------------- |-----------------|
@@ -80,7 +75,7 @@ last_update:
 | Works with ROS 2     | ✅                                                 | ✅                                                | ✅|
 | Works with MoveIt2    | ✅                                                 | ✅                                               |✅ |
 | Works with Gazebo    | ✅                                                 |✅                                              |✅ |
-| Communication Hub    | UC-01                                             | UC-01                                             |	UC-01 |
+| Communication Hub    | UC-01                                             | UC-01                                             | UC-01 |
 | Power Supply         | 12V10A/120w XT30                                   | 12V10A/120w XT30                                 |12V25A/300w XT60  |
 
 For more information about servo motors, please visit the following link.
@@ -90,9 +85,6 @@ For more information about servo motors, please visit the following link.
 [RX18-U100H-M](https://fashionrobo.com/actuator-u100/22853/)
 
 [RX8-U50H-M](https://fashionrobo.com/actuator-u50/136/)
-
-
-
 
 ## Dependent Environment
 
@@ -112,7 +104,6 @@ ROS2:           Humble
 
 [ROS2 Humble Installation](https://wiki.seeedstudio.com/install_ros2_humble/)
 
-
 ### Install Moveit2
 
 ```bash
@@ -126,7 +117,7 @@ sudo pip install pyserial
 sudo pip install fashionstar-uart-sdk
 ```
 
-### Create a workspace and Initialization.
+### Create a workspace and Initialization
 
 ```bash
 mkdir -p ~/starai_ws/src
@@ -135,6 +126,7 @@ colcon build
 ```
 
 ### Clone `starai-arm-moveit2` Ros2's Package
+
 ```
 cd ~/starai_ws/src
 git clone https://github.com/Welt-liu/starai-arm-moveit2.git
@@ -144,13 +136,11 @@ echo "source ~/starai_ws/install/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-
 ## Starai Arm MoveIt2 Simulation Script
 
 ```bash
 ros2 launch viola_configure demo.launch.py 
 ```
-
 
 ## Using a Real Robotic Arm
 
@@ -177,7 +167,6 @@ ros2 launch viola_configure actual_robot_demo.launch.py
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/L82y7e9uk9Q?si=Fa8YorBPgbRszYGn" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
 
 ## FAQ
 

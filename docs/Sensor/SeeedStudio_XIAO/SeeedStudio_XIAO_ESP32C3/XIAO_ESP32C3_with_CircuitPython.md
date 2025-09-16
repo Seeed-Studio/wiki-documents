@@ -423,6 +423,7 @@ while True:
 #### Light up OLED screen
 
 **Download and Extract the Library Bundle**:
+
 - Go to the [library](https://circuitpython.org/libraries) and download the library bundle for CircuitPython. To install, download the appropriate bundle for your version of CircuitPython.
 
 **Copy Libraries to CIRCUITPY**:

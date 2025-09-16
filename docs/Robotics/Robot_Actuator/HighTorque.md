@@ -1,6 +1,6 @@
 ---
 description: This document will introduce how to quickly get started with the HighTorque series motors.
-title: HighTorque Series Motor User Manual
+title: HighTorque Series Motor
 keywords:
 - Joint Module
 - Motor

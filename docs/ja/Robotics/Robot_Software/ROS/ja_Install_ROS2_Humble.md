@@ -1,6 +1,6 @@
 ---
-description: このウィキは、ROS2 Humble のインストール手順をステップバイステップで提供します。
-title: ROS2 Humble のインストール
+description: このwikiは、ROS2 humbleをインストールするためのステップバイステップガイドを提供します。
+title: ROS2 Humbleのインストール
 keywords:
 - NVIDIA
 - Isaac ROS
@@ -12,24 +12,26 @@ last_update:
   author: ZhuYaoHui
 ---
 
-# ROS2 Humble のインストール
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
+# ROS2 Humbleのインストール
 
-## 前提条件
-- ReComputer に Jetpack 5.1.2 と Ubuntu 20.04 環境がインストールされている必要があります。
+ROS 2は、リアルタイム、信頼性、スケーラブルなロボットシステムを構築するために設計された次世代のオープンソースロボティクスミドルウェアです。このwikiでは、Jetsonを例にしてROS 2の詳細なインストールプロセスを説明します。
+
+
+<Tabs>
+
+<TabItem value="JP5.1.2" label="JP5.1.2">
 
 ## ロケールの設定
 ```bash
-locale  # UTF-8 を確認
+locale  # check for UTF-8
 sudo apt update && sudo apt install locales
 sudo locale-gen en_US en_US.UTF-8
 sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
-locale  # 設定を確認
+locale  # verify settings
 ```
 
 ## 依存関係のインストール
@@ -41,14 +43,14 @@ sudo add-apt-repository universe
 
 ## ソースの初期化（地域を選択）
 ```bash
-# 米国地域
+# US Region
 echo 'deb https://isaac.download.nvidia.com/isaac-ros/ubuntu/main focal main' | sudo tee -a /etc/apt/sources.list
 
-# 中国地域
+# China Region
 echo 'deb https://isaac.download.nvidia.cn/isaac-ros/ubuntu/main focal main' | sudo tee -a /etc/apt/sources.list
 ```
 
-## ROS 2 APT リポジトリの追加
+## ROS 2 APTリポジトリの追加
 ```bash
 sudo apt update && sudo apt install curl -y \
 && sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
@@ -56,10 +58,10 @@ sudo apt update && sudo apt install curl -y \
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu focal main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 ```
 
-## ROS2 のインストール
+## ROS2のインストール
 ```bash
 sudo apt update
-sudo apt install ros-humble-desktop-full  # オプション: ros-humble-desktop-full, ros-humble-desktop, または ros-humble-ros-base
+sudo apt install ros-humble-desktop-full  # Options: ros-humble-desktop-full, ros-humble-desktop, or ros-humble-ros-base
 ```
 
 ## 追加のビルドツールのインストール
@@ -67,21 +69,62 @@ sudo apt install ros-humble-desktop-full  # オプション: ros-humble-desktop-
 sudo apt install ros-dev-tools
 ```
 
-## ROS 環境の初期化
+## ROS環境の初期化
 ```bash
 sudo rosdep init
 rosdep update
 ```
 
-## ROS 環境変数の設定
+## ROS環境変数の設定
 ```bash
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-## 技術サポートと製品ディスカッション
+</TabItem>
 
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際に、スムーズな体験を提供するため、さまざまなサポートをご用意しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルを提供しています。
+<TabItem value="JP6.2" label="JP6.2">
+
+Jetsonデバイスでターミナルを開き、以下のコマンドを入力します：
+
+```bash
+sudo apt install software-properties-common -y
+sudo add-apt-repository universe
+sudo apt update
+sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+sudo apt update
+sudo apt install ros-humble-desktop -y
+```
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/ros/ros_install.png"/>
+</div>
+
+</TabItem>
+
+</Tabs>
+
+ROS2が正常にインストールされたかどうかを確認するために、デバイスで2つの新しいターミナルを作成し、それぞれ以下のコマンドを実行します。
+
+```bash
+# terminal1
+ros2 run demo_nodes_cpp talker
+
+# terminal2
+ros2 run demo_nodes_py listener
+```
+
+<div align="center">
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/ros/ros_test.png"/>
+</div>
+
+両方のターミナルでメッセージが出力されれば、ROS 2 Humbleが正常にインストールされています！🎉
+
+## 技術サポート & 製品ディスカッション
+
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

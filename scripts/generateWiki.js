@@ -20,6 +20,14 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'Watcher-Agent', 'Web Control Panel.md'), //8.20
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'Watcher-Agent', 'Flash Watcher Agent Firmware.md'), //8.20
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'Watcher-Agent', 'Device Network Setup Guide.md'), //8.20
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'Hand', 'AmazingHand.md'), //9.10
+  path.join(docsDirectory, 'Solutions', 'smart-building', 'indoor-positioning-bluetooth-lorawan-tracker.md'), //9.10
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C3', 'MicroBlocks_XIAO_ESP32_C3.md'), //9.9
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_nRF52840-Sense', 'MicroBlocks_XIAO_nRF52840.md'), //9.9
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_RP2040', 'MicroBlocks_XIAO_RP2040.md'), //9.9
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_RP2350', 'programming_language', 'MicroBlocks_XIAO_RP2350.md'), //9.9
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_SAMD21', 'MicroBlocks_XIAO_SAMD21.md'), //9.9
+  path.join(docsDirectory, 'Solutions', 'Frigate_on_Jetson_NodeRED_Gun_Alerts.md'), //9.5
 ];
 
 // 递归函数，用于遍历多层文件夹

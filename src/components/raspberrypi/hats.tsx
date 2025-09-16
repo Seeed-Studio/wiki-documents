@@ -95,41 +95,58 @@ const hats = [
 ];
 
 const Value = ({ lang = "en" }) => {
+  const isZH = lang === "zh" || lang === "cn";
+  const isJA = lang === "ja";
+  const isES = lang === "es";
+
+  const tCompatibleWith = isZH ? "兼容型号" : isJA ? "対応機種" : isES ? "Compatible con" : "Compatible With";
+  const tBuyNow        = isZH ? "🖱️ 立即购买" : isJA ? "🖱️ 今すぐ購入" : isES ? "🖱️ Comprar ahora" : "🖱️ Buy Now";
+  const tGettingStarted= isZH ? "📚 快速入门" : isJA ? "📚 はじめに" : isES ? "📚 Guía de inicio" : "📚 Getting Started";
+
   return (
     <div>
       <div className="rpi_hat_container">
-        {hats.map((hat) => (
-          <div key={hat.id} className="rpi_hat_grid">
-            <div className="rpi_hat_vertical">
-              <span className='rpi_hat_description'>
-                <h2>{lang === "cn" ? hat.name_cn : lang === "ja" ? hat.name_ja : hat.name_en}</h2>
-                <p>{lang === "cn" ? hat.description_cn : lang === "ja" ? hat.description_ja : hat.description_en}</p>
+        {hats.map((hat) => {
+          const name =
+            isZH ? hat.name_cn : isJA ? hat.name_ja : hat.name_en;
+          const description =
+            isZH ? hat.description_cn : isJA ? hat.description_ja : hat.description_en; // es 无数据字段时回退 en
+          const compatibleWith =
+            isZH ? hat.compatibleWith_cn : isJA ? hat.compatibleWith_ja : hat.compatibleWith_en; // es 回退 en
+
+          return (
+            <div key={hat.id} className="rpi_hat_grid">
+              <div className="rpi_hat_vertical">
+                <span className='rpi_hat_description'>
+                  <h2>{name}</h2>
+                  <p>{description}</p>
+                </span>
+                <span className='rpi_hat_compatible'>
+                  <h3>{tCompatibleWith}</h3>
+                  <p>{compatibleWith}</p>
+                </span>
+              </div>
+
+              <img
+                className={"rpi_hat_pic " + (hat.id % 2 ? "reverse" : "")}
+                src={hat.image}
+                alt={name}
+              />
+
+              <span className='rpi_hat_purchase pagelink'>
+                <a href={hat.purchasePage} target="_blank" rel="noopener noreferrer">
+                  {tBuyNow}
+                </a>
               </span>
-              <span className='rpi_hat_compatible'>
-                <h3>{lang === "cn" ? "兼容型号" : lang === "ja" ? "対応機種" : "Compatible With"}</h3>
-                <p>{lang === "cn" ? hat.compatibleWith_cn : lang === "ja" ? hat.compatibleWith_ja : hat.compatibleWith_en}</p>
+
+              <span className='rpi_hat_wikilink pagelink'>
+                <a href={hat.wikiPage} target="_blank" rel="noopener noreferrer">
+                  {tGettingStarted}
+                </a>
               </span>
             </div>
-
-            <img
-              className={"rpi_hat_pic " + (hat.id % 2 ? "reverse" : "")}
-              src={hat.image}
-              alt={lang === "cn" ? hat.name_cn : lang === "ja" ? hat.name_ja : hat.name_en}
-            />
-
-            <span className='rpi_hat_purchase pagelink'>
-              <a href={hat.purchasePage} target="_blank" rel="noopener noreferrer">
-                {lang === "cn" ? "🖱️ 立即购买" : lang === "ja" ? "🖱️ 今すぐ購入" : "🖱️ Buy Now"}
-              </a>
-            </span>
-
-            <span className='rpi_hat_wikilink pagelink'>
-              <a href={hat.wikiPage} target="_blank" rel="noopener noreferrer">
-                {lang === "cn" ? "📚 快速入门" : lang === "ja" ? "📚 はじめに" : "📚 Getting Started"}
-              </a>
-            </span>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

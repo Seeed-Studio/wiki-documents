@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/08/2025
+  date: 09/15/2025
   author: Frank
 ---
 
@@ -17,37 +17,53 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 8th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 15th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Training SoArm101 Policy with IsaacLab](https://wiki.seeedstudio.com/training_soarm101_policy_with_isaacLab/)
+### [Seeed Studio BeagleBone® Green Eco](https://wiki.seeedstudio.com/getting_started_with_seeedstudio_beaglebone_green_eco/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/isaaclab_rl/cube_play.gif" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/1-102111198-Seeed-Studio-BeagleBoneR-Green-Eco.jpg" alt="pir" width={800} height="auto" /></p>
 
-This wiki introduces how to use Isaac Lab to train and test SO-ARM100/101 robotic arm policies with reinforcement learning.
+**The Seeed Studio BeagleBone® Green Eco** is an industrial-grade, open-source single-board computer, co-developed with the BeagleBoard.org® Foundation and powered by the robust **TI AM3358 SoC**. This "Eco" version is engineered for high efficiency, incorporating an advanced TI power management chip (TPS6521403) to ensure optimized energy consumption. It is well-equipped for demanding applications with a generous 16GB of onboard eMMC storage and a Gigabit Ethernet port for high-speed network connectivity.
 
-### [Implement Ethercat Communication on reComputer](https://wiki.seeedstudio.com/recomputer_ethercat_communication/)
+### [Getting started with AmazingHand](https://wiki.seeedstudio.com/hand_amazinghand/)
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100001302_recomputer_robotics_j3011_with_gmsl_extension.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/pollen-robotics/AmazingHand/main/assets/Patterns_Overview.jpg" alt="pir" width={800} height="auto" /></p>
 
-EtherCAT (Ethernet for Control Automation Technology) is a high-performance, open-source industrial Ethernet protocol designed for real-time automation control in automation, robotics, and motion systems. This wiki will show you how to conduct EtherCat communication on the reComputer Jetson Series.
+The **AmazingHand** is an open-source robotic hand project designed to make research and experimentation with humanoid manipulation accessible and affordable. Traditional robotic hands are often prohibitively expensive and rely on complex, bulky forearm actuators. The AmazingHand solves this by integrating all its motors directly into a compact, 3D-printable design.
 
-### [Frigate on Jetson with Node-RED Gun Alerts](https://wiki.seeedstudio.com/solutions/nodered-gun-alerts/)
+### [Crowd Flow Heatmap with Home Assistant](https://wiki.seeedstudio.com/crowd-flow-monitoring/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/homepage%20demo.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/lovelace-heatmap-card-config.png" alt="pir" width={800} height="auto" /></p>
 
-This project provides real-time gun detection capabilities via Frigate-on-Jetson, combined with Node-RED to build a visual alert and notification system, enabling automatic threat detection, event alerts, and historical traceability in secured areas.  
+Want a clear view of how people move through a space? With **Home Assistant** and a **Floorplan Heatmap**, you can do just that. This solution lets you overlay person-hour data onto your floor plan, making it easy to see how the space is being used at a glance.
 
-<!-- ## Existing Wiki Updated
+### [Using XIAO ESP32-C3 on MicroBlocks](https://wiki.seeedstudio.com/xiao_esp32c3_microblocks/)
 
-### [XIAO ESP32S3-Sense Key Word Spotting](https://wiki.seeedstudio.com/tinyml_course_Key_Word_Spotting/)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/microblocks.png" alt="pir" width={800} height="auto" /></p>
 
-We have added example code for **[ESP32 Boards Manager version 3.x.x](https://wiki.seeedstudio.com/tinyml_course_Key_Word_Spotting/#step-1-save-recorded-sound-samples-as-wav-audio-files-to-a-microsd-card)**.
+MicroBlocks is a blocks-language that makes it easy for beginners (9 years to adults) to program microcontrollers. Yet in spite of its apparent simplicity, MicroBlocks is a powerful programming language with better performance than MicroPython; the ability to control GPIO pins and interface to peripherals via I2C, SPI, and serial; and nearly 200 extension libraries. This document explains how to use the Seeed Studio XIAO ESP32-C3 with MicroBlocks, including firmware installation, connection methods, and basic examples (such as blinking an LED), helping you get started quickly with block-based programming.
 
-### [Grove - Barometer Sensor (SPA06-003)](https://wiki.seeedstudio.com/grove_barometer_sensor_spa06_003/)
+In addition, we also provide tutorial documents for **[XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_microblocks/)**, **[XIAO RP2040](https://wiki.seeedstudio.com/xiao_rp2040_microblocks/)**, **[XIAO RP2350](https://wiki.seeedstudio.com/xiao_rp2350_microblocks/)**, **[XIAO SAMD21](https://wiki.seeedstudio.com/xiao_samd21_microblocks/)**, and **[XIAO nRF52840](https://wiki.seeedstudio.com/xiao_ble_microblocks/)**.
 
-We have updated the [example code](https://wiki.seeedstudio.com/grove_barometer_sensor_spa06_003/#software) related to software usage. -->
+### [Power Consumptions Example for XIAO nRF54L15 (PlatformIO)](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_power_consumptions/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/new/6.png" alt="pir" width={800} height="auto" /></p>
+
+This document presents the power consumption of the Seeed Studio XIAO nRF54L15 Sense in different operating modes, covering BLE advertising and ultra-low-power System Off mode, with code examples and test data based on PlatformIO.
+
+### [Use Zoneminder on reComputer](https://wiki.seeedstudio.com/zoneminder_on_recomputer/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/zoneminder/zone_m.png" alt="pir" width={600} height="auto" /></p>
+
+[Zoneminder](https://github.com/ZoneMinder/zoneminder) is an open-source video surveillance software that allows you to monitor and manage security cameras. It supports various types of cameras, including IP cameras, USB webcams, and analog cameras. ZoneMinder offers features like motion detection, video recording, alarm notifications, and remote viewing through a web interface. It's highly customizable, making it suitable for both personal and professional surveillance needs. Plus, being open-source, it’s free to use and can be adapted to different setups.
+
+## Existing Wiki Updated
+
+### [Grove Beginner Kit For Arduino](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/)
+
+We updated the examples for [SPA06-003](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/#for-spa06-003-new-version-after-october-2025).
 
 ## The Efforts of Contributor
 
@@ -187,5 +203,6 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.8.18th](/Seeed_Elderly/weekly_wiki/wiki250818)
 - [weekly wiki on 2025.8.25th](/Seeed_Elderly/weekly_wiki/wiki250825)
 - [weekly wiki on 2025.9.01st](/Seeed_Elderly/weekly_wiki/wiki250901)
+- [weekly wiki on 2025.9.08th](/Seeed_Elderly/weekly_wiki/wiki250908)
 
 </details>

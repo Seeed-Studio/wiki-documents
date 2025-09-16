@@ -626,6 +626,7 @@ spi:
 
 display:
   - platform: waveshare_epaper
+    id: main_display
     model: 7.50inv2
     cs_pin: GPIO44
     dc_pin: GPIO10

@@ -1,6 +1,6 @@
 ---
 description: 本文档将介绍如何快速上手高擎系列电机.
-title:  高擎系列电机使用文档
+title:  高擎系列电机
 keywords:
 - 关节模组
 - 电机

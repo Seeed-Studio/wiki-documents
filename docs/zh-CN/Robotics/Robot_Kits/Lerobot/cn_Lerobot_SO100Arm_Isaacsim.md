@@ -1,6 +1,6 @@
 ---
 description: 本文档提供了将 SO100 Arm Kit 机械臂导入 NVIDIA 的 Isaac Sim 仿真平台并使用 ROS2 和 Python 脚本进行控制的说明。
-title: 如何在 Isaac Sim 中导入和控制 SO100Arm Kit
+title: Isaac Sim 中导入和控制 SO100Arm Kit
 keywords:
 - Lerobot
 - Huggingface

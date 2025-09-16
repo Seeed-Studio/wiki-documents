@@ -1498,7 +1498,6 @@ void loop() {
   }
 
 
-
   if (scd30.isAvailable() && memu == 1) {
     scd30.getCarbonDioxideConcentration(result);
     u8x8.setFont(u8x8_font_chroma48medium8_r);

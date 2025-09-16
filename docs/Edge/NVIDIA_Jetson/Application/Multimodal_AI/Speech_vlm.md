@@ -268,7 +268,6 @@ model = AutoModel(
 )
 
 
-
 def extract_content(json_response):
     try:
         # 解析JSON字符串

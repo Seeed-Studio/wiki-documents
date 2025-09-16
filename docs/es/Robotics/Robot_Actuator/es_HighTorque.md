@@ -1,6 +1,6 @@
 ---
 description: Este documento presentará cómo comenzar rápidamente con los motores de la serie HighTorque.
-title: Manual de Usuario del Motor Serie HighTorque
+title: Motor de la Serie HighTorque
 keywords:
 - Joint Module
 - Motor
@@ -13,7 +13,7 @@ last_update:
   author: ZhuYaoHui
 ---
 
-# Manual de Usuario del Motor Serie HighTorque
+# Manual de Usuario del Motor de la Serie HighTorque
 
 <div className="quick-nav-container">
   <nav className="quick-nav">
@@ -30,7 +30,7 @@ last_update:
   </nav>
 </div>
 
-# Guía de Inicio Rápido del Motor Serie HighTorque
+# Guía de Inicio Rápido del Motor de la Serie HighTorque
 
 Este documento presentará cómo comenzar rápidamente con los motores de la serie HighTorque.
 
@@ -46,7 +46,7 @@ Este documento presentará cómo comenzar rápidamente con los motores de la ser
 | **Descarga de Especificaciones Técnicas** | **[HTDW-5047-36-NE](https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/HTDW-5047-36-NE.pdf)** |  **[HTDW-4438-32-NE](https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/HTDW-4438-32-NE.pdf)** |  
 |------------------------|------------------|---------------------|
 | **Relación de Reducción**    | 36               | 30                  |
-| **Torque Pico (Nm)**   | 16               | 6                   |
+| **Torque Máximo (Nm)**   | 16               | 6                   |
 | **Torque Nominal (Nm)**  | 4                | 1.5                 |
 | **Torque de Bloqueo (Nm)**  | 24               | 10                  |
 | **Velocidad Nominal (RPM)**  | 40               | 36                  |
@@ -56,13 +56,13 @@ Este documento presentará cómo comenzar rápidamente con los motores de la ser
 | **Pares de Polos**         | 14               | -                   |
 | **Voltaje Nominal (V)**  | 12-48            | 12-48               |
 | **Corriente Nominal (A)**  | 2                | 1                   |
-| **Corriente Pico (A)**   | 10               | 5                   |
+| **Corriente Máxima (A)**   | 10               | 5                   |
 | **Precisión de Control de Torque** | ±10%         | ±20%                |
 | **Precisión de Control de Velocidad** | ±8%           | ±10%                |
 | **Tiempo de Respuesta (μs)** | ≤200             | ≤200                |
-| **Resolución del Encoder de Alta Velocidad** | 14bit | 14bit               |
-| **Resolución del Encoder de Baja Velocidad** | 12bit  | 12bit               |
-| **Velocidad de Baudios de Comunicación (Mbps)** | 5 | 5                   |
+| **Resolución del Codificador de Alta Velocidad** | 14bit | 14bit               |
+| **Resolución del Codificador de Baja Velocidad** | 12bit  | 12bit               |
+| **Velocidad de Comunicación (Mbps)** | 5 | 5                   |
 | **Frecuencia de Control (Hz)** | 3k      | 3k                  |
 
 ### Dimensiones de Instalación del Motor
@@ -127,7 +127,7 @@ uint8_t cmd[] = {0x07, 0x07, pos1, pos2, val1, val2, tqe1, tqe2};
 
 El protocolo normal está compuesto por: bits de comando (2 bytes) + posición (2 bytes) + velocidad (2 bytes) + torque (2 bytes), totalizando 8 bytes.
 
-0x07 0x07: Modo normal, que puede controlar velocidad y torque, o posición y torque (ver [[#2.1 Modo Normal]]).
+0x07 0x07: Modo normal, que puede controlar velocidad y torque, o posición y torque (ver [[#2.1-Modo-Normal]]).
 
 Los datos de posición, velocidad y torque en el protocolo están en modo little-endian, lo que significa que el byte bajo se envía primero, seguido del byte alto. Por ejemplo, si pos = 0x1234, entonces pos1 = 0x34 y pos2 = 0x12.
 
@@ -144,11 +144,11 @@ uint8_t cmd[] = {0x05, 0x13, tqe1, tqe2};
 
 El protocolo del modo de torque consiste en: bits de comando (2 bytes) + torque (2 bytes).
 
-0x05 0x13: Modo de torque puro, seguido por dos bytes de datos de torque (ver [[#2.3 Modo de Torque]]).
+0x05 0x13: Modo de torque puro, seguido de dos bytes de datos de torque (ver [[#2.3-Modo-de-Torque]]).
 
-Los datos de torque en el protocolo están en modo little-endian, es decir, el byte bajo se envía primero, seguido por el byte alto. Por ejemplo, si tqe = 0x1234, entonces tqe1 = 0x34 y tqe2 = 0x12.
+Los datos de torque en el protocolo están en modo little-endian, es decir, el byte bajo se envía primero, seguido del byte alto. Por ejemplo, si tqe = 0x1234, entonces tqe1 = 0x34 y tqe2 = 0x12.
 
-### 1.2.3 Modo de Control Cooperativo (La posición, velocidad y torque pueden controlarse simultáneamente)
+### 1.2.3 Modo de Control Cooperativo (La posición, velocidad y torque se pueden controlar simultáneamente)
 
 ```bash
 uint8_t cmd[] = {0x07, 0x35, val1, val2, tqe1, teq2, pos1, pos2};
@@ -156,7 +156,7 @@ uint8_t cmd[] = {0x07, 0x35, val1, val2, tqe1, teq2, pos1, pos2};
 
 El protocolo del modo de control cooperativo: bits de comando (2 bytes) + velocidad (2 bytes) + torque (2 bytes) + posición (2 bytes), totalizando 8 bytes.
 
-0x07 0x35: Modo de control cooperativo, que especifica rotar a una velocidad especificada hasta una posición especificada y limitar el torque máximo.
+0x07 0x35: Modo de control cooperativo, que especifica rotar a una velocidad especificada a una posición especificada y limitar el torque máximo.
 
 En este modo, usar el parámetro 0x8000 indica sin límite (sin límite en velocidad y torque significa el valor máximo). Por ejemplo, val = 5000, tqe = 1000, pos = 0x8000: Significa que el motor rota a una velocidad de 0.5 rotaciones por segundo, con un torque máximo de 0.1 NM.
 
@@ -165,14 +165,14 @@ Los datos de posición, velocidad y torque en el protocolo están todos en modo 
 ## 1.3 Lectura de Datos de Estado del Motor
 
 1. El protocolo para leer la parte del estado del motor es el mismo que el protocolo en CAN-FD, con la única diferencia de que CAN está limitado por un segmento de datos de 8 bytes.
-2. Para la dirección del registro y las instrucciones de función, consulte el archivo "Register Function, Motor Operation Mode, Error Code Instructions.xlsx".
+2. Para la dirección del registro e instrucciones de función, consulte el archivo "Register Function, Motor Operation Mode, Error Code Instructions.xlsx".
 3. Debido a la limitación del segmento de datos de 8 bytes de CAN, una sola trama CAN puede devolver una cantidad limitada de información del motor:
    - Una información del motor de tipo float o int32_t en un registro.
-   - Tres informaciones consecutivas del motor de tipo int16_t.
-   - Seis informaciones consecutivas del motor de tipo int8_t.
+   - Tres información del motor de tipo int16_t consecutivas.
+   - Seis información del motor de tipo int8_t consecutivas.
 4. El programa de ejemplo proporciona funciones de muestra para consultar información de posición, velocidad y torque del motor de tipo int16_t y análisis de información del motor (el programa de ejemplo usa una unión en lenguaje C para copiar directamente los datos del 3er al 8vo byte en CAN).
 
-### 1.3.1 Instrucciones del Protocolo de Envío
+### 1.3.1 Instrucciones de Protocolo de Envío
 
 ```bash
 uint8_t tdata[] = {cmd, addr, cmd1, addr1, cmd2, add2};
@@ -193,13 +193,13 @@ cmd:
   - 10: Dos datos.
   - 11: Tres datos.
 
-addr: La dirección inicial a adquirir.
+addr: La dirección de inicio para adquirir.
 
-Múltiples cmds y addrs pueden concatenarse para leer datos con direcciones discontinuas y diferentes tipos de una sola vez.
+Múltiples cmds y addrs se pueden concatenar para leer datos con direcciones discontinuas y diferentes tipos a la vez.
 
-### 1.3.2 Instrucciones del Protocolo de Recepción
+### 1.3.2 Instrucciones de Protocolo de Recepción
 
-Asuma que los datos adquiridos son uint16_t.
+Suponga que los datos adquiridos son uint16_t.
 
 ```bash
 uint8_t rdata[] = {cmd, addr, a1, a2, b1, b2, ..., cmd1, addr1, c1, c2, c3, c4}
@@ -218,7 +218,7 @@ cmd:
   - 10: Dos datos.
   - 11: Tres datos.
 
-addr: La dirección inicial a adquirir.
+addr: La dirección de inicio para adquirir.
 
 a1, a2: Dato 1, en modo little-endian.
 
@@ -228,12 +228,12 @@ b1, b2: Dato 2, en modo little-endian.
 
 1. Necesitamos leer datos de posición, velocidad y torque.
 2. De la tabla excel de registros, sabemos que las direcciones de datos para posición, velocidad y torque son: 01, 02, 03.
-3. De esto, podemos ver que podemos leer 3 datos consecutivos comenzando desde la dirección 01. Considerando que CAN puede transmitir un máximo de 8 bytes de datos a la vez, y cmd + addr ocupa dos bytes, el tipo de dato puede ser como máximo tipo int16_t.
+3. De esto, podemos ver que podemos leer 3 datos consecutivos comenzando desde la dirección 01. Considerando que CAN puede transmitir un máximo de 8 bytes de datos a la vez, y cmd + addr ocupa dos bytes, el tipo de datos puede ser como máximo tipo int16_t.
 4. De lo anterior, el binario de cmd es: 0001 0111, y el hexadecimal es: 0x17.
 5. Es necesario comenzar a leer desde la dirección 01, por lo que addr es 0x01.
 6. Los datos totales a enviar son uint8_t tdata[] = {0x17, 0x01}.
 
-El código de ejemplo es el siguiente:
+El código de muestra es el siguiente:
 
 ```c
 /**
@@ -248,25 +248,24 @@ CAN_Send_Msg(0x8000 | id, tdata, sizeof(tdata));
 
 uint8_t cmd[] = {0x17, 0x01};
 ```
-
 El significado general es: Comenzar desde la dirección 0x01 y leer 3 registros int16_t (según la tabla, los registros en las direcciones 0x01 a 0x03 representan posición, velocidad y torque respectivamente). Por lo tanto, este comando es para consultar la información de posición, velocidad y torque del motor.
 
 0x17: El binario de 0x17[7:4] es 0001: indica lectura. El binario de 0x17[3:2] es 01: indica que el tipo de datos es int16_t. El binario de 0x17[1:0] es 11: indica que el número de datos es 3. 0x01: Comenzar desde la dirección 0x01.
 
-Ejemplo de datos recibidos correspondiente:
+Ejemplo de datos recibidos correspondientes:
 
 ```bash
 uint8_t rdata[] = {0x27, 0x01, 0x38, 0xf6, 0x09, 0x00, 0x00, 0x00};
 ```
 
-0x27: Corresponde al 0x17 enviado. 0x01: Iniciar desde la dirección 0x01. 0x38 0xf6: Datos de posición: 0xf638, es decir, -2505. 0x09 0x00: Datos de velocidad: 0x0009, es decir, 9. 0x00 0x00: Datos de torque: 0x0000, es decir, 0.
+0x27: Corresponde al 0x17 enviado. 0x01: Comenzar desde la dirección 0x01. 0x38 0xf6: Datos de posición: 0xf638, es decir, -2505. 0x09 0x00: Datos de velocidad: 0x0009, es decir, 9. 0x00 0x00: Datos de torque: 0x0000, es decir, 0.
 
 ## 1.4 Parada del Motor
 
 Instrucciones:
 
 1. Detener el motor.
-2. Corresponde a la instrucción d stop del ordenador anfitrión.
+2. Corresponde a la instrucción d stop del ordenador host.
 
 ```c
 /**
@@ -284,7 +283,7 @@ CAN_Send_Msg(0x8000 | id, tdata, sizeof(tdata));
 Instrucciones:
 
 1. Establecer la posición actual como la posición cero del motor.
-2. Esta instrucción solo la modifica en RAM y necesita ser usada con la instrucción conf write para guardarla en flash.
+2. Esta instrucción solo la modifica en RAM y necesita usarse con la instrucción conf write para guardarla en flash.
 3. Se recomienda enviar la instrucción conf write aproximadamente 1s después de usar esta instrucción.
 
 ```c
@@ -301,7 +300,7 @@ conf_write(id); // Save the settings
 
 Instrucciones:
 
-1. Guardar la configuración del motor en RAM a la memoria flash.
+1. Guardar la configuración del motor en RAM a flash.
 2. Se recomienda reiniciar el motor después de usar esta instrucción.
 
 ```c
@@ -316,8 +315,8 @@ CAN_Send_Msg(0x8000 | id, tdata, sizeof(tdata));
 
 Instrucciones:
 
-1. Leer los datos de posición, velocidad y torque del motor una vez.
-2. Para el análisis de los datos de información del estado de retroalimentación del motor, consulte el código en la función de interrupción HAL_FDCAN_RxFifo0Callback en el ejemplo.
+1. Leer datos de posición, velocidad y torque del motor una vez.
+2. Para el análisis de los datos de información de estado de retroalimentación del motor, consulte el código en la función de interrupción HAL_FDCAN_RxFifo0Callback en el ejemplo.
 
 ```c
 * @brief Instruction to read motor position, speed, and torque
@@ -330,11 +329,11 @@ can_send(hcan, 0x8000 | id, tdata, sizeof(tdata));
 }
 ```
 
-## 1.8 Devolver Periódicamente Datos de Estado del Motor
+## 1.8 Retorno Periódico de Datos de Estado del Motor
 
 Instrucciones:
 
-1. Devolver periódicamente datos de posición, velocidad y torque del motor.
+1. Retornar periódicamente datos de posición, velocidad y torque del motor.
 2. El formato de datos devuelto es el mismo que el obtenido usando la instrucción 0x17, 0x01 (es decir, 1.7 Lectura de Estado de Posición).
 3. La unidad del período es ms.
 4. El período mínimo es 1ms.
@@ -390,7 +389,7 @@ CAN_Send_Msg(ext_id, tdata, 8);
 }
 ```
 
-### 2.3 Modo de Par
+### 2.3 Modo de Torque
 
 ```c
 /**
@@ -430,7 +429,7 @@ CAN_Send_Msg(0x8000 | id, tdata, 8);
 
 Instrucciones:
 
-1. Puede controlar el voltaje de la fase Q, unidad: 0.1v, p. ej., vol = 10 significa que el voltaje de la fase Q es 1V.
+1. Puede controlar el voltaje de fase Q, unidad: 0.1v, por ejemplo, vol = 10 significa que el voltaje de fase Q es 1V.
 
 ```c
 void motor_control_volt(FDCAN_HandleTypeDef *hfdcanx, uint8_t id, int16_t vol)
@@ -444,7 +443,7 @@ can_send(hfdcanx, 0x8000 | id, tdata, sizeof(tdata));
 
 Instrucciones:
 
-1. Puede controlar la corriente de fase Q, unidad: 0.1A, p. ej., cur = 10 significa que la corriente de fase Q es 1A.
+1. Puede controlar la corriente de fase Q, unidad: 0.1A, por ejemplo, cur = 10 significa que el voltaje de fase Q es 1A.
 
 ```c
 void motor_control_cur(FDCAN_HandleTypeDef *hfdcanx, uint8_t id, int16_t cur)
@@ -512,11 +511,11 @@ can_send(fdcanHandle, 0x8000 | id, cmd, sizeof(cmd));
 | int32 | 1 | 0.001 |
 | float | 1 | 1 |
 
-### 3.3 Par (Nm)
+### 3.3 Torque (Nm)
 
-Par verdadero = k * tqe + d
+Torque verdadero = k * tqe + d
 
-#### 3.3.1 5046 Par (Nm)
+#### 3.3.1 5046 Torque (Nm)
 
 | Tipo de Datos | Pendiente (k) | Desplazamiento (d) |
 | --- | --- | --- |
@@ -524,7 +523,7 @@ Par verdadero = k * tqe + d
 | int32 | 0.000528 | -0.414526 |
 | float | 0.533654 | -0.519366 |
 
-#### 3.3.2 4538 Par (Nm)
+#### 3.3.2 4538 Torque (Nm)
 
 | Tipo de Datos | Pendiente (k) | Desplazamiento (d) |
 | --- | --- | --- |
@@ -532,7 +531,7 @@ Par verdadero = k * tqe + d
 | int32 | 0.000445 | -0.234668 |
 | float | 0.493835 | -0.473398 |
 
-#### 3.3.2 5047/6056 (Bipolar, Relación de Engranajes 36) Par (Nm)
+#### 3.3.2 5047/6056 (Bipolar, Relación de Engranaje 36) Torque (Nm)
 
 | Tipo de Datos | Pendiente (k) | Desplazamiento (d) |
 | --- | --- | --- |
@@ -540,7 +539,7 @@ Par verdadero = k * tqe + d
 | int32 | 0.000462 | -0.512253 |
 | float | 0.465293 | -0.554848 |
 
-#### 3.3.3 5047 (Unipolar, Relación de Engranajes 9) Par (Nm)
+#### 3.3.3 5047 (Unipolar, Relación de Engranaje 9) Torque (Nm)
 
 | Tipo de Datos | Pendiente (k) | Desplazamiento (d) |
 | --- | --- | --- |
@@ -615,7 +614,7 @@ Par verdadero = k * tqe + d
 
 ## Ejemplo en C++
 
-El control en C++ requiere una placa controladora CAN-USB adicional. Por favor consulte [livelybot_hardware_sdk](https://github.com/HighTorque-Robotics/livelybot_hardware_sdk)
+El control en C++ requiere una placa controladora CAN-USB adicional. Consulte [livelybot_hardware_sdk](https://github.com/HighTorque-Robotics/livelybot_hardware_sdk)
 
 <div align="center">
     <img width={400}
@@ -624,19 +623,18 @@ El control en C++ requiere una placa controladora CAN-USB adicional. Por favor c
 
 ## Controlando Motores con [reComputer Mini Jetson Orin](/es/recomputer_jetson_mini_getting_started)
 
-Actualmente, las interfaces de comunicación CAN más comúnmente utilizadas para motores en el mercado son los conectores XT30(2+2) y JST. Nuestros dispositivos **reComputer Mini Jetson Orin** y **reComputer Robotics** están equipados con puertos XT30(2+2) duales e interfaces CAN basadas en JST, proporcionando compatibilidad perfecta.
+Actualmente, las interfaces de comunicación CAN más utilizadas para motores en el mercado son los conectores XT30(2+2) y JST. Nuestros dispositivos **reComputer Mini Jetson Orin** y **reComputer Robotics** están equipados con puertos duales XT30(2+2) e interfaces CAN basadas en JST, proporcionando compatibilidad perfecta.
 
 **reComputer Mini:**
 <div align="center">
   <img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg"/>  
 </div>
-
 **reComputer Robotics**
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/hexfellow/fig5.jpg"/>  
 </div>
 
-Para más detalles sobre el uso de CAN, por favor consulte esta [wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_mini_hardware_interfaces_usage/#can).
+Para más detalles sobre el uso de CAN, consulte este [wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_mini_hardware_interfaces_usage/#can).
 
 ### Habilitando la Interfaz CAN
 
@@ -650,7 +648,7 @@ Para más detalles sobre el uso de CAN, por favor consulte esta [wiki](https://w
 **Paso 2:** Conecte el motor directamente al CAN0 del reComputer Mini a través de la interfaz XT30(2+2).
 
 :::tip
-Los pines H/L de la interfaz CAN del reComputer Mini son opuestos a los del motor, por lo que las conexiones H/L en el arnés XT30 2+2 necesitan ser invertidas.
+Los pines H/L de la interfaz CAN del reComputer Mini son opuestos a los del motor, por lo que las conexiones H/L en el arnés XT30 2+2 deben invertirse.
 :::
 
 <div align="center">
@@ -663,24 +661,24 @@ Los pines H/L de la interfaz CAN del reComputer Mini son opuestos a los del moto
 </div>
 
 :::danger
-Esta solución de alimentación solo es adecuada para aprendizaje y pruebas con un solo motor. Para aplicaciones con múltiples motores, por favor diseñe una placa de alimentación independiente para aislar la fuente de alimentación del Jetson de la fuente de alimentación del motor para evitar que grandes corrientes pasen directamente a través del Jetson.
+Esta solución de alimentación solo es adecuada para el aprendizaje y pruebas de un solo motor. Para aplicaciones de múltiples motores, diseñe una placa de alimentación independiente para aislar la fuente de alimentación del Jetson de la fuente de alimentación del motor para evitar que grandes corrientes pasen directamente a través del Jetson.
 :::
 
 #### Habilitando la Comunicación CAN del Jetson
 
-Abra una terminal e ingrese el siguiente comando para poner el pin GPIO en alto para activar CAN0:
+Abra una terminal e ingrese el siguiente comando para poner el pin GPIO en alto y activar CAN0:
 
 ```bash
 gpioset --mode=wait 0 43=0
 ```
 
-Si usas el CAN1 de la interfaz JST, pon el pin 106 en alto:
+Si usa CAN1 de la interfaz JST, ponga el pin 106 en alto:
 
 ```bash
 gpioset --mode=wait 0 106=0
 ```
 
-Mantén esta terminal abierta y crea una nueva terminal para configurar CAN0:
+Mantenga esta terminal abierta y cree una nueva terminal para configurar CAN0:
 
 ```bash
 sudo modprobe mttcan
@@ -688,9 +686,9 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-### Control de Python
+### Control con Python
 
-- **Instalar Entorno de Python**  
+- **Instalar Entorno Python**  
 
 ```bash
 pip install python-can numpy
@@ -702,14 +700,14 @@ pip install python-can numpy
 mkdir -p ~/hightorque/scripts
 ```
 
-- **Create hightorque_motor.py File**
+- **Crear Archivo hightorque_motor.py**
 
 ```bash
 cd ~/hightorque/scripts
 touch hightorque_motor.py
 ```
 
-Copia el siguiente código en hightorque_motor.py.
+Copie el siguiente código en hightorque_motor.py.
 
 <details>
 <summary>hightorque_motor.py</summary>
@@ -748,7 +746,7 @@ class Motor:
         self.velocity = 0
         self.torque = 0
         self.temperature = 0
-        
+
         # Set Torque Conversion Parameters Based on Motor Type
         if motor_type == MotorType.HT5046:
             self.torque_k = 0.005397
@@ -874,7 +872,7 @@ class MotorControl:
         data = bytes([0x17, 0x01])
         self.__send_data(motor.slave_id, data)
         sleep(0.01)  # Wait for Data Reception
-        
+
         # Receive and Parse Data
         msg = self.bus.recv(timeout=0.1)
         if msg and msg.arbitration_id == (0x8000 | motor.slave_id):
@@ -902,9 +900,9 @@ class MotorControl:
 
 </details>
 
-- **Crear archivo hightorque_test.py**
+- **Crear Archivo hightorque_test.py**
 
-Copia el siguiente código en hightorque_test.py.
+Copie el siguiente código en hightorque_test.py.
 
 <details>
 <summary>hightorque_test.py</summary>
@@ -933,7 +931,7 @@ DURATION = 60.0  # Run Duration (s)
 def main():
     # Create Motor Control Object
     controller = MotorControl(channel=CAN_INTERFACE, bitrate=CAN_BITRATE)
-    
+
     try:
         # Create and Add Motors
         motors = []
@@ -941,46 +939,46 @@ def main():
             motor = Motor(MOTOR_TYPE, slave_id=i+1, master_id=0)
             controller.add_motor(motor)
             motors.append(motor)
-            
+
             # Enable Motor
             print(f"Enabling Motor {i+1}...")
             controller.enable(motor)
             time.sleep(1)  # Wait for Motor Enable
-            
+
             # Set Zero Position
             print(f"Setting Motor {i+1} Zero Position...")
             controller.set_zero_position(motor)
             time.sleep(1)
-            
+
             # Save Settings to Flash
             print(f"Saving Motor {i+1} Settings...")
             controller.save_settings(motor)
             time.sleep(1)
-            
+
             # Read Initial Status
             controller.read_motor_status(motor)
             print(f"Motor {i+1} Initial Status:")
             print(f"Position: {motor.position * 0.0001:.4f} turns")
             print(f"Velocity: {motor.velocity * 0.00025:.4f} turns/second")
             print(f"Torque: {motor.torque * motor.torque_k + motor.torque_d:.4f} Nm")
-        
+
         # Start Sine Wave Position Control
         print("\nStarting Sine Wave Position Control...")
         start_time = time.time()
         while time.time() - start_time < DURATION:
             current_time = time.time() - start_time
-            
+
             # Calculate Sine Wave Position with Offset to Ensure Positive
             position = AMPLITUDE * math.sin(2 * math.pi * FREQUENCY * current_time) + OFFSET
-            
+
             # Control All Motors
             for motor in motors:
                 # Use Position Control Mode with Max Torque of 1000
                 controller.control_position(motor, position=int(position), torque=1000)
-            
+
             # Control Frequency
             time.sleep(0.001)  # 1kHz Control Frequency
-            
+
     except KeyboardInterrupt:
         print("\nProgram Interrupted by User")
     finally:
@@ -988,14 +986,13 @@ def main():
         for motor in motors:
             print(f"Disabling Motor {motor.slave_id}...")
             controller.disable(motor)
-        
+
         # Close CAN Bus
         controller.close()
         print("CAN Bus Closed")
 
 if __name__ == "__main__":
     main() 
-
 ```
 
 </details>
@@ -1296,7 +1293,7 @@ html[data-theme='dark'] .stable {
   box-shadow: 0 2px 4px rgba(200,0,0,0.1);
 }
 
-/* Modo Dark - Etiqueta Recomendado */
+/* Dark模式 - Recommended标签 */
 html[data-theme='dark'] .recommended {
   background: #7f1d1d;
   color: #fca5a5;
@@ -1308,24 +1305,24 @@ html[data-theme='dark'] .recommended {
   box-shadow: 0 6px 10px rgba(0,0,0,0.1);
 }
 
-/* Modo Dark - Efecto de clic */
+/* Dark模式 - 点击效果 */
 html[data-theme='dark'] .category-card:active {
   box-shadow: 0 6px 10px rgba(0,0,0,0.4);
 }
 
-/* Optimización responsiva */
+/* 响应式优化 */
 @media (max-width: 768px) {
   .nav-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .category-card {
     width: 100%;
-    margin-top: 0.5rem; /* Tarjeta pegada al título */
+    margin-top: 0.5rem; /* 卡片紧贴标题 */
   }
 }
 
-/* Modo Dark - Texto de títulos */
+/* Dark模式 - 标题文字 */
 html[data-theme='dark'] h1,
 html[data-theme='dark'] h2,
 html[data-theme='dark'] h3,
@@ -1335,14 +1332,14 @@ html[data-theme='dark'] h6 {
   color: #f9fafb;
 }
 
-/* Modo Dark - Texto del cuerpo */
+/* Dark模式 - 正文文字 */
 html[data-theme='dark'] p,
 html[data-theme='dark'] li,
 html[data-theme='dark'] strong {
   color: #e5e7eb;
 }
 
-/* Modo Dark - Bloque de cita */
+/* Dark模式 - 引用块 */
 html[data-theme='dark'] blockquote {
   color: #9ca3af;
   border-left-color: #4b5563;

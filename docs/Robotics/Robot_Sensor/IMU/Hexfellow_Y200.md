@@ -1,6 +1,6 @@
 ---
 description: This wiki provides tutorial for HEXFELLOW Y200 IMU Sensor.
-title: HEXFELLOW Y200 IMU Sensor Getting Start
+title: HEXFELLOW Y200 IMU Sensor
 keywords:
 - IMU
 - robotics
@@ -12,17 +12,16 @@ last_update:
 ---
 
 # HEXFELLOW Y200 IMU Sensor Getting Start
+
 The Y200 is a 9-axis gyroscope specifically developed for robots. The device supports a maximum power supply of 60V and uses a standard XT30 CAN interface for quick integration into a robot network. It features an internal potting process for excellent shock resistance, and its casing is designed with a reinforced structure for stable and reliable installation.
 
 <div align="center">
-    <img width={600} 
+    <img width={600}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/hexfellow/fig1.jpg" />
 </div>
 
-
 ## Specification
 
- 
 Here's the completed table with all parameters filled in for all motor models:
 
 ### Angle Output Param
@@ -62,6 +61,7 @@ Here's the completed table with all parameters filled in for all motor models:
 | **Temperature drift**| ±20mg          | 1σ RMS, -40~85°C          |
 
 ### Other Params
+
 | Parameter              | Value             | Note                                  |
 |------------------------|-------------------|---------------------------------------|
 | **Voltage Tolerance**  | 12-60V            | For XT30 2+2 connector. Non-USB-C, but USB-C power is compatible |
@@ -83,15 +83,12 @@ Here's the completed table with all parameters filled in for all motor models:
 ### Installation dimension diagram
 
 <div align="center">
-    <img width={300} 
+    <img width={300}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/hexfellow/fig3.png"/>
 </div>
 
-
-
-
-
 ## Getting Start with IMU on reComputer Jetson
+
 We provide linux driver using SocketCAN. It is the recommended way to work with IMU.
 Before you start, you need to connect the device to your PC! Here's the can bus wire and baudrate definition of the IMU
 
@@ -134,7 +131,6 @@ Please refer to the tutorial about [Install ROS2 Humble](/install_ros2_humble) o
 
 **For reComputer Robotics J401:**
 
- 
 ```bash
 sudo ip link set can0 down
 sudo ip link set can0 type can bitrate 500000
@@ -162,6 +158,7 @@ git clone https://github.com/hexfellow/hex_utils.git
 ```
 
 Build the package:
+
 ```bash
 cd hex_utils
 sudo apt-get install python3-venv
@@ -174,21 +171,20 @@ Install the package:
 pip3 install dist/hex_utils-0.0.1-py3-none-any.whl
 ```
 
-
-### Create a workspace `catkin_ws` and get into the `src`.
+### Create a workspace `catkin_ws` and get into the `src`
 
 ```shell
 mkdir -p catkin_ws/src
 cd catkin_ws/src
 ```
 
-### Clone this repo.
+### Clone this repo
 
 ```shell
 git clone git@github.com:hexfellow/hex_imu.git
 ```
 
-### Go to `catkin_ws` directory and build the repo.
+### Go to `catkin_ws` directory and build the repo
 
 - **ROS1**
 
@@ -235,10 +231,11 @@ ros2 launch hex_imu canopen_imu.launch.py
 ```
 
 2. We also offer a dedicated launch file for visualizing IMU data. Follow the steps below to get started:
-	
-	Before you begin, make sure you have the necessary plugin installed for RViz:
+ 
+ Before you begin, make sure you have the necessary plugin installed for RViz:
+
 - **ROS 1**
-        
+
 ```
 sudo apt install ros-noetic-rviz-imu-plugin
 ```
@@ -248,21 +245,22 @@ sudo apt install ros-noetic-rviz-imu-plugin
 ```
 sudo apt install ros-humble-rviz-imu-plugin
 ```
+
 	Once the plugin is installed, you can start the visualization tool with the following command:
+
 - **ROS 1**
 
 ```shell
 roslaunch hex_imu canopen_imu_display.launch
 ```
-    
+
 - **ROS 2**
-    
+
 ```shell
 ros2 launch hex_imu canopen_imu_display.launch.py
 ```
 
 3. If you want to output Azimuth, you can run the following sample code (only supports ROS1)
-
 
 ```shell
 roslaunch hex_imu canopen_imu.launch
@@ -296,17 +294,16 @@ rosrun hex_imu example.py
 
 ---
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -49,7 +49,44 @@ last_update:
 <div class="category-group">
   <div class="category-card robot-kits">
 
-## 🤗 Lerobot
+## 🤗 SO-Arm
+
+<div className="card-container">
+    <a href="/lerobot_so100m_new/" className="nav-item">
+      <span className="text">SO100/101 Arm</span>
+    </a>
+    <a href="/simulate_soarm101_by_leisaac/" className="nav-item">
+      <span className="text">SO100 Arm with IsaacSim</span>
+    </a>
+    <a href="/control_robotic_arm_via_phospho/" className="nav-item">
+      <span className="text">Phospho Lerobot</span>
+    </a>
+    <a href="//training_soarm101_policy_with_isaacLab/" className="nav-item">
+    <span className="text">So Arm Reinforcement Learning</span>
+    <span className="tag recommended">New</span>
+    </a>
+    <a href="/simulate_soarm101_by_leisaac/" className="nav-item">
+      <span className="text">SO100 Arm with IsaacSim</span>
+      <span className="tag recommended">New</span>
+    </a>
+    <a href="/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="nav-item">
+        <span className="text">SO101 Arm with NVIDIA's GR00T</span>
+        <span className="tag recommended">New</span>
+    </a>
+</div>
+
+## 🚗 Lekiwi
+
+<div className="card-container">
+    <a href="/lerobot_lekiwi/" className="nav-item">
+      <span className="text">Lekiwi Mobile Base</span>
+    </a>
+    <a href="/sound_follow_robot/" className="nav-item">
+      <span className="text">Lekiwi Sound Follow</span>
+    </a>
+</div>
+
+## 🦾 StarAI Arm
 
 <div className="card-container">
     <a href="/lerobot_starai_arm/" className="nav-item">
@@ -57,29 +94,23 @@ last_update:
       <span className="tag recommended">New</span>
     </a>
     <a href="/starai_arm_ros_moveit/" className="nav-item">
-      <span className="text">Starai Robotic Arm Moveit</span>
+      <span className="text">Starai Robotic Arm Moveit2</span>
       <span className="tag recommended">New</span>
     </a>
-    <a href="/lerobot_so100m_new/" className="nav-item">
-      <span className="text">SO100/101 Arm</span>
-      <span className="tag stable">Update</span>
-    </a>
-    <a href="/simulate_soarm101_by_leisaac/" className="nav-item">
-      <span className="text">SO100 Arm with IsaacSim</span>
+    <a href="/control_robotic_arm_via_gr00t" className="nav-item">
+  <span className="text">Star AI with NVIDIA's GR00T</span>
+  </a>
+</div>
+
+## 🖐️ Hand
+
+<div className="card-container">
+    <a href="/hand_amazinghand/" className="nav-item">
+      <span className="text">AmazingHand</span>
       <span className="tag recommended">New</span>
-    </a>
-    <a href="/lerobot_lekiwi/" className="nav-item">
-      <span className="text">Lekiwi Mobile Base</span>
-       <span className="tag recommended">New</span>
-    </a>
-    <a href="/sound_follow_robot/" className="nav-item">
-      <span className="text">Lekiwi Sound Follow</span>
-    </a>
-    <a href="/control_robotic_arm_via_phospho/" className="nav-item">
-      <span className="text">Phospho Lerobot</span>
-       <span className="tag recommended">New</span>
     </a>
 </div>
+
 
 </div>
 </div>
@@ -91,16 +122,16 @@ last_update:
 
 <div className="card-container">
     <a href="/myactuator_series/" className="nav-item">
-      <span className="text">MyActuator X Series</span>
+      <span className="text">0️⃣MyActuator X Series</span>
     </a>
     <a href="/damiao_series/" className="nav-item">
-      <span className="text">Damiao DM43 Series</span>
+      <span className="text">1️⃣Damiao DM43 Series</span>
     </a>
     <a href="/feetech_servo/" className="nav-item">
-      <span className="text">Feetech STS3215 Servo Motor</span>
+      <span className="text">2️⃣Feetech STS3215 Servo Motor</span>
     </a>
     <a href="/hightorque_series/" className="nav-item">
-      <span className="text">HighTorque Series</span>
+      <span className="text">3️⃣HighTorque Series</span>
     </a>
 </div>
 
@@ -112,7 +143,7 @@ last_update:
 <div class="category-group">
 <div className="category-card sensors">
 
-**LiDAR**  
+**📡LiDAR**  
 
 <div className="card-container">
     <a href="/robosense_lidar/" className="nav-item">
@@ -129,14 +160,14 @@ last_update:
     </a>
 </div>
 
-**Camera**  
+**📷Camera**  
 
 <div className="card-container">
     <a href="/orbbec_gemini2/" className="nav-item">
-      <span className="text">Getting Start with Orbbec Gemini2 3D Camera</span>
+      <span className="text">Orbbec Gemini2</span>
     </a>
     <a href="/orbbec_depth_camera_on_ros/" className="nav-item">
-      <span className="text">Orbbec Depth Camera</span>
+      <span className="text">Orbbec Depth Camera with ROS</span>
     </a>
     <a href="/orbbec_gemini_335lg" className="nav-item">
       <span className="text">Orbbec Gemini 335Lg Stereo Camera</span>
@@ -154,7 +185,7 @@ last_update:
     </a>
 </div>
 
-**Voice**  
+**🎤Voice**  
 
 <div className="card-container">
     <a href="/ReSpeaker_Core_v2.0/" className="nav-item">
@@ -165,7 +196,7 @@ last_update:
     </a>
 </div>
 
-**IMU**  
+**🧭IMU**  
 
 <div className="card-container">
     <a href="/hexfellow_y200/" className="nav-item">
@@ -205,12 +236,10 @@ last_update:
 <div className="card-container">
 <a href="/control_px4_with_recomputer_jetson/" className="nav-item">
   <span className="text">PX4 with Jetson</span>
-  <span className="tag recommended">New</span>
 </a>
 
 <a href="/object_tracking_with_reComputer_jetson_and_pX4/" className="nav-item">
   <span className="text">Object Tracking with PX4</span>
-  <span className="tag recommended">New</span>
 </a>
 
 </div>
@@ -219,6 +248,10 @@ last_update:
 <div className="card-container">
 <a href="/install_isaaclab/" className="nav-item">
   <span className="text">Isaac Lab Installation</span>
+</a>
+<a href="//training_soarm101_policy_with_isaacLab/" className="nav-item">
+  <span className="text">So Arm Reinforcement Learning</span>
+  <span className="tag recommended">New</span>
 </a>
 <a href="/simulate_soarm101_by_leisaac/" className="nav-item">
   <span className="text">SO100 Arm with IsaacSim</span>
@@ -229,7 +262,7 @@ last_update:
 **VLA**  
 <div className="card-container">
 <a href="/control_robotic_arm_via_gr00t" className="nav-item">
-  <span className="text">NVIDIA's GR00T</span>
+  <span className="text">Star AI with NVIDIA's GR00T</span>
 </a>
 </div>
 
@@ -275,6 +308,7 @@ html[data-theme='dark'] .quick-nav-container {
   padding: 0.8rem 1.5rem;
   border-radius: 12px;
   display: flex;
+  margin: 6px 6px; /* 上下6px，左右6px */
   flex-direction: column;
   align-items: center;
   text-decoration: none !important;

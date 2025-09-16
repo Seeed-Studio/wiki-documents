@@ -15,10 +15,11 @@ last_update:
 # How to Train and Deploy YOLOv8 on reComputer
 
 ## Introduction
+
 In the face of increasingly complex and dynamic challenges, the application of artificial intelligence provides new avenues for solving problems and has made significant contributions to the sustainable development of global society and the improvement of people's quality of life. Typically, before deploying artificial intelligence algorithms, the design and training of AI models take place on high-performance computing servers. Once the model training is complete, it is exported to edge computing devices for edge inference. In fact, all these processes can occur directly on edge computing devices. Specifically, tasks such as preparing datasets, training neural networks, validating neural networks, and deploying models can be performed on edge devices. This not only ensures data security but also saves costs associated with purchasing additional devices.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/reComputer_J4012.png" />
 </div>
 
@@ -26,27 +27,29 @@ In the face of increasingly complex and dynamic challenges, the application of a
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html?queryID=3d7dba9378be2accafeaff54420edb6a&objectID=5586&indexName=bazaar_retailer_products" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
-In this document, we train and deploy a object detection model for traffic scenes on the 
-[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?queryID=f6de8f6c8d814c021e13f4455d041d03&objectID=5586&indexName=bazaar_retailer_products). 
-This document uses the 
-[YOLOv8](https://www.ultralytics.com/) 
-object detection algorithm as an example and provides a detailed overview of the entire process. Please note that all the operations described below take place on the Jetson edge computing device, ensuring that the Jetson device has an operating system installed that is 
-[JetPack 5.0](https://wiki.seeedstudio.com/NVIDIA_Jetson/) 
+In this document, we train and deploy a object detection model for traffic scenes on the
+[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?queryID=f6de8f6c8d814c021e13f4455d041d03&objectID=5586&indexName=bazaar_retailer_products).
+This document uses the
+[YOLOv8](https://www.ultralytics.com/)
+object detection algorithm as an example and provides a detailed overview of the entire process. Please note that all the operations described below take place on the Jetson edge computing device, ensuring that the Jetson device has an operating system installed that is
+[JetPack 5.0](https://wiki.seeedstudio.com/NVIDIA_Jetson/)
 or above.
 
 ## Dataset
+
 The process of machine learning involves finding patterns within given data and then using a function to capture these patterns. Therefore, the quality of the dataset directly affects the performance of the model. Generally speaking, the better the quality and quantity of training data, the better the model trained. Therefore, the preparation of the dataset is crucial.
 
 There are various methods for collecting training dataset. Here, two methods are introduced: 1. Download pre-annotated open-source public datasets. 2. Collect and annotate training data. Finally, consolidate all the data to prepare for the subsequent training phase.
 
 ### Download public datasets
+
 Public datasets are shared standardized data resources widely used in machine learning and artificial intelligence research. They provide researchers with standard benchmarks to evaluate algorithm performance, fostering innovation and collaboration in the field. These datasets drive the AI community towards a more open, innovative, and sustainable direction.
 
-There are many platforms where you can freely download datasets, such as 
-[Roboflow](https://roboflow.com/), 
-[Kaggle](https://www.kaggle.com/), 
-and more. Here, we download an annotated dataset related to traffic scenes, 
-[Traffic Detection Project](https://www.kaggle.com/datasets/yusufberksardoan/traffic-detection-project/download?datasetVersionNumber=1), 
+There are many platforms where you can freely download datasets, such as
+[Roboflow](https://roboflow.com/),
+[Kaggle](https://www.kaggle.com/),
+and more. Here, we download an annotated dataset related to traffic scenes,
+[Traffic Detection Project](https://www.kaggle.com/datasets/yusufberksardoan/traffic-detection-project/download?datasetVersionNumber=1),
 from Kaggle.
 
 The file structure after extraction is as follows:
@@ -99,10 +102,10 @@ names: ['bicycle', 'bus', 'car', 'motorbike', 'person']
 ### Collecting and annotating data
 
 When public datasets cannot meet user requirements, neet to consider collecting and creating custom datasets tailored to specific needs. This can be achieved by collecting, annotating, and organizing relevant data.
-For demonstration purposes, I captured and saved three images from 
+For demonstration purposes, I captured and saved three images from
 [YouTube](https://www.youtube.com/watch?v=iJZcjZD0fw0)
-, and try to use 
-[Label Studio](https://www.youtube.com/watch?v=iJZcjZD0fw0) 
+, and try to use
+[Label Studio](https://www.youtube.com/watch?v=iJZcjZD0fw0)
 to annotate the images.
 
 **Step 1.** Collect raw data:
@@ -112,6 +115,7 @@ to annotate the images.
 </div>
 
 **Step 2.** Install and run the annotation tool:
+
 ```bash
 sudo groupadd docker
 sudo gpasswd -a ${USER} docker
@@ -135,6 +139,7 @@ After completing the annotation, you can export the dataset in YOLO format and o
 At this point, we have obtained the training data through two different methods and integrated them. If you want higher-quality training data, there are many additional steps to consider, such as data cleaning, class balancing, and more. Since our task is relatively simple, we will skip these steps for now and proceed with training using the data obtained above.
 
 ## Model
+
 In this section, we will download the YOLOv8 source code on reComputer and configure the runtime environment.
 
 **Step 1.** Use the following command to download the source code:
@@ -158,6 +163,7 @@ torchvision>=0.8.1 --> # torchvision>=0.8.1
 ```
 
 **Step 3**. Run the following commands to download the required dependencies for YOLO and install YOLOv8:
+
 ```bash
 pip3 install -e .
 cd ..
@@ -172,6 +178,7 @@ pip3 install torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl
 ```
 
 **Step 5.** Install the corresponding torchvision:
+
 ```bash
 sudo apt install -y libjpeg-dev zlib1g-dev
 git clone --branch v0.16.0 https://github.com/pytorch/vision torchvision
@@ -181,11 +188,13 @@ cd ..
 ```
 
 **Step 6.** Use the following command to ensure that YOLO has been successfully installed:
+
 ```bash
 yolo detect predict model=yolov8s.pt source='https://ultralytics.com/images/bus.jpg'
 ```
 
 ## Train
+
 Model training is the process of updating model weights. By training the model, machine learning algorithms can learn from the data to recognize patterns and relationships, enabling predictions and decisions on new data.
 
 **Step 1.** Create a Python script for training:
@@ -210,16 +219,17 @@ results = model.train(
 ```
 
 Press `ESC` to exit edit mode, and finally input `:wq` to save and exit the file.
-The `YOLO.train()` method has many configuration parameters; please refer to the 
-[documentation](https://docs.ultralytics.com/modes/train/#arguments) 
+The `YOLO.train()` method has many configuration parameters; please refer to the
+[documentation](https://docs.ultralytics.com/modes/train/#arguments)
 for details. Additionally, you can use a more streamlined `CLI` approach to start training based on your specific requirements.
 
 **Step 2.** Start training with the following command:
+
 ```bash
 python3 train.py
 ```
 
-Then comes the lengthy waiting process. Considering the possibility of closing the remote connection window during the wait, this tutorial uses the 
+Then comes the lengthy waiting process. Considering the possibility of closing the remote connection window during the wait, this tutorial uses the
 [Tmux](https://github.com/tmux/tmux/wiki)
 terminal multiplexer. Thus, the interface I see during the process looks like this:
 
@@ -234,6 +244,7 @@ Tmux is optional; as long as the model is training normally. After the training 
 </div>
 
 ## Validation
+
 The validation process involves using a portion of the data to validate the reliability of the model. This process helps ensure that the model can perform tasks accurately and robustly in real-world applications. If you closely examine the information output during the training process, you'll notice that many validations are interspersed throughout the training. This section won't analyze the meaning of each evaluation metric but will instead analyze the model's usability by examining the prediction results.
 
 **Step 1.** Use the trained model to infer on a specific image:
@@ -258,6 +269,7 @@ From the detection results, it can be observed that the trained model achieves t
 </div>
 
 ## Deployment
+
 Deployment is the process of applying a trained machine learning or deep learning model to real-world scenarios. The content introduced above has validated the feasibility of the model, but it has not considered the inference efficiency of the model. In the deployment phase, it's necessary to find a balance between detection accuracy and efficiency. TensorRT inference engine can be used to improve the inference speed of the model.
 
 **Step 1.** To visually demonstrate the contrast between the lightweight and original models, create a new `inference.py` file using the vi tool to implement video file inference. You can replace the inference model and input video by modifying lines 8 and 9. The input in this document is a video I shot with my phone.
@@ -329,7 +341,7 @@ After the program to complete(about 10-20 minutes), a `.engine` file will be gen
     <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/reComputer_is_all_you_need/model_engine.png" />
 </div>
 
-**Step 4.** Test the inference speed using the quantized model. 
+**Step 4.** Test the inference speed using the quantized model.
 
 Here, you need to modify the content of line 8 in the script created in Step 1.
 
@@ -353,10 +365,6 @@ From the perspective of inference efficiency, the quantized model shows a signif
 
 This article provides readers with a comprehensive guide that covers various aspects from data collection and model training to deployment. Importantly, all processes occur in reComputer, eliminating the need for additional GPUs from users.
 
-
-
-
-
 <!-- Code END -->
 
 ## Tech Support & Product Discussion
@@ -364,11 +372,11 @@ This article provides readers with a comprehensive guide that covers various asp
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

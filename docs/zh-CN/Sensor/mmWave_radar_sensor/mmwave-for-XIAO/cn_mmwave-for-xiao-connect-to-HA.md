@@ -1,5 +1,5 @@
 ---
-description: 介绍 mmWave 传感器如何连接到 HA。
+description: 介绍毫米波传感器如何连接到 HA 的方法。
 title: mmWave for XIAO 通过蓝牙或 Wifi 连接到 Home Assistant
 keywords:
 - mmwave
@@ -19,7 +19,7 @@ last_update:
 
 24GHz mmWave Sensor for XIAO - Human Static Presence 是 Seeed Studio XIAO 系列的扩展板。它是一个集成天线的高灵敏度毫米波传感器，基于 FMCW 原理。结合传感器信号处理和精确的人体感应算法，它可以识别运动和静止状态下的人体。
 
-本章主要介绍 24GHz mmWave Sensor for XIAO 如何通过蓝牙连接到 HA。有关 24GHz mmWave Sensor for XIAO 的详细功能特性，您可以参考[这里](https://wiki.seeedstudio.com/cn/mmwave_for_xiao/)。
+本章主要介绍 24GHz mmWave Sensor for XIAO 如何通过蓝牙连接到 HA。有关 24GHz mmWave Sensor for XIAO 的详细功能特性，您可以参考[这里](https://wiki.seeedstudio.com/mmwave_for_xiao/)。
 
 :::caution
 本 Wiki 的所有内容仅适用于 24GHz mmWave for XIAO，可能不适用于其他毫米波传感器。
@@ -54,7 +54,7 @@ last_update:
 	</tr>
 </table>
 
-该传感器专为 XIAO 兼容性而设计，因此一般来说，如果您想使用此传感器，您需要准备一个 XIAO 并为传感器安装母排针。连接到 XIAO 时，请特别注意传感器的安装方向，请不要插反，否则很可能会烧坏传感器或 XIAO。
+该传感器专为 XIAO 兼容性而设计，因此一般来说，如果您想使用此传感器，您需要准备一个 XIAO 并为传感器安装母头排针。连接到 XIAO 时，请特别注意传感器的安装方向，请不要插反，否则很可能会烧坏传感器或 XIAO。
 
 :::caution
 正确的方向是传感器的天线应朝外。
@@ -79,19 +79,19 @@ last_update:
 
 ### 步骤 1. 发现设备
 
-在 Home Assistant 中，点击左下角的 **设置**，在中间选择 **设备和服务**。
+在 Home Assistant 中，点击左下角的**设置**，在中间选择**设备和服务**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/1.png" style={{width:1000, height:'auto'}}/></div>
 
-在发现区域中，会有一个传感器图标，点击 **配置**。
+在发现区域中，会有一个传感器图标，点击**配置**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/2.png" style={{width:1000, height:'auto'}}/></div>
 
-会出现一个弹出窗口，点击 **提交**。
+将出现一个弹出窗口，点击**提交**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/3.png" style={{width:1000, height:'auto'}}/></div>
 
-您将看到一个成功配置的弹出窗口，点击 **完成**。
+您将看到一个成功配置的弹出窗口，点击**完成**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/4.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -101,7 +101,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/5.png" style={{width:1000, height:'auto'}}/></div>
 
-进入传感器设置页面后，点击 **1 个设备**。
+进入传感器设置页面后，点击 **1 device**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/6.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -109,42 +109,42 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/7.png" style={{width:1000, height:'auto'}}/></div>
 
-在弹出窗口中选择 **添加到仪表板**。
+在弹出窗口中选择**添加到仪表板**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/8.png" style={{width:1000, height:'auto'}}/></div>
 
-最后，点击左上角的 **概览**，您将看到 mmwave-for-xiao 传感器数据成功显示在仪表板上。到此为止，mmwave for xiao 传感器已成功连接到 Home Assistant。
+最后，点击左上角的**概览**，您将看到 mmwave-for-xiao 传感器数据成功显示在仪表板上。到此为止，mmwave for xiao 传感器已成功连接到 Home Assistant。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/9.png" style={{width:1000, height:'auto'}}/></div>
 
-接下来，您可以发挥创意进行自动化设置！
+接下来，您可以发挥创意进行自动化！
 
 # 通过 Wifi 使用 ESPHome 将 mmWave for XIAO 连接到 Home Assistant
 以下 yaml 文件使用 ESPHome 固件将带有雷达模块的 Seeed XIAO ESP32S3 Sense 连接到 Home Assistant：
 
 ```
-# ESPHome 配置
+# Configuration for ESPHome
 esphome:
-  # ESP32-S3 设备名称
+  # Name of the ESP32-S3 device
   name: "seeed-xiao-esp32s3-cam"
   
-  # PlatformIO 构建选项
+  # PlatformIO build options
   platformio_options:
     build_flags: -DBOARD_HAS_PSRAM
     board_build.arduino.memory_type: qio_opi
     board_build.f_flash: 80000000L
     board_build.flash_mode: qio 
 
-# ESP32 开发板配置
+# Configuration for ESP32 board
 esp32:
   board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
-# 启用日志记录
+# Enable logging
 logger:
 
-# 启用 Home Assistant API - 使用您的 api 和密码
+# Enable Home Assistant API - use your api and password
 api:
   encryption:
     key: ""
@@ -153,20 +153,20 @@ ota:
   - platform: esphome
     password: ""
 
-# Wi-Fi 配置 - 填入您的数据
+# Wi-Fi configuration - fill with your data
 wifi:
   ssid: ""
   password: ""
 
-  # 启用备用热点（强制门户），以防 wifi 连接失败
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Xiao-Esp32s3 Fallback Hotspot"
     password: ""
 
-# 强制门户配置
+# Captive portal configuration
 captive_portal:
 
-# ESP32 摄像头配置
+# Configuration for the ESP32 Camera
 esp32_camera:
   id: espcam
   name: Xiao Cam
@@ -182,14 +182,14 @@ esp32_camera:
   pixel_clock_pin: GPIO13
   resolution: 800x600
   
-# ESP32 摄像头 Web 服务器配置
+# Configuration for the ESP32 Camera Web Server
 esp32_camera_web_server:
   - port: 8080
     mode: stream
   - port: 8081
     mode: snapshot
 
-# 24GHz 毫米波 XIAO 雷达配置
+# Configuration for the 24GHz mmwave XIAO Radar
 ld2410:
   id: ld2410_radar
   
@@ -203,127 +203,127 @@ uart:
 number:
   - platform: ld2410
     timeout:
-      name: 雷达超时
+      name: Radar Timeout
     max_move_distance_gate:
-      name: 雷达最大移动距离
+      name: Radar Max Move Distance
     max_still_distance_gate:
-      name: 雷达最大静止距离
+      name: Radar Max Still Distance
     g0:
       move_threshold:
-        name: g0 移动阈值
+        name: g0 move threshold
       still_threshold:
-        name: g0 静止阈值
+        name: g0 still threshold
     g1:
       move_threshold:
-        name: g1 移动阈值
+        name: g1 move threshold
       still_threshold:
-        name: g1 静止阈值
+        name: g1 still threshold
     g2:
       move_threshold:
-        name: g2 移动阈值
+        name: g2 move threshold
       still_threshold:
-        name: g2 静止阈值
+        name: g2 still threshold
     g3:
       move_threshold:
-        name: g3 移动阈值
+        name: g3 move threshold
       still_threshold:
-        name: g3 静止阈值
+        name: g3 still threshold
     g4:
       move_threshold:
-        name: g4 移动阈值
+        name: g4 move threshold
       still_threshold:
-        name: g4 静止阈值
+        name: g4 still threshold
     g5:
       move_threshold:
-        name: g5 移动阈值
+        name: g5 move threshold
       still_threshold:
-        name: g5 静止阈值
+        name: g5 still threshold
     g6:
       move_threshold:
-        name: g6 移动阈值
+        name: g6 move threshold
       still_threshold:
-        name: g6 静止阈值
+        name: g6 still threshold
     g7:
       move_threshold:
-        name: g7 移动阈值
+        name: g7 move threshold
       still_threshold:
-        name: g7 静止阈值
+        name: g7 still threshold
     g8:
       move_threshold:
-        name: g8 移动阈值
+        name: g8 move threshold
       still_threshold:
-        name: g8 静止阈值
+        name: g8 still threshold
 
 binary_sensor:
   - platform: ld2410
     has_target:
-      name: 雷达目标
+      name: Radar Target
       id: radar_has_target
     has_moving_target:
-      name: 雷达移动目标
+      name: Radar Moving Target
     has_still_target:
-      name: 雷达静止目标
+      name: Radar Still Target
 
 sensor:
   - platform: ld2410
     moving_distance:
-      name: 雷达移动距离
+      name: Radar Moving Distance
       id: moving_distance
     still_distance:
-      name: 雷达静止距离
+      name: Radar Still Distance
       id: still_distance
     moving_energy:
-      name: 雷达移动能量
+      name: Radar Move Energy
     still_energy:
-      name: 雷达静止能量
+      name: Radar Still Energy
     detection_distance:
-      name: 雷达检测距离
+      name: Radar Detection Distance
       id: radar_detection_distance
     g0:
       move_energy:
-        name: g0 移动能量
+        name: g0 move energy
       still_energy:
-        name: g0 静止能量
+        name: g0 still energy
     g1:
       move_energy:
-        name: g1 移动能量
+        name: g1 move energy
       still_energy:
-        name: g1 静止能量
+        name: g1 still energy
     g2:
       move_energy:
-        name: g2 移动能量
+        name: g2 move energy
       still_energy:
-        name: g2 静止能量
+        name: g2 still energy
     g3:
       move_energy:
-        name: g3 移动能量
+        name: g3 move energy
       still_energy:
-        name: g3 静止能量
+        name: g3 still energy
     g4:
       move_energy:
-        name: g4 移动能量
+        name: g4 move energy
       still_energy:
-        name: g4 静止能量
+        name: g4 still energy
     g5:
       move_energy:
-        name: g5 移动能量
+        name: g5 move energy
       still_energy:
-        name: g5 静止能量
+        name: g5 still energy
     g6:
       move_energy:
-        name: g6 移动能量
+        name: g6 move energy
       still_energy:
-        name: g6 静止能量
+        name: g6 still energy
     g7:
       move_energy:
-        name: g7 移动能量
+        name: g7 move energy
       still_energy:
-        name: g7 静止能量
+        name: g7 still energy
     g8:
       move_energy:
-        name: g8 移动能量
+        name: g8 move energy
       still_energy:
-        name: g8 静止能量
+        name: g8 still energy
 ```
 
 ## 技术支持与产品讨论

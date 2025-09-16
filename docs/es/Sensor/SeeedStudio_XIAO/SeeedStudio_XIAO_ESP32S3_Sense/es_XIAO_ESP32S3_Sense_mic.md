@@ -12,7 +12,7 @@ last_update:
 
 # Uso del micrófono del Seeed Studio XIAO ESP32S3
 
-En este tutorial, te mostraremos cómo usar el micrófono de la placa de expansión XIAO ESP32S3 Sense. Primero veremos el uso muy básico del pin I2S, obtendremos el volumen del entorno actual usando I2S y el micrófono, y lo mostraremos en el gráfico de forma de onda serial. Luego explicaremos cómo grabar sonido y guardar el sonido grabado en la tarjeta SD.
+En este tutorial, te mostraremos cómo usar el micrófono de la placa de expansión XIAO ESP32S3 Sense. Primero es el uso muy básico del pin I2S, obtendremos el volumen del entorno actual usando I2S y el micrófono, y lo mostraremos en el gráfico de forma de onda serial. Luego explicaremos cómo grabar sonido y guardar el sonido grabado en la tarjeta SD.
 
 <div class="table-center">
   <table align="center">
@@ -25,7 +25,7 @@ En este tutorial, te mostraremos cómo usar el micrófono de la placa de expansi
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -33,16 +33,16 @@ En este tutorial, te mostraremos cómo usar el micrófono de la placa de expansi
 </div>
 
 :::caution
-Todo el contenido de este tutorial es aplicable únicamente a XIAO ESP32S3 Sense.
+Todo el contenido de este tutorial es aplicable solo al XIAO ESP32S3 Sense.
 :::
 
-## Primeros Pasos
+## Comenzando
 
 Antes de comenzar el contenido del tutorial, es posible que necesites preparar el siguiente hardware y software con anticipación.
 
 ### Instalación de placas de expansión (para Sense)
 
-Instalar la placa de expansión es muy simple, solo necesitas alinear el conector de la placa de expansión con el conector B2B en el XIAO ESP32S3, presionarlo fuerte y escuchar un "clic", la instalación está completa.
+Instalar la placa de expansión es muy simple, solo necesitas alinear el conector en la placa de expansión con el conector B2B en el XIAO ESP32S3, presionarlo fuerte y escuchar un "clic", la instalación está completa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -54,15 +54,34 @@ XIAO ESP32S3 Sense soporta tarjetas microSD de hasta **32GB**, así que si está
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/67.png" style={{width:250, height:'auto'}}/></div>
 
-Después del formateo, puedes insertar la tarjeta microSD en la ranura para tarjeta microSD. Por favor nota la dirección de inserción, el lado con los contactos dorados debe quedar hacia adentro.
+Después del formateo, puedes insertar la tarjeta microSD en la ranura de la tarjeta microSD. Por favor nota la dirección de inserción, el lado con el contacto dorado debe mirar hacia adentro.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/66.jpg" style={{width:500, height:'auto'}}/></div>
 
+### Entendiendo los Pines
+
+<div class="table-center">
+	<table align="center">
+    <tr>
+			<th>Número de Pin</th>
+			<th>Descripción de Función</th>
+		</tr>
+		<tr>
+			<td align="center">GPIO 41</td>
+			<td align="center">PDM Microphone DATA</td>
+		</tr>
+		<tr>
+			<td align="center">GPIO 42</td>
+			<td align="center">PDM Microphone CLK</td>
+		</tr>
+	</table>
+</div>
+
 ## Detección del volumen del sonido
 
-Para el primer caso de proyecto, detectemos el ruido en el ambiente y mostremos el volumen ambiental detectado por el micrófono usando el gráfico de forma de onda del puerto serie del IDE de Arduino.
+Para el primer caso de proyecto, detectemos el ruido en el entorno y mostremos el volumen ambiental detectado por el micrófono usando el gráfico de forma de onda del puerto serial del Arduino IDE.
 
-El siguiente es el programa de ejemplo completo.
+El siguiente es el programa de muestra completo.
 
 :::tip
 Verifica y asegúrate de qué versión de `esp32` estás usando, el siguiente ejemplo es para 2.0.x el de abajo es para 3.0.x y posteriores
@@ -99,7 +118,7 @@ void loop() {
 ```
 
 :::tip
-El ejemplo anterior solo es compatible con la versión 2.0.x de `esp32`, si estás usando la más reciente (por ejemplo, 3.0.x) usa el de abajo
+El ejemplo anterior solo es compatible con 2.0.x de `esp32`, si estás en la última versión (ej. 3.0.x) usa el de abajo
 :::
 
 ```cpp
@@ -147,13 +166,13 @@ Al comienzo del programa, necesitamos primero importar la biblioteca I2S para po
 #include <I2S.h>
 ```
 
-La función `setAllPins()` se llama en el objeto I2S para configurar los pines utilizados para la interfaz I2S. La función toma cinco parámetros enteros que representan los pines GPIO conectados al reloj de bits, selección de palabra, entrada de datos, salida de datos y líneas de selección de canal de la interfaz I2S, respectivamente.
+La función `setAllPins()` se llama en el objeto I2S para configurar los pines usados para la interfaz I2S. La función toma cinco parámetros enteros que representan los pines GPIO conectados al reloj de bits, selección de palabra, entrada de datos, salida de datos y líneas de selección de canal de la interfaz I2S, respectivamente.
 
 ```c
 I2S.setAllPins(-1, 42, 41, -1, -1);
 ```
 
-En este código específico, los valores `-1` indican que los pines correspondientes no se utilizan, mientras que los valores `42` y `41` representan los pines GPIO conectados a las líneas de selección de palabra y entrada de datos, respectivamente. Las líneas de salida de datos y selección de canal no se utilizan en esta configuración y se establecen en `-1`.
+En este código específico, los valores `-1` indican que los pines correspondientes no se usan, mientras que los valores `42` y `41` representan los pines GPIO conectados a las líneas de selección de palabra y entrada de datos, respectivamente. Las líneas de salida de datos y selección de canal no se usan en esta configuración y se establecen en `-1`.
 
 ```c
 if (!I2S.begin(PDM_MONO_MODE, 16000, 16)) {
@@ -165,7 +184,7 @@ if (!I2S.begin(PDM_MONO_MODE, 16000, 16)) {
 La función `begin()` se llama en el objeto I2S para inicializar la interfaz I2S con los parámetros especificados: `PDM_MONO_MODE`, frecuencia de muestreo de `16000` Hz, y resolución de `16-bit`.
 
 :::tip
-Cabe señalar que para el chip ESP32-S3 actual, solo podemos usar `PDM_MONO_MODE` y el ancho de bits de muestreo solo puede ser `16bit`. solo se puede modificar la frecuencia de muestreo, pero después de las pruebas, la frecuencia de muestreo a 16kHz es relativamente estable.
+Debe notarse que para el chip ESP32-S3 actual, solo podemos usar `PDM_MONO_MODE` y el ancho de bits de muestreo solo puede ser `16bit`. solo la frecuencia de muestreo puede ser modificada, pero después de las pruebas, la frecuencia de muestreo a 16kHz es relativamente estable.
 :::
 
 ```c
@@ -176,9 +195,9 @@ if (sample && sample != -1 && sample != 1) {
 }
 ```
 
-La función `read()` se llama en el objeto I2S para leer una sola muestra de audio desde la interfaz I2S. La declaración if verifica el valor de la variable sample. Si el valor de sample no es 0, -1, o 1, se considera una muestra de audio válida, y el código dentro del bloque if será ejecutado. En este caso, el valor de sample se imprime en la consola serie usando la función `Serial.println()`.
+La función `read()` se llama en el objeto I2S para leer una sola muestra de audio de la interfaz I2S. La declaración if verifica el valor de la variable sample. Si el valor de la muestra no es 0, -1, o 1, se considera una muestra de audio válida, y el código dentro del bloque if será ejecutado. En este caso, el valor de la muestra se imprime en la consola serial usando la función `Serial.println()`.
 
-## Guardar sonido grabado en tarjeta microSD
+## Guardar sonido grabado en la tarjeta microSD
 
 En este próximo proyecto, te guiaremos sobre cómo combinar las funciones de la tarjeta microSD y guardar el sonido grabado en la tarjeta microSD. Entonces para este proyecto, por favor prepara la tarjeta microSD y formatéala al formato **FAT32** con anticipación.
 
@@ -294,11 +313,10 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
     wav_size, wav_size >> 8, wav_size >> 16, wav_size >> 24, // Subchunk2Size
   };
   memcpy(wav_header, set_wav_header, sizeof(set_wav_header));
-}
-```
+}```
 
 :::tip
-El ejemplo anterior solo es compatible con la versión 2.0.x de `esp32`, si estás usando la última versión (por ejemplo, 3.0.x) usa el que está abajo
+El ejemplo anterior solo es compatible con la versión 2.0.x de `esp32`, si estás en la última versión (por ejemplo, 3.0.x) usa el de abajo
 :::
 
 ```cpp
@@ -378,7 +396,7 @@ Para ejecutar este ejemplo, necesitaremos usar la función PSRAM del chip ESP-32
 
 Este programa se ejecuta solo una vez después de que el usuario **encienda el monitor serie**, grabando durante 20 segundos y guardando el archivo de grabación en la tarjeta microSD como "arduino_rec.wav".
 
-Cuando se muestra el "." cada 1 segundo en el monitor serie, la ejecución del programa ha terminado y puedes reproducir el archivo de sonido grabado con la ayuda de un lector de tarjetas.
+Cuando se muestre un "." cada segundo en el monitor serie, la ejecución del programa habrá terminado y podrás reproducir el archivo de sonido grabado con la ayuda de un lector de tarjetas.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/102.png" style={{width:700, height:'auto'}}/></div>
 
@@ -386,7 +404,7 @@ Cuando se muestra el "." cada 1 segundo en el monitor serie, la ejecución del p
 Para reproducir el audio grabado desde XIAO ESP32S3, es posible que necesites usar un reproductor de audio que soporte formato WAV.
 :::
 
-### Anotación del programa
+### Anotaciones del programa
 
 En este programa, hemos escrito dos funciones para la función de grabación, una es `record_wav()` y la otra es `generate_wav_header()`.
 
@@ -398,39 +416,37 @@ En este programa, hemos escrito dos funciones para la función de grabación, un
 
   c. Escribir el encabezado del archivo WAV. El programa genera la información del encabezado del archivo de audio WAV usando la función `generate_wav_header()`, y la escribe en el archivo WAV abierto.
 
-  d. Asignar memoria y comenzar la grabación. El programa usa la función `ps_malloc()` para asignar un bloque de memoria en la PSRAM del ESP32S3 para almacenar los datos grabados, y usa la función `esp_i2s::i2s_read()` para leer datos de audio desde el micrófono. Los datos leídos se almacenan en el buffer rec_buffer.
+  d. Asignar memoria e iniciar grabación. El programa usa la función `ps_malloc()` para asignar un bloque de memoria en la PSRAM del ESP32S3 para almacenar los datos grabados, y usa la función `esp_i2s::i2s_read()` para leer datos de audio desde el micrófono. Los datos leídos se almacenan en el buffer rec_buffer.
 
-  e. Aumentar el volumen. El programa aumenta el volumen de los datos grabados usando un valor de ganancia definido por la constante `VOLUME_GAIN`.
+  e. Aumentar volumen. El programa aumenta el volumen de los datos grabados usando un valor de ganancia definido por la constante `VOLUME_GAIN`.
 
   f. Escribir los datos grabados en el archivo WAV. El programa usa la función `file.write()` para escribir los datos grabados en el archivo WAV abierto.
 
   g. Liberar la memoria del buffer y cerrar el archivo WAV. El programa usa la función `free()` para liberar la memoria del buffer `rec_buffer`, y usa la función `file.close()` para cerrar el archivo WAV abierto.
 
-- `generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample_rate)`: Función para generar la información del encabezado de un archivo WAV. En esta función, el programa genera un arreglo de bytes que contiene la información del encabezado de un archivo WAV basado en las especificaciones del archivo WAV.
+- `generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample_rate)`: Función para generar la información del encabezado de un archivo WAV. En esta función, el programa genera un array de bytes que contiene la información del encabezado de un archivo WAV basado en las especificaciones del archivo WAV.
 
-  a. Definir las constantes para la información del encabezado del archivo WAV. El programa define un arreglo de bytes `set_wav_header` que contiene la información del encabezado de un archivo WAV, y define las constantes para las especificaciones del archivo WAV, incluyendo `NUM_CHANNELS`, `BITS_PER_SAMPLE`, `WAV_HEADER_SIZE`, y `SUB_CHUNK_SIZE`.
+  a. Definir las constantes para la información del encabezado del archivo WAV. El programa define un array de bytes `set_wav_header` que contiene la información del encabezado de un archivo WAV, y define las constantes para las especificaciones del archivo WAV, incluyendo `NUM_CHANNELS`, `BITS_PER_SAMPLE`, `WAV_HEADER_SIZE`, y `SUB_CHUNK_SIZE`.
 
-  b. Establecer la información del encabezado del archivo WAV. El programa establece la información del encabezado del archivo WAV usando las constantes definidas en el paso a, y calcula los valores de algunos campos basados en las especificaciones del archivo WAV, incluyendo `AUDIO_FORMAT`, `BYTE_RATE`, `BLOCK_ALIGN`, `SAMPLES_PER_CHANNEL`, y `CHUNK_SIZE`. Los valores calculados se almacenan en el arreglo de bytes `set_wav_header`.
+  b. Establecer la información del encabezado del archivo WAV. El programa establece la información del encabezado del archivo WAV usando las constantes definidas en el paso a, y calcula los valores de algunos campos basados en las especificaciones del archivo WAV, incluyendo `AUDIO_FORMAT`, `BYTE_RATE`, `BLOCK_ALIGN`, `SAMPLES_PER_CHANNEL`, y `CHUNK_SIZE`. Los valores calculados se almacenan en el array de bytes `set_wav_header`.
 
-  c. Copiar la información del encabezado del archivo WAV. El programa copia la información del encabezado almacenada en `set_wav_header` al arreglo de bytes `wav_header`.
+  c. Copiar la información del encabezado del archivo WAV. El programa copia la información del encabezado almacenada en `set_wav_header` al array de bytes `wav_header`.
 
 ## Solución de problemas
 
 ### ¿Por qué no puedo reproducir los archivos de audio grabados?
 
-Si encuentras una situación en la que no puedes reproducir, por favor verifica la información de depuración impresa por el monitor serie para mensajes de error sobre lectura y escritura de tarjetas. Si los hay, por favor reemplaza la tarjeta microSD o verifica si la tarjeta y la conexión de la placa de expansión está suelta o inestable. Si no hay problema con la tarjeta, entonces el archivo de audio debería tener tamaño, si hay un problema con la grabación, puede mostrarse como un archivo de audio grabado con un tamaño de solo 0KB.
+Si encuentras una situación donde no puedes reproducir, por favor verifica la información de depuración impresa por el monitor serie para mensajes de error sobre lectura y escritura de tarjetas. Si los hay, por favor reemplaza la tarjeta microSD o verifica si la conexión entre la tarjeta y la placa de expansión está suelta o inestable. Si no hay problema con la tarjeta, entonces el archivo de audio debería tener tamaño, si hay un problema con la grabación, puede mostrarse como un archivo de audio grabado con un tamaño de solo 0KB.
 
 Por ejemplo, en la figura de abajo, hay un problema con la lectura y escritura de la tarjeta.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/103.png" style={{width:600, height:'auto'}}/></div>
 
-Si no hay problemas con la tarjeta y la grabación es bastante exitosa. Entonces necesitas verificar si el software soporta reproducción de audio en formato WAV. Recomendamos usar software especial de reproducción de música para reproducir audio, trata de no usar reproductor de video para reproducir. Después de pruebas reales, hay muchos reproductores de video (aunque soporten formato WAV) que no pueden reproducirlo.
+Si no hay problemas con la tarjeta y la grabación es bastante exitosa. Entonces necesitas verificar si el software soporta reproducción de audio en formato WAV. Recomendamos usar software especial de reproducción de música para reproducir audio, trata de no usar reproductores de video para reproducir. Después de pruebas reales, hay muchos reproductores de video (aunque soporten formato WAV) que no pueden reproducirlo.
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
-.
-
-¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -70,8 +70,8 @@ This wiki will use the reServer Industrial J501 Carrier Board with the GMSL exte
   </table>
 </div>
 
-
 ## Prerequisites
+
 - NVIDIA Jetson AGX Orin Module 32GB/64GB
 - Flashed with the latest [JetPack 6.2 SDK](https://wiki.seeedstudio.com/reserver_j501_getting_started/#prepare-the-jetpack-image) (support GMSL expansion board)
 - reServer Industrial J501 Carrier Board
@@ -79,7 +79,9 @@ This wiki will use the reServer Industrial J501 Carrier Board with the GMSL exte
 - [GMSL Camera](https://www.sensing-world.com/en/pd.jsp?recommendFromPid=0&id=23&fromMid=1544)
 
 ## GMSL Camera Configuration
+
 ## Hardware Connection
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/cam_c.jpg"/>
 </div>
@@ -93,7 +95,9 @@ In order to obtain the input from the GMSL camera, we need to first configure th
 ```bash
 touch media-setup.sh
 ```
+
 **Step 2.** Paste the following content into media-setup.sh:
+
 ```bash
 #!/bin/bash
 # Set Serializer & Deserializer Formats
@@ -121,6 +125,7 @@ media-ctl -d /dev/media0 --set-v4l2 '"des_1_ch_3":0[fmt:YUYV8_1X16/1920x1536]'
 ```bash
 chmod +x media-setup.sh
 ```
+
 **Step 4.** Create a systemd service:
 
 ```bash
@@ -139,6 +144,7 @@ RemainAfterExit=true
 [Install]
 WantedBy=multi-user.target
 ```
+
 **Step 5.** After saving and exiting, enable the service:
 
 ```bash
@@ -147,6 +153,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable mediactl-init.service
 sudo systemctl start mediactl-init.service
 ```
+
 **Step 5.** Reboot the device and check if the service is running:
 
 ```bash
@@ -171,7 +178,6 @@ gst-launch-1.0 v4l2src device=/dev/video7  ! xvimagesink -ev
 Our GMSL extension board supports up to 8 camera video inputs and provides a PTP timestamp accuracy of less than 1ms to ensure the synchronization of the 8 video data streams.
 :::
 
-
 ## Quickly deploy YOLO11 for real-time object detection of eight cameras
 
 <div style={{ textAlign: "justify" }}>
@@ -181,7 +187,7 @@ YOLOv11 is a real-time object detection model released by Ultralytics, offering 
 ### Install YOLO11 and run multiple cameras object detection
 
 **Step 1.** Download and install the necessary packages:
-:::note 
+:::note
 The following packages are built for JetPack 6.2 with CUDA 12.6.
 :::
 
@@ -215,7 +221,6 @@ yolo export model=./models/yolo11n.pt format=engine device=0 half=True dynamic=T
 yolo export model=./models/yolo11n-seg.pt format=engine device=0 half=True dynamic=True
 yolo export model=./models/yolo11n-pose.pt format=engine device=0 half=True dynamic=True
 ```
-
 
 Running the following Python script can quickly perform object detection on eight cameras:
 
@@ -308,6 +313,7 @@ if __name__ == "__main__":
     main()
 
 ```
+
 </details>
 
 <div align="center">
@@ -332,6 +338,7 @@ cd vggt
 pip install -r requirements.txt
 pip install -r requirements_demo.txt
 ```
+
 Run the following script to quickly perform 3D reconstruction on eight cameras:
 
 <details>
@@ -770,18 +777,16 @@ Since the camera we are using is a fisheye camera with severe distortion, the im
 - [YOLOv11 Github](https://github.com/ultralytics/ultralytics)
 - [VGGT: Visual Geometry Grounded Transformer](https://vgg-t.github.io/)
 
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

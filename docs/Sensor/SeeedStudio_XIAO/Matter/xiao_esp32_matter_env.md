@@ -344,6 +344,7 @@ These are commands that are connected via a cable to directly control a device, 
  ```
 
 - Device configuration: Dump the device static configuration:
+
  ```
  matter config
  ```
@@ -366,7 +367,7 @@ These are commands that are connected via a cable to directly control a device, 
  matter esp attribute get <endpoint_id> <cluster_id> <attribute_id>
  ```
 
- 	- Example: on_off::on_off:
+  - Example: on_off::on_off:
 
   ```
   matter esp attribute get 0x1 0x6 0x0
@@ -378,7 +379,7 @@ These are commands that are connected via a cable to directly control a device, 
  matter esp attribute set <endpoint_id> <cluster_id> <attribute_id> <attribute value>
  ```
 
- 	- Example: on_off::on_off:
+  - Example: on_off::on_off:
 
   ```
   matter esp attribute set 0x1 0x6 0x0 1

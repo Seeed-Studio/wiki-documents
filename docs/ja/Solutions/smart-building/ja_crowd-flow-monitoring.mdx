@@ -1,0 +1,183 @@
+---
+description: "空間内の人の流れを可視化したいですか？Home Assistantとフロアプランヒートマップを組み合わせることで、これを簡単に実現できます。このソリューションにより、フロアプランに人時データをオーバーレイし、空間利用状況を一目で理解できます。"
+keywords:
+    - Home Assistant
+    - フロー統計
+    - ヒートマップ
+image: https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/result_visualize.png
+slug: /ja/crowd-flow-monitoring
+sidebar_position: 4
+last_update:
+  date: 08/11/2025
+  author: Spencer
+---
+
+import Steppers from '@site/src/components/utils/Stepper';
+
+# Home Assistantを使った群衆フローヒートマップ
+
+人々が空間をどのように移動するかを明確に把握したいですか？**Home Assistant**と**フロアプランヒートマップ**を使えば、まさにそれが可能です。このソリューションにより、フロアプランに人時データをオーバーレイし、空間の使用状況を一目で簡単に確認できます。
+
+Home Assistantは、さまざまなデバイスからデータを収集・管理するだけでなく、強力な統合機能により他のプラットフォームとシームレスに接続します。ヒートマッププラグインを統合することで、**既存のデバイスデータを直接使用できます。**デバイスがすでにHome Assistantに接続されている場合、そのデータを視覚的なチャートに簡単に組み込むことができます。これにより、セットアップ プロセスが簡素化され、既存のスマートホームエコシステムの有用性が最大化されます。
+
+:::note
+
+フロアプランヒートマップは、建物のフロアプランや屋内レイアウトの上にデータを可視化する技術です。寒色（青、緑など）から暖色（黄、赤など）までのカラースケールを使用して、特定のエリアでのデータの強度、密度、または頻度を示します。例えば、部屋がどの程度頻繁に使用されているか、または特定のエリアの温度分布を表示できます。
+
+:::
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/result_visualize.png" alt="Heatmap Visualization"/>
+</div>
+
+## 人時統計の例
+
+必要なもの：
+
+- Node-REDプラットフォーム
+- Home Assistantシステム
+- [Grove Vision AI V2](https://www.seeedstudio.com/XIAO-Vision-AI-Camera-p-6450.html)カメラキット
+
+### Grove Vision AI V2
+
+1. [SenseCraft AI](https://sensecraft.seeed.cc/)プラットフォームにアクセスし、ログインして、「Vision Workspace」の下で「Grove Vision AI V2」をクリックし、**Connect**を選択します。
+2. ポップアップウィンドウで、接続したいGrove Vision AI V2デバイスを選択します。
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/connect-grove-vision-v2.png" alt="Connect Grove Vision V2"/>
+</div>
+
+### モデルのフラッシュ
+
+適切なモデルを選択します。顔や人物の検出を行わない場合は、人間の特徴を認識できるモデルをフラッシュする必要があります。例えば、**Face Detection**を選択し、デプロイを確認します。
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/sensecraft-model-face-detection.png" alt="SenseCraft AI Model Face Detection"/>
+</div>
+
+モデルをダブルクリックし、フラッシュとデプロイを確認します。
+
+### ネットワーク情報の設定
+
+1. メインパネルで、右側の**Network Configuration**をクリックします。
+2. Home AssistantのWi-Fi情報とMQTTサーバーアドレス（通常は*HAアドレス*:1883）を入力します。
+3. **Save**をクリックします。
+
+:::note
+
+後で使用するため、Client ID（カスタマイズ可能）を必ずメモしておいてください。
+
+:::
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/sensecraft-wifi-configuration.png" alt="SenseCraft Wi-Fi Configuration"/>
+</div>
+
+## Node-RED
+
+Grove Vision AI V2は非標準デバイスのため、現在はNode-REDを使用してデバイス登録とデータ表示を処理する必要があります。
+
+まず、[person-hour-statistics.json](https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/vision-v2-crowd-flow.json)ファイルをNode-REDにインポートし、以下の手順を続行します：
+
+<Steppers>
+
+### MQTT設定の確認
+
+「**Publish HA Data & Discovery**」ノードのサービス情報をHome Assistantアドレス（例：`192.168.101.160`）に変更します。Home Assistantの内蔵Node-REDアドオンを使用している場合は、`mqtt://localhost`に接続します。
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/nodered-mqtt-out-config.png" alt="Node-RED MQTT Out Config"/>
+</div>
+
+### デバイスIDの変更
+
+「**Know Camera IDs**」ノードで、ペイロードJSONを変更し、複数のデバイスがある場合は複数のクライアントIDを追加します。
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/nodered-heatmap-device-ids.png" alt="Node-RED Heatmap Device IDs"/>
+</div>
+
+### デバイスの登録
+
+「**Trigger HA Discovery for Known Devices**」をクリックしてデバイスを登録します。その後、概要ページで利用できないデバイスエンティティが表示されるはずです。
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/ha-heatmap-device-added.png" alt="Home Assistant Heatmap Device Added"/>
+</div>
+
+### データの表示
+
+「**Start**」ノードの`msg.topic`を`grove_vision_ai_v2_61003e7c`に設定し、**Start**をクリックします。完了すると、Home Assistantでデータを表示できます。
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/ha-heatmap-device-worked.png" alt="Home Assistant Heatmap Device Worked"/>
+</div>
+
+</Steppers>
+
+## Home Assistant
+
+### プラグインのインストール（HACS）
+
+HACSページにアクセスします。例：[http://homeassistant.local:8123/hacs/dashboard](http://homeassistant.local:8123/hacs/dashboard)
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/hacs-custom-repositories.png" alt="HACS Custom Repositories"/>
+</div>
+
+HACSで、`Custom repository`を追加し、以下のアドレスを入力します：
+
+```shell
+https://github.com/Seeed-Solution/lovelace-heatmap-card
+```
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/hacs-add-repositories.png" alt="HACS Add Repository"/>
+</div>
+
+「**Heatmap Card**」を検索し、プラグインをダウンロードします：
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/hacs-search-download.png" alt="HACS Search and Download"/>
+</div>
+
+インストール後、ブラウザをリロードする必要があります。プロンプトで`RELOAD`をクリックします。
+
+### ダッシュボードにカードを追加
+
+任意のダッシュボードで、ヒートマップカードを追加します。例えば、`Person-Hour Statistics`という名前のダッシュボードを編集してみましょう。
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/ha-edit-panel.png" alt="Home Assistant Edit Panel"/>
+</div>
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/ha-add-card.png" alt="Home Assistant Add Card"/>
+</div>
+
+「Add Card」をクリックし、カスタムカードセクションまでスクロールして、`Heatmap Card`を見つけ、クリックして追加します。
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/ha-choose-card.png" alt="Home Assistant Choose Card"/>
+</div>
+
+### データの接続
+
+<div align="center">
+  <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/lovelace-heatmap-card-config.png" alt="Lovelace Heatmap Card Config"/>
+</div>
+
+プラグインには4つの設定セクションがあります：
+
+- Color Style（半径、ぼかし）
+- Points - 異なるポイントの座標と情報
+- Display Options - データ凡例の表示
+- Show Point Labels - 各ポイントのラベル表示
+
+カード設定で、Pointsの1つの`entity_id`をデバイスエンティティID（例：`sensor.grove_vision_ai_v2_61003e7c_current_people_count`）に設定します。
+
+完了したら、Saveをクリックします。
+
+---
+
+これらの手順を完了すると、Home Assistantでヒートマップデータが動的に表示されるのを確認できます。

@@ -397,7 +397,7 @@ jobs:
           fi
           node _trusted/.github/scripts/translate.js
 
-      # ⭐ 将译文推送到 base 仓库的独立分支，并创建/更新翻译 PR
+      # ⭐ 将译文推送到 base 仓库独立分支（只提交改动的文件），并创建/更新翻译 PR
       - name: Prepare translation branch in base repo
         if: steps.check-permissions.outputs.has_permission == 'true'
         id: prep-branch
@@ -410,19 +410,12 @@ jobs:
         run: |
           set -e
           echo "🔧 准备在 base 仓库创建/更新翻译分支..."
+
           BRANCH="auto-translate/pr-${PR_NUMBER}"
           echo "BRANCH=$BRANCH" >> $GITHUB_OUTPUT
 
-          if [ -z "$(git status --porcelain docs/)" ]; then
-            echo "ℹ️ 没有需要提交的 docs/ 更改"
-            echo "HAS_CHANGES=false" >> $GITHUB_ENV
-            exit 0
-          fi
-          echo "HAS_CHANGES=true" >> $GITHUB_ENV
-
           WORKDIR=$(mktemp -d)
           echo "WORKDIR=$WORKDIR"
-          cd "$WORKDIR"
 
           TOKEN="${TRANSLATION_PAT:-${GITHUB_TOKEN}}"
           if [ -z "$TOKEN" ]; then
@@ -432,35 +425,38 @@ jobs:
           REMOTE_URL="https://${TOKEN}@github.com/${BASE_REPO}.git"
 
           git config --global init.defaultBranch main
-          git clone --depth=1 "$REMOTE_URL" repo
-          cd repo
+          git clone --depth=1 "$REMOTE_URL" "$WORKDIR/repo"
+          cd "$WORKDIR/repo"
           git fetch --depth=1 origin "$BASE_REF"
           git checkout "$BASE_REF"
 
-          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
-            git checkout -B "$BRANCH"
-          else
-            git switch -c "$BRANCH"
-          fi
-
-          rsync -a --delete "$GITHUB_WORKSPACE/docs/" docs/
+          # ✅ 镜像三种语言目录（含删除），并防止 symlink 越界
+          rsync -a --delete --safe-links --copy-dirlinks \
+            --include='docs/' \
+            --include='docs/zh-CN/***' \
+            --include='docs/ja/***' \
+            --include='docs/es/***' \
+            --exclude='*' \
+            "$GITHUB_WORKSPACE/" .
 
           git config user.email "action@github.com"
           git config user.name "GitHub Action Bot"
-          git add docs/
 
-          COMMIT_MSG="🌍 自动翻译文档 for #${PR_NUMBER}"
-          # ✅ 用多条 -m 追加提交说明，避免 YAML/heredoc 解析问题
+          # 只对语言目录进行 add（不存在则忽略）
+          git add docs/zh-CN docs/ja docs/es 2>/dev/null || true
+
           if git diff --cached --quiet; then
-            echo "ℹ️ 同步后无变化"
+            echo "ℹ️ 镜像后无变化"
+            echo "HAS_CHANGES=false" >> $GITHUB_ENV
           else
             git commit \
-              -m "$COMMIT_MSG" \
+              -m "🌍 自动翻译文档 for #${PR_NUMBER}" \
               -m "Languages: ${LANGUAGES}" \
               -m "Base: ${BASE_REF}" \
               -m "Source PR: #${PR_NUMBER}" \
               -m "[TRANSLATION_COMMIT]: true"
             git push origin HEAD:"$BRANCH"
+            echo "HAS_CHANGES=true" >> $GITHUB_ENV
           fi
 
       - name: Create or update translation PR

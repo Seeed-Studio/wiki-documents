@@ -1,6 +1,6 @@
 ---
 description: 本维基提供了 Myactuator 系列电机的教程。
-title: 脉塔X系列电机使用文档
+title: 脉塔X系列电机
 keywords:
 - 执行器
 - 电机

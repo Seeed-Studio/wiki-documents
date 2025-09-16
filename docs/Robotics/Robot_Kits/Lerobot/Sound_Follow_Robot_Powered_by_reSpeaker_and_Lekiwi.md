@@ -1,6 +1,6 @@
 ---
 description: This wiki provides a comprehensive implementation framework for equipping the Lekiwi Robot Kit with sound-following capabilities using ReSpeaker Mic Array v2.0 and reComputer Jetson Mini, covering hardware integration, environment configuration, and software adaptation while demonstrating real-time audio source tracking functionality. 
-title: A Sound Follow Robot Powered by reSpeaker and Lekiwi
+title: Lekiwi with Sound Follow 
 keywords:
 - Lerobot
 - Huggingface

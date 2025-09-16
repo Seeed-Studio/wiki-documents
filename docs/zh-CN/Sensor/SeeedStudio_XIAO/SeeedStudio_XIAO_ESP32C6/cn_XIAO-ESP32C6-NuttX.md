@@ -14,15 +14,15 @@ last_update:
 
 ## 介绍
 
-[NuttX](https://nuttx.apache.org/) 是一个成熟的实时操作系统（RTOS），因其标准合规性和小占用空间而广受认可。NuttX 的主要特性之一是其可扩展性，使其能够在从 8 位微控制器到 64 位系统的各种环境中使用。这种灵活性通过遵循 POSIX 和 ANSI 标准来实现，使您能够在来自不同架构、系列和半导体供应商的各种芯片上体验类似的 NuttX 功能。
+[NuttX](https://nuttx.apache.org/) 是一个成熟的实时操作系统（RTOS），因其标准合规性和小占用空间而广受认可。NuttX 的主要特性之一是其可扩展性，这使得它可以在从 8 位微控制器到 64 位系统的各种环境中使用。这种灵活性是通过遵循 POSIX 和 ANSI 标准实现的，使您能够在来自不同架构、系列和半导体供应商的各种芯片上体验类似的 NuttX 功能。
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO-ESP32C6-NuttX/nuttx.svg"/></div>
 
-此外，NuttX 提供许多先进且有用的功能，如 USB、以太网、音频和图形子系统。这些特性使 NuttX 成为寻求能够在各种类型硬件上运行的多功能、强大 RTOS 的开发者的有吸引力的选择。
+此外，NuttX 提供了许多先进且有用的功能，如 USB、以太网、音频和图形子系统。这些特性使 NuttX 成为寻求能够在各种类型硬件上运行的多功能、强大 RTOS 的开发者的有吸引力的选择。
 
 NuttX 支持大量且不断扩展的开发板。[官方文档](https://nuttx.apache.org/docs/latest/platforms/) 提供了支持的开发板的完整列表，按架构和片上系统（SoC）系列组织。
 
-例如，NuttX 文档中的 [Seeed Studio XIAO ESP32C6](https://nuttx.apache.org/docs/latest/platforms/risc-v/esp32c6/boards/esp32c6-xiao/index.html) 页面提供了每个支持功能的详细描述和如何使用它们的说明。此外，在 NuttX 文档中还有一个专门针对 [Espressif ESP32C6](https://nuttx.apache.org/docs/latest/platforms/risc-v/esp32c6/index.html) 系列芯片的页面，您可以在其中找到支持的 MCU 和外设列表。
+例如，NuttX 文档中的 [Seeed Studio XIAO ESP32C6](https://nuttx.apache.org/docs/latest/platforms/risc-v/esp32c6/boards/esp32c6-xiao/index.html) 页面提供了每个支持功能的详细描述和如何使用它们的说明。此外，在 NuttX 文档中还有一个专门针对 [Espressif ESP32C6](https://nuttx.apache.org/docs/latest/platforms/risc-v/esp32c6/index.html) 系列芯片的页面，您可以在那里找到支持的 MCU 和外设列表。
 
 ## 安装
 
@@ -63,7 +63,7 @@ Apache Nuttx 分为两个项目：
 ./tools/configurate.sh board_name:your_application
 ```
 
-也可以通过运行命令检查支持的开发板列表：
+Also it's possible to check the list of board-supported a running the command:
 
 ```bash
 ./tools/configurate.sh -L
@@ -77,6 +77,7 @@ Apache Nuttx 分为两个项目：
     ./tools/configure.sh esp32c6-xiao:usbnsh
     make V=1
     ```
+
 5. 可以使用 RESET 和 BOOT 按钮进入"Bootloader"模式，方法是在上电时按住 BOOT 键，然后按一次 RESET 键。
 
 6. 使用 esptool.py 加载固件：
@@ -87,11 +88,11 @@ Apache Nuttx 分为两个项目：
 
 ## 实践操作
 
-现在是时候实际探索 NuttX 了。在本节中，有四个可用的应用程序：USBNSH、GPIO 和 WIFI。
+现在是实际探索 NuttX 的时候了。在本节中，提供了四个应用程序：USBNSH、GPIO 和 WIFI。
 
 ### USBNSH
 
-NuttShell(NSH) 是在 NuttX 中使用的 shell 系统，类似于 bash 和其他类似选项。它支持丰富的内置命令集、脚本编写以及将您自己的应用程序作为"内置"（同一个 NuttX 二进制文件的一部分）运行的能力。NSH 配置使用 115200 bps 在 USB 上启用控制台。
+NuttShell(NSH) 是一个用于 NuttX 的 shell 系统，类似于 bash 和其他类似选项。它支持丰富的内置命令集、脚本编写以及将您自己的应用程序作为"内置"（同一个 NuttX 二进制文件的一部分）运行的能力。NSH 配置使用 115200 bps 在 USB 上启用控制台。
 
 我们可以通过清除之前的配置来开始构建过程
 
@@ -100,19 +101,19 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-现在我们为 esp32c6-xiao 开发板选择 NSH 配置：
+Now we select the NSH configuration to the esp32c6-xiao board:
 
 ```bash
 ./tools/configurate.sh esp32c6-xiao:usbnsh
 ```
 
-编译源代码。
+Compile the source code.
 
 ```bash
 make -j
 ```
 
-将固件加载到您的开发板中，重启开发板并使用 CDC/ACM 串行接口通过 USB 连接 NuttShell (NSH) 控制台：
+将固件加载到您的开发板中，重启开发板并通过 USB 使用 CDC/ACM 串行接口连接 NuttShell (NSH) 控制台：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
@@ -127,7 +128,7 @@ NuttX  12.9.0 ebf883ba72 May  8 2025 17:15:47 risc-v esp32c6-xiao
 nsh> 
 ```
 
-输入 `?`，您将访问命令和内置应用程序的可用选项。
+Typing `?`, you will access the available options for commands and built-in applications.
 
 ```bash
 nsh> ?
@@ -158,26 +159,26 @@ Hello, World!!
 
 ### GPIO
 
-此配置启用 gpio 示例应用程序。通用输入/输出 (GPIO) 是微控制器最基本的部分，允许它连接到外部世界。这样我们将使用 NSH 来访问和配置这些引脚。但首先，让我们清除之前的配置。
+此配置启用了 gpio 示例应用程序。通用输入/输出（GPIO）是微控制器最基本的部分，允许它连接到外部世界。这样我们将使用 NSH 来访问和配置这些引脚。但首先，让我们清除之前的配置。
 
 ```bash
 cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-为 xiao-esp32c6 开发板选择 gpio 配置。
+Select the gpio configuration to the xiao-esp32c6 board.
 
 ```bash
 ./tools/configurate.sh esp32c6-xiao:gpio
 ```
 
-编译源代码。
+Compile de the source code.
 
 ```bash
 make -j
 ```
 
-将固件加载到您的开发板中，运行串行通信程序，如 minicon 或 picocom：
+Load the firmware into you board, run a serial communication program such as minicon or picocom:
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
@@ -188,7 +189,7 @@ NuttShell (NSH) NuttX-12.9.0
 nsh>
 ```
 
-要检查与此应用程序交互接受哪些选项，输入 `gpio -h`，它将返回参数列表。
+要查看与此应用程序交互时接受哪些选项，请输入 `gpio -h`，它将返回参数列表。
 
 ```bash
 NuttShell (NSH) NuttX-12.9.0
@@ -215,11 +216,11 @@ IO_INPUT_PIN_PULLDOWN
  10: GPIO_INTERRUPT_BOTH_PIN
 ```
 
-要确认 GPIO 设备文件已创建，输入 `ls/dev`。输入后，您可以看到一些 gpio 被声明定义在 boards/risc-v/esp32c6/esp32c6-xiao/src/esp32c6_gpio.c 中，它们代表：
- 
-- GPIOs
-  - 1 Input w/ IRQ -> GPIO2 -> /dev/gpio1
-  - 1 Output       -> GPIO1 -> /dev/gpio0
+要确认 GPIO 设备文件已创建，请输入 `ls/dev`。输入后，您可以看到一些 gpio 已在 boards/risc-v/esp32c6/esp32c6-xiao/src/esp32c6_gpio.c 中声明定义，它们代表：
+
+- GPIO
+  - 1 个带 IRQ 的输入 -> GPIO2 -> /dev/gpio1
+  - 1 个输出       -> GPIO1 -> /dev/gpio0
 
 ```bash
 nsh> ls /dev
@@ -234,8 +235,8 @@ nsh> ls /dev
 nsh> 
 ```
 
-按照这些命令读取 GPIO1(/dev/gpio1)（带中断）
-并写入 GPIO2(/dev/gpio0)。
+Following these commands to read GPIO1(/dev/gpio1) (with interruption)
+and write at GPIO2(/dev/gpio0).
 
 ```bash
 NuttShell (NSH) NuttX-12.9.0
@@ -258,7 +259,7 @@ Driver: /dev/gpio1
 
 ### WIFI
 
-此配置启用一个 wlan 网络接口，可以使用以下命令进行配置和初始化：
+此配置启用了一个 wlan 网络接口，可以使用以下命令进行配置和初始化：
 
 ```bash
 nsh> ifup wlan0
@@ -267,28 +268,28 @@ nsh> wapi essid wlan0 myssid 1
 nsh> renew wlan0
 ```
 
-在这种情况下，连接到 SSID 为 myssid 的 AP，使用 mypasswd 作为密码。IP 地址通过使用 renew 命令的 DHCP 获得。您可以通过之后运行 ifconfig 来检查结果。
+在这种情况下，连接到SSID为myssid的AP，使用mypasswd作为密码。通过使用renew命令经由DHCP获取IP地址。您可以通过之后运行ifconfig来检查结果。
 
-让我们从清理之前的配置开始：
+让我们首先清理之前的配置：
 
 ```bash
 cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-为 xiao-esp32c6 开发板选择 wifi 配置。
+Select the wifi configuration to the xiao-esp32c6 board.
 
 ```bash
 ./tools/configurate.sh esp32c6-xiao:wifi
 ```
 
-编译源代码。
+Compile de the source code.
 
 ```bash
 make -j
 ```
 
-将固件加载到您的开发板中，运行串行通信程序，如 minicon 或 picocom：
+Load the firmware into you board, run a serial communication program such as minicon or picocom:
 
 ```bash
 picocom -b 115200 /dev/ttyACM0

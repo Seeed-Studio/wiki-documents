@@ -14,19 +14,21 @@ last_update:
 # How to Use NVStreamer for RTSP Streaming on reComputer with Jetson Platform Services
 
 ## Introduction
+
 [NVStreamer](https://docs.nvidia.com/moj/nvstreamer/moj-nvstreamer.html) is a software developed by NVIDIA that can store and serve video files, which can then be streamed using the RTSP protocol. It is particularly useful for testing with VST, as it provides an alternative method to cameras for creating video sources as input for VST. Specifically, it offers a mechanism to use specific video files as input for VST testing. VST can be configured to receive RTSP streams as if they were coming from ONVIF-S cameras.
 
 This wiki provides a tutorial on how to use NVStreamer for RTSP video streaming on [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
 
 <div align="center">
-    <img width={700} 
+    <img width={700}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recomputerj4012.jpg" />
 </div>
 
 ## Prerequisites
+
 Before proceeding with the setup process, please ensure that your system meets the following prerequisites:
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/reComputer_J4012.png" />
 </div>
 
@@ -40,6 +42,7 @@ Before proceeding with the setup process, please ensure that your system meets t
 - The Linux system must have sufficient available space to store the video files you will be serving (typically several hundred GB).
 - Driver Version: `535.113.01`, Jetpack `6.0` and CUDA Version: `12.2`.
 - Make sure that `JetPack` and the related `Jetson services` packages are installed.
+
   ```bash
   sudo apt-get install nvidia-jetpack
   sudo apt install nvidia-jetson-services
@@ -77,26 +80,28 @@ sudo docker compose -f compose_nvstreamer.yaml down --remove-orphans
 ```
 
 ### Upload Video to NVStreamer
+
 **Step 1**: Open a web browser (we recommend using Chrome) and navigate to this address (on the same system or another system on the same network).
 
 ```markdown
 http://[reComputer-IP]:31000
 ```
+
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/nvstreamer/fig1.png" />
 </div>
 
 **Step 2**: Select **`File Upload`** and choose the video disk file you want to test as a camera (supported codecs: h264/h265, containers: mp4/mkv). Drag and drop it into the indicated area. If the video file contains B-frames, NVStreamer will automatically transcode the file, which may take a few minutes depending on the file size.
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/nvstreamer/fig2.png" />
 </div>
 
 **Step 3** Once the file is successfully uploaded, a green progress bar in the bottom left corner will complete, indicating the end of the upload process. Then, the transcoding process will begin. After completion, the file name will be displayed in gray, and an RTSP stream with the file name will be automatically created.
 
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/nvstreamer/fig3.png" />
 </div>
 
@@ -108,7 +113,7 @@ The RTSP streaming tutorial ends at this step. Copy or note down the RTSP addres
 
  You will see a UI similar to this:
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/nvstreamer/fig4.png" />
 </div>
 
@@ -125,17 +130,18 @@ The RTSP streaming tutorial ends at this step. Copy or note down the RTSP addres
 
 **Step 2**: Click the **`Camera Management`** tab and Click on **`RTSP`**, paste the RTSP address copied from NVStreamer UI to **`rtsp url`** box. Fill **`location`** and **`name`** fields with the same string (it will become the camera name) and hit **`Submit`**.
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/nvstreamer/fig5.png" />
 </div>
 
 **Step 3**: You can now click on **`Streams tab`** to see the file.
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/nvstreamer/fig6.png" />
 </div>
 
 ## More Details
+
 - NVStreamer on Jetson Orin: https://docs.nvidia.com/moj/nvstreamer/moj-nvstreamer.html
 
 ## Tech Support & Product Discussion
@@ -143,11 +149,11 @@ The RTSP streaming tutorial ends at this step. Copy or note down the RTSP addres
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -14,100 +14,96 @@ last_update:
 
 # 从数据集到 XIAO ESP32S3 的模型部署
 
-欢迎来到这个综合教程，我们将踏上一段旅程，将您的数据集转化为可在 XIAO ESP32S3 上部署的完全功能模型。在本指南中，我们将使用 Roboflow 的直观工具来标注数据集，然后在 Google Colab 的协作环境中进行模型训练。
+欢迎来到这个综合教程，我们将踏上一段旅程，将您的数据集转化为可在 XIAO ESP32S3 上部署的功能完整的模型。在本指南中，我们将使用 Roboflow 的直观工具完成数据集标注的初始步骤，然后在 Google Colab 的协作环境中进行模型训练。
 
-接下来，我们将使用 SenseCraft Model Assistant 部署训练好的模型，这个过程连接了训练和实际应用之间的桥梁。在本教程结束时，您不仅将拥有一个在 XIAO ESP32S3 上运行的自定义模型，还将具备解释和利用模型预测结果的知识。
+接下来，我们将使用 SenseCraft Model Assistant 部署训练好的模型，这个过程连接了训练和实际应用之间的桥梁。在本教程结束时，您不仅将拥有一个在 XIAO ESP32S3 上运行的自定义模型，还将掌握解释和利用模型预测结果的知识。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/0.png" style={{width:1000, height:'auto'}}/></div>
 
-
-从数据集到模型部署，我们将有以下主要步骤。
+从数据集到模型落地，我们将有以下主要步骤。
 
 1. [标注数据集](#labelled-datasets) —— 本章重点介绍如何获取可以训练成模型的数据集。主要有两种方式。第一种是使用 Roboflow 社区提供的标注数据集，另一种是使用您自己特定场景的图像作为数据集，但您需要手动进行标注。
 
-2. [训练数据集导出模型](#training-dataset-exported-model) —— 本章重点介绍如何基于第一步获得的数据集，使用 Google Colab 平台训练得到可以部署到 XIAO ESP32S3 的模型。
+2. [训练数据集导出模型](#training-dataset-exported-model) —— 本章重点介绍如何基于第一步获得的数据集，通过使用 Google Colab 平台进行训练，获得可以部署到 XIAO ESP32S3 的模型。
 
 3. [通过 SenseCraft Model Assistant 上传模型](#upload-models-via-sensecraft-model-assistant) —— 本节描述如何使用导出的模型文件，通过 SenseCraft Model Assistant 将模型上传到 XIAO ESP32S3。
 
 4. [模型的通用协议和应用](#common-protocols-and-applications-of-the-model) —— 最后，我们将介绍 SenseCraft AI 的统一数据通信格式，以便您可以利用设备和模型的最大潜力来制作适合您场景的应用程序。
 
-让我们开始这个令人兴奋的数据变现过程。
+让我们开始这个令人兴奋的数据赋能过程吧。
 
 ## 所需材料
 
 在开始之前，您可能需要准备以下设备。
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeed Studio XIAO ESP32S3</th>
-			<th>Seeed Studio XIAO ESP32S3 Sense</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO ESP32S3</th>
+   <th>Seeed Studio XIAO ESP32S3 Sense</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
-XIAO ESP32S3 和 Sense 版本都可以用作本教程的内容，但由于标准版本的产品不允许使用摄像头扩展板，我们建议您使用 Sense 版本。
+XIAO ESP32S3 标准版和 Sense 版都可以用于本教程，但由于标准版产品不支持使用摄像头扩展板，我们建议您使用 Sense 版。
 
-## 标记数据集
+## 标注数据集
 
-在本节内容中，我们允许用户自由选择他们拥有的数据集。这包括社区的或他们自己拍摄的场景照片。本教程将介绍两种主要场景。第一种是使用 [Roboflow](https://roboflow.com/about) 社区提供的现成标记数据集。另一种是使用您拍摄的高分辨率图像并标记数据集。请根据您的需求阅读下面的不同教程。
+在本节内容中，我们允许用户自由选择他们拥有的数据集。这包括社区或他们自己拍摄的场景照片。本教程将介绍两种主要场景。第一种是使用 [Roboflow](https://roboflow.com/about) 社区提供的现成标注数据集。另一种是使用您拍摄的高分辨率图像并标注数据集。请根据您的需求阅读下面的不同教程。
 
 ### 步骤 1：创建免费的 Roboflow 账户
 
-Roboflow 提供标记、训练和部署计算机视觉解决方案所需的一切。要开始使用，请创建一个[免费的 Roboflow 账户](https://app.roboflow.com/?ref=blog.roboflow.com)。
+Roboflow 提供标注、训练和部署计算机视觉解决方案所需的一切。首先，创建一个[免费的 Roboflow 账户](https://app.roboflow.com/?ref=blog.roboflow.com)。
 
-在审查并接受服务条款后，您将被要求在两个计划中选择一个：公共计划和入门计划。
+在审阅并接受服务条款后，系统会要求您在两个计划中选择一个：公共计划和入门计划。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/1.png" style={{width:800, height:'auto'}}/></div>
 
+然后，系统会要求您邀请协作者到您的工作空间。这些协作者可以帮助您标注图像或管理工作空间中的视觉项目。一旦您邀请了人员到工作空间（如果您想要的话），您就可以创建项目了。
 
-然后，您将被要求邀请协作者到您的工作空间。这些协作者可以帮助您标注图像或管理工作空间中的视觉项目。一旦您邀请了人员到您的工作空间（如果您想要的话），您就可以创建一个项目。
-
-
-### 选择如何获取您的数据集
-
+### 选择获取数据集的方式
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="Download Labelled datasets using Roboflow" label="使用 Roboflow 下载标记数据集">
+<TabItem value="Download Labelled datasets using Roboflow" label="使用 Roboflow 下载标注数据集">
 
 从 Roboflow 选择合适的数据集直接使用涉及确定最符合项目要求的数据集，考虑数据集大小、质量、相关性和许可等方面。
 
 **步骤 2. 探索 Roboflow Universe**
 
-Roboflow Universe 是一个您可以找到各种数据集的平台。访问 Roboflow Universe 网站并探索可用的数据集。
+Roboflow Universe 是一个可以找到各种数据集的平台。访问 Roboflow Universe 网站并探索可用的数据集。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/2.png" style={{width:1000, height:'auto'}}/></div>
 
-Roboflow 提供过滤器和搜索功能来帮助您找到数据集。您可以按领域、类别数量、标注类型等过滤数据集。利用这些过滤器缩小符合您标准的数据集范围。
+Roboflow 提供过滤器和搜索功能来帮助您找到数据集。您可以按领域、类别数量、标注类型等过滤数据集。利用这些过滤器缩小符合您条件的数据集范围。
 
 **步骤 3. 评估单个数据集**
 
-一旦您有了候选清单，请单独评估每个数据集。查看：
+一旦您有了候选列表，请逐个评估每个数据集。查看：
 
 **标注质量**：检查标注是否准确和一致。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/3.png" style={{width:1000, height:'auto'}}/></div>
 
-**数据集大小**：确保数据集足够大以便您的模型有效学习，但不要太大而无法处理。
+**数据集大小**：确保数据集足够大以便您的模型有效学习，但又不会太大而难以处理。
 
 **类别平衡**：数据集理想情况下应该为每个类别提供平衡数量的示例。
 
@@ -125,16 +121,15 @@ Roboflow 提供过滤器和搜索功能来帮助您找到数据集。您可以�
 
 **步骤 4. 下载样本**
 
-如果您找到了您选择的数据集，那么您可以选择下载并使用它。Roboflow 通常允许您下载数据集的样本。测试样本以查看它是否与您的工作流程良好集成以及是否适合您的模型。
+如果您找到了选择的数据集，那么您可以选择下载并使用它。Roboflow 通常允许您下载数据集的样本。测试样本以查看它是否与您的工作流程良好集成，以及是否适合您的模型。
 
-要继续后续步骤，我们建议您以下面显示的格式导出数据集。
+要继续后续步骤，我们建议您按照下图所示的格式导出数据集。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/6.png" style={{width:1000, height:'auto'}}/></div>
 
 然后您将获得此模型的 **Raw URL**，请妥善保存，我们稍后在模型训练步骤中会使用该链接。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/26.png" style={{width:1000, height:'auto'}}/></div>
-
 
 :::caution
 如果您是第一次使用 Roboflow 并且对数据集的选择完全没有判断，那么使用数据集训练模型进行初始测试以查看性能的步骤可能是必不可少的。这可以帮助您评估数据集是否满足您的要求。
@@ -146,79 +141,78 @@ Roboflow 提供过滤器和搜索功能来帮助您找到数据集。您可以�
 
 <TabItem value="Use your own images as a dataset" label="使用您自己的图像作为数据集">
 
-在这里，我将使用石头剪刀布手势图像作为演示，指导您完成在 Roboflow 上传图像、标记和导出数据集的任务。
+在这里，我将使用石头剪刀布手势图像作为演示，指导您完成在 Roboflow 上传图像、标注和导出数据集的任务。
 
 :::note
-我们强烈建议您使用 XIAO ESP32S3 拍摄数据集照片，这对 XIAO ESP32S3 来说是最好的。XIAO ESP32S3 Sense 拍照的示例程序可以在下面的 Wiki 链接中找到。
+我们强烈建议您使用 XIAO ESP32S3 拍摄数据集照片，这对 XIAO ESP32S3 来说是最佳选择。XIAO ESP32S3 Sense 拍照的示例程序可以在下面的 Wiki 链接中找到。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/xiao_esp32s3_camera_usage/#taking-photos-with-the-camera" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#taking-photos-with-the-camera" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>前往 Wiki</font></span></strong>
     </a>
 </div>
 :::
 
-**步骤 2. 创建新项目并上传图像**
+**步骤 2. 创建新项目并上传图片**
 
 登录 Roboflow 后，点击 **Create Project**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/7.png" style={{width:1000, height:'auto'}}/></div>
 
-为您的项目命名（例如，"石头剪刀布"）。将您的项目定义为**目标检测**。将**输出标签**设置为**分类**（因为石头、剪刀和布是不同的类别）。
+为您的项目命名（例如，"Rock-Paper-Scissors"）。将您的项目定义为 **Object Detection**。将 **Output Labels** 设置为 **Categorical**（因为石头、布、剪刀是不同的类别）。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/8.png" style={{width:1000, height:'auto'}}/></div>
 
-现在是时候上传您的手势图像了。
+现在是时候上传您的手势图片了。
 
-收集石头、剪刀和布手势的图像。确保您有各种背景和光照条件。在您的项目页面上，点击"添加图像"。
+收集石头、布和剪刀手势的图片。确保您有各种背景和光照条件。在您的项目页面上，点击"Add Images"。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/9.png" style={{width:1000, height:'auto'}}/></div>
 
-您可以拖放图像或从计算机中选择它们。为了构建一个强大的数据集，请为每个手势至少上传100张图像。
+您可以拖放图片或从计算机中选择它们。为了构建一个强大的数据集，请为每个手势至少上传 100 张图片。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/10.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-**数据集大小是如何确定的？**
+**数据集大小如何确定？**
 
-这通常取决于多种因素：任务模型、任务复杂性、数据纯度等等。例如，人体检测模型涉及大量的人员、范围广泛，任务更加复杂，因此需要收集更多的数据。
-另一个例子是手势检测模型，它只需要检测"石头"、"剪刀"和"布"三种类型，所需的类别较少，因此收集的数据集大约为500张。
+这通常取决于多种因素：任务模型、任务复杂性、数据纯度等等。例如，人体检测模型涉及大量的人、范围广泛，任务更加复杂，因此需要收集更多数据。
+另一个例子是手势检测模型，它只需要检测"石头"、"剪刀"和"布"三种类型，需要的类别较少，因此收集的数据集大约是 500 张。
 :::
 
-**步骤3：标注图像**
+**步骤 3：标注图片**
 
-上传后，您需要通过标记手势来标注图像。
+上传后，您需要通过标记手势来标注图片。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/11.png" style={{width:1000, height:'auto'}}/></div>
 
-Roboflow提供三种不同的图像标记方式：自动标记、Roboflow标记和手动标记。
+Roboflow 提供三种不同的图片标记方式：Auto Label、Roboflow Labeling 和 Manual Labeling。
 
-- [**自动标记**](https://blog.roboflow.com/yolo-world-prompting-tips/)：使用大型通用模型自动标记图像。
-- **Roboflow标记**：与专业的人工标记团队合作。无最小数量要求。无预付承诺。边界框标注起价\$0.04，多边形标注起价\$0.08。
-- **手动标记**：您和您的团队自己标记图像。
+- [**Auto Label**](https://blog.roboflow.com/yolo-world-prompting-tips/)：使用大型通用模型自动标记图片。
+- **Roboflow Labeling**：与专业的人工标记团队合作。无最小数量要求。无预付承诺。边界框标注起价 \$0.04，多边形标注起价 \$0.08。
+- **Manual Labeling**：您和您的团队自己标记图片。
 
 以下描述最常用的手动标记方法。
 
-点击"手动标记"按钮。Roboflow将加载标注界面。
+点击"Manual Labeling"按钮。Roboflow 将加载标注界面。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/12.png" style={{width:1000, height:'auto'}}/></div>
 
-选择"开始标注"按钮。在每张图像中围绕手势绘制边界框。
+选择"Start Annotating"按钮。在每张图片中围绕手势绘制边界框。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/13.gif" style={{width:1000, height:'auto'}}/></div>
 
-将每个边界框标记为"石头"、"剪刀"或"布"。
+将每个边界框标记为"Rock"、"Paper"或"Scissors"。
 
-使用">"按钮浏览您的数据集，为每张图像重复标注过程。
+使用">"按钮浏览您的数据集，为每张图片重复标注过程。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/14.gif" style={{width:1000, height:'auto'}}/></div>
 
-
-**步骤4：审查和编辑标注**
+**步骤 4：审查和编辑标注**
 
 确保标注准确性至关重要。
 
-审查每张图像以确保边界框正确绘制和标记。如果发现任何错误，选择标注以调整边界框或更改标签。
+审查每张图片以确保边界框正确绘制和标记。如果发现任何错误，选择标注以调整边界框或更改标签。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/15.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -228,31 +222,31 @@ Roboflow提供三种不同的图像标记方式：自动标记、Roboflow标记�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/16.png" style={{width:700, height:'auto'}}/></div>
 :::
 
-**步骤5：生成和导出数据集**
+**步骤 5：生成和导出数据集**
 
-一旦所有图像都被标注完成。在标注页面点击右上角的**将x张图像添加到数据集**按钮。
+所有图片标注完成后。在 Annotate 中点击右上角的 **Add x images to Dataset** 按钮。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/17.png" style={{width:1000, height:'auto'}}/></div>
 
-然后点击新弹出窗口底部的**添加图像**按钮。
+然后点击新弹出窗口底部的 **Add Images** 按钮。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/18.png" style={{width:400, height:'auto'}}/></div>
 
-点击左侧工具栏中的**生成**，并在第三步**预处理**中点击**继续**。
+点击左侧工具栏中的 **Generate**，并在第三个 **Preprocessing** 步骤中点击 **Continue**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/19.png" style={{width:1000, height:'auto'}}/></div>
 
-在第4步的**数据增强**中，选择**马赛克**，这可以增加泛化能力。
+在步骤 4 的 **Augmentation** 中，选择 **Mosaic**，这可以增加泛化能力。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/20.png" style={{width:1000, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/21.png" style={{width:1000, height:'auto'}}/></div>
 
-在最后的**创建**步骤中，请根据Roboflow的提升合理计算图像数量；一般来说，图像越多，训练模型所需的时间就越长。然而，图像越多并不一定会使模型更准确，这主要取决于数据集是否足够好。
+在最后的 **Create** 步骤中，请根据 Roboflow 的提升合理计算图片数量；一般来说，图片越多，训练模型所需的时间就越长。然而，图片越多并不一定会使模型更准确，这主要取决于数据集是否足够好。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/22.png" style={{width:1000, height:'auto'}}/></div>
 
-点击**创建**来创建数据集版本。Roboflow将处理图像和标注，创建一个版本化的数据集。数据集生成后，点击**导出数据集**。选择符合您将要训练的模型要求的**COCO**格式。
+点击 **Create** 创建数据集版本。Roboflow 将处理图像和标注，创建一个版本化的数据集。数据集生成后，点击 **Export Dataset**。选择与您要训练的模型要求匹配的 **COCO** 格式。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/23.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -260,20 +254,17 @@ Roboflow提供三种不同的图像标记方式：自动标记、Roboflow标记�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/27.png" style={{width:1000, height:'auto'}}/></div>
 
-
 恭喜！您已成功使用 Roboflow 上传、标注并导出了石头剪刀布手势检测模型的数据集。数据集准备就绪后，您可以继续使用 Google Colab 等平台训练机器学习模型。
 
-记住要保持数据集的多样性和良好的标注质量，以提高未来模型的准确性。祝您模型训练顺利，享受使用 AI 的力量进行手势分类的乐趣！
+记住保持数据集的多样性和良好的标注质量，以提高未来模型的准确性。祝您模型训练顺利，享受使用 AI 的力量进行手势分类的乐趣！
 </TabItem>
 </Tabs>
 
-
 ## 训练数据集导出模型
 
+### 步骤 1. 访问 Colab Notebook
 
-### 步骤 1. 访问 Colab 笔记本
-
-您可以在 [SenseCraft Model Assistant 的 Wiki](https://wiki.seeedstudio.com/cn/ModelAssistant_Introduce_Quick_Start/#model-training) 上找到不同类型的模型 Google Colab 代码文件。如果您不知道应该选择哪个代码，可以根据您的模型类别（目标检测或图像分类）选择其中任何一个。
+您可以在 [SenseCraft Model Assistant 的 Wiki](https://wiki.seeedstudio.com/ModelAssistant_Introduce_Quick_Start/#model-training) 上找到不同类型的模型 Google Colab 代码文件。如果您不知道应该选择哪个代码，可以根据您的模型类别（目标检测或图像分类）选择其中任何一个。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/24.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -297,13 +288,13 @@ Roboflow提供三种不同的图像标记方式：自动标记、Roboflow标记�
 !unzip -q Gesture_Detection_Swift-YOLO_192/dataset.zip -d Gesture_Detection_Swift-YOLO_192/dataset
 ```
 
-这段代码用于在 Google Colab 环境中创建目录、从 Roboflow 下载数据集并将其解压到新创建的目录中。以下是每行代码的功能说明：
+这段代码用于创建目录、从 Roboflow 下载数据集，并在 Google Colab 环境中将其解压到新创建的目录中。以下是每行代码的详细说明：
 
 1. `%mkdir -p Gesture_Detection_Swift-YOLO_192/dataset`:
    - 这行代码创建一个名为 `Gesture_Detection_Swift-YOLO_192` 的新目录和一个名为 `dataset` 的子目录。`-p` 标志确保如果目录已存在，命令不会返回错误，并创建任何必要的父目录。
 
 2. `!wget -c https://universe.roboflow.com/ds/xaMM3ZTeWy?key=5bznPZyI0t -O Gesture_Detection_Swift-YOLO_192/dataset.zip`:
-   - 这行代码使用 `wget`（一个命令行实用程序）从提供的 Roboflow URL 下载数据集。`-c` 标志允许在下载中断时恢复下载。`-O` 标志指定下载文件的输出位置和文件名，在这种情况下是 `Gesture_Detection_Swift-YOLO_192/dataset.zip`。
+   - 这行代码使用 `wget`（一个命令行工具）从提供的 Roboflow URL 下载数据集。`-c` 标志允许在下载中断时恢复下载。`-O` 标志指定下载文件的输出位置和文件名，在这种情况下是 `Gesture_Detection_Swift-YOLO_192/dataset.zip`。
 
 3. `!unzip -q Gesture_Detection_Swift-YOLO_192/dataset.zip -d Gesture_Detection_Swift-YOLO_192/dataset`:
    - 这行代码使用 `unzip` 命令将 `dataset.zip` 文件的内容提取到之前创建的 `dataset` 目录中。`-q` 标志以静默模式运行 `unzip` 命令，抑制大部分输出消息。
@@ -319,12 +310,12 @@ Roboflow提供三种不同的图像标记方式：自动标记、Roboflow标记�
 4. 确保 `unzip` 命令中的输出目录与您创建的目录匹配，文件名与您在 `wget` 命令中设置的文件名匹配。
 
 :::caution
-如果您更改文件夹目录 `Gesture_Detection_Swift-YOLO_192` 的名称，请注意您需要对代码中更改前使用的其他目录名称进行更改，否则可能会出现错误！
+如果您更改文件夹目录 `Gesture_Detection_Swift-YOLO_192` 的名称，请注意您需要对更改前代码中使用的其他目录名称进行相应更改，否则可能会出现错误！
 :::
 
 ### 步骤 3. 调整模型参数
 
-下一步是调整模型的输入参数。请跳转到 Train a model with SSCMA 部分，您将看到以下代码片段。
+下一步是调整模型的输入参数。请跳转到使用 SSCMA 训练模型部分，您将看到以下代码片段。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/29.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -340,18 +331,17 @@ Roboflow提供三种不同的图像标记方式：自动标记、Roboflow标记�
     load_from=Gesture_Detection_Swift-YOLO_192/pretrain.pth
 ```
 
-
-此命令用于启动机器学习模型的训练过程，特别是使用 SSCMA（Seeed Studio SenseCraft Model Assistant）框架的 YOLO（You Only Look Once）模型。该命令包含各种选项来配置训练过程。以下是每个部分的功能：
+这个命令用于启动机器学习模型的训练过程，特别是使用 SSCMA（Seeed Studio SenseCraft Model Assistant）框架的 YOLO（You Only Look Once）模型。该命令包含各种选项来配置训练过程。以下是每个部分的作用：
 
 - `!sscma.train` 是在 SSCMA 框架内启动训练的命令。
 
-- `configs/swift_yolo/swift_yolo_tiny_1xb16_300e_coco.py` 指定训练的配置文件，包括模型架构、训练计划、数据增强策略等设置。
+- `configs/swift_yolo/swift_yolo_tiny_1xb16_300e_coco.py` 指定训练的配置文件，其中包括模型架构、训练计划、数据增强策略等设置。
 
 - `--cfg-options` 允许您使用命令行中提供的配置覆盖 `.py` 文件中指定的默认配置。
 
 - `work_dir=Gesture_Detection_Swift-YOLO_192` 设置存储训练输出（如日志和保存的模型检查点）的目录。
 
-- `num_classes=3` 指定模型应训练识别的类别数量。这取决于您拥有的标签数量，例如石头、布、剪刀应该是三个标签。
+- `num_classes=3` 指定模型应该训练识别的类别数量。这取决于您拥有的标签数量，例如石头、剪刀、布应该是三个标签。
 
 - `epochs=10` 设置要运行的训练周期（epochs）数量。推荐值在 50 到 100 之间。
 
@@ -363,7 +353,7 @@ Roboflow提供三种不同的图像标记方式：自动标记、Roboflow标记�
 
 - `data_root=Gesture_Detection_Swift-YOLO_192/dataset/` 定义训练数据所在目录的路径。
 
-- `load_from=Gesture_Detection_Swift-YOLO_192/pretrain.pth` 提供预训练模型检查点文件的路径，训练应从该文件恢复或将其用作迁移学习的起点。
+- `load_from=Gesture_Detection_Swift-YOLO_192/pretrain.pth` 提供预训练模型检查点文件的路径，训练应该从该文件恢复或将其用作迁移学习的起点。
 
 要为您自己的训练自定义此命令，您需要：
 
@@ -371,7 +361,7 @@ Roboflow提供三种不同的图像标记方式：自动标记、Roboflow标记�
 
 2. 将 `work_dir` 更改为您希望保存训练输出的目录。
 
-3. 更新 `num_classes` 以匹配您自己数据集中的类别数量。这取决于您拥有的标签数量，例如石头、布、剪刀应该是三个标签。
+3. 更新 `num_classes` 以匹配您自己数据集中的类别数量。这取决于您拥有的标签数量，例如石头、剪刀、布应该是三个标签。
 
 4. 将 `epochs` 调整为您模型所需的训练轮数。推荐值在 50 到 100 之间。
 
@@ -387,11 +377,11 @@ Roboflow提供三种不同的图像标记方式：自动标记、Roboflow标记�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/30.png" style={{width:1000, height:'auto'}}/></div>
 
-点击按钮后代码块将被执行，如果一切顺利，您将看到代码块执行完成的标志 - 块左侧出现勾号符号。如图所示是第一个代码块执行完成后的效果。
+点击按钮后代码块将被执行，如果一切顺利，您将看到代码块执行完成的标志——块左侧出现勾号符号。如图所示是第一个代码块执行完成后的效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/31.png" style={{width:1000, height:'auto'}}/></div>
 
-如果您遇到与我在上图中相同的错误消息，请检查您是否使用的是 **T4 GPU**，请**不要使用 CPU** 进行此项目。
+如果您遇到与我在上图中相同的错误消息，请检查您是否使用的是 **T4 GPU**，请**不要在此项目中使用 CPU**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/32.png" style={{width:400, height:'auto'}}/></div>
 
@@ -404,7 +394,6 @@ Roboflow提供三种不同的图像标记方式：自动标记、Roboflow标记�
 接下来，执行从 **Download the pretrain model weights file** 到 **Export the model** 的所有代码块。请确保每个代码块都没有错误。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/36.png" style={{width:400, height:'auto'}}/></div>
-
 
 :::note
 代码中出现的警告可以忽略。
@@ -446,7 +435,7 @@ FPS: 128.350449 fram/s
    - 这个分数是模型在IoU阈值从0.50到0.95范围内（以0.05递增）的平均精度。AP为0.450表明您的模型在这个范围内具有中等精度。这是COCO数据集常用的关键指标。
 
 2. **AP@[IoU=0.50 | area=all | maxDets=100] = 0.929**
-   - 在IoU阈值为0.50时，模型达到了0.929的高平均精度，表明它在更宽松的匹配标准下能够非常准确地检测目标。
+   - 在IoU阈值为0.50时，模型达到了0.929的高平均精度，表明它在较宽松的匹配标准下能够非常准确地检测目标。
 
 3. **AP@[IoU=0.75 | area=all | maxDets=100] = 0.361**
    - 在更严格的IoU阈值0.75下，模型的平均精度下降到0.361，表明在更严格的匹配标准下性能有所下降。
@@ -508,7 +497,6 @@ FPS: 128.350449 fram/s
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/42.png" style={{width:1000, height:'auto'}}/></div>
 
-
 :::tip
 您不需要在 **ID:Object** 中填写数字，只需直接填写类别名称，图像上类别前面的数字和冒号是自动添加的。
 :::
@@ -529,8 +517,7 @@ FPS: 128.350449 fram/s
 
 做到这一步，恭喜您，您已经能够成功训练和部署自己的模型了。
 
-
-## 模型的常见协议和应用
+## 模型的通用协议和应用
 
 在上传自定义模型的过程中，除了我们可以可视化上传的模型文件外，还有设备的固件需要传输到设备。在设备的固件中，有一套既定的通信协议，规定了模型结果输出的格式，以及用户可以对模型做什么。
 
@@ -555,7 +542,7 @@ FPS: 128.350449 fram/s
 
 2. **训练过程**
    - **问题**：训练时间可能不足，或者学习率设置不当，导致模型无法有效学习。
-   - **解决方案**：增加训练轮数，调整学习率和其他超参数，并实施早停机制以避免过拟合。
+   - **解决方案**：增加训练轮数，调整学习率和其他超参数，并实施早停以避免过拟合。
 
 3. **类别不平衡**
    - **问题**：某些类别的样本数量明显多于其他类别，导致模型偏向于多数类别。
@@ -563,13 +550,13 @@ FPS: 128.350449 fram/s
 
 通过全面分析和实施有针对性的改进，您可以逐步提高模型的准确率。记住在每次修改后使用验证集测试模型性能，以确保改进的有效性。
 
-### 2. 为什么我按照Wiki中的步骤操作后，在SenseCraft部署中看到**调用失败**消息？
+### 2. 为什么我按照 Wiki 中的步骤操作后，在 SenseCraft 部署中看到 **Invoke failed** 消息？
 
-如果您遇到调用失败，那么您训练的模型不符合设备使用要求。请关注以下几个方面。
+如果您遇到 Invoke failed，那么您训练的模型不符合设备使用要求。请关注以下几个方面。
 
-1. 请检查您是否修改了Colab的图像尺寸。默认压缩尺寸为**192x192**，Grove Vision AI V2要求图像尺寸压缩为正方形，请不要使用非正方形尺寸进行压缩。同时不要使用过大的尺寸*（建议不超过240x240）*。
+1. 请检查您是否修改了 Colab 的图像大小。默认压缩大小为 **192x192**，Grove Vision AI V2 要求图像大小压缩为正方形，请不要使用非正方形大小进行压缩。同时不要使用过大的尺寸 *（建议不超过 240x240）*。
 
-<!-- 2. Grove Vision AI V2的模型文件必须以**int8_vela.tflite**为后缀。请不要使用其他格式的模型文件。这包括**int8.tflite，它也不适用于**Grove Vision AI V2。 -->
+<!-- 2. The model file for Grove Vision AI V2 must be suffixed with **int8_vela.tflite**. Please do not use model files in other formats. This includes **int8.tflite, which is also not available** for Grove Vision AI V2. -->
 
 ## 技术支持与产品讨论
 

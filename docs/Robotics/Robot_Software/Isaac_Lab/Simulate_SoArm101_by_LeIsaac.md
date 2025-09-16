@@ -1,6 +1,6 @@
 ---
 description: This tutorial demonstrates how to teleoperate and train the SOArm101 robotic arm in Isaac Lab using LeIsaac, including data collection, model fine-tuning with NVIDIA Isaac GR00T, and deployment.
-title: Get started with Lightwheel LeIsaac
+title: Lightwheel LeIsaac
 keywords:
 - NVIDIA
 - Isaac Lab
@@ -11,19 +11,21 @@ last_update:
   author: Youjiang
 ---
 
-# Get started with Lightwheel LeIsaac — Open-source workflow combining Hugging Face LeRobot x GR00T N1.5 x Isaac Sim! 
+# Get started with Lightwheel LeIsaac — Open-source workflow combining Hugging Face LeRobot x GR00T N1.5 x Isaac Sim
 
 ## Interduction
 
 This wiki will follow the document of leisaac, show how to teleoperate SoArm101 robot arm in IsaacLab by leisaac.  Additionally, we will demonstrate the deployment of the fine-tuned Nvidia Isaac GR00T N1.5 model within the Isaac Lab simulation environment, using data collected from Isaac Lab. Primary projects employed in this wiki:
+
 - [LeIsaac](https://github.com/LightwheelAI/leisaac) provides teleoperation functionality in IsaacLab using the SO101Leader (LeRobot), including data collection, data conversion, and subsequent policy training.
 - [NVIDIA Isaac™ Lab](https://developer.nvidia.com/isaac/lab) is an open-source, unified framework for robot learning designed to help train robot policies.
 - [SO-ARM101](https://github.com/TheRobotStudio/SO-ARM100) is a low-cost, open-source 3D-printable robotic arm kit. Designed to work seamlessly with the open‑source LeRobot library.
-- [NVIDIA Isaac GR00T N1.5](https://github.com/NVIDIA/Isaac-GR00T) is an open foundation model for generalized humanoid robot reasoning and skills. 
+- [NVIDIA Isaac GR00T N1.5](https://github.com/NVIDIA/Isaac-GR00T) is an open foundation model for generalized humanoid robot reasoning and skills.
 
 ## Requierment
-- Ubuntu PC 
-- SoArm101 Leader Arm 
+
+- Ubuntu PC
+- SoArm101 Leader Arm
 
 :::info
 The computer used in this wiki has an NVIDIA RTX 3080 GPU and operates on Ubuntu 22.04 LTS.
@@ -67,6 +69,7 @@ If you are using 50 series GPU, we recommend to use isaacsim5.0 and isaaclab wit
 :::
 
 ## Install LeIsaac
+
 Clone LeIsaac repository and install it as dependency.
 
 ```bash
@@ -112,7 +115,7 @@ sudo chmod 666 /dev/ttyACM0
 If everything works properly, you should see similar log output.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/leisaac/connect_arm.png" />
 </div>
 
@@ -160,7 +163,7 @@ python scripts/environments/teleoperation/replay.py \
 
 ## Data Conversion
 
-Collected teleoperation data is stored in HDF5 format in the specified directory. If using this data to train a proxy model, the dataset must be converted to LeRobot-compatible format using LeIsaac's conversion scripts. 
+Collected teleoperation data is stored in HDF5 format in the specified directory. If using this data to train a proxy model, the dataset must be converted to LeRobot-compatible format using LeIsaac's conversion scripts.
 
 This script must be executed within the LeRobot virtual environment. Please create a new LeRobot environment by following the steps in this [wiki](https://wiki.seeedstudio.com/lerobot_so100m_new/#install-lerobot).
 
@@ -181,7 +184,7 @@ python scripts/convert/isaaclab2lerobot.py
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/leisaac/data_conversion.png" />
 </div>
 
@@ -189,7 +192,7 @@ python scripts/convert/isaaclab2lerobot.py
 If you modified the dataset storage path during data collection, you must update the corresponding path in the conversion script prior to execution.
 :::
 
-After the program completes execution, the converted dataset can be found at: `~/.cache/huggingface/lerobot/`. 
+After the program completes execution, the converted dataset can be found at: `~/.cache/huggingface/lerobot/`.
 
 We can also inspect the converted data using LeRobot's built-in dataset visualization toolkit.
 
@@ -202,8 +205,8 @@ python -m lerobot.scripts.visualize_dataset --repo-id EverNorif/so101_test_orang
 <iframe width="900" height="450" src="https://www.youtube.com/embed/LPSxPMoP-pk" title="Simulate SoArm101 by LeIsaac (2)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
 ## Policy Training
+
 In this wiki, we'll fine-tune NVIDIA Isaac GR00T N1.5. Let's begin by setting up the Isaac-GR00T virtual environment:
 
 ```bash
@@ -237,7 +240,7 @@ python scripts/gr00t_finetune.py \
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/leisaac/train.png" />
 </div>
 
@@ -245,6 +248,7 @@ python scripts/gr00t_finetune.py \
 
 At this stage, we can deploy our fine-tuned NVIDIA Isaac GR00T N1.5 model to control the SO-ARM101 robotic arm in Isaac Lab.
 The deployment architecture of Isaac-GR00T adopts a decoupled design between the inference endpoint and control endpoint:
+
 - Inference Endpoint (Server): Dedicated solely to executing model inference tasks.
 - Control Endpoint (Client): Responsible for acquiring robotic arm states and orchestrating motion control.
 
@@ -256,8 +260,9 @@ conda activate gr00t
 cd <path-to-Isaac-GR00T>
 python scripts/inference_service.py --server --model_path  ./so101-orange-checkpoints/checkpoint-10000 --embodiment_tag new_embodiment --data_config so100_dualcam --port 5555
 ```
+
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/leisaac/server.png" />
 </div>
 
@@ -278,6 +283,7 @@ python scripts/evaluation/policy_inference.py \
     --device=cuda \
     --enable_cameras
 ```
+
 :::note
 If you encounter ZMQ-related errors, run `pip install pyzmq` to resolve them.
 :::
@@ -293,11 +299,11 @@ The final trained model failed to control the SOArm101 robotic arm to pick the o
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

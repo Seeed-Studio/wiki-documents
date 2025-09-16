@@ -22,9 +22,9 @@ last_update:
 :::note
   由于"Adafruit TinyUSB Library for Arduino"库的重大更新，V1.0.0 及以上版本无法与 Seeed Studio XIAO SAMD21 一起使用，如果您需要使用此库，请使用 V0.10.5 版本的库。
 :::
-1. 访问 [Adafruit TinyUSB Library for Arduino](https://github.com/adafruit/Adafruit_TinyUSB_Arduino) 仓库并将整个仓库下载到您的本地驱动器。
+1. 访问 [Adafruit TinyUSB Library for Arduino](https://github.com/adafruit/Adafruit_TinyUSB_Arduino) 仓库，将整个仓库下载到您的本地驱动器。
 
-2. 现在，可以将库安装到 Arduino IDE 中。打开 Arduino IDE，点击 `sketch` -> `Include Library` -> `Add .ZIP Library`，然后选择您刚刚下载的 `Adafruit_TinyUSB_Arduino` 文件。
+2. 现在，可以将库安装到 Arduino IDE 中。打开 Arduino IDE，点击 `sketch` -> `Include Library` -> `Add .ZIP Library`，选择您刚刚下载的 `Adafruit_TinyUSB_Arduino` 文件。
 
 <!-- ![InstallLibrary](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2019-11-21_15-50-13.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2019-11-21_15-50-13.jpg" alt="pir" width={600} height="auto" /></p>

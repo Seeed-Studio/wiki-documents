@@ -1,10 +1,10 @@
 ---
-description: 部署 Riva 和 Llama2 于 reComputer
+description: 在 reComputer 上部署 Riva 和 Llama2
 title: 本地语音聊天机器人
 keywords:
 - reComputer
 - LLM
-- 聊天机器人
+- Chatbot
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Local_Voice_Chatbot
 last_update:
@@ -12,29 +12,30 @@ last_update:
   author: Youjiang
 ---
 
-# 本地语音聊天机器人：部署 Riva 和 Llama2 于 reComputer
 
-## 简介
+# 本地语音聊天机器人：在 reComputer 上部署 Riva 和 Llama2
 
-随着人工智能技术的快速发展，语音交互已成为人机交互的重要模式之一。尤其是在智能家居、个人助理和客户服务支持等领域，对语音聊天机器人的需求显著增长。然而，大多数现有的语音聊天机器人依赖于云计算服务，这在一定程度上引发了数据隐私和网络延迟的担忧。
+## 介绍
+
+随着人工智能技术的快速发展，语音交互已成为人机交互中越来越重要的模式。特别是在智能家居、个人助手和客户服务支持等领域，对语音聊天机器人的需求正在显著增长。然而，大多数现有的语音聊天机器人依赖于云计算服务，这在一定程度上引发了对数据隐私和网络延迟的担忧。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/workflow.png" />
 </div>
 
-本项目旨在通过构建一个本地运行的语音聊天机器人来解决这些问题。利用 [Nvidia Riva](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/quick-start-guide.html) 和 [Meta Llama2](https://huggingface.co/meta-llama)，我们开发了一个安全、私密且响应快速的语音交互系统。
+本项目旨在通过构建本地运行的语音聊天机器人来解决这些问题。利用 [Nvidia Riva](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/quick-start-guide.html) 和 [Meta Llama2](https://huggingface.co/meta-llama)，我们开发了一个安全、私密且响应快速的语音交互系统。
 
-## 前置条件
+## 先决条件
 
-- 内存超过 16GB 的 Jetson 设备。
-- 硬件设备需预装 Jetpack [5.1.1](https://wiki.seeedstudio.com/cn/reComputer_Intro/) 操作系统。
+- 具有超过 16GB 内存的 Jetson 设备。
+- 硬件设备需要预先刷入 jetpack [5.1.1](https://wiki.seeedstudio.com/reComputer_Intro/) 操作系统。
 - [扬声器和麦克风](https://www.seeedstudio.com/ReSpeaker-USB-Mic-Array-p-4247.html?queryID=dd9c8d91c63781d66776771a7ee5ec01&objectID=4247&indexName=bazaar_retailer_products)。
 
-**注意：** 我使用 [Jetson AGX Orin 32GB H01 Kit](https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html?queryID=012e528073e90bf80afd3880f3fc2b13&objectID=5569&indexName=bazaar_retailer_products) 完成了所有实验，但您可以尝试在内存较小的设备上加载较小的模型。
+**注意：** 我使用 [Jetson AGX Orin 32GB H01 Kit](https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html?queryID=012e528073e90bf80afd3880f3fc2b13&objectID=5569&indexName=bazaar_retailer_products) 完成了所有实验，但您可以尝试在内存较少的设备上加载较小的模型。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/jetson_agx_orin.jpg" />
 </div>
 
@@ -44,28 +45,30 @@ last_update:
     </a>
 </div>
 
-## 入门指南
+## 开始使用
 
 ### 硬件连接
+
 - 将音频输入/输出设备连接到 reComputer。
-- 启动 reComputer，并确保其正常联网。
+- 启动 reComputer 并确保其具有正常的网络访问。
 
 ### 安装 Riva 服务器
-请参考 [此处](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/quick-start-guide.html#embedded) 获取更详细的信息。
+
+请参考[这里](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/quick-start-guide.html#embedded)获取更详细的信息。
 
 **步骤1.** 访问并登录 [NVIDIA NGC](https://catalog.ngc.nvidia.com/?filters=&orderBy=weightPopularDESC&query=)。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/setup_riva_1.png" />
 </div>
 
 **步骤2.** 获取 NGC API 密钥。
 
-`账户（右上角）` --> `设置` --> `获取 API 密钥` --> `生成 API 密钥` --> `确认`
+`Account(右上角)` --> `Setup` --> `Get API Key` --> `Generate API Key` --> `Confirm`
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/setup_riva_2.png" />
 </div>
 
@@ -75,7 +78,7 @@ last_update:
 
 **步骤3.** 在 reComputer 上配置 NGC
 
-打开 reComputer 的终端（您可以通过快捷键 `Ctrl+Alt+T` 快速打开桌面终端，也可以通过另一台电脑远程访问 reComputer 的终端），并依次输入以下命令。
+打开 reComputer 终端（您可以使用快捷键 `Ctrl+Alt+T` 在 reComputer 桌面上快速打开终端，或者您可以使用另一台计算机远程访问 reComputer 的终端。）并逐一输入以下命令。
 
 ```sh
 cd ~ && mkdir ngc_setup && cd ngc_setup
@@ -88,13 +91,13 @@ ngc config set
 在终端交互界面中输入相关信息。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/setup_riva_3.png" />
 </div>
 
-**步骤4.** 在 reComputer 上安装并运行 Riva 服务器。
+**步骤4.** 在reComputer上安装并运行Riva服务器。
 
-在 reComputer 的终端中输入以下命令。
+在reComputer的终端中，输入以下命令。
 
 ```sh
 cd ~ && mkdir riva_setup && cd riva_setup
@@ -102,21 +105,21 @@ ngc registry resource download-version nvidia/riva/riva_quickstart_arm64:2.13.1
 cd riva_quickstart_v2.13.1
 ```
 
-使用 `Vim` 修改配置文件。
+Use `Vim` to modify the configuration file.
 
 ```sh
 vim config.sh
 
-# 按键盘上的 `A` 键进入编辑模式。
-# 按以下说明编辑第 18 和 20 行。
+# Press the `A` key on the keyboard to enter edit mode.
+# Edit lines 18 and 20 following the instructions below.
 
 # service_enabled_nlp=true --> service_enabled_nlp=false
 # service_enabled_nmt=true --> service_enabled_nmt=false
 
-# 按键盘上的 `ESC` 键退出编辑模式，然后使用快捷键 `Shift+Z Z` 保存编辑内容并关闭编辑器。
+# Press the `ESC` on the keyboard to exit edit mode, then use the shortcut `Shift+Z Z` to save the edited content and close the editor.
 ```
 
-编辑后的配置文件如下：
+The configuration file after editing：
 
 <details>
 
@@ -519,18 +522,18 @@ fi
 
 </details>
 
-使用类似的方法修改 `/etc/docker/daemon.json`。
+Use a similar method to modify `/etc/docker/daemon.json`.
 
 ```sh
 sudo vim /etc/docker/daemon.json
-# 添加以下行 >> "default-runtime": "nvidia"
+# Add this line >> "default-runtime": "nvidia"
 
-# 按下键盘上的 `ESC` 键退出编辑模式，然后使用快捷键 `Shift+Z Z` 保存编辑内容并关闭编辑器。
+# Press the `ESC` on the keyboard to exit edit mode, then use the shortcut `Shift+Z Z` to save the edited content and close the editor.
 
 sudo systemctl restart docker
 ```
 
-编辑后的配置文件如下所示：
+The configuration file after editing like this:
 
 <details>
 
@@ -550,7 +553,7 @@ sudo systemctl restart docker
 
 </details>
 
-使用以下命令初始化并启动 Riva：
+Use the following command to initialize and start Riva:
 
 ```sh
 sudo bash riva_init.sh
@@ -558,7 +561,7 @@ sudo bash riva_start.sh
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/setup_riva_4.png" />
 </div>
 
@@ -568,7 +571,7 @@ sudo bash riva_start.sh
 
 ### 安装并运行 LLM
 
-为了简化安装过程，我们可以参考 Dusty 的 [jetson-containers](https://github.com/dusty-nv/jetson-containers/tree/master/packages/llm/text-generation-inference) 项目来安装 [text generation inference](https://github.com/huggingface/text-generation-inference)，并使用 text generation inference 加载 [Llama2 7B](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf) 大语言模型。打开一个新终端并运行以下命令。
+为了简化安装过程，我们可以参考 Dusty 的 [jetson-containers](https://github.com/dusty-nv/jetson-containers/tree/master/packages/llm/text-generation-inference) 项目来安装 [text generation inference](https://github.com/huggingface/text-generation-inference)，并使用 text generation inference 来加载 [Llama2 7B](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf) 大语言模型。打开一个新的终端并运行以下命令。
 
 ```sh
 cd ~
@@ -581,11 +584,11 @@ text-generation-launcher --model-id meta-llama/Llama-2-7b-chat-hf --port 8899
 ```
 
 :::info
-您可以在 [这里](https://huggingface.co/docs/hub/security-tokens) 获取 hugging face token。
+您可以在[这里](https://huggingface.co/docs/hub/security-tokens)获取 hugging face token。
 :::
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/install_run_llm.png" />
 </div>
 
@@ -593,21 +596,21 @@ text-generation-launcher --model-id meta-llama/Llama-2-7b-chat-hf --port 8899
 请注意，您需要保持此终端处于活动状态。
 :::
 
-### 克隆本地聊天机器人示例并尝试运行
+### 克隆本地聊天机器人演示并尝试运行
 
-现在，您应该至少打开了两个终端，一个运行 Riva 服务器，另一个运行 text generation inference 服务器。接下来，我们需要打开一个新终端来运行我们的示例。
+现在，您应该至少打开了两个终端，一个运行 Riva 服务器，另一个运行文本生成推理服务器。接下来，我们需要打开一个新终端来运行我们的演示。
 
 ```sh
 cd ~
 git clone https://github.com/yuyoujiang/Deploy-Riva-LLama-on-Jetson.git
 cd Deploy-Riva-LLama-on-Jetson
 
-# 查询音频输入/输出设备。
+# Query audio input/output devices.
 python3 local_chatbot.py --list-input-devices
 python3 local_chatbot.py --list-output-devices
 
 python3 local_chatbot.py --input-device <your device id> --output-device <your device id>
-# 例如: python3 local_chatbot.py --input-device 25 --output-device 30
+# For example: python3 local_chatbot.py --input-device 25 --output-device 30
 ```
 
 ## 效果演示
@@ -617,22 +620,23 @@ python3 local_chatbot.py --input-device <your device id> --output-device <your d
 </div>
 
 ## 参考资料
-- [构建一个使用 Riva 和 OpenAI 的 AI 聊天机器人](https://www.hackster.io/wxxniubi8/build-an-ai-chatbot-using-riva-and-openai-13dc41)
-- [https://github.com/dusty-nv/jetson-containers](https://github.com/dusty-nv/jetson-containers/tree/cb6c847f88df221e705397a1ee98424c2e893243/packages/llm/text-generation-inference)
+
+- [build-an-ai-chatbot-using-riva-and-openai](https://www.hackster.io/wxxniubi8/build-an-ai-chatbot-using-riva-and-openai-13dc41)
+- [https://github.com/dusty-nv/jetson-containers](
+https://github.com/dusty-nv/jetson-containers/tree/cb6c847f88df221e705397a1ee98424c2e893243/packages/llm/text-generation-inference)
 - https://github.com/huggingface/text-generation-inference
 - https://huggingface.co/meta-llama
 
-
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们致力于为您提供多种支持，确保您在使用我们的产品时获得尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

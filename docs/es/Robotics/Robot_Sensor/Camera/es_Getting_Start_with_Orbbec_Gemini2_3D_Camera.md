@@ -1,6 +1,6 @@
 ---
-description: Muestra a las personas cómo usar Orbbec Gemini 335Lg en la plataforma reComputer Jetson.
-title: Comenzando con la Cámara 3D Orbbec Gemini2
+description: Mostrar a las personas cómo usar Orbbec Gemini 335Lg en la plataforma reComputer Jetson.
+title: Cámara 3D Orbbec Gemini2
 keywords:
 - Jetson
 - reComputer Robotics
@@ -25,7 +25,7 @@ last_update:
 </div>
 
 <div style={{ textAlign: "justify" }}>
-La cámara 3D compacta Gemini 2 está basada en tecnología IR Estéreo Activa y está equipada con el último ASIC personalizado de Orbbec para procesamiento de profundidad de alta calidad, IMU, y conectividad + alimentación USB 3.0 de un solo cable. El amplio FOV y el amplio rango de detección de profundidad hace que Gemini 2 sea adaptable para muchas aplicaciones, especialmente para robótica. Es fácil de configurar y operar con el SDK de Orbbec y entrega datos extremadamente precisos y confiables en varias condiciones de iluminación desde oscuridad total hasta semi-exterior.
+La cámara 3D compacta Gemini 2 está basada en tecnología Active Stereo IR y está equipada con el último ASIC personalizado de Orbbec para procesamiento de profundidad de alta calidad, IMU y conectividad + alimentación USB 3.0 de un solo cable. El amplio FOV y el amplio rango de detección de profundidad hace que Gemini 2 sea adaptable para muchas aplicaciones, especialmente para robótica. Es fácil de configurar y operar con el SDK de Orbbec y entrega datos extremadamente precisos y confiables en varias condiciones de iluminación desde oscuridad total hasta semi-exterior.
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -35,11 +35,11 @@ La cámara 3D compacta Gemini 2 está basada en tecnología IR Estéreo Activa y
 
 ## Características
 
-- **IR Estéreo Activa** Emplea tecnología IR estéreo activa para salida de profundidad, permitiendo salida de datos precisa y confiable en varias condiciones de iluminación
+- **Active Stereo IR** Emplea tecnología active stereo IR para salida de profundidad, permitiendo salida de datos precisa y confiable en varias condiciones de iluminación
 - **Amplio Rango de Detección** Proporciona salida de datos de profundidad de calidad desde 0.15m hasta 10m
-- **FOV Amplio** Proporciona datos de campo de visión amplio a 91 grados horizontal y 66 grados vertical
+- **Amplio FOV** Proporciona datos de campo de visión amplio a 91 grados horizontal y 66 grados vertical
 - **Sincronización multi-cámara** Soporta sincronización multi-cámara tanto para imagen de profundidad como imagen RGB
-- **Conexión USB** Usa un solo cable USB 3.0 Tipo-C para alimentación y conectividad
+- **Conexión USB** Usa un solo cable USB 3.0 Type-C para alimentación y conectividad
 
 ## Especificaciones
 
@@ -57,12 +57,12 @@ La cámara 3D compacta Gemini 2 está basada en tecnología IR Estéreo Activa y
 
       <tr style={{ height: "46px" }}>
         <td style={{ height: "46px", width: "132px" }}>Voltaje</td>
-        <td style={{ height: "46px", width: "491px" }}>5V (USB Tipo-C)</td>
+        <td style={{ height: "46px", width: "491px" }}>5V (USB Type-C)</td>
       </tr>
 
       <tr style={{ height: "46px" }}>
         <td style={{ height: "46px", width: "132px" }}>Tecnología de Profundidad</td>
-        <td style={{ height: "46px", width: "491px" }}>IR Estéreo Activa</td>
+        <td style={{ height: "46px", width: "491px" }}>Active Stereo IR</td>
       </tr>
 
       <tr style={{ height: "46px" }}>
@@ -77,7 +77,7 @@ La cámara 3D compacta Gemini 2 está basada en tecnología IR Estéreo Activa y
 
       <tr style={{ height: "46px" }}>
         <td style={{ height: "46px", width: "132px" }}>Interfaz de Comunicación</td>
-        <td style={{ height: "46px", width: "491px" }}>USB 3.0 Tipo-C</td>
+        <td style={{ height: "46px", width: "491px" }}>USB 3.0 Type-C</td>
       </tr>
 
       <tr style={{ height: "46px" }}>
@@ -118,7 +118,7 @@ La cámara 3D compacta Gemini 2 está basada en tecnología IR Estéreo Activa y
   </table>
 </div>
 
-## Descripción General del Hardware
+## Descripción del Hardware
 
 <div align="center">
     <img width={700}
@@ -135,9 +135,9 @@ La cámara 3D compacta Gemini 2 está basada en tecnología IR Estéreo Activa y
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-3.png" />
 </div>
 
-## Primeros Pasos en reComputer
+## Comenzando en reComputer
 
-**Paso 1.** Descarga e instala el SDK de Orbbec para arquitectura ARM64:
+**Paso 1.** Descargar e instalar el SDK de Orbbec para arquitectura ARM64:
 
 ```bash
 # Download Orbbec SDK
@@ -147,7 +147,7 @@ wget https://github.com/orbbec/OrbbecSDK_v2/releases/download/v2.4.11/OrbbecSDK_
 unzip OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64.zip
 ```
 
-**Step 2.** Build examples and test:
+**Paso 2.** Construir ejemplos y probar:
 
 ```bash
 # Install udev rules
@@ -169,8 +169,8 @@ cd ..
 ## Ejemplo de aplicaciones
 
 <div style={{ textAlign: "justify" }}>
-La Orbbec Gemini2 es una cámara de profundidad compacta y de alto rendimiento ideal para robótica, visión 3D, seguimiento de objetos y automatización industrial.
-Se adapta perfectamente a aplicaciones de IA embebida y computación en el borde como las de las plataformas NVIDIA Jetson.
+El Orbbec Gemini2 es una cámara de profundidad compacta y de alto rendimiento ideal para robótica, visión 3D, seguimiento de objetos y automatización industrial.
+se adapta perfectamente a aplicaciones de IA embebida y computación en el borde como las de las plataformas NVIDIA Jetson.
 </div>
 
 :::info
@@ -194,11 +194,11 @@ Hay algunos tutoriales de casos desarrollados por nosotros usando Gemini2:
 
 ## Recursos
 
-- [Guía de API de Orbbec SDK v2](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/source/3_Application_Guide/Application_Guide.html)
-- [Hoja de datos](https://files.seeedstudio.com/products/Orbbec/Orbbec_Gemini_2_Series_Datasheet_V1.7_20240316.pdf)
+- [Guía de API del SDK v2 de Orbbec](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/source/3_Application_Guide/Application_Guide.html)
+- [Hoja de Datos](https://files.seeedstudio.com/products/Orbbec/Orbbec_Gemini_2_Series_Datasheet_V1.7_20240316.pdf)
 - [OrbbecViewer](https://github.com/orbbec/OrbbecSDK/blob/main/doc/OrbbecViewer/English/OrbbecViewer.md)
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 

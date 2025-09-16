@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
 slug: /recomputer_r
 last_update:
-  date: 07/17/2025
-  author: Jiahao
+  date: 09/15/2025
+  author: Kasun Thushara
 ---
 
 <!-- ---
@@ -38,7 +38,8 @@ With robust IoT network communication capabilities, the R1000 series supports mu
 
 ### Designed for Building Automation System
 
-* Multiple isolated RS485 channels supports high and low speeds communication.
+- Multiple isolated RS485 channels supports high and low speeds communication.
+
 - Supports BACnet, Modbus RTU, and Modbus TCP/IP protocol
 - Up to 8GB RAM supports the processing of thousands of data points, ensuring efficient performance
 - Clear dual-sided LED indicators help check operational status quickly
@@ -47,20 +48,23 @@ With robust IoT network communication capabilities, the R1000 series supports mu
 
 ### Powerful Performance
 
-* Powered by Raspberry Pi CM4
+- Powered by Raspberry Pi CM4
+
 - Broadcom BCM2711 quad-core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz
 - Up to 8GB RAM and 32GB eMMC
 
 ### Rich Wireless Capabilities
 
-* On-chip Wi-Fi
+- On-chip Wi-Fi
+
 - On-chip BLE
 - Mini-PCIe1: LTE, USB LoRa®, USB Zigbee
 - Mini-PCIe2: SPI LoRa®, USB LoRa®, USB Zigbee
 
 ### Rich Interfaces
 
-* 3x RS485 (isolated)
+- 3x RS485 (isolated)
+
 - 1x 10M/100M/1000M Ethernet (Support PoE)
 - 1x 10M/100M Ethernet
 - 1x HDMI 2.0
@@ -70,7 +74,8 @@ With robust IoT network communication capabilities, the R1000 series supports mu
 
 ### Safety and Reliability
 
-* Hardware Watchdog
+- Hardware Watchdog
+
 - UPS Supercapacitor(optional)
 - Metal casing with PC side panels
 - ESD: EN61000-4-2,level 3
@@ -87,7 +92,6 @@ With robust IoT network communication capabilities, the R1000 series supports mu
 ## Specifications
 
 <div class="table-center">
-
 <table >
   <tbody>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -418,7 +422,6 @@ Please note that after shutting down, please wait for at least 10 seconds before
 ## Interface
 
 <div class="table-center">
-
 <table >
   <tbody>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -858,7 +861,6 @@ The reComputer R1000 supports a rich selection of expansion modules and accessor
 Here is the accessories and optional modules list:
 
 <div class="table-center">
-
 <table >
   <tbody>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -980,7 +982,6 @@ Here is the accessories and optional modules list:
       <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>SuperCAP UPS LTC3350 Module</td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110992004</td>
     </tr>
-
   </tbody>
 </table>
 </div>
@@ -1202,6 +1203,10 @@ sudo vim ./libloragw/inc/loragw_i2c.h
 
 Change `#define I2C_DEVICE "/dev/i2c-1"` to `#define I2C_DEVICE "/dev/i2c-3"`.
 
+:::important
+If you are using version 1.1 reComputer R1000 please change to `#define I2C_DEVICE "/dev/i2c-6"`
+:::
+
 ```bash
 sudo make
 ```
@@ -1233,6 +1238,10 @@ vim global_conf.json.sx1250.EU868
 ```
 
 Change `"com_path": "/dev/spidev0.0"` to `"com_path": "/dev/spidev0.1"`
+
+:::important
+If you are using version 1.1 reComputer R1000 please change to `"com_path": "/dev/spidev1.1"`
+:::
 
 **Step 6.** Start LoraWAN® Module
 
@@ -1376,6 +1385,7 @@ sudo apt-get install cutecom
 ```
 
 **Step 3.** Configure the setting and Open communication:
+
 - Configure the baudrate as 115200
 - Tick 'Hex output' at the bottom
 - Select correct Device port, for example: /dev/ttyACM0

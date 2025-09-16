@@ -57,6 +57,7 @@ export const steps = [
 <ProductBanner 
   imageUrl="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-101090101-3mp-gmsl2-camera-module-190-degree.jpg" 
   linkUrl="https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html" 
+  lang="zh"
 />
 
 我们提供不同的 GMSL2 相机，涵盖各种分辨率、传输速度等。这些相机可用于许多领域的应用。例如：
@@ -72,7 +73,7 @@ export const steps = [
 ## 规格参数
 
 
-<SensingGMSLCamTable />
+<SensingGMSLCamTable lang="zh" />
 
 
 ## 入门指南
@@ -128,7 +129,7 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 
 按照以下步骤逐步进行配置
 
-<JetsonIOStepper steps={steps}/>
+<JetsonIOStepper steps={steps} lang="zh" />
 
 :::note
 在上述步骤中，如果您使用的是 6Gbps 相机，请在步骤 3 中选择 **'Seeed GMSL 1X4 6G'** 覆盖层。6Gbps 相机包括：
@@ -176,7 +177,6 @@ v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0  -d /dev/vid
 |2|YUYV8_1X16/3840x2160|
 
 
-
 :::
 
 <Flex justify="center" style={{ 
@@ -220,4 +220,4 @@ gst-launch-1.0 v4l2src device=/dev/video0 ! \
 
 感谢您选择我们的产品！请确保在以下平台关注我们，以获取最新消息和支持。
 
-<RoboticsFooter />
+<RoboticsFooter lang="zh" />

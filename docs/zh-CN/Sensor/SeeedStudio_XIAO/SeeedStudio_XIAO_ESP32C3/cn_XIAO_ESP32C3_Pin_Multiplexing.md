@@ -12,66 +12,66 @@ last_update:
 
 # 引脚复用
 
-Seeed Studio XIAO ESP32C3 具有丰富的接口。它有 **11 个数字 I/O** 引脚可用作 **PWM 引脚**，以及 **4 个模拟输入**引脚可用作 **ADC 引脚**。它支持四种串行通信接口，如 **UART、I2C、SPI 和 I2S**。本 wiki 将帮助您了解这些接口并在您的下一个项目中实现它们！
+Seeed Studio XIAO ESP32C3 具有丰富的接口。它有 **11 个数字 I/O** 引脚可用作 **PWM 引脚**，以及 **4 个模拟输入**引脚可用作 **ADC 引脚**。它支持四种串行通信接口，如 **UART、I2C、SPI 和 I2S**。本教程将帮助您了解这些接口并在您的下一个项目中实现它们！
 
 ## 数字
 
 将一个按钮连接到引脚 D6，将一个 LED 连接到引脚 D10。然后上传以下代码，使用按钮控制 LED 的开/关。
 
 ```c
-const int buttonPin = D6;     // 按钮连接到数字引脚 6
-const int ledPin =  D10;      // LED 连接到数字引脚 10
+const int buttonPin = D6;     // pushbutton connected to digital pin 6
+const int ledPin =  D10;      // LED connected to digital pin 10
  
-int buttonState = 0;         // 用于读取按钮状态的变量
+int buttonState = 0;         // variable for reading the pushbutton status
  
 void setup() {
-  // 将 LED 引脚初始化为输出：
+  // initialize the LED pin as an output:
   pinMode(ledPin, OUTPUT);
-  // 将按钮引脚初始化为输入：
+  // initialize the pushbutton pin as an input:
   pinMode(buttonPin, INPUT);
 }
  
 void loop() {
-  // 读取按钮的状态值：
+  // read the state of the pushbutton value:
   buttonState = digitalRead(buttonPin);
  
-  // 检查按钮是否被按下。如果是，buttonState 为 HIGH：
+  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
   if (buttonState == HIGH) {
-    // 打开 LED：
+    // turn LED on:
     digitalWrite(ledPin, HIGH);
   } else {
-    // 关闭 LED：
+    // turn LED off:
     digitalWrite(ledPin, LOW);
   }
 }
 ```
 
-## 数字引脚作为PWM
+## Digital as PWM
 
-将LED连接到引脚D10。然后上传以下代码，观察LED逐渐淡化的效果。
+Connect an LED to Pin D10. Then upload the following code to see the LED gradually fading.
 
 ```cpp
-int ledPin = D10;    // LED连接到数字引脚10
+int ledPin = D10;    // LED connected to digital pin 10
 
 void setup() {
-  // 声明LED引脚为输出
+  // declaring LED pin as output
   pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
-  // 从最小值到最大值以5为增量淡入：
+  // fade in from min to max in increments of 5 points:
   for (int fadeValue = 0 ; fadeValue <= 255; fadeValue += 5) {
-    // 设置值（范围从0到255）：
+    // sets the value (range from 0 to 255):
     analogWrite(ledPin, fadeValue);
-    // 等待30毫秒以观察调光效果
+    // wait for 30 milliseconds to see the dimming effect
     delay(30);
   }
 
-  // 从最大值到最小值以5为增量淡出：
+  // fade out from max to min in increments of 5 points:
   for (int fadeValue = 255 ; fadeValue >= 0; fadeValue -= 5) {
-    // 设置值（范围从0到255）：
+    // sets the value (range from 0 to 255):
     analogWrite(ledPin, fadeValue);
-    // 等待30毫秒以观察调光效果
+    // wait for 30 milliseconds to see the dimming effect
     delay(30);
   }
 }
@@ -82,7 +82,7 @@ void loop() {
 将电位器连接到引脚 A0，将 LED 连接到引脚 D10。然后上传以下代码，通过旋转电位器旋钮来控制 LED 的闪烁间隔。
 
 :::tip
-ADC 映射范围为 0-2500mV。
+ADC 映射范围是 0-2500mV。
 :::
 
 ```c
@@ -90,20 +90,20 @@ const int sensorPin = A0;
 const int ledPin =  D10; 
 
 void setup() {
-  pinMode(sensorPin, INPUT);  // 将 sensorPin 声明为输入
-  pinMode(ledPin, OUTPUT);   // 将 ledPin 声明为输出
+  pinMode(sensorPin, INPUT);  // declare the sensorPin as an INPUT
+  pinMode(ledPin, OUTPUT);   // declare the ledPin as an OUTPUT
 }
 
 void loop() {
-  // 从传感器读取值：
+  // read the value from the sensor:
   int sensorValue = analogRead(sensorPin);
-  // 打开 ledPin
+  // turn the ledPin on
   digitalWrite(ledPin, HIGH);
-  // 程序停止 <sensorValue> 毫秒：
+  // stop the program for <sensorValue> milliseconds:
   delay(sensorValue);
-  // 关闭 ledPin：
+  // turn the ledPin off:
   digitalWrite(ledPin, LOW);
-  // 程序停止 <sensorValue> 毫秒：
+  // stop the program for for <sensorValue> milliseconds:
   delay(sensorValue);
 }
 ```
@@ -125,9 +125,11 @@ XIAO ESP32 C3 没有 `Serial2`。
 Serial1.begin(115200, SERIAL_8N1, D7, D6); // RX, TX
 ```
 
+:::
+
 默认情况下，USB串口是启用的，这意味着您可以通过USB Type-C将开发板连接到PC，并在Arduino IDE上打开串口监视器来查看通过串口发送的数据。
 
-但是，如果您想使用UART0作为串口，您需要将引脚D6作为TX引脚，引脚D7作为RX引脚，并连接到USB-串口适配器。
+但是，如果您想使用UART0作为串口，您需要将引脚D6作为TX引脚，引脚D7作为RX引脚，并连接USB-串口适配器。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-3.png" alt="pir" width={1000} height="auto" /></div>
 
@@ -151,7 +153,7 @@ void loop() {
 }
 ```
 
-在 Arduino 串口监视器上的输出如下所示
+输出将在 Arduino 串口监视器中显示如下
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-2.jpg" alt="pir" width={450} height="auto" /></div>
 
@@ -191,7 +193,7 @@ void loop()
 
 如您所见，XIAO ESP32C3 实际上有三个可用的 UART。
 
-在下面的内容中，我们将以可供销售的 [60GHz 毫米波传感器 - 人体静息呼吸和心跳模块](https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html) 为例，解释如何使用 D6 和 D7 硬件串口以及 USB 串口。
+在下面的内容中，我们将以正在销售的 [60GHz 毫米波传感器 - 人体静息呼吸和心跳模块](https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html) 为例，解释如何使用 D6 和 D7 硬件串口以及 USB 串口。
 
 请准备以下物品。
 
@@ -221,85 +223,85 @@ void loop()
 #include <60ghzbreathheart.h>
 #include <HardwareSerial.h>
 
-HardwareSerial MySerial(0);   //创建一个新的HardwareSerial类 -- D6/D7
+HardwareSerial MySerial(0);   //Create a new HardwareSerial class -- D6/D7
 
-// 也可以尝试使用硬件串口
+// can also try hardware serial with
 BreathHeart_60GHz radar = BreathHeart_60GHz(&MySerial);
 
 void setup() {
-  // 将你的设置代码放在这里，只运行一次：
+  // put your setup code here, to run once:
   Serial.begin(115200);
-  MySerial.begin(115200, SERIAL_8N1, -1, -1); // 当CPU频率为40MHz时，工作在定义速度的一半。
+  MySerial.begin(115200, SERIAL_8N1, -1, -1); // at CPU Freq is 40MHz, work half speed of defined.
 
-  while(!Serial);   //当串口打开时，程序开始执行。
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
 
-  Serial.println("准备就绪");
+  Serial.println("Readly");
 
-  // radar.ModeSelect_fuc(1);  //1: 表示实时传输模式，2: 表示睡眠状态模式。
-  //设置模式后，如果你没有看到返回的数据，可能需要重新给传感器上电。
+  // radar.ModeSelect_fuc(1);  //1: indicates real-time transmission mode, 2: indicates sleep state mode.
+  //After setting the mode, if you do not see data returned, you may need to re-power the sensor.
 }
 
 void loop()
 {
-  // 将你的主要代码放在这里，重复运行：
-  radar.Breath_Heart();           //呼吸和心跳信息输出
+  // put your main code here, to run repeatedly:
+  radar.Breath_Heart();           //Breath and heartbeat information output
   if(radar.sensor_report != 0x00){
     switch(radar.sensor_report){
       case HEARTRATEVAL:
-        Serial.print("传感器监测到当前心率值为: ");
+        Serial.print("Sensor monitored the current heart rate value is: ");
         Serial.println(radar.heart_rate, DEC);
         Serial.println("----------------------------");
         break;
-      case HEARTRATEWAVE:  //仅在实时数据传输模式开启时有效
-        Serial.print("心率波形(正弦波) -- 点 1: ");
+      case HEARTRATEWAVE:  //Valid only when real-time data transfer mode is on
+        Serial.print("The heart rate waveform(Sine wave) -- point 1: ");
         Serial.print(radar.heart_point_1);
-        Serial.print(", 点 2 : ");
+        Serial.print(", point 2 : ");
         Serial.print(radar.heart_point_2);
-        Serial.print(", 点 3 : ");
+        Serial.print(", point 3 : ");
         Serial.print(radar.heart_point_3);
-        Serial.print(", 点 4 : ");
+        Serial.print(", point 4 : ");
         Serial.print(radar.heart_point_4);
-        Serial.print(", 点 5 : ");
+        Serial.print(", point 5 : ");
         Serial.println(radar.heart_point_5);
         Serial.println("----------------------------");
         break;
       case BREATHNOR:
-        Serial.println("传感器检测到当前呼吸频率正常。");
+        Serial.println("Sensor detects current breath rate is normal.");
         Serial.println("----------------------------");
         break;
       case BREATHRAPID:
-        Serial.println("传感器检测到当前呼吸频率过快。");
+        Serial.println("Sensor detects current breath rate is too fast.");
         Serial.println("----------------------------");
         break;
       case BREATHSLOW:
-        Serial.println("传感器检测到当前呼吸频率过慢。");
+        Serial.println("Sensor detects current breath rate is too slow.");
         Serial.println("----------------------------");
         break;
       case BREATHNONE:
-        Serial.println("暂时没有呼吸信息，请等待...");
+        Serial.println("There is no breathing information yet, please wait...");
         Serial.println("----------------------------");
         break;
       case BREATHVAL:
-        Serial.print("传感器监测到当前呼吸频率值为: ");
+        Serial.print("Sensor monitored the current breath rate value is: ");
         Serial.println(radar.breath_rate, DEC);
         Serial.println("----------------------------");
         break;
-      case BREATHWAVE:  //仅在实时数据传输模式开启时有效
-        Serial.print("呼吸频率波形(正弦波) -- 点 1: ");
+      case BREATHWAVE:  //Valid only when real-time data transfer mode is on
+        Serial.print("The breath rate waveform(Sine wave) -- point 1: ");
         Serial.print(radar.breath_point_1);
-        Serial.print(", 点 2 : ");
+        Serial.print(", point 2 : ");
         Serial.print(radar.breath_point_2);
-        Serial.print(", 点 3 : ");
+        Serial.print(", point 3 : ");
         Serial.print(radar.breath_point_3);
-        Serial.print(", 点 4 : ");
+        Serial.print(", point 4 : ");
         Serial.print(radar.breath_point_4);
-        Serial.print(", 点 5 : ");
+        Serial.print(", point 5 : ");
         Serial.println(radar.breath_point_5);
         Serial.println("----------------------------");
         break;
     }
   }
-  delay(200);                       //添加时间延迟以避免程序卡死
+  delay(200);                       //Add time delay to avoid program jam
 }
 ```
 
@@ -351,17 +353,16 @@ void loop() {
 }
 ```
 
-上传程序后，在Arduino IDE中打开串口监视器并将波特率设置为115200。然后，您可以通过串口监视器Serial在XIAO ESP32C3中发送您想要的内容，XIAO将打印出您发送内容的每个字节。在这里，我输入的内容是"Hello Everyone"，我的结果图表如下
+上传程序后，在 Arduino IDE 中打开串口监视器并将波特率设置为 115200。然后，您可以通过串口监视器向 XIAO ESP32C3 发送您想要的内容，XIAO 将打印出您发送内容的每个字节。在这里，我输入的内容是"Hello Everyone"，我的结果图表如下所示
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/114.png" style={{width:600, height:'auto'}}/></div>
 
-
 ### 软件串口
 
-要使用软件串口，请安装[EspSoftwareSerial](https://github.com/plerup/espsoftwareserial)库。
+要使用软件串口，请安装 [EspSoftwareSerial](https://github.com/plerup/espsoftwareserial) 库。
 
 :::tip
-目前我们推荐使用EspSoftwareSerial库的7.0.0版本。其他版本可能存在不同程度的问题，导致软串口无法正常工作。
+目前我们推荐使用 EspSoftwareSerial 库的 7.0.0 版本。其他版本可能存在不同程度的问题，导致软串口无法正常工作。
 :::
 
 ```cpp
@@ -389,7 +390,7 @@ void loop() {
 }
 ```
 
-这个示例在引脚 `D7 (RX)` 和 `D6 (TX)` 上以 9600 波特率设置软件串口。它监控硬件串口（USB）和软件串口端口，在它们之间回显接收到的数据。
+这个示例在引脚 `D7 (RX)` 和 `D6 (TX)` 上设置软件串口，波特率为 9600。它监控硬件串口（USB）和软件串口端口，在它们之间回显接收到的数据。
 
 ## I2C
 
@@ -414,7 +415,7 @@ void loop() {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/u8g2-install.png" alt="pir" width={600} height="auto" /></p>
 
-- **步骤 3.** 上传以下代码在 OLED 显示屏上显示文本字符串
+- **步骤 3.** 上传以下代码以在 OLED 显示屏上显示文本字符串
 
 ```cpp
 //#include <Arduino.h>
@@ -449,7 +450,7 @@ void loop(void) {
 
 ### 硬件连接
 
-按照以下硬件连接将 [Grove - 高精度气压传感器 (DPS310)](https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html) 连接到 XIAO ESP32C3。
+按照以下硬件连接方式，将 [Grove - 高精度气压传感器 (DPS310)](https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html) 连接到 XIAO ESP32C3。
 
 | Grove - 高精度气压传感器 (DPS310) | XIAO ESP32C3 |
 |-----------|------------|
@@ -481,53 +482,53 @@ void loop(void) {
 ```cpp
 #include <Dps310.h>
 
-// Dps310 对象
+// Dps310 Opject
 Dps310 Dps310PressureSensor = Dps310();
 
 void setup() {
-    //你的从选择线的引脚号
+    //pin number of your slave select line
     //XMC2GO
     int16_t pin_cs = SS;
-    //对于 XMC 1100 Bootkit 和 XMC4700 Relax Kit，取消注释以下行
+    //for XMC 1100 Bootkit  & XMC4700 Relax Kit uncomment the following line
     //int16_t pin_cs = 10;
 
     Serial.begin(9600);
     while (!Serial);
 
 
-    //调用 begin 来初始化 Dps310
-    //参数 pin_nr 是你的微控制器上 CS 引脚的编号
+    //Call begin to initialize Dps310
+    //The parameter pin_nr is the number of the CS pin on your Microcontroller
     Dps310PressureSensor.begin(SPI, pin_cs);
 
-    //温度测量速率（值从 0 到 7）
-    //每秒 2^temp_mr 个温度测量结果
+    //temperature measure rate (value from 0 to 7)
+    //2^temp_mr temperature measurement results per second
     int16_t temp_mr = 2;
-    //温度过采样率（值从 0 到 7）
-    //每个结果进行 2^temp_osr 次内部温度测量
-    //更高的值增加精度
+    //temperature oversampling rate (value from 0 to 7)
+    //2^temp_osr internal temperature measurements per result
+    //A higher value increases precision
     int16_t temp_osr = 2;
-    //压力测量速率（值从 0 到 7）
-    //每秒 2^prs_mr 个压力测量结果
+    //pressure measure rate (value from 0 to 7)
+    //2^prs_mr pressure measurement results per second
     int16_t prs_mr = 2;
-    //压力过采样率（值从 0 到 7）
-    //每个结果进行 2^prs_osr 次内部压力测量
-    //更高的值增加精度
+    //pressure oversampling rate (value from 0 to 7)
+    //2^prs_osr internal pressure measurements per result
+    //A higher value increases precision
     int16_t prs_osr = 2;
-    //startMeasureBothCont 启用后台模式
-    //温度和压力自动测量
-    //高精度和高测量速率不能同时使用。
-    //查阅数据手册（或试错）获取更多信息
+    //startMeasureBothCont enables background mode
+    //temperature and pressure ar measured automatically
+    //High precision and hgh measure rates at the same time are not available.
+    //Consult Datasheet (or trial and error) for more information
     int16_t ret = Dps310PressureSensor.startMeasureBothCont(temp_mr, temp_osr, prs_mr, prs_osr);
-    //使用下面注释的行之一来仅测量温度或压力
+    //Use one of the commented lines below instead to measure only temperature or pressure
     //int16_t ret = Dps310PressureSensor.startMeasureTempCont(temp_mr, temp_osr);
     //int16_t ret = Dps310PressureSensor.startMeasurePressureCont(prs_mr, prs_osr);
 
 
     if (ret != 0) {
-        Serial.print("初始化失败！ret = ");
+        Serial.print("Init FAILED! ret = ");
         Serial.println(ret);
     } else {
-        Serial.println("初始化完成！");
+        Serial.println("Init complete!");
     }
 }
 
@@ -538,37 +539,37 @@ void loop() {
     uint8_t temperatureCount = 20;
     float temperature[temperatureCount];
 
-    //此函数将连续测量的结果写入作为参数给出的数组
-    //参数 temperatureCount 和 pressureCount 在调用函数时应保存数组 temperature 和 pressure 的大小
-    //函数结束后，temperatureCount 和 pressureCount 保存写入数组的值的数量
-    //注意：Dps310 不能保存超过 32 个结果。当其结果缓冲区满时，它不会保存任何新的测量结果
+    //This function writes the results of continuous measurements to the arrays given as parameters
+    //The parameters temperatureCount and pressureCount should hold the sizes of the arrays temperature and pressure when the function is called
+    //After the end of the function, temperatureCount and pressureCount hold the numbers of values written to the arrays
+    //Note: The Dps310 cannot save more than 32 results. When its result buffer is full, it won't save any new measurement results
     int16_t ret = Dps310PressureSensor.getContResults(temperature, temperatureCount, pressure, pressureCount);
 
     if (ret != 0) {
         Serial.println();
         Serial.println();
-        Serial.print("失败！ret = ");
+        Serial.print("FAIL! ret = ");
         Serial.println(ret);
     } else {
         Serial.println();
         Serial.println();
         Serial.print(temperatureCount);
-        Serial.println(" 个温度值找到：");
+        Serial.println(" temperature values found: ");
         for (int16_t i = 0; i < temperatureCount; i++) {
             Serial.print(temperature[i]);
-            Serial.println(" 摄氏度");
+            Serial.println(" degrees of Celsius");
         }
 
         Serial.println();
         Serial.print(pressureCount);
-        Serial.println(" 个压力值找到：");
+        Serial.println(" pressure values found: ");
         for (int16_t i = 0; i < pressureCount; i++) {
             Serial.print(pressure[i]);
-            Serial.println(" 帕斯卡");
+            Serial.println(" Pascal");
         }
     }
 
-    //等待一些时间，以便 Dps310 可以重新填充其缓冲区
+    //Wait some time, so that the Dps310 can refill its buffer
     delay(10000);
 }
 ```
@@ -581,7 +582,6 @@ void loop() {
 
 现在你将看到温度和压力数据如上所示在串口监视器上依次显示！
 
-
 ## XIAO ESP32C3 IO 分配注意事项
 
 ### D9
@@ -590,7 +590,7 @@ XIAO ESP32C3 的 D9 连接到 ESP32-C3 的 GPIO9 (15)、上拉电阻 (R6) 和 BO
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/10.png" alt="pir" width={600} height="auto" /></div>
 
-按下 BOOT 按钮将 D9 连接到 GND。**因此最好将 D9 用作开关输入**。
+按下 BOOT 按钮会将 D9 连接到 GND。**因此最好将 D9 用作开关输入**。
 
 ### D6
 
@@ -598,9 +598,9 @@ XIAO ESP32C3 的 D6 连接到 ESP32-C3 的 U0TXD (28)。第一/第二阶段引�
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/11.png" alt="pir" width={400} height="auto" /></div>
 
-D6 在启动时设置为 UART 输出，因此如果你将 D6 用作输入，可能会意外产生大电流。**因此建议仅在输出模式下使用 D6 引脚**。
+D6 在启动时被设置为 UART 输出，所以如果你将 D6 用作输入，可能会意外产生大电流。**因此建议仅在输出模式下使用 D6 引脚**。
 
-但是，由于这个 D6 是 UART 输出，你必须注意几件事：一是在不通信时，它在待机模式下为 HIGH。另一个是第一/第二阶段引导加载程序的文本输出。信号在启动后立即在 HIGH/LOW 之间跳动，如有必要必须进行抵消。
+但是，由于这个 D6 是 UART 输出，你必须注意几件事：一是在不通信时的待机模式下它是 HIGH。另一个是第一/第二阶段引导加载程序的文本输出。信号在启动后立即在 HIGH/LOW 之间跳动，必要时必须加以抵消。
 
 所以尽量不要使用 D6。（当然，在你理解它之后使用它是可以的。）
 
@@ -610,12 +610,12 @@ Seeed Studio XIAO ESP32C3 的 D8 连接到 ESP32-C3 的 GPIO8 (14)。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/12.png" alt="pir" width={300} height="auto" /></div>
 
-当通过按住 BOOT 按钮将启动模式设置为下载启动时，会引用 GPIO8，此时必须为 HIGH。（[这里](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf)说："GPIO8 = 0 和 GPIO9 = 0 的绑定组合无效，会触发意外行为。"）
+当通过按住 BOOT 按钮将启动模式设置为下载启动时，会引用 GPIO8，此时必须为 HIGH。（[这里](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf)说："GPIO8 = 0 和 GPIO9 = 0 的绑定组合是无效的，会触发意外行为。"）
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/13.png" alt="pir" width={700} height="auto" /></div>
 
 如果你使用下载启动，**添加一个上拉电阻以使 GPIO8 在启动时为 HIGH**。
 
-特别感谢 SeeedJP 同事 **matsujirushi** 对本节的测试和贡献。这里是原文章的参考链接。
+特别感谢 SeeedJP 同事 **matsujirushi** 对本节的测试和贡献。这里是原文的参考链接。
 
 - [Seeed Studio XIAO ESP32C3のI/O割り付けに注意](https://lab.seeed.co.jp/entry/2023/04/03/120000)

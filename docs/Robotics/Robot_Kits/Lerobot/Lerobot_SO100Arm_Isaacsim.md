@@ -1,6 +1,6 @@
 ---
 description: This wiki provides instructions on how to import the SO100 Arm Kit robotic arm into NVIDIA's Isaac Sim simulation platform and control it using ROS2 and Python scripts.
-title: How to Import and Control SO100Arm Kit in Isaac Sim
+title: SO100Arm Kit in Isaac Sim
 keywords:
 - Lerobot
 - Huggingface
@@ -220,14 +220,14 @@ The 3D printed parts and table clamps are not included in the product. However, 
   thread.join()
   ```
 
-  </details>
+</details>
 
 **`lerobot_publisher.py` implements continuously sending action commands to the servos.**
 
 <details>
 <summary>lerobot_publisher.py</summary>
 
-  ```python
+```python
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import JointState
@@ -298,9 +298,9 @@ def main(args=None):
 
 if __name__ == "__main__":
     main()
-  ```
+```
 
-  </details>
+</details>
 
 <iframe width="900" height="600" src="https://www.youtube.com/embed/buiqdmNQKwY?si=3CizpKK3Nhj4Vlp9&amp;start=232" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

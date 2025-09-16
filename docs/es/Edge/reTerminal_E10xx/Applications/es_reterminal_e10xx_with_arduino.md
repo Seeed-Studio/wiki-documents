@@ -605,7 +605,8 @@ void loop() {
   buzzer_tone(NOTE_G5, 80, 20);
   buzzer_tone(NOTE_C6, 150, 0);
   delay(30000);
-}```
+}
+```
 
 **Funciones del Buzzer:**
 

@@ -12,7 +12,7 @@ last_update:
 sidebar_position: 3
 ---
 
-# Seeed Studio XIAO MG24 Sense 内置传感器使用指南
+# Seeed Studio XIAO MG24 Sense 内置传感器使用方法
 
 ## XIAO MG24 Sense IMU
 
@@ -21,20 +21,22 @@ sidebar_position: 3
 **6轴 IMU（惯性测量单元）** 传感器如 **LSM6DS3TR-C** 集成了加速度计和陀螺仪，用于测量物体在三维空间中的运动和方向。具体来说，LSM6DS3TR-C 具有以下特性：
 
 **加速度计功能：**
+
 - 测量物体沿 X、Y 和 Z 轴的加速度。它能够感知物体运动（例如，静止、加速、减速）和倾斜变化（例如，物体的角度）。
 - 可用于检测步态、位置变化、振动等。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/xyz1.5.jpg" style={{width:320, height:'auto'}}/></div>
 
 **陀螺仪功能：**
+
 - 测量物体围绕 X、Y 和 Z 轴的角速度，即物体的旋转。
 - 可用于检测旋转、旋转速率和方向变化。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/xyz2.0.jpg" style={{width:320, height:'auto'}}/></div>
 
-- **X轴角度（Roll）** 是围绕 X 轴旋转方向的角度。
-- **Y轴角度（Pitch）** 是围绕 Y 轴旋转方向的角度。
-- **Z轴角度（Yaw）** 是围绕 Z 轴旋转方向的角度。
+- **X轴角度（Roll）** 是围绕X轴旋转方向的角度。
+- **Y轴角度（Pitch）** 是围绕Y轴旋转方向的角度。
+- **Z轴角度（Yaw）** 是围绕Z轴旋转方向的角度。
 
 ### 软件准备
 
@@ -45,7 +47,6 @@ sidebar_position: 3
 </div>
 
 点击 github 下载链接获取六轴传感器驱动库。
-
 
 ### 代码实现
 
@@ -128,29 +129,33 @@ void loop() {
 
 :::tip
 
-由于 LSM6DS3 库的更新，如果您之前已经添加了此库，您需要重新下载 2.0.4 或更高版本，并将 ZIP 文件添加到 Arduino 中。
+由于 LSM6DS3 库的更新，如果您之前已经添加了此库，您需要重新下载 2.0.4 或更高版本并将 ZIP 文件添加到 Arduino。
 
 :::
+
 ### 功能概述
-- **包含库文件**
+
+- **包含库**
 
   ```cpp
     #include <LSM6DS3.h> 
     #include <Wire.h>
   ```
-  - 包含与LSM6DS3传感器通信的库。
-  - 包含I2C通信的库。
-    
+
+  - 包含用于与LSM6DS3传感器通信的库。
+  - 包含用于I2C通信的库。
+
 - **创建传感器实例**
-    - `LSM6DS3 myIMU(I2C_MODE, 0x6A)` 为IMU传感器创建LSM6DS3类的实例，指定I2C通信模式和设备地址0x6A。
+  - `LSM6DS3 myIMU(I2C_MODE, 0x6A)` 为IMU传感器创建LSM6DS3类的实例，指定I2C通信模式和设备地址0x6A。
 
 - **变量和常量**
-    - `float aX, aY, aZ, gX, gY, gZ`: 存储加速度计和陀螺仪数据的变量。
-    - `const float accelerationThreshold = 2.5`: 检测显著运动的阈值，单位为G。
-    - `const int numSamples = 119`: 检测到显著运动后要收集的样本数量。
-    - `int samplesRead = numSamples`: 将样本计数器初始化为总样本数，表示尚未收集任何数据。
+  - `float aX, aY, aZ, gX, gY, gZ`：用于存储加速度计和陀螺仪数据的变量。
+  - `const float accelerationThreshold = 2.5`：用于检测显著运动的阈值，单位为G。
+  - `const int numSamples = 119`：检测到显著运动后要收集的样本数量。
+  - `int samplesRead = numSamples`：将样本计数器初始化为总样本数，表示尚未收集任何数据。
 
 - **基本设置**
+
   ```cpp
     pinMode(PD5,OUTPUT);
     digitalWrite(PD5,HIGH);
@@ -159,16 +164,17 @@ void loop() {
   - 打开陀螺仪使能引脚。
 
 - **数据处理**
+
     ```cpp
     aX = myIMU.readFloatAccelX();:
     aY = myIMU.readFloatAccelY();:
     aZ = myIMU.readFloatAccelZ();:
     float aSum = fabs(aX) + fabs(aY) + fabs(aZ);
-    ``` 
+    ```
 
-  - 读取X轴加速度。
-  - 读取Y轴加速度。
-  - 读取Z轴加速度。
+  - 读取沿X轴的加速度。
+  - 读取沿Y轴的加速度。
+  - 读取沿Z轴的加速度。
   - 计算加速度数据绝对值的总和，`fabs()`返回绝对值。
 
   ```cpp
@@ -179,9 +185,11 @@ void loop() {
       break;
     }
   ```
-  - 如果加速度绝对值的总和大于或等于设定的阈值，将样本计数samplesRead重置为0并退出循环。
+
+  - 如果绝对加速度值的总和大于或等于设定的阈值，则将采样计数 samplesRead 重置为 0 并退出循环。
 
 - **检查数据**
+
   ```cpp
   while (samplesRead < numSamples) {
     samplesRead++;
@@ -198,55 +206,51 @@ void loop() {
   ```
 
   - 进入另一个循环并检查是否已读取所需数量的样本。
-  - 增加samplesRead的计数。
-  - 如果已读取所有样本，打印一个空行来分隔数据输出。
-
+  - 增加 samplesRead 的计数。
+  - 如果所有样本都已读取，打印一个空行来分隔数据输出。
 
 ### 结果图表
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/six_resutl.png" style={{width:700, height:'auto'}}/></div>
 
-### 更多
+### 更多内容
 
 如果您想要更多示例代码，请点击：**"File" -> Example -> Seeed Arduino LSM6DS3"**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/33.png" style={{width:500, height:'auto'}}/></div>
 
-
-## IMU高级演示
+## IMU 高级演示
 
 ### 硬件准备
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeeduino-XIAO-Expansion-Board</th>
-			<th>Seeed Studio XIAO MG24 Sense</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Seeeduino-XIAO-Expansion-Board</th>
+   <th>Seeed Studio XIAO MG24 Sense</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
-
 
 ### 软件准备
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/arduino_mouse.jpg" style={{width:500, height:'auto'}}/></div>
-
 
 :::tip
 我们需要在工具栏中选择相应的堆栈来烧录程序。
@@ -260,15 +264,15 @@ void loop() {
 #include <LSM6DS3.h>
 #include "Wire.h"
 
-#define DEVICE_NAME "XIAO MG24 鼠标"
+#define DEVICE_NAME "XIAO MG24 Mouse"
 
 #define IMU_ACC_X_THRESHOLD 10
 #define IMU_ACC_Y_THRESHOLD 10
 
-// 鼠标按钮事件
+// Mouse button events
 #define LMB_PRESSED 1
 
-// HID 报告数据
+// HID report data
 struct mouse_data {
   int8_t delta_x;
   int8_t delta_y;
@@ -276,14 +280,14 @@ struct mouse_data {
 };
 static mouse_data report;
 
-// HID 报告数据缓冲区
+// HID report data buffer
 static uint8_t report_array[] = { 0x00, 0x00, 0x00 };
 
 static uint8_t connection_handle = SL_BT_INVALID_CONNECTION_HANDLE;
 static uint32_t bonding_handle = SL_BT_INVALID_BONDING_HANDLE;
 static uint16_t hid_report;
 
-// 设备信息服务
+// Device information service
 const uint8_t manufacturer[] = "Silicon Labs";
 const uint8_t model_no[] = "1";
 const uint8_t serial_no[] = "1";
@@ -301,17 +305,17 @@ static void ble_initialize_gatt_db();
 static void ble_start_advertising();
 static void mouse_button_callback();
 
-// 可选择连接一个按钮用于左键点击
+// Optionally connect a button for left click
 #define MOUSE_BUTTON D1
 
 LSM6DS3 myIMU(I2C_MODE, 0x6A);
 
 void setup()
 {
-  // 初始化报告数据
+  // Initialize report data
   memset(&report, 0, sizeof(report));
 
-  // 启用 IMU 电源
+  // Enable the IMU power
   pinMode(PD5, OUTPUT);
   digitalWrite(PD5, HIGH);
   delay(300);
@@ -321,33 +325,33 @@ void setup()
 
   Serial.begin(115200);
 
-  Serial.println("XIAO MG24 BLE 鼠标");
+  Serial.println("XIAO MG24 BLE mouse");
 
   myIMU.begin();
   Serial.println("---");
-  Serial.println("IMU 已初始化");
+  Serial.println("IMU initialized");
 }
 
 void loop()
 {
-  // 更新'左鼠标按钮'位
+  // Update 'left mouse button' bit
   if (button_press) {
     report.buttons |= LMB_PRESSED;
     if (!button_press_prev) {
       button_press_prev = true;
-      Serial.println("按钮按下");
+      Serial.println("Button pressed");
     }
   } else {
     button_press_prev = false;
     report.buttons &= ~LMB_PRESSED;
   }
 
-  // 更改 x 和 y 以获得正确的板子方向
+  // Change x and y for correct orientation of the boards
   acc_y = (int32_t)(myIMU.readFloatAccelX() * 10.0f);
   acc_x = (int32_t)(myIMU.readFloatAccelY() * 10.0f * -1.0f);
 
-  // 如果加速度值在正方向或负方向上超过阈值
-  // 则分配阈值
+  // In case the acceleration value would surpass the threshold value
+  // in positive or negative direction assign the threshold value
   if (acc_x > IMU_ACC_X_THRESHOLD) {
     report.delta_x = IMU_ACC_X_THRESHOLD;
   } else if (acc_x < (-1 * IMU_ACC_X_THRESHOLD)) {
@@ -366,13 +370,13 @@ void loop()
 
   memcpy(report_array, &report, sizeof(report));
   if (connection_handle != SL_BT_INVALID_CONNECTION_HANDLE && bonding_handle != SL_BT_INVALID_BONDING_HANDLE) {
-    // 通过 GATT 通知指示报告数据更改
+    // Indicate report data change with GATT notification
     sc = sl_bt_gatt_server_notify_all(hid_report, sizeof(report_array), report_array);
     if (sc != SL_STATUS_OK) {
-      Serial.print("sl_bt_gatt_server_notify_all() 返回错误代码 0x");
+      Serial.print("sl_bt_gatt_server_notify_all() returned with error code 0x");
       Serial.println(sc, HEX);
     } else {
-      Serial.print("光标 [delta-X: ");
+      Serial.print("cursor [delta-X: ");
       Serial.print(report.delta_x, DEC);
       Serial.print(" delta-Y: ");
       Serial.print(report.delta_y, DEC);
@@ -383,7 +387,7 @@ void loop()
 }
 
 /******************************************************************************
- * 鼠标按钮回调
+ * Mouse button callback
  *****************************************************************************/
 void mouse_button_callback()
 {
@@ -395,10 +399,10 @@ void mouse_button_callback()
 }
 
 /******************************************************************************
- * 蓝牙协议栈事件处理程序
- * 当 BLE 协议栈上发生事件时调用
+ * Bluetooth stack event handler
+ * Called when an event happens on BLE the stack
  *
- * @param[in] evt 来自蓝牙协议栈的事件
+ * @param[in] evt Event coming from the Bluetooth stack
  *****************************************************************************/
 void sl_bt_on_event(sl_bt_msg_t* evt)
 {
@@ -407,26 +411,26 @@ void sl_bt_on_event(sl_bt_msg_t* evt)
 
   switch (SL_BT_MSG_ID(evt->header)) {
     // -------------------------------
-    // 此事件表示设备已启动且无线电已就绪
+    // This event indicates the device has started and the radio is ready
     case sl_bt_evt_system_boot_id:
     {
-      // 获取 BLE 地址和地址类型
+      // Get BLE address and address type
       sc = sl_bt_system_get_identity_address(&ble_address, &ble_address_type);
       app_assert_status(sc);
 
-      // 打印欢迎消息
+      // Print welcome message
       Serial.begin(115200);
       Serial.println();
-      Serial.println("BLE 协议栈已启动");
+      Serial.println("BLE stack booted");
 
-      // 初始化应用程序特定的 GATT DB
+      // Initialize the application specific GATT DB
       ble_initialize_gatt_db();
 
-      // HID 输入设备需要强制安全级别和绑定
+      // HID input devices requires mandatory secure level and bonding
       sc = sl_bt_sm_configure(0, sl_bt_sm_io_capability_noinputnooutput);
       app_assert_status(sc);
 
-      // 允许绑定
+      // Allow bonding
       sc = sl_bt_sm_set_bondable_mode(1);
       app_assert_status(sc);
 
@@ -435,55 +439,55 @@ void sl_bt_on_event(sl_bt_msg_t* evt)
     break;
 
     // -------------------------------
-    // 此事件表示 BLE 连接已打开
+    // This event indicates that a BLE connection has been opened
     case sl_bt_evt_connection_opened_id:
     {
-      // 存储连接句柄，发送指示时需要用到
+      // Store the connection handle which will be needed for sending indications
       connection_handle = evt->data.evt_connection_opened.connection;
       bonding_handle = evt->data.evt_connection_opened.bonding;
-      Serial.print("连接已打开 - 句柄 0x");
+      Serial.print("Connection opened - handle 0x");
       Serial.println(connection_handle, HEX);
 
       if (bonding_handle == SL_BT_INVALID_BONDING_HANDLE) {
-        Serial.println("连接尚未绑定");
+        Serial.println("Connection not bonded yet");
       } else {
-        Serial.println("连接已绑定");
+        Serial.println("Connection bonded");
       }
 
-      Serial.println("提高安全性");
+      Serial.println("Increase security");
       sc = sl_bt_sm_increase_security(evt->data.evt_connection_opened.connection);
       app_assert_status(sc);
     }
     break;
 
     // -------------------------------
-    // 此事件表示绑定成功
+    // This event indicates that bonding was successful
     case sl_bt_evt_sm_bonded_id:
     {
-      Serial.print("已绑定 - 句柄: 0x");
+      Serial.print("Bonded - handle: 0x");
       Serial.print(evt->data.evt_sm_bonded.connection, HEX);
       bonding_handle = evt->data.evt_sm_bonded.bonding;
       connection_handle = evt->data.evt_sm_bonded.connection;
 
-      Serial.print(" - 安全模式: 0x");
+      Serial.print(" - security mode: 0x");
       Serial.println(evt->data.evt_sm_bonded.security_mode, HEX);
     }
     break;
 
     // -------------------------------
-    // 此事件表示BLE连接已关闭
+    // This event indicates that a BLE connection has closed
     case sl_bt_evt_connection_closed_id:
     {
-      Serial.print("连接已关闭 - 句柄: 0x");
+      Serial.print("Connection closed - handle: 0x");
       Serial.print(connection_handle, HEX);
-      Serial.print(" 原因: 0x");
+      Serial.print(" reason: 0x");
       Serial.println(evt->data.evt_connection_closed.reason, HEX);
 
       connection_handle = SL_BT_INVALID_CONNECTION_HANDLE;
       bonding_handle = SL_BT_INVALID_BONDING_HANDLE;
 
       sc = sl_bt_sm_delete_bondings();
-      Serial.println("已删除绑定");
+      Serial.println("Deleted bondings");
       app_assert_status(sc);
 
       ble_start_advertising();
@@ -491,41 +495,41 @@ void sl_bt_on_event(sl_bt_msg_t* evt)
     break;
 
     // -------------------------------
-    // 此事件表示连接参数已更改
+    // This event indicates that the connection parameters have changed
     case sl_bt_evt_connection_parameters_id:
     {
-      Serial.print("设置连接参数，安全模式: ");
+      Serial.print("Set connection parameters, security_mode: ");
       Serial.println(evt->data.evt_connection_parameters.security_mode, HEX);
     }
     break;
 
     // -------------------------------
-    // 此事件表示绑定失败
+    // This event indicates that bonding has failed
     case sl_bt_evt_sm_bonding_failed_id:
     {
-      Serial.print("绑定失败，原因: 0x");
+      Serial.print("Bonding failed, reason: 0x");
       Serial.println(evt->data.evt_sm_bonding_failed.reason, HEX);
-      Serial.println("删除绑定。");
+      Serial.println("Delete bondings.");
 
       sc = sl_bt_sm_delete_bondings();
       app_assert_status(sc);
 
-      Serial.println("绑定已删除");
-      Serial.print("关闭连接 - 句柄: 0x");
+      Serial.println("Bondings deleted");
+      Serial.print("Close connection - handle: 0x");
       Serial.println(evt->data.evt_sm_bonding_failed.connection, HEX);
     }
     break;
 
     // -------------------------------
-    // 默认事件处理程序
+    // Default event handler
     default:
       break;
   }
 }
 
 /******************************************************************************
- * 启动BLE广播
- * 如果是第一次调用，则初始化广播
+ * Starts BLE advertisement
+ * Initializes advertising if it's called for the first time
  *****************************************************************************/
 static void ble_start_advertising()
 {
@@ -534,34 +538,34 @@ static void ble_start_advertising()
   sl_status_t sc;
 
   if (init) {
-    // 创建广播集
+    // Create an advertising set
     sc = sl_bt_advertiser_create_set(&advertising_set_handle);
     app_assert_status(sc);
 
-    // 设置广播间隔为100ms
+    // Set advertising interval to 100ms
     sc = sl_bt_advertiser_set_timing(
       advertising_set_handle,
-      160,  // 最小广播间隔（毫秒 * 1.6）
-      160,  // 最大广播间隔（毫秒 * 1.6）
-      0,    // 广播持续时间
-      0);   // 最大广播事件数
+      160,  // Minimum advertisement interval (milliseconds * 1.6)
+      160,  // Maximum advertisement interval (milliseconds * 1.6)
+      0,    // Advertisement duration
+      0);   // Maximum number of advertisement events
     app_assert_status(sc);
 
     init = false;
   }
 
-  // 生成广播数据
+  // Generate data for advertising
   sc = sl_bt_legacy_advertiser_generate_data(advertising_set_handle, sl_bt_advertiser_general_discoverable);
   app_assert_status(sc);
 
-  // 启动广播并启用连接
+  // Start advertising and enable connections
   sc = sl_bt_legacy_advertiser_start(advertising_set_handle, sl_bt_advertiser_connectable_scannable);
   app_assert_status(sc);
 
-  Serial.print("开始以 '");
+  Serial.print("Started advertising as '");
   Serial.print(DEVICE_NAME);
-  Serial.print("' 地址广播: ");
-  // 以 'FF:FF:FF:FF:FF:FF' 格式打印地址
+  Serial.print("' address: ");
+  // Print address in format 'FF:FF:FF:FF:FF:FF'
   for (uint8_t i = (sizeof(bd_addr) - 1); i > 0; i--) {
     Serial.print(ble_address.addr[i], HEX);
     Serial.print(":");
@@ -570,8 +574,8 @@ static void ble_start_advertising()
 }
 
 /******************************************************************************
- * 初始化GATT数据库
- * 创建新的GATT会话并添加特定的服务和特征
+ * Initializes the GATT database
+ * Creates a new GATT session and adds certain services and characteristics
  *****************************************************************************/
 static void ble_initialize_gatt_db()
 {
@@ -581,11 +585,11 @@ static void ble_initialize_gatt_db()
   uint16_t characteristic;
   uint16_t descriptor;
 
-  // 创建新的GATT数据库
+  // Create a new GATT database
   sc = sl_bt_gattdb_new_session(&gattdb_session_id);
   app_assert_status(sc);
 
-  // 通用访问服务
+  // Generic access service
   uint8_t generic_access_service_uuid[] = { 0x00, 0x18 };
   sc = sl_bt_gattdb_add_service(gattdb_session_id,
                                 sl_bt_gattdb_primary_service,
@@ -595,7 +599,7 @@ static void ble_initialize_gatt_db()
                                 &service);
   app_assert_status(sc);
 
-  // 设备名称特征
+  // Device name characteristic
   sl_bt_uuid_16_t device_name_uuid = { .data = { 0x00, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service,
@@ -610,7 +614,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // 外观特征
+  // Appearance characteristic
   sl_bt_uuid_16_t appearence_uuid = { .data = { 0x01, 0x2A } };
   const uint8_t appearance_value[] = { 0xC2, 0x03 };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -626,11 +630,11 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // 启动通用访问服务
+  // Generic access service start
   sc = sl_bt_gattdb_start_service(gattdb_session_id, service);
   app_assert_status(sc);
 
-  // 电池服务
+  // Battery service
   const uint8_t battery_service_uuid[] = { 0x0F, 0x18 };
   sc = sl_bt_gattdb_add_service(gattdb_session_id,
                                 sl_bt_gattdb_primary_service,
@@ -640,7 +644,7 @@ static void ble_initialize_gatt_db()
                                 &service);
   app_assert_status(sc);
 
-// 电池电量特征
+  // Battery level characteristic
   const sl_bt_uuid_16_t battery_level_uuid = { .data = { 0x19, 0x2A } };
   const uint8_t battery_level_init_value = 100;
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -656,7 +660,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // 特征表示格式描述符
+  // Characteristic presentation format descriptor
   const sl_bt_uuid_16_t chara_presentation_format_descriptor_uuid = { .data = { 0x04, 0x29 } };
   const uint8_t chara_presentation_format_value[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
   sc = sl_bt_gattdb_add_uuid16_descriptor(gattdb_session_id,
@@ -671,7 +675,7 @@ static void ble_initialize_gatt_db()
                                           &descriptor);
   app_assert_status(sc);
 
-  // 客户端特征配置描述符
+  // Client characteristic configuration descriptor
   const sl_bt_uuid_16_t client_configuration_descriptor_uuid = { .data = { 0x02, 0x29 } };
   const uint8_t client_configuration_value[] = { 0x00, 0x00 };
   sc = sl_bt_gattdb_add_uuid16_descriptor(gattdb_session_id,
@@ -686,11 +690,11 @@ static void ble_initialize_gatt_db()
                                           &descriptor);
   app_assert_status(sc);
 
-  // 电池服务启动
+  // Battery service start
   sc = sl_bt_gattdb_start_service(gattdb_session_id, service);
   app_assert_status(sc);
 
-  // 设备信息服务
+  // Device information service
   const uint8_t device_info_service_uuid[] = { 0x0A, 0x18 };
   sc = sl_bt_gattdb_add_service(gattdb_session_id,
                                 sl_bt_gattdb_primary_service,
@@ -700,7 +704,7 @@ static void ble_initialize_gatt_db()
                                 &service);
   app_assert_status(sc);
 
-  // 制造商名称字符串特征
+  // Manufacturer name string characteristic
   const sl_bt_uuid_16_t manufacturer_uuid = { .data = { 0x29, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service,
@@ -715,7 +719,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // 型号字符串特征
+  // Model number string characteristic
   const sl_bt_uuid_16_t model_no_uuid = { .data = { 0x24, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service,
@@ -730,7 +734,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // 序列号字符串特征
+  // Serial number string characteristic
   const sl_bt_uuid_16_t serial_no_uuid = { .data = { 0x25, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service,
@@ -745,7 +749,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // 硬件版本字符串特征
+  // Hardware revision string characteristic
   const sl_bt_uuid_16_t hw_rev_uuid = { .data = { 0x27, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service,
@@ -760,7 +764,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-// 固件版本字符串特征
+  // Firmware revision string characteristic
   const sl_bt_uuid_16_t fw_rev_uuid = { .data = { 0x26, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service,
@@ -775,7 +779,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // 软件版本字符串特征
+  // Software revision string characteristic
   const sl_bt_uuid_16_t sw_rev_uuid = { .data = { 0x28, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service,
@@ -790,7 +794,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // 系统ID特征
+  // System ID characteristic
   const sl_bt_uuid_16_t sys_id_uuid = { .data = { 0x23, 0x2A } };
   const uint8_t sys_id_initial_value[] = { 0x12, 0x34, 0x56, 0xFF, 0xFE, 0x9A, 0xBC, 0xDE };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -806,7 +810,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // PnP ID特征
+  // PnP ID characteristic
   const sl_bt_uuid_16_t pnp_id_uuid = { .data = { 0x50, 0x2A } };
   const uint8_t pnp_id_initial_value[] = { 0x02, 0x10, 0xC4, 0x00, 0x01, 0x00, 0x01 };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -822,11 +826,11 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // 设备信息服务启动
+  // Device information service start
   sc = sl_bt_gattdb_start_service(gattdb_session_id, service);
   app_assert_status(sc);
 
-  // HID服务
+  // HID service
   uint8_t hid_service_uuid[] = { 0x12, 0x18 };
   sc = sl_bt_gattdb_add_service(gattdb_session_id,
                                 sl_bt_gattdb_primary_service,
@@ -836,7 +840,7 @@ static void ble_initialize_gatt_db()
                                 &service);
   app_assert_status(sc);
 
-  // 协议模式特征
+  // Protocol mode characteristic
   sl_bt_uuid_16_t hid_protocol_mode_uuid = { .data = { 0x4E, 0x2A } };
   const uint8_t hid_protocol_mode_init_value[] = { 1 };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -852,7 +856,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // HID报告特征
+  // HID report characteristic
   const sl_bt_uuid_16_t hid_report_uuid = { .data = { 0x4D, 0x2A } };
   const uint8_t hid_report_init_value[] = { 0x00, 0x00, 0x00 };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -869,7 +873,7 @@ static void ble_initialize_gatt_db()
   app_assert_status(sc);
   hid_report = characteristic;
 
-  // HID报告引用描述符
+  // HID report reference descriptor
   const sl_bt_uuid_16_t hid_report_reference_desc_uuid = { .data = { 0x08, 0x29 } };
   const uint8_t hid_report_reference_desc_init_val[] = { 0x00, 0x01 };
   sc = sl_bt_gattdb_add_uuid16_descriptor(gattdb_session_id,
@@ -884,33 +888,33 @@ static void ble_initialize_gatt_db()
                                           &descriptor);
   app_assert_status(sc);
 
-// HID 报告映射特征
+  // HID report map characteristic
   const sl_bt_uuid_16_t hid_report_map_uuid = { .data = { 0x4B, 0x2A } };
-  const uint8_t hid_report_map_init_value[] = { 0x05, 0x01, // 使用页面（通用桌面）
-                                                0x09, 0x02, // 使用（鼠标）
-                                                0xA1, 0x01, // 集合（应用程序）
-                                                0x09, 0x01, //   使用ID（指针）
-                                                0xA1, 0x00, //   集合（物理）
-                                                0x09, 0x30, //     使用ID（x）
-                                                0x09, 0x31, //     使用ID（y）
-                                                0x15, 0x80, //     逻辑最小值（-128）
-                                                0x25, 0x7F, //     逻辑最大值（127）
-                                                0x95, 0x02, //     报告计数（2）
-                                                0x75, 0x08, //     报告大小（8）
-                                                0x81, 0x06, //     输入（数据，变量，相对，无环绕，线性，首选状态，无空位置，位字段）
-                                                0x05, 0x09, //     使用页面（按钮）
-                                                0x19, 0x01, //     使用ID最小值（按钮1）
-                                                0x29, 0x03, //     使用ID最大值（按钮3）
-                                                0x15, 0x00, //     逻辑最小值（0）
-                                                0x25, 0x01, //     逻辑最大值（1）
-                                                0x95, 0x03, //     报告计数（3）
-                                                0x75, 0x01, //     报告大小（1）
-                                                0x81, 0x02, //     输入（数据，变量，绝对，无环绕，线性，首选状态，无空位置，位字段）
-                                                0x95, 0x01, //     报告计数（1）
-                                                0x75, 0x05, //     报告大小（5）
-                                                0x81, 0x03, //     输入（常量，变量，绝对，无环绕，线性，首选状态，无空位置，位字段）
-                                                0xC0,       //   结束集合（）
-                                                0xC0 };     // 结束集合（）
+  const uint8_t hid_report_map_init_value[] = { 0x05, 0x01, // Usage page (Generic Desktop)
+                                                0x09, 0x02, // Usage (Mouse)
+                                                0xA1, 0x01, // Collection (Application)
+                                                0x09, 0x01, //   UsageId (Pointer)
+                                                0xA1, 0x00, //   Collection (Physical)
+                                                0x09, 0x30, //     UsageId (x)
+                                                0x09, 0x31, //     UsageId (y)
+                                                0x15, 0x80, //     LogicalMinimum(-128)
+                                                0x25, 0x7F, //     LogicalMaximum(127)
+                                                0x95, 0x02, //     ReportCount(2)
+                                                0x75, 0x08, //     ReportSize(8)
+                                                0x81, 0x06, //     Input(Data, Variable, Relative, NoWrap, Linear, PreferredState, NoNullPosition, BitField)
+                                                0x05, 0x09, //     UsagePage(Button)
+                                                0x19, 0x01, //     UsageIdMin(Button 1)
+                                                0x29, 0x03, //     UsageIdMax(Button 3)
+                                                0x15, 0x00, //     LogicalMinimum(0)
+                                                0x25, 0x01, //     LogicalMaximum(1)
+                                                0x95, 0x03, //     ReportCount(3)
+                                                0x75, 0x01, //     ReportSize(1)
+                                                0x81, 0x02, //     Input(Data, Variable, Absolute, NoWrap, Linear, PreferredState, NoNullPosition, BitField)
+                                                0x95, 0x01, //     ReportCount(1)
+                                                0x75, 0x05, //     ReportSize(5)
+                                                0x81, 0x03, //     Input(Constant, Variable, Absolute, NoWrap, Linear, PreferredState, NoNullPosition, BitField)
+                                                0xC0,       //   EndCollection()
+                                                0xC0 };     // EndCollection()
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service,
                                               SL_BT_GATTDB_CHARACTERISTIC_READ,
@@ -924,7 +928,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // HID 外部报告引用描述符
+  // HID external report reference descriptor
   const sl_bt_uuid_16_t hid_external_report_reference_descriptor_uuid = { .data = { 0x07, 0x29 } };
   const uint8_t hid_external_report_reference_value[] = { 0x00, 0x00 };
   sc = sl_bt_gattdb_add_uuid16_descriptor(gattdb_session_id,
@@ -939,7 +943,7 @@ static void ble_initialize_gatt_db()
                                           &descriptor);
   app_assert_status(sc);
 
-  // HID 信息特征
+  // HID information characteristic
   const sl_bt_uuid_16_t hid_info_uuid = { .data = { 0x4A, 0x2A } };
   const uint8_t hid_info_init_value[] = { 0x01, 0x11, 0x00, 0x02 };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -955,7 +959,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // HID 控制点特征
+  // HID control point characteristic
   const sl_bt_uuid_16_t hid_control_point_uuid = { .data = { 0x4C, 0x2A } };
   const uint8_t hid_control_point_init_value[] = { 0x00 };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -971,30 +975,29 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // HID 服务启动
+  // HID service start
   sc = sl_bt_gattdb_start_service(gattdb_session_id, service);
   app_assert_status(sc);
 
-// 提交 GATT DB 更改
+  // Commit the GATT DB changes
   sc = sl_bt_gattdb_commit(gattdb_session_id);
   app_assert_status(sc);
 }
 
 #ifndef BLE_STACK_SILABS
-  #error "此示例仅与 Silicon Labs BLE 协议栈兼容。请在 'Tools > Protocol stack' 中选择 'BLE (Silabs)'。"
+  #error "This example is only compatible with the Silicon Labs BLE stack. Please select 'BLE (Silabs)' in 'Tools > Protocol stack'."
 #endif
 ```
+
 </details>
 
 ### 结果图表
 
-当我们按下扩展板上的按钮时，我们可以观察到鼠标事件被触发了！
-
+当我们按下扩展板上的按钮时，可以观察到鼠标事件被触发了！
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/hid_mouse.gif" style={{width:500, height:'auto'}}/></div>
 
-## XIAO MG24 Sense 麦克风(Seeed Studio 演示)
-
+## XIAO MG24 Sense 麦克风（Seeed Studio 演示）
 
 ### 内置传感器概述
 
@@ -1003,18 +1006,16 @@ static void ble_initialize_gatt_db()
 **麦克风功能：**
 
 - 捕获声波并将其转换为电信号，能够在各种环境中检测音频输入。
-- 它具有宽频率响应范围，通常从 20 Hz 到 20 kHz，适用于各种音频应用，包括语音识别和音乐播放。
+- 具有宽频响范围，通常为 20 Hz 到 20 kHz，适用于各种音频应用，包括语音识别和音乐播放。
 
 **主要特性**
 
-- 高灵敏度：能够检测微弱的声音，使其非常适合需要精确音频捕获的应用。
+- 高灵敏度：能够检测微弱声音，非常适合需要精确音频捕获的应用。
 - 低噪声：设计提供高信噪比（SNR），即使在嘈杂环境中也能确保清晰的音频输出。
 - 紧凑尺寸：MEMS 技术允许小型化设计，便于集成到智能手机和可穿戴设备等便携式设备中。
 - 数字输出：提供数字信号输出选项（例如 I2S），简化与数字信号处理器（DSP）和微控制器的接口。
 
-
 ### 软件准备
-
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_Mic" target="_blank" rel="noopener noreferrer">
@@ -1031,10 +1032,10 @@ static void ble_initialize_gatt_db()
 - **[替换文件]** [gsdk.a](https://files.seeedstudio.com/wiki/mg24_mic/gsdk_v2.a)
 
 **更改文件路径**
-  - __/Users/yourname/Library/Arduino15/packages/SiliconLabs/hardware/silabs/2.2.0/variants/xiao_mg24/ble_silabs/__
+
+- **/Users/yourname/Library/Arduino15/packages/SiliconLabs/hardware/silabs/2.2.0/variants/xiao_mg24/ble_silabs/**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/file.png" style={{width:350, height:'auto'}}/></div>
-
 
 ### 代码实现
 
@@ -1044,15 +1045,15 @@ static void ble_initialize_gatt_db()
 #include "processing/filters.h"
 #endif
 
-// 设置
+// Settings
 #if defined(WIO_TERMINAL)
-#define DEBUG 1                 // 在 ISR 期间启用引脚脉冲  
+#define DEBUG 1                 // Enable pin pulse during ISR  
 #define SAMPLES 16000*3
 #elif defined(ARDUINO_ARCH_NRF52840)
-#define DEBUG 1                 // 在 ISR 期间启用引脚脉冲  
+#define DEBUG 1                 // Enable pin pulse during ISR  
 #define SAMPLES 800
 #elif defined(ARDUINO_SILABS)
-#define DEBUG 1                 // 在 ISR 期间启用引脚脉冲  
+#define DEBUG 1                 // Enable pin pulse during ISR  
 #define SAMPLES 800
 #endif
 
@@ -1061,11 +1062,11 @@ mic_config_t mic_config{
   .sampling_rate = 16000,
   .buf_size = 1600,
 #if defined(WIO_TERMINAL)
-  .debug_pin = 1                // 切换每个 DAC ISR（如果 DEBUG 设置为 1）
+  .debug_pin = 1                // Toggles each DAC ISR (if DEBUG is set to 1)
 #elif defined(ARDUINO_ARCH_NRF52840)
-  .debug_pin = LED_BUILTIN                // 切换每个 DAC ISR（如果 DEBUG 设置为 1）
+  .debug_pin = LED_BUILTIN                // Toggles each DAC ISR (if DEBUG is set to 1)
 #elif defined(ARDUINO_SILABS)
-  .debug_pin = LED_BUILTIN                // 切换每个 DAC ISR（如果 DEBUG 设置为 1）  
+  .debug_pin = LED_BUILTIN                // Toggles each DAC ISR (if DEBUG is set to 1)  
 #endif
 };
 
@@ -1097,11 +1098,11 @@ void setup() {
   Mic.set_callback(audio_rec_callback);
 
   if (!Mic.begin()) {
-    Serial.println("麦克风初始化失败");
+    Serial.println("Mic initialization failed");
     while (1);
   }
 
-  Serial.println("麦克风初始化完成。");
+  Serial.println("Mic initialization done.");
 
 }
 
@@ -1110,7 +1111,7 @@ void loop() {
 #if defined(WIO_TERMINAL)  
 if (digitalRead(WIO_KEY_A) == LOW && !recording) {
 
-    Serial.println("开始采样");
+    Serial.println("Starting sampling");
     recording = 1;
     record_ready = false;  
 }
@@ -1122,7 +1123,7 @@ if (digitalRead(WIO_KEY_A) == LOW && !recording) {
   if (record_ready)
 #endif  
   {
-  Serial.println("采样完成");
+  Serial.println("Finished sampling");
   
   for (int i = 0; i < SAMPLES; i++) {
     
@@ -1138,14 +1139,14 @@ if (digitalRead(WIO_KEY_A) == LOW && !recording) {
 static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
   
   static uint32_t idx = 0;
-  // 将样本从 DMA 缓冲区复制到推理缓冲区
+  // Copy samples from DMA buffer to inference buffer
 #if defined(WIO_TERMINAL)
   if (recording) 
 #endif
   {
     for (uint32_t i = 0; i < buf_len; i++) {
   
-      // 将 12 位无符号 ADC 值转换为 16 位 PCM（有符号）音频值
+      // Convert 12-bit unsigned ADC value to 16-bit PCM (signed) audio value
 #if defined(WIO_TERMINAL)
       recording_buf[idx++] = filter.step((int16_t)(buf[i] - 1024) * 16);
       //recording_buf[idx++] = (int16_t)(buf[i] - 1024) * 16;  
@@ -1165,10 +1166,9 @@ static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
 }
 ```
 
-### 功能概述
+### Function Overview
 
-
-**麦克风配置**
+**Microphone Configuration**
 
   ```cpp
   mic_config_t mic_config{
@@ -1185,11 +1185,11 @@ static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
 };
   ```
 
-  - mic_config_t: 定义麦克风配置结构体。
-  - channel_cnt: 设置为 1 表示单声道。
-  - sampling_rate: 设置为 16000 Hz 采样频率。
-  - buf_size: 设置为 1600 缓冲区大小。
-  - debug_pin: 根据平台设置调试引脚，用于调试期间的信号指示。
+- mic_config_t: 定义麦克风配置结构体。
+- channel_cnt: 设置为 1 表示单声道。
+- sampling_rate: 设置为 16000 Hz 作为采样频率。
+- buf_size: 设置为 1600 作为缓冲区大小。
+- debug_pin: 根据平台设置调试引脚，用于调试期间的信号指示。
 
 **麦克风实例化**
 
@@ -1202,7 +1202,8 @@ static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
   MG24_ADC_Class Mic(&mic_config);
   #endif
   ```
-  - 条件编译: 为不同平台创建适当的麦克风类实例，使用之前定义的配置。
+
+- 条件编译：为不同平台创建适当的麦克风类实例，使用之前定义的配置。
 
 **录音缓冲区和标志**
 
@@ -1211,9 +1212,10 @@ static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
   volatile uint8_t recording = 0;
   volatile static bool record_ready = false;
   ```
-  - recording_buf: 定义一个 SAMPLES 大小的数组来存储录音样本。
-  - recording: 一个 volatile 变量，标记当前是否正在录音，防止编译器优化。
-  - record_ready: 一个 volatile 静态变量，指示录音是否完成并准备好进行进一步处理。
+
+- recording_buf: 定义一个 SAMPLES 数组来存储录音样本。
+- recording: 一个 volatile 变量，标记当前是否正在录音，以防止编译器优化。
+- record_ready: 一个 volatile 静态变量，指示录音是否完成并准备好进行进一步处理。
 
 **滤波器示例（适用于 WIO Terminal）**
 
@@ -1222,9 +1224,11 @@ static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
   FilterBuHp filter;
   #endif
   ```
-  - 如果在 WIO Terminal 上，创建一个高通滤波器实例用于滤波处理。
+
+- 如果在 WIO Terminal 上，创建一个高通滤波器实例用于滤波处理。
 
 **setup**
+
   ```cpp
   void setup() {
   Serial.begin(115200);
@@ -1245,10 +1249,11 @@ static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
 }
   ```
 
-  - 初始化串口: 以 115200 波特率启动串口通信并等待串口准备就绪。
-  - 设置引脚模式: 在 WIO Terminal 上，将按键引脚设置为输入上拉模式。
-  - 设置回调函数: 调用 Mic.set_callback(audio_rec_callback) 指定录音时的回调函数。
-  - 初始化麦克风: 调用 Mic.begin()，如果初始化失败，打印错误信息并进入死循环。
+- 初始化串口：以115200波特率启动串行通信并等待串口准备就绪。
+
+- 设置引脚模式：在WIO Terminal上，将按键引脚设置为输入上拉模式。
+- 设置回调函数：调用Mic.set_callback(audio_rec_callback)来指定录制音频时的回调函数。
+- 初始化麦克风：调用Mic.begin()，如果初始化失败，打印错误消息并进入死循环。
 
 **loop**
 
@@ -1280,9 +1285,9 @@ if (digitalRead(WIO_KEY_A) == LOW && !recording) {
 }
   ```
 
-  - 检测按键: 在 WIO Terminal 上，当检测到按键被按下且未在录音时开始录音。
-  - 完成采样: 如果未在录音且 record_ready 设置为 true，则打印"Finished sampling"。
-  - 遍历录音缓冲区并打印每个样本值。
+- 检测按键：在 WIO Terminal 上，当检测到按键被按下且未在录音时，开始录音。
+- 完成采样：如果未在录音且 record_ready 设置为 true，则打印"Finished sampling"。
+- 遍历录音缓冲区并打印每个采样值。
 
 **音频录音回调函数**
 
@@ -1311,29 +1316,26 @@ if (digitalRead(WIO_KEY_A) == LOW && !recording) {
 }
   ```
 
-  - 回调函数: 在音频录音期间调用，负责将样本从 DMA 缓冲区复制到录音缓冲区。
-  - 条件编译: 如果在 WIO Terminal 上，使用滤波器处理输入。
-  - 将 12 位无符号 ADC 值转换为 16 位 PCM（有符号）音频值。
-  - 样本填充: 将样本复制到 recording_buf 并更新索引 idx。
-  - 完成录音: 如果填充的样本数达到 SAMPLES，重置索引，标记录音结束并设置 record_ready 为 true。
-
+- 回调函数：在音频录制期间调用，负责将样本从 DMA 缓冲区复制到录制缓冲区。
+- 条件编译：如果在 WIO Terminal 上，使用滤波器处理输入。
+- 将 12 位无符号 ADC 值转换为 16 位 PCM（有符号）音频值。
+- 样本填充：将样本复制到 recording_buf 中并更新索引 idx。
+- 完成录制：如果填充的样本数量达到 SAMPLES，重置索引，标记录制结束并将 record_ready 设置为 true。
 
 ### 结果图表
-
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/mic_result1.png" style={{width:680, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/mic_result.png" style={{width:680, height:'auto'}}/></div>
 
-这是识别声音的波形，当你吹气时，可以清楚地看到波形振荡幅度变大。
+这是识别到的声音的波形，当你吹气时，可以清楚地看到波形振荡幅度变大。
 
-### 更多
+### 更多内容
 
 如果你想要更多示例代码，请点击：-> **"Example -> Seeed Arduino Mic"**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/34.png" style={{width:500, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/35.png" style={{width:500, height:'auto'}}/></div>
-
 
 ## XIAO MG24 Sense 麦克风（Silicon Labs 演示）
 
@@ -1351,27 +1353,27 @@ if (digitalRead(WIO_KEY_A) == LOW && !recording) {
 
 ```cpp
 /*
-   模拟麦克风音量示例
+   Analog microphone volume example
 
-   该示例展示了模拟MEMS麦克风的使用方法，并根据麦克风的输入音量调节
-   板载LED的亮度。
-   此示例与所有Silicon Labs Arduino开发板兼容，但需要
-   板载模拟麦克风或连接到指定引脚的模拟麦克风。
+   The example showcases the usage of analog MEMS microphones and dims the
+   on-board LED based on the microphone's input volume.
+   This example is compatible with all Silicon Labs Arduino boards, however
+   it requires an analog microphone on-board or connected to the specified pin.
 
-   作者：Áron Gyapjas (Silicon Labs)
+   Author: Áron Gyapjas (Silicon Labs)
  */
 
 #include <SilabsMicrophoneAnalog.h>
 
-// 此配置适用于Seeed Studio XIAO MG24上的MSM381ACT001麦克风
-// 请根据您的硬件进行更改
+// This configuration is for the MSM381ACT001 microphone on the Seeed Studio XIAO MG24
+// Change it according to your hardware
 #define MIC_DATA_PIN  PC9
 #define MIC_PWR_PIN   PC8
 #define NUM_SAMPLES   128
 #define MIC_VALUE_MIN 735
 #define MIC_VALUE_MAX 900
 
-// 用于存储采样的缓冲区
+// Buffers for storing samples
 uint32_t mic_buffer[NUM_SAMPLES];
 uint32_t mic_buffer_local[NUM_SAMPLES];
 
@@ -1386,10 +1388,10 @@ void setup()
   pinMode(LED_BUILTIN, OUTPUT);
 
   micAnalog.begin(mic_buffer, NUM_SAMPLES);
-  Serial.println("麦克风已初始化...");
+  Serial.println("Microphone initialized...");
 
   micAnalog.startSampling(mic_samples_ready_cb);
-  Serial.println("采样已开始...");
+  Serial.println("Sampling started...");
 }
 
 void loop()
@@ -1400,48 +1402,47 @@ void loop()
   }
 }
 
-// 当从麦克风获得请求数量的采样时调用
+// Called when the requested amount of samples are available from the microphone
 void mic_samples_ready_cb()
 {
-  // 将数据复制到本地缓冲区以防止被覆盖
+  // Copy data to the local buffer in order to prevent it from overwriting
   memcpy(mic_buffer_local, mic_buffer, NUM_SAMPLES * sizeof(uint32_t));
   data_ready_flag = true;
 }
 
 void calculate_and_display_voice_level() {
-  // 用于平滑语音电平的滚动平均值
+  // Rolling average for smoothing the voice level
   static uint32_t rolling_average = 0u;
 
-  // 停止采样以防止覆盖当前数据
+  // Stop sampling in order to prevent overwriting the current data
   micAnalog.stopSampling();
 
-  // 获取采样值的平均值
+  // Get the average of the sampled values
   uint32_t voice_level = (uint32_t)micAnalog.getAverage(mic_buffer_local, NUM_SAMPLES);
-  // 根据麦克风输出的最小值/最大值调整语音电平
+  // Adjust the voice level relative to minimum/maximum of the microphone's output
   voice_level = constrain(voice_level, MIC_VALUE_MIN, MIC_VALUE_MAX);
-  // 计算滚动平均值
+  // Calculate the rolling average
   rolling_average = (voice_level + rolling_average) / 2;
 
-  // 将当前平均电平映射到亮度
+  // Map the current average level to brightness
   int brightness = map(rolling_average, MIC_VALUE_MIN, MIC_VALUE_MAX, 0, 255);
   if (LED_BUILTIN_ACTIVE == LOW) {
     analogWrite(LED_BUILTIN, 255 - brightness);
   } else {
     analogWrite(LED_BUILTIN, brightness);
   }
-  // 打印平均语音电平（您可以使用串口绘图器在图表上查看此值）
+  // Print the average voice level (you can use the Serial Plotter to view this value on a graph)
   Serial.println(rolling_average);
 
-  // 重新开始采样
+  // Restart sampling
   micAnalog.startSampling(mic_samples_ready_cb);
 }
 
 ```
 
+### Function Overview
 
-### 功能概述
-
-***头文件介绍***
+***Header file introduction***
 
 ```cpp
 #include <SilabsMicrophoneAnalog.h>
@@ -1449,8 +1450,8 @@ void calculate_and_display_voice_level() {
 
 - 包含 `SilabsMicrophoneAnalog.h` 头文件，该文件包含使用模拟麦克风所需的库函数和定义。
 
-
 ***硬件配置***
+
 ```cpp
 #define MIC_DATA_PIN  PC9
 #define MIC_PWR_PIN   PC8
@@ -1459,40 +1460,38 @@ void calculate_and_display_voice_level() {
 #define MIC_VALUE_MAX 900
 ```
 
+- `MIC_DATA_PIN`: 定义麦克风数据引脚为 `PC9`。
 
-- `MIC_DATA_PIN`: 将麦克风数据引脚定义为 `PC9`。
+- `MIC_PWR_PIN`: 定义麦克风电源引脚为 `PC8`。
 
-- `MIC_PWR_PIN`: 将麦克风电源引脚定义为 `PC8`。
-
-- `NUM_SAMPLES`: 将每次采样的样本数定义为 128。
+- `NUM_SAMPLES`: 定义每次采样的样本数为 128。
 
 - `MIC_VALUE_MIN` 和 `MIC_VALUE_MAX`: 定义麦克风输出的最小值和最大值范围。
 
-
 ***缓冲区定义***
+
 ```cpp
 uint32_t mic_buffer[NUM_SAMPLES];
 uint32_t mic_buffer_local[NUM_SAMPLES];
 ```
 
+- `mic_buffer`：用于存储从麦克风收集的原始采样数据。
 
-- `mic_buffer`: 用于存储从麦克风收集的原始采样数据。
-
-- `mic_buffer_local`: 用于临时存储采样数据以防止覆盖。
-
+- `mic_buffer_local`：用于临时存储采样数据以防止覆盖。
 
 ***标志和对象定义***
+
 ```cpp
 volatile bool data_ready_flag = false;
 MicrophoneAnalog micAnalog(MIC_DATA_PIN, MIC_PWR_PIN);
 ```
 
+- `data_ready_flag`：用于指示新采样数据是否准备就绪的标志。
 
-- `data_ready_flag`: 一个标志，用于指示新的采样数据是否准备就绪。
-
-- `micAnalog`: 创建一个 MicrophoneAnalog 对象来控制麦克风。
+- `micAnalog`：创建一个 MicrophoneAnalog 对象来控制麦克风。
 
 ***回调函数声明***
+
 ```cpp
 void mic_samples_ready_cb();
 void calculate_and_display_voice_level();
@@ -1502,8 +1501,8 @@ void calculate_and_display_voice_level();
 
 - `calculate_and_display_voice_level()`: 计算音量并控制LED亮度的函数。
 
-
 ***setup() 函数***
+
 ```cpp
 void setup()
 {
@@ -1518,7 +1517,7 @@ void setup()
 }
 ```
 
-- 以115200的波特率初始化串口通信。
+- 以115200的波特率初始化串行通信。
 
 - 将板载LED引脚设置为输出模式。
 
@@ -1527,6 +1526,7 @@ void setup()
 - 开始采样并设置采样完成时的回调函数。
 
 ***loop()函数***
+
 ```cpp
 void loop()
 {
@@ -1537,13 +1537,12 @@ void loop()
 }
 ```
 
-
 - 检查 `data_ready_flag` 是否为 `true`，表示新数据已准备就绪。
 
 - 如果有新数据可用，调用 `calculate_and_display_voice_level()` 函数来处理数据。
 
-
 ```cpp
+
 void mic_samples_ready_cb()
 {
   memcpy(mic_buffer_local, mic_buffer, NUM_SAMPLES * sizeof(uint32_t));
@@ -1551,7 +1550,7 @@ void mic_samples_ready_cb()
 }
 ```
 
-将采样数据从 `mic_buffer` 复制到 `mic_buffer_local` 以防止覆盖。
+将样本数据从 `mic_buffer` 复制到 `mic_buffer_local` 以防止覆盖。
 
 将 `data_ready_flag` 设置为 `true` 以指示新数据已准备就绪。
 
@@ -1580,23 +1579,23 @@ void calculate_and_display_voice_level() {
 
 - 停止采样以防止数据覆盖。
 
-- 计算采样数据的平均值并将其限制在 `MIC_VALUE_MIN` 和 `MIC_VALUE_MAX` 之间。
+- 计算采样数据的平均值并将其约束在 `MIC_VALUE_MIN` 和 `MIC_VALUE_MAX` 之间。
 
 - 计算滚动平均值以平滑音量变化。
 
-- 将滚动平均值映射到 LED 亮度范围（0 到 255）并调整 LED 亮度。
+- 将滚动平均值映射到LED亮度范围（0到255）并调整LED亮度。
 
 - 通过串口输出滚动平均值以观察音量变化。
 
-- 重新启动采样以收集新的音频数据。
+- 重新开始采样以收集新的音频数据。
 
 ### 结果图表
 
-当我们对着麦克风吹气时，可以看到顶部的 LED 会随着声音变亮和变暗。
+当我们对着麦克风吹气时，可以看到顶部的LED会随着声音变亮和变暗。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/mic.gif" style={{width:500, height:'auto'}}/></div>
 
-### 更多示例
+### 更多内容
 
 如果您想要更多示例代码，请点击：-> **"Example -> SilabsMicrophoneAnalog -> MicrophoneVolume"**
 
