@@ -11,7 +11,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /flash_watcher_agent_firmware
 last_update:
-  date: 2025/09/04
+  date: 2025/09/16
   author: Twelve
 ---
 
@@ -38,7 +38,7 @@ The firmware provided in this guide may require authentication information. If n
 ### Required Software
 
 - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 or later)
-- [Watcher Agent firmware binary file](http://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)
+- [Watcher Agent firmware binary file](https://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)
 
 :::note
 If you already own a Watcher device and its model is **not -EN**, you will need to manually flash the authentication information after flashing the firmware.  
