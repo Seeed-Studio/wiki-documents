@@ -16,7 +16,7 @@ last_update:
 
 本wiki介绍了reTerminal上各种不同的硬件和接口，以及如何使用它们来扩展您的项目想法。
 
-**注意：** 对于某些硬件和接口，在运行Raspberry Pi OS镜像、[Buildroot镜像](https://wiki.seeedstudio.com/cn/reTerminal-Buildroot-SDK)和[Yocto镜像](https://wiki.seeedstudio.com/cn/reTerminal-Yocto)时，使用说明会有所不同。默认步骤适用于Raspberry Pi OS镜像。但是，如果Buildroot镜像和Yocto镜像的说明不同，会有明确的标注。
+**注意：** 对于某些硬件和接口，在运行Raspberry Pi OS镜像、[Buildroot镜像](https://wiki.seeedstudio.com/reTerminal-Buildroot-SDK)和[Yocto镜像](https://wiki.seeedstudio.com/reTerminal-Yocto)时，使用说明会有所不同。默认步骤适用于Raspberry Pi OS镜像。但是，如果Buildroot镜像和Yocto镜像的说明不同，会有明确的标注。
 
 ## 硬件概览
 
@@ -714,7 +714,7 @@ ls -l
 
 ## Micro - SD卡插槽
 
-reTerminal配备了一个**micro-sd卡插槽**。当您想要将操作系统**安装到micro-SD卡上**，同时使用**不带eMMC的CM4模块**时，这非常有用。建议使用至少8GB的卡。点击[此链接](https://wiki.seeedstudio.com/cn/reTerminal/#flash-to-micro-sd-card-cm4-non-emmc-version)了解更多！
+reTerminal配备了一个**micro-sd卡插槽**。当您想要将操作系统**安装到micro-SD卡上**，同时使用**不带eMMC的CM4模块**时，这非常有用。建议使用至少8GB的卡。点击[此链接](https://wiki.seeedstudio.com/reTerminal/#flash-to-micro-sd-card-cm4-non-emmc-version)了解更多！
 
 ### 原理图
 
@@ -774,7 +774,7 @@ sudo apt install arandr
 
 ## USB Type-C 端口
 
-reTerminal 上的 **USB Type-C 端口**可以用来**使用 5V/4A（推荐）为 reTerminal 供电**。但是它也可以用作 **USB 设备**，您可以将 reTerminal 连接到**主机 PC**，reTerminal 将充当 **USB 大容量存储设备**。在这里，您将能够通过 PC 访问 reTerminal 的**板载 eMMC** 并将**操作系统**刷写到 eMMC。点击[这里](https://wiki.seeedstudio.com/cn/reTerminal/#flash-to-emmc-cm4-emmc-version)了解更多！
+reTerminal 上的 **USB Type-C 端口**可以用来**使用 5V/4A（推荐）为 reTerminal 供电**。但是它也可以用作 **USB 设备**，您可以将 reTerminal 连接到**主机 PC**，reTerminal 将充当 **USB 大容量存储设备**。在这里，您将能够通过 PC 访问 reTerminal 的**板载 eMMC** 并将**操作系统**刷写到 eMMC。点击[这里](https://wiki.seeedstudio.com/reTerminal/#flash-to-emmc-cm4-emmc-version)了解更多！
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/type-c.png" alt="pir" width="130" height="auto"/></p>
 

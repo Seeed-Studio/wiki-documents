@@ -934,7 +934,7 @@ candump can0 &
 
 ### 与 reTerminal DM 的使用
 
-- **步骤 1：** 在使用 reTerminal DM 之前，请访问[此 wiki](https://wiki.seeedstudio.com/cn/reterminal-dm) 来开始使用 reTerminal DM
+- **步骤 1：** 在使用 reTerminal DM 之前，请访问[此 wiki](https://wiki.seeedstudio.com/reterminal-dm) 来开始使用 reTerminal DM
 
 - **步骤 2：** 在 reComputer Industrial 上打开终端窗口并执行以下命令来配置和启用 CAN 接口
 

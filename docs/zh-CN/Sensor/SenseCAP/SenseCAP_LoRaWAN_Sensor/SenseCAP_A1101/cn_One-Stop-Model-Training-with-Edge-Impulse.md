@@ -49,7 +49,7 @@ last_update:
 安装好所有软件后，现在是时候将 A1101 连接到 Edge Impulse 了。
 
 :::caution **注意：**
-如果您在 **2023年3月30日** 之后购买了设备，则无需更新 EI 固件，请直接跳转到 [步骤3](https://wiki.seeedstudio.com/cn/One-Stop-Model-Training-with-Edge-Impulse/#step-3-setting-keys) 设置密钥。请注意，更新 EI 固件将覆盖默认模型。
+如果您在 **2023年3月30日** 之后购买了设备，则无需更新 EI 固件，请直接跳转到 [步骤3](https://wiki.seeedstudio.com/One-Stop-Model-Training-with-Edge-Impulse/#step-3-setting-keys) 设置密钥。请注意，更新 EI 固件将覆盖默认模型。
 :::
 
 ### 步骤 1. 更新 BL702 芯片固件
@@ -147,7 +147,7 @@ edge-impulse-daemon --debug
 
 ## 在SenseCap Mate上配置您的模型
 
-- 下载[SenseCAP Mate](https://wiki.seeedstudio.com/cn/Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP/#docusaurus_skipToContent_fallback)
+- 下载[SenseCAP Mate](https://wiki.seeedstudio.com/Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP/#docusaurus_skipToContent_fallback)
   - [Android](https://play.google.com/store/apps/details?id=cc.seeed.sensecapmate&hl=en&gl=US)
   - [iOS](https://apps.apple.com/gb/app/sensecap-mate/id1619944834)
 - 打开SenseCAP Mate并登录

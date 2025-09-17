@@ -16,7 +16,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 :::danger Home Assistantでのレーダー使用範囲について
-RADARファームウェアの更新とESPHome YAMLの更新は2つの異なるソフトウェアです。ESPHome YAMLはOTAで更新できますが、RADARボードはケース内のUSB経由でのみ、SEEDが提供する専用ソフトウェアを使用して更新できます。ESPHomeソフトウェアはカスタマイズできますが、[RADARファームウェアはカスタマイズできません](https://wiki.seeedstudio.com/ja/getting_started_with_mr60bha2_mmwave_kit/#module-firmware-upgrade)。Seeed Studioは、ビジネス用途の場合のみRADARのカスタマイズを許可しています。
+RADARファームウェアの更新とESPHome YAMLの更新は2つの異なるソフトウェアです。ESPHome YAMLはOTAで更新できますが、RADARボードはケース内のUSB経由でのみ、SEEDが提供する専用ソフトウェアを使用して更新できます。ESPHomeソフトウェアはカスタマイズできますが、[RADARファームウェアはカスタマイズできません](https://wiki.seeedstudio.com/getting_started_with_mr60bha2_mmwave_kit/#module-firmware-upgrade)。Seeed Studioは、ビジネス用途の場合のみRADARのカスタマイズを許可しています。
 :::
 
 ## はじめに {#introduction}
@@ -54,7 +54,7 @@ MR60BHA2は、XIAO ESP32C6マイクロコントローラーとの統合用に設
 XIAO ESP32C6 を使用して MR60BHA2 mmWave センサーを Home Assistant と効果的に統合するには、以下の重要なステップに従ってください：
 
 :::caution
-MR60BHA2 モジュールの[ファームウェアを最新バージョンにアップグレード](/ja/getting_started_with_mr60bha2_mmwave_kit#module-firmware-upgrade)していることを確認してください。  
+MR60BHA2 モジュールの[ファームウェアを最新バージョンにアップグレード](/getting_started_with_mr60bha2_mmwave_kit#module-firmware-upgrade)していることを確認してください。  
 最新のファームウェアには、人の存在検知と人員検知機能が追加されています。
 :::
 
@@ -97,9 +97,9 @@ MR60BHA2 mmWave センサーを Home Assistant と正常に統合するには、
 :::tip Home Assistant のインストール
 Seeed Studio の一部の製品について Home Assistant のインストール方法も書いていますので、参考にしてください。
 
-- [ODYSSEY-X86 での Home Assistant 入門](/ja/ODYSSEY-X86-Home-Assistant)
-- [reTerminal での Home Assistant 入門](/ja/reTerminal_Home_Assistant)
-- [LinkStar H68K/reRouter CM4 での Home Assistant 入門](/ja/h68k-ha-esphome)
+- [ODYSSEY-X86 での Home Assistant 入門](/ODYSSEY-X86-Home-Assistant)
+- [reTerminal での Home Assistant 入門](/reTerminal_Home_Assistant)
+- [LinkStar H68K/reRouter CM4 での Home Assistant 入門](/h68k-ha-esphome)
 :::
 
 ### ステップ 2：キットの準備

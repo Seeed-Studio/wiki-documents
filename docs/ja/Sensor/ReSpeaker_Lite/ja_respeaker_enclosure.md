@@ -11,7 +11,10 @@ last_update:
   date: 05/15/2025
   author: Jessie
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 [ReSpeaker Lite Voice Kit](https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-Full-Kit-of-2-Mic-Array-pre-soldered-XIAO-ESP32S3-Mono-Enclosed-Speaker-and-Enclosure.html)のセットアップを安全に組み立てるための詳細でわかりやすいエンクロージャー設置ガイドです。
 

@@ -17,7 +17,7 @@ last_update:
 このwikiでは、特定のアプリケーション向けに独自のAIモデルを訓練し、それをSenseCAP A1101 - LoRaWAN Vision AIセンサーに簡単にデプロイする方法を説明します。さあ、始めましょう！
 
 :::caution **注意:**
-現在のデバイスファームウェアは[EI](https://wiki.seeedstudio.com/ja/One-Stop-Model-Training-with-Edge-Impulse/)と互換性があります。**2023年3月30日**以降にデバイスを購入した場合は、このwikiに従うために、デバイスを[デフォルトファームウェア](https://wiki.seeedstudio.com/ja/Train-Deploy-AI-Model-A1101/#change-device-firmware-after-image-collection)に戻す必要があります。
+現在のデバイスファームウェアは[EI](https://wiki.seeedstudio.com/One-Stop-Model-Training-with-Edge-Impulse/)と互換性があります。**2023年3月30日**以降にデバイスを購入した場合は、このwikiに従うために、デバイスを[デフォルトファームウェア](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101/#change-device-firmware-after-image-collection)に戻す必要があります。
 :::
 
 ## ハードウェア紹介
@@ -54,17 +54,17 @@ YOLOは「You Only Look Once」の略語です。これは、画像内のさま�
 
 このwikiは3つの主要なセクションに分かれています
 
-1. [公開データセットで独自のAIモデルを訓練する](https://wiki.seeedstudio.com/ja/Train-Deploy-AI-Model-A1101#1-train-your-own-ai-model-with-a-public-dataset)
-2. [独自のデータセットで独自のAIモデルを訓練する](https://wiki.seeedstudio.com/ja/Train-Deploy-AI-Model-A1101#2-train-your-own-ai-model-with-your-own-dataset)
-3. [訓練されたAIモデルをSenseCAP A1101にデプロイする](https://wiki.seeedstudio.com/ja/Train-Deploy-AI-Model-A1101#3-deploy-the-trained-model-and-perform-inference)
+1. [公開データセットで独自のAIモデルを訓練する](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#1-train-your-own-ai-model-with-a-public-dataset)
+2. [独自のデータセットで独自のAIモデルを訓練する](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#2-train-your-own-ai-model-with-your-own-dataset)
+3. [訓練されたAIモデルをSenseCAP A1101にデプロイする](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#3-deploy-the-trained-model-and-perform-inference)
 
 最初のセクションは、最少のステップで独自のAIモデルを構築する最も速い方法です。2番目のセクションは、独自のAIモデルを構築するのに時間と労力がかかりますが、知識として確実に価値があります。AIモデルのデプロイに関する3番目のセクションは、最初または2番目のセクションの後に実行できます。
 
 このwikiに従う方法は2つあります：
 
-1. [セクション1](https://wiki.seeedstudio.com/ja/Train-Deploy-AI-Model-A1101#1-train-your-own-ai-model-with-a-public-dataset)に従い、その後[セクション3](https://wiki.seeedstudio.com/ja/Train-Deploy-AI-Model-A1101#3-deploy-the-trained-model-and-perform-inference)に従う - 高速に進める
+1. [セクション1](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#1-train-your-own-ai-model-with-a-public-dataset)に従い、その後[セクション3](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#3-deploy-the-trained-model-and-perform-inference)に従う - 高速に進める
 
-2. [セクション2](https://wiki.seeedstudio.com/ja/Train-Deploy-AI-Model-A1101#2-train-your-own-ai-model-with-your-own-dataset)に従い、その後[セクション3](https://wiki.seeedstudio.com/ja/Train-Deploy-AI-Model-A1101#3-deploy-the-trained-model-and-perform-inference)に従う - 時間をかけて進める
+2. [セクション2](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#2-train-your-own-ai-model-with-your-own-dataset)に従い、その後[セクション3](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#3-deploy-the-trained-model-and-perform-inference)に従う - 時間をかけて進める
 
 ただし、最初に1番目の方法に従い、その後2番目の方法に移ることをお勧めします。
 
@@ -127,7 +127,7 @@ YOLOは「You Only Look Once」の略語です。これは、画像内のさま�
 
 ### デプロイと推論
 
-訓練されたAIモデルをSenseCAP A1101にデプロイして推論を実行する方法を説明する**セクション3**に直接ジャンプしたい場合は、[ここをクリック](https://wiki.seeedstudio.com/ja/Train-Deploy-AI-Model-A1101/#3-deploy-the-trained-model-and-perform-inference)してください。
+訓練されたAIモデルをSenseCAP A1101にデプロイして推論を実行する方法を説明する**セクション3**に直接ジャンプしたい場合は、[ここをクリック](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101/#3-deploy-the-trained-model-and-perform-inference)してください。
 
 ## 2. 独自のデータセットで独自のAIモデルを訓練する
 
@@ -333,7 +333,7 @@ Roboflowには**Label Assist**という機能があり、事前にラベルを�
 
 ### Google ColabでYOLOv5を使用したトレーニング
 
-データセットのアノテーションが完了したら、データセットをトレーニングする必要があります。Google Colab上で実行されるYOLOv5を使用してAIモデルをトレーニングする方法を説明している[この部分](https://wiki.seeedstudio.com/ja/Train-Deploy-AI-Model-A1101/#train-using-yolov5-on-google-colab)にジャンプしてください。
+データセットのアノテーションが完了したら、データセットをトレーニングする必要があります。Google Colab上で実行されるYOLOv5を使用してAIモデルをトレーニングする方法を説明している[この部分](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101/#train-using-yolov5-on-google-colab)にジャンプしてください。
 
 ## 3. トレーニング済みモデルをデプロイして推論を実行する
 

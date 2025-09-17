@@ -238,7 +238,7 @@ Seeed Studio RS485 Vision AI 摄像头是一款智能设备，结合了 ESP32-C3
 
 ### XIAO读取数据
 
-要通过XIAO读取烧录模型的数据，请访问此[wiki](https://wiki.seeedstudio.com/cn/grove_vision_ai_v2_software_support/)，其中详细说明了如何通过XIAO读取Vision AI V2数据。
+要通过XIAO读取烧录模型的数据，请访问此[wiki](https://wiki.seeedstudio.com/grove_vision_ai_v2_software_support/)，其中详细说明了如何通过XIAO读取Vision AI V2数据。
 
 ### 传输数据RS485
 
@@ -250,7 +250,7 @@ Seeed Studio RS485 Vision AI 摄像头是一款智能设备，结合了 ESP32-C3
 如果接入5v，则不需要接入12v，12v和5v选择其中一种电压供电，记住不要同时使用！
 :::
 
-按照上图成功连接后，点击此[wiki](https://wiki.seeedstudio.com/cn/grove_vision_ai_v2_rs485/)链接，获取如何使用代码驱动的更详细说明
+按照上图成功连接后，点击此[wiki](https://wiki.seeedstudio.com/grove_vision_ai_v2_rs485/)链接，获取如何使用代码驱动的更详细说明
 
 ## 资源
 

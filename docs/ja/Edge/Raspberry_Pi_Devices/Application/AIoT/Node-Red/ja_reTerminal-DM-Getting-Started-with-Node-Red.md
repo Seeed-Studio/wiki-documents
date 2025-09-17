@@ -42,7 +42,7 @@ reTerminal DMは、デジタルI/O、CANバス、RS485、RS232などの豊富な
 
 ## Raspbian OS上でのNode-REDのインストールとセットアップ
 
-[reTerminal DMにOSをインストール](/ja/reterminal-dm-flash-OS/)に従ってreTerminal DMに新しいオペレーティングシステムのセットアップが完了したら、以下の手順に従ってNode-REDをセットアップしてください。
+[reTerminal DMにOSをインストール](/reterminal-dm-flash-OS/)に従ってreTerminal DMに新しいオペレーティングシステムのセットアップが完了したら、以下の手順に従ってNode-REDをセットアップしてください。
 
 ### Node-REDのインストール
 
@@ -218,9 +218,9 @@ node-red-restart
 
 # reTerminal DM サポート対象ノード
 
-- [reTerminal DM RS485 ポートと Node-RED](/ja/reTerminal-DM-Node-Red-RS485)
-- [reTerminal DM MQTT と Node-RED](/ja/reTerminal-DM-Node-Red-mqtt)
-- [reTerminal DM CAN BUS と Node-RED](/ja/reTerminal-DM-Node-Red-canbus)
+- [reTerminal DM RS485 ポートと Node-RED](/reTerminal-DM-Node-Red-RS485)
+- [reTerminal DM MQTT と Node-RED](/reTerminal-DM-Node-Red-mqtt)
+- [reTerminal DM CAN BUS と Node-RED](/reTerminal-DM-Node-Red-canbus)
   
 ## 技術サポート & 製品ディスカッション
 

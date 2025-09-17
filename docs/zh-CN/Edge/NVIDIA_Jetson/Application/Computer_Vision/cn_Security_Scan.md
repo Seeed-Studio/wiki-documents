@@ -61,7 +61,7 @@ no_comments: false # for Disqus
 
 **步骤2.** 配置Raspberry Pi SSH端口（可选）。
 
-在部署环境之前，我们可以打开Raspberry Pi SSH端口，并在PC上使用[SSH接口](https://wiki.seeedstudio.com/cn/remote_connect/)远程调用它。
+在部署环境之前，我们可以打开Raspberry Pi SSH端口，并在PC上使用[SSH接口](https://wiki.seeedstudio.com/remote_connect/)远程调用它。
 
 > 注意：确保PC和Raspberry Pi在同一个局域网下。
 
@@ -151,7 +151,7 @@ rm torchvision-0.12.0a0+9b5a3fe-cp39-cp39-linux_aarch64.whl
 
 在这个项目中，我们将在 reComputer J1010 上部署 Triton 推理服务器。为了增强训练模型的交互性和部署便利性，我们将把模型转换为 **ONXX 格式**。
 
-**步骤 1.** 在 reComputer J1010 上[安装](https://wiki.seeedstudio.com/cn/reComputer_J1010_J101_Flash_Jetpack/) Jetpack 4.6.1。
+**步骤 1.** 在 reComputer J1010 上[安装](https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack/) Jetpack 4.6.1。
 
 **步骤 2.** 在 "home/server/docs/examples/model_repository" 中创建一个新文件夹 "opi/1"，然后下载训练好并转换的 [model.onnx](https://drive.google.com/file/d/1RcHK_gthCXHsJLeDOUQ6c3r0RlAUgRfV/view?usp=sharing) 并将其放入 "1" 文件夹中。
 

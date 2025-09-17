@@ -59,7 +59,7 @@ alt="auto" width={800} height="auto"/></p>
 
 #### ステップ1. Riva ASRサーバーのインストール：
 
-Riva ASRサーバーのインストールについては、[このwiki](https://wiki.seeedstudio.com/ja/Local_Voice_Chatbot/#install-riva-server)を参照してください。
+Riva ASRサーバーのインストールについては、[このwiki](https://wiki.seeedstudio.com/Local_Voice_Chatbot/#install-riva-server)を参照してください。
 
 ターミナル（Ctrl+Alt+T）で```sudo docker ps```と入力すると、以下のような表示が見えるはずです。これは最初のステップが完了したことを意味します。
 

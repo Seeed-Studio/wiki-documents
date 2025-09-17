@@ -17,7 +17,7 @@ last_update:
 
 ## 介绍
 
-在之前的教程中，我们解释了如何在 [reTerminal](https://wiki.seeedstudio.com/cn/reTerminal_Home_Assistant)、[ODYSSEY-X86](https://wiki.seeedstudio.com/cn/ODYSSEY-X86-Home-Assistant) 上安装 Home Assistant，并在 PC、智能手机、平板电脑上显示仪表板 UI，以及在 reTerminal LCD 上的 Kiosk 模式。
+在之前的教程中，我们解释了如何在 [reTerminal](https://wiki.seeedstudio.com/reTerminal_Home_Assistant)、[ODYSSEY-X86](https://wiki.seeedstudio.com/ODYSSEY-X86-Home-Assistant) 上安装 Home Assistant，并在 PC、智能手机、平板电脑上显示仪表板 UI，以及在 reTerminal LCD 上的 Kiosk 模式。
 
 本教程将逐步介绍如何通过进行必要的配置来构建仪表板，以及如何使用 Home Assistant 附带的一些重要插件。让我们开始吧！
 

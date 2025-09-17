@@ -23,7 +23,7 @@ last_update:
     <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong></a>
 </div><br />
 
-介绍我们为 XIAO 设计的先进**毫米波传感器模块**，旨在为[跌倒检测](https://wiki.seeedstudio.com/cn/getting_started_with_mr60fda2_mmwave_kit/)和心跳监测提供前沿的监控解决方案。这些模块由强大的 XIAO ESP32 微控制器驱动，内置 Wi-Fi 和蓝牙连接功能，提供精确可靠的检测能力。无论您需要实时监测跌倒还是以敏感精度跟踪心跳，我们的模块都配备了最先进的技术，包括可定制的 RGB LED 和环境光感应。通过 Grove GPIO 端口的便捷扩展选项，这些多功能模块非常适合广泛的应用场景，从智能家居集成到医疗保健监测。
+介绍我们为 XIAO 设计的先进**毫米波传感器模块**，旨在为[跌倒检测](https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/)和心跳监测提供前沿的监控解决方案。这些模块由强大的 XIAO ESP32 微控制器驱动，内置 Wi-Fi 和蓝牙连接功能，提供精确可靠的检测能力。无论您需要实时监测跌倒还是以敏感精度跟踪心跳，我们的模块都配备了最先进的技术，包括可定制的 RGB LED 和环境光感应。通过 Grove GPIO 端口的便捷扩展选项，这些多功能模块非常适合广泛的应用场景，从智能家居集成到医疗保健监测。
 
 ## 特性
 
@@ -102,15 +102,15 @@ last_update:
 
 :::info 注意
 
-默认情况下，MR60BHA2 预装了 [XIAO ESP32C6](/cn/xiao_esp32c6_getting_started)，但它兼容各种其他微控制器进行通信和集成。
+默认情况下，MR60BHA2 预装了 [XIAO ESP32C6](/xiao_esp32c6_getting_started)，但它兼容各种其他微控制器进行通信和集成。
 
 :::
 
 如果这是您第一次在 XIAO 系列中使用 Arduino，请按照适合您开发板的设置指南进行操作：
 
-- **XIAO ESP32S3**：参考 [XIAO ESP32S3 入门指南](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/)。
-- **XIAO ESP32C3**：按照 [Seeed Studio XIAO ESP32C3 入门指南](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/) 进行操作。
-- **XIAO ESP32C6**：按照 [Seeed Studio XIAO ESP32C6 入门指南](https://wiki.seeedstudio.com/cn/xiao_esp32c6_getting_started/) 进行操作。
+- **XIAO ESP32S3**：参考 [XIAO ESP32S3 入门指南](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)。
+- **XIAO ESP32C3**：按照 [Seeed Studio XIAO ESP32C3 入门指南](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/) 进行操作。
+- **XIAO ESP32C6**：按照 [Seeed Studio XIAO ESP32C6 入门指南](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/) 进行操作。
 
 设置好开发板后，请按照以下步骤操作：
 

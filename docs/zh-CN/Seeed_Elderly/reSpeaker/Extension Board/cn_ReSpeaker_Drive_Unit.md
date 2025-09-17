@@ -44,7 +44,7 @@ ReSpeaker Core 包含强大的扩展能力，我们希望它能帮助您轻松�
 
 要驱动 Meow King 驱动单元，需要更新 ReSpeaker Core 的固件。要了解原始库存固件与此固件之间的差异，请参考[这里](https://onedrive.live.com/?authkey=%21AKD3ZD6g0DE2M9E&cid=5219529519B9B6A1&id=5219529519B9B6A1%21720&parId=5219529519B9B6A1%21721&o=OneUp)的更改日志。
 
-现在让我们更新固件。首先，从 [OneDrive](https://1drv.ms/f/s!AqG2uRmVUhlShUyg92Q-oNAxNjPR) 下载 `ramips-openwrt-v1.0.01-LinkIt7688-squashfs-sysupgrade.bin`。将固件复制到 SD 卡，然后将 SD 卡插入 ReSpeaker Core。按照[这里的说明](https://wiki.seeedstudio.com/cn/ReSpeaker_Core/#2-connect-to-serial-console)获取串行控制台。请注意，要使 USB 串行工作，如果我们已经更改了 Arduino 芯片（ATMega32U4）的固件，我们需要恢复[默认固件](https://files.seeedstudio.com/wiki/ReSpeaker_Drive_Unit/res/respeaker_arduino_library/examples/pixels_pattern/pixels_pattern.ino)。获得 USB 串行后，输入以下命令来更新固件：
+现在让我们更新固件。首先，从 [OneDrive](https://1drv.ms/f/s!AqG2uRmVUhlShUyg92Q-oNAxNjPR) 下载 `ramips-openwrt-v1.0.01-LinkIt7688-squashfs-sysupgrade.bin`。将固件复制到 SD 卡，然后将 SD 卡插入 ReSpeaker Core。按照[这里的说明](https://wiki.seeedstudio.com/ReSpeaker_Core/#2-connect-to-serial-console)获取串行控制台。请注意，要使 USB 串行工作，如果我们已经更改了 Arduino 芯片（ATMega32U4）的固件，我们需要恢复[默认固件](https://files.seeedstudio.com/wiki/ReSpeaker_Drive_Unit/res/respeaker_arduino_library/examples/pixels_pattern/pixels_pattern.ino)。获得 USB 串行后，输入以下命令来更新固件：
 
 ```shell
 mount /dev/mmcblk0p1 /mnt

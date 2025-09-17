@@ -24,7 +24,7 @@ last_update:
 
 #### **接続**
 
-向きに注意して、reTerminal を reTerminal E10-1 の上に置き、しっかりと密着するまで押し込みます。この時点で reTerminal E10-1 の電源が入っていれば、reTerminal が起動してシステムにブートします。reTerminal についてもっと知りたい場合は、[**reTerminal**](https://wiki.seeedstudio.com/ja/reTerminal/) をクリックしてください。
+向きに注意して、reTerminal を reTerminal E10-1 の上に置き、しっかりと密着するまで押し込みます。この時点で reTerminal E10-1 の電源が入っていれば、reTerminal が起動してシステムにブートします。reTerminal についてもっと知りたい場合は、[**reTerminal**](https://wiki.seeedstudio.com/reTerminal/) をクリックしてください。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image3.png"/></div>
 

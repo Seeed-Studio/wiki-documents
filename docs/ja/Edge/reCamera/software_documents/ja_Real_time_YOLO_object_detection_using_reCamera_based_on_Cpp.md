@@ -52,8 +52,8 @@ make
 
 ### reCamera の準備
 
-1.**[On Device Models](https://wiki.seeedstudio.com/ja/recamera_on_device_models/)** からデプロイされた **YOLOv11** をダウンロードし、モデルの **.cvimodel** ファイルを reCamera ターミナルの **/home/recamera/** にコピーします。
-2.コードを実行する前に、メモリ消費を防ぐため、reCamera [workspace](http://192.168.42.1/#/workspace) にアクセスしてプロセスを終了してください（**[Develop with c/c++](https://wiki.seeedstudio.com/ja/recamera_develop_with_c_cpp)** を参照）。
+1.**[On Device Models](https://wiki.seeedstudio.com/recamera_on_device_models/)** からデプロイされた **YOLOv11** をダウンロードし、モデルの **.cvimodel** ファイルを reCamera ターミナルの **/home/recamera/** にコピーします。
+2.コードを実行する前に、メモリ消費を防ぐため、reCamera [workspace](http://192.168.42.1/#/workspace) にアクセスしてプロセスを終了してください（**[Develop with c/c++](https://wiki.seeedstudio.com/recamera_develop_with_c_cpp)** を参照）。
 3.次に **/etc/init.d/** に移動し、**S93sscma-supervisor** と **S91sscma-node** の両方のフォルダを **/home/recamera/** または他の場所にバックアップ用にコピーし、メモリ消費とプログラムの占有を防ぐため、元の **S93sscma-supervisor** と **S91sscma-node** フォルダを削除します。
 
 ```

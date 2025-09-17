@@ -93,7 +93,7 @@ Seeed Studio Round Display for XIAOは、すべてのXIAO開発ボードと互�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/round-pinout.png" style={{width:800, height:'auto'}}/></div>
 
-2023年4月7日以降、改良されたRound Displayには、画面のバックライトとバッテリー電圧読み取りを制御する2ビットスイッチが追加されました。ユーザーがピンを使用するか解放するかを自由に選択できます。詳細については[こちら](https://wiki.seeedstudio.com/ja/seeedstudio_round_display_usage/#ke-button--gpio)をクリックしてお読みください。
+2023年4月7日以降、改良されたRound Displayには、画面のバックライトとバッテリー電圧読み取りを制御する2ビットスイッチが追加されました。ユーザーがピンを使用するか解放するかを自由に選択できます。詳細については[こちら](https://wiki.seeedstudio.com/seeedstudio_round_display_usage/#ke-button--gpio)をクリックしてお読みください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/round-display-v1.1-pinout.png" style={{width:800, height:'auto'}}/></div>
 
@@ -161,7 +161,7 @@ Round Displayの推奨向きは、Round Displayに向かって、XIAOのType-C�
 Round Displayを使用するには、XIAOシリーズをプログラムする必要があります。推奨されるプログラミングツールはArduino IDEで、XIAOのArduino環境を設定し、オンボードパッケージを追加する必要があります。
 
 :::tip
-Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
 #### ステップ1. お使いのオペレーティングシステムに応じて、Arduino IDEの安定版をダウンロードしてインストールします。
@@ -176,15 +176,15 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
 
 #### ステップ3. 使用するXIAO用にArduino IDEを設定します。
 
-- 後のルーチンで**Seeed Studio XIAO RP2350**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/getting-started-xiao-rp2350/)**を参照して追加を完了してください。
+- 後のルーチンで**Seeed Studio XIAO RP2350**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/getting-started-xiao-rp2350/)**を参照して追加を完了してください。
 
-- 後のルーチンで**Seeed Studio XIAO nRF52840**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO_BLE/#software-setup)**を参照して追加を完了してください。
+- 後のルーチンで**Seeed Studio XIAO nRF52840**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)**を参照して追加を完了してください。
 
-- 後のルーチンで**Seeed Studio XIAO ESP32C3**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started#software-setup)**を参照して追加を完了してください。
+- 後のルーチンで**Seeed Studio XIAO ESP32C3**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started#software-setup)**を参照して追加を完了してください。
 
-- 後のルーチンで**Seeed Studio XIAO ESP32C6**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/xiao_esp32c6_getting_started/#software-preparation)**を参照して追加を完了してください。
+- 後のルーチンで**Seeed Studio XIAO ESP32C6**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/#software-preparation)**を参照して追加を完了してください。
 
-- 後のルーチンで**Seeed Studio XIAO ESP32S3**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started#software-preparation)**を参照して追加を完了してください。
+- 後のルーチンで**Seeed Studio XIAO ESP32S3**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)**を参照して追加を完了してください。
 
 #### ステップ4. グラフィックスライブラリとスクリーンドライバーライブラリのインストール
 
@@ -216,9 +216,9 @@ Round Displayを使用するには、事前に2つのライブラリをインス
 
 上記のチュートリアルからおそらくわかるように、Round Display は主に **LVGL**、**TFT_eSPI**、**Arduino GFX** ライブラリを使用しています。スペースの都合上、ダイアルの描画例を使って **LVGL** と **TFT_eSPI** ライブラリの使用方法を別々に紹介します。
 
-- **TFT_eSPI** ライブラリのインターフェースと使用方法については、**[こちら](https://wiki.seeedstudio.com/ja/using_lvgl_and_tft_on_round_display#common-interfaces-for-tft-library)** をクリックして学習できます。
+- **TFT_eSPI** ライブラリのインターフェースと使用方法については、**[こちら](https://wiki.seeedstudio.com/using_lvgl_and_tft_on_round_display#common-interfaces-for-tft-library)** をクリックして学習できます。
 
-- **LVGL** ライブラリのインターフェースと使用方法については、**[こちら](https://wiki.seeedstudio.com/ja/using_lvgl_and_tft_on_round_display#common-interfaces-for-lvgl-library)** をクリックして学習できます。
+- **LVGL** ライブラリのインターフェースと使用方法については、**[こちら](https://wiki.seeedstudio.com/using_lvgl_and_tft_on_round_display#common-interfaces-for-lvgl-library)** をクリックして学習できます。
 
 - **Arduino GFX** ライブラリのインターフェースと使用方法については、**[こちら](https://github.com/moononournation/Arduino_GFX)** をクリックして学習できます。
 
@@ -357,7 +357,7 @@ A: Round Displayのスイッチがオンになっていることを確認して�
 
 A: これは競合を引き起こしません。異なるSDカードスロットはチップセレクトによって制御されます。Sense上のmicroSDカードスロットを使用したい場合、チップセレクトピンは **21** にする必要があり、Round Display上のmicroSDカードスロットを使用したい場合、チップセレクトピンは **D2** にする必要があります。
 
-S3 Senseカメラチュートリアルには、ハードウェアとmicroSDカードの両方を使用する[例](https://wiki.seeedstudio.com/ja/xiao_esp32s3_camera_usage/#project-i-making-a-handheld-camera)があります。
+S3 Senseカメラチュートリアルには、ハードウェアとmicroSDカードの両方を使用する[例](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#project-i-making-a-handheld-camera)があります。
 
 ### Q3: XIAO RP2040 でRound DisplayのHardwareTestコードを使用すると、非常に奇妙なC++エラーが発生するのはなぜですか？
 

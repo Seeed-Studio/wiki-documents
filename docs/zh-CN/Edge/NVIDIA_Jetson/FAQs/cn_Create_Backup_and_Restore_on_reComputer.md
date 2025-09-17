@@ -40,7 +40,7 @@ reComputer 是一款功能强大且紧凑的智能边缘盒，可为边缘带来
 
 ## 备份系统
 
-**步骤 1.** 将设备设置为恢复模式，请参考此 [wiki 页面](https://wiki.seeedstudio.com/cn/reComputer_J4012_Flash_Jetpack/#enter-force-recovery-mode)。
+**步骤 1.** 将设备设置为恢复模式，请参考此 [wiki 页面](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/#enter-force-recovery-mode)。
 
 **步骤 2.** 获取与您的 Jetson 模块对应的 JetPack BSP。对于 JetPack 5.1.3，从 [NVIDIA 官方网站](https://developer.nvidia.com/embedded/jetson-linux-r3550) 下载 Jetson Linux R35.5.0 BSP。
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/download_bsp.jpg"/></div>
@@ -137,7 +137,7 @@ sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r recomputer-orin
 
 ## 资源
 
-- [将 JetPack 操作系统刷写到 J401 载板](https://wiki.seeedstudio.com/cn/reComputer_J4012_Flash_Jetpack/)
+- [将 JetPack 操作系统刷写到 J401 载板](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/)
 - [reComputer J30x 数据手册](https://files.seeedstudio.com/products/NVIDIA/reComputer-J301x-datasheet.pdf)
 - [reComputer J40x 数据手册](https://files.seeedstudio.com/products/NVIDIA/reComputer-J401x-datasheet.pdf)
 - [reComputer J30/J40 原理图](https://files.seeedstudio.com/wiki/J401/reComputer_J401_SCH_V1.0.pdf)

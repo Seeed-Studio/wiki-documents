@@ -17,8 +17,8 @@ no_comments: false # for Disqus
 
 開始する前に、以下の2つの記事を読む必要があります。J1010システムが正しく書き込まれており、SDカードドライバーが適切にインストールされていることを確認してください。
 
-- [J1010/J101 Flash Jetpack](https://wiki.seeedstudio.com/ja/reComputer_J1010_J101_Flash_Jetpack/)
-- [J101_Enable_SD_Card](https://wiki.seeedstudio.com/ja/J101_Enable_SD_Card/)
+- [J1010/J101 Flash Jetpack](https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack/)
+- [J101_Enable_SD_Card](https://wiki.seeedstudio.com/J101_Enable_SD_Card/)
 
 ## J101からSDカードへのシステム書き込み
 

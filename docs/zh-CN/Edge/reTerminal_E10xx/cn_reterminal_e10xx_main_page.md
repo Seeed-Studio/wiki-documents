@@ -23,7 +23,7 @@ reTerminal E 系列电子纸显示屏代表了 Seeed Studio 的电子纸显示�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1001 Wiki</font></span></strong>
   </a>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer">
@@ -45,7 +45,7 @@ reTerminal E1001 配备 7.5 英寸单色电子纸显示屏，具有 4 级灰度�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/25.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1002" target="_blank" rel="noopener noreferrer">
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1002 Wiki</font></span></strong>
   </a>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer">
@@ -71,7 +71,7 @@ reTerminal E1002 配备鲜艳的 7.3 英寸全彩电子纸显示屏，采用 ACe
     <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI 🖱️</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_hmi_overview" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft_hmi_overview" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI Wiki</font></span></strong>
   </a>
 </div><br />
@@ -88,29 +88,29 @@ reTerminal E1002 配备鲜艳的 7.3 英寸全彩电子纸显示屏，采用 ACe
 
 reTerminal E 系列 ePaper 显示器支持多个开发平台和框架：
 
-- [reTerminal E 系列 ePaper 显示器与 ESPHome 配合用于 Home Assistant](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome)
+- [reTerminal E 系列 ePaper 显示器与 ESPHome 配合用于 Home Assistant](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome)
 
   解释如何将 reTerminal E 系列 ePaper 显示器插入 Home Assistant，并在 ESPHome 中通过 YAML 编写简单程序来绘制简单图形。
 
-- [reTerminal E 系列 ePaper 显示器在 Home Assistant 中的高级 ESPHome 用法](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced)
+- [reTerminal E 系列 ePaper 显示器在 Home Assistant 中的高级 ESPHome 用法](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced)
 
   解释如何在 Home Assistant 中使用 reTerminal 的硬件和高级功能，如深度睡眠和综合用例。
 
-- [reTerminal E 系列 ePaper 显示器与 TRMNL 配合使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_trmnl)
+- [reTerminal E 系列 ePaper 显示器与 TRMNL 配合使用](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl)
 
   利用专用的 TRMNL 框架进行简化开发和快速部署。
 
-<!-- - [GxEPD2 Library Support](https://wiki.seeedstudio.com/cn/reTerminal_GxEPD2)
+<!-- - [GxEPD2 Library Support](https://wiki.seeedstudio.com/reTerminal_GxEPD2)
 Leverage the powerful GxEPD2 library for advanced ePaper display control and rendering.
 
-- [LVGL + SquareLine Studio](https://wiki.seeedstudio.com/cn/reTerminal_LVGL_SquareLine)
+- [LVGL + SquareLine Studio](https://wiki.seeedstudio.com/reTerminal_LVGL_SquareLine)
 Create rich graphical interfaces using LVGL and the visual SquareLine Studio designer. -->
 
 ## 资源
 
-- [SenseCraft HMI 文档](https://wiki.seeedstudio.com/cn/sensecraft_hmi_overview/)
+- [SenseCraft HMI 文档](https://wiki.seeedstudio.com/sensecraft_hmi_overview/)
 - [ESP32-S3 数据手册](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
-<!-- - [GitHub Repository](/cn/reterminal_e10xx_main_page) -->
+<!-- - [GitHub Repository](/reterminal_e10xx_main_page) -->
 
 ## FCC 声明
 

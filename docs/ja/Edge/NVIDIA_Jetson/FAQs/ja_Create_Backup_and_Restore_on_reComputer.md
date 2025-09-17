@@ -40,7 +40,7 @@ reComputerに必要なソフトウェアとアプリケーションをインス�
 
 ## システムのバックアップ
 
-**ステップ 1.** デバイスをリカバリモードに設定します。この[wikiページ](https://wiki.seeedstudio.com/ja/reComputer_J4012_Flash_Jetpack/#enter-force-recovery-mode)を参照してください。
+**ステップ 1.** デバイスをリカバリモードに設定します。この[wikiページ](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/#enter-force-recovery-mode)を参照してください。
 
 **ステップ 2.** Jetsonモジュールに対応するJetPack BSPを取得します。JetPack 5.1.3の場合、[NVIDIAの公式サイト](https://developer.nvidia.com/embedded/jetson-linux-r3550)からJetson Linux R35.5.0 BSPをダウンロードしてください。
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/download_bsp.jpg"/></div>
@@ -137,7 +137,7 @@ sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r recomputer-orin
 
 ## リソース
 
-- [J401キャリアボードにJetPack OSをフラッシュ](https://wiki.seeedstudio.com/ja/reComputer_J4012_Flash_Jetpack/)
+- [J401キャリアボードにJetPack OSをフラッシュ](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/)
 - [reComputer J30x データシート](https://files.seeedstudio.com/products/NVIDIA/reComputer-J301x-datasheet.pdf)
 - [reComputer J40x データシート](https://files.seeedstudio.com/products/NVIDIA/reComputer-J401x-datasheet.pdf)
 - [reComputer J30/J40 回路図](https://files.seeedstudio.com/wiki/J401/reComputer_J401_SCH_V1.0.pdf)

@@ -54,7 +54,7 @@ last_update:
 
 只需前往官方[链接](https://micropython.org/download/SEEED_XIAO_SAMD21/)并下载最新固件
 
-也可以[编译您自己的固件](https://wiki.seeedstudio.com/cn/Compiling_MicroPython_for_embedded_devices/)以确保安全性和对最新功能的支持，但这不是必需的。
+也可以[编译您自己的固件](https://wiki.seeedstudio.com/Compiling_MicroPython_for_embedded_devices/)以确保安全性和对最新功能的支持，但这不是必需的。
 
 ## 软件开发
 
@@ -121,7 +121,7 @@ tim.init(period=500, mode=Timer.PERIODIC, callback=fun)
 
 我们需要准备：
 
-- [Seeeduino-XIAO-扩展板](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-Expansion-Board/)
+- [Seeeduino-XIAO-扩展板](https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board/)
 - [Grove-继电器](https://www.seeedstudio.com/Grove-Relay.html)
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
@@ -157,7 +157,7 @@ tim.init(period=200, mode=Timer.PERIODIC, callback=fun)
 我们需要准备：
 
 - [用于人体检测的多普勒雷达](https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Sleep-Breathing-Monitoring-Module-p-5304.html?queryID=32e8107bce436db9b886cf1b8c698667&objectID=5304&indexName=bazaar_retailer_products)
-- [Seeeduino-XIAO-Expansion-Board](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-Expansion-Board/)
+- [Seeeduino-XIAO-Expansion-Board](https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board/)
 - [Grove-Relay](https://www.seeedstudio.com/Grove-Relay.html)
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 

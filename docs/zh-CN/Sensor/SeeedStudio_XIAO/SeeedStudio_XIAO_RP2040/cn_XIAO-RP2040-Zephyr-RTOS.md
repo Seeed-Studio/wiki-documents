@@ -14,7 +14,7 @@ last_update:
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-rp2040.png"/></div>
 
-本wiki介绍了[Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/cn/xiao_rp2040_getting_started/)对[Zephyr](https://www.zephyrproject.org/)的支持。通过本指南的帮助，您将能够利用该开发板的可用功能集。
+本wiki介绍了[Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/xiao_rp2040_getting_started/)对[Zephyr](https://www.zephyrproject.org/)的支持。通过本指南的帮助，您将能够利用该开发板的可用功能集。
 
 ## 什么是[Zephyr](https://www.zephyrproject.org/)
 
@@ -680,7 +680,7 @@ west flash -r uf2
 ## ✨ 贡献者项目
 
 - 此项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=57293558)支持。
-- 感谢 **Tim 的努力**，您的工作将被[展示](https://wiki.seeedstudio.com/cn/Honorary-Contributors/)。
+- 感谢 **Tim 的努力**，您的工作将被[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)。
 
 ## 技术支持与产品讨论
 

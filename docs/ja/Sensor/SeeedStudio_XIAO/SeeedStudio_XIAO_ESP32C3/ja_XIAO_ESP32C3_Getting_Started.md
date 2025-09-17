@@ -17,7 +17,7 @@ last_update:
 
 ## はじめに
 
-**Seeed Studio XIAO ESP32C3**は、Espressif **ESP32-C3** WiFi/Bluetooth デュアルモードチップをベースとしたIoTミニ開発ボードで、効率的なアーキテクチャで強力なコンピューティング性能を提供する**32ビットRISC-V CPU**を搭載しています。優れた無線周波数性能を持ち、**IEEE 802.11 b/g/n WiFi**および**Bluetooth 5 (BLE)**プロトコルをサポートしています。このボードには、ワイヤレスアプリケーションの信号強度を向上させるための外部アンテナが付属しています。また、**小型で精巧なフォームファクター**と**片面実装可能な設計**を組み合わせています。豊富なインターフェースを備え、**PWMピン**として使用できる**11個のデジタルI/O**と、**ADCピン**として使用できる**4個のアナログI/O**を搭載しています。**UART、I2C、SPI**などの4つのシリアルインターフェースをサポートしています。ボード上には小さな**リセットボタン**と**ブートローダーモードボタン**もあります。XIAO ESP32C3は[Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html)および[Seeeduino XIAO Expansion board](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO-Expansion-Board)と完全に互換性がありますが、Seeeduino XIAO Expansion boardについては、ボード上のSWDスプリングコンタクトは互換性がありません。
+**Seeed Studio XIAO ESP32C3**は、Espressif **ESP32-C3** WiFi/Bluetooth デュアルモードチップをベースとしたIoTミニ開発ボードで、効率的なアーキテクチャで強力なコンピューティング性能を提供する**32ビットRISC-V CPU**を搭載しています。優れた無線周波数性能を持ち、**IEEE 802.11 b/g/n WiFi**および**Bluetooth 5 (BLE)**プロトコルをサポートしています。このボードには、ワイヤレスアプリケーションの信号強度を向上させるための外部アンテナが付属しています。また、**小型で精巧なフォームファクター**と**片面実装可能な設計**を組み合わせています。豊富なインターフェースを備え、**PWMピン**として使用できる**11個のデジタルI/O**と、**ADCピン**として使用できる**4個のアナログI/O**を搭載しています。**UART、I2C、SPI**などの4つのシリアルインターフェースをサポートしています。ボード上には小さな**リセットボタン**と**ブートローダーモードボタン**もあります。XIAO ESP32C3は[Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html)および[Seeeduino XIAO Expansion board](https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board)と完全に互換性がありますが、Seeeduino XIAO Expansion boardについては、ボード上のSWDスプリングコンタクトは互換性がありません。
 
 上記で強調した機能に関して、XIAO ESP32C3は**高性能、低消費電力、コスト効率の高いIoTミニ開発ボード**として位置づけられ、**低消費電力IoTアプリケーションおよびワイヤレスウェアラブルアプリケーション**に適しています。
 

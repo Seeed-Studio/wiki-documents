@@ -48,8 +48,8 @@ reComputer R1000は、**PLC、VFD、HMI、エネルギーメーター、BMS**シ
 
 ### ソフトウェアの準備
 
-reComputer R1000は、Raspberry Pi OSがプリインストールされた状態でお手元に届きます。このデバイスを初回起動する場合は、[Getting Started](https://wiki.seeedstudio.com/ja/recomputer_r/)Wikiをお読みください。
-[Node-REDスタートガイド](https://wiki.seeedstudio.com/ja/recomputer_r1000_getting_started_node_red/)を準備しています。このwikiに進む前に、このガイドを確認することをお勧めします。
+reComputer R1000は、Raspberry Pi OSがプリインストールされた状態でお手元に届きます。このデバイスを初回起動する場合は、[Getting Started](https://wiki.seeedstudio.com/recomputer_r/)Wikiをお読みください。
+[Node-REDスタートガイド](https://wiki.seeedstudio.com/recomputer_r1000_getting_started_node_red/)を準備しています。このwikiに進む前に、このガイドを確認することをお勧めします。
 
 ### Modbus TCP/IPのEthernet設定を構成する
 

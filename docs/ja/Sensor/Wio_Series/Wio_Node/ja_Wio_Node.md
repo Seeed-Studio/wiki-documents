@@ -10,7 +10,10 @@ last_update:
   date: 05/15/2025
   author: gunengyu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 IoTプロジェクトを構築することは非常に魅力的です。周囲のほぼすべてのものを接続して制御することができます。しかし、IoTアプリケーションを構築するのは簡単ではありません。ハードウェア、プログラミング、ジャンパーワイヤー、はんだ付けなど、多くの作業が必要です。熟練したユーザーでもすべての作業を処理するのに数時間を費やすことがあり、初心者にとってはなおさらです。IoTプロジェクトの開発を簡素化するために、Seeedは**[Wio Link](https://www.seeedstudio.com/wiki/Wio_Link)**を**[Kickstarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search)**で発表し、大成功を収めました。Kickstarterでのスローガンは、Wio Linkの主な特徴をよく表しています。
 

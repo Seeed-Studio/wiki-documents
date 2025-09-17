@@ -22,7 +22,7 @@ last_update:
 
 ### デバイス設定
 
-開始する前に、Wio Tracker 1110 Dev Board の [ユーザーガイド](https://wiki.seeedstudio.com/ja/Get_Started_with_Wio-Trakcer_1110/) を読み、プラットフォームを `SenseCAP` に選択していることを確認してください。
+開始する前に、Wio Tracker 1110 Dev Board の [ユーザーガイド](https://wiki.seeedstudio.com/Get_Started_with_Wio-Trakcer_1110/) を読み、プラットフォームを `SenseCAP` に選択していることを確認してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio-1110getstart/4.jpeg" alt="pir" width={300} height="auto" /></p>
 

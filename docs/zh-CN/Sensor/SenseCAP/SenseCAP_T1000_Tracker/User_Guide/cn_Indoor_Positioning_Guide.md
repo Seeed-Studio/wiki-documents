@@ -24,7 +24,7 @@ last_update:
 以下是简要总结，但请阅读文档的其余部分以获得完整的了解。
 
 ● 登录 Traxmate 并创建您的建筑物。<br/>
-● 部署更多 Wi-Fi 和/或 [E5 蓝牙定位信标部署](https://wiki.seeedstudio.com/cn/bluetooth_beacon_for_SenseCAP_Traker/#deployment-guidelines)（如果需要）。<br/>
+● 部署更多 Wi-Fi 和/或 [E5 蓝牙定位信标部署](https://wiki.seeedstudio.com/bluetooth_beacon_for_SenseCAP_Traker/#deployment-guidelines)（如果需要）。<br/>
 ● 执行室内勘测以检查已安装的 Wi-Fi 和/或蓝牙基础设施提供的精度。<br/>
 ● 进行新的室内勘测以验证。<br/>
 ● 重复上述步骤或开始使用室内定位解决方案。<br/>
@@ -40,7 +40,7 @@ last_update:
 蓝牙信标通常由电池供电，因此可以更容易地部署。Wi-Fi 接入点具有更长的范围。密集的蓝牙信标网格比稀疏的 Wi-Fi 接入点网格提供更好的精度。
 :::
 
-查看 [E5 蓝牙定位信标部署](https://wiki.seeedstudio.com/cn/bluetooth_beacon_for_SenseCAP_Traker/#deployment-guidelines) 了解更多详情。
+查看 [E5 蓝牙定位信标部署](https://wiki.seeedstudio.com/bluetooth_beacon_for_SenseCAP_Traker/#deployment-guidelines) 了解更多详情。
 
 ## 添加地点
 
@@ -134,7 +134,7 @@ Android 通常对应用程序扫描 Wi-Fi 的频率有限制，设置为每 30 �
 
 SenseCAP T1000 Tracker 收集 Wi-Fi 和蓝牙扫描信息、MAC 地址和信号强度，并将其发送到 The Things Stack，然后通过 API 发送到 Traxmate 门户。
 
-请先查看[连接到 TTN](https://wiki.seeedstudio.com/cn/SenseCAP_T1000_tracker_TTN/)以正确设置跟踪器。
+请先查看[连接到 TTN](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/)以正确设置跟踪器。
 
 ### 添加设备
 

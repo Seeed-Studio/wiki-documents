@@ -16,7 +16,7 @@ last_update:
 ---
 ## はじめに
 
-[reTerminal DMデバイスからMQTTプロトコルを使用してAWS IoT Coreにデータを送信する](https://wiki.seeedstudio.com/ja/reTerminal-DM_AWS_first/)プロセスについて説明しました。このチュートリアルは、前述のプロセスとシームレスに統合されます。このチュートリアルでは、N3uron Edge IIoTプラットフォームとAWS IoT Core間のインターフェースの複雑さについて詳しく説明します。
+[reTerminal DMデバイスからMQTTプロトコルを使用してAWS IoT Coreにデータを送信する](https://wiki.seeedstudio.com/reTerminal-DM_AWS_first/)プロセスについて説明しました。このチュートリアルは、前述のプロセスとシームレスに統合されます。このチュートリアルでは、N3uron Edge IIoTプラットフォームとAWS IoT Core間のインターフェースの複雑さについて詳しく説明します。
 
 ## 前提条件
 
@@ -42,9 +42,9 @@ last_update:
 
 ### ソフトウェア
 
-[N3uronを始める](https://wiki.seeedstudio.com/ja/reTerminalDM_N3uron_Get_Start/)ガイドを学習することを強く推奨します。このガイドでは、N3uronのWebインターフェースのナビゲーション、Web UIやWeb Visionモジュールなどの概念の理解、タグの概念の把握、基本的なダッシュボードの作成に関する重要な洞察を提供しています。これらの基礎をまだ探索していない場合は、さらに進む前に行うことをお勧めします。提供されたリンクからガイドにアクセスできます。
+[N3uronを始める](https://wiki.seeedstudio.com/reTerminalDM_N3uron_Get_Start/)ガイドを学習することを強く推奨します。このガイドでは、N3uronのWebインターフェースのナビゲーション、Web UIやWeb Visionモジュールなどの概念の理解、タグの概念の把握、基本的なダッシュボードの作成に関する重要な洞察を提供しています。これらの基礎をまだ探索していない場合は、さらに進む前に行うことをお勧めします。提供されたリンクからガイドにアクセスできます。
 
-[AWS IoT CoreとreTerminal DMの統合](https://wiki.seeedstudio.com/ja/reTerminal-DM_AWS_first/)に関するガイドをまだ探索していない場合は、そちらも確認することをお勧めします。この包括的なガイドでは、基礎から高度なIoT Coreへの値の公開手順まですべてをカバーしています。**現在のチュートリアルを補完するものなので、この内容にも慣れ親しんでおくことが有益です**。
+[AWS IoT CoreとreTerminal DMの統合](https://wiki.seeedstudio.com/reTerminal-DM_AWS_first/)に関するガイドをまだ探索していない場合は、そちらも確認することをお勧めします。この包括的なガイドでは、基礎から高度なIoT Coreへの値の公開手順まですべてをカバーしています。**現在のチュートリアルを補完するものなので、この内容にも慣れ親しんでおくことが有益です**。
 
 ## N3uron IIoTプラットフォームの設定
 

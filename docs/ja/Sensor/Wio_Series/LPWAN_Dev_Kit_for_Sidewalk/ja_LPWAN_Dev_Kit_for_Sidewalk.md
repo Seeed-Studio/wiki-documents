@@ -11,7 +11,10 @@ last_update:
   date: 05/15/2025
   author: Jessie
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 LPWAN Asset Tracker開発キットは、[Wio-WM1110 Wireless Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html)を基盤としており、パッシブWiFiスキャンまたはGNSSを通じて位置データを収集し、BLEおよびLoRa無線を使用してAmazon Sidewalkネットワークブリッジと通信します。
 

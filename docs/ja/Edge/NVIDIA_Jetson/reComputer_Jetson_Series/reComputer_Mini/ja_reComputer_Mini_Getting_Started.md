@@ -473,7 +473,7 @@ sudo apt install nvidia-jetpack
 ## ハードウェアインターフェースの使用方法
 
 :::info
-ハードウェアインターフェースの詳細な仕様と使用方法について詳しく知りたい場合は、[このwiki](https://wiki.seeedstudio.com/ja/recomputer_jetson_mini_hardware_interfaces_usage/)を参照してください。
+ハードウェアインターフェースの詳細な仕様と使用方法について詳しく知りたい場合は、[このwiki](https://wiki.seeedstudio.com/recomputer_jetson_mini_hardware_interfaces_usage/)を参照してください。
 :::
 
 ## リソース

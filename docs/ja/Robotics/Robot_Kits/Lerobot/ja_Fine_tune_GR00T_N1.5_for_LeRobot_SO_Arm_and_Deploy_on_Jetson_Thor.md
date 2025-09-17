@@ -606,7 +606,7 @@ pip3 install numpy==1.26.0  # This should match torchvision
 
 サーボキャリブレーションプロセスについては、この文書では詳しく説明していません。詳細については、以下の記事を参照してください：
 
-[click me](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#%E6%A0%A1%E5%87%86%E8%88%B5%E6%9C%BA%E5%B9%B6%E7%BB%84%E8%A3%85%E6%9C%BA%E6%A2%B0%E8%87%82)
+[click me](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#%E6%A0%A1%E5%87%86%E8%88%B5%E6%9C%BA%E5%B9%B6%E7%BB%84%E8%A3%85%E6%9C%BA%E6%A2%B0%E8%87%82)
 
 ### SO-ARMキャリブレーション
 

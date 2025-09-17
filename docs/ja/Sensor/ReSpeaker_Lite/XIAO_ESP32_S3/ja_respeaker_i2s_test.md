@@ -11,7 +11,10 @@ last_update:
   date: 05/15/2025
   author: Jessie
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 このプロジェクトは、ReSpeaker Lite ボード上の I2S インターフェースの機能を検証するためのテストスケッチです。このボードには [XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) マイクロコントローラーとマイクアレイが統合されています。このスケッチは、矩形波オーディオ信号を生成し、それを I2S インターフェースに書き込み、オンボードのマイクアレイからサンプルを読み取ることで、I2S の送受信の整合性を確認します。
 

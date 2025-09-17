@@ -43,14 +43,14 @@ last_update:
 
 对于 Seeed Jetson 驱动设备的刷写指南，请参考以下链接：
 
-- [reComputer J1010 | J101](https://wiki.seeedstudio.com/cn/reComputer_J1010_J101_Flash_Jetpack)
-- [reComputer J2021 | J202](https://wiki.seeedstudio.com/cn/reComputer_J2021_J202_Flash_Jetpack)
-- [reComputer J1020 | A206](https://wiki.seeedstudio.com/cn/reComputer_J1020_A206_Flash_JetPack)
-- [reComputer J4012 | J401](https://wiki.seeedstudio.com/cn/reComputer_J4012_Flash_Jetpack)
-- [A203 载板](https://wiki.seeedstudio.com/cn/reComputer_A203_Flash_System)
-- [A205 载板](https://wiki.seeedstudio.com/cn/reComputer_A205_Flash_System)
-- [Jetson Xavier AGX H01 套件](https://wiki.seeedstudio.com/cn/Jetson_Xavier_AGX_H01_Driver_Installation)
-- [Jetson AGX Orin 32GB H01 套件](https://wiki.seeedstudio.com/cn/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack)
+- [reComputer J1010 | J101](https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack)
+- [reComputer J2021 | J202](https://wiki.seeedstudio.com/reComputer_J2021_J202_Flash_Jetpack)
+- [reComputer J1020 | A206](https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack)
+- [reComputer J4012 | J401](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack)
+- [A203 载板](https://wiki.seeedstudio.com/reComputer_A203_Flash_System)
+- [A205 载板](https://wiki.seeedstudio.com/reComputer_A205_Flash_System)
+- [Jetson Xavier AGX H01 套件](https://wiki.seeedstudio.com/Jetson_Xavier_AGX_H01_Driver_Installation)
+- [Jetson AGX Orin 32GB H01 套件](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack)
 
 :::note
 确保刷写 JetPack 版本 5.1.1，因为这是我们为本 wiki 验证过的版本
@@ -606,7 +606,7 @@ yolo detect predict model=yolov8n.engine source='0' show=True
 
 如果您不想自己收集数据，您也可以选择现成可用的公共数据集。您可以下载许多公开可用的数据集，如[COCO数据集](https://cocodataset.org)、[Pascal VOC数据集](http://host.robots.ox.ac.uk/pascal/VOC)等等。[Roboflow Universe](https://universe.roboflow.com)是一个推荐的平台，它提供了广泛的数据集，拥有[90,000+个数据集和6600万+张图像](https://blog.roboflow.com/computer-vision-datasets-and-apis)可用于构建计算机视觉模型。此外，您也可以简单地在Google上搜索开源数据集，从各种可用的数据集中进行选择。
 
-如果您有自己的数据集并想要标注图像，我们建议您使用[Roboflow](https://roboflow.com)提供的标注工具。请参考[wiki的这一部分](https://wiki.seeedstudio.com/cn/YOLOv5-Object-Detection-Jetson/#annotate-dataset-using-roboflow)了解更多信息。您也可以参考Roboflow的[这个指南](https://docs.roboflow.com/annotate/use-roboflow-annotate)来了解标注。
+如果您有自己的数据集并想要标注图像，我们建议您使用[Roboflow](https://roboflow.com)提供的标注工具。请参考[wiki的这一部分](https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/#annotate-dataset-using-roboflow)了解更多信息。您也可以参考Roboflow的[这个指南](https://docs.roboflow.com/annotate/use-roboflow-annotate)来了解标注。
 
 ### 训练
 
@@ -639,7 +639,7 @@ yolo detect predict model=yolov8n.engine source='0' show=True
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/11.jpg
 " style={{width:1000, height:'auto'}}/></div>
 
-- **步骤5.** 创建一个新的工作空间，并按照我们准备的[这个wiki指南](https://wiki.seeedstudio.com/cn/YOLOv5-Object-Detection-Jetson/#annotate-dataset-using-roboflow)在工作空间下创建一个新项目。您也可以[查看这里](https://blog.roboflow.com/getting-started-with-roboflow)从官方Roboflow文档了解更多信息。
+- **步骤5.** 创建一个新的工作空间，并按照我们准备的[这个wiki指南](https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/#annotate-dataset-using-roboflow)在工作空间下创建一个新项目。您也可以[查看这里](https://blog.roboflow.com/getting-started-with-roboflow)从官方Roboflow文档了解更多信息。
 
 - **步骤6.** 一旦您的工作空间中有几个项目，它将如下所示
 

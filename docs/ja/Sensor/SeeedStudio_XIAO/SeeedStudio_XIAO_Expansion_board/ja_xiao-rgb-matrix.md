@@ -71,7 +71,7 @@ XIAO用6x10 RGB-MATRIXのクイックスタートガイドへようこそ。こ�
 
 このチュートリアルではXIAO RP2040をマスターとして使用します。XIAO RP2040を初めて使用する場合は、その使用開始Wikiをお読みください。
 
-- [Seeed Studio XIAO RP2040 with Arduino](https://wiki.seeedstudio.com/ja/XIAO-RP2040-with-Arduino/)
+- [Seeed Studio XIAO RP2040 with Arduino](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/)
 
 一方、このチュートリアルで提供されるすべてのサンプルプログラムは他のXIAOでも動作し、使用しているXIAOに応じてArduino開発環境を事前に設定することもできます。
 
@@ -79,7 +79,7 @@ XIAO用6x10 RGB-MATRIXのクイックスタートガイドへようこそ。こ�
 
 :::tip
 
-Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
 ### 機能

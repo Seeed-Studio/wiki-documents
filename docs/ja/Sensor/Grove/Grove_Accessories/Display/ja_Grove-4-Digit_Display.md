@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 [<img src="https://files.seeedstudio.com/wiki/Grove-4-Digit_Display/img/Grove-4_digit_display.jpg" alt="pir" width={600} height="auto" />](https://www.seeedstudio.com/depot/grove-4digital-display-p-1198.html)
 

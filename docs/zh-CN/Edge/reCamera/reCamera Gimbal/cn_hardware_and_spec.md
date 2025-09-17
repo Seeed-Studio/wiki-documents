@@ -287,7 +287,7 @@ wpa_cli status                                  # Checking connection status
 
 **10 用户按钮**位于 **reCamera Gimbal** Board-B401 上。如果您想要重置设备（例如忘记设备密码），您可以长按用户按钮，然后连接设备电源。当设备的红灯持续亮起而不是闪烁时，松开用户按钮。
 
-如果您想要将设备固件恢复到特定版本，请访问[操作系统版本控制](https://wiki.seeedstudio.com/cn/recamera_os_version_control)。
+如果您想要将设备固件恢复到特定版本，请访问[操作系统版本控制](https://wiki.seeedstudio.com/recamera_os_version_control)。
 
 #### 重启按钮
 

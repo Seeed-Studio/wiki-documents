@@ -20,7 +20,7 @@ last_update:
 
 ## 软件设置
 
-请确保首先按照["Seeed Studio XIAO nRF52840 (Sense) 入门指南"](https://wiki.seeedstudio.com/cn/XIAO-BLE-Sense-Getting-Started)教程进行初始硬件和软件设置。
+请确保首先按照["Seeed Studio XIAO nRF52840 (Sense) 入门指南"](https://wiki.seeedstudio.com/XIAO-BLE-Sense-Getting-Started)教程进行初始硬件和软件设置。
 
 现在让我们继续进行其余的软件设置。
 

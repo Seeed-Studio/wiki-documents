@@ -52,7 +52,7 @@ FUXA 是一个强大的基于 Web 的软件，能够快速创建和部署可扩�
 
 ### 软件准备
 
-我们建议从官方网站安装 **Bullesye** 版本的 Raspberry Pi 64 位操作系统。如果您希望安装新的 Raspbian 操作系统，请按照此[**指南**](https://wiki.seeedstudio.com/cn/reterminal-dm-flash-OS/)中概述的步骤进行操作。
+我们建议从官方网站安装 **Bullesye** 版本的 Raspberry Pi 64 位操作系统。如果您希望安装新的 Raspbian 操作系统，请按照此[**指南**](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/)中概述的步骤进行操作。
 
 ## 在 reTerminal DM 上安装 FUXA
 

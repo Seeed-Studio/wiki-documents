@@ -148,11 +148,11 @@ Sonoff ZBDongle-E ドングルには、Zigbee デバイスとの通信のみを�
 
 ### Matter 温湿度センサーデバイス
 
-XIAO MG24 を Matter デバイスとして初めて使用する場合は、セットアップ方法について、この[wiki](https://wiki.seeedstudio.com/ja/xiao_mg24_matter/)を参照してください。
+XIAO MG24 を Matter デバイスとして初めて使用する場合は、セットアップ方法について、この[wiki](https://wiki.seeedstudio.com/xiao_mg24_matter/)を参照してください。
 
 - **ステップ 1.** Github から[ライブラリ](https://github.com/Seeed-Studio/Grove_SHT31_Temp_Humi_Sensor)をダウンロードします。
 
-- **ステップ 2.** [ライブラリのインストール方法](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library)を参照して、Arduino用のライブラリをインストールします。
+- **ステップ 2.** [ライブラリのインストール方法](https://wiki.seeedstudio.com/How_to_install_Arduino_Library)を参照して、Arduino用のライブラリをインストールします。
 
 - **ステップ 3.** Arduino IDEを再起動します。新しいスケッチを開き、以下のコードを新しいスケッチにコピーします。
 

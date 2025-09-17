@@ -23,7 +23,7 @@ reTerminal E シリーズ ePaper ディスプレイは、低消費電力情報�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1001 Wiki</font></span></strong>
   </a>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer">
@@ -45,7 +45,7 @@ reTerminal E1001 は、4レベルグレースケール機能を備えた7.5イ�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/25.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1002" target="_blank" rel="noopener noreferrer">
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1002 Wiki</font></span></strong>
   </a>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer">
@@ -71,7 +71,7 @@ reTerminal E1002 は、ACeP（Advanced Color ePaper）技術を採用した鮮�
     <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI 🖱️</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/sensecraft_hmi_overview" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft_hmi_overview" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI Wiki</font></span></strong>
   </a>
 </div><br />
@@ -88,29 +88,29 @@ reTerminal E1002 は、ACeP（Advanced Color ePaper）技術を採用した鮮�
 
 reTerminal E Series ePaper Displayは複数の開発プラットフォームとフレームワークをサポートしています：
 
-- [reTerminal E Series ePaper Display Work with ESPHome for Home Assistant](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome)
+- [reTerminal E Series ePaper Display Work with ESPHome for Home Assistant](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome)
 
   reTerminal E Series ePaper DisplayをHome Assistantに接続し、ESPHomeでYAMLを使用して簡単なグラフを描画する簡単なプログラムの書き方を説明します。
 
-- [Advanced ESPHome Usage of reTerminal E Series ePaper Display in Home Assistant](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced)
+- [Advanced ESPHome Usage of reTerminal E Series ePaper Display in Home Assistant](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced)
 
   reTerminalのハードウェアとディープスリープなどの高度な機能、およびHome Assistantでの包括的な使用例の使い方を説明します。
 
-- [reTerminal E Series ePaper Display Works with TRMNL](https://wiki.seeedstudio.com/ja/reterminal_e10xx_trmnl)
+- [reTerminal E Series ePaper Display Works with TRMNL](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl)
 
   専用のTRMNLフレームワークを活用して、簡素化された開発と迅速なデプロイメントを実現します。
 
-<!-- - [GxEPD2 Library Support](https://wiki.seeedstudio.com/ja/reTerminal_GxEPD2)
+<!-- - [GxEPD2 Library Support](https://wiki.seeedstudio.com/reTerminal_GxEPD2)
 Leverage the powerful GxEPD2 library for advanced ePaper display control and rendering.
 
-- [LVGL + SquareLine Studio](https://wiki.seeedstudio.com/ja/reTerminal_LVGL_SquareLine)
+- [LVGL + SquareLine Studio](https://wiki.seeedstudio.com/reTerminal_LVGL_SquareLine)
 Create rich graphical interfaces using LVGL and the visual SquareLine Studio designer. -->
 
 ## リソース
 
-- [SenseCraft HMI Documentation](https://wiki.seeedstudio.com/ja/sensecraft_hmi_overview/)
+- [SenseCraft HMI Documentation](https://wiki.seeedstudio.com/sensecraft_hmi_overview/)
 - [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
-<!-- - [GitHub Repository](/ja/reterminal_e10xx_main_page) -->
+<!-- - [GitHub Repository](/reterminal_e10xx_main_page) -->
 
 ## FCC通知
 

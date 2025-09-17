@@ -106,9 +106,9 @@ last_update:
 
 我们也为一些 Seeed Studio 产品编写了如何安装 Home Assistant 的教程，请参考它们。
 
-- [在 ODYSSEY-X86 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/ODYSSEY-X86-Home-Assistant/)
-- [在 reTerminal 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/reTerminal_Home_Assistant/)
-- [在 LinkStar H68K/reRouter CM4 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/h68k-ha-esphome/)
+- [在 ODYSSEY-X86 上开始使用 Home Assistant](https://wiki.seeedstudio.com/ODYSSEY-X86-Home-Assistant/)
+- [在 reTerminal 上开始使用 Home Assistant](https://wiki.seeedstudio.com/reTerminal_Home_Assistant/)
+- [在 LinkStar H68K/reRouter CM4 上开始使用 Home Assistant](https://wiki.seeedstudio.com/h68k-ha-esphome/)
 
 除此之外，XIAO ESP32C3 依赖开源项目 ESPHome 来接入 Home Assistant，所以您还需要在 **Add-Ons** 中安装 **ESPHome** 服务。
 
@@ -350,9 +350,9 @@ views:
 
 本套件主要面向智能家居方向，二次开发的内容我们不会过多详述，但我们会提供您可能需要的二次开发信息和内容，请参考。
 
-- 内置 MR24HPC1 模块的 Wiki：[24GHz mmWave Sensor - Human Static Presence Module Lite (MR24HPC1)](https://wiki.seeedstudio.com/cn/Radar_MR24HPC1)
+- 内置 MR24HPC1 模块的 Wiki：[24GHz mmWave Sensor - Human Static Presence Module Lite (MR24HPC1)](https://wiki.seeedstudio.com/Radar_MR24HPC1)
 
-- 内置 XIAO ESP32C3 开发资料和实践 Wiki：[Getting Started with Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/)
+- 内置 XIAO ESP32C3 开发资料和实践 Wiki：[Getting Started with Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/)
 
 ### ESPHome 二次开发
 
@@ -366,7 +366,7 @@ views:
 
 关于此代码框架的使用，您可以参考项目中 examples 文件夹下的 [**mr24hpc1.yaml**](https://github.com/limengdu/mmwave-kit-external-components/blob/main/example/mr24hpc1.yaml) 文件。该文件是 ESPHome 的示例 yaml 文件。
 
-如果您之前没有任何 ESPHome 使用经验，可以阅读[**此 Wiki**](https://wiki.seeedstudio.com/cn/xiao-esp32c3-esphome/) 来学习使用。
+如果您之前没有任何 ESPHome 使用经验，可以阅读[**此 Wiki**](https://wiki.seeedstudio.com/xiao-esp32c3-esphome/) 来学习使用。
 
 ## 使用 ESPHome OTA 进行软件升级
 

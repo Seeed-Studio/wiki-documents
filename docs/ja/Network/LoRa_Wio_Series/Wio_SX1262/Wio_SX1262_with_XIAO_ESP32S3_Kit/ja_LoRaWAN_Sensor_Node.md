@@ -246,7 +246,7 @@ LoRa通信を介してセンサーデータを読み取り、送信します。�
     </a>
 </div>
 
-ダウンロードしてXIAO ESP32S3にフラッシュしてください。XIAO ESP32S3を初めて使用する場合は、[こちらのフラッシュチュートリアル](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/#software-preparation)を参照してください。
+ダウンロードしてXIAO ESP32S3にフラッシュしてください。XIAO ESP32S3を初めて使用する場合は、[こちらのフラッシュチュートリアル](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#software-preparation)を参照してください。
 
 ## ペイロードフォーマッターの設定
 

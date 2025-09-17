@@ -45,7 +45,7 @@ reComputer R1000 边缘物联网控制器基于高性能的 Raspberry Pi CM4 平
 
 ### 将操作系统刷写到 NVME
 
-请参考此[链接](https://wiki.seeedstudio.com/cn/recomputer_r1000_flash_OS/#steps-for-flashing-raspbian-os)，然后将其插入 M.2 插槽。
+请参考此[链接](https://wiki.seeedstudio.com/recomputer_r1000_flash_OS/#steps-for-flashing-raspbian-os)，然后将其插入 M.2 插槽。
 
 ### 从 emmc 启动并更新 eeprom
 

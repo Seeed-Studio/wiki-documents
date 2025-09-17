@@ -79,7 +79,7 @@ last_update:
 
 在开始开发之前，需要以下软件工具。
 
-查看这里了解如何[开始使用 Arduino](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+查看这里了解如何[开始使用 Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 
 :::tip
 版本需要新于 v1.6.12。

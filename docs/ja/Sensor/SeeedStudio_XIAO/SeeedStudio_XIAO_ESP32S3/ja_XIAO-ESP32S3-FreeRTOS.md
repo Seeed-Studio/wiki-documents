@@ -15,7 +15,7 @@ last_update:
 
 # XIAO ESP32S3(Sense) With FreeRTOS
 
-このwikiは[Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/)の[FreeRTOS](https://freertos.org/)サポートについて説明します。このガイドの支援により、ボードで利用可能な機能セットを活用できるようになります。
+このwikiは[Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)の[FreeRTOS](https://freertos.org/)サポートについて説明します。このガイドの支援により、ボードで利用可能な機能セットを活用できるようになります。
 
 ## [FreeRTOS](https://www.freertos.org/index.html)とは
 
@@ -33,7 +33,7 @@ FreeRTOSは、ESP-IDFにコンポーネントとして統合されたオープ�
 
 ## ハードウェア準備
 
-私は[Seed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/)と、オンボードカメラ、マイクロフォン、SDカードリーダー、そしてESP32S3のWifi機能を使用しています。
+私は[Seed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)と、オンボードカメラ、マイクロフォン、SDカードリーダー、そしてESP32S3のWifi機能を使用しています。
 
 <div class="table-center">
   <table align="center">
@@ -522,7 +522,7 @@ Fresh air.
 
 ### ハードウェアセットアップ
 
-[microSDカードガイド](https://wiki.seeedstudio.com/ja/xiao_esp32s3_sense_filesystem/)と[カメラガイド](https://wiki.seeedstudio.com/ja/xiao_esp32s3_camera_usage/)に従って、カメラとmicroSDカード拡張ボードを取り付けてください。
+[microSDカードガイド](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem/)と[カメラガイド](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/)に従って、カメラとmicroSDカード拡張ボードを取り付けてください。
 
 - microSDカードをフォーマットする（最大32Gbまでサポート）
 - microSDカードを拡張ボードに取り付ける
@@ -1001,7 +1001,7 @@ Xiao-S3を[Grove - 拡張ボード](https://www.seeedstudio.com/Seeeduino-XIAO-E
 
 ### ソフトウェアセットアップ
 
-[pcf8563](https://github.com/Bill2462/PCF8563-Arduino-Library)、[U8x8lib](https://github.com/olikraus/U8g2_Arduino)、[bme680](https://github.com/Seeed-Studio/Seeed_Arduino_BME68x)ライブラリのArduinoライブラリをインストールします。Arduinoライブラリのインストール方法については、[ライブラリのインストール方法](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/)を参照してください。
+[pcf8563](https://github.com/Bill2462/PCF8563-Arduino-Library)、[U8x8lib](https://github.com/olikraus/U8g2_Arduino)、[bme680](https://github.com/Seeed-Studio/Seeed_Arduino_BME68x)ライブラリのArduinoライブラリをインストールします。Arduinoライブラリのインストール方法については、[ライブラリのインストール方法](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)を参照してください。
 
 ```cpp
 #include "time.h"

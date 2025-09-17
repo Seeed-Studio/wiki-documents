@@ -43,7 +43,7 @@ last_update:
 </div>
 
 >注意
->R1000 に UPS をインストールする方法については、この[リンク](https://wiki.seeedstudio.com/ja/recomputer_r1000_assembly_guide/#assemble-ups-and-poe-module)を参照してください。
+>R1000 に UPS をインストールする方法については、この[リンク](https://wiki.seeedstudio.com/recomputer_r1000_assembly_guide/#assemble-ups-and-poe-module)を参照してください。
 
 ## ソフトウェアの準備
 

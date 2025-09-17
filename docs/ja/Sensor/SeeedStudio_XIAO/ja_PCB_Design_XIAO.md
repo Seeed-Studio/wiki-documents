@@ -139,7 +139,7 @@ fluxで最初にフットプリントを作成すると、すべてのパッド�
 ## ✨ コントリビュータープロジェクト
 
 - このプロジェクトは[Seeed Studio Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6)によってサポートされています。
-- [Gokul](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=42323283)の努力に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)されます。
+- [Gokul](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=42323283)の努力に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)されます。
 
 ## 技術サポート & 製品ディスカッション
 

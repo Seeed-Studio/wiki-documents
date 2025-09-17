@@ -218,7 +218,7 @@ sudo ./USBIO /dev/sda1
 该程序也适用于测试其他USB接口。
 
 :::info
-关于USB Micro-B接口的使用，请参考[此wiki](https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_getting_started/)获取详细教程。
+关于USB Micro-B接口的使用，请参考[此wiki](https://wiki.seeedstudio.com/recomputer_jetson_mini_getting_started/)获取详细教程。
 :::
 
 ## UART

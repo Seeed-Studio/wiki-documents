@@ -140,7 +140,7 @@ Gateway details ページの LoRaWAN specific details セクションで、接�
 
 `Wireless device specification`：OTAAv1.0x
 
-`DevEUI/APP EUI/APP key`：SenseCAP Mate APPで確認できます。詳細については[Get_Started](https://wiki.seeedstudio.com/ja/Get_Started_with_SenseCAP_T1000_tracker/#get-started)をご確認ください。
+`DevEUI/APP EUI/APP key`：SenseCAP Mate APPで確認できます。詳細については[Get_Started](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/#get-started)をご確認ください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS17.PNG" alt="pir" width={800} height="auto" /></p>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS20.PNG" alt="pir" width={800} height="auto" /></p>

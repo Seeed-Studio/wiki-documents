@@ -52,8 +52,8 @@ make
 
 ### reCamera 准备工作
 
-1.从 **[设备端模型](https://wiki.seeedstudio.com/cn/recamera_on_device_models/)** 下载已部署的 **YOLOv11** 模型，然后将模型的 **.cvimodel** 文件复制到您的 reCamera 终端：**/home/recamera/**。
-2.在执行代码之前，请访问 reCamera [工作区](http://192.168.42.1/#/workspace) 来终止进程（参考 **[使用 c/c++ 开发](https://wiki.seeedstudio.com/cn/recamera_develop_with_c_cpp)**）以防止内存消耗。
+1.从 **[设备端模型](https://wiki.seeedstudio.com/recamera_on_device_models/)** 下载已部署的 **YOLOv11** 模型，然后将模型的 **.cvimodel** 文件复制到您的 reCamera 终端：**/home/recamera/**。
+2.在执行代码之前，请访问 reCamera [工作区](http://192.168.42.1/#/workspace) 来终止进程（参考 **[使用 c/c++ 开发](https://wiki.seeedstudio.com/recamera_develop_with_c_cpp)**）以防止内存消耗。
 3.然后导航到 **/etc/init.d/**，将 **S93sscma-supervisor** 和 **S91sscma-node** 文件夹复制到 **/home/recamera/** 或其他位置进行备份，并删除原始的 **S93sscma-supervisor** 和 **S91sscma-node** 文件夹以防止内存消耗和程序占用。​
 
 ```

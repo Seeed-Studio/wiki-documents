@@ -20,7 +20,7 @@ last_update:
 
 ## ソフトウェアセットアップ
 
-まず、初期のハードウェアとソフトウェアのセットアップについて、["Getting Started with Seeed Studio XIAO nRF52840 (Sense)"](https://wiki.seeedstudio.com/ja/XIAO-BLE-Sense-Getting-Started) の Wiki に従ってください。
+まず、初期のハードウェアとソフトウェアのセットアップについて、["Getting Started with Seeed Studio XIAO nRF52840 (Sense)"](https://wiki.seeedstudio.com/XIAO-BLE-Sense-Getting-Started) の Wiki に従ってください。
 
 それでは、残りのソフトウェアセットアップに進みましょう。
 

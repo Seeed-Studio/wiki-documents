@@ -36,7 +36,7 @@ Edge Impulseの完全な学習プロセスを進める前に、事前に生成�
 
 ### Arduino上でのXIAO ESPS3 Senseのセットアップ
 
-Edge impulseライブラリの使用を開始する前に、Arduino IDEでXIAO ESPS3をセットアップする必要があります。[こちら](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/)のガイドをご覧ください。
+Edge impulseライブラリの使用を開始する前に、Arduino IDEでXIAO ESPS3をセットアップする必要があります。[こちら](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)のガイドをご覧ください。
 
 #### Blinkサンプルのコンパイルとアップロード
 

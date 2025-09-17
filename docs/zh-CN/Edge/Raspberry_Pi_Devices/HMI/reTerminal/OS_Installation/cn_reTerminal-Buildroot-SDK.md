@@ -109,7 +109,7 @@ make menuconfig
 
 现在我们将把镜像烧录到 reTerminal 上 CM4 的 eMMC 中。
 
-按照[此 wiki](https://wiki.seeedstudio.com/cn/reTerminal/#getting-started-with-reterminal-extended) 中的步骤操作，并注意以下步骤：
+按照[此 wiki](https://wiki.seeedstudio.com/reTerminal/#getting-started-with-reterminal-extended) 中的步骤操作，并注意以下步骤：
 
 **注意：** 当您打开 **Raspberry Pi Imager** 时，点击 **CHOOSE OS**，选择 **Use custom** 并选择下载的 **sdcard.img** 文件。
 
@@ -182,7 +182,7 @@ make graph-size
 
 ## 测试 Buildroot 镜像
 
-要使用 reTerminal 测试上述 Buildroot 镜像，您可以访问 [reTerminal 硬件和接口使用说明](https://wiki.seeedstudio.com/cn/reTerminal-hardware-interfaces-usage) 并参考其中提到的步骤。
+要使用 reTerminal 测试上述 Buildroot 镜像，您可以访问 [reTerminal 硬件和接口使用说明](https://wiki.seeedstudio.com/reTerminal-hardware-interfaces-usage) 并参考其中提到的步骤。
 
 ## 资源
 

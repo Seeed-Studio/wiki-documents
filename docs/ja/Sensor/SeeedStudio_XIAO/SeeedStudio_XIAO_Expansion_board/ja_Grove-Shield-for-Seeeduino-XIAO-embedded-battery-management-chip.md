@@ -15,7 +15,7 @@ last_update:
 
 ## 概要
 
-Seeed Studio Grove Base for XIAOは、**[Seeed Studio XIAO](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO/)**用のプラグアンドプレイGrove拡張ボードです。オンボードのバッテリー管理チップとバッテリー接続パッドにより、Seeed Studio XIAOをリチウムバッテリーで簡単に電源供給し、充電することができます。8つのGroveコネクタがオンボードに搭載されており、2つのGrove I2Cと1つのUARTが含まれています。これはSeeed Studio XIAOとSeeedのGroveシステムの橋渡しとして機能します。Flash SPI接続パッドにより、Seeed Studio XIAOにFlashを追加してメモリ空間を拡張でき、Seeed Studio XIAOにより多くの可能性を提供します。
+Seeed Studio Grove Base for XIAOは、**[Seeed Studio XIAO](https://wiki.seeedstudio.com/Seeeduino-XIAO/)**用のプラグアンドプレイGrove拡張ボードです。オンボードのバッテリー管理チップとバッテリー接続パッドにより、Seeed Studio XIAOをリチウムバッテリーで簡単に電源供給し、充電することができます。8つのGroveコネクタがオンボードに搭載されており、2つのGrove I2Cと1つのUARTが含まれています。これはSeeed Studio XIAOとSeeedのGroveシステムの橋渡しとして機能します。Flash SPI接続パッドにより、Seeed Studio XIAOにFlashを追加してメモリ空間を拡張でき、Seeed Studio XIAOにより多くの可能性を提供します。
 
 オンボードのバッテリー管理チップとバッテリー接続パッドにより、Seeed Studio XIAOをリチウム3.7Vバッテリーで簡単に電源供給し、充電することができ、プロジェクト、特にウェアラブルプロジェクトをより柔軟でポータブルにします。プロジェクトの実際のニーズに応じて、オンボードのPCBスタンプホールを通してボードを分割することもでき（分割後の寸法は25*39mmのみ）、より小さくし、重量も13gから10gに軽減されます！
 <!-- 図に問題があります
@@ -129,7 +129,7 @@ USBケーブル、Doppler Radarインターフェースを Seeed Studio XIAO 拡
 ### ソフトウェア
 
 :::note
-Arduinoを初めて使用する場合は、開始前に[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+Arduinoを初めて使用する場合は、開始前に[Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
 - **ステップ 1.** [デモコード](https://github.com/Seeed-Studio/Seeed_Arduino_DopplerRadar)をダウンロードします。
@@ -138,7 +138,7 @@ Arduinoを初めて使用する場合は、開始前に[Getting Started with Ard
 
 - **ステップ 3.** Arduino IDEで**BGT24LTR11_DETECTION_TARGET**ファイルを開きます。
 
-- **ステップ 4.** デモをアップロードします。コードのアップロード方法がわからない場合は、[How to upload code](https://wiki.seeedstudio.com/ja/Upload_Code/)を確認してください。
+- **ステップ 4.** デモをアップロードします。コードのアップロード方法がわからない場合は、[How to upload code](https://wiki.seeedstudio.com/Upload_Code/)を確認してください。
 
 #### ソフトウェアコード
 

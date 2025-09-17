@@ -17,7 +17,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/wialon-sensecap.png" alt="pir" width={800} height="auto" /></p>
 
-セットアップを開始する前に、[Get Started](https://wiki.seeedstudio.com/ja/Get_Started_with_SenseCAP_T1000_tracker) を確認して、まずSenseCAP T1000 TrackerをSenseCAP Cloudに接続してください。
+セットアップを開始する前に、[Get Started](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker) を確認して、まずSenseCAP T1000 TrackerをSenseCAP Cloudに接続してください。
 
 ## SenseCAP PortalでSenseCAP APIを取得
 

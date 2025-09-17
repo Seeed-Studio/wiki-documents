@@ -246,7 +246,7 @@ const uint8_t subBand = 0; // For US915 and AU915
     </a>
 </div>
 
-请下载并将其刷写到 XIAO ESP32S3。对于首次使用 XIAO ESP32S3，请参考[这里的刷写教程](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/#software-preparation)。
+请下载并将其刷写到 XIAO ESP32S3。对于首次使用 XIAO ESP32S3，请参考[这里的刷写教程](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#software-preparation)。
 
 ## 设置载荷格式化器
 

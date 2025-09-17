@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 ![](https://files.seeedstudio.com/wiki/Xadow_GSM_Breakout/img/Xadow_GSM_Breakout.JPG)
 Xadow GSM ブレイクアウトは、35ピンのXadowコネクタから30ピンを引き出し、5列の0.1インチ間隔の穴に接続します。隣接する列間の間隔も0.1インチです。ブレイクアウトパッドにワイヤーやスルーホールピンヘッダーを直接はんだ付けすることで、以下に簡単にアクセスできます：

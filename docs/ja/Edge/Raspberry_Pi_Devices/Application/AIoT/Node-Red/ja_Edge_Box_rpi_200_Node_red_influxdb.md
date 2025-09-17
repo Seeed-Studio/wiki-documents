@@ -39,7 +39,7 @@ Raspberry PiベースのエッジコントローラーであるEdgebox RPi 200�
 
 ### ソフトウェアの準備
 
-Edge Boxは、Raspberry Pi OSがプリインストールされた状態でお手元に届きます。このデバイスを初めて起動する場合は、[Getting Started Wiki](https://wiki.seeedstudio.com/ja/Edge_Box_introduction/)をお読みください。[Node-REDのGetting Startedガイド](https://wiki.seeedstudio.com/ja/Edge-Box-Getting-Started-with-Node-Red/)を用意しています。このwikiに進む前に、このガイドを確認することをお勧めします。このチュートリアルでは、YABE室温シミュレーターを実行するホストPCと、Edge Box上で実行されるNode-REDを接続します。
+Edge Boxは、Raspberry Pi OSがプリインストールされた状態でお手元に届きます。このデバイスを初めて起動する場合は、[Getting Started Wiki](https://wiki.seeedstudio.com/Edge_Box_introduction/)をお読みください。[Node-REDのGetting Startedガイド](https://wiki.seeedstudio.com/Edge-Box-Getting-Started-with-Node-Red/)を用意しています。このwikiに進む前に、このガイドを確認することをお勧めします。このチュートリアルでは、YABE室温シミュレーターを実行するホストPCと、Edge Box上で実行されるNode-REDを接続します。
 
 ## Edgebox RPi 200へのInfluxDBのインストール
 

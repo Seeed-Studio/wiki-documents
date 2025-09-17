@@ -63,9 +63,9 @@ FUXA 是一个基于 Web 的过程可视化（SCADA/HMI/仪表板）软件。使
     sudo fuxa
   ```
 
-- 关于如何使用 fuxa 实现 OPC-UA 数据交互，您可以参考这个 [wiki](https://wiki.seeedstudio.com/cn/reComputer_r1000_fuxa_opc_ua/)。
+- 关于如何使用 fuxa 实现 OPC-UA 数据交互，您可以参考这个 [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_opc_ua/)。
 
-- 关于如何使用 fuxa 实现与 mqtt 客户端的数据交互，您可以参考这个 [wiki](https://wiki.seeedstudio.com/cn/reComputer_r1000_fuxa_mqtt_client/)。与这个 wiki 不同的是，我们在 `node-red` 中发布的数据是通过 `function` 模块处理的，并且使用 `loop` 模块进行连续发布。`function` 模块的代码如下：
+- 关于如何使用 fuxa 实现与 mqtt 客户端的数据交互，您可以参考这个 [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_mqtt_client/)。与这个 wiki 不同的是，我们在 `node-red` 中发布的数据是通过 `function` 模块处理的，并且使用 `loop` 模块进行连续发布。`function` 模块的代码如下：
 
   ```java
   ## On Start

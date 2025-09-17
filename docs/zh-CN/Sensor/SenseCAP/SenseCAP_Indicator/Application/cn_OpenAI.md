@@ -29,9 +29,9 @@ last_update:
 - 在您的计算机上安装 [ESP-IDF](https://github.com/espressif/esp-idf) 工具链
 
 :::tip
-如果您想了解如何更改用户界面（UI），可以参考指南：[如何创建您自己的 UI](/cn/SenseCAP_Indicator_How_to_Create_your_own_UI)
+如果您想了解如何更改用户界面（UI），可以参考指南：[如何创建您自己的 UI](/SenseCAP_Indicator_How_to_Create_your_own_UI)
 
-如果您还没有安装 IDF 工具链，可以按照指南中的说明进行操作：[如何刷写默认固件](/cn/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware)
+如果您还没有安装 IDF 工具链，可以按照指南中的说明进行操作：[如何刷写默认固件](/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware)
 :::
 
 ## 开始使用
@@ -61,7 +61,7 @@ SenseCAP Indicator x ChatGPT x DALL·E 应用基于 MVC（模型-视图-控制�
 
 - 模型：模型包含 `indicator_openai.c` 文件，其中包括 `indicator_openai_init()` 函数。当在模型入口执行时，此函数向 OpenAI 发送请求，接收响应，并解析它们以通过视图在屏幕上显示。
 
-以下是模型的关键函数和工作流程（一旦保存了 [API 密钥](/cn/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key)）：
+以下是模型的关键函数和工作流程（一旦保存了 [API 密钥](/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key)）：
 
 #### **ChatGPT 流程图**
 
@@ -882,10 +882,10 @@ int indicator_openai_init(void)
 
 ## 资源
 
-1. [SenseCAP Indicator X ChatGPT](/cn/SenseCAP_Indicator_ChatGPT)
-2. [SenseCAP Indicator X DALL·E](/cn/SenseCAP_Indicator_DALL·E)
+1. [SenseCAP Indicator X ChatGPT](/SenseCAP_Indicator_ChatGPT)
+2. [SenseCAP Indicator X DALL·E](/SenseCAP_Indicator_DALL·E)
 3. **演示 SDK**：SenseCAP Indicator 的演示 SDK 可在 [GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32) 上获取。
-4. **SenseCAP Indicator 用户指南**：用户指南提供了关于 SenseCAP Indicator 板软件和硬件的详细信息。您可以在[这里](/cn/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)阅读。
+4. **SenseCAP Indicator 用户指南**：用户指南提供了关于 SenseCAP Indicator 板软件和硬件的详细信息。您可以在[这里](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)阅读。
 5. **Chat completions OpenAI 指南**：如果您是 Chat API 的新手，本指南将帮助您入门。您可以在[这里](https://platform.openai.com/docs/guides/chat/chat-completions-beta)找到它。
 6. **`indicator_openai.c` 文件**：此文件包含 `ChatGPT` 和 `DALL·E` 集成的主要功能。您可以在[这里](https://raw.githubusercontent.com/Seeed-Solution/SenseCAP_Indicator_ESP32/main/examples/indicator_openai/main/model/indicator_openai.c)查看。
 7. **ESP-IDF 入门指南**：本指南提供了配置和使用 ESP-IDF 构建项目的完整步骤。您可以在[这里](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html)访问。

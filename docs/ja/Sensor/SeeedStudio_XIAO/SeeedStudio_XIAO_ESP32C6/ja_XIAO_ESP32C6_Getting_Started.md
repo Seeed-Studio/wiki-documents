@@ -249,7 +249,7 @@ XIAO ESP32C6 は小型サイズのため、ヘッダーをはんだ付けする�
 XIAO ESP32C6 の推奨プログラミングツールは Arduino IDE のため、ソフトウェア準備の一環として Arduino のインストールを完了する必要があります。
 
 :::tip
-Arduino を初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
+Arduino を初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
 
 また、XIAO ESP32C6 のオンボードパッケージには少なくともバージョン **2.0.8** が必要です。
 
@@ -325,7 +325,7 @@ XIAOにバッテリーを接続する場合は、認定された充電式3.7Vリ
 
 :::tip 赤色インジケーターライト
 
-XIAO ESP32C6 には、[XIAO ESP32S3](/ja/xiao_esp32s3_getting_started/#battery-usage)と同様に、バッテリー充電用の赤色インジケーターライトがあります：
+XIAO ESP32C6 には、[XIAO ESP32S3](/xiao_esp32s3_getting_started/#battery-usage)と同様に、バッテリー充電用の赤色インジケーターライトがあります：
 
 XIAO ESP32C6 の赤色ライトの動作は以下の通りです：
 
@@ -340,7 +340,7 @@ XIAO ESP32C6 の赤色ライトの動作は以下の通りです：
 
 ## バッテリー電圧の読み取り
 
-XIAO ESP32C6 でバッテリー電圧を監視するには、[XIAO ESP32C3](/ja/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)と同様に、200kΩ抵抗を1:2構成ではんだ付けする必要があります。この設定により電圧が半分に減少し、A0アナログポート経由で安全に監視できます。
+XIAO ESP32C6 でバッテリー電圧を監視するには、[XIAO ESP32C3](/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)と同様に、200kΩ抵抗を1:2構成ではんだ付けする必要があります。この設定により電圧が半分に減少し、A0アナログポート経由で安全に監視できます。
 
 ### サンプルコード
 

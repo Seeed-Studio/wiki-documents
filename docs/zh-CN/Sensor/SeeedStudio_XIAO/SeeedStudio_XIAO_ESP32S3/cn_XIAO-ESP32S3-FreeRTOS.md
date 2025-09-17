@@ -15,7 +15,7 @@ last_update:
 
 # XIAO ESP32S3(Sense) 与 FreeRTOS
 
-本 wiki 介绍了 [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/) 对 [FreeRTOS](https://freertos.org/) 的支持。通过本指南的帮助，您将能够利用该开发板的可用功能集。
+本 wiki 介绍了 [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/) 对 [FreeRTOS](https://freertos.org/) 的支持。通过本指南的帮助，您将能够利用该开发板的可用功能集。
 
 ## 什么是 [FreeRTOS](https://www.freertos.org/index.html)
 
@@ -33,7 +33,7 @@ FreeRTOS 是一个开源 RTOS（实时操作系统）内核，作为组件集成
 
 ## 硬件准备
 
-我使用的是 [Seed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/) 以及板载摄像头、麦克风和 SD 卡读卡器，还有 ESP32S3 的 WiFi 功能。
+我使用的是 [Seed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/) 以及板载摄像头、麦克风和 SD 卡读卡器，还有 ESP32S3 的 WiFi 功能。
 
 <div class="table-center">
   <table align="center">
@@ -522,7 +522,7 @@ Fresh air.
 
 ### 硬件设置
 
-按照 [microSD 卡指南](https://wiki.seeedstudio.com/cn/xiao_esp32s3_sense_filesystem/) 和 [摄像头指南](https://wiki.seeedstudio.com/cn/xiao_esp32s3_camera_usage/) 将摄像头和 microSD 卡扩展板连接到
+按照 [microSD 卡指南](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem/) 和 [摄像头指南](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/) 将摄像头和 microSD 卡扩展板连接到
 
 - 格式化 microSD 卡（支持最大 32GB）
 - 将 microSD 卡连接到扩展板
@@ -1001,7 +1001,7 @@ FreeRtos 可以用于基于 Arduino-IDE 的 XIAO-S3 构建。它类似于 ESP-ID
 
 ### 软件设置
 
-安装 [pcf8563](https://github.com/Bill2462/PCF8563-Arduino-Library)、[U8x8lib](https://github.com/olikraus/U8g2_Arduino) 和 [bme680](https://github.com/Seeed-Studio/Seeed_Arduino_BME68x) 库的 arduino 库。参考[如何安装库](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library/)来为 Arduino 安装库。
+安装 [pcf8563](https://github.com/Bill2462/PCF8563-Arduino-Library)、[U8x8lib](https://github.com/olikraus/U8g2_Arduino) 和 [bme680](https://github.com/Seeed-Studio/Seeed_Arduino_BME68x) 库的 arduino 库。参考[如何安装库](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)来为 Arduino 安装库。
 
 ```cpp
 #include "time.h"

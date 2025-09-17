@@ -546,7 +546,7 @@ candump can0 &
 </div>
 
 :::info
-我们也可以参考[这里](https://wiki.seeedstudio.com/cn/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/#connection-overview-with-reterminal-dm)来建立J501载板与reTerminal DM之间通过CAN的通信。
+我们也可以参考[这里](https://wiki.seeedstudio.com/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/#connection-overview-with-reterminal-dm)来建立J501载板与reTerminal DM之间通过CAN的通信。
 :::
 
 ## USB

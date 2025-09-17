@@ -20,7 +20,7 @@ last_update:
 ## 製品紹介
 
 :::note
-        最近、LoRa-E5モジュールをベースとした[WM1302 LoRaWANゲートウェイモジュール](https://wiki.seeedstudio.com/ja/WM1302_module/)とLoRa-E5シリーズをリリースしました。[こちら](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)をクリックして、[Groveモジュール](https://wiki.seeedstudio.com/ja/Grove_LoRa_E5_New_Version/)、[ミニ開発ボード](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/)から[開発キット](https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/)まで、LoRa-E5ファミリーの新しいメンバーをご覧ください。STM32WLシリーズ用STM32Cube MCUパッケージ（SDK）を使用してLoRaWANエンドノードを作成し、LoRaWANネットワークに参加してデータを送信する方法については、[ミニ開発ボード](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/)と[開発キット](https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/)のwikiページで詳細をご覧ください。
+        最近、LoRa-E5モジュールをベースとした[WM1302 LoRaWANゲートウェイモジュール](https://wiki.seeedstudio.com/WM1302_module/)とLoRa-E5シリーズをリリースしました。[こちら](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)をクリックして、[Groveモジュール](https://wiki.seeedstudio.com/Grove_LoRa_E5_New_Version/)、[ミニ開発ボード](https://wiki.seeedstudio.com/LoRa_E5_mini/)から[開発キット](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/)まで、LoRa-E5ファミリーの新しいメンバーをご覧ください。STM32WLシリーズ用STM32Cube MCUパッケージ（SDK）を使用してLoRaWANエンドノードを作成し、LoRaWANネットワークに参加してデータを送信する方法については、[ミニ開発ボード](https://wiki.seeedstudio.com/LoRa_E5_mini/)と[開発キット](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/)のwikiページで詳細をご覧ください。
 :::
 
 WM1302 Pi HATは、SX1302をベースとしたWM1302 LoRaWANゲートウェイモジュールをRaspberry Pi 4Bまでのバージョンに接続するために特別に設計されたアドオン拡張ボードです。また、LoRaWAN認証チップとGPSモジュールも統合されています。

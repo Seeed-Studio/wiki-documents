@@ -689,7 +689,7 @@ XIAO ESP32C6がMQTTブローカーからメッセージを受信すると、`cli
 
 この部分は、XIAO ESP32C3でChatGPTにアクセスするために書いた例を参照できます。これはWiFiClientとHTTPClientの使用方法について詳細な紹介を提供しています。
 
-- [XIAO ESP32C3でWiFiClientとHTTPClientの使用方法を学ぶ - XIAO ESP32C3 & ChatGPTの実践](https://wiki.seeedstudio.com/ja/xiaoesp32c3-chatgpt)
+- [XIAO ESP32C3でWiFiClientとHTTPClientの使用方法を学ぶ - XIAO ESP32C3 & ChatGPTの実践](https://wiki.seeedstudio.com/xiaoesp32c3-chatgpt)
 
 ## WiFi Mesh
 

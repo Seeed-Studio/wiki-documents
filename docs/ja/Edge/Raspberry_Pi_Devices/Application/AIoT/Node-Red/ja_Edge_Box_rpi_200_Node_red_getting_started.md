@@ -41,7 +41,7 @@ last_update:
 
 ### ソフトウェアの準備
 
-Edge Box-200は、Raspberry Pi OSがプリインストールされた状態でお手元に届きます。このデバイスを初回起動する場合は、[Getting Started](https://wiki.seeedstudio.com/ja/Edge_Box_introduction/) Wikiをお読みください。
+Edge Box-200は、Raspberry Pi OSがプリインストールされた状態でお手元に届きます。このデバイスを初回起動する場合は、[Getting Started](https://wiki.seeedstudio.com/Edge_Box_introduction/) Wikiをお読みください。
 
 ## Edge boxにNode Redをインストール
 

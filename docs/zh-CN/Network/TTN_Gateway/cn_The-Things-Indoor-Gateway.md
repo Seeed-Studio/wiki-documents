@@ -89,7 +89,7 @@ The Things Indoor 网关支持 LoRaWAN 1.0.3，因此与其他 LoRaWAN 传感器
 注意：如果您不了解 SenseCAP，这里有一个简要介绍：
 > 作为 Seeed 工业物联网 (IIoT) 产品系列的首批发布产品之一，SenseCAP 专注于无线环境感知应用：智慧农业、精准农业和智慧城市等。它包括硬件产品（传感器、数据记录器和网关等）、软件服务（SenseCAP 门户、移动应用、开放式仪表板）以及用于设备和数据管理的 API。SenseCAP 支持不同的通信协议，如 LoRa、2G、4G、NB-IoT 等。
 
-要了解更多信息，请点击 [SenseCAP 介绍](https://wiki.seeedstudio.com/cn/Industrial-IoT-SenseCAP-Introduction/)
+要了解更多信息，请点击 [SenseCAP 介绍](https://wiki.seeedstudio.com/Industrial-IoT-SenseCAP-Introduction/)
 
 ### 步骤 1：激活您的 TTIG 网关
 

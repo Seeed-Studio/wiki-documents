@@ -15,7 +15,7 @@ last_update:
 
 ## 概述
 
-Seeed Studio Grove Base for XIAO 是一款即插即用的 Grove 扩展板，专为 **[Seeed Studio XIAO](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/)** 设计。通过板载电池管理芯片和电池焊接焊盘，您可以轻松使用锂电池为 Seeed Studio XIAO 供电并进行充电。板载 8 个 Grove 连接器，包括两个 Grove I2C 和一个 UART。它充当 Seeed Studio XIAO 和 Seeed 的 Grove 系统之间的桥梁。Flash SPI 焊接焊盘允许您为 Seeed Studio XIAO 添加 Flash 以扩展其内存空间，为 Seeed Studio XIAO 提供更多可能性。
+Seeed Studio Grove Base for XIAO 是一款即插即用的 Grove 扩展板，专为 **[Seeed Studio XIAO](https://wiki.seeedstudio.com/Seeeduino-XIAO/)** 设计。通过板载电池管理芯片和电池焊接焊盘，您可以轻松使用锂电池为 Seeed Studio XIAO 供电并进行充电。板载 8 个 Grove 连接器，包括两个 Grove I2C 和一个 UART。它充当 Seeed Studio XIAO 和 Seeed 的 Grove 系统之间的桥梁。Flash SPI 焊接焊盘允许您为 Seeed Studio XIAO 添加 Flash 以扩展其内存空间，为 Seeed Studio XIAO 提供更多可能性。
 
 通过板载电池管理芯片和电池焊接焊盘，您可以轻松使用锂 3.7V 电池为 Seeed Studio XIAO 供电并进行充电，使您的项目，特别是可穿戴项目，更加灵活和便携。您甚至可以根据项目的实际需要通过板载 PCB 邮票孔掰断电路板（掰断后尺寸仅为 25*39mm），使其比小更小，重量也会从 13g 减少到 10g！
 <!-- 图有问题 
@@ -129,7 +129,7 @@ Seeed Studio Grove Base for XIAO 是一款即插即用的 Grove 扩展板，专�
 ### 软件
 
 :::note
-如果这是您第一次使用Arduino，我们强烈建议您在开始之前查看[Arduino入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用Arduino，我们强烈建议您在开始之前查看[Arduino入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 - **步骤 1.** 下载[演示代码](https://github.com/Seeed-Studio/Seeed_Arduino_DopplerRadar)。
@@ -138,7 +138,7 @@ Seeed Studio Grove Base for XIAO 是一款即插即用的 Grove 扩展板，专�
 
 - **步骤 3.** 使用Arduino IDE打开**BGT24LTR11_DETECTION_TARGET**文件。
 
-- **步骤 4.** 上传演示代码。如果您不知道如何上传代码，请查看[如何上传代码](https://wiki.seeedstudio.com/cn/Upload_Code/)。
+- **步骤 4.** 上传演示代码。如果您不知道如何上传代码，请查看[如何上传代码](https://wiki.seeedstudio.com/Upload_Code/)。
 
 #### 软件代码
 

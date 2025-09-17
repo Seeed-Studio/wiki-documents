@@ -13,7 +13,7 @@ last_update:
   author: Jessie
 ---
 
-開発を始める前に、まず[ツールチェーンのセットアップ](https://wiki.seeedstudio.com/ja/setup_toolchain_for_wio_tracker/)を確認してツールをセットアップしてください。
+開発を始める前に、まず[ツールチェーンのセットアップ](https://wiki.seeedstudio.com/setup_toolchain_for_wio_tracker/)を確認してツールをセットアップしてください。
 
 ## ハードウェア概要
 
@@ -26,7 +26,7 @@ last_update:
 
 ## Grove
 
-Wio Tracker 1110 Dev Boardには6つのGroveインターフェースがあり、300以上のGroveモジュールを接続できます。Groveモジュールについて詳しく知りたい場合は[こちら](https://wiki.seeedstudio.com/ja/Grove_Sensor_Intro/)をクリックしてください。
+Wio Tracker 1110 Dev Boardには6つのGroveインターフェースがあり、300以上のGroveモジュールを接続できます。Groveモジュールについて詳しく知りたい場合は[こちら](https://wiki.seeedstudio.com/Grove_Sensor_Intro/)をクリックしてください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio-tracker-grove.png" alt="pir" width={800} height="auto" /></p>
 

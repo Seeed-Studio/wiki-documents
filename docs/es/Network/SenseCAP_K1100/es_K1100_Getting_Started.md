@@ -1,6 +1,7 @@
 ---
 description: Introducción al Kit de Prototipo de Sensores
 title: Introducción al Kit de Prototipo de Sensores
+# slug: /ABC
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/K1100-Getting-Started
 last_update:

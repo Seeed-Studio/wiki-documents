@@ -636,7 +636,7 @@ aplay hello3.wav
 
 ## 与 Wio Link 一起使用
 
-请按照 [ReSpeaker Core V2 & Wio Link 教程](https://wiki.seeedstudio.com/cn/ReSpeaker_Core_V2_&_Wio_Link/) 来使用 ReSpeaker Core V2 通过 IFTTT 控制 Wio Link。
+请按照 [ReSpeaker Core V2 & Wio Link 教程](https://wiki.seeedstudio.com/ReSpeaker_Core_V2_&_Wio_Link/) 来使用 ReSpeaker Core V2 通过 IFTTT 控制 Wio Link。
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/OJ0i6QrZCSM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
@@ -889,7 +889,7 @@ ReSpeaker Core v2.0 的用户名是 **respeaker**，密码是 **respeaker**。
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/AP2.png)
 
-- **步骤 3.** 当您进入串行控制台后，您可以[设置 WiFi](https://wiki.seeedstudio.com/cn/ReSpeaker_Core_v2.0/#a-wi-fi-setting-up)
+- **步骤 3.** 当您进入串行控制台后，您可以[设置 WiFi](https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#a-wi-fi-setting-up)
 
 **Q3: 如何调节音量？**
 

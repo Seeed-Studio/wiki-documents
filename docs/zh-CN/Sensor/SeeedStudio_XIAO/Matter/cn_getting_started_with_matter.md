@@ -16,7 +16,7 @@ last_update:
 :::tip
 本文是 Seeed Studio XIAO ESP32 开发 Matter 系列的第二个教程。如果您还没有配置 ESP-IDF 环境，请先阅读第一个教程：
 
-- **[在 XIAO 上使用 Espressif ESP-IDF 进行开发](https://wiki.seeedstudio.com/cn/xiao_idf)**
+- **[在 XIAO 上使用 Espressif ESP-IDF 进行开发](https://wiki.seeedstudio.com/xiao_idf)**
 
 本教程适用于 XIAO ESP32C3、XIAO ESP32S3。由于 GPIO8 引脚未引出，Espressif 提供的 Matter 示例暂时不适用于 XIAO ESP32C6。
 :::

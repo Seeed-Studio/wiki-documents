@@ -78,7 +78,7 @@ XVF3800 麦克风阵列需要 12.288 MHz MCLK 才能工作，但 ESPHome（在 H
 
 您可以从[这里](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)下载固件
 
-安装指南在[这里](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#update-firmware)
+安装指南在[这里](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
 
 ## 准备带有 XIAO ESP32S3 的 ReSpeaker XMOS XVF3800
 

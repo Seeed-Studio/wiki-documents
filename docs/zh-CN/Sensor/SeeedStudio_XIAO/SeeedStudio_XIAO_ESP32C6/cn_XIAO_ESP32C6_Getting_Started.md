@@ -249,7 +249,7 @@ XIAO ESP32C6 默认出货时不带排针，您需要准备自己的排针并将�
 XIAO ESP32C6 的推荐编程工具是 Arduino IDE，因此您需要完成 Arduino 安装作为软件准备的一部分。
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Getting Started with Arduino](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 
 并且 XIAO ESP32C6 的板载包至少需要 **2.0.8** 版本才可用。
 
@@ -325,7 +325,7 @@ XIAO ESP32C6 系列具有内置电源管理芯片，允许其通过电池独立�
 
 :::tip 红色指示灯
 
-XIAO ESP32C6 具有电池充电红色指示灯，类似于 [XIAO ESP32S3](/cn/xiao_esp32s3_getting_started/#battery-usage)：
+XIAO ESP32C6 具有电池充电红色指示灯，类似于 [XIAO ESP32S3](/xiao_esp32s3_getting_started/#battery-usage)：
 
 XIAO ESP32C6 的红灯行为如下：
 
@@ -340,7 +340,7 @@ XIAO ESP32C6 的红灯行为如下：
 
 ## 读取电池电压
 
-要监控XIAO ESP32C6上的电池电压，类似于[XIAO ESP32C3](/cn/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)，您需要焊接一个200k电阻以1:2配置。此设置将电压减半，允许通过A0模拟端口安全监控。
+要监控XIAO ESP32C6上的电池电压，类似于[XIAO ESP32C3](/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)，您需要焊接一个200k电阻以1:2配置。此设置将电压减半，允许通过A0模拟端口安全监控。
 
 ### 示例代码
 

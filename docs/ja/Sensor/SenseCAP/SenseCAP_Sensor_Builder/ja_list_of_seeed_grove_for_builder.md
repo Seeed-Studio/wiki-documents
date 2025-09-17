@@ -464,7 +464,7 @@ Phase_Shift、ACサイクル数、タイムアウトなどの他のパラメー�
 ## ✨ コントリビュータープロジェクト
 
 - このプロジェクトは、Seeed Studio [コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
-- [Mohammed Adnan Khanの貢献](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=34120904)に感謝し、あなたの作業は[展示](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)されます。
+- [Mohammed Adnan Khanの貢献](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=34120904)に感謝し、あなたの作業は[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)されます。
 
 
 ## 技術サポート & 製品ディスカッション

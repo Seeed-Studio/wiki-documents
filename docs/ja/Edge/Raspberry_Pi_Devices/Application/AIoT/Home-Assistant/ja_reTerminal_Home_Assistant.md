@@ -71,7 +71,7 @@ import TabItem from '@theme/TabItem';
 
 それでは、reTerminalにHome Assistant Supervisedをインストールするプロセスを進めていきましょう。
 
-- **ステップ 1.** Raspberry Pi OSがすでにインストールされたreTerminalを準備します。reTerminalにはRPi OS 32-bitがプリインストールされています。ただし、再インストールしたい場合は、[このwiki](https://wiki.seeedstudio.com/ja/reTerminal-FAQ/#q2-how-can-i-flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal)に従ってください。
+- **ステップ 1.** Raspberry Pi OSがすでにインストールされたreTerminalを準備します。reTerminalにはRPi OS 32-bitがプリインストールされています。ただし、再インストールしたい場合は、[このwiki](https://wiki.seeedstudio.com/reTerminal-FAQ/#q2-how-can-i-flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal)に従ってください。
 
 **注意:** 32-bit版を使用することを確認してください。reTerminal LCDでのHome AssistantダッシュボードUIは、32-bit版の方がはるかにスムーズに動作するためです。
 

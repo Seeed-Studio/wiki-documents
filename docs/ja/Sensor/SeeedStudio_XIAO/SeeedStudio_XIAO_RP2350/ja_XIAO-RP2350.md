@@ -97,8 +97,8 @@ XIAO RP2350は、Raspberry Pi RP2350（150MHzで動作するデュアルCortex-M
     </tr>
     <tr>
         <td>ソフトウェア互換性</td>
-        <td>Arduino、PlatformIO、MicroPython、CircuitPython、Zephyr、<a href="https://wiki.seeedstudio.com/ja/xiao_topic_page/">その他多数</a></td>
-        <td>Arduino、PlatformIO、MicroPython、CircuitPython、<a href="https://wiki.seeedstudio.com/ja/xiao_topic_page/">その他多数</a></td>
+        <td>Arduino、PlatformIO、MicroPython、CircuitPython、Zephyr、<a href="https://wiki.seeedstudio.com/xiao_topic_page/">その他多数</a></td>
+        <td>Arduino、PlatformIO、MicroPython、CircuitPython、<a href="https://wiki.seeedstudio.com/xiao_topic_page/">その他多数</a></td>
     </tr>
     <tr>
         <td>動作温度</td>
@@ -161,7 +161,7 @@ RP2350を搭載したXIAO RP2350は、MicroPythonとRaspberry Piが提供するC
 ## はじめに▶️
 
 :::info attention
-このページは主にMicroPythonユーザーに焦点を当てています。SDK プログラミングの学習に興味がある方や上級ユーザーの方は、[Raspberry Pi Pico-series C/C++ SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf)から始めることをお勧めします。このガイドは環境のセットアップとサンプルコードの使用開始に役立ちます。また、XIAO RP2350に関するより具体的な手順については、[XIAO RP2350 with C/C++ SDK](/ja/xiao-rp2350-c-cpp-sdk)をご覧ください。
+このページは主にMicroPythonユーザーに焦点を当てています。SDK プログラミングの学習に興味がある方や上級ユーザーの方は、[Raspberry Pi Pico-series C/C++ SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf)から始めることをお勧めします。このガイドは環境のセットアップとサンプルコードの使用開始に役立ちます。また、XIAO RP2350に関するより具体的な手順については、[XIAO RP2350 with C/C++ SDK](/xiao-rp2350-c-cpp-sdk)をご覧ください。
 :::
 
 :::tip
@@ -428,7 +428,7 @@ while True:
 
 ### バッテリーと電源管理
 
-追加のコンポーネントなしでバッテリー電圧を読み取ることは可能でしょうか？はい、XIAO RP2350では、これまで以上に簡単になりました。[XIAO ESP32C3](/ja/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)などの以前のXIAOファミリーメンバーでは、バッテリー電圧を読み取るには抵抗を使って手動で*A0*に接続する必要がありました。
+追加のコンポーネントなしでバッテリー電圧を読み取ることは可能でしょうか？はい、XIAO RP2350では、これまで以上に簡単になりました。[XIAO ESP32C3](/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)などの以前のXIAOファミリーメンバーでは、バッテリー電圧を読み取るには抵抗を使って手動で*A0*に接続する必要がありました。
 
 しかし、XIAO RP2350では、このプロセスが簡素化されています。`A3/GPIO29`ピンを直接使用してバッテリー電圧レベルを読み取ることができるようになり、設計と開発が合理化されます。バッテリーレベルの読み取りを有効にするために`GPIO19`ピンをハイに設定することが必要であることを覚えておいてください。
 
@@ -532,11 +532,11 @@ XIAO RP2350 は Raspberry Pi RP2350 の力を活用し、Raspberry Pi コミュ�
 
 ### 拡張とアプリケーション
 
-[XIAO シリーズ](/ja/xiao_topic_page)には、学習と使用のための膨大な範囲の周辺機器と周辺アクセサリがあります。完璧なインタラクションを可能にするカラフルなスクリーン、明るくシンプルな RGB ライトを備えた統合ボードなど、チェックアウトを待っているものがあります。
+[XIAO シリーズ](/xiao_topic_page)には、学習と使用のための膨大な範囲の周辺機器と周辺アクセサリがあります。完璧なインタラクションを可能にするカラフルなスクリーン、明るくシンプルな RGB ライトを備えた統合ボードなど、チェックアウトを待っているものがあります。
 
 XIAO ファミリーのメンバーとして、XIAO RP2350 も同様です。もちろん、引き出された追加のピンをより良く活用するために、新しい*周辺機器とボード*が継続的に登場し、作成された性能を完全に活用します。
 
-- 🌟 **[アクセサリによる拡張](/ja/SeeedStudio_XIAO_Series_Introduction/#seeed-studio-xiao-series-compatible-accessories)**  
+- 🌟 **[アクセサリによる拡張](/SeeedStudio_XIAO_Series_Introduction/#seeed-studio-xiao-series-compatible-accessories)**  
   ディスプレイや LED マトリックスから Grove モジュールやセンサーまで、XIAO ファミリーと互換性のある幅広いアドオンとモジュールを発見し、それらがプロジェクトをどのように強化できるかを学びます。
 
 ### コミュニティと学習

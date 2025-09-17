@@ -11,7 +11,10 @@ last_update:
 no_comments: false # Disqus用
 
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 [www.seeedstudio.com](https://www.seeedstudio.com) で「ガスセンサー」を検索すると、多くのガスセンサーが見つかります。空気の成分は多様であり、特定のガスセンサーは1つまたは複数の空気成分を検出することができます。そのため、私たちは一連のガスセンサーを設計しました。
 

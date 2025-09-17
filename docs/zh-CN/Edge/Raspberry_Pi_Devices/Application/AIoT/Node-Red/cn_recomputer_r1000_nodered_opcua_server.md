@@ -50,9 +50,9 @@ OPC UA的架构设计考虑了关键原则：它通过将所有基于COM的OPC C
 
 在本教程中，我们将创建一个实际示例，将我们的 reComputer R1000 设置为使用 Node-RED 的 OPC UA 服务器。我们将专注于从 Modbus TCP 和 RTU 设备收集数据，不过值得注意的是，您也可以从 MQTT、BACnet 和其他设备收集数据。出于演示目的，我们将特别使用 Modbus TCP 和 RTU。如果您不熟悉从这些协议收集数据，请参考我们之前的教程：
 
-- [reComputer R1000 with Node-RED and BACnet IP](https://wiki.seeedstudio.com/cn/reComputer_r1000_node_red_bacnet_ip/)
-- [reComputer R1000 with Node-RED and Modbus TCP](https://wiki.seeedstudio.com/cn/recomputer_r1000_node_red_modbus_tcp/)
-- [reComputer R1000 with Node-RED and MQTT](https://wiki.seeedstudio.com/cn/recomputer_r1000_nodered_mqtt/)
+- [reComputer R1000 with Node-RED and BACnet IP](https://wiki.seeedstudio.com/reComputer_r1000_node_red_bacnet_ip/)
+- [reComputer R1000 with Node-RED and Modbus TCP](https://wiki.seeedstudio.com/recomputer_r1000_node_red_modbus_tcp/)
+- [reComputer R1000 with Node-RED and MQTT](https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/)
 
 ## 安装 OPC-UA 服务器节点
 

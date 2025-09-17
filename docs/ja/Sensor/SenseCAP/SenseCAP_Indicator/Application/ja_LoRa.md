@@ -34,7 +34,7 @@ LVGL コードなし: [Code · GitHub](https://github.com/Seeed-Solution/indicat
 
 ### SenseCAP Indicator
 
-ページ [Dive_into_the_Hardware](/ja/SenseCAP_Indicator_Dive_into_the_Hardware/#hardware-diagram) から、LoRa トランシーバーが SPI インターフェースを介して ESP32-S3 MCU に接続されていることがわかります。
+ページ [Dive_into_the_Hardware](/SenseCAP_Indicator_Dive_into_the_Hardware/#hardware-diagram) から、LoRa トランシーバーが SPI インターフェースを介して ESP32-S3 MCU に接続されていることがわかります。
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_6.png
 "/></div>
@@ -56,7 +56,7 @@ LoRa トランシーバーは、LoRa 信号の低レベル変調および復調�
 
 ## ソフトウェア
 
-[SenseCAP_Indicator_ESP32](https://github.com/Seeed-Solution/sensecap_indicator_esp32) SDK がすでに LoRa ライブラリを提供しているため、直接使用できます。LoRa ライブラリの使用方法については、ページ [LoRa®](/ja/SenseCAP_Indicator_ESP32_LoRa) を素早く確認してください。
+[SenseCAP_Indicator_ESP32](https://github.com/Seeed-Solution/sensecap_indicator_esp32) SDK がすでに LoRa ライブラリを提供しているため、直接使用できます。LoRa ライブラリの使用方法については、ページ [LoRa®](/SenseCAP_Indicator_ESP32_LoRa) を素早く確認してください。
 
 ## はじめに
 
@@ -64,7 +64,7 @@ LoRa トランシーバーは、LoRa 信号の低レベル変調および復調�
 
 ### 前提条件
 
-開発環境を設定するために提供された[手順](/ja/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware)に従ってください。
+開発環境を設定するために提供された[手順](/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware)に従ってください。
 
 ### ステップ 1: デモコードのダウンロード
 

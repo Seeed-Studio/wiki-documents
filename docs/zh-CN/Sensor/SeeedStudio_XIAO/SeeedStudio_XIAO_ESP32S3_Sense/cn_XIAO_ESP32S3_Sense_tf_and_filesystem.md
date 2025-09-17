@@ -975,7 +975,7 @@ void loop() {
 
 本节是为XIAO ESP32C3编写的，完全兼容新的XIAO ESP32S3，所以你可以直接使用这里的例程，因此我们不会在这里重复介绍。
 
-- [XIAO ESP32C3以不同方式永久存储数据](https://wiki.seeedstudio.com/cn/xiaoesp32c3-flash-storage/)
+- [XIAO ESP32C3以不同方式永久存储数据](https://wiki.seeedstudio.com/xiaoesp32c3-flash-storage/)
 
 ## 故障排除
 

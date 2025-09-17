@@ -43,7 +43,7 @@ last_update:
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-            <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
+            <a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> 詳細を確認 🖱️</font></span></strong>
             </a>
         </div></td>
@@ -137,7 +137,7 @@ e. モーメンタリーボタン（どのような種類でも可）
 
 ### Home Assistant のインストール
 
-Home Assistant が既に稼働していることを確認してください。[製品](https://wiki.seeedstudio.com/ja/home_assistant_topic/#-devices-for-home-assistant-)にHome Assistantをフラッシュする方法を紹介する複数のwikiがあります。私はRaspberry Pi CM4で動作するHome assistant Yellowを使用しているため、[公式のものを直接使用してHome assistant YellowにOSをフラッシュできます](https://yellow.home-assistant.io/power-supply/)。
+Home Assistant が既に稼働していることを確認してください。[製品](https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-)にHome Assistantをフラッシュする方法を紹介する複数のwikiがあります。私はRaspberry Pi CM4で動作するHome assistant Yellowを使用しているため、[公式のものを直接使用してHome assistant YellowにOSをフラッシュできます](https://yellow.home-assistant.io/power-supply/)。
 
 ### Home Assistant に ESPHome をインストール
 
@@ -617,7 +617,7 @@ M2x4およびM2x6ネジを使用して、前述のすべてのコンポーネン
 ## ✨ コントリビュータープロジェクト
 
 - このプロジェクトは、Seeed Studio [コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
-- Chrisの努力に感謝し、あなたの作業は[展示](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)されます。
+- Chrisの努力に感謝し、あなたの作業は[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)されます。
 
 ## 技術サポート & 製品ディスカッション
 

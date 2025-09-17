@@ -34,13 +34,13 @@ Open Interpreter 是一个开源工具，通过启用自然语言命令来执行
 
 ### 步骤 1：配置 SenseCap Watcher OpenSteam 模块
 
-首先，您需要按照下面的视频在 Watcher 中运行任务。如果您想了解更多信息，[请点击这里](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)。
+首先，您需要按照下面的视频在 Watcher 中运行任务。如果您想了解更多信息，[请点击这里](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)。
 
 <div class="table-center">
 <iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-如果您还不知道如何从 Watcher 向 Node_RED 发送消息，[请点击这里](https://wiki.seeedstudio.com/cn/watcher_to_node_red/)。
+如果您还不知道如何从 Watcher 向 Node_RED 发送消息，[请点击这里](https://wiki.seeedstudio.com/watcher_to_node_red/)。
 
 ### 步骤 2：配置 function 模块
 

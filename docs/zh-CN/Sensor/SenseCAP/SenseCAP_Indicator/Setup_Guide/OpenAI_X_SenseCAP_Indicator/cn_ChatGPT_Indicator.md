@@ -31,7 +31,7 @@ SenseCAP Indicator 通过 OpenAI 的 API 将 ChatGPT 集成到原生固件中，
 
 ## 步骤 2. 设置 API 密钥
 
-点击"Set API Key"并扫描二维码，然后根据[教程](/cn/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key)进行设置。
+点击"Set API Key"并扫描二维码，然后根据[教程](/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key)进行设置。
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/apikey.png"/></div>
 
@@ -45,7 +45,7 @@ SenseCAP Indicator 通过 OpenAI 的 API 将 ChatGPT 集成到原生固件中，
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/gpt.jpg"/></div>
 
 
-除了演示的功能外，SensecAP 还提供完全开源的代码和详细的教程，点击[这里](/cn/SenseCAP_Indicator_ChatGPT)了解更多详情。
+除了演示的功能外，SensecAP 还提供完全开源的代码和详细的教程，点击[这里](/SenseCAP_Indicator_ChatGPT)了解更多详情。
 
 
 # **常见问题**

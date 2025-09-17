@@ -60,7 +60,7 @@ YOLOv5 支持以下硬件：
 
 ## 先决条件
 
-- 运行最新 JetPack v4.6.1 并安装所有 SDK 组件的上述任一 Jetson 设备（安装参考请查看[此教程](https://wiki.seeedstudio.com/cn/reComputer_J1020_A206_Flash_JetPack/)）
+- 运行最新 JetPack v4.6.1 并安装所有 SDK 组件的上述任一 Jetson 设备（安装参考请查看[此教程](https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack/)）
 
 - 主机 PC
 
@@ -549,7 +549,7 @@ sudo ./yolov5 -d best.engine images
 
 这里我们将使用 [NVIDIA TensorRT](https://developer.nvidia.com/tensorrt) 以及 [NVIDIA DeepStream SDK](https://developer.nvidia.com/deepstream-sdk) 对视频片段进行推理
 
-- **步骤 1.** 确保您已在 Jetson 设备上正确安装了所有 **SDK 组件** 和 **DeepStream SDK**。（请参考[此 wiki](https://wiki.seeedstudio.com/cn/Tutorial-of-A20X-Carrier-Boards) 了解安装参考）
+- **步骤 1.** 确保您已在 Jetson 设备上正确安装了所有 **SDK 组件** 和 **DeepStream SDK**。（请参考[此 wiki](https://wiki.seeedstudio.com/Tutorial-of-A20X-Carrier-Boards) 了解安装参考）
 
 **注意：** 建议使用 NVIDIA SDK Manager 来安装所有 SDK 组件和 DeepStream SDK
 

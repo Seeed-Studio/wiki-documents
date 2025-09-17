@@ -32,7 +32,7 @@ last_update:
 ## 先决条件
 
 - 具有超过16GB内存的Jetson设备。
-- 硬件设备需要预先刷入jetpack [5.1.1](https://wiki.seeedstudio.com/cn/reComputer_Intro/)操作系统。
+- 硬件设备需要预先刷入jetpack [5.1.1](https://wiki.seeedstudio.com/reComputer_Intro/)操作系统。
 
 :::note
 在本wiki中，我们将使用[NVIDIA® Jetson AGX Orin™ 64GB开发者套件](https://www.seeedstudio.com/NVIDIArJetson-AGX-Orintm-64GB-Developer-Kit-p-5641.html)完成以下任务，但您也可以尝试使用其他Jetson设备。

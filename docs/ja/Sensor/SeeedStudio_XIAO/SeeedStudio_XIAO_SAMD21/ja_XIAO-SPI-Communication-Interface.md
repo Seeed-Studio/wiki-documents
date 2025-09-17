@@ -41,12 +41,12 @@ last_update:
 
 :::note
 
-Arduinoを初めて使用する場合は、開始前に[Arduino入門](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+Arduinoを初めて使用する場合は、開始前に[Arduino入門](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
 - **ステップ1.** GithubからDPS310-Pressure-Sensorライブラリをダウンロードします。
 
-- **ステップ2.** [ライブラリのインストール方法](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library)を参照してArduino用ライブラリをインストールします。
+- **ステップ2.** [ライブラリのインストール方法](https://wiki.seeedstudio.com/How_to_install_Arduino_Library)を参照してArduino用ライブラリをインストールします。
 
 - **ステップ3.** コードをArduino IDEにコピーしてアップロードします。
 

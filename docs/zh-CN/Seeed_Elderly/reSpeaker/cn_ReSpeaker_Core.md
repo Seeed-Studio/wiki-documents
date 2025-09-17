@@ -141,7 +141,7 @@ ReSpeaker 默认设置为中继模式，在享受互联网语音识别功能之�
 ![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/wifi1.png)
 
 :::note
-如果没有出现"ReSpeakerXXXXXX"，但发现了"LinkIt_Smart_7688_XXXXXX"。请点击[这里](https://wiki.seeedstudio.com/cn/ReSpeaker_Core/#q20-system-recovery-by-factory-image)。
+如果没有出现"ReSpeakerXXXXXX"，但发现了"LinkIt_Smart_7688_XXXXXX"。请点击[这里](https://wiki.seeedstudio.com/ReSpeaker_Core/#q20-system-recovery-by-factory-image)。
 :::
 
 一旦您获得了 IP 地址，打开网络浏览器，在地址栏中输入 192.168.100.1。几秒钟后，会出现一个网页，要求输入现有 Wi-Fi 网络的 ssid 和密码。

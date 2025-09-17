@@ -984,7 +984,7 @@ i2cdetect -y -r 7
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-I2C-test.png"/></div>
 
 :::info
-一般的なIOピンをロジック制御に使用したい場合は、[このwiki](/ja/reComputer_Jetson_GPIO)を参照してください。
+一般的なIOピンをロジック制御に使用したい場合は、[このwiki](/reComputer_Jetson_GPIO)を参照してください。
 :::
 
 ## 技術サポート & 製品ディスカッション

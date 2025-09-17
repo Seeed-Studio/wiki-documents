@@ -64,7 +64,7 @@ FUXA 是一个基于 Web 的过程可视化（SCADA/HMI/仪表板）软件。使
     sudo fuxa
   ```
 
-- 关于如何使用 reComputer R1000 的 modbus 功能，您可以参考这个 [wiki](https://wiki.seeedstudio.com/cn/reComputer_r1000_use_rs485_modbus_rtu/)。
+- 关于如何使用 reComputer R1000 的 modbus 功能，您可以参考这个 [wiki](https://wiki.seeedstudio.com/reComputer_r1000_use_rs485_modbus_rtu/)。
 
 ### 硬件配置
 

@@ -18,7 +18,7 @@ last_update:
 
 ## はじめに
 
-セットアップを開始する前に、[SenseCAP T1000をTTSに接続](https://wiki.seeedstudio.com/ja/SenseCAP_T1000_tracker_TTN)を確認して、まずSenseCAP T1000 TrackerをTTSに接続してください。
+セットアップを開始する前に、[SenseCAP T1000をTTSに接続](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN)を確認して、まずSenseCAP T1000 TrackerをTTSに接続してください。
 
 ## ThingsBoardの設定
 

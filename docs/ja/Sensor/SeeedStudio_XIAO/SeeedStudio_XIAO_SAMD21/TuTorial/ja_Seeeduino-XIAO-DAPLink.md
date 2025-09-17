@@ -29,7 +29,7 @@ Arduino DAPLinkの入門ガイドWikiをこちらでご覧ください。
 
 - [**simple_daplink_xiao**](http://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/simple_daplink_xiao.uf2) `uf2`ファイルをダウンロードしてください。
 
-電源スイッチを素早く2回スライドしてブートローダーモードに入ります。詳細については、[こちら](https://wiki.seeedstudio.com/ja/Wio-Terminal-Getting-Started/#faq)もご参照ください。
+電源スイッチを素早く2回スライドしてブートローダーモードに入ります。詳細については、[こちら](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/#faq)もご参照ください。
 
 PCに`Arduino`という名前の外部ドライブが表示されるはずです。ダウンロードしたuf2ファイルを`Arduino`ドライブにドラッグしてください。
 

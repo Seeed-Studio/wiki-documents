@@ -8,7 +8,10 @@ last_update:
   author: w0x7ce
 
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 この Wiki では、ODYSSEY-X86 上で LTE モジュールを Windows および Linux OS の両方で使用する方法を説明します。この例では、M.2 フォームファクターの [Quectel EM06-E LTE Cat 6 M.2 Module](https://www.seeedstudio.com/Quectel-EM06-E-LTE-Cat6-Module-p-4567.html) を使用します。
 

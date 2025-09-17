@@ -432,7 +432,7 @@ pi@raspberrypi:~/usb_4_mic_array $ sudo python VAD.py
 ```
 
 :::note
-对于VAD的阈值，我们也可以使用GAMMAVAD_SR来设置。更多详细信息请参考[调优](https://wiki.seeedstudio.com/cn/ReSpeaker_Mic_Array_v2.0/#tuning)。
+对于VAD的阈值，我们也可以使用GAMMAVAD_SR来设置。更多详细信息请参考[调优](https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#tuning)。
 :::
 
 ### 提取语音
@@ -763,7 +763,7 @@ A4: 是的，感谢 Yuki 分享了将 [ReSpeaker Mic Array v2 与 ROS (Robot Ope
 
 **Q5: 如何启用 3.5mm 音频端口来接收信号以及 USB 端口？**
 
-A5: 请下载 [新固件](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/i2s_i1o2.bin) 并按照 [如何更新固件](https://wiki.seeedstudio.com/cn/ReSpeaker_Mic_Array_v2.0/#update-firmware) 来烧录 XMOS。
+A5: 请下载 [新固件](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/i2s_i1o2.bin) 并按照 [如何更新固件](https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#update-firmware) 来烧录 XMOS。
 
 ## 资源
 

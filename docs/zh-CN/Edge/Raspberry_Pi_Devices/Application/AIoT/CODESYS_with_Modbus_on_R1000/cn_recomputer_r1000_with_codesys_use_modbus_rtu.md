@@ -44,7 +44,7 @@ last_update:
 
 ## 开始使用
 
-在开始之前，请确保您的 reComputer R1000 与主机在同一网段内，并且您已在 reComputer R1000 上部署了 `CODESYS run-time`。有关如何部署 `CODESYS run-time` 的信息，请参考 [wiki](https://wiki.seeedstudio.com/cn/reComputer_r1000_install_codesys/)
+在开始之前，请确保您的 reComputer R1000 与主机在同一网段内，并且您已在 reComputer R1000 上部署了 `CODESYS run-time`。有关如何部署 `CODESYS run-time` 的信息，请参考 [wiki](https://wiki.seeedstudio.com/reComputer_r1000_install_codesys/)
 
 ### 硬件配置
 

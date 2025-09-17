@@ -28,7 +28,7 @@ LoRa® 标记是 Semtech Corporation 或其子公司的商标。
 <iframe width={560} height={315} src="https://www.youtube.com/embed/XIksiHEXT3A?si=UNm6zmbeUVhgfWh4" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
 
 :::note
-我们最近发布了基于 Wio-E5 模块的 Wio-E5 系列产品。点击[这里](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)了解 Wio-E5 家族的新成员，从[Grove 模块](https://wiki.seeedstudio.com/cn/Grove_LoRa_E5_New_Version/)、[迷你开发板](https://wiki.seeedstudio.com/cn/LoRa_E5_mini/)到[开发套件](https://wiki.seeedstudio.com/cn/LoRa_E5_Dev_Board/)。要了解更多关于使用 STM32Cube MCU Package for STM32WL 系列(SDK)创建 LoRaWAN 终端节点、加入并向 LoRaWAN 网络发送数据的信息，请阅读[迷你开发板](https://wiki.seeedstudio.com/cn/LoRa_E5_mini/)和[开发套件](https://wiki.seeedstudio.com/cn/LoRa_E5_Dev_Board/)的 wiki 页面。
+我们最近发布了基于 Wio-E5 模块的 Wio-E5 系列产品。点击[这里](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)了解 Wio-E5 家族的新成员，从[Grove 模块](https://wiki.seeedstudio.com/Grove_LoRa_E5_New_Version/)、[迷你开发板](https://wiki.seeedstudio.com/LoRa_E5_mini/)到[开发套件](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/)。要了解更多关于使用 STM32Cube MCU Package for STM32WL 系列(SDK)创建 LoRaWAN 终端节点、加入并向 LoRaWAN 网络发送数据的信息，请阅读[迷你开发板](https://wiki.seeedstudio.com/LoRa_E5_mini/)和[开发套件](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/)的 wiki 页面。
 :::
 
 Wio-E5 是由深圳矽递科技股份有限公司设计的低成本、超低功耗、极其紧凑且高性能的 LoRaWAN® 模块。**它包含 ST 系统级封装芯片 STM32WLE5JC，这是世界上首个集成了 LoRa® RF 和 MCU 芯片组合的 SoC。** 该模块还嵌入了 ARM Cortex M4 超低功耗 MCU 和 LoRa® SX126X，因此支持 (G)FSK 模式和 LoRa®。在 LoRa® 模式下可以使用 62.5kHz、125kHz、250kHz 和 500kHz 带宽，使其适用于各种物联网节点的设计，支持 EU868 和 US915。
@@ -414,7 +414,7 @@ Rx: +KEY: APPKEY 2B7E151628AED2A6ABF7158809CF4F3C
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/12.png" alt="pir" width="450" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/12.png" alt="pir" width={600} height="auto" /></p>
 
-- **步骤 12.** 在 TTN 控制台注册您的 LoRaWAN® 网关。请参考[此处](https://wiki.seeedstudio.com/cn/The-Things-Indoor-Gateway/#step-2-gateway-registration-on-ttn-console)显示的说明
+- **步骤 12.** 在 TTN 控制台注册您的 LoRaWAN® 网关。请参考[此处](https://wiki.seeedstudio.com/The-Things-Indoor-Gateway/#step-2-gateway-registration-on-ttn-console)显示的说明
 
 - **步骤 13.** 输入以下 AT 命令连接到 TTN
 
@@ -481,7 +481,7 @@ Rx: +MSGHEX: Start
 **注意：** 我们现在已经更新了库以支持 v1.1.0，这是 STM32WL 系列 STM32Cube MCU 包的最新版本。
 
 :::note
-请先阅读[擦除出厂 AT 固件](https://wiki.seeedstudio.com/cn/LoRa_E5_mini/#21-erase-factory-at-firmware)部分，因为我们需要在使用 SDK 编程之前擦除出厂 AT 固件。擦除出厂 AT 固件后，它无法恢复。
+请先阅读[擦除出厂 AT 固件](https://wiki.seeedstudio.com/LoRa_E5_mini/#21-erase-factory-at-firmware)部分，因为我们需要在使用 SDK 编程之前擦除出厂 AT 固件。擦除出厂 AT 固件后，它无法恢复。
 :::
 
 #### 准备工作
@@ -565,7 +565,7 @@ Rx: +MSGHEX: Start
 
 现在我们将修改我们的 **Device EUI**、**Application EUI**、**Application KEY** 和 **LoRawan Region**
 
-- **步骤 7.** 请按照[这里](https://wiki.seeedstudio.com/cn/LoRa_E5_mini/#13-connect-and-send-data-to-the-things-network)的指南设置您的 TTN 应用程序，获取您的 **Application EUI** 并将其复制到 `LoRaWAN/App/se-identity.h` 中的宏定义 `LORAWAN_JOIN_EUI`，例如，这里的 Application EUI 是 `80 00 00 00 00 00 00 0x07`：
+- **步骤 7.** 请按照[这里](https://wiki.seeedstudio.com/LoRa_E5_mini/#13-connect-and-send-data-to-the-things-network)的指南设置您的 TTN 应用程序，获取您的 **Application EUI** 并将其复制到 `LoRaWAN/App/se-identity.h` 中的宏定义 `LORAWAN_JOIN_EUI`，例如，这里的 Application EUI 是 `80 00 00 00 00 00 00 0x07`：
 
 ```cpp
 // LoRaWAN/App/se-identity.h

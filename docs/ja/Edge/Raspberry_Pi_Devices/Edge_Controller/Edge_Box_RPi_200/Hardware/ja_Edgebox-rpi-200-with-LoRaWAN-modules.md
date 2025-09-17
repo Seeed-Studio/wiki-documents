@@ -30,7 +30,7 @@ EdgeBox-RPi-200シリーズは、複数の産業用途を組み合わせたRaspb
 LoRa®マークは、Semtech Corporationまたはその子会社の商標です。
 
 :::note
-        最近、Wio-E5モジュールをベースとしたWio-E5シリーズをリリースしました。[こちら](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)をクリックして、[Wio-E5モジュール](https://wiki.seeedstudio.com/ja/LoRa-E5_STM32WLE5JC_Module/)から[Groveモジュール](https://wiki.seeedstudio.com/ja/Grove_LoRa_E5_New_Version/)、[ミニ開発ボード](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/)、[開発キット](https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/)まで、LoRa-E5ファミリーの新しいメンバーをご覧ください。STM32WLシリーズ用STM32Cube MCUパッケージ（SDK）を使用してLoRaWAN®エンドノードを作成し、LoRaWAN®ネットワークに参加してデータを送信する方法について詳しく学ぶには、[ミニ開発ボード](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/)と[開発キット](https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/)のwikiページをお読みください。
+        最近、Wio-E5モジュールをベースとしたWio-E5シリーズをリリースしました。[こちら](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)をクリックして、[Wio-E5モジュール](https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module/)から[Groveモジュール](https://wiki.seeedstudio.com/Grove_LoRa_E5_New_Version/)、[ミニ開発ボード](https://wiki.seeedstudio.com/LoRa_E5_mini/)、[開発キット](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/)まで、LoRa-E5ファミリーの新しいメンバーをご覧ください。STM32WLシリーズ用STM32Cube MCUパッケージ（SDK）を使用してLoRaWAN®エンドノードを作成し、LoRaWAN®ネットワークに参加してデータを送信する方法について詳しく学ぶには、[ミニ開発ボード](https://wiki.seeedstudio.com/LoRa_E5_mini/)と[開発キット](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/)のwikiページをお読みください。
 :::
 
 WM1302モジュールは、mini-PCIeフォームファクターを持つ新世代のLoRaWAN®ゲートウェイモジュールです。Semtech® SX1302ベースバンドLoRaWAN®チップをベースとし、WM1302はゲートウェイ製品の長距離無線伝送のより大きな潜在能力を解き放ちます。従来のSX1301およびSX1308 LoRa®チップと比較して、より高い感度、より少ない消費電力、より低い動作温度を特徴としています。

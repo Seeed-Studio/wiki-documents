@@ -63,7 +63,7 @@ no_comments: false # for Disqus
 
 #### 步骤1：安装AI kit
 
-请参考[此wiki](https://wiki.seeedstudio.com/cn/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)并确保您已将AI kit安装到您的reComputer R1000上。
+请参考[此wiki](https://wiki.seeedstudio.com/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)并确保您已将AI kit安装到您的reComputer R1000上。
 
 #### 步骤2：安装项目
 

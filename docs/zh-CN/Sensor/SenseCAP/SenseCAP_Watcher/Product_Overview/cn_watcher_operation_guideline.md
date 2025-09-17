@@ -122,7 +122,7 @@ Watcher的按键通话功能允许您在任何屏幕或界面上使用语音命�
 
 2. 如果您在Watcher运行任务时开始对话，那么Watcher将首先暂停当前任务，然后在对话结束后重新进入您的原始任务。
 
-3. 要了解如何分配任务，请先阅读**[如何为Watcher分配任务](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)**教程。
+3. 要了解如何分配任务，请先阅读**[如何为Watcher分配任务](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)**教程。
 :::
 
 ## 功能概述

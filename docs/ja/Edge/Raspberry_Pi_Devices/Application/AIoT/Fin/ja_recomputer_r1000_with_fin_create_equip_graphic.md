@@ -47,7 +47,7 @@ FIN Framework (FIN) は、統合、制御、管理、分析、可視化、接続
 
 ### ソフトウェアの準備
 
-- FIN Framworkのインストール方法については、この[wiki](https://wiki.seeedstudio.com/ja/reComputer_r1000_install_fin/)を参照してください。
+- FIN Framworkのインストール方法については、この[wiki](https://wiki.seeedstudio.com/reComputer_r1000_install_fin/)を参照してください。
 
 ## Equip Graphicの作成手順
 

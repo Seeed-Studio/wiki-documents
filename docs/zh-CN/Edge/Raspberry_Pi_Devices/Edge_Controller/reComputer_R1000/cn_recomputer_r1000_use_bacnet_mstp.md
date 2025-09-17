@@ -45,7 +45,7 @@ BACnet MS/TP（主从/令牌传递）是一种用于楼宇自动化和控制网�
     </div>
 
 ### 软件
-* 由于 bacnet MS/TP 使用 RS485 物理层，您可以参考这个 [wiki](https://wiki.seeedstudio.com/cn/reComputer_r1000_use_rs485_modbus_rtu/) 了解如何在 reComputer R1000 V1.0 上正常使用 RS485 功能。
+* 由于 bacnet MS/TP 使用 RS485 物理层，您可以参考这个 [wiki](https://wiki.seeedstudio.com/reComputer_r1000_use_rs485_modbus_rtu/) 了解如何在 reComputer R1000 V1.0 上正常使用 RS485 功能。
 * 我们借助 `bacnet-stack` 库应用程序来模拟服务器，因此您需要输入以下命令来下载它：
   ```shell
   git clone https://github.com/bacnet-stack/bacnet-stack.git

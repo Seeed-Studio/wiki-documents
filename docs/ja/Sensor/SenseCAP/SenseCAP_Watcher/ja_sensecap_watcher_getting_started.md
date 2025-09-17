@@ -82,7 +82,7 @@ Watcherデバイスの電源を入れるには、右上角にあるホイール�
 ### ステップ3. デバイスバインディング
 
 :::caution
-[SenseCraft Pro](https://wiki.seeedstudio.com/ja/watcher_price/)は、デバイスがSenseCraft APPに接続されると自動的にトライアルサービスをアクティベートします。
+[SenseCraft Pro](https://wiki.seeedstudio.com/watcher_price/)は、デバイスがSenseCraft APPに接続されると自動的にトライアルサービスをアクティベートします。
 :::
 
 Watcherの電源を入れた後、以前にデバイスにバインドされていない場合、SenseCraftアプリに接続するよう促されます。または、設定メニューで「Connect to APP」オプションを見つけることができます。その後、WatcherはSenseCraftアプリをダウンロードするためのQRコードを表示します。
@@ -190,7 +190,7 @@ Task Templates：
 :::danger
 SenseCraft AIの一部のサービスを使用する際に料金が発生する場合があります。詳細については以下のドキュメントを参照してください：
 
-**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/ja/watcher_price/)**
+**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 SenseCraft APPを使用してWatcherデバイスにタスクを送信できます。この例では、Watcherが提供するサンプルタスクの1つを使用してタスクを送信するプロセスを実演します。コマンド*If you see a candles, please notify me*を使用しましょう。
@@ -231,7 +231,7 @@ Watcherはタスクの指示をダウンロードし、ダウンロードが完�
 
 これらの手順に従うことで、SenseCraft APPを使用してWatcherに効果的にコマンドを送信し、特定の監視タスクを実行させ、指定された条件が満たされたときに通知を受け取ることができます。
 
-最適なパフォーマンスと監視要件との整合性を確保するため、Watcherの設定とタスクフローを定期的に確認し調整することを忘れないでください。APPのタスクとオプションのより詳細な説明と解説、および間隔の詳細な説明については、**[Watcher Task Assignment Guideline](https://wiki.seeedstudio.com/ja/getting_started_with_watcher_task/)**を読んで詳細を学んでください。
+最適なパフォーマンスと監視要件との整合性を確保するため、Watcherの設定とタスクフローを定期的に確認し調整することを忘れないでください。APPのタスクとオプションのより詳細な説明と解説、および間隔の詳細な説明については、**[Watcher Task Assignment Guideline](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)**を読んで詳細を学んでください。
 
 </TabItem>
 
@@ -240,7 +240,7 @@ Watcherはタスクの指示をダウンロードし、ダウンロードが完�
 :::danger
 SenseCraft AIの一部のサービスを使用する際に料金が発生する場合があります。詳細については以下のドキュメントを参照してください：
 
-**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/ja/watcher_price/)**
+**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 Watcherは「Push to Talk」機能により、音声コマンドを使用してタスクを送信したり会話を行ったりする便利で直感的な方法を提供します。この機能はデバイスの任意の画面やインターフェースからアクセス可能で、メニューを操作することなくWatcherと簡単にやり取りできます。この機能の使用方法についてのステップバイステップガイドは以下の通りです：

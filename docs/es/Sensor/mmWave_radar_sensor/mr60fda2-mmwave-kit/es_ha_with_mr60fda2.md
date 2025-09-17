@@ -17,7 +17,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 :::danger Acerca del alcance del uso del radar en Home Assistant
-Las actualizaciones del firmware del RADAR y las actualizaciones del YAML de ESPHome son dos piezas de software diferentes. El YAML de ESPHome se puede actualizar por OTA, mientras que la placa RADAR SOLO se puede actualizar mediante USB dentro de la carcasa, con el software especializado que proporciona SEEED. Puede personalizar el software de ESPHome, pero [NO puede personalizar el firmware del RADAR](https://wiki.seeedstudio.com/es/getting_started_with_mr60fda2_mmwave_kit/#module-firmware-upgrade). Seeed Studio solo permite la personalización del RADAR si está realizando una aplicación comercial.
+Las actualizaciones del firmware del RADAR y las actualizaciones del YAML de ESPHome son dos piezas de software diferentes. El YAML de ESPHome se puede actualizar por OTA, mientras que la placa RADAR SOLO se puede actualizar mediante USB dentro de la carcasa, con el software especializado que proporciona SEEED. Puede personalizar el software de ESPHome, pero [NO puede personalizar el firmware del RADAR](https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/#module-firmware-upgrade). Seeed Studio solo permite la personalización del RADAR si está realizando una aplicación comercial.
 :::
 
 ## Introducción {#introduction}

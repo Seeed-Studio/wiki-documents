@@ -30,7 +30,7 @@ EdgeBox-RPi-200 系列是基于 Raspberry Pi 的一体化工业边缘计算控�
 LoRa® 标记是 Semtech Corporation 或其子公司的商标。
 
 :::note
-        我们最近发布了基于 Wio-E5 模块的 Wio-E5 系列。点击[这里](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)了解 LoRa-E5 家族的新成员，从 [Wio-E5 模块](https://wiki.seeedstudio.com/cn/LoRa-E5_STM32WLE5JC_Module/) [Grove 模块](https://wiki.seeedstudio.com/cn/Grove_LoRa_E5_New_Version/)、[迷你开发板](https://wiki.seeedstudio.com/cn/LoRa_E5_mini/)到[开发套件](https://wiki.seeedstudio.com/cn/LoRa_E5_Dev_Board/)。要了解更多关于使用 STM32Cube MCU Package for STM32WL 系列(SDK)创建 LoRaWAN® 终端节点、加入并向 LoRaWAN® 网络发送数据的信息，请阅读[迷你开发板](https://wiki.seeedstudio.com/cn/LoRa_E5_mini/)和[开发套件](https://wiki.seeedstudio.com/cn/LoRa_E5_Dev_Board/)的 wiki 页面。
+        我们最近发布了基于 Wio-E5 模块的 Wio-E5 系列。点击[这里](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)了解 LoRa-E5 家族的新成员，从 [Wio-E5 模块](https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module/) [Grove 模块](https://wiki.seeedstudio.com/Grove_LoRa_E5_New_Version/)、[迷你开发板](https://wiki.seeedstudio.com/LoRa_E5_mini/)到[开发套件](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/)。要了解更多关于使用 STM32Cube MCU Package for STM32WL 系列(SDK)创建 LoRaWAN® 终端节点、加入并向 LoRaWAN® 网络发送数据的信息，请阅读[迷你开发板](https://wiki.seeedstudio.com/LoRa_E5_mini/)和[开发套件](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/)的 wiki 页面。
 :::
 
 WM1302 模块是新一代采用 mini-PCIe 外形规格的 LoRaWAN® 网关模块。基于 Semtech® SX1302 基带 LoRaWAN® 芯片，WM1302 为网关产品释放了更大的长距离无线传输潜力。与之前的 SX1301 和 SX1308 LoRa® 芯片相比，它具有更高的灵敏度、更低的功耗和更低的工作温度。

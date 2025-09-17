@@ -105,7 +105,7 @@ XIAO ESP32S3 & Wio-SX1262 キットをベースにした、フル機能のmeshta
 
 ## ステップ 1: Meshtastic ファームウェアをフラッシュする
 
-XIAO ESP32S3 に Meshtastic ファームウェアが既にプリフラッシュされていることを確認してください。まだの場合は、[この手順](https://wiki.seeedstudio.com/ja/wio_sx1262_xiao_esp32s3_for_meshtastic/#flash-firmware)に従ってフラッシュしてください。
+XIAO ESP32S3 に Meshtastic ファームウェアが既にプリフラッシュされていることを確認してください。まだの場合は、[この手順](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_meshtastic/#flash-firmware)に従ってフラッシュしてください。
 
 ## ステップ 2: XIAO 拡張ボードのピンヘッダーを再はんだする
 

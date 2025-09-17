@@ -11,7 +11,10 @@ last_update:
   date: 05/15/2025
   author: Jessie
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 このプロジェクトでは、ReSpeaker Lite ボードの I2S インターフェースを使用して正弦波を生成し、再生する方法を示します。ReSpeaker Lite は、デュアルチャンネルのマイクとスピーカーを備えた XIAO ESP32S3 マイクロコントローラーを統合したオーディオボードです。
 

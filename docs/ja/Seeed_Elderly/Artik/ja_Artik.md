@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: Matthew
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 Samsung ARTIK Smart IoTプラットフォームは、ハードウェアモジュールとクラウドサービスを統合し、セキュリティが組み込まれたツールとパートナーのエコシステムを提供することで、製品の市場投入までの時間を短縮します。これを「エンドツーエンドIoT」と呼びます。
 

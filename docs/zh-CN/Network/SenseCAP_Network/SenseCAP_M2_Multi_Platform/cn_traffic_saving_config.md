@@ -29,7 +29,7 @@ last_update:
 固件版本需要新于1.1.6
 :::
 
-查看[快速开始](https://wiki.seeedstudio.com/cn/quick_start_with_M2_MP/)以登录Luci页面。
+查看[快速开始](https://wiki.seeedstudio.com/quick_start_with_M2_MP/)以登录Luci页面。
 
 导航到`Status` -> `Overview`，检查当前的操作系统和固件版本。
 

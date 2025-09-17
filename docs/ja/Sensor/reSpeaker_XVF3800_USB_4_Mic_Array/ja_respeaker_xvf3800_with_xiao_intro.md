@@ -108,10 +108,10 @@ reSpeaker XVF3800は外部制御用に3つの入力ピン（GPI）と5つの出�
 ## I2Sファームウェアのフラッシュ
 
 reSpeaker XVF3800をXIAO ESP32S3で使用するには、reSpeaker XVF3800のファームウェアがI2Sバージョンであることを確認してください。
-最新のI2Sファームウェアをフラッシュするには、Firmware Flashを確認してください。[このセクション](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#update-firmware)をご覧ください。
+最新のI2Sファームウェアをフラッシュするには、Firmware Flashを確認してください。[このセクション](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)をご覧ください。
 
 :::note
-XIAO ESP32S3で動作させるには、I2Sファームウェアをフラッシュする必要があります。ただし、USB DFUはサポートされていません。すでにUSBファームウェアを使用している場合は、セーフモードに入ってファームウェアをフラッシュできます。この方法はUSB DFUとI2C DFUの両方をサポートするため、より柔軟です。詳細については、この[セクション](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#safe-mode)をご覧ください。
+XIAO ESP32S3で動作させるには、I2Sファームウェアをフラッシュする必要があります。ただし、USB DFUはサポートされていません。すでにUSBファームウェアを使用している場合は、セーフモードに入ってファームウェアをフラッシュできます。この方法はUSB DFUとI2C DFUの両方をサポートするため、より柔軟です。詳細については、この[セクション](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#safe-mode)をご覧ください。
 :::
 
 ## ソフトウェアの準備

@@ -46,10 +46,10 @@ BACnet IP（Building Automation and Control Network over IP）は、ビルシス
 
 ### ソフトウェアの準備
 
-reComputer R1000は、Raspberry Pi OSがプリインストールされた状態でお手元に届きます。このデバイスを初めて起動する場合は、[Getting Started Wiki](https://wiki.seeedstudio.com/ja/reComputer_r/)をお読みください。node-redに関する情報については、[以下の投稿](https://wiki.seeedstudio.com/ja/Edge-Box-Getting-Started-with-Node-Red/)を参照してください。このwikiに進む前に、このガイドを確認することをお勧めします。このチュートリアルでは、YABE室温シミュレーターを実行するホストPCと、reComputer R1000で実行されるNode-REDを接続します。
+reComputer R1000は、Raspberry Pi OSがプリインストールされた状態でお手元に届きます。このデバイスを初めて起動する場合は、[Getting Started Wiki](https://wiki.seeedstudio.com/reComputer_r/)をお読みください。node-redに関する情報については、[以下の投稿](https://wiki.seeedstudio.com/Edge-Box-Getting-Started-with-Node-Red/)を参照してください。このwikiに進む前に、このガイドを確認することをお勧めします。このチュートリアルでは、YABE室温シミュレーターを実行するホストPCと、reComputer R1000で実行されるNode-REDを接続します。
 
 ### ノードのダウンロード
-このチュートリアルでは、**"node-bacnet-contrib-extended"**ノード、**"node-red-contrib-loop"**ノード、および**"node-red-dashboard"**ノードを使用します。開始前にこれらをダウンロードしてください。ノードのダウンロード方法については、[チュートリアル](https://wiki.seeedstudio.com/ja/Edge-Box-Getting-Started-with-Node-Red/)を参照してください。
+このチュートリアルでは、**"node-bacnet-contrib-extended"**ノード、**"node-red-contrib-loop"**ノード、および**"node-red-dashboard"**ノードを使用します。開始前にこれらをダウンロードしてください。ノードのダウンロード方法については、[チュートリアル](https://wiki.seeedstudio.com/Edge-Box-Getting-Started-with-Node-Red/)を参照してください。
 ### YABE
 
 この[リンク](https://sourceforge.net/projects/yetanotherbacnetexplorer/)にアクセスして、YABE（Yet Another BACnet Explorer）をダウンロードしてください。YABEはBACnetデバイスをシミュレートおよび探索できる多機能ツールで、テストと開発目的に最適です。ホストPCにダウンロードしてインストールした後、YABEを使用して室温データをシミュレートし、reComputer R1000のNode-REDを使用してそのデータを読み取り、処理します。
@@ -115,7 +115,7 @@ BACnetデバイスから継続的にデータを取得する必要があり、�
 上記の4つのステップを通じて、BACnetデバイスから継続的にデータを取得できます。データの変化をより直感的にするために、UI機能を導入してUIインタラクティブインターフェースを描画し、データの変化を表示できます。これは**"node-red-dashboard"**ノードの実装を使用できます。この例では、`"chart"`と`"gauge"`を使用して3セットの線グラフとダッシュボードを描画します。ステップ4の出力を`"chart"`と`"gauge"`の入力として使用し、BACnetデータのリアルタイム視覚監視を実現します。
 <center><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/Node_red_pic/5show.gif" /></center>
 
-このセクションでは主に**"node-bacnet-contrib-extended"**と**"node-red-dashboard"**ノードを使用してBACnetデバイスデータの視覚的読み取りを実現する方法を紹介します。**"node-bacnet-contrib-extended"**ノードの使用に関するより詳細な説明については、[このチュートリアル](https://wiki.seeedstudio.com/ja/edge_box_rpi_200_node_red_bacnet_tcp/)を参照してください。
+このセクションでは主に**"node-bacnet-contrib-extended"**と**"node-red-dashboard"**ノードを使用してBACnetデバイスデータの視覚的読み取りを実現する方法を紹介します。**"node-bacnet-contrib-extended"**ノードの使用に関するより詳細な説明については、[このチュートリアル](https://wiki.seeedstudio.com/edge_box_rpi_200_node_red_bacnet_tcp/)を参照してください。
 
 ## 技術サポート & 製品ディスカッション
 

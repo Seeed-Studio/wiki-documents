@@ -46,7 +46,7 @@ Edge Box RPi 200 和 [N3uron](https://n3uron.com/) Duo 的强大组合通过提�
 
 ### 软件
 
-我们强烈建议学习 [N3uron 入门指南](https://wiki.seeedstudio.com/cn/Edgebox-rpi-200-n3uron/)。它提供了导航 N3uron Web 界面的基本见解，理解 Web UI 和 Web Vision 模块等概念，掌握标签的概念，以及创建基本仪表板。如果您还没有探索这些基础知识，建议在进一步操作之前先了解这些内容。您可以通过提供的链接访问该指南。
+我们强烈建议学习 [N3uron 入门指南](https://wiki.seeedstudio.com/Edgebox-rpi-200-n3uron/)。它提供了导航 N3uron Web 界面的基本见解，理解 Web UI 和 Web Vision 模块等概念，掌握标签的概念，以及创建基本仪表板。如果您还没有探索这些基础知识，建议在进一步操作之前先了解这些内容。您可以通过提供的链接访问该指南。
 
 ### 配置以太网设置
 
@@ -212,7 +212,7 @@ sudo nano /etc/dhcpcd.conf
 ## 额外功能：让我们发布工厂状态到 AWS
 
 :::note
-我们已经提供了如何将 [AWS 云连接到您的 Edge Box RPi 200 设备](https://wiki.seeedstudio.com/cn/Edgebox-Rpi-200_N3uron_AWS/) 的分步说明。如果您是第一次接触这个 wiki，请参考此链接。
+我们已经提供了如何将 [AWS 云连接到您的 Edge Box RPi 200 设备](https://wiki.seeedstudio.com/Edgebox-Rpi-200_N3uron_AWS/) 的分步说明。如果您是第一次接触这个 wiki，请参考此链接。
 
 :::
 

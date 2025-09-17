@@ -25,12 +25,12 @@ reComputer J1010 是一款基于 NVIDIA Jetson Nano 4GB 生产模块构建的紧
 
 除了 Jetson 模块，reComputer J1010 还包括 [J101 载板](https://www.seeedstudio.com/reComputer-J101-v2-Carrier-Board-for-Jetson-Nano-p-5396.html)，板载 microSD 卡插槽、1×USB 3.0、2×USB2.0、HDMI、M.2 Key E 用于 WiFI、LTE 和蓝牙、RTC、Raspberry Pi GPIO 40 针接口等，以及散热器和铝制外壳。设备已预装 Jetpack 4.6.1，只需插入 USB C 5V/3A 电源、键盘、鼠标和网线，您就可以开始您的嵌入式 AI 之旅！如果您需要更多 USB 3.0 接口和板载 M.2 key M 来连接 SSD，您可以选择 reComputer J1020。
 
-注意：我们收到客户询问，他们需要比 16GB eMMC 更大的存储空间。对于 2022 年 7 月 30 日之后的订单，我们在 reComputer J1010 的[载板](https://www.seeedstudio.com/reComputer-J101-v2-Carrier-Board-for-Jetson-Nano-p-5396.html)上增加了 microSD 卡插槽。请查看将启动镜像写入 microSD 卡和调整 I/O 速度的[指南](https://wiki.seeedstudio.com/cn/J1010_Boot_From_SD_Card/#flashing-system-from-j101-to-sd-card)。
+注意：我们收到客户询问，他们需要比 16GB eMMC 更大的存储空间。对于 2022 年 7 月 30 日之后的订单，我们在 reComputer J1010 的[载板](https://www.seeedstudio.com/reComputer-J101-v2-Carrier-Board-for-Jetson-Nano-p-5396.html)上增加了 microSD 卡插槽。请查看将启动镜像写入 microSD 卡和调整 I/O 速度的[指南](https://wiki.seeedstudio.com/J1010_Boot_From_SD_Card/#flashing-system-from-j101-to-sd-card)。
 
 ## 特性
 
 - **手掌大小的边缘 AI 完整系统：** 提供 0.5 TFLOPs（FP16）的现代 AI 算力和丰富的嵌入式开发接口。
-- **开发和部署就绪：** 预装 NVIDIA JetPack 支持完整的 [Jetson 软件栈](https://developer.nvidia.com/embedded/develop/software)和业界领先的 [AI 开发者工具](https://wiki.seeedstudio.com/cn/Jetson-AI-developer-tools/)，用于构建强大的 AI 应用程序，如物流、零售、服务、农业、智慧城市、医疗保健和生命科学等
+- **开发和部署就绪：** 预装 NVIDIA JetPack 支持完整的 [Jetson 软件栈](https://developer.nvidia.com/embedded/develop/software)和业界领先的 [AI 开发者工具](https://wiki.seeedstudio.com/Jetson-AI-developer-tools/)，用于构建强大的 AI 应用程序，如物流、零售、服务、农业、智慧城市、医疗保健和生命科学等
 - **节能高效：** 由 Type C 5V/3A 供电，功耗低至 5 瓦。
 - **可扩展：** 通过板载接口和 reComputer 外壳，可通过背面的安装孔壁挂安装。
 
@@ -134,7 +134,7 @@ reComputer J1010 是一款基于 NVIDIA Jetson Nano 4GB 生产模块构建的紧
 ## 将 JetPack 刷写到 reComputer J1010
 
 :::info
-请参考此 [wiki](/cn/reComputer_J1010_J101_Flash_Jetpack) 页面获取更多信息，因为 J1010 使用 J101 载板。
+请参考此 [wiki](/reComputer_J1010_J101_Flash_Jetpack) 页面获取更多信息，因为 J1010 使用 J101 载板。
 :::
 
 ## 资源

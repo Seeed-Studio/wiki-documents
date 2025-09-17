@@ -120,7 +120,7 @@ J1 焊盘允许用户通过焊接决定是否将 MCP23017 的 RST、INTB 和 INT
 
 焊接完成后，您可以继续将扩展板连接到 XIAO RP2040 主控制器。
 
-要对 XIAO RP2040 进行编程，您需要一根 TYPE-C USB 数据线。将一端连接到 XIAO RP2040，另一端连接到您的计算机。有关 XIAO RP2040 编程的详细指南，请参考此 [Wiki](https://wiki.seeedstudio.com/cn/XIAO-RP2040/)。
+要对 XIAO RP2040 进行编程，您需要一根 TYPE-C USB 数据线。将一端连接到 XIAO RP2040，另一端连接到您的计算机。有关 XIAO RP2040 编程的详细指南，请参考此 [Wiki](https://wiki.seeedstudio.com/XIAO-RP2040/)。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/3.jpg" alt="pir" width={600} height="auto" /></p>
 

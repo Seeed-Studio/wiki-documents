@@ -125,7 +125,7 @@ APホットスポット名はSenseCAP_XXXXXX（6桁のMACアドレス）、デ�
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/4g3.png" alt="pir" width={800} height="auto" /></p>
 
 :::tip
-データ消費量を削減するには、[低データ消費モード設定](https://wiki.seeedstudio.com/ja/traffic_saving_config)をご確認ください。
+データ消費量を削減するには、[低データ消費モード設定](https://wiki.seeedstudio.com/traffic_saving_config)をご確認ください。
 :::
 
 ### チャンネルプラン設定

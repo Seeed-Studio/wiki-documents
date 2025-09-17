@@ -25,7 +25,7 @@ CircuitPython 是一种编程语言，旨在简化在低成本微控制器板上
 
 2. 通过 USB Type-C 将 Seeed Studio XIAO SAMD21 连接到您的电脑。
 
-3. 使用跳线快速短接 RST 引脚两次，进入 DFU 引导程序模式。更多参考信息，请参见[这里](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/#reset)。
+3. 使用跳线快速短接 RST 引脚两次，进入 DFU 引导程序模式。更多参考信息，请参见[这里](https://wiki.seeedstudio.com/Seeeduino-XIAO/#reset)。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif" /></div>
 

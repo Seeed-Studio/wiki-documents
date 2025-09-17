@@ -62,11 +62,11 @@ last_update:
     <a href="/cn/control_robotic_arm_via_phospho/" className="nav-item">
       <span className="text">Phospho Lerobot</span>
     </a>
-    <a href="/cn/training_soarm101_policy_with_isaacLab/" className="nav-item">
+    <a href="/training_soarm101_policy_with_isaacLab/" className="nav-item">
     <span className="text">So Arm 强化学习</span>
     <span className="tag recommended">New</span>
     </a>
-    <a href="/cn/simulate_soarm101_by_leisaac/" className="nav-item">
+    <a href="/simulate_soarm101_by_leisaac/" className="nav-item">
       <span className="text">SO100 Arm 导入Isaac Sim</span>
       <span className="tag recommended">New</span>
     </a>
@@ -104,7 +104,7 @@ last_update:
 ## 🖐️ Hand
 
 <div className="card-container">
-    <a href="/cn/hand_amazinghand/" className="nav-item">
+    <a href="/hand_amazinghand/" className="nav-item">
       <span className="text">AmazingHand</span>
       <span className="tag recommended">New</span>
     </a>
@@ -231,12 +231,12 @@ last_update:
 
 **PX4**  
 <div className="card-container">
-<a href="/cn/control_px4_with_recomputer_jetson/" className="nav-item">
+<a href="/control_px4_with_recomputer_jetson/" className="nav-item">
   <span className="text">PX4 与 Jetson</span>
   <span className="tag recommended">New</span>
 </a>
 
-<a href="/cn/object_tracking_with_reComputer_jetson_and_pX4/" className="nav-item">
+<a href="/object_tracking_with_reComputer_jetson_and_pX4/" className="nav-item">
   <span className="text">PX4 目标跟踪</span>
   <span className="tag recommended">New</span>
 </a>
@@ -253,7 +253,7 @@ last_update:
   <span className="text">SO100 机械臂与 IsaacSim</span>
   <span className="tag recommended">New</span>
 </a>
-    <a href="/cn/training_soarm101_policy_with_isaacLab/" className="nav-item">
+    <a href="/training_soarm101_policy_with_isaacLab/" className="nav-item">
     <span className="text">So Arm 强化学习</span>
     <span className="tag recommended">New</span>
     </a>

@@ -54,7 +54,7 @@ reTerminal E 系列代表了 Seeed Studio 在工业 HMI 解决方案方面的最
 要使用 Arduino 对 reTerminal E 系列电子纸显示屏进行编程，您需要设置支持 ESP32 的 Arduino IDE。
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 #### Arduino IDE 设置

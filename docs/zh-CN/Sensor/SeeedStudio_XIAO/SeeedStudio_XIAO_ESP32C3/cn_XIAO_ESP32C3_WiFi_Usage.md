@@ -342,8 +342,8 @@ void loop() {
 
 有关本节的更多信息，请参考相关教程。
 
-- [使用ESPHome将Grove模块连接到Home Assistant](https://wiki.seeedstudio.com/cn/Connect-Grove-to-Home-Assistant-ESPHome/)
-- [LinkStar Home Assistant](https://wiki.seeedstudio.com/cn/h68k-ha-esphome/)
+- [使用ESPHome将Grove模块连接到Home Assistant](https://wiki.seeedstudio.com/Connect-Grove-to-Home-Assistant-ESPHome/)
+- [LinkStar Home Assistant](https://wiki.seeedstudio.com/h68k-ha-esphome/)
 
 ## 参考资料
 

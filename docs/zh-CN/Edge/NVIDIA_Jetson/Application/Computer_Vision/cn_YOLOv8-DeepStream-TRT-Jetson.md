@@ -75,14 +75,14 @@ last_update:
 现在您需要确保Jetson设备已刷写了包含SDK组件（如CUDA、TensorRT、cuDNN等）的[JetPack](https://developer.nvidia.com/embedded/jetpack)系统。您可以使用NVIDIA SDK Manager或命令行将JetPack刷写到设备。
 
 对于Seeed Jetson驱动设备的刷写指南，请参考以下链接：
-- [reComputer J1010 | J101](https://wiki.seeedstudio.com/cn/reComputer_J1010_J101_Flash_Jetpack)
-- [reComputer J2021 | J202](https://wiki.seeedstudio.com/cn/reComputer_J2021_J202_Flash_Jetpack)
-- [reComputer J1020 | A206](https://wiki.seeedstudio.com/cn/reComputer_J1020_A206_Flash_JetPack)
-- [reComputer J4012 | J401](https://wiki.seeedstudio.com/cn/reComputer_J4012_Flash_Jetpack)
-- [A203载板](https://wiki.seeedstudio.com/cn/reComputer_A203_Flash_System)
-- [A205载板](https://wiki.seeedstudio.com/cn/reComputer_A205_Flash_System)
-- [Jetson Xavier AGX H01套件](https://wiki.seeedstudio.com/cn/Jetson_Xavier_AGX_H01_Driver_Installation)
-- [Jetson AGX Orin 32GB H01套件](https://wiki.seeedstudio.com/cn/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack)
+- [reComputer J1010 | J101](https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack)
+- [reComputer J2021 | J202](https://wiki.seeedstudio.com/reComputer_J2021_J202_Flash_Jetpack)
+- [reComputer J1020 | A206](https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack)
+- [reComputer J4012 | J401](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack)
+- [A203载板](https://wiki.seeedstudio.com/reComputer_A203_Flash_System)
+- [A205载板](https://wiki.seeedstudio.com/reComputer_A205_Flash_System)
+- [Jetson Xavier AGX H01套件](https://wiki.seeedstudio.com/Jetson_Xavier_AGX_H01_Driver_Installation)
+- [Jetson AGX Orin 32GB H01套件](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack)
 
 ## 安装DeepStream
 

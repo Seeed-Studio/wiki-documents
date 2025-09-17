@@ -14,7 +14,7 @@ last_update:
 
 ## Jetpack 5.1.2
 
-如果您需要使用 IMX477 摄像头，请下载[此驱动程序包](https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ERJdh3pvdYZOqJWugsnMJKEBMkGXtU8ngY03kJeLDWSkLw?e=TuLWmL)并按照[此教程](https://wiki.seeedstudio.com/cn/reComputer_A603_Flash_System/)重新刷写 Jetpack 系统。
+如果您需要使用 IMX477 摄像头，请下载[此驱动程序包](https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ERJdh3pvdYZOqJWugsnMJKEBMkGXtU8ngY03kJeLDWSkLw?e=TuLWmL)并按照[此教程](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/)重新刷写 Jetpack 系统。
 
 :::caution
 请注意，您需要使用适用于 [ **JP5.1.2** ](https://developer.nvidia.com/embedded/jetson-linux-r3541) 的 BSP。
@@ -22,7 +22,7 @@ last_update:
 
 ## Jetpack 6.0
 
-如果您需要使用 IMX477 摄像头，请下载[此驱动程序包](https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ETIsoZ25I69KsSiA6TweK4UBVfo7gBrvPyKX9pJ68J8oIA?e=a9uumE)并按照[此教程](https://wiki.seeedstudio.com/cn/reComputer_A603_Flash_System/)重新刷写 Jetpack 系统。
+如果您需要使用 IMX477 摄像头，请下载[此驱动程序包](https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ETIsoZ25I69KsSiA6TweK4UBVfo7gBrvPyKX9pJ68J8oIA?e=a9uumE)并按照[此教程](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/)重新刷写 Jetpack 系统。
 
 :::caution
 请注意，您需要使用适用于 [ **JP6.0** ](https://developer.nvidia.com/embedded/jetson-linux-r363) 的 BSP。

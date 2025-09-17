@@ -14,13 +14,13 @@ last_update:
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/Seeeduino-XIAO-pinout.jpg" /></div>
 
 
-モデル最適化の最近の改善と、マイクロコントローラー上で機械学習モデル推論を実行するために特別に作成されたフレームワークの出現により、これらの小さなデバイスにより多くのインテリジェンスを与えることが可能になりました。現在、音声シーン認識（例：象の活動やガラスの破砕音）、ホットワード検出（特定のフレーズでデバイスを起動）、さらには簡単な画像認識タスクのためにマイクロコントローラーにニューラルネットワークを展開できます。組み込みマイクロコントローラーを搭載したデバイスは、古いセンサーに新しい生命と意味を与えるために使用できます。例えば、異常検出と予知保全のためにメカニズムに設置された加速度計を使用したり、[このデモ](https://wiki.seeedstudio.com/ja/Wio-Terminal-Edge-Impulse-Distinguish-Alochol/)のように様々な種類の酒類を区別したりできます！
+モデル最適化の最近の改善と、マイクロコントローラー上で機械学習モデル推論を実行するために特別に作成されたフレームワークの出現により、これらの小さなデバイスにより多くのインテリジェンスを与えることが可能になりました。現在、音声シーン認識（例：象の活動やガラスの破砕音）、ホットワード検出（特定のフレーズでデバイスを起動）、さらには簡単な画像認識タスクのためにマイクロコントローラーにニューラルネットワークを展開できます。組み込みマイクロコントローラーを搭載したデバイスは、古いセンサーに新しい生命と意味を与えるために使用できます。例えば、異常検出と予知保全のためにメカニズムに設置された加速度計を使用したり、[このデモ](https://wiki.seeedstudio.com/Wio-Terminal-Edge-Impulse-Distinguish-Alochol/)のように様々な種類の酒類を区別したりできます！
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Edge-Impulse/booze.jpg" /></div>
 
 
 **TinyML の可能性は本当に巨大です。**
 
-私たちは、Seeed studio の別の製品であるプラスチックケースに入ったコンパクトな開発ボード、Wio Terminal に[小さな機械学習モデルを展開する全シリーズ](https://wiki.seeedstudio.com/ja/Wio-Terminal-TinyML/)を作成しました。しかし、さらに小さくして、ARM Cortex M0+ とそれを中心に構築された小さな [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) ボードに同様のモデルを展開することが可能です。このボードは親指ほど小さく（21×17.8mm）、わずか 1.33 mAh の電力しか消費せず（150 mA バッテリーで約112時間動作可能、ディープスリープに入れればさらに長時間）、価格はわずか 4.3 USD です。
+私たちは、Seeed studio の別の製品であるプラスチックケースに入ったコンパクトな開発ボード、Wio Terminal に[小さな機械学習モデルを展開する全シリーズ](https://wiki.seeedstudio.com/Wio-Terminal-TinyML/)を作成しました。しかし、さらに小さくして、ARM Cortex M0+ とそれを中心に構築された小さな [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) ボードに同様のモデルを展開することが可能です。このボードは親指ほど小さく（21×17.8mm）、わずか 1.33 mAh の電力しか消費せず（150 mA バッテリーで約112時間動作可能、ディープスリープに入れればさらに長時間）、価格はわずか 4.3 USD です。
 
 このプロジェクトでは、Seeed Studio XIAO SAMD21 と Seeed Studio XIAO RP2040 開発ボードへのモデルの訓練と展開について説明します。追加情報については、対応するビデオをご覧ください！
 
@@ -36,7 +36,7 @@ last_update:
 
 機械学習モデルのデータを提供するタスクに最適なセンサーは、明らかに加速度計です。元の Seeed Studio XIAO SAMD21 と Seeed Studio XIAO RP2040 は非常に小さいため加速度計センサーを搭載していませんが、新しい Seeed Studio XIAO nRF52840 Sense には内蔵加速度計が付属しています。
 
-元の Seeed Studio XIAO SAMD21 と Seeed Studio XIAO RP2040 を使用する場合は、[Grove LIS3DH 加速度計](https://wiki.seeedstudio.com/ja/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR/)モジュールを [Seeed Studio XIAO 拡張ボード](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)に接続してデータ収集を開始できます。各姿勢について 3 つのデータサンプルを収集し、それぞれ 60 秒間、デバイスを背中の T シャツに取り付けて行います。
+元の Seeed Studio XIAO SAMD21 と Seeed Studio XIAO RP2040 を使用する場合は、[Grove LIS3DH 加速度計](https://wiki.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR/)モジュールを [Seeed Studio XIAO 拡張ボード](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)に接続してデータ収集を開始できます。各姿勢について 3 つのデータサンプルを収集し、それぞれ 60 秒間、デバイスを背中の T シャツに取り付けて行います。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/image-31.png" /></div>
 

@@ -50,7 +50,7 @@ Ignition Edgeは、エッジデバイス上で組み合わせて使用し、ネ�
 <br />
 
 :::note
-*このガイドでは、reTerminal DMがRaspberry Pi OS(x64)の新規インストールを実行しており、他のクライアントデバイスからSSHターミナルアクセスが可能であることを前提としています。この手順の詳細な説明が必要な場合は、[reTerminal DMオペレーティングシステムのフラッシュ手順](https://wiki.seeedstudio.com/ja/reterminal-dm-flash-OS/#steps-for-flashing-raspbian-os)を参照してください。*
+*このガイドでは、reTerminal DMがRaspberry Pi OS(x64)の新規インストールを実行しており、他のクライアントデバイスからSSHターミナルアクセスが可能であることを前提としています。この手順の詳細な説明が必要な場合は、[reTerminal DMオペレーティングシステムのフラッシュ手順](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/#steps-for-flashing-raspbian-os)を参照してください。*
 :::
 
 ## reTerminalへのIgnition Edgeのインストール

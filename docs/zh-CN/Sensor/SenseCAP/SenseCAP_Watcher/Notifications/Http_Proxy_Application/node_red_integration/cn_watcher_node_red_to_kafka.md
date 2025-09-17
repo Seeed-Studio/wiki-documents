@@ -130,7 +130,7 @@ kafka-console-consumer.sh --bootstrap-server kafka:9092 --from-beginning --topic
 
 ### 步骤4. 安装Kafka消息模块
 
-1. 点击**管理调色板**。如果您还没有安装Node_RED，[请点击这里](https://wiki.seeedstudio.com/cn/watcher_to_node_red/)。
+1. 点击**管理调色板**。如果您还没有安装Node_RED，[请点击这里](https://wiki.seeedstudio.com/watcher_to_node_red/)。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_kafka_image/3.png" style={{width:600, height:'auto'}}/></div>
 
@@ -168,13 +168,13 @@ kafka-console-consumer.sh --bootstrap-server kafka:9092 --from-beginning --topic
 
 ## 第4部分：在Watcher中运行任务
 
-1. 首先，您需要按照下面的视频在Watcher中运行任务。如果您想了解更多，[请点击这里](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)。
+1. 首先，您需要按照下面的视频在Watcher中运行任务。如果您想了解更多，[请点击这里](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)。
 
 <div class="table-center">
 <iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-2. 当您完成在watcher中运行任务后，您应该[参考此链接](https://wiki.seeedstudio.com/cn/watcher_to_node_red/)将watcher消息发送到Node-RED。
+2. 当您完成在watcher中运行任务后，您应该[参考此链接](https://wiki.seeedstudio.com/watcher_to_node_red/)将watcher消息发送到Node-RED。
 
 ## 第5部分：在Kafka中接收数据
 

@@ -519,7 +519,7 @@ source toaster start webport=9000
 
 现在我们将继续将镜像刷写到 reTerminal 上 CM4 的 eMMC 中。
 
-按照[此 wiki](https://wiki.seeedstudio.com/cn/reTerminal/#getting-started-with-reterminal-extended) 中的步骤进行，并注意以下步骤：
+按照[此 wiki](https://wiki.seeedstudio.com/reTerminal/#getting-started-with-reterminal-extended) 中的步骤进行，并注意以下步骤：
 
 **注意：** 当您打开 **Raspberry Pi Imager** 时，点击 **CHOOSE OS**，选择 **Use custom** 并选择下载的 **.rootfs.wic.bz2** 文件。
 
@@ -535,11 +535,11 @@ source toaster start webport=9000
 
 ## 通过串口控制台从 PC 登录到 reTerminal
 
-建议使用串口控制台连接登录到 reTerminal 内部的操作系统。查看[此 wiki](https://wiki.seeedstudio.com/cn/reTerminal-FAQ/#q5-how-can-i-log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-a-usb-to-serial-converter) 来进行硬件连接并以 **root** 身份登录
+建议使用串口控制台连接登录到 reTerminal 内部的操作系统。查看[此 wiki](https://wiki.seeedstudio.com/reTerminal-FAQ/#q5-how-can-i-log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-a-usb-to-serial-converter) 来进行硬件连接并以 **root** 身份登录
 
 ## 测试 Yocto 镜像
 
-要使用 reTerminal 测试上述 Yocto 镜像，你可以访问 [reTerminal 硬件和接口使用 wiki](https://wiki.seeedstudio.com/cn/reTerminal-hardware-interfaces-usage) 并参考其中提到的步骤。
+要使用 reTerminal 测试上述 Yocto 镜像，你可以访问 [reTerminal 硬件和接口使用 wiki](https://wiki.seeedstudio.com/reTerminal-hardware-interfaces-usage) 并参考其中提到的步骤。
 
 ## Yocto Project Summit 2021 演讲
 

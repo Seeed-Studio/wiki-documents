@@ -132,8 +132,8 @@ seeed@seeed-desktop:~$
 
 reComputerデバイスがクラッシュしてNVIDIAシステムを再インストールしたい場合、reComputerにNVIDIAシステムをインストールする方法についてのwikiを提供しています。提供されているwikiには、A20Xキャリアボードとrecomputer J1010キャリアボードが含まれています：
 
-- [A20XキャリアボードベースのNVIDIAシステムのインストール](https://wiki.seeedstudio.com/ja/reComputer_J2021_J202_Flash_Jetpack/)
-- [reComputer J1010キャリアボードベースのNVIDIAシステムのインストール](https://wiki.seeedstudio.com/ja/reComputer_J1010_J101_Flash_Jetpack/)
+- [A20XキャリアボードベースのNVIDIAシステムのインストール](https://wiki.seeedstudio.com/reComputer_J2021_J202_Flash_Jetpack/)
+- [reComputer J1010キャリアボードベースのNVIDIAシステムのインストール](https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack/)
 
 ## トラブルシューティング
 
@@ -147,7 +147,7 @@ reComputerでプロジェクトを開始していない場合は、このオプ�
 
 - reComputerのシステムをインストールする方法は一般的に2つあり、最初の方法は**NVIDIA SDK Manager**を使用することです。
 
-**reComputer J2011**または**reComputer J2012**を使用している場合、[SDK Managerを使用したeMMCへのフラッシュ](/ja/reComputer_J2021_J202_Flash_Jetpack#flashing-to-emmc-with-command-line)の**ステップ12**で、システム書き込みの場所を変更することで容量を拡張できます。
+**reComputer J2011**または**reComputer J2012**を使用している場合、[SDK Managerを使用したeMMCへのフラッシュ](/reComputer_J2021_J202_Flash_Jetpack#flashing-to-emmc-with-command-line)の**ステップ12**で、システム書き込みの場所を変更することで容量を拡張できます。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/52.png" /></div>
 
@@ -157,9 +157,9 @@ reComputerでプロジェクトを開始していない場合は、このオプ�
 
 - reComputerのシステムをインストールする方法は一般的に2つあり、2番目の方法は**コマンドライン**を使用することです。
 
-- **A20Xキャリアボード**を使用している場合、コマンドラインを使用してシステムをインストールする方法は[コマンドラインを使用したeMMCへのフラッシュ](/ja/reComputer_J2021_J202_Flash_Jetpack#flashing-to-emmc-with-command-line)にあります。
+- **A20Xキャリアボード**を使用している場合、コマンドラインを使用してシステムをインストールする方法は[コマンドラインを使用したeMMCへのフラッシュ](/reComputer_J2021_J202_Flash_Jetpack#flashing-to-emmc-with-command-line)にあります。
 
-- **reComputer J1010キャリアボード**を使用している場合は、[コマンドラインを使用したeMMCへのフラッシュ](/ja/reComputer_J1010_J101_Flash_Jetpack#flashing-jetpack-os-via-command-line)でコマンドラインを使用してシステムをインストールします。
+- **reComputer J1010キャリアボード**を使用している場合は、[コマンドラインを使用したeMMCへのフラッシュ](/reComputer_J1010_J101_Flash_Jetpack#flashing-jetpack-os-via-command-line)でコマンドラインを使用してシステムをインストールします。
 
 これらは本質的に以下のコマンドを使用してシステムのインストールを完了します。
 
@@ -282,7 +282,7 @@ CUDAコンポーネントの内容をリリースした後、eMMCの残り容量
 
 reComputerを通常通りしばらく使用しており、既存のシステム環境を破壊することなく拡張ソリューションを完了したい場合は、このオプションを選択できます。
 
-すでに十分に開発された拡張wikiがあります [Memory Expansion for reComputer series](https://wiki.seeedstudio.com/ja/reComputer_Jetson_Memory_Expansion/)。
+すでに十分に開発された拡張wikiがあります [Memory Expansion for reComputer series](https://wiki.seeedstudio.com/reComputer_Jetson_Memory_Expansion/)。
 
 注目すべき点は、拡張操作は危険であり、すべてが始まる前にシステムの**バックアップを作成**することを積極的に行うことを期待していることです。
 

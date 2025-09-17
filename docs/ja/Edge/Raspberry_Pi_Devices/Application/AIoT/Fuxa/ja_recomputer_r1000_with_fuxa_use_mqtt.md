@@ -64,8 +64,8 @@ FUXAはWebベースのプロセス可視化（SCADA/HMI/ダッシュボード）
     sudo fuxa
   ```
 
-- fuxaでmodbusTCP機能を使用する方法については、この[wiki](https://wiki.seeedstudio.com/ja/reComputer_r1000_fuxa_modbus_rtu_and_tcp/)を参照してください。
-- mosquittoのダウンロードと設定方法については、この[チュートリアル](https://wiki.seeedstudio.com/ja/recomputer_r1000_nodered_mqtt/)を参照してください。node-redでmqtt通信を設定する方法についても説明されており、参考にできます。
+- fuxaでmodbusTCP機能を使用する方法については、この[wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_modbus_rtu_and_tcp/)を参照してください。
+- mosquittoのダウンロードと設定方法については、この[チュートリアル](https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/)を参照してください。node-redでmqtt通信を設定する方法についても説明されており、参考にできます。
 
 ### ハードウェア構成
 
@@ -75,7 +75,7 @@ ModbusTCPでは、イーサネットケーブルを使用してW10 PCとreComput
 
 ## MQTTクライアント通信手順
 
-**ステップ1**: この[チュートリアル](https://wiki.seeedstudio.com/ja/reComputer_r1000_fuxa_modbus_rtu_and_tcp/)を参照し、`fuxa`を使用して`modbusmechanic`との接続を確立します。また、この[wiki](https://wiki.seeedstudio.com/ja/Edge-Box-Node-Red-MQTT/)を参照して、reComputer R1000に`mosquitto`と`Node-red`をデプロイします。
+**ステップ1**: この[チュートリアル](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_modbus_rtu_and_tcp/)を参照し、`fuxa`を使用して`modbusmechanic`との接続を確立します。また、この[wiki](https://wiki.seeedstudio.com/Edge-Box-Node-Red-MQTT/)を参照して、reComputer R1000に`mosquitto`と`Node-red`をデプロイします。
 
 **ステップ2**: MQTTサーバーに接続します。`fuxa`インターフェースの右下角にある`+`ボタンをクリックし、`Name`、`Type`を入力し、`MQTTclient`を選択してから、MQTTサーバーのIPアドレスとポート番号を入力します。MQTTサーバーがセキュリティ認証を必要とする場合は、`Client ID`、`Username`、`Password`なども入力する必要があります。私たちのサーバーはこの認証を必要としないため、入力しません。最後に`OK`をクリックし、モジュールの左下角に緑色のドットが表示されるまで待ちます。これはMQTTサーバーへの接続が成功したことを示します。
 

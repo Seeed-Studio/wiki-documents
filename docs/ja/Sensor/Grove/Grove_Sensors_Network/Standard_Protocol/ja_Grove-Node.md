@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: jianjing Huang
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 Grove - Node は、物理オブジェクトを接続するためのシンプルで柔軟な電子モジュールです。これは IFTTT（IF-This-Then-That）のアイデアに基づいています。2つの Grove コネクタを備えており、さまざまな Grove モジュールにアクセスできます。IFTTT ファームウェアが事前にプログラムされているため、アナログセンサーや 0/1 アクチュエーターを使用して物理オブジェクトを簡単に作成できます。
 

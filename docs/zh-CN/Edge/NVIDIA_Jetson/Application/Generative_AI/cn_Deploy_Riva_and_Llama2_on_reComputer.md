@@ -29,7 +29,7 @@ last_update:
 ## 先决条件
 
 - 具有超过 16GB 内存的 Jetson 设备。
-- 硬件设备需要预先刷入 jetpack [5.1.1](https://wiki.seeedstudio.com/cn/reComputer_Intro/) 操作系统。
+- 硬件设备需要预先刷入 jetpack [5.1.1](https://wiki.seeedstudio.com/reComputer_Intro/) 操作系统。
 - [扬声器和麦克风](https://www.seeedstudio.com/ReSpeaker-USB-Mic-Array-p-4247.html?queryID=dd9c8d91c63781d66776771a7ee5ec01&objectID=4247&indexName=bazaar_retailer_products)。
 
 **注意：** 我使用 [Jetson AGX Orin 32GB H01 Kit](https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html?queryID=012e528073e90bf80afd3880f3fc2b13&objectID=5569&indexName=bazaar_retailer_products) 完成了所有实验，但您可以尝试在内存较少的设备上加载较小的模型。

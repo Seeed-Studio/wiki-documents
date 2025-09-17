@@ -111,9 +111,9 @@ Home Assistant Greenは、あなたの家を自動化する最も簡単でプラ
 :::tip Home Assistantをインストール
 Seeed Studio製品の一部にHome Assistantをインストールする方法も書いていますので、参考にしてください。
 
-- **[ODYSSEY-X86でHome Assistantを始める](https://wiki.seeedstudio.com/ja/ODYSSEY-X86-Home-Assistant/)**
-- **[reTerminalでHome Assistantを始める](https://wiki.seeedstudio.com/ja/reTerminal_Home_Assistant/)**
-- **[LinkStar H68K/reRouter CM4でHome Assistantを始める](https://wiki.seeedstudio.com/ja/h68k-ha-esphome/)**
+- **[ODYSSEY-X86でHome Assistantを始める](https://wiki.seeedstudio.com/ODYSSEY-X86-Home-Assistant/)**
+- **[reTerminalでHome Assistantを始める](https://wiki.seeedstudio.com/reTerminal_Home_Assistant/)**
+- **[LinkStar H68K/reRouter CM4でHome Assistantを始める](https://wiki.seeedstudio.com/h68k-ha-esphome/)**
 
 Seeed Studio製品を使用していない場合は、公式Home Assistantウェブサイトで他の製品にHome Assistantをインストールする方法を確認して学習することもできます。
 

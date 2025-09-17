@@ -17,7 +17,7 @@ last_update:
 
 ## 配置开发板
 
-在连接到 TTS 之前，您需要在 SenseCAP Mate APP 上配置开发板的基本参数，详情请查看[快速入门](https://wiki.seeedstudio.com/cn/Get_Started_with_Wio-Trakcer_1110/#configure-the-frequency-and-connect-to-the-gateway)。
+在连接到 TTS 之前，您需要在 SenseCAP Mate APP 上配置开发板的基本参数，详情请查看[快速入门](https://wiki.seeedstudio.com/Get_Started_with_Wio-Trakcer_1110/#configure-the-frequency-and-connect-to-the-gateway)。
 
 - 将平台设置为 TTN，然后复制 `Device EUI`/`APP EUI`/`APP Key`。
 

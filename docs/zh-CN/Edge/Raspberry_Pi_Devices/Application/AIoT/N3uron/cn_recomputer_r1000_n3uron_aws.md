@@ -17,7 +17,7 @@ last_update:
 ---
 ## 介绍
 
-我们已经概述了[使用 MQTT 协议从您的 reComputer-R1000 设备向 AWS IoT Core 传输数据](https://wiki.seeedstudio.com/cn/recomputer_r1000_aws/)的过程。本教程将与上述过程无缝集成。在本教程中，我们将深入探讨 N3uron Edge IIoT 平台与 AWS IoT Core 之间接口的复杂性。
+我们已经概述了[使用 MQTT 协议从您的 reComputer-R1000 设备向 AWS IoT Core 传输数据](https://wiki.seeedstudio.com/recomputer_r1000_aws/)的过程。本教程将与上述过程无缝集成。在本教程中，我们将深入探讨 N3uron Edge IIoT 平台与 AWS IoT Core 之间接口的复杂性。
 
 ## 先决条件
 
@@ -43,9 +43,9 @@ last_update:
 
 ### 软件
 
-我们强烈建议学习 [N3uron 入门指南](https://wiki.seeedstudio.com/cn/recomputer_r1000_n3uron/)。它提供了导航 N3uron Web 界面、理解 Web UI 和 Web Vision 模块等概念、掌握标签概念以及创建基本仪表板的重要见解。如果您还没有探索这些基础知识，建议在进一步操作之前先了解这些内容。您可以通过提供的链接访问该指南。
+我们强烈建议学习 [N3uron 入门指南](https://wiki.seeedstudio.com/recomputer_r1000_n3uron/)。它提供了导航 N3uron Web 界面、理解 Web UI 和 Web Vision 模块等概念、掌握标签概念以及创建基本仪表板的重要见解。如果您还没有探索这些基础知识，建议在进一步操作之前先了解这些内容。您可以通过提供的链接访问该指南。
 
-如果您还没有探索我们关于将 [AWS IoT Core 与 reComputer-R1000 集成](https://wiki.seeedstudio.com/cn/recomputer_r1000_aws/) 的指南，我们也建议您这样做。这个综合指南涵盖了从基础到高级步骤的所有内容，包括向 IoT Core 发布值。**由于它与当前教程相辅相成，熟悉这些内容也是有益的**。
+如果您还没有探索我们关于将 [AWS IoT Core 与 reComputer-R1000 集成](https://wiki.seeedstudio.com/recomputer_r1000_aws/) 的指南，我们也建议您这样做。这个综合指南涵盖了从基础到高级步骤的所有内容，包括向 IoT Core 发布值。**由于它与当前教程相辅相成，熟悉这些内容也是有益的**。
 
 ## 配置 N3uron IIoT 平台
 

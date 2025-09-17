@@ -48,7 +48,7 @@ LoRaWAN 被描述为一种低功耗广域（LPWA）网络协议，可在大区�
 
 ## 高级感知系统
 
-Seeed Studio 的"高级感知系统"是一个[物联网解决方案](/cn/SenseCAP_introduction)，提供全面的传感、网络、边缘计算工具和云服务阵列，旨在增强各行业的环境感知能力。该系统配备了多样化的模块和设备阵列[^2]，充当数字化的"眼睛和耳朵"，促进对现实世界的变革性理解。
+Seeed Studio 的"高级感知系统"是一个[物联网解决方案](/SenseCAP_introduction)，提供全面的传感、网络、边缘计算工具和云服务阵列，旨在增强各行业的环境感知能力。该系统配备了多样化的模块和设备阵列[^2]，充当数字化的"眼睛和耳朵"，促进对现实世界的变革性理解。
 
 <div style={{ textAlign: 'center' }}>
 
@@ -104,7 +104,7 @@ SenseCAP 团队主要专注于传感器和网络组件，致力于提供顶级�
 
 ### 1.2 烧录固件
 
-要将固件烧录到 SenseCAP Indicator，请先下载固件，然后使用 esptool（或如果您有 ESP-IDF 环境则使用 `esptool.py`）进行烧录（有关全面指导，请参阅[说明](/cn/SenseCAP_Indicator_Application_LoRaWAN)）。
+要将固件烧录到 SenseCAP Indicator，请先下载固件，然后使用 esptool（或如果您有 ESP-IDF 环境则使用 `esptool.py`）进行烧录（有关全面指导，请参阅[说明](/SenseCAP_Indicator_Application_LoRaWAN)）。
 
 **在 Windows 上使用 esptool 烧录固件：**
 
@@ -183,7 +183,7 @@ Mac 用户应将 `./esptool.exe` 替换为 `./esptool`。
 - **用户名：** `admin`
 - **密码：** `admin`
 
-有关更多详细信息和高级配置选项，请访问 [SenseCAP M2 网关 LNS 配置指南](https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration/)。
+有关更多详细信息和高级配置选项，请访问 [SenseCAP M2 网关 LNS 配置指南](https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration/)。
 
 ### 2.2 配置本地网络服务器（ChirpStack）
 

@@ -37,12 +37,12 @@ reComputer Miniは、NVIDIA Jetson Orin Nano/Orin NXモジュールを搭載し�
 
 - reComputerシリーズ製品
 - PX4フライトコントローラー
-- Jetson Pack 6.2と[ROS 2 Humble](https://wiki.seeedstudio.com/ja/install_ros2_humble/)がインストール済み
+- Jetson Pack 6.2と[ROS 2 Humble](https://wiki.seeedstudio.com/install_ros2_humble/)がインストール済み
 - [Orbbec Gemini 2 3Dカメラ](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)
 
 ## ROS2のPX4通信環境の設定
 
-JetsonでドローンのState監視を実装するには、まず[このwiki](https://wiki.seeedstudio.com/ja/control_px4_with_recomputer_jetson/)を参照してPX4のROS2通信環境を設定してください。
+JetsonでドローンのState監視を実装するには、まず[このwiki](https://wiki.seeedstudio.com/control_px4_with_recomputer_jetson/)を参照してPX4のROS2通信環境を設定してください。
 
 ## Gemini 2 Python SDKのセットアップ
 
@@ -126,7 +126,7 @@ ros2 topic list | grep "/fmu/out/"
 
 ## オブジェクト検出環境の迅速な設定
 
-**ステップ1.** お使いのJetpackバージョンに応じて、[PyTorchのインストール](https://wiki.seeedstudio.com/ja/install_torch_on_recomputer/)とTorchvisionについては、このwikiを参照してください。
+**ステップ1.** お使いのJetpackバージョンに応じて、[PyTorchのインストール](https://wiki.seeedstudio.com/install_torch_on_recomputer/)とTorchvisionについては、このwikiを参照してください。
 
 **ステップ2.** 必要な依存関係とパッケージをインストールします：
 
@@ -163,7 +163,7 @@ colcon build
 ```
 
 :::note
-検出ノードを実行する前に、以前に生成されたエンジンモデルファイルを `/ROS2-package-for-target-tracking/models` ディレクトリに移動する必要があります。さらに、ワークスペースのsrcディレクトリに `px4_msgs` と `px4_ros_com` パッケージ（[このwiki](https://wiki.seeedstudio.com/ja/control_px4_with_recomputer_jetson/#step-2-build-the-px4_msgs-ros-2-package)を参照）をクローンする必要があります。
+検出ノードを実行する前に、以前に生成されたエンジンモデルファイルを `/ROS2-package-for-target-tracking/models` ディレクトリに移動する必要があります。さらに、ワークスペースのsrcディレクトリに `px4_msgs` と `px4_ros_com` パッケージ（[このwiki](https://wiki.seeedstudio.com/control_px4_with_recomputer_jetson/#step-2-build-the-px4_msgs-ros-2-package)を参照）をクローンする必要があります。
 srcディレクトリの構造は以下のようになります：
 
 ```bash

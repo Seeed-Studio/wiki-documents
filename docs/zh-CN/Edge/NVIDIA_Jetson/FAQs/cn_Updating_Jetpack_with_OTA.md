@@ -117,7 +117,7 @@ sudo  BOARDID=<BOARDID> BOARDSKU=<BOARDSKU> FAB=<FAB>  BOARDREV=<BOARDREV> CHIP_
 
 ### 1.3 将 JP5.1.3 刷写到设备（可选）
 
-如果您想在 Jetson 设备上测试此固件，可以参考[此 wiki](https://wiki.seeedstudio.com/cn/reComputer_J4012_Flash_Jetpack/) 将固件刷写到 Jetson 设备中。
+如果您想在 Jetson 设备上测试此固件，可以参考[此 wiki](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/) 将固件刷写到 Jetson 设备中。
 
 ```bash
 sudo tar xpf mfi_jetson-orin-nano-devkit.tar.gz

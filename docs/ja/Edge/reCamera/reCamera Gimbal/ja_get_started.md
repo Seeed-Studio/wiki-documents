@@ -65,7 +65,7 @@ reCamera Gimbalの開封から始めます。箱の中には以下が含まれ�
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/Gimbal_1.png" /></div>
 
 :::note
-パスワードを覚えておいてください。そうでないと、デバイスをリセットするためにすべてのログが消去されます。パスワードを忘れた場合は、デバイスを[工場出荷時設定にリセット](https://wiki.seeedstudio.com/ja/recamera_getting_started/#factory-reset)してください。
+パスワードを覚えておいてください。そうでないと、デバイスをリセットするためにすべてのログが消去されます。パスワードを忘れた場合は、デバイスを[工場出荷時設定にリセット](https://wiki.seeedstudio.com/recamera_getting_started/#factory-reset)してください。
 :::
 
 :::note
@@ -132,7 +132,7 @@ gimbal cali
 
 - **機械的制限の確認**: ジンバルを手動でチェックして、動作範囲が妨げられていないか、または不適切に制限されていないかを確認してください。
 
-- **3Dプリント部品からの抵抗をチェック**: モーターが動作する際の抵抗を感じてください。抵抗が過度である場合、モーターの力を増加させるためにモーターのPID設定を調整する必要があるかもしれません。[PIDの調整方法はこちらで確認できます](https://wiki.seeedstudio.com/ja/recamera_pid_adjustment)。または、部品をサンディングしたり、ネジを少し緩めたりして摩擦を減らし、動作を改善してください。
+- **3Dプリント部品からの抵抗をチェック**: モーターが動作する際の抵抗を感じてください。抵抗が過度である場合、モーターの力を増加させるためにモーターのPID設定を調整する必要があるかもしれません。[PIDの調整方法はこちらで確認できます](https://wiki.seeedstudio.com/recamera_pid_adjustment)。または、部品をサンディングしたり、ネジを少し緩めたりして摩擦を減らし、動作を改善してください。
 
 ## 基本的なWebアクセス
 
@@ -272,7 +272,7 @@ Web URL：
 
 ## OTA OSアップグレード
 
-[OTAアップグレード手順](https://wiki.seeedstudio.com/ja/recamera_getting_started/#ota-upgrade-from-013-to-latest-version)を参照してください。
+[OTAアップグレード手順](https://wiki.seeedstudio.com/recamera_getting_started/#ota-upgrade-from-013-to-latest-version)を参照してください。
 
 ## ファクトリーリセット
 

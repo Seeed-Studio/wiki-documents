@@ -63,9 +63,9 @@ FUXAはWebベースのプロセス可視化（SCADA/HMI/ダッシュボード）
     sudo fuxa
   ```
 
-- fuxa を使用して OPC-UA データ相互作用を実装する方法については、この [wiki](https://wiki.seeedstudio.com/ja/reComputer_r1000_fuxa_opc_ua/) を参照してください。
+- fuxa を使用して OPC-UA データ相互作用を実装する方法については、この [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_opc_ua/) を参照してください。
 
-- fuxa を使用して mqtt クライアントとのデータ相互作用を実装する方法については、この [wiki](https://wiki.seeedstudio.com/ja/reComputer_r1000_fuxa_mqtt_client/) を参照してください。この wiki とは異なり、`node-red` で公開するデータは `function` モジュールで処理され、`loop` モジュールが継続的な公開に使用されます。`function` モジュールのコードは以下の通りです：
+- fuxa を使用して mqtt クライアントとのデータ相互作用を実装する方法については、この [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_mqtt_client/) を参照してください。この wiki とは異なり、`node-red` で公開するデータは `function` モジュールで処理され、`loop` モジュールが継続的な公開に使用されます。`function` モジュールのコードは以下の通りです：
 
   ```java
   ## On Start

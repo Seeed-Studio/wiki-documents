@@ -1,13 +1,17 @@
 ---
 description: センサープロトタイプキットの紹介
 title: センサープロトタイプキットの紹介
+# slug: /ja/ABC
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/K1100-Getting-Started
+slug: /ja/ABC
 last_update:
   date: 05/15/2025
   author: Citric
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 # SenseCAP - センサープロトタイプキット概要
 
@@ -31,7 +35,7 @@ IP66ハウジング、Bluetooth設定、グローバルLoRaWAN®ネットワー�
 
 <html>
     <table>
-  <tr><td colspan="4" bgcolor="#0e3c49" align="center"><font color="white" size={4}><strong>SenseCAP 産業用センサー</strong></font></td></tr>
+		<tr><td colspan="4" bgcolor="#0e3c49" align="center"><font color="white" size={4}><strong>SenseCAP 産業用センサー</strong></font></td></tr>
         <tr>
             <td bgcolor="#0e3c49"><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank"><img width="50%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2100.png" /></a></div>
             </td>
@@ -561,7 +565,7 @@ IP66ハウジング、Bluetooth設定、グローバルLoRaWAN®ネットワー�
         </tr>
         <tr>
             <td colSpan={3}><div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-helium/113.png" /></div></td>
-        </tr>
+        </tr>   
 </tbody></table>
 
 ### The Things Network セクション
@@ -681,6 +685,7 @@ IP66ハウジング、Bluetooth設定、グローバルLoRaWAN®ネットワー�
     </tr>
   </tbody></table>
 
+
 <table align="center">
   <tbody><tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit33.jpg" alt="pir" width={1100} height="auto" /></p></td>
@@ -715,12 +720,12 @@ IP66ハウジング、Bluetooth設定、グローバルLoRaWAN®ネットワー�
 弊社製品をお選びいただきありがとうございます！製品のご利用がスムーズに進むよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 

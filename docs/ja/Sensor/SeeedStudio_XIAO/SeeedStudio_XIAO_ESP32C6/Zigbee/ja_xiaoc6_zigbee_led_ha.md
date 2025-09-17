@@ -119,7 +119,7 @@ USB 3.0ポートとUSB 3.0ドライブは、Home Assistant Connect ZBT-1が提�
 :::note
 XIAO ESP32C6を初めて使用する場合は、以下のwikiリンクを読んで開発ボードを正しく追加してください。
 
-[XIAO ESP32C6入門](https://wiki.seeedstudio.com/ja/xiao_esp32c6_getting_started/)
+[XIAO ESP32C6入門](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/)
 :::
 
 2. **Zigbee_On_Off_Lightサンプルをロードする**:

@@ -30,7 +30,7 @@ DeepSeekは、効率性、精度、リアルタイム処理に最適化された
 ## 前提条件
 
 - 8GB以上のメモリを搭載したJetsonデバイス。
-- Jetsonデバイスには、jetpack [5.1.1](https://wiki.seeedstudio.com/ja/reComputer_Intro/)オペレーティングシステム以降が事前にフラッシュされている必要があります。
+- Jetsonデバイスには、jetpack [5.1.1](https://wiki.seeedstudio.com/reComputer_Intro/)オペレーティングシステム以降が事前にフラッシュされている必要があります。
 
 :::note
 このwikiでは、[reComputer J4012 - NVIDIA® Jetson™ Orin™ NX 16GB搭載エッジAIコンピュータ](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6InJlQ29tcHV0ZXIgSjQwMTIiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjo0LCJjX3RvdGFsX3Jlc3VsdHMiOjUyLCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0gJiYgcXVhbnRpdHlfYW5kX3N0b2NrX3N0YXR1czpbMV0ifQ%3D%3D)を使用して以下のタスクを実行しますが、他のJetsonデバイスでも試すことができます。

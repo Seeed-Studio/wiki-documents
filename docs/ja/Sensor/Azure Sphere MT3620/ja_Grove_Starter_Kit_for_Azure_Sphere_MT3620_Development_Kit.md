@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: jianjing Huang
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 ![画像の説明を入力してください](https://files.seeedstudio.com/wiki/Grove_Starter_KIT_for_Azure_Sphere_MT3620_Development_Kit/img/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit.jpg)
 

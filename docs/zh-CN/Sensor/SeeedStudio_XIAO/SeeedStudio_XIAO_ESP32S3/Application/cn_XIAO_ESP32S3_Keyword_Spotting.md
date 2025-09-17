@@ -48,8 +48,8 @@ XIAO ESP32S3 Sense支持最大**32GB**的microSD卡，因此如果您准备为XI
 
 如果这是您第一次使用XIAO ESP32S3 Sense，那么在开始之前，我们建议您阅读以下两个Wiki来学习如何使用它。
 
-- [Seeed Studio XIAO ESP32S3 (Sense)入门指南](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/)
-- [Seeed Studio XIAO ESP32S3麦克风使用方法](https://wiki.seeedstudio.com/cn/xiao_esp32s3_sense_mic/)
+- [Seeed Studio XIAO ESP32S3 (Sense)入门指南](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+- [Seeed Studio XIAO ESP32S3麦克风使用方法](https://wiki.seeedstudio.com/xiao_esp32s3_sense_mic/)
 
 ## 捕获（离线）音频数据
 

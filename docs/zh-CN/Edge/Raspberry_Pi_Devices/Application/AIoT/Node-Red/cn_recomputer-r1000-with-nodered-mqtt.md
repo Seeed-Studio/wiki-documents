@@ -46,7 +46,7 @@ last_update:
 
 ### 软件准备
 
-我们已经准备了一个 [Node-RED 入门指南](https://wiki.seeedstudio.com/cn/recomputer_r1000_getting_statrted_node_red/)。建议您在继续阅读本 wiki 之前先查看此指南。
+我们已经准备了一个 [Node-RED 入门指南](https://wiki.seeedstudio.com/recomputer_r1000_getting_statrted_node_red/)。建议您在继续阅读本 wiki 之前先查看此指南。
 
 ## 将 reComputer R1000 设置为 MQTT 代理
 

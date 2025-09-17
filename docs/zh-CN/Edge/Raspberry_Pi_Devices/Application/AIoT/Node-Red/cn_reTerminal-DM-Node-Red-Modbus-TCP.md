@@ -47,7 +47,7 @@ reTerminal DM 支持与各种设备进行 Modbus 通信，包括 **PLC、变频�
 
 ### 软件准备
 
-我们已经准备了一份 [Node-RED 入门指南](https://wiki.seeedstudio.com/cn/reTerminal-DM-Getting-Started-with-Node-Red/)。建议您在继续阅读本 wiki 之前先查看此指南。
+我们已经准备了一份 [Node-RED 入门指南](https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Node-Red/)。建议您在继续阅读本 wiki 之前先查看此指南。
 
 ### 为 Modbus TCP/IP 配置以太网设置
 

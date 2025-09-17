@@ -40,7 +40,7 @@ Phosphoは、MLエンジニアが実際のロボットをインテリジェン�
 
 ### ロボットアームの準備
 
-1. Seeedstudioからロボットアームキットを購入した場合は、[このリンク](https://wiki.seeedstudio.com/ja/lerobot_so100m/#assembly)を参照してロボットアームを組み立てる必要があります。
+1. Seeedstudioからロボットアームキットを購入した場合は、[このリンク](https://wiki.seeedstudio.com/lerobot_so100m/#assembly)を参照してロボットアームを組み立てる必要があります。
 2. [Phospho](https://robots.phospho.ai/)から購入した場合は、すぐに使用できるデバイスを受け取るため、組み立てプロセスを完全にスキップできます。
 
 <div align="center">
@@ -156,7 +156,7 @@ Lerobotリポジトリとは異なり、PhosphoはLeaderによるテレオペレ
 - [https://phospho.ai/](https://phospho.ai/)
 - [https://docs.phospho.ai/welcome](https://docs.phospho.ai/welcome)
 - [https://github.com/phospho-app/phosphobot](https://github.com/phospho-app/phosphobot)
-- [https://wiki.seeedstudio.com/lerobot_so100m](https://wiki.seeedstudio.com/ja/lerobot_so100m/)
+- [https://wiki.seeedstudio.com/lerobot_so100m](https://wiki.seeedstudio.com/lerobot_so100m/)
 
 ## 技術サポート & 製品ディスカッション
 

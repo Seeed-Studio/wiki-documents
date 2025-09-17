@@ -53,7 +53,7 @@ last_update:
 
 ### 点亮 XIAO RA4M1 的内置 LED
 
-如果您之前从未使用过 XIAO RA4M1，[请点击这里](https://wiki.seeedstudio.com/cn/getting_started_xiao_ra4m1/)学习如何点亮内置 LED，这可以确保您的开发环境正常工作。
+如果您之前从未使用过 XIAO RA4M1，[请点击这里](https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/)学习如何点亮内置 LED，这可以确保您的开发环境正常工作。
 
 ### 读取 Grove 摇杆的 X 和 Y 轴数据
 

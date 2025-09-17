@@ -11,7 +11,10 @@ last_update:
   date: 05/15/2025
   author: Kasun Thushara
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 # Web開発を効率化する完璧なデュオ - LinkstarとWordPress
 この情報満載のWikiへようこそ。ここではDockerを使用したWordPressのインストールプロセスと、WordPressダッシュボードへのアクセス方法について説明します。Linkstarの革新的な力を活用してローカルホストウェブサイトをカスタマイズし、顧客を魅了し、売上を向上させましょう。Linkstarの最先端機能を活用することで、比類のない成長、効率性、技術力を体験してください。今日、比類のない成功への第一歩を踏み出しましょう。

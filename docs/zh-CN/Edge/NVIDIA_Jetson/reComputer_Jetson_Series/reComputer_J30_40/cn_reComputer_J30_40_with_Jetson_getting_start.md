@@ -186,14 +186,14 @@ last_update:
 
 :::info
 reComputer J30/40 由 J401 载板供电。
-请参考此 [wiki 页面](/cn/reComputer_J4012_Flash_Jetpack) 获取更多关于刷写 jetpack 的信息。
+请参考此 [wiki 页面](/reComputer_J4012_Flash_Jetpack) 获取更多关于刷写 jetpack 的信息。
 :::
 
 ## 接口使用
 
 :::info
 reComputer J30/40 由 J401 载板供电。
-请参考此 [wiki 页面](/cn/J401_carrierboard_Hardware_Interfaces_Usage) 获取更多关于接口使用的信息。
+请参考此 [wiki 页面](/J401_carrierboard_Hardware_Interfaces_Usage) 获取更多关于接口使用的信息。
 :::
 
 

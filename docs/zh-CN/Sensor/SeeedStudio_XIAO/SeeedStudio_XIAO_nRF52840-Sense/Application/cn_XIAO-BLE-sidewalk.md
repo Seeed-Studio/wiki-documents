@@ -61,7 +61,7 @@ XIAO nRF52840 是一个通过 Amazon Sidewalk 认证的无线模块，通过 Ama
 
 该型号具有强大而紧凑的 SoM（系统级模块）设计，用于 Amazon Sidewalk 集成。凭借其内置的 nRF52840 芯片组，该模块提供 BLE 功能，为物联网应用实现无缝连接。Seeed Studio XIAO 拥有小巧的外形尺寸，使其非常适合空间受限的部署。凭借其可靠的性能和对 Amazon Sidewalk 的支持，它简化并加速了安全可靠的物联网解决方案的开发。
 
-有关模块技术规格的更多详细信息，请点击[这里](https://wiki.seeedstudio.com/cn/XIAO_BLE/)。
+有关模块技术规格的更多详细信息，请点击[这里](https://wiki.seeedstudio.com/XIAO_BLE/)。
 
 本文档将指导您完成：
 
@@ -614,7 +614,7 @@ C:\ncs\v2.3.0\sidewalk\samples\template_ble\build\zephyr
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/24.jpg" style={{width:600, height:'auto'}}/></div><br />
 
-如果您不打算使用 XIAO 扩展板，那么您可以参考 [XIAO nRF52840 Wiki](https://wiki.seeedstudio.com/cn/XIAO_BLE#access-the-swd-pins-for-debugging-and-reflashing-bootloader) 关于使用 SWD 接口的说明，额外焊接双工线到 JLink。
+如果您不打算使用 XIAO 扩展板，那么您可以参考 [XIAO nRF52840 Wiki](https://wiki.seeedstudio.com/XIAO_BLE#access-the-swd-pins-for-debugging-and-reflashing-bootloader) 关于使用 SWD 接口的说明，额外焊接双工线到 JLink。
 
 **步骤 3**. 打开 Programmer 并将两个固件烧录到 XIAO nRF52840。
 

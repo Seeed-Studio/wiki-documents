@@ -23,7 +23,7 @@ XIAO ESP32S3 作为主控 MCU 和 Wio-SX1262 LoRa 无线电套件可以配置为
 固件已准备好安装，预刷写到带有 3D 外壳的 XIAO ESP32S3 和 Wio-SX1262 套件中。如果您想将 XIAO ESP32S3 和 Wio-SX1262 套件刷写为单通道 LoRaWAN 网关，只需从 [bin 库](https://github.com/Seeed-Studio/one_channel_hub/tree/xiao-esp32s3-sx1262-bt-config/bin) 下载。
 
 :::tip
-带有 3D 外壳的 XIAO ESP32S3 和 Wio-SX1262 套件已预刷写为单通道 LoRaWAN 网关，请跳转到下一节进行[配置](https://wiki.seeedstudio.com/cn/wio_sx1262_xiao_esp32s3_for_single_channel_gateway/#configuration-via-sensecraft-app)。
+带有 3D 外壳的 XIAO ESP32S3 和 Wio-SX1262 套件已预刷写为单通道 LoRaWAN 网关，请跳转到下一节进行[配置](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_single_channel_gateway/#configuration-via-sensecraft-app)。
 :::
 
 :::note
@@ -110,7 +110,7 @@ idf.py -p port monitor
 
 ### 使用 esptool 烧录
 
-如果不使用完整的 ESP-IDF 环境，可以按照[第一节](https://wiki.seeedstudio.com/cn/wio_sx1262_xiao_esp32s3_for_single_channel_gateway/#flash-firmware)下载提供的二进制文件。
+如果不使用完整的 ESP-IDF 环境，可以按照[第一节](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_single_channel_gateway/#flash-firmware)下载提供的二进制文件。
 
 ### 使用 esptool-JS 烧录
 
@@ -156,7 +156,7 @@ idf.py -p port monitor
 ## 通过 ESP BLE prov 配置
 
 :::note
-如果您想使用 **ESP BLE prov** 配置 Wi-Fi 并使用 **web 客户端** 配置 LoRaWAN，您需要刷入[此固件](https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/seeed_xiao_esp32s3_one_chanel_hub_20241016.zip)。请注意，这与通过 SenseCraft 应用配置使用的固件不同。此外，您可以按照[自定义和构建固件](https://wiki.seeedstudio.com/cn/wio_sx1262_xiao_esp32s3_for_single_channel_gateway/#customize-and-build-firmware)配置 `启用 Wi-Fi 配置`。
+如果您想使用 **ESP BLE prov** 配置 Wi-Fi 并使用 **web 客户端** 配置 LoRaWAN，您需要刷入[此固件](https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/seeed_xiao_esp32s3_one_chanel_hub_20241016.zip)。请注意，这与通过 SenseCraft 应用配置使用的固件不同。此外，您可以按照[自定义和构建固件](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_single_channel_gateway/#customize-and-build-firmware)配置 `启用 Wi-Fi 配置`。
 :::
 
 ### Wi-Fi 配置
@@ -245,8 +245,8 @@ SNTP 服务器地址：获取 UTC 时间
 
 全部设置完成。现在我们可以将 XIAO ESP32S3 和 SX1262 套件 lora 套件连接到 Lora 网络服务器，如 TTN（The things network）和 Chirpstack。
 
-- [连接到 TTN](https://wiki.seeedstudio.com/cn/wio_sx1262_xiao_esp32s3_LNS_TTN/)
-- [连接到 Chirpstack](https://wiki.seeedstudio.com/cn/wio_sx1262_xiao_esp32s3_LNS_Chirpstack/)
+- [连接到 TTN](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_LNS_TTN/)
+- [连接到 Chirpstack](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_LNS_Chirpstack/)
 
 ## 自定义和构建固件
 

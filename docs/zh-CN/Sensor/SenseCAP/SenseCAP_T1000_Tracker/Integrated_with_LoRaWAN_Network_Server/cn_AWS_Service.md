@@ -140,7 +140,7 @@ last_update:
 
 `Wireless device specification`：OTAAv1.0x
 
-`DevEUI/APP EUI/APP key`：可以在 SenseCAP Mate APP 中找到，查看 [Get_Started](https://wiki.seeedstudio.com/cn/Get_Started_with_SenseCAP_T1000_tracker/#get-started) 了解更多详情。
+`DevEUI/APP EUI/APP key`：可以在 SenseCAP Mate APP 中找到，查看 [Get_Started](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/#get-started) 了解更多详情。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS17.PNG" alt="pir" width={800} height="auto" /></p>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS20.PNG" alt="pir" width={800} height="auto" /></p>

@@ -750,7 +750,7 @@ west build -p always -b xiao_esp32c3 samples/modules/lvgl/demos --  -DSHIELD=see
 ## ✨ コントリビュータープロジェクト
 
 - このプロジェクトはSeeed Studioの[コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=57293521)によってサポートされています。
-- **Timの努力**に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)されます。
+- **Timの努力**に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)されます。
 
 ## 技術サポート & 製品ディスカッション
 

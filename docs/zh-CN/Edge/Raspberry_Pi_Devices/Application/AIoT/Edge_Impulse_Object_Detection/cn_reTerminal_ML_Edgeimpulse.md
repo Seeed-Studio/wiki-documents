@@ -62,9 +62,9 @@ Edge Impulse 是一个多功能平台，专门致力于简化为边缘设备（�
 
 ### 软件准备
 
-我们建议从官方网站安装最新版本的 Raspberry Pi 64 位操作系统。如果您希望安装新的 Raspbian 操作系统，请按照此[指南](https://wiki.seeedstudio.com/cn/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)中概述的步骤进行操作。
+我们建议从官方网站安装最新版本的 Raspberry Pi 64 位操作系统。如果您希望安装新的 Raspbian 操作系统，请按照此[指南](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)中概述的步骤进行操作。
 
-之后我们需要配置树莓派摄像头，请按照此[指南](https://wiki.seeedstudio.com/cn/reTerminal-piCam/)中概述的步骤进行操作。
+之后我们需要配置树莓派摄像头，请按照此[指南](https://wiki.seeedstudio.com/reTerminal-piCam/)中概述的步骤进行操作。
 
 您需要一个 Edge Impulse 账户才能开始，所以请通过访问此[链接](https://edgeimpulse.com/)创建一个账户。默认情况下会创建初始项目。
 

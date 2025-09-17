@@ -174,7 +174,7 @@ XIAO MIDI 合成器预装了多功能的出厂固件，让您可以开箱即用�
 ## Arduino 库概述
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 XIAO MIDI 合成器由 [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster) 库支持，该库提供全面的 MIDI 控制和声音合成功能。
@@ -607,7 +607,7 @@ typedef enum {
 
 **步骤 2.** 选择您的开发板型号并将其添加到 Arduino IDE 中。
 
-- XIAO MIDI 合成器内置 **XIAO ESP32-C3**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/)** 完成添加。
+- XIAO MIDI 合成器内置 **XIAO ESP32-C3**，请参考 **[此教程](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/)** 完成添加。
 
 ### 演示 1：基本 MIDI 音符播放
 

@@ -48,8 +48,8 @@ XIAO ESP32S3 Sense は最大 **32GB** の microSD カードをサポートして
 
 XIAO ESP32S3 Sense を初めて使用する場合は、開始前に以下の 2 つの Wiki を読んで使用方法を学ぶことをお勧めします。
 
-- [Seeed Studio XIAO ESP32S3 (Sense) 入門](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/)
-- [Seeed Studio XIAO ESP32S3 マイクの使用方法](https://wiki.seeedstudio.com/ja/xiao_esp32s3_sense_mic/)
+- [Seeed Studio XIAO ESP32S3 (Sense) 入門](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+- [Seeed Studio XIAO ESP32S3 マイクの使用方法](https://wiki.seeedstudio.com/xiao_esp32s3_sense_mic/)
 
 ## （オフライン）音声データの取得
 

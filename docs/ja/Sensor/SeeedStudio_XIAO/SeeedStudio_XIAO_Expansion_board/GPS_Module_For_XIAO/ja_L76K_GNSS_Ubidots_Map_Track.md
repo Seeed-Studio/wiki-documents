@@ -21,7 +21,7 @@ last_update:
 </p>
 
 ## はじめに
-[SeeedStudio XIAO用L76K GNSSモジュールの使用開始](https://wiki.seeedstudio.com/ja/get_start_l76k_gnss/)の後、L76K GNSSモジュールを使用してオブジェクトの位置を特定し、マップ上で軌跡を表示したいと思うかもしれません。この目的のために、SeeedStudio XIAO開発ボードとUbidots IoTデータプラットフォームを組み合わせることで実現できます。
+[SeeedStudio XIAO用L76K GNSSモジュールの使用開始](https://wiki.seeedstudio.com/get_start_l76k_gnss/)の後、L76K GNSSモジュールを使用してオブジェクトの位置を特定し、マップ上で軌跡を表示したいと思うかもしれません。この目的のために、SeeedStudio XIAO開発ボードとUbidots IoTデータプラットフォームを組み合わせることで実現できます。
 
 [Ubidots](https://ubidots.com/)は、完全な本格的なIoTアプリケーションを自分で構築する時間やエネルギーがないエンジニアや開発者向けのローコードIoT開発プラットフォームです。デバイスフレンドリーなAPIからエンドユーザー向けのクリーンなUIまで、Ubidotsは、カスタマイズされたソリューションを開発・維持するための高価なエンジニアチームを雇うことなく、より早く市場に投入するための必須の構成要素を提供します。
 

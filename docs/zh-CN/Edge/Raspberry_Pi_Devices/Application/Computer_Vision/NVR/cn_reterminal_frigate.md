@@ -69,7 +69,7 @@ Home Assistant OS 为运行 Home Assistant 提供了一个精简和优化的环�
 
 ### 软件准备
 
-我们建议从官方网站安装最新版本的 Raspberry Pi 64 位操作系统。如果您更喜欢安装新的 Raspbian 操作系统，请按照此[指南](https://wiki.seeedstudio.com/cn/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)中概述的步骤进行操作。
+我们建议从官方网站安装最新版本的 Raspberry Pi 64 位操作系统。如果您更喜欢安装新的 Raspbian 操作系统，请按照此[指南](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)中概述的步骤进行操作。
 
 ## 在 Raspberry Pi 上安装 Home Assistant Supervised 操作系统
 

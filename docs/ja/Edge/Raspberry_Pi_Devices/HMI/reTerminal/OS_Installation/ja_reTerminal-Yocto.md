@@ -519,7 +519,7 @@ Yoctoを使用して既にコンパイル済みのreTerminalシステムイメ�
 
 次に、reTerminal上のCM4のeMMCにイメージをフラッシュする作業に移ります。
 
-[このwiki](https://wiki.seeedstudio.com/ja/reTerminal/#getting-started-with-reterminal-extended)の手順に従い、以下のステップに注意してください：
+[このwiki](https://wiki.seeedstudio.com/reTerminal/#getting-started-with-reterminal-extended)の手順に従い、以下のステップに注意してください：
 
 **注意:** **Raspberry Pi Imager** を開いたら、**CHOOSE OS** をクリックし、**Use custom** を選択して、ダウンロードした **.rootfs.wic.bz2** ファイルを選択してください。
 
@@ -535,11 +535,11 @@ Yoctoを使用して既にコンパイル済みのreTerminalシステムイメ�
 
 ## シリアルコンソール経由でPCからreTerminalにログイン
 
-シリアルコンソール接続を使用してreTerminal内のOSにログインすることをお勧めします。ハードウェア接続を行い、**root**としてログインするには、[このwiki](https://wiki.seeedstudio.com/ja/reTerminal-FAQ/#q5-how-can-i-log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-a-usb-to-serial-converter)を確認してください
+シリアルコンソール接続を使用してreTerminal内のOSにログインすることをお勧めします。ハードウェア接続を行い、**root**としてログインするには、[このwiki](https://wiki.seeedstudio.com/reTerminal-FAQ/#q5-how-can-i-log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-a-usb-to-serial-converter)を確認してください
 
 ## Yoctoイメージのテスト
 
-上記のYoctoイメージをreTerminalでテストするには、[reTerminal Hardware and Interfaces Usage wiki](https://wiki.seeedstudio.com/ja/reTerminal-hardware-interfaces-usage)にアクセスして、記載されている手順を参照してください。
+上記のYoctoイメージをreTerminalでテストするには、[reTerminal Hardware and Interfaces Usage wiki](https://wiki.seeedstudio.com/reTerminal-hardware-interfaces-usage)にアクセスして、記載されている手順を参照してください。
 
 ## Yocto Project Summit 2021での講演
 

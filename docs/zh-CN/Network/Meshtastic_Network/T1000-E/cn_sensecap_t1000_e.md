@@ -291,9 +291,9 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
-- 步骤 2：[擦除闪存](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-2-flash-erase)。
+- 步骤 2：[擦除闪存](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-2-flash-erase)。
 
-- 步骤 3：[刷写固件](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-3-flash-firmware)。
+- 步骤 3：[刷写固件](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-3-flash-firmware)。
 
 ### 设备变砖
 
@@ -406,7 +406,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-当您完成上述步骤后，您可以按照此[步骤](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#flash-the-application-firmware)来刷写应用程序固件。
+当您完成上述步骤后，您可以按照此[步骤](https://wiki.seeedstudio.com/sensecap_t1000_e/#flash-the-application-firmware)来刷写应用程序固件。
 
 **2) 设备无法进入 DFU 模式，但可以检测到串口**。
 
@@ -415,7 +415,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 - 将波特率设置为 `1200`。
 
 - 连接设备。
-   连接时指示灯会短暂闪烁。持续尝试此操作直到指示灯保持常亮，这意味着设备可以回到 DFU 模式，然后[刷写引导程序](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#flash-the-bootloader) -> [擦除闪存](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-2-flash-erase) -> [刷写固件](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-3-flash-firmware)。
+   连接时指示灯会短暂闪烁。持续尝试此操作直到指示灯保持常亮，这意味着设备可以回到 DFU 模式，然后[刷写引导程序](https://wiki.seeedstudio.com/sensecap_t1000_e/#flash-the-bootloader) -> [擦除闪存](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-2-flash-erase) -> [刷写固件](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-3-flash-firmware)。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/reset%20via%20serial%20tool.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

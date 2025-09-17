@@ -17,7 +17,7 @@ last_update:
 
 ## 介绍
 
-**Seeed Studio XIAO ESP32C3** 是一款基于乐鑫 **ESP32-C3** WiFi/蓝牙双模芯片的物联网迷你开发板，采用 **32位 RISC-V CPU**，凭借其高效的架构提供强大的计算性能。它具有出色的射频性能，支持 **IEEE 802.11 b/g/n WiFi** 和 **蓝牙 5 (BLE)** 协议。该开发板配备外置天线，以增强无线应用的信号强度。它还具有 **小巧精致的外形** 和 **单面可贴装设计**。它配备了丰富的接口，拥有 **11个数字I/O** 可用作 **PWM引脚** 和 **4个模拟I/O** 可用作 **ADC引脚**。它支持四种串行接口，如 **UART、I2C 和 SPI**。板上还有一个小的 **复位按钮** 和一个 **引导加载程序模式按钮**。XIAO ESP32C3 完全兼容 [Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) 和 [Seeeduino XIAO 扩展板](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-Expansion-Board)，但对于 Seeeduino XIAO 扩展板，板上的 SWD 弹簧触点将不兼容。
+**Seeed Studio XIAO ESP32C3** 是一款基于乐鑫 **ESP32-C3** WiFi/蓝牙双模芯片的物联网迷你开发板，采用 **32位 RISC-V CPU**，凭借其高效的架构提供强大的计算性能。它具有出色的射频性能，支持 **IEEE 802.11 b/g/n WiFi** 和 **蓝牙 5 (BLE)** 协议。该开发板配备外置天线，以增强无线应用的信号强度。它还具有 **小巧精致的外形** 和 **单面可贴装设计**。它配备了丰富的接口，拥有 **11个数字I/O** 可用作 **PWM引脚** 和 **4个模拟I/O** 可用作 **ADC引脚**。它支持四种串行接口，如 **UART、I2C 和 SPI**。板上还有一个小的 **复位按钮** 和一个 **引导加载程序模式按钮**。XIAO ESP32C3 完全兼容 [Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) 和 [Seeeduino XIAO 扩展板](https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board)，但对于 Seeeduino XIAO 扩展板，板上的 SWD 弹簧触点将不兼容。
 
 基于上述突出的特性，XIAO ESP32C3 定位为 **高性能、低功耗、高性价比的物联网迷你开发板**，适用于 **低功耗物联网应用和无线可穿戴应用**。
 

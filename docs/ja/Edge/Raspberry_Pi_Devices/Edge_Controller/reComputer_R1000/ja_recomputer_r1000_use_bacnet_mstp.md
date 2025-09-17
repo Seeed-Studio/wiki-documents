@@ -45,7 +45,7 @@ BACnet MS/TP（Master-Slave/Token Passing）は、ビルディングオートメ
     </div>
 
 ### ソフトウェア
-* bacnet MS/TPはRS485物理層を使用するため、reComputer R1000 V1.0でRS485機能を正常に使用する方法については、この[wiki](https://wiki.seeedstudio.com/ja/reComputer_r1000_use_rs485_modbus_rtu/)を参照してください。
+* bacnet MS/TPはRS485物理層を使用するため、reComputer R1000 V1.0でRS485機能を正常に使用する方法については、この[wiki](https://wiki.seeedstudio.com/reComputer_r1000_use_rs485_modbus_rtu/)を参照してください。
 * `bacnet-stack`ライブラリアプリケーションの助けを借りてサーバーをシミュレートするため、以下のコマンドを入力してダウンロードする必要があります：
   ```shell
   git clone https://github.com/bacnet-stack/bacnet-stack.git

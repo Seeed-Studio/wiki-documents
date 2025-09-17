@@ -93,7 +93,7 @@ Watcher 任务由三个主要组成部分构成：
 :::danger
 使用 SenseCraft AI 的某些服务可能需要付费，详情请参阅以下文档：
 
-**[SenseCraft AI for Watcher 计划和权益](https://wiki.seeedstudio.com/cn/watcher_price/)**
+**[SenseCraft AI for Watcher 计划和权益](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/task_3.png" style={{width:1000, height:'auto'}}/></div>
@@ -123,7 +123,7 @@ Watcher设备的第三种操作模式是本地AI服务和云端LLM服务的组�
 :::danger
 使用SenseCraft AI的某些服务可能需要付费，详情请参考以下文档：
 
-**[SenseCraft AI for Watcher计划和优势](https://wiki.seeedstudio.com/cn/watcher_price/)**
+**[SenseCraft AI for Watcher计划和优势](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/task_4.png" style={{width:1000, height:'auto'}}/></div>
@@ -189,13 +189,13 @@ Watcher设备的第三种操作模式是本地AI服务和云端LLM服务的组�
 :::danger
 使用SenseCraft AI的某些服务可能会产生费用，详情请参考以下文档：
 
-**[SenseCraft AI for Watcher计划和权益](https://wiki.seeedstudio.com/cn/watcher_price/)**
+**[SenseCraft AI for Watcher计划和权益](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 
 ## 通过SenseCraft APP下发任务
 
-在了解了任务的分类和基本概念后，让我们更详细地了解如何在SenseCraft APP中向Watcher发出命令。假设您已经完成了Watcher配对过程并进入了Watcher聊天页面。如果您还不知道如何绑定设备，请参考[设备绑定和OTA升级](https://wiki.seeedstudio.com/cn/getting_started_with_watcher/#device-binding-and-ota-upgrade)。
+在了解了任务的分类和基本概念后，让我们更详细地了解如何在SenseCraft APP中向Watcher发出命令。假设您已经完成了Watcher配对过程并进入了Watcher聊天页面。如果您还不知道如何绑定设备，请参考[设备绑定和OTA升级](https://wiki.seeedstudio.com/getting_started_with_watcher/#device-binding-and-ota-upgrade)。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/workflow.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -228,7 +228,7 @@ Watcher设备的第三种操作模式是本地AI服务和云端LLM服务的组�
 :::danger
 使用SenseCraft AI的某些服务可能会产生费用，详情请参考以下文档：
 
-**[SenseCraft AI for Watcher计划和权益](https://wiki.seeedstudio.com/cn/watcher_price/)**
+**[SenseCraft AI for Watcher计划和权益](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 ### 识别或配置任务分解

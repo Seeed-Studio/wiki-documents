@@ -19,7 +19,7 @@ last_update:
 
 このチュートリアルでは、RSSフィードの理解とSenseCraft HMIのRSS機能を使用してデバイスにコンテンツを表示する方法をガイドします。
 
-この記事では、[reTerminal E1002](https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1002/)を例として、SenseCraft HMIプラットフォームでこの機能を使用する方法を説明します。
+この記事では、[reTerminal E1002](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002/)を例として、SenseCraft HMIプラットフォームでこの機能を使用する方法を説明します。
 
 ## RSSの理解
 
@@ -330,7 +330,7 @@ RSSディスプレイの品質は、選択するフィードに大きく依存�
 ## リソース
 
 - [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi)
-- [Compatible Devices - reTerminal E Series](https://wiki.seeedstudio.com/ja/reterminal_e10xx_main_page/)
+- [Compatible Devices - reTerminal E Series](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
 
 ## 技術サポート & 製品ディスカッション
 

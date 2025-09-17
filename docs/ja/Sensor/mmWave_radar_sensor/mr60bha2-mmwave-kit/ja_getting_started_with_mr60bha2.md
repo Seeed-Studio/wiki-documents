@@ -23,7 +23,7 @@ last_update:
     <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
 </div><br />
 
-XIAO向けの先進的な**mmWaveセンサーモジュール**をご紹介します。[転倒検出](https://wiki.seeedstudio.com/ja/getting_started_with_mr60fda2_mmwave_kit/)と心拍モニタリングの両方に対応した最先端のモニタリングソリューションを提供するよう設計されています。内蔵Wi-FiとBluetooth接続機能を備えた堅牢なXIAO ESP32マイクロコントローラーを搭載し、これらのモジュールは精密で信頼性の高い検出機能を提供します。リアルタイムでの転倒監視や敏感な精度での心拍追跡が必要な場合でも、当社のモジュールは、カスタマイズ可能なRGB LEDや環境光センシングを含む最先端技術を搭載しています。Grove GPIOポートによる簡単な拡張オプションにより、これらの多用途モジュールは、スマートホーム統合からヘルスケアモニタリングまで、幅広いアプリケーションに最適です。
+XIAO向けの先進的な**mmWaveセンサーモジュール**をご紹介します。[転倒検出](https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/)と心拍モニタリングの両方に対応した最先端のモニタリングソリューションを提供するよう設計されています。内蔵Wi-FiとBluetooth接続機能を備えた堅牢なXIAO ESP32マイクロコントローラーを搭載し、これらのモジュールは精密で信頼性の高い検出機能を提供します。リアルタイムでの転倒監視や敏感な精度での心拍追跡が必要な場合でも、当社のモジュールは、カスタマイズ可能なRGB LEDや環境光センシングを含む最先端技術を搭載しています。Grove GPIOポートによる簡単な拡張オプションにより、これらの多用途モジュールは、スマートホーム統合からヘルスケアモニタリングまで、幅広いアプリケーションに最適です。
 
 ## 特徴
 
@@ -102,15 +102,15 @@ XIAO向けの先進的な**mmWaveセンサーモジュール**をご紹介しま
 
 :::info 注意
 
-デフォルトでは、MR60BHA2は[XIAO ESP32C6](/ja/xiao_esp32c6_getting_started)と組み立て済みで提供されますが、通信と統合のために様々な他のマイクロコントローラーと互換性があります。
+デフォルトでは、MR60BHA2は[XIAO ESP32C6](/xiao_esp32c6_getting_started)と組み立て済みで提供されますが、通信と統合のために様々な他のマイクロコントローラーと互換性があります。
 
 :::
 
 XIAOシリーズでArduinoを初めて使用する場合は、お使いのボードに適したセットアップガイドに従ってください：
 
-- **XIAO ESP32S3**: [XIAO ESP32S3 はじめに ガイド](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/)を参照してください。
-- **XIAO ESP32C3**: [Seeed Studio XIAO ESP32C3 はじめに](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started/)ガイドに従ってください。
-- **XIAO ESP32C6**: [Seeed Studio XIAO ESP32C6 はじめに](https://wiki.seeedstudio.com/ja/xiao_esp32c6_getting_started/)ガイドに従ってください。
+- **XIAO ESP32S3**: [XIAO ESP32S3 はじめに ガイド](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)を参照してください。
+- **XIAO ESP32C3**: [Seeed Studio XIAO ESP32C3 はじめに](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/)ガイドに従ってください。
+- **XIAO ESP32C6**: [Seeed Studio XIAO ESP32C6 はじめに](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/)ガイドに従ってください。
 
 ボードのセットアップが完了したら、以下の手順に進んでください：
 

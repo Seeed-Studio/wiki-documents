@@ -362,10 +362,10 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 
 - [Deepstream](https://developer.nvidia.com/deepstream-sdk) 为 Jetson 上基于 AI 的多传感器处理以及视频和图像理解提供完整的流分析工具包。
 - [TAO](https://developer.nvidia.com/tao-toolkit) 基于 TensorFlow 和 PyTorch 构建，是 NVIDIA TAO 框架的低代码版本，可加速模型训练
-- [alwaysAI](https://alwaysai.co/blog/getting-started-with-the-jetson-nano-using-alwaysai)：直接在 reComputer 边缘构建、训练和部署计算机视觉应用程序。免费访问 100+ 预训练计算机视觉模型，通过企业订阅在云端几次点击即可训练自定义 AI 模型。查看我们的 [wiki](https://wiki.seeedstudio.com/cn/alwaysAI-Jetson-Getting-Started/#object-detection-on-pre-loaded-video-file) 指南开始使用 alwaysAI。
+- [alwaysAI](https://alwaysai.co/blog/getting-started-with-the-jetson-nano-using-alwaysai)：直接在 reComputer 边缘构建、训练和部署计算机视觉应用程序。免费访问 100+ 预训练计算机视觉模型，通过企业订阅在云端几次点击即可训练自定义 AI 模型。查看我们的 [wiki](https://wiki.seeedstudio.com/alwaysAI-Jetson-Getting-Started/#object-detection-on-pre-loaded-video-file) 指南开始使用 alwaysAI。
 - [edge impulse](https://www.edgeimpulse.com/)：最简单的嵌入式机器学习管道，用于在边缘部署音频、分类和目标检测应用程序，无需依赖云端。
 - [Roboflow](https://blog.roboflow.com/deploy-to-nvidia-jetson/) 提供工具将原始图像转换为自定义训练的目标检测和分类计算机视觉模型，并部署模型用于应用程序。请参阅 https://docs.roboflow.com/inference/nvidia-jetson 了解如何使用 Roboflow 部署到 NVIDIA Jetson。
-- [ultralytics yolo](https://github.com/ultralytics/yolov5)：使用迁移学习实现 YOLOv5 的少样本目标检测，只需要很少的训练样本。请参阅我们的分步 [wiki](https://wiki.seeedstudio.com/cn/YOLOv5-Object-Detection-Jetson/) 教程。
+- [ultralytics yolo](https://github.com/ultralytics/yolov5)：使用迁移学习实现 YOLOv5 的少样本目标检测，只需要很少的训练样本。请参阅我们的分步 [wiki](https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/) 教程。
 - [深度学习](https://deci.ai/blog/jetson-machine-learning-inference/)：在 NVIDIA Jetson Nano 上优化您的模型。查看 Deci 的[这里](https://info.deci.ai/benchmark-optimize-runtime-performance-nvidia-jetson)，了解在 NVIDIA Jetson Nano 和 Xavier NX 设备上自动基准测试和优化运行时性能。
 
 ### 语音 AI

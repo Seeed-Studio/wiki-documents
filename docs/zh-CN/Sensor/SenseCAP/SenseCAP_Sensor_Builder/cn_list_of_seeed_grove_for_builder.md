@@ -464,7 +464,7 @@ void loop() {
 ## ✨ 贡献者项目
 
 - 本项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
-- 感谢 [Mohammed Adnan Khan 的努力](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=34120904)，您的工作将会被[展示](https://wiki.seeedstudio.com/cn/Honorary-Contributors/)。
+- 感谢 [Mohammed Adnan Khan 的努力](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=34120904)，您的工作将会被[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)。
 
 
 ## 技术支持与产品讨论

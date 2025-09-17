@@ -25,7 +25,7 @@ CircuitPythonは、低コストのマイコンボードでの実験やプログ�
 
 2. USB Type-CケーブルでSeeed Studio XIAO SAMD21をPCに接続します。
 
-3. ジャンパーを使用してRSTピンを2回素早くショートさせることで、DFUブートローダーモードに入ります。詳細については、[こちら](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO/#reset)も参照してください。
+3. ジャンパーを使用してRSTピンを2回素早くショートさせることで、DFUブートローダーモードに入ります。詳細については、[こちら](https://wiki.seeedstudio.com/Seeeduino-XIAO/#reset)も参照してください。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif" /></div>
 

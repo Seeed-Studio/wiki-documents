@@ -46,7 +46,7 @@ reServer 是基于 Nvidia Jetson 平台的边缘计算设备。它具有紧凑�
 :::
 
 :::note
-我们可以按照[此 wiki](https://wiki.seeedstudio.com/cn/reServer_Industrial_Getting_Started/#flash-jetpack) 中的说明将最新的 JetPack 6.0 系统刷入 reServer。
+我们可以按照[此 wiki](https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started/#flash-jetpack) 中的说明将最新的 JetPack 6.0 系统刷入 reServer。
 :::
 
 <div align="center">

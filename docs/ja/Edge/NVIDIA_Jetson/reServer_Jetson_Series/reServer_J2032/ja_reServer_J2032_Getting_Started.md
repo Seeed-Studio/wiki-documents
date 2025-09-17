@@ -555,7 +555,7 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
 
 ## JetPackのフラッシュ
 
-reServer J2032は、JetPackがプリインストールされた状態で出荷されます。ただし、デバイスを再フラッシュしたい場合は、[このwiki](https://wiki.seeedstudio.com/ja/reServer_J2032_Flash_Jetpack)に従ってください。
+reServer J2032は、JetPackがプリインストールされた状態で出荷されます。ただし、デバイスを再フラッシュしたい場合は、[このwiki](https://wiki.seeedstudio.com/reServer_J2032_Flash_Jetpack)に従ってください。
 
 ## reServerの周辺機器とモジュール組み立てのクイックスタート
 

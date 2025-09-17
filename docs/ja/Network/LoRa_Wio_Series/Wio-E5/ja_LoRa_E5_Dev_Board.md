@@ -28,7 +28,7 @@ Wio-E5 開発ボードには、グローバル周波数帯で LoRaWAN® プロ�
 
 Wio-E5 開発ボードには [Wio-E5 STM32WLE5JC モジュール](https://www.seeedstudio.com/LoRa-E5-Wireless-Module-p-4745.html) が組み込まれており、これは世界初の LoRa RF と MCU チップを単一の小さなチップに統合したもので、FCC および CE 認証を取得しています。ARM Cortex-M4 コアと Semtech SX126X LoRa® チップによって駆動され、世界的な周波数で LoRaWAN® と LoRa® プロトコルの両方をサポートし、(G)FSK、BPSK、(G)MSK、および LoRa® 変調をサポートします。
 
-[Wio-E5](https://wiki.seeedstudio.com/ja/LoRa-E5_STM32WLE5JC_Module/) についてはこちらで詳しく学習できます。
+[Wio-E5](https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module/) についてはこちらで詳しく学習できます。
 
 Wio-E5 開発ボードは、開放エリアで最大 10km の長距離伝送範囲を持つ Wio-E5 の長距離伝送機能を備えています。ボード上の Wio-E5 モジュールのスリープ電流は 2.1 uA（WOR モード）と非常に低くなっています。-40℃ ～ 85℃ の広い動作温度範囲、-116.5 dBm ～ -136 dBm の高感度、3.3V で最大 +20.8dBm の出力電力を持つ産業規格で設計されています。
 
@@ -301,7 +301,7 @@ Rx: +KEY: APPKEY 2B7E151628AED2A6ABF7158809CF4F3C
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/12.png" alt="pir" width={600} height="auto" /></p>
 
-- **ステップ 12.** LoRaWAN® ゲートウェイを TTN コンソールに登録します。[こちら](https://wiki.seeedstudio.com/ja/The-Things-Indoor-Gateway/#step-2-gateway-registration-on-ttn-console)に示されている手順を参照してください
+- **ステップ 12.** LoRaWAN® ゲートウェイを TTN コンソールに登録します。[こちら](https://wiki.seeedstudio.com/The-Things-Indoor-Gateway/#step-2-gateway-registration-on-ttn-console)に示されている手順を参照してください
 
 - **ステップ 13.** 以下のATコマンドを入力して TTN に接続します
 
@@ -367,7 +367,7 @@ ATコマンドの詳細については、[Wio-E5 ATコマンド仕様書](https:
 **注意:** STM32WLシリーズ用STM32Cube MCUパッケージの最新バージョンであるv1.1.0をサポートするようにライブラリを更新しました。
 
 :::note
-SDKでプログラムする前に工場出荷時のATファームウェアを消去する必要があるため、まず[工場出荷時ATファームウェアの消去](https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/#application-notes)セクションをお読みください。工場出荷時のATファームウェアを消去すると、復元することはできません。
+SDKでプログラムする前に工場出荷時のATファームウェアを消去する必要があるため、まず[工場出荷時ATファームウェアの消去](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/#application-notes)セクションをお読みください。工場出荷時のATファームウェアを消去すると、復元することはできません。
 :::
 
 #### 準備
@@ -447,7 +447,7 @@ SDKでプログラムする前に工場出荷時のATファームウェアを消
 
 次に、**Device EUI**、**Application EUI**、**Application KEY**、および**LoRawan Region**を変更します
 
-- **ステップ 7.** [こちらのガイド](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/#13-connect-and-send-data-to-the-things-network)に従ってTTNアプリケーションをセットアップし、**Application EUI**を取得して`LoRaWAN/App/se-identity.h`のマクロ定義`LORAWAN_JOIN_EUI`にコピーしてください。例えば、ここでのApplication EUIは`80 00 00 00 00 00 00 0x07`です：
+- **ステップ 7.** [こちらのガイド](https://wiki.seeedstudio.com/LoRa_E5_mini/#13-connect-and-send-data-to-the-things-network)に従ってTTNアプリケーションをセットアップし、**Application EUI**を取得して`LoRaWAN/App/se-identity.h`のマクロ定義`LORAWAN_JOIN_EUI`にコピーしてください。例えば、ここでのApplication EUIは`80 00 00 00 00 00 00 0x07`です：
 
 ```cpp
 // LoRaWAN/App/se-identity.h

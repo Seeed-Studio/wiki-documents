@@ -52,11 +52,11 @@ armv7l
 ```
 
 :::tip
-お使いのOSがDebian 11 (Bullseye)より古い場合、またはLOG_BITが64の場合は、最新のRaspberry Pi OS 32-bitをインストールしてください。[Raspbian OSフラッシュ手順](https://wiki.seeedstudio.com/ja/reterminal-dm-flash-OS/#steps-for-flashing-raspbian-os)を参照してください。
+お使いのOSがDebian 11 (Bullseye)より古い場合、またはLOG_BITが64の場合は、最新のRaspberry Pi OS 32-bitをインストールしてください。[Raspbian OSフラッシュ手順](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/#steps-for-flashing-raspbian-os)を参照してください。
 :::
 
 :::tip
-uname -mがaarch64の場合、お使いのOSは64-bitカーネルで動作しています。32-bitカーネルに変更してください。[32-bit OSドライバー](https://wiki.seeedstudio.com/ja/reterminal-dm-flash-OS/#32-bit-os-driver)を参照してください。
+uname -mがaarch64の場合、お使いのOSは64-bitカーネルで動作しています。32-bitカーネルに変更してください。[32-bit OSドライバー](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/#32-bit-os-driver)を参照してください。
 :::
 
 ## ステップ3: デバイス上でのAzure IoT Edgeの手動テスト

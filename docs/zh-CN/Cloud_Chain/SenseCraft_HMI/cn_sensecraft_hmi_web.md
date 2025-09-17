@@ -19,7 +19,7 @@ last_update:
 
 本教程将指导您使用 SenseCraft HMI 中的 Web 功能，涵盖网页内容的设置、预览和部署到您的设备。
 
-本文将以 [reTerminal E1002](https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1002/) 为例，说明如何在 SenseCraft HMI 平台上使用此功能。
+本文将以 [reTerminal E1002](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002/) 为例，说明如何在 SenseCraft HMI 平台上使用此功能。
 
 ## Web 功能入门
 
@@ -412,7 +412,7 @@ SenseCraft HMI 中的 Web 功能提供了一种在基于屏幕的设备上显示
 ## 资源
 
 - [SenseCraft HMI 平台](https://sensecraft.seeed.cc/hmi)
-- [兼容设备 - reTerminal E 系列](https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/)
+- [兼容设备 - reTerminal E 系列](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
 
 ## 技术支持与产品讨论
 

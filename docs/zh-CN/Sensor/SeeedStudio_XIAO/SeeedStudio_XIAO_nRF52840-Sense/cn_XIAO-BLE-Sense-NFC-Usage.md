@@ -26,7 +26,7 @@ Seeed nRF52 Boards 版本 1.1.3 和 Seeed nRF52 mbed-enabled Boards 版本 2.9.2
 
 > 当我们使用"Seeed nRF52 mbed-enabled Boards Library"时，NFC 功能将表现良好。
 
-有关开发板库的安装，请参考[此教程](https://wiki.seeedstudio.com/cn/XIAO_BLE/#software-setup)完成安装。如果您已经安装完成，我们可以继续进行项目。
+有关开发板库的安装，请参考[此教程](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)完成安装。如果您已经安装完成，我们可以继续进行项目。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new7.png" /></div>
 

@@ -73,7 +73,7 @@ last_update:
 ## 前提条件
 
 - NVIDIA Jetson AGX Orin モジュール 32GB/64GB
-- 最新の [JetPack 6.2 SDK](https://wiki.seeedstudio.com/ja/reserver_j501_getting_started/#prepare-the-jetpack-image) をフラッシュ済み（GMSL 拡張ボード対応）
+- 最新の [JetPack 6.2 SDK](https://wiki.seeedstudio.com/reserver_j501_getting_started/#prepare-the-jetpack-image) をフラッシュ済み（GMSL 拡張ボード対応）
 - reServer Industrial J501 キャリアボード
 - reServer Industrial J501-GMSL 拡張ボード
 - [GMSL カメラ](https://www.sensing-world.com/en/pd.jsp?recommendFromPid=0&id=23&fromMid=1544)

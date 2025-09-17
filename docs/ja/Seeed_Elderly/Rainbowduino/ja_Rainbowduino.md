@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 Rainbowduinoシリーズは、プロフェッショナルな多重化LEDドライバーを備えたArduino互換のコントローラーボードです。共通アノードモードで8x8 RGB LEDマトリックスまたは4x4x4 RGB LEDキューブを駆動することができます。Rainbowduinoファミリーは以下の通りです。
 

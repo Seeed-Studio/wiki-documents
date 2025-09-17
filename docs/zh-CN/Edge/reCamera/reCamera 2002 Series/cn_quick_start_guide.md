@@ -110,7 +110,7 @@ reCamera 有 4 个版本：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Wi-Fi_list.png" /></div>
 
-如果您遇到任何问题，请查看[网络故障排除](https://wiki.seeedstudio.com/cn/recamera_network_connection/)。
+如果您遇到任何问题，请查看[网络故障排除](https://wiki.seeedstudio.com/recamera_network_connection/)。
 
 ### 方法 2：以太网
 
@@ -135,7 +135,7 @@ reCamera 有 4 个版本：
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/laptop_wifi_list.png" /></div>
 
 连接到此 AP，网站应该会自动弹出。如果没有，您可以在浏览器中输入 **192.168.16.1** 来访问页面。然后您可以选择希望 reCamera 连接到哪个 wifi。
-如果您有多个 reCamera，可以参考[设备管理](https://wiki.seeedstudio.com/cn/recamera_getting_started/#multi-devices-management)来找出哪个是哪个。
+如果您有多个 reCamera，可以参考[设备管理](https://wiki.seeedstudio.com/recamera_getting_started/#multi-devices-management)来找出哪个是哪个。
 
 ## 基本网页访问
 
@@ -155,7 +155,7 @@ reCamera 有 4 个版本：
 - **电源**：`ip_address/#/power`
 - **原始 Node-RED**：```ip_address:1880```
 
-**请检查您的设备 OS 版本**。版本 0.1.3 和 0.1.4 之间有重大升级。为了更流畅的用户体验，我们建议升级到 0.1.5 及以上版本。请转到 ```侧边栏 -> 系统 -> 软件更新``` 检查软件版本，并应用和安装最新版本的 OS。更新说明请参考 [OTA 升级指南](https://wiki.seeedstudio.com/cn/recamera_getting_started/#ota-upgrade-from-013-to-latest-version)。
+**请检查您的设备 OS 版本**。版本 0.1.3 和 0.1.4 之间有重大升级。为了更流畅的用户体验，我们建议升级到 0.1.5 及以上版本。请转到 ```侧边栏 -> 系统 -> 软件更新``` 检查软件版本，并应用和安装最新版本的 OS。更新说明请参考 [OTA 升级指南](https://wiki.seeedstudio.com/recamera_getting_started/#ota-upgrade-from-013-to-latest-version)。
 
 ### 从 0.1.3 OTA 升级到最新版本
 
@@ -177,7 +177,7 @@ reCamera 有 4 个版本：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/OSupgrade4.png" /></div>
 
-**步骤 5**：您将进入加载页面来更改密码。现在您可以按照[此下载说明](https://wiki.seeedstudio.com/cn/recamera_getting_started/#access-recamera-preview-dashboard)体验带有 Node-RED 仪表板的最新版本 reCamera。
+**步骤 5**：您将进入加载页面来更改密码。现在您可以按照[此下载说明](https://wiki.seeedstudio.com/recamera_getting_started/#access-recamera-preview-dashboard)体验带有 Node-RED 仪表板的最新版本 reCamera。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/OSupgrade5.png" /></div>
 
@@ -240,7 +240,7 @@ reCamera 有 4 个版本：
 
 ### 计算机视觉模型
 
-对于这些提供的工作流程，默认选择 `YOLO11n detection model`，这是用于实时对象检测的最新计算机视觉模型。您也可以在节点中将其替换为其他模型。如果您想了解还有哪些其他模型可用，可以参考这个[wiki](https://wiki.seeedstudio.com/cn/recamera_on_device_models/)。
+对于这些提供的工作流程，默认选择 `YOLO11n detection model`，这是用于实时对象检测的最新计算机视觉模型。您也可以在节点中将其替换为其他模型。如果您想了解还有哪些其他模型可用，可以参考这个[wiki](https://wiki.seeedstudio.com/recamera_on_device_models/)。
 
 **交并比 (IoU)**：IoU 是用于评估预测边界框与真实边界框之间重叠程度的指标。它计算为两个框交集面积与两个框并集面积的比值。IoU 的值通常在 0 到 1 的范围内。我们将其标准化为 0 - 100 的比例，IoU 值为 0 表示预测框与真实框之间没有重叠。值为 100 表示完美匹配，意味着两个框完全重叠。
 
@@ -302,7 +302,7 @@ reCamera 有 4 个版本：
 这将删除用户信息，包括您开发的应用程序或任何本地存储的图像和视频。请谨慎操作。
 :::
 
-如果您想将设备的固件恢复到特定版本，请访问 [操作系统版本控制](https://wiki.seeedstudio.com/cn/recamera_os_version_control)
+如果您想将设备的固件恢复到特定版本，请访问 [操作系统版本控制](https://wiki.seeedstudio.com/recamera_os_version_control)
 
 ## 多设备管理
 

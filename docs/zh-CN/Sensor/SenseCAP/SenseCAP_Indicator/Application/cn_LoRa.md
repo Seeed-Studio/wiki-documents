@@ -34,7 +34,7 @@ Seeed Studio 的 SenseCAP Indicator（版本 D1L 和 D1Pro）包含内置的 LoR
 
 ### SenseCAP Indicator
 
-从页面 [深入了解硬件](/cn/SenseCAP_Indicator_Dive_into_the_Hardware/#hardware-diagram) 中，我们可以看到 LoRa 收发器通过 SPI 接口连接到 ESP32-S3 MCU。
+从页面 [深入了解硬件](/SenseCAP_Indicator_Dive_into_the_Hardware/#hardware-diagram) 中，我们可以看到 LoRa 收发器通过 SPI 接口连接到 ESP32-S3 MCU。
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_6.png
 "/></div>
@@ -56,7 +56,7 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以通
 
 ## 软件
 
-由于 [SenseCAP_Indicator_ESP32](https://github.com/Seeed-Solution/sensecap_indicator_esp32) SDK 已经提供了 LoRa 库，我们可以直接使用它，您可以快速查看页面 [LoRa®](/cn/SenseCAP_Indicator_ESP32_LoRa) 了解如何使用 LoRa 库。
+由于 [SenseCAP_Indicator_ESP32](https://github.com/Seeed-Solution/sensecap_indicator_esp32) SDK 已经提供了 LoRa 库，我们可以直接使用它，您可以快速查看页面 [LoRa®](/SenseCAP_Indicator_ESP32_LoRa) 了解如何使用 LoRa 库。
 
 ## 入门指南
 
@@ -64,7 +64,7 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以通
 
 ### 先决条件
 
-请按照[说明](/cn/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware)设置开发环境。
+请按照[说明](/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware)设置开发环境。
 
 ### 步骤 1：下载演示代码
 

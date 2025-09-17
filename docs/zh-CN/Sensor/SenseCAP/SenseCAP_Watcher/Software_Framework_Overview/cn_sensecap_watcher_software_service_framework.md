@@ -105,7 +105,7 @@ Watcher 还可以将数据发送到本地服务器、第三方应用程序或警
 此图展示了混合智能处理流程，涉及用户交互、一些云服务和本地应用程序。混合方法通过结合基于云的任务编排和本地视觉模型，在数据安全、用户体验和效率之间取得平衡。
 
 **步骤 1**. 初始设置
-在[入门和设备绑定](https://wiki.seeedstudio.com/cn/getting_started_with_watcher/#device-binding-and-ota-upgrade)之后，用户可以根据需要选择合适的本地服务，启用私有 Watcher 服务，并输入 Watcher 服务器 URL。
+在[入门和设备绑定](https://wiki.seeedstudio.com/getting_started_with_watcher/#device-binding-and-ota-upgrade)之后，用户可以根据需要选择合适的本地服务，启用私有 Watcher 服务，并输入 Watcher 服务器 URL。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcher_software_service_framework/1.gif" style={{width:400, height:'auto'}}/></div>
 
@@ -151,7 +151,7 @@ Watcher 还可以将数据发送到本地服务器、第三方应用程序或警
 此图概述了"本地安全处理流程"，重点关注用户与本地部署应用程序的完整交互。为确保数据隐私，任务编排和图像分析服务完全部署在本地服务器上，提供全面的隐私保护。但是，这种方法限制了功能，因为 SenseCraft 云服务不可用。任务只能通过现场语音命令启动，用户必须配置通知服务来查看历史数据。
 
 **步骤 1**. 初始设置
-在[入门和设备绑定](https://wiki.seeedstudio.com/cn/getting_started_with_watcher/#device-binding-and-ota-upgrade)之后，用户可以根据需要选择适当的本地服务，启用私有 Watcher 服务，并输入 Watcher 服务器 URL。
+在[入门和设备绑定](https://wiki.seeedstudio.com/getting_started_with_watcher/#device-binding-and-ota-upgrade)之后，用户可以根据需要选择适当的本地服务，启用私有 Watcher 服务，并输入 Watcher 服务器 URL。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcher_software_service_framework/1.gif" style={{width:400, height:'auto'}}/></div>
 

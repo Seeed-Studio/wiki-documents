@@ -30,7 +30,7 @@ GPSは屋外での位置特定能力を証明しています。現在、私た�
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTEwNA_594585_HptIoexn6zqh4-oS_1692694140?w=1424&h=328&type=image/png" alt="pir" width={800} height="auto" /></p>
 
 :::tip
-詳細については[屋内測位システム](https://wiki.seeedstudio.com/ja/IPS_For_SenseCAP_T1000_Traker)をご確認ください。
+詳細については[屋内測位システム](https://wiki.seeedstudio.com/IPS_For_SenseCAP_T1000_Traker)をご確認ください。
 :::
 
 ### 特徴

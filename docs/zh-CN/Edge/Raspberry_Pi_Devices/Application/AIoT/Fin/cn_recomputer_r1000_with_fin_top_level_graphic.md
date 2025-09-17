@@ -47,13 +47,13 @@ FIN Framework (FIN) 是一个软件框架，具有可以集成、控制、管理
 
 ### 软件准备
 
-* 关于如何安装 FIN Framework，您可以参考这个[wiki](https://wiki.seeedstudio.com/cn/reComputer_r1000_install_fin/)。
+* 关于如何安装 FIN Framework，您可以参考这个[wiki](https://wiki.seeedstudio.com/reComputer_r1000_install_fin/)。
 
 ## 创建顶级图形的步骤
 
 ### 创建新的顶级图形
 
-**步骤 1**：我们创建三个站点。关于如何在设备树下创建站点，您可以参考这个[wiki](https://wiki.seeedstudio.com/cn/reComputer_r1000_fin_modbus_tcp_and_rtu/#add-data-points-to-equip-tree)。请将系统上下文保持在主目录中。
+**步骤 1**：我们创建三个站点。关于如何在设备树下创建站点，您可以参考这个[wiki](https://wiki.seeedstudio.com/reComputer_r1000_fin_modbus_tcp_and_rtu/#add-data-points-to-equip-tree)。请将系统上下文保持在主目录中。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/Top_grap_Equip_tree_and_top_path.png" /></center>
 

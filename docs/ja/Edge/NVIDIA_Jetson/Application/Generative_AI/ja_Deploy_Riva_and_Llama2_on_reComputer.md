@@ -28,7 +28,7 @@ AI 技術の急速な進化にともない、音声インタラクションは�
 ## 前提条件
 
 - メモリ 16GB 以上の Jetson デバイス
-- ハードウェアは事前に JetPack [5.1.1](https://wiki.seeedstudio.com/ja/reComputer_Intro/) をフラッシュしておくこと
+- ハードウェアは事前に JetPack [5.1.1](https://wiki.seeedstudio.com/reComputer_Intro/) をフラッシュしておくこと
 - [スピーカーとマイク](https://www.seeedstudio.com/ReSpeaker-USB-Mic-Array-p-4247.html?queryID=dd9c8d91c63781d66776771a7ee5ec01&objectID=4247&indexName=bazaar_retailer_products)
 
 **注意:** すべての検証は [Jetson AGX Orin 32GB H01 Kit](https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html?queryID=012e528073e90bf80afd3880f3fc2b13&objectID=5569&indexName=bazaar_retailer_products) を使用して行いましたが、メモリ容量が少ないデバイスでも小さなモデルを読み込むことで試すことができます。

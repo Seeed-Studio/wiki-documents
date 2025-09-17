@@ -16,7 +16,7 @@ last_update:
 ## はじめに
 
 reTerminalは優れたヒューマンマシンインターフェース（HMI）として、様々な異なる側面のシステムで採用されています。システムのインターフェースとして、手で持つだけでなく、reTerminalをマウントすることは良いアイデアでしょう。
-このセクションでは、reTerminalマウントソリューションの可能性について説明します。このセクションの内容は、[ハードウェアのネジ仕様](https://wiki.seeedstudio.com/ja/reTerminal_Mount_Options/#Hardware_Specification_of_the_Screw)と[コミュニティデザイン](https://wiki.seeedstudio.com/ja/reTerminal_Mount_Options/#Community_Design)をカバーします。
+このセクションでは、reTerminalマウントソリューションの可能性について説明します。このセクションの内容は、[ハードウェアのネジ仕様](https://wiki.seeedstudio.com/reTerminal_Mount_Options/#Hardware_Specification_of_the_Screw)と[コミュニティデザイン](https://wiki.seeedstudio.com/reTerminal_Mount_Options/#Community_Design)をカバーします。
 
 ## ネジのハードウェア仕様
 

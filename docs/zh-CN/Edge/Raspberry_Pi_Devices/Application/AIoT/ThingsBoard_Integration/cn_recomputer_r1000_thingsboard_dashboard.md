@@ -46,7 +46,7 @@ last_update:
 
 ### 软件
 
-如果您是 ThingsBoard 的新用户，请确保正确安装。请参考[此 wiki](https://wiki.seeedstudio.com/cn/recomputer_r1000_thingsboard_ce/) 获取指导。
+如果您是 ThingsBoard 的新用户，请确保正确安装。请参考[此 wiki](https://wiki.seeedstudio.com/recomputer_r1000_thingsboard_ce/) 获取指导。
 
 ## 登录 ThingsBoard
 
@@ -105,7 +105,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/tb/dashboard/mqtt2.PNG" style={{width:400}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/tb/dashboard/mqtt3.PNG" style={{width:400}}/></div>
 
-- 如果您想了解更多关于 MQTT In 节点的信息，[您可以进一步探索](https://wiki.seeedstudio.com/cn/recomputer_r1000_nodered_mqtt/)。
+- 如果您想了解更多关于 MQTT In 节点的信息，[您可以进一步探索](https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/)。
 
 :::note
 您不需要在 reComputer 上安装 Mosquitto 代理。

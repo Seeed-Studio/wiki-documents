@@ -301,9 +301,9 @@ DHT11 使用简单的 GPIO 接口，只有一条数据线。
 
 ## 收集技术文档
 
-拥有传感器的技术文档至关重要。如果您使用的是 Seeed 的产品，您可以在 **[Seeed Studio 官方 Wiki](https://wiki.seeedstudio.com/cn/)** 上找到传感器或执行器的详细文档和资源。Wiki 的资源部分还包含您可以提供给 Cursor 的 Grove 产品数据表。例如，对于本项目中使用的 DHT11 传感器：
+拥有传感器的技术文档至关重要。如果您使用的是 Seeed 的产品，您可以在 **[Seeed Studio 官方 Wiki](https://wiki.seeedstudio.com/)** 上找到传感器或执行器的详细文档和资源。Wiki 的资源部分还包含您可以提供给 Cursor 的 Grove 产品数据表。例如，对于本项目中使用的 DHT11 传感器：
 
-- [Grove DHT11 Wiki 页面](https://wiki.seeedstudio.com/cn/Grove-TemperatureAndHumidity_Sensor/)
+- [Grove DHT11 Wiki 页面](https://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/)
 
 如果您使用的是其他制造商的传感器，请直接联系他们以获取必要的技术文档。
 

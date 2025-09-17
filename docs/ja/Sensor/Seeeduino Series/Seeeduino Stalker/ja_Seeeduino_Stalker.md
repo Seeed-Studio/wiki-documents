@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 **Seeeduino Stalker** は、**データロガー機能**を備えた、機能豊富な Arduino 互換の **ワイヤレスセンサーネットワークノード** です。そのモジュール構造とオンボード周辺機器により、定期的にタイムスタンプ付きセンサーデータを記録するのに便利です。**Seeeduino Stalker** には、_温度センサー、バックアップ電源付き RTC、SD カードソケット、Bee ソケット、ソーラーリチウムポリマーイオンバッテリーチャージャー_ が搭載されています。**Seeeduino Stalker** は、追跡、監視、制御プロジェクトに最適な候補です。
 

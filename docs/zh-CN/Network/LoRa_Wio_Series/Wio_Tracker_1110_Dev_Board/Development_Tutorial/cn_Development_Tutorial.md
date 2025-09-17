@@ -13,7 +13,7 @@ last_update:
   author: Jessie
 ---
 
-在开始开发之前，请查看[设置您的工具链](https://wiki.seeedstudio.com/cn/setup_toolchain_for_wio_tracker/)以首先设置工具。
+在开始开发之前，请查看[设置您的工具链](https://wiki.seeedstudio.com/setup_toolchain_for_wio_tracker/)以首先设置工具。
 
 ## 硬件概述
 
@@ -26,7 +26,7 @@ last_update:
 
 ## Grove
 
-Wio Tracker 1110 开发板有6个Grove接口，可以连接300多个Grove模块。点击[这里](https://wiki.seeedstudio.com/cn/Grove_Sensor_Intro/)了解更多关于Grove模块的信息。
+Wio Tracker 1110 开发板有6个Grove接口，可以连接300多个Grove模块。点击[这里](https://wiki.seeedstudio.com/Grove_Sensor_Intro/)了解更多关于Grove模块的信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio-tracker-grove.png" alt="pir" width={800} height="auto" /></p>
 

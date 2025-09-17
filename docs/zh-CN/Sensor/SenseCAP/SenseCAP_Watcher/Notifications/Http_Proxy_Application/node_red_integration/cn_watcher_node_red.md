@@ -92,7 +92,7 @@ node-red
 
 ## 第三部分：在 Watcher 中运行任务
 
-告诉 Watcher 您希望它帮助您做什么。您只需要在输入框中输入一些命令。例如，**检测到人时通知我** 或 **如果有火灾请告诉我** 等。如果您想了解更多，[**请跳转到这里**](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)。
+告诉 Watcher 您希望它帮助您做什么。您只需要在输入框中输入一些命令。例如，**检测到人时通知我** 或 **如果有火灾请告诉我** 等。如果您想了解更多，[**请跳转到这里**](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)。
 
 因此，当 Watcher 检测到火灾时，它将通过 SenseCraft APP 以及音频警报和闪烁的 RGB 灯通知您。
 

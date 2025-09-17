@@ -65,7 +65,7 @@ last_update:
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/Gimbal_1.png" /></div>
 
 :::note
-请记住您的密码，否则所有日志将被清除以重置您的设备。如果您忘记密码，请[恢复出厂设置](https://wiki.seeedstudio.com/cn/recamera_getting_started/#factory-reset)您的设备。
+请记住您的密码，否则所有日志将被清除以重置您的设备。如果您忘记密码，请[恢复出厂设置](https://wiki.seeedstudio.com/recamera_getting_started/#factory-reset)您的设备。
 :::
 
 :::note
@@ -132,7 +132,7 @@ gimbal cali
 
 - **验证机械限制**：手动检查云台，确保运动范围没有被阻挡或错误限制。
 
-- **检查3D打印部件的阻力**：感受电机移动时是否有阻力。如果阻力过大，您可能需要调整电机的PID设置以增加电机力量。您可以查看[如何调整PID](https://wiki.seeedstudio.com/cn/recamera_pid_adjustment)。或者，通过打磨任何部件或稍微松开螺丝来减少摩擦以改善运动。
+- **检查3D打印部件的阻力**：感受电机移动时是否有阻力。如果阻力过大，您可能需要调整电机的PID设置以增加电机力量。您可以查看[如何调整PID](https://wiki.seeedstudio.com/recamera_pid_adjustment)。或者，通过打磨任何部件或稍微松开螺丝来减少摩擦以改善运动。
 
 ## 基本Web访问
 
@@ -272,7 +272,7 @@ Web网址：
 
 ## OTA 系统升级
 
-请参考 [OTA 升级说明](https://wiki.seeedstudio.com/cn/recamera_getting_started/#ota-upgrade-from-013-to-latest-version)。
+请参考 [OTA 升级说明](https://wiki.seeedstudio.com/recamera_getting_started/#ota-upgrade-from-013-to-latest-version)。
 
 ## 恢复出厂设置
 

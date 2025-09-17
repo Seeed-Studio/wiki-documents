@@ -118,7 +118,7 @@ USB 3.0 端口和 USB 3.0 设备可能会对 2.4 GHz 协议造成干扰，包括
 :::note
 如果您是第一次使用 XIAO ESP32C6，请阅读下面的 wiki 链接以正确添加开发板。
 
-[XIAO ESP32C6 入门指南](https://wiki.seeedstudio.com/cn/xiao_esp32c6_getting_started/)
+[XIAO ESP32C6 入门指南](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/)
 :::
 
 2. **加载 Zigbee_On_Off_Light 示例**：

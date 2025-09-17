@@ -301,9 +301,9 @@ XIAO の例では、GPIO（デジタル/アナログ）と SPI プロトコル�
 
 ## 技術文書の収集
 
-センサーの技術文書を入手することは非常に重要です。Seeed の製品を使用している場合、**[Seeed Studio 公式 Wiki](https://wiki.seeedstudio.com/ja/)** でセンサーやアクチュエーターの詳細な文書とリソースを見つけることができます。Wiki のリソースセクションには、Cursor に提供できる Grove 製品のデータシートも含まれています。例えば、このプロジェクトで使用する DHT11 センサーの場合：
+センサーの技術文書を入手することは非常に重要です。Seeed の製品を使用している場合、**[Seeed Studio 公式 Wiki](https://wiki.seeedstudio.com/)** でセンサーやアクチュエーターの詳細な文書とリソースを見つけることができます。Wiki のリソースセクションには、Cursor に提供できる Grove 製品のデータシートも含まれています。例えば、このプロジェクトで使用する DHT11 センサーの場合：
 
-- [Grove DHT11 Wiki ページ](https://wiki.seeedstudio.com/ja/Grove-TemperatureAndHumidity_Sensor/)
+- [Grove DHT11 Wiki ページ](https://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/)
 
 他のメーカーのセンサーを使用している場合は、必要な技術文書を入手するために直接メーカーに連絡してください。
 

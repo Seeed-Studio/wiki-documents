@@ -20,7 +20,7 @@ last_update:
 ## 产品介绍
 
 :::note
-        我们最近发布了基于 LoRa-E5 模块的 [WM1302 LoRaWAN 网关模块](https://wiki.seeedstudio.com/cn/WM1302_module/) 和 LoRa-E5 系列。点击[这里](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)了解 LoRa-E5 家族的新成员，从 [Grove 模块](https://wiki.seeedstudio.com/cn/Grove_LoRa_E5_New_Version/)、[迷你开发板](https://wiki.seeedstudio.com/cn/LoRa_E5_mini/)到[开发套件](https://wiki.seeedstudio.com/cn/LoRa_E5_Dev_Board/)。要了解更多关于使用 STM32WL 系列的 STM32Cube MCU 包（SDK）创建 LoRaWAN 终端节点、加入并向 LoRaWAN 网络发送数据的信息，请阅读[迷你开发板](https://wiki.seeedstudio.com/cn/LoRa_E5_mini/)和[开发套件](https://wiki.seeedstudio.com/cn/LoRa_E5_Dev_Board/)的 wiki 页面。
+        我们最近发布了基于 LoRa-E5 模块的 [WM1302 LoRaWAN 网关模块](https://wiki.seeedstudio.com/WM1302_module/) 和 LoRa-E5 系列。点击[这里](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)了解 LoRa-E5 家族的新成员，从 [Grove 模块](https://wiki.seeedstudio.com/Grove_LoRa_E5_New_Version/)、[迷你开发板](https://wiki.seeedstudio.com/LoRa_E5_mini/)到[开发套件](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/)。要了解更多关于使用 STM32WL 系列的 STM32Cube MCU 包（SDK）创建 LoRaWAN 终端节点、加入并向 LoRaWAN 网络发送数据的信息，请阅读[迷你开发板](https://wiki.seeedstudio.com/LoRa_E5_mini/)和[开发套件](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/)的 wiki 页面。
 :::
 
 WM1302 Pi HAT 是一款专门设计的扩展板，用于将基于 SX1302 的 WM1302 LoRaWAN 网关模块连接到树莓派 4B 及以下版本。它还集成了 LoRaWAN 认证芯片和 GPS 模块。

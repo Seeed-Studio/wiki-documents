@@ -48,7 +48,7 @@ LoRaWANは、バッテリー駆動デバイスを大きな地域やネットワ�
 
 ## 高度知覚システム
 
-Seeed Studioの「高度知覚システム」は、さまざまな業界における環境認識を向上させるために設計された、センシング、ネットワーキング、エッジコンピューティングツール、クラウドの包括的な配列を提供する[IoTソリューション](/ja/SenseCAP_introduction)です。多様なモジュールとデバイス[^2]を備えたこのシステムは、デジタルな「目と耳」として機能し、現実世界の変革的な理解を促進します。
+Seeed Studioの「高度知覚システム」は、さまざまな業界における環境認識を向上させるために設計された、センシング、ネットワーキング、エッジコンピューティングツール、クラウドの包括的な配列を提供する[IoTソリューション](/SenseCAP_introduction)です。多様なモジュールとデバイス[^2]を備えたこのシステムは、デジタルな「目と耳」として機能し、現実世界の変革的な理解を促進します。
 
 <div style={{ textAlign: 'center' }}>
 
@@ -102,7 +102,7 @@ Heliumネットワークの分野では、チームの貢献は特に注目に�
 
 ### 1.2 ファームウェアの書き込み
 
-SenseCAP Indicator にファームウェアを書き込むには、まずファームウェアをダウンロードし、次に esptool（または ESP-IDF 環境がある場合は `esptool.py`）を使用して書き込みます（包括的なガイダンスについては、[手順](/ja/SenseCAP_Indicator_Application_LoRaWAN) を参照してください）。
+SenseCAP Indicator にファームウェアを書き込むには、まずファームウェアをダウンロードし、次に esptool（または ESP-IDF 環境がある場合は `esptool.py`）を使用して書き込みます（包括的なガイダンスについては、[手順](/SenseCAP_Indicator_Application_LoRaWAN) を参照してください）。
 
 **Windows で esptool を使用してファームウェアを書き込む：**
 
@@ -181,7 +181,7 @@ SenseCAP ゲートウェイを設定するには、そのWebインターフェ�
 - **ユーザー名:** `admin`
 - **パスワード:** `admin`
 
-詳細と高度な設定オプションについては、[SenseCAP M2 Gateway LNS設定ガイド](https://wiki.seeedstudio.com/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration/)をご覧ください。
+詳細と高度な設定オプションについては、[SenseCAP M2 Gateway LNS設定ガイド](https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration/)をご覧ください。
 
 ### 2.2 ローカルネットワークサーバー（ChirpStack）の設定
 

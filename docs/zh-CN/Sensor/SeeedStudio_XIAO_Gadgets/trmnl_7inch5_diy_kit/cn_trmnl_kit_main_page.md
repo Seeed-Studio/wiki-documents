@@ -135,15 +135,15 @@ autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowful
 
 ### 探索详细指南
 
-#### 1. [TRMNL BYOD 生态系统教程](https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_trmnl/)
+#### 1. [TRMNL BYOD 生态系统教程](https://wiki.seeedstudio.com/ogdiy_kit_works_with_trmnl/)
 
 了解如何使用 TRMNL BYOD 平台的 375+ 插件，包括为您的工作和生活创建无代码仪表板。
 
-#### 2. [与 Home Assistant 配合使用](https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_esphome)
+#### 2. [与 Home Assistant 配合使用](https://wiki.seeedstudio.com/ogdiy_kit_works_with_esphome)
 
 学习如何通过 ESPHome 将您的 TRMNL 套件与 Home Assistant 配置，包括固件上传和基础编程。
 
-#### 3. [与 Arduino 配合使用](https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_arduino/)
+#### 3. [与 Arduino 配合使用](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino/)
 
 掌握使用 Arduino 控制 TRMNL 套件，包括刷新机制、图形渲染和电源管理。
 

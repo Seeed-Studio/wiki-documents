@@ -19,7 +19,7 @@ last_update:
 
 关于 **Seeeduino XIAO** 的使用有两份文档，它们专注于不同的领域，请参考下表：
 
-|[**Seeed 官方文档**](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/)|[**Nanase 编写的文档**](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-by-Nanase/)|
+|[**Seeed 官方文档**](https://wiki.seeedstudio.com/Seeeduino-XIAO/)|[**Nanase 编写的文档**](https://wiki.seeedstudio.com/Seeeduino-XIAO-by-Nanase/)|
 |---|---|
 |引脚图|接口|
 |Seeed Studio XIAO SAMD21 入门指南|Seeed Studio XIAO SAMD21 与 MicroSD 卡(SPI)|
@@ -72,7 +72,7 @@ GPIO 14 引脚是指侧面的 11 个引脚、复位引脚和背面的 SWD（SWDI
 
 ## 重置您的开发板
 
-查看[这里](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/#software)并了解如何将 Seeed Studio XIAO SAMD21 添加到您的 Arduino IDE。
+查看[这里](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software)并了解如何将 Seeed Studio XIAO SAMD21 添加到您的 Arduino IDE。
 
 <!-- ![image](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F30370%2Fd8ff0409-7841-0a07-f9aa-ee49fef757b3.jpeg?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=c44f4d6b316014dd3a10476ad49311fd) -->
   <p style={{textAlign: 'center'}}><img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F30370%2Fd8ff0409-7841-0a07-f9aa-ee49fef757b3.jpeg?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=c44f4d6b316014dd3a10476ad49311fd" alt="pir" width={600} height="auto" /></p>

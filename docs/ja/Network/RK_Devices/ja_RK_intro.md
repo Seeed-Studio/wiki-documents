@@ -11,7 +11,10 @@ last_update:
   date: 05/15/2025
   author: Kasun Thushara
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 Seeed StudiosのRockchip搭載ネットワークソリューションへようこそ。Wi-Fi 6、4GB RAM、32GB eMMC、柔軟なEthernetオプションを備えたLinkStar-H68K-1432ルーターなどのデバイスで効率的な接続を体験してください。使いやすいAndroid 11、Lubuntu 20.04、OpenWRTのサポートをお楽しみください。LinkStar-H28Kはデュアルギガビットポート、クアッドコアチップ、4GBメモリ、8GBストレージを提供します。Rockchip駆動のネットワークのシンプルさとパワーを一緒に発見しましょう。
 

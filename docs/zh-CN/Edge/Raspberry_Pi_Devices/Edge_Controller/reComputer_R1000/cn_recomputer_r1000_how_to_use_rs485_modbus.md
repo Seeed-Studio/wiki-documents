@@ -63,7 +63,7 @@ sudo apt-get install minicom
 
 ## 在 reComputer R1000v1.1 上配置 minicom
 
-**注意：** 在使用 minicom 与 RS485 之前，请按照[此处](https://wiki.seeedstudio.com/cn/recomputer_r1000_flash_OS/#install-drivers)安装 r1000 驱动程序。
+**注意：** 在使用 minicom 与 RS485 之前，请按照[此处](https://wiki.seeedstudio.com/recomputer_r1000_flash_OS/#install-drivers)安装 r1000 驱动程序。
 
 ### 首先，安装 minicom
 
@@ -104,7 +104,7 @@ sudo minicom -D /dev/ttyAMA*
 对于 reComputer R1000 v1.0，内置 485 收发器的 DE 引脚默认处于失控状态，这意味着接口只能单向传输数据（仅接收或仅发送）。
 
 :::note
-要区分硬件版本（v1.0 和 v1.1），您可以参考 [reComputer R1000 V1.1 产品变更详情](https://wiki.seeedstudio.com/cn/recomputer_r1000_v1_1_description/)。
+要区分硬件版本（v1.0 和 v1.1），您可以参考 [reComputer R1000 V1.1 产品变更详情](https://wiki.seeedstudio.com/recomputer_r1000_v1_1_description/)。
 :::
 
 我们现在有两种解决方案，一种是**加载一个钩住 UART 驱动程序的内核模块，我们推荐您使用这种方法**，另一种是基于应用层的解决方案，简单地调用 `libgpiod` 来控制 DE 引脚。您可以根据需要选择其中一种。

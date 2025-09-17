@@ -409,7 +409,7 @@ pi@raspberrypi:~/usb_4_mic_array $ sudo python VAD.py
 ```
 
 :::note
-VADの閾値については、GAMMAVAD_SRを使用して設定することもできます。詳細については[Tuning](https://wiki.seeedstudio.com/ja/ReSpeaker_Mic_Array_v2.0/#tuning)を参照してください。
+VADの閾値については、GAMMAVAD_SRを使用して設定することもできます。詳細については[Tuning](https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#tuning)を参照してください。
 :::
 
 ### 音声の抽出
@@ -765,7 +765,7 @@ A4: はい、Yuki が [ReSpeaker USB Mic Array と ROS (Robot Operating System) 
 
 **Q5: 3.5mm オーディオポートを有効にして USB ポートと同様に信号を受信するにはどうすればよいですか？**
 
-A5: [新しいファームウェア](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/i2s_i1o2.bin) をダウンロードし、[ファームウェアの更新方法](https://wiki.seeedstudio.com/ja/ReSpeaker_Mic_Array_v2.0/#update-firmware) に従って XMOS を書き込んでください。
+A5: [新しいファームウェア](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/i2s_i1o2.bin) をダウンロードし、[ファームウェアの更新方法](https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#update-firmware) に従って XMOS を書き込んでください。
 
 **Q6: "sudo pip install pyaudio" を実行する際に #include "portaudio.h" エラーが発生します。**
 

@@ -125,7 +125,7 @@ AP 热点名称为 SenseCAP_XXXXXX（6 位 MAC 地址），默认密码为 12345
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/4g3.png" alt="pir" width={800} height="auto" /></p>
 
 :::tip
-为了减少数据消耗，请查看[低数据消耗模式配置](https://wiki.seeedstudio.com/cn/traffic_saving_config)。
+为了减少数据消耗，请查看[低数据消耗模式配置](https://wiki.seeedstudio.com/traffic_saving_config)。
 :::
 
 ### 信道计划设置

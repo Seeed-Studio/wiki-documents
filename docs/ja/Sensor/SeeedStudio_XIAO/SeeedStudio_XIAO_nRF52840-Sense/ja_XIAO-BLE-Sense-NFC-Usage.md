@@ -26,7 +26,7 @@ Seeed nRF52 Boards バージョン 1.1.3 と Seeed nRF52 mbed-enabled Boards バ
 
 > NFC 機能は「Seeed nRF52 mbed-enabled Boards Library」を使用する際に良好に動作します。
 
-ボードライブラリのインストールについては、[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO_BLE/#software-setup)を参照してインストールを完了してください。既にインストール済みの場合は、先に進んでプロジェクトを処理できます。
+ボードライブラリのインストールについては、[このチュートリアル](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)を参照してインストールを完了してください。既にインストール済みの場合は、先に進んでプロジェクトを処理できます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new7.png" /></div>
 

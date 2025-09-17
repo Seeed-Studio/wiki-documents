@@ -45,7 +45,7 @@ ReSpeaker 系列是一系列开发板，旨在实现语音接口成为日常人�
 
 ### **文档**
 
-- [详细的 Wiki 文档](https://wiki.seeedstudio.com/cn/ReSpeaker/)
+- [详细的 Wiki 文档](https://wiki.seeedstudio.com/ReSpeaker/)
 - [GitHub 仓库](https://github.com/respeaker)
 - [社区论坛](https://forum.seeedstudio.com/)
 

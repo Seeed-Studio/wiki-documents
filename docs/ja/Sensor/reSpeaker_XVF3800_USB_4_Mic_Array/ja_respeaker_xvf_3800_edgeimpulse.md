@@ -39,7 +39,7 @@ TinyMLを活用したキーワードスポッティング（KWS）システム�
 音声データ収集を開始するには、ReSpeakerにUSBファームウェアがフラッシュされており、USBマイクロフォンとして機能できることを確認してください。
 
 
-[**ファームウェアインストールWiki**](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#update-firmware)
+[**ファームウェアインストールWiki**](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
 
 [**ファームウェアファイル**](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
 
@@ -268,7 +268,7 @@ Edge Impulseの**インパルス**は、生データを訓練済み機械学習�
 ### ファームウェアをI2Sモードに切り替え
 
 Arduinoコードをアップロードする前に、I2Cプロトコル経由での通信を有効にするため、ReSpeaker XVF3800ファームウェアをI2Sモードに切り替える必要があります。
-[ファームウェアインストールガイド](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#update-firmware)
+[ファームウェアインストールガイド](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
 
 ### Arduinoコードの統合
 

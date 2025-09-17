@@ -216,7 +216,7 @@ reComputer J202 的设计和功能与 NVIDIA® Jetson Xavier NX™ 载板几乎�
 :::
 
 :::caution
-Jetson-Nano 上的 SPI 接口默认与 GPIO 复用且未启用。请参考[**此指南**](/cn/enable_spi_interface_on_jetsonnano)了解如何启用它。
+Jetson-Nano 上的 SPI 接口默认与 GPIO 复用且未启用。请参考[**此指南**](/enable_spi_interface_on_jetsonnano)了解如何启用它。
 :::
 
 ### 刷写到 Jetson
@@ -602,7 +602,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/35.jpg" /></div>
 
 :::note
-如果需要更多存储空间，我们可以使用 SD 卡来扩展容量，或者将系统烧录到 SD 卡上，您可以参考我们推荐的解决方案 [在 SD 卡上刷写系统](/cn/J101_Enable_SD_Card)
+如果需要更多存储空间，我们可以使用 SD 卡来扩展容量，或者将系统烧录到 SD 卡上，您可以参考我们推荐的解决方案 [在 SD 卡上刷写系统](/J101_Enable_SD_Card)
 :::
 
 ## 资源

@@ -115,8 +115,8 @@ last_update:
 
 本套件提供了2个应用。
 
-- 配置为LoRaWAN网关（预刷固件），请参考[LoRaWAN网关配置](https://wiki.seeedstudio.com/cn/wio_sx1262_xiao_esp32s3_for_single_channel_gateway/)和[LNS连接说明](https://wiki.seeedstudio.com/cn/wio_sx1262_xiao_esp32s3_LNS_TTN/)
-- 使用Meshtastic进行网络通信，请参考[meshtastic说明](https://wiki.seeedstudio.com/cn/wio_sx1262_xiao_esp32s3_for_meshtastic/)
+- 配置为LoRaWAN网关（预刷固件），请参考[LoRaWAN网关配置](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_single_channel_gateway/)和[LNS连接说明](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_LNS_TTN/)
+- 使用Meshtastic进行网络通信，请参考[meshtastic说明](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_meshtastic/)
 
 
 ## 资源

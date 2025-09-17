@@ -17,7 +17,7 @@ SenseCAP Watcher 是一款功能强大的监控设备，可以配置为识别特
 
 在开始使用 SenseCraft AI 模型库中的自定义模型之前，请确保您具备以下条件：
 
-- **SenseCAP Watcher**：您应该拥有一台已设置并准备使用的 SenseCAP Watcher 设备。如果您还没有，请按照 [SenseCAP Watcher 快速入门指南](https://wiki.seeedstudio.com/cn/getting_started_with_watcher/) 中的说明来设置您的设备。
+- **SenseCAP Watcher**：您应该拥有一台已设置并准备使用的 SenseCAP Watcher 设备。如果您还没有，请按照 [SenseCAP Watcher 快速入门指南](https://wiki.seeedstudio.com/getting_started_with_watcher/) 中的说明来设置您的设备。
 
 - **SenseCraft APP**：在您的移动设备上安装 SenseCraft APP。该应用程序适用于 iOS 和 Android 平台，可以从相应的应用商店下载。
 
@@ -55,7 +55,7 @@ SenseCAP Watcher 是一款功能强大的监控设备，可以配置为识别特
 
 在创建任务时，对于您希望 Watcher 识别的对象以及检测到该对象时希望它执行的操作，必须清晰明确。这有助于确保 Watcher 准确理解并执行任务。
 
-如果您对 Watcher 如何设置合适的任务了解不够，请阅读[任务分配指南](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)。
+如果您对 Watcher 如何设置合适的任务了解不够，请阅读[任务分配指南](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)。
 
 ## 步骤 2. 启用自定义 TinyML 模型的使用
 

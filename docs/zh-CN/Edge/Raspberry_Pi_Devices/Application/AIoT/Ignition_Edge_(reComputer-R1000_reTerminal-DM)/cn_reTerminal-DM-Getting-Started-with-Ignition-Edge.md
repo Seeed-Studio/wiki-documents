@@ -50,7 +50,7 @@ Ignition Edge 提供多种产品，可以在边缘设备上混合搭配，在网
 <br />
 
 :::note
-*本指南假设您的 reTerminal DM 运行全新安装的 Raspberry Pi OS(x64)，并且可以从另一个客户端设备进行 SSH 终端访问。如果您需要此过程的详细说明，请参阅[刷写 reTerminal DM 操作系统的说明](https://wiki.seeedstudio.com/cn/reterminal-dm-flash-OS/#steps-for-flashing-raspbian-os)。*
+*本指南假设您的 reTerminal DM 运行全新安装的 Raspberry Pi OS(x64)，并且可以从另一个客户端设备进行 SSH 终端访问。如果您需要此过程的详细说明，请参阅[刷写 reTerminal DM 操作系统的说明](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/#steps-for-flashing-raspbian-os)。*
 :::
 
 ## 在 reTerminal 上安装 Ignition Edge

@@ -11,7 +11,10 @@ last_update:
   date: 05/15/2025
   author: Jessie
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 このチュートリアルでは、Amazon Sidewalk用LPWAN開発ボードをLoRaWANネットワークを使用したい方向けにWio Tracker 1110開発ボードに書き換える方法を説明します。
 

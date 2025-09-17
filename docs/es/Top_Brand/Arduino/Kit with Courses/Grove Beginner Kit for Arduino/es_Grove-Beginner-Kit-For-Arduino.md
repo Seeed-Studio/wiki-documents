@@ -36,21 +36,21 @@ Comparado con la versión anterior, esta nueva versión actualiza ciertos sensor
 
 **Nota:** Dimensiones - 17.69 *11.64* 1.88cm
 
-1. **[Grove - LED](https://wiki.seeedstudio.com/es/Grove-Red_LED/):** Módulo LED simple
-2. **[Grove - Buzzer](https://wiki.seeedstudio.com/es/Grove-Buzzer/):** Zumbador Piezoeléctrico
-3. **[Grove - Pantalla OLED 0.96"](https://wiki.seeedstudio.com/es/Grove-OLED-Display-0.96-SSD1315/):** Resolución de puntos 128×64 Alto brillo, auto-emisión y alta relación de contraste Pantalla grande en un diseño compacto Bajo consumo de energía.
-4. **[Grove - Botón](https://wiki.seeedstudio.com/es/Grove-Button/):** Botón Pulsador Momentáneo
-5. **[Grove - Potenciómetro Rotatorio](https://wiki.seeedstudio.com/es/Grove-Rotary_Angle_Sensor/):** Potenciómetro Ajustable
-6. **[Grove - Luz](https://wiki.seeedstudio.com/es/Grove-Light_Sensor/):** Detecta la intensidad de luz circundante
-7. **[Grove - Sonido](https://wiki.seeedstudio.com/es/Grove-Sound_Sensor/):** Detecta la intensidad de sonido circundante
-8. **[Grove - Sensor de Temperatura y Humedad](https://wiki.seeedstudio.com/es/Grove-TemperatureAndHumidity_Sensor/):** Detecta los valores de temperatura y humedad circundantes. La versión anterior usaba el sensor DHT11, mientras que las versiones posteriores a 2025.10 usan el sensor DHT20.
+1. **[Grove - LED](https://wiki.seeedstudio.com/Grove-Red_LED/):** Módulo LED simple
+2. **[Grove - Buzzer](https://wiki.seeedstudio.com/Grove-Buzzer/):** Zumbador Piezoeléctrico
+3. **[Grove - Pantalla OLED 0.96"](https://wiki.seeedstudio.com/Grove-OLED-Display-0.96-SSD1315/):** Resolución de puntos 128×64 Alto brillo, auto-emisión y alta relación de contraste Pantalla grande en un diseño compacto Bajo consumo de energía.
+4. **[Grove - Botón](https://wiki.seeedstudio.com/Grove-Button/):** Botón Pulsador Momentáneo
+5. **[Grove - Potenciómetro Rotatorio](https://wiki.seeedstudio.com/Grove-Rotary_Angle_Sensor/):** Potenciómetro Ajustable
+6. **[Grove - Luz](https://wiki.seeedstudio.com/Grove-Light_Sensor/):** Detecta la intensidad de luz circundante
+7. **[Grove - Sonido](https://wiki.seeedstudio.com/Grove-Sound_Sensor/):** Detecta la intensidad de sonido circundante
+8. **[Grove - Sensor de Temperatura y Humedad](https://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/):** Detecta los valores de temperatura y humedad circundantes. La versión anterior usaba el sensor DHT11, mientras que las versiones posteriores a 2025.10 usan el sensor DHT20.
 9. **Grove - Sensor de Presión de Aire:** Detecta la presión atmosférica circundante
 
-- La versión anterior usaba el [BMP280](https://wiki.seeedstudio.com/es/Grove-Barometer_Sensor-BMP280/).
-- La nueva versión fechada en octubre de 2025 usa [SPA06-003](https://wiki.seeedstudio.com/es/grove_barometer_sensor_spa06_003).
+- La versión anterior usaba el [BMP280](https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/).
+- La nueva versión fechada en octubre de 2025 usa [SPA06-003](https://wiki.seeedstudio.com/grove_barometer_sensor_spa06_003).
 
-10. **[Grove - Acelerómetro de 3 Ejes](https://wiki.seeedstudio.com/es/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR):** Detecta la aceleración del objeto
-11. **[Seeeduino Lotus](https://wiki.seeedstudio.com/es/Seeeduino_Lotus/):** Placa Compatible con Arduino con Puertos Grove
+10. **[Grove - Acelerómetro de 3 Ejes](https://wiki.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR):** Detecta la aceleración del objeto
+11. **[Seeeduino Lotus](https://wiki.seeedstudio.com/Seeeduino_Lotus/):** Placa Compatible con Arduino con Puertos Grove
 
 **Nota:**
         Por defecto, los módulos Grove están conectados al Seeeduino a través de orificios de estampado de PCB. Esto significa que no necesitas usar cables Grove para conectar si no están separados. Los pines por defecto son los siguientes:
@@ -1013,7 +1013,7 @@ El entorno de Arduino puede extenderse mediante el uso de librerías, al igual q
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/zip.jpg" style={{width:500, height:'auto'}}/></div>
 
-Para más información, por favor visita también [Cómo instalar Librerías de Arduino](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library/).
+Para más información, por favor visita también [Cómo instalar Librerías de Arduino](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
 Componentes Involucrados
 
@@ -2006,7 +2006,7 @@ Para diseñar tu propia placa, necesitarás diseñar los esquemáticos de tu pro
 
 Si no quieres trabajar en esquemáticos o layout tú mismo, pero quieres convertir tu prototipo basado en módulos de Seeed en un producto integrado, te recomendamos encarecidamente que pruebes Upverter.
 
-Por favor visita la [**Guía de Upverter del Kit para Principiantes Grove para Arduino**](https://wiki.seeedstudio.com/es/Grove-Beginner-Kit-for-Arduino-Upverter-Guide/) para más información.
+Por favor visita la [**Guía de Upverter del Kit para Principiantes Grove para Arduino**](https://wiki.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-Upverter-Guide/) para más información.
 
 ### Servicios de PCB
 

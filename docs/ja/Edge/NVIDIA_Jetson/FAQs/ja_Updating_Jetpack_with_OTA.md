@@ -117,7 +117,7 @@ sudo  BOARDID=<BOARDID> BOARDSKU=<BOARDSKU> FAB=<FAB>  BOARDREV=<BOARDREV> CHIP_
 
 ### 1.3 JP5.1.3をデバイスにフラッシュする（オプション）
 
-このファームウェアをJetsonデバイスでテストしたい場合は、[このwiki](https://wiki.seeedstudio.com/ja/reComputer_J4012_Flash_Jetpack/)を参照して、ファームウェアをJetsonデバイスにフラッシュできます。
+このファームウェアをJetsonデバイスでテストしたい場合は、[このwiki](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/)を参照して、ファームウェアをJetsonデバイスにフラッシュできます。
 
 ```bash
 sudo tar xpf mfi_jetson-orin-nano-devkit.tar.gz

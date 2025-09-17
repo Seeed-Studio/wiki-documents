@@ -14,7 +14,7 @@ last_update:
 ---
 
 
-开始之前，请先查看[设置您的工具链](https://wiki.seeedstudio.com/cn/setup_toolchain_for_wio_tracker)。
+开始之前，请先查看[设置您的工具链](https://wiki.seeedstudio.com/setup_toolchain_for_wio_tracker)。
 
 ### 区域配置
 

@@ -311,7 +311,7 @@ while True:
 ## ✨ 贡献者项目
 
 - 本项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
-- 感谢 [Isaac 的努力](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35178340)，您的工作将被[展示](https://wiki.seeedstudio.com/cn/Honorary-Contributors/)。
+- 感谢 [Isaac 的努力](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35178340)，您的工作将被[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)。
 - 以及 [Djair Guilherme](https://github.com/Seeed-Studio/wiki-documents/issues/1237#issuecomment-2295415274)。
 
 ## 技术支持与产品讨论

@@ -62,7 +62,7 @@ last_update:
 
 **步骤 2.** 选择您的开发板型号并将其添加到 Arduino IDE。这里我们使用"Seeed nRF52 开发板库"。
 
-> 有关开发板库安装，请参考[此教程](https://wiki.seeedstudio.com/cn/XIAO_BLE/#software-setup)完成安装。
+> 有关开发板库安装，请参考[此教程](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)完成安装。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new.png" /></div>
 

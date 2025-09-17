@@ -196,7 +196,7 @@ while True:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/10.png" /></div>
 
-- 更多信息请参考[硬件概述](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/#hardware-overview)
+- 更多信息请参考[硬件概述](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#hardware-overview)
 - [Seeed Studio XIAO ESP32S3 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_SCH_v1.2.pdf)
 
 ## XIAO ESP32S3 上的 MicroPython 入门
@@ -573,7 +573,7 @@ oled.show()  # Show the text
 
 #### 摄像头流媒体测试
 
-摄像头流媒体测试也适用于带摄像头的 ESP32S3 sense，请参考[这里](https://wiki.seeedstudio.com/cn/XIAO_ESP32S3_Micropython/#step-3-testing-the-streaming-example)。
+摄像头流媒体测试也适用于带摄像头的 ESP32S3 sense，请参考[这里](https://wiki.seeedstudio.com/XIAO_ESP32S3_Micropython/#step-3-testing-the-streaming-example)。
 
 感谢您阅读本文！欢迎在评论中分享您的想法。
 

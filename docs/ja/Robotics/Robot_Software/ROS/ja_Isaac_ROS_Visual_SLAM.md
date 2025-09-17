@@ -16,7 +16,7 @@ last_update:
 # Isaac ROS Visual SLAM デプロイメント  
 
 ## 前提条件  
-Visual SLAMをデプロイする前に、ReComputer上でIsaac ROS環境が適切にセットアップされていることを確認してください [インストールガイド](/ja/install_isaacros)。ROS2がインストールされていない場合は、[このドキュメント](/ja/install_ros2_humble)を参照してください。  
+Visual SLAMをデプロイする前に、ReComputer上でIsaac ROS環境が適切にセットアップされていることを確認してください [インストールガイド](/install_isaacros)。ROS2がインストールされていない場合は、[このドキュメント](/install_ros2_humble)を参照してください。  
 
 
 ## 1. 環境設定  

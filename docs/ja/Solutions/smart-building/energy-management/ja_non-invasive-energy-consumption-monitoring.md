@@ -59,10 +59,10 @@ last_update:
 
 ## 2. ハードウェア選択
 
-詳細な仕様については、製品wikiをご覧ください：[Seeed Studio 2チャンネル Wi-Fi AC エネルギーメーター Wiki](/ja/2_channel_wifi_ac_energy_meter)
+詳細な仕様については、製品wikiをご覧ください：[Seeed Studio 2チャンネル Wi-Fi AC エネルギーメーター Wiki](/2_channel_wifi_ac_energy_meter)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/ja/2_channel_wifi_ac_energy_meter/">
+    <a class="get_one_now_item" href="/2_channel_wifi_ac_energy_meter/">
             <strong><span><font color={'FFFFFF'} size={"4"}> 製品Wikiを見る 🖱️</font></span></strong>
     </a>
 </div>

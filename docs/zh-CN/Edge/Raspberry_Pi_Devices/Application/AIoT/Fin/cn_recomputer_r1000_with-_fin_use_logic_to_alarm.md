@@ -47,8 +47,8 @@ FIN 框架（FIN）是一个软件框架，具有可以集成、控制、管理�
 
 ### 软件准备
 
-* 关于如何安装 FIN Framework，您可以参考这个[wiki](https://wiki.seeedstudio.com/cn/reComputer_r1000_install_fin/)。
-- 关于 reComputer R1000 使用 FIN 进行Modbus通信，您可以参考这个[wiki](https://wiki.seeedstudio.com/cn/reComputer_r1000_use_rs485_modbus_rtu/)。
+* 关于如何安装 FIN Framework，您可以参考这个[wiki](https://wiki.seeedstudio.com/reComputer_r1000_install_fin/)。
+- 关于 reComputer R1000 使用 FIN 进行Modbus通信，您可以参考这个[wiki](https://wiki.seeedstudio.com/reComputer_r1000_use_rs485_modbus_rtu/)。
 - 在 W10 PC 上使用[modbusmechanic](https://modbusmechanic.scifidryer.com/)。您也可以使用其他 modbus 测试工具。
 
 ### 硬件配置

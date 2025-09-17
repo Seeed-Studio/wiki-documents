@@ -20,7 +20,7 @@ last_update:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/workspace_flow.png" /></div>
 
-Node-REDが初めての方、またはVision AIとジンバル制御の統合方法に興味がある方は、[このページ](https://wiki.seeedstudio.com/ja/recamera_develop_with_node-red/)を参照してください。
+Node-REDが初めての方、またはVision AIとジンバル制御の統合方法に興味がある方は、[このページ](https://wiki.seeedstudio.com/recamera_develop_with_node-red/)を参照してください。
 
 また、以下の画像に示すように、Gimbalの軸範囲についても認識しておいてください：
 
@@ -685,7 +685,7 @@ For status query commands (94) with "Output in decimal" selected:
 
 ### PID制御
 
-PIDノードについてのドキュメントは[こちら](https://wiki.seeedstudio.com/ja/recamera_pid_adjustment/#adjust-pid-with-node-red)をご覧ください。
+PIDノードについてのドキュメントは[こちら](https://wiki.seeedstudio.com/recamera_pid_adjustment/#adjust-pid-with-node-red)をご覧ください。
 
 ## 技術サポート & 製品ディスカッション
 

@@ -66,12 +66,12 @@ Senscraft Edge OSを使用している場合は、Socketcanノードのインス
 
 ##### Socketcanノードのインストール
 
-このWikiチュートリアルでは`node-red-contrib-socketcan`ノードを使用するため、[ノードのインストール](/ja/reTerminal-DM-Getting-Started-with-Node-Red#install-nodes)ガイドに従って`node-red-contrib-socketcan`をインストールしてください。
+このWikiチュートリアルでは`node-red-contrib-socketcan`ノードを使用するため、[ノードのインストール](/reTerminal-DM-Getting-Started-with-Node-Red#install-nodes)ガイドに従って`node-red-contrib-socketcan`をインストールしてください。
 
 ##### reTerminal DMでのCAN BUSの設定
 
 :::note
-reTerminal DMの`Terminal`アプリに直接アクセスするか、SSH経由でreTerminal DMにアクセスできることを前提としています。そうでない場合は、[こちら](/ja/reTerminal-DM-Getting-Started-with-Node-Red#install-node-red)の最初のステップに従って、その方法に慣れてください。
+reTerminal DMの`Terminal`アプリに直接アクセスするか、SSH経由でreTerminal DMにアクセスできることを前提としています。そうでない場合は、[こちら](/reTerminal-DM-Getting-Started-with-Node-Red#install-node-red)の最初のステップに従って、その方法に慣れてください。
 :::
 
 reTerminal DMのCAN BUSポートでcan0という仮想canデバイスを有効にするために、以下のコマンドを一つずつ入力してください。
@@ -369,8 +369,8 @@ reTerminal DM上でcan0インターフェースデバイスを作成するため
 
 # Node-REDでreTerminal DMのより多くのノードを探索
 
-- [reTerminal DM RS485ポートとNode-RED](/ja/reTerminal-DM-Node-Red-RS485)
-- [reTerminal DM MQTTとNode-RED](/ja/reTerminal-DM-Node-Red-mqtt)
+- [reTerminal DM RS485ポートとNode-RED](/reTerminal-DM-Node-Red-RS485)
+- [reTerminal DM MQTTとNode-RED](/reTerminal-DM-Node-Red-mqtt)
 
 ## 技術サポートと製品ディスカッション
 

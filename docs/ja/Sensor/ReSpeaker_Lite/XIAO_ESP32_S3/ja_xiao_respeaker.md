@@ -11,7 +11,10 @@ last_update:
   date: 05/15/2025
   author: Jessie
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 XMOS XU316 AI サウンドおよびオーディオチップセットによって駆動されるこのキットは、高性能なオープンソース音声アシスタント開発キットです。このキットは、ReSpeaker Lite デュアルマイクロフォンアレイと強力な [XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) プロセッサを統合しており、優れた音声認識、ノイズリダクション、音声処理機能を提供します。このキットは ESPHome を介して Home Assistant とファームウェア統合を提供し、スマート音声アシスタントやホームオートメーションアプリケーションに最適です。
 

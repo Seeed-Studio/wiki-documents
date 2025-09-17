@@ -63,11 +63,11 @@ sudo dd if=/dev/zero of=/dev/sda bs=100M count=800
 ```
 格式化完成后，将 SSD 重新安装到 Jetson 中。如果 SSD 已被彻底擦除，理论上刷写 JetPack 5 应该可以防止任何启动失败。
 
-参考此 [wiki](https://wiki.seeedstudio.com/cn/flash/jetpack_to_selected_product/) 获取刷写 Jetson 的说明。
+参考此 [wiki](https://wiki.seeedstudio.com/flash/jetpack_to_selected_product/) 获取刷写 Jetson 的说明。
 
 ###  方案 B
 
-参考此 [wiki](/cn/how_to_build_the_source_code_project_for_seeed_jetson_bsp) 准备用于刷写的源代码项目。
+参考此 [wiki](/how_to_build_the_source_code_project_for_seeed_jetson_bsp) 准备用于刷写的源代码项目。
 
 当使用 `--erase-all` 参数执行 `./tools/kernel_flash/l4t_initrd_flash.sh` 时，固态硬盘将在刷写过程中被完全擦除。
 

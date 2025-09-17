@@ -292,7 +292,7 @@ void loop(void) {
 
 ### **SPI**
 
-ここでは[Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html)をSPI経由で接続し、「Hello World」を表示します。このOLEDディスプレイはIICとSPIの両方の通信をサポートしていますが、デフォルトの通信モードはIICです。開始前に[IIC機能をSPI機能に変更する](https://wiki.seeedstudio.com/ja/Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0/)ことが必要です。
+ここでは[Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html)をSPI経由で接続し、「Hello World」を表示します。このOLEDディスプレイはIICとSPIの両方の通信をサポートしていますが、デフォルトの通信モードはIICです。開始前に[IIC機能をSPI機能に変更する](https://wiki.seeedstudio.com//Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0/)ことが必要です。
 
 **接続**：
 

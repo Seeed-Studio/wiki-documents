@@ -285,12 +285,12 @@ Canvasを使用してダッシュボードをゼロからデザインしまし�
 
 前のセクションで説明したように、デバイスをSenseCraftプラットフォームとペアリングした後、最初のダッシュボードを作成する準備が整います。各機能の使用に関する詳細な手順については、対応するWikiページを参照してください：
 
-- [SenseCraft HMI概要](https://wiki.seeedstudio.com/ja/sensecraft_hmi_overview)
-- [AI Generatorガイド](https://wiki.seeedstudio.com/ja/sensecraft_hmi_ai_generation)
-- [Gallery使用ガイド](https://wiki.seeedstudio.com/ja/sensecraft_hmi_gallery)
-- [Canvasデザインツール](https://wiki.seeedstudio.com/ja/sensecraft_hmi_canvas)
-- [RSS Feed設定](https://wiki.seeedstudio.com/ja/sensecraft_hmi_rss)
-- [Webコンテンツ表示](https://wiki.seeedstudio.com/ja/sensecraft_hmi_web)
+- [SenseCraft HMI概要](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
+- [AI Generatorガイド](https://wiki.seeedstudio.com/sensecraft_hmi_ai_generation)
+- [Gallery使用ガイド](https://wiki.seeedstudio.com/sensecraft_hmi_gallery)
+- [Canvasデザインツール](https://wiki.seeedstudio.com/sensecraft_hmi_canvas)
+- [RSS Feed設定](https://wiki.seeedstudio.com/sensecraft_hmi_rss)
+- [Webコンテンツ表示](https://wiki.seeedstudio.com/sensecraft_hmi_web)
 
 SenseCraftプラットフォームでダッシュボードを作成して保存したら、「Deploy to Device」をクリックし、ペアリングしたreTerminal E1002を選択するだけで、カスタムコンテンツがデバイスにワイヤレスで送信されます。ePaperディスプレイがダッシュボードを表示するように更新され、複数のページを作成した場合は、ナビゲーションボタンを使用してページを切り替えることができます。
 
@@ -477,9 +477,9 @@ reTerminal E1002には、デバイスを最適な視野角で直立させるこ�
 
 - [reTerminal E1002 回路図 (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004321_reTerminal_E1002_V1.0_SCH_250805.pdf)
 - [ESP32-S3 データシート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
-- [SenseCraft HMI プラットフォーム ドキュメント](https://wiki.seeedstudio.com/ja/sensecraft_hmi_overview)
+- [SenseCraft HMI プラットフォーム ドキュメント](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
 - [外観全体 3D モデル STP ファイル](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reterminal_esp-250904.stp)
-<!-- - [GitHub Repository](/ja/getting_started_with_reterminal_e1002) -->
+<!-- - [GitHub Repository](/getting_started_with_reterminal_e1002) -->
 
 ## 技術サポート & 製品ディスカッション
 

@@ -25,7 +25,7 @@ p5.jsは、アーティストやデザイナーにとってコーディングを
 
 ### ステップ1. WatcherでタスクをRun
 
-まず最初に、以下のビデオに従ってWatcherでタスクを実行する必要があります。詳細を知りたい場合は[こちらをクリックしてください](https://wiki.seeedstudio.com/ja/getting_started_with_watcher_task/)。
+まず最初に、以下のビデオに従ってWatcherでタスクを実行する必要があります。詳細を知りたい場合は[こちらをクリックしてください](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)。
 
 <div class="table-center">
 <iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -37,7 +37,7 @@ p5.jsは、アーティストやデザイナーにとってコーディングを
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_p5js_image/1.png" style={{width:800, height:'auto'}}/></div>
 
-1. **OpenStream:** WatcherからNode-REDにデータを取得します。[詳細はこちらをクリックしてください](https://wiki.seeedstudio.com/ja/watcher_to_node_red/)。
+1. **OpenStream:** WatcherからNode-REDにデータを取得します。[詳細はこちらをクリックしてください](https://wiki.seeedstudio.com/watcher_to_node_red/)。
 
 2. **function:** Watcherからのデータを処理します。functionモジュールを**ダブルクリック**して、以下のコードを貼り付けてください。
 

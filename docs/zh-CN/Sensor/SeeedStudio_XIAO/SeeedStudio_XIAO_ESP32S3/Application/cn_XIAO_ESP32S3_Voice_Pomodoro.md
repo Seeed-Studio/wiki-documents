@@ -114,8 +114,8 @@ AskLou.io 番茄钟计时器响应以下语音命令：
 
 - [GitHub 仓库](https://github.com/AskLou-io/Pomodoro_Circuit_Python/blob/main/README.md)
 - [Hackster.io 项目](https://www.hackster.io/peter-machona/asklou-io-pomodoro-timer-a7a1f2)
-- [XIAO ESP32S3 文档](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/)
-- [圆形显示屏文档](https://wiki.seeedstudio.com/cn/get_start_round_display/)
+- [XIAO ESP32S3 文档](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+- [圆形显示屏文档](https://wiki.seeedstudio.com/get_start_round_display/)
 
 ## 致谢
 

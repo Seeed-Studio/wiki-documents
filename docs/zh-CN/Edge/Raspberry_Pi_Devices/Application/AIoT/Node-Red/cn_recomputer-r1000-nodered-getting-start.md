@@ -42,7 +42,7 @@ last_update:
 
 ### 软件准备
 
-reComputer-R1000 预装了 Raspberry Pi OS。如果您是第一次启动此设备，请阅读我们的[入门指南](https://wiki.seeedstudio.com/cn/recomputer_r/) Wiki
+reComputer-R1000 预装了 Raspberry Pi OS。如果您是第一次启动此设备，请阅读我们的[入门指南](https://wiki.seeedstudio.com/recomputer_r/) Wiki
 
 ## 在 reComputer-R1000 上安装 Node Red
 

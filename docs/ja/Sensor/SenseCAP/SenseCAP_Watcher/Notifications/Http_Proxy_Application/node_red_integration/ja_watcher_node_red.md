@@ -92,7 +92,7 @@ node-red
 
 ## パート3. Watcherでタスクを実行する
 
-Watcherに何を手伝ってもらいたいかを伝えます。入力ボックスにいくつかのコマンドを入力するだけです。例えば、**人を検出したら通知して**や**火災があったら教えて**などです。詳細を知りたい場合は、[**こちらをご覧ください**](https://wiki.seeedstudio.com/ja/getting_started_with_watcher_task/)。
+Watcherに何を手伝ってもらいたいかを伝えます。入力ボックスにいくつかのコマンドを入力するだけです。例えば、**人を検出したら通知して**や**火災があったら教えて**などです。詳細を知りたい場合は、[**こちらをご覧ください**](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)。
 
 Watcherは火災を検出すると、SenseCraft APPを通じて通知し、音声アラートと点滅するRGBライトでお知らせします。
 

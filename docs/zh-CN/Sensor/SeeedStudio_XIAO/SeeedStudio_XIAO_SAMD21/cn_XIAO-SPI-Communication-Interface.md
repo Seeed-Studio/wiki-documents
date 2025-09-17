@@ -41,12 +41,12 @@ last_update:
 
 :::note
 
-如果这是您第一次使用 Arduino，我们强烈建议您在开始之前先查看 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您在开始之前先查看 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 - **步骤 1.** 从 Github 下载 [DPS310-Pressure-Sensor](https://github.com/Infineon/DPS310-Pressure-Sensor.git) 库。
 
-- **步骤 2.** 参考 [如何安装库](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library) 为 Arduino 安装库。
+- **步骤 2.** 参考 [如何安装库](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) 为 Arduino 安装库。
 
 - **步骤 3.** 将代码复制到 Arduino IDE 中并上传。
 

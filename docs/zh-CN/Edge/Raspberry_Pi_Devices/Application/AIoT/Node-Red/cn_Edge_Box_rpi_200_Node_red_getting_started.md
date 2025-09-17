@@ -41,7 +41,7 @@ last_update:
 
 ### 软件准备
 
-Edge Box-200 预装了 Raspberry Pi OS。如果您是第一次启动此设备，请阅读我们的[入门指南](https://wiki.seeedstudio.com/cn/Edge_Box_introduction/) Wiki
+Edge Box-200 预装了 Raspberry Pi OS。如果您是第一次启动此设备，请阅读我们的[入门指南](https://wiki.seeedstudio.com/Edge_Box_introduction/) Wiki
 
 ## 在 Edge box 上安装 Node Red
 

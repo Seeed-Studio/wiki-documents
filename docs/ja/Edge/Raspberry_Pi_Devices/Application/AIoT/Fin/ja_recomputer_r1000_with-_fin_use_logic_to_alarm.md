@@ -46,8 +46,8 @@ FIN Framework (FIN) は、統合、制御、管理、分析、可視化、接続
 </div>
 
 ### ソフトウェア準備
-* FIN Framworkのインストール方法については、この[wiki](https://wiki.seeedstudio.com/ja/reComputer_r1000_install_fin/)を参照してください。
-* reComputer R1000でFINを使用したModbus通信については、この[wiki](https://wiki.seeedstudio.com/ja/reComputer_r1000_use_rs485_modbus_rtu/)を参照してください。
+* FIN Framworkのインストール方法については、この[wiki](https://wiki.seeedstudio.com/reComputer_r1000_install_fin/)を参照してください。
+* reComputer R1000でFINを使用したModbus通信については、この[wiki](https://wiki.seeedstudio.com/reComputer_r1000_use_rs485_modbus_rtu/)を参照してください。
 * W10 PCで[modbusmechanic](https://modbusmechanic.scifidryer.com/)を使用します。他のmodbusテストツールも使用できます。
 ### ハードウェア構成
 

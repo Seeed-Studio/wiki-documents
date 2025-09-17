@@ -11,7 +11,10 @@ last_update:
 no_comments: false # for Disqus
 
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-shield-for-Arduino-Nano/img/Grove-Shoeld-for-Arduino-Nano-front.png" alt="pir" width={600} height="auto" /></p>
 Arduino Nano用Groveシールドは、Arduino NanoおよびSeeeduino Nanoと簡単に接続する方法を提供します。このシールドは、ブレッドボードやジャンパーワイヤーを不要にし、マザーボードのピンを引き出して8つのGroveコネクタに拡張します。このシールドは、3つのGroveデジタルコネクタ、3つのGroveアナログコネクタ、1つのGrove I2Cコネクタ、1つのGrove UARTコネクタを含む8つのGroveコネクタに拡張します。

@@ -70,11 +70,11 @@ Senscraft Edge OSを使用している場合は、modbusノードのインスト
 
 ## Modbusノードのインストール
 
-このセクションでは`node-red-contrib-modbus`ノードをインストールします。[ノードのインストール方法](/ja/reTerminal-DM-Getting-Started-with-Node-Red#install-nodes)を確認してください。
+このセクションでは`node-red-contrib-modbus`ノードをインストールします。[ノードのインストール方法](/reTerminal-DM-Getting-Started-with-Node-Red#install-nodes)を確認してください。
 
 ### オプション1: コマンドライン
 
-まず、SSHを介してreTerminal DMにアクセスする知識を復習してください。手順は[こちら](/ja/reterminal-dm-flash-OS#install-drivers)で確認できます。
+まず、SSHを介してreTerminal DMにアクセスする知識を復習してください。手順は[こちら](/reterminal-dm-flash-OS#install-drivers)で確認できます。
 
 SSHでreTerminal DMにアクセスできたら、以下の手順に進んでください：
 
@@ -371,8 +371,8 @@ STEP 4: `debug node`と`Modbus Response node`を見つけてドラッグし、�
 
 # reTerminal DMでNode-REDを使用してより多くのノードを探索する
 
-* [reTerminal DM MQTT with Node-RED](/ja/reTerminal-DM-Node-Red-mqtt)
-* [reTerminal DM CAN BUS with Node-RED](/ja/reTerminal-DM-Node-Red-canbus)
+* [reTerminal DM MQTT with Node-RED](/reTerminal-DM-Node-Red-mqtt)
+* [reTerminal DM CAN BUS with Node-RED](/reTerminal-DM-Node-Red-canbus)
 * 
 ## 技術サポートと製品ディスカッション
 

@@ -794,7 +794,7 @@ BLE広告が検出されない場合：
 ## リソース
 
 - [ESP-IDF プログラミングガイド](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/)
-- [XIAO ESP32-C3 Wiki](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started/)
+- [XIAO ESP32-C3 Wiki](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/)
 - [BME680 データシート](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/)
 - [プロジェクト GitHub リポジトリ](https://github.com/Priyanshu0901/xiao_ibeacon)
 

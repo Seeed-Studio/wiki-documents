@@ -28,7 +28,7 @@ TRMNL 7.5" (OG) DIY 套件是一个多功能开发平台，以强大的 XIAO ESP
 要使用 Arduino 对 TRMNL DIY 套件进行编程，您需要设置支持 ESP32 的 Arduino IDE。
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 **步骤 1.** 下载并安装 [Arduino IDE](https://www.arduino.cc/en/software) 并启动 Arduino 应用程序。

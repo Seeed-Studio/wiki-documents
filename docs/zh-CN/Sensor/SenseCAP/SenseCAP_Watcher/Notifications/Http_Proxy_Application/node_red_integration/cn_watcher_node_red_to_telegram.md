@@ -66,7 +66,7 @@ https://api.telegram.org/bot123456789:AoUJnnpoFlkkdfJbCXlo.../getUpdates
 
 ### 步骤 3. 安装 Telegram 模块
 
-按照下图安装 Telegram 模块。如果您还没有安装 Node-RED，[请参考这里](https://wiki.seeedstudio.com/cn/watcher_to_node_red/)。
+按照下图安装 Telegram 模块。如果您还没有安装 Node-RED，[请参考这里](https://wiki.seeedstudio.com/watcher_to_node_red/)。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_telegram_image/2.png" style={{width:500, height:'auto'}}/></div>
 
@@ -76,7 +76,7 @@ https://api.telegram.org/bot123456789:AoUJnnpoFlkkdfJbCXlo.../getUpdates
 
 ### 步骤 4. 连接和配置模块
 
-**拖拽** 这些模块到工作区并将它们连接在一起。如果您不知道如何配置 **OpenStream**，您仍然可以[参考此链接](https://wiki.seeedstudio.com/cn/watcher_to_node_red/)。
+**拖拽** 这些模块到工作区并将它们连接在一起。如果您不知道如何配置 **OpenStream**，您仍然可以[参考此链接](https://wiki.seeedstudio.com/watcher_to_node_red/)。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_telegram_image/4.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -126,7 +126,7 @@ node.send({ payload: messagePayload });
 
 ### 步骤 5. 在 Watcher 中运行任务
 
-首先，你需要按照下面的视频在 Watcher 中运行一个任务。如果你想了解更多信息，[请点击这里](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)。
+首先，你需要按照下面的视频在 Watcher 中运行一个任务。如果你想了解更多信息，[请点击这里](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)。
 
 <div class="table-center">
 <iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

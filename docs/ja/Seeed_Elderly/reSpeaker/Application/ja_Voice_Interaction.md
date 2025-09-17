@@ -75,8 +75,8 @@ Baidu Speech には STT、TTS、音声インタラクション、オフライン
 
 音声インタラクションチュートリアルリストです。
 
-<!-- - [ReSpeaker Core V2 & Wio Link](/ja/ReSpeaker_Core_V2_&_Wio_Link/)
-- [Google Assistant](/ja/Google_Assistant) -->
+<!-- - [ReSpeaker Core V2 & Wio Link](/ReSpeaker_Core_V2_&_Wio_Link/)
+- [Google Assistant](/Google_Assistant) -->
 弊社製品をお選びいただき、ありがとうございます！弊社製品でのご体験を可能な限りスムーズにするため、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">

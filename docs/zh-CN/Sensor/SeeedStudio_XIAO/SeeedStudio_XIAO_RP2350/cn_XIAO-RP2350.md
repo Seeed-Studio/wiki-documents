@@ -97,8 +97,8 @@ XIAO RP2350 将 Raspberry Pi RP2350（双 Cortex-M33 内核，运行频率 150MH
     </tr>
     <tr>
         <td>软件兼容性</td>
-        <td>Arduino，PlatformIO，MicroPython，CircuitPython，Zephyr，<a href="https://wiki.seeedstudio.com/cn/xiao_topic_page/">更多即将推出</a></td>
-        <td>Arduino，PlatformIO，MicroPython，CircuitPython，<a href="https://wiki.seeedstudio.com/cn/xiao_topic_page/">更多即将推出</a></td>
+        <td>Arduino，PlatformIO，MicroPython，CircuitPython，Zephyr，<a href="https://wiki.seeedstudio.com/xiao_topic_page/">更多即将推出</a></td>
+        <td>Arduino，PlatformIO，MicroPython，CircuitPython，<a href="https://wiki.seeedstudio.com/xiao_topic_page/">更多即将推出</a></td>
     </tr>
     <tr>
         <td>工作温度</td>
@@ -161,7 +161,7 @@ XIAO RP2350由RP2350驱动，支持MicroPython和Raspberry Pi提供的C/C++ SDK�
 ## 入门指南▶️
 
 :::info 注意
-本页面主要面向 MicroPython 用户。对于有兴趣学习 SDK 编程或高级用户，您可能希望从 [Raspberry Pi Pico 系列 C/C++ SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf) 开始。本指南将帮助您设置环境并开始使用示例代码。此外，您可以访问 [XIAO RP2350 与 C/C++ SDK](/cn/xiao-rp2350-c-cpp-sdk) 获取与 XIAO RP2350 相关的更具体说明。
+本页面主要面向 MicroPython 用户。对于有兴趣学习 SDK 编程或高级用户，您可能希望从 [Raspberry Pi Pico 系列 C/C++ SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf) 开始。本指南将帮助您设置环境并开始使用示例代码。此外，您可以访问 [XIAO RP2350 与 C/C++ SDK](/xiao-rp2350-c-cpp-sdk) 获取与 XIAO RP2350 相关的更具体说明。
 :::
 
 :::tip
@@ -428,7 +428,7 @@ while True:
 
 ### 电池和电源管理
 
-是否可以在不使用额外组件的情况下读取电池电压？是的，使用 XIAO RP2350，这比以往任何时候都更容易。在之前的 XIAO 系列成员中，例如 [XIAO ESP32C3](/cn/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)，读取电池电压需要手动连接到 *A0* 并使用电阻。
+是否可以在不使用额外组件的情况下读取电池电压？是的，使用 XIAO RP2350，这比以往任何时候都更容易。在之前的 XIAO 系列成员中，例如 [XIAO ESP32C3](/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)，读取电池电压需要手动连接到 *A0* 并使用电阻。
 
 但是使用 XIAO RP2350，这个过程得到了简化。您现在可以直接使用 `A3/GPIO29` 引脚来读取电池电压水平，简化您的设计和开发。只需记住将 `GPIO19` 引脚设置为高电平，因为这是启用电池电平读取所必需的。
 
@@ -532,11 +532,11 @@ XIAO RP2350 利用 Raspberry Pi RP2350 的强大功能，充分利用 Raspberry 
 
 ### 扩展和应用
 
-[XIAO 系列](/cn/xiao_topic_page)拥有大量的外设和外设配件供您学习和使用，无论您想要一个允许完美交互的彩色屏幕，还是一个带有明亮简洁 RGB 灯光的集成板等等，都等待着您的探索。
+[XIAO 系列](/xiao_topic_page)拥有大量的外设和外设配件供您学习和使用，无论您想要一个允许完美交互的彩色屏幕，还是一个带有明亮简洁 RGB 灯光的集成板等等，都等待着您的探索。
 
 作为 XIAO 家族的一员，XIAO RP2350 也是如此。当然，为了更好地利用引出的额外引脚，新的*外设和开发板*将不断推出，充分利用其创造的性能。
 
-- 🌟 **[配件扩展](/cn/SeeedStudio_XIAO_Series_Introduction/#seeed-studio-xiao-series-compatible-accessories)**  
+- 🌟 **[配件扩展](/SeeedStudio_XIAO_Series_Introduction/#seeed-studio-xiao-series-compatible-accessories)**  
   探索与 XIAO 家族兼容的各种附加组件和模块，从显示器和 LED 矩阵到 Grove 模块和传感器，了解它们如何增强您的项目。
 
 ### 社区和学习

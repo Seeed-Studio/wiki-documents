@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 おそらく、Seeeduino Stalkerシリーズに非常に詳しい方もいれば、この機能豊富なワイヤレスセンサーネットワークノードに全く馴染みがない方もいるでしょう。どのような状況であっても、屋外データロギングアプリケーションを作成する予定がある場合、Seeeduino Stalkerが最適なボードであることが分かるでしょう。
 

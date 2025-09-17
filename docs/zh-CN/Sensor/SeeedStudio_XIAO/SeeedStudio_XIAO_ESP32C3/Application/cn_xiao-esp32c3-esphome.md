@@ -76,9 +76,9 @@ last_update:
 
 我们还为Seeed Studio的一些产品编写了如何安装Home Assistant的教程，请参考它们。
 
-- [在ODYSSEY-X86上开始使用Home Assistant](https://wiki.seeedstudio.com/cn/ODYSSEY-X86-Home-Assistant/)
-- [在reTerminal上开始使用Home Assistant](https://wiki.seeedstudio.com/cn/reTerminal_Home_Assistant/)
-- [在LinkStar H68K/reRouter CM4上开始使用Home Assistant](https://wiki.seeedstudio.com/cn/h68k-ha-esphome/)
+- [在ODYSSEY-X86上开始使用Home Assistant](https://wiki.seeedstudio.com/ODYSSEY-X86-Home-Assistant/)
+- [在reTerminal上开始使用Home Assistant](https://wiki.seeedstudio.com/reTerminal_Home_Assistant/)
+- [在LinkStar H68K/reRouter CM4上开始使用Home Assistant](https://wiki.seeedstudio.com/h68k-ha-esphome/)
 
 ## 在Home Assistant中安装ESPHome
 
@@ -575,7 +575,7 @@ number:
 
 当然，XIAO ESP32C3 不仅仅支持在 Home Assistant 中使用 24GHz mmWave 人体静态存在检测模块 Lite，您可以在本文档中找到更多教程供您自己使用。
 
-- [使用 XIAO ESP32C3 将 Grove 连接到 Home Assistant](https://wiki.seeedstudio.com/cn/Connect-Grove-to-Home-Assistant-ESPHome/)
+- [使用 XIAO ESP32C3 将 Grove 连接到 Home Assistant](https://wiki.seeedstudio.com/Connect-Grove-to-Home-Assistant-ESPHome/)
 
 发挥您的创造力！
 
@@ -665,7 +665,7 @@ void loop() {
 
 > 打开串口监视器并将波特率设置为115200，如果雷达正常工作，您应该看到大量数字被打印出来。
 
-> 如果您在执行此步骤时没有看到任何数据输出，请根据Wiki重新刷写雷达固件。我们为您提供两种更新固件的方法：[固件版本更新](https://wiki.seeedstudio.com/cn/Radar_MR24HPC1/#firmware-version-updates)。
+> 如果您在执行此步骤时没有看到任何数据输出，请根据Wiki重新刷写雷达固件。我们为您提供两种更新固件的方法：[固件版本更新](https://wiki.seeedstudio.com/Radar_MR24HPC1/#firmware-version-updates)。
 
 > 如果更新固件后仍然没有任何反应，请不要犹豫，直接联系我们的技术支持团队。并告知他们您已经完成的所有操作。
 

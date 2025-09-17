@@ -17,7 +17,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/wialon-sensecap.png" alt="pir" width={800} height="auto" /></p>
 
-在开始设置之前，请查看[快速入门](https://wiki.seeedstudio.com/cn/Get_Started_with_SenseCAP_T1000_tracker)，首先将您的 SenseCAP T1000 Tracker 连接到 SenseCAP Cloud。
+在开始设置之前，请查看[快速入门](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker)，首先将您的 SenseCAP T1000 Tracker 连接到 SenseCAP Cloud。
 
 ## 在 SenseCAP 门户获取 SenseCAP API
 

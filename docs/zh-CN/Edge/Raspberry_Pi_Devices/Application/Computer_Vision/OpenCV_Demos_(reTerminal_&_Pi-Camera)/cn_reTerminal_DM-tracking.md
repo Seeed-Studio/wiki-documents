@@ -42,24 +42,24 @@ last_update:
    <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
           </a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
         </tr>
     </table>
 </div>
 
 ### 软件准备
 
-我们推荐从官方网站安装 **Bullesye** 或 **Bookworm** 版本的 Raspberry Pi 64 位操作系统。如果您希望安装新的 Raspbian 操作系统，请按照此[**指南**](https://wiki.seeedstudio.com/cn/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)中概述的步骤进行操作。
+我们推荐从官方网站安装 **Bullesye** 或 **Bookworm** 版本的 Raspberry Pi 64 位操作系统。如果您希望安装新的 Raspbian 操作系统，请按照此[**指南**](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)中概述的步骤进行操作。
 
 :::note
 
-我们强烈推荐查看我们之前关于[**OpenCV 入门**](https://wiki.seeedstudio.com/cn/reTerminal_DM_opencv/)的教程，因为本教程是我们系列教程的延续。
+我们强烈推荐查看我们之前关于[**OpenCV 入门**](https://wiki.seeedstudio.com/reTerminal_DM_opencv/)的教程，因为本教程是我们系列教程的延续。
 
 :::
 
 ## 跟踪 vs. 检测
 
-在之前的教程中，我们介绍了[**人脸**](https://wiki.seeedstudio.com/cn/reTerminal_DM_Face_detection/)和[**颜色检测**](https://wiki.seeedstudio.com/cn/reTerminal_DM_Color_detection/)，但注意到它们的间歇性特点。以下是快速比较：
+在之前的教程中，我们介绍了[**人脸**](https://wiki.seeedstudio.com/reTerminal_DM_Face_detection/)和[**颜色检测**](https://wiki.seeedstudio.com/reTerminal_DM_Color_detection/)，但注意到它们的间歇性特点。以下是快速比较：
 
 1. **速度优势：**
 跟踪比检测更快。通过利用先前帧的数据，跟踪算法预测对象位置，而检测算法通常在每一帧中从头开始。

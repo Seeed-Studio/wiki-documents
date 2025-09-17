@@ -1036,7 +1036,7 @@ reServer IndustrialとreTerminal DMをCAN経由で接続するには、以下の
 
 ### reTerminal DMでの使用方法
 
-- **ステップ 1:** reTerminal DMを使用する前に、[このwiki](https://wiki.seeedstudio.com/ja/reterminal-dm)にアクセスして、reTerminal DMの使用を開始してください
+- **ステップ 1:** reTerminal DMを使用する前に、[このwiki](https://wiki.seeedstudio.com/reterminal-dm)にアクセスして、reTerminal DMの使用を開始してください
 
 - **ステップ 2:** reServer Industrialでターミナルウィンドウを開き、以下のコマンドを実行してCANインターフェースを設定し、有効にします
 

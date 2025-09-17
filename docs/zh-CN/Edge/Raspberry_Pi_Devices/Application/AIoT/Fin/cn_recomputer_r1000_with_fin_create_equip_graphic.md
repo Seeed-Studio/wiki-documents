@@ -47,7 +47,7 @@ FIN Framework (FIN) 是一个软件框架，具有可以集成、控制、管理
 
 ### 软件准备
 
-* 关于如何安装 FIN Framework，您可以参考这个 [wiki](https://wiki.seeedstudio.com/cn/reComputer_r1000_install_fin/)。
+* 关于如何安装 FIN Framework，您可以参考这个 [wiki](https://wiki.seeedstudio.com/reComputer_r1000_install_fin/)。
 
 ## 创建设备图形的步骤
 

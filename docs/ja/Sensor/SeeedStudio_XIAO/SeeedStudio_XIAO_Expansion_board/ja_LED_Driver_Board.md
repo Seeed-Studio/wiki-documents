@@ -63,7 +63,7 @@ LED Driver Board for XIAOは、5Vと12VのLEDストリップの両方をサポ�
 
         [Grove - IMU 9DOF (ICM20600+AK09918)](https://www.seeedstudio.com/Grove-IMU-9DOF-ICM20600-AK09918.html)
 
-  - **[`その他400以上`](https://wiki.seeedstudio.com/ja/Grove_System/)**
+  - **[`その他400以上`](https://wiki.seeedstudio.com/Grove_System/)**
 
 ### 仕様
 
@@ -219,7 +219,7 @@ LED Driver Board for XIAOは、5Vと12VのLEDストリップの両方をサポ�
 XIAOのArduino環境を設定し、オンボードパッケージを追加する必要があります。
 
 :::tip
-Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
 #### ソフトウェアの準備
@@ -236,23 +236,23 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
 
 **ステップ2.** 開発ボードモデルを選択し、Arduino IDEに追加します。
 
-- 後のルーチンで**Seeed Studio XIAO SAMD21**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO/#software)**を参照して追加を完了してください。
+- 後のルーチンで**Seeed Studio XIAO SAMD21**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software)**を参照して追加を完了してください。
 
-- 後のルーチンで**Seeed Studio XIAO RP2040**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO-RP2040-with-Arduino/#software-setup)**を参照して追加を完了してください。
+- 後のルーチンで**Seeed Studio XIAO RP2040**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/#software-setup)**を参照して追加を完了してください。
 
-- 後のルーチンで**Seeed Studio XIAO RP2350**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/xiao_rp2350_arduino/#setting-up-the-software)**を参照して追加を完了してください。
+- 後のルーチンで**Seeed Studio XIAO RP2350**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/xiao_rp2350_arduino/#setting-up-the-software)**を参照して追加を完了してください。
 
-- 後のルーチンで**Seeed Studio XIAO nRF52840**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO_BLE/#software-setup)**を参照して追加を完了してください。
+- 後のルーチンで**Seeed Studio XIAO nRF52840**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)**を参照して追加を完了してください。
 
-- 後のルーチンで**Seeed Studio XIAO ESP32C3**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started#software-setup)**を参照して追加を完了してください。
+- 後のルーチンで**Seeed Studio XIAO ESP32C3**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started#software-setup)**を参照して追加を完了してください。
 
-- 後のルーチンで**Seeed Studio XIAO ESP32C6**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/xiao_esp32c6_getting_started/#software-preparation)**を参照して追加を完了してください。
+- 後のルーチンで**Seeed Studio XIAO ESP32C6**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/#software-preparation)**を参照して追加を完了してください。
 
-- 後のルーチンで**Seeed Studio XIAO ESP32S3**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started#software-preparation)**を参照して追加を完了してください。
+- 後のルーチンで**Seeed Studio XIAO ESP32S3**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)**を参照して追加を完了してください。
 
-- 後のルーチンで**Seeed Studio XIAO RA4M1**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/getting_started_xiao_ra4m1/#software-preparation)**を参照して追加を完了してください。
+- 後のルーチンで**Seeed Studio XIAO RA4M1**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/#software-preparation)**を参照して追加を完了してください。
 
-- 後のルーチンで**Seeed Studio XIAO MG24**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/xiao_mg24_getting_started/#software-preparation)**を参照して追加を完了してください。
+- 後のルーチンで**Seeed Studio XIAO MG24**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/xiao_mg24_getting_started/#software-preparation)**を参照して追加を完了してください。
 
 **ステップ3.** 必要なライブラリをインストールします。
 
@@ -489,7 +489,7 @@ void loop() {
     </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
+        <a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
           <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
       </div></td>

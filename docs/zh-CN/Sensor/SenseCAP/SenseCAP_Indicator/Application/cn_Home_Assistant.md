@@ -69,7 +69,7 @@ import TabItem from '@theme/TabItem';
 
 ## 前提条件
 
-在开始之前，请确保您已经阅读了 SenseCAP Indicator 板的[用户指南](/cn/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)，以熟悉其软件和硬件信息。
+在开始之前，请确保您已经阅读了 SenseCAP Indicator 板的[用户指南](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)，以熟悉其软件和硬件信息。
 
 ## 安装 Home Assistant OS {#install_HA}
 
@@ -562,7 +562,7 @@ views:
 
 1. **演示 SDK**：SenseCAP Indicator 的演示 SDK 可在 [GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32) 上获取。
 2. **`indicator_ha.c` 文件**：此文件包含 Home Assistant 集成的主要功能。您可以在[这里](https://raw.githubusercontent.com/Seeed-Solution/SenseCAP_Indicator_ESP32/main/examples/indicator_ha/main/model/indicator_ha.c)查看。
-3. **用户指南**：用户指南提供了关于 SenseCAP Indicator 板软件和硬件的详细信息。您可以在[这里](/cn/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)阅读。
+3. **用户指南**：用户指南提供了关于 SenseCAP Indicator 板软件和硬件的详细信息。您可以在[这里](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)阅读。
 4. **Home Assistant 安装指南**：如果您是 Home Assistant 的新用户，本指南将帮助您安装和设置。您可以在[这里](https://www.home-assistant.io/installation/)找到。
 5. **ESP-IDF 入门指南**：本指南提供了配置和使用 ESP-IDF 构建项目的完整步骤。您可以在[这里](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html)访问。
 6. [Home Assistant 概念和术语](https://www.home-assistant.io/getting-started/concepts-terminology/)

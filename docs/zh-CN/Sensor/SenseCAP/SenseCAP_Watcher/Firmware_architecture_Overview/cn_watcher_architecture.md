@@ -392,7 +392,7 @@ typedef struct tf_module_mgmt {
 }tf_module_mgmt_t;
 ```
 
-有关如何编写模块的信息，请参考 [Watcher 功能模块开发指南](https://wiki.seeedstudio.com/cn/watcher_function_module_development_guide)
+有关如何编写模块的信息，请参考 [Watcher 功能模块开发指南](https://wiki.seeedstudio.com/watcher_function_module_development_guide)
 
 ## 2. 功能模块
 

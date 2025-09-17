@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 本教程将指导您使用 SenseCraft HMI 中的 Gallery 功能，涵盖图片上传方法、显示设置以及获得最佳性能的重要注意事项。
 
-本文将以 [reTerminal E1002](https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1002/) 为例，说明如何在 SenseCraft HMI 平台上使用此功能。
+本文将以 [reTerminal E1002](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002/) 为例，说明如何在 SenseCraft HMI 平台上使用此功能。
 
 ## Gallery 入门
 
@@ -318,7 +318,7 @@ SenseCraft HMI 中的图库功能提供了一种简单的方法，可以将您�
 ## 资源
 
 - [SenseCraft HMI 平台](https://sensecraft.seeed.cc/hmi)
-- [兼容设备 - reTerminal E 系列](https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/)
+- [兼容设备 - reTerminal E 系列](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
 
 ## 技术支持与产品讨论
 

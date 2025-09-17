@@ -186,14 +186,14 @@ Jetson Orinを搭載したreComputer J30/40は、最大100TOPSの最新AI性能�
 
 :::info
 reComputer J30/40はJ401キャリアボードを搭載しています。
-JetPackのフラッシュに関する詳細情報については、この[wikiページ](/ja/reComputer_J4012_Flash_Jetpack)を参照してください。
+JetPackのフラッシュに関する詳細情報については、この[wikiページ](/reComputer_J4012_Flash_Jetpack)を参照してください。
 :::
 
 ## インターフェース使用方法
 
 :::info
 reComputer J30/40はJ401キャリアボードを搭載しています。
-インターフェース使用方法に関する詳細情報については、この[wikiページ](/ja/J401_carrierboard_Hardware_Interfaces_Usage)を参照してください。
+インターフェース使用方法に関する詳細情報については、この[wikiページ](/J401_carrierboard_Hardware_Interfaces_Usage)を参照してください。
 :::
 
 

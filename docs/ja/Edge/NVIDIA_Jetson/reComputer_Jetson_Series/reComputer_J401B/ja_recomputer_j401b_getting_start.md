@@ -851,7 +851,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 ## インターフェース使用方法
 
 :::info
-インターフェース使用方法の詳細については、この[wikiページ](/ja/recomputer_j401b_interfaces_usage)を参照してください。
+インターフェース使用方法の詳細については、この[wikiページ](/recomputer_j401b_interfaces_usage)を参照してください。
 :::
 
 ## リソース

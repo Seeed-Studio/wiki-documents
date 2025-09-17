@@ -71,7 +71,7 @@ import TabItem from '@theme/TabItem';
 
 现在让我们来了解在 reTerminal 上安装 Home Assistant Supervised 的过程。
 
-- **步骤 1.** 准备一台已安装 Raspberry Pi OS 的 reTerminal。reTerminal 预装了 RPi OS 32 位版本。但是，如果您想重新安装，请参考[此 wiki](https://wiki.seeedstudio.com/cn/reTerminal-FAQ/#q2-how-can-i-flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal)。
+- **步骤 1.** 准备一台已安装 Raspberry Pi OS 的 reTerminal。reTerminal 预装了 RPi OS 32 位版本。但是，如果您想重新安装，请参考[此 wiki](https://wiki.seeedstudio.com/reTerminal-FAQ/#q2-how-can-i-flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal)。
 
 **注意：** 确保使用 32 位版本，因为在 32 位版本中，reTerminal LCD 上的 Home Assistant 仪表板 UI 会更加流畅。
 

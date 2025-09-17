@@ -17,8 +17,8 @@ no_comments: false # for Disqus
 
 在开始之前，我们需要阅读以下两篇文章。确保 J1010 系统正确烧录，并且 SD 卡驱动程序已正确安装。
 
-- [J1010/J101 刷写 Jetpack](https://wiki.seeedstudio.com/cn/reComputer_J1010_J101_Flash_Jetpack/)
-- [J101_启用_SD_卡](https://wiki.seeedstudio.com/cn/J101_Enable_SD_Card/)
+- [J1010/J101 刷写 Jetpack](https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack/)
+- [J101_启用_SD_卡](https://wiki.seeedstudio.com/J101_Enable_SD_Card/)
 
 ## 从 J101 将系统刷写到 SD 卡
 

@@ -46,7 +46,7 @@ SenseCAP IndicatorをMatterで動作させるには、いくつかの主要な�
 
 ## 前提条件
 
-始める前に、SenseCAP Indicatorボードの[ユーザーガイド](/ja/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)を読んで、そのソフトウェアとハードウェア情報に慣れ親しんでください。
+始める前に、SenseCAP Indicatorボードの[ユーザーガイド](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)を読んで、そのソフトウェアとハードウェア情報に慣れ親しんでください。
 
 ## ESP IDFとESP Matterのインストール {#install_sdks}
 
@@ -123,7 +123,7 @@ Home Assistantサイドからは、デバイスを必要に応じて有効化、
 
 ## Home Assistant UIのさらなる設定 {#going_beyond}
 
-UI自体は[LVGL](https://lvgl.io/)を使用して構築されています。LVGLの設定に関するより詳細な情報については、[以下の記事](https://wiki.seeedstudio.com/ja/using_lvgl_and_tft_on_round_display/)を参照してください。
+UI自体は[LVGL](https://lvgl.io/)を使用して構築されています。LVGLの設定に関するより詳細な情報については、[以下の記事](https://wiki.seeedstudio.com/using_lvgl_and_tft_on_round_display/)を参照してください。
 
 ダッシュボードのUIは、データがローカルストレージとMatterエンドポイントの両方に永続化されるように、コールバック用のイベントが設定されたLGVLコンポーネントで構成されています。仮想ダッシュボードコントローラー（`indicator_virtual_dashboard_controller.c`）は、基盤となるデータが変更されたときに、フォームの更新と他のコンシューマー向けの関連イベントの投稿を処理します。
 
@@ -139,7 +139,7 @@ UI自体は[LVGL](https://lvgl.io/)を使用して構築されています。LVG
 ## Resources
 
 1. **Demo SDK**: SenseCAP IndicatorのDemo SDKは[GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32)で入手できます。
-2. **ユーザーガイド**: ユーザーガイドはSenseCAP Indicatorボードのソフトウェアとハードウェアに関する詳細情報を提供します。[こちら](/ja/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)で読むことができます。
+2. **ユーザーガイド**: ユーザーガイドはSenseCAP Indicatorボードのソフトウェアとハードウェアに関する詳細情報を提供します。[こちら](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)で読むことができます。
 3. **ESP-IDFスタートガイド**: このガイドはESP-IDFを設定してプロジェクトをビルドするための完全な手順を提供します。[こちら](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html)でアクセスできます。
 4. **Matterインストールガイド**: ESP-Matterが初めての場合、このガイドがインストールとセットアップをサポートします。[こちら](https://docs.espressif.com/projects/esp-matter/en/latest/esp32/developing.html)で見つけることができます。
 

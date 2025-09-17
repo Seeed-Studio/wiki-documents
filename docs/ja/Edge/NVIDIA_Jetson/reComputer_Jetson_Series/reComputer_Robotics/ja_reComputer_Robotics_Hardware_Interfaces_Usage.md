@@ -37,7 +37,7 @@ last_update:
 
 ## ハードウェアインターフェース使用方法
 :::info
-reComputer Roboticsのインターフェース使用方法は、Robotics J401キャリアボードと同じです。詳細なインターフェース使用例については、[このwiki](https://wiki.seeedstudio.com/ja/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage)を参照してください。
+reComputer Roboticsのインターフェース使用方法は、Robotics J401キャリアボードと同じです。詳細なインターフェース使用例については、[このwiki](https://wiki.seeedstudio.com/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage)を参照してください。
 :::
 
 

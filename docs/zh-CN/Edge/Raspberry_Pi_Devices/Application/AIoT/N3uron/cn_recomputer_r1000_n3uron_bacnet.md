@@ -42,7 +42,7 @@ BACnet是楼宇管理系统(BMS)中广泛采用的协议，因其开放标准而
 
 ### 软件
 
-我们强烈建议学习[N3uron 入门指南](https://wiki.seeedstudio.com/cn/recomputer_r1000_n3uron/)。它提供了导航 N3uron Web 界面、理解 Web UI 和 Web Vision 模块等概念、掌握标签概念以及创建基本仪表板的重要见解。如果您还没有探索这些基础知识，建议在进一步操作之前先学习这些内容。您可以通过提供的链接访问该指南。
+我们强烈建议学习[N3uron 入门指南](https://wiki.seeedstudio.com/recomputer_r1000_n3uron/)。它提供了导航 N3uron Web 界面、理解 Web UI 和 Web Vision 模块等概念、掌握标签概念以及创建基本仪表板的重要见解。如果您还没有探索这些基础知识，建议在进一步操作之前先学习这些内容。您可以通过提供的链接访问该指南。
 
 ### YABE
 

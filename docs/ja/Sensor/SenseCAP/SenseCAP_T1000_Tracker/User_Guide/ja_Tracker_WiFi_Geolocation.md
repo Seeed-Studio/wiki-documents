@@ -14,7 +14,7 @@ last_update:
 
 # 1. The Things NetworkからWi-Fi情報を取得する
 
-- **ステップ1.** Seeed StudioのWiki[Wiki](https://wiki.seeedstudio.com/ja/SenseCAP_T1000_tracker_TTN/)で提供されているステップバイステップのチュートリアルに従って、トラッカーとThe Things Network（TTN）間の接続を確立します
+- **ステップ1.** Seeed StudioのWiki[Wiki](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/)で提供されているステップバイステップのチュートリアルに従って、トラッカーとThe Things Network（TTN）間の接続を確立します
 
 - **ステップ2.** 解析されたペイロードから必要なMACアドレス、RSSI（受信信号強度表示）、およびタイムスタンプを抽出します。これらのデータは、後続のステップでWi-Fiジオロケーションに使用されます。
 

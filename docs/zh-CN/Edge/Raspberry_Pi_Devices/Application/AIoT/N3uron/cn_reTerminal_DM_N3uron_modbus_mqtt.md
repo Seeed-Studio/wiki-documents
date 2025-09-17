@@ -44,7 +44,7 @@ reTerminal DM 和 [N3uron](https://n3uron.com/) Duo 的强大组合通过提供�
 
 ### 软件
 
-我们强烈建议学习 [N3uron 入门指南](https://wiki.seeedstudio.com/cn/reTerminalDM_N3uron_Get_Start/)。它提供了导航 N3uron Web 界面、理解 Web UI 和 Web Vision 模块等概念、掌握标签概念以及创建基本仪表板的重要见解。如果您还没有探索这些基础知识，建议在进一步操作之前先了解这些内容。您可以通过提供的链接访问该指南。
+我们强烈建议学习 [N3uron 入门指南](https://wiki.seeedstudio.com/reTerminalDM_N3uron_Get_Start/)。它提供了导航 N3uron Web 界面、理解 Web UI 和 Web Vision 模块等概念、掌握标签概念以及创建基本仪表板的重要见解。如果您还没有探索这些基础知识，建议在进一步操作之前先了解这些内容。您可以通过提供的链接访问该指南。
 
 ### 配置以太网设置
 
@@ -210,7 +210,7 @@ sudo nano /etc/dhcpcd.conf
 ## 额外功能：让我们发布工厂状态到 AWS
 
 :::note
-我们已经提供了如何将 [AWS 云连接到您的 reTerminal DM 设备](https://wiki.seeedstudio.com/cn/reTerminal-DM_AWS_first/) 的分步说明。如果您是第一次阅读此 wiki，请参考此链接。
+我们已经提供了如何将 [AWS 云连接到您的 reTerminal DM 设备](https://wiki.seeedstudio.com/reTerminal-DM_AWS_first/) 的分步说明。如果您是第一次阅读此 wiki，请参考此链接。
 :::
 
 - 步骤 01：在资源管理器面板中，选择您刚刚创建的 **MQTT** 实例。

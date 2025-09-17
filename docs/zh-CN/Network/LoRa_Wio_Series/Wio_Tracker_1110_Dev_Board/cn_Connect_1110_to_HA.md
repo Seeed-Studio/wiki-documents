@@ -22,7 +22,7 @@ last_update:
 
 ### 设备配置
 
-在开始之前，请确保您已阅读 Wio Tracker 1110 开发板的[用户指南](https://wiki.seeedstudio.com/cn/Get_Started_with_Wio-Trakcer_1110/)，并将平台选择为 `SenseCAP`。
+在开始之前，请确保您已阅读 Wio Tracker 1110 开发板的[用户指南](https://wiki.seeedstudio.com/Get_Started_with_Wio-Trakcer_1110/)，并将平台选择为 `SenseCAP`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio-1110getstart/4.jpeg" alt="pir" width={300} height="auto" /></p>
 

@@ -26,7 +26,7 @@ last_update:
 本文档将提供关于如何使用 C 语言编程为 reCamera Gimbal 进行开发的全面指南。
 
 有关基于 Node-RED 的开发，请参考：  
-[Node-RED 开发文档](https://wiki.seeedstudio.com/cn/recamera_gimbal_node_red/)
+[Node-RED 开发文档](https://wiki.seeedstudio.com/recamera_gimbal_node_red/)
 
 在开发之前，您需要将交叉编译环境安装到您的开发环境中。
 

@@ -44,7 +44,7 @@ BACnet IP（Building Automation and Control Network over IP）は、ビルシス
 
 ### ソフトウェアの準備
 
-[Node-REDを使った入門ガイド](https://wiki.seeedstudio.com/ja/reTerminal-DM-Getting-Started-with-Node-Red/)を用意しました。このwikiに進む前に、このガイドを確認することをお勧めします。
+[Node-REDを使った入門ガイド](https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Node-Red/)を用意しました。このwikiに進む前に、このガイドを確認することをお勧めします。
 
 ### YABE
 

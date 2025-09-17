@@ -12,13 +12,13 @@ last_update:
 
 # Watcher 功能模块开发指南
 
-建议您首先阅读 [Watcher 软件框架](https://wiki.seeedstudio.com/cn/watcher_software_framework) 以了解功能模块的工作原理。
+建议您首先阅读 [Watcher 软件框架](https://wiki.seeedstudio.com/watcher_software_framework) 以了解功能模块的工作原理。
 
 在本文档中，我们将展示如何开发新功能模块的分步指南。我们将以 `UART Alarm` 模块为例。
 
 ## 1. 安装和首次构建
 
-如果您跳过了 [构建 Watcher 开发环境](https://wiki.seeedstudio.com/cn/build_watcher_development_environment) 中的步骤，请先完成这些步骤。
+如果您跳过了 [构建 Watcher 开发环境](https://wiki.seeedstudio.com/build_watcher_development_environment) 中的步骤，请先完成这些步骤。
 
 ```shell
 # you're in PROJ_ROOT_DIR/examples/factory_firmware/
@@ -27,7 +27,7 @@ cd main/task_flow_module
 
 ## 2. 选择合适的模板
 
-在[Watcher软件框架](https://wiki.seeedstudio.com/cn/watcher_software_framework)中，我们介绍了现有的功能模块（在后续文档中简称为**FM**）以及它们的用途。当我们开发新的FM时，最好从最接近的现有FM开始作为参考。在本教程中，我们将开发一个报警器FM，因此我们选择其中一个报警器FM，`local alarmer`是最简单的一个，我们将使用它。
+在[Watcher软件框架](https://wiki.seeedstudio.com/watcher_software_framework)中，我们介绍了现有的功能模块（在后续文档中简称为**FM**）以及它们的用途。当我们开发新的FM时，最好从最接近的现有FM开始作为参考。在本教程中，我们将开发一个报警器FM，因此我们选择其中一个报警器FM，`local alarmer`是最简单的一个，我们将使用它。
 
 ```shell
 cp tf_module_local_alarm.h tf_module_uart_alarm.h
@@ -367,7 +367,7 @@ static int __msgs_sub_set(void *p_module, int evt_id)
 
 ### 4.3 事件处理程序
 
-在[Watcher 软件框架](https://wiki.seeedstudio.com/cn/watcher_software_framework)中我们了解到数据流是由事件循环驱动的。基本上，FM 会从其事件处理程序接收数据，然后消费数据，进行计算，得到一些结果。最后需要将结果发布到事件循环中 - 目标是对该 FM 数据感兴趣的下游 FM。
+在[Watcher 软件框架](https://wiki.seeedstudio.com/watcher_software_framework)中我们了解到数据流是由事件循环驱动的。基本上，FM 会从其事件处理程序接收数据，然后消费数据，进行计算，得到一些结果。最后需要将结果发布到事件循环中 - 目标是对该 FM 数据感兴趣的下游 FM。
 
 在这个 `uart alarmer` 示例中，我们从一个报警触发 FM 消费数据，该 FM 的输出数据类型为 `TF_DATA_TYPE_DUALIMAGE_WITH_INFERENCE_AUDIO_TEXT`。由于 uart 数据准备很简单，我们在事件循环处理程序中完成所有数据生成。不过这并不推荐，如果您的数据处理耗时或 IO 密集。在这种情况下，您需要创建一个工作任务（线程）来进行后台处理。
 
@@ -456,7 +456,7 @@ export taskflow to stdout or SD file, eg: taskflow -e -f "test.json"
     -j, --json  import taskflow json string by stdin
 ```
 
-请参考 [构建 Watcher 开发环境](https://wiki.seeedstudio.com/cn/build_watcher_development_environment) - `5. 监控日志输出` 来获取控制台。准备一个去除空格和空白字符的任务流，并使用以下方式发布任务流：
+请参考 [构建 Watcher 开发环境](https://wiki.seeedstudio.com/build_watcher_development_environment) - `5. 监控日志输出` 来获取控制台。准备一个去除空格和空白字符的任务流，并使用以下方式发布任务流：
 
 ```shell
 taskflow -i -j<enter>
@@ -465,7 +465,7 @@ Please input taskflow json:
 {"tlid":3,"ctd":3,"tn":"Local Human Detection","type":0,"task_flow":[{"id":1,"type":"ai camera","index":0,"version":"1.0.0","params":{"model_type":1,"modes":0,"model":{"arguments":{"iou":45,"conf":50}},"conditions":[{"class":"person","mode":1,"type":2,"num":0}],"conditions_combo":0,"silent_period":{"silence_duration":5},"output_type":0,"shutter":0},"wires":[[2]]},{"id":2,"type":"alarm trigger","index":1,"version":"1.0.0","params":{"text":"human detected","audio":""},"wires":[[3]]},{"id":3,"type":"uart alarm","index":2,"version":"1.0.0","params":{"output_format":1},"wires":[]}]}
 ```
 
-如何组成任务流？在[Watcher软件框架](https://wiki.seeedstudio.com/cn/watcher_software_framework)中，我们介绍了每个FM及其参数。组成任务流很像在FM块之间连接线路，就像Node-RED一样。
+如何组成任务流？在[Watcher软件框架](https://wiki.seeedstudio.com/watcher_software_framework)中，我们介绍了每个FM及其参数。组成任务流很像在FM块之间连接线路，就像Node-RED一样。
 
 在我们有用于组成任务流的GUI之前，我们可以使用导出命令来收集示例。只需使用移动应用程序发出一个启用了本地报警功能（RGB灯）的流，当流运行时，使用以下命令导出任务流：
 

@@ -67,11 +67,11 @@ SenseCAPプラットフォームは正式に`SenseCraft Data Platform`に名称�
 
 XIAO ESP32C3を初めて使用する場合は、まずこのWikiを読んでArduinoで良好な開発環境を設定する方法を学ぶ必要があります。
 
-- [Seeed Studio XIAO ESP32C3入門](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started/#software-setup)
+- [Seeed Studio XIAO ESP32C3入門](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#software-setup)
 
 また、このチュートリアルは[XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html)とも互換性があり、XIAO ESP32S3を使用してこのチュートリアルの内容を完了することもできます。
 
-- [Seeed Studio XIAO ESP32S3入門](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/#software-preparation)
+- [Seeed Studio XIAO ESP32S3入門](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#software-preparation)
 
 SHT40センサーを使用するため、プログラムがスムーズに実行されるように、Arduinoに以下の2つのライブラリを追加する必要があります。
 

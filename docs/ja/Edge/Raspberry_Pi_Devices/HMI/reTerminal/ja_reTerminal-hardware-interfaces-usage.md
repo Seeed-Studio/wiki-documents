@@ -16,7 +16,7 @@ last_update:
 
 このwikiでは、reTerminal上の様々なハードウェアとインターフェースについて、それらをプロジェクトのアイデア拡張にどのように使用するかを紹介します。
 
-**注意:** 一部のハードウェアとインターフェースについては、Raspberry Pi OSイメージ、[Buildrootイメージ](https://wiki.seeedstudio.com/ja/reTerminal-Buildroot-SDK)、[Yoctoイメージ](https://wiki.seeedstudio.com/ja/reTerminal-Yocto)を実行する際の使用方法が異なります。デフォルトの手順はRaspberry Pi OSイメージ用です。ただし、BuildrootイメージとYoctoイメージの手順が異なる場合は、明確に記載されています。
+**注意:** 一部のハードウェアとインターフェースについては、Raspberry Pi OSイメージ、[Buildrootイメージ](https://wiki.seeedstudio.com/reTerminal-Buildroot-SDK)、[Yoctoイメージ](https://wiki.seeedstudio.com/reTerminal-Yocto)を実行する際の使用方法が異なります。デフォルトの手順はRaspberry Pi OSイメージ用です。ただし、BuildrootイメージとYoctoイメージの手順が異なる場合は、明確に記載されています。
 
 ## ハードウェア概要
 
@@ -714,7 +714,7 @@ ls -l
 
 ## Micro - SDカードスロット
 
-reTerminalには**micro-sdカードスロット**が搭載されています。これは**eMMCなしのCM4モジュール**を使用している場合に、micro-SDカードに**オペレーティングシステムをインストール**したい時に便利です。最低でも8GB以上のカードを使用することをお勧めします。詳細については[このリンク](https://wiki.seeedstudio.com/ja/reTerminal/#flash-to-micro-sd-card-cm4-non-emmc-version)をご覧ください！
+reTerminalには**micro-sdカードスロット**が搭載されています。これは**eMMCなしのCM4モジュール**を使用している場合に、micro-SDカードに**オペレーティングシステムをインストール**したい時に便利です。最低でも8GB以上のカードを使用することをお勧めします。詳細については[このリンク](https://wiki.seeedstudio.com/reTerminal/#flash-to-micro-sd-card-cm4-non-emmc-version)をご覧ください！
 
 ### 回路図
 
@@ -774,7 +774,7 @@ sudo apt install arandr
 
 ## USB Type-Cポート
 
-reTerminalの**USB Type-Cポート**は、**5V/4A（推奨）を使用してreTerminalに電源を供給する**ために使用できます。ただし、**USBデバイス**として動作させることもでき、reTerminalを**ホストPC**に接続すると、reTerminalが**USB大容量記憶装置**として動作します。ここでは、PC経由でreTerminalの**オンボードeMMC**にアクセスし、eMMCに**オペレーティングシステム**をフラッシュできます。詳細については[こちら](https://wiki.seeedstudio.com/ja/reTerminal/#flash-to-emmc-cm4-emmc-version)をクリックしてください！
+reTerminalの**USB Type-Cポート**は、**5V/4A（推奨）を使用してreTerminalに電源を供給する**ために使用できます。ただし、**USBデバイス**として動作させることもでき、reTerminalを**ホストPC**に接続すると、reTerminalが**USB大容量記憶装置**として動作します。ここでは、PC経由でreTerminalの**オンボードeMMC**にアクセスし、eMMCに**オペレーティングシステム**をフラッシュできます。詳細については[こちら](https://wiki.seeedstudio.com/reTerminal/#flash-to-emmc-cm4-emmc-version)をクリックしてください！
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/type-c.png" alt="pir" width="130" height="auto"/></p>
 

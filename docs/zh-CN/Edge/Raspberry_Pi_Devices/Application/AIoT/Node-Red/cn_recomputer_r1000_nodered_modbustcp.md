@@ -46,8 +46,8 @@ reComputer R1000 支持与各种设备进行 Modbus 通信，包括 **PLC、变�
 
 ### 软件准备
 
-reComputer R1000 出厂时预装了树莓派操作系统。如果您是第一次启动此设备，请阅读我们的[入门指南](https://wiki.seeedstudio.com/cn/recomputer_r/)Wiki。
-我们已经准备了一份[Node-RED 入门指南](https://wiki.seeedstudio.com/cn/recomputer_r1000_getting_started_node_red/)。建议您在继续阅读本 wiki 之前先查看此指南。
+reComputer R1000 出厂时预装了树莓派操作系统。如果您是第一次启动此设备，请阅读我们的[入门指南](https://wiki.seeedstudio.com/recomputer_r/)Wiki。
+我们已经准备了一份[Node-RED 入门指南](https://wiki.seeedstudio.com/recomputer_r1000_getting_started_node_red/)。建议您在继续阅读本 wiki 之前先查看此指南。
 
 ### 为 Modbus TCP/IP 配置以太网设置
 

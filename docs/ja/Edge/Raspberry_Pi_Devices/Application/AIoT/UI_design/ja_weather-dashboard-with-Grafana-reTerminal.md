@@ -107,7 +107,7 @@ Azure と InflexDB の設定が完了しました。次に ESP32 の設定に移
 
 ![ESP32 Circuit Diagram](https://www.the-diy-life.com/wp-content/uploads/2021/12/ESP32-Circuit-Diagram-1024x576.jpg)
 
-- **Step 1.** [Arduino IDE](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を開き、[ライブラリをインストール](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/)します。ここでは2つのインストール方法を提供します。
+- **Step 1.** [Arduino IDE](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)を開き、[ライブラリをインストール](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)します。ここでは2つのインストール方法を提供します。
 
 1. Library Manager を使用
 

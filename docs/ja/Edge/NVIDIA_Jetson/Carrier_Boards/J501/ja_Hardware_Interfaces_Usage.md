@@ -546,7 +546,7 @@ candump can0 &
 </div>
 
 :::info
-また、[こちら](https://wiki.seeedstudio.com/ja/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/#connection-overview-with-reterminal-dm)を参照して、J501キャリアボードとreTerminal DMの間でCANを介した通信を確立することもできます。
+また、[こちら](https://wiki.seeedstudio.com/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/#connection-overview-with-reterminal-dm)を参照して、J501キャリアボードとreTerminal DMの間でCANを介した通信を確立することもできます。
 :::
 
 ## USB

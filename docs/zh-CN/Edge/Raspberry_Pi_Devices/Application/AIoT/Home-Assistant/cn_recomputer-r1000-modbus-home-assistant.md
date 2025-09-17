@@ -45,9 +45,9 @@ last_update:
 
 ### 软件准备
 
-在深入集成过程之前，确保安装所有必要的驱动程序和工具至关重要。正确[安装驱动程序](https://wiki.seeedstudio.com/cn/reComputer_r1000_use_rs485_modbus_rtu/)是Modbus RTU设备与Home Assistant之间无缝通信的先决条件。强烈建议在继续本指南之前彻底研究并安装所需的驱动程序。
+在深入集成过程之前，确保安装所有必要的驱动程序和工具至关重要。正确[安装驱动程序](https://wiki.seeedstudio.com/reComputer_r1000_use_rs485_modbus_rtu/)是Modbus RTU设备与Home Assistant之间无缝通信的先决条件。强烈建议在继续本指南之前彻底研究并安装所需的驱动程序。
 
-此外，如果您尚未安装Home Assistant，请按照[Home Assistant安装指南](https://wiki.seeedstudio.com/cn/recomputer_r1000_home_automation/)在您的reComputer R1000上进行设置。
+此外，如果您尚未安装Home Assistant，请按照[Home Assistant安装指南](https://wiki.seeedstudio.com/recomputer_r1000_home_automation/)在您的reComputer R1000上进行设置。
 
 ## 文件编辑器插件
 

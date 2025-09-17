@@ -48,7 +48,7 @@ CLIPなどの生成AI vision transformerにより、オープンボキャブラ�
   sudo apt install nvidia-jetson-services
   ```
 
-- IPカメラやローカル動画はRTSP経由でストリーミングできます。（RTSPストリーミングには、提供している[NVStreamerチュートリアル](/ja/getting_started_with_nvstreamer)の使用を推奨します。）
+- IPカメラやローカル動画はRTSP経由でストリーミングできます。（RTSPストリーミングには、提供している[NVStreamerチュートリアル](/getting_started_with_nvstreamer)の使用を推奨します。）
 
 ## はじめに
 
@@ -106,7 +106,7 @@ sudo docker ps
 
 ## RTSP ストリーム入力の追加
 
-まず、ゼロショット検出モデルで使用するRTSPストリームを以下のcurlコマンドで追加できます。ストリーミングには[NVStreamerチュートリアル](/ja/getting_started_with_nvstreamer)の使用を推奨します。
+まず、ゼロショット検出モデルで使用するRTSPストリームを以下のcurlコマンドで追加できます。ストリーミングには[NVStreamerチュートリアル](/getting_started_with_nvstreamer)の使用を推奨します。
 
 - **ステップ 1**: `0.0.0.0`をあなたのJetson IPに、`liveStreamUrl`リンクをあなたのRTSPリンクに置き換えて、ターミナルで以下のコマンドを入力してください：
 

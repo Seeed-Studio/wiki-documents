@@ -31,7 +31,7 @@ DALL-E 是由 OpenAI 开发的先进 AI 模型，能够根据文本描述生成�
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/dall2.png"/></div>
 
 
-除了演示的功能外，SenseCAP 还提供完全开源的代码和详细的教程，点击[这里](/cn/SenseCAP_Indicator_ChatGPT)了解更多详情。
+除了演示的功能外，SenseCAP 还提供完全开源的代码和详细的教程，点击[这里](/SenseCAP_Indicator_ChatGPT)了解更多详情。
 
 
 # **常见问题**

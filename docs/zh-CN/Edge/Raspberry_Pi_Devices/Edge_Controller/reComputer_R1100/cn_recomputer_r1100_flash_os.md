@@ -43,7 +43,7 @@ reComputer R1100 系列广泛应用于物联网应用，包括 **数据采集和
 
 ### 将操作系统刷写到 NVME
 
-请参考此[链接](https://wiki.seeedstudio.com/cn/recomputer_r1100_assembly_guide/#installing-an-ssd)，然后将其插入 M.2 插槽。
+请参考此[链接](https://wiki.seeedstudio.com/recomputer_r1100_assembly_guide/#installing-an-ssd)，然后将其插入 M.2 插槽。
 
 ### 从 emmc 启动并更新 eeprom
 

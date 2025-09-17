@@ -28,7 +28,7 @@ TRMNL 7.5" (OG) DIY Kitは、強力なXIAO ESP32-S3 Plusを中核とする多機
 TRMNL DIY KitをArduinoでプログラミングするには、ESP32サポート付きのArduino IDEをセットアップする必要があります。
 
 :::tip
-Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
 **ステップ 1.** [Arduino IDE](https://www.arduino.cc/en/software)をダウンロードしてインストールし、Arduinoアプリケーションを起動します。

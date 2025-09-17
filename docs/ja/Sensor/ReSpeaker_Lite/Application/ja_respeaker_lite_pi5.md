@@ -11,7 +11,10 @@ last_update:
   date: 05/15/2025
   author: ShuishengPeng
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 このプロジェクトでは、Raspberry Pi 5 を使用して音声入力、大規模モデルの応答、および音声出力機能を統合しています。ReSpeaker Lite を音声入出力デバイスとして使用し、ChatGPT および音声認識サービスとのシームレスな対話を可能にします。
 

@@ -24,7 +24,7 @@ SenseCAP IndicatorにはGroveモジュールを接続するための2つのGrove
 
 ## **サンプルコード**
 
-このサンプルコードでは、[Grove THセンサー](/ja/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor)の接続方法を紹介します：
+このサンプルコードでは、[Grove THセンサー](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor)の接続方法を紹介します：
 
 [AHT20温湿度センサーライブラリ](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20/)
 

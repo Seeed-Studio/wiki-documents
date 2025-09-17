@@ -78,10 +78,10 @@ EdgeBox-RPI-200 系列是一款基于 Raspberry Pi 的一体化工业边缘计�
 ## Raspberry Pi 工业软件生态系统
 
 凭借强大的 Raspberry Pi 工业软件生态系统，您会发现 EdgeBox 支持丰富的软件和自主平台。
-- [**Codesys**](https://wiki.seeedstudio.com/cn/Edgebox-rpi-200-codesys/)
-- [**Ignition**](https://wiki.seeedstudio.com/cn/Edgebox-rpi-200-ignition-edge/)
-- [**N3uron**](https://wiki.seeedstudio.com/cn/Edgebox-rpi-200-n3uron/)
-- [**balena**](https://wiki.seeedstudio.com/cn/Edgebox-rpi-200-balena-OS-setup/)
+- [**Codesys**](https://wiki.seeedstudio.com/Edgebox-rpi-200-codesys/)
+- [**Ignition**](https://wiki.seeedstudio.com/Edgebox-rpi-200-ignition-edge/)
+- [**N3uron**](https://wiki.seeedstudio.com/Edgebox-rpi-200-n3uron/)
+- [**balena**](https://wiki.seeedstudio.com/Edgebox-rpi-200-balena-OS-setup/)
 - **Node Red**
 
 ## 硬件概述

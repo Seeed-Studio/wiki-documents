@@ -45,10 +45,10 @@ BACnet IP（基于IP的楼宇自动化和控制网络）是一种专为管理和
 
 ### 软件准备
 
-reComputer R1000 出厂时预装了 Raspberry Pi OS。如果您是第一次启动此设备，请阅读我们的[入门指南 Wiki](https://wiki.seeedstudio.com/cn/reComputer_r/)。有关 node-red 的信息，您可以参考[以下文章](https://wiki.seeedstudio.com/cn/Edge-Box-Getting-Started-with-Node-Red/)。建议您在继续阅读本 wiki 之前先查看此指南。在本教程中，我们将连接运行 YABE 室温模拟器的主机 PC 与运行在 reComputer R1000 上的 Node-RED。
+reComputer R1000 出厂时预装了 Raspberry Pi OS。如果您是第一次启动此设备，请阅读我们的[入门指南 Wiki](https://wiki.seeedstudio.com/reComputer_r/)。有关 node-red 的信息，您可以参考[以下文章](https://wiki.seeedstudio.com/Edge-Box-Getting-Started-with-Node-Red/)。建议您在继续阅读本 wiki 之前先查看此指南。在本教程中，我们将连接运行 YABE 室温模拟器的主机 PC 与运行在 reComputer R1000 上的 Node-RED。
 
 ### 节点下载
-本教程使用 **"node-bacnet-contrib-extended"** 节点、**"node-red-contrib-loop"** 节点和 **"node-red-dashboard"** 节点。请在开始前下载它们。有关如何下载节点，您可以参考[教程](https://wiki.seeedstudio.com/cn/Edge-Box-Getting-Started-with-Node-Red/)。
+本教程使用 **"node-bacnet-contrib-extended"** 节点、**"node-red-contrib-loop"** 节点和 **"node-red-dashboard"** 节点。请在开始前下载它们。有关如何下载节点，您可以参考[教程](https://wiki.seeedstudio.com/Edge-Box-Getting-Started-with-Node-Red/)。
 ### YABE
 
 请访问此[链接](https://sourceforge.net/projects/yetanotherbacnetexplorer/)并下载 YABE（Yet Another BACnet Explorer）。YABE 是一个多功能工具，允许您模拟和探索 BACnet 设备，非常适合测试和开发目的。在您的主机 PC 上下载并安装后，YABE 将用于模拟室温数据，然后我们将使用 reComputer R1000 上的 Node-RED 读取和处理这些数据。
@@ -114,7 +114,7 @@ return [msg0, msg1, msg2];
 通过以上 4 个步骤，我们可以持续从 BACnet 设备获取数据。为了使数据变化更加直观，我们可以引入 UI 功能并绘制一个 UI 交互界面来显示数据变化。这可以使用 **"node-red-dashboard"** 节点实现。在这个示例中，使用 `"chart"` 和 `"gauge"` 来绘制三组折线图和仪表盘。将步骤 4 的输出作为 `"chart"` 和 `"gauge"` 的输入，实现对 BACnet 数据的实时可视化监控。
 <center><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/Node_red_pic/5show.gif" /></center>
 
-本节主要介绍如何使用 **"node-bacnet-contrib-extended"** 和 **"node-red-dashboard"** 节点来实现 BACnet 设备数据的可视化读取。更多关于 **"node-bacnet-contrib-extended"** 节点的使用说明，您可以参考[此教程](https://wiki.seeedstudio.com/cn/edge_box_rpi_200_node_red_bacnet_tcp/)。
+本节主要介绍如何使用 **"node-bacnet-contrib-extended"** 和 **"node-red-dashboard"** 节点来实现 BACnet 设备数据的可视化读取。更多关于 **"node-bacnet-contrib-extended"** 节点的使用说明，您可以参考[此教程](https://wiki.seeedstudio.com/edge_box_rpi_200_node_red_bacnet_tcp/)。
 
 ## 技术支持与产品讨论
 

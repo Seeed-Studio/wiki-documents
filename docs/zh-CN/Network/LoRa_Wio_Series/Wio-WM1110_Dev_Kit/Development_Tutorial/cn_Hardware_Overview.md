@@ -266,7 +266,7 @@ TWI needs to be enabled in the `sdk_config.h` file before usage.
 
 **示例代码**
 
-此示例通过 IIC 接口读取 [SHT41 温湿度传感器](https://wiki.seeedstudio.com/cn/Grove-SHT4x/) 的值，并将其打印到串口监视器。
+此示例通过 IIC 接口读取 [SHT41 温湿度传感器](https://wiki.seeedstudio.com/Grove-SHT4x/) 的值，并将其打印到串口监视器。
 
 ```cpp
 #include "nrf_gpio.h"

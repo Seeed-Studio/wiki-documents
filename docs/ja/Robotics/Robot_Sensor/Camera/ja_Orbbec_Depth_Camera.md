@@ -26,7 +26,7 @@ last_update:
 
 ## 前提条件
 
-- __[reComputer J30/40シリーズ](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)__：[JetPack 5.xシステム](/ja/reComputer_J4012_Flash_Jetpack)と[ROS Noetic環境](/ja/installing_ros1)に基づいてチュートリアルを実施します。
+- __[reComputer J30/40シリーズ](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)__：[JetPack 5.xシステム](/reComputer_J4012_Flash_Jetpack)と[ROS Noetic環境](/installing_ros1)に基づいてチュートリアルを実施します。
 
 - 依存関係をインストールします（ROSディストリビューションに注意してください）：
   
@@ -41,7 +41,7 @@ last_update:
 
 ### カメラの接続
 
-Orbbec Depth CameraをUSB Type-CでJetsonに接続し、システムに[ROSがすでにインストール](/ja/installing_ros1)されていることを確認してください。
+Orbbec Depth CameraをUSB Type-CでJetsonに接続し、システムに[ROSがすでにインストール](/installing_ros1)されていることを確認してください。
 
 <div align="center">
       <img width={700}

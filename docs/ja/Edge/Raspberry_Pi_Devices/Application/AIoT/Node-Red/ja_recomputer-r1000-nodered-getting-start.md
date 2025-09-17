@@ -42,7 +42,7 @@ last_update:
 
 ### ソフトウェアの準備
 
-reComputer-R1000は、Raspberry Pi OSがプリインストールされた状態でお手元に届きます。このデバイスを初回起動する場合は、[Getting Started](https://wiki.seeedstudio.com/ja/recomputer_r/)のWikiをお読みください。
+reComputer-R1000は、Raspberry Pi OSがプリインストールされた状態でお手元に届きます。このデバイスを初回起動する場合は、[Getting Started](https://wiki.seeedstudio.com/recomputer_r/)のWikiをお読みください。
 
 ## reComputer-R1000にNode Redをインストール
 

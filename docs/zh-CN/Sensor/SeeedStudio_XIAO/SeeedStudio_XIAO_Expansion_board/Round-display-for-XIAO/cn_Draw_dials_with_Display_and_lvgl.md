@@ -104,7 +104,7 @@ last_update:
 
 ### 软件准备
 
-这部分已在[基础 Wiki](https://wiki.seeedstudio.com/cn/get_start_round_display#software-preparation) 中详细描述，因此您可以直接跳转阅读。
+这部分已在[基础 Wiki](https://wiki.seeedstudio.com/get_start_round_display#software-preparation) 中详细描述，因此您可以直接跳转阅读。
 
 ## 使用 Seeed_GFX 库绘制简单表盘
 

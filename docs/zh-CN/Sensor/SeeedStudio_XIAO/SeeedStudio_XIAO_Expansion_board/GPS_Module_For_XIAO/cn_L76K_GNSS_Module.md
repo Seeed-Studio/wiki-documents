@@ -155,7 +155,7 @@ SeeedStudio XIAO L76K GNSS 模块是一款与所有 XIAO 开发板兼容的多 G
 要使用SeeedStudio XIAO的L76K GNSS模块，我们需要对XIAO系列进行编程。推荐的编程工具是Arduino IDE，您需要为XIAO配置Arduino环境并添加板载包。
 
 :::tip
-如果这是您第一次使用Arduino，我们强烈建议您参考[Arduino入门指南](/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用Arduino，我们强烈建议您参考[Arduino入门指南](/Getting_Started_with_Arduino/)。
 :::
 
 #### 步骤1. 根据您的操作系统下载并安装稳定版本的Arduino IDE
@@ -168,15 +168,15 @@ SeeedStudio XIAO L76K GNSS 模块是一款与所有 XIAO 开发板兼容的多 G
 
 #### 步骤3. 为您使用的XIAO配置Arduino IDE
 
-- 如果您想在后续例程中使用**Seeed Studio XIAO SAMD21**，请参考**[此教程](/cn/Seeeduino-XIAO/#software)**完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO SAMD21**，请参考**[此教程](/Seeeduino-XIAO/#software)**完成添加。
 
-- 如果您想在后续例程中使用**Seeed Studio XIAO RP2040**，请参考**[此教程](/cn/XIAO-RP2040-with-Arduino/#software-setup)**完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO RP2040**，请参考**[此教程](/XIAO-RP2040-with-Arduino/#software-setup)**完成添加。
 
-- 如果您想在后续例程中使用**Seeed Studio XIAO nRF52840**，请参考**[此教程](/cn/XIAO_BLE/#software-setup)**完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO nRF52840**，请参考**[此教程](/XIAO_BLE/#software-setup)**完成添加。
 
-- 如果您想在后续例程中使用**Seeed Studio XIAO ESP32C3**，请参考**[此教程](/cn/XIAO_ESP32C3_Getting_Started#software-setup)**完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO ESP32C3**，请参考**[此教程](/XIAO_ESP32C3_Getting_Started#software-setup)**完成添加。
 
-- 如果您想在后续例程中使用**Seeed Studio XIAO ESP32S3**，请参考**[此教程](/cn/xiao_esp32s3_getting_started#software-preparation)**完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO ESP32S3**，请参考**[此教程](/xiao_esp32s3_getting_started#software-preparation)**完成添加。
 
 #### 步骤4. 将TinyGPSPlus库添加到Arduino
 

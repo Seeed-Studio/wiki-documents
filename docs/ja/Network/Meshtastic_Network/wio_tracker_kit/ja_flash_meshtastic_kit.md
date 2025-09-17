@@ -14,7 +14,7 @@ last_update:
 このチュートリアルでは、Meshtasticネットワークを使用したいユーザー向けに、[Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html)をMeshtasticバージョンに書き込む方法をガイドします。
 
 :::tip
-ボードをLoRaWANバージョンに戻したい場合は、この[チュートリアル](https://wiki.seeedstudio.com/ja/flash_to_wio_tracker/)をご確認ください。
+ボードをLoRaWANバージョンに戻したい場合は、この[チュートリアル](https://wiki.seeedstudio.com/flash_to_wio_tracker/)をご確認ください。
 :::
 
 ### 準備

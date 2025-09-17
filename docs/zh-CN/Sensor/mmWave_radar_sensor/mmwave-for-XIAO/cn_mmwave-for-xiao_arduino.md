@@ -121,7 +121,7 @@ APP 无法读取波特率。即使修改后，APP 仍显示默认波特率。
 ## Arduino 库概述
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 <div class="github_container" style={{textAlign: 'center'}}>
@@ -309,15 +309,15 @@ class Seeed_HSP24
 
 **步骤2.** 选择您的开发板型号并将其添加到Arduino IDE中。
 
-- 如果您想在后续例程中使用**Seeed Studio XIAO SAMD21**，请参考**[此教程](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/#software)**完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO SAMD21**，请参考**[此教程](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software)**完成添加。
 
-- 如果您想在后续例程中使用**Seeed Studio XIAO RP2040**，请参考**[此教程](https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/#software-setup)**完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO RP2040**，请参考**[此教程](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/#software-setup)**完成添加。
 
-- 如果您想在后续例程中使用**Seeed Studio XIAO nRF52840**，请参考**[此教程](https://wiki.seeedstudio.com/cn/XIAO_BLE/#software-setup)**完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO nRF52840**，请参考**[此教程](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)**完成添加。
 
-- 如果您想在后续例程中使用**Seeed Studio XIAO ESP32C3**，请参考**[此教程](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started#software-setup)**完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO ESP32C3**，请参考**[此教程](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started#software-setup)**完成添加。
 
-- 如果您想在后续例程中使用**Seeed Studio XIAO ESP32S3**，请参考**[此教程](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started#software-preparation)**完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO ESP32S3**，请参考**[此教程](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)**完成添加。
 
 :::tip
 本教程将以XIAO ESP32C3为例。

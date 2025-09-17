@@ -1,12 +1,14 @@
 ---
 description: 传感器原型套件介绍
 title: 传感器原型套件介绍
+# slug: /cn/ABC
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/K1100-Getting-Started
+slug: /cn/ABC
 last_update:
   date: 11/30/2022
   author: Citric
 ---
+
 
 
 # SenseCAP - 传感器原型套件概述
@@ -14,6 +16,7 @@ last_update:
 在物联网和大数据日益普及的数字时代，需要通过传感器进行大规模数据采集以促进数字化转型。在这样的背景下，SenseCAP K1100 提供了所有必要的传感器和设备，包括 Wio Terminal、AI 视觉传感器和支持 LoRa® 的模块——这些设备共同使各类背景和水平的用户能够创建用于数据采集和解决现实世界问题的 DIY 传感器。
 
 <div align="center"><img width="1000" src="https://files.seeedstudio.com/wiki/K1100/banner.png" /></div>
+
 
 **SenseCAP - 配备 LoRa® 和 AI 的传感器原型套件** 使您能够使用 LoRaWAN® 快速实现世界的数字化，并解决现实世界中的挑战。通过这个即插即用的工具包，任何人都可以为其边缘设备添加 AI 功能，释放 AIoT 的潜力。
 
@@ -547,7 +550,7 @@ IP66 外壳、蓝牙配置、与全球 LoRaWAN® 网络的兼容性、内置 19 
         </tr>
         <tr>
             <td colspan="3"><div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-helium/113.png" /></div></td>
-        </tr>
+        </tr>   
 </tbody></table>
 
 ### The Things Network 部分
@@ -659,6 +662,7 @@ IP66 外壳、蓝牙配置、与全球 LoRaWAN® 网络的兼容性、内置 19 
     </tr>
   </tbody></table>
 
+
 <table align="center">
   <tbody><tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit33.jpg" alt="pir" width="1100" height="auto" /></p></td>
@@ -680,6 +684,7 @@ IP66 外壳、蓝牙配置、与全球 LoRaWAN® 网络的兼容性、内置 19 
   <p style={{}}><a href="https://github.com/limengdu/Seeed-Studio-LoRaWAN-Dev-Kit" target="_blank" /></p><div align="center"><a href="https://github.com/limengdu/Seeed-Studio-LoRaWAN-Dev-Kit" target="_blank"><img width="500" src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></a></div><p />
 </div>
 
+
 ## Helium LoRaWAN®
 
 更多详情，请阅读 [Helium LoRaWAN®: 公共基础设施与私有网络服务器](https://blog.helium.com/helium-lorawan-public-infrastructure-with-ultimate-privacy-9132560e4ae6)。
@@ -688,17 +693,18 @@ IP66 外壳、蓝牙配置、与全球 LoRaWAN® 网络的兼容性、内置 19 
 
 更多详情，请访问 [TTN 官方网站](https://www.thethingsnetwork.org/docs/)。
 
+
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们的产品时体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 

@@ -44,8 +44,8 @@ import TabItem from '@theme/TabItem';
 
 如果这是您第一次使用 XIAO ESP32S3 Sense，那么在开始之前，我们建议您阅读以下两个 Wiki 来学习如何使用它。
 
-- [Seeed Studio XIAO ESP32S3 (Sense) 入门指南](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/)
-- [Seeed Studio XIAO ESP32S3 麦克风使用方法](https://wiki.seeedstudio.com/cn/xiao_esp32s3_sense_mic/)
+- [Seeed Studio XIAO ESP32S3 (Sense) 入门指南](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+- [Seeed Studio XIAO ESP32S3 麦克风使用方法](https://wiki.seeedstudio.com/xiao_esp32s3_sense_mic/)
 
 ## 2. 捕获（离线）音频数据
 

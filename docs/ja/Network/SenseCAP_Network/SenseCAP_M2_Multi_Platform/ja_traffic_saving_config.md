@@ -29,7 +29,7 @@ OSバージョンは0.9.5より新しい必要があります<br/>
 ファームウェアバージョンは1.1.6より新しい必要があります
 :::
 
-[クイックスタート](https://wiki.seeedstudio.com/ja/quick_start_with_M2_MP/)を確認してLuciページにログインしてください。
+[クイックスタート](https://wiki.seeedstudio.com/quick_start_with_M2_MP/)を確認してLuciページにログインしてください。
 
 `Status` -> `Overview`に移動し、現在のOSとファームウェアのバージョンを確認してください。
 

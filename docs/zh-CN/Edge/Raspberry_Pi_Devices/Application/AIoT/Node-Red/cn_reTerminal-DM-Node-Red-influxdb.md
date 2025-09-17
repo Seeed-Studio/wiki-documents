@@ -39,7 +39,7 @@ last_update:
 
 ### 软件准备
 
-我们已经准备了一个 [Node-RED 入门指南](https://wiki.seeedstudio.com/cn/reTerminal-DM-Getting-Started-with-Node-Red/)。建议您在继续阅读本 wiki 之前先查看此指南。
+我们已经准备了一个 [Node-RED 入门指南](https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Node-Red/)。建议您在继续阅读本 wiki 之前先查看此指南。
 
 ## 在 reTerminal DM 上安装 InfluxDB
 

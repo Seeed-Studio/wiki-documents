@@ -81,7 +81,7 @@ IFTTT 是一个基于网络的服务，允许开发者在各种应用程序、�
 
 ### 步骤 4. Watcher 消息发送到 Node-RED
 
-将这些模块拖拽到工作区并将它们连接在一起。如果您还不知道如何从 watcher 发送消息到 Node-RED，[请点击这里](https://wiki.seeedstudio.com/cn/watcher_to_node_red/)。
+将这些模块拖拽到工作区并将它们连接在一起。如果您还不知道如何从 watcher 发送消息到 Node-RED，[请点击这里](https://wiki.seeedstudio.com/watcher_to_node_red/)。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_ifttt_image/20.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -114,7 +114,7 @@ return msg;
 
 ### 步骤 6. 向 Watcher 发送任务
 
-首先，您需要按照下面的视频在 Watcher 中运行任务。如果您想了解更多信息，[请点击这里](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)。
+首先，您需要按照下面的视频在 Watcher 中运行任务。如果您想了解更多信息，[请点击这里](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)。
 
 <div class="table-center">
 <iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

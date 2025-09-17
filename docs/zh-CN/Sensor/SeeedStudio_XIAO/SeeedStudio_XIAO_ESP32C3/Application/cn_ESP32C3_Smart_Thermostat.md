@@ -43,7 +43,7 @@ last_update:
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-            <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
+            <a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> 查看更多 🖱️</font></span></strong>
             </a>
         </div></td>
@@ -137,7 +137,7 @@ e. 瞬时按钮（任何类型都可以）
 
 ### 安装 Home Assistant
 
-确保您已经安装并运行了 Home Assistant。这里有多个介绍如何将 Home Assistant 刷入[产品](https://wiki.seeedstudio.com/cn/home_assistant_topic/#-devices-for-home-assistant-)的 wiki。我使用的是由 Raspberry Pi CM4 供电的 Home assistant Yellow，所以我可以[直接使用官方方法将操作系统刷入 Home assistant Yellow](https://yellow.home-assistant.io/power-supply/)。
+确保您已经安装并运行了 Home Assistant。这里有多个介绍如何将 Home Assistant 刷入[产品](https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-)的 wiki。我使用的是由 Raspberry Pi CM4 供电的 Home assistant Yellow，所以我可以[直接使用官方方法将操作系统刷入 Home assistant Yellow](https://yellow.home-assistant.io/power-supply/)。
 
 ### 在 Home Assistant 上安装 ESPHome
 
@@ -617,7 +617,7 @@ binary_sensor:
 ## ✨ 贡献者项目
 
 - 本项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
-- 感谢 Chris 的努力，您的工作将会被[展示](https://wiki.seeedstudio.com/cn/Honorary-Contributors/)。
+- 感谢 Chris 的努力，您的工作将会被[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)。
 
 ## 技术支持与产品讨论
 

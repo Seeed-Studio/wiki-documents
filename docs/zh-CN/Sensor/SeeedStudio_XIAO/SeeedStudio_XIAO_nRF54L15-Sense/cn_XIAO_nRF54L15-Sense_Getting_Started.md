@@ -673,7 +673,7 @@ TPS22916CYFPR 芯片的作用：
 以下示例代码是为 PlatformIO 设计的，但它也兼容 nRF Connect SDK。
 
 在 PlatformIO 中使用 XIAO nRF54L15
-如果您想在 PlatformIO 中使用 XIAO nRF54L15，请参考此教程进行配置：[XIAO nRF54L15 PlatformIO 配置](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_with_platform_io/)。
+如果您想在 PlatformIO 中使用 XIAO nRF54L15，请参考此教程进行配置：[XIAO nRF54L15 PlatformIO 配置](https://wiki.seeedstudio.com/xiao_nrf54l15_with_platform_io/)。
 
 :::
 <div class="github_container" style={{textAlign: 'center'}}>

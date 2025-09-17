@@ -19,7 +19,7 @@ last_update:
 
 このチュートリアルでは、SenseCraft HMIでのWeb機能の使用方法を説明し、Webコンテンツのセットアップ、プレビュー、およびデバイスへのデプロイメントについて説明します。
 
-この記事では、[reTerminal E1002](https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1002/)を例として、SenseCraft HMIプラットフォームでこの機能を使用する方法を説明します。
+この記事では、[reTerminal E1002](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002/)を例として、SenseCraft HMIプラットフォームでこの機能を使用する方法を説明します。
 
 ## Web機能の開始
 
@@ -412,7 +412,7 @@ SenseCraft HMIのWeb機能は、スクリーンベースのデバイスでWebコ
 ## リソース
 
 - [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi)
-- [対応デバイス - reTerminal E シリーズ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_main_page/)
+- [対応デバイス - reTerminal E シリーズ](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
 
 ## 技術サポート & 製品ディスカッション
 

@@ -21,7 +21,7 @@ sidebar_position: 3
 :::tip
 基于 VS Code，如果您想在 nRF Connect SDK 上使用以下案例，请参考提供的连接，添加 app.overlay 文件并修改 prj.conf 中的内容
 
-[XIAO nRF54L15 添加 overlay 文件并修改 conf 文件](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/)。
+[XIAO nRF54L15 添加 overlay 文件并修改 conf 文件](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/)。
 
 :::
 
@@ -38,7 +38,7 @@ sidebar_position: 3
 
 ### 添加 XIAO nRF54L15 开发板
 
-要将 XIAO nRF54L15(Sense) 开发板添加到 NCS (nRF Connect SDK)，您可以参考 Seeed Studio Wiki 上的["入门指南"](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_getting_started/)。该指南将提供详细的操作说明。
+要将 XIAO nRF54L15(Sense) 开发板添加到 NCS (nRF Connect SDK)，您可以参考 Seeed Studio Wiki 上的["入门指南"](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/)。该指南将提供详细的操作说明。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -257,7 +257,7 @@ int observer_start(void)
 
 ### 添加 XIAO nRF54L15 开发板
 
-要将 XIAO nRF54L15(Sense) 开发板添加到 NCS (nRF Connect SDK) 中，您可以参考 Seeed Studio Wiki 上的["入门指南"](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_getting_started/)。该指南将提供详细的操作步骤说明。
+要将 XIAO nRF54L15(Sense) 开发板添加到 NCS (nRF Connect SDK) 中，您可以参考 Seeed Studio Wiki 上的["入门指南"](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/)。该指南将提供详细的操作步骤说明。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -422,7 +422,7 @@ int main(void)
 
 ### 添加 XIAO nRF54L15 开发板
 
-要将 XIAO nRF54L15(Sense) 开发板添加到 NCS（nRF Connect SDK），您可以参考 Seeed Studio Wiki 上的["入门指南"](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_getting_started/)。该指南将提供详细的操作说明。
+要将 XIAO nRF54L15(Sense) 开发板添加到 NCS（nRF Connect SDK），您可以参考 Seeed Studio Wiki 上的["入门指南"](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/)。该指南将提供详细的操作说明。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">

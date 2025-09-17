@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 ![](https://files.seeedstudio.com/wiki/Xadow_IMU_9DOF/img/Xadow_9dof.jpg)
 Xadow - IMU 9DOFは、高性能な9軸モーション追跡モジュールであり、MPU-9150を基盤としています。MPU-9150は、スマートフォン、タブレット、ウェアラブルセンサーなどの消費者向け電子機器の低消費電力、低コスト、高性能要件に対応するために設計された世界初の統合型9軸モーション追跡デバイスです。MPU-9150は、ジャイロスコープ出力をデジタル化するための3つの16ビットADC、加速度計出力をデジタル化するための3つの16ビットADC、および磁力計出力をデジタル化するための3つの13ビットADCを備えています。

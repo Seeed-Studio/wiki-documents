@@ -70,7 +70,7 @@ Seeed Studio XIAO nRF52840 SenseでEdge Impulseを使用するためのクイッ
 
 ### ソフトウェア
 
-必要なライブラリは以下の通りです。ハードウェアが正常に機能しているかどうかを確認するために、ここのコードを使用することを強く推奨します。ライブラリのインストールに問題がある場合は、[こちら](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/)を参照してください。
+必要なライブラリは以下の通りです。ハードウェアが正常に機能しているかどうかを確認するために、ここのコードを使用することを強く推奨します。ライブラリのインストールに問題がある場合は、[こちら](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)を参照してください。
 
 - [Seeed_Arduino_LSM6DS3-master](https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Seeed_Arduino_LSM6DS3-master.zip)
 - [U8g2](https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/U8g2.zip)

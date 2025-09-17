@@ -18,21 +18,21 @@ toc_max_heading_level: 3
 ## 简介
 
 <div class="table-center">
- <table align="center">
-  <tr>
-   <th>Grove Vision AI V2</th>
-  </tr>
-  <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/43.jpg" style={{width:250, height:'auto'}}/></div></td>
-  </tr>
-  <tr>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}>立即购买 🖱️</font></span></strong>
-    </a>
-   </div></td>
-  </tr>
- </table>
+	<table align="center">
+		<tr>
+			<th>Grove Vision AI V2</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/43.jpg" style={{width:250, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html" target="_blank">
+				<strong><span><font color={'FFFFFF'} size={"4"}>立即购买 🖱️</font></span></strong>
+				</a>
+			</div></td>
+		</tr>
+	</table>
 </div>
 
 Grove Vision AI V2 是一个强大的 AI 摄像头模块，允许用户部署现成的模型用于视觉应用。除了其 AI 功能外，Grove Vision AI V2 还提供了多种硬件功能和使用选项，以增强其功能性和易用性。
@@ -127,6 +127,7 @@ Arduino 库与最新的 AT 指令集保持兼容，确保与模块交互的一�
 
 \*⚠️: 可能无法正常工作
 :::
+
 
 ## 连接 Grove Vision AI V2
 
@@ -234,21 +235,20 @@ void loop()
     }
 }
 ```
-
 </TabItem>
 </Tabs>
 
 <table align="center">
- <tr>
-     <th>连接设备</th>
-     <th>上传固件</th>
+	<tr>
+	    <th>连接设备</th>
+	    <th>上传固件</th>
         <th>监控</th>
- </tr>
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_connect.jpg" style={{width:500, height:'auto'}}/></div></td>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_code.png" style={{width:500, height:'auto'}}/></div></td>
+	</tr>
+	<tr>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_connect.jpg" style={{width:500, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_code.png" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_monitor.png" style={{width:500, height:'auto'}}/></div></td>
- </tr>
+	</tr>
 </table>
 
 ## *示例 2:* 获取推理结果
@@ -445,16 +445,16 @@ void loop() {
 </Tabs>
 
 <table align="center">
- <tr>
-     <th>连接设备</th>
-     <th>上传固件</th>
+	<tr>
+	    <th>连接设备</th>
+	    <th>上传固件</th>
       <th>监控</th>
- </tr>
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_connect.jpg" style={{width:500, height:'auto'}}/></div></td>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/reference_code.png" style={{width:500, height:'auto'}}/></div></td>
+	</tr>
+	<tr>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_connect.jpg" style={{width:500, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/reference_code.png" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/reference_monitor.png" style={{width:500, height:'auto'}}/></div></td>
- </tr>
+	</tr>
 </table>
 
 ## *示例 3:* 将 JPEG 图像保存到 SD 卡
@@ -464,7 +464,6 @@ void loop() {
 Grove Vision AI V2 模块允许将 JPEG 图像直接保存到外部 SD 卡。为了确保兼容性，建议将 SD 卡格式化为 ***FAT32***，并设置簇大小为 `8192`，或者使用 **exFAT** 文件系统。当保存图像时，如果默认保存路径 `Grove Vision AI (V2) Export` 不存在，模块会自动创建该路径。
 
 :::info 注意
-
 - 请确保固件版本高于 2024 年 4 月 18 日。
 :::
 
@@ -540,7 +539,6 @@ player = ImagePlayer(parent_directory, switch_time=0.3)  # 在此自定义图像
 # 启动图像播放器
 player.start()
 ```
-
 </details>
 
 调用 `save_jpeg()` 时，意味着您向 Grove Vision AI V2 模块发送了 AT 命令 `AT+ACTION="save_jpeg()"`。
@@ -561,7 +559,6 @@ void setup()
 ```
 
 ### 完整代码
-
 <Tabs groupId="grove_connect">
 <TabItem value="i2c" label="Grove(I2C)" >
 
@@ -680,16 +677,16 @@ void loop()
 </Tabs>
 
 <table align="center">
- <tr>
-     <th>连接设备</th>
-     <th>上传固件</th>
+	<tr>
+	    <th>连接设备</th>
+	    <th>上传固件</th>
       <th>监控</th>
- </tr>
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_connect.jpg" style={{width:500, height:'auto'}}/></div></td>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/save_image_code.png" style={{width:500, height:'auto'}}/></div></td>
+	</tr>
+	<tr>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_connect.jpg" style={{width:500, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/save_image_code.png" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/save_image_monitor.png" style={{width:500, height:'auto'}}/></div></td>
- </tr>
+	</tr>
 </table>
 
 ## Base64 转换为 JPEG 图像 {#base64tojpeg}
@@ -796,7 +793,6 @@ void loop() {
   }
 }
 ```
-
 </TabItem>
 </Tabs>
 
@@ -825,7 +821,6 @@ Base64 编码用于避免通过文本协议（如 HTTP、JSON、XML）直接传�
 ### invoke 的功能是什么？ {#faq_invoke}
 
 每次从 Grove Vision V2 获取数据值时，都需要调用 `invoke` 函数：
-
 ```cpp
 /**
  * @brief 调用算法指定次数
@@ -849,12 +844,10 @@ int SSCMA::invoke(int times, bool filter, bool show);
 
 :::info
 如果使用 `SSCMA.begin()`，它默认使用 I2C（Wire）进行通信，如函数头中定义：
-
 ```cpp
 bool begin(TwoWire *wire = &Wire, int32_t rst = -1, uint16_t address = I2C_ADDRESS,
       uint32_t wait_delay = 2, uint32_t clock = SSCMA_IIC_CLOCK);
 ```
-
 :::
 
 ## 资源

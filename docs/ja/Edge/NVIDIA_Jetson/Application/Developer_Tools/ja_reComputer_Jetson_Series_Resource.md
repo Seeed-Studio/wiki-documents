@@ -118,8 +118,8 @@ NVIDIA ® Jetson™ は、エネルギー効率的でコンパクトなフォー
 
 reComputer Jetsonシリーズ製品には16 GB eMMCが搭載されており、`ubuntu 18.04 LTS`と`NVIDIA JetPack 4.6`の両方がプリインストールされているため、プロジェクト開発に直接適用できます。再フラッシュを行いたい場合は、以下の適切なドキュメントをご覧ください：
 
-- [J1010キャリアバージョン](https://wiki.seeedstudio.com/ja/reComputer_J1010_J101_Flash_Jetpack/)
-- [Jetson A206キャリアボード](https://wiki.seeedstudio.com/ja/reComputer_J1020_A206_Flash_JetPack/)
+- [J1010キャリアバージョン](https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack/)
+- [Jetson A206キャリアボード](https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack/)
 
 ## サポート
 

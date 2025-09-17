@@ -20,7 +20,7 @@ last_update:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/workspace_flow.png" /></div>
 
-如果您是 Node-RED 的新手，或者您有兴趣学习如何将视觉 AI 与云台控制集成，请参考[此页面](https://wiki.seeedstudio.com/cn/recamera_develop_with_node-red/)。
+如果您是 Node-RED 的新手，或者您有兴趣学习如何将视觉 AI 与云台控制集成，请参考[此页面](https://wiki.seeedstudio.com/recamera_develop_with_node-red/)。
 
 请同时注意云台的轴范围，如下图所示：
 
@@ -685,7 +685,7 @@ For status query commands (94) with "Output in decimal" selected:
 
 ### PID 控制
 
-请查看[此处](https://wiki.seeedstudio.com/cn/recamera_pid_adjustment/#adjust-pid-with-node-red)关于PID节点的文档。
+请查看[此处](https://wiki.seeedstudio.com/recamera_pid_adjustment/#adjust-pid-with-node-red)关于PID节点的文档。
 
 ## 技术支持与产品讨论
 

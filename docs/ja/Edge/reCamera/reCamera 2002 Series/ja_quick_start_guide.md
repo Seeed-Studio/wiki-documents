@@ -110,7 +110,7 @@ reCameraからPCにUSBケーブルを接続すると、```192.168.42.1```にア�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Wi-Fi_list.png" /></div>
 
-問題が発生した場合は、[ネットワークトラブルシューティング](https://wiki.seeedstudio.com/ja/recamera_network_connection/)をご覧ください。
+問題が発生した場合は、[ネットワークトラブルシューティング](https://wiki.seeedstudio.com/recamera_network_connection/)をご覧ください。
 
 ### 方法2：Ethernet
 
@@ -135,7 +135,7 @@ Ethernetポートを使用したい場合は、箱に入っているケーブル
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/laptop_wifi_list.png" /></div>
 
 このAPに接続すると、ウェブサイトが自動的にポップアップするはずです。そうでない場合は、ブラウザで**192.168.16.1**と入力してページにアクセスできます。その後、reCameraを接続したいwifiを選択できます。
-複数のreCameraをお持ちの場合は、[デバイス管理](https://wiki.seeedstudio.com/ja/recamera_getting_started/#multi-devices-management)を参照してどれがどれかを確認できます。
+複数のreCameraをお持ちの場合は、[デバイス管理](https://wiki.seeedstudio.com/recamera_getting_started/#multi-devices-management)を参照してどれがどれかを確認できます。
 
 ## 基本的なWebアクセス
 
@@ -155,7 +155,7 @@ WebのURL：
 - **電源**：`ip_address/#/power`
 - **オリジナルNode-RED**：```ip_address:1880```
 
-**デバイスのOSバージョンを確認してください**。バージョン0.1.3と0.1.4の間には大きなアップグレードがあります。よりスムーズなユーザーエクスペリエンスのために、0.1.5以上へのアップグレードをお勧めします。```サイドバー -> システム -> ソフトウェアアップデート```に移動してソフトウェアバージョンを確認し、最新バージョンのOSを適用してインストールしてください。アップデート手順については[OTAアップグレードガイドライン](https://wiki.seeedstudio.com/ja/recamera_getting_started/#ota-upgrade-from-013-to-latest-version)を参照してください。
+**デバイスのOSバージョンを確認してください**。バージョン0.1.3と0.1.4の間には大きなアップグレードがあります。よりスムーズなユーザーエクスペリエンスのために、0.1.5以上へのアップグレードをお勧めします。```サイドバー -> システム -> ソフトウェアアップデート```に移動してソフトウェアバージョンを確認し、最新バージョンのOSを適用してインストールしてください。アップデート手順については[OTAアップグレードガイドライン](https://wiki.seeedstudio.com/recamera_getting_started/#ota-upgrade-from-013-to-latest-version)を参照してください。
 
 ### 0.1.3から最新バージョンへのOTAアップグレード
 
@@ -177,7 +177,7 @@ reCameraの最初のバッチを入手した場合は、この手順に従って
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/OSupgrade4.png" /></div>
 
-**ステップ5**：パスワードを変更するための読み込みページに入ります。これで、[このダウンロード手順](https://wiki.seeedstudio.com/ja/recamera_getting_started/#access-recamera-preview-dashboard)に従って、Node-REDダッシュボード付きの最新バージョンreCameraを体験できます。
+**ステップ5**：パスワードを変更するための読み込みページに入ります。これで、[このダウンロード手順](https://wiki.seeedstudio.com/recamera_getting_started/#access-recamera-preview-dashboard)に従って、Node-REDダッシュボード付きの最新バージョンreCameraを体験できます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/OSupgrade5.png" /></div>
 
@@ -240,7 +240,7 @@ OSを自分でアップグレードした場合は、Sensecraft AIからダッ�
 
 ### コンピュータビジョンモデル
 
-提供されたワークフローでは、デフォルトで`YOLO11n detection model`が選択されています。これはリアルタイムオブジェクト検出のための最新のコンピュータビジョンモデルです。ノード内で他のモデルに置き換えることもできます。利用可能な他のモデルを確認したい場合は、この[wiki](https://wiki.seeedstudio.com/ja/recamera_on_device_models/)を参照してください。
+提供されたワークフローでは、デフォルトで`YOLO11n detection model`が選択されています。これはリアルタイムオブジェクト検出のための最新のコンピュータビジョンモデルです。ノード内で他のモデルに置き換えることもできます。利用可能な他のモデルを確認したい場合は、この[wiki](https://wiki.seeedstudio.com/recamera_on_device_models/)を参照してください。
 
 **Intersection over Union (IoU)**: IoUは、予測されたバウンディングボックスとグラウンドトゥルースバウンディングボックス間の重複を評価するために使用されるメトリックです。これは、2つのボックスの交差領域と2つのボックスの結合領域の比率として計算されます。IoUの値は通常0から1の範囲にあります。私たちはこれを0-100のスケールに標準化しました。IoU値0は予測ボックスとグラウンドトゥルースボックス間に重複がないことを表します。値100は完全な一致を示し、2つのボックスが完全に重複していることを意味します。
 
@@ -302,7 +302,7 @@ OSを自分でアップグレードした場合は、Sensecraft AIからダッ�
 これにより、開発したアプリケーションやローカルストレージの画像・動画を含むユーザー情報が削除されます。慎重に操作してください。
 :::
 
-デバイスのファームウェアを特定のバージョンに復元したい場合は、[osバージョン管理](https://wiki.seeedstudio.com/ja/recamera_os_version_control)をご覧ください。
+デバイスのファームウェアを特定のバージョンに復元したい場合は、[osバージョン管理](https://wiki.seeedstudio.com/recamera_os_version_control)をご覧ください。
 
 ## 複数デバイス管理
 

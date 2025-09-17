@@ -689,7 +689,7 @@ void loop() {
 
 这部分可以参考我们为 XIAO ESP32C3 编写的访问 ChatGPT 的示例，其中详细介绍了 WiFiClient 和 HTTPClient 的使用方法。
 
-- [学习在 XIAO ESP32C3 上使用 WiFiClient 和 HTTPClient - XIAO ESP32C3 & ChatGPT 实战](https://wiki.seeedstudio.com/cn/xiaoesp32c3-chatgpt)
+- [学习在 XIAO ESP32C3 上使用 WiFiClient 和 HTTPClient - XIAO ESP32C3 & ChatGPT 实战](https://wiki.seeedstudio.com/xiaoesp32c3-chatgpt)
 
 ## WiFi Mesh
 

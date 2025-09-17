@@ -89,7 +89,7 @@ The Things Indoor LoRaWAN WiFi Gateway、The Things Network Console、およびS
 注意：SenseCAP について知らない場合は、簡単な紹介をします：
 > Seeed 産業用 IoT（IIoT）製品シリーズの最初のローンチの中で、SenseCAP は無線環境センシングアプリケーションに焦点を当てています：スマート農業、精密農業、スマートシティなどです。ハードウェア製品（センサー、データロガー、ゲートウェイなど）、ソフトウェアサービス（SenseCAP ポータル、モバイルアプリ、オープンダッシュボード）、およびデバイスとデータ管理用の API で構成されています。SenseCAP は LoRa、2G、4G、NB-IoT などの異なる通信プロトコルをサポートしています。
 
-詳細については、[SenseCAP Introduction](https://wiki.seeedstudio.com/ja/Industrial-IoT-SenseCAP-Introduction/) をクリックしてください。
+詳細については、[SenseCAP Introduction](https://wiki.seeedstudio.com/Industrial-IoT-SenseCAP-Introduction/) をクリックしてください。
 
 ### ステップ 1：TTIG ゲートウェイをアクティベートする
 

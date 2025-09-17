@@ -22,7 +22,7 @@ last_update:
 XIAO用L76-L GNSSへようこそ - Seeed StudioのXIAO製品シリーズの最新追加製品です。このGNSSモジュールは、プロジェクトに精密な測位機能を提供するだけでなく、XIAOメインコントローラーとのシームレスな統合により強力なツールとなります。モバイルアプリケーションの設計、追跡デバイス、またはプロジェクトに位置情報機能を追加したい場合でも、このモジュールが最適な選択肢です。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/ja/gnss_for_xiao" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="/gnss_for_xiao" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>

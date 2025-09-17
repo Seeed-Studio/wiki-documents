@@ -850,8 +850,8 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 reComputer Industrialボード上のすべてのハードウェアとインターフェースの使用方法について詳しく学ぶには、私たちが準備した関連するwikiドキュメントに従うことをお勧めします。
 
-- [reComputer Industrial J20 ハードウェアとインターフェースの使用方法](https://wiki.seeedstudio.com/ja/reComputer_Industrial_J20_Hardware_Interfaces_Usage)
-- [reComputer Industrial J40, J30 ハードウェアとインターフェースの使用方法](https://wiki.seeedstudio.com/ja/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage)
+- [reComputer Industrial J20 ハードウェアとインターフェースの使用方法](https://wiki.seeedstudio.com/reComputer_Industrial_J20_Hardware_Interfaces_Usage)
+- [reComputer Industrial J40, J30 ハードウェアとインターフェースの使用方法](https://wiki.seeedstudio.com/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage)
 
 ## リソース
 

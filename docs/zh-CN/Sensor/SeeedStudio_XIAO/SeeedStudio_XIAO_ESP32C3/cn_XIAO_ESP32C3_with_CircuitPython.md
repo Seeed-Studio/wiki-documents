@@ -169,7 +169,7 @@ thonny
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/6.png" /></div>
 
-- 更多信息请参考 [硬件概述](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/#hardware-overview)
+- 更多信息请参考 [硬件概述](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#hardware-overview)
 - [Seeed Studio XIAO ESP32C3 原理图](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-SCH.pdf)
 
 ## 在 XIAO ESP32C3 上开始使用 CircuitPython

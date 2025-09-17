@@ -102,7 +102,7 @@ Seeed Studio XIAO ESP32C3は、Espressif ESP32-C3 WiFi/Bluetoothデュアルモ�
 
 ## XIAO ESP32C3 をネットワークに接続するための設定
 
-WiFi の使用については、[XIAO ESP32C3 の WiFi 使用チュートリアル](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_WiFi_Usage/#connect-to-a-wifi-network)で詳しく説明されています。
+WiFi の使用については、[XIAO ESP32C3 の WiFi 使用チュートリアル](https://wiki.seeedstudio.com/XIAO_ESP32C3_WiFi_Usage/#connect-to-a-wifi-network)で詳しく説明されています。
 
 ESP32 が Wi-Fi ステーションとして設定されている場合、他のネットワーク（ルーターなど）に接続できます。このシナリオでは、ルーターが ESP ボードに一意の IP アドレスを割り当てます。
 

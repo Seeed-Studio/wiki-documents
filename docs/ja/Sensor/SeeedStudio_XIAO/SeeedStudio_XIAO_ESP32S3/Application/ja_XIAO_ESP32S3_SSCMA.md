@@ -147,7 +147,7 @@ Roboflowを初めて使用し、データセットの選択について全く判
 データセットの写真撮影にはXIAO ESP32S3の使用を強くお勧めします。これはXIAO ESP32S3に最適です。XIAO ESP32S3 Senseで写真を撮影するサンプルプログラムは、以下のWikiリンクで確認できます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/xiao_esp32s3_camera_usage/#taking-photos-with-the-camera" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#taking-photos-with-the-camera" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Wikiへ移動</font></span></strong>
     </a>
 </div>
@@ -264,7 +264,7 @@ Roboflowは画像にラベルを付ける3つの異なる方法を提供して�
 
 ### Step 1. Colab Notebookへのアクセス
 
-[SenseCraft Model AssistantのWiki](https://wiki.seeedstudio.com/ja/ModelAssistant_Introduce_Quick_Start/#model-training)で、さまざまな種類のモデルGoogle Colabコードファイルを見つけることができます。どのコードを選択すべきかわからない場合は、モデルのクラス（物体検出または画像分類）に応じて、いずれかを選択できます。
+[SenseCraft Model AssistantのWiki](https://wiki.seeedstudio.com/ModelAssistant_Introduce_Quick_Start/#model-training)で、さまざまな種類のモデルGoogle Colabコードファイルを見つけることができます。どのコードを選択すべきかわからない場合は、モデルのクラス（物体検出または画像分類）に応じて、いずれかを選択できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/24.png" style={{width:1000, height:'auto'}}/></div>
 

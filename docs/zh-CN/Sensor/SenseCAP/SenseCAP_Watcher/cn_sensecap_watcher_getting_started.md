@@ -82,7 +82,7 @@ Watcher配有独特的包装，可兼作时尚的日历式支架。通过将Watc
 ### 步骤3. 设备绑定
 
 :::caution
-当您的设备绑定到SenseCraft APP时，[SenseCraft Pro](https://wiki.seeedstudio.com/cn/watcher_price/)将自动激活试用服务。
+当您的设备绑定到SenseCraft APP时，[SenseCraft Pro](https://wiki.seeedstudio.com/watcher_price/)将自动激活试用服务。
 :::
 
 开启Watcher后，如果之前未绑定过设备，它会提示您连接到SenseCraft应用程序。或者，您可以在设置菜单中找到"连接到APP"选项。然后Watcher将显示一个二维码来下载SenseCraft应用程序。
@@ -190,7 +190,7 @@ import TabItem from '@theme/TabItem';
 :::danger
 使用 SenseCraft AI 的某些服务可能需要付费，请参考以下文档了解详情：
 
-**[SenseCraft AI for Watcher 计划和权益](https://wiki.seeedstudio.com/cn/watcher_price/)**
+**[SenseCraft AI for Watcher 计划和权益](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 SenseCraft 应用允许您向 Watcher 设备发送任务。在此示例中，我们将演示使用 Watcher 提供的示例任务之一发送任务的过程。让我们使用命令*如果您看到蜡烛，请通知我*。
@@ -231,7 +231,7 @@ Watcher 将下载任务指令，下载完成后，它将转变为一个警觉的
 
 通过遵循这些步骤，您可以有效地使用 SenseCraft APP 向您的 Watcher 发送命令，使其能够执行特定的监控任务，并在满足指定条件时通知您。
 
-请记住定期查看和调整您的 Watcher 设置和任务流程，以确保最佳性能并与您的监控要求保持一致。有关 APP 任务和选项的更详细描述和解释，以及间隔的详细描述，请阅读**[Watcher 任务分配指南](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)**以了解更多信息。
+请记住定期查看和调整您的 Watcher 设置和任务流程，以确保最佳性能并与您的监控要求保持一致。有关 APP 任务和选项的更详细描述和解释，以及间隔的详细描述，请阅读**[Watcher 任务分配指南](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)**以了解更多信息。
 
 </TabItem>
 
@@ -240,7 +240,7 @@ Watcher 将下载任务指令，下载完成后，它将转变为一个警觉的
 :::danger
 使用 SenseCraft AI 的某些服务可能需要付费，详情请参考以下文档：
 
-**[SenseCraft AI for Watcher 计划和权益](https://wiki.seeedstudio.com/cn/watcher_price/)**
+**[SenseCraft AI for Watcher 计划和权益](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 Watcher 提供了一种便捷直观的方式，通过语音命令发送任务或进行对话，这要归功于其"按键通话"功能。此功能可从设备上的任何屏幕或界面访问，使您能够轻松与 Watcher 交互而无需浏览菜单。以下是如何使用此功能的分步指南：

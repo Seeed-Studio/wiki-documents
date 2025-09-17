@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 [AT Command Tester](https://m2msupport.net/m2msupport/module-tester/)は、ATコマンドやその他のモジュール機能（[データコール](https://m2msupport.net/m2msupport/data-call-at-commands-to-set-up-gprsedgeumtslte-data-call/)、[音声通話](https://m2msupport.net/m2msupport/voice-call-at-commands-to-set-up-voice-call/)、[HTTP](https://m2msupport.net/m2msupport/at-command-for-http-functions-for-remote-server-data-access/)、[ネットワーク登録](https://m2msupport.net/m2msupport/network-registration/)、[SMS](https://m2msupport.net/m2msupport/sms-at-commands/)、[電話帳](https://m2msupport.net/m2msupport/sim-phonebook-at-commands/)、[信号品質](https://m2msupport.net/m2msupport/signal-quality/)、[SIMインターフェース](https://m2msupport.net/m2msupport/sim-at-commands-for-sim-presense-and-status/)、[デバイス情報](https://m2msupport.net/m2msupport/at-commands-to-get-device-information/)など）のテストを行うためのオンラインツールです。
 

@@ -32,7 +32,7 @@ last_update:
 
 ### 软件
 
-所需的库列在下面。强烈建议使用这里的代码来检查硬件是否正常工作。如果您在安装库时遇到问题，请参考[这里](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library/)。
+所需的库列在下面。强烈建议使用这里的代码来检查硬件是否正常工作。如果您在安装库时遇到问题，请参考[这里](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)。
 
 - [Seeed_Arduino_LSM6DS3-master](https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Seeed_Arduino_LSM6DS3-master.zip)
 
@@ -117,7 +117,7 @@ sudo edge-impulse-data-forwarder
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/05.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **步骤 7.** 上下摆动 [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/cn/XIAO-RP2040/)，保持动作 20 秒。您可以看到采集显示如下：
+- **步骤 7.** 上下摆动 [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/XIAO-RP2040/)，保持动作 20 秒。您可以看到采集显示如下：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/06.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -289,7 +289,7 @@ void loop()
 
 ## 资源
 
-- [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/cn/XIAO-RP2040/)
+- [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/XIAO-RP2040/)
 - [Edge Impluse CLI](https://docs.edgeimpulse.com/docs/edge-impulse-cli/cli-installation)
 
 ## 技术支持与产品讨论

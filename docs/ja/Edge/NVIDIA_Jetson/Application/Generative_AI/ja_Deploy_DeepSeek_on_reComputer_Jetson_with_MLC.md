@@ -21,14 +21,14 @@ last_update:
 
 DeepSeekは、効率性、精度、リアルタイム処理に最適化された最先端のAIモデルスイートです。エッジコンピューティング向けの高度な最適化により、DeepSeekはJetsonデバイス上で直接高速で低遅延のAI推論を可能にし、クラウドコンピューティングへの依存を減らしながらパフォーマンスを最大化します。
 
-[以前のwiki](/ja/deploy_deepseek_on_jetson)では、JetsonにDeepSeekをデプロイするクイックガイドを提供しました。しかし、正常にデプロイされたモデルは最適な推論速度を達成できませんでした。
+[以前のwiki](/deploy_deepseek_on_jetson)では、JetsonにDeepSeekをデプロイするクイックガイドを提供しました。しかし、正常にデプロイされたモデルは最適な推論速度を達成できませんでした。
 
 このwikiは、エッジでの効率的なAI推論のために[MLC](https://llm.mlc.ai/)を使用してreComputer Jetsonデバイスに[DeepSeek](https://www.deepseek.com/)をデプロイするステップバイステップガイドを提供します。
 
 ## 前提条件
 
 - 8GB以上のメモリを持つJetsonデバイス。
-- jetsonデバイスには、jetpack [5.1.1](https://wiki.seeedstudio.com/ja/reComputer_Intro/)オペレーティングシステム以降が事前にフラッシュされている必要があります。
+- jetsonデバイスには、jetpack [5.1.1](https://wiki.seeedstudio.com/reComputer_Intro/)オペレーティングシステム以降が事前にフラッシュされている必要があります。
 
 :::note
 このwikiでは、[reComputer J4012 - NVIDIA® Jetson™ Orin™ NX 16GB搭載エッジAIコンピュータ](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6InJlQ29tcHV0ZXIgSjQwMTIiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjo0LCJjX3RvdGFsX3Jlc3VsdHMiOjUyLCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0gJiYgcXVhbnRpdHlfYW5kX3N0b2NrX3N0YXR1czpbMV0ifQ%3D%3D)を使用して以下のタスクを実行しますが、他のJetsonデバイスを使用することも可能です。

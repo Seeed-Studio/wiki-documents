@@ -362,10 +362,10 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 
 - [Deepstream](https://developer.nvidia.com/deepstream-sdk)は、Jetson上でのAIベースのマルチセンサー処理、動画・画像理解のための完全なストリーミング分析ツールキットを提供します。
 - [TAO](https://developer.nvidia.com/tao-toolkit)は、TensorFlowとPyTorchをベースに構築された、モデル訓練を加速するNVIDIA TAOフレームワークのローコード版です。
-- [alwaysAI](https://alwaysai.co/blog/getting-started-with-the-jetson-nano-using-alwaysai): reComputerのエッジで直接コンピュータビジョンアプリケーションを構築、訓練、デプロイできます。100以上の事前訓練済みコンピュータビジョンモデルへの無料アクセスと、エンタープライズサブスクリプションによるクラウドでのカスタムAIモデル訓練が数クリックで可能です。alwaysAIの開始方法については、[wiki](https://wiki.seeedstudio.com/ja/alwaysAI-Jetson-Getting-Started/#object-detection-on-pre-loaded-video-file)ガイドをご確認ください。
+- [alwaysAI](https://alwaysai.co/blog/getting-started-with-the-jetson-nano-using-alwaysai): reComputerのエッジで直接コンピュータビジョンアプリケーションを構築、訓練、デプロイできます。100以上の事前訓練済みコンピュータビジョンモデルへの無料アクセスと、エンタープライズサブスクリプションによるクラウドでのカスタムAIモデル訓練が数クリックで可能です。alwaysAIの開始方法については、[wiki](https://wiki.seeedstudio.com/alwaysAI-Jetson-Getting-Started/#object-detection-on-pre-loaded-video-file)ガイドをご確認ください。
 - [edge impulse](https://www.edgeimpulse.com/) : クラウドに依存することなく、エッジで音声、分類、物体検出アプリケーションをデプロイするための最も簡単な組み込み機械学習パイプラインです。
 - [Roboflow](https://blog.roboflow.com/deploy-to-nvidia-jetson/)は、生画像をカスタム訓練されたコンピュータビジョンモデル（物体検出・分類）に変換し、アプリケーションで使用するためにモデルをデプロイするツールを提供します。RoboflowでNVIDIA Jetsonにデプロイする方法については、https://docs.roboflow.com/inference/nvidia-jetson をご覧ください。
-- [ultralytics yolo](https://github.com/ultralytics/yolov5): 非常に少ない訓練サンプルのみを必要とするYOLOv5で転移学習を使用してfew-shot物体検出を実現します。ステップバイステップの[wiki](https://wiki.seeedstudio.com/ja/YOLOv5-Object-Detection-Jetson/)チュートリアルをご覧ください。
+- [ultralytics yolo](https://github.com/ultralytics/yolov5): 非常に少ない訓練サンプルのみを必要とするYOLOv5で転移学習を使用してfew-shot物体検出を実現します。ステップバイステップの[wiki](https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/)チュートリアルをご覧ください。
 - [Deep Learning](https://deci.ai/blog/jetson-machine-learning-inference/): NVIDIA Jetson Nanoでモデルを最適化します。NVIDIA Jetson NanoとXavier NXデバイスでのランタイムパフォーマンスの自動ベンチマークと最適化については、Deciの[こちら](https://info.deci.ai/benchmark-optimize-runtime-performance-nvidia-jetson)をご確認ください。
 
 ### 音声AI

@@ -48,7 +48,7 @@ vision language models（VLM）は、画像、動画、テキストをサポー�
   sudo apt install nvidia-jetson-services
   ```
 
-- IPカメラやローカル動画はRTSP経由でストリーミングできます。（RTSPストリーミングには、提供している[NVStreamerチュートリアル](/ja/getting_started_with_nvstreamer)の使用を推奨します。）
+- IPカメラやローカル動画はRTSP経由でストリーミングできます。（RTSPストリーミングには、提供している[NVStreamerチュートリアル](/getting_started_with_nvstreamer)の使用を推奨します。）
 
 ## はじめに
 
@@ -106,7 +106,7 @@ sudo docker ps
 
 ## RTSP ストリーム入力の追加
 
-以下の curl コマンドを使用して、VLM モデルで使用する RTSP ストリームを最初に追加できます。ストリーミングには [NVStreamer チュートリアル](/ja/getting_started_with_nvstreamer) の使用を推奨します。
+以下の curl コマンドを使用して、VLM モデルで使用する RTSP ストリームを最初に追加できます。ストリーミングには [NVStreamer チュートリアル](/getting_started_with_nvstreamer) の使用を推奨します。
 
 - **ステップ 1**: `0.0.0.0` を Jetson の IP に、`liveStreamUrl` リンクを RTSP リンクに置き換えて、ターミナルで以下のコマンドを入力します：
 

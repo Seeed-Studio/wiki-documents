@@ -24,7 +24,7 @@ Jetson用reComputerシリーズは、NVIDIAの先進的なAI組み込みシス�
 
 reComputer J1020 v2は、Jetson Nano製品モジュールで構築された強力でコンパクトなインテリジェントエッジボックスで、モダンなAI性能をエッジにもたらします。内蔵のJ202キャリアボードは、Jetson Nano Developer Kitと同じ寸法で、4xUSB 3、M.2 Key M、HDMI、DPを含みます。完全なシステムには、ファンと電源アダプターも含まれています。
 
-AI初心者の方で、重要なAIスキルを習得し、深層学習に取り組みたい場合は、[NVIDIAのDeep Learning Institute（DLI）](https://www.nvidia.com/en-us/training/)が実践的なハンズオントレーニングと認定を提供しています。また、Jetson Nanoの使用開始や様々なプロジェクトの構築を含むSeeedの[wiki](https://wiki.seeedstudio.com/ja/reComputer_Jetson_Series_Started_Guide/)ガイドもご確認ください。
+AI初心者の方で、重要なAIスキルを習得し、深層学習に取り組みたい場合は、[NVIDIAのDeep Learning Institute（DLI）](https://www.nvidia.com/en-us/training/)が実践的なハンズオントレーニングと認定を提供しています。また、Jetson Nanoの使用開始や様々なプロジェクトの構築を含むSeeedの[wiki](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Started_Guide/)ガイドもご確認ください。
 
 ソリューションプロバイダーの場合、reComputer J1020 v2にはJetpack 4.6.1がプリインストールされており、豊富なI/Oセットにより、このAIボックスは開発を簡素化し、スマートシティ、セキュリティ、産業オートメーション、スマートファクトリーの業界で動画解析、物体検出、自然言語処理、医療画像、ロボティクスに取り組むエッジAIソリューションプロバイダーの展開に適しています。
 
@@ -33,7 +33,7 @@ AI初心者の方で、重要なAIスキルを習得し、深層学習に取り�
 - **NVIDIA Jetson Nano Dev Kitの代替品：** Jetson Nano 4GB製品モジュールで構築された手のひらサイズのエッジAIデバイス。キャリアボードは豊富なI/Oを提供：GPIO、CSI、ギガビットイーサネット、4 x USB 3.0 Type A、オンボード16 GB eMMC。SSDストレージ拡張についてはこちらをご確認ください。
 - **128 NVIDIA CUDA®コアが0.5 TFLOPs（FP16）を提供**し、画像分類、物体検出、セグメンテーション、音声処理などのアプリケーション用のAIフレームワークとモデルを実行します。
 - **NVIDIA JetPackがプリインストール**、JetPack SDKには、ボードサポートパッケージ（BSP）、Linux OS、NVIDIA CUDA、cuDNN、深層学習、コンピュータビジョン、GPU計算、マルチメディア処理などのためのTensorRTソフトウェアライブラリが含まれています。
-- **完全な**[Jetsonソフトウェアスタック](https://developer.nvidia.com/embedded/develop/software)と、Seeed Edge AIパートナーが提供する高速で堅牢なAIアプリケーション構築のための様々な[開発者ツール](https://wiki.seeedstudio.com/ja/Jetson-AI-developer-tools/)をサポート。
+- **完全な**[Jetsonソフトウェアスタック](https://developer.nvidia.com/embedded/develop/software)と、Seeed Edge AIパートナーが提供する高速で堅牢なAIアプリケーション構築のための様々な[開発者ツール](https://wiki.seeedstudio.com/Jetson-AI-developer-tools/)をサポート。
 
 ## 仕様
 
@@ -140,7 +140,7 @@ AI初心者の方で、重要なAIスキルを習得し、深層学習に取り�
 ## reComputer J1020v2 に Flash JetPack
 
 :::info
-J1020v2 は J202 キャリアボードを使用しているため、詳細については[こちらのwiki](/ja/reComputer_J2021_J202_Flash_Jetpack)ページを参照してください。
+J1020v2 は J202 キャリアボードを使用しているため、詳細については[こちらのwiki](/reComputer_J2021_J202_Flash_Jetpack)ページを参照してください。
 :::
 
 ## リソース

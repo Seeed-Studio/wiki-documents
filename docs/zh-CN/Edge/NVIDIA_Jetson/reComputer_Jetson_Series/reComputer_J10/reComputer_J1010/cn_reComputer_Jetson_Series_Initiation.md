@@ -132,8 +132,8 @@ seeed@seeed-desktop:~$
 
 如果您的 reComputer 设备崩溃并且您想重新安装 NVIDIA 系统。我们在这里为您提供关于如何在 reComputer 上安装 NVIDIA 系统的说明文档。提供的说明文档包括 A20X 载板和 reComputer J1010 载板：
 
-- [基于 A20X 载板安装 NVIDIA 系统](https://wiki.seeedstudio.com/cn/reComputer_J2021_J202_Flash_Jetpack/)
-- [基于 reComputer J1010 载板安装 NVIDIA 系统](https://wiki.seeedstudio.com/cn/reComputer_J1010_J101_Flash_Jetpack/)
+- [基于 A20X 载板安装 NVIDIA 系统](https://wiki.seeedstudio.com/reComputer_J2021_J202_Flash_Jetpack/)
+- [基于 reComputer J1010 载板安装 NVIDIA 系统](https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack/)
 
 ## 故障排除
 
@@ -147,7 +147,7 @@ seeed@seeed-desktop:~$
 
 - 通常有两种方法为 reComputer 安装系统，第一种是使用 **NVIDIA SDK Manager**。
 
-如果您使用的是 **reComputer J2011** 或 **reComputer J2012**，在[使用 SDK Manager 刷写到 eMMC](/cn/reComputer_J2021_J202_Flash_Jetpack#flashing-to-emmc-with-command-line) 的**步骤 12** 中，您可以通过更改系统烧录位置来扩展容量。
+如果您使用的是 **reComputer J2011** 或 **reComputer J2012**，在[使用 SDK Manager 刷写到 eMMC](/reComputer_J2021_J202_Flash_Jetpack#flashing-to-emmc-with-command-line) 的**步骤 12** 中，您可以通过更改系统烧录位置来扩展容量。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/52.png" /></div>
 
@@ -157,9 +157,9 @@ seeed@seeed-desktop:~$
 
 - 通常有两种方法为 reComputer 安装系统，第二种是使用**命令行**。
 
-- 如果您使用的是 **A20X 载板**，使用命令行安装系统的方法在[使用命令行刷写到 eMMC](/cn/reComputer_J2021_J202_Flash_Jetpack#flashing-to-emmc-with-command-line)。
+- 如果您使用的是 **A20X 载板**，使用命令行安装系统的方法在[使用命令行刷写到 eMMC](/reComputer_J2021_J202_Flash_Jetpack#flashing-to-emmc-with-command-line)。
 
-- 如果您使用的是 **reComputer J1010 载板**，则在[使用命令行刷写到 eMMC](/cn/reComputer_J1010_J101_Flash_Jetpack#flashing-jetpack-os-via-command-line) 使用命令行安装系统。
+- 如果您使用的是 **reComputer J1010 载板**，则在[使用命令行刷写到 eMMC](/reComputer_J1010_J101_Flash_Jetpack#flashing-jetpack-os-via-command-line) 使用命令行安装系统。
 
 它们本质上都是通过使用以下命令来完成系统的安装。
 
@@ -282,7 +282,7 @@ sudo apt autoremove cuda*
 
 如果您已经正常使用reComputer一段时间，并且不想破坏现有的系统环境来完成扩展方案，您可以选择此选项。
 
-我们已经有一个完善的扩展wiki [reComputer系列的内存扩展](https://wiki.seeedstudio.com/cn/reComputer_Jetson_Memory_Expansion/)。
+我们已经有一个完善的扩展wiki [reComputer系列的内存扩展](https://wiki.seeedstudio.com/reComputer_Jetson_Memory_Expansion/)。
 
 值得注意的是，任何扩展操作都是危险的，我们希望您在一切开始之前主动**进行系统备份**。
 

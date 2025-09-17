@@ -689,7 +689,7 @@ if(camera_sign && sd_sign){
   </table>
 </div>
 
-由于此项目将使用 XIAO 的圆形显示屏，请在运行此项目的例程之前，阅读**[显示扩展板的 Wiki 环境配置](https://wiki.seeedstudio.com/cn/get_start_round_display#software-preparation)**的内容，安装必要的库并配置 TFT 环境。
+由于此项目将使用 XIAO 的圆形显示屏，请在运行此项目的例程之前，阅读**[显示扩展板的 Wiki 环境配置](https://wiki.seeedstudio.com/get_start_round_display#software-preparation)**的内容，安装必要的库并配置 TFT 环境。
 
 由于 XIAO EPS32S3 Sense 设计时在 SD 卡槽上连接了三个上拉电阻 R4~R6，而圆形显示屏也有上拉电阻，当两者同时使用时无法读取 SD 卡。为了解决这个问题，我们需要切断 XIAO ESP32S3 Sense 扩展板上的 J3。
 
@@ -912,7 +912,7 @@ void loop() {
 
 ### 程序注释
 
-摄像头和 microSD 卡的配置是之前的内容，所以我们在这里不再重复。关于 microSD 卡的使用，您可以参考 [XIAO ESP32S3 Sense 文件系统](https://wiki.seeedstudio.com/cn/xiao_esp32s3_sense_filesystem) Wiki 来学习如何使用它。
+摄像头和 microSD 卡的配置是之前的内容，所以我们在这里不再重复。关于 microSD 卡的使用，您可以参考 [XIAO ESP32S3 Sense 文件系统](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem) Wiki 来学习如何使用它。
 
 ```cpp
 // Take a photo

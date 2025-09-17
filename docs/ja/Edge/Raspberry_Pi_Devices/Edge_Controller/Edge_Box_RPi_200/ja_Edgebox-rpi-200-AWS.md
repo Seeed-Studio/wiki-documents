@@ -42,7 +42,7 @@ AWS IoT Core は、Internet of Things (IoT) デバイスの安全な接続と管
 
 ### ソフトウェアの準備
 
-Edge Box-200 は、Raspberry Pi OS がプリインストールされた状態でお手元に届きます。このデバイスを初回起動する場合は、[Getting Started](https://wiki.seeedstudio.com/ja/Edge_Box_introduction/) Wiki をお読みください。
+Edge Box-200 は、Raspberry Pi OS がプリインストールされた状態でお手元に届きます。このデバイスを初回起動する場合は、[Getting Started](https://wiki.seeedstudio.com/Edge_Box_introduction/) Wiki をお読みください。
 
 #### Mqtt ライブラリのインストール
 

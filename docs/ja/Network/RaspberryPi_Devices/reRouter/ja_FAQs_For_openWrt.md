@@ -7,7 +7,10 @@ last_update:
   date: 05/15/2025
   author: yulu Ji
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 このドキュメントには、OpenWrt に関連するすべてのよくある質問が含まれています。OpenWrt を使用中に問題が発生した場合に非常に役立ちます。
 

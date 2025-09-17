@@ -37,7 +37,7 @@ XIAO ESP32-C3を搭載したこの7.5インチ電子ペーパーディスプレ�
   </tr>
   <tr>
    <td>MCU</td>
-   <td><a href="https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started/">XIAO ESP32-C3</a></td>
+   <td><a href="https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/">XIAO ESP32-C3</a></td>
   </tr>
   <tr>
    <td>ディスプレイ</td>
@@ -126,11 +126,11 @@ XIAO 7.5" ePaper Panelには、プログラミングとトラブルシューテ�
 
 以下のWikiページでは、XIAO 7.5" ePaper Panelをプログラムして使用するさまざまな方法について詳細な情報を提供しています：
 
-- [**Home AssistantでESPHomeと連携**](https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_esphome) - ESPHome統合を通じてePaper Panelを設定・制御し、Home Assistantユーザーがカスタムダッシュボードを作成するのに最適です。
+- [**Home AssistantでESPHomeと連携**](https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_esphome) - ESPHome統合を通じてePaper Panelを設定・制御し、Home Assistantユーザーがカスタムダッシュボードを作成するのに最適です。
 
-- [**Arduinoと連携**](https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_arduino/) - カスタムアプリケーション用のライブラリと例を使用してArduino IDEでデバイスをプログラムします。
+- [**Arduinoと連携**](https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_arduino/) - カスタムアプリケーション用のライブラリと例を使用してArduino IDEでデバイスをプログラムします。
 
-- [**TRMNLと連携**](https://wiki.seeedstudio.com/ja/xiao_7_5_inch_epaper_panel_with_trmnl) - スマートビジュアルダッシュボード管理のためのオープンソースプラットフォームであるtrmnlでディスプレイを制御します。
+- [**TRMNLと連携**](https://wiki.seeedstudio.com/xiao_7_5_inch_epaper_panel_with_trmnl) - スマートビジュアルダッシュボード管理のためのオープンソースプラットフォームであるtrmnlでディスプレイを制御します。
 
 ## リソース
 

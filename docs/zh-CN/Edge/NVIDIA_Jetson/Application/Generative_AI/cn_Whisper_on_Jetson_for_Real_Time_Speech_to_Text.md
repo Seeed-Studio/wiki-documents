@@ -102,7 +102,7 @@ Riva 以其先进的 AI 驱动语音识别和自然语言处理而闻名，为�
 
 Whisper 是一个自动语音识别（ASR）系统，在从网络收集的 680,000 小时多语言和多任务监督数据上进行训练。此外，它支持多种语言的转录，以及从这些语言翻译成英语。
 
-在即将到来的对比视频中，我们将比较在 Nvidia Jetson 上开发的 [Riva](https://wiki.seeedstudio.com/cn/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson/) 和 Whisper 在语音转文本方面的能力。
+在即将到来的对比视频中，我们将比较在 Nvidia Jetson 上开发的 [Riva](https://wiki.seeedstudio.com/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson/) 和 Whisper 在语音转文本方面的能力。
 
 <iframe width="800" height="400" src="https://www.youtube.com/embed/2l7yus611DI?si=XdEjwzpZdJkLC8aB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

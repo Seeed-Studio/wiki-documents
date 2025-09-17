@@ -31,7 +31,7 @@ Wi-FiとAPIキーを設定するために、ステップ1とステップ2に従�
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/dall2.png"/></div>
 
 
-実証された機能に加えて、SenseCAPは完全にオープンソースのコードと詳細なチュートリアルを提供しています。詳細については[こちら](/ja/SenseCAP_Indicator_ChatGPT)をクリックしてください。
+実証された機能に加えて、SenseCAPは完全にオープンソースのコードと詳細なチュートリアルを提供しています。詳細については[こちら](/SenseCAP_Indicator_ChatGPT)をクリックしてください。
 
 
 # **FAQ**

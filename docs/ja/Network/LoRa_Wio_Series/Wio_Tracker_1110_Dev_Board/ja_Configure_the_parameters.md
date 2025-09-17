@@ -14,7 +14,7 @@ last_update:
 ---
 
 
-開始する前に、まず[ツールチェーンのセットアップ](https://wiki.seeedstudio.com/ja/setup_toolchain_for_wio_tracker)を確認してください。
+開始する前に、まず[ツールチェーンのセットアップ](https://wiki.seeedstudio.com/setup_toolchain_for_wio_tracker)を確認してください。
 
 ### リージョン設定
 

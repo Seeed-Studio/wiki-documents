@@ -208,7 +208,7 @@ CAN.readMsgBuf(unsigned char len, unsigned char buf);
 
 - **步骤 1.** 从 Github 下载 [CAN Bus Library](https://github.com/limengdu/Arduino_CAN_BUS_MCP2515)。
 
-- **步骤 2.** 参考 [如何安装库](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library) 为 Arduino 安装库。
+- **步骤 2.** 参考 [如何安装库](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) 为 Arduino 安装库。
 
 - **步骤 3.** 正确下载并安装库后，您可以在 examples 文件夹中找到一个名为 send.ino 的示例程序。该程序是为 D7S 模块设计的。
 
@@ -263,7 +263,7 @@ void loop()
 // END FILE
 ```
 
-- **步骤 4.** 上传演示代码。如果您不知道如何上传代码，请查看[如何上传代码](https://wiki.seeedstudio.com/cn/Upload_Code/)。
+- **步骤 4.** 上传演示代码。如果您不知道如何上传代码，请查看[如何上传代码](https://wiki.seeedstudio.com/Upload_Code/)。
 
 - **步骤 5.** 代码上传成功后，您会注意到 RX 和 TX LED 灯亮起，表示 CAN 总线正在主动传输数据。如果您的 CAN 总线连接到其他设备，这些 LED 将闪烁而不是保持常亮状态。
 

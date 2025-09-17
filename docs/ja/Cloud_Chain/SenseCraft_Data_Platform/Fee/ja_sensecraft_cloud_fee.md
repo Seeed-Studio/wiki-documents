@@ -48,7 +48,7 @@ SenseCaft クラウドサービスは、LoRaWAN IoT 低消費電力通信プロ�
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/fee_1.png" alt="pir" width={600} height="auto" /></p>
 
 :::tip
-APP は現在単一デバイスの購入のみサポートしています。一括サービス購入については、[SenseCAP Portal サブスクリプション](https://wiki.seeedstudio.com/ja/sensecraft_cloud_fee/#sensecap-portal-services-subscription)をご覧ください。
+APP は現在単一デバイスの購入のみサポートしています。一括サービス購入については、[SenseCAP Portal サブスクリプション](https://wiki.seeedstudio.com/sensecraft_cloud_fee/#sensecap-portal-services-subscription)をご覧ください。
 :::
 
 ### SenseCAP Portal サブスクリプション

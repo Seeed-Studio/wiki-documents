@@ -105,7 +105,7 @@ last_update:
 
 ## 步骤 1：刷写 Meshtastic 固件
 
-确保已经为 XIAO ESP32S3 预刷写了 meshtastic 固件。如果还没有，请按照[此说明](https://wiki.seeedstudio.com/cn/wio_sx1262_xiao_esp32s3_for_meshtastic/#flash-firmware)进行刷写。
+确保已经为 XIAO ESP32S3 预刷写了 meshtastic 固件。如果还没有，请按照[此说明](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_meshtastic/#flash-firmware)进行刷写。
 
 ## 步骤 2：重新焊接 XIAO 扩展板的排针
 

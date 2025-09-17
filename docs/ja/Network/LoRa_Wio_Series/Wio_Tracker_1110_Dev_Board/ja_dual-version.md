@@ -26,11 +26,11 @@ last_update:
 
 プロセスは以下の主要なステップに分かれています：
 
-- [SDKのインストールとセットアップ](https://wiki.seeedstudio.com/ja/wio_tracker_dual_stack#setup-toolchain)
-- [ファームウェアのフラッシュ](https://wiki.seeedstudio.com/ja/wio_tracker_dual_stack#build-and-flash-the-demo)
+- [SDKのインストールとセットアップ](https://wiki.seeedstudio.com/wio_tracker_dual_stack#setup-toolchain)
+- [ファームウェアのフラッシュ](https://wiki.seeedstudio.com/wio_tracker_dual_stack#build-and-flash-the-demo)
 - AWS IoT Coreの設定
 - Amazon Locationの設定
-- [ウェブアプリの設定](https://wiki.seeedstudio.com/ja/wio_tracker_dual_stack#building-web-app)
+- [ウェブアプリの設定](https://wiki.seeedstudio.com/wio_tracker_dual_stack#building-web-app)
 
 ## 前提条件
 
@@ -398,7 +398,7 @@ pip install -r sidewalk/requirements.txt
 
 ### AWS上でLoRaWANゲートウェイを追加
 
-[SenseCAP M2 Multi-Platformゲートウェイ](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html)をAWS IoT Coreに追加するには、この[Get Started](https://wiki.seeedstudio.com/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/#add-gateway)をご確認ください。
+[SenseCAP M2 Multi-Platformゲートウェイ](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html)をAWS IoT Coreに追加するには、この[Get Started](https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/#add-gateway)をご確認ください。
 
 ### AWS上でLoRaWANデバイスを追加
 

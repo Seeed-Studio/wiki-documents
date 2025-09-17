@@ -50,7 +50,7 @@ TTSモデルは、テキスト音声合成タスク用の高性能深層学習�
 
 - 16GB以上のメモリを持つreComputer Jetson AGX Orin 64GまたはreComputer Jetson J4012 16Gデバイス。
 - USBドライバー不要のスピーカーマイク
-- RTSPストリームアドレスを出力できるIPカメラ。また、[NVIDIA Nvstreamerツールの使用方法](/ja/getting_started_with_nvstreamer)に関する説明も含めており、ローカルビデオをRTSPストリームに変換する方法を説明しています。
+- RTSPストリームアドレスを出力できるIPカメラ。また、[NVIDIA Nvstreamerツールの使用方法](/getting_started_with_nvstreamer)に関する説明も含めており、ローカルビデオをRTSPストリームに変換する方法を説明しています。
 
 :::note
 このwikiの実現可能性は、reComputer [Orin NX 16GB](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)および[AGX Orin 64GB](https://www.seeedstudio.com/NVIDIArJetson-AGX-Orintm-64GB-Developer-Kit-p-5641.html) Developer Kitで既にテスト済みです。
@@ -87,7 +87,7 @@ TTSモデルは、テキスト音声合成タスク用の高性能深層学習�
 
 ### VLMのインストール
 
-このプロジェクトのコア機能は視覚言語モデル（VLM）です。[reComputer Nvidia JetsonでVLMを使用する方法](/ja/run_vlm_on_recomputer)のガイドを提供しています。インストールと使用方法については、このリンクを参照してください。以下の手順に進む前に、VLMでテキスト記述を使用して推論を実行する方法を完全に理解していることを確認してください。
+このプロジェクトのコア機能は視覚言語モデル（VLM）です。[reComputer Nvidia JetsonでVLMを使用する方法](/run_vlm_on_recomputer)のガイドを提供しています。インストールと使用方法については、このリンクを参照してください。以下の手順に進む前に、VLMでテキスト記述を使用して推論を実行する方法を完全に理解していることを確認してください。
 
 ### Pytorch Torchaudioのインストール
 
@@ -171,7 +171,7 @@ curl --location 'http://192.168.49.227:5010/api/v1/live-stream' \
 ```
 
 :::note
-RTSPカメラをお持ちでない場合は、[NVStreamerを使用してローカル動画をRTSPとしてストリーミングする方法](/ja/getting_started_with_nvstreamer)と[それらをVLMに追加する方法](/ja/run_vlm_on_recomputer)の手順を提供しています。
+RTSPカメラをお持ちでない場合は、[NVStreamerを使用してローカル動画をRTSPとしてストリーミングする方法](/getting_started_with_nvstreamer)と[それらをVLMに追加する方法](/run_vlm_on_recomputer)の手順を提供しています。
 :::
 
 set_streamer_id.shを実行します

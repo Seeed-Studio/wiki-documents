@@ -287,7 +287,7 @@ wpa_cli status                                  # Checking connection status
 
 **10 ユーザーボタン**は**reCamera Gimbal** Board-B401に配置されています。デバイスのパスコードを忘れた場合などでデバイスをリセットしたい場合は、ユーザーボタンを長押ししてからデバイスを電源に接続してください。デバイスの赤いライトが点滅ではなく常時点灯になったら、ユーザーボタンを離してください。
 
-デバイスのファームウェアを特定のバージョンに復元したい場合は、[osバージョン制御](https://wiki.seeedstudio.com/ja/recamera_os_version_control)をご覧ください。
+デバイスのファームウェアを特定のバージョンに復元したい場合は、[osバージョン制御](https://wiki.seeedstudio.com/recamera_os_version_control)をご覧ください。
 
 #### 再起動ボタン
 

@@ -67,11 +67,11 @@ SenseCAP 平台正式更名为 `SenseCraft 数据平台`！
 
 如果这是您第一次使用 XIAO ESP32C3，那么您需要先阅读这个 Wiki 来学习如何在 Arduino 中配置一个良好的开发环境。
 
-- [Seeed Studio XIAO ESP32C3 入门指南](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/#software-setup)
+- [Seeed Studio XIAO ESP32C3 入门指南](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#software-setup)
 
 此外，本教程也兼容 [XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html)，您也可以使用 XIAO ESP32S3 来完成本教程的内容。
 
-- [Seeed Studio XIAO ESP32S3 入门指南](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/#software-preparation)
+- [Seeed Studio XIAO ESP32S3 入门指南](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#software-preparation)
 
 由于使用了 SHT40 传感器，您还需要在 Arduino 中添加以下两个库，以确保程序能够顺利运行。
 

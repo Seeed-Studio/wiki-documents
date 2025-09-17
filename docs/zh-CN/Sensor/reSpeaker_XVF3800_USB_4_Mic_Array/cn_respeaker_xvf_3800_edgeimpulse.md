@@ -37,7 +37,7 @@ last_update:
 
 要开始音频数据收集，请确保您的 ReSpeaker 已刷入 USB 固件，使其能够作为 USB 麦克风工作。
 
-[**固件安装说明**](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#update-firmware)
+[**固件安装说明**](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
 
 [**固件文件**](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
 
@@ -267,7 +267,7 @@ Edge Impulse 在关键词识别方面最适合使用 1 秒音频片段。由于�
 ### 将固件切换到I2S模式
 
 在上传Arduino代码之前，您必须将ReSpeaker XVF3800固件切换到I2S模式，以启用通过I2C协议的通信。
-[固件安装指南](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#update-firmware)
+[固件安装指南](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
 
 ### Arduino代码集成
 

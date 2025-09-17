@@ -107,7 +107,7 @@ Azure 和 InflexDB 现在已经设置完成，接下来我们将转到 ESP32。
 
 ![ESP32 Circuit Diagram](https://www.the-diy-life.com/wp-content/uploads/2021/12/ESP32-Circuit-Diagram-1024x576.jpg)
 
-- **步骤 1.** 打开 [Arduino IDE](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/) 并[安装库文件](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library/)。这里我们提供两种安装方式。
+- **步骤 1.** 打开 [Arduino IDE](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) 并[安装库文件](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)。这里我们提供两种安装方式。
 
 1. 使用库管理器
 

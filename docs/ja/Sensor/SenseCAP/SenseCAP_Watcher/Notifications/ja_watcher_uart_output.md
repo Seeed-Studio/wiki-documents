@@ -333,11 +333,11 @@ XIAO ESP32シリーズボードにコードをアップロードするには、�
 
 2. Arduino IDEを開き、XIAO ESP32シリーズに必要なボードサポートパッケージがインストールされていることを確認します。
 
-   - ルーチンに **Seeed Studio XIAO ESP32C3** を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started#software-setup)** を参照して追加を完了してください。
+   - ルーチンに **Seeed Studio XIAO ESP32C3** を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started#software-setup)** を参照して追加を完了してください。
 
-   - ルーチンに **Seeed Studio XIAO ESP32S3** を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started#software-preparation)** を参照して追加を完了してください。
+   - ルーチンに **Seeed Studio XIAO ESP32S3** を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)** を参照して追加を完了してください。
 
-   - ルーチンに **Seeed Studio XIAO ESP32C6** を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/xiao_esp32c6_getting_started/)** を参照して追加を完了してください。
+   - ルーチンに **Seeed Studio XIAO ESP32C6** を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/)** を参照して追加を完了してください。
 
 3. Arduino IDEのToolsメニューから適切なボードとポートを選択します。
 
@@ -751,19 +751,19 @@ sudo python watcher_uart.py
 
 ## リソース
 
-- [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/ja/getting_started_with_watcher/)
+- [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
 
-- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/ja/getting_started_with_watcher_task/)
+- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
 
-- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/ja/integrate_watcher_to_ha/#step-6-place-the-task-and-configure-the-http-message-block)
+- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/integrate_watcher_to_ha/#step-6-place-the-task-and-configure-the-http-message-block)
 
-- [Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/ja/watcher_as_grove)
+- [Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/watcher_as_grove)
 
-- [Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/ja/watcher_local_deploy)
+- [Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)
 
 - Watcher Quick Start Series 5# : Training a model for Watcher
 
-- [Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/ja/what_does_watcher_do)
+- [Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
 
 ## 技術サポート & 製品ディスカッション
 

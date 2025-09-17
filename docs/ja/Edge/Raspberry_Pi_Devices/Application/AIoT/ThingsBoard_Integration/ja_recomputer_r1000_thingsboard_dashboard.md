@@ -46,7 +46,7 @@ last_update:
 
 ### ソフトウェア
 
-ThingsBoardを初めて使用する場合は、正しくインストールされていることを確認してください。ガイダンスについては[このwiki](https://wiki.seeedstudio.com/ja/recomputer_r1000_thingsboard_ce/)を参照してください。
+ThingsBoardを初めて使用する場合は、正しくインストールされていることを確認してください。ガイダンスについては[このwiki](https://wiki.seeedstudio.com/recomputer_r1000_thingsboard_ce/)を参照してください。
 
 ## ThingsBoardにログイン
 
@@ -105,7 +105,7 @@ ThingsBoardを初めて使用する場合は、正しくインストールされ
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/tb/dashboard/mqtt2.PNG" style={{width:400}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/tb/dashboard/mqtt3.PNG" style={{width:400}}/></div>
 
-- MQTT Inノードについてさらに学びたい場合は、[こちらで詳しく探索できます](https://wiki.seeedstudio.com/ja/recomputer_r1000_nodered_mqtt/)。
+- MQTT Inノードについてさらに学びたい場合は、[こちらで詳しく探索できます](https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/)。
 
 :::note
 reComputerにMosquittoブローカーをインストールする必要はありません。

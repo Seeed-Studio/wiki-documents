@@ -41,7 +41,7 @@ AWS IoT Core 是一项帮助安全连接和管理物联网（IoT）设备的服�
 
 ### 软件准备
 
-我们建议从官方网站安装 Raspberry Pi 64 位操作系统的 **Bullesye** 版本。如果您希望安装新的 Raspbian 操作系统，请按照此[**指南**](https://wiki.seeedstudio.com/cn/reterminal-dm-flash-OS/)中概述的步骤进行操作。
+我们建议从官方网站安装 Raspberry Pi 64 位操作系统的 **Bullesye** 版本。如果您希望安装新的 Raspbian 操作系统，请按照此[**指南**](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/)中概述的步骤进行操作。
 
 #### 安装 Mqtt 库
 

@@ -13,27 +13,27 @@ last_update:
 
 #### Q1: インストールのトラブルシューティング
 
-詳細については、[こちら](/ja/Troubleshooting_Installation)をクリックしてください
+詳細については、[こちら](/Troubleshooting_Installation)をクリックしてください
 
 #### Q2: 受け取ったreComputerのeMMCの残り容量が約2GBしかない場合、容量不足の問題をどのように解決しますか？
 
-詳細については、[こちら](/ja/solution_of_insufficient_space)をクリックしてください
+詳細については、[こちら](/solution_of_insufficient_space)をクリックしてください
 
 #### Q3: reComputerとVEYEカメラ間の互換性問題をどのように解決しますか？
 
-詳細については、[こちら](/ja/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera)をクリックしてください
+詳細については、[こちら](/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera)をクリックしてください
 
 #### Q4: IMX477カメラとA603キャリアボード間の互換性問題をどのように解決しますか？
 
-詳細については、[こちら](/ja/Use_IMX477_Camera_with_A603_Jetson_Carrier_Board)をクリックしてください
+詳細については、[こちら](/Use_IMX477_Camera_with_A603_Jetson_Carrier_Board)をクリックしてください
 
 #### Q5: reComputer J30/J40のシステムログを取得するにはどうすればよいですか？
 
-詳細については、[こちら](/ja/get_the_system_log_of_recomputer_j30_and_j40)をクリックしてください
+詳細については、[こちら](/get_the_system_log_of_recomputer_j30_and_j40)をクリックしてください
 
 #### Q6: JetPackフラッシュ中のタイムアウト問題。
 
-詳細については、[こちら](/ja/usb_timeout_during_flash)をクリックしてください
+詳細については、[こちら](/usb_timeout_during_flash)をクリックしてください
 
 #### Q7: デバイスをフラッシュした後、USB-Aポート、Ethernetポートが使用できない、またはHDMI表示がありません。
 **A:** ファイルの整合性を確認してください（例えば、提供されたSHA256チェックサムを使用）。一部のキャリアボード（特にA60Xシリーズ）では、ドライバーパッチが**Linux_for_tegra**ディレクトリに正常にコピー/適用されていることを確認してください。**sudo**権限が必要なファイルがあり、ディレクトリをコピーする際は、コマンドに**-r**パラメータが含まれていることを確認してください。
@@ -43,24 +43,24 @@ last_update:
 
 #### Q9: apt upgradeを実行できないと言われた場合、ソフトウェアパッケージをどのようにアップグレードできますか？ソフトウェアをアップグレードしないとセキュリティリスクがありますか？
 
-詳細については、[こちら](/ja/upgrade_software_packages_for_jetson)をクリックしてください
+詳細については、[こちら](/upgrade_software_packages_for_jetson)をクリックしてください
 
 <!-- #### Q10: OTA（Over-the-Air）方式を使用してJetsonデバイスのシステムバージョンをアップグレードする方法。 -->
 
-<!-- 詳細については、[こちら](/ja/updating_jetpack_with_ota)をクリックしてください -->
+<!-- 詳細については、[こちら](/updating_jetpack_with_ota)をクリックしてください -->
 
 #### Q11: SeeedはNVIDIAのJetson BSPにどのような変更を加えていますか。
 
-詳細については、[こちら](/ja/differences_of_l4t_between_seeed_and_nvidia)をクリックしてください
+詳細については、[こちら](/differences_of_l4t_between_seeed_and_nvidia)をクリックしてください
 
 #### Q12: Jetson-nanoでSPIインターフェースを有効にする方法は？
-詳細については、[こちら](/ja/enable_spi_interface_on_jetsonnano)をクリックしてください
+詳細については、[こちら](/enable_spi_interface_on_jetsonnano)をクリックしてください
 
 #### Q13: Jetsonでフラッシュプロセスを完了した後、システムがSSDから起動に失敗することがあるのはなぜですか？
-この問題は現在JetPack 5をフラッシュする際に発生し、NVIDIAが公式に文書化しています。解決策については、[こちら](/ja/issue_of_jetpack5_failing_to_boot_from_certain_ssd)をクリックしてください。
+この問題は現在JetPack 5をフラッシュする際に発生し、NVIDIAが公式に文書化しています。解決策については、[こちら](/issue_of_jetpack5_failing_to_boot_from_certain_ssd)をクリックしてください。
 
 #### Q14: SeeedのJetson BSPのソースコードプロジェクトをビルドする方法は？
-詳細については、[こちら](/ja/how_to_build_the_source_code_project_for_seeed_jetson_bsp)をクリックしてください
+詳細については、[こちら](/how_to_build_the_source_code_project_for_seeed_jetson_bsp)をクリックしてください
 
 ## 技術サポート
 

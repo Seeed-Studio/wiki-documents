@@ -25,7 +25,7 @@ last_update:
 </div>
 
 :::info
-J401-Mini载板的接口使用方法与reComputer J30/40 Mini相同。详细的接口使用示例请参考[此wiki](https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_hardware_interfaces_usage/)。
+J401-Mini载板的接口使用方法与reComputer J30/40 Mini相同。详细的接口使用示例请参考[此wiki](https://wiki.seeedstudio.com/recomputer_jetson_mini_hardware_interfaces_usage/)。
 :::
 
 ## 资源

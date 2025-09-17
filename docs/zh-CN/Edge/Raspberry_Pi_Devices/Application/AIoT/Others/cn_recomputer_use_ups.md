@@ -43,7 +43,7 @@ last_update:
 </div>
 
 >注意
->请参考此[链接](https://wiki.seeedstudio.com/cn/recomputer_r1000_assembly_guide/#assemble-ups-and-poe-module)在 R1000 上安装 UPS。
+>请参考此[链接](https://wiki.seeedstudio.com/recomputer_r1000_assembly_guide/#assemble-ups-and-poe-module)在 R1000 上安装 UPS。
 
 ## 软件准备
 

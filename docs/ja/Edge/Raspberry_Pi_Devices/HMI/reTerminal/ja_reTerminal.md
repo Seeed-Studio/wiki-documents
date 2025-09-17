@@ -295,7 +295,7 @@ reTerminalには、箱から出してすぐに使えるようにRaspberry Pi OS�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-7-new.png" alt="pir" width="400" height="auto"/></p>
 
-- **ステップ 9.** **このステップは非常に重要です。** ソフトウェアの更新をスキップするために**Skip**を押すことを確認してください。ただし、ソフトウェアを更新したい場合は、[このwiki](https://wiki.seeedstudio.com/ja/reTerminal-FAQ/#q3-how-to-upgrade-raspberry-pi-os-and-the-installed-packages)に従ってください
+- **ステップ 9.** **このステップは非常に重要です。** ソフトウェアの更新をスキップするために**Skip**を押すことを確認してください。ただし、ソフトウェアを更新したい場合は、[このwiki](https://wiki.seeedstudio.com/reTerminal-FAQ/#q3-how-to-upgrade-raspberry-pi-os-and-the-installed-packages)に従ってください
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-8-new.png" alt="pir" width="400" height="auto"/></p>
 
@@ -374,7 +374,7 @@ Windowsがハードウェアを検出し、必要なドライバーをインス�
 - **ステップ8.** **CHOOSE OS**をクリックして希望するOSを選択します
 
 :::note
-Raspbian OSをインストールしようとしている場合、テストを実施した結果、**Bullseye**の*32ビットと64ビット*の両方のバージョンがreTerminalで[**黒い画面の問題**](https://wiki.seeedstudio.com/ja/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal)を発生させることなく正常に動作することがわかりました。さらに、新しい**Bookworm** *64ビット*バージョンもテストしており、reTerminalで正常に機能します。
+Raspbian OSをインストールしようとしている場合、テストを実施した結果、**Bullseye**の*32ビットと64ビット*の両方のバージョンがreTerminalで[**黒い画面の問題**](https://wiki.seeedstudio.com/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal)を発生させることなく正常に動作することがわかりました。さらに、新しい**Bookworm** *64ビット*バージョンもテストしており、reTerminalで正常に機能します。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
@@ -712,7 +712,7 @@ reTerminalの分解方法については、以下の動画をご確認くださ�
 
 ## FAQ
 
-よくある質問については、[こちらをクリック](https://wiki.seeedstudio.com/ja/reTerminal-FAQ)してreTerminal使用方法のFAQwikiをご覧ください
+よくある質問については、[こちらをクリック](https://wiki.seeedstudio.com/reTerminal-FAQ)してreTerminal使用方法のFAQwikiをご覧ください
 
 ## リソース
 

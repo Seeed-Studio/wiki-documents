@@ -45,11 +45,11 @@ FIN Framework (FIN) 是一个软件框架，具有可以集成、控制、管理
     </div>
 
 ### 软件准备
-* 关于如何安装 FIN Framework，您可以参考这个 [wiki](https://wiki.seeedstudio.com/cn/reComputer_r1000_install_fin/)。
+* 关于如何安装 FIN Framework，您可以参考这个 [wiki](https://wiki.seeedstudio.com/reComputer_r1000_install_fin/)。
 
 ## 创建站点图形的步骤
 ### 创建新的站点图形
-**步骤 1**：我们创建了 4 个楼层。关于如何创建楼层，您可以参考这个 [wiki](https://wiki.seeedstudio.com/cn/reComputer_r1000_fin_modbus_tcp_and_rtu/)。然后将上下文放置在相应的 `Site` 下，这里我们将其放置在 `Tower` 路径下。
+**步骤 1**：我们创建了 4 个楼层。关于如何创建楼层，您可以参考这个 [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fin_modbus_tcp_and_rtu/)。然后将上下文放置在相应的 `Site` 下，这里我们将其放置在 `Tower` 路径下。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/Site_graphic_path_and_floor.png" /></center>
 

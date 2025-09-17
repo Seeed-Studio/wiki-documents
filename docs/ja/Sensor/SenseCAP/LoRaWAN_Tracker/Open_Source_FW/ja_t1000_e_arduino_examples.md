@@ -79,7 +79,7 @@ last_update:
 
 開発を開始する前に、以下のソフトウェアツールが必要です。
 
-[Arduino を始める](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)をご確認ください。
+[Arduino を始める](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)をご確認ください。
 
 :::tip
 バージョンは v1.6.12 より新しい必要があります。

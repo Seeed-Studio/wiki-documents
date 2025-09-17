@@ -18,7 +18,7 @@ no_comments: false # for Disqus
 
 # reCamera通过HTTP连接到XIAO
 
-本文档演示了如何通过HTTP实现reCamera与[XIAO](https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/)之间的通信，将数据传输到[XIAO](https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/)，以便您可以将reCamera集成到自己的项目中。
+本文档演示了如何通过HTTP实现reCamera与[XIAO](https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/)之间的通信，将数据传输到[XIAO](https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/)，以便您可以将reCamera集成到自己的项目中。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_connects_to_Xiao_via_HTTP/1.png" /></div>
 
@@ -30,11 +30,11 @@ no_comments: false # for Disqus
 
 **首先**，准备您的reCamera C++监督项目和运行环境。
 
-- **步骤1.** 下载[Supervisor_add_detection_http](https://files.seeedstudio.com/wiki/reCamera/develop_with_c_cpp/Supervisor_add_detection_http.7z)项目，编译它并将**.exe**文件复制到reCamera终端目录中。（详细说明请参考wiki：[基于Cpp使用reCamera进行实时YOLO目标检测 / 环境准备 / 预编译](https://wiki.seeedstudio.com/cn/real_time_yolo_object_detection_using_recamera_based_on_cpp/)。）这是一个监督项目，我们将仅使用照片YOLO检测接口进行演示。如果您有自己的项目，可以在此项目中添加新的HTTP API和项目代码。
+- **步骤1.** 下载[Supervisor_add_detection_http](https://files.seeedstudio.com/wiki/reCamera/develop_with_c_cpp/Supervisor_add_detection_http.7z)项目，编译它并将**.exe**文件复制到reCamera终端目录中。（详细说明请参考wiki：[基于Cpp使用reCamera进行实时YOLO目标检测 / 环境准备 / 预编译](https://wiki.seeedstudio.com/real_time_yolo_object_detection_using_recamera_based_on_cpp/)。）这是一个监督项目，我们将仅使用照片YOLO检测接口进行演示。如果您有自己的项目，可以在此项目中添加新的HTTP API和项目代码。
 
-- **步骤2.** 使用USB线将reCamera连接到PC，使用**MobaXterm**访问reCamera终端（**192.168.42.1**），导航到**/etc/init.d/**目录，移除三个自启动程序：**S93sscma-supervisor、S03node-red和S91sscma-node**。（详细说明请参考wiki：[基于Cpp使用reCamera进行实时YOLO目标检测 / 环境准备 / reCamera准备](https://wiki.seeedstudio.com/cn/real_time_yolo_object_detection_using_recamera_based_on_cpp/)。）
+- **步骤2.** 使用USB线将reCamera连接到PC，使用**MobaXterm**访问reCamera终端（**192.168.42.1**），导航到**/etc/init.d/**目录，移除三个自启动程序：**S93sscma-supervisor、S03node-red和S91sscma-node**。（详细说明请参考wiki：[基于Cpp使用reCamera进行实时YOLO目标检测 / 环境准备 / reCamera准备](https://wiki.seeedstudio.com/real_time_yolo_object_detection_using_recamera_based_on_cpp/)。）
 
-**其次**，reCamera和XIAO必须在同一个2.4GHz局域网（LAN）中才能通信。ReCamera内置无线网卡，可以连接WiFi。通常，您可以通过相机的[Node-RED网页](http://192.168.42.1/#/workspace)连接WiFi。但是，当运行自定义C++项目时，必须禁用Node-RED并重启reCamera。（参考：[Seeed Studio Wiki](https://wiki.seeedstudio.com/cn/real_time_yolo_object_detection_using_recamera_based_on_cpp/)）。因此，我们需要通过Linux终端建立WiFi连接。
+**其次**，reCamera和XIAO必须在同一个2.4GHz局域网（LAN）中才能通信。ReCamera内置无线网卡，可以连接WiFi。通常，您可以通过相机的[Node-RED网页](http://192.168.42.1/#/workspace)连接WiFi。但是，当运行自定义C++项目时，必须禁用Node-RED并重启reCamera。（参考：[Seeed Studio Wiki](https://wiki.seeedstudio.com/real_time_yolo_object_detection_using_recamera_based_on_cpp/)）。因此，我们需要通过Linux终端建立WiFi连接。
 
 ```
 cd /etc/

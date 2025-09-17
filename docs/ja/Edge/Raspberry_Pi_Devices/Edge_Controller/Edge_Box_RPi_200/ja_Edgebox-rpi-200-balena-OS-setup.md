@@ -55,7 +55,7 @@ EdgeBox-RPI-200シリーズは、複数の産業用途を組み合わせた、Ra
 
 EdgeBox-RPI-200にbalenaOSをフラッシュするには、デバイスを分解してRaspberry Pi Compute Module 4を取り出す必要があります。
 
-**ステップ1:** EdgeBox-RPI-200からCM4を取り出し、[Dual Gigabit Ethernet NICs Carrier Board](https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html)に配置します。[Dual Gigabit Ethernet NICs Carrier Board](https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html)を使用してCM4 eMMCストレージをUSBマスストレージモードに設定する方法については、[wikiページ](/ja/Raspberry_pi_CM4_update_eeprom/#put-cm4-emmc-storage-into-usb-mass-storage-mode)に従ってください。
+**ステップ1:** EdgeBox-RPI-200からCM4を取り出し、[Dual Gigabit Ethernet NICs Carrier Board](https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html)に配置します。[Dual Gigabit Ethernet NICs Carrier Board](https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html)を使用してCM4 eMMCストレージをUSBマスストレージモードに設定する方法については、[wikiページ](/Raspberry_pi_CM4_update_eeprom/#put-cm4-emmc-storage-into-usb-mass-storage-mode)に従ってください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/latest-board/boot-pins.png" alt="pir" width={600} height="auto" /></p>
 

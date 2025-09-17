@@ -794,7 +794,7 @@ power_manager_enter_deep_sleep(30000); // Sleep for 30 seconds
 ## 资源
 
 - [ESP-IDF 编程指南](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/)
-- [XIAO ESP32-C3 Wiki](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/)
+- [XIAO ESP32-C3 Wiki](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/)
 - [BME680 数据手册](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/)
 - [项目 GitHub 仓库](https://github.com/Priyanshu0901/xiao_ibeacon)
 

@@ -464,7 +464,7 @@ sudo apt install nvidia-jetpack
 ## 硬件接口使用
 
 :::info
-如果您想了解更多关于硬件接口的详细规格和使用方法，请参考[此wiki](https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_hardware_interfaces_usage/)。
+如果您想了解更多关于硬件接口的详细规格和使用方法，请参考[此wiki](https://wiki.seeedstudio.com/recomputer_jetson_mini_hardware_interfaces_usage/)。
 :::
 
 ## 资源

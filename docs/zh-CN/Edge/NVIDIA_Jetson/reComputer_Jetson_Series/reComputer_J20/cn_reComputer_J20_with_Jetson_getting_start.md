@@ -138,14 +138,14 @@ last_update:
 
 :::info
 reComputer J20 由 J202 载板提供支持。
-请参考此 [wiki 页面](/cn/reComputer_J2021_J202_Flash_Jetpack) 获取更多关于刷写 jetpack 的信息。
+请参考此 [wiki 页面](/reComputer_J2021_J202_Flash_Jetpack) 获取更多关于刷写 jetpack 的信息。
 :::
 
 ## 接口使用
 
 :::info
 reComputer J20 由 J202 载板提供支持。该接口使用与 J30/J40 相同的设计。
-请参考此 [wiki 页面](/cn/J401_carrierboard_Hardware_Interfaces_Usage) 获取更多关于接口使用的信息。
+请参考此 [wiki 页面](/J401_carrierboard_Hardware_Interfaces_Usage) 获取更多关于接口使用的信息。
 :::
 
 

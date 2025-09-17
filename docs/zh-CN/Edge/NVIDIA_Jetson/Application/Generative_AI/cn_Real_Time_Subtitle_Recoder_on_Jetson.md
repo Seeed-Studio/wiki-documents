@@ -59,7 +59,7 @@ alt="auto" width={800} height="auto"/></p>
 
 #### 步骤1. 安装 Riva ASR 服务器：
 
-请参考[此 wiki](https://wiki.seeedstudio.com/cn/Local_Voice_Chatbot/#install-riva-server)来安装 Riva ASR 服务器。
+请参考[此 wiki](https://wiki.seeedstudio.com/Local_Voice_Chatbot/#install-riva-server)来安装 Riva ASR 服务器。
 
 在您的终端中（Ctrl+Alt+T），输入 ```sudo docker ps```，您将看到类似以下内容，这意味着您已完成第一步。
 

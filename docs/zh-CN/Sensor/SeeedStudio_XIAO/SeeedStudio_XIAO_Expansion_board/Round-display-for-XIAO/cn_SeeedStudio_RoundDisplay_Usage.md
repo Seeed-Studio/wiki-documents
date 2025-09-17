@@ -31,7 +31,7 @@ last_update:
 
 如果您是第一次使用 Round Display，您可能需要阅读我们之前为其编写的准备内容，并根据此内容配置库环境，以确保您能够顺利使用 Round Display。
 
-- **[使用 Seeed Studio Round Display for XIAO 的准备工作](https://wiki.seeedstudio.com/cn/get_start_round_display#getting-started)**
+- **[使用 Seeed Studio Round Display for XIAO 的准备工作](https://wiki.seeedstudio.com/get_start_round_display#getting-started)**
 
 ### 安装 microSD 卡
 
@@ -1013,7 +1013,7 @@ void loop() {
 
 由于ESP32系列具有非常强大的文件系统支持，我们为XIAO ESP32编写了一系列关于如何使用文件系统和保存microSD卡的示例，您可以通过以下链接学习使用。
 
-- **[文件系统和XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/cn/xiao_esp32s3_sense_filesystem)**
+- **[文件系统和XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem)**
 
 本Wiki中的教程适用于XIAO ESP32系列，但由于您现在想要使用Round Display的SD卡插槽，而上述教程专注于使用XIAO ESP32S3 Sense上的SD卡插槽，您需要将SD卡的初始化修改为下面的行。
 
@@ -1108,7 +1108,7 @@ void loop() {
 
 关于显示部分，我们主要介绍 LVGL 库和 TFT 库的使用。由于篇幅问题，我们将在新的 Wiki 中详细介绍如何使用支持的图形库绘制复杂的表盘。
 
-[在 Seeed Studio Round Display for XIAO 上使用 LVGL 和 TFT](https://wiki.seeedstudio.com/cn/using_lvgl_and_tft_on_round_display)
+[在 Seeed Studio Round Display for XIAO 上使用 LVGL 和 TFT](https://wiki.seeedstudio.com/using_lvgl_and_tft_on_round_display)
 
 当然，如果您只想实现一些简单的示例，图形库也有非常丰富的示例供您参考使用。
 

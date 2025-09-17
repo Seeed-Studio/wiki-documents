@@ -47,13 +47,13 @@ FIN Framework (FIN) は、統合、制御、管理、分析、可視化、接続
 
 ### ソフトウェアの準備
 
-- FIN Framworkのインストール方法については、この[wiki](https://wiki.seeedstudio.com/ja/reComputer_r1000_install_fin/)を参照してください。
+- FIN Framworkのインストール方法については、この[wiki](https://wiki.seeedstudio.com/reComputer_r1000_install_fin/)を参照してください。
 
 ## トップレベルグラフィック作成の手順
 
 ### 新しいトップレベルグラフィックの作成
 
-**ステップ1**: 3つのサイトを作成します。Equip Tree下でサイトを作成する方法については、この[wiki](https://wiki.seeedstudio.com/ja/reComputer_r1000_fin_modbus_tcp_and_rtu/#add-data-points-to-equip-tree)を参照してください。システムコンテキストはホームディレクトリに保持してください。
+**ステップ1**: 3つのサイトを作成します。Equip Tree下でサイトを作成する方法については、この[wiki](https://wiki.seeedstudio.com/reComputer_r1000_fin_modbus_tcp_and_rtu/#add-data-points-to-equip-tree)を参照してください。システムコンテキストはホームディレクトリに保持してください。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/Top_grap_Equip_tree_and_top_path.png" /></center>
 

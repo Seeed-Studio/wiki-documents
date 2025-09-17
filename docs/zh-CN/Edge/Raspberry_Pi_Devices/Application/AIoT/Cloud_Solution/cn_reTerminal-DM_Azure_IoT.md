@@ -52,11 +52,11 @@ armv7l
 ```
 
 :::tip
-如果您的操作系统版本低于 Debian 11 (Bullseye) 或 LOG_BIT 为 64，请安装最新的 Raspberry Pi OS 32 位版本。请参考 [刷写 Raspbian OS 的步骤](https://wiki.seeedstudio.com/cn/reterminal-dm-flash-OS/#steps-for-flashing-raspbian-os)。
+如果您的操作系统版本低于 Debian 11 (Bullseye) 或 LOG_BIT 为 64，请安装最新的 Raspberry Pi OS 32 位版本。请参考 [刷写 Raspbian OS 的步骤](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/#steps-for-flashing-raspbian-os)。
 :::
 
 :::tip
-如果 uname -m 显示为 aarch64，说明您的操作系统运行的是 64 位内核。请切换到 32 位内核。请参考 [32 位操作系统驱动](https://wiki.seeedstudio.com/cn/reterminal-dm-flash-OS/#32-bit-os-driver)。
+如果 uname -m 显示为 aarch64，说明您的操作系统运行的是 64 位内核。请切换到 32 位内核。请参考 [32 位操作系统驱动](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/#32-bit-os-driver)。
 :::
 
 ## 步骤 3：在设备上手动测试 Azure IoT Edge

@@ -10,7 +10,10 @@ last_update:
   date: 05/15/2025
   author: gunengyu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 ---
 Wioプラットフォームは、2015年末にWio LinkがKickstarterでクラウドファンディングされた際に初めて世界に紹介されました。Kickstarterで発売した2番目の製品として、Wio Linkの結果は私たちの期待を大きく上回りました。その後間もなく、Wio Linkの弟分であるWio Nodeをリリースしました。両者はほぼ同じ機能を持っていますが、サイズやGroveコネクタの数が異なり、異なる状況に対応するよう設計されています。

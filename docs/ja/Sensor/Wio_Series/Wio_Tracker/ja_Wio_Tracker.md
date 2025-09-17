@@ -10,7 +10,10 @@ last_update:
   date: 05/15/2025
   author: gunengyu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 Wio_Tracker プラットフォームは、2015 年末に Wio Link が Kickstarter でクラウドファンディングを行った際に初めて世界に紹介されました。Kickstarter で発売した 2 番目の製品として、Wio_Tracker の結果は私たちの期待を大きく上回りました。そのため、ほどなくして Wio Link の弟分である Wio Node をリリースしました。両者はほぼ同じ機能を持っていますが、サイズや Grove コネクタの数が異なり、異なる状況に対応するよう設計されています。
 

@@ -12,7 +12,7 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Front.jpg)
 
-本 wiki 适用于 ReSpeaker Core v2.0，我们建议您先阅读 [ReSpeaker Core v2.0 的 Wiki](https://wiki.seeedstudio.com/cn/ReSpeaker_Core_v2.0/#preparation)。
+本 wiki 适用于 ReSpeaker Core v2.0，我们建议您先阅读 [ReSpeaker Core v2.0 的 Wiki](https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#preparation)。
 
 ## 开始之前
 
@@ -24,7 +24,7 @@ last_update:
 - 一根 Micro-USB 数据线
 - [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
-我们假设您已经阅读了[准备工作](https://wiki.seeedstudio.com/cn/ReSpeaker_Core_v2.0/#preparation)并已经设置好了 WiFi 和串口。
+我们假设您已经阅读了[准备工作](https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#preparation)并已经设置好了 WiFi 和串口。
 
 现在让我们开始吧 😃
 

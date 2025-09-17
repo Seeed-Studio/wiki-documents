@@ -23,7 +23,7 @@ last_update:
 
 ## reComputer J1020 的独特之处是什么？
 
-[Seeed Studio reComputer J1020](https://wiki.seeedstudio.com/cn/reComputer_Jetson_Series_Introduction/#recomputer-j1020) 提供了开始构建基于 AI 应用程序所需的一切。与 NVIDIA 提供的 Jetson Nano 开发套件相比，它不需要从头开始在 SD 卡上刷写操作系统。它在 16 GB eMMC 上预装了 Ubuntu 操作系统。reComputer 预装的 Jetpack 4.6 包括板级支持包 (BSP)、Linux 操作系统、NVIDIA CUDA、cuDNN 和用于深度学习、计算机视觉、GPU 计算、多媒体处理等的 TensorRT 软件库。它支持整个 [Jetson 软件栈](https://developer.nvidia.com/embedded/develop/software)和 Seeed 边缘 AI 合作伙伴提供的各种[开发者工具](https://wiki.seeedstudio.com/cn/Jetson-AI-developer-tools)，用于[构建快速且强大的 AI 应用程序](https://wiki.seeedstudio.com/cn/Jetson-AI-developer-tools)。
+[Seeed Studio reComputer J1020](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Introduction/#recomputer-j1020) 提供了开始构建基于 AI 应用程序所需的一切。与 NVIDIA 提供的 Jetson Nano 开发套件相比，它不需要从头开始在 SD 卡上刷写操作系统。它在 16 GB eMMC 上预装了 Ubuntu 操作系统。reComputer 预装的 Jetpack 4.6 包括板级支持包 (BSP)、Linux 操作系统、NVIDIA CUDA、cuDNN 和用于深度学习、计算机视觉、GPU 计算、多媒体处理等的 TensorRT 软件库。它支持整个 [Jetson 软件栈](https://developer.nvidia.com/embedded/develop/software)和 Seeed 边缘 AI 合作伙伴提供的各种[开发者工具](https://wiki.seeedstudio.com/Jetson-AI-developer-tools)，用于[构建快速且强大的 AI 应用程序](https://wiki.seeedstudio.com/Jetson-AI-developer-tools)。
 
 ## 几个值得注意的特性包括
 
@@ -40,7 +40,7 @@ last_update:
 - CUDA 架构：5.3
 - OpenCV 版本：4.1.1
 
-[了解更多关于 reComputer 的硬件布局](https://wiki.seeedstudio.com/cn/reComputer_Jetson_Series_Hardware_Layout)
+[了解更多关于 reComputer 的硬件布局](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Hardware_Layout)
 
 ## reComputer 的组件
 

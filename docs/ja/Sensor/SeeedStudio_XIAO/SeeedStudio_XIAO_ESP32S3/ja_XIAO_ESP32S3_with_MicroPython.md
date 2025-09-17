@@ -196,7 +196,7 @@ VS Codeを開き、マイクロコントローラー用の新しいプロジェ�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/10.png" /></div>
 
-- 詳細については[ハードウェア概要](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/#hardware-overview)を参照してください
+- 詳細については[ハードウェア概要](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#hardware-overview)を参照してください
 - [Seeed Studio XIAO ESP32S3 回路図](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_SCH_v1.2.pdf)
 
 ## XIAO ESP32S3でのMicroPython入門
@@ -573,7 +573,7 @@ oled.show()  # Show the text
 
 #### カメラストリーミングテスト
 
-カメラストリーミングテストはESP32S3 sense（カメラ付き）にも提供されています。詳細は[こちら](https://wiki.seeedstudio.com/ja/XIAO_ESP32S3_Micropython/#step-3-testing-the-streaming-example)を参照してください。
+カメラストリーミングテストはESP32S3 sense（カメラ付き）にも提供されています。詳細は[こちら](https://wiki.seeedstudio.com/XIAO_ESP32S3_Micropython/#step-3-testing-the-streaming-example)を参照してください。
 
 この記事をお読みいただき、ありがとうございました！コメントでご意見をお聞かせください。
 

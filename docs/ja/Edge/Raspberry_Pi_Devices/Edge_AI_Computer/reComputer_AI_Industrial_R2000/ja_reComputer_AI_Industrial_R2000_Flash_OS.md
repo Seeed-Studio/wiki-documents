@@ -238,7 +238,7 @@ SDカードスロットに簡単にアクセスできる場合は、Piの電源�
 
 ### 最初：SD カードで EEPROM を更新する
 
-この[リンク](https://wiki.seeedstudio.com/ja/r2000_series_getting_start/#update-eeprom)を参照してください。
+この[リンク](https://wiki.seeedstudio.com/r2000_series_getting_start/#update-eeprom)を参照してください。
 
 NVMe ブート順序を最高優先度に設定するには、以下のコマンドを使用します：
 

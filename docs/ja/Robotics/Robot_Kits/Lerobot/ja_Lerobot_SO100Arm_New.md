@@ -1028,7 +1028,7 @@ pip3 install rerun-sdk==0.23
 
 ## 引用
 
-[中文文档](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/)
+[中文文档](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/)
 
 TheRobotStudio Project: [SO-ARM10x](https://github.com/TheRobotStudio/SO-ARM100)
 

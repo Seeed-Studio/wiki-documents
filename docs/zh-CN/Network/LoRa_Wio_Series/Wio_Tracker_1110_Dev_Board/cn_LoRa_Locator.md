@@ -40,7 +40,7 @@ last_update:
 
 ### 设置网关
 
-然后我们需要配置 [SenseCAP M2 多平台 LoRaWAN 室内网关](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html)，查看[快速入门](https://wiki.seeedstudio.com/cn/quick_start_with_M2_MP/)了解更多详情。
+然后我们需要配置 [SenseCAP M2 多平台 LoRaWAN 室内网关](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html)，查看[快速入门](https://wiki.seeedstudio.com/quick_start_with_M2_MP/)了解更多详情。
 
 登录到 Luci 页面，导航到 `LoRa` > `LoRa Network`
 
@@ -85,7 +85,7 @@ last_update:
 
 ### 设置设备
 
-请查看[将 Wio Tracker 1110 开发板连接到 TTN](https://wiki.seeedstudio.com/cn/connect_wio_tracker_to_TTN/) 来选择平台为 TTN。
+请查看[将 Wio Tracker 1110 开发板连接到 TTN](https://wiki.seeedstudio.com/connect_wio_tracker_to_TTN/) 来选择平台为 TTN。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker_appconfig.png" alt="pir" width={300} height="auto" /></p>
 

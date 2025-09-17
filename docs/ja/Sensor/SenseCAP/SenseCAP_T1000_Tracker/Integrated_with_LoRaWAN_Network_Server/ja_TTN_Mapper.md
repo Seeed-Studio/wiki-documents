@@ -15,7 +15,7 @@ last_update:
 
 このチュートリアルでは、[SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html)をTTN Mapperに追加する方法をユーザーに案内します。
 
-次のステップを進めるために、まず[The Things Networkへの接続](https://wiki.seeedstudio.com/ja/SenseCAP_T1000_tracker_TTN/)を参照してデバイスを登録してください。
+次のステップを進めるために、まず[The Things Networkへの接続](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/)を参照してデバイスを登録してください。
 
 ### ペイロードフォーマッターの設定
 

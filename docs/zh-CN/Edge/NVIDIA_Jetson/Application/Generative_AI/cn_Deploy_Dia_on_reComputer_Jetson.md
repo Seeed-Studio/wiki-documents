@@ -35,7 +35,7 @@ last_update:
 ## 先决条件
 
 - 具有超过8GB内存的Jetson设备。
-- Jetson设备需要预先刷入jetpack [6.1](https://wiki.seeedstudio.com/cn/reComputer_Intro/)操作系统或更高版本。
+- Jetson设备需要预先刷入jetpack [6.1](https://wiki.seeedstudio.com/reComputer_Intro/)操作系统或更高版本。
 
 :::note
 在本wiki中，我们将使用[reComputer J4012 - 配备NVIDIA® Jetson™ Orin™ NX 16GB的边缘AI计算机](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6InJlQ29tcHV0ZXIgSjQwMTIiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjo0LCJjX3RvdGFsX3Jlc3VsdHMiOjUyLCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0gJiYgcXVhbnRpdHlfYW5kX3N0b2NrX3N0YXR1czpbMV0ifQ%3D%3D)来完成以下任务，但您也可以尝试使用其他Jetson设备。

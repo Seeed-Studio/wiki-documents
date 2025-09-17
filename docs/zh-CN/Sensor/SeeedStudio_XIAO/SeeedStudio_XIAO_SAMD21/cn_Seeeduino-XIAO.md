@@ -28,7 +28,7 @@ Seeed Studio XIAO SAMD21 有 14 个引脚，通过引脚复用可用作 11 个�
 
 关于 **Seeed Studio XIAO SAMD21** 的使用有两个文档，分别专注于不同的领域，请参考下表：
 
-|[**Seeed 官方文档**](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/)|[**Nanase 编写的文档**](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-by-Nanase/)|
+|[**Seeed 官方文档**](https://wiki.seeedstudio.com/Seeeduino-XIAO/)|[**Nanase 编写的文档**](https://wiki.seeedstudio.com/Seeeduino-XIAO-by-Nanase/)|
 |---|---|
 |引脚图|接口|
 |Seeed Studio XIAO SAMD21 入门指南|Seeed Studio XIAO SAMD21 与 MicroSD 卡（SPI）|
@@ -37,7 +37,7 @@ Seeed Studio XIAO SAMD21 有 14 个引脚，通过引脚复用可用作 11 个�
 
 ### **CircuitPython 在 Seeed Studio XIAO SAMD21 上的应用**
 
-- 开始使用 [**CircuitPython 在 Seeed Studio XIAO SAMD21 上的应用**](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-CircuitPython)。
+- 开始使用 [**CircuitPython 在 Seeed Studio XIAO SAMD21 上的应用**](https://wiki.seeedstudio.com/Seeeduino-XIAO-CircuitPython)。
 
 ## **特性**
 
@@ -348,7 +348,7 @@ void loop()
 
 :::note
 
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino)
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino)
 :::
 
 - **步骤 1. 您需要安装 Arduino 软件。**
@@ -409,9 +409,9 @@ void loop()
 
 ## 示例应用
 
-- [如何使用 Seeed Studio XIAO SAMD21 登录到您的树莓派](https://wiki.seeedstudio.com/cn/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI)
+- [如何使用 Seeed Studio XIAO SAMD21 登录到您的树莓派](https://wiki.seeedstudio.com/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI)
 
-- [SPI 通信接口](https://wiki.seeedstudio.com/cn/XIAO-SPI-Communication-Interface)
+- [SPI 通信接口](https://wiki.seeedstudio.com/XIAO-SPI-Communication-Interface)
 
 - [如何使用树莓派修复损坏的 xiao](https://forum.seeedstudio.com/t/how-to-unbrick-a-dead-xiao-using-raspberry-pi-guide-openocd/253990)。感谢 John_Doe 的分享。
 

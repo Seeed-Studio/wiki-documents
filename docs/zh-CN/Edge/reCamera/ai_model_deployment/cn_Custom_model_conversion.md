@@ -713,7 +713,7 @@ model_tool --info yolov5s_mix-precision.cvimodel
 git clone https://github.com/jjjadand/yolov5_Test_reCamera.git
 ```
 
-使用 [FileZilla](https://filezilla-project.org/) 等软件将编译好的示例和 `yolov5s_mix-precision.cvimodel` 复制到 reCamera。（您可以查看 [reCamera 入门指南](https://wiki.seeedstudio.com/cn/recamera_getting_started/)）
+使用 [FileZilla](https://filezilla-project.org/) 等软件将编译好的示例和 `yolov5s_mix-precision.cvimodel` 复制到 reCamera。（您可以查看 [reCamera 入门指南](https://wiki.seeedstudio.com/recamera_getting_started/)）
 
 复制完成后，**在 recamera 终端中运行命令：**
 

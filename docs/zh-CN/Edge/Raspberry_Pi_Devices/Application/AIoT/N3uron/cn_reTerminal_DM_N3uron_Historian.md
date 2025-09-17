@@ -43,7 +43,7 @@ last_update:
 
 ### 软件
 
-我们强烈建议学习如何[将 N3uron 与 AWS IoT Core 连接](https://wiki.seeedstudio.com/cn/reTerminalDM_N3uron_AWS/)。在本教程的后续部分，您将学习如何使用历史数据模块创建图表。如果您是 N3uron 的新手，我们建议从[N3uron 入门指南](https://wiki.seeedstudio.com/cn/reTerminalDM_N3uron_Get_Start/)开始。该指南涵盖了 N3uron Web 界面导航、理解 Web UI 和 Web Vision 模块等概念、掌握标签概念以及创建基本仪表板。建议在继续之前先探索这些基础知识。您可以通过提供的链接访问该指南。
+我们强烈建议学习如何[将 N3uron 与 AWS IoT Core 连接](https://wiki.seeedstudio.com/reTerminalDM_N3uron_AWS/)。在本教程的后续部分，您将学习如何使用历史数据模块创建图表。如果您是 N3uron 的新手，我们建议从[N3uron 入门指南](https://wiki.seeedstudio.com/reTerminalDM_N3uron_Get_Start/)开始。该指南涵盖了 N3uron Web 界面导航、理解 Web UI 和 Web Vision 模块等概念、掌握标签概念以及创建基本仪表板。建议在继续之前先探索这些基础知识。您可以通过提供的链接访问该指南。
 
 ## 在您的 reTerminal DM 上安装 MongoDB
 

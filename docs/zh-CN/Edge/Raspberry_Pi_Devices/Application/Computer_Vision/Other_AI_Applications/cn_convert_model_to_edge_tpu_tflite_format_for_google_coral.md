@@ -65,7 +65,7 @@ no_comments: false # for Disqus
 ## 转换模型
 
 :::note
-在开始之前，请确保您已按照[安装指南](https://wiki.seeedstudio.com/cn/install_m2_coral_to_rpi5/)将 Google Coral TPU 安装到 Pi 5 上。
+在开始之前，请确保您已按照[安装指南](https://wiki.seeedstudio.com/install_m2_coral_to_rpi5/)将 Google Coral TPU 安装到 Pi 5 上。
 :::
 
 import Tabs from '@theme/Tabs';

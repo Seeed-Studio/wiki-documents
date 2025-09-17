@@ -32,7 +32,7 @@ last_update:
 ## 前提条件
 
 - 16GB以上のメモリを搭載したJetsonデバイス。
-- ハードウェアデバイスには、jetpack [5.1.1](https://wiki.seeedstudio.com/ja/reComputer_Intro/)オペレーティングシステムが事前にフラッシュされている必要があります。
+- ハードウェアデバイスには、jetpack [5.1.1](https://wiki.seeedstudio.com/reComputer_Intro/)オペレーティングシステムが事前にフラッシュされている必要があります。
 
 :::note
 このwikiでは、[NVIDIA® Jetson AGX Orin™ 64GB Developer Kit](https://www.seeedstudio.com/NVIDIArJetson-AGX-Orintm-64GB-Developer-Kit-p-5641.html)を使用して以下のタスクを実行しますが、他のJetsonデバイスでも試すことができます。

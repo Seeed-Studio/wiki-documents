@@ -44,7 +44,7 @@ BACnet IP（基于IP的楼宇自动化和控制网络）是一种专为管理和
 
 ### 软件准备
 
-我们已经准备了一个[Node-RED入门指南](https://wiki.seeedstudio.com/cn/reTerminal-DM-Getting-Started-with-Node-Red/)。建议您在继续阅读本wiki之前先查看此指南。
+我们已经准备了一个[Node-RED入门指南](https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Node-Red/)。建议您在继续阅读本wiki之前先查看此指南。
 
 ### YABE
 

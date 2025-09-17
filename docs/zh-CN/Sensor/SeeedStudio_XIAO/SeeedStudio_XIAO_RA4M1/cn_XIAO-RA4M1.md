@@ -158,7 +158,7 @@ XIAO RA4M1 将 Renesas 的 RA4M1 芯片（32 位 ARM® Cortex®-M4 MCU，最高 
 XIAO RA4M1 推荐的编程工具是 Arduino IDE，因此作为软件准备的一部分，您需要完成 Arduino 的安装。
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 - **步骤 1.** 根据您的操作系统下载并安装稳定版本的 Arduino IDE。
@@ -277,7 +277,7 @@ void loop() {
 
 ## 电池与电源管理
 
-是否可以在不使用额外组件的情况下读取电池电压？是的，使用 XIAO RA4M1，这比以往任何时候都更容易。在之前的 XIAO 系列产品中，例如 [XIAO ESP32C3](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)，读取电池电压需要手动连接到 A0 引脚并使用电阻。
+是否可以在不使用额外组件的情况下读取电池电压？是的，使用 XIAO RA4M1，这比以往任何时候都更容易。在之前的 XIAO 系列产品中，例如 [XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)，读取电池电压需要手动连接到 A0 引脚并使用电阻。
 
 但是使用 XIAO RA4M1，这个过程得到了简化。您现在可以直接使用 `BAT_DET_PIN/P105` 引脚来读取电池电压水平，简化您的设计和开发。只需记住将 `BAT_READ_EN/P400` 引脚设置为高电平，因为这是启用电池电量读取所必需的。
 

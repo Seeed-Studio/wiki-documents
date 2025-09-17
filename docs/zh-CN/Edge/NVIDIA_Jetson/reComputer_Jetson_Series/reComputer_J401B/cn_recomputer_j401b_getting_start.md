@@ -851,7 +851,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 ## 接口使用
 
 :::info
-有关接口使用的更多信息，请参考此[wiki页面](/cn/recomputer_j401b_interfaces_usage)。
+有关接口使用的更多信息，请参考此[wiki页面](/recomputer_j401b_interfaces_usage)。
 :::
 
 ## 资源

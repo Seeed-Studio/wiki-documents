@@ -10,7 +10,10 @@ last_update:
   date: 05/15/2025
   author: jianjing Huang
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 **Raspberry Pi®** は、[Raspberry Pi Foundation](http://www.raspberrypi.org) によって開発された、クレジットカードサイズの **ARM** ベースの **SBC**（シングルボードコンピュータ）です。Raspberry Pi は Debian ベースの **GNU/Linux** オペレーティングシステム [Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspberry-pi-os/) を実行し、この SBC 用に多くの他の OS の移植版も存在します。
 

@@ -18,7 +18,7 @@ last_update:
 
 ## **选择您的 ReSpeaker**
 
-您已经对 ReSpeaker 产品线的用途和目的有了一些了解——无论是通过我们的[解决方案页面](https://wiki.seeedstudio.com/cn/ReSpeaker_Solutions/)还是我们的[介绍页面](https://wiki.seeedstudio.com/cn/ReSpeaker/)，但哪些产品真正符合您的需求呢？别担心——这个自我感知的页面将为您提供帮助。
+您已经对 ReSpeaker 产品线的用途和目的有了一些了解——无论是通过我们的[解决方案页面](https://wiki.seeedstudio.com/ReSpeaker_Solutions/)还是我们的[介绍页面](https://wiki.seeedstudio.com/ReSpeaker/)，但哪些产品真正符合您的需求呢？别担心——这个自我感知的页面将为您提供帮助。
 
 ## **三大类别**
 
@@ -36,7 +36,7 @@ last_update:
 
 建议用户：开发者、企业
 
-**[ReSpeaker Core v2.0](https://wiki.seeedstudio.com/cn/ReSpeaker_Core_v2.0/)** 具有强大的处理能力以及集成的 6 麦克风圆形阵列。开发板中央是核心模块，包含 SoC、内存 (RAM) 和 PMU。开发板外边缘是外设，包括连接器、WiFi 模块、LED 和麦克风阵列。这使得定制变得容易，并使 ReSpeaker Core v2.0 成为项目的优秀一体化开发板解决方案，降低了项目规模化时的成本。
+**[ReSpeaker Core v2.0](https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/)** 具有强大的处理能力以及集成的 6 麦克风圆形阵列。开发板中央是核心模块，包含 SoC、内存 (RAM) 和 PMU。开发板外边缘是外设，包括连接器、WiFi 模块、LED 和麦克风阵列。这使得定制变得容易，并使 ReSpeaker Core v2.0 成为项目的优秀一体化开发板解决方案，降低了项目规模化时的成本。
 
 ### **麦克风阵列解决方案**
 
@@ -46,7 +46,7 @@ ReSpeaker 麦克风阵列系列使用硬件 DSP 进行前端加速，向集成�
 
 建议用户：开发者、专业创客、企业
 
-**[ReSpeaker 麦克风阵列 v2.0](https://wiki.seeedstudio.com/cn/ReSpeaker_Mic_Array_v2.0/)** 是由 XMOS XVF3000 驱动的圆形麦克风阵列。它具有硬件支持的前端音频处理功能，兼容大多数常见操作系统，包括 Windows、macOS 和许多 Linux 发行版。它也能够进行音频输出，使用时可以实现 AEC。麦克风配置也可以进行配置和定制。
+**[ReSpeaker 麦克风阵列 v2.0](https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/)** 是由 XMOS XVF3000 驱动的圆形麦克风阵列。它具有硬件支持的前端音频处理功能，兼容大多数常见操作系统，包括 Windows、macOS 和许多 Linux 发行版。它也能够进行音频输出，使用时可以实现 AEC。麦克风配置也可以进行配置和定制。
 
 ### **Raspberry Pi 麦克风阵列解决方案**
 
@@ -56,7 +56,7 @@ ReSpeaker 麦克风阵列系列使用硬件 DSP 进行前端加速，向集成�
 
 建议用户：创客、专业创客、开发者
 
-**[ReSpeaker 4-Mic 线性阵列套件](https://wiki.seeedstudio.com/cn/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi/)** 非常适合靠墙放置的固定项目。能够进行 180° 语音检测，该套件可以检测相对位置，或专注于特定方向同时忽略其他语音输入。阵列具有柔性电缆，允许以多种方向放置，为外壳设计提供更多选择。与其他开发板不同，这款只包含一个蓝色 LED。
+**[ReSpeaker 4-Mic 线性阵列套件](https://wiki.seeedstudio.com/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi/)** 非常适合靠墙放置的固定项目。能够进行 180° 语音检测，该套件可以检测相对位置，或专注于特定方向同时忽略其他语音输入。阵列具有柔性电缆，允许以多种方向放置，为外壳设计提供更多选择。与其他开发板不同，这款只包含一个蓝色 LED。
 
 显著特性：
 
@@ -67,7 +67,7 @@ ReSpeaker 麦克风阵列系列使用硬件 DSP 进行前端加速，向集成�
 - 1 x 3.5mm 音频插孔（立体声）
 - 1 x JST 扬声器连接器（单声道）
 
-**[ReSpeaker 6-Mic 圆形阵列套件](https://wiki.seeedstudio.com/cn/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi/)** 非常适合可能放置在人群中央的项目。能够进行 360° 语音检测，该套件可以检测相对位置，或专注于特定方向同时忽略其他语音输入。阵列具有柔性电缆，允许以多种方向放置，为外壳设计提供更多选择。
+**[ReSpeaker 6-Mic 圆形阵列套件](https://wiki.seeedstudio.com/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi/)** 非常适合可能放置在人群中央的项目。能够进行 360° 语音检测，该套件可以检测相对位置，或专注于特定方向同时忽略其他语音输入。阵列具有柔性电缆，允许以多种方向放置，为外壳设计提供更多选择。
 
 显著特性：
 
@@ -78,7 +78,7 @@ ReSpeaker 麦克风阵列系列使用硬件 DSP 进行前端加速，向集成�
 - 1 x 3.5mm 音频插孔（立体声）
 - 1 x JST 扬声器连接器（单声道）
 
-**[ReSpeaker 4-Mic 阵列](https://wiki.seeedstudio.com/cn/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/)**（圆形）能够进行 360° 语音检测。但是，与其他开发板不同，它没有音频输出功能，需要 Raspberry Pi 单独支持所有输出音频。该开发板具有 4 个麦克风、12 个 RGB LED 和 2 个 grove 连接器。
+**[ReSpeaker 4-Mic 阵列](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/)**（圆形）能够进行 360° 语音检测。但是，与其他开发板不同，它没有音频输出功能，需要 Raspberry Pi 单独支持所有输出音频。该开发板具有 4 个麦克风、12 个 RGB LED 和 2 个 grove 连接器。
 
 显著特性：
 
@@ -90,7 +90,7 @@ ReSpeaker 麦克风阵列系列使用硬件 DSP 进行前端加速，向集成�
 ReSpeaker 4-Mic Array for Raspberry Pi 上没有音频输出接口。它仅用于语音采集。您可以使用 Raspberry Pi 上的[耳机插孔](https://www.raspberrypi.org/documentation/configuration/audio-config.md)进行音频输出。如果您的项目需要更高质量的音频输出，请选择不同的产品。
 :::
 
-**[ReSpeaker 2-Mic Pi HAT](https://wiki.seeedstudio.com/cn/ReSpeaker_2_Mics_Pi_HAT/)** 是一个很好的入门级选择。需要注意的是，与此类别中的其他产品不同，2-Mic HAT 无法检测说话者的方向，它仅设计用于远场语音输入。
+**[ReSpeaker 2-Mic Pi HAT](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/)** 是一个很好的入门级选择。需要注意的是，与此类别中的其他产品不同，2-Mic HAT 无法检测说话者的方向，它仅设计用于远场语音输入。
 
 显著特性：
 

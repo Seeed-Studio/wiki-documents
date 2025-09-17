@@ -64,7 +64,7 @@ FUXAは、Webベースのプロセス可視化（SCADA/HMI/ダッシュボード
     sudo fuxa
   ```
 
-- reComputer R1000のmodbus機能の使用方法については、この[wiki](https://wiki.seeedstudio.com/ja/reComputer_r1000_use_rs485_modbus_rtu/)を参照してください。
+- reComputer R1000のmodbus機能の使用方法については、この[wiki](https://wiki.seeedstudio.com/reComputer_r1000_use_rs485_modbus_rtu/)を参照してください。
 
 ### ハードウェア構成
 

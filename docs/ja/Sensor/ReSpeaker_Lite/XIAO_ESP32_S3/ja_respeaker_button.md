@@ -11,7 +11,10 @@ last_update:
   date: 05/15/2025
   author: Jessie
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 UsrボタンはXMOS XU316に接続されていますが、まだプログラムされていません（将来の使用のために予約されています）。このボタンをXIAO ESP32S3で使用したい場合は、`Usr`ピンを`D2`または`D3`ピンに接続してください。
 

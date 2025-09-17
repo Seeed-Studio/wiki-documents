@@ -83,11 +83,11 @@ last_update:
 <font size={"2"}>
     <tr>
         <th></th>
-        <th><a href="https://wiki.seeedstudio.com/cn/getting_started_with_mr60fda2_mmwave_kit/">XIAO 60GHz 毫米波人体跌倒检测传感器 <strong>MR60FDA2</strong></a></th>
-        <th><a href="https://wiki.seeedstudio.com/cn/getting_started_with_mr60bha2_mmwave_kit/">XIAO 60GHz 毫米波人体呼吸心跳传感器 <strong>MR60BHA2</strong></a></th>
-        <th><a href="https://wiki.seeedstudio.com/cn/mmwave_for_xiao/">24Ghz 毫米波人体静态存在传感器 for XIAO</a></th>
-        <th><a href="https://wiki.seeedstudio.com/cn/mmwave_human_detection_kit/">毫米波人体检测传感器套件 <strong>MR24HPC1</strong></a></th>
-        <th><a href="https://wiki.seeedstudio.com/cn/Radar_MR24HPC1/">24GHz 毫米波人体静态存在传感器模块 <strong>MR24HPC1 Lite</strong></a></th>
+        <th><a href="https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/">XIAO 60GHz 毫米波人体跌倒检测传感器 <strong>MR60FDA2</strong></a></th>
+        <th><a href="https://wiki.seeedstudio.com/getting_started_with_mr60bha2_mmwave_kit/">XIAO 60GHz 毫米波人体呼吸心跳传感器 <strong>MR60BHA2</strong></a></th>
+        <th><a href="https://wiki.seeedstudio.com/mmwave_for_xiao/">24Ghz 毫米波人体静态存在传感器 for XIAO</a></th>
+        <th><a href="https://wiki.seeedstudio.com/mmwave_human_detection_kit/">毫米波人体检测传感器套件 <strong>MR24HPC1</strong></a></th>
+        <th><a href="https://wiki.seeedstudio.com/Radar_MR24HPC1/">24GHz 毫米波人体静态存在传感器模块 <strong>MR24HPC1 Lite</strong></a></th>
     </tr>
     <tr>
         <th>主要功能</th>
@@ -181,7 +181,7 @@ last_update:
         <th>ESPHome 支持</th>
         <td><a href="https://github.com/limengdu/MR60FDA2_ESPHome_external_components">原生固件支持</a></td>
         <td><a href="https://github.com/limengdu/MR60BHA2_ESPHome_external_components">原生固件支持</a></td>
-        <td><a href="https://wiki.seeedstudio.com/cn/mmwave_for_xiao/">指南</a></td>
+        <td><a href="https://wiki.seeedstudio.com/mmwave_for_xiao/">指南</a></td>
         <td><a href="https://github.com/thefipster/esphome-mmwave-sensors">GitHub</a></td>
         <td><a href="https://github.com/thefipster/esphome-mmwave-sensors">GitHub</a></td>
     </tr>
@@ -220,7 +220,7 @@ last_update:
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即购买</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="/cn/getting_started_with_mr60fda2_mmwave_kit/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
+    <a class="get_one_now_item" href="/getting_started_with_mr60fda2_mmwave_kit/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
     </a>
 </div>
 
@@ -240,7 +240,7 @@ last_update:
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即购买</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="/cn/getting_started_with_mr60bha2_mmwave_kit/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
+    <a class="get_one_now_item" href="/getting_started_with_mr60bha2_mmwave_kit/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
     </a>
 </div>
 
@@ -260,7 +260,7 @@ last_update:
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即购买</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="/cn/mmwave_human_detection_kit/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
+    <a class="get_one_now_item" href="/mmwave_human_detection_kit/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
     </a>
 </div>
 
@@ -280,7 +280,7 @@ last_update:
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-24GHz-mmWave-for-XIAO-p-5830.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即购买</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="/cn/mmwave_for_xiao/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
+    <a class="get_one_now_item" href="/mmwave_for_xiao/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
     </a>
 </div>
 
@@ -300,7 +300,7 @@ last_update:
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即获取</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="/cn/Radar_MR24HPC1/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
+    <a class="get_one_now_item" href="/Radar_MR24HPC1/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong>
     </a>
 </div> -->
 
@@ -413,10 +413,10 @@ last_update:
 
 当然，您也可以将我们的毫米波雷达传感器模块连接到HomeAssistant。以下是一些使用示例：
 
-- [MR60FDA2 跌倒检测传感器与 Home Assistant](https://wiki.seeedstudio.com/cn/ha_with_mr60fda2/)
-- [MR60BHA2 呼吸心跳传感器与 Home Assistant](https://wiki.seeedstudio.com/cn/ha_with_mr60bha2/)
-- [毫米波套件和 Grove 连接到 ESPHome](https://wiki.seeedstudio.com/cn/mmWave_Kit_And_Grove_Connect_To_ESPHome/)
-- [mmWave for XIAO 通过蓝牙连接到 Home Assistant](https://wiki.seeedstudio.com/cn/mmwave_for_xiao_to_ha_bt/)
+- [MR60FDA2 跌倒检测传感器与 Home Assistant](https://wiki.seeedstudio.com/ha_with_mr60fda2/)
+- [MR60BHA2 呼吸心跳传感器与 Home Assistant](https://wiki.seeedstudio.com/ha_with_mr60bha2/)
+- [毫米波套件和 Grove 连接到 ESPHome](https://wiki.seeedstudio.com/mmWave_Kit_And_Grove_Connect_To_ESPHome/)
+- [mmWave for XIAO 通过蓝牙连接到 Home Assistant](https://wiki.seeedstudio.com/mmwave_for_xiao_to_ha_bt/)
 
 ## 毫米波雷达传感器的安装方法
 

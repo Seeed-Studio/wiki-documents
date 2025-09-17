@@ -26,7 +26,7 @@ EdgeBox-RPi-200シリーズは、複数の産業用途を組み合わせたRaspb
 </div>
 
 :::tip開始する前に：
-2023年3月30日以降にリリースされたバッチから、Raspberry Pi Compute Module 4のEEPROMを更新しており、起動順序が`NVME > USB-MSD > BCM-USB-MSD > SD CARD/eMMC > NETWORK > RESTART`に変更されています。詳細については、[Compute Module 4のEEPROM更新](/ja/Raspberry_pi_CM4_update_eeprom/)ページをご覧ください。
+2023年3月30日以降にリリースされたバッチから、Raspberry Pi Compute Module 4のEEPROMを更新しており、起動順序が`NVME > USB-MSD > BCM-USB-MSD > SD CARD/eMMC > NETWORK > RESTART`に変更されています。詳細については、[Compute Module 4のEEPROM更新](/Raspberry_pi_CM4_update_eeprom/)ページをご覧ください。
 
 **2023年3月30日より前にEdgebox-RPI-200を購入され、このガイドに従ってEEPROMを更新したり、Edgebox-RPI-200にオペレーティングシステムをフラッシュしたりする場合は、Raspberry Pi CM4の起動モードを選択する機能を含む最小限の開発ボードが必要になります。[Dual Gigabit Ethernet NICs Carrier Board](https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html)がこの目的に最適です。**
 
@@ -63,7 +63,7 @@ import TabItem from '@theme/TabItem';
 元のOSイメージをバックアップし、Sourceforgeでファイルをリリースしています。イメージファイルを取得するには[このページ](https://sourceforge.net/projects/edgebox-rpi-200/files/edgeboxrpi200.img/download)をご覧ください。
 :::
 
-[Raspberry Pi公式Imager](https://www.raspberrypi.com/software/)を使用して起動可能なRaspbian OSデバイスをセットアップする方法については、[こちらの手順](https://wiki.seeedstudio.com/ja/Raspberry_Pi_3_Model_B/)に従ってください。
+[Raspberry Pi公式Imager](https://www.raspberrypi.com/software/)を使用して起動可能なRaspbian OSデバイスをセットアップする方法については、[こちらの手順](https://wiki.seeedstudio.com/Raspberry_Pi_3_Model_B/)に従ってください。
 
 #### USBからの起動
 
@@ -135,7 +135,7 @@ NVMeドライブがフォーマットされており、起動可能なパーテ�
 
 電源を接続し、デバイスが起動するまでお待ちください。
 
-次に、SSHを使用してEdgeBox-RPI-200にアクセスしてください。こちらが[ガイド](/ja/reterminal-dm-flash-OS/#access-reterminal-dm-via-ssh)です。
+次に、SSHを使用してEdgeBox-RPI-200にアクセスしてください。こちらが[ガイド](/reterminal-dm-flash-OS/#access-reterminal-dm-via-ssh)です。
 
 SSHアクセスを取得したら、以下の手順に従ってください：
 

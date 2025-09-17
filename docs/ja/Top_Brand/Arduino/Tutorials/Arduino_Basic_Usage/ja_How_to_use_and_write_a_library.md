@@ -11,7 +11,10 @@ last_update:
 no_comments: false # for Disqus
 
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 Arduinoの人気は、多くの優れた使いやすいライブラリに大きく依存しています。Arduinoライブラリはオブジェクト指向のC++クラスライブラリを使用しており、ライブラリの実装詳細を知らなくても簡単に使用できます。
 

@@ -141,7 +141,7 @@ GPS 卫星在太空中广播信号时具有一定的精度，但您接收到的�
 
 ## 如何批量配置
 
-请查看[快速开始](https://wiki.seeedstudio.com/cn/Get_Started_with_SenseCAP_T1000_tracker/#connect-to-sensecap-mate-app)来设置第一个设备，然后点击右上角的`模板`模块。
+请查看[快速开始](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/#connect-to-sensecap-mate-app)来设置第一个设备，然后点击右上角的`模板`模块。
 
 点击`保存为模板`，为您的模板命名，然后点击`确认`。
 
@@ -163,7 +163,7 @@ GPS 卫星在太空中广播信号时具有一定的精度，但您接收到的�
 
 如果您发现载荷中的时间戳错误，请将固件升级到最新版本。
 
-查看[固件升级和发布说明](https://wiki.seeedstudio.com/cn/fm_release_for_SenseCAP_T1000/)了解更多详情。
+查看[固件升级和发布说明](https://wiki.seeedstudio.com/fm_release_for_SenseCAP_T1000/)了解更多详情。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/time-error.png" alt="pir" width={400} height="auto" /></p>
 
@@ -177,10 +177,10 @@ GPS 卫星在太空中广播信号时具有一定的精度，但您接收到的�
 
 SenseCAP API 供用户管理物联网设备和数据。它结合了三种类型的 API 方法：HTTP 协议、MQTT 协议和 WebSocket 协议。
 
-查看 [SenseCAP API](https://wiki.seeedstudio.com/cn/Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction/) 了解更多详情。
+查看 [SenseCAP API](https://wiki.seeedstudio.com/Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction/) 了解更多详情。
 
 - **LoRaWAN 网络服务器**：
 
 您可以使用 [SenseCAP M2 多平台网关](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html)，然后您可以直接使用内置的 LoRaWAN 网络服务器进行集成。
 
-查看 [LNS 配置](https://wiki.seeedstudio.com/cn/SenseCAP_m2_LNS_config) 了解更多详情。
+查看 [LNS 配置](https://wiki.seeedstudio.com/SenseCAP_m2_LNS_config) 了解更多详情。

@@ -47,7 +47,7 @@ Arduinoプログラミングを通じて、以下のことができます：
 まず、Arduino IDEをまだお持ちでない場合は、[Arduino IDE](https://www.arduino.cc/en/software)にアクセスして最新バージョンをダウンロードしてください。
 
 :::tip
-Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
 ### ステップ2. ESP32ボードサポートのインストール

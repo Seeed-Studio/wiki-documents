@@ -32,7 +32,7 @@ last_update:
 
 ### ソフトウェア
 
-必要なライブラリは以下の通りです。ハードウェアが正常に動作しているかどうかを確認するために、ここのコードを使用することを強く推奨します。ライブラリのインストールに問題がある場合は、[こちら](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/)を参照してください。
+必要なライブラリは以下の通りです。ハードウェアが正常に動作しているかどうかを確認するために、ここのコードを使用することを強く推奨します。ライブラリのインストールに問題がある場合は、[こちら](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)を参照してください。
 
 - [Seeed_Arduino_LSM6DS3-master](https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Seeed_Arduino_LSM6DS3-master.zip)
 
@@ -117,7 +117,7 @@ Edge Impulseの「Data acquisition」ページに戻ると、接続が成功し�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/05.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **Step 7.** [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/ja/XIAO-RP2040/)を上下に振り、20秒間その動作を続けます。取得結果は次のように表示されます：
+- **Step 7.** [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/XIAO-RP2040/)を上下に振り、20秒間その動作を続けます。取得結果は次のように表示されます：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/06.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -289,7 +289,7 @@ Seeed Studio XIAO RP2040 を**円と線**の方向に動かすと：
 
 ## リソース
 
-- [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/ja/XIAO-RP2040/)
+- [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/XIAO-RP2040/)
 - [Edge Impluse CLI](https://docs.edgeimpulse.com/docs/edge-impulse-cli/cli-installation)
 
 ## 技術サポート & 製品ディスカッション

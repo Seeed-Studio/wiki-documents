@@ -75,7 +75,7 @@ conda install libusb-1.0.26-h1c322ee_100.tar.bz2
 ```
 
 :::caution
-在更改固件执行以下操作之前，您需要确保您的 BootLoader 版本大于 2.0.0。如果您不确定，请按照[此部分](https://wiki.seeedstudio.com/cn/Train-Deploy-AI-Model-A1101/#check-bootloader-version)中提到的步骤检查 BootLoader 版本，如果版本小于 2.0.0，请按照[此部分](https://wiki.seeedstudio.com/cn/Train-Deploy-AI-Model-A1101/#update-bootloader)中提到的步骤更新 BootLoader
+在更改固件执行以下操作之前，您需要确保您的 BootLoader 版本大于 2.0.0。如果您不确定，请按照[此部分](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101/#check-bootloader-version)中提到的步骤检查 BootLoader 版本，如果版本小于 2.0.0，请按照[此部分](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101/#update-bootloader)中提到的步骤更新 BootLoader
 :::
 
 ## 1. 收集图像数据

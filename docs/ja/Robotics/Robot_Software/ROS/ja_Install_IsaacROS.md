@@ -24,7 +24,7 @@ last_update:
 
 - JetPack 5.1.2
 - Ubuntu 20.04+
-- [ROS2 Humble](/ja/install_ros2_humble)
+- [ROS2 Humble](/install_ros2_humble)
 
 ## 1. 初期依存関係のインストール
 

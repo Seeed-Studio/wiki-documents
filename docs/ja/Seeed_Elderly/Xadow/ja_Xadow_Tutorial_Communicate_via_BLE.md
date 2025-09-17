@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 次のようなシーンを想像したことはありますか？スマートフォンを開くと、現在の気圧や動きの加速度が確認できる。Xadow モジュールを使用すれば、これを実現することができます。
 

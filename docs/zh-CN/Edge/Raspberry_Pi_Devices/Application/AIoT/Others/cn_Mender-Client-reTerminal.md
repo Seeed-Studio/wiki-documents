@@ -178,7 +178,7 @@ MACHINE="seeed-reterminal-mender" bitbake rpi-test-image
 
 ## 烧录说明
 
-请按照[此 wiki 指南](https://wiki.seeedstudio.com/cn/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)了解如何将上述镜像烧录到 reTerminal 的 eMMC 中。
+请按照[此 wiki 指南](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)了解如何将上述镜像烧录到 reTerminal 的 eMMC 中。
 
 烧录完成后，当您打开 reTerminal 时，它将从编译的镜像启动。
 

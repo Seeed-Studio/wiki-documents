@@ -30,7 +30,7 @@ last_update:
 ## Arduino 库概述
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 要使用 Seeed Studio XIAO nRF52840 的蓝牙功能，我们需要使用官方的 Arduino BLE 库。
 
@@ -48,7 +48,7 @@ last_update:
 
 有关 ArduinoBLE 代码库的功能和使用介绍，请参考 [Arduino 官网](https://www.arduino.cc/reference/en/libraries/arduinoble/)。
 
-有关 Seeed 24GHz 睡眠呼吸雷达 BLE 代码库的功能和使用介绍，请参考 [Wiki](https://wiki.seeedstudio.com/cn/Radar_MR24BSD1/#function)。
+有关 Seeed 24GHz 睡眠呼吸雷达 BLE 代码库的功能和使用介绍，请参考 [Wiki](https://wiki.seeedstudio.com/Radar_MR24BSD1/#function)。
 
 ### 安装
 
@@ -78,7 +78,7 @@ last_update:
 
 **步骤 2.** 选择您的开发板型号并将其添加到 Arduino IDE 中。这里我们使用 "Seeed nrf52 mbed-enabled Boards Library"。
 
-> 有关开发板库的安装，请参考[此教程](https://wiki.seeedstudio.com/cn/XIAO_BLE/#software-setup)完成安装。
+> 有关开发板库的安装，请参考[此教程](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)完成安装。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nrf528404.png" /></div>
 
@@ -220,7 +220,7 @@ The key to the implementation of this example is the following paragraph.
 
 在这个示例中，我们将描述如何获取传感器的数值，并通过 Seeed Studio XIAO nRF52840 将传感器检测到的数据信息通过蓝牙发送到移动设备。
 
-按照下图连接 Seeed Studio XIAO nRF52840 开发板和 24GHz 呼吸睡眠检测模块。更多信息，您可以点击[这里](https://wiki.seeedstudio.com/cn/Radar_MR24BSD1)。
+按照下图连接 Seeed Studio XIAO nRF52840 开发板和 24GHz 呼吸睡眠检测模块。更多信息，您可以点击[这里](https://wiki.seeedstudio.com/Radar_MR24BSD1)。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/60GHzradar/20.png" /></div>
 

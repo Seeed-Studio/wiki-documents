@@ -58,7 +58,7 @@ MQTTノードはNode-REDに組み込まれているため、ノードをイン�
 
 このセクションでは、IoTおよびM2Mアプリケーションで広く使用されているオープンソースのMQTTブローカーである[Eclipse Mosquitto](https://mosquitto.org/)をインストールします。これはEclipse Foundationによって開発され、Eclipse Public Licenseの下で利用可能です。Mosquittoは軽量で効率的に設計されており、低電力デバイスや限られたネットワーク帯域幅の環境での使用に適しています。最新のMQTT 5.0プロトコルと、MQTT 3.1.1などの以前のバージョンをサポートしています。
 
-まず最初に、SSH経由でreTerminal DMにアクセスする知識を復習してください。手順は[こちら](/ja/reterminal-dm-flash-OS#install-drivers)で確認できます。
+まず最初に、SSH経由でreTerminal DMにアクセスする知識を復習してください。手順は[こちら](/reterminal-dm-flash-OS#install-drivers)で確認できます。
 
 SSHでreTerminal DMにアクセスできたら、以下の手順に進むことができます：
 
@@ -349,8 +349,8 @@ STEP 4-2-5: `inject`ノードを`mqtt out`ノードに接続し、`Deploy`をク
 
 # reTerminal DM で node-RED を使用してより多くのノードを探索する
 
-- [reTerminal DM RS485 Port with Node-RED](/ja/reTerminal-DM-Node-Red-RS485)
-- [reTerminal DM CAN BUS with Node-RED](/ja/reTerminal-DM-Node-Red-canbus)
+- [reTerminal DM RS485 Port with Node-RED](/reTerminal-DM-Node-Red-RS485)
+- [reTerminal DM CAN BUS with Node-RED](/reTerminal-DM-Node-Red-canbus)
 
 ## 技術サポートと製品ディスカッション
 

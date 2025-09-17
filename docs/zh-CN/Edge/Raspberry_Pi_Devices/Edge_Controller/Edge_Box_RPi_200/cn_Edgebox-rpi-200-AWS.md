@@ -42,7 +42,7 @@ AWS IoT Core 是一项帮助安全连接和管理物联网（IoT）设备的服�
 
 ### 软件准备
 
-Edge Box-200 预装了树莓派操作系统。如果您是第一次启动此设备，请阅读我们的[入门指南](https://wiki.seeedstudio.com/cn/Edge_Box_introduction/) Wiki
+Edge Box-200 预装了树莓派操作系统。如果您是第一次启动此设备，请阅读我们的[入门指南](https://wiki.seeedstudio.com/Edge_Box_introduction/) Wiki
 
 #### 安装 Mqtt 库
 

@@ -63,11 +63,11 @@ sudo dd if=/dev/zero of=/dev/sda bs=100M count=800
 ```
 フォーマットが完了したら、SSDをJetsonに再インストールします。SSDが完全に消去されていれば、JetPack 5のフラッシュは理論的に起動失敗を防ぐはずです。
 
-Jetsonのフラッシュ手順については、この[wiki](https://wiki.seeedstudio.com/ja/flash/jetpack_to_selected_product/)を参照してください。
+Jetsonのフラッシュ手順については、この[wiki](https://wiki.seeedstudio.com/flash/jetpack_to_selected_product/)を参照してください。
 
 ### オプション B
 
-この[wiki](/ja/how_to_build_the_source_code_project_for_seeed_jetson_bsp)を参照して、フラッシュ用のソースコードプロジェクトを準備してください。
+この[wiki](/how_to_build_the_source_code_project_for_seeed_jetson_bsp)を参照して、フラッシュ用のソースコードプロジェクトを準備してください。
 
 `./tools/kernel_flash/l4t_initrd_flash.sh`を`--erase-all`パラメータで実行すると、フラッシュプロセス中にソリッドステートドライブが完全に消去されます。
 

@@ -238,7 +238,7 @@ rpi-imager
 
 ### 首先：使用 SD 卡更新 EEPROM
 
-请参考此[链接](https://wiki.seeedstudio.com/cn/r2000_series_getting_start/#update-eeprom)。
+请参考此[链接](https://wiki.seeedstudio.com/r2000_series_getting_start/#update-eeprom)。
 
 要将 NVMe 启动顺序设置为最高优先级，请使用以下命令：
 

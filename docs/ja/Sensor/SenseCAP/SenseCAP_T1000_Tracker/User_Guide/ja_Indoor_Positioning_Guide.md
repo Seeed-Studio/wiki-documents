@@ -24,7 +24,7 @@ last_update:
 以下に簡単な要約を示しますが、全体像を把握するために文書の残りの部分をお読みください。
 
 ● Traxmateにログインして建物を作成します。<br/>
-● より多くのWi-Fiや[E5 Bluetooth Location Beacon Deployment](https://wiki.seeedstudio.com/ja/bluetooth_beacon_for_SenseCAP_Traker/#deployment-guidelines)を展開します（必要に応じて）。<br/>
+● より多くのWi-Fiや[E5 Bluetooth Location Beacon Deployment](https://wiki.seeedstudio.com/bluetooth_beacon_for_SenseCAP_Traker/#deployment-guidelines)を展開します（必要に応じて）。<br/>
 ● 既にインストールされているWi-FiやBluetoothインフラストラクチャの提供精度を確認するために屋内調査を実行します。<br/>
 ● 検証のために新しい屋内調査を実行します。<br/>
 ● 上記の手順を繰り返すか、屋内測位ソリューションの使用を開始します。<br/>
@@ -40,7 +40,7 @@ Wi-FiアクセスポイントやBluetoothビーコンのインフラストラク
 Bluetoothビーコンは多くの場合バッテリー駆動であり、より簡単に展開できます。Wi-Fiアクセスポイントはより長い範囲を持ちます。Bluetoothビーコンの密なグリッドは、Wi-Fiアクセスポイントの疎なグリッドよりも優れた精度を提供します。
 :::
 
-詳細については[E5 Bluetooth Location Beacon Deployment](https://wiki.seeedstudio.com/ja/bluetooth_beacon_for_SenseCAP_Traker/#deployment-guidelines)を確認してください。
+詳細については[E5 Bluetooth Location Beacon Deployment](https://wiki.seeedstudio.com/bluetooth_beacon_for_SenseCAP_Traker/#deployment-guidelines)を確認してください。
 
 ## 場所の追加
 
@@ -134,7 +134,7 @@ AndroidでWiFiスキャンスロットリングを無効にすることで、Net
 
 SenseCAP T1000 Tracker は Wi-Fi と Bluetooth のスキャン情報、MAC アドレス、信号強度を収集し、これを The Things Stack に送信し、その後 API を介して Traxmate ポータルに送信します。
 
-まず [Connect to TTN](https://wiki.seeedstudio.com/ja/SenseCAP_T1000_tracker_TTN/) を確認して、トラッカーを正しく設定してください。
+まず [Connect to TTN](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/) を確認して、トラッカーを正しく設定してください。
 
 ### デバイスの追加
 

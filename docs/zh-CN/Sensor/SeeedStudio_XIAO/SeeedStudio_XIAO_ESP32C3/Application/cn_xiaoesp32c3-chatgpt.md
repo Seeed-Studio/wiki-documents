@@ -102,7 +102,7 @@ Seeed Studio XIAO ESP32C3 是一款基于乐鑫 ESP32-C3 WiFi/蓝牙双模芯片
 
 ## 配置 XIAO ESP32C3 连接到网络
 
-WiFi 的使用已在 [XIAO ESP32C3 WiFi 使用教程](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_WiFi_Usage/#connect-to-a-wifi-network)中详细描述。
+WiFi 的使用已在 [XIAO ESP32C3 WiFi 使用教程](https://wiki.seeedstudio.com/XIAO_ESP32C3_WiFi_Usage/#connect-to-a-wifi-network)中详细描述。
 
 当 ESP32 设置为 Wi-Fi 站点模式时，它可以连接到其他网络（如您的路由器）。在这种情况下，路由器会为您的 ESP 开发板分配一个唯一的 IP 地址。
 

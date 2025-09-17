@@ -216,7 +216,7 @@ JetPackをフラッシュすると、デバイス上のすべてのデータが�
 :::
 
 :::caution
-Jetson-NanoのSPIインターフェースはデフォルトでGPIOと多重化されており、有効になっていません。有効にする方法については、[**このガイド**](/ja/enable_spi_interface_on_jetsonnano)を参照してください。
+Jetson-NanoのSPIインターフェースはデフォルトでGPIOと多重化されており、有効になっていません。有効にする方法については、[**このガイド**](/enable_spi_interface_on_jetsonnano)を参照してください。
 :::
 
 ### Jetsonへのフラッシュ
@@ -602,7 +602,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/35.jpg" /></div>
 
 :::note
-より多くのストレージ容量が必要な場合は、SDカードを使用して容量を拡張するか、SDカードにシステムを書き込むことができます。推奨ソリューション[SDカードにシステムをフラッシュ](/ja/J101_Enable_SD_Card)を参照してください。
+より多くのストレージ容量が必要な場合は、SDカードを使用して容量を拡張するか、SDカードにシステムを書き込むことができます。推奨ソリューション[SDカードにシステムをフラッシュ](/J101_Enable_SD_Card)を参照してください。
 :::
 
 ## リソース

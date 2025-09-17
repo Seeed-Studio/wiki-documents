@@ -606,7 +606,7 @@ pip3 install numpy==1.26.0  # This should match torchvision
 
 El proceso de calibración del servo no se detalla en este documento. Consulte el siguiente artículo para obtener más información:
 
-[haga clic aquí](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#%E6%A0%A1%E5%87%86%E8%88%B5%E6%9C%BA%E5%B9%B6%E7%BB%84%E8%A3%85%E6%9C%BA%E6%A2%B0%E8%87%82)
+[haga clic aquí](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#%E6%A0%A1%E5%87%86%E8%88%B5%E6%9C%BA%E5%B9%B6%E7%BB%84%E8%A3%85%E6%9C%BA%E6%A2%B0%E8%87%82)
 
 ### Calibración del SO-ARM
 

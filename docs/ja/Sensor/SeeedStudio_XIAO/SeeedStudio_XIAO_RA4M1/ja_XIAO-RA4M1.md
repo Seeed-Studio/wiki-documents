@@ -158,7 +158,7 @@ XIAO RA4M1は、RenesasのRA4M1チップ（最大48MHzの32ビットARM® Cortex
 XIAO RA4M1の推奨プログラミングツールはArduino IDEです。そのため、ソフトウェア準備の一環として、Arduinoのインストールを完了する必要があります。
 
 :::tip
-Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
 - **ステップ 1.** お使いのオペレーティングシステムに応じて、Arduino IDEの安定版をダウンロードしてインストールします。
@@ -277,7 +277,7 @@ void loop() {
 
 ## バッテリー＆電源管理
 
-追加のコンポーネントなしでバッテリー電圧を読み取ることは可能でしょうか？はい、XIAO RA4M1 を使用すれば、これまで以上に簡単です。[XIAO ESP32C3](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage) などの以前の XIAO ファミリーメンバーでは、バッテリー電圧を読み取るには抵抗を使用して A0 に手動で接続する必要がありました。
+追加のコンポーネントなしでバッテリー電圧を読み取ることは可能でしょうか？はい、XIAO RA4M1 を使用すれば、これまで以上に簡単です。[XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage) などの以前の XIAO ファミリーメンバーでは、バッテリー電圧を読み取るには抵抗を使用して A0 に手動で接続する必要がありました。
 
 しかし、XIAO RA4M1 では、このプロセスが簡素化されています。`BAT_DET_PIN/P105` ピンを直接使用してバッテリー電圧レベルを読み取ることができるようになり、設計と開発が合理化されます。バッテリーレベルの読み取りを有効にするために必要なので、`BAT_READ_EN/P400` ピンを high に設定することを忘れないでください。
 

@@ -316,7 +316,7 @@ last_update:
 ### Arduino库概述
 
 :::tip
-如果这是您第一次使用Arduino，我们强烈建议您参考[Arduino入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用Arduino，我们强烈建议您参考[Arduino入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 本示例中使用的库代码可以通过点击下面的图标下载。
@@ -437,15 +437,15 @@ const unsigned char reset_frame[10] = {0x53, 0x59, 0x01, 0x02, 0x00, 0x01, 0x0F,
 
 **步骤 3.** 选择您的开发板型号并将其添加到 Arduino IDE 中。
 
-- 如果您想在后续教程中使用 **Seeeduino V4.2**，请参考[此教程](https://wiki.seeedstudio.com/cn/Seeed_Arduino_Boards/)完成添加。
+- 如果您想在后续教程中使用 **Seeeduino V4.2**，请参考[此教程](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/)完成添加。
 
-- 如果您想在后续教程中使用 **Seeeduino XIAO**，请参考[此教程](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/#software)完成添加。
+- 如果您想在后续教程中使用 **Seeeduino XIAO**，请参考[此教程](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software)完成添加。
 
-- 如果您想在后续教程中使用 **XIAO RP2040**，请参考[此教程](https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/#software-setup)完成添加。
+- 如果您想在后续教程中使用 **XIAO RP2040**，请参考[此教程](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/#software-setup)完成添加。
 
-- 如果您想在后续教程中使用 **XIAO nRF52840**，请参考[此教程](https://wiki.seeedstudio.com/cn/XIAO_BLE/#software-setup)完成添加。
+- 如果您想在后续教程中使用 **XIAO nRF52840**，请参考[此教程](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)完成添加。
 
-- 如果您想在后续教程中使用 **XIAO ESP32C3**，请参考[此教程](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/#software-setup)完成添加。
+- 如果您想在后续教程中使用 **XIAO ESP32C3**，请参考[此教程](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#software-setup)完成添加。
 
 :::caution
 对于 **XIAO nRF52840**，请选择 **Seeed nRF52 mbed-enabled Boards**，否则运行程序时可能会报错。
@@ -1009,11 +1009,11 @@ MR24HPC1 传感器需要 5V 电源供电，否则传感器可能无法正常工�
 
 我们为这款雷达和 XIAO ESP32C3 创建了连接到 ESPHome 和 Home Assistant 的教程，如果您感兴趣，可以参考这里的教程。
 
-- [XIAO ESP32C3 通过 ESPHome 服务接入 Home Assistant](https://wiki.seeedstudio.com/cn/xiao-esp32c3-esphome)
+- [XIAO ESP32C3 通过 ESPHome 服务接入 Home Assistant](https://wiki.seeedstudio.com/xiao-esp32c3-esphome)
 
 ### 示例 8：在 XIAO ESP32C3 中使用传感器 {#demo8}
 
-由于 XIAO ESP32C3 硬件串口的[特殊设计](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Pin_Multiplexing/#special-way---use-usb-serial-and-uart0uart1-at-the-same-time)，为了使用 UART 与传感器发送和接收数据消息，您需要使用以下代码。
+由于 XIAO ESP32C3 硬件串口的[特殊设计](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/#special-way---use-usb-serial-and-uart0uart1-at-the-same-time)，为了使用 UART 与传感器发送和接收数据消息，您需要使用以下代码。
 
 ```cpp
 #include "Arduino.h"
@@ -1063,7 +1063,7 @@ void loop() {
 
 ### 常见问题 2：为什么我在 XIAO ESP32C3 的串口监视器中看不到任何内容？ {#faq2}
 
-> XIAO ESP32C3 串口功能与一般 Arduino 硬件不太一致，直接使用 Serial1 可能会导致 USB 串口无法工作。相关应用案例请参考 [XIAO ESP32C3 的串口章节](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Pin_Multiplexing/#serial) 了解详情。
+> XIAO ESP32C3 串口功能与一般 Arduino 硬件不太一致，直接使用 Serial1 可能会导致 USB 串口无法工作。相关应用案例请参考 [XIAO ESP32C3 的串口章节](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/#serial) 了解详情。
 
 ### 常见问题 3：是否可以使用其他芯片代替 XIAO ESP32-C3 来使用该库？ {#faq3}
 

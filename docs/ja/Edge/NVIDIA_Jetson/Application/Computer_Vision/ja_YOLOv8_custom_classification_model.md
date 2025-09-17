@@ -632,7 +632,7 @@ cv2.destroyAllWindows
 ## ✨ コントリビュータープロジェクト
 
 - このプロジェクトは Seeed Studio コントリビュータープロジェクトによってサポートされています。
-- **Bruno の努力**に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)されます。
+- **Bruno の努力**に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)されます。
 
 ## 技術サポート & 製品ディスカッション
 

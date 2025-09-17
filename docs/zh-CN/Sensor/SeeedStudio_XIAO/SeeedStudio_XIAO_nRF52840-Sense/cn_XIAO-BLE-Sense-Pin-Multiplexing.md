@@ -181,7 +181,7 @@ void loop(void) {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/OLED-SPI.png" alt="pir" width={1000} height="auto" /></p>
 
-- **步骤 2.** 这个 OLED 显示屏支持 I2C 和 SPI 通信，默认模式是 I2C。要使用 SPI 模式，您需要参考 [Grove - OLED Display 1.12 (SH1107) V3.0 wiki](https://wiki.seeedstudio.com/cn/Grove-OLED-Display-1.12-SH1107_V3.0/#software-i2c) 将 OLED 显示屏的通信方式更改为 SPI，然后再继续进行
+- **步骤 2.** 这个 OLED 显示屏支持 I2C 和 SPI 通信，默认模式是 I2C。要使用 SPI 模式，您需要参考 [Grove - OLED Display 1.12 (SH1107) V3.0 wiki](https://wiki.seeedstudio.com/Grove-OLED-Display-1.12-SH1107_V3.0/#software-i2c) 将 OLED 显示屏的通信方式更改为 SPI，然后再继续进行
 
 **注意：** 确保已从前面的步骤中安装了 U8g2 库。
 

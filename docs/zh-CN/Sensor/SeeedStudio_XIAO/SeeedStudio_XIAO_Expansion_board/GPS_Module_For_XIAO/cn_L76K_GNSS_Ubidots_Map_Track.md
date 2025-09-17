@@ -21,7 +21,7 @@ last_update:
 </p>
 
 ## 介绍
-在完成[SeeedStudio XIAO L76K GNSS 模块入门指南](https://wiki.seeedstudio.com/cn/get_start_l76k_gnss/)后，您可能希望使用 L76K GNSS 模块来定位物体并在地图上显示轨迹。为此，我们可以通过结合 SeeedStudio XIAO 开发板和 Ubidots 物联网数据平台来实现。
+在完成[SeeedStudio XIAO L76K GNSS 模块入门指南](https://wiki.seeedstudio.com/get_start_l76k_gnss/)后，您可能希望使用 L76K GNSS 模块来定位物体并在地图上显示轨迹。为此，我们可以通过结合 SeeedStudio XIAO 开发板和 Ubidots 物联网数据平台来实现。
 
 [Ubidots](https://ubidots.com/) 是一个低代码物联网开发平台，专为没有时间或精力自己构建完整的、生产就绪的物联网应用程序的工程师和开发人员而设计。从设备友好的 API 到面向最终用户的简洁 UI，Ubidots 提供了必要的构建模块，让您更快地进入市场，而无需雇用昂贵的工程师团队来开发和维护定制解决方案。
 

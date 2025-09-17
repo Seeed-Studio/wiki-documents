@@ -45,7 +45,7 @@ Twilio 是面向开发者的领先云通信平台。它提供一套 API 来将�
 
 ## 第三部分. 如何在 Node-RED 中配置 Twilio
 
-如果您还不知道如何从 watcher 发送消息到 Node_RED，[请点击这里](https://wiki.seeedstudio.com/cn/watcher_to_node_red/)。
+如果您还不知道如何从 watcher 发送消息到 Node_RED，[请点击这里](https://wiki.seeedstudio.com/watcher_to_node_red/)。
 
 **步骤 1.** 首先我们需要在 Node-RED 中下载 Twilio 插件，所以点击 **Manage palette**。
 
@@ -77,13 +77,13 @@ Twilio 是面向开发者的领先云通信平台。它提供一套 API 来将�
 
 **步骤 1.** 在 Watcher 中运行任务。
 
-首先，您需要按照下面的视频在 Watcher 中运行任务。如果您想了解更多信息，[请点击这里](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)。
+首先，您需要按照下面的视频在 Watcher 中运行任务。如果您想了解更多信息，[请点击这里](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)。
 
 <div class="table-center">
 <iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-**步骤 2.** 将 sensecap **OpenStream** 模块和 **debug** 模块拖拽到工作区并配置它们。如果您不知道如何配置，[请点击这里](https://wiki.seeedstudio.com/cn/watcher_to_node_red/)。连接它们并点击右上角的 **Deploy** 按钮。
+**步骤 2.** 将 sensecap **OpenStream** 模块和 **debug** 模块拖拽到工作区并配置它们。如果您不知道如何配置，[请点击这里](https://wiki.seeedstudio.com/watcher_to_node_red/)。连接它们并点击右上角的 **Deploy** 按钮。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_twilio_image/101.png" style={{width:700, height:'auto'}}/></div>
 
@@ -134,7 +134,7 @@ msg.payload = {
 return msg;
 ```
 
-**步骤 2.** 在 Watcher 中运行任务，如果您不知道如何运行任务，[请参考这里。](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task)
+**步骤 2.** 在 Watcher 中运行任务，如果您不知道如何运行任务，[请参考这里。](https://wiki.seeedstudio.com/getting_started_with_watcher_task)
 
 **步骤 3.** 您将在**调试页面**和手机上的 **Twilio 消息**中收到消息。
 

@@ -14,7 +14,7 @@ last_update:
 本教程将指导用户将 [Wio Tracker 1110 开发板](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) 烧录为 Meshtastic 版本，适用于想要使用 Meshtastic 网络的用户。
 
 :::tip
-如果您想将开发板烧录回 LoRaWAN 版本，请查看此[教程](https://wiki.seeedstudio.com/cn/flash_to_wio_tracker/)。
+如果您想将开发板烧录回 LoRaWAN 版本，请查看此[教程](https://wiki.seeedstudio.com/flash_to_wio_tracker/)。
 :::
 
 ### 准备工作

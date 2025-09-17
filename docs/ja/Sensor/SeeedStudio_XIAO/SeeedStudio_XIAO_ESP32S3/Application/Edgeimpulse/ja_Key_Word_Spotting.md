@@ -44,8 +44,8 @@ microSDカードをmicroSDカードスロットに挿入してください。挿
 
 XIAO ESP32S3 Senseを初めて使用する場合は、開始前に以下の2つのWikiを読んで使用方法を学ぶことをお勧めします。
 
-- [Seeed Studio XIAO ESP32S3 (Sense)の使用開始](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/)
-- [Seeed Studio XIAO ESP32S3マイクロフォンの使用方法](https://wiki.seeedstudio.com/ja/xiao_esp32s3_sense_mic/)
+- [Seeed Studio XIAO ESP32S3 (Sense)の使用開始](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+- [Seeed Studio XIAO ESP32S3マイクロフォンの使用方法](https://wiki.seeedstudio.com/xiao_esp32s3_sense_mic/)
 
 ## 2. （オフライン）音声データの取得
 

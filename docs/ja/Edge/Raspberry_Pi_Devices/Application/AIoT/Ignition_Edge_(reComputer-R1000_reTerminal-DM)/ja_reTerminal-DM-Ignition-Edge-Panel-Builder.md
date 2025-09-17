@@ -15,7 +15,7 @@ last_update:
 
 :::note
 このドキュメントは、すでにIgnition Edgeゲートウェイが動作しており、ネットワークに接続されていることを前提としています。
-これらの手順を試行する前に、サポートが必要な場合は[Ignition Edgeの開始方法](/ja/reTerminal-DM-Getting-Started-with-Ignition-Edge)に従ってください。
+これらの手順を試行する前に、サポートが必要な場合は[Ignition Edgeの開始方法](/reTerminal-DM-Getting-Started-with-Ignition-Edge)に従ってください。
 :::
 
 ## ハードウェア前提条件

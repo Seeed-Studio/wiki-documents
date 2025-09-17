@@ -13,27 +13,27 @@ last_update:
 
 #### Q1: 安装故障排除
 
-详细信息，请点击[这里](/cn/Troubleshooting_Installation)
+详细信息，请点击[这里](/Troubleshooting_Installation)
 
 #### Q2: 收到的 reComputer 中 eMMC 的剩余空间只有约 2GB，如何解决空间不足的问题？
 
-详细信息，请点击[这里](/cn/solution_of_insufficient_space)
+详细信息，请点击[这里](/solution_of_insufficient_space)
 
 #### Q3: 如何解决 reComputer 与 VEYE 摄像头之间的兼容性问题？
 
-详细信息，请点击[这里](/cn/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera)
+详细信息，请点击[这里](/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera)
 
 #### Q4: 如何解决 IMX477 摄像头与 A603 载板之间的兼容性问题？
 
-详细信息，请点击[这里](/cn/Use_IMX477_Camera_with_A603_Jetson_Carrier_Board)
+详细信息，请点击[这里](/Use_IMX477_Camera_with_A603_Jetson_Carrier_Board)
 
 #### Q5: 如何获取 reComputer J30/J40 的系统日志？
 
-详细信息，请点击[这里](/cn/get_the_system_log_of_recomputer_j30_and_j40)
+详细信息，请点击[这里](/get_the_system_log_of_recomputer_j30_and_j40)
 
 #### Q6: 刷写 Jetpack 时的超时问题。
 
-详细信息，请点击[这里](/cn/usb_timeout_during_flash)
+详细信息，请点击[这里](/usb_timeout_during_flash)
 
 #### Q7: 刷写设备后无法使用 USB-A 端口、以太网端口或没有 HDMI 显示。
 **A:** 请检查文件完整性（例如，我们提供了 SHA256 校验和），对于某些载板（特别是 A60X 系列），确保驱动程序补丁已成功复制/应用到 **Linux_for_tegra** 目录。有些文件需要 **sudo** 权限，当您复制目录时，确保在命令中包含 **-r** 参数。
@@ -43,24 +43,24 @@ last_update:
 
 #### Q9: 如果您告诉我不能执行 apt upgrade，我如何升级软件包？如果我不升级软件，会有安全风险吗？
 
-详细信息，请点击[这里](/cn/upgrade_software_packages_for_jetson)
+详细信息，请点击[这里](/upgrade_software_packages_for_jetson)
 
 <!-- #### Q10: 如何使用 OTA（空中升级）方法升级 Jetson 设备的系统版本。 -->
 
-<!-- 详细信息，请点击[这里](/cn/updating_jetpack_with_ota) -->
+<!-- 详细信息，请点击[这里](/updating_jetpack_with_ota) -->
 
 #### Q11: Seeed 对 NVIDIA 的 Jetson BSP 做了哪些修改。
 
-详细信息，请点击[这里](/cn/differences_of_l4t_between_seeed_and_nvidia)
+详细信息，请点击[这里](/differences_of_l4t_between_seeed_and_nvidia)
 
 #### Q12: 如何在 Jetson-nano 上启用 SPI 接口？
-详细信息，请点击[这里](/cn/enable_spi_interface_on_jetsonnano)
+详细信息，请点击[这里](/enable_spi_interface_on_jetsonnano)
 
 #### Q13: 为什么有时在 Jetson 上完成刷写过程后，系统无法从 SSD 启动？
-此问题目前在刷写 JetPack 5 时出现，NVIDIA 已正式记录了此问题。解决方案，请点击[这里。](/cn/issue_of_jetpack5_failing_to_boot_from_certain_ssd)
+此问题目前在刷写 JetPack 5 时出现，NVIDIA 已正式记录了此问题。解决方案，请点击[这里。](/issue_of_jetpack5_failing_to_boot_from_certain_ssd)
 
 #### Q14: 如何构建 Seeed 的 Jetson BSP 源代码项目？
-详细信息，请点击[这里](/cn/how_to_build_the_source_code_project_for_seeed_jetson_bsp)
+详细信息，请点击[这里](/how_to_build_the_source_code_project_for_seeed_jetson_bsp)
 
 ## 技术支持
 

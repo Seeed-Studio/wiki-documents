@@ -53,7 +53,7 @@ last_update:
 
 ### XIAO RA4M1の内蔵LEDを点灯させる
 
-XIAO RA4M1を使用したことがない場合は、[こちらをクリック](https://wiki.seeedstudio.com/ja/getting_started_xiao_ra4m1/)して内蔵LEDの点灯方法を学習してください。これにより、開発環境が正常に動作することを確認できます。
+XIAO RA4M1を使用したことがない場合は、[こちらをクリック](https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/)して内蔵LEDの点灯方法を学習してください。これにより、開発環境が正常に動作することを確認できます。
 
 ### Grove ジョイスティックのXおよびY軸データを読み取る
 

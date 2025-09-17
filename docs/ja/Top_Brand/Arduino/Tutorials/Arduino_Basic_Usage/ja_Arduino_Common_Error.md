@@ -11,7 +11,10 @@ last_update:
 no_comments: false # Disqus用
 
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 初心者にとって、コンパイルやアップロード時にエラーが発生することがあります。ここでは、一般的なエラーとその解決策をまとめました。少しでもお役に立てれば幸いです。
 

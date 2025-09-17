@@ -392,7 +392,7 @@ typedef struct tf_module_mgmt {
 }tf_module_mgmt_t;
 ```
 
-モジュールの書き方については、[Watcher Function Module Development Guide](https://wiki.seeedstudio.com/ja/watcher_function_module_development_guide)を参照してください。
+モジュールの書き方については、[Watcher Function Module Development Guide](https://wiki.seeedstudio.com/watcher_function_module_development_guide)を参照してください。
 
 ## 2. 機能モジュール
 

@@ -33,7 +33,7 @@ last_update:
 この文書では、
 [YOLOv8](https://www.ultralytics.com/)
 物体検出アルゴリズムを例として使用し、全プロセスの詳細な概要を提供します。以下で説明するすべての操作はJetsonエッジコンピューティングデバイス上で行われ、Jetsonデバイスには
-[JetPack 5.0](https://wiki.seeedstudio.com/ja/NVIDIA_Jetson/)
+[JetPack 5.0](https://wiki.seeedstudio.com/NVIDIA_Jetson/)
 以上のオペレーティングシステムがインストールされていることを確認してください。
 
 ## データセット

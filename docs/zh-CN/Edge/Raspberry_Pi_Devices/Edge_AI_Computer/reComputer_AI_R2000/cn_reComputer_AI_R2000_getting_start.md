@@ -290,7 +290,7 @@ rpi-imager
 
 ### 首先：使用 SD 卡更新 EEPROM
 
-请参考此[链接](https://wiki.seeedstudio.com/cn/r2000_series_getting_start/#update-eeprom)。
+请参考此[链接](https://wiki.seeedstudio.com/r2000_series_getting_start/#update-eeprom)。
 
 要将 NVMe 启动顺序设置为最高优先级，请使用以下命令：
 
@@ -361,7 +361,7 @@ Frigate 是一个开源的 NVR（网络视频录像机），专为使用 AI 进�
 <iframe width="800" height="500" src="https://www.youtube.com/embed/thmI3dz9Ugs" title="Cost-Effective AI Surveillance: Frigate on Raspberry Pi 5 with Hailo8 on PCIe3.0 to Dual M.2 hat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 > **注意：**
-> **如果您想了解更多关于此项目的信息，请参考此[链接](https://wiki.seeedstudio.com/cn/frigate_nvr_with_raspberrypi_5/)。**
+> **如果您想了解更多关于此项目的信息，请参考此[链接](https://wiki.seeedstudio.com/frigate_nvr_with_raspberrypi_5/)。**
 
 ### YOLO
 
@@ -370,7 +370,7 @@ YOLO（You Only Look Once）系列模型是一系列专为速度和准确性而�
 <iframe width="800" height="500" src="https://www.youtube.com/embed/olaSVKmt9YI" title="Raspberry Pi AI: YOLOv8 Object Detection - 240fps Video Input, Pi 5 PCIe Gen2 vs Gen3 Benchmark" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 > **注意：**
-> **如果您想了解更多关于此项目的信息，请参考此[链接](https://wiki.seeedstudio.com/cn/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)。**
+> **如果您想了解更多关于此项目的信息，请参考此[链接](https://wiki.seeedstudio.com/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)。**
 
 ### Clip
 
@@ -379,7 +379,7 @@ CLIP（对比语言-图像预训练）是由 OpenAI 开发的机器学习模型�
 <iframe width="800" height="500" src="https://www.youtube.com/embed/JMHtqSmAGCA" title="CLIP Zero Shot Classification on Raspberry Pi 5 with Hailo AI Accelerator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 > **注意：**
-> **如果您想了解更多关于此项目的信息，请参考此[链接](https://wiki.seeedstudio.com/cn/clip_application_on_rpi5_with_ai_kit/)。**
+> **如果您想了解更多关于此项目的信息，请参考此[链接](https://wiki.seeedstudio.com/clip_application_on_rpi5_with_ai_kit/)。**
 
 ## 技术支持与产品讨论
 

@@ -14,7 +14,7 @@ last_update:
 
 # 1. 从The Things Network获取Wi-Fi信息
 
-- **步骤1.** 我们按照Seeed Studio [Wiki](https://wiki.seeedstudio.com/cn/SenseCAP_T1000_tracker_TTN/)提供的分步教程，建立追踪器与The Things Network (TTN)之间的连接
+- **步骤1.** 我们按照Seeed Studio [Wiki](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/)提供的分步教程，建立追踪器与The Things Network (TTN)之间的连接
 
 - **步骤2.** 从解析的有效载荷中提取必要的MAC地址、RSSI（接收信号强度指示）和时间戳，因为这些数据将在后续步骤中用于Wi-Fi地理定位。
 

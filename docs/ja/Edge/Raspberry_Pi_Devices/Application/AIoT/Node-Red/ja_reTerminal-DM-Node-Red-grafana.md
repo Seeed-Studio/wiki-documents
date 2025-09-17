@@ -41,7 +41,7 @@ last_update:
 
 ### ソフトウェアの準備
 
-[InfluxDBデータベースの作成方法](https://wiki.seeedstudio.com/ja/reterminal_dm_200_node_red_influxdb/)に関する以前のチュートリアルを参照することをお勧めします。このチュートリアルでは、セットアップに既存のInfluxDB接続を使用します。
+[InfluxDBデータベースの作成方法](https://wiki.seeedstudio.com/reterminal_dm_200_node_red_influxdb/)に関する以前のチュートリアルを参照することをお勧めします。このチュートリアルでは、セットアップに既存のInfluxDB接続を使用します。
 
 ## Grafanaリポジトリの追加
 

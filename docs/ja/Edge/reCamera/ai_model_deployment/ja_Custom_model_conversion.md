@@ -713,7 +713,7 @@ model_tool --info yolov5s_mix-precision.cvimodel
 git clone https://github.com/jjjadand/yolov5_Test_reCamera.git
 ```
 
-コンパイルされた例と `yolov5s_mix-precision.cvimodel` を [FileZilla](https://filezilla-project.org/) などのソフトウェアを使用して reCamera にコピーします。（[reCamera の使用開始](https://wiki.seeedstudio.com/ja/recamera_getting_started/) を参照できます）
+コンパイルされた例と `yolov5s_mix-precision.cvimodel` を [FileZilla](https://filezilla-project.org/) などのソフトウェアを使用して reCamera にコピーします。（[reCamera の使用開始](https://wiki.seeedstudio.com/recamera_getting_started/) を参照できます）
 
 コピーが完了したら、**reCamera ターミナルでコマンドを実行します：**
 

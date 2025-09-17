@@ -46,8 +46,8 @@ EdgeBox RPi 200 支持与各种设备进行 Modbus 通信，包括 **PLC、变�
 
 ### 软件准备
 
-Edge Box-200 出厂时预装了树莓派操作系统。如果您是第一次启动此设备，请阅读我们的[入门指南](https://wiki.seeedstudio.com/cn/Edge_Box_introduction/)。
-我们准备了一份[Node-RED 入门指南](https://wiki.seeedstudio.com/cn/Edge-Box-Getting-Started-with-Node-Red/)。建议您在继续阅读本文档之前先查看此指南。
+Edge Box-200 出厂时预装了树莓派操作系统。如果您是第一次启动此设备，请阅读我们的[入门指南](https://wiki.seeedstudio.com/Edge_Box_introduction/)。
+我们准备了一份[Node-RED 入门指南](https://wiki.seeedstudio.com/Edge-Box-Getting-Started-with-Node-Red/)。建议您在继续阅读本文档之前先查看此指南。
 
 ### 为 Modbus TCP/IP 配置以太网设置
 

@@ -29,7 +29,7 @@ last_update:
 
 - 下载 [**simple_daplink_xiao**](http://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/simple_daplink_xiao.uf2) `uf2` 文件。
 
-通过快速滑动电源开关两次进入引导加载程序模式。更多参考信息，请参见[这里](https://wiki.seeedstudio.com/cn/Wio-Terminal-Getting-Started/#faq)。
+通过快速滑动电源开关两次进入引导加载程序模式。更多参考信息，请参见[这里](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/#faq)。
 
 您的 PC 中应该会出现一个名为 `Arduino` 的外部驱动器。将下载的 uf2 文件拖拽到 `Arduino` 驱动器中。
 

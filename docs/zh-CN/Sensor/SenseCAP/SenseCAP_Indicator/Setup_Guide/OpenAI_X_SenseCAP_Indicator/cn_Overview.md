@@ -70,8 +70,8 @@ OpenAI 的 ChatGPT 和 DALL·E 模型与 SenseCAP Indicator 的集成提供以�
 
 需要更详细的信息来了解如何使用 ChatGPT 和 DALL·E 模型？
 
-- [SenseCAP_Indicator_ChatGPT 聊天完成](/cn/SenseCAP_Indicator_ChatGPT)
-- [SenseCAP_Indicator_DALL·E 图像生成](/cn/SenseCAP_Indicator_DALL·E)
+- [SenseCAP_Indicator_ChatGPT 聊天完成](/SenseCAP_Indicator_ChatGPT)
+- [SenseCAP_Indicator_DALL·E 图像生成](/SenseCAP_Indicator_DALL·E)
 
 # **技术支持**
 **需要 SenseCAP Indicator 的帮助？我们在这里为您提供支持！**

@@ -15,7 +15,7 @@ no_comments: false # for Disqus
 
 # J101 启用 SD 卡
 
-该方法是将 NVIDIA JetPack 操作系统刷写到 J101 载板上的 SD 卡，该载板运行在 reComputer J1010 上。因此需要先<a href="https://wiki.seeedstudio.com/cn/reComputer_J1010_J101_Flash_Jetpack/" target="_blank"><span>将 JetPack 操作系统刷写到 reComputer J1010</span></a>。
+该方法是将 NVIDIA JetPack 操作系统刷写到 J101 载板上的 SD 卡，该载板运行在 reComputer J1010 上。因此需要先<a href="https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack/" target="_blank"><span>将 JetPack 操作系统刷写到 reComputer J1010</span></a>。
 
 ## 驱动配置
 
@@ -163,7 +163,7 @@ cd bootFromUSB
 
 ### 更改SD卡I/O速度
 
-我们在<a href="https://wiki.seeedstudio.com/cn/install_NVIDIA_software_to_Jetson-101" target="_blank"><span>reComputer J101载板</span></a>上提供SD卡功能，支持CLK频率48MHz。这里的CLK设计是为了获得认证（如CE/FCC）。如果您想自己提高CLK，可以使用下面的说明。
+我们在<a href="https://wiki.seeedstudio.com/install_NVIDIA_software_to_Jetson-101" target="_blank"><span>reComputer J101载板</span></a>上提供SD卡功能，支持CLK频率48MHz。这里的CLK设计是为了获得认证（如CE/FCC）。如果您想自己提高CLK，可以使用下面的说明。
 
 <div>
   <p style={{}}><a href="https://github.com/Seeed-Studio/seeed-linux-dtoverlays/blob/master/overlays/jetsonnano/jetson-sdmmc-overlay.dts" target="_blank" /></p><div align="center"><a href="https://github.com/Seeed-Studio/seeed-linux-dtoverlays/blob/master/overlays/jetsonnano/jetson-sdmmc-overlay.dts" target="_blank"><img width={300} src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></a></div><p />

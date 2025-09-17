@@ -45,9 +45,9 @@ last_update:
 
 ### ソフトウェア準備
 
-統合プロセスに入る前に、必要なドライバーとツールがすべてインストールされていることを確認することが重要です。適切な[ドライバーのインストール](https://wiki.seeedstudio.com/ja/reComputer_r1000_use_rs485_modbus_rtu/)は、Modbus RTUデバイスとHome Assistant間のシームレスな通信の前提条件です。このガイドを進める前に、必要なドライバーを十分に研究してインストールすることを強く推奨します。
+統合プロセスに入る前に、必要なドライバーとツールがすべてインストールされていることを確認することが重要です。適切な[ドライバーのインストール](https://wiki.seeedstudio.com/reComputer_r1000_use_rs485_modbus_rtu/)は、Modbus RTUデバイスとHome Assistant間のシームレスな通信の前提条件です。このガイドを進める前に、必要なドライバーを十分に研究してインストールすることを強く推奨します。
 
-また、まだHome Assistantをインストールしていない場合は、[Home Assistantインストールガイド](https://wiki.seeedstudio.com/ja/recomputer_r1000_home_automation/)に従って、reComputer R1000にセットアップしてください。
+また、まだHome Assistantをインストールしていない場合は、[Home Assistantインストールガイド](https://wiki.seeedstudio.com/recomputer_r1000_home_automation/)に従って、reComputer R1000にセットアップしてください。
 
 ## File Editor アドオン
 

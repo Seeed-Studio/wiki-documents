@@ -38,7 +38,7 @@ last_update:
 
 SenseCraft HMIは現在、以下のSeeed Studioデバイスをサポートしています：
 
-### [reTerminal Eシリーズ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_main_page/)
+### [reTerminal Eシリーズ](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.jpg" style={{width:500, height:'auto'}}/></div>
@@ -47,7 +47,7 @@ SenseCraft HMIは現在、以下のSeeed Studioデバイスをサポートして
 
 reTerminal EシリーズePaperディスプレイは、強力なコンピューティング機能とePaperディスプレイ技術を組み合わせ、デジタルサイネージ、情報ダッシュボード、インタラクティブディスプレイに最適です。このシリーズには、異なるディスプレイ機能を持つ2つのモデルが含まれています：
 
-#### [reTerminal E1001](https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1001/)
+#### [reTerminal E1001](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1001/)
 
 reTerminal E1001は、4レベルグレースケール機能を備えた7.5インチモノクロームePaperディスプレイを特徴としています。800×480の解像度により、最小限の電力消費で鮮明なテキストとクリアな画像を提供します。モノクロームディスプレイは、テキストの読みやすさとバッテリー寿命が優先されるアプリケーションに最適です。
 
@@ -59,7 +59,7 @@ reTerminal E1001は、4レベルグレースケール機能を備えた7.5イン
 - **人気のソフトウェアプラットフォームとの連携**
 - **柔軟なハードウェアとソフトウェアのカスタマイズ**
 
-#### [reTerminal E1002](https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1002/)
+#### [reTerminal E1002](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002/)
 
 reTerminal E1002は、ACeP（Advanced Color ePaper）技術を採用した鮮やかな7.3インチ6色ePaperディスプレイを特徴としています。このカラーディスプレイは、ePaper技術の同じ電力効率の利点を提供しながら、複数の色でより視覚的に魅力的なコンテンツを可能にし、視覚的な区別と美的魅力が重要なアプリケーションに理想的です。
 
@@ -91,23 +91,23 @@ SenseCraft HMI の使用を開始するには：
 
 SenseCraft HMI は、それぞれ異なるディスプレイニーズに対応した複数の専門機能を提供します：
 
-### [AI 生成機能](https://wiki.seeedstudio.com/ja/sensecraft_hmi_ai_generation/)
+### [AI 生成機能](https://wiki.seeedstudio.com/sensecraft_hmi_ai_generation/)
 
 自然言語で欲しいものを説明するだけで美しいレイアウトと画像を作成でき、デザインスキルが不要です。
 
-### [Gallery 機能](https://wiki.seeedstudio.com/ja/sensecraft_hmi_gallery/)
+### [Gallery 機能](https://wiki.seeedstudio.com/sensecraft_hmi_gallery/)
 
 カスタマイズ可能な画像表示、トランジション、視覚効果でデバイスをデジタルフォトフレームに変換します。
 
-### [Canvas 機能](https://wiki.seeedstudio.com/ja/sensecraft_hmi_canvas/)
+### [Canvas 機能](https://wiki.seeedstudio.com/sensecraft_hmi_canvas/)
 
 静的要素と様々なソースからの動的データを組み合わせたカスタムインターフェースとダッシュボードをデザインします。
 
-### [RSS 機能](https://wiki.seeedstudio.com/ja/sensecraft_hmi_rss/)
+### [RSS 機能](https://wiki.seeedstudio.com/sensecraft_hmi_rss/)
 
 RSS フィードを使用して、ニュースメディア、ブログ、その他の情報源から自動更新されるコンテンツを表示します。
 
-### [Web 機能](https://wiki.seeedstudio.com/ja/sensecraft_hmi_web/)
+### [Web 機能](https://wiki.seeedstudio.com/sensecraft_hmi_web/)
 
 デバイス上で直接 Web コンテンツを表示し、ダッシュボード、ドキュメント、監視システムに最適です。
 

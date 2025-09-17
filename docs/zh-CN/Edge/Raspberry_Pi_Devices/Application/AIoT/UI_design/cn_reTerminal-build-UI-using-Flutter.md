@@ -32,7 +32,7 @@ last_update:
 
 > 点击[这里](https://github.com/ardera/flutter-pi)访问 flutter-pi 的 GitHub 仓库
 
-- **步骤 1.** 按照[此教程](https://wiki.seeedstudio.com/cn/reTerminal/#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet)中的说明登录到 reTerminal，并在 reTerminal 上安装 **flutter 引擎二进制文件**
+- **步骤 1.** 按照[此教程](https://wiki.seeedstudio.com/reTerminal/#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet)中的说明登录到 reTerminal，并在 reTerminal 上安装 **flutter 引擎二进制文件**
 
 ```sh
 git clone --depth 1 https://github.com/ardera/flutter-engine-binaries-for-arm.git engine-binaries

@@ -140,10 +140,10 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 git clone https://github.com/servodevelop/lerobot.git
 ```
 
-并切换到develop分支
+并切换到starai-arm-develop分支
 
 ```bash
-git checkout develop
+git checkout starai-arm-develop
 ```
 
 4.使用 miniconda 时，在环境中安装 ffmpeg：
@@ -287,6 +287,7 @@ sudo apt remove brltty
 
 ```sh
 sudo chmod 666 /dev/ttyUSB0
+sudo chmod 666 /dev/ttyUSB1
 ```
 :::
 
@@ -627,7 +628,7 @@ python -m lerobot.record \
     --dataset.episode_time_s=30 \
     --dataset.reset_time_s=30 \
     --dataset.num_episodes=10 \
-    --dataset.push_to_hub=False \
+    --dataset.push_to_hub=False \#修改push_to_hub为false
     --dataset.single_task="Grab the black cube"
 ```
 
@@ -639,7 +640,7 @@ python -m lerobot.record \
 
 </details>
 
-- record提供了一套用于在机器人操作过程中捕获和管理数据的工具:
+- `record` 提供了一套用于在机器人操作过程中捕获和管理数据的工具:
 
 #### 1.数据存储
 
@@ -651,7 +652,7 @@ python -m lerobot.record \
 - 如果出现问题，可以通过使用`--resume=true`重新运行相同的命令来恢复。恢复录制时，必须设置为**要录制的额外集数**`--dataset.num_episodes`，而不是数据集中的目标总剧集数！ 
 - 要从头开始录制，请**手动删除**数据集目录。
 
-#### 3.记录 参数 
+#### 3.记录参数 
 
 使用命令行参数设置数据记录流：
 
@@ -816,13 +817,7 @@ python -m lerobot.record  \
 
 ## FAQ
 
-- 如果你正在按照这份文档/教程操作，请克隆推荐的GitHub仓库：`git clone https://github.com/servodevelop/lerobot`。
-
-- 如果遇到以下报错，需要检查对应端口号的机械臂是否接通电源，总线舵机是否出现数据线松动或者脱落。
-
-  ```bash
-  ConnectionError: Read failed due to comunication eror on port /dev/ttyACM0 for group key Present_Position_Shoulder_pan_Shoulder_lift_elbow_flex_wrist_flex_wrist_roll_griper: [TxRxResult] There is no status packet!
-  ```
+- 如果使用本文档教程，请git clone本文档推荐的github仓库`https://github.com/servodevelop/lerobot.git`。
 
 - 如果遥操作正常，而带Camera的遥操作无法显示图像界面，请参考[这里](https://github.com/huggingface/lerobot/pull/757/files)
 
@@ -836,25 +831,14 @@ python -m lerobot.record  \
 
 - 对于Jetson，请先安装[Pytorch和Torchvsion](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)再执行`conda install -y -c conda-forge ffmpeg`,否则编译torchvision的时候会出现ffmpeg版本不匹配的问题。
 
-- 如果出现如下问题，是电脑的不支持此格式的视频编码，需要修改`lerobot-starai/lerobot/common/datasets/video_utils.py`文件134行`vcodec: str = "libsvtav1"`的值修改为`libx264`或者`libopenh264`,不同电脑参数不同，可以进行尝试。 [Issues 705](https://github.com/huggingface/lerobot/issues/705)
-
-  ```bash
-  [vost#0:0 @ 0x13207240] Unknown encoder 'libsvtav1' [vost#0:0 @ 0x13207240] Error selecting an encoder Error opening output file /home/han/.cache/huggingface/lerobot/lyhhan/so100_test/videos/chunk-000/observation.images.laptop/episode_000000.mp4. Error opening output files: Encoder not found
-  ```
-
 - 在3060的8G笔记本上训练ACT的50组数据的时间大概为6小时，在4090和A100的电脑上训练50组数据时间大概为2~3小时。
 
 - 数据采集过程中要确保摄像头位置和角度和环境光线的稳定，并且减少摄像头采集到过多的不稳定背景和行人，否则部署的环境变化过大会导致机械臂无法正常抓取。
 
-- 数据采集命令的num-episodes要确保采集数据足够，不可中途手动暂停，因为在数据采集结束后才会计算数据的均值和方差，这在训练中是必要的数据。
+- 数据采集命令的`num-episodes`要确保采集数据足够，不可中途手动暂停，因为在数据采集结束后才会计算数据的均值和方差，这在训练中是必要的数据。
 
 - 如果程序提示无法读取USB摄像头图像数据，请确保USB摄像头不是接在Hub上的，USB摄像头必须直接接入设备，确保图像传输速率快。
 
-- 如果遇到此错误 `AttributeError: module 'rerun' has no attribute 'scalar'. Did you mean: 'scalars'?`, 你可以降低rerun版本来解决.
-
-```bash
-pip3 install rerun-sdk==0.23
-```
 
 ## 参考文档
 

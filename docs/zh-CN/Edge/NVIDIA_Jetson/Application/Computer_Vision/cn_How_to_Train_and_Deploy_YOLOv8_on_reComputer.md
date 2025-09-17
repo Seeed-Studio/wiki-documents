@@ -32,7 +32,7 @@ last_update:
 上训练和部署一个用于交通场景的目标检测模型。本文档以
 [YOLOv8](https://www.ultralytics.com/)
 目标检测算法为例，详细介绍了整个过程。请注意，下面描述的所有操作都在 Jetson 边缘计算设备上进行，确保 Jetson 设备安装了
-[JetPack 5.0](https://wiki.seeedstudio.com/cn/NVIDIA_Jetson/)
+[JetPack 5.0](https://wiki.seeedstudio.com/NVIDIA_Jetson/)
 或更高版本的操作系统。
 
 ## 数据集

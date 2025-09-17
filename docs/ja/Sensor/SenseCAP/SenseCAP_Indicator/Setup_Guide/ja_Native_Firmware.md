@@ -67,5 +67,5 @@ D1、D1S、D1L、D1Proの4つの異なるバージョンを提供しています
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_13.png"/></div>
 
 :::tip ChatGPT x DALL·Eをお探しですか？
-[SenseCAP Indicator X OpenAI](/ja/SenseCAP_Indicator_OpenAI_X_Overview)をご覧ください
+[SenseCAP Indicator X OpenAI](/SenseCAP_Indicator_OpenAI_X_Overview)をご覧ください
 :::

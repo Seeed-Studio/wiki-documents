@@ -19,9 +19,9 @@ last_update:
 
 顺便说一下，如果您刚拿到这块板子，请点击此链接，它将告诉您如何开始使用。
 
-- [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/)
-- [Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/cn/xiao_esp32c3_getting_started/)
-- [Seeed Studio XIAO ESP32C6](https://wiki.seeedstudio.com/cn/xiao_esp32c6_getting_started/)
+- [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+- [Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/xiao_esp32c3_getting_started/)
+- [Seeed Studio XIAO ESP32C6](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/)
 
 ## 什么是 ESP-NOW 协议？
 

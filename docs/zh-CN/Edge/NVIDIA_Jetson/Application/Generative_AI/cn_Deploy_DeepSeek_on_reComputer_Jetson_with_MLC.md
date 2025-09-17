@@ -21,14 +21,14 @@ last_update:
 
 DeepSeek是一个前沿的AI模型套件，针对效率、准确性和实时处理进行了优化。通过针对边缘计算的高级优化，DeepSeek能够直接在Jetson设备上实现快速、低延迟的AI推理，减少对云计算的依赖，同时最大化性能。
 
-在[之前的wiki](/cn/deploy_deepseek_on_jetson)中，我们提供了在Jetson上部署DeepSeek的快速指南。然而，成功部署的模型并没有达到最佳的推理速度。
+在[之前的wiki](/deploy_deepseek_on_jetson)中，我们提供了在Jetson上部署DeepSeek的快速指南。然而，成功部署的模型并没有达到最佳的推理速度。
 
 本wiki提供了在reComputer Jetson设备上使用[MLC](https://llm.mlc.ai/)部署[DeepSeek](https://www.deepseek.com/)的分步指南，用于在边缘设备上进行高效的AI推理。
 
 ## 先决条件
 
 - 具有超过8GB内存的Jetson设备。
-- Jetson设备需要预先刷入jetpack [5.1.1](https://wiki.seeedstudio.com/cn/reComputer_Intro/)操作系统或更高版本。
+- Jetson设备需要预先刷入jetpack [5.1.1](https://wiki.seeedstudio.com/reComputer_Intro/)操作系统或更高版本。
 
 :::note
 在本wiki中，我们将使用[reComputer J4012 - 搭载NVIDIA® Jetson™ Orin™ NX 16GB的边缘AI计算机](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6InJlQ29tcHV0ZXIgSjQwMTIiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjo0LCJjX3RvdGFsX3Jlc3VsdHMiOjUyLCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0gJiYgcXVhbnRpdHlfYW5kX3N0b2NrX3N0YXR1czpbMV0ifQ%3D%3D)来完成以下任务，但您也可以尝试使用其他Jetson设备。

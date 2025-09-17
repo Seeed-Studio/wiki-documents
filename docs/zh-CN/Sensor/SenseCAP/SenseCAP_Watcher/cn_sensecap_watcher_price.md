@@ -98,11 +98,11 @@ last_update:
 
 图像分析涉及对 Watcher 捕获的图像进行高级检查，能够识别图像中的对象、活动和上下文。此功能需要使用大模型，并收取使用费。当您的任务需要使用大模型进行图像分析时，将计算一次请求。
 
-- 如果您使用的是 **[纯云端 LLM 服务](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/#pure-cloud-based-llm-service)**，请求将根据您设置的 **捕获频率** 进行计算。
+- 如果您使用的是 **[纯云端 LLM 服务](https://wiki.seeedstudio.com/getting_started_with_watcher_task/#pure-cloud-based-llm-service)**，请求将根据您设置的 **捕获频率** 进行计算。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/llm-app.png" style={{width:1000, height:'auto'}}/></div>
 
-- 对于 **[本地 AI + 云端 LLM 服务](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/#local-ai--cloud-based-llm-service)**，当小模型触发检测后调用大模型进行图像识别时，将计算一次请求。请注意，请求之间的最小间隔不会短于您配置的 **捕获频率**。
+- 对于 **[本地 AI + 云端 LLM 服务](https://wiki.seeedstudio.com/getting_started_with_watcher_task/#local-ai--cloud-based-llm-service)**，当小模型触发检测后调用大模型进行图像识别时，将计算一次请求。请注意，请求之间的最小间隔不会短于您配置的 **捕获频率**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/local_llm-app.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -120,7 +120,7 @@ last_update:
 
 ## 如何订阅？
 
-如果您需要订阅 SenseCraft Pro，那么您需要在 SenseCraft APP 内进行操作。第一步应该是在 APP 上[绑定您的 SenseCAP Watcher](https://wiki.seeedstudio.com/cn/getting_started_with_watcher/#step-3-device-binding)。目前，SenseCraft Pro 订阅仅适用于 SenseCAP Watcher 用户。
+如果您需要订阅 SenseCraft Pro，那么您需要在 SenseCraft APP 内进行操作。第一步应该是在 APP 上[绑定您的 SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/#step-3-device-binding)。目前，SenseCraft Pro 订阅仅适用于 SenseCAP Watcher 用户。
 
 进入 SenseCAP Watcher 的聊天界面，点击右上角的设置齿轮按钮，然后在底部附近，会有一个**订阅**选项。
 

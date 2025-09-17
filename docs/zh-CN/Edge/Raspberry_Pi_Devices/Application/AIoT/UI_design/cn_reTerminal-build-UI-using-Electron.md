@@ -26,7 +26,7 @@ last_update:
 
 首先，我们将在 reTerminal 上安装 **Node.js** 和 **npm**。npm 是 Node.js 包的包管理器。
 
-- **步骤 1.** 使用**板载 LCD、外部显示器或 SSH** 访问 reTerminal，如[此处](https://wiki.seeedstudio.com/cn/reTerminal/#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet)所述
+- **步骤 1.** 使用**板载 LCD、外部显示器或 SSH** 访问 reTerminal，如[此处](https://wiki.seeedstudio.com/reTerminal/#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet)所述
 
 - **步骤 2.** 升级软件包
 

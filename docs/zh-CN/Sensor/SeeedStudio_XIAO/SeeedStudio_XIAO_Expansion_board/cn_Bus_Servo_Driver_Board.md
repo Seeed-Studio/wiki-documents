@@ -209,7 +209,7 @@ import TabItem from '@theme/TabItem';
 ### Arduino 库概述
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 <div class="github_container" style={{textAlign: 'center'}}>
@@ -328,7 +328,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤2.** 选择您的开发板型号并将其添加到Arduino IDE中。
 
-- 要在后续例程中使用**Seeed Studio XIAO ESP32-C3**，请参考**[此教程](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started#software-setup)**完成添加。
+- 要在后续例程中使用**Seeed Studio XIAO ESP32-C3**，请参考**[此教程](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started#software-setup)**完成添加。
 
 **步骤3.** 按照图示完成接线。如果您需要连接多个舵机，可以使用舵机附带的线缆完成连接。
 

@@ -44,7 +44,7 @@ last_update:
 
 ## はじめに
 
-開始する前に、reComputer R1000がホストと同じネットワークセグメントにあり、reComputer R1000に`CODESYS run-time`がデプロイされていることを確認してください。`CODESYS run-time`のデプロイ方法については、[wiki](https://wiki.seeedstudio.com/ja/reComputer_r1000_install_codesys/)を参照してください。
+開始する前に、reComputer R1000がホストと同じネットワークセグメントにあり、reComputer R1000に`CODESYS run-time`がデプロイされていることを確認してください。`CODESYS run-time`のデプロイ方法については、[wiki](https://wiki.seeedstudio.com/reComputer_r1000_install_codesys/)を参照してください。
 
 ### ハードウェア構成
 

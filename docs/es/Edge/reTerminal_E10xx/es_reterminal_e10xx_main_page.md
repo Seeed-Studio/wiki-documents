@@ -107,7 +107,7 @@ Create rich graphical interfaces using LVGL and the visual SquareLine Studio des
 
 ## Recursos
 
-- [Documentación de SenseCraft HMI](https://wiki.seeedstudio.com/es/sensecraft_hmi_overview/)
+- [Documentación de SenseCraft HMI](https://wiki.seeedstudio.com/sensecraft_hmi_overview/)
 - [Hoja de Datos del ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
 <!-- - [Repositorio de GitHub](/es/reterminal_e10xx_main_page) -->
 

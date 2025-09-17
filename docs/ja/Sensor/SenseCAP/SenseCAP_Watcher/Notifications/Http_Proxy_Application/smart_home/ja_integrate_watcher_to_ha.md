@@ -180,7 +180,7 @@ SenseCraftをクリックし、Actionとして**Add device using host/id (局域
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/4.png" style={{width:500, height:'auto'}}/></div>
 
-次のページで、WatcherのデバイスEUIを入力してください。WatcherのEUIは[SenseCraft APPのWatcherの設定](https://wiki.seeedstudio.com/ja/integrate_watcher_to_ha/#step-6-place-the-task-and-configure-the-http-message-block)で確認できます。
+次のページで、WatcherのデバイスEUIを入力してください。WatcherのEUIは[SenseCraft APPのWatcherの設定](https://wiki.seeedstudio.com/integrate_watcher_to_ha/#step-6-place-the-task-and-configure-the-http-message-block)で確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/5.png" style={{width:500, height:'auto'}}/></div>
 

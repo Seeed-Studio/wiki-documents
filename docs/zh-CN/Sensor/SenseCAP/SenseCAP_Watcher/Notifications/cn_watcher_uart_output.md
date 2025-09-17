@@ -333,11 +333,11 @@ void loop() {
 
 2. 打开 Arduino IDE 并确保您已为 XIAO ESP32 系列安装了必要的开发板支持包。
 
-   - 如果您想在例程中使用 **Seeed Studio XIAO ESP32C3**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started#software-setup)** 完成添加。
+   - 如果您想在例程中使用 **Seeed Studio XIAO ESP32C3**，请参考 **[此教程](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started#software-setup)** 完成添加。
 
-   - 如果您想在例程中使用 **Seeed Studio XIAO ESP32S3**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started#software-preparation)** 完成添加。
+   - 如果您想在例程中使用 **Seeed Studio XIAO ESP32S3**，请参考 **[此教程](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)** 完成添加。
 
-   - 如果您想在例程中使用 **Seeed Studio XIAO ESP32C6**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/xiao_esp32c6_getting_started/)** 完成添加。
+   - 如果您想在例程中使用 **Seeed Studio XIAO ESP32C6**，请参考 **[此教程](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/)** 完成添加。
 
 3. 在 Arduino IDE 的工具菜单中选择适当的开发板和端口。
 
@@ -751,19 +751,19 @@ sudo python watcher_uart.py
 
 ## 资源
 
-- [SenseCAP Watcher 入门指南](https://wiki.seeedstudio.com/cn/getting_started_with_watcher/)
+- [SenseCAP Watcher 入门指南](https://wiki.seeedstudio.com/getting_started_with_watcher/)
 
-- [Watcher 快速入门系列 1# : 如何为 Watcher 分配任务](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)
+- [Watcher 快速入门系列 1# : 如何为 Watcher 分配任务](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
 
-- [Watcher 快速入门系列 2# : Watcher Looks & SenseCraft 工具](https://wiki.seeedstudio.com/cn/integrate_watcher_to_ha/#step-6-place-the-task-and-configure-the-http-message-block)
+- [Watcher 快速入门系列 2# : Watcher Looks & SenseCraft 工具](https://wiki.seeedstudio.com/integrate_watcher_to_ha/#step-6-place-the-task-and-configure-the-http-message-block)
 
-- [Watcher 快速入门系列 3# : 作为传感器使用 & 使用 Grove](https://wiki.seeedstudio.com/cn/watcher_as_grove)
+- [Watcher 快速入门系列 3# : 作为传感器使用 & 使用 Grove](https://wiki.seeedstudio.com/watcher_as_grove)
 
-- [Watcher 快速入门系列 4# : 在本地部署 Watcher 的 AI 功能](https://wiki.seeedstudio.com/cn/watcher_local_deploy)
+- [Watcher 快速入门系列 4# : 在本地部署 Watcher 的 AI 功能](https://wiki.seeedstudio.com/watcher_local_deploy)
 
 - Watcher 快速入门系列 5# : 为 Watcher 训练模型
 
-- [Watcher 快速入门系列 6# : Watcher 能做什么](https://wiki.seeedstudio.com/cn/what_does_watcher_do)
+- [Watcher 快速入门系列 6# : Watcher 能做什么](https://wiki.seeedstudio.com/what_does_watcher_do)
 
 ## 技术支持与产品讨论
 

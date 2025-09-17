@@ -286,7 +286,7 @@ R1100 计算机配备 12 个 LED 用于系统状态指示。它们的具体功�
 reComputer R1100 包含一个 **USER** 指示灯，可以根据用户需求进行自定义。
 
 **注意：**
-有关 **USER LED** 测试的详细信息，请参考[此部分](https://wiki.seeedstudio.com/cn/recomputer_r1100_configure_system/#control-led-indicators)。
+有关 **USER LED** 测试的详细信息，请参考[此部分](https://wiki.seeedstudio.com/recomputer_r1100_configure_system/#control-led-indicators)。
 
 ### 蜂鸣器
 
@@ -303,7 +303,7 @@ cat /sys/kernel/debug/gpio
 这将输出 **gpio587** 作为蜂鸣器分配的 GPIO。
 
 **注意：**  
-有关 **蜂鸣器测试** 的详细信息，请参考 [此部分](https://wiki.seeedstudio.com/cn/recomputer_r1100_configure_system/#controlling-the-buzzer-via-gpio)。
+有关 **蜂鸣器测试** 的详细信息，请参考 [此部分](https://wiki.seeedstudio.com/recomputer_r1100_configure_system/#controlling-the-buzzer-via-gpio)。
 
 ### RS485
 
@@ -332,7 +332,7 @@ RS485 接线的示意图如下：
 产品包装中包含 120 欧姆终端电阻，可根据 RS485 通信需要使用。
 :::
 
-有关 RS485 测试的详细信息，请参考[此部分](https://wiki.seeedstudio.com/cn/recomputer_r1100_configure_system/#rs485-testing)。
+有关 RS485 测试的详细信息，请参考[此部分](https://wiki.seeedstudio.com/recomputer_r1100_configure_system/#rs485-testing)。
 
 ### RS232
 
@@ -363,7 +363,7 @@ RS232接线的原理图如下所示：
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/rs285_connection.PNG" style={{width:600, height:'auto'}}/></div>
 
 :::note
-有关详细的RS232测试说明，请参考有关RS485测试的详细信息，请参考[此部分](https://wiki.seeedstudio.com/cn/recomputer_r1100_configure_system/#rs232-testing)。
+有关详细的RS232测试说明，请参考有关RS485测试的详细信息，请参考[此部分](https://wiki.seeedstudio.com/recomputer_r1100_configure_system/#rs232-testing)。
 
 :::
 
@@ -399,7 +399,7 @@ reComputer R1100系列包含2个DI端口，配有3针3.5mm间距的Phoenix端子
 | DI 到 G_DI（开启状态） | 5~30 VDC          |
 
 :::note
-有关 DI 测试的详细信息，请参考 [此部分](https://wiki.seeedstudio.com/cn/recomputer_r1100_configure_system/#di-digital-input-testing)。
+有关 DI 测试的详细信息，请参考 [此部分](https://wiki.seeedstudio.com/recomputer_r1100_configure_system/#di-digital-input-testing)。
 :::
 
 ### DO（数字输出）
@@ -431,7 +431,7 @@ reComputer R1100 系列设备包含 2x DO 端口，3 针 3.5mm 间距凤凰端�
 | 输出注意事项        | &lt; 60VDC         |
 
 :::note
-有关 DO 测试的详细信息，请参考[此部分](https://wiki.seeedstudio.com/cn/recomputer_r1100_configure_system/#do-digital-output)。
+有关 DO 测试的详细信息，请参考[此部分](https://wiki.seeedstudio.com/recomputer_r1100_configure_system/#do-digital-output)。
 :::
 
 ### 启动开关
@@ -478,7 +478,7 @@ reComputer R1100 系列包含一个内置的 Nano SIM 卡槽，用于安装 Nano
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/SIMsizes.PNG" style={{width:400, height:'auto'}}/></div>
 
 :::note
-reComputer R1100 的标准版本不包含内置的 4G 模块。如果需要 4G 功能，必须单独购买额外的 4G 模块。更多详情，请参考[此章节](https://wiki.seeedstudio.com/cn/recomputer_r1100_intro/#optional-interfaces-and-modules)。
+reComputer R1100 的标准版本不包含内置的 4G 模块。如果需要 4G 功能，必须单独购买额外的 4G 模块。更多详情，请参考[此章节](https://wiki.seeedstudio.com/recomputer_r1100_intro/#optional-interfaces-and-modules)。
 :::
 
 ### SSD 插槽
@@ -541,7 +541,7 @@ reComputer R1100配备了一个位于复位孔内的**迷你按钮开关**。通
 - **ETH1**：**USB 转换以太网**接口，支持 **10/100 Mbit/s** 速度，但**不支持 PoE**。
 
 **注意**  
-有关 PoE 的更多详细信息，请参考[此部分](https://wiki.seeedstudio.com/cn/recomputer_r1100_intro/#poe-power-over-ethernet)。
+有关 PoE 的更多详细信息，请参考[此部分](https://wiki.seeedstudio.com/recomputer_r1100_intro/#poe-power-over-ethernet)。
 
 ### HDMI
 
@@ -554,7 +554,7 @@ reComputer R1100 具有来自 CM4 的原生 HDMI 接口，支持高达 **4K@60fp
 reComputer R1100 包含一个 **RTC（实时时钟）电路**，预装了 **CR2032 电池**，即使在断电期间也能确保准确的计时。
 
 :::note
-有关 RTC 测试的详细信息，请参考[此部分](https://wiki.seeedstudio.com/cn/recomputer_r1100_intro/#rtc-real-time-clock-testing)。
+有关 RTC 测试的详细信息，请参考[此部分](https://wiki.seeedstudio.com/recomputer_r1100_intro/#rtc-real-time-clock-testing)。
 :::  
 
 ### 看门狗  
@@ -562,7 +562,7 @@ reComputer R1100 包含一个 **RTC（实时时钟）电路**，预装了 **CR20
 reComputer R1100 具有**独立的硬件看门狗电路**，在系统崩溃时自动重启系统。此看门狗通过 **RTC** 实现，允许**灵活的喂狗时间，范围从 1 到 255 秒**。
 
 :::note
-有关看门狗测试的详细信息，请参考[此部分](https://wiki.seeedstudio.com/cn/recomputer_r/#watchdog)。
+有关看门狗测试的详细信息，请参考[此部分](https://wiki.seeedstudio.com/recomputer_r/#watchdog)。
 :::
 
 ## 可选接口和模块  
@@ -627,7 +627,7 @@ reComputer R1100 支持**广泛的扩展模块和配件**，使其能够适应�
 **reComputer R1100** 主板具有**两个 Mini-PCIe 插槽**，其中 **Mini-PCIe 插槽 1** 支持**通过 USB 协议的 4G 模块**。**移远 EC25 4G 模块**已经过充分测试，与 reComputer R1100 完全兼容。
 
 :::note
-如果您需要 **4G 功能**，您必须**购买相应的 4G 模块和外部天线**，并按照[组装 4G/LoRa®/Zigbee 模块和天线](https://wiki.seeedstudio.com/cn/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)中的说明进行操作。
+如果您需要 **4G 功能**，您必须**购买相应的 4G 模块和外部天线**，并按照[组装 4G/LoRa®/Zigbee 模块和天线](https://wiki.seeedstudio.com/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)中的说明进行操作。
 :::
 
 ### LoRa® 模块
@@ -635,7 +635,7 @@ reComputer R1100 支持**广泛的扩展模块和配件**，使其能够适应�
 **两个 Mini-PCIe 插槽**都支持**通过 USB 协议的 LoRa® 模块**。此外，**Mini-PCIe 插槽 2** 支持**使用 SPI 协议的 LoRa® 模块**。来自 Seeed Studio 的 **WM1302 模块**已经过充分测试，与 reComputer R1100 完全兼容。
 
 :::note
-如果您需要 **LoRa® 功能**，您必须**购买相应的 LoRa® 模块和外部天线**，并按照[组装 4G/LoRa®/Zigbee 模块和天线](https://wiki.seeedstudio.com/cn/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)中的说明进行操作。
+如果您需要 **LoRa® 功能**，您必须**购买相应的 LoRa® 模块和外部天线**，并按照[组装 4G/LoRa®/Zigbee 模块和天线](https://wiki.seeedstudio.com/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)中的说明进行操作。
 :::
 
 ### Zigbee 模块
@@ -643,14 +643,14 @@ reComputer R1100 支持**广泛的扩展模块和配件**，使其能够适应�
 Mini-PCIe 插槽支持**使用 USB 协议的 Zigbee 模块**，允许将 Zigbee 功能无缝集成到兼容设备中。这使得在 Zigbee 网络内进行高效通信和控制成为可能，增强了系统的多功能性和连接性。由于有两个 Mini-PCIe 插槽可用于 Zigbee 模块，用户可以灵活地实施各种应用以增强可靠性。
 
 :::note
-如果您需要 **Zigbee 功能**，您必须**购买相应的 Zigbee 模块和外部天线**，并按照[组装 4G/LoRa®/Zigbee 模块和天线](https://wiki.seeedstudio.com/cn/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)中的说明进行操作。
+如果您需要 **Zigbee 功能**，您必须**购买相应的 Zigbee 模块和外部天线**，并按照[组装 4G/LoRa®/Zigbee 模块和天线](https://wiki.seeedstudio.com/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)中的说明进行操作。
 :::
 
 ### PoE（以太网供电）
 
 **reComputer R1100 通过添加 PoE 电源模块支持 IEEE 802.3af PD（受电设备）标准**。**PoE 座已预焊接在板上**，但用户必须**拆卸设备以安装 PoE 模块**来实现以太网 PoE 功能。
 
-有关拆卸指导，请参考[拆卸指南](https://wiki.seeedstudio.com/cn/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-ups-and-poe-module)
+有关拆卸指导，请参考[拆卸指南](https://wiki.seeedstudio.com/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-ups-and-poe-module)
 
 :::note
 
@@ -699,7 +699,7 @@ reComputer R1100 支持**英飞凌的 OPTIGA™ TPM SLB9670**，符合**可信�
   - **加密服务**
 
 :::note
-有关安装说明，请参考[组装 TPM 2.0 模块](https://wiki.seeedstudio.com/cn/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-tpm-20-module)
+有关安装说明，请参考[组装 TPM 2.0 模块](https://wiki.seeedstudio.com/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-tpm-20-module)
 
 :::
 

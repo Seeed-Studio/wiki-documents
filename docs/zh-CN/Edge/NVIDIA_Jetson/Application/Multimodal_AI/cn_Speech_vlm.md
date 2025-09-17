@@ -50,7 +50,7 @@ TTS模型是用于文本转语音任务的高性能深度学习模型。它包�
 
 - 具有16GB以上内存的reComputer Jetson AGX Orin 64G或reComputer Jetson J4012 16G设备。
 - USB免驱动扬声器麦克风
-- 能够输出RTSP流地址的IP摄像头。我们还包含了[如何使用NVIDIA Nvstreamer](/cn/getting_started_with_nvstreamer)工具将本地视频转换为RTSP流的说明。
+- 能够输出RTSP流地址的IP摄像头。我们还包含了[如何使用NVIDIA Nvstreamer](/getting_started_with_nvstreamer)工具将本地视频转换为RTSP流的说明。
 
 :::note
 我们已经在reComputer [Orin NX 16GB](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)和[AGX Orin 64GB](https://www.seeedstudio.com/NVIDIArJetson-AGX-Orintm-64GB-Developer-Kit-p-5641.html)开发套件上测试了本wiki的可行性。
@@ -87,7 +87,7 @@ TTS模型是用于文本转语音任务的高性能深度学习模型。它包�
 
 ### 安装 VLM
 
-本项目的核心功能是视觉语言模型（VLM）。我们提供了一个关于[如何在 reComputer Nvidia Jetson 上使用 VLM](/cn/run_vlm_on_recomputer) 的指南。请参考此链接获取安装和使用说明。在继续以下步骤之前，请确保您完全了解如何在 VLM 中使用文本描述进行推理。
+本项目的核心功能是视觉语言模型（VLM）。我们提供了一个关于[如何在 reComputer Nvidia Jetson 上使用 VLM](/run_vlm_on_recomputer) 的指南。请参考此链接获取安装和使用说明。在继续以下步骤之前，请确保您完全了解如何在 VLM 中使用文本描述进行推理。
 
 ### 安装 Pytorch Torchaudio
 
@@ -171,7 +171,7 @@ curl --location 'http://192.168.49.227:5010/api/v1/live-stream' \
 ```
 
 :::note
-如果您没有 RTSP 摄像头，我们提供了关于[如何使用 NVStreamer 将本地视频流式传输为 RTSP](/cn/getting_started_with_nvstreamer) 以及[将它们添加到 VLM](/cn/run_vlm_on_recomputer) 的说明。
+如果您没有 RTSP 摄像头，我们提供了关于[如何使用 NVStreamer 将本地视频流式传输为 RTSP](/getting_started_with_nvstreamer) 以及[将它们添加到 VLM](/run_vlm_on_recomputer) 的说明。
 :::
 
 运行 set_streamer_id.sh

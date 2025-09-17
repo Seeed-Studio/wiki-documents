@@ -114,7 +114,7 @@ SSD，也称为固态硬盘，通常用作笔记本电脑、台式机等的主�
 
 **步骤 1.** 安装 SSD
 
-按照[硬件说明](https://wiki.seeedstudio.com/cn/reComputer_Jetson_Series_Hardware_Layout/)中的步骤为 reComputer 安装 SSD。
+按照[硬件说明](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Hardware_Layout/)中的步骤为 reComputer 安装 SSD。
 
 **步骤 2.** 准备 SSD
 

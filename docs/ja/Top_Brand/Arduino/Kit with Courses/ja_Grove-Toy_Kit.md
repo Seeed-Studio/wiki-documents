@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 Grove Toy Kitは、簡単におもちゃを改造し、自分の個性に合わせてアップグレードする方法を提供します。このキットは、人間の動きを感知したり、音を聞いたり、動きを検出したり、OLEDディスプレイを表示したりするなど、通常のおもちゃに多くのクールな機能を追加します。Toy Hacking Contestの参加者のおかげで、以下に示す6つの素晴らしいプロジェクトが、このGrove Toy Kitで何ができるかを示しています。
 

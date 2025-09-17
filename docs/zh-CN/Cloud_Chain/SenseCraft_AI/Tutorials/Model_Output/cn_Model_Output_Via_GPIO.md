@@ -78,12 +78,12 @@ last_update:
 
 在继续之前，请确保您的 XIAO ESP32S3 Sense 开发板已加载训练好的模型。如果您尚未加载模型，请参考 SenseCraft AI 文档了解如何训练和部署模型到您的设备。
 
-- [为 XIAO ESP32S3 Sense 使用模型](https://wiki.seeedstudio.com/cn/sensecraft_ai_pretrained_models_for_xiao/)
+- [为 XIAO ESP32S3 Sense 使用模型](https://wiki.seeedstudio.com/sensecraft_ai_pretrained_models_for_xiao/)
 
 如果您想使用自己训练的模型，可以参考以下两个 Wiki。
 
-- [训练类型 - 分类](https://wiki.seeedstudio.com/cn/sensecraft_ai_training_classification/)
-- [训练类型 - 目标检测](https://wiki.seeedstudio.com/cn/sensecraft_ai_training_object_detection/)
+- [训练类型 - 分类](https://wiki.seeedstudio.com/sensecraft_ai_training_classification/)
+- [训练类型 - 目标检测](https://wiki.seeedstudio.com/sensecraft_ai_training_object_detection/)
 
 ## 步骤 3. 配置 GPIO 输出
 

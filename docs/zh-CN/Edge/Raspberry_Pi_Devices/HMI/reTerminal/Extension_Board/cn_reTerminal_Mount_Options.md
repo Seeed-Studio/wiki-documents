@@ -16,7 +16,7 @@ last_update:
 ## 介绍
 
 reTerminal 作为一个优秀的人机界面（HMI），已被广泛应用于许多不同的系统中。作为系统的接口，安装 reTerminal 而不是仅仅手持使用会是一个好主意。
-在本节中，我们将讨论 reTerminal 安装解决方案的可能性。本节内容将涵盖[硬件螺丝规格](https://wiki.seeedstudio.com/cn/reTerminal_Mount_Options/#Hardware_Specification_of_the_Screw)和[社区设计](https://wiki.seeedstudio.com/cn/reTerminal_Mount_Options/#Community_Design)。
+在本节中，我们将讨论 reTerminal 安装解决方案的可能性。本节内容将涵盖[硬件螺丝规格](https://wiki.seeedstudio.com/reTerminal_Mount_Options/#Hardware_Specification_of_the_Screw)和[社区设计](https://wiki.seeedstudio.com/reTerminal_Mount_Options/#Community_Design)。
 
 ## 硬件螺丝规格
 

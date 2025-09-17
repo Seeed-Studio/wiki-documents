@@ -75,7 +75,7 @@ Watcher 中的 HTTP 消息块功能是一个本地化的报警服务，与其他
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/83.png" style={{width:250, height:'auto'}}/></div><br />
 
-要设置 HTTP 消息块，用户需要配置两个重要信息：**HTTP URL** 和 **HTTP Token**。这些详细信息由您自己的 HTTP 服务器或本地部署的软件（如 [Watcher APP](https://wiki.seeedstudio.com/cn/watcher_local_deploy/#software-preparation)）提供。如果您选择使用自己的 HTTP 服务器，请确保正确设置并提供必要的 URL 和令牌。或者，如果您选择 Watcher APP，该软件将为您生成和管理这些配置详细信息。通过将配置数据保留在您自己的服务器上或 Watcher APP 本地，Watcher 为其用户维护了高水平的隐私和安全性，确保敏感信息保持在您的控制之下。
+要设置 HTTP 消息块，用户需要配置两个重要信息：**HTTP URL** 和 **HTTP Token**。这些详细信息由您自己的 HTTP 服务器或本地部署的软件（如 [Watcher APP](https://wiki.seeedstudio.com/watcher_local_deploy/#software-preparation)）提供。如果您选择使用自己的 HTTP 服务器，请确保正确设置并提供必要的 URL 和令牌。或者，如果您选择 Watcher APP，该软件将为您生成和管理这些配置详细信息。通过将配置数据保留在您自己的服务器上或 Watcher APP 本地，Watcher 为其用户维护了高水平的隐私和安全性，确保敏感信息保持在您的控制之下。
 
 :::caution
 如果您想使用完全本地的通知服务而不通过 SenseCraft，那么在配置消息通知时，请**不要**勾选 **APP 推送通知**，否则您的通知仍将通过 SenseCraft 然后推送到您的应用程序。并记住**勾选 HTTP 推送通知选项**。
@@ -91,7 +91,7 @@ Watcher 中的设备 AI 服务是一个强大的功能，允许用户直接在�
 
 配置完成后，设备 AI 服务使 Watcher 能够利用用户的本地计算资源进行各种 AI 驱动的功能，包括语音交互、任务分解、图像分析和聊天机器人服务。
 
-对于重视在本地运行 AI 服务的灵活性和控制权的用户，Watcher 中的设备 AI 服务提供了一个全面且可定制的解决方案。有关设置和配置设备 AI 服务的详细信息，以及每个 AI 功能的深入说明，可以在**[在本地部署 Watcher 的 AI 功能](https://wiki.seeedstudio.com/cn/watcher_local_deploy/)**中找到。
+对于重视在本地运行 AI 服务的灵活性和控制权的用户，Watcher 中的设备 AI 服务提供了一个全面且可定制的解决方案。有关设置和配置设备 AI 服务的详细信息，以及每个 AI 功能的深入说明，可以在**[在本地部署 Watcher 的 AI 功能](https://wiki.seeedstudio.com/watcher_local_deploy/)**中找到。
 
 :::caution
 如果您之前点击了私有 Watcher 服务，那么您将无法使用 SenseCraft 的云服务。当您突然发现无法从云服务获取消息时，请检查是否未选择 **SenseCraft**。

@@ -138,14 +138,14 @@ Jetson Xavier NXを搭載したreComputer J20シリーズは、エッジに最�
 
 :::info
 reComputer J20はJ202キャリアボードを搭載しています。
-JetPackのフラッシュに関する詳細情報については、この[wikiページ](/ja/reComputer_J2021_J202_Flash_Jetpack)を参照してください。
+JetPackのフラッシュに関する詳細情報については、この[wikiページ](/reComputer_J2021_J202_Flash_Jetpack)を参照してください。
 :::
 
 ## インターフェース使用方法
 
 :::info
 reComputer J20はJ202キャリアボードを搭載しています。インターフェースはJ30/J40と同じ設計を使用しています。
-インターフェース使用方法の詳細情報については、この[wikiページ](/ja/J401_carrierboard_Hardware_Interfaces_Usage)を参照してください。
+インターフェース使用方法の詳細情報については、この[wikiページ](/J401_carrierboard_Hardware_Interfaces_Usage)を参照してください。
 :::
 
 

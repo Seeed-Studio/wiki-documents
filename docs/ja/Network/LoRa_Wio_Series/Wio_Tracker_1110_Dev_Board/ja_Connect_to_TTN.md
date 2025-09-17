@@ -17,7 +17,7 @@ last_update:
 
 ## Dev Boardの設定
 
-TTSに接続する前に、SenseCAP Mate APPでボードの基本パラメータを設定する必要があります。詳細については[Get Started](https://wiki.seeedstudio.com/ja/Get_Started_with_Wio-Trakcer_1110/#configure-the-frequency-and-connect-to-the-gateway)を確認してください。
+TTSに接続する前に、SenseCAP Mate APPでボードの基本パラメータを設定する必要があります。詳細については[Get Started](https://wiki.seeedstudio.com/Get_Started_with_Wio-Trakcer_1110/#configure-the-frequency-and-connect-to-the-gateway)を確認してください。
 
 - プラットフォームをTTNに設定し、`Device EUI`/`APP EUI`/`APP Key`をコピーします。
 

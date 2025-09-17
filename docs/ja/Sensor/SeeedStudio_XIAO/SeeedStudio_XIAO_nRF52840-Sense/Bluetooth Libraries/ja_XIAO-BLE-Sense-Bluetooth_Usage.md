@@ -62,7 +62,7 @@ zipライブラリをダウンロードしたら、Arduino IDEを開き、**Sket
 
 **ステップ2.** 開発ボードモデルを選択し、Arduino IDEに追加します。ここでは「Seeed nRF52 ボードライブラリ」を使用しています。
 
-> ボードライブラリのインストールについては、[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO_BLE/#software-setup)を参照してインストールを完了してください。
+> ボードライブラリのインストールについては、[このチュートリアル](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)を参照してインストールを完了してください。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new.png" /></div>
 

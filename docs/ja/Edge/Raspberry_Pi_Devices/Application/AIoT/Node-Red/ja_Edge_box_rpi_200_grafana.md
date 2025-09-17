@@ -39,7 +39,7 @@ last_update:
 
 ### ソフトウェアの準備
 
-[InfluxDBデータベースの作成方法](https://wiki.seeedstudio.com/ja/edge_box_rpi_200_node_red_influxdb/)に関する以前のチュートリアルを参照することをお勧めします。このチュートリアルでは、セットアップに既存のInfluxDB接続を使用します。
+[InfluxDBデータベースの作成方法](https://wiki.seeedstudio.com/edge_box_rpi_200_node_red_influxdb/)に関する以前のチュートリアルを参照することをお勧めします。このチュートリアルでは、セットアップに既存のInfluxDB接続を使用します。
 
 ## Grafanaリポジトリの追加
 

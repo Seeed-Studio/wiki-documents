@@ -86,7 +86,7 @@ reComputer R1000は、4G、LoRa®、Wi-Fi/BLE、Zigbeeを含む複数のIoTワ�
 
 <div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/Assembly_Guide/Wifi_and_ble.gif" /></div>
 
-**ステップ1:** セクション[分解ガイド](/ja/recomputer_r1000_assembly_guide/#assembly--disassembly-guide)に従ってデバイス全体を分解します。
+**ステップ1:** セクション[分解ガイド](/recomputer_r1000_assembly_guide/#assembly--disassembly-guide)に従ってデバイス全体を分解します。
 
 **ステップ2:** 以下の図に従って、CM4モジュールからアンテナホールへフィーダーラインを接続します。
 

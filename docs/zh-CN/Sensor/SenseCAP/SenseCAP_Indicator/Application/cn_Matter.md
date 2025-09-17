@@ -46,7 +46,7 @@ Matter SDK 提供了一套标准的设备，并允许访问其数据以及将其
 
 ## 先决条件
 
-在开始之前，请确保您已阅读 SenseCAP Indicator 板的[用户指南](/cn/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)，以熟悉其软件和硬件信息。
+在开始之前，请确保您已阅读 SenseCAP Indicator 板的[用户指南](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)，以熟悉其软件和硬件信息。
 
 ## 安装 ESP IDF 和 ESP Matter {#install_sdks}
 
@@ -123,7 +123,7 @@ Indicator Matter 应用程序允许以类似于标准固件的方式浏览传感
 
 ## 进一步配置 Home Assistant UI {#going_beyond}
 
-UI 本身是使用 [LVGL](https://lvgl.io/) 构建的。有关配置 LVGL 的更详细信息，请参阅[以下文章](https://wiki.seeedstudio.com/cn/using_lvgl_and_tft_on_round_display/)。
+UI 本身是使用 [LVGL](https://lvgl.io/) 构建的。有关配置 LVGL 的更详细信息，请参阅[以下文章](https://wiki.seeedstudio.com/using_lvgl_and_tft_on_round_display/)。
 
 仪表板的 UI 由 LGVL 组件组成，设置了回调事件，使其数据既持久化到本地存储，也持久化到 matter 端点。虚拟仪表板控制器（`indicator_virtual_dashboard_controller.c`）处理更新表单并在底层数据更改时为其他消费者发布相关事件。
 
@@ -139,7 +139,7 @@ UI 本身是使用 [LVGL](https://lvgl.io/) 构建的。有关配置 LVGL 的更
 ## 资源
 
 1. **演示 SDK**：SenseCAP Indicator 的演示 SDK 可在 [GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32) 上获取。
-2. **用户指南**：用户指南提供了关于 SenseCAP Indicator 板软件和硬件的详细信息。您可以在[这里](/cn/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)阅读。
+2. **用户指南**：用户指南提供了关于 SenseCAP Indicator 板软件和硬件的详细信息。您可以在[这里](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)阅读。
 3. **ESP-IDF 入门指南**：本指南提供了配置和使用 ESP-IDF 构建项目的完整步骤。您可以在[这里](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html)访问。
 4. **Matter 安装指南**：如果您是 ESP-Matter 的新手，本指南将帮助您安装和设置。您可以在[这里](https://docs.espressif.com/projects/esp-matter/en/latest/esp32/developing.html)找到。
 

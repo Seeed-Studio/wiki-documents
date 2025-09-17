@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: hushuxu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。
+[GitHub Issues](https://github.com/Seeed-Studio/wiki-documents/issues)
+:::
 
 Arch Maxは、迅速なプロトタイピングのためのmbed対応開発ボードです。  
 STM32F407VET6マイクロコントローラーをベースにしており、ARM Cortex-M4Fコアが168MHzで動作します。SWDデバッグ、ドラッグ＆ドロッププログラミング、USBシリアル通信を提供するオープンリンクを含んでいます。

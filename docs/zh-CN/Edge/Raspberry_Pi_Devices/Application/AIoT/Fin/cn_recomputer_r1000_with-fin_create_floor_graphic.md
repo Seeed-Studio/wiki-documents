@@ -47,14 +47,14 @@ FIN Framework (FIN) 是一个软件框架，具有可以集成、控制、管理
 
 ### 软件准备
 
-* 关于如何安装 FIN Framework，您可以参考这个 [wiki](https://wiki.seeedstudio.com/cn/reComputer_r1000_install_fin/)。
-- 关于如何使用 FIN framework 的 Modbus 功能，您可以参考这个 [wiki](https://wiki.seeedstudio.com/cn/reComputer_r1000_fin_modbus_tcp_and_rtu/)
+* 关于如何安装 FIN Framework，您可以参考这个 [wiki](https://wiki.seeedstudio.com/reComputer_r1000_install_fin/)。
+- 关于如何使用 FIN framework 的 Modbus 功能，您可以参考这个 [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fin_modbus_tcp_and_rtu/)
 
 ## 创建楼层图形的步骤
 
 ### 创建新的楼层图形
 
-**步骤 1**：我们建立了一个 Modbus TCP 连接和一个 Modbus RTU 连接，并创建了相应的 Equip。每个 Equip 都有 `humidty` 和 `temperature` 标签。关于如何实现这一步，您可以参考这个 [wiki]( https://wiki.seeedstudio.com/cn/reComputer_r1000_fin_modbus_tcp_and_rtu/)。同时，请将 FIN Framework 的上下文放在相应的 `Floor` 下。这里我们将上下文放在 `Tower => Floor1` 下。
+**步骤 1**：我们建立了一个 Modbus TCP 连接和一个 Modbus RTU 连接，并创建了相应的 Equip。每个 Equip 都有 `humidty` 和 `temperature` 标签。关于如何实现这一步，您可以参考这个 [wiki]( https://wiki.seeedstudio.com/reComputer_r1000_fin_modbus_tcp_and_rtu/)。同时，请将 FIN Framework 的上下文放在相应的 `Floor` 下。这里我们将上下文放在 `Tower => Floor1` 下。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/Floor_sit_path_and_equip.png" /></center>
 

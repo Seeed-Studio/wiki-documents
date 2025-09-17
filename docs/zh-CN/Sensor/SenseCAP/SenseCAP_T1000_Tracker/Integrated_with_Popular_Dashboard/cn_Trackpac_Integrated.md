@@ -17,7 +17,7 @@ last_update:
 
 ## 配置设备
 
-请查看[快速入门](https://wiki.seeedstudio.com/cn/Get_Started_with_SenseCAP_T1000_tracker/)以正确设置您的设备。
+请查看[快速入门](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/)以正确设置您的设备。
 
 选择平台为 `Other Platform`，将 `APP EUI` 配置为推荐值：
 ```cpp 

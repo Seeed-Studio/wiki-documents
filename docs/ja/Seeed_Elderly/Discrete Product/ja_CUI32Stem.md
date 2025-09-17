@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 Create USB Interface（CUI）は、C言語、BASIC、またはArduino言語でプログラム可能なオープンソースのマイクロコントローラボードです。この最新バージョンはCUI32Stemと呼ばれ、GROVEプロトタイピングシステムと「手を取り合って」動作するように設計されており、幅広いセンサーやアクチュエータを含んでいます。高性能なMicrochip® PIC32マイクロコントローラを採用しており、ユーザーの発明品とのプログラム可能なインタラクションを可能にします。はんだ付けは不要です！ :)
 

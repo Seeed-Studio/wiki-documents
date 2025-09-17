@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 ---
 近距離無線通信（NFC）は、短距離無線技術のセットです。アクセス制御システムやモバイル決済システムなど、日常的なアプリケーションの背後にある技術です。

@@ -148,11 +148,11 @@ Sonoff ZBDongle-E 适配器出厂时搭载的固件只允许与 Zigbee 设备通
 
 ### Matter 温湿度传感器设备
 
-如果这是您第一次使用 XIAO MG24 作为 Matter 设备，您可以参考这个[wiki](https://wiki.seeedstudio.com/cn/xiao_mg24_matter/)了解如何设置它。
+如果这是您第一次使用 XIAO MG24 作为 Matter 设备，您可以参考这个[wiki](https://wiki.seeedstudio.com/xiao_mg24_matter/)了解如何设置它。
 
 - **步骤 1.** 从 Github 下载[库文件](https://github.com/Seeed-Studio/Grove_SHT31_Temp_Humi_Sensor)。
 
-- **步骤 2.** 参考[如何安装库文件](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library)为 Arduino 安装库文件。
+- **步骤 2.** 参考[如何安装库文件](https://wiki.seeedstudio.com/How_to_install_Arduino_Library)为 Arduino 安装库文件。
 
 - **步骤 3.** 重启 Arduino IDE。打开一个新的草图，并将以下代码复制到新草图中。
 

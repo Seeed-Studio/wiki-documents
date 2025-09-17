@@ -956,7 +956,7 @@ i2cdetect -y -r 7
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-I2C-test.png"/></div>
 
 :::info
-如果您想使用通用 IO 引脚进行逻辑控制，请参考[此 wiki](/cn/reComputer_Jetson_GPIO)。
+如果您想使用通用 IO 引脚进行逻辑控制，请参考[此 wiki](/reComputer_Jetson_GPIO)。
 :::
 
 ## 技术支持与产品讨论

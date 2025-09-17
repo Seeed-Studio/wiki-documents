@@ -194,7 +194,7 @@ sftp> put myfile.txt /home/user/Documents/
 
 ## **7.硬件命令**
 
-您可以参考此[文档](https://wiki.seeedstudio.com/cn/recamera_hardware_and_specs/#hardware-interface)来控制 recamera 设备上的硬件。
+您可以参考此[文档](https://wiki.seeedstudio.com/recamera_hardware_and_specs/#hardware-interface)来控制 recamera 设备上的硬件。
 
 ## 技术支持与产品讨论
 

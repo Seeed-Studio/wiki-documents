@@ -81,7 +81,7 @@ Gmailアカウントを選択し、送信先のメールアドレスを入力し
 
 ### ステップ4. WatcherメッセージをNode-REDに送信
 
-これらのモジュールをワークスペースにドラッグして、それらを接続します。WatcherからNode-REDにメッセージを送信する方法がまだわからない場合は、[こちらをクリックしてください](https://wiki.seeedstudio.com/ja/watcher_to_node_red/)。
+これらのモジュールをワークスペースにドラッグして、それらを接続します。WatcherからNode-REDにメッセージを送信する方法がまだわからない場合は、[こちらをクリックしてください](https://wiki.seeedstudio.com/watcher_to_node_red/)。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_ifttt_image/20.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -114,7 +114,7 @@ return msg;
 
 ### ステップ6. Watcherにタスクを送信
 
-まず最初に、以下の動画に従ってWatcherでタスクを実行する必要があります。詳細を知りたい場合は[こちらをクリックしてください](https://wiki.seeedstudio.com/ja/getting_started_with_watcher_task/)。
+まず最初に、以下の動画に従ってWatcherでタスクを実行する必要があります。詳細を知りたい場合は[こちらをクリックしてください](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)。
 
 <div class="table-center">
 <iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

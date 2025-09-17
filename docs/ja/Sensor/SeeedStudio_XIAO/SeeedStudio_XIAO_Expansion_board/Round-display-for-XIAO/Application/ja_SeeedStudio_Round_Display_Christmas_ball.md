@@ -40,7 +40,7 @@ last_update:
 
 ### ソフトウェア準備
 
-Round Displayを使用するには、[Getting Started with Round Display for XIAO](https://wiki.seeedstudio.com/ja/get_start_round_display/#getting-started)にアクセスして必要なライブラリをインストールしてください。
+Round Displayを使用するには、[Getting Started with Round Display for XIAO](https://wiki.seeedstudio.com/get_start_round_display/#getting-started)にアクセスして必要なライブラリをインストールしてください。
 
 すべてが正常に動作するかいくつかの例を試してみてください。
 
@@ -48,7 +48,7 @@ Round Displayを使用するには、[Getting Started with Round Display for XIA
 
 このプロジェクトでは、[Seeed Studio Round Display For XIAO](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html)にバンドルされているライブラリを使用します。
 
-チュートリアル[Getting Started with Round Display for XIAO](https://wiki.seeedstudio.com/ja/get_start_round_display/#getting-started)で指定されているように、すべてのライブラリをインストールしてください。
+チュートリアル[Getting Started with Round Display for XIAO](https://wiki.seeedstudio.com/get_start_round_display/#getting-started)で指定されているように、すべてのライブラリをインストールしてください。
 その後、以下が必要です：
 
 - PNGdecライブラリ

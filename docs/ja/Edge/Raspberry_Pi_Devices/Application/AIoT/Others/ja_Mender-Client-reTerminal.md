@@ -178,7 +178,7 @@ MACHINE="seeed-reterminal-mender" bitbake rpi-test-image
 
 ## フラッシュ手順
 
-上記のイメージをreTerminalのeMMCにフラッシュする方法については、[このwikiガイド](https://wiki.seeedstudio.com/ja/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc) に従ってください。
+上記のイメージをreTerminalのeMMCにフラッシュする方法については、[このwikiガイド](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc) に従ってください。
 
 フラッシュが完了したら、reTerminalの電源を入れると、コンパイルされたイメージから起動します。
 

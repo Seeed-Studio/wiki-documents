@@ -141,7 +141,7 @@ LoRaWAN信号が弱い場合やネットワークカバレッジがない場合�
 
 ## バッチ設定方法
 
-最初のデバイスをセットアップするには[クイックスタート](https://wiki.seeedstudio.com/ja/Get_Started_with_SenseCAP_T1000_tracker/#connect-to-sensecap-mate-app)を確認し、その後右上角の`Template`モジュールをクリックしてください。
+最初のデバイスをセットアップするには[クイックスタート](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/#connect-to-sensecap-mate-app)を確認し、その後右上角の`Template`モジュールをクリックしてください。
 
 `Save as Template`をクリックし、テンプレートに名前を付けて`Confirm`をクリックします。
 
@@ -163,7 +163,7 @@ LoRaWAN信号が弱い場合やネットワークカバレッジがない場合�
 
 ペイロード内のタイムスタンプが間違っている場合は、ファームウェアを最新バージョンにアップグレードしてください。
 
-詳細については[ファームウェアアップグレードとリリースノート](https://wiki.seeedstudio.com/ja/fm_release_for_SenseCAP_T1000/)を確認してください。
+詳細については[ファームウェアアップグレードとリリースノート](https://wiki.seeedstudio.com/fm_release_for_SenseCAP_T1000/)を確認してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/time-error.png" alt="pir" width={400} height="auto" /></p>
 
@@ -177,10 +177,10 @@ LoRaWAN信号が弱い場合やネットワークカバレッジがない場合�
 
 SenseCAP APIは、ユーザーがIoTデバイスとデータを管理するためのものです。HTTPプロトコル、MQTTプロトコル、WebSocketプロトコルの3種類のAPIメソッドを組み合わせています。
 
-詳細については[SenseCAP API](https://wiki.seeedstudio.com/ja/Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction/)をご確認ください。
+詳細については[SenseCAP API](https://wiki.seeedstudio.com/Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction/)をご確認ください。
 
 - **LoRaWAN Network Server**：
 
 [SenseCAP M2 Multi-Platformゲートウェイ](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html)を使用することで、内蔵のLoRaWAN Network Serverを直接統合に使用できます。
 
-詳細については[LNS Configuration](https://wiki.seeedstudio.com/ja/SenseCAP_m2_LNS_config)をご確認ください。
+詳細については[LNS Configuration](https://wiki.seeedstudio.com/SenseCAP_m2_LNS_config)をご確認ください。

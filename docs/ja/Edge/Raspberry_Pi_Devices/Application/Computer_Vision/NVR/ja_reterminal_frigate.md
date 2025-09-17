@@ -69,7 +69,7 @@ USB Coralアクセラレータの電力要件を考慮すると、高品質なUS
 
 ### ソフトウェアの準備
 
-公式ウェブサイトから最新バージョンのRaspberry Pi 64ビットOSをインストールすることを推奨します。新しいRaspbian OSをインストールしたい場合は、この[ガイド](https://wiki.seeedstudio.com/ja/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)に記載されている手順に従ってください。
+公式ウェブサイトから最新バージョンのRaspberry Pi 64ビットOSをインストールすることを推奨します。新しいRaspbian OSをインストールしたい場合は、この[ガイド](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)に記載されている手順に従ってください。
 
 ## Raspberry piにHome Assistant Supervised OSをインストール
 

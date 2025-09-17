@@ -17,9 +17,9 @@ last_update:
 :::tip
 この記事は、Seeed Studio XIAO ESP32開発Matterシリーズの4番目のチュートリアルです。前のチュートリアルを読んでいない場合は、まず読んで、デバイスが要求通りに設定されていることを確認することをお勧めします。
 
-- **[Espressif ESP-IDFを使用したXIAOでの開発](https://wiki.seeedstudio.com/ja/xiao_idf)**
-- **[XIAO ESP32シリーズでMatterを素早く始める](https://wiki.seeedstudio.com/ja/getting_started_with_matter)**
-- **[XIAO ESP32シリーズでのMatter開発](https://wiki.seeedstudio.com/ja/xiao_esp32_matter_env/)**
+- **[Espressif ESP-IDFを使用したXIAOでの開発](https://wiki.seeedstudio.com/xiao_idf)**
+- **[XIAO ESP32シリーズでMatterを素早く始める](https://wiki.seeedstudio.com/getting_started_with_matter)**
+- **[XIAO ESP32シリーズでのMatter開発](https://wiki.seeedstudio.com/xiao_esp32_matter_env/)**
 
 :::
 

@@ -48,7 +48,7 @@ last_update:
   sudo apt install nvidia-jetson-services
   ```
 
-- IP 摄像头或本地视频可以通过 RTSP 进行流式传输。（我们建议使用我们提供的 [NVStreamer 教程](/cn/getting_started_with_nvstreamer) 进行 RTSP 流式传输。）
+- IP 摄像头或本地视频可以通过 RTSP 进行流式传输。（我们建议使用我们提供的 [NVStreamer 教程](/getting_started_with_nvstreamer) 进行 RTSP 流式传输。）
 
 ## 入门指南
 
@@ -106,7 +106,7 @@ sudo docker ps
 
 ## 添加 RTSP 流输入
 
-您可以首先为零样本检测模型添加一个 RTSP 流，使用以下 curl 命令。建议使用 [NVStreamer 教程](/cn/getting_started_with_nvstreamer) 进行流媒体传输。
+您可以首先为零样本检测模型添加一个 RTSP 流，使用以下 curl 命令。建议使用 [NVStreamer 教程](/getting_started_with_nvstreamer) 进行流媒体传输。
 
 - **步骤 1**：将 `0.0.0.0` 替换为您的 Jetson IP，将 `liveStreamUrl` 链接替换为您的 RTSP 链接，然后在终端中输入以下命令：
 

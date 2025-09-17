@@ -951,11 +951,11 @@ WiFi.setSleep(true);
 
 以下是三个功能的介绍，您可以通过以下链接找到更多信息：
 
-- [麦克风使用](https://wiki.seeedstudio.com/cn/xiao_esp32s3_sense_mic/)：学习如何使用 XIAO ESP32S3 Sense 上的麦克风来捕获环境声音级别并录制音频。
+- [麦克风使用](https://wiki.seeedstudio.com/xiao_esp32s3_sense_mic/)：学习如何使用 XIAO ESP32S3 Sense 上的麦克风来捕获环境声音级别并录制音频。
 
-- [MicroSD](https://wiki.seeedstudio.com/cn/xiao_esp32s3_sense_filesystem/)：了解如何使用 MicroSD 卡进行数据存储，确保您可以在项目中保存和检索文件。
+- [MicroSD](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem/)：了解如何使用 MicroSD 卡进行数据存储，确保您可以在项目中保存和检索文件。
 
-- [相机使用](https://wiki.seeedstudio.com/cn/xiao_esp32s3_camera_usage/)：掌握如何使用 XIAO ESP32S3 Sense 上的相机模块拍照和录制视频。
+- [相机使用](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/)：掌握如何使用 XIAO ESP32S3 Sense 上的相机模块拍照和录制视频。
 
 ### 代码实现
 

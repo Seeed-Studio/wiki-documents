@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 このチュートリアルでは、SenseCraft HMIのGallery機能の使用方法を説明し、画像アップロード方法、表示設定、および最適なパフォーマンスのための重要な考慮事項をカバーします。
 
-この記事では、[reTerminal E1002](https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1002/)を例として、SenseCraft HMIプラットフォームでこの機能を使用する方法を説明します。
+この記事では、[reTerminal E1002](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002/)を例として、SenseCraft HMIプラットフォームでこの機能を使用する方法を説明します。
 
 ## Galleryの使用開始
 
@@ -318,7 +318,7 @@ SenseCraft HMIのギャラリー機能は、スクリーンベースのデバイ
 ## リソース
 
 - [SenseCraft HMIプラットフォーム](https://sensecraft.seeed.cc/hmi)
-- [対応デバイス - reTerminal Eシリーズ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_main_page/)
+- [対応デバイス - reTerminal Eシリーズ](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
 
 ## 技術サポート & 製品ディスカッション
 

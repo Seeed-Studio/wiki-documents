@@ -22,7 +22,7 @@ last_update:
 欢迎了解 XIAO 的 L76-L GNSS - Seeed Studio XIAO 产品系列的最新成员。这款 GNSS 模块不仅为您的项目提供精确的定位功能，而且与 XIAO 主控制器的无缝集成使其成为一个强大的工具。无论您是在设计移动应用程序、跟踪设备，还是只是希望为您的项目添加地理定位功能，这个模块都是您的首选。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/cn/gnss_for_xiao" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="/gnss_for_xiao" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>

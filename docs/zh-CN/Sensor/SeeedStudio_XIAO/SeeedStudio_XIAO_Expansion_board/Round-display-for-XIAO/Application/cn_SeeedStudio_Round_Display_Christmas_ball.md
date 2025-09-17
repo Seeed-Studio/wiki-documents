@@ -40,7 +40,7 @@ last_update:
 
 ### 软件准备
 
-要使用圆形显示屏，请前往[XIAO 圆形显示屏入门指南](https://wiki.seeedstudio.com/cn/get_start_round_display/#getting-started)安装必要的库。
+要使用圆形显示屏，请前往[XIAO 圆形显示屏入门指南](https://wiki.seeedstudio.com/get_start_round_display/#getting-started)安装必要的库。
 
 尝试一些示例，看看是否一切正常工作。
 
@@ -48,7 +48,7 @@ last_update:
 
 对于这个项目，我们将使用[Seeed Studio XIAO 圆形显示屏](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html)附带的库。
 
-按照教程[XIAO 圆形显示屏入门指南](https://wiki.seeedstudio.com/cn/get_start_round_display/#getting-started)中指定的方式安装所有库。
+按照教程[XIAO 圆形显示屏入门指南](https://wiki.seeedstudio.com/get_start_round_display/#getting-started)中指定的方式安装所有库。
 之后，您需要以下内容：
 
 - PNGdec 库。

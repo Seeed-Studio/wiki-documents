@@ -23,7 +23,7 @@ last_update:
 
 ### reTerminal 上で
 
-- **ステップ 1.** [こちら](https://wiki.seeedstudio.com/ja/reTerminal/#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet)で説明されているように、**オンボード LCD、外部ディスプレイ、または SSH** を使用して reTerminal にアクセスし、ターミナルウィンドウで以下を入力します
+- **ステップ 1.** [こちら](https://wiki.seeedstudio.com/reTerminal/#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet)で説明されているように、**オンボード LCD、外部ディスプレイ、または SSH** を使用して reTerminal にアクセスし、ターミナルウィンドウで以下を入力します
 
 ```sh
 sudo apt install qml-module-qtquick-shapes python3-pyside2.qtqml python3-pyside2.qtcore python3-pyside2.qtnetwork python3-pyside2.qtgui python3-pyside2.qtwidgets python3-pyside2.qtquick qtquickcontrols2-5-dev qml-module-qtcharts qml-module-qtquick-controls qml-module-qtquick-controls2

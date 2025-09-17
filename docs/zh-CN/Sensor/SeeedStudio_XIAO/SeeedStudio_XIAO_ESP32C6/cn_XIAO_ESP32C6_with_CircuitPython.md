@@ -169,7 +169,7 @@ thonny
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c6_circuitpython/5.png" /></div>
 
-- 更多信息请参考[硬件概述](https://wiki.seeedstudio.com/cn/xiao_esp32c6_getting_started/#hardware-overview)
+- 更多信息请参考[硬件概述](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/#hardware-overview)
 - [Seeed Studio XIAO ESP32C6 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH_PDF_24028.pdf)
 
 ## 在 XIAO ESP32C6 上开始使用 CircuitPython

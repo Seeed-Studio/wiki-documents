@@ -51,7 +51,7 @@ last_update:
 ## 先决条件
 
 - 运行 JetPack（基础 BSP）的上述任何 Jetson 设备
-- 在 Jetson 设备上[安装 Allxon DMS 代理](https://wiki.seeedstudio.com/cn/Allxon-Jetson-Getting-Started)并与 Allxon DMS 门户配对
+- 在 Jetson 设备上[安装 Allxon DMS 代理](https://wiki.seeedstudio.com/Allxon-Jetson-Getting-Started)并与 Allxon DMS 门户配对
 - 安装了 Ubuntu 的主机 PC（推荐原生系统）
 - HDMI 显示器和键盘（可选）
 
@@ -558,7 +558,7 @@ zip ota_payload.zip *
 
 - **步骤 1.** 访问 [Allxon DMS 门户](https://dms.allxon.com/)并登录
 
-**注意：** 确保您按照[此 wiki](https://wiki.seeedstudio.com/cn/Allxon-Jetson-Getting-Started) 在 Jetson 设备上安装 Allxon DMS 代理并将其与 Allxon DMS 门户配对
+**注意：** 确保您按照[此 wiki](https://wiki.seeedstudio.com/Allxon-Jetson-Getting-Started) 在 Jetson 设备上安装 Allxon DMS 代理并将其与 Allxon DMS 门户配对
 
 - **步骤 2.** 导航到 **Applications** 页面并点击 **Register** 注册新应用程序
 

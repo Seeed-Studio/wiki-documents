@@ -79,12 +79,12 @@ USB-Cケーブルを使用して、XIAO ESP32S3 Senseボードをコンピュー
 
 続行する前に、XIAO ESP32S3 Senseボードに訓練済みモデルがロードされていることを確認してください。まだモデルをロードしていない場合は、デバイスにモデルを訓練してデプロイする方法について、SenseCraft AIドキュメントを参照してください。
 
-- [XIAO ESP32S3 Sense用モデルの使用](https://wiki.seeedstudio.com/ja/sensecraft_ai_pretrained_models_for_xiao/)
+- [XIAO ESP32S3 Sense用モデルの使用](https://wiki.seeedstudio.com/sensecraft_ai_pretrained_models_for_xiao/)
 
 独自の訓練済みモデルを使用したい場合は、以下の2つのWikiを参照してください。
 
-- [訓練の種類 - 分類](https://wiki.seeedstudio.com/ja/sensecraft_ai_training_classification/)
-- [訓練の種類 - 物体検出](https://wiki.seeedstudio.com/ja/sensecraft_ai_training_object_detection/)
+- [訓練の種類 - 分類](https://wiki.seeedstudio.com/sensecraft_ai_training_classification/)
+- [訓練の種類 - 物体検出](https://wiki.seeedstudio.com/sensecraft_ai_training_object_detection/)
 
 ## ステップ3. GPIO出力を設定する
 

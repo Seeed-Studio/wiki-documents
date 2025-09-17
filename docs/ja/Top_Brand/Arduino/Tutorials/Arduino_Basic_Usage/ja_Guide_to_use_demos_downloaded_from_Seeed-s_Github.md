@@ -11,7 +11,10 @@ last_update:
 no_comments: false # for Disqus
 
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 SeeeduinoのGithubからデモを頻繁に使用する必要がある場合、初心者にとってデモをうまく実行するのは少し難しいことがあります。
 そこで、デモを迅速に実行するための手順を示します。

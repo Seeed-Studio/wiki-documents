@@ -8,7 +8,10 @@ last_update:
   author: w0x7ce
 
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 最新バージョンをご確認ください: https://wiki.seeedstudio.com/ja/ODYSSEY-X86J4105/
 

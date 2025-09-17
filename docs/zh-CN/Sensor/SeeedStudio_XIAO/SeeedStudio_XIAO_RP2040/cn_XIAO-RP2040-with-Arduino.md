@@ -292,7 +292,7 @@ void loop(void) {
 
 ### **SPI**
 
-这里我们将通过SPI连接[Grove - OLED黄蓝显示屏0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html)并显示"Hello World"。OLED显示屏支持IIC和SPI通信，但默认通信模式是IIC。在开始之前，必须[将IIC功能更改为SPI功能](https://wiki.seeedstudio.com/cn/Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0/)。
+这里我们将通过SPI连接[Grove - OLED黄蓝显示屏0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html)并显示"Hello World"。OLED显示屏支持IIC和SPI通信，但默认通信模式是IIC。在开始之前，必须[将IIC功能更改为SPI功能](https://wiki.seeedstudio.com//Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0/)。
 
 **连接**：
 

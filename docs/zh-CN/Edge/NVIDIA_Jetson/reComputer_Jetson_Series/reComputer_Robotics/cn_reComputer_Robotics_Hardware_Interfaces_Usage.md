@@ -37,7 +37,7 @@ last_update:
 
 ## 硬件接口使用
 :::info
-reComputer Robotics的接口使用方法与Robotics J401载板相同。详细的接口使用示例请参考[此wiki](https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage)。
+reComputer Robotics的接口使用方法与Robotics J401载板相同。详细的接口使用示例请参考[此wiki](https://wiki.seeedstudio.com/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage)。
 :::
 
 

@@ -23,7 +23,7 @@ last_update:
 
 ## reComputer J1020の独自性とは？
 
-[Seeed Studio reComputer J1020](https://wiki.seeedstudio.com/ja/reComputer_Jetson_Series_Introduction/#recomputer-j1020)は、AIベースのアプリケーションの構築を開始するために必要なすべてを備えています。NVIDIAが提供するJetson Nano開発キットと比較して、SDカードにオペレーティングシステムを一から書き込む必要がありません。16GB eMMCにUbuntu OSが既にプリインストールされています。reComputerにプリインストールされたJetpack 4.6には、ボードサポートパッケージ（BSP）、Linux OS、NVIDIA CUDA、cuDNN、および深層学習、コンピュータビジョン、GPU計算、マルチメディア処理などのためのTensorRTソフトウェアライブラリが含まれています。全体の[Jetsonソフトウェアスタック](https://developer.nvidia.com/embedded/develop/software)と、Seeed Edge AIパートナーが提供する[高速で堅牢なAIアプリケーションの構築](https://wiki.seeedstudio.com/ja/Jetson-AI-developer-tools)のための様々な[開発者ツール](https://wiki.seeedstudio.com/ja/Jetson-AI-developer-tools)をサポートしています。
+[Seeed Studio reComputer J1020](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Introduction/#recomputer-j1020)は、AIベースのアプリケーションの構築を開始するために必要なすべてを備えています。NVIDIAが提供するJetson Nano開発キットと比較して、SDカードにオペレーティングシステムを一から書き込む必要がありません。16GB eMMCにUbuntu OSが既にプリインストールされています。reComputerにプリインストールされたJetpack 4.6には、ボードサポートパッケージ（BSP）、Linux OS、NVIDIA CUDA、cuDNN、および深層学習、コンピュータビジョン、GPU計算、マルチメディア処理などのためのTensorRTソフトウェアライブラリが含まれています。全体の[Jetsonソフトウェアスタック](https://developer.nvidia.com/embedded/develop/software)と、Seeed Edge AIパートナーが提供する[高速で堅牢なAIアプリケーションの構築](https://wiki.seeedstudio.com/Jetson-AI-developer-tools)のための様々な[開発者ツール](https://wiki.seeedstudio.com/Jetson-AI-developer-tools)をサポートしています。
 
 ## 注目すべき機能
 
@@ -40,7 +40,7 @@ last_update:
 - CUDAアーキテクチャ：5.3
 - OpenCVバージョン：4.1.1
 
-[reComputerのハードウェアレイアウトについて詳しく学ぶ](https://wiki.seeedstudio.com/ja/reComputer_Jetson_Series_Hardware_Layout)
+[reComputerのハードウェアレイアウトについて詳しく学ぶ](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Hardware_Layout)
 
 ## reComputerのコンポーネント
 

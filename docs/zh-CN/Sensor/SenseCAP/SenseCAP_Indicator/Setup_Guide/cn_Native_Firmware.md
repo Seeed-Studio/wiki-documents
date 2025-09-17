@@ -67,5 +67,5 @@ SenseCAP Indicator 所有版本的原生固件 UI 保持相同。对于没有内
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_13.png"/></div>
 
 :::tip 寻找 ChatGPT x DALL·E？
-前往 [SenseCAP Indicator X OpenAI](/cn/SenseCAP_Indicator_OpenAI_X_Overview)
+前往 [SenseCAP Indicator X OpenAI](/SenseCAP_Indicator_OpenAI_X_Overview)
 :::

@@ -114,8 +114,8 @@ last_update:
 
 このキット用に2つのアプリケーションが提供されています。
 
-- LoRaWANゲートウェイとして設定する（プリフラッシュ済み）場合は、[LoRaWANゲートウェイ設定](https://wiki.seeedstudio.com/ja/wio_sx1262_xiao_esp32s3_for_single_channel_gateway/)と[LNS接続の手順](https://wiki.seeedstudio.com/ja/wio_sx1262_xiao_esp32s3_LNS_TTN/)に従ってください
-- ネットワーク通信にMeshtasticを使用する場合は、[meshtasticの手順](https://wiki.seeedstudio.com/ja/wio_sx1262_xiao_esp32s3_for_meshtastic/)に従ってください
+- LoRaWANゲートウェイとして設定する（プリフラッシュ済み）場合は、[LoRaWANゲートウェイ設定](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_single_channel_gateway/)と[LNS接続の手順](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_LNS_TTN/)に従ってください
+- ネットワーク通信にMeshtasticを使用する場合は、[meshtasticの手順](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_meshtastic/)に従ってください
 
 ## リソース
 

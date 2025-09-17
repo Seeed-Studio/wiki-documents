@@ -311,7 +311,7 @@ while True:
 ## ✨ コントリビュータープロジェクト
 
 - このプロジェクトは Seeed Studio [コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) によってサポートされています。
-- [Isaac の努力](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35178340) に感謝し、あなたの作品は [展示](https://wiki.seeedstudio.com/ja/Honorary-Contributors/) されます。
+- [Isaac の努力](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35178340) に感謝し、あなたの作品は [展示](https://wiki.seeedstudio.com/Honorary-Contributors/) されます。
 - そして [Djair Guilherme](https://github.com/Seeed-Studio/wiki-documents/issues/1237#issuecomment-2295415274) にも感謝します。
 
 ## 技術サポートと製品ディスカッション

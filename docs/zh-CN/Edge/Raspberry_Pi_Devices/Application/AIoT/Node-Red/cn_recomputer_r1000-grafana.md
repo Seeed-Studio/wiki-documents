@@ -42,7 +42,7 @@ last_update:
 
 ### 软件准备
 
-建议参考之前的教程[如何创建 InfluxDB 数据库](https://wiki.seeedstudio.com/cn/recomputer_r1000_node_red_influxdb/)。在本教程中，我们将使用现有的 InfluxDB 连接进行设置。
+建议参考之前的教程[如何创建 InfluxDB 数据库](https://wiki.seeedstudio.com/recomputer_r1000_node_red_influxdb/)。在本教程中，我们将使用现有的 InfluxDB 连接进行设置。
 
 ## 添加 Grafana 仓库
 

@@ -47,7 +47,7 @@ XIAO 7.5" 电子纸面板可以使用 Arduino IDE 进行编程，这使得熟悉
 首先，如果您还没有 Arduino IDE，请前往 [Arduino IDE](https://www.arduino.cc/en/software) 下载最新版本。
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 ### 步骤 2. 安装 ESP32 开发板支持

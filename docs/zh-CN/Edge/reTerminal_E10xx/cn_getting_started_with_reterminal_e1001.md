@@ -281,12 +281,12 @@ reTerminal E1001 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 按照上一节中描述的方法将您的设备与 SenseCraft 平台配对后，您就可以创建您的第一个仪表板了。有关使用每个功能的详细说明，请参考相应的 Wiki 页面：
 
-- [SenseCraft HMI 概述](https://wiki.seeedstudio.com/cn/sensecraft_hmi_overview)
-- [AI 生成器指南](https://wiki.seeedstudio.com/cn/sensecraft_hmi_ai_generation)
-- [图库使用指南](https://wiki.seeedstudio.com/cn/sensecraft_hmi_gallery)
-- [画布设计工具](https://wiki.seeedstudio.com/cn/sensecraft_hmi_canvas)
-- [RSS 订阅配置](https://wiki.seeedstudio.com/cn/sensecraft_hmi_rss)
-- [网页内容显示](https://wiki.seeedstudio.com/cn/sensecraft_hmi_web)
+- [SenseCraft HMI 概述](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
+- [AI 生成器指南](https://wiki.seeedstudio.com/sensecraft_hmi_ai_generation)
+- [图库使用指南](https://wiki.seeedstudio.com/sensecraft_hmi_gallery)
+- [画布设计工具](https://wiki.seeedstudio.com/sensecraft_hmi_canvas)
+- [RSS 订阅配置](https://wiki.seeedstudio.com/sensecraft_hmi_rss)
+- [网页内容显示](https://wiki.seeedstudio.com/sensecraft_hmi_web)
 
 在 SenseCraft 平台中创建并保存您的仪表板后，只需点击"部署到设备"，选择您已配对的 reTerminal E1001，您的自定义内容就会无线传输到设备。电子纸显示屏将更新以显示您的仪表板，如果您创建了多个页面，您可以使用导航按钮在它们之间切换。
 
@@ -472,9 +472,9 @@ reTerminal E1001 配备了一个 3D 打印支撑架配件，可让您将设备�
 
 - [reTerminal E1001 原理图 (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004307_reTerminal_E1001_V1.0_SCH_250805.pdf)
 - [ESP32-S3 数据手册](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
-- [SenseCraft HMI 平台文档](https://wiki.seeedstudio.com/cn/sensecraft_hmi_overview)
+- [SenseCraft HMI 平台文档](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
 - [外观整体 3D 模型 STP 文件](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reterminal_esp-250904.stp)
-<!-- - [GitHub Repository](/cn/getting_started_with_reterminal_e1001) -->
+<!-- - [GitHub Repository](/getting_started_with_reterminal_e1001) -->
 
 ## 技术支持与产品讨论
 

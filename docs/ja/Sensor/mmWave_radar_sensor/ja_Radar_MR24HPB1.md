@@ -68,7 +68,7 @@ Human Static Presence Radar Sensorは、24GHzで動作する自己完結型、�
 ### Arduinoライブラリ概要
 
 :::tip
-Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
 この例で使用されるライブラリコードは、下のアイコンをクリックしてダウンロードできます。
@@ -127,13 +127,13 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
 
 **ステップ3.** 開発ボードモデルを選択し、Arduino IDEに追加します。
 
-- 後のルーチンで**Seeeduino V4.2**を使用したい場合は、[このチュートリアル](https://wiki.seeedstudio.com/ja/Seeed_Arduino_Boards/)を参照して追加を完了してください。
+- 後のルーチンで**Seeeduino V4.2**を使用したい場合は、[このチュートリアル](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/)を参照して追加を完了してください。
 
-- 後のルーチンで**Seeeduino XIAO**を使用したい場合は、[このチュートリアル](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO/#software)を参照して追加を完了してください。
+- 後のルーチンで**Seeeduino XIAO**を使用したい場合は、[このチュートリアル](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software)を参照して追加を完了してください。
 
-- 後のルーチンで**XIAO RP2040**を使用したい場合は、[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO-RP2040-with-Arduino/#software-setup)を参照して追加を完了してください。
+- 後のルーチンで**XIAO RP2040**を使用したい場合は、[このチュートリアル](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/#software-setup)を参照して追加を完了してください。
 
-- 後のルーチンで**XIAO BLE**を使用したい場合は、[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO_BLE/#software-setup)を参照して追加を完了してください。
+- 後のルーチンで**XIAO BLE**を使用したい場合は、[このチュートリアル](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)を参照して追加を完了してください。
 
 **ステップ4.** Arduinoコードライブラリをインストールします。
 

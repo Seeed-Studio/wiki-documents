@@ -52,7 +52,7 @@ FUXA は堅牢な Web ベースソフトウェアとして、スケーラブル�
 
 ### ソフトウェアの準備
 
-公式ウェブサイトから Raspberry Pi 64 bit OS の **Bullesye** バージョンをインストールすることをお勧めします。新しい Raspbian OS をインストールしたい場合は、この[**ガイド**](https://wiki.seeedstudio.com/ja/reterminal-dm-flash-OS/)で説明されている手順に従ってください。
+公式ウェブサイトから Raspberry Pi 64 bit OS の **Bullesye** バージョンをインストールすることをお勧めします。新しい Raspbian OS をインストールしたい場合は、この[**ガイド**](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/)で説明されている手順に従ってください。
 
 ## reTerminal DM への FUXA のインストール
 

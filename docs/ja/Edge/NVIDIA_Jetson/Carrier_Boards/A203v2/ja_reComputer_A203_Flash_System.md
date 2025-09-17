@@ -217,7 +217,7 @@ Continueをクリックして次のステップに進みます。
     <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/9.png" /></div>
     実際のテストの結果、SDKコンポーネントの完全セットをインストールした後、eMMC容量は約500MBしか残りません。
     <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/10_1.jpg" /></div>
-    容量不足の問題を解決する方法を確認したい場合は、[トラブルシューティング](https://wiki.seeedstudio.com/ja/reComputer_Jetson_Series_Initiation/#q1-the-remaining-space-in-the-emmc-in-the-received-recomputer-jetson-is-only-about-2gb-how-can-i-solve-the-problem-of-insufficient-space)を参照してください。
+    容量不足の問題を解決する方法を確認したい場合は、[トラブルシューティング](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Initiation/#q1-the-remaining-space-in-the-emmc-in-the-received-recomputer-jetson-is-only-about-2gb-how-can-i-solve-the-problem-of-insufficient-space)を参照してください。
 
 SDK Managerがすべてのファイルをデフォルトパス以外の場所にダウンロードする場合は、画面下部にあるDownload & Install Optionsに移動し、使用したいパスを選択します。
 
@@ -548,7 +548,7 @@ sudo ./flash.sh ${BOARD} mmcblk0p1
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/35.jpg" /></div>
 
 !!!Note
-    より多くのストレージ容量が必要な場合は、SDカードを使用して容量を拡張するか、SDカードにシステムを書き込むことができます。推奨ソリューション[SDカードにシステムをフラッシュ](https://wiki.seeedstudio.com/ja/J101_Enable_SD_Card/)を参照してください。
+    より多くのストレージ容量が必要な場合は、SDカードを使用して容量を拡張するか、SDカードにシステムを書き込むことができます。推奨ソリューション[SDカードにシステムをフラッシュ](https://wiki.seeedstudio.com/J101_Enable_SD_Card/)を参照してください。
 
 ## 技術サポート & 製品ディスカッション
 

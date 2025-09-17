@@ -135,15 +135,15 @@ TRMNLキットがルーターから遠い場合は、アンテナをケースの
 
 ### 詳細ガイドを探索
 
-#### 1. [TRMNL BYODエコシステムチュートリアル](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_trmnl/)
+#### 1. [TRMNL BYODエコシステムチュートリアル](https://wiki.seeedstudio.com/ogdiy_kit_works_with_trmnl/)
 
 375以上のプラグインを備えたTRMNL BYODプラットフォームの使用方法を発見し、仕事と生活のためのノーコードダッシュボード作成を含みます。
 
-#### 2. [Home Assistantとの連携](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_esphome)
+#### 2. [Home Assistantとの連携](https://wiki.seeedstudio.com/ogdiy_kit_works_with_esphome)
 
 ESPHomeを介してTRMNLキットをHome Assistantでセットアップする方法を学び、ファームウェアのアップロードと基本的なプログラミングを含みます。
 
-#### 3. [Arduinoとの連携](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_arduino/)
+#### 3. [Arduinoとの連携](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino/)
 
 リフレッシュメカニズム、グラフィックスレンダリング、電源管理を含む、ArduinoでのTRMNLキット制御をマスターします。
 

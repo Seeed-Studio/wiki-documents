@@ -32,7 +32,7 @@ last_update:
 
 ### Lerobot環境のセットアップ
 
-StarAIロボットアームは、lerobotプロジェクトを使用して駆動できます。StarAIロボットアーム動作環境を設定するには、この[wiki](https://wiki.seeedstudio.com/ja/lerobot_so100m/)を参照してください。すべての準備が整ったら、以下のコマンドを使用してFollow Armを制御できます。
+StarAIロボットアームは、lerobotプロジェクトを使用して駆動できます。StarAIロボットアーム動作環境を設定するには、この[wiki](https://wiki.seeedstudio.com/lerobot_so100m/)を参照してください。すべての準備が整ったら、以下のコマンドを使用してFollow Armを制御できます。
 
 ```bash
 python lerobot/scripts/control_robot.py \
@@ -664,7 +664,7 @@ if __name__ == "__main__":
 
 ## 参考文献
 
-- [https://wiki.seeedstudio.com/ja/lerobot_so100m/](https://wiki.seeedstudio.com/lerobot_so100m/)
+- [https://wiki.seeedstudio.com/lerobot_so100m/](https://wiki.seeedstudio.com/lerobot_so100m/)
 - [https://github.com/NVIDIA/Isaac-GR00T/tree/main](https://github.com/NVIDIA/Isaac-GR00T/tree/main)
 - [https://github.com/huggingface/lerobot](https://github.com/huggingface/lerobot)
 - [https://github.com/Dao-AILab/flash-attention](https://github.com/Dao-AILab/flash-attention])

@@ -73,7 +73,7 @@ last_update:
 ## 前提条件
 
 - NVIDIA Jetson AGX Orin 模块 32GB/64GB
-- 已刷入最新的 [JetPack 6.2 SDK](https://wiki.seeedstudio.com/cn/reserver_j501_getting_started/#prepare-the-jetpack-image)（支持 GMSL 扩展板）
+- 已刷入最新的 [JetPack 6.2 SDK](https://wiki.seeedstudio.com/reserver_j501_getting_started/#prepare-the-jetpack-image)（支持 GMSL 扩展板）
 - reServer Industrial J501 载板
 - reServer Industrial J501-GMSL 扩展板
 - [GMSL 摄像头](https://www.sensing-world.com/en/pd.jsp?recommendFromPid=0&id=23&fromMid=1544)

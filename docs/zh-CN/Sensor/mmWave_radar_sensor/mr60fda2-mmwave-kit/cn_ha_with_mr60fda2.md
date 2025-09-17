@@ -17,7 +17,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 :::danger 关于雷达在 Home Assistant 中的使用范围
-雷达固件更新和 ESPHome YAML 更新是两个不同的软件。ESPHome YAML 可以通过 OTA 更新，而雷达板只能通过外壳内的 USB 使用 SEEED 提供的专用软件进行更新。您可以自定义 ESPHome 软件，但[无法自定义雷达固件](https://wiki.seeedstudio.com/cn/getting_started_with_mr60fda2_mmwave_kit/#module-firmware-upgrade)。Seeed Studio 只有在您进行商业应用时才允许雷达定制。
+雷达固件更新和 ESPHome YAML 更新是两个不同的软件。ESPHome YAML 可以通过 OTA 更新，而雷达板只能通过外壳内的 USB 使用 SEEED 提供的专用软件进行更新。您可以自定义 ESPHome 软件，但[无法自定义雷达固件](https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/#module-firmware-upgrade)。Seeed Studio 只有在您进行商业应用时才允许雷达定制。
 :::
 
 ## 介绍 {#introduction}
@@ -87,9 +87,9 @@ MR60FDA2 是一个 60GHz 毫米波跌倒检测传感器模块，专为与 XIAO E
 :::tip 安装 Home Assistant
 我们还为一些 Seeed Studio 产品编写了如何安装 Home Assistant 的教程，请参考它们。
 
-- [在 ODYSSEY-X86 上开始使用 Home Assistant](/cn/ODYSSEY-X86-Home-Assistant)
-- [在 reTerminal 上开始使用 Home Assistant](/cn/reTerminal_Home_Assistant)
-- [在 LinkStar H68K/reRouter CM4 上开始使用 Home Assistant](/cn/h68k-ha-esphome)
+- [在 ODYSSEY-X86 上开始使用 Home Assistant](/ODYSSEY-X86-Home-Assistant)
+- [在 reTerminal 上开始使用 Home Assistant](/reTerminal_Home_Assistant)
+- [在 LinkStar H68K/reRouter CM4 上开始使用 Home Assistant](/h68k-ha-esphome)
 :::
 
 ### 步骤 2：准备套件

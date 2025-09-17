@@ -45,8 +45,8 @@ last_update:
 
 ### 软件准备
 
-Edge Box-200 到您手中时已预装了 Raspberry Pi OS。如果您是第一次启动此设备，请阅读我们的[入门指南](https://wiki.seeedstudio.com/cn/Edge_Box_introduction/) Wiki。
-我们已经准备了一个[Node-RED 入门指南](https://wiki.seeedstudio.com/cn/Edge-Box-Getting-Started-with-Node-Red/)。建议您在继续阅读本 wiki 之前先查看此指南。
+Edge Box-200 到您手中时已预装了 Raspberry Pi OS。如果您是第一次启动此设备，请阅读我们的[入门指南](https://wiki.seeedstudio.com/Edge_Box_introduction/) Wiki。
+我们已经准备了一个[Node-RED 入门指南](https://wiki.seeedstudio.com/Edge-Box-Getting-Started-with-Node-Red/)。建议您在继续阅读本 wiki 之前先查看此指南。
 
 ## 将 EdgeBox 设置为 MQTT 代理
 

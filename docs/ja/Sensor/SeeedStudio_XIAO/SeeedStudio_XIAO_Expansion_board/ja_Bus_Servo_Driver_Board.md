@@ -209,7 +209,7 @@ Feetech SCS/STS/TTLシリーズプロトコルの詳細については、[Feetec
 ### Arduinoライブラリ概要
 
 :::tip
-Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
 <div class="github_container" style={{textAlign: 'center'}}>
@@ -328,7 +328,7 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
 
 **ステップ 2.** 開発ボードモデルを選択し、Arduino IDE に追加します。
 
-- 後のルーチンで **Seeed Studio XIAO ESP32-C3** を使用するには、**[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started#software-setup)** を参照して追加を完了してください。
+- 後のルーチンで **Seeed Studio XIAO ESP32-C3** を使用するには、**[このチュートリアル](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started#software-setup)** を参照して追加を完了してください。
 
 **ステップ 3.** 図に示すように配線を完了します。複数のサーボを接続する必要がある場合は、サーボに付属のワイヤーを使用して接続を完了できます。
 

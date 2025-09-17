@@ -25,12 +25,12 @@ reComputer J1010は、NVIDIA Jetson Nano 4GB プロダクションモジュー�
 
 Jetsonモジュールに加えて、reComputer J1010には[J101キャリアボード](https://www.seeedstudio.com/reComputer-J101-v2-Carrier-Board-for-Jetson-Nano-p-5396.html)も含まれており、オンボードmicroSDカードスロット、1×USB 3.0、2×USB2.0、HDMI、WiFi、LTE、Bluetooth用のM.2 Key E、RTC、Raspberry Pi GPIO 40ピンなどを搭載し、ヒートシンクとアルミニウムケースも付属しています。デバイスにはJetpack 4.6.1が事前インストールされており、USB C 5V/3A電源、キーボード、マウス、イーサネットケーブルを接続するだけで、組み込みAIの旅を始める準備が整います！より多くのUSB 3.0とSSD接続用のオンボードM.2 key Mが必要な場合は、reComputer J1020を選択できます。
 
-注意：16GB eMMCが提供する容量以上のストレージが必要というお客様からのお問い合わせを受けました。2022年7月30日以降のご注文については、reComputer J1010の[キャリアボード](https://www.seeedstudio.com/reComputer-J101-v2-Carrier-Board-for-Jetson-Nano-p-5396.html)にmicroSDカードスロットを含めています。microSDカードへのブートイメージとI/O速度調整については、[ガイド](https://wiki.seeedstudio.com/ja/J1010_Boot_From_SD_Card/#flashing-system-from-j101-to-sd-card)をご確認ください。
+注意：16GB eMMCが提供する容量以上のストレージが必要というお客様からのお問い合わせを受けました。2022年7月30日以降のご注文については、reComputer J1010の[キャリアボード](https://www.seeedstudio.com/reComputer-J101-v2-Carrier-Board-for-Jetson-Nano-p-5396.html)にmicroSDカードスロットを含めています。microSDカードへのブートイメージとI/O速度調整については、[ガイド](https://wiki.seeedstudio.com/J1010_Boot_From_SD_Card/#flashing-system-from-j101-to-sd-card)をご確認ください。
 
 ## 特徴
 
 - **手のひらサイズのエッジAIフルシステム：** 0.5 TFLOPs（FP16）の最新AI性能と組み込み開発用の豊富なインターフェースを提供。
-- **開発・展開対応：** 事前インストールされたNVIDIA JetPackは、[Jetsonソフトウェアスタック](https://developer.nvidia.com/embedded/develop/software)全体と業界をリードする[AI開発者ツール](https://wiki.seeedstudio.com/ja/Jetson-AI-developer-tools/)をサポートし、物流、小売、サービス、農業、スマートシティ、ヘルスケア、ライフサイエンスなどの堅牢なAIアプリケーションの構築を可能にします。
+- **開発・展開対応：** 事前インストールされたNVIDIA JetPackは、[Jetsonソフトウェアスタック](https://developer.nvidia.com/embedded/develop/software)全体と業界をリードする[AI開発者ツール](https://wiki.seeedstudio.com/Jetson-AI-developer-tools/)をサポートし、物流、小売、サービス、農業、スマートシティ、ヘルスケア、ライフサイエンスなどの堅牢なAIアプリケーションの構築を可能にします。
 - **省電力：** Type C 5V/3Aで駆動し、わずか5ワットの消費電力。
 - **拡張可能：** オンボードインターフェースとreComputerケースにより、背面の取り付け穴で壁面取り付けが可能。
 
@@ -134,7 +134,7 @@ Jetsonモジュールに加えて、reComputer J1010には[J101キャリアボ�
 ## Flash JetPack to reComputer J1010
 
 :::info
-J1010はJ101キャリアボードを使用しているため、詳細については[wiki](/ja/reComputer_J1010_J101_Flash_Jetpack)ページを参照してください。
+J1010はJ101キャリアボードを使用しているため、詳細については[wiki](/reComputer_J1010_J101_Flash_Jetpack)ページを参照してください。
 :::
 
 ## リソース

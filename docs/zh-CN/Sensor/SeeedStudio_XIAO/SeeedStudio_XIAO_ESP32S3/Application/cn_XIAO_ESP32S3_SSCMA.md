@@ -147,7 +147,7 @@ Roboflow 提供过滤器和搜索功能来帮助您找到数据集。您可以�
 我们强烈建议您使用 XIAO ESP32S3 拍摄数据集照片，这对 XIAO ESP32S3 来说是最佳选择。XIAO ESP32S3 Sense 拍照的示例程序可以在下面的 Wiki 链接中找到。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/xiao_esp32s3_camera_usage/#taking-photos-with-the-camera" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#taking-photos-with-the-camera" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>前往 Wiki</font></span></strong>
     </a>
 </div>
@@ -264,7 +264,7 @@ Roboflow 提供三种不同的图片标记方式：Auto Label、Roboflow Labelin
 
 ### 步骤 1. 访问 Colab Notebook
 
-您可以在 [SenseCraft Model Assistant 的 Wiki](https://wiki.seeedstudio.com/cn/ModelAssistant_Introduce_Quick_Start/#model-training) 上找到不同类型的模型 Google Colab 代码文件。如果您不知道应该选择哪个代码，可以根据您的模型类别（目标检测或图像分类）选择其中任何一个。
+您可以在 [SenseCraft Model Assistant 的 Wiki](https://wiki.seeedstudio.com/ModelAssistant_Introduce_Quick_Start/#model-training) 上找到不同类型的模型 Google Colab 代码文件。如果您不知道应该选择哪个代码，可以根据您的模型类别（目标检测或图像分类）选择其中任何一个。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/24.png" style={{width:1000, height:'auto'}}/></div>
 

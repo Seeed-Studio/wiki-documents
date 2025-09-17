@@ -75,7 +75,7 @@ Watcher の HTTP メッセージブロック機能は、RGB アラーム、APP �
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/83.png" style={{width:250, height:'auto'}}/></div><br />
 
-HTTP メッセージブロックを設定するには、ユーザーは 2 つの重要な情報を構成する必要があります：**HTTP URL** と **HTTP Token** です。これらの詳細は、ユーザー自身の HTTP サーバーまたは [Watcher APP](https://wiki.seeedstudio.com/ja/watcher_local_deploy/#software-preparation) などのローカルにデプロイされたソフトウェアによって提供されます。独自の HTTP サーバーを使用することを選択した場合は、正しく設定され、必要な URL とトークンを提供することを確認してください。または、Watcher APP を選択した場合、ソフトウェアがこれらの構成詳細を生成し、管理します。構成データを独自のサーバーまたは Watcher APP のローカルに保持することで、Watcher はユーザーに高いレベルのプライバシーとセキュリティを維持し、機密情報がユーザーの制御下に留まることを保証します。
+HTTP メッセージブロックを設定するには、ユーザーは 2 つの重要な情報を構成する必要があります：**HTTP URL** と **HTTP Token** です。これらの詳細は、ユーザー自身の HTTP サーバーまたは [Watcher APP](https://wiki.seeedstudio.com/watcher_local_deploy/#software-preparation) などのローカルにデプロイされたソフトウェアによって提供されます。独自の HTTP サーバーを使用することを選択した場合は、正しく設定され、必要な URL とトークンを提供することを確認してください。または、Watcher APP を選択した場合、ソフトウェアがこれらの構成詳細を生成し、管理します。構成データを独自のサーバーまたは Watcher APP のローカルに保持することで、Watcher はユーザーに高いレベルのプライバシーとセキュリティを維持し、機密情報がユーザーの制御下に留まることを保証します。
 
 :::caution
 SenseCraft を経由せずに完全にローカルな通知サービスを使用したい場合は、メッセージ通知を構成する際に **APP プッシュ通知** にチェックを入れ**ない**でください。そうしないと、通知は依然として SenseCraft を経由してアプリにプッシュされます。そして **HTTP プッシュ通知オプション** にチェックを入れることを忘れないでください。
@@ -91,7 +91,7 @@ Watcher のデバイス AI サービスは、ユーザーが PC や Jetson な�
 
 構成が完了すると、デバイス AI サービスにより、Watcher はユーザーのローカルコンピューティングリソースを活用して、音声インタラクション、タスク分解、画像解析、チャットボットサービスなど、さまざまな AI 駆動機能を実現できます。
 
-AI サービスをローカルで実行する柔軟性と制御を重視するユーザーにとって、Watcher のデバイス AI サービスは包括的でカスタマイズ可能なソリューションを提供します。デバイス AI サービスの設定と構成に関する詳細情報、および各 AI 機能の詳細な説明は、**[Watcher の AI 機能をローカルにデプロイする](https://wiki.seeedstudio.com/ja/watcher_local_deploy/)** で確認できます。
+AI サービスをローカルで実行する柔軟性と制御を重視するユーザーにとって、Watcher のデバイス AI サービスは包括的でカスタマイズ可能なソリューションを提供します。デバイス AI サービスの設定と構成に関する詳細情報、および各 AI 機能の詳細な説明は、**[Watcher の AI 機能をローカルにデプロイする](https://wiki.seeedstudio.com/watcher_local_deploy/)** で確認できます。
 
 :::caution
 以前にプライベート Watcher サービスをクリックした場合、SenseCraft のクラウドサービスを使用できなくなります。突然クラウドサービスからメッセージを受信できないことに気づいた場合は、**SenseCraft** が選択されていないかどうかを確認してください。

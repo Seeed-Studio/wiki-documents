@@ -66,7 +66,7 @@ PiCam 提供了一系列功能和特性，使其适用于各种应用，**包括
 
 :::
 
-- **步骤 1** 访问专门针对 reTerminal 的 Seeed Studio wiki 页面，并导航到提供预构建镜像的部分。（您可以参考此链接获取镜像并了解安装程序。如果您已经完成，请跳过此步骤。[此链接](https://wiki.seeedstudio.com/cn/reTerminal-FAQ/#q2-how-can-i-flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal)）
+- **步骤 1** 访问专门针对 reTerminal 的 Seeed Studio wiki 页面，并导航到提供预构建镜像的部分。（您可以参考此链接获取镜像并了解安装程序。如果您已经完成，请跳过此步骤。[此链接](https://wiki.seeedstudio.com/reTerminal-FAQ/#q2-how-can-i-flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal)）
 - **步骤 2** 关闭 reTerminal 电源，将 PiCam v1 模块连接到 reTerminal 上的相机接口。确保其牢固连接。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/reterminal_inside.png" alt="pir" width="600" height="auto"/></p>
@@ -84,7 +84,7 @@ raspistill -o Desktop/image.jpg
 
 我们推荐为 Seeed Studio reTerminal 使用来自树莓派官方网站的 Raspbian Bullseye 64 位全新镜像：
 
-- **步骤 1** Seeed Studio 提供了在刷写新的 Raspberry Pi OS 或其他操作系统后如何安装驱动程序的详细说明。请参考 Seeed Studio 的 reTerminal wiki 页面，并按照["刷写新的 Raspberry Pi OS"](https://wiki.seeedstudio.com/cn/reTerminal#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)部分和["如何安装 reTerminal 驱动程序"](https://wiki.seeedstudio.com/cn/reTerminal/#install-reterminal-drivers-after-flashing-new-raspberry-pi-os-ubuntu-os-or-other-os)部分中提供的说明进行操作。如果您已经完成了这些步骤，请跳过此步骤。
+- **步骤 1** Seeed Studio 提供了在刷写新的 Raspberry Pi OS 或其他操作系统后如何安装驱动程序的详细说明。请参考 Seeed Studio 的 reTerminal wiki 页面，并按照["刷写新的 Raspberry Pi OS"](https://wiki.seeedstudio.com/reTerminal#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)部分和["如何安装 reTerminal 驱动程序"](https://wiki.seeedstudio.com/reTerminal/#install-reterminal-drivers-after-flashing-new-raspberry-pi-os-ubuntu-os-or-other-os)部分中提供的说明进行操作。如果您已经完成了这些步骤，请跳过此步骤。
 
 - **步骤 2** 关闭 reTerminal 电源，并将 PiCam 模块连接到 reTerminal 上的摄像头接口。确保连接牢固。
 

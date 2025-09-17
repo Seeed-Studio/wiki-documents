@@ -152,7 +152,7 @@ sudo apt install nodejs
 
 ## 在 FlowFuse 中创建流程
 
-让我们在 Node-RED 中创建一个流程来生成随机数并在仪表板上显示它。如果您是 Node-RED 的新手，可以访问我们的 [Node-RED 入门指南](https://wiki.seeedstudio.com/cn/recomputer_r1000_getting_started_node_red/)。创建流程的步骤
+让我们在 Node-RED 中创建一个流程来生成随机数并在仪表板上显示它。如果您是 Node-RED 的新手，可以访问我们的 [Node-RED 入门指南](https://wiki.seeedstudio.com/recomputer_r1000_getting_started_node_red/)。创建流程的步骤
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/selectin.PNG" /></center>
 

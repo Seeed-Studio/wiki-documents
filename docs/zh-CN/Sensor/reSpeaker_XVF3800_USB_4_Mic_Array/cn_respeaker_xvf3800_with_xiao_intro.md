@@ -108,10 +108,10 @@ reSpeaker XVF3800 提供 3 个输入引脚 (GPI) 和 5 个输出引脚 (GPO) 用
 ## 刷写 I2S 固件
 
 要将 reSpeaker XVF3800 与 XIAO ESP32S3 一起使用，请确保 reSpeaker XVF3800 固件是 I2S 版本。
-查看固件刷写以刷写最新的 I2S 固件。请访问[此部分](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#update-firmware)。
+查看固件刷写以刷写最新的 I2S 固件。请访问[此部分](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)。
 
 :::note
-要与 XIAO ESP32S3 一起工作，您需要刷写 I2S 固件。但是，它不支持 USB DFU。如果您已经在使用 USB 固件，您可以进入安全模式来刷写固件。这种方法更加灵活，因为它同时支持 USB DFU 和 I2C DFU。要了解更多信息，请访问此[部分](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#safe-mode)。
+要与 XIAO ESP32S3 一起工作，您需要刷写 I2S 固件。但是，它不支持 USB DFU。如果您已经在使用 USB 固件，您可以进入安全模式来刷写固件。这种方法更加灵活，因为它同时支持 USB DFU 和 I2C DFU。要了解更多信息，请访问此[部分](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#safe-mode)。
 :::
 
 ## 软件准备

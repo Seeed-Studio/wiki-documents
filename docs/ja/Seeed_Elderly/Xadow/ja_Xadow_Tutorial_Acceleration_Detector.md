@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 私たちは加速度検出器を作成しました。このデバイスは加速度を検出し、振動によってユーザーに通知します。加速度が変化すると、Xadow Vibration が振動し、OLED に加速度計の値が表示されます。また、OLED ディスプレイで現在のバッテリー電圧も確認できます。
 

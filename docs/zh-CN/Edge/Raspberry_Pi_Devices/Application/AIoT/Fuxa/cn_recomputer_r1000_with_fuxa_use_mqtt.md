@@ -64,8 +64,8 @@ FUXA 是一个基于 Web 的过程可视化（SCADA/HMI/仪表板）软件。使
     sudo fuxa
   ```
 
-- 关于如何在fuxa中使用modbusTCP功能，您可以参考这个[wiki](https://wiki.seeedstudio.com/cn/reComputer_r1000_fuxa_modbus_rtu_and_tcp/)。
-- 关于如何下载和配置mosquitto，您可以参考这个[教程](https://wiki.seeedstudio.com/cn/recomputer_r1000_nodered_mqtt/)。这里还介绍了如何在node-red中配置mqtt通信，您也可以参考。
+- 关于如何在fuxa中使用modbusTCP功能，您可以参考这个[wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_modbus_rtu_and_tcp/)。
+- 关于如何下载和配置mosquitto，您可以参考这个[教程](https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/)。这里还介绍了如何在node-red中配置mqtt通信，您也可以参考。
 
 ### 硬件配置
 
@@ -75,7 +75,7 @@ FUXA 是一个基于 Web 的过程可视化（SCADA/HMI/仪表板）软件。使
 
 ## MQTT客户端通信步骤
 
-**步骤1**：参考这个[教程](https://wiki.seeedstudio.com/cn/reComputer_r1000_fuxa_modbus_rtu_and_tcp/)，使用`fuxa`与`modbusmechanic`建立连接。并参考这个[wiki](https://wiki.seeedstudio.com/cn/Edge-Box-Node-Red-MQTT/)在reComputer R1000上部署`mosquitto`和`Node-red`。
+**步骤1**：参考这个[教程](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_modbus_rtu_and_tcp/)，使用`fuxa`与`modbusmechanic`建立连接。并参考这个[wiki](https://wiki.seeedstudio.com/Edge-Box-Node-Red-MQTT/)在reComputer R1000上部署`mosquitto`和`Node-red`。
 
 **步骤2**：连接到MQTT服务器。点击`fuxa`界面右下角的`+`按钮，输入`Name`、`Type`，选择`MQTTclient`，然后输入MQTT服务器的IP地址和端口号。如果您的MQTT服务器需要安全验证，您还需要输入`Client ID`、`Username`、`Password`等。我们的服务器不需要此验证，因此不填写。最后点击`OK`并等待模块左下角出现绿点，表示成功连接到MQTT服务器。
 

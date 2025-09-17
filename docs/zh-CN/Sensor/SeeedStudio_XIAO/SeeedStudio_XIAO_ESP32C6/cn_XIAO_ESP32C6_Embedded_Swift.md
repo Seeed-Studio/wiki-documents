@@ -75,7 +75,7 @@ Embedded Swift 提供了几个优势：
 **ESP-IDF 安装：**
 
 - 按照 [Linux 和 macOS](https://docs.espressif.com/projects/esp-idf/en/release-v5.2/esp32/get-started/linux-macos-setup.html) 页面安装 ESP-IDF
-- 按照 [使用 Espressif ESP-IDF 在 XIAO 上开发指南](/cn/xiao_idf) 获取详细步骤。
+- 按照 [使用 Espressif ESP-IDF 在 XIAO 上开发指南](/xiao_idf) 获取详细步骤。
 
 **Swift 工具链安装：**
 

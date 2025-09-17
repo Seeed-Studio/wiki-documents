@@ -114,7 +114,7 @@ SSDを使用した拡張ソリューションでは、以下の条件を満た�
 
 **ステップ1.** SSDを取り付ける
 
-[ハードウェア説明書](https://wiki.seeedstudio.com/ja/reComputer_Jetson_Series_Hardware_Layout/)の手順に従って、reComputer用のSSDを取り付けます。
+[ハードウェア説明書](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Hardware_Layout/)の手順に従って、reComputer用のSSDを取り付けます。
 
 **ステップ2.** SSDを準備する
 

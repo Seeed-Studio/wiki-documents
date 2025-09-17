@@ -106,9 +106,9 @@ import TabItem from '@theme/TabItem';
 
 有关如何在 reTerminal DM 上使用 Node-RED 的更多信息，请访问 Node-RED Wiki 页面：
 
-* [reTerminal DM RS485 端口与 Node-RED](/cn/reTerminal-DM-Node-Red-RS485)
-* [reTerminal DM MQTT 与 Node-RED](/cn/reTerminal-DM-Node-Red-mqtt)
-* [reTerminal DM CAN BUS 与 Node-RED](/cn/reTerminal-DM-Node-Red-canbus)
+* [reTerminal DM RS485 端口与 Node-RED](/reTerminal-DM-Node-Red-RS485)
+* [reTerminal DM MQTT 与 Node-RED](/reTerminal-DM-Node-Red-mqtt)
+* [reTerminal DM CAN BUS 与 Node-RED](/reTerminal-DM-Node-Red-canbus)
 
 ### 系统设置标签页
 

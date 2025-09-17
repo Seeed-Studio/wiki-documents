@@ -12,7 +12,7 @@ last_update:
 
 #### Q1: デフォルトユーザー「recomputer」のパスワードは何ですか？
 
-詳細については、[**こちら**](/ja/R1000_default_username_password)をクリックしてください。
+詳細については、[**こちら**](/R1000_default_username_password)をクリックしてください。
 
 ## 技術サポート
 

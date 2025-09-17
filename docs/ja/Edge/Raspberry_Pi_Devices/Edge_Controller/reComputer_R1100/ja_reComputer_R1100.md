@@ -286,7 +286,7 @@ R1100 コンピュータは、システムステータス表示用に12個のLED
 reComputer R1100には**USER**インジケーターが含まれており、ユーザーの要件に基づいてカスタマイズできます。
 
 **注意：**
-**USER LED**テストの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#control-led-indicators)を参照してください。
+**USER LED**テストの詳細については、[このセクション](https://wiki.seeedstudio.com/recomputer_r1100_configure_system/#control-led-indicators)を参照してください。
 
 ### ブザー
 
@@ -303,7 +303,7 @@ cat /sys/kernel/debug/gpio
 これにより、ブザー用に割り当てられたGPIOとして**gpio587**が出力されます。
 
 **注意：**  
-**ブザーテスト**の詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#controlling-the-buzzer-via-gpio)を参照してください。
+**ブザーテスト**の詳細については、[このセクション](https://wiki.seeedstudio.com/recomputer_r1100_configure_system/#controlling-the-buzzer-via-gpio)を参照してください。
 
 ### RS485
 
@@ -332,7 +332,7 @@ RS485配線の回路図は以下の通りです：
 製品パッケージには120オーム終端抵抗が含まれており、RS485通信に必要に応じて使用できます。
 :::
 
-RS485テストの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#rs485-testing)を参照してください。
+RS485テストの詳細については、[このセクション](https://wiki.seeedstudio.com/recomputer_r1100_configure_system/#rs485-testing)を参照してください。
 
 ### RS232
 
@@ -363,7 +363,7 @@ RS232配線の回路図を以下に示します：
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/rs285_connection.PNG" style={{width:600, height:'auto'}}/></div>
 
 :::note
-詳細なRS232テスト手順については、RS485テストの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#rs232-testing)を参照してください。
+詳細なRS232テスト手順については、RS485テストの詳細については、[このセクション](https://wiki.seeedstudio.com/recomputer_r1100_configure_system/#rs232-testing)を参照してください。
 
 :::
 
@@ -399,7 +399,7 @@ reComputer R1100シリーズには、3ピン3.5mmピッチPhoenix端子を持つ
 | DI to G_DI（ON状態） | 5~30 VDC          |
 
 :::note
-DIテストの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#di-digital-input-testing)を参照してください。
+DIテストの詳細については、[このセクション](https://wiki.seeedstudio.com/recomputer_r1100_configure_system/#di-digital-input-testing)を参照してください。
 :::
 
 ### DO（デジタル出力）
@@ -431,7 +431,7 @@ reComputer R1100シリーズ機器には2x DOポート、3ピン3.5mmピッチ�
 | 出力注意事項        | &lt; 60VDC         |
 
 :::note
-DOテストの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#do-digital-output)を参照してください。
+DOテストの詳細については、[このセクション](https://wiki.seeedstudio.com/recomputer_r1100_configure_system/#do-digital-output)を参照してください。
 :::
 
 ### ブートスイッチ
@@ -478,7 +478,7 @@ reComputer R1100シリーズには、4G接続を可能にするためのNano SIM
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/SIMsizes.PNG" style={{width:400, height:'auto'}}/></div>
 
 :::note
-reComputer R1100の標準バージョンには、内蔵4Gモジュールは含まれていません。4G機能が必要な場合は、追加の4Gモジュールを別途購入する必要があります。詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/#optional-interfaces-and-modules)を参照してください。
+reComputer R1100の標準バージョンには、内蔵4Gモジュールは含まれていません。4G機能が必要な場合は、追加の4Gモジュールを別途購入する必要があります。詳細については、[このセクション](https://wiki.seeedstudio.com/recomputer_r1100_intro/#optional-interfaces-and-modules)を参照してください。
 :::
 
 ### SSDスロット
@@ -541,7 +541,7 @@ reComputer R1100には、リセットホール内に配置された**ミニプ�
 - **ETH1**: **USB変換イーサネット**インターフェースで、**10/100 Mbit/s**の速度をサポートしますが、**PoEはサポートされていません**。
 
 **注意**  
-PoEの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/#poe-power-over-ethernet)を参照してください。
+PoEの詳細については、[このセクション](https://wiki.seeedstudio.com/recomputer_r1100_intro/#poe-power-over-ethernet)を参照してください。
 
 ### HDMI
 
@@ -554,7 +554,7 @@ reComputer R1100は、CM4からのネイティブHDMIインターフェースを
 reComputer R1100には、**CR2032バッテリー**が事前にインストールされた**RTC（リアルタイムクロック）回路**が含まれており、電源喪失時でも正確な時刻管理を保証します。
 
 :::note
-RTCテストの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/#rtc-real-time-clock-testing)を参照してください。
+RTCテストの詳細については、[このセクション](https://wiki.seeedstudio.com/recomputer_r1100_intro/#rtc-real-time-clock-testing)を参照してください。
 :::  
 
 ### ウォッチドッグ  
@@ -562,7 +562,7 @@ RTCテストの詳細については、[このセクション](https://wiki.seee
 reComputer R1100は、システムクラッシュ時に自動的にシステムを再起動する**独立したハードウェアウォッチドッグ回路**を搭載しています。このウォッチドッグは**RTC**を通じて実装され、**1秒から255秒までの柔軟な給餌時間**を可能にします。
 
 :::note
-ウォッチドッグテストの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r/#watchdog)を参照してください。
+ウォッチドッグテストの詳細については、[このセクション](https://wiki.seeedstudio.com/recomputer_r/#watchdog)を参照してください。
 :::
 
 ## オプションインターフェースとモジュール  
@@ -627,7 +627,7 @@ reComputer R1100は**幅広い拡張モジュールとアクセサリ**をサポ
 **reComputer R1100** メインボードには **2つのMini-PCIeスロット** があり、**Mini-PCIeスロット1** は **USBプロトコル経由の4Gモジュール** をサポートします。**Quectel EC25 4Gモジュール** は、reComputer R1100との互換性について完全にテストされています。
 
 :::note
-**4G機能** が必要な場合は、**対応する4Gモジュールと外部アンテナを購入** し、[4G/LoRa®/Zigbeeモジュールとアンテナの組み立て](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)の手順に従ってください。
+**4G機能** が必要な場合は、**対応する4Gモジュールと外部アンテナを購入** し、[4G/LoRa®/Zigbeeモジュールとアンテナの組み立て](https://wiki.seeedstudio.com/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)の手順に従ってください。
 :::
 
 ### LoRa®モジュール
@@ -635,7 +635,7 @@ reComputer R1100は**幅広い拡張モジュールとアクセサリ**をサポ
 **両方のMini-PCIeスロット** は **USBプロトコル経由のLoRa®モジュール** をサポートします。さらに、**Mini-PCIeスロット2** は **SPIプロトコルを使用するLoRa®モジュール** をサポートします。Seeed Studioの **WM1302モジュール** は、reComputer R1100との互換性について完全にテストされています。
 
 :::note
-**LoRa®機能** が必要な場合は、**対応するLoRa®モジュールと外部アンテナを購入** し、[4G/LoRa®/Zigbeeモジュールとアンテナの組み立て](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)の手順に従ってください。
+**LoRa®機能** が必要な場合は、**対応するLoRa®モジュールと外部アンテナを購入** し、[4G/LoRa®/Zigbeeモジュールとアンテナの組み立て](https://wiki.seeedstudio.com/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)の手順に従ってください。
 :::
 
 ### Zigbeeモジュール
@@ -643,14 +643,14 @@ reComputer R1100は**幅広い拡張モジュールとアクセサリ**をサポ
 Mini-PCIeスロットは **USBプロトコルを使用するZigbeeモジュール** をサポートし、互換性のあるデバイスにZigbee機能をシームレスに統合できます。これにより、Zigbeeネットワーク内での効率的な通信と制御が可能になり、システムの汎用性と接続性が向上します。Zigbeeモジュール用に2つのMini-PCIeスロットが利用可能で、ユーザーは信頼性を向上させるために多様なアプリケーションを実装する柔軟性があります。
 
 :::note
-**Zigbee機能** が必要な場合は、**対応するZigbeeモジュールと外部アンテナを購入** し、[4G/LoRa®/Zigbeeモジュールとアンテナの組み立て](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)の手順に従ってください。
+**Zigbee機能** が必要な場合は、**対応するZigbeeモジュールと外部アンテナを購入** し、[4G/LoRa®/Zigbeeモジュールとアンテナの組み立て](https://wiki.seeedstudio.com/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)の手順に従ってください。
 :::
 
 ### PoE (Power over Ethernet)
 
 **reComputer R1100は、PoE電源モジュールを追加することでIEEE 802.3af PD (Powered Devices) 標準をサポート** します。**PoEソケットはボード上に事前にはんだ付けされています** が、ユーザーはEthernet PoE機能のために **デバイスを分解してPoEモジュールをインストールする必要があります**。
 
-分解ガイダンスについては、[分解ガイド](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-ups-and-poe-module)を参照してください
+分解ガイダンスについては、[分解ガイド](https://wiki.seeedstudio.com/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-ups-and-poe-module)を参照してください
 
 :::note
 
@@ -699,7 +699,7 @@ reComputer R1100は **Infineonの OPTIGA™ TPM SLB9670** をサポートし、*
   - **暗号化サービス**
 
 :::note
-インストール手順については、[TPM 2.0モジュールの組み立て](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-tpm-20-module)を参照してください
+インストール手順については、[TPM 2.0モジュールの組み立て](https://wiki.seeedstudio.com/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-tpm-20-module)を参照してください
 
 :::
 

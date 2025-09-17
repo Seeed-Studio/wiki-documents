@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: Matthew、Jenna、Kasun Thushara
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/HomeAsssitant_collection/HAbanner1.jpg" style={{width:1000, height:'auto'}}/></div>
 

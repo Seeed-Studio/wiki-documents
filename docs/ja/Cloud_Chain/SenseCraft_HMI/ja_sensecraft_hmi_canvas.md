@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 この包括的なガイドでは、Canvas機能を使用してSeeedデバイス用のプロフェッショナルなディスプレイを作成する方法を説明します。基本的な図形やテキストから、リアルタイムデータウィジェットや既製のテンプレートまで、特定のニーズに合わせたカスタマイズされたインターフェースを構築するために必要なすべてを学習できます。
 
-この記事では、[reTerminal E1002](https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1002/)を例として、SenseCraft HMIプラットフォームでこの機能を使用する方法を説明します。
+この記事では、[reTerminal E1002](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002/)を例として、SenseCraft HMIプラットフォームでこの機能を使用する方法を説明します。
 
 ## Canvasの開始
 
@@ -893,7 +893,7 @@ SenseCraft HMI CanvasにはAI搭載のレイアウトジェネレーターが含
 この機能は、ゼロから始めることなく迅速にレイアウトを作成するのに優れています。
 
 :::tip
-このセクションの使用に関する詳細な手順については、**[SenseCraft HMIでのAI生成の使用](https://wiki.seeedstudio.com/ja/sensecraft_hmi_ai_generation/)**を参照してください。
+このセクションの使用に関する詳細な手順については、**[SenseCraft HMIでのAI生成の使用](https://wiki.seeedstudio.com/sensecraft_hmi_ai_generation/)**を参照してください。
 :::
 
 ## デバイスへのデプロイ
@@ -981,7 +981,7 @@ SenseCraft HMIのCanvas機能は、Seeedデバイス用のカスタムインタ�
 ## リソース
 
 - [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi)
-- [対応デバイス - reTerminal E シリーズ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_main_page/)
+- [対応デバイス - reTerminal E シリーズ](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
 
 ## 技術サポート & 製品ディスカッション
 

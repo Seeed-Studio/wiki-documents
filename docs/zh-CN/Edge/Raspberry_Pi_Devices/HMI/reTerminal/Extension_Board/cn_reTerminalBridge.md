@@ -24,7 +24,7 @@ last_update:
 
 #### **连接**
 
-注意方向，将 reTerminal 放置在 reTerminal E10-1 上，用力使它们紧密贴合。如果此时 reTerminal E10-1 已通电，reTerminal 将会唤醒并启动进入系统。如果您想了解更多关于 reTerminal 的信息，请点击 [**reTerminal**](https://wiki.seeedstudio.com/cn/reTerminal/)。
+注意方向，将 reTerminal 放置在 reTerminal E10-1 上，用力使它们紧密贴合。如果此时 reTerminal E10-1 已通电，reTerminal 将会唤醒并启动进入系统。如果您想了解更多关于 reTerminal 的信息，请点击 [**reTerminal**](https://wiki.seeedstudio.com/reTerminal/)。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image3.png"/></div>
 

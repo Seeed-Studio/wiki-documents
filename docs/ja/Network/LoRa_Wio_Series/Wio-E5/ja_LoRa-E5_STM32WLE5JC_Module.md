@@ -28,7 +28,7 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
 <iframe width={560} height={315} src="https://www.youtube.com/embed/XIksiHEXT3A?si=UNm6zmbeUVhgfWh4" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
 
 :::note
-最近、Wio-E5 モジュールをベースとした Wio-E5 シリーズをリリースしました。[こちら](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)をクリックして、[Grove モジュール](https://wiki.seeedstudio.com/ja/Grove_LoRa_E5_New_Version/)、[mini 開発ボード](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/)から[開発キット](https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/)まで、Wio-E5 ファミリーの新しいメンバーをご覧ください。STM32WL シリーズ用 STM32Cube MCU パッケージ（SDK）を使用して LoRaWAN エンドノードを作成し、LoRaWAN ネットワークに参加してデータを送信する方法について詳しく学ぶには、[mini 開発ボード](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/)と[開発キット](https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/)の wiki ページをお読みください。
+最近、Wio-E5 モジュールをベースとした Wio-E5 シリーズをリリースしました。[こちら](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)をクリックして、[Grove モジュール](https://wiki.seeedstudio.com/Grove_LoRa_E5_New_Version/)、[mini 開発ボード](https://wiki.seeedstudio.com/LoRa_E5_mini/)から[開発キット](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/)まで、Wio-E5 ファミリーの新しいメンバーをご覧ください。STM32WL シリーズ用 STM32Cube MCU パッケージ（SDK）を使用して LoRaWAN エンドノードを作成し、LoRaWAN ネットワークに参加してデータを送信する方法について詳しく学ぶには、[mini 開発ボード](https://wiki.seeedstudio.com/LoRa_E5_mini/)と[開発キット](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/)の wiki ページをお読みください。
 :::
 
 Wio-E5 は、Seeed Technology Co., Ltd. によって設計された低コスト、超低消費電力、極めてコンパクト、高性能な LoRaWAN® モジュールです。**世界初の LoRa® RF と MCU チップの組み合わせを統合した SoC である ST システムレベルパッケージチップ STM32WLE5JC を搭載しています。** このモジュールには ARM Cortex M4 超低消費電力 MCU と LoRa® SX126X も組み込まれており、(G)FSK モードと LoRa® をサポートしています。LoRa® モードでは 62.5kHz、125kHz、250kHz、500kHz の帯域幅を使用でき、EU868 と US915 をサポートして、さまざまな IoT ノードの設計に適しています。
@@ -414,7 +414,7 @@ Rx: +KEY: APPKEY 2B7E151628AED2A6ABF7158809CF4F3C
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/12.png" alt="pir" width="450" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/12.png" alt="pir" width={600} height="auto" /></p>
 
-- **Step 12.** LoRaWAN®ゲートウェイをTTNコンソールに登録します。[こちら](https://wiki.seeedstudio.com/ja/The-Things-Indoor-Gateway/#step-2-gateway-registration-on-ttn-console)に示されている手順を参照してください
+- **Step 12.** LoRaWAN®ゲートウェイをTTNコンソールに登録します。[こちら](https://wiki.seeedstudio.com/The-Things-Indoor-Gateway/#step-2-gateway-registration-on-ttn-console)に示されている手順を参照してください
 
 - **Step 13.** TTNに接続するために以下のATコマンドを入力します
 
@@ -481,7 +481,7 @@ ATコマンドの詳細については、[WIo-E5 ATコマンド仕様書](https:
 **注意:** STM32WLシリーズ用STM32Cube MCUパッケージの最新バージョンであるv1.1.0をサポートするようにライブラリを更新しました。
 
 :::note
-SDKでプログラムする前に工場出荷時のATファームウェアを消去する必要があるため、まず[工場出荷時ATファームウェアの消去](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/#21-erase-factory-at-firmware)セクションをお読みください。工場出荷時のATファームウェアを消去すると、復元することはできません。
+SDKでプログラムする前に工場出荷時のATファームウェアを消去する必要があるため、まず[工場出荷時ATファームウェアの消去](https://wiki.seeedstudio.com/LoRa_E5_mini/#21-erase-factory-at-firmware)セクションをお読みください。工場出荷時のATファームウェアを消去すると、復元することはできません。
 :::
 
 #### 準備
@@ -565,7 +565,7 @@ SDKでプログラムする前に工場出荷時のATファームウェアを消
 
 次に、**Device EUI**、**Application EUI**、**Application KEY**、および **LoRawan Region** を変更します
 
-- **ステップ 7.** [こちらのガイド](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/#13-connect-and-send-data-to-the-things-network)に従って TTN アプリケーションをセットアップし、**Application EUI** を取得して `LoRaWAN/App/se-identity.h` のマクロ定義 `LORAWAN_JOIN_EUI` にコピーします。例えば、ここでの Application EUI は `80 00 00 00 00 00 00 0x07` です：
+- **ステップ 7.** [こちらのガイド](https://wiki.seeedstudio.com/LoRa_E5_mini/#13-connect-and-send-data-to-the-things-network)に従って TTN アプリケーションをセットアップし、**Application EUI** を取得して `LoRaWAN/App/se-identity.h` のマクロ定義 `LORAWAN_JOIN_EUI` にコピーします。例えば、ここでの Application EUI は `80 00 00 00 00 00 00 0x07` です：
 
 ```cpp
 // LoRaWAN/App/se-identity.h

@@ -53,9 +53,9 @@ SenseCAP A1101 - LoRaWAN Vision AI 传感器是一款支持 TinyML 边缘 AI 的
 
 2. 如果您想训练自己的 AI 模型，有两种方法。请参考：
 
-**1.[使用 Edge Impulse 进行一站式模型训练](https://wiki.seeedstudio.com/cn/One-Stop-Model-Training-with-Edge-Impulse)** 快速上手。
+**1.[使用 Edge Impulse 进行一站式模型训练](https://wiki.seeedstudio.com/One-Stop-Model-Training-with-Edge-Impulse)** 快速上手。
 
-**2.[使用 Roboflow、YOLOv5、TensorFlow Lite 训练 AI 模型](https://wiki.seeedstudio.com/cn/Train-Deploy-AI-Model-A1101)** 详细教程。
+**2.[使用 Roboflow、YOLOv5、TensorFlow Lite 训练 AI 模型](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101)** 详细教程。
 
 # 连接到 LoraWAN®
 LoRaWAN®（长距离广域网）是一种无线通信协议，专为物联网（IoT）设备和网关之间的低功耗、长距离通信而设计。它使用工业、科学和医疗（ISM）频段的免许可无线电频谱，通常在欧洲为 868 MHz，在美国为 915 MHz。LoRaWAN® 为长距离连接物联网设备提供了低成本、节能的解决方案。该技术允许设备和网关之间进行双向通信，并支持一系列数据速率以适应不同类型的应用。

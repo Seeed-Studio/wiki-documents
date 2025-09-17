@@ -69,7 +69,7 @@ Home Assistant の機能を最大限に活用するために、Home Assistant OS
 
 ## 前提条件
 
-始める前に、SenseCAP Indicator ボードの[ユーザーガイド](/ja/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)を読んで、そのソフトウェアとハードウェア情報に慣れ親しんでください。
+始める前に、SenseCAP Indicator ボードの[ユーザーガイド](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)を読んで、そのソフトウェアとハードウェア情報に慣れ親しんでください。
 
 ## Home Assistant OS のインストール {#install_HA}
 
@@ -562,7 +562,7 @@ views:
 
 1. **Demo SDK**: SenseCAP IndicatorのDemo SDKは[GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32)で入手できます。
 2. **`indicator_ha.c`ファイル**: このファイルにはHome Assistant統合のメイン機能が含まれています。[こちら](https://raw.githubusercontent.com/Seeed-Solution/SenseCAP_Indicator_ESP32/main/examples/indicator_ha/main/model/indicator_ha.c)で確認できます。
-3. **ユーザーガイド**: ユーザーガイドでは、SenseCAP Indicatorボードのソフトウェアとハードウェアに関する詳細情報を提供しています。[こちら](/ja/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)で読むことができます。
+3. **ユーザーガイド**: ユーザーガイドでは、SenseCAP Indicatorボードのソフトウェアとハードウェアに関する詳細情報を提供しています。[こちら](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)で読むことができます。
 4. **Home Assistantインストールガイド**: Home Assistantを初めて使用する場合、このガイドがインストールとセットアップに役立ちます。[こちら](https://www.home-assistant.io/installation/)で確認できます。
 5. **ESP-IDFスタートガイド**: このガイドでは、ESP-IDFを設定してプロジェクトをビルドするための完全な手順を提供しています。[こちら](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html)でアクセスできます。
 6. [Home Assistantの概念と用語](https://www.home-assistant.io/getting-started/concepts-terminology/)

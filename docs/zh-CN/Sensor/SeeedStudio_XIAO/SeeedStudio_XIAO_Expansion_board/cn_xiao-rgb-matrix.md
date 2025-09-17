@@ -71,7 +71,7 @@ last_update:
 
 本教程将使用 XIAO RP2040 作为主控，如果您是第一次使用 XIAO RP2040，请阅读其入门 Wiki。
 
-- [Seeed Studio XIAO RP2040 with Arduino](https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/)
+- [Seeed Studio XIAO RP2040 with Arduino](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/)
 
 同时，本教程提供的所有示例程序也适用于其他 XIAO，您也可以根据您使用的 XIAO 提前配置 Arduino 开发环境。
 
@@ -79,7 +79,7 @@ last_update:
 
 :::tip
 
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
 ### 功能

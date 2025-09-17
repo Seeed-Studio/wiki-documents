@@ -78,7 +78,7 @@ XVF3800マイクアレイは動作するために12.288 MHz MCLKが必要です�
 
 ファームウェアは[こちら](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)からダウンロードできます
 
-インストールガイドは[こちら](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#update-firmware)です
+インストールガイドは[こちら](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)です
 
 ## ReSpeaker XMOS XVF3800とXIAO ESP32S3の準備
 

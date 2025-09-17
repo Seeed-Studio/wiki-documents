@@ -551,7 +551,7 @@ void loop() {
 
 ## 资源
 
-- [XIAO ESP32C6 文档](https://wiki.seeedstudio.com/cn/xiao_esp32c6_getting_started/)
+- [XIAO ESP32C6 文档](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/)
 - [ESP32-C6 数据手册](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
 - [Arduino 参考](https://www.arduino.cc/reference/en/)
 - [Arduino ESP32 参考](https://docs.espressif.com/projects/arduino-esp32/en/latest/index.html)

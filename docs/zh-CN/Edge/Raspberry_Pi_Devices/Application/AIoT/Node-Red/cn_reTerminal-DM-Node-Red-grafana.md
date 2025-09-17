@@ -41,7 +41,7 @@ last_update:
 
 ### 软件准备
 
-建议参考之前关于[如何创建 InfluxDB 数据库](https://wiki.seeedstudio.com/cn/reterminal_dm_200_node_red_influxdb/)的教程。在本教程中，我们将使用现有的 InfluxDB 连接进行设置。
+建议参考之前关于[如何创建 InfluxDB 数据库](https://wiki.seeedstudio.com/reterminal_dm_200_node_red_influxdb/)的教程。在本教程中，我们将使用现有的 InfluxDB 连接进行设置。
 
 ## 添加 Grafana 仓库
 

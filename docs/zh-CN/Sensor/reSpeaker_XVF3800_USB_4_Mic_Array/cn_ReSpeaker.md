@@ -48,7 +48,7 @@ ReSpeaker Lite 系列是您轻松构建强大、高质量语音项目的入门�
                     <div className="get_one_now_container" style={{ textAlign: 'center' }}>
                         <a
                             className="get_one_now_item"
-                            href="https://wiki.seeedstudio.com/cn/reSpeaker_usb_v3/"
+                            href="https://wiki.seeedstudio.com/reSpeaker_usb_v3/"
                         >
                             <strong>
                                 <span>
@@ -92,7 +92,7 @@ ReSpeaker XMOS XVF3800 系列专为需要在嘈杂的真实环境中实现清晰
                     <div className="get_one_now_container" style={{ textAlign: 'center' }}>
                         <a
                             className="get_one_now_item"
-                            href="https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/"
+                            href="https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/"
                         >
                             <strong>
                                 <span>
@@ -136,7 +136,7 @@ ReSpeaker 2-Mics Pi HAT V2.0 将您的 Raspberry Pi 转变为强大的语音启�
                     <div className="get_one_now_container" style={{ textAlign: 'center' }}>
                         <a
                             className="get_one_now_item"
-                            href="https://wiki.seeedstudio.com/cn/ReSpeaker_2_Mics_Pi_HAT/"
+                            href="https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/"
                         >
                             <strong>
                                 <span>
@@ -180,7 +180,7 @@ ReSpeaker XVF3000 USB 麦克风阵列是一个即用型、即插即用的远场�
                     <div className="get_one_now_container" style={{ textAlign: 'center' }}>
                         <a
                             className="get_one_now_item"
-                            href="https://wiki.seeedstudio.com/cn/ReSpeaker_Mic_Array_v2.0/#version"
+                            href="https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#version"
                         >
                             <strong>
                                 <span>

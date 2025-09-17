@@ -9,7 +9,10 @@ last_update:
   date: 05/15/2025
   author: shuxu hu
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/img/20180823144904.jpg" /></a></p> -->
 

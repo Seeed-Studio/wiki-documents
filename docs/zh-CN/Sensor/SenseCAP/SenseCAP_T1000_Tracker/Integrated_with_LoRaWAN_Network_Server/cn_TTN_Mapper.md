@@ -15,7 +15,7 @@ last_update:
 
 本教程将指导用户将 [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) 添加到 TTN Mapper。
 
-为了进行下一步操作，请参考 [连接到 The Things Network](https://wiki.seeedstudio.com/cn/SenseCAP_T1000_tracker_TTN/) 首先注册您的设备。
+为了进行下一步操作，请参考 [连接到 The Things Network](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/) 首先注册您的设备。
 
 ### 配置载荷格式化器
 
