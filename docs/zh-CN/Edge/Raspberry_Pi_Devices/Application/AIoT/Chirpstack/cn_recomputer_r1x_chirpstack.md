@@ -1,29 +1,29 @@
 ---
-description: Learn how to build a LoRaWAN gateway using ChirpStack on Raspberry Pi–powered reComputer R11. Configure the R1X00 gateway, Packet Forwarder, and SenseCAP S2101 sensors to stream IoT data via MQTT. Access your LoRa devices and applications securely from anywhere in the world.
+description: 学习如何在基于 Raspberry Pi 的 reComputer R11 上使用 ChirpStack 构建 LoRaWAN 网关。配置 R1X00 网关、数据包转发器和 SenseCAP S2101 传感器，通过 MQTT 流式传输物联网数据。从世界任何地方安全访问您的 LoRa 设备和应用程序。
 
-title: ChirpStack R1X00 Gateway Integration with SenseCAP S2101
+title: ChirpStack R1X00 网关与 SenseCAP S2101 集成
 
 keywords:
 - ChripStack
 - LoRa-WAN
 - Raspberry-Pi 
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
-slug: /chirpstack_lora_gateway_r1x00
+slug: /cn/chirpstack_lora_gateway_r1x00
 last_update:
   date: 9/18/2025
   author: Kasun Thushara
 ---
 
-## Introduction
+## 介绍
 
-This guide walks you through setting up a complete LoRaWAN gateway solution using ChirpStack on the Seeed reComputer R11 edge controller, powered by Raspberry Pi. With the WM1302 LoRa concentrator module, the R11 device functions as a powerful gateway capable of reliable long-range wireless communication. By configuring the Semtech Packet Forwarder, LoRa data can be seamlessly transmitted to ChirpStack, which manages network and application layers. We will use Docker to simplify the installation and deployment of ChirpStack services, ensuring a modular and scalable setup. Finally, the system integrates with MQTT, enabling secure and real-time IoT data streaming from LoRa devices like the SenseCAP S2101 sensor to applications accessible anywhere in the world.
+本指南将引导您在基于 Raspberry Pi 的 Seeed reComputer R11 边缘控制器上使用 ChirpStack 设置完整的 LoRaWAN 网关解决方案。借助 WM1302 LoRa 集中器模块，R11 设备可作为功能强大的网关，能够实现可靠的长距离无线通信。通过配置 Semtech 数据包转发器，LoRa 数据可以无缝传输到 ChirpStack，后者管理网络和应用层。我们将使用 Docker 来简化 ChirpStack 服务的安装和部署，确保模块化和可扩展的设置。最后，系统与 MQTT 集成，实现从 LoRa 设备（如 SenseCAP S2101 传感器）到世界任何地方可访问的应用程序的安全实时物联网数据流传输。
 
-## Hardware Required
+## 所需硬件
 
 <table align="center">
   <tr>
       <th>reComputer R1X</th>
-        <th>WM1302 LoRaWAN Gateway Module </th>
+        <th>WM1302 LoRaWAN 网关模块</th>
         <th>SenseCAP S2101</th>
   </tr>
   <tr>
@@ -34,84 +34,84 @@ This guide walks you through setting up a complete LoRaWAN gateway solution usin
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
         </a>
     </div></td>
   </tr>
 </table>
 
-## Docker Installation Guide
+## Docker 安装指南
 
-**1. Update System Packages**
+**1. 更新系统包**
 
 ```bash
 sudo apt update
 sudo apt upgrade
 ```
 
-**2. Install Docker**
+**2. 安装 Docker**
 
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-**3. Add User to Docker Group**
+**3. 将用户添加到 Docker 组**
 
 ```bash
 sudo usermod -aG docker ${USER}
 ```
 
-**4. Reboot System**
+**4. 重启系统**
 
 ```bash
 sudo reboot
 ```
 
-**5. Verify Installation**
+**5. 验证安装**
 
 ```bash
 docker run hello-world
 ```
 
-**6. Install Docker Compose**
+**6. 安装 Docker Compose**
 
 ```bash
 sudo apt install docker-compose
 ```
 
-Perfect I’ll reformat your **Packet Forwarder setup** into the same structured wiki style you’re using:
+完美，我将把您的**数据包转发器设置**重新格式化为您正在使用的相同结构化 wiki 样式：
 
 ---
 
-## Run Packet Forwarder
+## 运行数据包转发器
 
-The **WM1302 LoRa concentrator** requires the **Semtech Packet Forwarder** to relay data between the LoRa module and ChirpStack. The reComputer R11 provides a prebuilt setup guide for LoRa modules.
+**WM1302 LoRa 集中器**需要 **Semtech 数据包转发器**在 LoRa 模块和 ChirpStack 之间中继数据。reComputer R11 为 LoRa 模块提供了预构建的设置指南。
 
-Refer to the official Seeed Wiki for installation steps:
-[Seeed reComputer R11 LoRa Module Guide](https://wiki.seeedstudio.com/recomputer_r/#lora-module)
+请参考官方 Seeed Wiki 了解安装步骤：
+[Seeed reComputer R11 LoRa 模块指南](https://wiki.seeedstudio.com/cn/recomputer_r/#lora-module)
 
-Once installed, follow the steps below to configure and run the Packet Forwarder.
+安装完成后，按照以下步骤配置和运行数据包转发器。
 
-**1. Modify Configuration**
+**1. 修改配置**
 
-Open the configuration file corresponding to your LoRa region. For example, for **US915**:
+打开与您的 LoRa 区域对应的配置文件。例如，对于 **US915**：
 
 ```bash
 nano global_conf.json.sx1250.US915
 ```
 
-Update the **gateway_conf** section to point to your ChirpStack server:
+更新 **gateway_conf** 部分以指向您的 ChirpStack 服务器：
 
 ```json
 "gateway_conf": {
@@ -123,40 +123,40 @@ Update the **gateway_conf** section to point to your ChirpStack server:
 }
 ```
 
-> Replace `AA555A0000000000` with your actual Gateway ID. We will keep as it is
-> Use the correct JSON file for your LoRaWAN region, depending on the module you purchased.
+> 将 `AA555A0000000000` 替换为您的实际网关 ID。我们将保持原样
+> 根据您购买的模块，为您的 LoRaWAN 区域使用正确的 JSON 文件。
 
-Save the file and exit:
+保存文件并退出：
 
-- Press **CTRL + X**,
-- Then **Y**,
-- And finally **Enter**.
+- 按 **CTRL + X**，
+- 然后按 **Y**，
+- 最后按 **Enter**。
 
-**2. Start Packet Forwarder**
+**2. 启动数据包转发器**
 
-Run the Packet Forwarder using the updated configuration:
+使用更新的配置运行数据包转发器：
 
 ```bash
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
-Here’s your **“Make Gateway” section** in the same wiki style:
+这是您的**"创建网关"部分**，采用相同的 wiki 样式：
 
 ---
 
-## Start Gateway
+## 启动网关
 
-After installing ChirpStack, you can register your **R11 LoRa gateway** and start processing data.
+安装 ChirpStack 后，您可以注册您的 **R11 LoRa 网关**并开始处理数据。
 
-**Start ChirpStack Services**
+**启动 ChirpStack 服务**
 
-If not already running, launch all ChirpStack services:
+如果尚未运行，请启动所有 ChirpStack 服务：
 
 ```bash
 sudo docker-compose up -d
 ```
 
-Verify the containers are running:
+验证容器是否正在运行：
 
 ```bash
 sudo docker ps
@@ -164,15 +164,15 @@ sudo docker ps
 
 ---
 
-**Access ChirpStack Web UI**
+**访问 ChirpStack Web UI**
 
-1. Open a web browser and navigate to:
+1. 打开网页浏览器并导航到：
 
 ```
 http://localhost:8080/
 ```
 
-2. Log in with the default credentials:
+2. 使用默认凭据登录：
 
 ```
 Username: admin
@@ -181,47 +181,47 @@ Password: admin
 
 ---
 
-## Add Your Gateway
+## 添加您的网关
 
-1. In the ChirpStack UI, go to **Gateways → Create Gateway**
+1. 在 ChirpStack UI 中，转到 **Gateways → Create Gateway**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image1.png" alt="pir" width={800} height="auto" /></p>
 
-2. Enter the following details:
+2. 输入以下详细信息：
 
-   - **Gateway ID**: `AA555A0000000000` (replace with your actual Gateway ID)
-   - **Name**: Give a descriptive name for your gateway
+   - **Gateway ID**: `AA555A0000000000`（替换为您的实际网关 ID）
+   - **Name**: 为您的网关提供描述性名称
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image2.png" alt="pir" width={800} height="auto" /></p>
 
-3. Click **Create Gateway** to register it.
+3. 点击 **Create Gateway** 注册网关。
 
-4. After this, you will be able to view the gateway in the ChirpStack UI
+4. 之后，您将能够在 ChirpStack UI 中查看网关
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image3.png" alt="pir" width={800} height="auto" /></p>
 
-## Add Device Profile
+## 添加设备配置文件
 
-To connect a LoRaWAN device (e.g., **SenseCAP S2101**) to ChirpStack, you first need to create a **Device Profile**.
+要将 LoRaWAN 设备（例如 **SenseCAP S2101**）连接到 ChirpStack，您首先需要创建一个**设备配置文件**。
 
-1. Navigate to **Device Profiles → Create Device Profile**
+1. 导航到 **Device Profiles → Create Device Profile**
 
-2. Enter the following details:
+2. 输入以下详细信息：
 
-   - **Name**: Give a descriptive name for your device profile
-   - **Region**: Select the region/sub-band that matches your device and gateway (e.g., `US915`)
+   - **Name**: 为您的设备配置文件提供描述性名称
+   - **Region**: 选择与您的设备和网关匹配的区域/子频段（例如 `US915`）
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image4.png" alt="pir" width={800} height="auto" /></p>
 
-3. Navigate to the **Codec** tab:
+3. 导航到 **Codec** 选项卡：
 
-   - Select **JavaScript Functions**
-   - Paste the codec for your device
+   - 选择 **JavaScript Functions**
+   - 粘贴您设备的编解码器
 
-> ⚠️ The codec is specific to your LoRa device. For example, if you are using **Seeed S201x**, you can use the code below.
-> If you are using a different device, consult the manufacturer for the correct codec.
+> ⚠️ 编解码器特定于您的 LoRa 设备。例如，如果您使用的是 **Seeed S201x**，您可以使用下面的代码。
+> 如果您使用的是不同的设备，请咨询制造商获取正确的编解码器。
 
-4. Copy and paste the codec in the **Uplink/Downlink Codec** section and save the profile.
+4. 在 **Uplink/Downlink Codec** 部分复制并粘贴编解码器，然后保存配置文件。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image5.png" alt="pir" width={800} height="auto" /></p>  
 
@@ -461,94 +461,94 @@ function toBinary(arr) {
 
 </details>
 
-## Add Device
+## 添加设备
 
-Once the **Device Profile** is created, you can register your LoRaWAN device with ChirpStack.
+创建**设备配置文件**后，您可以在 ChirpStack 中注册您的 LoRaWAN 设备。
 
-1. Navigate to **Tenant → Application** and click **Add Application**
+1. 导航到**租户 → 应用程序**并点击**添加应用程序**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image6.png" alt="pir" width={800} height="auto" /></p>  
 
-2. Enter a **Name** for your application and save it
-3. Open your newly created application and click **Add Device**
+2. 为您的应用程序输入**名称**并保存
+3. 打开您新创建的应用程序并点击**添加设备**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image7.png" alt="pir" width={800} height="auto" /></p>
 
-4. Enter the following details:
+4. 输入以下详细信息：
 
-   - **Device EUI**: Paste the EUI from your LoRa device (found in the device datasheet or configuration software, e.g., SenseCAP application)
-   - **Device Profile**: Select the device profile you created earlier
+   - **设备 EUI**：粘贴您 LoRa 设备的 EUI（可在设备数据表或配置软件中找到，例如 SenseCAP 应用程序）
+   - **设备配置文件**：选择您之前创建的设备配置文件
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image8.png" alt="pir" width={800} height="auto" /></p>
 
-5. Enter the **Application Key** and click **Submit**
+5. 输入**应用程序密钥**并点击**提交**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image9.png" alt="pir" width={800} height="auto" /></p>
 
-> ⚠️ Device EUI and Application Key can be obtained from your LoRa device datasheet or configuration software. For **SenseCAP devices**, you can use the SenseCAP application to view or reconfigure these settings.
+> ⚠️ 设备 EUI 和应用程序密钥可以从您的 LoRa 设备数据表或配置软件中获取。对于**SenseCAP 设备**，您可以使用 SenseCAP 应用程序查看或重新配置这些设置。
 
-Here’s a polished version of your **“Check Device Status”** section in your wiki style, keeping it consistent with the previous sections:
+以下是您的**"检查设备状态"**部分的完善版本，采用您的 wiki 风格，与之前的部分保持一致：
 
 ---
 
-## Check Device Status
+## 检查设备状态
 
-After adding your LoRaWAN device, you can verify that it is properly connected and transmitting data.
+添加 LoRaWAN 设备后，您可以验证设备是否正确连接并传输数据。
 
-1. Navigate to your application and select the device you added
-2. Go to the **Events** tab
+1. 导航到您的应用程序并选择您添加的设备
+2. 转到**事件**选项卡
 
-   - You should see a **join packet** when the device successfully joins the network
+   - 当设备成功加入网络时，您应该看到一个**加入数据包**
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image10.png" alt="pir" width={800} height="auto" /></p>
 
-3. Click on the packets to view **detailed information**
+3. 点击数据包查看**详细信息**
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image11.png" alt="pir" width={500} height="auto" /></p>
 
-- For example, you can see the **temperature and humidity data** reported by devices like the SenseCAP S2101
+- 例如，您可以看到 SenseCAP S2101 等设备报告的**温度和湿度数据**
 
-## MQTT Integration
+## MQTT 集成
 
-ChirpStack uses **MQTT** to stream data from LoRaWAN devices to applications or dashboards. You can monitor these messages in real-time.
+ChirpStack 使用**MQTT**将 LoRaWAN 设备的数据流式传输到应用程序或仪表板。您可以实时监控这些消息。
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image12.png" alt="pir" width={800} height="auto" /></p>
 
-1. Connect your PC to the **same network** as the reComputer R11 gateway
-2. Use an MQTT client such as **MQTT Explorer** to subscribe to topics
-3. Configure the MQTT client:
+1. 将您的 PC 连接到与 reComputer R11 网关**相同的网络**
+2. 使用 MQTT 客户端（如**MQTT Explorer**）订阅主题
+3. 配置 MQTT 客户端：
 
-   - **Host**: IP address of your reComputer R11
-   - **Port**: `1883`
-4. Once connected, you will see a **tree of topics** representing your devices, for example:
+   - **主机**：您的 reComputer R11 的 IP 地址
+   - **端口**：`1883`
+4. 连接后，您将看到代表您设备的**主题树**，例如：
 
 ```
 application/c853ffcd-53f0-4de3-83b9-5467ff895f76/device/2cf7f1c043500402/event/up
 ```
 
-5. Expanding the topic will show **uplink messages** containing sensor data, such as temperature and humidity for devices like the SenseCAP S2101
+5. 展开主题将显示包含传感器数据的**上行消息**，例如 SenseCAP S2101 等设备的温度和湿度
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image13.png" alt="pir" width={800} height="auto" /></p>
 
-## Node-RED Integration
+## Node-RED 集成
 
-You can visualize LoRaWAN device data in **Node-RED** using MQTT nodes and custom functions.
+您可以使用 MQTT 节点和自定义函数在**Node-RED**中可视化 LoRaWAN 设备数据。
 
-1. Open **Node-RED** and drag an **MQTT IN** node onto the flow
+1. 打开**Node-RED**并将**MQTT IN**节点拖到流程中
 
-2. Configure the MQTT node:
+2. 配置 MQTT 节点：
 
-   - **Server**: IP of your reComputer R11 (e.g., `10.0.0.208`)
-   - **Port**: `1883`
-   - **Topic**: `application/+/device/+/event/up`
+   - **服务器**：您的 reComputer R11 的 IP（例如，`10.0.0.208`）
+   - **端口**：`1883`
+   - **主题**：`application/+/device/+/event/up`
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image15.png" alt="pir" width={600} height="auto" /></p>
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image14.png" alt="pir" width={600} height="auto" /></p>
 
-3. Add a **Function node** to decode the MQTT message payload
+3. 添加**函数节点**来解码 MQTT 消息载荷
 
-   - For example, extract **temperature** and **humidity** from the JSON object
+   - 例如，从 JSON 对象中提取**温度**和**湿度**
 
 ```javascript
    // Get the JSON payload
@@ -587,16 +587,16 @@ data.object.messages.forEach(m => {
 return [tempMsg, humMsg];
 ```
 
-4. Connect **two output nodes** from the Function node, one for temperature and one for humidity
+4. 从函数节点连接**两个输出节点**，一个用于温度，一个用于湿度
 
-5. Connect each output to a **Gauge node** or any other visualization node in Node-RED to display the sensor readings
+5. 将每个输出连接到 Node-RED 中的**仪表节点**或任何其他可视化节点以显示传感器读数
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image16.png" alt="pir" width={600} height="auto" /></p>
     <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image17.png" alt="pir" width={600} height="auto" /></p>
 
-## Tech Support & Product Discussion
+## 技术支持与产品讨论
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

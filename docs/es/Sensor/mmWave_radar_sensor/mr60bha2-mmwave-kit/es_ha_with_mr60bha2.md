@@ -165,7 +165,6 @@ En esta sección, repasaremos el proceso usando la aplicación Home Assistant, d
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-login.JPG" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
 3. **Navegar a la Página de Integración**: Una vez que hayas iniciado sesión, ve a la página "Integraciones" en Home Assistant. Si has instalado el complemento ESPHome y tanto el XIAO ESP32C6 como tu servidor Home Assistant están en la misma red, deberías ver el dispositivo `Seeed Studio MR60BHA2 Kit {device-mac-address}` aparecer bajo dispositivos descubiertos.
 4. **Añadir el Dispositivo**: Haz clic para añadir el dispositivo a tu configuración de Home Assistant.
-
   <div class="img-container" align="center">
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-device-find.JPG" alt="find device"/>
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-device-submit.JPG" alt="submit a device"/>
@@ -212,7 +211,7 @@ Aquí te mostramos cómo implementar automatizaciones paso a paso:
 
 1. **Navega a la Sección de Automatizaciones**: En tu panel de Home Assistant, encuentra y haz clic en la pestaña "Automations". Esta área está dedicada a crear y gestionar acciones automatizadas dentro de tu hogar.
 2. **Crea una Nueva Automatización**: Haz clic en el botón "Add Automation". Home Assistant ofrece un asistente fácil de usar que te guía a través del proceso de configurar una automatización.
-3. **Define el Disparador**: Elige un disparador basado en los datos del Sensor MR60BHA2. Por ejemplo, puedes configurar la automatización para que se active cuando el sensor detecte movimiento o un patrón específico de latidos del corazón. Esto significa que tu automatización puede responder inmediatamente a las lecturas del sensor.
+3. **Define el Disparador**: Elige un disparador basado en los datos del Sensor MR60BHA2. Por ejemplo, puedes configurar la automatización para que se dispare cuando el sensor detecte movimiento o un patrón específico de latidos del corazón. Esto significa que tu automatización puede responder inmediatamente a las lecturas del sensor.
 4. **Establece Condiciones (Opcional)**: Las condiciones te permiten refinar cuándo debe ejecutarse la automatización. Por ejemplo, podrías querer que las luces se enciendan solo cuando esté oscuro afuera o si un usuario específico está en casa.
 5. **Determina la Acción**: Especifica qué acción debe ocurrir cuando se cumplan las condiciones del disparador. Las acciones pueden incluir encender luces, enviar notificaciones, o incluso ajustar configuraciones del termostato. Por ejemplo, podrías crear una acción que encienda una luz RGB cuando se detecte movimiento, mejorando tanto la seguridad como la comodidad.
 6. **Guarda y Prueba**: Después de configurar tu automatización, guárdala y prueba su funcionalidad. Camina frente al sensor para ver si las luces se encienden como se espera. Si surgen problemas, puedes regresar a la configuración de automatización para solucionar problemas y ajustar.
@@ -345,7 +344,7 @@ Para comenzar con ESPHome, sigue estos pasos:
 
 5. **Prueba e Itera**: Una vez que la subida esté completa, prueba tus cambios en tiempo real. Monitorea el rendimiento del sensor para asegurar que opere como se espera. Si encuentras algún problema, vuelve al panel de ESPHome para refinar tus configuraciones. Este enfoque iterativo te permite mejorar continuamente tu firmware, asegurando que cumpla con tus requisitos de manera efectiva.
 
-Al utilizar ESPHome, te empoderas para hacer mejoras continuas a tu configuración de sensor, adaptándola para satisfacer tus necesidades en evolución. Esta capacidad no solo mejora la funcionalidad de tu proyecto sino que también proporciona una plataforma para aprender y experimentar con el desarrollo de IoT.
+Al utilizar ESPHome, te empoderas para hacer mejoras continuas a tu configuración de sensor, adaptándola para satisfacer tus necesidades en evolución. Esta capacidad no solo mejora la funcionalidad de tu proyecto, sino que también proporciona una plataforma para aprender y experimentar con el desarrollo de IoT.
 
 A través de estos pasos, puedes maximizar la funcionalidad de tu configuración del Sensor mmWave MR60BHA2 y XIAO ESP32C6, transformándola en un sistema de hogar inteligente altamente personalizado y receptivo adaptado a tus preferencias y necesidades.
 
@@ -355,16 +354,90 @@ A través de estos pasos, puedes maximizar la funcionalidad de tu configuración
 - [Installation - Home Assistant](https://www.home-assistant.io/installation/)
 - [limengdu/MR60BHA2_ESPHome_external_components](https://github.com/limengdu/MR60BHA2_ESPHome_external_components)
 
-## Soporte Técnico y Discusión del Producto
+## Solución de Problemas
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+### Explicación del Mecanismo de Reporte de Datos del Sensor de Radar (Para v1.6.12 y posteriores)
+
+Esta parte detalla el tiempo, precisión y condiciones requeridas para los datos reportados por las diversas funciones de detección del sensor de radar. Está destinada a ayudar a los usuarios a comprender y utilizar mejor los datos del sensor
+
+---
+
+### 1. Presencia Estática Humana
+
+- **Descripción de la Función**:
+    Detecta la presencia de un objetivo humano estacionario dentro de un área específica.
+- **Parámetro Clave**:
+  - **Rango de Detección Efectivo**: Hasta **6 metros**.
+- **Lógica de Reporte de Datos**:
+  - Reporta un estado de "Presencia" cuando se detecta un objetivo humano en el área.
+  - Reporta un estado de "Sin Presencia" cuando el área está libre de objetivos humanos.
+  - **Nota**: El rango de detección de 6 metros es exclusivo de la función de Presencia Estática Humana. No se aplica a otras características como Detección de Respiración y Latidos o Detección de Distancia del Objetivo, que tienen sus propios rangos efectivos más cortos. El único propósito de esta función es determinar presencia o ausencia, no proporcionar datos detallados.
+
+---
+
+### 2. Detección de Respiración y Latidos
+
+- **Descripción de la Función**:
+    Realiza detección de signos vitales sin contacto en un solo objetivo humano estacionario.
+- **Parámetros Clave**:
+  - **Rango de Detección Efectivo**: Aproximadamente **1.5 metros**.
+  - **Objetivo de Detección**: Un solo humano estacionario.
+- **Condiciones de Operación Necesarias**:
+  - **Quietud del Objetivo**: La persona siendo monitoreada debe permanecer completamente quieta.
+  - **Estabilidad del Dispositivo**: El dispositivo radar debe estar montado de forma segura, sin sacudidas o vibraciones.
+  - **Objetivo Único**: Solo una persona debe estar dentro del rango de detección.
+- **Lógica de Reporte de Datos**:
+  - **Reporte Normal**: Cuando se cumplen todas las condiciones anteriores, el radar reporta valores de respiración y frecuencia cardíaca en tiempo real.
+  - **Escenarios de Reporte Anormal**:
+    - **Objetivo Más Allá de 1.5m**: Cuando un objetivo detectado está más allá del rango efectivo de 1.5 metros, los datos de respiración y frecuencia cardíaca **dejarán de actualizarse** y se mantendrán en la última medición válida.
+    - **Sin Objetivo en Zona Central**: Cuando no se detecta ningún objetivo dentro de la zona central de detección de 0.5 a 1.5 metros, los valores de respiración y frecuencia cardíaca se reportarán activamente como **0**.
+- **Nota**: Por favor, tenga en cuenta las interferencias ambientales. Los micro-movimientos de fuentes como ventiladores, aires acondicionados o cortinas que se balancean a veces pueden ser malinterpretados por el sensor. En tales casos, el radar podría reportar un valor de **frecuencia cardíaca** distinto de cero incluso cuando no se detecta ningún objetivo humano (y la frecuencia respiratoria se reporta como 0).
+
+---
+
+### 3. Detección de Distancia del Objetivo
+
+- **Firmware Aplicable**: `1.6.10` y más reciente.
+- **Descripción de la Función**:
+    Detecta y reporta la distancia en línea recta entre el radar y un objetivo.
+- **Parámetro Clave**:
+  - **Rango Máximo de Detección Efectivo**: **5 metros**.
+- **Lógica de Reporte de Datos y Limitaciones**:
+  - **Estado Sin Objetivo**: Cuando no se detectan objetivos, el valor de distancia se reporta como **0**.
+  - **Objetivo(s) Detectado(s)**: Cuando se detectan uno o más objetivos dentro del rango de 5 metros, el radar reporta la distancia del objetivo **más cercano** al sensor.
+  - **Datos No Actualizados (Mantiene Último Valor)**: El valor de distancia dejará de actualizarse si el objetivo más cercano está en o se mueve más allá del rango de detección efectivo de 5 metros. En este caso, el valor se mantendrá en la última medición válida.
+- **Rendimiento de Seguimiento**:
+    Para asegurar la estabilidad de objetivos estacionarios a corta distancia, la estrategia de seguimiento del radar está optimizada para diferentes distancias. El rendimiento se detalla en la tabla a continuación:
+
+| Rango de Distancia | Estado del Objetivo | Rendimiento de Seguimiento y Notas |
+| :--- | :--- | :--- |
+| **0.5m ~ 1.5m** | Estacionario | **Tasa de Éxito de Seguimiento > 96%**. El rendimiento es muy estable. |
+| **1.5m ~ 3m** | Estacionario | **Tasa de Éxito de Seguimiento > 90%**. El rendimiento es estable. |
+| **3m ~ 5m** | Estacionario | La estabilidad de seguimiento disminuye, con pérdida ocasional del objetivo. La versión 1.6.12 muestra una mejora del 80% sobre versiones anteriores. |
+| **Acercándose** | En Movimiento | Cuando un objetivo se mueve hacia el radar desde la distancia, el seguimiento estable típicamente comienza cuando la persona alcanza aproximadamente **3 metros**. |
+| **Alejándose** | En Movimiento | Cuando un objetivo se aleja del radar, el seguimiento puede extenderse **más allá de 5 metros**. |
+
+---
+
+### 4. Conteo de Ocupantes del Entorno
+
+- **Descripción de la Función**:
+    Proporciona un conteo preliminar estimado de individuos dentro del área de detección.
+- **Explicación de Datos**:
+  - Esta función está actualmente en una etapa de desarrollo y debe considerarse experimental. El valor devuelto es una estimación aproximada derivada de análisis de señales complejas.
+  - Su precisión está fuertemente influenciada por factores como la superposición de señales de múltiples personas, posturas individuales y patrones de movimiento.
+  - En consecuencia, **esta característica no es adecuada para aplicaciones que dependen de números precisos de ocupantes**.
+  - Estamos trabajando activamente en refinar el algoritmo subyacente y esperamos entregar mejoras sustanciales de precisión en futuras versiones de firmware.
+
+## Soporte Técnico y Discusión de Productos
+
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="table-center">
   <div class="button_tech_support_container">
   <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
-
 
   <div class="button_tech_support_container">
   <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
