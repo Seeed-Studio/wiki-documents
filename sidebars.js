@@ -3251,9 +3251,6 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/reTerminal-DM-Ignition-Edge-Panel-Builder',
                   ]
                 },
-
-
-                
                 {
                   type: 'category',
                   label: 'ThingsBoard Integration',
@@ -3270,17 +3267,13 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/CODESYS_with_Modbus_on_R1000/recomputer_r1000_with_codesys_use_modbus_rtu',
                   ]
                 },
-
-{
+                {
                   type: 'category',
                   label: 'Chirpstack',
                   items: [
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Chirpstack/recomputer_r1x_chirpstack',
                   ]
-                    
                 },
-
-
                 {
                   type: 'category',
                   label: 'Others',
