@@ -3271,7 +3271,7 @@ const sidebars = {
                   type: 'category',
                   label: 'Chirpstack',
                   items: [
-                    'Edge/Raspberry_Pi_Devices/Application/AIoT/recomputer_r1x_chripstack',
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/recomputer_r1x_chirpstack',
                    
                   ]
                 },
