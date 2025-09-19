@@ -1,7 +1,7 @@
 ---
 description: 学习如何在基于 Raspberry Pi 的 reComputer R11 上使用 ChirpStack 构建 LoRaWAN 网关。配置 R1X00 网关、数据包转发器和 SenseCAP S2101 传感器，通过 MQTT 流式传输物联网数据。从世界任何地方安全访问您的 LoRa 设备和应用程序。
 
-title: ChirpStack R1X00 网关与 SenseCAP S2101 集成
+title: ChirpStack R1X 网关与 SenseCAP S2101 集成
 
 keywords:
 - ChripStack
@@ -16,7 +16,7 @@ last_update:
 
 ## 介绍
 
-本指南将引导您在基于 Raspberry Pi 的 Seeed reComputer R11 边缘控制器上使用 ChirpStack 设置完整的 LoRaWAN 网关解决方案。借助 WM1302 LoRa 集中器模块，R11 设备可作为功能强大的网关，能够实现可靠的长距离无线通信。通过配置 Semtech 数据包转发器，LoRa 数据可以无缝传输到 ChirpStack，后者管理网络和应用层。我们将使用 Docker 来简化 ChirpStack 服务的安装和部署，确保模块化和可扩展的设置。最后，系统与 MQTT 集成，实现从 LoRa 设备（如 SenseCAP S2101 传感器）到世界任何地方可访问的应用程序的安全实时物联网数据流传输。
+本指南将引导您在基于 Raspberry Pi 的 Seeed reComputer R11 边缘控制器上使用 ChirpStack 设置完整的 LoRaWAN 网关解决方案。借助 WM1302 LoRa 集中器模块，R1X 设备可作为功能强大的网关，能够实现可靠的长距离无线通信。通过配置 Semtech 数据包转发器，LoRa 数据可以无缝传输到 ChirpStack，后者管理网络和应用层。我们将使用 Docker 来简化 ChirpStack 服务的安装和部署，确保模块化和可扩展的设置。最后，系统与 MQTT 集成，实现从 LoRa 设备（如 SenseCAP S2101 传感器）到世界任何地方可访问的应用程序的安全实时物联网数据流。
 
 ## 所需硬件
 
@@ -98,7 +98,7 @@ sudo apt install docker-compose
 
 **WM1302 LoRa 集中器**需要 **Semtech 数据包转发器**在 LoRa 模块和 ChirpStack 之间中继数据。reComputer R11 为 LoRa 模块提供了预构建的设置指南。
 
-请参考官方 Seeed Wiki 了解安装步骤：
+请参考官方 Seeed Wiki 的安装步骤：
 [Seeed reComputer R11 LoRa 模块指南](https://wiki.seeedstudio.com/cn/recomputer_r/#lora-module)
 
 安装完成后，按照以下步骤配置和运行数据包转发器。
@@ -166,7 +166,7 @@ sudo docker ps
 
 **访问 ChirpStack Web UI**
 
-1. 打开网页浏览器并导航到：
+1. 打开网络浏览器并导航到：
 
 ```
 http://localhost:8080/
@@ -219,7 +219,7 @@ Password: admin
    - 粘贴您设备的编解码器
 
 > ⚠️ 编解码器特定于您的 LoRa 设备。例如，如果您使用的是 **Seeed S201x**，您可以使用下面的代码。
-> 如果您使用的是不同的设备，请咨询制造商获取正确的编解码器。
+> 如果您使用的是不同的设备，请咨询制造商以获取正确的编解码器。
 
 4. 在 **Uplink/Downlink Codec** 部分复制并粘贴编解码器，然后保存配置文件。
 
@@ -456,7 +456,6 @@ function toBinary(arr) {
         return bin;
     }).join('');
 }
-
 ```
 
 </details>
@@ -476,7 +475,7 @@ function toBinary(arr) {
 
 4. 输入以下详细信息：
 
-   - **设备 EUI**：粘贴您 LoRa 设备的 EUI（可在设备数据表或配置软件中找到，例如 SenseCAP 应用程序）
+   - **设备 EUI**：粘贴您的 LoRa 设备的 EUI（可在设备数据表或配置软件中找到，例如 SenseCAP 应用程序）
    - **设备配置文件**：选择您之前创建的设备配置文件
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image8.png" alt="pir" width={800} height="auto" /></p>
@@ -485,7 +484,7 @@ function toBinary(arr) {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image9.png" alt="pir" width={800} height="auto" /></p>
 
-> ⚠️ 设备 EUI 和应用程序密钥可以从您的 LoRa 设备数据表或配置软件中获取。对于**SenseCAP 设备**，您可以使用 SenseCAP 应用程序查看或重新配置这些设置。
+> ⚠️ 设备 EUI 和应用程序密钥可以从您的 LoRa 设备数据表或配置软件中获取。对于 **SenseCAP 设备**，您可以使用 SenseCAP 应用程序查看或重新配置这些设置。
 
 以下是您的**"检查设备状态"**部分的完善版本，采用您的 wiki 风格，与之前的部分保持一致：
 
@@ -506,16 +505,16 @@ function toBinary(arr) {
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image11.png" alt="pir" width={500} height="auto" /></p>
 
-- 例如，您可以看到 SenseCAP S2101 等设备报告的**温度和湿度数据**
+- 例如，您可以看到像 SenseCAP S2101 这样的设备报告的**温度和湿度数据**
 
 ## MQTT 集成
 
-ChirpStack 使用**MQTT**将 LoRaWAN 设备的数据流式传输到应用程序或仪表板。您可以实时监控这些消息。
+ChirpStack 使用 **MQTT** 将数据从 LoRaWAN 设备流式传输到应用程序或仪表板。您可以实时监控这些消息。
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image12.png" alt="pir" width={800} height="auto" /></p>
 
 1. 将您的 PC 连接到与 reComputer R11 网关**相同的网络**
-2. 使用 MQTT 客户端（如**MQTT Explorer**）订阅主题
+2. 使用 MQTT 客户端（如 **MQTT Explorer**）订阅主题
 3. 配置 MQTT 客户端：
 
    - **主机**：您的 reComputer R11 的 IP 地址
@@ -532,9 +531,9 @@ application/c853ffcd-53f0-4de3-83b9-5467ff895f76/device/2cf7f1c043500402/event/u
 
 ## Node-RED 集成
 
-您可以使用 MQTT 节点和自定义函数在**Node-RED**中可视化 LoRaWAN 设备数据。
+您可以使用 MQTT 节点和自定义函数在 **Node-RED** 中可视化 LoRaWAN 设备数据。
 
-1. 打开**Node-RED**并将**MQTT IN**节点拖到流程中
+1. 打开 **Node-RED** 并将 **MQTT IN** 节点拖到流程中
 
 2. 配置 MQTT 节点：
 
@@ -546,7 +545,7 @@ application/c853ffcd-53f0-4de3-83b9-5467ff895f76/device/2cf7f1c043500402/event/u
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image14.png" alt="pir" width={600} height="auto" /></p>
 
-3. 添加**函数节点**来解码 MQTT 消息载荷
+3. 添加一个**函数节点**来解码 MQTT 消息负载
 
    - 例如，从 JSON 对象中提取**温度**和**湿度**
 
