@@ -210,6 +210,7 @@ TRMNL 的核心理念是技术应该增强我们的生活，而不需要持续�
 - 窗口将显示设备的 MAC 地址。**请记录 MAC 地址**，因为您在后续步骤中会需要它。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/219.png" style={{width:800, height:'auto'}}/></div>
+
 > ⚠️ **注意：** MAC 地址在配置门户中只显示 1-2 秒。如果您错过了，您也可以：
 >
 > - 从 VS Code > PlatformIO 构建/上传日志中获取。

@@ -210,6 +210,7 @@ reTerminal E Series ePaperディスプレイをTRMNLで使用してプレイリ�
 - ウィンドウにデバイスのMACアドレスが表示されます。**MACアドレスを記録してください**。後の手順で必要になります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/219.png" style={{width:800, height:'auto'}}/></div>
+
 > ⚠️ **注意:** MACアドレスはキャプティブポータルで1〜2秒間のみ表示されます。見逃した場合は、以下の方法でも確認できます：
 >
 > - VS Code > PlatformIOのビルド/アップロードログから取得する。

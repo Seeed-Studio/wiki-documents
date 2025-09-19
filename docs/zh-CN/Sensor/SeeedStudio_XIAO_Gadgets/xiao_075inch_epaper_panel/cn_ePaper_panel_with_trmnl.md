@@ -210,6 +210,7 @@ TRMNL 的核心理念是技术应该增强我们的生活，而不需要持续�
 > - 从 VS Code > PlatformIO 构建/上传日志中检索它。
 > - 使用 [usetrmnl.com/flash](https://usetrmnl.com/flash) 方法，并在刷写过程中检查 Chrome/Edge/Firefox 开发者控制台中的 MAC 地址。
 > - 在您的路由器或 Mesh 网络应用程序的已连接设备列表中找到它。
+>
 >> 更多详细信息和截图，请参阅官方指南：[查找您的 TRMNL MAC 地址](https://help.usetrmnl.com/en/articles/10614205-finding-your-trmnl-mac-address)
 
 ### 访问 TRMNL Web 界面

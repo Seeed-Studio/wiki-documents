@@ -210,6 +210,7 @@ XIAO 7.5" ePaperパネルをTRMNLで使用してプレイリストを送信す�
 > - VS Code > PlatformIOのビルド/アップロードログから取得する。
 > - [usetrmnl.com/flash](https://usetrmnl.com/flash)方法を使用し、書き込み中にChrome/Edge/Firefoxの開発者コンソールでMACアドレスを確認する。
 > - ルーターまたはメッシュネットワークアプリの接続デバイスリストで見つける。
+>
 >> 詳細とスクリーンショットについては、公式ガイドを参照してください：[Finding your TRMNL MAC address](https://help.usetrmnl.com/en/articles/10614205-finding-your-trmnl-mac-address)
 
 ### TRMNL Web インターフェースへのアクセス

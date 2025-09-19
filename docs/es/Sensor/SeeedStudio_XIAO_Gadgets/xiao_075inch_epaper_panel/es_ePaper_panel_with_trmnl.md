@@ -210,6 +210,7 @@ Para usar su Panel ePaper XIAO de 7.5" con TRMNL y enviar listas de reproducció
 > - Recuperarla de los registros de construcción/subida de VS Code > PlatformIO.
 > - Usar el método [usetrmnl.com/flash](https://usetrmnl.com/flash) y verificar la consola de desarrollador de Chrome/Edge/Firefox para la dirección MAC durante el flasheo.
 > - Encontrarla en la lista de dispositivos conectados de su aplicación de router o red Mesh.
+>
 >> Para más detalles y capturas de pantalla, consulta la guía oficial: [Finding your TRMNL MAC address](https://help.usetrmnl.com/en/articles/10614205-finding-your-trmnl-mac-address)
 
 ### Acceder a la Interfaz Web de TRMNL

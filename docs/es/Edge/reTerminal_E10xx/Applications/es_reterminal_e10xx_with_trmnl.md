@@ -210,6 +210,7 @@ Para usar tu pantalla ePaper de la serie reTerminal E con TRMNL y enviar listas 
 - La ventana mostrará la dirección MAC del dispositivo. **Por favor registra la dirección MAC**, ya que la necesitarás en un paso posterior.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/219.png" style={{width:800, height:'auto'}}/></div>
+
 > ⚠️ **Nota:** La dirección MAC solo es visible en el portal cautivo durante 1-2 segundos. Si la pierdes, también puedes:
 >
 > - Recuperarla de los registros de compilación/carga de VS Code > PlatformIO.

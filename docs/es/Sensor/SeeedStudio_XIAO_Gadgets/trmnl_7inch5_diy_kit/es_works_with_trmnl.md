@@ -209,6 +209,7 @@ Después de que tu kit DIY TRMNL 7.5inch(OG) esté conectado a tu Wi-Fi y hayas 
 
 3. **Agregar un Nuevo Dispositivo**  
    - Haz clic en el botón **Add new device**, que usualmente se encuentra en la esquina superior derecha o en el centro de la página de Dispositivos.
+
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/220.png" style={{width:800, height:'auto'}}/></div>
 
 4. **Introducir ID del Dispositivo**  
@@ -367,7 +368,8 @@ Presiona y mantén presionado el Key1 (el botón junto al botón Reset) durante 
 - **[Thingiverse]** [base triangular](https://www.thingiverse.com/thing:7091094)
 - **[Thingiverse]** [base triangular protegida](https://www.thingiverse.com/thing:7097231)
 - **[Thingiverse]** [base en forma de L](https://www.thingiverse.com/thing:7091096)
-- **[Makerworld]** [base triangular](https://makerworld.com/en/models/1625037-trmnl-7-5-og-diy-triangular-prism-shell-kit)- **[Makerworld]** [base triangular protegida](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
+- **[Makerworld]** [base triangular](https://makerworld.com/en/models/1625037-trmnl-7-5-og-diy-triangular-prism-shell-kit)
+- **[Makerworld]** [base triangular protegida](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
 - **[Makerworld]** [base en forma de L](https://makerworld.com/en/models/1625065-trmnl-7-5-og-diy-l-shaped-case-kit)
 
 ## Soporte Técnico y Discusión de Productos

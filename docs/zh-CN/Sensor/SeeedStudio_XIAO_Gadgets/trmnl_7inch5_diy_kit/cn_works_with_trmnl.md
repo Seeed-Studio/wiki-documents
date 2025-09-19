@@ -209,6 +209,7 @@ TRMNL 的核心理念是技术应该增强我们的生活，而不需要持续�
 
 3. **添加新设备**  
    - 点击**添加新设备**按钮，通常位于右上角或设备页面的中央。
+
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/220.png" style={{width:800, height:'auto'}}/></div>
 
 4. **输入设备 ID**  
@@ -367,7 +368,8 @@ TRMNL 的插件系统是让您的电子纸面板真正强大和可定制的关�
 - **[Thingiverse]** [三角形底座](https://www.thingiverse.com/thing:7091094)
 - **[Thingiverse]** [保护型三角形底座](https://www.thingiverse.com/thing:7097231)
 - **[Thingiverse]** [L 形底座](https://www.thingiverse.com/thing:7091096)
-- **[Makerworld]** [三角形底座](https://makerworld.com/en/models/1625037-trmnl-7-5-og-diy-triangular-prism-shell-kit)- **[Makerworld]** [保护三角底座](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
+- **[Makerworld]** [三角形底座](https://makerworld.com/en/models/1625037-trmnl-7-5-og-diy-triangular-prism-shell-kit)
+- **[Makerworld]** [保护三角底座](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
 - **[Makerworld]** [L 形底座](https://makerworld.com/en/models/1625065-trmnl-7-5-og-diy-l-shaped-case-kit)
 
 ## 技术支持与产品讨论

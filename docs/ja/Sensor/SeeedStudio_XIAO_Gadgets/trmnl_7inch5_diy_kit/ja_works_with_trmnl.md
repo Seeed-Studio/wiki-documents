@@ -209,6 +209,7 @@ TRMNL 7.5inch(OG) DIYキットがWi-Fiに接続され、MACアドレス（デバ
 
 3. **新しいデバイスを追加**  
    - **Add new device**ボタンをクリックしてください。通常、デバイスページの右上角または中央にあります。
+
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/220.png" style={{width:800, height:'auto'}}/></div>
 
 4. **デバイスIDを入力**  
@@ -367,7 +368,8 @@ Key1（リセットボタンの隣のボタン）を5秒間押し続けます。
 - **[Thingiverse]** [三角形ベース](https://www.thingiverse.com/thing:7091094)
 - **[Thingiverse]** [保護付き三角形ベース](https://www.thingiverse.com/thing:7097231)
 - **[Thingiverse]** [L字型ベース](https://www.thingiverse.com/thing:7091096)
-- **[Makerworld]** [三角形ベース](https://makerworld.com/en/models/1625037-trmnl-7-5-og-diy-triangular-prism-shell-kit)- **[Makerworld]** [保護された三角形ベース](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
+- **[Makerworld]** [三角形ベース](https://makerworld.com/en/models/1625037-trmnl-7-5-og-diy-triangular-prism-shell-kit)
+- **[Makerworld]** [保護された三角形ベース](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
 - **[Makerworld]** [L字型ベース](https://makerworld.com/en/models/1625065-trmnl-7-5-og-diy-l-shaped-case-kit)
 
 ## 技術サポート & 製品ディスカッション
