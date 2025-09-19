@@ -1,16 +1,16 @@
 ---
 description: Este artículo describe cómo usar la pantalla ePaper de la serie reTerminal E con TRMNL.
 title: La pantalla ePaper de la serie reTerminal E funciona con TRMNL
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.jpg
 slug: /es/reterminal_e10xx_trmnl
 sidebar_position: 1
 last_update:
-  date: 07/21/2025
+  date: 09/19/2025
   author: Citric
 ---
 
 :::caution
-El contenido del Wiki está en desarrollo y no está disponible en este momento.
+La versión 1.6.7 de TRMNL ahora soporta oficialmente el reTerminal E1001. Debido a limitaciones de la arquitectura del software, el soporte para la pantalla e-ink a todo color del reTerminal E1002 **no** está disponible aún.
 :::
 
 # La pantalla ePaper de la serie reTerminal E funciona con TRMNL
@@ -19,19 +19,19 @@ El contenido del Wiki está en desarrollo y no está disponible en este momento.
 
 ## ¿Qué es [TRMNL](https://trmnl.app/)?
 
-TRMNL es una plataforma innovadora diseñada para ayudar a las personas a mantenerse enfocadas y tranquilas en nuestro mundo digital cada vez más distractor. Fundada en 2023, TRMNL se ha convertido rápidamente en una solución líder para la gestión de paneles de control E Ink®, ofreciendo un enfoque único para mostrar información sin las notificaciones constantes y distracciones de las pantallas tradicionales.
+TRMNL es una plataforma innovadora diseñada para ayudar a las personas a mantenerse enfocadas y tranquilas en nuestro mundo digital cada vez más distractor. Fundada en 2023, TRMNL se ha convertido rápidamente en una solución líder para la gestión de paneles E Ink®, ofreciendo un enfoque único para mostrar información sin las notificaciones constantes y distracciones de las pantallas tradicionales.
 
-En su núcleo, TRMNL se basa en la filosofía de que la tecnología debe mejorar nuestras vidas sin exigir atención constante. La plataforma proporciona una forma elegante de ver información importante de un vistazo a través de pantallas E Ink®, creando una experiencia tecnológica más consciente y menos intrusiva.
+En su núcleo, TRMNL está construida sobre la filosofía de que la tecnología debe mejorar nuestras vidas sin exigir atención constante. La plataforma proporciona una forma elegante de ver información importante de un vistazo a través de pantallas E Ink®, creando una experiencia tecnológica más consciente y menos intrusiva.
 
 ### ¿Por qué usar TRMNL?
 
 La integración de TRMNL traerá varios beneficios convincentes:
 
-- **Creación simplificada de paneles de control**: La creciente biblioteca de aplicaciones e integraciones de TRMNL facilita la creación de pantallas de información personalizadas sin programación compleja
+- **Creación simplificada de paneles**: La creciente biblioteca de aplicaciones e integraciones de TRMNL facilita la creación de pantallas de información personalizadas sin programación compleja
 - **Bajo consumo de energía**: La combinación del software eficiente de TRMNL con los requisitos mínimos de energía de nuestra pantalla E Ink® crea una solución extremadamente eficiente en energía
 - **Información libre de distracciones**: Obtén la información que necesitas sin las notificaciones constantes y la fatiga visual asociada con las pantallas tradicionales
 - **Actualizaciones regulares**: El desarrollo activo de TRMNL significa que se agregan nuevas características e integraciones semanalmente, expandiendo continuamente las posibilidades para tu pantalla
-- **Amigable para desarrolladores**: Con la API abierta y las herramientas de desarrollo de TRMNL, puedes crear complementos e integraciones personalizadas para tus necesidades específicas
+- **Amigable para desarrolladores**: Con la API abierta y las herramientas de desarrollo de TRMNL, puedes crear plugins e integraciones personalizadas para tus necesidades específicas
 
 Al combinar la poderosa plataforma de TRMNL con nuestra pantalla ePaper de alta calidad de la serie reTerminal E, estamos ofreciendo a los usuarios una solución elegante para crear paneles de información personalizados y de bajo consumo que respetan tanto su atención como su tiempo.
 
@@ -80,12 +80,12 @@ Comenzando inmediatamente. Por favor prepara cualquiera de los siguientes reTerm
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Obtener uno ahora 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Obtener uno ahora 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
@@ -99,7 +99,7 @@ Si aún estás usando el firmware de fábrica para la serie reTerminal E, entonc
 #### Método 1: Flashear vía TRMNL Web Flasher (Más fácil)
 
 :::tip
-Por favor usa el firmware **FW x.x.x** o más nuevo para compatibilidad con Seeed.
+Por favor usa **FW 1.6.7** o firmware más nuevo para compatibilidad con Seeed.
 :::
 
 1. **Ve al TRMNL Web Flasher**
@@ -108,11 +108,11 @@ Por favor usa el firmware **FW x.x.x** o más nuevo para compatibilidad con Seee
    - Esta herramienta te permite flashear tu dispositivo directamente desde tu navegador.
    - Sigue las instrucciones en pantalla para completar el proceso de flasheo.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/224.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/160.png" style={{width:700, height:'auto'}}/></div>
 
 ---
 
-#### Método 2: Compilar y flashear desde el código fuente (Para usuarios avanzados/desarrolladores)
+#### Método 2: Construir y flashear desde el código fuente (Para usuarios avanzados/desarrolladores)
 
 1. **Clonar el repositorio de firmware**
 
@@ -124,7 +124,7 @@ Por favor usa el firmware **FW x.x.x** o más nuevo para compatibilidad con Seee
 
 :::tip
 
-Hay momentos en que actualizamos nuestro código y necesitamos enviar PR a TRMNL y revisarlo antes de que se muestre, si quieres ser el primero en usar la última versión del firmware, también puedes usar el repositorio TRMNL bajo Seeed Project.
+Hay veces cuando actualizamos nuestro código y necesitamos enviar PR a TRMNL y revisarlo antes de que se muestre, si quieres ser el primero en usar la última versión del firmware, también puedes usar el repositorio TRMNL bajo Seeed Project.
 
 - Visita el [repositorio de Seeed](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project) y clónalo:
 
@@ -148,7 +148,7 @@ Hay momentos en que actualizamos nuestro código y necesitamos enviar PR a TRMNL
 
   - Si estás usando reTerminal E1001, selecciona el entorno `seeed_reTerminal_E1001`.
 
-  - Si estás usando reTerminal E1002, selecciona el entorno `seeed_reTerminal_E1002`.
+  <!-- - Si estás usando reTerminal E1002, selecciona el entorno `seeed_reTerminal_E1002`. -->
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/26.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -156,7 +156,7 @@ Hay momentos en que actualizamos nuestro código y necesitamos enviar PR a TRMNL
 
    - Conecta tu dispositivo de pantalla ePaper de la serie reTerminal E.
 
-6. **Compilar y cargar**
+6. **Construir y subir**
 
    - En PlatformIO, haz clic en el botón "Upload", o ejecuta:
 
@@ -166,19 +166,19 @@ Hay momentos en que actualizamos nuestro código y necesitamos enviar PR a TRMNL
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/215.png" style={{width:1000, height:'auto'}}/></div>
 
-   - El firmware será compilado y cargado a tu dispositivo.
+   - El firmware será compilado y subido a tu dispositivo.
 
 ## Configurar Wi-Fi y enviar listas de reproducción a TRMNL
 
-Para usar tu pantalla ePaper de la serie reTerminal E con TRMNL y enviar listas de reproducción, primero necesitas conectar el dispositivo a tu red Wi-Fi. Este proceso se llama "modo de emparejamiento WiFi" y se realiza a través de un portal cautivo simple. Por favor sigue los pasos a continuación:
+Para usar tu pantalla ePaper de la serie reTerminal E con TRMNL y enviar listas de reproducción, primero necesitas conectar el dispositivo a tu red Wi-Fi. Este proceso se llama "modo de emparejamiento WiFi" y se hace a través de un portal cautivo simple. Por favor sigue los pasos a continuación:
 
 > 💡 **¿Problemas con Wi-Fi?** Si encuentras problemas conectando tu dispositivo a Wi-Fi, por favor consulta la [Guía de solución de problemas de Wi-Fi del dispositivo TRMNL](https://help.usetrmnl.com/en/articles/10193157-device-wifi-troubleshooting) para soluciones a problemas comunes de red y compatibilidad de router.
 
 ### Encender y entrar en modo de aprovisionamiento
 
-- Después de flashear el firmware TRMNL y encender tu dispositivo, automáticamente entrará en modo de aprovisionamiento si aún no está conectado a Wi-Fi.
+- Después de flashear el firmware TRMNL y encender tu dispositivo, entrará automáticamente en modo de aprovisionamiento si aún no está conectado a Wi-Fi.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/216.jpg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/161.jpg" style={{width:600, height:'auto'}}/></div>
 
 ### Conectar al Wi-Fi TRMNL
 
@@ -199,7 +199,7 @@ Para usar tu pantalla ePaper de la serie reTerminal E con TRMNL y enviar listas 
 - Ingresa tu contraseña de Wi-Fi.
 - Haz clic en **Save** o **Connect**.
 
-> ⚠️ **Importante:** Asegúrate de usar una red Wi-Fi de 2.4GHz. Las redes de 5GHz no son compatibles con la serie reTerminal E.
+> ⚠️ **Importante:** Asegúrate de usar una red Wi-Fi de 2.4GHz. Las redes de 5GHz no son soportadas por la serie reTerminal E.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/218.png" style={{width:800, height:'auto'}}/></div>
 
@@ -208,7 +208,6 @@ Para usar tu pantalla ePaper de la serie reTerminal E con TRMNL y enviar listas 
 - El dispositivo intentará conectarse a tu Wi-Fi.
 - Una vez exitoso, se desconectará del Wi-Fi TRMNL y se unirá a tu red doméstica.
 - La ventana mostrará la dirección MAC del dispositivo. **Por favor registra la dirección MAC**, ya que la necesitarás en un paso posterior.
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/219.png" style={{width:800, height:'auto'}}/></div>
 
 > ⚠️ **Nota:** La dirección MAC solo es visible en el portal cautivo durante 1-2 segundos. Si la pierdes, también puedes:
@@ -262,7 +261,7 @@ Después de agregar tu dispositivo en la interfaz web de TRMNL, por favor ve a l
 
 Si estas opciones se dejan habilitadas, tu dispositivo puede descargar e instalar automáticamente actualizaciones de firmware de TRMNL cuando esté conectado a internet. Estas actualizaciones están destinadas para hardware oficial de TRMNL y **no son compatibles con el reTerminal E Series**. Instalar firmware incompatible puede causar que tu dispositivo funcione mal o deje de responder.
 
-Mantén siempre ambas opciones deshabilitadas para asegurar una operación estable de tu reTerminal E Series.
+Mantén siempre ambas opciones deshabilitadas para asegurar el funcionamiento estable de tu reTerminal E Series.
 :::
 
 ## Entendiendo la Función de Lista de Reproducción de TRMNL
@@ -345,7 +344,7 @@ Si tienes alguna pregunta sobre el uso de TRMNL o quieres explorar funciones má
 
 Agradecimientos especiales a todo el **equipo de TRMNL** por su fuerte apoyo y ayuda invaluable con este proyecto. En particular, nos gustaría agradecer a **Bogdan**, **Ryan Kulp**, **Fr3d** y todos los demás miembros del equipo por su dedicación y asistencia durante todo el proceso de desarrollo y documentación.
 
-Su experiencia y compromiso han hecho posible esta integración y han mejorado enormemente la experiencia del usuario para la comunidad de reTerminal E Series ePaper Display.
+Su experiencia y compromiso han hecho posible esta integración y han mejorado enormemente la experiencia del usuario para la comunidad del reTerminal E Series ePaper Display.
 
 ## Solución de Problemas
 
