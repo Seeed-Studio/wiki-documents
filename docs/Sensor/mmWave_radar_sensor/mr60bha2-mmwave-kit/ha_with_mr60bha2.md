@@ -367,11 +367,11 @@ This Part details the timing, accuracy, and required conditions for data reporte
 - **Function Description**:
     Detects the presence of a stationary human target within a specified area.
 - **Key Parameter**:
-  - **Effective Detection Range**: Up to **6 meters**.
+  - **Effective Detection Range**: Up to **4 meters**.
 - **Data Reporting Logic**:
   - Reports a "Presence" status when a human target is detected in the area.
   - Reports a "No Presence" status when the area is clear of human targets.
-  - **Note**: The 6-meter detection range is exclusive to the Human Static Presence function. It does not apply to other features like Breathing & Heartbeat Detection or Target Distance Detection, which have their own, shorter effective ranges. This function's sole purpose is to determine presence or absence, not to provide detailed data.
+  - **Note**: The 4-meter detection range is exclusive to the Human Static Presence function. It does not apply to other features like Breathing & Heartbeat Detection or Target Distance Detection, which have their own, shorter effective ranges. This function's sole purpose is to determine presence or absence, not to provide detailed data.
 
 ---
 
