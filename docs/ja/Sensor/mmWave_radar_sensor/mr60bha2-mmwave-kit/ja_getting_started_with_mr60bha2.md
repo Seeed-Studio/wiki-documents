@@ -192,7 +192,8 @@ if (mmWave.update(100)) {
    Serial.printf("distance: %.2f\n", distance);
  }
 }
-}```
+}
+```
 
 Arduino シリアルモニターでの出力は以下のようになります：
 
@@ -262,7 +263,7 @@ Arduino シリアルモニターでの出力は以下のようになります：
 
 :::note
 呼吸と心拍数は1.5メートル以内で検出でき、存在は1.5〜6メートルの範囲で検出できます。  
-1.5M範囲内に人がいる場合、モジュールは心拍と呼吸検出モードに入ります。   
+1.5M範囲内に人がいる場合、モジュールは心拍と呼吸検出モードに入ります。
 このモードでは、人体検出機能の感度が低下する可能性があります。  
 :::
 
@@ -574,6 +575,7 @@ void loop() {
 2. 0-3メートル間を移動するターゲットの追跡安定性を最適化し、以前のターゲット座標の不正確さを解決しました。ただし、レポートの更新頻度は低下しました。
 
 3. 呼吸と心拍数の精度—このリリースでは更新はありません。関連する機械学習トレーニングの継続的な最適化が進行中です。呼吸と心拍数の精度を向上させるファームウェアアップデートは月末頃にリリース予定です。以前の呼吸と心拍数アルゴリズムには根本的な問題がありましたが、これらは対処されました。
+
 :::
 
 - **MR60BHA2 ファームウェアアップグレードツール**: [MR60BHA2_OTA.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_OTA.zip)
@@ -587,27 +589,31 @@ void loop() {
 
 :::note
 ファームウェア1.6.4には以下のアップデートがあります：
+
 1. 呼吸と心拍数検知機能を最適化し、小さな体の動きがデータ損失を引き起こすバグを修正しました。  
 2. 3D存在検知機能を強化：1.5メートル以内で呼吸と心拍数を検知でき、1.5〜6メートルの範囲で存在を検知できます。  
 3. 人員検知機能を追加し、6メートルの範囲内で最大3人まで検知できます。
+
 :::
 
 - **MR60BHA2 ファームウェア v1.6.5**: [MR60BHA2_eeprom_1.6.5.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.5.bin)
 
 :::note
 ファームウェア1.6.5には以下のアップデートがあります：
+
 1. 人体が安静時に呼吸と心拍数が時々検知されない問題を修正しました。
+
 :::
 
 - **MR60BHA2 ファームウェア v1.6.10**: [MR60BHA2_eeprom_1.6.10.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.10.bin)
 
 :::note
 ファームウェア1.6.10には以下のアップデートがあります：
+
 1. 息止め時間が減少しない問題を解決するため、呼吸メカニズムを最適化しました。
 2. データ収集機能を追加しました。
+
 :::
-
-
 
 </details>
 
@@ -627,7 +633,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware-update/5-module-enter-upgrade-mode.png" style={{width:700, height:'auto'}}/></div>
 
-4. アップグレードするファームウェアを選択します。選択後、自動的にアップグレード状態に入ります。 
+4. アップグレードするファームウェアを選択します。選択後、自動的にアップグレード状態に入ります。
 
 アップグレードが完了すると、自動的に通常モードにジャンプします。ジャンプしない場合は、電源を切って再起動し、OTAツールを使用してシリアルポートデータを表示してください。
 
@@ -665,8 +671,8 @@ mmWaveモジュールをカスタマイズする際の3Dポイントクラウド
 - **MR60BHA2 GUIソフトウェア**: [Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip)
 - **mmWaveセンサー回路図 V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
 - **MR60BHA2 モジュール技術仕様**: [MR60BHA2_Breathing_and_Heartbeat_Module.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/MR60BHA2_Breathing_and_Heartbeat_Module.pdf)
-- **MR60BHA2 Tiny Frameインターフェースマニュアル**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)- **Jlink経由でのレーダーファームウェア復旧方法**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
-
+- **MR60BHA2 Tiny Frameインターフェースマニュアル**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)
+- **Jlink経由でのレーダーファームウェア復旧方法**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
 
 ## 技術サポート & 製品ディスカッション
 

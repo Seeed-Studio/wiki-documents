@@ -192,7 +192,8 @@ if (mmWave.update(100)) {
    Serial.printf("distance: %.2f\n", distance);
  }
 }
-}```
+}
+```
 
 Arduino 串口监视器的输出如下：
 
@@ -262,7 +263,7 @@ Arduino 串口监视器的输出如下：
 
 :::note
 呼吸和心率可在 1.5 米范围内检测，存在检测范围为 1.5 到 6 米。  
-当 1.5 米范围内有人时，模块将进入心跳和呼吸检测模式。   
+当 1.5 米范围内有人时，模块将进入心跳和呼吸检测模式。
 在此模式下，人体检测功能的灵敏度可能会降低。  
 :::
 
@@ -483,27 +484,28 @@ Arduino 串口监视器的输出如下：
 <!-- 
 ### Fall Module API
 
-This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sensor for fall detection. Here's what each key function does:
+This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sensor for fall detection. Here’s what each key function does:
 
 - **`mmWave.begin(&mmWaveSerial)`**:
   - Initializes the sensor for communication, similar to the breath module, setting up the serial connection between the XIAO board and the MR60FDA2 sensor.
+
 - **`mmWave.setInstallationHeight(float height)`**:
-  - 设置雷达的安装高度，这对准确的跌倒检测至关重要。`height` 参数指定传感器安装的高度（以米为单位），有效范围通常在 1 到 5 米之间。
+  - Sets the installation height of the radar, which is crucial for accurate fall detection. The `height` parameter specifies the height (in meters) at which the sensor is installed, with a valid range typically between 1 and 5 meters.
 
 - **`mmWave.setThreshold(float threshold)`**:
-  - 设置跌倒检测阈值。该值根据传感器的高度和距离确定雷达检测跌倒的灵敏度。
+  - Sets the fall detection threshold. This value determines the sensitivity of the radar in terms of detecting falls based on the height and distance from the sensor.
 
 - **`mmWave.setSensitivity(uint32_t sensitivity)`**:
-  - 调整雷达跌倒检测的灵敏度。灵敏度值通常范围为 3 到 10，数值越高，传感器对潜在跌倒的响应越敏感。
+  - Adjusts the sensitivity of the radar for fall detection. The sensitivity value typically ranges from 3 to 10, with higher values making the sensor more responsive to potential falls.
 
 - **`mmWave.getRadarParameters(float &height, float &threshold, uint32_t &sensitivity)`**:
-  - 获取雷达的当前配置参数，包括安装高度、跌倒检测阈值和灵敏度设置。这些参数通过引用变量返回。
+  - Retrieves the current configuration parameters of the radar, including installation height, fall detection threshold, and sensitivity settings. These parameters are returned via the reference variables.
 
 - **`mmWave.getHuman()`**:
-  - 检查雷达是否检测到人体存在。如果检测到人体则返回 `true`，否则返回 `false`。
+  - Checks if a human presence is detected by the radar. Returns `true` if a human is detected, and `false` otherwise.
 
 - **`mmWave.getFall()`**:
-  - 确定是否检测到跌倒。如果检测到跌倒，此函数返回 `true`，否则返回 `false`。-->
+  - Determines whether a fall has been detected. This function returns `true` if a fall is detected and `false` if not.-->
 
 ## 模块固件升级
 
@@ -574,6 +576,7 @@ void loop() {
 2. 优化了 0-3 米范围内移动目标的跟踪稳定性，解决了之前目标坐标不准确的问题。但是，报告刷新率有所降低。
 
 3. 呼吸和心率准确性——本版本无更新。相关机器学习训练的持续优化正在进行中。将在月底左右发布固件更新以提高呼吸和心率准确性。之前的呼吸和心率算法存在根本问题，现已得到解决。
+
 :::
 
 - **MR60BHA2 固件升级工具**: [MR60BHA2_OTA.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_OTA.zip)
@@ -587,27 +590,31 @@ void loop() {
 
 :::note
 固件 1.6.4 有以下更新：
+
 1. 优化了呼吸和心率检测功能，修复了小幅身体运动导致数据丢失的错误。  
 2. 增强了 3D 存在检测功能：可在 1.5 米内检测呼吸和心率，可在 1.5 到 6 米范围内检测存在。  
 3. 添加了人员检测功能，能够在 6 米范围内检测多达三个人。
+
 :::
 
 - **MR60BHA2 固件 v1.6.5**: [MR60BHA2_eeprom_1.6.5.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.5.bin)
 
 :::note
 固件 1.6.5 有以下更新：
+
 1. 修复了人体静止时有时无法检测到呼吸和心率的问题。
+
 :::
 
 - **MR60BHA2 固件 v1.6.10**: [MR60BHA2_eeprom_1.6.10.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.10.bin)
 
 :::note
 固件 1.6.10 有以下更新：
+
 1. 优化了呼吸机制，解决了屏气持续时间不减少的问题。
 2. 添加了数据收集功能。
+
 :::
-
-
 
 </details>
 
@@ -627,7 +634,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware-update/5-module-enter-upgrade-mode.png" style={{width:700, height:'auto'}}/></div>
 
-4. 选择要升级的固件。选择后，将自动进入升级状态。 
+4. 选择要升级的固件。选择后，将自动进入升级状态。
 
 升级完成后，将自动跳转到正常模式。如果没有跳转，请断电重启，然后使用 OTA 工具查看串口数据。
 
@@ -665,8 +672,8 @@ void loop() {
 - **MR60BHA2 GUI 软件**: [Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip)
 - **mmWave 传感器原理图 V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
 - **MR60BHA2 模块技术规格**: [MR60BHA2_Breathing_and_Heartbeat_Module.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/MR60BHA2_Breathing_and_Heartbeat_Module.pdf)
-- **MR60BHA2 Tiny Frame 接口手册**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)- **通过 Jlink 的雷达固件恢复方法**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
-
+- **MR60BHA2 Tiny Frame 接口手册**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)
+- **通过 Jlink 的雷达固件恢复方法**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
 
 ## 技术支持与产品讨论
 

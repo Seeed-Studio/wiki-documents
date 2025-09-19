@@ -192,7 +192,8 @@ if (mmWave.update(100)) {
    Serial.printf("distance: %.2f\n", distance);
  }
 }
-}```
+}
+```
 
 La salida será la siguiente en el Monitor Serie de Arduino:
 
@@ -262,7 +263,7 @@ La salida será la siguiente en el Monitor Serie de Arduino:
 
 :::note
 La respiración y la frecuencia cardíaca se pueden detectar dentro de 1.5 metros, y la presencia se puede detectar dentro de un rango de 1.5 a 6 metros.  
-Cuando hay personas dentro del rango de 1.5M, el módulo entrará en el modo de detección de latidos y respiración.   
+Cuando hay personas dentro del rango de 1.5M, el módulo entrará en el modo de detección de latidos y respiración.
 En este modo, la sensibilidad de la función de detección humana puede disminuir.  
 :::
 
@@ -574,6 +575,7 @@ El firmware 1.6.12 tiene las siguientes actualizaciones:
 2. Optimizada la estabilidad de seguimiento para objetivos que se mueven entre 0-3 metros, resolviendo las inexactitudes previas en las coordenadas del objetivo. Sin embargo, la tasa de actualización de informes ha disminuido.
 
 3. Precisión de respiración y frecuencia cardíaca—Sin actualizaciones en esta versión. Continúa la optimización del entrenamiento de aprendizaje automático relacionado. Se lanzará una actualización de firmware para mejorar la precisión de respiración y frecuencia cardíaca alrededor de fin de mes. El algoritmo anterior de respiración y frecuencia cardíaca tenía problemas fundamentales, que han sido abordados.
+
 :::
 
 - **Herramienta de actualización de firmware MR60BHA2**: [MR60BHA2_OTA.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_OTA.zip)
@@ -587,27 +589,31 @@ El firmware 1.6.12 tiene las siguientes actualizaciones:
 
 :::note
 El firmware 1.6.4 tiene las siguientes actualizaciones:
+
 1. Optimizada la función de detección de respiración y frecuencia cardíaca, corrigiendo el error donde pequeños movimientos corporales causaban pérdida de datos.  
 2. Mejorada la función de detección de presencia 3D: la respiración y frecuencia cardíaca pueden detectarse dentro de 1.5 metros, y la presencia puede detectarse en un rango de 1.5 a 6 metros.  
 3. Agregada una función de detección de personal, capaz de detectar hasta tres individuos dentro de un rango de 6 metros.
+
 :::
 
 - **Firmware MR60BHA2 v1.6.5**: [MR60BHA2_eeprom_1.6.5.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.5.bin)
 
 :::note
 El firmware 1.6.5 tiene las siguientes actualizaciones:
+
 1. Corregido el problema de que la respiración y frecuencia cardíaca a veces no se detectaban cuando el cuerpo humano estaba en reposo.
+
 :::
 
 - **Firmware MR60BHA2 v1.6.10**: [MR60BHA2_eeprom_1.6.10.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.10.bin)
 
 :::note
 El firmware 1.6.10 tiene las siguientes actualizaciones:
+
 1. Optimizada la mecánica de respiración para resolver el problema donde la duración de retención de la respiración no disminuye.
 2. Agregada funcionalidad de recolección de datos.
+
 :::
-
-
 
 </details>
 
@@ -627,7 +633,7 @@ El firmware 1.6.10 tiene las siguientes actualizaciones:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware-update/5-module-enter-upgrade-mode.png" style={{width:700, height:'auto'}}/></div>
 
-4. Seleccionar el firmware a actualizar. Después de la selección, entrará automáticamente al estado de actualización. 
+4. Seleccionar el firmware a actualizar. Después de la selección, entrará automáticamente al estado de actualización.
 
 Después de que se complete la actualización, saltará automáticamente al modo normal. Si no salta, apagar y reiniciar, y luego usar la herramienta OTA para ver los datos del puerto serie.
 
@@ -665,8 +671,8 @@ El firmware y algoritmos del radar no son de código abierto, y los parámetros 
 - **Software GUI MR60BHA2**: [Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip)
 - **Esquemático del Sensor mmWave V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
 - **Especificación Técnica del Módulo MR60BHA2**: [MR60BHA2_Breathing_and_Heartbeat_Module.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/MR60BHA2_Breathing_and_Heartbeat_Module.pdf)
-- **Manual de Interfaz Tiny Frame MR60BHA2**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)- **Método de Recuperación de Firmware del Radar vía Jlink**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
-
+- **Manual de Interfaz Tiny Frame MR60BHA2**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)
+- **Método de Recuperación de Firmware del Radar vía Jlink**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
 
 ## Soporte Técnico y Discusión de Productos
 

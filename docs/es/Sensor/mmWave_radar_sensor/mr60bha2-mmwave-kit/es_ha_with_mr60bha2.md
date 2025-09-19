@@ -164,7 +164,8 @@ En esta sección, repasaremos el proceso usando la aplicación Home Assistant, d
 2. **Crear una Cuenta**: Si no has creado una cuenta, necesitarás hacerlo. Después de eso, inicia sesión con tus credenciales.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-login.JPG" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
 3. **Navegar a la Página de Integración**: Una vez que hayas iniciado sesión, ve a la página "Integraciones" en Home Assistant. Si has instalado el complemento ESPHome y tanto el XIAO ESP32C6 como tu servidor Home Assistant están en la misma red, deberías ver el dispositivo `Seeed Studio MR60BHA2 Kit {device-mac-address}` aparecer bajo dispositivos descubiertos.
-4. **Añadir el Dispositivo**: Haz clic para añadir el dispositivo a tu configuración de Home Assistant.  <div class="img-container" align="center">
+4. **Añadir el Dispositivo**: Haz clic para añadir el dispositivo a tu configuración de Home Assistant.
+  <div class="img-container" align="center">
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-device-find.JPG" alt="find device"/>
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-device-submit.JPG" alt="submit a device"/>
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-device-add.JPG" alt="area"/>
@@ -357,54 +358,55 @@ A través de estos pasos, puedes maximizar la funcionalidad de tu configuración
 
 ### Explicación del Mecanismo de Reporte de Datos del Sensor de Radar (Para v1.6.12 y posteriores)
 
-Esta parte detalla el tiempo, precisión y condiciones requeridas para los datos reportados por las diversas funciones de detección del sensor de radar. Está destinada a ayudar a los usuarios a comprender y utilizar mejor los datos del sensor.
+Esta parte detalla el tiempo, precisión y condiciones requeridas para los datos reportados por las diversas funciones de detección del sensor de radar. Está destinada a ayudar a los usuarios a comprender y utilizar mejor los datos del sensor
+
 ---
 
 ### 1. Presencia Estática Humana
 
-*   **Descripción de la Función**:
+- **Descripción de la Función**:
     Detecta la presencia de un objetivo humano estacionario dentro de un área específica.
-*   **Parámetro Clave**:
-    *   **Rango de Detección Efectivo**: Hasta **6 metros**.
-*   **Lógica de Reporte de Datos**:
-    *   Reporta un estado de "Presencia" cuando se detecta un objetivo humano en el área.
-    *   Reporta un estado de "Sin Presencia" cuando el área está libre de objetivos humanos.
-    *   **Nota**: El rango de detección de 6 metros es exclusivo de la función de Presencia Estática Humana. No se aplica a otras características como Detección de Respiración y Latidos o Detección de Distancia del Objetivo, que tienen sus propios rangos efectivos más cortos. El único propósito de esta función es determinar presencia o ausencia, no proporcionar datos detallados.
+- **Parámetro Clave**:
+  - **Rango de Detección Efectivo**: Hasta **6 metros**.
+- **Lógica de Reporte de Datos**:
+  - Reporta un estado de "Presencia" cuando se detecta un objetivo humano en el área.
+  - Reporta un estado de "Sin Presencia" cuando el área está libre de objetivos humanos.
+  - **Nota**: El rango de detección de 6 metros es exclusivo de la función de Presencia Estática Humana. No se aplica a otras características como Detección de Respiración y Latidos o Detección de Distancia del Objetivo, que tienen sus propios rangos efectivos más cortos. El único propósito de esta función es determinar presencia o ausencia, no proporcionar datos detallados.
 
 ---
 
 ### 2. Detección de Respiración y Latidos
 
-*   **Descripción de la Función**:
+- **Descripción de la Función**:
     Realiza detección de signos vitales sin contacto en un solo objetivo humano estacionario.
-*   **Parámetros Clave**:
-    *   **Rango de Detección Efectivo**: Aproximadamente **1.5 metros**.
-    *   **Objetivo de Detección**: Un solo humano estacionario.
-*   **Condiciones de Operación Necesarias**:
-    *   **Quietud del Objetivo**: La persona siendo monitoreada debe permanecer completamente quieta.
-    *   **Estabilidad del Dispositivo**: El dispositivo radar debe estar montado de forma segura, sin sacudidas o vibraciones.
-    *   **Objetivo Único**: Solo una persona debe estar dentro del rango de detección.
-*   **Lógica de Reporte de Datos**:
-    *   **Reporte Normal**: Cuando se cumplen todas las condiciones anteriores, el radar reporta valores de respiración y frecuencia cardíaca en tiempo real.
-    *   **Escenarios de Reporte Anormal**:
-        * **Objetivo Más Allá de 1.5m**: Cuando un objetivo detectado está más allá del rango efectivo de 1.5 metros, los datos de respiración y frecuencia cardíaca **dejarán de actualizarse** y se mantendrán en la última medición válida.
-        * **Sin Objetivo en Zona Central**: Cuando no se detecta ningún objetivo dentro de la zona central de detección de 0.5 a 1.5 metros, los valores de respiración y frecuencia cardíaca se reportarán activamente como **0**.
-*   **Nota**: Por favor, tenga en cuenta las interferencias ambientales. Los micro-movimientos de fuentes como ventiladores, aires acondicionados o cortinas que se balancean a veces pueden ser malinterpretados por el sensor. En tales casos, el radar podría reportar un valor de **frecuencia cardíaca** distinto de cero incluso cuando no se detecta ningún objetivo humano (y la frecuencia respiratoria se reporta como 0).
+- **Parámetros Clave**:
+  - **Rango de Detección Efectivo**: Aproximadamente **1.5 metros**.
+  - **Objetivo de Detección**: Un solo humano estacionario.
+- **Condiciones de Operación Necesarias**:
+  - **Quietud del Objetivo**: La persona siendo monitoreada debe permanecer completamente quieta.
+  - **Estabilidad del Dispositivo**: El dispositivo radar debe estar montado de forma segura, sin sacudidas o vibraciones.
+  - **Objetivo Único**: Solo una persona debe estar dentro del rango de detección.
+- **Lógica de Reporte de Datos**:
+  - **Reporte Normal**: Cuando se cumplen todas las condiciones anteriores, el radar reporta valores de respiración y frecuencia cardíaca en tiempo real.
+  - **Escenarios de Reporte Anormal**:
+    - **Objetivo Más Allá de 1.5m**: Cuando un objetivo detectado está más allá del rango efectivo de 1.5 metros, los datos de respiración y frecuencia cardíaca **dejarán de actualizarse** y se mantendrán en la última medición válida.
+    - **Sin Objetivo en Zona Central**: Cuando no se detecta ningún objetivo dentro de la zona central de detección de 0.5 a 1.5 metros, los valores de respiración y frecuencia cardíaca se reportarán activamente como **0**.
+- **Nota**: Por favor, tenga en cuenta las interferencias ambientales. Los micro-movimientos de fuentes como ventiladores, aires acondicionados o cortinas que se balancean a veces pueden ser malinterpretados por el sensor. En tales casos, el radar podría reportar un valor de **frecuencia cardíaca** distinto de cero incluso cuando no se detecta ningún objetivo humano (y la frecuencia respiratoria se reporta como 0).
 
 ---
 
 ### 3. Detección de Distancia del Objetivo
 
-*   **Firmware Aplicable**: `1.6.10` y más reciente.
-*   **Descripción de la Función**:
+- **Firmware Aplicable**: `1.6.10` y más reciente.
+- **Descripción de la Función**:
     Detecta y reporta la distancia en línea recta entre el radar y un objetivo.
-*   **Parámetro Clave**:
-    *   **Rango Máximo de Detección Efectivo**: **5 metros**.
-*   **Lógica de Reporte de Datos y Limitaciones**:
-    *   **Estado Sin Objetivo**: Cuando no se detectan objetivos, el valor de distancia se reporta como **0**.
-    *   **Objetivo(s) Detectado(s)**: Cuando se detectan uno o más objetivos dentro del rango de 5 metros, el radar reporta la distancia del objetivo **más cercano** al sensor.
-    *   **Datos No Actualizados (Mantiene Último Valor)**: El valor de distancia dejará de actualizarse si el objetivo más cercano está en o se mueve más allá del rango de detección efectivo de 5 metros. En este caso, el valor se mantendrá en la última medición válida.
-*   **Rendimiento de Seguimiento**:
+- **Parámetro Clave**:
+  - **Rango Máximo de Detección Efectivo**: **5 metros**.
+- **Lógica de Reporte de Datos y Limitaciones**:
+  - **Estado Sin Objetivo**: Cuando no se detectan objetivos, el valor de distancia se reporta como **0**.
+  - **Objetivo(s) Detectado(s)**: Cuando se detectan uno o más objetivos dentro del rango de 5 metros, el radar reporta la distancia del objetivo **más cercano** al sensor.
+  - **Datos No Actualizados (Mantiene Último Valor)**: El valor de distancia dejará de actualizarse si el objetivo más cercano está en o se mueve más allá del rango de detección efectivo de 5 metros. En este caso, el valor se mantendrá en la última medición válida.
+- **Rendimiento de Seguimiento**:
     Para asegurar la estabilidad de objetivos estacionarios a corta distancia, la estrategia de seguimiento del radar está optimizada para diferentes distancias. El rendimiento se detalla en la tabla a continuación:
 
 | Rango de Distancia | Estado del Objetivo | Rendimiento de Seguimiento y Notas |
@@ -419,14 +421,13 @@ Esta parte detalla el tiempo, precisión y condiciones requeridas para los datos
 
 ### 4. Conteo de Ocupantes del Entorno
 
-*   **Descripción de la Función**:
+- **Descripción de la Función**:
     Proporciona un conteo preliminar estimado de individuos dentro del área de detección.
-*   **Explicación de Datos**:
-    *   Esta función está actualmente en una etapa de desarrollo y debe considerarse experimental. El valor devuelto es una estimación aproximada derivada de análisis de señales complejas.
-    *   Su precisión está fuertemente influenciada por factores como la superposición de señales de múltiples personas, posturas individuales y patrones de movimiento.
-    *   En consecuencia, **esta característica no es adecuada para aplicaciones que dependen de números precisos de ocupantes**.
-    *   Estamos trabajando activamente en refinar el algoritmo subyacente y esperamos entregar mejoras sustanciales de precisión en futuras versiones de firmware.
-
+- **Explicación de Datos**:
+  - Esta función está actualmente en una etapa de desarrollo y debe considerarse experimental. El valor devuelto es una estimación aproximada derivada de análisis de señales complejas.
+  - Su precisión está fuertemente influenciada por factores como la superposición de señales de múltiples personas, posturas individuales y patrones de movimiento.
+  - En consecuencia, **esta característica no es adecuada para aplicaciones que dependen de números precisos de ocupantes**.
+  - Estamos trabajando activamente en refinar el algoritmo subyacente y esperamos entregar mejoras sustanciales de precisión en futuras versiones de firmware.
 
 ## Soporte Técnico y Discusión de Productos
 
