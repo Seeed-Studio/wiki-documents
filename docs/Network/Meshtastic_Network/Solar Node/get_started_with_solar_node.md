@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 2025/09/19
+  date: 09/11/2025
   author: Michelle
 ---
 

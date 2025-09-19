@@ -11,7 +11,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /watcher_web_control_panel
 last_update:
-  date: 2025/09/19
+  date: 09/11/2025
   author: Twelve
 ---
 

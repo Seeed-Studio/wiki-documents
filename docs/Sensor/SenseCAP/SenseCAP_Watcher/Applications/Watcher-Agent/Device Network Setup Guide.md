@@ -11,7 +11,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /device_network_setup
 last_update:
-  date: 2025/09/19
+  date: 09/19/2025
   author: Twelve
 ---
 

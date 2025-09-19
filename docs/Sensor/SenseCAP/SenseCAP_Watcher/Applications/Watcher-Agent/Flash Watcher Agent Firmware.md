@@ -11,7 +11,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /flash_watcher_agent_firmware
 last_update:
-  date: 2025/09/19
+  date: 09/04/2025
   author: Twelve
 ---
 

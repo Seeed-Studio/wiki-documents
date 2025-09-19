@@ -11,7 +11,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /cn/flash_watcher_agent_firmware
 last_update:
-  date: 2025/09/04
+  date: 09/04/2025
   author: Twelve
 ---
 
@@ -38,7 +38,7 @@ last_update:
 ### 所需软件
 
 - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 或更高版本)
-- [Watcher Agent 固件二进制文件](http://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)
+- [Watcher Agent 固件二进制文件](https://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)
 
 :::note
 如果您已经拥有 Watcher 设备且其型号**不是 -EN**，您需要在刷写固件后手动刷写认证信息。
@@ -59,7 +59,7 @@ last_update:
 
 ### 步骤 2. 准备固件文件
 
-1. 下载 Watcher Agent 固件[二进制文件](http://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)
+1. 下载 Watcher Agent 固件[二进制文件](https://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)
 :::caution 注意
 确保所有路径不包含特殊符号。
 :::
