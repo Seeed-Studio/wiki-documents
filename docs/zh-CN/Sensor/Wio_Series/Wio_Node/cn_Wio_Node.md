@@ -24,7 +24,7 @@ last_update:
 
 Wio Node 的生态系统也由开放硬件 **Wio Node 板**、**开源 Wio Link 移动应用程序** 和 **开源物联网服务器实现** 组成。因此，Wio Link 的软件平台也适用于 Wio Node。
 
-[![Get one now](https://files.seeedstudio.com/wiki/Wio_Node/pictures/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Node-p-2637.html)
+[![立即获取](https://files.seeedstudio.com/wiki/Wio_Node/pictures/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Node-p-2637.html)
 
 :::caution
 Wio IFTTT 功能已停止服务。但 Wio APP 仍可使用。您可以使用 Wio APP 的 API 来读取传感器状态和控制执行器。
