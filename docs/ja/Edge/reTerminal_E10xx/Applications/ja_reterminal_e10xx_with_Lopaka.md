@@ -95,6 +95,7 @@ Lopakaは、組み込みグラフィックス開発専用に設計されたグ�
 - **[Lopakaにアクセス](https://lopaka.app/)**
 
   GoogleまたはGitHubアカウントのいずれかを使用して登録できます。
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_1.png" style={{width:800, height:'auto'}}/>
 <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Lopakaメインインターフェース</em></p>
 </div>
@@ -285,8 +286,10 @@ void loop()
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_4.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
+
 - reTerminal E1001を使用したい場合は、リンクを参照してください：[reTerminal E1001のプログラミング](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
 - GxEPD2ライブラリを使用したい場合は、リンクを参照してください：[GxEPD2ライブラリの使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
+
 :::
 
 ### 例
@@ -403,6 +406,7 @@ void loop()
 {
     // put your main code here, to run repeatedly:
 }
+
 ```
 
 </details>
@@ -921,7 +925,8 @@ void setup()
 void loop()
 {
     // put your main code here, to run repeatedly:
-}```
+}
+```
 
 </details>
 

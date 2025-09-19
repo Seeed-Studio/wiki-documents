@@ -95,6 +95,7 @@ Lopaka es un editor gráfico diseñado específicamente para el desarrollo de gr
 - **[Ir a Lopaka](https://lopaka.app/)**
 
   Puedes registrarte usando una cuenta de Google o GitHub.
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_1.png" style={{width:800, height:'auto'}}/>
 <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Interfaz principal de Lopaka</em></p>
 </div>
@@ -285,8 +286,10 @@ El efecto se muestra en la siguiente figura.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_4.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
+
 - Si deseas usar reTerminal E1001, puedes consultar el enlace：[Programando reTerminal E1001](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
 - Si quieres usar su biblioteca GxEPD2, puedes consultar el enlace.: [Usando la Biblioteca GxEPD2](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
+
 :::
 
 ### Ejemplo
@@ -403,6 +406,7 @@ void loop()
 {
     // put your main code here, to run repeatedly:
 }
+
 ```
 
 </details>
@@ -921,7 +925,8 @@ void setup()
 void loop()
 {
     // put your main code here, to run repeatedly:
-}```
+}
+```
 
 </details>
 

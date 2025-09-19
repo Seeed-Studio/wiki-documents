@@ -95,6 +95,7 @@ Lopaka 是专为嵌入式图形开发设计的图形编辑器。它使用户能�
 - **[前往 Lopaka](https://lopaka.app/)**
 
   您可以使用 Google 或 GitHub 账户进行注册。
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_1.png" style={{width:800, height:'auto'}}/>
 <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Lopaka 主界面</em></p>
 </div>
@@ -183,6 +184,7 @@ Lopaka 是专为嵌入式图形开发设计的图形编辑器。它使用户能�
 ```
 
 :::tip
+
 如果您使用的是 reTerminal E1001，那么您应该复制以下代码
 
 ```cpp
@@ -285,8 +287,10 @@ void loop()
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_4.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
+
 - 如果您希望使用 reTerminal E1001，可以参考链接：[Programming reTerminal E1001](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
 - 如果您想使用其 GxEPD2 库，可以参考链接：[Using the GxEPD2 Library](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
+
 :::
 
 ### 示例
@@ -403,6 +407,7 @@ void loop()
 {
     // put your main code here, to run repeatedly:
 }
+
 ```
 
 </details>
@@ -921,7 +926,8 @@ void setup()
 void loop()
 {
     // put your main code here, to run repeatedly:
-}```
+}
+```
 
 </details>
 
