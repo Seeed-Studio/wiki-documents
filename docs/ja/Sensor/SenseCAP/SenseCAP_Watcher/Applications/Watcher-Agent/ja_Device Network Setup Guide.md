@@ -11,7 +11,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /ja/device_network_setup
 last_update:
-  date: 11/09/2025
+  date: 09/19/2025
   author: Twelve
 ---
 
@@ -85,7 +85,7 @@ WiFiスキャンページの読み込みには約5秒かかる場合がありま
 
 ステップ2. デバイスの登録
 - [SenseCraft AI-Watcher Agentプラットフォーム](https://sensecraft.seeed.cc/ai/watcher-agent)にアクセスします
-- この[WiKi](https://wiki.seeedstudio.com/ja/Web_Control_Panel/)に従ってAgentを設定します
+- この[WiKi](https://wiki.seeedstudio.com/ja/watcher_web_control_panel/)に従ってAgentを設定します
 
 ### 基本操作
 
