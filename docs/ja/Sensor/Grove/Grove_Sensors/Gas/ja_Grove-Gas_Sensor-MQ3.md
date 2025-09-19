@@ -22,7 +22,7 @@ Grove - ガスセンサー(MQ3)モジュールは、家庭や産業における�
 センサー値は許容誤差範囲内でガス濃度の概略的な傾向を反映するだけであり、正確なガス濃度を示すものではありません。空気中の特定の成分を検出するには、通常、より精密で高価な機器が必要であり、単一のガスセンサーでは実現できません。プロジェクトが非常に正確なレベルでガス濃度を取得することを目的としている場合、このガスセンサーはお勧めできません。
 </div>
 
-<!-- |Sensor|Gas Type|Get One Now|
+<!-- |Sensor|Gas Type|今すぐ購入取|
 |---|---|---|
 |MQ2|Combustible Gas, Smoke|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-937.html)|
 |MQ3|Alcohol Vapor|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-1418.html)|
