@@ -1,7 +1,7 @@
 ---
 description: Learn how to build a LoRaWAN gateway using ChirpStack on Raspberry Pi–powered reComputer R11. Configure the R1X00 gateway, Packet Forwarder, and SenseCAP S2101 sensors to stream IoT data via MQTT. Access your LoRa devices and applications securely from anywhere in the world.
 
-title: ChirpStack R1X00 Gateway Integration with SenseCAP S2101
+title: ChirpStack R1X Gateway Integration with SenseCAP S2101
 
 keywords:
 - ChripStack
@@ -16,7 +16,7 @@ last_update:
 
 ## Introduction
 
-This guide walks you through setting up a complete LoRaWAN gateway solution using ChirpStack on the Seeed reComputer R11 edge controller, powered by Raspberry Pi. With the WM1302 LoRa concentrator module, the R11 device functions as a powerful gateway capable of reliable long-range wireless communication. By configuring the Semtech Packet Forwarder, LoRa data can be seamlessly transmitted to ChirpStack, which manages network and application layers. We will use Docker to simplify the installation and deployment of ChirpStack services, ensuring a modular and scalable setup. Finally, the system integrates with MQTT, enabling secure and real-time IoT data streaming from LoRa devices like the SenseCAP S2101 sensor to applications accessible anywhere in the world.
+This guide walks you through setting up a complete LoRaWAN gateway solution using ChirpStack on the Seeed reComputer R11 edge controller, powered by Raspberry Pi. With the WM1302 LoRa concentrator module, the R1X device functions as a powerful gateway capable of reliable long-range wireless communication. By configuring the Semtech Packet Forwarder, LoRa data can be seamlessly transmitted to ChirpStack, which manages network and application layers. We will use Docker to simplify the installation and deployment of ChirpStack services, ensuring a modular and scalable setup. Finally, the system integrates with MQTT, enabling secure and real-time IoT data streaming from LoRa devices like the SenseCAP S2101 sensor to applications accessible anywhere in the world.
 
 ## Hardware Required
 
