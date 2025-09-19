@@ -347,6 +347,12 @@ Special thanks to the entire **TRMNL team** for their strong support and invalua
 
 Your expertise and commitment have made this integration possible and greatly improved the user experience for the reTerminal E Series ePaper Display community.
 
+## Troubleshooting
+
+### How to reconfigure the network?
+
+Press and hold the Green Button for five seconds. The device will return to the initial TRMNL interface and activate the AP.
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

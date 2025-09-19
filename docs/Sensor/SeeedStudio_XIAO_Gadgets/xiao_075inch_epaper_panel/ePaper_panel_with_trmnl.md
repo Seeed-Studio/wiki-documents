@@ -341,6 +341,12 @@ Special thanks to the entire **TRMNL team** for their strong support and invalua
 
 Your expertise and commitment have made this integration possible and greatly improved the user experience for the XIAO 7.5" ePaper Panel community.
 
+## Troubleshooting
+
+### How to reconfigure the network?
+
+Press the Reset button on the XIAO, release it, then press and hold the Boot button for five seconds. The device will return to the initial TRMNL interface and activate the AP.
+
 ## Resources
 
 - **[STP]**: [3D Model enclosure](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3D_model.zip)
