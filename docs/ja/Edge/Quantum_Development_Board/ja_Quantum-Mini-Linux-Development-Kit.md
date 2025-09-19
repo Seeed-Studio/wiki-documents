@@ -22,7 +22,7 @@ SoMは **Quark-N** と呼ばれ、**Allwinner H3、クアッドコア Cortex-A7�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Quantum-Mini-Linux-Development-Kit-p-4749.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
