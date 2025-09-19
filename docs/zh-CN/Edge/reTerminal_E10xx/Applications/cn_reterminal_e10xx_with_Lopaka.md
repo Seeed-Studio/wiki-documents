@@ -1,25 +1,25 @@
 ---
-description: This article mainly describes how to use the Lopaka website to create exquisite user interfaces and apply them in the reTerminal E series.
-title: reTerminal E Series ePaper Display Work with Lopaka
+description: 本文主要介绍如何使用 Lopaka 网站创建精美的用户界面并将其应用于 reTerminal E 系列。
+title: reTerminal E 系列 ePaper 显示屏与 Lopaka 配合使用
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
-slug: /reterminal_e10xx_with_lopaka
+slug: /cn/reterminal_e10xx_with_lopaka
 sidebar_position: 2
 last_update:
   date: 12/9/2025
   author: Martin
 ---
 
-# reTerminal E Series ePaper Display Work with Lopaka
+# reTerminal E 系列 ePaper 显示屏与 Lopaka 配合使用
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.jpg" style={{width:800, height:'auto'}}/></div>
 
 :::note
-This tutorial is used based on reTerminal E1002. However, it can also be applied to reTerminal E1001. The former has a richer color display. For a better experience, we recommend that you choose reTerminal E1002.
+本教程基于 reTerminal E1002 使用。但是，它也可以应用于 reTerminal E1001。前者具有更丰富的彩色显示。为了获得更好的体验，我们建议您选择 reTerminal E1002。
 :::
 
-## Introduction
+## 介绍
 
-To complete this tutorial, please prepare one of the following reTerminal E Series devices:
+要完成本教程，请准备以下 reTerminal E 系列设备之一：
 
 <div class="table-center">
   <table align="center">
@@ -34,150 +34,150 @@ To complete this tutorial, please prepare one of the following reTerminal E Seri
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-## Environmental Preparation
+## 环境准备
 
-To program reTerminal E Series ePaper Display with Arduino, you'll need to set up the Arduino IDE with ESP32 support.
+要使用 Arduino 对 reTerminal E 系列 ePaper 显示屏进行编程，您需要设置支持 ESP32 的 Arduino IDE。
 
 :::tip
-If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
+如果这是您第一次使用 Arduino，我们强烈建议您参考[Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
 :::
 
-### Arduino IDE Setup
+### Arduino IDE 设置
 
-**Step 1.** Download and install the [Arduino IDE](https://www.arduino.cc/en/software) and launch the Arduino application.
+**步骤 1.** 下载并安装 [Arduino IDE](https://www.arduino.cc/en/software) 并启动 Arduino 应用程序。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software">
-      <strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
+      <strong><span><font color={'FFFFFF'} size={"4"}>下载 Arduino IDE</font></span></strong>
     </a>
 </div><br />
 
-**Step 2.** Add ESP32 board support to Arduino IDE.
+**步骤 2.** 向 Arduino IDE 添加 ESP32 开发板支持。
 
-In Arduino IDE, go to **File > Preferences** and add the following URL to the "Additional Boards Manager URLs" field:
+在 Arduino IDE 中，转到 **文件 > 首选项**，并将以下 URL 添加到"附加开发板管理器网址"字段：
 
 ```url
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
 
-**Step 3.** Install ESP32 board package.
+**步骤 3.** 安装 ESP32 开发板包。
 
-Navigate to **Tools > Board > Boards Manager**, search for "esp32" and install the ESP32 package by Espressif Systems.
+导航到 **工具 > 开发板 > 开发板管理器**，搜索"esp32"并安装 Espressif Systems 的 ESP32 包。
 
-**Step 4.** Select the correct board.
+**步骤 4.** 选择正确的开发板。
 
-Go to **Tools > Board > ESP32 Arduino** and select **XIAO_ESP32S3**.
+转到 **工具 > 开发板 > ESP32 Arduino** 并选择 **XIAO_ESP32S3**。
 
-**Step 5.** Connect your reTerminal E Series ePaper Display to your computer using a USB-C cable.
+**步骤 5.** 使用 USB-C 线缆将您的 reTerminal E 系列 ePaper 显示屏连接到计算机。
 
-**Step 6.** Select the correct port from **Tools > Port**.
+**步骤 6.** 从 **工具 > 端口** 选择正确的端口。
 
-### Lopaka registered and used
+### Lopaka 注册和使用
 
-Lopaka is a graphic editor specifically designed for embedded graphics development. It enables users to customize the creation of their own UI interfaces, has built-in multiple font resources, and is very convenient to use when paired with Arduino or ESP32's OLED, TFT, or LCD displays. Lopaka can automatically generate C code that can be directly applied to sketches, significantly improving development efficiency.
+Lopaka 是专为嵌入式图形开发设计的图形编辑器。它使用户能够自定义创建自己的 UI 界面，内置多种字体资源，与 Arduino 或 ESP32 的 OLED、TFT 或 LCD 显示屏配合使用时非常方便。Lopaka 可以自动生成可直接应用于草图的 C 代码，显著提高开发效率。
 
-**Step 1.** [Registered](https://lopaka.app/)
+**步骤 1.** [注册](https://lopaka.app/)
 
-- **[Go to Lopaka](https://lopaka.app/)**
+- **[前往 Lopaka](https://lopaka.app/)**
 
-  You can register using either Google or GitHub account.
+  您可以使用 Google 或 GitHub 账户进行注册。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_1.png" style={{width:800, height:'auto'}}/>
-<p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Lopaka main interface</em></p>
+<p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Lopaka 主界面</em></p>
 </div>
 
-**Step 2.** New Project
+**步骤 2.** 新建项目
 
-Click on "NEW PROJECT" to create a new project. Then a window will pop up, and you will see the following screens. Fill in the project information.
+点击"NEW PROJECT"创建新项目。然后会弹出一个窗口，您将看到以下界面。填写项目信息。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_3.png" style={{width:800, height:'auto'}}/></div>
 
-- **Titile**: Project Name, i select hello
-- **Platform**: The platform you chose for development, the reTeerminal E series, uses AdfruitGFX Color.
-- **Screen**: The selection of screen size. Click "Custom" to customize the size. The screen size of the reTeerminal E series is 800×480.
-- **Background**: The background color of the screen is black by default. To achieve better display, I have changed it to yellow.
-Then click "SUBMIT" to create the project.
+- **Title**：项目名称，我选择 hello
+- **Platform**：您选择的开发平台，reTerminal E 系列使用 AdfruitGFX Color。
+- **Screen**：屏幕尺寸的选择。点击"Custom"自定义尺寸。reTerminal E 系列的屏幕尺寸为 800×480。
+- **Background**：屏幕的背景颜色，默认为黑色。为了获得更好的显示效果，我将其更改为黄色。
+然后点击"SUBMIT"创建项目。
 
-**Step 3.** Introduction to Common Settings
+**步骤 3.** 常用设置介绍
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_4.png" style={{width:800, height:'auto'}}/></div>
 
-- **Layers**：The name of the layer.Custom naming is supported.
-- **Screens**：It can create multiple screens and support you in storing different ideas.
-- **CODE**：The generated code is in C language.
-- **IMAGES**：The official image type of Lopaka
-- **Code settings**：Set the generated code. It is recommended that you check all the boxes.
+- **Layers**：图层的名称。支持自定义命名。
+- **Screens**：可以创建多个屏幕，支持您存储不同的想法。
+- **CODE**：生成的代码为 C 语言。
+- **IMAGES**：Lopaka 的官方图像类型
+- **Code settings**：设置生成的代码。建议您勾选所有选项。
 
-**Other**
+**其他**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_6.png" style={{width:800, height:'auto'}}/></div>
 
-From left to right
+从左到右
 
-- **"Gear"**: To manage the project, here you can redefine the project name, adjust the size of your screen and the background color, but modifying the Platform is not supported unless you delete or recreate the project.
-- **Toolbar**: The functions of this row of toolbars are Select, Paint, String, rectangle, Circle, Line, and image.
-- **Slider**: Here, you can adjust the size of the canvas, which enables you to perform detailed operations.
-- **Frok and SHARE**: You can frok others' projects share your own projects.
-- **Price Gally Blog Feedback**: Price enables you to subscribe to different levels of Lopaka to access additional features. Gally is an open-source engineering marketplace. Blog is the update log of Lopaka. Feedback provides feedback.
-- **Shortcuts**: These are some shortcut key tips.
+- **"齿轮"**：管理项目，在这里您可以重新定义项目名称、调整屏幕尺寸和背景颜色，但不支持修改平台，除非您删除或重新创建项目。
+- **工具栏**：这一排工具栏的功能分别是选择、绘制、字符串、矩形、圆形、线条和图像。
+- **滑块**：在这里，您可以调整画布的大小，这使您能够执行详细操作。
+- **Fork 和 SHARE**：您可以 fork 他人的项目并分享自己的项目。
+- **Price Gally Blog Feedback**：Price 使您能够订阅不同级别的 Lopaka 以访问其他功能。Gally 是一个开源工程市场。Blog 是 Lopaka 的更新日志。Feedback 提供反馈。
+- **快捷键**：这些是一些快捷键提示。
 
 ### Hello World
 
-- Select "String", then click on the canvas.
-- In the right column, select "Font" and choose your font, such as Adafruit 5×7.
-- Enter the content "Hello World!", select "Size" as 6, and choose the color you like. Here, I choose green.
-- Then, move it to the center position of the screen. After that, the required project code will be generated within "CODE".
+- 选择"String"，然后点击画布。
+- 在右侧栏中，选择"Font"并选择您的字体，例如 Adafruit 5×7。
+- 输入内容"Hello World!"，选择"Size"为 6，并选择您喜欢的颜色。在这里，我选择绿色。
+- 然后，将其移动到屏幕的中心位置。之后，所需的项目代码将在"CODE"中生成。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_1.png" style={{width:800, height:'auto'}}/></div>
 
 <!-- :::tip
-如果您使用Seeed_GFX库，采用Adafruit 5X7；如果使用GxEPD2库，则需选择FreeMonoBold9pt7b
+如果您使用 Seeed_GFX 库，采用 Adafruit 5X7；如果使用 GxEPD2 库，则需选择 FreeMonoBold9pt7b
 ::: -->
 
-#### Add Library
+#### 添加库
 
-We'll use the Seeed_GFX library, which provides comprehensive support for various Seeed Studio display devices.
+我们将使用 Seeed_GFX 库，它为各种 Seeed Studio 显示设备提供全面支持。
 
-**Step 1.** Download the Seeed_GFX library from GitHub:
+**步骤 1.** 从 GitHub 下载 Seeed_GFX 库：
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>下载库</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-**Step 2.** Install the library by adding the ZIP file in Arduino IDE. Go to **Sketch > Include Library > Add .ZIP Library** and select the downloaded ZIP file.
+**步骤 2.** 通过在 Arduino IDE 中添加 ZIP 文件来安装库。转到 **草图 > 包含库 > 添加 .ZIP 库** 并选择下载的 ZIP 文件。
 
 :::note
-If you have previously installed the TFT_eSPI library, you may need to temporarily remove or rename it from your Arduino libraries folder to avoid conflicts, as Seeed_GFX is a fork of TFT_eSPI with additional features for Seeed Studio displays.
+如果您之前安装了 TFT_eSPI 库，您可能需要暂时从 Arduino 库文件夹中删除或重命名它以避免冲突，因为 Seeed_GFX 是 TFT_eSPI 的分支，为 Seeed Studio 显示屏添加了额外功能。
 :::
 
-### Programming reTerminal E1002
+### 编程 reTerminal E1002
 
-The full color ePaper display supports red, black, yellow, green,  and white colors, allowing for more visually rich interfaces.
+全彩 ePaper 显示屏支持红色、黑色、黄色、绿色和白色，允许创建更丰富的视觉界面。
 
-**Step 1.** Open the color example sketch from the Seeed_GFX library: **File > Examples > Seeed_GFX > ePaper > Colorful > HelloWorld**
+**步骤 1.** 从 Seeed_GFX 库打开彩色示例草图：**文件 > 示例 > Seeed_GFX > ePaper > Colorful > HelloWorld**
 
-**Step 2.** Create a new file named `driver.h` in the same folder as your sketch, following the same process as before.
+**步骤 2.** 在与草图相同的文件夹中创建一个名为 `driver.h` 的新文件，按照之前相同的过程。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/select2.jpg" style={{width:800, height:'auto'}}/></div>
 
-**Step 3.** Go to the [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) and select **reTerminal E1002** from the device list.
+**步骤 3.** 转到 [Seeed GFX 配置工具](https://seeed-studio.github.io/Seeed_GFX/) 并从设备列表中选择 **reTerminal E1002**。
 
-**Step 4.** Copy the generated configuration code and paste it into the `driver.h` file. The code should look like this:
+**步骤 4.** 复制生成的配置代码并将其粘贴到 `driver.h` 文件中。代码应如下所示：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 521 // reTerminal E1002 (UC8179C)
@@ -185,7 +185,7 @@ The full color ePaper display supports red, black, yellow, green,  and white col
 
 :::tip
 
-If you are using the reTerminal E1001, then you should copy the following code
+如果您使用的是 reTerminal E1001，那么您应该复制以下代码
 
 ```cpp
 #define BOARD_SCREEN_COMBO 520 // reTerminal E1001 (UC8179)
@@ -193,17 +193,17 @@ If you are using the reTerminal E1001, then you should copy the following code
 
 :::
 
-**Step 5.** procedure of amendment
+**步骤 5.** 修改程序
 
-- Copy the CODE code of the Lopaka page to the Arduino environment.
-- Replace the lowercase "epaper" with "tft", open the global search using Ctrl + F, enter "epaper", then click `Aa` to switch to case-insensitive search, followed by entering "tft", and click "Global Replace"
+- 将 Lopaka 页面的 CODE 代码复制到 Arduino 环境中。
+- 将小写的 "epaper" 替换为 "tft"，使用 Ctrl + F 打开全局搜索，输入 "epaper"，然后点击 `Aa` 切换到不区分大小写搜索，接着输入 "tft"，并点击"全局替换"
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
-The reTerminal E1002 currently supports six colors. Therefore, you need to modify the color according to the actual situation.
+reTerminal E1002 目前支持六种颜色。因此，您需要根据实际情况修改颜色。
 <details>
 
-<summary>Colors Catergory</summary>
+<summary>颜色分类</summary>
 
 ```cpp
 Here is the 6 colors you can display:
@@ -217,15 +217,15 @@ Here is the 6 colors you can display:
 
 </details>
 
-- Replace the parameter in `tft.fillScreen(TFT_WHITE)` with TFF_YELLOW
-- Replace the 0x4D6A in `tft.setTextColor(0x4D6A)` with TFT_GREEN.
-- Modify the `setup` function and replace the content between `tft.fillScreen(TFT_WHITE)` and `tft.update` with `draw()`.
+- 将 `tft.fillScreen(TFT_WHITE)` 中的参数替换为 TFF_YELLOW
+- 将 `tft.setTextColor(0x4D6A)` 中的 0x4D6A 替换为 TFT_GREEN。
+- 修改 `setup` 函数，将 `tft.fillScreen(TFT_WHITE)` 和 `tft.update` 之间的内容替换为 `draw()`。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_3.png" style={{width:800, height:'auto'}}/></div>
 
 <details>
 
-<summary>Code</summary>
+<summary>代码</summary>
 
 ```cpp
 /*This is a 6-color electronic ink screen, which can only display 6 colors. 
@@ -264,9 +264,9 @@ void setup()
 #ifdef EPAPER_ENABLE
     tft.begin();
     tft.fillScreen(TFT_YELLOW);
-    
+
     draw();
-    
+
     tft.update(); // update the display
 
 #endif
@@ -280,30 +280,30 @@ void loop()
 
 </details>
 
-**Step 6.** upload
+**步骤 6.** 上传
 
-The effect is shown in the following figure.
+效果如下图所示。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_4.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
 
-- If you wish to use reTerminal E1001, you can refer to the link：[Programming reTerminal E1001](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
-- If you want to use its GxEPD2 library, you can refer to the link.: [Using the GxEPD2 Library](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
+- 如果您希望使用 reTerminal E1001，可以参考链接：[Programming reTerminal E1001](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
+- 如果您想使用其 GxEPD2 库，可以参考链接：[Using the GxEPD2 Library](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
 
 :::
 
-### Example
+### 示例
 
-Two different drawing methods are introduced here. You can choose the one that suits your actual needs.
+这里介绍两种不同的绘图方法。您可以选择适合您实际需求的方法。
 
-Furthermore, to better demonstrate the effect, I have changed the background color to black.
+此外，为了更好地展示效果，我将背景颜色改为了黑色。
 
-#### Image Example
+#### 图像示例
 
-##### Hardware
+##### 硬件
 
-To complete this tutorial, please prepare reTerminal E1002  devices:
+要完成本教程，请准备 reTerminal E1002 设备：
 
 <div class="table-center">
   <table align="center">
@@ -323,27 +323,27 @@ To complete this tutorial, please prepare reTerminal E1002  devices:
   </table>
 </div>
 
-##### Software
+##### 软件
 
-- Select "image" on the toolbar.
+- 在工具栏上选择"图像"。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/dragon_0.png" style={{width:800, height:'auto'}}/></div>
 
-- Adjustment parameter <br/>
+- 调整参数 <br/>
 
-    Adjust the appropriate size. I set it to 300×300, then adjusted the Brightness and other parameters to make the image clearer, and then imported it.<br/>
+    调整合适的尺寸。我将其设置为 300×300，然后调整亮度和其他参数以使图像更清晰，然后导入。<br/>
 
 <!-- **image**: [dragon](https://seeedstudio.com/wiki/reterminal_e10xx/img/dragon.png) -->
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/dragon_1.png" style={{width:800, height:'auto'}}/></div>
 
-- Adjust the position and distance to the appropriate ones, and then add some details.
+- 将位置和距离调整到合适的位置，然后添加一些细节。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/dragon_2.png" style={{width:800, height:'auto'}}/></div>
 
 <details>
 
-<summary>Code</summary>
+<summary>代码</summary>
 
 ```cpp
 /*This is a 6-color electronic ink screen, which can only display 6 colors. 
@@ -397,7 +397,7 @@ void setup()
     tft.fillScreen(TFT_BLACK);
 
     draw();
-    
+
     tft.update(); // update the display
 
 #endif
@@ -412,22 +412,22 @@ void loop()
 
 </details>
 :::tip
-If you are using the free version of Lopaka, the imported images only support color modification for the entire image, and do not support modification of a specific detail of the image.
+如果您使用的是 Lopaka 免费版本，导入的图像仅支持对整个图像进行颜色修改，不支持修改图像的特定细节。
 :::
 
-- Effect presentation
+- 效果展示
 
-  Upload the program and then wait for the ink screen to refresh.
+  上传程序，然后等待墨水屏刷新。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/dragon_3.jpg" style={{width:800, height:'auto'}}/></div>
 
-#### Hand-drawn example
+#### 手绘示例
 
-Here, a picture of Super Mario was drawn by hand. You can also create your own drawing based on your own ideas
+这里手绘了一张超级马里奥的图片。您也可以根据自己的想法创作自己的绘画
 
-##### Hardware
+##### 硬件
 
-To complete this tutorial, please prepare reTerminal E1002  devices:
+要完成本教程，请准备 reTerminal E1002 设备：
 
 <div class="table-center">
   <table align="center">
@@ -440,25 +440,25 @@ To complete this tutorial, please prepare reTerminal E1002  devices:
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-##### Software
+##### 软件
 
-- Choose the appropriate tools for drawing, such as rectangles, strings, circles and Paint.
-- The drawing effect is as follows
+- 选择合适的绘图工具，如矩形、字符串、圆形和画笔。
+- 绘图效果如下
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/super_mario_1.png" style={{width:800, height:'auto'}}/></div>
 
-- Upload program
+- 上传程序
 
 <details>
 
-<summary>Code</summary>
+<summary>代码</summary>
 
 ```cpp
 /*This is a 6-color electronic ink screen, which can only display 6 colors. 
@@ -917,7 +917,7 @@ void setup()
     tft.fillScreen(TFT_BLACK);
 
     draw();
-    
+
     tft.update(); // update the display
 
 #endif
@@ -931,20 +931,20 @@ void loop()
 
 </details>
 
-- The final result is as follows
+- 最终结果如下所示
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.jpg" style={{width:800, height:'auto'}}/></div>
 
-## Tech Support & Product Discussion
+## 技术支持与产品讨论
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
