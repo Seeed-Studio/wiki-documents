@@ -1,29 +1,29 @@
 ---
-description: Learn how to build a LoRaWAN gateway using ChirpStack on Raspberry Pi–powered reComputer R11. Configure the R1X00 gateway, Packet Forwarder, and SenseCAP S2101 sensors to stream IoT data via MQTT. Access your LoRa devices and applications securely from anywhere in the world.
+description: Raspberry Pi搭載のreComputer R11でChirpStackを使用してLoRaWANゲートウェイを構築する方法を学びます。R1X00ゲートウェイ、Packet Forwarder、SenseCAP S2101センサーを設定してMQTT経由でIoTデータをストリーミングします。世界中のどこからでもLoRaデバイスとアプリケーションに安全にアクセスできます。
 
-title: ChirpStack R1X Gateway Integration with SenseCAP S2101
+title: ChirpStack R1X00ゲートウェイとSenseCAP S2101の統合
 
 keywords:
 - ChripStack
 - LoRa-WAN
 - Raspberry-Pi 
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
-slug: /chirpstack_lora_gateway_r1x00
+slug: /ja/chirpstack_lora_gateway_r1x00
 last_update:
   date: 9/18/2025
   author: Kasun Thushara
 ---
 
-## Introduction
+## はじめに
 
-This guide walks you through setting up a complete LoRaWAN gateway solution using ChirpStack on the Seeed reComputer R11 edge controller, powered by Raspberry Pi. With the WM1302 LoRa concentrator module, the R1X device functions as a powerful gateway capable of reliable long-range wireless communication. By configuring the Semtech Packet Forwarder, LoRa data can be seamlessly transmitted to ChirpStack, which manages network and application layers. We will use Docker to simplify the installation and deployment of ChirpStack services, ensuring a modular and scalable setup. Finally, the system integrates with MQTT, enabling secure and real-time IoT data streaming from LoRa devices like the SenseCAP S2101 sensor to applications accessible anywhere in the world.
+このガイドでは、Raspberry Piを搭載したSeeed reComputer R11エッジコントローラーでChirpStackを使用して、完全なLoRaWANゲートウェイソリューションを設定する手順を説明します。WM1302 LoRa集約モジュールにより、R11デバイスは信頼性の高い長距離無線通信が可能な強力なゲートウェイとして機能します。Semtech Packet Forwarderを設定することで、LoRaデータをネットワーク層とアプリケーション層を管理するChirpStackにシームレスに送信できます。Dockerを使用してChirpStackサービスのインストールとデプロイメントを簡素化し、モジュラーでスケーラブルなセットアップを確保します。最後に、システムはMQTTと統合され、SenseCAP S2101センサーなどのLoRaデバイスから世界中のどこからでもアクセス可能なアプリケーションへの安全でリアルタイムなIoTデータストリーミングを可能にします。
 
-## Hardware Required
+## 必要なハードウェア
 
 <table align="center">
   <tr>
       <th>reComputer R1X</th>
-        <th>WM1302 LoRaWAN Gateway Module </th>
+        <th>WM1302 LoRaWANゲートウェイモジュール</th>
         <th>SenseCAP S2101</th>
   </tr>
   <tr>
@@ -50,68 +50,68 @@ This guide walks you through setting up a complete LoRaWAN gateway solution usin
   </tr>
 </table>
 
-## Docker Installation Guide
+## Dockerインストールガイド
 
-**1. Update System Packages**
+**1. システムパッケージの更新**
 
 ```bash
 sudo apt update
 sudo apt upgrade
 ```
 
-**2. Install Docker**
+**2. Dockerのインストール**
 
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-**3. Add User to Docker Group**
+**3. ユーザーをDockerグループに追加**
 
 ```bash
 sudo usermod -aG docker ${USER}
 ```
 
-**4. Reboot System**
+**4. システムの再起動**
 
 ```bash
 sudo reboot
 ```
 
-**5. Verify Installation**
+**5. インストールの確認**
 
 ```bash
 docker run hello-world
 ```
 
-**6. Install Docker Compose**
+**6. Docker Composeのインストール**
 
 ```bash
 sudo apt install docker-compose
 ```
 
-Perfect I’ll reformat your **Packet Forwarder setup** into the same structured wiki style you’re using:
+完璧です。**Packet Forwarderセットアップ**を同じ構造化されたwikiスタイルに再フォーマットします：
 
 ---
 
-## Run Packet Forwarder
+## Packet Forwarderの実行
 
-The **WM1302 LoRa concentrator** requires the **Semtech Packet Forwarder** to relay data between the LoRa module and ChirpStack. The reComputer R11 provides a prebuilt setup guide for LoRa modules.
+**WM1302 LoRa集約器**は、LoRaモジュールとChirpStack間でデータを中継するために**Semtech Packet Forwarder**が必要です。reComputer R11はLoRaモジュール用の事前構築されたセットアップガイドを提供しています。
 
-Refer to the official Seeed Wiki for installation steps:
-[Seeed reComputer R11 LoRa Module Guide](https://wiki.seeedstudio.com/recomputer_r/#lora-module)
+インストール手順については、公式のSeeed Wikiを参照してください：
+[Seeed reComputer R11 LoRaモジュールガイド](https://wiki.seeedstudio.com/ja/recomputer_r/#lora-module)
 
-Once installed, follow the steps below to configure and run the Packet Forwarder.
+インストール後、以下の手順に従ってPacket Forwarderを設定し実行してください。
 
-**1. Modify Configuration**
+**1. 設定の変更**
 
-Open the configuration file corresponding to your LoRa region. For example, for **US915**:
+LoRa地域に対応する設定ファイルを開きます。例えば、**US915**の場合：
 
 ```bash
 nano global_conf.json.sx1250.US915
 ```
 
-Update the **gateway_conf** section to point to your ChirpStack server:
+**gateway_conf**セクションを更新してChirpStackサーバーを指すようにします：
 
 ```json
 "gateway_conf": {
@@ -123,40 +123,40 @@ Update the **gateway_conf** section to point to your ChirpStack server:
 }
 ```
 
-> Replace `AA555A0000000000` with your actual Gateway ID. We will keep as it is
-> Use the correct JSON file for your LoRaWAN region, depending on the module you purchased.
+> `AA555A0000000000`を実際のゲートウェイIDに置き換えてください。そのままにしておきます
+> 購入したモジュールに応じて、LoRaWAN地域の正しいJSONファイルを使用してください。
 
-Save the file and exit:
+ファイルを保存して終了します：
 
-- Press **CTRL + X**,
-- Then **Y**,
-- And finally **Enter**.
+- **CTRL + X**を押し、
+- 次に**Y**を押し、
+- 最後に**Enter**を押します。
 
-**2. Start Packet Forwarder**
+**2. Packet Forwarderの開始**
 
-Run the Packet Forwarder using the updated configuration:
+更新された設定を使用してPacket Forwarderを実行します：
 
 ```bash
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
-Here’s your **“Make Gateway” section** in the same wiki style:
+同じwikiスタイルでの**「ゲートウェイの作成」セクション**は以下の通りです：
 
 ---
 
-## Start Gateway
+## ゲートウェイの開始
 
-After installing ChirpStack, you can register your **R11 LoRa gateway** and start processing data.
+ChirpStackをインストールした後、**R11 LoRaゲートウェイ**を登録してデータ処理を開始できます。
 
-**Start ChirpStack Services**
+**ChirpStackサービスの開始**
 
-If not already running, launch all ChirpStack services:
+まだ実行されていない場合は、すべてのChirpStackサービスを起動します：
 
 ```bash
 sudo docker-compose up -d
 ```
 
-Verify the containers are running:
+コンテナが実行されていることを確認します：
 
 ```bash
 sudo docker ps
@@ -164,15 +164,15 @@ sudo docker ps
 
 ---
 
-**Access ChirpStack Web UI**
+**ChirpStack Web UIへのアクセス**
 
-1. Open a web browser and navigate to:
+1. Webブラウザを開いて以下にアクセスします：
 
 ```
 http://localhost:8080/
 ```
 
-2. Log in with the default credentials:
+2. デフォルトの認証情報でログインします：
 
 ```
 Username: admin
@@ -181,47 +181,47 @@ Password: admin
 
 ---
 
-## Add Your Gateway
+## ゲートウェイの追加
 
-1. In the ChirpStack UI, go to **Gateways → Create Gateway**
+1. ChirpStack UIで、**Gateways → Create Gateway**に移動します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image1.png" alt="pir" width={800} height="auto" /></p>
 
-2. Enter the following details:
+2. 以下の詳細を入力します：
 
-   - **Gateway ID**: `AA555A0000000000` (replace with your actual Gateway ID)
-   - **Name**: Give a descriptive name for your gateway
+   - **Gateway ID**: `AA555A0000000000`（実際のゲートウェイIDに置き換えてください）
+   - **Name**: ゲートウェイの説明的な名前を付けます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image2.png" alt="pir" width={800} height="auto" /></p>
 
-3. Click **Create Gateway** to register it.
+3. **Create Gateway**をクリックして登録します。
 
-4. After this, you will be able to view the gateway in the ChirpStack UI
+4. この後、ChirpStack UIでゲートウェイを表示できるようになります
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image3.png" alt="pir" width={800} height="auto" /></p>
 
-## Add Device Profile
+## デバイスプロファイルの追加
 
-To connect a LoRaWAN device (e.g., **SenseCAP S2101**) to ChirpStack, you first need to create a **Device Profile**.
+LoRaWANデバイス（例：**SenseCAP S2101**）をChirpStackに接続するには、まず**デバイスプロファイル**を作成する必要があります。
 
-1. Navigate to **Device Profiles → Create Device Profile**
+1. **Device Profiles → Create Device Profile**に移動します
 
-2. Enter the following details:
+2. 以下の詳細を入力します：
 
-   - **Name**: Give a descriptive name for your device profile
-   - **Region**: Select the region/sub-band that matches your device and gateway (e.g., `US915`)
+   - **Name**: デバイスプロファイルの説明的な名前を付けます
+   - **Region**: デバイスとゲートウェイに一致する地域/サブバンドを選択します（例：`US915`）
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image4.png" alt="pir" width={800} height="auto" /></p>
 
-3. Navigate to the **Codec** tab:
+3. **Codec**タブに移動します：
 
-   - Select **JavaScript Functions**
-   - Paste the codec for your device
+   - **JavaScript Functions**を選択します
+   - デバイス用のコーデックを貼り付けます
 
-> ⚠️ The codec is specific to your LoRa device. For example, if you are using **Seeed S201x**, you can use the code below.
-> If you are using a different device, consult the manufacturer for the correct codec.
+> ⚠️ コーデックはLoRaデバイス固有です。例えば、**Seeed S201x**を使用している場合は、以下のコードを使用できます。
+> 異なるデバイスを使用している場合は、正しいコーデックについてメーカーに相談してください。
 
-4. Copy and paste the codec in the **Uplink/Downlink Codec** section and save the profile.
+4. **Uplink/Downlink Codec**セクションにコーデックをコピー＆ペーストし、プロファイルを保存します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image5.png" alt="pir" width={800} height="auto" /></p>  
 
@@ -461,94 +461,94 @@ function toBinary(arr) {
 
 </details>
 
-## Add Device
+## デバイスの追加
 
-Once the **Device Profile** is created, you can register your LoRaWAN device with ChirpStack.
+**デバイスプロファイル**が作成されたら、ChirpStackにLoRaWANデバイスを登録できます。
 
-1. Navigate to **Tenant → Application** and click **Add Application**
+1. **テナント → アプリケーション**に移動し、**アプリケーションを追加**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image6.png" alt="pir" width={800} height="auto" /></p>  
 
-2. Enter a **Name** for your application and save it
-3. Open your newly created application and click **Add Device**
+2. アプリケーションの**名前**を入力して保存します
+3. 新しく作成したアプリケーションを開き、**デバイスを追加**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image7.png" alt="pir" width={800} height="auto" /></p>
 
-4. Enter the following details:
+4. 以下の詳細を入力します：
 
-   - **Device EUI**: Paste the EUI from your LoRa device (found in the device datasheet or configuration software, e.g., SenseCAP application)
-   - **Device Profile**: Select the device profile you created earlier
+   - **デバイスEUI**: LoRaデバイスのEUIを貼り付けます（デバイスのデータシートまたは設定ソフトウェア（例：SenseCAP アプリケーション）で確認できます）
+   - **デバイスプロファイル**: 先ほど作成したデバイスプロファイルを選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image8.png" alt="pir" width={800} height="auto" /></p>
 
-5. Enter the **Application Key** and click **Submit**
+5. **アプリケーションキー**を入力し、**送信**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image9.png" alt="pir" width={800} height="auto" /></p>
 
-> ⚠️ Device EUI and Application Key can be obtained from your LoRa device datasheet or configuration software. For **SenseCAP devices**, you can use the SenseCAP application to view or reconfigure these settings.
+> ⚠️ デバイスEUIとアプリケーションキーは、LoRaデバイスのデータシートまたは設定ソフトウェアから取得できます。**SenseCAP デバイス**の場合、SenseCAP アプリケーションを使用してこれらの設定を表示または再設定できます。
 
-Here’s a polished version of your **“Check Device Status”** section in your wiki style, keeping it consistent with the previous sections:
+以下は、wikiスタイルに合わせて洗練された**「デバイスステータスの確認」**セクションで、前のセクションとの一貫性を保っています：
 
 ---
 
-## Check Device Status
+## デバイスステータスの確認
 
-After adding your LoRaWAN device, you can verify that it is properly connected and transmitting data.
+LoRaWANデバイスを追加した後、デバイスが適切に接続され、データを送信していることを確認できます。
 
-1. Navigate to your application and select the device you added
-2. Go to the **Events** tab
+1. アプリケーションに移動し、追加したデバイスを選択します
+2. **イベント**タブに移動します
 
-   - You should see a **join packet** when the device successfully joins the network
+   - デバイスがネットワークに正常に参加すると、**参加パケット**が表示されます
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image10.png" alt="pir" width={800} height="auto" /></p>
 
-3. Click on the packets to view **detailed information**
+3. パケットをクリックして**詳細情報**を表示します
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image11.png" alt="pir" width={500} height="auto" /></p>
 
-- For example, you can see the **temperature and humidity data** reported by devices like the SenseCAP S2101
+- 例えば、SenseCAP S2101などのデバイスから報告される**温度と湿度データ**を確認できます
 
-## MQTT Integration
+## MQTT統合
 
-ChirpStack uses **MQTT** to stream data from LoRaWAN devices to applications or dashboards. You can monitor these messages in real-time.
+ChirpStackは**MQTT**を使用してLoRaWANデバイスからアプリケーションやダッシュボードにデータをストリーミングします。これらのメッセージをリアルタイムで監視できます。
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image12.png" alt="pir" width={800} height="auto" /></p>
 
-1. Connect your PC to the **same network** as the reComputer R11 gateway
-2. Use an MQTT client such as **MQTT Explorer** to subscribe to topics
-3. Configure the MQTT client:
+1. PCをreComputer R11ゲートウェイと**同じネットワーク**に接続します
+2. **MQTT Explorer**などのMQTTクライアントを使用してトピックを購読します
+3. MQTTクライアントを設定します：
 
-   - **Host**: IP address of your reComputer R11
-   - **Port**: `1883`
-4. Once connected, you will see a **tree of topics** representing your devices, for example:
+   - **ホスト**: reComputer R11のIPアドレス
+   - **ポート**: `1883`
+4. 接続すると、デバイスを表す**トピックのツリー**が表示されます。例：
 
 ```
 application/c853ffcd-53f0-4de3-83b9-5467ff895f76/device/2cf7f1c043500402/event/up
 ```
 
-5. Expanding the topic will show **uplink messages** containing sensor data, such as temperature and humidity for devices like the SenseCAP S2101
+5. トピックを展開すると、SenseCAP S2101などのデバイスの温度や湿度などのセンサーデータを含む**アップリンクメッセージ**が表示されます
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image13.png" alt="pir" width={800} height="auto" /></p>
 
-## Node-RED Integration
+## Node-RED統合
 
-You can visualize LoRaWAN device data in **Node-RED** using MQTT nodes and custom functions.
+MQTTノードとカスタム関数を使用して、**Node-RED**でLoRaWANデバイスデータを可視化できます。
 
-1. Open **Node-RED** and drag an **MQTT IN** node onto the flow
+1. **Node-RED**を開き、**MQTT IN**ノードをフローにドラッグします
 
-2. Configure the MQTT node:
+2. MQTTノードを設定します：
 
-   - **Server**: IP of your reComputer R11 (e.g., `10.0.0.208`)
-   - **Port**: `1883`
-   - **Topic**: `application/+/device/+/event/up`
+   - **サーバー**: reComputer R11のIP（例：`10.0.0.208`）
+   - **ポート**: `1883`
+   - **トピック**: `application/+/device/+/event/up`
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image15.png" alt="pir" width={600} height="auto" /></p>
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image14.png" alt="pir" width={600} height="auto" /></p>
 
-3. Add a **Function node** to decode the MQTT message payload
+3. MQTTメッセージペイロードをデコードするために**Functionノード**を追加します
 
-   - For example, extract **temperature** and **humidity** from the JSON object
+   - 例えば、JSONオブジェクトから**温度**と**湿度**を抽出します
 
 ```javascript
    // Get the JSON payload
@@ -587,16 +587,16 @@ data.object.messages.forEach(m => {
 return [tempMsg, humMsg];
 ```
 
-4. Connect **two output nodes** from the Function node, one for temperature and one for humidity
+4. Functionノードから**2つの出力ノード**を接続します。1つは温度用、もう1つは湿度用です
 
-5. Connect each output to a **Gauge node** or any other visualization node in Node-RED to display the sensor readings
+5. 各出力をNode-REDの**Gaugeノード**またはその他の可視化ノードに接続して、センサー読み取り値を表示します
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image16.png" alt="pir" width={600} height="auto" /></p>
     <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image17.png" alt="pir" width={600} height="auto" /></p>
 
-## Tech Support & Product Discussion
+## 技術サポート & 製品ディスカッション
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

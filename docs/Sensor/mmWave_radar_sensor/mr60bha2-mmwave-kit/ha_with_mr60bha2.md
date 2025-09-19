@@ -354,6 +354,81 @@ Through these steps, you can maximize the functionality of your MR60BHA2 mmWave 
 - [Installation - Home Assistant](https://www.home-assistant.io/installation/)
 - [limengdu/MR60BHA2_ESPHome_external_components](https://github.com/limengdu/MR60BHA2_ESPHome_external_components)
 
+## Troubleshooting
+
+### Explanation of Radar Sensor Data Reporting Mechanism (For v1.6.12 and later)
+
+This Part details the timing, accuracy, and required conditions for data reported by the radar sensor's various detection functions. It is intended to help users better understand and utilize the sensor data.
+
+---
+
+### 1. Human Static Presence
+
+- **Function Description**:
+    Detects the presence of a stationary human target within a specified area.
+- **Key Parameter**:
+  - **Effective Detection Range**: Up to **6 meters**.
+- **Data Reporting Logic**:
+  - Reports a "Presence" status when a human target is detected in the area.
+  - Reports a "No Presence" status when the area is clear of human targets.
+  - **Note**: The 6-meter detection range is exclusive to the Human Static Presence function. It does not apply to other features like Breathing & Heartbeat Detection or Target Distance Detection, which have their own, shorter effective ranges. This function's sole purpose is to determine presence or absence, not to provide detailed data.
+
+---
+
+### 2. Breathing & Heartbeat Detection
+
+- **Function Description**:
+    Performs non-contact vital sign detection on a single, stationary human target.
+- **Key Parameters**:
+  - **Effective Detection Range**: Approximately **1.5 meters**.
+  - **Detection Target**: A single, stationary human.
+- **Necessary Operating Conditions**:
+  - **Target Stillness**: The person being monitored must remain completely still.
+  - **Device Stability**: The radar device must be securely mounted, with no shaking or vibration.
+  - **Single Target**: Only one person should be within the detection range.
+- **Data Reporting Logic**:
+  - **Normal Reporting**: When all the above conditions are met, the radar reports real-time breathing and heart rate values.
+  - **Abnormal Reporting Scenarios**:
+    - **Target Beyond 1.5m**: When a detected target is beyond the 1.5-meter effective range, the breathing and heart rate data will **stop updating** and be held at the last valid measurement.
+    - **No Target in Core Zone**: When no target is detected within the 0.5 to 1.5-meter core detection zone, the breathing and heart rate values will be actively reported as **0**.
+- **Note**: Please be aware of environmental interference. Micro-movements from sources like fans, air conditioners, or swaying curtains can sometimes be misinterpreted by the sensor. In such cases, the radar might report a non-zero **heart rate** value even when no human target is detected (and the breathing rate is reported as 0).
+
+---
+
+### 3. Target Distance Detection
+
+- **Applicable Firmware**: `1.6.10` and newer.
+- **Function Description**:
+    Detects and reports the straight-line distance between the radar and a target.
+- **Key Parameter**:
+  - **Maximum Effective Detection Range**: **5 meters**.
+- **Data Reporting Logic and Limitations**:
+  - **No Target State**: When no targets are detected, the distance value is reported as **0**.
+  - **Target(s) Detected**: When one or more targets are detected within the 5-meter range, the radar reports the distance of the target **closest** to the sensor.
+  - **Data Not Updated (Holds Last Value)**: The distance value will stop updating if the closest target is at or moves beyond the 5-meter effective detection range. In this case, the value will be held at the last valid measurement.
+- **Tracking Performance**:
+    To ensure the stability of stationary targets at close range, the radar's tracking strategy is optimized for different distances. The performance is detailed in the table below:
+
+| Distance Range | Target State | Tracking Performance & Notes |
+| :--- | :--- | :--- |
+| **0.5m ~ 1.5m** | Stationary | **Tracking Success Rate > 96%**. Performance is very stable. |
+| **1.5m ~ 3m** | Stationary | **Tracking Success Rate > 90%**. Performance is stable. |
+| **3m ~ 5m** | Stationary | Tracking stability decreases, with occasional target loss. Version 1.6.12 shows an 80% improvement over previous versions. |
+| **Approaching** | Moving | When a target moves towards the radar from a distance, stable tracking typically begins when the person reaches approximately **3 meters**. |
+| **Moving Away** | Moving | When a target moves away from the radar, tracking can extend **beyond 5 meters**. |
+
+---
+
+### 4. Environment Occupant Count
+
+- **Function Description**:
+    Provides a preliminary, estimated count of individuals within the detection area.
+- **Data Explanation**:
+  - This function is currently in a developmental stage and should be considered experimental. The returned value is a rough estimation derived from complex signal analysis.
+  - Its accuracy is heavily influenced by factors such as the overlapping of signals from multiple people, individual postures, and movement patterns.
+  - Consequently, **this feature is not suitable for applications that depend on precise occupant numbers**.
+  - We are actively working on refining the underlying algorithm and expect to deliver substantial accuracy improvements in future firmware releases.
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
