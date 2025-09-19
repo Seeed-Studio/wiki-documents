@@ -1,25 +1,25 @@
 ---
 description: この記事では、reTerminal E SeriesのePaperディスプレイをTRMNLで使用する方法について説明します。
-title: reTerminal E Series ePaperディスプレイとTRMNLの連携
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+title: reTerminal E Series ePaperディスプレイがTRMNLと連携
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.jpg
 slug: /ja/reterminal_e10xx_trmnl
 sidebar_position: 1
 last_update:
-  date: 07/21/2025
+  date: 09/19/2025
   author: Citric
 ---
 
 :::caution
-Wikiコンテンツは開発中のため、現在利用できません。
+TRMNLのバージョン1.6.7では、reTerminal E1001が正式にサポートされています。ソフトウェアアーキテクチャの制限により、reTerminal E1002フルカラー電子インクディスプレイのサポートは**まだ**利用できません。
 :::
 
-# reTerminal E Series ePaperディスプレイとTRMNLの連携
+# reTerminal E Series ePaperディスプレイがTRMNLと連携
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.jpg" style={{width:700, height:'auto'}}/></div>
 
 ## [TRMNL](https://trmnl.app/)とは？
 
-TRMNLは、ますます注意散漫になるデジタル世界において、人々が集中力を保ち、落ち着いた状態を維持できるよう支援するために設計された革新的なプラットフォームです。2023年に設立されたTRMNLは、E Ink®ダッシュボード管理の主要なソリューションとして急速に成長し、従来のスクリーンの絶え間ない通知や注意散漫を避けて情報を表示するユニークなアプローチを提供しています。
+TRMNLは、ますます注意散漫になるデジタル世界において、人々が集中力を保ち、落ち着いた状態を維持できるよう支援するために設計された革新的なプラットフォームです。2023年に設立されたTRMNLは、E Ink®ダッシュボード管理の主要ソリューションとして急速に成長し、従来のスクリーンの絶え間ない通知や注意散漫なしに情報を表示するユニークなアプローチを提供しています。
 
 TRMNLの核心は、テクノロジーは絶え間ない注意を要求することなく私たちの生活を向上させるべきだという哲学に基づいて構築されています。このプラットフォームは、E Ink®ディスプレイを通じて重要な情報を一目で確認できるエレガントな方法を提供し、より思慮深く、侵入的でないテクノロジー体験を創造します。
 
@@ -29,17 +29,17 @@ TRMNLの統合により、いくつかの魅力的な利点がもたらされま
 
 - **簡素化されたダッシュボード作成**: TRMNLの成長するアプリとインテグレーションライブラリにより、複雑なプログラミングなしでカスタム情報ディスプレイを簡単に作成できます
 - **低消費電力**: TRMNLの効率的なソフトウェアと当社のE Ink®ディスプレイの最小限の電力要件の組み合わせにより、極めてエネルギー効率の高いソリューションを実現します
-- **注意散漫のない情報表示**: 従来のスクリーンに関連する絶え間ない通知や眼精疲労なしに、必要な情報を取得できます
-- **定期的なアップデート**: TRMNLの活発な開発により、新機能とインテグレーションが毎週追加され、ディスプレイの可能性を継続的に拡張します
+- **注意散漫のない情報**: 従来のスクリーンに関連する絶え間ない通知や眼精疲労なしに、必要な情報を取得できます
+- **定期的な更新**: TRMNLの活発な開発により、新機能とインテグレーションが毎週追加され、ディスプレイの可能性を継続的に拡張します
 - **開発者フレンドリー**: TRMNLのオープンAPIと開発者ツールにより、特定のニーズに合わせたカスタムプラグインとインテグレーションを作成できます
 
-TRMNLの強力なプラットフォームと当社の高品質なE Ink® reTerminal E Series ePaperディスプレイを組み合わせることで、ユーザーの注意と時間の両方を尊重する、パーソナライズされた低消費電力情報ダッシュボードを作成するためのエレガントなソリューションを提供しています。
+TRMNLの強力なプラットフォームと当社の高品質E Ink® reTerminal E Series ePaperディスプレイを組み合わせることで、ユーザーの注意と時間の両方を尊重する、パーソナライズされた低消費電力情報ダッシュボードを作成するためのエレガントなソリューションを提供しています。
 
 ## TRMNLの開始方法
 
-### TRMNLアカウントのセットアップとTRMNLアクセス
+### TRMNLアカウントセットアップとTRMNLアクセス
 
-キットをTRMNLに接続する前に、以下の手順が必要です：
+キットをTRMNLに接続する前に、以下を行う必要があります：
 
 1. **TRMNLアクセスの購入**
 
@@ -51,8 +51,8 @@ TRMNLの強力なプラットフォームと当社の高品質なE Ink® reTermi
 
 2. **TRMNLアカウントの作成**
 
-   - [TRMNLのウェブサイト](https://usetrmnl.com)にアクセスしてください
-   - 「Sign Up」をクリックして新しいアカウントを作成してください
+   - [TRMNLのウェブサイト](https://usetrmnl.com)にアクセス
+   - 「Sign Up」をクリックして新しいアカウントを作成
    - 登録プロセスに従ってください
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/210.png" style={{width:900, height:'auto'}}/></div>
@@ -61,7 +61,7 @@ TRMNLの強力なプラットフォームと当社の高品質なE Ink® reTermi
 TRMNLの認証情報は機密情報です。公開したり、バージョン管理システムにコミットしたりしないでください。
 :::
 
-材料を準備し、TRMNLアクセスを購入したら、デバイスをTRMNLのプラットフォームに接続する手順に進むことができます。問題が発生したり質問がある場合は、team@usetrmnl.comでTRMNLチームに直接連絡できます。
+材料を準備し、TRMNLアクセスを購入したら、デバイスをTRMNLのプラットフォームに接続することができます。問題が発生したり質問がある場合は、team@usetrmnl.comでTRMNLチームに直接連絡できます。
 
 ### 必要な材料
 
@@ -96,23 +96,23 @@ TRMNLの認証情報は機密情報です。公開したり、バージョン管
 
 reTerminal E Seriesの工場出荷時ファームウェアをまだ使用している場合は、デバイスをTRMNLに接続する前に、以下の方法でTRMNLファームウェアを書き込む必要があります。
 
-#### 方法1: TRMNL Web Flasherによる書き込み（最も簡単）
+#### 方法1: TRMNL Web Flasherで書き込み（最も簡単）
 
 :::tip
-Seeed互換性のために**FW x.x.x**以降のファームウェアを使用してください。
+Seeed互換性のために**FW 1.6.7**以降のファームウェアを使用してください。
 :::
 
 1. **TRMNL Web Flasherにアクセス**
 
-   - [https://usetrmnl.com/flash](https://usetrmnl.com/flash)にアクセスしてください
-   - このツールを使用すると、ブラウザから直接デバイスに書き込みができます。
+   - [https://usetrmnl.com/flash](https://usetrmnl.com/flash)にアクセス
+   - このツールを使用すると、ブラウザから直接デバイスを書き込むことができます。
    - 画面の指示に従って書き込みプロセスを完了してください。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/224.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/160.png" style={{width:700, height:'auto'}}/></div>
 
 ---
 
-#### 方法2: ソースからのビルドと書き込み（上級ユーザー/開発者向け）
+#### 方法2: ソースからビルドして書き込み（上級ユーザー/開発者向け）
 
 1. **ファームウェアリポジトリのクローン**
 
@@ -148,11 +148,11 @@ Seeed互換性のために**FW x.x.x**以降のファームウェアを使用し
 
   - reTerminal E1001を使用している場合は、`seeed_reTerminal_E1001`環境を選択してください。
 
-  - reTerminal E1002を使用している場合は、`seeed_reTerminal_E1002`環境を選択してください。
+  <!-- - If you are using reTerminal E1002, select the `seeed_reTerminal_E1002` environment. -->
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/26.png" style={{width:1000, height:'auto'}}/></div>
 
-5. **デバイスの接続**
+5. **デバイスを接続**
 
    - reTerminal E Series ePaperディスプレイデバイスを接続してください。
 
@@ -172,15 +172,15 @@ Seeed互換性のために**FW x.x.x**以降のファームウェアを使用し
 
 reTerminal E Series ePaperディスプレイをTRMNLで使用してプレイリストを送信するには、まずデバイスをWi-Fiネットワークに接続する必要があります。このプロセスは「WiFiペアリングモード」と呼ばれ、シンプルなキャプティブポータルを通じて行われます。以下の手順に従ってください：
 
-> 💡 **Wi-Fiのトラブルシューティング？** デバイスをWi-Fiに接続する際に問題が発生した場合は、一般的なネットワークとルーター互換性の問題の解決策について[TRMNLデバイスWi-Fiトラブルシューティングガイド](https://help.usetrmnl.com/en/articles/10193157-device-wifi-troubleshooting)を参照してください。
+> 💡 **Wi-Fiのトラブルシューティング？** デバイスをWi-Fiに接続する際に問題が発生した場合は、一般的なネットワークとルーター互換性の問題の解決策について[TRMNL Device Wi-Fi Troubleshooting Guide](https://help.usetrmnl.com/en/articles/10193157-device-wifi-troubleshooting)を参照してください。
 
 ### 電源投入とプロビジョニングモードへの移行
 
 - TRMNLファームウェアを書き込んでデバイスの電源を入れた後、Wi-Fiにまだ接続されていない場合は自動的にプロビジョニングモードに入ります。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/216.jpg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/161.jpg" style={{width:600, height:'auto'}}/></div>
 
-### TRMNL Wi-Fiへの接続
+### TRMNL Wi-Fiに接続
 
 - **スマートフォン**または**コンピューター**で、利用可能なWi-Fiネットワークのリストを開いてください。
 - **TRMNL**という名前のネットワークを探して接続してください。（デフォルトではパスワードは不要です。）
@@ -192,10 +192,10 @@ reTerminal E Series ePaperディスプレイをTRMNLで使用してプレイリ�
 - 接続したら、ウェブブラウザ（ChromeやEdgeなど）を開いてください。
 - デバイスは自動的にTRMNL設定ページにリダイレクトするはずです。リダイレクトされない場合は、ブラウザで手動で[http://4.3.2.1](http://4.3.2.1)にアクセスしてください。
 
-### Wi-Fi認証情報の入力
+### Wi-Fi認証情報を入力
 
 - 設定ページで、利用可能なWi-Fiネットワークのリストが表示されます。
-- **2.4GHz Wi-Fiネットワークを選択してください**（reTerminal E Series ePaperディスプレイは5GHzネットワークをサポートしていません）。
+- **2.4GHz Wi-Fiネットワークを選択**してください（reTerminal E Series ePaperディスプレイは5GHzネットワークをサポートしていません）。
 - Wi-Fiパスワードを入力してください。
 - **Save**または**Connect**をクリックしてください。
 
@@ -203,12 +203,11 @@ reTerminal E Series ePaperディスプレイをTRMNLで使用してプレイリ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/218.png" style={{width:800, height:'auto'}}/></div>
 
-### デバイスのネットワークへの接続
+### デバイスがネットワークに接続
 
 - デバイスはWi-Fiへの接続を試行します。
 - 成功すると、TRMNL Wi-Fiから切断され、ホームネットワークに参加します。
 - ウィンドウにデバイスのMACアドレスが表示されます。**MACアドレスを記録してください**。後の手順で必要になります。
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/219.png" style={{width:800, height:'auto'}}/></div>
 
 > ⚠️ **注意:** MACアドレスはキャプティブポータルで1〜2秒間のみ表示されます。見逃した場合は、以下の方法でも確認できます：
@@ -217,7 +216,7 @@ reTerminal E Series ePaperディスプレイをTRMNLで使用してプレイリ�
 > - [usetrmnl.com/flash](https://usetrmnl.com/flash)方法を使用し、フラッシュ中にChrome/Edge/Firefoxの開発者コンソールでMACアドレスを確認する。
 > - ルーターまたはメッシュネットワークアプリの接続デバイス一覧で確認する。
 >
-> 詳細とスクリーンショットについては、公式ガイドを参照してください：[Finding your TRMNL MAC address](https://help.usetrmnl.com/en/articles/10614205-finding-your-trmnl-mac-address)
+> 詳細とスクリーンショットについては、公式ガイドを参照してください：[TRMNL MACアドレスの確認方法](https://help.usetrmnl.com/en/articles/10614205-finding-your-trmnl-mac-address)
 
 ### TRMNL Webインターフェースへのアクセス
 
@@ -303,26 +302,26 @@ TRMNLプレイリスト機能により、reTerminal E Series ePaper Displayに�
 
 - **スマートプレイリストオプション**: 下部で、コンテンツが変更されていない画面を自動的にスキップするかどうかを選択できます（例：「Never skip screens」）。
 
-> 📖 詳しく知りたいですか？高度なヒントと詳細については、[Smart Playlists blog post](https://usetrmnl.com/blog/smart-playlists)をお読みください。
+> 📖 詳細を知りたいですか？高度なヒントと詳細については、[Smart Playlistsブログ投稿](https://usetrmnl.com/blog/smart-playlists)をお読みください。
 
 この柔軟なプレイリストシステムにより、reTerminal E Seriesに何を表示するか、どのくらいの頻度で更新するか、どの順序で表示するかを完全にカスタマイズできます。さまざまなプラグインを組み合わせて、ニーズに合ったパーソナライズされたダッシュボードを作成できます。
 
 ## TRMNLプラグインの探索
 
-TRMNLのプラグインシステムは、reTerminal E Series ePaper Displayを真に強力でカスタマイズ可能にするものです。プラグインは、デバイスに追加して様々な情報やコンテンツを表示できるモジュラーアプリまたはウィジェットです。
+TRMNLのプラグインシステムは、reTerminal E Series ePaper Displayを真に強力でカスタマイズ可能にするものです。プラグインは、さまざまな情報やコンテンツを表示するためにデバイスに追加できるモジュラーアプリまたはウィジェットです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/222.png" style={{width:900, height:'auto'}}/></div>
 
 ### プラグインとは？
 
-プラグインは、天気、カレンダーイベント、株価、RSSフィード、励ましの言葉、GitHub活動など、様々な情報を表示できる個別のコンテンツブロックです。プラグインを組み合わせて、ニーズに合ったダッシュボードを作成できます。
+プラグインは、天気、カレンダーイベント、株価、RSSフィード、励ましの言葉、GitHub活動など、さまざまなものを表示できる個別のコンテンツブロックです。プラグインを組み合わせて、ニーズに合ったダッシュボードを作成できます。
 
 ### 接続済みプラグイン
 
 プラグインページの上部には、すでにTRMNLアカウントに接続されているすべてのプラグインが表示されます。これらはプレイリストに追加してreTerminal E Seriesに表示する準備ができています。例：
 
 - **Weather**: 現在の天気状況を表示します。
-- **Days Left This Year**: 年末までのカウントダウンです。
+- **Days Left This Year**: 年末までのカウントダウン。
 - **Stock Price**: お気に入りの株式を追跡します。
 - **RSS Feed**: ニュースやブログの更新を表示します。
 - **Reddit, Hacker News**: トレンドの投稿を表示します。
@@ -335,17 +334,17 @@ TRMNLのプラグインシステムは、reTerminal E Series ePaper Displayを�
 - **閲覧と検索**: 検索バーやタグを使用して、興味のあるプラグインを素早く見つけます。
 - **プラグインの追加**: 任意のプラグインをクリックしてアカウントに接続し、プレイリストで使用を開始します。
 
-開発者は独自のプラグインを作成して他の人が使用できるように公開することもでき、エコシステムは新しい可能性で継続的に拡大しています（[プラグイン作成について詳しく学ぶ](https://docs.usetrmnl.com/go/plugin-marketplace/introduction)）。
+開発者は、他の人が使用できる独自のプラグインを作成して公開することもでき、エコシステムは新しい可能性で継続的に拡張されています（[プラグイン作成について詳しく学ぶ](https://docs.usetrmnl.com/go/plugin-marketplace/introduction)）。
 
 ---
 
-TRMNLの使用について質問がある場合や、より高度な機能を探索したい場合は、公式TRMNLドキュメントをお読みください：[https://docs.usetrmnl.com/go](https://docs.usetrmnl.com/go)
+TRMNLの使用について質問がある場合や、より高度な機能を探索したい場合は、公式TRMNLドキュメントで詳細情報をお読みください：[https://docs.usetrmnl.com/go](https://docs.usetrmnl.com/go)
 
 ## 特別な感謝
 
 このプロジェクトに対する強力なサポートと貴重な支援をいただいた**TRMNLチーム**全体に特別な感謝を申し上げます。特に、開発とドキュメント作成プロセス全体を通じて献身的な支援をいただいた**Bogdan**、**Ryan Kulp**、**Fr3d**、その他すべてのチームメンバーに感謝いたします。
 
-皆様の専門知識と献身により、この統合が可能になり、reTerminal E Series ePaper Displayコミュニティのユーザーエクスペリエンスが大幅に向上しました。
+皆様の専門知識とコミットメントにより、この統合が可能になり、reTerminal E Series ePaper Displayコミュニティのユーザーエクスペリエンスが大幅に向上しました。
 
 ## トラブルシューティング
 

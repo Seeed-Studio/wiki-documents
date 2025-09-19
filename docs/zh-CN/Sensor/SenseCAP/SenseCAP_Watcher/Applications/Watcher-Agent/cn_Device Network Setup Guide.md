@@ -11,7 +11,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /cn/device_network_setup
 last_update:
-  date: 11/09/2025
+  date: 09/19/2025
   author: Twelve
 ---
 
@@ -85,7 +85,7 @@ WiFi 扫描页面可能需要大约 5 秒钟加载 - 请不要关闭或取消页
 
 步骤 2. 注册设备
 - 访问 [SenseCraft AI-Watcher Agent 平台](https://sensecraft.seeed.cc/ai/watcher-agent)
-- 根据此 [WiKi](https://wiki.seeedstudio.com/cn/Web_Control_Panel/) 配置您的 Agent
+- 根据此 [WiKi](https://wiki.seeedstudio.com/cn/watcher_web_control_panel/) 配置您的 Agent
 
 ### 基本操作
 

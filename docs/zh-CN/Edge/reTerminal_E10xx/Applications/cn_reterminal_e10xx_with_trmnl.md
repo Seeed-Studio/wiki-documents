@@ -1,19 +1,19 @@
 ---
-description: 本文介绍如何将 reTerminal E 系列 ePaper 显示屏与 TRMNL 配合使用。
-title: reTerminal E 系列 ePaper 显示屏与 TRMNL 配合使用
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+description: 本文介绍如何将 reTerminal E 系列 ePaper 显示器与 TRMNL 配合使用。
+title: reTerminal E 系列 ePaper 显示器与 TRMNL 配合使用
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.jpg
 slug: /cn/reterminal_e10xx_trmnl
 sidebar_position: 1
 last_update:
-  date: 07/21/2025
+  date: 09/19/2025
   author: Citric
 ---
 
 :::caution
-Wiki 内容正在开发中，目前暂不可用。
+TRMNL 版本 1.6.7 现已正式支持 reTerminal E1001。由于软件架构限制，对 reTerminal E1002 全彩电子墨水显示器的支持**尚未**提供。
 :::
 
-# reTerminal E 系列 ePaper 显示屏与 TRMNL 配合使用
+# reTerminal E 系列 ePaper 显示器与 TRMNL 配合使用
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -21,19 +21,19 @@ Wiki 内容正在开发中，目前暂不可用。
 
 TRMNL 是一个创新平台，旨在帮助人们在日益分散注意力的数字世界中保持专注和冷静。TRMNL 成立于 2023 年，已迅速成为 E Ink® 仪表板管理的领先解决方案，提供了一种独特的信息显示方法，避免了传统屏幕的持续通知和干扰。
 
-TRMNL 的核心理念是技术应该增强我们的生活，而不需要持续的关注。该平台提供了一种优雅的方式，通过 E Ink® 显示屏一目了然地查看重要信息，创造了更加专注且不那么侵扰的技术体验。
+TRMNL 的核心理念是技术应该增强我们的生活，而不需要持续的关注。该平台提供了一种优雅的方式，通过 E Ink® 显示器一目了然地查看重要信息，创造了更加专注且不那么侵扰的技术体验。
 
 ### 为什么使用 TRMNL？
 
-集成 TRMNL 将带来几个引人注目的好处：
+TRMNL 的集成将带来几个引人注目的好处：
 
 - **简化仪表板创建**：TRMNL 不断增长的应用程序和集成库使得创建自定义信息显示变得容易，无需复杂的编程
-- **低功耗**：TRMNL 高效软件与我们 E Ink® 显示屏的最小功耗要求相结合，创造了极其节能的解决方案
+- **低功耗**：TRMNL 高效软件与我们 E Ink® 显示器的最小功耗要求相结合，创造了极其节能的解决方案
 - **无干扰信息**：获取所需信息，而无需传统屏幕带来的持续通知和眼部疲劳
-- **定期更新**：TRMNL 的积极开发意味着每周都会添加新功能和集成，不断扩展显示屏的可能性
+- **定期更新**：TRMNL 的积极开发意味着每周都会添加新功能和集成，不断扩展显示器的可能性
 - **开发者友好**：通过 TRMNL 的开放 API 和开发者工具，您可以为特定需求创建自定义插件和集成
 
-通过将 TRMNL 强大的平台与我们高质量的 E Ink® reTerminal E 系列 ePaper 显示屏相结合，我们为用户提供了一个优雅的解决方案，用于创建个性化、低功耗的信息仪表板，既尊重他们的注意力，也尊重他们的时间。
+通过将 TRMNL 强大的平台与我们高质量的 E Ink® reTerminal E 系列 ePaper 显示器相结合，我们为用户提供了一个优雅的解决方案，用于创建个性化、低功耗的信息仪表板，既尊重他们的注意力，也尊重他们的时间。
 
 ## TRMNL 入门指南
 
@@ -99,7 +99,7 @@ TRMNL 的核心理念是技术应该增强我们的生活，而不需要持续�
 #### 方法 1：通过 TRMNL 网络烧录器烧录（最简单）
 
 :::tip
-请使用 **FW x.x.x** 或更新的固件以获得 Seeed 兼容性。
+请使用 **FW 1.6.7** 或更新的固件以获得 Seeed 兼容性。
 :::
 
 1. **前往 TRMNL 网络烧录器**
@@ -108,7 +108,7 @@ TRMNL 的核心理念是技术应该增强我们的生活，而不需要持续�
    - 此工具允许您直接从浏览器烧录设备。
    - 按照屏幕上的说明完成烧录过程。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/224.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/160.png" style={{width:700, height:'auto'}}/></div>
 
 ---
 
@@ -124,7 +124,7 @@ TRMNL 的核心理念是技术应该增强我们的生活，而不需要持续�
 
 :::tip
 
-有时我们更新代码需要向 TRMNL 提交 PR 并在显示之前进行审查，如果您想第一时间使用最新的固件版本，您也可以使用 Seeed 项目下的 TRMNL 仓库。
+有时我们更新代码后需要向 TRMNL 提交 PR 并审核后才会显示，如果您想第一时间使用最新的固件版本，也可以使用 Seeed 项目下的 TRMNL 仓库。
 
 - 访问 [Seeed 仓库](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)并克隆它：
 
@@ -148,13 +148,13 @@ TRMNL 的核心理念是技术应该增强我们的生活，而不需要持续�
 
   - 如果您使用的是 reTerminal E1001，请选择 `seeed_reTerminal_E1001` 环境。
 
-  - 如果您使用的是 reTerminal E1002，请选择 `seeed_reTerminal_E1002` 环境。
+  <!-- - 如果您使用的是 reTerminal E1002，请选择 `seeed_reTerminal_E1002` 环境。 -->
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/26.png" style={{width:1000, height:'auto'}}/></div>
 
 5. **连接您的设备**
 
-   - 插入您的 reTerminal E 系列 ePaper 显示屏设备。
+   - 插入您的 reTerminal E 系列 ePaper 显示器设备。
 
 6. **构建和上传**
 
@@ -170,7 +170,7 @@ TRMNL 的核心理念是技术应该增强我们的生活，而不需要持续�
 
 ## 配置 Wi-Fi 并向 TRMNL 发送播放列表
 
-要将您的 reTerminal E 系列 ePaper 显示屏与 TRMNL 配合使用并发送播放列表，您首先需要将设备连接到您的 Wi-Fi 网络。此过程称为"WiFi 配对模式"，通过简单的强制门户完成。请按照以下步骤操作：
+要将您的 reTerminal E 系列 ePaper 显示器与 TRMNL 配合使用并发送播放列表，您首先需要将设备连接到您的 Wi-Fi 网络。此过程称为"WiFi 配对模式"，通过简单的强制门户完成。请按照以下步骤操作：
 
 > 💡 **Wi-Fi 故障排除？** 如果您在将设备连接到 Wi-Fi 时遇到问题，请参考 [TRMNL 设备 Wi-Fi 故障排除指南](https://help.usetrmnl.com/en/articles/10193157-device-wifi-troubleshooting)以获得常见网络和路由器兼容性问题的解决方案。
 
@@ -178,12 +178,12 @@ TRMNL 的核心理念是技术应该增强我们的生活，而不需要持续�
 
 - 烧录 TRMNL 固件并为设备通电后，如果尚未连接到 Wi-Fi，它将自动进入配置模式。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/216.jpg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/161.jpg" style={{width:600, height:'auto'}}/></div>
 
 ### 连接到 TRMNL Wi-Fi
 
 - 在您的**手机**或**电脑**上，打开可用 Wi-Fi 网络列表。
-- 查找名为 **TRMNL** 的网络并连接到它。（默认情况下不需要密码。）
+- 寻找名为 **TRMNL** 的网络并连接到它。（默认情况下不需要密码。）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/217.png" style={{width:400, height:'auto'}}/></div>
 
@@ -195,7 +195,7 @@ TRMNL 的核心理念是技术应该增强我们的生活，而不需要持续�
 ### 输入您的 Wi-Fi 凭据
 
 - 在配置页面上，您将看到可用 Wi-Fi 网络的列表。
-- **选择您的 2.4GHz Wi-Fi 网络**（reTerminal E 系列 ePaper 显示屏不支持 5GHz 网络）。
+- **选择您的 2.4GHz Wi-Fi 网络**（reTerminal E 系列 ePaper 显示器不支持 5GHz 网络）。
 - 输入您的 Wi-Fi 密码。
 - 点击**保存**或**连接**。
 
@@ -208,13 +208,12 @@ TRMNL 的核心理念是技术应该增强我们的生活，而不需要持续�
 - 设备将尝试连接到您的 Wi-Fi。
 - 成功后，它将断开与 TRMNL Wi-Fi 的连接并加入您的家庭网络。
 - 窗口将显示设备的 MAC 地址。**请记录 MAC 地址**，因为您在后续步骤中会需要它。
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/219.png" style={{width:800, height:'auto'}}/></div>
 
 > ⚠️ **注意：** MAC 地址在配置门户中只显示 1-2 秒。如果您错过了，您也可以：
 >
 > - 从 VS Code > PlatformIO 构建/上传日志中获取。
-> - 使用 [usetrmnl.com/flash](https://usetrmnl.com/flash) 方法，在刷写过程中检查 Chrome/Edge/Firefox 开发者控制台中的 MAC 地址。
+> - 使用 [usetrmnl.com/flash](https://usetrmnl.com/flash) 方法，并在刷写过程中检查 Chrome/Edge/Firefox 开发者控制台中的 MAC 地址。
 > - 在您的路由器或 Mesh 网络应用的已连接设备列表中找到它。
 >
 > 有关更多详细信息和截图，请参阅官方指南：[查找您的 TRMNL MAC 地址](https://help.usetrmnl.com/en/articles/10614205-finding-your-trmnl-mac-address)
@@ -247,7 +246,7 @@ TRMNL 的核心理念是技术应该增强我们的生活，而不需要持续�
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/223.png" style={{width:900, height:'auto'}}/></div>
 
    - 您可以在 PlatformIO 上传过程中获取 MAC 地址（检查上传日志），或从配置门户获取（在 Wi-Fi 设置后会显示）。
-   - 尽早添加您的 MAC 地址有助于确保顺畅的入门过程和设备管理。
+   - 提前添加您的 MAC 地址有助于确保顺畅的入门过程和设备管理。
 
    - 然后您可以为您的 reTerminal E 系列 ePaper 显示屏设置自定义名称，并根据需要调整其他设置。
 
@@ -269,7 +268,7 @@ TRMNL 的核心理念是技术应该增强我们的生活，而不需要持续�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/221.png" style={{width:1000, height:'auto'}}/></div>
 
-TRMNL 播放列表功能允许您精确控制在 reTerminal E 系列 ePaper 显示屏上显示什么内容以及何时显示。以下是主要部分和控件的详细说明，如上面的截图所示：
+TRMNL 播放列表功能允许您精确控制在您的 reTerminal E 系列 ePaper 显示屏上显示什么内容以及何时显示。以下是主要部分和控件的详细说明，如上面的截图所示：
 
 ### 播放列表概览
 
@@ -283,7 +282,7 @@ TRMNL 播放列表功能允许您精确控制在 reTerminal E 系列 ePaper 显�
 播放列表中的每一行代表将在您的 reTerminal E 系列 ePaper 显示屏上显示的屏幕或小部件（仅供参考）：
 
 1. **天气**
-   - 显示您选择位置的当前天气信息。
+   - 显示您选定位置的当前天气信息。
    - 绿色的"正在显示"标签表示此屏幕当前正在您的设备上显示。
 2. **今年剩余天数**
    - 显示当前年份剩余天数的倒计时（例如，"2025"）。
@@ -305,7 +304,7 @@ TRMNL 播放列表功能允许您精确控制在 reTerminal E 系列 ePaper 显�
 
 > 📖 想了解更多？阅读 [智能播放列表博客文章](https://usetrmnl.com/blog/smart-playlists) 获取高级技巧和详细信息。
 
-这个灵活的播放列表系统让您完全自定义 reTerminal E 系列显示的内容、更新频率和显示顺序。您可以混合搭配不同的插件来创建符合您需求的个性化仪表板。
+这个灵活的播放列表系统让您完全自定义您的 reTerminal E 系列显示什么内容、更新频率以及显示顺序。您可以混合搭配不同的插件来创建符合您需求的个性化仪表板。
 
 ## 探索 TRMNL 插件
 
@@ -319,7 +318,7 @@ TRMNL 的插件系统是让您的 reTerminal E 系列 ePaper 显示屏真正强�
 
 ### 已连接的插件
 
-在插件页面顶部，您将看到已连接到您的 TRMNL 账户的所有插件。这些插件已准备好添加到您的播放列表并在您的 reTerminal E 系列上显示。示例包括：
+在插件页面的顶部，您将看到所有已连接到您的 TRMNL 账户的插件。这些插件已准备好添加到您的播放列表并在您的 reTerminal E 系列上显示。示例包括：
 
 - **天气**：显示当前天气状况。
 - **今年剩余天数**：倒计时到年底。
@@ -335,7 +334,7 @@ TRMNL 的插件系统是让您的 reTerminal E 系列 ePaper 显示屏真正强�
 - **浏览和搜索**：使用搜索栏或标签快速找到您感兴趣的插件。
 - **添加插件**：点击任何插件将其连接到您的账户并开始在播放列表中使用。
 
-开发者甚至可以创建和发布自己的插件供他人使用，使生态系统不断扩展新的可能性（[了解更多关于插件创建](https://docs.usetrmnl.com/go/plugin-marketplace/introduction)）。
+开发者甚至可以创建和发布自己的插件供他人使用，使生态系统不断扩展新的可能性（[了解更多关于插件创建的信息](https://docs.usetrmnl.com/go/plugin-marketplace/introduction)）。
 
 ---
 

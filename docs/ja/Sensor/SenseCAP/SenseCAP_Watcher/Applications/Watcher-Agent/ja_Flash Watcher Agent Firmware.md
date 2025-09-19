@@ -11,7 +11,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /ja/flash_watcher_agent_firmware
 last_update:
-  date: 2025/09/04
+  date: 09/04/2025
   author: Twelve
 ---
 
@@ -38,7 +38,7 @@ last_update:
 ### 必要なソフトウェア
 
 - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6以降)
-- [Watcher Agentファームウェアバイナリファイル](http://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)
+- [Watcher Agentファームウェアバイナリファイル](https://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)
 
 :::note
 すでにWatcherデバイスをお持ちで、そのモデルが**-ENではない**場合、ファームウェアをフラッシュした後に認証情報を手動でフラッシュする必要があります。
@@ -59,7 +59,7 @@ last_update:
 
 ### ステップ2. ファームウェアファイルの準備
 
-1. Watcher Agent ファームウェア[バイナリファイル](http://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)をダウンロードします
+1. Watcher Agent ファームウェア[バイナリファイル](https://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)をダウンロードします
 :::caution 注意
 すべてのパスに特殊記号が含まれていないことを確認してください。
 :::
