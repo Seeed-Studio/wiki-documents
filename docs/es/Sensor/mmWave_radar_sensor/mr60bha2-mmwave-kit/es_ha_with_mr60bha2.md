@@ -116,11 +116,11 @@ Firefox no soporta flashear firmware en dispositivos ESP. Por favor usa Google C
 :::
 
 <Tabs>
-<TabItem value='Herramienta Web'>
+<TabItem value='Web Tool'>
 
 Puedes usar esta [Herramienta Web](https://limengdu.github.io/MR60BHA2_ESPHome_external_components/) para un método fácil y directo de flashear tu firmware. Simplemente sigue las instrucciones en pantalla.
 
-- Haz clic en el botón `CONECTAR` para iniciar la conexión. La herramienta actualizará automáticamente el firmware.
+- Haz clic en el botón `CONNECT` para iniciar la conexión. La herramienta actualizará automáticamente el firmware.
 
 Si algo sale mal, sigue los pasos de solución de problemas en pantalla o cambia al método `ESPHome Web` para completar el proceso.
 
@@ -135,14 +135,14 @@ Para este método, necesitarás descargar el archivo de firmware `bin` desde [aq
 
 Mira el siguiente video para un recorrido detallado de flashear el firmware vía ESPHome Web:
 
-<iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Instalar firmware vía ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Install firmware via ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 </TabItem>
 </Tabs>
 
-Con cualquier método, tendrás tu firmware actualizado y listo para integración con Home Assistant.
+Con cualquiera de los métodos, tendrás tu firmware actualizado y listo para integración con Home Assistant.
 
-#### Conectar al punto de acceso del kit
+#### Conectar al hotspot del kit
 
 Con el firmware, podrías encender el kit sensor, y aparecerá un punto de acceso Wi-Fi: `seeedstudio-mr60bha2`.
 
@@ -164,8 +164,7 @@ En esta sección, repasaremos el proceso usando la aplicación Home Assistant, d
 2. **Crear una Cuenta**: Si no has creado una cuenta, necesitarás hacerlo. Después de eso, inicia sesión con tus credenciales.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-login.JPG" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
 3. **Navegar a la Página de Integración**: Una vez que hayas iniciado sesión, ve a la página "Integraciones" en Home Assistant. Si has instalado el complemento ESPHome y tanto el XIAO ESP32C6 como tu servidor Home Assistant están en la misma red, deberías ver el dispositivo `Seeed Studio MR60BHA2 Kit {device-mac-address}` aparecer bajo dispositivos descubiertos.
-4. **Añadir el Dispositivo**: Haz clic para añadir el dispositivo a tu configuración de Home Assistant.
-  <div class="img-container" align="center">
+4. **Añadir el Dispositivo**: Haz clic para añadir el dispositivo a tu configuración de Home Assistant.  <div class="img-container" align="center">
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-device-find.JPG" alt="find device"/>
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-device-submit.JPG" alt="submit a device"/>
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-device-add.JPG" alt="area"/>
@@ -358,8 +357,7 @@ A través de estos pasos, puedes maximizar la funcionalidad de tu configuración
 
 ### Explicación del Mecanismo de Reporte de Datos del Sensor de Radar (Para v1.6.12 y posteriores)
 
-Esta parte detalla el tiempo, precisión y condiciones requeridas para los datos reportados por las diversas funciones de detección del sensor de radar. Está destinada a ayudar a los usuarios a comprender y utilizar mejor los datos del sensor
-
+Esta parte detalla el tiempo, precisión y condiciones requeridas para los datos reportados por las diversas funciones de detección del sensor de radar. Está destinada a ayudar a los usuarios a comprender y utilizar mejor los datos del sensor.
 ---
 
 ### 1. Presencia Estática Humana
@@ -367,11 +365,11 @@ Esta parte detalla el tiempo, precisión y condiciones requeridas para los datos
 - **Descripción de la Función**:
     Detecta la presencia de un objetivo humano estacionario dentro de un área específica.
 - **Parámetro Clave**:
-  - **Rango de Detección Efectivo**: Hasta **6 metros**.
+  - **Rango de Detección Efectivo**: Hasta **4 metros**.
 - **Lógica de Reporte de Datos**:
   - Reporta un estado de "Presencia" cuando se detecta un objetivo humano en el área.
   - Reporta un estado de "Sin Presencia" cuando el área está libre de objetivos humanos.
-  - **Nota**: El rango de detección de 6 metros es exclusivo de la función de Presencia Estática Humana. No se aplica a otras características como Detección de Respiración y Latidos o Detección de Distancia del Objetivo, que tienen sus propios rangos efectivos más cortos. El único propósito de esta función es determinar presencia o ausencia, no proporcionar datos detallados.
+  - **Nota**: El rango de detección de 4 metros es exclusivo de la función de Presencia Estática Humana. No se aplica a otras características como Detección de Respiración y Latidos o Detección de Distancia del Objetivo, que tienen sus propios rangos efectivos más cortos. El único propósito de esta función es determinar presencia o ausencia, no proporcionar datos detallados.
 
 ---
 

@@ -19,7 +19,7 @@ last_update:
 
 Grove - ガスセンサー(MQ2)モジュールは、ガス漏れ検知（家庭および産業用途）に役立ちます。H2、LPG、CH4、CO、アルコール、煙、またはプロパンを検出するのに適しています。このセンサーは高感度で応答時間が速いため、測定を迅速に行うことができます。センサーの感度はポテンショメーターで調整可能です。
 
-<!-- |Sensor|Gas Type|今すぐ購入取|
+<!-- |Sensor|Gas Type|Get One Now|
 |:---:|---|---|
 |[MQ2](https://wiki.seeedstudio.com/ja/Grove-Gas_Sensor-MQ2/)|Combustible Gas, Smoke|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|
 |[MQ3](https://wiki.seeedstudio.com/ja/Grove-Gas_Sensor-MQ3/)|Alcohol Vapor|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor%28MQ3%29-p-1418.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|

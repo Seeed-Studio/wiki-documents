@@ -119,13 +119,13 @@ En esta parte, usaremos un **Arduino UNO R4 WiFi** como controlador, mostraremos
  </tr>
  <tr>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-   <a class="get_one_now_item" href="https://www.seeedstudio.com/Arduino-Uno-Rev4-WiFi-p-5717.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong></a>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/Arduino-Uno-Rev4-WiFi-p-5717.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
   </div></td>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-   <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-ADC-for-Load-Cell-HX711-p-4361.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong></a>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-ADC-for-Load-Cell-HX711-p-4361.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
   </div></td>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-   <a class="get_one_now_item" href="https://www.seeedstudio.com/Weight-Sensor-Load-Cell-0-500g-p-525.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong></a>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/Weight-Sensor-Load-Cell-0-500g-p-525.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
   </div></td>
  </tr>
  </table>

@@ -298,12 +298,12 @@ Este tutorial tomará Seeeduino V4.3 como ejemplo para explicar el uso del módu
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-MP3-V3-p-4297.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -474,19 +474,19 @@ style={{width:250, height:'auto'}}/></div></td>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Arduino-Uno-Rev4-WiFi-p-5717.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</
 font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-MP3-V4-p-5862.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</
 font></span></strong>
     </a>
    </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
  <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Smart-IR-Gesture-Sensor-p-5721.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</
 font></span></strong>
     </a>
    </div></td>

@@ -23,7 +23,7 @@ Grove - ガスセンサー(MQ5)モジュールは、ガス漏れ検知（家庭�
 </div>
 
 
-<!-- |Sensor|Gas Type|今すぐ購入取|
+<!-- |Sensor|Gas Type|Get One Now|
 |---|---|---|
 |MQ2|Combustible Gas, Smoke|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-937.html)|
 |MQ3|Alcohol Vapor|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-1418.html)|

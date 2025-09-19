@@ -36,8 +36,8 @@ Aquí hay algunos proyectos atractivos que puedes emprender usando el router Lin
             <td><font size={"2"}>Explora el futuro del entretenimiento doméstico con el Router LinkStar-H68K y el Servidor de Medios Plex: esta guía te llevará a través de los pasos para crear tu propio servidor de medios en casa.</font></td>
         </tr>
   <tr>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/h68k-ha-esphome/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Más información</font></span></strong></a></div></td>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/plex_media_server/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Más información</font></span></strong></a></div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/h68k-ha-esphome/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/plex_media_server/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
   </tr>
         <tr>
    <th>Optimizando el Desarrollo Web: El Dúo Perfecto - Linkstar y WordPress</th>
@@ -52,8 +52,8 @@ Aquí hay algunos proyectos atractivos que puedes emprender usando el router Lin
             <td><font size={"2"}>Sumérgete en esta wiki donde mostramos la integración de Grocy y BookStack en un servidor de oficina auto-hospedado, potenciado por un router LinkStar, proporcionando una solución convincente para operaciones optimizadas y organizadas.</font></td>
         </tr>
         <tr class="form_without_frame">
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/wordpress_linkstar/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Más información</font></span></strong></a></div></td>
-            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/grocy-bookstack-linkstar/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Más información</font></span></strong></a></div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/wordpress_linkstar/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/grocy-bookstack-linkstar/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
   </tr>
  </table>
 </div>

@@ -173,7 +173,7 @@ Para conectar la antena al módulo WiFi-Halow, también puede que necesites comp
         <tr>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/UF-L-SMA-K-1-13-120mm-p-5046.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
                 </a>
             </div></td>
         </tr>

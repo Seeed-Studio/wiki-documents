@@ -20,7 +20,7 @@ last_update:
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div><br />
 
 XIAO向けの先進的な**mmWaveセンサーモジュール**をご紹介します。[転倒検出](https://wiki.seeedstudio.com/ja/getting_started_with_mr60fda2_mmwave_kit/)と心拍モニタリングの両方に対応した最先端の監視ソリューションを提供するよう設計されています。Wi-FiとBluetooth接続を内蔵した堅牢なXIAO ESP32マイクロコントローラーを搭載し、これらのモジュールは精密で信頼性の高い検出機能を提供します。リアルタイムでの転倒監視や高感度での心拍追跡が必要な場合でも、当社のモジュールはカスタマイズ可能なRGB LEDや環境光センシングを含む最先端技術を搭載しています。Grove GPIOポートによる簡単な拡張オプションにより、これらの多用途モジュールはスマートホーム統合からヘルスケア監視まで、幅広いアプリケーションに最適です。

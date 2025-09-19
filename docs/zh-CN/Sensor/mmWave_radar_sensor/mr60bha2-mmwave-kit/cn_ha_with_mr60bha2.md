@@ -164,23 +164,22 @@ Firefox 不支持在 ESP 设备上刷写固件。请改用 Google Chrome 或 Mic
 2. **创建账户**：如果您还没有创建账户，需要先创建一个。之后，使用您的凭据登录。
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-login.JPG" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
 3. **导航到集成页面**：登录后，转到 Home Assistant 中的"集成"页面。如果您已安装 ESPHome 插件，并且 XIAO ESP32C6 和您的 Home Assistant 服务器都在同一网络上，您应该会看到设备 `Seeed Studio MR60BHA2 Kit {device-mac-address}` 出现在已发现的设备下。
-4. **添加设备**：点击将设备添加到您的 Home Assistant 设置中。
-  <div class="img-container" align="center">
+4. **添加设备**：点击将设备添加到您的 Home Assistant 设置中。  <div class="img-container" align="center">
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-device-find.JPG" alt="find device"/>
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-device-submit.JPG" alt="submit a device"/>
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-device-add.JPG" alt="area"/>
     <img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-addon-device.JPG" alt="addon"/>
   </div>
 
-  点击 `CONFIGURE` 按钮，按下 `SUBMIT` 按钮确认，并将设备分配到您首选的区域（例如，卧室）。之后，设备将通过您的 ESPHome 集成进行管理，在 Home Assistant 中实现完全控制和监控。
+  点击 `CONFIGURE` 按钮，按 `SUBMIT` 按钮确认，并将设备分配到您首选的区域（例如，卧室）。之后，设备将通过您的 ESPHome 集成进行管理，在 Home Assistant 中实现完全控制和监控。
 
 ## 监控和控制 {#监控和控制}
 
-通过遵循上述步骤，您将成功发现并将 MR60BHA2 传感器添加到您的 Home Assistant 中，实现实时监控和控制。
+按照上述步骤，您将成功发现并将 MR60BHA2 传感器添加到您的 Home Assistant 中，实现实时监控和控制。
 
 ### 传感器数据监控
 
-现在传感器已添加到"卧室"，导航到"概览"选项卡。您将看到 mmWave 卡片显示在卧室部分。
+现在传感器已添加到"卧室"，导航到"概览"选项卡。您将在卧室部分看到显示的 mmWave 卡片。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-sensor-data-with-person-detection.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div>
 
@@ -224,7 +223,7 @@ Home Assistant 强大的自动化功能允许您基于从 MR60BHA2 传感器收�
 
 要开始使用 ESPHome，请按照以下步骤操作：
 
-1. **访问 ESPHome 仪表板**：在 Home Assistant 中，导航到 ESPHome 插件。您应该看到您的 XIAO ESP32C6 列在设备中。
+1. **访问 ESPHome 仪表板**：在 Home Assistant 中，导航到 ESPHome 插件。您应该在设备中看到您的 XIAO ESP32C6 列出。
 
 2. **创建新配置**：点击设备打开其配置。在这里，您可以调整传感器的灵敏度、报告间隔和输出格式等设置。ESPHome 使用 YAML 配置格式，这是用户友好的，允许您定义各种参数。您可以使用以下模板 YAML 文件作为配置的起点，该文件专为 MR60BHA2 传感器设计：
 
@@ -359,7 +358,6 @@ Home Assistant 强大的自动化功能允许您基于从 MR60BHA2 传感器收�
 ### 雷达传感器数据报告机制说明（适用于 v1.6.12 及更高版本）
 
 本部分详细说明了雷达传感器各种检测功能报告数据的时机、准确性和所需条件。旨在帮助用户更好地理解和利用传感器数据。
-
 ---
 
 ### 1. 人体静态存在检测
@@ -367,11 +365,11 @@ Home Assistant 强大的自动化功能允许您基于从 MR60BHA2 传感器收�
 - **功能描述**：
     检测指定区域内静止人体目标的存在。
 - **关键参数**：
-  - **有效检测范围**：最远 **6 米**。
+  - **有效检测范围**：最远 **4 米**。
 - **数据上报逻辑**：
   - 当在区域内检测到人体目标时，上报"存在"状态。
   - 当区域内没有人体目标时，上报"无存在"状态。
-  - **注意**：6 米检测范围专属于人体静态存在检测功能。它不适用于其他功能，如呼吸心跳检测或目标距离检测，这些功能有各自更短的有效范围。此功能的唯一目的是确定存在或不存在，而不是提供详细数据。
+  - **注意**：4 米检测范围专属于人体静态存在检测功能。它不适用于其他功能，如呼吸心跳检测或目标距离检测，这些功能有各自更短的有效范围。此功能的唯一目的是确定存在或不存在，而不是提供详细数据。
 
 ---
 
@@ -391,7 +389,7 @@ Home Assistant 强大的自动化功能允许您基于从 MR60BHA2 传感器收�
   - **异常上报场景**：
     - **目标超出 1.5 米**：当检测到的目标超出 1.5 米有效范围时，呼吸和心率数据将**停止更新**并保持在最后一次有效测量值。
     - **核心区域无目标**：当在 0.5 到 1.5 米核心检测区域内未检测到目标时，呼吸和心率数值将主动上报为**0**。
-- **注意**：请注意环境干扰。来自风扇、空调或摆动窗帘等微小运动有时可能被传感器误解。在这种情况下，即使未检测到人体目标（呼吸率报告为 0），雷达也可能报告非零**心率**值。
+- **注意**：请注意环境干扰。来自风扇、空调或摆动窗帘等源头的微小运动有时可能被传感器误解。在这种情况下，即使未检测到人体目标（呼吸率报告为 0），雷达也可能报告非零的**心率**值。
 
 ---
 
@@ -404,7 +402,7 @@ Home Assistant 强大的自动化功能允许您基于从 MR60BHA2 传感器收�
   - **最大有效检测范围**：**5 米**。
 - **数据上报逻辑和限制**：
   - **无目标状态**：当未检测到目标时，距离值报告为**0**。
-  - **检测到目标**：当在 5 米范围内检测到一个或多个目标时，雷达报告**最接近**传感器的目标距离。
+  - **检测到目标**：当在 5 米范围内检测到一个或多个目标时，雷达报告距离传感器**最近**的目标距离。
   - **数据不更新（保持最后值）**：如果最近的目标处于或移动到 5 米有效检测范围之外，距离值将停止更新。在这种情况下，数值将保持在最后一次有效测量值。
 - **跟踪性能**：
     为确保近距离静止目标的稳定性，雷达的跟踪策略针对不同距离进行了优化。性能详情见下表：

@@ -42,7 +42,7 @@ SenseCAP S2110 Sensor Builderは、産業グレードモジュールとメーカ
 
 製品にはIP66産業グレードエンクロージャと取り付けパッドおよびネジセットが付属しており、センサーを屋外に簡単かつ安全にデプロイできます。
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong></a> <a class="get_one_now_item" href="https://www.seeedstudio.com/sensecap-outdoor-lorawan-sensor-kit-based-on-grove-p-5503.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get LoRaWAN Kit 🖱️</font></span></strong></a> </div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a> <a class="get_one_now_item" href="https://www.seeedstudio.com/sensecap-outdoor-lorawan-sensor-kit-based-on-grove-p-5503.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get LoRaWAN Kit 🖱️</font></span></strong></a> </div>
 
 ## 様々な方法でBuilderを始める
 
@@ -54,7 +54,7 @@ SenseCAP S2110 Sensor Builderは、産業グレードモジュールとメーカ
 
 Groveセンサーを使用してカスタムで費用対効果の高い産業グレードのLoRaWANセンサーを構築し、SenseCAP Data LoggerでSenseCAP Cloudに接続して、長距離無線データ伝送を可能にできます。
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 今すぐ購入取 </font></span></strong></a> </div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Get One Now </font></span></strong></a> </div>
 
 ### より多くの産業レベルLoRaWAN Groveセンサーの追加
 

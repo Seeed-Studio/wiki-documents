@@ -192,7 +192,7 @@ SenseCAP decoder は、SenseCAP LoRaWAN® デバイスから送信される LoRa
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/SenseCAP_Decoder/" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳しく見る</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>
 
