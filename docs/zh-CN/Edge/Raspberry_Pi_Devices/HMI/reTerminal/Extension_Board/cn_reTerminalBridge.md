@@ -45,7 +45,7 @@ sudo ./scripts/reTerminal.sh
 ```
 
 :::note
-For **32bit OS** you will need to add following step before execute `sudo ./scripts/reTerminal.sh`
+对于 **32 位操作系统**，您需要在执行 `sudo ./scripts/reTerminal.sh` 之前添加以下步骤
 
 ```
 echo arm_64bit=0 | sudo tee -a /boot/config.txt
