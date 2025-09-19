@@ -352,6 +352,12 @@ Special thanks to the entire **TRMNL team** for their strong support and invalua
 
 Your expertise and commitment have made this integration possible and greatly improved the user experience for the TRMNL 7.5inch(OG) DIY kit community.
 
+## Troubleshooting
+
+### How to reconfigure the network?
+
+Press and hold the Key1 (the button next to the Reset button) for five seconds. The device will return to the initial TRMNL interface and activate the AP.
+
 ## Resources
 
 - **[Firmware]** [TRMNL ePaper Library (GitHub)](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)
