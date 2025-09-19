@@ -3266,6 +3266,15 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/CODESYS_with_Modbus_on_R1000/recomputer_r1000_with_codesys_use_modbus_rtu',
                   ]
                 },
+
+                 {
+                  type: 'category',
+                  label: 'Chirpstack',
+                  items: [
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/recomputer_r1x_chripstack',
+                   
+                  ]
+                },
                 {
                   type: 'category',
                   label: 'Others',
