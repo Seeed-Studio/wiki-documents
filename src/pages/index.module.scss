@@ -49,7 +49,7 @@
 
         .banner_btn_item {
           color: var(--ifm-heading-color);
-          padding: 8px 16px;
+          padding: 8px 16px;         /* ← 高度由这里的上下 8px 决定 */
           margin-right: 20px;
           background-color: var(--ifm-navbar-background-color);
           border-radius: 50px;
@@ -59,6 +59,79 @@
           background-color: #8FC31F;
           color: #fff;
         }
+
+        /* === Split Button styles (新增) ============================== */
+        .gsGroup {
+          display: inline-flex;
+          align-items: stretch;
+          border-radius: 50px;
+          overflow: hidden;
+          margin-right: 20px;
+          background-color: transparent;
+          vertical-align: middle;        /* 与旁边按钮基线对齐 */
+        }
+
+        .gsGreen {
+          background-color: #8FC31F;
+          color: #fff;
+        }
+
+        .gsMain {
+          @extend .banner_btn_item;
+          margin-right: 0;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+
+          /* ▼ 关键：与右半统一，避免行高把高度撑大 */
+          display: inline-flex;
+          align-items: center;
+          padding-top: 10px;   /* 原本是 8px，上下多给 2px */
+          padding-bottom: 10px;
+          line-height: 1;
+        }
+
+        .gsToggle {
+          @extend .banner_btn_item;
+          margin-right: 0;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+
+          /* 仅左右 padding，保持与左侧一致的上下 padding=8px（由 @extend 带来） */
+          padding-left: 12px;
+          padding-right: 12px;
+
+          position: relative;
+          cursor: pointer;
+
+          /* ▼ 关键：压平行高，防止 emoji/字符把按钮整体抬高 */
+          line-height: 1;
+        }
+
+        /* 如果右半仍然略高（部分字体/emoji 会这样），再轻微压缩右半字体 */
+        .gsToggle > span {
+          line-height: 1; 
+          /* 可选：字体略微缩小一点，避免某些系统 emoji 拉高基线 */
+          font-size: 0.95em;
+        }
+
+        .gsToggle.gsGreen {
+          background-color: #7ab71d;
+          color: #fff;
+        }
+
+        .gsToggle::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 5%;
+          bottom: 5%;
+          width: 1.5px;
+          background: rgba(255,255,255,0.6);
+        }
+        /* ============================================================ */
       }
     }
   }
@@ -116,6 +189,16 @@ html[data-theme='light'] {
         .green {
           background-color: #8FC31F;
           color: #fff;
+        }
+
+        .gsMain.gsGreen,
+        .gsToggle.gsGreen {
+          background-color: #8FC31F !important;
+          color: #fff !important;
+        }
+
+        .gsToggle.gsGreen {
+          background-color: #7ab71d !important;
         }
       }
     }
