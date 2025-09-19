@@ -52,38 +52,44 @@ last_update:
 
 ## Docker 安装指南
 
-
 **1. 更新系统包**
+
 ```bash
 sudo apt update
 sudo apt upgrade
 ```
 
 **2. 安装 Docker**
+
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
 **3. 将用户添加到 Docker 组**
+
 ```bash
 sudo usermod -aG docker ${USER}
 ```
 
 **4. 重启系统**
+
 ```bash
 sudo reboot
 ```
 
 **5. 验证安装**
+
 ```bash
 docker run hello-world
 ```
 
 **6. 安装 Docker Compose**
+
 ```bash
 sudo apt install docker-compose
 ```
+
 完美，我将把您的**数据包转发器设置**重新格式化为您正在使用的相同结构化 wiki 样式：
 
 ---
@@ -122,9 +128,9 @@ nano global_conf.json.sx1250.US915
 
 保存文件并退出：
 
-* 按 **CTRL + X**，
-* 然后按 **Y**，
-* 最后按 **Enter**。
+- 按 **CTRL + X**，
+- 然后按 **Y**，
+- 最后按 **Enter**。
 
 **2. 启动数据包转发器**
 
@@ -133,7 +139,6 @@ nano global_conf.json.sx1250.US915
 ```bash
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
-
 
 这是您的**"创建网关"部分**，采用相同的 wiki 样式：
 
@@ -184,8 +189,8 @@ Password: admin
 
 2. 输入以下详细信息：
 
-   * **Gateway ID**: `AA555A0000000000`（替换为您的实际网关 ID）
-   * **Name**: 为您的网关提供描述性名称
+   - **Gateway ID**: `AA555A0000000000`（替换为您的实际网关 ID）
+   - **Name**: 为您的网关提供描述性名称
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -199,20 +204,19 @@ Password: admin
 
 要将 LoRaWAN 设备（例如 **SenseCAP S2101**）连接到 ChirpStack，您首先需要创建一个**设备配置文件**。
 
-
 1. 导航到 **Device Profiles → Create Device Profile**
 
 2. 输入以下详细信息：
 
-   * **Name**: 为您的设备配置文件提供描述性名称
-   * **Region**: 选择与您的设备和网关匹配的区域/子频段（例如 `US915`）
+   - **Name**: 为您的设备配置文件提供描述性名称
+   - **Region**: 选择与您的设备和网关匹配的区域/子频段（例如 `US915`）
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image4.png" alt="pir" width={800} height="auto" /></p>   
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image4.png" alt="pir" width={800} height="auto" /></p>
 
 3. 导航到 **Codec** 选项卡：
 
-   * 选择 **JavaScript Functions**
-   * 粘贴您设备的编解码器
+   - 选择 **JavaScript Functions**
+   - 粘贴您设备的编解码器
 
 > ⚠️ 编解码器特定于您的 LoRa 设备。例如，如果您使用的是 **Seeed S201x**，您可以使用下面的代码。
 > 如果您使用的是不同的设备，请咨询制造商获取正确的编解码器。
@@ -454,14 +458,12 @@ function toBinary(arr) {
 }
 
 ```
+
 </details>
-
-
 
 ## 添加设备
 
 创建**设备配置文件**后，您可以在 ChirpStack 中注册您的 LoRaWAN 设备。
-
 
 1. 导航到**租户 → 应用程序**并点击**添加应用程序**
 
@@ -470,21 +472,20 @@ function toBinary(arr) {
 2. 为您的应用程序输入**名称**并保存
 3. 打开您新创建的应用程序并点击**添加设备**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image7.png" alt="pir" width={800} height="auto" /></p> 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image7.png" alt="pir" width={800} height="auto" /></p>
 
 4. 输入以下详细信息：
 
-   * **设备 EUI**：粘贴您 LoRa 设备的 EUI（可在设备数据表或配置软件中找到，例如 SenseCAP 应用程序）
-   * **设备配置文件**：选择您之前创建的设备配置文件
+   - **设备 EUI**：粘贴您 LoRa 设备的 EUI（可在设备数据表或配置软件中找到，例如 SenseCAP 应用程序）
+   - **设备配置文件**：选择您之前创建的设备配置文件
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image8.png" alt="pir" width={800} height="auto" /></p> 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image8.png" alt="pir" width={800} height="auto" /></p>
 
 5. 输入**应用程序密钥**并点击**提交**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image9.png" alt="pir" width={800} height="auto" /></p> 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image9.png" alt="pir" width={800} height="auto" /></p>
 
 > ⚠️ 设备 EUI 和应用程序密钥可以从您的 LoRa 设备数据表或配置软件中获取。对于**SenseCAP 设备**，您可以使用 SenseCAP 应用程序查看或重新配置这些设置。
-
 
 以下是您的**"检查设备状态"**部分的完善版本，采用您的 wiki 风格，与之前的部分保持一致：
 
@@ -494,33 +495,31 @@ function toBinary(arr) {
 
 添加 LoRaWAN 设备后，您可以验证设备是否正确连接并传输数据。
 
-
 1. 导航到您的应用程序并选择您添加的设备
 2. 转到**事件**选项卡
 
-   * 当设备成功加入网络时，您应该看到一个**加入数据包**
+   - 当设备成功加入网络时，您应该看到一个**加入数据包**
 
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image10.png" alt="pir" width={800} height="auto" /></p> 
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image10.png" alt="pir" width={800} height="auto" /></p>
 
 3. 点击数据包查看**详细信息**
 
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image11.png" alt="pir" width={500} height="auto" /></p> 
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image11.png" alt="pir" width={500} height="auto" /></p>
 
-   * 例如，您可以看到 SenseCAP S2101 等设备报告的**温度和湿度数据**
-
+- 例如，您可以看到 SenseCAP S2101 等设备报告的**温度和湿度数据**
 
 ## MQTT 集成
 
 ChirpStack 使用**MQTT**将 LoRaWAN 设备的数据流式传输到应用程序或仪表板。您可以实时监控这些消息。
 
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image12.png" alt="pir" width={800} height="auto" /></p> 
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image12.png" alt="pir" width={800} height="auto" /></p>
 
 1. 将您的 PC 连接到与 reComputer R11 网关**相同的网络**
 2. 使用 MQTT 客户端（如**MQTT Explorer**）订阅主题
 3. 配置 MQTT 客户端：
 
-   * **主机**：您的 reComputer R11 的 IP 地址
-   * **端口**：`1883`
+   - **主机**：您的 reComputer R11 的 IP 地址
+   - **端口**：`1883`
 4. 连接后，您将看到代表您设备的**主题树**，例如：
 
 ```
@@ -529,8 +528,7 @@ application/c853ffcd-53f0-4de3-83b9-5467ff895f76/device/2cf7f1c043500402/event/u
 
 5. 展开主题将显示包含传感器数据的**上行消息**，例如 SenseCAP S2101 等设备的温度和湿度
 
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image13.png" alt="pir" width={800} height="auto" /></p> 
-
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image13.png" alt="pir" width={800} height="auto" /></p>
 
 ## Node-RED 集成
 
@@ -540,9 +538,9 @@ application/c853ffcd-53f0-4de3-83b9-5467ff895f76/device/2cf7f1c043500402/event/u
 
 2. 配置 MQTT 节点：
 
-   * **服务器**：您的 reComputer R11 的 IP（例如，`10.0.0.208`）
-   * **端口**：`1883`
-   * **主题**：`application/+/device/+/event/up`
+   - **服务器**：您的 reComputer R11 的 IP（例如，`10.0.0.208`）
+   - **端口**：`1883`
+   - **主题**：`application/+/device/+/event/up`
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image15.png" alt="pir" width={600} height="auto" /></p>
 
@@ -550,7 +548,7 @@ application/c853ffcd-53f0-4de3-83b9-5467ff895f76/device/2cf7f1c043500402/event/u
 
 3. 添加**函数节点**来解码 MQTT 消息载荷
 
-   * 例如，从 JSON 对象中提取**温度**和**湿度**
+   - 例如，从 JSON 对象中提取**温度**和**湿度**
 
 ```javascript
    // Get the JSON payload
@@ -595,7 +593,6 @@ return [tempMsg, humMsg];
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image16.png" alt="pir" width={600} height="auto" /></p>
     <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image17.png" alt="pir" width={600} height="auto" /></p>
-
 
 ## 技术支持与产品讨论
 

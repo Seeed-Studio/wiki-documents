@@ -52,38 +52,44 @@ last_update:
 
 ## Dockerインストールガイド
 
-
 **1. システムパッケージの更新**
+
 ```bash
 sudo apt update
 sudo apt upgrade
 ```
 
 **2. Dockerのインストール**
+
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
 **3. ユーザーをDockerグループに追加**
+
 ```bash
 sudo usermod -aG docker ${USER}
 ```
 
 **4. システムの再起動**
+
 ```bash
 sudo reboot
 ```
 
 **5. インストールの確認**
+
 ```bash
 docker run hello-world
 ```
 
 **6. Docker Composeのインストール**
+
 ```bash
 sudo apt install docker-compose
 ```
+
 完璧です。**Packet Forwarderセットアップ**を同じ構造化されたwikiスタイルに再フォーマットします：
 
 ---
@@ -122,9 +128,9 @@ nano global_conf.json.sx1250.US915
 
 ファイルを保存して終了します：
 
-* **CTRL + X**を押し、
-* 次に**Y**を押し、
-* 最後に**Enter**を押します。
+- **CTRL + X**を押し、
+- 次に**Y**を押し、
+- 最後に**Enter**を押します。
 
 **2. Packet Forwarderの開始**
 
@@ -133,7 +139,6 @@ nano global_conf.json.sx1250.US915
 ```bash
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
-
 
 同じwikiスタイルでの**「ゲートウェイの作成」セクション**は以下の通りです：
 
@@ -184,8 +189,8 @@ Password: admin
 
 2. 以下の詳細を入力します：
 
-   * **Gateway ID**: `AA555A0000000000`（実際のゲートウェイIDに置き換えてください）
-   * **Name**: ゲートウェイの説明的な名前を付けます
+   - **Gateway ID**: `AA555A0000000000`（実際のゲートウェイIDに置き換えてください）
+   - **Name**: ゲートウェイの説明的な名前を付けます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -199,20 +204,19 @@ Password: admin
 
 LoRaWANデバイス（例：**SenseCAP S2101**）をChirpStackに接続するには、まず**デバイスプロファイル**を作成する必要があります。
 
-
 1. **Device Profiles → Create Device Profile**に移動します
 
 2. 以下の詳細を入力します：
 
-   * **Name**: デバイスプロファイルの説明的な名前を付けます
-   * **Region**: デバイスとゲートウェイに一致する地域/サブバンドを選択します（例：`US915`）
+   - **Name**: デバイスプロファイルの説明的な名前を付けます
+   - **Region**: デバイスとゲートウェイに一致する地域/サブバンドを選択します（例：`US915`）
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image4.png" alt="pir" width={800} height="auto" /></p>   
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image4.png" alt="pir" width={800} height="auto" /></p>
 
 3. **Codec**タブに移動します：
 
-   * **JavaScript Functions**を選択します
-   * デバイス用のコーデックを貼り付けます
+   - **JavaScript Functions**を選択します
+   - デバイス用のコーデックを貼り付けます
 
 > ⚠️ コーデックはLoRaデバイス固有です。例えば、**Seeed S201x**を使用している場合は、以下のコードを使用できます。
 > 異なるデバイスを使用している場合は、正しいコーデックについてメーカーに相談してください。
@@ -454,14 +458,12 @@ function toBinary(arr) {
 }
 
 ```
+
 </details>
-
-
 
 ## デバイスの追加
 
 **デバイスプロファイル**が作成されたら、ChirpStackにLoRaWANデバイスを登録できます。
-
 
 1. **テナント → アプリケーション**に移動し、**アプリケーションを追加**をクリックします
 
@@ -470,21 +472,20 @@ function toBinary(arr) {
 2. アプリケーションの**名前**を入力して保存します
 3. 新しく作成したアプリケーションを開き、**デバイスを追加**をクリックします
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image7.png" alt="pir" width={800} height="auto" /></p> 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image7.png" alt="pir" width={800} height="auto" /></p>
 
 4. 以下の詳細を入力します：
 
-   * **デバイスEUI**: LoRaデバイスのEUIを貼り付けます（デバイスのデータシートまたは設定ソフトウェア（例：SenseCAP アプリケーション）で確認できます）
-   * **デバイスプロファイル**: 先ほど作成したデバイスプロファイルを選択します
+   - **デバイスEUI**: LoRaデバイスのEUIを貼り付けます（デバイスのデータシートまたは設定ソフトウェア（例：SenseCAP アプリケーション）で確認できます）
+   - **デバイスプロファイル**: 先ほど作成したデバイスプロファイルを選択します
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image8.png" alt="pir" width={800} height="auto" /></p> 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image8.png" alt="pir" width={800} height="auto" /></p>
 
 5. **アプリケーションキー**を入力し、**送信**をクリックします
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image9.png" alt="pir" width={800} height="auto" /></p> 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image9.png" alt="pir" width={800} height="auto" /></p>
 
 > ⚠️ デバイスEUIとアプリケーションキーは、LoRaデバイスのデータシートまたは設定ソフトウェアから取得できます。**SenseCAP デバイス**の場合、SenseCAP アプリケーションを使用してこれらの設定を表示または再設定できます。
-
 
 以下は、wikiスタイルに合わせて洗練された**「デバイスステータスの確認」**セクションで、前のセクションとの一貫性を保っています：
 
@@ -494,33 +495,31 @@ function toBinary(arr) {
 
 LoRaWANデバイスを追加した後、デバイスが適切に接続され、データを送信していることを確認できます。
 
-
 1. アプリケーションに移動し、追加したデバイスを選択します
 2. **イベント**タブに移動します
 
-   * デバイスがネットワークに正常に参加すると、**参加パケット**が表示されます
+   - デバイスがネットワークに正常に参加すると、**参加パケット**が表示されます
 
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image10.png" alt="pir" width={800} height="auto" /></p> 
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image10.png" alt="pir" width={800} height="auto" /></p>
 
 3. パケットをクリックして**詳細情報**を表示します
 
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image11.png" alt="pir" width={500} height="auto" /></p> 
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image11.png" alt="pir" width={500} height="auto" /></p>
 
-   * 例えば、SenseCAP S2101などのデバイスから報告される**温度と湿度データ**を確認できます
-
+- 例えば、SenseCAP S2101などのデバイスから報告される**温度と湿度データ**を確認できます
 
 ## MQTT統合
 
 ChirpStackは**MQTT**を使用してLoRaWANデバイスからアプリケーションやダッシュボードにデータをストリーミングします。これらのメッセージをリアルタイムで監視できます。
 
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image12.png" alt="pir" width={800} height="auto" /></p> 
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image12.png" alt="pir" width={800} height="auto" /></p>
 
 1. PCをreComputer R11ゲートウェイと**同じネットワーク**に接続します
 2. **MQTT Explorer**などのMQTTクライアントを使用してトピックを購読します
 3. MQTTクライアントを設定します：
 
-   * **ホスト**: reComputer R11のIPアドレス
-   * **ポート**: `1883`
+   - **ホスト**: reComputer R11のIPアドレス
+   - **ポート**: `1883`
 4. 接続すると、デバイスを表す**トピックのツリー**が表示されます。例：
 
 ```
@@ -529,8 +528,7 @@ application/c853ffcd-53f0-4de3-83b9-5467ff895f76/device/2cf7f1c043500402/event/u
 
 5. トピックを展開すると、SenseCAP S2101などのデバイスの温度や湿度などのセンサーデータを含む**アップリンクメッセージ**が表示されます
 
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image13.png" alt="pir" width={800} height="auto" /></p> 
-
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image13.png" alt="pir" width={800} height="auto" /></p>
 
 ## Node-RED統合
 
@@ -540,9 +538,9 @@ MQTTノードとカスタム関数を使用して、**Node-RED**でLoRaWANデバ
 
 2. MQTTノードを設定します：
 
-   * **サーバー**: reComputer R11のIP（例：`10.0.0.208`）
-   * **ポート**: `1883`
-   * **トピック**: `application/+/device/+/event/up`
+   - **サーバー**: reComputer R11のIP（例：`10.0.0.208`）
+   - **ポート**: `1883`
+   - **トピック**: `application/+/device/+/event/up`
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image15.png" alt="pir" width={600} height="auto" /></p>
 
@@ -550,7 +548,7 @@ MQTTノードとカスタム関数を使用して、**Node-RED**でLoRaWANデバ
 
 3. MQTTメッセージペイロードをデコードするために**Functionノード**を追加します
 
-   * 例えば、JSONオブジェクトから**温度**と**湿度**を抽出します
+   - 例えば、JSONオブジェクトから**温度**と**湿度**を抽出します
 
 ```javascript
    // Get the JSON payload
@@ -595,7 +593,6 @@ return [tempMsg, humMsg];
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image16.png" alt="pir" width={600} height="auto" /></p>
     <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image17.png" alt="pir" width={600} height="auto" /></p>
-
 
 ## 技術サポート & 製品ディスカッション
 
