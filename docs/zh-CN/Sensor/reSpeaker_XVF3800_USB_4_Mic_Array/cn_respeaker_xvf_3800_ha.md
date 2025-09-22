@@ -118,7 +118,6 @@ XVF3800 麦克风阵列需要 12.288 MHz MCLK 才能工作，但 ESPHome（在 H
 
 用您的自定义 **YAML 配置**替换内容
 
-
 :::important
 您可以从[这里](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main/config)找到 YAML 文件
 :::
@@ -209,7 +208,6 @@ XVF3800 麦克风阵列需要 12.288 MHz MCLK 才能工作，但 ESPHome（在 H
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_voice_nabu.PNG" alt="pir" width={800} height="auto" /></p>
 
-
 ## YAML 描述
 
 ### WiFi
@@ -250,7 +248,6 @@ i2c:
 - **frequency**：通信速度（100kHz 是标准速度）。
 
 ### 开关
-
 
 <details>
 <summary>开关</summary>
@@ -324,6 +321,7 @@ switch:
     on_turn_off:
       - script.execute: control_leds
 ```
+
 </details>
 
 开关是 Home Assistant 中软件控制的"按钮"。它们控制声音、定时器或闹钟等功能。
@@ -373,8 +371,6 @@ switch:
 - 跟踪闹钟状态。
 - 在开启/关闭时运行 LED 脚本。
 
-
-
 ### 传感器
 
 <details>
@@ -421,8 +417,8 @@ text_sensor:
     id: current_time
     icon: mdi:clock
 ```
-__CODE_LINE_PLH__
 
+</details>
 
 此 YAML 块为定时器、闹钟和 LED 亮度添加控制和传感器。它让您可以使用滑块调整 LED 环亮度，跟踪下一个定时器（时间 + 名称），并在 Home Assistant 中显示闹钟时间和设备的当前时间。
 
@@ -442,6 +438,7 @@ number:
 - restore_value 在重启后保持之前的设置。
 
 **下一个定时器**
+
 ```yml
 sensor:
   - platform: template
@@ -468,8 +465,6 @@ text_sensor:
 - 显示当前闹钟和 ESP32 系统时间。
 
 ### 间隔 LED 效果
-
-
 
 ```yml
 interval:
@@ -1289,6 +1284,7 @@ interval:
             last_time_string = current_time_string;
           }
 ```
+
 </details>
 
 **中央控制器 (led_set_effect)**
@@ -1335,30 +1331,27 @@ script:
 | 计时器响铃          | 紫色快速呼吸   |
 | 音量变化          | 临时显示     |
 
-
-
 #### LED 控制工作原理（流程概述）
 
 1. **触发效果**
 
-   * 当某些事件发生时（例如，启动失败、语音助手监听、计时器响铃），脚本会运行。
-   * 该脚本调用**中央 LED 控制器**（`led_set_effect`）并告诉它：
+   - 当某些事件发生时（例如，启动失败、语音助手监听、计时器响铃），脚本会运行。
+   - 该脚本调用**中央 LED 控制器**（`led_set_effect`）并告诉它：
 
-     * **运行哪个效果**（例如，呼吸、彩虹、彗星）
-     * **什么颜色**（R、G、B 值）
-     * **多快**（速度）。
+     - **运行哪个效果**（例如，呼吸、彩虹、彗星）
+     - **什么颜色**（R、G、B 值）
+     - **多快**（速度）。
 
    如果启动失败 → 调用`led_set_effect`，效果 = *呼吸*，颜色 = 红色。
 
-
 2. **中央控制器（间隔循环）**
 
-   * 每**50 毫秒**（每秒 20 次），`led_animation_interval`循环检查**当前效果**是什么。
-   * 根据该效果名称，它**将控制转发**到匹配的更新脚本。
+   - 每**50 毫秒**（每秒 20 次），`led_animation_interval`循环检查**当前效果**是什么。
+   - 根据该效果名称，它**将控制转发**到匹配的更新脚本。
 
-     * 如果效果 = *呼吸* → 运行`update_breathe_effect`。
-     * 如果效果 = *彩虹* → 运行`update_rainbow_effect`。
-     * 对于闪烁、彗星、计时器滴答、LED 光束等也是如此。
+     - 如果效果 = *呼吸* → 运行`update_breathe_effect`。
+     - 如果效果 = *彩虹* → 运行`update_rainbow_effect`。
+     - 对于闪烁、彗星、计时器滴答、LED 光束等也是如此。
 
 这个循环就像一个**调度器**：它决定*下一步运行哪个动画脚本*。
 
@@ -1394,16 +1387,15 @@ interval:
 
 ```
 
-
 3. **效果更新脚本**
 
-   * 每个效果都有自己的脚本，逐帧计算 LED 颜色。
-   * 示例：**呼吸效果**
+   - 每个效果都有自己的脚本，逐帧计算 LED 颜色。
+   - 示例：**呼吸效果**
 
-     * 使用正弦波平滑地上下淡化亮度。
-     * 将亮度乘以 LED 环的全局设置（速度、亮度滑块、R/G/B 颜色）。
-     * 为所有 12 个 LED 构建颜色数组。
-     * 将颜色发送到 Respeaker LED 环。
+     - 使用正弦波平滑地上下淡化亮度。
+     - 将亮度乘以 LED 环的全局设置（速度、亮度滑块、R/G/B 颜色）。
+     - 为所有 12 个 LED 构建颜色数组。
+     - 将颜色发送到 Respeaker LED 环。
 
 示例：
 
@@ -1571,14 +1563,12 @@ media_player:
 
 ### Respeaker XVF3800 集成
 
-
 - i2c 地址：0x2C
 - ID：respeaker
 - 麦克风静音开关：每 1 秒更新一次，切换时播放声音。
 - DFU 版本报告：每 120 秒报告固件。
 - 波束方向传感器：跟踪语音波束（仅内部）。
 - 固件管理：如需要自动刷写 XVF3800 固件。
-
 
 ```yml
 respeaker_xvf3800:
@@ -1639,7 +1629,8 @@ micro_wake_word:
 
 - id: mww → 引用名称。
 - microphone: i2s_mics，1 通道。
-- stop_after_detection: false → 持续监听。- okay_nabu, kenobi, hey_jarvis, hey_mycroft, stop（内部停止命令；您可以添加自己的命令）。
+- stop_after_detection: false → 持续监听。
+- okay_nabu, kenobi, hey_jarvis, hey_mycroft, stop（内部停止命令；您可以添加自己的命令）。
 - vad probability_cutoff: 0.05 → 语音敏感度。
 
 **检测时（如果麦克风未静音）**
@@ -1687,11 +1678,6 @@ voice_assistant:
   - 更新计时器状态和名称。
   - 更新 LED。
   - 对于滴答计时器，将 LED 更新减少到每 5 秒一次。
-
-
-
-
-
 
 ## 特别感谢
 

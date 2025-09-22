@@ -456,6 +456,7 @@ function toBinary(arr) {
         return bin;
     }).join('');
 }
+
 ```
 
 </details>

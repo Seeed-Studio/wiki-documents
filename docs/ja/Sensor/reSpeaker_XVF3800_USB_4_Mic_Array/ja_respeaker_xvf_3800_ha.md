@@ -118,7 +118,6 @@ Home Assistantのサイドバーから、**ESPHome Builder**に移動します�
 
 内容をカスタム**YAML設定**に置き換えます
 
-
 :::important
 YAMLファイルは[こちら](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main/config)から見つけることができます
 :::
@@ -209,7 +208,6 @@ ChromeまたはEdgeで[**Web-ESPHome**](https://web.esphome.io/?dashboard_wizard
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_voice_nabu.PNG" alt="pir" width={800} height="auto" /></p>
 
-
 ## YAML の説明
 
 ### WiFi
@@ -250,7 +248,6 @@ i2c:
 - **frequency**: 通信速度（100kHzが標準）。
 
 ### スイッチ
-
 
 <details>
 <summary>スイッチ</summary>
@@ -324,6 +321,7 @@ switch:
     on_turn_off:
       - script.execute: control_leds
 ```
+
 </details>
 
 スイッチは、Home Assistantでソフトウェア制御される「ボタン」です。音声、タイマー、アラームなどの機能を制御します。
@@ -373,8 +371,6 @@ switch:
 - アラームの状態を追跡します。
 - オン/オフ時にLEDスクリプトを実行します。
 
-
-
 ### センサー
 
 <details>
@@ -421,8 +417,8 @@ text_sensor:
     id: current_time
     icon: mdi:clock
 ```
-__CODE_LINE_PLH__
 
+</details>
 
 このYAMLブロックは、タイマー、アラーム、LED輝度のコントロールとセンサーを追加します。スライダーでLEDリングの輝度を調整し、次のタイマー（時間+名前）を追跡し、Home Assistantでアラーム時間とデバイスの現在時刻を表示できます。
 
@@ -442,6 +438,7 @@ number:
 - restore_valueで再起動後も前の設定を保持します。
 
 **次のタイマー**
+
 ```yml
 sensor:
   - platform: template
@@ -468,8 +465,6 @@ text_sensor:
 - 現在のアラームとESP32システム時間を表示します。
 
 ### インターバルでのLED効果
-
-
 
 ```yml
 interval:
@@ -1289,6 +1284,7 @@ interval:
             last_time_string = current_time_string;
           }
 ```
+
 </details>
 
 **中央コントローラー (led_set_effect)**
@@ -1335,30 +1331,27 @@ script:
 | タイマー鳴動          | 紫高速ブリーズ   |
 | ボリューム変更          | 一時表示     |
 
-
-
 #### LED制御の仕組み（フロー概要）
 
 1. **エフェクトのトリガー**
 
-   * 何かが起こったとき（例：起動失敗、音声アシスタント聞き取り中、タイマー鳴動）、スクリプトが実行されます。
-   * そのスクリプトは**中央LEDコントローラー**（`led_set_effect`）を呼び出し、以下を指示します：
+   - 何かが起こったとき（例：起動失敗、音声アシスタント聞き取り中、タイマー鳴動）、スクリプトが実行されます。
+   - そのスクリプトは**中央LEDコントローラー**（`led_set_effect`）を呼び出し、以下を指示します：
 
-     * **どのエフェクト**を実行するか（例：ブリーズ、レインボー、コメット）
-     * **何色**か（R、G、B値）
-     * **どの速度**か（速度）。
+     - **どのエフェクト**を実行するか（例：ブリーズ、レインボー、コメット）
+     - **何色**か（R、G、B値）
+     - **どの速度**か（速度）。
 
    起動が失敗した場合 → `led_set_effect`がエフェクト = *ブリーズ*、色 = 赤で呼び出されます。
 
-
 2. **中央コントローラー（インターバルループ）**
 
-   * **50ms**ごと（1秒間に20回）、`led_animation_interval`ループが**現在のエフェクト**が何かをチェックします。
-   * そのエフェクト名に基づいて、対応するアップデートスクリプトに**制御を転送**します。
+   - **50ms**ごと（1秒間に20回）、`led_animation_interval`ループが**現在のエフェクト**が何かをチェックします。
+   - そのエフェクト名に基づいて、対応するアップデートスクリプトに**制御を転送**します。
 
-     * エフェクト = *ブリーズ* → `update_breathe_effect`を実行。
-     * エフェクト = *レインボー* → `update_rainbow_effect`を実行。
-     * トゥインクル、コメット、タイマーティック、LEDビームなども同様。
+     - エフェクト = *ブリーズ* → `update_breathe_effect`を実行。
+     - エフェクト = *レインボー* → `update_rainbow_effect`を実行。
+     - トゥインクル、コメット、タイマーティック、LEDビームなども同様。
 
 このループは**ディスパッチャー**として機能します：*次にどのアニメーションスクリプトを実行するか*を決定します。
 
@@ -1394,16 +1387,15 @@ interval:
 
 ```
 
-
 3. **エフェクトアップデートスクリプト**
 
-   * 各エフェクトには、フレームごとにLEDの色を計算する独自のスクリプトがあります。
-   * 例：**ブリーズエフェクト**
+   - 各エフェクトには、フレームごとにLEDの色を計算する独自のスクリプトがあります。
+   - 例：**ブリーズエフェクト**
 
-     * サイン波を使用して明度をスムーズに上下にフェードします。
-     * LEDリングのグローバル設定（速度、明度スライダー、R/G/B色）で明度を乗算します。
-     * 12個すべてのLEDの色配列を構築します。
-     * 色をRespeaker LEDリングに送信します。
+     - サイン波を使用して明度をスムーズに上下にフェードします。
+     - LEDリングのグローバル設定（速度、明度スライダー、R/G/B色）で明度を乗算します。
+     - 12個すべてのLEDの色配列を構築します。
+     - 色をRespeaker LEDリングに送信します。
 
 例：
 
@@ -1571,14 +1563,12 @@ media_player:
 
 ### Respeaker XVF3800統合
 
-
 - i2cアドレス：0x2C
 - ID：respeaker
 - マイクロフォンミュートスイッチ：1秒ごとに更新、トグル時にサウンド再生。
 - DFUバージョンレポート：120秒ごとにファームウェアをレポート。
 - ビーム方向センサー：音声ビームを追跡（内部のみ）。
 - ファームウェア管理：必要に応じてXVF3800ファームウェアを自動フラッシュ。
-
 
 ```yml
 respeaker_xvf3800:
@@ -1639,7 +1629,8 @@ micro_wake_word:
 
 - id: mww → 参照名。
 - microphone: i2s_mics、1チャンネル。
-- stop_after_detection: false → 継続的に聞き続けます。- okay_nabu, kenobi, hey_jarvis, hey_mycroft, stop（内部停止コマンド；独自のコマンドを追加可能）。
+- stop_after_detection: false → 継続的に聞き続けます。
+- okay_nabu, kenobi, hey_jarvis, hey_mycroft, stop（内部停止コマンド；独自のコマンドを追加可能）。
 - vad probability_cutoff: 0.05 → 音声感度。
 
 **検出時（マイクがミュートされていない場合）**
@@ -1687,11 +1678,6 @@ voice_assistant:
   - タイマーの状態と名前を更新。
   - LEDを更新。
   - ティッキングタイマーのLED更新を5秒ごとに削減。
-
-
-
-
-
 
 ## 特別な謝辞
 

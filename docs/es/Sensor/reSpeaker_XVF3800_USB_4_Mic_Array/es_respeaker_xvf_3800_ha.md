@@ -118,7 +118,6 @@ Selecciona tu nueva entrada de dispositivo y haz clic en **EDITAR**.
 
 Reemplaza el contenido con tu **configuración YAML** personalizada
 
-
 :::important
 Puedes encontrar el archivo YAML desde [Aquí](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main/config)
 :::
@@ -209,7 +208,6 @@ Con la **palabra de activación** incorporada: "Okay Nabu", puedes activar coman
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_voice_nabu.PNG" alt="pir" width={800} height="auto" /></p>
 
-
 ## Descripción YAML
 
 ### WiFi
@@ -250,7 +248,6 @@ i2c:
 - **frequency**: Velocidad de comunicación (100kHz es estándar).
 
 ### Interruptores
-
 
 <details>
 <summary>Interruptores</summary>
@@ -324,6 +321,7 @@ switch:
     on_turn_off:
       - script.execute: control_leds
 ```
+
 </details>
 
 Los interruptores son "botones" controlados por software en Home Assistant. Controlan características como sonido, temporizadores o alarmas.
@@ -373,8 +371,6 @@ Los interruptores son "botones" controlados por software en Home Assistant. Cont
 - Rastrea el estado de la alarma.
 - Ejecuta script LED cuando está encendido/apagado.
 
-
-
 ### Sensores
 
 <details>
@@ -421,8 +417,8 @@ text_sensor:
     id: current_time
     icon: mdi:clock
 ```
-__CODE_LINE_PLH__
 
+</details>
 
 Este bloque YAML añade controles y sensores para temporizadores, alarmas y brillo LED. Te permite ajustar el brillo del anillo LED con un deslizador, rastrear el próximo temporizador (tiempo + nombre), y mostrar la hora de la alarma y la hora actual del dispositivo en Home Assistant.
 
@@ -442,6 +438,7 @@ number:
 - restore_value mantiene la configuración anterior después del reinicio.
 
 **Próximo Temporizador**
+
 ```yml
 sensor:
   - platform: template
@@ -468,8 +465,6 @@ text_sensor:
 - Muestra la alarma actual y la hora del sistema ESP32.
 
 ### Efectos LED en intervalo
-
-
 
 ```yml
 interval:
@@ -1289,6 +1284,7 @@ interval:
             last_time_string = current_time_string;
           }
 ```
+
 </details>
 
 **Controlador Central (led_set_effect)**
@@ -1335,30 +1331,27 @@ script:
 | Temporizador sonando   | Respirar púrpura rápido |
 | Cambio de volumen      | Visualización temporal |
 
-
-
 #### Cómo Funciona el Control LED (Resumen del Flujo)
 
 1. **Activar un Efecto**
 
-   * Cuando algo sucede (ej., fallo de inicio, asistente de voz escuchando, temporizador sonando), se ejecuta un script.
-   * Ese script llama al **controlador LED central** (`led_set_effect`) y le dice:
+   - Cuando algo sucede (ej., fallo de inicio, asistente de voz escuchando, temporizador sonando), se ejecuta un script.
+   - Ese script llama al **controlador LED central** (`led_set_effect`) y le dice:
 
-     * **qué efecto** ejecutar (ej., respirar, arcoíris, cometa)
-     * **qué color** (valores R, G, B)
-     * **qué tan rápido** (velocidad).
+     - **qué efecto** ejecutar (ej., respirar, arcoíris, cometa)
+     - **qué color** (valores R, G, B)
+     - **qué tan rápido** (velocidad).
 
    Si el inicio falla → `led_set_effect` se llama con efecto = *respirar*, color = rojo.
 
-
 2. **Controlador Central (bucle de intervalo)**
 
-   * Cada **50ms** (20 veces por segundo), el bucle `led_animation_interval` verifica cuál es el **efecto actual**.
-   * Basado en ese nombre de efecto, **reenvía el control** al script de actualización correspondiente.
+   - Cada **50ms** (20 veces por segundo), el bucle `led_animation_interval` verifica cuál es el **efecto actual**.
+   - Basado en ese nombre de efecto, **reenvía el control** al script de actualización correspondiente.
 
-     * Si efecto = *respirar* → ejecuta `update_breathe_effect`.
-     * Si efecto = *arcoíris* → ejecuta `update_rainbow_effect`.
-     * Y así sucesivamente para parpadeo, cometa, tic de temporizador, haz LED, etc.
+     - Si efecto = *respirar* → ejecuta `update_breathe_effect`.
+     - Si efecto = *arcoíris* → ejecuta `update_rainbow_effect`.
+     - Y así sucesivamente para parpadeo, cometa, tic de temporizador, haz LED, etc.
 
 Este bucle actúa como un **despachador**: decide *qué script de animación ejecutar a continuación*.
 
@@ -1394,16 +1387,15 @@ interval:
 
 ```
 
-
 3. **Script de Actualización de Efecto**
 
-   * Cada efecto tiene su propio script que calcula los colores LED fotograma por fotograma.
-   * Ejemplo: **efecto respirar**
+   - Cada efecto tiene su propio script que calcula los colores LED fotograma por fotograma.
+   - Ejemplo: **efecto respirar**
 
-     * Usa una onda sinusoidal para desvanecer el brillo hacia arriba y hacia abajo suavemente.
-     * Multiplica el brillo por la configuración global del anillo LED (velocidad, deslizador de brillo, color R/G/B).
-     * Construye un array de colores para los 12 LEDs.
-     * Envía los colores al anillo LED Respeaker.
+     - Usa una onda sinusoidal para desvanecer el brillo hacia arriba y hacia abajo suavemente.
+     - Multiplica el brillo por la configuración global del anillo LED (velocidad, deslizador de brillo, color R/G/B).
+     - Construye un array de colores para los 12 LEDs.
+     - Envía los colores al anillo LED Respeaker.
 
 Ejemplo:
 
@@ -1571,14 +1563,12 @@ media_player:
 
 ### Integración Respeaker XVF3800
 
-
 - dirección i2c: 0x2C
 - ID: respeaker
 - Interruptor de Silencio del Micrófono: Se actualiza cada 1 segundo, reproduce sonido al alternar.
 - Reporte de Versión DFU: Reporta firmware cada 120s.
 - Sensor de Dirección del Haz: Rastrea el haz de voz (solo interno).
 - Gestión de Firmware: Auto-flashea firmware XVF3800 si es necesario.
-
 
 ```yml
 respeaker_xvf3800:
@@ -1639,7 +1629,8 @@ Detecta tus palabras de activación (como "Okay Nabu") e inicia el asistente de 
 
 - id: mww → Nombre de referencia.
 - microphone: i2s_mics, 1 canal.
-- stop_after_detection: false → Mantiene la escucha continua.- okay_nabu, kenobi, hey_jarvis, hey_mycroft, stop (comando de parada interno; puedes agregar el tuyo propio).
+- stop_after_detection: false → Mantiene la escucha continua.
+- okay_nabu, kenobi, hey_jarvis, hey_mycroft, stop (comando de parada interno; puedes agregar el tuyo propio).
 - vad probability_cutoff: 0.05 → Sensibilidad del habla.
 
 **En Detección (si el micrófono no está silenciado)**
@@ -1687,11 +1678,6 @@ Controla el comportamiento e interacciones de tu asistente de voz (VA).
   - Actualiza estados y nombres de temporizadores.
   - Actualiza LEDs.
   - Reduce las actualizaciones de LED a cada 5 segundos para temporizador en funcionamiento.
-
-
-
-
-
 
 ## Agradecimientos Especiales
 
