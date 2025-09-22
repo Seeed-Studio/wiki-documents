@@ -118,7 +118,6 @@ Select your new device entry and click **EDIT**.
 
 Replace the content with your custom **YAML configuration**
 
-
 :::important
 You can Found the YAML file from [Here](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main/config)
 :::
@@ -209,8 +208,6 @@ With the built-in **wake word**: “Okay Nabu”, you can effortlessly trigger v
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_voice_nabu.PNG" alt="pir" width={800} height="auto" /></p>
 
-
-
 ## YAML description
 
 ### WiFi
@@ -251,7 +248,6 @@ i2c:
 - **frequency**: Communication speed (100kHz is standard).
 
 ### Switches
-
 
 <details>
 <summary>Switches</summary>
@@ -325,6 +321,7 @@ switch:
     on_turn_off:
       - script.execute: control_leds
 ```
+
 </details>
 
 Switches are software-controlled “buttons” in Home Assistant. They control features like sound, timers, or alarms.
@@ -374,8 +371,6 @@ Switches are software-controlled “buttons” in Home Assistant. They control f
 - Tracks alarm status.
 - Runs LED script when on/off.
 
-
-
 ### Sensors
 
 <details>
@@ -422,8 +417,8 @@ text_sensor:
     id: current_time
     icon: mdi:clock
 ```
-</details>
 
+</details>
 
 This YAML block adds controls and sensors for timers, alarms, and LED brightness. It lets you adjust the LED ring brightness with a slider, track the next timer (time + name), and display alarm time and the device’s current time in Home Assistant.
 
@@ -443,6 +438,7 @@ number:
 - restore_value keeps previous setting after restart.
 
 **Next Timer**
+
 ```yml
 sensor:
   - platform: template
@@ -469,8 +465,6 @@ text_sensor:
 - Displays current alarm and ESP32 system time.
 
 ### LED Effects on interval
-
-
 
 ```yml
 interval:
@@ -1289,8 +1283,8 @@ interval:
             id(current_time).publish_state(current_time_string);
             last_time_string = current_time_string;
           }
-
 ```
+
 </details>
 
 **Central Controller (led_set_effect)**
@@ -1337,30 +1331,27 @@ script:
 | Timer ringing          | Purple fast breathe   |
 | Volume change          | Temporary display     |
 
-
-
 #### How LED Control Works (Flow Overview)
 
 1. **Triggering an Effect**
 
-   * When something happens (e.g., startup failed, voice assistant listening, timer ringing), a script runs.
-   * That script calls the **central LED controller** (`led_set_effect`) and tells it:
+   - When something happens (e.g., startup failed, voice assistant listening, timer ringing), a script runs.
+   - That script calls the **central LED controller** (`led_set_effect`) and tells it:
 
-     * **which effect** to run (e.g., breathe, rainbow, comet)
-     * **what color** (R, G, B values)
-     * **how fast** (speed).
+     - **which effect** to run (e.g., breathe, rainbow, comet)
+     - **what color** (R, G, B values)
+     - **how fast** (speed).
 
    If startup fails → `led_set_effect` is called with effect = *breathe*, color = red.
 
-
 2. **Central Controller (interval loop)**
 
-   * Every **50ms** (20 times per second), the `led_animation_interval` loop checks what the **current effect** is.
-   * Based on that effect name, it **forwards control** to the matching update script.
+   - Every **50ms** (20 times per second), the `led_animation_interval` loop checks what the **current effect** is.
+   - Based on that effect name, it **forwards control** to the matching update script.
 
-     * If effect = *breathe* → runs `update_breathe_effect`.
-     * If effect = *rainbow* → runs `update_rainbow_effect`.
-     * And so on for twinkle, comet, timer tick, LED beam, etc.
+     - If effect = *breathe* → runs `update_breathe_effect`.
+     - If effect = *rainbow* → runs `update_rainbow_effect`.
+     - And so on for twinkle, comet, timer tick, LED beam, etc.
 
 This loop acts like a **dispatcher**: it decides *which animation script to run next*.
 
@@ -1396,16 +1387,15 @@ interval:
 
 ```
 
-
 3. **Effect Update Script**
 
-   * Each effect has its own script that calculates the LED colors frame-by-frame.
-   * Example: **breathe effect**
+   - Each effect has its own script that calculates the LED colors frame-by-frame.
+   - Example: **breathe effect**
 
-     * Uses a sine wave to fade brightness up and down smoothly.
-     * Multiplies brightness by the LED ring’s global settings (speed, brightness slider, R/G/B color).
-     * Builds a color array for all 12 LEDs.
-     * Sends the colors to the Respeaker LED ring.
+     - Uses a sine wave to fade brightness up and down smoothly.
+     - Multiplies brightness by the LED ring’s global settings (speed, brightness slider, R/G/B color).
+     - Builds a color array for all 12 LEDs.
+     - Sends the colors to the Respeaker LED ring.
 
 Example:
 
@@ -1573,14 +1563,12 @@ media_player:
 
 ### Respeaker XVF3800 Integration
 
-
 - i2c address: 0x2C
 - ID: respeaker
 - Microphone Mute Switch: Updates every 1 second, plays sound on toggle.
 - DFU Version Reporting: Reports firmware every 120s.
 - Beam Direction Sensor: Tracks voice beam (internal only).
 - Firmware Management: Auto-flash XVF3800 firmware if needed.
-
 
 ```yml
 respeaker_xvf3800:
@@ -1690,11 +1678,6 @@ Controls your voice assistant (VA) behavior and interactions.
   - Updates timer states and names.
   - Updates LEDs.
   - Reduces LED updates to every 5 seconds for ticking timer.
-
-
-
-
-
 
 ## Special Thanks
 
