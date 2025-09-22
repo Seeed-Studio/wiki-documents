@@ -149,25 +149,25 @@ SELECT * FROM room
 influx
 ```
 
-**Step 2**. Create an admin user with all privileges (replace `<password>` with your secure password):
+**步骤 2**. 创建一个拥有所有权限的管理员用户（将 `<password>` 替换为您的安全密码）：
 
 ```sh
 CREATE USER admin WITH PASSWORD '<password>' WITH ALL PRIVILEGES
- ```
+```
 
-**Step 3**. Exit the InfluxDB CLI:
+**步骤 3**. 退出 InfluxDB CLI：
 
 ```sh
 exit
 ```
 
-**Step 4**. Edit the InfluxDB configuration to enable authentication:
+**步骤 4**. 编辑 InfluxDB 配置以启用身份验证：
 
 ```sh
 sudo nano /etc/influxdb/influxdb.conf
 ```
 
-Under the `[HTTP]` section, add or modify the following lines:
+在 `[HTTP]` 部分下，添加或修改以下行：
 
 ```
     auth-enabled = true
@@ -178,13 +178,13 @@ Under the `[HTTP]` section, add or modify the following lines:
     bind-address=":8086"
 ```
 
-**Step 5**. Restart the InfluxDB service to apply the changes:
+**步骤 5**. 重启 InfluxDB 服务以应用更改：
 
 ```sh
 sudo systemctl restart influxdb
 ```
 
-**Step 6**. Connect to InfluxDB with the admin user:
+**步骤 6**. 使用管理员用户连接到 InfluxDB：
 
 ```sh
 influx -username admin -password <password>
