@@ -43,7 +43,7 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 
-Then create a container in the current directory as follows:
+然后在当前目录下按如下方式创建一个容器：
 
 ```bash
 docker run --privileged --name MyName -v $PWD:/workspace -it sophgo/tpuc_dev:v3.1
@@ -85,7 +85,7 @@ pip install tpu_mlir[torch]==1.7
 pip install tpu_mlir[all]==1.7
 ```
 
-When the `tpu_mlir-{version}.whl` file already exists locally, you can also use the following command to install it:
+当本地已经存在 `tpu_mlir-{version}.whl` 文件时，您也可以使用以下命令进行安装：
 
 ```bash
 pip install path/to/tpu_mlir-{version}.whl[all]
@@ -121,14 +121,14 @@ reCamera 已经适配了 YOLO 系列进行本地推理。因此，本节使用 `
 pip install onnx
 ```
 
-Pull the program for modifying the version of the ONNX file from GitHub:
+从 GitHub 拉取用于修改 ONNX 文件版本的程序：
 
 ```bash
 git clone https://github.com/jjjadand/ONNX_Downgrade.git
 cd ONNX_Downgrade/
 ```
 
-Run the script by providing the input and output model file paths as command-line arguments:
+通过在命令行参数中提供输入和输出模型文件路径来运行该脚本：
 
 ```bash
 python downgrade_onnx.py <input_model_path> <output_model_path> --target_ir_version <IR_version> --target_opset_version <Opset_version>
@@ -579,7 +579,7 @@ model_transform \
   --mlir yolov5s.mlir
 ```
 
-Then we also need to generate the calibration table, and this step is the same as in the previous section:
+然后我们还需要生成校准表，这一步与前一部分中的步骤相同：
 
 ```bash
 run_calibration \
@@ -695,7 +695,7 @@ model_deploy \
   --model yolov5s_mix-precision.cvimodel
 ```
 
-After obtaining `yolov5s_mix-precision.cvimodel`, we can use `model_tool` to view detailed information about the model:
+在获得 `yolov5s_mix-precision.cvimodel` 后，我们可以使用 `model_tool` 查看该模型的详细信息：
 
 ```bash
 model_tool --info yolov5s_mix-precision.cvimodel
