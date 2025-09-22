@@ -287,8 +287,8 @@ El efecto se muestra en la siguiente figura.
 
 :::tip
 
-- Si deseas usar reTerminal E1001, puedes consultar el enlace：[Programando reTerminal E1001](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
-- Si quieres usar su biblioteca GxEPD2, puedes consultar el enlace.: [Usando la Biblioteca GxEPD2](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
+- Si deseas usar reTerminal E1001, puedes consultar el enlace：[Programando reTerminal E1001](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino/)
+- Si quieres usar su biblioteca GxEPD2, puedes consultar el enlace.: [Usando la Biblioteca GxEPD2](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino/)
 
 :::
 
