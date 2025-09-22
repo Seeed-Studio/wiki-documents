@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/15/2025
+  date: 09/22/2025
   author: Frank
 ---
 
@@ -17,53 +17,57 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 15th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 22nd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Seeed Studio BeagleBone® Green Eco](https://wiki.seeedstudio.com/getting_started_with_seeedstudio_beaglebone_green_eco/)
+### [Getting Started with AC1](https://wiki.seeedstudio.com/ac1/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/1-102111198-Seeed-Studio-BeagleBoneR-Green-Eco.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/ac1/ac1_1.png" alt="pir" width={800} height="auto" /></p>
 
-**The Seeed Studio BeagleBone® Green Eco** is an industrial-grade, open-source single-board computer, co-developed with the BeagleBoard.org® Foundation and powered by the robust **TI AM3358 SoC**. This "Eco" version is engineered for high efficiency, incorporating an advanced TI power management chip (TPS6521403) to ensure optimized energy consumption. It is well-equipped for demanding applications with a generous 16GB of onboard eMMC storage and a Gigabit Ethernet port for high-speed network connectivity.
+Active Camera, invented by RoboSense, is a groundbreaking category in robotic vision designed to tackle the challenges of mobility perception and operational cognition.
+The AC1, the first in this series, integrates multiple sensors to deliver hardware-level fusion of depth information, image data, and motion posture data, synchronized in time and space. This enables robots to capture comprehensive environmental details, overcoming interference from sunlight and highly reflective surfaces, and adapting to diverse indoor and outdoor scenarios.
+In this wiki, we will demonstrate the detailed process of using AC1 together with reComputer Robotics.
 
-### [Getting started with AmazingHand](https://wiki.seeedstudio.com/hand_amazinghand/)
+### [Getting Started with reTerminal E Series ePaper Display and EEZStudio](https://wiki.seeedstudio.com/reterminal_e10xx_with_eezstudio/)
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/pollen-robotics/AmazingHand/main/assets/Patterns_Overview.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez.jpg" alt="pir" width={800} height="auto" /></p>
 
-The **AmazingHand** is an open-source robotic hand project designed to make research and experimentation with humanoid manipulation accessible and affordable. Traditional robotic hands are often prohibitively expensive and rely on complex, bulky forearm actuators. The AmazingHand solves this by integrating all its motors directly into a compact, 3D-printable design.
+This guide will walk you through designing a professional user interface for the reTerminal E Series using the visual design tool **EEZStudio**. You will learn how to create UI elements, generate the necessary code, and finally deploy it to the device using the Arduino IDE. This process allows you to build custom interfaces with excellent visibility and ultra-low power consumption, ideal for HMI applications.
 
-### [Crowd Flow Heatmap with Home Assistant](https://wiki.seeedstudio.com/crowd-flow-monitoring/)
+### [reTerminal E Series ePaper Display Work with Lopaka](https://wiki.seeedstudio.com/reterminal_e10xx_with_lopaka/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/lovelace-heatmap-card-config.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.jpg" alt="pir" width={800} height="auto" /></p>
 
-Want a clear view of how people move through a space? With **Home Assistant** and a **Floorplan Heatmap**, you can do just that. This solution lets you overlay person-hour data onto your floor plan, making it easy to see how the space is being used at a glance.
+This article mainly describes how to use the Lopaka website to create exquisite user interfaces and apply them in the reTerminal E series.
 
-### [Using XIAO ESP32-C3 on MicroBlocks](https://wiki.seeedstudio.com/xiao_esp32c3_microblocks/)
+### [DM_Gripper – Open-Source Assembly Guide](https://wiki.seeedstudio.com/dm_gripper/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/microblocks.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/end_effectors/dm_gripper/1-100094243--Seeed-Gripper-01.jpg" alt="pir" width={800} height="auto" /></p>
 
-MicroBlocks is a blocks-language that makes it easy for beginners (9 years to adults) to program microcontrollers. Yet in spite of its apparent simplicity, MicroBlocks is a powerful programming language with better performance than MicroPython; the ability to control GPIO pins and interface to peripherals via I2C, SPI, and serial; and nearly 200 extension libraries. This document explains how to use the Seeed Studio XIAO ESP32-C3 with MicroBlocks, including firmware installation, connection methods, and basic examples (such as blinking an LED), helping you get started quickly with block-based programming.
+The **DM_Gripper** is an open-source, **3D-printed robotic gripper** designed around the **DM-4310-2EC motor**. Its modular design emphasizes ease of assembly and disassembly, enabling both hobbyists and robotics developers to **rapidly prototype, customize, and scale** their projects.
 
-In addition, we also provide tutorial documents for **[XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_microblocks/)**, **[XIAO RP2040](https://wiki.seeedstudio.com/xiao_rp2040_microblocks/)**, **[XIAO RP2350](https://wiki.seeedstudio.com/xiao_rp2350_microblocks/)**, **[XIAO SAMD21](https://wiki.seeedstudio.com/xiao_samd21_microblocks/)**, and **[XIAO nRF52840](https://wiki.seeedstudio.com/xiao_ble_microblocks/)**.
+### [SenseCAP Watcher - AI Assistant that actively interacts with the world](https://wiki.seeedstudio.com/hello_watcher_llms/)
 
-### [Power Consumptions Example for XIAO nRF54L15 (PlatformIO)](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_power_consumptions/)
+<iframe class="youtube-video-r" src="https://www.youtube.com/embed/6UDVsv953Tw?si=6OYFfx4orpC5p90d" title="SenseCAP Watcher for Xiaozhi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/new/6.png" alt="pir" width={800} height="auto" /></p>
+Watcher's "Keen Eye" is powered by a powerful **On-Device AI Vision Chip (Himax)**, enabling rapid local processing for object recognition and target tracking. Combined with the expandable **XiaoZhi** assistant firmware, it's more than just a camera—it's a dedicated AI assistant that evolves and understands your needs.
 
-This document presents the power consumption of the Seeed Studio XIAO nRF54L15 Sense in different operating modes, covering BLE advertising and ultra-low-power System Off mode, with code examples and test data based on PlatformIO.
+### [TensorFlow Lite on ReSpeaker XVF3800](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_tensorflow/)
 
-### [Use Zoneminder on reComputer](https://wiki.seeedstudio.com/zoneminder_on_recomputer/)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/zoneminder/zone_m.png" alt="pir" width={600} height="auto" /></p>
+In this tutorial, you’ll build a custom voice recognition system on the Seeed XIAO ESP32 with the XVF3800 ReSpeaker using TensorFlow Lite Micro. We’ll cover data collection, preprocessing, model training, TFLite conversion, and deployment, resulting in a microcontroller-based system that can recognize spoken commands in real time.
 
-[Zoneminder](https://github.com/ZoneMinder/zoneminder) is an open-source video surveillance software that allows you to monitor and manage security cameras. It supports various types of cameras, including IP cameras, USB webcams, and analog cameras. ZoneMinder offers features like motion detection, video recording, alarm notifications, and remote viewing through a web interface. It's highly customizable, making it suitable for both personal and professional surveillance needs. Plus, being open-source, it’s free to use and can be adapted to different setups.
+### [ChirpStack R1X Gateway Integration with SenseCAP S2101](https://wiki.seeedstudio.com/chirpstack_lora_gateway_r1x00/)
+
+This guide shows how to set up a LoRaWAN gateway on the Seeed reComputer R11 (powered by Raspberry Pi) with the WM1302 module. Using Docker, ChirpStack, and the Semtech Packet Forwarder, you can build a scalable gateway that streams IoT data via MQTT from devices like the SenseCAP S2101.
 
 ## Existing Wiki Updated
 
-### [Grove Beginner Kit For Arduino](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/)
+### [Smart Home Voice Control with Home Assistant](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_home_assistant/)
 
-We updated the examples for [SPA06-003](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/#for-spa06-003-new-version-after-october-2025).
+We added content about the [YAML description](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_home_assistant/#yaml-description).
 
 ## The Efforts of Contributor
 
@@ -204,5 +208,6 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.8.25th](/Seeed_Elderly/weekly_wiki/wiki250825)
 - [weekly wiki on 2025.9.01st](/Seeed_Elderly/weekly_wiki/wiki250901)
 - [weekly wiki on 2025.9.08th](/Seeed_Elderly/weekly_wiki/wiki250908)
+- [weekly wiki on 2025.9.15th](/Seeed_Elderly/weekly_wiki/wiki250915)
 
 </details>
