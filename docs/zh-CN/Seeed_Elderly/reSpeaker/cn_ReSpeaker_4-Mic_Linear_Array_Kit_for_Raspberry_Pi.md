@@ -203,7 +203,7 @@ plughw:CARD=seeed8micvoicec,DEV=0
 
 **Step 3. Record and Play**
 
-You can record then play, or you can record and play at the same time.
+你可以先录制然后播放，或者可以同时录制和播放。
 
 ```
 #It will capture sound on AC108 and save as a.wav
@@ -284,7 +284,7 @@ python3 recording_examples/record.py
 python3 recording_examples/record_one_channel.py
 ```
 
-To play the recorded samples you can either use aplay system utility, for example
+要播放录制的样本，您可以使用 aplay 系统实用程序，例如
 
 ```bash
 aplay -f cd -Dhw:0 output.wav #for Stereo sound

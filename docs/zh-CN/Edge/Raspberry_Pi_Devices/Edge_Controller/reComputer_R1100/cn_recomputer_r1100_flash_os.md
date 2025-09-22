@@ -339,7 +339,7 @@ sudo apt-get update
 sudo apt install git pkg-config make gcc libusb-1.0-0-dev
 ```
 
-- **Step 3.** Git might produce an error if the date is not set properly. Type the following to correct this
+- **步骤 3.** 如果日期设置不正确，Git 可能会产生错误。输入以下内容来纠正这个问题
 
 ```sh
 sudo date MMDDhhmm
@@ -495,7 +495,7 @@ ECDSA key fingerprint is SHA256:XXXXXXX.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-- **Step 3.** When it asks for the password, type the following
+- **步骤 3.** 当它要求输入密码时，请输入以下内容
 
 ```sh
 # password for user

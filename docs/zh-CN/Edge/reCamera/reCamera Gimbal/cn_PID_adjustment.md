@@ -115,7 +115,7 @@ gimbal pid <id> <a|s>
 gimbal pid 1 a
 ```
 
-This command retrieves the angle PID settings for the yaw axis.
+此命令获取偏航轴的角度 PID 设置。
 
 ### Setting PID Values
 

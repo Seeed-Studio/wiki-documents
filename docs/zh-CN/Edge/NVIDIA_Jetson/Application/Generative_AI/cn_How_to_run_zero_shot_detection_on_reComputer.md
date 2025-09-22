@@ -79,7 +79,7 @@ sudo systemctl start jetson-gpu-monitoring
 /opt/nvidia/jetson/services/ingress/config/platform-nginx.conf
 ```
 
-**Step 5**: Start the API Gateway to access the monitoring dashboard.
+**步骤 5**: 启动API网关以访问监控仪表板。
 
 ```bash
 sudo systemctl restart jetson-ingress
@@ -93,7 +93,7 @@ sudo systemctl restart jetson-vst
 sudo docker compose up -d
 ```
 
-To check if all required containers have started, you can run the following command:
+要检查所有必需的容器是否已启动，可以运行以下命令：
 
 ```bash
 sudo docker ps

@@ -155,7 +155,7 @@ Home Assistant Green 是自动化家居最简单且最注重隐私的方式。�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/35.png" style={{width:1000, height:'auto'}}/></div>
 
-<!-- Inside the default generated code, the framework of esp32 may be `esp-idf`, which we need to change to `arduino`.
+<!-- 在默认生成的代码中，esp32 的框架可能是 `esp-idf`，我们需要将其更改为 `arduino`。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_arduino.png" style={{width:600, height:'auto'}}/></div> -->
 
@@ -1001,7 +1001,7 @@ lambda: |-
 
 **Using Multiple Images**
 
-To display multiple images on the same screen, define each image in your configuration:
+要在同一屏幕上显示多个图像，请在配置中定义每个图像：
 
 ```yaml
 image:

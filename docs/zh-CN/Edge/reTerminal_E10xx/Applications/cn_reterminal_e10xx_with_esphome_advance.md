@@ -1313,15 +1313,15 @@ display:
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/102.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-When the device is in deep sleep mode, you can't upload a new program directly. Follow these steps to enter download mode:
+当设备处于深度睡眠模式时，你无法直接上传新程序。请按照以下步骤进入下载模式：
 
-Step 1. Make sure the device is turned on. Then, press and hold the **Boot** button located next to the USB-C port on the XIAO ESP32-S3 Plus.
+步骤 1. 确保设备已开机。然后，按住并保持位于 XIAO ESP32-S3 Plus 上 USB-C 端口旁边的**Boot**按钮。
 
-Step 2. While holding the **Boot** button, press the **Reset** button once, then release the **Boot** button.
+步骤 2. 按住 **Boot** 按钮的同时，按一下 **Reset** 按钮，然后松开 **Boot** 按钮。
 
-Step 3. Turn off the battery switch and unplug the power cable.
+步骤 3. 关闭电池开关并拔掉电源线。
 
-Step 4. Finally, replug the cable and upload a new program. -->
+步骤 4. 最后，重新插入电缆并上传新程序。 -->
 
 ### Q3: Wi-Fi 上传程序失败？
 

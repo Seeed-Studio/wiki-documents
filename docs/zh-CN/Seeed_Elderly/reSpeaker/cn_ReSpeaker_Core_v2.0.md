@@ -382,7 +382,7 @@ sudo nmtui              # respeaker user needs sudo
 ip address
 ```
 
-In the example below, we can see that this ReSpeaker's IP address is ```192.168.7.108```
+在下面的例子中，我们可以看到这个ReSpeaker的IP地址是```192.168.7.108```
 
 ```
 root@v2:/home/respeaker# ip address
@@ -618,7 +618,7 @@ respeaker@v2:~$ ps aux|grep pulse|grep -v grep
 respeak+  1109  0.0  0.7 363272  7932 ?        S<l  01:01   0:00 /usr/bin/pulseaudio --start --log-target=syslog
 ```
 
-If it's not, please refer to PulseAudio's documentation to enable the auto-spawn of PulseAudio. Then test via:
+如果不是，请参考 PulseAudio 的文档来启用 PulseAudio 的自动生成。然后通过以下方式测试：
 
 ```
 parecord --channels=8 --rate=16000 --format=s16le hello2.wav
@@ -916,7 +916,7 @@ alsamixer
 sudo pip install evdev
 ```
 
-- **Step 2.** Copy the code below and save it as a python file, let's name it **usrer_button.py**.
+- **步骤 2.** 复制下面的代码并将其保存为一个 Python 文件，我们将其命名为 **usrer_button.py**。
 
 ```
 from evdev import InputDevice,categorize,ecodes

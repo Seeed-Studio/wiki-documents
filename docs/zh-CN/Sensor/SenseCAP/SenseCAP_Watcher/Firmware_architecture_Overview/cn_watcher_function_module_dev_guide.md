@@ -65,7 +65,7 @@ esp_err_t tf_module_uart_alarm_register(void)
 }
 ```
 
-The fourth parameter is a struct that contains necessary API functions to manage the life cycle of this FM.
+第四个参数是一个结构体，其中包含管理这个FM生命周期所需的API函数。
 
 ```cpp
 // in tf_module.h

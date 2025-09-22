@@ -206,13 +206,13 @@ unzip A603-Orin-NX-JP5.1.1.zip
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例如（用户名："nvidia"，密码："nvidia"，设备名称："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
 ```
 
-**Step 6:** Flash the system to either NVMe SSD or USB Flash drive
+**步骤 6:** 将系统刷写到 NVMe SSD 或 USB 闪存驱动器
 
 ```sh
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
@@ -265,13 +265,13 @@ unzip A603-Orin-NX-JP5.1.1.zip
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例如（用户名："nvidia"，密码："nvidia"，设备名称："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
 ```
 
-**Step 6:** Flash the system to either NVMe SSD or USB Flash drive
+**步骤 6:** 将系统刷写到 NVMe SSD 或 USB 闪存驱动器
 
 ```sh
 cd Linux_for_Tegra
@@ -322,7 +322,7 @@ unzip A603-JP5.1.2.zip
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例如（用户名："nvidia"，密码："nvidia"，设备名称："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
@@ -352,8 +352,8 @@ wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v6.0/releas
 wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v6.0/release/tegra_linux_sample-root-filesystem_r35.6.0_aarch64.tbz2
 ```
 
-**Step 2:** Assemble the Flashing Package
-Execute the following commands in order:
+**步骤 2:** 组装刷机包
+按顺序执行以下命令：
 
 ```bash
 tar xf jetson_linux_r35.6.0_aarch64.tbz2
@@ -444,7 +444,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例如（用户名："nvidia"，密码："nvidia"，设备名称："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
@@ -474,8 +474,8 @@ wget https://developer.nvidia.com/downloads/embedded/l4t/r36_release_v4.0/releas
 wget https://developer.nvidia.com/downloads/embedded/l4t/r36_release_v4.0/release/Tegra_Linux_Sample-Root-Filesystem_R36.4.0_aarch64.tbz2
 ```
 
-**Step 2:** Assemble the Flashing Package
-Execute the following commands in order:
+**步骤 2:** 组装刷机包
+按顺序执行以下命令：
 
 ```bash
 tar xf Jetson_Linux_R36.4.0_aarch64.tbz2
@@ -637,7 +637,7 @@ sudo modprobe mttcan
 sudo ip link set can0 type can bitrate 500000
 ```
 
-Optionally, you can change the bitrate to 1000000. Then, bring up can0:
+你可以选择将比特率更改为 1000000。然后，调出 can0：
 
 ```sh
 sudo ip link set can0 up

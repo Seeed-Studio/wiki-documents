@@ -74,7 +74,7 @@ Run the following commands.
 sudo apt install apache2 mariadb-server
 ```
 
-Switch into root user and create database and database user.
+切换到 root 用户并创建数据库和数据库用户。
 
 ```bash
 sudo su

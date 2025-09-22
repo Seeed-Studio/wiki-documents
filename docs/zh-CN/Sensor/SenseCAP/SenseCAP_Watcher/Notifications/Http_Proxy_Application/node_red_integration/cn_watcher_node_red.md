@@ -55,7 +55,7 @@ last_update:
 npm install -g npm@2.x
 ```
 
-Once installed, open a command prompt and run the following command to ensure Node.js and npm are installed correctly.
+安装完成后，打开命令提示符并运行以下命令，以确保 Node.js 和 npm 已正确安装。
 
 ```sh
 node --version && npm --version
@@ -76,7 +76,7 @@ You should receive back output that looks similar to:
 npm install -g --unsafe-perm node-red
 ```
 
-If Node-RED is installed as a global npm package, then execute the command node-red directly:
+如果 Node-RED 被安装为全局 npm 包，那么直接执行命令 node-red：
 
 ```sh
 node-red

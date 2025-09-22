@@ -298,7 +298,7 @@ sudo mount <USB Device Path> /media/USB/
 sudo mount /dev/sda1 /media/USB/
 ```
 
-Use the following command to check the mount location of the device.
+使用以下命令检查设备的挂载位置。
 
 ```sh
 sudo findmnt -rno TARGET <USB Device Path>
@@ -495,7 +495,7 @@ LABEL primary
 sudo apt-get install minicom
 ```
 
-After waiting for the installation to complete, enter the command to start minicom.
+等待安装完成后，输入命令启动 minicom。
 
 ```sh
 sudo minicom

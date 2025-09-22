@@ -122,7 +122,7 @@ Starter bundle harness 是一块用于保护 Grove Starter Bundle 组件免受�
 
 *   [Grove - 酒精传感器](/cn/Grove-Alcohol_Sensor/ "Grove - Alcohol Sensor")
 
-*   [Grove - 串口LCD](/cn/Grove-Serial_LCD_V1.0/ "Grove - Serial LCD")
+*   [Grove - 串口LCD](/cn/Grove-Serial_LCD_V1.0/ "Grove - 串口 LCD")
 
 *   [Grove - RTC](/cn/Grove-RTC/ "Grove - RTC")
 

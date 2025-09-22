@@ -85,7 +85,7 @@ mkdir reterminal-yocto
 cd reterminal-yocto
 ```
 
-- **Step 3.** Create a new directory to add layers and enter it
+- **步骤 3.** 创建一个新目录来添加层并进入该目录
 
 ```sh
 mkdir layers 
@@ -107,7 +107,7 @@ git clone -b dunfell https://github.com/meta-qt5/meta-qt5.git
 git clone -b dunfell https://github.com/openembedded/meta-openembedded.git
 ```
 
-- **Step 6.** Change kernel version from 5.4 to 5.10 in meta-raspberrypi layer
+- **步骤 6.** 在 meta-raspberrypi 层中将内核版本从 5.4 更改为 5.10
 
 ```sh
 cd meta-raspberrypi/
@@ -134,7 +134,7 @@ bitbake-layers add-layer ../layers/meta-openembedded/meta-oe
 bitbake-layers add-layer ../layers/meta-openembedded/meta-python
 ```
 
-- **Step 9.** Move back to the **build** directory and execute the following to start compiling
+- **步骤 9.** 返回到 **build** 目录并执行以下命令开始编译
 
 ```sh
 MACHINE="seeed-reterminal" bitbake rpi-test-image
@@ -324,7 +324,7 @@ Toaster 是 OpenEmbedded 和 BitBake 的 Web 界面，BitBake 是 Yocto Project�
 sudo apt update
 ```
 
-- **Step 2.** Prepare the development environment on the host PC by installing the following packages
+- **步骤 2.** 在主机 PC 上准备开发环境，安装以下软件包
 
 ```sh
 sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
@@ -353,7 +353,7 @@ cd poky
 pip3 install --user -r bitbake/toaster-requirements.txt
 ```
 
-- **Step 6.** Revert to the following commit for the poky directory
+- **步骤 6.** 将 poky 目录恢复到以下提交
 
 ```sh
 git reset --hard 7ade8346b3a09983257589d22aaada47e0eec010
@@ -371,7 +371,7 @@ source oe-init-build-env
 source toaster start
 ```
 
-- **Step 9.** To access the Toaster web interface, open your favorite browser and enter the following
+- **步骤 9.** 要访问 Toaster 网页界面，请打开您喜欢的浏览器并输入以下内容
 
 ```sh
 http://127.0.0.1:8000
@@ -451,7 +451,7 @@ source toaster start webport=9000
 - Value: overlays/reTerminal.dtbo overlays/i2c3.dtbo
 ```
 
-**Note:** Make sure to add a space before **overlays/xxxx**
+**注意：** 确保在 **overlays/xxxx** 前添加一个空格
 
 - **Step 19.** Repeat the same to add the following
 

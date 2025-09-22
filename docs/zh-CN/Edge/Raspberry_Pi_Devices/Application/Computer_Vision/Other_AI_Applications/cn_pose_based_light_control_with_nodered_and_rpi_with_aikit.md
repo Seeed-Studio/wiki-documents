@@ -83,7 +83,7 @@ bash run.sh
 
 #### Step 4: Install Node-RED
 
-Install Node-RED. You can download Node-RED with just one line of command:
+安装 Node-RED。你可以用一行命令下载 Node-RED：
 
 ```
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)

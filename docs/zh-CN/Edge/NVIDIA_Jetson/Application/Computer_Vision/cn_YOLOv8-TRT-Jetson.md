@@ -978,7 +978,7 @@ wget <URL> -O <file_name>
 pip3 install <file_name>
 ```
 
-For example, here we are running **JP5.1.1** and therefore we choose **PyTorch v2.0.0**
+例如，在这里我们运行的是 **JP5.1.1**，因此我们选择 **PyTorch v2.0.0**
 
 ```sh
 sudo apt-get install -y libopenblas-base libopenmpi-dev
@@ -1013,7 +1013,7 @@ python3 setup.py install --user
 pip3 install onnx
 ```
 
-- **Step 2.** Downgrade to lower version of Numpy to fix an error
+- **步骤 2.** 降级到较低版本的Numpy以修复错误
 
 ```sh
 pip3 install numpy==1.20.3

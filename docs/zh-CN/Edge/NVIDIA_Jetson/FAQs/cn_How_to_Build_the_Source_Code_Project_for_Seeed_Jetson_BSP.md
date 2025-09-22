@@ -28,7 +28,7 @@ https://developer.nvidia.com/embedded/jetpack-archive。
 搜索您想要编译的特定 **L4T (Linux for Tegra)** 版本，例如：
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/google_L4T.jpg"/></div>
 
-<!-- After clicking on the web, download and prepare the sample root file system, NVIDIA's official BSP and the toolchain used for cross-compilation, as shown below.
+<!-- 点击网页后,下载并准备示例根文件系统、NVIDIA官方BSP以及用于交叉编译的工具链,如下所示。
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/download-BSP-rootfs-toolchain.png"/></div> -->
 
 从 NVIDIA 提取官方 BSP，您将得到一个名为 `Linux_for_Tegra` 的目录。然后，将根文件系统归档文件提取到官方 `Linux_for_Tegra` 目录中：
@@ -38,7 +38,7 @@ tar xf Jetson_Linux_r36.4.3_aarch64.tbz2
 sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_r36.4.3_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
 ```
 
-Sync the source code for compiling. Replace the argument after `-t` with **the L4T version you want**:
+同步用于编译的源代码。将 `-t` 后的参数替换为**你想要的 L4T 版本**：
 
 ```bash
 cd Linux_for_Tegra/source/

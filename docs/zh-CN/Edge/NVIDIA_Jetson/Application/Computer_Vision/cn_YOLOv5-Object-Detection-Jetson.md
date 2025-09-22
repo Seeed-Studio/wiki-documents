@@ -349,7 +349,7 @@ cp ~/Downloads/pink-flowers.v1i.yolov5pytorch.zip ~/yolov5
 unzip pink-flowers.v1i.yolov5pytorch.zip
 ```
 
-- **Step 3.** Open **data.yaml** file and edit **train** and **val** directories as follows
+- **步骤 3.** 打开 **data.yaml** 文件并按如下方式编辑 **train** 和 **val** 目录
 
 ```sh
 train: train/images
@@ -457,7 +457,7 @@ git clone https://github.com/wang-xinyu/tensorrtx
 cp tensorrtx/yolov5/gen_wts.py yolov5
 ```
 
-- **Step 12.** Generate **.wts** file from PyTorch with **.pt**
+- **步骤 12.** 从带有 **.pt** 的 PyTorch 生成 **.wts** 文件
 
 ```sh
 cd yolov5
@@ -477,20 +477,20 @@ cd tensorrtx/yolov5
 vi yololayer.h
 ```
 
-- **Step 15.** Change **CLASS_NUM** to the number of classes your model is trained. In our example, it is 2
+- **步骤 15.** 将 **CLASS_NUM** 更改为你的模型训练的类别数量。在我们的示例中，它是 2
 
 ```sh
 CLASS_NUM = 2
 ```
 
-- **Step 16.** Create a new **build** directory and navigate inside
+- **步骤 16.** 创建一个新的 **build** 目录并进入其中
 
 ```sh
 mkdir build 
 cd build
 ```
 
-- **Step 17.** Copy the previously generated **best.wts** file into this **build** directory
+- **步骤 17.** 将之前生成的 **best.wts** 文件复制到这个 **build** 目录中
 
 ```sh
 cp ~/yolov5/best.wts .
@@ -622,13 +622,13 @@ cd ~
 git clone https://github.com/marcoslucianops/DeepStream-Yolo
 ```
 
-- **Step 11.** Copy **gen_wts_yoloV5.py** from **DeepStream-Yolo/utils** into **yolov5** directory
+- **步骤 11.** 将 **gen_wts_yoloV5.py** 从 **DeepStream-Yolo/utils** 复制到 **yolov5** 目录
 
 ```sh
 cp DeepStream-Yolo/utils/gen_wts_yoloV5.py yolov5
 ```
 
-- **Step 12.** Inside the yolov5 repo, download **pt file** from YOLOv5 releases (example for YOLOv5s 6.1)
+- **步骤 12.** 在 yolov5 仓库内，从 YOLOv5 发布中下载 **pt 文件**（以 YOLOv5s 6.1 为例）
 
 ```sh
 cd yolov5
@@ -655,14 +655,14 @@ or
 -s 1280 1280
 ```
 
-- **Step 14.** Copy the generated **cfg** and **wts** files into the **DeepStream-Yolo** folder
+- **步骤 14.** 将生成的 **cfg** 和 **wts** 文件复制到 **DeepStream-Yolo** 文件夹中
 
 ```sh
 cp yolov5s.cfg ~/DeepStream-Yolo
 cp yolov5s.wts ~/DeepStream-Yolo
 ```
 
-- **Step 15.** Open the **DeepStream-Yolo** folder and compile the library
+- **步骤 15.** 打开 **DeepStream-Yolo** 文件夹并编译库
 
 ```sh
 cd ~/DeepStream-Yolo
@@ -672,7 +672,7 @@ CUDA_VER=11.4 make -C nvdsinfer_custom_impl_Yolo
 CUDA_VER=10.2 make -C nvdsinfer_custom_impl_Yolo
 ```
 
-- **Step 16.** Edit the **config_infer_primary_yoloV5.txt** file according to your model
+- **步骤 16.** 根据你的模型编辑 **config_infer_primary_yoloV5.txt** 文件
 
 ```sh
 [property]
@@ -711,7 +711,7 @@ deepstream-app -c deepstream_app_config.txt
 sudo apt-get install libopencv-dev
 ```
 
-- **Step 2.** Compile/recompile the **nvdsinfer_custom_impl_Yolo** library with OpenCV support
+- **步骤 2.** 使用 OpenCV 支持编译/重新编译 **nvdsinfer_custom_impl_Yolo** 库
 
 ```sh
 cd ~/DeepStream-Yolo
@@ -729,7 +729,7 @@ CUDA_VER=10.2 OPENCV=1 make -C nvdsinfer_custom_impl_Yolo
 mkdir calibration
 ```
 
-- **Step 5.** Run the following to select 1000 random images from COCO dataset to run calibration
+- **步骤 5.** 运行以下命令从COCO数据集中选择1000张随机图像来进行校准
 
 ```sh
 for jpg in $(ls -1 val2017/*.jpg | sort -R | head -1000); do \
@@ -752,7 +752,7 @@ export INT8_CALIB_IMG_PATH=calibration.txt
 export INT8_CALIB_BATCH_SIZE=1
 ```
 
-- **Step 8.** Update the **config_infer_primary_yoloV5.txt** file
+- **步骤 8.** 更新 **config_infer_primary_yoloV5.txt** 文件
 
 From
 

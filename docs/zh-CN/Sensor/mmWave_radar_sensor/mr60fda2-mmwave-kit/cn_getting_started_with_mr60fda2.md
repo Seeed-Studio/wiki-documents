@@ -143,7 +143,7 @@ last_update:
 <!-- 
 ### Breath Module
 
-This example demonstrates how to use the **MR60BHA2** sensor for monitoring breathing and heartbeat.
+这个例子演示了如何使用 **MR60BHA2** 传感器来监测呼吸和心跳。
 
 ```cpp
 #include <Arduino.h>
@@ -490,26 +490,26 @@ Arduino 串口监视器的输出如下：
 <!-- 
 ### Breath Module API
 
-This example uses the `SEEED_MR60BHA2` class to interface with the MR60BHA2 sensor for heart and breath monitoring. Here's what each key function does:
+这个例子使用`SEEED_MR60BHA2`类来与MR60BHA2传感器进行接口，用于心跳和呼吸监测。以下是每个关键功能的作用：
 
-- **`mmWave.begin(&mmWaveSerial)`**: 
-  - Initializes the sensor for communication using the specified serial interface. It sets up the connection between the XIAO board and the MR60BHA2 sensor.
+- **`mmWave.begin(&mmWaveSerial)`**：
+  - 使用指定的串行接口初始化传感器以进行通信。它建立了XIAO板和MR60BHA2传感器之间的连接。
 
 - **`mmWave.update(100)`**:
-  - Updates the sensor data. The parameter `100` is a timeout value in milliseconds, specifying how long to wait for the sensor to provide new data. If new data is available within this timeframe, the function returns `true`.
+  - 更新传感器数据。参数`100`是以毫秒为单位的超时值，指定等待传感器提供新数据的时间。如果在此时间范围内有新数据可用，函数返回`true`。
 
 - **`mmWave.getHeartBreathPhases(float &total_phase, float &breath_phase, float &heart_phase)`**:
-  - Retrieves the phase information related to heart and breath activities. 
-  - `total_phase` represents the overall phase shift, while `breath_phase` and `heart_phase` are specific to breathing and heartbeat activities, respectively.
+  - 获取与心跳和呼吸活动相关的相位信息。
+  - `total_phase` 表示总体相位偏移，而 `breath_phase` 和 `heart_phase` 分别特定于呼吸和心跳活动。
 
 - **`mmWave.getBreathRate(float &rate)`**:
-  - Fetches the current breath rate detected by the sensor. The rate is returned in the reference variable `rate`.
+  - 获取传感器检测到的当前呼吸率。呼吸率通过引用变量`rate`返回。
 
 - **`mmWave.getHeartRate(float &rate)`**:
-  - Retrieves the current heart rate detected by the sensor. The rate is returned in the reference variable `rate`.
+  - 获取传感器检测到的当前心率。心率值通过引用变量`rate`返回。
 
 - **`mmWave.getDistance(float &distance)`**:
-  - Gets the distance from the sensor to the detected object (e.g., human body). This function is useful for understanding the range of the detected signal. -->
+  - 获取从传感器到检测到的物体（例如人体）的距离。这个函数对于理解检测到的信号范围很有用。
 
 ## 跌倒模块 API
 

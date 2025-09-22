@@ -189,7 +189,7 @@ cd yolomodel/runs/detect/retrain_yolov8n/weights
 git clone https://github.com/hailo-ai/hailo_model_zoo.git
 ```
 
-Install coco dataset for evaluate/optimize/compile the yolov8n model
+安装 coco 数据集以评估/优化/编译 yolov8n 模型
 
 ```
 python hailo_model_zoo/datasets/create_coco_tfrecord.py val2017

@@ -40,7 +40,7 @@ cd engine-binaries
 sudo ./install.sh
 ```
 
-- **Step 2.** Install cmake, graphics, system libraries and fonts
+- **步骤 2.** 安装 cmake、图形库、系统库和字体
 
 ```sh
 sudo apt install cmake libgl1-mesa-dev libgles2-mesa-dev libegl1-mesa-dev libdrm-dev libgbm-dev ttf-mscorefonts-installer fontconfig libsystemd-dev libinput-dev libudev-dev  libxkbcommon-dev
@@ -52,7 +52,7 @@ sudo apt install cmake libgl1-mesa-dev libgles2-mesa-dev libegl1-mesa-dev libdrm
 sudo fc-cache
 ```
 
-- **Step 4.** Clone flutter-pi and cd into the cloned directory
+- **步骤 4.** 克隆 flutter-pi 并进入克隆的目录
 
 ```sh
 git clone https://github.com/ardera/flutter-pi

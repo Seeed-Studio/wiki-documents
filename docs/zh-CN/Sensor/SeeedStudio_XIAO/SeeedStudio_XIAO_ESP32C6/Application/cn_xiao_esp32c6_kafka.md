@@ -159,7 +159,7 @@ COPY . .
 CMD ["python", "app.py"]
 ```
 
-4. After creating that 3 files, then we can build a docker image by running the following code.
+4. 创建完这3个文件后，我们就可以通过运行以下代码来构建Docker镜像。
 
 ```
 docker build -t pyserver .
@@ -260,7 +260,7 @@ networks:
     driver: bridge
 ```
 
-2. And then we launch this docker cluster by running the following command. 
+2. 然后我们通过运行以下命令来启动这个 docker 集群。
 
 ```
 docker-compose up -d

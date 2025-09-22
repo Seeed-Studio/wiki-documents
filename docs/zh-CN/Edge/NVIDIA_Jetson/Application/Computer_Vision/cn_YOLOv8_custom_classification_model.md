@@ -154,18 +154,18 @@ sudo nvpmodel -m 0
 
 我将尝试识别的鸟类类别有：
 
-- Barn Swallow
-- Common Firecrest
-- Common Nightingale
-- Eurasian Chaffinch
-- Eurasian Crag Martin
-- European Goldfinch
-- European Greenfinch
-- European Serin
-- House Sparrow
-- Spanish Sparrow
-- Western House Martin
-- white Wagtail
+- 家燕
+- 欧金冠戴菊
+- 欧夜莺
+- 苍头燕雀
+- 欧岩燕
+- 欧洲金翅雀
+- 欧洲绿金翅雀
+- 欧丝雀
+- 家麻雀
+- 西班牙麻雀
+- 白腰雨燕
+- 白鹡鸰
 
 选择您的数据集并从 roboflow 下载。
 选择数据集后，选择"Download Dataset"。- 您需要一个账户。
@@ -301,8 +301,8 @@ Let's install roboflow and jupyterlab
 pip install roboflow jupyterlab
 ```
 
-Now, let's download the dataset.
-If you're using the notebook, just replace the code there.
+现在，让我们下载数据集。
+如果你正在使用笔记本，只需替换那里的代码。
 
 ```python
 rf = Roboflow(api_key="<your_api_key>")
@@ -528,7 +528,7 @@ class_names = results.names
 top1 = results.probs.top1
 ```
 
-Next, we print the highest probability class that should be the bird species.
+接下来,我们打印出概率最高的类别,这应该是鸟类的种类。
 
 ```python
 print (f" The detected bird is: {class_names[top1]}")

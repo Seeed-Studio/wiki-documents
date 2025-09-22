@@ -132,7 +132,7 @@ sudo usermod -aG docker pi
 docker --version
 ```
 
-If you see an output like below, that means Docker is installed properly
+如果你看到如下输出，表示 Docker 已正确安装
 
 ```
 Docker version 20.10.18, build b40c2f6
@@ -216,7 +216,7 @@ wget https://github.com/home-assistant/supervised-installer/releases/download/1.
 sudo dpkg -i homeassistant-supervised.deb
 ```
 
-- **Step 15.** If there are any errors in the installation, pleae run the bellow command to fix broken installations
+- **步骤 15。** 如果安装过程中出现任何错误，请运行以下命令来修复损坏的安装
 
 ```sh
 sudo apt --fix-broken install
@@ -292,7 +292,7 @@ homeassistant.local:8123
 cd /etc/xdg/lxsession/LXDE-pi/
 ```
 
-- **Step 2.** Open **autostart** file with **nano text editor**
+- **步骤 2.** 使用 **nano 文本编辑器**打开 **autostart** 文件
 
 ```sh
 sudo nano autostart

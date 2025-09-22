@@ -144,7 +144,7 @@ void WiFiConnect(void){
 }
 ```
 
-The `ssid` and `password` variables hold the SSID and password of the network you want to connect to.
+`ssid`和`password`变量保存了你想要连接的网络的SSID和密码。
 
 ```c
 // Replace with your network credentials

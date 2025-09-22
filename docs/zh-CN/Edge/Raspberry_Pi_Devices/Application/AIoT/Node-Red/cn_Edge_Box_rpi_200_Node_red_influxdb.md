@@ -71,7 +71,7 @@ echo "deb [signed-by=/usr/share/keyrings/influxdb-archive-keyring.gpg] https://r
 
 **Step 3**: Update Package List
 
-Update the package list to include the InfluxDB repository:
+更新软件包列表以包含InfluxDB存储库：
 
 ```sh
 sudo apt update
@@ -109,7 +109,7 @@ sudo systemctl start influxdb
 
 ## Testing InfluxDB
 
-Access the InfluxDB CLI tool to perform basic database operations.
+访问 InfluxDB CLI 工具来执行基本的数据库操作。
 
 **Step 1**. Open terminal :
 

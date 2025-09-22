@@ -251,7 +251,7 @@ pip install -r sidewalk/requirements.txt
 west manifest --path
 ```
 
-The path returned should be similar to the following format.
+返回的路径应类似于以下格式。
 
 ```
 > /path-to-ncs-folder/nrf/west.yml
@@ -279,7 +279,7 @@ west update
 west manifest --path
 ```
 
-The path returned should be similar to the following format.
+返回的路径应类似于以下格式。
 
 ```
 > /path-to-ncs-folder/sidewalk/west.yml
@@ -329,14 +329,14 @@ git clone https://github.com/aws-samples/aws-iot-core-for-amazon-sidewalk-sample
 aws configure
 ```
 
-The window will then ask you to enter your keys, please enter them separately and enter to confirm.
+然后窗口会要求您输入密钥，请分别输入并按回车键确认。
 
 ```
 aws_access_key_id = YOUR_ACCESS_KEY
 aws_secret_access_key = YOUR_SECRET_KEY
 ```
 
-This is followed by the choice of country and region, here we need to select **us-east-1**.
+接下来是选择国家和地区,这里我们需要选择 **us-east-1**。
 
 ```
 region=us-east-1

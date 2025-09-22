@@ -96,13 +96,13 @@ Stalker 套件包含与 Seeeduino Stalker v3.0 配合使用的所有必要组件
 
 * Wireless Sensor Network (using XBee - bought separately)
 
-* GPS Logging (using [GPSBee](/cn/GPS_Bee_kit "GPS_Bee_kit") - bought separately)
+* GPS 日志记录（使用 [GPSBee](/cn/GPS_Bee_kit "GPS_Bee_kit") - 需单独购买）
 
-* Data Acquisition System capable of communicating with an App running on iPhone/Android Phone/Windows Phone (using [BluetoothBee](/cn/Bluetooth_Bee "Bluetooth Bee") - bought seperately)
+* 能够与运行在 iPhone/Android 手机/Windows Phone 上的应用程序通信的数据采集系统（使用[BluetoothBee](/cn/Bluetooth_Bee "Bluetooth Bee") - 需单独购买）
 
-* RF Remote Control (using [RFBee](/cn/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node") - bought separately)
+* RF 遥控器（使用 [RFBee](/cn/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - 无线 Arduino 兼容节点") - 需单独购买）
 
-* As a simple standalone Arduino compatible physical computing platform ([UartSBee_V4](/cn/UartSBee_V4 "UartSBee_V4") must be bought separately for programming)
+* 作为一个简单独立的 Arduino 兼容物理计算平台（必须单独购买 [UartSBee_V4](/cn/UartSBee_V4 "UartSBee_V4") 用于编程）
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/700px-Stalker_v3.0_and_the_Bees.jpg)
 
@@ -112,23 +112,23 @@ poly 75 0 353 0 353 102 75 99 [WiFiBee](/cn/Wifi_Bee "Wifi_Bee")
 
 poly 18 105 294 107 295 203 18 203 [BluetoothBee](/cn/Bluetooth_Bee "Bluetooth Bee")
 
-poly 2 212 274 212 275 327 2 326 [XBee](/cn/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products "Zigbee Networking with XBee Series_2 and Seeeds Products")
+poly 2 212 274 212 275 327 2 326 [XBee](/cn/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products "使用XBee Series_2和Seeeds产品进行Zigbee网络")
 
 poly 18 337 303 338 303 448 15 447 [GPSBee](/cn/GPS_Bee_kit "GPS_Bee_kit")
 
-poly 38 459 379 459 379 570 37 571 [RFBee](/cn/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node")
+poly 38 459 379 459 379 570 37 571 [RFBee](/cn/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - 兼容Arduino的无线节点")
 
 poly 400 55 477 106 424 147 354 97 [WiFiBee](/cn/Wifi_Bee "Wifi_Bee")
 
 poly 307 143 336 136 398 140 392 189 333 187 318 174 302 176 [BluetoothBee](/cn/Bluetooth_Bee "Bluetooth Bee")
 
-poly 290 238 308 221 394 214 396 271 306 283 290 265 [XBee](/cn/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products "Zigbee Networking with XBee Series_2 and Seeeds Products")
+poly 290 238 308 221 394 214 396 271 306 283 290 265 [XBee](/cn/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products "使用XBee Series_2和Seeeds产品进行Zigbee网络")
 
 poly 321 353 333 330 395 306 427 364 359 393 335 380 [GPSBee](/cn/GPS_Bee_kit "GPS_Bee_kit")
 
-poly 409 464 417 432 488 389 537 445 463 498 426 491 [RFBee](/cn/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node")
+poly 409 464 417 432 488 389 537 445 463 498 426 491 [RFBee](/cn/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - 无线Arduino兼容节点")
 
-poly 455 280 454 215 490 186 683 184 724 211 740 297 706 331 494 333 489 278 [Seeeduino-Stalker v3](/cn/Seeeduino-Stalker_v3 "Seeeduino-Stalker v3")
+聚 455 280 454 215 490 186 683 184 724 211 740 297 706 331 494 333 489 278 [Seeeduino-Stalker v3](/cn/Seeeduino-Stalker_v3 "Seeeduino-Stalker v3")
 
 poly 570 132 573 13 802 16 803 131 [UartSBee_V4](/cn/UartSBee_V4 "UartSBee_V4")
 &lt;/imagemap&gt; -->

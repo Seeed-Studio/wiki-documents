@@ -459,7 +459,7 @@ void loop() {
 WiFi.mode(WIFI_STA);
 ```
 
-Then, use `WiFi.begin()` to connect to a network. You must pass as arguments the network SSID and its password:
+然后，使用`WiFi.begin()`来连接网络。你必须传递网络SSID及其密码作为参数：
 
 ```c
 WiFi.begin(ssid, password);
@@ -593,7 +593,7 @@ void loop() {
 WiFi.softAP(ssid, password);
 ```
 
-Next, we need to get the access point IP address using the softAPIP() method and print it in the Serial Monitor.
+接下来,我们需要使用softAPIP()方法获取接入点IP地址,并在串口监视器中打印出来。
 
 ```c
 IPAddress myIP = WiFi.softAPIP();
@@ -761,7 +761,7 @@ painlessMesh  mesh;
 Task taskSendMessage(TASK_SECOND * 1 , TASK_FOREVER, &sendMessage);
 ```
 
-The `sendMessage()` function sends a message to all nodes in the message network (broadcast).
+`sendMessage()` 函数向消息网络中的所有节点发送消息（广播）。
 
 ```c
 void sendMessage() {
@@ -780,7 +780,7 @@ void sendMessage() {
 mesh.sendBroadcast(msg);
 ```
 
-Every time a new message is sent, the code changes the interval between messages (one to five seconds).
+每次发送新消息时，代码会改变消息之间的间隔时间（一到五秒）。
 
 ```c
 taskSendMessage.setInterval(random(TASK_SECOND * 1, TASK_SECOND * 5));
@@ -818,7 +818,7 @@ void nodeTimeAdjustedCallback(int32_t offset) {
 }
 ```
 
-In the `setup()`, initialize the serial monitor. Choose the desired debug message types:
+在 `setup()` 中，初始化串口监视器。选择所需的调试消息类型：
 
 ```c
 //mesh.setDebugMsgTypes( ERROR | MESH_STATUS | CONNECTION | SYNC | COMMUNICATION | GENERAL | MSG_TYPES | REMOTE ); // all types on
@@ -832,7 +832,7 @@ Initialize the mesh with the details defined earlier.
 mesh.init(MESH_PREFIX, MESH_PASSWORD, &userScheduler, MESH_PORT);
 ```
 
-Assign all the callback functions to their corresponding events.
+将所有回调函数分配给它们对应的事件。
 
 ```c
 mesh.onReceive(&receivedCallback);
@@ -847,7 +847,7 @@ mesh.onNodeTimeAdjusted(&nodeTimeAdjustedCallback);
 userScheduler.addTask(taskSendMessage);
 ```
 
-Finally, enable the taskSendMessage, so that the program starts sending the messages to the mesh.
+最后,启用 taskSendMessage,这样程序就会开始向网格发送消息。
 
 ```c
 taskSendMessage.enable();
@@ -916,9 +916,9 @@ void loop() {
 
 以下是原文的参考链接，欢迎通过以下原文链接了解更多关于 ESP32 网络的内容。
 
-- [ESP32 Useful Wi-Fi Library Functions (Arduino IDE)](https://randomnerdtutorials.com/esp32-useful-wi-fi-functions-arduino/)
-- [ESP32 MQTT – Publish and Subscribe with Arduino IDE](https://randomnerdtutorials.com/esp32-mqtt-publish-subscribe-arduino-ide/)
-- [ESP-MESH with ESP32 and ESP8266: Getting Started (painlessMesh library)](https://randomnerdtutorials.com/esp-mesh-esp32-esp8266-painlessmesh/)
+- [ESP32 实用 Wi-Fi 库函数（Arduino IDE）](https://randomnerdtutorials.com/esp32-useful-wi-fi-functions-arduino/)
+- [ESP32 MQTT – 使用 Arduino IDE 发布和订阅](https://randomnerdtutorials.com/esp32-mqtt-publish-subscribe-arduino-ide/)
+- [ESP32 和 ESP8266 的 ESP-MESH：入门（painlessMesh 库）](https://randomnerdtutorials.com/esp-mesh-esp32-esp8266-painlessmesh/)
 
 有关使用 ESP32 开发板的更多信息，请阅读 Random Nerd Tutorials 官方网站。
 

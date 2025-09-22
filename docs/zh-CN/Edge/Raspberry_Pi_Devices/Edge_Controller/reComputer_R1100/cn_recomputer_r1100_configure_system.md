@@ -66,8 +66,8 @@ echo 1 > /sys/class/leds/led-green/brightness
 
 This will **light up** the corresponding LED.
 
-**3. Turn off LEDs (optional)**  
-To **turn off** a specific LED, use:
+**3. 关闭LED（可选）**  
+要**关闭**特定的LED，请使用：
 
 ```bash
 echo 0 > /sys/class/leds/led-red/brightness
@@ -204,7 +204,7 @@ SX1302_POWER_EN_PIN=578 # SX1302 power enable
 SX1261_RESET_PIN=579    # SX1261 reset (LBT/Spectral Scan)  
 ```
 
-**Copy the reset script to the packet forwarder directory:**  
+**将重置脚本复制到数据包转发器目录：**
 
 ```bash
 cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
@@ -365,8 +365,8 @@ sudo apt-get install cutecom
    55 03 00 02 02  
    ```  
 
-**Check Device Status**  
-To verify the device status, send:  
+**检查设备状态**
+要验证设备状态，请发送：
 
 ```  
 55 03 00 00 00  
@@ -388,8 +388,8 @@ To verify the device status, send:
 55 07 00 11 00 03 00 01 13  
 ```  
 
-**Both modules must be in transparent mode for direct communication.**  
-To **exit transparent mode**, send:  
+**两个模块都必须处于透明模式才能直接通信。**
+要**退出透明模式**，发送：
 
 ```  
 +++  
@@ -625,8 +625,8 @@ Update the system time to match the RTC time:
 sudo hwclock --hctosys
 ```
 
-**Verify the RTC Time**  
-Check the current time stored in the RTC:  
+**验证 RTC 时间**  
+检查存储在 RTC 中的当前时间：
 
 ```bash
 sudo hwclock -r
@@ -688,8 +688,8 @@ realtime = yes
 priority = 1  
 ```
 
-**Start the Watchdog Service**  
-Enable and start the watchdog service:  
+**启动看门狗服务**
+启用并启动看门狗服务：
 
 ```bash
 sudo systemctl start watchdog

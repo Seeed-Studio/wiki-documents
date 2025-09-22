@@ -61,7 +61,7 @@ Apache Nuttx 分为两个项目：
 ./tools/configurate.sh board_name:your_application
 ```
 
-Also it's possible to check the list of board-supported a running the command:
+还可以通过运行以下命令来检查支持的板卡列表:
 
 ```bash
 ./tools/configurate.sh -L
@@ -99,7 +99,7 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Now we select the NSH configuration to the xiao-nrf5200 board:
+现在我们将 NSH 配置选择到 xiao-nrf5200 开发板上：
 
 ```bash
 ./tools/configurate.sh xiao-nrf52840:nsh
@@ -130,7 +130,7 @@ NuttShell (NSH) NuttX-12.8.0
 nsh> 
 ```
 
-Typing `?`, you will access the available options for commands and built-in applications.
+输入 `?`，您将访问可用的命令和内置应用程序选项。
 
 ```bash
 nsh> ?
@@ -170,7 +170,7 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Now we select the NSH configuration to the xiao-nrf5200 board:
+现在我们将 NSH 配置选择到 xiao-nrf5200 开发板上：
 
 ```bash
 ./tools/configurate.sh xiao-nrf52840:usbnsh
@@ -188,13 +188,13 @@ Convert nuttx.hex to UF2 format using U2F Tools:
 python3 uf2/utils/uf2conv.py -c -f 0xADA52840 -i nuttx.hex -o nuttx.uf2
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+将固件加载到您的开发板中，运行串行通信程序，如 minicon 或 picocom：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
 ```
 
-You must to press Enter 3 times, and then this message will show in the terminal.
+你必须按 Enter 键 3 次，然后这条消息才会显示在终端中。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -210,7 +210,7 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Select the jumbo configuration to the xiao-nrf52840 board.
+选择巨型配置到 xiao-nrf52840 开发板。
 
 ```bash
 ./tools/configurate.sh xiao-nrf52840:jumbo
@@ -222,13 +222,13 @@ Compile de the source code.
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+将固件加载到您的开发板中，运行串行通信程序，如 minicon 或 picocom：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
 ```
 
-You must to press Enter 3 times, and then this message will show in the terminal.
+你必须按 Enter 键 3 次，然后这条消息将显示在终端中。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0

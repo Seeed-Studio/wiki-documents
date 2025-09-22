@@ -339,13 +339,13 @@ reComputer AI Industrial R2135 配备了 3 个 LED 指示灯，用于显示设�
 echo 1 | sudo tee /sys/class/leds/led-red/brightness
 ```
 
-2. To turn off the red LED, please enter following command in the Terminal:
+2. 要关闭红色 LED，请在终端中输入以下命令：
 
 ```
 echo 0 | sudo tee /sys/class/leds/led-red/brightness
 ```
 
-3. You can turn on red and green LED at the same time, please enter following command in the Terminal:
+3. 您可以同时打开红色和绿色LED，请在终端中输入以下命令：
 
 ```
 echo 1 | sudo tee /sys/class/leds/led-red/brightness

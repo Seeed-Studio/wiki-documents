@@ -427,7 +427,7 @@ I2C地址是**0x29**。
 cd /sys/bus/iio/devices/iio:device0
 ```
 
-- **Step 2.** Type the following to obtain the light intensity value in **Lux**
+- **步骤 2.** 输入以下内容以获取以**勒克斯**为单位的光强度值
 
 ```sh
 cat in_illuminance_input 
@@ -827,7 +827,7 @@ gcc cantransmit.c -o cantransmit
 
 ```
 
-on you Linux host computer or another reTerminal DM, you can compiles and runs the code that receives the data.
+在您的 Linux 主机电脑或另一台 reTerminal DM 上，您可以编译并运行接收数据的代码。
 
 ```sh
 gcc canreceive.c -o canreceive
@@ -1089,7 +1089,7 @@ sudo hwclock --systohc
 
 ```
 
-Use the following command to change the system clock with current hardware clock
+使用以下命令将系统时钟更改为当前硬件时钟
 
 ```sh
 sudo hwclock --hctosys
@@ -1243,7 +1243,7 @@ AT+QCFG="usbnet"
 AT+QCFG="usbnet",1
 ```
 
-Then enter the following command to force the modem to reboot:
+然后输入以下命令强制调制解调器重启：
 
 ```sh
 AT+CFUN=1,1
@@ -1310,7 +1310,7 @@ sudo make
 cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
 ```
 
-**Step 5.** replace the default `SPI` port of the LoraWAN®  Module in the `global_conf.json.sx1250.US915` config file:
+**步骤 5.** 在`global_conf.json.sx1250.US915`配置文件中替换LoraWAN®模块的默认`SPI`端口：
 
 ```sh
 sed -i 's/spidev0.0/spidev0.1/g'  global_conf.json.sx1250.US915

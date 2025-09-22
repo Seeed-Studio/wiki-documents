@@ -57,7 +57,7 @@ ls
 sudo rm wpa_supplicant.conf
 ```
 
-Open your PC windows powershell and copy the file to the reCamera terminal : **/home/recamera/**:
+打开您的 PC windows powershell 并将文件复制到 reCamera 终端：**/home/recamera/**：
 
 ```
 scp "C:\Users\{your username}\Desktop\wpa_supplicant.conf" recamera@192.168.42.1:/home/recamera

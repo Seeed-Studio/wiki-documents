@@ -94,7 +94,7 @@ cd esp-idf/
 
 ### Installation of One Channel Hub
 
-**Step 1**: Clone the hub to local repository. And navigate to the project path.
+**步骤 1**: 将仓库克隆到本地仓库。并导航到项目路径。
 
 ```linux
 git clone https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32.git
@@ -181,7 +181,7 @@ idf.py -p port flash
 sudo usermod -a -G dialout $USERNAME
 ```
 
-On a **Windows** setup, let's suppose that the device is mounted as COM14, the above command would be like:
+在 **Windows** 设置中，假设设备挂载为 COM14，上述命令将类似于：
 
 ```
 idf.py -p COM14 flash
@@ -206,7 +206,7 @@ esptool.py --chip esp32s3 -p port -b 460800 --before=default_reset --after=hard_
 esptool.py --chip esp32s3 -p port -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 bootloader.bin 0x10000 indicator_lorahub.bin 0x8000 partition-table.bin
 ```
 
-On a Windows setup the esptool command for flashing would be:
+在 Windows 环境下，用于刷写固件的 esptool 命令应该是：
 
 ```cpp
 // Merged version

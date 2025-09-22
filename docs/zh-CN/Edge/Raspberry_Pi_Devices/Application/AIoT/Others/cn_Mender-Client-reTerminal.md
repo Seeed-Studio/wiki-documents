@@ -55,7 +55,7 @@ git clone -b dunfell https://github.com/openembedded/meta-openembedded.git layer
 git clone -b dunfell git://github.com/mendersoftware/meta-mender layers/meta-mender
 ```
 
-In order to be compatible with meta-raspberrypi, change the gstreamer version of poky to the latest
+为了与 meta-raspberrypi 兼容，将 poky 的 gstreamer 版本更改为最新版本
 
 ```
 cd layers/poky

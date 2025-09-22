@@ -80,7 +80,7 @@ sudo nvidia-ctk runtime configure --runtime=docker
 
 :::
 
-step2. Restart the Docker service and add your user to the docker group.
+step2. 重启 Docker 服务并将您的用户添加到 docker 组。
 
 ```bash
 sudo systemctl restart docker

@@ -111,7 +111,7 @@ sudo apt update
 sudo apt install nvidia-jetpack -y
 ```
 
-- **Step 2:** Execute the below commands on the terminal to install Roboflow inference server pip package
+- **步骤 2:** 在终端上执行以下命令来安装 Roboflow 推理服务器 pip 包
 
 ```sh
 sudo apt update
@@ -119,7 +119,7 @@ sudo apt install python3-pip -y
 pip install inference-gpu
 ```
 
-- **Step 3:** Execute the below and replace with your Roboflow Private API Key that you obtained before
+- **步骤 3:** 执行以下操作并替换为您之前获得的 Roboflow 私有 API 密钥
 
 ```sh
 export ROBOFLOW_API_KEY=your_key_here
@@ -226,7 +226,7 @@ python infer-simple.py
 git clone https://github.com/roboflow/inference
 ```
 
-- **Step 2:** Enter the "inference" directory and start compiling your own Docker image
+- **步骤 2:** 进入"inference"目录并开始编译你自己的Docker镜像
 
 ```sh
 cd inference

@@ -84,10 +84,10 @@ SenseCAP 为用户提供了 `Wio Tracker 1110 Examples` 以便快速入门。
 </details>
 
 :::note 参考库文件
-[Adafruit TinyUSB Library for Arduino](https://github.com/adafruit/Adafruit_TinyUSB_Arduino)<br/>
+[Adafruit TinyUSB Arduino 库](https://github.com/adafruit/Adafruit_TinyUSB_Arduino)<br/>
 [Adafruit SPI Flash](https://github.com/adafruit/Adafruit_SPIFlash)<br/>
 [Seeed_Arduino_LIS3DHTR](https://github.com/Seeed-Studio/Seeed_Arduino_LIS3DHTR)<br/>
-[Sensirion I2C SGP41 Arduino Library](https://github.com/Sensirion/arduino-i2c-sgp41)<br/>
-[Sensirion I2C SHT4X Arduino Library](https://github.com/Sensirion/arduino-i2c-sht4x)<br/>
+[Sensirion I2C SGP41 Arduino 库](https://github.com/Sensirion/arduino-i2c-sgp41)<br/>
+[Sensirion I2C SHT4X Arduino 库](https://github.com/Sensirion/arduino-i2c-sht4x)<br/>
 [Sensirion Gas Index Algorithm Arduino Library](https://github.com/Sensirion/arduino-gas-index-algorithm)
 :::

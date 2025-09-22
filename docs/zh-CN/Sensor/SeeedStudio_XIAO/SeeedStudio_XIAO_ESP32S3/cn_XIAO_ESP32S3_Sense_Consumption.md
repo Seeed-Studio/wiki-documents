@@ -122,13 +122,13 @@ void loop() {
 #define uS_TO_S_FACTOR 1000000ULL 
 ```
 
-- Define a macro to convert microseconds to seconds. 1000000ULL is the factor used to convert microseconds to seconds.
+- 定义一个宏来将微秒转换为秒。1000000ULL是用于将微秒转换为秒的因子。
 
 ```cpp
 #define TIME_TO_SLEEP  5     
 ```
 
-- Define a macro that sets the time for which the ESP32 will go to sleep, in this case, 5 seconds.
+- 定义一个宏来设置 ESP32 将进入睡眠状态的时间，在这种情况下为 5 秒。
 
 ```cpp
 RTC_DATA_ATTR int bootCount = 0;
@@ -140,13 +140,13 @@ RTC_DATA_ATTR int bootCount = 0;
 void print_wakeup_reason() {
 ```
 
-- Define a function named `print_wakeup_reason()` that will print the reason the ESP32 woke up.
+- 定义一个名为 `print_wakeup_reason()` 的函数，用于打印 ESP32 唤醒的原因。
 
 ```cpp
 esp_sleep_wakeup_cause_t wakeup_reason;
 ```
 
-- Declare a variable `wakeup_reason` of type `esp_sleep_wakeup_cause_t` to store the cause of the wakeup event.
+- 声明一个类型为 `esp_sleep_wakeup_cause_t` 的变量 `wakeup_reason` 来存储唤醒事件的原因。
 
 ```cpp
 wakeup_reason = esp_sleep_get_wakeup_cause();
@@ -175,7 +175,7 @@ wakeup_reason = esp_sleep_get_wakeup_cause();
 ++bootCount;
 ```
 
-- Increment the boot count and print it every time the device reboots.
+- 每次设备重启时增加启动计数并打印出来。
 
 ```cpp
 print_wakeup_reason();
@@ -272,9 +272,9 @@ void loop() {
 RTC_DATA_ATTR int bootCount = 0;
 ```
 
-- 2 ^ GPIO_NUMBER in hex
-- 1 = EXT0 wakeup, 0 = EXT1 wakeup
-- Only RTC IO are allowed - ESP32 Pin example
+- 2 ^ GPIO_NUMBER 的十六进制表示
+- 1 = EXT0唤醒，0 = EXT1唤醒
+- 仅允许RTC IO - ESP32引脚示例
 
 ```cpp
   switch (wakeup_reason) {
@@ -895,7 +895,7 @@ void loop() {
 Serial.println("Connecting to WiFi...");
 ```
 
-- Print a message indicating that the connection to WiFi is starting.
+- 打印一条消息，指示正在开始连接到 WiFi。
 
 ```cpp
 WiFi.begin("****", "****");

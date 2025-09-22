@@ -243,13 +243,13 @@ TFT 触摸屏扩展板 V2.0 是一款电阻式触摸屏，兼容 Arduino/Seeedui
  <p style={{textAlign: 'center'}}><a href="https://github.com/Seeed-Studio/TFT_Touch_Shield_V2/archive/master.zip" target="_blank"><img src="https://files.seeedstudio.com/wiki/TFT_Touch_Shield_V2/images/library.png" /></a></p>
 此库包含以下示例：
 
-* drawCircle
-* drawLines
-* drawNumber
-* drawRectangle
-* paint
-* shapes
-* text
+* 绘制圆形
+* 绘制线条
+* 绘制数字
+* 绘制矩形
+* 绘画
+* 形状
+* 文本
 * tftbmp
 * tftbmp2
 

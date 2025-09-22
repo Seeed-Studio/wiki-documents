@@ -107,7 +107,7 @@ ssh -V
 sudo usermod -aG docker $USER
 ```
 
-**Step 2.** To apply the new group membership, log out of the Jetson device and back in, or type the following
+**步骤 2.** 要应用新的组成员身份，请登出 Jetson 设备然后重新登录，或输入以下内容
 
 ```sh
 su - $USER
@@ -356,7 +356,7 @@ alwaysAI 在 alwaysAI GitHub 仓库中提供了广泛的即用型应用程序。
 aai app models add alwaysai/vehicle_license_mobilenet_ssd_nano
 ```
 
-**Step 4.** Open **app.py**, change the model name and inference engine
+**步骤 4.** 打开 **app.py**，更改模型名称和推理引擎
 
 ```python
 def main():
@@ -477,7 +477,7 @@ alwaysAI 还有企业版，具有以下功能：
 aai app models add lakshanthad/roadsign-mobilenet
 ```
 
-**Step 7.** After that change the model name in **app.py** and run the app again
+**步骤 7.** 之后在 **app.py** 中更改模型名称并再次运行应用程序
 
 ```sh
 lakshanthad/roadsign-mobilenet

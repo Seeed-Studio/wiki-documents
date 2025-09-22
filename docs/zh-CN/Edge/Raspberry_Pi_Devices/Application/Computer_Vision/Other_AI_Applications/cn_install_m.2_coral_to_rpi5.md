@@ -77,7 +77,7 @@ sudo apt full-upgrade
 
 ### Step 2: Install requirements
 
-Open a terminal and run the following commands to install the required packages:
+打开终端并运行以下命令来安装所需的软件包：
 
 ```
 sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev tar wget vim
@@ -85,7 +85,7 @@ sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev 
 
 ### Step 3: Download Python3.8
 
-Open a terminal and run the following commands to download Python3.8:
+打开终端并运行以下命令来下载 Python3.8:
 
 ```
 wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tgz
@@ -93,7 +93,7 @@ wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tgz
 
 ### Step 4: Install Python3.8
 
-Open a terminal and run the following commands to install Python3.8:
+打开终端并运行以下命令来安装 Python3.8:
 
 ```
 sudo tar zxf Python-3.8.0.tgz
@@ -106,7 +106,7 @@ cd ..
 
 ### Step 5: Check Python3.8
 
-Open a terminal and run the following commands to check Python3.8:
+打开终端并运行以下命令来检查 Python3.8:
 
 ```
 python3.8 -V
@@ -141,7 +141,7 @@ kernel=kernel8.img
 dtoverlay=pineboards-hat-ai
 ```
 
-Save and close the file by pressing CTRL+X, then Y to confirm. And then reboot the system.
+通过按 CTRL+X 保存并关闭文件，然后按 Y 确认。之后重启系统。
 
 ```
 sudo reboot

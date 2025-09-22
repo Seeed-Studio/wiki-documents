@@ -47,7 +47,7 @@ last_update:
 west build -p always -b xiao_rp2040 samples/subsys/usb/console
 ```
 
-Enter into bootloader mode as previously described and then flash the device:
+按照之前描述的方法进入引导加载程序模式，然后刷写设备：
 
 ```
 west flash -r uf2
@@ -262,7 +262,7 @@ Enter bootloader mode and flash your device:
 west flash -r uf2
 ```
 
-Connect to monitor (after quickly resetting your board to ensure it restarts):
+连接到显示器（在快速重置开发板以确保它重新启动后）：
 
 ```
 screen /dev/ttyACM0 115200

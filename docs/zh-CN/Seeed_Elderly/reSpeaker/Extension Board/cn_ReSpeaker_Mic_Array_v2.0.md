@@ -297,7 +297,7 @@ if __name__ == '__main__':
 
 ```
 
-**For Windows/Mac:** Here is the example to control the leds.
+**对于 Windows/Mac：** 这是控制 LED 灯的示例。
 
 - Step 1. Download pixel_ring.
 

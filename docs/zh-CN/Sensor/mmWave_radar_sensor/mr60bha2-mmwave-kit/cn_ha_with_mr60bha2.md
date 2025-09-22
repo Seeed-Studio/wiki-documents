@@ -351,7 +351,7 @@ Home Assistant 强大的自动化功能允许您基于从 MR60BHA2 传感器收�
 ## 资源
 
 - [ESPHome — ESPHome](https://esphome.io/)
-- [Installation - Home Assistant](https://www.home-assistant.io/installation/)
+- [安装 - Home Assistant](https://www.home-assistant.io/installation/)
 - [limengdu/MR60BHA2_ESPHome_external_components](https://github.com/limengdu/MR60BHA2_ESPHome_external_components)
 
 ## 故障排除

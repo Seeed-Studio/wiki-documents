@@ -117,7 +117,7 @@ Step4. Model Quantization.
 
 ## Launch GPT-OSS by llama.cpp
 
-Now we can attempt to launch the inference program in the Jetson terminal.
+现在我们可以尝试在 Jetson 终端中启动推理程序。
 
 ```bash
 ./build/bin/llama-cli -m /home/seeed/Documents/gpt-oss-gguf/Gpt-Oss-32x2.4B-F16.gguf -ngl 40

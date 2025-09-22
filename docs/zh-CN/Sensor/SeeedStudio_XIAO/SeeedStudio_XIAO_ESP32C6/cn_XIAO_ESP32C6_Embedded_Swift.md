@@ -118,7 +118,7 @@ echo "Installation complete. Use 'get_idf' to set up the ESP-IDF environment."
 
 ### Install Swift 6.0
 
-you could directly running this script to have swift 6.0 to be installed.
+你可以直接运行这个脚本来安装 Swift 6.0。
 
 ```shell
 #!/bin/bash
