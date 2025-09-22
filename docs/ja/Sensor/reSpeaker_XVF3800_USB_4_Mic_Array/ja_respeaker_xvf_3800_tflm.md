@@ -322,7 +322,8 @@ void loop() {
     // Feed converted data into TensorFlow
     tfl.write((uint8_t*)conv_buffer, samples * sizeof(int16_t));
   }
-}```
+}
+```
 
 #### 重要な注意事項
 
