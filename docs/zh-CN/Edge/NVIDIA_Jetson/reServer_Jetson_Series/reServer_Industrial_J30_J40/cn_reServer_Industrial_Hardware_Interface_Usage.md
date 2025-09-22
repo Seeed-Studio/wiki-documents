@@ -98,13 +98,13 @@ reServer Industrial 上有 5 个以太网端口，规格为 10/100/1000Mbps，�
   sudo nmcli connection modify POE3 ipv4.addresses 192.168.6.6/24
   ```
 
-  **Step3**: To set POE3's IPv4 address to manual configuration.
+  **步骤 3**: 将 POE3 的 IPv4 地址设置为手动配置。
 
   ```bash
   sudo nmcli connection modify POE3 ipv4.method manual
   ```
 
-  **Step4**: Start the connection
+  **步骤 4**: 开始连接
 
   ```bash
   sudo nmcli connection up POE3
@@ -190,7 +190,7 @@ sudo reboot
 sudo vi /usr/bin/hwtosys.sh 
 ```
 
-- **Step 9:** Enter **insert mode** by pressing **i**, copy and paste the following content inside the file
+- **步骤 9:** 按下 **i** 进入**插入模式**，复制并粘贴以下内容到文件中
 
 ```sh
 #!/bin/bash
@@ -229,14 +229,14 @@ WantedBy=multi-user.target
 sudo systemctl daemon-reload 
 ```
 
-- **Step 14:** Enable the newly created service to start on boot and start the service
+- **步骤 14:** 启用新创建的服务在启动时自动运行并启动该服务
 
 ```sh
 sudo systemctl enable hwtosys.service
 sudo systemctl start hwtosys.service
 ```
 
-- **Step 15:** Verify the script is up and running as a systemd service
+- **步骤 15:** 验证脚本作为 systemd 服务正在运行
 
 ```sh
 sudo systemctl status hwtosys.service
@@ -446,7 +446,7 @@ echo -e "AT+QGPS=1\r\n" > /dev/ttyUSB2
 echo -e "AT+QGPS=0\r\n" > /dev/ttyUSB2
 ```
 
-- **Step 2:** Obtain the GPS data by executing the below commands
+- **步骤 2:** 通过执行以下命令获取 GPS 数据
 
 ```sh
 sudo cat /dev/ttyUSB1
@@ -531,13 +531,13 @@ cd packet_forwarder
 cp ../tools/reset_lgw.sh .
 ```
 
-- **Step 2:** Run the following according to the LoRa module you are using. Here we have tested SPI US915 version
+- **步骤 2:** 根据您正在使用的LoRa模块运行以下内容。这里我们测试了SPI US915版本
 
 ```sh
 sudo ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
-However, the commands for different other modules are as follows
+然而，不同其他模块的命令如下
 
 ```sh
 # USB 915
@@ -1537,7 +1537,7 @@ echo 0 > value
 echo 1 > value 
 ```
 
-If you have finished using the LED, you can execute the following
+如果你已经完成使用LED,你可以执行以下操作
 
 ```sh
 cd ..

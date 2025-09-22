@@ -183,7 +183,7 @@ CAN.sendMsgBuf(0x00, 0, 8, stmp); //send out the message 'stmp' to the bus and t
 
 ### 6. Receive a frame
 
-The following function is used to receive data on the 'receive' node:
+以下函数用于在"receive"节点上接收数据：
 
 ```c
 CAN.readMsgBuf(unsigned char len, unsigned char buf);

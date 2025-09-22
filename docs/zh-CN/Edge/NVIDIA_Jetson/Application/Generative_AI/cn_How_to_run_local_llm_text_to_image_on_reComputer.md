@@ -103,7 +103,7 @@ pip install -U numpy grpcio absl-py py-cpuinfo psutil portpicker six mock reques
 
 Install TensorFlow for Jetpack 5.1.1
 
-To find what JetPack version we have, issue the following command:
+要查找我们拥有的 JetPack 版本，请执行以下命令：
 
 ```bash
 dpkg -l | grep -i jetpack
@@ -238,8 +238,8 @@ python -m venv huggingfaceTesting
 source huggingfaceTesting/bin/activate
 ```
 
-After creating the virtual environment, let's enter it.
-Install PyTorch using the instructions above.
+创建虚拟环境后，让我们进入它。
+使用上述说明安装 PyTorch。
 
 ```bash
 cd huggingfaceTesting
@@ -375,7 +375,7 @@ Now, let's start to write our application.
 vi app.py
 ```
 
-For those who don't know what Flask is or does, let's try a small example.
+对于那些不知道 Flask 是什么或它能做什么的人来说，让我们尝试一个小例子。
 
 ```python
 from flask import Flask
@@ -421,13 +421,13 @@ We next created an instance of the Flask class
 app = Flask(__name__)
 ```
 
-We next create a route decorator to tell Flask what URL will trigger our function
+接下来我们创建一个路由装饰器来告诉Flask哪个URL将触发我们的函数
 
  ```python
 @app.route("/generate_image")
 ```
 
-When using generate_image in the URL, we will trigger our function
+在 URL 中使用 generate_image 时，我们将触发我们的函数
 
 ```python
 def generate_image_api():
@@ -565,7 +565,7 @@ sudo apt update; sudo apt install -y python3-pip
 pip3 install -r requirements.txt
 ```
 
-Now that we have everything we need, let's run the container with the *stable-diffusion-webui autotag*
+现在我们已经准备好了所需的一切，让我们用 *stable-diffusion-webui autotag* 运行容器
 
 ```bash
 ./run.sh $(./autotag stable-diffusion-webui)

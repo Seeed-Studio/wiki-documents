@@ -75,11 +75,11 @@ ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/1.png" style={{width:900, height:'auto'}}/></div>
 
 <!--  
-- **Step 1.** To quickly setup ESPHome on Home Asssistant, click the below button
+- **步骤 1.** 要在Home Assistant上快速设置ESPHome，请点击下方按钮
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/4.png" width="300">
 
-- **Step 2.** Once you see the following pop-up, click **OPEN LINK**
+- **步骤 2.** 当你看到以下弹出窗口时，点击**OPEN LINK**
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/5.png" width="300">
 
@@ -102,7 +102,7 @@ ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单�
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/7.png" width="700">
 
-- **Step 5.** Click **OPEN WEB UI** or **ESPHOME from the side-panel**
+- **步骤 5.** 点击**OPEN WEB UI**或**从侧面板ESPHOME**
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/8.png" width="700">
 

@@ -71,7 +71,7 @@ echo "deb [signed-by=/usr/share/keyrings/influxdb-archive-keyring.gpg] https://r
 
 **Step 3**: Update Package List
 
-Update the package list to include the InfluxDB repository:
+更新软件包列表以包含InfluxDB存储库：
 
 ```sh
 sudo apt update
@@ -109,7 +109,7 @@ sudo systemctl start influxdb
 
 ## Testing InfluxDB
 
-Access the InfluxDB CLI tool to perform basic database operations.
+访问 InfluxDB CLI 工具来执行基本的数据库操作。
 
 **Step 1**. Open terminal :
 
@@ -149,7 +149,7 @@ SELECT * FROM room
 influx
 ```
 
-**Step 2**. Create an admin user with all privileges (replace `<password>` with your secure password):
+**步骤 2**. 创建具有所有权限的管理员用户（将 `<password>` 替换为您的安全密码）：
 
 ```sh
 CREATE USER admin WITH PASSWORD '<password>' WITH ALL PRIVILEGES
@@ -161,7 +161,7 @@ CREATE USER admin WITH PASSWORD '<password>' WITH ALL PRIVILEGES
 exit
 ```
 
-**Step 4**. Edit the InfluxDB configuration to enable authentication:
+**步骤 4**. 编辑 InfluxDB 配置以启用身份验证：
 
 ```sh
 sudo nano /etc/influxdb/influxdb.conf
@@ -178,7 +178,7 @@ Under the `[HTTP]` section, add or modify the following lines:
     bind-address=":8086"
 ```
 
-**Step 5**. Restart the InfluxDB service to apply the changes:
+**步骤 5**. 重启 InfluxDB 服务以应用更改：
 
 ```sh
 sudo systemctl restart influxdb

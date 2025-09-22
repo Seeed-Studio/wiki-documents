@@ -98,7 +98,7 @@ west flash
 west espressif monitor
 ```
 
-With the final command you should see the response showing the "Hello World!" greeting.
+执行最后一条命令后,你应该会看到显示"Hello World!"问候语的响应。
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -225,7 +225,7 @@ LED state: ON
 
 #### Bluetooth
 
-To test this setup we can use an existing sample with Zephyr:
+为了测试这个设置，我们可以使用一个包含 Zephyr 的现有样本：
 
 ```
 west build -p always -b xiao_esp32c3 samples/bluetooth/observer
@@ -233,7 +233,7 @@ west flash
 west espressif monitor
 ```
 
-You will see a console available for sending commands to the board:
+你会看到一个可用于向开发板发送命令的控制台:
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -267,7 +267,7 @@ west flash
 west espressif monitor
 ```
 
-You will see a console available for sending commands to the board:
+你会看到一个可用于向开发板发送命令的控制台:
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***

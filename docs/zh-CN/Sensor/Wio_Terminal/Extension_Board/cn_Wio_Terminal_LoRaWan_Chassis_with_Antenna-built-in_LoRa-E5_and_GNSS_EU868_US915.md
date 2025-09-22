@@ -284,7 +284,7 @@ function Decoder(bytes, port) {
 
 - [**Seeed_Arduino_SFUD**](https://github.com/Seeed-Studio/Seeed_Arduino_SFUD)
 - [**TinyGPS**](https://github.com/mikalhart/TinyGPSPlus)
-- [**Grove_Temperature_And_Humidity_Sensor**](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor)
+- [**Grove_温度和湿度传感器**](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor)
 
 ### TheThingsNetwork 控制台配置设置
 

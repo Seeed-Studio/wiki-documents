@@ -56,13 +56,13 @@ Edge Box-200 到您手中时已预装了 Raspberry Pi OS。如果您是第一次
 sudo apt update
 ```
 
-- **Step 02** : Then, install Mosquitto on it. To do so, open the terminal and execute this command:
+- **步骤 02** : 然后，在其上安装Mosquitto。为此，打开终端并执行以下命令：
 
 ```sh
 sudo apt-get install mosquitto 
 ```
 
-- **Step 03** :Next, install the Mosquitto command-line client by executing the following command in the terminal:
+- **步骤 03** :接下来，通过在终端中执行以下命令来安装Mosquitto命令行客户端：
 
 ```sh
 sudo apt-get install mosquitto-clients -y
@@ -74,7 +74,7 @@ sudo apt-get install mosquitto-clients -y
 sudo nano /etc/mosquitto/mosquitto.conf
 ```
 
-In the configuration file, we’ll disable the default configuration settings with this line:
+在配置文件中，我们将使用以下行禁用默认配置设置：
 
 ```sh
 include_dir /etc/mosquitto/conf.d
@@ -86,13 +86,13 @@ include_dir /etc/mosquitto/conf.d
 #include_dir /etc/mosquitto/conf.d
 ```
 
-Next, we'll enforce a policy disallowing anonymous users from connecting to the broker by adding the line:
+接下来，我们将通过添加以下行来实施一项禁止匿名用户连接到代理的策略：
 
 ```sh
 allow_anonymous false
 ```
 
-To store passwords securely, we'll specify a file location by adding:
+为了安全地存储密码，我们将通过添加以下内容来指定文件位置：
 
 ```sh
 password_file /etc/mosquitto/pwfile
@@ -120,7 +120,7 @@ After generating a username and password, reboot Edgebox
 sudo reboot
 ```
 
-You can initiate the Mosquitto broker by entering the following command in the terminal:
+您可以通过在终端中输入以下命令来启动Mosquitto代理：
 
 ```sh
 sudo systemctl start mosquitto

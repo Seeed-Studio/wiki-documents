@@ -50,7 +50,7 @@ west flash
 west espressif monitor
 ```
 
-With the final command you should see the response showing the "Hello World!" greeting.
+执行最后一条命令后,你应该会看到显示"Hello World!"问候语的响应。
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
@@ -120,7 +120,7 @@ west flash
 west espressif monitor
 ```
 
-You will see a console available for sending commands to the board:
+你会看到一个可用于向开发板发送命令的控制台:
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
@@ -162,7 +162,7 @@ west flash
 west espressif monitor
 ```
 
-You will see a console available for sending commands to the board:
+你会看到一个可用于向开发板发送命令的控制台:
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***

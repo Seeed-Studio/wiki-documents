@@ -141,7 +141,7 @@ ThingsBoard 需要 Java 17 才能运行。打开终端。
    export SQL_POSTGRES_TS_KV_PARTITIONING=MONTHS
    ```
 
-3. (Optional) Update memory settings for machines with 4GB of RAM:
+3. (可选) 为具有 4GB 的 RAM 的机器更新内存设置:
 
    ```bash
    export JAVA_OPTS="$JAVA_OPTS -Xms2G -Xmx2G"

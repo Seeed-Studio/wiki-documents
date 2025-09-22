@@ -50,7 +50,7 @@ sudo apt install build-essential
 git clone --depth=1 https://github.com/Seeed-Studio/seeed-linux-buildroot.git -b master
 ```
 
-- **Step 3.** Navigate to the **seeed-linux-buildroot** directory
+- **步骤 3.** 导航到 **seeed-linux-buildroot** 目录
 
 ```sh
 cd seeed-linux-buildroot
@@ -73,7 +73,7 @@ make
 sudo apt install libncurses-dev
 ```
 
-- **Step 5.** Type the following to open the buildroot configuration window
+- **步骤 5.** 输入以下内容以打开 buildroot 配置窗口
 
 ```sh
 make menuconfig

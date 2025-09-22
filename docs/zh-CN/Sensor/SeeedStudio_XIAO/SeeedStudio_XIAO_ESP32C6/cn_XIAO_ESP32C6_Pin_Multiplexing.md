@@ -214,7 +214,7 @@ void loop() {
 
 #### Interrupt Method
 
-You can also use interrupts to handle button presses more efficiently.
+您还可以使用中断来更高效地处理按钮按压。
 
 ```cpp
 // Define the pin numbers for the button and LED
@@ -339,7 +339,7 @@ void loop() {
 }
 ```
 
-This code gradually increases the LED brightness using PWM.
+这段代码使用PWM逐步增加LED的亮度。
 
 #### LED Control
 

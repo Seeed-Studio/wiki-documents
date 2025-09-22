@@ -93,7 +93,7 @@ cd ~/vlm/example_1
 sudo docker compose up -d
 ```
 
-To check if all required containers have started, you can run the following command:
+要检查所有必需的容器是否已启动，可以运行以下命令：
 
 ```bash
 sudo docker ps

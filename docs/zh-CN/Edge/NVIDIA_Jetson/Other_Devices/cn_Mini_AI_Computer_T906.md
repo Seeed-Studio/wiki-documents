@@ -467,7 +467,7 @@ sudo chmod +x n720-ppp-dial.sh
 sudo ./n720-ppp-dial.sh
 ```
 
-If you need to turn off dial-up, you can run the ppp-kill.sh script to end it.
+如果你需要关闭拨号连接,你可以运行 ppp-kill.sh 脚本来终止它。
 
 ```shell
 
@@ -516,7 +516,7 @@ sudo vi /etc/rc.local
 
 ```
 
-At the vi editor, type `i` and then use `control+shift+V` or paste the following script:
+在 vi 编辑器中，输入 `i` 然后使用 `control+shift+V` 或粘贴以下脚本：
 
 ```shell
 #!/bin/bash
@@ -608,7 +608,7 @@ finally:
     gpio.cleanup()
 ```
 
-- **Step 3.** you could also check if the GPIO pin is at HI or LO by:
+- **步骤 3.** 你也可以通过以下方式检查 GPIO 引脚是否处于 HI 或 LO 状态：
 
 ```shell
 

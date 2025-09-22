@@ -260,7 +260,7 @@ plughw:CARD=seeed8micvoicec,DEV=0
 
 **Step 3. Record and Play**
 
-You can record then play, or you can record and play at the same time.
+你可以先录制然后播放，或者可以同时录制和播放。
 
 ```
 #It will capture sound on AC108 and save as a.wav
@@ -373,7 +373,7 @@ for i in range(0, numdevices):
 Input Device id  2  -  seeed-8mic-voicecard: - (hw:1,0)
 ```
 
-- Step 5, change `RESPEAKER_INDEX = 2` to index number. Run python script record.py to record a speech.
+- 步骤 5，将 `RESPEAKER_INDEX = 2` 改为索引号。运行 Python 脚本 record.py 来录制语音。
 
 ```python
 import pyaudio

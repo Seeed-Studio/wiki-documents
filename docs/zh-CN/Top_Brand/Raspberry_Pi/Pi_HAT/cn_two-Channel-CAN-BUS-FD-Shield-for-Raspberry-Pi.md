@@ -871,7 +871,7 @@ void loop() {
 }
 ```
 
-- **Wio Terminal + 2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD) 代码**
+- **Wio Terminal + 树莓派用2通道CAN-BUS(FD)扩展板(MCP2518FD)代码**
 
 ```cpp
 #include <SPI.h>

@@ -203,7 +203,7 @@ west flash -r uf2
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 ```
 
-This is defined in the Xiao nRF52840 devicetree code via an alias:
+这在 Xiao nRF52840 设备树代码中通过别名定义：
 
 ```
  aliases {
@@ -419,7 +419,7 @@ const struct device *const dmic_dev = DEVICE_DT_GET(DT_NODELABEL(dmic_dev));
 };
 ```
 
-In the sample project overlay this regulator is then enabled:
+在示例项目叠加层中，此调节器随后被启用：
 
 ```
 / {
@@ -457,13 +457,13 @@ Flash your board:
 west flash -r uf2
 ```
 
-Wait a moment for the MCU to reset after flashing and connect to monitor:
+闪烁后等待片刻让 MCU 重置并连接到显示器:
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-You will see a console available for sending commands to the board:
+你会看到一个可用于向开发板发送命令的控制台:
 
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
@@ -506,7 +506,7 @@ Flash your board:
 west flash -r uf2
 ```
 
-Wait a moment for the MCU to reset after flashing and connect to monitor:
+闪烁后等待片刻让 MCU 重置并连接到显示器:
 
 ```
 screen /dev/ttyACM0 115200
@@ -609,7 +609,7 @@ west build -p always -b xiao_ble samples/basic/button -- -DSHIELD=seeed_xiao_exp
 west flash -r uf2
 ```
 
-Wait a moment for the MCU to reset after flashing and connect to monitor:
+闪烁后等待片刻让 MCU 重置并连接到显示器:
 
 ```
 screen /dev/ttyACM0 115200
@@ -692,7 +692,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_ble samples/subsys/fs/fs_sample -- -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_expansion_board
 ```
 
-Now flash and monitor (first pressing RESET twice to enter uf2 bootloader mode):
+现在刷写并监控（首先按两次 RESET 进入 uf2 引导加载程序模式）：
 
 ```
 west flash -r uf2
@@ -763,7 +763,7 @@ Flash your board after its in uf2 bootloader mode:
 west flash -r uf2
 ```
 
-Wait a moment for the MCU to reset after flashing and connect to monitor:
+闪烁后等待片刻让 MCU 重置并连接到显示器:
 
 ```
 screen /dev/ttyACM0 115200
@@ -921,13 +921,13 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_ble samples/subsys/fs/fs_sample -- -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_round_display
 ```
 
-Now flash and monitor (first pressing RESET twice to enter uf2 bootloader mode):
+现在刷写并监控（首先按两次 RESET 进入 uf2 引导加载程序模式）：
 
 ```
 west flash -r uf2
 ```
 
-Wait a moment for the MCU to reset after flashing and connect to monitor:
+闪烁后等待片刻让 MCU 重置并连接到显示器:
 
 ```
 screen /dev/ttyACM0 115200

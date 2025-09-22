@@ -332,7 +332,7 @@ void loop() {
 }
 ```
 
-The general format for using the TFT_eSprite library is as follows.
+TFT_eSprite 库的一般使用格式如下。
 
 ```cpp
 #include <TFT_eSPI.h>

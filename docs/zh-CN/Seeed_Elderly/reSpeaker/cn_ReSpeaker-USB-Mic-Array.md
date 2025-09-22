@@ -274,9 +274,9 @@ if __name__ == '__main__':
 
 ```
 
-**For Windows/Mac:** Here is the example to control the leds.
+**对于 Windows/Mac：** 这是控制 LED 灯的示例。
 
-- Step 1. Download pixel_ring.
+- 步骤 1. 下载 pixel_ring.
 
 ```python
 git clone https://github.com/respeaker/pixel_ring.git
@@ -350,7 +350,7 @@ if dev:
             break
 ```
 
-- Step 3. We will see the DOA as below.
+- 步骤 3. 我们将按照以下方式呈现数据.
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python doa.py 
@@ -395,7 +395,7 @@ if dev:
             break
 ```
 
-- Step 3. We will see the DOA as below.
+- 步骤 3. 我们将按照以下方式来呈现数据.
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python VAD.py 
@@ -553,7 +553,7 @@ wf.close()
 
 **For Windows:**
 
-- Step 1. We run below command to install pyaudio.
+- 步骤 1. 我们执行以下命令来安装 pyaudio.
 
 ```
  pip install pyaudio

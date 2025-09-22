@@ -62,7 +62,7 @@ ls /dev/video*
 sudo apt install v4l-utils
 ```
 
-**Step3.** Set the channel format for the serializer and deserializer.
+**步骤3.** 设置序列化器和反序列化器的通道格式。
 
 ```bash
 media-ctl -d /dev/media0 --set-v4l2 '"ser_0_ch_0":1[fmt:YUYV8_1X16/1920x1536]'
@@ -476,7 +476,7 @@ sudo ip link set can1 up
 
 ```
 
-Then, run the file we just created in the Jetson terminal window:
+然后，在 Jetson 终端窗口中运行我们刚刚创建的文件：
 
 ```bash
 sudo apt-get install gpiod
@@ -650,7 +650,7 @@ sudo reboot
 sudo vi /usr/bin/hwtosys.sh 
 ```
 
-**Step9.** Enter **insert mode** by pressing **i**, copy and paste the following content inside the file:
+**步骤9.** 按下 **i** 进入**插入模式**，复制并粘贴以下内容到文件中：
 
 ```bash
 #!/bin/bash
@@ -689,20 +689,20 @@ WantedBy=multi-user.target
 sudo systemctl daemon-reload 
 ```
 
-**Step14.** Enable the newly created service to start on boot and start the service:
+**步骤14.** 启用新创建的服务在系统启动时自动启动，并立即启动该服务：
 
 ```bash
 sudo systemctl enable hwtosys.service
 sudo systemctl start hwtosys.service
 ```
 
-**Step15.** Verify the script is up and running as a systemd service:
+**步骤15.** 验证脚本作为 systemd 服务正在运行：
 
 ```bash
 sudo systemctl status hwtosys.service
 ```
 
-**Step16** 重启开发板，您将看到系统时钟现在与硬件时钟同步。
+**步骤16** 重启开发板，您将看到系统时钟现在与硬件时钟同步。
 
 ## 风扇
 

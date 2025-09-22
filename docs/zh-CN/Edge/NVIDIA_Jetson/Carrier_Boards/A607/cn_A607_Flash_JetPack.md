@@ -178,13 +178,13 @@ unzip A607-Orin-NX-JP5.1.1.zip
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例如（用户名："nvidia"，密码："nvidia"，设备名称："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
 ```
 
-**Step 6:** Flash the system to either NVMe SSD or USB Flash drive
+**步骤 6:** 将系统刷写到 NVMe SSD 或 USB 闪存驱动器
 
 #### NVMe SSD
 
@@ -251,13 +251,13 @@ unzip A607-Orin-Nano-4GB-JP5.1.1.zip
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例如（用户名："nvidia"，密码："nvidia"，设备名称："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
 ```
 
-**Step 6:** Flash the system to either NVMe SSD or USB Flash drive
+**步骤 6:** 将系统刷写到 NVMe SSD 或 USB 闪存驱动器
 
 #### NVMe SSD
 
@@ -396,7 +396,7 @@ cd /lib/modules/5.10.104-tegra/kernel/drivers/net/wireless/realtek/
 sudo mkdir rtl8723du
 ```
 
-**Step 3:** Copy the previously downloaded **8723du.ko** file to the newly created directory
+**步骤 3:** 将之前下载的 **8723du.ko** 文件复制到新创建的目录中
 
 ```sh
 cd ~

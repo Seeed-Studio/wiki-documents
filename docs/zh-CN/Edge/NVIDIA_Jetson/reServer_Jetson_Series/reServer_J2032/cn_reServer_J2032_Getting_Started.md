@@ -724,7 +724,7 @@ AT+QCFG="usbnet"
 AT+QCFG="usbnet",1
 ```
 
-Then enter the following command to force the modem to reboot:
+然后输入以下命令强制调制解调器重启：
 
 ```
 AT+CFUN=1,1

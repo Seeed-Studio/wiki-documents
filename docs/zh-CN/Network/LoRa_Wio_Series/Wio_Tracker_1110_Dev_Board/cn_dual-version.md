@@ -115,7 +115,7 @@ import TabItem from '@theme/TabItem';
  nrfutil install toolchain-manager
  ```
 
-- Run the following command to list the available installations:
+- 运行以下命令列出可用的安装:
 
  ```cpp
  nrfutil toolchain-manager search
@@ -195,19 +195,19 @@ SDK 安装开始，可能需要几分钟时间。
 
 For example:
 
-  **Specific release**: To check out the v2.5.0 release, enter the following command:
+  **特定版本**：要检出 v2.5.0 版本，请输入以下命令：
 
   ```cpp
   west init -m https://github.com/nrfconnect/sdk-nrf --mr v2.5.0
   ```
 
-  **Development tag**: To check out the v1.9.2-dev1 tag, enter the following command:
+  **开发标签**：要检出 v1.9.2-dev1 标签，请输入以下命令：
 
   ```cpp
   west init -m https://github.com/nrfconnect/sdk-nrf --mr v1.9.2-dev1
   ```
 
-  **Branch**: To check out the main branch that includes the latest state of development, enter the following command:
+  **分支**：要检出包含最新开发状态的主分支，请输入以下命令：
 
   ```cpp
   west init -m https://github.com/nrfconnect/sdk-nrf --mr main
@@ -262,14 +262,14 @@ For example:
 |___ ...
 ```
 
-- Make sure the manifest path points to west.yml inside the nrf directory:
+- 确保清单路径指向 nrf 目录内的 west.yml:
 
 ```cpp
 west manifest --path
 /path-to-ncs-folder/nrf/west.yml
 ```
 
-In case your manifest path points to a different file, use the following command:
+如果你的清单路径指向不同的文件，请使用以下命令：
 
 ```cpp
 west config manifest.path nrf
@@ -294,7 +294,7 @@ sidewalk     sidewalk                     <sidewalk_revision> https://github.com
 west update
 ```
 
-Depending on your connection, the update might take some time.
+根据您的网络连接情况，更新可能需要一些时间。
 
 - Install Python requirements for Sidewalk.
 
@@ -530,7 +530,7 @@ JoinEUI 也称为 AppEUI
   cd /opt/nordic/ncs/v2.5.0/sidewalk/samples/template_lbm_wio_tracker
   ```
 
-- Build the application by using the following west command:
+- 使用以下west命令构建应用程序：
 
  ```cpp
  west build --board wio_tracker_1110 -- -DRADIO=LR1110_SRC

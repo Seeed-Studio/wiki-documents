@@ -114,7 +114,7 @@ SenseCAP 团队主要专注于传感器和网络组件，致力于提供顶级�
 <tool_path>/esptool.exe --chip esp32s3 --baud 921600 write_flash -z 0x0 <firmware_path>/indicator_lorawan.bin 
 ```
 
-For example, if your `flash_bin` folder is located in drive `D:` and contains the following structure:
+例如，如果你的 `flash_bin` 文件夹位于 `D:` 驱动器中，并包含以下结构：
 
 ```sh
 flash_bin/

@@ -230,7 +230,7 @@ void loop()
 
 #### **SPI**
 
-- Use pin 8 as the SCK pin of SPI(MISO pin of SPI is pin 9,MOSI pin of SPI is pin 10):
+- 使用引脚8作为SPI的SCK引脚（SPI的MISO引脚是引脚9，SPI的MOSI引脚是引脚10）：
 
 ```c
 #include <SPI.h>

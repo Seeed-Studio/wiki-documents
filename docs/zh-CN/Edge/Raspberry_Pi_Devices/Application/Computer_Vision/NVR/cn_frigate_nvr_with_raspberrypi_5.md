@@ -96,7 +96,7 @@ Then, install the Hailo PCIe driver.
 sudo make install_dkms
 ```
 
-After installation, download firmware for Hailo and copy it to the `/lib/firmware/hailo` directory.
+安装完成后，下载 Hailo 的固件并将其复制到 `/lib/firmware/hailo` 目录。
 
 ```bash
 cd ../..

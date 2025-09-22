@@ -248,7 +248,7 @@ CoreCell ADC reset through GPIO13...
 ...
 ```
 
-To determine if the system you are running on still has the **sysfs interface**, you can run the following command:
+要确定你正在运行的系统是否仍然具有**sysfs接口**，你可以运行以下命令：
 
 ```shell
 ls /sys/class/gpio

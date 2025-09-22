@@ -188,7 +188,7 @@ xTaskCreatePinnedToCore(
 
 ### Task function call
 
-The task function is the actual code that will be executed by the task.
+任务函数是将由任务执行的实际代码。
 
 ```c
 void taskFunction(void * pvParameters) {
@@ -678,7 +678,7 @@ Fresh air.
     s->set_colorbar(s, 0);                   // 0 = disable , 1 = enable
   ```
 
-  - Defines a function takePicture() to capture an image and save it to SD card.
+- 定义一个函数 takePicture() 来捕获图像并将其保存到 SD 卡中。
 
   ```c
   void takePicture()
@@ -697,7 +697,7 @@ Fresh air.
   }
   ```
 
-  - Creates a task cameraTakePicture_5_sec() to continuously take pictures every 5 seconds.
+- 创建一个任务 cameraTakePicture_5_sec() 以每5秒连续拍摄一张照片。
 
   ```c
   void cameraTakePicture_5_sec(void *pvParameters)
@@ -747,8 +747,8 @@ Fresh air.
 #endif //SDCARD_CONFIG_H
 ```
 
-- SD Card Interface:  
-  Declares functions initialize_sdcard(), deinitialize_sdcard(), and saveJpegToSdcard().
+- SD 卡接口：
+  声明函数 initialize_sdcard()、deinitialize_sdcard() 和 saveJpegToSdcard()。
 
 ```c
 #ifndef SDCARD_INTERFACE_H

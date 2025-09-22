@@ -57,7 +57,7 @@ sudo apt install -y ca-certificates curl gnupg
 
 2. **Setting Up the NodeSource Repository**
 
-Next, set up the NodeSource repository on your reComputer:
+接下来,在你的 reComputer 上设置 NodeSource 仓库:
 
 ```sh
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/nodesource.gpg
@@ -71,13 +71,13 @@ curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg 
 NODE_MAJOR=20
 ```
 
-Add the Node.js repository to your reComputer’s sources list:
+将 Node.js 仓库添加到您的 reComputer 的源列表中：
 
 ```sh
 echo "deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 ```
 
-Update your package list again to include the Node.js repository:
+再次更新您的软件包列表以包含Node.js存储库：
 
 ```sh
 sudo apt update
@@ -323,7 +323,7 @@ sudo npm install -g @flowfuse/device-agent
    cd opt/flowfuse-device
 ```
 
-2. Create and Edit Configuration File:**  - Open a new configuration file named `device.yml`:
+2. 创建和编辑配置文件：**  - 打开一个名为 `device.yml` 的新配置文件：
 
 ```sh
 nano device.yml

@@ -74,7 +74,7 @@ Apache Nuttx 分为两个项目：
 ./tools/configure.sh board_name:your_application
 ```
 
-Also it's possible to check the list of board-supported a running the command:
+还可以通过运行以下命令来检查支持的板卡列表:
 
 ```bash
 ./tools/configure.sh -L
@@ -112,7 +112,7 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Now we select the NSH configuration to the xiao-rp2350 board:
+现在我们将 NSH 配置选择到 xiao-rp2350 开发板上：
 
 ```bash
 ./tools/configure.sh xiao-rp2350:nsh
@@ -137,7 +137,7 @@ NuttShell (NSH) NuttX-12.8.0
 nsh> 
 ```
 
-Typing `?`, you will access the available options for commands and built-in applications.
+输入 `?`，您将访问可用的命令和内置应用程序选项。
 
 ```bash
 nsh> ?
@@ -177,7 +177,7 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Now we select the NSH configuration to the xiao-rp2350 board:
+现在我们将 NSH 配置选择到 xiao-rp2350 开发板上：
 
 ```bash
 ./tools/configure.sh xiao-rp2350:usbnsh
@@ -189,13 +189,13 @@ Compile the source code.
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+将固件加载到您的开发板中，运行串行通信程序，如 minicon 或 picocom：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
 ```
 
-You must to press Enter 3 times, and then this message will show in the terminal.
+你必须按 Enter 键 3 次，然后这条消息将显示在终端中。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -223,7 +223,7 @@ Compile de the source code.
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+将固件加载到您的开发板中，运行串行通信程序，如 minicon 或 picocom：
 
 ```bash
 picocom -b 115200 /dev/ttyUSB0
@@ -286,7 +286,7 @@ nsh> ls /dev
 nsh> 
 ```
 
-Following these commands to read gpio27 and gpio26 (with interruption) and write at gpio28.
+按照以下命令读取 gpio27 和 gpio26（带中断）并在 gpio28 处写入。
 
 ```bash
 nsh> gpio -w 1 /dev/gpio26

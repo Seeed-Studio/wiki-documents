@@ -188,7 +188,7 @@ lv_pm_open_page(g_example, &group_page_example, PM_ADD_OBJS_TO_GROUP, &ui_Page_E
 int view_alarm_init(lv_obj_t *ui_screen);
 ```
 
-`ui_screen` is a pointer to the screen object used to display the alarm UI components.
+`ui_screen` 是一个指向用于显示闹钟UI组件的屏幕对象的指针。
 
 **Usage:**
 

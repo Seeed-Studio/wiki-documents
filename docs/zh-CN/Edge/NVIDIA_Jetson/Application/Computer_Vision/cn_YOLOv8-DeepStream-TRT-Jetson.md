@@ -107,7 +107,7 @@ libyaml-cpp-dev
 
 ## Install Necessary Packages
 
-- **Step 1.** Access the terminal of Jetson device, install pip and upgrade it
+- **步骤 1.** 访问 Jetson 设备的终端，安装 pip 并升级
 
 ```sh
 sudo apt update
@@ -143,7 +143,7 @@ vi requirements.txt
 pip3 install -r requirements.txt
 ```
 
-If the installer complains about outdated **python-dateutil** package, upgrade it by
+如果安装程序报告 **python-dateutil** 包过时,请通过以下方式升级它
 
 ```sh
 pip3 install python-dateutil --upgrade
@@ -178,7 +178,7 @@ wget <URL> -O <file_name>
 pip3 install <file_name>
 ```
 
-For example, here we are running **JP5.0.2** and therefore we choose **PyTorch v1.12.0**
+例如，这里我们运行的是 **JP5.0.2**，因此我们选择 **PyTorch v1.12.0**
 
 ```sh
 sudo apt-get install -y libopenblas-base libopenmpi-dev
@@ -218,7 +218,7 @@ cd DeepStream-Yolo
 git checkout 68f762d5bdeae7ac3458529bfe6fed72714336ca
 ```
 
-- **Step 3.** Copy **gen_wts_yoloV8.py** from **DeepStream-Yolo/utils** into **ultralytics** directory
+- **步骤 3.** 将 **gen_wts_yoloV8.py** 从 **DeepStream-Yolo/utils** 复制到 **ultralytics** 目录
 
 ```sh
 cp utils/gen_wts_yoloV8.py ~/ultralytics
@@ -261,7 +261,7 @@ cp yolov8s.wts ~/DeepStream-Yolo
 cp labels.txt ~/DeepStream-Yolo
 ```
 
-- **Step 7.** Open the **DeepStream-Yolo** folder and compile the library
+- **步骤 7.** 打开 **DeepStream-Yolo** 文件夹并编译库
 
 ```sh
 cd ~/DeepStream-Yolo
@@ -281,7 +281,7 @@ num-detected-classes=80
 ...
 ```
 
-- **Step 9.** Edit the **deepstream_app_config.txt** file
+- **步骤 9.** 编辑 **deepstream_app_config.txt** 文件
 
 ```sh
 ...
@@ -325,7 +325,7 @@ deepstream-app -c deepstream_app_config.txt
 sudo apt-get install libopencv-dev
 ```
 
-- **Step 2.** Compile/recompile the **nvdsinfer_custom_impl_Yolo** library with OpenCV support
+- **步骤 2.** 使用 OpenCV 支持编译/重新编译 **nvdsinfer_custom_impl_Yolo** 库
 
 ```sh
 cd ~/DeepStream-Yolo
@@ -341,7 +341,7 @@ CUDA_VER=10.2 OPENCV=1 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.0.
 mkdir calibration
 ```
 
-- **Step 5.** Run the following to select 1000 random images from COCO dataset to run calibration
+- **步骤 5.** 运行以下命令从 COCO 数据集中选择 1000 张随机图像来进行校准
 
 ```sh
 for jpg in $(ls -1 val2017/*.jpg | sort -R | head -1000); do \
@@ -364,7 +364,7 @@ export INT8_CALIB_IMG_PATH=calibration.txt
 export INT8_CALIB_BATCH_SIZE=1
 ```
 
-- **Step 8.** Update the **config_infer_primary_yoloV8.txt** file
+- **步骤 8.** 更新 **config_infer_primary_yoloV8.txt** 文件
 
 From 
 

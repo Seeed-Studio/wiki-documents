@@ -242,7 +242,7 @@ infery_manager -INFO- Successfully loaded YOLOX_Nano.onnx to the GPU.
 model.benchmark(batch_size=1)
 ```
 
-The following will be the output for the **YOLOX_Nano** model
+以下将是 **YOLOX_Nano** 模型的输出
 
 ```sh
 base_inferencer -INFO- Benchmarking the model in batch size 1 and dimensions [(3, 416, 416)]...

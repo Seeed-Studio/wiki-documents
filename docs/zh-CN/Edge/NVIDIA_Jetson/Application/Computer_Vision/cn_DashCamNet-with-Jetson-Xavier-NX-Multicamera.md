@@ -153,14 +153,14 @@ Add the user into the `docker` group.
       && curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
    ```
 
-Update the package listing and install the `nvidia-docker2` package (and dependencies):
+更新软件包列表并安装 `nvidia-docker2` 软件包（及其依赖项）：
 
    ```shell
    sudo apt-get update
    sudo apt-get install -y nvidia-docker2
    ```
 
-Restart the Docker daemon to complete the installation after setting the default runtime:
+设置默认运行时后,重启 Docker 守护进程以完成安装:
 
    ```shell
    sudo systemctl restart docker
@@ -184,7 +184,7 @@ Restart the Docker daemon to complete the installation after setting the default
 wget -O ngccli_arm64.zip https://ngc.nvidia.com/downloads/ngccli_arm64.zip && unzip -o ngccli_arm64.zip && chmod u+x ngc
 ```
 
-Check the binary's md5 hash to ensure the file wasn't corrupted during download:
+检查二进制文件的md5哈希值以确保文件在下载过程中未被损坏：
 
 ```shell
 md5sum -c ngc.md5
@@ -272,7 +272,7 @@ virtualenv venv
 source venv/bin/activate
 ```
 
-- If you are done working in the virtual environment for the moment, you can deactivate it:
+- 如果你暂时完成了在虚拟环境中的工作，你可以停用它：
 
 ```shell
 deactivate
@@ -308,7 +308,7 @@ deactivate
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 ```
 
-- Setting the path to the python3 binary when creating your `virtualenv` using the `virtualenvwrapper` wrapper
+- 使用 `virtualenvwrapper` 包装器创建 `virtualenv` 时设置 python3 二进制文件的路径
 
 ```shell
 mkvirtualenv launcher -p /path/to/your/python3
@@ -320,13 +320,13 @@ mkvirtualenv launcher -p /path/to/your/python3
    (launcher) py-3.6.9 desktop:
 ```
 
-- **Step 3**. When you are done with you session, you may deactivate your `virtualenv` using the `deactivate` command:
+- **步骤 3**. 当您完成会话后，可以使用 `deactivate` 命令来停用您的 `virtualenv`：
 
 ```shell
 deactivate
 ```
 
-- **Step 4**. You may re-instantiate this created `virtualenv` env using the `workon` command.
+- **步骤 4**。你可以使用`workon`命令重新激活这个创建的`virtualenv`环境。
 
    ```shell
    workon launcher
@@ -429,7 +429,7 @@ cd examples
 sudo -H python3 example.py
 ```
 
-*This is the 'example.py', you can apply it to either monocular camera or multi-camera.*
+*这是"example.py"，你可以将其应用于单目相机或多相机。*
 
 ```cpp
 import time

@@ -194,7 +194,7 @@ void initParticles() {
 }
 ```
 
-- It initializes *numParticles* with random positions and speeds.
+- 它用随机位置和速度初始化 *numParticles*。
 
 2. Particle updates
 
@@ -247,7 +247,7 @@ if (rc != PNG_SUCCESS) {
 png.decode(NULL, 0);
 ```
 
-- Loads and decodes the current background PNG using the *png.openFLASH()* function
+- 使用 *png.openFLASH()* 函数加载并解码当前背景 PNG
 
 ### Touch interaction
 

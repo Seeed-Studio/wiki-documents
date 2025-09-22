@@ -87,7 +87,7 @@ Home Assistant OS 为运行 Home Assistant 提供了一个精简和优化的环�
 sudo apt update
 ```
 
-- **Following this, proceed to install the following dependencies:**
+- **接下来，继续安装以下依赖项：**
 
 ```sh
 sudo apt-get install \

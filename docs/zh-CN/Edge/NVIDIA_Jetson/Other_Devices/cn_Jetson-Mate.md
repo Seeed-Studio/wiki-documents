@@ -196,7 +196,7 @@ sudo minicom -b 9600 -D /dev/ttyACM0
 ifconfig
 ```
 
-- **Step 3.** Type the following on the host PC terminal to establish an SSH connection
+- **步骤 3.** 在主机 PC 终端上输入以下内容以建立 SSH 连接
 
 ```sh
 ssh user@192.xxx.xx.xx
@@ -266,13 +266,13 @@ sudo apt update && sudo apt install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-Disable the swap, You have to turn this off every time you reboot.
+禁用交换分区，每次重启时都必须关闭它。
 
 ```
 sudo swapoff -a
 ```
 
-Compile deviceQuery, which we will use it in the following steps.
+编译 deviceQuery，我们将在接下来的步骤中使用它。
 
 ```shell
 cd /usr/local/cuda/samples/1_Utilities/deviceQuery && sudo make 
@@ -308,7 +308,7 @@ kubeadm join 192.168.2.114:6443 --token zqqoy7.9oi8dpkfmqkop2p5 \
     --discovery-token-ca-cert-hash sha256:71270ea137214422221319c1bdb9ba6d4b76abfa2506753703ed654a90c4982b
 ```
 
-Using the output instructions, run the following commands:
+使用输出指令，运行以下命令:
 
 ```shell
 mkdir -p $HOME/.kube
@@ -316,7 +316,7 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-Install a pod-network add-on to the control plane node. Use calico as the pod-network add-on:
+在控制平面节点上安装 pod 网络插件。使用 calico 作为 pod 网络插件：
 
 ```
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
@@ -387,7 +387,7 @@ kubectl label node se4 node-role.kubernetes.io/worker=worker
 nano cuda-samples.yaml
 ```
 
-Add the following content and save it as cuda-samples.yaml:
+将以下内容添加并保存为 cuda-samples.yaml：
 
 ```shell
 apiVersion: v1

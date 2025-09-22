@@ -105,7 +105,7 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Now we select the USBNSH configuration to the seeed-xiao-rp2040 board:
+现在我们将USBNSH配置选择到seeed-xiao-rp2040开发板上：
 
 ```
 ./tools/configurate.sh seeed-xiao-rp2040:usbnsh
@@ -123,14 +123,14 @@ After programming and open serial communication
 picocom -b 115200 /dev/ttyACM0
 ```
 
-You must to press Enter 3 times, and then this message will show in the terminal.
+你必须按 Enter 键 3 次，然后这条消息将显示在终端中。
 
 ```
 NuttShell (NSH) NuttX-12.5.1
 nsh> 
 ```
 
-Typing `?`, you will access the available options for commands and built-in applications.
+输入 `?`，您将访问可用的命令和内置应用程序选项。
 
 ```
 nsh> ?
@@ -150,7 +150,7 @@ Builtin Apps:
     getprime    hello       nsh         ostest      sh 
 ```
 
-Let's say hello to NuttX, type `hello` and then it executes the command:
+让我们向 NuttX 打招呼，输入 `hello` 然后它执行该命令：
 
 ```
 nsh> hello
@@ -290,7 +290,7 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Configure the board for userled application using the command:
+使用以下命令配置开发板以运行 userled 应用程序：
 
 ```
 ./tools/configurate.sh seeed-xiao-rp2040:userleds
@@ -346,7 +346,7 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Select the ws2812 configuration to the seeed-xiao-rp2040 board.
+选择 ws2812 配置到 seeed-xiao-rp2040 开发板。
 
 ```
 ./tools/configurate.sh seeed-xiao-rp2040:ws2812
@@ -394,7 +394,7 @@ nsh> ls /dev/
 
 ```
 
-Typing `ws2812 -h` will return a list of parameters that are accepted to interact with this application.
+输入 `ws2812 -h` 将返回此应用程序接受的参数列表。
 
 ```
 nsh> ws2812 -h
@@ -409,7 +409,7 @@ specified, that path will be re-used until it is changed.
 
 ```
 
-Let's start our application, type `ws2812` and you see the LEDs changing the color.
+让我们启动我们的应用程序，输入`ws2812`，你会看到LED灯改变颜色。
 
 ```
 nsh> ws2812

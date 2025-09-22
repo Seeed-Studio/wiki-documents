@@ -35,7 +35,7 @@ last_update:
 sudo nano /boot/config.txt
 ```
 
-- **Step 2.** At the very bottom of this file, comment out the line which says **dtoverlay=reTerminal**
+- **步骤 2.** 在此文件的最底部，注释掉写有 **dtoverlay=reTerminal** 的那一行
 
 ```sh
 #dtoverlay=reTerminal
@@ -49,7 +49,7 @@ sudo nano /boot/config.txt
 sudo reboot
 ```
 
-- **Step 4.** Make STM32 enter **boot mode** through **i2c-tools**
+- **步骤 4.** 通过**i2c-tools**使STM32进入**引导模式**
 
 ```sh
 i2ctransfer -y 1 w2@0x45 0x9b 0x01
@@ -99,7 +99,7 @@ sudo poweroff
 sudo nano /boot/config.txt
 ```
 
-- **Step 2.** At the very bottom of this file, comment out the line which says **dtoverlay=reTerminal**
+- **步骤 2.** 在此文件的最底部，注释掉写有 **dtoverlay=reTerminal** 的那一行
 
 ```sh
 #dtoverlay=reTerminal
@@ -111,14 +111,14 @@ sudo nano /boot/config.txt
 sudo reboot
 ```
 
-- **Step 4.** Make a new directory inside reTerminal and enter it.
+- **步骤 4.** 在reTerminal内创建一个新目录并进入该目录。
 
 ```sh
 mkdir STM32
 cd STM32
 ```
 
-<!-- - **Step 5.** Visit [this link](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases) and download **stm32flash** file and the **STM32G030F6_R2.bin** file from the **latest release** version.
+<!-- - **步骤 5.** 访问[此链接](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases)并从**最新发布**版本中下载**stm32flash**文件和**STM32G030F6_R2.bin**文件。
 
 **Note:** You can click on them to start downloading -->
 
@@ -138,26 +138,26 @@ wget https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases/download/20
 tar -xvf stm32flash-0.7.tar.gz
 ```
 
-- **Step 7.** Go to the folder named **stm32flash-0.7** and make the flash tool executable
+- **步骤 7.** 进入名为 **stm32flash-0.7** 的文件夹，并使闪存工具可执行
 
 ```sh
 cd stm32flash-0.7/
 make
 ```
 
-- **Step 8.** Make STM32 enter **boot mode** through **i2c-tools**
+- **步骤 8.** 通过**i2c-tools**使STM32进入**引导模式**
 
 ```sh
 i2ctransfer -y 1 w2@0x45 0x9b 0x01
 ```
 
-- **Step 9.** Erase the flash in the STM32 chip using **stm32flash tool**
+- **步骤 9.** 使用**stm32flash工具**擦除STM32芯片中的闪存
 
 ```sh
 ./stm32flash -a 0x56 -o /dev/i2c-1
 ```
 
-- **Step 10.** Flash the firmware to STM32 using stm32flash tool
+- **步骤 10。** 使用stm32flash工具将固件刷入STM32
 
 ```sh
 ./stm32flash -a 0x56 -w ../STM32G030F6_R2.bin -v -g 0x0 /dev/i2c-1
@@ -171,13 +171,13 @@ i2ctransfer -y 1 w2@0x45 0x9b 0x01
 i2ctransfer -y 1 w2@0x45 0x9b 0x00
 ```
 
-- **Step 12.** Open the configuration file that we used before
+- **步骤 12。** 打开我们之前使用的配置文件
 
 ```sh
 sudo nano /boot/config.txt
 ```
 
-- **Step 13.** At the very bottom of this file, uncomment the line which says **dtoverlay=reTerminal**
+- **步骤 13。** 在此文件的最底部，取消注释写有 **dtoverlay=reTerminal** 的那一行
 
 ```sh
 dtoverlay=reTerminal
@@ -189,13 +189,13 @@ dtoverlay=reTerminal
 sudo reboot
 ```
 
-<!-- - **Step 6.** Open command prompt on PC and navigate to the location of the downloaded files before
+<!-- - **步骤 6.** 在PC上打开命令提示符，并导航到下载文件的位置
 
 ```sh
 cd C:\Users\user\Downloads
 ```
 
-- **Step 7.** Transfer the files to the **STM32** directory on the reTerminal we created before
+- **步骤 7.** 将文件传输到我们之前创建的 reTerminal 上的 **STM32** 目录
 
 ```sh
 scp -r .\stm32flash .\STM32G030F6_R2.bin pi@192.168.x.xx:\home\pi\STM32
@@ -223,13 +223,13 @@ chmod +x stm32flash
 i2ctransfer -y 1 w2@0x45 0x9b 0x01
 ```
 
-- **Step 11.** Erase the flash in the STM32 chip using **stm32flash tool**
+- **步骤 11。** 使用 **stm32flash 工具**擦除 STM32 芯片中的闪存
 
 ```sh
 ./stm32flash -a 0x56 -o /dev/i2c-1
 ```
 
-- **Step 12.** Flash the firmware to STM32 using stm32flash tool
+- **步骤 12。** 使用stm32flash工具将固件刷入STM32
 
 ```sh
 ./stm32flash -a 0x56 -w STM32G030F6_R2.bin -v -g 0x0 /dev/i2c-1
@@ -243,13 +243,13 @@ i2ctransfer -y 1 w2@0x45 0x9b 0x01
 i2ctransfer -y 1 w2@0x45 0x9b 0x00
 ```
 
-- **Step 14.** Open the configuration file that we used before
+- **步骤 14。** 打开我们之前使用的配置文件
 
 ```sh
 sudo nano /boot/config.txt
 ```
 
-- **Step 15.** At the very bottom of this file, uncomment the line which says **dtoverlay=reTerminal**
+- **步骤 15。** 在此文件的最底部，取消注释写有 **dtoverlay=reTerminal** 的那一行
 
 ```sh
 dtoverlay=reTerminal
@@ -296,7 +296,7 @@ cd openocd
 cd C:\Users\user\Downloads
 ```
 
-- **Step 6.** Transfer the files to the **openocd** directory on the reTerminal we created before
+- **步骤 6.** 将文件传输到我们之前在 reTerminal 上创建的 **openocd** 目录
 
 ```sh
 scp -r .\STM32G030F6_R2.bin pi@192.168.x.xx:\home\pi\openocd
@@ -362,7 +362,7 @@ openocd -f interface/sysfsgpio-raspberrypi.cfg -c "transport select swd" -f targ
 sudo nano /boot/config.txt
 ```
 
-- **Step 2.** At the very bottom of this file, comment out the line which says **dtoverlay=reTerminal**
+- **步骤 2.** 在此文件的最底部，注释掉写有 **dtoverlay=reTerminal** 的那一行
 
 ```sh
 #dtoverlay=reTerminal
@@ -384,7 +384,7 @@ i2ctransfer -y 1 w1@0x45 0x97 r2
 sudo nano /boot/config.txt
 ```
 
-- **Step 6.** At the very bottom of this file, uncomment the line which says **dtoverlay=reTerminal**
+- **步骤 6.** 在此文件的最底部，取消注释写有 **dtoverlay=reTerminal** 的那一行
 
 ```sh
 dtoverlay=reTerminal
@@ -562,7 +562,7 @@ sudo apt-get update
 sudo apt-get install minicom
 ```
 
-- **Step 5.** Type the following in the terminal to view the connected serial devices
+- **步骤 5.** 在终端中输入以下内容以查看已连接的串行设备
 
 ```sh
 dmesg | grep tty
@@ -624,7 +624,7 @@ sudo apt update
 sudo apt install git
 ```
 
-- **Step 6.** Git might produce an error if the date is not set properly. Type the following to correct this
+- **步骤 6.** 如果日期设置不正确，Git 可能会产生错误。输入以下内容来纠正这个问题
 
 ```sh
 sudo date MMDDhhmm
@@ -657,7 +657,7 @@ make
 sudo nano recovery/boot.conf
 ```
 
-- **Step 11.** Change the **BOOT_ORDER** field to the following
+- **步骤 11。** 将 **BOOT_ORDER** 字段更改为以下内容
 
 ```sh
 BOOT_ORDER=0xf15
@@ -680,7 +680,7 @@ pieeprom.bin 文件现在已准备好刷写到计算模块 4
 cd ..
 ```
 
-- **Step 14.** Run the usbboot tool to flash the bootloader EEPROM
+- **步骤 14。** 运行 usbboot 工具来刷写引导加载程序 EEPROM
 
 ```sh
 sudo ./rpiboot -d recovery
@@ -866,7 +866,7 @@ Sudo reboot
 sudo vi /boot/config.txt
 ```
 
-- **Step 2.** Comment the following line and save the file by typing **:wq** after pressing **ESC**
+- **步骤 2.** 注释以下行并通过按下 **ESC** 后输入 **:wq** 来保存文件
 
 ```sh
 #dtoverlay=reTerminal-bridge

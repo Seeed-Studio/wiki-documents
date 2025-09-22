@@ -103,7 +103,7 @@ sudo /opt/nvidia/jetson-io/config-by-hardware.py -n "reComputer sdmmc"
 
 <!-- ## Move system to SD card
 
-First, we need to clone the script include the tools we need.
+首先，我们需要克隆脚本以包含我们需要的工具。
 
 ```bash
 git clone https://github.com/limengdu/bootFromUSB

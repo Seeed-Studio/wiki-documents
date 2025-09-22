@@ -96,7 +96,7 @@ idf.py -p port flash
 sudo usermod -a -G dialout $USERNAME
 ```
 
-On a **Windows** setup, let's suppose that the device is mounted as COM14, the above command would be like:
+在 **Windows** 设置中，假设设备挂载为 COM14，上述命令将类似于：
 
 ```
 idf.py -p COM14 flash
@@ -273,7 +273,7 @@ cd esp-idf/
 
 ### Installation of One Channel Hub
 
-**Step 1**: Clone the hub to local repository. And navigate to the project path.
+**步骤 1**: 将仓库克隆到本地仓库。并导航到项目路径。
 
 ```linux
 git clone https://github.com/Seeed-Studio/one_channel_hub.git

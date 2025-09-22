@@ -365,7 +365,7 @@ evtest
 sudo nano /boot/config.txt
 ```
 
-- **Step 5.** Modify the file by adding the following to the end
+- **步骤 5.** 修改文件，在末尾添加以下内容
 
 ```sh
 dtoverlay=reTerminal,key0=0x100,key1=0x101,key2=0x102,key3=0x103,tp_rotate=1
@@ -410,7 +410,7 @@ sudo -i
 cd /sys/class/leds
 ```
 
-- **Step 3.** Enter the following directory to control the **Green Color USR LED**
+- **步骤 3.** 进入以下目录以控制**绿色 USR LED**
 
 ```sh
 cd usr_led0
@@ -422,7 +422,7 @@ cd usr_led0
 echo 255 > brightness
 ```
 
-**Note:** You can enter values from 1 - 255 to adjust the brightness levels
+**注意：** 您可以输入 1 - 255 之间的值来调节亮度级别
 
 - **Step 5.** Turn off the LED
 
@@ -430,7 +430,7 @@ echo 255 > brightness
 echo 0 > brightness
 ```
 
-- **Step 6.** Enter the following directory to control the **Red Color STA LED**
+- **步骤 6.** 进入以下目录以控制**红色 STA LED**
 
 ```sh
 cd ..
@@ -564,7 +564,7 @@ sudo -i
 cd /sys/bus/iio/devices/iio:device0
 ```
 
-- **Step 3.** Type the following to obtain the light intensity value in **Lux**
+- **步骤 3.** 输入以下内容以获取以**勒克斯**为单位的光强度值
 
 ```sh
 cat in_illuminance_input 

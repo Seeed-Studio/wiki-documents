@@ -201,7 +201,7 @@ west flash
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 ```
 
-This is defined in the Xiao SAMD21 devicetree code via an alias:
+这在 Xiao SAMD21 设备树代码中通过别名定义:
 
 ```
  aliases {
@@ -302,7 +302,7 @@ Double press RESET or short the RST pin to the GND:
 west flash
 ```
 
-Wait a moment for the MCU to reset after flashing and connect to monitor:
+闪烁后等待片刻让 MCU 重置并连接到显示器:
 
 ```
 screen /dev/ttyACM0 115200
@@ -340,7 +340,7 @@ I: Test file: /lfs/pattern.bin not found, create one!
 screen /dev/ttyACM0 115200
 ```
 
-Now connecting again to the serial monitor we do not see the formatting nor does it need to create a file:
+现在再次连接到串行监视器，我们看不到格式化，也不需要创建文件：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -391,7 +391,7 @@ Double press RESET or short the RST pin to the GND:
 west flash
 ```
 
-Wait a moment for the MCU to reset after flashing and connect to monitor:
+闪烁后等待片刻让MCU重置并连接到显示器:
 
 ```
 screen /dev/ttyACM0 115200
@@ -495,7 +495,7 @@ Double press RESET or short the RST pin to the GND:
 west flash
 ```
 
-Wait a moment for the MCU to reset after flashing and connect to monitor:
+闪烁后等待片刻让 MCU 重置并连接到显示器:
 
 ```
 screen /dev/ttyACM0 115200
@@ -680,7 +680,7 @@ Double press RESET or short the RST pin to the GND:
 west flash
 ```
 
-Wait a moment for the MCU to reset after flashing and connect to monitor:
+闪烁后等待片刻让 MCU 重置并连接到显示器:
 
 ```
 screen /dev/ttyACM0 115200

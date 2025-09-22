@@ -113,19 +113,19 @@ cat /etc/nv_tegra_release
 sudo tar -vxjf <Base_BSP_file_name>.tbz2
 ```
 
-- **Step 5.** Navigate to the **rootfs directory** of the extracted NVIDIA driver package
+- **步骤 5.** 导航到解压后的 NVIDIA 驱动程序包的 **rootfs 目录**
 
 ```sh
 cd <Base_BSP_L4T_root>/Linux_for_Tegra/rootfs
 ```
 
-- **Step 6.** Extract the sample file system to the rootfs directory
+- **步骤 6.** 将示例文件系统提取到 rootfs 目录
 
 ```sh
 sudo tar -jxpf ../../<rootfs_file_name>.tbz2
 ```
 
-- **Step 7.** Run the apply_binaries.sh script to copy the NVIDIA user space libraries into the target file system
+- **步骤 7.** 运行apply_binaries.sh脚本，将NVIDIA用户空间库复制到目标文件系统中
 
 ```sh
 cd ..
@@ -144,7 +144,7 @@ sudo ./apply_binaries.sh
 cd <Target_BSP_L4T_root>/Linux_for_Tegra/rootfs/etc/init.d
 ```
 
-- **Step 3.** Create a new file named **install_allxon_dms.sh**
+- **步骤 3.** 创建一个名为 **install_allxon_dms.sh** 的新文件
 
 ```sh
 sudo nano install_allxon_dms.sh
@@ -246,13 +246,13 @@ do_install() {
 do_install
 ```
 
-- **Step 5.** Navigate to the **rootfs/etc/systemd/system** directory of Target BSP
+- **步骤 5.** 导航到目标 BSP 的 **rootfs/etc/systemd/system** 目录
 
 ```sh
 cd <Target_BSP_L4T_root>/Linux_for_Tegra/rootfs/etc/systemd/system
 ```
 
-- **Step 6.** Create a new file named **dms-install.service** and then copy the following codes to the file
+- **步骤 6.** 创建一个名为 **dms-install.service** 的新文件，然后将以下代码复制到该文件中
 
 ```sh
 [Unit]
@@ -698,7 +698,7 @@ cat /etc/nv_tegra_release
 sudo systemctl disable dms-install.service
 ```
 
-After that you can use the below command to uninstall Allxon DMS Agent
+之后您可以使用以下命令卸载 Allxon DMS Agent
 
 ```sh
 sudo wget -qO - "https://get.allxon.net/linux/uninstall" | sudo bash -s
