@@ -63,7 +63,7 @@ cd your/folder/path
 
 - **Step 3**: Run Installation Script
 
-Execute the install.sh file to install MongoDB.
+执行 install.sh 文件以安装 MongoDB。
 
 ```sh
 ./install.sh

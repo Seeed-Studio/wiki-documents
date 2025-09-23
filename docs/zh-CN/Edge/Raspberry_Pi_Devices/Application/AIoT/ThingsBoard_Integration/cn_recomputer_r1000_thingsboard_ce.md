@@ -63,8 +63,7 @@ ThingsBoard 需要 Java 17 才能运行。打开终端。
    ```bash
    sudo apt install openjdk-17-jdk
    ```
-
-3. Configure your system to use OpenJDK 17 by default:
+3. 配置您的系统默认使用 OpenJDK 17：
 
    ```bash
    sudo update-alternatives --config java
@@ -107,8 +106,7 @@ ThingsBoard 需要 Java 17 才能运行。打开终端。
    sudo apt -y install postgresql
    sudo service postgresql start
    ```
-
-3. Set the password for the `postgres` user:
+3. 为 `postgres` 用户设置密码：
 
    ```bash
    sudo -u postgres psql
@@ -122,9 +120,9 @@ ThingsBoard 需要 Java 17 才能运行。打开终端。
    CREATE DATABASE thingsboard;
    ```
 
-## Step 4: Configure ThingsBoard
+## 步骤 4: 配置 ThingsBoard
 
-1. Open the ThingsBoard configuration file:
+1. 打开 ThingsBoard 配置文件：
 
    ```bash
    sudo nano /etc/thingsboard/conf/thingsboard.conf

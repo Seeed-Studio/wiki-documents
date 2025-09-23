@@ -65,7 +65,7 @@ west flash -r uf2
 screen /dev/ttyACM0 115200
 ```
 
-You should see a response similar to the following:
+你应该看到类似以下的响应：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2212-gc38ea288eee9 ***
@@ -139,7 +139,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/led_strip
 ```
 
-Enter bootloader mode and flash your device:
+进入引导加载程序模式并刷写您的设备：
 
 ```
 west flash -r uf2
@@ -213,7 +213,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/basic/fade_led
 ```
 
-Enter bootloader mode and flash your device:
+进入引导加载程序模式并刷写您的设备：
 
 ```
 west flash -r uf2
@@ -256,7 +256,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/counter/alarm -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-Enter bootloader mode and flash your device:
+进入引导加载程序模式并刷写您的设备：
 
 ```
 west flash -r uf2
@@ -291,7 +291,7 @@ Set alarm in 32 sec (32000000 ticks)
 
 #### TFLite - Hello World
 
-Enable TFLite with Zephyr and update:
+使用 Zephyr 启用 TFLite 并更新：
 
 ```
 west config manifest.project-filter -- +tflite-micro
@@ -305,7 +305,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/modules/tflite-micro/hello_world -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-Enter bootloader mode and flash your device:
+进入引导加载程序模式并刷写您的设备：
 
 ```
 west flash -r uf2
@@ -317,7 +317,7 @@ Connect to monitor:
 screen /dev/ttyACM0 115200
 ```
 
-You will see results returned from the console:
+你将看到从控制台返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
@@ -363,7 +363,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/display -- -DSHIELD=seeed_xiao_expansion_board
 ```
 
-Enter bootloader mode and flash your device:
+进入引导加载程序模式并刷写您的设备：
 
 ```
 west flash -r uf2
@@ -411,7 +411,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/basic/button -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf -DSHIELD=seeed_xiao_expansion_board
 ```
 
-Enter bootloader mode and flash your device:
+进入引导加载程序模式并刷写您的设备：
 
 ```
 west flash -r uf2
@@ -438,7 +438,7 @@ Button pressed at 3084766465
 Button pressed at 3388674993
 ```
 
-Let's dive into this example a bit to see why it works:
+让我们深入探讨这个例子，看看为什么它能够起作用：
 
 ```
 / {
@@ -470,7 +470,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/basic/blinky_pwm -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/xiao_expansion_buzzer.overlay"
 ```
 
-Enter bootloader mode and flash your device:
+进入引导加载程序模式并刷写您的设备：
 
 ```
 west flash -r uf2
@@ -528,7 +528,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/subsys/fs/fs_sample -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf $(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_expansion_board
 ```
 
-Enter bootloader mode and flash your device:
+进入引导加载程序模式并刷写您的设备：
 
 ```
 west flash -r uf2
@@ -601,7 +601,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/sht31.overlay $(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-Enter bootloader mode and flash your device:
+进入引导加载程序模式并刷写您的设备：
 
 ```
 west flash -r uf2
@@ -613,7 +613,7 @@ Connect to monitor:
 screen /dev/ttyACM0 115200
 ```
 
-You will see results returned from the console:
+你将看到从控制台返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2212-gc38ea288eee9 ***
@@ -627,7 +627,7 @@ SHT3XD: 26.23 Cel ; 52.48 %RH
 SHT3XD: 26.24 Cel ; 52.30 %RH
 ```
 
-Let's dive into this example a bit to see why it works:
+让我们深入探讨这个例子，看看为什么它能够起作用：
 
 ```
  &xiao_i2c {
@@ -666,7 +666,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.conf
 ```
 
-Enter bootloader mode and flash your device:
+进入引导加载程序模式并刷写您的设备：
 
 ```
 west flash -r uf2

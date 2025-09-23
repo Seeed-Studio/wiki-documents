@@ -77,7 +77,7 @@ sudo ./install.sh
 sudo reboot now
 ```
 
-- Step 2. Then select audio output on Raspberry Pi:
+- 步骤 2. 然后在树莓派上选择音频输出:
 
 ```sh
 sudo raspi-config
@@ -193,7 +193,7 @@ python3 interfaces/pixels.py
 python3 recording_examples/get_device_index.py
 ```
 
-You will see the device ID as below.
+您将看到如下所示的设备 ID。
 
 ```txt
 Input Device id  2  -  seeed-4mic-voicecard: - (hw:1,0)
@@ -237,7 +237,7 @@ cmake ..
 make
 ```
 
-- Step 2. Get [ODAS Studio](https://github.com/introlab/odas_web)  and run it.
+- 步骤 2. 获取 [ODAS Studio](https://github.com/introlab/odas_web) 并运行它。
 
 Install nodejs v12.22 and npm 6.14.
 
@@ -247,14 +247,14 @@ sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 ```
 
-Ensure that the relevant compilation tools are installed
+确保已安装相关的编译工具
 
 ```bash
 sudo apt -y install gcc g++ make
 sudo apt -y install nodejs
 ```
 
-Installing odas_web dependencies with npm
+使用 npm 安装 odas_web 依赖项
 
 ```bash
 cd ~/Desktop
@@ -284,7 +284,7 @@ sudo apt install python2 -y
 arecord -l  #type this commond  make sure u have arecord installed
 ```
 
-You will see something like the following output
+你会看到类似以下的输出
 
 ```bash
 pi@raspberrypi:~/Desktop/odas/config/odaslive $ arecord -l
@@ -372,7 +372,7 @@ picovoice_respeaker_demo
 
 ### Voice Commands
 
-Here are voice commands for this demo:
+以下是此演示的语音命令：
 
 - **Picovoice**
 
@@ -423,11 +423,11 @@ context:
 
 另外，您也可以尝试使用此命令来改变颜色：
 
-- **Picovoice, set the lights to orange**
+- **Picovoice，把灯光设置为橙色**
 
 通过以下命令关闭灯光：
 
-- **Picovoice, turn off all lights**
+- **Picovoice，关闭所有灯**
 
 **演示视频展示**
 

@@ -85,7 +85,7 @@ sudo apt install docker-compose-plugin
 
 ### Creating a yml file
 
-Create the `frigate.yml` file so that Docker Compose can run Frigate.
+创建 `frigate.yml` 文件以便 Docker Compose 可以运行 Frigate。
 
 ```bash
 cd ~
@@ -133,16 +133,14 @@ mkdir media && cd media
 wget -c \
 "https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/model_cache/yolov11s.hef"
 ```
-
-Download the YOLO model and create config.yml:
+下载 YOLO 模型并创建 config.yml：
 
 ```bash
 cd .. && mkdir config && cd config && mkdir model_cache
 cd model_cache && wget https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.14.0/hailo8/yolov8n.hef
 cd .. && nano config.yml
 ```
-
-The following is an example config.yml:
+以下是一个示例 config.yml：
 
 ```bash
 database:
@@ -415,7 +413,7 @@ lpr:
 
 ## Run the project
 
-Pull and run the project:
+拉取并运行项目：
 
 ```bash
 cd ~

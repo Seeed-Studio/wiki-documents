@@ -217,8 +217,7 @@ Edge Impulse提供了多种数据收集方式。这里我们将定制自己的�
 ```cpp
 ping -c 3 www.google.com
 ```
-
-If the network is working fine, the result should be like:
+如果网络运行正常，结果应该是这样的：
 
 ```cpp
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
@@ -311,8 +310,7 @@ edge-impulse-linux
 ```cpp
 ping -c 3 www.google.com
 ```
-
-If the network is working fine, the result should be like:
+如果网络运行正常，结果应该是这样的：
 
 ```cpp
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms

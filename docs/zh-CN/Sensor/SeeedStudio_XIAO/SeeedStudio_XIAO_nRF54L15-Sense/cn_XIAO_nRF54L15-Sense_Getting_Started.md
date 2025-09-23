@@ -295,73 +295,74 @@ nrfutil self-upgrade
 ```cpp
 [00:00:02] ###### 100% [Install packages] Install packages
 ``` -->
+#### VScode 配置开发板并构建烧录文件
 
-#### VScode configures the board and builds the burn-in file
-
-Open VS Code and search for nRF Connect for VS Code Extension Pack in the Plugin Center. This plugin pack will automatically install other VS Code plugins required for nRF Connect.
+打开 VS Code 并在插件中心搜索 nRF Connect for VS Code Extension Pack。这个插件包将自动安装 nRF Connect 所需的其他 VS Code 插件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn8.png" style={{width:600, height:'auto'}}/></div>
 <br />
-The nRF Connect for VS Code extension enables developers to utilize the popular Visual Studio Code Integrated Development Environment (VS Code IDE) to develop, build, debug and deploy embedded applications based on Nordic's nRF Connect SDK (Software Development Kit). The extension includes useful development tools such as a compiler interface, linker, complete build system, RTOS-enabled debugger, seamless interfacing with the nRF Connect SDK, device tree visualization editor, and an integrated serial terminal.
-The nRF Connect extension package for VS Code includes the following components:
 
-- nRF Connect for VS Code: The main extension contains the interface between the build system and the nRF Connect SDK, as well as an interface to manage the nRF Connect SDK version and toolchain.
-- nRF DeviceTree: Provides device tree language support and a device tree visualization editor.
-- nRF Kconfig: Provides Kconfig language support.
-- nRF Terminal: Serial and RTT terminals.
-- Microsoft C/C++: Adds language support for C/C++, including features of IntelliSense.
-- CMake: CMake language support.
-- GNU Linker Mapping Files: Support for linker mapping files.
-We can download any preferred version of the nRF Connect SDK and its toolchain via the extension. The full nRF Connect for VS Code documentation is available at https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html.
+nRF Connect for VS Code 扩展使开发者能够利用流行的 Visual Studio Code 集成开发环境（VS Code IDE）来开发、构建、调试和部署基于 Nordic nRF Connect SDK（软件开发套件）的嵌入式应用程序。  
+该扩展包含实用的开发工具，例如：编译器接口、链接器、完整的构建系统、支持 RTOS 的调试器、与 nRF Connect SDK 的无缝对接、设备树可视化编辑器以及集成的串口终端。  
+nRF Connect VS Code 扩展包包含以下组件：
 
-#### Installing the toolchain
+- nRF Connect for VS 代码：主扩展包含构建系统和 nRF Connect SDK 之间的接口，以及管理 nRF Connect SDK 版本和工具链的接口。
+- nRF DeviceTree：提供设备树语言支持和设备树可视化编辑器。
+- nRF Kconfig：提供 Kconfig 语言支持。
+- nRF 终端：串行和 RTT 终端。
+- Microsoft C/C++：添加 C/C++ 语言支持，包括 IntelliSense 的功能。
+- CMake：CMake 语言支持。
+- GNU 链接器映射文件：支持链接器映射文件。
+我们可以通过扩展下载任何首选版本的 nRF Connect SDK 及其工具链。完整的 nRF Connect for VS 代码文档可在 https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html 获取。
 
-The toolchain is a collection of tools that work together to build nRF Connect SDK applications, including assembler, compiler, linker, and CMake components.
-The first time you open nRF Connect for VS Code, you will be prompted to install the toolchain. This usually happens if the extension does not detect any installed toolchain on your computer.
-Click Install Toolchain and a list of toolchain versions will be listed that can be downloaded and installed on your computer. Select the version of the toolchain that matches the version of the nRF Connect SDK you plan to use. We always recommend using the latest tagged version of the nRF Connect SDK.
+#### 安装工具链
 
-By default, nRF Connect for VS Code only displays the Released tab (i.e., the stable version) of the toolchain. If you are evaluating a new feature and would like to use the Preview tab or another type of tab (e.g. Customer Sampling -cs), click on "Show all toolchain versions" as shown below:
+工具链是一组协同工作以构建 nRF Connect SDK 应用程序的工具集合，包括汇编器、编译器、链接器和 CMake 组件。
+首次打开 nRF Connect for VS Code 时，系统会提示您安装工具链。如果扩展未在您的计算机上检测到任何已安装的工具链，通常会出现这种情况。
+点击"安装工具链"，将列出可下载并安装到您计算机上的工具链版本列表。选择与您计划使用的 nRF Connect SDK 版本相匹配的工具链版本。我们始终建议使用最新标记版本的 nRF Connect SDK。
+
+默认情况下，nRF Connect for VS Code 仅显示工具链的 Released 标签（即稳定版本）。如果您正在评估新功能并希望使用 Preview 标签或其他类型的标签（例如 Customer Sampling -cs），请点击"Show all toolchain versions"，如下所示：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/toolchain2.png" style={{width:800, height:'auto'}}/></div>
 
 :::note
-**The ToolChain here is 3.0.1 or above**
+**此处的 ToolChain 为 3.0.1 或更高版本**
 :::
 
-#### Installing the nRF Connect SDK
+#### 安装 nRF Connect SDK
 
-In the nRF Connect extension for VS Code, click on Manage SDK. from the Manage SDK menu, we can install or uninstall the nRF Connect SDK version. Since this is the first time we are using the extension, the interface will only show two options.
+在 VS Code 的 nRF Connect 扩展中，点击管理 SDK。从管理 SDK 菜单中，我们可以安装或卸载 nRF Connect SDK 版本。由于这是我们第一次使用该扩展，界面将只显示两个选项。
 
 Clicking Install SDK will list all available nRF Connect SDK versions that can be downloaded and installed locally. Select the version of the nRF Connect SDK that is required for the development of your project.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/install_sdk.png" style={{width:800, height:'auto'}}/></div>
 
-If you have opened the SDK folder in VS Code, instead of the Manage SDK menu option, you will see the Manage west workspace. To resolve this issue, open another window or folder in VS Code.
+如果您已在 VS Code 中打开了 SDK 文件夹，您将看到"管理 west 工作区"而不是"管理 SDK"菜单选项。要解决此问题，请在 VS Code 中打开另一个窗口或文件夹。
 
 :::note
-**The nRF Connect SDK here is 3.0.1 or above**
+**此处的 nRF Connect SDK 为 3.0.1 或更高版本**
 :::
 
 :::tip
-If you do not see either of these options, make sure you have the latest version of the nRF Connect for VS Code extension package installed.
-It is important to note that the nRF Connect SDK is IDE independent, which means you can choose to use any IDE or none at all. The nRF Connect SDK is available via the https://www.nordicsemi.com/Products/Development-tools/nRF-Util (nrfutil) command line The  (nrfutil) command line interface (CLI) will download and install nRF Connect. However, we highly recommend using our nRF Connect for VS Code extension with VS Code, as it integrates not only a convenient graphical user interface (GUI) and an efficient command line interface (CLI), but also includes a number of features that will greatly simplify firmware development. Configuring other IDEs to work with the nRF Connect SDK requires additional manual steps beyond the scope of this course.
+如果您没有看到这两个选项，请确保您已安装最新版本的 nRF Connect for VS Code 扩展包。
+需要注意的是，nRF Connect SDK 是独立于 IDE 的，这意味着您可以选择使用任何 IDE 或完全不使用。nRF Connect SDK 可通过 https://www.nordicsemi.com/Products/Development-tools/nRF-Util (nrfutil) 命令行获得。(nrfutil) 命令行界面（CLI）将下载并安装 nRF Connect。然而，我们强烈建议使用我们的 nRF Connect for VS Code 扩展与 VS Code 一起使用，因为它不仅集成了便捷的图形用户界面（GUI）和高效的命令行界面（CLI），还包含了许多将大大简化固件开发的功能。配置其他 IDE 以与 nRF Connect SDK 一起工作需要额外的手动步骤，这超出了本课程的范围。
 :::
 
-#### Creating User Programs
+#### 创建用户程序
 
-In this exercise we will write a simple application based on the blinky example to control blinking LEDs on a development board. The same applies to all supported NordicSemiconductor development boards (nRF54, nRF53, nRF52, nRF70 or nRF91 series). The goal is to make sure that all the tools needed to build and burn the example are set up correctly. The focus is on learning how to create an application, build it and burn it to a Nordic chip development board using the “Copy Example” template!
+在这个练习中，我们将基于闪烁示例编写一个简单的应用程序，用于控制开发板上的 LED 闪烁。这适用于所有支持的 NordicSemiconductor 开发板（nRF54、nRF53、nRF52、nRF70 或 nRF91 系列）。目标是确保构建和烧录示例所需的所有工具都已正确设置。重点是学习如何使用"复制示例"模板创建应用程序，构建它并将其烧录到 Nordic 芯片开发板上！
 
-- In VS Code, click the nRF Connect extension icon. In the Welcome view, click Create New Application.
+- 在 VS Code 中，点击 nRF Connect 扩展图标。在欢迎视图中，点击创建新应用程序。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project1.png" style={{width:800, height:'auto'}}/></div>
 
-- Type blinky in the search bar and select the second Blinky sample (path zephyr/samples/basic/blinky), as shown below.
+- 在搜索栏中输入 blinky 并选择第二个 Blinky 示例（路径为 zephyr/samples/basic/blinky），如下所示。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project2.png" style={{width:800, height:'auto'}}/></div>
 
-The Blinky example will cause the LED1 on the development board to blink continuously.
-Our first application will be based on the Blinky example. The Blinky example is derived from the Zephyr mold block in the nRF Connect SDK, so you will see the zephyr name in the sample path: zephyr\samples\basic\blinky.
+Blinky 示例将使开发板上的 LED1 持续闪烁。
+我们的第一个应用程序将基于 Blinky 示例。Blinky 示例源自 nRF Connect SDK 中的 Zephyr 模块，因此您将在示例路径中看到 zephyr 名称：zephyr\samples\basic\blinky。
 
-#### Add XIAO nRF54L15 Board
+#### 添加 XIAO nRF54L15 开发板
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -369,50 +370,50 @@ Our first application will be based on the Blinky example. The Blinky example is
     </a>
 </div>
 
-To get started, **clone the repository from the GitHub link**`git clone https://github.com/Seeed-Studio/platform-seeedboards.git` into your preferred local folder. Once cloned, navigate to the `platform-seeedboards/zephyr/` directory. **Remember this `zephyr` folder Path**;
+要开始，请**从 GitHub 链接克隆仓库**`git clone https://github.com/Seeed-Studio/platform-seeedboards.git`到你喜欢的本地文件夹中。克隆完成后，进入`platform-seeedboards/zephyr/`目录。**记住这个`zephyr`文件夹的路径**；
 
-To configure your board for nRF Connect in VS Code, you can follow these steps:
+要在 VS Code 中为 nRF Connect 配置您的开发板，您可以按照以下步骤操作：
 
-- Open VS Code and go to Settings.
+- 打开 VS 代码并进入设置。
 
-- Type nRF Connect in the search box.
+- 在搜索框中输入 nRF Connect。
 
-- Find the Board Roots settings item and click Edit in settings.json.
+- 找到 Board Roots 设置项并点击"在 settings.json 中编辑"。
 
-- Add the `zephyr` path of the downloaded XIAO nRF54L15 board file to the boardRoots array.
+- 将下载的 XIAO nRF54L15 开发板文件的 `zephyr` 路径添加到 boardRoots 数组中。
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/config1.jpg" style={{width:600, height:'auto'}}/></div> -->
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/add_board1.png" style={{width:800, height:'auto'}}/></div>
 
-- In the application view, click Add Build Configuration below the application name .
+- 在应用程序视图中，点击应用程序名称下方的添加构建配置。
 
-- We can select the model of XIAO nRF54L15 in the Board target, and select the default prj.config file in the Base configuration files, and finally click `Generate and Build` to build the file.
+- 我们可以在 Board target 中选择 XIAO nRF54L15 的型号，在 Base configuration files 中选择默认的 prj.config 文件，最后点击 `Generate and Build` 来构建文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/add_board2.png" style={{width:800, height:'auto'}}/></div>
 
-#### Download Burn-in Plug-in
+#### 下载老化插件
 
 <Tabs>
 <TabItem  value="window" label="Window" default>
 
 **Additional Plugins:**
 
-On Windows, we'll use the Chocolatey package manager to install OpenOCD.
+在 Windows 上，我们将使用 Chocolatey 包管理器来安装 OpenOCD。
 
-**1.Open PowerShell (Run as Administrator):**
+**1.打开 PowerShell (以管理员身份运行):**
 
-- In the Windows search bar, type "PowerShell".
-- Right-click "Windows PowerShell" and select "Run as administrator".
+- 在 Windows 搜索栏中，输入"PowerShell"。
+- 右键点击"Windows PowerShell"并选择"以管理员身份运行"。
 
-**2.Check PowerShell Execution Policy:**
+**2.检查 PowerShell 执行策略：**
 
-- Type `Get-ExecutionPolicy` and press Enter.
-- Type `Get-ExecutionPolicy -List` and press Enter.
+- 输入 `Get-ExecutionPolicy` 并按回车键。
+- 输入 `Get-ExecutionPolicy -List` 并按回车键。
 
-**3.Install Chocolatey:**
+**3.安装 Chocolatey：**
 
-- Paste and run the following command:
+- 粘贴并运行以下命令：
 
 ```cpp
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
@@ -462,7 +463,7 @@ choco install openocd
 brew install ccache
 ```
 
-**3.Install OpenOCD:**
+**3.安装 OpenOCD:**
 
 In the terminal, type:
 
@@ -954,19 +955,20 @@ TPS22916CYFPR 芯片的作用：
     CONFIG_SSD1306=y
     CONFIG_CHARACTER_FRAMEBUFFER=y
 
-    # LVGL Graphics Library
-    CONFIG_LVGL=y
-    CONFIG_LV_Z_MEM_POOL_SIZE=49152
-    CONFIG_LV_Z_SHELL=y
-    CONFIG_LV_USE_MONKEY=y
-    CONFIG_LV_USE_LABEL=y
-    CONFIG_LV_COLOR_DEPTH_1=y
-    CONFIG_LV_FONT_MONTSERRAT_12=y
-    CONFIG_LV_FONT_MONTSERRAT_14=y
-    CONFIG_LV_FONT_MONTSERRAT_16=y
-    CONFIG_LV_FONT_MONTSERRAT_18=y
-    CONFIG_LV_FONT_MONTSERRAT_24=y
-    CONFIG_LV_USE_FONT_COMPRESSED=y
+# LVGL 图形库
+
+CONFIG_LVGL=y
+CONFIG_LV_Z_MEM_POOL_SIZE=49152
+CONFIG_LV_Z_SHELL=y
+CONFIG_LV_USE_MONKEY=y
+CONFIG_LV_USE_LABEL=y
+CONFIG_LV_COLOR_DEPTH_1=y
+CONFIG_LV_FONT_MONTSERRAT_12=y
+CONFIG_LV_FONT_MONTSERRAT_14=y
+CONFIG_LV_FONT_MONTSERRAT_16=y
+CONFIG_LV_FONT_MONTSERRAT_18=y
+CONFIG_LV_FONT_MONTSERRAT_24=y
+CONFIG_LV_USE_FONT_COMPRESSED=y
 
     # =========================================================
     # Shell configuration

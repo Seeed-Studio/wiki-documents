@@ -231,8 +231,7 @@ void renderParticlesToSprite() {
   }
 }
 ```
-
-- It renders each particle as a small white circle
+- 它将每个粒子渲染为一个小白圆
 
 ### PNG Decoding
 
@@ -275,8 +274,7 @@ void setup() {
   initParticles();
 }
 ```
-
-- Initializes the display, touch input and snow particles
+- 初始化显示器、触摸输入和雪花粒子
 
 - **Main loop:**
 

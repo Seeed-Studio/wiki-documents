@@ -92,7 +92,7 @@ cd esp-idf/
 ./install.sh
 ```
 
-### Installation of One Channel Hub
+### 一个通道集线器的安装
 
 **步骤 1**: 将仓库克隆到本地仓库。并导航到项目路径。
 
@@ -130,7 +130,7 @@ git clone -b v2.4.1 https://github.com/Lora-net/SWDR001.git lr11xx_driver
 
 ### Build Firmware
 
-**Step 1**: Enter the lorahub directory.
+**步骤 1**: 进入 lorahub 目录。
 
 ```
 cd ~/this_project_directory/lorahub
@@ -142,13 +142,13 @@ cd ~/this_project_directory/lorahub
 . ~/esp/esp-idf/export.sh
 ```
 
-Configure the ESP32 target to build for.
+配置要构建的 ESP32 目标。
 
 ```
 idf.py set-target esp32s3
 ```
 
-Customize the build if necessary:
+如有必要，自定义构建：
 
 ```
 idf.py menuconfig
@@ -169,7 +169,7 @@ idf.py all
 ls /dev/cu*
 ```
 
-then flash using `idf.py`, replace the **port**
+然后使用 `idf.py` 进行刷写，替换 **端口**
 
 ```
 idf.py -p port flash
@@ -187,7 +187,7 @@ sudo usermod -a -G dialout $USERNAME
 idf.py -p COM14 flash
 ```
 
-Launch the monitor console to see logs (optional).
+启动监视控制台以查看日志（可选）。
 
 ```
 idf.py -p port monitor

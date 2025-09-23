@@ -418,13 +418,13 @@ Code Analysis
 pinMode(ledPin, OUTPUT);
 ```
 
-Define LED as the output unit.
+将 LED 定义为输出单元。
 
 ```cpp
 pinMode(buttonPin, INPUT);
 ```
 
-Define button as the input unit.
+将按钮定义为输入单元。
 
 ```cpp
 buttonState = digitalRead(buttonPin);
@@ -752,7 +752,7 @@ map() 函数使用整数运算，因此不会生成分数，即使数学运算�
 
 **语法：**
 
-map(**value, fromLow, fromHigh, toLow, toHigh**)
+map(**值, 输入范围最小值, 输入范围最大值, 输出范围最小值, 输出范围最大值**)
 
 **参数：**
 
@@ -1189,7 +1189,7 @@ u8x8.print();
   Wire.setClock(u8x8->bus_clock);   // just delete or disable this line
   ```
 
- Or you can set the bus lock to 100000 then add in the setup().
+或者你可以将总线锁设置为 100000 然后在 setup() 中添加。
 
 ```cpp
 void setup(void) {
@@ -1354,7 +1354,7 @@ Code Analysis
 float temp, humi;
 ```
 
-Defines variables to store readings.
+定义变量以存储读数。
 
 ```cpp
 temp = dht.readTemperature();
@@ -1684,7 +1684,7 @@ Code Analysis
 #endif
 ```
 
-Initializing the module using software I2C or hardware I2C.
+使用软件I2C或硬件I2C初始化模块。
 
 ```cpp
 while (!Serial) {};
@@ -1895,13 +1895,13 @@ Code Analysis
 int tune[]=...
 ```
 
-List the frequencies according to the spectrum.
+根据光谱列出频率。
 
 ```cpp
 float durt[]=...
 ```
 
-List the beats according to the spectrum.
+根据频谱列出节拍。
 
 ```cpp
 delay(100*durt[x]);

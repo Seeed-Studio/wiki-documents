@@ -73,9 +73,9 @@ sudo apt-get install minicom
 sudo apt install minicom
 ```
 
-### Second, configure your minicom as follows
+### 第二，按如下配置你的 minicom
 
-Open a terminal with `Ctrl+Alt+T`, and input command like below:
+使用 `Ctrl+Alt+T` 打开终端，并输入如下命令：
 
 ```
 sudo minicom -D /dev/ttyAMA*
@@ -120,7 +120,7 @@ git clone https://github.com/bclswl0827/r1000v1-rs485-autoflow
 cd r1000v1-rs485-autoflow
 ```
 
-Next, you need to compile the kernel module.
+接下来，你需要编译内核模块。
 
 ```shell
 make

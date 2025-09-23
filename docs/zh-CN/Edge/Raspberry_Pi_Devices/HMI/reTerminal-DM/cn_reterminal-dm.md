@@ -819,7 +819,7 @@ git clone https://github.com/limengdu/Seeed_reTerminal_Bridge_CAN_exmaple
 
 ```
 
-- STEP 4: Compiles and runs the code that sends the data:
+- 步骤 4: 编译并运行发送数据的代码：
 
 ```sh
 cd Seeed_reTerminal_Bridge_CAN_exmaple/
@@ -1096,7 +1096,7 @@ sudo hwclock --hctosys
 
 ```
 
-To veiw the current hardware clock
+查看当前硬件时钟
 
 ```sh
 sudo hwclock -r 
@@ -1219,7 +1219,7 @@ lsusb -t
 sudo apt install minicom
 ```
 
-**Step 4.** Connect EC25-EUX 4G module through minicom.
+**步骤 4.** 通过 minicom 连接 EC25-EUX 4G 模块。
 
 ```sh
 sudo minicom -D /dev/ttyUSB2 -b 1152008n1
@@ -1304,7 +1304,7 @@ cd sx1302_hal
 sudo make
 ```
 
-**Step 4.** Copy the reset_lgw.sh script
+**步骤 4.** 复制 reset_lgw.sh 脚本
 
 ```
 cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
@@ -1361,7 +1361,7 @@ cd sx1302_hal
 sudo make
 ```
 
-**Step 4.** Copy the reset_lgw.sh script
+**步骤 4.** 复制 reset_lgw.sh 脚本
 
 ```
 cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
@@ -1387,7 +1387,7 @@ sudo dmesg | grep 5740
 sudo modprobe cdc_acm
 ```
 
-Then we could get the device port as follow:
+然后我们可以按如下方式获取设备端口：
 
 ```sh
 sudo dmesg | grep 1-1.4.1

@@ -209,7 +209,7 @@ sudo ./rpiboot
 sudo apt-get update
 ```
 
-- **Step 2.** Install **Git** by the following command
+- **步骤 2.** 通过以下命令安装 **Git**
 
 ```sh
 sudo apt install git libusb-1.0-0-dev pkg-config build-essential
@@ -230,7 +230,7 @@ git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-- **Step 5.** Build and install the usbboot tool
+- **步骤 5.** 构建并安装 usbboot 工具
 
 ```sh
 make
@@ -259,7 +259,7 @@ sudo apt install snap
 snap install rpi-imager
 ```
 
-- **Step 10.** Open Raspberry Pi Imager software
+- **步骤 10。** 打开 Raspberry Pi Imager 软件
 
 ```sh
 rpi-imager
@@ -361,7 +361,7 @@ raspberry
 ssh pi@raspberrypi.local
 ```
 
-- **Step 2.** Type **yes** for the following message
+- **步骤 2.** 对以下消息输入 **yes**
 
 ```sh
 ECDSA key fingerprint is SHA256:XXXXXXX.
@@ -413,7 +413,7 @@ git clone --depth 1 https://github.com/Seeed-Studio/seeed-linux-dtoverlays
 cd seeed-linux-dtoverlays
 ```
 
-- **Step 3.** Type the following to install the drivers
+- **步骤 3.** 输入以下内容以安装驱动程序
 
 ```sh
 sudo ./scripts/reTerminal.sh --device reTerminal-DM

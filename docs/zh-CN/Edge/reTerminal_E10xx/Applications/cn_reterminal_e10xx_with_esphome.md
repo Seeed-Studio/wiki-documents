@@ -839,7 +839,7 @@ glyphs:
   - "\U000F0123" # your new icon
 ```
 
-And in the display lambda:
+在显示 lambda 中：
 
 ```yaml
 lambda: |-
@@ -988,7 +988,7 @@ lambda: |-
 
 **Combining Images with Text**
 
-You can display both images and text on the same screen:
+您可以在同一屏幕上同时显示图像和文本：
 
 ```yaml
 lambda: |-

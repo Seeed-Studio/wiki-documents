@@ -491,8 +491,7 @@ sudo ln -fs /lib/systemd/system/rc-local.service /etc/systemd/system/rc-local.se
 sudo vi /etc/systemd/system/rc-local.service
 
 ```
-
-At the vi editor, type `i` and then please type in following:
+在 vi 编辑器中，输入 `i`，然后请输入以下内容：
 
 ```shell
 

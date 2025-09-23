@@ -327,8 +327,7 @@ sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAM
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
 ```
-
-**Step 6:** Flash the system to NVMe SSD.
+**步骤 6:** 将系统刷写到NVMe SSD。
 
 ```sh
 cd Linux_for_Tegra

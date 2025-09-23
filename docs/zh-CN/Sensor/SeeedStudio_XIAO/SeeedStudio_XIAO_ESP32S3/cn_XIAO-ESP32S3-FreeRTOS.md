@@ -124,13 +124,13 @@ Done! You can now compile ESP-IDF projects.
 ```
 
 :::  
-If everything is done properly, the following command :
+如果一切操作正确，以下命令：
 
 ```shell
 idf.py
 ```
 
-should show the following output :
+应显示以下输出：
 
 ```shell
 Usage: idf.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
@@ -863,7 +863,7 @@ void saveJpegToSdcard(camera_fb_t *);
   }
   ```
 
-  - Provides functions to save JPEG images to the SD card.
+  - 提供将 JPEG 图像保存到 SD 卡的功能。
 
   ```c
   uint16_t lastKnownFile = 0;

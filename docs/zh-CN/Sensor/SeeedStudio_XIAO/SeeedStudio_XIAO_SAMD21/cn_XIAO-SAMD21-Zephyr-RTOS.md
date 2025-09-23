@@ -95,7 +95,7 @@ Zephyr 为开发提供了许多熟悉的服务：
 west build -p always -b seeeduino_xiao samples/subsys/usb/console
 ```
 
-Double press RESET or short the RST pin to the GND:
+双击 RESET 或将 RST 引脚短接到 GND：
 
 ```
 west flash
@@ -111,7 +111,7 @@ west flash
 screen /dev/ttyACM0 115200
 ```
 
-You should see a response similar to the following:
+你应该看到类似以下的响应：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -184,7 +184,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/basic/blinky
 ```
 
-Double press RESET or short the RST pin to the GND:
+双击 RESET 或将 RST 引脚短接到 GND：
 
 ```
 west flash
@@ -256,7 +256,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/subsys/usb/hid-mouse --  -DDTC_OVERLAY_FILE=/home/nineso/zephyrproject/zephyr/boards/shields/seeed_xiao_expansion_board/seeed_xiao_expansion_board.overlay
 ```
 
-Double press RESET or short the RST pin to the GND:
+双击 RESET 或将 RST 引脚短接到 GND：
 
 ```
 west flash
@@ -296,7 +296,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/subsys/fs/littlefs -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-Double press RESET or short the RST pin to the GND:
+双击 RESET 或将 RST 引脚短接到 GND：
 
 ```
 west flash
@@ -308,7 +308,7 @@ west flash
 screen /dev/ttyACM0 115200
 ```
 
-With this loaded you should see something similar to:
+加载完成后，你应该会看到类似这样的内容：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -385,7 +385,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/modules/tflite-micro/hello_world -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-Double press RESET or short the RST pin to the GND:
+双击 RESET 或将 RST 引脚短接到 GND：
 
 ```
 west flash
@@ -397,7 +397,7 @@ west flash
 screen /dev/ttyACM0 115200
 ```
 
-You will see results returned from the console:
+你将看到从控制台返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -443,7 +443,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/drivers/display -- -DSHIELD=seeed_xiao_expansion_board
 ```
 
-Double press RESET or short the RST pin to the GND:
+双击 RESET 或将 RST 引脚短接到 GND：
 
 ```
 west flash
@@ -489,7 +489,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/basic/button -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf -DSHIELD=seeed_xiao_expansion_board
 ```
 
-Double press RESET or short the RST pin to the GND:
+双击 RESET 或将 RST 引脚短接到 GND：
 
 ```
 west flash
@@ -518,7 +518,7 @@ Button pressed at 550754013
 Button pressed at 591496990
 ```
 
-Let's dive into this example a bit to see why it works:
+让我们深入探讨这个例子，看看为什么它能够起作用：
 
 ```
 / {
@@ -605,7 +605,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/subsys/fs/fs_sample -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay $(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.overlay" -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf $(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_expansion_board
 ```
 
-After uploading the uf2 file connect to monitor:
+上传 uf2 文件后连接到监视器：
 
 ```
 screen /dev/ttyACM0 115200
@@ -674,7 +674,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/sht31.overlay $(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-Double press RESET or short the RST pin to the GND:
+双击 RESET 或将 RST 引脚短接到 GND：
 
 ```
 west flash
@@ -686,7 +686,7 @@ west flash
 screen /dev/ttyACM0 115200
 ```
 
-You will see results returned from the console:
+你将看到从控制台返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -702,7 +702,7 @@ SHT3XD: 26.27 Cel ; 47.11 %RH
 SHT3XD: 26.27 Cel ; 47.72 %RH
 ```
 
-Let's dive into this example a bit to see why it works:
+让我们深入探讨这个例子，看看为什么它能够起作用：
 
 ```
 &xiao_i2c {
@@ -752,7 +752,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.conf
 ```
 
-Double press RESET or short the RST pin to the GND:
+双击 RESET 或将 RST 引脚短接到 GND：
 
 ```
 west flash

@@ -422,8 +422,7 @@ DISPLAY=:0 npm test
 example:
 cd ~/Desktop/testapp
 ```
-
-- **Step 4.** Make the ledstart.sh an executable file
+- **步骤 4.** 将 ledstart.sh 设置为可执行文件
 
 ```sh
 sudo chmod +x ledstart.sh

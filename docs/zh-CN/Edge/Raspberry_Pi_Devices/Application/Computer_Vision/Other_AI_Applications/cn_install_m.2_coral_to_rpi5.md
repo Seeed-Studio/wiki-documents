@@ -124,13 +124,13 @@ python3.8 -m venv coral_venv
 
 ## Configure Hardware Settings
 
-Open a terminal and run the following commands to open ```config.txt```:
+打开终端并运行以下命令来打开 ```config.txt```：
 
 ```
 sudo nano /boot/firmware/config.txt
 ```
 
-And then add the following text to ```config.txt```:
+然后将以下文本添加到```config.txt```中：
 
 ```
 [all]
@@ -159,17 +159,17 @@ sudo reboot
 uname -a
 ```
 
-## Install the PCIe Driver and Edge TPU Runtime
+## 安装 PCIe 驱动程序和 Edge TPU 运行时
 
-### Step 1: Enter the virtual environment
+### 步骤 1: 进入虚拟环境
 
 ```
 source coral_venv/bin/activate
 ```
 
-### Step 2: Install Edge TPU Runtime
+### 步骤 2: 安装 Edge TPU 运行时
 
-Add the Google Coral Edge TPU package repository
+添加 Google Coral Edge TPU 软件包仓库
 
 ```
 echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
@@ -185,7 +185,7 @@ sudo apt-get update
 sudo apt-get install cmake libedgetpu1-std devscripts debhelper dkms dh-dkms
 ```
 
-### Step 3: Install the PCIe driver
+### 步骤 3: 安装 PCIe 驱动程序
 
 ```
 git clone https://github.com/google/gasket-driver.git
@@ -236,9 +236,9 @@ pip install --upgrade pip
 python3 -m pip install --extra-index-url https://google-coral.github.io/py-repo/ pycoral~=2.0
 ```
 
-### Step 2: Test the Edge TPU
+### 步骤 2: 测试 Edge TPU
 
-Install resources for the example:
+为示例安装 retranslations：
 
 ```
 mkdir coral && cd coral

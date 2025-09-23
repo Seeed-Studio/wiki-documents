@@ -755,8 +755,7 @@ sudo nano ./libloragw/inc/loragw_i2c.h
 # compile the code
 sudo make
 ```
-
-Then modify the configuration code:
+然后修改配置代码：
 
 ```bash
 sudo nano ./tools/reset_lgw.sh
@@ -826,8 +825,7 @@ sudo ip link set dev usb0 up
 # Request an IP address from the DHCP server on the network and assign it to the usb0 interface
 sudo dhclient usb0
 ```
-
-Then test if it can ping default router
+然后测试它是否能 ping 通默认路由器
 
 ```bash
 ping 192.168.225.1

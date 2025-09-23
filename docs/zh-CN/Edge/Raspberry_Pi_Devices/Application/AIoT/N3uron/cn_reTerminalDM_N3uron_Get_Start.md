@@ -104,20 +104,17 @@ curl -fsSL https://get.n3uron.com/install.sh | sudo bash
 ```sh
 sudo <n3uron folder>/bin/n3uron uninstall
 ```
-
-For example, if N3uron is installed in the ‘/opt/n3uron’ folder, the command would be:
+例如，如果 N3uron 安装在 '/opt/n3uron' 文件夹中，命令将是：
 
 ```sh
 sudo /opt/n3uron/bin/n3uron uninstall
 ```
-
-**Step 2:** Delete N3uron folder (optional).
+**步骤 2:** 删除 N3uron 文件夹（可选）。
 
 ```sh
 sudo rm -r <n3uron folder>
 ```
-
-For example, if the N3uron folder is ‘/opt/n3uron’ the command would be:
+例如，如果 N3uron 文件夹是 '/opt/n3uron'，则命令将是：
 
 ```sh
 sudo rm -r /opt/n3uron

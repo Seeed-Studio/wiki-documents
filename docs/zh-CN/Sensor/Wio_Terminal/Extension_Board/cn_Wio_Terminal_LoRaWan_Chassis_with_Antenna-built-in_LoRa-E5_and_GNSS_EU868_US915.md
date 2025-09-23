@@ -270,11 +270,11 @@ function Decoder(bytes, port) {
 
 - [**WioTerminal**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)
 
-- [**Wio Terminal Chassis - Battery (650mAh)**](https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-650mAh-p-4756.html)
+- [**Wio Terminal 底座 - 电池（650mAh）**](https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-650mAh-p-4756.html)
 
-- [**Grove - Temperature&Humidity Sensor (DHT11)**](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT1-p-745.html)
+- [**Grove - 温湿度传感器 (DHT11)**](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT1-p-745.html)
 
-- [**Wio Terminal Chassis - LoRa-E5 and GNSS**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)
+- [**Wio 终端机外壳 - LoRa-E5 和 GNSS**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)
 
 ## 使用方法
 

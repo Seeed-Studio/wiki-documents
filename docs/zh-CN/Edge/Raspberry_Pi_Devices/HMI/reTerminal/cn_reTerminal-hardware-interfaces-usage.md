@@ -55,27 +55,27 @@ echo 23 > export #GPIO23 which is Pin 16
 cd gpio23
 ```
 
-- **Step 2.** Set GPIO input/output
+- **步骤 2.** 设置 GPIO 输入/输出
 
 ```sh
 echo in > direction  #set GPIO as input
 echo out > direction  #set GPIO as output
 ```
 
-- **Step 3.** Set GPIO high/low level
+- **步骤 3.** 设置 GPIO 高/低电平
 
 ```sh
 echo 1 > value  #set GPIO to high
 echo 0 > value  #set GPIO to low
 ```
 
-- **Step 4.** Get GPIO input/output status
+- **步骤 4.** 获取GPIO输入/输出状态
 
 ```sh
 cat direction
 ```
 
-- **Step 5.** Get GPIO level status
+- **步骤 5.** 获取GPIO级别状态
 
 ```sh
 cat value
@@ -165,7 +165,7 @@ ls /dev/spi*
 wget https://files.seeedstudio.com/wiki/102110497/spidev_test
 ```
 
-- **Step 6.** Change the user rights of the tool
+- **步骤 6.** 更改工具的用户权限
 
 ```sh
 chmod +x spidev_test
@@ -292,7 +292,7 @@ LCD的触摸面板通过 **6针FPC** 连接器连接。您可以使用evtest工�
 sudo apt install evtest
 ```
 
-- **Step 2.** Open the evtest tool
+- **步骤 2.** 打开evtest工具
 
 ```sh
 evtest
@@ -404,7 +404,7 @@ reTerminal 前面有 2 个用户可编程 LED。这些 LED 可以通过软件开
 sudo -i
 ```
 
-- **Step 2.** Enter the following directory
+- **步骤 2.** 进入以下目录
 
 ```sh
 cd /sys/class/leds
@@ -416,7 +416,7 @@ cd /sys/class/leds
 cd usr_led0
 ```
 
-- **Step 4.** Turn on the LED with maximum brightness
+- **步骤 4.** 以最大亮度打开LED
 
 ```sh
 echo 255 > brightness
@@ -424,7 +424,7 @@ echo 255 > brightness
 
 **注意：** 您可以输入 1 - 255 之间的值来调节亮度级别
 
-- **Step 5.** Turn off the LED
+- **步骤 5.** 关闭 LED
 
 ```sh
 echo 0 > brightness
@@ -558,7 +558,7 @@ reTerminal 配备了一个 **Levelek LTR-303ALS-01** 数字光传感器，它连
 sudo -i
 ```
 
-- **Step 2.** Enter the following directory
+- **步骤 2.** 进入以下目录
 
 ```sh
 cd /sys/bus/iio/devices/iio:device0
@@ -641,19 +641,19 @@ reTerminal 内置了一个蜂鸣器。可以通过软件控制。这个蜂鸣器
 sudo -i
 ```
 
-- **Step 2.** Enter the following directory
+- **步骤 2.** 进入以下目录
 
 ```sh
 cd /sys/class/leds/usr_buzzer
 ```
 
-- **Step 3.** Turn on the buzzer
+- **步骤 3.** 打开蜂鸣器
 
 ```sh
 echo 1 > brightness
 ```
 
-- **Step 4.** Turn off the buzzer
+- **步骤 4.** 关闭蜂鸣器
 
 ```sh
 echo 0 > brightness

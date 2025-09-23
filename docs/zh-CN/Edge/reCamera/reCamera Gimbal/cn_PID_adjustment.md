@@ -119,7 +119,7 @@ gimbal pid 1 a
 
 ### Setting PID Values
 
-To update PID parameters, use:
+要更新 PID 参数，请使用：
 
 ```bash
 gimbal pid <id> <a|s> <Kp> [Ki] [Kd]
@@ -137,7 +137,7 @@ gimbal pid <id> <a|s> <Kp> [Ki] [Kd]
 gimbal pid 1 a 100 0 0
 ```
 
-Sets yaw axis angle PID to: Kp = 100, Ki = 0, Kd = 0
+将偏航轴角度 PID 设置为：Kp = 100，Ki = 0，Kd = 0
 
 ```bash
 gimbal pid 2 s 100 ^ ^

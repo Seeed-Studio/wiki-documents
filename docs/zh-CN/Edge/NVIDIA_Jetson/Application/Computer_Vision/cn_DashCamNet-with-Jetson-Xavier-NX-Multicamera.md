@@ -91,8 +91,7 @@ sudo apt-get purge docker docker-engine docker.io containerd runc
        gnupg \
        lsb-release
    ```
-
-Add Docker’s official GPG key:
+添加 Docker 的官方 GPG 密钥：
 
    ```shell
    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -128,8 +127,7 @@ Add Docker’s official GPG key:
    ```shell
    sudo groupadd docker
    ```
-
-Add the user into the `docker` group.
+将用户添加到 `docker` 组。
 
    ```shell
    sudo usermod -aG docker $USER
@@ -189,8 +187,7 @@ wget -O ngccli_arm64.zip https://ngc.nvidia.com/downloads/ngccli_arm64.zip && un
 ```shell
 md5sum -c ngc.md5
 ```
-
-- **Step 3**. Add your current directory to path:
+- **步骤 3**. 将当前目录添加到路径：
 
 ```shell
 echo "export PATH=\"\$PATH:$(pwd)\"" >> ~/.bash_profile && source ~/.bash_profile
@@ -340,14 +337,12 @@ deactivate
    pip3 install nvidia-pyindex
    pip3 install nvidia-tao
    ```
-
-- **step 2**. Invoke the entrypoints using the `tao` command.
+- **步骤 2**. 使用`tao`命令调用入口点。
 
 ```
 tao --help
 ```
-
-The sample output of the above command is:
+上述命令的示例输出为：
 
 ```
 usage: tao [-h]
@@ -382,7 +377,7 @@ tao --help
 
 ### Install DeepStream5
 
-- **Step 1**. Edit `/etc/apt/sources.list.d/nvidia-l4t-apt-source.list` and replace .6 with .5:
+- **步骤 1**. 编辑 `/etc/apt/sources.list.d/nvidia-l4t-apt-source.list` 文件，将 .6 替换为 .5：
 
 ```shell
 deb https://repo.download.nvidia.com/jetson/common r32.5 main
@@ -420,8 +415,7 @@ bash scripts/install_dependencies.sh
 sudo -H pip3 install Cython
 sudo -H pip3 install .
 ```
-
-- **Step 2**. Run example with your cameras:
+- **步骤 2**. 使用你的相机运行示例:
 
 ```shell
 source scripts/env_vars.sh 

@@ -172,8 +172,7 @@ make distclean
 ```bash
 ./tools/configurate.sh xiao-esp32s3:combo
 ```
-
-Compile de the source code.
+编译 translation 代码。
 
 ```bash
 make -j

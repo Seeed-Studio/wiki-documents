@@ -414,8 +414,7 @@ echo 320 > export
 cd PAA.04
 echo out > direction
 ```
-
-**Step3.** Execute the following to turn on the pin:
+**步骤3.** 执行以下操作以打开引脚：
 
 ```bash
 echo 1 > value
@@ -657,20 +656,18 @@ sudo vi /usr/bin/hwtosys.sh
 
 sudo hwclock --hctosys
 ```
-
-**Step10.** Make the script executable.
+**步骤10.** 使脚本可执行。
 
 ```bash
 sudo chmod +x /usr/bin/hwtosys.sh 
 ```
 
-**Step11.** Create a systemd file:
+**步骤11.** 创建一个 systemd 文件:
 
 ```bash
 sudo vim /lib/systemd/system/hwtosys.service 
 ```
-
-**Step12.** Add the following inside the file:
+**步骤12.** 在文件内添加以下内容：
 
 ```bash
 [Unit]
@@ -683,7 +680,7 @@ ExecStart=/usr/bin/hwtosys.sh
 WantedBy=multi-user.target
 ```
 
-**Step13.** Reload systemctl daemon:
+**步骤13.** 重新加载 systemctl daemon:
 
 ```bash
 sudo systemctl daemon-reload 

@@ -51,8 +51,7 @@ ESP32_GENERIC_S3-20230602-v1.23.0.bin
 ```Linux
 dmesg | grep tty
 ```
-
-Alternatively, you can list serial devices using *ls*:
+或者，您可以使用 *ls* 列出串行设备：
 
 ```
 ls /dev/ttyS* /dev/ttyUSB*

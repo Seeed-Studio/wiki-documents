@@ -72,8 +72,7 @@ sudo apt full-upgrade
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
-
-### Add the current user to the docker group
+### 将当前用户添加到 docker 组
 
 ```bash
 sudo usermod -aG docker $USER
@@ -493,7 +492,7 @@ jinja2
 
 </details>
 
-### The project directory is as follows
+### 项目目录如下
 
 ```bash
 tree

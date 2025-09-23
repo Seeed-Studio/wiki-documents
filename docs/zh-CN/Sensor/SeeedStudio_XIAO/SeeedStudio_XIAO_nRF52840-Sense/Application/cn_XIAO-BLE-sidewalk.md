@@ -232,8 +232,7 @@ Nordic Semiconductor 的 Amazon Sidewalk 解决方案基于 nRF Connect SDK v2.3
 ```
 git clone https://github.com/nrfconnect/sdk-sidewalk.git sidewalk
 ```
-
-**Step 9**. Install Python requirements for Amazon Sidewalk.
+**步骤 9**. 安装 Amazon Sidewalk 的 Python 依赖项。
 
 ```
 pip install -r sidewalk/requirements.txt

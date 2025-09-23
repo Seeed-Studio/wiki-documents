@@ -66,16 +66,14 @@ reComputer 预装了 Bookworm 64 位版本。本指南涵盖了在该系统上**
 sudo apt update
 sudo apt-get install -y jq wget curl udisks2 apparmor-utils libglib2.0-bin network-manager dbus systemd-journal-remote systemd-resolved
 ```
+#### 步骤 2: 启动并启用网络管理器
 
-#### Step 2: Start and Enable Network Manager
-
-Check the status of Network Manager
+检查 Network Manager 的状态
 
 ```bash
 sudo systemctl status NetworkManager.service
 ```
-
-NetworkManager does not start, start and enable
+NetworkManager 无法启动，启动并启用
 
 ```bash
 sudo systemctl start NetworkManager
@@ -89,8 +87,7 @@ sudo systemctl enable NetworkManager
 ```bash
 sudo nano /boot/firmware/cmdline.txt
 ```
-
-Add the following at the end of the line:
+在行尾添加以下内容：
 
 ```bash
 systemd.unified_cgroup_hierarchy=false lsm=apparmor
@@ -116,8 +113,7 @@ newgrp docker
 wget https://github.com/home-assistant/os-agent/releases/download/1.6.0/os-agent_1.6.0_linux_aarch64.deb
 sudo dpkg -i os-agent_1.6.0_linux_aarch64.deb
 ```
-
-#### Step 6: Install Home Assistant Supervised
+#### 步骤 6: 安装 Home Assistant Supervised
 
 ```bash
 wget https://github.com/home-assistant/supervised-installer/releases/download/1.6.0/homeassistant-supervised.deb

@@ -79,7 +79,7 @@ sudo reboot
 sudo apt-get install dkms
 ```
 
-### Install hailort-pcie-driver_4.19.0_all.deb
+### 安装 hailort-pcie-driver_4.19.0_all.deb
 
 ```
 sudo dpkg -i hailort-pcie-driver_4.19.0_all.deb 
@@ -87,7 +87,7 @@ sudo reboot
 
 ```
 
-### Create and activate a Python virtual environment
+### 创建并激活 Python 虚拟环境
 
 ```
 python -m venv hailo_env
@@ -100,13 +100,13 @@ source hailo_env/bin/activate
 pip install hailort-4.19.0-cp311-cp311-linux_aarch64.whl 
 ```
 
-### Check if the software is installed
+### 检查软件是否已安装
 
 ```
 hailortcli fw-control identify
 ```
 
-The result is show as bellow:
+结果如下所示：
 
 ```
 ain@pi5-hailo:~ $ hailortcli fw-control identify
@@ -122,7 +122,7 @@ Part Number: HM218B1C2FAE
 Product Name: HAILO-8 AI ACC M.2 M KEY MODULE EXT TEMP
 ```
 
-### Set pcie to gen2/gen3(gen3 is faster than gen2)
+### 将 pcie 设置为 gen2/gen3（gen3 比 gen2 更快）
 
 Add following text to ```/boot/firmware/config.txt```
 
@@ -155,21 +155,21 @@ sudo apt-get install -y libcairo2-dev libgirepository1.0-dev libgstreamer1.0-dev
 sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-3.0
 ```
 
-#### Set hailo_pci force_desc_page_size
+#### 设置 hailo_pci force_desc_page_size
 
 ```
 sudo nano /etc/modprobe.d/hailo_pci.conf
 ```
 
-And then input the following content.
+然后输入以下内容。
 
 ```
 options hailo_pci force_desc_page_size=4096
 ```
 
-Finally, press `Ctrl+X`, type `Y`, and press `Enter` to save the file
+最后，按下`Ctrl+X`，输入`Y`，然后按`Enter`保存文件
 
-And then reboot the raspberrypi5
+然后重启 raspberrypi5
 
 ```
 sudo reboot
@@ -226,7 +226,7 @@ cd ./apps/h8/gstreamer/general/multistream_detection/
 nano multi_stream_detection.sh
 ```
 
-Add `readonly DEFAULT_BATCH_SIZE=8` to the 14 line as follows:
+将 `readonly DEFAULT_BATCH_SIZE=8` 添加到 14 行，如下所示：
 
 ```
 readonly DEFAULT_NETWORK_NAME="yolov5"
@@ -234,7 +234,7 @@ readonly DEFAULT_BATCH_SIZE=8
 readonly MAX_NUM_OF_DEVICES=4
 ```
 
-Add `batch_size=$DEFAULT_BATCH_SIZE` to the 19 line as follows:
+将 `batch_size=$DEFAULT_BATCH_SIZE` 添加到 19 行，如下所示：
 
 ```
 network_name=$DEFAULT_NETWORK_NAME
@@ -242,7 +242,7 @@ batch_size=$DEFAULT_BATCH_SIZE
 num_of_src=12
 ```
 
-Add `batch-size=$batch_size` to the 154 line as follows:
+按如下方式将 `batch-size=$batch_size` 添加到 154 行：
 
 ```
 queue name=hailo_pre_infer_q_0 leaky=no max-size-buffers=30 max-size-bytes=0 max-size-time=0 ! \

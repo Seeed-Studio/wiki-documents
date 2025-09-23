@@ -261,8 +261,7 @@ reComputer Mini载板有两个4针GH-1.25 UART接口：**UART1**和**UART-DEBUG*
 sudo apt update
 sudo apt install cutecom
 ```
-
-Open **Cutecom** in two different terminals.
+在两个不同的终端中打开 **Cutecom**。
 
 ```bash
 sudo cutecom
@@ -345,14 +344,12 @@ sudo apt update
 sudo apt install python3-pip -y
 sudo pip3 install jetson-stats
 ```
-
-Then reboot your reComputer Mini:
+然后重启您的 reComputer Mini：
 
 ```bash
 sudo reboot
 ```
-
-After installing **jtop**, you can lanch it in terminal:
+安装 **jtop** 后，你可以在终端中启动它：
 
 ```bash
 jtop

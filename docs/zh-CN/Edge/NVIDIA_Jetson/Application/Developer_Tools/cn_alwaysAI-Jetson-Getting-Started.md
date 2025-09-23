@@ -112,8 +112,7 @@ sudo usermod -aG docker $USER
 ```sh
 su - $USER
 ```
-
-**Step 3.** Test your docker installation without **sudo**
+**步骤 3.** 不使用 **sudo** 测试你的 Docker 安装
 
 ```sh
 docker run hello-world
@@ -240,8 +239,7 @@ def main():
     obj_detect = edgeiq.ObjectDetection("alwaysai/ssd_mobilenet_v1_coco_2018_01_28_xavier_nx")
     obj_detect.load(engine=edgeiq.Engine.TENSOR_RT)
 ```
-
-**Step 12.** Type the following to install the app
+**步骤 12。** 输入以下内容以安装应用程序
 
 ```sh
 aai app install
@@ -313,8 +311,7 @@ with edgeiq.FileVideoStream(
 ```sh
 aai app install
 ```
-
-**Step 4.** Finally run the app
+**步骤 4.** 最后运行应用程序
 
 ```sh
 aai app start
@@ -422,8 +419,7 @@ http://localhost:5000
 ```sh
 aai app install
 ```
-
-**Step 4.** Finally run the app
+**步骤 4.** 最后运行应用程序
 
 ```sh
 aai app start

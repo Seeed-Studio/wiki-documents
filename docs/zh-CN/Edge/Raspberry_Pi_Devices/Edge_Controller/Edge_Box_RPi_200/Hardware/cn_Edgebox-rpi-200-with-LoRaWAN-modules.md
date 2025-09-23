@@ -89,8 +89,7 @@ git clone https://github.com/Lora-net/sx1302_hal
 cd sx1302_hal
 sudo make
 ```
-
-**Step 7.** Copy the reset_lgw.sh script
+**步骤 7.** 复制 reset_lgw.sh 脚本
 
 ```
 cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
@@ -184,8 +183,7 @@ cd sx1302_hal
 git checkout Edgebox-RPI-200
 sudo make
 ```
-
-**Step 7.** Copy the reset_lgw.sh script
+**步骤 7.** 复制 reset_lgw.sh 脚本
 
 ```sh
 cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/

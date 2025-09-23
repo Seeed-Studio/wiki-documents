@@ -367,8 +367,7 @@ cd ..
 tar xf A607_Jetpack_6.1.tar.gz
 sudo cp -r 607_jetpack6.1/Linux_for_Tegra/* Linux_for_Tegra/
 ```
-
-**Step 5:** Flash the system to either NVMe SSD:
+**步骤 5:** 将系统刷写到 NVMe SSD:
 
 ```sh
 cd Linux_for_Tegra

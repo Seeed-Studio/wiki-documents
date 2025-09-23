@@ -303,8 +303,7 @@ sudo mount /dev/sda1 /media/USB/
 ```sh
 sudo findmnt -rno TARGET <USB Device Path>
 ```
-
-For my USB device, the commands I need to use are:
+对于我的 USB 设备，我需要使用的命令是：
 
 ```sh
 sudo findmnt -rno TARGET /dev/sda1

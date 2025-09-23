@@ -216,7 +216,7 @@ west config manifest.project-filter -- +tflite-micro
 west update
 ```
 
-Build the sample and flash to your board:
+构建示例并将其烧录到您的开发板：
 
 ```
 west build -p always -b xiao_esp32s3 samples/modules/tflite-micro/hello_world
@@ -224,7 +224,7 @@ west flash
 west espressif monitor
 ```
 
-You will see results returned from the console:
+你将看到从控制台返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
@@ -334,7 +334,7 @@ Button pressed at 1728755988
 Button pressed at 1822426500
 ```
 
-Let's dive into this example a bit to see why it works:
+让我们深入探讨这个例子，看看为什么它能够起作用：
 
 ```
 / {
@@ -428,7 +428,7 @@ west flash
 west espressif monitor
 ```
 
-You should see a response similar to this:
+你应该看到类似这样的响应:
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -491,7 +491,7 @@ west flash
 west espressif monitor
 ```
 
-You will see results returned from the console:
+你将看到从控制台返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
@@ -507,7 +507,7 @@ SHT3XD: 25.82 Cel ; 53.31 %RH
 SHT3XD: 25.84 Cel ; 53.16 %RH
 ```
 
-Let's dive into this example a bit to see why it works:
+让我们深入探讨这个例子，看看为什么它能够起作用：
 
 ```
  &xiao_i2c {

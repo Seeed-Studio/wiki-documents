@@ -636,8 +636,7 @@ sudo apt update
 sudo apt install -y git
 git clone https://github.com/Lora-net/sx1302_hal
 ```
-
-Move to sx1302_hal folder and build the program:
+移动到 sx1302_hal 文件夹并构建程序：
 
 ```
 cd ~/sx1302_hal
