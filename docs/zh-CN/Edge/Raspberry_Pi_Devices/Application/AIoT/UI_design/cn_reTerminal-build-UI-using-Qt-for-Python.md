@@ -544,8 +544,7 @@ DISPLAY=:0 python3 main.py
 example:
 cd /ledApp
 ```
-
-- **Step 4.** Make the led_start.sh an executable file
+- **步骤 4.** 将 led_start.sh 设置为可执行文件
 
 ```sh
 chmod +x led_start.sh
@@ -577,8 +576,7 @@ Categories=Application;Development;
 example:
 cd /ledApp
 ```
-
-- **Step 4.** Make the led_start.sh an executable file
+- **步骤 4.** 将 led_start.sh 设置为可执行文件
 
 ```sh
 chmod +x led.desktop

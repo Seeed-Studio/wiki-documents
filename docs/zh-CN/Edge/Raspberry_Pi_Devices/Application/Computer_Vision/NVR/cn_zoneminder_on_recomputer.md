@@ -66,7 +66,7 @@ sudo apt update
 sudo apt upgrade -y
 ```
 
-### Install MariaDB and do initial database configuration
+### 安装 MariaDB 并进行初始数据库配置
 
 Run the following commands.
 

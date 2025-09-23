@@ -55,7 +55,7 @@ sudo reboot
 i2ctransfer -y 1 w2@0x45 0x9b 0x01
 ```
 
-- **Step 5.** List the connected I2C devices
+- **步骤 5.** 列出已连接的I2C设备
 
 ```sh
 i2cdetect -y 1
@@ -120,7 +120,7 @@ cd STM32
 
 <!-- - **步骤 5.** 访问[此链接](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases)并从**最新发布**版本中下载**stm32flash**文件和**STM32G030F6_R2.bin**文件。
 
-**Note:** You can click on them to start downloading -->
+**注意：** 您可以点击它们开始下载 -->
 
 - **步骤 5.** 下载 **stm32flash** 文件和 **STM32G030F6_R2.bin** 文件
 
@@ -208,16 +208,14 @@ scp -r .\stm32flash .\STM32G030F6_R2.bin pi@192.168.x.xx:\home\pi\STM32
 ```sh
 cd STM32
 ```
+然后你会看到我们之前复制的文件
 
-Then you will see the files that we copied earlier
-
-- **Step 9.** Make the flash tool **executable**
+- **步骤 9.** 使闪存工具**可执行**
 
 ```sh
 chmod +x stm32flash
 ``` -->
-
-<!-- - **Step 10.** Make STM32 enter **boot mode** through **i2c-tools**
+<!-- - **步骤 10。** 通过 **i2c-tools** 使 STM32 进入**引导模式**
 
 ```sh
 i2ctransfer -y 1 w2@0x45 0x9b 0x01
@@ -260,26 +258,25 @@ dtoverlay=reTerminal
 ```sh
 sudo reboot
 ``` -->
+现在你已经成功地将固件刷入 STM32 了！
 
-Now you have successfully flashed the firmware to STM32!
+### 使用跳线和 OpenOCD 连接到 STM32
 
-### Connect to STM32 using jumper wires and OpenOCD
+如果您的主板上安装的是**旧版本（低于 v1.7）**的 STM32 固件，请按照此方法操作。
 
-If you have the **old version (lower than v1.7)** of the STM32 firmware on the board, please follow this method.
-
-- **Step 1.** Enter terminal window of reTerminal and type the following to update the packages list
+- **步骤 1.** 进入 reTerminal 的终端窗口，输入以下内容以更新软件包列表
 
 ```sh
 sudo apt-get update
 ```
 
-- **Step 2.** Install the following packages
+- **步骤 2.** 安装以下软件包
 
 ```sh
 sudo apt-get install git autoconf libtool make pkg-config libusb-1.0-0 libusb-1.0-0-dev
 ```
 
-- **Step 3.** Clone the following repo and navigate to it
+- **步骤 3.** 克隆以下仓库并导航到该仓库
 
 ```sh
 git clone http://openocd.zylin.com/openocd
@@ -556,7 +553,7 @@ sudo reboot
 sudo apt-get update
 ```
 
-- **Step 4.** Type the following to install **minicom**
+- **步骤 4.** 输入以下内容以安装 **minicom**
 
 ```sh
 sudo apt-get install minicom
@@ -618,7 +615,7 @@ DISPLAY=:0 xset dpms force on
 sudo apt update
 ```
 
-- **Step 5.** Install **Git** by the following command
+- **步骤 5.** 通过以下命令安装 **Git**
 
 ```sh
 sudo apt install git
@@ -639,19 +636,19 @@ git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-- **Step 8.** Enter the following to install **libusb**
+- **步骤 8.** 输入以下内容以安装 **libusb**
 
 ```sh
 sudo apt install libusb-1.0-0-dev
 ```
 
-- **Step 9.** Build and install the usbboot tool
+- **步骤 9.** 构建并安装 usbboot 工具
 
 ```sh
 make
 ```
 
-- **Step 10.** Open the bootloader configuration file
+- **步骤 10。** 打开引导加载程序配置文件
 
 ```sh
 sudo nano recovery/boot.conf
@@ -663,9 +660,9 @@ sudo nano recovery/boot.conf
 BOOT_ORDER=0xf15
 ```
 
-**Note:** Here if USB Boot fails, it switches to eMMC boot
+**注意：** 此处如果 USB 引导失败，它会切换到 eMMC 引导
 
-- **Step 12.** Run the following to update the EEPROM image
+- **步骤 12。** 运行以下命令以更新 EEPROM 镜像
 
 ```sh
 cd recovery
@@ -800,13 +797,13 @@ sudo vi ~/.config/monitors.xml
 </monitors>
 ```
 
-- **Step 4.** Open **/boot/config.txt**
+- **步骤 4.** 打开 **/boot/config.txt**
 
 ```sh
 sudo vi /boot/config.txt
 ```
 
-- **Step 5.** Add the following into the file
+- **步骤 5.** 在文件中添加以下内容
 
 ```sh
 dtoverlay=reTerminal,tp_rotate=1

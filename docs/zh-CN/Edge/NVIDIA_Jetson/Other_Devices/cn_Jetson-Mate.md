@@ -236,8 +236,7 @@ Kubernetes 管理容器及更多内容，从边缘的微规模到大规模，在
 ```shell
 sudo systemctl daemon-reload && sudo systemctl restart docker
 ```
-
-Validate the Docker default runtime as NVIDIA:
+验证 Docker 默认运行时为 NVIDIA：
 
 ```shell
 sudo docker info | grep -i runtime
@@ -321,8 +320,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
-
-> If you are in China, follow this instead:
+> 如果你在中国，请改为按照以下步骤操作：
 
 ```
 kubectl apply -f https://gitee.com/wj204811/wj204811/raw/master/kube-flannel.yml
@@ -408,14 +406,12 @@ Create a sample GPU pod:
 ```shell
 sudo kubectl apply -f cuda-samples.yaml
 ```
-
-Check whether the samples pod was created:
+检查是否已创建 samples pod：
 
 ```
 kubectl get pods
 ```
-
-Validate the sample pod logs to support CUDA libraries:
+验证样本 pod 日志以支持 CUDA 库：
 
 ```shell
 kubectl logs nvidia-l4t-base
@@ -502,14 +498,12 @@ Create a jupyter GPU pod:
  ```
  kubectl  apply -f jupyter.yml
  ```
-
- Check whether the jupyter pod was created and running:
+检查 jupyter pod 是否已创建并正在运行：
 
  ```shell
  kubectl get pod
  ```
-
- Create an External Load Balancer
+创建外部负载均衡器
 
  ```
  kubectl expose deployment cluster-deployment --port=8888 --type=LoadBalancer 

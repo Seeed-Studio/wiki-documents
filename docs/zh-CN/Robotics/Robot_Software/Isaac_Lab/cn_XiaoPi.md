@@ -16,6 +16,7 @@ last_update:
 # Seeed&高擎双足机器人强化学习Hackathon
 
 ## 介绍
+
 欢迎来到 Seeed 具身智能 Hackathon，一场面向未来的具身智能实战体验，即将开启！本篇文章将会引导您亲手操控双足机器人"小π"，从零开始体验具身智能的完整开发流程：搭建 Isaacgym 仿真环境、训练控制策略、完成 sim2sim 验证，最终实现 sim2real 强化学习部署，把你的智能算法真正"装进"机器人的身体！
 
 <div align="center">
@@ -23,9 +24,11 @@ last_update:
 </div>
 
 ## 环境配置
+
 为保障具身智能算法训练与硬件部署的流畅性，参赛者需预先配置符合以下技术规范的开发环境。本活动推荐采用NVIDIA生态链开发方案，确保仿真训练与实体机器人间的算力一致性。
 
 ### 硬件准备
+
 - 算力平台：
   - GPU：NVIDIA RTX 20系列以上 （注意:  不能使用50系列nvidia 显卡）
   - 显存：大于 6GB
@@ -41,14 +44,15 @@ last_update:
 
 ### 运行环境配置
 
-#### Step1. 安装 NVIDIA 驱动
+#### 步骤1. 安装 NVIDIA 驱动
+
 请在 ubuntu 计算平台的终端中使用 `nvidia-smi` 命令测试 Nvidia 启动是否正常安装。
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/xiaopi/nvidia-smi.png"/>
 </div>
 
-如果没有报错并返回类似上图中的内容则证明你的设备中已经安装了 NVIDIA 驱动，可以跳转到`Step2`，否则，请参考下面的命令安装 Nvidia 驱动。
+如果没有报错并返回类似上图中的内容则证明你的设备中已经安装了 NVIDIA 驱动，可以跳转到`步骤2`，否则，请参考下面的命令安装 Nvidia 驱动。
 
 ```bash
 sudo apt update
@@ -56,8 +60,10 @@ sudo apt install nvidia-driver-535
 sudo reboot #安装完成后，重启系统
 nvidia-smi #验证查看
 ```
-#### Step2. 安装Miniconda
-安装并使用 conda 是为了方便管理 Python 环境和包，可创建相互隔离的虚拟环境，避免不同项目间依赖冲突，如果你的电脑中已经安装了conda相关软件，可以直接跳转到 `Step3`，否则，请在终端中运行下面的命令安装 Miniconda：
+
+#### 步骤2. 安装Miniconda
+
+安装并使用 conda 是为了方便管理 Python 环境和包，可创建相互隔离的虚拟环境，避免不同项目间依赖冲突，如果你的电脑中已经安装了conda相关软件，可以直接跳转到 `步骤3`，否则，请在终端中运行下面的命令安装 Miniconda：
 
 ```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
@@ -65,11 +71,12 @@ bash Miniconda3-latest-Linux-x86_64.sh
 source ~/.bashrc
 conda --version
 ```
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/xiaopi/conda-version.png"/>
 </div>
 
-#### Step3. 创建 conda 虚拟环境
+#### 步骤3. 创建 conda 虚拟环境
 
 请使用下面的终端命令创建并激活虚拟环境：
 
@@ -77,11 +84,12 @@ conda --version
 conda create --name pi python=3.8
 conda activate pi
 ```
+
 :::note
 如果虚拟环境成功激活，您的终端用户标识之前应该出现 `(pi)` 的标识。
 :::
 
-#### Step4. 安装 Isaac gym 
+#### 步骤4. 安装 Isaac gym
 
 1. 下载并解压 [Isaacgym](https://developer.nvidia.com/isaac-gym/download) 代码。
 
@@ -94,21 +102,26 @@ conda activate pi
 :::
 
 2. 在虚拟环境中安装pytorch等依赖
+
 ```bash
 conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia 
 conda install numpy=1.23
 ```
 
 3. 安装 Isaac Gym
+
 ```bash
 cd  <path_to_isaacgym>/IsaacGym_Preview_4_Package/isaacgym/python
 pip install -e .
 ```
+
 4. 验证 Isaac 是否安装成功
+
 ```bash
 cd  <path_to_isaacgym>/IsaacGym_Preview_4_Package/isaacgym/python/examples
 python 1080_balls_of_solitude.py
 ```
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/xiaopi/test_isaacgym.png"/>
 </div>
@@ -125,7 +138,8 @@ python 1080_balls_of_solitude.py
 请注意，需要将 `${LD_LIBRARY_PATH}:` 后面的路径替换成你自己的路径。
 :::
 
-#### Step5. 安装小pi运行环境
+#### 步骤5. 安装小pi运行环境
+
 ```bash
 git clone https://github.com/HighTorque-Robotics/livelybot_pi_rl_baseline.git
 cd livelybot_pi_rl_baseline
@@ -137,6 +151,7 @@ pip install -e .
 ### 调整训练参数
 
 #### pai_config.py
+
 以下是对pai_config.py中相关代码的参数的中文注释。环境相关配置由于跟机器人结构耦合，因此无法修改。**可以根据需求修改pd控制器、仿真等参数，**训练后查看效果
 
 <details>
@@ -412,12 +427,12 @@ class PaiCfgPPO(LeggedRobotCfgPPO):
         checkpoint = -1             # 要加载的模型 checkpoint 序号 (-1 表示加载最新的模型)
         resume_path = None          # 恢复训练的路径 (通常由 load_run 和 checkpoint 自动生成)
 ```
+
 </details>
 
-
 #### pai_env.py
-以下是对`pai_env.py`代码中相关代码的中文注释，其中`“_reward”`开头的是各种奖励函数定义，可以修改`pai_config.py`中的`class rewards`中对应的系数来改变奖励惩罚的权重：
 
+以下是对`pai_env.py`代码中相关代码的中文注释，其中`“_reward”`开头的是各种奖励函数定义，可以修改`pai_config.py`中的`class rewards`中对应的系数来改变奖励惩罚的权重：
 
 <details>
 
@@ -1258,15 +1273,16 @@ class PaiFreeEnv(LeggedRobot):
 </details>
 
 ### 修改步态并可视化
+
 为了方便演示，本文使用飞的岛up主开源的步态可视化工具
 
-#### Step1. 加载镜像（找工作人员）
+#### 步骤1. 加载镜像（找工作人员）
 
 ```bash
 docker load -i ubuntu20_pino_cro.tar
 ```
 
-#### Step2. 运行 docker
+#### 步骤2. 运行 docker
 
 ```bash
 sudo docker run -it \
@@ -1280,19 +1296,24 @@ sudo docker run -it \
   ubuntu20_pino_cro:v0 /bin/bash
 ```
 
-#### Step3. 在主机开启运行显示
+#### 步骤3. 在主机开启运行显示
+
 在主机上，运行xhost +local:$(whoami)来运行显示
 
-#### Step4. 安装依赖
+#### 步骤4. 安装依赖
+
 容器中如果要用mujoco之类的，需要在容器中安装
+
 ```bash
 apt-get install libglfw3 libglfw3-dev
 apt-get install libx11-dev libxcursor-dev
 apt-get install libx11-dev libxcursor-dev libxinerama-dev
 ```
 
-#### Step5. (Optional) pinocchio 使用
+#### 步骤5. (Optional) pinocchio 使用
+
 如果用pinocchio的c++编写一些程序
+
 ```bash
 find_package(Eigen3 REQUIRED)
 INCLUDE_DIRECTORIES(${EIGEN3_INCLUDE_DIR})
@@ -1308,7 +1329,8 @@ target_link_libraries(ctl PUBLIC pinocchio_default pinocchio_parsers pinocchio_c
 
 ```
 
-#### Step6. 运行可视化脚本
+#### 步骤6. 运行可视化脚本
+
 可以利用Cursor等工具来修改实现自定义步态，以下代码是模拟“立定跳远”：
 
 <details>
@@ -1413,7 +1435,8 @@ while True:
 
 </details>
 
-#### Step7. 查看效果
+#### 步骤7. 查看效果
+
 通过修改参数来实现不同的步态或腿部动作，运行后可以查看最终的效果：
 <div align="center">
     <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/xiaopi/pi.png"/>
@@ -1422,6 +1445,7 @@ while True:
 ### 训练代理并仿真验证
 
 #### 训练代理
+
 首先运行`play.py`脚本，这样在`”/logs/exported/“`目录下会生成`”policy_1.pt“`策略权重
 
 ```bash
@@ -1429,17 +1453,21 @@ python humanoid/scripts/play.py --task=pai_ppo --load_run=Mar12_10-23-45_v2 --ch
 ```
 
 #### Sim2Sim 仿真
+
 运行sim2sim.py在mujoco中进行仿真：
+
 ```bash
 python scripts/sim2sim.py --load_model /path/to/logs/Pai_ppo/exported/policies/policy_1.pt
 ```
+
 <div align="center">
     <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/xiaopi/sim2sim.png"/>
 </div>
 
 ### 模型部署
 
-#### Step1. 登入机器
+#### 步骤1. 登入机器
+
 ##### 机器人开机
 
 1. 启动电池: 短按电池按钮一次；在短按后的一秒内，长按电池按钮， 持续时间需超过1秒。
@@ -1463,23 +1491,24 @@ python scripts/sim2sim.py --load_model /path/to/logs/Pai_ppo/exported/policies/p
 :::info
 详细信息请参考[这里](https://www.hightorque.cn/wp-content/uploads/2024/12/1213%E6%95%B4%E6%9C%BA-%E5%8F%8C%E8%B6%B3%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8CA5.pdf)。
 :::
+
 ##### 接入网络
 
 使用usb 转网口接入网络，路由器后台找到IP ，开发电脑需要和机器人处于同一网络
 
 使用ssh工具登入, **用户名:nvidia, 密码:nvidia**
 
-#### Step2. 部署 Policy
+#### 步骤2. 部署 Policy
 
 1. 把 policy 放在这个文件夹次文件夹 /home/nvidia/Desktop/sim2real_master-series_structure_pi/src/custom_config/policy/
 2. 修改 /home/nvidia/Desktop/sim2real_master-series_structure_pi/src/custom_config/config.yaml 文件的 policy_name
 3. 重启服务: `sudo systemctl restart sim2real.service`
 
 :::note
-如果在训练电脑修改了 `pai_config.py` 文件， 需要把对应修改的同步到jetson上 `custom_config/config.yaml` 文件上. 
+如果在训练电脑修改了 `pai_config.py` 文件， 需要把对应修改的同步到jetson上 `custom_config/config.yaml` 文件上.
 :::
 
-#### Step3. 运行和使用
+#### 步骤3. 运行和使用
 
 1. 用手柄切换到custom 模式, LCD 将显示CUSTOM
 
@@ -1489,12 +1518,10 @@ python scripts/sim2sim.py --load_model /path/to/logs/Pai_ppo/exported/policies/p
 
 当已经选中一个模式时， 需要退出当前模式 保持（LT+RT）按下，随后 按下（B）键
 
-
 2. 使用
 
 - 左摇杆（LS ⊥），按下即可 使机器人缓慢站起
 - 按下（LB）时机器人可以原 地踏步，再次按下即可暂停
-
 
 ## FAQ
 
@@ -1532,6 +1559,7 @@ Q6: 机器人在仿真中一开始就摔倒/行为怪异怎么办？
 Q7: 如何修改训练的地形？
 
 在 pi_config.py 中修改 terrain 部分的参数。
+
 - mesh_type: 选择地形类型 (plane, rough, trimesh)。plane 是平地，rough 是程序生成的崎岖地形，trimesh 可以加载自定义的三角网格模型。
 - 修改 terrain_proportions 来控制不同类型地形出现的比例。
 - 调整与选定地形类型相关的参数（如 measure_heights, static_friction, dynamic_friction, restitution, rough_terrain_params 等）
@@ -1539,6 +1567,7 @@ Q7: 如何修改训练的地形？
 Q8: 奖励函数中的各项权重应该设为多少？
 
 没有固定的“最佳”权重，它们高度依赖于具体的任务目标、机器人特性和环境。这是一个需要反复试验和调整的过程。建议：
+
 - 从默认配置或类似工作的论文/代码库中获取初始值。
 - 理解每个奖励项的物理意义。
 - 小幅度调整权重，观察行为变化。
@@ -1547,6 +1576,7 @@ Q8: 奖励函数中的各项权重应该设为多少？
 Q9: Sim2Sim 迁移失败，机器人不稳定或行走方式差异很大，可能是什么原因？
 
 这是 Sim2Sim 的核心挑战，常见原因包括：
+
 - 仿真模型不准确: 质量、惯量、质心、电机特性（PD增益）、摩擦、延迟等与真实机器人差异过大。需要进行系统辨识和模型校准。
 - 领域随机化不足或过度: DR 没有覆盖到真实世界与仿真的关键差异，或者 DR 范围过大导致策略过于保守。
 - 状态估计不准: 真实机器人上的状态估计（特别是基座姿态和速度）有误差。
@@ -1557,6 +1587,7 @@ Q9: Sim2Sim 迁移失败，机器人不稳定或行走方式差异很大，可�
 Q10: 如何在观测 (Observation) 中加入新的传感器信息（比如足底接触力传感器）？
 
 这需要修改代码：
+
 - 修改环境代码: 在 legged_gym/envs/pi/pi.py (或类似文件) 中： 增加 num_observations 的值。
   - 在 _get_observations 函数中，获取新的传感器数据（可能需要修改仿真接口或物理引擎交互部分来读取接触力）。
   - 将新的传感器数据添加到观测向量 obs 中。
@@ -1567,10 +1598,10 @@ Q10: 如何在观测 (Observation) 中加入新的传感器信息（比如足底
 Q11: 我可以修改使用的强化学习算法吗？
 legged_gym 默认深度集成了 rsl_rl 库，主要使用 PPO 算法。替换为其他 RL 算法（如 SAC）通常需要较多的代码修改和集成工作，涉及到与环境的交互方式、数据收集和策略更新逻辑的对接。对于不熟悉框架底层实现的用户来说，这可能比较困难。建议首先充分利用 PPO 及其可调参数。
 
-
 ## 参考文档
+
 - https://ccnahw0w6tn5.feishu.cn/docx/LHBPdyCCCoR0TEx9h9oc8v8In59
-- [双足机器人快速使用手册](https://www.hightorque.cn/wp-content/uploads/2024/12/1213%E6%95%B4%E6%9C%BA-%E5%8F%8C%E8%B6%B3%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8CA5.pdf 
+- [双足机器人快速使用手册](https://www.hightorque.cn/wp-content/uploads/2024/12/1213%E6%95%B4%E6%9C%BA-%E5%8F%8C%E8%B6%B3%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8CA5.pdf
 )
 
 ## 技术支持与产品讨论
@@ -1578,11 +1609,11 @@ legged_gym 默认深度集成了 rsl_rl 库，主要使用 PPO 算法。替换�
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

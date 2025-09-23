@@ -37,7 +37,7 @@ git clone -b 1.1.2 https://github.com/raspberrypi/pico-sdk.git
 
 ```
 
-3. Set PICO_SDK_PATH enviroment variable:
+3. 设置 PICO_SDK_PATH 环境变量：
 
 ```
 export PICO_SDK_PATH=<absolute_path_to_pico-sdk_directory>
@@ -117,7 +117,7 @@ Compile the source code.
 make -j
 ```
 
-After programming and open serial communication
+编程并打开串行通信之后
 
 ```
 picocom -b 115200 /dev/ttyACM0
@@ -174,13 +174,13 @@ make distclean
 ./tools/configurate.sh seeed-xiao-rp2040:gpio
 ```
 
-Compile de the source code.
+编译 translation 代码。
 
 ```
 make -j
 ```
 
-After programming and open serial communication
+编程并打开串行通信之后
 
 ```
 picocom -b 115200 /dev/ttyACM0
@@ -296,7 +296,7 @@ make distclean
 ./tools/configurate.sh seeed-xiao-rp2040:userleds
 ```
 
-Compile de the source code.
+编译 translation 代码。
 
 ```
 make -j
@@ -316,7 +316,7 @@ nsh> ls /dev/
  ttyS0
 ```
 
-Typing `leds`, you observe the LEDs blinky same time.
+输入 `leds`，你会观察到 LED 灯同时闪烁。
 
 ```
 NuttShell (NSH) NuttX-12.5.1
@@ -352,7 +352,7 @@ make distclean
 ./tools/configurate.sh seeed-xiao-rp2040:ws2812
 ```
 
-Compile de the source code.
+编译 translation 代码。
 
 ```
 make -j

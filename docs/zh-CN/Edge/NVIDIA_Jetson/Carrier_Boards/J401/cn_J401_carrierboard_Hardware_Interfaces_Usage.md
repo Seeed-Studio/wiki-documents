@@ -270,8 +270,7 @@ sudo vi /usr/bin/hwtosys.sh
 
 sudo hwclock --hctosys
 ```
-
-- **Step 10:** Make the script executable.
+- **步骤 10:** 使脚本可执行。
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
@@ -282,8 +281,7 @@ sudo chmod +x /usr/bin/hwtosys.sh
 ```sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
-
-- **Step 12:** Add the following inside the file.
+- **步骤 12:** 在文件内添加以下内容。
 
 ```sh
 [Unit]
@@ -343,18 +341,16 @@ sudo systemctl stop nvfancontrol
 ```
 vi /etc/nvfancontrol.conf 
 ```
-
 :::note
-After you change nvfancontrol.conf, print `Ese` and `:q` to quit
+更改 nvfancontrol.conf 后，输入 `Ese` 和 `:q` 退出
 :::
 
-- **Step 3:** Remove the status file.
+- **步骤 3:** 删除状态文件。
 
 ```
 sudo rm /var/lib/nvfancontrol/status
 ```
-
-- **Step 4:** Restart nvfancontrol systemd service.
+- **步骤 4:** 重启 nvfancontrol systemd 服务。
 
 ```
 sudo systemctl restart nvfancontrol
@@ -369,8 +365,7 @@ sudo systemctl restart nvfancontrol
 ```
 sudo -i
 ```
-
-- **Step 2:**  Stop the nvfancontrol systemd service.
+- **步骤 2:** 停止 nvfancontrol systemd 服务。
 
 ```
 sudo systemctl stop nvfancontrol

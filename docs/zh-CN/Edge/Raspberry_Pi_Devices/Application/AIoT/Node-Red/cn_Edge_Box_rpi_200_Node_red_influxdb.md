@@ -52,18 +52,16 @@ Edge Box 出厂时预装了 Raspberry Pi OS。如果您是第一次启动此设�
 ```sh
 sudo apt update
 ```
+**步骤 2**: 添加 InfluxDB 仓库
 
-**Step 2**: Add the InfluxDB Repository
-
-Add the InfluxDB GPG key and repository to your system.
+将 InfluxDB GPG 密钥和仓库添加到您的系统中。
 
 Add the GPG key:
 
 ```sh
 curl https://repos.influxdata.com/influxdata-archive.key | gpg --dearmor | sudo tee /usr/share/keyrings/influxdb-archive-keyring.gpg >/dev/null
  ```
-
-Add the repository to the sources list:
+将该仓库添加到 translations 列表中：
 
 ```sh
 echo "deb [signed-by=/usr/share/keyrings/influxdb-archive-keyring.gpg] https://repos.influxdata.com/debian stable main" | sudo tee /etc/apt/sources.list.d/influxdb.list
@@ -87,7 +85,7 @@ sudo apt install influxdb
 
 ## Start InfluxDB Server
 
-Enable and start the InfluxDB service:
+启用并启动 InfluxDB 服务：
 
 **Step 1**. Unmask the service:
 
@@ -128,14 +126,12 @@ CREATE DATABASE data
 ```sh
 USE data
 ```
-
-**Step 4**. Insert a sample data point:
+**步骤 4**. 插入一个样本数据点：
 
 ```sh
 INSERT room,temperature=30.1 humidity=80.2
  ```
-
-**Step 5**. Query the inserted data:
+**步骤 5**. 查询插入的数据：
 
 ```sh
 SELECT * FROM room

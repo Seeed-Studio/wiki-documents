@@ -367,8 +367,7 @@ idf.py build
    ```bash
    idf.py build
    ```
-
-4. **Flash the project to XIAO ESP32-C3**:
+4. **将项目烧录到 XIAO ESP32-C3**：
 
    ```bash
    idf.py -p /dev/ttyUSB0 flash

@@ -218,7 +218,7 @@ reCamera上有3个指示灯，**红色和蓝色**指示灯是可编程指示灯�
 echo 0 | sudo tee /sys/class/leds/red/brightness
 ```
 
-Example 2: completely turn **red light** off
+示例 2：完全关闭**红灯**
 
 ``` bash
 echo none | sudo tee /sys/class/leds/red/trigger

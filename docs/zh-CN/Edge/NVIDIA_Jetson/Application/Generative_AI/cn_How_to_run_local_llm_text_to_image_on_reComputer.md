@@ -78,8 +78,7 @@ Keras 可以使用 TensorFlow 或 PyTorch 作为后端。Hugging Face 主要使�
 sudo apt install python3.8-venv
 python -m venv kerasStableEnvironment
 ```
-
-After creating it, activate the virtual environment
+创建完成后，激活虚拟环境
 
 ```bash
 source kerasStableEnvironment/bin/activate
@@ -93,8 +92,7 @@ source kerasStableEnvironment/bin/activate
 ```bash
 cd kerasStableEnvironment
 ```
-
-Upgrade PIP and install some dependencies
+升级 PIP 并安装一些依赖项
 
 ```bash
 pip install -U pip
@@ -125,8 +123,7 @@ pip install --extra-index-url https://developer.download.nvidia.com/compute/redi
 ```bash
 python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
 ```
-
-This should return the following line:
+这应该返回以下行：
 
 ```bash
 [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
@@ -139,14 +136,12 @@ This should return the following line:
 ```bash
 sudo apt install libopenblas-dev
 ```
-
-Now, install PyTorch for JetPack 5.1.1
+现在，为 JetPack 5.1.1 安装 PyTorch
 
 ```bash
 pip install --no-cache https://developer.download.nvidia.com/compute/redist/jp/v511/pytorch/torch-2.0.0+nv23.05-cp38-cp38-linux_aarch64.whl
 ```
-
-To check the installation and if CUDA is available
+检查安装情况以及 CUDA 是否可用
 
 ```bash
 python -c "import torch; print(torch.cuda.is_available())"
@@ -174,8 +169,7 @@ pip install keras-cv==0.5.1
 pip install keras==2.12.0
 pip install Pillow
 ```
-
-Open your preferred editor and type the following example
+打开你喜欢的编辑器并输入以下示例
 
 ```bash
 vi generate_image.py
@@ -342,8 +336,7 @@ image.save("sdxl-turbo.png")
 ```bash
 python -m venv imageAPIGenerator
 ```
-
-Activate the environment and enter it
+激活环境并进入
 
 ```bash
 source  imageAPIGenerator/bin/activate
@@ -368,8 +361,7 @@ pip install keras-cv==0.5.1
 pip install keras==2.12.0
 pip install Pillow
 ```
-
-Now, let's start to write our application.
+现在，让我们开始编写我们的应用程序。
 
 ```bash
 vi app.py
@@ -391,8 +383,7 @@ def generate_image_api():
 if __name__ == "__main__":
     app.run(host='',port=8080)
 ```
-
-To run, execute the python script:
+要运行，请执行 Python 脚本：
 
 ```bash
 python app.py
@@ -414,8 +405,7 @@ python app.py
 ```python
 import Flask
 ```
-
-We next created an instance of the Flask class
+接下来我们创建了一个 Flask 类的实例
 
 ```python
 app = Flask(__name__)
@@ -433,8 +423,7 @@ app = Flask(__name__)
 def generate_image_api():
     return "<h2>Hello World !</h2>"
 ```
-
-We can also use curl to access our API
+我们也可以使用 curl 来访问我们的 API
 
 ```bash
 curl http://192.168.2.230:8080/generate_image

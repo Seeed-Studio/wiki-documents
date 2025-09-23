@@ -66,8 +66,7 @@ sudo cp config/vlm-nginx.conf /opt/nvidia/jetson/services/ingress/config
 sudo cp config/prometheus.yml /opt/nvidia/jetson/services/monitoring/config/prometheus.yml
 sudo cp config/rules.yml /opt/nvidia/jetson/services/monitoring/config/rules.yml
 ```
-
-**Step 3**: Run the basic services:
+**步骤 3**: 运行基本服务：
 
 ```bash
 sudo systemctl start jetson-ingress
@@ -85,8 +84,7 @@ sudo fallocate -l 10G /data/10GB.swap
 sudo mkswap /data/10GB.swap
 sudo swapon /data/10GB.swap
 ```
-
-**Step 5**: Start the VLM AI service:
+**步骤 5**: 启动 VLM AI 服务：
 
 ```bash
 cd ~/vlm/example_1

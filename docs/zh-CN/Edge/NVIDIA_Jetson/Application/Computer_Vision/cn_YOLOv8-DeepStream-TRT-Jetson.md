@@ -114,8 +114,7 @@ sudo apt update
 sudo apt install -y python3-pip
 pip3 install --upgrade pip
 ```
-
-- **Step 2.** Clone the following repo
+- **步骤 2.** 克隆以下仓库
 
 ```sh
 git clone https://github.com/ultralytics/ultralytics.git
@@ -210,8 +209,7 @@ python3 setup.py install --user
 cd ~
 git clone https://github.com/marcoslucianops/DeepStream-Yolo
 ```
-
-- **Step 2.** Checkout the repo to the following commit
+- **步骤 2.** 将仓库检出到以下提交
 
 ```sh
 cd DeepStream-Yolo
@@ -237,8 +235,7 @@ wget https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8s.pt
 ```sh
 python3 gen_wts_yoloV8.py -w yolov8s.pt
 ```
-
-**Note:** To change the inference size (defaut: 640)
+**注意：**要更改推理大小（默认值：640）
 
 ```sh
 -s SIZE
@@ -451,8 +448,7 @@ num-sources=9
 ```sh
 yolo mode=export model=yolov8s.pt format=onnx
 ```
-
-- **Step 1.** Build engine file using trtexec as follows:
+- **步骤 1.** 使用trtexec构建引擎文件，步骤如下：
 
 ```sh
 cd /usr/src/tensorrt/bin

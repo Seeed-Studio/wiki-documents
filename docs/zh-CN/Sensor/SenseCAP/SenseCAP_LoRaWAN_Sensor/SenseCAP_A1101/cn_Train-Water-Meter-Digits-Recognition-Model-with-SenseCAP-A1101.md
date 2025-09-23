@@ -109,8 +109,7 @@ python3 capture_images_script.py
 ```sh
 python3 capture_images_script.py --interval <time_in_ms>
 ```
-
-For example, to capture an image every second
+例如，每秒捕获一张图像
 
 ```sh
 python3 capture_images_script.py --interval 1000

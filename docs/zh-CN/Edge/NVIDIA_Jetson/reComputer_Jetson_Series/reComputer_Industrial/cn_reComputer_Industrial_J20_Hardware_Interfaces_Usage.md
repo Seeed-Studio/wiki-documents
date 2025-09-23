@@ -200,8 +200,7 @@ sudo vi /usr/bin/hwtosys.sh
 
 sudo hwclock --hctosys
 ```
-
-- **Step 10:** Make the script executable
+- **步骤 10:** 使脚本可执行
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
@@ -212,8 +211,7 @@ sudo chmod +x /usr/bin/hwtosys.sh
 ```sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
-
-- **Step 12:** Add the following inside the file
+- **步骤 12:** 在文件内添加以下内容
 
 ```sh
 [Unit]
@@ -1440,14 +1438,12 @@ echo 318 > export
 cd PCC.01
 echo out > direction 
 ```
-
-- **Step 2:** Turn OFF the LED
+- **步骤 2:** 打开 OFF LED
 
 ```sh
 echo 0 > value 
 ```
-
-- **Step 3:** Turn ON the LED
+- **步骤 3:** 打开 ON LED
 
 ```sh
 echo 1 > value 
@@ -1482,8 +1478,7 @@ sudo pip3 install jetson-stats
 ```sh
 sudo reboot
 ```
-
-- **Step 3:** Type the following on the terminal
+- **步骤 3:** 在终端中输入以下内容
 
 ```sh
 jtop
@@ -1573,8 +1568,7 @@ sudo jetson_clocks
 ```sh
 sudo cat /sys/kernel/debug/gpio
 ```
-
-And you will see the output as follows
+你将看到输出如下
 
 ```sh
 gpiochip3: GPIOs 289-304, parent: i2c/1-0021, 1-0021, can sleep:

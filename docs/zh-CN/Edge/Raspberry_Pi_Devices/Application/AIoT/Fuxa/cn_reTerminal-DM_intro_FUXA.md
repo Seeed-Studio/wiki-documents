@@ -76,8 +76,7 @@ node -v
 npm -v
 
 ```
-
-**Next Install FUXA from NPM**
+**接下来从NPM安装FUXA**
 
 ```sh
 sudo npm install -g --unsafe-perm @frangoteam/fuxa-min

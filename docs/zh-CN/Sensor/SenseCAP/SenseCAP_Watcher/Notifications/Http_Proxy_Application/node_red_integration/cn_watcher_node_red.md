@@ -61,7 +61,7 @@ npm install -g npm@2.x
 node --version && npm --version
 ```
 
-You should receive back output that looks similar to:
+你应该收到看起来类似这样的输出：
 
 ```sh
 > v16.17.0

@@ -271,8 +271,7 @@ ls /dev/tty*
 ```
 idf.py set-target esp32c6
 ```
-
-Build the project by running:
+通过运行以下命令构建项目：
 
 ```
 idf.py build

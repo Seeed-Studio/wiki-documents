@@ -408,8 +408,7 @@ if(cardType == CARD_MMC){
     Serial.println("UNKNOWN");
 }
 ```
-
-3. You can get the microSDcard size by calling the `cardSize()` method:
+3. 你可以通过调用`cardSize()`方法来获取microSD卡的大小：
 
 ```c
 uint64_t cardSize = SD.cardSize() / (1024 * 1024);

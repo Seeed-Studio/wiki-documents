@@ -111,7 +111,7 @@ Compile the source code.
 make -j
 ```
 
-Convert nuttx.hex to UF2 format using U2F Tools:
+使用 U2F 工具将 nuttx.hex 转换为 UF2 格式：
 
 ```bash
 python3 uf2/utils/uf2conv.py -c -f 0xADA52840 -i nuttx.hex -o nuttx.uf2
@@ -182,7 +182,7 @@ Compile the source code.
 make -j
 ```
 
-Convert nuttx.hex to UF2 format using U2F Tools:
+使用 U2F 工具将 nuttx.hex 转换为 UF2 格式：
 
 ```bash
 python3 uf2/utils/uf2conv.py -c -f 0xADA52840 -i nuttx.hex -o nuttx.uf2
@@ -216,7 +216,7 @@ make distclean
 ./tools/configurate.sh xiao-nrf52840:jumbo
 ```
 
-Compile de the source code.
+编译 translation 代码。
 
 ```bash
 make -j
@@ -340,7 +340,6 @@ led_daemon: LED set 0x07
     <source src="https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nrf52840_nuttx_demo.mp4" type="video/mp4" />
   </video>
 </div>
-
 
 有关 NuttX RTOS 的更多信息，请访问 [NuttX 文档](https://nuttx.apache.org/docs/latest/index.html)
 

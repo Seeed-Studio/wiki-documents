@@ -166,13 +166,13 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Select the combo configuration to the xiao-ra4m1 board.
+选择组合配置到 xiao-ra4m1 板。
 
 ```bash
 ./tools/configurate.sh xiao-ra4m1:combo
 ```
 
-Compile de the source code.
+编译 translation 代码。
 
 ```bash
 make -j

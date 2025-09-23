@@ -576,7 +576,7 @@ void loop() {
 #define LORA_IQ_INVERSION_ON       false
 ```
 
-##### Set up the LoRa Transceiver Reciever
+##### 设置 LoRa 收发器接收机
 
 ```cpp
 void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr )
@@ -621,7 +621,7 @@ Radio.SetMaxPayloadLength( MODEM_LORA, 255 );
 Radio.Rx( 0 ); // Continuous Rx
 ```
 
-#### Step 3.4: Compile and Flash the Code to the SenseCAP Indicator
+#### 步骤 3.4: 编译并将代码烧录到SenseCAP Indicator
 
 ```cpp
 /**

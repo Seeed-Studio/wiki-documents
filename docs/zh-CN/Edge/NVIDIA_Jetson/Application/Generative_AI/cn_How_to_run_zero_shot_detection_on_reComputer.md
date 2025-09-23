@@ -64,8 +64,7 @@ cd ~/zero_shot_detection/example_1
 ```bash
 sudo cp config/zero_shot_detection-nginx.conf /opt/nvidia/jetson/services/ingress/config
 ```
-
-**Step 3**: Run the basic services.
+**步骤 3**: 运行基本服务。
 
 ```bash
 sudo systemctl start jetson-monitoring
@@ -86,8 +85,7 @@ sudo systemctl restart jetson-ingress
 sudo systemctl restart jetson-redis
 sudo systemctl restart jetson-vst
 ```
-
-**Step 6**: Start the zero-shot detection AI service.
+**步骤 6**: 启动零样本检测 AI 服务。
 
 ```bash
 sudo docker compose up -d

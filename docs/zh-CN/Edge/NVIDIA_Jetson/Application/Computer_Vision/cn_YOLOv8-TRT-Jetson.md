@@ -797,8 +797,7 @@ yolo detect predict model=<your_model.pt> source='0' show=True
 ```sh
 sudo apt install python3-pip -y
 ```
-
-- **Step 2.** Install Ultralytics along with dependencies
+- **步骤 2.** 安装 Ultralytics 及其依赖项
 
 ```sh
 pip install ultralytics
@@ -865,8 +864,7 @@ samples 目录中包含一个名为 [trtexec](https://docs.nvidia.com/deeplearni
 ```sh
 yolo mode=export model=yolov8s.pt format=onnx
 ```
-
-- **Step 2.** Build engine file using trtexec as follows:
+- **步骤 2.** 使用trtexec构建引擎文件，步骤如下：
 
 ```sh
 cd /usr/src/tensorrt/bin
@@ -930,7 +928,7 @@ pip3 install --upgrade pip
 pip3 install ultralytics
 ```
 
-- **Step 3.**  Upgrade numpy version to latest
+- **步骤 3.**  将 numpy 版本升级到最新
 
 ```sh
 pip3 install numpy -U

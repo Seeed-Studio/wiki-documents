@@ -144,8 +144,7 @@ RemainAfterExit=true
 [Install]
 WantedBy=multi-user.target
 ```
-
-**Step 5.** After saving and exiting, enable the service:
+**步骤 5.** 保存并退出后，启用该服务：
 
 ```bash
 sudo systemctl daemon-reexec

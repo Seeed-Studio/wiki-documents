@@ -355,8 +355,7 @@ unzip pink-flowers.v1i.yolov5pytorch.zip
 train: train/images
 val: valid/images
 ```
-
-- **Step 4.** Execute the following to start training
+- **步骤 4.** 执行以下操作以开始训练
 
 ```sh
 python3 train.py --data data.yaml --img-size 640 --batch-size -1 --epoch 100 --weights yolov5n6.pt
@@ -387,8 +386,7 @@ sudo apt update
 sudo apt install -y python3-pip
 pip3 install --upgrade pip
 ```
-
-- **Step 2.** Clone the following repo
+- **步骤 2.** 克隆以下仓库
 
 ```sh
 git clone https://github.com/ultralytics/yolov5
@@ -417,8 +415,7 @@ numpy==1.19.4
 ```sh
 sudo apt install -y libfreetype6-dev
 ```
-
-- **Step 6.** Install the necessary packages
+- **步骤 6.** 安装必要的软件包
 
 ```sh
 pip3 install -r requirements.txt
@@ -441,8 +438,7 @@ git clone --branch v0.9.0 https://github.com/pytorch/vision torchvision
 cd torchvision
 sudo python3 setup.py install 
 ```
-
-- **Step 9.** Clone the following repo
+- **步骤 9.** 克隆以下仓库
 
 ```sh
 cd ~
@@ -463,15 +459,13 @@ cp tensorrtx/yolov5/gen_wts.py yolov5
 cd yolov5
 python3 gen_wts.py -w best.pt -o best.wts
 ```
-
-- **Step 13.** Navigate to **tensorrtx/yolov5**
+- **步骤 13。** 导航到 **tensorrtx/yolov5**
 
 ```sh
 cd ~
 cd tensorrtx/yolov5
 ```
-
-- **Step 14.** Open **yololayer.h** with **vi text editor**
+- **步骤 14。** 使用 **vi 文本编辑器**打开 **yololayer.h**
 
 ```sh
 vi yololayer.h
@@ -560,8 +554,7 @@ sudo apt update
 sudo apt install -y python3-pip
 pip3 install --upgrade pip
 ```
-
-- **Step 3.** Clone the following repo
+- **步骤 3.** 克隆以下仓库
 
 ```sh
 git clone https://github.com/ultralytics/yolov5
@@ -590,8 +583,7 @@ numpy==1.19.4
 ```sh
 sudo apt install -y libfreetype6-dev
 ```
-
-- **Step 7.** Install the necessary packages
+- **步骤 7.** 安装必要的软件包
 
 ```sh
 pip3 install -r requirements.txt
@@ -614,8 +606,7 @@ git clone --branch v0.9.0 https://github.com/pytorch/vision torchvision
 cd torchvision
 sudo python3 setup.py install 
 ```
-
-- **Step 10.** Clone the following repo
+- **步骤 10。** 克隆以下仓库
 
 ```sh
 cd ~
@@ -634,14 +625,12 @@ cp DeepStream-Yolo/utils/gen_wts_yoloV5.py yolov5
 cd yolov5
 wget https://github.com/ultralytics/yolov5/releases/download/v6.1/yolov5s.pt
 ```
-
-- **Step 13.** Generate the **cfg** and **wts** files
+- **步骤 13。** 生成 **cfg** 和 **wts** 文件
 
 ```sh
 python3 gen_wts_yoloV5.py -w yolov5s.pt
 ```
-
-**Note**: To change the inference size (defaut: 640)
+**注意**：要更改推理大小（默认值：640）
 
 ```sh
 -s SIZE
@@ -681,8 +670,7 @@ custom-network-config=yolov5s.cfg
 model-file=yolov5s.wts
 ...
 ```
-
-- **Step 17.** Edit the **deepstream_app_config** file
+- **步骤 17。**编辑**deepstream_app_config**文件
 
 ```sh
 ...

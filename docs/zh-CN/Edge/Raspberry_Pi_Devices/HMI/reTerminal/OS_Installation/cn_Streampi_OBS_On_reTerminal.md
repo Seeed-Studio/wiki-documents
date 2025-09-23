@@ -93,7 +93,7 @@ cd build
 cmake -DBUILD_BROWSER=OFF ..
 ```
 
-### Install websocket plugin for OBS studio
+### 为 OBS studio 安装 websocket 插件
 
 ```bash
 wget https://github.com/obsproject/obs-websocket/releases/download/4.9.0/obs-websocket_4.9.0-1_amd64.deb

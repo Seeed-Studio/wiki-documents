@@ -210,8 +210,7 @@ sudo vi /usr/bin/hwtosys.sh
 
 sudo hwclock --hctosys
 ```
-
-**Step 10:** Make the script executable
+**步骤 10:** 使脚本可执行
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
@@ -222,8 +221,7 @@ sudo chmod +x /usr/bin/hwtosys.sh
 ```sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
-
-**Step 12:** Add the following inside the file
+**步骤 12:** 在文件内添加以下内容
 
 ```sh
 [Unit]
@@ -1608,14 +1606,12 @@ echo 329 > export
 cd PCC.01
 echo out > direction 
 ```
-
-**Step 2:** Turn OFF the LED
+**步骤 2:** 打开 OFF LED
 
 ```sh
 echo 0 > value 
 ```
-
-**Step 3:** Turn ON the LED
+**步骤 3:** 打开 ON LED
 
 ```sh
 echo 1 > value 
@@ -1669,8 +1665,7 @@ sudo pip3 install jetson-stats
 ```sh
 sudo reboot
 ```
-
-- **Step 3:** Type the following on the terminal
+- **步骤 3:** 在终端中输入以下内容
 
 ```sh
 jtop
@@ -1763,8 +1758,7 @@ sudo jetson_clocks
 ```bash
 sudo cat /sys/kernel/debug/gpio
 ```
-
-And you will see the output as follows
+你将看到输出如下
 
 ```bash
 gpiochip2: GPIOs 300-315, parent: i2c/1-0021, 1-0021, can sleep:
@@ -1989,13 +1983,12 @@ gpiochip0: GPIOs 348-511, parent: platform/2200000.gpio, tegra234-gpio:
 
 <TabItem value="Jetpack6" label="Jetpack6">
 
-Execute the following inside a terminal to access it.
+在终端内执行以下命令以访问它。
 
 ```bash
 gpioinfo
 ```
-
-And you will see the output as follows
+你将看到输出如下
 
 ```bash
 seeed@seeed-desktop:~$ gpioinfo 

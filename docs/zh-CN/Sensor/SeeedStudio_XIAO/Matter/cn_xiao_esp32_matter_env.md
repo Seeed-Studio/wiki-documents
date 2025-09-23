@@ -248,13 +248,13 @@ set_cache
 cd examples/light                # Navigate to the light example directory
 ```
 
-Perform a clean operation to remove previous build files.
+执行清理操作以删除先前的构建文件。
 
 ```bash
 rm -rf build/                     # Clean previous build files
 ```
 
-Set the target to ESP32-C6.
+将目标设置为ESP32-C6。
 
 ```bash
 idf.py set-target esp32c6        # Set the build target to ESP32-C6
@@ -337,13 +337,13 @@ sudo chmod 666 /dev/ttyACM0       # Grant permissions to the USB device file
  matter ble [start|stop|state]
  ```
 
-- Wi-Fi commands: Set and get the Wi-Fi mode:
+- Wi-Fi 命令：设置和获取 Wi-Fi 模式：
 
  ```
  matter wifi mode [disable|ap|sta]
  ```
 
-- Device configuration: Dump the device static configuration:
+- 设备配置：导出设备静态配置：
 
  ```
  matter config
@@ -373,13 +373,13 @@ sudo chmod 666 /dev/ttyACM0       # Grant permissions to the USB device file
   matter esp attribute get 0x1 0x6 0x0
   ```
 
-- Set attribute: (The IDs are in hex):
+- 设置属性：（ID 以十六进制表示）：
 
  ```
  matter esp attribute set <endpoint_id> <cluster_id> <attribute_id> <attribute value>
  ```
 
-  - Example: on_off::on_off:
+  - 示例：on_off::on_off:
 
   ```
   matter esp attribute set 0x1 0x6 0x0 1

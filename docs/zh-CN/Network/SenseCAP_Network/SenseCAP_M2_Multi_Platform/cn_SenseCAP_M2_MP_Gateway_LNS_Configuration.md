@@ -176,8 +176,7 @@ gateway/<GATEWAY_EUI>/device/+/event/up
 ```cpp
 application/+/device/+/event/+
 ```
-
-- To receive all device messages from all gateways:
+- 接收来自所有网关的所有设备消息：
 
 ```cpp
 gateway/+/device/+/event/+

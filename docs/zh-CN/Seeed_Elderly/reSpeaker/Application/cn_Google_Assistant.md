@@ -151,7 +151,7 @@ sudo python -m pip install --upgrade google-assistant-sdk[samples]
 
 **Step 3. Generate credentials**
 
-Install or update the authorization tool:
+安装或更新授权工具：
 
 ```
 sudo python -m pip install --upgrade google-auth-oauthlib[tool]==0.2
@@ -163,13 +163,13 @@ Make the target folder.
 sudo mkdir –p /path/to/assistant-sdk/
 ```
 
-Use the command below to copy `credentials.json` to the target location.
+使用以下命令将 `credentials.json` 复制到目标位置。
 
 ```
 sudo cp /home/respeaker/credentials.json /path/to/assistant-sdk/ 
 ```
 
-Tap the command below to get the token generate code.
+点击下方的命令以获取令牌生成代码。
 
 ```
 google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype \

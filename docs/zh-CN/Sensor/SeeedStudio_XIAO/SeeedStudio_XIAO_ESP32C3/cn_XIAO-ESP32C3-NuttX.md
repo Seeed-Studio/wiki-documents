@@ -166,13 +166,13 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Select the gpio configuration to the xiao-esp32c3 board.
+选择适用于 xiao-esp32c3 开发板的 gpio 配置。
 
 ```bash
 ./tools/configurate.sh xiao-esp32c3:gpio
 ```
 
-Compile de the source code.
+编译 translation 代码。
 
 ```bash
 make -j
@@ -284,13 +284,13 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Select the wifi configuration to the xiao-esp32c3 board.
+选择 wifi 配置到 xiao-esp32c3 开发板。
 
 ```bash
 ./tools/configurate.sh xiao-esp32c3:wifi
 ```
 
-Compile de the source code.
+编译 translation 代码。
 
 ```bash
 make -j
@@ -357,13 +357,13 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Select the ble configuration to the xiao-esp32c3 board.
+选择 ble 配置到 xiao-esp32c3 开发板。
 
 ```bash
 ./tools/configurate.sh xiao-esp32c3:ble
 ```
 
-Compile de the source code.
+编译 translation 代码。
 
 ```bash
 make -j
