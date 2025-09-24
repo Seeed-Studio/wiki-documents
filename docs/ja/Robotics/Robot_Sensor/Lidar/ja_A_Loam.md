@@ -77,7 +77,7 @@ A-LOAMは自動運転、ロボティクス、3Dマッピングなど様々なア
   sudo make install
   ```
 
-- __Step 4:__ Clone the A-LOAM code into the src directory of your workspace (~/catkin_ws/src).
+- __ステップ 4:__ A-LOAMのコードをワークスペースのsrcディレクトリ（~/catkin_ws/src）にクローンしてください。
 
   ```bash
   cd ~/catkin_ws/src

@@ -81,7 +81,7 @@ sudo nano /boot/config.txt
 dtoverlay=reTerminal
 ```
 
-- **Step 8.** Power off reTerminal
+- **步骤 8.** 关闭 reTerminal 电源
 
 ```sh
 sudo poweroff
@@ -105,7 +105,7 @@ sudo nano /boot/config.txt
 #dtoverlay=reTerminal
 ```
 
-- **Step 3.** Reboot reTerminal
+- **步骤 3.** 重启 reTerminal
 
 ```sh
 sudo reboot
@@ -132,7 +132,7 @@ wget https://sourceforge.net/projects/stm32flash/files/stm32flash-0.7.tar.gz
 wget https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases/download/2022-05-29-reTerminal-V1.9/STM32G030F6_R2.bin
 ```
 
-- **Step 6.** Unpack **stm32flash-0.7.tar.gz**
+- **步骤 6.** 解压 **stm32flash-0.7.tar.gz**
 
 ```sh
 tar -xvf stm32flash-0.7.tar.gz
@@ -157,7 +157,7 @@ i2ctransfer -y 1 w2@0x45 0x9b 0x01
 ./stm32flash -a 0x56 -o /dev/i2c-1
 ```
 
-- **步骤 10。** 使用stm32flash工具将固件刷入STM32
+- **步骤 10.** 使用stm32flash工具将固件刷入STM32
 
 ```sh
 ./stm32flash -a 0x56 -w ../STM32G030F6_R2.bin -v -g 0x0 /dev/i2c-1
@@ -171,19 +171,19 @@ i2ctransfer -y 1 w2@0x45 0x9b 0x01
 i2ctransfer -y 1 w2@0x45 0x9b 0x00
 ```
 
-- **步骤 12。** 打开我们之前使用的配置文件
+- **步骤 12.** 打开我们之前使用的配置文件
 
 ```sh
 sudo nano /boot/config.txt
 ```
 
-- **步骤 13。** 在此文件的最底部，取消注释写有 **dtoverlay=reTerminal** 的那一行
+- **步骤 13.** 在此文件的最底部，取消注释写有 **dtoverlay=reTerminal** 的那一行
 
 ```sh
 dtoverlay=reTerminal
 ```
 
-- **Step 14.** Reboot reTerminal
+- **步骤 14.** 重启 reTerminal
 
 ```sh
 sudo reboot
@@ -215,19 +215,19 @@ cd STM32
 ```sh
 chmod +x stm32flash
 ``` -->
-<!-- - **步骤 10。** 通过 **i2c-tools** 使 STM32 进入**引导模式**
+<!-- - **步骤 10.** 通过 **i2c-tools** 使 STM32 进入**引导模式**
 
 ```sh
 i2ctransfer -y 1 w2@0x45 0x9b 0x01
 ```
 
-- **步骤 11。** 使用 **stm32flash 工具**擦除 STM32 芯片中的闪存
+- **步骤 11.** 使用 **stm32flash 工具**擦除 STM32 芯片中的闪存
 
 ```sh
 ./stm32flash -a 0x56 -o /dev/i2c-1
 ```
 
-- **步骤 12。** 使用stm32flash工具将固件刷入STM32
+- **步骤 12.** 使用stm32flash工具将固件刷入STM32
 
 ```sh
 ./stm32flash -a 0x56 -w STM32G030F6_R2.bin -v -g 0x0 /dev/i2c-1
@@ -241,19 +241,19 @@ i2ctransfer -y 1 w2@0x45 0x9b 0x01
 i2ctransfer -y 1 w2@0x45 0x9b 0x00
 ```
 
-- **步骤 14。** 打开我们之前使用的配置文件
+- **步骤 14.** 打开我们之前使用的配置文件
 
 ```sh
 sudo nano /boot/config.txt
 ```
 
-- **步骤 15。** 在此文件的最底部，取消注释写有 **dtoverlay=reTerminal** 的那一行
+- **步骤 15.** 在此文件的最底部，取消注释写有 **dtoverlay=reTerminal** 的那一行
 
 ```sh
 dtoverlay=reTerminal
 ```
 
-- **Step 16.** Reboot reTerminal
+- **步骤 16.** 重启 reTerminal
 
 ```sh
 sudo reboot
@@ -307,19 +307,19 @@ scp -r .\STM32G030F6_R2.bin pi@192.168.x.xx:\home\pi\openocd
 ./bootstrap
 ```
 
-- **Step 8.** Enter the following
+- **步骤 8.** 输入以下内容
 
 ```sh
 ./configure --enable-sysfsgpio --enable-bcm2835gpio
 ```
 
-- **Step 9.** Compile it
+- **步骤 9.** 编译它
 
 ```sh
 make
 ```
 
-- **Step 10.** Install it
+- **步骤 10.** 安装它
 
 ```sh
 sudo make install
@@ -387,7 +387,7 @@ sudo nano /boot/config.txt
 dtoverlay=reTerminal
 ```
 
-- **Step 7.** Reboot reTerminal
+- **步骤 7.** 重启 reTerminal
 
 ```sh
 sudo reboot
@@ -437,13 +437,13 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-- **Step 2.** Reinstall kernel headers
+- **步骤 2.** 重新安装内核头文件
 
 ```sh
 sudo apt install raspberrypi-kernel-headers
 ```
 
-- **Step 3.** Reboot the reTerminal
+- **步骤 3.** 重启 reTerminal
 
 ```sh
 sudo reboot
@@ -648,13 +648,13 @@ sudo apt install libusb-1.0-0-dev
 make
 ```
 
-- **步骤 10。** 打开引导加载程序配置文件
+- **步骤 10.** 打开引导加载程序配置文件
 
 ```sh
 sudo nano recovery/boot.conf
 ```
 
-- **步骤 11。** 将 **BOOT_ORDER** 字段更改为以下内容
+- **步骤 11.** 将 **BOOT_ORDER** 字段更改为以下内容
 
 ```sh
 BOOT_ORDER=0xf15
@@ -662,7 +662,7 @@ BOOT_ORDER=0xf15
 
 **注意：** 此处如果 USB 引导失败，它会切换到 eMMC 引导
 
-- **步骤 12。** 运行以下命令以更新 EEPROM 镜像
+- **步骤 12.** 运行以下命令以更新 EEPROM 镜像
 
 ```sh
 cd recovery
@@ -677,7 +677,7 @@ pieeprom.bin 文件现在已准备好刷写到计算模块 4
 cd ..
 ```
 
-- **步骤 14。** 运行 usbboot 工具来刷写引导加载程序 EEPROM
+- **步骤 14.** 运行 usbboot 工具来刷写引导加载程序 EEPROM
 
 ```sh
 sudo ./rpiboot -d recovery
@@ -809,7 +809,7 @@ sudo vi /boot/config.txt
 dtoverlay=reTerminal,tp_rotate=1
 ```
 
-- **Step 6.** Reboot reTerminal
+- **步骤 6.** 重启 reTerminal
 
 ```sh
 sudo reboot
@@ -869,7 +869,7 @@ sudo vi /boot/config.txt
 #dtoverlay=reTerminal-bridge
 ```
 
-- **Step 3.** Reboot reTerminal
+- **步骤 3.** 重启 reTerminal
 
 ```sh
 sudo reboot

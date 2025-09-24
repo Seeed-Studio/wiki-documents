@@ -120,7 +120,7 @@ west flash
 west espressif monitor
 ```
 
-You will see a console available for sending commands to the board:
+ボードにコマンドを送信するためのコンソールが表示されます：
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***

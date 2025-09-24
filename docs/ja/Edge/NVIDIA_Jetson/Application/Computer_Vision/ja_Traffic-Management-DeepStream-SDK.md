@@ -96,7 +96,7 @@ cd deepstream_reference_apps/deepstream_app_tao_configs/
 sudo cp -a * /opt/nvidia/deepstream/deepstream/samples/configs/tao_pretrained_models/
 ```
 
-**Step 3:** Download the models
+**ステップ 3:** モデルをダウンロードします
 
 ```sh
 sudo apt install -y wget zip
@@ -189,11 +189,11 @@ sudo deepstream-app -c deepstream_app_source1_$MODEL.txt
 弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しております。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

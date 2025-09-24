@@ -25,7 +25,7 @@ ArduPy を始めるには、まず **`aip` - ArduPy Integrated Platform** をイ
 
 以下の方法を使用して、最も簡単な方法で ArduPy ソフトウェアを体験できます。手順に従って、今すぐ始めましょう！
 
-- **STEP.1 ブートローダーモードに入る**
+- **ステップ.1 ブートローダーモードに入る**
 
 デバイスを USB 接続で PC に接続します。デバイスを素早くリセットしてブートローダーモードに入ります。
 
@@ -36,7 +36,7 @@ PC に **`Arduino`** という名前の USB ドライブが表示されるはず
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/USBdrive.png"/></div>
 
-- **STEP.2 ArduPy UF2 ファームウェアをダウンロード**
+- **ステップ.2 ArduPy UF2 ファームウェアをダウンロード**
 
 UF2 ファイル形式の ArduPy ファームウェアをダウンロードします。
 
@@ -45,11 +45,11 @@ UF2 ファイル形式の ArduPy ファームウェアをダウンロードし�
 
 ダウンロードしたファイルをドライブに保存します。
 
-- **STEP.3 ArduPy ファームウェアをデバイスにフラッシュ**
+- **ステップ.3 ArduPy ファームウェアをデバイスにフラッシュ**
 
 デバイス用のファームウェアをダウンロードしたら、`.UF2` ファイルを `ARDUINO` USB ドライブにドラッグします。これで、ボードが PC から一時的に消えます。ボードをリセットすると、ArduPy ファームウェアがロードされます！
 
-- **STEP.4 デバイスを点滅させる**
+- **ステップ.4 デバイスを点滅させる**
 
 PC に **`ARDUPY`** という名前の USB ドライブが表示されます。`ARDUPY` を開き、`main.py` という Python ファイルを見つけます。`main.py` を [Microsoft Visual Studio Code](https://code.visualstudio.com/)、[Atom](https://atom.io/)、[Sublime Text](https://www.sublimetext.com/) などの好きなエディタで開きます。以下のコードをコピーして `main.py` に保存してください。
 

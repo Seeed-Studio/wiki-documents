@@ -749,7 +749,7 @@ endif()
 
 </details>
 
-__Step 6.__ ORB-SLAM3 RGB-D モード用の Orbbec Gemini2 アダプターを使用するスクリプトを作成する
+__ステップ 6.__ ORB-SLAM3 RGB-D モード用の Orbbec Gemini2 アダプターを使用するスクリプトを作成する
 
 `Examples/RGB-D/` ディレクトリの下に `rgbd_orbbec_gemini2_cpp.cc` という名前のファイルを以下のように作成します：
 
@@ -1008,7 +1008,7 @@ int main(int argc, char **argv)
 
 </details>
 
-__Step 7.__ ORB-SLAM3 をビルドする
+__ステップ 7.__ ORB-SLAM3 をビルドする
 
 ```bash
 chmod +x build.sh
@@ -1021,7 +1021,7 @@ chmod +x build.sh
 ORB-SLAM3 を実行する前に、カメラのパラメータ設定を取得するためにカメラをキャリブレーションする必要があります。ここでは、ROS が提供するカメラキャリブレーションツールを使用してカメラをキャリブレーションし、そのパラメータを取得する方法を説明します。
 </div>
 
-__Step 1.__ Orbbec ROS2 ドライバーをインストールする
+__ステップ 1.__ Orbbec ROS2 ドライバーをインストールする
 
 ```bash
 mkdir -p ~/ros2_ws/src

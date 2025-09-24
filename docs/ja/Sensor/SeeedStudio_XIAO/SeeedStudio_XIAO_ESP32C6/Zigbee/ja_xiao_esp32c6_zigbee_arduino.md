@@ -207,7 +207,7 @@ void setup() {
   zbLight.setManufacturerAndModel("Espressif", "ZBLightBulb");
 ```
 
-This sets the manufacturer and model name for the device, which helps identify it on the Zigbee network.
+これにより、デバイスの製造元とモデル名が設定され、Zigbeeネットワーク上でデバイスを識別するのに役立ちます。
 
 ```cpp
   zbLight.onLightChange(setLED);
@@ -520,7 +520,6 @@ void loop() {
 :::tip
 公式のルーチンは継続的に更新されており、私たちのドキュメントは最新のプログラムを最初に同期できない場合があります。相違がある場合は、**[Espressifのプログラム例](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Switch/Zigbee_On_Off_Switch.ino)**を参照してください。
 :::
-
 
 ```cpp title=Zigbee_On_Off_Switch.ino showLineNumbers
 #ifndef ZIGBEE_MODE_ZCZR

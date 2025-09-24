@@ -16,21 +16,21 @@ last_update:
 
 Rainbowduinoボードは、プロフェッショナルなLED駆動能力を備えたArduino互換のコントローラーボードです。8x8 RGB LEDマトリックス（共通アノード）を駆動します。
 
-* 外部回路不要、接続してすぐに点灯！
+- 外部回路不要、接続してすぐに点灯！
 
-* 各120mAの24チャンネル定電流
+- 各120mAの24チャンネル定電流
 
-* 各500mAの8チャンネルスーパーソースドライバー
+- 各500mAの8チャンネルスーパーソースドライバー
 
-* 6.5V-12VDCの広い出力電圧適応
+- 6.5V-12VDCの広い出力電圧適応
 
-* 専用GPIOおよびADC
+- 専用GPIOおよびADC
 
-* ハードウェアUARTおよびI2C通信
+- ハードウェアUARTおよびI2C通信
 
-* 簡単なカスケード接続
+- 簡単なカスケード接続
 
-* 小型で軽量
+- 小型で軽量
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Rainbowduino-LED-driver-platform-Atmega-328-p-371.html)
 
@@ -39,30 +39,30 @@ Rainbowduinoボードは、プロフェッショナルなLED駆動能力を備�
 ---
 必要なハードウェア:
 
-* 1 x Rainbowduino
+- 1 x Rainbowduino
 
-* 1 x RGB LEDマトリックス
+- 1 x RGB LEDマトリックス
 
 最も簡単な動作モードで、外部システムは不要です（ファームウェアをアップロードするためのTTLシリアルアダプターのみ必要）。LEDマトリックスの内容はRainbowduino自体によって生成されます。
 
 使用例:
 
-* Rainbowduinoによって計算されたシンプルなリアルタイムアニメーション
+- Rainbowduinoによって計算されたシンプルなリアルタイムアニメーション
 
-* 事前に保存されたアニメーションの表示（Rainbowduinoの32kb ROMに制限される）
+- 事前に保存されたアニメーションの表示（Rainbowduinoの32kb ROMに制限される）
 
 ## UARTモード
 
 ---
 必要なハードウェア:
 
-* 1x Rainbowduino
+- 1x Rainbowduino
 
-* 1x RGB LEDマトリックス
+- 1x RGB LEDマトリックス
 
-* 1x TTLレベルコンバーター
+- 1x TTLレベルコンバーター
 
-* 1x UART送信ユニット（Arduino、PCなど）
+- 1x UART送信ユニット（Arduino、PCなど）
 
 コンピュータからRainbowduinoにデータ（LEDマトリックスの内容）を送信します。RainbowduinoにはUSBコネクタがなく、TTLシリアル接続を使用するため、TTLシリアルレベルコンバーター（BusPirate、UartSBee、Arduinoなど）が必要です。
 
@@ -75,13 +75,13 @@ PCまたはArduinoで生成されたフレームを1つのLEDマトリックス�
 ---
 必要なハードウェア:
 
-* 1..n x Rainbowduino
+- 1..n x Rainbowduino
 
-* 1..n x RGB LEDマトリックス
+- 1..n x RGB LEDマトリックス
 
-* 1 x I2Cマスターデバイス（例: Arduino）
+- 1 x I2Cマスターデバイス（例: Arduino）
 
-* いくつかのケーブル
+- いくつかのケーブル
 
 コンピュータから複数のRainbowduinoにデータ（LEDマトリックスの内容）を送信します。FTDI USBからシリアルアダプターを使用するArduino（Duemillanove、Diecimilaなど）を使用する場合、コンピュータからArduinoへのデータ送信には約16msの遅延があります。新しいArduino UNOでは遅延が大幅に短縮され、約4msです。
 
@@ -107,49 +107,49 @@ Rainbowduinoは簡単にカスケード接続できるように設計されて�
 ## 仕様
 
 ---
-* マイクロプロセッサ：Atmega 328
+- マイクロプロセッサ：Atmega 328
 
-* PCBサイズ：60mm * 60mm * 1.6mm
+- PCBサイズ：60mm *60mm* 1.6mm
 
-* インジケーター：リセット、電源、ピン13 LED
+- インジケーター：リセット、電源、ピン13 LED
 
-* 電源供給：6.5-12 VDC（推奨9 VDC）
+- 電源供給：6.5-12 VDC（推奨9 VDC）
 
-* 電源コネクタ：2ピン JST ターミナルブロック、3mm DCジャック
+- 電源コネクタ：2ピン JST ターミナルブロック、3mm DCジャック
 
-* カスケード電源コネクタ：ターミナルブロック
+- カスケード電源コネクタ：ターミナルブロック
 
-* プログラムインターフェース：UART / ISP
+- プログラムインターフェース：UART / ISP
 
-* LEDドットマトリックスソケット：32
+- LEDドットマトリックスソケット：32
 
-* 拡張ソケット：2.54mm 曲げピンヘッダーのペア
+- 拡張ソケット：2.54mm 曲げピンヘッダーのペア
 
-* 通信プロトコル：I2C / UART
+- 通信プロトコル：I2C / UART
 
-* RHOS：対応
+- RHOS：対応
 
-* 入力電圧：6.5~12V
+- 入力電圧：6.5~12V
 
-* 全体消費電流：600~2000mA
+- 全体消費電流：600~2000mA
 
-* 定電流チャンネル（カソード）：24
+- 定電流チャンネル（カソード）：24
 
-* チャンネルごとの定電流（カソード）：20~120mA
+- チャンネルごとの定電流（カソード）：20~120mA
 
-* チャンネルごとのソースドライバ電流（共通アノード）：500mA
+- チャンネルごとのソースドライバ電流（共通アノード）：500mA
 
-* チャンネルごとのソースドライバ電圧（共通アノード）：9~12V
+- チャンネルごとのソースドライバ電圧（共通アノード）：9~12V
 
-* ソースドライブチャンネル：8
+- ソースドライブチャンネル：8
 
-* 駆動LED数：192
+- 駆動LED数：192
 
-* 回路応答時間：10ns
+- 回路応答時間：10ns
 
-* RGB LEDマトリックスのドットごとの色解像度：4096
+- RGB LEDマトリックスのドットごとの色解像度：4096
 
-* UARTボーレート：115200baud
+- UARTボーレート：115200baud
 
 ## LEDデバイスの互換性
 
@@ -171,11 +171,11 @@ Rainbowduinoの性能はRGBドットマトリックスを駆動する以上の�
 ---
 <big>必要なもの</big>
 
-* Rainbowduinoボード
+- Rainbowduinoボード
 
-* 共通アノードRGBマトリックス
+- 共通アノードRGBマトリックス
 
-* Arduinoボード（オプション）
+- Arduinoボード（オプション）
 
 ![](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/img/RAINBOW-connected-matrix.png)
 
@@ -225,13 +225,13 @@ UartSBeeをUSBバスに接続すると、新しいシリアルポートが登録
 
 Buspirateを使用した3つのプログラミング方法を説明します（すべてISPを使用）：
 
-* ISPを介したプログラミング
-* avrdudeと手動リセットを使用したプログラミング（パッチ不要）
-* avrdudeを使用した小さなパッチによるプログラミング
+- ISPを介したプログラミング
+- avrdudeと手動リセットを使用したプログラミング（パッチ不要）
+- avrdudeを使用した小さなパッチによるプログラミング
 
 Rainbowduinoをディスプレイと電源から切断してください。
 
-STEP 1: Buspirateを使用するには、新しいバージョンのavrdudeが必要です [[1]](http://download.savannah.gnu.org/releases/avrdude/)。バージョン5.10を使用しており、'-c buspirate'プログラマーオプションを認識します。以下のコマンドでテストできます：
+ステップ 1: Buspirateを使用するには、新しいバージョンのavrdudeが必要です [[1]](http://download.savannah.gnu.org/releases/avrdude/)。バージョン5.10を使用しており、'-c buspirate'プログラマーオプションを認識します。以下のコマンドでテストできます：
 
 ```
 ./avrdude -c buspirate -C ./avrdude.conf
@@ -239,7 +239,7 @@ STEP 1: Buspirateを使用するには、新しいバージョンのavrdudeが�
 
 プログラマーに関するエラーが表示された場合は、Buspirateの新しいバージョンが必要です。
 
-STEP 2: BuspirateをRainbowduinoのISPコネクタに以下のように接続します：
+ステップ 2: BuspirateをRainbowduinoのISPコネクタに以下のように接続します：
 
 | Buspirate | ISP | ISPピン |
 |---|---|---|
@@ -250,9 +250,9 @@ STEP 2: BuspirateをRainbowduinoのISPコネクタに以下のように接続し
 | MISO | MISO | 1 |
 | SCL/CLK | SCK | 3 |
 
-STEP 3: 正しいブートローダーを見つけます（tiny optibootファームウェアを使用しています）。このファイルを新しくコンパイルしたavrdudeディレクトリにコピーします。
+ステップ 3: 正しいブートローダーを見つけます（tiny optibootファームウェアを使用しています）。このファイルを新しくコンパイルしたavrdudeディレクトリにコピーします。
 
-STEP 4: 以下のコマンドでATmega 328pをプログラムします：
+ステップ 4: 以下のコマンドでATmega 328pをプログラムします：
 
 ```
 ./avrdude -v -c buspirate -p m328p -C ./avrdude.conf -P /dev/ttyUSB0 -U flash:w:optiboot_atmega328.hex
@@ -367,19 +367,19 @@ _注: Arduino IDEで使用するプログラマータイプを'boards.txt'ファ
 
 **特徴:**
 
-* I2C対応ファームウェア（複数のRainbowduinoをサポート）
+- I2C対応ファームウェア（複数のRainbowduinoをサポート）
 
-* Processingライブラリにより、ProcessingからRainbowduinoを簡単に制御可能！
+- Processingライブラリにより、ProcessingからRainbowduinoを簡単に制御可能！
 
-* ProcessingからRainbowduinoにフルフレームを送信
+- ProcessingからRainbowduinoにフルフレームを送信
 
-* ProcessingからRGBマトリックスにフレームを送信。各フレームは8x8ピクセル、12ビットカラー解像度（4096色）。カラー変換はライブラリによって処理されます。
+- ProcessingからRGBマトリックスにフレームを送信。各フレームは8x8ピクセル、12ビットカラー解像度（4096色）。カラー変換はライブラリによって処理されます。
 
-* 最適化されたProcessingライブラリ - 必要に応じてRainbowduinoにのみフレームを送信（トラフィックを約50%節約 - もちろんフレームによります）
+- 最適化されたProcessingライブラリ - 必要に応じてRainbowduinoにのみフレームを送信（トラフィックを約50%節約 - もちろんフレームによります）
 
-* バッファスワッピングの修正（ちらつきなし）
+- バッファスワッピングの修正（ちらつきなし）
 
-* I2Cバススキャナーを追加。Rainbowduinoのアドレスを忘れた場合に検索可能
+- I2Cバススキャナーを追加。Rainbowduinoのアドレスを忘れた場合に検索可能
 
 対応動作モード: I2C
 
@@ -387,7 +387,7 @@ _注: Arduino IDEで使用するプログラマータイプを'boards.txt'ファ
 
 このファームウェアを使用すると、Processingを使用してRainbowduinoを制御できます。そのため、以下が必要です：
 
-* Processingソフトウェア、[http://processing.org/](http://processing.org/)から入手可能
+- Processingソフトウェア、[http://processing.org/](http://processing.org/)から入手可能
 
 <big>Arduino IDEのパッチ</big>
 
@@ -455,8 +455,8 @@ RainbowduinoとArduinoの接続は以下のようになります：
 |---|---|
 | RESET | DTR |
 | GND | GND |
-| Analog IN 4 | SDA |
-| Analog IN 5 | SDL |
+| アナログ IN 4 | SDA |
+| アナログ IN 5 | SDL |
 
 <big>Processingライブラリのインストール</big>
 
@@ -529,7 +529,7 @@ TODO スクリーンショットを追加
 
 **特徴:**
 
-* mtXcontrolは、複数のマルチカラーLEDマトリックスを含む出力デバイス用の画像シーケンスを簡単に作成するためにProcessingで書かれたエディタです。
+- mtXcontrolは、複数のマルチカラーLEDマトリックスを含む出力デバイス用の画像シーケンスを簡単に作成するためにProcessingで書かれたエディタです。
 
 対応する動作モード: ???
 
@@ -539,17 +539,17 @@ TODO スクリーンショットを追加
 
 **特徴:**
 
-* リフレッシュレートに同期したダブルバッファリング
+- リフレッシュレートに同期したダブルバッファリング
 
-* 4つの補助バッファ
+- 4つの補助バッファ
 
-* 高レベル命令セット
+- 高レベル命令セット
 
-* 複数のハードウェア制御
+- 複数のハードウェア制御
 
-* I2C通信プロトコル
+- I2C通信プロトコル
 
-* Eepromへのデータ永続保存
+- Eepromへのデータ永続保存
 
 対応する動作モード: I2C
 
@@ -559,21 +559,21 @@ TODO スクリーンショットを追加
 
 **特徴:**
 
-* クリーンで保守可能なコードベース
+- クリーンで保守可能なコードベース
 
-* 標準ファームウェアと互換性あり
+- 標準ファームウェアと互換性あり
 
-* UARTモードをサポート（Arduinoホスト不要 - Rainbowduinoに直接接続可能）
+- UARTモードをサポート（Arduinoホスト不要 - Rainbowduinoに直接接続可能）
 
-* ダブルバッファリングされたグラフィックス操作
+- ダブルバッファリングされたグラフィックス操作
 
-* ソフトウェアリアルタイムクロック
+- ソフトウェアリアルタイムクロック
 
-* Rainbowduino自体によるアニメーション駆動
+- Rainbowduino自体によるアニメーション駆動
 
-* フルWindows ANSI (CP1252) 文字セット
+- フルWindows ANSI (CP1252) 文字セット
 
-* 高レベルコマンドセット
+- 高レベルコマンドセット
 
 対応する動作モード: UART
 
@@ -641,34 +641,34 @@ LEDマトリックスにフルフレームを表示するには、Rainbowduino�
 
 15ビットの色解像度を実現するには、ファームウェアに以下の2つの変更が必要です：
 
-* 明るさレベルを16ではなく32でループする
+- 明るさレベルを16ではなく32でループする
 
-* シフトアウト関数を変更する
+- シフトアウト関数を変更する
 
 ## リソース
 
 ---
 
-* [巨大なDIY LEDマトリックス](http://www.neophob.com/2010/11/huge-rgb-led-matrix/)
+- [巨大なDIY LEDマトリックス](http://www.neophob.com/2010/11/huge-rgb-led-matrix/)
 
-* [一般的なRainbowduino情報](http://www.neophob.com/2010/07/rainbowduino-fun-aka-neorainbowduino/)
+- [一般的なRainbowduino情報](http://www.neophob.com/2010/07/rainbowduino-fun-aka-neorainbowduino/)
 
-* [ファイル:RAINBOW-MBI5168 Datasheet VA.02-English.pdf](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/res/RAINBOW-MBI5168_Datasheet_VA.02-English.pdf "ファイル:RAINBOW-MBI5168 Datasheet VA.02-English.pdf")
+- [ファイル:RAINBOW-MBI5168 Datasheet VA.02-English.pdf](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/res/RAINBOW-MBI5168_Datasheet_VA.02-English.pdf "ファイル:RAINBOW-MBI5168 Datasheet VA.02-English.pdf")
 
-* [prod_documents](http://www.atmel.com/dyn/resources/prod_documents/doc2545.pdf)
+- [prod_documents](http://www.atmel.com/dyn/resources/prod_documents/doc2545.pdf)
 
-* [ファイル:RAINBOW-MBI5168 Datasheet VA.02-English.pdf](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/res/RAINBOW-MBI5168_Datasheet_VA.02-English.pdf "ファイル:RAINBOW-MBI5168 Datasheet VA.02-English.pdf")
+- [ファイル:RAINBOW-MBI5168 Datasheet VA.02-English.pdf](https://files.seeedstudio.com/wiki/Rainbowduino_LED_driver_platform-ATmega328/res/RAINBOW-MBI5168_Datasheet_VA.02-English.pdf "ファイル:RAINBOW-MBI5168 Datasheet VA.02-English.pdf")
 
 ## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

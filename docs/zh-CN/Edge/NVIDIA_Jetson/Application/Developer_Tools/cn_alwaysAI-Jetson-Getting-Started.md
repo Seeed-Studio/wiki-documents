@@ -362,7 +362,7 @@ def main():
     obj_detect.load(engine=edgeiq.Engine.TENSOR_RT)
 ```
 
-**Step 5.** Execute the following
+**步骤 5.** 执行以下操作
 
 ```sh
 aai app configure

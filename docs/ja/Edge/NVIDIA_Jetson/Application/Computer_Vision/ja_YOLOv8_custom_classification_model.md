@@ -154,18 +154,18 @@ sudo nvpmodel -m 0
 
 識別しようとしている鳥の種類は以下の通りです：
 
-- Barn Swallow
-- Common Firecrest
-- Common Nightingale
-- Eurasian Chaffinch
-- Eurasian Crag Martin
-- European Goldfinch
-- European Greenfinch
-- European Serin
-- House Sparrow
-- Spanish Sparrow
-- Western House Martin
-- white Wagtail
+- ツバメ
+- キクイタダキ
+- サヨナキドリ
+- ズアオアトリ
+- イワツバメ
+- ゴシキヒワ
+- アオカワラヒワ
+- セリン
+- イエスズメ
+- スペインスズメ
+- ニシイワツバメ
+- ハクセキレイ
 
 データセットを選択し、roboflowからダウンロードしてください。
 データセットを選択したら、「Download Dataset」を選択します。- そのためにはアカウントが必要です。
@@ -295,7 +295,7 @@ CUDA サポート付きの PyTorch がインストールされたので、YOLOv8
 pip install ultralytics
 ```
 
-Let's install roboflow and jupyterlab
+roboflowとjupyterlabをインストールしましょう
 
 ```bash
 pip install roboflow jupyterlab
@@ -528,7 +528,7 @@ class_names = results.names
 top1 = results.probs.top1
 ```
 
-Next, we print the highest probability class that should be the bird species.
+次に、鳥の種類であるべき最も高い確率のクラスを出力します。
 
 ```python
 print (f" The detected bird is: {class_names[top1]}")

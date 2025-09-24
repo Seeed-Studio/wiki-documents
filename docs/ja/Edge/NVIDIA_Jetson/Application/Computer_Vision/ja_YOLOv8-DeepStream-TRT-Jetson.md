@@ -75,6 +75,7 @@ YOLOv8をDeepStreamと連携させるために、この[DeepStram-YOLO](https://
 Jetsonデバイスに、CUDA、TensorRT、cuDNNなどのSDKコンポーネントを含む[JetPack](https://developer.nvidia.com/embedded/jetpack)システムがフラッシュされていることを確認する必要があります。NVIDIA SDK Managerまたはコマンドラインを使用してJetPackをデバイスにフラッシュできます。
 
 Seeed Jetson搭載デバイスのフラッシュガイドについては、以下のリンクを参照してください：
+
 - [reComputer J1010 | J101](https://wiki.seeedstudio.com/ja/reComputer_J1010_J101_Flash_Jetpack)
 - [reComputer J2021 | J202](https://wiki.seeedstudio.com/ja/reComputer_J2021_J202_Flash_Jetpack)
 - [reComputer J1020 | A206](https://wiki.seeedstudio.com/ja/reComputer_J1020_A206_Flash_JetPack)
@@ -211,7 +212,7 @@ cd ~
 git clone https://github.com/marcoslucianops/DeepStream-Yolo
 ```
 
-- **Step 2.** Checkout the repo to the following commit
+- **ステップ 2.** リポジトリを以下のコミットにチェックアウトする
 
 ```sh
 cd DeepStream-Yolo
@@ -281,7 +282,7 @@ num-detected-classes=80
 ...
 ```
 
-- **Step 9.** Edit the **deepstream_app_config.txt** file
+- **ステップ 9.** **deepstream_app_config.txt** ファイルを編集する
 
 ```sh
 ...
@@ -325,7 +326,7 @@ deepstream-app -c deepstream_app_config.txt
 sudo apt-get install libopencv-dev
 ```
 
-- **Step 2.** Compile/recompile the **nvdsinfer_custom_impl_Yolo** library with OpenCV support
+- **ステップ 2.** OpenCVサポートを有効にして**nvdsinfer_custom_impl_Yolo**ライブラリをコンパイル/再コンパイルする
 
 ```sh
 cd ~/DeepStream-Yolo
@@ -333,9 +334,9 @@ CUDA_VER=11.4 OPENCV=1 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.2/
 CUDA_VER=10.2 OPENCV=1 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.0.1 / 6.0
 ```
 
-- **Step 3.** COCOデータセットについて、[val2017](https://drive.google.com/file/d/1gbvfn7mcsGDRZ_luJwtITL-ru2kK99aK/view?usp=sharing)をダウンロードし、展開して**DeepStream-Yolo**フォルダに移動します
+- **ステップ 3.** COCOデータセットについて、[val2017](https://drive.google.com/file/d/1gbvfn7mcsGDRZ_luJwtITL-ru2kK99aK/view?usp=sharing)をダウンロードし、展開して**DeepStream-Yolo**フォルダに移動します
 
-- **Step 4.** キャリブレーション画像用の新しいディレクトリを作成します
+- **ステップ 4.** キャリブレーション画像用の新しいディレクトリを作成します
 
 ```sh
 mkdir calibration
@@ -366,7 +367,7 @@ export INT8_CALIB_BATCH_SIZE=1
 
 - **ステップ 8.** **config_infer_primary_yoloV8.txt** ファイルを更新する
 
-変更前 
+変更前
 
 ```sh
 ...
@@ -377,7 +378,7 @@ network-mode=0
 ...
 ```
 
-から 
+から
 
 ```sh
 ...
@@ -446,7 +447,7 @@ samples ディレクトリには、[trtexec](https://docs.nvidia.com/deeplearnin
 
 ここでは、trtexec ツールを使用して、異なるパラメータでモデルを迅速にベンチマークできます。しかし、まず最初に onnx モデルが必要で、この onnx モデルは ultralytics yolov8 を使用して生成できます。
 
-- **Step 1.** 以下を使用して ONNX をビルドします：
+- **ステップ 1.** 以下を使用して ONNX をビルドします：
 
 ```sh
 yolo mode=export model=yolov8s.pt format=onnx
@@ -521,11 +522,11 @@ reComputer Jetson Orinシリーズ製品でいくつかのdeepstreamアプリケ
 私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

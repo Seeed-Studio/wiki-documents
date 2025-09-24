@@ -271,7 +271,7 @@ void loop() {
 
 ```
 
-- **Step 3.** ボードモデルを **XIAO RA4M1** に選択し、正しいポート番号を選択してプログラムをアップロードします。
+- **ステップ 3.** ボードモデルを **XIAO RA4M1** に選択し、正しいポート番号を選択してプログラムをアップロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/rgb_led.gif" style={{width:600, height:'auto'}}/></div>
 
@@ -281,7 +281,7 @@ void loop() {
 
 しかし、XIAO RA4M1 では、このプロセスが簡素化されています。`BAT_DET_PIN/P105` ピンを直接使用してバッテリー電圧レベルを読み取ることができるようになり、設計と開発が合理化されます。バッテリーレベルの読み取りを有効にするために必要なので、`BAT_READ_EN/P400` ピンを high に設定することを忘れないでください。
 
-- **Step 1.** ハードウェアの準備
+- **ステップ 1.** ハードウェアの準備
 
 <table align="center">
  <tr>

@@ -152,7 +152,7 @@ python -m venv --system-site-packages env
 source env/bin/activate
 ```
 
-- **Step 02**: Install Mqtt library
+- **ステップ 02**: Mqtt ライブラリをインストールします
 
 ```sh
 pip3 install "paho-mqtt<2.0.0"

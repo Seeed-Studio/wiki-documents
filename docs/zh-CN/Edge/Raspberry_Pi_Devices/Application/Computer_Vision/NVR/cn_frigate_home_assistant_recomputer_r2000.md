@@ -81,7 +81,7 @@ sudo raspi-config
 dtoverlay=pciex1-compat-pi5,no-mip
 ```
 
-### Step 2: Install PCIe Driver
+### 步骤 2：安装 PCIe 驱动
 
 ```bash
 sudo apt update
@@ -95,7 +95,7 @@ git checkout 24e7ff2fb58fab7029024c1a1d3f2d1914f56d7b
 sudo make install_dkms
 ```
 
-### Step 3: Install Firmware
+### 步骤 3：安装固件
 
 ```bash
 cd ../..
@@ -112,7 +112,7 @@ sudo cp hailo8_fw*.bin /lib/firmware/hailo/hailo8_fw.bin
 options hailo_pci force_desc_page_size=4096
 ```
 
-### Step 5: Reboot and Verify
+### 步骤 5：重启并验证
 
 ```bash
 sudo reboot
@@ -137,7 +137,7 @@ Expected output:
 sudo apt update
 ```
 
-### Install Docker
+### 安装 Docker
 
 ```bash
 curl -fsSL get.docker.com | bash
@@ -145,13 +145,13 @@ sudo usermod -aG docker $USER
 sudo reboot
 ```
 
-### Pull Frigate Image
+### 拉取 Frigate 镜像
 
 ```bash
 docker pull ghcr.io/blakeblackshear/frigate:0.15.0-rc2-h8l
 ```
 
-### Create Directory Structure
+### 创建目录结构
 
 ```bash
 mkdir -p ~/frigate/config
@@ -159,6 +159,7 @@ mkdir -p ~/frigate/data/db
 mkdir -p ~/frigate/data/storage
 cd ~/frigate
 ```
+
 ### 创建 Docker Compose 文件 (frigate.yml)
 
 ```bash
@@ -187,6 +188,7 @@ services:
     ports:
       - 5000:5000
 ```
+
 ### 创建 Frigate 配置文件 (config/config.yml)
 
 ```bash
@@ -233,7 +235,7 @@ model:
 version: 0.15-1
 ```
 
-### Start Frigate
+### 启动 Frigate
 
 ```bash
 docker compose -f frigate.yml up -d
@@ -345,7 +347,7 @@ version: 0.15-1
 
 ```
 
-### Step 4: Restart Frigate
+### 步骤 4：重启 Frigate
 
 ```bash
 docker compose -f frigate.yml down

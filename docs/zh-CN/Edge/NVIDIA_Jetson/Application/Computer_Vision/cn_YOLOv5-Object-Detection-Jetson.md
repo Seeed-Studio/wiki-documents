@@ -355,6 +355,7 @@ unzip pink-flowers.v1i.yolov5pytorch.zip
 train: train/images
 val: valid/images
 ```
+
 - **步骤 4.** 执行以下操作以开始训练
 
 ```sh
@@ -386,13 +387,14 @@ sudo apt update
 sudo apt install -y python3-pip
 pip3 install --upgrade pip
 ```
+
 - **步骤 2.** 克隆以下仓库
 
 ```sh
 git clone https://github.com/ultralytics/yolov5
 ```
 
-- **Step 3.** Open **requirements.txt**
+- **步骤 3.** 打开 **requirements.txt**
 
 ```sh
 cd yolov5
@@ -415,13 +417,14 @@ numpy==1.19.4
 ```sh
 sudo apt install -y libfreetype6-dev
 ```
+
 - **步骤 6.** 安装必要的软件包
 
 ```sh
 pip3 install -r requirements.txt
 ```
 
-- **Step 7.** Install torch
+- **步骤 7.** 安装 torch
 
 ```sh
 cd ~
@@ -430,7 +433,7 @@ wget https://nvidia.box.com/shared/static/fjtbno0vpo676a25cgvuqc1wty0fkkg6.whl -
 pip3 install torch-1.10.0-cp36-cp36m-linux_aarch64.whl
 ```
 
-- **Step 8.** Install torchvision
+- **步骤 8.** 安装 torchvision
 
 ```sh
 sudo apt install -y libjpeg-dev zlib1g-dev
@@ -438,6 +441,7 @@ git clone --branch v0.9.0 https://github.com/pytorch/vision torchvision
 cd torchvision
 sudo python3 setup.py install 
 ```
+
 - **步骤 9.** 克隆以下仓库
 
 ```sh
@@ -459,12 +463,14 @@ cp tensorrtx/yolov5/gen_wts.py yolov5
 cd yolov5
 python3 gen_wts.py -w best.pt -o best.wts
 ```
+
 - **步骤 13。** 导航到 **tensorrtx/yolov5**
 
 ```sh
 cd ~
 cd tensorrtx/yolov5
 ```
+
 - **步骤 14。** 使用 **vi 文本编辑器**打开 **yololayer.h**
 
 ```sh
@@ -490,14 +496,14 @@ cd build
 cp ~/yolov5/best.wts .
 ```
 
-- **Step 18.** Compile it
+- **步骤 18.** 编译它
 
 ```sh
 cmake ..
 make
 ```
 
-- **Step 19.** Serialize the model
+- **步骤 19.** 序列化模型
 
 ```sh
 sudo ./yolov5 -s [.wts] [.engine] [n/s/m/l/x/n6/s6/m6/l6/x6 or c/c6 gd gw]
@@ -554,13 +560,14 @@ sudo apt update
 sudo apt install -y python3-pip
 pip3 install --upgrade pip
 ```
+
 - **步骤 3.** 克隆以下仓库
 
 ```sh
 git clone https://github.com/ultralytics/yolov5
 ```
 
-- **Step 4.** Open **requirements.txt**
+- **步骤 4.** 打开 **requirements.txt**
 
 ```sh
 cd yolov5
@@ -583,13 +590,14 @@ numpy==1.19.4
 ```sh
 sudo apt install -y libfreetype6-dev
 ```
+
 - **步骤 7.** 安装必要的软件包
 
 ```sh
 pip3 install -r requirements.txt
 ```
 
-- **Step 8.** Install torch
+- **步骤 8.** 安装 torch
 
 ```sh
 cd ~
@@ -598,7 +606,7 @@ wget https://nvidia.box.com/shared/static/fjtbno0vpo676a25cgvuqc1wty0fkkg6.whl -
 pip3 install torch-1.10.0-cp36-cp36m-linux_aarch64.whl
 ```
 
-- **Step 9.** Install torchvision
+- **步骤 9.** 安装 torchvision
 
 ```sh
 sudo apt install -y libjpeg-dev zlib1g-dev
@@ -606,6 +614,7 @@ git clone --branch v0.9.0 https://github.com/pytorch/vision torchvision
 cd torchvision
 sudo python3 setup.py install 
 ```
+
 - **步骤 10。** 克隆以下仓库
 
 ```sh
@@ -625,11 +634,13 @@ cp DeepStream-Yolo/utils/gen_wts_yoloV5.py yolov5
 cd yolov5
 wget https://github.com/ultralytics/yolov5/releases/download/v6.1/yolov5s.pt
 ```
+
 - **步骤 13。** 生成 **cfg** 和 **wts** 文件
 
 ```sh
 python3 gen_wts_yoloV5.py -w yolov5s.pt
 ```
+
 **注意**：要更改推理大小（默认值：640）
 
 ```sh
@@ -670,6 +681,7 @@ custom-network-config=yolov5s.cfg
 model-file=yolov5s.wts
 ...
 ```
+
 - **步骤 17。**编辑**deepstream_app_config**文件
 
 ```sh
@@ -679,7 +691,7 @@ model-file=yolov5s.wts
 config-file=config_infer_primary_yoloV5.txt
 ```
 
-- **Step 18.** Run the inference
+- **步骤 18.** 运行推理
 
 ```sh
 deepstream-app -c deepstream_app_config.txt
@@ -733,7 +745,7 @@ done
 realpath calibration/*jpg > calibration.txt
 ```
 
-- **Step 7.** Set environment variables
+- **步骤 7.** 设置环境变量
 
 ```sh
 export INT8_CALIB_IMG_PATH=calibration.txt
@@ -764,7 +776,7 @@ network-mode=1
 ...
 ```
 
-- **Step 9.** Run the inference
+- **步骤 9.** 运行推理
 
 ```sh
 deepstream-app -c deepstream_app_config.txt
@@ -977,11 +989,11 @@ deepstream-app -c deepstream_app_config.txt
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -186,7 +186,7 @@ PC に [mosquitto](https://mosquitto.org/download/) がインストールされ�
 
 このデモは Wio Terminal の Wi-Fi コアに依存しています。まず [**こちら**](https://wiki.seeedstudio.com/ja/Wio-Terminal-Network-Overview/) のウィキを参照してください。
 
-**STEP.1 Pubsubclient ライブラリのインストール**
+**ステップ.1 Pubsubclient ライブラリのインストール**
 
 1. [pubsubclient](https://github.com/knolleary/pubsubclient) リポジトリにアクセスし、リポジトリ全体をローカルドライブにダウンロードします。
 
@@ -194,7 +194,7 @@ PC に [mosquitto](https://mosquitto.org/download/) がインストールされ�
 
 ![ライブラリのインストール](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2019-11-21_15-50-13.jpg)
 
-**STEP.2 ArduinoJson ライブラリのインストール**
+**ステップ.2 ArduinoJson ライブラリのインストール**
 
 1. [ArduinoJson](https://github.com/bblanchon/ArduinoJson) リポジトリにアクセスし、リポジトリ全体をローカルドライブにダウンロードします。
 

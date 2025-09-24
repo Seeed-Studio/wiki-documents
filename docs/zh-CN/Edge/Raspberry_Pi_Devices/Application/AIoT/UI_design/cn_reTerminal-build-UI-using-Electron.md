@@ -41,7 +41,7 @@ sudo apt full-upgrade
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 ```
 
-- **Step 4.** Install Node.js
+- **步骤 4.** 安装 Node.js
 
 ```sh
 sudo apt install -y nodejs
@@ -168,7 +168,7 @@ electron-rebuild npm 模块会针对您的 Electron 项目所使用的 Node.js �
 npm install --save-dev electron-rebuild
 ```
 
-- **Step 2.** Run electron-rebuild
+- **步骤 2.** 运行 electron-rebuild
 
 ```sh
 ./node_modules/.bin/electron-rebuild
@@ -422,6 +422,7 @@ DISPLAY=:0 npm test
 example:
 cd ~/Desktop/testapp
 ```
+
 - **步骤 4.** 将 ledstart.sh 设置为可执行文件
 
 ```sh

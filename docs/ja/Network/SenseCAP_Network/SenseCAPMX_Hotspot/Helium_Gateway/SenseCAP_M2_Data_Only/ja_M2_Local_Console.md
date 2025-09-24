@@ -183,15 +183,15 @@ LuCiパスワードを忘れた場合、工場出荷時設定を復元するこ�
 
 ここでWi-Fiに接続できます。以下の手順に従ってください：
 
-*   **Step 1**: 「**scan**」ボタンをクリックして、お住まいの地域のWi-Fiをスキャンします。
+*   **ステップ 1**: 「**scan**」ボタンをクリックして、お住まいの地域のWi-Fiをスキャンします。
 
 ![SenseCAP M2 Local Console Guide Network Interface Wireless](https://www.sensecapmx.com/wp-content/uploads/2022/07/wireless_home.png)
 
-*   **Step 2**: ネットワークに参加するWi-Fiを選択します。
+*   **ステップ 2**: ネットワークに参加するWi-Fiを選択します。
 
 ![SenseCAP M2 Local Console Guide Network Interface Wifi](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi_join.png)
 
-*   **Step 3**: Wi-Fiパスワードを入力し、送信して保存します。
+*   **ステップ 3**: Wi-Fiパスワードを入力し、送信して保存します。
 
 ![SenseCAP M2 Local Console Guide Network Interface Wifi Guide](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi_submit.png)
 

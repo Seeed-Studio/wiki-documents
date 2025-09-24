@@ -200,17 +200,19 @@ sudo vi /usr/bin/hwtosys.sh
 
 sudo hwclock --hctosys
 ```
+
 - **步骤 10:** 使脚本可执行
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
 ```
 
-- **Step 11:** Create a systemd file
+- **步骤 11：** 创建一个 systemd 文件
 
 ```sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
+
 - **步骤 12:** 在文件内添加以下内容
 
 ```sh
@@ -224,7 +226,7 @@ ExecStart=/usr/bin/hwtosys.sh
 WantedBy=multi-user.target
 ```
 
-- **Step 13:** Reload systemctl daemon
+- **步骤 13：** 重新加载 systemctl 守护进程
 
 ```sh
 sudo systemctl daemon-reload 
@@ -1438,11 +1440,13 @@ echo 318 > export
 cd PCC.01
 echo out > direction 
 ```
+
 - **步骤 2:** 打开 OFF LED
 
 ```sh
 echo 0 > value 
 ```
+
 - **步骤 3:** 打开 ON LED
 
 ```sh
@@ -1473,11 +1477,12 @@ sudo apt install python3-pip -y
 sudo pip3 install jetson-stats
 ```
 
-- **Step 2:** Reboot the board
+- **步骤 2：** 重启开发板
 
 ```sh
 sudo reboot
 ```
+
 - **步骤 3:** 在终端中输入以下内容
 
 ```sh
@@ -1568,6 +1573,7 @@ sudo jetson_clocks
 ```sh
 sudo cat /sys/kernel/debug/gpio
 ```
+
 你将看到输出如下
 
 ```sh

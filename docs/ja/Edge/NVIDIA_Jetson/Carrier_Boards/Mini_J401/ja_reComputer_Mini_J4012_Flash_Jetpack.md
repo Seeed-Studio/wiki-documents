@@ -426,7 +426,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**Step 2:** Execute the following command to flash jetpack system to the NVMe SSD:
+**ステップ 2:** 次のコマンドを実行して、jetpackシステムをNVMe SSDにフラッシュします：
 
 ```bash
 cd mfi_xxxx

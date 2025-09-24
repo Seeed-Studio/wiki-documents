@@ -378,7 +378,7 @@ if dev:
             break
 ```
 
-- Step 3. We will see the DOA as below.
+- ステップ 3. 以下のようにDOAが表示されます。
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python doa.py 
@@ -589,7 +589,7 @@ wf.close()
 
 **For Windows:**
 
-- Step 1. We run below command to install pyaudio.
+- ステップ 1. pyaudioをインストールするために以下のコマンドを実行します。
 
 ```
  pip install pyaudio
@@ -618,7 +618,7 @@ C:\Users\XXX\Desktop>python record.py
 
 **MAC の場合:**
 
-- Step 1. 以下のコマンドを実行して pyaudio をインストールします。
+- ステップ 1. 以下のコマンドを実行して pyaudio をインストールします。
 
 ```
  pip install pyaudio
@@ -643,7 +643,7 @@ MacBook-Air:Desktop XXX$ python record.py
 
 ## FAQ
 
-**Q1: Parameters of built-in algorithms**
+**Q1: 組み込みアルゴリズムのパラメータ**
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ python tuning.py -p
@@ -742,9 +742,9 @@ VOICEACTIVITY    int 1 0 ro VAD voice activity status.
                                                             1 = true (voice activity)
 ```
 
-**Q2: ImportError: No module named usb.core**
+**Q2: ImportError: usb.coreという名前のモジュールがありません**
 
-A2: Run sudo pip install pyusb to install the pyusb.
+A2: pyusbをインストールするために sudo pip install pyusb を実行してください。
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python tuning.py DOAANGLE

@@ -27,28 +27,28 @@ Seeed Studio BeagleBone® Green Wirelessは、[BeagleBoard.org](https://beaglebo
 
 ----
 
-* **BeagleBone® Blackと完全互換**
-* **プロセッサ: AM335x 1GHz ARM® Cortex-A8**
-  * 512MB DDR3 RAM
-  * 4GB 8ビットeMMCオンボードフラッシュストレージ
-  * 3Dグラフィックスアクセラレータ
-  * NEON浮動小数点アクセラレータ
-  * 2x PRU 32ビットマイクロコントローラ
+- **BeagleBone® Blackと完全互換**
+- **プロセッサ: AM335x 1GHz ARM® Cortex-A8**
+  - 512MB DDR3 RAM
+  - 4GB 8ビットeMMCオンボードフラッシュストレージ
+  - 3Dグラフィックスアクセラレータ
+  - NEON浮動小数点アクセラレータ
+  - 2x PRU 32ビットマイクロコントローラ
 
-* **接続性**
-  * 電源供給と通信のためのUSBクライアント
-  * 4ポートハブ付きUSBホスト
-  * WiFi 802.11 b/g/n 2.4GHz
-  * Bluetooth 4.1（BLE対応）
-  * 2x 46ピンヘッダー
-  * 2x Groveコネクタ（I2CおよびUART）
+- **接続性**
+  - 電源供給と通信のためのUSBクライアント
+  - 4ポートハブ付きUSBホスト
+  - WiFi 802.11 b/g/n 2.4GHz
+  - Bluetooth 4.1（BLE対応）
+  - 2x 46ピンヘッダー
+  - 2x Groveコネクタ（I2CおよびUART）
 
-* **ソフトウェア互換性**
-  * Debian
-  * Android
-  * Ubuntu
-  * Cloud9 IDE on Node.js（BoneScriptライブラリ付き）
-  * その他多数
+- **ソフトウェア互換性**
+  - Debian
+  - Android
+  - Ubuntu
+  - Cloud9 IDE on Node.js（BoneScriptライブラリ付き）
+  - その他多数
 
 ## 仕様
 
@@ -69,13 +69,13 @@ Seeed Studio BeagleBone® Green Wirelessは、[BeagleBoard.org](https://beaglebo
 
 ## 応用アイデア
 
-* モノのインターネット（IoT）
-* スマートハウス
-* 産業用途
-* 自動化 & プロセス制御
-* ヒューマンマシンインターフェース
-* センサーハブ
-* ロボット
+- モノのインターネット（IoT）
+- スマートハウス
+- 産業用途
+- 自動化 & プロセス制御
+- ヒューマンマシンインターフェース
+- センサーハブ
+- ロボット
 
 ### Seeed Studio BeagleBone® Green Wireless スターターチュートリアル #1-#6
 
@@ -170,7 +170,7 @@ UART0ピンにアクセスしてデバッグケーブルを接続する専用ヘ
 この章はWin10を基に記述されています。他のオペレーティングシステムでも手順は類似しています。
 :::
 
-### STEP1. Seeed Studio BeagleBone® Green WirelessをUSB経由で接続
+### ステップ1. Seeed Studio BeagleBone® Green WirelessをUSB経由で接続
 
 付属のマイクロUSBケーブルを使用して、Seeed Studio BeagleBone® Green Wirelessをコンピュータに接続します。これにより、ボードに電力を供給し、開発インターフェースを提供します。Seeed Studio BeagleBone® Green Wirelessは、**オンボードの2GB**または4GB eMMCからLinuxを起動します。
 
@@ -178,12 +178,12 @@ Seeed Studio BeagleBone® Green Wirelessは、ローカルコピーのドキュ�
 
 PWR LEDが点灯しているのが確認できます。10秒以内に、他のLEDがデフォルト設定で点滅するのが見えるはずです。
 
-* D2は起動時にハートビートパターンで点滅するように設定されています
-* D3は起動時にmicroSDカードアクセス時に点灯するように設定されています
-* D4は起動時にCPUアクティビティ時に点灯するように設定されています
-* D5は起動時にeMMCアクセス時に点灯するように設定されています
+- D2は起動時にハートビートパターンで点滅するように設定されています
+- D3は起動時にmicroSDカードアクセス時に点灯するように設定されています
+- D4は起動時にCPUアクティビティ時に点灯するように設定されています
+- D5は起動時にeMMCアクセス時に点灯するように設定されています
 
-### STEP2. ドライバのインストール
+### ステップ2. ドライバのインストール
 
 オペレーティングシステム用のドライバをインストールして、BeagleへのUSB経由のネットワークアクセスを可能にします。追加のドライバをインストールすることで、ボードへのシリアルアクセスも可能になります。
 
@@ -197,14 +197,15 @@ PWR LEDが点灯しているのが確認できます。10秒以内に、他のLE
 :::note
 Windowsシステムの場合、以下に注意してください：
 
-* Windows Driver Certificationの警告が2～3回表示される場合があります。「無視」、「インストール」または「実行」をクリックしてください。
-* 32ビットまたは64ビットのWindowsを使用しているか確認するには、[こちら](https://support.microsoft.com/kb/827218)を参照してください。
-* 最新のサービスリリースがないシステムでは、エラー（0xc000007b）が発生する場合があります。その場合は、[こちら](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523)をインストールして再試行してください。
-* Windowsを再起動する必要がある場合があります。
-* これらのドライバはWindows 10まで動作確認されています。
+- Windows Driver Certificationの警告が2～3回表示される場合があります。「無視」、「インストール」または「実行」をクリックしてください。
+- 32ビットまたは64ビットのWindowsを使用しているか確認するには、[こちら](https://support.microsoft.com/kb/827218)を参照してください。
+- 最新のサービスリリースがないシステムでは、エラー（0xc000007b）が発生する場合があります。その場合は、[こちら](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523)をインストールして再試行してください。
+- Windowsを再起動する必要がある場合があります。
+- これらのドライバはWindows 10まで動作確認されています。
+
 :::
 
-### STEP3. Beagleにアクセス
+### ステップ3. Beagleにアクセス
 
 ChromeまたはFirefox（Internet Explorerは使用不可）を使用して、ボード上で実行されているWebサーバーにアクセスします。ボードの機能を示すプレゼンテーションが表示されます。キーボードの矢印キーを使用してプレゼンテーションを操作します。
 
@@ -213,13 +214,13 @@ ChromeまたはFirefox（Internet Explorerは使用不可）を使用して、�
 
 [![クリックして画像を拡大](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)
 
-### STEP4. Cloud9 IDE
+### ステップ4. Cloud9 IDE
 
 ボード上に保存されているプログラムを編集するには、Cloud9 IDEを使用します。
 
 [![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/cloud9.png)](http://192.168.7.2:3000/ide.html)
 
-### STEP5. Seeed Studio BeagleBone® Green Wireless を Wi-Fi に接続する
+### ステップ5. Seeed Studio BeagleBone® Green Wireless を Wi-Fi に接続する
 
 スマートフォンまたはコンピュータを使用して、ローカル Wi-Fi ネットワークをスキャンし、「BeagleBone® XXX」という名前の AP に接続します。
 
@@ -233,7 +234,7 @@ ChromeまたはFirefox（Internet Explorerは使用不可）を使用して、�
 
 ![](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/wifi3.png)
 
-### STEP6. Seeed Studio BeagleBone® Green Wireless を Bluetooth デバイスに接続する
+### ステップ6. Seeed Studio BeagleBone® Green Wireless を Bluetooth デバイスに接続する
 
 Cloud9 IDE に接続し、新しいターミナルを開きます。以下のコマンドを使用して Bluetooth 設定を開始します：
 
@@ -267,7 +268,7 @@ Seeed Studio BeagleBone® Green Wireless で音楽を再生すると、Bluetooth
 
 ボードのパフォーマンスを向上させるために、最新のソフトウェアに更新する必要があります。以下に手順を示します。
 
-### STEP1. 最新のソフトウェアイメージをダウンロードする
+### ステップ1. 最新のソフトウェアイメージをダウンロードする
 
 まず、適切なイメージを以下のリンクからダウンロードしてください。
 
@@ -279,7 +280,7 @@ Seeed Studio BeagleBone® Green Wireless で音楽を再生すると、Bluetooth
 
 ダウンロードしたファイルは **.img.xz** 拡張子を持っています。これは SD カードのセクターごとの圧縮イメージです。
 
-### STEP2. 圧縮ユーティリティをインストールしてイメージを解凍する
+### ステップ2. 圧縮ユーティリティをインストールしてイメージを解凍する
 
 [7-zip](http://www.7-zip.org/download.html) をダウンロードしてインストールします。
 
@@ -289,11 +290,11 @@ Seeed Studio BeagleBone® Green Wireless で音楽を再生すると、Bluetooth
 
 7-zip を使用して SD カードの **.img ファイル** を解凍します。
 
-### STEP3. SD カードプログラミングユーティリティをインストールする
+### ステップ3. SD カードプログラミングユーティリティをインストールする
 
 [Image Writer for Windows](https://sourceforge.net/projects/win32diskimager/files/latest/download) をダウンロードしてインストールします。バイナリ配布版をダウンロードしてください。
 
-### STEP4. イメージを SD カードに書き込む
+### ステップ4. イメージを SD カードに書き込む
 
 まず、microSD カードをコンピュータに接続するための SD アダプタが必要です。その後、Image Writer for Windows ソフトウェアを使用して解凍したイメージを SD カードに書き込みます。
 
@@ -305,12 +306,13 @@ Seeed Studio BeagleBone® Green Wireless で音楽を再生すると、Bluetooth
 
 :::note
 
-* デバイスが損傷する可能性があるという警告が表示される場合があります。SD カードに書き込む場合は問題ありません。
-* この時点で BeagleBone® をコンピュータに接続しないでください。
-* このプロセスには最大 10 分かかる場合があります。
+- デバイスが損傷する可能性があるという警告が表示される場合があります。SD カードに書き込む場合は問題ありません。
+- この時点で BeagleBone® をコンピュータに接続しないでください。
+- このプロセスには最大 10 分かかる場合があります。
+
 :::
 
-### STEP5. SD カードからボードを起動する
+### ステップ5. SD カードからボードを起動する
 
 SD カードを（電源がオフの状態で）ボードに挿入します。その後、ボードは SD カードから起動します。
 
@@ -322,9 +324,10 @@ SD カードを（電源がオフの状態で）ボードに挿入します。�
 
 **/boot/uEnv.txt** 内で：
 
-## 汎用 eMMC フラッシャーを有効化する:
+## 汎用 eMMC フラッシャーを有効化する
 
 ## 以下のツールがインストールされていることを確認してください: dosfstools rsync
+
 cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3.sh
 
 次に、以下のように4つのユーザーLEDライトが点灯するのを確認できます:
@@ -353,7 +356,7 @@ Mraa と UPM は、Seeed Studio BeagleBone® Green Wireless のシステムイ�
 
 ### Mraa の例
 
-* LED を点灯させる
+- LED を点灯させる
 
 ```
 import mraa
@@ -369,7 +372,7 @@ while True:
     time.sleep(1)
 ```
 
-* Grove - PIR センサー
+- Grove - PIR センサー
 
 ```
 import mraa
@@ -383,7 +386,7 @@ while True:
     time.sleep(1)
 ```
 
-* Grove - 回転角センサー
+- Grove - 回転角センサー
 
 ```
 import mraa
@@ -396,7 +399,7 @@ while True:
     time.sleep(1)
 ```
 
-* その他のチュートリアル
+- その他のチュートリアル
 
 [Grove - 3軸デジタル加速度計(±16g)
  Grove - 可変色LED](https://community.seeedstudio.com/BBGW-starter-tutorial%231-The-breath-LED-p-1641.html)
@@ -433,7 +436,7 @@ Grove - RTC v2.0
 
 ![UART](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/BBGW_Mraa_UART.png)
 
-## Grove for Seeed Studio BeagleBone® Green
+## Seeed Studio BeagleBone® Green用のGrove
 
 ------
 
@@ -494,12 +497,12 @@ Groveは、モジュール化された標準化コネクタのプロトタイピ
 
 ボードに関する情報をさらに得るための参考資料が多数あります。
 
-* [BeagleBoard メインページ](https://beagleboard.org/)
-* [Seeed Studio BeagleBone® Green Wireless の情報 (BeagleBoard ページ)](https://beagleboard.org/green-wireless)
-* [BeagleBoard 入門ガイド](https://beagleboard.org/getting-started)
-* [トラブルシューティング](https://beagleboard.org/getting-started#troubleshooting)
-* [ハードウェアドキュメント](https://beagleboard.org/getting-started#hardware)
-* [BeagleBoard プロジェクト](https://beagleboard.org/project)
+- [BeagleBoard メインページ](https://beagleboard.org/)
+- [Seeed Studio BeagleBone® Green Wireless の情報 (BeagleBoard ページ)](https://beagleboard.org/green-wireless)
+- [BeagleBoard 入門ガイド](https://beagleboard.org/getting-started)
+- [トラブルシューティング](https://beagleboard.org/getting-started#troubleshooting)
+- [ハードウェアドキュメント](https://beagleboard.org/getting-started#hardware)
+- [BeagleBoard プロジェクト](https://beagleboard.org/project)
 
 ## よくある質問 (FAQs)
 
@@ -525,10 +528,10 @@ Discovery started
 
 -----
 
-* **[PDF]** [Seeed Studio BeagleBone® Green Wireless 回路図 (pdf)](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/tree/master/resources/BeagleBone_Green%20Wireless_V1.0_SCH_20160314.pdf)
-* **[Zip]** [AM335X データシート](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
-* **[3D]** [Seeed Studio BeagleBone® Green Wireless 3D モデル](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/resources/BBGW_0421.zip)
-* **[PDF]** [Seeed Studio BeagleBone® Green Wireless 機械図面](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/resources/BBGW-PCBA.pdf)
+- **[PDF]** [Seeed Studio BeagleBone® Green Wireless 回路図 (pdf)](https://github.com/SeeedDocument/BeagleBone_Green_Wireless/tree/master/resources/BeagleBone_Green%20Wireless_V1.0_SCH_20160314.pdf)
+- **[Zip]** [AM335X データシート](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
+- **[3D]** [Seeed Studio BeagleBone® Green Wireless 3D モデル](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/resources/BBGW_0421.zip)
+- **[PDF]** [Seeed Studio BeagleBone® Green Wireless 機械図面](https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/resources/BBGW-PCBA.pdf)
 
 ## プロジェクト
 
@@ -541,11 +544,11 @@ Discovery started
 弊社製品をお選びいただきありがとうございます！製品をご利用いただく際にスムーズな体験を提供するため、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

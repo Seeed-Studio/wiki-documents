@@ -176,7 +176,7 @@ west flash
 west espressif monitor
 ```
 
-Double press RESET or short the RST pin to the GND.
+RESETをダブルプレスするか、RSTピンをGNDにショートしてください。
 
 ```
 west flash
@@ -193,7 +193,7 @@ west flash
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 ```
 
-The LED overlay (`xiao-zephyr-examples/d0_led.overlay`) defines this LED for us:
+LEDオーバーレイ（`xiao-zephyr-examples/d0_led.overlay`）は、このLEDを次のように定義しています：
 
 ```
 / {
@@ -267,7 +267,7 @@ west flash
 west espressif monitor
 ```
 
-You will see a console available for sending commands to the board:
+ボードにコマンドを送信するためのコンソールが表示されます：
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
@@ -616,7 +616,7 @@ SHT3XD: 26.07 Cel ; 51.87 %RH
 SHT3XD: 26.13 Cel ; 52.81 %RH
 ```
 
-Let's dive into this example a bit to see why it works:
+この例を少し詳しく見て、なぜうまくいくのかを理解しましょう：
 
 ```
  &xiao_i2c {

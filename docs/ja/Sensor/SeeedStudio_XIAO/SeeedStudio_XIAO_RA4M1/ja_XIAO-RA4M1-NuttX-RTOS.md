@@ -166,19 +166,19 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Select the combo configuration to the xiao-ra4m1 board.
+xiao-ra4m1ボードのコンボ設定を選択してください。
 
 ```bash
 ./tools/configurate.sh xiao-ra4m1:combo
 ```
 
-Compile de the source code.
+ソースコードをコンパイルしてください。
 
 ```bash
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+ファームウェアをボードにロードし、miniconやpicocomなどのシリアル通信プログラムを実行してください：
 
 ```bash
 picocom -b 115200 /dev/ttyUSB0

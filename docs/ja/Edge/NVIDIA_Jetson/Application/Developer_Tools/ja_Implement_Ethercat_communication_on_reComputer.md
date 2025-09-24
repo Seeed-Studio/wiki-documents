@@ -607,7 +607,7 @@ help:
 
 </details>
 
-Compile and run the program:
+プログラムをコンパイルして実行する：
 
 ```bash
 make gcc -Wall -Wextra -std=c99 -O2 -I/home/seeed/ethercat/SOEM/build/install/include -c ethercat_simple_test.c -o ethercat_simple_test.o

@@ -323,7 +323,7 @@ void espnow_deinit(){
 - `NO_PMK_KEY`
   - 役割 : 暗号化なしでデバイスをペアリングすることを選択する
 
-### Part 2. XIAO ESP32C3 Receiver Code
+### パート2. XIAO ESP32C3 受信機コード
 
 ```c
 #include<Arduino.h>
@@ -521,7 +521,7 @@ void Association_SenderXIAOS3_peer(){
 - `NO_PMK_KEY`
   - 役割 : 暗号化なしでデバイスをペアリングすることを選択する
 
-### Part 3. XIAO ESP32C6 Receiver Code
+### パート3. XIAO ESP32C6 受信機コード
 
 ```c
 #include<Arduino.h>

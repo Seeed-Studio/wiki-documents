@@ -76,7 +76,7 @@ GrovePi は C# でプログラム可能ですが、まず GrovePi 用の Windows
 現在のリリース用の GrovePi NuGet パッケージが利用可能です。
 Windows IoT 用 GrovePi をインストールするには、以下の手順に従ってください。
 
-**STEP1.**
+**ステップ1.**
 
 ツールメニューから「ライブラリ パッケージ マネージャー」を選択し、「パッケージ マネージャー コンソール」をクリックします。
 
@@ -86,7 +86,7 @@ Windows IoT 用 GrovePi をインストールするには、以下の手順に�
 
 ![画像をここに挿入](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/2_1_2.png)
 
-**STEP2.**
+**ステップ2.**
 
 パッケージ マネージャー コンソールで以下のコマンドを実行します。
 
@@ -98,7 +98,7 @@ Windows IoT 用 GrovePi をインストールするには、以下の手順に�
 
 もしあなたが上級プログラマーであるか、または GrovePi NuGet パッケージを正常にインストールできない場合は、以下のリンクからライブラリコードをダウンロードしてください：[https://github.com/DexterInd/GrovePi/tree/master/Software/CSharp](https://github.com/DexterInd/GrovePi/tree/master/Software/CSharp)。
 
-**STEP1.**
+**ステップ1.**
 
 2 つの C# ライブラリプロジェクト「GrovePi」と「Driver」を、あなたのプロジェクトが存在するフォルダーに移動し、ソリューションエクスプローラーでプロジェクトに追加します。
 例えば、ソリューション「GrovePiExamples」を右クリックし、「追加」|「既存のプロジェクト」を選択します。以下の画像を参照してください。
@@ -109,7 +109,7 @@ Windows IoT 用 GrovePi をインストールするには、以下の手順に�
 
 ![画像をここに挿入](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/2_2_2.png)
 
-**STEP2.**
+**ステップ2.**
 
 C# ライブラリを参照プロジェクトとして設定します。参照を右クリックし、「参照の追加」をクリックします。
 

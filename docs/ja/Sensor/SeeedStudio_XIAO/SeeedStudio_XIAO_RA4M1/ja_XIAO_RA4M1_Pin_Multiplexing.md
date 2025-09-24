@@ -520,9 +520,9 @@ void loop(void) {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/15.png" style={{width:700, height:'auto'}}/></div>
 
-## CAN(XIAO CAN Bus Expansion Board)
+## CAN（XIAO CAN バス拡張ボード）
 
-### Hadware Preparation
+### ハードウェアの準備
 
 <table align="center">
  <tr>

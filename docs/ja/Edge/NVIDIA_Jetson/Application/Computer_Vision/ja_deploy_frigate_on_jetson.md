@@ -92,7 +92,7 @@ Seeed Jetson搭載デバイスのフラッシュガイドについては、以�
 sudo apt-get update && sudo apt-get upgrade
 ```
 
-**Install Additional Dependencies: Install common dependencies required for building and running software on Jetson:**
+**追加の依存関係をインストール: Jetson上でソフトウェアをビルドおよび実行するために必要な一般的な依存関係をインストールします:**
 
 ```
 sudo apt-get install -y \
@@ -113,7 +113,7 @@ Frigate は Docker コンテナとして動作します。以下の手順に従�
 
 ##### 1. docker をインストール
 
-* Docker の依存関係をインストール：
+- Docker の依存関係をインストール：
 
 ```
 sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
@@ -161,7 +161,7 @@ NVIDIA Container Toolkitのインストールについては、参考文献の�
 
 ##### 4. Frigate 設定
 
-* 設定ディレクトリのセットアップ: Frigate設定ファイルを保存するディレクトリを作成します:
+- 設定ディレクトリのセットアップ: Frigate設定ファイルを保存するディレクトリを作成します:
 
 ```
 mkdir ~/frigate

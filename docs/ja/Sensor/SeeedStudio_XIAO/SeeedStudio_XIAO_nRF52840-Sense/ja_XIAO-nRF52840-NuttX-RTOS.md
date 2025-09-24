@@ -222,7 +222,7 @@ xiao-nrf52840ボードにjumbo設定を選択します。
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+ファームウェアをボードにロードし、miniconやpicocomなどのシリアル通信プログラムを実行してください：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
@@ -340,7 +340,6 @@ led_daemon: LED set 0x07
     <source src="https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nrf52840_nuttx_demo.mp4" type="video/mp4" />
   </video>
 </div>
-
 
 NuttX RTOSの詳細については、[NuttX Documentation](https://nuttx.apache.org/docs/latest/index.html)をご覧ください
 

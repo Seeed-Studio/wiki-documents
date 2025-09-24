@@ -141,7 +141,7 @@ my-cluster123.mongodb.net
 
 ## Part 3. MongoDB データベースを Node-RED に接続
 
-### Step 8. MongoDB モジュールをインストール
+### ステップ 8. MongoDB モジュールをインストール
 
 三本線のアイコンをクリックし、**Manage palette** オプションをクリックします。これにより、ノードを追加または削除できる新しいウィンドウが開きます。
 
@@ -155,7 +155,7 @@ my-cluster123.mongodb.net
 **node-red-contrib-mongodb-aleph** モジュールは、このチュートリアルの執筆時点（2024年7月）での現在の互換性と信頼性のために推奨されています。ただし、Node-RED モジュールの可用性と機能は時間の経過とともに変わる可能性があります。Node-RED ライブラリまたは GitHub リポジトリで最新のユーザーフィードバックと互換性ノートを確認することをお勧めします。このモジュールで問題が発生した場合は、より適切なオプションについて Node-RED ライブラリにリストされている他の MongoDB モジュールを検討してください。
 :::
 
-### Step 9. MongoDB ノードを設定
+### ステップ 9. MongoDB ノードを設定
 
 MongoDB モジュールをインストールしたら、**mongodb - aleph - out** ノードを Node-RED フローにドラッグし、function ノードに接続します。
 
@@ -185,7 +185,7 @@ MongoDB ノードをダブルクリックして設定します。次に、server
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_mongo_db_image/Node_RED_8.png" style={{width:1000, height:'auto'}}/></div>
 
-### Step 10. デプロイ
+### ステップ 10. デプロイ
 
 最後に、Node-RED インターフェースの右上にある Deploy ボタンをクリックしてフローをデプロイします。このアクションにより、設定されたノードがアクティブになり、function ノードから MongoDB へのデータフローが可能になります。
 

@@ -360,7 +360,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo ./apply_binaries.sh
 ```
 
-**Step 4:** Extract **A607_Jetpack_6.1.tar.gz**:
+**步骤 4：** 解压 **A607_Jetpack_6.1.tar.gz**：
 
 ```sh
 cd ..
@@ -402,7 +402,7 @@ cd ~
 sudo cp 8723du.ko /lib/modules/5.10.104-tegra/kernel/drivers/net/wireless/realtek/rtl8723du
 ```
 
-**Step 4:** Enable the driver
+**步骤 4：** 启用驱动程序
 
 ```sh
 sudo modprobe cfg80211
@@ -412,7 +412,7 @@ sudo modprobe 8723du
 sudo echo 8723du >> /etc/modules
 ```
 
-**Step 5:** Reboot the device
+**步骤 5：** 重启设备
 
 ```sh
 sudo reboot

@@ -270,7 +270,7 @@ Arduino シリアルモニターでの出力は以下のようになります：
 <!-- 
 ### Fall Module
 
-This example shows how to use the **MR60FDA2** sensor for fall detection.
+この例では、転倒検知に**MR60FDA2**センサーを使用する方法を示しています。
 
 ```cpp
 #include <Arduino.h>
@@ -484,7 +484,7 @@ Arduino シリアルモニターでの出力は以下のようになります：
 <!-- 
 ### Fall Module API
 
-This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sensor for fall detection. Here's what each key function does:
+この例では、転倒検知のためにMR60FDA2センサーとインターフェースするために`SEEED_MR60FDA2`クラスを使用しています。各主要機能の動作は以下の通りです：
 
 - **`mmWave.begin(&mmWaveSerial)`**:
   - Initializes the sensor for communication, similar to the breath module, setting up the serial connection between the XIAO board and the MR60FDA2 sensor.

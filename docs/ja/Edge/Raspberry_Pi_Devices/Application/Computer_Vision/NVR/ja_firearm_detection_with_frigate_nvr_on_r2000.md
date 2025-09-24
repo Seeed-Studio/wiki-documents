@@ -415,7 +415,7 @@ lpr:
 
 ## Run the project
 
-Pull and run the project:
+プロジェクトをプルして実行する：
 
 ```bash
 cd ~
