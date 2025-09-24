@@ -220,9 +220,9 @@ py -m esptool --chip esp32s3 -p COM -b 460800 --before=default_reset --after=har
 
 フラッシュには [Online esptool](https://espressif.github.io/esptool-js/) を推奨します。
 
-**Step1**: ボーレートを 115200 に設定し、正しいポートに接続します。
+**ステップ 1**: ボーレートを 115200 に設定し、正しいポートに接続します。
 
-**Step2**: bin ファイルを選択し、対応するフラッシュアドレスを入力します。
+**ステップ 2**: bin ファイルを選択し、対応するフラッシュアドレスを入力します。
 
 - マージ版:
 
@@ -456,7 +456,7 @@ enabled_regions={
 }
 ```
 
-**Step 4:** ChirpStackのコンソールにログインし、シングルチャンネルゲートウェイを追加します。
+**ステップ 4:** ChirpStackのコンソールにログインし、シングルチャンネルゲートウェイを追加します。
 
 ゲートウェイを追加する前に、シングルチャンネル地域が正常に有効化されていることを確認してください。
 
@@ -466,7 +466,7 @@ enabled_regions={
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Single_Channel_Gateway/single-channel-2.png" alt="pir" width={600} height="auto" /></p>
 
-**Step 5:** LoRa Gatewayページでパラメータを設定し、アドレスをChirpStackサーバーのアドレスに設定し、`configure`をクリックしてから`reboot`をクリックします。
+**ステップ 5:** LoRa Gatewayページでパラメータを設定し、アドレスをChirpStackサーバーのアドレスに設定し、`configure`をクリックしてから`reboot`をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -474,7 +474,7 @@ enabled_regions={
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Single_Channel_Gateway/single-channel-3.png" alt="pir" width={600} height="auto" /></p>
 
-**Step 6:** シングルチャンネルゲートウェイと同じデータレートを使用することで、エンドデバイスの接続時間を最適化できます。
+**ステップ 6:** シングルチャンネルゲートウェイと同じデータレートを使用することで、エンドデバイスの接続時間を最適化できます。
 
 シングルチャンネルゲートウェイの設定`SF7 BW125`を参考に、T1000-Aのデータレートを`DR5`に調整します。
 

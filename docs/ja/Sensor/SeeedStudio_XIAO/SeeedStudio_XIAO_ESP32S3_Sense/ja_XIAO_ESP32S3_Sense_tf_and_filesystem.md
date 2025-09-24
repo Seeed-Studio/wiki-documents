@@ -784,7 +784,7 @@ uint64_t uS_TO_S_FACTOR = 1000000; // Conversion factor for micro seconds to sec
 uint64_t TIME_TO_SLEEP = 600;
 ```
 
-Next, define the microSD card CS pin. In this case, it is set to **GPIO 21**.
+次に、microSDカードCSピンを定義します。この場合、**GPIO 21**に設定されています。
 
 ```c
 #define SD_CS 21

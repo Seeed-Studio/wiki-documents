@@ -13,11 +13,11 @@ last_update:
 
 SeeedはArduino IDEで動作する多くのボードを設計しています。以下を含みます：
 
-* [Seeeduino XIAO](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO/)
-* [Seeeduino Wio Terminal](https://wiki.seeedstudio.com/ja/Wio-Terminal-Getting-Started/)
-* [Seeeduino Lotus Cortex-M0+](https://wiki.seeedstudio.com/ja/Seeeduino_Lotus_Cortex-M0-/)
-* [Seeeduino LoRaWAN](https://wiki.seeedstudio.com/ja/Seeeduino_LoRAWAN/)/GPS
-* [Seeeduino Cortex M0](https://wiki.seeedstudio.com/ja/Seeeduino-Cortex-M0/)
+- [Seeeduino XIAO](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO/)
+- [Seeeduino Wio Terminal](https://wiki.seeedstudio.com/ja/Wio-Terminal-Getting-Started/)
+- [Seeeduino Lotus Cortex-M0+](https://wiki.seeedstudio.com/ja/Seeeduino_Lotus_Cortex-M0-/)
+- [Seeeduino LoRaWAN](https://wiki.seeedstudio.com/ja/Seeeduino_LoRAWAN/)/GPS
+- [Seeeduino Cortex M0](https://wiki.seeedstudio.com/ja/Seeeduino-Cortex-M0/)
 
 :::caution
 上記のボードはAT SAMD21マイクロコントローラーシリーズです。以下のURLをステップ2の*追加のボードマネージャーURL*にコピーしてください。
@@ -28,18 +28,18 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 ```
 
 * Seeeduino [V3](https://wiki.seeedstudio.com/ja/Seeeduino_v3.0/)/[4](https://wiki.seeedstudio.com/ja/Seeeduino_v4.0/)
-* [Seeeduino Lotus](https://wiki.seeedstudio.com/ja/Seeeduino_Lotus/)
-* Seeeduino Stalker [V2.3](https://wiki.seeedstudio.com/ja/Seeeduino_Stalker_v2.3/)/[3](https://wiki.seeedstudio.com/ja/Seeeduino_v3.0/)/[3.1](https://wiki.seeedstudio.com/ja/Seeeduino_Stalker_V3.1/)
-* [Seeeduino Lite](https://wiki.seeedstudio.com/ja/Seeeduino_Lite/)
-* [Seeeduino Mega](https://wiki.seeedstudio.com/ja/Seeeduino_Mega/)
-* [Seeeduino Mega Protoshield Kit](https://wiki.seeedstudio.com/ja/Seeeduino_Mega_Protoshield_Kit/)
-* [Seeeduino GPRS](https://wiki.seeedstudio.com/ja/Seeeduino_GPRS/)
-* [Seeeduino Ethernet](https://wiki.seeedstudio.com/ja/Seeeduino_Ethernet/)
-* [Seeeduino Cloud](https://wiki.seeedstudio.com/ja/Seeeduino_Cloud/)
-* [Seeeduino Nano](https://wiki.seeedstudio.com/ja/Seeeduino-Nano/)
-* [Seeeduino Crypto (ATmega4809 ECC608)](https://wiki.seeedstudio.com/ja/Seeeduino-Crypto-ATmega4809-ECC608/)
-* [LinkIt ONE](https://wiki.seeedstudio.com/ja/LinkIt_ONE/)
-* [RePhone Series](https://wiki.seeedstudio.com/ja/RePhone/)
+- [Seeeduino Lotus](https://wiki.seeedstudio.com/ja/Seeeduino_Lotus/)
+- Seeeduino Stalker [V2.3](https://wiki.seeedstudio.com/ja/Seeeduino_Stalker_v2.3/)/[3](https://wiki.seeedstudio.com/ja/Seeeduino_v3.0/)/[3.1](https://wiki.seeedstudio.com/ja/Seeeduino_Stalker_V3.1/)
+- [Seeeduino Lite](https://wiki.seeedstudio.com/ja/Seeeduino_Lite/)
+- [Seeeduino Mega](https://wiki.seeedstudio.com/ja/Seeeduino_Mega/)
+- [Seeeduino Mega Protoshield Kit](https://wiki.seeedstudio.com/ja/Seeeduino_Mega_Protoshield_Kit/)
+- [Seeeduino GPRS](https://wiki.seeedstudio.com/ja/Seeeduino_GPRS/)
+- [Seeeduino Ethernet](https://wiki.seeedstudio.com/ja/Seeeduino_Ethernet/)
+- [Seeeduino Cloud](https://wiki.seeedstudio.com/ja/Seeeduino_Cloud/)
+- [Seeeduino Nano](https://wiki.seeedstudio.com/ja/Seeeduino-Nano/)
+- [Seeeduino Crypto (ATmega4809 ECC608)](https://wiki.seeedstudio.com/ja/Seeeduino-Crypto-ATmega4809-ECC608/)
+- [LinkIt ONE](https://wiki.seeedstudio.com/ja/LinkIt_ONE/)
+- [RePhone Series](https://wiki.seeedstudio.com/ja/RePhone/)
 
 :::note
 上記のSeeeduino V3からRePhoneシリーズまでのボードはAT SAMD21マイクロコントローラーシリーズではありません。以下のURLをステップ2の*追加のボードマネージャーURL*にコピーしてください。
@@ -86,11 +86,11 @@ Arduino IDEを開き、**ファイル > 設定**をクリックし、以下のUR
 弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

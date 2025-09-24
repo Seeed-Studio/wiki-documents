@@ -252,7 +252,7 @@ config.txtを開く
 sudo nano /boot/firmware/config.txt 
 ```
 
-Add the following text to config.txt
+以下のテキストをconfig.txtに追加してください
 
 ```
 dtparam=pciex1_gen=3
@@ -272,9 +272,9 @@ sudo usermod -aG docker $USER
 sudo apt install docker-compose-plugin
 ```
 
-### Create yml file
+### yml ファイルを作成します
 
-Create frigate.yml for docker compose to run frigate
+docker composeでfrigateを実行するためのfrigate.ymlを作成する
 
 ```
 cd ~

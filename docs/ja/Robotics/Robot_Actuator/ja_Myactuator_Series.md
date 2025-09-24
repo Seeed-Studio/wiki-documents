@@ -588,7 +588,8 @@ angle = actuator.getMultiTurnAngle()
 print(f"Current position: {angle}°")
 
 mode = actuator.getControlMode()
-print(f"Current control mode: {mode}")```
+print(f"Current control mode: {mode}")
+```
 
 <div align="center">
     <img width={800}

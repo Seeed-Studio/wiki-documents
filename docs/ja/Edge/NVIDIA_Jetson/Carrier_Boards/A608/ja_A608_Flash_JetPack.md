@@ -286,7 +286,7 @@ tar xf A608_Jetpack_6.1.tar.gz
 sudo cp -r 608_jetpack6.1/Linux_for_Tegra/* Linux_for_Tegra/
 ```
 
-**Step 4.** Flash the system to Nvme of A608.
+**ステップ 4.** A608のNvmeにシステムをフラッシュする。
 
 ```bash
 cd Linux_for_Tegra
@@ -329,7 +329,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo ./apply_binaries.sh
 ```
 
-**Step 4.** Flash the system to Nvme of A608.
+**ステップ 4.** A608のNvmeにシステムをフラッシュする。
 
 ```bash
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t234_nvme.xml -p "-c bootloader/generic/cfg/flash_t234_qspi.xml" --showlogs --network usb0 jetson-orin-nano-devkit-super internal

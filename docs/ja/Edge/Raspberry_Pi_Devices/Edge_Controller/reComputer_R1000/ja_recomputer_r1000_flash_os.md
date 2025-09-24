@@ -86,7 +86,7 @@ dtoverlay=spi-gpio40-45
 sudo reboot
 ```
 
-Then update the eeprom use command like below:
+次に、以下のようにeepromコマンドを使用して更新してください：
 
 ```
 sudo rpi-eeprom-update -a
@@ -108,9 +108,9 @@ BOOTLOADER: up to date
     LATEST: 
 ```
 
-### Flash the lastest eeprom and modify the boot order
+### 最新のeepromをフラッシュし、ブート順序を変更する
 
-Use command like below to open the raspi-config:
+以下のようなコマンドを使用してraspi-configを開きます：
 
 ```
 sudo raspi-config 
@@ -272,27 +272,27 @@ brew install libusb
 brew install pkg-config
 ```
 
-- **Step 4.** Build using make
+- **ステップ 4.** Build using make
 
 ```sh
 make
 ```
 
-- **Step 5.** Run the binary
+- **ステップ 5.** Run the binary
 
 ```sh
 sudo ./rpiboot
 ```
 
-- **Step 6.** USB Type-Cケーブルを使用してreComputer R1000をMacコンピュータに接続します
+- **ステップ 6.** USB Type-Cケーブルを使用してreComputer R1000をMacコンピュータに接続します
 
-- **Step 7.** [このリンク](https://www.raspberrypi.org/software/)にアクセスして**Raspberry Pi Imager**アプリケーションをダウンロードしてインストールします
+- **ステップ 7.** [このリンク](https://www.raspberrypi.org/software/)にアクセスして**Raspberry Pi Imager**アプリケーションをダウンロードしてインストールします
 
-- **Step 8.** **Raspberry Pi Imager**アプリケーションを開きます
+- **ステップ 8.** **Raspberry Pi Imager**アプリケーションを開きます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **Step 9.** キーボードで**CTRL + SHIFT + X**を押して**詳細オプション**ウィンドウを開きます
+- **ステップ 9.** キーボードで**CTRL + SHIFT + X**を押して**詳細オプション**ウィンドウを開きます
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
@@ -301,7 +301,7 @@ sudo ./rpiboot
 システムには事前設定されたユーザー名とパスワードがあります。ログイン時はデフォルトのユーザー名を「**recomputer**」、デフォルトのパスワードを「**12345678**」に設定してください。異なる認証情報を設定して問題が発生した場合、reComputer R1000の初回バッチを購入された場合はOSを再フラッシュしてください。
 :::
 
-- **Step 10.** **CHOOSE OS**をクリックして、お好みのOSを選択します
+- **ステップ 10.** **CHOOSE OS**をクリックして、お好みのOSを選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
@@ -313,15 +313,15 @@ sudo ./rpiboot
 
 [Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **Step 11.** **CHOOSE STORAGE**をクリックして、接続されたeMMCドライブを選択します
+- **ステップ 11.** **CHOOSE STORAGE**をクリックして、接続されたeMMCドライブを選択します
 
-- **Step 12.** 最後に、**WRITE**をクリックします
+- **ステップ 12.** 最後に、**WRITE**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
 フラッシュプロセスが完了するまで数分お待ちください。
 
-- **Step 13.** **Boot Mode switch**を**Normal mode**の位置に戻します
+- **ステップ 13.** **Boot Mode switch**を**Normal mode**の位置に戻します
 
 これで**[こちら](#install-drivers)**にスキップできます
 
@@ -329,7 +329,7 @@ sudo ./rpiboot
 
 **rpiboot**のソースコードを取得するためにGitを使用しますので、Gitがインストールされていることを確認してください
 
-- **Step 1.** **ターミナル**ウィンドウを開き、以下を入力して**パッケージリスト**を更新します
+- **ステップ 1.** **ターミナル**ウィンドウを開き、以下を入力して**パッケージリスト**を更新します
 
 ```sh
 sudo apt-get update
@@ -379,7 +379,7 @@ sudo ./rpiboot
 sudo apt install snap
 ```
 
-- **Step 9.** Download **rpi-imager**
+- **ステップ 9.** Download **rpi-imager**
 
 ```sh
 snap install rpi-imager
@@ -497,14 +497,14 @@ ECDSA key fingerprint is SHA256:XXXXXXX.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-- **Step 3.** When it asks for the password, type the following
+- **ステップ 3.** パスワードを求められたら、以下を入力してください
 
 ```sh
 # password for user
 raspberry
 ```
 
-- **Step 4.** Raspberry Pi OSに正常にログインできた場合、以下の出力が表示されます
+- **ステップ 4.** Raspberry Pi OSに正常にログインできた場合、以下の出力が表示されます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"/></p>
 

@@ -74,7 +74,7 @@ sudo ifconfig
 
 ![](https://files.seeedstudio.com/wiki/Jetson-Nano-MaskCam/tu5.png)
 
-- #### **Step 3.** dockerでMaskCamを開始する
+- #### **ステップ 3.** dockerでMaskCamを開始する
 
 Jetson NanoにUSBカメラを接続することを忘れずに、その後、以下のコマンドをターミナルに入力してください。
 
@@ -175,7 +175,7 @@ notepad database.env
 
 ![](https://files.seeedstudio.com/wiki/Jetson-Nano-MaskCam/tu15.png)
 
-- #### **Step3.** ローカルサーバーのビルドと実行
+- #### **ステップ3.** ローカルサーバーのビルドと実行
 
 データベース環境ファイルの編集後、すべてのコンテナをビルドし、単一のコマンドで実行する準備が整いました：
 
@@ -191,19 +191,19 @@ sudo docker-compose up -d
 
 ![](https://files.seeedstudio.com/wiki/Jetson-Nano-MaskCam/tu8.png)
 
-**Note:** Replace ```<server IP>``` with your own IP address.
+**注意:** ```<server IP>``` を自分のIPアドレスに置き換えてください。
 
-If you see a ```ConnectionError``` in the frontend, wait a couple more seconds and reload the page. The backend container can take some time to finish the database setup.
+フロントエンドで```ConnectionError```が表示された場合は、数秒待ってからページをリロードしてください。バックエンドコンテナがデータベースのセットアップを完了するまでに時間がかかることがあります。
 
 ![](https://files.seeedstudio.com/wiki/Jetson-Nano-MaskCam/tu7.png)
 
-If you wait a couple more seconds and reload the page but it is still a ```ConnectionError``` in the frontend, please make sure the ports: `5432` and `80` are not being occupied or listened up.
+もう数秒待ってページをリロードしても、フロントエンドで```ConnectionError```が発生している場合は、ポート`5432`と`80`が占有されていないか、リッスンされていないかを確認してください。
 
-If you visit the frontend webpage successfully the first time but failed the next, the best way to solve it currently is to re-install docker.
+フロントエンドのウェブページに初回は正常にアクセスできたが、次回以降失敗する場合、現在のところ最良の解決方法はdockerを再インストールすることです。
 
-- #### **Step4.** Point Jetson Nano at your local server
+- #### **ステップ4.** Jetson Nanoをローカルサーバーに向ける
 
-Return to your Jetson Nano's terminal, and then run the maskcam container with the command below:
+Jetson Nanoのターミナルに戻り、以下のコマンドでmaskcamコンテナを実行してください：
 
 ```shell
 sudo docker run --runtime nvidia --privileged --rm -it --env MQTT_BROKER_IP=<server IP> --env MQTT_DEVICE_NAME=my-jetson-1 --env MASKCAM_DEVICE_ADDRESS=<your-jetson-ip> -p 1883:1883 -p 8080:8080 -p 8554:8554 maskcam/maskcam-beta

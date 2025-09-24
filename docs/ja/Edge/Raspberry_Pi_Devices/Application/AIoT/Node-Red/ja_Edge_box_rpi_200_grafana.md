@@ -75,7 +75,7 @@ sudo apt update
 
 ## Installing Grafana on EdgeBox
 
-Install the latest version of Grafana by running the following command:
+以下のコマンドを実行して、Grafanaの最新バージョンをインストールしてください：
 
 ```bash
 sudo apt install grafana

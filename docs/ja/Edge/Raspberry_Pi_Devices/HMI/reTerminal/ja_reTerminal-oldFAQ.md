@@ -105,7 +105,7 @@ sudo nano /boot/config.txt
 #dtoverlay=reTerminal
 ```
 
-- **Step 3.** Reboot reTerminal
+- **ステップ 3.** Reboot reTerminal
 
 ```sh
 sudo reboot
@@ -153,7 +153,7 @@ i2ctransfer -y 1 w2@0x45 0x9b 0x01
 ./stm32flash -a 0x56 -o /dev/i2c-1
 ```
 
-- **Step 10.** Flash the firmware to STM32 using stm32flash tool
+- **ステップ 10.** stm32flashツールを使用してSTM32にファームウェアを書き込む
 
 ```sh
 ./stm32flash -a 0x56 -w ../STM32G030F6_R2.bin -v -g 0x0 /dev/i2c-1
@@ -212,20 +212,17 @@ cd STM32
 ```sh
 chmod +x stm32flash
 ``` -->
-
-<!-- - **Step 10.** Make STM32 enter **boot mode** through **i2c-tools**
+<!-- - **ステップ 10.** **i2c-tools**を通じてSTM32を**ブートモード**に入らせる
 
 ```sh
 i2ctransfer -y 1 w2@0x45 0x9b 0x01
 ```
-
-- **Step 11.** Erase the flash in the STM32 chip using **stm32flash tool**
+- **ステップ 11。** **stm32flashツール**を使用してSTM32チップのフラッシュを消去する
 
 ```sh
 ./stm32flash -a 0x56 -o /dev/i2c-1
 ```
-
-- **Step 12.** Flash the firmware to STM32 using stm32flash tool
+- **ステップ 12.** stm32flashツールを使用してSTM32にファームウェアを書き込む
 
 ```sh
 ./stm32flash -a 0x56 -w STM32G030F6_R2.bin -v -g 0x0 /dev/i2c-1
@@ -256,26 +253,25 @@ dtoverlay=reTerminal
 ```sh
 sudo reboot
 ``` -->
+これでSTM32にファームウェアの書き込みが正常に完了しました！
 
-Now you have successfully flashed the firmware to STM32!
+### ジャンパーワイヤーとOpenOCDを使用してSTM32に接続する
 
-### Connect to STM32 using jumper wires and OpenOCD
+ボード上に**旧バージョン（v1.7未満）**のSTM32ファームウェアがある場合は、この方法に従ってください。
 
-If you have the **old version (lower than v1.7)** of the STM32 firmware on the board, please follow this method.
-
-- **Step 1.** Enter terminal window of reTerminal and type the following to update the packages list
+- **ステップ 1.** reTerminalのターミナルウィンドウに入り、以下を入力してパッケージリストを更新します
 
 ```sh
 sudo apt-get update
 ```
 
-- **Step 2.** Install the following packages
+- **ステップ 2.** 以下のパッケージをインストールしてください
 
 ```sh
 sudo apt-get install git autoconf libtool make pkg-config libusb-1.0-0 libusb-1.0-0-dev
 ```
 
-- **Step 3.** Clone the following repo and navigate to it
+- **ステップ 3.** 以下のリポジトリをクローンして、そこに移動してください
 
 ```sh
 git clone http://openocd.zylin.com/openocd
@@ -306,7 +302,7 @@ scp -r .\STM32G030F6_R2.bin pi@192.168.x.xx:\home\pi\openocd
 ./bootstrap
 ```
 
-- **Step 8.** Enter the following
+- **ステップ 8.** 次の内容を入力します
 
 ```sh
 ./configure --enable-sysfsgpio --enable-bcm2835gpio
@@ -318,7 +314,7 @@ scp -r .\STM32G030F6_R2.bin pi@192.168.x.xx:\home\pi\openocd
 make
 ```
 
-- **Step 10.** Install it
+- **ステップ 10.** それをインストールします
 
 ```sh
 sudo make install
@@ -558,7 +554,7 @@ sudo apt-get update
 sudo apt-get install minicom
 ```
 
-- **Step 5.** Type the following in the terminal to view the connected serial devices
+- **ステップ 5.** 接続されたシリアルデバイスを表示するために、ターミナルで以下を入力してください
 
 ```sh
 dmesg | grep tty
@@ -614,13 +610,13 @@ DISPLAY=:0 xset dpms force on
 sudo apt update
 ```
 
-- **Step 5.** Install **Git** by the following command
+- **ステップ 5.** 次のコマンドで**Git**をインストールする
 
 ```sh
 sudo apt install git
 ```
 
-- **Step 6.** Git might produce an error if the date is not set properly. Type the following to correct this
+- **ステップ 6.** 日付が適切に設定されていない場合、Gitはエラーを出力する可能性があります。これを修正するために以下を入力してください
 
 ```sh
 sudo date MMDDhhmm
@@ -647,13 +643,13 @@ sudo apt install libusb-1.0-0-dev
 make
 ```
 
-- **Step 10.** Open the bootloader configuration file
+- **ステップ 10.** ブートローダー設定ファイルを開く
 
 ```sh
 sudo nano recovery/boot.conf
 ```
 
-- **Step 11.** Change the **BOOT_ORDER** field to the following
+- **ステップ 11.** **BOOT_ORDER**フィールドを以下のように変更してください
 
 ```sh
 BOOT_ORDER=0xf15
@@ -676,7 +672,7 @@ pieeprom.binファイルがCompute Module 4にフラッシュする準備がで�
 cd ..
 ```
 
-- **Step 14.** Run the usbboot tool to flash the bootloader EEPROM
+- **ステップ 14.** usbbootツールを実行してブートローダーEEPROMをフラッシュする
 
 ```sh
 sudo ./rpiboot -d recovery
@@ -740,15 +736,15 @@ sudo ./script2.1.sh
 sudo reboot
 ```
 
-- **Step 3.** reTerminalがUbuntu Desktopで起動しますが、画面の向きが間違っています
+- **ステップ 3.** reTerminalがUbuntu Desktopで起動しますが、画面の向きが間違っています
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/ubuntu-portrait.jpg" alt="pir" width={1000} height="auto" /></p>
 
-- **Step 4.** 右上角の**電源アイコン**をクリックし、**Settings**をクリックします
+- **ステップ 4.** 右上角の**電源アイコン**をクリックし、**Settings**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/ubuntu-settings-2.jpg" alt="pir" width={350} height="auto" /></p>
 
-- **Step 5.** **Displays**を選択し、**Orientation**の下で**Portrait Left**を選択して**Apply**をクリックします
+- **ステップ 5.** **Displays**を選択し、**Orientation**の下で**Portrait Left**を選択して**Apply**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/ubuntu-portrait-left-2.jpg" alt="pir" width={400} height="auto" /></p>
 
@@ -758,9 +754,9 @@ sudo reboot
 
 ## Q11: Raspberry Pi OS Bullseyeをインストール後に画面の向きが正しくない
 
-- **Step 1.** **Raspberry Pi OS Bullseye**をreTerminal eMMCにフラッシュした後、[このガイド](https://wiki.seeedstudio.com/ja/reTerminal/#install-reterminal-drivers-after-flashing-new-raspberry-pi-os-ubuntu-os-or-other-os)に従って必要なドライバーをインストールします
+- **ステップ 1.** **Raspberry Pi OS Bullseye**をreTerminal eMMCにフラッシュした後、[このガイド](https://wiki.seeedstudio.com/ja/reTerminal/#install-reterminal-drivers-after-flashing-new-raspberry-pi-os-ubuntu-os-or-other-os)に従って必要なドライバーをインストールします
 
-- **Step 2.** **.config**ディレクトリの下に**monitors.xml**という名前の新しいファイルを作成します
+- **ステップ 2.** **.config**ディレクトリの下に**monitors.xml**という名前の新しいファイルを作成します
 
 ```sh
 sudo vi ~/.config/monitors.xml
@@ -868,7 +864,7 @@ sudo vi /boot/config.txt
 #dtoverlay=reTerminal-bridge
 ```
 
-- **Step 3.** Reboot reTerminal
+- **ステップ 3.** reTerminal を再起動します
 
 ```sh
 sudo reboot

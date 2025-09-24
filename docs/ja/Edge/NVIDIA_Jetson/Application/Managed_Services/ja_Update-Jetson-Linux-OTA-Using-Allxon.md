@@ -245,8 +245,7 @@ do_install() {
     
 do_install
 ```
-
-- **Step 5.** Navigate to the **rootfs/etc/systemd/system** directory of Target BSP
+- **ステップ 5.** Target BSPの**rootfs/etc/systemd/system**ディレクトリに移動する
 
 ```sh
 cd <Target_BSP_L4T_root>/Linux_for_Tegra/rootfs/etc/systemd/system
@@ -363,7 +362,7 @@ echo "8. Copy ota_payload_package.tar.gz to ${TARGET_FOLDER}"
 cp bootloader/${JETSON_MODEL}/ota_payload_package.tar.gz ${TARGET_FOLDER}
 ```
 
-- **Step 5.** 上記のコード内の以下の変数を修正してください
+- **ステップ 5.** 上記のコード内の以下の変数を修正してください
 
   - BASE_BSP_PATH: Base BSPのディレクトリパス
   - TOT_BSP_PATH: Target BSPのディレクトリパス
@@ -372,7 +371,7 @@ cp bootloader/${JETSON_MODEL}/ota_payload_package.tar.gz ${TARGET_FOLDER}
   - BSP_VERSION: Base BSPのバージョン
   - TARGET_FOLDER: 生成されたOTA Payload Packageを配置するディレクトリパス
 
-- **Step 6.** **generate_ota_payload.sh**に実行権限を付与してください
+- **ステップ 6.** **generate_ota_payload.sh**に実行権限を付与してください
 
 ```sh
 chmod 777 generate_ota_payload.sh

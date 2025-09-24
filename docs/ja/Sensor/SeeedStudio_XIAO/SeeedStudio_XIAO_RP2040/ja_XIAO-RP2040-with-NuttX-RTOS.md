@@ -117,7 +117,7 @@ make distclean
 make -j
 ```
 
-After programming and open serial communication
+プログラミングとシリアル通信のオープン後
 
 ```
 picocom -b 115200 /dev/ttyACM0
@@ -180,7 +180,7 @@ seeed-xiao-rp2040ボードにgpio設定を選択します。
 make -j
 ```
 
-After programming and open serial communication
+プログラミングとシリアル通信のオープン後
 
 ```
 picocom -b 115200 /dev/ttyACM0
@@ -316,7 +316,7 @@ nsh> ls /dev/
  ttyS0
 ```
 
-Typing `leds`, you observe the LEDs blinky same time.
+`leds`と入力すると、LEDが同時に点滅するのを観察できます。
 
 ```
 NuttShell (NSH) NuttX-12.5.1
@@ -394,7 +394,7 @@ nsh> ls /dev/
 
 ```
 
-Typing `ws2812 -h` will return a list of parameters that are accepted to interact with this application.
+`ws2812 -h`と入力すると、このアプリケーションとやり取りするために受け入れられるパラメータのリストが返されます。
 
 ```
 nsh> ws2812 -h

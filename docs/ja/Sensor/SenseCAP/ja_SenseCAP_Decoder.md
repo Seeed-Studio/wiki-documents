@@ -9252,7 +9252,7 @@ function Decoder (bytes, port) {
 
 ---
 
-### SenseCAP A1101 - LoRaWAN Vision AI Sensor
+### SenseCAP A1101 - LoRaWAN ビジョン AI センサー
 
 [SenseCAP A1101 - LoRaWAN Vision AI Sensor](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html)は、TinyML Edge AI対応のスマート画像センサーです。画像認識、人数カウント、対象検出、メーター認識などの様々なAIモデルをサポートします。TensorFlow Liteでのモデル訓練もサポートしています。
 

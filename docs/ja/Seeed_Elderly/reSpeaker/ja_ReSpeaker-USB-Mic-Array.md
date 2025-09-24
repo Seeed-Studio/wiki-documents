@@ -274,9 +274,9 @@ if __name__ == '__main__':
 
 ```
 
-**For Windows/Mac:** Here is the example to control the leds.
+**Windows/Mac の場合:** LED を制御する例を以下に示します。
 
-- Step 1. Download pixel_ring.
+- ステップ 1. pixel_ring をダウンロードします
 
 ```python
 git clone https://github.com/respeaker/pixel_ring.git
@@ -350,7 +350,7 @@ if dev:
             break
 ```
 
-- Step 3. We will see the DOA as below.
+- ステップ 3. 以下のようにDOAが表示されます。
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python doa.py 
@@ -553,7 +553,7 @@ wf.close()
 
 **For Windows:**
 
-- Step 1. We run below command to install pyaudio.
+- ステップ 1. pyaudioをインストールするために以下のコマンドを実行します。
 
 ```
  pip install pyaudio
@@ -582,7 +582,7 @@ C:\Users\XXX\Desktop>python record.py
 
 **MAC の場合:**
 
-- Step 1. 以下のコマンドを実行して pyaudio をインストールします。
+- ステップ 1. 以下のコマンドを実行して pyaudio をインストールします。
 
 ```
  pip install pyaudio
@@ -622,11 +622,11 @@ cmake ..
 make
 ```
 
-- Step 2. [ODAS Studio](https://github.com/introlab/odas_web/releases) を取得して開きます。
+- ステップ 2. [ODAS Studio](https://github.com/introlab/odas_web/releases) を取得して開きます。
 
-- Step 3. odascoreは **odas/bin/odaslive** にあり、**設定ファイル**は [odas.cfg](https://raw.githubusercontent.com/respeaker/usb_4_mic_array/master/odas.cfg) です。
+- ステップ 3. odascoreは **odas/bin/odaslive** にあり、**設定ファイル**は [odas.cfg](https://raw.githubusercontent.com/respeaker/usb_4_mic_array/master/odas.cfg) です。
 
-- Step 4. 4チャンネルの生音声データを含む6_channels_firmware.binでマイクアレイをアップグレードします。
+- ステップ 4. 4チャンネルの生音声データを含む6_channels_firmware.binでマイクアレイをアップグレードします。
 
 <iframe width="800" height="500" src="https://www.youtube.com/embed/K5gZabfaaPI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
@@ -731,9 +731,9 @@ VOICEACTIVITY    int 1 0 ro VAD voice activity status.
                                                             1 = true (voice activity)
 ```
 
-**Q2: ImportError: No module named usb.core**
+**Q2: ImportError: usb.coreという名前のモジュールがありません**
 
-A2: Run sudo pip install pyusb to install the pyusb.
+A2: pyusbをインストールするために sudo pip install pyusb を実行してください。
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python tuning.py DOAANGLE

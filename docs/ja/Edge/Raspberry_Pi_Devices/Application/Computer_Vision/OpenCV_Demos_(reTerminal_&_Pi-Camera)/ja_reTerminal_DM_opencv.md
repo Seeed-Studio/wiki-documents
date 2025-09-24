@@ -82,7 +82,7 @@ sh setup.sh
 sudo apt-get install libopencv-dev python3-opencv
 ```
 
-- **Step 2** Next, clone this Git repo onto your Raspberry Pi like this
+- **ステップ 2** 次に、このGitリポジトリを以下のようにRaspberry Piにクローンします
 
 ```sh
 git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal

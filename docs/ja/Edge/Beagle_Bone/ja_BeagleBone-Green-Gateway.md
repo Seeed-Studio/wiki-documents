@@ -27,31 +27,31 @@ Linux を 10 秒以内に起動し、1 本の USB ケーブルだけで 5 分以
 
 ## 特徴
 
-* **BeagleBone® Black と Seeed Studio BeagleBone® Green に完全対応**
-* **プロセッサ: AM3358 1GHz ARM® Cortex-A8**
-  * 2×32-bit 200-MHz プログラム可能リアルタイムユニット (PRUs)
-  * 512MB DDR3 RAM
-  * 4KB EEPROM
-  * 4GB 8-bit eMMC オンボードフラッシュストレージ
-  * 3D グラフィックスアクセラレータ
-  * NEON 浮動小数点アクセラレータ
+- **BeagleBone® Black と Seeed Studio BeagleBone® Green に完全対応**
+- **プロセッサ: AM3358 1GHz ARM® Cortex-A8**
+  - 2×32-bit 200-MHz プログラム可能リアルタイムユニット (PRUs)
+  - 512MB DDR3 RAM
+  - 4KB EEPROM
+  - 4GB 8-bit eMMC オンボードフラッシュストレージ
+  - 3D グラフィックスアクセラレータ
+  - NEON 浮動小数点アクセラレータ
 
-* **接続性**
-  * Ethernet 10/100M ビット
-  * WiFi 802.11 b/g/n 2.4GHz
-  * USB クライアント (電源 & 通信)
-  * USB ホスト
-  * SD/MMC コネクタ (microSD 用)
-  * Bluetooth 4.1 (BLE 対応)
-  * 2x 46 ピンヘッダー
-  * 2x Grove コネクタ (I2C と UART)
-  * DC ジャック (電源用、12V)
-* **ソフトウェア互換性**
-  * Debian
-  * Android
-  * Ubuntu
-  * Cloud9 IDE on Node.js w/ BoneScript ライブラリ
-  * その他多数
+- **接続性**
+  - Ethernet 10/100M ビット
+  - WiFi 802.11 b/g/n 2.4GHz
+  - USB クライアント (電源 & 通信)
+  - USB ホスト
+  - SD/MMC コネクタ (microSD 用)
+  - Bluetooth 4.1 (BLE 対応)
+  - 2x 46 ピンヘッダー
+  - 2x Grove コネクタ (I2C と UART)
+  - DC ジャック (電源用、12V)
+- **ソフトウェア互換性**
+  - Debian
+  - Android
+  - Ubuntu
+  - Cloud9 IDE on Node.js w/ BoneScript ライブラリ
+  - その他多数
 
 ## 仕様
 
@@ -72,13 +72,13 @@ Linux を 10 秒以内に起動し、1 本の USB ケーブルだけで 5 分以
 
 ## アプリケーションアイデア
 
-* モノのインターネット (IoT)
-* スマートハウス
-* 産業用途
-* 自動化 & プロセス制御
-* ヒューマンマシンインターフェース
-* センサーハブ
-* ロボット
+- モノのインターネット (IoT)
+- スマートハウス
+- 産業用途
+- 自動化 & プロセス制御
+- ヒューマンマシンインターフェース
+- センサーハブ
+- ロボット
 
 ### コミュニティプロジェクト
 
@@ -115,7 +115,7 @@ SeeedStudio BeagleBone® Green Gateway は、SeeedStudio BeagleBone® Green と 
 
 Seeed Studio BeagleBone® Green Gateway の寸法は以下の通りです：
 
-* **89.0mm x 54.6mm x 19.6mm**
+- **89.0mm x 54.6mm x 19.6mm**
 
 ![BeagleBoneGreenGateway](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/dimensions.png)
 
@@ -173,7 +173,7 @@ UART0 ピンにアクセスしてデバッグケーブルを接続するため�
 
 ## はじめに
 
-**STEP1. Seeed Studio BeagleBone® Green を USB 経由で接続**
+**ステップ1. Seeed Studio BeagleBone® Green を USB 経由で接続**
 
 付属の micro USB ケーブルを使用して、Seeed Studio BeagleBone® Green をコンピュータに接続します。これにより、ボードに電力を供給し、開発インターフェースを提供します。Seeed Studio BeagleBone® Green は、オンボードの 2GB または 4GB eMMC から Linux を起動します。
 
@@ -181,12 +181,12 @@ Seeed Studio BeagleBone® Green はフラッシュドライブとして動作し
 
 PWR LED が点灯しているのが確認できます。10 秒以内に、他の LED がデフォルトの設定で点滅するのが見えるはずです。
 
-* D2 は起動時にハートビートパターンで点滅するように設定されています
-* D3 は起動時に microSD カードアクセス中に点灯するように設定されています
-* D4 は起動時に CPU アクティビティ中に点灯するように設定されています
-* D5 は起動時に eMMC アクセス中に点灯するように設定されています
+- D2 は起動時にハートビートパターンで点滅するように設定されています
+- D3 は起動時に microSD カードアクセス中に点灯するように設定されています
+- D4 は起動時に CPU アクティビティ中に点灯するように設定されています
+- D5 は起動時に eMMC アクセス中に点灯するように設定されています
 
-**STEP2. ドライバのインストール**
+**ステップ2. ドライバのインストール**
 
 ネットワーク経由で USB アクセスを可能にするために、使用しているオペレーティングシステム用のドライバをインストールしてください。追加のドライバをインストールすることで、ボードへのシリアルアクセスが可能になります。
 
@@ -200,14 +200,15 @@ PWR LED が点灯しているのが確認できます。10 秒以内に、他の
 :::note
 Windows システムの場合、以下に注意してください：
 
-* Windows ドライバ認証警告が 2 ～ 3 回表示される場合があります。「無視」、「インストール」または「実行」をクリックしてください。
-* 32 ビットまたは 64 ビットの Windows を使用しているか確認するには、[こちら](https://support.microsoft.com/kb/827218)を参照してください。
-* 最新のサービスリリースがないシステムでは、エラー (0xc000007b) が発生する場合があります。その場合は、[こちら](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523)をインストールして再試行してください。
-* Windows を再起動する必要がある場合があります。
-* これらのドライバは Windows 10 まで動作確認済みです。
+- Windows ドライバ認証警告が 2 ～ 3 回表示される場合があります。「無視」、「インストール」または「実行」をクリックしてください。
+- 32 ビットまたは 64 ビットの Windows を使用しているか確認するには、[こちら](https://support.microsoft.com/kb/827218)を参照してください。
+- 最新のサービスリリースがないシステムでは、エラー (0xc000007b) が発生する場合があります。その場合は、[こちら](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523)をインストールして再試行してください。
+- Windows を再起動する必要がある場合があります。
+- これらのドライバは Windows 10 まで動作確認済みです。
+
 :::
 
-**STEP3. Beagle にアクセス**
+**ステップ3. Beagle にアクセス**
 
 Chrome または Firefox を使用して（Internet Explorer は使用不可）、ボード上で実行されているウェブサーバーにアクセスしてください。ボードの機能を示すプレゼンテーションが表示されます。キーボードの矢印キーを使用してプレゼンテーションを操作してください。
 
@@ -217,13 +218,13 @@ Chrome または Firefox を使用して（Internet Explorer は使用不可）�
 
 [![クリックして画像を拡大](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)
 
-**STEP4. Cloud9 IDE**
+**ステップ4. Cloud9 IDE**
 
 ボード上に保存されているプログラムを編集するには、Cloud9 IDE を使用します。以下をクリックしてください：
 
 [![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/cloud9.png)](http://192.168.7.2:3000/ide.html)
 
-**STEP5. Wi-Fi に接続**
+**ステップ5. Wi-Fi に接続**
 
 `connmanctl` を使用して近くの Wi-Fi に接続できます：
 
@@ -245,7 +246,7 @@ Connected wifi_1862e41aec0d_5354552d4545_managed_psk
 connmanctl> quit
 ```
 
-**STEP6. Bluetoothに接続する**
+**ステップ6. Bluetoothに接続する**
 
 近くのBluetoothに接続するには、`BlueZ`をインストールする必要があります：
 
@@ -284,7 +285,7 @@ connect A4:xx:xx:xx:xx:30
 
 ボードのパフォーマンスを向上させるために、最新のソフトウェアに更新する必要があります。以下にステップごとに方法を説明します。
 
-**STEP1. 最新のソフトウェアイメージをダウンロード**
+**ステップ1. 最新のソフトウェアイメージをダウンロード**
 
 まず、適切なイメージを以下からダウンロードしてください。
 
@@ -296,19 +297,19 @@ connect A4:xx:xx:xx:xx:30
 
 ダウンロードしたファイルは**.img.xz**拡張子を持っています。これはSDカードのセクターごとの圧縮イメージです。
 
-**STEP2. イメージバーナーをインストール**
+**ステップ2. イメージバーナーをインストール**
 
 オープンソースのフラッシュバーナー[balenaEtcher](https://www.balena.io/etcher/)をダウンロードしてください。使用しているオペレーティングシステム（Windows/macOS/Linux）に応じたバージョンをダウンロードしてください。
 
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/etcher.jpg"/></div>
 
-**STEP3. OSイメージをSDカードに書き込む**
+**ステップ3. OSイメージをSDカードに書き込む**
 
 ダウンロードしたイメージを選択し、MicroSDカードを選択してフラッシュします！
 
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/bbgg-flash.png"/></div>
 
-**STEP4. SDカードからボードを起動する**
+**ステップ4. SDカードからボードを起動する**
 
 SDカードを（まず電源を切った状態で）ボードに挿入します。その後、ボードはSDカードから起動します。
 
@@ -393,40 +394,40 @@ Groveはモジュール式で標準化されたコネクタプロトタイピン
 ## FAQ
 
 1. 2 x 46ピンヘッダーと2x Groveコネクタは、Seeed Studio BeagleBone® GreenおよびSeeed Studio BeagleBone® Green Wirelessと同じ仕様で、以下の点に注意してください：
-   * ADアナログインターフェースの最大入力電圧は1.8Vです。
-   * 3.3Vを超える電圧を入力しないでください。CPUが損傷する可能性があります。
-   * 外部I2C RTCバッテリー電源コネクタには3Vボタン電池のみを接続してください。電圧が5Vを超えてはいけません。
+   - ADアナログインターフェースの最大入力電圧は1.8Vです。
+   - 3.3Vを超える電圧を入力しないでください。CPUが損傷する可能性があります。
+   - 外部I2C RTCバッテリー電源コネクタには3Vボタン電池のみを接続してください。電圧が5Vを超えてはいけません。
 
 ## 参考資料
 
 ボードに関する情報をさらに得るための参考資料が多数あります。
 
-* [BeagleBoard メインページ](https://beagleboard.org/)
-* [BeagleBoard スタートガイド](https://beagleboard.org/getting-started)
-* [トラブルシューティング](https://beagleboard.org/getting-started#troubleshooting)
-* [ハードウェアドキュメント](https://beagleboard.org/getting-started#hardware)
-* [BeagleBoard プロジェクト](https://beagleboard.org/project)
+- [BeagleBoard メインページ](https://beagleboard.org/)
+- [BeagleBoard スタートガイド](https://beagleboard.org/getting-started)
+- [トラブルシューティング](https://beagleboard.org/getting-started#troubleshooting)
+- [ハードウェアドキュメント](https://beagleboard.org/getting-started#hardware)
+- [BeagleBoard プロジェクト](https://beagleboard.org/project)
 
 ## リソース
 
 -----
 
-* **[PDF]** [Seeed Studio BeagleBone® Green Gateway 回路図](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/SeeedStudio-BeagleBoneGreemGateway-SCH.pdf)
+- **[PDF]** [Seeed Studio BeagleBone® Green Gateway 回路図](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/SeeedStudio-BeagleBoneGreemGateway-SCH.pdf)
 
-* **[ZIP]** [Seeed Studio BeagleBone® Green Gateway 回路図](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/SeeedStudio-BeagleBoneGreemGateway-SCH.zip)
+- **[ZIP]** [Seeed Studio BeagleBone® Green Gateway 回路図](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/SeeedStudio-BeagleBoneGreemGateway-SCH.zip)
 
-* **[Zip]** [AM335X データシート](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
+- **[Zip]** [AM335X データシート](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
 
 ## 技術サポートと製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なるニーズや好みに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

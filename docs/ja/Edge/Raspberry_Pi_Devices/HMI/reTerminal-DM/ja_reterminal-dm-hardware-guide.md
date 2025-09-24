@@ -146,55 +146,55 @@ PiCamera V2モジュールはreTerminal DMでテスト済みで動作します�
 
 **ステップ5:** カメラモジュールをフロントカバーに組み立て、ネジを締めます。
 
-**STEP 6:** FPCをメインボードソケットに差し込み、背面カバーを戻してネジを締めます
+**ステップ 6:** FPCをメインボードソケットに差し込み、背面カバーを戻してネジを締めます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/hardware/camera.png" alt="pir" width="800" height="auto"/></p>
 
 ### PoEモジュールの取り付け
 
-**STEP 1:** 背面カバーを取り外し、メインボードを取り出します。
+**ステップ 1:** 背面カバーを取り外し、メインボードを取り出します。
 
-**STEP 2:** ドットマークに従ってPoEをメインボードに挿入します。
+**ステップ 2:** ドットマークに従ってPoEをメインボードに挿入します。
 
-**STEP 3:** メインボードの背面にPoEモジュールをはんだ付けします。
+**ステップ 3:** メインボードの背面にPoEモジュールをはんだ付けします。
 
-**STEP 4:** メインボードを固定し直し、背面カバーを戻してネジを締めます。
+**ステップ 4:** メインボードを固定し直し、背面カバーを戻してネジを締めます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/hardware/poe.png" alt="pir" width="800" height="auto"/></p>
 
 ### RTCバッテリーの交換
 
-**STEP 1:** 背面カバーを取り外します。
+**ステップ 1:** 背面カバーを取り外します。
 
-**STEP 2:** RTCバッテリーケーブルをRTCバッテリーソケットに挿入し、RTCバッテリーをネットワークポートに取り付けます。
+**ステップ 2:** RTCバッテリーケーブルをRTCバッテリーソケットに挿入し、RTCバッテリーをネットワークポートに取り付けます。
 
-**STEP 3:** 背面カバーを戻してネジを締めます。
+**ステップ 3:** 背面カバーを戻してネジを締めます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/hardware/RTC_battery.png" alt="pir" width="800" height="auto"/></p>
 
 ### ヒューズの交換
 
-**STEP 1:** 背面カバーを取り外します。
+**ステップ 1:** 背面カバーを取り外します。
 
-**STEP 2:** メインボードのヒューズソケットから古いヒューズを取り出し、新しいヒューズを入れます。
+**ステップ 2:** メインボードのヒューズソケットから古いヒューズを取り出し、新しいヒューズを入れます。
 
-**STEP 3:** 背面カバーを戻してネジを締めます。
+**ステップ 3:** 背面カバーを戻してネジを締めます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/hardware/fuse.png" alt="pir" width="800" height="auto"/></p>
 
 ### シャーシ接地ガイド
 
-**STEP 1:** 接地ネジを緩めます。
+**ステップ 1:** 接地ネジを緩めます。
 
-**STEP 2:** 接地コネクタを取り付けてネジを締めます
+**ステップ 2:** 接地コネクタを取り付けてネジを締めます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/hardware/grounding.png" alt="pir" width="800" height="auto"/></p>
 
 ### 端子接続ガイド
 
-**STEP 1:** 下図に示す方向に電源コネクタを挿入します。
+**ステップ 1:** 下図に示す方向に電源コネクタを挿入します。
 
-**STEP 2:** 下図に示す方向にケーブルコネクタを挿入します
+**ステップ 2:** 下図に示す方向にケーブルコネクタを挿入します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/hardware/terminal_block.png" alt="pir" width="800" height="auto"/></p>
 

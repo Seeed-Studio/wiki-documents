@@ -1009,11 +1009,11 @@ void loop() {
 }
 ```
 
-### XIAO ESP32S3 & XIAO ESP32S3 Sense & XIAO ESP32C3
+### XIAO ESP32S3 & XIAO ESP32S3 センス & XIAO ESP32C3
 
 ESP32シリーズは非常に強力なファイルシステムサポートを持っているため、XIAO ESP32でファイルシステムを使用し、microSDカードを保存する方法について一連の例を書きました。以下のリンクで使用方法を学ぶことができます。
 
-- **[File System and XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/ja/xiao_esp32s3_sense_filesystem)**
+- **[ファイルシステムと XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/ja/xiao_esp32s3_sense_filesystem)**
 
 このWikiのチュートリアルはXIAO ESP32シリーズに適用されますが、現在Round DisplayのSDカードスロットを使用したい場合、上記のチュートリアルはXIAO ESP32S3 SenseのSDカードスロットの使用に焦点を当てているため、SDカードの初期化を以下の行に変更する必要があります。
 

@@ -116,7 +116,7 @@ RTSピンによるハードリセットを忘れずに行ってください。
 人気のあるツールを以下に示します。
 
 - [Thonny IDE](https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/)
-- [Arduino for micropython](https://docs.arduino.cc/micropython/)
+- [micropython用Arduino](https://docs.arduino.cc/micropython/)
 - [Visual Studio Code pymakr](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/)
 - [uPyCraft IDE](https://randomnerdtutorials.com/install-upycraft-ide-windows-pc-instructions/)
   

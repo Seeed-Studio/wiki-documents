@@ -226,7 +226,6 @@ authorization = Device base64(EUI:Key)
  </tr>
 </table>
 
-
 以下は、センサーアップロードデータの送信例です。
 
 ```json
@@ -578,7 +577,6 @@ https://sensecap.seeed.cc/openapi
  </tr>
 </table>
 
-
 以下はInterface Iを呼び出す例です。
 
 ```json
@@ -677,7 +675,6 @@ Interface I の構造とフレームワークは Interface II とほぼ同じで
  </tr>
 </table>
 
-
 以下は AI アドバイスを取得する例です。
 
 ```json
@@ -715,7 +712,7 @@ Interface I の構造とフレームワークは Interface II とほぼ同じで
 }
 ```
 
-## XIAO ESP32C3 Getting SenseCraft AI Advisor
+## XIAO ESP32C3 SenseCraft AI アドバイザーを取得する
 
 ### ステップ 6. API アクセスの作成
 

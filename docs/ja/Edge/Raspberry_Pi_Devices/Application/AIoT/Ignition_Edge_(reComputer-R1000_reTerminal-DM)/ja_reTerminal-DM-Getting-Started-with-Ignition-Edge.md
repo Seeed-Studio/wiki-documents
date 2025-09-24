@@ -111,7 +111,7 @@ chmod +x ./uninstall-ignition-edge.sh
 nano ~/.bashrc
 ```
 
-Append the launch command to the the file
+ファイルに起動コマンドを追加する
 
 ```bash
 /opt/ignitionedge/ignition.sh start'

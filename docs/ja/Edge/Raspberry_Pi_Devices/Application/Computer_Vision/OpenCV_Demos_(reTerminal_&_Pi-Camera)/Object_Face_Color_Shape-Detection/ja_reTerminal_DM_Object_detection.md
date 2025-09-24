@@ -104,7 +104,7 @@ python -m venv --system-site-packages env
 source env/bin/activate
  ```
 
-- **Step 2** Next, clone this Git repo onto your Raspberry Pi virtual environmnet like this
+- **ステップ 2** 次に、このGitリポジトリをRaspberry Pi仮想環境にクローンします
 
 ```sh
 git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal
@@ -122,7 +122,7 @@ cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam/ObjectDetection_bookworm
 sh setup.sh
 ```
 
-Run the code
+コードを実行します
 
  ```sh
 python3 detect_picam.py

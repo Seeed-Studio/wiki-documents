@@ -250,9 +250,9 @@ except IOError:
 print "エラー"
 ```
 
-**Step5:** Grove Temperature センサーを Grove I2C ADC に接続し、さらに Grove I2C ソケットを BBG に接続します。
+**ステップ5:** Grove Temperature センサーを Grove I2C ADC に接続し、さらに Grove I2C ソケットを BBG に接続します。
 
-**Step6:** コードを実行します。  
+**ステップ6:** コードを実行します。  
 ターミナルに温度値が2秒ごとに出力されることが確認できます。
 
 ## 回路図オンラインビューア

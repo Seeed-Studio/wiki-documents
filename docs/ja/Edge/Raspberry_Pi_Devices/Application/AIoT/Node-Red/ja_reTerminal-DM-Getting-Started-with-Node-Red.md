@@ -180,7 +180,7 @@ cd .node-red/
 npm install node-red-contrib-modbus
 ```
 
-STEP 3: ノードがインストールされたら、以下のコマンドでNode-REDサービスを再起動してください：
+ステップ 3: ノードがインストールされたら、以下のコマンドでNode-REDサービスを再起動してください：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-red-restart.png" /></div><br />
 

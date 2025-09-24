@@ -256,7 +256,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/counter/alarm -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-Enter bootloader mode and flash your device:
+ブートローダーモードに入り、デバイスをフラッシュしてください：
 
 ```
 west flash -r uf2
@@ -305,7 +305,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/modules/tflite-micro/hello_world -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-Enter bootloader mode and flash your device:
+ブートローダーモードに入り、デバイスをフラッシュしてください：
 
 ```
 west flash -r uf2
@@ -470,7 +470,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/basic/blinky_pwm -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/xiao_expansion_buzzer.overlay"
 ```
 
-Enter bootloader mode and flash your device:
+ブートローダーモードに入り、デバイスをフラッシュしてください：
 
 ```
 west flash -r uf2
@@ -519,7 +519,7 @@ uf2ファイルをフラッシュした後、サンプルが実行される過�
 
 ここではPWMにチャンネル6Bを使用しています。Xiao RP2040のA3に関連するピンはピン29だからです。詳細情報や他のピンのピンマッピングについては、[RP2040 pinctrlドキュメント](https://docs.zephyrproject.org/apidoc/latest/rpi-pico-rp2040-pinctrl_8h.html#a8c0c1058a626d83ba5f7e18238aba150)を参照してください。
 
-#### Grove - Expansion Board - SD Card
+#### Grove - 拡張ボード - SD カード
 
 ここではファイルシステムサンプルをXiao Expansion Boardシールドと組み合わせて使用し、SPI経由でSDカードリーダーとのインターフェースを試します。拡張ボードシールドには、関連する `&xiao_d 2` ピン用にCSピンが設定されているため、シールドを追加する以外に、この機能をボードに関連付けるための作業は必要ありません。さらに準備するために、SDカード機能を有効にするカスタム設定を使用しています。
 

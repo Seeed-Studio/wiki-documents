@@ -63,7 +63,7 @@ last_update:
 
 ここでは、[jetson-examples](https://github.com/Seeed-Projects/jetson-examples)を使用してJetsonデバイス上にOllamaを迅速にデプロイすることを強く推奨します。
 
-**Step1.** jetsonデバイス上でターミナルを開き、以下のコマンドを実行して`jetson-examples`をインストールします：
+**ステップ1.** jetsonデバイス上でターミナルを開き、以下のコマンドを実行して`jetson-examples`をインストールします：
 
 ```bash
 sudo apt install python3-pip
@@ -107,7 +107,7 @@ docker run -d -p 3001:3001 --cap-add SYS_ADMIN \
     mintplexlabs/anythingllm
 ```
 
-**Step2.** 独自のローカル知識ベースを設定する。
+**ステップ2.** 独自のローカル知識ベースを設定する。
 
 完全なアプリケーションにアクセスするには、ブラウザで `http://<jetson-ip>:3001` にアクセスしてください。
 

@@ -156,15 +156,15 @@ AWS IoT thingとは独立して証明書を作成および登録する場合、A
 
 そのためには：
 
-- **Step 01**：設定に移動
+- **ステップ 01**：設定に移動
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/AWS/settings.PNG" style={{width:200, height:300}}/></div>
 
-- **Step 02**：URLを見つけます
+- **ステップ 02**：URLを見つけます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/AWS/weburl.PNG" style={{width:800, height:'auto'}}/></div>
 
-- **Step 03**：これらのファイル名をあなたのものに置き換えて、ファイルを実行します
+- **ステップ 03**：これらのファイル名をあなたのものに置き換えて、ファイルを実行します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/AWS/cosw1.PNG" style={{width:800, height:'auto'}}/></div>
 

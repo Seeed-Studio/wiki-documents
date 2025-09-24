@@ -85,7 +85,7 @@ sudo apt-get -y update
 sudo apt-get install -y python3-pip libopenblas-dev
 ```
 
-**Step 2.** cuSPARSELtを[こちら](https://developer.nvidia.com/cusparselt-downloads?target_os=Linux&target_arch=aarch64-jetson&Compilation=Native&Distribution=Ubuntu&target_version=22.04&target_type=deb_network)からインストールします（PyTorch 24.06+に必要）：
+**ステップ 2.** cuSPARSELtを[こちら](https://developer.nvidia.com/cusparselt-downloads?target_os=Linux&target_arch=aarch64-jetson&Compilation=Native&Distribution=Ubuntu&target_version=22.04&target_type=deb_network)からインストールします（PyTorch 24.06+に必要）：
 
 :::note
 <div style={{ textAlign: "justify" }}>
@@ -97,7 +97,7 @@ cuSPARSELtは、NVIDIAが開発したスパース行列乗算専用の高性能C
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer/Application/Install_torch_on_reComputer/download_cu.png"/>
 </div>
 
-**Step 3.** 上図に示すように選択したバージョンに従って、以下のインストールコマンドを取得します：
+**ステップ 3.** 上図に示すように選択したバージョンに従って、以下のインストールコマンドを取得します：
 
 ```bash
 wget https://developer.download.nvidia.com/compute/cusparselt/0.7.1/local_installers/cusparselt-local-tegra-repo-ubuntu2204-0.7.1_1.0-1_arm64.deb
@@ -207,7 +207,7 @@ conda create -n torch_2.0 python=3.8
 conda activate torch_2.0
 ```
 
-**Step 4.** [前のセクション](#Install_Torch)で示されているように、PyTorchのwheelファイルをダウンロードしてインストールします。
+**ステップ 4.** [前のセクション](#Install_Torch)で示されているように、PyTorchのwheelファイルをダウンロードしてインストールします。
 
 :::info
 詳細については、[NVIDIA PyTorchインストールガイド](https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html)を参照してください
