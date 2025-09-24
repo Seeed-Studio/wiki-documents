@@ -922,7 +922,7 @@ sudo apt install -y python3-pip -y
 pip3 install --upgrade pip
 ```
 
-- **Step 2.**  Install Ultralytics package
+- **步骤 2.** 安装 Ultralytics 包
 
 ```sh
 pip3 install ultralytics
@@ -934,7 +934,7 @@ pip3 install ultralytics
 pip3 install numpy -U
 ```
 
-- **Step 4.** Reboot the device
+- **步骤 4.** 重启设备
 
 ```sh
 sudo reboot

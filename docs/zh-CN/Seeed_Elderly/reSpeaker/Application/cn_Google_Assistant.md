@@ -149,7 +149,7 @@ sudo python -m pip install --upgrade google-assistant-sdk[samples]
 
 ```
 
-**Step 3. Generate credentials**
+**步骤 3. 生成凭证**
 
 安装或更新授权工具：
 
@@ -157,7 +157,7 @@ sudo python -m pip install --upgrade google-assistant-sdk[samples]
 sudo python -m pip install --upgrade google-auth-oauthlib[tool]==0.2
 ```
 
-Make the target folder.
+创建目标文件夹。
 
 ```
 sudo mkdir –p /path/to/assistant-sdk/

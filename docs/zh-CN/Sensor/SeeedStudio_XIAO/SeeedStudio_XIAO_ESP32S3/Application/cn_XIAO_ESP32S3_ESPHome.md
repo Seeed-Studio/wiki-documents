@@ -94,11 +94,11 @@ ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/3.png" style={{width:900, height:'auto'}}/></div>
 
 <!-- 
-- **Step 3.** Click **INSTALL**
+- **步骤 3.** 点击 **INSTALL**
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/6.png" width="700">
 
-- **Step 4.** Enable all the options and click **START**
+- **步骤 4.** 启用所有选项并点击 **START**
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/7.png" width="700">
 

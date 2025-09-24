@@ -258,7 +258,7 @@ plughw:CARD=seeed8micvoicec,DEV=0
 
 ```
 
-**Step 3. Record and Play**
+**步骤 3. 录制并播放**
 
 你可以先录制然后播放，或者可以同时录制和播放。
 

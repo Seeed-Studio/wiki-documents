@@ -378,7 +378,7 @@ cp bootloader/${JETSON_MODEL}/ota_payload_package.tar.gz ${TARGET_FOLDER}
 chmod 777 generate_ota_payload.sh
 ```
 
-- **Step 7.** Execute the script
+- **步骤 7.** 执行脚本
 
 ```sh
 sudo ./generate_ota_payload.sh

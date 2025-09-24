@@ -120,7 +120,7 @@ pip3 install --upgrade pip
 git clone https://github.com/ultralytics/ultralytics.git
 ```
 
-- **Step 3.** Open requirements.txt
+- **步骤 3.** 打开 requirements.txt
 
 ```sh
 cd ultralytics
@@ -354,7 +354,7 @@ done
 realpath calibration/*jpg > calibration.txt
 ```
 
-- **Step 7.** Set environment variables
+- **步骤 7.** 设置环境变量
 
 ```sh
 export INT8_CALIB_IMG_PATH=calibration.txt

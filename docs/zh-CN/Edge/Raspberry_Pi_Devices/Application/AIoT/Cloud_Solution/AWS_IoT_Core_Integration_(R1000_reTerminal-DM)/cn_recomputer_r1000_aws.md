@@ -152,7 +152,7 @@ python -m venv --system-site-packages env
 source env/bin/activate
 ```
 
-- **Step 02**: Install Mqtt library
+- **步骤 02：** 安装 Mqtt 库
 
 ```sh
 pip3 install "paho-mqtt<2.0.0"

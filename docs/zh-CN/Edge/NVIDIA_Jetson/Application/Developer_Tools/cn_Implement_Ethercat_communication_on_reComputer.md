@@ -117,7 +117,7 @@ git clone https://github.com/OpenEtherCATsociety/SOEM
 cd SOEM
 ```
 
-**Step 2.** Build and Install
+**步骤 2.** 构建并安装
 
 ```bash
 # Create build directory
@@ -134,9 +134,9 @@ make -j4
 sudo make install
 ```
 
-## Testing EtherCAT Communication
+## 测试 EtherCAT 通信
 
-**Step 1.** Identify Network Interface:
+**步骤 1.** 确认网络接口：
 
 ```bash
 # Check available network interfaces

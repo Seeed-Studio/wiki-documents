@@ -45,6 +45,7 @@ sudo ./install.sh
 ```sh
 sudo apt install cmake libgl1-mesa-dev libgles2-mesa-dev libegl1-mesa-dev libdrm-dev libgbm-dev ttf-mscorefonts-installer fontconfig libsystemd-dev libinput-dev libudev-dev  libxkbcommon-dev
 ```
+
 - **步骤 3.** 更新系统字体
 
 ```sh
@@ -58,7 +59,7 @@ git clone https://github.com/ardera/flutter-pi
 cd flutter-pi
 ```
 
-- **Step 5.** Compile flutter-pi
+- **步骤 5.** 编译 flutter-pi
 
 ```sh
 mkdir build && cd build
@@ -66,13 +67,13 @@ cmake ..
 make -j`nproc`
 ```
 
-- **Step 6.** Install flutter-pi
+- **步骤 6.** 安装 flutter-pi
 
 ```sh
 sudo make install
 ```
 
-- **Step 7.** Open raspi-config
+- **步骤 7.** 打开 raspi-config
 
 ```sh
 sudo raspi-config
@@ -92,7 +93,7 @@ sudo raspi-config
 usermod -a -G render pi
 ```
 
-- **Step 13.** Reboot reTerminal
+- **步骤 13.** 重启 reTerminal
 
 ```sh
 sudo reboot
@@ -380,7 +381,7 @@ dependencies:
 flutter clean
 ```
 
-- **Step 3.** Build the project
+- **步骤 3.** 构建项目
 
 ```sh
 flutter build bundle
@@ -427,11 +428,11 @@ flutter-pi /home/pi/testapp
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

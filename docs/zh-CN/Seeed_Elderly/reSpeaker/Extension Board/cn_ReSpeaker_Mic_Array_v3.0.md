@@ -300,7 +300,7 @@ if __name__ == '__main__':
 
 **对于 Windows/Mac：** 这是控制 LED 灯的示例。
 
-- Step 1. Download pixel_ring.
+- 步骤 1. 下载 pixel_ring。
 
 ```python
 git clone https://github.com/respeaker/pixel_ring.git

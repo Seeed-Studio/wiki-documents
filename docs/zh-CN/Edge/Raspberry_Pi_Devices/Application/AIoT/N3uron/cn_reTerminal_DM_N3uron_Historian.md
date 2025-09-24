@@ -61,7 +61,7 @@ last_update:
 cd your/folder/path
 ```
 
-- **Step 3**: Run Installation Script
+- **步骤 3**：运行安装脚本
 
 执行 install.sh 文件以安装 MongoDB。
 

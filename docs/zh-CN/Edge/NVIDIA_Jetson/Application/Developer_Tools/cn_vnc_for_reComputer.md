@@ -47,14 +47,14 @@ VNC是一个远程桌面工具，允许您从其他PC设备远程控制您的reC
   sudo apt install vino
  ```
 
-**步骤 2.** 设置 VNC 服务器在每次登录时自动启动：
+ **步骤 2.** 设置 VNC 服务器在每次登录时自动启动：
 
  ```bash
   cd /usr/lib/systemd/user/graphical-session.target.wants
   sudo ln -s ../vino-server.service ./.
  ```
 
- **Step 3.** Configure VNC Server
+ **步骤 3.** 配置 VNC 服务器
 
  ```bash
   gsettings set org.gnome.Vino prompt-enabled false

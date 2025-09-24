@@ -117,11 +117,12 @@ reComputer AI Industrial R2000 系列由 Raspberry Pi CM5 和 Hailo-8 AI 加速�
 sudo apt install snap
 ```
 
-- **Step 2.** Download **rpi-imager**
+- **步骤 2.** 下载 **rpi-imager**
 
 ```sh
 snap install rpi-imager
 ```
+
 - **步骤 3.** 打开 Raspberry Pi Imager 软件
 
 ```sh
@@ -244,6 +245,7 @@ rpi-imager
 ```
 sudo rpi-eeprom-config --edit
 ```
+
 然后按如下方式更改 rpi-eeprom-config：
 
 ```
