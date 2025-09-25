@@ -1,5 +1,5 @@
 ---
-description: このチュートリアルでは、XIAO ESP32C6開発ボードを使用してZigbeeアプリケーション開発を探求する旅に出ます。XIAO ESP32C6は、統合されたWi-FiとBluetooth Low Energy（BLE）接続を提供するESP32-C6チップを搭載したコンパクトでありながら強力なボードです。ESP Zigbee SDKを活用することで、XIAO ESP32C6の全ポテンシャルを活用し、Zigbee機能を含むようにその機能を拡張できます。
+description: このチュートリアルでは、XIAO ESP32C6開発ボードを使用してZigbeeアプリケーション開発の旅に出ます。XIAO ESP32C6は、Wi-FiとBluetooth Low Energy（BLE）接続を統合したESP32-C6チップを搭載したコンパクトながら強力なボードです。ESP Zigbee SDKを活用することで、XIAO ESP32C6の全ポテンシャルを引き出し、Zigbee機能を含むように機能を拡張できます。
 title: XIAO ESP32C6 Zigbee クイックスタートガイド（Arduino）
 image: https://files.seeedstudio.com/wiki/xiaoc6_zigbee/3.webp
 slug: /ja/xiao_esp32c6_zigbee_arduino
@@ -23,11 +23,11 @@ last_update:
 
 :::note 前提条件：Arduino開発環境のセットアップ
 
-Arduino IDEの準備がまだの場合は、**[スタートガイド](https://chatgpt.com/xiao_esp32c6_getting_started/#software-preparation)**を参照してください。**esp-arduinoボードバージョン**が**v3.0.6以降**であることを確認してください。これによりZigbee機能がサポートされます。
+Arduino IDEの準備がまだの場合は、**[入門ガイド](https://wiki.seeedstudio.com/ja/xiao_esp32c6_getting_started/#software-preparation)**を参照してください。**esp-arduinoボードバージョン**が**v3.0.6以降**であることを確認してください。これによりZigbee機能がサポートされます。
 
 :::
 
-このガイドでは、XIAO ESP32C6でZigbeeを使用する際の基本事項に焦点を当て、実用的なアプリケーションの明確な理解を確保します：
+このガイドでは、XIAO ESP32C6でZigbeeを使用する基本事項に焦点を当て、実用的なアプリケーションの明確な理解を確実にします：
 
 1. [Zigbee概要](#zigbee_overview)：Zigbeeプロトコルとそのネットワーク構造を理解する。
 2. [Zigbee Arduinoサンプル](#examples)：ESP32-C6で電球やスイッチなどのZigbeeサンプルを実装する。
@@ -38,16 +38,16 @@ Zigbeeは、IEEE 802.15.4標準に基づく**低消費電力**、**低帯域幅*
 
 ### Zigbeeデータモデル
 
-Zigbee通信は**Zigbee Cluster Library（ZCL）**に依存しており、これはデバイスがその機能をどのように整理し、相互作用するかを定義します。主要なコンポーネントには以下があります：
+Zigbee通信は**Zigbee Cluster Library（ZCL）**に依存しており、これはデバイスがその機能をどのように整理し、相互作用するかを定義します。主要コンポーネントには以下が含まれます：
 
 1. **デバイスタイプ**
-    Zigbeeデバイス（例：スイッチ、センサー、ライト）は特定の動作で事前定義されており、機能的な**クラスター**にグループ化されています。
+    Zigbeeデバイス（例：スイッチ、センサー、ライト）は特定の動作で事前定義され、機能的な**クラスター**にグループ化されます。
 
 2. **クラスター**
     クラスターは以下の論理的なグループです：
 
    - **属性**：明度や温度などのデバイス状態を表します。
-   - **コマンド**：ライトをオンにしたり、明度を50%に設定したりするアクションをトリガーします。
+   - **コマンド**：ライトをオンにしたり明度を50%に設定するなどのアクションをトリガーします。
 
    例：
 
@@ -57,7 +57,7 @@ Zigbee通信は**Zigbee Cluster Library（ZCL）**に依存しており、これ
    - **シーンクラスター**：プリセット設定を保存・呼び出しします。
 
 3. **属性とコマンド**
-    属性はデバイスデータ（例：状態、設定）を保存し、コマンドはアクションを開始します。
+    属性はデバイスデータ（例：状態、設定）を格納し、コマンドはアクションを開始します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee/datamodel.png" style={{width:800, height:'auto'}}/></div>
 
@@ -69,28 +69,28 @@ Zigbeeネットワークは3つの主要なノードタイプで構成されま�
    - ネットワークの中央ハブとして機能します。  
    - ネットワーク作成、デバイス認証、アドレス割り当てを処理します。  
    - ネットワークの初期化と管理を担当します。  
-   - 各Zigbeeネットワークには**1つのコーディネーター**のみが存在できます。  
+   - 各Zigbeeネットワークには**1つのコーディネーター**のみ存在できます。  
 
 2. **Zigbeeルーター（ZR）**  
-   - デバイス間でメッセージを中継することでネットワーク範囲を拡張します。  
+   - デバイス間でメッセージを中継してネットワーク範囲を拡張します。  
    - 追加デバイスのネットワーク参加をサポートします。  
-   - 通常は常時動作と信頼性の高いメッセージ中継を確保するために主電源で動作します。  
+   - 通常は電源供給により、一定の動作と信頼性の高いメッセージ中継を確保します。  
    - バッテリー駆動のルーターも可能ですが、エネルギー需要が高いため一般的ではありません。  
 
 3. **Zigbeeエンドデバイス（ZED）**  
    - 親ノード（コーディネーターまたはルーター）と通信する軽量で電力効率の良いデバイスです。  
    - 他のデバイスにメッセージをルーティングしません。  
-   - バッテリー動作に最適化されており、通常はエネルギーを節約するためにスリープモードに入ります。
+   - バッテリー動作に最適化され、通常はエネルギー節約のためスリープモードに入ります。
 
 :::note
 
 - **アドレッシングとルーティング**：
-  - Zigbeeは16ビットアドレッシングスキームを使用します。デバイスは直接アドレッシングと間接アドレッシングの組み合わせで通信します。  
+  - Zigbeeは16ビットアドレッシングスキームを使用します。デバイスは直接および間接アドレッシングの組み合わせで通信します。  
   - ルーティング決定は、AODV（Ad hoc On-demand Distance Vector）などのアルゴリズムを使用してルーターによって行われます。  
 
 - **電力管理**：
-  - Zigbeeエンドデバイスは低消費電力に最適化されています。多くの場合、スリープモードで動作し、必要な時のみ起動します。  
-  - ルーターとコーディネーターは、一貫した可用性のために通常主電源で動作します。
+  - Zigbeeエンドデバイスは低消費電力に最適化されています。多くの場合スリープモードで動作し、必要な時のみ起動します。  
+  - ルーターとコーディネーターは一般的に一貫した可用性のため電源供給されます。
 
 :::
 
@@ -106,52 +106,52 @@ Zigbeeは、アプリケーション要件と環境に応じて、3つの主要�
 
   <div style={{textAlign:'center'}}><img src="https://mermaid.ink/svg/pako:eNptkcEOgjAQRH9lsydI5CDcuIo_oJ5MLxu6AlG6pLYmxvjvVlFSgj3NtG9nmvaBtWjGEgGgsTS0cKiUgXFtRKzuDDmxSRKZNIUsy2An3rFdJ8koYJ2m_0YjNp_YPGK_OR9ua3TFt67mEBs0jGYWHeOjLqbYYsHlMff3bKrMZ5XLGxZzvJjhoRlX2LPtqdPhPR_vYYWu5Z4VlkFqsmeFyjwDR97J_m5qLJ31vEIrvml_xg-aHFcdhQ_psTzR5Rp2BzJHkZ9_vgDkroUg" style={{width:380, height:'auto', "border-radius": '1px'}}/></div>
 
-- **主な特徴**：  
+- **主要機能**：  
   - 動的再ルーティングにより高い信頼性を確保します。  
-  - スケーラブルなカバレッジを持つ大規模ネットワークをサポートします。  
+  - スケーラブルなカバレッジで大規模ネットワークをサポートします。  
   - 自己修復メカニズムにより耐障害性が向上します。  
 
 #### 2. ツリートポロジー
 
-- コーディネーターは階層構造のルートとして機能し、ルーターがブランチを形成します。
-- 各ブランチは複数のエンドデバイスや追加のルーターを持つことができ、ツリー状の構造を作成します。
-- 通信は階層パスに依存するため、潜在的な単一障害点が発生する可能性があります。
+- コーディネーターが階層構造のルートとして機能し、ルーターがブランチを形成します。  
+- 各ブランチには複数のエンドデバイスまたは追加のルーターを持つことができ、ツリー状の構造を作成します。  
+- 通信は階層パスに依存し、潜在的な単一障害点を導入します。  
 
   <div style={{textAlign:'center'}}><img src="https://mermaid.ink/svg/pako:eNqF0MEKwjAMBuBXCTmt4A5OT7s6X0A9SS9hjW7omlFbQcR3tzqVFQV7yl--_IdcsRbDWCIA7B31DWwqbWF4CxFnWkteXJaNglKQ5zmsJHh20ywbBpgq9Wt1ZIuPLUb21fN0S2sqPrc1x9o4wxCS6p-8SPh3e5HyWcJn__g84XOlcIIdu45aE093fSxr9A13rLGMoyF30KjtLToKXtYXW2PpXeAJOgn7BssdHU8xhd6Q56qlePzu89uT3Yq88-0OO1R_gA" style={{width:600, height:'auto', "border-radius": '1px'}}/></div>
 
-- **主な特徴**：
-  - 構造化された環境でうまく機能します。
-  - メッシュネットワークよりもセットアップと管理が簡単です。
-  - ブランチの障害に脆弱で、サブネットワーク全体が切断される可能性があります。
+- **主要機能**：  
+  - 構造化された環境でうまく機能します。  
+  - メッシュネットワークよりもセットアップと管理が簡単です。  
+  - ブランチ障害に脆弱で、サブネットワーク全体が切断される可能性があります。  
 
 #### 3. スタートポロジー
 
-- すべてのデバイスがコーディネーターと直接通信します。
-- デプロイは簡単ですが、コーディネーターが単一障害点となります。
-- デバイスがコーディネーターの近くに配置されている小規模ネットワークに最適です。
+- すべてのデバイスがコーディネーターと直接通信します。  
+- 展開は簡単ですが、コーディネーターが単一障害点になります。  
+- デバイスがコーディネーターの近くにある小規模ネットワークに最適です。  
 
   <div style={{textAlign:'center'}}><img src="https://mermaid.ink/svg/pako:eNqNkMEKwjAMhl8l5LTCdth269X5BHqSXsIat6JtR20FGXt3K0Nx4MGc_i_kCyEz9l4zSgSAIdA0wrFTDtbaeR-0cRR9KIovEAKqqoK90x3fTc91UeQMK0AtxK8NW6XZKM0_SrtRWiGwRMvBktH5_vm1QGEc2bJCmaOmcFGo3JLnKEV_eLgeZQyJSww-DSPKM11vmdKkKXJnKH_AfroTuZP3b16etDldgQ" style={{width:480, height:'auto', "border-radius": '1px'}}/></div>
 
-- **主な特徴**：
-  - セットアップと管理が簡単です。
-  - 範囲とデバイス容量の制約により、スケーラビリティが制限されます。
-  - すべての通信をコーディネーターに依存するため、耐障害性が低下します。
+- **主要機能**：  
+  - セットアップと管理が簡単です。  
+  - 範囲とデバイス容量の制約によりスケーラビリティが制限されます。  
+  - すべての通信をコーディネーターに依存するため、耐障害性が低下します。  
 
 これらの概念を簡単に確認した後、XIAO ESP32C6でのZigbee開発を始めましょう。
 
-## Arduinoの例 {#examples}
+## Arduinoサンプル {#examples}
 
-[Zigbeeの例 - Arduino](https://github.com/espressif/arduino-esp32/tree/master/libraries/Zigbee/examples)を参照してください
+[Zigbeeサンプル - Arduino](https://github.com/espressif/arduino-esp32/tree/master/libraries/Zigbee/examples)を参照してください
 
-### 例1：電球とライトスイッチ {#Light_Bulb_switch}
+### サンプル1：電球とライトスイッチ {#Light_Bulb_switch}
 
 まず、2つのXIAO ESP32C6を準備し、1つを**Zigbee電球**として、もう1つを**Zigbeeライトスイッチ**として使用します。
 
-`Zigbee_On_Off_Light`と`Zigbee_On_Off_Switch`の例を使用して、Zigbee対応デバイスが実際のシナリオでどのように相互作用するかを理解します。始める準備はできましたか？開発に飛び込みましょう！
+`Zigbee_On_Off_Light`と`Zigbee_On_Off_Switch`のサンプルを使用して、Zigbee対応デバイスが実際のシナリオでどのように相互作用するかを理解します。始める準備はできましたか？開発に飛び込みましょう！
 
 #### Zigbee電球
 
-ZigbeeモードでZigbee ED（エンドデバイス）を選択していることを確認してください。
+Zigbeeモードで`Zigbee ED(end device)`を選択していることを確認してください。
 
 いくつかの定数：
 
@@ -161,9 +161,9 @@ ZigbeeモードでZigbee ED（エンドデバイス）を選択しているこ�
 #define ZIGBEE_LIGHT_ENDPOINT 10
 ```
 
-- `LED_PIN` は内蔵LEDを制御するために使用されます。
-- `BUTTON_PIN` はファクトリーリセットボタン用です。
-- `ZIGBEE_LIGHT_ENDPOINT` は電球のZigbeeエンドポイントを表し、ネットワーク内のサービス識別子のような役割を果たします。
+- `LED_PIN`は内蔵LEDを制御するために使用されます。
+- `BUTTON_PIN`はファクトリーリセットボタン用です。
+- `ZIGBEE_LIGHT_ENDPOINT`は電球のZigbeeエンドポイントを表し、ネットワーク内のサービス識別子のように機能します。
 
 ##### Zigbeeライトデバイスの定義
 
@@ -175,7 +175,7 @@ ZigbeeLight zbLight = ZigbeeLight(ZIGBEE_LIGHT_ENDPOINT);
 
 ##### デバイス状態制御関数
 
-`setLED()`関数はLEDの状態を制御します：
+`setLED()`関数はLED状態を制御します：
 
 ```cpp
 void setLED(bool value) {
@@ -183,11 +183,11 @@ void setLED(bool value) {
 }
 ```
 
-`setLED()` 関数はブール値を受け取り、入力値に基づいてLEDの状態を設定し、LEDをオンまたはオフにします。
+`setLED()`関数はブール値を受け取り、入力値に基づいてLED状態を設定し、オンまたはオフにします。
 
-##### `setup()` 関数
+##### `setup()`関数
 
-`setup()` 関数は、LED、ボタン、Zigbee設定を含むデバイスを初期化します。
+`setup()`関数は、LED、ボタン、Zigbee設定を含むデバイスを初期化します。
 
 ```cpp
 void setup() {
@@ -207,13 +207,13 @@ void setup() {
   zbLight.setManufacturerAndModel("Espressif", "ZBLightBulb");
 ```
 
-これにより、デバイスの製造元とモデル名が設定され、Zigbeeネットワーク上でデバイスを識別するのに役立ちます。
+これはデバイスのメーカー名とモデル名を設定し、Zigbeeネットワーク上でデバイスを識別するのに役立ちます。
 
 ```cpp
   zbLight.onLightChange(setLED);
 ```
 
-これは `setLED()` をコールバック関数として登録し、ライトの状態に変化があるたびに呼び出されます。
+これは`setLED()`をコールバック関数として登録し、ライト状態に変更があるたびに呼び出されます。
 
 ```cpp
   Zigbee.addEndpoint(&zbLight);
@@ -225,11 +225,11 @@ void setup() {
   Zigbee.begin();
 ```
 
-最後に、`Zigbee.begin()` を呼び出して Zigbee スタックを初期化し、ネットワーク内のエンドデバイスとしてデバイスを開始します。
+最後に、`Zigbee.begin()`を呼び出してZigbeeスタックを初期化し、デバイスをネットワーク内のエンドデバイスとして開始します。
 
-##### `loop()` 関数
+##### `loop()`関数
 
-メインループは、ファクトリーリセットを実行するためのボタン押下を処理します：
+メインループはファクトリーリセットを実行するためのボタン押下を処理します：
 
 ```cpp
 void loop() {
@@ -245,18 +245,17 @@ void loop() {
     }
   }
   delay(100);
-}
-```
+}```
 
 このコードはボタンが押されているかどうかをチェックします：
 
 - 押されている場合、100ms待機します（デバウンス処理のため）。
 - ボタンが3秒以上押され続けた場合、`Zigbee.factoryReset()`を呼び出してファクトリーリセットをトリガーします。
 
-この機能は、ネットワークやペアリングの問題により、ユーザーがデバイスを再設定する必要がある場合に便利です。
+この機能は、ネットワークやペアリングの問題によりデバイスを再設定する必要がある場合にユーザーにとって便利です。
 
 :::tip
-公式ルーチンは継続的に更新されており、私たちのドキュメントは最新のプログラムを即座に同期できない場合があります。相違がある場合は、**[Espressifのプログラム例](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Light/Zigbee_On_Off_Light.ino)**を参照してください。
+公式ルーチンは継続的に更新されており、私たちのドキュメントは最新のプログラムを最初に同期できない場合があります。相違がある場合は、**[Espressifのプログラム例](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Light/Zigbee_On_Off_Light.ino)**を参照してください。
 :::
 
 ```cpp title=Zigbee_On_Off_Light.ino showLineNumbers
@@ -323,7 +322,7 @@ void loop() {
 
 #### Zigbee ライトスイッチ
 
-ここでは、XIAO ESP32C6 が **Zigbee コーディネーター** として機能し、他の Zigbee デバイスを制御する役割を担います。ここで、**Zigbee スイッチ** はコントローラーを表し、Zigbee ライトデバイスにバインドして、ライトのオン/オフの切り替えなどのコマンドを通じてそれを制御します。
+ここでは、XIAO ESP32C6が**Zigbee コーディネーター**として機能し、他のZigbeeデバイスを制御する責任を負います。ここで、**Zigbee スイッチ**はコントローラーを表し、Zigbeeライトデバイスにバインドし、ライトのオン/オフ切り替えなどのコマンドを通じて制御します。
 
 ##### インクルードと定義
 
@@ -336,13 +335,13 @@ void loop() {
 #define PAIR_SIZE(TYPE_STR_PAIR) (sizeof(TYPE_STR_PAIR) / sizeof(TYPE_STR_PAIR[0]))
 ```
 
-- `SWITCH_ENDPOINT_NUMBER` は `5` として定義されています。これはスイッチのエンドポイントを表します。電球の例と同様に、エンドポイント番号は Zigbee デバイス内の特定の機能を定義するために使用されます。
-- `GPIO_INPUT_IO_TOGGLE_SWITCH` は GPIO ピン `9` を参照し、スイッチボタンとして機能します。
-- `PAIR_SIZE()` は指定された配列のサイズを計算するために使用されるマクロで、ここではボタン設定を処理するために使用されます。
+- `SWITCH_ENDPOINT_NUMBER`は`5`として定義されています。これはスイッチのエンドポイントを表します。電球の例と同様に、エンドポイント番号はZigbeeデバイス内の特定の機能を定義するために使用されます。
+- `GPIO_INPUT_IO_TOGGLE_SWITCH`はGPIOピン`9`を指し、スイッチボタンとして機能します。
+- `PAIR_SIZE()`は指定された配列のサイズを計算するために使用されるマクロで、ここではボタン設定の処理に使用されます。
 
-##### スイッチ設定タイプと機能
+##### スイッチ設定タイプと関数
 
-コードは、スイッチ機能に関連するいくつかの列挙型とデータ構造を定義しています：
+コードはスイッチ機能に関連するいくつかの列挙型とデータ構造を定義しています：
 
 ```cpp
 typedef enum {
@@ -369,9 +368,9 @@ typedef enum {
 } SwitchState;
 ```
 
-- **`SwitchFunction`** は、スイッチが実行できる異なる機能を列挙します。例えば、ライトのオン、オフ、切り替え、明度調整などです。
-- **`SwitchData`** は、GPIO ピンと特定の機能をペアにする構造体で、異なる機能を持つ複数のボタンを追加する際により良い整理を可能にします。
-- **`SwitchState`** は、ユーザーの操作中のスイッチの異なる状態を表します（例：アイドル、押下、解放）。
+- **`SwitchFunction`**はスイッチが実行できる異なる機能を列挙します（ライトのオン、オフ、切り替え、明度調整など）。
+- **`SwitchData`**はGPIOピンと特定の機能をペアにする構造体で、異なる機能を持つ複数のボタンを追加する際の整理に役立ちます。
+- **`SwitchState`**はユーザーの操作中のスイッチの異なる状態を表します（例：アイドル、押下、解放）。
 
 ##### Zigbee スイッチのインスタンス化
 
@@ -380,10 +379,10 @@ static SwitchData buttonFunctionPair[] = {{GPIO_INPUT_IO_TOGGLE_SWITCH, SWITCH_O
 ZigbeeSwitch zbSwitch = ZigbeeSwitch(SWITCH_ENDPOINT_NUMBER);
 ```
 
-- **`buttonFunctionPair`** は、ボタンの機能を定義する配列です。ここでは、`GPIO 9` に接続されたボタンがライトのオン/オフ切り替えに使用されます。
-- **`zbSwitch`** は、エンドポイント番号 `5` で `ZigbeeSwitch` のインスタンスを作成します。
+- **`buttonFunctionPair`**はボタンの機能を定義する配列です。ここでは、`GPIO 9`に接続されたボタンがライトのオン/オフ切り替えに使用されます。
+- **`zbSwitch`**はエンドポイント番号`5`で`ZigbeeSwitch`のインスタンスを作成します。
 
-##### Zigbee 機能と GPIO 割り込み処理
+##### Zigbee 関数とGPIO割り込み処理
 
 ```cpp
 static void onZbButton(SwitchData *button_func_pair) {
@@ -393,9 +392,9 @@ static void onZbButton(SwitchData *button_func_pair) {
 }
 ```
 
-**`onZbButton()`** は、ボタンが押されるたびに呼び出されます。この場合、ライトを切り替えるために Zigbee コマンドを送信します。
+**`onZbButton()`**はボタンが押されるたびに呼び出されます。この場合、ライトを切り替えるZigbeeコマンドを送信します。
 
-###### GPIO イベントの処理
+###### GPIOイベントの処理
 
 ```cpp
 static void IRAM_ATTR onGpioInterrupt(void *arg) {
@@ -403,7 +402,7 @@ static void IRAM_ATTR onGpioInterrupt(void *arg) {
 }
 ```
 
-**`onGpioInterrupt()`** は GPIO ピン割り込みを処理する割り込みサービスルーチン（ISR）です。ボタンが押されるたびにイベントをキューに配置します。
+**`onGpioInterrupt()`**はGPIOピン割り込みを処理する割り込みサービスルーチン（ISR）です。ボタンが押されるたびにキューにイベントを配置します。
 
 ```cpp
 static void enableGpioInterrupt(bool enabled) {
@@ -417,7 +416,7 @@ static void enableGpioInterrupt(bool enabled) {
 }
 ```
 
-**`enableGpioInterrupt()`** は、パラメータ `enabled` が `true` か `false` かに応じて、GPIO 割り込みを有効または無効にします。
+**`enableGpioInterrupt()`**は、パラメータ`enabled`が`true`か`false`かに応じて、GPIO割り込みを有効または無効にします。
 
 ##### セットアップ関数
 
@@ -466,11 +465,11 @@ void setup() {
 }
 ```
 
-- **シリアル通信の初期化**: デバッグ用のシリアル通信を初期化します。
-- **デバイス情報**: メーカーとモデルを設定し、複数のデバイスのバインドを許可し、Zigbeeコアにエンドポイントを追加します。
-- **ネットワーク初期化**: 再起動後にZigbeeネットワークを`180`秒間開放し、デバイスの参加を許可します。
-- **ボタン初期化**: ボタン用のGPIOピンを設定し、GPIO割り込みを処理するキューを作成し、ボタンに割り込みを接続します。
-- **バインド待機**: コーディネーターは、ライトデバイスにバインドするまで待機してから処理を続行します。バインドが完了すると、バインドされたデバイス情報を出力します。
+- **シリアル通信の初期化**：デバッグ用にシリアルを初期化します。
+- **デバイス情報**：メーカーとモデルを設定し、複数のデバイスのバインドを許可し、Zigbeeコアにエンドポイントを追加します。
+- **ネットワーク初期化**：再起動後`180`秒間Zigbeeネットワークを開いて、デバイスの参加を許可します。
+- **ボタン初期化**：ボタン用のGPIOピンを設定し、GPIO割り込みを処理するキューを作成し、ボタンに割り込みを接続します。
+- **バインド待機**：コーディネーターはライトデバイスにバインドするまで待機してから続行します。バインドされると、バインドされたデバイス情報を出力します。
 
 ##### ループ関数
 
@@ -513,13 +512,13 @@ void loop() {
 }
 ```
 
-- **ループ関数**は、割り込みキュー（`gpio_evt_queue`）から読み取り、それに応じて`buttonState`を更新することで、ボタンの押下を管理します。
-- ボタンが押されて離されたとき（`SWITCH_RELEASE_DETECTED`）、`onZbButton()`コールバックが呼び出されてライトを切り替えます。
-- **10秒**ごとに、監視目的でバインドされたライトが印刷されます。
+- **ループ関数**は割り込みキュー（`gpio_evt_queue`）から読み取り、それに応じて`buttonState`を更新することでボタンの押下を管理します。
+- ボタンが押されて離された時（`SWITCH_RELEASE_DETECTED`）、`onZbButton()`コールバックが呼び出されてライトを切り替えます。
+- **10秒**ごとに、監視目的でバインドされたライトが出力されます。
 
-:::tip
-公式のルーチンは継続的に更新されており、私たちのドキュメントは最新のプログラムを最初に同期できない場合があります。相違がある場合は、**[Espressifのプログラム例](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Switch/Zigbee_On_Off_Switch.ino)**を参照してください。
+:::tip公式ルーチンは継続的に更新されており、私たちのドキュメントは最新のプログラムを即座に同期できない場合があります。相違がある場合は、**[Espressifのプログラム例](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Switch/Zigbee_On_Off_Switch.ino)**を参照してください。
 :::
+
 
 ```cpp title=Zigbee_On_Off_Switch.ino showLineNumbers
 #ifndef ZIGBEE_MODE_ZCZR
@@ -710,7 +709,7 @@ Zigbee制御照明プロジェクトの完成おめでとうございます！�
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+私たちの製品をお選びいただきありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

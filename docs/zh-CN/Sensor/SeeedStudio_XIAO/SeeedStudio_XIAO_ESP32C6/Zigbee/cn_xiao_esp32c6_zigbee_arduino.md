@@ -10,7 +10,7 @@ last_update:
 
 ## 概述
 
-本教程指导您在 Seeed Studio **XIAO ESP32C6** 开发板上实现 [Zigbee](https://en.wikipedia.org/wiki/Zigbee) 应用。该开发板由 ESP32-C6 芯片驱动，结合了 **Wi-Fi**、**蓝牙低功耗 (BLE)** 和 **Zigbee** 连接功能，使其非常适合 **物联网应用**。本指南中的示例使用 **esp-arduino Zigbee SDK** 来实现 Zigbee 功能。
+本教程指导您在 Seeed Studio **XIAO ESP32C6** 开发板上实现 [Zigbee](https://en.wikipedia.org/wiki/Zigbee) 应用。该开发板由 ESP32-C6 芯片驱动，结合了 **Wi-Fi**、**蓝牙低功耗 (BLE)** 和 **Zigbee** 连接功能，使其成为 **物联网应用** 的完美选择。本指南中的示例使用 **esp-arduino Zigbee SDK** 来实现 Zigbee 功能。
 
 <div style={{ textAlign: 'center' }}>
   <img
@@ -19,15 +19,15 @@ last_update:
   />
 </div>
 
-### 您将学到的内容
+### 您将学到什么
 
 :::note 前提条件：Arduino 开发环境设置
 
-如果您还没有准备好 Arduino IDE，请参考 **[入门指南](https://chatgpt.com/xiao_esp32c6_getting_started/#software-preparation)**。确保 **esp-arduino 板版本** 为 **v3.0.6 或更高版本**，该版本支持 Zigbee 功能。
+如果您还没有准备好 Arduino IDE，请参考 **[入门指南](https://wiki.seeedstudio.com/cn/xiao_esp32c6_getting_started/#software-preparation)**。确保 **esp-arduino 板版本** 为 **v3.0.6 或更高版本**，该版本支持 Zigbee 功能。
 
 :::
 
-本指南专注于在 XIAO ESP32C6 上使用 Zigbee 的基本要点，确保清楚理解其实际应用：
+本指南专注于使用 XIAO ESP32C6 的 Zigbee 功能的要点，确保清楚理解其实际应用：
 
 1. [Zigbee 概述](#zigbee_overview)：了解 Zigbee 协议及其网络结构。
 2. [Zigbee Arduino 示例](#examples)：在 ESP32-C6 上实现 Zigbee 示例，如灯泡和开关。
@@ -41,7 +41,7 @@ Zigbee 是一种基于 IEEE 802.15.4 标准的 **低功耗**、**低带宽** 无
 Zigbee 通信依赖于 **Zigbee 集群库 (ZCL)**，它定义了设备如何组织其功能并进行交互。关键组件包括：
 
 1. **设备类型**
-    Zigbee 设备（例如开关、传感器、灯具）预定义了特定行为，按功能分组到 **集群** 中。
+    Zigbee 设备（例如开关、传感器、灯）具有预定义的特定行为，按功能分组到 **集群** 中。
 
 2. **集群**
     集群是以下内容的逻辑分组：
@@ -73,7 +73,7 @@ Zigbee 网络由三种主要节点类型组成：
 
 2. **Zigbee 路由器 (ZR)**  
    - 通过在设备之间中继消息来扩展网络范围。  
-   - 支持更多设备加入网络。  
+   - 支持其他设备加入网络。  
    - 通常由市电供电以确保持续运行和可靠的消息中继。  
    - 电池供电的路由器是可能的，但由于更高的能耗需求而不太常见。  
 
@@ -85,7 +85,7 @@ Zigbee 网络由三种主要节点类型组成：
 :::note
 
 - **寻址和路由**：
-  - Zigbee 使用 16 位寻址方案。设备通过直接和间接寻址的混合方式进行通信。  
+  - Zigbee 使用 16 位寻址方案。设备通过直接和间接寻址的混合进行通信。  
   - 路由决策由路由器使用 AODV（按需距离矢量）等算法做出。  
 
 - **电源管理**：
@@ -113,29 +113,29 @@ Zigbee 支持三种主要网络拓扑，具体取决于应用需求和环境：
 
 #### 2. 树形拓扑
 
-- 协调器作为分层结构的根节点，路由器形成分支。
-- 每个分支可以有多个终端设备或额外的路由器，创建树状结构。
-- 通信依赖于分层路径，这引入了潜在的单点故障。
+- 协调器作为分层结构的根，路由器形成分支。  
+- 每个分支可以有多个终端设备或其他路由器，创建树状结构。  
+- 通信依赖于分层路径，这引入了潜在的单点故障。  
 
   <div style={{textAlign:'center'}}><img src="https://mermaid.ink/svg/pako:eNqF0MEKwjAMBuBXCTmt4A5OT7s6X0A9SS9hjW7omlFbQcR3tzqVFQV7yl--_IdcsRbDWCIA7B31DWwqbWF4CxFnWkteXJaNglKQ5zmsJHh20ywbBpgq9Wt1ZIuPLUb21fN0S2sqPrc1x9o4wxCS6p-8SPh3e5HyWcJn__g84XOlcIIdu45aE093fSxr9A13rLGMoyF30KjtLToKXtYXW2PpXeAJOgn7BssdHU8xhd6Q56qlePzu89uT3Yq88-0OO1R_gA" style={{width:600, height:'auto', "border-radius": '1px'}}/></div>
 
-- **主要特点**：
-  - 在结构化环境中运行良好。
-  - 比网状网络更容易设置和管理。
-  - 容易受到分支故障的影响，这可能会断开整个子网络。
+- **关键特性**：  
+  - 适用于结构化环境。  
+  - 比网状网络更容易设置和管理。  
+  - 容易受到分支故障的影响，这可能会断开整个子网络。  
 
-#### 3. 星型拓扑
+#### 3. 星形拓扑
 
-- 所有设备直接与协调器通信。
-- 部署简单，但协调器是单点故障。
-- 最适合设备位于协调器附近的小型网络。
+- 所有设备直接与协调器通信。  
+- 部署简单，但协调器是单点故障。  
+- 最适合设备靠近协调器的小型网络。  
 
   <div style={{textAlign:'center'}}><img src="https://mermaid.ink/svg/pako:eNqNkMEKwjAMhl8l5LTCdth269X5BHqSXsIat6JtR20FGXt3K0Nx4MGc_i_kCyEz9l4zSgSAIdA0wrFTDtbaeR-0cRR9KIovEAKqqoK90x3fTc91UeQMK0AtxK8NW6XZKM0_SrtRWiGwRMvBktH5_vm1QGEc2bJCmaOmcFGo3JLnKEV_eLgeZQyJSww-DSPKM11vmdKkKXJnKH_AfroTuZP3b16etDldgQ" style={{width:480, height:'auto', "border-radius": '1px'}}/></div>
 
-- **主要特点**：
-  - 易于设置和管理。
-  - 由于范围和设备容量限制，可扩展性有限。
-  - 依赖协调器进行所有通信，降低了容错性。
+- **关键特性**：  
+  - 易于设置和管理。  
+  - 由于范围和设备容量限制，可扩展性有限。  
+  - 依赖协调器进行所有通信降低了容错能力。  
 
 在快速了解这些概念后，让我们开始在 XIAO ESP32C6 上进行 Zigbee 开发。
 
@@ -161,21 +161,21 @@ Zigbee 支持三种主要网络拓扑，具体取决于应用需求和环境：
 #define ZIGBEE_LIGHT_ENDPOINT 10
 ```
 
-- `LED_PIN` 用于控制内置LED。
-- `BUTTON_PIN` 用于出厂重置按钮。
-- `ZIGBEE_LIGHT_ENDPOINT` 代表灯泡的Zigbee端点，它在网络中充当服务标识符的作用。
+- `LED_PIN` 用于控制内置 LED。
+- `BUTTON_PIN` 用于恢复出厂设置按钮。
+- `ZIGBEE_LIGHT_ENDPOINT` 表示灯泡的 Zigbee 端点，它在网络中充当服务标识符。
 
-##### 定义Zigbee灯设备
+##### 定义 Zigbee 灯设备
 
 ```cpp
 ZigbeeLight zbLight = ZigbeeLight(ZIGBEE_LIGHT_ENDPOINT);
 ```
 
-这一行定义了一个带有端点ID的`ZigbeeLight`对象。端点用于表示Zigbee设备内的不同功能。
+这行代码定义了一个带有端点 ID 的 `ZigbeeLight` 对象。端点用于表示 Zigbee 设备内的不同功能。
 
 ##### 设备状态控制函数
 
-`setLED()`函数控制LED状态：
+`setLED()` 函数控制 LED 状态：
 
 ```cpp
 void setLED(bool value) {
@@ -183,7 +183,7 @@ void setLED(bool value) {
 }
 ```
 
-`setLED()` 函数接受一个布尔值，并相应地设置 LED 状态，根据输入值打开或关闭 LED。
+`setLED()` 函数接受一个布尔值并相应地设置 LED 状态，根据输入值打开或关闭它。
 
 ##### `setup()` 函数
 
@@ -195,31 +195,31 @@ void setup() {
   digitalWrite(LED_PIN, LOW);
 ```
 
-首先，我们将 LED 引脚配置为输出并初始设置为关闭状态。
+首先，我们将 LED 引脚配置为输出并初始关闭它。
 
 ```cpp
   pinMode(BUTTON_PIN, INPUT_PULLUP);
 ```
 
-按钮引脚被配置为带有内部上拉电阻的输入。
+按钮引脚配置为带有内部上拉电阻的输入。
 
 ```cpp
   zbLight.setManufacturerAndModel("Espressif", "ZBLightBulb");
 ```
 
-这设置了设备的制造商和型号名称，有助于在Zigbee网络上识别它。
+这设置了设备的制造商和型号名称，有助于在 Zigbee 网络上识别它。
 
 ```cpp
   zbLight.onLightChange(setLED);
 ```
 
-这将 `setLED()` 注册为回调函数，每当光线状态发生变化时就会调用该函数。
+这将 `setLED()` 注册为回调函数，每当灯状态发生变化时都会调用该函数。
 
 ```cpp
   Zigbee.addEndpoint(&zbLight);
 ```
 
-我们将 `zbLight` 添加为 Zigbee 核心的一个端点。这允许其他 Zigbee 设备与该端点进行交互。
+我们将 `zbLight` 作为端点添加到 Zigbee 核心。这允许其他 Zigbee 设备与此端点交互。
 
 ```cpp
   Zigbee.begin();
@@ -245,18 +245,17 @@ void loop() {
     }
   }
   delay(100);
-}
-```
+}```
 
-这段代码检查按钮是否被按下：
+此代码检查按钮是否被按下：
 
 - 如果按下，它会等待 100 毫秒（用于防抖处理）。
-- 如果按钮保持按下状态超过 3 秒，它会通过调用 `Zigbee.factoryReset()` 触发恢复出厂设置。
+- 如果按钮保持按下超过 3 秒，它会通过调用`Zigbee.factoryReset()`触发恢复出厂设置。
 
-当用户因为网络或配对问题需要重新配置设备时，此功能非常有用。
+当用户因网络或配对问题需要重新配置设备时，此功能非常有用。
 
 :::tip
-官方例程仍在持续更新中，我们的文档可能无法第一时间同步最新程序，如有差异，请以 **[Espressif 的程序示例](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Light/Zigbee_On_Off_Light.ino)** 为准。
+官方例程仍在持续更新中，我们的文档可能无法第一时间同步最新程序，如有差异，请以**[Espressif 的程序示例](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Light/Zigbee_On_Off_Light.ino)**为准。
 :::
 
 ```cpp title=Zigbee_On_Off_Light.ino showLineNumbers
@@ -323,9 +322,9 @@ void loop() {
 
 #### Zigbee 灯光开关
 
-在这里，XIAO ESP32C6 作为 **Zigbee 协调器**，负责控制其他 Zigbee 设备。这里，**Zigbee 开关** 代表控制器，它绑定到 Zigbee 灯光设备并通过命令控制它，例如切换灯光的开关状态。
+在这里，XIAO ESP32C6 作为**Zigbee 协调器**，负责控制其他 Zigbee 设备。这里的**Zigbee 开关**代表控制器，它绑定到 Zigbee 灯光设备并通过开关灯等命令来控制它。
 
-##### 包含文件和定义
+##### 包含和定义
 
 ```cpp
 #include "ZigbeeCore.h"
@@ -336,9 +335,9 @@ void loop() {
 #define PAIR_SIZE(TYPE_STR_PAIR) (sizeof(TYPE_STR_PAIR) / sizeof(TYPE_STR_PAIR[0]))
 ```
 
-- `SWITCH_ENDPOINT_NUMBER` 定义为 `5`。它表示开关的端点。就像在灯泡示例中一样，端点号用于定义 Zigbee 设备内的特定功能。
-- `GPIO_INPUT_IO_TOGGLE_SWITCH` 指的是 GPIO 引脚 `9`，它作为开关按钮。
-- `PAIR_SIZE()` 是一个用于计算给定数组大小的宏，这里用于处理按钮配置。
+- `SWITCH_ENDPOINT_NUMBER`定义为`5`。它代表开关的端点。就像在灯泡示例中一样，端点号用于定义 Zigbee 设备内的特定功能。
+- `GPIO_INPUT_IO_TOGGLE_SWITCH`指向 GPIO 引脚`9`，它作为开关按钮。
+- `PAIR_SIZE()`是一个用于计算给定数组大小的宏，这里用于处理按钮配置。
 
 ##### 开关配置类型和函数
 
@@ -369,9 +368,9 @@ typedef enum {
 } SwitchState;
 ```
 
-- **`SwitchFunction`** 枚举了开关可以执行的不同功能，例如打开灯光、关闭灯光、切换、调节亮度等。
-- **`SwitchData`** 是一个将 GPIO 引脚与特定功能配对的结构体，这样在添加具有不同功能的多个按钮时可以更好地组织。
-- **`SwitchState`** 表示用户交互期间开关的不同状态（例如，空闲、按下、释放）。
+- **`SwitchFunction`**枚举开关可以执行的不同功能，如开灯、关灯、切换、调节亮度等。
+- **`SwitchData`**是一个将 GPIO 引脚与特定功能配对的结构体，这允许在添加具有不同功能的多个按钮时更好地组织。
+- **`SwitchState`**表示用户交互期间开关的不同状态（例如，空闲、按下、释放）。
 
 ##### 实例化 Zigbee 开关
 
@@ -380,10 +379,10 @@ static SwitchData buttonFunctionPair[] = {{GPIO_INPUT_IO_TOGGLE_SWITCH, SWITCH_O
 ZigbeeSwitch zbSwitch = ZigbeeSwitch(SWITCH_ENDPOINT_NUMBER);
 ```
 
-- **`buttonFunctionPair`** 是一个定义按钮功能的数组。这里，连接到 `GPIO 9` 的按钮将用于切换灯的开关状态。
-- **`zbSwitch`** 创建一个 `ZigbeeSwitch` 实例，端点号为 `5`。
+- **`buttonFunctionPair`**是一个定义按钮功能的数组。这里，连接到`GPIO 9`的按钮将用于切换灯的开关。
+- **`zbSwitch`**创建一个`ZigbeeSwitch`实例，端点号为`5`。
 
-##### Zigbee 功能和 GPIO 中断处理
+##### Zigbee 函数和 GPIO 中断处理
 
 ```cpp
 static void onZbButton(SwitchData *button_func_pair) {
@@ -393,7 +392,7 @@ static void onZbButton(SwitchData *button_func_pair) {
 }
 ```
 
-**`onZbButton()`** 在按下按钮时被调用。在这种情况下，它发送一个 Zigbee 命令来切换灯的状态。
+**`onZbButton()`**在按钮被按下时调用。在这种情况下，它发送一个 Zigbee 命令来切换灯光。
 
 ###### 处理 GPIO 事件
 
@@ -403,7 +402,7 @@ static void IRAM_ATTR onGpioInterrupt(void *arg) {
 }
 ```
 
-**`onGpioInterrupt()`** 是处理 GPIO 引脚中断的中断服务程序（ISR）。每当按钮被按下时，它会将一个事件放入队列中。
+**`onGpioInterrupt()`**是处理 GPIO 引脚中断的中断服务例程（ISR）。它在按钮被按下时将事件放入队列中。
 
 ```cpp
 static void enableGpioInterrupt(bool enabled) {
@@ -417,7 +416,7 @@ static void enableGpioInterrupt(bool enabled) {
 }
 ```
 
-**`enableGpioInterrupt()`** 根据参数 `enabled` 是 `true` 还是 `false` 来启用或禁用 GPIO 中断。
+**`enableGpioInterrupt()`**根据参数`enabled`是`true`还是`false`来启用或禁用 GPIO 中断。
 
 ##### 设置函数
 
@@ -466,11 +465,11 @@ void setup() {
 }
 ```
 
-- **串行通信初始化**：初始化串行通信用于调试。
-- **设备信息**：设置制造商和型号，允许多个设备绑定，并向 Zigbee 核心添加一个端点。
-- **网络初始化**：重启后打开 Zigbee 网络 `180` 秒，允许设备加入。
-- **按钮初始化**：为按钮设置 GPIO 引脚，创建队列来处理 GPIO 中断，并为按钮附加中断。
-- **等待绑定**：协调器等待直到绑定到灯设备后才继续。绑定完成后，它会打印绑定设备信息。
+- **串行通信初始化**：初始化串行用于调试。
+- **设备信息**：设置制造商和型号，允许多个设备绑定，并向 Zigbee 核心添加端点。
+- **网络初始化**：重启后打开 Zigbee 网络`180`秒以允许设备加入。
+- **按钮初始化**：为按钮设置 GPIO 引脚，创建队列来处理 GPIO 中断，并将中断附加到按钮。
+- **等待绑定**：协调器等待直到它绑定到灯光设备后才继续。一旦绑定，它会打印绑定的设备信息。
 
 ##### 循环函数
 
@@ -513,12 +512,11 @@ void loop() {
 }
 ```
 
-- **循环函数**通过从中断队列（`gpio_evt_queue`）读取数据并相应地更新`buttonState`来管理按钮按压。
-- 当按钮被按下并释放时（`SWITCH_RELEASE_DETECTED`），调用`onZbButton()`回调函数来切换灯光。
-- 每**10秒**，打印绑定的灯光以进行监控。
+- **循环函数**通过从中断队列（`gpio_evt_queue`）读取并相应地更新`buttonState`来管理按钮按下。
+- 当按钮被按下并释放（`SWITCH_RELEASE_DETECTED`）时，调用`onZbButton()`回调来切换灯光。
+- 每**10 秒**，打印绑定的灯光用于监控目的。
 
-:::tip
-官方例程仍在持续更新中，我们的文档可能无法第一时间同步最新程序，如有差异，请以**[Espressif的程序示例](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Switch/Zigbee_On_Off_Switch.ino)**为准。
+:::tip官方例程仍在持续更新中，我们的文档可能无法第一时间同步最新程序，如有差异，请以**[Espressif 的程序示例](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Switch/Zigbee_On_Off_Switch.ino)**为准。
 :::
 
 
@@ -701,13 +699,13 @@ void loop() {
   style={{ width: '380px', height: '640px' }}
 ></iframe>
 
-恭喜您成功完成了Zigbee控制照明项目！还有许多令人兴奋的Zigbee应用等待您去探索。继续保持出色的工作！
+恭喜您成功完成了 Zigbee 控制照明项目！还有许多令人兴奋的 Zigbee 应用等待您去探索。继续保持出色的工作！
 
 ## 参考资料
 
-- [Zigbee 示例 - Arduino](https://github.com/espressif/arduino-esp32/blob/master/libraries/Zigbee/examples)
+- [Zigbee Examples- Arduino](https://github.com/espressif/arduino-esp32/blob/master/libraries/Zigbee/examples)
 - [ESP Zigbee SDK](https://docs.espressif.com/projects/esp-zigbee-sdk/en/latest/esp32c6/introduction.html)
-- [Arduino Core for ESP32 获得Zigbee封装库](https://www.cnx-software.com/2024/08/23/arduino-core-for-esp32-gets-a-zigbee-wrapper-library/)
+- [Arduino Core for ESP32 gets a Zigbee wrapper library](https://www.cnx-software.com/2024/08/23/arduino-core-for-esp32-gets-a-zigbee-wrapper-library/)
 
 ## 技术支持与产品讨论
 

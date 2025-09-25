@@ -47,7 +47,7 @@ Presentamos nuestros avanzados **Módulos de Sensor mmWave** para XIAO, diseñad
 | **Parámetros Generales**   |                                      |
 | ------------------------ | ------------------------------------ |
 | **Firmware mmWave**      | Detección de Respiración y Latidos |
-| **Rango de Detección**      | Detección de Presencia Estática Humana: hasta 6 Metros<br />Detección de Respiración y Latidos: 1.5 Metros|
+| **Rango de Detección**      | Detección de Presencia Humana Estática: hasta 6 Metros<br />Detección de Respiración y Latidos: 1.5 Metros|
 | **MCU**                  | Seeed Studio XIAO ESP32C6 |
 | **LED**                  | LED RGB WS2812 |
 | **Botón**               | Reinicio |
@@ -86,7 +86,7 @@ Presentamos nuestros avanzados **Módulos de Sensor mmWave** para XIAO, diseñad
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/tilt_installation.png" style={{width:600, height:'auto'}}/></div>
 
 :::note
-Por favor usa este módulo en un espacio abierto, y mantente fuera de los siguientes escenarios dentro del rango de detección para prevenir interferencia con el módulo:
+Por favor use este módulo en un espacio abierto, y manténgase fuera de los siguientes escenarios dentro del rango de detección para prevenir interferencia con el módulo:
 
 - Múltiples radares instalados demasiado cerca entre sí  
 - El viento mueve cortinas y balancea plantas
@@ -125,7 +125,7 @@ Una vez que tu placa esté configurada, procede con los siguientes pasos:
   </div>
 2. **Instalar la Librería en Arduino IDE**:
    - Abre el Arduino IDE.
-   - Navega a **Sketch > Incluir Librería > Agregar Librería .ZIP...**.
+   - Navega a **Sketch > Incluir Librería > Añadir Librería .ZIP...**.
    - Selecciona el archivo `.zip` descargado para instalar la librería.
 3. **Conectar tu Placa XIAO**:
    - Conecta tu placa XIAO a tu computadora vía USB.
@@ -192,8 +192,7 @@ if (mmWave.update(100)) {
    Serial.printf("distance: %.2f\n", distance);
  }
 }
-}
-```
+}```
 
 La salida será la siguiente en el Monitor Serie de Arduino:
 
@@ -439,7 +438,7 @@ La salida será la siguiente en el Monitor Serie de Arduino:
 
 ## API del Módulo de Respiración
 
-Este ejemplo usa la clase `SEEED_MR60BHA2` para interfaz con el sensor MR60BHA2 para monitoreo cardíaco y respiratorio. Esto es lo que hace cada función clave:
+Este ejemplo usa la clase `SEEED_MR60BHA2` para interactuar con el sensor MR60BHA2 para monitoreo cardíaco y respiratorio. Esto es lo que hace cada función clave:
 
 - **`mmWave.begin(&mmWaveSerial)`**:
   - Inicializa el sensor para comunicación usando la interfaz serie especificada. Establece la conexión entre la placa XIAO y el sensor MR60BHA2.
@@ -509,9 +508,13 @@ This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sens
 ## Actualización del firmware del módulo
 
 :::caution
-Modificar el firmware del radar es una operación riesgosa, así que asegúrate de leer esta sección cuidadosamente antes de seguir cada paso con atención. Ten en cuenta que si un paso no se realiza correctamente, el Radar puede quedar inutilizado o inservible.
+Modificar el firmware del radar es una operación riesgosa, así que asegúrate de leer esta sección cuidadosamente antes de seguir cada paso con cuidado. Ten en cuenta que si un paso no se realiza correctamente, el Radar puede quedar inutilizado o inservible.
 
-**Nota especial, si compraste el Fall Radar MR60FDA2, por favor no flashees el firmware ilegalmente de la siguiente manera, ¡¡¡¡seguramente dañará tu dispositivo!!!!**
+**Nota especial, si compraste el Fall Radar MR60FDA2, por favor no flashees el firmware ilegalmente de la siguiente manera, ¡¡¡¡seguramente inutilizará tu dispositivo!!!!**
+:::
+
+:::tip
+Si prefieres no leer el texto, también puedes consultar **[el video](https://youtu.be/uic8__FFzos)** para actualizar el firmware. Dado que el firmware ESPHome para XIAO será sobrescrito a continuación, es posible que necesites volver a flashear el firmware ESPHome para XIAO en esta [página web](https://limengdu.github.io/MR60BHA2_ESPHome_external_components/) después de actualizar el firmware del radar.
 :::
 
 Primero, conecta los módulos XIAO ESP32C6 y MR60BHA2 juntos. Luego usa el siguiente código para programar XIAO.
@@ -574,7 +577,7 @@ El firmware 1.6.12 tiene las siguientes actualizaciones:
 
 2. Optimizada la estabilidad de seguimiento para objetivos que se mueven entre 0-3 metros, resolviendo las inexactitudes previas en las coordenadas del objetivo. Sin embargo, la tasa de actualización de informes ha disminuido.
 
-3. Precisión de respiración y frecuencia cardíaca—Sin actualizaciones en esta versión. Continúa la optimización del entrenamiento de aprendizaje automático relacionado. Se lanzará una actualización de firmware para mejorar la precisión de respiración y frecuencia cardíaca alrededor de fin de mes. El algoritmo anterior de respiración y frecuencia cardíaca tenía problemas fundamentales, que han sido abordados.
+3. Precisión de respiración y frecuencia cardíaca—Sin actualizaciones en esta versión. La optimización continua del entrenamiento de aprendizaje automático relacionado está en curso. Una actualización de firmware para mejorar la precisión de respiración y frecuencia cardíaca será lanzada a finales de mes. El algoritmo anterior de respiración y frecuencia cardíaca tenía problemas fundamentales, que han sido abordados.
 
 :::
 
@@ -591,7 +594,7 @@ El firmware 1.6.12 tiene las siguientes actualizaciones:
 El firmware 1.6.4 tiene las siguientes actualizaciones:
 
 1. Optimizada la función de detección de respiración y frecuencia cardíaca, corrigiendo el error donde pequeños movimientos corporales causaban pérdida de datos.  
-2. Mejorada la función de detección de presencia 3D: la respiración y frecuencia cardíaca pueden detectarse dentro de 1.5 metros, y la presencia puede detectarse en un rango de 1.5 a 6 metros.  
+2. Mejorada la función de detección de presencia 3D: la respiración y frecuencia cardíaca pueden detectarse dentro de 1.5 metros, y la presencia puede detectarse dentro de un rango de 1.5 a 6 metros.  
 3. Agregada una función de detección de personal, capaz de detectar hasta tres individuos dentro de un rango de 6 metros.
 
 :::
@@ -648,14 +651,14 @@ Después de que se complete la actualización, saltará automáticamente al modo
 6. Necesitas volver a flashear el firmware de XIAO ESP32C6 después de que se complete la actualización.
 
 :::tip
-Si en los pasos anteriores has operado incorrectamente causando que ocurra una anomalía y no has podido intentar grabar el firmware nuevamente y el radar no está funcionando correctamente, entonces el radar puede haber sufrido un brick debido a firmware corrupto. La única manera de intentar recuperar el dispositivo es referirse a los archivos y documentación **[aquí](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)**. Sin embargo, por favor entiende que no proporcionamos soporte técnico y asistencia para el dispositivo dañado debido a operación incorrecta.
+Si en los pasos anteriores has operado incorrectamente causando que ocurra una anomalía y no has podido intentar grabar el firmware nuevamente y el radar no está funcionando correctamente, entonces el radar puede haber sufrido un brick debido a firmware corrupto. La única manera de intentar recuperar el dispositivo es consultar los archivos y documentación **[aquí](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)**. Sin embargo, por favor entiende que no proporcionamos soporte técnico y asistencia para el dispositivo inutilizado debido a operación incorrecta.
 :::
 
 ## Abierto para Personalización
 
-¿Quieres personalizar el kit para que se ajuste a tus aplicaciones únicas?
+¿Quieres personalizar el kit para que se adapte a tus aplicaciones únicas?
 
-Para más información sobre la generación de datos de nube de puntos 3D y configuración de zona de interferencia al personalizar módulos mmWave. Seeed proporciona servicios de personalización de I+D y fabricación integral para desarrollo rápido desde concepto hasta producción. Contáctanos en [iot@seeed.cc](mailto:iot@seeed.cc) para obtener más información.
+Para más información sobre la generación de datos de nube de puntos 3D y configuración de zona de interferencia al personalizar módulos mmWave. Seeed proporciona servicios de personalización y fabricación de I+D integral para desarrollo rápido desde el concepto hasta la producción. Contáctanos en [iot@seeed.cc](mailto:iot@seeed.cc) para obtener más información.
 
 :::danger Descripción del Servicio Personalizado
 El firmware y algoritmos del radar no son de código abierto, y los parámetros complejos del radar como nube de puntos 3D, distancia de detección, rango, etc., requieren servicios personalizados, que pueden involucrar tarifas de personalización adicionales y MOQs.
@@ -671,8 +674,7 @@ El firmware y algoritmos del radar no son de código abierto, y los parámetros 
 - **Software GUI MR60BHA2**: [Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip)
 - **Esquemático del Sensor mmWave V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
 - **Especificación Técnica del Módulo MR60BHA2**: [MR60BHA2_Breathing_and_Heartbeat_Module.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/MR60BHA2_Breathing_and_Heartbeat_Module.pdf)
-- **Manual de Interfaz Tiny Frame MR60BHA2**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)
-- **Método de Recuperación de Firmware del Radar vía Jlink**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
+- **Manual de Interfaz Tiny Frame MR60BHA2**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)- **Método de Recuperación de Firmware del Radar vía Jlink**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
 
 ## Soporte Técnico y Discusión de Productos
 

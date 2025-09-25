@@ -1,14 +1,14 @@
 ---
 description: Usando XIAO ESP32-S3 en MicroBlocks.
 title: MicroBlocks
-image: https://files.seeedstudio.com/wiki/microblocks/microblocks.png
+image: https://files.seeedstudio.com/wiki/microblocks/microblocks.webp
 slug: /es/xiao_esp32s3_microblocks
 last_update:
   date: 09/09/2025
   author: MicroBlocks
 ---
 
-# Usando XIAO ESP32-S3 en MicroBlocks
+# XIAO ESP32-S3 con MicroBlocks
 
 ## MicroBlocks
 
@@ -20,7 +20,6 @@ MicroBlocks es un lenguaje de bloques que facilita a los principiantes (de 9 añ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-esp32s3-sense-pinout.jpg" style={{width:600, height:'auto'}}/></div>
 
-
 Esta placa ofrece conectividad Wi-Fi y BLE a través de una antena externa (incluida).
 
 La placa tiene 11 pines GPIO (pines 0..10).
@@ -29,15 +28,13 @@ Los pines 0..5 y 8..10 pueden ser entradas analógicas.
 
 El pin 13 es el LED amarillo del usuario (invertido).
 
-La versión Sense incluye una placa de extensión con una cámara
-(ya sea una cámara OV2640 con resolución 1600x1200 o una OV3660 con 2048x1536)
-y un micrófono digital.
+La versión Sense incluye una placa de extensión con una cámara (ya sea una cámara OV2640 con resolución de 1600x1200 o una OV3660 con 2048x1536) y un micrófono digital.
 
-**Nota: El soporte para cámara aún no ha sido implementado en MicroBlocks pero puede ser añadido en el futuro.**
+**Nota: El soporte para cámara aún no se ha implementado en MicroBlocks pero puede agregarse en el futuro.**
 
 ## Instalando el Firmware de MicroBlocks
 
-El firmware de MicroBlocks para esta placa puede ser instalado directamente desde el editor de MicroBlocks.
+El firmware de MicroBlocks para esta placa se puede instalar directamente desde el editor de MicroBlocks.
 
 Conecta la placa a tu computadora con un cable USB de datos (**no** un cable solo de alimentación).
 
@@ -67,8 +64,7 @@ Una vez que el firmware esté instalado, puedes conectar la placa a MicroBlocks 
 
 Usualmente no es necesario entrar manualmente al modo bootloader cuando se instala el firmware de MicroBlocks en placas ESP32.
 
-Para entrar al modo bootloader, si es necesario, mantén presionado el botón B (boot)
-mientras presionas y sueltas el botón R (reset).
+Para entrar al modo bootloader, si es necesario, mantén presionado el botón B (boot) mientras presionas y sueltas el botón R (reset).
 También puedes conectar la placa a tu computadora mientras mantienes presionado el botón B.
 
 **Los pequeños botones B y R a cada lado del conector USB son complicados;
@@ -103,15 +99,14 @@ MicroBlocks es un entorno de programación **en vivo** por lo que puedes probar 
 Haz clic en bloques y scripts para ejecutarlos.
 Arrastra bloques al panel de scripts y ensámblalos para crear scripts.
 
-Tu código se almacena en memoria flash persistente y puede ejecutarse incluso cuando la placa
-no está conectada al editor de MicroBlocks.
-Los scripts bajo un bloque **cuando se inicia** se ejecutan cuando la placa se enciende.
+Tu código se almacena en memoria flash persistente y puede ejecutarse incluso cuando la placa no está conectada al editor de MicroBlocks.
+Los scripts bajo un bloque **when started** se ejecutan cuando la placa se enciende.
 
 MicroBlocks soporta concurrencia. Hasta diez scripts pueden ejecutarse al mismo tiempo.
 
 Además de sus muchos bloques integrados, MicroBlocks tiene casi 200 librerías
 que soportan características adicionales y periféricos.
-Haz clic en el botón **Añadir Librería** para añadir librerías.
+Haz clic en el botón **Agregar Librería** para agregar librerías.
 
 ## Ejemplo
 
