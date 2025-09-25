@@ -234,6 +234,7 @@ Recuerda remover el usb, de lo contrario la interfaz no será detectada.
 :::
 
 Por ejemplo：
+
 1. Ejemplo de salida al identificar el puerto del brazo líder (por ejemplo, `/dev/tty.usbmodem575E0031751` en Mac, o posiblemente `/dev/ttyUSB0` en Linux):
 2. Ejemplo de salida al identificar el puerto del brazo seguidor (por ejemplo, `/dev/tty.usbmodem575E0032081` en Mac, o posiblemente `/dev/ttyUSB1` en Linux):
 
@@ -493,6 +494,7 @@ lerobot-teleoperate \
     --teleop.id=bi_starai_leader \
     --display_data=true
 ```
+
 </details>
 
 :::tip
@@ -674,7 +676,6 @@ En Linux, si las teclas de flecha izquierda y derecha y la tecla escape no tiene
 Una vez que estés familiarizado con la grabación de datos, puedes crear un conjunto de datos más grande para entrenamiento. Una buena tarea inicial es agarrar un objeto en diferentes posiciones y colocarlo en una caja pequeña. Recomendamos grabar al menos 50 episodios, con 10 episodios por ubicación. Mantén la cámara fija y mantén un comportamiento de agarre consistente durante toda la grabación. Además, asegúrate de que el objeto que estás manipulando sea visible en la cámara. Una buena regla general es que deberías poder completar la tarea mirando solo la imagen de la cámara.
 :::
 
-
 ## Reproducir un episodio
 
 Ahora intenta reproducir el primer episodio en tu robot:
@@ -734,7 +735,6 @@ lerobot-train \
 
 </details>
 
-
 1. `policy.type` soporta entrada `diffusion,pi0,pi0fast`
 1. Proporcionamos el conjunto de datos como parámetro: `dataset.repo_id=starai/record-test`.
 
@@ -750,7 +750,6 @@ lerobot-train \
   --resume=true
 ```
 
-
 <details>
 <summary>Si Entrenando comando de [política SmolVLA](https://huggingface.co/docs/lerobot/smolvla): </summary>
 
@@ -759,6 +758,7 @@ pip install -e ".[smolvla]"
 ```
 
 ### Entrenamiento
+
 ```bash
 lerobot-train \
   --policy.path=lerobot/smolvla_base \ # <- Use pretrained fine-tuned model
@@ -768,7 +768,8 @@ lerobot-train \
   --output_dir=outputs/train/my_smolvla \
   --job_name=my_smolvla_training \
   --policy.device=cuda \
-  --wandb.enable=true```
+  --wandb.enable=true
+```
 
 ### Evaluar
 
@@ -789,19 +790,18 @@ lerobot-record \
   --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
 ```
 
-
 </details>
-
 
 <details>
 <summary>Si entrenas [política Libero](https://huggingface.co/docs/lerobot/libero) comando: </summary>
 
 LIBERO es un benchmark diseñado para estudiar el aprendizaje robótico de por vida. La idea es que los robots no solo serán preentrenados una vez en una fábrica, sino que necesitarán seguir aprendiendo y adaptándose con sus usuarios humanos a lo largo del tiempo. Esta adaptación continua se llama aprendizaje de por vida en la toma de decisiones (LLDM), y es un paso clave hacia la construcción de robots que se conviertan en verdaderos asistentes personalizados.
 
-  - [Artículo de LIBERO](https://arxiv.org/abs/2306.03310)
-  - [Repositorio original de LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)
+- [Artículo de LIBERO](https://arxiv.org/abs/2306.03310)
+- [Repositorio original de LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)
 
 LIBERO incluye cinco suites de tareas:
+
 - LIBERO-Spatial (libero_spatial) – tareas que requieren razonamiento sobre relaciones espaciales.
 
 - LIBERO-Object (libero_object) – tareas centradas en manipular diferentes objetos.
@@ -831,12 +831,11 @@ lerobot-train \
   --eval_freq=1000 \
 ```
 
-
 ## Evaluación con LIBERO  
 
 Para instalar LIBERO, después de seguir las instrucciones oficiales de LeRobot, simplemente ejecuta: `pip install -e ".[libero]"`
 
-### Evaluación de suite única:
+### Evaluación de suite única
 
 ```bash
 lerobot-eval \
@@ -866,11 +865,7 @@ lerobot-eval \
 
 - Pasa una lista separada por comas a `--env.task` para evaluación multi-suite.
 
-
-
 </details>
-
-
 
 ## Evalúa tu política
 

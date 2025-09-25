@@ -234,6 +234,7 @@ usbを取り外すことを忘れないでください。そうしないとイ�
 :::
 
 例：
+
 1. リーダーアームのポートを識別する際の出力例（例：Macでは `/dev/tty.usbmodem575E0031751`、Linuxでは `/dev/ttyUSB0` の可能性があります）：
 2. フォロワーアームのポートを識別する際の出力例（例：Macでは `/dev/tty.usbmodem575E0032081`、Linuxでは `/dev/ttyUSB1` の可能性があります）：
 
@@ -493,6 +494,7 @@ lerobot-teleoperate \
     --teleop.id=bi_starai_leader \
     --display_data=true
 ```
+
 </details>
 
 :::tip
@@ -674,7 +676,6 @@ Linuxでは、データ記録中に左右の矢印キーとエスケープキー
 データ記録に慣れたら、トレーニング用により大きなデータセットを作成できます。良い開始タスクは、異なる位置でオブジェクトを掴み、小さな箱に置くことです。少なくとも50エピソード、場所ごとに10エピソードを記録することをお勧めします。記録中はカメラを固定し、一貫した掴み動作を維持してください。また、操作しているオブジェクトがカメラに映っていることを確認してください。良い経験則は、カメラ画像だけを見てタスクを完了できることです。
 :::
 
-
 ## エピソードの再生
 
 ロボットで最初のエピソードを再生してみましょう：
@@ -734,7 +735,6 @@ lerobot-train \
 
 </details>
 
-
 1. `policy.type`は`diffusion,pi0,pi0fast`の入力をサポートします
 1. データセットをパラメータとして提供します：`dataset.repo_id=starai/record-test`。
 
@@ -750,7 +750,6 @@ lerobot-train \
   --resume=true
 ```
 
-
 <details>
 <summary>[SmolVLA policy](https://huggingface.co/docs/lerobot/smolvla)をトレーニングする場合のコマンド： </summary>
 
@@ -759,6 +758,7 @@ pip install -e ".[smolvla]"
 ```
 
 ### トレーニング
+
 ```bash
 lerobot-train \
   --policy.path=lerobot/smolvla_base \ # <- Use pretrained fine-tuned model
@@ -768,7 +768,8 @@ lerobot-train \
   --output_dir=outputs/train/my_smolvla \
   --job_name=my_smolvla_training \
   --policy.device=cuda \
-  --wandb.enable=true```
+  --wandb.enable=true
+```
 
 ### 評価
 
@@ -789,19 +790,18 @@ lerobot-record \
   --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
 ```
 
-
 </details>
-
 
 <details>
 <summary>[Libero policy](https://huggingface.co/docs/lerobot/libero)のトレーニングコマンド： </summary>
 
 LIBEROは生涯ロボット学習を研究するために設計されたベンチマークです。ロボットは工場で一度だけ事前訓練されるのではなく、時間をかけて人間のユーザーと共に学習し適応し続ける必要があるという考えです。この継続的な適応は意思決定における生涯学習（LLDM）と呼ばれ、真にパーソナライズされたヘルパーとなるロボットの構築に向けた重要なステップです。
 
-  - [LIBERO論文](https://arxiv.org/abs/2306.03310)
-  - [オリジナルLIBEROリポジトリ](https://github.com/Lifelong-Robot-Learning/LIBERO)
+- [LIBERO論文](https://arxiv.org/abs/2306.03310)
+- [オリジナルLIBEROリポジトリ](https://github.com/Lifelong-Robot-Learning/LIBERO)
 
 LIBEROには5つのタスクスイートが含まれています：
+
 - LIBERO-Spatial (libero_spatial) – 空間関係についての推論を必要とするタスク。
 
 - LIBERO-Object (libero_object) – 異なるオブジェクトの操作を中心としたタスク。
@@ -830,7 +830,6 @@ lerobot-train \
   --eval.n_episodes=1 \
   --eval_freq=1000 \
 ```
-
 
 ## LIBEROでの評価  
 
@@ -866,11 +865,7 @@ lerobot-eval \
 
 - マルチスイート評価には`--env.task`にカンマ区切りのリストを渡します。
 
-
-
 </details>
-
-
 
 ## ポリシーの評価
 
