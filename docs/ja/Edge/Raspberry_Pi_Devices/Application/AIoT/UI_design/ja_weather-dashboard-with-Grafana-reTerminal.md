@@ -87,15 +87,15 @@ sudo docker run -d --name influxdb -p 8086:8086 influxdb:2.1.1
 
 ![image-20220124135326814](https://files.seeedstudio.com/wiki/ESP32-InfluxDB-Grafana/image-20220124135326814.png)
 
-- **Step 7.** ブラウザを開き、`http://yourip:8086`（あなたのIP）を入力します。「Get Started」をクリックして使用を開始します。
+- **ステップ 7.** ブラウザを開き、`http://yourip:8086`（あなたのIP）を入力します。「Get Started」をクリックして使用を開始します。
 
 ![image-20220124135533274](https://files.seeedstudio.com/wiki/ESP32-InfluxDB-Grafana/image-20220124135533274.png)
 
-- **Step 8.** `Organization Name` と `Bucket Name` を記録し、「Continue」をクリックします。
+- **ステップ 8.** `Organization Name` と `Bucket Name` を記録し、「Continue」をクリックします。
 
 ![image-20220124135632177](https://files.seeedstudio.com/wiki/ESP32-InfluxDB-Grafana/image-20220124135632177.png)
 
-- **Step 9.** `Data > API Tokens` をクリックします。
+- **ステップ 9.** `Data > API Tokens` をクリックします。
 
 ![image-20220124140028985](https://files.seeedstudio.com/wiki/ESP32-InfluxDB-Grafana/image-20220124140028985.png)
 
@@ -107,7 +107,7 @@ Azure と InflexDB の設定が完了しました。次に ESP32 の設定に移
 
 ![ESP32 Circuit Diagram](https://www.the-diy-life.com/wp-content/uploads/2021/12/ESP32-Circuit-Diagram-1024x576.jpg)
 
-- **Step 1.** [Arduino IDE](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を開き、[ライブラリをインストール](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/)します。ここでは2つのインストール方法を提供します。
+- **ステップ 1.** [Arduino IDE](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を開き、[ライブラリをインストール](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/)します。ここでは2つのインストール方法を提供します。
 
 1. Library Manager を使用
 

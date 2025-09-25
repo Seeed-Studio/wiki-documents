@@ -123,7 +123,7 @@ optional arguments:
 
 ```
 
-### Convert Tensorflow Model to TFlite Model
+### 将 Tensorflow 模型转换为 TFlite 模型
 
 ```
 tflite_convert --saved_model_dir=YOUR_MODEL_PATH --output_file=YOUR_MODEL_NAME.tflite
@@ -147,7 +147,7 @@ sudo apt-get update
 sudo apt-get install edgetpu-compiler
 ```
 
-#### Transform TFlite Model to Edge TPU Model
+#### 将 TFlite 模型转换为 Edge TPU 模型
 
 ```
 edgetpu_compiler YOUR_MODEL_NAME.tflite
@@ -235,7 +235,7 @@ optional arguments:
 
 ```
 
-### Convert TFlite Model to Edge TPU Model
+### 将 TFlite 模型转换为 Edge TPU 模型
 
 #### Install edgetpu compiler
 
@@ -249,7 +249,7 @@ sudo apt-get update
 sudo apt-get install edgetpu-compiler
 ```
 
-#### Transform TFlite Model to Edge TPU Model
+#### 将 TFlite 模型转换为 Edge TPU 模型
 
 ```
 edgetpu_compiler resnet18.tflite
@@ -267,7 +267,7 @@ edgetpu_compiler resnet18.tflite
 pip install ultralytics 
 ```
 
-### Convert YOLO Model to egde TPU Model
+### 将 YOLO 模型转换为边缘 TPU 模型
 
 ```
 # For example, if you want to convert yolov8n.pt to yolov8n_integer_quant_edgetpu.tflite
@@ -276,7 +276,7 @@ yolo export model=yolov8n.pt format=edge int8=True
 
 ```
 
-The result should be like this:
+结果应该像这样：
 
 ```
 jiahao@PC:~/yolov8s_saved_model$ ls

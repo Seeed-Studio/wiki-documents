@@ -62,8 +62,8 @@ GD32VF103CBT6 是基于芯来科技的蜂鸟内核。支持 RV32IMAC 指令集�
 
 **所需材料**
 
-+ [Wio Lite RISC-V (GD32VF103) - With ESP8266](https://www.seeedstudio.com/Wio-Lite-RISC-V-GD32VF103-p-4293.html)
-+ [USB 3.1 Type C to A Cable](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A.html)
++ [Wio Lite RISC-V (GD32VF103) - 带有 ESP8266](https://www.seeedstudio.com/Wio-Lite-RISC-V-GD32VF103-p-4293.html)
++ [USB 3.1 Type C 转 A 线缆](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A.html)
 
 - **步骤 1** 使用 USB Type C 转 A 线缆连接 Wio Lite 和您的 PC，用于供电和下载串口。
 
@@ -403,7 +403,7 @@ void loop()
 
 - **[PDF]** [GD32VF103_Datasheet_Rev1.0](https://files.seeedstudio.com/wiki/Bazaar_Document/GD32VF103_Datasheet_Rev1.0.pdf)
 - **[PDF]** [GD32VF103_User_Manual_EN_V1.0](https://files.seeedstudio.com/wiki/Bazaar_Document/GD32VF103_User_Manual_EN_V1.0.pdf)
-- **[Zip]** [DFU Tool](https://files.seeedstudio.com/wiki/GD32VF103/res/GD32_MCU_Dfu_Tool_V3.8.1.5784_1.rar)
+- **[Zip]** [DFU 工具](https://files.seeedstudio.com/wiki/GD32VF103/res/GD32_MCU_Dfu_Tool_V3.8.1.5784_1.rar)
 
 
 ## 技术支持与产品讨论

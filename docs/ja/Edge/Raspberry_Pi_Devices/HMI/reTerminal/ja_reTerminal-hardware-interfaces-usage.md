@@ -292,7 +292,7 @@ LCD用のタッチパネルは**6ピンFPC**コネクタ経由で接続されて
 sudo apt install evtest
 ```
 
-- **Step 2.** Open the evtest tool
+- **ステップ 2.** evtestツールを開く
 
 ```sh
 evtest
@@ -404,13 +404,13 @@ reTerminalの前面には2つのユーザープログラマブルLEDがありま
 sudo -i
 ```
 
-- **Step 2.** Enter the following directory
+- **ステップ 2.** 次のディレクトリに入る
 
 ```sh
 cd /sys/class/leds
 ```
 
-- **Step 3.** Enter the following directory to control the **Green Color USR LED**
+- **ステップ 3.** **緑色 USR LED**を制御するために次のディレクトリに入る
 
 ```sh
 cd usr_led0
@@ -558,7 +558,7 @@ reTerminalには **Levelek LTR-303ALS-01** デジタル光センサーが搭載�
 sudo -i
 ```
 
-- **Step 2.** Enter the following directory
+- **ステップ 2.** 次のディレクトリに入る
 
 ```sh
 cd /sys/bus/iio/devices/iio:device0
@@ -608,7 +608,7 @@ evtest
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/evtest.png" alt="pir" width="680" height="auto"/></p>
 
-- **Step 2.** **1** を入力すると、X、Y、Z の加速度値が表示されます
+- **ステップ 2.** **1** を入力すると、X、Y、Z の加速度値が表示されます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/accel-test.png" alt="pir" width="700" height="auto"/></p>
 
@@ -635,13 +635,13 @@ reTerminal には内蔵ブザーがあります。これはソフトウェアを
 
 ### 使用方法
 
-- **Step 1.** root アカウント権限を有効にします
+- **ステップ 1.** root アカウント権限を有効にします
 
 ```sh
 sudo -i
 ```
 
-- **Step 2.** Enter the following directory
+- **ステップ 2.** 次のディレクトリに入る
 
 ```sh
 cd /sys/class/leds/usr_buzzer

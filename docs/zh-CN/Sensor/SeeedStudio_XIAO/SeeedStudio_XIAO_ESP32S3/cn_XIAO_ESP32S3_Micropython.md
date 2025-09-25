@@ -103,7 +103,7 @@ pip install esptool
 esptool.py --port COMXX erase_flash
 ```
 
-Now proceed to install the micropython firmware using this command
+现在使用以下命令安装 micropython 固件
 
 ```cpp
 esptool.py --port COMXX --baud 460800 --before default_reset --after hard_reset --chip esp32s3  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x0 firmware.bin 

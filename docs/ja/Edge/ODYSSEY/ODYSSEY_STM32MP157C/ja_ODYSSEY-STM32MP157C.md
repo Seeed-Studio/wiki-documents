@@ -18,7 +18,6 @@ ODYSSEY – STM32MP157C は、650MHzで動作するデュアルコア Arm-Cortex
 
 [![今すぐ購入](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)
 
-
 ## 特徴
 
 - Cortex-M4 を統合したデュアルコア Arm-Cortex-A7 プロセッサ
@@ -39,8 +38,6 @@ ODYSSEY – STM32MP157C は、650MHzで動作するデュアルコア Arm-Cortex
 |寸法|56mm x 85mm|
 |動作温度| 0 ~ 75 ℃ |
 
-
-
 ## 応用例
 
 - 産業用途（CAN-イーサネットゲートウェイなど）
@@ -52,7 +49,6 @@ ODYSSEY – STM32MP157C は、650MHzで動作するデュアルコア Arm-Cortex
 ## ハードウェア概要
 
 <iframe src="https://3dwarehouse.sketchup.com/embed/6eecf961-5dd1-4baf-94e4-72f130c5542d" frameBorder={0} scrolling="no" marginHeight={0} marginWidth={0} width={580} height={326} allowFullScreen />
-
 
 ODYSSEY – STM32MP157C は、キャリアボードと Seeed SoM - STM32MP157C の 2 部構成です。
 
@@ -203,9 +199,9 @@ ODYSSEY – STM32MP157Cが起動したら、コンソールを通じてLinuxシ�
 - **ステップ1.** USB to TTLアダプターを使用してUARTポートをPC/Macに接続します。USB to TTLアダプターを持っていない場合は、[こちら](https://www.seeedstudio.com/catalogsearch/result/?q=UART)をクリックして購入できます。（RX->TX、TX->RX）
 
 - **ステップ2.** 以下のシリアルデバッグツールを使用します。ボーレートは115200です：
-    - Windows : [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)を使用し、```Serial```プロトコルを選択します。ODYSSEY – STM32MP157Cに対応するCOMポート、```115200```ボーレート、8ビット、パリティなし、ストップビット1、フロー制御なしを入力します。
-    - Linux : USB to TTLアダプターに応じて、```screen /dev/ttyACM0(,1,など) 115200```または```screen /dev/ttyUSB0(,1,など) 115200```を使用します。
-    - Mac : USB to TTLアダプターに応じて、```screen /dev/cu.usbserial1412(,1422,など) 115200```または```screen /dev/cu.usbmodem1412(,1422,など) 115200```を使用します。
+  - Windows : [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)を使用し、```Serial```プロトコルを選択します。ODYSSEY – STM32MP157Cに対応するCOMポート、```115200```ボーレート、8ビット、パリティなし、ストップビット1、フロー制御なしを入力します。
+  - Linux : USB to TTLアダプターに応じて、```screen /dev/ttyACM0(,1,など) 115200```または```screen /dev/ttyUSB0(,1,など) 115200```を使用します。
+  - Mac : USB to TTLアダプターに応じて、```screen /dev/cu.usbserial1412(,1422,など) 115200```または```screen /dev/cu.usbmodem1412(,1422,など) 115200```を使用します。
 
 - **ステップ3.** デフォルトのユーザー名は```debian```、パスワードは```temppwd```です。
 
@@ -215,12 +211,14 @@ ODYSSEY – STM32MP157Cが起動したら、コンソールを通じてLinuxシ�
 ls /dev/cu.usb* (Mac)
 ls /dev/ttyACM* (Linux)
 ```
+
 以下のようなフィードバックが得られるはずです：
 
 ```
 /dev/cu.usbmodem14XX （XXは使用したUSBポートに応じて変わります）（Macの場合）
 /dev/ttyACMX （Xは使用したUSBポートに応じて変わります）（Linuxの場合）
 ```
+
 その後、上記の手順に従ってシリアル接続を介してODYSSEY – STM32MP157Cに接続します。通常、初回起動時にこれを行い、その後ODYSSEY – STM32MP157CをWi-Fi接続およびSSH接続の設定に進めます。
 
 **ネットワーク設定**
@@ -288,6 +286,7 @@ connmanctl> quit
 ```
 
 次のコマンドを使用してODYSSEY – STM32MP157CのIPアドレスを確認します。
+
 ```
 ifconfig
 ```
@@ -307,6 +306,7 @@ sudo apt install ssh -y
 - Windowsユーザー: PUTTYを使用し、SSHプロトコルを選択して正しいIPアドレスを入力し、「Open」をクリックします。ユーザー名は`debian`、パスワードは`temppwd`です。
 
 - Linux/Macユーザー:
+
 ```
 ssh debian@IP
 // パスワード: temppwd
@@ -462,7 +462,7 @@ Connection successful
 - **ステップ 2.** CAN BUS Shield V2 を Seeeduino V4.2 に取り付けます。
 - **ステップ 3.** ジャンパーワイヤーを使用して、Raspberry Pi 用の 2 Channel CAN BUS FD Shield を CAN-BUS Shield V2 に接続します。
 
-|2 Channel CAN BUS FD Shield for Raspberry Pi|CAN-BUS Shield V2|
+|Raspberry Pi用2チャンネル CAN BUS FD シールド|CAN-BUS シールド V2|
 |:----:|:------:|
 |CAN_0_L|CANL|
 |CAN_0_H|CANH|
@@ -574,7 +574,6 @@ python3 QtViewerForStm32p1.py
 `Seeeduino V4.2` 上で [CanBus_SendForArduino.ino](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/examples/CanBus_SendForArduino.ino) を実行します。
 
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/can_bus_demo.png)
-
 
 ## GPIO を操作する
 
@@ -833,7 +832,7 @@ dtb=stm32mp1-seeed-npi-full-rpi-exp.dtb
 ```
 sudo reboot
 ```
- 
+
 - **ステップ 5.** `seeed-linux-dtverlays` フォルダに移動し、以下のように soundstate を設定します：
 
 ```sh
@@ -885,7 +884,9 @@ aplay -Dhw:0 -r 48000 test.wav
 ReSpeaker 2-Mics Pi HAT の詳細については [wiki](https://wiki.seeedstudio.com/ja/ReSpeaker_2_Mics_Pi_HAT/) を参照してください。
 
 ## リソース
+
 -----
+
 - **[PDF]** [STM32MP157C データシート](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/stm32mp157c.pdf)
 - **[SCH]** [Seeed SoM - STM32MP157C](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_191212.pdf)
 - **[SCH]** [ODYSSEY-STM32MP157C](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/Seeed%20NPi%20-%20STM32MP157C%20v1.0_191212.pdf)
@@ -896,8 +897,8 @@ ReSpeaker 2-Mics Pi HAT の詳細については [wiki](https://wiki.seeedstudio
 - **[PDF]** [STM32 リファレンスガイド](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/STM32+Reference+Guide+V1.0.pdf)
 - **[URL]** [高度なシステム開発](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C)
 
-
 # ODYSSEY-STM32MP157C 高度なシステム開発
+
 - [在庫状況](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-Availability)
 - [ベンダー文書](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-VendorDocumentation)
 - [基本要件](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-BasicRequirements)
@@ -920,14 +921,15 @@ ReSpeaker 2-Mics Pi HAT の詳細については [wiki](https://wiki.seeedstudio
 - [コメント](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-Comments)
 
 ## 技術サポートと製品ディスカッション
+
 私たちの製品をお選びいただきありがとうございます！製品をご利用いただく際に、できる限りスムーズな体験を提供するために、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

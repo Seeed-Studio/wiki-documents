@@ -129,8 +129,7 @@ last_update:
 cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam
 
  ```
-
-Then or Even you can use Thonny IDE to run the python script.
+然后或者你甚至可以使用 Thonny IDE 来运行 Python 脚本。
 
  ```sh
 python Tracking.py

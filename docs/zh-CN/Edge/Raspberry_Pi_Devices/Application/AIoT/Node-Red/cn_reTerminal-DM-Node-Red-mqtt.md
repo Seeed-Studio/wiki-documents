@@ -68,25 +68,25 @@ MQTT 是 Node-RED 支持的众多协议之一，使其成为构建基于 MQTT �
 sudo apt-get update
 ```
 
-STEP 2: Install Mosquitto by running the following command:
+步骤 2: 通过运行以下命令安装 Mosquitto：
 
 ```sh
 sudo apt-get install mosquitto
 ```
 
-STEP 3: Install the Mosquitto client tools by running the following command:
+步骤 3: 通过运行以下命令安装 Mosquitto 客户端工具：
 
 ```sh
 sudo apt-get install mosquitto-clients
 ```
 
-STEP 4: Once the installation is complete, you can start the Mosquitto service by running the following command:
+步骤 4: 安装完成后，您可以通过运行以下命令来启动Mosquitto服务：
 
 ```sh
 sudo systemctl start mosquitto
 ```
 
-STEP 5: To check if Mosquitto is running, you can run the following command:
+步骤 5: 要检查 Mosquitto 是否正在运行，你可以执行以下命令：
 
 ```sh
 sudo systemctl status mosquitto
@@ -100,7 +100,7 @@ sudo systemctl status mosquitto
 mosquitto_sub -h localhost -t test
 ```
 
-In another SSH session, run the following command to publish a message to the same topic:
+在另一个 SSH 会话中，运行以下命令向同一主题发布消息：
 
 ```sh
 mosquitto_pub -h localhost -t test -m "Hello, world!"

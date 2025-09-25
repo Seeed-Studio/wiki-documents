@@ -49,7 +49,7 @@ sudo apt-get -y update
 sudo apt-get install -y python3-pip libopenblas-dev
 ```
 
-**Step 2.** Download the official PyTorch wheel (example: torch-2.1.0 for JetPack 5.1.3, Python 3.8):
+**步骤 2.** 下载官方 PyTorch wheel（示例：适用于 JetPack 5.1.3、Python 3.8 的 torch-2.1.0）：
 
 ```bash
 wget https://developer.download.nvidia.com/compute/redist/jp/v512/pytorch/torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl
@@ -107,7 +107,7 @@ sudo apt-get update
 sudo apt-get -y install libcusparselt0 libcusparselt-dev
 ```
 
-**Step 4.** Download and install PyTorch (example: torch-2.5.0 for JetPack 6.2, Python 3.10):
+**步骤 4.** 下载并安装 PyTorch（示例：适用于 JetPack 6.2、Python 3.10 的 torch-2.5.0）：
 
 ```bash
 wget https://developer.download.nvidia.cn/compute/redist/jp/v61/pytorch/torch-2.5.0a0+872d972e41.nv24.08.17622132-cp310-cp310-linux_aarch64.whl
@@ -155,7 +155,7 @@ wget https://developer.download.nvidia.cn/compute/redist/jp/v60/pytorch/torch-2.
 pip install torch-2.4.0a0+f70bd71a48.nv24.06.15634931-cp310-cp310-linux_aarch64.whl
 ```
 
-**Step 3.** Verify installation:
+**步骤 3.** 验证安装：
 
 ```python
 import torch
@@ -200,7 +200,7 @@ conda config --set auto_activate_base false
 # Close and reopen the terminal. By default, it will not enter the base environment.
 ```
 
-**Step 3.** Create a new environment and install a specific PyTorch wheel:
+**步骤 3.** 创建一个新环境并安装特定的 PyTorch wheel：
 
 ```bash
 conda create -n torch_2.0 python=3.8

@@ -103,7 +103,7 @@ python3 -c 'import riva.client; print(riva.client.__version__)'
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/wheel.png" alt="pir" width={1000} height="auto"/></p>
 
-#### Step4. pyaudioをインストール：
+#### ステップ4. pyaudioをインストール：
 
 ```shell
 # pyaudio

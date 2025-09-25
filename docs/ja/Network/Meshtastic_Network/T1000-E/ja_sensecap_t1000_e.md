@@ -381,14 +381,14 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 </TabItem>
 </Tabs>
 
-**Step2: ポート番号を確認する**
+**ステップ2: ポート番号を確認する**
 
 デバイスを PC に接続し、ポート番号を確認します。
 
 例：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**Step3: ブートローダーをフラッシュする**
+**ステップ3: ブートローダーをフラッシュする**
 
 ターミナルまたはコマンドプロンプトで、ブートローダーの zip パッケージをダウンロードしたディレクトリに移動し、以下のコマンドを実行します。デバイスの正しいポートに置き換えてください：
 

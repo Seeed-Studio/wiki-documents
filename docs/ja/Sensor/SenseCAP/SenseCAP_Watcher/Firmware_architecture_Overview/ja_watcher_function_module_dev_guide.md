@@ -340,7 +340,7 @@ static int __cfg(void *p_module, cJSON *p_json)
 }
 ```
 
-In the above task flow, the `params` for `uart alarmer` is
+上記のタスクフローにおいて、`uart alarmer`の`params`は
 
 ```json
 {

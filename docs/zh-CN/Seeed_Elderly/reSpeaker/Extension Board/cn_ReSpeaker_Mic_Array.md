@@ -94,7 +94,7 @@ for i in range(0, numdevices):
             print "Input Device id ", i, " - ", p.get_device_info_by_host_api_device_index(0, i).get('name')
 ```
 
-Then, change `RESPEAKER_INDEX = 1` to your index number. Run the script to record a speech.
+然后，将 `RESPEAKER_INDEX = 1` 改为你的索引号。运行脚本来录制语音。
 
 ```python
 import pyaudio

@@ -33,11 +33,11 @@ reComputer Superは、画像とビデオキャプチャ用の標準4 MIPI CSIカ
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/sci.jpg"/>  
 </div>
 
-**Step1.** Recomputer Superの背面カバーを開きます。
+**ステップ1.** Recomputer Superの背面カバーを開きます。
 
-**Step2.** MIPI CSIカメラをreComputer Super基板上の適切なCSIポートに接続します。
+**ステップ2.** MIPI CSIカメラをreComputer Super基板上の適切なCSIポートに接続します。
 
-**Step3.** カメラを固定し、接続がしっかりしていることを確認します。
+**ステップ3.** カメラを固定し、接続がしっかりしていることを確認します。
 
 ### 使用方法
 
@@ -45,7 +45,7 @@ reComputer Superは、画像とビデオキャプチャ用の標準4 MIPI CSIカ
 CSIカメラを使用する前に、必要なカメラドライバーを含むJetPackバージョンがインストールされていることを確認してください。
 :::
 
-**Step1.** カメラがシステムに認識されているかを確認します：
+**ステップ1.** カメラがシステムに認識されているかを確認します：
 
 ```bash
 ls /dev/video*
@@ -111,49 +111,49 @@ Jetsonターミナルで`watch -n 1 lsusb -tv`を入力してUSBポートを調�
 
 このシリアルポートを使用して、USB C データケーブル経由でPC側の入出力デバッグ情報を監視できます。
 
-**Step1.** スイッチをデバッグモードに切り替えます。
+**ステップ1.** スイッチをデバッグモードに切り替えます。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/debug.jpg"/>
 </div>
 
-**Step2.** USB データケーブルでPCに接続し、PC上で[CP210X Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)をダウンロードします。
+**ステップ2.** USB データケーブルでPCに接続し、PC上で[CP210X Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)をダウンロードします。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/download_driver.png"/>
 </div>
 
-**Step3.** USB データケーブルでPCに接続し、ダウンロードしたファイルを解凍してPC上でドライバーをインストールします。
+**ステップ3.** USB データケーブルでPCに接続し、ダウンロードしたファイルを解凍してPC上でドライバーをインストールします。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png"/>
 </div>
 
-**Step4.** Windows PC上でデバイスマネージャーを開き、reComputer Superに割り当てられたCOMポート番号を確認します。「ポート (COM & LPT)」の下に「Silicon Labs CP210x USB to UART Bridge (COMX)」として表示されます。ここでXはCOMポート番号です。
+**ステップ4.** Windows PC上でデバイスマネージャーを開き、reComputer Superに割り当てられたCOMポート番号を確認します。「ポート (COM & LPT)」の下に「Silicon Labs CP210x USB to UART Bridge (COMX)」として表示されます。ここでXはCOMポート番号です。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/debug1.png"/>
 </div>
 
-**Step5.** シリアルポートツール（ここではMobaXtermツールを例として使用）を開き、新しいセッションを作成します。
+**ステップ5.** シリアルポートツール（ここではMobaXtermツールを例として使用）を開き、新しいセッションを作成します。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/1.png"/>
 </div>
 
-**Step6.** Serialツールを選択します。
+**ステップ6.** Serialツールを選択します。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/2.png"/>
 </div>
 
-**Step7.** 対応するシリアルポートを選択し、ボーレートを115200に設定して「OK」をクリックします。
+**ステップ7.** 対応するシリアルポートを選択し、ボーレートを115200に設定して「OK」をクリックします。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/3.png"/>
 </div>
 
-**Step8.** ユーザー名とパスワードでreComputer Superにログインします。
+**ステップ8.** ユーザー名とパスワードでreComputer Superにログインします。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/4.png"/>
@@ -165,11 +165,11 @@ M.2 Key Mは高速ソリッドステートドライブ（SSD）用に設計さ�
 
 ### サポートされているSSDは以下の通りです
 
-- [128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
-- [256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
-- [512GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
-- [1TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
-- [2TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-2TB-p-6265.html)
+- [128GB NVMe M.2 PCle Gen3x4 2280 内蔵 SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
+- [256GB NVMe M.2 PCle Gen3x4 2280 内蔵 SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
+- [512GB NVMe M.2 PCle Gen3x4 2280 内蔵 SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
+- [1TB NVMe M.2 PCle Gen3x4 2280 内蔵 SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
+- [2TB NVMe M.2 PCle Gen3x4 2280 内蔵 SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-2TB-p-6265.html)
 
 ### ハードウェア接続
 
@@ -250,7 +250,7 @@ SIMカードを取り外したい場合は、カードを押し込んで内部�
 
 ### 使用方法
 
-**Step1.** minicomをインストールします：
+**ステップ1.** minicomをインストールします：
 
 ```bash
 sudo apt update
@@ -263,15 +263,15 @@ sudo apt install minicom -y
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-**Step3.** Ctrl+Aを押してからEを押して、ローカルエコーをオンにします。
+**ステップ3.** Ctrl+Aを押してからEを押して、ローカルエコーをオンにします。
 
-**Step4.** コマンド「AT」を入力してEnterを押します。レスポンスが「OK」と表示されれば、4Gモジュールが正常に動作しています。
+**ステップ4.** コマンド「AT」を入力してEnterを押します。レスポンスが「OK」と表示されれば、4Gモジュールが正常に動作しています。
 
 <div align="center">
   <img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/22.jpg"/>
 </div>
 
-**Step5.** コマンド「ATI」を入力してモジュール情報を確認します。
+**ステップ5.** コマンド「ATI」を入力してモジュール情報を確認します。
 
 <div align="center">
   <img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/23.png"/>
@@ -297,11 +297,11 @@ reComputer SuperはRTCインターフェースを搭載しており、システ�
 
 ### 使用方法
 
-**Step1.** 上記の通りRTC電池を接続します。
+**ステップ1.** 上記の通りRTC電池を接続します。
 
-**Step2.** reComputer Superの電源をオンにします。
+**ステップ2.** reComputer Superの電源をオンにします。
 
-**Step3.** Ubuntuデスクトップで、右上角のドロップダウンメニューをクリックし、`Settings > Date & Time`に移動し、イーサネットケーブルでネットワークに接続して**Automatic Date & Time**を選択し、日付/時刻を自動的に取得します。
+**ステップ3.** Ubuntuデスクトップで、右上角のドロップダウンメニューをクリックし、`Settings > Date & Time`に移動し、イーサネットケーブルでネットワークに接続して**Automatic Date & Time**を選択し、日付/時刻を自動的に取得します。
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/13.png"/>
@@ -311,7 +311,7 @@ reComputer SuperはRTCインターフェースを搭載しており、システ�
 イーサネット経由でインターネットに接続していない場合は、ここで手動で日付/時刻を設定できます。
 :::
 
-**Step4.** ターミナルウィンドウを開き、以下のコマンドを実行してハードウェアクロック時刻を確認します：
+**ステップ4.** ターミナルウィンドウを開き、以下のコマンドを実行してハードウェアクロック時刻を確認します：
 
 ```bash
 cat /sys/devices/platform/bpmp/bpmp\:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/time
@@ -419,11 +419,11 @@ CANインターフェースは絶縁電源を使用しています。これは�
 
 ### 使用方法
 
-**Step1.** 使用しているUSB to CANアダプターのドライバーをメーカーのWebサイトからダウンロードしてインストールします。今回使用したアダプターの場合、ドライバーは[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver)で見つけることができます。
+**ステップ1.** 使用しているUSB to CANアダプターのドライバーをメーカーのWebサイトからダウンロードしてインストールします。今回使用したアダプターの場合、ドライバーは[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver)で見つけることができます。
 
-**Step2.** 一部のアダプターには、CANデバイスと通信するためのPC用の必要なソフトウェアも付属しています。今回使用したアダプターの場合、[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)で見つけることができるソフトウェアをダウンロードしてインストールしました。
+**ステップ2.** 一部のアダプターには、CANデバイスと通信するためのPC用の必要なソフトウェアも付属しています。今回使用したアダプターの場合、[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)で見つけることができるソフトウェアをダウンロードしてインストールしました。
 
-**Step3.** JetsonのCANインターフェースを初期化します。
+**ステップ3.** JetsonのCANインターフェースを初期化します。
 
 Jetsonで**`can_init.sh`**という名前の新しいファイルを作成し、以下の内容を記述します：
 
@@ -452,7 +452,7 @@ sudo ip link set can1 up
 
 ```
 
-Then, run the file we just created in the Jetson terminal window:
+次に、Jetson のターミナルウィンドウで、今作成したファイルを実行します：
 
 ```bash
 sudo apt-get install gpiod
@@ -461,37 +461,37 @@ sudo chmod +x can_init.sh
 ./can_init.sh
 ```
 
-**Step4.** ターミナルでifconfigと入力すると、CANインターフェースが有効になっていることが確認できます。
+**ステップ4.** ターミナルでifconfigと入力すると、CANインターフェースが有効になっていることが確認できます。
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/can.png"/>
 </div>
 
-**Step5.** 以前にインストールしたCANソフトウェアを開きます。この場合、使用しているCANアダプターに応じてインストールしたソフトウェアを開きます。
+**ステップ5.** 以前にインストールしたCANソフトウェアを開きます。この場合、使用しているCANアダプターに応じてインストールしたソフトウェアを開きます。
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/42.jpg"/>
 </div>
 
-**Step6.** USB to CANアダプターをPCに接続し、Windowsの検索バーで検索して**デバイスマネージャー**を開きます。接続されたアダプターが**ポート (COM & LPT)**の下に表示されます。ここに表示されているシリアルポートをメモしてください。下の画像によると、シリアルポートは**COM9**です。
+**ステップ6.** USB to CANアダプターをPCに接続し、Windowsの検索バーで検索して**デバイスマネージャー**を開きます。接続されたアダプターが**ポート (COM & LPT)**の下に表示されます。ここに表示されているシリアルポートをメモしてください。下の画像によると、シリアルポートは**COM9**です。
 
 <div align="center">
   <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/43.png"/>
 </div>
 
-**Step7.** CANソフトウェアを開き、**COM**セクションの横にある**Refresh**をクリックし、ドロップダウンメニューをクリックして接続されたアダプターに応じてシリアルポートを選択します。**COM bps**はデフォルトのままにして、**Open**をクリックします。
+**ステップ7.** CANソフトウェアを開き、**COM**セクションの横にある**Refresh**をクリックし、ドロップダウンメニューをクリックして接続されたアダプターに応じてシリアルポートを選択します。**COM bps**はデフォルトのままにして、**Open**をクリックします。
 
 <div align="center">
   <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/44.jpg"/>
 </div>
 
-**Step8.** **Mode**と**CAN bps**はデフォルトのままにし、**Type**を**Standard frame**に変更して**Set and Start**をクリックします。
+**ステップ8.** **Mode**と**CAN bps**はデフォルトのままにし、**Type**を**Standard frame**に変更して**Set and Start**をクリックします。
 
 <div align="center">
   <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/45.png"/>
 </div>
 
-**Step9.** reComputer Industrialで、以下のコマンドを実行してPCにCAN信号を送信します：
+**ステップ9.** reComputer Industrialで、以下のコマンドを実行してPCにCAN信号を送信します：
 
 ```sh
 cansend can0 123#abcdabcd
@@ -509,7 +509,7 @@ cansend can0 123#abcdabcd
 candump can0 &
 ```
 
-**Step11.** CANソフトウェアで、**Send a single frame**をクリックします：
+**ステップ11.** CANソフトウェアで、**Send a single frame**をクリックします：
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/47.png"/>

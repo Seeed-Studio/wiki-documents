@@ -163,7 +163,7 @@ Windowsコンピュータは使用しないでください。Windowsコンピュ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/23.png" style={{width:800, height:'auto'}}/></div>
 
-## Step 2. iPhone Home APPでコードをスキャンしてデバイスを追加する
+## ステップ 2. iPhone Home APPでコードをスキャンしてデバイスを追加する
 
 デバイス追加のセクションでは、Appleのデバイスを例に説明します（手元にあるのがそれだけなので）。もし[Googleのデバイス](https://support.google.com/googlenest/answer/12391458?hl=en&co=GENIE.Platform%3DAndroid)や[Amazonのデバイス](https://developer.amazon.com/en-US/alexa/matter)をお持ちの場合は、それらも使用できるかもしれません。
 

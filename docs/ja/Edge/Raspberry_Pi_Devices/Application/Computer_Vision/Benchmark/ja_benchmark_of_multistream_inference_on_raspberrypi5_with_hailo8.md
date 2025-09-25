@@ -100,7 +100,7 @@ source hailo_env/bin/activate
 pip install hailort-4.19.0-cp311-cp311-linux_aarch64.whl 
 ```
 
-### Check if the software is installed
+### ソフトウェアがインストールされているかを確認する
 
 ```
 hailortcli fw-control identify

@@ -343,7 +343,7 @@ Rx: +JOIN: Start
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/13.png" alt="pir" width={600} height="auto" /></p>
 
-- **Step 14.** 以下のATコマンドを入力してTTNにデータを送信します
+- **ステップ 14.** 以下のATコマンドを入力してTTNにデータを送信します
 
 ```
 // send string "HELLO" to TTN 
@@ -476,7 +476,7 @@ SDKでプログラムする前に工場出荷時のATファームウェアを消
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/se-identity.png" alt="pir" width={600} height="auto" /></p>
 
-- **Step 9.** デフォルトのLoRaWAN®リージョンは`EU868`です。`LoRaWAN/App/lora_app.h`内のマクロ定義`ACTIVE_REGION`を設定することで変更できます。
+- **ステップ 9.** デフォルトのLoRaWAN®リージョンは`EU868`です。`LoRaWAN/App/lora_app.h`内のマクロ定義`ACTIVE_REGION`を設定することで変更できます。
 
 ```c
 // LoRaWAN/App/lora_app.h

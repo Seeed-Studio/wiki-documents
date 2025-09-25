@@ -78,7 +78,7 @@ https://api.telegram.org/bot123456789:AoUJnnpoFlkkdfJbCXlo.../getUpdates
 
 ## Part 2. 人物検出モデル
 
-#### Step 3. モデルを選択する
+#### ステップ 3. モデルを選択する
 
 まず、SenseCraft AI Model Assistantのメインページを開きます。
 
@@ -95,7 +95,7 @@ https://api.telegram.org/bot123456789:AoUJnnpoFlkkdfJbCXlo.../getUpdates
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove_vision_ai_v2_telegram/5.png" style={{width:1000, height:'auto'}}/></div>
 
-### Step 4. モジュールを接続し、適切なモデルをアップロードする
+### ステップ 4. モジュールを接続し、適切なモデルをアップロードする
 
 Type-Cタイプのケーブルを使用してGrove Vision AI V2をコンピュータに接続し、**Connect**ボタンをクリックしてください。
 
@@ -107,7 +107,7 @@ Type-Cタイプのケーブルを使用してGrove Vision AI V2をコンピュ�
 
 このページに1～2分間留まり、モデルが正常にアップロードされるまで待ってください。このプロセス中に別のページタブに切り替えると、アップロードが失敗する可能性があります（現在、チームがこの問題の解決に取り組んでおり、近々修正される予定です）。
 
-### Step 5. 観察
+### ステップ 5. 観察
 
 モデルが正常にアップロードされると、左側のプレビューでGrove Vision AI V2カメラからのライブフィードを見ることができます。
 
@@ -117,13 +117,13 @@ Type-Cタイプのケーブルを使用してGrove Vision AI V2をコンピュ�
 
 ## Part 3. Telegramへの通知を送信する
 
-### Step 6. インストール
+### ステップ 6. インストール
 
 まず、XIAO ESP32S3をピンを介してGrove Vision AI V2に接続し、次にアンテナをXIAO ESP32S3に接続します。最後に、XIAO ESP32S3をType-Cケーブルを使用してコンピュータに接続します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove_vision_ai_v2_telegram/8.png" style={{width:500, height:'auto'}}/></div>
 
-### Step 7. コーディング
+### ステップ 7. コーディング
 
 まず、このページから[SSCMAライブラリ](https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA)をダウンロードします。
 

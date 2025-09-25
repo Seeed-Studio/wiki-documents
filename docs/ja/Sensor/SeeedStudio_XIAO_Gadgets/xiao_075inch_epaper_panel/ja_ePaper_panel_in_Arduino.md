@@ -58,7 +58,7 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
 
-### Step 3. Seeed Arduino LCD ライブラリのインストール
+### ステップ 3. Seeed Arduino LCD ライブラリのインストール
 
 :::tip
 このライブラリはTFTライブラリと同じ機能を持ちますが、互換性はありません。TFTライブラリや他の類似のディスプレイライブラリをインストールしている場合は、まずそれらをアンインストールしてください。
@@ -101,7 +101,7 @@ GitHubからSeeed GFXライブラリをダウンロードしてインストー�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
-### Step 4. コードのアップロード
+### ステップ 4. コードのアップロード
 
 **新しい「driver.h」ファイル**を作成し、そのコードを貼り付けます。コードは次のようになります：
 

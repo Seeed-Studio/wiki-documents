@@ -323,14 +323,14 @@ connect 0C:xx:xx:xx:xx:0B
 
 在 **/boot/uEnv.txt** 中：
 
-  ##enable Generic eMMC Flasher:
-  ##make sure, these tools are installed: dosfstools rsync
+  ##启用通用 eMMC 刷写器：
+  ##确保已安装以下工具：dosfstools rsync
   #cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3.sh
 
 改为:
 
-  ##enable Generic eMMC Flasher:
-  ##make sure, these tools are installed: dosfstools rsync
+  ##启用通用 eMMC 刷写器：
+  ##确保已安装以下工具：dosfstools rsync
   cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3.sh
 
 然后你会看到 4 个用户 LED 灯如下所示：

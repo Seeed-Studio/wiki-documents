@@ -804,8 +804,8 @@ Serial.println("LED is OFF");
 vTaskDelete(NULL); 
 ```
 
-- `vTaskDelay(pdMS_TO_TICKS(1000));`Keep the LED on for 1 second
-- `vTaskDelete(NULL);`Delete the current task
+- `vTaskDelay(pdMS_TO_TICKS(1000));`LEDを1秒間オンに保つ
+- `vTaskDelete(NULL);`現在のタスクを削除する
 
 ```cpp
 esp_sleep_enable_timer_wakeup(sleepTime * 1000);
@@ -911,7 +911,7 @@ WiFi.begin("****", "****");
     Serial.println("Connected to WiFi!");
 ```
 
-- Loop until successfully connected to WiFi.
+- WiFiへの接続が成功するまでループする。
 
 ```cpp
 WiFi.setSleep(true);

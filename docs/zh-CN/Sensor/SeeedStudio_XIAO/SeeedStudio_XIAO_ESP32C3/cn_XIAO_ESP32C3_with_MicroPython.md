@@ -52,7 +52,7 @@ ESP32_GENERIC_C3-20230602-v1.23.0.bin
 dmesg | grep tty
 ```
 
-Alternatively, you can list serial devices using *ls*:
+或者，您可以使用 *ls* 列出串行设备：
 
 ```
 ls /dev/ttyS* /dev/ttyUSB*
@@ -92,7 +92,7 @@ lsof | grep port
 kill -9 <PID>
 ```
 
-Replace *PID* with the actual process ID found.
+将 *PID* 替换为找到的实际进程 ID。
 :::
 
 #### Erase flash
@@ -121,7 +121,7 @@ esptool.py --chip esp32c3 --port /dev/cu.usbmodem11301 --baud 460800 write_flash
 下面列出了一些流行的工具。
 
 - [Thonny IDE](https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/)
-- [Arduino for micropython](https://docs.arduino.cc/micropython/)
+- [Arduino 用于 MicroPython](https://docs.arduino.cc/micropython/)
 - [Visual Studio Code pymakr](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/)
 - [uPyCraft IDE](https://randomnerdtutorials.com/install-upycraft-ide-windows-pc-instructions/)
 
@@ -272,7 +272,7 @@ ap.active(True)         # activate the interface
 
 ```
 
-A useful function for connecting to your local WiFi network is:
+一个用于连接到本地 WiFi 网络的有用函数是：
 
 ```python
 def do_connect():

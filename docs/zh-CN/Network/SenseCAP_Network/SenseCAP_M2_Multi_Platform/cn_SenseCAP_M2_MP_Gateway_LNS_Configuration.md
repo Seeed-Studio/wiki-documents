@@ -171,13 +171,12 @@ application/APPLICATION_ID/device/DEV_EUI/event/EVENT
 gateway/<GATEWAY_EUI>/device/+/event/up
 ```
 
-- To receive all messages from all devices under the application:
+- 接收来自应用程序下所有设备的所有消息:
 
 ```cpp
 application/+/device/+/event/+
 ```
-
-- To receive all device messages from all gateways:
+- 接收来自所有网关的所有设备消息：
 
 ```cpp
 gateway/+/device/+/event/+

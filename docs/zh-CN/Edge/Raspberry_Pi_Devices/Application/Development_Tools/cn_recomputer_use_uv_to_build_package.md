@@ -83,8 +83,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 uv init uv_test --package
 cd uv_test
 ```
-
-Check the structure of the project
+检查项目的结构
 
 ```bash
 ls -la

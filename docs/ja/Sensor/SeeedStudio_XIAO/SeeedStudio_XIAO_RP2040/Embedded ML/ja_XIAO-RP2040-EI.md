@@ -105,7 +105,7 @@ void loop() {
 sudo edge-impulse-data-forwarder
 ```
 
-- **Step 5.** CLIを使用してSeeed Studio XIAO RP2040をEdge Impulseに接続する必要があります。まず、アカウントにログインしてプロジェクトを選択します
+- **ステップ 5.** CLIを使用してSeeed Studio XIAO RP2040をEdge Impulseに接続する必要があります。まず、アカウントにログインしてプロジェクトを選択します
 
 加速度計とデバイスに名前を付けます。
 
@@ -113,31 +113,31 @@ Edge Impulseの「Data acquisition」ページに戻ると、接続が成功し�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/04.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **Step 6.** センサーを「3 axes」として選択します。ラベルを`up`と`down`として名前を付け、Sample length (ms.)を20000に変更してstart samplingをクリックします。
+- **ステップ 6.** センサーを「3 axes」として選択します。ラベルを`up`と`down`として名前を付け、Sample length (ms.)を20000に変更してstart samplingをクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/05.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **Step 7.** [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/ja/XIAO-RP2040/)を上下に振り、20秒間その動作を続けます。取得結果は次のように表示されます：
+- **ステップ 7.** [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/ja/XIAO-RP2040/)を上下に振り、20秒間その動作を続けます。取得結果は次のように表示されます：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/06.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **Step 8.** 生データの右上をクリックして「Split Sample」を選択し、データを分割します。+Add Segmentをクリックしてからグラフをクリックします。これを20回以上繰り返してセグメントを追加します。Splitをクリックすると、それぞれ1秒間のサンプルデータが表示されます。
+- **ステップ 8.** 生データの右上をクリックして「Split Sample」を選択し、データを分割します。+Add Segmentをクリックしてからグラフをクリックします。これを20回以上繰り返してセグメントを追加します。Splitをクリックすると、それぞれ1秒間のサンプルデータが表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/07.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **Step 9.** **Step 7.**と**Step 8.**を繰り返し、`circle`や`line`など異なる名前でデータにラベルを付けて、異なる動作データをクリックします。提供されている例では、上下、左右、円の分類を行っています。ここで必要に応じて変更することができます。
+- **ステップ 9.** **ステップ 7.**と**ステップ 8.**を繰り返し、`circle`や`line`など異なる名前でデータにラベルを付けて、異なる動作データをクリックします。提供されている例では、上下、左右、円の分類を行っています。ここで必要に応じて変更することができます。
 
 :::note
-Step 8.では分割時間が1秒です。これは、Step 7.で1秒間に少なくとも1回の上下の振りを行う必要があることを意味します。そうでなければ、結果は正確になりません。同時に、自分の動作速度に応じて分割時間を調整することができます。
+ステップ 8.では分割時間が1秒です。これは、ステップ 7.で1秒間に少なくとも1回の上下の振りを行う必要があることを意味します。そうでなければ、結果は正確になりません。同時に、自分の動作速度に応じて分割時間を調整することができます。
 :::
 
-- **Step 10.** Impulseを作成
+- **ステップ 10.** Impulseを作成
 
 **Create impulse**をクリック -> Add a processing blockをクリック -> **Spectral Analysis**を選択 -> Add a learning blockをクリック -> **Classification (Keras)**を選択 -> Save Impulseをクリック
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/08.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **Step 11.** スペクトル特徴
+- **ステップ 11.** スペクトル特徴
 
 クリックしてSet up
 
@@ -149,13 +149,13 @@ Step 8.では分割時間が1秒です。これは、Step 7.で1秒間に少な�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/10.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **Step 12.** モデルのトレーニング
+- **ステップ 12.** モデルのトレーニング
 
 NN Classifierをクリック -> Start trainingをクリック -> Unoptimized (float32)を選択
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/11.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **Step 13.** モデルテスト
+- **ステップ 13.** モデルテスト
 
 Model testingをクリック -> Classify allをクリック
 
@@ -165,17 +165,17 @@ Model testingをクリック -> Classify allをクリック
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/12.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **Step 14.** Arduinoライブラリをビルド
+- **ステップ 14.** Arduinoライブラリをビルド
 
 Deploymentをクリック -> Arduino Libraryをクリック -> **Build**をクリック -> .ZIPファイルをダウンロード
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/13.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **Step 15.** .ZIPファイルの名前は非常に重要で、デフォルトでEdge Impulseプロジェクトの名前として設定されます。ここではプロジェクト名が「RP2040」です。ファイルを選択して「.ZIPファイル」をArduinoライブラリに追加します
+- **ステップ 15.** .ZIPファイルの名前は非常に重要で、デフォルトでEdge Impulseプロジェクトの名前として設定されます。ここではプロジェクト名が「RP2040」です。ファイルを選択して「.ZIPファイル」をArduinoライブラリに追加します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/14.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **Step 16.** Arduinoを開く -> Sketchをクリック -> **Include Library**をクリック ->
+- **ステップ 16.** Arduinoを開く -> Sketchをクリック -> **Include Library**をクリック ->
  **ADD .ZIP Library**をクリック
 
 以下のコードをコピーします。edgeimpulseのプロジェクト名がカスタマイズされている場合、zipアーカイブのテキストは同じ名前になります。includeの最初の行をヘッダーファイルに変更できます。

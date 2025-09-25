@@ -287,8 +287,8 @@ void loop()
 
 :::tip
 
-- reTerminal E1001を使用したい場合は、リンクを参照してください：[reTerminal E1001のプログラミング](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
-- GxEPD2ライブラリを使用したい場合は、リンクを参照してください：[GxEPD2ライブラリの使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
+- reTerminal E1001を使用したい場合は、リンクを参照してください：[reTerminal E1001のプログラミング](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino/)
+- GxEPD2ライブラリを使用したい場合は、リンクを参照してください：[GxEPD2ライブラリの使用](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino/)
 
 :::
 

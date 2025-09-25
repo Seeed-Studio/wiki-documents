@@ -1,7 +1,7 @@
 ---
-description: Aprende cómo construir un gateway LoRaWAN usando ChirpStack en reComputer R11 con Raspberry Pi. Configura el gateway R1X00, Packet Forwarder y sensores SenseCAP S2101 para transmitir datos IoT vía MQTT. Accede a tus dispositivos LoRa y aplicaciones de forma segura desde cualquier lugar del mundo.
+description: Aprende cómo construir un gateway LoRaWAN usando ChirpStack en reComputer R11 con Raspberry Pi. Configura el gateway R1X00, Packet Forwarder y sensores SenseCAP S2101 para transmitir datos IoT vía MQTT. Accede a tus dispositivos y aplicaciones LoRa de forma segura desde cualquier lugar del mundo.
 
-title: Integración de Gateway ChirpStack R1X00 con SenseCAP S2101
+title: Integración de Gateway ChirpStack R1X con SenseCAP S2101
 
 keywords:
 - ChripStack
@@ -16,7 +16,7 @@ last_update:
 
 ## Introducción
 
-Esta guía te lleva paso a paso para configurar una solución completa de gateway LoRaWAN usando ChirpStack en el controlador edge Seeed reComputer R11, alimentado por Raspberry Pi. Con el módulo concentrador LoRa WM1302, el dispositivo R11 funciona como un gateway potente capaz de comunicación inalámbrica confiable de largo alcance. Al configurar el Semtech Packet Forwarder, los datos LoRa pueden transmitirse sin problemas a ChirpStack, que gestiona las capas de red y aplicación. Usaremos Docker para simplificar la instalación y despliegue de los servicios ChirpStack, asegurando una configuración modular y escalable. Finalmente, el sistema se integra con MQTT, habilitando transmisión segura y en tiempo real de datos IoT desde dispositivos LoRa como el sensor SenseCAP S2101 a aplicaciones accesibles desde cualquier lugar del mundo.
+Esta guía te lleva paso a paso para configurar una solución completa de gateway LoRaWAN usando ChirpStack en el controlador edge Seeed reComputer R11, alimentado por Raspberry Pi. Con el módulo concentrador LoRa WM1302, el dispositivo R1X funciona como un gateway potente capaz de comunicación inalámbrica confiable de largo alcance. Al configurar el Semtech Packet Forwarder, los datos LoRa pueden transmitirse sin problemas a ChirpStack, que gestiona las capas de red y aplicación. Usaremos Docker para simplificar la instalación y despliegue de los servicios ChirpStack, asegurando una configuración modular y escalable. Finalmente, el sistema se integra con MQTT, habilitando transmisión segura y en tiempo real de datos IoT desde dispositivos LoRa como el sensor SenseCAP S2101 a aplicaciones accesibles desde cualquier lugar del mundo.
 
 ## Hardware Requerido
 
@@ -90,7 +90,7 @@ docker run hello-world
 sudo apt install docker-compose
 ```
 
-Perfecto, reformatearé tu configuración de **Packet Forwarder** en el mismo estilo de wiki estructurado que estás usando:
+Perfecto, reformatearé tu sección de **configuración del Packet Forwarder** en el mismo estilo de wiki estructurado que estás usando:
 
 ---
 
@@ -456,7 +456,6 @@ function toBinary(arr) {
         return bin;
     }).join('');
 }
-
 ```
 
 </details>

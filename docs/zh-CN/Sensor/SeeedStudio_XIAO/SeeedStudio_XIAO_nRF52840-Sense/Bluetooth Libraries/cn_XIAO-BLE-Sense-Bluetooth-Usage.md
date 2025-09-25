@@ -25,7 +25,7 @@ last_update:
 ### 所需软件
 
 - [nRF Connect for Mobile (Android)](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp)
-- [LightBlue App (Apple)](https://apps.apple.com/us/app/lightblue/id557428110)
+- [LightBlue 应用 (Apple)](https://apps.apple.com/us/app/lightblue/id557428110)
 
 ## Arduino 库概述
 
@@ -161,7 +161,7 @@ void loop() {
 }
 ```
 
-The key to the implementation of this example is the following paragraph.
+这个例子的实现关键在于以下段落。
 
 ```cpp
   while (central.connected()) {

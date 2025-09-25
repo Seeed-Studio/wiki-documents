@@ -592,8 +592,8 @@ static void ble_initialize_gatt_db() {
 
 同时，您可以在主要的移动应用商店中搜索并下载 **nRF Connect** 应用，该应用允许您的手机搜索并连接到蓝牙设备。
 
-- Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
-- IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
+- 安卓系统：[nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
+- IOS：[nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
 
 下载软件后，按照下面显示的步骤搜索并连接 XIAO_MG24，您将看到广播的"Hello World"。
 

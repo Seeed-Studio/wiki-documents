@@ -637,7 +637,7 @@ sudo apt install -y git
 git clone https://github.com/Lora-net/sx1302_hal
 ```
 
-Move to sx1302_hal folder and build the program:
+sx1302_halフォルダに移動してプログラムをビルドします：
 
 ```
 cd ~/sx1302_hal

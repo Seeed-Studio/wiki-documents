@@ -160,7 +160,7 @@ mkdir -p ~/frigate/data/storage
 cd ~/frigate
 ```
 
-### Create Docker Compose File (frigate.yml)
+### Docker Compose ファイル（frigate.yml）を作成する
 
 ```bash
 nano frigate.yml

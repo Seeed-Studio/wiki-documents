@@ -65,7 +65,7 @@ esp_err_t tf_module_uart_alarm_register(void)
 }
 ```
 
-The fourth parameter is a struct that contains necessary API functions to manage the life cycle of this FM.
+第四个参数是一个结构体，其中包含管理这个FM生命周期所需的API函数。
 
 ```cpp
 // in tf_module.h
@@ -136,7 +136,7 @@ tf_module_t *tf_module_uart_alarm_instance(void)
 }
 ```
 
-Two members of `tf_module_t` must be assigned.
+`tf_module_t` 的两个成员必须被赋值。
 
 ```cpp
 // in tf_module_uart_alarm.c
@@ -340,7 +340,7 @@ static int __cfg(void *p_module, cJSON *p_json)
 }
 ```
 
-In the above task flow, the `params` for `uart alarmer` is
+在上述任务流程中，`uart alarmer` 的 `params` 为
 
 ```json
 {

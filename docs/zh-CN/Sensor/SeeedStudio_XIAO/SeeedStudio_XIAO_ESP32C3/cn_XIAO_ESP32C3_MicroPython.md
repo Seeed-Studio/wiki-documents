@@ -95,15 +95,15 @@ last_update:
 
 ``` git clone https://github.com/espressif/esptool.git ```
 
-2. Download the latest firmware (This Tutorial is v1.20.0 (2023-04-26) .bin)
+2. 下载最新的固件（本教程使用 v1.20.0 (2023-04-26) .bin）
 
 ```https://micropython.org/download/esp32c3/```
 
-3. Put the latest firm in this file location and open the file in CMD
+3. 将最新的固件放在此文件位置，并在CMD中打开文件
 
 ```your own file location\esptool-master\esptool```
 
-4. Flash the firmware by entering this command in CMD （enter bootloader mode before flashing）
+4. 在 CMD 中输入以下命令来烧录固件（烧录前需进入引导程序模式）
 
 ```cpp
 esptool.exe --chip esp32c3 --port COM10 --baud 921600 --before default_reset --after hard_reset --no-stub  write_flash --flash_mode dio --flash_freq 80m 0x0 esp32c3-usb-20230426-v1.20.0.bin

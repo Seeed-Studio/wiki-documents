@@ -312,7 +312,7 @@ digitalWrite(**pin, value**)
 digitalWrite(ledPin, LOW);
 ```
 
-When we set the led as output, low stands for sending low level to the pin, LED turns off.
+当我们将 LED 设置为输出时，低电平表示向引脚发送低电平信号，LED熄灭。
 
 ```cpp
 delay(1000);
@@ -418,13 +418,13 @@ Code Analysis
 pinMode(ledPin, OUTPUT);
 ```
 
-Define LED as the output unit.
+将 LED 定义为输出单元。
 
 ```cpp
 pinMode(buttonPin, INPUT);
 ```
 
-Define button as the input unit.
+将按钮定义为输入单元。
 
 ```cpp
 buttonState = digitalRead(buttonPin);
@@ -752,7 +752,7 @@ map() 函数使用整数运算，因此不会生成分数，即使数学运算�
 
 **语法：**
 
-map(**value, fromLow, fromHigh, toLow, toHigh**)
+map(**值, 输入范围最小值, 输入范围最大值, 输出范围最小值, 输出范围最大值**)
 
 **参数：**
 
@@ -973,7 +973,7 @@ void loop(){
 Serial.begin(9600);
 ```
 
-The software running on the computer communicates with the development board, and the baud rate is 9600.
+运行在计算机上的软件与开发板进行通信，波特率为9600。
 
 ```cpp
 Serial.print(" ");
@@ -985,7 +985,7 @@ Serial.print(" ");
 Serial.println( );
 ```
 
-This statement is similar to the one above, except that **serial.println** has a newline return.
+这个语句与上面的类似，只是 **serial.println** 有一个换行返回。
 
 ```cpp
 Serial.println(soundState);
@@ -1078,7 +1078,7 @@ void loop(void) {
 #include <U8x8lib.h>
 ```
 
-**#include** is an instruction that introduces a header file. Here we use the U8x8lib.h library.
+**#include** 是一个引入头文件的指令。这里我们使用 U8x8lib.h 库。
 
 ```cpp
 U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);  
@@ -1086,7 +1086,7 @@ U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
 
 **Note**
   
-If you break out other modules and only use OLED, you have to software I2C:
+如果你分解出其他模块并且只使用OLED，你必须软件I2C：
 
 ```cpp
 // U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);  
@@ -1096,7 +1096,7 @@ U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset
 
 **Description:**
 
-Once the object is declared, you can use functions from the library.
+一旦对象被声明，你就可以使用库中的函数。
 
 ```cpp
 u8x8.begin();
@@ -1189,7 +1189,7 @@ u8x8.print();
   Wire.setClock(u8x8->bus_clock);   // just delete or disable this line
   ```
 
- Or you can set the bus lock to 100000 then add in the setup().
+或者你可以将总线锁设置为 100000 然后在 setup() 中添加。
 
 ```cpp
 void setup(void) {
@@ -1346,7 +1346,7 @@ void loop(void) {
 }
 ```
 
-Click "Monitor" on the top right corner and check the result.
+点击右上角的"监视器"并查看结果。
 
 Code Analysis
 
@@ -1354,7 +1354,7 @@ Code Analysis
 float temp, humi;
 ```
 
-Defines variables to store readings.
+定义变量以存储读数。
 
 ```cpp
 temp = dht.readTemperature();
@@ -1458,7 +1458,7 @@ Code Analysis
 #include "Seeed_BMP280.h"
 ```
 
-Represents the Seeed_BMP280.h header file that introduces the current path.
+表示引入当前路径的 Seeed_BMP280.h 头文件。
 
 ```cpp
 if (!bmp280.init()) {
@@ -1684,13 +1684,13 @@ Code Analysis
 #endif
 ```
 
-Initializing the module using software I2C or hardware I2C.
+使用软件I2C或硬件I2C初始化模块。
 
 ```cpp
 while (!Serial) {};
 ```
 
-Code stops here if don't open the serial monitor, so open serial monitor.
+如果不打开串口监视器,代码会在这里停止,所以请打开串口监视器。
 
 ```cpp
 LIS.begin(WIRE, 0x19);
@@ -1879,7 +1879,7 @@ Code Analysis
 #define NTD
 ```
 
-Here is the definition of the frequency of the D key, which is divided into bass, alto, and treble.
+以下是 D 键频率的定义，分为低音、中音和高音。
 
 ```cpp
 #define WHOLE 1
@@ -1895,13 +1895,13 @@ Here is the definition of the frequency of the D key, which is divided into bass
 int tune[]=...
 ```
 
-List the frequencies according to the spectrum.
+根据光谱列出频率。
 
 ```cpp
 float durt[]=...
 ```
 
-List the beats according to the spectrum.
+根据频谱列出节拍。
 
 ```cpp
 delay(100*durt[x]);

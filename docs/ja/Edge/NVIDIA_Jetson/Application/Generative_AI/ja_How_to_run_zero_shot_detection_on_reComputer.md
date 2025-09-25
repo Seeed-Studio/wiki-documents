@@ -93,7 +93,7 @@ sudo systemctl restart jetson-vst
 sudo docker compose up -d
 ```
 
-To check if all required containers have started, you can run the following command:
+必要なコンテナがすべて起動しているかを確認するには、次のコマンドを実行できます：
 
 ```bash
 sudo docker ps

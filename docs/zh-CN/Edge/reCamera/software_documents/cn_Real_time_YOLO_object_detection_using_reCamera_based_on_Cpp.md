@@ -66,7 +66,7 @@ sudo rm -r S91sscma-node
 
 ## Run the program
 
-Run the program as administrator under the **/home/recamera/** on the reCamera terminal​:
+在 reCamera 终端上以管理员身份在 **/home/recamera/** 下运行程序：
 
 ```
 sudo ./Realtime_detection_http

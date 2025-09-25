@@ -247,7 +247,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo ./apply_binaries.sh
 ```
 
-- **Step 4:** Extract **A605_Jetpack_6.1.tar.gz**:
+- **ステップ 4:** **A605_Jetpack_6.1.tar.gz** を解凍します:
 
 ```bash
 cd ..
@@ -318,7 +318,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo ./apply_binaries.sh
 ```
 
-- **Step 4:** Extract **605_jp62.tar.gz**:
+- **ステップ 4:** **605_jp62.tar.gz** を解凍します:
 
 ```bash
 cd ..
@@ -326,7 +326,7 @@ tar xf 605_jp62.tar.gz
 sudo cp -r 605_jp62/Linux_for_Tegra/* Linux_for_Tegra/
 ```
 
-- **Step 5:** Flash the system to the eMMC:
+- **ステップ 5:** システムをeMMCにフラッシュする：
 
 ```bash
 cd Linux_for_Tegra
