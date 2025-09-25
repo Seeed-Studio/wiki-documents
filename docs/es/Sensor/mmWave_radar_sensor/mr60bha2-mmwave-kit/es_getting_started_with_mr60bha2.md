@@ -192,7 +192,8 @@ if (mmWave.update(100)) {
    Serial.printf("distance: %.2f\n", distance);
  }
 }
-}```
+}
+```
 
 La salida será la siguiente en el Monitor Serie de Arduino:
 
@@ -487,6 +488,7 @@ This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sens
 
 - **`mmWave.begin(&mmWaveSerial)`**:
   - Initializes the sensor for communication, similar to the breath module, setting up the serial connection between the XIAO board and the MR60FDA2 sensor.
+
 - **`mmWave.setInstallationHeight(float height)`**:
   - Establece la altura de instalación del radar, que es crucial para la detección precisa de caídas. El parámetro `height` especifica la altura (en metros) a la que se instala el sensor, con un rango válido típicamente entre 1 y 5 metros.
 
@@ -674,7 +676,8 @@ El firmware y algoritmos del radar no son de código abierto, y los parámetros 
 - **Software GUI MR60BHA2**: [Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip)
 - **Esquemático del Sensor mmWave V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
 - **Especificación Técnica del Módulo MR60BHA2**: [MR60BHA2_Breathing_and_Heartbeat_Module.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/MR60BHA2_Breathing_and_Heartbeat_Module.pdf)
-- **Manual de Interfaz Tiny Frame MR60BHA2**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)- **Método de Recuperación de Firmware del Radar vía Jlink**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
+- **Manual de Interfaz Tiny Frame MR60BHA2**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)
+- **Método de Recuperación de Firmware del Radar vía Jlink**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
 
 ## Soporte Técnico y Discusión de Productos
 

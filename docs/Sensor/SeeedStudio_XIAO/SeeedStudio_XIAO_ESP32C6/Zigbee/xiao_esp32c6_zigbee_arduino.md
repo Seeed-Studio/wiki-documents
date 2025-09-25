@@ -521,7 +521,6 @@ void loop() {
 The official routines are still being continuously updated, our documentation may not be able to synchronize the latest programs at the first time, if there is any discrepancy, please refer to **[Espressif's program examples](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Switch/Zigbee_On_Off_Switch.ino)**.
 :::
 
-
 ```cpp title=Zigbee_On_Off_Switch.ino showLineNumbers
 #ifndef ZIGBEE_MODE_ZCZR
 #error "Zigbee coordinator mode is not selected in Tools->Zigbee mode"

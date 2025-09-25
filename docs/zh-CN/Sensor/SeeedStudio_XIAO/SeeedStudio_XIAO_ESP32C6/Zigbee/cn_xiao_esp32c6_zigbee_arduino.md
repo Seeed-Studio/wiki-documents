@@ -245,7 +245,8 @@ void loop() {
     }
   }
   delay(100);
-}```
+}
+```
 
 此代码检查按钮是否被按下：
 
@@ -516,9 +517,9 @@ void loop() {
 - 当按钮被按下并释放（`SWITCH_RELEASE_DETECTED`）时，调用`onZbButton()`回调来切换灯光。
 - 每**10 秒**，打印绑定的灯光用于监控目的。
 
-:::tip官方例程仍在持续更新中，我们的文档可能无法第一时间同步最新程序，如有差异，请以**[Espressif 的程序示例](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Switch/Zigbee_On_Off_Switch.ino)**为准。
+:::tip
+官方例程仍在持续更新中，我们的文档可能无法第一时间同步最新程序，如有差异，请以**[Espressif 的程序示例](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Switch/Zigbee_On_Off_Switch.ino)**为准。
 :::
-
 
 ```cpp title=Zigbee_On_Off_Switch.ino showLineNumbers
 #ifndef ZIGBEE_MODE_ZCZR

@@ -245,7 +245,8 @@ void loop() {
     }
   }
   delay(100);
-}```
+}
+```
 
 このコードはボタンが押されているかどうかをチェックします：
 
@@ -516,9 +517,9 @@ void loop() {
 - ボタンが押されて離された時（`SWITCH_RELEASE_DETECTED`）、`onZbButton()`コールバックが呼び出されてライトを切り替えます。
 - **10秒**ごとに、監視目的でバインドされたライトが出力されます。
 
-:::tip公式ルーチンは継続的に更新されており、私たちのドキュメントは最新のプログラムを即座に同期できない場合があります。相違がある場合は、**[Espressifのプログラム例](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Switch/Zigbee_On_Off_Switch.ino)**を参照してください。
+:::tip
+公式ルーチンは継続的に更新されており、私たちのドキュメントは最新のプログラムを即座に同期できない場合があります。相違がある場合は、**[Espressifのプログラム例](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Switch/Zigbee_On_Off_Switch.ino)**を参照してください。
 :::
-
 
 ```cpp title=Zigbee_On_Off_Switch.ino showLineNumbers
 #ifndef ZIGBEE_MODE_ZCZR

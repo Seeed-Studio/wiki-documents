@@ -192,7 +192,8 @@ if (mmWave.update(100)) {
    Serial.printf("distance: %.2f\n", distance);
  }
 }
-}```
+}
+```
 
 Arduino シリアルモニターでの出力は以下のようになります：
 
@@ -487,6 +488,7 @@ This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sens
 
 - **`mmWave.begin(&mmWaveSerial)`**:
   - Initializes the sensor for communication, similar to the breath module, setting up the serial connection between the XIAO board and the MR60FDA2 sensor.
+
 - **`mmWave.setInstallationHeight(float height)`**:
   - レーダーの設置高度を設定します。これは正確な転倒検知に重要です。`height`パラメータはセンサーが設置される高度（メートル単位）を指定し、有効範囲は通常1〜5メートルです。
 
@@ -674,7 +676,8 @@ mmWaveモジュールをカスタマイズする際の3Dポイントクラウド
 - **MR60BHA2 GUIソフトウェア**: [Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip)
 - **mmWave センサー SCH V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
 - **MR60BHA2 モジュール技術仕様**: [MR60BHA2_Breathing_and_Heartbeat_Module.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/MR60BHA2_Breathing_and_Heartbeat_Module.pdf)
-- **MR60BHA2 Tiny Frameインターフェースマニュアル**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)- **Jlink経由でのレーダーファームウェア復旧方法**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
+- **MR60BHA2 Tiny Frameインターフェースマニュアル**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)
+- **Jlink経由でのレーダーファームウェア復旧方法**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
 
 ## 技術サポート & 製品ディスカッション
 

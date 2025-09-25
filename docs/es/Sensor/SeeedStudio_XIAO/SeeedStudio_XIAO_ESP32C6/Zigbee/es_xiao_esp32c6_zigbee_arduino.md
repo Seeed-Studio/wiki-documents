@@ -245,7 +245,8 @@ void loop() {
     }
   }
   delay(100);
-}```
+}
+```
 
 Este código verifica si el botón está presionado:
 
@@ -415,25 +416,25 @@ static void enableGpioInterrupt(bool enabled) {
   }
 }
 ```
-__CODE_LINE_PLH__
 
 **`enableGpioInterrupt()`** habilita o deshabilita la interrupción GPIO, dependiendo de si el parámetro `enabled` es `true` o `false`.
 
 ##### Función Setup
 
+```cpp
 void setup() {
   Serial.begin(115200);
   while (!Serial) {
     delay(10);
   }
 
-
+  zbSwitch.setManufacturerAndModel("Espressif", "ZigbeeSwitch");
   zbSwitch.allowMultipleBinding(true);
 
-
+  Zigbee.addEndpoint(&zbSwitch);
   Zigbee.setRebootOpenNetwork(180);
 
-
+  for (int i = 0; i < PAIR_SIZE(buttonFunctionPair); i++) {
     pinMode(buttonFunctionPair[i].pin, INPUT_PULLUP);
     gpio_evt_queue = xQueueCreate(10, sizeof(SwitchData));
     if (gpio_evt_queue == 0) {
@@ -443,15 +444,15 @@ void setup() {
     attachInterruptArg(buttonFunctionPair[i].pin, onGpioInterrupt, (void *)(buttonFunctionPair + i), FALLING);
   }
 
+  Zigbee.begin(ZIGBEE_COORDINATOR);
 
-
-
+  Serial.println("Waiting for Light to bound to the switch");
   while (!zbSwitch.isBound()) {
     Serial.printf(".");
     delay(500);
   }
 
-
+  std::list<zb_device_params_t *> boundLights = zbSwitch.getBoundDevices();
   for (const auto &device : boundLights) {
     Serial.printf("Device on endpoint %d, short address: 0x%x\n", device->endpoint, device->short_addr);
     Serial.printf(
@@ -464,7 +465,6 @@ void setup() {
   Serial.println();
 }
 ```
-__CODE_LINE_PLH__
 
 - **Inicialización de Comunicación Serie**: Inicializa el puerto serie para depuración.
 - **Información del Dispositivo**: Establece el fabricante y modelo, permite que múltiples dispositivos se vinculen, y agrega un endpoint al núcleo Zigbee.
@@ -474,13 +474,14 @@ __CODE_LINE_PLH__
 
 ##### Función Loop
 
+```cpp
 void loop() {
   uint8_t pin = 0;
   SwitchData buttonSwitch;
   static SwitchState buttonState = SWITCH_IDLE;
   bool eventFlag = false;
 
-
+  if (xQueueReceive(gpio_evt_queue, &buttonSwitch, portMAX_DELAY)) {
     pin = buttonSwitch.pin;
     enableGpioInterrupt(false);
     eventFlag = true;
@@ -504,21 +505,21 @@ void loop() {
     vTaskDelay(10 / portTICK_PERIOD_MS);
   }
 
-
+  static uint32_t lastPrint = 0;
   if (millis() - lastPrint > 10000) {
     lastPrint = millis();
     zbSwitch.printBoundDevices();
   }
 }
 ```
-__CODE_LINE_PLH__
 
 - La **función loop** gestiona las pulsaciones de botones leyendo de la cola de interrupciones (`gpio_evt_queue`) y actualizando el `buttonState` en consecuencia.
 - Cuando el botón se presiona y se libera (`SWITCH_RELEASE_DETECTED`), se invoca el callback `onZbButton()` para alternar la luz.
 - Cada **10 segundos**, se imprimen las luces vinculadas para propósitos de monitoreo.
+
+:::tip
 Las rutinas oficiales se siguen actualizando continuamente, nuestra documentación puede no ser capaz de sincronizar los programas más recientes en el primer momento, si hay alguna discrepancia, por favor consulte **[los ejemplos de programas de Espressif](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Switch/Zigbee_On_Off_Switch.ino)**.
 :::
-
 
 ```cpp title=Zigbee_On_Off_Switch.ino showLineNumbers
 #ifndef ZIGBEE_MODE_ZCZR
