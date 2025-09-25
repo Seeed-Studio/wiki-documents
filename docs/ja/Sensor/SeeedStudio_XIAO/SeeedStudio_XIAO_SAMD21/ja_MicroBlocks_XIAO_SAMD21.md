@@ -1,5 +1,5 @@
 ---
-description: MicroBlocksでXIAO SAMD21を使用する。
+description: XIAO SAMD21をMicroBlocksで使用する。
 title: MicroBlocks
 image: https://files.seeedstudio.com/wiki/microblocks/microblocks.png
 slug: /ja/xiao_samd21_microblocks
@@ -8,34 +8,34 @@ last_update:
   author: MicroBlocks
 ---
 
-# MicroBlocksでXIAO SAMD21を使用する
+# XIAO SAMD21 with MicroBlocks
 
 ## MicroBlocks
 
-MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラムできるブロック言語です。見た目の単純さにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語です。GPIOピンの制御やI2C、SPI、シリアル経由での周辺機器とのインターフェース、そして約200の拡張ライブラリを備えています。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、ラピッドプロトタイピングやテストにMicroBlocksを好んで使用しています。
+MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラミングできるブロック言語です。見た目のシンプルさにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語で、GPIOピンの制御やI2C、SPI、シリアル経由でのペリフェラルとのインターフェース機能、そして約200の拡張ライブラリを備えています。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、ラピッドプロトタイピングやテストにMicroBlocksを好んで使用しています。
 
 ### XIAO SAMD21のピン配置とハードウェア機能
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-pinout-samd21.jpg" style={{width:600, height:'auto'}}/></div>
 
-すべてのXIAOボードと同様に、このボードには11個のGPIOピン（ピン0..10）があります。すべてのピンはアナログ入力、デジタル出力、アナログ出力に使用できます。
-ピン1..10は、他のXiaoボードと同様にパルス幅変調（PWM）出力をサポートしています。
+すべてのXIAOボードと同様に、このボードには11個のGPIOピン（ピン0〜10）があります。すべてのピンはアナログ入力、デジタル出力、アナログ出力に使用できます。
+ピン1〜10は、他のXiaoボードと同様にパルス幅変調（PWM）出力をサポートしています。
 
-他のボードとは異なり、このボードのピン0は**10ビットデジタル-アナログコンバーター**（DAC）です。ピン0を0から1023の間の数値に設定すると、ピンは0から3.3ボルトの間の安定した電圧を出力します。（対照的に、PWM出力は数値がパルス幅を決定するデジタルパルスの連続です。）DACピンは、オーディオやその他のアナログ信号の生成に使用できます。
+他のボードとは異なり、このボードのピン0は**10ビットデジタル-アナログコンバーター**（DAC）です。ピン0を0から1023の間の数値に設定すると、ピンは0から3.3ボルトの間の安定した電圧を出力します。（対照的に、PWMは数値がパルス幅を決定するデジタルパルスの連続を出力します。）DACピンは音声やその他のアナログ信号の生成に使用できます。
 
 このボードには黄色のユーザーLED（ピン13）と青色のRX/TX LED（ピン11と12）があります。
-すべてのLEDは反転しています：関連するピンをLOWに設定するとLEDが点灯します。
+すべてのLEDは反転しています：LEDを点灯させるには、関連するピンをLOWに設定します。
 
 RX/TX LEDはMicroBlocksで使用できますが、注意点があります。
 MicroBlocksは常にボードとデータを交換しているため、
 MicroBlocksエディターを使用している際にRX/TX LEDが明るく点滅します。
 その点滅が気を散らすため、RX/TX LEDはデフォルトで無効になっており、
 スクリプトが関連するピンを設定した場合にのみ有効になります。
-これを念頭に置くと、RX/TX LEDはIDEが接続されていない時に有用です。
+このことを念頭に置くと、RX/TX LEDはIDEが接続されていない時に有用です。
 
 ## MicroBlocksファームウェアのインストール
 
-このボードにはブートボタンがないため、ブートローダーモードに入るのは少し複雑です。USBポートの左側にある2つのRSTピンの接点を、ワイヤーを使って素早く2回ショートさせます：
+このボードにはブートボタンがないため、ブートローダーモードに入るのは少し難しいです。USBポートの左側にある2つのRSTピンの接点をワイヤーで素早く2回ショートさせます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif" style={{width:400, height:'auto'}}/></div>
 
@@ -76,12 +76,14 @@ MicroBlocksは**ライブ**コーディング環境なので、コーディン�
 ブロックやスクリプトをクリックして実行します。
 ブロックをスクリプトペインにドラッグして組み立て、スクリプトを作成します。
 
-コードは永続的なフラッシュメモリに保存され、ボードがMicroBlocksエディターに接続されていなくても実行できます。
-**when started**ブロックの下にあるスクリプトは、ボードに電源が供給されたときに実行されます。
+コードは永続的なフラッシュメモリに保存され、ボードが
+MicroBlocksエディターに接続されていなくても実行できます。
+**when started**ブロックの下にあるスクリプトは、ボードに電源が入ったときに実行されます。
 
-MicroBlocksは並行処理をサポートしています。最大10個のスクリプトが同時に実行できます。
+MicroBlocksは並行処理をサポートしています。最大10個のスクリプトを同時に実行できます。
 
-多くの組み込みブロックに加えて、MicroBlocksには追加機能や周辺機器をサポートする約200のライブラリがあります。
+多くの組み込みブロックに加えて、MicroBlocksには約200のライブラリがあり、
+追加機能やペリフェラルをサポートしています。
 **Add Library**ボタンをクリックしてライブラリを追加します。
 
 ## 例
@@ -90,11 +92,12 @@ MicroBlocksは並行処理をサポートしています。最大10個のスク�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-blink.png" style={{width:200, height:'auto'}}/></div>
 
-[ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)には、さらに多くの例が含まれています。
+[ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)には
+多くの追加例が含まれています。
 
-## 特別な謝辞
+## 特別な感謝
 
-記事を執筆してくれたMicroBlocksのJohnに特別な感謝を。
+この記事を執筆してくれたMicroBlocksのJohnに特別な感謝を。
 
 ## MicroBlocksリソース
 

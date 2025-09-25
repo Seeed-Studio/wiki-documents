@@ -1,5 +1,5 @@
 ---
-description: En este tutorial, nos embarcaremos en un viaje para explorar el desarrollo de aplicaciones Zigbee usando la placa de desarrollo XIAO ESP32C6. La XIAO ESP32C6 es una placa compacta pero potente que cuenta con el chip ESP32-C6, que ofrece conectividad integrada Wi-Fi y Bluetooth Low Energy (BLE). Al aprovechar el SDK ESP Zigbee, podemos aprovechar todo el potencial de la XIAO ESP32C6 y extender sus capacidades para incluir funcionalidad Zigbee.
+description: En este tutorial, nos embarcaremos en un viaje para explorar el desarrollo de aplicaciones Zigbee utilizando la placa de desarrollo XIAO ESP32C6. La XIAO ESP32C6 es una placa compacta pero potente que cuenta con el chip ESP32-C6, que ofrece conectividad integrada Wi-Fi y Bluetooth Low Energy (BLE). Al aprovechar el ESP Zigbee SDK, podemos aprovechar todo el potencial de la XIAO ESP32C6 y extender sus capacidades para incluir funcionalidad Zigbee.
 title: Guía de Inicio Rápido XIAO ESP32C6 Zigbee (Arduino)
 image: https://files.seeedstudio.com/wiki/xiaoc6_zigbee/3.webp
 slug: /es/xiao_esp32c6_zigbee_arduino
@@ -10,7 +10,7 @@ last_update:
 
 ## Descripción General
 
-Este tutorial te guía a través de la implementación de aplicaciones [Zigbee](https://en.wikipedia.org/wiki/Zigbee) en la placa de desarrollo Seeed Studio **XIAO ESP32C6**. Impulsada por el chip ESP32-C6, esta placa combina conectividad **Wi-Fi**, **Bluetooth Low Energy (BLE)** y **Zigbee**, haciéndola perfecta para **aplicaciones IoT**. Los ejemplos en esta guía utilizan el **SDK esp-arduino Zigbee** para dar vida a la funcionalidad Zigbee.
+Este tutorial te guía a través de la implementación de aplicaciones [Zigbee](https://en.wikipedia.org/wiki/Zigbee) en la placa de desarrollo Seeed Studio **XIAO ESP32C6**. Impulsada por el chip ESP32-C6, esta placa combina conectividad **Wi-Fi**, **Bluetooth Low Energy (BLE)** y **Zigbee**, haciéndola perfecta para **aplicaciones IoT**. Los ejemplos en esta guía utilizan el **esp-arduino Zigbee SDK** para dar vida a la funcionalidad Zigbee.
 
 <div style={{ textAlign: 'center' }}>
   <img
@@ -19,11 +19,11 @@ Este tutorial te guía a través de la implementación de aplicaciones [Zigbee](
   />
 </div>
 
-### Lo que Aprenderás
+### Lo Que Aprenderás
 
 :::note Prerrequisito: Configuración de Desarrollo Arduino
 
-Si no has preparado tu IDE de Arduino, consulta la **[Guía de Inicio](https://chatgpt.com/xiao_esp32c6_getting_started/#software-preparation)**. Asegúrate de que la **versión de la placa esp-arduino** sea **v3.0.6 o posterior**, que soporta funcionalidad Zigbee.
+Si no has preparado tu Arduino IDE, consulta la **[Guía de Inicio](https://wiki.seeedstudio.com/es/xiao_esp32c6_getting_started/#software-preparation)**. Asegúrate de que la **versión de la placa esp-arduino** sea **v3.0.6 o posterior**, que soporta funcionalidad Zigbee.
 
 :::
 
@@ -51,7 +51,7 @@ La comunicación Zigbee se basa en la **Biblioteca de Clústeres Zigbee (ZCL)**,
 
    Ejemplos:
 
-   - **Clúster On/Off**: Controla estados binarios como la alimentación.
+   - **Clúster On/Off**: Controla estados binarios como la energía.
    - **Clúster de Control de Nivel**: Ajusta intensidad o brillo.
    - **Clúster de Medición de Temperatura**: Envía lecturas de temperatura.
    - **Clúster de Escenas**: Guarda y recupera configuraciones preestablecidas.
@@ -71,26 +71,26 @@ Una red Zigbee consiste en tres tipos principales de nodos:
    - Responsable de inicializar y gestionar la red.  
    - Cada red Zigbee puede tener solo **un Coordinador**.  
 
-2. **Enrutador Zigbee (ZR)**  
+2. **Router Zigbee (ZR)**  
    - Extiende el alcance de la red retransmitiendo mensajes entre dispositivos.  
    - Soporta dispositivos adicionales uniéndose a la red.  
    - Típicamente alimentado por la red eléctrica para asegurar operación constante y retransmisión confiable de mensajes.  
-   - Los Enrutadores alimentados por batería son posibles pero menos comunes debido a mayores demandas de energía.  
+   - Los Routers alimentados por batería son posibles pero menos comunes debido a mayores demandas de energía.  
 
 3. **Dispositivo Final Zigbee (ZED)**  
-   - Dispositivos ligeros y eficientes en energía que se comunican con un nodo padre (ya sea un Coordinador o Enrutador).  
+   - Dispositivos ligeros y eficientes en energía que se comunican con un nodo padre (ya sea un Coordinador o Router).  
    - No enrutan mensajes a otros dispositivos.  
    - Optimizados para operación con batería y típicamente entran en modos de suspensión para conservar energía.
 
 :::note
 
 - **Direccionamiento y Enrutamiento**:
-  - Zigbee usa un esquema de direccionamiento de 16 bits. Los dispositivos se comunican a través de una mezcla de direccionamiento directo e indirecto.  
-  - Las decisiones de enrutamiento son tomadas por los Enrutadores usando algoritmos como AODV (Ad hoc On-demand Distance Vector).  
+  - Zigbee utiliza un esquema de direccionamiento de 16 bits. Los dispositivos se comunican a través de una mezcla de direccionamiento directo e indirecto.  
+  - Las decisiones de enrutamiento son tomadas por los Routers utilizando algoritmos como AODV (Ad hoc On-demand Distance Vector).  
 
 - **Gestión de Energía**:
   - Los Dispositivos Finales Zigbee están optimizados para bajo consumo de energía. A menudo operan en modo de suspensión y solo despiertan cuando es necesario.  
-  - Los Enrutadores y el Coordinador generalmente están alimentados por la red eléctrica para disponibilidad consistente.
+  - Los Routers y el Coordinador generalmente están alimentados por la red eléctrica para disponibilidad consistente.
 
 :::
 
@@ -100,54 +100,54 @@ Zigbee soporta tres topologías de red principales, dependiendo de los requisito
 
 #### 1. Topología de Malla
 
-- Un solo Coordinador y múltiples Enrutadores forman una red robusta y auto-reparable.  
-- Los dispositivos pueden reencaminar dinámicamente mensajes si una ruta de comunicación se interrumpe, asegurando alta confiabilidad.  
-- Ideal para redes de gran escala que requieren amplia cobertura y redundancia.  
+- Un solo Coordinador y múltiples Routers forman una red robusta y auto-reparable.  
+- Los dispositivos pueden redirigir dinámicamente los mensajes si una ruta de comunicación se interrumpe, asegurando alta confiabilidad.  
+- Ideal para redes a gran escala que requieren amplia cobertura y redundancia.  
 
   <div style={{textAlign:'center'}}><img src="https://mermaid.ink/svg/pako:eNptkcEOgjAQRH9lsydI5CDcuIo_oJ5MLxu6AlG6pLYmxvjvVlFSgj3NtG9nmvaBtWjGEgGgsTS0cKiUgXFtRKzuDDmxSRKZNIUsy2An3rFdJ8koYJ2m_0YjNp_YPGK_OR9ua3TFt67mEBs0jGYWHeOjLqbYYsHlMff3bKrMZ5XLGxZzvJjhoRlX2LPtqdPhPR_vYYWu5Z4VlkFqsmeFyjwDR97J_m5qLJ31vEIrvml_xg-aHFcdhQ_psTzR5Rp2BzJHkZ9_vgDkroUg" style={{width:380, height:'auto', "border-radius": '1px'}}/></div>
 
 - **Características Clave**:  
-  - El reencaminamiento dinámico asegura alta confiabilidad.  
+  - El redireccionamiento dinámico asegura alta confiabilidad.  
   - Soporta redes grandes con cobertura escalable.  
   - Los mecanismos de auto-reparación aumentan la tolerancia a fallos.  
 
 #### 2. Topología de Árbol
 
-- El Coordinador actúa como la raíz de una estructura jerárquica, con los Routers formando ramas.
-- Cada rama puede tener múltiples Dispositivos Finales o Routers adicionales, creando una estructura similar a un árbol.
-- La comunicación depende de rutas jerárquicas, lo que introduce posibles puntos únicos de falla.
+- El Coordinador actúa como la raíz de una estructura jerárquica, con Routers formando ramas.  
+- Cada rama puede tener múltiples Dispositivos Finales o Routers adicionales, creando una estructura similar a un árbol.  
+- La comunicación depende de rutas jerárquicas, lo que introduce potenciales puntos únicos de falla.  
 
   <div style={{textAlign:'center'}}><img src="https://mermaid.ink/svg/pako:eNqF0MEKwjAMBuBXCTmt4A5OT7s6X0A9SS9hjW7omlFbQcR3tzqVFQV7yl--_IdcsRbDWCIA7B31DWwqbWF4CxFnWkteXJaNglKQ5zmsJHh20ywbBpgq9Wt1ZIuPLUb21fN0S2sqPrc1x9o4wxCS6p-8SPh3e5HyWcJn__g84XOlcIIdu45aE093fSxr9A13rLGMoyF30KjtLToKXtYXW2PpXeAJOgn7BssdHU8xhd6Q56qlePzu89uT3Yq88-0OO1R_gA" style={{width:600, height:'auto', "border-radius": '1px'}}/></div>
 
-- **Características Clave**:
-  - Funciona bien para entornos estructurados.
-  - Más fácil de configurar y gestionar que una red de malla.
-  - Vulnerable a fallas de rama, lo que puede desconectar sub-redes completas.
+- **Características Clave**:  
+  - Funciona bien para entornos estructurados.  
+  - Más fácil de configurar y gestionar que una red de malla.  
+  - Vulnerable a fallas de rama, que pueden desconectar sub-redes enteras.  
 
-#### 3. Topología en Estrella
+#### 3. Topología de Estrella
 
-- Todos los dispositivos se comunican directamente con el Coordinador.
-- Simple de implementar, pero el Coordinador es un punto único de falla.
-- Mejor adaptado para redes pequeñas donde los dispositivos están ubicados cerca del Coordinador.
+- Todos los dispositivos se comunican directamente con el Coordinador.  
+- Simple de implementar, pero el Coordinador es un punto único de falla.  
+- Mejor adecuado para redes pequeñas donde los dispositivos están ubicados cerca del Coordinador.  
 
   <div style={{textAlign:'center'}}><img src="https://mermaid.ink/svg/pako:eNqNkMEKwjAMhl8l5LTCdth269X5BHqSXsIat6JtR20FGXt3K0Nx4MGc_i_kCyEz9l4zSgSAIdA0wrFTDtbaeR-0cRR9KIovEAKqqoK90x3fTc91UeQMK0AtxK8NW6XZKM0_SrtRWiGwRMvBktH5_vm1QGEc2bJCmaOmcFGo3JLnKEV_eLgeZQyJSww-DSPKM11vmdKkKXJnKH_AfroTuZP3b16etDldgQ" style={{width:480, height:'auto', "border-radius": '1px'}}/></div>
 
-- **Características Clave**:
-  - Fácil de configurar y gestionar.
-  - Escalabilidad limitada debido a restricciones de rango y capacidad de dispositivos.
-  - La dependencia del Coordinador para toda la comunicación reduce la tolerancia a fallos.
+- **Características Clave**:  
+  - Fácil de configurar y gestionar.  
+  - Escalabilidad limitada debido a restricciones de alcance y capacidad de dispositivos.  
+  - La dependencia del Coordinador para toda la comunicación reduce la tolerancia a fallos.  
 
-Después de obtener una vista rápida de estos conceptos, comencemos con el desarrollo de Zigbee en XIAO ESP32C6.
+Después de obtener una vista rápida de estos conceptos, comencemos con el desarrollo Zigbee en XIAO ESP32C6.
 
-## Ejemplos de Arduino {#examples}
+## Ejemplos Arduino {#examples}
 
-Consulta [ejemplos de Zigbee - Arduino](https://github.com/espressif/arduino-esp32/tree/master/libraries/Zigbee/examples)
+Consulta [Ejemplos Zigbee - Arduino](https://github.com/espressif/arduino-esp32/tree/master/libraries/Zigbee/examples)
 
-### Ejemplo 1: Bombilla y Interruptor de Luz {#Light_Bulb_switch}
+### Ejemplo 1: Bombilla e Interruptor de Luz {#Light_Bulb_switch}
 
-Primero, prepara dos XIAO ESP32C6, uno como una **Bombilla Zigbee** y el otro como un **Interruptor de Luz Zigbee**.
+Primero, prepara dos XIAO ESP32C6, una como **Bombilla Zigbee** y la otra como **Interruptor de Luz Zigbee**.
 
-Usa los ejemplos `Zigbee_On_Off_Light` y `Zigbee_On_Off_Switch` para entender cómo interactúan los dispositivos habilitados para Zigbee en escenarios del mundo real. ¿Listo para comenzar? ¡Sumerjámonos en el desarrollo!
+Utiliza los ejemplos `Zigbee_On_Off_Light` y `Zigbee_On_Off_Switch` para entender cómo los dispositivos habilitados para Zigbee interactúan en escenarios del mundo real. ¿Listo para comenzar? ¡Sumerjámonos en el desarrollo!
 
 #### Bombilla Zigbee
 
@@ -161,9 +161,9 @@ algunas constantes:
 #define ZIGBEE_LIGHT_ENDPOINT 10
 ```
 
-- `LED_PIN` se usa para controlar el LED integrado.
+- `LED_PIN` se utiliza para controlar el LED integrado.
 - `BUTTON_PIN` es para el botón de restablecimiento de fábrica.
-- `ZIGBEE_LIGHT_ENDPOINT` representa el endpoint de Zigbee para la bombilla, que actúa como un identificador de servicio en la red.
+- `ZIGBEE_LIGHT_ENDPOINT` representa el endpoint Zigbee para la bombilla, que actúa como un identificador de servicio en la red.
 
 ##### Definir el Dispositivo de Luz Zigbee
 
@@ -187,7 +187,7 @@ La función `setLED()` acepta un valor booleano y establece el estado del LED en
 
 ##### Función `setup()`
 
-La función `setup()` inicializa el dispositivo, incluyendo el LED, el botón y la configuración de Zigbee.
+La función `setup()` inicializa el dispositivo, incluyendo el LED, botón y configuraciones Zigbee.
 
 ```cpp
 void setup() {
@@ -201,13 +201,13 @@ Primero, configuramos el pin del LED como salida y lo apagamos inicialmente.
   pinMode(BUTTON_PIN, INPUT_PULLUP);
 ```
 
-El pin del botón se configura como una entrada con una resistencia pull-up interna.
+El pin del botón se configura como entrada con una resistencia pull-up interna.
 
 ```cpp
   zbLight.setManufacturerAndModel("Espressif", "ZBLightBulb");
 ```
 
-Esto establece el nombre del fabricante y el modelo para el dispositivo, lo que ayuda a identificarlo en la red Zigbee.
+Esto establece el nombre del fabricante y modelo para el dispositivo, lo que ayuda a identificarlo en la red Zigbee.
 
 ```cpp
   zbLight.onLightChange(setLED);
@@ -225,7 +225,7 @@ Agregamos `zbLight` como un endpoint al núcleo Zigbee. Esto permite que otros d
   Zigbee.begin();
 ```
 
-Finalmente, llamamos a `Zigbee.begin()` para inicializar la pila de Zigbee e iniciar el dispositivo como un dispositivo final en la red.
+Finalmente, llamamos `Zigbee.begin()` para inicializar la pila Zigbee e iniciar el dispositivo como un dispositivo final en la red.
 
 ##### Función `loop()`
 
@@ -250,10 +250,10 @@ void loop() {
 
 Este código verifica si el botón está presionado:
 
-- Si está presionado, espera 100 ms (para el manejo del rebote).
+- Si está presionado, espera 100 ms (para el manejo de rebote).
 - Si el botón permanece presionado por más de 3 segundos, activa un restablecimiento de fábrica llamando a `Zigbee.factoryReset()`.
 
-Esta característica es útil para los usuarios cuando necesitan reconfigurar el dispositivo debido a problemas de red o emparejamiento.
+Esta función es útil para los usuarios cuando necesitan reconfigurar el dispositivo debido a problemas de red o emparejamiento.
 
 :::tip
 Las rutinas oficiales aún se están actualizando continuamente, nuestra documentación puede no ser capaz de sincronizar los programas más recientes en el primer momento, si hay alguna discrepancia, por favor consulte **[los ejemplos de programa de Espressif](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Light/Zigbee_On_Off_Light.ino)**.
@@ -336,7 +336,7 @@ Aquí, el XIAO ESP32C6 sirve como el **Coordinador Zigbee**, responsable de cont
 #define PAIR_SIZE(TYPE_STR_PAIR) (sizeof(TYPE_STR_PAIR) / sizeof(TYPE_STR_PAIR[0]))
 ```
 
-- `SWITCH_ENDPOINT_NUMBER` se define como `5`. Representa el endpoint del interruptor. Al igual que en el ejemplo de la bombilla, el número de endpoint se utiliza para definir la función específica dentro de un dispositivo Zigbee.
+- `SWITCH_ENDPOINT_NUMBER` se define como `5`. Representa el endpoint del interruptor. Al igual que en el ejemplo de la bombilla, el número de endpoint se usa para definir la función específica dentro de un dispositivo Zigbee.
 - `GPIO_INPUT_IO_TOGGLE_SWITCH` se refiere al pin GPIO `9`, que actúa como el botón del interruptor.
 - `PAIR_SIZE()` es una macro utilizada para calcular el tamaño de un array dado, utilizada aquí para manejar las configuraciones de botones.
 
@@ -380,10 +380,10 @@ static SwitchData buttonFunctionPair[] = {{GPIO_INPUT_IO_TOGGLE_SWITCH, SWITCH_O
 ZigbeeSwitch zbSwitch = ZigbeeSwitch(SWITCH_ENDPOINT_NUMBER);
 ```
 
-- **`buttonFunctionPair`** es un array que define las funciones de los botones. Aquí, el botón conectado al `GPIO 9` se utilizará para alternar el encendido y apagado de la luz.
+- **`buttonFunctionPair`** es un array que define las funciones de los botones. Aquí, el botón conectado al `GPIO 9` se utilizará para alternar el encendido o apagado de la luz.
 - **`zbSwitch`** crea una instancia de `ZigbeeSwitch`, con el número de endpoint `5`.
 
-##### Funciones de Zigbee y Manejo de Interrupciones de GPIO
+##### Funciones Zigbee y Manejo de Interrupciones GPIO
 
 ```cpp
 static void onZbButton(SwitchData *button_func_pair) {
@@ -403,7 +403,7 @@ static void IRAM_ATTR onGpioInterrupt(void *arg) {
 }
 ```
 
-**`onGpioInterrupt()`** es la rutina de servicio de interrupción (ISR) para manejar interrupciones de pines GPIO. Coloca un evento en una cola cada vez que se presiona el botón.
+**`onGpioInterrupt()`** es la rutina de servicio de interrupción (ISR) para manejar las interrupciones de pines GPIO. Coloca un evento en una cola cada vez que se presiona el botón.
 
 ```cpp
 static void enableGpioInterrupt(bool enabled) {
@@ -419,7 +419,7 @@ static void enableGpioInterrupt(bool enabled) {
 
 **`enableGpioInterrupt()`** habilita o deshabilita la interrupción GPIO, dependiendo de si el parámetro `enabled` es `true` o `false`.
 
-##### Función de Configuración
+##### Función Setup
 
 ```cpp
 void setup() {
@@ -467,10 +467,10 @@ void setup() {
 ```
 
 - **Inicialización de Comunicación Serie**: Inicializa el puerto serie para depuración.
-- **Información del Dispositivo**: Establece el fabricante y modelo, permite que múltiples dispositivos se vinculen, y añade un endpoint al núcleo de Zigbee.
-- **Inicialización de Red**: Abre la red Zigbee durante `180` segundos después del reinicio para permitir que los dispositivos se unan.
-- **Inicialización de Botones**: Configura los pines GPIO para los botones, crea una cola para manejar las interrupciones GPIO, y asocia interrupciones a los botones.
-- **Esperar Vinculación**: El coordinador espera hasta que se vincule con un dispositivo de luz antes de continuar. Una vez vinculado, imprime la información del dispositivo vinculado.
+- **Información del Dispositivo**: Establece el fabricante y modelo, permite que múltiples dispositivos se vinculen, y agrega un endpoint al núcleo Zigbee.
+- **Inicialización de Red**: Abre la red Zigbee por `180` segundos después del reinicio para permitir que los dispositivos se unan.
+- **Inicialización de Botones**: Configura los pines GPIO para los botones, crea una cola para manejar las interrupciones GPIO, y adjunta interrupciones a los botones.
+- **Esperar Vinculación**: El coordinador espera hasta que se vincule a un dispositivo de luz antes de continuar. Una vez vinculado, imprime la información del dispositivo vinculado.
 
 ##### Función Loop
 
@@ -513,14 +513,13 @@ void loop() {
 }
 ```
 
-- La **función loop** gestiona las pulsaciones de botón leyendo desde la cola de interrupciones (`gpio_evt_queue`) y actualizando el `buttonState` en consecuencia.
-- Cuando el botón es presionado y liberado (`SWITCH_RELEASE_DETECTED`), se invoca el callback `onZbButton()` para alternar la luz.
-- Cada **10 segundos**, las luces vinculadas se imprimen con fines de monitoreo.
+- La **función loop** gestiona las pulsaciones de botones leyendo de la cola de interrupciones (`gpio_evt_queue`) y actualizando el `buttonState` en consecuencia.
+- Cuando el botón se presiona y se libera (`SWITCH_RELEASE_DETECTED`), se invoca el callback `onZbButton()` para alternar la luz.
+- Cada **10 segundos**, se imprimen las luces vinculadas para propósitos de monitoreo.
 
 :::tip
-Las rutinas oficiales aún se están actualizando continuamente, nuestra documentación puede no ser capaz de sincronizar los programas más recientes en el primer momento, si hay alguna discrepancia, por favor consulte **[los ejemplos de programa de Espressif](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Switch/Zigbee_On_Off_Switch.ino)**.
+Las rutinas oficiales se siguen actualizando continuamente, nuestra documentación puede no ser capaz de sincronizar los programas más recientes en el primer momento, si hay alguna discrepancia, por favor consulte **[los ejemplos de programas de Espressif](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Switch/Zigbee_On_Off_Switch.ino)**.
 :::
-
 
 ```cpp title=Zigbee_On_Off_Switch.ino showLineNumbers
 #ifndef ZIGBEE_MODE_ZCZR
@@ -701,17 +700,17 @@ void loop() {
   style={{ width: '380px', height: '640px' }}
 ></iframe>
 
-¡Felicitaciones por completar exitosamente tu proyecto de iluminación controlada por Zigbee! Hay muchas más aplicaciones emocionantes de Zigbee esperando que las explores. ¡Sigue con el excelente trabajo!
+¡Felicidades por completar exitosamente tu proyecto de iluminación controlada por Zigbee! Hay muchas más aplicaciones emocionantes de Zigbee esperando que las explores. ¡Sigue con el excelente trabajo!
 
 ## Referencia
 
-- [Ejemplos de Zigbee- Arduino](https://github.com/espressif/arduino-esp32/blob/master/libraries/Zigbee/examples)
+- [Ejemplos de Zigbee - Arduino](https://github.com/espressif/arduino-esp32/blob/master/libraries/Zigbee/examples)
 - [ESP Zigbee SDK](https://docs.espressif.com/projects/esp-zigbee-sdk/en/latest/esp32c6/introduction.html)
 - [Arduino Core para ESP32 obtiene una biblioteca wrapper de Zigbee](https://www.cnx-software.com/2024/08/23/arduino-core-for-esp32-gets-a-zigbee-wrapper-library/)
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

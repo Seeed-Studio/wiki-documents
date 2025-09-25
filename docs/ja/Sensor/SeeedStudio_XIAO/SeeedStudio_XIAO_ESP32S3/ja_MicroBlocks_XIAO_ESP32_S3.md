@@ -1,36 +1,36 @@
 ---
 description: XIAO ESP32-S3をMicroBlocksで使用する。
 title: MicroBlocks
-image: https://files.seeedstudio.com/wiki/microblocks/microblocks.png
+image: https://files.seeedstudio.com/wiki/microblocks/microblocks.webp
 slug: /ja/xiao_esp32s3_microblocks
 last_update:
   date: 09/09/2025
   author: MicroBlocks
 ---
 
-# XIAO ESP32-S3をMicroBlocksで使用する
+# XIAO ESP32-S3 と MicroBlocks
 
 ## MicroBlocks
 
-MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラムできるブロック言語です。見た目のシンプルさにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語です。GPIOピンの制御やI2C、SPI、シリアル経由での周辺機器とのインターフェース機能、そして約200の拡張ライブラリを備えています。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、ラピッドプロトタイピングやテストにMicroBlocksを好んで使用しています。
+MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラミングできるブロック言語です。見た目のシンプルさにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語で、GPIOピンの制御やI2C、SPI、シリアル経由での周辺機器とのインターフェース機能、そして約200の拡張ライブラリを提供します。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、迅速なプロトタイピングとテストにMicroBlocksを好んで使用しています。
 
-## XIAO ESP32S3のピン配置とハードウェア機能
+## XIAO ESP32S3 ピン配置とハードウェア機能
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-esp32-s3-sense-overview.png" style={{width:600, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-esp32s3-sense-pinout.jpg" style={{width:600, height:'auto'}}/></div>
 
-このボードは、外部アンテナ（付属）を介してWi-FiとBLE接続の両方を提供します。
+このボードは外部アンテナ（付属）を介してWi-FiとBLE接続の両方を提供します。
 
 ボードには11個のGPIOピン（ピン0..10）があります。
-Senseバージョンには、カメラボードに2つの追加GPIOピン（ピン11..12）があります。
+Senseバージョンには、カメラボード上に2つの追加GPIOピン（ピン11..12）があります。
 ピン0..5と8..10はアナログ入力として使用できます。
 
 ピン13は黄色のユーザーLED（反転）です。
 
-Senseバージョンには、カメラ（1600x1200解像度のOV2640カメラまたは2048x1536解像度のOV3660カメラ）とデジタルマイクロフォンを備えた拡張ボードが含まれています。
+Senseバージョンには、カメラ（1600x1200解像度のOV2640カメラまたは2048x1536解像度のOV3660）とデジタルマイクロフォンを搭載した拡張ボードが含まれています。
 
-**注意：カメラサポートはMicroBlocksではまだ実装されていませんが、将来追加される可能性があります。**
+**注意：カメラサポートはまだMicroBlocksに実装されていませんが、将来追加される可能性があります。**
 
 ## MicroBlocksファームウェアのインストール
 
@@ -40,7 +40,7 @@ Senseバージョンには、カメラ（1600x1200解像度のOV2640カメラま
 
 ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microblocks.fun/run/microblocks.html)を実行します。
 
-ギアメニューで「advanced mode」を有効にします：
+ギアメニューで「アドバンスモード」を有効にします：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/set-advanced-mode.png" style={{width:400, height:'auto'}}/></div>
 
@@ -64,11 +64,10 @@ ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microbloc
 
 ESP32ボードにMicroBlocksファームウェアをインストールする際、通常は手動でブートローダーモードに入る必要はありません。
 
-必要に応じてブートローダーモードに入るには、B（ブート）ボタンを押し続けながら
-R（リセット）ボタンを押して離します。
+必要に応じてブートローダーモードに入るには、B（ブート）ボタンを押し続けながらR（リセット）ボタンを押して離します。
 Bボタンを押し続けながらボードをコンピューターに接続することもできます。
 
-**USBコネクタの両側にある小さなBとRボタンは扱いにくいため、
+**USBコネクターの両側にある小さなBとRボタンは扱いにくいため、
 爪や小さな工具を使って押す必要があるかもしれません。**
 
 ## ボードをMicroBlocksに接続する
@@ -100,14 +99,13 @@ MicroBlocksは**ライブ**コーディング環境なので、コーディン�
 ブロックやスクリプトをクリックして実行します。
 ブロックをスクリプトペインにドラッグして組み立て、スクリプトを作成します。
 
-コードは永続的なフラッシュメモリに保存され、ボードが
-MicroBlocksエディターに接続されていなくても実行できます。
+コードは永続的なフラッシュメモリに保存され、ボードがMicroBlocksエディターに接続されていなくても実行できます。
 **when started**ブロックの下にあるスクリプトは、ボードに電源が供給されたときに実行されます。
 
 MicroBlocksは並行処理をサポートしています。最大10個のスクリプトを同時に実行できます。
 
-多くの組み込みブロックに加えて、MicroBlocksには追加機能と周辺機器を
-サポートする約200のライブラリがあります。
+多くの組み込みブロックに加えて、MicroBlocksには約200のライブラリがあり、
+追加機能と周辺機器をサポートします。
 **Add Library**ボタンをクリックしてライブラリを追加します。
 
 ## 例
@@ -119,9 +117,9 @@ MicroBlocksは並行処理をサポートしています。最大10個のスク�
 [ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)
 には多くの追加例が含まれています。
 
-## 特別な謝辞
+## 特別な感謝
 
-この記事を執筆してくれたMicroBlocksのJohnに特別な感謝を捧げます。
+この記事を執筆してくれたMicroBlocksのJohnに特別な感謝を。
 
 ## MicroBlocksリソース
 
