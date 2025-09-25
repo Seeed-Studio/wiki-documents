@@ -1123,6 +1123,16 @@ export const RecoveryClassic = ({ lang = 'en' }) => {
           alt={texts.lsusbResult}
         />
       </div>
+      <div
+        className="alert alert--danger"
+        role="alert"
+        style={{ marginTop: '1em' }}
+      >
+        If you are using an <strong>Orin NX 16GB/8GB</strong> module, 
+        <strong> do not enable MAXN SUPER mode</strong>. <br />
+        The cooling capacity of the reComputer J401 carrier board is insufficient 
+        to support it, and forcing this mode may result in permanent damage to the module.
+      </div>
     </div>
   );
 };
