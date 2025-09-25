@@ -676,7 +676,6 @@ On Linux, if the left and right arrow keys and the escape key have no effect dur
 Once you are familiar with data recording, you can create a larger dataset for training. A good starting task is to grasp an object at different positions and place it in a small box. We recommend recording at least 50 episodes, with 10 episodes per location. Keep the camera fixed and maintain consistent grasping behavior throughout the recording. Also, ensure that the object you are manipulating is visible in the camera. A good rule of thumb is that you should be able to complete the task by looking only at the camera image.
 :::
 
-
 ## Replay an episode
 
 Now try to replay the first episode on your robot:
@@ -736,7 +735,6 @@ lerobot-train \
 
 </details>
 
-
 1. `policy.type` supports input `diffusion,pi0,pi0fast`
 1. We provide the dataset as a parameter: `dataset.repo_id=starai/record-test`.
 
@@ -752,7 +750,6 @@ lerobot-train \
   --resume=true
 ```
 
-
 <details>
 <summary>If Training [SmolVLA policy](https://huggingface.co/docs/lerobot/smolvla) command: </summary>
 
@@ -761,6 +758,7 @@ pip install -e ".[smolvla]"
 ```
 
 ### Training
+
 ```bash
 lerobot-train \
   --policy.path=lerobot/smolvla_base \ # <- Use pretrained fine-tuned model
@@ -792,19 +790,18 @@ lerobot-record \
   --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
 ```
 
-
 </details>
-
 
 <details>
 <summary>If Training [Libero policy](https://huggingface.co/docs/lerobot/libero) command: </summary>
 
 LIBERO is a benchmark designed to study lifelong robot learning. The idea is that robots won’t just be pretrained once in a factory, they’ll need to keep learning and adapting with their human users over time. This ongoing adaptation is called lifelong learning in decision making (LLDM), and it’s a key step toward building robots that become truly personalized helpers.
 
-  - [LIBERO paper](https://arxiv.org/abs/2306.03310)
-  - [Original LIBERO repo](https://github.com/Lifelong-Robot-Learning/LIBERO)
+- [LIBERO paper](https://arxiv.org/abs/2306.03310)
+- [Original LIBERO repo](https://github.com/Lifelong-Robot-Learning/LIBERO)
 
 LIBERO includes five task suites:
+
 - LIBERO-Spatial (libero_spatial) – tasks that require reasoning about spatial relations.
 
 - LIBERO-Object (libero_object) – tasks centered on manipulating different objects.
@@ -834,12 +831,11 @@ lerobot-train \
   --eval_freq=1000 \
 ```
 
-
 ## Evaluating with LIBERO  
 
 To Install LIBERO, after following LeRobot official instructions, just do: `pip install -e ".[libero]"`
 
-### Single-suite evaluation:
+### Single-suite evaluation
 
 ```bash
 lerobot-eval \
@@ -869,11 +865,7 @@ lerobot-eval \
 
 - Pass a comma-separated list to `--env.task` for multi-suite evaluation.
 
-
-
 </details>
-
-
 
 ## Evaluate your policy
 
