@@ -25,14 +25,14 @@ Wio 最吸引人的地方必须是通过移动应用程序将即插即用模块�
 这里是你可以在 Seeed WiKi 中找到的 Wio 开发板列表。该列表将不断更新。
 
 - [Wio Link](https://wiki.seeedstudio.com/cn/Wio_Link/)
-- [Wio Link Bootcamp Kit](https://wiki.seeedstudio.com/cn/Wio_Link_Bootcamp_Kit/)
-- [Wio Link Deluxe Kit](https://wiki.seeedstudio.com/cn/Wio_Link_Deluxe_Kit/)
-- [Wio Link Deluxe Plus Kit](https://wiki.seeedstudio.com/cn/Wio_Link_Deluxe_Plus_Kit/)
-- [Wio Link Environment Kit](https://wiki.seeedstudio.com/cn/Wio_Link_Environment_Kit/)
-- [Wio Link Event Kit](https://wiki.seeedstudio.com/cn/Wio_Link_Event_Kit/)
-- [Wio Link Starter Kit](https://wiki.seeedstudio.com/cn/Wio_Link_Starter_Kit/)
+- [Wio Link 训练营套件](https://wiki.seeedstudio.com/cn/Wio_Link_Bootcamp_Kit/)
+- [Wio Link 豪华套件](https://wiki.seeedstudio.com/cn/Wio_Link_Deluxe_Kit/)
+- [Wio Link 豪华增强套件](https://wiki.seeedstudio.com/cn/Wio_Link_Deluxe_Plus_Kit/)
+- [Wio Link 环境套件](https://wiki.seeedstudio.com/cn/Wio_Link_Environment_Kit/)
+- [Wio Link 事件套件](https://wiki.seeedstudio.com/cn/Wio_Link_Event_Kit/)
+- [Wio Link 入门套件](https://wiki.seeedstudio.com/cn/Wio_Link_Starter_Kit/)
 - [Wio Node](https://wiki.seeedstudio.com/cn/Wio_Node/)
-- [Grove Starter Kit for Wio LTE](https://wiki.seeedstudio.com/cn/Grove_Starter_Kit_for_Wio_LTE/)
+- [Grove Wio LTE 入门套件](https://wiki.seeedstudio.com/cn/Grove_Starter_Kit_for_Wio_LTE/)
 
 
 ## 技术支持与产品讨论

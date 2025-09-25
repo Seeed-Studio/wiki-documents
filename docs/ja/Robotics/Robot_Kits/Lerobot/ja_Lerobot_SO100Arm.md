@@ -247,7 +247,7 @@ source ~/miniconda3/bin/activate
 conda init --all
 ```
 
-2. Create and activate a fresh conda environment for lerobot
+2. lerobot用の新しいconda環境を作成してアクティベートする
 
 ```bash
 conda create -y -n lerobot python=3.10 && conda activate lerobot
@@ -906,7 +906,7 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 python3 examples/depth.py
 ```
 
-However, you need to run these commands again when opening a new terminal:
+ただし、新しいターミナルを開く際には、これらのコマンドを再度実行する必要があります：
 
 ```bash
 cd ~/pyorbbecsdk 

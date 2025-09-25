@@ -13,7 +13,7 @@ keywords:
 - Yolo
 - Assistant
 - MCP
-# image:
+image: https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/display.webp
 slug: /hello_watcher_llms
 sidebar_position: 1
 last_update:

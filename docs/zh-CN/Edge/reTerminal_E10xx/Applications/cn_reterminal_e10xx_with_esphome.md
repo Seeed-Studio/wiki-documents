@@ -83,17 +83,17 @@ ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
@@ -155,7 +155,7 @@ Home Assistant Green 是自动化家居最简单且最注重隐私的方式。�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/35.png" style={{width:1000, height:'auto'}}/></div>
 
-<!-- Inside the default generated code, the framework of esp32 may be `esp-idf`, which we need to change to `arduino`.
+<!-- 在默认生成的代码中，esp32 的框架可能是 `esp-idf`，我们需要将其更改为 `arduino`。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_arduino.png" style={{width:600, height:'auto'}}/></div> -->
 
@@ -839,7 +839,7 @@ glyphs:
   - "\U000F0123" # your new icon
 ```
 
-And in the display lambda:
+在显示 lambda 中：
 
 ```yaml
 lambda: |-
@@ -988,7 +988,7 @@ lambda: |-
 
 **Combining Images with Text**
 
-You can display both images and text on the same screen:
+您可以在同一屏幕上同时显示图像和文本：
 
 ```yaml
 lambda: |-
@@ -1001,7 +1001,7 @@ lambda: |-
 
 **Using Multiple Images**
 
-To display multiple images on the same screen, define each image in your configuration:
+要在同一屏幕上显示多个图像，请在配置中定义每个图像：
 
 ```yaml
 image:

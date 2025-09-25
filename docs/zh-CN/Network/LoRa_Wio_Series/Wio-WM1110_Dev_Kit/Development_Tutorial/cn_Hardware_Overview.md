@@ -234,8 +234,7 @@ DK上有一个Grove IIC端口，`SDA`在引脚27上，`SCL`在引脚26上。
 ```cpp
 #define IIC_POWER          7
 ```
-
-TWI needs to be enabled in the `sdk_config.h` file before usage.
+TWI 需要在使用前在 `sdk_config.h` 文件中启用。
 
 ```cpp
 // <e> TWI_ENABLED - nrf_drv_twi - TWI/TWIM peripheral driver - legacy layer

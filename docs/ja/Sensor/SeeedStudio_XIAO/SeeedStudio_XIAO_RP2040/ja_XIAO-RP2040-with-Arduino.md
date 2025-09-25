@@ -183,7 +183,7 @@ void loop() {
 
 Pin 11はRGB LEDのイネーブルピンです。Pin 11をHighに設定することでRGB LEDを点灯させることができます。ここではフラッシュさせてみます。まず、サードパーティライブラリを追加する必要があります。
 
-- **Step 1.** Arduino IDEを開き、`Sketch > Include Library > Manage Libraries...`に移動してライブラリを検索します。
+- **ステップ 1.** Arduino IDEを開き、`Sketch > Include Library > Manage Libraries...`に移動してライブラリを検索します。
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
 
@@ -191,7 +191,7 @@ Arduino Library Managerで「Adafruit_NeoPixel」ライブラリをキーワー�
 
 <div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/boardurl6.png" /></div>
 
-- **Step 2.** コードをArduinoにコピーし、**Upload**ボタンをクリックしてアップロードします。
+- **ステップ 2.** コードをArduinoにコピーし、**Upload**ボタンをクリックしてアップロードします。
 
 ```cpp
 #include <Adafruit_NeoPixel.h>

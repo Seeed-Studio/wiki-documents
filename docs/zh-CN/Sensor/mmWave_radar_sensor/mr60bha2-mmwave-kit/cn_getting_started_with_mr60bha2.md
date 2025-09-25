@@ -270,7 +270,7 @@ Arduino 串口监视器的输出如下：
 <!-- 
 ### Fall Module
 
-This example shows how to use the **MR60FDA2** sensor for fall detection.
+这个例子展示了如何使用 **MR60FDA2** 传感器进行跌倒检测。
 
 ```cpp
 #include <Arduino.h>
@@ -481,31 +481,31 @@ Arduino 串口监视器的输出如下：
 - **`mmWave.isHumanDetected()`**:
   - 返回是否检测到人体。
 
-<!-- 
+<!--
 ### Fall Module API
 
-This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sensor for fall detection. Here’s what each key function does:
+这个例子使用`SEEED_MR60FDA2`类来与MR60FDA2传感器进行接口，用于跌倒检测。以下是每个关键功能的作用：
 
 - **`mmWave.begin(&mmWaveSerial)`**:
-  - Initializes the sensor for communication, similar to the breath module, setting up the serial connection between the XIAO board and the MR60FDA2 sensor.
+  - 初始化传感器以进行通信，类似于呼吸模块，设置XIAO板和MR60FDA2传感器之间的串行连接。
 
 - **`mmWave.setInstallationHeight(float height)`**:
-  - Sets the installation height of the radar, which is crucial for accurate fall detection. The `height` parameter specifies the height (in meters) at which the sensor is installed, with a valid range typically between 1 and 5 meters.
+  - 设置雷达的安装高度，这对于准确的跌倒检测至关重要。`height`参数指定传感器安装的高度（以米为单位），有效范围通常在1到5米之间。
 
 - **`mmWave.setThreshold(float threshold)`**:
-  - Sets the fall detection threshold. This value determines the sensitivity of the radar in terms of detecting falls based on the height and distance from the sensor.
+  - 设置跌倒检测阈值。该值决定了雷达在检测跌倒时的灵敏度，基于高度和与传感器的距离。
 
 - **`mmWave.setSensitivity(uint32_t sensitivity)`**:
-  - Adjusts the sensitivity of the radar for fall detection. The sensitivity value typically ranges from 3 to 10, with higher values making the sensor more responsive to potential falls.
+  - 调整雷达的灵敏度以进行跌倒检测。灵敏度值通常范围在3到10之间，较高的值会使传感器对潜在的跌倒更加敏感。
 
 - **`mmWave.getRadarParameters(float &height, float &threshold, uint32_t &sensitivity)`**:
-  - Retrieves the current configuration parameters of the radar, including installation height, fall detection threshold, and sensitivity settings. These parameters are returned via the reference variables.
+  - 获取雷达的当前配置参数，包括安装高度、跌倒检测阈值和灵敏度设置。这些参数通过引用变量返回。
 
 - **`mmWave.getHuman()`**:
-  - Checks if a human presence is detected by the radar. Returns `true` if a human is detected, and `false` otherwise.
+  - 检查雷达是否检测到人的存在。如果检测到人，返回`true`，否则返回`false`。
 
 - **`mmWave.getFall()`**:
-  - Determines whether a fall has been detected. This function returns `true` if a fall is detected and `false` if not.-->
+  - 判断是否检测到跌倒。如果检测到跌倒，此函数返回 `true`，否则返回 `false`。-->
 
 ## 模块固件升级
 

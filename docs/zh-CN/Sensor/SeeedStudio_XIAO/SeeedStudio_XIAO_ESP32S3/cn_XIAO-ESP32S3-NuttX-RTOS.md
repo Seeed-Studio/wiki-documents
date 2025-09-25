@@ -64,7 +64,7 @@ Apache Nuttx 分为两个项目：
 ./tools/configurate.sh board_name:your_application
 ```
 
-Also it's possible to check the list of board-supported a running the command:
+还可以通过运行以下命令来检查支持的板卡列表:
 
 ```bash
 ./tools/configurate.sh -L
@@ -102,7 +102,7 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Now we select the NSH configuration to the xiao-esp32s3 board:
+现在我们将 NSH 配置选择到 xiao-esp32s3 开发板上：
 
 ```bash
 ./tools/configurate.sh xiao-esp32s3:usbnsh
@@ -129,7 +129,7 @@ NuttX 12.8.0 2c845426da-dirty Apr  6 2025 22:53:57 xtensa esp32s3-xiao
 nsh> 
 ```
 
-Typing `?`, you will access the available options for commands and built-in applications.
+输入 `?`，您将访问可用的命令和内置应用程序选项。
 
 ```bash
 nsh> ?
@@ -167,19 +167,18 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Select the combo configuration to the xiao-esp32s3 board.
+选择组合配置到 xiao-esp32s3 开发板。
 
 ```bash
 ./tools/configurate.sh xiao-esp32s3:combo
 ```
-
-Compile de the source code.
+编译 translation 代码。
 
 ```bash
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+将固件加载到您的开发板中，运行串行通信程序，如 minicon 或 picocom：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0

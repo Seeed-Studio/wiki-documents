@@ -34,7 +34,7 @@ AWS IoT Coreは、モノのインターネット（IoT）デバイスを安全�
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
    <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
@@ -152,7 +152,7 @@ python -m venv --system-site-packages env
 source env/bin/activate
 ```
 
-- **Step 02**: Install Mqtt library
+- **ステップ 02**: Mqtt ライブラリをインストールします
 
 ```sh
 pip3 install "paho-mqtt<2.0.0"

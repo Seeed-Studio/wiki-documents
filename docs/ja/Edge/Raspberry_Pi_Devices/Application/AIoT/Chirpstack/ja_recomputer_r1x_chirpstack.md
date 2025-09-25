@@ -1,7 +1,7 @@
 ---
 description: Raspberry Pi搭載のreComputer R11でChirpStackを使用してLoRaWANゲートウェイを構築する方法を学びます。R1X00ゲートウェイ、Packet Forwarder、SenseCAP S2101センサーを設定してMQTT経由でIoTデータをストリーミングします。世界中のどこからでもLoRaデバイスとアプリケーションに安全にアクセスできます。
 
-title: ChirpStack R1X00ゲートウェイとSenseCAP S2101の統合
+title: ChirpStack R1XゲートウェイとSenseCAP S2101の統合
 
 keywords:
 - ChripStack
@@ -16,7 +16,7 @@ last_update:
 
 ## はじめに
 
-このガイドでは、Raspberry Piを搭載したSeeed reComputer R11エッジコントローラーでChirpStackを使用して、完全なLoRaWANゲートウェイソリューションを設定する手順を説明します。WM1302 LoRa集約モジュールにより、R11デバイスは信頼性の高い長距離無線通信が可能な強力なゲートウェイとして機能します。Semtech Packet Forwarderを設定することで、LoRaデータをネットワーク層とアプリケーション層を管理するChirpStackにシームレスに送信できます。Dockerを使用してChirpStackサービスのインストールとデプロイメントを簡素化し、モジュラーでスケーラブルなセットアップを確保します。最後に、システムはMQTTと統合され、SenseCAP S2101センサーなどのLoRaデバイスから世界中のどこからでもアクセス可能なアプリケーションへの安全でリアルタイムなIoTデータストリーミングを可能にします。
+このガイドでは、Raspberry Piを搭載したSeeed reComputer R11エッジコントローラーでChirpStackを使用して、完全なLoRaWANゲートウェイソリューションを設定する手順を説明します。WM1302 LoRaコンセントレーターモジュールにより、R1Xデバイスは信頼性の高い長距離無線通信が可能な強力なゲートウェイとして機能します。Semtech Packet Forwarderを設定することで、LoRaデータをChirpStackにシームレスに送信でき、ChirpStackがネットワーク層とアプリケーション層を管理します。Dockerを使用してChirpStackサービスのインストールと展開を簡素化し、モジュラーでスケーラブルなセットアップを確保します。最後に、システムはMQTTと統合され、SenseCAP S2101センサーなどのLoRaデバイスから世界中のどこからでもアクセス可能なアプリケーションへの安全でリアルタイムなIoTデータストリーミングを可能にします。
 
 ## 必要なハードウェア
 
@@ -90,13 +90,13 @@ docker run hello-world
 sudo apt install docker-compose
 ```
 
-完璧です。**Packet Forwarderセットアップ**を同じ構造化されたwikiスタイルに再フォーマットします：
+完璧です。あなたの**Packet Forwarderセットアップ**を、使用している同じ構造化されたwikiスタイルに再フォーマットします：
 
 ---
 
 ## Packet Forwarderの実行
 
-**WM1302 LoRa集約器**は、LoRaモジュールとChirpStack間でデータを中継するために**Semtech Packet Forwarder**が必要です。reComputer R11はLoRaモジュール用の事前構築されたセットアップガイドを提供しています。
+**WM1302 LoRaコンセントレーター**は、LoRaモジュールとChirpStack間でデータを中継するために**Semtech Packet Forwarder**が必要です。reComputer R11は、LoRaモジュール用の事前構築されたセットアップガイドを提供しています。
 
 インストール手順については、公式のSeeed Wikiを参照してください：
 [Seeed reComputer R11 LoRaモジュールガイド](https://wiki.seeedstudio.com/ja/recomputer_r/#lora-module)
@@ -105,13 +105,13 @@ sudo apt install docker-compose
 
 **1. 設定の変更**
 
-LoRa地域に対応する設定ファイルを開きます。例えば、**US915**の場合：
+あなたのLoRa地域に対応する設定ファイルを開きます。例えば、**US915**の場合：
 
 ```bash
 nano global_conf.json.sx1250.US915
 ```
 
-**gateway_conf**セクションを更新してChirpStackサーバーを指すようにします：
+**gateway_conf**セクションを更新して、ChirpStackサーバーを指すようにします：
 
 ```json
 "gateway_conf": {
@@ -124,7 +124,7 @@ nano global_conf.json.sx1250.US915
 ```
 
 > `AA555A0000000000`を実際のゲートウェイIDに置き換えてください。そのままにしておきます
-> 購入したモジュールに応じて、LoRaWAN地域の正しいJSONファイルを使用してください。
+> 購入したモジュールに応じて、LoRaWAN地域に適したJSONファイルを使用してください。
 
 ファイルを保存して終了します：
 
@@ -140,7 +140,7 @@ nano global_conf.json.sx1250.US915
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
-同じwikiスタイルでの**「ゲートウェイの作成」セクション**は以下の通りです：
+こちらが同じwikiスタイルでの**「ゲートウェイの作成」セクション**です：
 
 ---
 
@@ -456,14 +456,13 @@ function toBinary(arr) {
         return bin;
     }).join('');
 }
-
 ```
 
 </details>
 
 ## デバイスの追加
 
-**デバイスプロファイル**が作成されたら、ChirpStackにLoRaWANデバイスを登録できます。
+**デバイスプロファイル**が作成されたら、LoRaWANデバイスをChirpStackに登録できます。
 
 1. **テナント → アプリケーション**に移動し、**アプリケーションを追加**をクリックします
 
@@ -476,16 +475,16 @@ function toBinary(arr) {
 
 4. 以下の詳細を入力します：
 
-   - **デバイスEUI**: LoRaデバイスのEUIを貼り付けます（デバイスのデータシートまたは設定ソフトウェア（例：SenseCAP アプリケーション）で確認できます）
-   - **デバイスプロファイル**: 先ほど作成したデバイスプロファイルを選択します
+   - **Device EUI**: LoRaデバイスのEUIを貼り付けます（デバイスのデータシートまたは設定ソフトウェア（例：SenseCAP アプリケーション）で確認できます）
+   - **Device Profile**: 先ほど作成したデバイスプロファイルを選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image8.png" alt="pir" width={800} height="auto" /></p>
 
-5. **アプリケーションキー**を入力し、**送信**をクリックします
+5. **Application Key**を入力し、**送信**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image9.png" alt="pir" width={800} height="auto" /></p>
 
-> ⚠️ デバイスEUIとアプリケーションキーは、LoRaデバイスのデータシートまたは設定ソフトウェアから取得できます。**SenseCAP デバイス**の場合、SenseCAP アプリケーションを使用してこれらの設定を表示または再設定できます。
+> ⚠️ Device EUIとApplication Keyは、LoRaデバイスのデータシートまたは設定ソフトウェアから取得できます。**SenseCAP デバイス**の場合、SenseCAP アプリケーションを使用してこれらの設定を表示または再設定できます。
 
 以下は、wikiスタイルに合わせて洗練された**「デバイスステータスの確認」**セクションで、前のセクションとの一貫性を保っています：
 
@@ -498,7 +497,7 @@ LoRaWANデバイスを追加した後、デバイスが適切に接続され、�
 1. アプリケーションに移動し、追加したデバイスを選択します
 2. **イベント**タブに移動します
 
-   - デバイスがネットワークに正常に参加すると、**参加パケット**が表示されます
+   - デバイスがネットワークに正常に参加すると、**joinパケット**が表示されます
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image10.png" alt="pir" width={800} height="auto" /></p>
 
@@ -546,7 +545,7 @@ MQTTノードとカスタム関数を使用して、**Node-RED**でLoRaWANデバ
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image14.png" alt="pir" width={600} height="auto" /></p>
 
-3. MQTTメッセージペイロードをデコードするために**Functionノード**を追加します
+3. MQTTメッセージペイロードをデコードする**Functionノード**を追加します
 
    - 例えば、JSONオブジェクトから**温度**と**湿度**を抽出します
 
@@ -596,7 +595,7 @@ return [tempMsg, humMsg];
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

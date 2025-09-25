@@ -25,7 +25,7 @@ last_update:
 ### 所需软件
 
 - [nRF Connect for Mobile (Android)](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp)
-- [LightBlue App (Apple)](https://apps.apple.com/us/app/lightblue/id557428110)
+- [LightBlue 应用 (Apple)](https://apps.apple.com/us/app/lightblue/id557428110)
 
 ### 安装
 

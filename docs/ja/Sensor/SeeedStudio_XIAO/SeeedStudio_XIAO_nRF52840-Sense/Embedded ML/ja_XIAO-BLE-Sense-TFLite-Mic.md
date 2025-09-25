@@ -114,9 +114,9 @@ const char* kCategoryLabels[kCategoryCount] = {
 constexpr int kCategoryCount = 6;
 ```
 
-- **Step 6.** **micro_speech** フォルダ内の **micro_speech.ino** を開き、コードを Seeed Studio XIAO nRF52840 Sense にアップロードします
+- **ステップ 6.** **micro_speech** フォルダ内の **micro_speech.ino** を開き、コードを Seeed Studio XIAO nRF52840 Sense にアップロードします
 
-- **Step 7.** **シリアルモニターウィンドウ** を開き、先ほど定義した単語を声に出して言います。認識後、シリアルモニターに話した正しい単語が出力されるのを確認できます。
+- **ステップ 7.** **シリアルモニターウィンドウ** を開き、先ほど定義した単語を声に出して言います。認識後、シリアルモニターに話した正しい単語が出力されるのを確認できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/TFLite/pics/mic-capture.png" alt="pir" width={300} height="auto" /></p>
 

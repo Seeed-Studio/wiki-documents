@@ -48,7 +48,7 @@ void loop() {
 
 ## Digital as PWM
 
-Connect an LED to Pin D10. Then upload the following code to see the LED gradually fading.
+LEDをピンD10に接続してください。その後、以下のコードをアップロードすると、LEDが徐々にフェードしていく様子を確認できます。
 
 ```cpp
 int ledPin = D10;    // LED connected to digital pin 10
@@ -207,8 +207,8 @@ void loop()
         <td><div align="center"><img width = {240} src="https://files.seeedstudio.com/wiki/60GHzradar/newpic.png"/></div></td>
     </tr>
  <tr>
-        <td align = "center"><a href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html">Get One Now</a></td>
-        <td align = "center"><a href="https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html">Get One Now</a></td>
+        <td align = "center"><a href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html">今すぐ購入取</a></td>
+        <td align = "center"><a href="https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html">今すぐ購入取</a></td>
  </tr>
 </table>
 

@@ -104,7 +104,7 @@ python -m venv --system-site-packages env
 source env/bin/activate
  ```
 
-- **Step 2** Next, clone this Git repo onto your Raspberry Pi virtual environmnet like this
+- **步骤 2** 接下来,按照以下方式将这个 Git 仓库克隆到你的树莓派虚拟环境中
 
 ```sh
 git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal
@@ -116,7 +116,7 @@ git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal
 cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam/ObjectDetection_bookworm
 ```
 
-- **Step 3** The script install the required dependencies and download the TFLite models For this tutorial series.
+- **步骤 3** 该脚本安装所需的依赖项并下载本教程系列所需的TFLite模型。
 
 ```sh
 sh setup.sh

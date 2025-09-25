@@ -100,11 +100,11 @@ reTerminal E 系列 ePaper 显示器支持多个开发平台和框架：
 
   利用专用的 TRMNL 框架进行简化开发和快速部署。
 
-<!-- - [GxEPD2 Library Support](https://wiki.seeedstudio.com/cn/reTerminal_GxEPD2)
-Leverage the powerful GxEPD2 library for advanced ePaper display control and rendering.
+<!-- - [GxEPD2 库支持](https://wiki.seeedstudio.com/cn/reTerminal_GxEPD2)
+利用强大的 GxEPD2 库进行高级电子墨水屏显示控制和渲染。
 
 - [LVGL + SquareLine Studio](https://wiki.seeedstudio.com/cn/reTerminal_LVGL_SquareLine)
-Create rich graphical interfaces using LVGL and the visual SquareLine Studio designer. -->
+使用LVGL和可视化的SquareLine Studio设计器创建丰富的图形界面。 -->
 
 ## 资源
 

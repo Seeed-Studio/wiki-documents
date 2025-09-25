@@ -31,7 +31,7 @@ last_update:
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -62,7 +62,7 @@ XIAO ESP32S3の前面左下に、独立した「WiFi/BTアンテナコネクタ�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -229,7 +229,7 @@ typedef struct {
 } camera_fb_t;
 ```
 
-4. Return the frame buffer to be reused again.
+4. フレームバッファを再利用のために返却する。
 
 ```cpp
 void esp_camera_fb_return(camera_fb_t * fb);
@@ -359,7 +359,7 @@ bool frame2bmp(camera_fb_t * fb, uint8_t ** out, size_t * out_len);
 
 - **出力**: 成功時にtrue
 
-### Part III: app_httpd.cpp
+### パート III: app_httpd.cpp
 
 :::note
 このライブラリ紹介の部分は、動画保存端末の作成 -- Based WebServerセクションに基づいています。このライブラリは主にWebサーバーの画像取得と顔認識機能を実行するために使用されます。ESP のオンボードパッケージには直接含まれていません。
@@ -677,12 +677,12 @@ if(camera_sign && sd_sign){
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -1340,7 +1340,7 @@ XIAO ESP32S3 このプロジェクトを長時間実行する場合は、放熱�
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html?qid=UXYOXT_08tfc9pt_1746512260418" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>

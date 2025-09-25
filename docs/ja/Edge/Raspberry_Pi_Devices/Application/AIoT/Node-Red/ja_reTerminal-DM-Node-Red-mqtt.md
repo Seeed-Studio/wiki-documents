@@ -19,7 +19,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -62,7 +62,7 @@ MQTTノードはNode-REDに組み込まれているため、ノードをイン�
 
 SSHでreTerminal DMにアクセスできたら、以下の手順に進むことができます：
 
-STEP 1: 以下のコマンドを実行してパッケージリストを更新します：
+ステップ 1: 以下のコマンドを実行してパッケージリストを更新します：
 
 ```sh
 sudo apt-get update
@@ -74,7 +74,7 @@ sudo apt-get update
 sudo apt-get install mosquitto
 ```
 
-STEP 3: Install the Mosquitto client tools by running the following command:
+ステップ 3: 次のコマンドを実行してMosquittoクライアントツールをインストールします：
 
 ```sh
 sudo apt-get install mosquitto-clients
@@ -124,17 +124,17 @@ Node-REDには、それぞれSubscribeとPublishを表すMQTT inとMQTT outが�
 
 :::
 
-STEP 1: `mqtt in`を`Flow Editor`パネルにドラッグします
+ステップ 1: `mqtt in`を`Flow Editor`パネルにドラッグします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/drag-mqtt-in.png" /></div>
 
-STEP 2: `Modbus Server`と`mqtt in`ノードを設定します
+ステップ 2: `Modbus Server`と`mqtt in`ノードを設定します
 
-STEP 2-1: `mqtt in`をダブルクリックして`Node editor panel`を開きます
+ステップ 2-1: `mqtt in`をダブルクリックして`Node editor panel`を開きます
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/mqtt-node-editor.png" /></div>
 
-STEP 2-2: サーバー設定オプションの`鉛筆`アイコンをクリックします
+ステップ 2-2: サーバー設定オプションの`鉛筆`アイコンをクリックします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/mqtt-node-editor-click.png" /></div>
 
@@ -142,7 +142,7 @@ STEP 2-2: サーバー設定オプションの`鉛筆`アイコンをクリッ�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/mqtt-broker-config.png" /></div>
 
-STEP 2-3: `Connection`タブで以下のフィールドを適切に設定してください
+ステップ 2-3: `Connection`タブで以下のフィールドを適切に設定してください
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/mqtt-connection-config.png" /></div>
 
@@ -152,19 +152,19 @@ STEP 2-3: `Connection`タブで以下のフィールドを適切に設定して�
 
 :::
 
-STEP 2-4: 購読するトピックを設定します。ここでは`test-mqtt`を使用し、その他はすべてデフォルトのままにして、`Done`ボタンをクリックします。
+ステップ 2-4: 購読するトピックを設定します。ここでは`test-mqtt`を使用し、その他はすべてデフォルトのままにして、`Done`ボタンをクリックします。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/sub-topic-setup.png" /></div>
 
-STEP 2-5: 以下の手順では`debug`ノードを紹介します。この場合、`mqtt in`から購読したトピック出力を表示およびデバッグするために使用されます。下の画像に示すとおりです
+ステップ 2-5: 以下の手順では`debug`ノードを紹介します。この場合、`mqtt in`から購読したトピック出力を表示およびデバッグするために使用されます。下の画像に示すとおりです
 
-STEP 2-5-1: `debug`ノードを`Flow Editor`パネルにドラッグしてください
+ステップ 2-5-1: `debug`ノードを`Flow Editor`パネルにドラッグしてください
 
-STEP 2-5-2: `debug`ノードを`mqtt in`ノードに接続します
+ステップ 2-5-2: `debug`ノードを`mqtt in`ノードに接続します
 
-STEP 2-5-3: `Option and Config panel`の`小さなバグボタン`をクリックして、`Option and Config panel`で`debug console`を開きます
+ステップ 2-5-3: `Option and Config panel`の`小さなバグボタン`をクリックして、`Option and Config panel`で`debug console`を開きます
 
-STEP 2-5-4: `Deploy`ボタンをクリックしてフローをデプロイします
+ステップ 2-5-4: `Deploy`ボタンをクリックしてフローをデプロイします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/mqtt-debug-node.png" /></div>
 
@@ -174,47 +174,47 @@ STEP 2-5-4: `Deploy`ボタンをクリックしてフローをデプロイしま
 
 :::
 
-STEP 3: `mqtt out`ノードを設定します
+ステップ 3: `mqtt out`ノードを設定します
 
-STEP 3-1: `mqtt out`ノードをダブルクリックして`Node editor panel`を開きます
+ステップ 3-1: `mqtt out`ノードをダブルクリックして`Node editor panel`を開きます
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/drag-mqtt-out.png" /></div>
 
-STEP 3-1: 下の画像に示すように、`mqtt out`ノードを`Flow Editor`パネルにドラッグしてください
+ステップ 3-1: 下の画像に示すように、`mqtt out`ノードを`Flow Editor`パネルにドラッグしてください
 
-STEP 3-1-1: `STEP 2-3:`で設定したのと同じサーバー（`localhost:1883`）を選択する必要があります
+ステップ 3-1-1: `ステップ 2-3:`で設定したのと同じサーバー（`localhost:1883`）を選択する必要があります
 
-STEP 3-1-2: `STEP 2-4:`のトピック設定と同じトピック名（`test-mqtt`）を設定する必要があります。
+ステップ 3-1-2: `ステップ 2-4:`のトピック設定と同じトピック名（`test-mqtt`）を設定する必要があります。
 
-STEP 3-1-3: 同様に、QoSは`mqtt in`設定と同じ`2`に合わせる必要があります
+ステップ 3-1-3: 同様に、QoSは`mqtt in`設定と同じ`2`に合わせる必要があります
 
-STEP 3-1-4: `Done`をクリックして設定を完了します
+ステップ 3-1-4: `Done`をクリックして設定を完了します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/mqtt-out-setup.png" /></div>
 
-STEP 4: `inject`ノードを設定します
+ステップ 4: `inject`ノードを設定します
 
-STEP 4-1: `inject`ノードを`Flow Editor`パネルにドラッグします
+ステップ 4-1: `inject`ノードを`Flow Editor`パネルにドラッグします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/drag-inject.png" /></div>
 
-STEP 4-2: `inject`ノードをダブルクリックして`Node editor panel`を開くと、`inject`ノードのデフォルト設定が表示されます
+ステップ 4-2: `inject`ノードをダブルクリックして`Node editor panel`を開くと、`inject`ノードのデフォルト設定が表示されます
 
-STEP 4-2-1: msg.topic行の`x`をクリックして削除します
+ステップ 4-2-1: msg.topic行の`x`をクリックして削除します
 
-STEP 4-2-2: `msg.payload`行の`timestamp`オプションをクリックしてドロップダウンリストを開きます
+ステップ 4-2-2: `msg.payload`行の`timestamp`オプションをクリックしてドロップダウンリストを開きます
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/inject-node-config.png" /></div>
 
-STEP 4-2-3: ドロップダウンリストで`string`オプションを選択します
+ステップ 4-2-3: ドロップダウンリストで`string`オプションを選択します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/select-string.png" /></div>
 
-STEP 4-2-4: メッセージボックスに`test-mqtt`トピックに送信するメッセージとして`this is the message`と入力し、`Done`をクリックします
+ステップ 4-2-4: メッセージボックスに`test-mqtt`トピックに送信するメッセージとして`this is the message`と入力し、`Done`をクリックします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/edit-string.png" /></div>
 
-STEP 4-2-5: `inject`ノードを`mqtt out`ノードに接続し、`Deploy`をクリックします
+ステップ 4-2-5: `inject`ノードを`mqtt out`ノードに接続し、`Deploy`をクリックします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/connect-mqtt-out.png" /></div>
 

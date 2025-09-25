@@ -20,7 +20,7 @@ ReSpeaker 4-Mic Array for Raspberry Pi は、AI と音声アプリケーショ�
 <iframe width="800" height="450" src="https://www.youtube.com/embed/IkSfBSf1IRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong></a>
 </div>
 
 ## 特徴
@@ -125,7 +125,7 @@ usbstream:CARD=ALSA
 
 `alsa`設定を変更したい場合は、`sudo alsactl --file=ac108_asound.state store`を使用して保存できます。そして、その設定を再度使用する必要がある場合は、次の場所にコピーします：`sudo cp ~/seeed-voicecard/ac108_asound.state /var/lib/alsa/asound.state`
 
-- Step 4. Audacityを開き、入力として**AC108 & 4 channels**を選択し、出力として**bcm2835 alsa: - (hw:0:0)**を選択してテストします：
+- ステップ 4. Audacityを開き、入力として**AC108 & 4 channels**を選択し、出力として**bcm2835 alsa: - (hw:0:0)**を選択してテストします：
 
 ```sh
 sudo apt update
@@ -177,7 +177,7 @@ sudo raspi-config
 3. Enable SPIを選択
 4. 最後に、ツールを終了
 
-- Step 2. 次にサンプルコードを実行すると、LEDがAlexa AssistantのようにBlinkするのを確認できます。
+- ステップ 2. 次にサンプルコードを実行すると、LEDがAlexa AssistantのようにBlinkするのを確認できます。
 
 ```bash
 python3 interfaces/pixels.py
@@ -247,7 +247,7 @@ sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 ```
 
-Ensure that the relevant compilation tools are installed
+関連するコンパイルツールがインストールされていることを確認してください
 
 ```bash
 sudo apt -y install gcc g++ make
@@ -423,11 +423,11 @@ context:
 
 また、次のコマンドで色を変更することもできます：
 
-- **Picovoice, set the lights to orange**
+- **Picovoice、ライトをオレンジに設定して**
 
 ライトを消すには：
 
-- **Picovoice, turn off all lights**
+- **Picovoice、すべてのライトを消して**
 
 **デモビデオデモンストレーション**
 

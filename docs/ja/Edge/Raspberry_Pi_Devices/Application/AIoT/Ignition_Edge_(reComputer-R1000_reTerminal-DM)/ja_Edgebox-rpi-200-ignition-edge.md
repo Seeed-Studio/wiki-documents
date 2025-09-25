@@ -119,7 +119,7 @@ Ignition Edge Gatewayのホームページを読み込むことができれば�
 nano ~/.bashrc
 ```
 
-Append the launch command to the the file
+ファイルに起動コマンドを追加する
 
 ```bash
 /opt/ignitionedge/ignition.sh start

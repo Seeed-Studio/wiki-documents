@@ -664,7 +664,7 @@ if __name__ == "__main__":
 
 ## 参考资料
 
-- [https://wiki.seeedstudio.com/cn/lerobot_so100m/](https://wiki.seeedstudio.com/lerobot_so100m/)
+- [https://wiki.seeedstudio.com/cn/lerobot_so100m/](https://wiki.seeedstudio.com/cn/lerobot_so100m/)
 - [https://github.com/NVIDIA/Isaac-GR00T/tree/main](https://github.com/NVIDIA/Isaac-GR00T/tree/main)
 - [https://github.com/huggingface/lerobot](https://github.com/huggingface/lerobot)
 - [https://github.com/Dao-AILab/flash-attention](https://github.com/Dao-AILab/flash-attention])

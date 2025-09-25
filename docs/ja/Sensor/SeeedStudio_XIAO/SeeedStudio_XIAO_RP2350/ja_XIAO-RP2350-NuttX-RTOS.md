@@ -189,7 +189,7 @@ make distclean
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+ファームウェアをボードにロードし、miniconやpicocomなどのシリアル通信プログラムを実行してください：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
@@ -223,7 +223,7 @@ xiao-rp2350ボードにcombo設定を選択します。
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+ファームウェアをボードにロードし、miniconやpicocomなどのシリアル通信プログラムを実行してください：
 
 ```bash
 picocom -b 115200 /dev/ttyUSB0
@@ -265,7 +265,7 @@ GPIOデバイスファイルが作成されたことを確認するには、`ls/
 
 - オンボードLED：
   - 黄色            -> GPIO25
- 
+
 - GPIO
   - 1つの入力           -> GPIO27
   - 1つの割り込み入力 -> GPIO26
@@ -333,11 +333,11 @@ led_daemon: LED set 0x00
 ```
 
 Seeed Studio XIAO RP2350 には WS2812 アドレサブル LED も搭載されており、ws2812 アプリケーションを使用してテストできます：
+
 ```bash
 NuttShell (NSH) NuttX-12.8.0
 nsh> ws2812
 ```
-
 
 gpio、LED、ws2812の例のデモについては、以下の動画をご確認ください：
 
@@ -346,7 +346,6 @@ gpio、LED、ws2812の例のデモについては、以下の動画をご確認�
     <source src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/Nuttx/xiao-rp2350-nuttx-demo.mp4" type="video/mp4" />
   </video>
 </div>
-
 
 NuttX RTOSの詳細については、[NuttX ドキュメント](https://nuttx.apache.org/docs/latest/index.html)をご覧ください。
 

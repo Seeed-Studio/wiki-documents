@@ -24,22 +24,22 @@ reComputer Industrial 配备了 **2 个 2 通道 15 针 MIPI CSI 摄像头连接
 
 - IMX219 摄像头
 
-  - [Raspberry Pi Camera V2](https://www.seeedstudio.com/Raspberry-Pi-Camera-Module-V2.html)
-  - [IMX219-130 8MP Camera with 130° FOV](https://www.seeedstudio.com/IMX219-130-Camera-130-FOV-Applicable-for-Jetson-Nano-p-4606.html)
-  - [IMX219-160 8MP Camera with 160° FOV](https://www.seeedstudio.com/IMX219-160-Camera-160-FOV-Applicable-for-Jetson-Nano-p-4603.html)
-  - [IMX219-200 8MP Camera with 200° FOV](https://www.seeedstudio.com/IMX219-200-Camera-200-FOV-Applicable-for-Jetson-Nano-p-4609.html)
-  - [IMX219-77 8MP Camera with 77° FOV](https://www.seeedstudio.com/IMX219-77-Camera-77-FOV-Applicable-for-Jetson-Nano-p-4608.html)
-  - [IMX219 M12/CS mount CMOS Camera Module](https://www.seeedstudio.com/IMX-219-CMOS-camera-module-M12-and-CS-camera-available-p-5372.html)
-  - [IMX219-83 8MP 3D Stereo Camera Module](https://www.seeedstudio.com/IMX219-83-Stereo-Camera-8MP-Binocular-Camera-Module-Depth-Vision-Applicable-for-Jetson-Nano-p-4610.html)
-  - [IMX219-77IR 8MP IR Night Vision Camera with 77° FOV](https://www.seeedstudio.com/IMX219-77IR-Camera-77-FOV-Infrared-Applicable-for-Jetson-Nano-p-4607.html)
-  - [IMX219-160IR 8MP Camera with 160° FOV](https://www.seeedstudio.com/IMX219-160IR-Camera160-FOV-Infrared-Applicable-for-Jetson-Nano-p-4602.html)
-  - [IMX219 M12/CS mount CMOS Camera Module](https://www.seeedstudio.com/IMX-219-CMOS-camera-module-M12-and-CS-camera-available-p-5372.html)
+  - [树莓派相机 V2](https://www.seeedstudio.com/Raspberry-Pi-Camera-Module-V2.html)
+  - [IMX219-130 8MP 相机，130° FOV](https://www.seeedstudio.com/IMX219-130-Camera-130-FOV-Applicable-for-Jetson-Nano-p-4606.html)
+  - [IMX219-160 8MP 相机，160° FOV](https://www.seeedstudio.com/IMX219-160-Camera-160-FOV-Applicable-for-Jetson-Nano-p-4603.html)
+  - [IMX219-200 8MP 相机，200° FOV](https://www.seeedstudio.com/IMX219-200-Camera-200-FOV-Applicable-for-Jetson-Nano-p-4609.html)
+  - [IMX219-77 8MP 相机，77° FOV](https://www.seeedstudio.com/IMX219-77-Camera-77-FOV-Applicable-for-Jetson-Nano-p-4608.html)
+  - [IMX219 M12/CS 安装 CMOS 相机模块](https://www.seeedstudio.com/IMX-219-CMOS-camera-module-M12-and-CS-camera-available-p-5372.html)
+  - [IMX219-83 8MP 3D 立体相机模块](https://www.seeedstudio.com/IMX219-83-Stereo-Camera-8MP-Binocular-Camera-Module-Depth-Vision-Applicable-for-Jetson-Nano-p-4610.html)
+  - [IMX219-77IR 8MP IR 夜视相机，77° FOV](https://www.seeedstudio.com/IMX219-77IR-Camera-77-FOV-Infrared-Applicable-for-Jetson-Nano-p-4607.html)
+  - [IMX219-160IR 8MP 相机，160° FOV](https://www.seeedstudio.com/IMX219-160IR-Camera160-FOV-Infrared-Applicable-for-Jetson-Nano-p-4602.html)
+  - [IMX219 M12/CS 安装 CMOS 相机模块](https://www.seeedstudio.com/IMX-219-CMOS-camera-module-M12-and-CS-camera-available-p-5372.html)
 
 - IMX477 摄像头
 
-  - [Raspberry Pi High Quality Camera](https://www.seeedstudio.com/Raspberry-Pi-High-Quality-Cam-p-4463.html)
-  - [Raspberry Pi HQ Camera - M12 mount](https://www.seeedstudio.com/Raspberry-Pi-HQ-Camera-M12-mount-p-5578.html)
-  - [High Quality Camera for Raspberry Pi](https://www.seeedstudio.com/High-Quality-Camera-For-Raspberry-Pi-Compute-Module-Jetson-Nano-p-4729.html)
+  - [树莓派高质量相机](https://www.seeedstudio.com/Raspberry-Pi-High-Quality-Cam-p-4463.html)
+  - [树莓派 HQ 相机 - M12 接口](https://www.seeedstudio.com/Raspberry-Pi-HQ-Camera-M12-mount-p-5578.html)
+  - [树莓派高质量相机](https://www.seeedstudio.com/High-Quality-Camera-For-Raspberry-Pi-Compute-Module-Jetson-Nano-p-4729.html)
 
 ### 连接概述
 
@@ -193,7 +193,7 @@ sudo reboot
 sudo vi /usr/bin/hwtosys.sh 
 ```
 
-- **Step 9:** Enter **insert mode** by pressing **i**, copy and paste the following content inside the file
+- **步骤 9:** 按下 **i** 进入**插入模式**，复制并粘贴以下内容到文件中
 
 ```sh
 #!/bin/bash
@@ -201,19 +201,19 @@ sudo vi /usr/bin/hwtosys.sh
 sudo hwclock --hctosys
 ```
 
-- **Step 10:** Make the script executable
+- **步骤 10:** 使脚本可执行
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
 ```
 
-- **Step 11:** Create a systemd file
+- **步骤 11：** 创建一个 systemd 文件
 
 ```sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
 
-- **Step 12:** Add the following inside the file
+- **步骤 12:** 在文件内添加以下内容
 
 ```sh
 [Unit]
@@ -226,20 +226,20 @@ ExecStart=/usr/bin/hwtosys.sh
 WantedBy=multi-user.target
 ```
 
-- **Step 13:** Reload systemctl daemon
+- **步骤 13：** 重新加载 systemctl 守护进程
 
 ```sh
 sudo systemctl daemon-reload 
 ```
 
-- **Step 14:** Enable the newly created service to start on boot and start the service
+- **步骤 14:** 启用新创建的服务在启动时自动运行并启动该服务
 
 ```sh
 sudo systemctl enable hwtosys.service
 sudo systemctl start hwtosys.service
 ```
 
-- **Step 15:** Verify the script is up and running as a systemd service
+- **步骤 15:** 验证脚本作为 systemd 服务正在运行
 
 ```sh
 sudo systemctl status hwtosys.service
@@ -505,13 +505,13 @@ cd packet_forwarder
 cp ../tools/reset_lgw.sh .
 ```
 
-- **Step 2:** Run the following according to the LoRa module you are using. Here we have tested SPI US915 version
+- **步骤 2:** 根据您正在使用的LoRa模块运行以下内容。这里我们测试了SPI US915版本
 
 ```sh
 sudo ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
-However, the commands for different other modules are as follows
+然而，不同其他模块的命令如下
 
 ```sh
 # USB 915
@@ -1441,19 +1441,19 @@ cd PCC.01
 echo out > direction 
 ```
 
-- **Step 2:** Turn OFF the LED
+- **步骤 2:** 打开 OFF LED
 
 ```sh
 echo 0 > value 
 ```
 
-- **Step 3:** Turn ON the LED
+- **步骤 3:** 打开 ON LED
 
 ```sh
 echo 1 > value 
 ```
 
-If you have finished using the LED, you can execute the following
+如果你已经完成使用LED,你可以执行以下操作
 
 ```sh
 cd ..
@@ -1477,13 +1477,13 @@ sudo apt install python3-pip -y
 sudo pip3 install jetson-stats
 ```
 
-- **Step 2:** Reboot the board
+- **步骤 2：** 重启开发板
 
 ```sh
 sudo reboot
 ```
 
-- **Step 3:** Type the following on the terminal
+- **步骤 3:** 在终端中输入以下内容
 
 ```sh
 jtop
@@ -1574,7 +1574,7 @@ sudo jetson_clocks
 sudo cat /sys/kernel/debug/gpio
 ```
 
-And you will see the output as follows
+你将看到输出如下
 
 ```sh
 gpiochip3: GPIOs 289-304, parent: i2c/1-0021, 1-0021, can sleep:

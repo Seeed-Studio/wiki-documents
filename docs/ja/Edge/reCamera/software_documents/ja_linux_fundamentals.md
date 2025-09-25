@@ -50,6 +50,7 @@ Linuxはファイルとディレクトリを階層構造で整理しています
 - アクセスアドレス：http://192.168.42.1/#/terminal（デフォルトのユーザー名とパスワード：`recamera`）
 - ssh[ツール](https://mobaxterm.mobatek.net/)を使用してリモートでログインします。
 以下のコマンドを使用してreCameraにリモートでアクセスできます：
+
 ```
 ssh recamera@recamera.local
 ```
@@ -97,7 +98,7 @@ rootユーザーはシステム関連ファイルを変更でき、システム�
 
 以下は基本的なコマンドとその使用方法です：
 
-### ファイルとディレクトリ管理:
+### ファイルとディレクトリ管理
 
 - `pwd`: 現在の作業ディレクトリを表示します。
 - `ls`: 現在のディレクトリ内のファイルとディレクトリを一覧表示します。
@@ -106,21 +107,22 @@ rootユーザーはシステム関連ファイルを変更でき、システム�
 - `rm [file]`: ファイルを削除します。
 - `rmdir [directory]`: 空のディレクトリを削除します。
 
-### ファイル権限と所有権:
+### ファイル権限と所有権
 
 - `chmod [permissions] [file]`: ファイルの権限を変更します。
 - `chown [owner] [file]`: ファイルの所有者を変更します。
 
-### ファイル操作:
+### ファイル操作
 
 - `cp [source] [destination]`: ファイルまたはディレクトリをコピーします。
 - `mv [source] [destination]`: ファイルまたはディレクトリを移動または名前変更します。
 - `cat [file]`: ファイルの内容を表示します。
 - `nano [file]`: テキストエディタ（Nano）でファイルを開きます。
 
-### システム情報:
+### システム情報
 
 - `top`: リアルタイムのシステムプロセスとリソース使用状況を表示します。
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/linux_fundamentals/image-2.png" /></div>
 - `df`: ディスク容量使用状況を表示します。
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/linux_fundamentals/image-3.png" /></div>
@@ -135,7 +137,7 @@ Linuxは、ローカルネットワークやインターネット経由でシス
 
 SCPを使用すると、ローカルホストとリモートホスト間、または2つのリモートホスト間でファイルを安全にコピーできます。
 
-#### 基本的なSCPコマンド:
+#### 基本的なSCPコマンド
 
 - ローカルからリモートにファイルをコピー:
 
@@ -143,7 +145,7 @@ SCPを使用すると、ローカルホストとリモートホスト間、ま�
   scp [file] username@remote_host:/path/to/destination
   ```
 
-- Copy a file from remote to local:
+- リモートからローカルにファイルをコピーする：
 
   ```bash
   scp username@remote_host:/path/to/file /local/destination
@@ -201,11 +203,11 @@ recameraデバイス上のハードウェアを制御するには、この[ド�
 弊社製品をお選びいただき、ありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -116,7 +116,7 @@ There are 3 ways to deploy different models on reCamera:
 
 - 1. Choose `On Device` model. Several Yolo models are in the reCamera [by default](https://wiki.seeedstudio.com/recamera_on_device_models).
 - 2. Select models from `SenseCraft Zoo`. There are several public models to choose such as gesture and fruits. Users can also upload their own models, and make it public to contribute the community.
-- 3. `Upload your own model` to reCamera. By following the instruction for [converting model to reCamera](https://wiki.seeedstudio.com/convert xxx), users can convert their own AI models to INT8 cvimodel format to adapt to reCamera. Then upload the model to reCamera for deployment. After the model is uploaded, please list the classies of the model in the `Labels` field.
+- 3. `Upload your own model` to reCamera. By following the instruction for [converting model to reCamera](https://wiki.seeedstudio.com/recamera_model_conversion/), users can convert their own AI models to INT8 cvimodel format to adapt to reCamera. Then upload the model to reCamera for deployment. After the model is uploaded, please list the classies of the model in the `Labels` field.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/model_classes.png" /></div>
 

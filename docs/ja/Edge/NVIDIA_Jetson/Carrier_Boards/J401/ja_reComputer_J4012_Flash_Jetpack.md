@@ -16,7 +16,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401-Carrier-Board-for-Jetson-Orin-NX-Orin-Nano-without-Power-Adapter-p-5637.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
 </a></div>
 
 J401 キャリアボードは、NVIDIA Jetson Orin NX/Nano モジュールをサポートする強力な拡張ボードです。1xGbE ポート、データ転送用の 1x CAN、SSD 用の M.2 Key M、WiFi/BlueTooth 用の M.2 Key E、2 CSI、高品質ビデオキャプチャとディスプレイ用の 1 HDMI を搭載しています。また、4x USB 3.2 ポート、ファン、RTC、柔軟な 9-19V 電源供給も含まれています。これらすべてにより、さまざまな産業自動化システムに信頼性をもたらし、強力な AI アプリケーションの構築を可能にします。

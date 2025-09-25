@@ -143,7 +143,7 @@ mqtt-broker 的配置需要按如下方式填写：
 
 部署成功后，您将在 **mqtt in** 构建块下看到"**Connected**"，数据上报间隔由我们连接的传感器决定。接收到数据后，右侧的调试窗口将显示原始数据。![IMG_267](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/012.png)
 
-## **SenseCAP & Node-RED & Azure IoT Central**
+## **SenseCAP 与 Node-RED 和 Azure IoT Central**
 
 [**Microsoft Azure IoT Central**](https://azure.microsoft.com/en-us/services/iot-central) 是一个完全托管的全球物联网 SaaS（软件即服务）解决方案，可轻松大规模连接、监控和管理您的物联网资产。它高度安全，随着您的业务增长而扩展，确保您的投资可重复，并与您现有的业务应用程序集成。它还弥合了您的业务应用程序和物联网数据之间的差距。最后，它提供集中管理来重新配置和更新您的设备。
 

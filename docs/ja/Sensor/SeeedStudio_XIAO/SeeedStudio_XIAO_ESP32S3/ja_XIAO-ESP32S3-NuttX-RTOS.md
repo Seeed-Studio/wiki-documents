@@ -167,7 +167,7 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Select the combo configuration to the xiao-esp32s3 board.
+xiao-esp32s3ボードのコンボ設定を選択してください。
 
 ```bash
 ./tools/configurate.sh xiao-esp32s3:combo
@@ -179,7 +179,7 @@ Select the combo configuration to the xiao-esp32s3 board.
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+ファームウェアをボードにロードし、miniconやpicocomなどのシリアル通信プログラムを実行してください：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
@@ -223,9 +223,9 @@ GPIOデバイスファイルが作成されたことを確認するには、`ls/
   - 黄色            -> GPIO21
 
 - GPIO
-  - 1 Input           -> GPIO1
-  - 1 Input w/ IRQ    -> GPIO3
-  - 1 Output          -> GPIO2
+  - 1つの入力           -> GPIO1
+  - IRQ付きの1つの入力    -> GPIO3
+  - 1つの出力          -> GPIO2
 
 ```bash
 nsh> ls /dev

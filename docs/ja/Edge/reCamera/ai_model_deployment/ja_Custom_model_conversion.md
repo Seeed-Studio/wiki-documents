@@ -695,7 +695,7 @@ model_deploy \
   --model yolov5s_mix-precision.cvimodel
 ```
 
-After obtaining `yolov5s_mix-precision.cvimodel`, we can use `model_tool` to view detailed information about the model:
+`yolov5s_mix-precision.cvimodel`を取得した後、`model_tool`を使用してモデルの詳細情報を表示できます：
 
 ```bash
 model_tool --info yolov5s_mix-precision.cvimodel

@@ -55,14 +55,14 @@ AI 技術の急速な進化にともない、音声インタラクションは�
 
 より詳細な情報は[こちら](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/quick-start-guide.html#embedded)を参照してください。
 
-**Step1.**  [NVIDIA NGC](https://catalog.ngc.nvidia.com/?filters=&orderBy=weightPopularDESC&query=) にアクセスしてログインします。
+**ステップ1.**  [NVIDIA NGC](https://catalog.ngc.nvidia.com/?filters=&orderBy=weightPopularDESC&query=) にアクセスしてログインします。
 
 <div align="center">
     <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/setup_riva_1.png" />
 </div>
 
-**Step2.** NGC の API キーを取得します。
+**ステップ2.** NGC の API キーを取得します。
 
 `Account（右上）` --> `Setup` --> `Get API Key` --> `Generate API Key` --> `Confirm`
 
@@ -75,7 +75,7 @@ AI 技術の急速な進化にともない、音声インタラクションは�
 生成された API キーを記録してください。
 :::
 
-**Step3.** reComputer 上で NGC を設定します
+**ステップ3.** reComputer 上で NGC を設定します
 
 reComputer のターミナルを開きます（reComputer のデスクトップでは `Ctrl+Alt+T` で素早く開けます。別の PC からリモートで reComputer のターミナルにアクセスしても構いません）。以下のコマンドを順に入力します。
 
@@ -94,7 +94,7 @@ ngc config set
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/setup_riva_3.png" />
 </div>
 
-**Step4.** reComputer に Riva サーバーをインストールして起動します。
+**ステップ4.** reComputer に Riva サーバーをインストールして起動します。
 
 reComputer のターミナルで以下を実行します。
 

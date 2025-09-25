@@ -367,11 +367,11 @@ Esta parte detalla el tiempo, precisión y condiciones requeridas para los datos
 - **Descripción de la Función**:
     Detecta la presencia de un objetivo humano estacionario dentro de un área específica.
 - **Parámetro Clave**:
-  - **Rango de Detección Efectivo**: Hasta **6 metros**.
+  - **Rango de Detección Efectivo**: Hasta **4 metros**.
 - **Lógica de Reporte de Datos**:
   - Reporta un estado de "Presencia" cuando se detecta un objetivo humano en el área.
   - Reporta un estado de "Sin Presencia" cuando el área está libre de objetivos humanos.
-  - **Nota**: El rango de detección de 6 metros es exclusivo de la función de Presencia Estática Humana. No se aplica a otras características como Detección de Respiración y Latidos o Detección de Distancia del Objetivo, que tienen sus propios rangos efectivos más cortos. El único propósito de esta función es determinar presencia o ausencia, no proporcionar datos detallados.
+  - **Nota**: El rango de detección de 4 metros es exclusivo de la función de Presencia Estática Humana. No se aplica a otras características como Detección de Respiración y Latidos o Detección de Distancia del Objetivo, que tienen sus propios rangos efectivos más cortos. El único propósito de esta función es determinar presencia o ausencia, no proporcionar datos detallados.
 
 ---
 

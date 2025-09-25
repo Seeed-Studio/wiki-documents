@@ -173,17 +173,17 @@ UART 输出的格式由 `output_format` 字段控制。
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -387,7 +387,7 @@ sudo apt install python3-pip
 pip3 install pyserial pillow
 ```
 
-Check the device name of the UART interface on the Raspberry Pi:
+检查 Raspberry Pi 上 UART 接口的设备名称：
 
 ```
 ls /dev/ttyAMA*
@@ -582,7 +582,7 @@ sudo apt-get install python3-serial
 sudo apt-get install python3-pillow
 ```
 
-If you do not intend to use the Serial Console on the UART, you should disable the Serial Console:
+如果您不打算在 UART 上使用串行控制台，您应该禁用串行控制台：
 
 ```
 systemctl stop nvgetty

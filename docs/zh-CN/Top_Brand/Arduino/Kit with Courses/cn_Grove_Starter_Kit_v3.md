@@ -26,11 +26,11 @@ Grove 是一个模块化的、即用型工具集。就像乐高一样，它采�
 
 如果这是您第一次使用 Arduino，您需要完成以下步骤：
 
-<!-- *   [Getting Started with Arduino](/cn/Getting_Started_with_Arduino)
+<!-- *   [Arduino 入门指南](/cn/Getting_Started_with_Arduino)
 
-*   [Install your microcontroller](/cn/Getting_Started_with_Seeeduino)
+*   [安装您的微控制器](/cn/Getting_Started_with_Seeeduino)
 
-*   [Download and import the Grove - Starter Kit Sketchbook](/cn/How_To_Use_Sketchbook) -->
+*   [下载并导入 Grove - 入门套件 Sketchbook](/cn/How_To_Use_Sketchbook) -->
 
 Grove - Starter Kit Sketchbook 的下载地址在[这里](https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_V2.0)。
 

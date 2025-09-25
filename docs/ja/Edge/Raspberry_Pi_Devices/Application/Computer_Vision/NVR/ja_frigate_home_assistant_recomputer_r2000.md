@@ -43,12 +43,12 @@ Home Assistant（HA）は、家庭内のデバイスを制御・自動化でき�
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a>
       </div></td>
 <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -160,7 +160,7 @@ mkdir -p ~/frigate/data/storage
 cd ~/frigate
 ```
 
-### Create Docker Compose File (frigate.yml)
+### Docker Compose ファイル（frigate.yml）を作成する
 
 ```bash
 nano frigate.yml

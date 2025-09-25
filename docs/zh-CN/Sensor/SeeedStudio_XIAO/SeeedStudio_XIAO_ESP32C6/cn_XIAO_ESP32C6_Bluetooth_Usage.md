@@ -234,8 +234,8 @@ void loop() {
 
 同时，您可以在主要的移动应用商店中搜索并下载 **nRF Connect** 应用，该应用允许您的手机搜索并连接到蓝牙设备。
 
-- Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
-- IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
+- 安卓系统：[nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
+- IOS：[nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
 
 下载软件后，按照下面显示的步骤搜索并连接 XIAO ESP32C6，您将看到广播的"Hello World"。
 
@@ -247,7 +247,6 @@ void loop() {
   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/59.jpg" style={{width:200, height:'auto'}}/></div></td>
  </tr>
 </table>
-
 
 如果您想使用另一个 XIAO ESP32C6 作为客户端来接收来自服务器的消息，那么您可以为客户端 XIAO 使用以下程序。
 
@@ -470,17 +469,17 @@ pAdvertising->start();
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Digital-Light-Sensor-TSL2561.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
@@ -825,7 +824,7 @@ pCharacteristic->registerForNotify([](BLERemoteCharacteristic* pBLERemoteCharact
 :::tip
 上述示例给出了单个传感器单个值的最简单示例。如果您想通过蓝牙广播多个传感器或多个传感器值，我们建议您阅读这里的教程示例。
 
-- [ESP32 BLE Server and Client (Bluetooth Low Energy)](https://randomnerdtutorials.com/esp32-ble-server-client/)
+- [ESP32 BLE 服务器和客户端（蓝牙低功耗）](https://randomnerdtutorials.com/esp32-ble-server-client/)
 
 :::
 

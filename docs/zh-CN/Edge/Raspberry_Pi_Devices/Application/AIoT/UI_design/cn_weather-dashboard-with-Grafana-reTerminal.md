@@ -124,8 +124,7 @@ Azure 和 InflexDB 现在已经设置完成，接下来我们将转到 ESP32。
 2. git clone https://github.com/tobiasschuerg/InfluxDB-Client-for-Arduino
 3. Restart the Arduino IDE
 ```
-
-- **Step 2.** Copy the following codes in the skecth.
+- **步骤 2.** 在草图中复制以下代码。
 
 ```cpp
 #include <Wire.h>                                                   //Import the required libraries

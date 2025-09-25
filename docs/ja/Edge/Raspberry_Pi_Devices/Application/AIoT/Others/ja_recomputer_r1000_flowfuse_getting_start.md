@@ -34,7 +34,7 @@ last_update:
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
    <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
@@ -71,13 +71,13 @@ FlowFuseのドキュメントによると、Node.jsバージョン20のインス
 NODE_MAJOR=20
 ```
 
-Add the Node.js repository to your reComputer’s sources list:
+Node.jsリポジトリをreComputerのソースリストに追加してください：
 
 ```sh
 echo "deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 ```
 
-Update your package list again to include the Node.js repository:
+パッケージリストを再度更新して、Node.jsリポジトリを含めてください：
 
 ```sh
 sudo apt update

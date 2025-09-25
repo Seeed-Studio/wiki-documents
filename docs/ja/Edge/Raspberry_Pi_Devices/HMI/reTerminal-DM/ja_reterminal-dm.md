@@ -25,7 +25,7 @@ Raspberry Pi CM4をベースとし、Panel PC、HMI、PLC、IIoTゲートウェ�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -427,7 +427,7 @@ I2Cアドレスは **0x29** です。
 cd /sys/bus/iio/devices/iio:device0
 ```
 
-- **Step 2.** Type the following to obtain the light intensity value in **Lux**
+- **ステップ 2.** **Lux**での光強度値を取得するために以下を入力してください
 
 ```sh
 cat in_illuminance_input 
@@ -787,7 +787,7 @@ CANバスをテストし、インターフェースするには：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/canbus-connection.png" /></div>
 
-- STEP 1: CAN-utilsをインストールする
+- ステップ 1: CAN-utilsをインストールする
 
 ```sh
 sudo apt install can-utils
@@ -805,7 +805,7 @@ CAN-utilsは、CANインターフェースを使用した非常に有用なデ�
 
 CAN-utilsのソースコードは[GitHubリポジトリ](https://github.com/linux-can/can-utils)から入手できます。
 
-- STEP 2: 以下のコマンドを使用してCANインターフェースをセットアップします：
+- ステップ 2: 以下のコマンドを使用してCANインターフェースをセットアップします：
   
 ```sh
 sudo ip link set can0 up type can bitrate 500000
@@ -813,7 +813,7 @@ sudo ifconfig can0 txqueuelen 1000
 sudo ip link set can0 up
 ```
 
-- STEP 3: Download the testing code to reTerminal DM by using git
+- ステップ 3: gitを使用してテストコードをreTerminal DMにダウンロードする
 
 ```sh
 git clone https://github.com/limengdu/Seeed_reTerminal_Bridge_CAN_exmaple
@@ -1111,13 +1111,13 @@ reTerminal DMには、システムの異常クラッシュが発生した場合�
 
 watchdog.confでウォッチドッグタイムアウト時間を設定するには、以下の手順に従ってください：
 
-STEP 1: 通常/etc/watchdog.confにあるwatchdog.confファイルを編集用に開きます。
+ステップ 1: 通常/etc/watchdog.confにあるwatchdog.confファイルを編集用に開きます。
 
 ```sh
 sudo nano /etc/watchdog.conf
 ```
 
-STEP 2: `/etc/watchdog.conf` の下にある "watchdog-device" と "watchdog-timeout" 設定オプションを探し、以下のように設定してください。
+ステップ 2: `/etc/watchdog.conf` の下にある "watchdog-device" と "watchdog-timeout" 設定オプションを探し、以下のように設定してください。
 
 :::note
 `watchdog-timeout` オプションが `60` 未満に設定されている場合、即座に再起動が発生する可能性があります。ハードウェアウォッチドッグを利用するには、`watchdog-device` を `/dev/watchdog1` として設定する必要があります。`1` のないデフォルト設定では Broadcom ウォッチドッグデバイスを利用しています。
@@ -1193,7 +1193,7 @@ reTerminal DMメインボードにはCSIカメラインターフェースが予�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -1274,7 +1274,7 @@ import TabItem from '@theme/TabItem';
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM1302-LoRaWAN-Gateway-Module-SPI-US-915-p-5454.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -1287,7 +1287,7 @@ sudo apt install git
 sudo apt-get install build-essential
 ```
 
-**Step 2.** コマンドラインで `sudo raspi-config` と入力してRaspberry Pi Software Configuration Toolを開きます：
+**ステップ 2.** コマンドラインで `sudo raspi-config` と入力してRaspberry Pi Software Configuration Toolを開きます：
 
 - Interface Optionsを選択
 - SPIを選択し、**Yes**を選択して有効にします
@@ -1296,7 +1296,7 @@ sudo apt-get install build-essential
 
 この後、これらの設定が動作することを確認するためにRaspberry Piを再起動してください。
 
-**Step 3.** [WM1302コード](https://github.com/Lora-net/sx1302_hal)をreTerminalにダウンロードしてコンパイルします。
+**ステップ 3.** [WM1302コード](https://github.com/Lora-net/sx1302_hal)をreTerminalにダウンロードしてコンパイルします。
 
 ```sh
 cd ~/
@@ -1337,7 +1337,7 @@ cd ~/sx1302_hal/packet_forwarder
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -1368,9 +1368,9 @@ sudo make
 cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
 ```
 
-**Step 5.** `global_conf.json.sx1250.US915.USB` 設定ファイル内のLoraWAN®モジュールのUSBポートを置き換えます：
+**ステップ 5.** `global_conf.json.sx1250.US915.USB` 設定ファイル内のLoraWAN®モジュールのUSBポートを置き換えます：
 
-**Step 5-1.**
+**ステップ 5-1.**
 まず、特定のUSBポートを取得するために、以下の手順に従ってください：
 
 ```sh

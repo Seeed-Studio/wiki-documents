@@ -187,7 +187,7 @@ apt install python3-pip
 pip install docker-compose
 ```
 
-## Install the latest version of CUDA toolkit
+## CUDA ツールキットの最新バージョンをインストールする
 
 ```sh
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/sbsa/cuda-ubuntu1804.pin

@@ -121,8 +121,8 @@ tim.init(period=500, mode=Timer.PERIODIC, callback=fun)
 
 準備するもの：
 
-- [Seeeduino-XIAO-Expansion-Board](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO-Expansion-Board/)
-- [Grove-Relay](https://www.seeedstudio.com/Grove-Relay.html)
+- [Seeeduino-XIAO-拡張ボード](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO-Expansion-Board/)
+- [Grove-リレー](https://www.seeedstudio.com/Grove-Relay.html)
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
 ```python

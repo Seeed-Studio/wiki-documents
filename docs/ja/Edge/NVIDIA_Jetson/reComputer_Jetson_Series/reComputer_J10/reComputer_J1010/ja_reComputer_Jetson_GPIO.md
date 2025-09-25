@@ -131,13 +131,13 @@ sudo su
 cat /sys/kernel/debug/gpio
 ```
 
-**Step 4:** 前に取得した**GPIOラベル**に対応する**GPIO番号**を見つける
+**ステップ 4:** 前に取得した**GPIOラベル**に対応する**GPIO番号**を見つける
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-GPIO/5.png" /></div>
 
 この場合、**PN.01**に対応する**gpio-433**であり、これは**GPIO12**と等しい
 
-**Step 5:** ターミナル内で以下を実行してgpio-433ピンをエクスポートする
+**ステップ 5:** ターミナル内で以下を実行してgpio-433ピンをエクスポートする
 
 ```sh
 cd /sys/class/gpio
@@ -189,7 +189,7 @@ sudo apt install gpiod
 gpioinfo
 ```
 
-**Step 4:** 前に取得した**GPIOラベル**に対応する**GPIO番号**を見つける
+**ステップ 4:** 前に取得した**GPIOラベル**に対応する**GPIO番号**を見つける
 
 <div align="center">
   <img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/gpio/gpioinfo1.png" />
@@ -198,7 +198,7 @@ gpioinfo
 
 この場合、**PN.01**に対応するのは**gpiochip0 line85**で、これは**GPIO12**と等しくなります
 
-**Step 5:** 次に**gpioset**コマンドを使用してGPIOの動作モードを設定できます。
+**ステップ 5:** 次に**gpioset**コマンドを使用してGPIOの動作モードを設定できます。
 
 ```bash
 # To set GPIO12 to HIGH

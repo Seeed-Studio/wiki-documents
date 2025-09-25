@@ -519,7 +519,7 @@ Example:
 }
 ```
 
-For absolute position commands (A4) with "Output in integer" selected:
+絶対位置コマンド（A4）で「整数で出力」が選択されている場合：
 
 ```json
 {
@@ -541,7 +541,7 @@ For absolute position commands (A4) with "Output in integer" selected:
 }
 ```
 
-For status query commands (94) with "Output in decimal" selected:
+ステータス照会コマンド（94）で「10進数で出力」が選択されている場合：
 
 ```json
 {

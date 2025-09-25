@@ -98,7 +98,7 @@ west flash
 west espressif monitor
 ```
 
-With the final command you should see the response showing the "Hello World!" greeting.
+执行最后一条命令后,你应该会看到显示"Hello World!"问候语的响应。
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -176,7 +176,7 @@ west flash
 west espressif monitor
 ```
 
-Double press RESET or short the RST pin to the GND.
+双击 RESET 或将 RST 引脚短接到 GND。
 
 ```
 west flash
@@ -193,7 +193,7 @@ west flash
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 ```
 
-The LED overlay (`xiao-zephyr-examples/d0_led.overlay`) defines this LED for us:
+LED 覆盖文件（`xiao-zephyr-examples/d0_led.overlay`）为我们定义了这个 LED：
 
 ```
 / {
@@ -225,7 +225,7 @@ LED state: ON
 
 #### Bluetooth
 
-To test this setup we can use an existing sample with Zephyr:
+为了测试这个设置，我们可以使用一个包含 Zephyr 的现有样本：
 
 ```
 west build -p always -b xiao_esp32c3 samples/bluetooth/observer
@@ -233,7 +233,7 @@ west flash
 west espressif monitor
 ```
 
-You will see a console available for sending commands to the board:
+你会看到一个可用于向开发板发送命令的控制台:
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -267,7 +267,7 @@ west flash
 west espressif monitor
 ```
 
-You will see a console available for sending commands to the board:
+你会看到一个可用于向开发板发送命令的控制台:
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
@@ -287,7 +287,7 @@ Num  | SSID                             (len) | Chan (Band)   | RSSI | Security 
 4    | Aernazonea                       10    | 6    (2.4GHz) |
 ```
 
-Let's dive into this example a bit to see why it works:
+让我们深入探讨这个例子，看看为什么它能够起作用：
 
 ```
 &wifi {
@@ -322,7 +322,7 @@ west config manifest.project-filter -- +tflite-micro
 west update
 ```
 
-Build the sample and flash to your board:
+构建示例并将其烧录到您的开发板：
 
 ```
 west build -p always -b xiao_esp32c3 samples/modules/tflite-micro/hello_world
@@ -330,7 +330,7 @@ west flash
 west espressif monitor
 ```
 
-You will see results returned from the console:
+你将看到从控制台返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -538,7 +538,7 @@ west flash
 west espressif monitor
 ```
 
-You should see a response similar to this:
+你应该看到类似这样的响应:
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -601,7 +601,7 @@ west flash
 west espressif monitor
 ```
 
-You will see results returned from the console:
+你将看到从控制台返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
@@ -616,7 +616,7 @@ SHT3XD: 26.07 Cel ; 51.87 %RH
 SHT3XD: 26.13 Cel ; 52.81 %RH
 ```
 
-Let's dive into this example a bit to see why it works:
+让我们深入探讨这个例子，看看为什么它能够起作用：
 
 ```
  &xiao_i2c {
@@ -669,7 +669,7 @@ west flash
 west build -p always -b xiao_esp32c3 samples/drivers/display --  -DSHIELD=seeed_xiao_round_display
 ```
 
-Enter bootloader mode and flash your device:
+进入引导加载程序模式并刷写您的设备：
 
 ```
 west flash

@@ -41,9 +41,9 @@ last_update:
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
    <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
           </a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
         </tr>
     </table>
 </div>
@@ -68,33 +68,33 @@ git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal
 cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam/ObjectDetection
 ```
 
-- **Step 3** The script install the required dependencies and download the TFLite models For this tutorial series.
+- **步骤 3** 该脚本会安装所需的依赖项并下载本系列教程所需的 TFLite 模型。
 
 ```sh
 sh setup.sh
 ```
 
-Follow these step if You are using **Bookworm OS**:
+如果您使用的是 **Bookworm OS**，请按照以下步骤操作：
 
-- **Step 1** In your Terminal execute following command to install
+- **步骤 1** 在终端中执行以下命令进行安装
 
 ```sh
 sudo apt-get install libopencv-dev python3-opencv
 ```
 
-- **Step 2** Next, clone this Git repo onto your Raspberry Pi like this
+- **步骤 2** 接下来，将此 Git 仓库克隆到您的树莓派中
 
 ```sh
 git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal
- ```
+```
 
-## Take a video stream
+## 获取视频流
 
-In new terminal window  navigate to  **Opencv_and_piCam**
+在新的终端窗口中，进入 **Opencv_and_piCam** 目录
 
- ```sh
+```sh
 cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam
- ```
+```
 
 在本教程中，我们将从在 reTerminal 上使用 PiCam 和 OpenCV 的"Hello World"程序开始。您可以在我们克隆的仓库中找到 **captureimages.py** 文件。我们将探索实时视频流，如果您按下"q"键，视频流将优雅地停止。您甚至可以使用 Thonny IDE 来运行 Python 脚本。
 

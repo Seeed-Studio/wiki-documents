@@ -193,7 +193,7 @@ BeagleBone® Blueは、BeagleBone® Black Wirelessの高性能で柔軟なWiFi/B
 
 ### 準備
 
-#### STEP1. 最新イメージの更新
+#### ステップ1. 最新イメージの更新
 
 SeeedからBeagleBone® Blueを受け取った際には、イメージはすでにオンボードeMMCに書き込まれています。このため、このステップをスキップすることも可能です。しかし、最新のイメージに更新することを強くお勧めします。
 
@@ -217,7 +217,7 @@ Debianディストリビューションがボード用に提供されていま�
 
 その後、SDカードを取り出し、BeagleBone® Blueに挿入してください。
 
-#### STEP2. 電源供給と起動
+#### ステップ2. 電源供給と起動
 
 BeagleBone® BlueをMicro-USBケーブルでコンピュータに接続します。
 
@@ -276,7 +276,7 @@ USBケーブルを優しく差し込んでください。そうしないとイ�
   </table>
 </div>
 
-#### STEP3. Beagleにアクセスする
+#### ステップ3. Beagleにアクセスする
 
 ChromeまたはFirefox（Internet Explorerは使用できません）を使用して、ボード上で実行されているウェブサーバーにアクセスしてください。ボードの機能を示すプレゼンテーションが読み込まれます。キーボードの矢印キーを使用してプレゼンテーションを操作してください。
 
@@ -284,7 +284,7 @@ ChromeまたはFirefox（Internet Explorerは使用できません）を使用�
 
 <div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/cloud9.png" /></div>
 
-#### STEP4. Wi-Fiに接続する
+#### ステップ4. Wi-Fiに接続する
 
 新しいターミナルを開き、以下のコマンドを入力してください。
 

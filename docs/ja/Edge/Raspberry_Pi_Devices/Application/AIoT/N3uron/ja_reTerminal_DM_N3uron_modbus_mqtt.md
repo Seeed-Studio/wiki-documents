@@ -36,7 +36,7 @@ reTerminal DMと[N3uron](https://n3uron.com/) Duoの強力な組み合わせは�
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
    <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
@@ -56,7 +56,7 @@ PLCのIPドメインがワイヤレス設定と異なるため、IP設定を手�
 sudo nano /etc/dhcpcd.conf
 ```
 
-- Step 02: 次に、PLCネットワークドメインに応じてイーサネットポート設定を構成し、'metric'コマンドを使用して優先度を設定します。最も低いメトリックが最も高い優先度を持ちます。
+- ステップ 02: 次に、PLCネットワークドメインに応じてイーサネットポート設定を構成し、'metric'コマンドを使用して優先度を設定します。最も低いメトリックが最も高い優先度を持ちます。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/ipconfig.PNG" /></center>
 
@@ -64,24 +64,24 @@ sudo nano /etc/dhcpcd.conf
 
 N3uronのWebUIインターフェース内でモジュールインスタンスを作成する
 
-- Step 01: ナビゲーションパネルで**Config**を選択します。
-- Step 02: エクスプローラーパネルで**Modules**を選択します。
-- Step 03: Modelメニューをクリックし、**New Module**を選択します。
+- ステップ 01: ナビゲーションパネルで**Config**を選択します。
+- ステップ 02: エクスプローラーパネルで**Modules**を選択します。
+- ステップ 03: Modelメニューをクリックし、**New Module**を選択します。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/modbusmodule.PNG" /></center>
 
-- Step 04: インスタンスには任意の名前を付けることができますが、この例では**ModbusClient**を使用します。
-- Step 05: Module Typeプロパティを**ModbusClient**に設定します。残りのプロパティはデフォルト値のままにして、**Save**をクリックします。
+- ステップ 04: インスタンスには任意の名前を付けることができますが、この例では**ModbusClient**を使用します。
+- ステップ 05: Module Typeプロパティを**ModbusClient**に設定します。残りのプロパティはデフォルト値のままにして、**Save**をクリックします。
 
 <center><img width={400} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/modbusmodule2.PNG" /></center>
 
 ### チャンネルの作成と設定
 
-- Step 01: 作成したModbusクライアントとモデルの下で、**New Channel**を選択します。チャンネル名を**Client**とします。
+- ステップ 01: 作成したModbusクライアントとモデルの下で、**New Channel**を選択します。チャンネル名を**Client**とします。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/newmodbuschannel.PNG" /></center>
 
-- Step 02: 次に、Modbus TCPを使用してPLCと通信します。PLCの**IPアドレス**と**ポートアドレス**を提供してください。
+- ステップ 02: 次に、Modbus TCPを使用してPLCと通信します。PLCの**IPアドレス**と**ポートアドレス**を提供してください。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/clientconfig.PNG" /></center>
 
@@ -89,21 +89,21 @@ N3uronのWebUIインターフェース内でモジュールインスタンスを
  Modbus RTUを使用している場合、考慮すべき様々な設定があります。そのためには、COMポート、ボーレートなどの詳細を提供する必要があります。N3uronでのModbus RTUとTCPプロトコルの両方の設定に関する詳細情報については、提供された[ガイド](https://docs.n3uron.com/docs/modbus-client-configuration)を参照してください。
 :::
 
-- Step 03: デバイスを追加する：各チャンネルは1つ以上のデバイスを持つことができます。デバイスの**名前**を設定し、設定を続行します。この場合、デバイス名は**PLC**です。
+- ステップ 03: デバイスを追加する：各チャンネルは1つ以上のデバイスを持つことができます。デバイスの**名前**を設定し、設定を続行します。この場合、デバイス名は**PLC**です。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/adddevice.PNG" /></center>
 
-- Step 04: このインターフェースを通じて調整できるいくつかの設定があります。詳細はこのリンクから確認できます。ただし、この場合はそのままにしておきます。
+- ステップ 04: このインターフェースを通じて調整できるいくつかの設定があります。詳細はこのリンクから確認できます。ただし、この場合はそのままにしておきます。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/deviceconfig.PNG" /></center>
 
 ## タグ設定
 
-- Step 01: **WebUI**に移動し、**Config**を選択してから**Tag**をクリックします。Modelセクションでメニューをクリックし、**New Tag**を選択します。Q1と名前を付けます。通常、Qは出力コイルを示すために使用されます。
+- ステップ 01: **WebUI**に移動し、**Config**を選択してから**Tag**をクリックします。Modelセクションでメニューをクリックし、**New Tag**を選択します。Q1と名前を付けます。通常、Qは出力コイルを示すために使用されます。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/addtag.PNG" /></center>
 
-- Step 02: 次に、以下の設定を行う必要があります。
+- ステップ 02: 次に、以下の設定を行う必要があります。
   - Source : Enabled/Yes
   - Module Type : ModbusClient
   - ModuleName: ModbusClient
@@ -118,7 +118,7 @@ N3uronのWebUIインターフェース内でモジュールインスタンスを
  Modbusアドレスに関しては、PLCまたはデバイスメーカーのデータシートを参照することをお勧めします。そこには、入力、出力、保持アドレスに関する詳細が記載されています。これらの仕様に従って、タグ設定のModbusアドレス行で調整を行う必要があります。例えば、メーカーが出力コイルQ1を8193と表記している場合、アドレスは008193として設定する必要があります。同様に、ネットワーク入力が1と表記され、それがコイルタイプの場合、アドレスは000001として設定する必要があります。
 :::
 
-- Step 03: リアルタイムシミュレーション
+- ステップ 03: リアルタイムシミュレーション
 
 システムに接続すると、出力コイルと入力コイルのリアルタイムステータスを表示できます。
 

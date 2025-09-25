@@ -185,23 +185,23 @@ Raspberry Pi用の新しいプロジェクトをセットアップした後、�
 
 <div align="center"><img width ={400} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/add_gpio_1.png"/></div>
 
-- **STEP 3-4:** **"Add Device"** ウィンドウで、**"GPIOS 1 bit"** オプションを選択し、**"Add Device"** をクリックして確認します。
+- **ステップ 3-4:** **"Add Device"** ウィンドウで、**"GPIOS 1 bit"** オプションを選択し、**"Add Device"** をクリックして確認します。
 
 <div align="center"><img width ={400} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/add_gpio_2.png"/></div>
 
-- **STEP 3-5:** GPIOを設定するには、上記のステップで新しく追加されたデバイス **"GPIOS_1_bit(GPIOs 1 bit)"** をダブルクリックして、メイン設定ウィンドウを開きます。
+- **ステップ 3-5:** GPIOを設定するには、上記のステップで新しく追加されたデバイス **"GPIOS_1_bit(GPIOs 1 bit)"** をダブルクリックして、メイン設定ウィンドウを開きます。
 
 <div align="center"><img width ={400} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/add_gpio_3.png"/></div>
 
 <div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/add_gpio_4.png"/></div>
 
-- **STEP 3-6:** **"GPIOs_1_bit"** **メイン設定** ウィンドウで、最初のタブ **"GPIOSysfsModuleParameters"** を選択して、**GPIO Direction**、**Pin Number**、および **current PIN state** を設定・割り当てします。この場合、[データシート](#)によるとEdgebox-RPI-200のLED2をトグルします。これはGPIO Pin 21です。そのため、Pin設定は以下と同じにする必要があります。
+- **ステップ 3-6:** **"GPIOs_1_bit"** **メイン設定** ウィンドウで、最初のタブ **"GPIOSysfsModuleParameters"** を選択して、**GPIO Direction**、**Pin Number**、および **current PIN state** を設定・割り当てします。この場合、[データシート](#)によるとEdgebox-RPI-200のLED2をトグルします。これはGPIO Pin 21です。そのため、Pin設定は以下と同じにする必要があります。
 
 <div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/config_gpio_1.png"/></div>
 
 <div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/config_gpio_2.png"/></div>
 
-- **STEP 3-7:** GPIO I/Oをマッピングするには、2番目のタブ **"GPIOSysfsModule I/O Mapping"** を選択し、GPIOに変数名を割り当てます。この場合、**"GPIO 21 input"** に **"LED_in"**、**"GPIO 21 Output"** に **"LED_out"** と名前を付けます。
+- **ステップ 3-7:** GPIO I/Oをマッピングするには、2番目のタブ **"GPIOSysfsModule I/O Mapping"** を選択し、GPIOに変数名を割り当てます。この場合、**"GPIO 21 input"** に **"LED_in"**、**"GPIO 21 Output"** に **"LED_out"** と名前を付けます。
 
 <div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/config_gpio_3.png"/></div>
 
@@ -211,45 +211,45 @@ Raspberry Pi用の新しいプロジェクトをセットアップした後、�
 
 <div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/delete_gpio_AB.png"/></div>
 
-- **STEP 4:** **オンライン設定モードでEdgebox-RPI-200に接続し、Edgebox-RPI-200のLED2をテスト・トグルする**
+- **ステップ 4:** **オンライン設定モードでEdgebox-RPI-200に接続し、Edgebox-RPI-200のLED2をテスト・トグルする**
 
-- **STEP 4-1:** まず、**"Deivce (CODESYS Control for Raspberry Pi MC SL)"** をダブルクリックしてデバイスを設定する必要があります。これにより **デバイス設定** ウィンドウが開きます。
+- **ステップ 4-1:** まず、**"Deivce (CODESYS Control for Raspberry Pi MC SL)"** をダブルクリックしてデバイスを設定する必要があります。これにより **デバイス設定** ウィンドウが開きます。
 
 <div align="center"><img width ={600} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/connect_device.png"/></div>
 
-- **STEP 4-2:** **"デバイス設定"** ウィンドウの **"Communication"** 設定タブで、**"Device"** ドロップダウンリストをクリックし、**"Options>Manage Favorite Devices..."** を選択します。
+- **ステップ 4-2:** **"デバイス設定"** ウィンドウの **"Communication"** 設定タブで、**"Device"** ドロップダウンリストをクリックし、**"Options>Manage Favorite Devices..."** を選択します。
 
 <div align="center"><img width ={600} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/connect_device_1.png"/></div>
 
-- **STEP 4-3:** **"Manage Favorite Devices"** ウィンドウで、**"+ Add"** をクリックし、**"Add favorite"** ウィンドウで
+- **ステップ 4-3:** **"Manage Favorite Devices"** ウィンドウで、**"+ Add"** をクリックし、**"Add favorite"** ウィンドウで
 
 <div align="center"><img width ={600} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/connect_device_2.png"/></div>
 
-- **STEP 4-4:** **"Enter name, device address or IP address"** ボックスに **Edgebox-RPI-200のIPアドレス** を入力してください。
+- **ステップ 4-4:** **"Enter name, device address or IP address"** ボックスに **Edgebox-RPI-200のIPアドレス** を入力してください。
 
 > 私の場合、Edgebox-RPI-200のIPアドレスは **"192.168.1.40"** で、**"OK"** をクリックして確認します。
 
 <div align="center"><img width ={600} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/connect_device_3.png"/></div>
 
-- **STEP 4-5:** **"Manage Favorite Devices"** ウィンドウで、Identifierフィールドに **新しく追加されたIPアドレスデバイス** を選択し、**"OK"** をクリックして確認します。
+- **ステップ 4-5:** **"Manage Favorite Devices"** ウィンドウで、Identifierフィールドに **新しく追加されたIPアドレスデバイス** を選択し、**"OK"** をクリックして確認します。
 
 <div align="center"><img width ={600} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/connect_device_4.png"/></div>
 
-- **STEP 4-6:** **"デバイス設定"** ウィンドウの **"Communication"** 設定タブで、ドロップダウンリストを **"クリック"** し、新しく追加されたデバイス **"IP Address"** を選択してください。下に接続されたデバイスに関する情報が表示されるはずです。
+- **ステップ 4-6:** **"デバイス設定"** ウィンドウの **"Communication"** 設定タブで、ドロップダウンリストを **"クリック"** し、新しく追加されたデバイス **"IP Address"** を選択してください。下に接続されたデバイスに関する情報が表示されるはずです。
 
 <div align="center"><img width ={600} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/connect_device_5.png"/></div>
 
 <div align="center"><img width ={600} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/connect_device_6.png"/></div>
   
-- **STEP 4-7:** **"ツールバー"** から **"Online Config Mode..."** ボタンをクリックします。**"Online Config Mode..."** のアイコンが緑から赤に変わるはずです。これは、CODESYS Development System V3 IDEがEdgebox-RPI-200に接続され、IDEから接続されたハードウェアデバイスと直接テスト・インターフェースできることを意味します。
+- **ステップ 4-7:** **"ツールバー"** から **"Online Config Mode..."** ボタンをクリックします。**"Online Config Mode..."** のアイコンが緑から赤に変わるはずです。これは、CODESYS Development System V3 IDEがEdgebox-RPI-200に接続され、IDEから接続されたハードウェアデバイスと直接テスト・インターフェースできることを意味します。
 
 <div align="center"><img width ={600} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/online_config.png"/></div>
 
-- **STEP 4-8:** デバイスサイドバーから **"GPIOs_1_bit(GPIOs 1 bit)"** をダブルクリックして、設定ウィンドウを開きます。
+- **ステップ 4-8:** デバイスサイドバーから **"GPIOs_1_bit(GPIOs 1 bit)"** をダブルクリックして、設定ウィンドウを開きます。
 
 <div align="center"><img width ={600} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/online_config_1.png"/></div>
 
-- **STEP 4-9:** メイン設定ウィンドウで2番目のタブ **"GPIOSysfsModule I/O Mapping"** を選択します。**"Current Value"** がLED_inとLED_outの両方で **"False"** になっているはずです。**"LED_out"** の **"Current Value"** セクションで **"False"** をダブルクリックして **"True/False"** をトグルすることで、Edgebox-RPI-200のLED2をトグルできます。LED2はTrue/Falseの値に応じてオン/オフになるはずです。
+- **ステップ 4-9:** メイン設定ウィンドウで2番目のタブ **"GPIOSysfsModule I/O Mapping"** を選択します。**"Current Value"** がLED_inとLED_outの両方で **"False"** になっているはずです。**"LED_out"** の **"Current Value"** セクションで **"False"** をダブルクリックして **"True/False"** をトグルすることで、Edgebox-RPI-200のLED2をトグルできます。LED2はTrue/Falseの値に応じてオン/オフになるはずです。
 
 <div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/Edge_Box/codesys/toggle_gpio.png"/></div>
 

@@ -193,19 +193,19 @@ OSを自分でアップグレードした場合は、Sensecraft AIからダッ�
 
  <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboarddownload1.png" /></div>
 
-**Step 2**. Sensecraft AIプラットフォームに移動し、最初の公式Dashboard Demoを選択して```Clone```をクリックします。このウェブサイトにはログインが必要です。
+**ステップ 2**. Sensecraft AIプラットフォームに移動し、最初の公式Dashboard Demoを選択して```Clone```をクリックします。このウェブサイトにはログインが必要です。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboarddownload2.png" /></div>
 
-**Step 3**. デバイスの接続方法を選択します。
+**ステップ 3**. デバイスの接続方法を選択します。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboarddownload3.png" /></div>
 
-**Step 4**. 事前構築されたフローを含むNode-REDワークスペースが表示されます。
+**ステップ 4**. 事前構築されたフローを含むNode-REDワークスペースが表示されます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboarddownload4.png" /></div>
 
-**Step 5**. ```Deploy```をクリックしてフローが既に開始されていることを確認し、```dashboard```をクリックすると、ダッシュボードが表示されます。
+**ステップ 5**. ```Deploy```をクリックしてフローが既に開始されていることを確認し、```dashboard```をクリックすると、ダッシュボードが表示されます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboarddownload5.png" /></div>
 
@@ -215,7 +215,7 @@ OSを自分でアップグレードした場合は、Sensecraft AIからダッ�
 成功！
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboarddownload7.png" /></div>
 
-**Step 6**. ```IoU```と```Confidence```の閾値を調整して、より正確な結果を得ることができます。
+**ステップ 6**. ```IoU```と```Confidence```の閾値を調整して、より正確な結果を得ることができます。
 
 - IoU=0,Confidence=0:
 

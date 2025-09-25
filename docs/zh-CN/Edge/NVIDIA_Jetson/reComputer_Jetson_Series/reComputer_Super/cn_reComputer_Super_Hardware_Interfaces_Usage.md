@@ -51,13 +51,13 @@ reComputer Super 支持标准的 4 个 MIPI CSI 摄像头进行图像和视频�
 ls /dev/video*
 ```
 
-**Step2.** (Optional) Install video utilities if not already present:
+**步骤2.** (可选) 如果尚未安装视频工具，请安装：
 
 ```bash
 sudo apt install v4l-utils
 ```
 
-**Step3.** Start the camera and display the video stream using the following command:
+**步骤3.** 使用以下命令启动摄像头并显示视频流：
 
 ```bash
 nvgstcapture-1.0 --sensor-id=0
@@ -452,7 +452,7 @@ sudo ip link set can1 up
 
 ```
 
-Then, run the file we just created in the Jetson terminal window:
+然后，在 Jetson 终端窗口中运行我们刚刚创建的文件：
 
 ```bash
 sudo apt-get install gpiod
@@ -587,15 +587,15 @@ sudo /opt/nvidia/jetson-io/config-by-hardware.py -n "seeed gpio config Overlay"
 
 ```
 
-The following are command examples for operating GPIO pins using the gpiod toolkit.
+以下是使用 gpiod 工具包操作 GPIO 引脚的命令示例。
 
-**Step 1.** Install gpiod:
+**步骤 1.** 安装 gpiod:
 
   ```bash
   sudo apt-get install gpiod
   ```
 
-**Step 2.** Find pin number:
+**步骤 2.** 查找引脚编号:
 
   ```bash
   sudo gpiofind PH.00
@@ -607,19 +607,19 @@ The following are command examples for operating GPIO pins using the gpiod toolk
   sudo gpioset --mode=wait 0 43=1
   ```
 
-**Step 4.** Set pin low:
+**步骤 4.** 将引脚设为低电平:
 
   ```bash
   sudo gpioset --mode=wait 0 43=0
   ```
 
-**Step 5.** Read input:
+**步骤 5.** 读取输入:
 
   ```bash
   gpioget 0 4
   ```
 
-GPIO Control Script Example
+GPIO 控制脚本示例
 
 ```bash
 #!/bin/bash

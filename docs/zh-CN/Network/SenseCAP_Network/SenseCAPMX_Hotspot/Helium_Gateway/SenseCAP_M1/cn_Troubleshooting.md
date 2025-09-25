@@ -264,21 +264,21 @@ _该套件包含一个螺丝刀、一个 MicroSD 读卡器、一个 64GB MicroSD
 
 *   **步骤 1：** 关闭热点电源，然后拆下天线。
 
-![SenseCAP M1 SD Card Step 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-1-1.png)
+![SenseCAP M1 SD Card 步骤 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-1-1.png)
 
 *   **步骤 2**：使用螺丝刀松开前面板上的两颗螺丝。
 
-![SenseCAP M1 SD Card Step 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-2.png)
+![SenseCAP M1 SD Card 步骤 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-2.png)
 
 *   **步骤 3**：移开前面板并将其放在一边。
 
-![SenseCAP M1 SD Card Step 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-3.png)
+![SenseCAP M1 SD Card 步骤 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-3.png)
 
 *   **步骤 4**：撕掉 Micro SD 卡顶部的黄色贴纸（您可以使用镊子）。
 
-![SenseCAP M1 SD Card Step 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4.png)
+![SenseCAP M1 SD Card 步骤 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4.png)
 
-![SenseCAP M1 SD Card Step 4B](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4a.png)
+![SenseCAP M1 SD Card 步骤 4B](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4a.png)
 
 * * *
 
@@ -286,11 +286,11 @@ _该套件包含一个螺丝刀、一个 MicroSD 读卡器、一个 64GB MicroSD
 
 *   **步骤 1**：将新的 Micro SD 卡插入 Micro SD 读卡器。
 
-![SenseCAP M1 SD Card Image Step 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-1.png)
+![SenseCAP M1 SD Card Image 步骤 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-1.png)
 
 _将新的 Micro SD 卡插入 Micro SD 读卡器_
 
-![SenseCAP M1 SD Card Image Step 1B](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-2.png)
+![SenseCAP M1 SD Card Image 步骤 1B](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-2.png)
 
 _确保完全插入_
 
@@ -321,12 +321,12 @@ _MacOS - 复制 'config.json' 文件_
 *   **步骤 4**：从计算机中拔出新的 Micro SD 卡。
 *   **步骤 5**：将新的 Micro SD 卡插入您的 SenseCAP M1。
 
-![SenseCAP M1 SD Card Step 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-5.png)
+![SenseCAP M1 SD Card 步骤 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-5.png)
 
 *   **步骤 6**：开启 SenseCAP M1 电源，并重新连接到互联网（最好使用以太网线）。
 *   **步骤 7**：等待大约 20 分钟以应用更新，然后检查仪表板（**[https://status.sensecapmx.cloud/)](https://status.sensecapmx.cloud/)**）或在完成后在 Helium 应用中运行诊断。
 
-![SenseCAP M1 SD Card Step 6](https://www.sensecapmx.com/wp-content/uploads/2022/07/diagnostics-1.png)
+![SenseCAP M1 SD Card 步骤 6](https://www.sensecapmx.com/wp-content/uploads/2022/07/diagnostics-1.png)
 
 **注意**：只有在确认您的热点正常工作后，才应组装热点的前面板。
 
@@ -391,21 +391,21 @@ _套件包含一个螺丝刀、一个 MicroSD 读卡器、一个 64GB MicroSD �
 
 *   **步骤 1：** 关闭热点电源，然后拆下天线。
 
-![SenseCAP M1 SD Card Step 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-1-1.png)
+![SenseCAP M1 SD Card 步骤 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-1-1.png)
 
 *   **步骤 2**：使用螺丝刀松开前面板上的两颗螺丝。
 
-![SenseCAP M1 SD Card Step 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-2.png)
+![SenseCAP M1 SD Card 步骤 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-2.png)
 
 *   **步骤 3**：移开前面板并将其放在一边。
 
-![SenseCAP M1 SD Card Step 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-3.png)
+![SenseCAP M1 SD Card 步骤 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-3.png)
 
 *   **步骤 4**：撕掉 Micro SD 卡顶部的黄色贴纸（您可以使用镊子）。
 
-![SenseCAP M1 SD Card Step 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4.png)
+![SenseCAP M1 SD Card 步骤 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4.png)
 
-![SenseCAP M1 SD Card Step 4B](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4a.png)
+![SenseCAP M1 SD Card 步骤 4B](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4a.png)
 
 * * *
 
@@ -414,11 +414,11 @@ _套件包含一个螺丝刀、一个 MicroSD 读卡器、一个 64GB MicroSD �
 *   **步骤 1****：** 将新的 Micro SD 卡插入 Micro SD 卡读卡器。  
     
 
-![SenseCAP M1 SD Card Image Step 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-1.png)
+![SenseCAP M1 SD Card Image 步骤 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-1.png)
 
 _将新的 Micro SD 卡插入 Micro SD 卡读卡器_
 
-![SenseCAP M1 SD Card Image Step 1B](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-2.png)
+![SenseCAP M1 SD Card Image 步骤 1B](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-2.png)
 
 _确保完全插入_
 
@@ -500,12 +500,12 @@ _Windows - 复制 'config.json' 文件_
 *   **步骤 1**：从计算机中拔出新的 Micro SD 卡。
 *   **步骤 2**：将新的 Micro SD 卡插入您的 SenseCAP M1。
 
-![SenseCAP M1 SD Card Step 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-5.png)
+![SenseCAP M1 SD Card 步骤 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-5.png)
 
 *   **步骤 6**：打开 SenseCAP M1 电源，并重新连接到互联网（最好使用以太网电缆）。
 *   **步骤 7**：等待大约 20 分钟以应用更新，然后检查仪表板（**[https://status.sensecapmx.cloud/)](https://status.sensecapmx.cloud/)**）或在完成后在 Helium 应用中运行诊断。
 
-![SenseCAP M1 SD Card Step 6](https://www.sensecapmx.com/wp-content/uploads/2022/07/diagnostics-1.png)
+![SenseCAP M1 SD Card 步骤 6](https://www.sensecapmx.com/wp-content/uploads/2022/07/diagnostics-1.png)
 
 **注意**：只有在确认您的热点正常工作后，才应该组装热点的前面板。
 

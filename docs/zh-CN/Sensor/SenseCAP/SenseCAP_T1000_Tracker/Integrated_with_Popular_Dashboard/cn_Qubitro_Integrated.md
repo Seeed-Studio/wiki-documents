@@ -89,9 +89,9 @@ last_update:
 我们为用户上传了一个模板，您只需选择产品型号即可快速设置。
 
 :::info
-**Formatter type**: Device template<br />
-**Manufacturer Brand**: Seeed Studio<br />
-**Model**: SenseCAP_T1000
+**格式化类型**: 设备模板<br />
+**制造商品牌**: Seeed Studio<br />
+**型号**: SenseCAP_T1000
 :::
 
 然后点击 **Save and complete**。

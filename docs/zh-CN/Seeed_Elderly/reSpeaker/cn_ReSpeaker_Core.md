@@ -257,7 +257,7 @@ tmpfs                   512.0K         0    512.0K   0% /dev
 
 ```
 
-- Prepare your external storage root overlay.
+- 准备您的外部存储根覆盖层。
 
 ```
 mount /dev/mmcblk0p2 /mnt ; tar -C /overlay -cvf - . | tar -C /mnt -xf - ; umount /mnt
@@ -272,7 +272,7 @@ mount /dev/mmcblk0p2 /mnt ; tar -C /overlay -cvf - . | tar -C /mnt -xf - ; umoun
  cat /etc/config/fstab;
 ```
 
-- Check if it is mountable to overlay.
+- 检查它是否可以挂载到覆盖层。
 
 ```
  root@mylinkit:/# mount /dev/mmcblk0p2 /overlay/
@@ -494,7 +494,7 @@ cd /etc/arduino
 avrdude -c linuxgpio -p m32u4 -e -U lfuse:w:0xFF:m -U hfuse:w:0xD8:m -U efuse:w:0xCB:m  -U flash:w:Caterina-ReSpeaker.hex -u -U lock:w:0xEF:m
 ```
 
-**Q8: Forgot the password of WebUI**
+**Q8: 忘记了 WebUI 的密码**
 
 - Reset the juci password
 
