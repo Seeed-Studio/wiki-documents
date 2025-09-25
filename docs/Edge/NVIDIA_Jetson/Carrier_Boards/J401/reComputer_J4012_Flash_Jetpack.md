@@ -783,7 +783,7 @@ Please complete the **System Configuration** according to your needs.
 Here we will use NVIDIA L4T 36.4.3 to install Jetpack 6.2 on the reComputer
 
 :::danger
-If you are using an **Orin NX 16GB/8GB** module, **do not enable MAXN SUPER mode**. 
+If you are using an **Orin NX 16GB/8GB** module, **do not enable MAXN SUPER mode**.
 The cooling capacity of the reComputer J401 carrier board is insufficient to support it, and forcing this mode may result in permanent damage to the module.
 :::
 

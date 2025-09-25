@@ -301,6 +301,7 @@ reComputer J40/ J30 シリーズには、付属の NVMe SSD に JetPack 5.1 が�
 **ステップ 2.** 電源アダプターから付属のケーブルを接続して reComputer に電源を供給し、USB Type-C データ転送ケーブルでボードを Ubuntu ホスト PC に接続します
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/2.png"/></div>
+
 **ステップ 3.** Linux ホスト PC でターミナルウィンドウを開き、コマンド `lsusb` を入力します。使用している Jetson SoM に応じて、返される内容に以下の出力のいずれかが含まれている場合、ボードは強制リカバリモードになっています。
 
 - Orin NX 16GB の場合：**0955:7323 NVidia Corp**
@@ -545,7 +546,8 @@ sudo apt install nvidia-jetpack
 </table>
 </div>
 
-:::infoダウンロードしたファームウェアの整合性を確認するために、SHA256ハッシュ値を比較することができます。
+:::info
+ダウンロードしたファームウェアの整合性を確認するために、SHA256ハッシュ値を比較することができます。
 
 Ubuntuホストマシンで、ターミナルを開き、`sha256sum <File>`コマンドを実行して、ダウンロードしたファイルのSHA256ハッシュ値を取得します。結果のハッシュがwikiで提供されているSHA256ハッシュと一致する場合、ダウンロードしたファームウェアが完全で破損していないことが確認されます。
 :::
@@ -780,6 +782,11 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ここでは、NVIDIA L4T 36.4.3を使用してreComputerにJetpack 6.2をインストールします
 
+:::danger
+**Orin NX 16GB/8GB** モジュールを使用している場合、**MAXN SUPER モードを有効にしないでください**。  
+reComputer J401 キャリアボードの冷却能力はこのモードをサポートするには不十分であり、強制的に有効化するとモジュールが永久的に損傷する可能性があります。
+:::
+
 **ステップ 1:** 使用しているJetsonモジュールに対応するシステムイメージをUbuntu PCにダウンロードします：
 
 <div class="table-center">
@@ -792,6 +799,20 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>Orin NX 16GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdcCLLY0ZBdIl5YpQk9n1jUBRnqIhjpDHZxo4_6OaxIbYg?e=R7rEqU" target="_blank" rel="noopener noreferrer">Download</a>
+      </td>
+      <td>489F2B5D41655208EB2C5CFD980162B77D3871AD9EA06CD55C05FBB8B747500F</td>
+    </tr>
+    <tr>
+      <td>Orin NX 8GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ETW85CuJ9p5Gtefm7r7Hh74B6VvKATStF5B0SyfANjMZ2Q?e=CPj7HB" target="_blank" rel="noopener noreferrer">Download</a>
+      </td>
+      <td>DCC74CAB5F38E62C7A892DE6DFD547EBD61C5B5B71C5EF9F5A0EF675518EF062 </td>
+    </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>
@@ -809,6 +830,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
   </tbody>
 </table>
 </div>
+
 :::info
 ダウンロードしたファームウェアの整合性を確認するために、SHA256ハッシュ値を比較することができます。
 
