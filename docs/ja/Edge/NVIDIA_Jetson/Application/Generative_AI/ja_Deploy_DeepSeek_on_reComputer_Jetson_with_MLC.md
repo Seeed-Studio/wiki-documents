@@ -80,7 +80,7 @@ sudo nvidia-ctk runtime configure --runtime=docker
 
 :::
 
-step2. Restart the Docker service and add your user to the docker group.
+ステップ2. Dockerサービスを再起動し、dockerグループにユーザーを追加してください。
 
 ```bash
 sudo systemctl restart docker
@@ -88,7 +88,7 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 
-step3. Add default runtime in `/etc/docker/daemon.json`.
+ステップ3. `/etc/docker/daemon.json`にデフォルトランタイムを追加する。
 
 ```bash
 sudo apt install -y jq

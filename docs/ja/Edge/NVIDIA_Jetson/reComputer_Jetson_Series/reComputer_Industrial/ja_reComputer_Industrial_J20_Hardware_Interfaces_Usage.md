@@ -67,27 +67,27 @@ reComputer Industrialには**2x 2レーン15ピンMIPI CSIカメラコネクタ*
 sudo /opt/nvidia/jetson-io/jetson-io.py
 ```
 
-- **Step 2:** **Configure Jetson Nano CSI Connector** を選択します
+- **ステップ 2:** **Configure Jetson Nano CSI Connector** を選択します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/119.jpg"/></div>
 
-- **Step 3:** **Configure for compatible hardware** を選択します
+- **ステップ 3:** **Configure for compatible hardware** を選択します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/120.jpg"/></div>
 
-- **Step 4:** 使用したいカメラを選択します
+- **ステップ 4:** 使用したいカメラを選択します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/121.jpg"/></div>
 
-- **Step 5:** **Save pin changes** を選択します
+- **ステップ 5:** **Save pin changes** を選択します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/122.jpg"/></div>
 
-- **Step 6:** **Save and reboot to reconfigure pins** を選択します
+- **ステップ 6:** **Save and reboot to reconfigure pins** を選択します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/123.jpg"/></div>
 
-- **Step 7:** キーボードの任意のキーを押すと、適用されたカメラ設定でデバイスが再起動します
+- **ステップ 7:** キーボードの任意のキーを押すと、適用されたカメラ設定でデバイスが再起動します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/124.jpg"/></div>
 
@@ -201,19 +201,19 @@ sudo vi /usr/bin/hwtosys.sh
 sudo hwclock --hctosys
 ```
 
-- **Step 10:** Make the script executable
+- **ステップ 10:** スクリプトを実行可能にする
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
 ```
 
-- **Step 11:** Create a systemd file
+- **ステップ 11:** Create a systemd file
 
 ```sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
 
-- **Step 12:** Add the following inside the file
+- **ステップ 12:** ファイル内に以下を追加してください
 
 ```sh
 [Unit]
@@ -239,13 +239,13 @@ sudo systemctl enable hwtosys.service
 sudo systemctl start hwtosys.service
 ```
 
-- **Step 15:** Verify the script is up and running as a systemd service
+- **ステップ 15:** スクリプトがsystemdサービスとして起動し実行されていることを確認する
 
 ```sh
 sudo systemctl status hwtosys.service
 ```
 
-- **Step 16:** ボードを再起動すると、システムクロックがハードウェアクロックと同期されていることが確認できます
+- **ステップ 16:** ボードを再起動すると、システムクロックがハードウェアクロックと同期されていることが確認できます
 
 ## M.2 Key M
 
@@ -255,21 +255,21 @@ reComputer Industrialには、M.2 Key Mスロットに接続された128GB SSD�
 
 付属のSSDを取り外して新しいものを取り付けたい場合は、以下の手順に従ってください。ここでは、[128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)、[256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)、[512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)のSeeed SSDのみを推奨します。これらのSSDのみをテストしているためです。さらに、このインターフェースはPCIe Gen4.0 SSDをサポートしています。
 
-- **Step 1:** プリインストールされたSSDのネジを取り外します
+- **ステップ 1:** プリインストールされたSSDのネジを取り外します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/15.png"/></div>
 
-- **Step 2:** SSDコネクタから離すようにスライドさせてSSDを取り外します
+- **ステップ 2:** SSDコネクタから離すようにスライドさせてSSDを取り外します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/16.png"/></div>
 
-- **Step 3:** 新しいSSDを挿入し、ネジを締め直します
+- **ステップ 3:** 新しいSSDを挿入し、ネジを締め直します
 
 ### 使用方法
 
 接続されたSSDで簡単なベンチマークを実行する方法を説明します
 
-- **Step 1:** 以下のコマンドを実行して書き込み速度を確認します
+- **ステップ 1:** 以下のコマンドを実行して書き込み速度を確認します
 
 ```sh
 sudo dd if=/dev/zero of=/home/nvidia/test bs=1M count=512 conv=fdatasync
@@ -1232,8 +1232,8 @@ DB9コネクタのピン番号と表を参照して接続を行うことがで�
 
 - **ステップ3:** PCでPuttyを開き、**Terminal**セクションを選択して以下を設定します
 
-  - Local echo: Force on
-  - Local line editing: Force on
+- ローカルエコー: 強制オン
+- ローカル行編集: 強制オン
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
@@ -1258,7 +1258,7 @@ sudo echo "RS232 message from reComputer Industrial" > /dev/ttyTHS0
 sudo cat /dev/ttyTHS0
 ```
 
-- **Step 6:** Puttyで何かを入力し、**ENTER**を押すと、reComputer Industrialのターミナルウィンドウに表示されます
+- **ステップ 6:** Puttyで何かを入力し、**ENTER**を押すと、reComputer Industrialのターミナルウィンドウに表示されます
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/73.png"/></div>
 
@@ -1266,40 +1266,40 @@ sudo cat /dev/ttyTHS0
 
 ここでは、USB to RS422アダプターを使用してインターフェースをテストできます。テストには[DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K)を使用しました。
 
-- **Step 1:** ボードの電源を切ります
+- **ステップ 1:** ボードの電源を切ります
 
-- **Step 2:** ここでは、DIPスイッチを設定するために2つのオプションがあります。000モードまたは100モードのいずれかです。各モードのスイッチ位置を以下に示します
+- **ステップ 2:** ここでは、DIPスイッチを設定するために2つのオプションがあります。000モードまたは100モードのいずれかです。各モードのスイッチ位置を以下に示します
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/65.png"/></div>
 
-- **Step 3:** 以下に示すように、ジャンパーワイヤーを使用してUSB to RS422アダプターをDB9コネクターに接続します。ここでは、上記で言及したアダプターを接続しました
+- **ステップ 3:** 以下に示すように、ジャンパーワイヤーを使用してUSB to RS422アダプターをDB9コネクターに接続します。ここでは、上記で言及したアダプターを接続しました
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/74.png"/></div>
 
-- **Step 4:** もう一方の端をPCのUSBポートの1つに接続します
+- **ステップ 4:** もう一方の端をPCのUSBポートの1つに接続します
 
-- **Step 5:** ボードの電源を入れます
+- **ステップ 5:** ボードの電源を入れます
 
 ### RS422の使用方法
 
-- **Step 1:** 使用しているアダプターのドライバーをインストールする必要がある場合があります。または、Windowsが自動的にドライバーをインストールします。Windowsの検索で**Device Manager**と入力してDevice Managerに移動し、接続されたアダプターがCOMデバイスとして表示されるかどうかを確認します。
+- **ステップ 1:** 使用しているアダプターのドライバーをインストールする必要がある場合があります。または、Windowsが自動的にドライバーをインストールします。Windowsの検索で**Device Manager**と入力してDevice Managerに移動し、接続されたアダプターがCOMデバイスとして表示されるかどうかを確認します。
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/75.png"/></div>
 
-- **Step 2:** アダプターが表示されない場合は、使用しているアダプターに応じてドライバーをインストールする必要があります。これらのドライバーは通常、メーカーのWebサイトで見つけることができます。使用しているアダプターについては、[このページ](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485)を参照してください
+- **ステップ 2:** アダプターが表示されない場合は、使用しているアダプターに応じてドライバーをインストールする必要があります。これらのドライバーは通常、メーカーのWebサイトで見つけることができます。使用しているアダプターについては、[このページ](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485)を参照してください
 
-- **Step 3:** PCでPuttyを開き、**Terminal**セクションを選択して以下を設定します
+- **ステップ 3:** PCでPuttyを開き、**Terminal**セクションを選択して以下を設定します
 
-  - Local echo: Force on
-  - Local line editing: Force on
+- ローカルエコー: 強制オン
+- ローカル行編集: 強制オン
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
-- **Step 4:** **Session**を選択し、**Connection type**で**Serial**を選択し、**Device Manager**で確認したシリアルポート番号を設定し、Speedはデフォルト（9600）のままにして**Open**をクリックします
+- **ステップ 4:** **Session**を選択し、**Connection type**で**Serial**を選択し、**Device Manager**で確認したシリアルポート番号を設定し、Speedはデフォルト（9600）のままにして**Open**をクリックします
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/76.png"/></div>
 
-- **Step 4:** reTerminal Industrialのターミナルウィンドウで、以下を入力してreComputerからPCに信号を送信します
+- **ステップ 4:** reTerminal Industrialのターミナルウィンドウで、以下を入力してreComputerからPCに信号を送信します
 
 ```sh
 sudo chmod 777 /dev/ttyTHS0
@@ -1314,46 +1314,46 @@ sudo echo "RS422 message from reComputer Industrial" > /dev/ttyTHS0
 sudo cat /dev/ttyTHS0
 ```
 
-- **Step 6:** Puttyで何かを入力し、**ENTER**を押すと、reComputer Industrialのターミナルウィンドウに表示されます
+- **ステップ 6:** Puttyで何かを入力し、**ENTER**を押すと、reComputer Industrialのターミナルウィンドウに表示されます
 
 ### RS485 接続概要
 
 ここでは、USB to RS422アダプターを使用してインターフェースをテストできます。テストには[DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K)を使用しました。
 
-- **Step 1:** ボードの電源を切ります
+- **ステップ 1:** ボードの電源を切ります
 
-- **Step 2:** ここでは、DIPスイッチを設定する3つのオプションがあります。010モード、011モード、または110モードのいずれかです。各モードのスイッチ位置を以下に示します
+- **ステップ 2:** ここでは、DIPスイッチを設定する3つのオプションがあります。010モード、011モード、または110モードのいずれかです。各モードのスイッチ位置を以下に示します
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/66.png"/></div>
 
-- **Step 3:** 以下に示すように、ジャンパーワイヤーを使用してUSB to RS422アダプターをDB9コネクターに接続します。ここでは、上記で言及したアダプターを接続しました
+- **ステップ 3:** 以下に示すように、ジャンパーワイヤーを使用してUSB to RS422アダプターをDB9コネクターに接続します。ここでは、上記で言及したアダプターを接続しました
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/77.png"/></div>
 
-- **Step 4:** もう一方の端をPCのUSBポートの1つに接続します
+- **ステップ 4:** もう一方の端をPCのUSBポートの1つに接続します
 
-- **Step 5:** ボードの電源を入れます
+- **ステップ 5:** ボードの電源を入れます
 
 ### RS485 使用方法
 
-- **Step 1:** 使用しているアダプター用のドライバーをインストールする必要がある場合があります。または、Windowsが自動的にドライバーをインストールします。Windowsの検索で**Device Manager**と入力してデバイスマネージャーを開き、接続されたアダプターがCOMデバイスとして表示されているかどうかを確認します。
+- **ステップ 1:** 使用しているアダプター用のドライバーをインストールする必要がある場合があります。または、Windowsが自動的にドライバーをインストールします。Windowsの検索で**Device Manager**と入力してデバイスマネージャーを開き、接続されたアダプターがCOMデバイスとして表示されているかどうかを確認します。
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/75.png"/></div>
 
-- **Step 2:** アダプターが表示されない場合は、使用しているアダプターに応じてドライバーをインストールする必要があります。これらのドライバーは通常、メーカーのウェブサイトで見つけることができます。使用しているアダプターについては、[このページ](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485)を参照してください
+- **ステップ 2:** アダプターが表示されない場合は、使用しているアダプターに応じてドライバーをインストールする必要があります。これらのドライバーは通常、メーカーのウェブサイトで見つけることができます。使用しているアダプターについては、[このページ](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485)を参照してください
 
-- **Step 3:** PCでPuttyを開き、**Terminal**セクションを選択して以下を設定します
+- **ステップ 3:** PCでPuttyを開き、**Terminal**セクションを選択して以下を設定します
 
-  - Local echo: Force on
-  - Local line editing: Force on
+- ローカルエコー: 強制オン
+- ローカル行編集: 強制オン
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
-- **Step 4:** **Session**を選択し、**Connection type**で**Serial**を選択し、**Device Manager**で確認したシリアルポート番号を設定し、Speedはデフォルト（9600）のままにして**Open**をクリックします
+- **ステップ 4:** **Session**を選択し、**Connection type**で**Serial**を選択し、**Device Manager**で確認したシリアルポート番号を設定し、Speedはデフォルト（9600）のままにして**Open**をクリックします
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/76.png"/></div>
 
-- **Step 4:** reTerminal Industrialのターミナルウィンドウで、以下を入力してreComputerからPCに信号を送信します
+- **ステップ 4:** reTerminal Industrialのターミナルウィンドウで、以下を入力してreComputerからPCに信号を送信します
 
 ```sh
 sudo su 
@@ -1447,7 +1447,7 @@ echo out > direction
 echo 0 > value 
 ```
 
-- **Step 3:** Turn ON the LED
+- **ステップ 3:** ON LEDを点灯する
 
 ```sh
 echo 1 > value 
@@ -1483,7 +1483,7 @@ sudo pip3 install jetson-stats
 sudo reboot
 ```
 
-- **Step 3:** Type the following on the terminal
+- **ステップ 3:** ターミナルで以下を入力してください
 
 ```sh
 jtop
@@ -1574,7 +1574,7 @@ reComputer IndustrialのGPIOテーブルにアクセスして、すべてのピ�
 sudo cat /sys/kernel/debug/gpio
 ```
 
-And you will see the output as follows
+そして、以下のような出力が表示されます
 
 ```sh
 gpiochip3: GPIOs 289-304, parent: i2c/1-0021, 1-0021, can sleep:

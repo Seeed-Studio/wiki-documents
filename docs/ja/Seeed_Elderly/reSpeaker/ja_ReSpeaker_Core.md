@@ -272,7 +272,7 @@ mount /dev/mmcblk0p2 /mnt ; tar -C /overlay -cvf - . | tar -C /mnt -xf - ; umoun
  cat /etc/config/fstab;
 ```
 
-- Check if it is mountable to overlay.
+- オーバーレイにマウント可能かどうかを確認する。
 
 ```
  root@mylinkit:/# mount /dev/mmcblk0p2 /overlay/

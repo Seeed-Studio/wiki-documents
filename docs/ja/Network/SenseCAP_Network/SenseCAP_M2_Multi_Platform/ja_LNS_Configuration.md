@@ -155,15 +155,15 @@ application/APPLICATION_ID/device/DEV_EUI/event/EVENT
 
 - **Event types**
 
-|up|Uplink event|
+|up|アップリンクイベント|
 | - | - |
-|status|Margin and battery status|
-|join|Device join event|
-|ack|Confirmed downlink (n)ack|
-|txack|Downlink transmission ack|
-|log|Log (or error) event|
-|location|Location event|
-|integration|Integration event|
+|status|マージンとバッテリーステータス|
+|join|デバイス参加イベント|
+|ack|確認済みダウンリンク(n)ack|
+|txack|ダウンリンク送信ack|
+|log|ログ（またはエラー）イベント|
+|location|位置情報イベント|
+|integration|統合イベント|
 
 :::info Note
 `+` はすべてのメッセージを受信することを意味します

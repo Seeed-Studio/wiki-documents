@@ -3,23 +3,23 @@ description: SeeedStudio BeagleBone® Green Eco入門ガイド
 title: Seeed Studio BeagleBone® Green Eco
 keywords:
 - Beagle_Bone_Green_Eco
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/Seeed-Studio-BeagleBoneR-Green-Eco.webp
 slug: /ja/getting_started_with_seeedstudio_beaglebone_green_eco
 last_update:
-  date: 9/12/2025
+  date: 9/18/2025
   author: Atom Yang
 ---
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/1-102111198-Seeed-Studio-BeagleBoneR-Green-Eco.jpg" /></div>
 
-**Seeed Studio BeagleBone® Green Eco**は、BeagleBoard.org®財団と共同開発された産業グレードのオープンソース・シングルボードコンピュータで、堅牢な**TI AM3358 SoC**を搭載しています。この「Eco」バージョンは高効率を目指して設計されており、先進的なTI電源管理チップ（TPS6521403）を組み込んで最適化されたエネルギー消費を実現しています。16GBの大容量オンボードeMMCストレージとギガビットイーサネットポートを搭載し、高速ネットワーク接続により要求の厳しいアプリケーションに十分対応できます。シームレスなハードウェアプロトタイピングのために、2つのGroveコネクタを統合し、Seedの豊富なGroveセンサーとモジュールのエコシステムへの直接的でハンダ付け不要のアクセスを提供します。
+**Seeed Studio BeagleBone® Green Eco**は、BeagleBoard.org®財団と共同開発された産業グレードのオープンソースシングルボードコンピュータで、堅牢な**TI AM3358 SoC**を搭載しています。この「Eco」バージョンは高効率を目指して設計されており、最適化されたエネルギー消費を確保するために先進的なTI電源管理チップ（TPS6521403）を組み込んでいます。16GBの大容量オンボードeMMCストレージとギガビットイーサネットポートによる高速ネットワーク接続を備え、要求の厳しいアプリケーションに十分対応できます。シームレスなハードウェアプロトタイピングのために、2つのシグネチャGroveコネクタを統合し、Seedの豊富なGroveセンサーとモジュールのエコシステムへの直接的でハンダ付け不要のアクセスを提供します。
 
-10秒以内でLinuxを起動し、USBケーブル1本だけで5分以内に開発を開始できます。
+Linuxを10秒以内で起動し、USBケーブル1本だけで5分以内に開発を開始できます。
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Eco-p-6540.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -27,11 +27,11 @@ last_update:
 
 **特徴1：強力なコア＆リアルタイム処理**
 
-* TI AM3358 1GHz ARM® Cortex-A8プロセッサを統合し、処理を高速化するNEON™ SIMDコプロセッサを搭載しています。また、産業オートメーションやロボティクスに重要な決定論的で低遅延制御のためのデュアルコア・プログラマブル・リアルタイム・ユニット（PRU-ICSS）も含まれています。
+* TI AM3358 1GHz ARM® Cortex-A8プロセッサを統合し、処理を高速化するNEON™ SIMDコプロセッサを搭載しています。また、産業オートメーションやロボティクスに重要な決定論的で低遅延制御のためのデュアルコアプログラマブルリアルタイムユニット（PRU-ICSS）も含まれています。
 
 **特徴2：エコフレンドリーな電源管理**
 
-* PFMモードや動的電圧スケーリングなどの機能を持つ先進的なTI TPS6521403 PMICを使用しています。これにより電力消費が大幅に最適化され、エネルギーに敏感なアプリケーションやバッテリー駆動アプリケーションに理想的です。
+* PFMモードと動的電圧スケーリングなどの機能を備えた先進的なTI TPS6521403 PMICを使用しています。これにより電力消費が大幅に最適化され、エネルギーに敏感なアプリケーションやバッテリー駆動アプリケーションに理想的です。
 
 **特徴3：4倍のストレージ容量＆10倍のネットワーク速度**
 
@@ -39,7 +39,7 @@ last_update:
 
 **特徴4：豊富でモダンな接続性**
 
-* ギガビットイーサネットポートや電源とデータ用のモダンなUSB Type-Cポートを含む、アップグレードされた高速インターフェースを搭載しています。迅速なプロトタイピングのために、2つの内蔵Groveコネクタ（I2C & UART）も含まれており、Seeed Studioの豊富なセンサーとアクチュエータのエコシステムへの簡単でハンダ付け不要の接続を可能にします。
+* ギガビットイーサネットポートと電源・データ用のモダンなUSB Type-Cポートを含む、アップグレードされた高速インターフェースを搭載しています。迅速なプロトタイピングのために、2つの内蔵Groveコネクタ（I2C & UART）Grove - Seeed Studioも含まれており、Seeed Studioの豊富なセンサーとアクチュエータのエコシステムへの簡単でハンダ付け不要の接続を可能にします。
 
 **特徴5：開発準備完了**
 
@@ -53,8 +53,8 @@ last_update:
 |            | アクセラレータ          | NEON浮動小数点ユニット＆3Dグラフィックスアクセラレータ                                                                     | NEON浮動小数点ユニット＆3Dグラフィックスアクセラレータ                                            |
 | メモリ     | RAM                   | 512MB DDR3L, 800MHz                                                                                                    | 512MB DDR3L, 800MHz                                                                           |
 |            | フラッシュストレージ         | **16GB eMMC (Kingston EMMC16G-WW28)**                                                                                  | 4GB 8-bit eMMC                                                                                |
-|            | EEPRPM                | **32KB (FMD FT24C32A-ELRT)**                                                                                           | 4KB EEPROM                                                                                    |
-|            | 外部ストレージ      | microSDカードスロット、最大32GBまでサポート                                                                                 | microSDカードスロット、最大32GBまでサポート                                                        |
+|            | EEPROM                | 4KB                                                                                                                    | 4KB                                                                                    |
+|            | 外部ストレージ      | microSDカードスロット、最大32GBサポート                                                                                 | microSDカードスロット、最大32GBサポート                                                        |
 | 電源      | 電源管理      | **TI TPS6521403 PMIC**                                                                                                     | TI TPS65217C PMIC                                                                             |
 |            | 電圧レギュレータ     | TI TPS62A01DRL (3.3V Buck converter);TI TPS74501PDRV (1.8V Always-On LDO);TI TPS2117DRL (Power Mux)            | TI TL5209DR (3.3V LDO Regulator)                                                              |
 |            | 入力電圧         | 5V DC (USB Type-C経由)                                                                                                 | 5V DC (micro USB経由)                                                                         |
@@ -72,9 +72,9 @@ last_update:
 
 ## アプリケーションアイデア
 
-* Internet of Things
+* モノのインターネット
 * スマートハウス
-* 産業用
+* 産業
 * オートメーション＆プロセス制御
 * ヒューマンマシンインターフェース
 * センサーハブ
@@ -92,47 +92,47 @@ BeagleBone® Green EcoはTexas InstrumentsのAM335x ARM Cortex-A8プロセッサ
 
 **プロセッサ**
 BeagleBone® Green EcoはTexas Instruments AM335x 1GHz ARM® Cortex-A8プロセッサを統合しており、単一のSoC内で計算処理、グラフィックス加速、リアルタイム制御機能を組み合わせています。アーキテクチャはNEON™ SIMDエンジンとVFPv3浮動小数点ユニットを備えたARMv7-Aを実装し、組み込みアプリケーションの電力効率を維持しながら複雑な計算タスクの効率的な実行を可能にします。
-特徴的な機能は、メインARMプロセッサから独立して動作するデュアル32ビットRISCコアで構成されるプログラマブル・リアルタイム・ユニット・サブシステムおよび産業通信サブシステム（PRU-ICSS）です。これらのPRUは、サブマイクロ秒の応答時間での決定論的リアルタイム制御と、特殊な産業通信プロトコルの実装を可能にします。AM335xは、TIのProcessor SDKと開発環境を通じて、Linuxを含む高レベルオペレーティングシステムとリアルタイムオペレーティングシステムをサポートします。
-* AM335x 1GHz ARM® Cortex-A8プロセッサ、15.0mm x 15.0mm、NFBGA (324)* NEON™ SIMD コプロセッサと VFPv3 浮動小数点ユニットによる高速メディア・信号処理
-* OpenGL ES 2.0 をサポートする PowerVR SGX™ グラフィックスアクセラレータ
-* リアルタイム産業通信・制御用デュアル 32 ビット PRU-ICSS
-* EtherCAT、PROFINET、PROFIBUS を含む産業インターフェースのサポート
+特徴的な機能は、メインARMプロセッサから独立して動作するデュアル32ビットRISCコアで構成されるプログラマブルリアルタイムユニットサブシステムおよび産業通信サブシステム（PRU-ICSS）です。これらのPRUは、サブマイクロ秒の応答時間での決定論的リアルタイム制御と、特殊な産業通信プロトコルの実装を可能にします。AM335xは、TIのProcessor SDKと開発環境を通じて、Linuxを含む高レベルオペレーティングシステムとリアルタイムオペレーティングシステムをサポートします。
+* AM335x 1GHz ARM® Cortex-A8プロセッサ、15.0mm x 15.0mm、NFBGA (324)
+* メディアと信号処理を高速化するNEON™ SIMDコプロセッサとVFPv3浮動小数点ユニット* PowerVR SGX™ Graphics Accelerator supporting OpenGL ES 2.0
+* リアルタイム産業通信・制御用デュアル32ビットPRU-ICSS
+* EtherCAT、PROFINET、PROFIBUSを含む産業インターフェースのサポート
 
 **メモリとストレージ**
-BeagleBone® Green Eco には以下が含まれます：
-* 1x 512MB (4Gb) DDR3L RAM (Kingston D2516ECMDXGJDI-U) 16 ビットインターフェース付き
-* 1x 16GB eMMC オンボードフラッシュストレージ (Kingston EMMC16G-WW28) MMC1 8 ビットインターフェース付き
-* 1x 32Kbit EEPROM (FMD FT24C32A-ELRT) I2C0 経由で接続
-* 拡張可能ストレージ用 MicroSD カードスロット MMC0 4 ビットインターフェース付き
+BeagleBone® Green Ecoには以下が含まれます：
+* 1x 512MB (4Gb) DDR3L RAM (Kingston D2516ECMDXGJDI-U) 16ビットインターフェース付き
+* 1x 16GB eMMCオンボードフラッシュストレージ (Kingston EMMC16G-WW28) MMC1 8ビットインターフェース付き
+* 1x 32Kbit EEPROM (FMD FT24C32A-ELRT) I2C0経由で接続
+* 拡張可能ストレージ用MMC0 4ビットインターフェース付きMicroSDカードスロット
 
 **インターフェースと周辺機器**
-BeagleBone® Green Eco は以下をサポートします：
+BeagleBone® Green Ecoは以下をサポートします：
 * ギガビットイーサネット接続
-* 1x USB 2.0 Type-C ポート（電源と通信用）
-* 1x USB 2.0 ホストインターフェース、Type-A
+* 1x USB 2.0 Type-Cポート（電源と通信用）
+* 1x USB 2.0ホストインターフェース、Type-A
 
-**アプリケーション固有ケープをサポートする拡張コネクタ/ヘッダー**
-* 2x 46 ピンヘッダー
-* 1x 6 ピン UART0 ヘッダー
-* 2 つの Grove コネクタ（1 つは I2C、1 つは UART）Grove エコシステムのセンサーとアクチュエータへの簡単接続用
+**アプリケーション固有のケープをサポートする拡張コネクタ/ヘッダー**
+* 2x 46ピンヘッダー
+* 1x 6ピンUART0ヘッダー
+* 2つのGroveコネクタ（1つはI2C、1つはUART）でGroveエコシステムのセンサーとアクチュエーターに簡単接続
 
 **ヘッダーピン定義**
 
-各デジタル I/O ピンには GPIO を含む 8 つの異なるモードを選択できます。
+各デジタルI/Oピンには、GPIOを含む8つの異なるモードを選択できます。
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/1.png" /></div>
 
-**65 個の可能なデジタル I/O**
+**65個の可能なデジタルI/O**
 
 :::note
-    GPIO モードでは、各デジタル I/O は割り込みを生成できます。
+    GPIOモードでは、各デジタルI/Oは割り込みを生成できます。
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/2.png" /></div>
 
-**PWM とタイマー**
+**PWMとタイマー**
 
 :::note
-最大 8 つのデジタル I/O ピンをパルス幅変調器（PWM）で設定して、モーター制御や疑似アナログ電圧レベル生成用の信号を、追加の CPU サイクルを消費することなく生成できます。
+最大8つのデジタルI/Oピンをパルス幅変調器（PWM）で設定して、モーター制御用の信号を生成したり、疑似アナログ電圧レベルを作成したりできます。追加のCPUサイクルを消費しません。
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/3.png" /></div>
@@ -140,7 +140,7 @@ BeagleBone® Green Eco は以下をサポートします：
 **アナログ入力**
 
 :::note
-アナログ入力ピンには 1.8V を超える電圧を入力しないでください。これは 8 チャンネルの単一 12 ビットアナログ-デジタルコンバータで、そのうち 7 チャンネルがヘッダーで利用可能です。
+アナログ入力ピンには1.8V以上を入力しないでください。これは8チャンネルの単一12ビットアナログ-デジタルコンバーターで、そのうち7チャンネルがヘッダーで利用可能です。
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/4.png" /></div>
@@ -149,7 +149,7 @@ BeagleBone® Green Eco は以下をサポートします：
 **UART**
 
 :::note
-UART0 ピンにアクセスしてデバッグケーブルを接続するための専用ヘッダーがあります。5 つの追加シリアルポートが拡張ヘッダーに接続されていますが、そのうち 1 つは単方向のみがヘッダーに接続されています。
+UART0ピンにアクセスしてデバッグケーブルを接続するための専用ヘッダーがあります。5つの追加シリアルポートが拡張ヘッダーに接続されていますが、そのうち1つは単方向のみがヘッダーに接続されています。
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/5.png" /></div>
@@ -157,7 +157,7 @@ UART0 ピンにアクセスしてデバッグケーブルを接続するため�
 **I2C**
 
 :::note
-最初の I2C バスはケープアドオンボード上の EEPROM 読み取りに使用されており、その機能を妨げることなく他のデジタル I/O 操作には使用できませんが、利用可能なアドレスで他の I2C デバイスを追加することは可能です。2 番目の I2C バスは設定して使用できます。
+最初のI2Cバスはケープアドオンボード上のEEPROMを読み取るために使用されており、その機能を妨げることなく他のデジタルI/O操作には使用できませんが、利用可能なアドレスで他のI2Cデバイスを追加することは可能です。2番目のI2Cバスは設定して使用できます。
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/6.png" /></div>
@@ -165,7 +165,7 @@ UART0 ピンにアクセスしてデバッグケーブルを接続するため�
 **SPI**
 
 :::note
-    高速でデータを出力する場合は、SPI ポートの 1 つの使用を検討してください。
+    データを高速でシフトアウトするには、SPIポートの1つを使用することを検討してください。
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/7.png" /></div>
@@ -174,63 +174,63 @@ UART0 ピンにアクセスしてデバッグケーブルを接続するため�
 ## 入門ガイド
 
 :::note
-この章は Windows 10 環境で書かれています。他のオペレーティングシステムでも手順は同様です。
+この章はWin10環境で書かれています。他のオペレーティングシステムでも手順は同様です。
 :::
 
-**ステップ1. Seeed Studio BeagleBone® Green を USB で接続**
+**ステップ1. Seeed Studio BeagleBone® GreenをUSB経由で接続**
 
-付属のマイクロ USB ケーブルを使用して、Seeed Studio BeagleBone® Green をコンピュータに接続します。これによりボードに電源が供給され、開発インターフェースが提供されます。Seeed Studio BeagleBone® Green はオンボードの 2GB または 4GB eMMC から Linux を起動します。
+付属のmicro USBケーブルを使用して、Seeed Studio BeagleBone® Greenをコンピューターに接続します。これによりボードに電源が供給され、開発インターフェースが提供されます。Seeed Studio BeagleBone® Greenはオンボードの2GBまたは4GB eMMCからLinuxを起動します。
 
-Seeed Studio BeagleBone® Green はフラッシュドライブとして動作し、ドキュメントとドライバーのローカルコピーを提供します。このインターフェースは新しいイメージで microSD カードを再設定するために使用することはできませんが、uEnv.txt ファイルを使用してブートパラメータを更新するために使用できます。
+Seeed Studio BeagleBone® Greenはフラッシュドライブとして動作し、ドキュメントとドライバーのローカルコピーを提供します。このインターフェースは新しいイメージでmicroSDカードを再設定するために使用することはできませんが、uEnv.txtファイルを使用してブートパラメーターを更新するために使用できます。
 
-PWR LED が点灯し続けているのが確認できます。10 秒以内に、他の LED がデフォルト設定で点滅しているのが確認できるはずです。
+PWR LEDが点灯し続けているのが確認できます。10秒以内に、他のLEDがデフォルト設定で点滅しているのが確認できるはずです。
 
-* D2 は起動時にハートビートパターンで点滅するよう設定されています
-* D3 は起動時に microSD カードアクセス中に点灯するよう設定されています
-* D4 は起動時に CPU アクティビティ中に点灯するよう設定されています
-* D5 は起動時に eMMC アクセス中に点灯するよう設定されています
+* D2は起動時にハートビートパターンで点滅するように設定されています
+* D3は起動時にmicroSDカードアクセス中に点灯するように設定されています
+* D4は起動時にCPUアクティビティ中に点灯するように設定されています
+* D5は起動時にeMMCアクセス中に点灯するように設定されています
 
 **ステップ2. ドライバーのインストール**
 
-お使いのオペレーティングシステム用のドライバーをインストールして、Beagle への USB 経由ネットワークアクセスを取得します。追加のドライバーによりボードへのシリアルアクセスが提供されます。
+お使いのオペレーティングシステム用のドライバーをインストールして、BeagleへのUSB経由ネットワークアクセスを取得します。追加のドライバーによりボードへのシリアルアクセスが可能になります。
 
-|オペレーティングシステム | USB ドライバー | コメント |
+|オペレーティングシステム | USBドライバー | コメント |
 |---------------------|---------|------------|
-|Windows (64-bit) | [64-bit installer](https://beagleboard.org/static/Drivers/Windows/BONE_D64.exe)  | |
-|Windows (32-bit) | [32-bit installer](https://beagleboard.org/static/Drivers/Windows/BONE_DRV.exe)||
-|Mac OS X|[Network](https://beagleboard.org/static/Drivers/MacOSX/RNDIS/HoRNDIS.pkg) [Serial](https://beagleboard.org/static/Drivers/MacOSX/FTDI/EnergiaFTDIDrivers2.2.18.pkg) | 両方のドライバーセットをインストールしてください。|
-|Linux|[mkudevrule.sh](https://beagleboard.org/static/Drivers/Linux/FTDI/mkudevrule.sh)|ドライバーのインストールは必須ではありませんが、いくつかの udev ルールが役立つ場合があります。|
+|Windows (64-bit) | [64-bitインストーラー](https://beagleboard.org/static/Drivers/Windows/BONE_D64.exe)  | |
+|Windows (32-bit) | [32-bitインストーラー](https://beagleboard.org/static/Drivers/Windows/BONE_DRV.exe)||
+|Mac OS X|[ネットワーク](https://beagleboard.org/static/Drivers/MacOSX/RNDIS/HoRNDIS.pkg) [シリアル](https://beagleboard.org/static/Drivers/MacOSX/FTDI/EnergiaFTDIDrivers2.2.18.pkg) | 両方のドライバーセットをインストールしてください。|
+|Linux|[mkudevrule.sh](https://beagleboard.org/static/Drivers/Linux/FTDI/mkudevrule.sh)|ドライバーのインストールは必須ではありませんが、いくつかのudevルールが役立つ場合があります。|
 
 :::note
-    Windows システムの場合、以下にご注意ください：
+    Windowsシステムの場合、以下にご注意ください：
 
-* Windows ドライバー認証警告が 2〜3 回ポップアップする場合があります。「無視」、「インストール」、または「実行」をクリックしてください
-* 32 ビットまたは 64 ビット Windows を実行しているかを確認するには、[こちら](https://support.microsoft.com/kb/827218)を参照してください。
-* 最新のサービスリリースがないシステムでは、エラー (0xc000007b) が発生する場合があります。その場合は、[インストール](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523)してから再試行してください：
-* Windows の再起動が必要な場合があります。
-* これらのドライバーは Windows 10 まで動作することがテストされています
+* Windowsドライバー認証警告が2〜3回ポップアップする場合があります。「無視」、「インストール」、または「実行」をクリックしてください
+* 32ビットまたは64ビットWindowsを実行しているかを確認するには、[こちら](https://support.microsoft.com/kb/827218)を参照してください。
+* 最新のサービスリリースがないシステムでは、エラー（0xc000007b）が発生する場合があります。その場合は、[インストール](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523)してから再試行してください：
+* Windowsの再起動が必要な場合があります。
+* これらのドライバーはWindows 10まで動作することがテストされています
 :::
 
 :::note
-追加の FTDI USB to シリアル/JTAG 情報とドライバーは [https://www.ftdichip.com/Drivers/VCP.htm](https://www.ftdichip.com/Drivers/VCP.htm) から入手できます。
+追加のFTDI USB to serial/JTAG情報とドライバーは[https://www.ftdichip.com/Drivers/VCP.htm](https://www.ftdichip.com/Drivers/VCP.htm)から入手できます。
 :::
 
 :::note
-追加の USB to 仮想イーサネット情報とドライバーは [https://www.linux-usb.org/gadget/](https://www.linux-usb.org/gadget/) と [https://joshuawise.com/horndis](https://joshuawise.com/horndis) から入手できます。
+追加のUSB to virtual Ethernet情報とドライバーは[https://www.linux-usb.org/gadget/](https://www.linux-usb.org/gadget/)と[https://joshuawise.com/horndis](https://joshuawise.com/horndis)から入手できます。
 :::
 
-**ステップ3. Beagle にブラウザでアクセス**
+**ステップ3. Beagleにブラウザでアクセス**
 
-Chrome または Firefox を使用して（Internet Explorer は動作しません）、ボード上で実行されているウェブサーバーにアクセスします。ボードの機能を示すプレゼンテーションが読み込まれます。キーボードの矢印キーを使用してプレゼンテーションをナビゲートします。
+ChromeまたはFirefox（Internet Explorerは動作しません）を使用して、ボード上で実行されているWebサーバーにアクセスします。ボードの機能を示すプレゼンテーションが読み込まれます。キーボードの矢印キーを使用してプレゼンテーションをナビゲートします。
 
-[http://192.168.7.2](http://192.168.7.2) をクリックして Seeed Studio BeagleBone® Green を起動します。
-古いソフトウェアイメージでは、ネットワークを開始するために BeagleBone® ドライブを取り出す必要があります。最新のソフトウェアイメージでは、この手順は不要です。
+[http://192.168.7.2](http://192.168.7.2)をクリックして、Seeed Studio BeagleBone® Greenを起動します。
+古いソフトウェアイメージでは、ネットワークを開始するためにBeagleBone®ドライブを取り出す必要があります。最新のソフトウェアイメージでは、この手順は不要です。
 
 [![Click to view larger image](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)
 
 **ステップ4. Cloud9 IDE**
 
-ボード上にあるプログラムの編集を開始するには、Cloud9 IDE をクリックして使用できます
+ボード上にあるプログラムの編集を開始するには、Cloud9 IDEを使用できます。クリックしてください
 
 [![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/cloud9.png)](http://192.168.7.2:3000/ide.html)
 
@@ -245,67 +245,67 @@ Chrome または Firefox を使用して（Internet Explorer は動作しませ�
 [![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/down_latest_image.png)](https://beagleboard.org/latest-images)
 
 :::note
-サイズの関係で、このダウンロードには約 30 分以上かかる場合があります。
+サイズの関係で、このダウンロードには30分以上かかる場合があります。
 :::
 
-ダウンロードするファイルは **.img.xz** 拡張子を持ちます。これは SD カードの圧縮されたセクター単位のイメージです。
+ダウンロードするファイルは**.img.xz**拡張子を持ちます。これはSDカードのセクター単位の圧縮イメージです。
 
 **ステップ2. 圧縮ユーティリティをインストールしてイメージを展開**
 
-[7-zip](http://www.7-zip.org/download.html) をダウンロードしてインストールします。
+[7-zip](http://www.7-zip.org/download.html)をダウンロードしてインストールします。
 
 :::note
     お使いのシステムに適したバージョンを選択してください。
 :::
 
-7-zip を使用して SD カード **.img ファイル** を展開します
+7-zipを使用してSDカードの**.imgファイル**を展開します
 
-**ステップ3. SD カードプログラミングユーティリティをインストール**
+**ステップ3. SDカードプログラミングユーティリティをインストール**
 
-[Image Writer for Windows](https://sourceforge.net/projects/win32diskimager/files/latest/download) をダウンロードしてインストールします。必ずバイナリ配布版をダウンロードしてください。
+[Image Writer for Windows](https://sourceforge.net/projects/win32diskimager/files/latest/download)をダウンロードしてインストールします。必ずバイナリ配布版をダウンロードしてください。
 
-**ステップ4. イメージを SD カードに書き込み**
+**ステップ4. イメージをSDカードに書き込み**
 
-まず、microSD カードをコンピュータに接続するために SD アダプターが必要です。次に、Image Write for Windows ソフトウェアを使用して、展開されたイメージを SD カードに書き込みます。
+まず、microSDカードをコンピューターに接続するためのSDアダプターが必要です。次に、Image Write for Windowsソフトウェアを使用して、展開したイメージをSDカードに書き込みます。
 
 ![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/win32_disk_image.png)
 
-**Write** ボタンをクリックすると、プロセスが開始されます。
+**Write**ボタンをクリックすると、プロセスが開始されます。
 
 ![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/win32_disk_image_process.png)
 
 :::note
 
-* デバイスの損傷に関する警告が表示される場合があります。書き込み先が SD カードを指している限り、これを受け入れても問題ありません。
-* この時点では BeagleBone® をコンピュータに接続しないでください。
-* このプロセスには最大 10 分かかる場合があります。
+* デバイスの損傷に関する警告が表示される場合があります。書き込み先がSDカードを指している限り、これを受け入れても問題ありません。
+* この時点でBeagleBone®をコンピューターに接続しないでください。
+* このプロセスには最大10分かかる場合があります。
 :::
 
-**ステップ5. SD カードからボードを起動**
+**ステップ5. SDカードからボードを起動**
 
-SD カードを（まず電源を切った）ボードに挿入します。その後、ボードは SD カードから起動します。
+SDカードを（まず電源を切った）ボードに挿入します。その後、ボードはSDカードから起動します。
 
 :::note
-オンボード eMMC にイメージを書き込む必要がない場合は、この章の残りを読む必要はありません。そうでなければ続行してください。
+オンボードeMMCにイメージを書き込む必要がない場合は、この章の残りを読む必要はありません。そうでなければ続行してください。
 :::
 
-オンボード eMMC にイメージを書き込みたい場合は、ボードを起動してファイルを変更する必要があります。
+オンボードeMMCにイメージを書き込みたい場合は、ボードを起動してファイルを変更する必要があります。
 
-**/boot/uEnv.txt** で：
+**/boot/uEnv.txt**で：
 
     ##enable BeagleBone® Black: eMMC Flasher:
     #cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3.sh
-これを以下に変更：
+以下に変更：
 
     ##enable BeagleBone® Black: eMMC Flasher:
     cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3.sh
 
-その後、4 つのユーザー LED が以下のように点灯します
+その後、4つのユーザーLEDが以下のように点灯します
 
 ![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/flashing.gif)
 
 :::note
-上記のトレーシングライトが見つからない場合は、RESET ボタンを押してボードをリセットしてください。
+上記のトレーシングライトが見つからない場合は、RESETボタンを押してボードをリセットしてください。
 :::
 フラッシュが完了すると、4つのUSRx LEDがすべて**消灯**します。最新のDebianフラッシャーイメージは、完了時に自動的にボードの電源を切ります。これには最大**10分**かかる場合があります。ボードの電源を切り、SDカードを取り外してから再度電源を入れて完了です。
 
@@ -330,7 +330,7 @@ Groveは、モジュラー式の標準化されたコネクタープロトタイ
 |104030006 |Grove - チェーン可能RGB LED                     |I2C| [リンク](https://www.seeedstudio.com/Grove-Chainable-RGB-LED-p-850.html)|
 |101020030 |Grove - デジタル光センサー                 |I2C| [リンク](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
 |103020024 |Grove - 指クリップ心拍センサー         |I2C| [リンク](https://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-p-2425.html)|
-|101020082 |Grove - シェル付き指クリップ心拍センサー |I2C|[リンク](https://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-with-shell-p-2420.html)|
+|101020082 |Grove - 指クリップ心拍センサー（シェル付き） |I2C|[リンク](https://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor-with-shell-p-2420.html)|
 |113020003 |Grove - GPS                         |UART| [リンク](https://www.seeedstudio.com/Grove-GPS-p-959.html)|
 |104030007 |Grove - 緑色LED |I/O| [リンク](https://www.seeedstudio.com/Grove-Green-LED-p-1144.html)|
 |103020013 |Grove - I2C ADC |I2C| [リンク](https://wiki.seeedstudio.com/ja/Grove-I2C_ADC/)|

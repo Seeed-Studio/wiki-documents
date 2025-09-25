@@ -124,9 +124,9 @@ We strongly recommend using the Jetson's native UART for a robust connection tha
 ---
 **Footnotes:**
 
-- **`*` (UART & I2C B Port):** A spare port for connecting sensors supporting serial communication or I2C e.g. a second GPS module can be connected here.
-- **`*` (SBUS Signal):** Connect SBUS or DSM/Spektrum receiver's signal wire here.
-- **`**` **(RSSI Signal):** Sends the RC signal strength info to autopilot.
+- **(UART & I2C B Port):** A spare port for connecting sensors supporting serial communication or I2C e.g. a second GPS module can be connected here.
+- **(SBUS Signal):** Connect SBUS or DSM/Spektrum receiver's signal wire here.
+- **(RSSI Signal):** Sends the RC signal strength info to autopilot.
 
 </details>
 
@@ -136,9 +136,9 @@ To avoid using `sudo` for every serial command, you must add your user to the `d
 
 ```bash
 sudo usermod -a -G dialout $USER
-````
+```
 
-**You must reboot the Jetson for this change to take effect\!**
+**You must reboot the Jetson for this change to take effect!**
 
 :::
 
@@ -278,7 +278,7 @@ Connect to QGroundControl and set the following parameters:
   <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/12.png" alt="PX4_dev_02" />
 </div>
 
------
+---
 
 ## Method 2: MAVSDK (High-Level API)
 
@@ -327,7 +327,7 @@ if __name__ == "__main__":
 
 Execute the script from your terminal: `python3 takeoff_and_land.py`.
 
------
+---
 
 ## Method 3: MAVROS (The Powerful ROS Bridge)
 
@@ -344,7 +344,7 @@ sudo apt update
 sudo apt install ros-humble-mavros ros-humble-mavros-msgs
 ```
 
-:::info[Prevent a Common Crash\!]
+:::info[Prevent a Common Crash!]
 MAVROS requires a geographic dataset for coordinate transformations. A missing dataset is a common cause of crashes on startup. This script downloads and installs it.
 
 ```bash title="Terminal on Jetson"
@@ -383,7 +383,7 @@ sudo bash /opt/ros/humble/lib/mavros/install_geographiclib_datasets.sh
   <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/14.png" alt="PX4_dev_02" />
 </div>
 
------
+---
 
 ## Troubleshooting Common Issues
 
@@ -398,7 +398,7 @@ If you run into trouble, check these common issues first.
 
 You now have three powerful methods for enabling communication between a Jetson Orin and a PX4 flight controller. The best tool depends on your project's architecture, performance needs, and development speed. By understanding the trade-offs, you can build a robust foundation for any autonomous drone application.
 
-Happy flying\! 🚁
+Happy flying! 🚁
 
 ## Tech Support & Product Discussion
 

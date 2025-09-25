@@ -92,7 +92,7 @@ IP 摄像头提供高质量的视频源，这对于有效的对象检测至关�
 sudo apt-get update && sudo apt-get upgrade
 ```
 
-**Install Additional Dependencies: Install common dependencies required for building and running software on Jetson:**
+**安装额外依赖项：安装在 Jetson 上构建和运行软件所需的常用依赖项：**
 
 ```
 sudo apt-get install -y \
@@ -332,7 +332,7 @@ services:
 cd ~/frigate
 ```
 
-2. Start Frigate with Docker Compose: Run the following command to start Frigate:
+2. 使用 Docker Compose 启动 Frigate：运行以下命令来启动 Frigate：
 
 ```
 docker-compose up -d

@@ -640,7 +640,16 @@ def rewrite_doc_refs(array_text:str, folder_prefix:str, file_prefix:str)->str:
         return f"{prefix}{quote}{transform_doc_id(val, folder_prefix, file_prefix)}{quote}"
     out = pat_link_doc.sub(_slink, out)
 
-    # 3) items：逐字符扫描，任意嵌套层级
+    # 2b) 任意数组中的顶层“裸字符串”元素（包括最外层根数组）
+    # 仅当字符串作为数组元素出现：前面是 '[' 或 ','；后面是 ',' 或 ']'
+    # 捕获并还原数组元素前的空白（含换行与缩进）
+    pat_any_arr_str = re.compile(r'(?:(?<=\[)|(?<=,))(\s*)([\'"])([^\'"]+)\2(?=\s*(?:,|\]))')
+    def _sany(m):
+        ws, quote, val = m.group(1), m.group(2), m.group(3)
+        return f"{ws}{quote}{transform_doc_id(val, folder_prefix, file_prefix)}{quote}"
+    out = pat_any_arr_str.sub(_sany, out)
+
+    # 3) items：逐字符扫描，任意嵌套层级（含递归 + 纯字符串美化换行）
     prev = out
     for _ in range(10):
         curr = _rewrite_and_format_items_arrays(prev, folder_prefix, file_prefix)

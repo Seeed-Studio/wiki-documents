@@ -6,7 +6,7 @@ keywords:
 - Huggingface
 - Arm
 - Robotics 
-image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
+image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello.webp
 slug: /lerobot_starai_arm
 last_update:
   date: 9/16/2025
@@ -739,7 +739,9 @@ lerobot-train \
 
 1. `policy.type` supports input `diffusion,pi0,pi0fast`
 1. We provide the dataset as a parameter: `dataset.repo_id=starai/record-test`.
+
 2. We will load the configuration from [`configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/src/lerobot/policies/act/configuration_act.py). Importantly, this policy will automatically adapt to the robot's motor states, motor actions, and the number of cameras, and will be saved in your dataset.
+
 3. We provide `wandb.enable=true` to use [Weights and Biases](https://docs.wandb.ai/quickstart) for visualizing training charts. This is optional, but if you use it, make sure you have logged in by running `wandb login`.
 
 Resume training from a specific checkpoint.

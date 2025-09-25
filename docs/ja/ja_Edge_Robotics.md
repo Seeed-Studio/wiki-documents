@@ -119,24 +119,7 @@ last_update:
       <span className="text">DMグリッパー</span>
       <span className="tag recommended">New</span>
     </a>
-    <a href="/ja/starai_arm_ros_moveit/" className="nav-item">
-      <span className="text">StaraiロボットアームMoveit2</span>
-      <span className="tag recommended">New</span>
-    </a>
-    <a href="/ja/control_robotic_arm_via_gr00t" className="nav-item">
-  <span className="text">Star AI with NVIDIA's GR00T</span>
-  </a>
 </div>
-
-## 🖐️ ハンド
-
-<div className="card-container">
-    <a href="/ja/hand_amazinghand/" className="nav-item">
-      <span className="text">AmazingHand</span>
-      <span className="tag recommended">New</span>
-    </a>
-</div>
-
 
 </div>
 </div>
@@ -361,11 +344,12 @@ html[data-theme='dark'] .nav-item {
 }
 
 /* 文字様式 */
-.nav-item .text {  font-size: 0.95rem;
+.nav-item .text {
+  font-size: 0.95rem;
   white-space: nowrap;
 }
 
-/* ホバー効果 */
+/* 悬浮特効 */
 .nav-item .hover-effect {
   position: absolute;
   bottom: 0;
@@ -378,16 +362,15 @@ html[data-theme='dark'] .nav-item {
   z-index: -1;
 }
 
-/* ホバーアニメーション */
+/* 悬浮動画 */
 .nav-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   color: white;
 }
 
-/* Darkモード - ホバーアニメーション */
-html[data-theme='dark'] .nav-item:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+/* Dark模式 - 悬浮動画 */
+html[data-theme='dark'] .nav-item:hover {  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
   color: white;
 }
 
@@ -463,13 +446,13 @@ html[data-theme='dark'] .category-card {
 .sensors::before { background: linear-gradient(to bottom, #ff6b6b, #ff8e8e); }
 .software::before { background: linear-gradient(to bottom, #f5a623, #f5c623); }
 
-/* ホバー効果 */
+/* ホバー特効 */
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0,0,0,0.1);
 }
 
-/* Darkモード - ホバー効果 */
+/* Darkモード - ホバー特効 */
 html[data-theme='dark'] .category-card:hover {
   box-shadow: 0 12px 20px rgba(0,0,0,0.6);
 }
@@ -485,7 +468,7 @@ html[data-theme='dark'] .category-card:hover {
   z-index: -1;
 }
 
-/* Darkモード - ホバー光効果 */
+/* Darkモード - ホバー光効 */
 html[data-theme='dark'] .category-card:hover::after {
   background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
 }
@@ -591,7 +574,7 @@ html[data-theme='dark'] .category-card:active {
 
   .category-card {
     width: 100%;
-    margin-top: 0.5rem; /* カードをタイトルに密着 */
+    margin-top: 0.5rem; /* カードがタイトルに密着 */
   }
 }
 

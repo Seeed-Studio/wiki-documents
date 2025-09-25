@@ -10,8 +10,7 @@ last_update:
   author: shuxu hu
 ---
 
-
-##   Overview  
+## Overview  
 
 This board based on the latest SIMCOM SIM808 GSM/GPS module, it offers cellular GSM and GPRS data along with GPS technology for satellite navigation.
 
@@ -21,77 +20,77 @@ The GPS receiver is incredibly sensitive with 22 tracking and 66 acquisition cha
 
 The board uses the 2G (not 3G or LTE) GSM networks.
 
-##   Features
+## Features
 
-*   Quad-band 850/900/1800/1900MHz
+- Quad-band 850/900/1800/1900MHz
 
-*   GPRS multi-slot class12 connectivity: max. 85.6kbps(down-load/up-load)
+- GPRS multi-slot class12 connectivity: max. 85.6kbps(down-load/up-load)
 
-*   GPRS mobile station class B
+- GPRS mobile station class B
 
-*   Controlled by AT Command (3GPP TS 27.007, 27.005 and SIMCOM enhanced AT Commands)
+- Controlled by AT Command (3GPP TS 27.007, 27.005 and SIMCOM enhanced AT Commands)
 
-*   Supports charging control for Li-Ion battery
+- Supports charging control for Li-Ion battery
 
-*   Supports Real Time Clock
+- Supports Real Time Clock
 
-*   Supply voltage range 3.4V ~ 4.4V
+- Supply voltage range 3.4V ~ 4.4V
 
-*   Integrated GPS/CNSS and supports A-GPS
+- Integrated GPS/CNSS and supports A-GPS
 
-*   Supports 3.0V to 5.0V logic level
+- Supports 3.0V to 5.0V logic level
 
-*   Low power consumption, 1mA in sleep mode
+- Low power consumption, 1mA in sleep mode
 
-*   Supports GPS NMEA protocol
+- Supports GPS NMEA protocol
 
-*   Compact size 27mm x 46mm x 10mm
+- Compact size 27mm x 46mm x 10mm
 
-*   Standard SIM Card
+- Standard SIM Card
 
-##   GPS Specifications   
+## GPS Specifications
 
-*   Receiver channels: 22 tracking / 66 acquisition
+- Receiver channels: 22 tracking / 66 acquisition
 
-*   Coarse/Acquisition code: GPS L1
+- Coarse/Acquisition code: GPS L1
 
-*   Tracking sensitivity: -165dBm
+- Tracking sensitivity: -165dBm
 
-*   Cold start time: 30s (typ.)
+- Cold start time: 30s (typ.)
 
-*   Hot start time: 1s (typ.)
+- Hot start time: 1s (typ.)
 
-*   Warm start time: 28s (typ.)
+- Warm start time: 28s (typ.)
 
-*   Horizontal position accuracy: &lt; 2.5m CEP
+- Horizontal position accuracy: &lt; 2.5m CEP
 
-*   Power consumption - Acquisition: 42mA
+- Power consumption - Acquisition: 42mA
 
-*   Power consumption - Continuous tracking: 24mA
+- Power consumption - Continuous tracking: 24mA
 
-*   Update rate: 5Hz
+- Update rate: 5Hz
 
-##   Functional Block  
+## Functional Block  
 
 ![](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/img/Lonet_pcb_top.jpg)
 
-*   GPS Antenna: this is an uFL GPS antenna connector. You can connect either passive or active GPS antenna to it. Active GPS antenna runs at 2.8V voltage.
+- GPS Antenna: this is an uFL GPS antenna connector. You can connect either passive or active GPS antenna to it. Active GPS antenna runs at 2.8V voltage.
 
-*   MicroUSB: the charging interface for Li-Ion battery, of input voltage range from 5V to 7V.
+- MicroUSB: the charging interface for Li-Ion battery, of input voltage range from 5V to 7V.
 
-*   Power Button: this is the hard power switch for the module. When the module is power up, you can turn on or turn off the module by pressing the button for 2s.
+- Power Button: this is the hard power switch for the module. When the module is power up, you can turn on or turn off the module by pressing the button for 2s.
 
-*   Net Indicator: Red LED, it will tell the what status is about the module linking to network. It can be turned off by LEDs_EN jumper pad.
+- Net Indicator: Red LED, it will tell the what status is about the module linking to network. It can be turned off by LEDs_EN jumper pad.
 
-*   Status Indicator: Green LED, it will tell whether the module is on, light when the module is running. It can be turned off by LEDs_EN jumper pad.
+- Status Indicator: Green LED, it will tell whether the module is on, light when the module is running. It can be turned off by LEDs_EN jumper pad.
 
-*   Li-ion Battery: this is power supply for the module, input voltage is from 3.4V to 4.4V. It uses the JST-2.0mm connector, that make it convenient to connect to 3.7V Li-Po Battery.
+- Li-ion Battery: this is power supply for the module, input voltage is from 3.4V to 4.4V. It uses the JST-2.0mm connector, that make it convenient to connect to 3.7V Li-Po Battery.
 
-*   GSM Antenna: this is an uFL GSM antenna connector, just connect it to a GSM antenna for receiving GSM signal.
+- GSM Antenna: this is an uFL GSM antenna connector, just connect it to a GSM antenna for receiving GSM signal.
 
-*   SIM - Card Holder: SIM card holder for standard SIM card
+- SIM - Card Holder: SIM card holder for standard SIM card
 
-###   Pin Definitions
+### Pin Definitions
 
 <table>
 <tr>
@@ -156,7 +155,7 @@ The board uses the 2G (not 3G or LTE) GSM networks.
 </tr>
 </table>
 
-###   Indicator LEDs
+### Indicator LEDs
 
 <table>
 <tr>
@@ -196,21 +195,21 @@ The board uses the 2G (not 3G or LTE) GSM networks.
 </tr>
 </table>
 
-##   Usage  
+## Usage  
 
-###   Related Product
+### Related Product
 
 The module comes with a mini GPS and GSM antenna, but not includes Li-Po battery. In addition, to use this module, you still need a unlock SIM-Card that supports GPRS service.
 
-*   3.7 V Li-ion Battery
-*   SIM-Card
-*   USB to UART Tool
+- 3.7 V Li-ion Battery
+- SIM-Card
+- USB to UART Tool
 
-###   Reference Circuit
+### Reference Circuit
 
 ![](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/img/Rerfer_Circuit_SIM808.png)
 
-###   Getting Started with AT Command
+### Getting Started with AT Command
 
 The module is controlled by AT command via serial port, here we use Arduino as USB to serial tool. Upload the following code to Arduino and open the serial monitor. If you use other USB to serial tools, you can use [AT Command Tester](https://seeeddoc.github.io/AT_Command_Tester_Application/) or [SSCOM32](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/res/Sscom32E.zip) to test AT commands.
 
@@ -250,7 +249,7 @@ void loop() // run over and over
 }
 ```
 
-####   Set Baud and Enable Charging Function
+#### Set Baud and Enable Charging Function
 
 It is recommended to execute this process when first time to use the module. In the Serial Monitor columns of following tables, input of AT commands are in back, module returns values are in orange.
 
@@ -280,7 +279,7 @@ It is recommended to execute this process when first time to use the module. In 
 <td>Power down the module.</td>
 </tr>
 <tr>
-<td> 
+<td>
 <span style={{color: 'rgb(242,133,0)'}}>RDY
 +CFUN: 1
 GPS Ready
@@ -300,7 +299,7 @@ SMS Ready</span>
 </tr>
 </table>
 
-####   Get location with GPS
+#### Get location with GPS
 
 <table cellPadding="0">
 <tr>
@@ -350,7 +349,7 @@ AT+CGPSRST=0
 </tr>
 </table>
 
-##   Resource  
+## Resource  
 
 - **[PDF]**   [LoNet_DesignSchematic](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/res/LoNet_DesignSchematic.pdf)
 
@@ -364,7 +363,7 @@ AT+CGPSRST=0
 
 - **[Library]**   [Adafruit_FONA_Library](https://github.com/adafruit/Adafruit_FONA_Library/)
 
-##   Related Projects
+## Related Projects
 
 It's a pity that we don't have any demo about LoNet-GSM/GPRS/GPS Breakout in the [Recipe](https://www.seeedstudio.com/recipe/) yet.
 
@@ -372,21 +371,21 @@ Post your awesome project about LoNet-GSM/GPRS/GPS Breakout to <span style={{col
 
 Here we introduce some projects about [GPRS Shield](https://www.seeedstudio.com/depot/GPRS-Shield-V30-p-2333.html) as a reference.
 
-###  What is GPRS shield
+### What is GPRS shield
 
 ![](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/img/113030009_1.jpg)
 
 Features:
 
-*   Compatible with standard Arduino and Arduino Mega
+- Compatible with standard Arduino and Arduino Mega
 
-*   Quad band support: 850/900/1800/1900MHz
+- Quad band support: 850/900/1800/1900MHz
 
-*   Full control via AT commands set: Standard - GSM 07.07 &amp; 07.05 and Enhanced - SIMCOM AT Commands
+- Full control via AT commands set: Standard - GSM 07.07 &amp; 07.05 and Enhanced - SIMCOM AT Commands
 
-*   Support TCP/UDP protocols
+- Support TCP/UDP protocols
 
-###   SMS Remote Control
+### SMS Remote Control
 
 ![](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/img/54c720959dae7.JPG)
 
@@ -394,17 +393,17 @@ This project describes how to turn your hot water heater on and off via SMS and 
 
 It is reliable, secure, easy and flexible because of the reasons below:
 
-*   Commands are always responded to and lost messages are re-requested
+- Commands are always responded to and lost messages are re-requested
 
-*   It uses 128 bit password protection
+- It uses 128 bit password protection
 
-*   The pfodDesigner generates all the code, and you can use it to create you own custom menu.
+- The pfodDesigner generates all the code, and you can use it to create you own custom menu.
 
-*   All the pfod screens are available via SMS, like sub-menus, multi and single selection list, text input, data logging and plotting.
+- All the pfod screens are available via SMS, like sub-menus, multi and single selection list, text input, data logging and plotting.
 
 [**I want to make it.**](https://www.seeedstudio.com/recipe/98-sms-remote-control.html)
 
-###   Arduino Phone
+### Arduino Phone
 
 ![](https://files.seeedstudio.com/wiki/Mini-GSM-GPRS-GPS-Breakout-SIM808/img/Recipe-arduinophone.png)
 
@@ -414,19 +413,19 @@ This project tells us what you need to do when Arduino Phone apps can't fit your
 
 This Arduino Phone contains the following main functions.
 
-*   receive &amp; send message, letter input
+- receive &amp; send message, letter input
 
-*   dial &amp; answer calls
+- dial &amp; answer calls
 
-*   real time clock display
+- real time clock display
 
-*   A convenient and concise UI
+- A convenient and concise UI
 
 [**I want to make it.**](https://www.seeedstudio.com/recipe/37-arduinophone.html)
 
 [**More Awesome Projects by GPRS**](https://www.seeedstudio.com/recipe/index.php?query=GPRS)
 
-###   Share Your Awesome Projects with Us
+### Share Your Awesome Projects with Us
 
 Born with the spirit of making and sharing, that is what we believe makes a maker.
 
@@ -438,12 +437,12 @@ As long as you start sharing your works with others, you are being part of the o
 
 Now share your awesome projects with us on [Recipe](https://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
 
-*   Core Users, are those who show high interests in Seeed products and make significant contributions on Recipe.
-*   We cooperate with our Core Users in the development of our new product, this, in another word, the Core Users will have the chance to experience any new products of Seeed before its official launch, and in return we expect valuable feedback from them to help us improve the product performance and user experience. And in most cases when our Core Users have some good ideas of making things, we'll offer hardware pieces, PCBA services as well as technical support. Besides, further commercial cooperation with the Core Users is highly possible.
+- Core Users, are those who show high interests in Seeed products and make significant contributions on Recipe.
+- We cooperate with our Core Users in the development of our new product, this, in another word, the Core Users will have the chance to experience any new products of Seeed before its official launch, and in return we expect valuable feedback from them to help us improve the product performance and user experience. And in most cases when our Core Users have some good ideas of making things, we'll offer hardware pieces, PCBA services as well as technical support. Besides, further commercial cooperation with the Core Users is highly possible.
 
 <span style={{color: '#FF0000'}}>Get more information about Core User, please email to:</span> **recipe@seeed.cc**
 
-##   Support
+## Support
 
 Any tech support, please contact [_support@deegou.com_](http://www.deegou.com)
 
@@ -452,11 +451,11 @@ Any tech support, please contact [_support@deegou.com_](http://www.deegou.com)
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

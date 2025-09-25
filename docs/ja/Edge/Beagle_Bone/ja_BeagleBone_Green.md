@@ -33,25 +33,25 @@ Linuxを10秒以内に起動し、わずか1本のUSBケーブルで5分以内�
 
 ## 特徴
 
-* **BeagleBone® Blackと完全互換**
-* **プロセッサ: AM335x 1GHz ARMR Cortex-A8**
-  * 512MB DDR3 RAM
-  * 4GB 8ビット eMMCオンボードフラッシュストレージ
-  * 3Dグラフィックスアクセラレータ
-  * NEON浮動小数点アクセラレータ
-  * 2x PRU 32ビットマイクロコントローラ
-* **接続性**
-  * 電源および通信用USBクライアント
-  * USBホスト
-  * イーサネット
-  * 2x 46ピンヘッダー
-  * 2x Groveコネクタ（I2CおよびUART）
-* **ソフトウェア互換性**
-  * Debian
-  * Android
-  * Ubuntu
-  * Cloud9 IDE on Node.js w/ BoneScriptライブラリ
-  * その他多数
+- **BeagleBone® Blackと完全互換**
+- **プロセッサ: AM335x 1GHz ARMR Cortex-A8**
+  - 512MB DDR3 RAM
+  - 4GB 8ビット eMMCオンボードフラッシュストレージ
+  - 3Dグラフィックスアクセラレータ
+  - NEON浮動小数点アクセラレータ
+  - 2x PRU 32ビットマイクロコントローラ
+- **接続性**
+  - 電源および通信用USBクライアント
+  - USBホスト
+  - イーサネット
+  - 2x 46ピンヘッダー
+  - 2x Groveコネクタ（I2CおよびUART）
+- **ソフトウェア互換性**
+  - Debian
+  - Android
+  - Ubuntu
+  - Cloud9 IDE on Node.js w/ BoneScriptライブラリ
+  - その他多数
 
 ## 仕様
 
@@ -70,13 +70,13 @@ Linuxを10秒以内に起動し、わずか1本のUSBケーブルで5分以内�
 
 ## 応用アイデア
 
-* モノのインターネット（IoT）
-* スマートハウス
-* 産業用途
-* 自動化 & プロセス制御
-* ヒューマンマシンインターフェース
-* センサーハブ
-* ロボット
+- モノのインターネット（IoT）
+- スマートハウス
+- 産業用途
+- 自動化 & プロセス制御
+- ヒューマンマシンインターフェース
+- センサーハブ
+- ロボット
 
 以下は参考になる面白いプロジェクトです。
 
@@ -94,19 +94,19 @@ Linuxを10秒以内に起動し、わずか1本のUSBケーブルで5分以内�
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/10201002703.jpg" /></div>
 
-* **USBホスト** - USBホスト
-* **DC電源およびUSBクライアント** - ボードに電源を供給し、クライアントとして動作
-* **LED**
-  * **D2** - 起動時にハートビートパターンで点滅するように設定
-  * **D3** - 起動時にmicroSDカードアクセス時に点灯するように設定
-  * **D4** - 起動時にCPUアクティビティ時に点灯するように設定
-  * **D5** - 起動時にeMMCアクセス時に点灯するように設定
-* **ブートボタン**
-  * SDカードが挿入されている場合、システムはSDカードから起動します。eMMCから起動したい場合は、このボタンを押してから電源を入れてください。
-  * 起動後は通常のボタンとして使用可能で、**GPIO_72**に接続されています。
-* **I2C Groveインターフェース** - **I2C2**に接続
-* **UART Groveインターフェース** - **UART2**に接続
-* **シリアルデバッグ** - **UART0**に接続、PIN1~PIN6: GND, NC, NC, RX, TX, NC（PIN1はUSBに近い側）
+- **USBホスト** - USBホスト
+- **DC電源およびUSBクライアント** - ボードに電源を供給し、クライアントとして動作
+- **LED**
+  - **D2** - 起動時にハートビートパターンで点滅するように設定
+  - **D3** - 起動時にmicroSDカードアクセス時に点灯するように設定
+  - **D4** - 起動時にCPUアクティビティ時に点灯するように設定
+  - **D5** - 起動時にeMMCアクセス時に点灯するように設定
+- **ブートボタン**
+  - SDカードが挿入されている場合、システムはSDカードから起動します。eMMCから起動したい場合は、このボタンを押してから電源を入れてください。
+  - 起動後は通常のボタンとして使用可能で、**GPIO_72**に接続されています。
+- **I2C Groveインターフェース** - **I2C2**に接続
+- **UART Groveインターフェース** - **UART2**に接続
+- **シリアルデバッグ** - **UART0**に接続、PIN1~PIN6: GND, NC, NC, RX, TX, NC（PIN1はUSBに近い側）
 
 **ピンマップ**
 
@@ -174,7 +174,7 @@ UART0ピンにアクセスしてデバッグケーブルを接続するための
 この章は Win10 上で執筆されています。他のオペレーティングシステムでも手順はほぼ同じです。
 :::
 
-**STEP1. Seeed Studio BeagleBone® Green を USB 経由で接続する**
+**ステップ1. Seeed Studio BeagleBone® Green を USB 経由で接続する**
 
 付属の micro USB ケーブルを使用して、Seeed Studio BeagleBone® Green をコンピュータに接続します。この操作により、ボードに電力を供給し、開発インターフェースを提供します。Seeed Studio BeagleBone® Green は、オンボードの 2GB または 4GB eMMC から Linux を起動します。
 
@@ -182,12 +182,12 @@ Seeed Studio BeagleBone® Green はフラッシュドライブとして動作し
 
 PWR LED が点灯しているのが確認できます。10秒以内に、他の LED がデフォルトの設定で点滅しているのが見えるはずです。
 
-* D2 は起動時にハートビートパターンで点滅するように設定されています
-* D3 は起動時に microSD カードアクセス中に点灯するように設定されています
-* D4 は起動時に CPU アクティビティ中に点灯するように設定されています
-* D5 は起動時に eMMC アクセス中に点灯するように設定されています
+- D2 は起動時にハートビートパターンで点滅するように設定されています
+- D3 は起動時に microSD カードアクセス中に点灯するように設定されています
+- D4 は起動時に CPU アクティビティ中に点灯するように設定されています
+- D5 は起動時に eMMC アクセス中に点灯するように設定されています
 
-**STEP2. ドライバーをインストールする**
+**ステップ2. ドライバーをインストールする**
 
 オペレーティングシステムに対応したドライバーをインストールして、Beagle への USB 経由のネットワークアクセスを可能にします。追加のドライバーをインストールすることで、ボードへのシリアルアクセスも可能になります。
 
@@ -201,11 +201,12 @@ PWR LED が点灯しているのが確認できます。10秒以内に、他の 
 :::note
     Windows システムの場合、以下に注意してください：
 
-* Windows ドライバー認証警告が 2～3 回表示される場合があります。「無視」、「インストール」または「実行」をクリックしてください。
-* 自分の Windows が 32 ビットか 64 ビットかを確認するには [こちら](https://support.microsoft.com/kb/827218) を参照してください。
-* 最新のサービスリリースがないシステムでは、エラー (0xc000007b) が発生する場合があります。その場合は [こちら](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523) をインストールして再試行してください。
-* Windows を再起動する必要がある場合があります。
-* これらのドライバーは Windows 10 まで動作確認されています。
+- Windows ドライバー認証警告が 2～3 回表示される場合があります。「無視」、「インストール」または「実行」をクリックしてください。
+- 自分の Windows が 32 ビットか 64 ビットかを確認するには [こちら](https://support.microsoft.com/kb/827218) を参照してください。
+- 最新のサービスリリースがないシステムでは、エラー (0xc000007b) が発生する場合があります。その場合は [こちら](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523) をインストールして再試行してください。
+- Windows を再起動する必要がある場合があります。
+- これらのドライバーは Windows 10 まで動作確認されています。
+
 :::
 
 :::note
@@ -216,7 +217,7 @@ PWR LED が点灯しているのが確認できます。10秒以内に、他の 
 追加の USB 仮想イーサネット情報とドライバーは [https://www.linux-usb.org/gadget/](https://www.linux-usb.org/gadget/) および [https://joshuawise.com/horndis](https://joshuawise.com/horndis) から入手できます。
 :::
 
-**STEP3. Beagle にアクセスする**
+**ステップ3. Beagle にアクセスする**
 
 Chrome または Firefox を使用して、ボード上で実行されているウェブサーバーにアクセスします。（Internet Explorer は使用できません。）これにより、ボードの機能を示すプレゼンテーションが読み込まれます。キーボードの矢印キーを使用してプレゼンテーションを操作してください。
 
@@ -225,7 +226,7 @@ Chrome または Firefox を使用して、ボード上で実行されている�
 
 [![画像をクリックして拡大表示](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)
 
-**STEP4. Cloud9 IDE**
+**ステップ4. Cloud9 IDE**
 
 ボード上に保存されているプログラムを編集するには、Cloud9 IDE を使用します。以下をクリックしてください。
 
@@ -235,7 +236,7 @@ Chrome または Firefox を使用して、ボード上で実行されている�
 
 ボードの性能を向上させるために、最新のソフトウェアに更新する必要があります。以下に手順を示します。
 
-**STEP1. 最新のソフトウェアイメージをダウンロード**
+**ステップ1. 最新のソフトウェアイメージをダウンロード**
 
 まず、適切なイメージを以下のリンクからダウンロードしてください。
 
@@ -247,7 +248,7 @@ Chrome または Firefox を使用して、ボード上で実行されている�
 
 ダウンロードしたファイルは **.img.xz** 拡張子を持っています。これはSDカードのセクターごとの圧縮イメージです。
 
-**STEP2. 圧縮ユーティリティをインストールしてイメージを解凍**
+**ステップ2. 圧縮ユーティリティをインストールしてイメージを解凍**
 
 [7-zip](http://www.7-zip.org/download.html) をダウンロードしてインストールしてください。
 
@@ -257,11 +258,11 @@ Chrome または Firefox を使用して、ボード上で実行されている�
 
 7-zipを使用してSDカードの **.imgファイル** を解凍します。
 
-**STEP3. SDカードプログラミングユーティリティをインストール**
+**ステップ3. SDカードプログラミングユーティリティをインストール**
 
 [Image Writer for Windows](https://sourceforge.net/projects/win32diskimager/files/latest/download) をダウンロードしてインストールしてください。バイナリ配布版をダウンロードすることを確認してください。
 
-**STEP4. イメージをSDカードに書き込む**
+**ステップ4. イメージをSDカードに書き込む**
 
 まず、microSDカードをコンピュータに接続するためのSDアダプタが必要です。その後、Image Writer for Windowsを使用して解凍したイメージをSDカードに書き込みます。
 
@@ -273,12 +274,13 @@ Chrome または Firefox を使用して、ボード上で実行されている�
 
 :::note
 
-* デバイスが損傷する可能性があるという警告が表示される場合がありますが、SDカードに書き込む場合は問題ありません。
-* この時点でBeagleBone®をコンピュータに接続しないでください。
-* このプロセスには最大10分かかる場合があります。
+- デバイスが損傷する可能性があるという警告が表示される場合がありますが、SDカードに書き込む場合は問題ありません。
+- この時点でBeagleBone®をコンピュータに接続しないでください。
+- このプロセスには最大10分かかる場合があります。
+
 :::
 
-**STEP5. SDカードからボードを起動する**
+**ステップ5. SDカードからボードを起動する**
 
 SDカードを（まず電源を切った状態で）ボードに挿入します。その後、ボードはSDカードから起動します。
 
@@ -538,14 +540,14 @@ BeagleBone® Greenは0〜75度の温度範囲で動作します。
 
 ボードに関する情報をさらに得るための参考資料が多数あります。
 
-* [BeagleBoard メインページ](https://beagleboard.org/)
-* [BeagleBoardページでのSeeed Studio BeagleBone® Green情報](https://beagleboard.org/green)
-* [BeagleBoard 初めての使用ガイド](https://beagleboard.org/getting-started)
-* [トラブルシューティング](https://beagleboard.org/getting-started#troubleshooting)
-* [ハードウェアドキュメント](https://beagleboard.org/getting-started#hardware)
-* [BeagleBoardのプロジェクト](https://beagleboard.org/project)
-* [Seeed Studio BeagleBone® GreenのCE認証](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/CE.zip)
-* [Seeed Studio BeagleBone® GreenのFCC認証](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/FCC.zip)
+- [BeagleBoard メインページ](https://beagleboard.org/)
+- [BeagleBoardページでのSeeed Studio BeagleBone® Green情報](https://beagleboard.org/green)
+- [BeagleBoard 初めての使用ガイド](https://beagleboard.org/getting-started)
+- [トラブルシューティング](https://beagleboard.org/getting-started#troubleshooting)
+- [ハードウェアドキュメント](https://beagleboard.org/getting-started#hardware)
+- [BeagleBoardのプロジェクト](https://beagleboard.org/project)
+- [Seeed Studio BeagleBone® GreenのCE認証](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/CE.zip)
+- [Seeed Studio BeagleBone® GreenのFCC認証](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/FCC.zip)
 
 ## 回路図オンラインビューア
 
@@ -554,28 +556,28 @@ BeagleBone® Greenは0〜75度の温度範囲で動作します。
 
 ## リソース
 
-* **[PDF]** [Seeed Studio BeagleBone® Green SRM(v1a)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG_SRM_V1a_20151009.pdf)
-* **[PDF]** [Seeed Studio BeagleBone® Green SRM(v3)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG_SRM_V3_20150804.pdf)
-* **[PDF]** [Seeed Studio BeagleBone® Green 回路図 v1.1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_REV1.1_SCH.pdf)
-* **[ZIP]** [Seeed Studio BeagleBone® Green 回路図 v1.1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_REV1.1_SCH.zip)
-* **[PDF]** [Seeed Studio BeagleBone® Green 回路図 v1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BEAGLEBONE_GREEN_V1.pdf)
-* **[Zip]** [Seeed Studio BeagleBone® Green 回路図(OrCAD) v1c](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_v1c.zip)
-* **[RAR]** [Seeed Studio BeagleBone® Green 回路図(OrCAD)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BEAGLEBONE_GREEN_V1_166%28sch%29.rar)
-* **[RAR]** [Seeed Studio BeagleBone® Green PCB(OrCAD)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_v1.166%28board%29.rar)
-* **[Zip]** [AM335X データシート](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
-* **[3D]** [Seeed Studio BeagleBone® Green 3Dモデル](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG.zip)
-* **[PDF]** [Seeed Studio BeagleBone® Green 機械図面](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG-PCBA.pdf)
+- **[PDF]** [Seeed Studio BeagleBone® Green SRM(v1a)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG_SRM_V1a_20151009.pdf)
+- **[PDF]** [Seeed Studio BeagleBone® Green SRM(v3)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG_SRM_V3_20150804.pdf)
+- **[PDF]** [Seeed Studio BeagleBone® Green 回路図 v1.1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_REV1.1_SCH.pdf)
+- **[ZIP]** [Seeed Studio BeagleBone® Green 回路図 v1.1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_REV1.1_SCH.zip)
+- **[PDF]** [Seeed Studio BeagleBone® Green 回路図 v1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BEAGLEBONE_GREEN_V1.pdf)
+- **[Zip]** [Seeed Studio BeagleBone® Green 回路図(OrCAD) v1c](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_v1c.zip)
+- **[RAR]** [Seeed Studio BeagleBone® Green 回路図(OrCAD)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BEAGLEBONE_GREEN_V1_166%28sch%29.rar)
+- **[RAR]** [Seeed Studio BeagleBone® Green PCB(OrCAD)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_v1.166%28board%29.rar)
+- **[Zip]** [AM335X データシート](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
+- **[3D]** [Seeed Studio BeagleBone® Green 3Dモデル](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG.zip)
+- **[PDF]** [Seeed Studio BeagleBone® Green 機械図面](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG-PCBA.pdf)
 
 ## 技術サポートと製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

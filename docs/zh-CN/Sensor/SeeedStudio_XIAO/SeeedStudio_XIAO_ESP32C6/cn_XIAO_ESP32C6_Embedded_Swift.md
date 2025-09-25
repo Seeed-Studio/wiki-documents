@@ -118,7 +118,7 @@ echo "Installation complete. Use 'get_idf' to set up the ESP-IDF environment."
 
 ### Install Swift 6.0
 
-you could directly running this script to have swift 6.0 to be installed.
+你可以直接运行这个脚本来安装 Swift 6.0。
 
 ```shell
 #!/bin/bash
@@ -140,9 +140,9 @@ swift --version
 echo "Swift 6.0 installation complete."
 ```
 
-## Run your first Blink program with Swift
+## 运行你的第一个 Swift Blink 程序
 
-### Step 1. Get the example
+### 步骤 1. 获取示例
 
 ```shell showLineNumbers
 get_idf #get idf enviorment
@@ -177,7 +177,7 @@ func app_main() {
 }
 ```
 
-Then you could build the firmware:
+然后你就可以构建固件了：
 
 ```shell
 idf.py set-target esp32c6
@@ -205,20 +205,20 @@ idf.py build
 winget install usbipd
 ```
 
-After installation, share the USB device using:
+安装完成后，使用以下方式共享 USB 设备：
 
 ```shell
 usbipd list #Check BUSID
 usbipd bind -b '<BUSID>'
 ```
 
-To attach the device from within WSL2:
+要从 WSL2 内部连接设备：
 
 ```shell
 usbipd attach --wsl --busid=<BUSID>
 ```
 
-To see which port is shared:
+要查看哪个端口被共享：
 
 ```shell
 dmesg | tail

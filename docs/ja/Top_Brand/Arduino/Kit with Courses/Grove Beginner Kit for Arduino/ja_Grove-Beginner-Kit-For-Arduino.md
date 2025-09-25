@@ -1346,7 +1346,7 @@ void loop(void) {
 }
 ```
 
-Click "Monitor" on the top right corner and check the result.
+右上角の「Monitor」をクリックして結果を確認してください。
 
 Code Analysis
 
@@ -1684,7 +1684,7 @@ void loop() {
 #endif
 ```
 
-Initializing the module using software I2C or hardware I2C.
+ソフトウェア I2C またはハードウェア I2C を使用してモジュールを初期化する。
 
 ```cpp
 while (!Serial) {};
@@ -1895,7 +1895,7 @@ void loop()
 int tune[]=...
 ```
 
-List the frequencies according to the spectrum.
+スペクトラムに従って周波数を列挙してください。
 
 ```cpp
 float durt[]=...

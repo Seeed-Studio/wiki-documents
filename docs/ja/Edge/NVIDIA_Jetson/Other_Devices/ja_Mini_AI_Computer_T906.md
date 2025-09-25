@@ -608,7 +608,7 @@ finally:
     gpio.cleanup()
 ```
 
-- **Step 3.** you could also check if the GPIO pin is at HI or LO by:
+- **ステップ 3.** GPIOピンがHIまたはLOにあるかどうかを次の方法でも確認できます：
 
 ```shell
 

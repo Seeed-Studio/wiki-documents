@@ -167,13 +167,13 @@ Hailo AI 软件套件提供强大的工具，可在硬件加速器上高效运�
 sudo apt install snap
 ```
 
-- **Step 2.** Download **rpi-imager**
+- **步骤 2.** 下载 **rpi-imager**
 
 ```sh
 snap install rpi-imager
 ```
 
-- **Step 3.** Open Raspberry Pi Imager software
+- **步骤 3.** 打开 Raspberry Pi Imager 软件
 
 ```sh
 rpi-imager
@@ -298,7 +298,7 @@ rpi-imager
 sudo rpi-eeprom-config --edit
 ```
 
-And then change rpi-eeprom-config like below:
+然后按如下方式更改 rpi-eeprom-config：
 
 ```
 BOOT_UART=1

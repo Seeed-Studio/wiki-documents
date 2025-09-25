@@ -281,9 +281,9 @@ Arduino IDE 1.6.5 支持通过 **Board Manager** 工具集成第三方开发板�
 
 **1.** 在 Arduino IDE 的 File 菜单中点击 Preferences，然后在 Additional Boards Manager URLs 字段中插入以下内容：
 
-````
+```
 http://download.labs.mediatek.com/package_mtk_linkit_smart_7688_index.json
-````
+```
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Install_package.jpg)
 

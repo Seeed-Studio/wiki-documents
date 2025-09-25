@@ -20,7 +20,7 @@ EdgeBox-RPi-200シリーズは、複数の産業用途を組み合わせたRaspb
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -67,7 +67,7 @@ import TabItem from '@theme/TabItem';
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -96,9 +96,9 @@ sudo make
 cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
 ```
 
-**Step 8.** `global_conf.json.sx1250.US915.USB` 設定ファイル内のLoraWAN®モジュールのUSBポートを置き換えます：
+**ステップ 8.** `global_conf.json.sx1250.US915.USB` 設定ファイル内のLoraWAN®モジュールのUSBポートを置き換えます：
 
-**Step 8-1.**
+**ステップ 8-1.**
 まず、特定のUSBポートを取得するために、以下の手順に従ってください：
 
 ```sh
@@ -158,7 +158,7 @@ $ ./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM1302-LoRaWAN-Gateway-Module-SPI-US-915-p-5454.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 

@@ -383,7 +383,7 @@ Mueve el brazo a la posición mostrada en el diagrama y ponlo en espera.
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png" />
 </div>
 
-Entonces estarás listo para teleoperar tu robot (¡No mostrará las cámaras)! Ejecuta este script simple:
+¡Entonces estarás listo para teleoperar tu robot (No mostrará las cámaras)! Ejecuta este script simple:
 
 ```bash
 python -m lerobot.teleoperate \
@@ -587,7 +587,7 @@ Para diferenciar entre configuraciones de brazo único y brazo dual, el `--datas
 Si no quieres usar la función de subida de conjuntos de datos del Hub de Hugging Face, puedes elegir `--dataset.push_to_hub=false`. Además, reemplaza `--dataset.repo_id=${HF_USER}/starai` con un nombre de carpeta local personalizado, por ejemplo, `--dataset.repo_id=starai/record-test`. Los datos se almacenarán en `~/.cache/huggingface/lerobot` bajo el directorio home del sistema.
 :::
 
-No subir al Hub:
+Sin subir al Hub:
 **（Recomendado, los siguientes tutoriales se enfocarán en datos locales）**
 
 ```bash
@@ -762,7 +762,9 @@ python -m lerobot.scripts.train \
 </details>
 
 1. Proporcionamos el conjunto de datos como parámetro: `dataset.repo_id=starai/record-test`.
+
 2. Cargaremos la configuración desde [`configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/src/lerobot/policies/act/configuration_act.py). Importante, esta política se adaptará automáticamente a los estados del motor del robot, las acciones del motor y el número de cámaras, y se guardará en tu conjunto de datos.
+
 3. Proporcionamos `wandb.enable=true` para usar [Weights and Biases](https://docs.wandb.ai/quickstart) para visualizar gráficos de entrenamiento. Esto es opcional, pero si lo usas, asegúrate de haber iniciado sesión ejecutando `wandb login`.
 
 Reanudar el entrenamiento desde un checkpoint específico.
@@ -843,27 +845,25 @@ Como puedes ver, esto es casi lo mismo que el comando usado previamente para gra
 
 ## Cita
 
-Documento Wiki en inglés de Seeedstudio：[How to use the SO10xArm robotic arm in the latest version of Lerobot](https://wiki.seeedstudio.com/es/lerobot_so100m_new/)
+Brazo Robótico StarAI ROS2 Moveit2: [star-arm-moveit2](https://wiki.seeedstudio.com/es/starai_arm_ros_moveit/)
 
-lerobot-starai github: [lerobot-starai](https://github.com/Welt-liu/lerobot-starai)
+lerobot-starai github: [lerobot-starai](https://github.com/servodevelop/lerobot.git)
 
-STEP: [STEP](https://github.com/Welt-liu/star-arm-moveit2/tree/main/hardware)
+PASO: [STEP](https://github.com/Welt-liu/star-arm-moveit2/tree/main/hardware)
 
 URDF: [URDF](https://github.com/Welt-liu/star-arm-moveit2/tree/main/src/cello_description)
 
-StarAI Robot Arm moveit2: [star-arm-moveit2](https://github.com/Welt-liu/star-arm-moveit2)
-
 Proyecto Huggingface: [Lerobot](https://github.com/huggingface/lerobot/tree/main)
 
-ACT o ALOHA: [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](https://tonyzhaozh.github.io/aloha/)
+ACT o ALOHA: [Aprendiendo manipulación bimano fina con hardware de bajo costo](https://tonyzhaozh.github.io/aloha/)
 
-VQ-BeT: [VQ-BeT: Behavior Generation with Latent Actions](https://sjlee.cc/vq-bet/)
+VQ-BeT: [VQ-BeT: Generación de comportamiento con acciones latentes](https://sjlee.cc/vq-bet/)
 
 Diffusion Policy: [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)
 
 TD-MPC: [TD-MPC](https://www.nicklashansen.com/td-mpc/)
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

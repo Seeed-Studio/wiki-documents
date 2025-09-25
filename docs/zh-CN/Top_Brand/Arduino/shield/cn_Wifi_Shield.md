@@ -12,7 +12,7 @@ last_update:
 
 <!-- ---
 name: WIFI Shield
-category: Discontinued
+category: 已停产
 bzurl:
 oldwikiname: WIFI_Shield
 prodimagename:

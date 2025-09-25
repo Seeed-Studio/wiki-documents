@@ -183,7 +183,7 @@ sudo ./flash.sh [options] <board> <rootdev>
 sudo ./flash.sh <board> sda<x>
 ```
 
-For a partition on an NVMe storage device connected to the reComputer device, enter this command:
+对于连接到 reComputer 设备的 NVMe 存储设备上的分区，输入以下命令：
 
 ```sh
 sudo ./flash.sh <board> nvme0n1p<x>

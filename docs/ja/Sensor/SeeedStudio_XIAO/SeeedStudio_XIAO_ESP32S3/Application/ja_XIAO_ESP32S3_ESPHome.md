@@ -39,12 +39,12 @@ last_update:
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -75,11 +75,11 @@ ESPHomeは**Home Assistantアドオン**として利用でき、アドオンス�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/1.png" style={{width:900, height:'auto'}}/></div>
 
 <!--  
-- **Step 1.** To quickly setup ESPHome on Home Asssistant, click the below button
+- **ステップ 1.** Home Assistant で ESPHome を素早くセットアップするには、以下のボタンをクリックしてください
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/4.png" width="300">
 
-- **Step 2.** Once you see the following pop-up, click **OPEN LINK**
+- **ステップ 2.** 次のポップアップが表示されたら、**OPEN LINK** をクリックします
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/5.png" width="300">
 
@@ -94,19 +94,20 @@ ESPHomeは**Home Assistantアドオン**として利用でき、アドオンス�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/3.png" style={{width:900, height:'auto'}}/></div>
 
 <!-- 
-- **Step 3.** Click **INSTALL**
+- **ステップ 3.** **INSTALL** をクリックします
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/6.png" width="700">
 
-- **Step 4.** Enable all the options and click **START**
+- **ステップ 4.** すべてのオプションを有効にして **START** をクリックします
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/7.png" width="700">
 
-- **Step 5.** Click **OPEN WEB UI** or **ESPHOME from the side-panel**
+- **ステップ 5.** **OPEN WEB UI** または **サイドパネルの ESPHOME** をクリックします
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/8.png" width="700">
 
 -->
+
 <br />
 ESPHomeが正常に読み込まれると、以下のウィンドウが表示されます
 
@@ -421,7 +422,7 @@ sensor:
 
 <br />
 
-#### Grove -Smart Air Quality Sensor (SGP41)
+#### Grove -スマート空気品質センサー (SGP41)
   
 - **ステップ1.** Grove - [Smart Air Quality Sensor (SGP41)](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html?queryID=3ac9c3a1ed9e1a56a66b142e8282868a&objectID=5687&indexName=bazaar_retailer_products)をSeeed Studio Expansion Base for XIAOのI2Cコネクターの1つに接続します
 

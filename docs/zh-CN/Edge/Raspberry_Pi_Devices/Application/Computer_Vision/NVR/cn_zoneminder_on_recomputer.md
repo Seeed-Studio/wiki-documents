@@ -66,7 +66,7 @@ sudo apt update
 sudo apt upgrade -y
 ```
 
-### Install MariaDB and do initial database configuration
+### 安装 MariaDB 并进行初始数据库配置
 
 Run the following commands.
 
@@ -74,7 +74,7 @@ Run the following commands.
 sudo apt install apache2 mariadb-server
 ```
 
-Switch into root user and create database and database user.
+切换到 root 用户并创建数据库和数据库用户。
 
 ```bash
 sudo su

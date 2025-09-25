@@ -31,7 +31,7 @@ Raspberry Pi搭載HMIであるreTerminal DMに[InfluxDB](https://www.influxdata.
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
    <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
@@ -53,9 +53,9 @@ Raspberry Pi搭載HMIであるreTerminal DMに[InfluxDB](https://www.influxdata.
 sudo apt update
 ```
 
-**Step 2**: Add the InfluxDB Repository
+**ステップ 2**: InfluxDBリポジトリを追加する
 
-Add the InfluxDB GPG key and repository to your system.
+InfluxDB GPG キーとリポジトリをシステムに追加してください。
 
 Add the GPG key:
 
@@ -184,7 +184,7 @@ sudo nano /etc/influxdb/influxdb.conf
 sudo systemctl restart influxdb
 ```
 
-**Step 6**. Connect to InfluxDB with the admin user:
+**ステップ 6**. 管理者ユーザーでInfluxDBに接続する：
 
 ```sh
 influx -username admin -password <password>

@@ -29,7 +29,7 @@ last_update:
 sudo apt install qml-module-qtquick-shapes python3-pyside2.qtqml python3-pyside2.qtcore python3-pyside2.qtnetwork python3-pyside2.qtgui python3-pyside2.qtwidgets python3-pyside2.qtquick qtquickcontrols2-5-dev qml-module-qtcharts qml-module-qtquick-controls qml-module-qtquick-controls2
 ```
 
-- **Step 2.** Install compile tools to install the **QtQuick.Studio** component manually
+- **ステップ 2.** **QtQuick.Studio**コンポーネントを手動でインストールするためのコンパイルツールをインストールする
 
 ```sh
 sudo apt install qt5-qmake

@@ -358,7 +358,7 @@ pip3 install -r --user requirements.txt
 python3 setup.py install
 ```
 
-If you want to install in system directories (generally not recommended):
+如果你想安装到系统目录（通常不推荐）：
 
 ```
 sudo pip3 install -r requirements.txt

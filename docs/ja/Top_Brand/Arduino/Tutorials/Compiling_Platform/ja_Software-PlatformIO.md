@@ -39,11 +39,11 @@ PlatformIOは、最も人気のあるIDEやテキストエディタをプラグ�
 
 ### VSCode用PlatformIO
 
-- **STEP1. VSCodeをダウンロード**
+- **ステップ1. VSCodeをダウンロード**
 
 [Microsoft Visual Studio Code](https://code.visualstudio.com/)をダウンロードしてインストールします。
 
-- **STEP2. VSCode用PlatformIO IDEプラグインをダウンロード**
+- **ステップ2. VSCode用PlatformIO IDEプラグインをダウンロード**
 
 VS Codeの左パネルで**拡張機能マーケット**を開くか、以下のキーボードショートカットを使用します：
 
@@ -55,7 +55,7 @@ VS Codeの左パネルで**拡張機能マーケット**を開くか、以下の
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/platformIO/platformIO-1.png"/></div>
 
-- **STEP3. PlatformIOホームページを開く**
+- **ステップ3. PlatformIOホームページを開く**
 
 PlatformIOツールバーの下部にある「PlatformIO Home」ボタンをクリックします。
 

@@ -290,9 +290,9 @@ Arduino IDE 1.6.5 supports third party board integration using the **Board Manag
 
 **1.** In Arduino IDE, on the File menu click Preferences then insert
 
-````
+```
 http://download.labs.mediatek.com/package_mtk_linkit_smart_7688_index.json
-````
+```
 
 to the Additional Boards Manager URLs field:
 

@@ -402,7 +402,7 @@ export const exploreList = [
       },
       {
         title: 'Wiki SeeedStudio (Español)',
-        link: '/es/Sensor_Network/',
+        link: '/es/Getting_Started/',
       },
     ],
   },

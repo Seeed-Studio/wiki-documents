@@ -756,7 +756,7 @@ Command to check DoA values
 
 ```bash
 ./xvf_host AEC_AZIMUTH_VALUES
-````
+```
 
 Example Output
 

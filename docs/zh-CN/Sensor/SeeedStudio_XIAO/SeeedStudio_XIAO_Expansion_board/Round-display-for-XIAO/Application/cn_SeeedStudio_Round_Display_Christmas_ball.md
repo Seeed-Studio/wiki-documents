@@ -194,7 +194,7 @@ void initParticles() {
 }
 ```
 
-- It initializes *numParticles* with random positions and speeds.
+- 它用随机位置和速度初始化 *numParticles*。
 
 2. Particle updates
 
@@ -231,8 +231,7 @@ void renderParticlesToSprite() {
   }
 }
 ```
-
-- It renders each particle as a small white circle
+- 它将每个粒子渲染为一个小白圆
 
 ### PNG Decoding
 
@@ -247,7 +246,7 @@ if (rc != PNG_SUCCESS) {
 png.decode(NULL, 0);
 ```
 
-- Loads and decodes the current background PNG using the *png.openFLASH()* function
+- 使用 *png.openFLASH()* 函数加载并解码当前背景 PNG
 
 ### Touch interaction
 
@@ -275,8 +274,7 @@ void setup() {
   initParticles();
 }
 ```
-
-- Initializes the display, touch input and snow particles
+- 初始化显示器、触摸输入和雪花粒子
 
 - **Main loop:**
 

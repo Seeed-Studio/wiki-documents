@@ -2,19 +2,32 @@
 description: This wiki aims to promote the development of a swappable gripper using the DM-4310-2EC motor
 title: DM_Gripper - Assembly Guide with Demo
 keywords:
-- Gripper
-- Robotics 
+  - DM_Gripper
+  - DM-4310-2EC
+  - 3D Printed Gripper
+  - Swappable Gripper
+  - Robotics 
+image: https://files.seeedstudio.com/wiki/robotics/projects/end_effectors/dm_gripper/1-100094243--Seeed-Gripper-01.webp
 slug: /dm_gripper
 last_update:
   date: 9/17/2025
   author: Ylson W
 ---
 
-# DM_Gripper - Assembly Guide
+# DM_Gripper – Open-Source Assembly Guide
 
-DM_Gripper is designed with an assembly/disassembly-friendly structure and an open-source mindset. This allows hobbyists and developers to rapidly prototype through 3D printing or redesign it to meet personalized needs.
+The **DM_Gripper** is an open-source, **3D-printed robotic gripper** designed around the **DM-4310-2EC motor**. Its modular design emphasizes ease of assembly and disassembly, enabling both hobbyists and robotics developers to **rapidly prototype, customize, and scale** their projects.  
 
-The gripper features a swappable claw system, making it easy to exchange claws of different shapes for alternative use cases. All parts are fully 3D-printable at home with minimal support required. The wiki below provides a step-by-step guide for assembly.
+Fully compatible with **DAMIAO actuators**, the DM_Gripper also provides flexibility for integration with other actuator brands. Its unique **swappable claw system** allows users to quickly exchange claws of different shapes, supporting diverse robotic tasks and use cases.  
+
+All gripper parts are **fully 3D-printable** with minimal support requirements, making it accessible for makers, researchers, and engineers alike.  
+
+This wiki includes:  
+- Mechanism design overview  
+- Full bill of materials (BOM)  
+- 3D printing guide and setup  
+- Step-by-step assembly instructions  
+- Demo and practical use cases 
 
 <div align="center">
   <img width ="720" src="https://files.seeedstudio.com/wiki/robotics/projects/end_effectors/dm_gripper/1-100094243--Seeed-Gripper-01.jpg"/>  

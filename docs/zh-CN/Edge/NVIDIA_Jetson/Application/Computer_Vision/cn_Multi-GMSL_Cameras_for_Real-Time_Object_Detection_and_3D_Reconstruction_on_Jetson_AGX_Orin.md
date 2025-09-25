@@ -96,7 +96,7 @@ last_update:
 touch media-setup.sh
 ```
 
-**Step 2.** Paste the following content into media-setup.sh:
+**步骤 2.** 将以下内容粘贴到 media-setup.sh 中：
 
 ```bash
 #!/bin/bash
@@ -120,7 +120,7 @@ media-ctl -d /dev/media0 --set-v4l2 '"des_1_ch_2":0[fmt:YUYV8_1X16/1920x1536]'
 media-ctl -d /dev/media0 --set-v4l2 '"des_1_ch_3":0[fmt:YUYV8_1X16/1920x1536]'
 ```
 
-**Step 3.** Add execution permissions to media-setup.sh:
+**步骤 3.** 为 media-setup.sh 添加执行权限:
 
 ```bash
 chmod +x media-setup.sh
@@ -144,8 +144,7 @@ RemainAfterExit=true
 [Install]
 WantedBy=multi-user.target
 ```
-
-**Step 5.** After saving and exiting, enable the service:
+**步骤 5.** 保存并退出后，启用该服务：
 
 ```bash
 sudo systemctl daemon-reexec
@@ -154,7 +153,7 @@ sudo systemctl enable mediactl-init.service
 sudo systemctl start mediactl-init.service
 ```
 
-**Step 5.** Reboot the device and check if the service is running:
+**步骤 5.** 重启设备并检查服务是否正在运行：
 
 ```bash
 sudo systemctl status mediactl-init.service

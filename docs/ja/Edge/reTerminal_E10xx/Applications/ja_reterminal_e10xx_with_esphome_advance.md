@@ -1306,22 +1306,22 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
 
-<!-- ### Q3: How can I upload a new program when device is in deep sleep mode?
+<!-- ### Q3: デバイスがディープスリープモードのときに新しいプログラムをアップロードするにはどうすればよいですか？
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/103.png" style={{width:'100%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/102.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-When the device is in deep sleep mode, you can't upload a new program directly. Follow these steps to enter download mode:
+デバイスがディープスリープモードにあるときは、直接新しいプログラムをアップロードすることはできません。次の手順でダウンロードモードに入ってください:
 
-Step 1. Make sure the device is turned on. Then, press and hold the **Boot** button located next to the USB-C port on the XIAO ESP32-S3 Plus.
+ステップ 1. デバイスの電源が入っていることを確認します。その後、XIAO ESP32-S3 Plus の USB-C ポートの横にある **Boot** ボタンを押し続けます。
 
-Step 2. While holding the **Boot** button, press the **Reset** button once, then release the **Boot** button.
+ステップ 2. **Boot** ボタンを押したまま、**Reset** ボタンを一度押し、その後 **Boot** ボタンを離します。
 
-Step 3. Turn off the battery switch and unplug the power cable.
+ステップ 3. バッテリースイッチをオフにし、電源ケーブルを抜きます。
 
-Step 4. Finally, replug the cable and upload a new program. -->
+ステップ 4. 最後にケーブルを再接続し、新しいプログラムをアップロードします。 -->
 
 ### Q3: Wi-Fi プログラムアップロードが失敗しますか？
 

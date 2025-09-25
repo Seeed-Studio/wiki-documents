@@ -64,10 +64,10 @@ echo 1 > /sys/class/leds/led-blue/brightness
 echo 1 > /sys/class/leds/led-green/brightness
 ```
 
-This will **light up** the corresponding LED.
+これにより、対応するLEDが**点灯**します。
 
-**3. Turn off LEDs (optional)**  
-To **turn off** a specific LED, use:
+**3. LEDを消す（オプション）**  
+特定のLEDを**消す**には、以下を使用します：
 
 ```bash
 echo 0 > /sys/class/leds/led-red/brightness
@@ -758,7 +758,7 @@ sudo reboot
 
 **Check Camera Detection**  
 
-After restarting, verify if the camera is detected:  
+再起動後、カメラが検出されているかを確認してください：
 
 ```bash
 libcamera-jpeg --list-cameras
@@ -768,7 +768,7 @@ libcamera-jpeg --list-cameras
 
 **Test the Camera**  
 
-Run the following command to activate the camera:  
+次のコマンドを実行してカメラを有効にしてください：
 
 ```bash
 rpicam-hello --timeout 0

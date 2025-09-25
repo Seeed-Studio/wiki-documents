@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-09-17 11:27:19 (北京时间)
-// 多语言页面: 2011 个
+// 生成时间: 2025-09-22 14:55:35 (北京时间)
+// 多语言页面: 2005 个
 
 (function() {
   'use strict';
@@ -377,46 +377,6 @@
     "es",
     "ja"
   ],
-  "/Embedded-World-Seeed-Studio-Presentation-BeagleBone": [
-    "cn",
-    "en",
-    "es"
-  ],
-  "/Embedded-World-Seeed-Studio-Presentation-Edge-Series": [
-    "cn",
-    "en",
-    "es"
-  ],
-  "/Embedded-World-Seeed-Studio-Presentation-Jetson-Family": [
-    "cn",
-    "en",
-    "es"
-  ],
-  "/Embedded-World-Seeed-Studio-Presentation-reComputer": [
-    "cn",
-    "en",
-    "es"
-  ],
-  "/Embedded-World-Seeed-Studio-Presentation-SenseCAP": [
-    "cn",
-    "en",
-    "es"
-  ],
-  "/Embedded-World-Seeed-Studio-Presentation-Wio-Series": [
-    "cn",
-    "en",
-    "es"
-  ],
-  "/Embedded-World-Seeed-Studio-Presentation-XIAO": [
-    "cn",
-    "en",
-    "es"
-  ],
-  "/community_sourced_projects": [
-    "cn",
-    "en",
-    "es"
-  ],
   "/Contribution-Guide": [
     "cn",
     "en",
@@ -441,46 +401,35 @@
     "es",
     "ja"
   ],
-  "/Honorary-Contributors": [
-    "cn",
-    "en",
-    "es"
-  ],
-  "/How_To_Edit_A_Document": [
-    "cn",
-    "en",
-    "es"
-  ],
   "/Scale-up-Your-Creation-with-Fusion": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/Things_We_Make": [
-    "cn",
-    "en",
-    "es"
-  ],
   "/Galileo_Case": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/Service_for_Fusion_PCB": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/Starter_bundle_harness_V1": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/Unibody_box_for_Galileo_Gen2": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/Contributor": [
     "cn",
@@ -1532,6 +1481,12 @@
     "es",
     "ja"
   ],
+  "/chirpstack_lora_gateway_r1x00": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/recomputer_r1000_aws": [
     "cn",
     "en",
@@ -2559,6 +2514,12 @@
     "ja"
   ],
   "/reterminal_e10xx_with_esphome_advanced": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reterminal_e10xx_with_lopaka": [
     "cn",
     "en",
     "es",
@@ -3866,6 +3827,12 @@
     "es",
     "ja"
   ],
+  "/dm_gripper": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/hand_amazinghand": [
     "cn",
     "en",
@@ -3921,6 +3888,12 @@
     "ja"
   ],
   "/csi_camera_on_ros": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ac1": [
     "cn",
     "en",
     "es",
@@ -4005,16 +3978,19 @@
     "ja"
   ],
   "/training_soarm101_policy_with_isaacLab": [
+    "cn",
     "en",
     "es",
     "ja"
   ],
   "/control_px4_with_recomputer_jetson": [
+    "cn",
     "en",
     "es",
     "ja"
   ],
   "/object_tracking_with_reComputer_jetson_and_pX4": [
+    "cn",
     "en",
     "es",
     "ja"
@@ -4050,6 +4026,7 @@
     "ja"
   ],
   "/control_robotic_arm_via_gr00t": [
+    "cn",
     "en",
     "es",
     "ja"
@@ -7947,6 +7924,12 @@
     "es",
     "ja"
   ],
+  "/respeaker_xvf3800_xiao_tensorflow": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/respeaker_xvf3800_xiao_udp_audio_stream": [
     "cn",
     "en",
@@ -9884,6 +9867,12 @@
     "es",
     "ja"
   ],
+  "/hello_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/watcher_web_control_panel": [
     "cn",
     "en",
@@ -10863,11 +10852,6 @@
   ],
   "/solutions/indoor-positioning-bluetooth-lorawan-tracker": [
     "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Solutions": [
     "en",
     "es",
     "ja"
@@ -12064,19 +12048,7 @@
     "cn",
     "es",
     "ja"
-  ],
-  "/ABC": [
-    "cn",
-    "ja"
-  ],
-  "/ReSpeaker": [
-    "cn",
-    "ja"
-  ],
-  "/hello_watcher_llms": [
-    "cn",
-    "en"
-  ],
+  ]
 };
 
   // 生产环境优化的状态管理

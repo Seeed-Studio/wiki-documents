@@ -116,7 +116,7 @@ Hay 3 formas de desplegar diferentes modelos en reCamera:
 
 - 1. Elegir modelo `On Device`. Varios modelos Yolo están en reCamera [por defecto](https://wiki.seeedstudio.com/es/recamera_on_device_models).
 - 2. Seleccionar modelos de `SenseCraft Zoo`. Hay varios modelos públicos para elegir como gestos y frutas. Los usuarios también pueden subir sus propios modelos, y hacerlos públicos para contribuir a la comunidad.
-- 3. `Subir tu propio modelo` a reCamera. Siguiendo las instrucciones para [convertir modelo a reCamera](https://wiki.seeedstudio.com/es/convert xxx), los usuarios pueden convertir sus propios modelos de IA al formato cvimodel INT8 para adaptarse a reCamera. Luego subir el modelo a reCamera para despliegue. Después de que el modelo sea subido, por favor lista las clases del modelo en el campo `Labels`.
+- 3. `Subir tu propio modelo` a reCamera. Siguiendo las instrucciones para [convertir modelo a reCamera](https://wiki.seeedstudio.com/es/recamera_model_conversion/), los usuarios pueden convertir sus propios modelos de IA al formato cvimodel INT8 para adaptarse a reCamera. Luego subir el modelo a reCamera para despliegue. Después de que el modelo sea subido, por favor lista las clases del modelo en el campo `Labels`.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/model_classes.png" /></div>
 

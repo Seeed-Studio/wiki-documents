@@ -171,13 +171,13 @@ source coral_venv/bin/activate
 
 Add the Google Coral Edge TPU package repository
 
-````
+```
 echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
 
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
 sudo apt-get update
-````
+```
 
 Install necessary packages and Edge TPU Runtime
 

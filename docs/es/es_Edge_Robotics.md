@@ -1,5 +1,5 @@
 ---
-description: Este tema presenta la documentación de productos de robótica de Seeed Studio.
+description: Este tema presenta la documentación de productos de Robótica de Seeed Studio.
 title: Robótica
 keywords:
 - robotics
@@ -119,39 +119,22 @@ last_update:
       <span className="text">Pinza DM</span>
       <span className="tag recommended">Nuevo</span>
     </a>
-    <a href="/es/starai_arm_ros_moveit/" className="nav-item">
-      <span className="text">Brazo Robótico Starai Moveit2</span>
-      <span className="tag recommended">Nuevo</span>
-    </a>
-    <a href="/es/control_robotic_arm_via_gr00t" className="nav-item">
-  <span className="text">Star AI con GR00T de NVIDIA</span>
-  </a>
 </div>
-
-## 🖐️ Mano
-
-<div className="card-container">
-    <a href="/es/hand_amazinghand/" className="nav-item">
-      <span className="text">AmazingHand</span>
-      <span className="tag recommended">Nuevo</span>
-    </a>
-</div>
-
 
 </div>
 </div>
 
-## ⚙️ Actuadores {#actuadores}
+## ⚙️ Actuadores {#actuators}
 
 <div class="category-group">
 <div className="category-card actuators">
 
 <div className="card-container">
     <a href="/es/myactuator_series/" className="nav-item">
-      <span className="text">0️⃣Serie X de MyActuator</span>
+      <span className="text">0️⃣MyActuator Serie X</span>
     </a>
     <a href="/es/damiao_series/" className="nav-item">
-      <span className="text">1️⃣Serie Damiao DM43</span>
+      <span className="text">1️⃣Damiao Serie DM43</span>
     </a>
     <a href="/es/feetech_servo/" className="nav-item">
       <span className="text">2️⃣Motor Servo Feetech STS3215</span>
@@ -164,7 +147,7 @@ last_update:
 </div>
 </div>
 
-## 👁️ Sensores {#sensores}
+## 👁️ Sensores {#sensors}
 
 <div class="category-group">
 <div className="category-card sensors">
@@ -361,7 +344,8 @@ html[data-theme='dark'] .nav-item {
 }
 
 /* 文字样式 */
-.nav-item .text {  font-size: 0.95rem;
+.nav-item .text {
+  font-size: 0.95rem;
   white-space: nowrap;
 }
 
@@ -386,8 +370,7 @@ html[data-theme='dark'] .nav-item {
 }
 
 /* Dark模式 - 悬浮动画 */
-html[data-theme='dark'] .nav-item:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+html[data-theme='dark'] .nav-item:hover {  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
   color: white;
 }
 

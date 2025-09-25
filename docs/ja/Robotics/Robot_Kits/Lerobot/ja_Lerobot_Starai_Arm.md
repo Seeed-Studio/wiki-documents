@@ -252,7 +252,7 @@ lsusb
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Calibrate1.png" />
 </div>
 
-識別後、ttyusbの情報を確認します。
+識別できたら、ttyusbの情報を確認します。
 
 ```sh
 sudo dmesg | grep ttyUSB
@@ -291,9 +291,9 @@ sudo chmod 666 /dev/ttyUSB1
 
 ## キャリブレーション
 
-### 初期キャリブレーション
+### 初回キャリブレーション
 
-各関節を左右に回転させて対応する位置に移動してください。
+各関節を左右に回転させて、対応する位置に移動してください。
 
 ### 再キャリブレーション
 
@@ -333,7 +333,7 @@ python -m lerobot.calibrate --teleop.type=starai_violin --teleop.port=/dev/ttyUS
 python -m lerobot.calibrate --robot.type=starai_viola --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraiviola_arm
 ```
 
-コマンドを実行した後、各関節が**制限位置**に到達するように**ロボットアームを手動で動かす**必要があります。ターミナルには記録された範囲データが表示されます。この操作が完了したら、Enterキーを押してください。
+コマンドを実行した後、**手動でロボットアームを動かして**各関節が**制限位置**に到達するようにする必要があります。ターミナルには記録された範囲データが表示されます。この操作が完了したら、Enterキーを押してください。
 
 :::tip
 キャリブレーションファイルは以下のパスに保存されます：`~/.cache/huggingface/lerobot/calibration/robots`と`~/.cache/huggingface/lerobot/calibration/teleoperators`。
@@ -364,7 +364,7 @@ python -m lerobot.calibrate --robot.type=bi_starai_follower --robot.left_arm_por
 
 シングルアームとデュアルアーム設定の違いは、`--teleop.type`と`--robot.type`パラメータにあります。さらに、デュアルアーム設定では左右のアーム用に別々のUSBポートが必要で、合計4つのUSBポートが必要です：`--teleop.left_arm_port`、`--teleop.right_arm_port`、`--robot.left_arm_port`、`--robot.right_arm_port`。
 
-デュアルアーム設定を使用する場合、テレオペレーション、データ収集、トレーニング、評価コマンドに適応するために、ロボットアームファイルタイプ`--teleop.type`と`--robot.type`、およびUSBポート`--teleop.left_arm_port`、`--teleop.right_arm_port`、`--robot.left_arm_port`、`--robot.right_arm_port`を手動で変更する必要があります。
+デュアルアーム設定を使用する場合は、テレオペレーション、データ収集、トレーニング、評価コマンドに適応するために、ロボットアームファイルタイプ`--teleop.type`と`--robot.type`、およびUSBポート`--teleop.left_arm_port`、`--teleop.right_arm_port`、`--robot.left_arm_port`、`--robot.right_arm_port`を手動で変更する必要があります。
 
 :::
 
@@ -425,7 +425,7 @@ python -m lerobot.teleoperate \
 <iframe width="900" height="600" src="https://www.youtube.com/embed/-p8K_-XxW8U?si=UmYWvEyKNPpTRxDC" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-2つのUSBカメラを挿入した後、以下のスクリプトを実行してカメラのポート番号を確認してください。カメラはUSBハブに接続してはならず、デバイスに直接接続する必要があることを覚えておくことが重要です。USBハブの低速度により、画像データを読み取れない場合があります。
+2台のUSBカメラを挿入した後、以下のスクリプトを実行してカメラのポート番号を確認してください。カメラはUSBハブに接続してはならず、デバイスに直接接続する必要があることを覚えておくことが重要です。USBハブの低速度により、画像データを読み取れない場合があります。
 
 ```bash
 python -m lerobot.find_cameras opencv # or realsense for Intel Realsense cameras
@@ -462,9 +462,9 @@ Finalizing image saving...
 Image capture finished. Images saved to outputs/captured_images
 ```
 
-各カメラで撮影された画像は`outputs/images_from_opencv_cameras`ディレクトリで確認でき、異なる位置のカメラに対応するポートインデックス情報を検証できます。
+`outputs/images_from_opencv_cameras`ディレクトリで各カメラが撮影した画像を確認し、異なる位置のカメラに対応するポートインデックス情報を検証できます。
 
-外部カメラを確認した後、以下のカメラ情報を実際のカメラ情報に置き換えると、リモート操作中にコンピューターでカメラを表示できるようになります：
+外部カメラを確認した後、以下のカメラ情報を実際のカメラ情報に置き換えると、リモート操作中にコンピュータでカメラを表示できるようになります：
 
 ```bash
 python -m lerobot.teleoperate \
@@ -521,7 +521,7 @@ pip3 install rerun-sdk==0.23
 
 テレオペレーションに慣れたら、最初のデータセットを記録できます。
 
-データセットをアップロードするためにHugging Face hubの機能を使用したい場合で、以前に行ったことがない場合は、[Hugging Face設定](https://huggingface.co/settings/tokens)から生成できる書き込みアクセストークンを使用してログインしていることを確認してください：
+データセットのアップロードにHugging Face hubの機能を使用したい場合で、以前に行ったことがない場合は、[Hugging Face設定](https://huggingface.co/settings/tokens)から生成できる書き込みアクセストークンを使用してログインしていることを確認してください：
 
 ```bash
 huggingface-cli login --token ${HUGGINGFACE_TOKEN} --add-to-git-credential
@@ -578,7 +578,7 @@ python -m lerobot.record \
 ```
 
 :::tip
-シングルアームとデュアルアームのセットアップを区別するために、ここでの`--dataset.repo_id`は`starai/record-test_bi_arm`という名前になっています。
+シングルアームとデュアルアームのセットアップを区別するため、ここでの`--dataset.repo_id`は`starai/record-test_bi_arm`という名前になっています。
 :::
 
 </details>
@@ -632,7 +632,7 @@ python -m lerobot.record \
 ```
 
 :::tip
-シングルアームとデュアルアームのセットアップを区別するために、ここでの`--dataset.repo_id`は`starai/record-test_bi_arm`という名前になっています。
+シングルアームとデュアルアームのセットアップを区別するため、ここでの`--dataset.repo_id`は`starai/record-test_bi_arm`という名前になっています。
 :::
 
 </details>
@@ -673,7 +673,7 @@ Parameter Description
 :::tip
 Linuxでは、データ記録中に左右の矢印キーとエスケープキーが効かない場合、$DISPLAY環境変数が設定されていることを確認してください。pynputの制限を参照してください。
 
-データ記録に慣れたら、トレーニング用により大きなデータセットを作成できます。良い開始タスクは、異なる位置でオブジェクトを掴み、小さな箱に置くことです。少なくとも50エピソード、位置ごとに10エピソードを記録することをお勧めします。カメラを固定し、記録全体を通して一貫した掴み動作を維持してください。また、操作しているオブジェクトがカメラに映っていることを確認してください。良い経験則は、カメラ画像だけを見てタスクを完了できることです。
+データ記録に慣れたら、トレーニング用により大きなデータセットを作成できます。良い開始タスクは、異なる位置でオブジェクトを掴み、小さな箱に置くことです。少なくとも50エピソード、場所ごとに10エピソードを記録することをお勧めします。記録全体を通してカメラを固定し、一貫した掴み動作を維持してください。また、操作しているオブジェクトがカメラに映っていることを確認してください。良い経験則は、カメラ画像だけを見てタスクを完了できることです。
 :::
 
 ## データセットの可視化
@@ -762,7 +762,9 @@ python -m lerobot.scripts.train \
 </details>
 
 1. データセットをパラメータとして提供します：`dataset.repo_id=starai/record-test`。
+
 2. [`configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/src/lerobot/policies/act/configuration_act.py)から設定を読み込みます。重要なことに、このポリシーはロボットのモーター状態、モーターアクション、カメラ数に自動的に適応し、データセットに保存されます。
+
 3. トレーニングチャートを可視化するために[Weights and Biases](https://docs.wandb.ai/quickstart)を使用する場合は、`wandb.enable=true`を提供します。これはオプションですが、使用する場合は`wandb login`を実行してログインしていることを確認してください。
 
 特定のチェックポイントからトレーニングを再開します。
@@ -835,29 +837,27 @@ python -m lerobot.record  \
 
 - 3060 8GBラップトップでACTデータの50エピソードをトレーニングするには約6時間かかり、4090またはA100コンピュータでは約2-3時間かかります。
 
-- データ収集中は、カメラの位置と角度の安定性、環境照明を確保し、カメラに映る不安定な背景や歩行者を最小限に抑えてください。そうしないと、デプロイメント環境の大幅な変化により、ロボットアームが正常にオブジェクトを把握できなくなる可能性があります。
+- データ収集中は、カメラの位置と角度、環境照明の安定性を確保し、カメラに映る不安定な背景や歩行者を最小限に抑えてください。そうしないと、デプロイメント環境の大幅な変化により、ロボットアームが正常にオブジェクトを把握できなくなる可能性があります。
 
 - データ収集コマンドの`num-episodes`は十分なデータ収集を確保し、途中で手動で一時停止しないでください。これは、データの平均と分散がデータ収集完了後にのみ計算されるためで、これはトレーニングに必要です。
 
-- プログラムがUSBカメラの画像データを読み取れないというプロンプトが表示される場合は、USBカメラがHubを介して接続されていないことを確認してください。USBカメラは高速画像転送レートを確保するために、デバイスに直接接続する必要があります。
+- プログラムがUSBカメラの画像データを読み取れないというプロンプトが表示された場合は、USBカメラがHubを介して接続されていないことを確認してください。USBカメラは高速画像転送レートを確保するために、デバイスに直接接続する必要があります。
 
 ## 引用
 
-Seeedstudio英語Wikiドキュメント：[How to use the SO10xArm robotic arm in the latest version of Lerobot](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/)
+StarAI ロボットアーム ROS2 Moveit2: [star-arm-moveit2](https://wiki.seeedstudio.com/ja/starai_arm_ros_moveit/)
 
-lerobot-starai github: [lerobot-starai](https://github.com/Welt-liu/lerobot-starai)
+lerobot-starai github: [lerobot-starai](https://github.com/servodevelop/lerobot.git)
 
 STEP: [STEP](https://github.com/Welt-liu/star-arm-moveit2/tree/main/hardware)
 
 URDF: [URDF](https://github.com/Welt-liu/star-arm-moveit2/tree/main/src/cello_description)
 
-StarAI Robot Arm moveit2: [star-arm-moveit2](https://github.com/Welt-liu/star-arm-moveit2)
+Huggingface プロジェクト: [Lerobot](https://github.com/huggingface/lerobot/tree/main)
 
-Huggingface Project: [Lerobot](https://github.com/huggingface/lerobot/tree/main)
+ACT または ALOHA: [低コストハードウェアによる細粒度二手操作の学習](https://tonyzhaozh.github.io/aloha/)
 
-ACT or ALOHA: [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](https://tonyzhaozh.github.io/aloha/)
-
-VQ-BeT: [VQ-BeT: Behavior Generation with Latent Actions](https://sjlee.cc/vq-bet/)
+VQ-BeT: [VQ-BeT: 潜在アクションによる行動生成](https://sjlee.cc/vq-bet/)
 
 Diffusion Policy: [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)
 

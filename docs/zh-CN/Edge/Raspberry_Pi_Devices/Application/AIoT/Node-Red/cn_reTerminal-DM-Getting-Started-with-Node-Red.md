@@ -35,6 +35,7 @@ last_update:
 这是关于如何在 reTerminal DM 上设置以及熟悉 Node-RED 界面的入门指南。
 
 :::tip
+
 - 对于 **Raspbian OS** 用户，请转到：[安装 Node-RED](#install-and-setting-up-node-red)
 - 对于 **Sensecraft Edge OS** 用户，请转到：[熟悉 Node-RED](#getting-familiar-with-node-red)，因为 Sensecraft Edge OS 预装了 Node-RED
 
@@ -171,7 +172,7 @@ Node-RED 编辑器的核心元素列表如下：
 cd .node-red/
 ```
 
-STEP 2: Install Modbus Node
+步骤 2：安装 Modbus 节点
 
 ```
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/npm-install-node.png" /></div><br />

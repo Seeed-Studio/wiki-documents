@@ -282,9 +282,9 @@ Arduino IDE 1.6.5は、**Board Manager** ツールを使用してサードパー
 
 **1.** Arduino IDEで、[ファイル] メニューから [環境設定] をクリックし、以下を追加します：
 
-````
+```
 http://download.labs.mediatek.com/package_mtk_linkit_smart_7688_index.json
-````
+```
 
 これを「追加のボードマネージャURL」フィールドに挿入します：
 

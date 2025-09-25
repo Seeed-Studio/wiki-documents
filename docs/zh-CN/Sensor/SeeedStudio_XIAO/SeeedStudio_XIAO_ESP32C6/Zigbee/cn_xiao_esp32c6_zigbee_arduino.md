@@ -195,31 +195,31 @@ void setup() {
   digitalWrite(LED_PIN, LOW);
 ```
 
-First, we configure the LED pin as an output and turn it off initially.
+首先，我们将 LED 引脚配置为输出并初始设置为关闭状态。
 
 ```cpp
   pinMode(BUTTON_PIN, INPUT_PULLUP);
 ```
 
-The button pin is configured as an input with an internal pull-up resistor.
+按钮引脚被配置为带有内部上拉电阻的输入。
 
 ```cpp
   zbLight.setManufacturerAndModel("Espressif", "ZBLightBulb");
 ```
 
-This sets the manufacturer and model name for the device, which helps identify it on the Zigbee network.
+这设置了设备的制造商和型号名称，有助于在Zigbee网络上识别它。
 
 ```cpp
   zbLight.onLightChange(setLED);
 ```
 
-This registers `setLED()` as a callback function, which gets called whenever there is a change in the light state.
+这将 `setLED()` 注册为回调函数，每当光线状态发生变化时就会调用该函数。
 
 ```cpp
   Zigbee.addEndpoint(&zbLight);
 ```
 
-We add `zbLight` as an endpoint to the Zigbee core. This allows other Zigbee devices to interact with this endpoint.
+我们将 `zbLight` 添加为 Zigbee 核心的一个端点。这允许其他 Zigbee 设备与该端点进行交互。
 
 ```cpp
   Zigbee.begin();

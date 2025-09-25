@@ -263,7 +263,7 @@ The output will be as follows on Arduino Serial Monitor:
 
 :::note
 Breathing and heart rate can be detected within 1.5 meters, and presence can be detected within a range of 1.5 to 6 meters.  
-When there are people within the 1.5M range, the module will enter the heartbeat and breathing detection mode.   
+When there are people within the 1.5M range, the module will enter the heartbeat and breathing detection mode.
 In this mode, the sensitivity of the human detection function may decrease.  
 :::
 
@@ -569,25 +569,51 @@ You will see the original data sent by the module.
 Then you need to download and unzip the OTA tool and the firmware here.
 
 :::note
-The firmware 1.6.5 has the following update:
-1. Fixed the issue that breathing and heart rate were sometimes not detected when the human body was at rest.
+The firmware 1.6.12 has the following update:
+
+1. Fixed target loss when stationary within 1.5 meters.
+
+2. Optimized tracking stability for targets moving between 0-3 meters, resolving previous inaccuracies in target coordinates. However, the reporting refresh rate has decreased.
+
+3. Breathing and heart rate accuracy—No updates in this release. Continued optimization of related machine learning training is underway. A firmware update to improve breathing and heart rate accuracy will be released around month-end. The previous breathing and heart rate algorithm had fundamental issues, which have been addressed.
+
 :::
 
 - **MR60BHA2 Firmware upgrade tool**: [MR60BHA2_OTA.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_OTA.zip)
-- **MR60BHA2 Firmware v1.6.10**: [MR60BHA2_eeprom_1.6.10.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.10.bin)
+- **MR60BHA2 Firmware v1.6.12**: [MR60BHA2_eeprom_1.6.12.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.12.bin)
 
 <details>
 
 <summary>Click here to preview the old version</summary>
 
 - **MR60BHA2 Firmware v1.6.4**: [MR60BHA2_eeprom_1.6.4.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.4.bin)
-- **MR60BHA2 Firmware v1.6.5**: [MR60BHA2_eeprom_1.6.5.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.5.bin)
 
 :::note
 The firmware 1.6.4 has the following update:
+
 1. Optimized the breathing and heart rate detection feature, fixing the bug where small body movements caused data loss.  
 2. Enhanced the 3D presence detection function: breathing and heart rate can be detected within 1.5 meters, and presence can be detected within a range of 1.5 to 6 meters.  
 3. Added a personnel detection feature, capable of detecting up to three individuals within a range of 6 meters.
+
+:::
+
+- **MR60BHA2 Firmware v1.6.5**: [MR60BHA2_eeprom_1.6.5.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.5.bin)
+
+:::note
+The firmware 1.6.5 has the following update:
+
+1. Fixed the issue that breathing and heart rate were sometimes not detected when the human body was at rest.
+
+:::
+
+- **MR60BHA2 Firmware v1.6.10**: [MR60BHA2_eeprom_1.6.10.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.10.bin)
+
+:::note
+The firmware 1.6.10 has the following update:
+
+1. Optimized breathing mechanics to resolve the issue where breath hold duration does not decrease.
+2. Added data collection functionality.
+
 :::
 
 </details>
@@ -608,7 +634,7 @@ The firmware 1.6.4 has the following update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware-update/5-module-enter-upgrade-mode.png" style={{width:700, height:'auto'}}/></div>
 
-4. Select the firmware to be upgraded. After selection, it will automatically enter the upgrade state. 
+4. Select the firmware to be upgraded. After selection, it will automatically enter the upgrade state.
 
 After the upgrade is completed, it will automatically jump to normal mode. If it does not jump, power off and restart, and then use OTA tool to view the serial port data.
 
@@ -642,13 +668,12 @@ The firmware and algorithms of the radar are not open source, and complex parame
 - **GitHub Repository**: Access the full codebase and documentation at the [Seeed mmWave Library GitHub page](https://github.com/Love4yzp/Seeed-mmWave-library).
 - **ESPHome Documentation**: For further customization and integration, refer to the [ESPHome documentation](https://esphome.io/).
 - **MR60BHA2 Firmware upgrade tool**: [MR60BHA2_OTA.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_OTA.zip)
-- **MR60BHA2 Firmware v1.6.5**: [MR60BHA2_eeprom_1.6.5.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.5.bin)
+- **MR60BHA2 Firmware v1.6.12**: [MR60BHA2_eeprom_1.6.12.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.12.bin)
 - **MR60BHA2 GUI Software**: [Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip)
 - **mmWave Sensor SCH V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
 - **MR60BHA2 Module Technical Specification**: [MR60BHA2_Breathing_and_Heartbeat_Module.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/MR60BHA2_Breathing_and_Heartbeat_Module.pdf)
 - **MR60BHA2 Tiny Frame Interface Manual**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)
 - **Radar Firmware Recovery Method via Jlink**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
-
 
 ## Tech Support & Product Discussion
 

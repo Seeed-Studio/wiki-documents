@@ -754,9 +754,9 @@ Comando para verificar valores DoA
 
 ```bash
 ./xvf_host AEC_AZIMUTH_VALUES
-````
+```
 
-Example Output
+Ejemplo de salida
 
 ```bash
 Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3

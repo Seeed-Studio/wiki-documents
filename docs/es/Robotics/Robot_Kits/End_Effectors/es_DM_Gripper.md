@@ -2,19 +2,31 @@
 description: Esta wiki tiene como objetivo promover el desarrollo de una pinza intercambiable utilizando el motor DM-4310-2EC
 title: DM_Gripper - Guía de Ensamblaje con Demo
 keywords:
-- Gripper
-- Robotics 
+  - DM_Gripper
+  - DM-4310-2EC
+  - 3D Printed Gripper
+  - Swappable Gripper
+  - Robotics 
 slug: /es/dm_gripper
 last_update:
   date: 9/17/2025
   author: Ylson W
 ---
 
-# DM_Gripper - Guía de Ensamblaje
+# DM_Gripper – Guía de Ensamblaje de Código Abierto
 
-DM_Gripper está diseñado con una estructura amigable para el ensamblaje/desensamblaje y una mentalidad de código abierto. Esto permite a los aficionados y desarrolladores crear prototipos rápidamente a través de impresión 3D o rediseñarlo para satisfacer necesidades personalizadas.
+El **DM_Gripper** es una **pinza robótica impresa en 3D** de código abierto diseñada alrededor del **motor DM-4310-2EC**. Su diseño modular enfatiza la facilidad de ensamblaje y desensamblaje, permitiendo tanto a aficionados como a desarrolladores de robótica **crear prototipos rápidamente, personalizar y escalar** sus proyectos.  
 
-La pinza cuenta con un sistema de garras intercambiables, lo que facilita el intercambio de garras de diferentes formas para casos de uso alternativos. Todas las partes son completamente imprimibles en 3D en casa con soporte mínimo requerido. La wiki a continuación proporciona una guía paso a paso para el ensamblaje.
+Totalmente compatible con **actuadores DAMIAO**, el DM_Gripper también proporciona flexibilidad para la integración con otras marcas de actuadores. Su único **sistema de garras intercambiables** permite a los usuarios intercambiar rápidamente garras de diferentes formas, soportando diversas tareas robóticas y casos de uso.  
+
+Todas las partes de la pinza son **completamente imprimibles en 3D** con requisitos mínimos de soporte, haciéndola accesible para makers, investigadores e ingenieros por igual.  
+
+Esta wiki incluye:  
+- Descripción general del diseño del mecanismo  
+- Lista completa de materiales (BOM)  
+- Guía de impresión 3D y configuración  
+- Instrucciones de ensamblaje paso a paso  
+- Demo y casos de uso prácticos 
 
 <div align="center">
   <img width ="720" src="https://files.seeedstudio.com/wiki/robotics/projects/end_effectors/dm_gripper/1-100094243--Seeed-Gripper-01.jpg"/>  
@@ -27,7 +39,7 @@ Las dimensiones y el rango de operación se muestran a continuación en milímet
 </div>
 
 ## Mecanismos de Accionamiento
-Esta pinza cuenta con un mecanismo clásico de Doble Manivela y Deslizador, traduciendo el movimiento rotacional a movimiento axial.
+Esta pinza presenta un mecanismo clásico de Doble Manivela y Deslizador, traduciendo el movimiento rotacional a movimiento axial.
 
 - **Demostración de Manivela y Deslizador:**
 <div align="center">
@@ -100,7 +112,7 @@ Esta pinza cuenta con un mecanismo clásico de Doble Manivela y Deslizador, trad
 
     <br/>
 
-    - Paso 2: Las configuraciones de Scarf proporcionan un mejor acabado superficial como se marca en los Rectángulos Verdes.  
+    - Paso 2: Las configuraciones Scarf proporcionan un mejor acabado superficial como se marca en los Rectángulos Verdes.  
     <br/>
     <div align="center">
     <img src="https://github.com/YlsonDdb/DM_Gripper/raw/main/docs/pics/Scarf_Settings.png" 
@@ -109,7 +121,7 @@ Esta pinza cuenta con un mecanismo clásico de Doble Manivela y Deslizador, trad
 
     <br/>
 
-    - Paso 3: Mis Configuraciones de Impresión: altura de capa de 0.2mm, densidad de relleno del 25%, Estilo – Panal 3D.  
+    - Paso 3: Mis Configuraciones de Impresión: altura de capa 0.2mm, densidad de relleno 25%, Estilo – Panal 3D.  
     <p align="center">
     <img src="https://github.com/YlsonDdb/DM_Gripper/raw/main/docs/pics/ps1.png" alt="ps1" height="500" hspace="5"/>
     <img src="https://github.com/YlsonDdb/DM_Gripper/raw/main/docs/pics/ps2.png" alt="ps2" height="500" hspace="5"/>
@@ -231,7 +243,7 @@ Esta pinza cuenta con un mecanismo clásico de Doble Manivela y Deslizador, trad
 </div>
 
 ## Demos y Archivos CAD
-- Sigue la [**Wiki de Actuadores Damiao**](https://wiki.seeedstudio.com/es/damiao_series/) para configurar todo si aún no lo has hecho.
+- Sigue la [**Wiki de Actuadores Damiao**](https://wiki.seeedstudio.com/es/damiao_series/) para configurar todo si no lo has hecho aún.
 - Sigue el [**Demo del Controlador de Torque**](https://github.com/tianrking/DM_Gripper/tree/main) (**muchas gracias a tianrking**) para hacer que la pinza se mueva con una GUI genial.  
 <div align="center">
   <img src="https://github.com/YlsonDdb/DM_Gripper/raw/main/docs/pics/DM_GripperController.gif" 

@@ -22,7 +22,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-optional-accessories.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6InJlY29tcHUiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjoyLCJjX3RvdGFsX3Jlc3VsdHMiOjg4LCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0ifQ%3D%3D" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
 </a></div>
 
 :::tip[学習内容]
@@ -65,119 +65,119 @@ Jetsonのネイティブ UARTを使用することを強く推奨します。こ
 - **デバイスファイル**: このシリアルポートは、JetsonのOSでは`/dev/ttyTHS1`に対応します。
 
 <details>
-<summary><strong>Pixhawk 4 Miniポートとピン配置の詳細（クリックして展開）</strong></summary>
+<summary><strong>Pixhawk 4 Miniのポート／ピン配置の詳細（クリックして展開）</strong></summary>
 
 <br/>
 
-| UART   | Device      | QGC Parameter Description | Port Label on FC           |
-| :----- | :---------- | :------------------------ | :------------------------- |
-| UART1  | /dev/ttyS0  | GPS1                      | GPS Module                 |
-| USART2 | /dev/ttyS1  | TELEM1                    | TELEM1                     |
-| USART3 | /dev/ttyS2  | TELEM2                    | N/A                        |
-| UART4  | /dev/ttyS3  | TELEM/SERIAL4             | UART/I2C B                 |
-| USART6 | /dev/ttyS4  | N/A                       | RC IN                      |
-| UART7  | /dev/ttyS5  | N/A                       | Debug                      |
-| UART8  | /dev/ttyS6  | N/A                       | Not connected (no PX4IO)   |
+| UART   | デバイス     | QGCパラメータの説明 | FC上のポートラベル            |
+| :----- | :----------- | :------------------ | :---------------------------- |
+| UART1  | /dev/ttyS0  | GPS1                | GPSモジュール                 |
+| USART2 | /dev/ttyS1  | TELEM1              | TELEM1                        |
+| USART3 | /dev/ttyS2  | TELEM2              | なし                          |
+| UART4  | /dev/ttyS3  | TELEM/SERIAL4       | UART/I2C B                    |
+| USART6 | /dev/ttyS4  | なし                | RC IN                         |
+| UART7  | /dev/ttyS5  | なし                | デバッグ                      |
+| UART8  | /dev/ttyS6  | なし                | 未接続（PX4IOなし）          |
 
-### TELEM1, TELEM2 ポート
+### TELEM1 / TELEM2 ポート
 
-| Pin       | Signal  | Volt  |
-| :-------- | :------ | :---- |
-| 1(red)    | VCC     | +5V   |
-| 2(black)  | TX(out) | +3.3V |
-| 3(black)  | RX(in)  | +3.3V |
-| 4(black)  | CTS(in) | +3.3V |
-| 5(black)  | RTS(out)| +3.3V |
-| 6(black)  | GND     | GND   |
+| ピン       | 信号     | 電圧   |
+| :--------- | :------- | :----- |
+| 1（赤）    | VCC      | +5V    |
+| 2（黒）    | TX（出力） | +3.3V |
+| 3（黒）    | RX（入力） | +3.3V |
+| 4（黒）    | CTS（入力）| +3.3V |
+| 5（黒）    | RTS（出力）| +3.3V |
+| 6（黒）    | GND      | GND    |
 
 ### DSM RC ポート
 
-| Pin        | Signal             | Volt  |
-| :--------- | :----------------- | :---- |
-| 1(null)    | VDD_5V_SBUS_RC     | +5V   |
-| 2(yellow)  | SBUS* | +3.3V |
-| 3(null)    | RSSI** | +3.3V |
-| 4(red)     | VDD_3V3_SPEKTRUM   | +3.3V |
-| 5(black)   | GND                | GND   |
+| ピン        | 信号               | 電圧   |
+| :---------- | :----------------- | :----- |
+| 1（なし）   | VDD_5V_SBUS_RC     | +5V    |
+| 2（黄）     | SBUS*              | +3.3V  |
+| 3（なし）   | RSSI**             | +3.3V  |
+| 4（赤）     | VDD_3V3_SPEKTRUM   | +3.3V  |
+| 5（黒）     | GND                | GND    |
 
 ### UART & I2C B ポート *
 
-| Pin       | Signal  | Volt  |
-| :-------- | :------ | :---- |
-| 1(red)    | VCC     | +5V   |
-| 2(black)  | TX(out) | +3.3V |
-| 3(black)  | RX(in)  | +3.3V |
-| 4(black)  | SCL2    | +3.3V |
-| 5(black)  | SDA2    | +3.3V |
-| 6(black)  | GND     | GND   |
+| ピン       | 信号     | 電圧   |
+| :--------- | :------- | :----- |
+| 1（赤）    | VCC      | +5V    |
+| 2（黒）    | TX（出力） | +3.3V |
+| 3（黒）    | RX（入力） | +3.3V |
+| 4（黒）    | SCL2     | +3.3V  |
+| 5（黒）    | SDA2     | +3.3V  |
+| 6（黒）    | GND      | GND    |
 
 ### SBUS RC ポート
 
-| Pin        | Signal             | Volt  |
-| :--------- | :----------------- | :---- |
-| 1(red)     | VDD_5V_SBUS_RC     | +5V   |
-| 2(yellow)  | SBUS* | +3.3V |
-| 3(null)    | RSSI** | +3.3V |
-| 4(null)    | VDD_3V3_SPEKTRUM   | +3.3V |
-| 5(black)   | GND                | GND   |
+| ピン        | 信号               | 電圧   |
+| :---------- | :----------------- | :----- |
+| 1（赤）     | VDD_5V_SBUS_RC     | +5V    |
+| 2（黄）     | SBUS*              | +3.3V  |
+| 3（なし）   | RSSI**             | +3.3V  |
+| 4（なし）   | VDD_3V3_SPEKTRUM   | +3.3V  |
+| 5（黒）     | GND                | GND    |
 
 ---
 **脚注:**
 
-- **`*` (UART & I2C B ポート):** シリアル通信やI2Cをサポートするセンサーを接続するための予備ポート。例えば、2番目のGPSモジュールをここに接続できます。
-- **`*` (SBUS信号):** SBUSまたはDSM/Spektrumレシーバーの信号線をここに接続します。
-- **`**` **(RSSI信号):** RC信号強度情報をオートパイロットに送信します。
+- **（UART & I2C B ポート）:** シリアル通信やI2Cをサポートするセンサーを接続するための予備ポート。例：2基目のGPSモジュールなど。
+- **（SBUS信号）:** SBUSまたはDSM/Spektrumレシーバーの信号線をここに接続します。
+- **（RSSI信号）:** RC信号強度情報をオートパイロットへ送信します。
 
 </details>
 
 :::caution[重要: シリアルポートの権限設定]
 
-すべてのシリアルコマンドで `sudo` を使用することを避けるため、ユーザーを `dialout` グループに追加する必要があります。これは重要な一回限りの設定です。
+すべてのシリアルコマンドで `sudo` を使うのを避けるには、ユーザーを `dialout` グループに追加する必要があります。これは一度だけ行う重要な設定です。
 
 ```bash
 sudo usermod -a -G dialout $USER
-````
+```
 
-**You must reboot the Jetson for this change to take effect\!**
+**この変更を反映させるには、Jetsonを再起動する必要があります。**
 
 :::
 
-## Choosing Your Method: A Comparison
+## 方法の選び方：比較
 
-Before diving in, understand the trade-offs. The right choice depends entirely on your project's goals.
+作業に入る前に、トレードオフを理解しましょう。最適な選択はプロジェクトの目的によって決まります。
 
-| Feature             | uXRCE-DDS (ROS 2 Native) 🚀                                     | MAVSDK (High-Level API) 🐍                                         | MAVROS (ROS Bridge) 🌉                                                        |
-| :------------------ | :--------------------------------------------------------------- | :----------------------------------------------------------------- | :---------------------------------------------------------------------------- |
-| **Architecture** | PX4 and ROS 2 share a DDS data space for **native communication**. | A standalone C++ library (with wrappers) providing a high-level API. | A **bridge/gateway** that translates MAVLink protocol to ROS topics/services. |
-| **Performance** | **Highest**. Zero-copy data transfer with the lowest latency.      | **High**. The API calls directly generate efficient MAVLink messages.    | **Good**. A slight overhead exists due to the MAVLink-to-ROS translation layer. |
-| **Ease of Use** | Moderate. Requires compiling the Agent and `px4_msgs`.          | **Easiest**. Intuitive, function-based API ideal for rapid prototyping. | Steep learning curve but offers the deepest integration with the ROS ecosystem. |
-| **Flexibility** | **Excellent**. Provides direct access to all internal PX4 uORB topics. | **Limited**. Exposes common actions (takeoff, waypoints) but not raw data. | **Excellent**. Access to nearly all MAVLink messages, parameters, and services. |
-| **ROS Integration** | **Native ROS 2**. The official, future-proof method for ROS 2.       | **ROS Agnostic**. Can be used in any project, easily wrapped in a ROS node. | **ROS Centric**. The de-facto standard for ROS 1 and widely used in ROS 2.    |
-| **Use Case** | Performance-critical ROS 2 projects needing low-level data access. | Task-level scripting, rapid prototyping, non-ROS projects, and education. | Complex robotics systems integrated with ROS packages like Nav2 or MoveIt.    |
+| 特徴          | uXRCE-DDS（ROS 2ネイティブ）🚀                | MAVSDK（高レベルAPI）🐍                        | MAVROS（ROSブリッジ）🌉                               |
+| :---------- | :------------------------------------- | :--------------------------------------- | :---------------------------------------------- |
+| **アーキテクチャ** | PX4とROS 2がDDSデータ空間を共有し、**ネイティブ通信**を実現。 | ラッパー付きのスタンドアロンC++ライブラリで高レベルAPIを提供。       | MAVLinkプロトコルをROSのトピック／サービスへ変換する**ブリッジ／ゲートウェイ**。 |
+| **性能**      | **最高**。ゼロコピーで最小レイテンシ。                  | **高い**。API呼び出しが効率的なMAVLinkメッセージを直接生成。    | **良好**。MAVLink→ROS変換レイヤ由来の軽微なオーバーヘッドあり。         |
+| **使いやすさ**   | 中程度。Agentと`px4_msgs`のビルドが必要。           | **最も簡単**。関数ベースで直感的。素早いプロトタイピングに最適。       | 学習コストは高いが、ROSエコシステムとの統合が最も深い。                   |
+| **柔軟性**     | **優秀**。PX4内部（uORB）の全トピックへ直接アクセス可能。     | **限定的**。離陸やウェイポイントなど一般的操作は可、rawデータは不可。   | **優秀**。ほぼ全てのMAVLinkメッセージ／パラメータ／サービスへアクセス可。      |
+| **ROS統合**   | **ROS 2ネイティブ**。公式で将来性のある方法。            | **ROSに非依存**。どのプロジェクトでも利用可、ROSノードで包むのも容易。 | **ROS中心**。ROS 1のデファクトで、ROS 2でも広く利用。             |
+| **ユースケース**  | 低レベルデータへのアクセスが必要な性能重視のROS 2案件。         | タスクレベルのスクリプト、試作、非ROS案件、教育用途。             | Nav2やMoveItなどと統合する複雑なROSシステム。                   |
 
-## Method 1: uXRCE-DDS (Native ROS 2 Integration)
+## 方法1：uXRCE-DDS（ROS 2ネイティブ統合）
 
-This is PX4's official solution for ROS 2, bridging its internal `uORB` messaging system directly into the ROS 2 network for zero-overhead communication.
+PX4の内部メッセージング `uORB` をROS 2ネットワークへ直接ブリッジし、オーバーヘッド無しの通信を実現するPX4公式の解決策です。
 
-### Step 1: Compile the Micro XRCE-DDS Agent
+### ステップ1：Micro XRCE-DDS Agentのコンパイル
 
-The Agent is a small program on the Jetson that acts as a broker between the flight controller's serial connection and the ROS 2 network.
+AgentはJetson上で動作する軽量プログラムで、フライトコントローラのシリアル接続とROS 2ネットワークの仲介役を担います。
 
-```bash title="Terminal on Jetson"
-# 1. Clone the specific version of the Agent repository
+```bash title="Jetsonのターミナル"
+# 1. Agentリポジトリの特定バージョンをクローン
 cd ~
 git clone -b v2.4.2 https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
 cd Micro-XRCE-DDS-Agent
 
-# 2. IMPORTANT: Patch the Fast-DDS dependency version
-# The v2.12.x tag for fastdds was removed by the vendor; we update it to a working one.
+# 2. 重要：Fast-DDS依存バージョンをパッチ
+# fastddsのv2.12.xタグはベンダにより削除されたため、動作する版へ更新
 sed -i 's/v2.12.x/v2.13.x/g' SuperBuild.cmake
 
-# 3. Build and install the Agent
+# 3. Agentをビルドしてインストール
 mkdir build && cd build
 cmake ..
 make
-sudo make install # Installs MicroXRCEAgent globally
+sudo make install # MicroXRCEAgentをグローバルにインストール
 ```
 
 <div style={{
@@ -193,41 +193,41 @@ sudo make install # Installs MicroXRCEAgent globally
 
 ### ステップ2: `px4_msgs` ROS 2パッケージをビルドする
 
-ROS 2がPX4のトピックを理解できるようにするには、そのメッセージ定義をビルドする必要があります。
+ROS 2がPX4のトピックを理解できるよう、メッセージ定義をビルドします。
 
-```bash title="Terminal on Jetson"
-# 1. Create a ROS 2 workspace
+```bash title="Jetsonのターミナル"
+# 1. ROS 2ワークスペースを作成
 mkdir -p ~/px4_ros_ws/src
 cd ~/px4_ros_ws/src
 
-# 2. Clone the required repositories
+# 2. 必要なリポジトリをクローン
 git clone https://github.com/PX4/px4_msgs.git
-git clone https://github.com/PX4/px4_ros_com.git # Contains examples
+git clone https://github.com/PX4/px4_ros_com.git # サンプルを含む
 
-# 3. Checkout the branch matching your firmware version
+# 3. 利用中のファームウェアに一致するブランチへチェックアウト
 cd px4_msgs
 git checkout release/1.15
 
-# 4. Build the workspace
+# 4. ワークスペースをビルド
 cd ~/px4_ros_ws
 source /opt/ros/humble/setup.bash
 colcon build
 ```
 
-:::caution[uXRCE-DDSのハードウェア互換性]
+:::caution[ハードウェア互換性（uXRCE-DDS 用）]
 
-`px4_msgs`のバージョンは、お使いのPX4ファームウェアのバージョンと**必ず**一致させる必要があります。これは互換性にとって重要です。
+`px4_msgs` のバージョンは、PX4 ファームウェアのバージョンと**必ず**一致している必要があります。これは互換性のために非常に重要です。
 
-さらに、PX4ファームウェアv1.14以降で標準となったuXRCE-DDSによる完全なネイティブROS 2サポートには、**2MBのフラッシュメモリ**を持つフライトコントローラー（このガイドで使用されているPixhawk 4 Miniなど）が必要です。
+さらに、PX4 ファームウェア v1.14 以降で標準となった uXRCE-DDS による完全なネイティブ ROS 2 サポートを利用するには、**2MB のフラッシュメモリ**を搭載したフライトコントローラ（本ガイドで使用している Pixhawk 4 Mini など）が必要です。
 
-人気のある**Pixhawk 2.4.8**（およびその他のFMUv2ベースのボード）などの古い従来のハードウェアは、1MBのフラッシュしか持ちません。これらはこのuXRCE-DDS方式に必要な標準のプリビルドファームウェアを実行できません。カスタムの軽量ファームウェアを作成することは理論的には可能ですが、複雑なプロセスです。
+古いクラシックハードウェア、たとえばよく使われる **Pixhawk 2.4.8**（およびその他の FMUv2 ベースのボード）はフラッシュメモリが 1MB しかなく、この方法に必要な標準のプリビルドファームウェアを実行できません。理論的にはカスタムで削減版ファームウェアを作ることも可能ですが、非常に複雑です。
 
-**Pixhawk 2.4.8またはその他の1MBフラッシュボードを使用している場合は、この方式をスキップして直接[方式2（MAVSDK）](#4-method-2-mavsdk-high-level-api)または[方式3（MAVROS）](#5-method-3-mavros-the-powerful-ros-bridge)に進むことを強く推奨します。どちらもお使いのハードウェアで完全にサポートされているMAVLinkプロトコルを使用しているためです。**
+**もし Pixhawk 2.4.8 やその他 1MB フラッシュのボードを使用している場合、この方法はスキップし、代わりに [方法 2 (MAVSDK)](#4-method-2-mavsdk-high-level-api) または [方法 3 (MAVROS)](#5-method-3-mavros-the-powerful-ros-bridge) を使用することを強くお勧めします。これらは MAVLink プロトコルを使用しており、あなたのハードウェアで完全にサポートされています。**
 
 :::
 
 :::info
-`px4_msgs`ブランチは、メッセージ定義の互換性を確保するために、お使いのPX4ファームウェアのバージョンと**必ず**一致させる必要があります。
+`px4_msgs` のブランチは、PX4 ファームウェアのバージョンと**一致**している必要があります。これによりメッセージ定義の互換性が保証されます。
 :::
 
 <div style={{
@@ -235,119 +235,119 @@ colcon build
   gridTemplateColumns: 'repeat(1, 1fr)',
   gap: '16px'
 }}>
-  <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/05.png" alt="PX4_dev_01" />
-  <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/06.png" alt="PX4_dev_02" />
+  <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/05.png" alt="PX4_dev_05" />
+  <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/06.png" alt="PX4_dev_06" />
 </div>
 
 ### ステップ3：PX4ファームウェアの設定
 
 QGroundControlに接続し、以下のパラメータを設定します：
 
-1. **`UXRCE_DDS_CFG`**：`TELEM1`に設定します。これによりそのポートでXRCE-DDSクライアントが有効になります。
-2. **`SER_TEL1_BAUD`**：`921600 8N1`に設定します。
-3. **`MAV_1_CONFIG`**：`Disabled`に設定します。これは同じポートでMAVLinkが競合することを防ぐために重要です。
-4. パラメータを保存し、フライトコントローラーを再起動します。
+1. **`UXRCE_DDS_CFG`**：`TELEM1`に設定（当該ポートでXRCE-DDSクライアントを有効化）。
+2. **`SER_TEL1_BAUD`**：`921600 8N1`に設定。
+3. **`MAV_1_CONFIG`**：`Disabled`に設定（同一ポートでのMAVLink競合を防止）。
+4. パラメータを保存し、フライトコントローラを再起動。
 
 ### ステップ4：起動と確認
 
-1. **Jetsonでエージェントを開始**（1つのターミナルで）：
+1. **JetsonでAgentを起動**（1つ目のターミナル）：
 
-    ```bash title="ターミナル1：エージェントの実行"
-    MicroXRCEAgent serial --dev /dev/ttyTHS1 -b 921600
-    ```
+   ```bash title="ターミナル1：Agentの実行"
+   MicroXRCEAgent serial --dev /dev/ttyTHS1 -b 921600
+   ```
 
-2. **ROS 2トピックの確認**（新しいターミナルで）：
+2. **ROS 2トピックを確認**（新しいターミナル）：
 
-    ```bash title="ターミナル2：トピックの確認"
-    # 新しいターミナルごとにワークスペースをソースする
-    source ~/px4_ros_ws/install/setup.bash
+   ```bash title="ターミナル2：トピック確認"
+   # 各ターミナルでワークスペースを読み込む
+   source ~/px4_ros_ws/install/setup.bash
 
-    # /fmu/で始まるトピックのリストが表示されるはずです
-    ros2 topic list | grep /fmu/
+   # /fmu/で始まるトピックが列挙されるはず
+   ros2 topic list | grep /fmu/
 
-    # トピックをエコーしてFCUからのライブデータストリームを確認
-    ros2 topic echo /fmu/out/vehicle_odometry
-    ```
+   # トピックをエコーしてFCUからのライブデータを確認
+   ros2 topic echo /fmu/out/vehicle_odometry
+   ```
 
 <div style={{
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
   gap: '16px'
 }}>
-  <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/11.png" alt="PX4_dev_01" />
-  <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/12.png" alt="PX4_dev_02" />
+  <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/11.png" alt="PX4_dev_11" />
+  <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/12.png" alt="PX4_dev_12" />
 </div>
 
------
+---
 
 ## 方式2：MAVSDK（高レベルAPI）
 
-MAVSDKは、MAVLinkプロトコルの複雑さを抽象化し、ドローンをプログラムで制御するためのシンプルで現代的なAPIを提供します。高レベルのミッションスクリプトを書くのに最適です。
+MAVSDKはMAVLinkの複雑さを抽象化し、プログラムによるドローン制御のためのシンプルでモダンなAPIを提供します。高レベルのミッションスクリプトに最適です。
 
 ### ステップ1：PX4ファームウェアの設定
 
 QGroundControlで、ポート設定をDDSからMAVLinkモードに戻します。
 
-1. **`UXRCE_DDS_CFG`**：`Disabled`に戻します。
-2. **`MAV_1_CONFIG`**：`TELEM 1`に設定してポートをMAVLinkに割り当てます。
-3. **`MAV_1_MODE`**：`Onboard`に設定してリンクがコンパニオンコンピューター用であることを指定します。
-4. **`SER_TEL1_BAUD`**：これが引き続き`921600 8N1`であることを確認します。
-5. パラメータを保存し、フライトコントローラーを再起動します。
+1. **`UXRCE_DDS_CFG`**：`Disabled`に戻す。
+2. **`MAV_1_CONFIG`**：`TELEM 1`に設定（ポートをMAVLinkに割り当て）。
+3. **`MAV_1_MODE`**：`Onboard`に設定（コンパニオン用リンク）。
+4. **`SER_TEL1_BAUD`**：`921600 8N1`が継続していることを確認。
+5. 保存してFCを再起動。
 
 ### ステップ2：MAVSDK-Pythonのインストール
 
-```bash title="Terminal on Jetson"
+```bash title="Jetsonのターミナル"
 pip3 install mavsdk
 ```
 
 ### ステップ3: 制御スクリプトの作成と実行
 
-このPythonスクリプトは接続し、10メートルまで離陸し、待機してから着陸します。
+次のPythonは接続後、（例では接続確認まで。離陸・着陸は各自で拡張可）メッセージを表示します。
 
 ```python title="takeoff_and_land.py"
 import asyncio
 from mavsdk import System
 
 async def run():
-    # Create a drone object and connect to the flight controller
+    # ドローンオブジェクトを作成し、フライトコントローラに接続
     drone = System()
     await drone.connect(system_address="serial:///dev/ttyTHS1:921600")
 
-    print("Waiting for drone to connect...")
-    # This is an asynchronous generator that yields connection state updates
+    print("ドローンの接続を待機中...")
+    # 接続状態の更新を返す非同期ジェネレータ
     async for state in drone.core.connection_state():
         if state.is_connected:
-            print("--> Drone discovered!")
+            print("--> ドローンを検出しました！")
             break
 
 if __name__ == "__main__":
-    # Run the asyncio event loop
+    # asyncioイベントループを実行
     asyncio.run(run())
 ```
 
-ターミナルからスクリプトを実行してください：`python3 takeoff_and_land.py`。
+ターミナルから実行：`python3 takeoff_and_land.py`
 
------
+---
 
 ## 方法3：MAVROS（強力なROSブリッジ）
 
-MAVROSは実戦で検証されたMAVLink-to-ROSゲートウェイで、複雑なROSベースシステムに対して包括的な機能と比類のない安定性を提供します。
+MAVROSは実績あるMAVLink→ROSゲートウェイで、複雑なROSベースのシステムに包括的機能と高い安定性を提供します。
 
 ### ステップ1：PX4ファームウェアの設定
 
-MAVROSのPX4設定は**MAVSDKセットアップと同一**です。`TELEM1`が`Onboard`モードでMAVLink用に設定されていることを確認してください。
+MAVROS向けのPX4設定は**MAVSDKと同一**です。`TELEM1`が`Onboard`モードでMAVLink用に設定されていることを確認してください。
 
 ### ステップ2：MAVROSと依存関係のインストール
 
-```bash title="Terminal on Jetson"
+```bash title="Jetsonのターミナル"
 sudo apt update
 sudo apt install ros-humble-mavros ros-humble-mavros-msgs
 ```
 
-:::info[よくあるクラッシュを防ぐ！]
-MAVROSは座標変換のために地理データセットを必要とします。データセットの欠如は起動時のクラッシュの一般的な原因です。このスクリプトはそれをダウンロードしてインストールします。
+:::info[よくあるクラッシュを防ぐ！]  
+MAVROS は座標変換のために地理データセットを必要とします。データセットがないと、起動時にクラッシュする一般的な原因となります。このスクリプトはそれをダウンロードしてインストールします。
 
-```bash title="Terminal on Jetson"
+```bash title="Jetson のターミナル"
 sudo bash /opt/ros/humble/lib/mavros/install_geographiclib_datasets.sh 
 ```
 
@@ -357,52 +357,52 @@ sudo bash /opt/ros/humble/lib/mavros/install_geographiclib_datasets.sh
 
 1. **MAVROSノードを起動**:
 
-    ```bash title="Terminal 1: Launch MAVROS"
-    source /opt/ros/humble/setup.bash
+   ```bash title="ターミナル1：MAVROSを起動"
+   source /opt/ros/humble/setup.bash
 
-    # Launch mavros, specifying the FCU connection URL via a parameter
-    ros2 launch mavros px4.launch fcu_url:="serial:///dev/ttyTHS1:921600"
-    ```
+   # パラメータでFCU接続URLを指定してmavrosを起動
+   ros2 launch mavros px4.launch fcu_url:="serial:///dev/ttyTHS1:921600"
+   ```
 
 2. **接続を検証**:
 
-    新しいターミナルで、MAVROSステートトピックをエコーします。
+   新しいターミナルでMAVROSのステートトピックをエコー。
 
-    ```bash title="Terminal 2: Verify Connection"
-    ros2 topic echo /mavros/state
-    ```
+   ```bash title="ターミナル2：接続確認"
+   ros2 topic echo /mavros/state
+   ```
 
-    出力を確認してください。`connected`フィールドが`true`に変わったら、MAVROSがPX4と正常に通信しています。
+   出力を確認し、`connected` フィールドが `true` になればPX4と正常に通信しています。
 
 <div style={{
   display: 'grid',
   gridTemplateColumns: 'repeat(1, 1fr)',
   gap: '16px'
 }}>
-  <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/13.png" alt="PX4_dev_01" />
-  <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/14.png" alt="PX4_dev_02" />
+  <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/13.png" alt="PX4_dev_13" />
+  <img src="https://files.seeedstudio.com/wiki/robotics/PX4_dev/14.png" alt="PX4_dev_14" />
 </div>
 
------
+---
 
 ## よくある問題のトラブルシューティング
 
-問題が発生した場合は、まずこれらのよくある問題を確認してください。
+問題が発生した場合は、まずこちらを確認してください。
 
-- **シリアルポートで「Permission Denied」:** ユーザーを`dialout`グループに追加して再起動するのを忘れています。「ハードウェア接続」セクションを参照してください。
-- **`/dev/ttyTHS1`で「No such file or directory」:** 物理的な配線を再確認してください。フライトコントローラーの電源は入っていますか？`ls /dev/ttyTHS*`を実行してデバイス名を確認してください。
-- **MAVROS起動時にクラッシュ:** `install_geographiclib_dataset.sh`ステップを見逃している可能性があります。方法3のコマンドを実行してください。
-- **`colcon build`が失敗:** 最初にROS 2環境をソースしているか確認してください（`source /opt/ros/humble/setup.bash`）。より複雑な依存関係の問題については、`rosdep install --from-paths src --ignore-src -r -y`を実行する必要があるかもしれません。
+- **シリアルポートで「Permission Denied」:** ユーザーを`dialout`グループへ追加＆再起動を忘れている可能性。上記「ハードウェア接続」を参照。
+- **`/dev/ttyTHS1`で「No such file or directory」:** 物理配線を再確認。FCの電源は入っていますか？`ls /dev/ttyTHS*`でデバイス名を確認。
+- **MAVROSが起動時にクラッシュ:** `install_geographiclib_dataset.sh` を未実行の可能性。方法3のコマンドを実行。
+- **`colcon build` が失敗:** まず `source /opt/ros/humble/setup.bash` を実行してROS 2環境を読み込む。依存関係が複雑な場合は `rosdep install --from-paths src --ignore-src -r -y` を検討。
 
 ## 最後に
 
-これで、Jetson OrinとPX4フライトコントローラー間の通信を可能にする3つの強力な方法を手に入れました。最適なツールは、プロジェクトのアーキテクチャ、パフォーマンス要件、開発速度によって異なります。トレードオフを理解することで、あらゆる自律ドローンアプリケーションのための堅牢な基盤を構築できます。
+これで、Jetson OrinとPX4フライトコントローラ間の通信を実現する3つの強力な方法を理解できました。最適解はプロジェクトのアーキテクチャ、要求性能、開発スピードによって異なります。トレードオフを理解し、堅牢な基盤を構築しましょう。
 
 ハッピーフライング！🚁
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます。できるだけスムーズにご利用いただけるよう、複数のサポート窓口をご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

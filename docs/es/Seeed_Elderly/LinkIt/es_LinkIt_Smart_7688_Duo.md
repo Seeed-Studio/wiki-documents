@@ -290,9 +290,9 @@ Arduino IDE 1.6.5 soporta integración de placas de terceros usando la herramien
 
 **1.** En Arduino IDE, en el menú File haz clic en Preferences luego inserta
 
-````
+```
 http://download.labs.mediatek.com/package_mtk_linkit_smart_7688_index.json
-````
+```
 
 al campo URLs adicionales del Gestor de Placas:
 

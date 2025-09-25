@@ -14,7 +14,7 @@ last_update:
 Seeed 设计了许多与 Arduino IDE 兼容的开发板，包括：
 
 * [Seeeduino XIAO](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/)
-* [Seeeduino Wio Terminal](https://wiki.seeedstudio.com/cn/Wio-Terminal-Getting-Started/)
+* [Seeeduino Wio 终端](https://wiki.seeedstudio.com/cn/Wio-Terminal-Getting-Started/)
 * [Seeeduino Lotus Cortex-M0+](https://wiki.seeedstudio.com/cn/Seeeduino_Lotus_Cortex-M0-/)
 * [Seeeduino LoRaWAN](https://wiki.seeedstudio.com/cn/Seeeduino_LoRAWAN/)/GPS
 * [Seeeduino Cortex M0](https://wiki.seeedstudio.com/cn/Seeeduino-Cortex-M0/)
@@ -32,14 +32,14 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 * Seeeduino Stalker [V2.3](https://wiki.seeedstudio.com/cn/Seeeduino_Stalker_v2.3/)/[3](https://wiki.seeedstudio.com/cn/Seeeduino_v3.0/)/[3.1](https://wiki.seeedstudio.com/cn/Seeeduino_Stalker_V3.1/)
 * [Seeeduino Lite](https://wiki.seeedstudio.com/cn/Seeeduino_Lite/)
 * [Seeeduino Mega](https://wiki.seeedstudio.com/cn/Seeeduino_Mega/)
-* [Seeeduino Mega Protoshield Kit](https://wiki.seeedstudio.com/cn/Seeeduino_Mega_Protoshield_Kit/)
+* [Seeeduino Mega 原型扩展板套件](https://wiki.seeedstudio.com/cn/Seeeduino_Mega_Protoshield_Kit/)
 * [Seeeduino GPRS](https://wiki.seeedstudio.com/cn/Seeeduino_GPRS/)
-* [Seeeduino Ethernet](https://wiki.seeedstudio.com/cn/Seeeduino_Ethernet/)
-* [Seeeduino Cloud](https://wiki.seeedstudio.com/cn/Seeeduino_Cloud/)
+* [Seeeduino 以太网](https://wiki.seeedstudio.com/cn/Seeeduino_Ethernet/)
+* [Seeeduino 云](https://wiki.seeedstudio.com/cn/Seeeduino_Cloud/)
 * [Seeeduino Nano](https://wiki.seeedstudio.com/cn/Seeeduino-Nano/)
 * [Seeeduino Crypto (ATmega4809 ECC608)](https://wiki.seeedstudio.com/cn/Seeeduino-Crypto-ATmega4809-ECC608/)
 * [LinkIt ONE](https://wiki.seeedstudio.com/cn/LinkIt_ONE/)
-* [RePhone Series](https://wiki.seeedstudio.com/cn/RePhone/)
+* [RePhone 系列](https://wiki.seeedstudio.com/cn/RePhone/)
 
 :::note
 上述从 Seeeduino V3 到 RePhone 系列的开发板不是 AT SAMD21 微控制器系列，请在步骤2中将以下网址复制到*附加开发板管理器网址*。

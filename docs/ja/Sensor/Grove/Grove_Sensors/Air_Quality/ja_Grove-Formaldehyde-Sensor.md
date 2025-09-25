@@ -168,7 +168,7 @@ void loop() {
 }
 ```
 
-- **Step 4.** このプログラムでは、Seeeduinoがホルムアルデヒドガス濃度、空気湿度、温度データをリアルタイムで監視できます。「シリアルモニター」を開くと、結果は以下のようになります。
+- **ステップ 4.** このプログラムでは、Seeeduinoがホルムアルデヒドガス濃度、空気湿度、温度データをリアルタイムで監視できます。「シリアルモニター」を開くと、結果は以下のようになります。
 
 ![](https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/test.png)
 
@@ -176,25 +176,25 @@ void loop() {
 
 #### **ハードウェア**
 
-- **Step 1.** 以下のアイテムを準備してください：
+- **ステップ 1.** 以下のアイテムを準備してください：
 
 | Raspberry Pi | Raspberry Pi用Grove Base Hat | Grove-Formaldehyde Sensor |
 |--------------|-----------------------------|---------------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/GroveFormaldehydehardware.jpg)|
 |[今すぐ購入](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[今すぐ購入](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[今すぐ購入](https://www.seeedstudio.com/Grove-Formaldehyde-Sensor-SFA30-p-5204.html)|
 
-- **Step 2.** Raspberry PiにGrove Base Hatを接続します。
-- **Step 3.** Grove-Dust SensorをRaspberry Pi用Grove Base Hatの**I²C**ポートに接続します。
-- **Step 4.** USBケーブルを使用してRaspberry PiをPCに接続します。
+- **ステップ 2.** Raspberry PiにGrove Base Hatを接続します。
+- **ステップ 3.** Grove-Dust SensorをRaspberry Pi用Grove Base Hatの**I²C**ポートに接続します。
+- **ステップ 4.** USBケーブルを使用してRaspberry PiをPCに接続します。
 
 ![](https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/raspberry-link.jpg)
 
 #### **ソフトウェア**
 
-- **Step 1.** [ソフトウェアの設定](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/)に従って、Raspberry Piの開発環境を構築します。
-- **Step 2.** [Grove-Formaldehyde Sensor Library](https://github.com/Sensirion/raspberry-pi-i2c-sfa3x/archive/refs/heads/master.zip)をダウンロードし、Raspberry Piに解凍します。
+- **ステップ 1.** [ソフトウェアの設定](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/)に従って、Raspberry Piの開発環境を構築します。
+- **ステップ 2.** [Grove-Formaldehyde Sensor Library](https://github.com/Sensirion/raspberry-pi-i2c-sfa3x/archive/refs/heads/master.zip)をダウンロードし、Raspberry Piに解凍します。
 
-- **Step 3.** デモディレクトリに移動します。以下のコマンドでホルムアルデヒド濃度、湿度、温度を監視できます。
+- **ステップ 3.** デモディレクトリに移動します。以下のコマンドでホルムアルデヒド濃度、湿度、温度を監視できます。
 
 ```python
 cd ~/raspberry-pi-i2c-sfa3x-master
@@ -203,7 +203,7 @@ make
 ```
 
 :::tip
-このWikiでは、**~/embedded-sfa3x-main/i2c**というパスを使用していますが、**/home/pi/Desktop/embedded-sfa3x-main/i2c**ではありません。Step 2とStep 3で同じパスを使用する必要があります。
+このWikiでは、**~/embedded-sfa3x-main/i2c**というパスを使用していますが、**/home/pi/Desktop/embedded-sfa3x-main/i2c**ではありません。ステップ 2とステップ 3で同じパスを使用する必要があります。
 :::
 
 以下は**sfa3x_i2c_example_usage.c**のコードです。

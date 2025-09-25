@@ -42,7 +42,7 @@ OK
 
 Revision:1137B03SIM900M64_ST_MMS  
 OK  
-版本：Revision:1137B03SIM900M64_ST_MMS  
+版本：Revision:1137B03SIM900M64_ST_MMS
 
 [AT+CSQ](https://m2msupport.net/m2msupport/atcsq-signal-quality/)  
 
@@ -117,7 +117,7 @@ OK
 
 +CGDCONT: 1,"IP","epc.tmobile.com","0.0.0.0",0,0  
 +CGDCONT: 2,"IP","test5","0.0.0.0",0,0  
-+CGDCONT: 3,"IP","","0.0.0.0",0,0  
++CGDCONT: 3,"IP","","0.0.0.0",0,0
 
 OK  
 检查注册状态...  

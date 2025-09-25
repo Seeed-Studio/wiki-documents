@@ -20,7 +20,9 @@ last_update:
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Retro-Phone-Kit-p-2797.html)
 
 ## 特徴
+
 ---
+
 - Arduino互換
 
 - アナログオーディオ対応
@@ -55,6 +57,7 @@ last_update:
 |重量|12 g|
 
 ## モジュール接続
+
 Rephone Core 2G-Atmel32u4は、Xadow 36ピンコネクタとXadow 11ピンコネクタを統合しており、Xadow - GSM＋BLEと似ています。このため、モジュール接続は非常に簡単です。
 
 1. Xadow Key Boardを36ピンコネクタを介してRePhone Coreボードに接続します。ケーブルはしっかりと平らに挿入し、特に「TOP」側を上向きに保つことを忘れないでください。
@@ -71,13 +74,14 @@ Rephone Core 2G-Atmel32u4は、Xadow 36ピンコネクタとXadow 11ピンコネ
 
 **RePhone_Menu_GSM**
 
-Step1. Rephone Core 2G-Atmel32u4をインストールします。完全な手順については[こちら](https://wiki.seeedstudio.com/ja/RePhone_core_2G-Atmel32u4/#arduino-ide)をクリックしてください。
+ステップ1. Rephone Core 2G-Atmel32u4をインストールします。完全な手順については[こちら](https://wiki.seeedstudio.com/ja/RePhone_core_2G-Atmel32u4/#arduino-ide)をクリックしてください。
 
-Step2. サンプルを見つけてボードにアップロードします。
+ステップ2. サンプルを見つけてボードにアップロードします。
 
 Arduino IDEにRephone Core 2G-Atmel32u4をインストールすると、基本的なサンプルも含まれており、サンプルセクションで見つけることができます。
 
 サンプルには以下が含まれます：
+
 - Atmel32u4_gprs.h
 - TimerOne.h
 - Rephone_lcm.h
@@ -86,7 +90,7 @@ Arduino IDEにRephone Core 2G-Atmel32u4をインストールすると、基本�
 
 ![](https://files.seeedstudio.com/wiki/Retro_Phone_Kit/img/Example%20code.png)
 
-Step3. 自分自身に電話をかける
+ステップ3. 自分自身に電話をかける
 
 - サンプルが正常にアップロードされると、画面が点灯し、以下のようなメインメニューが表示されます。
 
@@ -103,6 +107,7 @@ Step3. 自分自身に電話をかける
 すると、レトロフォンから電話がかかってきます。
 
 ## RePhone コミュニティ
+
 ---
 [![](https://files.seeedstudio.com/wiki/RePhone_Lumi_Kit/img/RePhone_Community-2.png)](https://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4)
 
@@ -110,18 +115,15 @@ Step3. 自分自身に電話をかける
 
 今すぐ [RePhone コミュニティ](https://forum.seeedstudio.com/viewforum.php?f=71&amp;sid=b70f8138c89becf7701260bb41faf9f4) に参加してください！一緒に答えを探し、面白いものを作り、お互いを気遣い、経験を共有しましょう。
 
-
 ## RePhone core 2G Atmel32u4 回路図オンラインビューア
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Retro_Phone_Kit/res/RePhone%20core%202G-Atmel32u4%20v1.0_Eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 ## Xadow - キーボード回路図オンラインビューア
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Retro_Phone_Kit/res/202001232_PCBA%3BXadow%20-%20Key%20Board_Eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 ## リソース
 
@@ -138,11 +140,11 @@ Step3. 自分自身に電話をかける
 私たちの製品を選んでいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

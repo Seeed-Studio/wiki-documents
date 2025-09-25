@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/Seeed-Studio-BeagleBoneR-Green-Eco.webp
 slug: /getting_started_with_seeedstudio_beaglebone_green_eco
 last_update:
-  date: 9/12/2025
+  date: 9/18/2025
   author: Atom Yang
 ---
 
@@ -53,7 +53,7 @@ Boot Linux in under 10 seconds and get started on development in less than 5 min
 |            | Accelerators          | NEON floating-point unit & 3D graphics accelerator                                                                     | NEON floating-point unit & 3D graphics accelerator                                            |
 | Memory     | RAM                   | 512MB DDR3L, 800MHz                                                                                                    | 512MB DDR3L, 800MHz                                                                           |
 |            | Flash Storage         | **16GB eMMC (Kingston EMMC16G-WW28)**                                                                                  | 4GB 8-bit eMMC                                                                                |
-|            | EEPRPM                | **32KB (FMD FT24C32A-ELRT)**                                                                                           | 4KB EEPROM                                                                                    |
+|            | EEPROM                | 4KB                                                                                                                    | 4KB                                                                                    |
 |            | External Storage      | microSD card slot, supports up to 32GB                                                                                 | microSD card slot, supports up to 32GB                                                        |
 | Power      | Power Management      | **TI TPS6521403 PMIC**                                                                                                     | TI TPS65217C PMIC                                                                             |
 |            | Voltage Regulator     | TI TPS62A01DRL (3.3V Buck converter);TI TPS74501PDRV (1.8V Always-On LDO);TI TPS2117DRL (Power Mux)            | TI TL5209DR (3.3V LDO Regulator)                                                              |

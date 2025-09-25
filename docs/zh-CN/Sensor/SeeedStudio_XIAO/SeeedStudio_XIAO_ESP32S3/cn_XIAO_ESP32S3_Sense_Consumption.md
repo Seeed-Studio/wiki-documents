@@ -122,13 +122,13 @@ void loop() {
 #define uS_TO_S_FACTOR 1000000ULL 
 ```
 
-- Define a macro to convert microseconds to seconds. 1000000ULL is the factor used to convert microseconds to seconds.
+- 定义一个宏来将微秒转换为秒。1000000ULL是用于将微秒转换为秒的因子。
 
 ```cpp
 #define TIME_TO_SLEEP  5     
 ```
 
-- Define a macro that sets the time for which the ESP32 will go to sleep, in this case, 5 seconds.
+- 定义一个宏来设置 ESP32 将进入睡眠状态的时间，在这种情况下为 5 秒。
 
 ```cpp
 RTC_DATA_ATTR int bootCount = 0;
@@ -140,13 +140,13 @@ RTC_DATA_ATTR int bootCount = 0;
 void print_wakeup_reason() {
 ```
 
-- Define a function named `print_wakeup_reason()` that will print the reason the ESP32 woke up.
+- 定义一个名为 `print_wakeup_reason()` 的函数，用于打印 ESP32 唤醒的原因。
 
 ```cpp
 esp_sleep_wakeup_cause_t wakeup_reason;
 ```
 
-- Declare a variable `wakeup_reason` of type `esp_sleep_wakeup_cause_t` to store the cause of the wakeup event.
+- 声明一个类型为 `esp_sleep_wakeup_cause_t` 的变量 `wakeup_reason` 来存储唤醒事件的原因。
 
 ```cpp
 wakeup_reason = esp_sleep_get_wakeup_cause();
@@ -175,13 +175,13 @@ wakeup_reason = esp_sleep_get_wakeup_cause();
 ++bootCount;
 ```
 
-- Increment the boot count and print it every time the device reboots.
+- 每次设备重启时增加启动计数并打印出来。
 
 ```cpp
 print_wakeup_reason();
 ```
 
-- Print the reason for the ESP32's wakeup.
+- 打印 ESP32 唤醒的原因。
 
 ```cpp
 esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
@@ -272,9 +272,9 @@ void loop() {
 RTC_DATA_ATTR int bootCount = 0;
 ```
 
-- 2 ^ GPIO_NUMBER in hex
-- 1 = EXT0 wakeup, 0 = EXT1 wakeup
-- Only RTC IO are allowed - ESP32 Pin example
+- 2 ^ GPIO_NUMBER 的十六进制表示
+- 1 = EXT0唤醒，0 = EXT1唤醒
+- 仅允许RTC IO - ESP32引脚示例
 
 ```cpp
   switch (wakeup_reason) {
@@ -786,14 +786,14 @@ const int sleepTime = 10000;
 const int ledPin = LED_BUILTIN; 
 ```
 
-- Set sleep time to 10 seconds
-- Use the built-in LED pin
+- 将睡眠时间设置为 10 秒
+- 使用内置的 LED 引脚
 
 ```cpp
 void ledTask(void *pvParameters): 
 ```
 
-- Define a FreeRTOS task to control the LED state.
+- 定义一个 FreeRTOS 任务来控制 LED 状态。
 
 ```cpp
 digitalWrite(ledPin, HIGH); 
@@ -804,8 +804,8 @@ Serial.println("LED is OFF");
 vTaskDelete(NULL); 
 ```
 
-- `vTaskDelay(pdMS_TO_TICKS(1000));`Keep the LED on for 1 second
-- `vTaskDelete(NULL);`Delete the current task
+- `vTaskDelay(pdMS_TO_TICKS(1000));`保持LED开启1秒钟
+- `vTaskDelete(NULL);`删除当前任务
 
 ```cpp
 esp_sleep_enable_timer_wakeup(sleepTime * 1000);
@@ -889,19 +889,19 @@ void loop() {
 #include "WiFi.h"
 ```
 
-- Include the WiFi library to enable WiFi functions.
+- 包含 WiFi 库以启用 WiFi 函数。
 
 ```cpp
 Serial.println("Connecting to WiFi...");
 ```
 
-- Print a message indicating that the connection to WiFi is starting.
+- 打印一条消息，指示正在开始连接到 WiFi。
 
 ```cpp
 WiFi.begin("****", "****");
 ```
 
-- Start connecting to the specified WiFi network.
+- 开始连接到指定的 WiFi 网络。
 
 ```cpp
     while (WiFi.status() != WL_CONNECTED) {
@@ -911,19 +911,19 @@ WiFi.begin("****", "****");
     Serial.println("Connected to WiFi!");
 ```
 
-- Loop until successfully connected to WiFi.
+- 循环直到成功连接到 WiFi。
 
 ```cpp
 WiFi.setSleep(true);
 ```
 
-- Enable modem sleep mode to save power.
+- 启用调制解调器睡眠模式以节省电量。
 
 ```cpp
 WiFi.setSleep(false);
 ```
 
-- Disable modem sleep mode to activate WiFi.
+- 禁用调制解调器睡眠模式以激活 WiFi。
 
 ```cpp
 if (WiFi.status() == WL_CONNECTED) {

@@ -133,7 +133,7 @@ Seeeduino Stalker V3.1はArduino互換であり、多くのアナログピン、
     UartSBee V4、Mini USB ケーブル、6ピンケーブルは含まれていません。
 :::
 
-### STEP1: 接続
+### ステップ1: 接続
 
 まず、Stalker を 6ピンジャンパーワイヤーを使って UartSBee に接続し、その後 Mini USB ケーブルを使って UartSBee を PC に接続します。
 
@@ -149,7 +149,7 @@ Seeeduino Stalker V3.1はArduino互換であり、多くのアナログピン、
     UartSBee V4 の電源スイッチを 5V に設定してください。
 :::
 
-### STEP2: UartSBee とドライバー
+### ステップ2: UartSBee とドライバー
 
 UartSBee は、FDTI の FT232RL をベースにした USB からシリアル UART インターフェースです。[ドライバー](https://www.ftdichip.com/FTDrivers.htm)をダウンロードしてください。
 
@@ -159,17 +159,17 @@ UartSBee は、FDTI の FT232RL をベースにした USB からシリアル UAR
 - Seeeduino Stalker との通信。
 - Seeeduino Stalker（および接続された周辺機器）への電力供給（PC の USB 電源から）。
 
-### STEP3: Arduino IDE
+### ステップ3: Arduino IDE
 
 Seeeduino Stalker は、豊富な機能を備えた Arduino 互換ボードです。Arduino IDE をお持ちでない場合は、最新の Arduino ソフトウェアをダウンロードしてボードをプログラムしてください。
 
 [![画像説明をここに入力](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
 
-### STEP4: Arduino IDE に Seeeduino Stalker を追加
+### ステップ4: Arduino IDE に Seeeduino Stalker を追加
 
 Arduino IDE のボードオプションには *Seeeduino Stalker* がありません。[Seeed ボードを Arduino IDE に追加する方法](https://wiki.seeedstudio.com/ja/Seeed_Arduino_Boards/)をクリックして手順を確認してください。
 
-### STEP5: 点滅（Blink）
+### ステップ5: 点滅（Blink）
 
 ここでは、Stalker に簡単なコードをアップロードします。Arduino IDE を開き、**ファイル > スケッチ例 > 基本 > Blink** を開きます。
 

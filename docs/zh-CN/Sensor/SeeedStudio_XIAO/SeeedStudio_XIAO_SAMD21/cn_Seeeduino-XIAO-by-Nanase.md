@@ -143,7 +143,7 @@ uint32_t USBDeviceClass::recv(uint32_t ep, void *_data, uint32_t len)
 #define PIN_LED3             PIN_LED_TXL
 ```
 
-Below is a sketch of blinking three LEDs. The LEDs for RX and TX are blue.
+以下是闪烁三个 LED 的示意图。RX 和 TX 的 LED 是蓝色的。
 
 ```cpp
 void setup() {
@@ -369,7 +369,7 @@ void loop() { W W W W W W W W W W W W W W W W }
 
 ### Use Registers
 
-You can also create a pulse by directly operating the register without using `digitalWrite`.
+你也可以通过直接操作寄存器来创建脉冲，而无需使用`digitalWrite`。
 
 ```cpp
 void setup() {

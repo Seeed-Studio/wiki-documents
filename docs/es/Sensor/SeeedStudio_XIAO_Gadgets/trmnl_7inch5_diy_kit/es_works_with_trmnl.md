@@ -70,8 +70,8 @@ Tus credenciales de TRMNL son información sensible. Nunca las compartas públic
 
 Una vez que tengas tus materiales y hayas comprado el acceso a TRMNL, puedes proceder con la conexión de tu dispositivo a la plataforma de TRMNL. Si encuentras algún problema o tienes preguntas, puedes contactar al equipo de TRMNL directamente en team@usetrmnl.com.
 
-
 ### Flasheo de Firmware
+
 :::tip
 Si obtuviste un kit completamente nuevo, tendrá firmware dentro. Así que puedes omitir este paso.
 :::
@@ -98,7 +98,7 @@ Por favor usa firmware **FW 1.5.12** o más nuevo para compatibilidad con Seeed.
 
 1. **Clonar el Repositorio de Firmware**
 
-  - Visita el [repositorio oficial de firmware](https://github.com/usetrmnl/trmnl-firmware) y clónalo:
+- Visita el [repositorio oficial de firmware](https://github.com/usetrmnl/trmnl-firmware) y clónalo:
 
     ```
     git clone https://github.com/usetrmnl/trmnl-firmware.git
@@ -108,11 +108,12 @@ Por favor usa firmware **FW 1.5.12** o más nuevo para compatibilidad con Seeed.
 
 Hay veces cuando actualizamos nuestro código y necesitamos enviar PR a TRMNL y revisarlo antes de que se muestre, si quieres ser el primero en usar la última versión de firmware, también puedes usar el repositorio TRMNL bajo Seeed Project.
 
-  - Visita el [repositorio de Seeed](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project) y clónalo:
+- Visita el [repositorio de Seeed](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project) y clónalo:
 
     ```
     git clone https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project.git
     ```
+
 :::
 
 2. **Instalar PlatformIO**
@@ -136,6 +137,7 @@ Hay veces cuando actualizamos nuestro código y necesitamos enviar PR a TRMNL y 
 6. **Construir y Subir**
 
    - En PlatformIO, haz clic en el botón "Upload", o ejecuta:
+
      ```
      pio run --target upload
      ```
@@ -143,7 +145,6 @@ Hay veces cuando actualizamos nuestro código y necesitamos enviar PR a TRMNL y 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/215.png" style={{width:1000, height:'auto'}}/></div>
 
    - El firmware será compilado y subido a tu dispositivo.
-
 
 ## Configurar Wi-Fi y Enviar Listas de Reproducción a TRMNL
 
@@ -189,11 +190,12 @@ Para usar tu kit DIY TRMNL 7.5inch(OG) con TRMNL y enviar listas de reproducció
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/219.png" style={{width:800, height:'auto'}}/></div>
 
 > ⚠️ **Nota:** La dirección MAC solo es visible en el portal cautivo por 1-2 segundos. Si la pierdes, también puedes:
+>
 > - Recuperarla de los registros de construcción/subida de VS Code > PlatformIO.
 > - Usar el método [usetrmnl.com/flash](https://usetrmnl.com/flash) y verificar la consola de desarrollador de Chrome/Edge/Firefox para la dirección MAC durante el flasheo.
 > - Encontrarla en la lista de dispositivos conectados de tu router o aplicación de red Mesh.
 >
-> Para más detalles y capturas de pantalla, consulta la guía oficial: [Encontrar tu dirección MAC de TRMNL](https://help.usetrmnl.com/en/articles/10614205-finding-your-trmnl-mac-address)
+> Para más detalles y capturas de pantalla, ve la guía oficial: [Encontrar tu dirección MAC de TRMNL](https://help.usetrmnl.com/en/articles/10614205-finding-your-trmnl-mac-address)
 
 ### Acceder a la Interfaz Web de TRMNL
 
@@ -210,9 +212,8 @@ Después de que tu kit DIY TRMNL 7.5inch(OG) esté conectado a tu Wi-Fi y hayas 
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/220.png" style={{width:800, height:'auto'}}/></div>
 
-4. **Ingresar ID del Dispositivo**
-
-   - En la ventana emergente, ingresa el Device ID que recibiste cuando compraste el acceso a TRMNL (esto no es la dirección MAC). Usa el Device ID de tu correo de confirmación de compra o del panel de TRMNL.
+4. **Introducir ID del Dispositivo**  
+   - En la ventana emergente, introduce el ID del Dispositivo que recibiste cuando compraste el acceso a TRMNL (esto no es la dirección MAC). Usa el ID del Dispositivo de tu email de confirmación de compra o del panel de TRMNL.
    - Haz clic en **Add new device** para completar el proceso.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/212.png" style={{width:700, height:'auto'}}/></div>
@@ -232,7 +233,7 @@ Después de que tu kit DIY TRMNL 7.5inch(OG) esté conectado a tu Wi-Fi y hayas 
 
 ¡Tu kit DIY TRMNL 7.5inch(OG) ahora está vinculado a tu cuenta TRMNL! Ahora puedes enviar listas de reproducción, imágenes u otro contenido a tu pantalla directamente desde la interfaz TRMNL.
 
-> 💡 **Consejo:** Si tienes múltiples Paneles ePaper, repite los pasos anteriores para cada dispositivo usando sus Device IDs únicos.
+> 💡 **Consejo:** Si tienes múltiples Paneles ePaper, repite los pasos anteriores para cada dispositivo usando sus IDs de Dispositivo únicos.
 
 :::caution
 Después de agregar tu dispositivo en la interfaz web de TRMNL, por favor ve a la página de configuración del dispositivo y **desactiva** tanto **Firmware Early Release** como **OTA Updates Enabled**.  
@@ -247,29 +248,32 @@ Mantén siempre ambas opciones deshabilitadas para asegurar el funcionamiento es
 Tenemos 4 botones en esta placa de desarrollo. Son RESET, KEY1, KEY2, KEY3 y **solo usamos los botones RESET y KEY1 en el firmware TRMNL.**
 
 **Uso de KEY1:**
+
 1. **Un Clic:** para actualizar páginas inmediatamente.
 2. **Doble Clic:** función personalizada, puedes encontrarla en la página de configuración.
-3. **Clic largo:** aproximadamente 5s, para reconfigurar la red.
+3. **Clic Largo:** aproximadamente 5s, para reconfigurar la red.
 
 **Uso de RESET:** solo un clic para reiniciar el dispositivo.
 
-## Entendiendo la Función de Lista de Reproducción TRMNL
+## Entendiendo la Función de Lista de Reproducción de TRMNL
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/221.png" style={{width:1000, height:'auto'}}/></div>
 
-La función de Lista de Reproducción TRMNL te permite controlar exactamente qué se muestra en tu Panel ePaper y cuándo. Aquí tienes un desglose de las secciones principales y controles, como se muestra en la captura de pantalla anterior:
+La función de Lista de Reproducción de TRMNL te permite controlar exactamente qué se muestra en tu Panel ePaper y cuándo. Aquí tienes un desglose de las secciones principales y controles, como se muestra en la captura de pantalla anterior:
 
 ### Resumen de Lista de Reproducción
+
 - **Título de Lista de Reproducción**: En la parte superior, ves el nombre de tu dispositivo TRMNL (ej., "MengDu's TRMNL").
 - **Rango de Tiempo de Visualización**: Puedes establecer el rango de tiempo para cuando la lista de reproducción esté activa (ej., de 00:00 a 23:45).
-- **Intervalo de Actualización**: Elige qué tan seguido se actualiza la pantalla (ej., cada 5 minutos).
+- **Intervalo de Actualización**: Elige con qué frecuencia se actualiza la pantalla (ej., cada 5 minutos).
 - **Add a Group / Add a Plugin**: Usa estos botones para organizar tu lista de reproducción en grupos o agregar nuevos plugins de contenido (como clima, calendario o texto personalizado).
 
 ### Elementos de Lista de Reproducción
+
 Cada fila en la lista de reproducción representa una pantalla o widget que se mostrará en tu Panel ePaper (solo para referencia):
 
 1. **Weather**
-   - Muestra información del clima actual para tu ubicación seleccionada.
+   - Muestra información meteorológica actual para tu ubicación seleccionada.
    - La etiqueta verde "Displayed now" indica que esta pantalla se está mostrando actualmente en tu dispositivo.
 2. **Days Left This Year**
    - Muestra una cuenta regresiva de días restantes en el año actual (ej., "2025").
@@ -279,38 +283,43 @@ Cada fila en la lista de reproducción representa una pantalla o widget que se m
    - También muestra cuándo fue actualizado por última vez.
 
 Para cada elemento, tienes varios controles:
+
 - **Settings (ícono de engranaje)**: Configura las opciones del plugin.
 - **Delete (ícono X)**: Elimina el elemento de tu lista de reproducción.
 - **Preview (ícono de ojo)**: Previsualiza cómo se verá la pantalla.
 - **Reorder (ícono de barras)**: Arrastra para cambiar el orden en que se muestran las pantallas.
 
 ### Lista de Reproducción Inteligente
+
 - **Opción de Lista de Reproducción Inteligente**: En la parte inferior, puedes elegir si omitir automáticamente pantallas cuyo contenido no ha cambiado (ej., "Never skip screens").
 
 > 📖 ¿Quieres aprender más? Lee la [publicación del blog Smart Playlists](https://usetrmnl.com/blog/smart-playlists) para consejos avanzados y detalles.
 
-Este sistema flexible de lista de reproducción te permite personalizar completamente lo que muestra tu Panel ePaper, qué tan seguido se actualiza y en qué orden. Puedes mezclar y combinar diferentes plugins para crear un panel personalizado que se ajuste a tus necesidades.
+Este sistema flexible de listas de reproducción te permite personalizar completamente lo que muestra tu Panel ePaper, con qué frecuencia se actualiza y en qué orden. Puedes mezclar y combinar diferentes plugins para crear un panel personalizado que se adapte a tus necesidades.
 
-
-## Explorando Plugins TRMNL
+## Explorando los Plugins de TRMNL
 
 El sistema de plugins de TRMNL es lo que hace que tu Panel ePaper sea verdaderamente poderoso y personalizable. Los plugins son aplicaciones o widgets modulares que puedes agregar a tu dispositivo para mostrar una amplia variedad de información y contenido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/222.png" style={{width:900, height:'auto'}}/></div>
 
 ### ¿Qué son los Plugins?
-Los plugins son bloques de contenido individuales que pueden mostrar cosas como clima, eventos de calendario, precios de acciones, feeds RSS, citas motivacionales, actividad de GitHub y mucho más. Puedes mezclar y combinar plugins para crear un panel que se ajuste a tus necesidades.
+
+Los plugins son bloques de contenido individuales que pueden mostrar cosas como clima, eventos de calendario, precios de acciones, feeds RSS, citas motivacionales, actividad de GitHub y mucho más. Puedes mezclar y combinar plugins para crear un panel que se adapte a tus necesidades.
 
 ### Plugins Conectados
+
 En la parte superior de la página de Plugins, verás todos los plugins que ya has conectado a tu cuenta TRMNL. Estos están listos para ser agregados a tu lista de reproducción y mostrados en tu Panel ePaper. Los ejemplos incluyen:
-- **Weather**: Muestra las condiciones climáticas actuales.
+
+- **Weather**: Muestra las condiciones meteorológicas actuales.
 - **Days Left This Year**: Cuenta regresiva hasta el final del año.
 - **Stock Price**: Rastrea tus acciones favoritas.
-- **RSS Feed**: Muestra noticias o actualizaciones de blog.
+- **RSS Feed**: Muestra noticias o actualizaciones de blogs.
 - **Reddit, Hacker News**: Muestra publicaciones en tendencia.
 - **Language Learning, Motivational Quote, Custom Text**: Personaliza tu pantalla con herramientas de aprendizaje o mensajes personalizados.
 
 ### Mercado de Plugins
+
 Debajo de tus plugins conectados, encontrarás el mercado de plugins. Aquí puedes navegar, buscar y descubrir nuevos plugins para agregar a tu dispositivo. Los plugins están organizados por categorías y etiquetas (como #productivity, #news, #ecommerce, etc.), facilitando encontrar lo que necesitas.
 
 - **Navegar y Buscar**: Usa la barra de búsqueda o etiquetas para encontrar rápidamente plugins que te interesen.
@@ -343,9 +352,15 @@ Agradecimientos especiales a todo el **equipo TRMNL** por su fuerte apoyo y ayud
 
 Su experiencia y compromiso han hecho posible esta integración y han mejorado enormemente la experiencia del usuario para la comunidad del kit DIY TRMNL 7.5inch(OG).
 
+## Solución de Problemas
+
+### ¿Cómo reconfigurar la red?
+
+Presiona y mantén presionado el Key1 (el botón junto al botón Reset) durante cinco segundos. El dispositivo volverá a la interfaz inicial de TRMNL y activará el AP.
 
 ## Recursos
-- **[Firmware]** [TRMNL ePaper Library (GitHub)](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)   
+
+- **[Firmware]** [TRMNL ePaper Library (GitHub)](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)
 - **[Hardware]** [Driver Board SCH](https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/XIAO_ePaper_driver_board_sch.pdf)
 - **[Imprimible]** [base triangular](https://www.printables.com/model/1354873)  
 - **[Imprimible]** [base triangular protegida](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)  
@@ -357,23 +372,18 @@ Su experiencia y compromiso han hecho posible esta integración y han mejorado e
 - **[Makerworld]** [base triangular protegida](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
 - **[Makerworld]** [base en forma de L](https://makerworld.com/en/models/1625065-trmnl-7-5-og-diy-l-shaped-case-kit)
 
-
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
-
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>
-
-
-

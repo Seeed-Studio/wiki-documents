@@ -231,7 +231,7 @@ DM_Gripper 采用便于装配/拆卸的结构与开源设计理念。这使得�
 </div>
 
 ## 演示与 CAD 文件
-- 请参考 [**Damiao Actuators 维基**](https://wiki.seeedstudio.com/damiao_series/) 进行前期准备。  
+- 请参考 [**Damiao Actuators 维基**](https://wiki.seeedstudio.com/cn/damiao_series/) 进行前期准备。  
 - 请参考 [**力矩控制器演示**](https://github.com/tianrking/DM_Gripper/tree/main)（特别感谢 tianrking）来通过 GUI 控制夹爪动作。  
 <div align="center">
   <img src="https://github.com/YlsonDdb/DM_Gripper/raw/main/docs/pics/DM_GripperController.gif" 

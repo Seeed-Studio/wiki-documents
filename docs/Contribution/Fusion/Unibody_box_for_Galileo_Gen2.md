@@ -15,21 +15,25 @@ Unibody box for Galileo Gen2 is a protective casing for Intel Galileo board. It 
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Unibody-Box-for-Galileo-Gen2-p-2605.html)
 
-##  Features
+## Features
+
 ---
-*   Durable PMMA material to ensure you applications always be safe.
 
-*   Specially designed auto-lock, simple to use.
+- Durable PMMA material to ensure you applications always be safe.
 
-*   Light weight and compact design.
+- Specially designed auto-lock, simple to use.
 
-*   Minimalistic style.
+- Light weight and compact design.
 
-##  Applications
+- Minimalistic style.
+
+## Applications
+
 ---
 ![](https://files.seeedstudio.com/wiki/Unibody_box_for_Galileo_Gen2/img/Unibody_box_for_Galileo_Gen2_with_Galileo_.jpg)
 
-##  Specification
+## Specification
+
 ---
 <table>
   <tr>
@@ -46,7 +50,8 @@ Unibody box for Galileo Gen2 is a protective casing for Intel Galileo board. It 
   </tr>
 </table>
 
-##  Parts list
+## Parts list
+
 ---
 <table>
   <tr>
@@ -63,32 +68,36 @@ Unibody box for Galileo Gen2 is a protective casing for Intel Galileo board. It 
   </tr>
 </table>
 
-##  Assemle guides
+## Assemle guides
+
 ---
 It is quite necessary to read this guide before assembling you Galileo board into this box.
 
 **<span>Note :</span>**
 
-1.  Peel off masking paper first.
+1. Peel off masking paper first.
 
-2.  Please put a screw right into one hole and fix it slowly.
+2. Please put a screw right into one hole and fix it slowly.
 
-3.  Push stopper close horizontally and gently with thumb and index finger before press the lid to avoid breaking stopper.
+3. Push stopper close horizontally and gently with thumb and index finger before press the lid to avoid breaking stopper.
 ![](https://files.seeedstudio.com/wiki/Unibody_box_for_Galileo_Gen2/img/800px-Galileogen2case_Assembly_Guide.jpg)
 
 4. Push stopper close horizontally and gently first as you want to take out the lid.
 
+## Related Projects
 
-##  Related Projects
 ---
+
 - [Cubieboard A20 Acrylic Enclosure](https://www.seeedstudio.com/depot/Cubieboard-A20-Acrylic-Enclosure-p-2396.html)
 
 - [Arduino UNO R3 Acrylic Enclosure - Clear](https://www.seeedstudio.com/depot/Arduino-UNO-R3-Acrylic-Enclosure-Clear-p-2362.html)
 
 - [Acrylic Case for BeagleBone Green](https://www.seeedstudio.com/depot/Acrylic-Case-for-BeagleBone-Green-p-2515.html)
 
-##  Resources
+## Resources
+
 ---
+
 - [CNC files](https://files.seeedstudio.com/wiki/Unibody_box_for_Galileo_Gen2/res/CNC_files.zip)
 
 ## Tech Support & Product Discussion
@@ -96,11 +105,11 @@ It is quite necessary to read this guide before assembling you Galileo board int
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

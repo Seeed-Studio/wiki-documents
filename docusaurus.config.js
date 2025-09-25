@@ -582,7 +582,7 @@ module.exports = (async () => {
                 },
                 {
                   label: 'Solutions',
-                  to: '/Solutions',
+                  to: 'https://solution.seeed.cc/',
                 },
               ],
             },

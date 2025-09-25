@@ -87,6 +87,7 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 ## Read the topics published by px4 in ROS2
 
 Connect the PX4 controller to the UART1 serial port of Jetson
+
 <div align="center">
     <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Object_Tracking/px4_mini.jpg" />
@@ -164,6 +165,7 @@ colcon build
 
 :::note
 Before running the detection node, you need to move the previously generated engine model file to the `/ROS2-package-for-target-tracking/models` directory. Additionally, you must clone the `px4_msgs` and `px4_ros_com` packages(refer to [this wiki](https://wiki.seeedstudio.com/control_px4_with_recomputer_jetson/#step-2-build-the-px4_msgs-ros-2-package)) in the src directory of your workspace.
+
 Your src directory structure should be as follows:
 
 ```bash

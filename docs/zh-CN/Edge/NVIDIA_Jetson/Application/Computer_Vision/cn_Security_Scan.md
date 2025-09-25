@@ -109,7 +109,7 @@ sudo -H pip3 install torch-1.11.0a0+gitbc2c6ed-cp39-cp39-linux_aarch64.whl
 rm torch-1.11.0a0+gitbc2c6ed-cp39-cp39m-linux_aarch64.whl
 ```
 
-After a successful installation, we can check PyTorch with the following commands **after initiating** `python`:
+成功安装后，我们可以在**启动** `python` 后使用以下命令检查 PyTorch：
 
 ```python
 import torch as tr

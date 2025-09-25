@@ -142,12 +142,12 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
@@ -267,7 +267,7 @@ RESETボタンをダブルプレスしてからフラッシュします：
 west flash -r uf2
 ```
 
-Next you'll need to connect to see the output:
+次に、出力を確認するために接続する必要があります：
 
 ```
 screen /dev/ttyACM0 115200
@@ -358,13 +358,13 @@ RESETボタンをダブルプレスしてからフラッシュします：
 west flash -r uf2
 ```
 
-Next you'll need to connect to see the output:
+次に、出力を確認するために接続する必要があります：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-This should display something along these lines:
+これは次のような内容を表示するはずです：
 
 ```
 [00:00:00.297,088] <inf> dmic_sample: PCM output rate: 16000, channels: 1

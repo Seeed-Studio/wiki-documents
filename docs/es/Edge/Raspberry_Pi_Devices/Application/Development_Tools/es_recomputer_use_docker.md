@@ -64,7 +64,7 @@ Este wiki explica cómo usar [docker](https://www.docker.com) en la caja reCompu
 sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
 sudo apt update
 sudo apt full-upgrade
-````
+```
 
 ### Instalar docker
 

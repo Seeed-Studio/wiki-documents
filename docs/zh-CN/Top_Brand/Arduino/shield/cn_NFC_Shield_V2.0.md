@@ -192,11 +192,11 @@ void loop() {
 
 <!--  ### Example #2: NFC(keyless) Door Lock
 
-This example will show you how to use an NFC tag as a key to unlock a door or a lock. The door/lock mechanism will be left to your imagination, we'll only cover the NFC part of the code.
+这个例子将向你展示如何使用NFC标签作为钥匙来解锁门或锁。门/锁的机制将留给你的想象，我们只会涉及代码中的NFC部分。
 
-1.  Do Example #1: NFC Tag Scan, above, to get your NFC tag's UID.
-2.  Optional Step - connect a green LED to pin 3 as shown in the figure/schematic below. We'll use this LED to signal a successful match in keys.
-3.  Optional Step – connect a red LED to pin 4 as shown in the figure/schematic below. We'll use this LED to signal a mismatched key.
+1. 执行上面的示例 #1：NFC 标签扫描，以获取你的 NFC 标签的 UID。
+2. 可选 步骤 - 如下图/示意图所示，将一个绿色 LED 连接到引脚 3。我们将使用这个 LED 来表示密钥匹配成功。
+3. 可选 步骤 - 如下图/示意图所示，将一个红色 LED 连接到引脚 4。我们将使用这个 LED 来表示密钥不匹配。
     <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/Example-2-red-green-led-nfc-alarm.PNG" alt="pir" width={600} height="auto" /></p>
 
     **NFC lock circuit**
@@ -204,7 +204,7 @@ This example will show you how to use an NFC tag as a key to unlock a door or a 
 
     **NFC lock circuit**
 
-4.  In the Arduino IDE create a new sketch and copy, paste, and upload the code below to your Arduino board replacing the myUID string constant with your tag's UID obtained from Example \#1.
+4.  在Arduino IDE中创建一个新的草图,并复制、粘贴以下代码并上传到你的Arduino板上,将myUID字符串常量替换为你在示例#1中获得的标签UID。
 
 #### 代码
 

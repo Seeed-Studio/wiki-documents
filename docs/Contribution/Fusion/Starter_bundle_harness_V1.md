@@ -17,24 +17,24 @@ Starter bundle harness is a board  keeping the component of grove-starter bundle
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Starter-Bundle-Harness-p-906.html)
 
-##   Assemble Instruction
+## Assemble Instruction
 
 ![](https://files.seeedstudio.com/wiki/Starter_bundle_harness_V1/img/Starter_bundle_assemble_instruction.jpg)
 ![](https://files.seeedstudio.com/wiki/Starter_bundle_harness_V1/img/Starter_bundle_assemble_instruction_2.jpg)
 
-##   Features
+## Features
 
-*   Grove compatible interface
+- Grove compatible interface
 
-*   Low power consumption (this is a joke)
+- Low power consumption (this is a joke)
 
-*   2.0cm x 2.0cm Grove module
+- 2.0cm x 2.0cm Grove module
 
-##   Mechanic Dimensions
+## Mechanic Dimensions
 
 ![](https://files.seeedstudio.com/wiki/Starter_bundle_harness_V1/img/Starterbh_mech.jpg)
 
-##   Bill of Materials (BOM) /parts list
+## Bill of Materials (BOM) /parts list
 
 <table >
   <tr>
@@ -94,54 +94,54 @@ Starter bundle harness is a board  keeping the component of grove-starter bundle
   </tr>
 </table>
 
-##   Resources
+## Resources
 
-*   [PEG Board manufacture material](http://garden.seeedstudio.com/images/7/76/PEG_Board_manufacture_material.zip)
+- [PEG Board manufacture material](http://garden.seeedstudio.com/images/7/76/PEG_Board_manufacture_material.zip)
 
-*   [Starter Bundle Harness Pack list v1.0b PEG Board](http://garden.seeedstudio.com/images/f/ff/Starter_Bundle_Harness_Pack_list_v1.0b_PEG_Board.pdf)
+- [Starter Bundle Harness Pack list v1.0b PEG Board](http://garden.seeedstudio.com/images/f/ff/Starter_Bundle_Harness_Pack_list_v1.0b_PEG_Board.pdf)
 
-##   See Also
+## See Also
 
-*   GROVE - Starter Bundle
+- GROVE - Starter Bundle
 
-*   2-axis compass Module
+- 2-axis compass Module
 
-*   [Grove - I2C 3-axis Accelerometer](/Grove-3-Axis_Digital_Accelerometer-400g/ "Grove - I2C 3-axis Accelerometer")
+- [Grove - I2C 3-axis Accelerometer](/Grove-3-Axis_Digital_Accelerometer-400g/ "Grove - I2C 3-axis Accelerometer")
 
-*   [Grove - 3-axis Gyro](/Grove-3-Axis_Digital_Gyro/ "Grove - 3-axis Gyro")
+- [Grove - 3-axis Gyro](/Grove-3-Axis_Digital_Gyro/ "Grove - 3-axis Gyro")
 
-*   [Grove - 3-axis Compass](/Grove-3-Axis_Compass_V1.0/ "Grove_-_3-axis_Compass")
+- [Grove - 3-axis Compass](/Grove-3-Axis_Compass_V1.0/ "Grove_-_3-axis_Compass")
 
-*   [Grove - Light Sensor](/Grove-Light_Sensor/ "Grove - Light Sensor")
+- [Grove - Light Sensor](/Grove-Light_Sensor/ "Grove - Light Sensor")
 
-*   [Grove - Touch Sensor](/Grove-Touch_Sensor/ "Grove - Touch Sensor")
+- [Grove - Touch Sensor](/Grove-Touch_Sensor/ "Grove - Touch Sensor")
 
-*   [Grove - Temperature and Humidity Sensor](/Grove-TemperatureAndHumidity_Sensor/ "Grove - Temperature and Humidity Sensor")
+- [Grove - Temperature and Humidity Sensor](/Grove-TemperatureAndHumidity_Sensor/ "Grove - Temperature and Humidity Sensor")
 
 <!-- *   [Grove - Magnetic Switch](/Grove-Magnetic_Switch "Grove - Magnetic Switch") -->
 
-*   [Grove - Alcohol Sensor](/Grove-Alcohol_Sensor/ "Grove - Alcohol Sensor")
+- [Grove - Alcohol Sensor](/Grove-Alcohol_Sensor/ "Grove - Alcohol Sensor")
 
-*   [Grove - Serial LCD](/Grove-Serial_LCD_V1.0/ "Grove - Serial LCD")
+- [Grove - Serial LCD](/Grove-Serial_LCD_V1.0/ "Grove - Serial LCD")
 
-*   [Grove - RTC](/Grove-RTC/ "Grove - RTC")
+- [Grove - RTC](/Grove-RTC/ "Grove - RTC")
 
-*   [Grove - Electricity Sensor](/Grove-Electricity_Sensor/ "Grove - Electricity Sensor")
+- [Grove - Electricity Sensor](/Grove-Electricity_Sensor/ "Grove - Electricity Sensor")
 
-*   [Grove - Sound Sensor ](/Grove-Sound_Sensor/    "Grove - Sound Sensor")
+- [Grove - Sound Sensor](/Grove-Sound_Sensor/    "Grove - Sound Sensor")
 
-*   [Grove - Base Shield](/Base_Shield_V2/ "Grove - Base Shield")
+- [Grove - Base Shield](/Base_Shield_V2/ "Grove - Base Shield")
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

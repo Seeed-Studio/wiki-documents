@@ -3,10 +3,10 @@ description: SeeedStudio BeagleBone® Green Eco 入门指南
 title: Seeed Studio BeagleBone® Green Eco
 keywords:
 - Beagle_Bone_Green_Eco
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/Seeed-Studio-BeagleBoneR-Green-Eco.webp
 slug: /cn/getting_started_with_seeedstudio_beaglebone_green_eco
 last_update:
-  date: 9/12/2025
+  date: 9/18/2025
   author: Atom Yang
 ---
 
@@ -14,7 +14,7 @@ last_update:
 
 **Seeed Studio BeagleBone® Green Eco** 是一款工业级开源单板计算机，与 BeagleBoard.org® 基金会共同开发，采用强大的 **TI AM3358 SoC** 供电。这款"Eco"版本专为高效率而设计，集成了先进的 TI 电源管理芯片 (TPS6521403)，确保优化的能耗。它配备了丰富的 16GB 板载 eMMC 存储和千兆以太网端口，可提供高速网络连接，非常适合要求苛刻的应用。为了实现无缝硬件原型设计，它集成了两个标志性的 Grove 连接器，提供对 Seeed 广泛的 Grove 传感器和模块生态系统的直接、免焊接访问。
 
-在不到 10 秒内启动 Linux，仅用一根 USB 线缆即可在 5 分钟内开始开发。
+在 10 秒内启动 Linux，仅用一根 USB 线缆即可在 5 分钟内开始开发。
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -27,7 +27,7 @@ last_update:
 
 **特性 1：强大的核心与实时处理**
 
-* 集成 TI AM3358 1GHz ARM® Cortex-A8 处理器，配备 NEON™ SIMD 协处理器以加速处理。还包括双核可编程实时单元 (PRU-ICSS)，用于确定性、低延迟控制，这对工业自动化和机器人技术至关重要。
+* 集成 TI AM3358 1GHz ARM® Cortex-A8 处理器，配备 NEON™ SIMD 协处理器以实现加速处理。还包括双核可编程实时单元 (PRU-ICSS)，用于确定性、低延迟控制，这对工业自动化和机器人技术至关重要。
 
 **特性 2：环保电源管理**
 
@@ -39,7 +39,7 @@ last_update:
 
 **特性 4：丰富的现代连接性**
 
-* 配备升级的高速接口，包括千兆以太网端口和现代 USB Type-C 端口，用于供电和数据传输。为了快速原型设计，还包括两个内置 Grove 连接器（I2C 和 UART）Grove - Seeed Studio，可轻松、免焊接地连接到 Seeed Studio 广泛的传感器和执行器生态系统。
+* 配备升级的高速接口，包括千兆以太网端口和现代 USB Type-C 端口，用于电源和数据传输。为了快速原型设计，还包括两个内置 Grove 连接器（I2C 和 UART）Grove - Seeed Studio，可轻松、免焊接地连接到 Seeed Studio 广泛的传感器和执行器生态系统。
 
 **特性 5：开发就绪**
 
@@ -53,7 +53,7 @@ last_update:
 |            | 加速器                | NEON 浮点单元和 3D 图形加速器                                                                                           | NEON 浮点单元和 3D 图形加速器                                                                  |
 | 内存       | RAM                   | 512MB DDR3L, 800MHz                                                                                                    | 512MB DDR3L, 800MHz                                                                           |
 |            | 闪存存储              | **16GB eMMC (Kingston EMMC16G-WW28)**                                                                                  | 4GB 8-bit eMMC                                                                                |
-|            | EEPRPM                | **32KB (FMD FT24C32A-ELRT)**                                                                                           | 4KB EEPROM                                                                                    |
+|            | EEPROM                | 4KB                                                                                                                    | 4KB                                                                                    |
 |            | 外部存储              | microSD 卡槽，支持最大 32GB                                                                                            | microSD 卡槽，支持最大 32GB                                                                   |
 | 电源       | 电源管理              | **TI TPS6521403 PMIC**                                                                                                     | TI TPS65217C PMIC                                                                             |
 |            | 电压调节器            | TI TPS62A01DRL (3.3V Buck 转换器);TI TPS74501PDRV (1.8V 常开 LDO);TI TPS2117DRL (电源多路复用器)                    | TI TL5209DR (3.3V LDO 调节器)                                                                 |
@@ -92,9 +92,9 @@ BeagleBone® Green Eco 基于德州仪器的 AM335x ARM Cortex-A8 处理器构�
 
 **处理器**
 BeagleBone® Green Eco 集成了德州仪器 AM335x 1GHz ARM® Cortex-A8 处理器，在单个 SoC 内结合了计算处理、图形加速和实时控制功能。该架构实现了带有 NEON™ SIMD 引擎和 VFPv3 浮点单元的 ARMv7-A，可高效执行复杂的计算任务，同时保持嵌入式应用的功耗效率。
-一个独特的特性是可编程实时单元子系统和工业通信子系统 (PRU-ICSS)，包含独立于主 ARM 处理器运行的双 32 位 RISC 核心。这些 PRU 能够实现亚微秒响应时间的确定性实时控制和专用工业通信协议的实现。AM335x 通过 TI 的 Processor SDK 和开发环境支持包括 Linux 在内的高级操作系统和实时操作系统。
-* AM335x 1GHz ARM® Cortex-A8 处理器，15.0mm x 15.0mm，NFBGA (324)* NEON™ SIMD 协处理器和 VFPv3 浮点单元，用于加速媒体和信号处理
-* PowerVR SGX™ 图形加速器，支持 OpenGL ES 2.0
+一个显著特性是可编程实时单元子系统和工业通信子系统 (PRU-ICSS)，包含独立于主 ARM 处理器运行的双 32 位 RISC 核心。这些 PRU 能够实现亚微秒响应时间的确定性实时控制和专用工业通信协议的实现。AM335x 通过 TI 的 Processor SDK 和开发环境支持包括 Linux 在内的高级操作系统和实时操作系统。
+* AM335x 1GHz ARM® Cortex-A8 处理器，15.0mm x 15.0mm，NFBGA (324)
+* NEON™ SIMD 协处理器和 VFPv3 浮点单元，用于加速媒体和信号处理* PowerVR SGX™ 图形加速器，支持 OpenGL ES 2.0
 * 双 32 位 PRU-ICSS，用于实时工业通信和控制
 * 支持工业接口，包括 EtherCAT、PROFINET 和 PROFIBUS
 
@@ -132,7 +132,7 @@ BeagleBone® Green Eco 支持：
 **PWM 和定时器**
 
 :::note
-最多 8 个数字 I/O 引脚可以配置为脉宽调制器 (PWM)，用于产生信号来控制电机或创建伪模拟电压电平，而不占用任何额外的 CPU 周期。
+最多 8 个数字 I/O 引脚可以配置为脉宽调制器 (PWM)，用于产生控制电机的信号或创建伪模拟电压电平，而不占用任何额外的 CPU 周期。
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/3.png" /></div>
@@ -149,7 +149,7 @@ BeagleBone® Green Eco 支持：
 **UART**
 
 :::note
-有一个专用接头用于访问 UART0 引脚和连接调试电缆。另外五个串行端口被引出到扩展接头，但其中一个只有单向引出到接头。
+有一个专用接头用于访问 UART0 引脚和连接调试电缆。另外五个串行端口连接到扩展接头，但其中一个只有单向连接到接头。
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/5.png" /></div>
@@ -174,7 +174,7 @@ BeagleBone® Green Eco 支持：
 ## 入门指南
 
 :::note
-本章节是在 Win10 下编写的。其他操作系统的步骤类似。
+本章节在 Win10 下编写。其他操作系统的步骤类似。
 :::
 
 **步骤 1. 通过 USB 连接您的 Seeed Studio BeagleBone® Green**
@@ -212,11 +212,11 @@ Seeed Studio BeagleBone® Green 将作为闪存驱动器运行，为您提供文
 :::
 
 :::note
-其他 FTDI USB 转串行/JTAG 信息和驱动程序可从 [https://www.ftdichip.com/Drivers/VCP.htm](https://www.ftdichip.com/Drivers/VCP.htm) 获取。
+更多 FTDI USB 转串行/JTAG 信息和驱动程序可从 [https://www.ftdichip.com/Drivers/VCP.htm](https://www.ftdichip.com/Drivers/VCP.htm) 获取。
 :::
 
 :::note
-其他 USB 转虚拟以太网信息和驱动程序可从 [https://www.linux-usb.org/gadget/](https://www.linux-usb.org/gadget/) 和 [https://joshuawise.com/horndis](https://joshuawise.com/horndis) 获取。
+更多 USB 转虚拟以太网信息和驱动程序可从 [https://www.linux-usb.org/gadget/](https://www.linux-usb.org/gadget/) 和 [https://joshuawise.com/horndis](https://joshuawise.com/horndis) 获取。
 :::
 
 **步骤 3. 浏览到您的 Beagle**
@@ -365,7 +365,7 @@ Grove 是一个模块化、标准化的连接器原型系统。Grove 采用积�
 
 ## 参考资料
 
-有许多参考资料可以帮助您获取有关开发板的更多信息。
+有许多参考资料可以帮助您获取有关该开发板的更多信息。
 
 * [BeagleBoard 主页](https://beagleboard.org/)
 * [BeagleBoard 入门指南](https://beagleboard.org/getting-started)

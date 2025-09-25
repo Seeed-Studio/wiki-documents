@@ -17,7 +17,7 @@ last_update:
 
 El módulo Grove - Sensor de Gas(MQ2) es útil para la detección de fugas de gas (hogar e industria). Es adecuado para detectar H2, GLP, CH4, CO, Alcohol, Humo o Propano. Debido a su alta sensibilidad y tiempo de respuesta rápido, la medición se puede realizar lo antes posible. La sensibilidad del sensor se puede ajustar mediante potenciómetro.
 
-<!-- |Sensor|Gas Type|Get One Now|
+<!-- |Sensor|Gas Type|Compra ahora|
 |:---:|---|---|
 |[MQ2](https://wiki.seeedstudio.com/es/Grove-Gas_Sensor-MQ2/)|Combustible Gas, Smoke|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|
 |[MQ3](https://wiki.seeedstudio.com/es/Grove-Gas_Sensor-MQ3/)|Alcohol Vapor|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor%28MQ3%29-p-1418.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|

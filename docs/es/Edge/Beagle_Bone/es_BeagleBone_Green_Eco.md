@@ -3,16 +3,16 @@ description: Introducción a SeeedStudio BeagleBone® Green Eco
 title: Seeed Studio BeagleBone® Green Eco
 keywords:
 - Beagle_Bone_Green_Eco
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/Seeed-Studio-BeagleBoneR-Green-Eco.webp
 slug: /es/getting_started_with_seeedstudio_beaglebone_green_eco
 last_update:
-  date: 9/12/2025
+  date: 9/18/2025
   author: Atom Yang
 ---
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/1-102111198-Seeed-Studio-BeagleBoneR-Green-Eco.jpg" /></div>
 
-**El Seeed Studio BeagleBone® Green Eco** es una computadora de placa única de código abierto de grado industrial, co-desarrollada con la Fundación BeagleBoard.org® y alimentada por el robusto **TI AM3358 SoC**. Esta versión "Eco" está diseñada para alta eficiencia, incorporando un chip avanzado de gestión de energía TI (TPS6521403) para asegurar un consumo de energía optimizado. Está bien equipada para aplicaciones exigentes con generosos 16GB de almacenamiento eMMC integrado y un puerto Gigabit Ethernet para conectividad de red de alta velocidad. Para prototipado de hardware sin problemas, integra dos conectores Grove característicos, ofreciendo acceso directo sin soldadura al extenso ecosistema de sensores y módulos Grove de Seeed.
+**El Seeed Studio BeagleBone® Green Eco** es una computadora de placa única de código abierto de grado industrial, co-desarrollada con la Fundación BeagleBoard.org® y alimentada por el robusto **SoC TI AM3358**. Esta versión "Eco" está diseñada para alta eficiencia, incorporando un chip avanzado de gestión de energía TI (TPS6521403) para asegurar un consumo de energía optimizado. Está bien equipada para aplicaciones exigentes con generosos 16GB de almacenamiento eMMC integrado y un puerto Gigabit Ethernet para conectividad de red de alta velocidad. Para prototipado de hardware sin problemas, integra dos conectores Grove característicos, ofreciendo acceso directo sin soldadura al extenso ecosistema de sensores y módulos Grove de Seeed.
 
 Inicia Linux en menos de 10 segundos y comienza el desarrollo en menos de 5 minutos con solo un cable USB.
 
@@ -50,10 +50,10 @@ Inicia Linux en menos de 10 segundos y comienza el desarrollo en menos de 5 minu
 | Categoría  | Elemento              | Seeed Studio BeagleBone® Green Eco                                                                                     | Seeed Studio BeagleBone® Green                                                                 |
 |------------|-----------------------|------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | Procesador | Núcleo                | TI AM3358 1GHz ARM® Cortex-A8                                                                                          | TI AM3358 1GHz ARM® Cortex-A8                                                                 |
-|            | Aceleradores          | Unidad de punto flotante NEON y acelerador de gráficos 3D                                                             | Unidad de punto flotante NEON y acelerador de gráficos 3D                                     |
+|            | Aceleradores          | Unidad de punto flotante NEON y acelerador gráfico 3D                                                                  | Unidad de punto flotante NEON y acelerador gráfico 3D                                         |
 | Memoria    | RAM                   | 512MB DDR3L, 800MHz                                                                                                    | 512MB DDR3L, 800MHz                                                                           |
 |            | Almacenamiento Flash  | **16GB eMMC (Kingston EMMC16G-WW28)**                                                                                  | 4GB 8-bit eMMC                                                                                |
-|            | EEPRPM                | **32KB (FMD FT24C32A-ELRT)**                                                                                           | 4KB EEPROM                                                                                    |
+|            | EEPROM                | 4KB                                                                                                                    | 4KB                                                                                    |
 |            | Almacenamiento Externo| Ranura para tarjeta microSD, soporta hasta 32GB                                                                        | Ranura para tarjeta microSD, soporta hasta 32GB                                               |
 | Energía    | Gestión de Energía    | **TI TPS6521403 PMIC**                                                                                                     | TI TPS65217C PMIC                                                                             |
 |            | Regulador de Voltaje  | TI TPS62A01DRL (convertidor Buck 3.3V);TI TPS74501PDRV (LDO siempre activo 1.8V);TI TPS2117DRL (Mux de energía)  | TI TL5209DR (Regulador LDO 3.3V)                                                              |
@@ -62,11 +62,11 @@ Inicia Linux en menos de 10 segundos y comienza el desarrollo en menos de 5 minu
 |            | Red                   | **Gigabit Ethernet (10/100/1000Mbps)**                                                                                 | Ethernet (10/100Mbit)                                                                         |
 |            | Cabezales de Expansión| 2x cabezales de 46 pines                                                                                               | 2x cabezales de 46 pines                                                                      |
 |            | Grove                 | 1x I2C, 1x UART2                                                                                                       | 1x I2C, 1x UART2                                                                              |
-|            | Botones               | 1x botón Reset;1x botón Usuario(Boot)                                                                              | 1x botón Reset;1x botón Usuario(Boot);1x Botón de Encendido                            |
-|            | Indicadores           | 1x LED de energía, 4x LEDs programables por usuario                                                                    | 4x LEDs (latido, microSD, CPU, eMMC)                                                          |
+|            | Botones               | 1x botón Reset;1x botón Usuario(Boot)                                                                              | 1x botón Reset;1x botón Usuario(Boot);1x Botón de Encendido                           |
+|            | Indicadores           | 1x LED de energía, 4x LEDs programables por usuario                                                                     | 4x LEDs (latido, microSD, CPU, eMMC)                                                          |
 | Físico     | Dimensiones           | 86.4mm x 53.3mm x 18mm                                                                                                 | 86.4mm x 53.3mm x 18mm                                                                        |
 |            | Peso                  | 40g                                                                                                                    | 45g                                                                                           |
-|            | Temperatura Operativa | **-40 ~ 85℃**                                                                                                              | 0 ~ 75℃                                                                                       |
+|            | Temperatura de Operación | **-40 ~ 85℃**                                                                                                              | 0 ~ 75℃                                                                                       |
 
 
 
@@ -91,10 +91,10 @@ BeagleBone® Green Eco está construido alrededor del procesador AM335x ARM Cort
 
 
 **Procesador**
-BeagleBone® Green Eco integra el procesador Texas Instruments AM335x 1GHz ARM® Cortex-A8 que combina procesamiento computacional, aceleración de gráficos y funcionalidad de control en tiempo real dentro de un solo SoC. La arquitectura implementa ARMv7-A con motor NEON™ SIMD y unidad de punto flotante VFPv3 para ejecución eficiente de tareas computacionales complejas, mientras mantiene eficiencia energética para aplicaciones embebidas.
+BeagleBone® Green Eco integra el procesador Texas Instruments AM335x 1GHz ARM® Cortex-A8 que combina procesamiento computacional, aceleración gráfica y funcionalidad de control en tiempo real dentro de un solo SoC. La arquitectura implementa ARMv7-A con motor NEON™ SIMD y unidad de punto flotante VFPv3 para ejecución eficiente de tareas computacionales complejas, mientras mantiene eficiencia energética para aplicaciones embebidas.
 Una característica distintiva es el Subsistema de Unidad Programable de Tiempo Real y Subsistema de Comunicación Industrial (PRU-ICSS), que comprende núcleos RISC de 32 bits duales operando independientemente del procesador ARM principal. Estos PRUs permiten control determinístico en tiempo real con tiempos de respuesta sub-microsegundo e implementación de protocolos de comunicación industrial especializados. El AM335x soporta sistemas operativos de alto nivel incluyendo Linux y sistemas operativos de tiempo real a través del SDK de Procesador de TI y entornos de desarrollo.
-* Procesador AM335x 1GHz ARM® Cortex-A8, 15.0mm x 15.0mm, NFBGA (324)* Coprocesador NEON™ SIMD y unidad de punto flotante VFPv3 para procesamiento acelerado de medios y señales
-* Acelerador gráfico PowerVR SGX™ compatible con OpenGL ES 2.0
+* Procesador AM335x 1GHz ARM® Cortex-A8, 15.0mm x 15.0mm, NFBGA (324)
+* Coprocesador NEON™ SIMD y unidad de punto flotante VFPv3 para procesamiento acelerado de medios y señales* Acelerador de Gráficos PowerVR SGX™ compatible con OpenGL ES 2.0
 * PRU-ICSS dual de 32 bits para comunicaciones y control industrial en tiempo real
 * Soporte para interfaces industriales incluyendo EtherCAT, PROFINET y PROFIBUS
 
@@ -109,12 +109,12 @@ BeagleBone® Green Eco incluye:
 BeagleBone® Green Eco soporta:
 * Conectividad Gigabit Ethernet
 * 1x puerto USB 2.0 Type-C para alimentación y comunicaciones
-* 1x interfaz USB 2.0 Host, Type-A
+* 1x Interfaz Host USB 2.0, Type-A
 
 **Conectores/Cabezales de Expansión para Soportar Capes Específicas de Aplicación**
 * 2x cabezales de 46 pines
 * 1x cabezales UART0 de 6 pines
-* Dos conectores Grove (uno I2C y uno UART) para conexión fácil al ecosistema Grove de sensores y actuadores
+* Dos conectores Grove (Uno I2C y Uno UART) para conexión fácil al ecosistema Grove de sensores y actuadores
 
 **Definición de Pines del Cabezal**
 
@@ -140,7 +140,7 @@ Hasta 8 pines de E/S digitales pueden configurarse con moduladores de ancho de p
 **Entradas Analógicas**
 
 :::note
-Asegúrate de no ingresar más de 1.8V a los pines de entrada analógica. Este es un convertidor analógico-digital único de 12 bits con 8 canales, 7 de los cuales están disponibles en los cabezales.
+Asegúrate de no ingresar más de 1.8V a los pines de entrada analógica. Este es un convertidor analógico-digital de 12 bits con 8 canales, 7 de los cuales están disponibles en los cabezales.
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/4.png" /></div>
@@ -157,7 +157,7 @@ Hay un cabezal dedicado para acceder a los pines UART0 y conectar un cable de de
 **I2C**
 
 :::note
-El primer bus I2C se utiliza para leer EEPROMs en placas adicionales cape y no puede usarse para otras operaciones de E/S digitales sin interferir con esa función, pero aún puedes usarlo para agregar otros dispositivos I2C en direcciones disponibles. El segundo bus I2C está disponible para que lo configures y uses.
+El primer bus I2C se utiliza para leer EEPROMs en placas de expansión cape y no puede usarse para otras operaciones de E/S digitales sin interferir con esa función, pero aún puedes usarlo para agregar otros dispositivos I2C en direcciones disponibles. El segundo bus I2C está disponible para que lo configures y uses.
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/6.png" /></div>
@@ -165,7 +165,7 @@ El primer bus I2C se utiliza para leer EEPROMs en placas adicionales cape y no p
 **SPI**
 
 :::note
-    Para transferir datos rápidamente, podrías considerar usar uno de los puertos SPI.
+    Para enviar datos rápidamente, podrías considerar usar uno de los puertos SPI.
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/7.png" /></div>
@@ -177,7 +177,7 @@ El primer bus I2C se utiliza para leer EEPROMs en placas adicionales cape y no p
 Este capítulo está escrito bajo Win10. Los pasos son similares para otros sistemas operativos.
 :::
 
-**PASO 1. Conecta tu Seeed Studio BeagleBone® Green vía USB**
+**PASO1. Conecta tu Seeed Studio BeagleBone® Green vía USB**
 
 Usa el cable micro USB proporcionado para conectar tu Seeed Studio BeagleBone® Green a tu computadora. Esto alimentará la placa y proporcionará una interfaz de desarrollo. Seeed Studio BeagleBone® Green arrancará Linux desde el eMMC integrado de 2GB o 4GB.
 
@@ -190,14 +190,14 @@ Verás el LED PWR encendido de forma constante. Dentro de 10 segundos, deberías
 * D4 está configurado al arranque para encenderse durante actividad de CPU
 * D5 está configurado al arranque para encenderse durante accesos al eMMC
 
-**PASO 2. Instalar Controladores**
+**PASO2. Instalar Controladores**
 
 Instala los controladores para tu sistema operativo para darte acceso de red-sobre-USB a tu Beagle. Los controladores adicionales te dan acceso serie a tu placa.
 
 |Sistema Operativo | Controladores USB | Comentarios |
 |---------------------|---------|------------|
-|Windows (64-bit) | [Instalador de 64 bits](https://beagleboard.org/static/Drivers/Windows/BONE_D64.exe)  | |
-|Windows (32-bit) | [Instalador de 32 bits](https://beagleboard.org/static/Drivers/Windows/BONE_DRV.exe)||
+|Windows (64-bit) | [Instalador de 64-bit](https://beagleboard.org/static/Drivers/Windows/BONE_D64.exe)  | |
+|Windows (32-bit) | [Instalador de 32-bit](https://beagleboard.org/static/Drivers/Windows/BONE_DRV.exe)||
 |Mac OS X|[Red](https://beagleboard.org/static/Drivers/MacOSX/RNDIS/HoRNDIS.pkg) [Serie](https://beagleboard.org/static/Drivers/MacOSX/FTDI/EnergiaFTDIDrivers2.2.18.pkg) | Instala ambos conjuntos de controladores.|
 |Linux|[mkudevrule.sh](https://beagleboard.org/static/Drivers/Linux/FTDI/mkudevrule.sh)|La instalación de controladores no es requerida, pero podrías encontrar útiles algunas reglas udev.|
 
@@ -219,7 +219,7 @@ Información adicional y controladores FTDI USB a serie/JTAG están disponibles 
 Información adicional y controladores USB a Ethernet virtual están disponibles en [https://www.linux-usb.org/gadget/](https://www.linux-usb.org/gadget/) y [https://joshuawise.com/horndis](https://joshuawise.com/horndis).
 :::
 
-**PASO 3. Navegar a tu Beagle**
+**PASO3. Navegar a tu Beagle**
 
 Usando Chrome o Firefox (Internet Explorer NO funcionará), navega al servidor web ejecutándose en tu placa. Cargará una presentación mostrándote las capacidades de la placa. Usa las teclas de flecha de tu teclado para navegar la presentación.
 
@@ -228,7 +228,7 @@ Las imágenes de software más antiguas requieren que EXPULSES la unidad BeagleB
 
 [![Haz clic para ver imagen más grande](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)
 
-**PASO 4. IDE Cloud9**
+**PASO4. IDE Cloud9**
 
 Para comenzar a editar programas que viven en tu placa, puedes usar el IDE Cloud9 haciendo clic
 
@@ -238,7 +238,7 @@ Para comenzar a editar programas que viven en tu placa, puedes usar el IDE Cloud
 
 Necesitas actualizar la placa al software más reciente para mantener un mejor rendimiento, aquí te mostraremos cómo hacerlo paso a paso.
 
-**PASO 1. Descargar la imagen de software más reciente**
+**PASO1. Descargar la imagen de software más reciente**
 
 Primero que todo, tienes que descargar la imagen adecuada aquí.
 
@@ -250,7 +250,7 @@ Debido a necesidades de tamaño, esta descarga puede tomar alrededor de 30 minut
 
 El archivo que descargues tendrá una extensión **.img.xz**. Esta es una imagen comprimida sector por sector de la tarjeta SD.
 
-**PASO 2. Instalar utilidad de compresión y descomprimir la imagen**
+**PASO2. Instalar utilidad de compresión y descomprimir la imagen**
 
 Descarga e instala [7-zip.](http://www.7-zip.org/download.html)
 
@@ -260,11 +260,11 @@ Descarga e instala [7-zip.](http://www.7-zip.org/download.html)
 
 Usa 7-zip para descomprimir el **archivo .img** de la tarjeta SD
 
-**PASO 3. Instalar utilidad de programación de tarjeta SD**
+**PASO3. Instalar utilidad de programación de tarjeta SD**
 
 Descarga e instala [Image Writer para Windows](https://sourceforge.net/projects/win32diskimager/files/latest/download). Asegúrate de descargar la distribución binaria.
 
-**PASO 4. Escribir la imagen a tu tarjeta SD**
+**PASO4. Escribir la imagen a tu tarjeta SD**
 
 Necesitas un adaptador SD para conectar tu tarjeta microSD a tu computadora primero. Luego usa el software Image Write para Windows para escribir la imagen descomprimida a tu tarjeta SD.
 
@@ -276,12 +276,12 @@ Haz clic en el botón **Write**, entonces el proceso comienza.
 
 :::note
 
-* Puedes ver una advertencia sobre dañar tu dispositivo. Está bien aceptarla siempre y cuando estés apuntando a tu tarjeta SD para escribir.
+* Puedes ver una advertencia sobre dañar tu dispositivo. Esto está bien aceptarlo siempre que estés apuntando a tu tarjeta SD para escribir.
 * No deberías tener tu BeagleBone® conectado a tu computadora en este momento.
 * Este proceso puede necesitar hasta 10 minutos.
 :::
 
-**PASO 5. Arrancar tu placa desde la tarjeta SD**
+**PASO5. Arrancar tu placa desde la tarjeta SD**
 
 Inserta la tarjeta SD en tu placa (apagada primero). Entonces la placa arrancará desde la tarjeta SD.
 
@@ -311,7 +311,7 @@ Cuando el flasheo esté completo, todos los 4 LEDs USRx estarán **apagados**. L
 
 ## Grove para Seeed Studio BeagleBone® Green
 
-Grove es un sistema de prototipado con conectores modulares y estandarizados. Grove adopta un enfoque de bloques de construcción para ensamblar electrónicos. Comparado con el sistema basado en jumpers o soldadura, es más fácil de conectar, experimentar y construir, y simplifica el sistema de aprendizaje, pero no al punto de volverse simplista. Algunos de los otros sistemas de prototipado que existen reducen el nivel a bloques de construcción. Es bueno aprender de esa manera, pero el sistema Grove te permite construir sistemas reales. Requiere algo de aprendizaje y experiencia para conectar las cosas.
+Grove es un sistema de prototipado con conectores modulares y estandarizados. Grove adopta un enfoque de bloques de construcción para ensamblar electrónicos. Comparado con el sistema basado en jumpers o soldadura, es más fácil de conectar, experimentar y construir, y simplifica el sistema de aprendizaje, pero no hasta el punto de volverse simplista. Algunos de los otros sistemas de prototipado que existen reducen el nivel a bloques de construcción. Es bueno aprender de esa manera, pero el sistema Grove te permite construir sistemas reales. Requiere algo de aprendizaje y experiencia para conectar las cosas.
 
 A continuación se listan los módulos Grove que funcionan bien con Seeed Studio BeagleBone® Green.
 

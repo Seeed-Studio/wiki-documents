@@ -21,7 +21,7 @@ ReSpeaker XVF3800 USB 4-Mic Array は、XMOS XVF3800 を搭載したプロフェ
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -756,9 +756,9 @@ DoA 値を確認するコマンド
 
 ```bash
 ./xvf_host AEC_AZIMUTH_VALUES
-````
+```
 
-Example Output
+出力例
 
 ```bash
 Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3

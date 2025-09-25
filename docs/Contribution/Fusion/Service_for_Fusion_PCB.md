@@ -69,10 +69,8 @@ For PCB size (50mm X 100mm), 4 x 10pcs option cost more than 1 x 50pcs option.
 - PCB MateriaFR-4
 
 - Available Color:
-
-- Solder Mask: Green, Red, Yellow, Blue, White, Black
-
-- Silk Screen: White, Black (For White Solder Mask only)
+  - Solder Mask: Green, Red, Yellow, Blue, White, Black
+  - Silk Screen: White, Black (For White Solder Mask only)
 
 - Font: The minimum is 6 mil of line-width and 32 mil of height, a litter bigger will be better.
 
@@ -137,11 +135,11 @@ PCB design: 70mm X 70mm   Option: 50mm X 150mm (No)   100mm X 100mm (Yes)
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div className="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" className="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" className="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
 </div>
 
 <div className="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
 </div>
