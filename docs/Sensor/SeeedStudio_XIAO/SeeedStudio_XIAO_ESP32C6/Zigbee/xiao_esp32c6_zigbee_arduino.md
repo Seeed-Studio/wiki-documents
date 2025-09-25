@@ -23,7 +23,7 @@ This tutorial guides you through implementing [Zigbee](https://en.wikipedia.org/
 
 :::note Prerequisite: Arduino Development Setup
 
-If you haven't prepared your Arduino IDE, refer to the **[Getting Started Guide](https://chatgpt.com/xiao_esp32c6_getting_started/#software-preparation)**. Make sure the **esp-arduino board version** is **v3.0.6 or later**, which supports Zigbee functionality.
+If you haven't prepared your Arduino IDE, refer to the **[Getting Started Guide](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/#software-preparation)**. Make sure the **esp-arduino board version** is **v3.0.6 or later**, which supports Zigbee functionality.
 
 :::
 

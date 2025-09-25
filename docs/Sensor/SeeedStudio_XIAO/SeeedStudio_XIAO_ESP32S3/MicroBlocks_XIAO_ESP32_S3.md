@@ -8,7 +8,7 @@ last_update:
   author: MicroBlocks
 ---
 
-# Using XIAO ESP32-S3 on MicroBlocks
+# XIAO ESP32-S3 with MicroBlocks
 
 ## MicroBlocks
 
