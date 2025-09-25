@@ -348,7 +348,7 @@ if __name__ == "__main__":
    sys.exit(0)
 ```
 
-- **Step 4.** Run the demo.
+- **Paso 4.** Ejecuta la demostración.
 
 ```
 sudo python grove_gps_data.py

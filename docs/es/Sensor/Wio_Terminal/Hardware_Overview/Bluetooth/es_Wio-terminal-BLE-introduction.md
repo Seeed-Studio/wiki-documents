@@ -316,7 +316,7 @@ Crear servidor BLE
 BLEServer *pServer = BLEDevice::createServer();
 ```
 
-Create BLE service using the server UUID.
+Crear el servicio BLE usando el servidor UUID.
 
 ```cpp
 BLEService *pService = pServer->createService(SERVICE_UUID);

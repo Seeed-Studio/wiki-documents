@@ -16,22 +16,22 @@ last_update:
 El Seeed Studio XIAO ESP32C6 es una placa de desarrollo potente y versátil construida alrededor del SoC ESP32-C6, que cuenta con procesadores duales **RISC-V** de 32 bits. El procesador de alto rendimiento opera hasta 160 MHz, mientras que el procesador de bajo consumo funciona hasta 20 MHz. Con 512KB SRAM y 4MB Flash, el XIAO ESP32C6 ofrece un espacio de programación significativo, haciéndolo ideal para diversas aplicaciones IoT. Esta placa sobresale en conectividad inalámbrica, soportando Wi-Fi 6 de 2.4 GHz, Bluetooth® 5.3, Zigbee, y Thread (802.15.4), y es nativo de Matter, lo cual es crucial para la interoperabilidad de hogares inteligentes.
 
 <div class="table-center">
-	<table>
-		<tr>
-			<th>Seeed Studio XIAO ESP32C6</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html
+ <table>
+  <tr>
+   <th>Seeed Studio XIAO ESP32C6</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html
         " target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 [Swift](https://www.swift.org/) es un lenguaje de programación poderoso e intuitivo desarrollado por Apple Inc. para desarrollar software para iOS, macOS, watchOS, tvOS y más. En [WWDC2024](https://developer.apple.com/wwdc24/), Apple anunció Embedded Swift, un proyecto de código abierto que tiene como objetivo llevar Swift al mundo de los sistemas embebidos e IoT. Permite usar Swift en microcontroladores sin sistema operativo y con recursos mínimos disponibles. Actualmente, los swift-embedded-examples oficiales soportan plataformas de hardware de STM32, Raspberry Pi Pico, Nordic Semiconductor, e incluso RISC-V ESP32 (ESP32C6).
@@ -200,22 +200,26 @@ Ahora podemos tener el firmware en nuestro XIAO C6, una vez que obtengas el mens
 Si estás trabajando con WSL2, necesitarás tener [usbipd](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/WSL.md#usbipd) instalado.
 
 Para instalar, usa el Administrador de Paquetes de Windows con el comando:
+
 ```shell
 winget install usbipd
 ```
 
-After installation, share the USB device using:
+Después de la instalación, comparte el dispositivo USB usando:
+
 ```shell
 usbipd list #Check BUSID
 usbipd bind -b '<BUSID>'
 ```
 
 Para conectar el dispositivo desde WSL2:
+
 ```shell
 usbipd attach --wsl --busid=<BUSID>
 ```
 
 Para ver qué puerto está compartido:
+
 ```shell
 dmesg | tail
 # dmesg | tail -n 100 | sed -n 's/.*\(ttyACM[0-9]*\).*/\1/p'
@@ -230,6 +234,7 @@ idf.py -p /dev/ttyACM0 flash monitor
 ```
 
 *Este comando:*
+
 1. Flashea el firmware al dispositivo conectado a ttyACM0.
 2. Inicia el monitoreo de la salida serie del dispositivo, mostrando cualquier declaración de impresión o registros.
 

@@ -270,7 +270,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 
-- **Step 3**. Excute below commands to run the code.
+- **Paso 3**. Ejecuta los siguientes comandos para ejecutar el código.
 
 ```
 cd grove.py/grove

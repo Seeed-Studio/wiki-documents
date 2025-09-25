@@ -251,7 +251,7 @@ if __name__ == '__main__':
 ```
 
 :::tip
-If everything goes well, you will be able to see the following result
+Si todo va bien, podrás ver el siguiente resultado
 :::
 
 ```python
@@ -382,7 +382,7 @@ while True:
         print "Error"
 ```
 
-- **Step 3.** Run the demo.
+- **Paso 3.** Ejecuta la demostración.
 
 ```
 sudo python3 grove_thumb_joystick.py

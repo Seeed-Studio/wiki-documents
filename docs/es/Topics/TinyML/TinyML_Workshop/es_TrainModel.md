@@ -116,7 +116,7 @@ sudo apt-get update
 sudo apt-get install mosquitto
 ```
 
-and get the Mosquitto installation done on the reComputer(Linux).
+y completar la instalación de Mosquitto en el reComputer(Linux).
 
 Then run the commend:
 

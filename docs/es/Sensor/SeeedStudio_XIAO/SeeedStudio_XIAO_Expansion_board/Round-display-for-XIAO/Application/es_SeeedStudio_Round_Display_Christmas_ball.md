@@ -247,7 +247,7 @@ if (rc != PNG_SUCCESS) {
 png.decode(NULL, 0);
 ```
 
-- Loads and decodes the current background PNG using the *png.openFLASH()* function
+- Carga y decodifica el fondo actual PNG usando la función *png.openFLASH()*
 
 ### Touch interaction
 

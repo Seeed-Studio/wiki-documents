@@ -27,6 +27,7 @@ Uno de los componentes más importantes de los sistemas embebidos actuales es el
 El SO [**Zephyr**](https://www.zephyrproject.org/) está basado en un kernel de huella pequeña diseñado para uso en sistemas embebidos y con recursos limitados: desde simples sensores ambientales embebidos y wearables LED hasta controladores embebidos sofisticados, relojes inteligentes y aplicaciones inalámbricas IoT.
 
 ## Características
+
 Zephyr ofrece un gran y creciente número de características incluyendo:
 
 ### Suite extensa de servicios de Kernel
@@ -43,16 +44,18 @@ Zephyr ofrece una serie de servicios familiares para el desarrollo:
 ### Múltiples Algoritmos de Programación
 
   Zephyr proporciona un conjunto integral de opciones de programación de hilos:
-  - Programación Cooperativa y Preventiva
-  - Earliest Deadline First (EDF)
-  - Programación Meta IRQ implementando comportamiento de "interrupt bottom half" o "tasklet"
-  - División de tiempo: Habilita la división de tiempo entre hilos preventivos de igual prioridad
-  - Múltiples estrategias de cola:
-    - Cola de preparados de lista enlazada simple
-    - Cola de preparados de árbol rojo/negro
-    - Cola de preparados multi-cola tradicional
+
+- Programación Cooperativa y Preventiva
+- Earliest Deadline First (EDF)
+- Programación Meta IRQ implementando comportamiento de "interrupt bottom half" o "tasklet"
+- División de tiempo: Habilita la división de tiempo entre hilos preventivos de igual prioridad
+- Múltiples estrategias de cola:
+  - Cola de preparados de lista enlazada simple
+  - Cola de preparados de árbol rojo/negro
+  - Cola de preparados multi-cola tradicional
 
 ### Soporte Bluetooth Low Energy 5.0
+
 Cumple con Bluetooth 5.0 (ESR10) y soporte de Controlador Bluetooth Low Energy (LE Link Layer). Incluye malla Bluetooth y un controlador Bluetooth listo para calificación Bluetooth.
 
 - Perfil de Acceso Genérico (GAP) con todos los roles LE posibles
@@ -80,6 +83,7 @@ El primer paso para trabajar con Zephyr es configurar el SDK y la cadena de herr
 Una vez que la cadena de herramientas de Zephyr haya sido configurada y se haya descargado un SDK asociado, puedes comenzar el desarrollo de aplicaciones.
 
 Para programar el Xiao SAMD21 se pueden seguir los siguientes pasos:
+
 1. Compilar un ejemplo o tu aplicación
 2. Conectar el Xiao SAMD21
 3. Cortocircuitar el pin RST a GND (usando los puntos de prueba visibles) para arrancar el MCU en modo bootloader (o presionar el botón RESET en una placa de expansión conectada dos veces seguidas rápidamente)
@@ -102,11 +106,13 @@ Encuentra el puerto para tu dispositivo escribiendo `ls /dev/tty*` y confirmando
 En mi ejemplo veo `/dev/ttyACM0` como el dispositivo recién añadido.
 
 Usando screen puedes entonces conectarte y monitorear la respuesta serial:
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
 Deberías ver una respuesta similar a la siguiente:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 Hello World! arm
@@ -189,24 +195,26 @@ Verás que el LED amarillo integrado se enciende y apaga creando un efecto de pa
 Profundicemos un poco en este ejemplo para ver por qué funciona.
 
 El código de ejemplo asociado hace referencia a led0:
+
 ```
 #define LED0_NODE DT_ALIAS(led0)
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 ```
 
 Esto se define en el código del árbol de dispositivos del Xiao SAMD21 a través de un alias:
-```
-	aliases {
-		led0 = &led;
-	};
 
-	leds {
-		compatible = "gpio-leds";
-		led: led_0 {
-			gpios = <&porta 17 GPIO_ACTIVE_LOW>;
-			label = "LED";
-		};
-	};
+```
+ aliases {
+  led0 = &led;
+ };
+
+ leds {
+  compatible = "gpio-leds";
+  led: led_0 {
+   gpios = <&porta 17 GPIO_ACTIVE_LOW>;
+   label = "LED";
+  };
+ };
 ```
 
 Corresponde con el pin PA17 en la placa. Esto se puede encontrar a través del esquemático del Xiao SAMD21 revisando el MCU y viendo el etiquetado en los pines.
@@ -217,25 +225,25 @@ Por ejemplo, si fuera a referenciar D0 lo referenciaría como `&porta 2` o `&xia
 
 ```
 / {
-	xiao_d: connector {
-		compatible = "seeed,xiao-gpio";
-		#gpio-cells = <2>;
-		gpio-map-mask = <0xffffffff 0xffffffc0>;
-		gpio-map-pass-thru = <0 0x3f>;
-		gpio-map
-			= <0 0 &porta 2 0>		/* D0 */
-			, <1 0 &porta 4 0>		/* D1 */
-			, <2 0 &porta 10 0>		/* D2 */
-			, <3 0 &porta 11 0>		/* D3 */
-			, <4 0 &porta 8 0>		/* D4 */
-			, <5 0 &porta 9 0>		/* D5 */
-			, <6 0 &portb 8 0>		/* D6 */
-			, <7 0 &portb 9 0>		/* D7 */
-			, <8 0 &porta 7 0>		/* D8 */
-			, <9 0 &porta 5 0>		/* D9 */
-			, <10 0 &porta 6 0>		/* D10 */
-			;
-	};
+ xiao_d: connector {
+  compatible = "seeed,xiao-gpio";
+  #gpio-cells = <2>;
+  gpio-map-mask = <0xffffffff 0xffffffc0>;
+  gpio-map-pass-thru = <0 0x3f>;
+  gpio-map
+   = <0 0 &porta 2 0>  /* D0 */
+   , <1 0 &porta 4 0>  /* D1 */
+   , <2 0 &porta 10 0>  /* D2 */
+   , <3 0 &porta 11 0>  /* D3 */
+   , <4 0 &porta 8 0>  /* D4 */
+   , <5 0 &porta 9 0>  /* D5 */
+   , <6 0 &portb 8 0>  /* D6 */
+   , <7 0 &portb 9 0>  /* D7 */
+   , <8 0 &porta 7 0>  /* D8 */
+   , <9 0 &porta 5 0>  /* D9 */
+   , <10 0 &porta 6 0>  /* D10 */
+   ;
+ };
 };
 ```
 
@@ -259,18 +267,18 @@ Después de que tu Xiao se reinicie, ahora deberías poder controlar el botón i
 Se pueden configurar botones adicionales para usar con el ejemplo, ya que permite que hasta 4 botones se configuren para activar tanto botones como dirección para el ratón con fines de ejemplo.
 
 ```
-	buttons {
-		compatible = "gpio-keys";
-		xiao_button0: button_0 {
-			gpios = <&xiao_d 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-			label = "SW0";
-			zephyr,code = <INPUT_KEY_0>;
-		};
-	};
+ buttons {
+  compatible = "gpio-keys";
+  xiao_button0: button_0 {
+   gpios = <&xiao_d 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+   label = "SW0";
+   zephyr,code = <INPUT_KEY_0>;
+  };
+ };
 
-	aliases {
-		sw0 = &xiao_button0;
-	};
+ aliases {
+  sw0 = &xiao_button0;
+ };
 ```
 
 Puedes ver aquí en el ejemplo que `&xiao_d` 1 se usa para indicar el pin D1. Este mapeo es proporcionado por los archivos de placa Xiao SAMD21 y hace conveniente la conexión a un pin dado ya que no necesitas conocer el mapeo subyacente del MCU sino que puedes confiar en el pinout del Xiao.
@@ -295,11 +303,13 @@ west flash
 ```
 
 Espera un momento para que el MCU se reinicie después del flasheo y conéctate al monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
 Con esto cargado deberías ver algo similar a:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 Sample program to r/w files on littlefs
@@ -331,6 +341,7 @@ screen /dev/ttyACM0 115200
 ```
 
 Ahora conectándose nuevamente al monitor serie no vemos el formato ni necesita crear un archivo:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 Sample program to r/w files on littlefs
@@ -361,6 +372,7 @@ Listing dir /lfs ...
 #### TFLite - Hola Mundo
 
 Habilita TFLite con Zephyr y actualiza:
+
 ```
 west config manifest.project-filter -- +tflite-micro
 west update
@@ -380,11 +392,13 @@ west flash
 ```
 
 Espera un momento para que el MCU se reinicie después del flasheo y conéctate al monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
 Verás los resultados devueltos desde la consola:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 x_value: 1.0*2^-127, y_value: 1.0*2^-127
@@ -438,6 +452,7 @@ west flash
 Verás una pantalla que muestra múltiples cajas negras y una caja parpadeante en la esquina dado que esta pantalla solo soporta dos colores.
 
 Profundicemos en este ejemplo un poco para ver por qué funciona:
+
 ```
 / {
     chosen {
@@ -474,13 +489,14 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/basic/button -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf -DSHIELD=seeed_xiao_expansion_board
 ```
 
-Double press RESET or short the RST pin to the GND:
+Presiona dos veces RESET o conecta el pin RST a GND:
 
 ```
 west flash
 ```
 
 Espera un momento para que el MCU se reinicie después del flasheo y conéctate al monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
@@ -503,6 +519,7 @@ Button pressed at 591496990
 ```
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
+
 ```
 / {
     aliases {
@@ -536,13 +553,14 @@ west build -p always -b seeeduino_xiao samples/basic/blinky_pwm -- -DDTC_OVERLAY
 Después de cargar el archivo uf2 deberías comenzar a escuchar una serie de zumbidos que cambian de sonido mientras la muestra ejecuta su curso.
 
 Veamos por qué esto funciona:
+
 ```
 /delete-node/ &pwm_led0;
 
 / {
-	aliases {
-		pwm-led = &pwm_led0;
-	};
+ aliases {
+  pwm-led = &pwm_led0;
+ };
 
     pwm_leds {
         status = "okay";
@@ -555,22 +573,22 @@ Veamos por qué esto funciona:
 };
 
 &pinctrl {
-	pwm_default: pwm_default {
-		group1 {
-			pinmux = <PA11E_TCC1_WO1>;
-		};
-	};
+ pwm_default: pwm_default {
+  group1 {
+   pinmux = <PA11E_TCC1_WO1>;
+  };
+ };
 };
 
 &tcc1 {
-	status = "okay";
-	compatible = "atmel,sam0-tcc-pwm";
-	/* Gives a maximum period of 1.4 s */
-	prescaler = <1024>;
-	#pwm-cells = <2>;
+ status = "okay";
+ compatible = "atmel,sam0-tcc-pwm";
+ /* Gives a maximum period of 1.4 s */
+ prescaler = <1024>;
+ #pwm-cells = <2>;
 
-	pinctrl-0 = <&pwm_default>;
-	pinctrl-names = "default";
+ pinctrl-0 = <&pwm_default>;
+ pinctrl-names = "default";
 };
 ```
 
@@ -588,6 +606,7 @@ west build -p always -b seeeduino_xiao samples/subsys/fs/fs_sample -- -DDTC_OVER
 ```
 
 Después de cargar el archivo uf2, conéctate al monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
@@ -608,6 +627,7 @@ Listing dir /SD: ...
 En este caso mi tarjeta SD tenía dos archivos. Sus nombres y sus tamaños fueron mostrados en mi consola.
 
 Veamos los elementos relevantes en juego aquí:
+
 ```
 CONFIG_SPI=y
 CONFIG_DISK_DRIVER_SDMMC=y
@@ -620,19 +640,19 @@ La parte relevante del shield de la Placa de Expansión Xiao es en realidad anul
 
 ```
 &xiao_spi {
-	status = "okay";
-	cs-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
+ status = "okay";
+ cs-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
 
-	sdhc0: sdhc@0 {
-		compatible = "zephyr,sdhc-spi-slot";
-		reg = <0>;
-		status = "okay";
-		mmc {
-			compatible = "zephyr,sdmmc-disk";
-			status = "okay";
-		};
-		spi-max-frequency = <10000000>;
-	};
+ sdhc0: sdhc@0 {
+  compatible = "zephyr,sdhc-spi-slot";
+  reg = <0>;
+  status = "okay";
+  mmc {
+   compatible = "zephyr,sdmmc-disk";
+   status = "okay";
+  };
+  spi-max-frequency = <10000000>;
+ };
 };
 ```
 
@@ -661,11 +681,13 @@ west flash
 ```
 
 Espera un momento para que el MCU se reinicie después del flasheo y conéctate al monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
 Verás los resultados devueltos desde la consola:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 SHT3XD: 26.13 Cel ; 47.34 %RH
@@ -681,6 +703,7 @@ SHT3XD: 26.27 Cel ; 47.72 %RH
 ```
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
+
 ```
 &xiao_i2c {
   status = "okay";
@@ -720,16 +743,16 @@ Primero conecta tu placa a la pantalla LCD usando la siguiente imagen como guía
 | RST | D0 |
 | BL | D6 |
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/10.png" style={{width:700, height:'auto'}}/></div>
 
 A continuación, con el hardware preparado, podemos compilar y flashear:
+
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.conf
 ```
 
-Double press RESET or short the RST pin to the GND:
+Presiona dos veces RESET o conecta el pin RST a GND:
 
 ```
 west flash
@@ -739,7 +762,6 @@ Con el nuevo firmware en su lugar, el dispositivo ahora muestra la misma pantall
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/samd21/spi_lcd.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_samd21_zephyr/spi_lcd.jpg" style={{width:600, height:'auto'}}/></div>
-
 
 ## ✨ Proyecto de Colaborador
 

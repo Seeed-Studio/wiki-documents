@@ -249,7 +249,7 @@ _Descripción: establece la frecuencia de preescala del PWM, 0x03 por defecto._
 
 _Frequence: la frecuencia de preescala del PWM._
 
-**3. void MotorDirectionSet(unsigned char Direction)**
+**3. void MotorDirectionSet(unsigned char Dirección)**
 
 _Descripción: Ajusta la dirección de los motores._
 
