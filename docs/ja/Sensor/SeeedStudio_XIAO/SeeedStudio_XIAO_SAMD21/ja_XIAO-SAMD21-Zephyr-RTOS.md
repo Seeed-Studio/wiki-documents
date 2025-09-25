@@ -10,7 +10,7 @@ last_update:
   author: timo614
 ---
 
-# XIAO SAMD21 With Zephyr(RTOS)
+# XIAO SAMD21 と Zephyr(RTOS)
 
 <div align="center"><img width ="{100}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-samd21.png"/></div>
 

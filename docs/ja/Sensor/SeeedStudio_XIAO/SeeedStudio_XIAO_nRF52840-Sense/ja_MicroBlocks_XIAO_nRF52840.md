@@ -8,7 +8,7 @@ last_update:
   author: MicroBlocks
 ---
 
-# XIAO nRF52840 with MicroBlocks
+# XIAO nRF52840 と MicroBlocks
 
 ## MicroBlocks
 

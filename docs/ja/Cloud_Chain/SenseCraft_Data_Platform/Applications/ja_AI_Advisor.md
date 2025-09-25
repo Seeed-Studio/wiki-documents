@@ -98,7 +98,7 @@ SenseCraft AI Advisorは現在、以下の測定項目とデバイスタイプ�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP_AI/4.png"/></div>
 
-## SenseCraft Data Platform
+## SenseCraft データプラットフォーム
 
 1. [SenseCraft Data Platform (Global)](https://sensecap.seeed.cc/portal/#/login)または[SenseCraft Data Platform (China)](http://sensecap.seeed.cn/portal/#/login)にログインします
 2. センサーのSNとコードを入力してSenseCraftセンサーをバインドします

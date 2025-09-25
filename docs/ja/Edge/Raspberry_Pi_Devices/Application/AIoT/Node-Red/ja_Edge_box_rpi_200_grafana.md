@@ -73,7 +73,7 @@ echo "deb [signed-by=/usr/share/keyrings/grafana-archive-keyrings.gpg] https://a
 sudo apt update
 ```
 
-## Installing Grafana on EdgeBox
+## EdgeBoxにGrafanaをインストールする
 
 以下のコマンドを実行して、Grafanaの最新バージョンをインストールしてください：
 

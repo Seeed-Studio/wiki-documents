@@ -253,7 +253,7 @@ ZIP形式のライブラリをダウンロードした後、Arduino IDEを開き
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:800, height:'auto'}}/></div>
 
-#### 2. Grove Gesture Library
+#### 2. Grove ジェスチャーライブラリ
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Grove_Gesture/tree/dev" target="_blank" rel="noopener noreferrer">

@@ -273,7 +273,7 @@ void espnow_deinit(){
 }
 ```
 
-#### Resolution Part1 Code
+#### 解決 Part1 コード
 
 インクルードライブラリ
 
@@ -473,7 +473,7 @@ void Association_SenderXIAOS3_peer(){
 }
 ```
 
-#### Resolution Part2 Code
+#### 解決 Part2 コード
 
 インクルードライブラリ
 
@@ -670,7 +670,7 @@ void Association_SenderXIAOS3_peer(){
 }
 ```
 
-#### Resolution Part3 Code
+#### 解決 Part3 コード
 
 インクルードライブラリ
 

@@ -13,7 +13,7 @@ last_update:
   author: Matthew
 ---
 
-# SenseCraft Data Platform API Introduction
+# SenseCraft データプラットフォーム API 概要
 
 
 =============================

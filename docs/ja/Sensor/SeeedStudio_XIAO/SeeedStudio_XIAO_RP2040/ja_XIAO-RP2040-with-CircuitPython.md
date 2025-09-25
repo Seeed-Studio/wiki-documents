@@ -9,7 +9,7 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 ---
-# **Seeed Studio XIAO RP2040 with CircuitPython**
+# **Seeed Studio XIAO RP2040 と CircuitPython**
 
 CircuitPython は、低コストのマイコンボードでの実験やプログラミング学習を簡単にするために設計されたプログラミング言語です。事前にデスクトップでのダウンロードが不要で、これまで以上に簡単に始めることができます。ボードをセットアップしたら、任意のテキストエディタを開いてコードの編集を開始するだけです。とても簡単です。
 

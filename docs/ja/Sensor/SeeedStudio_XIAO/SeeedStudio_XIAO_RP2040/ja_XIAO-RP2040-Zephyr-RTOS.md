@@ -10,7 +10,7 @@ last_update:
   author: timo614
 ---
 
-# XIAO RP2040 With Zephyr(RTOS)
+# XIAO RP2040 と Zephyr(RTOS)
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-rp2040.png"/></div>
 

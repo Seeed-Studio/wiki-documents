@@ -26,7 +26,7 @@ Alexaは、Amazonのクラウドベースの音声サービスで、Amazonおよ
 -　[Alexa Voice Service Get Started](https://developer.amazon.com/zh/alexa-voice-service)
 -　[avs-device-sdk](https://github.com/alexa/avs-device-sdk/wiki)
 
-## 2. Google assistant
+## 2. Google アシスタント
 
 Google Assistant SDKを使用すると、ホットワード検出、音声制御、自然言語理解、Googleのスマート機能をデバイスに追加できます。デバイスが発話（「私のカレンダーには何がありますか？」などの音声リクエスト）をキャプチャし、Google Assistantに送信し、発話の生テキストに加えて音声応答を受信します。
 
