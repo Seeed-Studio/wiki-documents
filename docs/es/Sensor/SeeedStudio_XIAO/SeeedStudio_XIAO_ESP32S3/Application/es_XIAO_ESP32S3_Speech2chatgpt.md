@@ -282,7 +282,7 @@ Si ves algo como lo de arriba, significa que desplegaste correctamente el servic
 
 Si hay problemas, consulta las [instrucciones oficiales de Google Cloud](https://cloud.google.com/speech-to-text/docs/) para verificar errores u omisiones.
 
-## Upload XIAO ESP32S3 Sense recorded sound files to Google Cloud for recognition
+## Subir XIAO ESP32S3 archivos de sonido grabados de Sense a Google Cloud para reconocimiento
 
 Ahora cambiaremos la ruta del archivo de audio cargado: de una carga local a una carga **desde la grabación de la XIAO ESP32S3 Sense**. Los archivos se guardan primero en la microSD y luego se transfieren a Google Cloud a través del puerto del host local.
 
@@ -792,7 +792,7 @@ Una vez subido el programa, abre el monitor serie y prepárate para grabar. Tras
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3sense-speech2chatgpt/15.png" style={{width:1000, height:'auto'}}/></div>
 
-## Deploy ChatGPT on XIAO ESP32S3 Sense
+## Implementar ChatGPT en XIAO ESP32S3 Sense
 
 A continuación, aumentamos la dificultad: añadimos llamadas a ChatGPT en el código.
 
@@ -1353,7 +1353,7 @@ Una vez modificado y subido, abre el monitor serie. Tras la grabación verás la
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3sense-speech2chatgpt/16.png" style={{width:1000, height:'auto'}}/></div>
 
-## Design of screen display content & Integration of programs
+## Diseño del contenido de visualización en pantalla e Integración de programas
 
 Por último, añadimos un poco de “magia”. En lugar del monitor serie, usaremos una pantalla táctil para las funciones de toque y clic.
 

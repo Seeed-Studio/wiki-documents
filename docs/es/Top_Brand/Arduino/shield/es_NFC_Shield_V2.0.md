@@ -192,7 +192,7 @@ Para probar el código:
 
 <!--  ### Example #2: NFC(keyless) Door Lock
 
-This example will show you how to use an NFC tag as a key to unlock a door or a lock. The door/lock mechanism will be left to your imagination, we'll only cover the NFC part of the code.
+Este ejemplo te mostrará cómo usar una etiqueta NFC como llave para abrir una puerta o una cerradura. El mecanismo de la puerta/cerradura se dejará a tu imaginación, solo cubriremos la parte del código NFC.
 
 1.  Do Example #1: NFC Tag Scan, above, to get your NFC tag's UID.
 2.  Optional Step - connect a green LED to pin 3 as shown in the figure/schematic below. We'll use this LED to signal a successful match in keys.
@@ -204,7 +204,7 @@ This example will show you how to use an NFC tag as a key to unlock a door or a 
 
     **NFC lock circuit**
 
-4.  In the Arduino IDE create a new sketch and copy, paste, and upload the code below to your Arduino board replacing the myUID string constant with your tag's UID obtained from Example \#1.
+4. En el Arduino IDE crea un nuevo sketch y copia, pega y sube el código de abajo a tu placa Arduino reemplazando la constante de cadena myUID con el UID de tu etiqueta obtenido del Ejemplo \#1.
 
 #### Code
 ```cpp
@@ -410,7 +410,7 @@ Para probar el código anterior:
 
 <!-- ### Example #5: Format a Tag as NDEF
 
-Your brand new NFC tag might not be NDEF formatted initially. To format a tag as NDEF upload the following code to your Arduino development board:
+Tu nueva etiqueta NFC podría no estar formateada como NDEF inicialmente. Para formatear una etiqueta como NDEF sube el siguiente código a tu placa de desarrollo Arduino:
 
 #### Code
 ```cpp

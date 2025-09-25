@@ -382,7 +382,7 @@ Ahora encuentra la dirección IP de tu ReSpeaker usando el comando a continuaci�
 ip address
 ```
 
-In the example below, we can see that this ReSpeaker's IP address is ```192.168.7.108```
+En el ejemplo a continuación, podemos ver que la dirección IP de este ReSpeaker es ```192.168.7.108```
 
 ```
 root@v2:/home/respeaker# ip address
@@ -603,7 +603,7 @@ aplay -r 16000 -c 2 hello.wav
 arecord -Dhw:0,0 -f S16_LE -r 16000 -c 8 hello_8ch.wav
 ```
 
-Besides you can record and play at the same time.
+Además puedes grabar y reproducir al mismo tiempo.
 
 ```
 arecord | aplay
@@ -686,7 +686,7 @@ La descripción de las definiciones de PIN para la placa ReSpeaker Core v2.0, co
 
 Materiales
 
-| ReSpeaker Core v2.0 |  Grove - Buzzer |
+| ReSpeaker Core v2.0 |  Grove - Zumbador |
 |--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Buzzer.png)|
 |[Obtener UNO Ahora](https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html)|[Obtener UNO Ahora](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
@@ -833,7 +833,7 @@ if __name__ == '__main__':
     main()
 ```
 
-The result should be something like:
+El resultado debería ser algo como:
 
 ``` python
 respeaker@v2:~$ python tsl2561.py       

@@ -104,7 +104,7 @@ Luego, haga clic en la marca `+` para agregar un dispositivo e ingrese la direcc
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/YABE-config.PNG" /></center>
 
 :::note
-You might need to configure the Ethernet port IP address to ensure it is in the same network domain as both the EdgeBox and your PC.
+Es posible que necesites configurar la dirección del puerto Ethernet IP para asegurar que esté en el mismo dominio de red que tanto el EdgeBox como tu PC.
 :::
 
 Después de eso, deberías poder ver el dispositivo con el mismo ID de dispositivo que el simulador de temperatura ambiente.

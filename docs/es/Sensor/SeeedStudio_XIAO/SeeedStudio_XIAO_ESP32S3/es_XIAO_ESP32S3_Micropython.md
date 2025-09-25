@@ -67,7 +67,6 @@ En esta guía estaré usando **windows 10** junto con Thonny IDE y esptool. Para
 
 <strong><font color={'8DC215'} size={"3"}>El firmware diseñado para la placa XIAO ESP32S3 Sense, utilizado en esta wiki, fue creado por nuestro amigo: shariltumin, a quien estamos realmente agradecidos.</font></strong>
 
-
 ## Comenzando
 
 El firmware está diseñado únicamente para la programación MicroPython de XIAO ESP32S3. Primero flashearemos el firmware y luego usaremos el ejemplo en él.
@@ -91,6 +90,7 @@ Serás dirigido al terminal cmd.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/on_cmd.jpg" alt="pir" width={600} height="auto" /></p>
 
 Instala esptool usando el comando pip (asegúrate de que python 3 ya esté instalado)
+
 ```cpp
 pip install esptool
 ```
@@ -103,7 +103,8 @@ Borra la memoria flash del Xiao ESP32S3 usando este comando
 esptool.py --port COMXX erase_flash
 ```
 
-Now proceed to install the micropython firmware using this command
+Ahora procede a instalar el firmware de micropython usando este comando
+
 ```cpp
 esptool.py --port COMXX --baud 460800 --before default_reset --after hard_reset --chip esp32s3  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x0 firmware.bin 
 ```
@@ -113,7 +114,6 @@ cambia COMXX con el número de puerto COM en tu PC
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/device_manager.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 ### Paso 2. Subir el código de ejemplo
 
@@ -134,7 +134,6 @@ Navega a la carpeta donde se extrajo el código de ejemplo, luego sube los archi
 después de que todo el código de ejemplo se haya subido a la placa xiao esp32s3, cambia las credenciales wifi tanto en el archivo streamin_server.py como en el archivo Wifi.py basándote en tu configuración wifi local
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/wifi_configuration.png" alt="pir" width={600} height="auto" /></p>
-
 
 ### Paso 3. Probar el ejemplo de streaming
 
@@ -180,11 +179,11 @@ Si la cámara no se inicializa exitosamente (muestra un frame y luego se congela
 ¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

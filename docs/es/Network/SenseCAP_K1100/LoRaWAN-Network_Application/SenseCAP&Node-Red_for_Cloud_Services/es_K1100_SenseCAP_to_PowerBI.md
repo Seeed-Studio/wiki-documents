@@ -71,58 +71,58 @@ Para completar este tutorial, necesitas:
 - En cualquiera de los siguientes wikis, has subido exitosamente datos a SenseCAP.
   - [Enviar datos de sensores a SenseCAP vía LoRa®](https://wiki.seeedstudio.com/es/K1100-quickstart/#send-sensor-data-to-sensecap-via-lora)
 
-<!--## Create SenseCAP node
+<!--## Crear nodo SenseCAP
 
-**Step 1.** Start Node-RED
+**Paso 1.** Iniciar Node-RED
 
-Start Node-RED by typing the command `node-red` in the terminal and open a browser and enter the address **http://localhost:1880** in the address bar to access the editor of Node-RED.
+Inicia Node-RED escribiendo el comando `node-red` en el terminal y abre un navegador. Ingresa la dirección **http://localhost:1880** en la barra de direcciones para acceder al editor de Node-RED.
 
-**Step 2.** Install the SenseCAP node
+**Paso 2.** Instalar el nodo SenseCAP
 
-Click on the upper-right menu bar and select Settings.
+Haz clic en la barra de menú superior derecha y selecciona Configuración.
 
 <div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/6.png"/></div>
 
-Search and install **node-red-sensecap-paas** in the **Paletts -> Install**.
+Busca e instala **node-red-sensecap-paas** en **Paleta -> Instalar**.
 
 <div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/1.png"/></div>
 
-**Step 3.** Configure SenseCAP node
+**Paso 3.** Configurar nodo SenseCAP
 
-Add **sensecap.OpenStream** from the storage bar on the left，double-click it to enter the configuration page, then click the edit button to edit **sensecap.OpenStream** node.
+Agrega **sensecap.OpenStream** desde la barra de almacenamiento a la izquierda, haz doble clic sobre él para entrar en la página de configuración y luego haz clic en el botón de edición para editar el nodo **sensecap.OpenStream**.
 
 <div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/2.png"/></div>
 
-Please edit your account.
+Por favor edita tu cuenta.
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/7.png"/></div>
 
-In the new page, please fill in the following fields.
+En la nueva página, rellena los siguientes campos:
 
-- Name: Name this account.
-- Orgnization ID: From the **Organization Information** section, copy the Organization ID.
+- Nombre: Asigna un nombre a esta cuenta.
+- ID de Organización: Desde la sección **Información de la Organización**, copia el ID de la organización.
 
 <div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/8.png"/></div>
 
-- API Key: Please click on **Security** -> **Access API keys** on the left side of the dashboard. Then Create an Access Key.
+- Clave API: Haz clic en **Seguridad** -> **Acceder a claves API** en el lado izquierdo del panel. Luego crea una clave de acceso.
 
 <div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/9.png"/></div>
 
 <div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/10.png"/></div>
 
-Then just click on the **Update** or **Save** button.
+Luego simplemente haz clic en el botón **Actualizar** o **Guardar**.
 
-On the screen for setting up nodes, please fill in the following fields.
-- Name: Name your node.
-- EUI: Please enter the EUI of your device, which can be found in the SenseCAP console.
-- Measurement ID: Sensor number. Information on sensor numbers can be found in the [SenseCAP Documentation Centre](https://sensecap-docs.seeed.cc/sensor_types_list.html).
-- Output Format: Select **Power BI**.
+En la pantalla de configuración de nodos, rellena los siguientes campos:
+- Nombre: Nombra tu nodo.
+- EUI: Ingresa el EUI de tu dispositivo, que puedes encontrar en la consola de SenseCAP.
+- ID de Medición: Número del sensor. La información sobre los números de sensores se puede encontrar en el [Centro de Documentación de SenseCAP](https://sensecap-docs.seeed.cc/sensor_types_list.html).
+- Formato de Salida: Selecciona **Power BI**.
 
 <div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/5.png"/></div>
 
-!!!Note
-    Our recommendation is to fill in the Measurement ID, which will be a sensor value each time it is transmitted to Power BI. If this is left blank, multiple sensor values will be transmitted at the same time and Power BI will then get a messy data.
-    If you have a need to analyse values from multiple sensors at the same time, you can use multiple SenseCAP nodes.-->
+!!!Nota
+    Nuestra recomendación es completar el ID de Medición, ya que este será un valor de sensor cada vez que se transmita a Power BI. Si se deja en blanco, se transmitirán múltiples valores de sensores al mismo tiempo y Power BI obtendrá datos desordenados.
+    Si necesitas analizar valores de múltiples sensores al mismo tiempo, puedes usar múltiples nodos SenseCAP.-->
 
 ## Crear Nodo MQTT
 

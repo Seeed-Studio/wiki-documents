@@ -184,7 +184,7 @@ Ultrasonic ultrasonic(0);
 TFT_eSPI tft;
 ```
 
-In setup function, initialize LCD screen
+En la función de configuración, inicializar la pantalla LCD
 
 ```cpp
     tft.begin();

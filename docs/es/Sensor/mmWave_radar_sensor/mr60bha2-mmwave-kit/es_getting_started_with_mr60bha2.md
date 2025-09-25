@@ -270,7 +270,7 @@ En este modo, la sensibilidad de la función de detección humana puede disminui
 <!-- 
 ### Fall Module
 
-This example shows how to use the **MR60FDA2** sensor for fall detection.
+Este ejemplo muestra cómo usar el sensor **MR60FDA2** para la detección de caídas.
 
 ```cpp
 #include <Arduino.h>
@@ -484,7 +484,7 @@ Este ejemplo usa la clase `SEEED_MR60BHA2` para interactuar con el sensor MR60BH
 <!-- 
 ### Fall Module API
 
-This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sensor for fall detection. Here's what each key function does:
+Este ejemplo utiliza la clase `SEEED_MR60FDA2` para interactuar con el sensor MR60FDA2 para la detección de caídas. Esto es lo que hace cada función clave:
 
 - **`mmWave.begin(&mmWaveSerial)`**:
   - Initializes the sensor for communication, similar to the breath module, setting up the serial connection between the XIAO board and the MR60FDA2 sensor.

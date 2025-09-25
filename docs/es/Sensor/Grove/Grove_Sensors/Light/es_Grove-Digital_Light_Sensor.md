@@ -547,7 +547,7 @@ if __name__ == "__main__":
         main()
 ```
 
-- **Step 3.** Run the demo.
+- **Paso 3.** Ejecuta la demostración.
 
 ```
 sudo python3 grove_i2c_digital_light_sensor.py

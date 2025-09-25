@@ -241,7 +241,7 @@ while True:
         print "Error"
 ```
 
-- **Step 3.** Run the demo.
+- **Paso 3.** Ejecuta la demostración.
 
 ```
 sudo python grove_vibration_motor.py

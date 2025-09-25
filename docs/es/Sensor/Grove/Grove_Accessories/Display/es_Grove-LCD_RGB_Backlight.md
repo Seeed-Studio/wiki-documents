@@ -269,7 +269,7 @@ cd ~/GrovePi/Software/Python/grove_rgb_lcd
 python3 grove_rgb_lcd.py
 ```
 
-Here is the grove_rgb_lcd.py code.
+Aquí está el código grove_rgb_lcd.py.
 
 ```python
 import time,sys

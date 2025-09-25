@@ -136,7 +136,6 @@ Hay 2 firmwares. Uno incluye datos de 1 canal, mientras que el otro incluye dato
 | 1_channel_firmware.bin  | 1              | Audio procesado para ASR |
 | 6_channels_firmware.bin | 6  |Canal 0: audio procesado para ASR <br /> Canal 1: datos en bruto mic1 <br />Canal 2: datos en bruto mic2 <br />Canal 3: datos en bruto mic3 <br />Canal 4: datos en bruto mic4 <br />Canal 5: reproducción combinada|
 
-
 **Para Linux:**  El array de micrófonos soporta USB DFU. Desarrollamos un script de python dfu.py para actualizar el firmware a través de USB.
 
 ```python
@@ -261,7 +260,6 @@ Aquí están las APIs de usb_pixel_ring.
 | 0x23    | [volume]                       | pixel_ring.set_volume()        | mostrar volumen, rango: 0 ~ 12                                                                                   |
 | 0x24    | [pattern]                      | pixel_ring.change_pattern()    | establecer patrón, 0 - patrón Google Home, otros - patrón Echo                                                   |
 
-
 **Para Linux:** Aquí está el ejemplo para controlar los leds. Por favor sigue los comandos a continuación para ejecutar la demo.
 
 ```python
@@ -380,7 +378,7 @@ if dev:
             break
 ```
 
-- Step 3. We will see the DOA as below.
+- Paso 3. Veremos el DOA como se muestra a continuación.
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python doa.py 
@@ -429,7 +427,7 @@ if dev:
             break
 ```
 
-- Step 3. We will see the DOA as below.
+- Paso 3. Veremos el DOA como se muestra a continuación.
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python VAD.py 
@@ -643,7 +641,6 @@ MacBook-Air:Desktop XXX$ python record.py
 * done recording
 ```
 
-
 ## Preguntas Frecuentes
 
 **P1: Parámetros de algoritmos integrados**
@@ -797,12 +794,11 @@ R5: Por favor descarga el [nuevo firmware](https://files.seeedstudio.com/wiki/Re
 ¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

@@ -19,6 +19,7 @@ Este artículo es el tercer tutorial en la serie de Desarrollo Matter de Seeed S
 
 - **[Desarrollado en XIAO usando Espressif ESP-IDF](https://wiki.seeedstudio.com/es/xiao_idf)**
 - **[Comenzando con Matter Rápidamente con la Serie XIAO ESP32](https://wiki.seeedstudio.com/es/getting_started_with_matter)**
+
 :::
 
 En el panorama en rápida evolución del Internet de las Cosas (IoT), ha surgido un nuevo actor para revolucionar la forma en que los dispositivos domésticos inteligentes se comunican e interactúan entre sí. Conoce Matter, el protocolo unificador que promete cerrar la brecha entre varios ecosistemas de hogares inteligentes y crear una experiencia fluida e interoperable para usuarios de todo el mundo.
@@ -67,61 +68,61 @@ A continuación listaré la versión del sistema, la versión de ESP-IDF y la ve
 En esta sección, detallaremos cómo configurar el uso de ESP-IDF en el entorno de Ubuntu y ejecutar el ejemplo de iluminación proporcionado por ESP-IDF. Así que para este artículo, solo necesitas preparar cualquiera de las siguientes series XIAO ESP32.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO ESP32C3</th>
-			<th>XIAO ESP32S3</th>
+ <table align="center">
+  <tr>
+   <th>XIAO ESP32C3</th>
+   <th>XIAO ESP32S3</th>
             <th>XIAO ESP32C6</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
-				</a>
-			</div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 Además del XIAO, también necesitamos la barra de luces o perla de luz modelo WS281x. Actualmente, el ejemplo de luz proporcionado por Espressif solo admite una sola perla, por lo que ya sea que uses una tira o una perla, solo se encenderá una luz. También recomendaríamos que consigas Grove Base for XIAO para facilitar el cableado.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Grove Base for XIAO</th>
-			<th>Grove - RGB LED Ring (20 - WS2813 Mini)</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Mini.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
-				</a></div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Grove Base for XIAO</th>
+   <th>Grove - RGB LED Ring (20 - WS2813 Mini)</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Mini.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+    </a></div></td>
+  </tr>
+ </table>
 </div>
 
 Para unificar la interfaz, usaremos el pin **D9** como ejemplo en este caso, por favor conecta tu tira LED o perla al pin **D9** del XIAO.
@@ -306,7 +307,6 @@ Por favor, reemplaza `/dev/ttyACM0` con el archivo de dispositivo USB real que c
 
 Recuerda seguir todas las instrucciones cuidadosamente, y asegúrate de que cada paso se complete exitosamente antes de pasar al siguiente. Si encuentras algún error, deberá ser resuelto antes de que puedas continuar.
 
-
 :::tip
 Durante el proceso de flasheo del firmware de Matter, puedes encontrar una situación donde no tienes permisos, en este momento puedes usar el siguiente comando para dar permisos a los puertos del dispositivo y volver a subir el programa nuevamente. Como el dispositivo se conecta o se reinicia, es posible que todos los permisos necesiten ser dados nuevamente.
 
@@ -333,68 +333,68 @@ Estos son comandos que se conectan a través de un cable para controlar directam
 
 - Comandos BLE: Iniciar y detener la publicidad BLE:
 
-	```
-	matter ble [start|stop|state]
-	```
+ ```
+ matter ble [start|stop|state]
+ ```
 
 - Comandos Wi-Fi: Configurar y obtener el modo Wi-Fi:
 
-	```
-	matter wifi mode [disable|ap|sta]
-	```
+ ```
+ matter wifi mode [disable|ap|sta]
+ ```
 
 - Configuración del dispositivo: Volcar la configuración estática del dispositivo:
-	```
-	matter config
-	```
+ ```
+ matter config
+ ```
 
 - Restablecimiento de fábrica:
 
-	```
-	matter device factoryreset
-	```
+ ```
+ matter device factoryreset
+ ```
 
 - Códigos de incorporación: Volcar las cargas útiles del código de emparejamiento de incorporación:
 
-	```
-	matter onboardingcodes
-	```
+ ```
+ matter onboardingcodes
+ ```
 
 - Obtener atributo: (Los IDs están en hexadecimal):
 
-	```
-	matter esp attribute get <endpoint_id> <cluster_id> <attribute_id>
-	```
+ ```
+ matter esp attribute get <endpoint_id> <cluster_id> <attribute_id>
+ ```
 
-	- Ejemplo: on_off::on_off:
+ 	- Ejemplo: on_off::on_off:
 
-		```
-		matter esp attribute get 0x1 0x6 0x0
-		```
+  ```
+  matter esp attribute get 0x1 0x6 0x0
+  ```
 
 - Configurar atributo: (Los IDs están en hexadecimal):
 
-	```
-	matter esp attribute set <endpoint_id> <cluster_id> <attribute_id> <attribute value>
-	```
+ ```
+ matter esp attribute set <endpoint_id> <cluster_id> <attribute_id> <attribute value>
+ ```
 
-	- Ejemplo: on_off::on_off:
+ 	- Ejemplo: on_off::on_off:
 
-		```
-		matter esp attribute set 0x1 0x6 0x0 1
-		```
+  ```
+  matter esp attribute set 0x1 0x6 0x0 1
+  ```
 
 - Diagnósticos:
 
-	```
-	matter esp diagnostics mem-dump
-	```
+ ```
+ matter esp diagnostics mem-dump
+ ```
 
 - Wi-Fi
 
-	```
-	matter esp wifi connect <ssid> <password>
-	```
+ ```
+ matter esp wifi connect <ssid> <password>
+ ```
 
 ### Uso
 
@@ -449,7 +449,7 @@ Para iniciar Minicom con las configuraciones predeterminadas, simplemente escrib
 minicom
 ```
 
-If you need to run it with sudo privileges (e.g., if you encounter permission issues), you can use:
+Si necesitas ejecutarlo con privilegios sudo (por ejemplo, si encuentras problemas de permisos), puedes usar:
 
 ```bash
 sudo minicom
@@ -482,7 +482,6 @@ matter onboardingcodes onnetwork
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/9.png" style={{width:1000, height:'auto'}}/></div>
 
 Lo último que se muestra aquí es el enlace al código QR de emparejamiento del dispositivo. Con el código QR, puedes escanear el código en tu teléfono móvil para vincular el dispositivo Matter tal como se indica en los pasos de [Primeros pasos](https://wiki.seeedstudio.com/es/getting_started_with_matter/#step-2-add-a-device-by-scanning-the-code-using-the-iphone-home-app).
-
 
 ## Depuración remota de dispositivos Matter usando Chip-tool
 
@@ -590,7 +589,6 @@ git submodule update --init --depth 1
 
 Si aún no funciona, elimina toda la carpeta esp-matter y ejecútalo de nuevo siguiendo el contenido del Wiki.
 
-
 ## Recursos
 
 - **[ESPRESSIF Matter - Developing with the SDK](https://docs.espressif.com/projects/esp-matter/en/latest/esp32/developing.html#)**
@@ -608,4 +606,3 @@ Si aún no funciona, elimina toda la carpeta esp-matter y ejecútalo de nuevo si
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

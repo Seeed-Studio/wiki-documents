@@ -323,7 +323,7 @@ unsigned char read_charge_status(void)
 
 ### Reading Battery Voltage ###
 
-If you want to know your battery voltage on Analog Pin 7, this is a simple example.
+Si quieres conocer el voltaje de tu batería en el Pin Analógico 7, este es un ejemplo simple.
 
 ```
 void setup(){

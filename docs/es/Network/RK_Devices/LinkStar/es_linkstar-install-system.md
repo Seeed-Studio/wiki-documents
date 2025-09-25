@@ -204,26 +204,26 @@ Espera a que la operación se complete y haz clic en "确定" (OK).
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/10.png" /></div>
 
-<!-- **Step 4.** Flash Android (Optional)
+<!-- **Paso 4.** Flash Android (Optional)
 
-!!!Note
-    If you are installing OpenWRT from another system, please complete this step first, if not, you can skip this one.
+!!!Nota
+    Si estás instalando OpenWRT desde otro sistema, por favor completa primero este Paso, si no, puedes omitir este paso.
 
-Click on "Upgrade Firmware", then click on "Firmware" and select the Android image you want to install, this file ends with **.img**.
+Haz clic en "Upgrade Firmware", luego haz clic en "Firmware" y selecciona la imagen de Android que quieres instalar, este archivo termina con **.img**.
 
 <div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/LinkStar/8.png"/></div>
 
-After importing the file, click on "Upgrade".
+Después de importar el archivo, haz clic en "Actualizar".
 
 <div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/LinkStar/23.png"/></div>
 
-Wait for the prompt to appear that the "Reset Device Success", at which point the system has finished flashing.
+Espera a que aparezca el mensaje de que "Reset Device Success", momento en el cual el sistema habrá terminado de flashear.
 
 <div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/LinkStar/24.png"/></div>
 
-Once the system flash is complete, the LInkStar will automatically reboot and once rebooted it will enter the system.
+Una vez que el flash del sistema esté completo, el LInkStar se reiniciará automáticamente y una vez reiniciado entrará al sistema.
 
-At this point, please turn off and power off the LinkStar and retry the **step2** to put LinkStar into **Maskrom mode**. -->
+En este punto, por favor apaga y desconecta la alimentación del LinkStar y vuelve a intentar el **Paso2** para poner LinkStar en **modo Maskrom**. -->
 
 **Paso 4.** Flashear OpenWRT
 
@@ -352,11 +352,11 @@ Una vez que el flasheo del sistema esté completo, el LinkStar se reiniciará au
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

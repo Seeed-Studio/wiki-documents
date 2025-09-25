@@ -735,11 +735,11 @@ Este wiki introduce cómo hacer un mini ventilador para colocar en tu habitació
 
 - [**Seeed Studio XIAO SAMD21 **](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-- [**Seeed Studio Expansion Base for XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+- [**Base de Expansión Seeed Studio para XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
-- [**Grove mini fan**](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1.html)
+- [**Grove mini ventilador**](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1.html)
 - [**Grove-Servo**](https://www.seeedstudio.com/Grove-Servo.html)
-- [**Grove - IR (Infrared) Receiver**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
+- [**Grove - IR Receptor (Infrarrojo)**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
 
 **Conexión de Hardware**
 
@@ -836,7 +836,6 @@ void loop() {
   delay(100);
 }
 ```
-
 ### Proyecto 2 - Coche de control remoto
 
 **Descripción general**
@@ -853,11 +852,11 @@ Este wiki presenta cómo hacer un coche de control remoto.
 
 - [**Seeed Studio XIAO **](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-- [**Seeed Studio Expansion Base for XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+- [**Base de Expansión Seeed Studio para XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
-- [**Grove - I2C Mini Motor Driver**](https://www.seeedstudio.com/Grove-I2C-Mini-Motor-Driver.html)
+- [**Grove - I2C Controlador de Motor Mini**](https://www.seeedstudio.com/Grove-I2C-Mini-Motor-Driver.html)
 - [**DC Motor**](https://www.seeedstudio.com/130-DC-Motor-p-2023.html)
-- [**Grove - IR (Infrared) Receiver**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
+- [**Grove - IR Receptor (Infrarrojo)**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
 
 **Conexión de hardware**
 
@@ -869,7 +868,7 @@ Por favor sigue la misma línea de color para conectar cada sensor en la placa. 
 
 **Paso 1**. Sigue la imagen de conexión para conectar todos los sensores en la placa.
 
-**Paso 2**. Descarga el [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
+**Paso 2**. Descarga el [**Arduino IDE**](https://www.arduino.cc/en/Main/software)
 
 **Paso 3**. Instala las librerías [**Arduino-IRremote**](https://github.com/Seeed-Studio/Seeed_Arduino_IRSendRev) y [**Motor driver**](https://github.com/Seeed-Studio/Drv8830_Motor_Driver), esta es la guía [**cómo instalar la librería**](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library/).
 
@@ -973,9 +972,9 @@ Esta caja puede almacenar tus cosas importantes, y no tienes que preocuparte de 
 
 - [**Seeed Studio XIAO SAMD21 **](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-- [**Seeed Studio Expansion Base for XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+- [**Base de Expansión Seeed Studio para XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
-- [**Seeed Grove - Capacitive Fingerprint Scanner/Sensor**](https://www.hackster.io/products/buy/80263?s=BAhJIhMzNzA5MzAsUHJvamVjdAY6BkVG%0A)
+- [**Seeed Grove - Escáner/Sensor de Huellas Dactilares Capacitivo**](https://www.hackster.io/products/buy/80263?s=BAhJIhMzNzA5MzAsUHJvamVjdAY6BkVG%0A)
 
 - [**Seeed Grove RGB LED Ring - 24**](https://www.hackster.io/products/buy/80264?s=BAhJIhMzNzA5MzAsUHJvamVjdAY6BkVG%0A)
 
@@ -1312,7 +1311,7 @@ Este es un dispositivo de detección ambiental para recopilar PM2.5, PM10, tempe
 
 - [**Seeed Studio XIAO SAMD21 **](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-- [**Seeed Studio Expansion Base para XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+- [**Base de Expansión Seeed Studio para XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
 - [**Seeed Grove - Sensor de CO2, Temperatura y Humedad para Arduino (SCD30) - 3-en-1**](https://www.hackster.io/products/buy/80471?s=BAhJIhMzNzE2NzQsUHJvamVjdAY6BkVG%0A)
 

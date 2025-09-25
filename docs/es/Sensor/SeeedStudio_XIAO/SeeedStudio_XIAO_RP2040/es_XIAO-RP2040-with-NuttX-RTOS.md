@@ -316,7 +316,7 @@ nsh> ls /dev/
  ttyS0
 ```
 
-Typing `leds`, you observe the LEDs blinky same time.
+Escribiendo `leds`, observas que los LEDs parpadean al mismo tiempo.
 
 ```
 NuttShell (NSH) NuttX-12.5.1
@@ -394,7 +394,7 @@ nsh> ls /dev/
 
 ```
 
-Typing `ws2812 -h` will return a list of parameters that are accepted to interact with this application.
+Escribir `ws2812 -h` devolverá una lista de parámetros que son aceptados para interactuar con esta aplicación.
 
 ```
 nsh> ws2812 -h
@@ -409,7 +409,7 @@ specified, that path will be re-used until it is changed.
 
 ```
 
-Let's start our application, type `ws2812` and you see the LEDs changing the color.
+Iniciemos nuestra aplicación, escribe `ws2812` y verás que los LEDs cambian de color.
 
 ```
 nsh> ws2812
