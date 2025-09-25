@@ -782,6 +782,11 @@ Please complete the **System Configuration** according to your needs.
 
 Here we will use NVIDIA L4T 36.4.3 to install Jetpack 6.2 on the reComputer
 
+:::danger
+If you are using an **Orin NX 16GB/8GB** module, **do not enable MAXN SUPER mode**. 
+The cooling capacity of the reComputer J401 carrier board is insufficient to support it, and forcing this mode may result in permanent damage to the module.
+:::
+
 **Step 1:** Download the system image to your Ubuntu PC corresponding to the Jetson module you are using:
 
 <div class="table-center">
@@ -794,6 +799,20 @@ Here we will use NVIDIA L4T 36.4.3 to install Jetpack 6.2 on the reComputer
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>Orin NX 16GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdcCLLY0ZBdIl5YpQk9n1jUBRnqIhjpDHZxo4_6OaxIbYg?e=R7rEqU" target="_blank" rel="noopener noreferrer">Download</a>
+      </td>
+      <td>489F2B5D41655208EB2C5CFD980162B77D3871AD9EA06CD55C05FBB8B747500F</td>
+    </tr>
+    <tr>
+      <td>Orin NX 8GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ETW85CuJ9p5Gtefm7r7Hh74B6VvKATStF5B0SyfANjMZ2Q?e=CPj7HB" target="_blank" rel="noopener noreferrer">Download</a>
+      </td>
+      <td>DCC74CAB5F38E62C7A892DE6DFD547EBD61C5B5B71C5EF9F5A0EF675518EF062 </td>
+    </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>
