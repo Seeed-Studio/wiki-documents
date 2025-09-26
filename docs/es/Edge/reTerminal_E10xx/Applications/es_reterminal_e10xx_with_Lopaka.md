@@ -184,6 +184,7 @@ La pantalla ePaper a todo color admite colores rojo, negro, amarillo, verde y bl
 ```
 
 :::tip
+
 Si estás usando el reTerminal E1001, entonces deberías copiar el siguiente código
 
 ```cpp
@@ -406,6 +407,7 @@ void loop()
 {
     // put your main code here, to run repeatedly:
 }
+
 ```
 
 </details>
@@ -924,7 +926,8 @@ void setup()
 void loop()
 {
     // put your main code here, to run repeatedly:
-}```
+}
+```
 
 </details>
 

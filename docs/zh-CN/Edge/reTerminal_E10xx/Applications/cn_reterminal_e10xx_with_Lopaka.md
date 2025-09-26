@@ -184,6 +184,7 @@ Lopaka 是专为嵌入式图形开发设计的图形编辑器。它使用户能�
 ```
 
 :::tip
+
 如果您使用的是 reTerminal E1001，那么您应该复制以下代码
 
 ```cpp
@@ -406,6 +407,7 @@ void loop()
 {
     // put your main code here, to run repeatedly:
 }
+
 ```
 
 </details>
@@ -924,7 +926,8 @@ void setup()
 void loop()
 {
     // put your main code here, to run repeatedly:
-}```
+}
+```
 
 </details>
 

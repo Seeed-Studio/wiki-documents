@@ -184,6 +184,7 @@ Seeed_GFXライブラリを使用します。これは、さまざまなSeeed St
 ```
 
 :::tip
+
 reTerminal E1001を使用している場合は、以下のコードをコピーしてください
 
 ```cpp
@@ -406,6 +407,7 @@ void loop()
 {
     // put your main code here, to run repeatedly:
 }
+
 ```
 
 </details>
@@ -924,7 +926,8 @@ void setup()
 void loop()
 {
     // put your main code here, to run repeatedly:
-}```
+}
+```
 
 </details>
 

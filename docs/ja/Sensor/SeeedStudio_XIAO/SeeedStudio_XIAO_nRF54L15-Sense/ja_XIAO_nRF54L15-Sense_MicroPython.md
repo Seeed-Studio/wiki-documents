@@ -35,7 +35,7 @@ XIAO nRF54L15を準備してください。
 <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
 </tr>
@@ -645,6 +645,7 @@ finally:
             - `KeyboardInterrupt`：Ctrl+Cで正常に終了。
             - 一般的な`Exception`：予期しないエラーをキャッチして印刷。
         - 最後に、終了前にUARTリソースをクリーンアップするために`uart.deinit()`を呼び出します。
+
 ### 結果
 <!-- 添加対応GIF図 -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/UART_GPS_2.png" style={{width:800, height:'auto'}}/></div>
@@ -885,7 +886,8 @@ else:
 # Initialize display
 ssd1306_init()
 ssd1306_draw_text("NRF54L15", 30, 2)
-ssd1306_draw_text("HELLO WORLD", 20, 4)```
+ssd1306_draw_text("HELLO WORLD", 20, 4)
+```
 
 </details>
 
@@ -1162,7 +1164,8 @@ def main():
         time.sleep(1_000_000)
 
 if __name__ == "__main__":
-    main()```
+    main()
+```
 
 </details>
 
@@ -1244,11 +1247,11 @@ if __name__ == "__main__":
 弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

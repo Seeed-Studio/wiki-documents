@@ -645,6 +645,7 @@ finally:
             - `KeyboardInterrupt`: Sale elegantemente con Ctrl+C.
             - `Exception` general: Captura e imprime cualquier error inesperado.
         - Finalmente, llama a `uart.deinit()` para limpiar recursos UART antes de salir.
+
 ### Resultado
 <!-- 添加对应GIF图 -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/UART_GPS_2.png" style={{width:800, height:'auto'}}/></div>
@@ -885,7 +886,8 @@ else:
 # Initialize display
 ssd1306_init()
 ssd1306_draw_text("NRF54L15", 30, 2)
-ssd1306_draw_text("HELLO WORLD", 20, 4)```
+ssd1306_draw_text("HELLO WORLD", 20, 4)
+```
 
 </details>
 
@@ -1162,7 +1164,8 @@ def main():
         time.sleep(1_000_000)
 
 if __name__ == "__main__":
-    main()```
+    main()
+```
 
 </details>
 
@@ -1244,11 +1247,11 @@ efecto:
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
