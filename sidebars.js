@@ -3384,7 +3384,8 @@ const sidebars = {
               label: 'Tools',
               items: [
                 'Edge/Raspberry_Pi_Devices/Application/Development_Tools/recomputer_use_uv_to_build_package',
-                'Edge/Raspberry_Pi_Devices/Application/Development_Tools/recomputer_use_docker'
+                'Edge/Raspberry_Pi_Devices/Application/Development_Tools/recomputer_use_docker',
+                'Edge/Raspberry_Pi_Devices/Application/Development_Tools/recomputer_use_sqlite',
               ]
             }
           ]
