@@ -6,7 +6,7 @@ keywords:
 - Huggingface
 - Arm
 - Robotics 
-image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello.webp
+image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
 slug: /es/lerobot_starai_arm
 last_update:
   date: 9/16/2025
@@ -41,7 +41,7 @@ last_update:
 
 ## Características Principales
 
-- Listo para Usar — Sin Ensamblaje Requerido. Solo Desempaca y Sumérgete en el Mundo de la IA.
+- Listo para Usar — No Requiere Ensamblaje. Solo Desempaca y Sumérgete en el Mundo de la IA.
 - 6+1 Grados de Libertad y un Alcance de 470mm — Construido para Versatilidad y Precisión.
 - Alimentado por Servos de Bus Sin Escobillas Duales — Suave, Silencioso y Fuerte con hasta 300g de Carga Útil.
 - Pinza Paralela con Apertura Máxima de 66mm — Puntas de Dedos Modulares para Flexibilidad de Reemplazo Rápido.
@@ -73,7 +73,7 @@ last_update:
 | Hub de Comunicación    | UC-01                                             | UC-01                                             | UC-01 |
 | Fuente de Alimentación         | 12V10A/120w XT30                                   | 12V10A/120w XT30                                 |12V25A/300w XT60  |
 
-Para más información sobre los motores servo, por favor visita el siguiente enlace.
+Para más información sobre motores servo, por favor visita el siguiente enlace.
 
 [RA8-U25H-M](https://fashionrobo.com/actuator-u25/23396/)
 
@@ -100,7 +100,7 @@ Para más información sobre los motores servo, por favor visita el siguiente en
 
 ### Instalar LeRobot
 
-Los entornos como pytorch y torchvision necesitan ser instalados basándose en tu CUDA.
+Entornos como pytorch y torchvision necesitan ser instalados basándose en tu CUDA.
 
 1. Instalar Miniconda:
 Para Jetson:
@@ -149,7 +149,7 @@ conda install ffmpeg -c conda-forge
 ```
 
 :::tip
-Esto usualmente instala ffmpeg 7.X para tu plataforma compilado con el codificador libsvtav1. Si libsvtav1 no es soportado (verifica los codificadores soportados con ffmpeg -encoders), puedes:
+Esto usualmente instala ffmpeg 7.X para tu plataforma compilado con el codificador libsvtav1. Si libsvtav1 no es soportado (verifica codificadores soportados con ffmpeg -encoders), puedes:
 
 - [En cualquier plataforma] Instalar explícitamente ffmpeg 7.X usando:
 
@@ -167,7 +167,7 @@ conda install ffmpeg=7.1.1 -c conda-forge
 cd ~/lerobot && pip install -e ".[starai]"
 ```
 
-Para dispositivos Jetson Jetpack (por favor asegúrate de instalar [Pytorch-gpu y Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) desde el paso 5 antes de ejecutar este paso):
+Para dispositivos Jetson Jetpack (por favor asegúrate de instalar [Pytorch-gpu y Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) desde el paso 5 antes de ejecutar este paso):
 
 ```bash
 conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
@@ -201,7 +201,7 @@ El Kit de Brazo Robótico Incluye
 - Pinza paralela
 - Herramientas de instalación (tornillos, llave hexagonal)
 - Fuente de alimentación ×2
-- Abrazadera en C ×2
+- Abrazadera C ×2
 - Placa de depuración UC-01 ×2
 
 Interruptor de la placa de depuración UC-01：
@@ -235,13 +235,12 @@ Recuerda remover el usb, de lo contrario la interfaz no será detectada.
 
 Por ejemplo：
 
-1. Ejemplo de salida al identificar el puerto del brazo líder (por ejemplo, `/dev/tty.usbmodem575E0031751` en Mac, o posiblemente `/dev/ttyUSB0` en Linux):
-2. Ejemplo de salida al identificar el puerto del brazo seguidor (por ejemplo, `/dev/tty.usbmodem575E0032081` en Mac, o posiblemente `/dev/ttyUSB1` en Linux):
+1. Salida de ejemplo al identificar el puerto del brazo líder (ej., `/dev/tty.usbmodem575E0031751` en Mac, o posiblemente `/dev/ttyUSB0` en Linux):2. Ejemplo de salida al identificar el puerto del brazo seguidor (por ejemplo, `/dev/tty.usbmodem575E0032081` en Mac, o posiblemente `/dev/ttyUSB1` en Linux):
 
 :::tip
 Si no se puede identificar el puerto serie ttyUSB0, prueba las siguientes soluciones:
 
-Listar todos los puertos USB.
+Lista todos los puertos USB.
 
 ```sh
 lsusb
@@ -338,7 +337,7 @@ Después de ejecutar el comando, necesitas **mover manualmente el brazo robótic
 Los archivos de calibración se guardarán en las siguientes rutas: `~/.cache/huggingface/lerobot/calibration/robots` y `~/.cache/huggingface/lerobot/calibration/teleoperators`.
 :::
 
-### Configuración de Calibración de Doble Brazo
+### Configuración de Calibración de Brazo Dual
 
 <details>
 <summary> Tutorial </summary>
@@ -361,9 +360,9 @@ lerobot-calibrate     --robot.type=bi_starai_follower  --robot.left_arm_port=/de
 
 :::tip
 
-La diferencia entre configuraciones de un solo brazo y doble brazo radica en los parámetros `--teleop.type` y `--robot.type`. Además, las configuraciones de doble brazo requieren puertos USB separados para los brazos izquierdo y derecho, totalizando cuatro puertos USB: `--teleop.left_arm_port`, `--teleop.right_arm_port`, `--robot.left_arm_port`, y `--robot.right_arm_port`.
+La diferencia entre configuraciones de brazo único y brazo dual radica en los parámetros `--teleop.type` y `--robot.type`. Además, las configuraciones de brazo dual requieren puertos USB separados para los brazos izquierdo y derecho, totalizando cuatro puertos USB: `--teleop.left_arm_port`, `--teleop.right_arm_port`, `--robot.left_arm_port`, y `--robot.right_arm_port`.
 
-Si usas una configuración de doble brazo, necesitas modificar manualmente los tipos de archivo del brazo robótico `--teleop.type` y `--robot.type`, así como los puertos USB `--teleop.left_arm_port`, `--teleop.right_arm_port`, `--robot.left_arm_port`, y `--robot.right_arm_port`, para adaptarse a los comandos de teleoperación, recolección de datos, entrenamiento y evaluación.
+Si usas una configuración de brazo dual, necesitas modificar manualmente los tipos de archivo del brazo robótico `--teleop.type` y `--robot.type`, así como los puertos USB `--teleop.left_arm_port`, `--teleop.right_arm_port`, `--robot.left_arm_port`, y `--robot.right_arm_port`, para adaptarse a los comandos de teleoperación, recolección de datos, entrenamiento y evaluación.
 
 :::
 
@@ -395,7 +394,7 @@ lerobot-teleoperate \
 ```
 
 <details>
-<summary> Doble Brazo </summary>
+<summary> Brazo Dual </summary>
 
 ```bash
 lerobot-teleoperate \
@@ -479,7 +478,7 @@ lerobot-teleoperate \
 ```
 
 <details>
-<summary> Doble Brazo </summary>
+<summary> Brazo Dual </summary>
 
 ```bash
 lerobot-teleoperate \
@@ -501,8 +500,7 @@ lerobot-teleoperate \
 Si encuentras un error como este.
 
 <div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/rerun-version.png" />
+    <img width={800}    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/rerun-version.png" />
 </div>
 
 Puedes degradar la versión de rerun para resolver el problema.
@@ -519,7 +517,7 @@ pip3 install rerun-sdk==0.23
 <iframe width="900" height="600" src="https://www.youtube.com/embed/OpaC0CA3-Mc?si=rbNhJJRkG9zngQB-" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-Una vez que estés familiarizado con la teleoperación, puedes grabar tu primer conjunto de datos.
+Una vez que te familiarices con la teleoperación, puedes grabar tu primer conjunto de datos.
 
 Si quieres usar las funciones del hub de Hugging Face para subir tu conjunto de datos y no lo has hecho anteriormente, asegúrate de haber iniciado sesión usando un token de acceso de escritura, que se puede generar desde la [configuración de Hugging Face](https://huggingface.co/settings/tokens):
 
@@ -587,7 +585,7 @@ Para diferenciar entre configuraciones de brazo único y brazo dual, el `--datas
 Si no quieres usar la función de subida de conjuntos de datos del Hub de Hugging Face, puedes elegir `--dataset.push_to_hub=false`. Además, reemplaza `--dataset.repo_id=${HF_USER}/starai` con un nombre de carpeta local personalizado, por ejemplo, `--dataset.repo_id=starai/record-test`. Los datos se almacenarán en `~/.cache/huggingface/lerobot` bajo el directorio home del sistema.
 :::
 
-No subir al Hub:
+Sin subir al Hub:
 **（Recomendado, los siguientes tutoriales se enfocarán en datos locales）**
 
 ```bash
@@ -641,7 +639,7 @@ Para diferenciar entre configuraciones de brazo único y brazo dual, el `--datas
 
 #### 1. Almacenamiento de Datos
 
-- Los datos se almacenan en el formato `LeRobotDataset` y se guardan en disco durante el proceso de grabación.
+- Los datos se almacenan en formato `LeRobotDataset` y se guardan en disco durante el proceso de grabación.
 
 #### 2. Puntos de Control y Reanudación
 
@@ -673,7 +671,7 @@ Usa atajos de teclado para controlar el flujo de trabajo de grabación de datos:
 :::tip
 En Linux, si las teclas de flecha izquierda y derecha y la tecla escape no tienen efecto durante la grabación de datos, asegúrate de que la variable de entorno $DISPLAY esté configurada. Ver limitaciones de pynput.
 
-Una vez que estés familiarizado con la grabación de datos, puedes crear un conjunto de datos más grande para entrenamiento. Una buena tarea inicial es agarrar un objeto en diferentes posiciones y colocarlo en una caja pequeña. Recomendamos grabar al menos 50 episodios, con 10 episodios por ubicación. Mantén la cámara fija y mantén un comportamiento de agarre consistente durante toda la grabación. Además, asegúrate de que el objeto que estás manipulando sea visible en la cámara. Una buena regla general es que deberías poder completar la tarea mirando solo la imagen de la cámara.
+Una vez que te familiarices con la grabación de datos, puedes crear un conjunto de datos más grande para entrenamiento. Una buena tarea inicial es agarrar un objeto en diferentes posiciones y colocarlo en una caja pequeña. Recomendamos grabar al menos 50 episodios, con 10 episodios por ubicación. Mantén la cámara fija y mantén un comportamiento de agarre consistente durante toda la grabación. Además, asegúrate de que el objeto que estás manipulando sea visible en la cámara. Una buena regla general es que deberías poder completar la tarea mirando solo la imagen de la cámara.
 :::
 
 ## Reproducir un episodio
@@ -737,9 +735,7 @@ lerobot-train \
 
 1. `policy.type` soporta entrada `diffusion,pi0,pi0fast`
 1. Proporcionamos el conjunto de datos como parámetro: `dataset.repo_id=starai/record-test`.
-
 2. Cargaremos la configuración desde [`configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/src/lerobot/policies/act/configuration_act.py). Importante, esta política se adaptará automáticamente a los estados del motor del robot, acciones del motor y el número de cámaras, y se guardará en tu conjunto de datos.
-
 3. Proporcionamos `wandb.enable=true` para usar [Weights and Biases](https://docs.wandb.ai/quickstart) para visualizar gráficos de entrenamiento. Esto es opcional, pero si lo usas, asegúrate de haber iniciado sesión ejecutando `wandb login`.
 
 Reanudar entrenamiento desde un punto de control específico.
@@ -751,7 +747,7 @@ lerobot-train \
 ```
 
 <details>
-<summary>Si Entrenando comando de [política SmolVLA](https://huggingface.co/docs/lerobot/smolvla): </summary>
+<summary>Si entrenas comando de [política SmolVLA](https://huggingface.co/docs/lerobot/smolvla): </summary>
 
 ```bash
 pip install -e ".[smolvla]"
@@ -787,21 +783,20 @@ lerobot-record \
   # --teleop.type=so100_leader \
   # --teleop.port=/dev/ttyACM0 \
   # --teleop.id=my_red_leader_arm \
-  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
-```
+  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model```
 
 </details>
 
+
 <details>
-<summary>Si entrenas [política Libero](https://huggingface.co/docs/lerobot/libero) comando: </summary>
+<summary>Si entrenas comando de [política Libero](https://huggingface.co/docs/lerobot/libero): </summary>
 
 LIBERO es un benchmark diseñado para estudiar el aprendizaje robótico de por vida. La idea es que los robots no solo serán preentrenados una vez en una fábrica, sino que necesitarán seguir aprendiendo y adaptándose con sus usuarios humanos a lo largo del tiempo. Esta adaptación continua se llama aprendizaje de por vida en la toma de decisiones (LLDM), y es un paso clave hacia la construcción de robots que se conviertan en verdaderos asistentes personalizados.
 
-- [Artículo de LIBERO](https://arxiv.org/abs/2306.03310)
-- [Repositorio original de LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)
+  - [Artículo de LIBERO](https://arxiv.org/abs/2306.03310)
+  - [Repositorio original de LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)
 
 LIBERO incluye cinco suites de tareas:
-
 - LIBERO-Spatial (libero_spatial) – tareas que requieren razonamiento sobre relaciones espaciales.
 
 - LIBERO-Object (libero_object) – tareas centradas en manipular diferentes objetos.
@@ -831,11 +826,12 @@ lerobot-train \
   --eval_freq=1000 \
 ```
 
+
 ## Evaluación con LIBERO  
 
 Para instalar LIBERO, después de seguir las instrucciones oficiales de LeRobot, simplemente ejecuta: `pip install -e ".[libero]"`
 
-### Evaluación de suite única
+### Evaluación de suite única:
 
 ```bash
 lerobot-eval \
@@ -865,7 +861,11 @@ lerobot-eval \
 
 - Pasa una lista separada por comas a `--env.task` para evaluación multi-suite.
 
+
+
 </details>
+
+
 
 ## Evalúa tu política
 
@@ -937,7 +937,7 @@ Como puedes ver, esto es casi lo mismo que el comando usado previamente para gra
 
 - El `num-episodes` en el comando de recolección de datos debe asegurar suficiente recolección de datos y no debe pausarse manualmente a la mitad. Esto es porque la media y varianza de los datos se calculan solo después de que se completa la recolección de datos, lo cual es necesario para el entrenamiento.
 
-- Si el programa indica que no puede leer los datos de imagen de la cámara USB, por favor asegúrate de que la cámara USB no esté conectada a través de un Hub. La cámara USB debe estar conectada directamente al dispositivo para asegurar velocidades rápidas de transmisión de imagen.
+- Si el programa indica que no puede leer los datos de imagen de la cámara USB, por favor asegúrate de que la cámara USB no esté conectada a través de un Hub. La cámara USB debe estar conectada directamente al dispositivo para asegurar velocidades rápidas de transmisión de imágenes.
 
 ## Cita
 

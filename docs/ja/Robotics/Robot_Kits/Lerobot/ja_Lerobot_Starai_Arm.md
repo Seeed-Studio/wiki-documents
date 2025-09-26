@@ -1,12 +1,12 @@
 ---
-description: このwikiは、StarAI Robot ArmのデバッグチュートリアルとLerobotフレームワーク内でのデータ収集とトレーニングの実現方法を提供します。
+description: このwikiは、StarAI Robot ArmのデバッグチュートリアルとLerobotフレームワーク内でのデータ収集とトレーニングの実現を提供します。
 title: LeRobotでのStarAI Arm
 keywords:
 - Lerobot
 - Huggingface
 - Arm
 - Robotics 
-image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello.webp
+image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
 slug: /ja/lerobot_starai_arm
 last_update:
   date: 9/16/2025
@@ -19,7 +19,7 @@ last_update:
 <iframe width="900" height="600" src="https://www.youtube.com/embed/IJKTeBYAG7k?si=iS-jqT27fDjeI6yX" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-| **フォロワー Viola** | **リーダー Violin** | **フォロワー Cello** |
+| **Follower Viola** | **Leader Violin** | **Follower Cello** |
 |:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello.png) |
 
@@ -35,7 +35,7 @@ last_update:
 2. **LeRobotとの統合**
    [LeRobot Platform](https://github.com/huggingface/lerobot)との統合を目的として設計されており、実世界のロボットタスクにおける模倣学習のためのPyTorchモデル、データセット、ツール（データ収集、シミュレーション、トレーニング、デプロイメントを含む）を提供します。
 3. **包括的な学習リソース**
-   組み立てと校正ガイド、カスタム把持タスクの例など、包括的なオープンソース学習リソースを提供し、ユーザーが迅速に開始してロボットアプリケーションを開発できるよう支援します。
+   組み立てとキャリブレーションガイド、カスタム把持タスクの例など、包括的なオープンソース学習リソースを提供し、ユーザーが迅速に開始してロボットアプリケーションを開発できるよう支援します。
 4. **Nvidiaとの互換性**
    reComputer Mini J4012 Orin NX 16GBプラットフォームでのデプロイメントをサポートします。
 
@@ -44,7 +44,7 @@ last_update:
 - すぐに使用可能 — 組み立て不要。開封してすぐにAIの世界に飛び込めます。
 - 6+1自由度と470mmのリーチ — 汎用性と精度のために構築されています。
 - デュアルブラシレスバスサーボ駆動 — 最大300gのペイロードでスムーズ、静音、強力。
-- 最大66mm開口の平行グリッパー — クイック交換の柔軟性のためのモジュラーフィンガーチップ。
+- 66mm最大開口のパラレルグリッパー — クイック交換の柔軟性のためのモジュラーフィンガーチップ。
 - 独自のホバーロック技術 — ワンプレスでリーダーアームを任意の位置で瞬時に固定。
 
 ## 仕様
@@ -54,7 +54,7 @@ last_update:
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello.jpg" />
 </div>
 
-| 項目                 | フォロワーアーム \| Viola                             | リーダーアーム \|Violin                                |    フォロワーアーム \|Cello    |
+| 項目                 | Follower Arm \| Viola                             | Leder Arm \|Violin                                |    Follower Arm \|Cello    |
 | -------------------- | ------------------------------------------------- | ------------------------------------------------- |-----------------|
 | 自由度   | 6+1                                               | 6+1                                               | 6+1             |
 | リーチ                | 470mm                                             | 470mm                                             | 670mm |
@@ -62,10 +62,10 @@ last_update:
 | 再現性        | 2mm                                               | -                                                 | 1mm  |
 | 作業ペイロード      | 300g（70%リーチ時）                            | -                                                 |  750g（70%リーチ時）   |
 | サーボ               | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 |RX18-U100H-M x3<br/> RX8-U50H-M x3<br/> RX8-U51H-M x1|
-| 平行グリッパーキット  | ✅                                                 | -                                                 | ✅   |
-| 手首回転         | あり                                               | あり                                               | あり |
-| 任意位置での保持 | あり                                               | あり（ハンドルボタン付き）                          |  あり|
-| 手首カメラマウント   |参考3Dプリントファイル提供 | | 参考3Dプリントファイル提供
+| パラレルグリッパーキット  | ✅                                                 | -                                                 | ✅   |
+| 手首回転         | Yes                                               | Yes                                               | Yes |
+| 任意位置での保持 | Yes                                               | Yes（ハンドルボタン付き）                          |  Yes|
+| 手首カメラマウント   |参考3Dプリントファイルを提供 | | 参考3Dプリントファイルを提供
 | LeRobotとの連携   | ✅                                                 | ✅                                                 | ✅|
 | ROS 2との連携     | ✅                                                 | ✅                                                | ✅|
 | MoveIt2との連携    | ✅                                                 | ✅                                               |✅ |
@@ -167,7 +167,7 @@ conda install ffmpeg=7.1.1 -c conda-forge
 cd ~/lerobot && pip install -e ".[starai]"
 ```
 
-Jetson Jetpackデバイスの場合（このステップを実行する前に、ステップ5から[Pytorch-gpuとTorchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)をインストールしてください）：
+Jetson Jetpackデバイスの場合（このステップを実行する前に、ステップ5から[Pytorch-gpuとTorchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch)をインストールしてください）：
 
 ```bash
 conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
@@ -180,7 +180,7 @@ pip3 install numpy==1.26.0  # This should match torchvision
 
 6. PytorchとTorchvisionの確認
 
-pipを介してlerobot環境をインストールすると、元のPytorchとTorchvisionがアンインストールされ、PytorchとTorchvisionのCPUバージョンがインストールされるため、Pythonで確認を行う必要があります。
+pipを介してlerobot環境をインストールすると、元のPytorchとTorchvisionがアンインストールされ、CPU版のPytorchとTorchvisionがインストールされるため、Pythonで確認を行う必要があります。
 
 ```python
 import torch
@@ -191,14 +191,14 @@ print(torch.cuda.is_available())
 
 Jetsonデバイスを使用している場合は、[このチュートリアル](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)に従ってPytorchとTorchvisionをインストールしてください。
 
-### ロボットアームの開梱
+### ロボットアームの開封
 
-ロボットアームキットに含まれるもの
+ロボットアームキットの内容
 
 - リーダーアーム
 - フォロワーアーム
 - コントローラー（ハンドル）
-- 平行グリッパー
+- パラレルグリッパー
 - インストールツール（ネジ、六角レンチ）
 - 電源 ×2
 - Cクランプ ×2
@@ -235,8 +235,7 @@ usbを取り外すことを忘れないでください。そうしないとイ�
 
 例：
 
-1. リーダーアームのポートを識別する際の出力例（例：Macでは `/dev/tty.usbmodem575E0031751`、Linuxでは `/dev/ttyUSB0` の可能性があります）：
-2. フォロワーアームのポートを識別する際の出力例（例：Macでは `/dev/tty.usbmodem575E0032081`、Linuxでは `/dev/ttyUSB1` の可能性があります）：
+1. リーダーアームのポートを識別する際の出力例（例：Macでは`/dev/tty.usbmodem575E0031751`、Linuxでは`/dev/ttyUSB0`の可能性があります）：2. フォロワーアームのポートを識別する際の出力例（例：Macでは `/dev/tty.usbmodem575E0032081`、Linuxでは `/dev/ttyUSB1` の可能性があります）：
 
 :::tip
 ttyUSB0シリアルポートが識別できない場合は、以下の解決策を試してください：
@@ -282,7 +281,7 @@ sudo chmod 777 /dev/ttyUSB*
 
 :::
 
-以下を実行してUSBポートへのアクセス権限を付与する必要がある場合があります：
+以下を実行してUSBポートへのアクセス権を付与する必要がある場合があります：
 
 ```bash
 sudo chmod 666 /dev/ttyUSB*
@@ -292,7 +291,7 @@ sudo chmod 666 /dev/ttyUSB*
 
 ### 初期キャリブレーション
 
-各関節を左右に回転させて対応する位置に移動してください。
+各関節を左右に対応する位置まで回転させてください。
 
 ### 再キャリブレーション
 
@@ -311,14 +310,14 @@ sudo chmod 666 /dev/ttyUSB*
 | motor\_6 | 0°                    | 100°                  | 制限位置まで回転                   |
 
 :::tip
-PC（Linux）とJetsonボードを例にすると、`最初に`挿入されたUSBデバイスは`ttyUSB0`にマップされ、`2番目に`挿入されたUSBデバイスは`ttyUSB1`にマップされます。
+PC（Linux）とJetsonボードを例にとると、`最初に`挿入されたUSBデバイスは`ttyUSB0`にマップされ、`2番目に`挿入されたUSBデバイスは`ttyUSB1`にマップされます。
 
 コードを実行する前に、リーダーとフォロワーのマッピングインターフェースに注意してください。
 :::
 
 #### リーダーロボットアーム
 
-リーダーを `/dev/ttyUSB0` に接続するか、`--teleop.port` パラメータを変更してから実行してください：
+リーダーを`/dev/ttyUSB0`に接続するか、`--teleop.port`パラメータを変更してから実行してください：
 
 ```bash
 lerobot-calibrate     --teleop.type=starai_violin --teleop.port=/dev/ttyUSB0 --teleop.id=my_awesome_staraiviolin_arm
@@ -326,16 +325,16 @@ lerobot-calibrate     --teleop.type=starai_violin --teleop.port=/dev/ttyUSB0 --t
 
 #### フォロワーロボットアーム
 
-フォロワーを `/dev/ttyUSB1` に接続するか、`--teleop.port` パラメータを変更してから実行してください：
+フォロワーを`/dev/ttyUSB1`に接続するか、`--teleop.port`パラメータを変更してから実行してください：
 
 ```bash
 lerobot-calibrate     --robot.type=starai_viola --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraiviola_arm
 ```
 
-コマンドを実行した後、各関節が**制限位置**に到達するように**ロボットアームを手動で動かす**必要があります。ターミナルには記録された範囲データが表示されます。この操作が完了したら、Enterキーを押してください。
+コマンドを実行した後、各関節が**制限位置**に到達するように**手動でロボットアームを動かす**必要があります。ターミナルには記録された範囲データが表示されます。この操作が完了したら、Enterキーを押してください。
 
 :::tip
-キャリブレーションファイルは以下のパスに保存されます：`~/.cache/huggingface/lerobot/calibration/robots` と `~/.cache/huggingface/lerobot/calibration/teleoperators`。
+キャリブレーションファイルは以下のパスに保存されます：`~/.cache/huggingface/lerobot/calibration/robots`と`~/.cache/huggingface/lerobot/calibration/teleoperators`。
 :::
 
 ### デュアルアームキャリブレーション設定
@@ -345,7 +344,7 @@ lerobot-calibrate     --robot.type=starai_viola --robot.port=/dev/ttyUSB1 --robo
 
 #### リーダーロボットアーム
 
-`left_arm_port` を `/dev/ttyUSB0` に、`right_arm_port` を `/dev/ttyUSB2` に接続するか、`--teleop.left_arm_port` と `--teleop.right_arm_port` パラメータを変更してから実行してください：
+`left_arm_port`を`/dev/ttyUSB0`に、`right_arm_port`を`/dev/ttyUSB2`に接続するか、`--teleop.left_arm_port`と`--teleop.right_arm_port`パラメータを変更してから実行してください：
 
 ```bash
 lerobot-calibrate     --teleop.type=bi_starai_leader  --teleop.left_arm_port=/dev/ttyUSB0  --teleop.right_arm_port=/dev/ttyUSB2  --teleop.id=bi_starai_leader
@@ -353,7 +352,7 @@ lerobot-calibrate     --teleop.type=bi_starai_leader  --teleop.left_arm_port=/de
 
 #### フォロワーロボットアーム
 
-`left_arm_port` を `/dev/ttyUSB1` に、`right_arm_port` を `/dev/ttyUSB3` に接続するか、`--robot.left_arm_port` と `--robot.right_arm_port` パラメータを変更してから実行してください：
+`left_arm_port`を`/dev/ttyUSB1`に、`right_arm_port`を`/dev/ttyUSB3`に接続するか、`--robot.left_arm_port`と`--robot.right_arm_port`パラメータを変更してから実行してください：
 
 ```bash
 lerobot-calibrate     --robot.type=bi_starai_follower  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_follower
@@ -361,9 +360,9 @@ lerobot-calibrate     --robot.type=bi_starai_follower  --robot.left_arm_port=/de
 
 :::tip
 
-シングルアームとデュアルアーム設定の違いは、`--teleop.type` と `--robot.type` パラメータにあります。さらに、デュアルアーム設定では左右のアーム用に別々のUSBポートが必要で、合計4つのUSBポートが必要です：`--teleop.left_arm_port`、`--teleop.right_arm_port`、`--robot.left_arm_port`、`--robot.right_arm_port`。
+シングルアームとデュアルアーム設定の違いは、`--teleop.type`と`--robot.type`パラメータにあります。さらに、デュアルアーム設定では左右のアーム用に別々のUSBポートが必要で、合計4つのUSBポートが必要です：`--teleop.left_arm_port`、`--teleop.right_arm_port`、`--robot.left_arm_port`、`--robot.right_arm_port`。
 
-デュアルアーム設定を使用する場合は、テレオペレーション、データ収集、トレーニング、評価コマンドに適応するために、ロボットアームファイルタイプ `--teleop.type` と `--robot.type`、およびUSBポート `--teleop.left_arm_port`、`--teleop.right_arm_port`、`--robot.left_arm_port`、`--robot.right_arm_port` を手動で変更する必要があります。
+デュアルアーム設定を使用する場合、テレオペレーション、データ収集、トレーニング、評価コマンドに適応するために、ロボットアームファイルタイプ`--teleop.type`と`--robot.type`、およびUSBポート`--teleop.left_arm_port`、`--teleop.right_arm_port`、`--robot.left_arm_port`、`--robot.right_arm_port`を手動で変更する必要があります。
 
 :::
 
@@ -416,7 +415,7 @@ lerobot-teleoperate \
 1. 不足しているキャリブレーションを識別し、キャリブレーション手順を開始します。
 2. ロボットとリモート操作デバイスを接続し、リモート操作を開始します。
 
-プログラム開始後、Hover Lock Technologyは機能し続けます。
+プログラム開始後、ホバーロック技術は機能し続けます。
 
 ## カメラの追加
 
@@ -424,13 +423,13 @@ lerobot-teleoperate \
 <iframe width="900" height="600" src="https://www.youtube.com/embed/-p8K_-XxW8U?si=UmYWvEyKNPpTRxDC" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-2つのUSBカメラを挿入した後、以下のスクリプトを実行してカメラのポート番号を確認してください。カメラはUSBハブに接続してはならず、デバイスに直接接続する必要があることが重要です。USBハブの低速度により、画像データを読み取れない場合があります。
+2つのUSBカメラを挿入した後、以下のスクリプトを実行してカメラのポート番号を確認してください。カメラはUSBハブに接続してはならず、デバイスに直接接続する必要があることを覚えておくことが重要です。USBハブの低速度により、画像データを読み取れない場合があります。
 
 ```bash
 lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
 ```
 
-ターミナルには以下の情報が出力されます。例えば、ラップトップカメラは `index 2`、USBカメラは `index 4` です。
+ターミナルには以下の情報が出力されます。例えば、ラップトップカメラは`index 2`、USBカメラは`index 4`です。
 
 ```markdown
 --- Detected Cameras ---
@@ -461,9 +460,9 @@ Finalizing image saving...
 Image capture finished. Images saved to outputs/captured_images
 ```
 
-各カメラで撮影された画像は `outputs/images_from_opencv_cameras` ディレクトリで確認でき、異なる位置のカメラに対応するポートインデックス情報を検証できます。
+`outputs/images_from_opencv_cameras`ディレクトリで各カメラが撮影した画像を確認し、異なる位置のカメラに対応するポートインデックス情報を検証できます。
 
-外部カメラを確認した後、以下のカメラ情報を実際のカメラ情報に置き換えると、リモート操作中にコンピューターでカメラを表示できるようになります：
+外部カメラを確認した後、以下のカメラ情報を実際のカメラ情報に置き換えると、リモート操作中にコンピュータでカメラを表示できるようになります：
 
 ```bash
 lerobot-teleoperate \
@@ -501,11 +500,10 @@ lerobot-teleoperate \
 このようなバグが見つかった場合。
 
 <div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/rerun-version.png" />
+    <img width={800}    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/rerun-version.png" />
 </div>
 
-rerunのバージョンをダウングレードすることで問題を解決できます。
+この問題を解決するために、rerunのバージョンをダウングレードできます。
 
 ```bash
 pip3 install rerun-sdk==0.23
@@ -673,7 +671,7 @@ Parameter Description
 :::tip
 Linuxでは、データ記録中に左右の矢印キーとエスケープキーが効かない場合、$DISPLAY環境変数が設定されていることを確認してください。pynputの制限を参照してください。
 
-データ記録に慣れたら、トレーニング用により大きなデータセットを作成できます。良い開始タスクは、異なる位置でオブジェクトを掴み、小さな箱に置くことです。少なくとも50エピソード、場所ごとに10エピソードを記録することをお勧めします。記録中はカメラを固定し、一貫した掴み動作を維持してください。また、操作しているオブジェクトがカメラに映っていることを確認してください。良い経験則は、カメラ画像だけを見てタスクを完了できることです。
+データ記録に慣れたら、トレーニング用により大きなデータセットを作成できます。良い開始タスクは、異なる位置でオブジェクトを掴み、小さな箱に置くことです。少なくとも50エピソード、場所ごとに10エピソードを記録することをお勧めします。カメラを固定し、記録全体を通して一貫した掴み動作を維持してください。また、操作しているオブジェクトがカメラに映っていることを確認してください。良い経験則は、カメラ画像だけを見てタスクを完了できることです。
 :::
 
 ## エピソードの再生
@@ -737,9 +735,7 @@ lerobot-train \
 
 1. `policy.type`は`diffusion,pi0,pi0fast`の入力をサポートします
 1. データセットをパラメータとして提供します：`dataset.repo_id=starai/record-test`。
-
 2. [`configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/src/lerobot/policies/act/configuration_act.py)から設定を読み込みます。重要なことに、このポリシーはロボットのモーター状態、モーターアクション、カメラ数に自動的に適応し、データセットに保存されます。
-
 3. トレーニングチャートを可視化するために[Weights and Biases](https://docs.wandb.ai/quickstart)を使用する`wandb.enable=true`を提供します。これはオプションですが、使用する場合は`wandb login`を実行してログインしていることを確認してください。
 
 特定のチェックポイントからトレーニングを再開します。
@@ -787,26 +783,25 @@ lerobot-record \
   # --teleop.type=so100_leader \
   # --teleop.port=/dev/ttyACM0 \
   # --teleop.id=my_red_leader_arm \
-  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
-```
+  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model```
 
 </details>
 
+
 <details>
-<summary>[Libero policy](https://huggingface.co/docs/lerobot/libero)のトレーニングコマンド： </summary>
+<summary>[Libero policy](https://huggingface.co/docs/lerobot/libero)をトレーニングする場合のコマンド： </summary>
 
-LIBEROは生涯ロボット学習を研究するために設計されたベンチマークです。ロボットは工場で一度だけ事前訓練されるのではなく、時間をかけて人間のユーザーと共に学習し適応し続ける必要があるという考えです。この継続的な適応は意思決定における生涯学習（LLDM）と呼ばれ、真にパーソナライズされたヘルパーとなるロボットの構築に向けた重要なステップです。
+LIBEROは生涯ロボット学習を研究するために設計されたベンチマークです。ロボットは工場で一度だけ事前訓練されるのではなく、時間をかけて人間のユーザーと共に学習し適応し続ける必要があるという考えです。この継続的な適応は意思決定における生涯学習（LLDM）と呼ばれ、真にパーソナライズされたヘルパーとなるロボットを構築するための重要なステップです。
 
-- [LIBERO論文](https://arxiv.org/abs/2306.03310)
-- [オリジナルLIBEROリポジトリ](https://github.com/Lifelong-Robot-Learning/LIBERO)
+  - [LIBERO論文](https://arxiv.org/abs/2306.03310)
+  - [オリジナルLIBEROリポジトリ](https://github.com/Lifelong-Robot-Learning/LIBERO)
 
 LIBEROには5つのタスクスイートが含まれています：
-
 - LIBERO-Spatial (libero_spatial) – 空間関係についての推論を必要とするタスク。
 
 - LIBERO-Object (libero_object) – 異なるオブジェクトの操作を中心としたタスク。
 
-- LIBERO-Goal (libero_goal) – ロボットが変化するターゲットに適応する必要がある目標条件付きタスク。
+- LIBERO-Goal (libero_goal) – ロボットが変化する目標に適応する必要がある目標条件付きタスク。
 
 - LIBERO-90 (libero_90) – LIBERO-100コレクションからの90の短期間タスク。
 
@@ -831,6 +826,7 @@ lerobot-train \
   --eval_freq=1000 \
 ```
 
+
 ## LIBEROでの評価  
 
 LIBEROをインストールするには、LeRobotの公式手順に従った後、単に次を実行してください：`pip install -e ".[libero]"`
@@ -850,7 +846,7 @@ lerobot-eval \
 
 - `--eval.batch_size`は並列実行する環境の数を制御します。
 
-- `--eval.n_episodes`は実行する総エピソード数を設定します。
+- `--eval.n_episodes`は実行するエピソードの総数を設定します。
 
 ### マルチスイート評価
 
@@ -865,7 +861,11 @@ lerobot-eval \
 
 - マルチスイート評価には`--env.task`にカンマ区切りのリストを渡します。
 
+
+
 </details>
+
+
 
 ## ポリシーの評価
 
@@ -909,7 +909,7 @@ lerobot-record  \
 
 1. `--policy.path`パラメータは、トレーニング済みポリシー重みファイルへのパスを示します（例：`outputs/train/act_viola_test/checkpoints/last/pretrained_model`）。モデル重みをHubにアップロードしている場合は、モデルリポジトリも使用できます（例：`${HF_USER}/starai`）。
 
-2. 評価データセット`dataset.repo_id`の名前は`eval_`で始まります。この操作により、評価フェーズ専用のビデオとデータが記録され、`eval_`で始まるフォルダ（例：`starai/eval_record-test`）に保存されます。
+2. 評価データセット`dataset.repo_id`の名前は`eval_`で始まります。この操作により、評価フェーズ専用のビデオとデータが記録され、`starai/eval_record-test`などの`eval_`で始まるフォルダに保存されます。
 
 3. 評価フェーズで`File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/starai/eval_xxxx'`が発生した場合は、`eval_`で始まるフォルダを削除してプログラムを再実行してください。
 
@@ -933,11 +933,11 @@ lerobot-record  \
 
 - 3060 8GBラップトップでACTデータの50エピソードをトレーニングするには約6時間かかり、4090またはA100コンピュータでは約2-3時間かかります。
 
-- データ収集中は、カメラの位置と角度、環境照明の安定性を確保し、カメラに映る不安定な背景や歩行者を最小限に抑えてください。そうしないと、デプロイメント環境の大幅な変化により、ロボットアームが正常にオブジェクトを把握できなくなる可能性があります。
+- データ収集中は、カメラの位置と角度の安定性、環境照明を確保し、カメラに映る不安定な背景や歩行者を最小限に抑えてください。そうしないと、デプロイメント環境の大幅な変化により、ロボットアームが正常にオブジェクトを把握できなくなる可能性があります。
 
 - データ収集コマンドの`num-episodes`は十分なデータ収集を確保し、途中で手動で一時停止してはいけません。これは、データの平均と分散がデータ収集完了後にのみ計算され、これがトレーニングに必要だからです。
 
-- プログラムがUSBカメラの画像データを読み取れないと表示する場合は、USBカメラがHubを通じて接続されていないことを確認してください。USBカメラは高速な画像転送レートを確保するために、デバイスに直接接続する必要があります。
+- プログラムがUSBカメラの画像データを読み取れないと表示する場合は、USBカメラがHubを通じて接続されていないことを確認してください。USBカメラは高速画像転送レートを確保するために、デバイスに直接接続する必要があります。
 
 ## 引用
 
