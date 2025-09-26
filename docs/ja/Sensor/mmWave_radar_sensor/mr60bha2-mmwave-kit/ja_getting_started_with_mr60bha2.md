@@ -482,7 +482,7 @@ Arduino シリアルモニターでの出力は以下のようになります：
   - 人が検出されたかどうかを返します。
 
 <!-- 
-### Fall Module API
+### Fall モジュール API
 
 This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sensor for fall detection. Here's what each key function does:
 

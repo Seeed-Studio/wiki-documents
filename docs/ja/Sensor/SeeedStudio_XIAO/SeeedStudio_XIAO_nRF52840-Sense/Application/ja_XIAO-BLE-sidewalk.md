@@ -55,7 +55,7 @@ Amazon Sidewalkは現在米国で利用可能です。開発者は、Sidewalk対
 
     Amazon Sidewalkは、ネットワーク上を移動するデータを保護し、顧客データとプライバシー保護を確保するために、複数のプライバシーとセキュリティ機能を備えて設計されています。
 
-## Seeed Studio XIAO nRF52840 for Amazon Sidewalk
+## Amazon Sidewalk用Seeed Studio XIAO nRF52840
 
 XIAO nRF52840は、Amazon Sidewalk認定のワイヤレスモジュールで、Amazon SidewalkネットワークでBluetooth Low Energyラジオ技術を介してIoTデバイス接続を提供します。
 

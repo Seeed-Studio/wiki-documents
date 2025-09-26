@@ -260,7 +260,7 @@ Roboflowは画像にラベルを付ける3つの異なる方法を提供して�
 </TabItem>
 </Tabs>
 
-## Training Dataset Exported Model
+## トレーニングデータセットエクスポートモデル
 
 ### ステップ 1. Colab Notebookへのアクセス
 

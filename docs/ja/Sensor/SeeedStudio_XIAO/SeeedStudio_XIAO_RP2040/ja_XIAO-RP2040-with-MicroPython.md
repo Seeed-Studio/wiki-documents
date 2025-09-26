@@ -10,7 +10,7 @@ last_update:
   author: shuxu hu
 ---
 
-# **Seeed Studio XIAO RP2040 with MicroPython**
+# **Seeed Studio XIAO RP2040 と MicroPython**
 
 ## **MicroPython の紹介**
 

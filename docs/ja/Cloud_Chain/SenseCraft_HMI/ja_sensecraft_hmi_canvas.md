@@ -750,7 +750,7 @@ GitHubプロファイルテンプレートは、GitHubユーザーのプロフ�
 - 一部のGitHub統計は近似値の場合があります（1,000を超えるフォロワー数は「1.0K」として表示されます）。
 :::
 
-### YouTube Channel Stats Template
+### YouTube チャンネル統計テンプレート
 
 YouTube Channel Stats Templateは、YouTubeチャンネルのブランディング、スローガン、登録者数をクリーンでモダンなデザインで表示します。
 

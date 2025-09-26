@@ -9,7 +9,7 @@ last_update:
 
 ---
 
-# reComputer for Jetson Series Introduction
+# reComputer for Jetson シリーズ紹介
 
 <div align="center"><img width={900} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/reComputerheadline.png" /></div>
 
@@ -164,7 +164,7 @@ reComputer for Jetsonシリーズは、NVIDIA の先進的なAI組み込みシ�
 
 ---
 
-## What's More
+## さらに詳しく
 
 ここでは、NVIDIA® Jetson Module搭載デバイス比較とNVIDIA® Jetson Module対応キャリアボード比較のより完全な表をご紹介します。画像またはタイトルをクリックすると、より詳細にご覧いただけます。
 

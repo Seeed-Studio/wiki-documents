@@ -326,7 +326,7 @@ HAのインストールを開きます。設定 -> デバイスとサービス�
 ダッシュボードに移動すると、XIAO nRF52840 Senseによってブロードキャストされた温度と湿度を含む新しく追加されたカードが表示されます。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/17_HA.png" alt="Home Assistant" width="auto" height="auto" /></p>
 
-## What's More - Deep Sleep Function
+## さらに詳しく - ディープスリープ機能
 
 私はこれを動作させることができませんでした。もし解決策をお持ちの方がいらっしゃいましたら、コメントを残してください。[GitHub](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237)でご意見をお聞かせください。
 
@@ -335,7 +335,7 @@ HAのインストールを開きます。設定 -> デバイスとサービス�
 - このプロジェクトは、Seeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
 - [Brunoの努力](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237)に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)されます。
 
-## Tech Support & Product Discussion
+## 技術サポート・製品ディスカッション
 
 私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 

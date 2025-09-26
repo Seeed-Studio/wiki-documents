@@ -8,7 +8,7 @@ last_update:
   author: jianjing Huang
 ---
 
-# Quantum Mini Linux Development Kit
+# Quantum Mini Linux 開発キット
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/Quantum-Mini-Linux-Dev-Kit.png"/></div>
 

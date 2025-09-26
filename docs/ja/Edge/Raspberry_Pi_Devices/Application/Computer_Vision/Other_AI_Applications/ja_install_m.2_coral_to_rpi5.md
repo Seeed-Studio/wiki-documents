@@ -210,7 +210,7 @@ sudo reboot
 
 ```
 
-## Check Edge TPU
+## エッジをチェック TPU
 
 ```
 lspci -nn | grep 089a

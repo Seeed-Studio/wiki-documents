@@ -19,7 +19,7 @@ GSMモジュールとGPSモジュールの組み合わせが、RePhone Geo Kit�
 
 ##  仕様
 ---
-###   Xadow GSM+BLE
+### Xadow GSM+BLE
 
 <!-- このモジュールの詳細については、[**Xadow GSM+BLE Wikiページ**](/ja/Xadow_GSMPlusBLE)をご覧ください。 -->
 
@@ -74,7 +74,7 @@ GSMモジュールとGPSモジュールの組み合わせが、RePhone Geo Kit�
 </tr>
 </table>
 
-###   Xadow GPS v2
+### Xadow GPS v2
 
 <!-- このモジュールの詳細については、[**Xadow GPS V2 Wikiページ**](/ja/Xadow_GPS_V2)をご覧ください。 -->
 
@@ -165,7 +165,7 @@ GSMモジュールとGPSモジュールの組み合わせが、RePhone Geo Kit�
 </tr>
 </table>
 
-###   Xadow GSM Breakout
+### Xadow GSM ブレイクアウト
 
 <!-- このモジュールの詳細については、[**Xadow GSM Breakout Wikiページ**](/ja/Xadow_GSM_Breakout)をご覧ください。 -->
 

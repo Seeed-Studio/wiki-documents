@@ -173,7 +173,7 @@ flutter --version
 
 これで開発環境の準備が正常に完了しました
 
-## Smart Lamp Flutter Application
+## スマートランプ Flutter アプリケーション
 
 ### ハードウェア接続
 
