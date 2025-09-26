@@ -468,7 +468,7 @@ int main() {
 }
 ```
 
-## Exmaple 4: Read Battery Voltage
+## 例 4: バッテリー電圧の読み取り
 
 ```c title="hello_adc.c"
 #include <stdio.h>
@@ -541,7 +541,7 @@ TinyUSB submodule has not been initialized; USB support will be unavailable
 - 📄 **[PDF]** [Getting started with Raspberry Pi Pico-series](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf)  - 公式Raspberry Piドキュメント。
 - 📽️ **[Video]** [Intro to Raspberry Pi Pico and RP2040](https://www.youtube.com/watch?v=B5rQSoOmR5w) -  ビデオチュートリアル。
 
-## Tech Support & Product Discussion
+## 技術サポート・製品ディスカッション
 
 私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 

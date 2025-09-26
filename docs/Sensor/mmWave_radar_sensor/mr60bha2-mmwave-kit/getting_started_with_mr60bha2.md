@@ -515,6 +515,10 @@ Modifying the radar firmware is a risky operation, so be sure to read this secti
 **Special note, if you purchased the Fall Radar MR60FDA2, please do not flash the firmware illegally by the following way, it will surely brick your device!!!!**
 :::
 
+:::tip
+If you'd rather not read the text, you can also refer to **[the video](https://youtu.be/uic8__FFzos)** to update the firmware. Since the ESPHome firmware for XIAO will be overwritten below, you may need to reflash the ESPHome firmware for XIAO on this [webpage](https://limengdu.github.io/MR60BHA2_ESPHome_external_components/) after updating the radar's firmware.
+:::
+
 First, connect the XIAO ESP32C6 and MR60BHA2 modules together. Then use the following code to program XIAO.
 
 ```cpp

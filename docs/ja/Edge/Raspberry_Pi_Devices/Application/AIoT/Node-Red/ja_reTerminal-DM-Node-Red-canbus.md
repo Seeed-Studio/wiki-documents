@@ -12,7 +12,7 @@ last_update:
   author: Peter Pan
 ---
 
-# reTerminal DM CAN BUS with Node-RED
+# reTerminal DM CAN BUS と Node-RED
 
 ## CAN BUSについての簡単な情報
 

@@ -11,7 +11,7 @@ last_update:
     author: rcsim
 ---
 
-# Seeed Studio XIAO RA4M1 with NuttX(RTOS)
+# Seeed Studio XIAO RA4M1 と NuttX(RTOS)
 
 ## はじめに
 

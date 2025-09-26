@@ -262,7 +262,7 @@ Resetting USB to switch back to Run-Time mode
 ```
 
 :::caution
-After flashing is completed, please restart the board.
+Después de completar el flasheo, por favor reinicia la placa.
 :::
 
 - Check the firmware version:

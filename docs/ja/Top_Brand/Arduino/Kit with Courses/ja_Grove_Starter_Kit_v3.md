@@ -222,7 +222,7 @@ Grove – Temperature Sensorは環境温度を検出するために使用され�
 
 <!-- For a detailed information on how to use your Grove - Temperature Sensor,you can go to [Grove - Temperature Sensor](/ja/Grove-Temperature_Sensor) -->
 
-####   Grove - LED
+#### Grove - LED
 
 ![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-LED_Photo.jpg)
 

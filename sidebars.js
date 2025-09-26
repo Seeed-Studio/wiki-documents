@@ -1178,6 +1178,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Pin_Multiplexing',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Built-in-Sensor',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Power_Consumptions',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_MicroPython',
             {
               type: 'category',
               label: 'Wireless Connection',
@@ -3348,7 +3349,7 @@ const sidebars = {
                   type: 'category',
                   label: 'NVR',
                   items: [
-                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/firearm_detection_with_frigate_nvr_on_r2000',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/gan_detection_with_frigate_nvr_on_r2000',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/frigate_home_assistant_recomputer_r2000',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/frigate_nvr_with_raspberrypi_5',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/reterminal_frigate',
@@ -3384,7 +3385,8 @@ const sidebars = {
               label: 'Tools',
               items: [
                 'Edge/Raspberry_Pi_Devices/Application/Development_Tools/recomputer_use_uv_to_build_package',
-                'Edge/Raspberry_Pi_Devices/Application/Development_Tools/recomputer_use_docker'
+                'Edge/Raspberry_Pi_Devices/Application/Development_Tools/recomputer_use_docker',
+                'Edge/Raspberry_Pi_Devices/Application/Development_Tools/recomputer_use_sqlite',
               ]
             }
           ]
@@ -8382,7 +8384,7 @@ const sidebars = {
                   type: 'category',
                   label: 'NVR',
                   items: [
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_firearm_detection_with_frigate_nvr_on_r2000',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_gan_detection_with_frigate_nvr_on_r2000',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_frigate_home_assistant_recomputer_r2000',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_frigate_nvr_with_raspberrypi_5',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_reterminal_frigate',
@@ -13324,7 +13326,7 @@ const sidebars = {
                   type: 'category',
                   label: 'NVR',
                   items: [
-                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_firearm_detection_with_frigate_nvr_on_r2000',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_gan_detection_with_frigate_nvr_on_r2000',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_frigate_home_assistant_recomputer_r2000',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_frigate_nvr_with_raspberrypi_5',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_reterminal_frigate',
@@ -18266,7 +18268,7 @@ const sidebars = {
                   type: 'category',
                   label: 'NVR',
                   items: [
-                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_firearm_detection_with_frigate_nvr_on_r2000',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_gan_detection_with_frigate_nvr_on_r2000',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_frigate_home_assistant_recomputer_r2000',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_frigate_nvr_with_raspberrypi_5',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_reterminal_frigate',

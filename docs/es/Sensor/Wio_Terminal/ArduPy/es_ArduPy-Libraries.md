@@ -39,7 +39,6 @@ En este wiki, tomaré el [**Grove - Sensor de Temp&Humi&Barómetro (BME280)**](h
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-ArduPy-Library/structure.png" /></div>
 
-
 Esta es la [biblioteca ArduPy para Grove-BME280](https://github.com/Seeed-Studio/seeed-ardupy-bme280) y esto es lo que consiste una biblioteca ArduPy:
 
 - **`.gitigore`** - especifica archivos intencionalmente no rastreados para ignorar en git
@@ -144,7 +143,7 @@ extern "C" {
 }
 ```
 
-where `common_hal_bme280_construct` is the initializing function to create an object and it has a format of:
+donde `common_hal_bme280_construct` es la función de inicialización para crear un objeto y tiene un formato de:
 
 ```cpp
 self->module = new (m_new_obj(BME280)) BME280();
@@ -255,7 +254,7 @@ void bme280_obj_attr(mp_obj_t self_in, qstr attr, mp_obj_t *dest){
 }
 ```
 
-You can see that it simply return the functions by doing as followed:
+Puedes ver que simplemente devuelve las funciones haciendo lo siguiente:
 
 ```cpp
 if (attr == MP_QSTR_temperature) {
@@ -269,7 +268,6 @@ Esto básicamente se convierte en el método `.temperature` en el uso (es decir,
 
 !!!Note
         El tipo de datos de `dest[0]` debe coincidir aquí. Hay `mp_obj_new_float`, `mp_obj_new_int`, `mp_obj_new_bool`, `mp_obj_new_str` y etc.
-
 
 Define una tabla de búsqueda:
 
@@ -375,7 +373,6 @@ Si todo va bien, deberías ver una pantalla como la siguiente, lo que significa 
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-ArduPy-Library/build.png" /></div>
 
-
 ## Probando las Bibliotecas
 
 Una vez que tu compilación fue exitosa, puedes usar el siguiente comando para flashear el firmware a tu dispositivo y probar la biblioteca:
@@ -425,11 +422,11 @@ Hay una gran cantidad de bibliotecas ArduPy ya disponibles, puedes instalarlas y
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

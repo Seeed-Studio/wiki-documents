@@ -405,7 +405,7 @@ dtoverlay=pi3-disable-bt
 enable_uart=1
 ```
 
-- Step 2. Disable the system serivce to use the UART0.
+- Paso 2. Deshabilitar el servicio del sistema para usar el UART0.
 
 ```
 sudo systemctl disable hciuart 
@@ -421,15 +421,15 @@ sudo systemctl disable hciuart
 sudo nano /boot/cmdline.txt
 ```
 
-Then delete console=serial0,115200 from the string.
+Luego elimina console=serial0,115200 de la cadena.
 
-- Step 4. Reboot the Raspberry Pi3/Pi4
+- Paso 4. Reinicia la Raspberry Pi3/Pi4
 
 ```
 sudo reboot
 ```
 
-- Step 5. Run below commands to run the demo
+- Paso 5. Ejecuta los siguientes comandos para ejecutar la demostración
 
 ```
 cd ~

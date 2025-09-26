@@ -243,7 +243,7 @@ if __name__ == '__main__':
     main()
 ```
 
-It should also display "on" when you press the button:
+También debería mostrar "on" cuando presiones el botón:
 
 ```bash
 $ python3 ~/button.py
@@ -301,7 +301,7 @@ aplay -f cd -D hw:2,0 output.wav # for Stereo sound
 aplay -D plughw:2,0 output_one_channel.wav #for Mono sound from one channel
 ```
 
-Alternatively you can use recording_examples/play.py script to play the .wav files with PyAudio.
+Alternativamente puedes usar el script recording_examples/play.py para reproducir los archivos .wav con PyAudio.
 
 ```bash
 python3 recording_examples/play.py path-to-wav-file

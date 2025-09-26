@@ -179,7 +179,7 @@ SERIAL.print(SeeedTFLidar.get_strength()); //output signal strength value
 
 #### Hardware
 
-| Wio Terminal |  Grove-TF-Mini-LiDAR | Jumper |
+| Wio Terminal |  Grove-TF-Mini-LiDAR | Puente |
 |--------------|-----------------|----------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Grove-TF-Mini-LiDAR_S.JPG)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Jumper.png)|
 |[Obtener UNO Ahora](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Obtener UNO Ahora](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html)|[Obtener UNO Ahora](https://www.seeedstudio.com/Breadboard-Jumper-Wire-Pack-200mm-100m-p-1032.html)|

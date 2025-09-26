@@ -77,12 +77,12 @@ ESPHome está disponible como un **Complemento de Home Assistant** y se puede in
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/1.png" style={{width:900, height:'auto'}}/></div>
 
-<!-- - **Step 1.** To quickly setup ESPHome on Home Asssistant, click the below button -->
+<!-- - **Paso 1.** Para configurar rápidamente ESPHome en Home Assistant, haz clic en el botón de abajo -->
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/4.png"style={{width:300, height:'auto'}}/></div> -->
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/4.png" style={{width:300, height:'auto'}}/></div> -->
 
-<!-- - **Step 2.** Once you see the following pop-up, click **OPEN LINK** -->
+<!-- - **Paso 2.** Una vez que veas la siguiente ventana emergente, haz clic en **ABRIR ENLACE** -->
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/5.png"style={{width:300, height:'auto'}}/></div> -->
 
@@ -97,7 +97,7 @@ ESPHome está disponible como un **Complemento de Home Assistant** y se puede in
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/3.png" style={{width:900, height:'auto'}}/></div>
 
-<!-- - **Step 3.** Click **OPEN WEB UI** or **ESPHOME from the side-panel** -->
+<!-- - **Paso 3.** Haz clic en **ABRIR INTERFAZ WEB** o en **ESPHOME desde el panel lateral** -->
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/8.png"style={{width:700, height:'auto'}}/></div> -->
 

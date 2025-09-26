@@ -676,7 +676,6 @@ On Linux, if the left and right arrow keys and the escape key have no effect dur
 Once you are familiar with data recording, you can create a larger dataset for training. A good starting task is to grasp an object at different positions and place it in a small box. We recommend recording at least 50 episodes, with 10 episodes per location. Keep the camera fixed and maintain consistent grasping behavior throughout the recording. Also, ensure that the object you are manipulating is visible in the camera. A good rule of thumb is that you should be able to complete the task by looking only at the camera image.
 :::
 
-
 ## Replay an episode
 
 Now try to replay the first episode on your robot:
@@ -736,7 +735,6 @@ lerobot-train \
 
 </details>
 
-
 1. `policy.type` supports input `diffusion,pi0,pi0fast`
 1. We provide the dataset as a parameter: `dataset.repo_id=starai/record-test`.
 2. We will load the configuration from [`configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/src/lerobot/policies/act/configuration_act.py). Importantly, this policy will automatically adapt to the robot's motor states, motor actions, and the number of cameras, and will be saved in your dataset.
@@ -750,7 +748,6 @@ lerobot-train \
   --resume=true
 ```
 
-
 <details>
 <summary>If Training [SmolVLA policy](https://huggingface.co/docs/lerobot/smolvla) command: </summary>
 
@@ -759,6 +756,7 @@ pip install -e ".[smolvla]"
 ```
 
 ### Training
+
 ```bash
 lerobot-train \
   --policy.path=lerobot/smolvla_base \ # <- Use pretrained fine-tuned model
@@ -790,9 +788,85 @@ lerobot-record \
   --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
 ```
 
-
 </details>
 
+
+<details>
+<summary>If Training [Libero policy](https://huggingface.co/docs/lerobot/libero) command: </summary>
+
+LIBERO is a benchmark designed to study lifelong robot learning. The idea is that robots won’t just be pretrained once in a factory, they’ll need to keep learning and adapting with their human users over time. This ongoing adaptation is called lifelong learning in decision making (LLDM), and it’s a key step toward building robots that become truly personalized helpers.
+
+  - [LIBERO paper](https://arxiv.org/abs/2306.03310)
+  - [Original LIBERO repo](https://github.com/Lifelong-Robot-Learning/LIBERO)
+
+LIBERO includes five task suites:
+- LIBERO-Spatial (libero_spatial) – tasks that require reasoning about spatial relations.
+
+- LIBERO-Object (libero_object) – tasks centered on manipulating different objects.
+
+- LIBERO-Goal (libero_goal) – goal-conditioned tasks where the robot must adapt to changing targets.
+
+- LIBERO-90 (libero_90) – 90 short-horizon tasks from the LIBERO-100 collection.
+
+- LIBERO-Long (libero_10) – 10 long-horizon tasks from the LIBERO-100 collection.
+
+Together, these suites cover 130 tasks, ranging from simple object manipulations to complex multi-step scenarios. LIBERO is meant to grow over time, and to serve as a shared benchmark where the community can test and improve lifelong learning algorithms.
+
+## Training with LIBERO
+
+```bash
+lerobot-train \
+  --policy.type=smolvla \
+  --policy.repo_id=${HF_USER}/libero-test \
+  --dataset.repo_id=HuggingFaceVLA/libero \
+  --env.type=libero \
+  --env.task=libero_10 \
+  --output_dir=./outputs/ \
+  --steps=100000 \
+  --batch_size=4 \
+  --eval.batch_size=1 \
+  --eval.n_episodes=1 \
+  --eval_freq=1000 \
+```
+
+
+## Evaluating with LIBERO  
+
+To Install LIBERO, after following LeRobot official instructions, just do: `pip install -e ".[libero]"`
+
+### Single-suite evaluation:
+
+```bash
+lerobot-eval \
+  --policy.path="your-policy-id" \
+  --env.type=libero \
+  --env.task=libero_object \
+  --eval.batch_size=2 \
+  --eval.n_episodes=3
+```
+
+- `--env.task` picks the suite (libero_object, libero_spatial, etc.).
+
+- `--eval.batch_size` controls how many environments run in parallel.
+
+- `--eval.n_episodes` sets how many episodes to run in total.
+
+### Multi-suite evaluation
+
+```bash
+lerobot-eval \
+  --policy.path="your-policy-id" \
+  --env.type=libero \
+  --env.task=libero_object,libero_spatial \
+  --eval.batch_size=1 \
+  --eval.n_episodes=2
+```
+
+- Pass a comma-separated list to `--env.task` for multi-suite evaluation.
+
+
+
+</details>
 
 
 

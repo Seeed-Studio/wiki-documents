@@ -12,7 +12,7 @@ last_update:
 
 SenseCAP decoderは、SenseCAP LoRaWAN®デバイスから送信されるLoRaWANメッセージをデコードするために使用されます。デコード後、ユーザーのアプリケーションはより親しみやすく、読みやすいメッセージを取得できます。
 
-### SenseCAP T1000 Tracker
+### SenseCAP T1000 トラッカー
 
 [**SenseCAP T1000**](https://www.seeedstudio.com/sensecap-t1000-tracker?utm_source=emailsig&utm_medium=emailsig&utm_campaign=emailsig)は、GNSS/Wi-Fi/Bluetoothを利用して屋内外の精密な位置追跡を行うコンパクトなLoRaWAN®トラッカーです。自己地理適応機能、ローカルデータストレージ、そして数ヶ月間のバッテリー寿命を誇ります。さらに、温度、光、モーションセンサーを搭載しており、様々な位置ベースアプリケーションに最適です。
 
@@ -3331,7 +3331,7 @@ exports.handler = async (event) => {
 
 </details>
 
-### Wio Tracker 1110 Dev Board
+### Wio Tracker 1110 開発ボード
 
 [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html)は、[Wio-WM1110 Wireless Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html)をベースとし、位置測定用の多目的無線フロントエンドとSemtechの[LR1110](https://www.semtech.com/products/wireless-rf/lora-edge/lr1110) LoRa®トランシーバーを統合した、ユーザーフレンドリーなLoRaベースの追跡開発プラットフォームです。
 
@@ -6944,7 +6944,7 @@ exports.handler = async (event) => {
 
 </details>
 
-### SenseCAP S2100 Data Logger
+### SenseCAP S2100 データロガー
 
 [SenseCAP S2100 Data Logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html)は、MODBUS-RTU RS485/アナログ/GPIOセンサーに接続でき、LoRaWANネットワークにデータを簡単に送信できる多機能デバイスです。LoRaとIP66設計により、印象的な安定性と信頼性を誇り、超低消費電力を維持しながら長距離伝送をカバーできます。屋外使用に最適で、バッテリー駆動または12V外部電源接続でさらなる柔軟性を提供します。12V電源に接続した場合、交換可能な内蔵バッテリーがバックアップ電源として機能します。さらに、S2100 Data Loggerは内蔵Bluetoothを備えたOTA用に最適化されており、セットアップとアップデートを迅速かつ簡単にします。最後に、S2110コンバーターにより、S2100 Data LoggerをGroveセンサーに接続でき、DIY産業レベルLoRaWANセンサーと小規模展開に優れた選択肢となります。
 
@@ -8207,7 +8207,7 @@ function bytes2HexString (arrBytes) {
 
 ---
 
-### SenseCAP S2120 8-in-1 Weather Sensor
+### SenseCAP S2120 8-in-1 気象センサー
 
 [SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor](https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html)は、気温、湿度、風速、風向、降雨量、光強度、UV指数、気圧を測定します。超低消費電力、信頼性の高い性能、内蔵Bluetooth、OTA設定とリモートデバイス管理用のアプリサービスにより、低メンテナンスコストを実現します。裏庭、庭園、スマート農業、気象学、スマートシティなどの多シナリオアプリケーションをサポートします。
 

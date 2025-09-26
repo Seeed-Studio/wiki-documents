@@ -27,6 +27,7 @@ Uno de los componentes más importantes de los sistemas embebidos actuales es el
 El SO [**Zephyr**](https://www.zephyrproject.org/) está basado en un kernel de huella pequeña diseñado para uso en sistemas embebidos y con recursos limitados: desde simples sensores ambientales embebidos y wearables LED hasta controladores embebidos sofisticados, relojes inteligentes y aplicaciones inalámbricas IoT.
 
 ## Características
+
 Zephyr ofrece un gran y siempre creciente número de características incluyendo:
 
 ### Suite extensa de servicios de Kernel
@@ -43,16 +44,18 @@ Zephyr ofrece una serie de servicios familiares para el desarrollo:
 ### Múltiples Algoritmos de Programación
 
   Zephyr proporciona un conjunto integral de opciones de programación de hilos:
-  - Programación Cooperativa y Preventiva
-  - Earliest Deadline First (EDF)
-  - Programación Meta IRQ implementando comportamiento de "interrupt bottom half" o "tasklet"
-  - División de tiempo: Habilita la división de tiempo entre hilos preventivos de igual prioridad
-  - Múltiples estrategias de cola:
-    - Cola de preparados de lista enlazada simple
-    - Cola de preparados de árbol rojo/negro
-    - Cola de preparados multi-cola tradicional
+
+- Programación Cooperativa y Preventiva
+- Earliest Deadline First (EDF)
+- Programación Meta IRQ implementando comportamiento de "interrupt bottom half" o "tasklet"
+- División de tiempo: Habilita la división de tiempo entre hilos preventivos de igual prioridad
+- Múltiples estrategias de cola:
+  - Cola de preparados de lista enlazada simple
+  - Cola de preparados de árbol rojo/negro
+  - Cola de preparados multi-cola tradicional
 
 ### Soporte Bluetooth Low Energy 5.0
+
 Cumple con Bluetooth 5.0 (ESR10) y soporte de Controlador Bluetooth Low Energy (LE Link Layer). Incluye malla Bluetooth y un controlador Bluetooth listo para calificación Bluetooth.
 
 - Perfil de Acceso Genérico (GAP) con todos los roles LE posibles
@@ -184,31 +187,34 @@ Verás que el LED rojo adjunto se enciende y apaga creando un efecto de parpadeo
 Profundicemos un poco en este ejemplo para ver por qué funciona.
 
 El código de ejemplo asociado hace referencia a led0:
+
 ```
 #define LED0_NODE DT_ALIAS(led0)
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 ```
 
 La superposición LED (`xiao-zephyr-examples/d0_led.overlay`) define este LED para nosotros:
+
 ```
 / {
-	aliases {
-		led0 = &led0;
-	};
+ aliases {
+  led0 = &led0;
+ };
 
-	leds {
-		compatible = "gpio-leds";
-		led0: led_0 {
-			gpios = <&xiao_d 0 GPIO_ACTIVE_HIGH>;
-			label = "Demo LED";
-		};
-	};
+ leds {
+  compatible = "gpio-leds";
+  led0: led_0 {
+   gpios = <&xiao_d 0 GPIO_ACTIVE_HIGH>;
+   label = "Demo LED";
+  };
+ };
 };
 ```
 
 Esta superposición establece D0 (como se muestra a través de `&xiao_d 0`) como un LED y lo asocia con el alias `led0`. `led0` es un alias que permite que muchas muestras lo usen como el LED que se está controlando, ya que buscan específicamente este nombre.
 
 Si monitoreas la salida serie a través de `west espressif monitor` verás una salida similar a:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 LED state: OFF
@@ -227,7 +233,8 @@ west flash
 west espressif monitor
 ```
 
-You will see a console available for sending commands to the board:
+Verás una consola disponible para enviar comandos a la placa:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 Starting Observer Demo
@@ -261,12 +268,14 @@ west espressif monitor
 ```
 
 Verás una consola disponible para enviar comandos a la placa:
+
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
 uart:~$
 ```
 
 Existen varios comandos que te permiten ver y conectarte a redes locales, consulta el [readme de ejemplo](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/README.rst) para más información.
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 uart:~$ wifi scan
@@ -279,9 +288,10 @@ Num  | SSID                             (len) | Chan (Band)   | RSSI | Security 
 ```
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
+
 ```
 &wifi {
-	status = "okay";
+ status = "okay";
 };
 ```
 
@@ -306,12 +316,14 @@ El [archivo conf](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples
 #### TFLite - Hello World
 
 Habilitar TFLite con Zephyr y actualizar:
+
 ```
 west config manifest.project-filter -- +tflite-micro
 west update
 ```
 
 Compila la muestra y grábala en tu placa:
+
 ```
 west build -p always -b xiao_esp32c3 samples/modules/tflite-micro/hello_world
 west flash
@@ -319,6 +331,7 @@ west espressif monitor
 ```
 
 Verás los resultados devueltos desde la consola:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 x_value: 1.0*2^-127, y_value: 1.0*2^-127
@@ -367,6 +380,7 @@ west flash
 Verás una pantalla que muestra múltiples cajas negras y una caja parpadeante en la esquina dado que esta pantalla solo soporta dos colores.
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
+
 ```
 / {
     chosen {
@@ -395,7 +409,6 @@ Profundicemos un poco en este ejemplo para ver por qué funciona:
 ```
 
 El shield configura una pantalla OLED SSD1306 en el registro 0x3C. Se selecciona como la pantalla de zephyr en la sección chosen.
-
 
 #### Grove - Placa de Expansión - Botón
 
@@ -426,6 +439,7 @@ Button pressed at 419342954
 ```
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
+
 ```
 / {
     aliases {
@@ -452,7 +466,6 @@ El LED como se muestra arriba en el ejemplo del LED también se configura a trav
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32c3/led-button.gif?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23c3_zephyr/led-button.gif" style={{width:600, height:'auto'}}/></div>
 
-
 #### Grove - Placa de Expansión - Zumbador
 
 Activaremos nuestro zumbador usando el ejemplo PWM blinky para controlar su activación a través de una señal PWM. Para esto usaremos un overlay personalizado que habilita el PWM para el pin A3.
@@ -466,43 +479,44 @@ west flash
 Después de flashear deberías comenzar a escuchar una serie de zumbidos que cambian de sonido mientras la muestra ejecuta su curso.
 
 Veamos por qué esto funciona:
+
 ```
 #include <zephyr/dt-bindings/pwm/pwm.h>
 
 / {
-	aliases {
-		pwm-0 = &ledc0;
-		pwm-led0 = &pwm_buzzer;
-	};
+ aliases {
+  pwm-0 = &ledc0;
+  pwm-led0 = &pwm_buzzer;
+ };
 
-	pwmleds {
-		compatible = "pwm-leds";
-		pwm_buzzer: pwm_led_gpio0_5 {
-			label = "PWM LED0";
-			pwms = <&ledc0 0 1000 PWM_POLARITY_NORMAL>;
-		};
-	};
+ pwmleds {
+  compatible = "pwm-leds";
+  pwm_buzzer: pwm_led_gpio0_5 {
+   label = "PWM LED0";
+   pwms = <&ledc0 0 1000 PWM_POLARITY_NORMAL>;
+  };
+ };
 };
 
 &pinctrl {
-	ledc0_default: ledc0_default {
-		group1 {
-			pinmux = <LEDC_CH0_GPIO5>;
-			output-enable;
-		};
-	};
+ ledc0_default: ledc0_default {
+  group1 {
+   pinmux = <LEDC_CH0_GPIO5>;
+   output-enable;
+  };
+ };
 };
 
 &ledc0 {
-	pinctrl-0 = <&ledc0_default>;
-	pinctrl-names = "default";
-	status = "okay";
-	#address-cells = <1>;
-	#size-cells = <0>;
-	channel0@0 {
-		reg = <0x0>;
-		timer = <0>;
-	};
+ pinctrl-0 = <&ledc0_default>;
+ pinctrl-names = "default";
+ status = "okay";
+ #address-cells = <1>;
+ #size-cells = <0>;
+ channel0@0 {
+  reg = <0x0>;
+  timer = <0>;
+ };
 };
 ```
 
@@ -518,12 +532,14 @@ west build -p always -b xiao_esp32c3 samples/subsys/fs/fs_sample -- -DEXTRA_CONF
 ```
 
 Now flash and monitor:
+
 ```
 west flash
 west espressif monitor
 ```
 
 Deberías ver una respuesta similar a esta:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 [00:00:00.032,000] <inf> sd: Maximum SD clock is under 25MHz, using clock of 24000000Hz
@@ -539,6 +555,7 @@ Listing dir /SD: ...
 En este caso mi tarjeta SD tenía dos archivos. Sus nombres y sus tamaños fueron mostrados en mi consola.
 
 Veamos los elementos relevantes en juego aquí:
+
 ```
 CONFIG_SPI=y
 CONFIG_DISK_DRIVER_SDMMC=y
@@ -551,19 +568,19 @@ La parte relevante del shield de la Placa de Expansión Xiao se muestra a contin
 
 ```
 &xiao_spi {
-	status = "okay";
-	cs-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
+ status = "okay";
+ cs-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
 
-	sdhc0: sdhc@0 {
-		compatible = "zephyr,sdhc-spi-slot";
-		reg = <0>;
-		status = "okay";
-		mmc {
-			compatible = "zephyr,sdmmc-disk";
-			status = "okay";
-		};
-		spi-max-frequency = <24000000>;
-	};
+ sdhc0: sdhc@0 {
+  compatible = "zephyr,sdhc-spi-slot";
+  reg = <0>;
+  status = "okay";
+  mmc {
+   compatible = "zephyr,sdmmc-disk";
+   status = "okay";
+  };
+  spi-max-frequency = <24000000>;
+ };
 };
 ```
 
@@ -576,7 +593,6 @@ Primero solda los pines y conecta tu Xiao ESP32C3 a la placa de expansión. Lueg
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32c3/xiao_sht31.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23c3_zephyr/xiao_sht31.jpg" style={{width:600, height:'auto'}}/></div>
 
-
 Para probar esta configuración podemos usar una muestra existente con Zephyr:
 
 ```
@@ -586,6 +602,7 @@ west espressif monitor
 ```
 
 Verás los resultados devueltos desde la consola:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 SHT3XD: 25.92 Cel ; 53.37 %RH
@@ -600,13 +617,14 @@ SHT3XD: 26.13 Cel ; 52.81 %RH
 ```
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
+
 ```
  &xiao_i2c {
-	sht3xd@44 {
-			compatible = "sensirion,sht3xd";
-			reg = <0x44>;
-		};
-	};
+ sht3xd@44 {
+   compatible = "sensirion,sht3xd";
+   reg = <0x44>;
+  };
+ };
 ```
 
 El archivo de superposición de la aplicación se utiliza para configurar varios componentes de la placa. Usando este archivo, el ejemplo SHT31 puede utilizarse ya que la superposición informa a la [lógica de muestra](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c) cómo configurar el sensor para nuestra placa.
@@ -628,10 +646,10 @@ Primero conecta tu placa a la pantalla LCD usando la siguiente imagen como guía
 | RST | D0 |
 | BL | D6 |
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/10.png" style={{width:700, height:'auto'}}/></div>
 
 Ahora podemos compilar y flashear el firmware:
+
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_esp32c3 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.conf
@@ -643,7 +661,6 @@ Con el nuevo firmware en su lugar, el dispositivo ahora muestra la misma pantall
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32c3/spi_lcd.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23c3_zephyr/spi_lcd.jpg" style={{width:600, height:'auto'}}/></div>
 
-
 #### Pantalla Redonda para Xiao
 
 Para probar esta configuración podemos usar una muestra existente con Zephyr:
@@ -653,6 +670,7 @@ west build -p always -b xiao_esp32c3 samples/drivers/display --  -DSHIELD=seeed_
 ```
 
 Entra en modo bootloader y flashea tu dispositivo:
+
 ```
 west flash
 ```
@@ -670,16 +688,17 @@ La demostración de música mostrada aquí es solo una parte de la pantalla real
 Puedes ver desde el [archivo shield](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/shields/seeed_xiao_round_display/seeed_xiao_round_display.overlay) que esto funciona interfazando con el controlador de pantalla redonda GC9A01 a través de SPI y el módulo táctil CHSC6X a través de i2c.
 
 Profundicemos un poco en este ejemplo para ver cómo funciona:
+
 ```
 / {
     chosen {
       zephyr,display = &gc9a01_xiao_round_display;
     };
 
-	lvgl_pointer {
-		compatible = "zephyr,lvgl-pointer-input";
-		input = <&chsc6x_xiao_round_display>;
-	};
+ lvgl_pointer {
+  compatible = "zephyr,lvgl-pointer-input";
+  input = <&chsc6x_xiao_round_display>;
+ };
 };
 
 /*
@@ -687,46 +706,46 @@ Profundicemos un poco en este ejemplo para ver cómo funciona:
  * control the screen backlight and as touch controller interrupt.
  */
 &xiao_serial {
-	status = "disabled";
+ status = "disabled";
 };
 
 &xiao_i2c {
-	clock-frequency = < I2C_BITRATE_FAST >;
+ clock-frequency = < I2C_BITRATE_FAST >;
 
-	chsc6x_xiao_round_display: chsc6x@2e {
-		status = "okay";
-		compatible = "chipsemi,chsc6x";
-		reg = <0x2e>;
-		irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;
-	};
+ chsc6x_xiao_round_display: chsc6x@2e {
+  status = "okay";
+  compatible = "chipsemi,chsc6x";
+  reg = <0x2e>;
+  irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;
+ };
 };
 
 &xiao_spi {
-	status = "okay";
-	cs-gpios = <&xiao_d 1 GPIO_ACTIVE_LOW>, <&xiao_d 2 GPIO_ACTIVE_LOW>;
+ status = "okay";
+ cs-gpios = <&xiao_d 1 GPIO_ACTIVE_LOW>, <&xiao_d 2 GPIO_ACTIVE_LOW>;
 
-	gc9a01_xiao_round_display: gc9a01@0 {
-		status = "okay";
-		compatible = "galaxycore,gc9x01x";
-		reg = <0>;
-		spi-max-frequency = <DT_FREQ_M(100)>;
-		cmd-data-gpios = <&xiao_d 3 GPIO_ACTIVE_HIGH>;
-		pixel-format = <PANEL_PIXEL_FORMAT_RGB_565>;
-		width = <240>;
-		height = <240>;
-		display-inversion;
-	};
+ gc9a01_xiao_round_display: gc9a01@0 {
+  status = "okay";
+  compatible = "galaxycore,gc9x01x";
+  reg = <0>;
+  spi-max-frequency = <DT_FREQ_M(100)>;
+  cmd-data-gpios = <&xiao_d 3 GPIO_ACTIVE_HIGH>;
+  pixel-format = <PANEL_PIXEL_FORMAT_RGB_565>;
+  width = <240>;
+  height = <240>;
+  display-inversion;
+ };
 };
 ```
 
 Este shield hace lo siguiente:
+
 - Selecciona la pantalla GC9A01 como la pantalla Zephyr elegida
 - Configura la lógica del puntero LVGL para usar el módulo CHSC6X
 - Deshabilita el puerto serie ya que los pines se usan para la retroiluminación y la interrupción táctil (como se ve arriba mediante: `irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;`)
 - Configura la pantalla redonda para SPI usando los pines D1, D2 y D3
 
 La [lógica de ejemplo](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/modules/lvgl/demos/src/main.c) se basa en el [código de ejemplo de demostración de LVGL](https://github.com/lvgl/lvgl/tree/master/demos/music) que puede examinarse más a fondo.
-
 
 ## ✨ Proyecto de Colaborador
 

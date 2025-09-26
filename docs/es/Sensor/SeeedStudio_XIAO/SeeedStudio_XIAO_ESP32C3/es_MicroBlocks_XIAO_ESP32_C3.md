@@ -1,6 +1,6 @@
 ---
-description: Usando XIAO ESP32-C3 en MicroBlocks.
-title: Usando XIAO ESP32-C3 en MicroBlocks
+description: XIAO ESP32-C3 con MicroBlocks
+title: XIAO ESP32-C3 con MicroBlocks
 image: https://files.seeedstudio.com/wiki/microblocks/microblocks.png
 slug: /es/xiao_esp32c3_microblocks
 last_update:
@@ -8,11 +8,11 @@ last_update:
   author: MicroBlocks
 ---
 
-# Usando XIAO ESP32-C3 en MicroBlocks
+# XIAO ESP32-C3 con MicroBlocks
 
 ## MicroBlocks
 
-MicroBlocks es un lenguaje de bloques que facilita a los principiantes (de 9 años a adultos) programar microcontroladores. Sin embargo, a pesar de su aparente simplicidad, MicroBlocks es un lenguaje de programación potente con mejor rendimiento que MicroPython; la capacidad de controlar pines GPIO e interfaz con periféricos a través de I2C, SPI y serial; y casi 200 librerías de extensión. De hecho, algunos diseñadores de hardware prefieren MicroBlocks para prototipado rápido y pruebas debido a su ciclo de desarrollo rápido e interactivo.
+MicroBlocks es un lenguaje de bloques que facilita a los principiantes (de 9 años a adultos) programar microcontroladores. A pesar de su aparente simplicidad, MicroBlocks es un lenguaje de programación potente con mejor rendimiento que MicroPython; la capacidad de controlar pines GPIO e interfaz con periféricos a través de I2C, SPI y serial; y casi 200 librerías de extensión. De hecho, algunos diseñadores de hardware prefieren MicroBlocks para prototipado rápido y pruebas debido a su ciclo de desarrollo rápido e interactivo.
 
 ### Pinout y Características de Hardware del XIAO ESP32C3
 
@@ -27,9 +27,9 @@ La placa tiene 11 pines GPIO (pines 0..10). Los pines 0..3 pueden ser entradas a
 Esta placa **no** tiene un LED de usuario integrado;
 conecta un LED externo entre el pin 10 y tierra para usar el bloque "set user LED" de MicroBlocks.
 
-### Instalando el Firmware de MicroBlocks
+### Instalación del Firmware de MicroBlocks
 
-El firmware de MicroBlocks para esta placa puede instalarse directamente desde el editor de MicroBlocks.
+El firmware de MicroBlocks para esta placa se puede instalar directamente desde el editor de MicroBlocks.
 
 Conecta la placa a tu computadora con un cable USB de datos (**no** un cable solo de alimentación).
 
@@ -53,11 +53,11 @@ Cuando se te solicite, usa el botón "Connect" (icono de enchufe) para abrir una
 
 La instalación del firmware toma de 30 a 60 segundos. No cambies de pestaña del navegador hasta que esté completa.
 
-Una vez que el firmware esté instalado, puedes conectar la placa a MicroBlocks y comenzar a programar!
+Una vez que el firmware esté instalado, ¡puedes conectar la placa a MicroBlocks y comenzar a programar!
 
 ## Modo Bootloader
 
-Usualmente no es necesario entrar manualmente al modo bootloader cuando se instala el firmware de MicroBlocks en placas ESP32.
+Generalmente no es necesario entrar manualmente al modo bootloader al instalar el firmware de MicroBlocks en placas ESP32.
 
 Para entrar al modo bootloader, si es necesario, mantén presionado el botón B (boot)
 mientras presionas y sueltas el botón R (reset).

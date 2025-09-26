@@ -1,6 +1,6 @@
 ---
-description: This wiki demonstrates implement gun detection based on the Frigate NVR and reComputer AI box. 
-title: Firearm detection with Frigate NVR on R2000
+description: このwikiは、Frigate NVRとreComputer AIボックスに基づく銃器検出の実装を実演します。
+title: R2000でのFrigate NVRによる銃器検出
 keywords:
   - Raspberry pi
   - Edge AI Computer
@@ -8,7 +8,7 @@ keywords:
   - Object detecton
   - Frigate
 image: https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/setting_3.webp
-slug: /firearm_detection_with_frigate_nvr_on_r2000
+slug: /ja/gan_detection_with_frigate_nvr_on_r2000
 last_update:
   date: 08/12/2025
   author: Nolan Chen
@@ -16,17 +16,17 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# Firearm detection with Frigate NVR on R2000
+# R2000でのFrigate NVRによる銃器検出
 
-## Introduction
+## はじめに
 
-**Frigate NVR** is an open-source network video recorder designed for AI-first, real-time video analytics at the edge. Deployed on a **reComputer AI box** with Hailo, the system locally ingests multiple camera streams, runs a quantitative object detection model, and emits MQTT events within milliseconds, eliminating cloud latency and bandwidth costs.
+**Frigate NVR**は、エッジでのAIファーストなリアルタイム映像解析のために設計されたオープンソースのネットワークビデオレコーダーです。Hailoを搭載した**reComputer AIボックス**に展開されたこのシステムは、複数のカメラストリームをローカルで取り込み、定量的物体検出モデルを実行し、ミリ秒以内にMQTTイベントを発信し、クラウドの遅延と帯域幅コストを排除します。
 
-For this deployment, we expanded Frigate's existing model library and added a custom **yolov11s** model specifically fine-tuned for pistol and rifle recognition. When a firearm is detected, Frigate's rules engine immediately triggers an alert, giving security teams precious seconds to lock down the area and coordinate a response before the threat escalates.
+この展開では、Frigateの既存のモデルライブラリを拡張し、ピストルとライフルの認識に特化してファインチューニングされたカスタム**yolov11s**モデルを追加しました。銃器が検出されると、Frigateのルールエンジンが即座にアラートをトリガーし、セキュリティチームに脅威がエスカレートする前にエリアを封鎖し、対応を調整するための貴重な数秒を与えます。
 
-## Prerequisites
+## 前提条件
 
-### Hardware Requirements
+### ハードウェア要件
 
 <div class="table-center">
   <table align="center">
@@ -53,26 +53,26 @@ For this deployment, we expanded Frigate's existing model library and added a cu
   </table>
 </div>
 
-## Configuring Frigate
+## Frigateの設定
 
-### Modifying PCIe Settings
+### PCIe設定の変更
 
-Opening `config.txt`:
+`config.txt`を開く：
 
 ```bash
 sudo nano /boot/firmware/config.txt
 ```
 
-Add the following to `config.txt`:
+`config.txt`に以下を追加：
 
 ```bash
 dtparam=pciex1_gen=3
 dtoverlay=pciex1-compat-pi5,no-mip
 ```
 
-Then save the file using  `Ctrl+x`  and restart the AI box.
+その後、`Ctrl+x`を使用してファイルを保存し、AIボックスを再起動します。
 
-### Install Docker and hailo-all
+### DockerとHailo-allのインストール
 
 ```bash
 sudo apt update
@@ -83,16 +83,16 @@ sudo usermod -aG docker $USER
 sudo apt install docker-compose-plugin
 ```
 
-### Creating a yml file
+### ymlファイルの作成
 
-Create the `frigate.yml` file so that Docker Compose can run Frigate.
+Docker ComposeがFrigateを実行できるように`frigate.yml`ファイルを作成します。
 
 ```bash
 cd ~
 sudo nano frigate.yml
 ```
 
-Here is an example of `frigate.yml`:
+以下は`frigate.yml`の例です：
 
 ```bash
 services:
@@ -126,7 +126,7 @@ services:
       - "44"  # video group
 ```
 
-Download the case video:
+ケースビデオをダウンロード：
 
 ```bash
 mkdir media && cd media
@@ -134,7 +134,7 @@ wget -c \
 "https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/model_cache/yolov11s.hef"
 ```
 
-Download the YOLO model and create config.yml:
+YOLOモデルをダウンロードしてconfig.ymlを作成：
 
 ```bash
 cd .. && mkdir config && cd config && mkdir model_cache
@@ -142,7 +142,7 @@ cd model_cache && wget https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZ
 cd .. && nano config.yml
 ```
 
-The following is an example config.yml:
+以下はconfig.ymlの例です：
 
 ```bash
 database:
@@ -153,24 +153,24 @@ go2rtc:
     # USB camera streaming
     usb_camera:
       - "ffmpeg:/dev/video0#input=-f v4l2 -input_format mjpeg -video_size 640x480 -framerate 15"
-    
+
     # RTSP stream configuration
 
     hikvision_main:
       - "rtsp://admin:password@192.168.1.100:554/h264/ch1/main/av_stream"
-    
+
     # Video file streaming - close.mp4
     video_files_close:
       - "ffmpeg:/media/frigate/close.mp4"
-    
+
     # Video file streaming - close2.mp4
     video_files_close2:
       - "ffmpeg:/media/frigate/close2.mp4"
-    
+
     # Video file streaming - y4.mp4
     video_files_y4:
       - "ffmpeg:/media/frigate/y4.mp4"
-    
+
     # Video file streaming - y5.mp4
     video_files_y5:
       - "ffmpeg:/media/frigate/y5.mp4"
@@ -413,9 +413,9 @@ lpr:
   enabled: false
 ```
 
-## Run the project
+## プロジェクトの実行
 
-Pull and run the project:
+プロジェクトをプルして実行：
 
 ```bash
 cd ~
@@ -423,7 +423,7 @@ sudo docker pull mjqx2023/frigate_seeed
 docker compose -f frigate.yml up -d
 ```
 
-Then open **localhost:5000** in the web browser of the AI box:
+その後、AIボックスのWebブラウザで**localhost:5000**を開きます：
 
 <div style={{ textAlign: 'center' }}>
   <img
@@ -432,7 +432,7 @@ Then open **localhost:5000** in the web browser of the AI box:
   />
 </div>
 
-Select one of the videos to start debugging, select the display box, and the results will be automatically displayed:
+デバッグを開始するビデオの1つを選択し、表示ボックスを選択すると、結果が自動的に表示されます：
 
 <div style={{ textAlign: 'center' }}>
   <img
@@ -448,7 +448,7 @@ Select one of the videos to start debugging, select the display box, and the res
   />
 </div>
 
-Switch tabs to view past test results:
+タブを切り替えて過去のテスト結果を表示します：
 
 <div style={{ textAlign: 'center' }}>
   <img
@@ -457,22 +457,22 @@ Switch tabs to view past test results:
   />
 </div>
 
-## Result
+## 結果
 
-When it sees someone holding a gun, the model will identify it and select it.
-Switch to debug mode, select the display box, and the results will be automatically displayed; switch tabs to view past detection results.
+銃を持っている人を検出すると、モデルがそれを識別して選択します。
+デバッグモードに切り替えて表示ボックスを選択すると、結果が自動的に表示されます。タブを切り替えて過去の検出結果を表示できます。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/gun_detection_gif.gif" alt="pir" width={1000} height="auto"/></p>
 
-## Other configurations
+## その他の設定
 
-| Configuration of other video sources | Frame rate configuration|
+| その他のビデオソースの設定 | フレームレート設定|
 |--------------------------|--------------------|
-| Frigate supports RTSP, video streaming, and USB cameras. Once the configuration file is configured, it will take effect after reboot.                | The configuration file can configure the detection frame rate of each camera, which will take effect after restart.|
-| You can access configuration options in Settings, such as changing the RTSP path to connect to an RTSP camera. Once you've made changes, click Save & Restart in the upper-right corner for the changes to take effect.| ![page](https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/other.png)|
+| Frigateは RTSP、ビデオストリーミング、USB カメラをサポートしています。設定ファイルが設定されると、再起動後に有効になります。                | 設定ファイルで各カメラの検出フレームレートを設定でき、再起動後に有効になります。|
+| 設定で設定オプションにアクセスできます。例えば、RTSP パスを変更して RTSP カメラに接続できます。変更を行った後、右上角の「保存して再起動」をクリックして変更を有効にします。| ![page](https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/other.png)|
 
-## Tech Support & Product Discussion
+## 技術サポートと製品ディスカッション
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

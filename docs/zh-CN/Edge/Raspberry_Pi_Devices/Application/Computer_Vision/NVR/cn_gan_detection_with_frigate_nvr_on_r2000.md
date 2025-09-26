@@ -1,6 +1,6 @@
 ---
-description: Esta wiki demuestra la implementación de detección de armas basada en el NVR Frigate y la caja de IA reComputer.
-title: Detección de armas de fuego con NVR Frigate en R2000
+description: 本 wiki 演示了基于 Frigate NVR 和 reComputer AI 盒子实现枪支检测。
+title: 在 R2000 上使用 Frigate NVR 进行枪支检测
 keywords:
   - Raspberry pi
   - Edge AI Computer
@@ -8,7 +8,7 @@ keywords:
   - Object detecton
   - Frigate
 image: https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/setting_3.webp
-slug: /es/firearm_detection_with_frigate_nvr_on_r2000
+slug: /cn/gan_detection_with_frigate_nvr_on_r2000
 last_update:
   date: 08/12/2025
   author: Nolan Chen
@@ -16,17 +16,17 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# Detección de armas de fuego con NVR Frigate en R2000
+# 在 R2000 上使用 Frigate NVR 进行枪支检测
 
-## Introducción
+## 介绍
 
-**Frigate NVR** es un grabador de video en red de código abierto diseñado para análisis de video en tiempo real con IA en el borde. Desplegado en una **caja de IA reComputer** con Hailo, el sistema ingiere localmente múltiples flujos de cámara, ejecuta un modelo cuantitativo de detección de objetos y emite eventos MQTT en milisegundos, eliminando la latencia de la nube y los costos de ancho de banda.
+**Frigate NVR** 是一个开源网络视频录像机，专为 AI 优先的边缘实时视频分析而设计。部署在配备 Hailo 的 **reComputer AI 盒子** 上，该系统在本地接收多个摄像头流，运行量化目标检测模型，并在毫秒内发出 MQTT 事件，消除了云延迟和带宽成本。
 
-Para este despliegue, expandimos la biblioteca de modelos existente de Frigate y agregamos un modelo personalizado **yolov11s** específicamente ajustado para el reconocimiento de pistolas y rifles. Cuando se detecta un arma de fuego, el motor de reglas de Frigate inmediatamente activa una alerta, dando a los equipos de seguridad segundos preciosos para bloquear el área y coordinar una respuesta antes de que la amenaza escale.
+在此部署中，我们扩展了 Frigate 现有的模型库，并添加了专门针对手枪和步枪识别进行微调的自定义 **yolov11s** 模型。当检测到枪支时，Frigate 的规则引擎立即触发警报，为安全团队提供宝贵的几秒钟时间来封锁区域并协调响应，防止威胁升级。
 
-## Prerrequisitos
+## 先决条件
 
-### Requisitos de Hardware
+### 硬件要求
 
 <div class="table-center">
   <table align="center">
@@ -41,38 +41,38 @@ Para este despliegue, expandimos la biblioteca de modelos existente de Frigate y
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
 <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-## Configurando Frigate
+## 配置 Frigate
 
-### Modificando la Configuración PCIe
+### 修改 PCIe 设置
 
-Abriendo `config.txt`:
+打开 `config.txt`：
 
 ```bash
 sudo nano /boot/firmware/config.txt
 ```
 
-Añade lo siguiente a `config.txt`:
+将以下内容添加到 `config.txt`：
 
 ```bash
 dtparam=pciex1_gen=3
 dtoverlay=pciex1-compat-pi5,no-mip
 ```
 
-Luego guarda el archivo usando `Ctrl+x` y reinicia la caja de IA.
+然后使用 `Ctrl+x` 保存文件并重启 AI 盒子。
 
-### Instalar Docker y hailo-all
+### 安装 Docker 和 hailo-all
 
 ```bash
 sudo apt update
@@ -83,16 +83,16 @@ sudo usermod -aG docker $USER
 sudo apt install docker-compose-plugin
 ```
 
-### Creando un archivo yml
+### 创建 yml 文件
 
-Crea el archivo `frigate.yml` para que Docker Compose pueda ejecutar Frigate.
+创建 `frigate.yml` 文件，以便 Docker Compose 可以运行 Frigate。
 
 ```bash
 cd ~
 sudo nano frigate.yml
 ```
 
-Aquí hay un ejemplo de `frigate.yml`:
+以下是 `frigate.yml` 的示例：
 
 ```bash
 services:
@@ -126,7 +126,7 @@ services:
       - "44"  # video group
 ```
 
-Descarga el video del caso:
+下载案例视频：
 
 ```bash
 mkdir media && cd media
@@ -134,7 +134,7 @@ wget -c \
 "https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/model_cache/yolov11s.hef"
 ```
 
-Descarga el modelo YOLO y crea config.yml:
+下载 YOLO 模型并创建 config.yml：
 
 ```bash
 cd .. && mkdir config && cd config && mkdir model_cache
@@ -142,7 +142,7 @@ cd model_cache && wget https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZ
 cd .. && nano config.yml
 ```
 
-El siguiente es un ejemplo de config.yml:
+以下是 config.yml 的示例：
 
 ```bash
 database:
@@ -153,24 +153,24 @@ go2rtc:
     # USB camera streaming
     usb_camera:
       - "ffmpeg:/dev/video0#input=-f v4l2 -input_format mjpeg -video_size 640x480 -framerate 15"
-    
+
     # RTSP stream configuration
 
     hikvision_main:
       - "rtsp://admin:password@192.168.1.100:554/h264/ch1/main/av_stream"
-    
+
     # Video file streaming - close.mp4
     video_files_close:
       - "ffmpeg:/media/frigate/close.mp4"
-    
+
     # Video file streaming - close2.mp4
     video_files_close2:
       - "ffmpeg:/media/frigate/close2.mp4"
-    
+
     # Video file streaming - y4.mp4
     video_files_y4:
       - "ffmpeg:/media/frigate/y4.mp4"
-    
+
     # Video file streaming - y5.mp4
     video_files_y5:
       - "ffmpeg:/media/frigate/y5.mp4"
@@ -413,9 +413,9 @@ lpr:
   enabled: false
 ```
 
-## Ejecutar el proyecto
+## 运行项目
 
-Descargar y ejecutar el proyecto:
+拉取并运行项目：
 
 ```bash
 cd ~
@@ -423,7 +423,7 @@ sudo docker pull mjqx2023/frigate_seeed
 docker compose -f frigate.yml up -d
 ```
 
-Luego abre **localhost:5000** en el navegador web de la caja AI:
+然后在 AI 盒子的网页浏览器中打开 **localhost:5000**：
 
 <div style={{ textAlign: 'center' }}>
   <img
@@ -432,7 +432,7 @@ Luego abre **localhost:5000** en el navegador web de la caja AI:
   />
 </div>
 
-Selecciona uno de los videos para comenzar la depuración, selecciona la caja de visualización, y los resultados se mostrarán automáticamente:
+选择其中一个视频开始调试，选择显示框，结果将自动显示：
 
 <div style={{ textAlign: 'center' }}>
   <img
@@ -448,7 +448,7 @@ Selecciona uno de los videos para comenzar la depuración, selecciona la caja de
   />
 </div>
 
-Cambia de pestañas para ver los resultados de pruebas anteriores:
+切换选项卡查看过去的测试结果：
 
 <div style={{ textAlign: 'center' }}>
   <img
@@ -457,22 +457,22 @@ Cambia de pestañas para ver los resultados de pruebas anteriores:
   />
 </div>
 
-## Resultado
+## 结果
 
-Cuando ve a alguien sosteniendo un arma, el modelo la identificará y la seleccionará.
-Cambia al modo de depuración, selecciona la caja de visualización, y los resultados se mostrarán automáticamente; cambia de pestañas para ver los resultados de detección anteriores.
+当它看到有人持枪时，模型会识别并选中它。
+切换到调试模式，选择显示框，结果将自动显示；切换选项卡查看过去的检测结果。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/gun_detection_gif.gif" alt="pir" width={1000} height="auto"/></p>
 
-## Otras configuraciones
+## 其他配置
 
-| Configuración de otras fuentes de video | Configuración de velocidad de fotogramas|
+| 其他视频源配置 | 帧率配置|
 |--------------------------|--------------------|
-| Frigate soporta RTSP, transmisión de video y cámaras USB. Una vez que el archivo de configuración esté configurado, tomará efecto después del reinicio.                | El archivo de configuración puede configurar la velocidad de fotogramas de detección de cada cámara, lo cual tomará efecto después del reinicio.|
-| Puedes acceder a las opciones de configuración en Configuración, como cambiar la ruta RTSP para conectar a una cámara RTSP. Una vez que hayas hecho cambios, haz clic en Guardar y Reiniciar en la esquina superior derecha para que los cambios tomen efecto.| ![page](https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/other.png)|
+| Frigate 支持 RTSP、视频流和 USB 摄像头。配置文件配置完成后，重启后生效。                | 配置文件可以配置每个摄像头的检测帧率，重启后生效。|
+| 您可以在设置中访问配置选项，例如更改 RTSP 路径以连接到 RTSP 摄像头。完成更改后，点击右上角的保存并重启以使更改生效。| ![page](https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/other.png)|
 
-## Soporte Técnico y Discusión de Productos
+## 技术支持与产品讨论
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -10,7 +10,7 @@ last_update:
   author: shuxu hu
 ---
 
-# **Seeed Studio XIAO SAMD21 with MicroPython**
+# **Seeed Studio XIAO SAMD21 と MicroPython**
 
 ## **MicroPython の紹介**
 

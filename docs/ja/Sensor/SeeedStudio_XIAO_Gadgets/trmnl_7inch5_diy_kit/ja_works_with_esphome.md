@@ -287,9 +287,9 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある�
 </TabItem>
 </Tabs>
 
-## Basic usages
+## 基本的な使用方法
 
-### 1. Display shape
+### 1. 表示形状
 
 この例では、ディスプレイに図形を表示します。
 

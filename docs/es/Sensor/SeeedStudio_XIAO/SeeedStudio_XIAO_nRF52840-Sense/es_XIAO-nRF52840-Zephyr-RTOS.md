@@ -20,7 +20,6 @@ Uno de los componentes más importantes de los sistemas embebidos actuales es el
 
 **RTOS** está diseñado para proporcionar un modo de ejecución predecible. Cuando el procesamiento debe cumplir con el límite de tiempo del sistema, se utiliza RTOS. Por lo tanto, comparado con GPOS (Sistema Operativo de Propósito General), RTOS es usualmente ligero y pequeño en tamaño, y generalmente solo proporciona funciones requeridas para ejecutar tipos específicos de aplicaciones en hardware específico. En algunos casos, los desarrolladores pueden modificar el RTOS existente, reducirlo para proporcionar solo la funcionalidad requerida por una aplicación específica, y/o personalizar su funcionalidad o características de rendimiento.
 
-
 ## Qué es [Zephyr](https://www.zephyrproject.org/)
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO/Zephyr_logo.png"/></div>
@@ -28,6 +27,7 @@ Uno de los componentes más importantes de los sistemas embebidos actuales es el
 El SO [**Zephyr**](https://www.zephyrproject.org/) está basado en un kernel de huella pequeña diseñado para uso en sistemas embebidos y con recursos limitados: desde simples sensores ambientales embebidos y wearables LED hasta controladores embebidos sofisticados, relojes inteligentes y aplicaciones inalámbricas IoT.
 
 ## Características
+
 Zephyr ofrece un gran y siempre creciente número de características incluyendo:
 
 ### Suite extensa de servicios de Kernel
@@ -54,6 +54,7 @@ Zephyr ofrece una serie de servicios familiares para desarrollo:
     - Cola de preparados multi-cola tradicional
 
 ### Soporte Bluetooth Low Energy 5.0
+
 Cumple con Bluetooth 5.0 (ESR10) y soporte de Controlador Bluetooth Low Energy (LE Link Layer). Incluye malla Bluetooth y un controlador Bluetooth listo para calificación Bluetooth.
 
 - Perfil de Acceso Genérico (GAP) con todos los roles LE posibles
@@ -79,6 +80,7 @@ Una vez que la cadena de herramientas de Zephyr ha sido configurada y un SDK aso
 Para el Xiao nrf52840, el [archivo de descripción de la placa](https://docs.zephyrproject.org/latest/boards/seeed/xiao_ble/doc/index.html) puede ser referenciado para información adicional de configuración.
 
 Para programar el Xiao nrf52840 se pueden seguir los siguientes pasos:
+
 1. Construir un ejemplo o tu aplicación
 2. Conectar el Xiao nrf52840
 3. Hacer doble clic en el botón `RST` configurando el dispositivo en modo bootloader uf2
@@ -97,6 +99,7 @@ west build -p always -b xiao_ble/nrf52840/sense samples/hello_world
 ```
 
 Después de que esto se complete, entra en el modo bootloader uf2 y escribe:
+
 ```
 west flash -r uf2
 ```
@@ -106,11 +109,13 @@ Encuentra el puerto para tu dispositivo, en el caso de Ubuntu esto se puede hace
 En mi ejemplo veo `/dev/ttyACM0`:
 
 Usando screen puedes entonces conectarte y monitorear la respuesta serial:
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
 Deberías ver una respuesta similar a la siguiente:
+
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
 Hello World! xiao_ble/nrf52840
@@ -191,12 +196,14 @@ Verás que el LED rojo integrado se enciende y apaga creando un efecto de parpad
 Profundicemos un poco en este ejemplo para ver por qué funciona.
 
 El código de ejemplo asociado hace referencia a led0:
+
 ```
 #define LED0_NODE DT_ALIAS(led0)
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 ```
 
 Esto se define en el código del árbol de dispositivos del Xiao nRF52840 a través de un alias:
+
 ```
 	aliases {
 		led0 = &led0;
@@ -259,13 +266,14 @@ Presiona dos veces el botón RESET y luego flashea:
 west flash -r uf2
 ```
 
-Next you'll need to connect to see the output:
+Necesitarás conectarte para ver la salida:
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
 Esto debería mostrar algo similar a esto:
+
 ```
 3LSM6DSL sensor samples:
 
@@ -349,13 +357,14 @@ Presiona dos veces el botón RESET y luego flashea:
 west flash -r uf2
 ```
 
-Next you'll need to connect to see the output:
+Necesitarás conectarte para ver la salida:
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
 Esto debería mostrar algo similar a estas líneas:
+
 ```
 [00:00:00.297,088] <inf> dmic_sample: PCM output rate: 16000, channels: 1
 [00:00:00.297,119] <inf> dmic_nrfx_pdm: PDM clock frequency: 1280000, actual PCM rate: 16000
@@ -410,6 +419,7 @@ La lógica de ejemplo encuentra el objeto devicetree `dmic_dev` asociado para la
 ```
 
 En el overlay del proyecto de muestra, este regulador se habilita entonces:
+
 ```
 / {
 	msm261d3526hicpm-c-en {
@@ -441,17 +451,19 @@ west build -p always -b xiao_ble samples/bluetooth/observer
 ```
 
 Flashea tu placa:
+
 ```
 west flash -r uf2
 ```
 
 Espera un momento para que el MCU se reinicie después del flasheo y conéctate al monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
-
 Verás una consola disponible para enviar comandos a la placa:
+
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
 Starting Observer Demo
@@ -475,28 +487,32 @@ El [archivo conf](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples
 #### TFLite - Hello World
 
 Habilitar TFLite con Zephyr y actualizar:
+
 ```
 west config manifest.project-filter -- +tflite-micro
 west update
 ```
 
 Compila la muestra y grábala en tu placa:
+
 ```
 west build -p always -b xiao_ble samples/modules/tflite-micro/hello_world
 ```
 
 Flashea tu placa:
+
 ```
 west flash -r uf2
 ```
 
 Espera un momento para que el MCU se reinicie después del flasheo y conéctate al monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
-
 Verás los resultados devueltos desde la consola:
+
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
 x_value: 1.0*2^-127, y_value: 1.0*2^-127
@@ -548,6 +564,7 @@ west flash -r uf2
 Verás una pantalla que muestra múltiples cajas negras y una caja parpadeante en la esquina dado que esta pantalla solo soporta dos colores.
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
+
 ```
 / {
     chosen {
@@ -577,7 +594,6 @@ Profundicemos un poco en este ejemplo para ver por qué funciona:
 
 El shield configura una pantalla OLED SSD1306 en el registro 0x3C. Se selecciona como la pantalla de zephyr en la sección chosen.
 
-
 #### Grove - Placa de Expansión - Botón
 
 Para probar esta configuración podemos usar una muestra existente con Zephyr:
@@ -587,15 +603,16 @@ west build -p always -b xiao_ble samples/basic/button -- -DSHIELD=seeed_xiao_exp
 ```
 
 Flashea tu placa:
+
 ```
 west flash -r uf2
 ```
 
 Espera un momento para que el MCU se reinicie después del flasheo y conéctate al monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
-
 
 Presionar el botón con la muestra activará el LED integrado para que se encienda.
 
@@ -613,6 +630,7 @@ Button pressed at 1001258
 ```
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
+
 ```
 / {
     aliases {
@@ -646,6 +664,7 @@ west build -p always -b xiao_ble samples/basic/blinky_pwm -- -DDTC_OVERLAY_FILE=
 Después de flashear deberías comenzar a escuchar una serie de zumbidos que cambian de sonido mientras la muestra ejecuta su curso.
 
 Veamos por qué esto funciona:
+
 ```
 &pwm0 {
 	status = "disabled";
@@ -672,7 +691,8 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_ble samples/subsys/fs/fs_sample -- -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_expansion_board
 ```
 
-Now flash and monitor (first pressing RESET twice to enter uf2 bootloader mode):
+Ahora flashea y monitorea (primero presionando RESET dos veces para entrar al modo bootloader uf2):
+
 ```
 west flash -r uf2
 ```
@@ -698,6 +718,7 @@ Veamos los elementos relevantes en juego aquí:
 CONFIG_SPI=y
 CONFIG_DISK_DRIVER_SDMMC=y
 CONFIG_GPIO=y
+
 ```
 
 En la configuración asociada estamos habilitando SPI, el controlador de disco SDMMC, y el GPIO. Sin esta configuración, la superposición llevará a un error ya que la muestra no puede encontrar la tarjeta SD.
@@ -736,12 +757,16 @@ west build -p always -b xiao_ble samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE=$(d
 
 Flashea tu placa después de que esté en modo bootloader uf2:
 ```
+
 west flash -r uf2
+
 ```
 
 Espera un momento para que el MCU se reinicie después del flasheo y conéctate al monitor:
 ```
+
 screen /dev/ttyACM0 115200
+
 ```
 
 Verás los resultados devueltos desde la consola:
@@ -757,6 +782,7 @@ SHT3XD: 25.84 Cel ; 55.69 %RH
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
 ```
+
  &xiao_i2c {
 	sht3xd@44 {
 			compatible = "sensirion,sht3xd";
@@ -891,18 +917,20 @@ Usaremos aquí el ejemplo de sistema de archivos junto con el shield de la Placa
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_ble samples/subsys/fs/fs_sample -- -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_round_display
 ```
+Ahora flashea y monitorea (primero presionando RESET dos veces para entrar al modo bootloader uf2):
 
-Now flash and monitor (first pressing RESET twice to enter uf2 bootloader mode):
 ```
 west flash -r uf2
 ```
 
 Espera un momento para que el MCU se reinicie después del flasheo y conéctate al monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
 Deberías ver una respuesta similar a esta:
+
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
 [00:00:00.491,485] <inf> sd: Maximum SD clock is under 25MHz, using clock of 24000000Hz
@@ -939,7 +967,6 @@ La parte relevante del shield de pantalla redonda se muestra a continuación:
 ```
 
 D2 se utiliza para el pin SD CS.
-
 
 ## ✨ Proyecto de Colaborador
 

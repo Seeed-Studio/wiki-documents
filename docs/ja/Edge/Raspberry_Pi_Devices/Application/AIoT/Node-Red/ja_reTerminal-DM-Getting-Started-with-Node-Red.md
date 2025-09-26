@@ -11,7 +11,7 @@ last_update:
   date: 04/04/2023
   author: Peter Pan
 ---
-# reTerminal DM Getting Started with Node Red
+# reTerminal DM Node Redを始める
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3--114070201-reterminal-dm---font.jpg" alt="pir" width="600" height="auto"/></p>
 

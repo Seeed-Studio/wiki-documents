@@ -351,7 +351,7 @@ Find USB ports associated to your arms
 To find the correct ports for each arm, run the utility script twice:
 
 ```bash
-python -m lerobot.find_port
+lerobot-find-port
 ```
 
 Example output:
@@ -407,7 +407,7 @@ Again, please make sure that the servo joint IDs and gear ratios strictly corres
 Connect the usb cable from your computer and the power supply to the follower arm’s controller board. Then, run the following command.
 
 ```bash
-python -m lerobot.setup_motors \
+lerobot-setup-motors \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0  # <- paste here the port found at previous step
 ```
@@ -445,9 +445,9 @@ When you are done, the script will simply finish, at which point the motors are 
 Do the same steps for the leader arm.
 
 ```bash
-python -m lerobot.setup_motors \
+lerobot-setup-motors \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0  # <- paste here the port found at previous step
+    --teleop.port=/dev/ttyACM1  # <- paste here the port found at previous step
 ```
 
 <div class="video-container">
@@ -532,7 +532,7 @@ sudo chmod 666 /dev/ttyACM*
 ***Then calibrate the follower arm***
 
 ```python
-python -m lerobot.calibrate \
+lerobot-calibrate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm
@@ -545,9 +545,9 @@ The video below shows how to perform the calibration. First you need to move the
 Do the same steps to calibrate the leader arm, run the following command or API example:
 
 ```python
-python -m lerobot.calibrate \
+lerobot-calibrate \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm
 ```
 
@@ -567,12 +567,12 @@ sudo chmod 666 /dev/ttyACM*
 ```
 
 ```bash
-python -m lerobot.teleoperate \
+lerobot-teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm
 ```
 
@@ -596,7 +596,7 @@ To instantiate a camera, you need a camera identifier. This identifier might cha
 To find the camera indices of the cameras plugged into your system, run the following script:
 
 ```python
-python -m lerobot.find_cameras opencv # or realsense for Intel Realsense cameras
+lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
 ```
 
 The terminal will print out the following information.
@@ -626,13 +626,13 @@ When using Intel RealSense cameras in , you could get this error: , this can be 
 Then you will be able to display the cameras on your computer while you are teleoperating by running the following code. This is useful to prepare your setup before recording your first dataset.
 
 ```bash
-python -m lerobot.teleoperate \
+lerobot-teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true
 ```
@@ -642,13 +642,13 @@ If you have more cameras, you can change `--robot.cameras` to add cameras. You s
 For example, you want to add a side camera:
 
 ```bash
-python -m lerobot.teleoperate \
+lerobot-teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true
 ```
@@ -678,13 +678,13 @@ pip3 install rerun-sdk==0.23
 - If you want to save the dataset locally, you can run it directly:
 
 ```bash
-python -m lerobot.record \
+lerobot-record \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true \
     --dataset.repo_id=seeedstudio123/test \
@@ -713,13 +713,13 @@ echo $HF_USER
 Record 5 episodes and upload your dataset to the hub:
 
 ```bash
-python -m lerobot.record \
+lerobot-record \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true \
     --dataset.repo_id=${HF_USER}/record-test \
@@ -784,14 +784,14 @@ echo ${HF_USER}/so101_test
 If you didn't upload with `--dataset.push_to_hub=false`, you can also visualize it locally with:
 
 ```bash
-python -m lerobot.scripts.visualize_dataset_html \
+lerobot-dataset-viz \
   --repo-id ${HF_USER}/so101_test \
 ```
 
 If you upload with `--dataset.push_to_hub=false`, you can also visualize it locally with:
 
 ```bash
-python -m lerobot.scripts.visualize_dataset_html \
+lerobot-dataset-viz \
   --repo-id seeed_123/so101_test \
 ```
 
@@ -811,9 +811,9 @@ The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO
 Now try to replay the first episode on your robot:
 
 ```bash
-python -m lerobot.replay \
+lerobot-replay \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
     --dataset.repo_id=${HF_USER}/record-test \
     --dataset.episode=0
@@ -828,7 +828,7 @@ The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO
 To train a policy to control your robot, use the python -m lerobot.scripts.train script. A few arguments are required. Here is an example command:
 
 ```bash
-python -m lerobot.scripts.train \
+lerobot-train \
   --dataset.repo_id=${HF_USER}/so101_test \
   --policy.type=act \
   --output_dir=outputs/train/act_so101_test \
@@ -841,7 +841,7 @@ python -m lerobot.scripts.train \
 **If you want to train on a local dataset, make sure the `repo_id` matches the one used during data collection and add `--policy.push_to_hub=False`.**
 
 ```bash
-python -m lerobot.scripts.train \
+lerobot-train \
   --dataset.repo_id=seeedstudio123/test \
   --policy.type=act \
   --output_dir=outputs/train/act_so101_test \
@@ -878,7 +878,7 @@ Training should take several hours. You will find checkpoints in `outputs/train/
 To resume training from a checkpoint, below is an example command to resume from last checkpoint of the `act_so101_test` policy:
 
 ```bash
-python -m lerobot.scripts.train \
+lerobot-train \
   --config_path=outputs/train/act_so101_test/checkpoints/last/pretrained_model/train_config.json \
   --resume=true
 ```
@@ -909,9 +909,9 @@ The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO
 You can use the `record` function from [`lerobot/record.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/record.py) but with a policy checkpoint as input. For instance, run this command to record 10 evaluation episodes:
 
 ```bash
-python -m lerobot.record  \
+lerobot-record \
   --robot.type=so100_follower \
-  --robot.port=/dev/ttyACM1 \
+  --robot.port=/dev/ttyACM0 \
   --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video10, width: 640, height: 480, fps: 30}, side: {type: intelrealsense, serial_number_or_name: 233522074606, width: 640, height: 480, fps: 30}}" \
   --robot.id=my_awesome_follower_arm \
   --display_data=false \
@@ -923,9 +923,9 @@ python -m lerobot.record  \
 such as:
 
 ```bash
-python -m lerobot.record  \
+lerobot-record \
   --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM1 \
+  --robot.port=/dev/ttyACM0 \
   --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
   --robot.id=my_awesome_follower_arm \
   --display_data=false \

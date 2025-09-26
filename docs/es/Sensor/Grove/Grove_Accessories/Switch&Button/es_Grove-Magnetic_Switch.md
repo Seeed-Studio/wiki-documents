@@ -382,7 +382,7 @@ while True:
         print "Error"
 ```
 
-- **Step 4.** Run the demo.
+- **Paso 4.** Ejecuta la demostración.
 
 ```
 sudo python grovepi_tilt_switch.py

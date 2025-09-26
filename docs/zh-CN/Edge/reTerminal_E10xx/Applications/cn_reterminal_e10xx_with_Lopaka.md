@@ -1,11 +1,11 @@
 ---
 description: 本文主要介绍如何使用 Lopaka 网站创建精美的用户界面并将其应用于 reTerminal E 系列。
 title: reTerminal E 系列 ePaper 显示屏与 Lopaka 配合使用
-image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.webp
 slug: /cn/reterminal_e10xx_with_lopaka
 sidebar_position: 2
 last_update:
-  date: 12/9/2025
+  date: 9/12/2025
   author: Martin
 ---
 
@@ -159,7 +159,7 @@ Lopaka 是专为嵌入式图形开发设计的图形编辑器。它使用户能�
     </a>
 </div><br />
 
-**步骤 2.** 通过在 Arduino IDE 中添加 ZIP 文件来安装库。转到 **草图 > 包含库 > 添加 .ZIP 库** 并选择下载的 ZIP 文件。
+**步骤 2.** 通过在 Arduino IDE 中添加 ZIP 文件来安装库。转到 **项目 > 加载库 > 添加 .ZIP 库** 并选择下载的 ZIP 文件。
 
 :::note
 如果您之前安装了 TFT_eSPI 库，您可能需要暂时从 Arduino 库文件夹中删除或重命名它以避免冲突，因为 Seeed_GFX 是 TFT_eSPI 的分支，为 Seeed Studio 显示屏添加了额外功能。
@@ -171,7 +171,7 @@ Lopaka 是专为嵌入式图形开发设计的图形编辑器。它使用户能�
 
 **步骤 1.** 从 Seeed_GFX 库打开彩色示例草图：**文件 > 示例 > Seeed_GFX > ePaper > Colorful > HelloWorld**
 
-**步骤 2.** 在与草图相同的文件夹中创建一个名为 `driver.h` 的新文件，按照之前相同的过程。
+**步骤 2.** 在与您的草图相同的文件夹中创建一个名为 `driver.h` 的新文件，按照之前相同的过程。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/select2.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -288,8 +288,8 @@ void loop()
 
 :::tip
 
-- 如果您希望使用 reTerminal E1001，可以参考链接：[Programming reTerminal E1001](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
-- 如果您想使用其 GxEPD2 库，可以参考链接：[Using the GxEPD2 Library](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
+- 如果您希望使用 reTerminal E1001，可以参考链接：[编程 reTerminal E1001](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
+- 如果您想使用其 GxEPD2 库，可以参考链接：[使用 GxEPD2 库](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
 
 :::
 
@@ -940,11 +940,11 @@ void loop()
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

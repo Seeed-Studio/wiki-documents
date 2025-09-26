@@ -9,7 +9,7 @@ last_update:
   author: Allen
 ---
 
-# TRMNL 7.5" (OG) DIY Kit
+# TRMNL 7.5" (OG) DIY キット
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/head.jpg" style={{width:1000, height:'auto'}}/></div>
 
