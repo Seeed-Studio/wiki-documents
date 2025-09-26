@@ -5,7 +5,7 @@ keywords:
 - nRF54L15
 - xiao
 - MicroPython
-image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg	
+image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.webp	
 slug: /xiao_nrf54l15_sense_micropython
 last_update:
   date: 9/23/2025
