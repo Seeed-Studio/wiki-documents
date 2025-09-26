@@ -14,7 +14,7 @@ sidebar_position: 3
 
 # Seeed Studio XIAO MG24 Sense 内蔵センサーの使用方法
 
-## XIAO MG24 Sense IMU
+## XIAO MG24 センス IMU
 
 ### 内蔵センサーの概要
 

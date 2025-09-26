@@ -85,7 +85,7 @@ bluetoothctl
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/bluetoothctl.png"/>
 </div>
 
-## M.2 Key M for SSD
+## M.2 SSDのキーM
 
 M.2 Key Mは高速ソリッドステートドライブ（SSD）用に設計されたインターフェースで、超高速データ転送速度を提供し、高性能アプリケーションに最適です。
 

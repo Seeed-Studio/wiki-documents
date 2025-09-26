@@ -145,7 +145,7 @@ sudo usermod -aG docker $USER
 sudo reboot
 ```
 
-### Pull Frigate Image
+### Frigate イメージをプル
 
 ```bash
 docker pull ghcr.io/blakeblackshear/frigate:0.15.0-rc2-h8l

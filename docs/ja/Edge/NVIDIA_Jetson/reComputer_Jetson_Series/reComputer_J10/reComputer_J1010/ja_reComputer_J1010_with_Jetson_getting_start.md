@@ -131,7 +131,7 @@ Jetsonモジュールに加えて、reComputer J1010には[J101キャリアボ�
   </tbody>
 </table>
 
-## Flash JetPack to reComputer J1010
+## Flash JetPack を reComputer J1010 に
 
 :::info
 J1010はJ101キャリアボードを使用しているため、詳細については[wiki](/ja/reComputer_J1010_J101_Flash_Jetpack)ページを参照してください。

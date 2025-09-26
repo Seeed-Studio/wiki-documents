@@ -45,12 +45,12 @@ RePhoneのコアは、Xadow GSM+BLEまたはRePhone Core 3Gモジュール（近
 |[詳細を見る](https://www.seeedstudio.com/Xadow-Audio-p-2554.html)|[詳細を見る](https://www.seeedstudio.com/Xadow-GSM-Breakout-p-2559.html)|[詳細を見る](https://www.seeedstudio.com/Xadow-Duino-p-2556.html)|
 
 
-### RePhone Kit Create
+### RePhone キット作成
 
 [![](https://files.seeedstudio.com/wiki/Rephone/image/375px-IMG_2999.JPG)](https://www.seeedstudio.com/item_detail.html?p_id=2552)
 
 
-### RePhone Strap Kit for Pebble
+### RePhone Pebble用ストラップキット
 
 [![](https://files.seeedstudio.com/wiki/Rephone/image/450px-RePhone_strap_kit_for_pebble-20.png)](https://www.seeedstudio.com/RePhone-Strap-Kit-for-Pebble-Time-p-2633.html)
 
@@ -60,12 +60,12 @@ RePhoneのコアは、Xadow GSM+BLEまたはRePhone Core 3Gモジュール（近
 [![](https://files.seeedstudio.com/wiki/Rephone/image/450px-RePhone_Geo_Kit_wiki_2.jpg)](https://www.seeedstudio.com/RePhone-Geo-Kit-p-2624.html)
 
 
-### RePhone Lumi Kit
+### RePhone Lumi キット
 
 [![](https://files.seeedstudio.com/wiki/Rephone/image/450px-RePhone_Lumi_Kit_wiki_2.jpg)](https://www.seeedstudio.com/RePhone-Lumi-Kit-p-2623.html)
 
 
-### RePhone Extension Pack
+### RePhone 拡張パック
 
 [![](https://files.seeedstudio.com/wiki/Rephone/image/450px-RePhone_Extesion_Pack_wiki_2.jpg)](https://www.seeedstudio.com/RePhone-Extension-Pack-p-2630.html)
 

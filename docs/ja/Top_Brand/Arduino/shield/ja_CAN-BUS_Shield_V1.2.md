@@ -379,7 +379,7 @@ case (CAN_xxxKBPS):
 
 CAN-BUSシールドを使用して素晴らしいプロジェクトを作りたい場合、以下のプロジェクトを参考にしてください。
 
-### Volkswagen CAN BUS Gaming
+### Volkswagen CAN BUS ゲーミング
 
 ![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/project1.JPG)
 

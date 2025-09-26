@@ -8,7 +8,7 @@ last_update:
   author: MicroBlocks
 ---
 
-# XIAO SAMD21 with MicroBlocks
+# XIAO SAMD21 と MicroBlocks
 
 ## MicroBlocks
 

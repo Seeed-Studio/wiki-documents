@@ -11,7 +11,7 @@ last_update:
 ---
 
 
-# Seeed Studio XIAO SAMD21 Get Started By Nanase
+# Seeed Studio XIAO SAMD21 Nanaseによる入門ガイド
 
 これは [@nanase_coder](https://twitter.com/nanase_coder) によって書かれた文書です。（元の日本語文書からSeeedが翻訳：[コインサイズ Arduino互換機 Seeed Studio XIAO SAMD21 を使ってみた](https://qiita.com/nanase/items/0fed598975c49b1d707e#spi-microsd%E3%82%AB%E3%83%BC%E3%83%89)）。Nanaseさん、この情報を共有していただき、ありがとうございます！
 
@@ -346,7 +346,7 @@ void loop() {
 
 SAMD型Arduinoの機能の一つとして、XiaoでDMAを使用できます。DMAの詳細については[こちら](https://qiita.com/nanase/items/406a8a848d1b259d3af4#dma)を確認してください。
 
-### Single Cycle IOBUS
+### 単一サイクル IOBUS
 
 Cortex M0+には[Single Cycle IOBUS](https://microchipdeveloper.com/32arm:samd21-iobus-overview)という機能があり、GPIO出力を1クロックサイクルで操作できます。特定のレジスタに書き込むことで、論理を反転させたり、ピンを無効にしたり、ピンの駆動電流を変更したりできます。
 
@@ -384,7 +384,7 @@ void setup() {
 void loop() { W W W W W W W W W W W W W W W W }
 ```
 
-### Use Single Cycle IOBUS
+### 単一サイクルを使用 IOBUS
 
 We use `IOBUS.h` introduced [here](https://lab.sasapea.mydns.jp/2020/03/16/seeeduino-xiao/).
 

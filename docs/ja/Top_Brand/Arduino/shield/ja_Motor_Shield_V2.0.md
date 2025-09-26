@@ -433,7 +433,7 @@ void loop()
 
 ### DC モーター API
 
-#### begin
+#### 開始
 
 **説明**
 
@@ -441,7 +441,7 @@ void loop()
 void begin();
 ```
 
-#### speed
+#### 速度
 
 **説明**
 

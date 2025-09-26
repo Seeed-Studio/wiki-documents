@@ -47,7 +47,7 @@ SES は、組み込みアプリケーションの管理、構築、テスト、�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/5.68version.png" alt="pir" width={800} height="auto" /></p>
 
-#### SEGGER J-Link Software and Documentation Pack
+#### SEGGER J-Link ソフトウェアおよびドキュメントパック
 
 <a  href="https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack" target="_blank"><span>SEGGER J-Link Software and Documentation Pack-ダウンロード</span></a>
 
@@ -133,7 +133,7 @@ Wio-WM1110 DKでは、ユーザーがDevEUI、AppEUI、AppKeyを設定できま�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/register_device3.png" alt="pir" width={800} height="auto" /></p>
 
-### LoRa Cloud™ Modem & Geolocation Services
+### LoRa Cloud™ モデム & 位置情報サービス
 
 LoRa Cloud Modem & Geolocation Servicesは、LoRaWANネットワーク上で動作するLoRa®デバイス向けの包括的なライフサイクル管理機能を提供します。これらの機能には以下が含まれますが、これらに限定されません：
 
@@ -173,7 +173,7 @@ LoRa Cloud Modem & Geolocation Services URLは、デバイスが展開される�
 デバイスからデータを受信すると、LoRa Cloud Modem & Geolocation Servicesサーバーに自動的に登録されます。これは、デバイスを事前に登録する必要がないことを意味します。
 :::
 
-### LoRaWAN® Network Server(TTN)
+### LoRaWAN® ネットワークサーバー(TTN)
 
 現在、[The Things Network V3](https://lora-developers.semtech.com/build/software/lora-basics/lora-basics-for-end-nodes/developer-walk-through/?url=lns.html#the-things-network-v3)を使用しています
 

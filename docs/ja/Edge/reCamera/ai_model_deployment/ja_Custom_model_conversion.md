@@ -187,7 +187,7 @@ model_yolo11n
 
 **後続のステップは、あなたの `Workspace` で実行されます。**
 
-### ONNX to MLIR
+### ONNX から MLIR へ
 
 ONNXから`MLIR`への変換は、モデル変換プロセスの中間ステップです。reCamera上での推論に適したモデルを取得する前に、まずONNXモデルを`MLIR`形式に変換する必要があります。この`MLIR`ファイルは、reCameraの推論エンジン用に最適化された最終モデルを生成するためのブリッジとして機能します。
 
@@ -327,7 +327,7 @@ YOLOの `head` 内の演算子は **INT8** 量子化後の精度が非常に低�
   </tbody>
 </table>
 
-### MLIR to F16 cvimodel
+### MLIR から F16 cvimodel
 
 `mlir`からF16精度の`cvimodel`に変換したい場合は、ターミナルで以下の参考コマンドを入力できます：
 

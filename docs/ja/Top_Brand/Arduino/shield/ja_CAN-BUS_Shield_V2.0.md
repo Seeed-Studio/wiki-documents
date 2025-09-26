@@ -448,7 +448,7 @@ case (CAN_xxxKBPS):
 
 CAN-BUSシールドを使用して素晴らしいプロジェクトを作りたい場合、以下のプロジェクトを参考にしてください。
 
-### Volkswagen CAN BUS Gaming
+### Volkswagen CAN BUS ゲーミング
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/project1.JPG" alt="pir" width={600} height="auto" /></p>
 PCでリアルなダッシュボードを使って車やトラックのシミュレーターをプレイしたいと思ったことはありませんか？私もです！Arduino UnoとSeeed CAN Bus Shieldを使用して、VW Polo 6RのダッシュボードをCAN Bus経由で制御しようとしています。Silas Parkerにインスパイアされました。SeppとIs0-Mickの素晴らしいサポートに感謝します！

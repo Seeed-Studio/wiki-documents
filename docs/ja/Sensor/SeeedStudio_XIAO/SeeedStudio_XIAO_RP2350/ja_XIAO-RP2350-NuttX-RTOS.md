@@ -11,7 +11,7 @@ last_update:
     author: rcsim
 ---
 
-# Seeed Studio XIAO RP2350 with NuttX(RTOS)
+# Seeed Studio XIAO RP2350 と NuttX(RTOS)
 
 :::note
 

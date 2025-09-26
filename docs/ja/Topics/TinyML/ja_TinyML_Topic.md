@@ -11,7 +11,7 @@ last_update:
 ---
 
 
-# Tiny Machine Learning (TinyML)
+# 小型機械学習 (TinyML)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/main.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -176,7 +176,7 @@ Tiny Machine Learning (TinyML) は、Arduino のような低消費電力、低�
 
 <br />
 
-### Grove Vision AI
+### Grove ビジョン AI
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -200,7 +200,7 @@ Tiny Machine Learning (TinyML) は、Arduino のような低消費電力、低�
 
 <br />
 
-### Grove Vision AI V2
+### Grove ビジョン AI V2
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -279,7 +279,7 @@ Tiny Machine Learning (TinyML) は、Arduino のような低消費電力、低�
 
 これらのプラットフォームをサポートすることで、開発者はマイクロコントローラーからシングルボードコンピュータまで、エッジデバイス上で機械学習モデルを簡単に構築およびデプロイできます。
 
-### SenseCraft Model Assistant
+### SenseCraft モデルアシスタント
 
 SenseCraft Model Assistantは、Seeed Studioによって開発された組み込みAIに焦点を当てたオープンソースプロジェクトです。現実世界のシナリオに最適化されたアルゴリズムを提供し、実装をよりユーザーフレンドリーにし、組み込みデバイスでの推論をより迅速かつ正確にします。
 
@@ -399,7 +399,7 @@ TinyMLが達成できる興味深いことを見てみましょう！
 
 ---
 
-### TinyML on Wio Terminal
+### Wio Terminal上のTinyML
 
 Wio Terminalは、メーカー、趣味愛好家、IoT愛好家向けに設計された強力で使いやすい開発ボードです。2.4インチLCDスクリーン、Wi-FiおよびBluetooth接続、センサー群、多様な入出力インターフェースを備えています。
 

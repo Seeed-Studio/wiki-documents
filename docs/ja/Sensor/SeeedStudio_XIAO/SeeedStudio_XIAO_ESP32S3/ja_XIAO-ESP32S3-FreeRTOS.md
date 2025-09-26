@@ -13,7 +13,7 @@ last_update:
   author: Priyanshu Roy
 ---
 
-# XIAO ESP32S3(Sense) With FreeRTOS
+# XIAO ESP32S3（センス）とFreeRTOS
 
 このwikiは[Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/)の[FreeRTOS](https://freertos.org/)サポートについて説明します。このガイドの支援により、ボードで利用可能な機能セットを活用できるようになります。
 

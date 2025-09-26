@@ -10,7 +10,7 @@ last_update:
     author: rcsim
 ---
 
-# Seeed Studio XIAO ESP32C6 with NuttX(RTOS)
+# Seeed Studio XIAO ESP32C6 と NuttX(RTOS)
 
 ## はじめに
 

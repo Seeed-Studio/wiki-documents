@@ -73,7 +73,7 @@ sudo reboot
 
 ```
 
-### Install dkms
+### dkmsをインストール
 
 ```
 sudo apt-get install dkms
@@ -94,7 +94,7 @@ python -m venv hailo_env
 source hailo_env/bin/activate
 ```
 
-### Install hailort-4.19.0-cp311-cp311-linux_aarch64.whl
+### hailort-4.19.0-cp311-cp311-linux_aarch64.whlをインストール
 
 ```
 pip install hailort-4.19.0-cp311-cp311-linux_aarch64.whl 
@@ -212,7 +212,7 @@ class Platform(Enum):
         return self.value
 ```
 
-#### Install tappas
+#### tappasをインストール
 
 ```
 ./install.sh --skip-hailort --target-platform rpi5

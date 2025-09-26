@@ -11,7 +11,7 @@ last_update:
   date: 04/27/2023
   author: Peter Pan
 ---
-# reTerminal DM MQTT with Node-RED
+# reTerminal DM MQTT と Node-RED
 
 ## MQTTについての簡単な情報
 

@@ -77,7 +77,7 @@ typedef struct tf_module_mgmt {
 
 `tf_module_instance` は、エンジンがタスクフローで指定されたすべてのFMを初期化する際にTFEによって呼び出される関数です。基本的に、これはエンジンがタスクフロー作成リクエストを受信し、フローを開始したことを意味します。`tf_module_destroy` は、TFEがフローを停止する際に呼び出される関数です。
 
-### 3.1 Instance
+### 3.1 インスタンス
 
 ```cpp
 tf_module_t *tf_module_uart_alarm_instance(void)
@@ -434,7 +434,7 @@ static int __msgs_pub_set(void *p_module, int output_index, int *p_evt_id, int n
 - データ作成者FMが各購読者に対してメモリ割り当てを行う
 - データ消費者FMがデータ使用後にメモリ解放を行う。
 
-### 4.5 start and stop
+### 4.5 開始と停止
 
 これらはFMのランタイム制御で、将来のフロー一時停止/再開をサポートします。現在、FMはインスタンス化後に実行できますが、FMのライフサイクル管理とFMのランタイム制御にロジックを分離することを推奨します。
 
