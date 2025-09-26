@@ -1178,6 +1178,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Pin_Multiplexing',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Built-in-Sensor',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Power_Consumptions',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_MicroPython',
             {
               type: 'category',
               label: 'Wireless Connection',
@@ -3384,7 +3385,8 @@ const sidebars = {
               label: 'Tools',
               items: [
                 'Edge/Raspberry_Pi_Devices/Application/Development_Tools/recomputer_use_uv_to_build_package',
-                'Edge/Raspberry_Pi_Devices/Application/Development_Tools/recomputer_use_docker'
+                'Edge/Raspberry_Pi_Devices/Application/Development_Tools/recomputer_use_docker',
+                'Edge/Raspberry_Pi_Devices/Application/Development_Tools/recomputer_use_sqlite',
               ]
             }
           ]
