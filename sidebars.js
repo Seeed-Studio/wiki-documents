@@ -3274,6 +3274,13 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Chirpstack/recomputer_r1x_chirpstack',
                   ]
                 },
+                 {
+                  type: 'category',
+                  label: 'OpenRemote',
+                  items: [
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/openremote/recomputer_r1x_openremote',
+                  ]
+                },
                 {
                   type: 'category',
                   label: 'Others',
