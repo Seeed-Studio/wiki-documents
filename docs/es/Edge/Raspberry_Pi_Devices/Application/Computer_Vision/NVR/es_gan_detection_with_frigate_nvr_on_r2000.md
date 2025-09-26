@@ -442,7 +442,8 @@ Seleccionar uno de los videos para comenzar la depuración, seleccionar la caja 
 </div>
 
 <div style={{ textAlign: 'center' }}>
-  <img    src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/setting_2.png"
+  <img
+    src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/setting_2.png"
     style={{ width: 1000}}
   />
 </div>
