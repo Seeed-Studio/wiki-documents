@@ -349,7 +349,7 @@ SO101的舵机校准初始化与SO100方法和代码一致的，这里只是需�
 查找机械臂对应的 USB 端口
 为了找到每个机械臂正确的端口，请运行实用脚本两次：
 ```bash
-lerobot-find-port
+python -m lerobot.find_port
 ```
 
 示例输出:
@@ -405,7 +405,7 @@ sudo chmod 666 /dev/ttyACM1
 将 USB 线从电脑连接到从动臂的舵机驱动板，并接通电源。然后，运行以下命令。
 
 ```bash
-lerobot-setup-motors \
+python -m lerobot.setup_motors \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0
 ```
@@ -443,9 +443,9 @@ Connect the controller board to the 'wrist_roll' motor only and press enter.
 对领导臂重复相同的步骤。
 
 ```bash
-lerobot-setup-motors \
+python -m lerobot.setup_motors \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1
+    --teleop.port=/dev/ttyACM0
 ```    
 
 <div class="video-container">
@@ -546,7 +546,7 @@ sudo chmod 666 /dev/ttyACM*
 接下来，通过运行以下 Python 命令来校准从动臂：
 
 ```python
-lerobot-calibrate \
+python -m lerobot.calibrate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm
@@ -560,9 +560,9 @@ lerobot-calibrate \
 对主机械臂进行校准的步骤与上述相同，请运行以下命令或 API 示例：
 
 ```python
-lerobot-calibrate \
+python -m lerobot.calibrate \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
+    --teleop.port=/dev/ttyACM0 \
     --teleop.id=my_awesome_leader_arm
 ```
 
@@ -586,12 +586,12 @@ sudo chmod 666 /dev/ttyACM*
 运行遥操作：
 
 ```bash
-lerobot-teleoperate \
+python -m lerobot.teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.port=/dev/ttyACM1 \
     --robot.id=my_awesome_follower_arm \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
+    --teleop.port=/dev/ttyACM0 \
     --teleop.id=my_awesome_leader_arm
 ```
 
@@ -614,7 +614,7 @@ lerobot-teleoperate \
 要查找连接到您系统的摄像头的**摄像头索引**，请运行以下脚本：
 
 ```python
-lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
+python -m lerobot.find_cameras opencv # or realsense for Intel Realsense cameras
 ```
 
 终端会打印相关摄像头信息。
@@ -644,13 +644,13 @@ Camera #0:
 之后，您就可以在遥控操作时在电脑上显示摄像头画面了，只需运行以下代码即可。这对于在录制第一个数据集之前准备您的设置非常有用。
 
 ```bash
-lerobot-teleoperate \
+python -m lerobot.teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.port=/dev/ttyACM1 \
     --robot.id=my_awesome_follower_arm \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
+    --teleop.port=/dev/ttyACM0 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true
 ```
@@ -659,13 +659,13 @@ lerobot-teleoperate \
 
 例如，如果你想添加摄像头:  
 ```bash
-lerobot-teleoperate \
+python -m lerobot.teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.port=/dev/ttyACM1 \
     --robot.id=my_awesome_follower_arm \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
+    --teleop.port=/dev/ttyACM0 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true
 ```
@@ -683,13 +683,13 @@ lerobot-teleoperate \
 - 如果你想数据集保存在本地，可以直接运行：
 
 ```bash
-lerobot-record \
+python -m lerobot.record \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.port=/dev/ttyACM1 \
     --robot.id=my_awesome_follower_arm \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
+    --teleop.port=/dev/ttyACM0 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true \
     --dataset.repo_id=seeedstudio123/test \
@@ -718,13 +718,13 @@ echo $HF_USER
 记录 5 个回合并将您的数据集上传到 Hub：
 
 ```bash
-lerobot-record \
+python -m lerobot.record \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.port=/dev/ttyACM1 \
     --robot.id=my_awesome_follower_arm \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
+    --teleop.port=/dev/ttyACM0 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true \
     --dataset.repo_id=${HF_USER}/record-test \
@@ -785,14 +785,14 @@ echo ${HF_USER}/so101_test
 如果您没有使用 `--dataset.push_to_hub=false` ，并上传了数据，您也可以在本地通过以下命令进行可视化：
 
 ```bash
-lerobot-dataset-viz \
+python -m lerobot.scripts.visualize_dataset_html \
   --repo-id ${HF_USER}/so101_test \
 ```
 
 如果您使用了 `--dataset.push_to_hub=false` ，没有上传数据，您也可以通过以下命令在本地进行可视化：
 
 ```bash
-lerobot-dataset-viz \
+python -m lerobot.scripts.visualize_dataset_html \
   --repo-id seeedstudio123/test \
 ```
 
@@ -814,9 +814,9 @@ lerobot-dataset-viz \
 现在，尝试在您的机器人上重播第一个数据集：
 
 ```bash
-lerobot-replay \
+python -m lerobot.replay \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
+    --robot.port=/dev/ttyACM1 \
     --robot.id=my_awesome_follower_arm \
     --dataset.repo_id=${HF_USER}/record-test \
     --dataset.episode=0
@@ -834,7 +834,7 @@ lerobot-replay \
 要训练一个控制您机器人策略，使用 `python -m lerobot.scripts.train` 脚本。需要一些参数。以下是一个示例命令：
 
 ```bash
-lerobot-train \
+python -m lerobot.scripts.train \
   --dataset.repo_id=${HF_USER}/so101_test \
   --policy.type=act \
   --output_dir=outputs/train/act_so101_test \
@@ -847,7 +847,7 @@ lerobot-train \
 **如果您想在本地数据集上进行训练，请确保 `repo_id` 与数据收集时使用的名称匹配，并添加 `--policy.push_to_hub=false`。**
 
 ```bash
-lerobot-train \
+python -m lerobot.scripts.train \
   --dataset.repo_id=seeedstudio123/test \
   --policy.type=act \
   --output_dir=outputs/train/act_so101_test \
@@ -885,7 +885,7 @@ pip install datasets==2.19
 
 要从某个训练结果权重文件恢复训练，下面是一个从 `act_so101_test` 策略的最后一个训练结果权重文件恢复训练的示例命令：
 ```bash
-lerobot-train \
+python -m lerobot.scripts.train \
   --config_path=outputs/train/act_so101_test/checkpoints/last/pretrained_model/train_config.json \
   --resume=true
 ```
@@ -899,9 +899,9 @@ SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的
 
 
 ```bash
-lerobot-record \
+python -m lerobot.record  \
   --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM0 \
+  --robot.port=/dev/ttyACM1 \
   --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
   --robot.id=my_awesome_follower_arm \
   --display_data=false \
