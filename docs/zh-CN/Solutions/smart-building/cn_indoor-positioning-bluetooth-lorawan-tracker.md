@@ -131,7 +131,8 @@ last_update:
   <!-- Card 2: BLE Beacons -->
   <div class="seeed-feature-card">
     <div class="card-header">
-        <h2><a href="https://www.seeedstudio.com/BC01-Indoor-Bluetooth-Beacon-p-5791.html">BLE 信标</a></h2>        <p>常规蓝牙广播</p>
+        <h2><a href="https://www.seeedstudio.com/BC01-Indoor-Bluetooth-Beacon-p-5791.html">BLE 信标</a></h2>
+        <p>常规蓝牙广播</p>
     </div>
     <div class="card-body">
         <ul class="features-list">
@@ -261,7 +262,8 @@ last_update:
 MAC Address,Location,Beacon ID
 c30000564b31,"Main Entrance",01
 c30000564b32,"Warehouse Zone A",02
-c30000564b33,"Corner Office",03```
+c30000564b33,"Corner Office",03
+```
 
 下面的视频展示了您稍后如何使用此列表将信标添加到应用程序地图中。现在创建准确的记录将使软件设置变得更加容易。
 
@@ -437,7 +439,8 @@ docker run -p 5173:5173 -p 8022:8022 --name indoor-positioning --restart unless-
   <source src="https://files.seeedstudio.com/wiki/solution/smart-building/indoor-positioning-bluetooth-lorawan-tracker/indoor-position-tracker-configuration.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
-<p><em>使用 ChirpStack 时，选择 `Other Platform`。</em></p><p><em>使用 SenseCraft Data 时，保留默认平台设置（SenseCAP for The Things Network）。</em></p>
+<p><em>使用 ChirpStack 时，选择 `Other Platform`。</em></p>
+<p><em>使用 SenseCraft Data 时，保留默认平台设置（SenseCAP for The Things Network）。</em></p>
 </div>
 
 ## 应用功能概述
