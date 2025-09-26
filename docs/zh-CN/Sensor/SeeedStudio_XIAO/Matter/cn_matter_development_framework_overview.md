@@ -304,7 +304,7 @@ endpoint_t *endpoint = extended_color_light::create(node, &light_config, ENDPOIN
 ABORT_APP_ON_FAILURE(endpoint != nullptr, ESP_LOGE(TAG, "Failed to create extended color light endpoint"));
 ```
 
-How is auto-matching clustering achieved? Let's take an example of a snippet that sets an attribute.
+如何实现自动匹配聚类？让我们以设置属性的代码片段为例。
 
 ```cpp
 light_config.level_control.lighting.start_up_current_level = DEFAULT_BRIGHTNESS;
@@ -605,7 +605,7 @@ attribute::set_deferred_persistence(current_x_attribute);
 
 #### Attributes and Commands
 
-Non-Standard/Custom attributes can also be created on any cluster:
+还可以在任何集群上创建非标准/自定义属性:
 
 - Attribute create:
 

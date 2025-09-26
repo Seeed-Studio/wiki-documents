@@ -224,10 +224,10 @@ void loop() {
 
 如果您想将此模块与树莓派一起使用，您可能需要使用以下任一扩展板：
 
-- [4-Channel 16-Bit ADC for Raspberry Pi(ADS1115)](https://www.seeedstudio.com/4-Channel-16-Bit-ADC-for-Raspberry-Pi-ADS1115.html)
-- [8-Channel 12-Bit ADC for Raspberry Pi (STM32F030)](https://www.seeedstudio.com/8-Channel-12-Bit-ADC-for-Raspberry-Pi(STM32F030).html)
-- [Grove Base Hat for Raspberry Pi](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)
-- [Grove Base Hat for Raspberry Pi Zero](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-Zero-p-3187.html)
+- [4通道16位ADC，适用于树莓派(ADS1115)](https://www.seeedstudio.com/4-Channel-16-Bit-ADC-for-Raspberry-Pi-ADS1115.html)
+- [8通道12位ADC，适用于树莓派(STM32F030)](https://www.seeedstudio.com/8-Channel-12-Bit-ADC-for-Raspberry-Pi(STM32F030).html)
+- [Grove基础扩展板，适用于树莓派](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)
+- [Grove基础扩展板，适用于树莓派Zero](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-Zero-p-3187.html)
 
 您可以在这些扩展板的wiki中找到演示代码。
 
@@ -238,7 +238,7 @@ void loop() {
 
 ## 资源
 
-- **[Zip]** [Grove - Capacitive Moisture Sensor (Corrosion Resistant) Eagle Files](https://files.seeedstudio.com/wiki/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/res/Grove-Capacitive%20Moisture%20Sensor%20(Corrosion%20Resistant).zip)
+- **[Zip]** [Grove - 电容式土壤湿度传感器（防腐蚀）Eagle文件](https://files.seeedstudio.com/wiki/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/res/Grove-Capacitive%20Moisture%20Sensor%20(Corrosion%20Resistant).zip)
 
 - **[PDF]** [NE555DR Datasheet](https://files.seeedstudio.com/wiki/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/res/NE555DR.pdf)
 

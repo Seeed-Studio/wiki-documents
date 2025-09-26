@@ -41,9 +41,9 @@ El valor del sensor solo refleja la tendencia aproximada de la concentración de
 
 Te sugerimos leer estos conocimientos antes de usar el sensor de gas, te ayudará a aprender más sobre Arduino y nuestros productos, y también te permitirá usar hardware de código abierto más fácilmente.
 
--   Comenzando con Arduino
--   Qué es el sistema Grove
--   ¿Por qué necesito un Base shield?
+- Comenzando con Arduino
+- Qué es el sistema Grove
+- ¿Por qué necesito un Base shield?
 
 Después de leer eso sabrás cómo usar el Base shield con productos Grove para trabajar bien con Arduino. ¡Comencemos!
 
@@ -51,9 +51,9 @@ Después de leer eso sabrás cómo usar el Base shield con productos Grove para 
 
 Este tutorial incluirá algunos productos necesarios:
 
--   Arduino UNO R3 o Seeeduino v4
--   Base Shield
--   Grove - Sensor de Gas Multicanal
+- Arduino UNO R3 o Seeeduino v4
+- Base Shield
+- Grove - Sensor de Gas Multicanal
 
 Descripción general del hardware
 -----------------
@@ -63,7 +63,6 @@ Descripción general del hardware
 </center> -->
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Multi_sensor1.png" alt="pir" width={600} height="auto" /></p>
-
 
 Cuatro pines se señalan en la figura anterior
 
@@ -79,26 +78,25 @@ La fuente de alimentación está entre 3.3V y 5V, por lo que este sensor puede s
 Características
 -------
 
--   Tres elementos de detección completamente independientes en un paquete
--   Construido con ATmega168PA
--   Interfaz I2C con dirección programable
--   La potencia de calentamiento se puede apagar para bajo consumo
--   Gases detectables
-    -   Monóxido de carbono CO 1 – 1000ppm
-    -   Dióxido de nitrógeno NO2 0.05 – 10ppm
-    -   Etanol C2H6OH 10 – 500ppm
-    -   Hidrógeno H2 1 – 1000ppm
-    -   Amoníaco NH3 1 – 500ppm
-    -   Metano CH4 &gt;1000ppm
-    -   Propano C3H8 &gt;1000ppm
-    -   Iso-butano C4H10 &gt;1000ppm
+- Tres elementos de detección completamente independientes en un paquete
+- Construido con ATmega168PA
+- Interfaz I2C con dirección programable
+- La potencia de calentamiento se puede apagar para bajo consumo
+- Gases detectables
+  - Monóxido de carbono CO 1 – 1000ppm
+  - Dióxido de nitrógeno NO2 0.05 – 10ppm
+  - Etanol C2H6OH 10 – 500ppm
+  - Hidrógeno H2 1 – 1000ppm
+  - Amoníaco NH3 1 – 500ppm
+  - Metano CH4 &gt;1000ppm
+  - Propano C3H8 &gt;1000ppm
+  - Iso-butano C4H10 &gt;1000ppm
 
 Diagrama de Bloques
 -------------
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_block_diagram.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_block_diagram.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 Plataformas Compatibles
 <!-- -------------------
@@ -113,7 +111,6 @@ Plataformas Compatibles
 :::caution
     Las plataformas mencionadas anteriormente como compatibles son una indicación de la compatibilidad de software o teórica del módulo. Solo proporcionamos biblioteca de software o ejemplos de código para la plataforma Arduino en la mayoría de los casos. No es posible proporcionar biblioteca de software / código de demostración para todas las plataformas MCU posibles. Por lo tanto, los usuarios tienen que escribir su propia biblioteca de software.
 :::
-
 
 Características Eléctricas
 --------------------------
@@ -137,10 +134,8 @@ Características Eléctricas
 | Rango típico de detección de CO  | FS      | -   | 1   | 1000 | ppm    |
 | Factor de sensibilidad           | SR      | -   | 1.2 | 50   | -      |
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Red_sensor.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Red_sensor.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 ### Rendimiento sensor OX
 
@@ -164,7 +159,6 @@ Características Eléctricas
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/NH3_sensor.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/NH3_sensor.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 Primeros Pasos
 -------------
 
@@ -177,7 +171,6 @@ Primeros Pasos
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-MultiChannelGasSensor.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-MultiChannelGasSensor.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 **Subir Código:**
 
@@ -265,7 +258,6 @@ Al abrir el monitor serie, puedes ver los datos en bruto leídos del sensor.
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Mutichannel_Gas_Sensor_Grove_Print.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Mutichannel_Gas_Sensor_Grove_Print.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 :::tip
     Más detalles sobre los módulos Grove consulta [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
 :::
@@ -303,9 +295,9 @@ Si la versión de tu sensor es V1, te recomendamos actualizarla a V2 para obtene
 
 Para actualizar el firmware, necesitas:
 
-* Un Arduino UNO/Seeeduino V3/
-* 6 cables dupont 
-* Soldador
+- Un Arduino UNO/Seeeduino V3/
+- 6 cables dupont
+- Soldador
 
 Hay un pad ICSP en la parte posterior de la placa, necesitas conectar esos pads a una placa Arduino.
 
@@ -318,10 +310,8 @@ Hay un pad ICSP en la parte posterior de la placa, necesitas conectar esos pads 
 | MOSI   | D11     |
 | VCC    | 5V      |
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/firmware_connect.jpeg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/firmware_connect.jpeg" alt="pir" width={600} height="auto" /></p>
-
 
 Luego abre el ejemplo **UpdateFrimware** en tu Arduino, abre el monitor serie y obtendrás información impresa.
 Ingresa una 'g' para comenzar.
@@ -329,12 +319,11 @@ Ingresa una 'g' para comenzar.
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/firmware_done.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/firmware_done.png" alt="pir" width={600} height="auto" /></p>
 
-
 calibración
 --------------
 
-Si siempre obtienes un valor no auténtico, por favor intenta calibrar el sensor. 
-Abre el ejemplo **calibration** y súbelo a tu Arduino, abre el monitor serie para obtener información cuando esté calibrando. 
+Si siempre obtienes un valor no auténtico, por favor intenta calibrar el sensor.
+Abre el ejemplo **calibration** y súbelo a tu Arduino, abre el monitor serie para obtener información cuando esté calibrando.
 
 :::note
     La calibración se ha realizado antes de que los módulos salgan de fábrica. Si quieres recalibrar, por favor asegúrate de que las condiciones del aire sean frescas. Y la calibración puede necesitar desde minutos hasta media hora. 
@@ -345,32 +334,32 @@ Abre el ejemplo **calibration** y súbelo a tu Arduino, abre el monitor serie pa
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/Grove-Multichannel_Gas_Sensor_v1.0_eagle_files.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 Recursos
 ---------
 
--   [Grove - Multichannel Gas Sensor v1.0 sch](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/Grove-Multichannel_Gas_Sensor_v1.0_sch.pdf)
--   [Grove - Multichannel Gas Sensor eagle files](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/Grove-Multichannel_Gas_Sensor_v1.0_eagle_files.zip)
--   [Arduino Library & Grove/Xadow firmware](https://github.com/Seeed-Studio/Mutichannel_Gas_Sensor)
--   [MiCS-6814 Datasheet](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/MiCS-6814_Datasheet.pdf)
+- [Grove - Sensor de Gas Multicanal v1.0 sch](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/Grove-Multichannel_Gas_Sensor_v1.0_sch.pdf)
+- [Archivos eagle del Grove - Sensor de Gas Multicanal](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/Grove-Multichannel_Gas_Sensor_v1.0_eagle_files.zip)
+- [Librería de Arduino y firmware Grove/Xadow](https://github.com/Seeed-Studio/Mutichannel_Gas_Sensor)
+- [Hoja de datos MiCS-6814](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/MiCS-6814_Datasheet.pdf)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Multichannel_Gas_Sensor -->
 
 FAQ
 ---------
+
 * **P1. Cómo cambiar la dirección I2C del módulo**
 
-    * *R1. Abre el ejemplo I2C_Address y ejecútalo.*
+  - *R1. Abre el ejemplo I2C_Address y ejecútalo.*
 
-* **P2. Cambié la dirección I2C y desafortunadamente olvidé cuál es.**
+- **P2. Cambié la dirección I2C y desafortunadamente olvidé cuál es.**
 
-    * *R2. No te preocupes por eso, ejecuta el ejemplo factory_setting para hacerlo por defecto. Ten en cuenta que los datos de calibración también se restablecerán a configuración de fábrica.*
+  - *R2. No te preocupes por eso, ejecuta el ejemplo factory_setting para hacerlo por defecto. Ten en cuenta que los datos de calibración también se restablecerán a configuración de fábrica.*
 
-* **P3. ¿Funciona el sensor de gas multicanal con Wio GPS y Wio LTE?**
+- **P3. ¿Funciona el sensor de gas multicanal con Wio GPS y Wio LTE?**
 
-    * *R3. Sí, por favor consulta el código a continuación. 
+  - *R3. Sí, por favor consulta el código a continuación.
 
-Wio GPS: 
+Wio GPS:
 
 ```
 #include <Wire.h>
@@ -431,7 +420,6 @@ void loop()
     delay(1000);
 }
 ```
-
 
 Wio LTE:
 
@@ -495,7 +483,6 @@ void loop()
 }
 ```
 
-
 ## Proyectos
 
 **Smart Crops: ¡Implementando IoT en la Agricultura Convencional!**: Nuestra misión con la naturaleza es preservarla, diseñando e implementando tecnologías y métodos de monitoreo con la ayuda de IoT a través de Helium.
@@ -505,20 +492,19 @@ void loop()
 ## Soporte Técnico y Discusión de Productos
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 
 ## Actualizable a Sensores Industriales
+
 Con el [controlador S2110](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) y el [registrador de datos S2100](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html) de SenseCAP, puedes convertir fácilmente el Grove en un sensor LoRaWAN®. Seeed no solo te ayuda con la creación de prototipos, sino que también te ofrece la posibilidad de expandir tu proyecto con la serie SenseCAP de [sensores industriales](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP) robustos.
 
 La carcasa IP66, configuración Bluetooth, compatibilidad con la red global LoRaWAN®, batería integrada de 19 Ah y el potente soporte de la APP hacen del [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP&product_module=Device) la mejor opción para aplicaciones industriales. La serie incluye sensores para humedad del suelo, temperatura y humedad del aire, intensidad de luz, CO2, EC, y una estación meteorológica 8 en 1. Prueba el último SenseCAP S210x para tu próximo proyecto industrial exitoso.
 
 <div align="center"><a href="https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP" target="_blank"><img width={800} src="https://files.seeedstudio.com/wiki/K1100_overview/sensecap.png" /></a></div>
-
-

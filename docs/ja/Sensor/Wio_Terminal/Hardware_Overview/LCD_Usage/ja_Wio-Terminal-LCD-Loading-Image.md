@@ -30,43 +30,43 @@ last_update:
 
 ## 画像フォーマットの設定
 
-### STEP 1: 画像の準備
+### ステップ 1: 画像の準備
 :::note
     画像フォーマットをWindows 24ビットBMP形式に変換し、適切なフォルダに配置する必要があります。これには`Microsoft Paint`を使用することをお勧めします。
 :::
- - **Step 1-1:** `Microsoft Paint`を使用して画像をリサイズし、スクリーン表示領域の最大ピクセルサイズに収まるようにします。
+ - **ステップ 1-1:** `Microsoft Paint`を使用して画像をリサイズし、スクリーン表示領域の最大ピクセルサイズに収まるようにします。
 
- - **Step 1-2:** 次に、`名前を付けて保存`をクリックし、`BMP画像`を選択して、ファイルタイプのドロップダウンから`24ビットビットマップ(.bmp)`を選択して保存します。
+ - **ステップ 1-2:** 次に、`名前を付けて保存`をクリックし、`BMP画像`を選択して、ファイルタイプのドロップダウンから`24ビットビットマップ(.bmp)`を選択して保存します。
   
- - **Step 1-3:** フォルダ名を`bmp`とし、このフォルダ内にWindows `.bmp`形式の画像を保存します。
+ - **ステップ 1-3:** フォルダ名を`bmp`とし、このフォルダ内にWindows `.bmp`形式の画像を保存します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/wioterminaltu.png" /></div>
 
-### STEP 2: `24ビットビットマップ`画像をマイクロコントローラで読み取り可能な`8ビットまたは16ビットbmp`形式に変換
+### ステップ 2: `24ビットビットマップ`画像をマイクロコントローラで読み取り可能な`8ビットまたは16ビットbmp`形式に変換
 :::note
     組み込みシステムでbmp画像を表示するには、Windows bmp形式の一部情報（ヘッダファイル）を削除する必要があります。この作業を自動化するPythonスクリプトを作成しましたので、以下の2つのオプションから選択して画像を変換してください。
 :::
 #### オプション1: 事前構築されたWindows実行ファイルを使用（Windowsのみ）
 
-- **Step 2-1-1:** [Pyinstaller](https://pyinstaller.org/en/stable/)パッケージを使用して実行ファイルを準備しました。[bmp_converter.exe](https://files.seeedstudio.com/wiki/Wio-Terminal/res/bmp_converter.exe)をクリックしてダウンロードしてください。
+- **ステップ 2-1-1:** [Pyinstaller](https://pyinstaller.org/en/stable/)パッケージを使用して実行ファイルを準備しました。[bmp_converter.exe](https://files.seeedstudio.com/wiki/Wio-Terminal/res/bmp_converter.exe)をクリックしてダウンロードしてください。
 
-- **Step 2-1-2:** ダウンロードした`bmp_converter.exe`を`Step 1-3`で作成した`bmpフォルダ`と同じディレクトリに配置します。
+- **ステップ 2-1-2:** ダウンロードした`bmp_converter.exe`を`ステップ 1-3`で作成した`bmpフォルダ`と同じディレクトリに配置します。
 
-- **Step 2-1-3:** `bmp_converter.exe`をダブルクリックして実行し、ポップアップした`ターミナル`で以下の2つのオプションから選択します: "`1`を入力して8ビットカラーに変換; `2`を入力して16ビットカラーに変換"。
+- **ステップ 2-1-3:** `bmp_converter.exe`をダブルクリックして実行し、ポップアップした`ターミナル`で以下の2つのオプションから選択します: "`1`を入力して8ビットカラーに変換; `2`を入力して16ビットカラーに変換"。
 
 #### オプション2: Pythonソースコードを使用（クロスプラットフォーム対応）
 :::note
     コンピュータにPythonがインストールされている必要があります。
 :::
-- **Step 2-2-1:** Pythonスクリプト[bmp_converter.py](https://files.seeedstudio.com/wiki/Wio-Terminal/res/bmp_converter.py)をダウンロードし、`Step 1-3`で作成した`bmpフォルダ`と同じディレクトリに保存します。
+- **ステップ 2-2-1:** Pythonスクリプト[bmp_converter.py](https://files.seeedstudio.com/wiki/Wio-Terminal/res/bmp_converter.py)をダウンロードし、`ステップ 1-3`で作成した`bmpフォルダ`と同じディレクトリに保存します。
 
-- **Step 2-2-2:** `cmd`または`ターミナル`を開いてPythonスクリプトを実行します。まず、`bmp_converter.py`と`bmpフォルダ`が保存されているディレクトリに`cd`で移動し、Pythonスクリプトを実行します。
+- **ステップ 2-2-2:** `cmd`または`ターミナル`を開いてPythonスクリプトを実行します。まず、`bmp_converter.py`と`bmpフォルダ`が保存されているディレクトリに`cd`で移動し、Pythonスクリプトを実行します。
 
-- **Step 2-2-3:** 以下の2つのオプションから選択します: "`1`を入力して8ビットカラーに変換; `2`を入力して16ビットカラーに変換"
+- **ステップ 2-2-3:** 以下の2つのオプションから選択します: "`1`を入力して8ビットカラーに変換; `2`を入力して16ビットカラーに変換"
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/PythonScript.gif" /></div>
 
-### STEP 3: 画像の準備完了
+### ステップ 3: 画像の準備完了
 
 変換された`.bmp`画像は、`bmpフォルダ`内の`rgb332`（8ビット）または`rgb565`（16ビット）という名前の別フォルダに保存されます。
 

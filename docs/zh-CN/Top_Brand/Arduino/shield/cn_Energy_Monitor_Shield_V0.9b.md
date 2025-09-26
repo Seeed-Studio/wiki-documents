@@ -12,7 +12,7 @@ last_update:
 
 <!-- ---
 name: Energy Monitor Shield V0.9b
-category: Discontinued
+category: 已停产
 bzurl:
 oldwikiname: Energy_Monitor_Shield_V0.9b
 prodimagename:

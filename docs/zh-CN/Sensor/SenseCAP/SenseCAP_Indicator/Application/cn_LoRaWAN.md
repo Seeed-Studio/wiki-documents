@@ -114,7 +114,7 @@ SenseCAP 团队主要专注于传感器和网络组件，致力于提供顶级�
 <tool_path>/esptool.exe --chip esp32s3 --baud 921600 write_flash -z 0x0 <firmware_path>/indicator_lorawan.bin 
 ```
 
-For example, if your `flash_bin` folder is located in drive `D:` and contains the following structure:
+例如，如果你的 `flash_bin` 文件夹位于 `D:` 驱动器中，并包含以下结构：
 
 ```sh
 flash_bin/
@@ -533,7 +533,7 @@ LoRaWAN网络中的下行链路过程对于双向通信至关重要，它允许�
 
 - 这些有效载荷以SenseCAP Indicator被编程理解和执行的格式进行编码。[^6]
 
-[^6]: [lorawan_rx_data_handle function - GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/11bf6165f0e815a1dc6b83be253972ac320ecdd5/examples/indicator_lorawan/main/lorawan/indicator_lorawan.c#L591C33-L591C33)
+[^6]: [lorawan_rx_data_handle 函数 - GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/11bf6165f0e815a1dc6b83be253972ac320ecdd5/examples/indicator_lorawan/main/lorawan/indicator_lorawan.c#L591C33-L591C33)
 
 <div align="center">
   <img class='border-radius: 10px;' width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/bulb_payload.png"/>

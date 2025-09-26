@@ -280,9 +280,9 @@ pi@raspberrypi:~/grove.py/grove $ grove_3_axis_compass_bmm150
 ## 资源
 
 - **[库]** [Grove-3_Axis_Compass_V2.0 lib](https://github.com/Seeed-Studio/Grove_3_Axis_Compass_V2.0_BMM150)
-- **[PDF]** [BST-BMM150-Datasheet](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digitial_Compass_v2.0/res/Datasheet.pdf)
+- **[数据表]** [BST-BMM150-Datasheet](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digitial_Compass_v2.0/res/Datasheet.pdf)
 
-- **[Zip]** [Grove-3-Axis Digital Compass v2_Eagle File](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digitial_Compass_v2.0/res/Eagle File.zip)
+- **[Zip]** [Grove-3轴数字罗盘 v2_Eagle 文件](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digitial_Compass_v2.0/res/Eagle File.zip)
 
 ## 技术支持与产品讨论
 

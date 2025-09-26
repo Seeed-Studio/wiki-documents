@@ -375,7 +375,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例えば（ユーザー名："nvidia"、パスワード："nvidia"、デバイス名："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license

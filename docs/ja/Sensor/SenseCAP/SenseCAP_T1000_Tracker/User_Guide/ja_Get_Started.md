@@ -317,7 +317,7 @@ The Things Networkについては、以下を参照してください：[TTN-fre
 
 ### デバイスデータ表示
 
-#### SenseCAP Mate App
+#### SenseCAP Mate アプリ
 
 アプリで位置情報を確認します。
 

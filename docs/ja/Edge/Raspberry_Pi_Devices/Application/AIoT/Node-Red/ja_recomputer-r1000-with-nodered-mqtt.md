@@ -38,7 +38,7 @@ last_update:
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
    <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
@@ -92,7 +92,7 @@ include_dir /etc/mosquitto/conf.d
 allow_anonymous false
 ```
 
-To store passwords securely, we'll specify a file location by adding:
+パスワードを安全に保存するために、以下を追加してファイルの場所を指定します：
 
 ```sh
 password_file /etc/mosquitto/pwfile
@@ -114,7 +114,7 @@ Ctrl+Sを押して変更を保存し、Ctrl+Xでエディタを終了します�
 sudo mosquitto_passwd -c /etc/mosquitto/pwfile <username>
 ```
 
-After generating a username and password, reboot reComputer R1000
+ユーザー名とパスワードを生成した後、reComputer R1000を再起動してください
 
 ```sh
 sudo reboot
@@ -136,7 +136,7 @@ sudo systemctl start mosquitto
 
 ## 接続テスト
 
-- **Step 01** : 新しい SSH セッションまたはターミナルを開き、以下のコマンドを実行してトピックを購読する
+- **ステップ 01** : 新しい SSH セッションまたはターミナルを開き、以下のコマンドを実行してトピックを購読する
 
 ```sh
 mosquitto_sub -h localhost -t test -u <USER> -P <PASSWORD>

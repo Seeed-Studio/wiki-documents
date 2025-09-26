@@ -344,7 +344,7 @@ Device Jetson Nanoがプロジェクトに接続されたことが明確に確�
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/2.23jetsonedge/jetsonnano4a.png" /></div>
 
-- **Step 3**. 以下のコードに従って、MLモデルをJetson Nanoにダウンロードします。
+- **ステップ 3**. 以下のコードに従って、MLモデルをJetson Nanoにダウンロードします。
 
 ```cpp
 edge-impulse-linux-runner
@@ -416,7 +416,7 @@ Jetson NanoとEdge Impulseの間で初回接続の場合、ウェブサイトは
 
 !!!Note これによりファイルがmodelfile.eimにダウンロードされます。プロジェクトを切り替えたい場合は、'--clean'を追加することで実行できます。
 
-- **Step 5**. 以下のコマンドでMLモデルを適用するために[hardhat_detectation.py](https://files.seeedstudio.com/wiki/2.23jetsonedge/hardhat_detectation.py)を実行します。コードには外部[ファイル](https://files.seeedstudio.com/wiki/2.23jetsonedge/device_patches.py)が必要な場合があります。
+- **ステップ 5**. 以下のコマンドでMLモデルを適用するために[hardhat_detectation.py](https://files.seeedstudio.com/wiki/2.23jetsonedge/hardhat_detectation.py)を実行します。コードには外部[ファイル](https://files.seeedstudio.com/wiki/2.23jetsonedge/device_patches.py)が必要な場合があります。
 
 ```cpp
 python3 hardhat_detectation.py /home/jetson-nano/modelfile.eim

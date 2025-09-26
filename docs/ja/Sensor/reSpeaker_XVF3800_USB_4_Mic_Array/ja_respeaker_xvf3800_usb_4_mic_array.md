@@ -21,7 +21,7 @@ ReSpeaker XVF3800 USB 4-Mic Array は、XMOS XVF3800 を搭載したプロフェ
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -114,7 +114,7 @@ reSpeaker XVF3800は、外部制御用に3つの入力ピン（GPI）と5つの�
 
 ### 開封後の使用方法
 
-#### DOA (Direction of Arrival)
+#### DOA (到来方向)
 
 音声の入力方向に従って LED アレイが動作する様子を体験できます。
 

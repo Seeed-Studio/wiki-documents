@@ -1,7 +1,7 @@
 ---
 description: This article mainly describes how to use the Lopaka website to create exquisite user interfaces and apply them in the reTerminal E series.
 title: reTerminal E Series ePaper Display Work with Lopaka
-image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.webp
 slug: /reterminal_e10xx_with_lopaka
 sidebar_position: 2
 last_update:
@@ -95,6 +95,7 @@ Lopaka is a graphic editor specifically designed for embedded graphics developme
 - **[Go to Lopaka](https://lopaka.app/)**
 
   You can register using either Google or GitHub account.
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_1.png" style={{width:800, height:'auto'}}/>
 <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Lopaka main interface</em></p>
 </div>
@@ -135,9 +136,9 @@ From left to right
 
 ### Hello World
 
-- Select "String", then click on the canvas. 
+- Select "String", then click on the canvas.
 - In the right column, select "Font" and choose your font, such as Adafruit 5×7.
-- Enter the content "Hello World!", select "Size" as 6, and choose the color you like. Here, I choose green. 
+- Enter the content "Hello World!", select "Size" as 6, and choose the color you like. Here, I choose green.
 - Then, move it to the center position of the screen. After that, the required project code will be generated within "CODE".
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_1.png" style={{width:800, height:'auto'}}/></div>
@@ -286,13 +287,15 @@ The effect is shown in the following figure.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_4.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
+
 - If you wish to use reTerminal E1001, you can refer to the link：[Programming reTerminal E1001](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
 - If you want to use its GxEPD2 library, you can refer to the link.: [Using the GxEPD2 Library](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
+
 :::
 
 ### Example
 
-Two different drawing methods are introduced here. You can choose the one that suits your actual needs. 
+Two different drawing methods are introduced here. You can choose the one that suits your actual needs.
 
 Furthermore, to better demonstrate the effect, I have changed the background color to black.
 
@@ -937,11 +940,11 @@ void loop()
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

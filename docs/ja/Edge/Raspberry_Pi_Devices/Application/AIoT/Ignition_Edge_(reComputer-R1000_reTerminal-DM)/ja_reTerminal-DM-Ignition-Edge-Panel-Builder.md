@@ -29,7 +29,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -92,7 +92,7 @@ Perspectiveセッションを更新したので、ライブになり、Webブラ
 ## HMIの拡張
 ReTerminalのビジュアルを強化するIgnitionのPerspectiveモジュールの基本設定が完了しました。Ignitionプラットフォームの全機能を活用してより強力なビジュアルを作成するには、タグサーバー、ヒストリアンデータベースなどの設定が必要になる場合がありますが、これらはこのチュートリアルの範囲外です。Ignitionプラットフォームについて詳しく学ぶには、[Inductive University](https://inductiveuniversity.com/)で無料で提供されている優れたドキュメントと手順をご利用ください。
 
-## Perspective vs Vision
+## パースペクティブ vs ビジョン
 Ignitionは2つのパネルビルダーソフトウェアを提供しており、どちらを使用するかを決めることはよくある質問です。両者の機能には多くの重複がありますが、決定を下すためのいくつかの重要な決定要因があります。
 
 ### ユーザーがモバイルファーストの場合はPerspectiveを選択

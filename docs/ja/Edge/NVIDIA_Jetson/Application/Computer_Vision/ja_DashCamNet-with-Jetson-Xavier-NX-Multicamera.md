@@ -153,7 +153,7 @@ DockerのオフィシャルGPGキーを追加：
       && curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
    ```
 
-Update the package listing and install the `nvidia-docker2` package (and dependencies):
+パッケージリストを更新し、`nvidia-docker2`パッケージ（および依存関係）をインストールします：
 
    ```shell
    sudo apt-get update
@@ -272,7 +272,7 @@ Pythonのコピーを、コマンドを実行したディレクトリに作成�
 source venv/bin/activate
 ```
 
-- If you are done working in the virtual environment for the moment, you can deactivate it:
+- 仮想環境での作業を一時的に終了する場合は、それを無効化できます：
 
 ```shell
 deactivate
@@ -326,7 +326,7 @@ mkvirtualenv launcher -p /path/to/your/python3
 deactivate
 ```
 
-- **Step 4**. You may re-instantiate this created `virtualenv` env using the `workon` command.
+- **ステップ 4**. この作成された `virtualenv` 環境は `workon` コマンドを使用して再インスタンス化することができます。
 
    ```shell
    workon launcher
@@ -421,7 +421,7 @@ sudo -H pip3 install Cython
 sudo -H pip3 install .
 ```
 
-- **Step 2**. Run example with your cameras:
+- **ステップ 2**. あなたのカメラで例を実行する：
 
 ```shell
 source scripts/env_vars.sh 
@@ -487,11 +487,11 @@ pipeline = CameraPipelineDNN(
 弊社製品をお選びいただき、ありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

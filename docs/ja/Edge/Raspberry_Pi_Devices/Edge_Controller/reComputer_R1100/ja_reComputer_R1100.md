@@ -646,7 +646,7 @@ Mini-PCIeスロットは **USBプロトコルを使用するZigbeeモジュー�
 **Zigbee機能** が必要な場合は、**対応するZigbeeモジュールと外部アンテナを購入** し、[4G/LoRa®/Zigbeeモジュールとアンテナの組み立て](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)の手順に従ってください。
 :::
 
-### PoE (Power over Ethernet)
+### PoE（Power over Ethernet）
 
 **reComputer R1100は、PoE電源モジュールを追加することでIEEE 802.3af PD (Powered Devices) 標準をサポート** します。**PoEソケットはボード上に事前にはんだ付けされています** が、ユーザーはEthernet PoE機能のために **デバイスを分解してPoEモジュールをインストールする必要があります**。
 

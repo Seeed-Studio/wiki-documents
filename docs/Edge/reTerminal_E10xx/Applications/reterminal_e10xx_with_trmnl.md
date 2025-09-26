@@ -1,16 +1,16 @@
 ---
 description: This article describes how to use the reTerminal E Series ePaper Display with TRMNL.
 title: reTerminal E Series ePaper Display Works with TRMNL
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.webp
 slug: /reterminal_e10xx_trmnl
 sidebar_position: 1
 last_update:
-  date: 07/21/2025
+  date: 09/19/2025
   author: Citric
 ---
 
 :::caution
-The Wiki content is under development and is not available at this time.
+Version 1.6.7 of TRMNL now officially supports the reTerminal E1001. Due to software architecture limitations, support for the reTerminal E1002 full-color e-ink display **is not** yet available.
 :::
 
 # reTerminal E Series ePaper Display Works with TRMNL
@@ -99,7 +99,7 @@ If you are still using the factory firmware for the reTerminal E Series, then yo
 #### Method 1: Flash via TRMNL Web Flasher (Easiest)
 
 :::tip
-Please use **FW x.x.x** or newer firmware for Seeed compatibility.
+Please use **FW 1.6.7** or newer firmware for Seeed compatibility.
 :::
 
 1. **Go to the TRMNL Web Flasher**
@@ -108,7 +108,7 @@ Please use **FW x.x.x** or newer firmware for Seeed compatibility.
    - This tool allows you to flash your device directly from your browser.
    - Follow the on-screen instructions to complete the flashing process.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/224.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/160.png" style={{width:700, height:'auto'}}/></div>
 
 ---
 
@@ -148,7 +148,7 @@ There are times when we update our code and need to submit PR to TRMNL and revie
   
   - If you are using reTerminal E1001, select the `seeed_reTerminal_E1001` environment.
 
-  - If you are using reTerminal E1002, select the `seeed_reTerminal_E1002` environment.
+  <!-- - If you are using reTerminal E1002, select the `seeed_reTerminal_E1002` environment. -->
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/26.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -178,7 +178,7 @@ To use your reTerminal E Series ePaper Display with TRMNL and send playlists, yo
 
 - After flashing the TRMNL firmware and powering on your device, it will automatically enter provisioning mode if it is not yet connected to Wi-Fi.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/216.jpg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/161.jpg" style={{width:600, height:'auto'}}/></div>
 
 ### Connect to the TRMNL Wi-Fi
 
@@ -346,6 +346,12 @@ If you have any questions about using TRMNL or want to explore more advanced fea
 Special thanks to the entire **TRMNL team** for their strong support and invaluable help with this project. In particular, we would like to thank **Bogdan**, **Ryan Kulp**, **Fr3d** and all other team members for their dedication and assistance throughout the development and documentation process.
 
 Your expertise and commitment have made this integration possible and greatly improved the user experience for the reTerminal E Series ePaper Display community.
+
+## Troubleshooting
+
+### How to reconfigure the network?
+
+Press and hold the Green Button for five seconds. The device will return to the initial TRMNL interface and activate the AP.
 
 ## Tech Support & Product Discussion
 

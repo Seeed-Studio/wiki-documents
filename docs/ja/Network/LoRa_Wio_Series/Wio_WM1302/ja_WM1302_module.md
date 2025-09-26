@@ -199,7 +199,7 @@ sudo raspi-config
 
 5. この後、これらの設定が動作することを確認するために Raspberry Pi を再起動してください。
 
-#### Step3. SX1302 ソースコードの取得とコンパイル
+#### ステップ3. SX1302 ソースコードの取得とコンパイル
 
 それでは `git` をインストールし、github から `sx1302_hal`（SX1302 LoRa Gateway 用のライブラリとプログラム）をダウンロードしましょう：
 
@@ -210,7 +210,7 @@ cd ~
 git clone https://github.com/Lora-net/sx1302_hal
 ```
 
-Move to `sx1302_hal` folder and compile everything:
+`sx1302_hal` フォルダに移動し、すべてをコンパイルします：
 
 ```shell
 cd ~/sx1302_hal

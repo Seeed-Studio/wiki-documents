@@ -235,7 +235,7 @@ Por ejemplo, en sistemas basados en Ubuntu o Debian, puedes instalar Python 3 si
    python3 --version
    ```
 
-On Fedora or Red Hat-based systems, you would use `dnf`:
+En sistemas Fedora o basados en Red Hat, usarías `dnf`:
 
 ```sh
 sudo dnf install python3

@@ -172,7 +172,7 @@ Si conectas el LED Rojo a un puerto diferente del Base Hat, en lugar de ejecutar
 python3 grove_led.py portnumber
 ```
 
-Following is the grove_led.py code.
+A continuación se muestra el código grove_led.py.
 
 ```python
 

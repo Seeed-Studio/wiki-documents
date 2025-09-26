@@ -82,17 +82,17 @@ Matter開発の旅を始めるには、適切なツールと環境が必要で�
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -114,12 +114,12 @@ XIAOに加えて、WS281xモデルのライトバーまたはライトビーズ�
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Mini.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a></div></td>
   </tr>
  </table>
@@ -229,7 +229,7 @@ alias set_cache='export IDF_CCACHE_ENABLE=1'
 source ~/.bashrc
 ```
 
-Now you can run `get_matter` and `set_cache` to set up or refresh the esp-matter environment in any terminal session.
+これで任意のターミナルセッションで `get_matter` と `set_cache` を実行して、esp-matter環境をセットアップまたはリフレッシュできます。
 
 ```bash
 get_matter
@@ -254,7 +254,7 @@ cd examples/light                # Navigate to the light example directory
 rm -rf build/                     # Clean previous build files
 ```
 
-Set the target to ESP32-C6.
+ターゲットをESP32-C6に設定してください。
 
 ```bash
 idf.py set-target esp32c6        # Set the build target to ESP32-C6
@@ -344,6 +344,7 @@ sudo chmod 666 /dev/ttyACM0       # Grant permissions to the USB device file
  ```
 
 - デバイス設定：デバイスの静的設定をダンプ：
+
  ```
  matter config
  ```
@@ -366,7 +367,7 @@ sudo chmod 666 /dev/ttyACM0       # Grant permissions to the USB device file
  matter esp attribute get <endpoint_id> <cluster_id> <attribute_id>
  ```
 
- 	- 例：on_off::on_off：
+  - 例：on_off::on_off：
 
   ```
   matter esp attribute get 0x1 0x6 0x0
@@ -378,7 +379,7 @@ sudo chmod 666 /dev/ttyACM0       # Grant permissions to the USB device file
  matter esp attribute set <endpoint_id> <cluster_id> <attribute_id> <attribute value>
  ```
 
- 	- 例：on_off::on_off：
+  - 例：on_off::on_off：
 
   ```
   matter esp attribute set 0x1 0x6 0x0 1
@@ -434,14 +435,14 @@ sudo minicom -s
 3. 必要に応じて他の設定を調整します。デフォルト設定は通常9600 8N1（9600ボー、パリティなし、8データビット、1ストップビット）です。ボーレートを**115200**に変更するだけで済みます。
 4. 'Enter'を押してこの画面を終了します。
 
-#### Step 4. 設定の保存
+#### ステップ 4. 設定の保存
 
 シリアルポートの設定後：
 
 1. **Save setup as dfl**を選択して、これをデフォルト設定にします。
 2. **Exit from Minicom**を選択してMinicomeセットアップを終了します。
 
-#### Step 5: Minicomの実行
+#### ステップ 5: Minicomの実行
 
 デフォルト設定でMinicomを開始するには、次のように入力するだけです：
 
@@ -449,7 +450,7 @@ sudo minicom -s
 minicom
 ```
 
-If you need to run it with sudo privileges (e.g., if you encounter permission issues), you can use:
+sudo権限で実行する必要がある場合（例：権限の問題が発生した場合）は、以下を使用できます：
 
 ```bash
 sudo minicom
@@ -581,7 +582,7 @@ ESP-Matterの環境は少し要求が厳しく、開発によく使用されるU
 rm -r connectedhomeip/connectedhomeip/.environment
 ```
 
-Then re-pull the appropriate version of the connectedhomeip branch again.
+その後、connectedhomeipブランチの適切なバージョンを再度プルしてください。
 
 ```
 git submodule update --init --depth 1

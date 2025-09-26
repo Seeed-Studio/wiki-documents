@@ -278,7 +278,7 @@ Google Drive Backup アドオンを使用すると、バックアップを自動
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/59.png" /></div>
 
-## HACS (Home Assistant Community Store)
+## HACS (Home Assistant コミュニティストア)
 
 では、Home AssistantでHACSを探索してみましょう！HACSは、さまざまな統合やフロントエンドのカスタマイズオプションを提供します。ここでは、以下の設定方法を紹介します。
 

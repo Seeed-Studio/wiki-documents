@@ -519,7 +519,7 @@ Example:
 }
 ```
 
-For absolute position commands (A4) with "Output in integer" selected:
+对于选择了"以整数输出"的绝对位置命令(A4)：
 
 ```json
 {
@@ -530,7 +530,7 @@ For absolute position commands (A4) with "Output in integer" selected:
 }
 ```
 
-For relative offset commands (A8) with "Output in decimal" selected:
+对于相对偏移命令(A8)，选择"以十进制输出"时：
 
 ```json
 {
@@ -541,7 +541,7 @@ For relative offset commands (A8) with "Output in decimal" selected:
 }
 ```
 
-For status query commands (94) with "Output in decimal" selected:
+对于选择了"以十进制输出"的状态查询命令(94):
 
 ```json
 {

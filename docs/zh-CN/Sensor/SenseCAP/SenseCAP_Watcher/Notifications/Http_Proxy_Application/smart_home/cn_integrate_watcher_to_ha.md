@@ -90,7 +90,7 @@ Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方�
 cd /config
 ```
 
-Execute the following command to download and run the HACS installation script:
+执行以下命令来下载并运行 HACS 安装脚本：
 
 ```
 wget -q -O - https://install.hacs.xyz | bash -

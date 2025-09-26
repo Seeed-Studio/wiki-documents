@@ -320,7 +320,7 @@ KeyboardInterrupt
 
 ## 资源
 
-- **[Zip]** [8-Channel 12-Bit ADC for Raspberry Pi (STM32F030) (STM32F030) Eagle 文件](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/res/8-Channel%2012-Bit%20ADC%20for%20Raspberry%20Pi%20(STM32F030).zip)
+- **[Zip]** [8通道12位ADC树莓派版（STM32F030）（STM32F030）Eagle文件](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/res/8-Channel%2012-Bit%20ADC%20for%20Raspberry%20Pi%20(STM32F030).zip)
 
 - **[Zip]** [MM32F031F6P6-固件](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/res/MM32F031F6P6_firmware.zip)
 

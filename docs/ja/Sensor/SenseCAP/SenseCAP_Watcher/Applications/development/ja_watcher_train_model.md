@@ -99,7 +99,7 @@ Pretrained Modelsに戻り、My Own Modelsをクリックして、トレーニ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/7.png" style={{width:800, height:'auto'}}/></div>
 
-## SenseCraft APP Setup Watcher
+## SenseCraft APP ウォッチャーのセットアップ
 
 ### ステップ 1 . Watcherを選択する
 

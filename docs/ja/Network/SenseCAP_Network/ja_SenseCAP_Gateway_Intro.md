@@ -49,7 +49,7 @@ LoRa（Long Range）は、地域、国内、またはグローバルネットワ
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html" target="_blank"><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/1ef6149dd438035c41238babee3f27e5-1.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></a></p>
 
-### SenseCAP M2 Multi-Platform Gateway
+### SenseCAP M2 マルチプラットフォームゲートウェイ
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -69,7 +69,7 @@ LoRa（Long Range）は、地域、国内、またはグローバルネットワ
 
 ### Helium Gateway
 
-#### SenseCAP M1 Gateway
+#### SenseCAP M1 ゲートウェイ
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -87,7 +87,7 @@ LoRa（Long Range）は、地域、国内、またはグローバルネットワ
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### SenseCAP M2 Data Only
+#### SenseCAP M2 データのみ
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -105,7 +105,7 @@ LoRa（Long Range）は、地域、国内、またはグローバルネットワ
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### SenseCAP M2 Light Gateway
+#### SenseCAP M2 ライトゲートウェイ
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -177,7 +177,7 @@ SenseCAP Portal
 
 ### ホットスポット用
 
-#### SenseCAP Hotspot App
+#### SenseCAP ホットスポットアプリ
 
 SenseCAP Hotspot Appは、ユーザーがWeb 3.0デバイス（Helium、Fluxなど）の購入、展開、管理を支援するオールインワンアプリです。
 
@@ -193,7 +193,7 @@ SenseCAPデバイスと報酬を管理する効率的な方法として、SenseC
 - このページを更新するためのタスクリストがあり、これは私たちの[コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)の下に分類されています。私たちはwikiプラットフォームの開発を通じて、ユーザーエクスペリエンスの向上とより良いサポートの提供に専念しています。
 - [このページへのあなたの貢献](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33962531)は私たちにとって不可欠です！私たちはあなたの意見を本当に大切にしており、アイデアの創出においてあなたの支援を心から感謝いたします。
 
-## SenseCAP Tech Support
+## SenseCAP技術サポート
 
 弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
 

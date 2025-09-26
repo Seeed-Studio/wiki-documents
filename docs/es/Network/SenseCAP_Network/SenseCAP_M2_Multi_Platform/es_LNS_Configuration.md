@@ -165,7 +165,7 @@ Puedes encontrar el ID de la aplicación en la pestaña de tu aplicación:
 |location|Evento de ubicación|
 |integration|Evento de integración|
 
-:::info Note
+:::info Nota
 `+` significa recibir todos los mensajes
 :::
 

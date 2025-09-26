@@ -80,15 +80,14 @@ sudo nvidia-ctk runtime configure --runtime=docker
 
 :::
 
-step2. Restart the Docker service and add your user to the docker group.
+步骤2. 重启 Docker 服务并将您的用户添加到 docker 组。
 
 ```bash
 sudo systemctl restart docker
 sudo usermod -aG docker $USER
 newgrp docker
 ```
-
-step3. Add default runtime in `/etc/docker/daemon.json`.
+步骤3. 在 `/etc/docker/daemon.json` 中添加默认运行时。
 
 ```bash
 sudo apt install -y jq
@@ -97,7 +96,7 @@ sudo jq '. + {"default-runtime": "nvidia"}' /etc/docker/daemon.json | \
   sudo mv /etc/docker/daemon.json.tmp /etc/docker/daemon.json
 ```
 
-step4. Restart Docker.
+步骤4. 重启 Docker.
 
 ```bash
 sudo systemctl daemon-reload && sudo systemctl restart docker

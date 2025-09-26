@@ -138,7 +138,7 @@ sudo apt update
 sudo apt install libpulse-dev pulseaudio pulseaudio-utilss
 ```
 
-**Step 3:** Go to the source code folder and build your application with the following commands.
+**步骤 3:** 进入源代码文件夹，并使用以下命令构建您的应用程序。
 
 ```sh
 cd Downloads/sense-sdk-cpp-tutorials-main

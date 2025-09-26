@@ -34,7 +34,7 @@ AWS IoT Core は、Internet of Things (IoT) デバイスの安全な接続と管
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
    <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
@@ -156,15 +156,15 @@ AWS IoT thingとは独立して証明書を作成および登録する場合、A
 
 そのためには：
 
-- **Step 01**：設定に移動
+- **ステップ 01**：設定に移動
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/AWS/settings.PNG" style={{width:200, height:300}}/></div>
 
-- **Step 02**：URLを見つけます
+- **ステップ 02**：URLを見つけます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/AWS/weburl.PNG" style={{width:800, height:'auto'}}/></div>
 
-- **Step 03**：これらのファイル名をあなたのものに置き換えて、ファイルを実行します
+- **ステップ 03**：これらのファイル名をあなたのものに置き換えて、ファイルを実行します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/AWS/cosw1.PNG" style={{width:800, height:'auto'}}/></div>
 

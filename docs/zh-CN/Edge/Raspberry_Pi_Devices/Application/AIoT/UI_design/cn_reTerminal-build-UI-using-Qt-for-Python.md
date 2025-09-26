@@ -29,7 +29,7 @@ last_update:
 sudo apt install qml-module-qtquick-shapes python3-pyside2.qtqml python3-pyside2.qtcore python3-pyside2.qtnetwork python3-pyside2.qtgui python3-pyside2.qtwidgets python3-pyside2.qtquick qtquickcontrols2-5-dev qml-module-qtcharts qml-module-qtquick-controls qml-module-qtquick-controls2
 ```
 
-- **Step 2.** Install compile tools to install the **QtQuick.Studio** component manually
+- **步骤 2.** 安装编译工具以手动安装 **QtQuick.Studio** 组件
 
 ```sh
 sudo apt install qt5-qmake
@@ -544,8 +544,7 @@ DISPLAY=:0 python3 main.py
 example:
 cd /ledApp
 ```
-
-- **Step 4.** Make the led_start.sh an executable file
+- **步骤 4.** 将 led_start.sh 设置为可执行文件
 
 ```sh
 chmod +x led_start.sh
@@ -577,8 +576,7 @@ Categories=Application;Development;
 example:
 cd /ledApp
 ```
-
-- **Step 4.** Make the led_start.sh an executable file
+- **步骤 4.** 将 led_start.sh 设置为可执行文件
 
 ```sh
 chmod +x led.desktop

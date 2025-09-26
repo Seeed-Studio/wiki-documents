@@ -27,7 +27,7 @@ reTerminal E シリーズ ePaper ディスプレイは、低消費電力情報�
     <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1001 Wiki</font></span></strong>
   </a>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}>今すぐ購入取</font></span></strong>
   </a>
 </div><br />
 
@@ -49,7 +49,7 @@ reTerminal E1001 は、4レベルグレースケール機能を備えた7.5イ�
     <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1002 Wiki</font></span></strong>
   </a>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}>今すぐ購入取</font></span></strong>
   </a>
 </div><br />
 

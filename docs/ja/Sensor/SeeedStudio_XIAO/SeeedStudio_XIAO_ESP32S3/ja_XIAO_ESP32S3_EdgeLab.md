@@ -12,7 +12,7 @@ last_update:
   author: LynnL4
 ---
 
-# SenseCraft Model Assistant Getting Start with Seeed Studio XIAO ESP32S3
+# SenseCraft Model Assistant Seeed Studio XIAO ESP32S3 入門ガイド
 
 ## はじめに
 [SenseCraft Model Assistant](https://edgelab.readthedocs.io/en/latest/) は、組み込みAIに焦点を当てたオープンソースプロジェクトです。OpenMMLab の優秀なアルゴリズムを実世界のシナリオに最適化し、実装をよりユーザーフレンドリーにして、組み込みデバイスでより高速で正確な推論を実現しています。

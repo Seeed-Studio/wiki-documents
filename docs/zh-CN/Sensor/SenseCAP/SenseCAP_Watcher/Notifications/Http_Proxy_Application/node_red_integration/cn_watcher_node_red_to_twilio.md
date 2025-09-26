@@ -119,7 +119,7 @@ msg.payload = msg.payload.value[0].content;
 return msg;
 ```
 
-If you want to get more than one message please following the codes below.
+如果你想获得多条消息，请按照以下代码操作。
 
 ```cpp
 var content = msg.payload.value[0].content;

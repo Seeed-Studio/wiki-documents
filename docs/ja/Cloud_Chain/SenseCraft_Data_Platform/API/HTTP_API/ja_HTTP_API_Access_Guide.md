@@ -52,7 +52,7 @@ last_update:
 </tr>
 </table>
 
- #### HTTP Basic Authentication
+ #### HTTP 基本認証
   [HTTP Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) は RESTfull API 認証の最も一般的な方法の一つです。Access ID をユーザー名として、Access Key をパスワードとして使用します。すべての HTTP クライアントライブラリは Basic Authentication の組み込みサポートを持っているはずです。このドキュメントでは curl を使用し、Basic Authentication の認証情報を指定するために –user オプションを使用します。
 
   SenseCAP Portal を通じてアクセスキーを作成できます。アクセスキーの取得方法については、クイックスタートを参照してください。

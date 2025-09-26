@@ -11,7 +11,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /es/device_network_setup
 last_update:
-  date: 11/09/2025
+  date: 09/19/2025
   author: Twelve
 ---
 
@@ -85,7 +85,7 @@ Paso 1. El dispositivo muestra un código de verificación
 
 Paso 2. Registrar Dispositivo
 - Accede a la [plataforma SenseCraft AI-Watcher Agent](https://sensecraft.seeed.cc/ai/watcher-agent)
-- Configura tu Agent según este [WiKi](https://wiki.seeedstudio.com/es/Web_Control_Panel/)
+- Configura tu Agent según este [WiKi](https://wiki.seeedstudio.com/es/watcher_web_control_panel/)
 
 ### Operaciones Básicas
 

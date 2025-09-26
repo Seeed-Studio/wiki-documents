@@ -114,7 +114,7 @@ Por favor conecta el cable grove del ventilador a D7, el cable grove del Servo a
 
 **Instrucciones de Arduino**
 
-**Paso 1**. Descarga el [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
+**Paso 1**. Descarga el [**Arduino IDE**](https://www.arduino.cc/en/Main/software)
 
 **Paso 2**. Copia el código y pégalo en el Arduino IDE
 
@@ -158,7 +158,6 @@ void loop() {
   }
 }
 ```
-
 ## Proyecto 3: Ventilador Oscilante con Control Remoto
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/beginnerKit-5-projects/Remote-Control-Oscillating-Fan/Fan_IRcontroler.gif
@@ -202,7 +201,7 @@ Esta es la función de los botones del controlador.
 
 **Paso 1**. Sigue la imagen de conexión para conectar todos los sensores en la placa.
 
-**Paso 2**. Descarga el [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
+**Paso 2**. Descarga el [**Arduino IDE**](https://www.arduino.cc/en/Main/software)
 
 **Paso 3**. Navega a **Sketch** -> **Include Library** -> **Manage Libraries**, busca **IRremote** y luego instálalo.
 
@@ -333,7 +332,7 @@ Conecta el cable del Grove water atomization a D2.
 
 **Paso 1**. Sigue la imagen de conexión para conectar todos los sensores en la placa.
 
-**Paso 2** Descarga el [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
+**Paso 2** Descarga el [**Arduino IDE**](https://www.arduino.cc/en/Main/software)
 
 **Paso 3** Navega a **Sketch** -> **Include Library** -> **Manage Libraries**, busca **U8g2** luego instálalo.
 
@@ -452,7 +451,7 @@ Por favor sigue la imagen, conecta el cable Grove del sensor ultrasónico al D2,
 
 **Paso 1**. Sigue la Conexión para enchufar el cable en el puerto.
 
-**Paso 2**. Descarga el [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
+**Paso 2**. Descarga el [**Arduino IDE**](https://www.arduino.cc/en/Main/software)
 
 **Paso 3**. Descarga [**Processing**](https://processing.org/download/)
 

@@ -11,7 +11,7 @@ last_update:
 ---
 
 
-# Grove Vision AI Module V2
+# Grove ビジョン AI モジュール V2
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/0.jpg" style={{width:700, height:'auto'}}/></div>
 

@@ -196,7 +196,7 @@ sudo minicom -b 9600 -D /dev/ttyACM0
 ifconfig
 ```
 
-- **Step 3.** Type the following on the host PC terminal to establish an SSH connection
+- **步骤 3.** 在主机 PC 终端上输入以下内容以建立 SSH 连接
 
 ```sh
 ssh user@192.xxx.xx.xx
@@ -236,8 +236,7 @@ Kubernetes 管理容器及更多内容，从边缘的微规模到大规模，在
 ```shell
 sudo systemctl daemon-reload && sudo systemctl restart docker
 ```
-
-Validate the Docker default runtime as NVIDIA:
+验证 Docker 默认运行时为 NVIDIA：
 
 ```shell
 sudo docker info | grep -i runtime
@@ -266,13 +265,13 @@ sudo apt update && sudo apt install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-Disable the swap, You have to turn this off every time you reboot.
+禁用交换分区，每次重启时都必须关闭它。
 
 ```
 sudo swapoff -a
 ```
 
-Compile deviceQuery, which we will use it in the following steps.
+编译 deviceQuery，我们将在接下来的步骤中使用它。
 
 ```shell
 cd /usr/local/cuda/samples/1_Utilities/deviceQuery && sudo make 
@@ -308,7 +307,7 @@ kubeadm join 192.168.2.114:6443 --token zqqoy7.9oi8dpkfmqkop2p5 \
     --discovery-token-ca-cert-hash sha256:71270ea137214422221319c1bdb9ba6d4b76abfa2506753703ed654a90c4982b
 ```
 
-Using the output instructions, run the following commands:
+使用输出指令，运行以下命令:
 
 ```shell
 mkdir -p $HOME/.kube
@@ -316,13 +315,12 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-Install a pod-network add-on to the control plane node. Use calico as the pod-network add-on:
+在控制平面节点上安装 pod 网络插件。使用 calico 作为 pod 网络插件：
 
 ```
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
-
-> If you are in China, follow this instead:
+> 如果你在中国，请改为按照以下步骤操作：
 
 ```
 kubectl apply -f https://gitee.com/wj204811/wj204811/raw/master/kube-flannel.yml
@@ -387,7 +385,7 @@ kubectl label node se4 node-role.kubernetes.io/worker=worker
 nano cuda-samples.yaml
 ```
 
-Add the following content and save it as cuda-samples.yaml:
+将以下内容添加并保存为 cuda-samples.yaml：
 
 ```shell
 apiVersion: v1
@@ -408,14 +406,12 @@ Create a sample GPU pod:
 ```shell
 sudo kubectl apply -f cuda-samples.yaml
 ```
-
-Check whether the samples pod was created:
+检查是否已创建 samples pod：
 
 ```
 kubectl get pods
 ```
-
-Validate the sample pod logs to support CUDA libraries:
+验证样本 pod 日志以支持 CUDA 库：
 
 ```shell
 kubectl logs nvidia-l4t-base
@@ -502,14 +498,12 @@ Create a jupyter GPU pod:
  ```
  kubectl  apply -f jupyter.yml
  ```
-
- Check whether the jupyter pod was created and running:
+检查 jupyter pod 是否已创建并正在运行：
 
  ```shell
  kubectl get pod
  ```
-
- Create an External Load Balancer
+创建外部负载均衡器
 
  ```
  kubectl expose deployment cluster-deployment --port=8888 --type=LoadBalancer 

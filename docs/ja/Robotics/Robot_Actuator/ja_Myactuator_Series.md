@@ -24,7 +24,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱</font></span></strong>
     </a>
 </div>
 
@@ -588,7 +588,8 @@ angle = actuator.getMultiTurnAngle()
 print(f"Current position: {angle}°")
 
 mode = actuator.getControlMode()
-print(f"Current control mode: {mode}")```
+print(f"Current control mode: {mode}")
+```
 
 <div align="center">
     <img width={800}

@@ -105,7 +105,7 @@ USB Type-Cケーブルでデバイスをコンピュータに接続します。�
 
 - シリアルデバッグツール
 
-## SenseCAP ONE Configuration Tool
+## SenseCAP ONE 設定ツール
 
 SenseCAP ONE Configuration Toolは、デバイスを設定するためのグラフィカルインターフェースを提供します。以下のGitHubリンクからツールをダウンロードできます：
 

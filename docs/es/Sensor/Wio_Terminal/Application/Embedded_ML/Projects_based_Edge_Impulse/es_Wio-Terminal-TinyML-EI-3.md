@@ -282,7 +282,7 @@ void DMAC_1_Handler() {
 }
 ```
 
-Next block contains configuration data for ADC DMAC and timer controlling ISR (interrupt Service Routine)
+El siguiente bloque contiene datos de configuración para ADC DMAC y temporizador que controla ISR (Rutina de Servicio de Interrupción)
 
 ```cpp
 // Configure DMA to sample from ADC at regular interval
@@ -353,7 +353,7 @@ void config_dma_adc() {
 }
 ```
 
-Add the debug condition on top of the setup function:
+Agrega la condición de depuración en la parte superior de la función de configuración:
 
 ```cpp
   // Configure pin to toggle on DMA interrupt

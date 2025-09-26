@@ -64,8 +64,7 @@ cd ~/zero_shot_detection/example_1
 ```bash
 sudo cp config/zero_shot_detection-nginx.conf /opt/nvidia/jetson/services/ingress/config
 ```
-
-**Step 3**: Run the basic services.
+**步骤 3**: 运行基本服务。
 
 ```bash
 sudo systemctl start jetson-monitoring
@@ -79,21 +78,20 @@ sudo systemctl start jetson-gpu-monitoring
 /opt/nvidia/jetson/services/ingress/config/platform-nginx.conf
 ```
 
-**Step 5**: Start the API Gateway to access the monitoring dashboard.
+**步骤 5**: 启动API网关以访问监控仪表板。
 
 ```bash
 sudo systemctl restart jetson-ingress
 sudo systemctl restart jetson-redis
 sudo systemctl restart jetson-vst
 ```
-
-**Step 6**: Start the zero-shot detection AI service.
+**步骤 6**: 启动零样本检测 AI 服务。
 
 ```bash
 sudo docker compose up -d
 ```
 
-To check if all required containers have started, you can run the following command:
+要检查所有必需的容器是否已启动，可以运行以下命令：
 
 ```bash
 sudo docker ps

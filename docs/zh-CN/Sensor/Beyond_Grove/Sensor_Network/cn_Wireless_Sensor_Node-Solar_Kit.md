@@ -175,7 +175,7 @@ last_update:
 
 有关设置/编程 Bee 模块的信息，请参考以下链接：
 
-* [Grove - XBee_Carrier](/cn/Grove-XBee_Carrier "Grove - XBee Carrier")
+* [Grove - XBee 载板](/cn/Grove-XBee_Carrier "Grove - XBee 载板")
 
 * [Wifi Bee 页面](/cn/Wifi_Bee "Wifi Bee")
 
@@ -188,7 +188,7 @@ last_update:
 
 ## 相关链接
 
-* [Grove - XBee_Carrier](/cn/Grove-XBee_Carrier "Grove - XBee Carrier")
+* [Grove - XBee 载板](/cn/Grove-XBee_Carrier "Grove - XBee 载板")
 
 * [Bees Shield](/cn/Bees_Shield "Bees Shield")
 

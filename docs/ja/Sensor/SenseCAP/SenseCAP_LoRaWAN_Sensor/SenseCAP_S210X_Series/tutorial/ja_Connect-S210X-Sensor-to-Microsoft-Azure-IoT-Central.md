@@ -88,13 +88,13 @@ node-red
 
 mqtt-brokerの設定は以下のように入力する必要があります：
 
-Server：openstream.api.sensecap.seeed.cc
+サーバー：openstream.api.sensecap.seeed.cc
 
 Port：1883
 
 Protocol: MQTT V3.1.1
 
-Client ID format：**org-"Organization ID" "Random ID"**
+クライアント ID フォーマット：**org-"組織 ID" "ランダム ID"**
 
 **Organization ID:** あなたの**Organization information**から取得
 

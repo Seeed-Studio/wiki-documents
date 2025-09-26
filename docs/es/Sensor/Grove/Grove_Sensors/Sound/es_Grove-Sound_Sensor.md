@@ -160,7 +160,7 @@ Sube el programa a tu Arduino/Seeeduino.
 
 * **Paso 1**. Elementos utilizados en este proyecto:
 
-| Raspberry pi | Grove Base Hat para RasPi| Grove - Sound Sensor|
+| Raspberry pi | Grove Base Hat para RasPi| Grove - Sensor de Sonido|
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/img/page_small_1.jpg)|
 |[Consigue UNO Ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Consigue UNO Ahora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Consigue UNO Ahora](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|
@@ -239,9 +239,8 @@ if __name__ == '__main__':
 
 
 ```
-
 :::success
-    If everything goes well, you will be able to see the following result
+    Si todo va bien, podrás ver el siguiente resultado
 :::
 
 ```python
@@ -280,7 +279,7 @@ Puedes salir de este programa simplemente presionando ++ctrl+c++.
 
 * **Paso 1.** Prepara las siguientes cosas:
 
-| Raspberry pi | GrovePi_Plus|Grove-Sound Sensor|Grove-Blue LED|
+| Raspberry pi | GrovePi_Plus|Grove-Sensor de Sonido|Grove-LED Azul|
 |--------------|-------------|-----------------|----------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/img/groveblue%20led.jpg)|
 |[Obtener Uno Ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Grove---Blue-LED-p-1139.html)|

@@ -30,7 +30,7 @@ tags:
 ![image](https://files.seeedstudio.com/wiki/reComputer_Carrier_Board/A205/Flash_A205.png)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/A205-Carrier-Board-for-Jetson-Nano-Xavier-NX-p-5133.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/A205-Carrier-Board-for-Jetson-Nano-Xavier-NX-p-5133.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong></a>
 </div>
 
 ## はじめに
@@ -309,7 +309,7 @@ cd Linux_for_Tegra/rootfs/
 sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R32.7.1_aarch64.tbz2
 ```
 
-### Step 3. 適切なドライバーの選択
+### ステップ 3. 適切なドライバーの選択
 
 パッケージを解凍した後、ボード上の各コンポーネントが正常に動作するようにドライバーもインストールする必要があります。まず、キャリアボードとモジュールに応じて、Ubuntu ホストでドライバーファイルを選択する必要があります。
 
@@ -355,7 +355,7 @@ sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R32.7.1_aarch64.tbz2
 !!!Note
  ダウンロードファイルには A205 用の JetPack 5.0.2 ドライバーが 2 つ含まれています。どちらも正常に動作しますが、一方は **IMX-219 カメラ**をサポートし、もう一方は **IMX-477 カメラ**をサポートしています。
 
-### Step 4. ファイル内のドライバーを解凍
+### ステップ 4. ファイル内のドライバーを解凍
 
 ファイルを公式のものにドラッグできます：
 
@@ -372,7 +372,7 @@ cp -a -f ${Drive package kernel path} ${Officially unpacked Linux_for_Tegra path
  `${Drive package kernel path}` はカーネルイメージフォルダへのフルパスを示します
  `${Officially unpacked Linux_for_Tegra path}` は公式に提供されたL4T zipパッケージを展開した後のLinux_for_Tegraフォルダへのフルパスを示します。
 
-### Step 5.  ボードへのシステムのフラッシュ
+### ステップ 5.  ボードへのシステムのフラッシュ
 
 この例ではNVIDIA Jetson Nanoモジュールを使用し、以下のコマンドを実行してシステムを直接ボードにフラッシュできます：
 

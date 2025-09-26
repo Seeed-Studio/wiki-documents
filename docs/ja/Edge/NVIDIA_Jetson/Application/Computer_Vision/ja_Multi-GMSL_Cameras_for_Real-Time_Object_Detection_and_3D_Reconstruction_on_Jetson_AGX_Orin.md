@@ -90,13 +90,13 @@ last_update:
 GMSL カメラから入力を得るためには、まずシリアライザおよびデシリアライザのフォーマットを設定する必要があります。これらをシステム起動スクリプトに追加し、システム起動時に自動で設定されるようにします。
 </div>
 
-**Step 1.** 構成スクリプトを作成：
+**ステップ 1.** 構成スクリプトを作成：
 
 ```bash
 touch media-setup.sh
 ```
 
-**Step 2.** 次の内容を media-setup.sh に貼り付けます：
+**ステップ 2.** 次の内容を media-setup.sh に貼り付けます：
 
 ```bash
 #!/bin/bash
@@ -120,13 +120,13 @@ media-ctl -d /dev/media0 --set-v4l2 '"des_1_ch_2":0[fmt:YUYV8_1X16/1920x1536]'
 media-ctl -d /dev/media0 --set-v4l2 '"des_1_ch_3":0[fmt:YUYV8_1X16/1920x1536]'
 ```
 
-**Step 3.** media-setup.sh に実行権限を付与：
+**ステップ 3.** media-setup.sh に実行権限を付与：
 
 ```bash
 chmod +x media-setup.sh
 ```
 
-**Step 4.** systemd サービスを作成：
+**ステップ 4.** systemd サービスを作成：
 
 ```bash
 sudo vim /etc/systemd/system/mediactl-init.service 
@@ -145,7 +145,7 @@ RemainAfterExit=true
 WantedBy=multi-user.target
 ```
 
-**Step 5.** 保存して終了後、サービスを有効化：
+**ステップ 5.** 保存して終了後、サービスを有効化：
 
 ```bash
 sudo systemctl daemon-reexec
@@ -154,7 +154,7 @@ sudo systemctl enable mediactl-init.service
 sudo systemctl start mediactl-init.service
 ```
 
-**Step 5.** デバイスを再起動し、サービスが実行中か確認：
+**ステップ 5.** デバイスを再起動し、サービスが実行中か確認：
 
 ```bash
 sudo systemctl status mediactl-init.service
@@ -186,7 +186,7 @@ YOLOv11 は Ultralytics によって公開されたリアルタイム物体検�
 
 ### YOLO11 をインストールしてマルチカメラ物体検出を実行
 
-**Step 1.** 必要なパッケージをダウンロードしてインストール：
+**ステップ 1.** 必要なパッケージをダウンロードしてインストール：
 :::note
 以下のパッケージは、CUDA 12.6 を搭載した JetPack 6.2 用にビルドされています。
 :::

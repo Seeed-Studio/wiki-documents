@@ -148,7 +148,7 @@ git clone https://github.com/ultralytics/ultralytics.git
 cd ultralytics
 ```
 
-**Step 2.** Open requirements.txt and modify the relevant content:
+**步骤 2.** 打开 requirements.txt 并修改相关内容：
 
 ```bash
 # Use the `vi` command to open the file
@@ -161,7 +161,7 @@ torchvision>=0.8.1 --> # torchvision>=0.8.1
 # Press `ESC` to exit edit mode, and finally input `:wq` to save and exit the file.
 ```
 
-**Step 3**. Run the following commands to download the required dependencies for YOLO and install YOLOv8:
+**步骤 3**. 运行以下命令来下载 YOLO 所需的依赖项并安装 YOLOv8：
 
 ```bash
 pip3 install -e .
@@ -175,8 +175,7 @@ sudo apt-get install -y libopenblas-base libopenmpi-dev
 wget https://developer.download.nvidia.cn/compute/redist/jp/v512/pytorch/torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl -O torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl
 pip3 install torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl
 ```
-
-**Step 5.** Install the corresponding torchvision:
+**步骤 5.** 安装相应的 torchvision：
 
 ```bash
 sudo apt install -y libjpeg-dev zlib1g-dev
@@ -186,7 +185,7 @@ python3 setup.py install --user
 cd ..
 ```
 
-**Step 6.** Use the following command to ensure that YOLO has been successfully installed:
+**步骤 6.** 使用以下命令确保已成功安装 YOLO：
 
 ```bash
 yolo detect predict model=yolov8s.pt source='https://ultralytics.com/images/bus.jpg'
@@ -315,7 +314,7 @@ cap.release()
 output.release()
 ```
 
-**Step 2.** Run the following command and record the inference speed before model quantization:
+**步骤 2.** 运行以下命令并记录模型量化前的推理速度:
 
 ```bash
 python3 inference.py
@@ -347,8 +346,7 @@ yolo export model=/home/nvidia/Everything_Happens_Locally/runs/detect/train2/wei
 ```bash
 model = YOLO(<path to .pt>) --> model = YOLO(<path to .engine>)
 ```
-
-Then, rerun the inference command:
+然后，重新运行推理命令：
 
 ```bash
 python3 inference.py

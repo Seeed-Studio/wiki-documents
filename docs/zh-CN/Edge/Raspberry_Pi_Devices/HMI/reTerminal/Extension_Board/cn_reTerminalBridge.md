@@ -45,7 +45,7 @@ sudo ./scripts/reTerminal.sh
 ```
 
 :::note
-For **32bit OS** you will need to add following step before execute `sudo ./scripts/reTerminal.sh`
+对于 **32 位操作系统**，您需要在执行 `sudo ./scripts/reTerminal.sh` 之前添加以下步骤
 
 ```
 echo arm_64bit=0 | sudo tee -a /boot/config.txt
@@ -134,7 +134,7 @@ cd Seeed_reTerminal_Bridge_Fan_control/
 sudo python3 fan.py
 ```
 
-Here is the **fan.py** code for reference.
+以下是 **fan.py** 代码供参考。
 
 ```python
 import sys 
@@ -241,20 +241,20 @@ sudo nano /boot/config.txt
 sudo ip link set can0 up type can bitrate 500000
 ```
 
-**Step 6.** Download the [code](https://github.com/limengdu/Seeed_reTerminal_Bridge_CAN_exmaple) to reTerminal.
+**步骤 6.** 将[代码](https://github.com/limengdu/Seeed_reTerminal_Bridge_CAN_exmaple)下载到reTerminal。
 
 ```sh
 git clone https://github.com/limengdu/Seeed_reTerminal_Bridge_CAN_exmaple
 ```
 
-One of the reTerminals compiles and runs the code that sends the data.
+其中一个 reTerminal 编译并运行发送数据的代码。
 
 ```sh
 cd Seeed_reTerminal_Bridge_CAN_exmaple/
 gcc cantransmit.c -o cantransmit
 ```
 
-Here is the **cantransmit.c** code for reference.
+以下是 **cantransmit.c** 代码供参考。
 
 ```c
 #include <stdio.h>
@@ -313,13 +313,13 @@ int main(int argc, char **argv)
 }
 ```
 
-Another reTerminal compiles and runs the code that receives the data.
+另一个 reTerminal 编译并运行接收数据的代码。
 
 ```sh
 gcc canreceive.c -o canreceive
 ```
 
-Here is the **canreceive.c** code for reference.
+以下是 **canreceive.c** 代码供参考。
 
 ```c
 #include <stdio.h>
@@ -394,7 +394,7 @@ int main(int argc, char **argv)
 gcc canfilter.c -o canfilter
 ```
 
-Here is the **canfilter.c** code for reference.
+以下是 **canfilter.c** 代码供参考。
 
 ```c
 
@@ -634,7 +634,7 @@ git clone https://github.com/limengdu/Seeed_reTerminal_Bridge_RS232_exmaple
 cd Seeed_reTerminal_Bridge_RS232_exmaple/
 ```
 
-One of the reTerminals compiles and runs the code that sends the data.
+其中一个 reTerminal 编译并运行发送数据的代码。
 
 ```sh
 sudo python3 rs232_send.py
@@ -669,7 +669,7 @@ except KeyboardInterrupt:
     exit()
 ```
 
-Another reTerminal compiles and runs the code that receives the data.
+另一个 reTerminal 编译并运行接收数据的代码。
 
 ```sh
 sudo python3 rs232_receive.py
@@ -717,7 +717,7 @@ except KeyboardInterrupt:
 git clone https://github.com/esnet/iperf.git
 ```
 
-**Step 2.** Use the following codes to install the **iperf3**
+**步骤 2.** 使用以下代码安装 **iperf3**
 
 ```
 cd iperf
@@ -726,7 +726,7 @@ sudo make
 sudo make install
 ```
 
-**Step 3.** Use reTerminal as server.
+**步骤 3.** 将 reTerminal 用作服务器。
 
 ```sh
 iperf3 -s
@@ -791,14 +791,14 @@ cd sx1302_hal
 sudo make
 ```
 
-**Step 4.** Configure the reset script. First download the file to **sx1302_hal/packet_forwarder** use the command
+**步骤 4.** 配置重置脚本。首先使用以下命令将文件下载到 **sx1302_hal/packet_forwarder**
 
 ```
 cd sx1302_hal/packet_forwarder
 wget https://files.seeedstudio.com/wiki/reTerminal_Bridge/reset_lgw.sh
 ```
 
-Then run the following code test according to your WM1302 version.
+然后根据你的 WM1302 版本运行以下代码测试。
 
 ```sh
 USB version
@@ -947,7 +947,7 @@ lsblk
 sudo fdisk /dev/sdX
 ```
 
-For example, in my case:
+例如，就我而言：
 
 ```sh
 sudo fdisk /dev/sda
@@ -1000,7 +1000,7 @@ Partition type
 sudo mkfs.ext4 /dev/sdXX
 ```
 
-similarly where the ```sdXX``` is the device name of your SSD, in my case i use ```/dev/sda1``` like:
+类似地，其中 ```sdXX``` 是你的 SSD 的设备名称，在我的情况下我使用 ```/dev/sda1``` 例如：
 
 ```bash
 sudo mkfs.ext4 /dev/sda1
@@ -1029,7 +1029,7 @@ sudo mkdir /media/seeed/SSD
 sudo mount /dev/sda1 /media/seeed/SSD/
 ```
 
-To check if the SSD successfully mounted by:
+通过以下方式检查 SSD 是否成功挂载：
 
 ```bash
 lsblk
@@ -1075,7 +1075,7 @@ lsusb -t
 sudo apt install minicom
 ```
 
-**Step 4.** Connect EC25-EUX 4G module through minicom.
+**步骤 4.** 通过 minicom 连接 EC25-EUX 4G 模块。
 
 ```sh
 sudo minicom -D /dev/ttyUSB2 -b 1152008n1
@@ -1101,7 +1101,7 @@ AT+QCFG="usbnet"
 AT+QCFG="usbnet",1
 ```
 
-Then enter the following command to force the modem to reboot:
+然后输入以下命令强制调制解调器重启：
 
 ```sh
 AT+CFUN=1,1
@@ -1152,7 +1152,7 @@ nano /boot/config.txt
 sudo reboot
 ```
 
-After waiting for the restart, use the command `arecord -l` to view the recording device.
+重启后，使用命令 `arecord -l` 查看录音设备。
 
 ```bash
 arecord -L

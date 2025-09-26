@@ -81,7 +81,7 @@ import TabItem from '@theme/TabItem';
 sudo apt update
 ```
 
-- **Step 3.** Install dependencies
+- **ステップ 3.** Install dependencies
 
 ```sh
 sudo apt-get install \
@@ -120,19 +120,19 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-- **Step 8.** Add Docker user to the system
+- **ステップ 8.** Dockerユーザーをシステムに追加する
 
 ```sh
 sudo usermod -aG docker pi
 ```
 
-- **Step 9.** Check whether Docker is working properly
+- **ステップ 9.** Dockerが正常に動作しているかどうかを確認する
 
 ```sh
 docker --version
 ```
 
-If you see an output like below, that means Docker is installed properly
+以下のような出力が表示された場合、Dockerが正しくインストールされていることを意味します
 
 ```
 Docker version 20.10.18, build b40c2f6
@@ -188,7 +188,7 @@ wget <copied_link>
 wget https://github.com/home-assistant/os-agent/releases/download/1.3.0/os-agent_1.3.0_linux_armv7.deb
 ```
 
-- **Step 12.** Install Home Asssitant OS Agent
+- **ステップ 12.** Home Assistant OS エージェントをインストールする
 
 ```sh
 sudo dpkg -i os-agent_<version_number>_linux_armv7.deb
@@ -210,7 +210,7 @@ sudo dpkg -i os-agent_1.3.0_linux_armv7.deb
 wget https://github.com/home-assistant/supervised-installer/releases/download/1.3.0/homeassistant-supervised.deb
 ```
 
-- **Step 14.** Install Home Assistant-Supervised
+- **ステップ 14.** Home Assistant-Supervisedをインストール
 
 ```sh
 sudo dpkg -i homeassistant-supervised.deb
@@ -274,7 +274,7 @@ homeassistant.local:8123
 
 初期起動プロセスの完了には時間がかかります
 
-- **Step 2.** 起動が完了したら、アカウントを作成し、初期設定の指示に従ってください
+- **ステップ 2.** 起動が完了したら、アカウントを作成し、初期設定の指示に従ってください
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png" /></center>
 
@@ -286,7 +286,7 @@ homeassistant.local:8123
 
 reTerminalのLCDでHome AssistantダッシュボードUIを表示するために、Raspberry Pi OSに既に含まれているChromiumウェブブラウザを使用します。reTerminalが起動した後にChromiumがフルスクリーンモードで自動起動するように設定します。
 
-- **Step 1.** 以下のディレクトリに移動します
+- **ステップ 1.** 以下のディレクトリに移動します
 
 ```sh
 cd /etc/xdg/lxsession/LXDE-pi/

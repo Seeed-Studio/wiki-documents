@@ -72,10 +72,10 @@ Home Assistant 主要提供三种方式来扩展其功能：
 
 现在让我们设置一些插件。在这里，我们将向您展示如何设置以下插件。
 
-- Terminal & SSH
-- File editor
+- 终端 & SSH
+- 文件编辑器
 - Glances
-- Google Drive Backup
+- Google Drive 备份
 
 您还可以设置诸如 **Node-RED、ESPHome、Adguard Home、BitWarden、Samba Share、Mosquitto broker、BookStack、Uptime Kuma、Cloudflared Tunnel 等**插件
 

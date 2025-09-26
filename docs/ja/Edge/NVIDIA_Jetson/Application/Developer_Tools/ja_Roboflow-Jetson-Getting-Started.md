@@ -226,7 +226,7 @@ python infer-simple.py
 git clone https://github.com/roboflow/inference
 ```
 
-- **Step 2:** Enter the "inference" directory and start compiling your own Docker image
+- **ステップ 2:** "inference"ディレクトリに入り、独自のDockerイメージのコンパイルを開始する
 
 ```sh
 cd inference

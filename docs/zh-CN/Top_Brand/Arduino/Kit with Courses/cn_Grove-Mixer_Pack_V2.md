@@ -38,9 +38,9 @@ last_update:
 
 2.  1x [Grove - Recorder](/cn/Grove_Recorder "Grove - Recorder")
 
-3.  1x [Grove - LED String Light](/cn/Grove-LED_String_Light "Grove - LED String Light")
+3.  1x [Grove - LED 串灯](/cn/Grove-LED_String_Light "Grove - LED 串灯")
 
-4.  1x [Grove - Mini Fan](/cn/Grove-Mini_Fan "Grove - Mini Fan")
+4.  1x [Grove - 迷你风扇](/cn/Grove-Mini_Fan "Grove - 迷你风扇")
 
 5.  1x [Grove - NOT](/cn/Grove-NOT "Grove - NOT")
 
@@ -50,27 +50,27 @@ last_update:
 
 8.  1x [Grove - Buzzer](/cn/Grove-Buzzer "Grove - Buzzer")
 
-9.  1x [Grove - Light Sensor](/cn/Grove-Light_Sensor "Grove - Light Sensor")
+9.  1x [Grove - 光线传感器](/cn/Grove-Light_Sensor "Grove - 光线传感器")
 
-10.  1x [Grove - Red LED](/cn/Grove-Red_LED "Grove - Red LED")
+10。1x [Grove - 红色 LED](/cn/Grove-Red_LED "Grove - 红色 LED")
 
-11.  1x [Grove - Sound Sensor](/cn/Grove-Sound_Sensor "Grove - Sound Sensor")
+11。 1x [Grove - 声音传感器](/cn/Grove-Sound_Sensor "Grove - 声音传感器")
 
-12.  1x [Grove - Slide Potentiometer](/cn/Grove-Slide_Potentiometer "Grove - Slide Potentiometer")
+12。 1x [Grove - 滑动电位器](/cn/Grove-Slide_Potentiometer "Grove - 滑动电位器")
 
 13.  1x [Grove - Button](/cn/Grove-Button "Grove - Button") -->
 
 *   **Grove模块配件：**
 
-<!-- 1.  1x DC Motor to work with the [Grove - Mini Fan](/cn/Grove-Mini_Fan "Grove - Mini Fan") module
+<!-- 1.  1x DC 电机可与 [Grove - 迷你风扇](/cn/Grove-Mini_Fan "Grove - 迷你风扇")模块配合使用
 
 2.  1x Colorful Fan that fits onto the DC Motor
 
-3.  1x Small Audio Speaker to work with the [Grove - Recorder](/cn/Grove_Recorder "Grove - Recorder") module
+3.  1x 小型音频扬声器，可与 [Grove - 录音机](/cn/Grove_Recorder "Grove - 录音机")模块配合使用
 
-4.  1x LED String Light to work with the [Grove - LED String Light](/cn/Grove-LED_String_Light "Grove - LED String Light") module
+4.  1x LED 灯串以配合 [Grove - LED 灯串](/cn/Grove-LED_String_Light "Grove - LED 灯串")模块使用
 
-5.  7x [Grove Cables](/cn/Grove_System/#grove-cables "GROVE System") (3x 200mm, 3x 50mm, 1x Branch Cable) -->
+5.  7x [Grove 线缆](/cn/Grove_System/#grove-cables "GROVE 系统") (3x 200mm，3x 50mm，1x 分支线缆) -->
 
 ## 使用方法
 
@@ -165,7 +165,7 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/Grove-Mixer_Pack_V2/img/Grove-and-usage.jpg)
 
-<!-- Using [Grove - AND](/cn/Grove-AND "Grove - AND") logic gate
+<!-- 使用 [Grove - AND](/cn/Grove-AND "Grove - AND") 逻辑门
 
 Typical Usage:_ Use this when you need two sensory inputs to trigger an output. For example, lets say you want to build a circuit that lights up some LED lights either on music but only in the dark. To build such a circuit, you will need two input modules - the [Grove - Sound Sensor](/cn/Grove-Sound_Sensor "Grove - Sound Sensor") and the [Grove - Light Sensor](/cn/Grove-Light_Sensor "Grove - Light Sensor") (The [Grove - Light Sensor](/cn/Grove-Light_Sensor "Grove - Light Sensor") module will be used in conjunction with the [Grove - NOT](/cn/Grove-NOT "Grove - NOT") logic gate so that lights switch ON only in the dark). These input side modules can then be connected to the left-side of the [Grove - AND](/cn/Grove-AND "Grove - AND") gate module. The output from this logic gate module will connect to the left-side of the power module, while the right-side will be connected to the LED lights module ([Grove - Red LED](/cn/Grove-Red_LED "Grove - Red LED") or [Grove - LED String Light](/cn/Grove-LED_String_Light "Grove - LED String Light")). Now, when you switch ON the circuit, observe what happens. You will see that the LED lights turn ON when it is both dark AND there is some sound or music playing. This also implies that even if the [Grove - Sound Sensor](/cn/Grove-Sound_Sensor "Grove - Sound Sensor") is supplying a HIGH signal to the LED lights when it detects sound or music, then unless the [Grove - Light Sensor](/cn/Grove-Light_Sensor "Grove - Light Sensor") detects darkness, the LED lights will always stay OFF. Only when it is dark AND there is sound or music detected by the sound sensor will the LED lights will flash. -->
 
@@ -259,9 +259,9 @@ Grove Mixer Pack 模块和配件可用于构建许多有趣的项目。您随包
 
         *   1x [Grove - DC Jack Power](/cn/Grove-DC_Jack_Power "Grove - DC Jack Power")
 
-        *   1x [Grove - Light Sensor](/cn/Grove-Light_Sensor "Grove - Light Sensor")
+        *   1x [Grove - 光线传感器](/cn/Grove-Light_Sensor "Grove - 光线传感器")
 
-        *   1x [Grove - Red LED](/cn/Grove-Red_LED "Grove - Red LED") -->
+        *   1x [Grove - 红色 LED](/cn/Grove-Red_LED "Grove - 红色 LED") -->
 
 **按照这些逐步图形说明来构建您的项目：**
 
@@ -283,11 +283,11 @@ Grove Mixer Pack 模块和配件可用于构建许多有趣的项目。您随包
 
 <!-- - 1x [Grove - DC Jack Power](/cn/Grove-DC_Jack_Power "Grove - DC Jack Power")
 
-- 1x [Grove - Light Sensor](/cn/Grove-Light_Sensor "Grove - Light Sensor")
+- 1x [Grove - 光线传感器](/cn/Grove-Light_Sensor "Grove - 光线传感器")
 
 - 1x [Grove - NOT](/cn/Grove-NOT "Grove - NOT")
 
-- 1x [Grove - LED String Light](/cn/Grove-LED_String_Light "Grove - LED String Light") module along with the LED String lights -->
+- 1x [Grove - LED 串灯](/cn/Grove-LED_String_Light "Grove - LED 串灯")模块以及LED串灯 -->
 
 **按照这些逐步图形说明来构建您的项目：**
 

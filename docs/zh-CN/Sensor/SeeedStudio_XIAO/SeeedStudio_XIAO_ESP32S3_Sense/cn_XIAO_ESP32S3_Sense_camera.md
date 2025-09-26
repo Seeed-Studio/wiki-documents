@@ -216,7 +216,7 @@ esp_err_t esp_camera_init(const camera_config_t* config);
 camera_fb_t* esp_camera_fb_get();
 ```
 
-Data structure of camera frame buffer:
+相机帧缓冲区的数据结构：
 
 ```cpp
 typedef struct {
@@ -229,23 +229,23 @@ typedef struct {
 } camera_fb_t;
 ```
 
-4. Return the frame buffer to be reused again.
+4. 返回帧缓冲区以便再次使用。
 
 ```cpp
 void esp_camera_fb_return(camera_fb_t * fb);
 ```
 
-- **Input Parameters**: Pointer to the frame buffer
+- **输入参数**：指向帧缓冲区的指针
 
-5. Get a pointer to the image sensor control structure.
+5. 获取指向图像传感器控制结构的指针。
 
 ```cpp
 sensor_t * esp_camera_sensor_get();
 ```
 
-- **Output**: pointer to the sensor
+- **输出**：指向传感器的指针
 
-6. Save camera settings to non-volatile-storage (NVS).
+6. 将相机设置保存到非易失性存储器中 (NVS)。
 
 ```cpp
 esp_err_t esp_camera_save_to_nvs(const char *key);
@@ -677,12 +677,12 @@ if(camera_sign && sd_sign){
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -1340,7 +1340,7 @@ XIAO ESP32S3 如果您长时间执行此项目，请注意散热，XIAO会变得
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html?qid=UXYOXT_08tfc9pt_1746512260418" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>

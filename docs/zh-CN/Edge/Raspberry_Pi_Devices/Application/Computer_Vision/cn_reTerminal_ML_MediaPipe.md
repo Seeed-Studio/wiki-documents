@@ -33,9 +33,9 @@ MediaPipe 是 Google 开发的一个开源框架，用于构建多模态（例�
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
    <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
           </a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
         </tr>
     </table>
 
@@ -80,13 +80,13 @@ source env/bin/activate
 cd Seeed_Python_ReTerminal/samples/mediapipe_picam/face_detector/raspberry_pi
  ```
 
-- **Step 2** Run the setup script to install the necessary dependencies
+- **步骤 2** 运行安装脚本以安装必要的依赖项
 
  ```sh
 sh setup.sh
  ```
 
-- **Step 3** Once the setup is complete, you can execute the source file to initiate face detection
+- **步骤 3** 设置完成后，您可以执行源文件来启动人脸检测
 
  ```sh
 python3 detect.py
@@ -102,13 +102,13 @@ python3 detect.py
 cd Seeed_Python_ReTerminal/samples/mediapipe_picam/face_landmarker/raspberry_pi
  ```
 
-- **Step 2** Run the setup script to install the necessary dependencies
+- **步骤 2** 运行安装脚本以安装必要的依赖项
 
  ```sh
 sh setup.sh
  ```
 
-- **Step 3** Once the setup is complete, you can execute the source file to initiate face landmaker.
+- **步骤 3** 设置完成后，您可以执行源文件来启动面部特征点标记器。
 
  ```sh
 python3 detect.py
@@ -124,13 +124,13 @@ python3 detect.py
 cd Seeed_Python_ReTerminal/samples/mediapipe_picam/hand_landmarker/raspberry_pi
  ```
 
-- **Step 2** Run the setup script to install the necessary dependencies
+- **步骤 2** 运行安装脚本以安装必要的依赖项
 
  ```sh
 sh setup.sh
  ```
 
-- **Step 3** Once the setup is complete, you can execute the source file to initiate hand landmaker.
+- **步骤 3** 设置完成后，您可以执行源文件来启动手部地标检测器。
 
  ```sh
 python3 detect.py
@@ -146,13 +146,13 @@ python3 detect.py
 cd Seeed_Python_ReTerminal/samples/mediapipe_picam/pose_landmarker/raspberry_pi
  ```
 
-- **Step 2** Run the setup script to install the necessary dependencies
+- **步骤 2** 运行安装脚本以安装必要的依赖项
 
  ```sh
 sh setup.sh
  ```
 
-- **Step 3** Once the setup is complete, you can execute the source file to initiate pose landmaker.
+- **步骤 3** 设置完成后，您可以执行源文件来启动姿势标记器。
 
  ```sh
 python3 detect.py

@@ -11,7 +11,7 @@ last_update:
 ---
 
 
-# Grove Vision AI Module
+# Grove Vision AI モジュール
 
 このセクションでは、センサーの動作方法、Wio Terminalを使用してセンサーデータを取得する方法、Wio TerminalとGrove - Wio-E5を使用してデータを送信する方法について詳しく説明します。
 

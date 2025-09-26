@@ -94,7 +94,7 @@ for i in range(0, numdevices):
             print "Input Device id ", i, " - ", p.get_device_info_by_host_api_device_index(0, i).get('name')
 ```
 
-Then, change `RESPEAKER_INDEX = 1` to your index number. Run the script to record a speech.
+次に、`RESPEAKER_INDEX = 1`をあなたのインデックス番号に変更してください。スクリプトを実行して音声を録音します。
 
 ```python
 import pyaudio
@@ -266,7 +266,7 @@ if __name__ == '__main__':
   | d2,0  | 210    |
   | 96,0  | 150    |
 
-## Schematic Online Viewer
+## 回路図オンラインビューア
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array/res/Respeaker%20Microphone%20Array%20v1.0%20Eagle%20File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
@@ -284,7 +284,7 @@ if __name__ == '__main__':
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/build-google-assistant-on-rpi-with-respeaker-mic-array-1030bb/embed' width='350'></iframe>
 
-## Tech Support & Product Discussion
+## 技術サポート・製品ディスカッション
 
 当社の製品をお選びいただき、ありがとうございます！当社の製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 

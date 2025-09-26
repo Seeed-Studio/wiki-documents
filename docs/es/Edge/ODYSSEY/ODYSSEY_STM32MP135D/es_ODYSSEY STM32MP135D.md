@@ -269,19 +269,19 @@ CONFIG_NVMEM=y
 
 Para aplicarlo, ejecuta ```make menuconfig``` en el directorio de nivel superior de buildroot. Ve al menú de bootloaders, desplázate hacia abajo hasta u-boot y modifica la ruta de fragmentos de configuración adicionales, por ejemplo ingresando ```$(BR2_EXTERNAL_STM32MP135D_ODYSSEY_PATH)/board/stm32mp135d-odyssey/configs/uboot.config```.
 
-Then, please do a rebuild using ```make clean && make```.
+Luego, por favor haz una reconstrucción usando ```make clean && make```.
 
-Ultimately the layout is free for you to use, except for the MAC addresses location and length.
+En última instancia, el diseño es libre para que lo uses, excepto por la ubicación y longitud de las direcciones MAC.
 
-### How to use the EEPROM ###
+### Cómo usar el EEPROM ###
 
-To make use of the EEPROM on your board, you get access to it as a nvmem device, in both u-boot and linux. For example, lets write a MAC address in it:
+Para hacer uso del EEPROM en tu placa, obtienes acceso a él como un dispositivo nvmem, tanto en u-boot como en linux. Por ejemplo, escribamos una dirección MAC en él:
 
 ```
 printf '\x2c\xf7\xf1\30\x2b\x62'|dd of=/sys/bus/nvmem/devices/0-00501/nvmem bs=1
 ```
 
-To store a second MAC address, do like so:
+Para almacenar una segunda dirección MAC, hazlo así:
 
 ```
 printf '\x2c\xf7\xf1\30\x2b\x63'|dd of=/sys/bus/nvmem/devices/0-00501/nvmem bs=1 seek=16

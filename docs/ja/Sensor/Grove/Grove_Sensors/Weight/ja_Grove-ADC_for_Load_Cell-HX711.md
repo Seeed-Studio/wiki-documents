@@ -12,7 +12,7 @@ last_update:
 ---
 
 
-# Grove - ADC for Load Cell (HX711)
+# Grove - ADC ロードセル用 (HX711)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/Grove-ADC-for-Load-Cell-HX711-wiki.jpg" style={{width:700, height:'auto'}}/></div>
 

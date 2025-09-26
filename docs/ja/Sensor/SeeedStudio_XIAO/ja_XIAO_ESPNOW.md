@@ -18,6 +18,7 @@ last_update:
 このWikiでは、ESP-NOWプロトコルとは何かを説明し、XIAO ESP32シリーズを使用してこのプロトコルで通信する方法を教えます。プロセスは非常にシンプルです。XIAO ESP32シリーズでESP-NOWプロトコルを活用できるように、3つのXIAO ESP32タイプ（C6/C3/S3）を用意して通信を行います。それでは、この旅を始めましょう！
 
 ちなみに、このボードを初めて手に入れた場合は、このリンクをクリックしてください。始め方を説明しています。
+
 - [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/)
 - [Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/ja/xiao_esp32c3_getting_started/)
 - [Seeed Studio XIAO ESP32C6](https://wiki.seeedstudio.com/ja/xiao_esp32c6_getting_started/)
@@ -27,10 +28,12 @@ last_update:
 公式の定義によると：ESP-NOWは、Espressifが定義した無線通信プロトコルで、ルーターを必要とせずにスマートデバイスの直接的で高速かつ低消費電力の制御を可能にします。Wi-FiやBluetooth LEと共存でき、Lexin ESP8266、ESP32、ESP32-S、ESP32-Cなどの複数シリーズのSoCをサポートしています。ESP-NOWは、スマートホーム家電、リモートコントロール、センサーなどの分野で広く使用されています。
 
 以下の特徴があります：
+
 - MACアドレス接続方式により、ネットワーク条件なしで迅速にペアリングでき、デバイスを1対多、1対1、多対1、多対多の方法で接続できます
 - ESP-NOWはデータリンク層に基づく無線通信プロトコルで、5層のOSI上位層プロトコルを1層に簡素化し、パケットヘッダーの追加や層ごとのアンパックが不要です。ネットワーク輻輳時のパケット損失による遅延や遅れを大幅に軽減し、より高い応答速度を持ちます
 
 Wi-FiやBluetoothとの比較：
+
 - Wi-Fi：ESP-NOWはデバイス間のポイントツーポイント通信をサポートするため、消費電力が低く、伝送速度が高く、通信距離も長くなります。
 - Bluetooth：ESP-NOWはペアリングプロセスが不要で、より簡単で使いやすく、消費電力が低く、伝送速度が高くなります。
 
@@ -43,35 +46,35 @@ Wi-FiやBluetoothとの比較：
 まだXIAO ESP32シリーズを2つ持っていない場合は、こちらが購入リンクです。
   
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO ESP32C3</th>
-			<th>XIAO ESP32S3</th>
+ <table align="center">
+  <tr>
+   <th>XIAO ESP32C3</th>
+   <th>XIAO ESP32S3</th>
             <th>XIAO ESP32C6</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    </a>
+   </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## 機能実現
@@ -270,13 +273,15 @@ void espnow_deinit(){
 }
 ```
 
-#### Resolution Part1 Code
+#### 解像度 パート1 コード
 
 インクルードライブラリ
- - `#include "WiFi.h"`
- - `#include "esp_now.h"`
+
+- `#include "WiFi.h"`
+- `#include "esp_now.h"`
 
 コア関数
+
 - `espnow_init()`  
   - 役割 : ESPNOW 機能を初期化する
   - 戻り値 : 初期化成功 : [ESP_OK] 失敗 : [ESP_FAIL]
@@ -285,29 +290,30 @@ void espnow_deinit(){
   - 戻り値 : 初期化成功 : [ESP_OK]
 - `SenderXIAOS3_MACAddress_Requir()`  
   - 役割 : WiFiモードをSTAに設定し、MACアドレスを取得してシリアルポートに出力する
-- `SenderXIAOS3_Send_Data()` 
+- `SenderXIAOS3_Send_Data()`
   - 役割 : 特定のメッセージを送信する
-- `SenderXIAOS3_Send_Data_cb()` 
+- `SenderXIAOS3_Send_Data_cb()`
   - 役割 : これはコールバック関数で、実行時に印刷されたメッセージが正常に配信されたかどうかと、どのMACアドレス宛かを確認する
-- `Association_ReceiverXIAOC3_peer() and Association_ReceiverXIAOC6_peer` 
+- `Association_ReceiverXIAOC3_peer() and Association_ReceiverXIAOC6_peer`
   - 役割 : ピアノードを追加する。より多くの受信機が必要な場合は、ノードを作成し、送信機と受信機に対応するメッセージを記述できる
-- `esp_now_register_send_cb()` 
+- `esp_now_register_send_cb()`
   - 役割 : MACレイヤーに送信されたかどうかを確認するコールバック関数を登録する
   - 戻り値 : MACレイヤーがデータを正常に受信:[ESP_NOW_SEND_SUCCESS] そうでなければ [ESP_NOW_SEND_FAIL]
 - `ReceiverXIAOC3_Recive_Data_cb()`
- - 役割 : 送信からの送信およびデータ送信のコールバック関数を受け入れる
+- 役割 : 送信からの送信およびデータ送信のコールバック関数を受け入れる
 - `ReceiverXIAOC6_Recive_Data_cb()`
- - 役割 : 送信からの送信およびデータ送信のコールバック関数を受け入れる
-- `esp_now_register_recv_cb()` 
+- 役割 : 送信からの送信およびデータ送信のコールバック関数を受け入れる
+- `esp_now_register_recv_cb()`
   - 役割 : MACレイヤーに送信されたかどうかを確認するコールバック関数を登録する
   - 戻り値 : MACレイヤーがデータを正常に受信:[ESP_NOW_SEND_SUCCESS] そうでなければ [ESP_NOW_SEND_FAIL]
 
 デフォルト変数
-- `#define ESPNOW_WIFI_CHANNE` 
+
+- `#define ESPNOW_WIFI_CHANNE`
   - 役割 : 送信機と受信機が位置するチャンネル
-- `#define MAX_ESP_NOW_MAC_LEN` 
+- `#define MAX_ESP_NOW_MAC_LEN`
   - 役割 : MACアドレスの長さ
-- `#define MAX_CHARACTERS_NUMBER` 
+- `#define MAX_CHARACTERS_NUMBER`
   - 役割 : 受信または送信する最大文字数
 - `#define BAUD 115200`
   - 役割 : シリアルポートのボーレートを設定する
@@ -317,7 +323,7 @@ void espnow_deinit(){
 - `NO_PMK_KEY`
   - 役割 : 暗号化なしでデバイスをペアリングすることを選択する
 
-### Part 2. XIAO ESP32C3 Receiver Code
+### パート2. XIAO ESP32C3 受信機コード
 
 ```c
 #include<Arduino.h>
@@ -467,13 +473,15 @@ void Association_SenderXIAOS3_peer(){
 }
 ```
 
-#### Resolution Part2 Code
+#### 解像度 パート2 コード
 
 インクルードライブラリ
+
 - `#include "WiFi.h"`
 - `#include "esp_now.h"`
 
 コア関数
+
 - `espnow_init()`  
   - 役割 : ESPNOW 機能を初期化する
   - 戻り値 : 初期化成功 : [ESP_OK] 失敗 : [ESP_FAIL]
@@ -482,27 +490,28 @@ void Association_SenderXIAOS3_peer(){
   - 戻り値 : 初期化成功 : [ESP_OK]
 - `Receiver_MACAddress_requir()`  
   - 役割 : WiFiモードをSTAに設定し、MACアドレスを取得してシリアルポートに出力する
-- `ReceiverXIAOC3_Send_Data()` 
+- `ReceiverXIAOC3_Send_Data()`
   - 役割 : 特定のメッセージを送信する
-- `ReceiverXIAOC3_Recive_Data_cb()` 
+- `ReceiverXIAOC3_Recive_Data_cb()`
   - 役割 : これはコールバック関数で、実行時に印刷されたメッセージが正常に配信されたかどうかと、どのMACアドレス宛かを確認する
-- `Association_SenderXIAOS3_peer()` 
+- `Association_SenderXIAOS3_peer()`
   - 役割 : XIAO ESP32S3 がメッセージを送信するためのチャンネルノードを追加する
-- `esp_now_register_send_cb()` 
+- `esp_now_register_send_cb()`
   - 役割 : MAC層に送信されたかどうかを確認するコールバック関数を登録する
   - 戻り値 : MAC層がデータを正常に受信:[ESP_NOW_SEND_SUCCESS] それ以外 [ESP_NOW_SEND_FAIL]
 - `ReceiverXIAOC3_Send_Data_cb`
   - 役割 : これはコールバック関数で、実行時に印刷されたメッセージが正常に配信されたかどうかと、どのMACアドレス宛かを確認する
-- `esp_now_register_recv_cb()` 
+- `esp_now_register_recv_cb()`
   - 役割 : MAC層に送信されたかどうかを確認するコールバック関数を登録する
   - 戻り値 : MAC層がデータを正常に受信:[ESP_NOW_SEND_SUCCESS] それ以外 [ESP_NOW_SEND_FAIL]
 
 デフォルト変数
-- `#define ESPNOW_WIFI_CHANNE` 
+
+- `#define ESPNOW_WIFI_CHANNE`
   - 役割 : 送信者と受信者が位置するチャンネル
-- `#define MAX_ESP_NOW_MAC_LEN` 
+- `#define MAX_ESP_NOW_MAC_LEN`
   - 役割 : MACアドレスの長さ
-- `#define MAX_CHARACTERS_NUMBER` 
+- `#define MAX_CHARACTERS_NUMBER`
   - 役割 : 受信または送信する最大文字数
 - `#define BAUD 115200`
   - 役割 : シリアルポートのボーレートを設定する
@@ -512,7 +521,7 @@ void Association_SenderXIAOS3_peer(){
 - `NO_PMK_KEY`
   - 役割 : 暗号化なしでデバイスをペアリングすることを選択する
 
-### Part 3. XIAO ESP32C6 Receiver Code
+### パート3. XIAO ESP32C6 受信機コード
 
 ```c
 #include<Arduino.h>
@@ -661,13 +670,15 @@ void Association_SenderXIAOS3_peer(){
 }
 ```
 
-#### Resolution Part3 Code
+#### 解像度 パート3 コード
 
 インクルードライブラリ
+
 - `#include "WiFi.h"`
 - `#include "esp_now.h"`
 
 コア関数
+
 - `espnow_init()`  
   - 役割：ESPNOW機能を初期化する
   - 戻り値：初期化成功：[ESP_OK] 失敗：[ESP_FAIL]
@@ -676,29 +687,30 @@ void Association_SenderXIAOS3_peer(){
   - 戻り値：初期化成功：[ESP_OK]
 - `Receiver_MACAddress_requir()`  
   - 役割：WiFiモードをSTAに設定し、MACアドレスを取得してシリアルポートに出力する
-- `ReceiverXIAOC6_Send_Data()` 
+- `ReceiverXIAOC6_Send_Data()`
   - 役割：特定のメッセージを送信する
-- `ReceiverXIAOC6_Recive_Data_cb()` 
+- `ReceiverXIAOC6_Recive_Data_cb()`
   - 役割：これはコールバック関数で、実行時に印刷されたメッセージが正常に配信されたかどうかと、どのMACアドレス宛かを確認する
-- `Association_SenderXIAOS3_peer()` 
+- `Association_SenderXIAOS3_peer()`
   - 役割：XIAO ESP32S3がメッセージを送信するためのチャンネルノードを追加する
 - `ReceiverXIAOC6_Send_Data_cb()`
   - 役割：これはコールバック関数で、実行時に印刷されたメッセージが正常に配信されたかどうかと、どのMACアドレス宛かを確認する
-- `esp_now_register_send_cb()` 
+- `esp_now_register_send_cb()`
   - 役割：MACレイヤーに送信されたかどうかを確認するコールバック関数を登録する
   - 戻り値：MACレイヤーがデータを正常に受信：[ESP_NOW_SEND_SUCCESS] それ以外：[ESP_NOW_SEND_FAIL]
-- `esp_now_register_recv_cb()` 
+- `esp_now_register_recv_cb()`
   - 役割：MACレイヤーに送信されたかどうかを確認するコールバック関数を登録する
   - 戻り値：MACレイヤーがデータを正常に受信：[ESP_NOW_SEND_SUCCESS] それ以外：[ESP_NOW_SEND_FAIL]
 - `NO_PMK_KEY`
   - 役割：暗号化なしでデバイスをペアリングすることを選択する
 
 デフォルト変数
-- `#define ESPNOW_WIFI_CHANNE` 
+
+- `#define ESPNOW_WIFI_CHANNE`
   - 役割：送信者と受信者が位置するチャンネル
-- `#define MAX_ESP_NOW_MAC_LEN` 
+- `#define MAX_ESP_NOW_MAC_LEN`
   - 役割：受信者MACアドレスの長さ
-- `#define MAX_CHARACTERS_NUMBER` 
+- `#define MAX_CHARACTERS_NUMBER`
   - 役割：受信または送信する最大文字数
 - `#define BAUD 115200`
   - 役割：シリアルポートのボーレートを設定する
@@ -708,12 +720,11 @@ void Association_SenderXIAOS3_peer(){
 - `NO_PMK_KEY`
   - 役割：暗号化なしでデバイスをペアリングすることを選択する
 
-
 ## デモレンダリング
 
 以下はESPNOWを使用したIXAO ESP32通信の結果です
 
-#### 送信者 XIAO ESP32S3 結果 
+#### 送信者 XIAO ESP32S3 結果
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/121.png" style={{width:600, height:'auto'}}/></div>
 
@@ -728,18 +739,23 @@ void Association_SenderXIAOS3_peer(){
 ## ESPNOWの概要
 
 低消費電力：
+
 - Wi-Fiに接続することなく通信できるバッテリー駆動デバイスに適している。
 
 高速接続：
+
 - デバイスは複雑なペアリングプロセスを必要とせずに迅速に接続を確立できる。
 
 多対多通信：
+
 - 複数のデバイス間の通信をサポートし、1つのデバイスが複数のデバイスにデータを送信できる。
 
 セキュリティ：
+
 - 暗号化機能をサポートし、データ伝送のセキュリティを確保する。
 
 短距離通信：
+
 - 通常、短距離（数十メートル）のワイヤレス通信に使用される。
 
 ## トラブルシューティング
@@ -756,7 +772,7 @@ void Association_SenderXIAOS3_peer(){
 
 ## リソース
 
-- **[Espressif 公式ドキュメント]** [ESPRESSIF ESP-IDF ESP-NOW ](https://docs.espressif.com/projects/esp-idf/zh_CN/stable/esp32/api-reference/network/esp_now.html?highlight=espnow#esp-now)
+- **[Espressif 公式ドキュメント]** [ESPRESSIF ESP-IDF ESP-NOW](https://docs.espressif.com/projects/esp-idf/zh_CN/stable/esp32/api-reference/network/esp_now.html?highlight=espnow#esp-now)
 
 ## 技術サポートと製品ディスカッション
 

@@ -41,7 +41,7 @@ Base Shield 已经过测试，完全兼容以下开发板：
 
 - [Wio Lite - W600](https://www.seeedstudio.com/Wio-Lite-W600-p-4155.html)
 - [Wio Lite - MG126](https://www.seeedstudio.com/Wio-Lite-MG126-p-4189.html)
-- Adafruit SAMD21 based Feather Board 
+- 基于Adafruit SAMD21的Feather板
 
 
 这款开发板在外形上也与其他 Adafruit Feather 开发板兼容。当您将此 shield 与那些 Adafruit Feather 开发板一起使用时，请匹配引脚编号。

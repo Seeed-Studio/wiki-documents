@@ -240,7 +240,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 
-- **Step 3**. Execute below commands to create the python code.
+- **Paso 3**. Ejecuta los siguientes comandos para crear el código de python.
 
 ```
 cd grove.py/grove/
@@ -305,7 +305,7 @@ python MIX8410.py 0
 ```
 
 :::success
-    If everything goes well, you will be able to see the following result.
+    Si todo va bien, podrás ver el siguiente resultado.
 :::
 
 ```python

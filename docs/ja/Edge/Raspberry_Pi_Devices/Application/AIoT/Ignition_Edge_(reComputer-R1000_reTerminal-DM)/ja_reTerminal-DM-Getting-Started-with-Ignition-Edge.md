@@ -11,7 +11,7 @@ last_update:
   date: 09/29/2023
   author: Corey Thompson
 ---
-# reTerminal DM Getting Started with Ignition Edge
+# reTerminal DM Ignition Edge を使い始める
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/reTerminal_DM_Ignition_Edge.png" alt="pir" width="600" height="auto"/></p>
 
@@ -43,7 +43,7 @@ Ignition Edgeは、エッジデバイス上で組み合わせて使用し、ネ�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -111,7 +111,7 @@ chmod +x ./uninstall-ignition-edge.sh
 nano ~/.bashrc
 ```
 
-Append the launch command to the the file
+ファイルに起動コマンドを追加する
 
 ```bash
 /opt/ignitionedge/ignition.sh start'
