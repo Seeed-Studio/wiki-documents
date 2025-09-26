@@ -264,6 +264,7 @@ west --version
 
 - nRF Connect SDK
 - Plugin nRF Connect para VSCode
+
 ***Si ya lo tienes preinstalado en tu computadora, puedes verificar el número de versión de tu herramienta siguiendo el comando a continuación***
 
 </details>
@@ -302,6 +303,7 @@ Abre VS Code y busca nRF Connect for VS Code Extension Pack en el Centro de Plug
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn8.png" style={{width:600, height:'auto'}}/></div>
 <br />
 La extensión nRF Connect for VS Code permite a los desarrolladores utilizar el popular Entorno de Desarrollo Integrado Visual Studio Code (VS Code IDE) para desarrollar, construir, depurar e implementar aplicaciones embebidas basadas en el nRF Connect SDK (Kit de Desarrollo de Software) de Nordic. La extensión incluye herramientas de desarrollo útiles como una interfaz de compilador, enlazador, sistema de construcción completo, depurador habilitado para RTOS, interfaz perfecta con el nRF Connect SDK, editor de visualización del árbol de dispositivos y un terminal serie integrado.
+
 El paquete de extensión nRF Connect para VS Code incluye los siguientes componentes:
 
 - nRF Connect for VS Code: La extensión principal contiene la interfaz entre el sistema de construcción y el nRF Connect SDK, así como una interfaz para gestionar la versión del nRF Connect SDK y la cadena de herramientas.
@@ -375,6 +377,7 @@ Para configurar tu placa para nRF Connect en VS Code, puedes seguir estos pasos:
 - Abre VS Code y ve a Settings.
 
 - Escribe nRF Connect en el cuadro de búsqueda.
+
 - Encuentra el elemento de configuración Board Roots y haz clic en Edit en settings.json.
 
 - Agrega la ruta `zephyr` del archivo de placa XIAO nRF54L15 descargado al array boardRoots.
@@ -592,6 +595,7 @@ Si quieres tener una comprensión más profunda de los principios internos del n
 </Steppers>
 
 ## Restaurar configuración de fábrica
+
 Para las placas XIAO nRF54L15, se proporciona un script de restablecimiento de fábrica para recuperar la placa de un mal estado (ej., cuando no se puede cargar debido a la protección de escritura NVM interna). Este script realizará un borrado masivo de la flash y programará un firmware de fábrica.
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="hhttps://github.com/Jasionf/platform-seeedboards/tree/main/scripts/factory_reset" target="_blank" rel="noopener noreferrer">
@@ -626,7 +630,8 @@ Si quieres usar JLink para programar, puedes seguir los pasos a continuación. S
 - [Jlink](https://www.segger.com/downloads/jlink/)
 
 :::tip
-Necesitas descargar la versión más reciente de J-Link para tener soporte para la placa modelo nRF54L15.:::
+Necesitas descargar la versión más reciente de J-Link para tener soporte para la placa modelo nRF54L15.
+:::
 
 **Software Requerido**
 
@@ -889,7 +894,8 @@ Si quieres usar esta rutina de batería en el nRF Connect SDK, necesitas agregar
     com-invdir;
     prechargep = <0x22>;
   };
-  };  ```
+  };
+  ```
 
   </details>
 

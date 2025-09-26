@@ -264,6 +264,7 @@ west --version
 
 - nRF Connect SDK
 - VSCode nRF Connect 插件
+
 ***如果您已经在计算机上预安装了它，您可以通过以下命令检查工具的版本号***
 
 </details>
@@ -295,31 +296,32 @@ You should see the following output:
 [00:00:02] ###### 100% [Install packages] Install packages
 ``` -->
 
-#### VScode configures the board and builds the burn-in file
+#### VScode 配置开发板并构建烧录文件
 
-Open VS Code and search for nRF Connect for VS Code Extension Pack in the Plugin Center. This plugin pack will automatically install other VS Code plugins required for nRF Connect.
+打开 VS Code，在插件中心搜索 **nRF Connect for VS Code Extension Pack**。此插件包会自动安装 nRF Connect 所需的其他 VS Code 插件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn8.png" style={{width:600, height:'auto'}}/></div>
 <br />
-The nRF Connect for VS Code extension enables developers to utilize the popular Visual Studio Code Integrated Development Environment (VS Code IDE) to develop, build, debug and deploy embedded applications based on Nordic's nRF Connect SDK (Software Development Kit). The extension includes useful development tools such as a compiler interface, linker, complete build system, RTOS-enabled debugger, seamless interfacing with the nRF Connect SDK, device tree visualization editor, and an integrated serial terminal.
-The nRF Connect extension package for VS Code includes the following components:
+**nRF Connect for VS Code 扩展**使开发者能够利用流行的 Visual Studio Code 集成开发环境（VS Code IDE）来开发、构建、调试和部署基于 Nordic nRF Connect SDK（软件开发包）的嵌入式应用程序。该扩展包含许多实用的开发工具，例如：编译器接口、链接器、完整的构建系统、支持 RTOS 的调试器、与 nRF Connect SDK 的无缝对接、设备树可视化编辑器，以及集成的串口终端。
 
-- nRF Connect for VS Code: The main extension contains the interface between the build system and the nRF Connect SDK, as well as an interface to manage the nRF Connect SDK version and toolchain.
-- nRF DeviceTree: Provides device tree language support and a device tree visualization editor.
-- nRF Kconfig: Provides Kconfig language support.
-- nRF Terminal: Serial and RTT terminals.
-- Microsoft C/C++: Adds language support for C/C++, including features of IntelliSense.
-- CMake: CMake language support.
-- GNU Linker Mapping Files: Support for linker mapping files.
-We can download any preferred version of the nRF Connect SDK and its toolchain via the extension. The full nRF Connect for VS Code documentation is available at https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html.
+nRF Connect 扩展包包含以下组件：
 
-#### Installing the toolchain
+- nRF Connect for VS Code：主扩展，提供构建系统与 nRF Connect SDK 之间的接口，以及 SDK 版本和工具链管理接口。  
+- nRF DeviceTree：提供设备树语言支持和设备树可视化编辑器。  
+- nRF Kconfig：提供 Kconfig 语言支持。  
+- nRF Terminal：串口和 RTT 终端。  
+- Microsoft C/C++：为 C/C++ 添加语言支持，包括 IntelliSense 功能。  
+- CMake：CMake 语言支持。  
+- GNU Linker Mapping Files：支持链接器映射文件。  
+我们可以通过扩展下载任意所需版本的 nRF Connect SDK 及其工具链。完整的 nRF Connect for VS Code 文档请参考：https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html  
 
-The toolchain is a collection of tools that work together to build nRF Connect SDK applications, including assembler, compiler, linker, and CMake components.
-The first time you open nRF Connect for VS Code, you will be prompted to install the toolchain. This usually happens if the extension does not detect any installed toolchain on your computer.
-Click Install Toolchain and a list of toolchain versions will be listed that can be downloaded and installed on your computer. Select the version of the toolchain that matches the version of the nRF Connect SDK you plan to use. We always recommend using the latest tagged version of the nRF Connect SDK.
+#### 安装工具链
 
-By default, nRF Connect for VS Code only displays the Released tab (i.e., the stable version) of the toolchain. If you are evaluating a new feature and would like to use the Preview tab or another type of tab (e.g. Customer Sampling -cs), click on "Show all toolchain versions" as shown below:
+工具链（Toolchain）是一组协同工作的工具，用于构建 nRF Connect SDK 应用程序，包括汇编器、编译器、链接器和 CMake 组件。  
+首次打开 nRF Connect for VS Code 时，系统会提示安装工具链。如果扩展未检测到你电脑上已安装的工具链，就会出现此提示。  
+点击 **Install Toolchain**，系统会列出可下载和安装的工具链版本。请选择与你计划使用的 nRF Connect SDK 版本相匹配的工具链版本。我们始终建议使用 nRF Connect SDK 的最新标记版本。  
+
+默认情况下，nRF Connect for VS Code 仅显示工具链的 Released 标签页（即稳定版本）。如果你在评估新功能，想使用 Preview 标签页或其他类型的版本（例如 Customer Sampling -cs），请点击 Show all toolchain versions，如下所示：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/toolchain2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -375,6 +377,7 @@ Blinky 示例将使开发板上的 LED1 持续闪烁。
 - 打开 VS Code 并转到设置。
 
 - 在搜索框中输入 nRF Connect。
+
 - 找到 Board Roots 设置项并点击 Edit in settings.json。
 
 - 将下载的 XIAO nRF54L15 板文件的 `zephyr` 路径添加到 boardRoots 数组中。
@@ -592,6 +595,7 @@ return 0;
 </Steppers>
 
 ## 恢复出厂设置
+
 对于 XIAO nRF54L15 板，提供了出厂重置脚本来从不良状态恢复板子（例如，当由于内部 NVM 写保护而无法上传时）。此脚本将执行闪存的批量擦除并编程出厂固件。
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="hhttps://github.com/Jasionf/platform-seeedboards/tree/main/scripts/factory_reset" target="_blank" rel="noopener noreferrer">
@@ -626,7 +630,8 @@ bash factory_reset.sh
 - [Jlink](https://www.segger.com/downloads/jlink/)
 
 :::tip
-您需要下载最新版本的 J-Link 以获得 nRF54L15 型号板的支持。:::
+您需要下载最新版本的 J-Link 以获得 nRF54L15 型号板的支持。
+:::
 
 **所需软件**
 
@@ -889,7 +894,8 @@ TPS22916CYFPR 芯片的作用：
     com-invdir;
     prechargep = <0x22>;
   };
-  };  ```
+  };
+  ```
 
   </details>
 

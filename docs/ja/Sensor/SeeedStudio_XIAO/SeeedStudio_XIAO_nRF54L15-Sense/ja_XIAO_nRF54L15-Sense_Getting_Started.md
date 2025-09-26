@@ -264,6 +264,7 @@ west --version
 
 - nRF Connect SDK
 - VSCode nRF Connectプラグイン
+
 ***コンピュータに事前にインストールされている場合は、以下のコマンドでツールのバージョン番号を確認できます***
 
 </details>
@@ -302,6 +303,7 @@ VS Codeを開き、プラグインセンターでnRF Connect for VS Code Extensi
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn8.png" style={{width:600, height:'auto'}}/></div>
 <br />
 nRF Connect for VS Code拡張機能により、開発者は人気のVisual Studio Code統合開発環境（VS Code IDE）を利用して、NordicのnRF Connect SDK（Software Development Kit）に基づく組み込みアプリケーションの開発、ビルド、デバッグ、デプロイを行うことができます。この拡張機能には、コンパイラインターフェース、リンカー、完全なビルドシステム、RTOS対応デバッガー、nRF Connect SDKとのシームレスなインターフェース、デバイスツリー可視化エディター、統合シリアルターミナルなどの便利な開発ツールが含まれています。
+
 VS Code用nRF Connect拡張パッケージには、以下のコンポーネントが含まれています：
 
 - nRF Connect for VS Code：メイン拡張機能で、ビルドシステムとnRF Connect SDKの間のインターフェース、およびnRF Connect SDKバージョンとツールチェーンを管理するインターフェースが含まれています。
@@ -375,6 +377,7 @@ VS CodeでnRF Connect用にボードを設定するには、以下の手順に�
 - VS Codeを開き、設定に移動してください。
 
 - 検索ボックスにnRF Connectと入力してください。
+
 - Board Roots設定項目を見つけて、settings.jsonの編集をクリックします。
 
 - ダウンロードしたXIAO nRF54L15ボードファイルの`zephyr`パスをboardRoots配列に追加します。
@@ -592,6 +595,7 @@ nRF Connect SDKの内部原理をより深く理解したい場合は、以下�
 </Steppers>
 
 ## 工場出荷時設定の復元
+
 XIAO nRF54L15ボードには、ボードを不良状態から回復するための工場リセットスクリプトが提供されています（例：内部NVM書き込み保護によりアップロードできない場合）。このスクリプトはフラッシュの一括消去を実行し、工場出荷時ファームウェアをプログラムします。
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="hhttps://github.com/Jasionf/platform-seeedboards/tree/main/scripts/factory_reset" target="_blank" rel="noopener noreferrer">
@@ -626,7 +630,8 @@ JLinkをプログラミングに使用したい場合は、以下の手順に従
 - [Jlink](https://www.segger.com/downloads/jlink/)
 
 :::tip
-nRF54L15モデルボードのサポートを得るには、J-Linkの最新バージョンをダウンロードする必要があります。:::
+nRF54L15モデルボードのサポートを得るには、J-Linkの最新バージョンをダウンロードする必要があります。
+:::
 
 **必要なソフトウェア**
 
@@ -889,7 +894,8 @@ nRF Connect SDKでこのバッテリールーチンを使用したい場合は�
     com-invdir;
     prechargep = <0x22>;
   };
-  };  ```
+  };
+  ```
 
   </details>
 

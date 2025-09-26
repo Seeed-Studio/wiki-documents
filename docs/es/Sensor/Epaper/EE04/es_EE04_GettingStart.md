@@ -38,6 +38,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 Alimentada por **XIAO ESP32-S3** Plus, la placa de pantalla EE04 soporta pantallas ePaper de **24 pines** y **50 pines**. Cuenta con un conector de batería JST de 2.0 mm con interruptor de alimentación, IC de carga integrado, y viene con un botón de reinicio y tres botones de usuario. Muy adecuada para proyectos ePaper de bajo consumo como señalización digital, etiquetas electrónicas y tableros de información portátiles.
 
 ### Características
+
 - **Alimentada por XIAO ESP32-S3 Plus:** Funciona inmediatamente cuando se conecta a una pantalla ePaper compatible.
 - **Soporte de Pantalla Versátil:** Compatible con una amplia gama de pantallas ePaper, soportando interfaces de 24 pines y 50 pines con cambio fácil mediante tapas de puente.
 - **Conector BAT con Interruptor:** Proporciona conexión simple de batería e integra un interruptor, permitiendo gestión eficiente de energía y ahorro energético.
@@ -145,15 +146,14 @@ Alimentada por **XIAO ESP32-S3** Plus, la placa de pantalla EE04 soporta pantall
 - **Pantalla de Termostato Inteligente**: Mostrar niveles de temperatura y humedad, así como configuraciones de control para su termostato inteligente.
 - **Marco de Fotos Digital**: Crear un marco de fotos digital habilitado para WiFi que puede mostrar imágenes desde su red de casa inteligente.
 
-
 ## Descripción del Hardware
-
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
 
-
 ### eInk Soportados
+
 #### Conector de 24 Pines
+
 - [Papel electrónico de 1.54 pulgadas - Dotmatix 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
 - [Papel electrónico de 2.13 pulgadas - Monocromático Flexible 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
 - [Papel electrónico de 2.13 pulgadas - Cuádruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
@@ -170,12 +170,15 @@ Alimentada por **XIAO ESP32-S3** Plus, la placa de pantalla EE04 soporta pantall
 
 :::tip
 Al usar la Placa de Pantalla ePaper XIAO, asegúrese de configurar el puente según el tipo de pantalla ePaper:
+
 - Para pantallas ePaper de 24 Pines → configure el puente a 24 Pines
 
 ⚠️ Usar la configuración de puente incorrecta puede causar que el ePaper falle al mostrar o muestre contenido anormal. Siempre verifique dos veces la posición del puente antes de encender.
 
 :::
+
 #### Conector de 50 Pines
+
 - [Papel electrónico de 7.3 pulgadas - Siete Colores 800x480](https://www.seeedstudio.com/7-3-Seven-Color-ePaper-Display-with-800x480-Pixels-p-5787.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
@@ -188,7 +191,6 @@ Al usar la Placa de Pantalla ePaper XIAO, asegúrese de configurar el puente seg
 :::
 
 ## Descripción del Software
-
 
 ### Instalar la Librería Seeed Arduino GFX
 
@@ -236,9 +238,11 @@ Hay 4 ejemplos básicos, abra un ejemplo básico que le guste:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
 ## Comenzando
+
 Aquí, usamos una pantalla de 5.83 pulgadas como ejemplo. Los pasos son los mismos para todas las pantallas de 24 pines; la única diferencia es seleccionar el tamaño de pantalla apropiado en el controlador.
 
 Cree un **nuevo archivo "driver.h"** y pegue ese código en él. El código debería ser como:
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/40.png" style={{width:1000, height:'auto'}}/></div>
 
 ```cpp
@@ -251,7 +255,6 @@ Después de eso, ve a **Herramientas** -> **Placa** -> **XIAO ESP32S3** y **Herr
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/32.png" style={{width:1000, height:'auto'}}/></div>
 
 ¡Ahora verás la respuesta en tu pantalla de papel electrónico! A continuación se muestran los resultados de los ejemplos de Helloworld.
-
 
 :::tip
 ⚠️ Nota: Orientación del Cable ePaper
@@ -268,6 +271,7 @@ La imagen de abajo muestra la conexión correcta:
 El EE04 cuenta con tres botones programables por el usuario que pueden utilizarse para varios propósitos de control. Esta sección demuestra cómo leer los estados de los botones y responder a las pulsaciones de botones usando Arduino.
 
 En el EE04, los tres botones están conectados al ESP32-S3:
+
 - KEY1 (GPIO2_D1/A1)
 - KEY2 (GPIO3_D2/A2)
 - KEY3 (GPIO5_D4/A4)
@@ -365,8 +369,8 @@ void loop() {
 ```
 
 ## Recursos
-- **[PDF]** [Esquemático de la Pantalla ePaper XIAO EE04 de Seeed Studio](https://files.seeedstudio.com/wiki/Epaper/EE04/EE04.pdf)
 
+- **[PDF]** [Esquemático de la Pantalla ePaper XIAO EE04 de Seeed Studio](https://files.seeedstudio.com/wiki/Epaper/EE04/EE04.pdf)
 
 ## Soporte Técnico y Discusión de Productos
 

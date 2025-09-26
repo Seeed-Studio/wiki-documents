@@ -38,6 +38,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 由 **XIAO ESP32-S3** Plus 驱动，显示板 EE04 支持 **24 针**和 **50 针**电子纸显示屏。它配备 JST 2.0 mm 电池连接器和电源开关、内置充电 IC，并配有一个复位按钮和三个用户按钮。非常适合低功耗电子纸项目，如数字标牌、电子标签和便携式信息板。
 
 ### 特性
+
 - **由 XIAO ESP32-S3 Plus 驱动：** 连接兼容的电子纸显示屏后即可立即工作。
 - **多功能显示支持：** 兼容多种电子纸屏幕，支持 24 针和 50 针接口，通过跳线帽轻松切换。
 - **带开关的电池连接器：** 提供简单的电池连接并集成开关，实现高效的电源管理和节能。
@@ -145,15 +146,14 @@ import Steppers from '@site/src/components/utils/Stepper';
 - **智能恒温器显示**：显示温度和湿度水平，以及智能恒温器的控制设置。
 - **数字相框**：创建支持 WiFi 的数字相框，可以显示来自智能家居网络的图像。
 
-
 ## 硬件概述
-
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
 
-
 ### 支持的电子墨水屏
+
 #### 24 针连接器
+
 - [1.54 英寸电子纸 - 点阵 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
 - [2.13 英寸电子纸 - 柔性单色 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
 - [2.13 英寸电子纸 - 四色 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
@@ -170,12 +170,15 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 :::tip
 使用 XIAO ePaper Display Board 时，请确保根据电子纸显示屏类型设置跳线：
+
 - 对于 24 针电子纸显示屏 → 将跳线设置为 24 针
 
 ⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。在通电前请务必仔细检查跳线位置。
 
 :::
+
 #### 50 针连接器
+
 - [7.3 英寸电子纸 - 七色 800x480](https://www.seeedstudio.com/7-3-Seven-Color-ePaper-Display-with-800x480-Pixels-p-5787.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
@@ -188,7 +191,6 @@ import Steppers from '@site/src/components/utils/Stepper';
 :::
 
 ## 软件概述
-
 
 ### 安装 Seeed Arduino GFX 库
 
@@ -236,9 +238,11 @@ import Steppers from '@site/src/components/utils/Stepper';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
 ## 入门指南
+
 这里，我们以 5.83 英寸显示屏为例。所有 24 针屏幕的步骤都相同；唯一的区别是在驱动程序中选择适当的屏幕尺寸。
 
 创建一个**新的 "driver.h" 文件**并将这些代码粘贴到其中。代码应该如下所示：
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/40.png" style={{width:1000, height:'auto'}}/></div>
 
 ```cpp
@@ -251,7 +255,6 @@ import Steppers from '@site/src/components/utils/Stepper';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/32.png" style={{width:1000, height:'auto'}}/></div>
 
 现在您将在电子纸屏幕上看到反馈！以下是 Helloworld 示例的结果。
-
 
 :::tip
 ⚠️ 注意：电子纸电缆方向
@@ -268,6 +271,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 EE04 具有三个用户可编程按钮，可用于各种控制目的。本节演示如何使用 Arduino 读取按钮状态并响应按钮按下。
 
 在 EE04 上，三个按钮连接到 ESP32-S3：
+
 - KEY1 (GPIO2_D1/A1)
 - KEY2 (GPIO3_D2/A2)
 - KEY3 (GPIO5_D4/A4)
@@ -365,8 +369,8 @@ void loop() {
 ```
 
 ## 资源
-- **[PDF]** [Seeed Studio XIAO 电子纸显示屏 EE04 原理图](https://files.seeedstudio.com/wiki/Epaper/EE04/EE04.pdf)
 
+- **[PDF]** [Seeed Studio XIAO 电子纸显示屏 EE04 原理图](https://files.seeedstudio.com/wiki/Epaper/EE04/EE04.pdf)
 
 ## 技术支持与产品讨论
 
