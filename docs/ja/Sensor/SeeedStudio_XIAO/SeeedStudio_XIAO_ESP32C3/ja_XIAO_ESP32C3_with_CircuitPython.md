@@ -158,7 +158,7 @@ REPLの探索を開始する場所を教えてくれる*help()*でREPLと対話�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/4.png" /></div>
 
-### 2. CircuitPython Web Workflow
+### 2. CircuitPython Web ワークフロー
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/5.png" /></div>
 

@@ -413,7 +413,7 @@ lpr:
   enabled: false
 ```
 
-## Run the project
+## プロジェクトを実行する
 
 プロジェクトをプルして実行する：
 

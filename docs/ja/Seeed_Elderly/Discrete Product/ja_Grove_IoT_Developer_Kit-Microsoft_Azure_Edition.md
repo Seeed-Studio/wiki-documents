@@ -47,7 +47,7 @@ Intel Edison コンピュートモジュール
 Intel Edison For Arduino
 
 
-### Base Shield V2
+### ベースシールド V2
 
 [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Base_Shield_v2-1.png)](https://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
 

@@ -117,7 +117,7 @@ reServerでWindowsを使用している場合、システムの機能性を向�
 
 - **ステップ 2.** 以下の手順に進みます
 
-### Realtek High Definition Audio Driver
+### Realtek High Definition Audio ドライバー
 
 - **ステップ 1.** **audio_realtek_6.0.9057.1_w1064.zip**を展開します
 
@@ -125,7 +125,7 @@ reServerでWindowsを使用している場合、システムの機能性を向�
 
 - **ステップ 3.** **Setup.exe**をダブルクリックします
 
-### Intel® Chipset Device Software
+### Intel® チップセットデバイスソフトウェア
 
 - **ステップ 1.** **chipset-10.1.18460.8229-public-mup.zip**を展開します
 
@@ -133,13 +133,13 @@ reServerでWindowsを使用している場合、システムの機能性を向�
 
 - **ステップ 3.** **SetupChipset.exe**をダブルクリックします
 
-### Intel® Graphics Driver
+### Intel® グラフィックスドライバー
 
 - **ステップ 1.** **Graphics Driver.zip**を展開します
 
 - **ステップ 2.** **igfx_win_101.1069.exe**をダブルクリックします
 
-### Intel® HID Event Filter Driver
+### Intel® HID イベントフィルタードライバー
 
 - **ステップ 1.** **Intel(R)_HIDEventFilterDriver-2.2.1.384_20H1Certified.zip**を展開します
 
@@ -147,7 +147,7 @@ reServerでWindowsを使用している場合、システムの機能性を向�
 
 - **ステップ 3.** **Setup.exe**をダブルクリックします
 
-### Intel® Converged Security and Management Engine Driver
+### Intel® Converged Security and Management Engine ドライバー
 
 - **ステップ 1.** **intel_(r)_csme_15.0.0.1318v3_b0_cons.zip**を展開します
 
@@ -155,7 +155,7 @@ reServerでWindowsを使用している場合、システムの機能性を向�
 
 - **ステップ 3.** **MEISetup.exe**をダブルクリックします
 
-### Intel® Serial IO Host Controller Driver
+### Intel® Serial IO ホストコントローラードライバー
 
 - **ステップ 1.** **SerialIO-Win10-30.100.2129.8.zip**を展開します
 

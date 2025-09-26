@@ -199,7 +199,7 @@ sudo apt-get update
 sudo apt-get -y install cuda
 ```
 
-## Verify Docker runtime
+## Docker ランタイムの検証
 
 ```sh
 docker info | grep runtime

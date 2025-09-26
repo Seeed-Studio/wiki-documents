@@ -69,7 +69,7 @@ command [options] [arguments]
 
 例えば、`ls -l /home/recamera` は `/home/recamera` ディレクトリ内のすべてのファイルを詳細形式で一覧表示します。
 
-## **4.User recamera && root**
+## **4.ユーザー再カメラ && root**
 
 recameraを初めて使用する際は、デフォルトのrecameraパスワードをリセットします。これはターミナルにログインする際に使用するパスワードでもあります。
 
@@ -94,7 +94,7 @@ rootユーザーはシステム関連ファイルを変更でき、システム�
 
 :::
 
-## **5. Basic Linux Commands**
+## **5. 基本的なLinuxコマンド**
 
 以下は基本的なコマンドとその使用方法です：
 

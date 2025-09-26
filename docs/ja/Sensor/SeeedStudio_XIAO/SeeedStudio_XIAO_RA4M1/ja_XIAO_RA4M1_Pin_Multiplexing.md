@@ -329,7 +329,7 @@ void loop() {
 }
 ```
 
-### Usage of Software Serial
+### ソフトウェアシリアルの使用法
 
 ```c
 #include <SoftwareSerial.h>

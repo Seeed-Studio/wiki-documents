@@ -10,7 +10,7 @@ last_update:
     author: halyssonJr
 ---
 
-# Seeed Studio XIAO RP2040 with NuttX(RTOS)
+# Seeed Studio XIAO RP2040 と NuttX(RTOS)
 
 ## はじめに
 

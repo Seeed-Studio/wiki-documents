@@ -165,7 +165,7 @@ Groveネットワークモジュールには、IoTプロジェクト、ワイヤ
     <a class="get_one_now_item" href="/ja/Grove_NFC/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove - NFC_tag
+#### Grove - NFCタグ
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -226,7 +226,7 @@ Groveネットワークモジュールには、IoTプロジェクト、ワイヤ
 
 ### RF
 
-#### Grove - 125KHz RFID Reader
+#### Grove - 125KHz RFID リーダー
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -245,7 +245,7 @@ Groveネットワークモジュールには、IoTプロジェクト、ワイヤ
     <a class="get_one_now_item" href="/ja/Grove-125KHz_RFID_Reader/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove - 315MHz RF Kit
+#### Grove - 315MHz RF キット
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -263,7 +263,7 @@ Groveネットワークモジュールには、IoTプロジェクト、ワイヤ
     <a class="get_one_now_item" href="/ja/Grove-315MHz_RF_Kit/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove - 433MHz Simple RF Link Kit
+#### Grove - 433MHz シンプル RF リンクキット
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -281,7 +281,7 @@ Groveネットワークモジュールには、IoTプロジェクト、ワイヤ
     <a class="get_one_now_item" href="/ja/Grove-433MHz_Simple_RF_Link_Kit/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove - Long Range
+#### Grove - 長距離
 
 Groveは、Seeed Studioによって開発された非常に強力なプラットフォームで、IoTプロジェクトを簡素化することを目的としています。Seeedが製造したほとんどのボードにGroveコネクタを統合し、それらをシステム化しました。今回は、GroveとLoRaを組み合わせて、超長距離の無線モジュールを提供します。
 
@@ -310,7 +310,7 @@ Groveは、Seeed Studioによって開発された非常に強力なプラット
 </div>
 
 
-#### Grove - Serial RF Pro
+#### Grove - シリアル RF Pro
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -369,7 +369,7 @@ Groveは、Seeed Studioによって開発された非常に強力なプラット
     <a class="get_one_now_item" href="/ja/Grove-I2C_ADC/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove - I2C FM Receiver
+#### Grove - I2C FM レシーバー
 
 Grove - I2C FM Receiverは広帯域FM受信モジュールで、このモジュールはRDA5807Mを基にしています。ヘッドセットジャックがあり、イヤホンやオーディオに接続することができます。
 
@@ -397,7 +397,7 @@ Grove - I2C FM Receiverは広帯域FM受信モジュールで、このモジュ�
 </div>
 
 
-#### Grove - Protoshield
+#### Grove - プロトシールド
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -415,7 +415,7 @@ Grove - I2C FM Receiverは広帯域FM受信モジュールで、このモジュ�
     <a class="get_one_now_item" href="/ja/Grove-Protoshield/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove - RJ45 Adapter
+#### Grove - RJ45 アダプター
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">

@@ -10,7 +10,7 @@ last_update:
 
 <!-- This wiki has been devided into 3 parts. -->
 
-# SenseCAP S2110 Sensor Builder
+# SenseCAP S2110 センサービルダー
 
 SenseCAP S2110 Sensor Builderは、産業グレードモジュールとメーカーレベルモジュールの融合を可能にする画期的なソリューションです。これは500以上のGroveモジュールでRS485機能モジュールを構築する能力を持つオープンソースツールです。
 

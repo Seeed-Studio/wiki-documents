@@ -10,7 +10,7 @@ last_update:
   author: Yvonne
 ---
 
-# SenseCAP Sensor Hub Data Logger
+# SenseCAP センサーハブ データロガー
 
 ## 製品紹介
 

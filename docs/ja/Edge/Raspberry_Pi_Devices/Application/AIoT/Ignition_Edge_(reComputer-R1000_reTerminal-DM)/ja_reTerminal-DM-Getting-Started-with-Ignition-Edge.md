@@ -11,7 +11,7 @@ last_update:
   date: 09/29/2023
   author: Corey Thompson
 ---
-# reTerminal DM Getting Started with Ignition Edge
+# reTerminal DM Ignition Edge を使い始める
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/reTerminal_DM_Ignition_Edge.png" alt="pir" width="600" height="auto"/></p>
 

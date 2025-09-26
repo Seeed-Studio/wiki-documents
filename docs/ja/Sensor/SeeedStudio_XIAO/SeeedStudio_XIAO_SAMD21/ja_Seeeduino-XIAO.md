@@ -35,7 +35,7 @@ Seeed Studio XIAO SAMD21は14個のPINを持ち、ピン多重化により11個�
 |Seeed Studio XIAO SAMD21 GPIO使用方法|Seeed Studio XIAO SAMD21とGPS（UART）|
 |Seeed Studio XIAO SAMD21リソース|シングルサイクルIOBUS|
 
-### **CircuitPython on Seeed Studio XIAO SAMD21**
+### **Seeed Studio XIAO SAMD21でのCircuitPython**
 
 - [**Seeed Studio XIAO SAMD21 での CircuitPython**](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO-CircuitPython)を始めましょう。
 

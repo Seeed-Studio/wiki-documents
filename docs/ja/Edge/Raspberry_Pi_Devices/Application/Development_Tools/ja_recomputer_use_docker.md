@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </details>
 
-### Creat `html` file
+### `html`ファイルを作成
 
 ```bash
 cd ../../
