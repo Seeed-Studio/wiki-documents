@@ -10,7 +10,7 @@ last_update:
   author: jianjing Huang
 ---
 
-# 24GHz mmWave Sensor - Human Static Presence Module (MR24HPB1)
+# 24GHz mmWave センサー - 人体静的存在検知モジュール (MR24HPB1)
 
 ![](https://files.seeedstudio.com/wiki/mmWave-radar/radar.jpg)
 

@@ -10,7 +10,7 @@ last_update:
   author: Spencer
 ---
 
-# **Seeed Studio XIAO RP2040 with Arduino**
+# **Seeed Studio XIAO RP2040 と Arduino**
 
 このページでは、Seeed Studio XIAO RP2040を接続し、Arduinoでプログラミングする方法について説明します。ピンマルチプレクシングに関するいくつかのプロジェクトも含まれています。
 

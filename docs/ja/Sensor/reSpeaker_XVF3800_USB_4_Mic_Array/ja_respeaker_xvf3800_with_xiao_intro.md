@@ -13,7 +13,7 @@ last_update:
   author: Kasun Thushara
 ---
 
-# reSpeaker XVF3800 USB 4 Microphone Array with XIAO ESP32S3
+# reSpeaker XVF3800 USB 4 マイクロフォンアレイ（XIAO ESP32S3付き）
 
 ## 概要
 

@@ -59,7 +59,7 @@ WatcherデバイスのBasic Settingsメニューでは、ユーザーエクス�
 
 これらの設定にアクセスして変更するには、WatcherデバイスのBasic Settingsメニューに移動し、直感的なインターフェースを使用して希望する変更を行います。
 
-### SenseCraft Remote Control
+### SenseCraft リモートコントロール
 
 SenseCraft Remote Control機能は、WatcherデバイスがSenseCraftクラウドサービスとどのように通信するかを決定する重要な設定です。有効にすると、この機能はWatcherとSenseCraftクラウド間の通信チャネルを確立し、クラウドベースの大規模言語モデル（LLM）やリモート通知機能などの幅広い高度な機能とサービスにアクセスできるようになります。
 

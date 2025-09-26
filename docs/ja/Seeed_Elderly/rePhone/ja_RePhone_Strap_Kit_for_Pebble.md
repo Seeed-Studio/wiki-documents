@@ -25,7 +25,7 @@ RePhone（Xadow）モジュールの導入により、スマートウォッチ�
 
 ![](https://files.seeedstudio.com/wiki/RePhone_Strap_Kit_for_Pebble/img/Pebble_base_2.png)
 
-###   Xadow GPS v2
+### Xadow GPS v2
 ---
 <!-- このモジュールの詳細については、[**Xadow GPS V2 Wikiページ**](/ja/Xadow_GPS_V2)をご確認ください。 -->
 
@@ -116,7 +116,7 @@ RePhone（Xadow）モジュールの導入により、スマートウォッチ�
 </tr>
 </table>
 
-###   Xadow NFC v2
+### Xadow NFC v2
 
 <!-- このモジュールの詳細については、[**Xadow NFC v2 Wikiページ**](/ja/Xadow_NFC_v2)をご確認ください。 -->
 
@@ -163,7 +163,7 @@ RePhone（Xadow）モジュールの導入により、スマートウォッチ�
 </tr>
 </table>
 
-###   Xadow Battery 100mAh
+### Xadow バッテリー 100mAh
 
 <table>
 <tr>

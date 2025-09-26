@@ -189,7 +189,7 @@ void loop ()
 
 この回路はArduinoのデジタルI/Oピンで動作します。
 
-### Arduino Plant Warden
+### Arduino植物監視装置
 
 ![](https://files.seeedstudio.com/wiki/G3-4_Water_Flow_sensor/img/552c2c4f2e5a8.jpg)
 

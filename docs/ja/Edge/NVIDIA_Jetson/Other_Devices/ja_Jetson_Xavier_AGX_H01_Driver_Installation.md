@@ -47,7 +47,7 @@ tags:
 
 ドライバーをインストールする前に、ボードをForce Recovery Modelに設定する必要があります。
 
-#### Force Recovery Model
+#### 強制回復モデル
 
 ボードにはリカバリーボタンがあり、これは3つのボタンの中央にあります。リカバリーボタンを押したまま電源を入れると、Force Recovery Modelに入ります。
 

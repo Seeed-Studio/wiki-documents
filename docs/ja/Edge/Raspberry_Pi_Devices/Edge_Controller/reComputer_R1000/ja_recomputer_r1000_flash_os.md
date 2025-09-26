@@ -11,7 +11,7 @@ last_update:
   date: 10/25/2024
   author: Parker Hu
 ---
-# reComputer R1000 Raspbian OS to eMMC
+# reComputer R1000 Raspbian OS を eMMC に
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width="600" height="auto"/></p>
 

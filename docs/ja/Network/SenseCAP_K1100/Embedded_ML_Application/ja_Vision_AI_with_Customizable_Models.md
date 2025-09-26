@@ -64,7 +64,7 @@ IP66 ハウジング、Bluetooth 設定、グローバル LoRaWAN® ネットワ
 
 このウィキ全体を通じて、主にGrove - Vision AI Moduleを使用します。まずは、このハードウェアについて理解を深めましょう。
 
-### Grove - Vision AI Module
+### Grove - Vision AI モジュール
 
 [Grove Vision AI Module](https://www.seeedstudio.com/Grove-Vision-AI-Module-p-5457.html)は、親指サイズのAIカメラで、カスタマイズされたセンサーが搭載されており、人検出やその他のカスタマイズモデルのための機械学習アルゴリズムがすでにインストールされています。このモジュールは、数分で簡単にデプロイおよび表示でき、超低消費電力モードで動作します。また、2つの信号伝送方法と複数のオンボードモジュールを提供しており、AI対応カメラの入門に最適です。
 
@@ -283,7 +283,7 @@ Roboflow には **Label Assist** という機能があり、ラベルを事前�
 
 ## <span id="jump3">3. トレーニング済みモデルをデプロイして推論を実行する</span>
 
-### Grove - Vision AI Module
+### Grove - Vision AI モジュール
 
 次に、トレーニングの最後で得られた**model-1.uf2**をGrove - Vision AI Moduleに移動します。ここでは、Grove - Vision AI Moduleを[Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)に接続して推論結果を確認します。
 

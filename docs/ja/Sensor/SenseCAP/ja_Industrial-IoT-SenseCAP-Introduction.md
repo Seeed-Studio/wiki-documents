@@ -37,7 +37,7 @@ Wild IoTとは、自然環境にセンサーネットワークを展開して、
 
 ## ハードウェア製品
 
-### SenseCAP T1000 Tracker
+### SenseCAP T1000 トラッカー
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker_1.png" alt="pir" width={800} height="auto" /></p>
 
@@ -159,7 +159,7 @@ SenseCAP ONEは、複数のセンサーをこのコンパクトなデバイス�
 
 ### Sensor Builder
 
-#### SenseCAP S2110 Sensor Builder
+#### SenseCAP S2110 センサービルダー
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP_S2110_builder/SenseCAP-S2110-Sensor-Builder-105.jpg"/></div>
 

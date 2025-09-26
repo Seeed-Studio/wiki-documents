@@ -75,7 +75,7 @@ echo "deb [signed-by=/usr/share/keyrings/grafana-archive-keyrings.gpg] https://a
 sudo apt update
 ```
 
-## Installing Grafana on reComputer R1000
+## reComputer R1000 への Grafana のインストール
 
 以下のコマンドを実行して、Grafanaの最新バージョンをインストールしてください：
 

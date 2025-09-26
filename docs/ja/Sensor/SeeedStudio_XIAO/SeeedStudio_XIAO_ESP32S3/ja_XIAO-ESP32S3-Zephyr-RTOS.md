@@ -10,7 +10,7 @@ last_update:
   author: timo614
 ---
 
-# XIAO ESP32S3(sense) With Zephyr(RTOS)
+# XIAO ESP32S3（感覚）とZephyr（RTOS）
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-esp32s3.png"/></div>
 

@@ -10,7 +10,7 @@ last_update:
     author: rcsim
 ---
 
-# Seeed Studio XIAO nRF52840 with NuttX(RTOS)
+# Seeed Studio XIAO nRF52840 と NuttX(RTOS)
 
 ## はじめに
 
@@ -348,7 +348,7 @@ NuttX RTOSの詳細については、[NuttX Documentation](https://nuttx.apache.
 - このプロジェクトはSeeed Studioの[Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
 - [Rodrigo](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=92947609)の献身的な努力に特別な感謝を捧げます。あなたの作品は[展示](https://wiki.seeedstudio.com/contributors/)されます。
 
-## Tech Support & Product Discussion
+## 技術サポート・製品ディスカッション
 
 私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
