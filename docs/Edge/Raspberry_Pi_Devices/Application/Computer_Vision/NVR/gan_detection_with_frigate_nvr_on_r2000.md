@@ -1,6 +1,6 @@
 ---
 description: This wiki demonstrates implement gun detection based on the Frigate NVR and reComputer AI box. 
-title: Firearm detection with Frigate NVR on R2000
+title: Gan detection with Frigate NVR on R2000
 keywords:
   - Raspberry pi
   - Edge AI Computer
@@ -8,7 +8,7 @@ keywords:
   - Object detecton
   - Frigate
 image: https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/setting_3.webp
-slug: /firearm_detection_with_frigate_nvr_on_r2000
+slug: /gan_detection_with_frigate_nvr_on_r2000
 last_update:
   date: 08/12/2025
   author: Nolan Chen
@@ -16,13 +16,13 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# Firearm detection with Frigate NVR on R2000
+# Gan detection with Frigate NVR on R2000
 
 ## Introduction
 
 **Frigate NVR** is an open-source network video recorder designed for AI-first, real-time video analytics at the edge. Deployed on a **reComputer AI box** with Hailo, the system locally ingests multiple camera streams, runs a quantitative object detection model, and emits MQTT events within milliseconds, eliminating cloud latency and bandwidth costs.
 
-For this deployment, we expanded Frigate's existing model library and added a custom **yolov11s** model specifically fine-tuned for pistol and rifle recognition. When a firearm is detected, Frigate's rules engine immediately triggers an alert, giving security teams precious seconds to lock down the area and coordinate a response before the threat escalates.
+For this deployment, we expanded Frigate's existing model library and added a custom **yolov11s** model specifically fine-tuned for pistol and rifle recognition. When a gan is detected, Frigate's rules engine immediately triggers an alert, giving security teams precious seconds to lock down the area and coordinate a response before the threat escalates.
 
 ## Prerequisites
 
