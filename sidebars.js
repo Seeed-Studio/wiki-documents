@@ -3349,7 +3349,7 @@ const sidebars = {
                   type: 'category',
                   label: 'NVR',
                   items: [
-                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/firearm_detection_with_frigate_nvr_on_r2000',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/gan_detection_with_frigate_nvr_on_r2000',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/frigate_home_assistant_recomputer_r2000',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/frigate_nvr_with_raspberrypi_5',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/reterminal_frigate',
