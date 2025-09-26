@@ -82,7 +82,7 @@ Before you begin, make sure you have the following:
 - A server or computer with Docker installed
 
 <div class="seeed-features-container">
-    <div class="seeed-features-grid">
+  <div class="seeed-features-grid">
 
   <!-- Card 1: SenseCAP T1000 Tracker -->
   <div class="seeed-feature-card">
@@ -177,7 +177,7 @@ Before you begin, make sure you have the following:
             </li>
         </ul>
     </div>
-</div>
+  </div>
 
   <!-- Card 3: SenseCAP M2 Multi-Platform Gateway -->
   <div class="seeed-feature-card">
@@ -223,7 +223,7 @@ Before you begin, make sure you have the following:
         </ul>
     </div>
   </div>
-</div>
+  </div>
 </div>
 
 ## Getting Started Guide
