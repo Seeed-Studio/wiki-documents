@@ -1,11 +1,11 @@
 ---
 description: Este artículo describe principalmente cómo usar el sitio web Lopaka para crear interfaces de usuario exquisitas y aplicarlas en la serie reTerminal E.
 title: Pantalla ePaper de la Serie reTerminal E Trabajando con Lopaka
-image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.webp
 slug: /es/reterminal_e10xx_with_lopaka
 sidebar_position: 2
 last_update:
-  date: 12/9/2025
+  date: 9/12/2025
   author: Martin
 ---
 
@@ -19,7 +19,7 @@ Este tutorial se basa en reTerminal E1002. Sin embargo, también se puede aplica
 
 ## Introducción
 
-Para completar este tutorial, por favor prepara uno de los siguientes dispositivos de la Serie reTerminal E:
+Para completar este tutorial, por favor prepara uno de los siguientes dispositivos de la serie reTerminal E:
 
 <div class="table-center">
   <table align="center">
@@ -48,7 +48,7 @@ Para completar este tutorial, por favor prepara uno de los siguientes dispositiv
 
 ## Preparación del Entorno
 
-Para programar la Pantalla ePaper de la Serie reTerminal E con Arduino, necesitarás configurar el IDE de Arduino con soporte para ESP32.
+Para programar la pantalla ePaper de la serie reTerminal E con Arduino, necesitarás configurar el IDE de Arduino con soporte para ESP32.
 
 :::tip
 Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Comenzando con Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
@@ -82,7 +82,7 @@ Navega a **Herramientas > Placa > Gestor de Placas**, busca "esp32" e instala el
 
 Ve a **Herramientas > Placa > ESP32 Arduino** y selecciona **XIAO_ESP32S3**.
 
-**Paso 5.** Conecta tu Pantalla ePaper de la Serie reTerminal E a tu computadora usando un cable USB-C.
+**Paso 5.** Conecta tu pantalla ePaper de la serie reTerminal E a tu computadora usando un cable USB-C.
 
 **Paso 6.** Selecciona el puerto correcto desde **Herramientas > Puerto**.
 
@@ -105,21 +105,21 @@ Lopaka es un editor gráfico diseñado específicamente para el desarrollo de gr
 Haz clic en "NEW PROJECT" para crear un nuevo proyecto. Luego aparecerá una ventana, y verás las siguientes pantallas. Completa la información del proyecto.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_3.png" style={{width:800, height:'auto'}}/></div>
 
-- **Title**: Nombre del Proyecto, selecciono hello
-- **Platform**: La plataforma que elegiste para el desarrollo, la serie reTerminal E, usa AdfruitGFX Color.
-- **Screen**: La selección del tamaño de pantalla. Haz clic en "Custom" para personalizar el tamaño. El tamaño de pantalla de la serie reTerminal E es 800×480.
-- **Background**: El color de fondo de la pantalla es negro por defecto. Para lograr una mejor visualización, lo he cambiado a amarillo.
+- **Título**: Nombre del proyecto, selecciono hello
+- **Plataforma**: La plataforma que elegiste para el desarrollo, la serie reTerminal E, usa AdfruitGFX Color.
+- **Pantalla**: La selección del tamaño de pantalla. Haz clic en "Custom" para personalizar el tamaño. El tamaño de pantalla de la serie reTerminal E es 800×480.
+- **Fondo**: El color de fondo de la pantalla es negro por defecto. Para lograr una mejor visualización, lo he cambiado a amarillo.
 Luego haz clic en "SUBMIT" para crear el proyecto.
 
 **Paso 3.** Introducción a Configuraciones Comunes
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_4.png" style={{width:800, height:'auto'}}/></div>
 
-- **Layers**：El nombre de la capa. Se admite nomenclatura personalizada.
-- **Screens**：Puede crear múltiples pantallas y te permite almacenar diferentes ideas.
-- **CODE**：El código generado está en lenguaje C.
-- **IMAGES**：El tipo de imagen oficial de Lopaka
-- **Code settings**：Configurar el código generado. Se recomienda que marques todas las casillas.
+- **Capas**: El nombre de la capa. Se admite nomenclatura personalizada.
+- **Pantallas**: Puede crear múltiples pantallas y te permite almacenar diferentes ideas.
+- **CÓDIGO**: El código generado está en lenguaje C.
+- **IMÁGENES**: El tipo de imagen oficial de Lopaka
+- **Configuraciones de código**: Configurar el código generado. Se recomienda que marques todas las casillas.
 
 **Otros**
 
@@ -130,7 +130,7 @@ De izquierda a derecha
 - **"Engranaje"**: Para gestionar el proyecto, aquí puedes redefinir el nombre del proyecto, ajustar el tamaño de tu pantalla y el color de fondo, pero no se admite modificar la Plataforma a menos que elimines o recrees el proyecto.
 - **Barra de herramientas**: Las funciones de esta fila de barras de herramientas son Seleccionar, Pintar, Cadena, rectángulo, Círculo, Línea e imagen.
 - **Deslizador**: Aquí, puedes ajustar el tamaño del lienzo, lo que te permite realizar operaciones detalladas.
-- **Fork y SHARE**: Puedes hacer fork de proyectos de otros y compartir tus propios proyectos.
+- **Fork y COMPARTIR**: Puedes hacer fork de proyectos de otros y compartir tus propios proyectos.
 - **Price Gally Blog Feedback**: Price te permite suscribirte a diferentes niveles de Lopaka para acceder a funciones adicionales. Gally es un mercado de ingeniería de código abierto. Blog es el registro de actualizaciones de Lopaka. Feedback proporciona retroalimentación.
 - **Atajos**: Estos son algunos consejos de teclas de acceso rápido.
 
@@ -184,6 +184,7 @@ La pantalla ePaper a todo color admite colores rojo, negro, amarillo, verde y bl
 ```
 
 :::tip
+
 Si estás usando el reTerminal E1001, entonces deberías copiar el siguiente código
 
 ```cpp
@@ -287,8 +288,8 @@ El efecto se muestra en la siguiente figura.
 
 :::tip
 
-- Si deseas usar reTerminal E1001, puedes consultar el enlace：[Programando reTerminal E1001](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino/)
-- Si quieres usar su biblioteca GxEPD2, puedes consultar el enlace.: [Usando la Biblioteca GxEPD2](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino/)
+- Si deseas usar reTerminal E1001, puedes consultar el enlace：[Programando reTerminal E1001](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
+- Si quieres usar su biblioteca GxEPD2, puedes consultar el enlace.: [Usando la Biblioteca GxEPD2](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
 
 :::
 
@@ -939,11 +940,11 @@ void loop()
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
