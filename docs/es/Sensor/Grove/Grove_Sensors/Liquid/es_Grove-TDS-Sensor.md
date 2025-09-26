@@ -18,6 +18,7 @@ El Grove - Sensor TDS detecta los niveles de Sólidos Disueltos Totales (TDS) en
 Soporta voltaje de entrada de 3.3 / 5V y voltaje de salida de 0 ~ 2.3V, lo que facilita la compatibilidad con todas las placas Arduino. El sensor también proporciona una sonda impermeable, haciendo que el proceso de prueba sea mucho más fácil de manejar.
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-TDS-Sensor-p-4400.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p> -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-TDS-Sensor-p-4400.html)
+
 ## Características
 
 - Señal analógica, fácil de implementar
@@ -46,7 +47,6 @@ Soporta voltaje de entrada de 3.3 / 5V y voltaje de salida de 0 ~ 2.3V, lo que f
   </figure>
 </div>
 
-
 ## Plataformas Compatibles
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
@@ -60,9 +60,7 @@ Soporta voltaje de entrada de 3.3 / 5V y voltaje de salida de 0 ~ 2.3V, lo que f
 
 ### Jugar con Arduino
 
-
 #### Materiales requeridos
-
 
 | Seeeduino V4.2 | Base Shield | Grove - Sensor TDS|
 |--------------|-------------|-----------------|
@@ -119,7 +117,6 @@ void loop() {
 - **Paso 5.** El resultado debería ser así cuando la sonda esté en agua:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/img/Results.gif" /></div>
-
 
 ### Jugar con Raspberry Pi
 
@@ -199,9 +196,9 @@ if __name__ == '__main__':
     main()
 ```
 
-- **Step 5.** Use **Ctrl+O** to save and **Ctrl+X** to quit.
+- **Paso 5.** Usa **Ctrl+O** para guardar y **Ctrl+X** para salir.
 
-- **Step 6**. Run the following to execute:
+- **Paso 6**. Ejecuta lo siguiente para ejecutar:
 
 ```sh
 python TDS.py 0
@@ -223,7 +220,6 @@ TDS Value: 30.9311414242
 TDS Value: 30.9311414242
 ```
 
-
 ## FAQ
 
 **P1:** ¿Limitaciones del Grove - Sensor/Medidor TDS Para Calidad del Agua (Sólidos Disueltos Totales)?
@@ -237,10 +233,8 @@ TDS Value: 30.9311414242
 
 ## Visor de Esquemático en Línea
 
-
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/res/Grove-TDS-Sensor-v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 ## Recursos
 
@@ -251,20 +245,19 @@ TDS Value: 30.9311414242
 ## Soporte Técnico y Discusión de Productos
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 
 ## Actualizable a Sensores Industriales
+
 Con el [controlador S2110](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) y el [registrador de datos S2100](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html) de SenseCAP, puedes convertir fácilmente el Grove en un sensor LoRaWAN®. Seeed no solo te ayuda con la creación de prototipos, sino que también te ofrece la posibilidad de expandir tu proyecto con la serie SenseCAP de [sensores industriales](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP) robustos.
 
 La carcasa IP66, configuración Bluetooth, compatibilidad con la red global LoRaWAN®, batería integrada de 19 Ah y el potente soporte de la APP hacen del [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP&product_module=Device) la mejor opción para aplicaciones industriales. La serie incluye sensores para humedad del suelo, temperatura y humedad del aire, intensidad de luz, CO2, EC y una estación meteorológica 8 en 1. Prueba el último SenseCAP S210x para tu próximo proyecto industrial exitoso.
 
 <div align="center"><a href="https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP" target="_blank"><img width={800} src="https://files.seeedstudio.com/wiki/K1100_overview/sensecap.png" /></a></div>
-
-

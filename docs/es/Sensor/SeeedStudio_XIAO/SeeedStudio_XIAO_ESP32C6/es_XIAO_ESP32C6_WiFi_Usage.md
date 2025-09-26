@@ -37,6 +37,7 @@ El Seeed Studio XIAO ESP32C6 es una placa de desarrollo embebida que cuenta con 
 
 :::tip
 GPIO14 se utiliza para seleccionar entre usar la antena integrada o una antena externa. Antes de eso, necesitas configurar GPIO3 a nivel bajo para activar esta función. Si GPIO14 se configura a nivel bajo, utiliza la antena integrada; si se configura a nivel alto, utiliza la antena externa. Por defecto es nivel bajo. Si quieres configurarlo alto, puedes consultar el código a continuación.
+
 ```cpp
 void setup() {
   pinMode(3, OUTPUT);
@@ -59,224 +60,224 @@ ESP32-C6 proporciona una amplia gama de funciones de red WiFi. Generalmente, pod
 
 - `WiFiGenericClass::persistent(bool persistent)` -- Es un método que se utiliza para habilitar o deshabilitar el modo persistente de la biblioteca WiFi ESP32. Cuando el modo persistente está habilitado, la configuración Wi-Fi se almacena en memoria no volátil (NVM) y se conserva incluso después de un ciclo de energía o reinicio. Cuando el modo persistente está deshabilitado, la configuración se almacena en RAM y se pierde después de un ciclo de energía o reinicio.
 
-	- **Parámetros de Entrada**
-		- **persistent**: Si el argumento es true, el modo persistente está habilitado. Si el argumento es false, el modo persistente está deshabilitado.
+ 	- **Parámetros de Entrada**
+  		- **persistent**: Si el argumento es true, el modo persistente está habilitado. Si el argumento es false, el modo persistente está deshabilitado.
 
 - `WiFiGenericClass::enableLongRange(bool enable)` -- La función se utiliza para habilitar o deshabilitar la característica de Largo Alcance (LR) del módulo WiFi. Cuando está habilitada, la característica LR permite al módulo conectarse a redes WiFi que están más lejos de lo usual, pero con velocidades de datos más bajas.
 
-	- **Parámetros de Entrada**
-		- **enable**: El parámetro debe establecerse en true para habilitar la característica y false para deshabilitarla.
+ 	- **Parámetros de Entrada**
+  		- **enable**: El parámetro debe establecerse en true para habilitar la característica y false para deshabilitarla.
 
 - `WiFiGenericClass::mode(wifi_mode_t m)` -- La función se utiliza para establecer el modo WiFi del dispositivo.
 
-	- **Parámetros de Entrada**
-		- **m**: El parámetro m especifica el modo a establecer, que puede ser una de las siguientes constantes definidas en el enum wifi_mode_t:
-			- **WIFI_MODE_NULL**: Deshabilita tanto los modos de estación WiFi como de punto de acceso.
-			- **WIFI_MODE_STA**: Habilita el modo de estación WiFi para conectarse a una red WiFi existente.
-			- **WIFI_MODE_AP**: Habilita el modo de punto de acceso para crear una nueva red WiFi.
-			- **WIFI_MODE_APSTA**: Habilita tanto los modos de estación WiFi como de punto de acceso.
+ 	- **Parámetros de Entrada**
+  		- **m**: El parámetro m especifica el modo a establecer, que puede ser una de las siguientes constantes definidas en el enum wifi_mode_t:
+   			- **WIFI_MODE_NULL**: Deshabilita tanto los modos de estación WiFi como de punto de acceso.
+   			- **WIFI_MODE_STA**: Habilita el modo de estación WiFi para conectarse a una red WiFi existente.
+   			- **WIFI_MODE_AP**: Habilita el modo de punto de acceso para crear una nueva red WiFi.
+   			- **WIFI_MODE_APSTA**: Habilita tanto los modos de estación WiFi como de punto de acceso.
 
 - `WiFiGenericClass::setSleep(wifi_ps_type_t sleepType)` -- La función establece el modo de ahorro de energía para el módulo WiFi.
 
-	- **Parámetros de Entrada**
-		- **sleepType**: El parámetro sleepType es un tipo enumerado que especifica el tipo de modo de ahorro de energía a usar. Hay tres posibles tipos de suspensión:
-			- **WIFI_PS_NONE**: Este es el modo de suspensión predeterminado, en el cual el módulo WiFi no entra en modo de ahorro de energía.
-			- **WIFI_PS_MIN_MODEM**: En este modo, el módulo WiFi apaga su módem mientras mantiene la conexión al punto de acceso (AP).
-			- **WIFI_PS_MAX_MODEM**: En este modo, el módulo WiFi apaga tanto el módem como la estación, lo que resulta en una desconexión del AP.
+ 	- **Parámetros de Entrada**
+  		- **sleepType**: El parámetro sleepType es un tipo enumerado que especifica el tipo de modo de ahorro de energía a usar. Hay tres posibles tipos de suspensión:
+   			- **WIFI_PS_NONE**: Este es el modo de suspensión predeterminado, en el cual el módulo WiFi no entra en modo de ahorro de energía.
+   			- **WIFI_PS_MIN_MODEM**: En este modo, el módulo WiFi apaga su módem mientras mantiene la conexión al punto de acceso (AP).
+   			- **WIFI_PS_MAX_MODEM**: En este modo, el módulo WiFi apaga tanto el módem como la estación, lo que resulta en una desconexión del AP.
 
 ### Funciones STA
 
 - `WiFiSTAClass::status()` -- Devuelve el estado de conexión.
 
-	- **Salida**: uno de los valores definidos en wl_status_t.
-		- **WL_NO_SHIELD**: Este código de estado indica que el módulo Wi-Fi no está presente.
-    	- **WL_IDLE_STATUS**: Este código de estado indica que el módulo Wi-Fi no está realizando ninguna operación.
-    	- **WL_NO_SSID_AVAIL**: Este código de estado indica que no se encontraron redes Wi-Fi durante el escaneo.
-    	- **WL_SCAN_COMPLETED**: Este código de estado indica que el escaneo Wi-Fi se ha completado exitosamente.
-    	- **WL_CONNECTED**: Este código de estado indica que el ESP32 está conectado exitosamente a una red Wi-Fi.
-    	- **WL_CONNECT_FAILED**: Este código de estado indica que la conexión a la red Wi-Fi falló.
-    	- **WL_CONNECTION_LOST**: Este código de estado indica que la conexión a la red Wi-Fi se perdió.
-    	- **WL_DISCONNECTED**: Este código de estado indica que el ESP32 estaba previamente conectado a una red Wi-Fi, pero actualmente no está conectado a ninguna red.
+ 	- **Salida**: uno de los valores definidos en wl_status_t.
+  		- **WL_NO_SHIELD**: Este código de estado indica que el módulo Wi-Fi no está presente.
+    - **WL_IDLE_STATUS**: Este código de estado indica que el módulo Wi-Fi no está realizando ninguna operación.
+    - **WL_NO_SSID_AVAIL**: Este código de estado indica que no se encontraron redes Wi-Fi durante el escaneo.
+    - **WL_SCAN_COMPLETED**: Este código de estado indica que el escaneo Wi-Fi se ha completado exitosamente.
+    - **WL_CONNECTED**: Este código de estado indica que el ESP32 está conectado exitosamente a una red Wi-Fi.
+    - **WL_CONNECT_FAILED**: Este código de estado indica que la conexión a la red Wi-Fi falló.
+    - **WL_CONNECTION_LOST**: Este código de estado indica que la conexión a la red Wi-Fi se perdió.
+    - **WL_DISCONNECTED**: Este código de estado indica que el ESP32 estaba previamente conectado a una red Wi-Fi, pero actualmente no está conectado a ninguna red.
 
 - `WiFiSTAClass::begin(const char* wpa2_ssid, wpa2_auth_method_t method, const char* wpa2_identity, const char* wpa2_username, const char *wpa2_password, const char* ca_pem, const char* client_crt, const char* client_key, int32_t channel, const uint8_t* bssid, bool connect)` -- Inicia la conexión Wifi con un AP WPA2 Enterprise.
 
-	- **Parámetros de Entrada** (Opcional)
-		- **ssid**: Puntero a la cadena SSID.
-		- **method**: El método de autenticación de WPA2 (WPA2_AUTH_TLS, WPA2_AUTH_PEAP, WPA2_AUTH_TTLS)
-		- **wpa2_identity**: Puntero a la entidad
-		- **wpa2_username**: Puntero al nombre de usuario
-		- **wpa2_password**: Puntero a la contraseña.
-		- **ca_pem**: Puntero a una cadena con el contenido de un archivo .pem con certificado CA
-		- **client_crt**: Puntero a una cadena con el contenido de un archivo .crt con certificado de cliente
-		- **client_key**: Puntero a una cadena con el contenido de un archivo .key con clave de cliente
-		- **channel**: Opcional. Canal del AP
-		- **bssid**: Opcional. BSSID / MAC del AP
-		- **connect**: Opcional. llamar connect
+ 	- **Parámetros de Entrada** (Opcional)
+  		- **ssid**: Puntero a la cadena SSID.
+  		- **method**: El método de autenticación de WPA2 (WPA2_AUTH_TLS, WPA2_AUTH_PEAP, WPA2_AUTH_TTLS)
+  		- **wpa2_identity**: Puntero a la entidad
+  		- **wpa2_username**: Puntero al nombre de usuario
+  		- **wpa2_password**: Puntero a la contraseña.
+  		- **ca_pem**: Puntero a una cadena con el contenido de un archivo .pem con certificado CA
+  		- **client_crt**: Puntero a una cadena con el contenido de un archivo .crt con certificado de cliente
+  		- **client_key**: Puntero a una cadena con el contenido de un archivo .key con clave de cliente
+  		- **channel**: Opcional. Canal del AP
+  		- **bssid**: Opcional. BSSID / MAC del AP
+  		- **connect**: Opcional. llamar connect
 
 - `WiFiSTAClass::reconnect()` -- Forzará una desconexión y luego comenzará a reconectarse al AP.
 
-	- **Salida**: True/False.
+ 	- **Salida**: True/False.
 
 - `WiFiSTAClass::disconnect(bool wifioff, bool eraseap)` -- Desconectar de la red.
 
-	- **Parámetros de Entrada**
-		- **wifioff**: wifioff `true` para apagar la radio Wi-Fi.
-		- **eraseap**: eraseap `true` para borrar la configuración del AP de la memoria NVS.
-	
-	- **Salida**: True/False.
+ 	- **Parámetros de Entrada**
+  		- **wifioff**: wifioff `true` para apagar la radio Wi-Fi.
+  		- **eraseap**: eraseap `true` para borrar la configuración del AP de la memoria NVS.
+ 
+ 	- **Salida**: True/False.
 
 - `WiFiSTAClass::config(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dns1, IPAddress dns2)` -- Cambiar la configuración IP deshabilitando el cliente dhcp.
 
-	- **Parámetros de Entrada**
-		- **local_ip**: Configuración de ip estática.
-		- **gateway**: Configuración de gateway estático.
-		- **subnet**: Máscara de subred estática.
-		- **dns1**: Servidor DNS estático 1.
-		- **dns2**: Servidor DNS estático 2.
+ 	- **Parámetros de Entrada**
+  		- **local_ip**: Configuración de ip estática.
+  		- **gateway**: Configuración de gateway estático.
+  		- **subnet**: Máscara de subred estática.
+  		- **dns1**: Servidor DNS estático 1.
+  		- **dns2**: Servidor DNS estático 2.
 
 - `WiFiSTAClass::setAutoConnect(bool autoConnect)` -- Obsoleto. Configurar la estación ESP32 para conectarse al AP (que está registrado) automáticamente o no cuando se enciende. Habilitar auto-conexión por defecto.
 
 - **Parámetros de Entrada**
-		- **autoConnect**: autoConnect bool.
+  - **autoConnect**: autoConnect bool.
 
-	- **Salida**: False.
+ 	- **Salida**: False.
 
 - `WiFiSTAClass::waitForConnectResult(unsigned long timeoutLength)` -- Esperar a que la conexión WiFi alcance un resultado.
 
-	- **Parámetros de Entrada**
-		- **timeoutLength**: El parámetro especifica la cantidad máxima de tiempo a esperar para que se establezca una conexión, en milisegundos.
+ 	- **Parámetros de Entrada**
+  		- **timeoutLength**: El parámetro especifica la cantidad máxima de tiempo a esperar para que se establezca una conexión, en milisegundos.
 
-	- **Salida**: uno de los valores definidos en wl_status_t.
+ 	- **Salida**: uno de los valores definidos en wl_status_t.
 
 - `WiFiSTAClass::localIP()` -- Obtener la dirección IP de la interfaz de estación.
 
-	- **Salida**: IPAddress IP de estación.
+ 	- **Salida**: IPAddress IP de estación.
 
 - `WiFiSTAClass::macAddress(uint8_t* mac)` -- Obtener la dirección MAC de la interfaz de estación.
 
-	- **Parámetros de Entrada**
-		- **mac** (Opcional): Puntero a array uint8_t con longitud WL_MAC_ADDR_LENGTH.
+ 	- **Parámetros de Entrada**
+  		- **mac** (Opcional): Puntero a array uint8_t con longitud WL_MAC_ADDR_LENGTH.
 
-	- **Salida**: Puntero a uint8_t *.
+ 	- **Salida**: Puntero a uint8_t *.
 
 - `WiFiSTAClass::SSID()` -- Devolver el SSID actual asociado con la red.
 
-	- **Salida**: SSID.
+ 	- **Salida**: SSID.
 
 - `WiFiSTAClass::RSSI(void)` -- Devolver el RSSI actual de la red.
 
-	- **Salida**: RSSI.
+ 	- **Salida**: RSSI.
 
 ### Funciones AP
 
 - `WiFiAPClass::softAP(const char* ssid, const char* passphrase, int channel, int ssid_hidden, int max_connection, bool ftm_responder)` -- Esta es una función en la biblioteca WiFi del ESP32-C6. Se utiliza para configurar un SoftAP (punto de acceso por software), que permite a otros dispositivos conectarse al ESP32-C6 y acceder a sus recursos.
 
-	- **Parámetros de Entrada**
-		-  **ssid**:              Puntero al SSID (máx 63 char).
- 		-  **passphrase**:        (Para WPA2 mín 8 char, para abierto usar NULL).
- 		-  **channel**:           Número de canal WiFi, 1 - 13.
- 		-  **ssid_hidden**:       Ocultación de red (0 = difundir SSID, 1 = ocultar SSID).
- 		-  **max_connection**:    Máx clientes conectados simultáneamente, 1 - 4.
+ 	- **Parámetros de Entrada**
+  		- **ssid**:              Puntero al SSID (máx 63 char).
+    - **passphrase**:        (Para WPA2 mín 8 char, para abierto usar NULL).
+    - **channel**:           Número de canal WiFi, 1 - 13.
+    - **ssid_hidden**:       Ocultación de red (0 = difundir SSID, 1 = ocultar SSID).
+    - **max_connection**:    Máx clientes conectados simultáneamente, 1 - 4.
 
-	- **Salida**: True/False.
+ 	- **Salida**: True/False.
 
 - `WiFiAPClass::softAPgetStationNum()` -- Obtener el conteo de las Estaciones / clientes que están conectados a la interfaz softAP.
 
-	- **Salida**: Conteo de estaciones.
+ 	- **Salida**: Conteo de estaciones.
 
 - `WiFiAPClass::softAPConfig(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dhcp_lease_start)` -- Una función para configurar SoftAP.
 
-	- **Parámetros de Entrada**
-		- **local_ip**:      IP del punto de acceso.
-		- **gateway**:       IP de puerta de enlace.
-		- **subnet**:        Máscara de subred.
+ 	- **Parámetros de Entrada**
+  		- **local_ip**:      IP del punto de acceso.
+  		- **gateway**:       IP de puerta de enlace.
+  		- **subnet**:        Máscara de subred.
 
-	- **Salida**: True/False.
+ 	- **Salida**: True/False.
 
 - `WiFiAPClass::softAPIP()` -- Obtener la dirección IP de la interfaz softAP.
 
-	- **Salida**: IPAddress IP softAP.
+ 	- **Salida**: IPAddress IP softAP.
 
 - `WiFiAPClass::softAPmacAddress(uint8_t* mac)` -- Obtener la dirección MAC de la interfaz softAP.
 
-	- **Parámetros de Entrada**
-		- **mac** (Opcional):   Puntero a array uint8_t con longitud WL_MAC_ADDR_LENGTH.
+ 	- **Parámetros de Entrada**
+  		- **mac** (Opcional):   Puntero a array uint8_t con longitud WL_MAC_ADDR_LENGTH.
 
-	- **Salida**: Puntero a uint8_t* o String mac.
+ 	- **Salida**: Puntero a uint8_t* o String mac.
 
 ### Función de Escaneo WiFi
 
 - `WiFiScanClass::scanNetworks(bool async, bool show_hidden, bool passive, uint32_t max_ms_per_chan, uint8_t channel, const char * ssid, const uint8_t * bssid)` -- Iniciar escaneo de redes WiFi disponibles.
 
-	- **Parámetros de Entrada**
-		- **async**: El parámetro es un valor booleano que determina si el escaneo debe realizarse de forma asíncrona. Si se establece en true, la función regresa inmediatamente y los resultados del escaneo pueden obtenerse más tarde llamando a la función getScanResults(). Si se establece en false, la función se bloqueará hasta que el escaneo esté completo.
-		- **show_hidden**: El parámetro es un valor booleano que determina si la función debe incluir redes ocultas en los resultados del escaneo.
-		- **passive**: El parámetro es un valor booleano que determina si la función debe realizar un escaneo pasivo. Si se establece en true, la función no transmitirá ningún paquete durante el escaneo, lo que puede tomar más tiempo pero puede ser útil en ciertas situaciones.
-		- **max_ms_per_chan**: El parámetro es el tiempo máximo a gastar escaneando cada canal en milisegundos.
-		- **channel**: El parámetro es el canal Wi-Fi a escanear. Si se establece en 0, la función escaneará todos los canales disponibles.
-		- **ssid**: El parámetro es un puntero a una cadena terminada en null que contiene el SSID de la red a buscar. Si se establece en nullptr, la función escaneará todas las redes disponibles.
-		- **bssid**: El parámetro es un puntero a un array de 6 bytes que contiene la dirección MAC del punto de acceso a buscar. Si se establece en nullptr, la función escaneará todos los puntos de acceso.
+ 	- **Parámetros de Entrada**
+  		- **async**: El parámetro es un valor booleano que determina si el escaneo debe realizarse de forma asíncrona. Si se establece en true, la función regresa inmediatamente y los resultados del escaneo pueden obtenerse más tarde llamando a la función getScanResults(). Si se establece en false, la función se bloqueará hasta que el escaneo esté completo.
+  		- **show_hidden**: El parámetro es un valor booleano que determina si la función debe incluir redes ocultas en los resultados del escaneo.
+  		- **passive**: El parámetro es un valor booleano que determina si la función debe realizar un escaneo pasivo. Si se establece en true, la función no transmitirá ningún paquete durante el escaneo, lo que puede tomar más tiempo pero puede ser útil en ciertas situaciones.
+  		- **max_ms_per_chan**: El parámetro es el tiempo máximo a gastar escaneando cada canal en milisegundos.
+  		- **channel**: El parámetro es el canal Wi-Fi a escanear. Si se establece en 0, la función escaneará todos los canales disponibles.
+  		- **ssid**: El parámetro es un puntero a una cadena terminada en null que contiene el SSID de la red a buscar. Si se establece en nullptr, la función escaneará todas las redes disponibles.
+  		- **bssid**: El parámetro es un puntero a un array de 6 bytes que contiene la dirección MAC del punto de acceso a buscar. Si se establece en nullptr, la función escaneará todos los puntos de acceso.
 
-	- **Salida**: El valor de retorno de esta función es un entero que indica el número de redes escaneadas.
+ 	- **Salida**: El valor de retorno de esta función es un entero que indica el número de redes escaneadas.
 
 - `WiFiScanClass::getNetworkInfo(uint8_t i, String &ssid, uint8_t &encType, int32_t &rssi, uint8_t* &bssid, int32_t &channel)` -- Carga toda la información de un wifi escaneado en los parámetros ptr.
 
-	- **Parámetros de Entrada**
-		- **i**: La función se utiliza para recuperar información sobre una red escaneada en un índice especificado i.
-		- **ssid**: El parámetro ssid es una referencia a una variable String donde la función almacena el SSID de la red.
-		- **encType**: El parámetro encType es una referencia a una variable uint8_t donde la función almacena el tipo de cifrado de la red (0 = abierto, 1 = WEP, 2 = WPA_PSK, 3 = WPA2_PSK, 4 = WPA_WPA2_PSK).
-		- **rssi**: El parámetro rssi es una referencia a una variable int32_t donde la función almacena la indicación de intensidad de señal recibida (RSSI) de la red.
-		- **bssid**: El parámetro bssid es una referencia a un puntero uint8_t* donde la función almacena el BSSID (dirección MAC) de la red.
-		- **channel**: El parámetro channel es una referencia a una variable int32_t donde la función almacena el número de canal de la red.
+ 	- **Parámetros de Entrada**
+  		- **i**: La función se utiliza para recuperar información sobre una red escaneada en un índice especificado i.
+  		- **ssid**: El parámetro ssid es una referencia a una variable String donde la función almacena el SSID de la red.
+  		- **encType**: El parámetro encType es una referencia a una variable uint8_t donde la función almacena el tipo de cifrado de la red (0 = abierto, 1 = WEP, 2 = WPA_PSK, 3 = WPA2_PSK, 4 = WPA_WPA2_PSK).
+  		- **rssi**: El parámetro rssi es una referencia a una variable int32_t donde la función almacena la indicación de intensidad de señal recibida (RSSI) de la red.
+  		- **bssid**: El parámetro bssid es una referencia a un puntero uint8_t* donde la función almacena el BSSID (dirección MAC) de la red.
+  		- **channel**: El parámetro channel es una referencia a una variable int32_t donde la función almacena el número de canal de la red.
 
-	- **Salida**: True/False.
+ 	- **Salida**: True/False.
 
 - `WiFiScanClass::SSID(uint8_t i)` -- Devolver el SSID descubierto durante el escaneo de red.
 
-	- **Parámetros de Entrada**
-		- **i**: Especificar de qué elemento de red se quiere obtener la información.
+ 	- **Parámetros de Entrada**
+  		- **i**: Especificar de qué elemento de red se quiere obtener la información.
 
-	- **Salida**: Cadena SSID del elemento especificado en la lista de redes escaneadas.
+ 	- **Salida**: Cadena SSID del elemento especificado en la lista de redes escaneadas.
 
 - `WiFiScanClass::RSSI(uint8_t i)` -- Devolver el RSSI de las redes descubiertas durante scanNetworks.
 
-	- **Parámetros de Entrada**
-		- **i**: Especificar de qué elemento de red se quiere obtener la información.
+ 	- **Parámetros de Entrada**
+  		- **i**: Especificar de qué elemento de red se quiere obtener la información.
 
-	- **Salida**: Valor con signo del RSSI del elemento especificado en la lista de redes escaneadas.
+ 	- **Salida**: Valor con signo del RSSI del elemento especificado en la lista de redes escaneadas.
 
 ### Funciones WiFi Client
 
 - `WiFiClient::connect(IPAddress ip, uint16_t port, int32_t timeout)` -- Esta función se utiliza en la biblioteca WiFiClient para conectarse a una dirección IP remota y puerto con un valor de timeout especificado.
 
-	- **Parámetros de Entrada**
-		- **ip**:   La dirección IP del servidor al que conectarse.
-		- **port**: El número de puerto del servidor al que conectarse.
-		- **timeout** (Opcional): El tiempo máximo a esperar para que se establezca la conexión, en milisegundos. Si la conexión no se establece dentro de este tiempo, la función devolverá un error. Si timeout se establece en 0, la función esperará indefinidamente a que se establezca la conexión.
+ 	- **Parámetros de Entrada**
+  		- **ip**:   La dirección IP del servidor al que conectarse.
+  		- **port**: El número de puerto del servidor al que conectarse.
+  		- **timeout** (Opcional): El tiempo máximo a esperar para que se establezca la conexión, en milisegundos. Si la conexión no se establece dentro de este tiempo, la función devolverá un error. Si timeout se establece en 0, la función esperará indefinidamente a que se establezca la conexión.
 
 - `WiFiClient::stop()` -- La función se utiliza para desconectar el cliente del servidor y liberar el socket/puerto utilizado por el cliente. Una vez que se llama a la función, el cliente ya no puede enviar o recibir datos.
 
 - `WiFiClient::setTimeout(uint32_t seconds)` -- La función establece el número máximo de segundos que el cliente esperará para que se establezca una conexión o se reciban datos. Si la conexión o transferencia de datos toma más tiempo que el timeout especificado, la conexión se cerrará.
 
-	- **Parámetros de Entrada**
-		- **seconds**:   El número de segundos para el timeout.
+ 	- **Parámetros de Entrada**
+  		- **seconds**:   El número de segundos para el timeout.
 
 - `WiFiClient::write(uint8_t data)` -- Escribe un solo byte de datos al servidor conectado a través de la instancia WiFiClient. O `WiFiClient::write(const uint8_t *buf, size_t size)`.
 
-	- **Parámetros de Entrada**
-		- **data**:   Es un solo byte de datos que necesita ser enviado a través de la conexión de red establecida.
+ 	- **Parámetros de Entrada**
+  		- **data**:   Es un solo byte de datos que necesita ser enviado a través de la conexión de red establecida.
 
 - `WiFiClient::read()` -- La función lee un solo byte de datos entrantes del servidor conectado. Devuelve el byte leído como un valor entero. Si no hay datos disponibles, devuelve -1. O `read(uint8_t *buf, size_t size)`.
 
-	- **Salida**: Un valor entero que indica el número de bytes recibidos. Si el valor de retorno es 0, significa que el servidor ha cerrado la conexión.
+ 	- **Salida**: Un valor entero que indica el número de bytes recibidos. Si el valor de retorno es 0, significa que el servidor ha cerrado la conexión.
 
 - `WiFiClient::peek()` -- La función se utiliza para verificar si hay datos disponibles para ser leídos del servidor sin realmente leerlos.
 
-	- **Salida**: Devuelve el siguiente byte de datos entrantes sin eliminarlo del buffer de recepción. Si no hay datos disponibles, devuelve -1.
+ 	- **Salida**: Devuelve el siguiente byte de datos entrantes sin eliminarlo del buffer de recepción. Si no hay datos disponibles, devuelve -1.
 
 - `WiFiClient::available()` -- La función se utiliza para verificar cuántos bytes de datos están disponibles para ser leídos del servidor.
 
-	- **Salida**: Devuelve un valor entero que representa el número de bytes disponibles para ser leídos.
+ 	- **Salida**: Devuelve un valor entero que representa el número de bytes disponibles para ser leídos.
 
 ### Función WiFi Server
 
@@ -284,13 +285,13 @@ ESP32-C6 proporciona una amplia gama de funciones de red WiFi. Generalmente, pod
 
 - `WiFiServer::begin(uint16_t port, int enable)` -- La función se utiliza para iniciar un servidor en el puerto especificado. El servidor escuchará las conexiones de clientes entrantes.
 
-	- **Parámetros de Entrada**
-		- **port**: El número de puerto en el que escuchar.
-		- **enable** (Opcional): Una bandera para indicar si el servidor debe habilitarse inmediatamente después de iniciarse. Esta bandera está establecida en true por defecto.
+ 	- **Parámetros de Entrada**
+  		- **port**: El número de puerto en el que escuchar.
+  		- **enable** (Opcional): Una bandera para indicar si el servidor debe habilitarse inmediatamente después de iniciarse. Esta bandera está establecida en true por defecto.
 
 - `WiFiServer::hasClient()` -- La función se utiliza para verificar si hay conexiones de clientes entrantes disponibles en el servidor. Esta función puede usarse en un bucle para verificar continuamente nuevas conexiones.
 
-	- **Salida**: Devuelve un objeto WiFiClient si un cliente se ha conectado o un puntero NULL si no hay clientes esperando conectarse.
+ 	- **Salida**: Devuelve un objeto WiFiClient si un cliente se ha conectado o un puntero NULL si no hay clientes esperando conectarse.
 
 - `WiFiServer::end()` -- La función se utiliza para detener el servidor y liberar los recursos asociados. Una vez llamada, el servidor ya no puede aceptar nuevas conexiones de clientes. Cualquier conexión de cliente existente permanecerá abierta hasta que sea cerrada por el cliente o el servidor. `WiFiServer::close()` y `WiFiServer::stop()` tienen la misma función.
 
@@ -298,19 +299,18 @@ ESP32-C6 proporciona una amplia gama de funciones de red WiFi. Generalmente, pod
 
 - `WiFiMulti::addAP(const char* ssid, const char *passphrase)` -- Se utiliza para agregar un nuevo punto de acceso (AP) a la lista de APs disponibles a los que el objeto WiFiMulti intentará conectarse.
 
-	- **Parámetros de Entrada**
-		- **ssid**: Puntero al SSID (máximo 63 caracteres).
-		- **passphrase**: (para WPA2 mínimo 8 caracteres, para abierto usar NULL).
+ 	- **Parámetros de Entrada**
+  		- **ssid**: Puntero al SSID (máximo 63 caracteres).
+  		- **passphrase**: (para WPA2 mínimo 8 caracteres, para abierto usar NULL).
 
-	- **Salida**: True/False
-
+ 	- **Salida**: True/False
 
 - `WiFiMulti::run(uint32_t connectTimeout)` -- La función intenta conectarse a uno de los puntos de acceso guardados en orden secuencial hasta que se conecta exitosamente a uno.
 
-	- **Parámetros de Entrada**
-		- **connectTimeout**: El parámetro especifica la cantidad máxima de tiempo a esperar por una conexión en milisegundos. Si connectTimeout se establece en 0, la función no tendrá timeout e intentará conectarse indefinidamente.
+ 	- **Parámetros de Entrada**
+  		- **connectTimeout**: El parámetro especifica la cantidad máxima de tiempo a esperar por una conexión en milisegundos. Si connectTimeout se establece en 0, la función no tendrá timeout e intentará conectarse indefinidamente.
 
-	- **Salida**: estado
+ 	- **Salida**: estado
 
 ## Escanear redes WiFi cercanas
 
@@ -394,6 +394,7 @@ Cuando el ESP32 se configura como una estación Wi-Fi, puede conectarse a otras 
 `WiFi.RSSI()` devuelve el RSSI de esa red. RSSI significa Indicador de Intensidad de Señal Recibida. Es una medida estimada del nivel de potencia que un dispositivo cliente RF está recibiendo de un punto de acceso o router.
 
 Finalmente, `WiFi.encryptionType()` devuelve el tipo de cifrado de la red. Ese ejemplo específico pone un * en el caso de redes abiertas. Sin embargo, esa función puede devolver una de las siguientes opciones (no solo redes abiertas):
+
 - WIFI_AUTH_OPEN
 - WIFI_AUTH_WEP
 - WIFI_AUTH_WPA_PSK
@@ -477,9 +478,11 @@ En palabras simples, cuando configuras el XIAO ESP32C6 como un punto de acceso c
 En tu Arduino IDE, ve a **File > Examples > WiFi > WiFiAccessPoint**. Este ejemplo te mostrará cómo usar el XIAO ESP32C6 para crear un hotspot y controlar el interruptor de encendido/apagado de una luz a través de una página web simple conectada al hotspot.
 
 :::note
+
 1. Hicimos algunos cambios menores al programa de ejemplo comentando LED_BUILTIN, porque el XIAO ESP32C6 tiene su propio indicador de usuario y no necesitamos un LED externo.
 2. El LED solo se apagará cuando el pin del LED de usuario en el XIAO ESP32C6 se configure a un nivel alto, y solo se encenderá cuando el pin se configure a un nivel bajo.
 3. También necesitas modificar el nombre del hotspot y la contraseña en el programa a los que desees.
+
 :::
 
 ```cpp
@@ -682,7 +685,6 @@ La dirección del servidor MQTT proporcionada en el programa de muestra es `test
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/41.png" style={{width:800, height:'auto'}}/></div>
 
-
 ## Uso de WiFi & HTTP/HTTPS
 
 Esta parte puede referirse al ejemplo que escribimos para XIAO ESP32C3 para acceder a ChatGPT, que proporciona una introducción detallada al uso de WiFiClient y HTTPClient.
@@ -759,7 +761,7 @@ Crea una tarea llamada `taskSendMessage` responsable de llamar a la función `se
 Task taskSendMessage(TASK_SECOND * 1 , TASK_FOREVER, &sendMessage);
 ```
 
-The `sendMessage()` function sends a message to all nodes in the message network (broadcast).
+La función `sendMessage()` envía un mensaje a todos los nodos en la red de mensajes (difusión).
 
 ```cpp
 void sendMessage() {
@@ -824,7 +826,7 @@ En el `setup()`, inicializa el monitor serie. Elige los tipos de mensajes de dep
 mesh.setDebugMsgTypes( ERROR | STARTUP );  // set before init() so that you can see startup messages
 ```
 
-Initialize the mesh with the details defined earlier.
+Inicializa la malla con los detalles definidos anteriormente.
 
 ```cpp
 mesh.init(MESH_PREFIX, MESH_PASSWORD, &userScheduler, MESH_PORT);
@@ -862,7 +864,7 @@ void loop() {
 
 ## Citas y Referencias
 
-Este artículo se basa en el contenido web de **[Random Nerd Tutorials](https://randomnerdtutorials.com/)** sobre ESP32 y lo utiliza verificado en el Seeed Studio XIAO ESP32C6. 
+Este artículo se basa en el contenido web de **[Random Nerd Tutorials](https://randomnerdtutorials.com/)** sobre ESP32 y lo utiliza verificado en el Seeed Studio XIAO ESP32C6.
 
 ¡Agradecimientos especiales a los autores de **Random Nerd Tutorials** por su arduo trabajo!
 
@@ -886,13 +888,11 @@ Y consulta estas documentaciones para más detalles sobre la API de Arduino:
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

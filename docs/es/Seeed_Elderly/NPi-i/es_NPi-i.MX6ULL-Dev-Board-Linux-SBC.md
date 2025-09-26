@@ -150,6 +150,7 @@ necesitas instalar la imagen NPi i.MX6ULL Dev Board - Linux SBC desde tu tarjeta
 
 - **Paso 3.** Haz clic aquí para descargar <a href="https://etcher.io/">Etcher</a>, luego usa Etcher para escribir el archivo ```*.img.xz``` directamente a la tarjeta SD. O extrae el archivo ```*.img.xz``` en un archivo ```*.img```, y luego grábalo en una tarjeta SD usando otra herramienta de escritura de imagen.
 <br />
+
 <br />Haz clic en el icono más para añadir el archivo de imagen recién descargado y el software seleccionará automáticamente la tarjeta SD que insertaste. Luego haz clic en Flash! para escribir. Toma aproximadamente 10 minutos terminar.
 
 ![](https://files.seeedstudio.com/wiki/NPi-i-MX6ULL-Dev-Board/IMG/etcher.png)
@@ -553,7 +554,7 @@ En esta sección, explicaremos el principio de control del programa IIS de Linux
 
 **Materiales Requeridos**
 
-- NPi i.MX6ULL Dev Board - Linux SBC NAND Version(o eMMC Version)
+- Placa de Desarrollo NPi i.MX6ULL - Versión Linux SBC NAND (o Versión eMMC)
 - [ReSpeaker 2-Mics Pi HAT](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html)
 
 **Software**
@@ -654,11 +655,11 @@ Para más información sobre el ReSpeaker 2-Mics Pi HAT puedes visitar [wiki](ht
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

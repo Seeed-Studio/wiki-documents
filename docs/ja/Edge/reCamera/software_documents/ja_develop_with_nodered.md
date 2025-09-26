@@ -184,7 +184,7 @@ Model nodeは`preview` nodeに接続して、Node-REDワークスペースでエ
 
 クライアントには`sscma`を選択してください。選択後、赤い三角形が消えます。
 
-#### Input and Output
+#### 入力と出力
 
 Input: `camera` nodeを`stream` nodeに接続してストリーミングを有効にします。
 

@@ -20,7 +20,7 @@ last_update:
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div><br />
 
 XIAO向けの先進的な**mmWaveセンサーモジュール**をご紹介します。[転倒検出](https://wiki.seeedstudio.com/ja/getting_started_with_mr60fda2_mmwave_kit/)と心拍モニタリングの両方に対応した最先端の監視ソリューションを提供するよう設計されています。Wi-FiとBluetooth接続を内蔵した堅牢なXIAO ESP32マイクロコントローラーを搭載し、これらのモジュールは精密で信頼性の高い検出機能を提供します。リアルタイムでの転倒監視や高感度での心拍追跡が必要な場合でも、当社のモジュールはカスタマイズ可能なRGB LEDや環境光センシングを含む最先端技術を搭載しています。Grove GPIOポートによる簡単な拡張オプションにより、これらの多用途モジュールはスマートホーム統合からヘルスケア監視まで、幅広いアプリケーションに最適です。
@@ -74,7 +74,7 @@ XIAO向けの先進的な**mmWaveセンサーモジュール**をご紹介しま
 
 ## 使用開始
 
-### 設置方法と検出範囲
+### 設置方法とセンシング範囲
 
 **方法1.**側面取り付け、レーダーの設置高さは測定対象者の胸の高さと一致させることを推奨し、モジュール位置と胸の位置≤1.5m
 
@@ -270,7 +270,7 @@ Arduino シリアルモニターでの出力は以下のようになります：
 <!-- 
 ### Fall Module
 
-この例では、転倒検知に**MR60FDA2**センサーを使用する方法を示しています。
+This example shows how to use the **MR60FDA2** sensor for fall detection.
 
 ```cpp
 #include <Arduino.h>
@@ -344,11 +344,11 @@ if (mmWave.update(100)) {
 
 この例では、NeoPixel ライブラリを使用して RGB LED を制御する方法を示します。
 
-- **ステップ 1.** `Adafruit_NeoPixel` ライブラリをダウンロード
+- **ステップ 1.** `Adafruit_NeoPixel` ライブラリをダウンロードします
 
 **スケッチ > ライブラリをインクルード > ライブラリを管理...** に移動し、**Adafruit_NeoPixel** を検索して最新バージョンをインストールします。
 
-- **ステップ 2.** 以下のコードを新しいスケッチにコピー：
+- **ステップ 2.** 以下のコードを新しいスケッチにコピーします：
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
@@ -383,7 +383,7 @@ for (int i = 255; i >= 0; i--) {
 }
 ```
 
-- **ステップ 3.** 正しいボードとポート番号を選択してプログラムをアップロード。
+- **ステップ 3.** 正しいボードとポート番号を選択してプログラムをアップロードします。
 
 プログラムが正常にアップロードされると、mmWave センサーモジュールの右側にある RGB LED が点滅するのが見えます。
 
@@ -393,11 +393,11 @@ for (int i = 255; i >= 0; i--) {
 
 この例では、BH1750 センサーを使用して光強度値を読み取る方法を示します。
 
-- **ステップ 1.** `hp_BH1750` ライブラリをダウンロード
+- **ステップ 1.** `hp_BH1750` ライブラリをダウンロードします
 
 **スケッチ > ライブラリをインクルード > ライブラリを管理...** に移動し、**hp_BH1750** を検索して最新バージョンをインストールします。
 
-- **ステップ 2.** 以下のコードを新しいスケッチにコピー：
+- **ステップ 2.** 以下のコードを新しいスケッチにコピーします：
 
 ```cpp
 #include <Arduino.h>
@@ -429,7 +429,7 @@ if (BH1750.hasValue()) {
 }
 ```
 
-- **ステップ 3.** 正しいボードとポート番号を選択してプログラムをアップロード。
+- **ステップ 3.** 正しいボードとポート番号を選択してプログラムをアップロードします。
 
 Arduino シリアルモニターでの出力は以下のようになります：
 
@@ -442,7 +442,7 @@ Arduino シリアルモニターでの出力は以下のようになります：
 この例では、`SEEED_MR60BHA2` クラスを使用して MR60BHA2 センサーと心拍・呼吸監視のためのインターフェースを行います。各主要機能の説明は以下の通りです：
 
 - **`mmWave.begin(&mmWaveSerial)`**:
-  - 指定されたシリアルインターフェースを使用してセンサーとの通信を初期化します。XIAO ボードと MR60BHA2 センサー間の接続を設定します。
+  - 指定されたシリアルインターフェースを使用して通信用にセンサーを初期化します。XIAO ボードと MR60BHA2 センサー間の接続を設定します。
 
 - **`mmWave.update(100)`**:
   - センサーデータを更新します。パラメータ `100` はミリ秒単位のタイムアウト値で、センサーが新しいデータを提供するまでの待機時間を指定します。この時間内に新しいデータが利用可能な場合、関数は `true` を返します。
@@ -479,15 +479,16 @@ Arduino シリアルモニターでの出力は以下のようになります：
     - `cluster_index` : ターゲットのクラスター ID、シーン内の個々のターゲットを識別するために使用されます。
 
 - **`mmWave.isHumanDetected()`**:
-  - 人が検出されているかどうかを返します。
+  - 人が検出されたかどうかを返します。
 
 <!-- 
-### Fall Module API
+### Fall モジュール API
 
-この例では、転倒検知のためにMR60FDA2センサーとインターフェースするために`SEEED_MR60FDA2`クラスを使用しています。各主要機能の動作は以下の通りです：
+This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sensor for fall detection. Here's what each key function does:
 
 - **`mmWave.begin(&mmWaveSerial)`**:
   - Initializes the sensor for communication, similar to the breath module, setting up the serial connection between the XIAO board and the MR60FDA2 sensor.
+
 - **`mmWave.setInstallationHeight(float height)`**:
   - レーダーの設置高度を設定します。これは正確な転倒検知に重要です。`height`パラメータはセンサーが設置される高度（メートル単位）を指定し、有効範囲は通常1〜5メートルです。
 
@@ -509,9 +510,13 @@ Arduino シリアルモニターでの出力は以下のようになります：
 ## モジュールファームウェアアップグレード
 
 :::caution
-レーダーファームウェアの変更は危険な操作ですので、このセクションを注意深く読み、各ステップを慎重に実行してください。ステップが正しく実行されない場合、レーダーがブリック状態になったり使用不能になったりする可能性があることをご理解ください。
+レーダーファームウェアの変更は危険な操作ですので、各ステップを慎重に実行する前に、このセクションを注意深く読んでください。ステップが正しく実行されない場合、レーダーがブリック状態になったり使用不能になったりする可能性があることをご理解ください。
 
 **特別な注意：Fall Radar MR60FDA2を購入された場合は、以下の方法でファームウェアを不正にフラッシュしないでください。確実にデバイスがブリック状態になります！！！！**
+:::
+
+:::tip
+テキストを読みたくない場合は、**[動画](https://youtu.be/uic8__FFzos)**を参照してファームウェアを更新することもできます。以下でXIAOのESPHomeファームウェアが上書きされるため、レーダーのファームウェア更新後にこの[ウェブページ](https://limengdu.github.io/MR60BHA2_ESPHome_external_components/)でXIAOのESPHomeファームウェアを再フラッシュする必要がある場合があります。
 :::
 
 まず、XIAO ESP32C6とMR60BHA2モジュールを接続します。次に、以下のコードを使用してXIAOをプログラムします。
@@ -568,13 +573,13 @@ void loop() {
 次に、OTAツールとファームウェアをここからダウンロードして解凍する必要があります。
 
 :::note
-ファームウェア1.6.12には以下のアップデートがあります：
+ファームウェア1.6.12には以下の更新があります：
 
 1. 1.5メートル以内で静止している際のターゲット喪失を修正しました。
 
 2. 0-3メートル間を移動するターゲットの追跡安定性を最適化し、以前のターゲット座標の不正確さを解決しました。ただし、レポートの更新頻度は低下しました。
 
-3. 呼吸と心拍数の精度—このリリースでは更新はありません。関連する機械学習トレーニングの継続的な最適化が進行中です。呼吸と心拍数の精度を向上させるファームウェアアップデートは月末頃にリリース予定です。以前の呼吸と心拍数アルゴリズムには根本的な問題がありましたが、これらは対処されました。
+3. 呼吸と心拍数の精度—このリリースでは更新はありません。関連する機械学習トレーニングの継続的な最適化が進行中です。呼吸と心拍数の精度を向上させるファームウェア更新は月末頃にリリース予定です。以前の呼吸と心拍数アルゴリズムには根本的な問題がありましたが、これらは対処されています。
 
 :::
 
@@ -588,7 +593,7 @@ void loop() {
 - **MR60BHA2 ファームウェア v1.6.4**: [MR60BHA2_eeprom_1.6.4.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.4.bin)
 
 :::note
-ファームウェア1.6.4には以下のアップデートがあります：
+ファームウェア1.6.4には以下の更新があります：
 
 1. 呼吸と心拍数検知機能を最適化し、小さな体の動きがデータ損失を引き起こすバグを修正しました。  
 2. 3D存在検知機能を強化：1.5メートル以内で呼吸と心拍数を検知でき、1.5〜6メートルの範囲で存在を検知できます。  
@@ -599,7 +604,7 @@ void loop() {
 - **MR60BHA2 ファームウェア v1.6.5**: [MR60BHA2_eeprom_1.6.5.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.5.bin)
 
 :::note
-ファームウェア1.6.5には以下のアップデートがあります：
+ファームウェア1.6.5には以下の更新があります：
 
 1. 人体が安静時に呼吸と心拍数が時々検知されない問題を修正しました。
 
@@ -608,7 +613,7 @@ void loop() {
 - **MR60BHA2 ファームウェア v1.6.10**: [MR60BHA2_eeprom_1.6.10.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.10.bin)
 
 :::note
-ファームウェア1.6.10には以下のアップデートがあります：
+ファームウェア1.6.10には以下の更新があります：
 
 1. 息止め時間が減少しない問題を解決するため、呼吸メカニズムを最適化しました。
 2. データ収集機能を追加しました。
@@ -655,7 +660,7 @@ void loop() {
 
 独自のアプリケーションに合わせてキットをカスタマイズしたいですか？
 
-mmWaveモジュールをカスタマイズする際の3Dポイントクラウドデータ生成と干渉ゾーン設定の詳細については、Seeedがコンセプトから生産まで迅速な開発のためのワンストップR&Dカスタマイゼーションと製造サービスを提供しています。詳細については[iot@seeed.cc](mailto:iot@seeed.cc)までお問い合わせください。
+mmWaveモジュールをカスタマイズする際の3Dポイントクラウドデータ生成と干渉ゾーン設定の詳細については、Seedは概念から生産まで迅速な開発のためのワンストップR&Dカスタマイゼーションと製造サービスを提供しています。詳細については[iot@seeed.cc](mailto:iot@seeed.cc)までお問い合わせください。
 
 :::danger カスタマイズサービスの説明
 レーダーのファームウェアとアルゴリズムはオープンソースではなく、3Dポイントクラウド、検知距離、範囲などのレーダーの複雑なパラメータにはカスタマイズサービスが必要で、追加のカスタマイゼーション費用とMOQが発生する場合があります。
@@ -669,7 +674,7 @@ mmWaveモジュールをカスタマイズする際の3Dポイントクラウド
 - **MR60BHA2 ファームウェアアップグレードツール**: [MR60BHA2_OTA.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_OTA.zip)
 - **MR60BHA2 ファームウェア v1.6.12**: [MR60BHA2_eeprom_1.6.12.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.12.bin)
 - **MR60BHA2 GUIソフトウェア**: [Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip)
-- **mmWaveセンサー回路図 V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
+- **mmWave センサー SCH V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
 - **MR60BHA2 モジュール技術仕様**: [MR60BHA2_Breathing_and_Heartbeat_Module.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/MR60BHA2_Breathing_and_Heartbeat_Module.pdf)
 - **MR60BHA2 Tiny Frameインターフェースマニュアル**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)
 - **Jlink経由でのレーダーファームウェア復旧方法**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)

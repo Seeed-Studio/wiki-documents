@@ -145,7 +145,7 @@ esp.flash_size()
 
 XIAO ESP32S3でThonnyを使用してMicroPythonのセットアップが正常に完了しました。おめでとうございます！
 
-### 2. Arduino Lab for MicroPython
+### 2. MicroPython用Arduino Lab
 
 Arduino lab for MicroPythonをダウンロードし、デバイスをPCに接続してください。
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_micropython/7.png" /></div>
@@ -281,7 +281,7 @@ def do_connect():
     print('network config:', wlan.ifconfig())
 ```
 
-### Delay and timing
+### 遅延とタイミング
 
 The *time* module:
 

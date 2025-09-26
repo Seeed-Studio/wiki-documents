@@ -11,7 +11,7 @@ last_update:
     author: rcsim
 ---
 
-# Seeed Studio XIAO ESP32S3 with NuttX(RTOS)
+# Seeed Studio XIAO ESP32S3 と NuttX(RTOS)
 
 ## はじめに
 

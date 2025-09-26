@@ -511,7 +511,7 @@ void loop()
 
 - **[PDF]** [Bus Servo Driver Board Schematic](https://files.seeedstudio.com/wiki/bus_servo_driver_board/202004237_Servo_Driver_Board_for_Seeed_Studio_XIAO_SCH_PDF_250225.pdf)
 
-### Tech Support & Product Discussion
+### 技術サポート・製品ディスカッション
 
 私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 

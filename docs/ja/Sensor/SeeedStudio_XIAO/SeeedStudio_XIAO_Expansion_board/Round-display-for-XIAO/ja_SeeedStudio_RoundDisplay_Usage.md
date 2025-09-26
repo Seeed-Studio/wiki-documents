@@ -315,7 +315,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/80.png" style={{width:700, height:'auto'}}/></div>
 
-### Program annotation
+### プログラム注釈
 
 このコードはADCを使用してバッテリー電圧を測定し、バッテリー残量パーセンテージを計算します。実装はハードウェアプラットフォームによって異なります：
 

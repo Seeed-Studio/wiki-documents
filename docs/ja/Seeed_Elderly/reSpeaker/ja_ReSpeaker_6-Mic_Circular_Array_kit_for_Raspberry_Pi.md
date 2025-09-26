@@ -618,7 +618,7 @@ A2: raspberry -> Preferences -> Raspberry Pi Configurationをクリックし、I
 - **[Voice Engine]** [音声対応オブジェクトを作成するためのビルディングブロックを提供するVoice Engineプロジェクト](https://github.com/voice-engine/voice-engine)
 - **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
 
-## Tech Support & Product Discussion
+## 技術サポート・製品ディスカッション
 
 私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 

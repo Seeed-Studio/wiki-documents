@@ -223,7 +223,7 @@ Home Assistantはホームオートメーションを超えて進化し、**ス�
 
 <br/>
 
-## Seeed Powered Home Assistant Peripherals
+## Seeed Powered Home Assistant 周辺機器
 
 ### XIAO ESP32C3: 自分だけのノードを作成
 

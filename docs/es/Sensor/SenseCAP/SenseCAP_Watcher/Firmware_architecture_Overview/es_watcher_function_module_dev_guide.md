@@ -340,7 +340,7 @@ Como puedes ver, la función `cfg` simplemente extrae valores de campo del objet
 }
 ```
 
-In the above task flow, the `params` for `uart alarmer` is
+En el flujo de tareas anterior, los `params` para `uart alarmer` son
 
 ```json
 {

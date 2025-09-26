@@ -175,7 +175,7 @@ wakeup_reason = esp_sleep_get_wakeup_cause();
 ++bootCount;
 ```
 
-- Increment the boot count and print it every time the device reboots.
+- Incrementar el contador de arranque e imprimirlo cada vez que el dispositivo se reinicie.
 
 ```cpp
 print_wakeup_reason();
@@ -804,8 +804,8 @@ Serial.println("LED is OFF");
 vTaskDelete(NULL); 
 ```
 
-- `vTaskDelay(pdMS_TO_TICKS(1000));`Keep the LED on for 1 second
-- `vTaskDelete(NULL);`Delete the current task
+- `vTaskDelay(pdMS_TO_TICKS(1000));`Mantener el LED encendido durante 1 segundo
+- `vTaskDelete(NULL);`Eliminar la tarea actual
 
 ```cpp
 esp_sleep_enable_timer_wakeup(sleepTime * 1000);

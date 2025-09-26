@@ -76,7 +76,7 @@ Recomendamos instalar la última versión del SO Raspberry Pi de 64 bits desde s
 Instalar Home Assistant Supervised en tu Raspberry Pi 4 es un proceso integral que combina varios pasos críticos para asegurar una configuración exitosa.
 
 :::note
-In some steps, if you are connected through Wi-Fi, you may lose connection. It is recommended to use a LAN connection instead.
+En algunos pasos, si está conectado a través de Wi-Fi, puede perder la conexión. Se recomienda usar una conexión LAN en su lugar.
 
 :::
 
@@ -183,7 +183,7 @@ sudo dpkg -i os-agent_1.3.0_linux_aarch64.deb
 gdbus introspect --system --dest io.hass.os --object-path /io/hass/os
 ```
 
-### Paso 5: Adquirir Home Assistant Supervised
+### Paso 5: Adquirir Home Assistant Supervisado
 
 - **Descargar el paquete más reciente de Home Assistant Supervised:**
 
@@ -216,7 +216,7 @@ Al corregir exitosamente, aparecerá una pantalla azul que te permitirá selecci
 Permite unos minutos para que Home Assistant se vuelva accesible en http://[tu_IP_raspberry]:8123.
 :::note
 
-If you encounter Wi-Fi connectivity issues after rebooting, follow these steps
+Si encuentras problemas de conectividad Wi-Fi después de reiniciar, sigue estos steps
 
 :::
 
@@ -240,7 +240,7 @@ sudo reboot
 
 :::note
 
-To resolve the "Network Manager issues,"(find in settings) you can rectify the situation by initiating and subsequently enabling the Network Manager. Utilize the following command to accomplish this:
+Para resolver los "problemas del Administrador de Red" (encontrar en configuración), puedes rectificar la situación iniciando y posteriormente habilitando el Administrador de Red. Utiliza el siguiente comando para lograr esto:
 
 :::
 

@@ -12,7 +12,7 @@ last_update:
 ---
 
 
-# **Wio RP2040 mini Dev Board with Arduino**
+# **Arduino搭載Wio RP2040 mini開発ボード**
 
 ここでは、Wio RP2040 mini Dev Boardを使用して、Arduinoを介してMQTTおよびSocketを通じてデータを送信します。
 

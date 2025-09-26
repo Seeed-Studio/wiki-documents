@@ -5,7 +5,7 @@ image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.webp
 slug: /reterminal_e10xx_with_lopaka
 sidebar_position: 2
 last_update:
-  date: 12/9/2025
+  date: 9/12/2025
   author: Martin
 ---
 

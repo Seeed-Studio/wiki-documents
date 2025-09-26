@@ -853,7 +853,7 @@ exports.handler = async (event) => {
 
 `AWS IoT Core Console`に移動し、`MQTT Test Client`を選択してトピックを購読します。
 
-#### Add Tracker Rule
+#### トラッカールールを追加
 
 上記の手順を繰り返して新しいルールを作成し、以下のLambdaコードをコピーします：
 

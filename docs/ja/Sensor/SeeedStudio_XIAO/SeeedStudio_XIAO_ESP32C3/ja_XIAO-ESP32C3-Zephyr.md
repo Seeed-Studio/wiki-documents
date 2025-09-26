@@ -10,7 +10,7 @@ last_update:
   author: timo614
 ---
 
-# XIAO ESP32C3 with Zephyr(RTOS)
+# XIAO Zephyr(RTOS)を使用したESP32C3
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-esp32c3.png"/></div>
 

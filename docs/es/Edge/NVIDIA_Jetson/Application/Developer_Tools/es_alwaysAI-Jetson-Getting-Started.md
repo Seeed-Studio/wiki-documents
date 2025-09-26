@@ -314,7 +314,7 @@ Y luego reemplaza **file name goes here** con el nombre del archivo de video y l
 aai app install
 ```
 
-**Step 4.** Finally run the app
+**Paso 4.** Finalmente ejecuta la aplicación
 
 ```sh
 aai app start
@@ -423,7 +423,7 @@ Si quieres realizar la misma inferencia que arriba en un flujo de video en tiemp
 aai app install
 ```
 
-**Step 4.** Finally run the app
+**Paso 4.** Finalmente ejecuta la aplicación
 
 ```sh
 aai app start
@@ -492,11 +492,11 @@ lakshanthad/roadsign-mobilenet
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -17,7 +17,7 @@ Data Loggerは、産業レベルセンサー、Groveセンサー、アナログ/
 
 ## ハードウェア製品
 
-### SenseCAP Sensor Hub Data Logger
+### SenseCAP センサーハブ データロガー
 
 SenseCAP Sensor Hubは、リモート環境監視のためのコンパクトなソリューションです。最大40台のRS-485センサーを接続できる強力なデータロガーと幅広いセンサー選択で構成されており、気象観測所や大気質監視などのアプリケーションに使用できます。IP66と太陽光電源供給により、信頼性が高く不揮発性のデータ収集サービスを提供することができます。SenseCAP Sensor Hub Data Loggerには2つのバージョンがあります：2Gと4G、どちらも利用可能です。
 
@@ -31,7 +31,7 @@ SenseCAP Sensor Hubは、リモート環境監視のためのコンパクトな�
 [SesneCAP Mobile APP](https://solution.seeedstudio.com/product/software-cloud-sensecap-app/)、[SenseCAP webベースポータル](https://solution.seeedstudio.com/product/software-cloud-sensecap-portal/)、[SenseCAP API](https://sensecap-docs.seeed.cc/introduction.html)、および[SenseCAP Dashboard](https://solution.seeedstudio.com/product/software-cloud-sensecap-dashboard/)も、迅速な設定とデバイス+データ管理のために利用可能です。
 
 
-### SenseCAP S2100 LoRaWAN Data Logger
+### SenseCAP S2100 LoRaWAN データロガー
 
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/log.png"/></div>
 

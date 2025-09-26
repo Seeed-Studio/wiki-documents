@@ -155,7 +155,7 @@ sudo pip3 install docker-compose
 docker-compose --version
 ```
 
-##### 3. NVIDIA Container Toolkit
+##### 3. NVIDIA コンテナツールキット
 
 NVIDIA Container Toolkitのインストールについては、参考文献のリンクを参照してください。お使いのシステムに基づいて、以下のインストールガイドラインに従ってください。Dockerコンテナ内でGPUを使用するためにインストールする必要があります。
 

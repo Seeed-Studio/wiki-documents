@@ -10,7 +10,7 @@ last_update:
   author: Tim
 ---
 
-# XIAO nRF52840(sense) With Zephyr(RTOS)
+# XIAO nRF52840(sense)とZephyr（RTOS）
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-ble.png"/></div>
 

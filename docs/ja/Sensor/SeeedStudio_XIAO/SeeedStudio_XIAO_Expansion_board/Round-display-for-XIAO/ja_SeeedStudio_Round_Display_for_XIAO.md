@@ -380,7 +380,7 @@ A: これは、XIAO RP2040 に適切なコンパイルオプションを選択�
 - **[STL]** [Round Display用シェルの3Dモデル図](https://files.seeedstudio.com/wiki/round_display_for_xiao/Round-Display-shell-3D-Model.stl)
 - **[STL]** [Seeed Studio XIAO ESP32 S3 Sense ラウンドスクリーン付きケース](https://files.seeedstudio.com/wiki/round_display_for_xiao/Seeed_Studio-XIAO-ESP32-S3-Sense-Case-With-Round-Screen.stl)
 
-## Tech Support & Product Discussion
+## 技術サポート・製品ディスカッション
 
 私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
