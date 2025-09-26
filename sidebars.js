@@ -698,7 +698,7 @@ const sidebars = {
                 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Datacake_Integrated',
                 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Ubidots_Integrated',
                 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/thingsboard_integrated',
-                'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Ubidots_Integrated(Helium)',
+                'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Ubidots_Integrated_Helium',
                 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Qubitro_Integrated',
                 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/TagoIO_Integrated',
                 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/InfluxDB_Integrated',
@@ -833,7 +833,7 @@ const sidebars = {
                 'Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
                 'Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
                 'Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
-                'Sensor/SenseCAP/SenseCAP_Probe/RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor(S-THP-01A)',
+                'Sensor/SenseCAP/SenseCAP_Probe/RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor_S-THP-01A',
                 'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
                 'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
                 'Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor',
@@ -3148,8 +3148,8 @@ const sidebars = {
                       type: 'category',
                       label: 'AWS IoT Core Integration (R1000 / reTerminal DM)',
                       items: [
-                        'Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/recomputer_r1000_aws',
-                        'Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/reTerminal-DM_AWS_first',
+                        'Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_R1000_reTerminal-DM/recomputer_r1000_aws',
+                        'Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_R1000_reTerminal-DM/reTerminal-DM_AWS_first',
                       ]
                     },
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/reTerminal-DM_Azure_IoT',
@@ -3258,9 +3258,9 @@ const sidebars = {
                   type: 'category',
                   label: 'Ignition Edge (reComputer R1000 / reTerminal DM)',
                   items: [
-                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/Edgebox-rpi-200-ignition-edge',
-                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/reTerminal-DM-Getting-Started-with-Ignition-Edge',
-                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/reTerminal-DM-Ignition-Edge-Panel-Builder',
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_reComputer-R1000_reTerminal-DM/Edgebox-rpi-200-ignition-edge',
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_reComputer-R1000_reTerminal-DM/reTerminal-DM-Getting-Started-with-Ignition-Edge',
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_reComputer-R1000_reTerminal-DM/reTerminal-DM-Ignition-Edge-Panel-Builder',
                   ]
                 },
                 {
@@ -3319,14 +3319,14 @@ const sidebars = {
                       type: 'category',
                       label: 'Object/Face/Color/Shape Detection',
                       items: [
-                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Color_detection',
-                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Face_detection',
-                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Object_detection',
-                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Shape_detection',
+                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/reTerminal_DM_Color_detection',
+                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/reTerminal_DM_Face_detection',
+                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/reTerminal_DM_Object_detection',
+                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/reTerminal_DM_Shape_detection',
                       ]
                     },
-                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/reTerminal_DM_opencv',
-                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/reTerminal_DM-tracking',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/reTerminal_DM_opencv',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/reTerminal_DM-tracking',
                   ]
                 },
                 {
@@ -3337,8 +3337,8 @@ const sidebars = {
                       type: 'category',
                       label: 'YOLOv8  Object Detection (Pi 5 / R1000 / AI Box)',
                       items: [
-                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection',
-                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
+                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_Pi-5_R1000_AI-Box/Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection',
+                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_Pi-5_R1000_AI-Box/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
                       ]
                     },
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/reTerminal-DM-Yolo5',
@@ -5745,7 +5745,7 @@ const sidebars = {
                 'zh-CN/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/cn_Datacake_Integrated',
                 'zh-CN/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/cn_Ubidots_Integrated',
                 'zh-CN/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/cn_thingsboard_integrated',
-                'zh-CN/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/cn_Ubidots_Integrated(Helium)',
+                'zh-CN/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/cn_Ubidots_Integrated_Helium',
                 'zh-CN/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/cn_Qubitro_Integrated',
                 'zh-CN/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/cn_TagoIO_Integrated',
                 'zh-CN/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/cn_InfluxDB_Integrated',
@@ -5880,7 +5880,7 @@ const sidebars = {
                 'zh-CN/Sensor/SenseCAP/SenseCAP_Probe/cn_Liquid-Level-Sensor',
                 'zh-CN/Sensor/SenseCAP/SenseCAP_Probe/cn_Water-Leak-Detector',
                 'zh-CN/Sensor/SenseCAP/SenseCAP_Probe/cn_Industrial-ph-Sensor',
-                'zh-CN/Sensor/SenseCAP/SenseCAP_Probe/cn_RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor(S-THP-01A)',
+                'zh-CN/Sensor/SenseCAP/SenseCAP_Probe/cn_RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor_S-THP-01A',
                 'zh-CN/Sensor/SenseCAP/SenseCAP_Probe/cn_Soil-Moisture-Temperature-EC-Sensor',
                 'zh-CN/Sensor/SenseCAP/SenseCAP_Probe/cn_Soil-Moisture-Temperature-Sensor',
                 'zh-CN/Sensor/SenseCAP/SenseCAP_Probe/cn_RS485_500cm_Ultrasonic_Sensor',
@@ -8183,8 +8183,8 @@ const sidebars = {
                       type: 'category',
                       label: 'AWS IoT Core 集成 (R1000 / reTerminal DM)',
                       items: [
-                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/cn_recomputer_r1000_aws',
-                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/cn_reTerminal-DM_AWS_first',
+                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_R1000_reTerminal-DM/cn_recomputer_r1000_aws',
+                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_R1000_reTerminal-DM/cn_reTerminal-DM_AWS_first',
                       ]
                     },
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/cn_reTerminal-DM_Azure_IoT',
@@ -8293,9 +8293,9 @@ const sidebars = {
                   type: 'category',
                   label: 'Ignition Edge (reComputer R1000 / reTerminal DM)',
                   items: [
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/cn_Edgebox-rpi-200-ignition-edge',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/cn_reTerminal-DM-Getting-Started-with-Ignition-Edge',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/cn_reTerminal-DM-Ignition-Edge-Panel-Builder',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_reComputer-R1000_reTerminal-DM/cn_Edgebox-rpi-200-ignition-edge',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_reComputer-R1000_reTerminal-DM/cn_reTerminal-DM-Getting-Started-with-Ignition-Edge',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_reComputer-R1000_reTerminal-DM/cn_reTerminal-DM-Ignition-Edge-Panel-Builder',
                   ]
                 },
                 {
@@ -8354,14 +8354,14 @@ const sidebars = {
                       type: 'category',
                       label: '物体/人脸/颜色/形状检测',
                       items: [
-                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/cn_reTerminal_DM_Color_detection',
-                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/cn_reTerminal_DM_Face_detection',
-                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/cn_reTerminal_DM_Object_detection',
-                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/cn_reTerminal_DM_Shape_detection',
+                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/cn_reTerminal_DM_Color_detection',
+                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/cn_reTerminal_DM_Face_detection',
+                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/cn_reTerminal_DM_Object_detection',
+                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/cn_reTerminal_DM_Shape_detection',
                       ]
                     },
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/cn_reTerminal_DM_opencv',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/cn_reTerminal_DM-tracking',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/cn_reTerminal_DM_opencv',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/cn_reTerminal_DM-tracking',
                   ]
                 },
                 {
@@ -8372,8 +8372,8 @@ const sidebars = {
                       type: 'category',
                       label: 'YOLOv8 物体检测 (Pi 5 / R1000 / AI Box)',
                       items: [
-                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/cn_Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection',
-                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/cn_yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
+                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_Pi-5_R1000_AI-Box/cn_Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection',
+                        'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_Pi-5_R1000_AI-Box/cn_yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
                       ]
                     },
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/cn_reTerminal-DM-Yolo5',
@@ -10687,7 +10687,7 @@ const sidebars = {
                 'es/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/es_Datacake_Integrated',
                 'es/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/es_Ubidots_Integrated',
                 'es/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/es_thingsboard_integrated',
-                'es/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/es_Ubidots_Integrated(Helium)',
+                'es/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/es_Ubidots_Integrated_Helium',
                 'es/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/es_Qubitro_Integrated',
                 'es/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/es_TagoIO_Integrated',
                 'es/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/es_InfluxDB_Integrated',
@@ -10822,7 +10822,7 @@ const sidebars = {
                 'es/Sensor/SenseCAP/SenseCAP_Probe/es_Liquid-Level-Sensor',
                 'es/Sensor/SenseCAP/SenseCAP_Probe/es_Water-Leak-Detector',
                 'es/Sensor/SenseCAP/SenseCAP_Probe/es_Industrial-ph-Sensor',
-                'es/Sensor/SenseCAP/SenseCAP_Probe/es_RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor(S-THP-01A)',
+                'es/Sensor/SenseCAP/SenseCAP_Probe/es_RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor_S-THP-01A',
                 'es/Sensor/SenseCAP/SenseCAP_Probe/es_Soil-Moisture-Temperature-EC-Sensor',
                 'es/Sensor/SenseCAP/SenseCAP_Probe/es_Soil-Moisture-Temperature-Sensor',
                 'es/Sensor/SenseCAP/SenseCAP_Probe/es_RS485_500cm_Ultrasonic_Sensor',
@@ -13125,8 +13125,8 @@ const sidebars = {
                       type: 'category',
                       label: 'Integración AWS IoT Core (R1000 / reTerminal DM)',
                       items: [
-                        'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/es_recomputer_r1000_aws',
-                        'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/es_reTerminal-DM_AWS_first',
+                        'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_R1000_reTerminal-DM/es_recomputer_r1000_aws',
+                        'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_R1000_reTerminal-DM/es_reTerminal-DM_AWS_first',
                       ]
                     },
                     'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/es_reTerminal-DM_Azure_IoT',
@@ -13235,9 +13235,9 @@ const sidebars = {
                   type: 'category',
                   label: 'Ignition Edge (reComputer R1000 / reTerminal DM)',
                   items: [
-                    'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/es_Edgebox-rpi-200-ignition-edge',
-                    'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/es_reTerminal-DM-Getting-Started-with-Ignition-Edge',
-                    'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/es_reTerminal-DM-Ignition-Edge-Panel-Builder',
+                    'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_reComputer-R1000_reTerminal-DM/es_Edgebox-rpi-200-ignition-edge',
+                    'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_reComputer-R1000_reTerminal-DM/es_reTerminal-DM-Getting-Started-with-Ignition-Edge',
+                    'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_reComputer-R1000_reTerminal-DM/es_reTerminal-DM-Ignition-Edge-Panel-Builder',
                   ]
                 },
                 {
@@ -13296,14 +13296,14 @@ const sidebars = {
                       type: 'category',
                       label: 'Detección de Objetos/Rostros/Colores/Formas',
                       items: [
-                        'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/es_reTerminal_DM_Color_detection',
-                        'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/es_reTerminal_DM_Face_detection',
-                        'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/es_reTerminal_DM_Object_detection',
-                        'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/es_reTerminal_DM_Shape_detection',
+                        'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/es_reTerminal_DM_Color_detection',
+                        'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/es_reTerminal_DM_Face_detection',
+                        'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/es_reTerminal_DM_Object_detection',
+                        'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/es_reTerminal_DM_Shape_detection',
                       ]
                     },
-                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/es_reTerminal_DM_opencv',
-                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/es_reTerminal_DM-tracking',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/es_reTerminal_DM_opencv',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/es_reTerminal_DM-tracking',
                   ]
                 },
                 {
@@ -13314,8 +13314,8 @@ const sidebars = {
                       type: 'category',
                       label: 'Detección de Objetos YOLOv8 (Pi 5 / R1000 / AI Box)',
                       items: [
-                        'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/es_Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection',
-                        'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/es_yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
+                        'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_Pi-5_R1000_AI-Box/es_Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection',
+                        'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_Pi-5_R1000_AI-Box/es_yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
                       ]
                     },
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/es_reTerminal-DM-Yolo5',
@@ -15629,7 +15629,7 @@ const sidebars = {
                 'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/ja_Datacake_Integrated',
                 'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/ja_Ubidots_Integrated',
                 'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/ja_thingsboard_integrated',
-                'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/ja_Ubidots_Integrated(Helium)',
+                'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/ja_Ubidots_Integrated_Helium',
                 'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/ja_Qubitro_Integrated',
                 'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/ja_TagoIO_Integrated',
                 'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/ja_InfluxDB_Integrated',
@@ -15764,7 +15764,7 @@ const sidebars = {
                 'ja/Sensor/SenseCAP/SenseCAP_Probe/ja_Liquid-Level-Sensor',
                 'ja/Sensor/SenseCAP/SenseCAP_Probe/ja_Water-Leak-Detector',
                 'ja/Sensor/SenseCAP/SenseCAP_Probe/ja_Industrial-ph-Sensor',
-                'ja/Sensor/SenseCAP/SenseCAP_Probe/ja_RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor(S-THP-01A)',
+                'ja/Sensor/SenseCAP/SenseCAP_Probe/ja_RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor_S-THP-01A',
                 'ja/Sensor/SenseCAP/SenseCAP_Probe/ja_Soil-Moisture-Temperature-EC-Sensor',
                 'ja/Sensor/SenseCAP/SenseCAP_Probe/ja_Soil-Moisture-Temperature-Sensor',
                 'ja/Sensor/SenseCAP/SenseCAP_Probe/ja_RS485_500cm_Ultrasonic_Sensor',
@@ -18067,8 +18067,8 @@ const sidebars = {
                       type: 'category',
                       label: 'AWS IoT Core Integration (R1000 / reTerminal DM)',
                       items: [
-                        'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/ja_recomputer_r1000_aws',
-                        'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/ja_reTerminal-DM_AWS_first',
+                        'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_R1000_reTerminal-DM/ja_recomputer_r1000_aws',
+                        'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_R1000_reTerminal-DM/ja_reTerminal-DM_AWS_first',
                       ]
                     },
                     'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/ja_reTerminal-DM_Azure_IoT',
@@ -18177,9 +18177,9 @@ const sidebars = {
                   type: 'category',
                   label: 'Ignition Edge (reComputer R1000 / reTerminal DM)',
                   items: [
-                    'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/ja_Edgebox-rpi-200-ignition-edge',
-                    'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/ja_reTerminal-DM-Getting-Started-with-Ignition-Edge',
-                    'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal-DM)/ja_reTerminal-DM-Ignition-Edge-Panel-Builder',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_reComputer-R1000_reTerminal-DM/ja_Edgebox-rpi-200-ignition-edge',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_reComputer-R1000_reTerminal-DM/ja_reTerminal-DM-Getting-Started-with-Ignition-Edge',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_reComputer-R1000_reTerminal-DM/ja_reTerminal-DM-Ignition-Edge-Panel-Builder',
                   ]
                 },
                 {
@@ -18238,14 +18238,14 @@ const sidebars = {
                       type: 'category',
                       label: 'オブジェクト/顔/色/形状検出',
                       items: [
-                        'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/ja_reTerminal_DM_Color_detection',
-                        'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/ja_reTerminal_DM_Face_detection',
-                        'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/ja_reTerminal_DM_Object_detection',
-                        'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/ja_reTerminal_DM_Shape_detection',
+                        'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/ja_reTerminal_DM_Color_detection',
+                        'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/ja_reTerminal_DM_Face_detection',
+                        'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/ja_reTerminal_DM_Object_detection',
+                        'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/Object_Face_Color_Shape-Detection/ja_reTerminal_DM_Shape_detection',
                       ]
                     },
-                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/ja_reTerminal_DM_opencv',
-                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/ja_reTerminal_DM-tracking',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/ja_reTerminal_DM_opencv',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_reTerminal_and_Pi-Camera/ja_reTerminal_DM-tracking',
                   ]
                 },
                 {
@@ -18256,8 +18256,8 @@ const sidebars = {
                       type: 'category',
                       label: 'YOLOv8 オブジェクト検出 (Pi 5 / R1000 / AI Box)',
                       items: [
-                        'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/ja_Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection',
-                        'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/ja_yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
+                        'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_Pi-5_R1000_AI-Box/ja_Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection',
+                        'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_Pi-5_R1000_AI-Box/ja_yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
                       ]
                     },
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/ja_reTerminal-DM-Yolo5',
