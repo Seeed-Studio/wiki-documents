@@ -15,13 +15,11 @@ last_update:
 ---
 
 
-
-## Introduction 
+## Introduction
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/ros/RoS2reSpeakerXVF3800.gif" alt="pir" width={800} height="auto" /></p>
 
 This project demonstrates the integration of the ReSpeaker XVF3800 with ROS2 for robotic applications, focusing on speech detection and Direction of Arrival (DOA) estimation. Using the Turtlesim node, we simulate robotic control based on speech input, enabling precise movement through PID control. The tutorial covers the setup of the ROS2 environment, configuration of the ReSpeaker XVF3800, and how to apply speech commands for controlling a robot. By the end, users will understand how to connect voice interfaces with robotics and use basic control algorithms for navigation.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -31,15 +29,11 @@ This project demonstrates the integration of the ReSpeaker XVF3800 with ROS2 for
     </a>
 </div>
 
-
 ## How to Install ROS 2 on the Host Computer
 
 For this project, we use **ROS 2 Humble** as the middleware. If you are installing ROS 2 for the first time, please follow the official installation guide for detailed steps:
 
 [ROS 2 Humble Installation Guide (Ubuntu)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
-
-
-
 
 ## Set Up ReSpeaker USB Mic Array
 
@@ -54,7 +48,6 @@ lsusb
 ```
 
 Look for the ReSpeaker device (e.g., `vendor 0x2886, product 0x001A`).
-
 
 ### Create a udev Rule for the Device
 
@@ -72,8 +65,6 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="0018", MODE="0666", 
 SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="001a", MODE="0666", GROUP="plugdev"
 ```
 
-
-
 ### Reload udev Rules and Restart the Service
 
 Reload the udev rules and restart the service for changes to take effect:
@@ -90,9 +81,7 @@ Unplug and replug your ReSpeaker USB Mic Array to apply the new rules.
 
 This guide walks you through the process of setting up a ROS2 workspace, creating a custom ROS2 package, controlling a robot using Python, and configuring the ReSpeaker USB Mic Array for use in your ROS2 project.
 
-
-
-###  Install Required Dependencies
+### Install Required Dependencies
 
 **Install Python Colcon Extension**
 
@@ -102,8 +91,7 @@ First, ensure that the necessary Python extensions for building ROS2 packages ar
 sudo apt install python3-colcon-common-extensions
 ```
 
-
-###  Configure Colcon Auto-completion (Optional)
+### Configure Colcon Auto-completion (Optional)
 
 If you need to set up auto-completion for colcon:
 
@@ -120,8 +108,7 @@ Then, add `source ~/.bashrc` to reload the environment:
 source ~/.bashrc
 ```
 
-
-###  Create a ROS2 Workspace
+### Create a ROS2 Workspace
 
 Create a new ROS2 workspace and prepare the environment:
 
@@ -132,9 +119,7 @@ mkdir src
 colcon build
 ```
 
-
-
-###  Source the ROS2 Workspace
+### Source the ROS2 Workspace
 
 After building the workspace, source it to set up the environment variables:
 
@@ -149,9 +134,7 @@ echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-
-
-###  Create a New ROS2 Package
+### Create a New ROS2 Package
 
 Now, let's create a new ROS2 package for your robot controller. This package will use `ament_python` for building and `rclpy` as a dependency:
 
@@ -160,9 +143,7 @@ cd ~/ros2_ws/src
 ros2 pkg create my_robot_controller --build-type ament_python --dependencies rclpy
 ```
 
-
-
-###  Add Python Script for Robot Control
+### Add Python Script for Robot Control
 
 Navigate into your newly created package, and create a Python script (e.g., `rotate_doa.py`) to control the robot:
 
@@ -334,9 +315,10 @@ if __name__ == '__main__':
     main()
 
 ```
+
 </details>
 
-Add this dependancies to package.xml 
+Add this dependancies to package.xml
 
 ```bash
   <depend>rclpy</depend>
@@ -345,7 +327,7 @@ Add this dependancies to package.xml
   <depend>std_msgs</depend>
 ```
 
-Add this endpoint to package.xml 
+Add this endpoint to package.xml
 
 ```python
 
@@ -357,7 +339,7 @@ entry_points={
 
 ```
 
-###  Build and Run the Package
+### Build and Run the Package
 
 After editing your Python script, build the package:
 
@@ -378,8 +360,6 @@ In another terminal, you can also run a basic ROS2 node (e.g., `turtlesim` for t
 ros2 run turtlesim turtlesim_node
 ```
 
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
@@ -393,4 +373,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
