@@ -291,7 +291,7 @@ If you encounter an error like this, you can use this command too.
 cd ~/lerobot && pip install -e ".[feetech]"
 ```
 
-For Jetson Jetpack 6.0+ devices (please make sure to install [Pytorch-gpu and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) from step 5 before executing this step):
+For Jetson Jetpack 6.0+ devices (please make sure to install [Pytorch-gpu and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) from step 5 before executing this step):
 
 ```bash
 conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
