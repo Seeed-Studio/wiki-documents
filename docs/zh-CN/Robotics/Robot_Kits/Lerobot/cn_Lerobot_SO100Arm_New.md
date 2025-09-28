@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /cn/lerobot_so100m_new
 last_update:
-  date: 7/29/2025
+  date: 9/26/2025
   author: LiShanghang
 ---
 
@@ -251,9 +251,8 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 3. 克隆 Lerobot 仓库：
 
 ```bash
-git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
+git clone https://github.com/huggingface/lerobot.git ~/lerobot
 ```
-
 
 4. 使用 miniconda 时，在环境中安装 ffmpeg：
  
@@ -368,8 +367,8 @@ Reconnect the USB cable.
 请记住要拔出 USB 接头，否则将无法检测到接口。
 :::
 
-识别领导臂端口时的示例输出（例如，在 Mac 上为 `/dev/tty.usbmodem575E0031751`，或在 Linux 上可能为 `/dev/ttyACM0`）：
-识别跟从懂端口时的示例输出（例如，在 Mac 上为 `/dev/tty.usbmodem575E0032081`，或在 Linux 上可能为 `/dev/ttyACM1`）：
+识别从动臂端口时的示例输出（例如，在 Mac 上为 `/dev/tty.usbmodem575E0031751`，或在 Linux 上可能为 `/dev/ttyACM0`）：
+识别领导臂端口时的示例输出（例如，在 Mac 上为 `/dev/tty.usbmodem575E0032081`，或在 Linux 上可能为 `/dev/ttyACM1`）：
 
 故障排除：在 Linux 上，你可能需要通过运行以下命令来赋予 USB 端口访问权限：
 
@@ -445,7 +444,7 @@ Connect the controller board to the 'wrist_roll' motor only and press enter.
 ```bash
 lerobot-setup-motors \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1
+    --teleop.port=/dev/ttyACM0
 ```    
 
 <div class="video-container">
@@ -516,8 +515,6 @@ lerobot-setup-motors \
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115020482480174&bvid=BV1i2bazGEHo&cid=31664966705&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
-
 :::tip
 SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的参数和代码进行操作。
 :::
@@ -528,12 +525,13 @@ SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的
 
 接下来，你需要对你的 SO-10x 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。这个校准过程至关重要，因为它可以让在一个 SO-10x 机器人上训练的神经网络在另一个机器人上也能正常工作。如果需要重新校准机械臂，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
 
-## 从动臂手动校准
-
 请通过 3 针接口连接 6 个机器人舵机的接口，并将底盘舵机连接到舵机驱动板，然后运行以下命令或 API 示例来校准机械臂：
 
+:::tip
+以PC(linux)和jetson板卡为例，`第一个`插入usb接口会映射为`ttyACM0`，`第二个`插入usb接口会映射为`ttyACM1`。
 
-### 接口授权
+在运行代码前请注意leader和follower的映射接口。
+:::
 
 首先，您需要授予接口权限，运行以下命令：
 
@@ -541,7 +539,7 @@ SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的
 sudo chmod 666 /dev/ttyACM*
 ```
 
-### 然后校准从动臂
+### 校准从动臂
 
 接下来，通过运行以下 Python 命令来校准从动臂：
 
@@ -555,7 +553,7 @@ lerobot-calibrate \
 下面的视频演示了如何执行校准。首先，您需要将机器人移动到所有关节都位于其活动范围中间的位置。然后，按下回车键后，您必须将每个关节在其完整的运动范围内移动。
 
 
-**领导臂手动校准**
+###  校准领导臂
 
 对主机械臂进行校准的步骤与上述相同，请运行以下命令或 API 示例：
 
@@ -740,37 +738,65 @@ lerobot-record \
 INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)
 ```
 
+**记录功能**
 
-**参数说明**
+**record**功能提供了一套工具，用于在机器人运行期间捕获和管理数据。
 
-- episode-time-s: 表示每次收集数据的时间。
-- reset-time-s: 是每次数据收集之间的准备时间。
-- num-episodes: 表示预期收集多少组数据。
-- push-to-hub: 决定是否将数据上传到 HuggingFace Hub。
+**1. 数据存储**
 
-:::tip
+- 数据以 `LeRobotDataset` 格式存储，并在记录过程中保存到磁盘中。
+- 默认情况下，数据集在记录完成后会推送到你的 Hugging Face 页面。
+- 若要禁用上传，请使用：`--dataset.push_to_hub=False`。
 
-- "如果你希望将数据保存在本地 (`--dataset.push_to_hub=false`)，请将 `--dataset.repo_id=${HF_USER}/so101_test` 替换为一个自定义的本地文件夹名称，例如 `--dataset.repo_id=seeed_123/so101_test`。数据将存储在系统主目录下的 `~/.cache/huggingface/lerobot`."
+**2. 检查点与恢复**
 
-- 如果你通过 `--dataset.push_to_hub=true` 将数据集上传到了 Hugging Face Hub，可以通过 [在线可视化你的数据集](https://huggingface.co/spaces/lerobot/visualize_dataset)，只需复制粘贴你的 repo id。
+- 在记录过程中会自动创建检查点。
+- 如果记录过程中断，可以通过重新运行相同的命令并添加 `--resume=true` 来恢复记录。
 
-- 在回合记录过程中任何时候按下右箭头 → 可提前停止并进入重置状态。重置过程中同样，可提前停止并进入下一个回合记录。
+⚠️ **重要提示**：在恢复时，需将 `--dataset.num_episodes` 设置为要额外记录的剧集数量（而不是数据集中目标的总剧集数量）。
+- 若要从头开始记录，请**手动删除**数据集目录。
 
-- 在录制或重置到早期阶段时，随时按左箭头 ← 可提前停止当前剧集，并重新录制。
+**3. 记录参数**
 
-- 在录制过程中随时按 ESCAPE ESC 可提前结束会话，直接进入视频编码和数据集上传。
+通过命令行参数设置数据记录的流程：
 
-- 可以通过重新运行相同的命令并添加 `--resume=true` 来恢复录制。如果要从头开始录制，请手动删除数据集目录。
+| 参数 | 描述 | 默认值 |
+|------|------|--------|
+| --dataset.episode_time_s | 每个数据剧集的持续时间（秒） | 60 |
+| --dataset.reset_time_s | 每个剧集后环境重置时间（秒） | 60 |
+| --dataset.num_episodes | 要记录的总剧集数量 | 50 |
 
-- 一旦你熟悉了数据记录，你就可以创建一个更大的数据集进行训练。一个不错的起始任务是在不同的位置抓取物体并将其放入箱子中。我们建议至少记录 50 个场景，每个位置 10 个场景。保持相机固定，并在整个录制过程中保持一致的抓取行为。同时确保你正在操作的物体在相机视野中可见。一个很好的经验法则是，你应该仅通过查看相机图像就能完成这项任务。
+**4. 记录过程中的键盘控制**
 
-- 在接下来的章节中，你将训练你的神经网络。在实现可靠的抓取性能后，你可以在数据收集过程中引入更多变化，例如增加抓取位置、不同的抓取技巧以及改变相机位置。
+使用键盘快捷键控制数据记录流程：
 
-- 避免快速添加过多变化，因为这可能会阻碍您的结果。
+| 键 | 动作 |
+|----|------|
+| →（右箭头） | 提前终止当前剧集/重置；进入下一个。 |
+| ←（左箭头） | 取消当前剧集；重新录制。 |
+| ESC | 立即停止会话，编码视频，并上传数据集。 |
 
-- 在 Linux 上，如果在数据记录期间左右箭头键和 Esc 键没有效果，请确保您已设置 $DISPLAY 环境变量。参见 [pynput 限制](https://pynput.readthedocs.io/en/latest/limitations.html#linux)。
+**数据收集技巧**
 
-:::
+- **任务建议**：在不同位置抓取物体并将其放入箱子中。
+- **规模**：记录 ≥50 个剧集（每个位置 10 个剧集）。
+- **一致性**：
+  - 保持摄像头固定。
+  - 保持相同的抓取行为。
+  - 确保操作的物体在摄像头画面中可见。
+- **逐步推进**：
+  - 先从可靠的抓取开始，然后再增加变化（新位置、抓取技巧、摄像头调整）。
+  - 避免复杂性急剧增加，以防止失败。
+
+💡 **经验法则**：仅使用摄像头画面作为指导，只根据屏幕反馈的视频图像，来控制机械臂完成任务。
+
+如果你想要深入了解这个重要主题，可以查看我们撰写的关于什么是好的数据集的[博客文章](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset)。
+
+**故障排除**
+
+Linux 问题：
+如果在记录过程中右箭头/左箭头/ESC 键无响应：
+- 验证 `$DISPLAY` 环境变量是否已设置（参见 [pynput 限制](https://pynput.readthedocs.io/en/latest/limitations.html )）。
 
 ## 可视化数据集
 
@@ -804,7 +830,6 @@ lerobot-dataset-viz \
   </div>
 
 
-
 ## 回放一个数据集
 
 :::tip
@@ -821,6 +846,8 @@ lerobot-replay \
     --dataset.repo_id=${HF_USER}/record-test \
     --dataset.episode=0
 ```
+
+此时，机器人应该做出与你遥操记录时一样的动作。
 
 ## 训练
 

@@ -1862,6 +1862,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ha',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_tflm',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2',
                   ],
                 },
               ],
@@ -3284,6 +3285,13 @@ const sidebars = {
                   label: 'Chirpstack',
                   items: [
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Chirpstack/recomputer_r1x_chirpstack',
+                  ]
+                },
+                 {
+                  type: 'category',
+                  label: 'OpenRemote',
+                  items: [
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/openremote/recomputer_r1x_openremote',
                   ]
                 },
                 {
