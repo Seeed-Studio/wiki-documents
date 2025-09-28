@@ -134,11 +134,11 @@ void loop() {
 
 この例は[**Kenta IDA**](https://github.com/ciniml)によって作成され、すべてのクレジットはKenta IDAに帰属します。
 
-**STEP 1.** **[リポジトリ](https://github.com/Seeed-Studio/Seeed_Arduino_Sketchbook)をダウンロードしてください。**
+**ステップ 1.** **[リポジトリ](https://github.com/Seeed-Studio/Seeed_Arduino_Sketchbook)をダウンロードしてください。**
 
 - `examples/WioTerminal_BackLight` の場所にあります。
 
-**STEP 2.** **コードをアップロードしてください。**
+**ステップ 2.** **コードをアップロードしてください。**
 
 `lcd_backlight_control.ino` を Wio Terminal にアップロードすると、LCDの明るさが変化するのが確認できます。
 

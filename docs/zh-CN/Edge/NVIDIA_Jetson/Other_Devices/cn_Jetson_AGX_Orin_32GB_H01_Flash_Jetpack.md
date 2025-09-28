@@ -247,13 +247,14 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo ./apply_binaries.sh
 ```
 
-- **Step 4:** Extract **A605_Jetpack_6.1.tar.gz**:
+- **步骤 4：** 解压 **A605_Jetpack_6.1.tar.gz**：
 
 ```bash
 cd ..
 tar xf A605_Jetpack_6.1.tar.gz
 sudo cp -r 605_jetpack6.1/Linux_for_Tegra/* Linux_for_Tegra/
 ```
+
 - **步骤 5:** 将系统刷写到 eMMC:
 
 ```bash
@@ -317,13 +318,14 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo ./apply_binaries.sh
 ```
 
-- **Step 4:** Extract **605_jp62.tar.gz**:
+- **步骤 4：** 解压 **605_jp62.tar.gz**：
 
 ```bash
 cd ..
 tar xf 605_jp62.tar.gz
 sudo cp -r 605_jp62/Linux_for_Tegra/* Linux_for_Tegra/
 ```
+
 - **步骤 5:** 将系统刷写到 eMMC:
 
 ```bash

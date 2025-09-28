@@ -20,6 +20,7 @@ Grove-Sensor de Vibración Piezoeléctrico es adecuado para mediciones de flexib
 
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-Piezo-Vibration-Sensor-p-1411.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p> -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-Piezo-Vibration-Sensor-p-1411.html)
+
 ## Versión
 
 | Versión del Producto              | Cambios                                                                                                                                                                                    | Fecha de Lanzamiento |
@@ -28,14 +29,15 @@ Grove-Sensor de Vibración Piezoeléctrico es adecuado para mediciones de flexib
 
 ## Características
 
--   Conector grove estándar
--   Amplio rango dinámico：0.1Hz~180Hz
--   Sensibilidad ajustable
--   Alta receptividad para impactos fuertes
+- Conector grove estándar
+- Amplio rango dinámico：0.1Hz~180Hz
+- Sensibilidad ajustable
+- Alta receptividad para impactos fuertes
 
 :::tip
     Más detalles sobre los módulos Grove consulte [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
 :::
+
 ## Plataformas Compatibles
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
@@ -51,15 +53,14 @@ Grove-Sensor de Vibración Piezoeléctrico es adecuado para mediciones de flexib
 
 ## Aplicaciones
 
--   Detección de Vibración en Lavadora
--   Interruptor de Activación de Bajo Consumo
--   Detección de Vibración de Bajo Costo
--   Alarmas de Automóvil
--   Movimiento Corporal
--   Sistemas de Seguridad
+- Detección de Vibración en Lavadora
+- Interruptor de Activación de Bajo Consumo
+- Detección de Vibración de Bajo Costo
+- Alarmas de Automóvil
+- Movimiento Corporal
+- Sistemas de Seguridad
 
 ## Primeros Pasos
-
 
 ### Jugar con Arduino
 
@@ -84,6 +85,7 @@ El Grove - Sensor de Vibración Piezoeléctrico emite un nivel lógico ALTO cuan
 :::note
     Puede generar un nivel bajo aunque originalmente genere un nivel alto cuando aumentes el voltaje umbral ajustando el potenciómetro en sentido horario.
 :::
+
 #### Software
 
 - Paso 1. Copia y pega el código de abajo en un nuevo sketch de Arduino.
@@ -112,7 +114,6 @@ void loop() {
 
 - Paso 2. El LED se encenderá cuando se detecte vibración.
 
-
 ### Jugar Con Raspberry Pi (Con Grove Base Hat para Raspberry Pi)
 
 #### Hardware
@@ -128,10 +129,8 @@ void loop() {
 - **Paso 3**. Conecta el Grove - Sensor de Vibración Piezoeléctrico al puerto 12 del Base Hat.
 - **Paso 4**. Conecta el Raspberry Pi a la PC a través del cable USB.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/img/Piezo_Hat.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/img/Piezo_Hat.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 :::note
     Para el paso 3 puedes conectar el sensor de vibración piezoeléctrico a **cualquier Puerto GPIO** pero asegúrate de cambiar el comando con el número de puerto correspondiente.
@@ -142,8 +141,9 @@ void loop() {
 :::note
      Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usar esta línea de comandos **solo con Python3**.
 :::
+
 - **Paso 1**. Sigue [Configuración de Software](https://wiki.seeedstudio.com/es/Grove_Base_Hat_for_Raspberry_Pi/#installation) para configurar el entorno de desarrollo.
-- **Paso 2**. Descarga el archivo fuente clonando la librería grove.py. 
+- **Paso 2**. Descarga el archivo fuente clonando la librería grove.py.
 
 ```
 cd ~
@@ -219,8 +219,9 @@ if __name__ == '__main__':
 ```
 
 :::success
-    If everything goes well, you will be able to see the following result
+    Si todo va bien, podrás ver el siguiente resultado
 :::
+
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ python3 grove_piezo_vibration_sensor.py 12
@@ -242,9 +243,7 @@ KeyboardInterrupt
 
 ```
 
-
 Puedes salir de este programa simplemente presionando ++ctrl+c++.
-
 
 ### Jugar con Raspberry Pi (con GrovePi_Plus)
 
@@ -266,7 +265,7 @@ Puedes salir de este programa simplemente presionando ++ctrl+c++.
 
 #### Software
 
-:::note 
+:::note
      Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usar esta línea de comandos **solo con Python3**.
 :::
 
@@ -307,7 +306,7 @@ while True:
         print "Error"
 ```
 
-- Step 4. We will see the vibration display on terminal as below.
+- Paso 4. Veremos la visualización de vibración en la terminal como se muestra a continuación.
 
 ```python
 pi@raspberrypi:~/GrovePi/Software/Python $ python3 grove_piezo_vibration_sensor.py
@@ -331,12 +330,10 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python3 grove_piezo_vibration_sensor.
 
 R1: Es salida digital, Bajo o Alto.
 
-
 ## Visor de Esquemático en Línea
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/res/Eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 ## Recursos
 
@@ -345,7 +342,6 @@ R1: Es salida digital, Bajo o Alto.
 - **[PDF]** [Grove - Archivo PDF del Esquemático del Sensor de Vibración Piezo](https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/res/Gvove-Piezo_Vibration_Sensor.pdf)
 - **[PDF]** [Grove - Archivo PDF del PCB del Sensor de Vibración Piezo](https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/res/Gvove%20-%20Piezo%20Vibration%20Sensor%20v1.1%20PCB.pdf)
 - **[Hoja de Datos]** [Hoja de Datos del Sensor de Vibración Piezo](https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/res/Piezo_Vibration_Sensor.pdf)
-
 
 ## Proyectos
 
@@ -358,14 +354,15 @@ R1: Es salida digital, Bajo o Alto.
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/momososo/seat-monitor-4288dc/embed' width='350'></iframe>
 
 ## Soporte Técnico y Discusión de Productos
+
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

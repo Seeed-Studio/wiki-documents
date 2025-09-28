@@ -421,13 +421,15 @@ brew install libusb
 brew install pkg-config
 ```
 
-- **Step 4.** Build using make
+- **ステップ 4.** make を使ってビルドします
+
 
 ```sh
 make
 ```
 
-- **Step 5.** Run the binary
+- **ステップ 5.** バイナリを実行します
+
 
 ```sh
 sudo ./rpiboot
@@ -504,7 +506,7 @@ cd usbboot
 make
 ```
 
-- **Step 6.** Run the usbboot tool and it will wait for a connection
+- **ステップ 6.** usbbootツールを実行すると、接続を待機します
 
 ```sh
 sudo ./rpiboot

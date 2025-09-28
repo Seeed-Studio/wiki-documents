@@ -75,7 +75,7 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-### Step 2: Install requirements
+### 步骤 2：安装依赖
 
 打开终端并运行以下命令来安装所需的软件包：
 
@@ -83,7 +83,7 @@ sudo apt full-upgrade
 sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev tar wget vim
 ```
 
-### Step 3: Download Python3.8
+### 步骤 3：下载 Python3.8
 
 打开终端并运行以下命令来下载 Python3.8:
 
@@ -91,7 +91,7 @@ sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev 
 wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tgz
 ```
 
-### Step 4: Install Python3.8
+### 步骤 4：安装 Python3.8
 
 打开终端并运行以下命令来安装 Python3.8:
 
@@ -104,7 +104,7 @@ sudo make altinstall
 cd ..
 ```
 
-### Step 5: Check Python3.8
+### 步骤 5：检查 Python3.8
 
 打开终端并运行以下命令来检查 Python3.8:
 
@@ -122,7 +122,7 @@ python3.8 -V
 python3.8 -m venv coral_venv
 ```
 
-## Configure Hardware Settings
+## 配置硬件设置
 
 打开终端并运行以下命令来打开 ```config.txt```：
 
@@ -210,7 +210,7 @@ sudo reboot
 
 ```
 
-## Check Edge TPU
+## 检查 Edge TPU
 
 ```
 lspci -nn | grep 089a

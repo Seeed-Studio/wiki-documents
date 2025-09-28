@@ -617,15 +617,15 @@ idf.py flash monitor
 cd ~/mm-iot-esp32/example/iperf
 ```
 
-### Step 2: Configure Network Settings
+### 步骤 2：配置网络设置
 
-1. Open the configuration file:
+1. 打开配置文件：
 
 ```bash
 nano main/src/mm_app_loadconfig.c
 ```
 
-2. Modify the following parameters:
+2. 修改以下参数：
 
 ```cpp
 // Set country code (must be "US" for North America)
@@ -706,9 +706,9 @@ iperf -c <device_ip>%wlan0 -p <port> -i 1 -V -u -b 20M
 cd ~/mm-iot-esp32/example/web_camera_serve
 ```
 
-### Step 2: Configure Network Settings
+### 步骤 2：配置网络设置
 
-1. Open the configuration file:
+1. 打开配置文件：
 
 ```bash
 nano main/src/mm_app_loadconfig.c

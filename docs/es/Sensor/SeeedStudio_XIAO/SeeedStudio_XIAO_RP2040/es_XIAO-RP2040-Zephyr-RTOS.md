@@ -35,6 +35,7 @@ Una vez que la cadena de herramientas de Zephyr ha sido configurada y un SDK aso
 Para el Xiao RP2040 el [archivo de descripción de la placa](https://docs.zephyrproject.org/latest/boards/seeed/xiao_rp2040/doc/index.html) puede ser referenciado para información adicional de configuración.
 
 Para programar el Xiao RP2040 se pueden seguir los siguientes pasos:
+
 1. Construir un ejemplo o tu aplicación
 2. Conectar el Xiao RP2040
 3. Mantener presionado el botón designado `B` (boot) y presionar `R` (reset) lo cual montará el dispositivo como un dispositivo de almacenamiento masivo
@@ -59,11 +60,13 @@ Encuentra el puerto para tu dispositivo, por ejemplo en Ubuntu escribiendo `ls /
 En mi ejemplo veo `/dev/ttyACM0` como el dispositivo recién añadido.
 
 Usando screen puedes entonces conectarte y monitorear la respuesta serie:
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
 Deberías ver una respuesta similar a la siguiente:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2212-gc38ea288eee9 ***
 Hello World! arm
@@ -137,6 +140,7 @@ west build -p always -b xiao_rp2040 samples/drivers/led_strip
 ```
 
 Entra en modo bootloader y flashea tu dispositivo:
+
 ```
 west flash -r uf2
 ```
@@ -144,6 +148,7 @@ west flash -r uf2
 Verás el LED WS2812 integrado alternando continuamente entre rojo, azul y verde en un patrón intermitente.
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
+
 ```
 
  / {
@@ -154,10 +159,10 @@ Profundicemos un poco en este ejemplo para ver por qué funciona:
  &gpio0 {
      status = "okay";
      neopixel-power-enable {
-		gpio-hog;
-		gpios = <11 GPIO_ACTIVE_HIGH>;
-		output-high;
-	};
+  gpio-hog;
+  gpios = <11 GPIO_ACTIVE_HIGH>;
+  output-high;
+ };
  };
  &pio0 {
      status = "okay";
@@ -209,6 +214,7 @@ west build -p always -b xiao_rp2040 samples/basic/fade_led
 ```
 
 Entra en modo bootloader y flashea tu dispositivo:
+
 ```
 west flash -r uf2
 ```
@@ -216,22 +222,24 @@ west flash -r uf2
 Verás la luz azul del LED RGB integrado desvanecerse lentamente y repetir el proceso nuevamente.
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
+
 ```
 &pwm {
-	status = "okay";
-	divider-int-4 = <255>;
+ status = "okay";
+ divider-int-4 = <255>;
 };
 ```
 
 Esta lógica en el `boards/xiao_rp2040.overlay` para el ejemplo habilita la funcionalidad PWM desde el devicetree que normalmente está deshabilitada. La configuración del Xiao RP2040 tiene el LED RGB azul integrado configurado como el PWM predeterminado.
 
 Como se puede ver en el `xiao_rp2040-pinctrl.dtsi` de los archivos de placa de zephyr, existe lo siguiente:
+
 ```
-	pwm_ch4b_default: pwm_ch4b_default {
-		group1 {
-			pinmux = <PWM_4B_P25>;
-		};
-	};
+ pwm_ch4b_default: pwm_ch4b_default {
+  group1 {
+   pinmux = <PWM_4B_P25>;
+  };
+ };
 ```
 
 En este caso, el PWM está utilizando el LED PWM del devicetree configurado que está asociado con el pin 25 (el LED azul). Los pines PWM pueden ser referenciados desde la [documentación del RP2040](https://docs.zephyrproject.org/apidoc/latest/rpi-pico-rp2040-pinctrl_8h.html).
@@ -242,22 +250,26 @@ En este caso, el PWM está utilizando el LED PWM del devicetree configurado que 
 #### Reloj
 
 Para esto usaremos una muestra existente y nuestro overlay de consola:
+
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/counter/alarm -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
 Entra en modo bootloader y flashea tu dispositivo:
+
 ```
 west flash -r uf2
 ```
 
-Connect to monitor (after quickly resetting your board to ensure it restarts):
+Conecta al monitor (después de reiniciar rápidamente tu placa para asegurar que se reinicie):
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
 Verás una serie de temporizadores activándose después de un retraso establecido uno tras otro:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2212-gc38ea288eee9 ***
 Counter alarm sample
@@ -280,6 +292,7 @@ Set alarm in 32 sec (32000000 ticks)
 #### TFLite - Hola Mundo
 
 Habilita TFLite con Zephyr y actualiza:
+
 ```
 west config manifest.project-filter -- +tflite-micro
 west update
@@ -293,16 +306,19 @@ west build -p always -b xiao_rp2040 samples/modules/tflite-micro/hello_world -- 
 ```
 
 Entra en modo bootloader y flashea tu dispositivo:
+
 ```
 west flash -r uf2
 ```
 
 Conectar al monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
-You will see results returned from the console:
+Verás los resultados devueltos desde la consola:
+
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
 x_value: 1.0*2^-127, y_value: 1.0*2^-127
@@ -348,6 +364,7 @@ west build -p always -b xiao_rp2040 samples/drivers/display -- -DSHIELD=seeed_xi
 ```
 
 Entra en modo bootloader y flashea tu dispositivo:
+
 ```
 west flash -r uf2
 ```
@@ -355,6 +372,7 @@ west flash -r uf2
 Verás una pantalla que muestra múltiples cajas negras y una caja parpadeante en la esquina dado que esta pantalla solo soporta dos colores.
 
 Profundicemos en este ejemplo un poco para ver por qué funciona:
+
 ```
 / {
     chosen {
@@ -394,11 +412,13 @@ west build -p always -b xiao_rp2040 samples/basic/button -- -DDTC_OVERLAY_FILE="
 ```
 
 Entra en modo bootloader y flashea tu dispositivo:
+
 ```
 west flash -r uf2
 ```
 
 Conectar al monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
@@ -419,6 +439,7 @@ Button pressed at 3388674993
 ```
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
+
 ```
 / {
     aliases {
@@ -450,6 +471,7 @@ west build -p always -b xiao_rp2040 samples/basic/blinky_pwm -- -DDTC_OVERLAY_FI
 ```
 
 Entra en modo bootloader y flashea tu dispositivo:
+
 ```
 west flash -r uf2
 ```
@@ -457,38 +479,39 @@ west flash -r uf2
 Después de flashear el archivo uf2 deberías comenzar a escuchar una serie de zumbidos que cambian de sonido mientras la muestra ejecuta su curso.
 
 Veamos por qué esto funciona:
+
 ```
 /delete-node/ &pwm_led0;
 
 / {
-	aliases {
-		pwm-led = &pwm_led0;
-	};
+ aliases {
+  pwm-led = &pwm_led0;
+ };
 };
 
 &{/pwm_leds} {
-	status = "okay";
-	compatible = "pwm-leds";
+ status = "okay";
+ compatible = "pwm-leds";
 
-	pwm_led0: pwm_led0 {
-		status = "okay";
-		pwms = <&pwm 13 PWM_HZ(880) PWM_POLARITY_NORMAL>;
-	};
+ pwm_led0: pwm_led0 {
+  status = "okay";
+  pwms = <&pwm 13 PWM_HZ(880) PWM_POLARITY_NORMAL>;
+ };
 };
 
 &pinctrl {
-	pwm_ch6b_default: pwm_ch6b_default {
-		group1 {
-			pinmux = <PWM_6B_P29>;
-		};
-	};
+ pwm_ch6b_default: pwm_ch6b_default {
+  group1 {
+   pinmux = <PWM_6B_P29>;
+  };
+ };
 };
 
 &pwm {
-	status = "okay";
-	pinctrl-0 = <&pwm_ch6b_default>;
-	divider-frac-6 = <15>;
-	divider-int-6 = <255>;
+ status = "okay";
+ pinctrl-0 = <&pwm_ch6b_default>;
+ divider-frac-6 = <15>;
+ divider-int-6 = <255>;
 };
 ```
 
@@ -506,11 +529,13 @@ west build -p always -b xiao_rp2040 samples/subsys/fs/fs_sample -- -DDTC_OVERLAY
 ```
 
 Entra en modo bootloader y flashea tu dispositivo:
+
 ```
 west flash -r uf2
 ```
 
 Conectar al monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
@@ -531,6 +556,7 @@ Listing dir /SD: ...
 En este caso mi tarjeta SD tenía dos archivos. Sus nombres y sus tamaños fueron mostrados en mi consola.
 
 Veamos los elementos relevantes en juego aquí:
+
 ```
 CONFIG_SPI=y
 CONFIG_DISK_DRIVER_SDMMC=y
@@ -543,19 +569,19 @@ La parte relevante del shield de la Placa de Expansión Xiao se muestra a contin
 
 ```
 &xiao_spi {
-	status = "okay";
-	cs-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
+ status = "okay";
+ cs-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
 
-	sdhc0: sdhc@0 {
-		compatible = "zephyr,sdhc-spi-slot";
-		reg = <0>;
-		status = "okay";
-		mmc {
-			compatible = "zephyr,sdmmc-disk";
-			status = "okay";
-		};
-		spi-max-frequency = <24000000>;
-	};
+ sdhc0: sdhc@0 {
+  compatible = "zephyr,sdhc-spi-slot";
+  reg = <0>;
+  status = "okay";
+  mmc {
+   compatible = "zephyr,sdmmc-disk";
+   status = "okay";
+  };
+  spi-max-frequency = <24000000>;
+ };
 };
 ```
 
@@ -576,16 +602,19 @@ west build -p always -b xiao_rp2040 samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE=
 ```
 
 Entra en modo bootloader y flashea tu dispositivo:
+
 ```
 west flash -r uf2
 ```
 
 Conectar al monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
 Verás los resultados devueltos desde la consola:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2212-gc38ea288eee9 ***
 SHT3XD: 26.20 Cel ; 52.49 %RH
@@ -599,13 +628,14 @@ SHT3XD: 26.24 Cel ; 52.30 %RH
 ```
 
 Profundicemos un poco en este ejemplo para ver por qué funciona:
+
 ```
  &xiao_i2c {
-	sht3xd@44 {
-			compatible = "sensirion,sht3xd";
-			reg = <0x44>;
-		};
-	};
+ sht3xd@44 {
+   compatible = "sensirion,sht3xd";
+   reg = <0x44>;
+  };
+ };
 ```
 
 El archivo de superposición de la aplicación se utiliza para configurar varios componentes de la placa. Usando este archivo, el ejemplo SHT31 puede utilizarse ya que la superposición informa a la [lógica de muestra](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c) cómo configurar el sensor para nuestra placa.
@@ -627,16 +657,17 @@ Primero conecta tu placa a la pantalla LCD usando la siguiente imagen como guía
 | RST | D0 |
 | BL | D6 |
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/10.png" style={{width:700, height:'auto'}}/></div>
 
 A continuación, con el hardware preparado, podemos construir el archivo uf2 para flashear:
+
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.conf
 ```
 
 Entra en modo bootloader y flashea tu dispositivo:
+
 ```
 west flash -r uf2
 ```
@@ -650,7 +681,6 @@ Con el nuevo firmware en su lugar, el dispositivo ahora muestra la misma pantall
 
 - Este proyecto está respaldado por el [Proyecto de Colaborador](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=57293558) de Seeed Studio.
 - Gracias a **los esfuerzos de Tim** y tu trabajo será [exhibido](https://wiki.seeedstudio.com/es/Honorary-Contributors/).
-
 
 ## Soporte Técnico y Discusión de Productos
 

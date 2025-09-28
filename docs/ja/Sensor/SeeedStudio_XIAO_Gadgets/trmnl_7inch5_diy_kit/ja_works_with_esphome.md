@@ -287,9 +287,9 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある�
 </TabItem>
 </Tabs>
 
-## Basic usages
+## 基本的な使用方法
 
-### 1. Display shape
+### 1. 表示形状
 
 この例では、ディスプレイに図形を表示します。
 
@@ -591,7 +591,7 @@ eink=2を使用している場合、invertパラメータを追加すること�
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2&invert
 ```
 
-Besides, you can also screenshot other page, for example **To-do lists** page in HA:
+さらに、他のページのスクリーンショットも撮ることができます。例えば、HAの**To-doリスト**ページなどです：
 
 ```python
 http://192.168.1.191:10000/todo?viewport=800x480&eink=2&invert

@@ -15,7 +15,7 @@ last_update:
 ---
 
 
-# GPT-OSS Running Live on reComputer Jetson
+# GPT-OSS reComputer Jetson上でのライブ実行
 
 ## はじめに
 

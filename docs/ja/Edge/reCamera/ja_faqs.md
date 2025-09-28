@@ -113,27 +113,27 @@ UsbNcm Host Deviceを右クリックします。`プロパティ` -> `TCP/IPv4` 
 
 具体的な設定は以下の通りです：
 
-**step1**: `システム設定`を選択
+**ステップ1**: `システム設定`を選択
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/015.png" /></div>
 
-**step2**: この順序が表示されます。これから変更します。
+**ステップ2**: この順序が表示されます。これから変更します。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/016.png" /></div>
 
-**step3**: 一番下までドラッグして、クリックします。
+**ステップ3**: 一番下までドラッグして、クリックします。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/017.png" /></div>
 
-**step4**: `サービスの順序を設定`を選択
+**ステップ4**: `サービスの順序を設定`を選択
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/018.png" /></div>
 
-**step5**: NCMをWi-Fiの下にドラッグして`ok`をクリック
+**ステップ5**: NCMをWi-Fiの下にドラッグして`ok`をクリック
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/019.png" /></div>
 
-**step6**: 最後に、表示された設定を確認してください
+**ステップ6**: 最後に、表示された設定を確認してください
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/020.png" /></div>
 

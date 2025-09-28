@@ -156,11 +156,11 @@ Una vez que el firmware se haya flasheado exitosamente, obtén los parámetros e
 
 Esta sección te guiará a través de la conexión a un servidor de red LoRaWAN local. Usaremos la plataforma [ChirpStack](https://www.chirpstack.io/) como ejemplo, junto con el [SenseCAP M2 Multi-Platform LoRaWAN Indoor Gateway (EU868)](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html). *Si estás empleando un servidor de red diferente, el procedimiento será similar*; necesitarás recopilar la información esencial para la activación:
 
-- OTAA (Over The Air Activation):
+- OTAA (Activación Over The Air):
   - DevEUI
   - AppKey
   - JoinEUI/AppEUI (Mac Version 1.1.0 necesaria)
-- ABP (Activation By Personalization):
+- ABP (Activación Por Personalización):
   - DevEUI
   - DevAddr
   - AppSKey
@@ -533,7 +533,7 @@ En esta demostración, ilustraremos cómo los mensajes de enlace descendente pue
 
 - Estas cargas útiles están codificadas en un formato que el SenseCAP Indicator está programado para entender y actuar en consecuencia.[^6]
 
-[^6]: [lorawan_rx_data_handle function - GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/11bf6165f0e815a1dc6b83be253972ac320ecdd5/examples/indicator_lorawan/main/lorawan/indicator_lorawan.c#L591C33-L591C33)
+[^6]: [función lorawan_rx_data_handle - GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/11bf6165f0e815a1dc6b83be253972ac320ecdd5/examples/indicator_lorawan/main/lorawan/indicator_lorawan.c#L591C33-L591C33)
 
 <div align="center">
   <img class='border-radius: 10px;' width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/bulb_payload.png"/>

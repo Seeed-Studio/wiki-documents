@@ -11,7 +11,7 @@ last_update:
   date: 04/23/2023
   author: Peter Pan
 ---
-# reTerminal DM Flash Raspbian OS to eMMC
+# reTerminal DM に Raspbian OS を eMMC にフラッシュ
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114070201-reterminal-dm-first_one_.jpg" alt="pir" width="600" height="auto"/></p>
 
@@ -153,7 +153,7 @@ brew install pkg-config
 make
 ```
 
-- **Step 5.** Run the binary
+- **ステップ 5.** Run the binary
 
 ```sh
 sudo ./rpiboot
@@ -215,7 +215,7 @@ sudo apt-get update
 sudo apt install git libusb-1.0-0-dev pkg-config build-essential
 ```
 
-- **Step 3.** Git might produce an error if the date is not set properly. Type the following to correct this
+- **ステップ 3.** 日付が適切に設定されていない場合、Gitはエラーを出力する可能性があります。これを修正するには以下を入力してください
 
 ```sh
 sudo date MMDDhhmm
@@ -236,7 +236,7 @@ cd usbboot
 make
 ```
 
-- **Step 6.** Run the usbboot tool and it will wait for a connection
+- **ステップ 6.** usbbootツールを実行すると、接続を待機します
 
 ```sh
 sudo ./rpiboot
@@ -253,7 +253,7 @@ sudo ./rpiboot
 sudo apt install snap
 ```
 
-- **Step 9.** Download **rpi-imager**
+- **ステップ 9.** **rpi-imager** をダウンロードします
 
 ```sh
 snap install rpi-imager
@@ -268,7 +268,7 @@ rpi-imager
 結果は以下のように表示されます：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/linux_interface.png" alt="pir" width="600" height="auto"/></p>
 
-- **Step 11.** キーボードで **CTRL + SHIFT + X** を押して **Advanced options** ウィンドウを開きます
+- **ステップ 11.** キーボードで **CTRL + SHIFT + X** を押して **Advanced options** ウィンドウを開きます
 
 ホスト名の設定、パスワードの設定、WiFiの設定、ロケール設定を行います
 
@@ -280,7 +280,7 @@ SSHを有効にします
 
 ここで **ホスト名の設定、SSHの有効化、パスワードの設定、WiFiの設定、ロケール設定** などを行うことができます
 
-- **Step 11.** **CHOOSE OS** をクリックして、お好みのOSを選択します
+- **ステップ 11.** **CHOOSE OS** をクリックして、お好みのOSを選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
@@ -288,9 +288,9 @@ SSHを有効にします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
-- **Step 12.** **CHOOSE STORAGE** をクリックして、接続されたeMMCドライブを選択します
+- **ステップ 12.** **CHOOSE STORAGE** をクリックして、接続されたeMMCドライブを選択します
 
-- **Step 13.** 最後に、**NEXT** をクリックして **YES** をクリックします
+- **ステップ 13.** 最後に、**NEXT** をクリックして **YES** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/next-yes.png" alt="pir" width="600" height="auto"/></p>
 
@@ -298,7 +298,7 @@ SSHを有効にします
 結果は以下のように表示されます：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="600" height="auto"/></p>
 
-- **Step 14.** **Boot Mode Switch** を元の位置に戻します
+- **ステップ 14.** **Boot Mode Switch** を元の位置に戻します
 
 :::note
 
@@ -332,7 +332,7 @@ pingコマンドの後に以下の出力が表示されれば、両方のデバ�
 
 ##### Windows の場合
 
-- **Step 1.** **コマンドプロンプト** を開いて以下を入力します
+- **ステップ 1.** **コマンドプロンプト** を開いて以下を入力します
 
 ```sh
 # ssh username@hostname
@@ -374,7 +374,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 raspberry
 ```
 
-- **Step 4.** Raspberry Pi OSに正常にログインできた場合、以下の出力が表示されます
+- **ステップ 4.** Raspberry Pi OSに正常にログインできた場合、以下の出力が表示されます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"/></p>
 

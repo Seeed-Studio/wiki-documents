@@ -49,6 +49,19 @@ const PRESERVE_TERMS = {
     'Home Assistant': 'Home Assistant'
 };
 
+// 术语表：强制把英文术语译成指定目标语言短语（优先从 .github/scripts/glossary.json 读取；不存在则使用内置空表）
+let GLOSSARY = { "zh-CN": {}, "ja": {}, "es": {} };
+(async () => {
+  try {
+    const gPath = path.join(__dirname, 'glossary.json');
+    const raw = await fs.readFile(gPath, 'utf8');
+    const obj = JSON.parse(raw);
+    if (obj && typeof obj === 'object') GLOSSARY = { ...GLOSSARY, ...obj };
+  } catch (e) {
+    console.log('ℹ️ 未找到自定义术语表 glossary.json，使用内置空表');
+  }
+})();
+
 // 文档保护列表
 const PROTECTED_PATHS = [
   'docs/Getting_Started.md',
@@ -315,9 +328,16 @@ function intelligentSplit(lines, maxSize) {
 // 提示词生成
 function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkInfo = null) {
   const langName = LANGUAGE_CONFIG[targetLang].name;
+
+  // 术语保护（不翻译/不改写）展示前 5 个示例，避免提示太长
   const termsList = Object.entries(PRESERVE_TERMS)
     .map(([original, preserved]) => `- ${original} → ${preserved}`)
     .join('\n');
+
+  // 术语表（强制翻译为指定译法）
+  const glossaryPairs = Object.entries(GLOSSARY?.[targetLang] || {})
+    .map(([src, dst]) => `- ${src} → ${dst}`)
+    .join('\n') || '（无）';
 
   let prompt = `<instruction>
 你是一个专业的技术文档翻译助手。你的任务是将Markdown文档从英文翻译成${langName}。
@@ -343,21 +363,24 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
    - HTML标签
    - 专有名词：${termsList.split('\n').slice(0, 5).join(', ')}等
 
-2. **Front Matter处理**：
+2. **术语表（强制翻译）**：以下术语若出现，必须严格使用右侧译法（不允许其它译法）：
+${glossaryPairs}
+
+3. **Front Matter处理**：
    - 只翻译title和description字段的值
    - slug字段添加前缀：${pathPrefix}
 
-3. **缩进保持**：
+4. **缩进保持**：
    - 如果原文有缩进，译文必须保持相同的缩进
    - 列表项的缩进级别必须保持不变
    - 代码块内的缩进必须完全保留
 
-4. **锚点链接处理**：
+5. **锚点链接处理**：
    - 在[文本](#锚点)格式中，锚点部分的空格用连字符替换
    - 例如：[Some Text](#some-text) → [一些文本](#一些-文本)
    - 注意：锚点中绝不能有空格，必须用连字符连接
 
-5. **严格禁止**：
+6. **严格禁止**：
    - 添加或删除任何行
    - 改变任何缩进
    - 添加原文没有的\`\`\`代码块标记
@@ -570,6 +593,8 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
       if (targetLang === 'zh-CN') {
         translatedContent = addChineseEnglishSpacing(translatedContent);
       }
+      // ✅ 应用术语表
+      translatedContent = applyGlossary(translatedContent, targetLang);
 
       // ✅ 最后一步再恢复行号/缩进，并把代码块整行原样回写
       translatedContent = postprocessDocument(translatedContent, lineMetadata, totalLines);
@@ -748,6 +773,66 @@ function addChineseEnglishSpacing(content) {
   });
   
   return tempContent;
+}
+
+// 在非代码行、且行内反引号之外，应用术语表替换
+function applyGlossary(content, targetLang) {
+  const map = GLOSSARY?.[targetLang] || {};
+  const entries = Object.entries(map);
+  if (!entries.length) return content;
+
+  const lines = content.split('\n');
+  const out = [];
+
+  // 用于跳过代码块（围栏）整行
+  let inFence = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    let line = lines[i];
+
+    // 跳过 [LINE_x] 标记本身（只处理其后的内容）
+    const m = line.match(/^(\[LINE_\d+\])(.*)$/);
+    if (!m) { out.push(line); continue; }
+    const prefix = m[1];
+    let body = m[2];
+
+    // 追踪围栏状态
+    const trimmed = body.trimStart();
+    const isFence = trimmed.startsWith('```');
+    if (isFence) {
+      inFence = !inFence;
+      out.push(prefix + body);
+      continue;
+    }
+    if (inFence) { out.push(prefix + body); continue; }
+
+    // 保护行内反引号片段：分段替换
+    // 例如: 文本 `code Trilateration` 文本
+    const parts = body.split(/(`[^`]*`)/g); // 奇数索引处为反引号片段
+    for (let pi = 0; pi < parts.length; pi++) {
+      const seg = parts[pi];
+      // 反引号片段保持不变
+      if (seg.startsWith('`') && seg.endsWith('`')) continue;
+
+      // 对可替换片段做术语替换（使用 \b 边界，避免误伤）
+      let replaced = seg;
+      for (const [src, dst] of entries) {
+        // 仅匹配独立词；若需要大小写不敏感可加 'i'
+        const re = new RegExp(`\\b${escapeRegExp(src)}\\b`, 'g');
+        replaced = replaced.replace(re, dst);
+      }
+      parts[pi] = replaced;
+    }
+
+    out.push(prefix + parts.join(''));
+  }
+
+  return out.join('\n');
+}
+
+// 简单的正则转义
+function escapeRegExp(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 // 检查文件是否受保护

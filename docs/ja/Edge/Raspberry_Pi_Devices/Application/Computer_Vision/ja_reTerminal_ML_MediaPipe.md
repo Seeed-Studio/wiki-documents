@@ -107,7 +107,7 @@ cd Seeed_Python_ReTerminal/samples/mediapipe_picam/face_landmarker/raspberry_pi
 sh setup.sh
  ```
 
-- **Step 3** Once the setup is complete, you can execute the source file to initiate face landmaker.
+- **ステップ 3** セットアップが完了したら、ソースファイルを実行して顔ランドマーカーを開始できます。
 
  ```sh
 python3 detect.py
@@ -129,7 +129,7 @@ cd Seeed_Python_ReTerminal/samples/mediapipe_picam/hand_landmarker/raspberry_pi
 sh setup.sh
  ```
 
-- **Step 3** Once the setup is complete, you can execute the source file to initiate hand landmaker.
+- **ステップ 3** セットアップが完了したら、ソースファイルを実行してhand landmakerを開始できます。
 
  ```sh
 python3 detect.py
@@ -151,7 +151,7 @@ cd Seeed_Python_ReTerminal/samples/mediapipe_picam/pose_landmarker/raspberry_pi
 sh setup.sh
  ```
 
-- **Step 3** Once the setup is complete, you can execute the source file to initiate pose landmaker.
+- **ステップ 3** セットアップが完了したら、ソースファイルを実行してポーズランドマーカーを開始できます。
 
  ```sh
 python3 detect.py

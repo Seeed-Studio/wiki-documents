@@ -86,7 +86,7 @@ Node-RED 还有一系列其他节点和插件，可用于扩展其功能并与�
 cd .node-red/
 ```
 
-STEP 2: 安装 Modbus 节点
+步骤 2: 安装 Modbus 节点
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/npm-install-node.png" /></div><br />
 

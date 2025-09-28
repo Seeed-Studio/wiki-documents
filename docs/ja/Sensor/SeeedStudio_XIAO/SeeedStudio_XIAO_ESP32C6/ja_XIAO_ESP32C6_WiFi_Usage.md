@@ -60,257 +60,257 @@ ESP32-C6は幅広いWiFiネットワーク機能を提供します。一般的�
 
 - `WiFiGenericClass::persistent(bool persistent)` -- ESP32 WiFiライブラリの永続モードを有効または無効にするために使用されるメソッドです。永続モードが有効になっている場合、Wi-Fi設定は不揮発性メモリ（NVM）に保存され、電源サイクルやリセット後も保持されます。永続モードが無効になっている場合、設定はRAMに保存され、電源サイクルやリセット後に失われます。
 
- 	- **入力パラメータ**
-  		- **persistent**: 引数がtrueの場合、永続モードが有効になります。引数がfalseの場合、永続モードが無効になります。
+  - **入力パラメータ**
+    - **persistent**: 引数がtrueの場合、永続モードが有効になります。引数がfalseの場合、永続モードが無効になります。
 
 - `WiFiGenericClass::enableLongRange(bool enable)` -- この関数は、WiFiモジュールのロングレンジ（LR）機能を有効または無効にするために使用されます。有効にすると、LR機能により、モジュールは通常よりも遠くにあるWiFiネットワークに接続できますが、データレートは低くなります。
 
- 	- **入力パラメータ**
-  		- **enable**: この機能を有効にするにはtrueに、無効にするにはfalseに設定する必要があります。
+  - **入力パラメータ**
+    - **enable**: この機能を有効にするにはtrueに、無効にするにはfalseに設定する必要があります。
 
 - `WiFiGenericClass::mode(wifi_mode_t m)` -- この関数は、デバイスのWiFiモードを設定するために使用されます。
 
- 	- **入力パラメータ**
-  		- **m**: mパラメータは設定するモードを指定し、wifi_mode_t列挙型で定義された以下の定数のいずれかを使用できます：
-   			- **WIFI_MODE_NULL**: WiFiステーションモードとアクセスポイントモードの両方を無効にします。
-   			- **WIFI_MODE_STA**: 既存のWiFiネットワークに接続するためのWiFiステーションモードを有効にします。
-   			- **WIFI_MODE_AP**: 新しいWiFiネットワークを作成するためのアクセスポイントモードを有効にします。
-   			- **WIFI_MODE_APSTA**: WiFiステーションモードとアクセスポイントモードの両方を有効にします。
+  - **入力パラメータ**
+    - **m**: mパラメータは設定するモードを指定し、wifi_mode_t列挙型で定義された以下の定数のいずれかを使用できます：
+      - **WIFI_MODE_NULL**: WiFiステーションモードとアクセスポイントモードの両方を無効にします。
+      - **WIFI_MODE_STA**: 既存のWiFiネットワークに接続するためのWiFiステーションモードを有効にします。
+      - **WIFI_MODE_AP**: 新しいWiFiネットワークを作成するためのアクセスポイントモードを有効にします。
+      - **WIFI_MODE_APSTA**: WiFiステーションモードとアクセスポイントモードの両方を有効にします。
 
 - `WiFiGenericClass::setSleep(wifi_ps_type_t sleepType)` -- この関数は、WiFiモジュールの省電力モードを設定します。
 
- 	- **入力パラメータ**
-  		- **sleepType**: sleepTypeパラメータは、使用する省電力モードのタイプを指定する列挙型です。3つの可能なスリープタイプがあります：
-   			- **WIFI_PS_NONE**: これはデフォルトのスリープモードで、WiFiモジュールは省電力モードに入りません。
-   			- **WIFI_PS_MIN_MODEM**: このモードでは、WiFiモジュールはアクセスポイント（AP）への接続を維持しながらモデムをシャットダウンします。
-   			- **WIFI_PS_MAX_MODEM**: このモードでは、WiFiモジュールはモデムとステーションの両方をシャットダウンし、APからの切断が発生します。
+  - **入力パラメータ**
+    - **sleepType**: sleepTypeパラメータは、使用する省電力モードのタイプを指定する列挙型です。3つの可能なスリープタイプがあります：
+      - **WIFI_PS_NONE**: これはデフォルトのスリープモードで、WiFiモジュールは省電力モードに入りません。
+      - **WIFI_PS_MIN_MODEM**: このモードでは、WiFiモジュールはアクセスポイント（AP）への接続を維持しながらモデムをシャットダウンします。
+      - **WIFI_PS_MAX_MODEM**: このモードでは、WiFiモジュールはモデムとステーションの両方をシャットダウンし、APからの切断が発生します。
 
 ### STA機能
 
 - `WiFiSTAClass::status()` -- 接続ステータスを返します。
 
- 	- **出力**: wl_status_tで定義された値のいずれか。
-  		- **WL_NO_SHIELD**: このステータスコードは、Wi-Fiモジュールが存在しないことを示します。
-    - **WL_IDLE_STATUS**: このステータスコードは、Wi-Fiモジュールが何も操作を実行していないことを示します。
-    - **WL_NO_SSID_AVAIL**: このステータスコードは、スキャン中にWi-Fiネットワークが見つからなかったことを示します。
-    - **WL_SCAN_COMPLETED**: このステータスコードは、Wi-Fiスキャンが正常に完了したことを示します。
-    - **WL_CONNECTED**: このステータスコードは、ESP32がWi-Fiネットワークに正常に接続されていることを示します。
-    - **WL_CONNECT_FAILED**: このステータスコードは、Wi-Fiネットワークへの接続が失敗したことを示します。
-    - **WL_CONNECTION_LOST**: このステータスコードは、Wi-Fiネットワークへの接続が失われたことを示します。
-    - **WL_DISCONNECTED**: このステータスコードは、ESP32が以前にWi-Fiネットワークに接続されていたが、現在はどのネットワークにも接続されていないことを示します。
+  - **出力**: wl_status_tで定義された値のいずれか。
+    - **WL_NO_SHIELD**: このステータスコードは、Wi-Fiモジュールが存在しないことを示します。
+  - **WL_IDLE_STATUS**: このステータスコードは、Wi-Fiモジュールが何も操作を実行していないことを示します。
+  - **WL_NO_SSID_AVAIL**: このステータスコードは、スキャン中にWi-Fiネットワークが見つからなかったことを示します。
+  - **WL_SCAN_COMPLETED**: このステータスコードは、Wi-Fiスキャンが正常に完了したことを示します。
+  - **WL_CONNECTED**: このステータスコードは、ESP32がWi-Fiネットワークに正常に接続されていることを示します。
+  - **WL_CONNECT_FAILED**: このステータスコードは、Wi-Fiネットワークへの接続が失敗したことを示します。
+  - **WL_CONNECTION_LOST**: このステータスコードは、Wi-Fiネットワークへの接続が失われたことを示します。
+  - **WL_DISCONNECTED**: このステータスコードは、ESP32が以前にWi-Fiネットワークに接続されていたが、現在はどのネットワークにも接続されていないことを示します。
 
 - `WiFiSTAClass::begin(const char* wpa2_ssid, wpa2_auth_method_t method, const char* wpa2_identity, const char* wpa2_username, const char *wpa2_password, const char* ca_pem, const char* client_crt, const char* client_key, int32_t channel, const uint8_t* bssid, bool connect)` -- WPA2 Enterprise APとのWifi接続を開始します。
 
- 	- **入力パラメータ**（オプション）
-  		- **ssid**: SSID文字列へのポインタ。
-  		- **method**: WPA2の認証方法（WPA2_AUTH_TLS、WPA2_AUTH_PEAP、WPA2_AUTH_TTLS）
-  		- **wpa2_identity**: エンティティへのポインタ
-  		- **wpa2_username**: ユーザー名へのポインタ
-  		- **wpa2_password**: パスワードへのポインタ。
-  		- **ca_pem**: CA証明書を含む.pemファイルの内容を持つ文字列へのポインタ
-  		- **client_crt**: クライアント証明書を含む.crtファイルの内容を持つ文字列へのポインタ
-  		- **client_key**: クライアントキーを含む.keyファイルの内容を持つ文字列へのポインタ
-  		- **channel**: オプション。APのチャンネル
-  		- **bssid**: オプション。APのBSSID / MAC
-  		- **connect**: オプション。接続を呼び出す
+  - **入力パラメータ**（オプション）
+    - **ssid**: SSID文字列へのポインタ。
+    - **method**: WPA2の認証方法（WPA2_AUTH_TLS、WPA2_AUTH_PEAP、WPA2_AUTH_TTLS）
+    - **wpa2_identity**: エンティティへのポインタ
+    - **wpa2_username**: ユーザー名へのポインタ
+    - **wpa2_password**: パスワードへのポインタ。
+    - **ca_pem**: CA証明書を含む.pemファイルの内容を持つ文字列へのポインタ
+    - **client_crt**: クライアント証明書を含む.crtファイルの内容を持つ文字列へのポインタ
+    - **client_key**: クライアントキーを含む.keyファイルの内容を持つ文字列へのポインタ
+    - **channel**: オプション。APのチャンネル
+    - **bssid**: オプション。APのBSSID / MAC
+    - **connect**: オプション。接続を呼び出す
 
 - `WiFiSTAClass::reconnect()` -- 強制的に切断してからAPへの再接続を開始します。
 
- 	- **出力**: True/False。
+  - **出力**: True/False。
 
 - `WiFiSTAClass::disconnect(bool wifioff, bool eraseap)` -- ネットワークから切断します。
 
- 	- **入力パラメータ**
-  		- **wifioff**: wifioff `true`でWi-Fiラジオをオフにします。
-  		- **eraseap**: eraseap `true`でNVSメモリからAP設定を消去します。
- 
- 	- **出力**: True/False。
+  - **入力パラメータ**
+    - **wifioff**: wifioff `true`でWi-Fiラジオをオフにします。
+    - **eraseap**: eraseap `true`でNVSメモリからAP設定を消去します。
+
+  - **出力**: True/False。
 
 - `WiFiSTAClass::config(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dns1, IPAddress dns2)` -- dhcpクライアントを無効にしてIP設定を変更します。
 
- 	- **入力パラメータ**
-  		- **local_ip**: 静的IP設定。
-  		- **gateway**: 静的ゲートウェイ設定。
-  		- **subnet**: 静的サブネットマスク。
-  		- **dns1**: 静的DNSサーバー1。
-  		- **dns2**: 静的DNSサーバー2。
+  - **入力パラメータ**
+    - **local_ip**: 静的IP設定。
+    - **gateway**: 静的ゲートウェイ設定。
+    - **subnet**: 静的サブネットマスク。
+    - **dns1**: 静的DNSサーバー1。
+    - **dns2**: 静的DNSサーバー2。
 
 - `WiFiSTAClass::setAutoConnect(bool autoConnect)` -- 非推奨。ESP32ステーションが電源投入時に（記録されている）APに自動的に接続するかどうかを設定します。デフォルトで自動接続が有効になっています。
 
 - **入力パラメータ**
   - **autoConnect**: autoConnect bool.
 
- 	- **出力**: False.
+    - **出力**: False.
 
 - `WiFiSTAClass::waitForConnectResult(unsigned long timeoutLength)` -- WiFi接続が結果に到達するまで待機します。
 
- 	- **入力パラメータ**
-  		- **timeoutLength**: このパラメータは、接続が確立されるまで待機する最大時間をミリ秒単位で指定します。
+  - **入力パラメータ**
+    - **timeoutLength**: このパラメータは、接続が確立されるまで待機する最大時間をミリ秒単位で指定します。
 
- 	- **出力**: wl_status_tで定義された値のいずれか。
+  - **出力**: wl_status_tで定義された値のいずれか。
 
 - `WiFiSTAClass::localIP()` -- ステーションインターフェースのIPアドレスを取得します。
 
- 	- **出力**: IPAddressステーションIP。
+  - **出力**: IPAddressステーションIP。
 
 - `WiFiSTAClass::macAddress(uint8_t* mac)` -- ステーションインターフェースのMACアドレスを取得します。
 
- 	- **入力パラメータ**
-  		- **mac** (オプション): 長さWL_MAC_ADDR_LENGTHのuint8_t配列へのポインタ。
+  - **入力パラメータ**
+    - **mac** (オプション): 長さWL_MAC_ADDR_LENGTHのuint8_t配列へのポインタ。
 
- 	- **出力**: uint8_t *へのポインタ。
+  - **出力**: uint8_t *へのポインタ。
 
 - `WiFiSTAClass::SSID()` -- ネットワークに関連付けられた現在のSSIDを返します。
 
- 	- **出力**: SSID。
+  - **出力**: SSID。
 
 - `WiFiSTAClass::RSSI(void)` -- 現在のネットワークRSSIを返します。
 
- 	- **出力**: RSSI。
+  - **出力**: RSSI。
 
 ### AP関数
 
 - `WiFiAPClass::softAP(const char* ssid, const char* passphrase, int channel, int ssid_hidden, int max_connection, bool ftm_responder)` -- これはESP32-C6のWiFiライブラリの関数です。SoftAP（ソフトウェアアクセスポイント）を設定するために使用され、他のデバイスがESP32-C6に接続してそのリソースにアクセスできるようにします。
 
- 	- **入力パラメータ**
-  		- **ssid**:              SSID（最大63文字）へのポインタ。
-    - **passphrase**:        （WPA2の場合最小8文字、オープンの場合はNULLを使用）。
-    - **channel**:           WiFiチャンネル番号、1 - 13。
-    - **ssid_hidden**:       ネットワーククローキング（0 = SSID放送、1 = SSID隠蔽）。
-    - **max_connection**:    最大同時接続クライアント数、1 - 4。
+  - **入力パラメータ**
+    - **ssid**:              SSID（最大63文字）へのポインタ。
+  - **passphrase**:        （WPA2の場合最小8文字、オープンの場合はNULLを使用）。
+  - **channel**:           WiFiチャンネル番号、1 - 13。
+  - **ssid_hidden**:       ネットワーククローキング（0 = SSID放送、1 = SSID隠蔽）。
+  - **max_connection**:    最大同時接続クライアント数、1 - 4。
 
- 	- **出力**: True/False。
+  - **出力**: True/False。
 
 - `WiFiAPClass::softAPgetStationNum()` -- softAPインターフェースに接続されているステーション/クライアントの数を取得します。
 
- 	- **出力**: ステーション数。
+  - **出力**: ステーション数。
 
 - `WiFiAPClass::softAPConfig(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dhcp_lease_start)` -- SoftAPを設定するための関数。
 
- 	- **入力パラメータ**
-  		- **local_ip**:      アクセスポイントIP。
-  		- **gateway**:       ゲートウェイIP。
-  		- **subnet**:        サブネットマスク。
+  - **入力パラメータ**
+    - **local_ip**:      アクセスポイントIP。
+    - **gateway**:       ゲートウェイIP。
+    - **subnet**:        サブネットマスク。
 
- 	- **出力**: True/False。
+  - **出力**: True/False。
 
 - `WiFiAPClass::softAPIP()` -- softAPインターフェースのIPアドレスを取得します。
 
- 	- **出力**: IPAddress softAP IP。
+  - **出力**: IPAddress softAP IP。
 
 - `WiFiAPClass::softAPmacAddress(uint8_t* mac)` -- softAPインターフェースのMACアドレスを取得します。
 
- 	- **入力パラメータ**
-  		- **mac** (オプション):   長さWL_MAC_ADDR_LENGTHのuint8_t配列へのポインタ。
+  - **入力パラメータ**
+    - **mac** (オプション):   長さWL_MAC_ADDR_LENGTHのuint8_t配列へのポインタ。
 
- 	- **出力**: uint8_t*またはString macへのポインタ。
+  - **出力**: uint8_t*またはString macへのポインタ。
 
 ### WiFiスキャン関数
 
 - `WiFiScanClass::scanNetworks(bool async, bool show_hidden, bool passive, uint32_t max_ms_per_chan, uint8_t channel, const char * ssid, const uint8_t * bssid)` -- 利用可能なWiFiネットワークのスキャンを開始します。
 
- 	- **入力パラメータ**
-  		- **async**: このパラメータは、スキャンを非同期で実行するかどうかを決定するブール値です。trueに設定すると、関数は即座に戻り、スキャン結果は後でgetScanResults()関数を呼び出すことで取得できます。falseに設定すると、関数はスキャンが完了するまでブロックします。
-  		- **show_hidden**: このパラメータは、関数がスキャン結果に隠されたネットワークを含めるかどうかを決定するブール値です。
-  		- **passive**: このパラメータは、関数がパッシブスキャンを実行するかどうかを決定するブール値です。trueに設定すると、関数はスキャン中にパケットを送信しません。これは時間がかかる場合がありますが、特定の状況では有用です。
-  		- **max_ms_per_chan**: このパラメータは、各チャンネルのスキャンに費やす最大時間をミリ秒単位で指定します。
-  		- **channel**: このパラメータは、スキャンするWi-Fiチャンネルです。0に設定すると、関数は利用可能なすべてのチャンネルをスキャンします。
-  		- **ssid**: このパラメータは、スキャンするネットワークのSSIDを含むnull終端文字列へのポインタです。nullptrに設定すると、関数は利用可能なすべてのネットワークをスキャンします。
-  		- **bssid**: このパラメータは、スキャンするアクセスポイントのMACアドレスを含む6バイト配列へのポインタです。nullptrに設定すると、関数はすべてのアクセスポイントをスキャンします。
+  - **入力パラメータ**
+    - **async**: このパラメータは、スキャンを非同期で実行するかどうかを決定するブール値です。trueに設定すると、関数は即座に戻り、スキャン結果は後でgetScanResults()関数を呼び出すことで取得できます。falseに設定すると、関数はスキャンが完了するまでブロックします。
+    - **show_hidden**: このパラメータは、関数がスキャン結果に隠されたネットワークを含めるかどうかを決定するブール値です。
+    - **passive**: このパラメータは、関数がパッシブスキャンを実行するかどうかを決定するブール値です。trueに設定すると、関数はスキャン中にパケットを送信しません。これは時間がかかる場合がありますが、特定の状況では有用です。
+    - **max_ms_per_chan**: このパラメータは、各チャンネルのスキャンに費やす最大時間をミリ秒単位で指定します。
+    - **channel**: このパラメータは、スキャンするWi-Fiチャンネルです。0に設定すると、関数は利用可能なすべてのチャンネルをスキャンします。
+    - **ssid**: このパラメータは、スキャンするネットワークのSSIDを含むnull終端文字列へのポインタです。nullptrに設定すると、関数は利用可能なすべてのネットワークをスキャンします。
+    - **bssid**: このパラメータは、スキャンするアクセスポイントのMACアドレスを含む6バイト配列へのポインタです。nullptrに設定すると、関数はすべてのアクセスポイントをスキャンします。
 
- 	- **出力**: この関数の戻り値は、スキャンされたネットワーク数を示す整数です。
+  - **出力**: この関数の戻り値は、スキャンされたネットワーク数を示す整数です。
 
 - `WiFiScanClass::getNetworkInfo(uint8_t i, String &ssid, uint8_t &encType, int32_t &rssi, uint8_t* &bssid, int32_t &channel)` -- スキャンされたwifiからすべての情報をptrパラメータに読み込みます。
 
- 	- **入力パラメータ**
-  		- **i**: この関数は、指定されたインデックスiでスキャンされたネットワークに関する情報を取得するために使用されます。
-  		- **ssid**: ssidパラメータは、関数がネットワークのSSIDを格納するString変数への参照です。
-  		- **encType**: encTypeパラメータは、関数がネットワークの暗号化タイプを格納するuint8_t変数への参照です（0 = オープン、1 = WEP、2 = WPA_PSK、3 = WPA2_PSK、4 = WPA_WPA2_PSK）。
-  		- **rssi**: rssiパラメータは、関数がネットワークの受信信号強度表示（RSSI）を格納するint32_t変数への参照です。
-  		- **bssid**: bssidパラメータは、関数がネットワークのBSSID（MACアドレス）を格納するuint8_t*ポインタへの参照です。
-  		- **channel**: channelパラメータは、関数がネットワークのチャンネル番号を格納するint32_t変数への参照です。
+  - **入力パラメータ**
+    - **i**: この関数は、指定されたインデックスiでスキャンされたネットワークに関する情報を取得するために使用されます。
+    - **ssid**: ssidパラメータは、関数がネットワークのSSIDを格納するString変数への参照です。
+    - **encType**: encTypeパラメータは、関数がネットワークの暗号化タイプを格納するuint8_t変数への参照です（0 = オープン、1 = WEP、2 = WPA_PSK、3 = WPA2_PSK、4 = WPA_WPA2_PSK）。
+    - **rssi**: rssiパラメータは、関数がネットワークの受信信号強度表示（RSSI）を格納するint32_t変数への参照です。
+    - **bssid**: bssidパラメータは、関数がネットワークのBSSID（MACアドレス）を格納するuint8_t*ポインタへの参照です。
+    - **channel**: channelパラメータは、関数がネットワークのチャンネル番号を格納するint32_t変数への参照です。
 
- 	- **出力**: True/False。
+  - **出力**: True/False。
 
 - `WiFiScanClass::SSID(uint8_t i)` -- ネットワークスキャン中に発見されたSSIDを返します。
 
- 	- **入力パラメータ**
-  		- **i**: どのネットワーク項目から情報を取得したいかを指定します。
+  - **入力パラメータ**
+    - **i**: どのネットワーク項目から情報を取得したいかを指定します。
 
- 	- **出力**: スキャンされたネットワークリストの指定された項目のSSID文字列。
+  - **出力**: スキャンされたネットワークリストの指定された項目のSSID文字列。
 
 - `WiFiScanClass::RSSI(uint8_t i)` -- scanNetworks中に発見されたネットワークのRSSIを返します。
 
- 	- **入力パラメータ**
-  		- **i**: どのネットワーク項目から情報を取得したいかを指定します。
+  - **入力パラメータ**
+    - **i**: どのネットワーク項目から情報を取得したいかを指定します。
 
- 	- **出力**: スキャンされたネットワークリストの指定された項目のRSSIの符号付き値。
+  - **出力**: スキャンされたネットワークリストの指定された項目のRSSIの符号付き値。
 
 ### WiFiクライアント関数
 
 - `WiFiClient::connect(IPAddress ip, uint16_t port, int32_t timeout)` -- この関数は、WiFiClientライブラリで使用され、指定されたタイムアウト値でリモートIPアドレスとポートに接続します。
 
- 	- **入力パラメータ**
-  		- **ip**:   接続するサーバーのIPアドレス。
-  		- **port**: 接続するサーバーのポート番号。
-  		- **timeout** (オプション): 接続が確立されるまで待機する最大時間をミリ秒単位で指定します。この時間内に接続が確立されない場合、関数はエラーを返します。timeoutが0に設定されている場合、関数は接続が確立されるまで無期限に待機します。
+  - **入力パラメータ**
+    - **ip**:   接続するサーバーのIPアドレス。
+    - **port**: 接続するサーバーのポート番号。
+    - **timeout** (オプション): 接続が確立されるまで待機する最大時間をミリ秒単位で指定します。この時間内に接続が確立されない場合、関数はエラーを返します。timeoutが0に設定されている場合、関数は接続が確立されるまで無期限に待機します。
 
 - `WiFiClient::stop()` -- この関数はクライアントをサーバーから切断し、クライアントが使用しているソケット/ポートを解放するために使用されます。この関数が呼び出されると、クライアントはもはやデータを送信または受信できなくなります。
 
 - `WiFiClient::setTimeout(uint32_t seconds)` -- この関数は、クライアントが接続の確立またはデータの受信を待機する最大秒数を設定します。接続またはデータ転送が指定されたタイムアウトよりも長くかかる場合、接続は閉じられます。
 
- 	- **入力パラメータ**
-  		- **seconds**:   タイムアウトの秒数。
+  - **入力パラメータ**
+    - **seconds**:   タイムアウトの秒数。
 
 - `WiFiClient::write(uint8_t data)` -- WiFiClientインスタンスを通じて接続されたサーバーに単一バイトのデータを書き込みます。または `WiFiClient::write(const uint8_t *buf, size_t size)`。
 
- 	- **入力パラメータ**
-  		- **data**:   確立されたネットワーク接続を通じて送信する必要がある単一バイトのデータです。
+  - **入力パラメータ**
+    - **data**:   確立されたネットワーク接続を通じて送信する必要がある単一バイトのデータです。
 
 - `WiFiClient::read()` -- この関数は接続されたサーバーから受信データの単一バイトを読み取ります。読み取ったバイトを整数値として返します。データが利用できない場合は-1を返します。または `read(uint8_t *buf, size_t size)`。
 
- 	- **出力**: 受信したバイト数を示す整数値。戻り値が0の場合、サーバーが接続を閉じたことを意味します。
+  - **出力**: 受信したバイト数を示す整数値。戻り値が0の場合、サーバーが接続を閉じたことを意味します。
 
 - `WiFiClient::peek()` -- この関数は、実際に読み取ることなく、サーバーから読み取り可能なデータがあるかどうかを確認するために使用されます。
 
- 	- **出力**: 受信バッファから削除することなく、次の受信データバイトを返します。データが利用できない場合は-1を返します。
+  - **出力**: 受信バッファから削除することなく、次の受信データバイトを返します。データが利用できない場合は-1を返します。
 
 - `WiFiClient::available()` -- この関数は、サーバーから読み取り可能なデータのバイト数を確認するために使用されます。
 
- 	- **出力**: 読み取り可能なバイト数を表す整数値を返します。
+  - **出力**: 読み取り可能なバイト数を表す整数値を返します。
 
-### WiFi Server function
+### WiFi サーバー関数
 
 - `WiFiServer::stopAll()` -- この関数はArduino WiFiライブラリのWiFiServerクラスのメソッドです。このメソッドはWiFiServerクラスを使用して作成されたすべてのサーバーインスタンスを停止します。各インスタンスに対して個別に `stop()` メソッドを呼び出す代わりに、すべてのサーバーを一度に停止したい場合に便利です。
 
 - `WiFiServer::begin(uint16_t port, int enable)` -- この関数は指定されたポートでサーバーを開始するために使用されます。サーバーは受信クライアント接続をリッスンします。
 
- 	- **入力パラメータ**
-  		- **port**: リッスンするポート番号。
-  		- **enable** (オプション): サーバーが開始された直後に有効にするかどうかを示すフラグ。このフラグはデフォルトでtrueに設定されています。
+  - **入力パラメータ**
+    - **port**: リッスンするポート番号。
+    - **enable** (オプション): サーバーが開始された直後に有効にするかどうかを示すフラグ。このフラグはデフォルトでtrueに設定されています。
 
 - `WiFiServer::hasClient()` -- この関数は、サーバーで利用可能な受信クライアント接続があるかどうかを確認するために使用されます。この関数はループ内で使用して、新しい接続を継続的にチェックできます。
 
- 	- **出力**: クライアントが接続している場合はWiFiClientオブジェクトを返し、接続を待機しているクライアントがない場合はNULLポインタを返します。
+  - **出力**: クライアントが接続している場合はWiFiClientオブジェクトを返し、接続を待機しているクライアントがない場合はNULLポインタを返します。
 
 - `WiFiServer::end()` -- この関数はサーバーを停止し、関連するリソースを解放するために使用されます。呼び出されると、サーバーは新しいクライアント接続を受け入れることができなくなります。既存のクライアント接続は、クライアントまたはサーバーのいずれかによって閉じられるまで開いたままになります。`WiFiServer::close()` と `WiFiServer::stop()` は同じ機能を持ちます。
 
-### WiFi Multiple functions
+### WiFi 複数の関数
 
 - `WiFiMulti::addAP(const char* ssid, const char *passphrase)` -- これは、WiFiMultiオブジェクトが接続を試行する利用可能なAPのリストに新しいアクセスポイント（AP）を追加するために使用されます。
 
- 	- **入力パラメータ**
-  		- **ssid**: SSID へのポインタ（最大63文字）。
-  		- **passphrase**: （WPA2の場合は最小8文字、オープンの場合はNULLを使用）。
+  - **入力パラメータ**
+    - **ssid**: SSID へのポインタ（最大63文字）。
+    - **passphrase**: （WPA2の場合は最小8文字、オープンの場合はNULLを使用）。
 
- 	- **出力**: True/False
+  - **出力**: True/False
 
 - `WiFiMulti::run(uint32_t connectTimeout)` -- この関数は、保存されたアクセスポイントの1つに正常に接続するまで、順次順序で接続を試行します。
 
- 	- **入力パラメータ**
-  		- **connectTimeout**: このパラメータは、接続を待機する最大時間をミリ秒で指定します。connectTimeoutが0に設定されている場合、関数はタイムアウトせず、無期限に接続を試行します。
+  - **入力パラメータ**
+    - **connectTimeout**: このパラメータは、接続を待機する最大時間をミリ秒で指定します。connectTimeoutが0に設定されている場合、関数はタイムアウトせず、無期限に接続を試行します。
 
- 	- **出力**: status
+  - **出力**: status
 
 ## 近くのWiFiネットワークをスキャンする
 
@@ -593,7 +593,7 @@ void loop() {
 WiFi.softAP(ssid, password);
 ```
 
-Next, we need to get the access point IP address using the softAPIP() method and print it in the Serial Monitor.
+次に、softAPIP()メソッドを使用してアクセスポイントIPのアドレスを取得し、シリアルモニターに出力する必要があります。
 
 ```cpp
 IPAddress myIP = WiFi.softAPIP();
@@ -715,7 +715,7 @@ ESP-MESHでは、ノードは中央ノードに接続する必要がありませ
 
 このウィンドウが表示されない場合は、以下のライブラリ依存関係をインストールする必要があります：
 
-- [ArduinoJson](https://github.com/bblanchon/ArduinoJson) (by bblanchon)
+- [ArduinoJson](https://github.com/bblanchon/ArduinoJson) (bblanchon作)
 - [TaskScheduler](https://github.com/arkhipenko/TaskScheduler)
 - [AsyncTCP](https://github.com/me-no-dev/AsyncTCP) (ESP32)
 

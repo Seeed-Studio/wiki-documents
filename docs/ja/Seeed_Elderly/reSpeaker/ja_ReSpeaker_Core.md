@@ -272,7 +272,7 @@ mount /dev/mmcblk0p2 /mnt ; tar -C /overlay -cvf - . | tar -C /mnt -xf - ; umoun
  cat /etc/config/fstab;
 ```
 
-- Check if it is mountable to overlay.
+- オーバーレイにマウント可能かどうかを確認する。
 
 ```
  root@mylinkit:/# mount /dev/mmcblk0p2 /overlay/
@@ -426,11 +426,11 @@ Weather Cloud は ReSpeaker の素晴らしいプロジェクトです。この�
 6. python main.py を実行し、ReSpeaker に「ReSpeaker, what is the weather like?」と話しかける
 7. Weather Cloud の作り方の詳細については、[こちら](https://www.instructables.com/id/How-to-DIY-an-in-House-Weather-telling-Cloud/) をクリックしてください。
 
-## ReSpeaker Mic Array
+## ReSpeaker マイクアレイ
 
 ---
 
-### [ReSpeaker Mic Array](https://www.seeedstudio.com/ReSpeaker-Mic-Array-Far-field-w%2F-7-PDM-Microphones--p-2719.html)
+### [ReSpeaker マイクアレイ](https://www.seeedstudio.com/ReSpeaker-Mic-Array-Far-field-w%2F-7-PDM-Microphones--p-2719.html)
 
 ReSpeaker Mic Array は ReSpeaker Core の上に直接スタック（接続）でき、音声インタラクション体験を大幅に向上させます。XMOS の XVSM-2000 Smart Microphone をベースに開発されています。このボードは 7 つの PDM マイクロフォンを統合し、ReSpeaker の音響 DSP 性能をはるかに高いレベルまで向上させます。
 
@@ -438,7 +438,7 @@ ReSpeaker Mic Array は ReSpeaker Core の上に直接スタック（接続）�
 
 ---
 
-### [ReSpeaker Arduino Library](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker/ReSpeakerArduinoLibrary.md#respeaker-arduino-library)
+### [ReSpeaker Arduino ライブラリ](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker/ReSpeakerArduinoLibrary.md#respeaker-arduino-library)
 
 ReSpeaker Arduino Library は以下の機能を提供します：
 
@@ -446,7 +446,7 @@ ReSpeaker Arduino Library は以下の機能を提供します：
 - WS2812 RGB LED ドライバーを実装
 - Arduino (ATmega32U4) と Linux ベース OpenWrt (MT7688) 間の USB to Serial ブリッジと SPI ブリッジを構築
 
-### [ReSpeaker Python Library](https://github.com/respeaker/respeaker_python_library)
+### [ReSpeaker Python ライブラリ](https://github.com/respeaker/respeaker_python_library)
 
 ReSpeaker は音声対応オブジェクトを作成するオープンプロジェクトです。ReSpeaker python library は音声インタラクションの基本機能を提供するオープンソース python ライブラリです。
 

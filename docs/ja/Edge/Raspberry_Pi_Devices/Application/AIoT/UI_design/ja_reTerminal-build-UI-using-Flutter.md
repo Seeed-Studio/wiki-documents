@@ -46,13 +46,13 @@ sudo ./install.sh
 sudo apt install cmake libgl1-mesa-dev libgles2-mesa-dev libegl1-mesa-dev libdrm-dev libgbm-dev ttf-mscorefonts-installer fontconfig libsystemd-dev libinput-dev libudev-dev  libxkbcommon-dev
 ```
 
-- **Step 3.** Update the system fonts
+- **ステップ 3.** システムフォントを更新する
 
 ```sh
 sudo fc-cache
 ```
 
-- **Step 4.** Clone flutter-pi and cd into the cloned directory
+- **ステップ 4.** flutter-piをクローンし、クローンしたディレクトリにcdで移動する
 
 ```sh
 git clone https://github.com/ardera/flutter-pi
@@ -73,7 +73,7 @@ make -j`nproc`
 sudo make install
 ```
 
-- **Step 7.** Open raspi-config
+- **ステップ 7.** Open raspi-config
 
 ```sh
 sudo raspi-config
@@ -93,7 +93,7 @@ sudo raspi-config
 usermod -a -G render pi
 ```
 
-- **Step 13.** Reboot reTerminal
+- **ステップ 13.** Reboot reTerminal
 
 ```sh
 sudo reboot
@@ -115,37 +115,37 @@ flutter --version
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/flutter-version.png" alt="pir" width="800" height="auto"/></p>
 
-- **Step 3.** お使いのオペレーティングシステムに応じて[Android Studio](https://developer.android.com/studio)をダウンロードしてインストールします
+- **ステップ 3.** お使いのオペレーティングシステムに応じて[Android Studio](https://developer.android.com/studio)をダウンロードしてインストールします
 
-- **Step 4.** Android Studioを開き、`Configure > Plugins`に移動します
+- **ステップ 4.** Android Studioを開き、`Configure > Plugins`に移動します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-6.png" alt="pir" width="650" height="auto"/></p>
 
-- **Step 5.** **Marketplace**で、検索ボックスに**flutter**と入力し、**Install**をクリックします
+- **ステップ 5.** **Marketplace**で、検索ボックスに**flutter**と入力し、**Install**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-7.png" alt="pir" width="650" height="auto"/></p>
 
-- **Step 6.** プロンプトウィンドウで**Install**をクリックして**Dart**プラグインもインストールします
+- **ステップ 6.** プロンプトウィンドウで**Install**をクリックして**Dart**プラグインもインストールします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-8.png" alt="pir" width="650" height="auto"/></p>
 
-- **Step 7.** **Restart IDE**をクリックして、インストールしたプラグインでIDEを再起動します
+- **ステップ 7.** **Restart IDE**をクリックして、インストールしたプラグインでIDEを再起動します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-9.png" alt="pir" width="650" height="auto"/></p>
 
-- **Step 8.** IDEが再び開いたら、`Configure > AVD Manager`に移動します
+- **ステップ 8.** IDEが再び開いたら、`Configure > AVD Manager`に移動します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/android-studio-open.png" alt="pir" width="800" height="auto"/></p>
 
-- **Step 9.** **Create Virtual Device**をクリックします
+- **ステップ 9.** **Create Virtual Device**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-1.png" alt="pir" width="800" height="auto"/></p>
 
-- **Step 10.** **New Hardware Profile**をクリックします
+- **ステップ 10.** **New Hardware Profile**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-2.png" alt="pir" width="800" height="auto"/></p>
 
-- **Step 11.** 以下のように設定を構成します
+- **ステップ 11.** 以下のように設定を構成します
 
   - Device Name: reTerminal
   - Device Type: Phone/ Tablet
@@ -159,21 +159,21 @@ flutter --version
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-3.png" alt="pir" width="800" height="auto"/></p>
 
-- **Step 12.** **Finish**をクリックし、次に**Next**をクリックします
+- **ステップ 12.** **Finish**をクリックし、次に**Next**をクリックします
 
-- **Step 13.** 最新のAndroid Imageを選択し、**Next**をクリックします
+- **ステップ 13.** 最新のAndroid Imageを選択し、**Next**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-4.png" alt="pir" width="800" height="auto"/></p>
 
-- **Step 14.** **Emulated Performance**で、加速されたパフォーマンスのために**Hardware - GLES 2.0**を選択します
+- **ステップ 14.** **Emulated Performance**で、加速されたパフォーマンスのために**Hardware - GLES 2.0**を選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-5.png" alt="pir" width="800" height="auto"/></p>
 
-- **Step 15.** 最後に**Finish**をクリックします
+- **ステップ 15.** 最後に**Finish**をクリックします
 
 これで開発環境の準備が正常に完了しました
 
-## Smart Lamp Flutter Application
+## スマートランプ Flutter アプリケーション
 
 ### ハードウェア接続
 
@@ -185,17 +185,17 @@ flutter --version
 
 ### アプリケーションの作成と初期化
 
-- **Step 1.** Android Studioを開き、**Create New Flutter Project**をクリックします
+- **ステップ 1.** Android Studioを開き、**Create New Flutter Project**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-10.png" alt="pir" width="550" height="auto"/></p>
 
-- **Step 2.** **Flutter SDK path**は自動的に設定されます
+- **ステップ 2.** **Flutter SDK path**は自動的に設定されます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-11.png" alt="pir" width="800" height="auto"/></p>
 
 **注意:** このウィンドウにFlutter SDK pathが表示されない場合は、手動でFlutter SDKの場所を指定できます
 
-- **Step 3.** プロジェクトの詳細を以下のように入力し、**Finish**をクリックします
+- **ステップ 3.** プロジェクトの詳細を以下のように入力し、**Finish**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-12.png" alt="pir" width="800" height="auto"/></p>
 
@@ -345,15 +345,15 @@ dependencies:
   flutter_gpiod: ^0.4.0-nullsafety
 ```
 
-- **Step 2.** ファイルを保存し、**Pub get** をクリックします
+- **ステップ 2.** ファイルを保存し、**Pub get** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-17.jpg" alt="pir" width="520" height="auto"/></p>
 
 ### アプリをテストする
 
-- **Step 1.** **main.dart** ファイルを開きます
+- **ステップ 1.** **main.dart** ファイルを開きます
 
-- **Step 2.** **no device selected** ボタンをクリックし、先ほど作成したAndroidデバイスを選択します
+- **ステップ 2.** **no device selected** ボタンをクリックし、先ほど作成したAndroidデバイスを選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-13.1.jpg" alt="pir" width="800" height="auto"/></p>
 
@@ -361,7 +361,7 @@ dependencies:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-5.png" alt="pir" width="800" height="auto"/></p>
 
-- **Step 3.** **再生ボタン** をクリックしてアプリケーションを実行します
+- **ステップ 3.** **再生ボタン** をクリックしてアプリケーションを実行します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-14.png" alt="pir" width="800" height="auto"/></p>
 
@@ -373,15 +373,15 @@ Androidエミュレーター上で以下のアプリケーションが実行さ�
 
 次に、FlutterアプリケーションをビルドしてreTerminalに転送します
 
-- **Step 1.** Android Studio内でターミナルウィンドウを開きます。`View > Tool Windows > Terminal` に移動します
+- **ステップ 1.** Android Studio内でターミナルウィンドウを開きます。`View > Tool Windows > Terminal` に移動します
 
-- **Step 2.** 以下を入力してビルドの準備をします
+- **ステップ 2.** 以下を入力してビルドの準備をします
 
 ```sh
 flutter clean
 ```
 
-- **Step 3.** Build the project
+- **ステップ 3.** Build the project
 
 ```sh
 flutter build bundle
@@ -428,11 +428,11 @@ Flutterでより興味深いデモを体験したい場合は、[このGitHubリ
 私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

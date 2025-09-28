@@ -651,7 +651,7 @@ EEPROM.begin(EEPROM_SIZE);
 digitalWrite (ledPin, ledState);
 ```
 
-In the `loop()` function section, all we need to do is flip the state of the LED over a period of time.
+`loop()` 関数セクションでは、一定時間にわたってLEDの状態を反転させるだけです。
 
 ```c
 // check to see if it's time to blink the LED; that is, if the difference

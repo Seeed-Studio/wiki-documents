@@ -823,7 +823,7 @@ pCharacteristic->registerForNotify([](BLERemoteCharacteristic* pBLERemoteCharact
 :::tip
 上記の例は、単一センサーの単一値の最もシンプルな例を示しています。Bluetooth経由で複数のセンサーまたは複数のセンサー値をアドバタイズしたい場合は、こちらのチュートリアル例を読むことをお勧めします。
 
-- [ESP32 BLE Server and Client (Bluetooth Low Energy)](https://randomnerdtutorials.com/esp32-ble-server-client/)
+- [ESP32 BLE サーバーとクライアント (Bluetooth Low Energy)](https://randomnerdtutorials.com/esp32-ble-server-client/)
 
 :::
 

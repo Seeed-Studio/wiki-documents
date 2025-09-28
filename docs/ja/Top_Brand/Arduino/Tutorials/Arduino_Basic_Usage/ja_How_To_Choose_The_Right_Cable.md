@@ -87,7 +87,7 @@ Arduino UNO はピン3、5、6、9、10、11で PWM をサポートしていま�
 
 ![](https://files.seeedstudio.com/wiki/How_To_Choose_The_Right_Cable/img/4pinto2x3pin500.jpg)
 
-## Grove to 4pin Female Jumper
+## Groveから4pinメスジャンパー
 
 以下の用途に使用できます：
 

@@ -96,7 +96,7 @@ cd deepstream_reference_apps/deepstream_app_tao_configs/
 sudo cp -a * /opt/nvidia/deepstream/deepstream/samples/configs/tao_pretrained_models/
 ```
 
-**Step 3:** Download the models
+**步骤 3：** 下载模型
 
 ```sh
 sudo apt install -y wget zip
@@ -110,7 +110,7 @@ sudo ./download_models.sh
 vi deepstream_app_source1_dashcamnet_vehiclemakenet_vehicletypenet.txt
 ```
 
-**Step 5:** Change **sync=1** to **sync=0** under [sink0]
+**步骤 5：** 将 [sink0] 下的 **sync=1** 改为 **sync=0**
 
 ```sh
 [sink0]

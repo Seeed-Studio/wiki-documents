@@ -201,7 +201,7 @@ SDK のインストールが開始され、数分かかる場合があります�
   west init -m https://github.com/nrfconnect/sdk-nrf --mr v2.5.0
   ```
 
-  **Development tag**: To check out the v1.9.2-dev1 tag, enter the following command:
+**開発タグ**: v1.9.2-dev1 タグをチェックアウトするには、以下のコマンドを入力してください：
 
   ```cpp
   west init -m https://github.com/nrfconnect/sdk-nrf --mr v1.9.2-dev1
@@ -853,7 +853,7 @@ exports.handler = async (event) => {
 
 `AWS IoT Core Console`に移動し、`MQTT Test Client`を選択してトピックを購読します。
 
-#### Add Tracker Rule
+#### トラッカールールを追加
 
 上記の手順を繰り返して新しいルールを作成し、以下のLambdaコードをコピーします：
 

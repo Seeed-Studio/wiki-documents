@@ -94,7 +94,7 @@ source kerasStableEnvironment/bin/activate
 cd kerasStableEnvironment
 ```
 
-Upgrade PIP and install some dependencies
+PIPをアップグレードし、いくつかの依存関係をインストールする
 
 ```bash
 pip install -U pip
@@ -175,7 +175,7 @@ pip install keras==2.12.0
 pip install Pillow
 ```
 
-Open your preferred editor and type the following example
+お好みのエディタを開いて、以下の例を入力してください
 
 ```bash
 vi generate_image.py
@@ -238,8 +238,8 @@ python -m venv huggingfaceTesting
 source huggingfaceTesting/bin/activate
 ```
 
-After creating the virtual environment, let's enter it.
-Install PyTorch using the instructions above.
+仮想環境を作成した後、その環境に入りましょう。
+上記の手順を使用してPyTorchをインストールしてください。
 
 ```bash
 cd huggingfaceTesting
@@ -343,7 +343,7 @@ Jetsonが動作していて、APIを呼び出すことで画像を生成でき�
 python -m venv imageAPIGenerator
 ```
 
-Activate the environment and enter it
+環境をアクティベートして入る
 
 ```bash
 source  imageAPIGenerator/bin/activate
@@ -415,7 +415,7 @@ python app.py
 import Flask
 ```
 
-We next created an instance of the Flask class
+次に、Flaskクラスのインスタンスを作成しました
 
 ```python
 app = Flask(__name__)

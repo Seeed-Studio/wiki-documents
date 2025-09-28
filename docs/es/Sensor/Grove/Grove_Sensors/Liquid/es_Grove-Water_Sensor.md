@@ -13,9 +13,7 @@ last_update:
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Water_Sensor/img/Grove-Water_Sensor_1.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Water_Sensor/img/Grove-Water_Sensor_1.png" alt="pir" width={600} height="auto" /></p>
 
-
 El módulo Sensor de Agua es parte del sistema Grove. Indica si el sensor está seco, húmedo o completamente sumergido en agua midiendo la conductividad. Las pistas del sensor tienen una resistencia de pull-up débil de 1 MΩ. La resistencia mantendrá el valor de la pista del sensor en alto hasta que una gota de agua cortocircuite la pista del sensor con la pista conectada a tierra. Aunque no lo creas, este circuito funcionará con los pines de E/S digitales de tu Arduino o puedes usarlo con los pines analógicos para detectar la cantidad de contacto inducido por agua entre las pistas conectadas a tierra y del sensor.
-
 
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-Water-Sensor-p-748.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p> -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-Water-Sensor-p-748.html)
@@ -26,9 +24,7 @@ El módulo Sensor de Agua es parte del sistema Grove. Indica si el sensor está 
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | Grove-Sensor de Agua V1.1   | Inicial                                                                                                                                                                                    | Julio 2014      |
 
-
 ## Características
-
 
 - Interfaz compatible con Grove
 - Bajo consumo de energía
@@ -128,8 +124,8 @@ Humedad de Trabajo (sin condensación)
 :::tip
     Más detalles sobre los módulos Grove consulte [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
 :::
-## Plataformas Compatibles
 
+## Plataformas Compatibles
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -147,6 +143,7 @@ Humedad de Trabajo (sin condensación)
 :::note
     Si esta es la primera vez que trabajas con Arduino, te recomendamos firmemente que veas Primeros Pasos con Arduino antes de comenzar.
 :::
+
 ### Jugar Con Arduino
 
 #### Hardware
@@ -168,8 +165,9 @@ Conecta el módulo a la placa Basic usando cualquiera de los pines digitales. Pu
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Water_Sensor/img/3.jpg" alt="pir" width={600} height="auto" /></p>
 
 :::note
-	Si no tenemos Grove Base Shield, también podemos conectar directamente Grove_Water_Sensor al Seeeduino como se muestra a continuación.
+ Si no tenemos Grove Base Shield, también podemos conectar directamente Grove_Water_Sensor al Seeeduino como se muestra a continuación.
 :::
+
 | Seeeduino       | Grove - Sensor de Agua |
 |---------------|-------------------------|
 | 5V           | Rojo                     |
@@ -177,8 +175,8 @@ Conecta el módulo a la placa Basic usando cualquiera de los pines digitales. Pu
 | No Conectado | Blanco                   |
 | D2            | Amarillo                  |
 
-
 #### Software
+
 - **Paso 1.** Copia el código en Arduino IDE y súbelo. Si no sabes cómo subir el código, por favor revisa [cómo subir código](https://wiki.seeedstudio.com/es/Upload_Code/).
 
 ```c
@@ -197,7 +195,7 @@ void loop()
 
 ```
 
-- **Step 2.** We will see the output display on terminal as below.
+- **Paso 2.** Veremos la salida mostrada en la terminal como se muestra a continuación.
 
 ```c
 1
@@ -235,6 +233,7 @@ Sube el programa a tu Arduino/Seeeduino.
 :::success
     Cuando el código termine de subirse, verás si hay agua o no en el Monitor Serie.
 :::
+
 ### Jugar con Raspberry Pi (Con Grove Base Hat para Raspberry Pi)
 
 #### Hardware
@@ -256,7 +255,7 @@ Sube el programa a tu Arduino/Seeeduino.
 #### Software
 
 - **Paso 1**. Sigue [Configuración de Software](https://wiki.seeedstudio.com/es/Grove_Base_Hat_for_Raspberry_Pi/#installation) para configurar el entorno de desarrollo.
-- **Paso 2**. Descarga el archivo fuente clonando la biblioteca grove.py. 
+- **Paso 2**. Descarga el archivo fuente clonando la biblioteca grove.py.
 
 ```
 cd ~
@@ -270,7 +269,6 @@ git clone https://github.com/Seeed-Studio/grove.py
 cd grove.py/grove
 python grove_water_sensor.py 0
 ```
-
 
 A continuación se muestra el código grove_water_sensor.py.
 
@@ -318,9 +316,8 @@ if __name__ == '__main__':
 
 ```
 
-
 :::success
-    If everything goes well, you will be able to see the following result
+    Si todo va bien, podrás ver el siguiente resultado
 :::
 ```python
 
@@ -363,7 +360,6 @@ KeyboardInterrupt
 
 Puedes usar este sensor para detectar el agua. Presiona ++ctrl+c++ para salir.
 
-
 :::note
         Puede que hayas notado que para el puerto analógico, el número de pin en la serigrafía es algo como **A1, A0**, sin embargo en el comando usamos el parámetro **0** y **1**, igual que el puerto digital. Así que por favor asegúrate de conectar el módulo en el puerto correcto, de lo contrario puede haber conflictos de pines.
 :::
@@ -386,7 +382,6 @@ Puedes usar este sensor para detectar el agua. Presiona ++ctrl+c++ para salir.
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Water_Sensor/img/7.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Water_Sensor/img/7.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 #### Software
 
 - **Paso 1.** Sigue [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) para configurar el entorno de desarrollo.
@@ -396,7 +391,7 @@ Puedes usar este sensor para detectar el agua. Presiona ++ctrl+c++ para salir.
 cd yourpath/GrovePi/Software/Python/
 ```
 
--	**Paso 3.** Para ver el código
+- **Paso 3.** Para ver el código
 
 ```
 nano grove_water_sensor.py
@@ -421,7 +416,7 @@ while True:
         print "Error"
 ```
 
--	**Step 4.** Run the demo.
+- **Paso 4.** Ejecute la demostración.
 
 ```
 sudo python grove_water_sensor.py
@@ -437,12 +432,10 @@ sudo python grove_water_sensor.py
 1
 ```
 
-
 ## Visor Esquemático en Línea
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Water_Sensor/res/Water_sensor.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 ## Recursos
 
@@ -452,21 +445,22 @@ sudo python grove_water_sensor.py
 
 <!-- Este archivo Markdown fue creado desde https://wiki.seeedstudio.com/es/Grove-Water_Sensor/ -->
 
-## Proyecto 
+## Proyecto
 
 **Cultivos Inteligentes: ¡Implementando IoT en la Agricultura Convencional!**: Nuestra misión con la naturaleza es preservarla, diseñando e implementando tecnologías y métodos de monitoreo con la ayuda de IoT a través de Helium.
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/gabogiraldo/smart-crops-implementing-iot-in-conventional-agriculture-3674a6/embed' width='350'></iframe>
 
 ## Soporte Técnico y Discusión de Productos
+
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

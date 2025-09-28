@@ -198,19 +198,19 @@ sudo vi /usr/bin/hwtosys.sh
 sudo hwclock --hctosys
 ```
 
-- **Step 10:** Make the script executable
+- **ステップ 10:** スクリプトを実行可能にする
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
 ```
 
-- **Step 11:** Create a systemd file
+- **ステップ 11:** systemd ファイルを作成します
 
 ```sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
 
-- **Step 12:** Add the following inside the file
+- **ステップ 12:** ファイル内に以下を追加してください
 
 ```sh
 [Unit]
@@ -236,13 +236,13 @@ sudo systemctl enable hwtosys.service
 sudo systemctl start hwtosys.service
 ```
 
-- **Step 15:** Verify the script is up and running as a systemd service
+- **ステップ 15:** スクリプトがsystemdサービスとして起動し実行されていることを確認する
 
 ```sh
 sudo systemctl status hwtosys.service
 ```
 
-- **Step 16:** ボードを再起動すると、システムクロックがハードウェアクロックと同期されていることが確認できます
+- **ステップ 16:** ボードを再起動すると、システムクロックがハードウェアクロックと同期されていることが確認できます
 
 ## M.2 Key M
 
@@ -252,21 +252,21 @@ reServer Industrialには、M.2 Key Mスロットに接続された128GB SSDが�
 
 付属のSSDを取り外して新しいものをインストールしたい場合は、以下の手順に従ってください。ここでは、[128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)、[256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)、[512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)、[1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)ストレージのSeeed SSDのみを推奨します。これらのSSDのみをテストしているためです。さらに、このインターフェースはPCIe Gen4.0 SSDをサポートしています。
 
-- **Step 1:** プリインストールされたSSDのネジを取り外します
+- **ステップ 1:** プリインストールされたSSDのネジを取り外します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/8.jpg"/></div>
 
-- **Step 2:** SSDコネクタから離すようにスライドしてSSDを取り外します
+- **ステップ 2:** SSDコネクタから離すようにスライドしてSSDを取り外します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/9.jpg"/></div>
 
-- **Step 3:** 新しいSSDを挿入し、ネジを締め直します
+- **ステップ 3:** 新しいSSDを挿入し、ネジを締め直します
 
 ### 使用方法
 
 接続されたSSDで簡単なベンチマークを実行する方法を説明します
 
-- **Step 1:** 以下のコマンドを実行して書き込み速度を確認します
+- **ステップ 1:** 以下のコマンドを実行して書き込み速度を確認します
 
 ```sh
 sudo dd if=/dev/zero of=/home/$USER/test bs=1M count=512 conv=fdatasync
@@ -446,7 +446,7 @@ echo -e "AT+QGPS=1\r\n" > /dev/ttyUSB2
 echo -e "AT+QGPS=0\r\n" > /dev/ttyUSB2
 ```
 
-- **Step 2:** Obtain the GPS data by executing the below commands
+- **ステップ 2:** 以下のコマンドを実行してGPSデータを取得する
 
 ```sh
 sudo cat /dev/ttyUSB1
@@ -666,7 +666,7 @@ echo 0 > value
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reServer-Industrial/15.jpg"/></div>
 
-- **Step 2:** minicomをインストールする
+- **ステップ 2:** minicomをインストールする
 
 ```sh
 sudo apt update
@@ -1529,7 +1529,7 @@ echo out > direction
 echo 0 > value 
 ```
 
-- **Step 3:** Turn ON the LED
+- **ステップ 3:** ON LEDを点灯する
 
 ```sh
 echo 1 > value 
@@ -1565,7 +1565,7 @@ sudo pip3 install jetson-stats
 sudo reboot
 ```
 
-- **Step 3:** Type the following on the terminal
+- **ステップ 3:** ターミナルで以下を入力してください
 
 ```sh
 jtop
@@ -1632,7 +1632,7 @@ reServer IndustrialのGPIOテーブルにアクセスして、すべてのピン
 sudo cat /sys/kernel/debug/gpio
 ```
 
-And you will see the output as follows
+そして、以下のような出力が表示されます
 
 ```sh
 gpiochip2: GPIOs 300-315, parent: i2c/1-0021, 1-0021, can sleep:

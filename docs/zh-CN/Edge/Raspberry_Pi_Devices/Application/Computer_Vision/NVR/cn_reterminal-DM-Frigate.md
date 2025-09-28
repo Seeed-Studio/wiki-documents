@@ -198,7 +198,7 @@ wget https://github.com/home-assistant/supervised-installer/releases/download/1.
 sudo dpkg -i homeassistant-supervised.deb
 ```
 
-### Step 7: Address Installation Errors
+### 步骤 7：解决安装错误
 
 如果出现安装错误，请运行以下命令进行修复：
 

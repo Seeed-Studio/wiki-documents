@@ -201,7 +201,7 @@ idf.py --version
 nano ~/.bashrc
 ```
 
-Add the following to the end of the `.bashrc` file.
+`.bashrc` ファイルの末尾に以下を追加してください。
 
 ```
 alias get_idf='. ~/esp/esp-idf/export.sh'

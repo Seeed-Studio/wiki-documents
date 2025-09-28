@@ -164,7 +164,7 @@ CAN-BUS Shield の動作を示す簡単な例を以下に示します。この�
 この例は [Arduino IDE バージョン 1.6.9](https://www.arduino.cc/download_handler.php?f=/arduino-1.6.9-windows.zip) を使用して構築されています。
 :::
 
-**STEP1: 必要なもの**
+**ステップ1: 必要なもの**
 
 <table align="center">
   <tbody>
@@ -188,7 +188,7 @@ CAN-BUS Shield の動作を示す簡単な例を以下に示します。この�
   </tr>  
   </tbody></table>
 
-**STEP2: ハードウェア接続**
+**ステップ2: ハードウェア接続**
 
 各 CAN-BUS Shield を Seeeduino V4.2 に挿入し、2 本のジャンパー線で 2 つの CAN-BUS Shield を接続します。以下の画像のように接続してください。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/connection.png" alt="pir" width={600} height="auto" /></p>
@@ -197,7 +197,7 @@ CAN-BUS Shield の動作を示す簡単な例を以下に示します。この�
 CAN_H を CAN_H に、CAN_L を CAN_L に接続してください。
 :::
 
-**STEP3: ソフトウェア**
+**ステップ3: ソフトウェア**
 
 [Arduino ライブラリのインストール方法](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/) の手順に従って、CAN BUS Shield ライブラリをインストールしてください。
 
@@ -262,7 +262,7 @@ void loop() {
 }
 ```
 
-**STEP4: 結果を確認**
+**ステップ4: 結果を確認**
 
 Arduino IDE のシリアルモニターを開きます (**スレーブ**)。マスターから送信されたデータを確認できます。
 
@@ -448,7 +448,7 @@ case (CAN_xxxKBPS):
 
 CAN-BUSシールドを使用して素晴らしいプロジェクトを作りたい場合、以下のプロジェクトを参考にしてください。
 
-### Volkswagen CAN BUS Gaming
+### Volkswagen CAN BUS ゲーミング
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/project1.JPG" alt="pir" width={600} height="auto" /></p>
 PCでリアルなダッシュボードを使って車やトラックのシミュレーターをプレイしたいと思ったことはありませんか？私もです！Arduino UnoとSeeed CAN Bus Shieldを使用して、VW Polo 6RのダッシュボードをCAN Bus経由で制御しようとしています。Silas Parkerにインスパイアされました。SeppとIs0-Mickの素晴らしいサポートに感謝します！

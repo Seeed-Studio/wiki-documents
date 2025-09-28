@@ -350,7 +350,7 @@ if dev:
             break
 ```
 
-- Step 3. We will see the DOA as below.
+- Paso 3. Veremos el DOA como se muestra a continuación.
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python doa.py 
@@ -395,7 +395,7 @@ if dev:
             break
 ```
 
-- Step 3. We will see the DOA as below.
+- Paso 3. Veremos el DOA como se muestra a continuación.
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python VAD.py 

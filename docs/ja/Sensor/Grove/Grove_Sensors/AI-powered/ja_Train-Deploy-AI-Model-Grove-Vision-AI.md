@@ -64,7 +64,7 @@ IP66の筐体、Bluetooth設定、グローバルLoRaWAN®ネットワークと�
 
 このウィキ全体を通じて、主にGrove - Vision AI Moduleを使用します。まずは、このハードウェアについて理解を深めましょう。
 
-### Grove - Vision AI Module
+### Grove - Vision AI モジュール
 
 [Grove Vision AI Module](https://www.seeedstudio.com/Grove-Vision-AI-Module-p-5457.html)は、親指サイズのAIカメラで、カスタマイズされたセンサーが搭載されており、人検出やその他のカスタマイズモデルのための機械学習アルゴリズムがすでにインストールされています。数分で簡単にデプロイおよび表示でき、超低消費電力モードで動作します。また、2つの信号伝送方法と複数のオンボードモジュールを提供しており、AI対応カメラの入門に最適です。
 

@@ -155,7 +155,7 @@ wget https://developer.download.nvidia.cn/compute/redist/jp/v60/pytorch/torch-2.
 pip install torch-2.4.0a0+f70bd71a48.nv24.06.15634931-cp310-cp310-linux_aarch64.whl
 ```
 
-**Step 3.** Verify installation:
+**步骤 3.** 验证安装：
 
 ```python
 import torch

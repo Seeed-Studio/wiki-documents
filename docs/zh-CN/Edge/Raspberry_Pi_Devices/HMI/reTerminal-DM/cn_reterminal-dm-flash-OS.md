@@ -135,25 +135,25 @@ git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-- **Step 2.** Install **libusb**
+- **步骤 2.** 安装 **libusb**
 
 ```sh
 brew install libusb
 ```
 
-- **Step 3.** Install **pkg-config**
+- **步骤 3.** 安装 **pkg-config**
 
 ```sh
 brew install pkg-config
 ```
 
-- **Step 4.** Build using make
+- **步骤 4.** 使用 make 构建
 
 ```sh
 make
 ```
 
-- **Step 5.** Run the binary
+- **步骤 5.** 运行二进制文件
 
 ```sh
 sudo ./rpiboot
@@ -253,7 +253,7 @@ sudo ./rpiboot
 sudo apt install snap
 ```
 
-- **Step 9.** Download **rpi-imager**
+- **步骤 9.** 下载 **rpi-imager**
 
 ```sh
 snap install rpi-imager
@@ -407,7 +407,7 @@ sudo apt install git -y
 git clone --depth 1 https://github.com/Seeed-Studio/seeed-linux-dtoverlays
 ```
 
-- **Step 2.** Enter the repo
+- **步骤 2.** 进入仓库
 
 ```sh
 cd seeed-linux-dtoverlays

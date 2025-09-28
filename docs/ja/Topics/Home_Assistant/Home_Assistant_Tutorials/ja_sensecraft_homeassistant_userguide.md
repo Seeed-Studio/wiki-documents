@@ -168,8 +168,8 @@ wget -q -O - https://install.hacs.xyz | bash -
 4. 「オプション > ログイン」に移動し、ユーザー名またはパスワードを希望のものに置き換えます。設定を保存します。
 
 :::note
-- username: user
-- password: passwd
+- ユーザー名: user
+- パスワード: passwd
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecraft/sensecraft_homeassistant/SenseCraft-HomeAssistantimage29.png" alt="pir" width={800} height="auto" /></p>

@@ -167,13 +167,13 @@ cd ~/server/docs/examples
 sh fetch_models.sh
 ```
 
-**Step 3.** JetPack 4.6.1用のTritonのリリースをインストールします。これは添付のtarファイルで提供されています：[tritonserver2.21.0-jetpack5.0.tgz](https://github.com/triton-inference-server/server/releases/download/v2.19.0/tritonserver2.19.0-jetpack4.6.1.tgz)。
+**ステップ 3.** JetPack 4.6.1用のTritonのリリースをインストールします。これは添付のtarファイルで提供されています：[tritonserver2.21.0-jetpack5.0.tgz](https://github.com/triton-inference-server/server/releases/download/v2.19.0/tritonserver2.19.0-jetpack4.6.1.tgz)。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SecurityCheck/Security_Scan_16.png" /></div>
 
 ここのtarファイルには、Tritonサーバーの実行ファイルと共有ライブラリが含まれており、C++およびPythonクライアントライブラリと例も含まれています。JetPackでのTritonのインストールと使用方法の詳細については、[こちら](https://github.com/triton-inference-server/server/blob/r22.04/docs/jetson.md)を参照してください。
 
-**Step 4.** 以下のコマンドを実行します：
+**ステップ 4.** 以下のコマンドを実行します：
 
 ```python
 

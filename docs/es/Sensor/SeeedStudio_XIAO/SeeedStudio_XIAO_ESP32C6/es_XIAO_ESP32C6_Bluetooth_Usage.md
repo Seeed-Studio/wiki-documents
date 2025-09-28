@@ -825,7 +825,7 @@ Finalmente, el valor de luz se coloca en el puntero pData.
 :::tip
 El ejemplo anterior proporciona el ejemplo más simple de un solo valor para un solo sensor. Si deseas anunciar múltiples sensores o múltiples valores de sensores a través de Bluetooth, te recomendamos leer los ejemplos del tutorial aquí.
 
-- [ESP32 BLE Server and Client (Bluetooth Low Energy)](https://randomnerdtutorials.com/esp32-ble-server-client/)
+- [ESP32 BLE Servidor y Cliente (Bluetooth Low Energy)](https://randomnerdtutorials.com/esp32-ble-server-client/)
 :::
 
 

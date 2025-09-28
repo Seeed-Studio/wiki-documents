@@ -204,7 +204,7 @@ sudo hwclock --hctosys
 sudo chmod +x /usr/bin/hwtosys.sh 
 ```
 
-- **Step 11:** Create a systemd file
+- **步骤 11：** 创建一个 systemd 文件
 
 ```sh
 sudo nano /lib/systemd/system/hwtosys.service 
@@ -223,7 +223,7 @@ ExecStart=/usr/bin/hwtosys.sh
 WantedBy=multi-user.target
 ```
 
-- **Step 13:** Reload systemctl daemon
+- **步骤 13：** 重新加载 systemctl 守护进程
 
 ```sh
 sudo systemctl daemon-reload 
@@ -866,7 +866,7 @@ gpioinfo gpiochip0
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/reserver-di.jpg"/></div>
 
 :::note
-您可以参考 **DI/ DO 引脚分配表** 来找到 GPIO 编号和 BGA 编号。在上面的示例中，对于 DI1 引脚，GPIO 编号是 453，BGA 编号是 PQ.05 
+您可以参考 **DI/ DO 引脚分配表** 来找到 GPIO 编号和 BGA 编号。在上面的示例中，对于 DI1 引脚，GPIO 编号是 453，BGA 编号是 PQ.05
 :::
 
 - **步骤 3：**
@@ -1559,7 +1559,7 @@ sudo apt install python3-pip -y
 sudo pip3 install jetson-stats
 ```
 
-- **Step 2:** Reboot the board
+- **步骤 2：** 重启开发板
 
 ```sh
 sudo reboot

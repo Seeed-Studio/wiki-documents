@@ -276,7 +276,7 @@ int main(void) {
 ```
 
 :::tip
-If everything goes well, the following results can be displayed like:
+Si todo va bien, los siguientes resultados se pueden mostrar así:
 :::
 
 ```shell

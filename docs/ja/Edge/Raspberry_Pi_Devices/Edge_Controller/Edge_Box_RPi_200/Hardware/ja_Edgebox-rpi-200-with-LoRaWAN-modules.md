@@ -96,9 +96,9 @@ sudo make
 cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
 ```
 
-**Step 8.** `global_conf.json.sx1250.US915.USB` 設定ファイル内のLoraWAN®モジュールのUSBポートを置き換えます：
+**ステップ 8.** `global_conf.json.sx1250.US915.USB` 設定ファイル内のLoraWAN®モジュールのUSBポートを置き換えます：
 
-**Step 8-1.**
+**ステップ 8-1.**
 まず、特定のUSBポートを取得するために、以下の手順に従ってください：
 
 ```sh

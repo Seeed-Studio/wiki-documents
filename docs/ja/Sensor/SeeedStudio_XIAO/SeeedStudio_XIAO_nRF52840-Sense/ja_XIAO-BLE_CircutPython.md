@@ -9,7 +9,7 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 ---
-# **Seeed Studio XIAO nRF52840 with CircuitPython**
+# **Seeed Studio XIAO nRF52840 と CircuitPython**
 
 CircuitPython は、低コストのマイコンボードでのプログラミングの実験と学習を簡素化するために設計されたプログラミング言語です。事前のデスクトップダウンロードが不要で、これまで以上に簡単に始めることができます。ボードをセットアップしたら、任意のテキストエディタを開いて、コードの編集を開始するだけです。それほど簡単です。
 

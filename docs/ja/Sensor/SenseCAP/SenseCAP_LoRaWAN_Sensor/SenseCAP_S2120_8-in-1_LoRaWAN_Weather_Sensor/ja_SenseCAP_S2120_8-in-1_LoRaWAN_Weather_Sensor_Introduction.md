@@ -10,7 +10,7 @@ last_update:
   author: Yvonne
 ---
 
-# SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor
+# SenseCAP S2120 8-in-1 LoRaWAN 気象センサー
 
 [![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction146.png)](https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html)
 

@@ -145,7 +145,7 @@ Wio Node を使用して非常に基本的な LED アプリケーションを構
 - Grove - LED にはすでに Grove ケーブルが含まれています
 :::
 
-### **STEP 1:** Android/iOS アプリをインストールする
+### **ステップ 1:** Android/iOS アプリをインストールする
 
 Wio Node デバイスを管理および設定するために Wio Link アプリをインストールする必要があります。
 
@@ -159,7 +159,7 @@ Android または iOS アプリをダウンロードしてインストールし�
 Android OS バージョンが 4.1 以上、iOS バージョンが 7 以上であることを確認してください。
 :::
 
-### **STEP 2:** アカウントを作成する
+### **ステップ 2:** アカウントを作成する
 
 - 初めて Wio アプリを使用する場合、GPS の許可が求められることがあります。許可を与えた後、サインアップしてください。
 - すでにアカウントをお持ちの場合は、ログインする前にサーバーの場所を確認してください。
@@ -169,7 +169,7 @@ Android OS バージョンが 4.1 以上、iOS バージョンが 7 以上であ
 :::
 [![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)
 
-### **STEP 3**: Wio Node をインターネットに接続する
+### **ステップ 3**: Wio Node をインターネットに接続する
 
 - CONFIG ボタンを押し続け、青色の LED が呼吸モード（フェードインとフェードアウトの点滅効果）になるまで待ちます。これにより、Wio Node が設定モードに成功し、Wio アプリによって検出可能になります。
 [![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Confiture%20button.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Confiture%20button.png)
@@ -190,7 +190,7 @@ Android OS バージョンが 4.1 以上、iOS バージョンが 7 以上であ
 
 [![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Connect%20to%20Wio%20node3.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Connect%20to%20Wio%20node3.png)
 
-### **STEP 4:** Wio Node とモジュールを仮想的に接続し、ファームウェアを更新する
+### **ステップ 4:** Wio Node とモジュールを仮想的に接続し、ファームウェアを更新する
 
 - Wio Node をクリックすると、メインインターフェースに移動します。
 - 2つの Grove コネクタがあります。左側（D0）を選択してください。
@@ -204,7 +204,7 @@ Android OS バージョンが 4.1 以上、iOS バージョンが 7 以上であ
 
 [![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Wio_Node_Grove_LED.JPG)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Wio_Node_Grove_LED.JPG)
 
-### **STEP 5**: API を使用してアプリケーションをテストする
+### **ステップ 5**: API を使用してアプリケーションをテストする
 
 - LED を Wio Node に正常に接続したら、「View API」をクリックして Wio Node の API を確認します。
 - 「Test Request」エリアに「1」または「0」を入力し、「Post」ボタンをクリックして何が起こるか確認してください。
