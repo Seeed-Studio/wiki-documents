@@ -943,7 +943,7 @@ huggingface-cli upload ${HF_USER}/act_so101_test${CKPT} \
 <details>
 <summary> SmolVLA </summary>
 
-[SmolVLA]((https://huggingface.co/docs/lerobot/smolvla)) is Hugging Face’s lightweight foundation model for robotics. Designed for easy fine-tuning on LeRobot datasets, it helps accelerate your development!
+[SmolVLA](https://huggingface.co/docs/lerobot/smolvla) is Hugging Face’s lightweight foundation model for robotics. Designed for easy fine-tuning on LeRobot datasets, it helps accelerate your development!
 
 **Set Up Your Environment**
 
