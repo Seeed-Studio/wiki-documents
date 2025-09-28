@@ -17,7 +17,6 @@ La pantalla ePaper de la serie reTerminal E representa la familia de terminales 
 
 A diferencia de las pantallas tradicionales que consumen energía continuamente, la pantalla ePaper de la serie reTerminal E solo usa energía al cambiar el contenido, lo que las hace ideales para aplicaciones que requieren una vida útil de batería extendida y visualización de información siempre activa.
 
-
 ## reTerminal E1001
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.jpg" style={{width:700, height:'auto'}}/></div><br />
@@ -52,7 +51,6 @@ El reTerminal E1001 cuenta con una pantalla ePaper monocromática de 7.5 pulgada
     <strong><span><font color={'FFFFFF'} size={"4"}>Obtener uno ahora</font></span></strong>
   </a>
 </div><br />
-
 
 El reTerminal E1002 cuenta con una vibrante pantalla ePaper a todo color de 7.3 pulgadas con tecnología ACeP (Advanced Color ePaper). Esta pantalla a color ofrece los mismos beneficios de eficiencia energética de la tecnología ePaper mientras permite contenido más visualmente atractivo con múltiples colores, lo que la hace ideal para aplicaciones donde la distinción visual y el atractivo estético son importantes.
 
@@ -133,14 +131,12 @@ Nota: Este equipo ha sido probado y se ha encontrado que cumple con los límites
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>
-
-

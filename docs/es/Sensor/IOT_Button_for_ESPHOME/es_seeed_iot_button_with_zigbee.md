@@ -83,29 +83,29 @@ Si quieres personalizar el comportamiento de tu Botón IoT, puedes desarrollar t
 
 ### Paso 1: Configurar Arduino IDE para ESP32-C6
 
-1.  Instala la versión más reciente de Arduino IDE.
-2.  Agrega soporte para placas ESP32:
-    -   Ve a **Archivo > Preferencias**.
-    -   Agrega `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` al campo "URLs adicionales del Gestor de Placas".
-    -   Ve a **Herramientas > Placa > Gestor de Placas**.
-    -   Busca "esp32" e instala la versión más reciente (asegúrate de que sea **versión 3.2.1 o superior**).
+1. Instala la versión más reciente de Arduino IDE.
+2. Agrega soporte para placas ESP32:
+    - Ve a **Archivo > Preferencias**.
+    - Agrega `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` al campo "URLs adicionales del Gestor de Placas".
+    - Ve a **Herramientas > Placa > Gestor de Placas**.
+    - Busca "esp32" e instala la versión más reciente (asegúrate de que sea **versión 3.2.1 o superior**).
 
 ### Paso 2: Instalar Librerías Requeridas
 
 El firmware del Botón IoT usa la librería `FastLED` para efectos RGB y el SDK Zigbee de Espressif, que está incluido en el paquete Arduino ESP32. La librería `FastLED` puede instalarse vía el Gestor de Librerías de Arduino.
 
-1.  Ve a **Programa > Incluir Librería > Gestionar Librerías...**.
+1. Ve a **Programa > Incluir Librería > Gestionar Librerías...**.
 
-2.  Busca "FastLED" e instala la librería de Daniel Garcia.
+2. Busca "FastLED" e instala la librería de Daniel Garcia.
 
 ### Paso 3: Configurar Arduino IDE para Desarrollo Zigbee
 
-1.  Selecciona la placa correcta:
-    -   **Herramientas > Placa > ESP32 Arduino > XIAO ESP32C6**
+1. Selecciona la placa correcta:
+    - **Herramientas > Placa > ESP32 Arduino > XIAO ESP32C6**
 
-2.  Configura los ajustes de Zigbee:
-    -   **Herramientas > Modo Zigbee > Zigbee End Device**
-    -   **Herramientas > Esquema de Partición > Zigbee 4MB with spiffs**
+2. Configura los ajustes de Zigbee:
+    - **Herramientas > Modo Zigbee > Zigbee End Device**
+    - **Herramientas > Esquema de Partición > Zigbee 4MB with spiffs**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/iot_button_zigbee/1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -905,7 +905,8 @@ void loop()
   {
     vTaskDelay(1000 / portTICK_PERIOD_MS); // Keep loop running even if Zigbee fails
   }
-}```
+}
+```
 
 </details>
 
@@ -919,35 +920,35 @@ La documentación puede no estar actualizada con las actualizaciones del código
 
 ### Paso 5: Cargar y Probar tu Firmware
 
-1.  Conecta tu Botón IoT a tu computadora vía USB.
-2.  Selecciona el puerto correcto en Arduino IDE.
-3.  Haz clic en el botón **Cargar**.
-4.  Abre el **Monitor Serie** (velocidad de baudios 115200) para ver la información de depuración.
-5.  Una vez que la carga esté completa, el botón estará listo para ser emparejado.
+1. Conecta tu Botón IoT a tu computadora vía USB.
+2. Selecciona el puerto correcto en Arduino IDE.
+3. Haz clic en el botón **Cargar**.
+4. Abre el **Monitor Serie** (velocidad de baudios 115200) para ver la información de depuración.
+5. Una vez que la carga esté completa, el botón estará listo para ser emparejado.
 
 ### Paso 6: Configurar Zigbee en Home Assistant
 
 Antes de emparejar tu Botón IoT, necesitas configurar un coordinador Zigbee en Home Assistant:
 
-1.  **Instalar un Coordinador Zigbee**: Conecta un coordinador Zigbee como el Home Assistant Connect ZBT-1 a tu servidor de Home Assistant.
-2.  **Configurar Zigbee Home Automation (ZHA)**:
-    -   Ve a **Configuración > Dispositivos y Servicios**.
-    -   Haz clic en "**Agregar Integración**" y busca "**Zigbee Home Automation**".
-    -   Sigue las indicaciones para configurar ZHA con tu coordinador.
+1. **Instalar un Coordinador Zigbee**: Conecta un coordinador Zigbee como el Home Assistant Connect ZBT-1 a tu servidor de Home Assistant.
+2. **Configurar Zigbee Home Automation (ZHA)**:
+    - Ve a **Configuración > Dispositivos y Servicios**.
+    - Haz clic en "**Agregar Integración**" y busca "**Zigbee Home Automation**".
+    - Sigue las indicaciones para configurar ZHA con tu coordinador.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/5.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Paso 7: Emparejar el Botón IoT con Home Assistant
 
-1.  En Home Assistant, ve a **Configuración > Dispositivos y Servicios > Zigbee Home Automation**.
-2.  Haz clic en tu dispositivo coordinador Zigbee.
-3.  Haz clic en "**Agregar Dispositivo**" para poner el coordinador en modo de emparejamiento.
+1. En Home Assistant, ve a **Configuración > Dispositivos y Servicios > Zigbee Home Automation**.
+2. Haz clic en tu dispositivo coordinador Zigbee.
+3. Haz clic en "**Agregar Dispositivo**" para poner el coordinador en modo de emparejamiento.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/15.png" style={{width:1000, height:'auto'}}/></div>
 
-4.  Presiona el botón en tu Botón IoT una vez para despertarlo e iniciar el emparejamiento. Si no se empareja, intenta mantener presionado el botón por más de 5 segundos para activar un restablecimiento de fábrica, lo cual también lo pondrá en modo de emparejamiento.
-5.  Home Assistant debería descubrir el Botón IoT como "**Seeed Studio IoT_Button**".
-6.  Sigue las indicaciones para completar el proceso de emparejamiento. Verás un dispositivo con múltiples entidades (un sensor binario y tres interruptores).
+4. Presiona el botón en tu Botón IoT una vez para despertarlo e iniciar el emparejamiento. Si no se empareja, intenta mantener presionado el botón por más de 5 segundos para activar un restablecimiento de fábrica, lo cual también lo pondrá en modo de emparejamiento.
+5. Home Assistant debería descubrir el Botón IoT como "**Seeed Studio IoT_Button**".
+6. Sigue las indicaciones para completar el proceso de emparejamiento. Verás un dispositivo con múltiples entidades (un sensor binario y tres interruptores).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/iot_button_zigbee/2.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -955,15 +956,15 @@ Antes de emparejar tu Botón IoT, necesitas configurar un coordinador Zigbee en 
 
 Una vez emparejado, puedes crear automatizaciones basadas en las acciones del botón. El firmware expone diferentes tipos de clic como interruptores separados, haciendo la automatización simple.
 
-1.  Ve a **Configuración > Automatizaciones y Escenas > Crear Automatización**.
-2.  Selecciona "**Dispositivo**" como el tipo de disparador.
-3.  Encuentra tu Botón IoT en la lista de dispositivos.
-4.  Selecciona el disparador deseado de la lista. ZHA expondrá los diferentes clics como acciones del dispositivo, por ejemplo:
-    -   "Presión simple" (del interruptor virtual en Endpoint 11)
-    -   "Presión doble" (del interruptor virtual en Endpoint 12)
-    -   "Presión larga" (del interruptor virtual en Endpoint 13)
-5.  Configura las acciones que quieres realizar cuando se presione el botón.
-6.  Guarda la automatización.
+1. Ve a **Configuración > Automatizaciones y Escenas > Crear Automatización**.
+2. Selecciona "**Dispositivo**" como el tipo de disparador.
+3. Encuentra tu Botón IoT en la lista de dispositivos.
+4. Selecciona el disparador deseado de la lista. ZHA expondrá los diferentes clics como acciones del dispositivo, por ejemplo:
+    - "Presión simple" (del interruptor virtual en Endpoint 11)
+    - "Presión doble" (del interruptor virtual en Endpoint 12)
+    - "Presión larga" (del interruptor virtual en Endpoint 13)
+5. Configura las acciones que quieres realizar cuando se presione el botón.
+6. Guarda la automatización.
 
 Ejemplo de automatización en YAML de Home Assistant para alternar una luz con un **doble clic**:
 
@@ -990,7 +991,7 @@ Al aprovechar las capacidades Zigbee integradas del ESP32-C6, el Botón IoT pued
 
 ## Solución de Problemas
 
-### P1: ¿Por qué mi dispositivo sigue desconectándose y no puede conectarse a internet después de reemplazar la batería? Puedo confirmar que la batería está cargada.
+### P1: ¿Por qué mi dispositivo sigue desconectándose y no puede conectarse a internet después de reemplazar la batería? Puedo confirmar que la batería está cargada
 
 Después de que la batería ha sido removida, debido a la estrategia de protección del chip de la batería 18650, necesita ser activada un poco por un cable de alimentación USB cargado para funcionar correctamente.
 

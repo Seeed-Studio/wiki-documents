@@ -83,29 +83,29 @@ Seeed Studio IoT 按钮是一个多功能智能按钮，配备内置的 ESP32-C6
 
 ### 步骤 1：为 ESP32-C6 设置 Arduino IDE
 
-1.  安装最新版本的 Arduino IDE。
-2.  添加 ESP32 开发板支持：
-    -   转到 **文件 > 首选项**。
-    -   在"附加开发板管理器网址"字段中添加 `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`。
-    -   转到 **工具 > 开发板 > 开发板管理器**。
-    -   搜索"esp32"并安装最新版本（确保是 **3.2.1 版本或更高版本**）。
+1. 安装最新版本的 Arduino IDE。
+2. 添加 ESP32 开发板支持：
+    - 转到 **文件 > 首选项**。
+    - 在"附加开发板管理器网址"字段中添加 `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`。
+    - 转到 **工具 > 开发板 > 开发板管理器**。
+    - 搜索"esp32"并安装最新版本（确保是 **3.2.1 版本或更高版本**）。
 
 ### 步骤 2：安装所需库
 
 IoT 按钮固件使用 `FastLED` 库来实现 RGB 效果，以及包含在 ESP32 Arduino 包中的 Espressif Zigbee SDK。`FastLED` 库可以通过 Arduino 库管理器安装。
 
-1.  转到 **项目 > 加载库 > 管理库...**。
+1. 转到 **项目 > 加载库 > 管理库...**。
 
-2.  搜索"FastLED"并安装 Daniel Garcia 的库。
+2. 搜索"FastLED"并安装 Daniel Garcia 的库。
 
 ### 步骤 3：配置 Arduino IDE 进行 Zigbee 开发
 
-1.  选择正确的开发板：
-    -   **工具 > 开发板 > ESP32 Arduino > XIAO ESP32C6**
+1. 选择正确的开发板：
+    - **工具 > 开发板 > ESP32 Arduino > XIAO ESP32C6**
 
-2.  配置 Zigbee 设置：
-    -   **工具 > Zigbee 模式 > Zigbee 终端设备**
-    -   **工具 > 分区方案 > Zigbee 4MB with spiffs**
+2. 配置 Zigbee 设置：
+    - **工具 > Zigbee 模式 > Zigbee 终端设备**
+    - **工具 > 分区方案 > Zigbee 4MB with spiffs**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/iot_button_zigbee/1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -905,7 +905,8 @@ void loop()
   {
     vTaskDelay(1000 / portTICK_PERIOD_MS); // Keep loop running even if Zigbee fails
   }
-}```
+}
+```
 
 </details>
 
@@ -919,35 +920,35 @@ void loop()
 
 ### 步骤 5：上传并测试您的固件
 
-1.  通过 USB 将您的 IoT Button 连接到计算机。
-2.  在 Arduino IDE 中选择正确的端口。
-3.  点击**上传**按钮。
-4.  打开**串口监视器**（波特率 115200）查看调试信息。
-5.  刷写完成后，按钮就可以进行配对了。
+1. 通过 USB 将您的 IoT Button 连接到计算机。
+2. 在 Arduino IDE 中选择正确的端口。
+3. 点击**上传**按钮。
+4. 打开**串口监视器**（波特率 115200）查看调试信息。
+5. 刷写完成后，按钮就可以进行配对了。
 
 ### 步骤 6：在 Home Assistant 中设置 Zigbee
 
 在配对您的 IoT Button 之前，您需要在 Home Assistant 中设置 Zigbee 协调器：
 
-1.  **安装 Zigbee 协调器**：将 Zigbee 协调器（如 Home Assistant Connect ZBT-1）连接到您的 Home Assistant 服务器。
-2.  **设置 Zigbee Home Automation (ZHA)**：
-    -   转到**设置 > 设备和服务**。
-    -   点击"**添加集成**"并搜索"**Zigbee Home Automation**"。
-    -   按照提示使用您的协调器设置 ZHA。
+1. **安装 Zigbee 协调器**：将 Zigbee 协调器（如 Home Assistant Connect ZBT-1）连接到您的 Home Assistant 服务器。
+2. **设置 Zigbee Home Automation (ZHA)**：
+    - 转到**设置 > 设备和服务**。
+    - 点击"**添加集成**"并搜索"**Zigbee Home Automation**"。
+    - 按照提示使用您的协调器设置 ZHA。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/5.png" style={{width:1000, height:'auto'}}/></div>
 
 ### 步骤 7：将 IoT Button 与 Home Assistant 配对
 
-1.  在 Home Assistant 中，转到**设置 > 设备和服务 > Zigbee Home Automation**。
-2.  点击您的 Zigbee 协调器设备。
-3.  点击"**添加设备**"将协调器置于配对模式。
+1. 在 Home Assistant 中，转到**设置 > 设备和服务 > Zigbee Home Automation**。
+2. 点击您的 Zigbee 协调器设备。
+3. 点击"**添加设备**"将协调器置于配对模式。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/15.png" style={{width:1000, height:'auto'}}/></div>
 
-4.  按一次 IoT Button 上的按钮来唤醒它并启动配对。如果无法配对，请尝试按住按钮超过 5 秒钟以触发恢复出厂设置，这也会将其置于配对模式。
-5.  Home Assistant 应该会发现 IoT Button 为"**Seeed Studio IoT_Button**"。
-6.  按照提示完成配对过程。您将看到一个具有多个实体（一个二进制传感器和三个开关）的设备。
+4. 按一次 IoT Button 上的按钮来唤醒它并启动配对。如果无法配对，请尝试按住按钮超过 5 秒钟以触发恢复出厂设置，这也会将其置于配对模式。
+5. Home Assistant 应该会发现 IoT Button 为"**Seeed Studio IoT_Button**"。
+6. 按照提示完成配对过程。您将看到一个具有多个实体（一个二进制传感器和三个开关）的设备。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/iot_button_zigbee/2.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -955,15 +956,15 @@ void loop()
 
 配对完成后，您可以基于按钮的操作创建自动化。固件将不同的点击类型作为单独的开关公开，使自动化变得简单。
 
-1.  转到**设置 > 自动化和场景 > 创建自动化**。
-2.  选择"**设备**"作为触发器类型。
-3.  在设备列表中找到您的 IoT Button。
-4.  从列表中选择所需的触发器。ZHA 将不同的点击作为设备操作公开，例如：
-    -   "单击"（来自端点 11 上的虚拟开关）
-    -   "双击"（来自端点 12 上的虚拟开关）
-    -   "长按"（来自端点 13 上的虚拟开关）
-5.  配置按下按钮时要执行的操作。
-6.  保存自动化。
+1. 转到**设置 > 自动化和场景 > 创建自动化**。
+2. 选择"**设备**"作为触发器类型。
+3. 在设备列表中找到您的 IoT Button。
+4. 从列表中选择所需的触发器。ZHA 将不同的点击作为设备操作公开，例如：
+    - "单击"（来自端点 11 上的虚拟开关）
+    - "双击"（来自端点 12 上的虚拟开关）
+    - "长按"（来自端点 13 上的虚拟开关）
+5. 配置按下按钮时要执行的操作。
+6. 保存自动化。
 
 在 Home Assistant YAML 中使用**双击**切换灯光的示例自动化：
 

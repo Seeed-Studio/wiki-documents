@@ -17,7 +17,6 @@ reTerminal Eシリーズ ePaperディスプレイは、低消費電力情報表�
 
 継続的に電力を消費する従来のディスプレイとは異なり、reTerminal Eシリーズ ePaperディスプレイはコンテンツを変更する時のみ電力を使用するため、長時間のバッテリー寿命と常時表示情報ディスプレイが必要なアプリケーションに最適です。
 
-
 ## reTerminal E1001
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.jpg" style={{width:700, height:'auto'}}/></div><br />
@@ -52,7 +51,6 @@ reTerminal E1001は、4レベルグレースケール機能を備えた7.5イン
     <strong><span><font color={'FFFFFF'} size={"4"}>今すぐ購入</font></span></strong>
   </a>
 </div><br />
-
 
 reTerminal E1002は、ACeP（Advanced Color ePaper）技術を搭載した鮮やかな7.3インチフルカラーePaperディスプレイを特徴としています。このカラーディスプレイは、ePaper技術の同じ電力効率の利点を提供しながら、複数の色でより視覚的に魅力的なコンテンツを可能にし、視覚的な区別と美的魅力が重要なアプリケーションに最適です。
 
@@ -133,14 +131,12 @@ LVGLとビジュアルSquareLine Studioデザイナーを使用してリッチ�
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>
-
-

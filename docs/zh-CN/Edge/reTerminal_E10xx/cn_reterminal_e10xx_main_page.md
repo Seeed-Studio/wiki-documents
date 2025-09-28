@@ -17,7 +17,6 @@ reTerminal E 系列电子纸显示器代表了 Seeed Studio 专为低功耗信�
 
 与持续消耗电力的传统显示器不同，reTerminal E 系列电子纸显示器仅在更改内容时才使用电力，使其成为需要延长电池寿命和始终显示信息的应用的理想选择。
 
-
 ## reTerminal E1001
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.jpg" style={{width:700, height:'auto'}}/></div><br />
@@ -52,7 +51,6 @@ reTerminal E1001 配备 7.5 英寸单色电子纸显示器，具有 4 级灰度�
     <strong><span><font color={'FFFFFF'} size={"4"}>立即购买</font></span></strong>
   </a>
 </div><br />
-
 
 reTerminal E1002 配备鲜艳的 7.3 英寸全彩电子纸显示器，采用 ACeP（高级彩色电子纸）技术。这种彩色显示器提供与电子纸技术相同的功耗效率优势，同时允许更具视觉吸引力的多色内容，使其成为视觉区分和美学吸引力重要的应用的理想选择。
 
@@ -133,14 +131,12 @@ Create rich graphical interfaces using LVGL and the visual SquareLine Studio des
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>
-
-

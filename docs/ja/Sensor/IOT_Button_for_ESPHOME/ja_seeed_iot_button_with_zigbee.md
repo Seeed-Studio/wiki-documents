@@ -83,29 +83,29 @@ IoT Buttonの動作をカスタマイズしたい場合は、Arduinoを使用し
 
 ### ステップ1：ESP32-C6用Arduino IDEのセットアップ
 
-1.  Arduino IDEの最新バージョンをインストールします。
-2.  ESP32ボードサポートを追加します：
-    -   **File > Preferences**に移動します。
-    -   「Additional Boards Manager URLs」フィールドに`https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`を追加します。
-    -   **Tools > Board > Boards Manager**に移動します。
-    -   「esp32」を検索し、最新バージョンをインストールします（**バージョン3.2.1以上**であることを確認）。
+1. Arduino IDEの最新バージョンをインストールします。
+2. ESP32ボードサポートを追加します：
+    - **File > Preferences**に移動します。
+    - 「Additional Boards Manager URLs」フィールドに`https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`を追加します。
+    - **Tools > Board > Boards Manager**に移動します。
+    - 「esp32」を検索し、最新バージョンをインストールします（**バージョン3.2.1以上**であることを確認）。
 
 ### ステップ2：必要なライブラリのインストール
 
 IoT ButtonファームウェアはRGB効果用の`FastLED`ライブラリと、ESP32 Arduinoパッケージに含まれるEspressif Zigbee SDKを使用します。`FastLED`ライブラリはArduino Library Manager経由でインストールできます。
 
-1.  **Sketch > Include Library > Manage Libraries...**に移動します。
+1. **Sketch > Include Library > Manage Libraries...**に移動します。
 
-2.  「FastLED」を検索し、Daniel Garciaによるライブラリをインストールします。
+2. 「FastLED」を検索し、Daniel Garciaによるライブラリをインストールします。
 
 ### ステップ3：Zigbee開発用Arduino IDEの設定
 
-1.  正しいボードを選択します：
-    -   **Tools > Board > ESP32 Arduino > XIAO ESP32C6**
+1. 正しいボードを選択します：
+    - **Tools > Board > ESP32 Arduino > XIAO ESP32C6**
 
-2.  Zigbee設定を構成します：
-    -   **Tools > Zigbee Mode > Zigbee End Device**
-    -   **Tools > Partition Scheme > Zigbee 4MB with spiffs**
+2. Zigbee設定を構成します：
+    - **Tools > Zigbee Mode > Zigbee End Device**
+    - **Tools > Partition Scheme > Zigbee 4MB with spiffs**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/iot_button_zigbee/1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -905,7 +905,8 @@ void loop()
   {
     vTaskDelay(1000 / portTICK_PERIOD_MS); // Keep loop running even if Zigbee fails
   }
-}```
+}
+```
 
 </details>
 
@@ -919,35 +920,35 @@ void loop()
 
 ### ステップ 5: ファームウェアのアップロードとテスト
 
-1.  IoT ButtonをUSB経由でコンピュータに接続します。
-2.  Arduino IDEで正しいポートを選択します。
-3.  **アップロード**ボタンをクリックします。
-4.  **シリアルモニタ**（ボーレート115200）を開いてデバッグ情報を確認します。
-5.  書き込みが完了すると、ボタンはペアリング準備完了です。
+1. IoT ButtonをUSB経由でコンピュータに接続します。
+2. Arduino IDEで正しいポートを選択します。
+3. **アップロード**ボタンをクリックします。
+4. **シリアルモニタ**（ボーレート115200）を開いてデバッグ情報を確認します。
+5. 書き込みが完了すると、ボタンはペアリング準備完了です。
 
 ### ステップ 6: Home AssistantでZigbeeを設定
 
 IoT Buttonをペアリングする前に、Home AssistantでZigbeeコーディネーターを設定する必要があります：
 
-1.  **Zigbeeコーディネーターをインストール**: Home Assistant Connect ZBT-1などのZigbeeコーディネーターをHome Assistantサーバーに接続します。
-2.  **Zigbee Home Automation (ZHA)を設定**:
-    -   **設定 > デバイスとサービス**に移動します。
-    -   「**統合を追加**」をクリックし、「**Zigbee Home Automation**」を検索します。
-    -   プロンプトに従って、コーディネーターでZHAを設定します。
+1. **Zigbeeコーディネーターをインストール**: Home Assistant Connect ZBT-1などのZigbeeコーディネーターをHome Assistantサーバーに接続します。
+2. **Zigbee Home Automation (ZHA)を設定**:
+    - **設定 > デバイスとサービス**に移動します。
+    - 「**統合を追加**」をクリックし、「**Zigbee Home Automation**」を検索します。
+    - プロンプトに従って、コーディネーターでZHAを設定します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/5.png" style={{width:1000, height:'auto'}}/></div>
 
 ### ステップ 7: IoT ButtonをHome Assistantとペアリング
 
-1.  Home Assistantで、**設定 > デバイスとサービス > Zigbee Home Automation**に移動します。
-2.  Zigbeeコーディネーターデバイスをクリックします。
-3.  「**デバイスを追加**」をクリックして、コーディネーターをペアリングモードにします。
+1. Home Assistantで、**設定 > デバイスとサービス > Zigbee Home Automation**に移動します。
+2. Zigbeeコーディネーターデバイスをクリックします。
+3. 「**デバイスを追加**」をクリックして、コーディネーターをペアリングモードにします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/15.png" style={{width:1000, height:'auto'}}/></div>
 
-4.  IoT Buttonのボタンを一度押してウェイクアップし、ペアリングを開始します。ペアリングされない場合は、ボタンを5秒以上長押ししてファクトリーリセットをトリガーしてください。これによりペアリングモードになります。
-5.  Home Assistantは IoT Button を「**Seeed Studio IoT_Button**」として検出するはずです。
-6.  プロンプトに従ってペアリングプロセスを完了します。複数のエンティティ（バイナリセンサーと3つのスイッチ）を持つデバイスが表示されます。
+4. IoT Buttonのボタンを一度押してウェイクアップし、ペアリングを開始します。ペアリングされない場合は、ボタンを5秒以上長押ししてファクトリーリセットをトリガーしてください。これによりペアリングモードになります。
+5. Home Assistantは IoT Button を「**Seeed Studio IoT_Button**」として検出するはずです。
+6. プロンプトに従ってペアリングプロセスを完了します。複数のエンティティ（バイナリセンサーと3つのスイッチ）を持つデバイスが表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/iot_button_zigbee/2.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -955,15 +956,15 @@ IoT Buttonをペアリングする前に、Home AssistantでZigbeeコーディ�
 
 ペアリングが完了したら、ボタンのアクションに基づいてオートメーションを作成できます。ファームウェアは異なるクリックタイプを別々のスイッチとして公開するため、オートメーションが簡単になります。
 
-1.  **設定 > オートメーションとシーン > オートメーションを作成**に移動します。
-2.  トリガータイプとして「**デバイス**」を選択します。
-3.  デバイスリストでIoT Buttonを見つけます。
-4.  リストから希望するトリガーを選択します。ZHAは異なるクリックをデバイスアクションとして公開します。例：
-    -   「シングルプレス」（エンドポイント11の仮想スイッチから）
-    -   「ダブルプレス」（エンドポイント12の仮想スイッチから）
-    -   「ロングプレス」（エンドポイント13の仮想スイッチから）
-5.  ボタンが押されたときに実行したいアクションを設定します。
-6.  オートメーションを保存します。
+1. **設定 > オートメーションとシーン > オートメーションを作成**に移動します。
+2. トリガータイプとして「**デバイス**」を選択します。
+3. デバイスリストでIoT Buttonを見つけます。
+4. リストから希望するトリガーを選択します。ZHAは異なるクリックをデバイスアクションとして公開します。例：
+    - 「シングルプレス」（エンドポイント11の仮想スイッチから）
+    - 「ダブルプレス」（エンドポイント12の仮想スイッチから）
+    - 「ロングプレス」（エンドポイント13の仮想スイッチから）
+5. ボタンが押されたときに実行したいアクションを設定します。
+6. オートメーションを保存します。
 
 **ダブルクリック**でライトを切り替えるHome Assistant YAMLオートメーションの例：
 
