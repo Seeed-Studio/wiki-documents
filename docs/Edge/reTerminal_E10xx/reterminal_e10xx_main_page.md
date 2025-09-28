@@ -100,10 +100,7 @@ The reTerminal E Series ePaper Display supports multiple development platforms a
 
   Utilize the dedicated TRMNL framework for simplified development and rapid deployment.
 
-<!-- - [GxEPD2 Library Support](https://wiki.seeedstudio.com/reTerminal_GxEPD2)
-Leverage the powerful GxEPD2 library for advanced ePaper display control and rendering.
-
-- [LVGL + SquareLine Studio](https://wiki.seeedstudio.com/reTerminal_LVGL_SquareLine)
+<!-- - [LVGL + SquareLine Studio](https://wiki.seeedstudio.com/reTerminal_LVGL_SquareLine)
 Create rich graphical interfaces using LVGL and the visual SquareLine Studio designer. -->
 
 ## Resources
