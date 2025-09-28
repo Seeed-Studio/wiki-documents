@@ -17,7 +17,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/button.jpg" style={{width:600, height:'auto'}}/></div>
 
-En este tutorial, te mostraremos cómo conectar el Botón IoT de Seeed Studio a Home Assistant usando Zigbee. El Botón IoT de Seeed Studio cuenta con un chip ESP32-C6 integrado con funcionalidad Zigbee, lo que lo convierte en un dispositivo versátil para tu hogar inteligente. Aprenderás cómo flashear el firmware Zigbee, emparejarlo con Home Assistant, e incluso personalizar el comportamiento del botón a través del desarrollo con Arduino.
+En este tutorial, te mostraremos cómo conectar el Botón IoT de Seeed Studio a Home Assistant usando Zigbee. El Botón IoT de Seeed Studio cuenta con un chip ESP32-C6 integrado con funcionalidad Zigbee, lo que lo convierte en un dispositivo versátil para tu hogar inteligente. Aprenderás cómo flashear el firmware Zigbee, emparejarlo con Home Assistant e incluso personalizar el comportamiento del botón a través del desarrollo con Arduino.
 
 ## Materiales Requeridos
 
@@ -46,24 +46,24 @@ En este tutorial, te mostraremos cómo conectar el Botón IoT de Seeed Studio a 
   </table>
 </div>
 
-El Seeed Studio IoT Button es un botón inteligente versátil con un chip ESP32-C6 integrado. Es un dispositivo completo e independiente que puede integrarse con Home Assistant a través de Zigbee para controlar varios dispositivos y activar automatizaciones. Con su chip ESP32-C6, ofrece bajo consumo de energía y conectividad confiable.
+El Botón IoT de Seeed Studio es un botón inteligente versátil con un chip ESP32-C6 integrado. Es un dispositivo completo e independiente que puede integrarse con Home Assistant vía Zigbee para controlar varios dispositivos y activar automatizaciones. Con su chip ESP32-C6, ofrece bajo consumo de energía y conectividad confiable.
 
 ## Descripción Funcional (basada en el firmware más reciente)
 
 - **Detección de botón multi-acción**
   - Clic simple, doble y triple.
   - Pulsación larga corta (mantener presionado por 1-5 segundos).
-  - Pulsación larga (mantener presionado por > 5 segundos) activa un restablecimiento de fábrica de Zigbee.
+  - Pulsación larga (mantener presionado por > 5 segundos) activa un restablecimiento de fábrica Zigbee.
   - Los eventos de presión y liberación inmediatos se reportan para automatizaciones en tiempo real.
 
-- **Cuatro Endpoints de Zigbee**
-  - **Endpoint 10:** Un sensor binario principal que refleja el estado en tiempo real del botón físico (encendido cuando está presionado, apagado cuando está liberado).
-  - **Endpoint 11:** Un interruptor virtual alternado por un **clic simple**.
-  - **Endpoint 12:** Un interruptor virtual alternado por un **doble clic**.
-  - **Endpoint 13:** Un interruptor virtual alternado por una **pulsación larga corta**.
+- **Cuatro Endpoints Zigbee**
+  - **Endpoint 10:** Un sensor binario principal que refleja el estado en tiempo real del botón físico (encendido cuando está presionado, apagado cuando se libera).
+  - **Endpoint 11:** Un interruptor virtual activado por un **clic simple**.
+  - **Endpoint 12:** Un interruptor virtual activado por un **doble clic**.
+  - **Endpoint 13:** Un interruptor virtual activado por una **pulsación larga corta**.
 
-- **Monitoreo de Batería (solo IoT Button V2)**
-  - Lee el voltaje de la batería a través de ADC y aplica un filtro de Media Móvil Exponencial (EMA) para lecturas suaves y estables.
+- **Monitoreo de Batería (solo Botón IoT V2)**
+  - Lee el voltaje de la batería vía ADC y aplica un filtro de Media Móvil Exponencial (EMA) para lecturas suaves y estables.
   - Reporta tanto el voltaje (en unidades de 0.01V) como el porcentaje de batería a Zigbee.
   - Un estado de batería baja (< 20%) activa el indicador LED rojo.
 
@@ -79,20 +79,20 @@ El Seeed Studio IoT Button es un botón inteligente versátil con un chip ESP32-
 
 ## Desarrollando Firmware Zigbee Personalizado con Arduino
 
-Si deseas personalizar el comportamiento de tu IoT Button, puedes desarrollar tu propio firmware Zigbee usando Arduino.
+Si quieres personalizar el comportamiento de tu Botón IoT, puedes desarrollar tu propio firmware Zigbee usando Arduino.
 
 ### Paso 1: Configurar Arduino IDE para ESP32-C6
 
 1.  Instala la versión más reciente de Arduino IDE.
-2.  Añade soporte para placas ESP32:
+2.  Agrega soporte para placas ESP32:
     -   Ve a **Archivo > Preferencias**.
-    -   Añade `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` al campo "URLs adicionales del Gestor de Tarjetas".
-    -   Ve a **Herramientas > Placa > Gestor de Tarjetas**.
+    -   Agrega `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` al campo "URLs adicionales del Gestor de Placas".
+    -   Ve a **Herramientas > Placa > Gestor de Placas**.
     -   Busca "esp32" e instala la versión más reciente (asegúrate de que sea **versión 3.2.1 o superior**).
 
 ### Paso 2: Instalar Librerías Requeridas
 
-El firmware del IoT Button usa la librería `FastLED` para efectos RGB y el SDK Zigbee de Espressif, que está incluido en el paquete Arduino ESP32. La librería `FastLED` puede instalarse a través del Gestor de Librerías de Arduino.
+El firmware del Botón IoT usa la librería `FastLED` para efectos RGB y el SDK Zigbee de Espressif, que está incluido en el paquete Arduino ESP32. La librería `FastLED` puede instalarse vía el Gestor de Librerías de Arduino.
 
 1.  Ve a **Programa > Incluir Librería > Gestionar Librerías...**.
 
@@ -101,32 +101,29 @@ El firmware del IoT Button usa la librería `FastLED` para efectos RGB y el SDK 
 ### Paso 3: Configurar Arduino IDE para Desarrollo Zigbee
 
 1.  Selecciona la placa correcta:
-    -   **Herramientas > Placa > ESP32 Arduino > ESP32C6 Dev Module**
+    -   **Herramientas > Placa > ESP32 Arduino > XIAO ESP32C6**
 
 2.  Configura los ajustes de Zigbee:
-    -   **Herramientas > Modo Zigbee > Dispositivo Final Zigbee**
-    -   **Herramientas > Esquema de Partición > Zigbee 4MB con spiffs**
+    -   **Herramientas > Modo Zigbee > Zigbee End Device**
+    -   **Herramientas > Esquema de Partición > Zigbee 4MB with spiffs**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/iot_button_zigbee/1.png" style={{width:800, height:'auto'}}/></div>
 
 ### Paso 4: Crear Tu Firmware Personalizado
 
-El nuevo firmware es un sketch de Arduino autocontenido. Soporta tanto el hardware IoT Button V1 como V2, detección avanzada de eventos de botón (clic simple, doble, triple, pulsación corta/larga), monitoreo de batería (V2), retroalimentación LED rica, e integración robusta de Zigbee usando tareas de FreeRTOS.
+El nuevo firmware es un sketch de Arduino autocontenido. Soporta tanto el hardware del Botón IoT V1 como V2, detección avanzada de eventos de botón (clic simple, doble, triple, pulsación corta/larga), monitoreo de batería (V2), retroalimentación LED rica e integración Zigbee robusta usando tareas FreeRTOS.
 
 #### Selección de Versión de Hardware
 
-El código se compila para **IoT Button V2** por defecto. Para compilar para V1, debes descomentar la línea correspondiente en la parte superior del código:
+El código se compila para **Botón IoT V2** por defecto. Para compilar para V1, debes descomentar la línea correspondiente en la parte superior del código:
+
+:::caution versión del dispositivo
+Por favor verifica la versión correcta del dispositivo. Todos los Botones IoT actualmente disponibles en el mercado son V1.
+:::
 
 <details>
 
 <summary>Haz clic aquí para previsualizar el código completo</summary>
-
-```cpp
-// #define IOT_BUTTON_V1  // Uncomment this line to select to compile the iot button v1 version
-#define IOT_BUTTON_V2  // Comment out or remove this line if compiling for V1
-```
-
-#### Firmware de Ejemplo
 
 ```cpp
 #ifndef ZIGBEE_MODE_ED
@@ -142,7 +139,7 @@ El código se compila para **IoT Button V2** por defecto. Para compilar para V1,
 #include "driver/rtc_io.h"
 
 // Logging macro switch
-#define ENABLE_LOGGING  // Comment out to disable logging
+#define ENABLE_LOGGING // Comment out to disable logging
 
 #ifdef ENABLE_LOGGING
 #define LOG_PRINTLN(x) Serial.println(x)
@@ -152,8 +149,8 @@ El código se compila para **IoT Button V2** por defecto. Para compilar para V1,
 #define LOG_PRINTF(x, ...)
 #endif
 
-// #define IOT_BUTTON_V1  //Uncomment this line to select to compile the iot button v1 version
-#define IOT_BUTTON_V2  //Uncomment this line to select to compile the iot button v2 version
+#define IOT_BUTTON_V1  //Uncomment this line to select to compile the iot button v1 version
+// #define IOT_BUTTON_V2  //Uncomment this line to select to compile the iot button v2 version
 
 #if !defined(IOT_BUTTON_V1) && !defined(IOT_BUTTON_V2)
 #define IOT_BUTTON_V2
@@ -245,441 +242,670 @@ float emaVoltage = 0.0;
 float batteryPercentage = 100.0;
 #endif
 
-void IRAM_ATTR button_isr()
+#if defined(IOT_BUTTON_V2)
+/********************* Battery Functions **************************/
+void measureBattery()
 {
-  portYIELD_FROM_ISR(xTaskResumeFromISR(clickTimeoutTaskHandle));
+  digitalWrite(BATTERY_ENABLE_PIN, HIGH);
+  vTaskDelay(10 / portTICK_PERIOD_MS); // Wait for stabilization
+
+  // Take multiple samples and compute average
+  float adcSum = 0;
+  for (int i = 0; i < SAMPLE_COUNT; i++)
+  {
+    adcSum += analogRead(BATTERY_ADC_PIN);
+    vTaskDelay(5 / portTICK_PERIOD_MS); // Small delay between samples
+  }
+  digitalWrite(BATTERY_ENABLE_PIN, LOW);
+
+  float adcAverage = adcSum / SAMPLE_COUNT;
+  float voltage = (adcAverage / 4095.0) * 3.3 * 3.0; // Apply divider ratio
+
+  if (voltage < MIN_VOLTAGE)
+  {
+    emaVoltage = 0.0;
+    batteryPercentage = 0.0;
+    LOG_PRINTF("Battery voltage: %.2fV (too low or not connected), EMA voltage: %.2fV, Percentage: %.2f%%\n",
+               voltage, emaVoltage, batteryPercentage);
+  }
+  else
+  {
+    // Update EMA
+    if (emaVoltage == 0.0)
+    {
+      emaVoltage = voltage;
+    }
+    else
+    {
+      emaVoltage = ALPHA * voltage + (1 - ALPHA) * emaVoltage;
+    }
+
+    // Calculate battery percentage from emaVoltage
+    float localBatteryPercentage = (emaVoltage - MIN_VOLTAGE) / (MAX_VOLTAGE - MIN_VOLTAGE) * 100;
+    if (localBatteryPercentage < 0)
+      localBatteryPercentage = 0;
+    if (localBatteryPercentage > 100)
+      localBatteryPercentage = 100;
+
+    // Update global battery percentage
+    batteryPercentage = localBatteryPercentage;
+
+    LOG_PRINTF("Battery voltage: %.2fV, EMA voltage: %.2fV, Percentage: %.2f%%\n",
+               voltage, emaVoltage, localBatteryPercentage);
+  }
+}
+#endif
+
+/********************* FreeRTOS Tasks **************************/
+void breathingLedTask(void *pvParameters)
+{
+  LOG_PRINTLN("Breathing LED");
+  uint8_t hue = random8();    // Random color hue
+  for (int i = 0; i < 1; i++) // one breathing cycle
+  {
+    // Brighten
+    for (int brightness = 0; brightness <= 255; brightness += 5)
+    {
+      rgbs[0] = CHSV(hue, 255, brightness);
+      FastLED.show();
+      vTaskDelay(20 / portTICK_PERIOD_MS);
+    }
+    // Dim
+    for (int brightness = 255; brightness >= 0; brightness -= 5)
+    {
+      rgbs[0] = CHSV(hue, 255, brightness);
+      FastLED.show();
+      vTaskDelay(20 / portTICK_PERIOD_MS);
+    }
+  }
+  rgbs[0] = CRGB::Black;
+  FastLED.show();
+  vTaskDelete(NULL);
 }
 
-void setupHardware()
+void blinkLedTask(void *pvParameters)
 {
-  Serial.begin(115200);
+  LOG_PRINTLN("Blink LED");
+  uint8_t rand = random8();
+  for (int i = 0; i < 2; i++)
+  {
+    rgbs[0] = CHSV(rand, 255, 255); // Random color
+    FastLED.show();
+    vTaskDelay(200 / portTICK_PERIOD_MS);
+    rgbs[0] = CRGB::Black;
+    FastLED.show();
+    vTaskDelay(200 / portTICK_PERIOD_MS);
+  }
+  vTaskDelete(NULL);
+}
+
+void rainbowLedTask(void *pvParameters)
+{
+  LOG_PRINTLN("Rainbow LED");
+  for (int hue = 0; hue < 128; hue += 10)
+  {
+    rgbs[0] = CHSV(hue, 255, 255);
+    FastLED.show();
+    vTaskDelay(100 / portTICK_PERIOD_MS);
+  }
+  rgbs[0] = CRGB::Black;
+  FastLED.show();
+  vTaskDelete(NULL);
+}
+
+void clickTimeoutTask(void *pvParameters)
+{
+  uint32_t localClickCount = clickCount;
+  uint32_t localLastReleaseTime = lastReleaseTime;
+
+  while (millis() - localLastReleaseTime < MULTI_CLICK_TIME)
+  {
+    vTaskDelay(10 / portTICK_PERIOD_MS);
+  }
+
+  ButtonEvent event;
+  switch (localClickCount)
+  {
+  case 1:
+    event = ButtonEvent::SINGLE_CLICK;
+    break;
+  case 2:
+    event = ButtonEvent::DOUBLE_CLICK;
+    break;
+  case 3:
+    event = ButtonEvent::TRIPLE_CLICK;
+    break;
+  default:
+    vTaskDelete(NULL);
+    return;
+  }
+  xQueueSend(eventQueue, &event, 0);
+
+  clickCount = 0;
+  clickSequenceActive = false;
+  clickTimeoutTaskHandle = NULL;
+
+  vTaskDelete(NULL);
+}
+
+// --- Button Task Refactor ---
+static bool debounceButton(bool currentState, uint32_t currentTime, uint32_t &lastDebounceTime)
+{
+  if (currentTime - lastDebounceTime < DEBOUNCE_TIME)
+  {
+    vTaskDelay(1 / portTICK_PERIOD_MS);
+    return true;
+  }
+  return false;
+}
+
+static void handleButtonPress(uint32_t currentTime)
+{
+  pressStartTime = currentTime;
+  ButtonEvent event = ButtonEvent::PRESS;
+  xQueueSend(eventQueue, &event, 0);
+  lastActivityTime = millis();
+
+  if (clickSequenceActive && (currentTime - lastReleaseTime <= MULTI_CLICK_TIME))
+  {
+    clickCount++;
+    if (clickTimeoutTaskHandle != NULL)
+    {
+      vTaskDelete(clickTimeoutTaskHandle);
+      clickTimeoutTaskHandle = NULL;
+    }
+  }
+  else
+  {
+    clickCount = 1;
+    clickSequenceActive = true;
+  }
+  longPressTriggered = false;
+}
+
+static void handleButtonRelease(uint32_t currentTime)
+{
+  uint32_t pressDuration = currentTime - pressStartTime;
+  ButtonEvent event = ButtonEvent::RELEASE;
+  xQueueSend(eventQueue, &event, 0);
+  lastActivityTime = millis();
+
+  if (!longPressTriggered)
+  {
+    if (pressDuration >= LONG_PRESS_TIME)
+    {
+      event = ButtonEvent::LONG_PRESS;
+      longPressTriggered = true;
+      clickSequenceActive = false;
+      clickCount = 0;
+      xQueueSend(eventQueue, &event, 0);
+      if (clickTimeoutTaskHandle != NULL)
+      {
+        vTaskDelete(clickTimeoutTaskHandle);
+        clickTimeoutTaskHandle = NULL;
+      }
+    }
+    else if (pressDuration >= SHORT_LONG_PRESS_TIME)
+    {
+      event = ButtonEvent::SHORT_LONG_PRESS;
+      longPressTriggered = true;
+      clickSequenceActive = false;
+      clickCount = 0;
+      xQueueSend(eventQueue, &event, 0);
+      if (clickTimeoutTaskHandle != NULL)
+      {
+        vTaskDelete(clickTimeoutTaskHandle);
+        clickTimeoutTaskHandle = NULL;
+      }
+    }
+    else
+    {
+      lastReleaseTime = currentTime;
+      if (clickTimeoutTaskHandle != NULL)
+      {
+        vTaskDelete(clickTimeoutTaskHandle);
+        clickTimeoutTaskHandle = NULL;
+      }
+      xTaskCreate(clickTimeoutTask, "ClickTimeout", 2048, NULL, 1, &clickTimeoutTaskHandle);
+    }
+  }
+}
+
+static void checkLongPress(uint32_t currentTime)
+{
+  if (currentTime - pressStartTime >= LONG_PRESS_TIME)
+  {
+    ButtonEvent event = ButtonEvent::LONG_PRESS;
+    longPressTriggered = true;
+    clickSequenceActive = false;
+    clickCount = 0;
+    xQueueSend(eventQueue, &event, 0);
+    lastActivityTime = millis();
+    if (clickTimeoutTaskHandle != NULL)
+    {
+      vTaskDelete(clickTimeoutTaskHandle);
+      clickTimeoutTaskHandle = NULL;
+    }
+  }
+}
+
+void buttonTask(void *pvParameters)
+{
+  uint32_t lastDebounceTime = 0;
+  bool lastState = false;
+
+  // Check if woken up by button press
+  if (esp_sleep_get_wakeup_cause() == ESP_SLEEP_WAKEUP_EXT1)
+  {
+    bool currentState = (digitalRead(BUTTON_PIN) == LOW);
+    if (currentState)
+    {
+      handleButtonPress(millis());
+    }
+  }
+
+  while (1)
+  {
+    bool currentState = (digitalRead(BUTTON_PIN) == LOW);
+    uint32_t currentTime = millis();
+
+    if (debounceButton(currentState, currentTime, lastDebounceTime))
+      continue;
+
+    if (currentState != lastState)
+    {
+      lastDebounceTime = currentTime;
+      lastState = currentState;
+      if (currentState)
+      {
+        handleButtonPress(currentTime);
+      }
+      else
+      {
+        handleButtonRelease(currentTime);
+      }
+    }
+    else if (currentState && !longPressTriggered)
+    {
+      checkLongPress(currentTime);
+    }
+
+    vTaskDelay(10 / portTICK_PERIOD_MS);
+  }
+}
+
+void mainTask(void *pvParameters)
+{
+  ButtonEvent event;
+  while (1)
+  {
+    if (xQueueReceive(eventQueue, &event, portMAX_DELAY) == pdTRUE)
+    {
+      switch (event)
+      {
+      case ButtonEvent::PRESS:
+        if (buttonStatus == false)
+        {
+          buttonStatus = true;
+          LOG_PRINTLN("Button Pressed");
+          if (zigbeeInitialized && Zigbee.connected())
+          {
+            zbIoTButton.setBinaryInput(buttonStatus);
+            zbIoTButton.reportBinaryInput();
+          }
+        }
+        break;
+
+      case ButtonEvent::RELEASE:
+        if (buttonStatus == true)
+        {
+          buttonStatus = false;
+          LOG_PRINTLN("Button Released");
+          if (zigbeeInitialized && Zigbee.connected())
+          {
+            zbIoTButton.setBinaryInput(buttonStatus);
+            zbIoTButton.reportBinaryInput();
+          }
+        }
+        break;
+
+      case ButtonEvent::SINGLE_CLICK:
+        LOG_PRINTLN("Single Click");
+        switch1Status = !switch1Status;
+        if (zigbeeInitialized && Zigbee.connected())
+        {
+          zbSwitch1.setBinaryInput(switch1Status);
+          zbSwitch1.reportBinaryInput();
+        }
+        xTaskCreate(breathingLedTask, "BreathingLed", 2048, NULL, 1, NULL);
+        break;
+
+      case ButtonEvent::DOUBLE_CLICK:
+        LOG_PRINTLN("Double Click");
+        switch2Status = !switch2Status;
+        if (zigbeeInitialized && Zigbee.connected())
+        {
+          zbSwitch2.setBinaryInput(switch2Status);
+          zbSwitch2.reportBinaryInput();
+        }
+        xTaskCreate(blinkLedTask, "BlinkLed", 2048, NULL, 1, NULL);
+        break;
+
+      case ButtonEvent::TRIPLE_CLICK:
+        LOG_PRINTLN("Triple Click");
+        if (zigbeeInitialized && Zigbee.connected())
+        {
+          // Add any specific Zigbee action here if needed
+        }
+        break;
+
+      case ButtonEvent::SHORT_LONG_PRESS:
+        LOG_PRINTLN("Short Long Press");
+        switch3Status = !switch3Status;
+        if (zigbeeInitialized && Zigbee.connected())
+        {
+          zbSwitch3.setBinaryInput(switch3Status);
+          zbSwitch3.reportBinaryInput();
+        }
+        xTaskCreate(rainbowLedTask, "RainbowLed", 2048, NULL, 1, NULL);
+        break;
+
+      case ButtonEvent::LONG_PRESS:
+        LOG_PRINTLN("Long Press\nReset Zigbee");
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        if (zigbeeInitialized)
+        {
+          Zigbee.factoryReset();
+        }
+        break;
+      }
+    }
+  }
+}
+
 #if defined(IOT_BUTTON_V1)
+void ledTask(void *pvParameters)
+{
   pinMode(BLUE_LED_PIN, OUTPUT);
-  digitalWrite(BLUE_LED_PIN, LOW);
-  pinMode(RGB_ENABLE_PIN, OUTPUT);
-  digitalWrite(RGB_ENABLE_PIN, HIGH);
-  FastLED.addLeds<WS2812, RGB_PIN, GRB>(rgbs, NUM_RGBS);
+  while (1)
+  {
+    if (isAwake)
+    {
+      if (!zigbeeInitialized || !Zigbee.connected()) // Blink when not connected or not initialized
+      {
+        digitalWrite(BLUE_LED_PIN, LOW); // On
+        vTaskDelay(500 / portTICK_PERIOD_MS);
+        digitalWrite(BLUE_LED_PIN, HIGH); // Off
+        vTaskDelay(500 / portTICK_PERIOD_MS);
+      }
+      else
+      {
+        digitalWrite(BLUE_LED_PIN, LOW); // On when connected
+      }
+    }
+    else
+    {
+      digitalWrite(BLUE_LED_PIN, HIGH); // Off during sleep
+    }
+    vTaskDelay(10 / portTICK_PERIOD_MS);
+  }
+}
 #elif defined(IOT_BUTTON_V2)
+void ledTask(void *pvParameters)
+{
   pinMode(BLUE_LED_PIN, OUTPUT);
   pinMode(RED_LED_PIN, OUTPUT);
-  digitalWrite(BLUE_LED_PIN, LOW);
-  digitalWrite(RED_LED_PIN, LOW);
-  pinMode(RGB_ENABLE_PIN, OUTPUT);
-  digitalWrite(RGB_ENABLE_PIN, HIGH);
-  FastLED.addLeds<WS2812, RGB_PIN, GRB>(rgbs, NUM_RGBS);
+  bool ledState = false;
+
+  while (1)
+  {
+    if (isAwake)
+    {
+      bool isLowBattery = (batteryPercentage < 20.0);
+      bool isConnected = zigbeeInitialized && Zigbee.connected();
+      uint8_t activeLedPin = isLowBattery ? RED_LED_PIN : BLUE_LED_PIN;
+      uint8_t inactiveLedPin = isLowBattery ? BLUE_LED_PIN : RED_LED_PIN;
+
+      if (isConnected)
+      {
+        digitalWrite(activeLedPin, LOW);
+        digitalWrite(inactiveLedPin, HIGH);
+      }
+      else
+      {
+        ledState = !ledState;
+        digitalWrite(activeLedPin, ledState ? LOW : HIGH);
+        digitalWrite(inactiveLedPin, HIGH);
+      }
+    }
+    else
+    {
+      digitalWrite(BLUE_LED_PIN, HIGH);
+      digitalWrite(RED_LED_PIN, HIGH);
+    }
+    vTaskDelay(500 / portTICK_PERIOD_MS);
+  }
+}
+#endif
+
+#if defined(IOT_BUTTON_V2)
+void batteryTask(void *pvParameters)
+{
   pinMode(BATTERY_ENABLE_PIN, OUTPUT);
-  digitalWrite(BATTERY_ENABLE_PIN, HIGH);
-  analogReadResolution(12);
-  analogSetPinAttenuation(BATTERY_ADC_PIN, ADC_11db);
+
+  while (1)
+  {
+    measureBattery();
+    if (zigbeeInitialized && Zigbee.connected())
+    {
+      zbIoTButton.setBatteryVoltage((uint8_t)(emaVoltage * 100)); // Unit: 0.01V
+      zbIoTButton.setBatteryPercentage((uint8_t)batteryPercentage);
+      zbIoTButton.reportBatteryPercentage();
+    }
+    vTaskDelay(30000 / portTICK_PERIOD_MS); // Check every 30 seconds
+  }
+}
 #endif
-  pinMode(BUTTON_PIN, INPUT_PULLUP);
+
+void sleepTask(void *pvParameters)
+{
+  while (1)
+  {
+    if (isAwake && (millis() - lastActivityTime > INACTIVITY_TIMEOUT))
+    {
+      LOG_PRINTLN("Entering sleep due to inactivity");
+#if defined(IOT_BUTTON_V1)
+      isAwake = false;
+      digitalWrite(BLUE_LED_PIN, HIGH);
+      esp_sleep_enable_gpio_wakeup();
+      digitalWrite(BLUE_LED_PIN, HIGH); // Turn off LED
+      gpio_wakeup_enable((gpio_num_t)BUTTON_PIN, GPIO_INTR_LOW_LEVEL);
+      digitalWrite(RGB_ENABLE_PIN, LOW);
+      esp_light_sleep_start();
+      digitalWrite(RGB_ENABLE_PIN, HIGH);
+      LOG_PRINTLN("Woke up from light sleep");
+      isAwake = true;
+      digitalWrite(BLUE_LED_PIN, LOW); // Turn on LED
+#elif defined(IOT_BUTTON_V2)
+      // Save button state to RTC memory
+      pressStartTimeRTC = pressStartTime;
+      lastReleaseTimeRTC = lastReleaseTime;
+      clickCountRTC = clickCount;
+      longPressTriggeredRTC = longPressTriggered;
+      clickSequenceActiveRTC = clickSequenceActive;
+
+      digitalWrite(BLUE_LED_PIN, HIGH);
+      digitalWrite(RED_LED_PIN, HIGH);
+      digitalWrite(RGB_PIN, LOW);
+      digitalWrite(RGB_ENABLE_PIN, LOW);
+      static gpio_num_t WAKEUP_GPIO = (gpio_num_t)BUTTON_PIN;
+      esp_sleep_enable_ext1_wakeup_io(BUTTON_PIN_BITMASK(WAKEUP_GPIO), ESP_EXT1_WAKEUP_ANY_LOW);
+      esp_deep_sleep_start();
+#endif
+    }
+    vTaskDelay(10000 / portTICK_PERIOD_MS); // Check every 10 seconds
+  }
 }
 
-void enterSleep()
+/********************* Zigbee Functions **************************/
+void onZigbeeConnected()
 {
-  isAwake = false;
-  LOG_PRINTLN("Entering sleep mode...");
-  Serial.flush();
+  if (!zigbeeInitialized)
+  {
+    return;
+  }
 #if defined(IOT_BUTTON_V2)
-  // Save button state to RTC memory before deep sleep
-  pressStartTimeRTC = pressStartTime;
-  lastReleaseTimeRTC = lastReleaseTime;
-  clickCountRTC = clickCount;
-  longPressTriggeredRTC = longPressTriggered;
-  clickSequenceActiveRTC = clickSequenceActive;
-  esp_sleep_enable_ext1_wakeup(BUTTON_PIN_BITMASK(BUTTON_PIN), ESP_EXT1_WAKEUP_ALL_LOW);
-  esp_deep_sleep_start();
-#elif defined(IOT_BUTTON_V1)
-  esp_sleep_enable_ext1_wakeup(BUTTON_PIN_BITMASK(BUTTON_PIN), ESP_EXT1_WAKEUP_ALL_LOW);
-  esp_light_sleep_start();
+  measureBattery();                                           // Ensure latest battery data
+  zbIoTButton.setBatteryVoltage((uint8_t)(emaVoltage * 100)); // Unit: 0.01V
+  zbIoTButton.setBatteryPercentage((uint8_t)batteryPercentage);
+  zbIoTButton.reportBatteryPercentage();
 #endif
+  zbSwitch1.setBinaryInput(switch1Status);
+  zbSwitch1.reportBinaryInput();
+  zbSwitch2.setBinaryInput(switch2Status);
+  zbSwitch2.reportBinaryInput();
+  zbSwitch3.setBinaryInput(switch3Status);
+  zbSwitch3.reportBinaryInput();
 }
 
-void wakeUp()
+void zigbeeSetupTask(void *pvParameters)
 {
-  isAwake = true;
-  lastActivityTime = millis();
-  LOG_PRINTLN("Woke up from sleep.");
+  zbIoTButton.addBinaryInput();
+  zbIoTButton.setBinaryInputApplication(BINARY_INPUT_APPLICATION_TYPE_SECURITY_MOTION_DETECTION);
+  zbIoTButton.setBinaryInputDescription("Button");
+  zbSwitch1.addBinaryInput();
+  zbSwitch1.setBinaryInputApplication(BINARY_INPUT_APPLICATION_TYPE_SECURITY_MOTION_DETECTION);
+  zbSwitch1.setBinaryInputDescription("Switch1");
+  zbSwitch2.addBinaryInput();
+  zbSwitch2.setBinaryInputApplication(BINARY_INPUT_APPLICATION_TYPE_SECURITY_MOTION_DETECTION);
+  zbSwitch2.setBinaryInputDescription("Switch2");
+  zbSwitch3.addBinaryInput();
+  zbSwitch3.setBinaryInputApplication(BINARY_INPUT_APPLICATION_TYPE_SECURITY_MOTION_DETECTION);
+  zbSwitch3.setBinaryInputDescription("Switch3");
+
+  // Set Zigbee device information
+#if defined(IOT_BUTTON_V1)
+  zbIoTButton.setManufacturerAndModel("Seeed Studio", "IoT_Button");
+#elif defined(IOT_BUTTON_V2)
+  zbIoTButton.setManufacturerAndModel("Seeed Studio", "IoT Button V2");
+  zbIoTButton.setPowerSource(ZB_POWER_SOURCE_BATTERY, 100);
+#endif
+
+  // Add endpoint to Zigbee Core
+  Zigbee.addEndpoint(&zbIoTButton);
+  Zigbee.addEndpoint(&zbSwitch1);
+  Zigbee.addEndpoint(&zbSwitch2);
+  Zigbee.addEndpoint(&zbSwitch3);
+  esp_zb_cfg_t zigbeeConfig = ZIGBEE_DEFAULT_ED_CONFIG();
+  zigbeeConfig.nwk_cfg.zed_cfg.keep_alive = 10000;
+
+  Zigbee.setTimeout(10000); // Set timeout for Zigbee Begin to 10s (default is 30s)
+  LOG_PRINTLN("Starting Zigbee...");
+  if (!Zigbee.begin(&zigbeeConfig, false))
+  {
+    LOG_PRINTLN("Zigbee failed to start!");
+    LOG_PRINTLN("Please try holding down the 5S key for a long time to reset zigbee");
+    zigbeeInitialized = false;
+  }
+  else
+  {
+    LOG_PRINTLN("Zigbee started successfully!");
+    zigbeeInitialized = true;
+  }
+
+  vTaskDelete(NULL); // Terminate the task after completion
+}
+
+/********************* Arduino Setup **************************/
+void setup()
+{
+  Serial.begin(115200);
+
+  LOG_PRINTLN("Zigbee IoT Button Starting...");
 #if defined(IOT_BUTTON_V2)
-  // Restore button state from RTC memory after deep sleep
+  // Restore button state from RTC memory
   pressStartTime = pressStartTimeRTC;
   lastReleaseTime = lastReleaseTimeRTC;
   clickCount = clickCountRTC;
   longPressTriggered = longPressTriggeredRTC;
   clickSequenceActive = clickSequenceActiveRTC;
 #endif
-}
 
-void breathingEffect(CRGB color, int duration)
-{
-  uint32_t startTime = millis();
-  while (millis() - startTime < duration)
-  {
-    float brightness = (exp(sin(millis() / 2000.0 * PI)) - 0.36787944) * 108.0;
-    rgbs[0] = color;
-    rgbs[0].nscale8_video(brightness);
-    FastLED.show();
-    vTaskDelay(10 / portTICK_PERIOD_MS);
-  }
-  rgbs[0] = CRGB::Black;
-  FastLED.show();
-}
+  // Initialize button pin
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
 
-void blinkEffect(CRGB color, int times, int delayTime)
-{
-  for (int i = 0; i < times; i++)
-  {
-    rgbs[0] = color;
-    FastLED.show();
-    vTaskDelay(delayTime / portTICK_PERIOD_MS);
-    rgbs[0] = CRGB::Black;
-    FastLED.show();
-    vTaskDelay(delayTime / portTICK_PERIOD_MS);
-  }
-}
-
-void rainbowEffect(int duration)
-{
-  uint32_t startTime = millis();
-  uint8_t hue = 0;
-  while (millis() - startTime < duration)
-  {
-    rgbs[0] = CHSV(hue++, 255, 255);
-    FastLED.show();
-    vTaskDelay(10 / portTICK_PERIOD_MS);
-  }
-  rgbs[0] = CRGB::Black;
-  FastLED.show();
-}
-
-void buttonTask(void *pvParameters)
-{
-  ButtonEvent event;
-  while (1)
-  {
-    if (xQueueReceive(eventQueue, &event, portMAX_DELAY) == pdPASS)
-    {
-      lastActivityTime = millis();
-      switch (event)
-      {
-      case ButtonEvent::PRESS:
-        LOG_PRINTLN("Button Pressed");
-        zbIoTButton.on();
-        break;
-      case ButtonEvent::RELEASE:
-        LOG_PRINTLN("Button Released");
-        zbIoTButton.off();
-        break;
-      case ButtonEvent::SINGLE_CLICK:
-        LOG_PRINTLN("Single Click");
-        rainbowEffect(1000);
-        switch1Status = !switch1Status;
-        zbSwitch1.toggle();
-        break;
-      case ButtonEvent::DOUBLE_CLICK:
-        LOG_PRINTLN("Double Click");
-        breathingEffect(CRGB::Green, 1000);
-        switch2Status = !switch2Status;
-        zbSwitch2.toggle();
-        break;
-      case ButtonEvent::TRIPLE_CLICK:
-        LOG_PRINTLN("Triple Click");
-        breathingEffect(CRGB::Blue, 1000);
-        // No specific switch for triple click, can be customized
-        break;
-      case ButtonEvent::SHORT_LONG_PRESS:
-        LOG_PRINTLN("Short Long Press");
-        breathingEffect(CRGB::Yellow, 1000);
-        switch3Status = !switch3Status;
-        zbSwitch3.toggle();
-        break;
-      case ButtonEvent::LONG_PRESS:
-        LOG_PRINTLN("Long Press - Factory Reset");
-        blinkEffect(CRGB::Red, 5, 200);
-        esp_zb_factory_reset();
-        break;
-      }
-    }
-  }
-}
-
-void clickTimeoutTask(void *pvParameters)
-{
-  while (1)
-  {
-    vTaskSuspend(NULL); // Suspend until resumed by ISR
-    if (!isAwake)
-    {
-      wakeUp();
-    }
-    uint32_t startTime = millis();
-    bool possiblyReleased = false;
-
-    // Initial debounce for press
-    vTaskDelay(pdMS_TO_TICKS(DEBOUNCE_TIME));
-    if (digitalRead(BUTTON_PIN) == LOW)
-    { // Press confirmed
-      if (!buttonStatus)
-      {
-        buttonStatus = true;
-        pressStartTime = millis();
-        longPressTriggered = false;
-        clickSequenceActive = true;
-        ButtonEvent event = ButtonEvent::PRESS;
-        xQueueSend(eventQueue, &event, portMAX_DELAY);
-      }
-    }
-
-    while (clickSequenceActive)
-    {
-      if (digitalRead(BUTTON_PIN) == LOW)
-      { // Still pressed
-        if (!longPressTriggered && (millis() - pressStartTime >= LONG_PRESS_TIME))
-        {
-          longPressTriggered = true;
-          ButtonEvent event = ButtonEvent::LONG_PRESS;
-          xQueueSend(eventQueue, &event, portMAX_DELAY);
-          clickSequenceActive = false; // End sequence after long press
-        }
-        else if (!longPressTriggered && (millis() - pressStartTime >= SHORT_LONG_PRESS_TIME) && (clickCount == 0))
-        {
-          // Trigger short long press only if it's the first press in a sequence
-          longPressTriggered = true; // Use same flag to prevent re-trigger
-          ButtonEvent event = ButtonEvent::SHORT_LONG_PRESS;
-          xQueueSend(eventQueue, &event, portMAX_DELAY);
-        }
-        vTaskDelay(pdMS_TO_TICKS(10));
-      }
-      else
-      { // Released
-        if (buttonStatus)
-        {
-          buttonStatus = false;
-          ButtonEvent event = ButtonEvent::RELEASE;
-          xQueueSend(eventQueue, &event, portMAX_DELAY);
-          lastReleaseTime = millis();
-          if (!longPressTriggered)
-          {
-            clickCount++;
-          }
-        }
-
-        // Wait for potential next click
-        uint32_t timeSinceRelease = millis() - lastReleaseTime;
-        if (timeSinceRelease >= MULTI_CLICK_TIME)
-        {
-          if (clickCount > 0 && !longPressTriggered)
-          {
-            ButtonEvent event;
-            if (clickCount == 1)
-              event = ButtonEvent::SINGLE_CLICK;
-            else if (clickCount == 2)
-              event = ButtonEvent::DOUBLE_CLICK;
-            else
-              event = ButtonEvent::TRIPLE_CLICK;
-            xQueueSend(eventQueue, &event, portMAX_DELAY);
-          }
-          clickCount = 0;
-          clickSequenceActive = false; // End sequence
-        }
-        vTaskDelay(pdMS_TO_TICKS(10));
-      }
-    }
-  }
-}
-
-void zigbeeTask(void *pvParameters)
-{
-  while (1)
-  {
-    if (isAwake)
-    {
-      esp_zb_cli_main_loop_iteration();
-    }
-    vTaskDelay(10 / portTICK_PERIOD_MS);
-  }
-}
-
+  pinMode(RGB_ENABLE_PIN, OUTPUT);
+  digitalWrite(RGB_ENABLE_PIN, HIGH);
 #if defined(IOT_BUTTON_V2)
-void batteryTask(void *pvParameters)
-{
-  // Initialize EMA with the first valid reading
-  float voltage = 0;
-  do
-  {
-    voltage = analogRead(BATTERY_ADC_PIN) / 4095.0 * 3.3 * 2;
-    vTaskDelay(100 / portTICK_PERIOD_MS);
-  } while (voltage < MIN_VOLTAGE);
-  emaVoltage = voltage;
-
-  while (1)
-  {
-    if (isAwake)
-    {
-      uint32_t total = 0;
-      for (int i = 0; i < SAMPLE_COUNT; i++)
-      {
-        total += analogRead(BATTERY_ADC_PIN);
-        vTaskDelay(1 / portTICK_PERIOD_MS);
-      }
-      float currentVoltage = (total / (float)SAMPLE_COUNT) / 4095.0 * 3.3 * 2;
-
-      // Apply Exponential Moving Average (EMA)
-      emaVoltage = ALPHA * currentVoltage + (1 - ALPHA) * emaVoltage;
-
-      batteryPercentage = ((emaVoltage - MIN_VOLTAGE) / (MAX_VOLTAGE - MIN_VOLTAGE)) * 100.0;
-      if (batteryPercentage > 100.0)
-        batteryPercentage = 100.0;
-      if (batteryPercentage < 0.0)
-        batteryPercentage = 0.0;
-
-      uint16_t voltageToReport = (uint16_t)(emaVoltage * 100); // Report in 0.01V units
-      uint8_t percentageToReport = (uint8_t)(batteryPercentage);
-
-      esp_zb_zcl_set_attribute_val(HA_POWER_CONFIG_ENDPOINT, ESP_ZB_ZCL_CLUSTER_ID_POWER_CONFIG, ESP_ZB_ZCL_CLUSTER_SERVER_ROLE, ESP_ZB_ZCL_ATTR_POWER_CONFIG_BAT_VOLTAGE_ID, &voltageToReport, false);
-      esp_zb_zcl_set_attribute_val(HA_POWER_CONFIG_ENDPOINT, ESP_ZB_ZCL_CLUSTER_ID_POWER_CONFIG, ESP_ZB_ZCL_CLUSTER_SERVER_ROLE, ESP_ZB_ZCL_ATTR_POWER_CONFIG_BAT_PERCENTAGE_REMAINING_ID, &percentageToReport, false);
-
-      LOG_PRINTF("Battery Voltage: %.2fV, Percentage: %.1f%%\n", emaVoltage, batteryPercentage);
-
-      if (batteryPercentage < 20)
-      {
-        digitalWrite(RED_LED_PIN, HIGH);
-      }
-      else
-      {
-        digitalWrite(RED_LED_PIN, LOW);
-      }
-    }
-    vTaskDelay(60000 / portTICK_PERIOD_MS); // Update every minute
-  }
-}
+  pinMode(BATTERY_ENABLE_PIN, OUTPUT);
 #endif
 
-void esp_zb_app_signal_handler(esp_zb_app_signal_t *signal_struct)
-{
-  uint32_t *p_sg_p       = signal_struct->p_app_signal;
-  esp_err_t err_status = signal_struct->esp_err_status;
-  esp_zb_app_signal_type_t sig_type = *p_sg_p;
+  // Initialize LED
+  FastLED.addLeds<WS2812, RGB_PIN, GRB>(rgbs, NUM_RGBS);
+  FastLED.setBrightness(50);
 
-  switch (sig_type)
-  {
-  case ESP_ZB_ZDO_SIGNAL_SKIP_STARTUP:
-    LOG_PRINTLN("Zigbee stack initialized");
-    esp_zb_scheduler_alarm((esp_zb_callback_t)bdb_start_top_level_commissioning_cb, ESP_ZB_BDB_MODE_INITIALIZATION, 1000);
-    break;
-  case ESP_ZB_BDB_SIGNAL_DEVICE_FIRST_START:
-  case ESP_ZB_BDB_SIGNAL_DEVICE_REBOOT:
-    if (err_status == ESP_OK)
-    {
-      LOG_PRINTLN("Device started up in Zigbee stack");
-      esp_zb_scheduler_alarm((esp_zb_callback_t)bdb_start_top_level_commissioning_cb, ESP_ZB_BDB_MODE_NETWORK_STEERING, 1000);
-    }
-    else
-    {
-      LOG_PRINTF("Failed to initialize Zigbee stack (status: %s)\n", esp_err_to_name(err_status));
-    }
-    break;
-  case ESP_ZB_BDB_SIGNAL_STEERING_COMPLETE:
-    if (err_status == ESP_OK)
-    {
-      esp_zb_ieee_addr_t extended_pan_id;
-      esp_zb_get_extended_pan_id(extended_pan_id);
-      LOG_PRINTF("Successfully joined network, PAN ID: %02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x, Channel: %d",
-                 extended_pan_id[7], extended_pan_id[6], extended_pan_id[5], extended_pan_id[4],
-                 extended_pan_id[3], extended_pan_id[2], extended_pan_id[1], extended_pan_id[0],
-                 esp_zb_get_current_channel());
-      zigbeeInitialized = true;
-    }
-    else
-    {
-      LOG_PRINTF("Steering failed (status: %s)\n", esp_err_to_name(err_status));
-      esp_zb_scheduler_alarm((esp_zb_callback_t)bdb_start_top_level_commissioning_cb, ESP_ZB_BDB_MODE_NETWORK_STEERING, 1000);
-    }
-    break;
-  default:
-    LOG_PRINTF("ZDO signal: %d, status: %s\n", sig_type, esp_err_to_name(err_status));
-    break;
-  }
-}
-
-void setup()
-{
-  setupHardware();
-  LOG_PRINTLN("Hardware Initialized");
-
-  esp_zb_cfg_t zb_cfg;
-  esp_zb_param_list_t *param_list = (esp_zb_param_list_t *)malloc(sizeof(esp_zb_param_list_t));
-  param_list->param_list_length = 0;
-  esp_zb_platform_config_t config = {
-      .radio_config = ESP_ZB_DEFAULT_RADIO_CONFIG(),
-      .host_config = ESP_ZB_DEFAULT_HOST_CONFIG(),
-  };
-  zb_cfg.esp_zb_role = ESP_ZB_DEVICE_TYPE_ED;
-  zb_cfg.install_cfg = config;
-  zb_cfg.param_list = param_list;
-  esp_zb_init(&zb_cfg);
-
-  esp_zb_attribute_list_t *iot_button_cluster = esp_zb_zcl_attr_list_create(ESP_ZB_ZCL_CLUSTER_ID_ON_OFF);
-  esp_zb_on_off_cluster_add_attr(iot_button_cluster, ESP_ZB_ZCL_ATTR_ON_OFF_ON_OFF_ID, &buttonStatus);
-  esp_zb_attribute_list_t *switch1_cluster = esp_zb_zcl_attr_list_create(ESP_ZB_ZCL_CLUSTER_ID_ON_OFF);
-  esp_zb_on_off_cluster_add_attr(switch1_cluster, ESP_ZB_ZCL_ATTR_ON_OFF_ON_OFF_ID, &switch1Status);
-  esp_zb_attribute_list_t *switch2_cluster = esp_zb_zcl_attr_list_create(ESP_ZB_ZCL_CLUSTER_ID_ON_OFF);
-  esp_zb_on_off_cluster_add_attr(switch2_cluster, ESP_ZB_ZCL_ATTR_ON_OFF_ON_OFF_ID, &switch2Status);
-  esp_zb_attribute_list_t *switch3_cluster = esp_zb_zcl_attr_list_create(ESP_ZB_ZCL_CLUSTER_ID_ON_OFF);
-  esp_zb_on_off_cluster_add_attr(switch3_cluster, ESP_ZB_ZCL_ATTR_ON_OFF_ON_OFF_ID, &switch3Status);
-
-#if defined(IOT_BUTTON_V2)
-  esp_zb_attribute_list_t *power_config_cluster = esp_zb_zcl_attr_list_create(ESP_ZB_ZCL_CLUSTER_ID_POWER_CONFIG);
-  esp_zb_power_config_cluster_add_attr(power_config_cluster, ESP_ZB_ZCL_ATTR_POWER_CONFIG_BAT_VOLTAGE_ID, 0);
-  esp_zb_power_config_cluster_add_attr(power_config_cluster, ESP_ZB_ZCL_ATTR_POWER_CONFIG_BAT_PERCENTAGE_REMAINING_ID, 0);
-#endif
-
-  esp_zb_ep_list_t *ep_list = esp_zb_ep_list_create();
-  esp_zb_ep_list_add_ep(ep_list, iot_button_cluster, BUTTON_ENDPOINT, ESP_ZB_AF_HA_PROFILE_ID, ESP_ZB_HA_ON_OFF_LIGHT_DEVICE_ID);
-  esp_zb_ep_list_add_ep(ep_list, switch1_cluster, SWITCH1_ENDPOINT, ESP_ZB_AF_HA_PROFILE_ID, ESP_ZB_HA_ON_OFF_LIGHT_DEVICE_ID);
-  esp_zb_ep_list_add_ep(ep_list, switch2_cluster, SWITCH2_ENDPOINT, ESP_ZB_AF_HA_PROFILE_ID, ESP_ZB_HA_ON_OFF_LIGHT_DEVICE_ID);
-  esp_zb_ep_list_add_ep(ep_list, switch3_cluster, SWITCH3_ENDPOINT, ESP_ZB_AF_HA_PROFILE_ID, ESP_ZB_HA_ON_OFF_LIGHT_DEVICE_ID);
-#if defined(IOT_BUTTON_V2)
-  esp_zb_ep_list_add_ep(ep_list, power_config_cluster, HA_POWER_CONFIG_ENDPOINT, ESP_ZB_AF_HA_PROFILE_ID, ESP_ZB_HA_ON_OFF_LIGHT_DEVICE_ID);
-#endif
-
-  esp_zb_device_register(ep_list);
-  esp_zb_set_primary_network_channel_set(ESP_ZB_PRIMARY_CHANNEL_MASK);
-  esp_zb_start(false);
-  esp_zb_set_app_signal_callback(esp_zb_app_signal_handler);
-
+  // Create event queue
   eventQueue = xQueueCreate(10, sizeof(ButtonEvent));
-  xTaskCreate(buttonTask, "ButtonTask", 4096, NULL, 5, NULL);
-  xTaskCreate(clickTimeoutTask, "ClickTimeoutTask", 4096, NULL, 10, &clickTimeoutTaskHandle);
-  xTaskCreate(zigbeeTask, "ZigbeeTask", 4096, NULL, 4, NULL);
+  if (eventQueue == NULL)
+  {
+    LOG_PRINTLN("Failed to create event queue!");
+    ESP.restart();
+  }
+
 #if defined(IOT_BUTTON_V2)
-  xTaskCreate(batteryTask, "BatteryTask", 4096, NULL, 3, NULL);
+  // Check if woken up by button press and handle immediately
+  if (esp_sleep_get_wakeup_cause() == ESP_SLEEP_WAKEUP_EXT1)
+  {
+    uint32_t currentTime = millis();
+    if (digitalRead(BUTTON_PIN) == LOW)
+    {
+      handleButtonPress(currentTime);
+    }
+  }
 #endif
 
-  attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), button_isr, CHANGE);
-  lastActivityTime = millis();
+  // Create FreeRTOS tasks
+  xTaskCreate(buttonTask, "ButtonTask", 2048, NULL, 4, NULL);
+  xTaskCreate(ledTask, "LedTask", 1024, NULL, 0, NULL);
+  xTaskCreate(mainTask, "MainTask", 2048, NULL, 3, NULL);
+  xTaskCreate(sleepTask, "SleepTask", 2048, NULL, 2, NULL);
+  xTaskCreate(zigbeeSetupTask, "ZigbeeSetup", 2048, NULL, 1, NULL);
+#if defined(IOT_BUTTON_V2)
+  xTaskCreate(batteryTask, "BatteryTask", 2048, NULL, 1, NULL);
+#endif
 }
 
+/********************* Arduino Loop **************************/
 void loop()
 {
-  if (isAwake)
+  if (zigbeeInitialized)
   {
-    bool connected = esp_zb_is_device_joined();
-    if (connected != lastConnected)
+    bool currentConnected = Zigbee.connected();
+    if (currentConnected && !lastConnected)
     {
-      LOG_PRINTF("Zigbee connection status: %s\n", connected ? "Connected" : "Disconnected");
-      lastConnected = connected;
+      LOG_PRINTLN("Zigbee connected!");
+      onZigbeeConnected();
     }
-    digitalWrite(BLUE_LED_PIN, connected ? HIGH : LOW);
-
-    if (millis() - lastActivityTime > INACTIVITY_TIMEOUT)
+    else if (!currentConnected && lastConnected)
     {
-      enterSleep();
+      LOG_PRINTLN("Zigbee disconnected!");
+    }
+    lastConnected = currentConnected;
+    if (!currentConnected)
+    {
+      LOG_PRINTLN("Zigbee not connected, retrying...");
+      vTaskDelay(5000 / portTICK_PERIOD_MS);
+    }
+    else
+    {
+      vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
   }
-  vTaskDelay(100 / portTICK_PERIOD_MS);
-}
-```
+  else
+  {
+    vTaskDelay(1000 / portTICK_PERIOD_MS); // Keep loop running even if Zigbee fails
+  }
+}```
 
 </details>
 
@@ -697,13 +923,13 @@ La documentación puede no estar actualizada con las actualizaciones del código
 2.  Selecciona el puerto correcto en Arduino IDE.
 3.  Haz clic en el botón **Cargar**.
 4.  Abre el **Monitor Serie** (velocidad de baudios 115200) para ver la información de depuración.
-5.  Una vez que la carga esté completa, el botón está listo para ser emparejado.
+5.  Una vez que la carga esté completa, el botón estará listo para ser emparejado.
 
 ### Paso 6: Configurar Zigbee en Home Assistant
 
 Antes de emparejar tu Botón IoT, necesitas configurar un coordinador Zigbee en Home Assistant:
 
-1.  **Instalar un Coordinador Zigbee**: Conecta un coordinador Zigbee como el Home Assistant Connect ZBT-1 a tu servidor Home Assistant.
+1.  **Instalar un Coordinador Zigbee**: Conecta un coordinador Zigbee como el Home Assistant Connect ZBT-1 a tu servidor de Home Assistant.
 2.  **Configurar Zigbee Home Automation (ZHA)**:
     -   Ve a **Configuración > Dispositivos y Servicios**.
     -   Haz clic en "**Agregar Integración**" y busca "**Zigbee Home Automation**".
@@ -736,7 +962,7 @@ Una vez emparejado, puedes crear automatizaciones basadas en las acciones del bo
     -   "Presión simple" (del interruptor virtual en Endpoint 11)
     -   "Presión doble" (del interruptor virtual en Endpoint 12)
     -   "Presión larga" (del interruptor virtual en Endpoint 13)
-5.  Configura las acciones que quieres realizar cuando el botón sea presionado.
+5.  Configura las acciones que quieres realizar cuando se presione el botón.
 6.  Guarda la automatización.
 
 Ejemplo de automatización en YAML de Home Assistant para alternar una luz con un **doble clic**:
@@ -758,23 +984,23 @@ mode: single
 
 ## Conclusión
 
-El Seeed Studio IoT Button con funcionalidad Zigbee ofrece una forma versátil y eficiente en energía para controlar tu hogar inteligente. Ya sea que uses el firmware precompilado o desarrolles tu propia solución personalizada, el botón proporciona una interfaz simple para activar automatizaciones complejas en Home Assistant.
+El Botón IoT de Seeed Studio con funcionalidad Zigbee ofrece una forma versátil y eficiente en energía para controlar tu hogar inteligente. Ya sea que uses el firmware precompilado o desarrolles tu propia solución personalizada, el botón proporciona una interfaz simple para activar automatizaciones complejas en Home Assistant.
 
-Al aprovechar las capacidades Zigbee integradas del ESP32-C6, el IoT Button puede operar durante períodos extendidos con alimentación por batería mientras mantiene conectividad confiable con tu ecosistema de hogar inteligente.
+Al aprovechar las capacidades Zigbee integradas del ESP32-C6, el Botón IoT puede operar por períodos extendidos con energía de batería mientras mantiene conectividad confiable con tu ecosistema de hogar inteligente.
 
-## Solución de problemas
+## Solución de Problemas
 
-### P1: ¿Por qué mi dispositivo se sigue desconectando y no puede conectarse a internet después de reemplazar la batería? Puedo confirmar que la batería está cargada.
+### P1: ¿Por qué mi dispositivo sigue desconectándose y no puede conectarse a internet después de reemplazar la batería? Puedo confirmar que la batería está cargada.
 
 Después de que la batería ha sido removida, debido a la estrategia de protección del chip de la batería 18650, necesita ser activada un poco por un cable de alimentación USB cargado para funcionar correctamente.
 
 ## Recursos
 
-- **[GITHUB]** [Repositorio Github del Seeed IoT Button](https://github.com/Seeed-Studio/xiao-esphome-projects/blob/main/projects/seeedstudio-iot-button)
-- **[PDF]** [PDF del esquemático del Seeed IoT Button](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed_IoT_Button_SCH.pdf)
-- **[SCH&PCB]** [Esquemático y PCB del Seeed IoT Button](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed_IoT_Button_SCH&PCB.zip)
+- **[GITHUB]** [Repositorio Github del Botón IoT de Seeed](https://github.com/Seeed-Studio/xiao-esphome-projects/blob/main/projects/seeedstudio-iot-button)
+- **[PDF]** [PDF del Esquemático del Botón IoT de Seeed](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed_IoT_Button_SCH.pdf)
+- **[SCH&PCB]** [Esquemático y PCB del Botón IoT de Seeed](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed_IoT_Button_SCH&PCB.zip)
 
-## Soporte técnico y discusión del producto
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
@@ -786,4 +1012,4 @@ Después de que la batería ha sido removida, debido a la estrategia de protecci
 <div class="button_tech_support_container">
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-</div> 
+</div>
