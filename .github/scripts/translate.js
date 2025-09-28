@@ -3,6 +3,14 @@ const fs = require('fs').promises;
 const path = require('path');
 const { execSync } = require('child_process');
 
+// 使用 js-yaml 解析 Front Matter（若不可用，则回退正则）
+let yaml;
+try {
+  yaml = require('js-yaml');
+} catch (e) {
+  console.log('ℹ️ 未安装 js-yaml，将使用简易解析回退逻辑');
+}
+
 const anthropic = new Anthropic({
   apiKey: process.env.TRANSLATION_API_KEY
 });
@@ -78,6 +86,8 @@ const translationStatus = {
   moved: 0,
   deleted: 0,
   protected: 0,
+  // 被 front matter 跳过的次数
+  skipped: 0,
   errors: []
 };
 
@@ -104,7 +114,7 @@ function preprocessDocument(content, startsInsideCodeBlock = false) {
       indent: indent,
       content: trimmedContent,
       isEmpty: line.trim() === '',
-      inCodeBlockLine: false, // 新增：标记该行是否属于代码块（含围栏行）
+      inCodeBlockLine: false, // 标记该行是否属于代码块（含围栏行）
     };
 
     // 根据围栏切换代码块状态，并标记当前行
@@ -136,7 +146,7 @@ function preprocessDocument(content, startsInsideCodeBlock = false) {
     processed: processedLines.join('\n'),
     lineMetadata: lineMetadata,
     totalLines: lines.length,
-    endsInsideCodeBlock: inCodeBlock // PATCH: 返回块末状态
+    endsInsideCodeBlock: inCodeBlock // 返回块末状态
   };
 }
 
@@ -265,12 +275,12 @@ function intelligentSplit(lines, maxSize) {
   let inTable = false;
   let lastHeaderIndex = -1;
   
-  // PATCH: 将换行字节也计入阈值，避免边界误差
+  // 将换行字节也计入阈值，避免边界误差
   const NL_BYTES = Buffer.byteLength('\n', 'utf8');
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    // PATCH: 统计“行+换行”的字节数
+    // 统计“行+换行”的字节数
     const lineSize = Buffer.byteLength(line, 'utf8') + NL_BYTES;
     
     // 检测代码块
@@ -587,16 +597,16 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
 
       let translatedContent = response.content[0].text;
 
-      // ✅ 先做链接/排版修复（此时代码块仍是占位符，不会被改动）
+      // 先做链接/排版修复（此时代码块仍是占位符，不会被改动）
       translatedContent = fixAnchorLinks(translatedContent);
       translatedContent = processInternalLinks(translatedContent, targetLang);
       if (targetLang === 'zh-CN') {
         translatedContent = addChineseEnglishSpacing(translatedContent);
       }
-      // ✅ 应用术语表
+      // 应用术语表
       translatedContent = applyGlossary(translatedContent, targetLang);
 
-      // ✅ 最后一步再恢复行号/缩进，并把代码块整行原样回写
+      // 最后一步再恢复行号/缩进，并把代码块整行原样回写
       translatedContent = postprocessDocument(translatedContent, lineMetadata, totalLines);
 
       // 验证翻译结果（针对最终文本）
@@ -878,6 +888,47 @@ function generateTargetPath(originalPath, targetLang) {
   return targetPath;
 }
 
+// ===== Front Matter 工具（支持黑名单 translation.skip / 白名单 translation.only）=====
+function extractFrontMatter(raw) {
+  const m = raw.match(/^---\n([\s\S]*?)\n---\n/);
+  return m ? m[1] : null;
+}
+
+function parseFrontMatterObj(fmText) {
+  if (!fmText) return {};
+  if (yaml) {
+    try { return yaml.load(fmText) || {}; } catch {}
+  }
+  // 回退：简易解析，仅抓 translation.skip / translation.only
+  const obj = {};
+  // translation.skip: [zh-CN, ...]
+  const skipMatch = fmText.match(/translation:\s*[\s\S]*?skip:\s*\[([^\]]*)\]/m);
+  if (skipMatch) {
+    obj.translation = obj.translation || {};
+    obj.translation.skip = skipMatch[1].split(',').map(s => s.trim().replace(/^['"]|['"]$/g,'')).filter(Boolean);
+  }
+  // translation.only: [ja, es]
+  const onlyMatch = fmText.match(/translation:\s*[\s\S]*?only:\s*\[([^\]]*)\]/m);
+  if (onlyMatch) {
+    obj.translation = obj.translation || {};
+    obj.translation.only = onlyMatch[1].split(',').map(s => s.trim().replace(/^['"]|['"]$/g,'')).filter(Boolean);
+  }
+  return obj;
+}
+
+function shouldSkipLangByFrontMatter(frontMatterObj, targetLang) {
+  if (!frontMatterObj || typeof frontMatterObj !== 'object') return false;
+  const t = frontMatterObj.translation || {};
+  // 黑名单 skip：包含当前语言则跳过
+  if (Array.isArray(t.skip)) {
+    const lowered = t.skip.map(x => String(x));
+    if (lowered.includes(targetLang)) return true;
+  }
+  // 白名单 only：存在 only 且不包含当前语言 → 跳过
+  if (Array.isArray(t.only) && !t.only.includes(targetLang)) return true;
+  return false;
+}
+
 // 翻译_category.yml文件
 async function translateCategoryFile(filePath, targetLang) {
   try {
@@ -919,7 +970,7 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
   
   console.log(`📚 开始翻译文档 ${filePath} 到 ${langConfig.name} (共${chunks.length}块)`);
   
-  // PATCH: 跨块延续代码块状态
+  // 跨块延续代码块状态
   let carryInCode = false;
   
   for (let i = 0; i < chunks.length; i++) {
@@ -974,16 +1025,16 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
     
     if (frontMatterMatch) {
       const frontMatter = frontMatterMatch[0];
-      // PATCH: 不再 trim，避免吞掉空行导致行号错位
+      // 不再 trim，避免吞掉空行导致行号错位
       const firstContent = firstChunk.replace(frontMatterMatch[0], '');
       
-      // PATCH: 直接拼接，不额外插入空行，保持逐行对齐
+      // 直接拼接，不额外插入空行，保持逐行对齐
       finalContent = frontMatter + firstContent;
       if (otherChunks.length > 0) {
         finalContent += otherChunks.join('');
       }
     } else {
-      // PATCH: 多块直接无缝拼接，避免 \n\n 造成偏移
+      // 多块直接无缝拼接，避免 \n\n 造成偏移
       finalContent = translatedChunks.join('');
     }
   }
@@ -1009,6 +1060,18 @@ async function translateFile(filePath, targetLang) {
     
     const content = await fs.readFile(filePath, 'utf8');
     console.log(`🔍 文件大小: ${content.length} 字符`);
+
+    // Front Matter 跳过规则判断（仅 md/mdx 有意义）
+    if (/\.(md|mdx)$/i.test(filePath)) {
+      const fmText = extractFrontMatter(content);
+      const fmObj = parseFrontMatterObj(fmText);
+      if (shouldSkipLangByFrontMatter(fmObj, targetLang)) {
+        console.log(`🚫 Front Matter 指定跳过 ${targetLang}，不生成该语言译文: ${filePath}`);
+        translationStatus.skipped++;
+        // 返回“成功但跳过”，以便后续报告能统计到
+        return { success: true, path: generateTargetPath(filePath, targetLang), action: 'skipped_by_frontmatter' };
+      }
+    }
     
     // 使用智能分块
     const chunks = smartChunkDocument(content, 10000);
@@ -1202,6 +1265,7 @@ async function deleteTranslationFile(filePath, targetLang) {
 function generateProgressReport(languages, results) {
   const successCount = results.filter(r => r.success).length;
   const failCount = results.filter(r => !r.success).length;
+  const skippedList = results.filter(r => r.success && r.action === 'skipped_by_frontmatter');
   
   let report = `#### 📊 翻译完成报告\n\n`;
   report += `**目标语言:** ${languages.map(l => LANGUAGE_CONFIG[l]?.name || l).join(', ')}\n`;
@@ -1209,13 +1273,24 @@ function generateProgressReport(languages, results) {
   report += `**统计信息:**\n`;
   report += `- ✅ 成功: ${successCount}\n`;
   report += `- ❌ 失败: ${failCount}\n`;
+  report += `- ⏭️ 跳过: ${skippedList.length}\n`;
   report += `- 📊 总计: ${successCount + failCount}\n\n`;
   
-  if (results.some(r => r.success)) {
-    report += `**成功处理的文件:**\n`;
-    results.filter(r => r.success).forEach(r => {
+  if (skippedList.length) {
+    report += `**因 Front Matter 跳过的文件:**\n`;
+    skippedList.forEach(r => {
       report += `- ${r.path}\n`;
     });
+    report += '\n';
+  }
+
+  if (results.some(r => r.success && r.action !== 'skipped_by_frontmatter')) {
+    report += `**成功处理的文件:**\n`;
+    results
+      .filter(r => r.success && r.action !== 'skipped_by_frontmatter')
+      .forEach(r => {
+        report += `- ${r.path}\n`;
+      });
     report += '\n';
   }
   
@@ -1300,8 +1375,8 @@ async function main() {
     r.action === 'renamed_and_retranslated' ||
     r.action === 'moved' ||
     r.action === 'deleted' ||
-    (!r.action)  // 兼容旧返回（最好配合 B 改动后可去掉）
-  ) && r.action !== 'skipped' && r.action !== 'protected');
+    (!r.action)  // 兼容旧返回
+  ) && r.action !== 'skipped' && r.action !== 'protected' && r.action !== 'skipped_by_frontmatter');
   
   if (hasChanges) {
     console.log('\n🚀 设置触发其他工作流标志...');
