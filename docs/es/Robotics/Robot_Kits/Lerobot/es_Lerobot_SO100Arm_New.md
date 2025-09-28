@@ -58,7 +58,7 @@ Este wiki proporciona el tutorial de ensamblaje y depuración para el SO ARM10x 
 
 :::caution
 
-Seeed Studio solo es responsable de la calidad del hardware en sí. Los tutoriales se actualizan estrictamente de acuerdo con la documentación oficial. Si encuentras problemas de software o problemas de dependencias del entorno que no se pueden resolver, además de verificar la sección FAQ al final de este tutorial, por favor reporta el problema oportunamente a la [plataforma LeRobot](https://github.com/huggingface/lerobot) o al [canal Discord de LeRobot](https://discord.gg/8TnwDdjFGU).
+Seeed Studio solo es responsable de la calidad del hardware en sí. Los tutoriales se actualizan estrictamente de acuerdo con la documentación oficial. Si encuentras problemas de software o problemas de dependencias del entorno que no se pueden resolver, además de verificar la sección de FAQ al final de este tutorial, por favor reporta el problema oportunamente a la [plataforma LeRobot](https://github.com/huggingface/lerobot) o al [canal Discord de LeRobot](https://discord.gg/8TnwDdjFGU).
 
 :::
 
@@ -171,7 +171,7 @@ Si compras la versión Arm Kit, ambas fuentes de alimentación son de 5V. Si com
 
   [E. Calibrar](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#calibrate)
 
-  [F. Teleoperar](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#teleoperate)
+  [F. Teleoperación](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#teleoperate)
 
   [G. Agregar cámaras](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#add-cameras)
 
@@ -188,12 +188,12 @@ Si compras la versión Arm Kit, ambas fuentes de alimentación son de 5V. Si com
 ## Guía de Impresión 3D
 
 :::caution
-Siguiendo la actualización oficial de SO101, SO100 ya no lo soportará y los archivos fuente serán eliminados según lo oficial, pero los archivos fuente aún se pueden encontrar en nuestro [Makerworld](https://makerworld.com/zh/models/908660). Sin embargo, para los usuarios que han comprado previamente SO100, los tutoriales y métodos de instalación siguen siendo compatibles. La impresión de SO101 es completamente compatible con la instalación del kit de motor de SO100.
+Siguiendo la actualización oficial de SO101, SO100 ya no será compatible y los archivos fuente serán eliminados según lo oficial, pero los archivos fuente aún se pueden encontrar en nuestro [Makerworld](https://makerworld.com/zh/models/908660). Sin embargo, para los usuarios que han comprado previamente SO100, los tutoriales y métodos de instalación siguen siendo compatibles. La impresión de SO101 es completamente compatible con la instalación del kit de motor de SO100.
 :::
 
 ### Paso 1: Elegir una impresora
 
-Los archivos STL proporcionados están listos para imprimir en muchas impresoras FDM. A continuación se muestran las configuraciones probadas y sugeridas aunque otras pueden funcionar.
+Los archivos STL proporcionados están listos para imprimir en muchas impresoras FDM. A continuación se muestran las configuraciones probadas y sugeridas, aunque otras pueden funcionar.
 
 - Material: PLA+
 - Diámetro de Boquilla y Precisión: diámetro de boquilla de 0.4mm a altura de capa de 0.2mm o boquilla de 0.6mm a altura de capa de 0.4mm.
@@ -266,7 +266,7 @@ conda install ffmpeg -c conda-forge
 ```
 
 :::tip
-Esto generalmente instala ffmpeg 7.X para su plataforma compilado con el codificador libsvtav1. Si libsvtav1 no es compatible (verifique los codificadores compatibles con ffmpeg -encoders), puede:
+Esto usualmente instala ffmpeg 7.X para su plataforma compilado con el codificador libsvtav1. Si libsvtav1 no es compatible (verifique los codificadores compatibles con ffmpeg -encoders), puede:
 
 - [En cualquier plataforma] Instalar explícitamente ffmpeg 7.X usando:
 
@@ -291,7 +291,7 @@ Si encuentra un error como este, también puede usar este comando.
 cd ~/lerobot && pip install -e ".[feetech]"
 ```
 
-Para dispositivos Jetson Jetpack 6.0+ (asegúrese de instalar [Pytorch-gpu y Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) desde el paso 5 antes de ejecutar este paso):
+Para dispositivos Jetson Jetpack 6.0+ (por favor asegúrese de instalar [Pytorch-gpu y Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) desde el paso 5 antes de ejecutar este paso):
 
 ```bash
 conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
@@ -304,7 +304,7 @@ pip3 install numpy==1.26.0  # This should match torchvision
 
 6. Verificar Pytorch y Torchvision
 
-Dado que instalar el entorno lerobot a través de pip desinstalará el Pytorch y Torchvision originales e instalará las versiones CPU de Pytorch y Torchvision, necesita realizar una verificación en Python.
+Dado que instalar el entorno lerobot vía pip desinstalará el Pytorch y Torchvision originales e instalará las versiones CPU de Pytorch y Torchvision, necesita realizar una verificación en Python.
 
 ```python
 import torch
@@ -330,11 +330,11 @@ Para configurar los motores, designe un adaptador de servo de bus y 6 motores pa
 
 | Modelo de Servo                        | Relación de Engranajes | Articulaciones Correspondientes |
 |----------------------------------------|------------|------------------------------|
-| ST-3215-C044(7.4V)                     | 1:191      | L1                           |
-| ST-3215-C001(7.4V)                     | 1:345      | L2                           |
-| ST-3215-C044(7.4V)                     | 1:191      | L3                           |
-| ST-3215-C046(7.4V)                     | 1:147      | L4–L6                        |
-| ST-3215-C001(7.4V) / C018(12V) / C047(12V) | 1:345      | F1–F6                        |
+| ST-3215-C044(7.4V)                            | 1:191      | L1                           |
+| ST-3215-C001(7.4V)                       | 1:345      | L2                           |
+| ST-3215-C044(7.4V)                           | 1:191      | L3                           |
+| ST-3215-C046(7.4V)                           | 1:147      | L4–L6                        |
+| ST-3215-C001(7.4V) / C018(12V) / C047(12V)             | 1:345      | F1–F6                        |
 
 :::danger
 Ahora debe conectar la fuente de alimentación de 5V o 12V al bus del motor. 5V para los motores STS3215 7.4V y 12V para los motores STS3215 12V. Tenga en cuenta que el brazo líder siempre usa los motores de 7.4V, así que tenga cuidado de conectar la fuente de alimentación correcta si tiene motores de 12V y 7.4V, ¡de lo contrario podría quemar sus motores! Ahora, conecte el bus del motor a su computadora vía USB. Tenga en cuenta que el USB no proporciona energía, y tanto la fuente de alimentación como el USB deben estar conectados.
@@ -345,7 +345,7 @@ Ahora debe conectar la fuente de alimentación de 5V o 12V al bus del motor. 5V 
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/all_motos.png" />
 </div>
 
-***Los siguientes son los pasos de calibración del código, por favor calibre con el servo de cableado de referencia en la imagen de arriba***
+***Los siguientes son los pasos de calibración de código, por favor calibre con el servo de cableado de referencia en la imagen de arriba***
 
 Encontrar puertos USB asociados a sus brazos
 Para encontrar los puertos correctos para cada brazo, ejecute el script de utilidad dos veces:
@@ -371,9 +371,9 @@ Reconnect the USB cable.
 Recuerde quitar el usb, de lo contrario la interfaz no será detectada.
 :::
 
-Salida de ejemplo al identificar el puerto del brazo líder (por ejemplo, `/dev/tty.usbmodem575E0031751` en Mac, o posiblemente `/dev/ttyACM0` en Linux):
+Salida de ejemplo al identificar el puerto del brazo líder (ej., `/dev/tty.usbmodem575E0031751` en Mac, o posiblemente `/dev/ttyACM0` en Linux):
 
-Salida de ejemplo al identificar el puerto del brazo seguidor (por ejemplo, `/dev/tty.usbmodem575E0032081`, o posiblemente `/dev/ttyACM1` en Linux):
+Salida de ejemplo al identificar el puerto del brazo seguidor (ej., `/dev/tty.usbmodem575E0032081`, o posiblemente `/dev/ttyACM1` en Linux):
 
 Podría necesitar dar acceso a los puertos USB ejecutando:
 
@@ -418,7 +418,7 @@ Debería ver la siguiente instrucción.
 Connect the controller board to the 'gripper' motor only and press enter.
 ```
 
-Como se indica, conecte el motor de la pinza. Asegúrese de que sea el único motor conectado a la placa, y que el motor en sí no esté aún conectado en cadena a ningún otro motor. Al presionar [Enter], el script configurará automáticamente el id y la velocidad de transmisión para ese motor.
+Como se indica, conecte el motor de la pinza. Asegúrese de que sea el único motor conectado a la placa, y que el motor en sí no esté aún conectado en cadena a ningún otro motor. Al presionar [Enter], el script configurará automáticamente el ID y la velocidad de baudios para ese motor.
 
 Luego debería ver el siguiente mensaje:
 
@@ -463,7 +463,7 @@ lerobot-setup-motors \
 :::tip
 
 - El proceso de ensamblaje de brazo dual del SO-ARM101 es el mismo que el del SO-ARM100. Las únicas diferencias son la adición de clips de cable en el SO-ARM101 y las diferentes relaciones de engranajes de los servos de las articulaciones en el Brazo Líder. Por lo tanto, tanto el SO100 como el SO101 pueden instalarse siguiendo el siguiente contenido
-- Antes del ensamblaje, verifique nuevamente su modelo de motor y relación de reducción. Si ha comprado SO100, puede ignorar este paso. Si ha comprado SO101, verifique la siguiente tabla para distinguir F1 a F6 y L1 a L6.
+- Antes del ensamblaje, verifique nuevamente su modelo de motor y relación de reducción. Si ha comprado el SO100, puede ignorar este paso. Si ha comprado el SO101, verifique la siguiente tabla para distinguir F1 a F6 y L1 a L6.
 
 :::
 
@@ -593,7 +593,7 @@ Los códigos SO100 y SO101 son compatibles. Los usuarios de SO100 pueden utiliza
 
 Para instanciar una cámara, necesitas un identificador de cámara. Este identificador podría cambiar si reinicias tu computadora o reconectas tu cámara, un comportamiento que depende principalmente de tu sistema operativo.
 
-Para encontrar los índices de las cámaras conectadas a tu sistema, ejecuta el siguiente script:
+Para encontrar los índices de cámara de las cámaras conectadas a tu sistema, ejecuta el siguiente script:
 
 ```python
 lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
@@ -741,7 +741,7 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 - episode-time-s: Representa el tiempo para recopilar datos cada vez.
 - reset-time-s: Es el tiempo de preparación entre cada recopilación de datos.
 - num-episodes: Indica cuántos grupos de datos se espera recopilar.
-- push-to-hub: Determina si subir los datos al HuggingFace Hub.
+- push-to-hub: Determina si subir los datos al Hub de HuggingFace.
 
 :::tip
 
@@ -763,7 +763,7 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 
 - Evita agregar demasiada variación muy rápidamente, ya que puede obstaculizar tus resultados.
 
-- En Linux, si las teclas de flecha izquierda y derecha y la tecla escape no tienen ningún efecto durante la grabación de datos, asegúrate de haber configurado la variable de entorno $DISPLAY. Ver [limitaciones de pynput](https://pynput.readthedocs.io/en/latest/limitations.html#linux).
+- En Linux, si las teclas de flecha izquierda y derecha y la tecla escape no tienen efecto durante la grabación de datos, asegúrate de haber configurado la variable de entorno $DISPLAY. Ver [limitaciones de pynput](https://pynput.readthedocs.io/en/latest/limitations.html#linux).
 
 :::
 
@@ -856,7 +856,7 @@ Vamos a explicarlo:
 
 - **Especificación del conjunto de datos**: Proporcionamos el conjunto de datos a través del parámetro `--dataset.repo_id=${HF_USER}/so101_test`.
 - **Pasos de entrenamiento**: Modificamos el número de pasos de entrenamiento usando `--steps=300000`. El algoritmo por defecto usa 800000 pasos, y puedes ajustarlo según la dificultad de tu tarea y observando la pérdida durante el entrenamiento.
-- **Tipo de política**: Proporcionamos la política con `policy.type=act`. De manera similar, puedes cambiar entre políticas como [act, diffusion, pi0, pi0fast, pi0fast, sac, smolvla]., lo cual cargará la configuración desde `configuration_act.py`. Importante, esta política se adaptará automáticamente a los estados del motor de tu robot (por ejemplo, `laptop` y `phone`), acciones del motor y el número de cámaras, ya que esta información ya está almacenada en tu conjunto de datos.
+- **Tipo de política**: Proporcionamos la política con `policy.type=act`. De manera similar, puedes cambiar entre políticas como [act, diffusion, pi0, pi0fast, pi0fast, sac, smolvla]., lo cual cargará la configuración desde `configuration_act.py`. Importante, esta política se adaptará automáticamente a los estados del motor de tu robot (ej., `laptop` y `phone`), acciones del motor, y el número de cámaras, ya que esta información ya está almacenada en tu conjunto de datos.
 - **Selección de dispositivo**: Proporcionamos `policy.device=cuda` porque estamos entrenando en una GPU Nvidia, pero puedes usar `policy.device=mps` para entrenar en Apple Silicon.
 - **Herramienta de visualización**: Proporcionamos `wandb.enable=true` para visualizar gráficos de entrenamiento usando [Weights and Biases](https://docs.wandb.ai/quickstart). Esto es opcional, pero si lo usas, asegúrate de haber iniciado sesión ejecutando `wandb login`.
 
@@ -934,7 +934,7 @@ lerobot-record \
   --policy.path=outputs/train/act_so101_test/checkpoints/last/pretrained_model
 ```
 
-1. El parámetro `--policy.path` indica la ruta al archivo de pesos de los resultados de entrenamiento de tu política (por ejemplo, `outputs/train/act_so101_test/checkpoints/last/pretrained_model`). Si subes el archivo de pesos del resultado del entrenamiento del modelo a Hub, también puedes usar el repositorio del modelo (por ejemplo, `${HF_USER}/act_so100_test`).
+1. El parámetro `--policy.path` indica la ruta al archivo de pesos de los resultados de entrenamiento de tu política (ej., `outputs/train/act_so101_test/checkpoints/last/pretrained_model`). Si subes el archivo de pesos del resultado del entrenamiento del modelo a Hub, también puedes usar el repositorio del modelo (ej., `${HF_USER}/act_so100_test`).
 
 2. El nombre del conjunto de datos `dataset.repo_id` comienza con `eval_`. Esta operación grabará por separado videos y datos durante la evaluación, que se guardarán en la carpeta que comience con `eval_`, como `seeed/eval_test123`.
 
@@ -1001,7 +1001,7 @@ lerobot-record \
   File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'
   ```
 
-  Por favor elimina primero la carpeta que comience con `eval_` y luego ejecuta el programa nuevamente.
+  Por favor, elimina primero la carpeta que comience con `eval_` y luego ejecuta el programa nuevamente.
 
 - Si encuentras durante la fase de evaluación:
 
@@ -1045,7 +1045,7 @@ Dnsty: [Jetson Containers](https://github.com/dusty-nv/jetson-containers/tree/ma
 
 [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)
 
-[ACT o ALOHA](https://tonyzhaozh.github.io/aloha/)
+[ACT or ALOHA](https://tonyzhaozh.github.io/aloha/)
 
 [TDMPC](https://www.nicklashansen.com/td-mpc/)
 
