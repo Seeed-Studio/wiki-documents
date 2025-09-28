@@ -198,6 +198,7 @@ SO101の公式アップデートに伴い、SO100は公式によりサポート�
 - 材料：PLA+
 - ノズル径と精度：0.2mmレイヤー高さでの0.4mmノズル径、または0.4mmレイヤー高さでの0.6mmノズル。
 - 充填密度：15%
+
 ### ステップ 2: プリンターのセットアップ
 
 - プリンター固有の手順を使用して、プリンターが校正され、ベッドレベルが正しく設定されていることを確認してください。
@@ -386,6 +387,7 @@ sudo chmod 666 /dev/ttyACM1
 | **リーダーアーム関節6校正** | **リーダーアーム関節5校正** | **リーダーアーム関節4校正** | **リーダーアーム関節3校正** | **リーダーアーム関節2校正** | **リーダーアーム関節1校正** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L4.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L3.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L2.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L1.jpg) |
+
 :::danger
 Arm Kit版（ST-3215-C001）を購入した場合は、5V電源を使用してください。Arm Kit Pro版を購入した場合は、サーボの校正に12V電源を使用してください（ST-3215-C047/ST-3215-C018）。
 :::
@@ -533,6 +535,7 @@ ID 6まですべてのモーターに対してこのプロセスを繰り返し�
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F7.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F8.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F9.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F11.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F12.jpg) |
 | **ステップ13** | **ステップ14** | **ステップ15** | **ステップ16** | **ステップ17** |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F13.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F14.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F15.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F16.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F17.jpg) |
+
 ## キャリブレーション
 
 :::tip
@@ -780,7 +783,8 @@ Saving images to outputs/images_from_opencv_cameras
 Frame: 0000 Latency (ms): 39.52
 [...]
 Frame: 0046 Latency (ms): 40.07
-Images have been saved to outputs/images_from_opencv_cameras```
+Images have been saved to outputs/images_from_opencv_cameras
+```
 
 各カメラで撮影された画像は`outputs/images_from_opencv_cameras`ディレクトリで確認でき、異なる位置のカメラに対応するポートインデックス情報を確認できます。その後、`lerobot/lerobot/common/robot_devices/robots/configs.py`ファイルでカメラパラメータの調整を完了してください。
 
@@ -1030,6 +1034,7 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 - エピソード記録中はいつでもESCキーを押すとセッションを早期終了し、直接ビデオエンコーディングとデータセットアップロードに移行します。
 
 - 注意：--control.resume=trueを追加することで記録を再開できます。また、データセットをまだプッシュしていない場合は、--control.local_files_only=trueを追加してください。最初から記録を開始したい場合は、データセットディレクトリを手動で削除する必要があります。
+
 - データ記録に慣れたら、トレーニング用のより大きなデータセットを作成できます。良い開始タスクは、異なる場所でオブジェクトを掴み、ビンに配置することです。少なくとも50エピソードを記録し、場所ごとに10エピソードを記録することをお勧めします。カメラを固定し、記録全体を通して一貫した掴み動作を維持してください。また、操作しているオブジェクトがカメラに見えることを確認してください。良い経験則として、カメラ画像だけを見てタスクを自分で実行できるようにする必要があります。
 
 - 以下のセクションでは、ニューラルネットワークをトレーニングします。信頼性の高い掴み性能を達成した後、データ収集中により多くのバリエーションを導入し始めることができます。例えば、追加の掴み場所、異なる掴み技術、カメラ位置の変更などです。
@@ -1205,7 +1210,8 @@ python lerobot/scripts/control_robot.py \
 - 重要！！！実行中にサーボのケーブルが緩んだ場合は、サーボを初期位置に戻してからサーボケーブルを再接続してください。[サーボ初期化コマンド](https://wiki.seeedstudio.com/ja/lerobot_so100m/#configure-the-motors)を使用して個別にサーボをキャリブレーションすることもできます。個別キャリブレーション中は、サーボとドライバーボード間に1本のケーブルのみが接続されていることを確認してください。以下のエラーが発生した場合
 
   ```bash
-  Auto-correct calibration of motor 'wrist roll' by shifting value by 1 full turns, from '-270 < -312.451171875 < 270degrees' to'-270<-312.451171875 < 270 degrees'.  ```
+  Auto-correct calibration of motor 'wrist roll' by shifting value by 1 full turns, from '-270 < -312.451171875 < 270degrees' to'-270<-312.451171875 < 270 degrees'.  
+  ```
 
   またはロボットアームのキャリブレーション過程で角度や制限値の超過に関連するその他のエラーが発生した場合でも、この方法は依然として適用可能です。
 

@@ -50,7 +50,7 @@ Este wiki proporciona el tutorial de ensamblaje y depuración para el SO ARM10x 
 4. **Compatible con Nvidia**: Despliega este kit de brazo con reComputer Mini J4012 Orin NX 16 GB.
 5. **Aplicación Multi-Escenario**: Es aplicable a campos como educación, investigación científica, producción automatizada y robótica, ayudando a los usuarios a lograr operaciones de robot eficientes y precisas en varias tareas complejas.
 
-## Novedades:
+## Novedades
 
 - Optimización del cableado: Comparado con SO-ARM100, SO-ARM101 presenta un cableado mejorado que previene problemas de desconexión previamente vistos en la articulación 3. El nuevo diseño de cableado también ya no limita el rango de movimiento de las articulaciones.
 - Diferentes relaciones de engranajes para el brazo líder: El brazo líder ahora usa motores con relaciones de engranajes optimizadas, mejorando el rendimiento y eliminando la necesidad de cajas de engranajes externas.
@@ -198,6 +198,7 @@ Los archivos STL proporcionados están listos para imprimir en muchas impresoras
 - Material: PLA+
 - Diámetro de Boquilla y Precisión: diámetro de boquilla de 0.4mm a altura de capa de 0.2mm o boquilla de 0.6mm a altura de capa de 0.4mm.
 - Densidad de Relleno: 15%
+
 ### Paso 2: Configurar la impresora
 
 - Asegúrese de que la impresora esté calibrada y el nivel de la cama esté configurado correctamente usando las instrucciones específicas de la impresora.
@@ -386,6 +387,7 @@ Por favor use una fuente de alimentación de 5V para calibrar los motores Líder
 | **Calibración Articulación 6 Brazo Líder** | **Calibración Articulación 5 Brazo Líder** | **Calibración Articulación 4 Brazo Líder** | **Calibración Articulación 3 Brazo Líder** | **Calibración Articulación 2 Brazo Líder** | **Calibración Articulación 1 Brazo Líder** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L4.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L3.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L2.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L1.jpg) |
+
 :::danger
 Si compras la versión Arm Kit (ST-3215-C001), usa una fuente de alimentación de 5V. Si compras la versión Arm Kit Pro, por favor usa una fuente de alimentación de 12V para calibrar el servo (ST-3215-C047/ST-3215-C018).
 :::
@@ -533,6 +535,7 @@ Si compraste la **Edición Estándar SO101 Arm Kit**, todas las fuentes de alime
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F7.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F8.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F9.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F11.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F12.jpg) |
 | **Paso 13** | **Paso 14** | **Paso 15** | **Paso 16** | **Paso 17** |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F13.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F14.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F15.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F16.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F17.jpg) |
+
 ## Calibrar
 
 :::tip
@@ -780,7 +783,8 @@ Saving images to outputs/images_from_opencv_cameras
 Frame: 0000 Latency (ms): 39.52
 [...]
 Frame: 0046 Latency (ms): 40.07
-Images have been saved to outputs/images_from_opencv_cameras```
+Images have been saved to outputs/images_from_opencv_cameras
+```
 
 Puedes encontrar las imágenes tomadas por cada cámara en el directorio `outputs/images_from_opencv_cameras`, y confirmar la información del índice de puerto correspondiente a las cámaras en diferentes posiciones. Luego completa la alineación de los parámetros de la cámara en el archivo `lerobot/lerobot/common/robot_devices/robots/configs.py`.
 
@@ -1030,6 +1034,7 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 - Presiona escape ESC en cualquier momento durante la grabación del episodio para terminar la sesión temprano e ir directamente a la codificación de video y subida del conjunto de datos.
 
 - Nota: Puedes reanudar la grabación agregando --control.resume=true. También si aún no subiste tu conjunto de datos, agrega --control.local_files_only=true. Necesitarás eliminar manualmente el directorio del conjunto de datos si quieres empezar a grabar desde cero.
+
 - Una vez que te sientas cómodo con la grabación de datos, puedes crear un conjunto de datos más grande para el entrenamiento. Una buena tarea inicial es agarrar un objeto en diferentes ubicaciones y colocarlo en un contenedor. Sugerimos grabar al menos 50 episodios, con 10 episodios por ubicación. Mantén las cámaras fijas y conserva un comportamiento de agarre consistente durante todas las grabaciones. También asegúrate de que el objeto que estás manipulando sea visible en las cámaras. Una buena regla general es que deberías poder realizar la tarea tú mismo solo mirando las imágenes de la cámara.
 
 - En las siguientes secciones, entrenarás tu red neuronal. Después de lograr un rendimiento de agarre confiable, puedes comenzar a introducir más variaciones durante la recolección de datos, como ubicaciones de agarre adicionales, diferentes técnicas de agarre y alteración de las posiciones de la cámara.
@@ -1205,7 +1210,8 @@ Como puedes ver, es casi el mismo comando que se usó anteriormente para grabar 
 - ¡¡¡Importante!!! Si durante la ejecución el cable del servo se afloja, por favor restaura el servo a su posición inicial y luego reconecta el cable del servo. También puedes calibrar individualmente un servo usando el [Comando de Inicialización del Servo](https://wiki.seeedstudio.com/es/lerobot_so100m/#configure-the-motors), asegurándote de que solo un cable esté conectado entre el servo y la placa del controlador durante la calibración individual. Si encuentras
 
   ```bash
-  Auto-correct calibration of motor 'wrist roll' by shifting value by 1 full turns, from '-270 < -312.451171875 < 270degrees' to'-270<-312.451171875 < 270 degrees'.  ```
+  Auto-correct calibration of motor 'wrist roll' by shifting value by 1 full turns, from '-270 < -312.451171875 < 270degrees' to'-270<-312.451171875 < 270 degrees'.  
+  ```
 
   u otros errores durante el proceso de calibración del brazo robótico relacionados con ángulos y valores que exceden los límites, este método sigue siendo aplicable.
 
