@@ -16,7 +16,6 @@ last_update:
 
 Boot Linux in under 10 seconds and get started on development in less than 5 minutes with just a single USB cable.
 
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Eco-p-6540.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
@@ -27,23 +26,23 @@ Boot Linux in under 10 seconds and get started on development in less than 5 min
 
 **Feature 1: Powerful Core & Real-Time Processing**
 
-* Integrates a TI AM3358 1GHz ARM® Cortex-A8 processor, featuring a NEON™ SIMD coprocessor for accelerated processing. It also includes a dual-core Programmable Real-time Unit (PRU-ICSS) for deterministic, low-latency control, critical for industrial automation and robotics.
+- Integrates a TI AM3358 1GHz ARM® Cortex-A8 processor, featuring a NEON™ SIMD coprocessor for accelerated processing. It also includes a dual-core Programmable Real-time Unit (PRU-ICSS) for deterministic, low-latency control, critical for industrial automation and robotics.
 
 **Feature 2: Eco-Friendly Power Management**
 
-* Utilizes an advanced TI TPS6521403 PMIC with features like PFM mode and dynamic voltage scaling. This significantly optimizes power consumption, making it ideal for energy-sensitive and battery-powered applications.
+- Utilizes an advanced TI TPS6521403 PMIC with features like PFM mode and dynamic voltage scaling. This significantly optimizes power consumption, making it ideal for energy-sensitive and battery-powered applications.
 
 **Feature 3: 4X Storage Capacity & 10X Network Speed**
 
-* Leaps forward with 16GB of onboard eMMC storage (a four-fold increase) and upgrades connectivity with a Gigabit Ethernet port, offering up to 10 times the bandwidth of its predecessor for high-speed, stable network communication.
+- Leaps forward with 16GB of onboard eMMC storage (a four-fold increase) and upgrades connectivity with a Gigabit Ethernet port, offering up to 10 times the bandwidth of its predecessor for high-speed, stable network communication.
 
 **Feature 4: Rich & Modern Connectivity**
 
-* Features upgraded high-speed interfaces including a Gigabit Ethernet port and a modern USB Type-C port for power and data. For rapid prototyping, it also includes two built-in Grove connectors (I2C & UART)Grove - Seeed Studio, enabling easy, solder-free connection to Seeed Studio's extensive ecosystem of sensors and actuators.
+- Features upgraded high-speed interfaces including a Gigabit Ethernet port and a modern USB Type-C port for power and data. For rapid prototyping, it also includes two built-in Grove connectors (I2C & UART)Grove - Seeed Studio, enabling easy, solder-free connection to Seeed Studio's extensive ecosystem of sensors and actuators.
 
 **Feature 5: Ready for Development**
 
-* Comes pre-loaded with a Debian software image designated by the BeagleBoard.org® Foundation, providing a robust and familiar Linux environment with well-established tools and libraries to streamline your development process.
+- Comes pre-loaded with a Debian software image designated by the BeagleBoard.org® Foundation, providing a robust and familiar Linux environment with well-established tools and libraries to streamline your development process.
 
 ## Specification
 
@@ -68,17 +67,15 @@ Boot Linux in under 10 seconds and get started on development in less than 5 min
 |            | Weight                | 40g                                                                                                                    | 45g                                                                                           |
 |            | Operating Temperature | **-40 ~ 85℃**                                                                                                              | 0 ~ 75℃                                                                                       |
 
-
-
 ## Application Ideas
 
-* Internet of Things
-* Smart House
-* Industrial
-* Automation & Process Control
-* Human Machine Interface
-* Sensor Hub
-* Robot
+- Internet of Things
+- Smart House
+- Industrial
+- Automation & Process Control
+- Human Machine Interface
+- Sensor Hub
+- Robot
 
 ## Hardware Overview
 
@@ -89,33 +86,36 @@ BeagleBone® Green Eco is built around Texas Instruments' AM335x ARM Cortex-A8 p
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/Functional-Block-Diagram.png" /></div>
 
-
 **Processor**
 BeagleBone® Green Eco integrates the Texas Instruments AM335x 1GHz ARM® Cortex-A8 processor that combines computational processing, graphics acceleration, and real-time control functionality within a single SoC. The architecture implements ARMv7-A with NEON™ SIMD engine and VFPv3 floating-point unit for efficient execution of complex computational tasks, while maintaining power efficiency for embedded applications.
 A distinctive feature is the Programmable Real-time Unit Subsystem and Industrial Communication Subsystem (PRU-ICSS), comprising dual 32-bit RISC cores operating independently from the main ARM processor. These PRUs enable deterministic real-time control with sub-microsecond response times and implementation of specialized industrial communication protocols. The AM335x supports high-level operating systems including Linux and real-time operating systems through TI's Processor SDK and development environments.
-* AM335x 1GHz ARM® Cortex-A8 processor, 15.0mm x 15.0mm, NFBGA (324)
-* NEON™ SIMD coprocessor and VFPv3 floating-point unit for accelerated media and signal processing
-* PowerVR SGX™ Graphics Accelerator supporting OpenGL ES 2.0
-* Dual 32-bit PRU-ICSS for real-time industrial communications and control
-* Support for industrial interfaces including EtherCAT, PROFINET, and PROFIBUS
+
+- AM335x 1GHz ARM® Cortex-A8 processor, 15.0mm x 15.0mm, NFBGA (324)
+- NEON™ SIMD coprocessor and VFPv3 floating-point unit for accelerated media and signal processing
+- PowerVR SGX™ Graphics Accelerator supporting OpenGL ES 2.0
+- Dual 32-bit PRU-ICSS for real-time industrial communications and control
+- Support for industrial interfaces including EtherCAT, PROFINET, and PROFIBUS
 
 **Memory and Storage**
 BeagleBone® Green Eco includes:
-* 1x 512MB (4Gb) DDR3L RAM (Kingston D2516ECMDXGJDI-U) with 16-bit interface
-* 1x 16GB eMMC onboard flash storage (Kingston EMMC16G-WW28) with MMC1 8-bit interface
-* 1x 32Kbit EEPROM (FMD FT24C32A-ELRT) connected via I2C0
-* MicroSD card slot with MMC0 4-bit interface for expandable storage
+
+- 1x 512MB (4Gb) DDR3L RAM (Kingston D2516ECMDXGJDI-U) with 16-bit interface
+- 1x 16GB eMMC onboard flash storage (Kingston EMMC16G-WW28) with MMC1 8-bit interface
+- 1x 32Kbit EEPROM (FMD FT24C32A-ELRT) connected via I2C0
+- MicroSD card slot with MMC0 4-bit interface for expandable storage
 
 **Interfaces and Peripherals**
 BeagleBone® Green Eco supports:
-* Gigabit Ethernet connectivity
-* 1x USB 2.0 Type-C port for power and communications
-* 1x USB 2.0 Host Interface, Type-A
- 
+
+- Gigabit Ethernet connectivity
+- 1x USB 2.0 Type-C port for power and communications
+- 1x USB 2.0 Host Interface, Type-A
+
 **Expansion Connectors/Headers to Support Application Specific Capes**
-* 2x 46-pins headers
-* 1x 6-pins UART0 headers
-* Two Grove connectors (One I2C and One UART) for easy connection to the Grove ecosystem of sensors and actuators
+
+- 2x 46-pins headers
+- 1x 6-pins UART0 headers
+- Two Grove connectors (One I2C and One UART) for easy connection to the Grove ecosystem of sensors and actuators
 
 **Header Pin Definition**
 
@@ -146,7 +146,6 @@ Make sure you don't input more than 1.8V to the analog input pins. This is a sin
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/4.png" /></div>
 
-
 **UART**
 
 :::note
@@ -171,7 +170,6 @@ The first I2C bus is utilized for reading EEPROMS on cape add-on boards and can'
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/7.png" /></div>
 
-
 ## Getting Started
 
 :::note
@@ -186,10 +184,10 @@ Seeed Studio BeagleBone® Green will operate as a flash drive providing you with
 
 You'll see the PWR LED lit steadily. Within 10 seconds, you should see the other LEDs blinking in their default configurations.
 
-* D2 is configured at boot to blink in a heartbeat pattern
-* D3 is configured at boot to light during microSD card accesses
-* D4 is configured at boot to light during CPU activity
-* D5 is configured at boot to light during eMMC accesses
+- D2 is configured at boot to blink in a heartbeat pattern
+- D3 is configured at boot to light during microSD card accesses
+- D4 is configured at boot to light during CPU activity
+- D5 is configured at boot to light during eMMC accesses
 
 **STEP2. Install Drivers**
 
@@ -205,11 +203,12 @@ Install the drivers for your operating system to give you network-over-USB acces
 :::note
     For Windows system, please note that:
 
-* Windows Driver Certification warning may pop up two or three times. Click "Ignore", "Install" or "Run"
-* To check if you're running 32 or 64-bit Windows see [this](https://support.microsoft.com/kb/827218).
-* On systems without the latest service release, you may get an error (0xc000007b). In that case, please [install](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523) and retry:
-* You may need to reboot Windows.
-* These drivers have been tested to work up to Windows 10
+- Windows Driver Certification warning may pop up two or three times. Click "Ignore", "Install" or "Run"
+- To check if you're running 32 or 64-bit Windows see [this](https://support.microsoft.com/kb/827218).
+- On systems without the latest service release, you may get an error (0xc000007b). In that case, please [install](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523) and retry:
+- You may need to reboot Windows.
+- These drivers have been tested to work up to Windows 10
+
 :::
 
 :::note
@@ -277,9 +276,10 @@ Click on **Write** button, then the process is started.
 
 :::note
 
-* You may see a warning about damaging your device. This is fine to accept as long as you are pointing to your SD card for writing.
-* You should not have your BeagleBone® connected to your computer at this time.
-* This process may need up to 10 minutes.
+- You may see a warning about damaging your device. This is fine to accept as long as you are pointing to your SD card for writing.
+- You should not have your BeagleBone® connected to your computer at this time.
+- This process may need up to 10 minutes.
+
 :::
 
 **STEP5. Boot your board off of the SD card**
@@ -364,35 +364,33 @@ You will need some expansion board when you start a project. There're many cape 
 |![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product6.jpg)|
 |[GET ONE NOW!](https://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)|[GET ONE NOW!](https://www.seeedstudio.com/5-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2642.html)|[GET ONE NOW!](https://www.seeedstudio.com/7-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2643.html)|
 
-
 ## References
 
 There're many references to help you to get more information about the board.
 
-* [BeagleBoard Main Page](https://beagleboard.org/)
-* [BeagleBoard Getting Started](https://beagleboard.org/getting-started)
-* [Troubleshooting](https://beagleboard.org/getting-started#troubleshooting)
-* [Hardware documentation](https://beagleboard.org/getting-started#hardware)
-* [Projects of BeagleBoard](https://beagleboard.org/project)
-* [CE certification of Seeed Studio BeagleBone® Green Eco](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-CE.pdf)
-* [FCC certification of Seeed Studio BeagleBone® Green Eco](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-FCC.pdf)
+- [BeagleBoard Main Page](https://beagleboard.org/)
+- [BeagleBoard Getting Started](https://beagleboard.org/getting-started)
+- [Troubleshooting](https://beagleboard.org/getting-started#troubleshooting)
+- [Hardware documentation](https://beagleboard.org/getting-started#hardware)
+- [Projects of BeagleBoard](https://beagleboard.org/project)
+- [CE certification of Seeed Studio BeagleBone® Green Eco](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-CE.pdf)
+- [FCC certification of Seeed Studio BeagleBone® Green Eco](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-FCC.pdf)
 
 ## Resources
 
-* **[PDF]** [AM335X Datasheet](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
-* **[PDF]** [Seeed Studio BeagleBone Green Eco Schematic](https://files.seeedstudio.com/products/102111198/res/BeagleBone%20Green%20Eco_V1.0_SCH_250814.pdf)
+- **[PDF]** [AM335X Datasheet](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
+- **[PDF]** [Seeed Studio BeagleBone Green Eco Schematic](https://files.seeedstudio.com/products/102111198/res/BeagleBone%20Green%20Eco_V1.0_SCH_250814.pdf)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
