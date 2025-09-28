@@ -83,29 +83,29 @@ If you want to customize the behavior of your IoT Button, you can develop your o
 
 ### Step 1: Set Up Arduino IDE for ESP32-C6
 
-1.  Install the latest version of Arduino IDE.
-2.  Add ESP32 board support:
-    -   Go to **File > Preferences**.
-    -   Add `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` to the "Additional Boards Manager URLs" field.
-    -   Go to **Tools > Board > Boards Manager**.
-    -   Search for "esp32" and install the latest version (ensure it is **version 3.2.1 or above**).
+1. Install the latest version of Arduino IDE.
+2. Add ESP32 board support:
+    - Go to **File > Preferences**.
+    - Add `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` to the "Additional Boards Manager URLs" field.
+    - Go to **Tools > Board > Boards Manager**.
+    - Search for "esp32" and install the latest version (ensure it is **version 3.2.1 or above**).
 
 ### Step 2: Install Required Libraries
 
 The IoT Button firmware uses the `FastLED` library for RGB effects and the Espressif Zigbee SDK, which is included in the ESP32 Arduino package. The `FastLED` library can be installed via the Arduino Library Manager.
 
-1.  Go to **Sketch > Include Library > Manage Libraries...**.
+1. Go to **Sketch > Include Library > Manage Libraries...**.
 
-2.  Search for "FastLED" and install the library by Daniel Garcia.
+2. Search for "FastLED" and install the library by Daniel Garcia.
 
 ### Step 3: Configure Arduino IDE for Zigbee Development
 
-1.  Select the correct board:
-    -   **Tools > Board > ESP32 Arduino > XIAO ESP32C6**
+1. Select the correct board:
+    - **Tools > Board > ESP32 Arduino > XIAO ESP32C6**
 
-2.  Configure Zigbee settings:
-    -   **Tools > Zigbee Mode > Zigbee End Device**
-    -   **Tools > Partition Scheme > Zigbee 4MB with spiffs**
+2. Configure Zigbee settings:
+    - **Tools > Zigbee Mode > Zigbee End Device**
+    - **Tools > Partition Scheme > Zigbee 4MB with spiffs**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/iot_button_zigbee/1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -920,35 +920,35 @@ The documentation may not be up to date with code updates, you can also click th
 
 ### Step 5: Upload and Test Your Firmware
 
-1.  Connect your IoT Button to your computer via USB.
-2.  Select the correct port in Arduino IDE.
-3.  Click the **Upload** button.
-4.  Open the **Serial Monitor** (baud rate 115200) to view debug information.
-5.  Once flashing is complete, the button is ready to be paired.
+1. Connect your IoT Button to your computer via USB.
+2. Select the correct port in Arduino IDE.
+3. Click the **Upload** button.
+4. Open the **Serial Monitor** (baud rate 115200) to view debug information.
+5. Once flashing is complete, the button is ready to be paired.
 
 ### Step 6: Set Up Zigbee in Home Assistant
 
 Before pairing your IoT Button, you need to set up a Zigbee coordinator in Home Assistant:
 
-1.  **Install a Zigbee Coordinator**: Connect a Zigbee coordinator like the Home Assistant Connect ZBT-1 to your Home Assistant server.
-2.  **Set Up Zigbee Home Automation (ZHA)**:
-    -   Go to **Settings > Devices & Services**.
-    -   Click "**Add Integration**" and search for "**Zigbee Home Automation**".
-    -   Follow the prompts to set up ZHA with your coordinator.
+1. **Install a Zigbee Coordinator**: Connect a Zigbee coordinator like the Home Assistant Connect ZBT-1 to your Home Assistant server.
+2. **Set Up Zigbee Home Automation (ZHA)**:
+    - Go to **Settings > Devices & Services**.
+    - Click "**Add Integration**" and search for "**Zigbee Home Automation**".
+    - Follow the prompts to set up ZHA with your coordinator.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/5.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Step 7: Pair the IoT Button with Home Assistant
 
-1.  In Home Assistant, go to **Settings > Devices & Services > Zigbee Home Automation**.
-2.  Click on your Zigbee coordinator device.
-3.  Click "**Add Device**" to put the coordinator in pairing mode.
+1. In Home Assistant, go to **Settings > Devices & Services > Zigbee Home Automation**.
+2. Click on your Zigbee coordinator device.
+3. Click "**Add Device**" to put the coordinator in pairing mode.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/15.png" style={{width:1000, height:'auto'}}/></div>
 
-4.  Press the button on your IoT Button once to wake it and initiate pairing. If it doesn't pair, try holding the button for more than 5 seconds to trigger a factory reset, which will also put it into pairing mode.
-5.  Home Assistant should discover the IoT Button as "**Seeed Studio IoT_Button**".
-6.  Follow the prompts to complete the pairing process. You will see a device with multiple entities (a binary sensor and three switches).
+4. Press the button on your IoT Button once to wake it and initiate pairing. If it doesn't pair, try holding the button for more than 5 seconds to trigger a factory reset, which will also put it into pairing mode.
+5. Home Assistant should discover the IoT Button as "**Seeed Studio IoT_Button**".
+6. Follow the prompts to complete the pairing process. You will see a device with multiple entities (a binary sensor and three switches).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/iot_button_zigbee/2.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -956,15 +956,15 @@ Before pairing your IoT Button, you need to set up a Zigbee coordinator in Home 
 
 Once paired, you can create automations based on the button's actions. The firmware exposes different click types as separate switches, making automation simple.
 
-1.  Go to **Settings > Automations & Scenes > Create Automation**.
-2.  Select "**Device**" as the trigger type.
-3.  Find your IoT Button in the device list.
-4.  Select the desired trigger from the list. ZHA will expose the different clicks as device actions, for example:
-    -   "Single press" (from the virtual switch on Endpoint 11)
-    -   "Double press" (from the virtual switch on Endpoint 12)
-    -   "Long press" (from the virtual switch on Endpoint 13)
-5.  Configure the actions you want to perform when the button is pressed.
-6.  Save the automation.
+1. Go to **Settings > Automations & Scenes > Create Automation**.
+2. Select "**Device**" as the trigger type.
+3. Find your IoT Button in the device list.
+4. Select the desired trigger from the list. ZHA will expose the different clicks as device actions, for example:
+    - "Single press" (from the virtual switch on Endpoint 11)
+    - "Double press" (from the virtual switch on Endpoint 12)
+    - "Long press" (from the virtual switch on Endpoint 13)
+5. Configure the actions you want to perform when the button is pressed.
+6. Save the automation.
 
 Example automation in Home Assistant YAML to toggle a light with a **double click**:
 
@@ -991,7 +991,7 @@ By leveraging the ESP32-C6's built-in Zigbee capabilities, the IoT Button can op
 
 ## Troubleshooting
 
-### Q1: Why does my device keep dropping out and not being able to connect to the internet after replacing the battery? I can confirm that the battery is charged.
+### Q1: Why does my device keep dropping out and not being able to connect to the internet after replacing the battery? I can confirm that the battery is charged
 
 After the battery has been removed, due to the chip protection strategy of the 18650 battery, it needs to be activated a bit by a charged USB power cable to work properly.
 
@@ -1013,4 +1013,4 @@ Thank you for choosing our products! We are here to provide you with different s
 <div class="button_tech_support_container">
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-</div> 
+</div>
