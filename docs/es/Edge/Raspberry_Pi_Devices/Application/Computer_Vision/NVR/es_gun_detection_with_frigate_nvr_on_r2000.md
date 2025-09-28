@@ -1,6 +1,6 @@
 ---
-description: This wiki demonstrates implement gun detection based on the Frigate NVR and reComputer AI box. 
-title: Gan detection with Frigate NVR on R2000
+description: Este wiki demuestra la implementación de detección de armas basada en Frigate NVR y la caja de IA reComputer.
+title: Detección de armas con Frigate NVR en R2000
 keywords:
   - Raspberry pi
   - Edge AI Computer
@@ -8,7 +8,7 @@ keywords:
   - Object detecton
   - Frigate
 image: https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/setting_3.webp
-slug: /gan_detection_with_frigate_nvr_on_r2000
+slug: /es/gun_detection_with_frigate_nvr_on_r2000
 last_update:
   date: 08/12/2025
   author: Nolan Chen
@@ -16,17 +16,17 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# Gan detection with Frigate NVR on R2000
+# Detección de armas con Frigate NVR en R2000
 
-## Introduction
+## Introducción
 
-**Frigate NVR** is an open-source network video recorder designed for AI-first, real-time video analytics at the edge. Deployed on a **reComputer AI box** with Hailo, the system locally ingests multiple camera streams, runs a quantitative object detection model, and emits MQTT events within milliseconds, eliminating cloud latency and bandwidth costs.
+**Frigate NVR** es un grabador de video en red de código abierto diseñado para análisis de video en tiempo real con IA en el borde. Desplegado en una **caja de IA reComputer** con Hailo, el sistema ingiere localmente múltiples flujos de cámara, ejecuta un modelo de detección de objetos cuantitativo y emite eventos MQTT en milisegundos, eliminando la latencia de la nube y los costos de ancho de banda.
 
-For this deployment, we expanded Frigate's existing model library and added a custom **yolov11s** model specifically fine-tuned for pistol and rifle recognition. When a gan is detected, Frigate's rules engine immediately triggers an alert, giving security teams precious seconds to lock down the area and coordinate a response before the threat escalates.
+Para este despliegue, expandimos la biblioteca de modelos existente de Frigate y agregamos un modelo personalizado **yolov11s** específicamente ajustado para el reconocimiento de pistolas y rifles. Cuando se detecta un arma, el motor de reglas de Frigate inmediatamente activa una alerta, dando a los equipos de seguridad segundos preciosos para bloquear el área y coordinar una respuesta antes de que la amenaza escale.
 
-## Prerequisites
+## Prerrequisitos
 
-### Hardware Requirements
+### Requisitos de Hardware
 
 <div class="table-center">
   <table align="center">
@@ -41,38 +41,38 @@ For this deployment, we expanded Frigate's existing model library and added a cu
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
           </a>
       </div></td>
 <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-## Configuring Frigate
+## Configurando Frigate
 
-### Modifying PCIe Settings
+### Modificando la Configuración PCIe
 
-Opening `config.txt`:
+Abriendo `config.txt`:
 
 ```bash
 sudo nano /boot/firmware/config.txt
 ```
 
-Add the following to `config.txt`:
+Agregar lo siguiente a `config.txt`:
 
 ```bash
 dtparam=pciex1_gen=3
 dtoverlay=pciex1-compat-pi5,no-mip
 ```
 
-Then save the file using  `Ctrl+x`  and restart the AI box.
+Luego guardar el archivo usando `Ctrl+x` y reiniciar la caja de IA.
 
-### Install Docker and hailo-all
+### Instalar Docker y hailo-all
 
 ```bash
 sudo apt update
@@ -83,16 +83,16 @@ sudo usermod -aG docker $USER
 sudo apt install docker-compose-plugin
 ```
 
-### Creating a yml file
+### Creando un archivo yml
 
-Create the `frigate.yml` file so that Docker Compose can run Frigate.
+Crear el archivo `frigate.yml` para que Docker Compose pueda ejecutar Frigate.
 
 ```bash
 cd ~
 sudo nano frigate.yml
 ```
 
-Here is an example of `frigate.yml`:
+Aquí hay un ejemplo de `frigate.yml`:
 
 ```bash
 services:
@@ -126,7 +126,7 @@ services:
       - "44"  # video group
 ```
 
-Download the case video:
+Descargar el video de caso:
 
 ```bash
 mkdir media && cd media
@@ -134,7 +134,7 @@ wget -c \
 "https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/model_cache/yolov11s.hef"
 ```
 
-Download the YOLO model and create config.yml:
+Descargar el modelo YOLO y crear config.yml:
 
 ```bash
 cd .. && mkdir config && cd config && mkdir model_cache
@@ -142,7 +142,7 @@ cd model_cache && wget https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZ
 cd .. && nano config.yml
 ```
 
-The following is an example config.yml:
+El siguiente es un ejemplo de config.yml:
 
 ```bash
 database:
@@ -153,24 +153,24 @@ go2rtc:
     # USB camera streaming
     usb_camera:
       - "ffmpeg:/dev/video0#input=-f v4l2 -input_format mjpeg -video_size 640x480 -framerate 15"
-    
+
     # RTSP stream configuration
 
     hikvision_main:
       - "rtsp://admin:password@192.168.1.100:554/h264/ch1/main/av_stream"
-    
+
     # Video file streaming - close.mp4
     video_files_close:
       - "ffmpeg:/media/frigate/close.mp4"
-    
+
     # Video file streaming - close2.mp4
     video_files_close2:
       - "ffmpeg:/media/frigate/close2.mp4"
-    
+
     # Video file streaming - y4.mp4
     video_files_y4:
       - "ffmpeg:/media/frigate/y4.mp4"
-    
+
     # Video file streaming - y5.mp4
     video_files_y5:
       - "ffmpeg:/media/frigate/y5.mp4"
@@ -413,9 +413,9 @@ lpr:
   enabled: false
 ```
 
-## Run the project
+## Ejecutar el proyecto
 
-Pull and run the project:
+Descargar y ejecutar el proyecto:
 
 ```bash
 cd ~
@@ -423,7 +423,7 @@ sudo docker pull mjqx2023/frigate_seeed
 docker compose -f frigate.yml up -d
 ```
 
-Then open **localhost:5000** in the web browser of the AI box:
+Luego abrir **localhost:5000** en el navegador web de la caja de IA:
 
 <div style={{ textAlign: 'center' }}>
   <img
@@ -432,7 +432,7 @@ Then open **localhost:5000** in the web browser of the AI box:
   />
 </div>
 
-Select one of the videos to start debugging, select the display box, and the results will be automatically displayed:
+Seleccionar uno de los videos para comenzar la depuración, seleccionar la caja de visualización, y los resultados se mostrarán automáticamente:
 
 <div style={{ textAlign: 'center' }}>
   <img
@@ -448,7 +448,7 @@ Select one of the videos to start debugging, select the display box, and the res
   />
 </div>
 
-Switch tabs to view past test results:
+Cambia de pestaña para ver los resultados de pruebas anteriores:
 
 <div style={{ textAlign: 'center' }}>
   <img
@@ -457,22 +457,22 @@ Switch tabs to view past test results:
   />
 </div>
 
-## Result
+## Resultado
 
-When it sees someone holding a gun, the model will identify it and select it.
-Switch to debug mode, select the display box, and the results will be automatically displayed; switch tabs to view past detection results.
+Cuando detecta a alguien sosteniendo un arma, el modelo la identificará y la seleccionará.
+Cambia al modo de depuración, selecciona la caja de visualización, y los resultados se mostrarán automáticamente; cambia de pestaña para ver los resultados de detección anteriores.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/gun_detection_gif.gif" alt="pir" width={1000} height="auto"/></p>
 
-## Other configurations
+## Otras configuraciones
 
-| Configuration of other video sources | Frame rate configuration|
+| Configuración de otras fuentes de video | Configuración de velocidad de fotogramas|
 |--------------------------|--------------------|
-| Frigate supports RTSP, video streaming, and USB cameras. Once the configuration file is configured, it will take effect after reboot.                | The configuration file can configure the detection frame rate of each camera, which will take effect after restart.|
-| You can access configuration options in Settings, such as changing the RTSP path to connect to an RTSP camera. Once you've made changes, click Save & Restart in the upper-right corner for the changes to take effect.| ![page](https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/other.png)|
+| Frigate soporta RTSP, transmisión de video y cámaras USB. Una vez que el archivo de configuración esté configurado, tomará efecto después del reinicio.                | El archivo de configuración puede configurar la velocidad de fotogramas de detección de cada cámara, lo cual tomará efecto después del reinicio.|
+| Puedes acceder a las opciones de configuración en Configuración, como cambiar la ruta RTSP para conectar a una cámara RTSP. Una vez que hayas hecho cambios, haz clic en Guardar y Reiniciar en la esquina superior derecha para que los cambios tomen efecto.| ![page](https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/other.png)|
 
-## Tech Support & Product Discussion
+## Soporte Técnico y Discusión del Producto
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
