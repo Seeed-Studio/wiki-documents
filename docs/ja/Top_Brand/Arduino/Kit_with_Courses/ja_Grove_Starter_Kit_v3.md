@@ -226,7 +226,7 @@ Grove – Temperature Sensorは環境温度を検出するために使用され�
 
 ![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_v3/img/Grove-LED_Photo.jpg)
 
-Grove - LEDは、Arduino/Seeeeduinoの初心者がデジタルポートからの制御を監視するために設計されています。ボックスや机の表面に簡単に取り付けることができ、電源や信号のパイロットランプとして使用できます。
+Grove - LEDは、Arduino/Seeeduinoの初心者がデジタルポートからの制御を監視するために設計されています。ボックスや机の表面に簡単に取り付けることができ、電源や信号のパイロットランプとして使用できます。
 
 **例**
 
