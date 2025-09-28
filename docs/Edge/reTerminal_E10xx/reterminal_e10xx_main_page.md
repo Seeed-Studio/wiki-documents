@@ -17,7 +17,6 @@ The reTerminal E Series ePaper Display represents Seeed Studio's family of ePape
 
 Unlike traditional displays that consume power continuously, the reTerminal E Series ePaper Display only uses power when changing content, making them ideal for applications requiring extended battery life and always-on information display.
 
-
 ## reTerminal E1001
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.jpg" style={{width:700, height:'auto'}}/></div><br />
@@ -52,7 +51,6 @@ The reTerminal E1001 features a 7.5-inch monochrome ePaper display with 4-level 
     <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
   </a>
 </div><br />
-
 
 The reTerminal E1002 features a vibrant 7.3-inch full-color ePaper display with ACeP (Advanced Color ePaper) technology. This color display offers the same power efficiency benefits of ePaper technology while allowing for more visually engaging content with multiple colors, making it ideal for applications where visual distinction and aesthetic appeal are important.
 
@@ -100,10 +98,7 @@ The reTerminal E Series ePaper Display supports multiple development platforms a
 
   Utilize the dedicated TRMNL framework for simplified development and rapid deployment.
 
-<!-- - [GxEPD2 Library Support](https://wiki.seeedstudio.com/reTerminal_GxEPD2)
-Leverage the powerful GxEPD2 library for advanced ePaper display control and rendering.
-
-- [LVGL + SquareLine Studio](https://wiki.seeedstudio.com/reTerminal_LVGL_SquareLine)
+<!-- - [LVGL + SquareLine Studio](https://wiki.seeedstudio.com/reTerminal_LVGL_SquareLine)
 Create rich graphical interfaces using LVGL and the visual SquareLine Studio designer. -->
 
 ## Resources
@@ -118,15 +113,15 @@ Any changes or modifications not expressly approved by the party responsible for
 
 (1) this device may not cause harmful interference, and
 
-(2) this device must accept any interference received, including interference that may cause undesired operation. This transmitter must not be co-located or operating in conjunction with any other antenna or transmitter. 
+(2) this device must accept any interference received, including interference that may cause undesired operation. This transmitter must not be co-located or operating in conjunction with any other antenna or transmitter.
 
-Note: This equipment has been tested and found to comply with the limits for a Class B digital device, pursuant to Part 15 of the FCC Rules. These limits are designed to provide reasonable protection against harmful interference in a residential installation. This equipment generates, uses, and can radiate radio frequency energy, and if not installed and used in accordance with the instructions, may cause harmful interference to radio communications. However, there is no guarantee that interference will not occur in a particular installation. If this equipment does cause harmful interference to radio or television reception, which can be determined by turning the equipment off and on, the user is encouraged to try to correct the interference by one or more of the following measures: 
+Note: This equipment has been tested and found to comply with the limits for a Class B digital device, pursuant to Part 15 of the FCC Rules. These limits are designed to provide reasonable protection against harmful interference in a residential installation. This equipment generates, uses, and can radiate radio frequency energy, and if not installed and used in accordance with the instructions, may cause harmful interference to radio communications. However, there is no guarantee that interference will not occur in a particular installation. If this equipment does cause harmful interference to radio or television reception, which can be determined by turning the equipment off and on, the user is encouraged to try to correct the interference by one or more of the following measures:
 
 – Reorient or relocate the receiving antenna.
 
-– Increase the separation between the equipment and receiver. 
+– Increase the separation between the equipment and receiver.
 
-– Connect the equipment into an outlet on a circuit different from that to which the receiver is connected. 
+– Connect the equipment into an outlet on a circuit different from that to which the receiver is connected.
 
 – Consult the dealer or an experienced radio/TV technician for help. This device complies with FCC radiation exposure limits set forth for an uncontrolled environment. This device should be installed and operated with minimum distance 20cm between the radiator & your body.
 
@@ -136,14 +131,12 @@ Thank you for choosing our products! We are here to provide you with different s
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>
-
-
