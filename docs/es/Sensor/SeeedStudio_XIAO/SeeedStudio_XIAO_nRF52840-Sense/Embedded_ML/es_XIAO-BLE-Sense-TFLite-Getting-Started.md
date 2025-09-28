@@ -40,7 +40,7 @@ Ahora continuemos con el resto de la configuración del software.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/add-zip.png" alt="pir" width={600} height="auto" /></p>
 
 
-- **Paso 4.** Navega a `File > Examples > Seeeed Arduino LSM6DS3 > IMU_Capture` para abrir **IMU_Capture.ino**
+- **Paso 4.** Navega a `File > Examples > Seeed Arduino LSM6DS3 > IMU_Capture` para abrir **IMU_Capture.ino**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/select-IMUCapture-2.png" alt="pir" width={500} height="auto" /></p>
 

@@ -50,7 +50,7 @@ Este wiki proporciona el tutorial de ensamblaje y depuración para el SO ARM10x 
 4. **Compatible con Nvidia**: Despliega este kit de brazo con reComputer Mini J4012 Orin NX 16 GB.
 5. **Aplicación Multi-Escenario**: Es aplicable a campos como educación, investigación científica, producción automatizada y robótica, ayudando a los usuarios a lograr operaciones de robot eficientes y precisas en varias tareas complejas.
 
-## Novedades:
+## Novedades
 
 - Optimización del cableado: Comparado con SO-ARM100, SO-ARM101 presenta un cableado mejorado que previene problemas de desconexión previamente vistos en la articulación 3. El nuevo diseño de cableado también ya no limita el rango de movimiento de las articulaciones.
 - Diferentes relaciones de engranajes para el brazo líder: El brazo líder ahora usa motores con relaciones de engranajes optimizadas, mejorando el rendimiento y eliminando la necesidad de cajas de engranajes externas.
@@ -200,6 +200,7 @@ Los archivos STL proporcionados están listos para imprimir en muchas impresoras
 - Densidad de Relleno: 15%  
 
 ### Paso 2: Configurar la impresora
+
 - Asegúrese de que la impresora esté calibrada y que el nivel de la cama esté configurado correctamente usando las instrucciones específicas de la impresora.
 - Limpie la cama de impresión, asegurándose de que esté libre de polvo o grasa. Si limpia la cama con agua u otro líquido, seque la cama.
 - Si su impresora lo recomienda, use una barra de pegamento estándar y aplique una capa delgada y uniforme de pegamento en el área de impresión de la cama. Evite la acumulación o aplicación desigual.
@@ -398,6 +399,7 @@ Si compra la versión Arm Kit (ST-3215-C001), use una fuente de alimentación de
 | **Calibración Articulación 6 Brazo Seguidor** | **Calibración Articulación 5 Brazo Seguidor** | **Calibración Articulación 4 Brazo Seguidor** | **Calibración Articulación 3 Brazo Seguidor** | **Calibración Articulación 2 Brazo Seguidor** | **Calibración Articulación 1 Brazo Seguidor** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F4.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F3.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F2.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F1.jpg) |
+
 :::tip
 Nuevamente, asegúrese de que los IDs de las articulaciones del servo y las relaciones de engranajes correspondan estrictamente a los del SO-ARM101.
 :::
@@ -535,7 +537,8 @@ sudo chmod 666 /dev/ttyACM*
 lerobot-calibrate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \# <- The port of your robot
-    --robot.id=my_awesome_follower_arm  # <- Give the robot a unique name```
+    --robot.id=my_awesome_follower_arm  # <- Give the robot a unique name
+```
 
 El video a continuación muestra cómo realizar la calibración. Primero necesitas mover el robot a la posición donde todas las articulaciones estén en el medio de sus rangos. Luego, después de presionar enter, tienes que mover cada articulación a través de su rango completo de movimiento.
 
@@ -751,6 +754,7 @@ La función **record** proporciona un conjunto de herramientas para capturar y g
 - Para reanudar después de una interrupción, vuelve a ejecutar el mismo comando con: `--resume=true`
 
 ⚠️ Nota crítica: Al reanudar, establece `--dataset.num_episodes` al número de episodios adicionales a grabar (no el número total objetivo de episodios en el conjunto de datos).
+
 - Para comenzar a grabar desde cero, **elimina manualmente** el directorio del conjunto de datos.
 
 **3. Parámetros de grabación**
@@ -786,14 +790,15 @@ Controla el flujo de grabación de datos usando atajos de teclado:
   - Evitar aumentos rápidos de complejidad para prevenir fallas.
 
 💡 Regla general: Deberías poder hacer la tarea tú mismo solo mirando las imágenes de la cámara.
+
 Si quieres profundizar en este tema importante, puedes consultar la [publicación del blog](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) que escribimos sobre qué hace que un conjunto de datos sea bueno.
 
-**Solución de problemas** 
+**Solución de problemas**
 
 Problema específico de Linux:  
 Si las teclas Flecha Derecha/Flecha Izquierda/ESC no responden durante la grabación:  
-- Verifica que la variable de entorno `$DISPLAY` esté configurada (ver [limitaciones de pynput](https://pynput.readthedocs.io/en/latest/limitations.html)).  
 
+- Verifica que la variable de entorno `$DISPLAY` esté configurada (ver [limitaciones de pynput](https://pynput.readthedocs.io/en/latest/limitations.html)).  
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=-eDB73KgUksyJXa-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -1017,6 +1022,7 @@ Dependiendo de tu configuración de evaluación, puedes configurar la duración 
 En **LeRobot**, portamos LIBERO a nuestro framework y lo usamos principalmente para **evaluar** [SmolVLA](https://huggingface.co/docs/lerobot/en/smolvla), nuestro modelo ligero de Visión-Lenguaje-Acción.
 
 LIBERO ahora es parte de nuestra **simulación multi-eval soportada**, lo que significa que puedes hacer benchmark de tus políticas ya sea en una **suite única de tareas** o a través de **múltiples suites a la vez** con solo una bandera.
+
 Para instalar LIBERO, después de seguir las instrucciones oficiales de LeRobot, simplemente ejecuta: `pip install -e ".[libero]"`
 
 ***Evaluación de suite única***
@@ -1031,6 +1037,7 @@ lerobot-eval \
   --eval.batch_size=2 \
   --eval.n_episodes=3
 ```
+
 - `--env.task` selecciona la suite (`libero_object`, `libero_spatial`, etc.).
 - `--eval.batch_size` controla cuántos entornos se ejecutan en paralelo.
 - `--eval.n_episodes` establece cuántos episodios ejecutar en total.
@@ -1238,5 +1245,6 @@ Dnsty: [Jetson Containers](https://github.com/dusty-nv/jetson-containers/tree/ma
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a><a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

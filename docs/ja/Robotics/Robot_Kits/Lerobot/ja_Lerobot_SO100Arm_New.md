@@ -200,6 +200,7 @@ SO101の公式アップデートに従い、SO100はもはやサポートされ�
 - 充填密度：15%  
 
 ### ステップ2：プリンターをセットアップする
+
 - プリンターが校正され、ベッドレベルがプリンター固有の指示に従って正しく設定されていることを確認してください。
 - プリントベッドを清掃し、ほこりや油脂がないことを確認してください。水やその他の液体でベッドを清掃した場合は、ベッドを乾燥させてください。
 - プリンターが推奨する場合は、標準的なグルースティックを使用し、ベッドのプリント領域全体に薄く均一にグルーを塗布してください。塊や不均一な塗布は避けてください。
@@ -398,6 +399,7 @@ sudo chmod 666 /dev/ttyACM1
 | **フォロワーアーム関節6校正** | **フォロワーアーム関節5校正** | **フォロワーアーム関節4校正** | **フォロワーアーム関節3校正** | **フォロワーアーム関節2校正** | **フォロワーアーム関節1校正** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F4.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F3.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F2.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F1.jpg) |
+
 :::tip
 繰り返しになりますが、サーボジョイントIDとギア比がSO-ARM101のものと厳密に対応していることを確認してください。
 :::
@@ -535,7 +537,8 @@ sudo chmod 666 /dev/ttyACM*
 lerobot-calibrate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \# <- The port of your robot
-    --robot.id=my_awesome_follower_arm  # <- Give the robot a unique name```
+    --robot.id=my_awesome_follower_arm  # <- Give the robot a unique name
+```
 
 以下の動画はキャリブレーションの実行方法を示しています。まず、すべての関節が可動範囲の中央にある位置にロボットを移動する必要があります。その後、Enterキーを押してから、各関節を可動範囲全体で動かす必要があります。
 
@@ -751,6 +754,7 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 - 中断後に再開するには、`--resume=true`を付けて同じコマンドを再実行してください
 
 ⚠️ 重要な注意：再開時は、`--dataset.num_episodes`を記録する追加エピソード数に設定してください（データセット内の目標総エピソード数ではありません）。
+
 - 最初から記録を開始するには、データセットディレクトリを**手動で削除**してください。
 
 **3. 記録パラメータ**
@@ -786,14 +790,15 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
   - 失敗を防ぐため、急激な複雑さの増加を避ける。
 
 💡 経験則：カメラ画像だけを見てタスクを自分で実行できるようにする必要があります。
+
 この重要なトピックについてより深く学びたい場合は、良いデータセットとは何かについて書いた[ブログ記事](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset)をご確認ください。
 
-**トラブルシューティング** 
+**トラブルシューティング**
 
 Linux固有の問題：  
 記録中に右矢印/左矢印/ESCキーが反応しない場合：  
-- `$DISPLAY`環境変数が設定されていることを確認してください（[pynputの制限事項](https://pynput.readthedocs.io/en/latest/limitations.html)を参照）。  
 
+- `$DISPLAY`環境変数が設定されていることを確認してください（[pynputの制限事項](https://pynput.readthedocs.io/en/latest/limitations.html)を参照）。  
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=-eDB73KgUksyJXa-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -1017,6 +1022,7 @@ lerobot-record \
 **LeRobot**では、LIBEROをフレームワークに移植し、主に軽量Vision-Language-Actionモデルである[SmolVLA](https://huggingface.co/docs/lerobot/en/smolvla)の**評価**に使用しました。
 
 LIBEROは現在、**マルチ評価対応シミュレーション**の一部となっており、**単一のタスクスイート**または**複数のスイートを同時に**フラグ一つでポリシーをベンチマークできます。
+
 LIBEROをインストールするには、LeRobot公式の手順に従った後、次のコマンドを実行してください：`pip install -e ".[libero]"`
 
 ***単一スイート評価***
@@ -1031,6 +1037,7 @@ lerobot-eval \
   --eval.batch_size=2 \
   --eval.n_episodes=3
 ```
+
 - `--env.task`でスイート（`libero_object`、`libero_spatial`など）を選択します。
 - `--eval.batch_size`で並列実行する環境数を制御します。
 - `--eval.n_episodes`で実行する総エピソード数を設定します。
@@ -1238,5 +1245,6 @@ Dnsty: [Jetson Containers](https://github.com/dusty-nv/jetson-containers/tree/ma
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a><a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
