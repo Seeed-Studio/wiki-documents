@@ -235,7 +235,8 @@ Recuerda remover el usb, de lo contrario la interfaz no será detectada.
 
 Por ejemplo：
 
-1. Salida de ejemplo al identificar el puerto del brazo líder (ej., `/dev/tty.usbmodem575E0031751` en Mac, o posiblemente `/dev/ttyUSB0` en Linux):2. Ejemplo de salida al identificar el puerto del brazo seguidor (por ejemplo, `/dev/tty.usbmodem575E0032081` en Mac, o posiblemente `/dev/ttyUSB1` en Linux):
+1. Salida de ejemplo al identificar el puerto del brazo líder (ej., `/dev/tty.usbmodem575E0031751` en Mac, o posiblemente `/dev/ttyUSB0` en Linux):
+2. Ejemplo de salida al identificar el puerto del brazo seguidor (por ejemplo, `/dev/tty.usbmodem575E0032081` en Mac, o posiblemente `/dev/ttyUSB1` en Linux):
 
 :::tip
 Si no se puede identificar el puerto serie ttyUSB0, prueba las siguientes soluciones:
@@ -500,7 +501,8 @@ lerobot-teleoperate \
 Si encuentras un error como este.
 
 <div align="center">
-    <img width={800}    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/rerun-version.png" />
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/rerun-version.png" />
 </div>
 
 Puedes degradar la versión de rerun para resolver el problema.
@@ -783,20 +785,21 @@ lerobot-record \
   # --teleop.type=so100_leader \
   # --teleop.port=/dev/ttyACM0 \
   # --teleop.id=my_red_leader_arm \
-  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model```
+  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
+```
 
 </details>
-
 
 <details>
 <summary>Si entrenas comando de [política Libero](https://huggingface.co/docs/lerobot/libero): </summary>
 
 LIBERO es un benchmark diseñado para estudiar el aprendizaje robótico de por vida. La idea es que los robots no solo serán preentrenados una vez en una fábrica, sino que necesitarán seguir aprendiendo y adaptándose con sus usuarios humanos a lo largo del tiempo. Esta adaptación continua se llama aprendizaje de por vida en la toma de decisiones (LLDM), y es un paso clave hacia la construcción de robots que se conviertan en verdaderos asistentes personalizados.
 
-  - [Artículo de LIBERO](https://arxiv.org/abs/2306.03310)
-  - [Repositorio original de LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)
+- [Artículo de LIBERO](https://arxiv.org/abs/2306.03310)
+- [Repositorio original de LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)
 
 LIBERO incluye cinco suites de tareas:
+
 - LIBERO-Spatial (libero_spatial) – tareas que requieren razonamiento sobre relaciones espaciales.
 
 - LIBERO-Object (libero_object) – tareas centradas en manipular diferentes objetos.
@@ -826,12 +829,11 @@ lerobot-train \
   --eval_freq=1000 \
 ```
 
-
 ## Evaluación con LIBERO  
 
 Para instalar LIBERO, después de seguir las instrucciones oficiales de LeRobot, simplemente ejecuta: `pip install -e ".[libero]"`
 
-### Evaluación de suite única:
+### Evaluación de suite única
 
 ```bash
 lerobot-eval \
@@ -861,11 +863,7 @@ lerobot-eval \
 
 - Pasa una lista separada por comas a `--env.task` para evaluación multi-suite.
 
-
-
 </details>
-
-
 
 ## Evalúa tu política
 

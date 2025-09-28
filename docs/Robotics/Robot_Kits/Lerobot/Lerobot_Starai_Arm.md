@@ -790,16 +790,16 @@ lerobot-record \
 
 </details>
 
-
 <details>
 <summary>If Training [Libero policy](https://huggingface.co/docs/lerobot/libero) command: </summary>
 
 LIBERO is a benchmark designed to study lifelong robot learning. The idea is that robots won’t just be pretrained once in a factory, they’ll need to keep learning and adapting with their human users over time. This ongoing adaptation is called lifelong learning in decision making (LLDM), and it’s a key step toward building robots that become truly personalized helpers.
 
-  - [LIBERO paper](https://arxiv.org/abs/2306.03310)
-  - [Original LIBERO repo](https://github.com/Lifelong-Robot-Learning/LIBERO)
+- [LIBERO paper](https://arxiv.org/abs/2306.03310)
+- [Original LIBERO repo](https://github.com/Lifelong-Robot-Learning/LIBERO)
 
 LIBERO includes five task suites:
+
 - LIBERO-Spatial (libero_spatial) – tasks that require reasoning about spatial relations.
 
 - LIBERO-Object (libero_object) – tasks centered on manipulating different objects.
@@ -829,12 +829,11 @@ lerobot-train \
   --eval_freq=1000 \
 ```
 
-
 ## Evaluating with LIBERO  
 
 To Install LIBERO, after following LeRobot official instructions, just do: `pip install -e ".[libero]"`
 
-### Single-suite evaluation:
+### Single-suite evaluation
 
 ```bash
 lerobot-eval \
@@ -864,11 +863,7 @@ lerobot-eval \
 
 - Pass a comma-separated list to `--env.task` for multi-suite evaluation.
 
-
-
 </details>
-
-
 
 ## Evaluate your policy
 

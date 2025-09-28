@@ -235,7 +235,8 @@ usbを取り外すことを忘れないでください。そうしないとイ�
 
 例：
 
-1. リーダーアームのポートを識別する際の出力例（例：Macでは`/dev/tty.usbmodem575E0031751`、Linuxでは`/dev/ttyUSB0`の可能性があります）：2. フォロワーアームのポートを識別する際の出力例（例：Macでは `/dev/tty.usbmodem575E0032081`、Linuxでは `/dev/ttyUSB1` の可能性があります）：
+1. リーダーアームのポートを識別する際の出力例（例：Macでは`/dev/tty.usbmodem575E0031751`、Linuxでは`/dev/ttyUSB0`の可能性があります）：
+2. フォロワーアームのポートを識別する際の出力例（例：Macでは `/dev/tty.usbmodem575E0032081`、Linuxでは `/dev/ttyUSB1` の可能性があります）：
 
 :::tip
 ttyUSB0シリアルポートが識別できない場合は、以下の解決策を試してください：
@@ -500,7 +501,8 @@ lerobot-teleoperate \
 このようなバグが見つかった場合。
 
 <div align="center">
-    <img width={800}    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/rerun-version.png" />
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/rerun-version.png" />
 </div>
 
 この問題を解決するために、rerunのバージョンをダウングレードできます。
@@ -783,20 +785,21 @@ lerobot-record \
   # --teleop.type=so100_leader \
   # --teleop.port=/dev/ttyACM0 \
   # --teleop.id=my_red_leader_arm \
-  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model```
+  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
+```
 
 </details>
-
 
 <details>
 <summary>[Libero policy](https://huggingface.co/docs/lerobot/libero)をトレーニングする場合のコマンド： </summary>
 
 LIBEROは生涯ロボット学習を研究するために設計されたベンチマークです。ロボットは工場で一度だけ事前訓練されるのではなく、時間をかけて人間のユーザーと共に学習し適応し続ける必要があるという考えです。この継続的な適応は意思決定における生涯学習（LLDM）と呼ばれ、真にパーソナライズされたヘルパーとなるロボットを構築するための重要なステップです。
 
-  - [LIBERO論文](https://arxiv.org/abs/2306.03310)
-  - [オリジナルLIBEROリポジトリ](https://github.com/Lifelong-Robot-Learning/LIBERO)
+- [LIBERO論文](https://arxiv.org/abs/2306.03310)
+- [オリジナルLIBEROリポジトリ](https://github.com/Lifelong-Robot-Learning/LIBERO)
 
 LIBEROには5つのタスクスイートが含まれています：
+
 - LIBERO-Spatial (libero_spatial) – 空間関係についての推論を必要とするタスク。
 
 - LIBERO-Object (libero_object) – 異なるオブジェクトの操作を中心としたタスク。
@@ -825,7 +828,6 @@ lerobot-train \
   --eval.n_episodes=1 \
   --eval_freq=1000 \
 ```
-
 
 ## LIBEROでの評価  
 
@@ -861,11 +863,7 @@ lerobot-eval \
 
 - マルチスイート評価には`--env.task`にカンマ区切りのリストを渡します。
 
-
-
 </details>
-
-
 
 ## ポリシーの評価
 
