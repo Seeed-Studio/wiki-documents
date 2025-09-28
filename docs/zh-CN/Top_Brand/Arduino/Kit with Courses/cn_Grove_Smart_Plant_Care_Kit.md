@@ -28,7 +28,7 @@ Grove 智能植物护理套件是一个易于使用的高级工具包，可帮�
 ---
 <!-- Please refer to each modules' specifications:
 
-*   [Grove - Temp &amp; Humidity Sensor](/cn/Grove-TemperatureAndHumidity_Sensor/#specifications)
+*   [Grove - 温度和湿度传感器](/cn/Grove-TemperatureAndHumidity_Sensor/#specifications)
 
 *   [Grove - Sunlight Sensor V1.0](/cn/Grove-Sunlight_Sensor)
 
@@ -38,7 +38,7 @@ Grove 智能植物护理套件是一个易于使用的高级工具包，可帮�
 
 *   [Grove – Encoder](/cn/Grove-Encoder#Specification)
 
-*   [Grove-OLED Display 1.12](/cn/Grove-OLED_Display_1.12inch#Specification)
+*   [Grove-OLED 显示屏 1.12](/cn/Grove-OLED_Display_1.12inch#Specification)
 
 *   [Grove - Button](/cn/Grove-Button#Introduction)
 

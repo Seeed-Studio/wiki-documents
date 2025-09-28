@@ -289,13 +289,13 @@ Seeed Studio BeagleBone® Green 将作为一个闪存驱动器运行，为您提
 
 在 **/boot/uEnv.txt** 中：
 
-    ##enable BeagleBone® Black: eMMC Flasher:
-    #cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3.sh
+  ##启用 BeagleBone® Black: eMMC 刷写器：
+  #cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3.sh
 
 修改为：
 
-    ##enable BeagleBone® Black: eMMC Flasher:
-    cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3.sh
+  ##启用 BeagleBone® Black: eMMC 刷写器：
+  cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3.sh
 
 然后您会看到4个用户LED灯如下图所示：
 

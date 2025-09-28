@@ -159,8 +159,7 @@ mkdir -p ~/frigate/data/db
 mkdir -p ~/frigate/data/storage
 cd ~/frigate
 ```
-
-### Create Docker Compose File (frigate.yml)
+### 创建 Docker Compose 文件 (frigate.yml)
 
 ```bash
 nano frigate.yml
@@ -188,8 +187,7 @@ services:
     ports:
       - 5000:5000
 ```
-
-### Create Frigate Config File (config/config.yml)
+### 创建 Frigate 配置文件 (config/config.yml)
 
 ```bash
 nano config/config.yml

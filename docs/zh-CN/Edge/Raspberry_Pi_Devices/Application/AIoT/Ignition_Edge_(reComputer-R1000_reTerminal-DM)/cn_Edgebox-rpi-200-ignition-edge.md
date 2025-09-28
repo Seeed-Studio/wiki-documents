@@ -118,8 +118,7 @@ chmod +x ./uninstall-ignition-edge.sh
 ```bash
 nano ~/.bashrc
 ```
-
-Append the launch command to the the file
+将启动命令附加到文件中
 
 ```bash
 /opt/ignitionedge/ignition.sh start

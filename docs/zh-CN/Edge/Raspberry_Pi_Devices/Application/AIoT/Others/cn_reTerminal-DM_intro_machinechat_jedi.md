@@ -81,7 +81,7 @@ Launch JEDI
 
 ### Accessing JEDI's Web Interface
 
-Open a web browser at reTerminal DM and type
+在 reTerminal DM 上打开一个网络浏览器并输入
 
 ```sh
 http://localhost:9123

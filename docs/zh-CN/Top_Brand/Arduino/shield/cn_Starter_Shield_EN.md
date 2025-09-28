@@ -34,57 +34,57 @@ Starter Shield 包含一些基本的电子资源，如按钮、传感器、蜂�
 
 ## 零件清单
 
-* 1x 蜂鸣器；
+- 1x 蜂鸣器；
 
-* 1x 铝电解电容 100uF-16V；
+- 1x 铝电解电容 100uF-16V；
 
-* 1x 温度传感器-10k；
+- 1x 温度传感器-10k；
 
-* 1x 光敏电阻 10K；
+- 1x 光敏电阻 10K；
 
-* 4x 电阻 10K-5%-1/4W；
+- 4x 电阻 10K-5%-1/4W；
 
-* 4x 电阻 220R-5%-1/4W；
+- 4x 电阻 220R-5%-1/4W；
 
-* 3x 电阻 4.7K-5%-1/4W；
+- 3x 电阻 4.7K-5%-1/4W；
 
-* 2x 蓝色公排针 垂直；
+- 2x 蓝色公排针 垂直；
 
-* 2x 蓝色公排针 垂直；
+- 2x 蓝色公排针 垂直；
 
-* 1x 蓝色母排针 垂直；
+- 1x 蓝色母排针 垂直；
 
-* 1x 锂离子电池 3V-40mAh；
+- 1x 锂离子电池 3V-40mAh；
 
-* 1x SMD 电池座 塑料；
+- 1x SMD 电池座 塑料；
 
-* 1x IC 驱动器；
+- 1x IC 驱动器；
 
-* 1x RTC 时钟/定时；
+- 1x RTC 时钟/定时；
 
-* 2x IC 插座；
+- 2x IC 插座；
 
-* 3x 按钮顶部；
+- 3x 按钮顶部；
 
-* 2x 黑色圆形母排针 垂直；
+- 2x 黑色圆形母排针 垂直；
 
-* 1x LED 绿色-绿色；
+- 1x LED 绿色-绿色；
 
-* 1x LED 蓝色-蓝色；
+- 1x LED 蓝色-蓝色；
 
-* 2x LED 红色-红色；
+- 2x LED 红色-红色；
 
-* 1x LED 7段-红色；
+- 1x LED 7段-红色；
 
-* 1x 晶振 32.768KHz-12.5pF-20ppm-30K；
+- 1x 晶振 32.768KHz-12.5pF-20ppm-30K；
 
-* 2x 陶瓷圆片电容 1nF-50V-20%；
+- 2x 陶瓷圆片电容 1nF-50V-20%；
 
-* 1x 陶瓷圆片电容 100nF-25V；
+- 1x 陶瓷圆片电容 100nF-25V；
 
-* 1x Starter Shield 焊接指南
+- 1x Starter Shield 焊接指南
 
-* 1x Starter Shield PCB；
+- 1x Starter Shield PCB；
 
 ## 规格
 
@@ -92,48 +92,48 @@ Starter Shield 包含一些基本的电子资源，如按钮、传感器、蜂�
 
 **硬件资源**
 
-* 纽扣电池座：当外部电源关闭时为 RTC IC 提供电源；
+- 纽扣电池座：当外部电源关闭时为 RTC IC 提供电源；
 
-* 蜂鸣器：产生音频效果；
+- 蜂鸣器：产生音频效果；
 
-* 光传感器：检测环境光强度；
+- 光传感器：检测环境光强度；
 
-* 温度传感器：检测环境温度；
+- 温度传感器：检测环境温度；
 
-* K1...K3：临时按钮；
+- K1...K3：临时按钮；
 
-* D1...D4：蓝色、绿色、红色和红色 LED；
+- D1...D4：蓝色、绿色、红色和红色 LED；
 
-* U3：VS1307，实时时钟 IC；
+- U3：VS1307，实时时钟 IC；
 
-* U5：TM1636，7段显示驱动 IC。
+- U5：TM1636，7段显示驱动 IC。
 
 **Arduino 上使用的引脚**
 
-* D2：控制 LED1；
+- D2：控制 LED1；
 
-* D3：控制 LED2；
+- D3：控制 LED2；
 
-* D4：控制 LED3；
+- D4：控制 LED3；
 
-* D5：控制 LED4；
+- D5：控制 LED4；
 
-* D6：控制蜂鸣器；
+- D6：控制蜂鸣器；
 
-* D7：VS1636 SCLK 引脚；
+- D7：VS1636 SCLK 引脚；
 
-* D8：VS1636 DIO 引脚；
+- D8：VS1636 DIO 引脚；
 
-* D9：控制 K1；
-* D10：控制 K2；
-* D11：控制 K3；
+- D9：控制 K1；
+- D10：控制 K2；
+- D11：控制 K3；
 
-* A0(D14)：从温度传感器轮询读数；
+- A0(D14)：从温度传感器轮询读数；
 
-* A1(D15)：从光传感器轮询读数；
+- A1(D15)：从光传感器轮询读数；
 
-* A4(D18)：DS1307 SDA 引脚
-* A5(D19)：DS1307 SCK 引脚
+- A4(D18)：DS1307 SDA 引脚
+- A5(D19)：DS1307 SCK 引脚
 
 ## 演示
 
@@ -214,27 +214,27 @@ Starter Shield 包含一些基本的电子资源，如按钮、传感器、蜂�
 
 3. 调整时间和设置闹钟的方法：
 
-* 1) 由于板上有 RTC 芯片，所以您不需要每次开机时都重新设置时间，当然，条件是 RTC 芯片的纽扣电池还有电。但如果这是您第一次启动 Tick Tock Shield，则需要设置时间。
+- 1) 由于板上有 RTC 芯片，所以您不需要每次开机时都重新设置时间，当然，条件是 RTC 芯片的纽扣电池还有电。但如果这是您第一次启动 Tick Tock Shield，则需要设置时间。
 
-* 2) 使用三个按钮来调整时间。它们是 "menu"(K3)、"increase"(K2) 和 "decrease"(K1)。按下 "menu" 在以下设置模式之间循环：
+- 2) 使用三个按钮来调整时间。它们是 "menu"(K3)、"increase"(K2) 和 "decrease"(K1)。按下 "menu" 在以下设置模式之间循环：
 
-  * a) 设置正常时间显示的小时部分
+  - a) 设置正常时间显示的小时部分
 
-  * b) 设置正常时间显示的分钟部分
+  - b) 设置正常时间显示的分钟部分
 
-  * c) 设置闹钟的小时部分
+  - c) 设置闹钟的小时部分
 
-  * d) 设置闹钟的分钟部分
+  - d) 设置闹钟的分钟部分
 
-  * e) 设置 7 段数码管的默认亮度
+  - e) 设置 7 段数码管的默认亮度
 
-  * f) 打开或关闭闹钟功能
+  - f) 打开或关闭闹钟功能
 
-  * g) 退出时间设置模式
+  - g) 退出时间设置模式
 
-* 3) 如果您想在处理完上述所有 7 个步骤之前退出。有两种中断方式。第一，无论在哪一步都按住 K3 3 秒。这样，Tick Tock Shield 将确认您所做的所有设置并退出。第二，让 Tick Tock Shield 闲置 5 秒。这样，不会存储任何设置，您也会退出时间设置模式。
+- 3) 如果您想在处理完上述所有 7 个步骤之前退出。有两种中断方式。第一，无论在哪一步都按住 K3 3 秒。这样，Tick Tock Shield 将确认您所做的所有设置并退出。第二，让 Tick Tock Shield 闲置 5 秒。这样，不会存储任何设置，您也会退出时间设置模式。
 
-* 4) K2 被分配用于设置闹钟的状态。您可以通过 ALARM_ENABLE 指示器了解闹钟的状态。
+- 4) K2 被分配用于设置闹钟的状态。您可以通过 ALARM_ENABLE 指示器了解闹钟的状态。
 
 ## 原理图在线查看器
 
@@ -243,18 +243,18 @@ Starter Shield 包含一些基本的电子资源，如按钮、传感器、蜂�
 
 ## 资源  
 
-* **[库文件]** [Starter Shield 库文件](https://github.com/Seeed-Studio/Starter_Shield)
+- **[库文件]** [Starter Shield 库文件](https://github.com/Seeed-Studio/Starter_Shield)
 
-* **[Eagle]** [Starter Shield eagle 文件](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter_Shield_v1.1.zip)
-* **[PDF]** [BLE Bee v1.0 pdf](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter_Shield_v1.1.pdf)
+- **[Eagle]** [Starter Shield eagle 文件](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter_Shield_v1.1.zip)
+- **[PDF]** [BLE Bee v1.0 pdf](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter_Shield_v1.1.pdf)
 
-* **[EAGLE]** [BLE Bee v1.0 sch](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter%20Shield%20v1.1.sch)
+- **[EAGLE]** [BLE Bee v1.0 sch](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter%20Shield%20v1.1.sch)
 
-* **[原理图]** [Starter Shield pdf 原理图](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter_Shield_v1.1.pdf)
+- **[原理图]** [Starter Shield pdf 原理图](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Starter_Shield_v1.1.pdf)
 
-* **[数据手册]** [TM1636 数据手册](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Tm1636.pdf)
+- **[数据手册]** [TM1636 数据手册](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Tm1636.pdf)
 
-* **[数据手册]** [VS1307 数据手册](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Vs1307.pdf)
+- **[数据手册]** [VS1307 数据手册](https://files.seeedstudio.com/wiki/Starter_Shield_EN/res/Vs1307.pdf)
 
 ## 参考
 
@@ -267,7 +267,7 @@ Starter Shield 包含一些基本的电子资源，如按钮、传感器、蜂�
 **1. EEPROM.read(int address);**
 此函数用于从 EEPROM 的指定地址读取数据。
 
-* address：目标单元的地址。
+- address：目标单元的地址。
 
 示例：
 
@@ -278,8 +278,8 @@ temp_data[i] = EEPROM.read(i);
 **2. EEPROM.write(int address, uint8_t value);**
 此函数用于向 EEPROM 的指定地址写入数据。
 
-* address：目标单元的地址
-* uint8_t value：要写入目标单元的数据。
+- address：目标单元的地址
+- uint8_t value：要写入目标单元的数据。
 
 示例：
 
@@ -303,7 +303,7 @@ if(temp_data[i] != mark[i])
  **1. tm1636.point(boolean PointFlag);**
  此函数用于打开或关闭时钟点（:）。每次显示内容更改时，此函数都会生效。
 
-* PointFlag：可以是 0（关闭）或 1（打开）。
+- PointFlag：可以是 0（关闭）或 1（打开）。
 
 示例：
 
@@ -318,7 +318,7 @@ if(flag_clockpoint)
 **2. Tm1636.display(int8_t DispData[]);**
 使用 DispData[] 的内容创建字符流。
 
-* DispData[]：int8_t 类型的数组，包括 0、1、2、3、4、5、6、7、8、9、0、A、b、C、d、E 和 F。
+- DispData[]：int8_t 类型的数组，包括 0、1、2、3、4、5、6、7、8、9、0、A、b、C、d、E 和 F。
 
 示例：
 
@@ -334,12 +334,12 @@ tm1636.display(disp);
 **1. ticktockshield.init();**
 Tick Tock Shield 的初始化。
 
-**2. ticktockshield.runLED(byte speed, byte direction);**
+**2. ticktockshield.runLED(字节 速度, 字节 方向);**
 
 此函数按您选择的方向扫描 4 个 LED。
 
-* speed：LED 流动速度，从 1（最慢）到 10（最快）。
-* direction：LED 流动方向，可以是 LEFT_TO_RIGHT 或 RIGHT_TO_LEFT。
+- speed：LED 流动速度，从 1（最慢）到 10（最快）。
+- direction：LED 流动方向，可以是 LEFT_TO_RIGHT 或 RIGHT_TO_LEFT。
 
 示例：
 
@@ -357,8 +357,8 @@ ticktockshield.runLED(1,LEFT_TO_RIGHT);
 **5. setLed(unsigned char led_status, int pinLED);**
 此函数用于打开或关闭单个 LED。
 
-* led_status：可以是 LED_ON 或 LED_OFF。
-* pinLED：可以是 LED_CLOCK_ADJUST、LED_ALARM_ADJUST、LED_BRIGHT_ADJUST、LED_ALARM_ENABLE 中的一个。
+- led_status：可以是 LED_ON 或 LED_OFF。
+- pinLED：可以是 LED_CLOCK_ADJUST、LED_ALARM_ADJUST、LED_BRIGHT_ADJUST、LED_ALARM_ENABLE 中的一个。
 
 示例：
 
@@ -390,9 +390,9 @@ void TickTockShield::turnOffLED()
 **8. ticktockshield.setAlarm(uint8_t hour,uint8_t minute,uint8_t flag_enabl);**
 设置闹钟时间。
 
-* hour：小时
-* minute：分钟
-* flag_enabl：恢复闹钟状态的标志，可以是 0（未启用）或 1（已启用）
+- hour：小时
+- minute：分钟
+- flag_enabl：恢复闹钟状态的标志，可以是 0（未启用）或 1（已启用）
 
 示例：
 
@@ -482,11 +482,11 @@ if(ticktockshield.isAlarmEnable())
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

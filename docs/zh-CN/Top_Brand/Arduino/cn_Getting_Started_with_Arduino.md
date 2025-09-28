@@ -182,9 +182,9 @@ prodimagename:
 
 ### 带课程的套件
 
-- [Grove Beginner Kit for Arduino](https://wiki.seeedstudio.com/cn/Grove-Beginner-Kit-For-Arduino/)
-- [Rainbow Cube kit- RGB 4X4X4 (Rainbowduino Compatible)](https://wiki.seeedstudio.com/cn/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/)
-- [Grove Creator Kit for Arduino](https://wiki.seeedstudio.com/cn/Grove-Creator-Kit-1/)
+- [Grove Arduino 初学者套件](https://wiki.seeedstudio.com/cn/Grove-Beginner-Kit-For-Arduino/)
+- [彩虹立方体套件 - RGB 4X4X4（兼容 Rainbowduino）](https://wiki.seeedstudio.com/cn/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/)
+- [Grove Arduino 创客套件](https://wiki.seeedstudio.com/cn/Grove-Creator-Kit-1/)
 
 ## 技术支持与产品讨论
 

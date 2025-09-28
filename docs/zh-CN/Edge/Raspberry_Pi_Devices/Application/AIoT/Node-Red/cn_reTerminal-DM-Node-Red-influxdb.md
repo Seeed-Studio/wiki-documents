@@ -52,18 +52,16 @@ last_update:
 ```sh
 sudo apt update
 ```
+**步骤 2**: 添加 InfluxDB 仓库
 
-**Step 2**: Add the InfluxDB Repository
-
-Add the InfluxDB GPG key and repository to your system.
+将 InfluxDB GPG 密钥和仓库添加到您的系统中。
 
 Add the GPG key:
 
 ```sh
 curl https://repos.influxdata.com/influxdata-archive.key | gpg --dearmor | sudo tee /usr/share/keyrings/influxdb-archive-keyring.gpg >/dev/null
  ```
-
-Add the repository to the sources list:
+将该仓库添加到 translations 列表中：
 
 ```sh
 echo "deb [signed-by=/usr/share/keyrings/influxdb-archive-keyring.gpg] https://repos.influxdata.com/debian stable main" | sudo tee /etc/apt/sources.list.d/influxdb.list
@@ -71,7 +69,7 @@ echo "deb [signed-by=/usr/share/keyrings/influxdb-archive-keyring.gpg] https://r
 
 **Step 3**: Update Package List
 
-Update the package list to include the InfluxDB repository:
+更新软件包列表以包含InfluxDB存储库：
 
 ```sh
 sudo apt update
@@ -87,7 +85,7 @@ sudo apt install influxdb
 
 ## Start InfluxDB Server
 
-Enable and start the InfluxDB service:
+启用并启动 InfluxDB 服务：
 
 **Step 1**. Unmask the service:
 
@@ -109,7 +107,7 @@ sudo systemctl start influxdb
 
 ## Testing InfluxDB
 
-Access the InfluxDB CLI tool to perform basic database operations.
+访问 InfluxDB CLI 工具来执行基本的数据库操作。
 
 **Step 1**. Open terminal :
 
@@ -128,14 +126,12 @@ CREATE DATABASE data
 ```sh
 USE data
 ```
-
-**Step 4**. Insert a sample data point:
+**步骤 4**. 插入一个样本数据点：
 
 ```sh
 INSERT room,temperature=30.1 humidity=80.2
  ```
-
-**Step 5**. Query the inserted data:
+**步骤 5**. 查询插入的数据：
 
 ```sh
 SELECT * FROM room
@@ -149,25 +145,23 @@ SELECT * FROM room
 influx
 ```
 
-**Step 2**. Create an admin user with all privileges (replace `<password>` with your secure password):
+**步骤 2**. 创建具有所有权限的管理员用户（将 `<password>` 替换为您的安全密码）：
 
 ```sh
 CREATE USER admin WITH PASSWORD '<password>' WITH ALL PRIVILEGES
  ```
-
-**Step 3**. Exit the InfluxDB CLI:
+**步骤 3**. 退出 InfluxDB CLI:
 
 ```sh
 exit
 ```
 
-**Step 4**. Edit the InfluxDB configuration to enable authentication:
+**步骤 4**. 编辑 InfluxDB 配置以启用身份验证：
 
 ```sh
 sudo nano /etc/influxdb/influxdb.conf
 ```
-
-Under the `[HTTP]` section, add or modify the following lines:
+在 `[HTTP]` 部分下，添加或修改以下行：
 
 ```
     auth-enabled = true
@@ -178,13 +172,12 @@ Under the `[HTTP]` section, add or modify the following lines:
     bind-address=":8086"
 ```
 
-**Step 5**. Restart the InfluxDB service to apply the changes:
+**步骤 5**. 重启 InfluxDB 服务以应用更改：
 
 ```sh
 sudo systemctl restart influxdb
 ```
-
-**Step 6**. Connect to InfluxDB with the admin user:
+**步骤 6**. 使用管理员用户连接到InfluxDB：
 
 ```sh
 influx -username admin -password <password>

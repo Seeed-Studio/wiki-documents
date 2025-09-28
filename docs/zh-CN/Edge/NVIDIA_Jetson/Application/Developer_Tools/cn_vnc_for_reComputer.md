@@ -47,7 +47,7 @@ VNC是一个远程桌面工具，允许您从其他PC设备远程控制您的reC
   sudo apt install vino
  ```
 
- **Step 2.** Enable the VNC server to start each time you log in:
+**步骤 2.** 设置 VNC 服务器在每次登录时自动启动：
 
  ```bash
   cd /usr/lib/systemd/user/graphical-session.target.wants
@@ -61,7 +61,7 @@ VNC是一个远程桌面工具，允许您从其他PC设备远程控制您的reC
   gsettings set org.gnome.Vino require-encryption false
  ```
 
- **Step 4.** Set a password to access the VNC server
+  **步骤 4.** 设置密码以访问VNC服务器
 
  ```bash
  # Replace thepassword with your desired password
@@ -69,7 +69,7 @@ VNC是一个远程桌面工具，允许您从其他PC设备远程控制您的reC
   gsettings set org.gnome.Vino vnc-password $(echo -n 'thepassword'|base64)
  ```
 
- **Step 5.** Edit `org.gnome` to add a parameter for the `enabled key`
+  **步骤 5.** 编辑 `org.gnome` 以添加 `enabled key` 的参数
 
  ```bash
   cd /usr/share/glib-2.0/schemas
@@ -77,7 +77,7 @@ VNC是一个远程桌面工具，允许您从其他PC设备远程控制您的reC
   sudo vi org.gnome.Vino.gschema.xml 
  ```
 
-Paste the following code into the location below, ensuring the format is the same as below.
+将以下代码粘贴到下面的位置，确保格式与下方所示相同。
 
   ```bash
   <key name='enabled' type='b'>

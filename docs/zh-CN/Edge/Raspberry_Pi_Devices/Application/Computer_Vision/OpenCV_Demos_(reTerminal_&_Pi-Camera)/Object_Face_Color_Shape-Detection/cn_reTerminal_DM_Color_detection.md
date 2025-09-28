@@ -195,8 +195,7 @@ while True:
  ```sh
 python colordetector.py
  ```
-
-Here is the full code for Color Detection
+以下是颜色检测的完整代码
 
 ```sh
 import cv2

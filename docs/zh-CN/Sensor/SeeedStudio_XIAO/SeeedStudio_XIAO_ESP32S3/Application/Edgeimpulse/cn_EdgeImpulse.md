@@ -445,7 +445,7 @@ void loop() {
 
 ## 资源
 
-- **[GITHUB]** [SenseCraft Model Assistant Models](https://github.com/Seeed-Studio/edgelab-model-zoo/tree/main/detection)
-- **[GITHUB]** [Project Github](https://github.com/Mjrovai/XIAO-ESP32S3-Sense)
-- **[EDGE-IMPULSE]** [edge impulse KWS demo](https://studio.edgeimpulse.com/public/270277/latest)
-- **[EDGE-IMPULSE]** [edge impulse Fruits classify demo](https://studio.edgeimpulse.com/public/269519/latest)
+- **[GITHUB]** [SenseCraft模型助手模型](https://github.com/Seeed-Studio/edgelab-model-zoo/tree/main/detection)
+- **[GITHUB]** [项目Github](https://github.com/Mjrovai/XIAO-ESP32S3-Sense)
+- **[EDGE-IMPULSE]** [edge impulse KWS演示](https://studio.edgeimpulse.com/public/270277/latest)
+- **[EDGE-IMPULSE]** [edge impulse水果分类演示](https://studio.edgeimpulse.com/public/269519/latest)

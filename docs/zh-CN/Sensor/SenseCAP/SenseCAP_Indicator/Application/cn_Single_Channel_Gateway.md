@@ -92,9 +92,9 @@ cd esp-idf/
 ./install.sh
 ```
 
-### Installation of One Channel Hub
+### 一个通道集线器的安装
 
-**Step 1**: Clone the hub to local repository. And navigate to the project path.
+**步骤 1**: 将仓库克隆到本地仓库。并导航到项目路径。
 
 ```linux
 git clone https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32.git
@@ -130,7 +130,7 @@ git clone -b v2.4.1 https://github.com/Lora-net/SWDR001.git lr11xx_driver
 
 ### Build Firmware
 
-**Step 1**: Enter the lorahub directory.
+**步骤 1**: 进入 lorahub 目录。
 
 ```
 cd ~/this_project_directory/lorahub
@@ -142,13 +142,13 @@ cd ~/this_project_directory/lorahub
 . ~/esp/esp-idf/export.sh
 ```
 
-Configure the ESP32 target to build for.
+配置要构建的 ESP32 目标。
 
 ```
 idf.py set-target esp32s3
 ```
 
-Customize the build if necessary:
+如有必要，自定义构建：
 
 ```
 idf.py menuconfig
@@ -169,7 +169,7 @@ idf.py all
 ls /dev/cu*
 ```
 
-then flash using `idf.py`, replace the **port**
+然后使用 `idf.py` 进行刷写，替换 **端口**
 
 ```
 idf.py -p port flash
@@ -181,13 +181,13 @@ idf.py -p port flash
 sudo usermod -a -G dialout $USERNAME
 ```
 
-On a **Windows** setup, let's suppose that the device is mounted as COM14, the above command would be like:
+在 **Windows** 设置中，假设设备挂载为 COM14，上述命令将类似于：
 
 ```
 idf.py -p COM14 flash
 ```
 
-Launch the monitor console to see logs (optional).
+启动监视控制台以查看日志（可选）。
 
 ```
 idf.py -p port monitor
@@ -206,7 +206,7 @@ esptool.py --chip esp32s3 -p port -b 460800 --before=default_reset --after=hard_
 esptool.py --chip esp32s3 -p port -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 bootloader.bin 0x10000 indicator_lorahub.bin 0x8000 partition-table.bin
 ```
 
-On a Windows setup the esptool command for flashing would be:
+在 Windows 环境下，用于刷写固件的 esptool 命令应该是：
 
 ```cpp
 // Merged version

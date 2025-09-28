@@ -83,7 +83,7 @@ bash run.sh
 
 #### Step 4: Install Node-RED
 
-Install Node-RED. You can download Node-RED with just one line of command:
+安装 Node-RED。你可以用一行命令下载 Node-RED：
 
 ```
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
@@ -145,7 +145,7 @@ sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgst
 
 #### Step 2: Install the repository
 
-Download the repository with the command below:
+使用以下命令下载仓库：
 
 ```
 git clone https://github.com/LJ-Hao/Pose-Based_Light_Control_with_Node-Red_and_Raspberry_Pi_with_AIkit.git && cd Pose-Based_Light_Control_with_Node-Red_and_Raspberry_Pi_with_AIkit

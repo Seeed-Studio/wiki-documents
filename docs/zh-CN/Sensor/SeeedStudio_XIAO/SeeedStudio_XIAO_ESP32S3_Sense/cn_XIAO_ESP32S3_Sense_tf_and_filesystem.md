@@ -408,8 +408,7 @@ if(cardType == CARD_MMC){
     Serial.println("UNKNOWN");
 }
 ```
-
-3. You can get the microSDcard size by calling the `cardSize()` method:
+3. 你可以通过调用`cardSize()`方法来获取microSD卡的大小：
 
 ```c
 uint64_t cardSize = SD.cardSize() / (1024 * 1024);
@@ -784,7 +783,7 @@ uint64_t uS_TO_S_FACTOR = 1000000; // Conversion factor for micro seconds to sec
 uint64_t TIME_TO_SLEEP = 600;
 ```
 
-Next, define the microSD card CS pin. In this case, it is set to **GPIO 21**.
+接下来，定义 microSD 卡 CS 引脚。在这种情况下，它被设置为 **GPIO 21**。
 
 ```c
 #define SD_CS 21
@@ -987,9 +986,9 @@ void loop() {
 
 以下是原文的参考链接，欢迎通过以下原文链接了解更多关于ESP32文件系统的内容。
 
-- [ESP32: Guide for MicroSD Card Module using Arduino IDE](https://randomnerdtutorials.com/esp32-microsd-card-arduino/)
-- [ESP32 Data Logging Temperature to MicroSD Card](https://randomnerdtutorials.com/esp32-data-logging-temperature-to-microsd-card/)
-- [Install ESP32 Filesystem Uploader in Arduino IDE](https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/)
+- [ESP32：使用Arduino IDE的MicroSD卡模块指南](https://randomnerdtutorials.com/esp32-microsd-card-arduino/)
+- [ESP32将温度数据记录到MicroSD卡](https://randomnerdtutorials.com/esp32-data-logging-temperature-to-microsd-card/)
+- [在Arduino IDE中安装ESP32文件系统上传器](https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/)
 
 有关使用ESP32开发板的更多信息，请阅读Random Nerd Tutorials官方网站。
 

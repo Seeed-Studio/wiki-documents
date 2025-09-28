@@ -126,8 +126,7 @@ sudo apt-get install python3-tflite-runtime
 ```sh
 cd yolov5
 ```
-
-- **Step 2** Inference with detect.py
+- **步骤 2** 使用 detect.py 进行推理
 
 ```sh
 python detect.py --weight best-int8.tflite --img 224 --source <your source > --nosave --view-img --data data.yaml

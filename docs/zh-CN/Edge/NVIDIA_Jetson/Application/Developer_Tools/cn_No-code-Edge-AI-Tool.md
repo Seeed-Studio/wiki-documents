@@ -92,7 +92,7 @@ cat /etc/nv_tegra_release
 git clone https://github.com/Seeed-Studio/node-red-contrib-ml.git
 ```
 
-Once the download is complete, run the following command to start the required docker.
+下载完成后，运行以下命令来启动所需的 docker。
 
 ```sh
 cd node-red-contrib-ml

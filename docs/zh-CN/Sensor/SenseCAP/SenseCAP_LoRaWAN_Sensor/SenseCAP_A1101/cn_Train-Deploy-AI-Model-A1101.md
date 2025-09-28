@@ -211,13 +211,12 @@ conda install libusb-1.0.26-h1c322ee_100.tar.bz2
 python3 capture_images_script.py
 ```
 
-By default, it will capture an image every 300ms. If you want to change this, you can run the script in this format
+默认情况下，它会每 300ms 捕获一张图像。如果你想改变这一点，可以按以下格式运行脚本
 
 ```sh
 python3 capture_images_script.py --interval <time_in_ms>
 ```
-
-For example, to capture an image every second
+例如，每秒捕获一张图像
 
 ```sh
 python3 capture_images_script.py --interval 1000
@@ -434,7 +433,7 @@ cp ~/Downloads/Apples.v1i.yolov5pytorch.zip ~/yolov5-swift
 unzip Apples.v1i.yolov5pytorch.zip
 ```
 
-- **Step 4.** Open **data.yaml** file and edit **train** and **val** directories as follows
+- **步骤 4.** 打开 **data.yaml** 文件并按如下方式编辑 **train** 和 **val** 目录
 
 ```sh
 train: train/images

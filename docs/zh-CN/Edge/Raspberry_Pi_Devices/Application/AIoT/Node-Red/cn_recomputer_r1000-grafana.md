@@ -51,10 +51,9 @@ last_update:
 ```bash
 sudo apt update
 ```
+**添加 Grafana APT 密钥：**
 
-**Add the Grafana APT Key:**
-
-To add the Grafana APT key to your Raspberry Pi’s keychain, run the following command:
+要将 Grafana APT 密钥添加到您的树莓派密钥链中，请运行以下命令：
 
 ```bash
 curl https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/grafana-archive-keyrings.gpg >/dev/null
@@ -70,7 +69,7 @@ echo "deb [signed-by=/usr/share/keyrings/grafana-archive-keyrings.gpg] https://a
 
 **Update Package List:**
 
-As we have made changes to our package list, we need to run an update:
+由于我们对软件包列表进行了更改，我们需要运行一次更新：
 
 ```bash
 sudo apt update
@@ -78,15 +77,14 @@ sudo apt update
 
 ## Installing Grafana on reComputer R1000
 
-Install the latest version of Grafana by running the following command:
+通过运行以下命令安装最新版本的Grafana：
 
 ```bash
 sudo apt install grafana
 ```
+**配置 Grafana 在系统启动时自动运行**
 
-**Configuring Grafana to Start at Boot**
-
-Enable Grafana to start at boot:
+启用 Grafana 在系统启动时自动运行：
 
 ```bash
 sudo systemctl enable grafana-server
@@ -94,7 +92,7 @@ sudo systemctl enable grafana-server
 
 **Starting Grafana**
 
-Start the Grafana server software by running the command below:
+通过运行以下命令启动 Grafana 服务器软件：
 
 ```bash
 sudo systemctl start grafana-server

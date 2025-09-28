@@ -422,8 +422,7 @@ DISPLAY=:0 npm test
 example:
 cd ~/Desktop/testapp
 ```
-
-- **Step 4.** Make the ledstart.sh an executable file
+- **步骤 4.** 将 ledstart.sh 设置为可执行文件
 
 ```sh
 sudo chmod +x ledstart.sh
@@ -456,7 +455,7 @@ example:
 cd ~/Desktop
 ```
 
-- **Step 4.** Make the **ledStart.desktop** an executable file
+- **步骤 4.** 将 **ledStart.desktop** 设置为可执行文件
 
 ```sh
 sudo chmod +x ledStart.desktop
@@ -502,7 +501,7 @@ npm test
 npm install --save-dev electron-reloader
 ```
 
-- **Step 2.** Add the following line at the end of **main.js** file
+- **步骤 2.** 在 **main.js** 文件末尾添加以下行
 
 ```javascript
 try {

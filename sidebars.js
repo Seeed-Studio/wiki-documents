@@ -6891,6 +6891,7 @@ const sidebars = {
                   items: [
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ha',
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_edgeimpulse',
+                    'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_tflm',
                   ],
                 },
               ],
@@ -8310,6 +8311,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'Chirpstack',
+                  items: [
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Chirpstack/cn_recomputer_r1x_chirpstack',
+                  ]
+                },
+                {
+                  type: 'category',
                   label: '其他',
                   items: [
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_Mender-Client-reTerminal',
@@ -9054,6 +9062,7 @@ const sidebars = {
           //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
           // },
           items: [
+            'zh-CN/Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_AC1',
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_Orbbec_Depth_Camera',
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_ORB_SLAM3_with_Orbbec_Gemini2',
@@ -11824,6 +11833,7 @@ const sidebars = {
                   items: [
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_ha',
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_edgeimpulse',
+                    'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_tflm',
                   ],
                 },
               ],
@@ -13243,6 +13253,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'Chirpstack',
+                  items: [
+                    'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Chirpstack/es_recomputer_r1x_chirpstack',
+                  ]
+                },
+                {
+                  type: 'category',
                   label: 'Otros',
                   items: [
                     'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_Mender-Client-reTerminal',
@@ -13991,6 +14008,7 @@ const sidebars = {
           //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
           // },
           items: [
+            'es/Robotics/Robot_Sensor/Camera/es_Getting_Start_with_AC1',
             'es/Robotics/Robot_Sensor/Camera/es_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
             'es/Robotics/Robot_Sensor/Camera/es_Orbbec_Depth_Camera',
             'es/Robotics/Robot_Sensor/Camera/es_ORB_SLAM3_with_Orbbec_Gemini2',
@@ -16757,6 +16775,7 @@ const sidebars = {
                   items: [
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ha',
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_edgeimpulse',
+                    'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_tflm',
                   ],
                 },
               ],
@@ -18176,6 +18195,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'Chirpstack',
+                  items: [
+                    'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Chirpstack/ja_recomputer_r1x_chirpstack',
+                  ]
+                },
+                {
+                  type: 'category',
                   label: 'その他',
                   items: [
                     'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_Mender-Client-reTerminal',
@@ -18924,6 +18950,7 @@ const sidebars = {
           //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
           // },
           items: [
+            'ja/Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_AC1',
             'ja/Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
             'ja/Robotics/Robot_Sensor/Camera/ja_Orbbec_Depth_Camera',
             'ja/Robotics/Robot_Sensor/Camera/ja_ORB_SLAM3_with_Orbbec_Gemini2',

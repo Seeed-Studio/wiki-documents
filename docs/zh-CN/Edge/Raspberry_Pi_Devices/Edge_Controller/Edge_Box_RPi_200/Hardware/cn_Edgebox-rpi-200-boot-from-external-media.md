@@ -93,7 +93,7 @@ mmcblk0boot1 179:64   0    4M  1 disk
 ```
 
 :::note
-If you see the output as following, which you probably does for the first time boot:
+如果你看到以下输出，这很可能是首次启动时的情况：
 
 ```sh
 pi@raspberrypi:~ $ lsblk
@@ -155,16 +155,14 @@ nvme0n1      259:0    0 119.2G  0 disk
 |-nvme0n1p1  259:1    0   200M  0 part 
 `-nvme0n1p2  259:2    0   119G  0 part 
 ```
+**STEP 2:** 下载 EdgeBox-RPI-200 图像文件
 
-**STEP 2:** Download the EdgeBox-RPI-200 image file
-
-Please enter the following command to download the image file:
+请输入以下命令来下载图片文件：
 
 ```sh
 wget https://altushost-swe.dl.sourceforge.net/project/edgebox-rpi-200/edgeboxrpi200.img -O edgeboxrpi200.img
 ```
-
-You should see the downloading progress like:
+你应该会看到类似这样的下载进度：
 
 ```sh
 pi@raspberrypi:~/Downloads $ wget https://altushost-swe.dl.sourceforge.net/project/edgebox-rpi-200/edgeboxrpi200.img -O edgeboxrpi200.img

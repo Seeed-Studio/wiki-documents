@@ -102,7 +102,7 @@ sudo docker run --runtime nvidia --privileged --rm -it --env MASKCAM_INPUT=v4l2:
 sudo docker run --runtime nvidia --privileged --rm -it --env MASKCAM_INPUT=v4l2://0 --env MASKCAM_DEVICE_ADDRESS=<your-jetson-ip> -p 1883:1883 -p 8080:8080 -p 8554:8554 maskcam/maskcam-beta
 ```
 
-- #### **Step 4.** View the live vedio stream through the ```MASKCAM_DEVICE_ADDRESS```
+- #### **步骤 4.** 通过```MASKCAM_DEVICE_ADDRESS```查看实时视频流
 
 ```shell
 Streaming at rtsp://aaa.bbb.ccc.ddd:8554/maskcam
@@ -157,7 +157,7 @@ Expand-Archive e:\maskcam.zip -DestinationPath e:\maskcam
 cd maskcam\maskcam-main\server
 ```
 
-Then, create the ```.env``` files by copying the default templates:
+然后，通过复制默认模板来创建 ```.env``` 文件：
 
 ```shell
 cp database.env.template database.env

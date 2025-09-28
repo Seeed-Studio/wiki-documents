@@ -165,7 +165,7 @@ int sensorValue = analogRead(sensorPin);
 
 ### **Serial**
 
-Use pin D6 as the TX pin of UART and pin D7 as RX pin of UART to send the "Hello World!" message
+使用引脚 D6 作为 UART 的 TX 引脚，使用引脚 D7 作为 UART 的 RX 引脚来发送"Hello World!"消息
 
 ```cpp
 void setup() {

@@ -87,7 +87,7 @@ Home Assistant OS 为运行 Home Assistant 提供了一个精简和优化的环�
 sudo apt update
 ```
 
-- **Following this, proceed to install the following dependencies:**
+- **接下来，继续安装以下依赖项：**
 
 ```sh
 sudo apt-get install \
@@ -123,13 +123,13 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-- **Add Docker user to the system**
+- **将 Docker 用户添加到系统中**
 
 ```sh
 sudo usermod -aG docker pi
 ```
 
-- **Check whether Docker is working properly**
+- **检查 Docker 是否正常工作**
 
 ```sh
 docker --version
@@ -143,7 +143,7 @@ docker --version
 sudo nano /etc/default/grub
 ```
 
-- **Add this line and save it.**
+- **添加此行并保存。**
 
 ```sh
 systemd.unified_cgroup_hierarchy=false
@@ -155,7 +155,7 @@ systemd.unified_cgroup_hierarchy=false
 sudo nano /boot/cmdline.txt
 ```
 
-- **Add this line end of the phrase and save it.**
+- **在短语末尾添加此行并保存。**
 
 ```sh
 
@@ -170,21 +170,21 @@ systemd.unified_cgroup_hierarchy=false apparmor=1 security=apparmor
 wget https://github.com/home-assistant/os-agent/releases/download/1.3.0/os-agent_1.3.0_linux_aarch64.deb
 ```
 
-- **Install Home Asssitant OS Agent**
+- **安装 Home Asssitant OS 代理**
 
 ```sh
 sudo dpkg -i os-agent_1.3.0_linux_aarch64.deb
 ```
 
-- **Ensure the installation was successful by running**
+- **通过运行以下命令确保安装成功**
 
 ```sh
 gdbus introspect --system --dest io.hass.os --object-path /io/hass/os
 ```
 
-### Step 5: Acquire Home Assistant Supervised
+### 步骤 5：获取Home Assistant监督
 
-- **Download the latest Home Assistant Supervised package:**
+- **下载最新的 Home Assistant Supervised 包：**
 
 ```sh
 wget https://github.com/home-assistant/supervised-installer/releases/download/1.3.0/homeassistant-supervised.deb
@@ -200,7 +200,7 @@ sudo dpkg -i homeassistant-supervised.deb
 
 ### Step 7: Address Installation Errors
 
-In case of installation errors, rectify them by running:
+如果出现安装错误，请运行以下命令进行修复：
 
 ```sh
 sudo apt --fix-broken install
@@ -225,13 +225,13 @@ sudo apt --fix-broken install
 sudo systemctl enable dhcpcd
 ```
 
-- Disable the networking service with the command:
+- 使用以下命令禁用网络服务：
 
 ```sh
 sudo systemctl disable networking
 ```
 
-- Reboot the Raspberry Pi to apply the changes:
+- 重启树莓派以应用更改：
 
 ```sh
 sudo reboot

@@ -116,7 +116,7 @@ reCameraに異なるモデルをデプロイする方法は3つあります：
 
 - 1. `On Device` モデルを選択します。いくつかのYoloモデルが[デフォルトで](https://wiki.seeedstudio.com/ja/recamera_on_device_models)reCameraに含まれています。
 - 2. `SenseCraft Zoo` からモデルを選択します。ジェスチャーや果物など、選択できるいくつかのパブリックモデルがあります。ユーザーは独自のモデルをアップロードし、コミュニティに貢献するために公開することもできます。
-- 3. `独自のモデルをアップロード` してreCameraに配置します。[reCameraへのモデル変換](https://wiki.seeedstudio.com/convert xxx)の指示に従って、ユーザーは独自のAIモデルをreCameraに適応するINT8 cvimodel形式に変換できます。その後、モデルをreCameraにアップロードしてデプロイメントします。モデルがアップロードされた後、`Labels` フィールドにモデルのクラスをリストしてください。
+- 3. `独自のモデルをアップロード` してreCameraに配置します。[reCameraへのモデル変換](https://wiki.seeedstudio.com/ja/recamera_model_conversion/)の指示に従って、ユーザーは独自のAIモデルをreCameraに適応するINT8 cvimodel形式に変換できます。その後、モデルをreCameraにアップロードしてデプロイメントします。モデルがアップロードされた後、`Labels` フィールドにモデルのクラスをリストしてください。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/model_classes.png" /></div>
 

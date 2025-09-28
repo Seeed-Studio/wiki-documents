@@ -28,7 +28,7 @@ ReCamera使用轻量级的**SysVinit系统**，并通过**/etc/inittab**执行�
 ::sysinit:/etc/init.d/rcS
 ```
 
-The **rcS** file defines that the program will sequentially start scripts beginning with "S??":
+**rcS** 文件定义程序将按顺序启动以"S??"开头的脚本：
 
 ```
 for i in /etc/init.d/S??* ;do
@@ -177,14 +177,14 @@ esac
 exit 0
 ```
 
-Then, grant executable permissions to your script:
+然后，给你的脚本授予可执行权限：
 
 ```
 sudo chmod +x {your script}
 ls -l
 ```
 
-Place your program's executable file in the specified path, typically: **/usr/local/bin**:
+将程序的可执行文件放置在指定路径，通常是：**/usr/local/bin**：
 
 ```
 sudo scp {your program} /usr/local/bin
@@ -192,7 +192,7 @@ sudo chmod +x {your program}
 ls -l
 ```
 
-Test whether the script and program can start normally:
+测试脚本和程序是否能正常启动：
 
 ```
 sudo /etc/init.d/{your script} start
@@ -301,13 +301,13 @@ cd build && cpack
 scp {your project.deb} recamera@192.168.42.1:/tmp/
 ```
 
-In the recamera terminal,use opkg to install:
+在 recamera 终端中，使用 opkg 安装：
 
 ```
 sudo opkg install /tmp/{your project.deb}
 ```
 
-If your project was previously installed, uninstall it first.
+如果你的项目之前已经安装过，请先卸载它。
 
 ```
 sudo opkg remove {your program}

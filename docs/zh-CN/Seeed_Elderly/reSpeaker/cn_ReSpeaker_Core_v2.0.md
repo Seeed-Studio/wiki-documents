@@ -349,7 +349,7 @@ ls /dev/cu.usb* (Mac)
 ls /dev/ttyACM* (Linux)
 ```
 
-You should get back something like:
+你应该会得到类似这样的结果：
 
 ```
 /dev/cu.usbmodem14XX where XX will vary depending on which USB port you used (on Mac)
@@ -382,7 +382,7 @@ sudo nmtui              # respeaker user needs sudo
 ip address
 ```
 
-In the example below, we can see that this ReSpeaker's IP address is ```192.168.7.108```
+在下面的例子中，我们可以看到这个ReSpeaker的IP地址是```192.168.7.108```
 
 ```
 root@v2:/home/respeaker# ip address
@@ -603,7 +603,7 @@ aplay -r 16000 -c 2 hello.wav
 arecord -Dhw:0,0 -f S16_LE -r 16000 -c 8 hello_8ch.wav
 ```
 
-Besides you can record and play at the same time.
+此外，你可以同时录音和播放。
 
 ```
 arecord | aplay
@@ -611,14 +611,14 @@ arecord | aplay
 
 **2. Test via PulseAudio**
 
-First check whether the PulseAudio is running:
+首先检查 PulseAudio 是否正在运行：
 
 ```
 respeaker@v2:~$ ps aux|grep pulse|grep -v grep
 respeak+  1109  0.0  0.7 363272  7932 ?        S<l  01:01   0:00 /usr/bin/pulseaudio --start --log-target=syslog
 ```
 
-If it's not, please refer to PulseAudio's documentation to enable the auto-spawn of PulseAudio. Then test via:
+如果不是，请参考 PulseAudio 的文档来启用 PulseAudio 的自动生成。然后通过以下方式测试：
 
 ```
 parecord --channels=8 --rate=16000 --format=s16le hello2.wav
@@ -652,7 +652,7 @@ aplay hello3.wav
 sudo apt install  python-mraa python-upm libmraa1 libupm1 mraa-tools
 ```
 
-- **Step 2. Check your platform information**
+- **步骤 2. 检查你的平台信息**
 
 ```
 #only have bus 0 and id=03(/dev/i2c-3), 0 is the i2c number for mraa and upm
@@ -833,7 +833,7 @@ if __name__ == '__main__':
     main()
 ```
 
-The result should be something like:
+结果应该类似于：
 
 ``` python
 respeaker@v2:~$ python tsl2561.py       
@@ -916,7 +916,7 @@ alsamixer
 sudo pip install evdev
 ```
 
-- **Step 2.** Copy the code below and save it as a python file, let's name it **usrer_button.py**.
+- **步骤 2.** 复制下面的代码并将其保存为一个 Python 文件，我们将其命名为 **usrer_button.py**。
 
 ```
 from evdev import InputDevice,categorize,ecodes
@@ -927,7 +927,7 @@ for event in key.read_loop():
         print(categorize(event))
 ```
 
-- **Step 3.** Tap the following command to run this demo.
+- **步骤 3.** 点击以下命令来运行此演示。
 
 ```
 sudo python usrer_button.py

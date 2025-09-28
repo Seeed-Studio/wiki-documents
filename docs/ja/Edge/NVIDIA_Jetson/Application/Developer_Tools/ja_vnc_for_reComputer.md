@@ -77,7 +77,7 @@ VNCは、他のPCデバイスからreComputer Nvidia Jetsonをリモート制御
   sudo vi org.gnome.Vino.gschema.xml 
  ```
 
-Paste the following code into the location below, ensuring the format is the same as below.
+次のコードを以下の場所に貼り付け、フォーマットが下の例と同じであることを確認してください。
 
   ```bash
   <key name='enabled' type='b'>
