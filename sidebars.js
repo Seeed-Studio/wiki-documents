@@ -8384,7 +8384,7 @@ const sidebars = {
                   type: 'category',
                   label: 'NVR',
                   items: [
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_gan_detection_with_frigate_nvr_on_r2000',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_gun_detection_with_frigate_nvr_on_r2000',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_frigate_home_assistant_recomputer_r2000',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_frigate_nvr_with_raspberrypi_5',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_reterminal_frigate',
@@ -13326,7 +13326,7 @@ const sidebars = {
                   type: 'category',
                   label: 'NVR',
                   items: [
-                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_gan_detection_with_frigate_nvr_on_r2000',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_gun_detection_with_frigate_nvr_on_r2000',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_frigate_home_assistant_recomputer_r2000',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_frigate_nvr_with_raspberrypi_5',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_reterminal_frigate',
@@ -18268,7 +18268,7 @@ const sidebars = {
                   type: 'category',
                   label: 'NVR',
                   items: [
-                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_gan_detection_with_frigate_nvr_on_r2000',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_gun_detection_with_frigate_nvr_on_r2000',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_frigate_home_assistant_recomputer_r2000',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_frigate_nvr_with_raspberrypi_5',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_reterminal_frigate',
