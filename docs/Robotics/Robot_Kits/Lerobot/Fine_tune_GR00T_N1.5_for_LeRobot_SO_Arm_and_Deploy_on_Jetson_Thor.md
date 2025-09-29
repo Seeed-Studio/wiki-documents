@@ -561,7 +561,6 @@ chmod +x Miniconda3-latest-Linux-aarch64.sh
 ./Miniconda3-latest-Linux-aarch64.sh
 source ~/.bashrc
 
-
 #PC 
 mkdir -p ~/miniconda3
 cd miniconda3
@@ -611,10 +610,8 @@ pip3 install numpy==1.26.0  # This should match torchvision
 
 ### Configure the motors
 
-
-The motors on each joint of the SO-ARM need to be configured before assembly. The configuration steps can be found in the subsection of the following link:    
+The motors on each joint of the SO-ARM need to be configured before assembly. The configuration steps can be found in the subsection of the following link:
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#configure-the-motors](https://wiki.seeedstudio.com/lerobot_so100m_new/#configure-the-motors)
-
 
 ### Assembly
 
@@ -622,7 +619,6 @@ The installation process of the SO-ARM’s master and follower arms can be found
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#assembly](https://wiki.seeedstudio.com/lerobot_so100m_new/#assembly)
 
 ### SO-ARM Calibration
-
 
 After the SO-ARM has been fully assembled, calibration is required. Please refer to the subsection of the following link for the calibration procedure:  
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#calibrate](https://wiki.seeedstudio.com/lerobot_so100m_new/#calibrate)
@@ -812,7 +808,6 @@ The collected data will be saved locally under `~/.cache/huggingface/lerobot` di
 
 ### Visualizing Collected Data
 
-
 To visualize the data collected on the SO-ARM, please refer to the subsection of the following link:  
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset)
 
@@ -848,7 +843,6 @@ For example: running this script will cause the follower arm to execute the exac
 
 Based on the collected data, the procedure for training a Policy can be found in the subsection of the following link:  
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#train-a-policy](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-a-policy)
-
 
 <!-- If you plan to train the policy locally, you may refer to the following command:
 

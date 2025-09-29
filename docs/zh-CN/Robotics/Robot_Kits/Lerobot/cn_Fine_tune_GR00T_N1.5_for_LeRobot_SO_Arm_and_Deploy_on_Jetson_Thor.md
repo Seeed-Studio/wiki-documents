@@ -498,7 +498,8 @@ widgetsnbextension        4.0.14                             /opt/venv/lib/pytho
 wrapt                     1.17.3                             /opt/venv/lib/python3.12/site-packages pip
 xxhash                    3.5.0                              /opt/venv/lib/python3.12/site-packages pip
 yarl                      1.20.1                             /opt/venv/lib/python3.12/site-packages pip
-zipp                      3.23.0                             /opt/venv/lib/python3.12/site-packages pip```
+zipp                      3.23.0                             /opt/venv/lib/python3.12/site-packages pip
+```
 
 </details>
 
@@ -560,7 +561,6 @@ chmod +x Miniconda3-latest-Linux-aarch64.sh
 ./Miniconda3-latest-Linux-aarch64.sh
 source ~/.bashrc
 
-
 #PC 
 mkdir -p ~/miniconda3
 cd miniconda3
@@ -610,10 +610,8 @@ pip3 install numpy==1.26.0  # This should match torchvision
 
 ### 配置电机
 
-
-SO-ARM 每个关节上的电机需要在组装前进行配置。配置步骤可以在以下链接的子部分中找到：    
+SO-ARM 每个关节上的电机需要在组装前进行配置。配置步骤可以在以下链接的子部分中找到：
 [https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#configure-the-motors](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#configure-the-motors)
-
 
 ### 组装
 
@@ -621,7 +619,6 @@ SO-ARM 主臂和从臂的安装过程可以在以下链接的子部分中找到�
 [https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#assembly](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#assembly)
 
 ### SO-ARM 校准
-
 
 SO-ARM 完全组装后，需要进行校准。校准程序请参考以下链接的子部分：  
 [https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#calibrate](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#calibrate)
@@ -751,7 +748,8 @@ python -m lerobot.record \
     --robot.port=/dev/ttyACM1 \
     --robot.id=my_awesome_follower_arm \
     --robot.cameras="{ wrist: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, front: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
-    --teleop.type=so101_leader \    --teleop.port=/dev/ttyACM0 \
+    --teleop.type=so101_leader \
+    --teleop.port=/dev/ttyACM0 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true \
     --dataset.repo_id=seeed_studio/test \
@@ -810,7 +808,6 @@ The collected data will be saved locally under `~/.cache/huggingface/lerobot` di
 
 ### Visualizing Collected Data
 
-
 To visualize the data collected on the SO-ARM, please refer to the subsection of the following link:  
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset)
 
@@ -846,7 +843,6 @@ For example: running this script will cause the follower arm to execute the exac
 
 Based on the collected data, the procedure for training a Policy can be found in the subsection of the following link:  
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#train-a-policy](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-a-policy)
-
 
 <!-- If you plan to train the policy locally, you may refer to the following command:
 
@@ -1030,6 +1026,7 @@ python scripts/gr00t_finetune.py \
 This script will automatically download the pretrained GR00T model from Hugging Face and begin the fine-tuning process.
 
 If you wish to use a locally stored pretrained GR00T model, modify the command as follows:
+
 ```bash
 python scripts/gr00t_finetune.py \
    --dataset-path ./demo_data/so101-table-cleanup/ \
