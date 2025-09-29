@@ -20,46 +20,41 @@ last_update:
     </a>
 </div>
 
-
-
 The reComputer Industrial R21xx supports a variety of IoT wireless communications, including 4G, 5G, LoRa®, Wi-Fi/BLE, and Zigbee. It supports expansion via an M.2 slot for SSD storage or AI capabilities via an NPU accelerator. If you choose to include the AI ​​accelerator directly in your purchase, you'll gain an additional 26TOPS of computing power. Furthermore, our hardware engineering services include logo customization, package branding, labeling, firmware flashing, and imaging services, providing comprehensive support tailored to your specific needs.
 
 This Wiki will show you how to Assemble and Disassemble the unit to install peripherals components, as well as the option for mounting
 
-
 ## Hardware Prerequisites
+
 You need to prepare the following hardware
 
 - reComputer Industrial R21xx x 1
 - Accessories
 - Screw Driver set
-  * Phillips + 3.5 bit
-  * Phillips + 3.0 bit
-  * Slotted - 2.5 bit
+  - Phillips + 3.5 bit
+  - Phillips + 3.0 bit
+  - Slotted - 2.5 bit
 
 ## Device Disassembly Guide
 
 Following these steps should help you disassemble the device without any issues.
 
 **Step 1:** Remove the Four Screws at the Bottom and remove the front and rear panels:
+
 - Locate and unscrew the four screws located at the bottom of the device using an appropriate screwdriver.
 - Once the screws are removed, carefully lift off the front and rear panels from the device.
 
 **Step 2:**  Unscrew the side antenna connector nuts and remove the Floor Panel.
 
 **Step 3:** Remove the four screws that secure the PCB in place
- 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.1_disassembly_guide_1.png" style={{width:800, height:'auto'}}/></div>
-
 
 ## Installing a Nano SIM Card
 
 **Step 1:** Load the Nano SIM Card into the SIM slot.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.2_assemble_nano_sim_card_1.png" style={{width:800, height:'auto'}}/></div>
-
-
 
 ## Installing an SSD  
 
@@ -68,7 +63,6 @@ Following these steps should help you disassemble the device without any issues.
 **Step 2:** Load the SSD into the M.2 socket and lock the screws.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.3_assemble_ssd_1.png" style={{width:800, height:'auto'}}/></div>
-
 
 ## Assembling 5G/4G/LoRa®/Zigbee Module and Antenna
 
@@ -80,7 +74,7 @@ Following these steps should help you disassemble the device without any issues.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.5_assemble_5g4glora_zigbee_module_and_antenna_1.png" style={{width:800, height:'auto'}}/></div>
 
-## Assembling the TPM 2.0 Module 
+## Assembling the TPM 2.0 Module
 
 **Step 1:** Remove the back cover following the disassembly guide.
 
@@ -88,29 +82,27 @@ Following these steps should help you disassemble the device without any issues.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.6_assemble_tpm_2.0_module_1.png" style={{width:800, height:'auto'}}/></div>
 
-
 ## Assembling the UPS and PoE Module
 
 **Step 1:** Before installing the UPS and PoE module on the CM5 module side of board, disassemble the entire device following the disassembly guide provided.
- 
 
 **Step 2:** Install the UPS Module**  
+
 - Using two PM2.0xL5.0 screws and M2.0x5.0 standoffs, secure the UPS module onto two holes without metal contact pads.
 - Make sure the UPS module is aligned properly and firmly attached using the provided screws and standoffs.
 
 **Step 3: Install the PoE Module**  
+
 - Align the **PoE module** with the **designated slot** on the board.  
 - Carefully **solder the PoE module** onto the board, ensuring precision to prevent damage to nearby components.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.7_assemble_ups_module_1.png" style={{width:800, height:'auto'}}/></div>
 
-
-
 ## Mounting Guide
 
 ### DIN-Rail Mounting Guide
 
-reComputer Industrial R21xx offers various installation methods. The DIN-rail clip and installation screws are included in the packaging. Follow the diagram to correctly attach the DIN-rail clip to the mounting holes on the side of the device. Once the screws are securely fastened, you can then install the device onto the mounting rail. 
+reComputer Industrial R21xx offers various installation methods. The DIN-rail clip and installation screws are included in the packaging. Follow the diagram to correctly attach the DIN-rail clip to the mounting holes on the side of the device. Once the screws are securely fastened, you can then install the device onto the mounting rail.
 
 #### Installation Steps
 
@@ -120,29 +112,26 @@ reComputer Industrial R21xx offers various installation methods. The DIN-rail cl
 
 #### Removal Steps
 
-- **Step 1:** Push down the device until it is released by the rail clip. 
+- **Step 1:** Push down the device until it is released by the rail clip.
 - **Step 2:** Swing the device out of the standard profile rail.
 - **Step 3:** Lift the device up and of
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.8.1_din-rail_mounting_guide_1.png" style={{width:1000, height:'auto'}}/></div>
 
-
-###  Wall Mounting Guide 
+### Wall Mounting Guide
 
 Vertical mounting method is also suitable for reComputer Industrial R2000, however the mounting brackets are not included in box, that need additional purchase.
-
 
 #### Installation Steps
 
 - **Step 1:** Lay the mounting brackets on the rear of the device.
 - **Step 2:** Fasten the brackets with supplied screws.
-- **Step 3:** Mark the bore holes, drill the required holes in the wall and fasten the device to the wall using two screws. 
+- **Step 3:** Mark the bore holes, drill the required holes in the wall and fasten the device to the wall using two screws.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.8.2_wall_mounting_guide_1.png" style={{width:1000, height:'auto'}}/></div>
 
-
 ## Accessories List
+
 <div class="table-center">
 <table >
   <tbody>
@@ -279,11 +268,11 @@ Vertical mounting method is also suitable for reComputer Industrial R2000, howev
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

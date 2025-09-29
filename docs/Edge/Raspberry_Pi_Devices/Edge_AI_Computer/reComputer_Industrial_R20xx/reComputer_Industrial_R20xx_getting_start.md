@@ -27,30 +27,34 @@ The reComputer Industrial R20xx series is ideal for use in industrial AI applica
 ## Features
 
 **Industrial-Grade Reliability**
+
 - Fanless compact PC with wide temperature support -20°C to 60°C
 - Hardware watchdog
 - UPS Supercapacitor(optional)
-- High-quality metal case, compatible with DIN-rail and Wall installation 
+- High-quality metal case, compatible with DIN-rail and Wall installation
 - Production Lifetime: reComputer Industrial R2000 will remain in production until at least December 2030
 
 **High-Efficiency AI Computing**
-- Powered by Raspberry Pi CM5 
-- Broadcom BCM2711 quad-core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz 
+
+- Powered by Raspberry Pi CM5
+- Broadcom BCM2711 quad-core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz
 - Up to 16GB RAM and 64GB eMMC
 - Powered by Hailo-8 AI accelerator up to 26 TOPS(optional)
-       
+
 **Rich Wireless Capabilities**
+
 - On-chip Wi-Fi
 - On-chip BLE
 - Mini-PCIe: LTE, USB LoRa®, USB Zigbee
 - M.2 KEY-B: 4G/5G
 
 **Rich Interfaces**
+
 - 3x RS485 (isolated), 1x RS232 (isolated), 8x isolated DI ports, 8x isolated DO ports
 - 1x 10M/100M/1000M Ethernet (Support PoE PD)
 - 1x 10M/100M Ethernet
 - 2x HDMI 2.0
-- 3x Type-A USB3.0 
+- 3x Type-A USB3.0
 - 1x Type-A USB2.0
 - 1x Type-C USB2.0 (USB console for OS update)
 - 1x Nano SIM card slot
@@ -137,7 +141,7 @@ The reComputer Industrial R20xx supports two power supply options: DC terminal a
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/R1100/power_terminal.PNG" style={{width:100, height:'auto'}}/></div>
 
-The reComputer Industrial R2000 is supplied with a terminal DC voltage of 9~36V. The power supply is connected via the 2-pin power terminal block connector. 
+The reComputer Industrial R2000 is supplied with a terminal DC voltage of 9~36V. The power supply is connected via the 2-pin power terminal block connector.
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2-pin_power_terminal_2.png" style={{width:100, height:'auto'}}/></div>
 
 To ground the reComputer Industrial R2000, the ground wire can be secured to the screw located at the right of the power terminal.
@@ -148,7 +152,6 @@ The ETH0(PoE PD) port of reComputer Industrial R2000 can support PoE power suppl
 
 - PoE PD: IEEE 802.3at, 25.5W Max
 
-
 > Note:
 > It's worth noting that the PoE module provided with the reComputer Industrial R2000 is compliant with the IEEE 802.3at standard and can provide a maximum power supply of 25W. Therefore, if there is a need to connect high-power peripherals such as 5G or 4G modules, the PoE power supply may not be sufficient. In this case, it's recommended to use the DC terminal for power supply instead to ensure stable and reliable operation of the device.
 
@@ -158,13 +161,12 @@ The reComputer Industrial R2000 does not come with a power button by default, an
 
 #### Block Diagram
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.1.4_block_diagram_1.png" style={{width:800, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.1.4_block_diagram_2.png" style={{width:800, height:'auto'}}/></div>
 
 #### IIC Diagram
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.1.5_iic_diagram_1.png" style={{width:800, height:'auto'}}/></div>
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.1.5_iic_diagram_1.png" style={{width:800, height:'auto'}}/></div>
 
 ## Interface Description
 
@@ -235,7 +237,6 @@ The reComputer Industrial R2000 features 4 LED indicators that serve to signal t
   </table>
 </div>
 
-
 #### ACT Status table
 
 | Long flashes | Short flashes | Status                               |
@@ -265,13 +266,11 @@ For more detail please check the [Raspberry Pi forum](https://forums.raspberrypi
 
 The reComputer Industrial R2000 contains a USER indicator, and users can customize the status according to actual needs.
 
-
 ### Buzzer
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.2_buzzer_1.png" style={{width:800, height:'auto'}}/></div>
 
 The reComputer Industrial R2000 contains an active buzzer, which can be used for various purposes such as alarm and event notifications. Enter in the terminal of reComputer Industrial R2000:
- 
 
 ```bash
 cat /sys/kernel/debug/gpio
@@ -281,7 +280,7 @@ This command will output the GPIO corresponding to the Buzzer_EN is gpio627.
 
 ### RS485
 
-The reComputer Industrial R20xx series equipment includes 3x RS485 ports, 6-Pin 3.5mm spacing phoenix terminals. 
+The reComputer Industrial R20xx series equipment includes 3x RS485 ports, 6-Pin 3.5mm spacing phoenix terminals.
 The silkscreen of single RS485 is "A/B/GND".
 
 **Pin Definitions**  
@@ -338,7 +337,6 @@ The terminal pin assignments are as follows:
   </table>
 </div>
 
-
 **Connecting Cables**
 Schematic diagram of RS485 wires is as follws:
 
@@ -348,9 +346,8 @@ Note : The product packaging contains some 120 Ohm terminal resistors. You can u
 
 ### RS232
 
-The reComputer Industrial R2000 series equipment includes 1x RS232 ports, 6-Pin 3.5mm spacing phoenix terminals. 
+The reComputer Industrial R2000 series equipment includes 1x RS232 ports, 6-Pin 3.5mm spacing phoenix terminals.
 The silkscreen of single RS232 is "TX/RX/GND".
-
 
 **Pin Definition**
 
@@ -388,9 +385,9 @@ Schematic diagram of RS232 wires is as follws:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.4_rs232_1.png" style={{width:800, height:'auto'}}/></div>
 
+### DI (Digital Input)
 
-###  DI (Digital Input)
-The reComputer Industrial R2000 series equipment includes 8x DI ports, 3-Pin 3.5mm spacing phoenix terminals. 
+The reComputer Industrial R2000 series equipment includes 8x DI ports, 3-Pin 3.5mm spacing phoenix terminals.
  The silkscreen of single DI is "DI/G_DI".
 
 **Pin Definition**
@@ -451,7 +448,6 @@ Terminal pins are defined as follows:
 **Connecting Cables**
 Schematic diagram of a single DI wires is as follws:
 
-
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
     <thead>
@@ -479,15 +475,12 @@ Schematic diagram of a single DI wires is as follws:
   </table>
 </div>
 
-
-
-> Note 
+> Note
 > For details of DI testing, please refer to section [link](https://wiki.seeedstudio.com/recomputer_industrial_r20xx_configure_system/di-(digital-input)-testing).
-
 
 ### DO (Digital Output)
 
-The reComputer Industrial R2000 series equipment includes 8x DO ports, 3-Pin 3.5mm spacing phoenix terminals. 
+The reComputer Industrial R2000 series equipment includes 8x DO ports, 3-Pin 3.5mm spacing phoenix terminals.
 The silkscreen of single DO is "DO/G_DO".
 **Pin Definition**
 Terminal pins are defined as follows:
@@ -542,7 +535,6 @@ Terminal pins are defined as follows:
   </table>
 </div>
 
-
 **Connecting Cables**
 
 Schematic diagram of a single DO wires is as follws:
@@ -574,7 +566,6 @@ Schematic diagram of a single DO wires is as follws:
   </table>
 </div>
 
-
 ### Boot Switch
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.7_boot_switch_1.png" style={{width:100, height:'auto'}}/></div>
@@ -601,9 +592,8 @@ The reComputer Industrial R20xx is equipped with 1x USB Type-C port and 4x USB T
 | Type-A   | *1       | USB 2.0    | USB-Host     | Connect different USB devices such as flash drives, USB keyboards or mouses. |
 | Type-A   | *3       | USB 3.0    | USB-Host     | Connect different USB devices such as flash drives, USB keyboards or mouses. |
 
-
-
 ### SIM Slot(Internal)
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.9_sim_slot(internal)_1.png" style={{width:900, height:'auto'}}/></div>
 
 The reComputer Industrial R2000 series equipment includes an internal Nano SIM card slot, which is used to install Nano SIM card for obtaining 5G/4G signals.
@@ -613,7 +603,7 @@ The size differences between standard SIM, Micro SIM and Nano SIM cards are as f
 
 > **Note**  
 > Please note that the standard version of reComputer Industrial R2000 does not come with a 5G/4G module.
-> If you require 5G/4G functionality, an additional 5G/4G module must be purchased separately. 
+> If you require 5G/4G functionality, an additional 5G/4G module must be purchased separately.
 
 ### M.2 M-KEY Slot
 
@@ -629,7 +619,7 @@ The size differences between standard SIM, Micro SIM and Nano SIM cards are as f
 The M.2 M-KEY 2280 slot on the reComputer Industrial R2000 is designed to accommodate NVMe M.2 2280 SSDs for 128GB, 256GB, 512GB, 1TB and 2TB in capacity. This slot allows for high-speed storage expansion, enabling users to enhance the performance and capacity of their system.
 
 > **Note**  
-> There are two main uses for SSD cards: 
+> There are two main uses for SSD cards:
 >
 > 1. **High Capacity Storage:** SSD cards can be utilized for high-capacity storage needs.
 > 2. **Boot Drive with Image:** Another usage involves using the SSD both as a high-capacity storage and for storing system images, allowing booting directly from the SSD card.
@@ -637,7 +627,6 @@ The M.2 M-KEY 2280 slot on the reComputer Industrial R2000 is designed to accomm
 > It's important to note that not all SSD cards available in the market support the second usage. Therefore, if you intend to use it as a boot drive and are unsure about which model to purchase, we recommend opting for our recommended 2TB SSD(SKU 114993467). This model has been tested and verified for boot functionality, reducing the risk of compatibility issues and minimizing trial and error costs.
 
 The M.2 M-KEY 2280 slot on the reComputer Industrial R2000 is designed to accommodate PCIE M.2 AI  Accelerator. And the R20xx-12 series has been pre-installed with a Hailo-8 M.2 AI Acceleration up to 26TOPS.
-
 
 ### Mini-PCIe Slot
 
@@ -650,12 +639,14 @@ The MiniPCIe slot on the reComputer Industrial R2000 is designed to accommodate 
 
 There is a Mini Push Button Switch located in the reset hole of the reComputer AI Industrial R2135. By pressing this button with a thin object, the CM4 can be reset. This pin when high signals that the CM4 has started. Driving this pin low resets the module.
 
-### M.2 B-KEY Slot 
+### M.2 B-KEY Slot
+
 The M.2 B-KEY slot on the reComputer Industrial R2000 is designed to accommodate 5G/4G LTE.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.12_m.2_b-key__slot_1.png" style={{width:800, height:'auto'}}/></div>
 
 ### Reset Hole
+
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.13_reset_hole_1.png" style={{width:200, height:'auto'}}/></div>
 There is a Mini Push Button Switch located in the reset hole of reComputer Industrial R2000. By pressing this button with a thin object, the CM5 can be reset. This pin when high signals that the CM5 has started. Driving this pin low resets the module.
 
@@ -665,7 +656,7 @@ There is a Mini Push Button Switch located in the reset hole of reComputer Indus
 
 The **reComputer R1100** is equipped with two Ethernet ports:  
 
-| **Name**  | **Type**                     | **Speeds**          | **PoE PD**              
+| **Name**  | **Type**                     | **Speeds**          | **PoE PD**
 |-------|------------------------------|---------------------|----------------------------|
 | ETH0  | CM5 native Gigabit Ethernet  | 10/100/1000 Mbit/s  | Supported       |
 | ETH1  | Converted from USB           | 10/100 Mbit/s       | Not Supported   |
@@ -682,8 +673,6 @@ The reComputer Industrial R2000 features 2x native HDMI interface from CM5, supp
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.16_rtc_1.png" style={{width:200, height:'auto'}}/></div>
 The reComputer Industrial R2000 features an RTC circuit that powered by the capacitor, enabling it to maintain timekeeping functionality even in the event of power loss.
-
-
 
 ### Watchdog
 
@@ -828,41 +817,42 @@ Here is the accessories and optional modules list:
   </table>
 </div>
 
-The reComputer Industrial R20xx mainboard features two Mini-PCIe slots. Mini-PCIe slot 1 supports 4G module, LoRa® module using the USB protocol and Zigbee module using USB protocol; while Mini-PCIe slot 2 supports LoRa® module using the USB and SPI protocol and Zigbee module using USB protocol. Additionally, 4G module and LoRa® module shouldn't be used at the same time, can not plug in two LoRa® modules on board. 
+The reComputer Industrial R20xx mainboard features two Mini-PCIe slots. Mini-PCIe slot 1 supports 4G module, LoRa® module using the USB protocol and Zigbee module using USB protocol; while Mini-PCIe slot 2 supports LoRa® module using the USB and SPI protocol and Zigbee module using USB protocol. Additionally, 4G module and LoRa® module shouldn't be used at the same time, can not plug in two LoRa® modules on board.
 
 > Note
 > Can not plug in 2 LoRa® modules on board.
 
-###  Wi-Fi/BLE  
+### Wi-Fi/BLE  
+
 The  reComputer Industrial R20xx is powered by the CM5 with an onboard Wi-Fi/BLE version, providing the same Wi-Fi/BLE parameters as the CM5. For detailed parameter information, please refer to the Raspberry Pi official website.  
 
+### 4G Module
 
-###  4G Module 
 The reComputer Industrial R20xx mainboard features one M.2 B-KEY Slot  and one Mini-PCIe Slot, Both M.2 B-KEY Slot and  Mini-PCIe slot  supporting a 4G module. The EC25 4G module from Quectel has been fully tested to be compatible with the reComputer Industrial R20xx.
 
 ### 5G Module
 
 The reComputer Industrial R20xx mainboard features one M.2 B-KEY Slot, supporting a 4G/5G module using the USB protocol. The EC25 4G module from Quectel has been fully tested to be compatible with the reComputer Industrial R20xx.
 
-> Note 
+> Note
 > Please note that if you require 4G/5G functionality, it is necessary to purchase the corresponding 4G module and external antenna, and follow the instructions in section 4.5 "Assemble 4G/LoRa®/Zigbee Module and Antenna".
 
 ### LoRa® Module  
+
 The Mini-PCIe slot supports LoRa® module using the USB and SPI protocol.  The WM1302 module from Seeed Studio has been fully tested to be compatible with the reComputer Industrial R2000.
 
-
-> Note 
+> Note
 > Please note that if you require LoRa® functionality, it is necessary to purchase the corresponding LoRa® module and external antenna, and follow the instructions in section 4.5 "Assemble 4G/LoRa®/Zigbee Module and Antenna".
 
+### Zigbee Module
 
-###  Zigbee Module 
 The Mini-PCIe slot offer support for Zigbee modules utilizing the USB protocol, allowing for seamless integration of Zigbee functionality into compatible devices. This feature enables efficient communication and control within Zigbee networks, enhancing the versatility and connectivity of the system. With the Mini-PCIe slot available for Zigbee modules, users have the flexibility to implement diverse applications for enhanced reliability.
-
 
 > Note  
 > Please note that if you require Zigbee functionality, it is necessary to purchase the corresponding Zigbee module and external antenna, and follow the instructions in section 4.5 "Assemble 4G/LoRa®/Zigbee Module and Antenna".
 
 ### SSD
+
 The reComputer Industrial R2000 supports 2280 NVMe SSD through the use of a PCIe slot(J7). It is important to note that the CM5's PCIe is gen2.0 with a maximum theoretical speed of 5Gbps. If you are using a Gen3.0 or higher SSD, it may not be able to achieve the SSD's maximum speed. After testing, the reTerminal DM with installed SSD can achieve a maximum write speed of 230MB/s and a maximum read speed of 370MB/s. If you are unsure which SSDs are compatible, you can purchase following the accessories list below.
 
 > Note
@@ -871,16 +861,14 @@ The reComputer Industrial R2000 supports 2280 NVMe SSD through the use of a PCIe
 
 > Note
 > There are two main uses for SSD cards:
+>
 > 1. **High Capacity Storage:** SSD cards can be utilized for high-capacity storage needs.
 > 2. **Boot Drive with Image:** Another usage involves using the SSD both as a highcapacity storage and for storing system images, allowing booting directly from the SSD card.
 > It's important to note that not all SSD cards available in the market support the second usage. Therefore, if you intend to use it as a boot drive and are unsure about which model to purchase, we recommend opting for our recommended 1TB SSD(SKU 112990267). This model has been tested and verified for boot functionality, reducing the risk of compatibility issues and minimizing trial and error costs.
 
-
 ### Encryption Chip TPM 2.0
 
 The TPM features Infineon’s OPTIGA™ TPM SLB9670 which is compliant to the Trusted Computing Group (TCG) TPM 2.0 specification is recommended as encryption chip to the reComputer Industrial R2000. The chip features an SPI interface applied for port J26 on board, to enable a root of trust for platform integrity, remote attestation, and cryptographic services.
-
-
 
 ### UPS (Uninterruptible Power Supply) Module
 
@@ -889,7 +877,7 @@ The TPM features Infineon’s OPTIGA™ TPM SLB9670 which is compliant to the Tr
 The UPS is 7F, which operates in series. The UPS module is positioned between the DC5V and CM5 components, with a GPIO signal utilized to alert the CPU in the event of a power loss from the 5V supply. Upon receiving this signal, the CPU executes an urgent script before the super capacitor's energy is depleted, initiating a "$ shutdown" command.
 The backup duration provided by the UPS heavily relies on the system load. Below are some typical scenarios tested with a CM5 module featuring 4GB RAM, 32GB eMMC storage, and a Wi-Fi module.
 
-| **Mode of Operation** | **Time(s)**  | **Remark**          |    
+| **Mode of Operation** | **Time(s)**  | **Remark**          |
 |-----------------------|------------------------------|---------------------|
 | Idle                  | 15           | Testing under idle conditions with official driver program loaded  |
 | Full load of CPU      | 6            | stress -c 4 -t 10m -v &       |
@@ -900,20 +888,18 @@ For UPS function please contact us for more information, and the alarm signal is
 
 ## Additional Resources
 
-
 - [reComputer Industrial R20xx Flyer](https://files.seeedstudio.com/wiki/raspberry-pi/Seeed_Raspberry_Pi_Flyer.pdf)
 
-  
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

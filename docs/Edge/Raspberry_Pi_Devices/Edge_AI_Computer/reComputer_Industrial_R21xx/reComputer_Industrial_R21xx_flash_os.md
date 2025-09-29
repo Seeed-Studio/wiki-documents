@@ -12,7 +12,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 ---
-#  reComputer Industrial R21xx Flash OS
+# reComputer Industrial R21xx Flash OS
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -37,12 +37,14 @@ You need to prepare the following hardware
 
 - [usbboot tool](https://github.com/raspberrypi/usbboot)
 - [Raspberry Pi Imager APP](https://www.raspberrypi.com/software/)
+
 ## Flash OS
 
 ### For Windows host computer
 
 - **Step 1.** Click the link below to download the device [image file](https://github.com/Seeed-Studio/pi-gen-expand/tree/main?tab=readme-ov-file)
 Select the last one and click the date link to download:
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.1_flashing_image_1.png" style={{width:800, height:'auto'}}/></div>
 
 - **Step 2.** Download **Raspberry Pi Imager** software from **[here](https://www.raspberrypi.org/software/)**
@@ -59,11 +61,9 @@ Select the last one and click the date link to download:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.1_flashing_image_5.png" alt="pir" width="800" height="auto"/></p>
 
-
 Continue burning the image until it succeeds.
 
 Unplug the USB-C port, press the boot button again, and power on/off. If you can log in to the system normally, the image has been burned successfully and can be used normally.
-
 
 ### For MAC host computer
 
@@ -134,7 +134,6 @@ Here you can **set a hostname, enable SSH, set a password, configure wifi, set l
 - **Step 5.** Click **CHOOSE OS** and select your preferred OS
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/system.png" /></div>
-
 
 **NOTE:** You can select other OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
 
@@ -268,7 +267,6 @@ Finally, click `Next` and wait for the flashing process to complete.
 
 Install `pcie-fix.dtbo` with this [link](https://files.seeedstudio.com/wiki/reComputer-R2000/pcie-fix.dtbo)
 
-
 Copy pcie-fix.dtbo to /overlays file like below:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file1.png" alt="pir" width="800" height="auto" /></div>
@@ -279,17 +277,16 @@ Modify the `config.txt`, add `dtoverlay=pcie-fix` at the end of the file like be
 
 And then Use `Ctrl+X` and input `y` to store this file.
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

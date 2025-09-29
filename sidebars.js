@@ -3319,7 +3319,7 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Chirpstack/recomputer_r1x_chirpstack',
                   ]
                 },
-                 {
+                {
                   type: 'category',
                   label: 'OpenRemote',
                   items: [
