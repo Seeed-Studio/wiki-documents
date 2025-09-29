@@ -174,6 +174,10 @@ conda install ffmpeg=7.1.1 -c conda-forge
 cd ~/lerobot && pip install -e ".[starai]"
 ```
 
+```bash
+sudo apt remove brltty
+```
+
 对于 Jetson Jetpack 设备（请确保在执行此步骤前按照[此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch)第 5 步安装了 Pytorch-gpu 和 Torchvision）：
 
 ```bash
