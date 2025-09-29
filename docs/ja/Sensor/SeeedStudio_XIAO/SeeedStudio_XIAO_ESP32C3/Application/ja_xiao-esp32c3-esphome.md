@@ -607,37 +607,37 @@ pip3 install esphomeflasher
 それでもXIAOが表示されない場合は、[esphome flasher](https://github.com/esphome/esphome-flasher)ソフトウェアを使用してXIAOのログ情報を確認し、ログを通じてXIAOの接続を確認できます。
 xiaoを再接続して、WiFiの検索と再接続を試行させることができます。
 
-<!-- ### FAQ4: My XIAO ESP32C3 is connected to network, but why don't I see the sensor data refreshed?
+<!-- ### FAQ4: 私のXIAO ESP32C3はネットワークに接続されていますが、なぜセンサーデータが更新されないのでしょうか？
 
 :::caution
-As of June 1, 2023 troubleshooting has revealed that if you set any value or change any scene in the dashboard of ESPHome, there is a possibility that the radar will go down.
+6月1日現在、2023のトラブルシューティングにより、ESPHomeのダッシュボードで任意の値を設定したり、任意のシーンを変更したりすると、レーダーがダウンする可能性があることが判明しています。
 
-As of 31 July 2023, the previous issue that would cause the radar to completely die has now been fixed, so please update the library files and configurator for this tutorial species to work properly.
+31年7月2023日現在、レーダーが完全に停止する原因となっていた以前の問題は修正されましたので、このチュートリアル種が正常に動作するようライブラリファイルとコンフィギュレーターを更新してください。
 :::
 
-> A: In the previous Wiki content, we used the default UART pins (D6, D7) to receive and send data from the radar, but many users feedback there is a need to re-power the radar before it can work. In response, we **updated the Wiki** content and procedures to replace the serial ports of the radar with **D2 and D3**, and after testing, this fixes the problem very well.
+> A: 以前のWikiコンテンツでは、レーダーからデータを受信・送信するためにデフォルトのUARTピン（D6、D7）を使用していましたが、多くのユーザーからレーダーが動作する前に再電源投入が必要であるとのフィードバックがありました。これに対応して、**Wikiを更新**し、レーダーのシリアルポートを**D2とD3**に置き換える内容と手順に変更しました。テスト後、この変更により問題が非常によく解決されることが確認されました。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/esphome-pinconnect.png" style={{width:600, height:'auto'}}/></div>
 
-> **If you haven't noticed the Wiki update, I suggest you re-wire the radar and re-write the compile and upload process following [steps 2 and 5](#configure-the-xiao-esp32c3-and-esphome-connection) of this article's tutorial.**
+> **Wikiの更新に気づいていない場合は、この記事のチュートリアルの[stepの2と5](#configure-the-xiao-esp32c3-and-esphome-connection)に従って、レーダーを再配線し、コンパイルとアップロードプロセスを書き直すことをお勧めします。**
 
-> However, some users have responded that they still can't get the radar to work properly even after replacing the serial pins. So here, we propose the following methods and steps to check where the problem occurs, if you still can't solve the problem of radar working, **please provide your operation steps to the technical support email**, which can speed up the processing of after-sales problems.
+しかし、一部のユーザーからは、シリアルピンを交換した後でも、レーダーが正常に動作しないという報告があります。そこで、問題がどこで発生しているかを確認するために、以下の方法とstepsを提案します。それでもレーダーの動作問題を解決できない場合は、**技術サポートメールに操作stepsを提供してください**。これにより、アフターサービス問題の処理を迅速化できます。
 
-**Please check the following Exclusion in order.**
+**以下の除外項目を順番に確認してください。**
 
-> **Exclusion 1: Make sure the XIAO ESP32C3 is under the same LAN as the ESPHome deployed device.**
+> **除外事項1: XIAO ESP32C3が展開されたデバイスESPHomeと同じLANの下にあることを確認してください。**
 
-> If the XIAO ESP32C3 is not under the same LAN as the device of ESPHome, the log you see in Home Assistant is incomplete and cannot be used as the basis of data collection. So please double check your router to see if the IP address of XIAO appears.
+> XIAO ESP32C3がESPHomeのデバイスと同じLAN下にない場合、Home Assistantで確認できるログは不完全であり、データ収集の根拠として使用することはできません。そのため、XIAOのIPアドレスが表示されているかどうか、ルーターを再度確認してください。
 
-> **Exclusion 2: Check that the Data Live Transfer button is on.**
+> **除外 2: データライブ転送ボタンがオンになっていることを確認してください。**
 
-> After XIAO is on the network and the device is successfully added, you will be able to see the radar components in the dashboard. Please note that by default the live data transfer button is off, you need to turn it on to be able to see the radar data being reported continuously.
+> XIAOがネットワークに接続され、デバイスが正常に追加された後、ダッシュボードでレーダーコンポーネントを確認できるようになります。デフォルトではライブデータ転送ボタンがオフになっているため、レーダーデータが継続的に報告されるのを確認するには、このボタンをオンにする必要があることにご注意ください。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/69.png" /></div>
 
-> **Exclusion 3: Check whether the radar can work properly.**
+> **除外3: レーダーが正常に動作するかどうかを確認する。**
 
-> We need to make sure that the radar works well with the XIAO ESP32C3 first, which will allow us to quickly identify whether it is a problem with ESPHome or the product. Please upload the following code to XIAO ESP32C3 in Arduino IDE, please note that the **RX/TX pins of radar should be connected to D2/D3 of XIAO**.
+> XIAO ESP32C3でレーダーが正常に動作することを最初に確認する必要があります。これにより、ESPHomeの問題なのか製品の問題なのかを迅速に特定できます。Arduino IDEで以下のコードをXIAO ESP32C3にアップロードしてください。レーダーの**RX/TXピンはXIAOのD2/D3に接続する**必要があることに注意してください。
 
 ```cpp
 #include "Arduino.h"

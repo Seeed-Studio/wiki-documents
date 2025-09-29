@@ -349,7 +349,7 @@ ls /dev/cu.usb* (Mac)
 ls /dev/ttyACM* (Linux)
 ```
 
-You should get back something like:
+你应该会得到类似这样的结果：
 
 ```
 /dev/cu.usbmodem14XX where XX will vary depending on which USB port you used (on Mac)
@@ -603,7 +603,7 @@ aplay -r 16000 -c 2 hello.wav
 arecord -Dhw:0,0 -f S16_LE -r 16000 -c 8 hello_8ch.wav
 ```
 
-Besides you can record and play at the same time.
+此外，你可以同时录音和播放。
 
 ```
 arecord | aplay
@@ -611,7 +611,7 @@ arecord | aplay
 
 **2. Test via PulseAudio**
 
-First check whether the PulseAudio is running:
+首先检查 PulseAudio 是否正在运行：
 
 ```
 respeaker@v2:~$ ps aux|grep pulse|grep -v grep
@@ -652,7 +652,7 @@ aplay hello3.wav
 sudo apt install  python-mraa python-upm libmraa1 libupm1 mraa-tools
 ```
 
-- **Step 2. Check your platform information**
+- **步骤 2. 检查你的平台信息**
 
 ```
 #only have bus 0 and id=03(/dev/i2c-3), 0 is the i2c number for mraa and upm
@@ -833,7 +833,7 @@ if __name__ == '__main__':
     main()
 ```
 
-The result should be something like:
+结果应该类似于：
 
 ``` python
 respeaker@v2:~$ python tsl2561.py       
@@ -927,7 +927,7 @@ for event in key.read_loop():
         print(categorize(event))
 ```
 
-- **Step 3.** Tap the following command to run this demo.
+- **步骤 3.** 点击以下命令来运行此演示。
 
 ```
 sudo python usrer_button.py

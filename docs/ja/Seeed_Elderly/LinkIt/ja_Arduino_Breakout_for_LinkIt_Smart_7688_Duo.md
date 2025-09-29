@@ -104,11 +104,11 @@ while True:
   sleep(0.5)
 ```
 
-- Step10: **buzzer.py** を保存し、**python buzzer.py** と入力してサンプルコードを実行します。
-- Step11: これでブザーの音が聞こえるはずです。
-
+- ステップ10: **buzzer.py** を保存し、**python buzzer.py** と入力してサンプルコードを実行します。
+- ステップ11: これでブザーの音が聞こえるはずです。
 
 ## 今すぐ作ってみよう
+
 ブザーを鳴らすことに成功しましたか？ここでは、LinkIt Smart 7688 Duo を使用したさらに素晴らしいプロジェクトを2つ紹介します。さあ、作ってみましょう！
 
 |WiFi接続可視化付きスマートルーター|Facebook「いいね」モニター|
@@ -116,13 +116,10 @@ while True:
 |![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/F9SCHIKIPH4SPTP.MEDIUM.jpg)|![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/F9MQJJOIHQOBV4Q.MEDIUM.jpg)|
 |[![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/200px-Wiki_makeitnow_logo.png)](https://www.instructables.com/id/ReRouter-Make-an-Extensible-IoT-Router/)|[![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/200px-Wiki_makeitnow_logo.png)](https://www.instructables.com/id/Facebook-Like-Monitor/)|
 
-
 ## オンライン回路図ビューア
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/resources/Schematic_files_for_Arduino_Breakout_for_LinkIt_Smart_7688_Duo.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## リソース
 
@@ -135,11 +132,11 @@ while True:
 弊社製品をお選びいただきありがとうございます！製品をスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お客様のご希望やニーズに応じた複数のコミュニケーションチャネルをご利用いただけます。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

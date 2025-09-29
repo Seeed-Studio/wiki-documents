@@ -61,7 +61,7 @@ VNCは、他のPCデバイスからreComputer Nvidia Jetsonをリモート制御
   gsettings set org.gnome.Vino require-encryption false
  ```
 
- **Step 4.** Set a password to access the VNC server
+**ステップ 4.** VNCサーバーにアクセスするためのパスワードを設定する
 
  ```bash
  # Replace thepassword with your desired password
@@ -69,7 +69,7 @@ VNCは、他のPCデバイスからreComputer Nvidia Jetsonをリモート制御
   gsettings set org.gnome.Vino vnc-password $(echo -n 'thepassword'|base64)
  ```
 
- **Step 5.** Edit `org.gnome` to add a parameter for the `enabled key`
+**ステップ 5.** `enabled key`のパラメータを追加するために`org.gnome`を編集する
 
  ```bash
   cd /usr/share/glib-2.0/schemas

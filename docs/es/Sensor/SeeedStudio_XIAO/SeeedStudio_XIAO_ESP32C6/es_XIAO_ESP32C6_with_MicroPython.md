@@ -38,7 +38,6 @@ Estoy usando la placa Seeed Studio XIAO ESP32C6 aquí.
   </table>
 </div>
 
-
 ## Preparación del Software
 
 En esta guía estaré usando **windows 10** junto con Thonny IDE y esptool. Para usar esptool asegúrate de instalar el entorno Python 3 en tu sistema operativo Windows. Antes de comenzar asegúrate de descargar el firmware e instalar Thonny
@@ -64,11 +63,9 @@ En esta guía estaré usando **windows 10** junto con Thonny IDE y esptool. Para
   </table>
 </div>
 
-
 ### 👍 Muchas Gracias
 
 <strong><font color={'8DC215'} size={"3"}>El firmware diseñado para la placa XIAO ESP32C6, utilizado en este wiki, fue creado por nuestro amigo: Zhishuo Song, a quien estamos realmente agradecidos.</font></strong>
-
 
 ## Comenzando
 
@@ -106,7 +103,7 @@ Borra la memoria flash del XIAO ESP32C6 usando este comando
 esptool.py --port COMXX --chip esp32c6 erase_flash
 ```
 
-Now proceed to install the micropython firmware using this command
+Ahora procede a instalar el firmware de micropython usando este comando
 
 ```cpp
 esptool.py --port COMXX --baud 460800 --before default_reset --after hard_reset --chip esp32c6  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x0 ESP32C6_MicroPython.bin
@@ -160,11 +157,11 @@ Si el programa no se puede grabar, por favor intenta usar el botón BOOT y el bo
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

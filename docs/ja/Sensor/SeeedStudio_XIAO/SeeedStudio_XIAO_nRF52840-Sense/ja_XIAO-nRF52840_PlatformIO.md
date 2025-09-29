@@ -12,7 +12,7 @@ last_update:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/nRF52840_PlatformIO/1.png" /></div>
 
-# **Seeed Studio XIAO nRF52840 with PlatformIO**
+# **Seeed Studio XIAO nRF52840 と PlatformIO**
 
 PlatformIOは多くの種類の開発ボードを統合し、優れた拡張性を持つ開発プラットフォームです。プラットフォームに必要なタイプがない場合は、手動で開発ボードのタイプを追加することができます。Arduinoで書いたコードを使用でき、対応するライブラリを追加するだけです。
 

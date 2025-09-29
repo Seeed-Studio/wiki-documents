@@ -177,7 +177,7 @@ esac
 exit 0
 ```
 
-Then, grant executable permissions to your script:
+然后，给你的脚本授予可执行权限：
 
 ```
 sudo chmod +x {your script}
@@ -192,7 +192,7 @@ sudo chmod +x {your program}
 ls -l
 ```
 
-Test whether the script and program can start normally:
+测试脚本和程序是否能正常启动：
 
 ```
 sudo /etc/init.d/{your script} start
@@ -301,7 +301,7 @@ cd build && cpack
 scp {your project.deb} recamera@192.168.42.1:/tmp/
 ```
 
-In the recamera terminal,use opkg to install:
+在 recamera 终端中，使用 opkg 安装：
 
 ```
 sudo opkg install /tmp/{your project.deb}

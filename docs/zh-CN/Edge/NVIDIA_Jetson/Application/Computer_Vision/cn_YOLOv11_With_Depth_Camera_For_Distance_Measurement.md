@@ -198,8 +198,7 @@ cd tensorrtx/yolo11
 ```bash
 wget -O yolo11n.pt https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt
 ```
-
-**Step 3.** Generate the .wts file:
+**步骤 3.** 生成 .wts 文件：
 
 ```bash
 python gen_wts.py -w yolo11n.pt -o yolo11n.wts -t detect

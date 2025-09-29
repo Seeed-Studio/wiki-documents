@@ -198,19 +198,19 @@ sudo vi /usr/bin/hwtosys.sh
 sudo hwclock --hctosys
 ```
 
-- **Step 10:** Make the script executable
+- **步骤 10:** 使脚本可执行
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
 ```
 
-- **Step 11:** Create a systemd file
+- **步骤 11：** 创建一个 systemd 文件
 
 ```sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
 
-- **Step 12:** Add the following inside the file
+- **步骤 12:** 在文件内添加以下内容
 
 ```sh
 [Unit]
@@ -223,7 +223,7 @@ ExecStart=/usr/bin/hwtosys.sh
 WantedBy=multi-user.target
 ```
 
-- **Step 13:** Reload systemctl daemon
+- **步骤 13：** 重新加载 systemctl 守护进程
 
 ```sh
 sudo systemctl daemon-reload 
@@ -824,7 +824,6 @@ reServer Industrial 支持 4 个数字输入和 4 个数字输出通道，所有
 
 您需要在 DI 线路上输入 12V 电压才能被检测为输入。启用 DI / DO 的命令在 Jetpack 5 和 Jetpack 6 之间有所不同。
 
-
 <Tabs>
 <TabItem value="Jetpack 5" label="Jetpack 5">
 
@@ -867,11 +866,12 @@ gpioinfo gpiochip0
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/reserver-di.jpg"/></div>
 
 :::note
-您可以参考 **DI/ DO 引脚分配表** 来找到 GPIO 编号和 BGA 编号。在上面的示例中，对于 DI1 引脚，GPIO 编号是 453，BGA 编号是 PQ.05	
+您可以参考 **DI/ DO 引脚分配表** 来找到 GPIO 编号和 BGA 编号。在上面的示例中，对于 DI1 引脚，GPIO 编号是 453，BGA 编号是 PQ.05
 :::
 
 - **步骤 3：**
 读取 gpiochip0 中对应 DI1 的**线偏移量 105**：
+
 ```sh
 sudo gpioget gpiochip0 105
 ```
@@ -882,7 +882,6 @@ sudo gpioget gpiochip0 105
 </TabItem>
 </Tabs>
 
-
 ### DO 连接概述
 
 您可以按照下图进行 DO 连接。最好在 DO 线路中串联一个电阻。这里我们使用 4.7kΩ 电阻进行了测试
@@ -892,7 +891,6 @@ sudo gpioget gpiochip0 105
 ### DO 使用方法
 
 这里您需要按照上图连接负载。测试的最简单方法是连接万用表（如果您有的话），或者连接需要最大电压小于 40V 的负载。启用 DI / DO 的命令在 Jetpack 5 和 Jetpack 6 之间有所不同。
-
 
 <Tabs>
 <TabItem value="Jetpack 5" label="Jetpack 5">
@@ -934,13 +932,13 @@ gpioinfo gpiochip0
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/reserver-do.jpg"/></div>
 
-
 :::note
 您可以参考 **DI/ DO 引脚分配表** 来找到 GPIO 编号和 BGA 编号。在上面的示例中，对于 DO1 引脚，GPIO 编号是 399，BGA 编号是 PI.00
 :::
 
 - **步骤 3：**
 使用以下命令控制 DO1 的状态：
+
 ```sh
 # set to 12v
 sudo gpioset --mode=wait gpiochip0 51=0
@@ -1525,13 +1523,13 @@ cd PCC.01
 echo out > direction 
 ```
 
-- **Step 2:** Turn OFF the LED
+- **步骤 2:** 打开 OFF LED
 
 ```sh
 echo 0 > value 
 ```
 
-- **Step 3:** Turn ON the LED
+- **步骤 3:** 打开 ON LED
 
 ```sh
 echo 1 > value 
@@ -1561,13 +1559,13 @@ sudo apt install python3-pip -y
 sudo pip3 install jetson-stats
 ```
 
-- **Step 2:** Reboot the board
+- **步骤 2：** 重启开发板
 
 ```sh
 sudo reboot
 ```
 
-- **Step 3:** Type the following on the terminal
+- **步骤 3:** 在终端中输入以下内容
 
 ```sh
 jtop
@@ -1634,7 +1632,7 @@ sudo jetson_clocks
 sudo cat /sys/kernel/debug/gpio
 ```
 
-And you will see the output as follows
+你将看到输出如下
 
 ```sh
 gpiochip2: GPIOs 300-315, parent: i2c/1-0021, 1-0021, can sleep:

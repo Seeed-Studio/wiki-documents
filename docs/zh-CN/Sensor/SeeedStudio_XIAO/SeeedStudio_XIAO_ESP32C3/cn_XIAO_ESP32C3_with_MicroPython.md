@@ -52,7 +52,7 @@ ESP32_GENERIC_C3-20230602-v1.23.0.bin
 dmesg | grep tty
 ```
 
-Alternatively, you can list serial devices using *ls*:
+或者，您可以使用 *ls* 列出串行设备：
 
 ```
 ls /dev/ttyS* /dev/ttyUSB*
@@ -92,7 +92,7 @@ lsof | grep port
 kill -9 <PID>
 ```
 
-Replace *PID* with the actual process ID found.
+将 *PID* 替换为找到的实际进程 ID。
 :::
 
 #### Erase flash

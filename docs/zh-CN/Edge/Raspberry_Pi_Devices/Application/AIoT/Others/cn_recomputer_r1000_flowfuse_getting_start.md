@@ -54,8 +54,7 @@ last_update:
 sudo apt update
 sudo apt install -y ca-certificates curl gnupg
 ```
-
-2. **Setting Up the NodeSource Repository**
+2. **设置 NodeSource 仓库**
 
 接下来,在你的 reComputer 上设置 NodeSource 仓库:
 

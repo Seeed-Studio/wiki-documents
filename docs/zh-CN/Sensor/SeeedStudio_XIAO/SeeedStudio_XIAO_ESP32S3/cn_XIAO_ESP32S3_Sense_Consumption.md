@@ -181,7 +181,7 @@ wakeup_reason = esp_sleep_get_wakeup_cause();
 print_wakeup_reason();
 ```
 
-- Print the reason for the ESP32's wakeup.
+- 打印 ESP32 唤醒的原因。
 
 ```cpp
 esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
@@ -786,14 +786,14 @@ const int sleepTime = 10000;
 const int ledPin = LED_BUILTIN; 
 ```
 
-- Set sleep time to 10 seconds
-- Use the built-in LED pin
+- 将睡眠时间设置为 10 秒
+- 使用内置的 LED 引脚
 
 ```cpp
 void ledTask(void *pvParameters): 
 ```
 
-- Define a FreeRTOS task to control the LED state.
+- 定义一个 FreeRTOS 任务来控制 LED 状态。
 
 ```cpp
 digitalWrite(ledPin, HIGH); 
@@ -804,8 +804,8 @@ Serial.println("LED is OFF");
 vTaskDelete(NULL); 
 ```
 
-- `vTaskDelay(pdMS_TO_TICKS(1000));`Keep the LED on for 1 second
-- `vTaskDelete(NULL);`Delete the current task
+- `vTaskDelay(pdMS_TO_TICKS(1000));`保持LED开启1秒钟
+- `vTaskDelete(NULL);`删除当前任务
 
 ```cpp
 esp_sleep_enable_timer_wakeup(sleepTime * 1000);
@@ -889,7 +889,7 @@ void loop() {
 #include "WiFi.h"
 ```
 
-- Include the WiFi library to enable WiFi functions.
+- 包含 WiFi 库以启用 WiFi 函数。
 
 ```cpp
 Serial.println("Connecting to WiFi...");
@@ -901,7 +901,7 @@ Serial.println("Connecting to WiFi...");
 WiFi.begin("****", "****");
 ```
 
-- Start connecting to the specified WiFi network.
+- 开始连接到指定的 WiFi 网络。
 
 ```cpp
     while (WiFi.status() != WL_CONNECTED) {
@@ -911,19 +911,19 @@ WiFi.begin("****", "****");
     Serial.println("Connected to WiFi!");
 ```
 
-- Loop until successfully connected to WiFi.
+- 循环直到成功连接到 WiFi。
 
 ```cpp
 WiFi.setSleep(true);
 ```
 
-- Enable modem sleep mode to save power.
+- 启用调制解调器睡眠模式以节省电量。
 
 ```cpp
 WiFi.setSleep(false);
 ```
 
-- Disable modem sleep mode to activate WiFi.
+- 禁用调制解调器睡眠模式以激活 WiFi。
 
 ```cpp
 if (WiFi.status() == WL_CONNECTED) {

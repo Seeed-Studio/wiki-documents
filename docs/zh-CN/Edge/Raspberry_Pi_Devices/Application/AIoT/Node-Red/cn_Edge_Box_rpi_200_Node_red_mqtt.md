@@ -97,8 +97,7 @@ allow_anonymous false
 ```sh
 password_file /etc/mosquitto/pwfile
 ```
-
-Then, to set the listening port to 1883, we'll add:
+然后，要将监听端口设置为1883，我们将添加：
 
 ```sh
 listener 1883
@@ -113,8 +112,7 @@ listener 1883
 ```sh
 sudo mosquitto_passwd -c /etc/mosquitto/pwfile <username>
 ```
-
-After generating a username and password, reboot Edgebox
+生成用户名和密码后，重启 Edgebox
 
 ```sh
 sudo reboot

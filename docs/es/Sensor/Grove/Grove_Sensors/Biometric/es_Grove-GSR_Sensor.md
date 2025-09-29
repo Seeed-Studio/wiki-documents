@@ -37,7 +37,6 @@ GSR significa respuesta galvánica de la piel, es un método para medir la condu
 | Señal de salida         | Voltaje, lectura analógica      |
 | Material de contacto del dedo | Níquel                    |
 
-
 :::tip
 Más detalles sobre los módulos Grove consulte [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
 :::
@@ -82,7 +81,6 @@ Si no tenemos un Base Shield, no te preocupes, el sensor se puede conectar direc
 | NC               | Blanco  |
 | A0               | Amarillo |
 
-
 #### Software
 
 - Paso 1. Copia el código en el IDE de Arduino y súbelo.
@@ -118,13 +116,11 @@ void loop(){
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/Grove-GSR_Result.png" /></div><br />
 
-
 **Resistencia Humana** = ((1024 + 2 x Lectura_Puerto_Serie) x 10000)/(Serial_calibration - Lectura_Puerto_Serie)
 
-- La unidad es ohmio; 
-- Lectura_Puerto_Serie es el valor mostrado en el Puerto Serie (entre 0~1023); 
+- La unidad es ohmio;
+- Lectura_Puerto_Serie es el valor mostrado en el Puerto Serie (entre 0~1023);
 - Serial_calibration es del Paso 4 (Usa el destornillador para ajustar la resistencia hasta que la salida serie se minimice. Los datos del puerto serie en este punto se anotan como Serial_calibration).
-
 
 ### Jugar Con Raspberry Pi (Con Grove Base Hat para Raspberry Pi)
 
@@ -208,7 +204,7 @@ if __name__ == '__main__':
 
 ```
 
-- **Step 4**. Excute below command to run the code
+- **Paso 4**. Ejecuta el siguiente comando para ejecutar el código
 
 ```
 
@@ -284,12 +280,11 @@ R1: Medimos la señal por voltaje e imprimimos al puerto COM como (0~1023).
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

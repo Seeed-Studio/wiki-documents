@@ -93,7 +93,7 @@ mmcblk0boot1 179:64   0    4M  1 disk
 ```
 
 :::note
-If you see the output as following, which you probably does for the first time boot:
+初回起動時に以下のような出力が表示される場合（おそらく初回起動時に表示されるでしょう）：
 
 ```sh
 pi@raspberrypi:~ $ lsblk

@@ -103,9 +103,9 @@ sudo reboot
 
 ```
 
-**Step 2. Check the Sound Card**
+**步骤 2. 检查声卡**
 
-Tap the command below to check the record device.
+点击下方的命令来检查录音设备。
 
 ```
 pi@raspberrypi:~ $ arecord -L
@@ -139,7 +139,7 @@ plughw:CARD=seeed8micvoicec,DEV=0
     Hardware device with all software conversions
 ```
 
-Use the following command to check the play device.
+使用以下命令检查播放设备。
 
 ```
 pi@raspberrypi:~ $ aplay -L
@@ -201,7 +201,7 @@ plughw:CARD=seeed8micvoicec,DEV=0
 
 ```
 
-**Step 3. Record and Play**
+**步骤 3. 录制并播放**
 
 你可以先录制然后播放，或者可以同时录制和播放。
 
@@ -266,7 +266,7 @@ pip3 install -r requirements.txt
 python3 recording_examples/get_device_index.py
 ```
 
-You will see the device ID as below.
+您将看到如下所示的设备 ID。
 
 ```
 Input Device id  2  -  seeed-8mic-voicecard: - (hw:1,0)

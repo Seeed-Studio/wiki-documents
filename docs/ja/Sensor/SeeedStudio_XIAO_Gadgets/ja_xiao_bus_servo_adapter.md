@@ -507,7 +507,7 @@ void loop()
 - **[STL]** [XIAO Bus Servo Adapter upper shell](https://files.seeedstudio.com/wiki/bus_servo_driver_board/xiao_bus_servo_adapter_top.stl)
 - **[STL]** [XIAO Bus Servo Adapter lower shell](https://files.seeedstudio.com/wiki/bus_servo_driver_board/xiao_bus_servo_adapter_bottom.stl)
 
-### Tech Support & Product Discussion
+### 技術サポート・製品ディスカッション
 
 私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 

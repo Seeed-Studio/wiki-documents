@@ -105,7 +105,6 @@ Si esta es la primera vez que trabajas with Arduino, te recomendamos firmemente 
 | Sin Conexión | Blanco                   |
 | A0            | Amarillo                  |
 
-
 #### Software
 
 - **Paso 1.** Inicia Arduino IDE y haz clic en **File>New** para abrir una nueva página. Copia el siguiente código en la nueva página y súbelo. Si no sabes cómo subir el código, por favor revisa [Cómo subir código](https://wiki.seeedstudio.com/es/Upload_Code/).
@@ -335,7 +334,7 @@ while True:
 
 ```
 
-The result should be like:
+El resultado debería ser como:
 
 ```python
 pi@raspberrypi:~/GrovePi/Software/Python $ sudo python3 grove_temperature_sensor.py
@@ -484,12 +483,11 @@ Si quieres saber cómo funciona el algoritmo de temperatura, por favor consulta 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

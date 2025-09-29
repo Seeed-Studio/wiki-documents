@@ -299,19 +299,19 @@ sudo vi /usr/bin/hwtosys.sh
 sudo hwclock --hctosys
 ```
 
-- **Step 10:** Make the script executable.
+- **步骤 10:** 使脚本可执行。
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
 ```
 
-- **Step 11:** Create a systemd file.
+- **步骤 11：** 创建一个 systemd 文件。
 
 ```sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
 
-- **Step 12:** Add the following inside the file.
+- **步骤 12:** 在文件内添加以下内容。
 
 ```sh
 [Unit]
@@ -324,7 +324,7 @@ ExecStart=/usr/bin/hwtosys.sh
 WantedBy=multi-user.target
 ```
 
-- **Step 13:** Reload systemctl daemon.
+- **步骤 13：** 重新加载 systemctl 守护进程。
 
 ```sh
 sudo systemctl daemon-reload 
@@ -366,23 +366,23 @@ nvfancontrol 服务中有一些基本元素，包括 Tmargin、启动 PWM、风�
 sudo systemctl stop nvfancontrol
 ```
 
-- **Step 2:** Change nvfancontrol.conf.
+- **步骤 2：** 修改 nvfancontrol.conf。
 
 ```
 vi /etc/nvfancontrol.conf 
 ```
 
 :::note
-After you change nvfancontrol.conf, print `Ese` and `:q` to quit
+更改 nvfancontrol.conf 后，输入 `Ese` 和 `:q` 退出
 :::
 
-- **Step 3:** Remove the status file.
+- **步骤 3:** 删除状态文件。
 
 ```
 sudo rm /var/lib/nvfancontrol/status
 ```
 
-- **Step 4:** Restart nvfancontrol systemd service.
+- **步骤 4:** 重启 nvfancontrol systemd 服务。
 
 ```
 sudo systemctl restart nvfancontrol
@@ -392,19 +392,19 @@ sudo systemctl restart nvfancontrol
 
 <TabItem value="Method 2" label="Method 2">
 
-- **Step 1:**  Enter root model.
+- **步骤 1：** 进入 root 模式。
 
 ```
 sudo -i
 ```
 
-- **Step 2:**  Stop the nvfancontrol systemd service.
+- **步骤 2:** 停止 nvfancontrol systemd 服务。
 
 ```
 sudo systemctl stop nvfancontrol
 ```
 
-- **Step 3:**  Change PWM value.
+- **步骤 3：** 修改 PWM 值。
 
 ```
 echo 100 > /sys/devices/platform/pwm-fan/hwmon/hwmon3/pwm1

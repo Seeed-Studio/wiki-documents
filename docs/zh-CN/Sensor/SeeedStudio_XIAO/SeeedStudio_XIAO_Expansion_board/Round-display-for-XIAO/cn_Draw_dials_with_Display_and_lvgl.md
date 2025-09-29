@@ -125,8 +125,7 @@ TFT_eSPI tft = TFT_eSPI(240,240)        // Set the screen size at the time of ob
 void init(uint8_t tc = TAB_COLOUR)
 void begin(uint8_t tc = TAB_COLOUR)
 ```
-
-`tft.begin()` and `tft.init()` are two functions with the same function.
+`tft.begin()` 和 `tft.init()` 是两个功能相同的函数。
 
 #### 3. Clear screen
 

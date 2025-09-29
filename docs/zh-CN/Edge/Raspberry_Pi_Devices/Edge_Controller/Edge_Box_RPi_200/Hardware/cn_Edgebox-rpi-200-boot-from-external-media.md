@@ -156,7 +156,7 @@ nvme0n1      259:0    0 119.2G  0 disk
 `-nvme0n1p2  259:2    0   119G  0 part 
 ```
 
-**STEP 2:** Download the EdgeBox-RPI-200 image file
+**步骤 2:** 下载 EdgeBox-RPI-200 图像文件
 
 请输入以下命令来下载图片文件：
 
@@ -164,7 +164,7 @@ nvme0n1      259:0    0 119.2G  0 disk
 wget https://altushost-swe.dl.sourceforge.net/project/edgebox-rpi-200/edgeboxrpi200.img -O edgeboxrpi200.img
 ```
 
-You should see the downloading progress like:
+你应该会看到类似这样的下载进度：
 
 ```sh
 pi@raspberrypi:~/Downloads $ wget https://altushost-swe.dl.sourceforge.net/project/edgebox-rpi-200/edgeboxrpi200.img -O edgeboxrpi200.img
@@ -186,9 +186,9 @@ edgeboxrpi200.img                     3%[=>                                     
 sudo dd if=edgeboxrpi200.img of=/dev/nvme0n1 bs=4MB status=progress oflag=sync
 ```
 
-**STEP 4:** Reboot
+**步骤 4：** 重启
 
-Please enter following command:
+请输入以下命令：
 
 ```sh
 sudo reboot

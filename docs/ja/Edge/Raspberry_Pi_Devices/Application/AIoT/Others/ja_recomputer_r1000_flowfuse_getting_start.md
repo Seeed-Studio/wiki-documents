@@ -71,13 +71,13 @@ FlowFuseのドキュメントによると、Node.jsバージョン20のインス
 NODE_MAJOR=20
 ```
 
-Add the Node.js repository to your reComputer’s sources list:
+Node.jsリポジトリをreComputerのソースリストに追加してください：
 
 ```sh
 echo "deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 ```
 
-Update your package list again to include the Node.js repository:
+パッケージリストを再度更新して、Node.jsリポジトリを含めてください：
 
 ```sh
 sudo apt update

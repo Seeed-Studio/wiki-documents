@@ -62,7 +62,7 @@ preferences.begin("my-app", false);
 preferences.clear();
 ```
 
-**Func 3**. Remove a key from the opened namespace:
+**功能 3**. 从已打开的命名空间中移除一个键：
 
 ```c
 preferences.remove(key);
@@ -292,7 +292,7 @@ namespace2{
 }
 ```
 
-For example, store the new value on the “counter” key:
+例如，将新值存储在"counter"键上：
 
 ```c
 preferences.putUInt("counter", counter);
@@ -304,7 +304,7 @@ preferences.putUInt("counter", counter);
 unsigned int counter = preferences.getUInt("counter", 0);
 ```
 
-So, your data is structured in this way:
+因此，你的数据是以这种方式结构化的：
 
 ```c
 my-app{
@@ -540,7 +540,7 @@ EEPROM.write(address, value);
 EEPROM.put(address, value);
 ```
 
-For example, to write 9 on address 0, you’ll have:
+例如，要在地址 0 写入 9，你将会有：
 
 ```c
 EEPROM.write(0, 9);
@@ -637,7 +637,7 @@ unsigned long previousMillis = 0;  // will store last time LED was updated
 const long interval = 10000;  // interval at which to blink (milliseconds)
 ```
 
-In the `setup()` you initialize the EEPROM with the predefined size.
+在 `setup()` 中，你使用预定义的大小初始化 EEPROM。
 
 ```c
 EEPROM.begin(EEPROM_SIZE);

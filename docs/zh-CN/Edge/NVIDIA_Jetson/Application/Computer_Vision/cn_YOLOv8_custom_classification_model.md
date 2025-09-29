@@ -210,8 +210,7 @@ sudo nvpmodel -m 0
 ```bash
 sudo apt install libopenblas-dev cuda-toolkit libcudnn8 tensorrt python3-libnvinfer nvidia-l4t-dla-compiler
 ```
-
-Create the Python virtual environment
+创建 Python 虚拟环境
 
 ```bash
 python -m venv birdClassificationModel
@@ -294,8 +293,7 @@ python -c "import torch;print (torch.cuda.is_available())"
 ```bash
 pip install ultralytics
 ```
-
-Let's install roboflow and jupyterlab
+让我们安装 roboflow 和 jupyterlab
 
 ```bash
 pip install roboflow jupyterlab
@@ -332,8 +330,7 @@ YOLOv8 将知道类别，不仅从我们稍后创建的配置文件中，还从�
 cd <dataset_directory>
 vi birdClassificationModel.yaml
 ```
-
-Insert the following text in the file
+在文件中插入以下文本
 
 ```bash
 train: train/

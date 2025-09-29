@@ -216,8 +216,7 @@ Luego verás los archivos que copiamos anteriormente
 ```sh
 chmod +x stm32flash
 ``` -->
-
-<!-- - **Step 10.** Make STM32 enter **boot mode** through **i2c-tools**
+<!-- - **Paso 10.** Hacer que STM32 entre en **modo de arranque** a través de **herramientas-i2c**
 
 ```sh
 i2ctransfer -y 1 w2@0x45 0x9b 0x01
@@ -261,13 +260,13 @@ dtoverlay=reTerminal
 sudo reboot
 ``` -->
 
-Now you have successfully flashed the firmware to STM32!
+¡Ahora has flasheado exitosamente el firmware al STM32!
 
-### Connect to STM32 using jumper wires and OpenOCD
+### Conectar a STM32 usando cables puente y OpenOCD
 
-If you have the **old version (lower than v1.7)** of the STM32 firmware on the board, please follow this method.
+Si tienes la **versión antigua (inferior a v1.7)** del firmware STM32 en la placa, por favor sigue este método.
 
-- **Step 1.** Enter terminal window of reTerminal and type the following to update the packages list
+- **Paso 1.** Ingresa a la ventana de terminal de reTerminal y escribe lo siguiente para actualizar la lista de paquetes
 
 ```sh
 sudo apt-get update

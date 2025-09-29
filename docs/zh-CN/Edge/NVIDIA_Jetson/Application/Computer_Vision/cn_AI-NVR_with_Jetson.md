@@ -400,8 +400,7 @@ sudo docker compose -f compose_nx16.yaml down --remove-orphans
 # Orin Nano: 
 # sudo docker compose -f compose_nano.yaml down --remove-orphans
 ```
-
-The services may be stopped using the commands:
+可以使用以下命令停止服务：
 
 `sudo systemctl stop <service-name>`
 

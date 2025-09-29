@@ -147,7 +147,7 @@ sudo apt-get update
 sudo apt-get install edgetpu-compiler
 ```
 
-#### Transform TFlite Model to Edge TPU Model
+#### TFliteモデルをEdge TPUモデルに変換する
 
 ```
 edgetpu_compiler YOUR_MODEL_NAME.tflite

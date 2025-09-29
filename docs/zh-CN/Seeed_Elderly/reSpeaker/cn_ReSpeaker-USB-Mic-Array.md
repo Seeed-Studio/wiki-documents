@@ -196,13 +196,13 @@ cd usb_4_mic_array
 python tuning.py -p
 ```
 
-- Example#1, we can turn off Automatic Gain Control (AGC):
+- 示例#1，我们可以关闭自动增益控制（AGC）：
 
 ```
 sudo python tuning.py AGCONOFF 0
 ```
 
-- Example#2, We can check the DOA angle.
+- 示例#2，我们可以检查DOA角度。
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python tuning.py DOAANGLE
@@ -246,7 +246,7 @@ sudo python setup.py install
 sudo python examples/usb_mic_array.py
 ```
 
-Here is the code of the usb_mic_array.py.
+这是 usb_mic_array.py 的代码。
 
 ```python
 import time
@@ -731,9 +731,9 @@ VOICEACTIVITY    int 1 0 ro VAD voice activity status.
                                                             1 = true (voice activity)
 ```
 
-**Q2: ImportError: No module named usb.core**
+**Q2: ImportError：没有名为 usb.core 的模块**
 
-A2: Run sudo pip install pyusb to install the pyusb.
+A2: 运行 sudo pip install pyusb 来安装 pyusb。
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python tuning.py DOAANGLE

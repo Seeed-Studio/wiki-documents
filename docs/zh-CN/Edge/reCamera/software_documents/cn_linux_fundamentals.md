@@ -50,6 +50,7 @@ Linux 以分层结构组织其文件和目录。这个结构的顶部是根目�
 - 访问地址：http://192.168.42.1/#/terminal（默认用户名和密码：`recamera`）
 - 通过 ssh [工具](https://mobaxterm.mobatek.net/)远程登录。
 您可以使用以下命令远程访问 reCamera：
+
 ```
 ssh recamera@recamera.local
 ```
@@ -121,6 +122,7 @@ root 用户可以修改系统相关文件，这可能导致系统故障。请谨
 ### 系统信息：
 
 - `top`：显示实时系统进程和资源使用情况。
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/linux_fundamentals/image-2.png" /></div>
 - `df`：显示磁盘空间使用情况。
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/linux_fundamentals/image-3.png" /></div>
@@ -143,13 +145,13 @@ SCP 允许您在本地和远程主机之间或两个远程主机之间安全地�
   scp [file] username@remote_host:/path/to/destination
   ```
 
-- Copy a file from remote to local:
+- 从远程复制文件到本地：
 
   ```bash
   scp username@remote_host:/path/to/file /local/destination
   ```
 
-- Copy a directory (use the `-r` flag for recursive copy):
+- 复制一个目录（使用 `-r` 标志进行递归复制）：
 
   ```bash
   scp -r [directory] username@remote_host:/path/to/destination
@@ -201,11 +203,11 @@ sftp> put myfile.txt /home/user/Documents/
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

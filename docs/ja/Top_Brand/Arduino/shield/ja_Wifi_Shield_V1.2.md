@@ -204,7 +204,7 @@ if(sendCommand("join\r", "Associated",DEFAULT_WAIT_RESPONSE_TIME*10))
 
 File->Examples->WiFi_Shield->wifly_testスケッチで完全な例を確認できます。
 
-## WiFi Shield Examples/Applications
+## WiFi シールドの例/アプリケーション
 
 ### 例 1: WiFi Shield にコマンドを送信し、Arduino シリアルモニターウィンドウで応答を受信する
 

@@ -64,7 +64,7 @@ echo 1 > /sys/class/leds/led-blue/brightness
 echo 1 > /sys/class/leds/led-green/brightness
 ```
 
-This will **light up** the corresponding LED.
+这将**点亮**相应的LED。
 
 **3. 关闭LED（可选）**  
 要**关闭**特定的LED，请使用：
@@ -156,7 +156,7 @@ cd ~
 git clone https://github.com/Lora-net/sx1302_hal
 ```
 
-**Navigate to the cloned directory:**
+**导航到克隆的目录：**
 
 ```bash
 cd sx1302_hal
@@ -164,7 +164,7 @@ cd sx1302_hal
 
 **Modify the configuration file:**  
 
-Open the I2C device configuration file:  
+打开 I2C 设备配置文件：
 
 ```bash
 sudo vim ./libloragw/inc/loragw_i2c.h
@@ -291,7 +291,7 @@ cat /dev/ttyUSB*
 
 **Install a Serial Communication Tool**
 
-Install **CuteCom**, a graphical serial terminal, using:  
+使用以下命令安装图形化串口终端 **CuteCom**：
 
 ```bash
 sudo apt-get install cutecom
@@ -617,9 +617,9 @@ sudo systemctl disable systemd-timesyncd
 sudo hwclock --set --date "2024-11-12 12:00:00"
 ```
 
-**Sync RTC Time to the System**
+**将 RTC 时间同步到系统**
 
-Update the system time to match the RTC time:  
+更新系统时间以匹配 RTC 时间：
 
 ```bash
 sudo hwclock --hctosys
@@ -660,14 +660,14 @@ sudo apt install watchdog
 
 **Configure the Watchdog**  
 
-Edit the **watchdog configuration file**:  
+编辑**watchdog 配置文件**：
 
 ```bash
 sudo apt-get install vim  # Install Vim if not already installed  
 sudo vim /etc/watchdog.conf
 ```
 
-Modify the configuration as follows:  
+按如下方式修改配置：
 
 ```ini
 watchdog-device = /dev/watchdog  
@@ -742,7 +742,7 @@ echo 0 > /sys/class/gpio/gpio587/value
 sudo nano /boot/firmware/config.txt
 ```
 
-Add the following line at the **end** of the file:  
+在文件的**末尾**添加以下行：
 
 ```ini
 dtoverlay=imx219,cam0
@@ -750,7 +750,7 @@ dtoverlay=imx219,cam0
 
 **Restart the System**
 
-Reboot to apply the changes:  
+重启以应用更改：
 
 ```bash
 sudo reboot
@@ -758,7 +758,7 @@ sudo reboot
 
 **Check Camera Detection**  
 
-After restarting, verify if the camera is detected:  
+重启后，验证摄像头是否被检测到：
 
 ```bash
 libcamera-jpeg --list-cameras
@@ -768,7 +768,7 @@ libcamera-jpeg --list-cameras
 
 **Test the Camera**  
 
-Run the following command to activate the camera:  
+运行以下命令以激活摄像头：
 
 ```bash
 rpicam-hello --timeout 0
@@ -849,13 +849,13 @@ make
 sudo chmod 777 /sys/bus/i2c/devices/6-0050/eeprom
 ```  
 
-**Write Data to the EEPROM:**  
+**向EEPROM写入数据：**
 
 ```bash
 echo "This is a test string" > /sys/bus/i2c/devices/6-0050/eeprom
 ```  
 
-**Read the EEPROM Contents in Hexadecimal Format:**  
+**以十六进制格式读取EEPROM内容：**
 
 ```bash
 cat /sys/bus/i2c/devices/6-0050/eeprom | hexdump -C

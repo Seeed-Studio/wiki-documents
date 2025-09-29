@@ -117,8 +117,8 @@ Grove Shield for Pi Pico v1.0 是 Raspberry Pi Pico 的即插即用扩展板，�
 
 **注意**：如果您在解释器列表中没有看到"**MicroPython (Raspberry Pi Pico)**"，请确保您安装了最新版本的 Thonny。
 
-![Interpreter Selection](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/interpreter.png)
-![COM Port Selection](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/comport.png)
+![解释器选择](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/interpreter.png)
+![COM 端口选择](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/comport.png)
 
 **步骤 3.** 如果 Raspberry Pi Pico 已连接并运行 MicroPython，Thonny 应该会自动连接到 REPL。现在，将以下代码复制到 Thonny IDE 中并按绿色的 **Run** 按钮。
 

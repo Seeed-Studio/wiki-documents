@@ -73,9 +73,9 @@ ModbusTCPについては、イーサネットケーブルを使用してW10 PC�
 sudo apt install minicom
 ```
 
-### Second, configure your minicom as follows
+### 次に、minicomを以下のように設定してください
 
-Open a terminal with `Ctrl+Alt+T`, and input command like below:
+ターミナルを`Ctrl+Alt+T`で開き、以下のようなコマンドを入力してください：
 
 ```
 sudo minicom -D /dev/ttyAMA*

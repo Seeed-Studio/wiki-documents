@@ -85,14 +85,14 @@ cd ~/esp
 git clone -b v5.2.1 --recursive https://github.com/espressif/esp-idf.git
 ```
 
-#### Set up Tools
+#### 设置工具
 
 ```linux
 cd esp-idf/
 ./install.sh
 ```
 
-### Installation of One Channel Hub
+### 一个通道集线器的安装
 
 **步骤 1**: 将仓库克隆到本地仓库。并导航到项目路径。
 
@@ -102,21 +102,21 @@ git clone https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32.git
 cd ~/this_project_directory/
 ```
 
-**Step 2**: Install required driver
+**步骤 2**：安装所需驱动
 
-- Get the radio drivers:
+- 获取无线电驱动程序：
 
 ```
 cd ~/this_project_directory/components/radio_drivers
 ```
 
-- SX126x driver(sx1261, sx1262, sx1268):
+- SX126x 驱动程序（sx1261, sx1262, sx1268）：
 
 ```
 git clone -b v2.3.2 https://github.com/Lora-net/sx126x_driver.git sx126x_driver
 ```
 
-- llcc68 driver:
+- llcc68 驱动程序:
 
 ```
 git clone -b v2.3.2 https://github.com/Lora-net/llcc68_driver.git llcc68_driver
@@ -128,9 +128,9 @@ git clone -b v2.3.2 https://github.com/Lora-net/llcc68_driver.git llcc68_driver
 git clone -b v2.4.1 https://github.com/Lora-net/SWDR001.git lr11xx_driver
 ```
 
-### Build Firmware
+### 构建固件
 
-**Step 1**: Enter the lorahub directory.
+**步骤 1**: 进入 lorahub 目录。
 
 ```
 cd ~/this_project_directory/lorahub
@@ -142,19 +142,19 @@ cd ~/this_project_directory/lorahub
 . ~/esp/esp-idf/export.sh
 ```
 
-Configure the ESP32 target to build for.
+配置要构建的 ESP32 目标。
 
 ```
 idf.py set-target esp32s3
 ```
 
-Customize the build if necessary:
+如有必要，自定义构建：
 
 ```
 idf.py menuconfig
 ```
 
-Build the project:
+构建项目：
 
 ```
 idf.py all
@@ -169,7 +169,7 @@ idf.py all
 ls /dev/cu*
 ```
 
-then flash using `idf.py`, replace the **port**
+然后使用 `idf.py` 进行刷写，替换 **端口**
 
 ```
 idf.py -p port flash
@@ -187,7 +187,7 @@ sudo usermod -a -G dialout $USERNAME
 idf.py -p COM14 flash
 ```
 
-Launch the monitor console to see logs (optional).
+启动监视控制台以查看日志（可选）。
 
 ```
 idf.py -p port monitor

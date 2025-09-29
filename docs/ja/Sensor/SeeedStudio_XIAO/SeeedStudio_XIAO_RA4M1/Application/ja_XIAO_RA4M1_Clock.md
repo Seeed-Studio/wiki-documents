@@ -191,7 +191,7 @@ rotate(int step): モーターを指定されたステップ数回転させる�
 - 📄 **[PCB]** [Motor Driver Board](https://files.seeedstudio.com/wiki/RA4M1_Application/xiao.pcb)
 - 📄 **[3D]** [Clock 3D Modeling](https://files.seeedstudio.com/wiki/RA4M1_Application/clock.zip)
 
-## Tech Support & Product Discussion
+## 技術サポート・製品ディスカッション
 
 私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 

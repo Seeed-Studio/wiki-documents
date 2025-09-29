@@ -23,7 +23,6 @@ no_comments: false # for Disqus
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Boot_NVIDIA_System_from_SD_card_for_Jetson101/S.png" /></div>
 
-
 ### 步骤 1. 克隆仓库
 
 右键打开终端，然后执行以下命令下载相关代码：
@@ -32,9 +31,9 @@ no_comments: false # for Disqus
 git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays.git
 ```
 
-### Step 2. Compile jetson-sdmmc-overlay
+### 步骤 2. 编译 jetson-sdmmc-overlay
 
-Access to the workspace location:
+访问工作区位置：
 
 ```bash
 cd seeed-linux-dtoverlays
@@ -56,9 +55,9 @@ sed -i '17s#JETSON_COMPATIBLE#\"nvidia,p3449-0000-b00+p3448-0002-b00\"\, \"nvidi
 make overlays/jetsonnano/jetson-sdmmc-overlay.dtbo
 ```
 
-### Step 3. Make sure the sd card can be recognized
+### 步骤 3. 确保 SD 卡可以被识别
 
-Insert the SD card to the **J101 Carrier board**.
+将 SD 卡插入到 **J101 载板**中。
 
 ```bash
 sudo cp overlays/jetsonnano/jetson-sdmmc-overlay.dtbo /boot/
@@ -89,14 +88,13 @@ sudo /opt/nvidia/jetson-io/config-by-hardware.py -l
     No hardware configurations found!
 ```
 
-### Step 4. Name our device and Finish driver installation
+### 步骤 4. 为我们的设备命名并完成驱动程序安装
 
 ```bash
 sudo /opt/nvidia/jetson-io/config-by-hardware.py -n "reComputer sdmmc"
 ```
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Boot_NVIDIA_System_from_SD_card_for_Jetson101/fix01.png" /></div>
-
 
 !!!Note
     首次完成安装后，您可能需要**重启**才能运行 jtop。
@@ -169,7 +167,6 @@ cd bootFromUSB
   <p style={{}}><a href="https://github.com/Seeed-Studio/seeed-linux-dtoverlays/blob/master/overlays/jetsonnano/jetson-sdmmc-overlay.dts" target="_blank" /></p><div align="center"><a href="https://github.com/Seeed-Studio/seeed-linux-dtoverlays/blob/master/overlays/jetsonnano/jetson-sdmmc-overlay.dts" target="_blank"><img width={300} src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></a></div><p />
 </div>
 
-
 - **步骤1**. 克隆此仓库并修改下面的代码。
 
     ```bash
@@ -197,12 +194,11 @@ cd bootFromUSB
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

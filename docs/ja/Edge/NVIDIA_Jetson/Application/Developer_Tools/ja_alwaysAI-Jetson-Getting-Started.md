@@ -101,7 +101,7 @@ ssh -V
 
 次に、エッジデバイス（この場合はJetsonデバイス）で環境をセットアップする必要があります。
 
-**Step 1.** Jetsonデバイスで機械学習プロジェクトを実行する際、edgeIQランタイムが使用されます。これは[dockerイメージ](https://hub.docker.com/r/alwaysai/edgeiq)として利用可能です。Dockerをインストールする必要はありません。JetPackに既にプリインストールされているためです。ただし、Dockerにアクセスするためにroot権限（sudo）を必要としないよう、ユーザーに「docker」グループを追加する必要があります。Jetsonデバイスにアクセスし、ターミナルで以下を実行してください。
+**ステップ 1.** Jetsonデバイスで機械学習プロジェクトを実行する際、edgeIQランタイムが使用されます。これは[dockerイメージ](https://hub.docker.com/r/alwaysai/edgeiq)として利用可能です。Dockerをインストールする必要はありません。JetPackに既にプリインストールされているためです。ただし、Dockerにアクセスするためにroot権限（sudo）を必要としないよう、ユーザーに「docker」グループを追加する必要があります。Jetsonデバイスにアクセスし、ターミナルで以下を実行してください。
 
 ```sh
 sudo usermod -aG docker $USER
@@ -314,7 +314,7 @@ with edgeiq.FileVideoStream(
 aai app install
 ```
 
-**Step 4.** Finally run the app
+**ステップ 4.** 最後にアプリを実行する
 
 ```sh
 aai app start
@@ -356,7 +356,7 @@ alwaysAIは、alwaysAI GitHubリポジトリで幅広いすぐに使用できる
 aai app models add alwaysai/vehicle_license_mobilenet_ssd_nano
 ```
 
-**Step 4.** Open **app.py**, change the model name and inference engine
+**ステップ 4.** **app.py**を開き、モデル名と推論エンジンを変更する
 
 ```python
 def main():
@@ -365,7 +365,7 @@ def main():
     obj_detect.load(engine=edgeiq.Engine.TENSOR_RT)
 ```
 
-**Step 5.** Execute the following
+**ステップ 5.** Execute the following
 
 ```sh
 aai app configure
@@ -423,7 +423,7 @@ http://localhost:5000
 aai app install
 ```
 
-**Step 4.** Finally run the app
+**ステップ 4.** 最後にアプリを実行する
 
 ```sh
 aai app start
@@ -431,7 +431,7 @@ aai app start
 
 ここでは、以前と同じコマンドライン出力が表示され、前述と同じアドレスでWebブラウザを開くと、Webカメラからのリアルタイム映像ストリームに対してオブジェクト検出が実行され、以前と同様の出力が表示されます。
 
-## alwaysAI Enterprise Edition
+## alwaysAI エンタープライズエディション
 
 alwaysAIには、以下の機能を持つエンタープライズエディションもあります：
 
@@ -492,11 +492,11 @@ lakshanthad/roadsign-mobilenet
 私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

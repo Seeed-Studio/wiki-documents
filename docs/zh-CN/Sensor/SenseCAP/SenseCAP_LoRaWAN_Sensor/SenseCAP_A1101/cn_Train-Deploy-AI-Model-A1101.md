@@ -157,25 +157,25 @@ pip3 install libusb1
 
 #### M1/ M2 Mac
 
-- **Step 1.** Install Homebrew
+- **步骤 1.** 安装 Homebrew
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-- **Step 2.** Install conda
+- **步骤 2.** 安装 conda
 
 ```sh
 brew install conda
 ```
 
-- **Step 3.** Download libusb
+- **步骤 3.** 下载 libusb
 
 ```sh
 wget https://conda.anaconda.org/conda-forge/osx-arm64/libusb-1.0.26-h1c322ee_100.tar.bz2
 ```
 
-- **Step 4.** Install libusb
+- **步骤 4.** 安装 libusb
 
 ```sh
 conda install libusb-1.0.26-h1c322ee_100.tar.bz2
@@ -217,7 +217,7 @@ python3 capture_images_script.py
 python3 capture_images_script.py --interval <time_in_ms>
 ```
 
-For example, to capture an image every second
+例如，每秒捕获一张图像
 
 ```sh
 python3 capture_images_script.py --interval 1000

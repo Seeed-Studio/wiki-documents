@@ -134,7 +134,7 @@ cd Seeed_reTerminal_Bridge_Fan_control/
 sudo python3 fan.py
 ```
 
-Here is the **fan.py** code for reference.
+以下是 **fan.py** 代码供参考。
 
 ```python
 import sys 
@@ -241,7 +241,7 @@ sudo nano /boot/config.txt
 sudo ip link set can0 up type can bitrate 500000
 ```
 
-**Step 6.** Download the [code](https://github.com/limengdu/Seeed_reTerminal_Bridge_CAN_exmaple) to reTerminal.
+**步骤 6.** 将[代码](https://github.com/limengdu/Seeed_reTerminal_Bridge_CAN_exmaple)下载到reTerminal。
 
 ```sh
 git clone https://github.com/limengdu/Seeed_reTerminal_Bridge_CAN_exmaple
@@ -254,7 +254,7 @@ cd Seeed_reTerminal_Bridge_CAN_exmaple/
 gcc cantransmit.c -o cantransmit
 ```
 
-Here is the **cantransmit.c** code for reference.
+以下是 **cantransmit.c** 代码供参考。
 
 ```c
 #include <stdio.h>
@@ -319,7 +319,7 @@ int main(int argc, char **argv)
 gcc canreceive.c -o canreceive
 ```
 
-Here is the **canreceive.c** code for reference.
+以下是 **canreceive.c** 代码供参考。
 
 ```c
 #include <stdio.h>
@@ -394,7 +394,7 @@ int main(int argc, char **argv)
 gcc canfilter.c -o canfilter
 ```
 
-Here is the **canfilter.c** code for reference.
+以下是 **canfilter.c** 代码供参考。
 
 ```c
 
@@ -726,7 +726,7 @@ sudo make
 sudo make install
 ```
 
-**Step 3.** Use reTerminal as server.
+**步骤 3.** 将 reTerminal 用作服务器。
 
 ```sh
 iperf3 -s
@@ -947,7 +947,7 @@ lsblk
 sudo fdisk /dev/sdX
 ```
 
-For example, in my case:
+例如，就我而言：
 
 ```sh
 sudo fdisk /dev/sda
@@ -1029,7 +1029,7 @@ sudo mkdir /media/seeed/SSD
 sudo mount /dev/sda1 /media/seeed/SSD/
 ```
 
-To check if the SSD successfully mounted by:
+通过以下方式检查 SSD 是否成功挂载：
 
 ```bash
 lsblk
@@ -1075,7 +1075,7 @@ lsusb -t
 sudo apt install minicom
 ```
 
-**Step 4.** Connect EC25-EUX 4G module through minicom.
+**步骤 4.** 通过 minicom 连接 EC25-EUX 4G 模块。
 
 ```sh
 sudo minicom -D /dev/ttyUSB2 -b 1152008n1

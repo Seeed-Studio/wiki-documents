@@ -193,7 +193,7 @@ if (mmWave.update(100)) {
 
 #### Fall Module
 
-This example shows how to use the **MR60FDA2** sensor for fall detection.
+这个例子展示了如何使用 **MR60FDA2** 传感器进行跌倒检测。
 
 ```cpp
 #include <Adafruit_NeoPixel.h>

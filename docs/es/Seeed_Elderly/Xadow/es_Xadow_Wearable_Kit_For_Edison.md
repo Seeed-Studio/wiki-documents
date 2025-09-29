@@ -252,7 +252,7 @@ Ahora abre la demostración GlowingThermometer compila y sube el sketch.
 
 **Subir Sketch**
 
-Haz clic en File&gt;Examples&gt;GrowingThermometer
+Haz clic en File>Examples>GrowingThermometer
 
 **DETALLE DEL CÓDIGO**
 

@@ -48,8 +48,7 @@ last_update:
 ```bash
 sudo apt update
 ```
-
-**Add the Grafana APT Key:**
+**添加 Grafana APT 密钥：**
 
 要将 Grafana APT 密钥添加到您的树莓派的密钥链中，请运行以下命令：
 
@@ -80,10 +79,9 @@ sudo apt update
 ```bash
 sudo apt install grafana
 ```
+**配置 Grafana 在系统启动时自动运行**
 
-**Configuring Grafana to Start at Boot**
-
-Enable Grafana to start at boot:
+启用 Grafana 在系统启动时自动运行：
 
 ```bash
 sudo systemctl enable grafana-server

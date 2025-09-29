@@ -90,7 +90,6 @@ Si no tenemos Grove Base Shield, también podemos conectar directamente Grove-Sw
 | NC        | Blanco          | NC        | Blanco                   |
 | D2        | Amarillo        | D6        | Amarillo                 |
 
-
 **Software**
 
 - **Paso 1.** Por favor copia el código de abajo al IDE de Arduino y súbelo al arduino. Si no sabes cómo subir el código, por favor revisa [cómo subir código](https://wiki.seeedstudio.com/es/Upload_Code/).
@@ -127,7 +126,7 @@ void loop(){
 
 ```
 
-- **Step 2.** When we switch to high and the LED will be on. We also can see the Serial output as  below.
+- **Paso 2.** Cuando cambiamos a alto y el LED estará encendido. También podemos ver la salida Serial como se muestra a continuación.
 
 ```
 switch high!
@@ -225,7 +224,7 @@ if __name__ == '__main__':
 ```
 
 :::tip
-    If everything goes well, you will be able to see the following result
+    Si todo va bien, podrás ver el siguiente resultado
 :::
 
 ```python
@@ -341,11 +340,11 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python3 grove_switch.py
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -175,8 +175,7 @@ sudo apt-get install -y libopenblas-base libopenmpi-dev
 wget https://developer.download.nvidia.cn/compute/redist/jp/v512/pytorch/torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl -O torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl
 pip3 install torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl
 ```
-
-**Step 5.** Install the corresponding torchvision:
+**步骤 5.** 安装相应的 torchvision：
 
 ```bash
 sudo apt install -y libjpeg-dev zlib1g-dev
@@ -347,8 +346,7 @@ yolo export model=/home/nvidia/Everything_Happens_Locally/runs/detect/train2/wei
 ```bash
 model = YOLO(<path to .pt>) --> model = YOLO(<path to .engine>)
 ```
-
-Then, rerun the inference command:
+然后，重新运行推理命令：
 
 ```bash
 python3 inference.py

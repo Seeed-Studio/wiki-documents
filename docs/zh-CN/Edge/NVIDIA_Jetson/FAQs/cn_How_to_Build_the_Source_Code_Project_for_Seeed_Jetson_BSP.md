@@ -65,15 +65,13 @@ Seeed Jetson 的 BSP 源代码可在**此 [GitHub 仓库](https://github.com/See
 ```bash
 cp -r github/Linux_for_Tegra/* Linux_for_Tegra/
 ```
-
-Apply necessary changes to rootfs:
+对根文件系统应用必要的更改：
 
 ```bash
 cd Linux_for_Tegra
 sudo ./apply_binaries.sh
 ```
-
-Install dependencies on your PC:
+在您的 PC 上安装依赖项：
 
 ```bash
 sudo apt-get update
@@ -84,8 +82,7 @@ sudo apt-get install nfs-kernel-server
 sudo apt-get install libxml2-utils
 sudo apt-get install qemu-user-static
 ```
-
-prepare work for kernel build:
+为内核构建准备工作：
 
 ```bash
 mkdir -p l4t-gcc
@@ -100,8 +97,7 @@ Compile and build kernel:
 cd source
 ./nvbuild.sh
 ```
-
-Install new kernel dtbs and drivers:
+安装新的内核 dtbs 和驱动程序：
 
 ```bash
 ./do_copy.sh

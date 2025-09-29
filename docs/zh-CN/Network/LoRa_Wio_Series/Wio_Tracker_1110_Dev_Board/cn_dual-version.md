@@ -275,13 +275,13 @@ west manifest --path
 west config manifest.path nrf
 ```
 
-* Enable the Sidewalk group filter for west.
+* 为西部启用人行道组过滤器。
 
 ```cpp
 west config manifest.group-filter "+sidewalk"
 ```
 
-Check for Sidewalk presence in west:
+检查西边是否存在人行道：
 
 ```cpp
 west list sidewalk
@@ -296,7 +296,7 @@ west update
 
 根据您的网络连接情况，更新可能需要一些时间。
 
-- Install Python requirements for Sidewalk.
+- 安装 Sidewalk 的 Python 依赖项。
 
 ```cpp
 pip install -r sidewalk/requirements.txt
@@ -367,7 +367,7 @@ pip install -r sidewalk/requirements.txt
  cd ~/environment/asset-tracking-workshop
  ```
 
-- Resize the EBS Volume of the underlying EC2 instance.
+- 调整底层 EC2 实例的 EBS 卷大小。
 
  ```cpp
  npm run utils:resizeC9EBS
@@ -536,7 +536,7 @@ JoinEUI 也称为 AppEUI
  west build --board wio_tracker_1110 -- -DRADIO=LR1110_SRC
  ```
 
-or with pre-compiled radio driver library:
+或使用预编译的无线电驱动程序库：
 
  ```cpp
  west build --board wio_tracker_1110 -- -DRADIO=LR1110

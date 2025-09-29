@@ -256,7 +256,7 @@ esp-idf --version
 brew install cmake ninja dfu-util
 ```
 
-**Step 2.** Download and install ESP-IDF
+**ステップ 2.** ESP-IDFをダウンロードしてインストールする
 
 ```bash
 mkdir -p ~/esp
@@ -266,7 +266,7 @@ cd esp-idf
 ./install.sh esp32s3
 ```
 
-**Step 3.** Set up the environment variables
+**ステップ 3.** 環境変数を設定する
 
 ```bash
 . $HOME/esp/esp-idf/export.sh
@@ -298,7 +298,7 @@ cd esp-idf
 ./install.sh esp32s3
 ```
 
-**Step 3.** Set up the environment variables
+**ステップ 3.** 環境変数を設定する
 
 ```bash
 . $HOME/esp/esp-idf/export.sh
@@ -316,7 +316,7 @@ cd esp-idf
 :::note
 ESP-IDF v5.1.1のインストールに関するより詳細な手順については、Espressifの公式ドキュメントを参照してください：
 
-- [ESP-IDF Get Started Guide](https://docs.espressif.com/projects/esp-idf/en/v5.1.1/esp32s3/get-started/index.html)
+- [ESP-IDF 開始ガイド](https://docs.espressif.com/projects/esp-idf/en/v5.1.1/esp32s3/get-started/index.html)
 
 :::
 
@@ -408,7 +408,7 @@ source ~/.zshrc
 
 <TabItem value="Linux" label="Linux">
 
-**Step 1.** Clone the repository
+**ステップ 1.** リポジトリをクローンします
 
 ```bash
 cd ~
@@ -662,7 +662,7 @@ IPv4テストの場合、ゲートウェイで以下のコマンドを実行し�
 iperf -c <device_ip> -p <port> -i 1 -u -b 20M
 ```
 
-For IPv6 testing, execute this command on your gateway:
+IPv6テストの場合、ゲートウェイで次のコマンドを実行してください：
 
 ```bash
 iperf -c <device_ip>%wlan0 -p <port> -i 1 -V -u -b 20M

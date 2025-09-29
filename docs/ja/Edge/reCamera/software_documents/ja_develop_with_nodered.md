@@ -184,7 +184,7 @@ Model nodeは`preview` nodeに接続して、Node-REDワークスペースでエ
 
 クライアントには`sscma`を選択してください。選択後、赤い三角形が消えます。
 
-#### Input and Output
+#### 入力と出力
 
 Input: `camera` nodeを`stream` nodeに接続してストリーミングを有効にします。
 
@@ -255,7 +255,7 @@ if (option.find("1080p") != std::string::npos) {
 
 例：sliceが5分に設定され、durationが1時間に設定されている場合、ビデオは5分ずつの12個のファイルに保存されます。
 
-### Example Flow with SSCMA Nodes
+### SSCMA ノードを使用したフロー例
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/example_flow.png" /></div>
 

@@ -75,7 +75,7 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-### Step 2: Install requirements
+### 步骤 2：安装依赖
 
 打开终端并运行以下命令来安装所需的软件包：
 
@@ -83,7 +83,7 @@ sudo apt full-upgrade
 sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev tar wget vim
 ```
 
-### Step 3: Download Python3.8
+### 步骤 3：下载 Python3.8
 
 打开终端并运行以下命令来下载 Python3.8:
 
@@ -91,7 +91,7 @@ sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev 
 wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tgz
 ```
 
-### Step 4: Install Python3.8
+### 步骤 4：安装 Python3.8
 
 打开终端并运行以下命令来安装 Python3.8:
 
@@ -104,7 +104,7 @@ sudo make altinstall
 cd ..
 ```
 
-### Step 5: Check Python3.8
+### 步骤 5：检查 Python3.8
 
 打开终端并运行以下命令来检查 Python3.8:
 
@@ -122,15 +122,15 @@ python3.8 -V
 python3.8 -m venv coral_venv
 ```
 
-## Configure Hardware Settings
+## 配置硬件设置
 
-Open a terminal and run the following commands to open ```config.txt```:
+打开终端并运行以下命令来打开 ```config.txt```：
 
 ```
 sudo nano /boot/firmware/config.txt
 ```
 
-And then add the following text to ```config.txt```:
+然后将以下文本添加到```config.txt```中：
 
 ```
 [all]
@@ -159,17 +159,17 @@ sudo reboot
 uname -a
 ```
 
-## Install the PCIe Driver and Edge TPU Runtime
+## 安装 PCIe 驱动程序和 Edge TPU 运行时
 
-### Step 1: Enter the virtual environment
+### 步骤 1: 进入虚拟环境
 
 ```
 source coral_venv/bin/activate
 ```
 
-### Step 2: Install Edge TPU Runtime
+### 步骤 2: 安装 Edge TPU 运行时
 
-Add the Google Coral Edge TPU package repository
+添加 Google Coral Edge TPU 软件包仓库
 
 ```
 echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
@@ -185,7 +185,7 @@ sudo apt-get update
 sudo apt-get install cmake libedgetpu1-std devscripts debhelper dkms dh-dkms
 ```
 
-### Step 3: Install the PCIe driver
+### 步骤 3: 安装 PCIe 驱动程序
 
 ```
 git clone https://github.com/google/gasket-driver.git
@@ -210,7 +210,7 @@ sudo reboot
 
 ```
 
-## Check Edge TPU
+## 检查 Edge TPU
 
 ```
 lspci -nn | grep 089a
@@ -236,9 +236,9 @@ pip install --upgrade pip
 python3 -m pip install --extra-index-url https://google-coral.github.io/py-repo/ pycoral~=2.0
 ```
 
-### Step 2: Test the Edge TPU
+### 步骤 2: 测试 Edge TPU
 
-Install resources for the example:
+为示例安装 retranslations：
 
 ```
 mkdir coral && cd coral

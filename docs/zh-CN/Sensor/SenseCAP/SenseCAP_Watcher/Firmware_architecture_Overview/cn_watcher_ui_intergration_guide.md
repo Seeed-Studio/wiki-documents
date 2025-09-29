@@ -57,7 +57,7 @@ lv_obj_t *example_objects[] = {example_obj1, example_obj2, ...};
 addObjToGroup(&group_page_example, example_objects, sizeof(example_objects) / sizeof(example_objects[0]));
 ```
 
-### 2.3 Page Navigation and Object Management
+### 2.3 页面导航和对象管理
 
 ```cpp
 void lv_pm_open_page(lv_group_t *group, 
@@ -157,13 +157,13 @@ GroupInfo group_page_example;
 lv_obj_t * example_objects[] = {example_obj1, example_obj2, ...};
 ```
 
-3. Add objects to the group
+3. 向组中添加对象
 
 ```cpp
 addObjToGroup(&group_page_example, example_objects, sizeof(example_objects) / sizeof(example_objects[0]));
 ```
 
-4. Open the page and add the group
+4. 打开页面并添加群组
 
 ```cpp
 lv_pm_open_page(g_example, &group_page_example, PM_ADD_OBJS_TO_GROUP, &ui_Page_Example, LV_SCR_LOAD_ANIM_NONE, 0, 0, &ui_Page_Example_screen_init);
@@ -377,7 +377,7 @@ void btn2click_cb(lv_event_t * e);
 void btn3click_cb(lv_event_t * e);
 ```
 
-And the code will be like this in `ui_events.c`:
+而代码在 `ui_events.c` 中将会是这样的：
 
 ```cpp
 void btn1click_cb(lv_event_t * e)

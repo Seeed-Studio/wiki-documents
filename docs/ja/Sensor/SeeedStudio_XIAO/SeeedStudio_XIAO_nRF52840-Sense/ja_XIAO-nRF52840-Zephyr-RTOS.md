@@ -10,7 +10,7 @@ last_update:
   author: Tim
 ---
 
-# XIAO nRF52840(sense) With Zephyr(RTOS)
+# XIAO nRF52840(sense)とZephyr（RTOS）
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-ble.png"/></div>
 
@@ -267,7 +267,7 @@ RESETボタンをダブルプレスしてからフラッシュします：
 west flash -r uf2
 ```
 
-Next you'll need to connect to see the output:
+次に、出力を確認するために接続する必要があります：
 
 ```
 screen /dev/ttyACM0 115200
@@ -358,13 +358,13 @@ RESETボタンをダブルプレスしてからフラッシュします：
 west flash -r uf2
 ```
 
-Next you'll need to connect to see the output:
+次に、出力を確認するために接続する必要があります：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-This should display something along these lines:
+これは次のような内容を表示するはずです：
 
 ```
 [00:00:00.297,088] <inf> dmic_sample: PCM output rate: 16000, channels: 1

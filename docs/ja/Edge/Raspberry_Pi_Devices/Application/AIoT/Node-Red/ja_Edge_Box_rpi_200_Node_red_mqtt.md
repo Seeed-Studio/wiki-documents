@@ -50,7 +50,7 @@ Edge Box-200は、Raspberry Pi OSがプリインストールされた状態で�
 
 ## EdgeBoxをMQTTブローカーとして設定する
 
-- **Step 01** : EdgeBox RPi 200にSSHまたはVNC接続し、Raspberry Pi OSを更新します：
+- **ステップ 01** : EdgeBox RPi 200にSSHまたはVNC接続し、Raspberry Pi OSを更新します：
 
 ```sh
 sudo apt update
@@ -92,7 +92,7 @@ include_dir /etc/mosquitto/conf.d
 allow_anonymous false
 ```
 
-To store passwords securely, we'll specify a file location by adding:
+パスワードを安全に保存するために、以下を追加してファイルの場所を指定します：
 
 ```sh
 password_file /etc/mosquitto/pwfile
@@ -136,7 +136,7 @@ sudo systemctl start mosquitto
 
 ## 接続テスト
 
-- **Step 01** : 新しい SSH セッションまたはターミナルを開き、以下のコマンドを実行してトピックを購読する
+- **ステップ 01** : 新しい SSH セッションまたはターミナルを開き、以下のコマンドを実行してトピックを購読する
 
 ```sh
 mosquitto_sub -h localhost -t test -u <USER> -P <PASSWORD>

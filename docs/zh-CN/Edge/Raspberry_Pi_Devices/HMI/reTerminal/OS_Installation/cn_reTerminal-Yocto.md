@@ -92,13 +92,13 @@ mkdir layers
 cd layers
 ```
 
-- **Step 4.** Clone the following GitHub repo
+- **步骤 4.** 克隆以下 GitHub 仓库
 
 ```sh
 git clone -b dunfell git://git.yoctoproject.org/poky
 ```
 
-- **Step 5.** Clone the following repos
+- **步骤 5.** 克隆以下仓库
 
 ```sh
 git clone -b dunfell https://github.com/Seeed-Studio/meta-seeed-cm4.git
@@ -118,13 +118,13 @@ mv -f ../linux/ recipes-kernel/
 cd ../../
 ```
 
-- **Step 7.** Initialize the build environment
+- **步骤 7.** 初始化构建环境
 
 ```sh
 source layers/poky/oe-init-build-env
 ```
 
-- **Step 8.** Add the layers to the build environment
+- **步骤 8.** 将图层添加到构建环境中
 
 ```sh
 bitbake-layers add-layer ../layers/meta-raspberrypi
@@ -341,13 +341,13 @@ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 git clone -b master git://git.yoctoproject.org/poky
 ```
 
-- **Step 4.** Navigate to the **poky** directory
+- **步骤 4.** 导航到 **poky** 目录
 
 ```sh
 cd poky
 ```
 
-- **Step 5.** Install the following toaster packages
+- **步骤 5.** 安装以下烤面包机软件包
 
 ```sh
 pip3 install --user -r bitbake/toaster-requirements.txt
@@ -359,13 +359,13 @@ pip3 install --user -r bitbake/toaster-requirements.txt
 git reset --hard 7ade8346b3a09983257589d22aaada47e0eec010
 ```
 
-- **Step 7.** Source the build environment script
+- **步骤 7.** 获取构建环境脚本
 
 ```sh
 source oe-init-build-env
 ```
 
-- **Step 8.** From the **build** directory, start toaster
+- **步骤 8.** 从 **build** 目录启动 toaster
 
 ```sh
 source toaster start
@@ -453,14 +453,14 @@ source toaster start webport=9000
 
 **注意：** 确保在 **overlays/xxxx** 前添加一个空格
 
-- **Step 19.** Repeat the same to add the following
+- **步骤 19。** 重复相同步骤以添加以下内容
 
 ```sh
 - Variable:PACKAGECONFIG_append_pn-qtbase
 - Value: eglfs 
 ```
 
-**Note:** Make sure to add a space before **eglfs**
+**注意：** 确保在 **eglfs** 前添加一个空格
 
 ```sh
 - Variable:DISTRO_FEATURES_remove

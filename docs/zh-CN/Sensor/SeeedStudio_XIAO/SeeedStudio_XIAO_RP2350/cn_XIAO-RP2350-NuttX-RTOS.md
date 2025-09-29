@@ -211,13 +211,13 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Select the combo configuration to the xiao-rp2350 board.
+选择组合配置到 xiao-rp2350 板。
 
 ```bash
 ./tools/configure.sh xiao-rp2350:combo
 ```
 
-Compile de the source code.
+编译 translation 代码。
 
 ```bash
 make -j
@@ -265,7 +265,7 @@ IO_INPUT_PIN_PULLDOWN
 
 - 板载 LED：
   - 黄色            -> GPIO25
- 
+
 - GPIO：
   - 1 个输入           -> GPIO27
   - 1 个中断输入 -> GPIO26
@@ -332,12 +332,12 @@ led_daemon: LED set 0x01
 led_daemon: LED set 0x00
 ```
 
-The Seeed Studio XIAO RP2350 also has a WS2812 addressable LED that can be tested using ws2812 application:
+Seeed Studio XIAO RP2350 还有一个可寻址的 LED，可以使用 ws2812 应用程序进行测试：
+
 ```bash
 NuttShell (NSH) NuttX-12.8.0
 nsh> ws2812
 ```
-
 
 查看下面的视频演示，包含 gpio、leds 和 ws2812 示例：
 
@@ -346,7 +346,6 @@ nsh> ws2812
     <source src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/Nuttx/xiao-rp2350-nuttx-demo.mp4" type="video/mp4" />
   </video>
 </div>
-
 
 有关 NuttX RTOS 的更多信息，请访问 [NuttX 文档](https://nuttx.apache.org/docs/latest/index.html)
 

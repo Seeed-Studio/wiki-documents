@@ -69,7 +69,7 @@ CM4_ENABLE_RPI_EEPROM_UPDATE=1
 sudo nano /boot/firmware/config.txt
 ```
 
-Modify `[cm4]` part as shown below:
+按如下所示修改 `[cm4]` 部分：
 
 ```
 [cm4]
@@ -84,13 +84,13 @@ dtoverlay=spi-gpio40-45
 sudo reboot
 ```
 
-Then update the eeprom use command like below:
+然后使用如下命令更新 eeprom:
 
 ```
 sudo rpi-eeprom-update -a
 ```
 
-The output is like below:
+输出如下所示：
 
 ```
 recomputer@reComputer-R110x:~ $ sudo rpi-eeprom-update -a
@@ -106,9 +106,9 @@ BOOTLOADER: up to date
     LATEST: 
 ```
 
-### Flash the lastest eeprom and modify the boot order
+### 刷写最新的 EEPROM 并修改启动顺序
 
-Use command like below to open the raspi-config:
+使用如下命令打开 raspi-config：
 
 ```
 sudo raspi-config 
@@ -143,7 +143,7 @@ sudo raspi-config
 sudo -E rpi-eeprom-config --edit
 ```
 
-Modify the file like below:
+按如下方式修改文件：
 
 ```
 [all]
@@ -258,25 +258,25 @@ git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-- **Step 2.** Install **libusb**
+- **步骤 2.** 安装 **libusb**
 
 ```sh
 brew install libusb
 ```
 
-- **Step 3.** Install **pkg-config**
+- **步骤 3.** 安装 **pkg-config**
 
 ```sh
 brew install pkg-config
 ```
 
-- **Step 4.** Build using make
+- **步骤 4.** 使用 make 构建
 
 ```sh
 make
 ```
 
-- **Step 5.** Run the binary
+- **步骤 5.** 运行二进制文件
 
 ```sh
 sudo ./rpiboot
@@ -333,7 +333,7 @@ sudo ./rpiboot
 sudo apt-get update
 ```
 
-- **Step 2.** Install **Git** by the following command
+- **步骤 2.** 通过以下命令安装 **Git**
 
 ```sh
 sudo apt install git pkg-config make gcc libusb-1.0-0-dev
@@ -354,7 +354,7 @@ git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-- **Step 5.** Build and install the usbboot tool
+- **步骤 5.** 构建并安装 usbboot 工具
 
 ```sh
 make
@@ -377,13 +377,13 @@ sudo ./rpiboot
 sudo apt install snap
 ```
 
-- **Step 9.** Download **rpi-imager**
+- **步骤 9.** 下载 **rpi-imager**
 
 ```sh
 snap install rpi-imager
 ```
 
-- **Step 10.** Open Raspberry Pi Imager software
+- **步骤 10。** 打开 Raspberry Pi Imager 软件
 
 ```sh
 rpi-imager
@@ -488,7 +488,7 @@ raspberry
 ssh pi@raspberrypi.local
 ```
 
-- **Step 2.** Type **yes** for the following message
+- **步骤 2.** 对以下消息输入 **yes**
 
 ```sh
 ECDSA key fingerprint is SHA256:XXXXXXX.
@@ -533,13 +533,13 @@ sudo apt install git -y
 git clone --depth 1 https://github.com/Seeed-Studio/seeed-linux-dtoverlays
 ```
 
-- **Step 2.** Enter the repo
+- **步骤 2.** 进入仓库
 
 ```sh
 cd seeed-linux-dtoverlays
 ```
 
-- **Step 3.** Type the following to install the drivers
+- **步骤 3.** 输入以下内容以安装驱动程序
 
 ```sh
 sudo ./scripts/reTerminal.sh --device reComputer-R110x
