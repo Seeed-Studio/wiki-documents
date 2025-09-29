@@ -1,6 +1,7 @@
 # YOLO11n Model Conversion for reCamera: Complete Guide
 
 ## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Understanding the Hardware Constraints](#understanding-the-hardware-constraints)
 3. [Prerequisites](#prerequisites)
@@ -33,6 +34,7 @@ The reCamera family includes several variants, all built around the Sophgo CV181
 - **reCamera Gimbal**: Motorized gimbal with object tracking capabilities
 
 **Technical Specifications:**
+
 - **Processor**: Sophgo CV181x (RISC-V + TPU)
 - **AI Performance**: 0.5 TOPS INT8
 - **Memory**: 256MB DDR3
@@ -51,16 +53,19 @@ YOLO11n models are typically trained in PyTorch and exported to ONNX format. How
 ## Understanding the Hardware Constraints
 
 ### Memory Limitations
+
 - **Model Size Limit**: Typically 8-16MB for practical deployment
 - **Input Resolution**: Usually 640x640 for YOLO11n to balance accuracy and performance
 - **Batch Size**: Limited to 1 due to memory constraints
 
 ### Processing Constraints
+
 - **Supported Operations**: Not all ONNX operations have TPU equivalents
 - **Precision Loss**: INT8 quantization may reduce accuracy by 1-3%
 - **Inference Speed**: Target is 10-30 FPS depending on model complexity
 
 ### Why Standard ML Frameworks Don't Work
+
 - **TensorFlow/PyTorch**: Designed for x86/ARM CPUs and NVIDIA GPUs
 - **ONNX Runtime**: Lacks CV181x backend support
 - **TensorRT**: NVIDIA-specific, incompatible with Sophgo hardware
@@ -68,18 +73,21 @@ YOLO11n models are typically trained in PyTorch and exported to ONNX format. How
 ## Prerequisites
 
 ### Required Knowledge
+
 - Basic Linux command line operations
 - Understanding of Docker containers
 - Familiarity with YOLO model architecture
 - Basic networking concepts for cloud deployment
 
 ### Required Software
+
 - Docker Desktop (for local development)
 - SSH client (Terminal on macOS, PuTTY on Windows)
 - Web browser for cloud provider management
 - Text editor for configuration files
 
 ### Required Files
+
 - Trained YOLO11n model in ONNX format
 - 100 calibration images (representative of your dataset)
 - 1 test image for validation
@@ -93,6 +101,7 @@ Since the conversion process requires Linux and specific toolchains, cloud provi
 **Advantages**: Simple interface, predictable pricing, good documentation
 
 **Setup Steps:**
+
 1. Create DigitalOcean account at [digitalocean.com](https://www.digitalocean.com)
 2. Create new Droplet with these specifications:
    - **Image**: Ubuntu 22.04 LTS
@@ -101,11 +110,13 @@ Since the conversion process requires Linux and specific toolchains, cloud provi
    - **Authentication**: SSH Key (recommended) or Password
 
 3. **SSH Connection:**
+
    ```bash
    ssh root@your_droplet_ip
    ```
 
 4. **Install Dependencies:**
+
    ```bash
    apt update && apt upgrade -y
    apt install -y docker.io git wget
@@ -120,6 +131,7 @@ Since the conversion process requires Linux and specific toolchains, cloud provi
 **Advantages**: Most comprehensive cloud platform, free tier available
 
 **Setup Steps:**
+
 1. Create AWS account at [aws.amazon.com](https://aws.amazon.com)
 2. Launch EC2 instance:
    - **AMI**: Ubuntu Server 22.04 LTS
@@ -127,11 +139,13 @@ Since the conversion process requires Linux and specific toolchains, cloud provi
    - **Security Group**: Allow SSH (port 22) from your IP
 
 3. **SSH Connection:**
+
    ```bash
    ssh -i your-key.pem ubuntu@your-instance-ip
    ```
 
 4. **Install Dependencies:**
+
    ```bash
    sudo apt update && sudo apt upgrade -y
    sudo apt install -y docker.io git wget
@@ -147,6 +161,7 @@ Since the conversion process requires Linux and specific toolchains, cloud provi
 **Advantages**: $300 free credits for new users, excellent performance
 
 **Setup Steps:**
+
 1. Create GCP account at [cloud.google.com](https://cloud.google.com)
 2. Create Compute Engine instance:
    - **Machine Type**: e2-standard-2 (2 vCPU, 8GB RAM)
@@ -156,6 +171,7 @@ Since the conversion process requires Linux and specific toolchains, cloud provi
 3. **SSH via Browser** (built-in terminal) or use gcloud CLI
 
 4. **Install Dependencies:**
+
    ```bash
    sudo apt update && sudo apt upgrade -y
    sudo apt install -y docker.io git wget
@@ -171,6 +187,7 @@ Since the conversion process requires Linux and specific toolchains, cloud provi
 **Advantages**: Good integration with Windows ecosystem, student discounts
 
 **Setup Steps:**
+
 1. Create Azure account at [azure.microsoft.com](https://azure.microsoft.com)
 2. Create Virtual Machine:
    - **Image**: Ubuntu Server 22.04 LTS
@@ -178,11 +195,13 @@ Since the conversion process requires Linux and specific toolchains, cloud provi
    - **Authentication**: SSH public key
 
 3. **SSH Connection:**
+
    ```bash
    ssh azureuser@your-vm-ip
    ```
 
 4. **Install Dependencies:**
+
    ```bash
    sudo apt update && sudo apt upgrade -y
    sudo apt install -y docker.io git wget
@@ -198,6 +217,7 @@ Since the conversion process requires Linux and specific toolchains, cloud provi
 **Advantages**: Strong presence in Asia, competitive pricing
 
 **Setup Steps:**
+
 1. Create account at [alibabacloud.com](https://www.alibabacloud.com)
 2. Create ECS instance:
    - **Image**: Ubuntu 22.04 64-bit
@@ -205,11 +225,13 @@ Since the conversion process requires Linux and specific toolchains, cloud provi
    - **Security Group**: Allow SSH (22/22)
 
 3. **SSH Connection:**
+
    ```bash
    ssh root@your-ecs-ip
    ```
 
 4. **Install Dependencies:**
+
    ```bash
    apt update && apt upgrade -y
    apt install -y docker.io git wget
@@ -224,6 +246,7 @@ Since the conversion process requires Linux and specific toolchains, cloud provi
 **Advantages**: Good for users in China, affordable pricing
 
 **Setup Steps:**
+
 1. Create account at [intl.cloud.tencent.com](https://intl.cloud.tencent.com)
 2. Create CVM instance:
    - **Image**: Ubuntu Server 22.04 LTS 64-bit
@@ -231,11 +254,13 @@ Since the conversion process requires Linux and specific toolchains, cloud provi
    - **Security Group**: Allow SSH (port 22)
 
 3. **SSH Connection:**
+
    ```bash
    ssh ubuntu@your-cvm-ip
    ```
 
 4. **Install Dependencies:**
+
    ```bash
    sudo apt update && sudo apt upgrade -y
    sudo apt install -y docker.io git wget
@@ -253,6 +278,7 @@ Since the conversion process requires Linux and specific toolchains, cloud provi
 1. **Connect to your cloud instance via SSH**
 
 2. **Set up TPU-MLIR environment:**
+
    ```bash
    # Pull the official TPU-MLIR Docker image
    docker pull sophgo/tpuc_dev:v3.1
@@ -265,6 +291,7 @@ Since the conversion process requires Linux and specific toolchains, cloud provi
    ```
 
 3. **Install TPU-MLIR tools inside container:**
+
    ```bash
    pip install tpu_mlir[all]==1.7
    
@@ -334,11 +361,13 @@ cd /workspace/tpu-mlir/model_yolo11n/Workspace
 ### Step 5: Model Conversion Pipeline
 
 **5.1: ONNX Version Downgrade**
+
 ```bash
 python /workspace/tpu-mlir/downgrade_onnx.py yolo11n.onnx yolo11n_v8.onnx
 ```
 
 **5.2: Convert ONNX to MLIR**
+
 ```bash
 model_transform \
 --model_name yolo11n \
@@ -426,6 +455,7 @@ model_transform \
   - *Effect*: Only affects file naming
 
 **5.3: Generate Calibration Table**
+
 ```bash
 run_calibration \
 yolo11n.mlir \
@@ -454,7 +484,7 @@ yolo11n.mlir \
   - *Effects of changes*:
     - **Fewer images (25-50)**: Faster calibration, potentially less accurate quantization
     - **More images (200-500)**: Better calibration accuracy, much longer processing time
-    - **Too few (<10)**: Poor quantization, significant accuracy loss
+    - **Too few (&lt;10)**: Poor quantization, significant accuracy loss
     - **Too many (>1000)**: Diminishing returns, very long processing time
 
 - **`-o` (output file)**: Name for the calibration table file
@@ -463,12 +493,14 @@ yolo11n.mlir \
   - *Effect*: Only affects filename, content is the same
 
 **What Happens During Calibration:**
+
 1. **Statistical Analysis**: Each calibration image is processed through the model
 2. **Activation Mapping**: The tool records the range of values each layer produces
 3. **Quantization Planning**: Determines how to map FP32 values to INT8 efficiently
 4. **Accuracy Preservation**: Finds optimal scaling factors to minimize precision loss
 
 **Expected Output**: This process will take 5-15 minutes and should show progress like:
+
 ```
 input_num = 100, ref = 100
 real input_num = 100
@@ -478,6 +510,7 @@ auto tune end, run time: XXX seconds
 ```
 
 **5.4: Compile Final INT8 Model**
+
 ```bash
 model_deploy \
 --mlir yolo11n.mlir \
@@ -566,6 +599,7 @@ model_deploy \
   - *Effect*: Only affects filename
 
 **What Happens During Compilation:**
+
 1. **Layer Conversion**: Each neural network layer is converted to TPU instructions
 2. **Memory Optimization**: Model weights are arranged for efficient TPU access
 3. **Quantization Application**: FP32 weights are converted to INT8 using calibration data
@@ -573,6 +607,7 @@ model_deploy \
 5. **Validation**: Final model is tested against reference outputs
 
 **Expected Output**: The conversion should complete with validation results showing similarity scores >99%:
+
 ```
 npz compare PASSED
 230 compared
@@ -581,6 +616,7 @@ min_similarity = (0.9999997615814209, 0.9999984392787142, 116.13544464111328)
 ```
 
 **Performance Expectations After Conversion:**
+
 - **Model Size**: 3-8MB (compared to 20-40MB original ONNX)
 - **Inference Speed**: 15-30 FPS on reCamera
 - **Accuracy**: 97-99% of original model performance
@@ -589,6 +625,7 @@ min_similarity = (0.9999997615814209, 0.9999984392787142, 116.13544464111328)
 ### Step 6: Download Converted Model
 
 **6.1: Exit Docker and copy file to host**
+
 ```bash
 # Exit Docker container
 exit
@@ -601,6 +638,7 @@ ls -lh yolo11n_sym_int8.cvimodel
 ```
 
 **6.2: Download to your local machine**
+
 ```bash
 # From your local machine
 scp user@your-cloud-ip:~/yolo_conversion/yolo11n_sym_int8.cvimodel ~/Downloads/
@@ -620,12 +658,14 @@ scp user@your-cloud-ip:~/yolo_conversion/yolo11n_sym_int8.cvimodel ~/Downloads/
 
 ### Issue 1: "File not found" errors during conversion
 
-**Symptoms**: 
+**Symptoms**:
+
 ```
 ../image/test.jpg doesn't existed !!!
 ```
 
 **Solution**:
+
 ```bash
 # Check if file exists and has correct extension
 ls -la ../image/
@@ -636,11 +676,13 @@ mv ../image/test.img ../image/test.jpg
 ### Issue 2: "Directory not empty" when moving files
 
 **Symptoms**:
+
 ```
 mv: cannot move 'Download/model_yolo11n' to 'tpu-mlir/model_yolo11n': Directory not empty
 ```
 
 **Solution**:
+
 ```bash
 # Remove existing directory and replace
 rm -rf tpu-mlir/model_yolo11n
@@ -650,11 +692,13 @@ mv Download/model_yolo11n tpu-mlir/
 ### Issue 3: Calibration fails with "There is no inputs"
 
 **Symptoms**:
+
 ```
 RuntimeError: There is no inputs
 ```
 
 **Solution**:
+
 ```bash
 # Ensure calibration images are in correct format (.jpg, .png)
 cd ../COCO2017/
@@ -666,11 +710,13 @@ done
 ### Issue 4: Docker permission errors
 
 **Symptoms**:
+
 ```
 permission denied while trying to connect to the Docker daemon socket
 ```
 
 **Solution**:
+
 ```bash
 # Add user to docker group
 sudo usermod -aG docker $USER
@@ -681,11 +727,13 @@ newgrp docker
 ### Issue 5: Out of memory errors
 
 **Symptoms**:
+
 ```
 CUDA out of memory
 ```
 
 **Solution**:
+
 - Upgrade to larger cloud instance (8GB+ RAM)
 - Reduce batch size in conversion commands
 - Use fewer calibration images (minimum 50)
@@ -693,11 +741,13 @@ CUDA out of memory
 ### Issue 6: Model validation fails
 
 **Symptoms**:
+
 ```
 npz compare FAILED
 ```
 
 **Solution**:
+
 - Check if test image is representative of training data
 - Verify ONNX model is correct version
 - Try different test image
@@ -705,12 +755,14 @@ npz compare FAILED
 ### Issue 7: SSH connection issues
 
 **Symptoms**:
+
 ```
 Connection refused
 ssh: connect to host [IP] port 22: Connection refused
 ```
 
 **Solution**:
+
 - Check cloud provider security groups allow SSH (port 22)
 - Verify instance is running
 - Try different SSH key or password authentication
@@ -745,38 +797,50 @@ ssh: connect to host [IP] port 22: Connection refused
 ## Frequently Asked Questions
 
 ### Q: How long does the conversion process take?
+
 **A**: Typically 20-45 minutes depending on model complexity and cloud instance performance. The calibration step is usually the longest.
 
 ### Q: Can I use a different YOLO version?
+
 **A**: This guide is specific to YOLO11n. Other versions (YOLOv8, YOLOv9) require different output layer names and may have compatibility issues.
 
 ### Q: What if my model accuracy drops significantly after conversion?
+
 **A**: Some accuracy loss (1-3%) is normal due to INT8 quantization. If loss is >5%, try:
+
 - Using more representative calibration images
 - Increasing calibration image count to 200-500
 - Adjusting confidence thresholds during deployment
 
 ### Q: Can I convert models trained on custom datasets?
+
 **A**: Yes, but ensure your calibration images are representative of your custom dataset. The 100 calibration images should cover the variety of scenarios your model will encounter.
 
 ### Q: What's the maximum model size supported?
+
 **A**: The reCamera's memory limits practical model size to ~8-16MB. YOLO11n typically produces 3-8MB models after conversion.
 
 ### Q: Do I need to keep the cloud instance running?
+
 **A**: No, you can terminate the instance immediately after downloading your converted model. The conversion is a one-time process.
 
 ### Q: Can I batch convert multiple models?
+
 **A**: Yes, you can keep the same environment and convert multiple models by repeating steps 5-6 with different model files.
 
 ### Q: What if I encounter an error not covered here?
-**A**: 
+
+**A**:
+
 1. Check the Docker container logs: `docker logs tpu_converter`
 2. Verify your ONNX model loads correctly in a Python environment first
 3. Try with a simpler test model to isolate the issue
 4. Contact Seeed Studio support with specific error messages
 
 ### Q: Are there alternatives to cloud deployment?
+
 **A**: Yes, you can:
+
 - Use Docker Desktop locally on Mac/Windows (requires significant RAM)
 - Set up WSL2 on Windows with Docker
 - Use a local Linux machine or VM
@@ -790,6 +854,7 @@ However, cloud deployment is recommended for reliability and performance.
 Converting YOLO11n models for reCamera deployment requires understanding both the hardware constraints and the TPU-MLIR toolchain. While the process has several steps, following this guide should result in a successfully converted model ready for edge AI deployment.
 
 The key to success is:
+
 1. **Preparation**: Having all files in the correct format and structure
 2. **Environment**: Using a properly configured Linux environment (cloud recommended)
 3. **Patience**: Allowing sufficient time for the calibration and conversion steps
