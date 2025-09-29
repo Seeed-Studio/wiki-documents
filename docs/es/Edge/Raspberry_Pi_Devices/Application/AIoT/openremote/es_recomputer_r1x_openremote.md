@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
 slug: /es/openremote_r1x00
 last_update:
-  date: 9/24/2025
+  date: 9/29/2025
   author: Kasun Thushara
 ---
 
@@ -143,6 +143,8 @@ Para usar la API de OpenWeatherMap, necesita una clave API gratuita. Regístrese
 - **Nombre:** `HTTP API Agent`
 - Haga clic en **Add**.
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote2.png" alt="pir" width={800} height="auto" /></p>
+
 El agente ahora está creado con atributos preconfigurados. Necesitará configurarlo para conectarse a la API de OpenWeatherMap.
 
 ### Configurar el Agente HTTP API
@@ -153,7 +155,7 @@ Ahora que el Agente HTTP API está creado, configúrelo con los siguientes detal
   *(No olvide enviar el valor haciendo clic en el botón enviar a la derecha o presionando Enter.)*
 
 - **Request Query Parameters:**  
-  Ingrese la clave API de su cuenta de OpenWeatherMap y configure los parámetros como sigue:
+  Ingrese la clave API de su cuenta de OpenWeatherMap y configure los parámetros de la siguiente manera:
 
 ```json
 {
@@ -165,6 +167,9 @@ Ahora que el Agente HTTP API está creado, configúrelo con los siguientes detal
 
 Haga clic en **Save** para confirmar la configuración.
 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote3.png" alt="pir" width={800} height="auto" /></p>
+
 ### Crear el Activo Meteorológico
 
 **Agregar un Nuevo Activo Meteorológico**
@@ -174,7 +179,11 @@ Haga clic en **Save** para confirmar la configuración.
 - **Nombre:** `Weather Rotterdam`
 - Haga clic en **Add**.
 
-El activo meteorológico ahora aparecerá en la lista como un hijo del Agente HTTP API. Puede cambiar su padre si lo desea.
+El activo meteorológico ahora aparecerá en la lista como hijo del Agente HTTP API. Puede cambiar su padre si lo desea.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote4.png" alt="pir" width={800} height="auto" /></p>
+
 
 ### Agregar los Enlaces del Agente
 
@@ -193,7 +202,11 @@ Vaya al **Modo Modificar** haciendo clic en el interruptor en la parte superior 
   - **Value filters:** `JsonPathFilter-2`
   - **Path (JSON):** `$.main.humidity`
 
-### Configurar el Atributo de Temperatura
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote5.png" alt="pir" width={800} height="auto" /></p>
+
+### Configurar el Atributo de Temperatura:
+
 
 - Expanda el atributo **temperature**.
 - Haga clic en **Add configuration item** y seleccione **Agent link**.
