@@ -15,26 +15,22 @@ last_update:
 
 Grove - Red LED is similar to the Grove - LED module which houses an LED light source. In addition, it also has a potentiometer on-board to manage the power requirements of the LED. The PCB of this module has mounting holes which can be mounted on the required surface of your prototype. For example, it can be used as a pilot lamp for indicating power or signal presence.
 
-
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-Red-LED-p-1142.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p> -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)
 
-
 ## Version
-
 
 | Product Version              | Changes                                                                                                                                                                                    | Released Date |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | Grove-LED_v1.3 | Initial                                                                                                                                                                                    | Mar 15 2016      |
 
-##  Features
+## Features
 
-*   Provide an LED light indication for your project
-*   Support different color LEDs, the LED is pluged into the LED holder rather than soldered on the board
-*   Support brightness control and higher range of input voltages with On-board potentiometer adjustment
+- Provide an LED light indication for your project
+- Support different color LEDs, the LED is pluged into the LED holder rather than soldered on the board
+- Support brightness control and higher range of input voltages with On-board potentiometer adjustment
 
 ## Platforms Supported
-
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -42,11 +38,12 @@ Grove - Red LED is similar to the Grove - LED module which houses an LED light s
 |Arduino|Raspberry Pi|
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" alt="pir" width={200} height="auto" /></p>|
+
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
-##  Getting Started
 
+## Getting Started
 
 ### Play With Arduino
 
@@ -67,8 +64,9 @@ Grove - Red LED is similar to the Grove - LED module which houses an LED light s
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Red_LED/img/seeedstudio_red_led.jpg" alt="pir" width={600} height="auto" /></p>
 
 :::note
-	If we don't have Grove Base Shield, We also can directly connect Grove-Red_Led to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connect Grove-Red_Led to Seeeduino as below.
 :::
+
 | Seeeduino       | Grove-Red Led |
 |---------------|-------------------------|
 | 5V           | Red                     |
@@ -124,6 +122,7 @@ Upload the program to your Arduino/Seeeduino.
 :::success
     When the code finishes uploaded, you will see the LED blinking.
 :::
+
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
 #### Hardware
@@ -150,8 +149,9 @@ Upload the program to your Arduino/Seeeduino.
 :::note
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
+
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library. 
+- **Step 2**. Download the source file by cloning the grove.py library.
 
 ```
 cd ~
@@ -165,7 +165,9 @@ git clone https://github.com/Seeed-Studio/grove.py
 cd yourpath/grove.py/grove
 python3 grove_led.py 12
 ```
+
 If you connect the Red LED to the different port of the Base Hat, instead of excuting **python grove_led.py 12**, you should run the following command.
+
 ```
 python3 grove_led.py portnumber
 ```
@@ -213,9 +215,10 @@ if __name__ == '__main__':
 
 
 ```
+
 :::success
     If everything goes well, you will be able to see the led on and off.
-:::   
+:::
 :::note
     For most of the grove modules, you need to add the pin number parameter, as in this example  `python3 grove_led.py 12`, **12** is the chosen GPIO pin and the output from pin 12 will feed the led.  
 :::
@@ -240,9 +243,10 @@ if __name__ == '__main__':
 
 #### Software
 
-:::note 
+:::note
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
+
 - **Step 1**. Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
 - **Step 2**. Git clone the Github repository.
 
@@ -251,6 +255,7 @@ cd ~
 git clone https://github.com/DexterInd/GrovePi.git
 
 ```
+
 - **Step 3**. Excute below commands.
 
 ```
@@ -278,18 +283,18 @@ print ("Connect the LED to the port labele D4!" )
 while True:
     try:
         #Blink the LED
-        digitalWrite(led,1)		# Send HIGH to switch on LED
+        digitalWrite(led,1)  # Send HIGH to switch on LED
         print ("LED ON!")
         time.sleep(1)
 
-        digitalWrite(led,0)		# Send LOW to switch off LED
+        digitalWrite(led,0)  # Send LOW to switch off LED
         print ("LED OFF!")
         time.sleep(1)
 
-    except KeyboardInterrupt:	# Turn LED off before stopping
+    except KeyboardInterrupt: # Turn LED off before stopping
         digitalWrite(led,0)
         break
-    except IOError:				# Print "Error" if communication error encountered
+    except IOError:    # Print "Error" if communication error encountered
         print ("Error")
         
 ```
@@ -309,11 +314,10 @@ LED ON!
 LED OFF!
 ```
 
+## Resources
 
-##  Resources
-
-* **[PDF]** [Grove-Red LED Schematic](https://files.seeedstudio.com/wiki/Grove-Red_LED/res/Grove-LED_v1.3.pdf)
-* **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove-Red_LED/res/Grove_Red_LED_CDC_File.zip)
+- **[PDF]** [Grove-Red LED Schematic](https://files.seeedstudio.com/wiki/Grove-Red_LED/res/Grove-LED_v1.3.pdf)
+- **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove-Red_LED/res/Grove_Red_LED_CDC_File.zip)
 
 ## Projects
 
@@ -322,23 +326,21 @@ LED OFF!
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/user50338573/using-grove-button-to-control-grove-led-96d00b/embed' width='350'></iframe>
 
 **Button and LED Grove modules**:
- 
+
 <iframe width={560} height={315} src="https://www.youtube.com/embed/RCtsxwx4OaA" frameBorder={0} allow="autoplay; encrypted-media" allowFullScreen />
 
-
 <iframe width={560} height={315} src="https://www.youtube.com/embed/78lVn_-oYaY" frameBorder={0} allow="autoplay; encrypted-media" allowFullScreen />
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -94,7 +94,7 @@ Please becareful when you press the reset button to prevent the USB device false
 If it fails, it may show **握手超时**, which means handshake timeout, please repeat step 5 several times, it will be OK then.
 :::
 
-:::tipsuccess
+:::tip
 If everything goes well, you will see the following picture, which means you have successfully burned the firmware into the Air602 development board. Enjoy :D
 :::
 

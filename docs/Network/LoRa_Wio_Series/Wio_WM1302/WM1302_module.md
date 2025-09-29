@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.webp
 slug: /WM1302_module
 last_update:
-  date: 02/17/2025
-  author: Leo Liu
+  date: 4/24/2025
+  author: Leo
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.jpeg) -->
@@ -20,7 +20,11 @@ last_update:
 The LoRa® Mark is a trademark of Semtech Corporation or its subsidiaries.
 
 :::note
-        We has recently released the Wio-E5 Series based on Wio-E5 module. Click [here](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3) to meet new members of the LoRa-E5 family from the [Wio-E5 Module](https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module/) [Grove module](https://wiki.seeedstudio.com/Grove_LoRa_E5_New_Version/), [mini Dev boards](https://wiki.seeedstudio.com/LoRa_E5_mini/) to [Development Kit](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/). To learn more on creating a LoRaWAN® End Node with STM32Cube MCU Package for STM32WL series(SDK), to join and to send data to LoRaWAN® Network, read more on wiki pages for [mini Dev boards](https://wiki.seeedstudio.com/LoRa_E5_mini/) and [Development Kit](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/).
+We has recently released the Wio-E5 Series based on Wio-E5 module.
+
+Click [here](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3) to meet new members of the LoRa-E5 family from the [Wio-E5 Module](https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module/) [Grove module](https://wiki.seeedstudio.com/Grove_LoRa_E5_New_Version/), [mini Dev boards](https://wiki.seeedstudio.com/LoRa_E5_mini/) to [Development Kit](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/).
+
+To learn more on creating a LoRaWAN® End Node with STM32Cube MCU Package for STM32WL series(SDK), to join and to send data to LoRaWAN® Network, read more on wiki pages for [mini Dev boards](https://wiki.seeedstudio.com/LoRa_E5_mini/) and [Development Kit](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/).
 :::
 
 WM1302 module is a new generation of LoRaWAN® gateway module with mini-PCIe form-factor. Based on the Semtech® SX1302 baseband LoRaWAN® chip, WM1302 unlocks the greater potential capacity of long-range wireless transmission for gateway products. It features higher sensitivity, less power consumption, and lower operating temperature than the previous SX1301 and SX1308 LoRa® chip.
@@ -178,7 +182,7 @@ WM1302 module communicates with Raspberry Pi with SPI and I2C. But these two int
 
 First, login in Raspberry Pi via SSH or using a monitor(don't use serial console as the GPS module on the Pi Hat takes over the Pi's hardware UART pins), then type `sudo raspi-config` in command line to open Rasberry Pi Software Configuration Tool:
 
-```
+```shell
 sudo raspi-config
 ```
 
@@ -199,7 +203,7 @@ sudo raspi-config
 
 Now let's install `git` and download `sx1302_hal`(library and programs for SX1302 LoRa Gateway) from github:
 
-```
+```shell
 sudo apt update
 sudo apt install -y git
 cd ~
@@ -208,7 +212,7 @@ git clone https://github.com/Lora-net/sx1302_hal
 
 Move to `sx1302_hal` folder and compile everything:
 
-```
+```shell
 cd ~/sx1302_hal
 make
 ```
@@ -216,9 +220,35 @@ make
 #### Step4. Run Semtech SX1302 packet forwarder
 
 :::caution Note
-In the new Linux kernel, the **sysfs interface** has been replaced by the **chardev interface**. This causes the reset_lgw.sh provided in the sx_1302 repository to not reset the module properly.
+In the new Linux kernel, the **sysfs interface** has been replaced by the **chardev interface**.
 
-To determine if the system you are running on still has the sysfs interface, you can run the following command:
+This causes the reset_lgw.sh provided in the sx_1302 repository to not reset the module properly and output the following logs:
+
+```shell
+...
+./reset_lgw.sh: 26: echo: echo: I/O error
+./reset_lgw.sh: 27: echo: echo: I/O error
+./reset_lgw.sh: 28: echo: echo: I/O error
+./reset_lgw.sh: 29: echo: echo: I/O error
+./reset_lgw.sh: 32: cannot create /sys/class/gpio/gpio17/direction: Directory nonexistent
+./reset_lgw.sh: 33: cannot create /sys/class/gpio/gpio5/direction: Directory nonexistent
+./reset_lgw.sh: 34: cannot create /sys/class/gpio/gpio18/direction: Directory nonexistent
+./reset_lgw.sh: 35: cannot create /sys/class/gpio/gpio13/direction: Directory nonexistent
+CoreCell reset through GPIO17...
+SX1261 reset through GPIO17...
+CoreCell power enable through GPIO18...
+CoreCell ADC reset through GPIO13...
+./reset_lgw.sh: 45: cannot create /sys/class/gpio/gpio18/value: Directory nonexistent
+./reset_lgw.sh: 47: cannot create /sys/class/gpio/gpio17/value: Directory nonexistent
+./reset_lgw.sh: 48: cannot create /sys/class/gpio/gpio17/value: Directory nonexistent
+./reset_lgw.sh: 50: cannot create /sys/class/gpio/gpio5/value: Directory nonexistent
+./reset_lgw.sh: 51: cannot create /sys/class/gpio/gpio5/value: Directory nonexistent
+./reset_lgw.sh: 53: cannot create /sys/class/gpio/gpio13/value: Directory nonexistent
+./reset_lgw.sh: 54: cannot create /sys/class/gpio/gpio13/value: Directory nonexistent
+...
+```
+
+To determine if the system you are running on still has the **sysfs interface**, you can run the following command:
 
 ```shell
 ls /sys/class/gpio
@@ -228,17 +258,17 @@ ls /sys/class/gpio
 
 **For Linux with sysfs interface:**
 
-If a series of `gpiox` folders appear in it, it means that your system kernel still has the sysfs interface, and you can use the script above to reset the module.
+If a series of `gpiox` folders appear in it, it means that your system kernel still has the **sysfs interface**, and you can use the script above to reset the module.
 
 Modify `reset pin` for SX1302 and SX1261 in `reset_lgw.sh` script, with text editor `nano`:
 
-```
+```shell
 nano tools/reset_lgw.sh
 ```
 
 The following code is shown at the head of text editor:
 
-```
+```shell
 # GPIO mapping has to be adapted with HW
 #
 
@@ -250,13 +280,13 @@ AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 
 Use the navigation keys to move the cursor, change `SX1302_RESET_PIN=23` to `SX1302_RESET_PIN=17` and `SX1261_RESET_PIN=22` to `SX1261_RESET_PIN=5`, as following:
 
-```
+```shell
 # GPIO mapping has to be adapted with HW
 #
 
 SX1302_RESET_PIN=17     # SX1302 reset
 SX1302_POWER_EN_PIN=18  # SX1302 power enable
-SX1261_RESET_PIN=5     # SX1261 reset (LBT / Spectral Scan)
+SX1261_RESET_PIN=5      # SX1261 reset (LBT / Spectral Scan)
 AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 ```
 
@@ -316,7 +346,7 @@ exit 0
 
 Copy `reset_lgw.sh` to `packet_forwarder` folder, then run `lora_pkt_fwd`. Please note that you should select a `global_conf.json.sx1250.xxxx` config file based on the module you are using:
 
-```
+```shell
 cp tools/reset_lgw.sh packet_forwarder/
 cd packet_forwarder
 
@@ -348,7 +378,7 @@ To achieve this target, developers must add the Raspberry Pi Gateway to Lora Ser
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/114992549/WM1302_Wiki4.png" alt="pir" width={600} height="auto" /></p>
 After adding gateway, back to the Raspberry Pi, press `CTRL + c` to stop `lora_pkt_fwd`, then edit the `global_conf.json.sx1250.xxxx` config file you used just now, with text editor `nano`:
 
-```
+```shell
 # Please select one of the following comands based on your module
 # for WM1302 LoRaWAN Gateway Module (SPI) - EU868
 nano global_conf.json.sx1250.EU868
@@ -365,7 +395,7 @@ nano global_conf.json.sx1250.US915.USB
 
 Basically, you need to modify these parameters: `"gateway_ID" "server_address" "serv_port_up" "serv_port_down"`, which can be found at the tail of the config file. Copy `Gateway Server address` to `"server_address"`, change `"serv_port_up"` and `"serv_port_down"` to `1700`, these parameters should be edited like this:
 
-```
+```json
 "gateway_conf": {
     "gateway_ID": "AA555A0000000000",
     /* change with default server address/ports */
@@ -378,7 +408,7 @@ Save these changes by pressing `CTRL + x`, and then `y`, finally pressing `Enter
 
 Restart `lora_pkt_fwd`, you will find your Raspberry Pi Gateway are conntected to TTNv3.
 
-```
+```shell
 # Please select one of the following comands based on your module
 # for WM1302 LoRaWAN Gateway Module (SPI) - EU868
 ./lora_pkt_fwd -c global_conf.json.sx1250.EU868

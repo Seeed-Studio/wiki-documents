@@ -42,7 +42,7 @@ last_update:
 
 <div class="embedded_world_container">
     <a class="embedded_world_item" style={{textAlign: 'center'}} href="/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack">
-            <div class="embedded_world_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Jetson AGX Orin Developer Kit</font></div>
+            <div class="embedded_world_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Jetson AGX Orin Developer Kit</font></div>
             <div class="embedded_world_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Smallest and most powerful AI edge computer, 275 TOPS AI Performance </font></div>
     </a>
 </div>

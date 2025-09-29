@@ -14,19 +14,22 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/Google_Cloud_IoT/thumb.png)
 
-## Introduction 
+## Introduction
+
 In this tutorial, we will walk you through the process of connecting the Wio Terminal to Google Cloud IoT Core and send telemetry data from the Wio Terminal to the Google Cloud IoT core. This will be divided into two sections where the first section will talk about how to use the exciting libraries to send telemetry data preconfigured in the code, whereas the second section will talk about how to add your own sensors to the Wio Terminal to send the telemetry data to Google Cloud IoT Core. Google Cloud IoT Core supports both HTTP and MQTT protocols for communication, but however we will be using the MQTT protocol in this tutorial.
 
-
 ### What is Google Cloud?
+
 [Google Cloud](https://cloud.google.com/) consists of a set of physical assets, such as computers and hard disk drives, and virtual resources, such as virtual machines (VMs), that are contained in Google's data centers around the globe. This distribution of resources provides several benefits, including redundancy in case of failure and reduced latency by locating resources closer to clients.
 
 In cloud computing, what you might be used to thinking of as software and hardware products, become services. These services provide access to the underlying resources. The [list of available Google Cloud services](https://cloud.google.com/products) is long, and it keeps growing. When you develop your website or application on Google Cloud, you mix and match these services into combinations that provide the infrastructure you need, and then add your code to enable the scenarios you want to build.
 
 ### What is Google Cloud Platform?
+
 [Google Cloud Platform (GCP)](https://console.cloud.google.com/) is a collection of cloud computing services. With a set of management tools, it provides a series of modular cloud services including computing, data storage, data analytics and machine learning. It provides infrastructure as a service, platform as a service, and serverless computing environments.
 
 ### What is Google Cloud IoT Core?
+
 [Google Cloud Internet of Things (IoT) Core](https://cloud.google.com/iot/docs) is a fully managed service for securely connecting and managing IoT devices, from a few to millions. Ingest data from connected devices and build rich applications that integrate with the other big data services of Google Cloud Platform.
 
 ### What is Google Cloud Console?
@@ -39,7 +42,7 @@ As explained before, we will be using the availble MQTT bridge for the communica
 
 ![](https://files.seeedstudio.com/wiki/Google_Cloud_IoT/5555555.png)
 
-### Google Cloud Console Set Up 
+### Google Cloud Console Set Up
 
 First we need to visit the Google Cloud Console, create a Cloud IoT Core device registry and register a device.
 
@@ -53,18 +56,17 @@ First we need to visit the Google Cloud Console, create a Cloud IoT Core device 
 
 - **STEP 3:** Click **NEW PROJECT** and enter a **project name**
 
-- **STEP 4:** Click **CREATE** 
+- **STEP 4:** Click **CREATE**
 
 - **STEP 5:** Enable billing for your Cloud project. This is required to make sure you are not a robot and you will not be charged. Choose "Billing" under the navigation menu and go through the set up.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/1111111.png" alt="pir" width={500} height="auto" /></p>
 
-
 - **STEP 6:** Visit [here](https://console.cloud.google.com/flows/enableapi?apiid=cloudiot.googleapis.com%2Cpubsub&authuser=3&_ga=2.254170561.853675115.1607885458-878786893.1606048800) to enable the Cloud IoT Core and Cloud Pub/Sub APIs
 
 **Note:** Choose the project that you created before from the drop-down menu
 
-#### Create a Device Registry 
+#### Create a Device Registry
 
 - **STEP 1:** Visit [Google Cloud IoT Core page](https://console.cloud.google.com/iot/registries) in Cloud Console
 
@@ -96,7 +98,7 @@ Now we have created a device registry with a Cloud Pub/Sub topic for publishing 
 
 Cloud IoT Core uses public key (or asymmetric) authentication
 
-- The device uses a private key to sign a [JSON Web Token (JWT)](https://cloud.google.com/iot/docs/how-tos/credentials/jwts). The token is passed to Cloud IoT Core as proof of the device's identity. 
+- The device uses a private key to sign a [JSON Web Token (JWT)](https://cloud.google.com/iot/docs/how-tos/credentials/jwts). The token is passed to Cloud IoT Core as proof of the device's identity.
 - The service uses the device public key (uploaded before the JWT is sent) to verify the device's identity.
 
 Cloud IoT Core supports the RSA and Elliptic Curve algorithms, and we will be using Elliptic Curve keys in this tutorial.
@@ -117,11 +119,11 @@ The above commands create the following public/private key pair:
 - **ec_private.pem**: The private key that must be securely stored on the device and used to sign the authentication JWT.
 - **ec_public.pem**: The public key that must be stored in Cloud IoT Core and used to verify the signature of the authentication JWT.
 
-#### Extract the Private Key 
+#### Extract the Private Key
 
 We need to extract the private key bytes and copy them into  the private key string in the Arduino project that we will create later in this tutorial. Save these keys for now to use later.
 
-- **STEP 1:** Open a terminal window and navigate to the folder containing the Elliptic Curve key pair that we generated before. 
+- **STEP 1:** Open a terminal window and navigate to the folder containing the Elliptic Curve key pair that we generated before.
 
 - **STEP 2:** Type the following command
 
@@ -155,7 +157,7 @@ openssl ec -in ec_private.pem -noout -text
 
 You have now added a device to your registry. The ES256 key appears on the Device details page for your device.
 
-#### Set up a Subscriber 
+#### Set up a Subscriber
 
 Now that we have created a device registry, created a topic and added a device to that registry, let's move on to creating a subscriber to subcribe to the topic we have created, in order to grab the telemetry data from the Wio Terminal.
 
@@ -165,7 +167,7 @@ Now that we have created a device registry, created a topic and added a device t
 
 - **STEP 2:** Click **Subscriptions** on the navigation menu
 
-- **STEP 3:** Click **CREATE SUBSCRIPTION** 
+- **STEP 3:** Click **CREATE SUBSCRIPTION**
 
 - **STEP 4:** Enter a **Subscription ID** of your choice
 
@@ -173,15 +175,16 @@ Now that we have created a device registry, created a topic and added a device t
 
 - **STEP 6:** Select **Pull** as the Delivery type
 
-- **STEP 7:** Click **Create** 
+- **STEP 7:** Click **Create**
 
 Now we have finished setting up the Google Cloud IoT Core. Next, we will move on to setting up the Wio Terminal along with the Arduino IDE.
 
-### Arduino Set Up with Wio Terminal 
+### Arduino Set Up with Wio Terminal
 
-#### Needed Libraries 
+#### Needed Libraries
 
-We need two libraries for this tutorial. 
+We need two libraries for this tutorial.
+
 1. lwMQTT MQTT Arduino Library
 2. Google Cloud IoT Arduino Library
 
@@ -447,12 +450,9 @@ Now we have finished setting up Arduino IDE. Finally you need to Upload this cod
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/4444444.png" alt="pir" width={700} height="auto" /></p>
 
-
-
 ### Display Telemetry Data
 
 Now we need to display the incoming telemetry data from the Wio Terminal. Here in this example code, the Wi-Fi signal strength will be sent as telemetry data.
-
 
 - **STEP 1:** Visit **Pub/Sub** in Google Cloud Console
 
@@ -468,8 +468,6 @@ Now we need to display the incoming telemetry data from the Wio Terminal. Here i
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/6666666.png" alt="pir" width={950} height="auto" /></p>
 
-
-
 ### How to Add Other Sensors?
 
 You can add any sensor to the Wio Terminal and send telemetry data to Google Cloud IoT Core. For simplicity, we will use the built-in light sensor on the Wio Terminal to send light intensity levels to Google Cloud IoT Core.
@@ -480,7 +478,7 @@ You can add any sensor to the Wio Terminal and send telemetry data to Google Clo
 
 **Note:** You can search **IoT Core** in the search bar within Google Cloud Console
 
-- **STEP 2:** Select the registry that we created before 
+- **STEP 2:** Select the registry that we created before
 
 - **STEP 3:** Under Cloud **Pub/Sub topics** select **Add or edit topics**
 
@@ -498,8 +496,6 @@ You can add any sensor to the Wio Terminal and send telemetry data to Google Clo
 
 - **STEP 9:** Create a **new subscription** as explained before
 
-
-
 #### Arduino Set Up
 
 Navigate to **Esp32-lwmqtt.ino** and add the following
@@ -512,7 +508,7 @@ void loop() {
   light = map(light,0,1023,0,100); //Map sensor values  
 ```
 
-- **STEP 2:**  Add the topic with the Subfolder name 
+- **STEP 2:**  Add the topic with the Subfolder name
 
 ```cpp
     publishTelemetry(getDefaultSensor());
@@ -524,7 +520,6 @@ void loop() {
 After you upload the code to the Wio Terminal, pull from the newly created topic as a subscriber and you will see the following result.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/222222.png" alt="pir" width={950} height="auto" /></p>
-
 
 ### How to Add Other Sensors And Visualize Data on Dashboards?
 
@@ -540,7 +535,7 @@ Basically, we will connect a temperature/ humidity sensor to the Wio Terminal, u
 
 Connect the Grove - Temperature and Humudity Sensor (DHT11) to the Grove - Digital/Analog Port (D0) of the Wio Terminal.
 
-#### Software Set Up for Arduino 
+#### Software Set Up for Arduino
 
 - **STEP 1:** Visit the [Grove - Temperature and Humidity Sensor repo](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor) and download it as a zip file
 
@@ -576,22 +571,22 @@ String payload = String("{\"timestamp\":") + getNTPtime() +
                   String("}");
 publishTelemetry(payload); 
 ```
+
 **Note:** Here we parse all the data as a string into influxDB. Parsing the **time** is important because influxDB is a time series database. Also the **pushTelemetry** function will send the data to the default topic we have created at the very beginning of this tutorial.
 
 - **STEP 4:** Upload the code to the Wio Terminal
 
 #### Google Cloud IoT Set Up
 
-- **STEP 1:** Visit [this](https://github.com/lakshanthad/esp32-cloud-iot-core-k8s) repo and download it as a zip file 
+- **STEP 1:** Visit [this](https://github.com/lakshanthad/esp32-cloud-iot-core-k8s) repo and download it as a zip file
 
-- **STEP 2:** Extract the downloaded zip file 
+- **STEP 2:** Extract the downloaded zip file
 
 - **STEP 3:** Open Google Cloud Console and navigate to [Google Kubernetes Engine](https://console.cloud.google.com/kubernetes/list) and wait for the system to initialize
 
-- **STEP 4:** Start the Cloud shell by pressing the button on the top right corner 
+- **STEP 4:** Start the Cloud shell by pressing the button on the top right corner
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/cloud_shell_1.png" alt="pir" width={700} height="auto" /></p>
-
 
 - **STEP 5:** Type the following commands to set defaults for the gcloud command-line tool
 
@@ -638,6 +633,7 @@ cd esp32-cloud-iot-core-k8s-master/05-influxdb_grafana_k8s
 ```sh
 kubectl create -f k8s/
 ```
+
 #### Grafana Setup
 
 - **STEP 1:** Type the following to check the services external IPs / ports
@@ -700,7 +696,7 @@ cd esp32-cloud-iot-core-k8s-master/06-cloud_function
 
 - **STEP 6:** modify **InfluxDB variables** (host, port, username, password) in the **_get_influxdb_client function**
 
-**Note:** Obtain the InfluxDB host by typing the following on Cloud Shell and copying the external IP 
+**Note:** Obtain the InfluxDB host by typing the following on Cloud Shell and copying the external IP
 
 ```sh
 kubectl get services
@@ -708,7 +704,7 @@ kubectl get services
 
 - **STEP 7:** Save the file by typing **:wq**
 
-- **STEP 8:** Deploy the **Cloud Function** by typing the following 
+- **STEP 8:** Deploy the **Cloud Function** by typing the following
 
 ```sh
 export PUBSUB_TOPIC="enter_topic-name>"
@@ -752,18 +748,17 @@ You will now see the dashboard created on Grafana
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/grafana_dash_1.png" alt="pir" width={900} height="auto" /></p>
 
-
-
 ## Tech Support & Product Discussion
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

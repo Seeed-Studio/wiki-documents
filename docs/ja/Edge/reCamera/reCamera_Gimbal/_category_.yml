@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'reCamera ジンバル'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: recamera_gimbal
+link:
+  type: generated-index
+  slug: ja/recamera_gimbal
+  title: reCamera ジンバル
+  description: reCamera ジンバルのドキュメント

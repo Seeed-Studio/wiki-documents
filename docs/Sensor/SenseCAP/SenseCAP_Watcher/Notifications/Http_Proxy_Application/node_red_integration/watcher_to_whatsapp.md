@@ -49,7 +49,8 @@ node.send({ payload: msg.payload.value[0].content });
 
 node.send({ payload: msg.payload.value[0].image_url });
 ```
-## Part 2. Set up WhatsApp API 
+
+## Part 2. Set up WhatsApp API
 
 ### Step 3. Sign up for WhatsApp
 
@@ -77,9 +78,9 @@ In case you do not receive such a message and all provided phone numbers are ful
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Watcher_WhatsApp/WhatsApp_Full.png" style={{width:1000, height:'auto'}}/></div>
 :::
 
-## Part 3. Integrate WhatsApp with Node-RED 
+## Part 3. Integrate WhatsApp with Node-RED
 
-### Step 5. Install WhatsApp module 
+### Step 5. Install WhatsApp module
 
 Click the three bars icon and then click **Manage palette** option. This opens a new window where you can add or remove nodes.
 
@@ -95,7 +96,7 @@ We also recommend reviewing the [**node's documentation**](https://github.com/Pf
 The **node-red-contrib-whatsapp-cmb** module is recommended for its current compatibility and reliability at the time of writing this tutorial (July 2024). However, the availability and functionality of Node-RED modules can vary over time. It's advisable to review the most recent user feedback and compatibility notes in the Node-RED library or GitHub repositories. If you encounter issues with this module, consider exploring other WhatsApp modules listed in the Node-RED library for a more suitable option.
 :::
 
-### Step 6. Configure WhatsApp node 
+### Step 6. Configure WhatsApp node
 
 Once you installed the WhatsApp module, drag the **Send Message** node to your Node-RED flow and connect it to the function node.
 
@@ -167,11 +168,11 @@ Congratulations on successfully integrating Watcher with WhatsApp! You've opened
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

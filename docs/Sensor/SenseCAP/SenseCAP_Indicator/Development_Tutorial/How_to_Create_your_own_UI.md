@@ -20,7 +20,6 @@ last_update:
 
 We provide the demo code of the UI interface, and [lvGL example file](https://docs.lvgl.io/master/examples.html) are many sample codes for drawing UI for reference, you can modify the sample code or customize your own UI.
 
-
 ```c
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -81,18 +80,13 @@ void app_main(void)
 }
 ```
 
-
-
 ## **Squareline Studio(Optional)**
 
 [Squareline Studio](https://docs.squareline.io/docs/squareline/) is a multi-platform design tool that uses a visual interface to help designers and developers work quickly and efficiently. SquareLine Studio makes it possible by creating the perfect code for your projects. Whether you use C or Python, you can export code for both.
 
 If you need to create a more complex or advanced UI interface, it‘s recommended that you use Squareline Studio for development.
 
-
 [Squareline Studio Installation](https://docs.squareline.io/docs/introduction/install)
-
-
 
 We provide a demo project for the UI page:
 
@@ -100,8 +94,7 @@ We provide a demo project for the UI page:
 
 ### **Replace with your own UI**
 
-
-* Step 1:You can make changes in our demo project, or create a new UI page
+- Step 1:You can make changes in our demo project, or create a new UI page
 
 Open the demo project and make changes:
 
@@ -111,31 +104,21 @@ Create a new project:
 
 **Note**:The resolution of the screen is 480*480.
 
-
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/create.png"/></div>
 
-
-
-* Step 2:Export your finished page as UI files
-
+- Step 2:Export your finished page as UI files
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/export.png"/></div>
 
-
-
-* Step 3:Remove all the original UI files and copy your onw UI files to this direct.
-
+- Step 3:Remove all the original UI files and copy your onw UI files to this direct.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/ui.png"/></div>
 
-* Step 4:Build and Flash the project
+- Step 4:Build and Flash the project
 
 Run the following command to build, flash and monitor the project:
 
 `idf.py -p PORT build flash monitor`
-
-
-
 
 # **Tech Support**
 

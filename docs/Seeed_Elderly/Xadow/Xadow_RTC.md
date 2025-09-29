@@ -39,7 +39,7 @@ Note: when connect Xadow RTC to Xadow Main Board, you should concern about the c
 **Demo code as show below:**
 
 ```
-#include &lt;Wire.h&gt;
+#include <Wire.h>
 #define DS1337_CTRL_ID 0x68
 
 unsigned char  second,minute,hour;
@@ -114,9 +114,9 @@ void readTime(void)
     // request the 7 bytes of data    (secs, min, hr, dow, date. mth, yr)
     Wire.requestFrom(DS1337_CTRL_ID, 7);
     // A few of these need masks because certain bits are control bits
-    second       = bcdToDec(Wire.read() &amp; 0x7f);
+    second       = bcdToDec(Wire.read() & 0x7f);
     minute       = bcdToDec(Wire.read());
-    hour       = bcdToDec(Wire.read() &amp; 0x3f);// Need to change this if 12 hour am/pm
+    hour       = bcdToDec(Wire.read() & 0x3f);// Need to change this if 12 hour am/pm
     week  = bcdToDec(Wire.read());
     day = bcdToDec(Wire.read());
     month      = bcdToDec(Wire.read());

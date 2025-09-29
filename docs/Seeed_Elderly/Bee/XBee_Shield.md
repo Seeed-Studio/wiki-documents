@@ -82,101 +82,71 @@ A **Bee module** is connected to Arduino / Seeeduino via the XBee Shield. In cas
 ![](https://files.seeedstudio.com/wiki/XBee-Shield/img/XBee_Shield_Outline.jpg)
 
 <table>
-<caption> Arduino
-</caption>
+<caption>Arduino</caption>
 <tr>
-<th> TOG_1
-</th>
-<th> TOG_2
-</th>
-<th> Xbee Tx Connected to
-</th>
-<th> Xbee Rx Connected to
-</th></tr>
+<th>TOG_1</th>
+<th>TOG_2</th>
+<th>Xbee Tx Connected to</th>
+<th>Xbee Rx Connected to</th>
+</tr>
 <tr>
-<td width="200"> Left
-</td>
-<td width="200"> Left
-</td>
-<td width="300"> Digital pin 11
-</td>
-<td width="300"> Digital pin 12
-</td></tr>
+<td width="200">Left</td>
+<td width="200">Left</td>
+<td width="300">Digital pin 11</td>
+<td width="300">Digital pin 12</td>
+</tr>
 <tr>
-<td> Left
-</td>
-<td> Right
-</td>
-<td> FT232 RxD
-</td>
-<td> FT232 TxD
-</td></tr>
+<td>Left</td>
+<td>Right</td>
+<td>FT232 RxD</td>
+<td>FT232 TxD</td>
+</tr>
 <tr>
-<td> Right
-</td>
-<td> Left
-</td>
-<td> Digital pin 11
-</td>
-<td> Digital pin 12
-</td></tr>
+<td>Right</td>
+<td>Left</td>
+<td>Digital pin 11</td>
+<td>Digital pin 12</td>
+</tr>
 <tr>
-<td> Right
-</td>
-<td> Right
-</td>
-<td> Atmege RxD
-</td>
-<td> Atmege TxD
-</td></tr></table>
+<td>Right</td>
+<td>Right</td>
+<td>Atmege RxD</td>
+<td>Atmege TxD</td>
+</tr>
+</table>
 <table>
-<caption> Arduino Mega
-</caption>
+<caption>Arduino Mega</caption>
 <tr>
-<th> TOG_1
-</th>
-<th> TOG_2
-</th>
-<th> Xbee Tx Connected to
-</th>
-<th> Xbee Rx Connected to
-</th></tr>
+<th>TOG_1</th>
+<th>TOG_2</th>
+<th>Xbee Tx Connected to</th>
+<th>Xbee Rx Connected to</th>
+</tr>
 <tr>
-<td width="200"> Left
-</td>
-<td width="200"> Left
-</td>
-<td width="300"> Digital pin 51
-</td>
-<td width="300"> Digital pin 50
-</td></tr>
+<td width="200">Left</td>
+<td width="200">Left</td>
+<td width="300">Digital pin 51</td>
+<td width="300">Digital pin 50</td>
+</tr>
 <tr>
-<td> Left
-</td>
-<td> Right
-</td>
-<td> FT232 RxD
-</td>
-<td> FT232 TxD
-</td></tr>
+<td>Left</td>
+<td>Right</td>
+<td>FT232 RxD</td>
+<td>FT232 TxD</td>
+</tr>
 <tr>
-<td> Right
-</td>
-<td> Left
-</td>
-<td> Digital pin 51
-</td>
-<td> Digital pin 50
-</td></tr>
+<td>Right</td>
+<td>Left</td>
+<td>Digital pin 51</td>
+<td>Digital pin 50</td>
+</tr>
 <tr>
-<td> Right
-</td>
-<td> Right
-</td>
-<td> Atmege RxD0
-</td>
-<td> Atmege TxD0
-</td></tr></table>
+<td>Right</td>
+<td>Right</td>
+<td>Atmege RxD0</td>
+<td>Atmege TxD0</td>
+</tr>
+</table>
 
 ### Testing AT commands on Bees  
 
@@ -189,7 +159,7 @@ Create a new sketch with the following code and download it into your Arduino bo
 //Computer is connected to Hardware UART
 //Bee Shield is connected to the Software UART
 
-#include &lt;NewSoftSerial.h&gt;
+#include <NewSoftSerial.h>
 #define RxD 11
 #define TxD 12
 
@@ -217,7 +187,7 @@ void loop()
 }
 ```
 
- After this fire up your favorite serial terminal software, choose the COM port for Arduino, set it to operate at default baud rate of your Bee (XBee default is 9600 8-N-1), connect and send the commands. Try sending "+++" (without the quotes) for XBee module, to the Arduino board. The XBee should respond by sending back an "OK".
+ After this fire up your favorite serial terminal software, choose the COM port for Arduino, set it to operate at default baud rate of your Bee (XBee default is 9600 8-N-1), connect and send the commands. Try sending "+++" (without the quotes) for XBee module, to the Arduino board. The XBee should respond by sending back an "OK".
 
 ### Send AT Updated Version for V 1.0  
 
@@ -227,7 +197,7 @@ The code above may have worked on earlier versions but the SoftwareSerial librar
 /*
 Example from Arduino SoftwareSerial tutorial
  */
-#include &lt;SoftwareSerial.h&gt;
+#include <SoftwareSerial.h>
 
 SoftwareSerial mySerial(11, 12); // RX, TX
 
@@ -371,20 +341,19 @@ If you have questions or other better design ideas, you can go to our [forum](ht
 ## Version Tracker  
 
 <table>
-  <tbody><tr>
-      <th> Revision
-      </th>
-      <th> Descriptions
-      </th>
-      <th> Release Date
-      </th></tr>
-    <tr style={{fontSize: '90%'}}>
-      <td width={300}> XBee® Shield V1.1
-      </td>
-      <td width={500}> new version by Seeedstudio
-      </td>
-      <td width={200}> Jul 06, 2009
-      </td></tr></tbody></table>
+<tbody>
+<tr>
+<th>Revision</th>
+<th>Descriptions</th>
+<th>Release Date</th>
+</tr>
+<tr style={{fontSize: '90%'}}>
+<td width={300}>XBee® Shield V1.1</td>
+<td width={500}>new version by Seeedstudio</td>
+<td width={200}>Jul 06, 2009</td>
+</tr>
+</tbody>
+</table>
 
 ## Bug Tracker  
 

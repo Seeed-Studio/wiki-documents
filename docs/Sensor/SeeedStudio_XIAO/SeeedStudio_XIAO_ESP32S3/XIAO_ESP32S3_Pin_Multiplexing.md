@@ -17,26 +17,26 @@ last_update:
 # Pin Multiplexing with Seeed Studio XIAO ESP32S3 (Sense)
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO ESP32S3</th>
-	    <th>Seeed Studio XIAO ESP32S3 Sense</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+     <th>Seeed Studio XIAO ESP32S3</th>
+     <th>Seeed Studio XIAO ESP32S3 Sense</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 The Seeed Studio XIAO ESP32S3 is a powerful and versatile development board that features a variety of peripheral interfaces and GPIO pins. These pins can be used for various purposes, such as communicating with other devices, reading analog sensors, controlling LEDs, and more. In this tutorial, we will explore the pinout of the XIAO ESP32S3 and its related board, the XIAO ESP32S3 Sense, and learn how to use these pins for different purposes. Specifically, we will cover the usage of 1x UART, 1x lIC, 1x lIS, 1x SPI, 11x GPIOs (PWM), 9xADC, 1x User LED, 1x Charge LED, 1x Reset button, 1x Boot button, and, for the XIAO ESP32S3 Sense, 1x B2B Connector (with 2 additional GPIOs). By the end of this tutorial, you will have a good understanding of the pinout of the XIAO ESP32S3 and be able to use it effectively in your projects.
@@ -48,32 +48,131 @@ The Seeed Studio XIAO ESP32S3 is a powerful and versatile development board that
 Before we begin, let's review all the pins that the XIAO ESP32S3 has and its functions with the following schematic.
 
 <table align="center">
-	<tr>
-	    <th>XIAO ESP32S3/XIAO ESP32S3 Sense front indication diagram</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/front-indication.png" style={{width:700, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+     <th>XIAO ESP32S3/XIAO ESP32S3 Sense front indication diagram</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/front-indication.png" style={{width:700, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-	    <th>XIAO ESP32S3/XIAO ESP32S3 Sense back indication diagram</th>
-	</tr>
+     <th>XIAO ESP32S3/XIAO ESP32S3 Sense back indication diagram</th>
+ </tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/back-indication.png" style={{width:700, height:'auto'}}/></div></td>
-	</tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/back-indication.png" style={{width:700, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-	    <th>XIAO ESP32S3/XIAO ESP32S3 Sense Pin List</th>
-	</tr>
+     <th>XIAO ESP32S3/XIAO ESP32S3 Sense Pin List</th>
+ </tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg" style={{width:1000, height:'auto'}}/></div></td>
-	</tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg" style={{width:1000, height:'auto'}}/></div></td>
+ </tr>
 </table>
-
 
 - 5V - This is 5v out from the USB port. You can also use this as a voltage input but you must have some sort of diode (schottky, signal, power) between your external power source and this pin with anode to battery, cathode to 5V pin.
 
 - 3V3 - This is the regulated output from the onboard regulator. You can draw 700mA
 
 - GND - Power/data/signal ground
+
+Below is an overview of the functional pins for the XIAO ESP32S3.
+
+<div class="table-center">
+ <table align="center">
+  <tr>
+   <th>Pin Number</th>
+   <th>Function Description</th>
+  </tr>
+    <tr>
+   <th colspan="2">-- PDM Microphone Pins --</th>
+  </tr>
+  <tr>
+   <td align="center">GPIO 41</td>
+   <td align="center">PDM Microphone DATA</td>
+  </tr>
+  <tr>
+   <td align="center">GPIO 42</td>
+   <td align="center">PDM Microphone CLK</td>
+  </tr>
+    <tr>
+   <th colspan="2">-- MicrSD Card SPI Pins --</th>
+  </tr>
+  <tr>
+   <td align="center">GPIO 21</td>
+   <td align="center">MicroSD SPI CS</td>
+  </tr>
+  <tr>
+   <td align="center">D8 / A8 / Qt7 / GPIO7</td>
+   <td align="center">MicroSD SPI SCK</td>
+  </tr>
+  <tr>
+   <td align="center">D9 / A9 / Qt8 / GPIO8</td>
+   <td align="center">MicroSD SPI MISO</td>
+  </tr>
+  <tr>
+   <td align="center">D10 / A10 / Qt9 / GPIO9</td>
+   <td align="center">MicroSD SPI MOSI</td>
+  </tr>
+    <tr>
+   <th colspan="2">-- Camera Pins --</th>
+  </tr>
+    <tr>
+   <td align="center">GPIO 10</td>
+   <td align="center">XMCLK</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 11</td>
+   <td align="center">DVP_Y8</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 12</td>
+   <td align="center">DVP_Y7</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 13</td>
+   <td align="center">DVP_PCLK</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 14</td>
+   <td align="center">DVP_Y6</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 15</td>
+   <td align="center">DVP_Y2</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 16</td>
+   <td align="center">DVP_Y5</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 17</td>
+   <td align="center">DVP_Y3</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 18</td>
+   <td align="center">DVP_Y4</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 38</td>
+   <td align="center">DVP_VSYNC</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 39</td>
+   <td align="center">Camera SCL</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 40</td>
+   <td align="center">Camera SDA</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 47</td>
+   <td align="center">DVP_HREF</td>
+  </tr>
+    <tr>
+   <td align="center">GPIO 48</td>
+   <td align="center">DVP_Y9</td>
+  </tr>
+ </table>
+</div>
 
 ### Solder header
 
@@ -94,40 +193,40 @@ The XIAO ESP32S3 has up to 11 regular GPIO pins and 9 analog pins. In this examp
 ### Hardware Preparation
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO ESP32S3</th>
-	    <th>Seeed Studio XIAO ESP32S3 Sense</th>
+ <tr>
+     <th>Seeed Studio XIAO ESP32S3</th>
+     <th>Seeed Studio XIAO ESP32S3 Sense</th>
         <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
         <th>Grove - Relay</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:500, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:500, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Relay/img/Twig-Relay.jpg" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 Please install XIAO ESP32S3 or Sense onto the expansion board, and connect the relay to the **A0/D0** interface of the expansion board via a Grove cable. Finally, connect XIAO to the computer via a USB-C cable.
@@ -175,7 +274,7 @@ If you want to use the digital function, then you should use the letter "D" as t
 
 For XIAO ESP32S3 Sense, in addition to using the 11 digital pins on XIAO, you can also use the two pins on the expansion board, which are **D11** and **D12**. If you want to use them, please follow the steps below.
 
-#### Step 1. Cut off the connection between J1 and J2.
+#### Step 1. Cut off the connection between J1 and J2
 
 Due to the limited number of pins on the ESP32-S3, D11 and D12 on the Sense expansion board are reserved for the microphone by default. If you do need to use D11 and D12 for other purposes, you can flip over the Sense expansion board and cut the connection between J1 and J2 along the white line between the two solder pads using a sharp knife.
 
@@ -200,26 +299,26 @@ For the actual circuit schematic, please refer to the following diagram:
 #### Step 2. Hardware preparation
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO ESP32S3 Sense</th>
+ <tr>
+     <th>Seeed Studio XIAO ESP32S3 Sense</th>
         <th>Grove - Relay</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:200, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:200, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Relay/img/Twig-Relay.jpg" style={{width:200, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 #### Step 3. Software implementation
@@ -257,40 +356,40 @@ All GPIO pins on XIAO ESP32S3 support PWM output. Therefore, you can use any pin
 ### Hardware Preparation
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO ESP32S3</th>
-	    <th>Seeed Studio XIAO ESP32S3 Sense</th>
+ <tr>
+     <th>Seeed Studio XIAO ESP32S3</th>
+     <th>Seeed Studio XIAO ESP32S3 Sense</th>
         <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
         <th>Grove - Variable Color LED</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:500, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:500, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Variable_Color_LED/img/Variable_Color_LED1.jpg" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-p-852.html">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-p-852.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 Please install XIAO ESP32S3 or Sense onto the expansion board, then connect the Variable Color LED to the A0/D0 interface of the expansion board using a Grove cable. Finally, connect XIAO to your computer via USB-C cable.
@@ -337,40 +436,40 @@ On XIAO ESP32S3, among the 11 built-in GPIO pins, except for D6 and D7 pins used
 ### Hardware Preparation
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO ESP32S3</th>
-	    <th>Seeed Studio XIAO ESP32S3 Sense</th>
+ <tr>
+     <th>Seeed Studio XIAO ESP32S3</th>
+     <th>Seeed Studio XIAO ESP32S3 Sense</th>
         <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
         <th>Grove - Oxygen Sensor</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:500, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:500, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/cover.jpg" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Oxygen-Sensor-ME2-O2-f20.html">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Oxygen-Sensor-ME2-O2-f20.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 Please install XIAO ESP32S3 or Sense on the expansion board, then connect the Oxygen Sensor to the A0/D0 interface on the expansion board with the Grove cable. Finally, connect the XIAO to the computer via USB-C cable.
@@ -462,12 +561,12 @@ When working with Arduino IDE, Serial communication is an essential part of many
 
 Some of the commonly used Serial functions include:
 
-- `Serial.begin()` -- which initializes the communication at a specified baud rate; 
-- `Serial.print()` -- which sends data to the Serial port in a readable format; 
+- `Serial.begin()` -- which initializes the communication at a specified baud rate;
+- `Serial.print()` -- which sends data to the Serial port in a readable format;
 - `Serial.write()` -- which sends binary data to the Serial port;
-- `Serial.available()` -- which checks if there is any data available to be read from the Serial port; 
-- `Serial.read()` -- which reads a single byte of data from the Serial port; 
-- `Serial.flush()` -- which waits for the transmission of outgoing serial data to complete. 
+- `Serial.available()` -- which checks if there is any data available to be read from the Serial port;
+- `Serial.read()` -- which reads a single byte of data from the Serial port;
+- `Serial.flush()` -- which waits for the transmission of outgoing serial data to complete.
 
 By using these Serial functions, you can send and receive data between the Arduino board and your computer, which opens up many possibilities for creating interactive projects.
 
@@ -509,8 +608,8 @@ After uploading the program, open the Serial Monitor in Arduino IDE and set the 
 
 ### Serial1 Usage
 
-According to the above XIAO ESP32S3 Pin diagrams for specific parameters, we can observe that there are TX pin and RX pin. 
-This is different from serial communication, but the usage is also very similar, except that a few parameters need to be added. 
+According to the above XIAO ESP32S3 Pin diagrams for specific parameters, we can observe that there are TX pin and RX pin.
+This is different from serial communication, but the usage is also very similar, except that a few parameters need to be added.
 So next, we will use the pins led out by the chip for serial communication.
 
 Core Function that need to be include:
@@ -558,7 +657,7 @@ Of course, we would recommend using the second method of mapping hardware serial
 For ESP32 series chip products, if you need to use the soft serial port, you need to download the third-party soft serial port library separately. A reference is provided here.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/plerup/espsoftwareserial">
+    <a class="github_item" href="https://github.com/plerup/espsoftwareserial" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -645,7 +744,7 @@ void setup()
     MySerial0.print("MySerial0");
 
     // And configure MySerial1 on pins RX=D9, TX=D10
-    MySerial1.begin(115200, SERIAL_8N1, 9, 10);
+    MySerial1.begin(115200, SERIAL_8N1, D9, D10);
     MySerial1.print("MySerial1");
 }
 
@@ -660,39 +759,39 @@ In the following, we will take the [60GHz mmWave Sensor - Human Resting Breathin
 Please be prepared for the following.
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO ESP32S3</th>
-	    <th>Seeed Studio XIAO ESP32S3 Sense</th>
+ <tr>
+     <th>Seeed Studio XIAO ESP32S3</th>
+     <th>Seeed Studio XIAO ESP32S3 Sense</th>
         <th>60GHz mmWave Sensor -<br/>Human Resting Breathing<br/>and Heartbeat Module</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:240, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:240, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:240, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:240, height:'auto'}}/></div></td>
         <td><div align="center"><img width = {240} src="https://files.seeedstudio.com/wiki/60GHzradar/newpic.png"/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 Download the sensor library to your computer. And add it to the Arduino IDE.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/Seeed-Studio-MR60BHA1-Sensor/">
+    <a class="github_item" href="https://github.com/limengdu/Seeed-Studio-MR60BHA1-Sensor/" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
@@ -799,33 +898,33 @@ XIAO ESP32S3 has an I2C interface that can be used for data transmission and par
 ### Hardware Preparation
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO ESP32S3</th>
-	    <th>Seeed Studio XIAO ESP32S3 Sense</th>
+ <tr>
+     <th>Seeed Studio XIAO ESP32S3</th>
+     <th>Seeed Studio XIAO ESP32S3 Sense</th>
         <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:500, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 The OLED display on the XIAO expansion board uses the I2C protocol and is connected to the XIAO's I2C interface through the I2C circuit on the board. Therefore, we can directly plug the XIAO into the expansion board and program it to display content on the screen.
@@ -834,17 +933,17 @@ The OLED display on the XIAO expansion board uses the I2C protocol and is connec
 
 This example introduces how to use the OLED display on the Seeed Studio Expansion Base for XIAO ESP32S3.
 
-#### Step 1. Install the Seeed Studio XIAO ESP32S3 on the Expansion board then conect the Type-C cable.
+#### Step 1. Install the Seeed Studio XIAO ESP32S3 on the Expansion board then conect the Type-C cable
 
-#### Step 2. Install the u8g2 library.
+#### Step 2. Install the u8g2 library
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino">
+    <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
-#### Step 3. Copy the code and stick on the Ardiono IDE then upload it.
+#### Step 3. Copy the code and stick on the Ardiono IDE then upload it
 
 ```c
 #include <Arduino.h>
@@ -882,33 +981,33 @@ The ESP32-S3 chip integrates multiple peripherals, including an SPI interface th
 ### Hardware Preparation
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO ESP32S3</th>
-	    <th>Seeed Studio XIAO ESP32S3 Sense</th>
+ <tr>
+     <th>Seeed Studio XIAO ESP32S3</th>
+     <th>Seeed Studio XIAO ESP32S3 Sense</th>
       <th>Grove - OLED Display 1.12 (SH1107) V3.0 - SPI/IIC</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-OLED-Display-1.12-(SH1107)_V3.0/img/10402050_Main-02.png" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 After preparing the hardware as mentioned above, use jumper wires to connect the SPI interface of the XIAO and OLED. Please refer to the following diagram for the wiring method.
@@ -922,7 +1021,7 @@ Next, we will take the following program as an example to introduce how to use t
 Install the u8g2 library.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino">
+    <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
@@ -964,14 +1063,14 @@ If you purchased the Sense version and need to connect to the expansion board, p
 The solder pad interfaces provided on the Sense expansion board allow users to select the required functions. Among them, the function of the **J3** solder pad is to enable the SPI or SD card functionality.
 
 <table align="center">
-	<tr>
-	    <th>If you want to use the SPI Pins / Disable the SD card of the expansion board</th>
-	    <th>If you want to enable the SD card on the expansion board / Disable the SPI Pins</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/33.png" style={{width:300, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/36.JPG" style={{width:300, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+     <th>If you want to use the SPI Pins / Disable the SD card of the expansion board</th>
+     <th>If you want to enable the SD card on the expansion board / Disable the SPI Pins</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/33.png" style={{width:300, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/36.JPG" style={{width:300, height:'auto'}}/></div></td>
+ </tr>
   <tr>
     <td>Cut along the white thin line to disconnect the solder pad connection.</td>
     <td>Solder the two solder pads together.</td>
@@ -1095,23 +1194,14 @@ In terms of SD card design, the correct circuit must have pull-up resistors to m
 
 ## Tech Support & Product Discussion
 
-.
-
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-

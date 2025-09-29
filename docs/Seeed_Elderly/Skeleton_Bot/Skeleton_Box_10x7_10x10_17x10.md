@@ -23,49 +23,34 @@ Skeleton Box 3.0 is the newest version, protection circuit device.  There are se
 
 <table  cellspacing="0" width="50%">
 <tr>
-<th scope="col"> Item
-</th>
-<th scope="col"> Length
-</th>
-<th scope="col"> Width
-</th>
-<th scope="col"> Height
-</th>
-<th scope="col"> Unit
-</th></tr>
+<th scope="col"> Item</th>
+<th scope="col"> Length</th>
+<th scope="col"> Width</th>
+<th scope="col"> Height</th>
+<th scope="col"> Unit</th>
+</tr>
 <tr>
-<th scope="row"> Skeleton Box 10x7
-</th>
-<td> 106
-</td>
-<td> 67
-</td>
-<td> 36
-</td>
-<td> mm
-</td></tr>
+<th scope="row"> Skeleton Box 10x7</th>
+<td> 106</td>
+<td> 67</td>
+<td> 36</td>
+<td> mm</td>
+</tr>
 <tr>
-<th scope="row"> Skeleton Box 10x10
-</th>
-<td> 106
-</td>
-<td> 106
-</td>
-<td> 36
-</td>
-<td> mm
-</td></tr>
+<th scope="row"> Skeleton Box 10x10</th>
+<td> 106</td>
+<td> 106</td>
+<td> 36</td>
+<td> mm</td>
+</tr>
 <tr>
-<th scope="row"> Skeleton Box 17x10
-</th>
-<td> 177
-</td>
-<td> 106
-</td>
-<td> 36
-</td>
-<td> mm
-</td></tr></table>
+<th scope="row"> Skeleton Box 17x10</th>
+<td> 177</td>
+<td> 106</td>
+<td> 36</td>
+<td> mm</td>
+</tr>
+</table>
 
 ##  Skeleton Box List
 

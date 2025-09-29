@@ -15,8 +15,8 @@ last_update:
 ![](https://files.seeedstudio.com/wiki/microbit/bitmaker/1.png)
 
 ## Introduction
-BitMaker is a credit card-sized, plug and play expansion board that bridges Grove modules with a micro:bit. It incorporates 4 RGB LEDs, 1 inbuilt buzzer for playing melodies and 6 Grove ports (one is an I2C port) that allows micro:bit to connect to hundreds of modules, such as sensors, actuators, communication modules and displays.
 
+BitMaker is a credit card-sized, plug and play expansion board that bridges Grove modules with a micro:bit. It incorporates 4 RGB LEDs, 1 inbuilt buzzer for playing melodies and 6 Grove ports (one is an I2C port) that allows micro:bit to connect to hundreds of modules, such as sensors, actuators, communication modules and displays.
 
 <!-- ![](https://cdn.nlark.com/yuque/0/2020/png/2701823/1607656250001-d4b242c7-636e-430b-8565-1503c4272f34.png#height=384&id=zyWSH&originHeight=384&originWidth=1123&originalType=binary&ratio=1&size=0&status=done&style=none&width=1123) -->
 ![](https://files.seeedstudio.com/wiki/microbit/bitmaker/2.png)
@@ -26,8 +26,8 @@ After you download a program to micro:bit, make sure the BitMaker is connected t
 :::
 
 ## Tutorials
-Here are some related tutorials to help you get started with BitMaker.
 
+Here are some related tutorials to help you get started with BitMaker.
 
 ### 1. Mini Music Player
 
@@ -38,6 +38,7 @@ This is a cool music player which can play a birthday song and flash yellow, gre
 ![](https://files.seeedstudio.com/wiki/microbit/bitmaker/3.png)
 
 #### 1.2 Write a Program
+
 Note that in MakeCode we don’t have blocks to control the RGB LEDs. Therefore we need to add a Neopixel extension in MakeCode to make sure that everything goes well. Let’s learn how to do it now!
 [How to Add the Neopixel Extension]
 Let’s go to MakeCode: [https://makecode.microbit.org](https://makecode.microbit.org/)
@@ -63,8 +64,6 @@ Let’s go to MakeCode: [https://makecode.microbit.org](https://makecode.microbi
 
 Let’s move to the task after we added the extension.
 
-
-
 :::note
 If you want to add a BitMaker extension, follow the same instruction above. BitMaker extension: [https://github.com/TinkerGen/pxt-BitMaker](https://github.com/TinkerGen/pxt-BitMaker)
 :::
@@ -75,27 +74,31 @@ Firstly, add an “on start” block. Go to the tab “Music” and connect the 
 ![](https://files.seeedstudio.com/wiki/microbit/bitmaker/8.png)
 
 #### 1.3 Connect a Device
+
 Straightly slide the micro:bit into BitMaker and be careful not to reverse it. Then connect the micro:bit to your PC with a USB cable. Check if the LED indicator on the micro:bit lights up. If not, you need to unplug in the USB cable and connect it to the devices again.
 
 #### 1.4 Download a Program
+
 You have been introduced how to download a program in the [previous tutorials](#), which can be simply concluded into steps as: rename a program, click the “Download” button and send it to the micro:bit.
 <!-- [previous tutorials](#https://docproxy.tinkergen.com/web/#/2?page_id=329) -->
 
 #### 1.5 Run a Program
+
 Turn on the switch on the BitMaker and see if the micro:bit can work normally.
 
-
-
 ### 2. Other Tutorials
+
 As mentioned in the beginning, BitMaker is able to bridges Grove modules with a micro:bit. We provide specific tutorials in [4.3 BitGadget Kit](#) to show you how to do that. If you have some Grove modules with you, go ahead and follow the tutorials to start your projects. If you don’t, visit our TinkerGen Shop and buy!
 
 > BitMaker is compatible with all of the Grove modules.
 <!-- [4.3 BitGadget Kit](#https://docproxy.tinkergen.com/web/#/2?page_id=325)  -->
 
 ## Course Materials
+
 You can see course materials about the micro:bit and BitMaker on our online learning platform Make2Learn via this address: [https://make2learn.tinkergen.com/](https://make2learn.tinkergen.com/)
 
 ## Attachments
+
 Attachment: https://files.seeedstudio.com/wiki/microbit_wiki_page/microbit-music player.hex
 
 ## Tech Support & Product Discussion
@@ -103,11 +106,11 @@ Attachment: https://files.seeedstudio.com/wiki/microbit_wiki_page/microbit-music
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

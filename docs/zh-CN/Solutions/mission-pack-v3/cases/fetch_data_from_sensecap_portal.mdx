@@ -1,0 +1,57 @@
+---
+description: 拉取远程 SenseCAP Portal 云平台数据在本地进行展示，并基于 NodeRED 搭建自己的应用。
+title: 接入 SenseCAP 云平台作为数据端口
+keywords:
+    - mission-pack
+# image: 
+slug: /cn/fetch_data_from_sensecap_portal
+sidebar_position: 0
+last_update:
+    date: 07/08/2025
+    author: Spencer
+---
+
+<!-- NodeRED 获取 SenseCAP Portal 信息 在有网的情况下，NodeRED 如何获取 SenseCAP Portal 的传感器信息 途径一：通过已有的 Block
+ 途径二：提供普通的思路
+
+我们可能会碰到一些传感器设备来自于 4G 的设备，这个时候，你即使部署了本地的 LoRaWAN 的网络服务，也需要去网络上拉取信息；
+这种情况不可避免。
+
+在这样的的情况下，我们可以把 Mission Pack 当做一个协议转换的网关，这在工业场景下会经常听到的名词。
+
+Mission Pack 同样也是一个网关，在
+ -->
+
+---
+
+### Mission Pack的数据获取与SenseCAP Portal
+
+Mission Pack作为一款**开放源代码的AIoT解决方案**，其核心功能之一是实现高效的**远程传感、数据传输、处理、推理和分析**。SenseCAP Portal（SenseCAP门户）和SenseCAP云服务在此过程中扮演着关键角色，作为**数据汇聚、管理和访问的中心**。
+
+## 1. 数据来源与传输
+
+Mission Pack通过其多样化的组件收集数据，并将数据传输到SenseCAP Portal或相关云服务：
+
+- **智能灾害传感器**：Mission Pack包含各类智能传感器，如**气象站、远距离追踪器和AI传感器**，这些都是用于灾害监测的理想选择。例如，SenseCAP S210x系列LoRaWAN®传感器能够通过LoRaWAN®网络实现**长距离数据采集**。这些传感器具有高精度、快速响应和卓越的稳定性。
+- **数据记录器与集线器**：SenseCAP S2100 LoRaWAN® DTU可以连接 Modbus-RTU RS485/模拟输入/GPIO传感器，并通过 LoRaWAN® 网络传输数据。SenseCAP Outdoor Combo 和 SenseCAP 4G Sensor Hub是多功能环境传感器，支持多达10个Modbus RTU RS-485传感器，并通过4G MQTT上传数据。
+- **网关设备**：数据通常通过**SenseCAP LoRaWAN®网关**传输，这些网关支持连接到不同的网络服务器（LNS），如SenseCAP、TTN和Chirpstack，并通过4G或以太网无缝收集和传输数据。
+- **Meshtastic网络**：值得一提的是，Mission Pack中的T1000-E设备引入了基于Meshtastic的网格网络功能，这使得在没有传统网络基础设施（如蜂窝网络）的区域也能进行**离网通信和数据收集**，用户可以通过智能手机连接T1000-E进行数据收集。
+
+## 2. 数据在SenseCAP Portal的汇聚与管理
+
+SenseCAP Portal是数据汇聚和集中管理的核心。一旦数据从各种传感器和网关传输到SenseCAP服务器，用户便可以通过多种方式进行访问和管理：
+
+- **SenseCAP应用与专业仪表板**：SenseCAP提供**一体化的SenseCAP App和专业的仪表板**，用户只需简单的步骤（如扫描二维码、连接并通电）即可在平台上查看设备状态和实时数据。这些工具旨在提供用户友好的界面，简化数据可视化和设备管理。
+- **SenseCraft平台**：作为Seeed Studio的软件套件，SenseCraft是一个**MLOps服务**，旨在简化AI模型的训练、分发和部署。它也支持**远程设备监控、控制和软件空中更新** (OTA)。SenseCraft提供**无代码/低代码**的设备配置和部署能力，尤其适用于边缘设备，让用户无需复杂的编码即可实现数据处理和上传至云端。
+- **对话树与自动化**：在Mission Pack的基地营中，可以创建设备间的自动化，并且能够为基地营创建对话树。
+
+## 3. 数据输出与集成
+
+SenseCAP Portal不仅用于数据查看，还支持将数据输出到其他服务或平台，以实现更广泛的应用和集成：
+
+- **开放API支持**：SenseCAP云服务提供**开放API**，支持进一步的开发和与外部服务的集成。这意味着用户可以根据自己的需求，将数据流连接到自定义的服务器应用程序。
+- **第三方服务集成**：Mission Pack支持与Twilio、Datacake和Grafana等**外部服务集成**，这通过Node-RED实现，为用户提供了极大的灵活性，可以将SenseCAP数据用于消息通知、数据存储和高级可视化分析。
+- **本地API访问**：对于需要更低延迟或离线操作的场景，边缘计算支持**本地数据收集和分析**，并且数据可以通过**局域网API**轻松访问。
+- **数据输出到串行端口**：系统还可以将数据输出到有线和无线串行端口，这对于特定硬件集成和调试非常有用。
+
+综上所述，Mission Pack与SenseCAP Portal通过其强大的硬件组合、灵活的通信方式以及开放的软件平台，提供了一个**全面且易于操作的数据获取、管理和集成解决方案**，特别适用于灾害响应等需要实时、可靠数据支持的场景.

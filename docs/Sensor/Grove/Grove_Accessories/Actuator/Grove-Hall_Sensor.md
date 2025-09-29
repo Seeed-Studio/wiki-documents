@@ -213,7 +213,7 @@ If this is your first time using Codecraft, see also [Guide for Codecraft using 
 
 Upload the program to your Arduino/Seeeduino.
 
-:::tipSuccess
+:::tip
 When the code finishes uploaded, the LED will goes on when Hall Sensor detects changes in the magnetic field.
 :::
 

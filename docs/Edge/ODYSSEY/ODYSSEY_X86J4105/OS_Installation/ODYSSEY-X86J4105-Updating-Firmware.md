@@ -70,7 +70,7 @@ BIOS is also like an OS and can be upgraded to fix bugs and enhance performance 
 
 - Improve overall stability.
 
-**Note:** If you want the above BIOS with **bifurcation feature enabled**, please contact <techsupport@seeed.io>
+**Note:** If you want the above BIOS with **bifurcation feature enabled**, please contact techsupport@seeed.io
 
 With bifurcation feature, you will be able to use the M.2 M-Key for 4 PCIe x1. This enables you to connect four different PCIe x1 devices to the M.2 such as multiple network ports, multiple SSDs and other expansion devices. With the normal BIOS without bifurcation feature, M.2 M-Key can be used for only one PCIe x4.
 

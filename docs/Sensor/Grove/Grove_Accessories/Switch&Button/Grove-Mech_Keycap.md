@@ -366,7 +366,7 @@ if __name__ == '__main__':
 
 ```
 
-:::tipsuccess
+:::tip
 If everything goes well, you will be able to see the following result. If you single click the keycap, you will see "turn on LED", if you double-click the keycap, you will see "blink LED". Long press the keycap will give "turn off LED".
 :::
 

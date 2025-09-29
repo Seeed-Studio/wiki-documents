@@ -4,6 +4,7 @@ title: Sensor Network
 keywords:
 - Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /Seeed_Elderly/Navigation/Sensor_Network_4.7
 last_update:
   date: 01/20/2023
   author: Matthew
@@ -81,7 +82,7 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### Industrial AI-based Sensors 
+### Industrial AI-based Sensors
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
@@ -90,7 +91,6 @@ You can discover this page with two large portions.
             <a href="/Train-Deploy-AI-Model-A1101" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click here for more information</font></span></a>
     </a>
 </div>
-
 
 ### Data Logger with Configuration Guide
 
@@ -126,7 +126,7 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### Gateway for Multiple Platform 
+### Gateway for Multiple Platform
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
@@ -224,7 +224,7 @@ You can discover this page with two large portions.
 - Application for IoT or embedded ML methods acknowledge
 - Kit with free courses and more intriguing tutorials
 
-### Sensors and Sensors' Network 
+### Sensors and Sensors' Network
 
 <!-- Grove Sensor -->
 
@@ -320,7 +320,7 @@ You can discover this page with two large portions.
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Barometer</font></div>
-            <a href="Grove-Barometer-High-Accuracy" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HP206C  </font></span></a>
+            <a href="Grove-Barometer-High-Accuracy" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HP206F  </font></span></a>
             <br/>
             <a href="/Grove-Barometer_Sensor-BME280" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  BME280  </font></span></a>,
             <a href="/Grove-Barometer_Sensor-BMP280" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  BMP280  </font></span></a>
@@ -769,9 +769,9 @@ You can discover this page with two large portions.
 
 <!-- Application -->
 
-### Application 
+### Application
 
-### Easy IoT Application 
+### Easy IoT Application
 
 <!-- Easy IoT Application -->
 
@@ -964,7 +964,7 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### Accessories 
+### Accessories
 
 <!-- Grove Accessories -->
 
@@ -1123,7 +1123,7 @@ You can discover this page with two large portions.
 
 <!-- Kit with Courses -->
 
-### Kit with Courses 
+### Kit with Courses
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>

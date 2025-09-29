@@ -60,7 +60,7 @@ You need to copy the following code and replace the content in platform.ini file
 ```
 [env:seeed_xiao_esp32_c6]
 platform = https://github.com/Seeed-Studio/platform-seeedboards.git
-board = seeed-xiao-c6
+board = seeed-xiao-esp32-c6
 framework = arduino
 ```
 :::tip

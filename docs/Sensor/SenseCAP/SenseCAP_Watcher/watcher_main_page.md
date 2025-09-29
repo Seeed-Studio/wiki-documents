@@ -15,13 +15,13 @@ last_update:
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE">
+    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Watcher's Video</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher">
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Github Repository</font></span></strong>
     </a>
 </div>
@@ -36,61 +36,61 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 ### [Price and benefits](https://wiki.seeedstudio.com/watcher_price/)
 
-### [Product Overview](http://wiki.seeedstudio.com/product_overview_with_watcher/)
+### [Product Overview](https://wiki.seeedstudio.com/product_overview_with_watcher/)
 
-- [Hardware Overview](http://wiki.seeedstudio.com/watcher_hardware_overview/)
+- [Hardware Overview](https://wiki.seeedstudio.com/watcher_hardware_overview/)
 
-- [Operation Guideline](http://wiki.seeedstudio.com/watcher_operation_guideline/)
+- [Operation Guideline](https://wiki.seeedstudio.com/watcher_operation_guideline/)
 
-- [Task Assignment Guideline](http://wiki.seeedstudio.com/getting_started_with_watcher_task/)
+- [Task Assignment Guideline](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
 
-### [Software Framework Overview](http://wiki.seeedstudio.com/watcher_software_framework_overview/)
+### [Software Framework Overview](https://wiki.seeedstudio.com/watcher_software_framework_overview/)
 
-- [SenseCraft APP Introduction](http://wiki.seeedstudio.com/sensecap_app_introduction/)
+- [SenseCraft APP Introduction](https://wiki.seeedstudio.com/sensecap_app_introduction/)
 
-- [Watcher Software Service Introduction](http://wiki.seeedstudio.com/watcher_software_service_framework/)
+- [Watcher Software Service Introduction](https://wiki.seeedstudio.com/watcher_software_service_framework/)
 
-- [Deploy Watcher's AI Capabilities Locally](http://wiki.seeedstudio.com/watcher_local_deploy/)
+- [Deploy Watcher's AI Capabilities Locally](https://wiki.seeedstudio.com/watcher_local_deploy/)
 
-### [Notification](http://wiki.seeedstudio.com/notifications_with_watcher_main_page/)
+### [Notification](https://wiki.seeedstudio.com/notifications_with_watcher_main_page/)
 
-#### [UART Output](http://wiki.seeedstudio.com/uart_output/)
+#### [UART Output](https://wiki.seeedstudio.com/uart_output/)
 
-#### [HTTP Proxy Notification](http://wiki.seeedstudio.com/http_proxy_notification/)
+#### [HTTP Proxy Notification](https://wiki.seeedstudio.com/http_proxy_notification/)
 
-##### [Smart Home](http://wiki.seeedstudio.com/smart_main_page/)
+##### [Smart Home](https://wiki.seeedstudio.com/smart_main_page/)
 
-- [Integrate Watcher to Home Assistant](http://wiki.seeedstudio.com/integrate_watcher_to_ha/)
+- [Integrate Watcher to Home Assistant](https://wiki.seeedstudio.com/integrate_watcher_to_ha/)
 
-##### [Node-RED Integration](http://wiki.seeedstudio.com/notification_with_watcher/)
+##### [Node-RED Integration](https://wiki.seeedstudio.com/notification_with_watcher/)
 
-- [Watcher to Node-RED](http://wiki.seeedstudio.com/watcher_to_node_red/)
+- [Watcher to Node-RED](https://wiki.seeedstudio.com/watcher_to_node_red/)
 
-- [Watcher & Node-RED to IFTTT](http://wiki.seeedstudio.com/watcher_node_red_to_ifttt/)
+- [Watcher & Node-RED to IFTTT](https://wiki.seeedstudio.com/watcher_node_red_to_ifttt/)
 
-- [Watcher & Node-RED to Kafka](http://wiki.seeedstudio.com/watcher_node_red_to_kafka/)
+- [Watcher & Node-RED to Kafka](https://wiki.seeedstudio.com/watcher_node_red_to_kafka/)
 
-- [Watcher & Node-RED to Open Interpreter](http://wiki.seeedstudio.com/watcher_node_red_to_open_interpreter/)
+- [Watcher & Node-RED to Open Interpreter](https://wiki.seeedstudio.com/watcher_node_red_to_open_interpreter/)
 
-- [Watcher & Node-RED to P5JS](http://wiki.seeedstudio.com/watcher_node_red_to_p5js/)
+- [Watcher & Node-RED to P5JS](https://wiki.seeedstudio.com/watcher_node_red_to_p5js/)
 
-- [Watcher & Node-RED to Telegram](http://wiki.seeedstudio.com/watcher_node_red_to_telegram/)
+- [Watcher & Node-RED to Telegram](https://wiki.seeedstudio.com/watcher_node_red_to_telegram/)
 
-- [Watcher & Node-RED to Twilio](http://wiki.seeedstudio.com/watcher_node_red_to_twilio/)
+- [Watcher & Node-RED to Twilio](https://wiki.seeedstudio.com/watcher_node_red_to_twilio/)
 
-- [Watcher & Node-RED to Discord](http://wiki.seeedstudio.com/watcher_node_red_to_discord/)
+- [Watcher & Node-RED to Discord](https://wiki.seeedstudio.com/watcher_node_red_to_discord/)
 
-- [Watcher & Node-RED to MongoDB](http://wiki.seeedstudio.com/watcher_node_red_to_mongodb/)
+- [Watcher & Node-RED to MongoDB](https://wiki.seeedstudio.com/watcher_node_red_to_mongodb/)
 
-- [Watcher & Node-RED to WhatsApp](http://wiki.seeedstudio.com/watcher_node_red_to_whatsapp/)
+- [Watcher & Node-RED to WhatsApp](https://wiki.seeedstudio.com/watcher_node_red_to_whatsapp/)
 
-### [Application](http://wiki.seeedstudio.com/applications_with_watcher_main_page/)
+### [Application](https://wiki.seeedstudio.com/applications_with_watcher_main_page/)
 
-#### [Use Case](http://wiki.seeedstudio.com/use_case/)
+#### [Use Case](https://wiki.seeedstudio.com/use_case/)
 
-#### [Development](http://wiki.seeedstudio.com/development/)
+#### [Development](https://wiki.seeedstudio.com/development/)
 
-- [Traning Model For Watcher](http://wiki.seeedstudio.com/training_model_for_watcher/)
+- [Traning Model For Watcher](https://wiki.seeedstudio.com/training_model_for_watcher/)
 
 
 

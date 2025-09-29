@@ -63,7 +63,7 @@ Before everything starts, it is quite essential to have some basic parameters of
 | **Reference system** |
 | Liquid junction boundary | Polyvinyl tetrachloride |
 | Material of the housing | PPS |
-| Membrane resistance | <500 MQ |
+| Membrane resistance | &lt;500 MQ |
 | Wire length | 5 meters |
 | Method of installation | Drop |
 | Level of protection | IP68 |

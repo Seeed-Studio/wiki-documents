@@ -24,6 +24,8 @@ There are other models that you can replace:
 | gender_cv181x_int8.cvimodel        | Human Gender Identification Models                           | [Gender Detect Download](https://files.seeedstudio.com/wiki/reCamera/models/gender_cv181x_int8.cvimodel) |
 | gesture_cv181x_int8.cvimodel       | Hand gesture recognition                                     | [Gesture Detect Download](https://files.seeedstudio.com/wiki/reCamera/models/gesture_cv181x_int8.cvimodel) |
 | digital_meter_cv181x_int8.cvimodel | Digit recognition model                                      | [Digital Detect Download](https://files.seeedstudio.com/wiki/reCamera/models/digital_meter_cv181x_int8.cvimodel) |
+|yolo11n_drone_int8_sym.cvimodel     | Bird and Drone Object Recognition                            | [Drone Detect Download](https://files.seeedstudio.com/wiki/reCamera/models/yolo11n_drone_int8_sym.cvimodel ) |
+
 
 Yolo11n model classes:
 

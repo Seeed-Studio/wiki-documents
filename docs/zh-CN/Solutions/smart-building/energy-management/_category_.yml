@@ -1,0 +1,10 @@
+position: 3
+label: '能源管理'
+collapsible: true
+collapsed: true
+className: _energy-management
+link:
+  type: generated-index
+  slug: cn/energy-management
+  title: 能源管理
+  description: 能源管理解决方案。

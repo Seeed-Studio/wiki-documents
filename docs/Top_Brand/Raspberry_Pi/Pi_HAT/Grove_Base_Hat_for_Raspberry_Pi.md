@@ -10,6 +10,8 @@ last_update:
   author: jianjing Huang
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/main.jpg)
 
@@ -20,7 +22,7 @@ The Grove Base Hat for Raspberry Pi provide Digital/Analog/I2C/PWM/UART port to 
 Frankly speaking, it's about 60 Grove modules support the Grove Base Hat for Raspberry Pi now. However, we will continue to add new compatible modules, the more you use, the more grove added.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -152,8 +154,10 @@ We recommend that you power up the Raspberry Pis after all the hardware connecti
 Currently, this board is available in two versions on the market: the STM32 version (V1.1) and the MM32 version (V1.0). The current shipping version is the STM32 version.
 
 If you experience issues using the Grove Base Hat for Pi with the `grove.py` library, please check your board version:  
+
 1. **If it is the STM32 version**, the I2C address is `0x04`. You need to change the I2C address in `/home/username/.local/lib/python3.9/site-packages/adc.py` to `0x04`.  
 2. **If it is the MM32 version**, the I2C address is `0x08`. You need to change the I2C address in `/home/username/.local/lib/python3.9/site-packages/adc.py` to `0x08`.  
+
 :::
 
 In this section we will introduce how to install the **seeed grove.py** library and how to use I2C, PWM, Digital and analog port of the Grove Base Hat for Raspberry Pi.
@@ -170,30 +174,28 @@ To operate grove sensors, the grove.py depends many hardware interface libraries
 
 #### Installation
 
-**Step by step installation**
-
-Besides the one-click installation, you can also install all the dependencies and latest grove.py step by step. Please refer to [grove.py github repository](https://github.com/Seeed-Studio/grove.py).
-
 :::caution
 If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**. The following instruction is working on Bookworm OS.
 :::
 
-For beginner or library user only, please install with online method.
-For developer or advanced user, please install [dependencies](https://github.com/Seeed-Studio/grove.py/blob/master/doc/INSTALL.md#install-dependencies) and then install grove.py with [source code](https://github.com/Seeed-Studio/grove.py?tab=readme-ov-file#install-grovepy).
 ##### Install Dependencies
-Add repository
+
+**Add repository**
+
 ```linux
-# RPi
 echo "deb https://seeed-studio.github.io/pi_repo/ stretch main" | sudo tee /etc/apt/sources.list.d/seeed.list
 ```
-Add public GPG key
 
-```shell
+**Add public GPG key**
+
+```linux
 curl https://seeed-studio.github.io/pi_repo/public.key | sudo apt-key add -
 # or
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BB8F40F3
 ```
-Enable I2C interface
+
+**Enable I2C interface**
+
 ```linux
 sudo raspi-config
 ```
@@ -201,53 +203,92 @@ sudo raspi-config
 - Select interfacingg Options>I2C>Yes>Ok>Finish
 - Enable I2C interface
 
+**Install required packages**
+
 In the lastest version of Python3, it is recommended to use *virtualenv* for isolated package management.
+
+<Tabs>
+<TabItem value="python3" label="global environment" default>
+
+```linux
+sudo pip3 install rpi_ws281x
+pip3 install RPi.GPIO
+```
+
+</TabItem>
+<TabItem value="env" label="vertual environment" default>
+
 ```linux
 sudo apt install python3-virtualenv
 virtualenv -p python3 env
 source env/bin/activate
+
+pip install rpi_ws281x RPi.GPIO
 ```
 
-Install library raspberry-gpio-python for RPi
+</TabItem>
+</Tabs>
+
+:::note
+There might be issues using RPi.GPIO on the Pi 5, as discussed [here](https://forums.raspberrypi.com/viewtopic.php?t=367169#p2230294). it is recommended to replace RPi.GPIO with rpi-lgpio. Commands:
+
 ```linux
-pip install rpi-gpio
-```
-Install library rpi_ws281x for RPi
-```linux
-# python3
-sudo pip3 install rpi_ws281x
-# env
-pip install rpi_ws281x
+pip uninstall RPi.GPIO
+pip install rpi-lgpio
 ```
 
+:::
 
-##### Online install
-To install into a virtual environment, first active your virtualenv and type the following command:
-```linux
-curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | bash -s -- --user-local --bypass-gui-installation
-```
-If you want to install into the system, you can type the following command:
+##### Install grove.py
+
+For beginner or library user only, please install with online method.
+
+- Automatic dependency installation and library deployment.
+- Quick to get started, no manual operation required.
+
+For developer or advanced user, please install dependencies and then install grove.py with source code.
+
+- Includes the complete `grove.py` repository, source code, examples, and documentation
+- Suitable for viewing source code and examples, modifying library functions
+
+<Tabs>
+<TabItem  value="Beginner" label="For beginner or library user" default>
+
+To install into the global environment, you can type the following command:
+
 ```linux
 curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | sudo bash -s -
 ```
 
-##### Install grove.py locally
+If you want to install into a virtual environment, first active your virtualenv and type the following command:
+
+```linux
+curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | bash -s -- --user-local --bypass-gui-installation
+```
+
+</TabItem>
+<TabItem  value="Developer" label="For developer or advanced user" default>
+
+To install into the global environment, you can type the following command:
 
 ```linux
 git clone https://github.com/Seeed-Studio/grove.py
 cd grove.py
-# Python3 
 sudo pip3 install .
 ```
+
+If you want to install into a virtual environment, first active your virtualenv and type the following command:
+
 ```linux
-# virutalenv for Python3 (If the installation fails when using pip3)
-sudo apt install python3-virtualenv
-virtualenv -p python3 env
-source env/bin/activate
+git clone https://github.com/Seeed-Studio/grove.py
+cd grove.py
 pip3 install .
 ```
 
-#### Usage
+</TabItem>
+</Tabs>
+
+### Usage
 
 Now you can use the Grove Base Hat for Raspberry Pi with dozens Grove modules, tap the command **grove_** and press the ++tab++ key to check [the supported Grove list](https://github.com/Seeed-Studio/grove.py/tree/master/doc).
 
@@ -334,7 +375,6 @@ grove_ws2813_rgb_led_strip
 ```
 
 Then we will show you how to use them according to port type.
-
 
 **Digital Port**
 
@@ -454,6 +494,8 @@ If you use the I2C tool to scan the I2C address of the grove module, you may fin
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/res/Raspberry%20Pi%20Grove%20Base%20HAT%20v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+<br></br>
+
 :::noteChange Note:
 
 Because ST32 series chips are out of stock globally, prices have increased several times and there is no clear delivery date. We have no choice but to switch to the MM32 chip. The specific replacement models are as follows: STM32F030F4P6TR is replaced by MM32F031F6P6. After the chip is replaced, the product functions, features, usage methods and codes remain unchanged. It should be noted that the firmware version has changed, and the factory firmware has been adjusted according to different chips. If you need to re-burn the firmware, please download the firmware corresponding to the chip.
@@ -484,11 +526,11 @@ This is the introduction Video of this product.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -39,63 +39,47 @@ It can drive an LED strip 1 to 2 meters long with 9 V, while 1 to 5 meters long 
 ---
 <table >
 <tr>
-<td width="150"> **Power supply**
-</td>
-<td width="150"> **LED Strip**
-</td>
-<td width="100"> **LED Color**
-</td>
-<td width="100"> **Length(m)**
-</td>
-<td width="150"> **Max current(mA)**
-</td></tr>
+<td width="150"> **Power supply**</td>
+<td width="150"> **LED Strip**</td>
+<td width="100"> **LED Color**</td>
+<td width="100"> **Length(m)**</td>
+<td width="150"> **Max current(mA)**</td>
+</tr>
 <tr>
-<td rowspan="5"> 12V/5A
-</td>
-<td rowspan="5"> RGB LED strip
-</td>
-<td rowspan="5"> White
-</td>
-<td> 1
-</td>
-<td> 1032
-</td></tr>
+<td rowspan="5"> 12V/5A</td>
+<td rowspan="5"> RGB LED strip</td>
+<td rowspan="5"> White</td>
+<td> 1</td>
+<td> 1032</td>
+</tr>
 <tr>
-<td> 2
-</td>
-<td> 1822
-</td></tr>
+<td> 2</td>
+<td> 1822</td>
+</tr>
 <tr>
-<td> 3
-</td>
-<td> 2430
-</td></tr>
+<td> 3</td>
+<td> 2430</td>
+</tr>
 <tr>
-<td> 4
-</td>
-<td> 2800
-</td></tr>
+<td> 4</td>
+<td> 2800</td>
+</tr>
 <tr>
-<td> 5
-</td>
-<td> 3000
-</td></tr>
+<td> 5</td>
+<td> 3000</td>
+</tr>
 <tr>
-<td rowspan="2"> 9V/1A
-</td>
-<td rowspan="2"> RGB LED strip
-</td>
-<td rowspan="2"> White
-</td>
-<td> 1
-</td>
-<td> 365
-</td></tr>
+<td rowspan="2"> 9V/1A</td>
+<td rowspan="2"> RGB LED strip</td>
+<td rowspan="2"> White</td>
+<td> 1</td>
+<td> 365</td>
+</tr>
 <tr>
-<td> 2
-</td>
-<td> 627
-</td></tr></table>
+<td> 2</td>
+<td> 627</td>
+</tr>
+</table>
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-LED_Strip_Driver/img/LED_Strip_Driver_Interface3.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-LED_Strip_Driver/img/LED_Strip_Driver_Interface3.jpg" alt="pir" width={600} height="auto" /></p>

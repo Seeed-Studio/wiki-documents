@@ -872,7 +872,6 @@ OK+ Set:[P1]
 <td>AT+RSSB?</td>
 <td>OK+RSSB: [P1]</td>
 <td>P1: RSSI value<br />
-
 <p>9999: No connection<br />
 9998: Try later<br />
 9997: Read error<br />
@@ -902,9 +901,7 @@ This command must use after “AT+MODE1” is setup. This command is only used b
 <tr class="odd">
 <td>AT+RSSE?</td>
 <td>OK+RSSE: [P1]</td>
-<td>P1: RSSI value<br />
-
-<p>9999: No connection<br />
+<td>P1: RSSI value<br /><p>9999: No connection<br />
 9998: Try later<br />
 9997: Read error<br />
 Xxxx: RSSI value</p></td>
@@ -1024,10 +1021,7 @@ Q: AT+STOP?
 OK+ Get:[P1]
 </td>
 <td rowspan="2" width="300">
-P1: 0, 1, (Default: 0)
-0: 1 stop bit
-1: 2 stop bits
-
+P1: 0, 1, (Default: 0) 0: 1 stop bit 1: 2 stop bits
 </td>
 </tr>
 <tr>
@@ -1057,9 +1051,10 @@ OK+ Set:[P1]
 </thead>
 <tbody>
 <tr class="odd">
-<td>AT+VERR?<br />
-
-<p>AT+VERS?</p></td>
+<td>
+AT+VERR?<br />
+<p>AT+VERS?</p>
+</td>
 <td>Version Information</td>
 <td>None</td>
 </tr>
@@ -1174,11 +1169,11 @@ Resources
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

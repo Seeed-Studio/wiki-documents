@@ -34,19 +34,15 @@ This is a Wireless car key FOB with 4 buttons: Lock,unlock,mute and alarm on.  A
 
 <table>
 <tr>
-<th> Revision
-</th>
-<th> Descriptions
-</th>
-<th> Release
-</th></tr>
+<th> Revision</th>
+<th> Descriptions</th>
+<th> Release</th>
+</tr>
 <tr>
-<td width="300px"> v0.9b
-</td>
-<td width="500px"> Initial public release
-</td>
-<td width="200px"> Nov 04, 2009
-</td></tr></table>
+<td width="300px"> v0.9b</td>
+<td width="500px"> Initial public release</td>
+<td width="200px"> Nov 04, 2009</td>
+</tr></table>
 
 ## Tech Support & Product Discussion
  if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 

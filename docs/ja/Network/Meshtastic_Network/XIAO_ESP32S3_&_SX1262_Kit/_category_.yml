@@ -1,0 +1,10 @@
+position: 6 # float position is supported
+label: 'XIAOシリーズ & Wio SX1262 キット'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: xiao_esp32s3_wio_sx1262_kit
+link:
+  type: generated-index
+  slug: ja/xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic_main_page
+  title: XIAOシリーズ & Wio SX1262 キット
+  description: XIAO ESP32S3 & Wio-SX1262 Meshtasticアプリケーション。

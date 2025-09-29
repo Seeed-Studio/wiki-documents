@@ -16,8 +16,7 @@ last_update:
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/A607/1.png" /></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/A607-Carrier-Board-for-Jetson-Orin-NX-Nano-p-5634.html"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/A607-Carrier-Board-for-Jetson-Orin-NX-Nano-p-5634.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
 In this wiki, we will show you how to flash [Jetpack](https://developer.nvidia.com/embedded/jetpack) to an NVMe SSD connected to the A607 Carrier Board which supports both NVIDIA Jetson Orin NX module and NVIDIA Jetson Orin Nano module
@@ -125,10 +124,9 @@ First of all, you need to install the peripheral drivers for this board. These a
 </table>
 </div>
 
-
 **Note:** Currently we provide the above drivers. We will keep updating the drivers in the future with the release of new JetPack versions.
 
-## Flash to Jetson 
+## Flash to Jetson
 
 :::note
  Before moving onto flashing, it should be noted that Jetson Orin NX module only supports JetPack 5.1 and above, while Jetson Orin Nano module only supports JetPack 5.1.1 and above.
@@ -385,7 +383,6 @@ You will see the following output if the flashing process is successful:
 
 </Tabs>
 
-
 ## Configure WiFi and Bluetooth
 
 After flashing is successful, the Jetson will boot into the OS. Now you need to additionally configure WiFi and Bluetooth.
@@ -416,7 +413,7 @@ sudo modprobe 8723du
 sudo echo 8723du >> /etc/modules
 ```
 
-**Step 5:** Reboot the device 
+**Step 5:** Reboot the device
 
 ```sh
 sudo reboot
@@ -427,11 +424,11 @@ sudo reboot
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

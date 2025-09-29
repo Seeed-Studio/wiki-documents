@@ -116,8 +116,10 @@ Since both light sensor types share a similar working principle, do refer to the
 
 <div align="center">
 <figure>
-  <a href="https://files.seeedstudio.com/wiki/Light-Sensor-Selection-Guide/Light-Sensor.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/Light-Sensor-Selection-Guide/Light-Sensor.png" alt="Seeed Light Sensor Selection Guide" title="Seeed Light Sensor Selection Guide" />
-  <figcaption><b>Figure 2</b>. <i>Light Sensors at Seeed</i></figcaption></a>
+  <a href="https://files.seeedstudio.com/wiki/Light-Sensor-Selection-Guide/Light-Sensor.png" target="_blank">
+    <img src="https://files.seeedstudio.com/wiki/Light-Sensor-Selection-Guide/Light-Sensor.png" alt="Seeed Light Sensor Selection Guide" title="Seeed Light Sensor Selection Guide" />
+    <figcaption><b>Figure 2</b>. <i>Light Sensors at Seeed</i></figcaption>
+  </a>
 </figure>
 </div>
 
@@ -138,7 +140,7 @@ Since both light sensor types share a similar working principle, do refer to the
 
 <div align="center"><img width={400} src="https://media-cdn.seeedstudio.site/media/catalog/product/cache/ab187aaa5f626ad16c8031644cd2de5b/h/t/httpsstatics3.seeedstudio.comseeedimg2016-10po8b7qd0xnlnchgogziq9g3d.jpg" /></div>
 
-Starting off the list of light sensors available right here at Seeed is the Grove – Light Sensor v1.2! Alongside its low price tag of $2.90, comes a highly sensitive and reliable photodiode for your light-sensing needs!
+Starting off the list of light sensors available right here at Seeed is the Grove – Light Sensor v1.2! Alongside its low price tag of \$2.90, comes a highly sensitive and reliable photodiode for your light-sensing needs!
 
 Easily parable with your Arduino board through our Grove plug and play system, you’ll save yourself some trouble of connecting jumper wires and soldering it on!
 
@@ -205,27 +207,27 @@ Since performance is key, this light sensor offers a wide dynamic and spectrum d
 
 **Grove - Introduction in a Light Sensor**:
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ingo-lohs/grove-introduction-in-a-light-sensor-a55efd/embed' width='350'></iframe>
+<iframe frameborder="0" height="327.5" scrolling="no" src="https://www.hackster.io/ingo-lohs/grove-introduction-in-a-light-sensor-a55efd/embed" width="350"></iframe>
 
 **The Environment Cube! Know the Land Beneath You using Sigfox**: A cube with all the necessary sensors, suitable for a wide range of applications like agriculture, monitoring, ,etc.
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/dhairya-parikh/the-environment-cube-know-the-land-beneath-you-using-sigfox-952f29/embed' width='350'></iframe>
+<iframe frameborder="0" height="327.5" scrolling="no" src="https://www.hackster.io/dhairya-parikh/the-environment-cube-know-the-land-beneath-you-using-sigfox-952f29/embed" width="350"></iframe>
 
 **Seeed LoRa IoTea Solution**: An automatic information collection system applied to tea plantation. It is part of intelligent agricultural information collection.
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/seeed-lora-iotea-solution-b5ee95/embed' width='350'></iframe>
+<iframe frameborder="0" height="327.5" scrolling="no" src="https://www.hackster.io/SeeedStudio/seeed-lora-iotea-solution-b5ee95/embed" width="350"></iframe>
 
 **Intel Edison IoT Hydroponic Controller**: An IoT enabled Hydroponics Controller using the Intel Edison during the Boston IoT Hackathon.
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/bltrobotics/intel-edison-iot-hydroponic-controller-d7132d/embed' width='350'></iframe>
+<iframe frameborder="0" height="327.5" scrolling="no" src="https://www.hackster.io/bltrobotics/intel-edison-iot-hydroponic-controller-d7132d/embed" width="350"></iframe>
 
 **COI - Light Transmission Meter**: The finished product uses the light sensor provided in the Grove Starter Kit Plus to measure change in light intensity.
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/DigitalFabber/coi-light-transmission-meter-8044fd/embed' width='350'></iframe>
+<iframe frameborder="0" height="327.5" scrolling="no" src="https://www.hackster.io/DigitalFabber/coi-light-transmission-meter-8044fd/embed" width="350"></iframe>
 
 **The Environment Cube! Know the Land Beneath You!** A cube with all the necessary sensors, suitable for a wide range of applications like agriculture. Know the land beneath you!
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/dhairya-parikh/the-environment-cube-know-the-land-beneath-you-b3c2dd/embed' width='350'></iframe>
+<iframe frameborder="0" height="327.5" scrolling="no" src="https://www.hackster.io/dhairya-parikh/the-environment-cube-know-the-land-beneath-you-b3c2dd/embed" width="350"></iframe>
 
 ## Resource
 
@@ -239,12 +241,12 @@ Since performance is key, this light sensor offers a wide dynamic and spectrum d
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+<div className="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" className="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
 </div>
 
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div className="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
 </div>

@@ -27,17 +27,17 @@ Water flow sensor consists of a plastic valve body, a water rotor, and a hall-ef
 ---
 |items|value|
 |---|---|
-|Mini. Wokring Voltage	|DC 4.5V|
-|Max. Working Current	|15mA(DC 5V)|
-|Working Voltage	|5V～24V|
-|Flow Rate Range	|1～30L/min|
-|Load Capacity	|≤10mA(DC 5V)|
-|Operating Temperature	|≤80℃|
-|Liquid Temperature|	≤120℃|
-|Operating Humidity	|35%～90%RH|
-|Water Pressure	|≤2.0MPa|
-|Storage Temperature	|-25℃～+80℃|
-|Storage Humidity	|25%～95%RH|
+|Mini. Wokring Voltage|DC 4.5V|
+|Max. Working Current|15mA(DC 5V)|
+|Working Voltage|5V～24V|
+|Flow Rate Range|1～30L/min|
+|Load Capacity|≤10mA(DC 5V)|
+|Operating Temperature|≤80℃|
+|Liquid Temperature|≤120℃|
+|Operating Humidity|35%～90%RH|
+|Water Pressure|≤2.0MPa|
+|Storage Temperature|-25℃～+80℃|
+|Storage Humidity|25%～95%RH|
 
 ## Mechanic Dimensions
 ---
@@ -144,8 +144,8 @@ Pulse frequency (Hz) in Horizontal Test= 7.5Q, Q is flow rate in L/min. (Results
 
 |items|value|
 |---|---|
-|Output pulse high level|	Signal voltage >4.5 V( input DC 5 V)|
-|Output pulse low level	|Signal voltage <0.5V( input DC 5V)|
+|Output pulse high level|	Signal voltage &gt;4.5 V( input DC 5 V)|
+|Output pulse low level	|Signal voltage &lt;0.5V( input DC 5V)|
 |Precision	|3% (Flow rate from 1L/min to 10L/min)|
 |Output signal duty cycle	|40%～60%|
 

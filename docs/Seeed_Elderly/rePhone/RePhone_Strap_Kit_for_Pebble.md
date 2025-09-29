@@ -30,94 +30,89 @@ The ‘GND’ and ‘PWR’on the back frame means you can charge your Pebble Ti
 <table>
 <tr>
 <td> Microcontroller </td>
-<td> Kinetis KL02
-</td></tr>
+<td> Kinetis KL02 </td>
+</tr>
 <tr>
 <td> Core </td>
-<td> ARM® 32-bit Cortex® -M0+CPU
-</td></tr>
+<td> ARM® 32-bit Cortex® -M0+CPU </td>
+</tr>
 <tr>
 <td> Power Supply </td>
-<td> 3.3 ~ 6 V (via breakout pins)
-</td></tr>
+<td> 3.3 ~ 6 V (via breakout pins) </td>
+</tr>
 <tr>
 <td> Flash </td>
-<td> 32 KB
-</td></tr>
+<td> 32 KB </td>
+</tr>
 <tr>
 <td> SRAM </td>
-<td> 4 KB
-</td></tr>
+<td> 4 KB </td>
+</tr>
 <tr>
 <td> Clock Speed </td>
-<td> 48 MHz
-</td></tr>
+<td> 48 MHz </td>
+</tr>
 <tr>
 <td> Power Consumption </td>
-<td> 18mA@Tracking, 21mA@Acquisition
-</td></tr>
+<td> 18mA@Tracking, 21mA@Acquisition </td>
+</tr>
 <tr>
 <td> Power Saving </td>
-<td> Typ. 3mA@AlwaysLocateTM, 7uA@Backup
-
-Mode, 180uA@Standby Mode
-
-</td></tr>
+<td> Typ. 3mA@AlwaysLocateTM, 7uA@Backup Mode, 180uA@Standby Mode </td>
+</tr>
 <tr>
 <td> Channel </td>
-<td> 22(Tracking) / 66 (Acquisition)
-</td></tr>
+<td> 22(Tracking) / 66 (Acquisition) </td>
+</tr>
 <tr>
 <td> Update Rate </td>
-<td> 1Hz(Default), up to 10Hz
-</td></tr>
+<td> 1Hz(Default), up to 10Hz </td>
+</tr>
 <tr>
 <td> Horizontal Position Accuracy </td>
-<td> &lt;2.5m CEP
-</td></tr>
+<td> &lt;2.5m CEP </td>
+</tr>
 <tr>
 <td> Velocity Accuracy </td>
-<td> &lt;0.1m/s
-</td></tr>
+<td> &lt;0.1m/s </td>
+</tr>
 <tr>
 <td> Maximum Velocity </td>
-<td> Max.515m/s
-</td></tr>
+<td> Max.515m/s </td>
+</tr>
 <tr>
 <td> Cold/warm start with EASYTM </td>
-<td> 215s/5s
-</td></tr>
+<td> 215s/5s </td>
+</tr>
 <tr>
 <td> Acquisition Sensitivity </td>
-<td> -145dBm
-</td></tr>
+<td> -145dBm </td>
+</tr>
 <tr>
 <td> Tracking Sensitivity </td>
-<td>-163dBm
-</td></tr>
+<td> -163dBm </td>
+</tr>
 <tr>
 <td> Operating Temperature </td>
-<td> -40℃ to 85℃
-</td></tr>
+<td> -40℃ to 85℃ </td>
+</tr>
 <tr>
 <td> Protocols </td>
-<td> NMEA 0183/PMTK
-</td></tr>
+<td> NMEA 0183/PMTK </td>
+</tr>
 <tr>
 <td> Antenna Type </td>
-<td> Chip antenna
-</td></tr>
+<td> Chip antenna </td>
+</tr>
 <tr>
 <td> Interface </td>
-<td> Interface with Xadow GSM+BLE through
-
-I2C (7-bit address 0x05)
-
-</td></tr>
+<td> Interface with Xadow GSM+BLE through I2C (7-bit address 0x05) </td>
+</tr>
 <tr>
 <td> Dimensions </td>
-<td> 25.37mm X 20.30mm / 1” × 0.8”
-</td></tr></table>
+<td> 25.37mm X 20.30mm / 1" × 0.8" </td>
+</tr>
+</table>
 
 ###   Xadow NFC v2
 
@@ -126,56 +121,58 @@ I2C (7-bit address 0x05)
 <table>
 <tr>
 <td> Microcontroller </td>
-<td> Kinetis KL02
-</td></tr>
+<td> Kinetis KL02 </td>
+</tr>
 <tr>
 <td> Core </td>
-<td> ARM® 32-bit Cortex® -M0+CPU
-</td></tr>
+<td> ARM® 32-bit Cortex® -M0+CPU </td>
+</tr>
 <tr>
 <td> Power Supply </td>
-<td> 3.3 ~ 6V (via breakout pins)
-</td></tr>
+<td> 3.3 ~ 6V (via breakout pins) </td>
+</tr>
 <tr>
 <td> Flash </td>
-<td> 32 KB
-</td></tr>
+<td> 32 KB </td>
+</tr>
 <tr>
 <td> SRAM </td>
-<td> 4 KB
-</td></tr>
+<td> 4 KB </td>
+</tr>
 <tr>
 <td> Working Current </td>
-<td> 5mA at standby; 55mA when read/write
-</td></tr>
+<td> 5mA at standby; 55mA when read/write </td>
+</tr>
 <tr>
 <td> Radio Frequency </td>
-<td> 13.56 MHz
-</td></tr>
+<td> 13.56 MHz </td>
+</tr>
 <tr>
 <td> Supported protocols </td>
-<td> ISO/IEC 14443 Type A and ISO/IEC 14443 Type B
-</td></tr>
+<td> ISO/IEC 14443 Type A and ISO/IEC 14443 Type B </td>
+</tr>
 <tr>
 <td> Max Operating Distance </td>
-<td> ~28mm depending on the current antenna size
-</td></tr>
+<td> ~28mm depending on the current antenna size </td>
+</tr>
 <tr>
 <td> Dimensions </td>
-<td> 25.37mm × 20.30mm / 1” × 0.8”
-</td></tr></table>
+<td> 25.37mm × 20.30mm / 1” × 0.8” </td>
+</tr>
+</table>
 
 ###   Xadow Battery 100mAh
 
 <table>
 <tr>
 <td> Voltage </td>
-<td> 3.3 V
-</td></tr>
+<td> 3.3 V </td>
+</tr>
 <tr>
 <td> Dimensions </td>
-<td> 25.37mm × 20.30mm / 1” × 0.8”
-</td></tr></table>
+<td> 25.37mm × 20.30mm / 1” × 0.8” </td>
+</tr>
+</table>
 
 ##  Assembling process
 ---
@@ -207,93 +204,94 @@ So the resources which can be called from the watchapp side are as following:
 <th> Attribute </th>
 <th> R/W </th>
 <th> Data Type </th>
-<th> Data
-</th></tr>
+<th> Data </th>
+</tr>
 <tr>
 <td> 0x0 Raw Data </td>
 <td> 0x0 Raw Data </td>
 <td> RW </td>
 <td> uint8 *buffer </td>
-<td> No handler in adapter side, leave the expandability for adapter firmware programmer
-</td></tr>
+<td> No handler in adapter side, leave the expandability for adapter firmware programmer </td>
+</tr>
 <tr>
 <td> 0x2003 Battery Service </td>
 <td> 0x1001 Get voltage of the battery </td>
 <td> R </td>
 <td> uint16 </td>
-<td> The voltage of the battery for strap in Volt with a precision of 1/100. For example, the voltage is 3.70V, which would be specified as 370.
-</td></tr>
+<td> The voltage of the battery for strap in Volt with a precision of 1/100. For example, the voltage is 3.70V, which would be specified as 370. </td>
+</tr>
 <tr>
 <td> 0x2003 Battery Service </td>
 <td> 0x1002 Enable or disable charging pebble with the battery of strap </td>
 <td> RW </td>
 <td> uint8 </td>
-<td> 0: Don't charge pebble. 1: Charge pebble.
-</td></tr>
+<td> 0: Don't charge pebble. 1: Charge pebble. </td>
+</tr>
 <tr>
 <td> 0x2001 Location and Navigation Service  </td>
 <td> 0x0001 Location </td>
 <td> R </td>
 <td> sint32[2] </td>
-<td> The current longitude and latitude in degrees with a precision of 1/10^7. The latitude comes before the longitude in the data. For example, Pebble HQ is at (37.4400662, -122.1583808), which would be specified as {374400662, -1221583808}.
-</td></tr>
+<td> The current longitude and latitude in degrees with a precision of 1/10^7. The latitude comes before the longitude in the data. For example, Pebble HQ is at (37.4400662, -122.1583808), which would be specified as {374400662, -1221583808}. </td>
+</tr>
 <tr>
 <td> 0x2001 Location and Navigation Service </td>
 <td> 0x0003 Speed </td>
 <td> R </td>
 <td> uint16 </td>
-<td> The current speed in meters per second with a precision of 1/100. For example, 1.5 m/s would be specified as 150.
-</td></tr>
+<td> The current speed in meters per second with a precision of 1/100. For example, 1.5 m/s would be specified as 150. </td>
+</tr>
 <tr>
 <td> 0x2001 Location and Navigation Service </td>
 <td> 0x1001 Altitude </td>
 <td> R </td>
 <td> uint16 </td>
-<td> The current altitude in meters with a precision of 1/100. For example, 100m would be specified as 10000.
-</td></tr>
+<td> The current altitude in meters with a precision of 1/100. For example, 100m would be specified as 10000. </td>
+</tr>
 <tr>
 <td> 0x2001 Location and Navigation Service </td>
 <td> 0x0101 GPS Satellites </td>
 <td> R </td>
 <td> uint8 </td>
-<td> The number of GPS satellites (typically reported via NMEA. Note that this number is for satellites in view.
-</td></tr>
+<td> The number of GPS satellites (typically reported via NMEA. Note that this number is for satellites in view. </td>
+</tr>
 <tr>
 <td> 0x2001 Location and Navigation Service </td>
 <td> 0x0102 GPS Fix Quality </td>
 <td> R </td>
 <td> uint8 </td>
-<td> The quality of the GPS fix (reported via NMEA). The possible values are listed in the [NMEA specification](http://www.gpsinformation.org/dale/nmea.htm#GGA).
-</td></tr>
+<td> The quality of the GPS fix (reported via NMEA). The possible values are listed in the [NMEA specification](http://www.gpsinformation.org/dale/nmea.htm#GGA). </td>
+</tr>
 <tr>
 <td> 0x1E01 NFC Service </td>
 <td> 0x1001 Get UID of a NFC tag </td>
 <td> R </td>
 <td> uint8 * </td>
 <td> The UID will be returned with variable length which can be indicated in the SmartstrapReadHandler with parameter length.
- **This attribute can be notified in SmartstrapNotifyHandler.**
-</td></tr>
+ **This attribute can be notified in SmartstrapNotifyHandler.** </td>
+</tr>
 <tr>
 <td> 0x1E01 NFC Service </td>
 <td> 0x1002 Read NDEF Data </td>
 <td> R </td>
 <td> uint8 * </td>
-<td> The NDEF data will be returned with variable length which can be indicated in the SmartstrapReadHandler with parameter length.
-</td></tr>
+<td> The NDEF data will be returned with variable length which can be indicated in the SmartstrapReadHandler with parameter length. </td>
+</tr>
 <tr>
 <td> 0x1E01 NFC Service </td>
 <td> 0x1003 Write NDEF Data </td>
 <td> W </td>
 <td> uint8 * </td>
-<td> Write a uint8 buffer into NFC tag
-</td></tr>
+<td> Write a uint8 buffer into NFC tag </td>
+</tr>
 <tr>
 <td> 0x1E01 NFC Service </td>
 <td> 0x1004 Erase NDEF Data </td>
 <td> W </td>
 <td> any type </td>
-<td> Write any content or empty to trigger the erasing.
-</td></tr></table>
+<td> Write any content or empty to trigger the erasing. </td>
+</tr>
+</table>
 
 The source code of the demo pebble app can be downloaded at github: [https://github.com/Seeed-Studio/Xadow_Strap](https://github.com/Seeed-Studio/Xadow_Strap)
 

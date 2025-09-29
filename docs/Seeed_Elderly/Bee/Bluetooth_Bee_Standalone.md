@@ -56,7 +56,7 @@ Save that extra Arduino you have lying around for another project, this two-for-
 * Arduino compatilbe module with Bluetooth communication.
 <!-- *   Bluetooth Serial Port for PC when connected with [UartSBee](/UartSBee_V4) and uploading SoftSerial program to **ATMEGA168**. -->
 
-:::cautions
+:::caution
     *3.3 V power needed.
     *   While using with UartSBee, set the operation voltage to 3.3V
     *   Command to change baud rate is persistent even after reset. Hence remember the baud rate for next use.

@@ -28,87 +28,72 @@ This Seeed BLE Shield utilizes an HM-11 module to provide your Arduino/Seeeduino
 ## Specifications
 
 ---
-<table >
-<tr>
-<th> Specifications
-</th>
-<th> Value
-</th></tr>
-<tr>
-<td width="300px"> BT Version
-</td>
-<td width="500px"> Bluetooth Specification V4.0 BLE
-</td></tr>
-<tr>
-<td> Working Frequency
-</td>
-<td> 2.4GHz ISM band
-</td></tr>
-<tr>
-<td> Working Current
-</td>
-<td> &lt; 15 mA
-</td></tr>
-<tr>
-<td> Sourcing Current
-</td>
-<td> &lt; 30 mA
-</td></tr>
-<tr>
-<td> Sleeping Current
-</td>
-<td> &lt; 3 mA
-</td></tr>
-<tr>
-<td> Modulation Method
-</td>
-<td> GFSK(Gaussian Frequency Shift Keying)
-</td></tr>
-<tr>
-<td> RF Power
-</td>
-<td> -23dbm, -6dbm, 0dbm, 6dbm, can modify through AT Command AT+POWE
-</td></tr>
-<tr>
-<td> Speed
-</td>
-<td> Asynchronous: 6K Bytes, Synchronous: 6K Bytes
-</td></tr>
-<tr>
-<td> Sensibility
-</td>
-<td> ≤-84dBm at 0.1% BER
-</td></tr>
-<tr>
-<td> Security
-</td>
-<td> Authentication and encryption
-</td></tr>
-<tr>
-<td> Service
-</td>
-<td> Central &amp; Peripheral UUID FFE0,FFE1
-</td></tr>
-<tr>
-<td> Supply Power
-</td>
-<td> 5v
-</td></tr>
-<tr>
-<td> Working Temperature
-</td>
-<td> –5 ~ +65 Centigrade
-</td></tr>
-<tr>
-<td> Size
-</td>
-<td> 68mm x 43mm
-</td></tr>
-<tr>
-<td> PIN Code
-</td>
-<td> 000000(by default)
-</td></tr></table>
+<table>
+  <tr>
+    <th>Specifications</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td width="300px">BT Version</td>
+    <td width="500px">Bluetooth Specification V4.0 BLE</td>
+  </tr>
+  <tr>
+    <td>Working Frequency</td>
+    <td>2.4GHz ISM band</td>
+  </tr>
+  <tr>
+    <td>Working Current</td>
+    <td>&lt; 15 mA</td>
+  </tr>
+  <tr>
+    <td>Sourcing Current</td>
+    <td>&lt; 30 mA</td>
+  </tr>
+  <tr>
+    <td>Sleeping Current</td>
+    <td>&lt; 3 mA</td>
+  </tr>
+  <tr>
+    <td>Modulation Method</td>
+    <td>GFSK(Gaussian Frequency Shift Keying)</td>
+  </tr>
+  <tr>
+    <td>RF Power</td>
+    <td>-23dbm, -6dbm, 0dbm, 6dbm, can modify through AT Command AT+POWE</td>
+  </tr>
+  <tr>
+    <td>Speed</td>
+    <td>Asynchronous: 6K Bytes, Synchronous: 6K Bytes</td>
+  </tr>
+  <tr>
+    <td>Sensibility</td>
+    <td>≤-84dBm at 0.1% BER</td>
+  </tr>
+  <tr>
+    <td>Security</td>
+    <td>Authentication and encryption</td>
+  </tr>
+  <tr>
+    <td>Service</td>
+    <td>Central &amp; Peripheral UUID FFE0,FFE1</td>
+  </tr>
+  <tr>
+    <td>Supply Power</td>
+    <td>5v</td>
+  </tr>
+  <tr>
+    <td>Working Temperature</td>
+    <td>–5 ~ +65 Centigrade</td>
+  </tr>
+  <tr>
+    <td>Size</td>
+    <td>68mm x 43mm</td>
+  </tr>
+  <tr>
+    <td>PIN Code</td>
+    <td>000000(by default)</td>
+  </tr>
+</table>
 
 ## Hardwarw Overview
 

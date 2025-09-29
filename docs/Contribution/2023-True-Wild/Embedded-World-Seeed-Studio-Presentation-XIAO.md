@@ -36,7 +36,7 @@ last_update:
 <div class="embedded_world_container">
     <a class="embedded_world_item" style={{textAlign: 'center'}} href="/XIAO_BLE">
             <div class="embedded_world_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Seeed Studio XIAO nRF52840 Sense</font></div>
-            <div class="embedded_world_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Advanced version of XIAO nRF52840 with onboard microphone and 3-axis IMU</font></div>
+            <div class="embedded_world_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Advanced version of XIAO nRF52840 with onboard microphone and 6-axis IMU</font></div>
     </a>
 </div>
 

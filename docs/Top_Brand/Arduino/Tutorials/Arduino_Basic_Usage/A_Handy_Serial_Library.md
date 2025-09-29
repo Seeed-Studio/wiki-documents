@@ -59,7 +59,7 @@ As for C++, one line is enough also:
 
 
 ```cpp
-cout &lt;&lt; "a[" &lt;&lt; 3 &lt;&lt; "] = " &lt;&lt; 5 &lt;&lt; endl;
+cout << "a[" << 3 << "] = " << 5 << endl;
 ```
 
 I will glad that if Arduino has the function such as printf or cout, it’s really convenient. It’s lucky that some guy had written such library, you can refer to [http://arduiniana.org/libraries/streaming/](http://arduiniana.org/libraries/streaming/)

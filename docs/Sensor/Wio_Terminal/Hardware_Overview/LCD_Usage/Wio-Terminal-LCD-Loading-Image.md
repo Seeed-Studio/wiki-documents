@@ -48,7 +48,7 @@ This repo describes how to load and display images from the SD card to the TFT L
 :::
 #### Option 1: Using Prebuilt Windows Executables (Windows only):
 
-- **Step 2-1-1:** We have prepared the executable by using the [Pyinstaller](https://pyinstaller.org/en/stable/){target=_blank} package, you can download the executable by simply clicking [bmp_converter.exe](https://files.seeedstudio.com/wiki/Wio-Terminal/res/bmp_converter.exe)
+- **Step 2-1-1:** We have prepared the executable by using the [Pyinstaller](https://pyinstaller.org/en/stable/) package, you can download the executable by simply clicking [bmp_converter.exe](https://files.seeedstudio.com/wiki/Wio-Terminal/res/bmp_converter.exe)
 
 - **Step 2-1-2:** Put the downloaded `bmp_converter.exe` into the same directory with the `bmp folder` created in `Step 1-3`.
 

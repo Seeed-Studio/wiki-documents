@@ -24,7 +24,7 @@ The advantage of OLED is its power consumption. In addition to E-ink, the OLED m
 *   Dimensions: 25.43mm x 20.35mm
 *   Connection: I2C (address 0x3C)
 
-:::cautions
+:::caution
     Please notice: heavy impact or stress on the OLED will cause the breakdown of screen..
 :::
 ## Demonstration

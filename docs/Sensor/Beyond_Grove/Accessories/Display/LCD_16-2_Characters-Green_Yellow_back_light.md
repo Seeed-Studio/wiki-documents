@@ -91,372 +91,269 @@ V<sub>ss</sub>=0V,V<sub>DD</sub>=5V,T<sub>OP</sub>=25℃
 
 <table>
 <tr>
-<th>Item
-</th>
-<th>Symbol
-</th>
-<th>MIN
-</th>
-<th>TYP
-</th>
-<th>MAX
-</th>
-<th>Unit
-</th></tr>
+<th>Item</th>
+<th>Symbol</th>
+<th>MIN</th>
+<th>TYP</th>
+<th>MAX</th>
+<th>Unit</th>
+</tr>
 <tr>
-<td width="200px">E cycle time
-</td>
-<td width="100px">tc
-</td>
-<td width="100px">1500
-</td>
-<td width="100px"> -
-</td>
-<td width="100px"> -
-</td>
-<td width="100px">ns
-</td></tr>
+<td width="200px">E cycle time</td>
+<td width="100px">tc</td>
+<td width="100px">1500</td>
+<td width="100px">-</td>
+<td width="100px">-</td>
+<td width="100px">ns</td>
+</tr>
 <tr>
-<td>E high level width
-</td>
-<td>twh
-</td>
-<td>700
-</td>
-<td> -
-</td>
-<td> -
-</td>
-<td>ns
-</td></tr>
+<td>E high level width</td>
+<td>twh</td>
+<td>700</td>
+<td>-</td>
+<td>-</td>
+<td>ns</td>
+</tr>
 <tr>
-<td>E low level width
-</td>
-<td>twl
-</td>
-<td>700
-</td>
-<td> -
-</td>
-<td> -
-</td>
-<td>ns
-</td></tr>
+<td>E low level width</td>
+<td>twl</td>
+<td>700</td>
+<td>-</td>
+<td>-</td>
+<td>ns</td>
+</tr>
 <tr>
-<td>E rise time
-</td>
-<td>tr
-</td>
-<td> -
-</td>
-<td> -
-</td>
-<td>18
-</td>
-<td>ns
-</td></tr>
+<td>E rise time</td>
+<td>tr</td>
+<td>-</td>
+<td>-</td>
+<td>18</td>
+<td>ns</td>
+</tr>
 <tr>
-<td>E fall time
-</td>
-<td>tf
-</td>
-<td> -
-</td>
-<td> -
-</td>
-<td>18
-</td>
-<td>ns
-</td></tr>
+<td>E fall time</td>
+<td>tf</td>
+<td>-</td>
+<td>-</td>
+<td>18</td>
+<td>ns</td>
+</tr>
 <tr>
-<td>Address set-up time
-</td>
-<td>tas
-</td>
-<td>5
-</td>
-<td> -
-</td>
-<td> -
-</td>
-<td>ns
-</td></tr>
+<td>Address set-up time</td>
+<td>tas</td>
+<td>5</td>
+<td>-</td>
+<td>-</td>
+<td>ns</td>
+</tr>
 <tr>
-<td>Address set-up time
-</td>
-<td>tasu
-</td>
-<td>210
-</td>
-<td> -
-</td>
-<td> -
-</td>
-<td>ns
-</td></tr>
+<td>Address set-up time</td>
+<td>tasu</td>
+<td>210</td>
+<td>-</td>
+<td>-</td>
+<td>ns</td>
+</tr>
 <tr>
-<td>Address hold time
-</td>
-<td>tah
-</td>
-<td>15
-</td>
-<td> -
-</td>
-<td> -
-</td>
-<td>ns
-</td></tr>
+<td>Address hold time</td>
+<td>tah</td>
+<td>15</td>
+<td>-</td>
+<td>-</td>
+<td>ns</td>
+</tr>
 <tr>
-<td>Data set-up time
-</td>
-<td>tdsw
-</td>
-<td>300
-</td>
-<td> -
-</td>
-<td> -
-</td>
-<td>ns
-</td></tr>
+<td>Data set-up time</td>
+<td>tdsw</td>
+<td>300</td>
+<td>-</td>
+<td>-</td>
+<td>ns</td>
+</tr>
 <tr>
-<td>Data delay time
-</td>
-<td>td
-</td>
-<td> -
-</td>
-<td> -
-</td>
-<td> 480
-</td>
-<td>ns
-</td></tr>
+<td>Data delay time</td>
+<td>td</td>
+<td>-</td>
+<td>-</td>
+<td>480</td>
+<td>ns</td>
+</tr>
 <tr>
-<td>Data hold time(write)
-</td>
-<td>tdhw
-</td>
-<td>15
-</td>
-<td> -
-</td>
-<td> -
-</td>
-<td>ns
-</td></tr>
+<td>Data hold time(write)</td>
+<td>tdhw</td>
+<td>15</td>
+<td>-</td>
+<td>-</td>
+<td>ns</td>
+</tr>
 <tr>
-<td>Data hold time(read)
-</td>
-<td>tdhr
-</td>
-<td>30
-</td>
-<td> -
-</td>
-<td> -
-</td>
-<td>ns
-</td></tr></table>
-<table >
+<td>Data hold time(read)</td>
+<td>tdhr</td>
+<td>30</td>
+<td>-</td>
+<td>-</td>
+<td>ns</td>
+</tr>
+</table>
+<table>
 <tr>
-<td><div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/LCD-module-WTiming.jpg" /></div>
+<td>
+<div align="center">
+<img width={1000} src="https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/LCD-module-WTiming.jpg" />
+</div>
 </td>
-<td><div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/LCD-module-RTiming.jpg" /></div>
-</td></tr>
+<td>
+<div align="center">
+<img width={1000} src="https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/LCD-module-RTiming.jpg" />
+</div>
+</td>
+</tr>
 <tr>
-<td><strong>Host Writing Timing Diagram</strong>
-</td>
-<td><strong>Host Read Timing Diagram</strong>
-</td></tr></table>
+<td><strong>Host Writing Timing Diagram</strong></td>
+<td><strong>Host Read Timing Diagram</strong></td>
+</tr>
+</table>
 
 ## Pin definition and Rating
 
 ---
 <table>
 <tr>
-<th>Pin No
-</th>
-<th>Pin Name
-</th>
-<th>I/O
-</th>
-<th>Descriptions
-</th></tr>
+<th>Pin No</th>
+<th>Pin Name</th>
+<th>I/O</th>
+<th>Descriptions</th>
+</tr>
 <tr>
-<td width="100px">1
-</td>
-<td width="100px">VSS
-</td>
-<td width="100px">Power
-</td>
-<td width="500px">Negative Power supply, Ground(0V)
-</td></tr>
+<td width="100px">1</td>
+<td width="100px">VSS</td>
+<td width="100px">Power</td>
+<td width="500px">Negative Power supply, Ground(0V)</td>
+</tr>
 <tr>
-<td>2
-</td>
-<td>VDD
-</td>
-<td>Power
-</td>
-<td>Positive power supply
-</td></tr>
+<td>2</td>
+<td>VDD</td>
+<td>Power</td>
+<td>Positive power supply</td>
+</tr>
 <tr>
-<td>3
-</td>
-<td>V0
-</td>
-<td>Power
-</td>
-<td>LCD contrast reference
-</td></tr>
+<td>3</td>
+<td>V0</td>
+<td>Power</td>
+<td>LCD contrast reference</td>
+</tr>
 <tr>
-<td>4
-</td>
-<td>RS
-</td>
-<td>Input
-</td>
+<td>4</td>
+<td>RS</td>
+<td>Input</td>
 <td>
-
 * RS=HIGH:DB0-DB7=Display RAM data
-
 * RS=LOW:DB0-DB7=Instruction data
-
-<div>
-  5
-  R/W
-  Input
-</div>
-
-In read mode
-
-R/W=HIGH
-
-Data read form the LCD module,
-
-data appears at DB0-DB7 and can be read by the host while, E=H and the device is being selected
-
-In write mode
-
-R/W=LOW;
-
-Data write to the LCD module,
-
-data appears at DB0-DB7 will be written into the LCD module at E=H-&gt;L and device is being selected.
-
-</td></tr>
+</td>
+</tr>
 <tr>
-<td>6
+<td>5</td>
+<td>R/W</td>
+<td>Input</td>
+<td>
+In read mode R/W=HIGH
+Data read form the LCD module, data appears at DB0-DB7 and can be read by the host while, E=H and the device is being selected
+
+In write mode R/W=LOW;
+Data write to the LCD module, data appears at DB0-DB7 will be written into the LCD module at E=H-&gt;L and device is being selected.
 </td>
-<td>E
-</td>
-<td>Input
-</td></tr>
+</tr>
 <tr>
-<td>7
-</td>
-<td>DB0
-</td>
-<td>I/O
-</td>
-<td rowspan="3">Data bus;
-
-Three state I/O terminal for display data or instruction data
-
-</td></tr>
+<td>6</td>
+<td>E</td>
+<td>Input</td>
+<td></td>
+</tr>
 <tr>
-<td>..
-</td>
-<td>..
-</td>
-<td>..
-</td></tr>
+<td>7</td>
+<td>DB0</td>
+<td>I/O</td>
+<td>Data bus; Three state I/O terminal for display data or instruction data</td>
+</tr>
 <tr>
-<td>14
-</td>
-<td>DB7
-</td>
-<td>I/O
-</td></tr>
+<td>8</td>
+<td>DB1</td>
+<td>I/O</td>
+<td>Data bus; Three state I/O terminal for display data or instruction data</td>
+</tr>
 <tr>
-<td>15
-</td>
-<td>CS1
-</td>
-<td>input
-</td>
-<td>Chip Selection,
-
-When CS1=1(*1)
-
-Enable access to the Left Side (64column) of the LCD module
-
-</td></tr>
+<td>9</td>
+<td>DB2</td>
+<td>I/O</td>
+<td>Data bus; Three state I/O terminal for display data or instruction data</td>
+</tr>
 <tr>
-<td>16
-</td>
-<td>CS2
-</td>
-<td>Input
-</td>
-<td>Chip Selection,
-
-When CS2=1(*1)
-
-Enable access to the Right Side (64column) of the LCD module
-
-</td></tr>
+<td>10</td>
+<td>DB3</td>
+<td>I/O</td>
+<td>Data bus; Three state I/O terminal for display data or instruction data</td>
+</tr>
 <tr>
-<td>17
-</td>
-<td> /RST
-</td>
-<td>Input
-</td>
-<td>Reset signal
-
-/RST = L,
-
-Display off
-
-display start line register becomes 0
-
-no command or instruction data could be accepted
-
-/RST = H
-
-Normal running
-
-</td></tr>
+<td>11</td>
+<td>DB4</td>
+<td>I/O</td>
+<td>Data bus; Three state I/O terminal for display data or instruction data</td>
+</tr>
 <tr>
-<td>18
-</td>
-<td>VOUT
-</td>
-<td>Output
-</td>
-<td>Power Booster output for V0
-</td></tr>
+<td>12</td>
+<td>DB5</td>
+<td>I/O</td>
+<td>Data bus; Three state I/O terminal for display data or instruction data</td>
+</tr>
 <tr>
-<td>19
-</td>
-<td>BLA
-</td>
-<td>Power
-</td>
-<td>Positive Power for LED backlight
-</td></tr>
+<td>13</td>
+<td>DB6</td>
+<td>I/O</td>
+<td>Data bus; Three state I/O terminal for display data or instruction data</td>
+</tr>
 <tr>
-<td>20
-</td>
-<td>BLK
-</td>
-<td>Power
-</td>
-<td>Negative Power for LED backlight
-</td></tr></table>
+<td>14</td>
+<td>DB7</td>
+<td>I/O</td>
+<td>Data bus; Three state I/O terminal for display data or instruction data</td>
+</tr>
+<tr>
+<td>15</td>
+<td>CS1</td>
+<td>input</td>
+<td>Chip Selection, When CS1=1(*1) Enable access to the Left Side (64column) of the LCD module</td>
+</tr>
+<tr>
+<td>16</td>
+<td>CS2</td>
+<td>Input</td>
+<td>Chip Selection, When CS2=1(*1) Enable access to the Right Side (64column) of the LCD module</td>
+</tr>
+<tr>
+<td>17</td>
+<td>/RST</td>
+<td>Input</td>
+<td>Reset signal /RST = L, Display off display start line register becomes 0 no command or instruction data could be accepted /RST = H Normal running</td>
+</tr>
+<tr>
+<td>18</td>
+<td>VOUT</td>
+<td>Output</td>
+<td>Power Booster output for V0</td>
+</tr>
+<tr>
+<td>19</td>
+<td>BLA</td>
+<td>Power</td>
+<td>Positive Power for LED backlight</td>
+</tr>
+<tr>
+<td>20</td>
+<td>BLK</td>
+<td>Power</td>
+<td>Negative Power for LED backlight</td>
+</tr>
+</table>
 
 Note:
 
@@ -525,46 +422,32 @@ When /RST pull low, the LCD mudule will:
 
 While /RST is low, no instruction can be accepted except status read. Therefore, execute other instructions after making sure that DB4=0(cleat /RST) and DB7=0(ready) by status read instruction. The conditions of power supply at initial power up are as follow:
 
-<table >
+<table>
 <tr>
-<th>Item
-</th>
-<th>Symbol
-</th>
-<th>Min
-</th>
-<th>Tpy
-</th>
-<th>Max
-</th>
-<th>Unit
-</th></tr>
+<th>Item</th>
+<th>Symbol</th>
+<th>Min</th>
+<th>Tpy</th>
+<th>Max</th>
+<th>Unit</th>
+</tr>
 <tr>
-<td width="200px">Reset time
-</td>
-<td width="100px">trs
-</td>
-<td width="100px">2.0
-</td>
-<td width="100px"> -
-</td>
-<td width="100px"> -
-</td>
-<td width="100px"> us
-</td></tr>
+<td width="200px">Reset time</td>
+<td width="100px">trs</td>
+<td width="100px">2.0</td>
+<td width="100px">-</td>
+<td width="100px">-</td>
+<td width="100px">us</td>
+</tr>
 <tr>
-<td>Rise time
-</td>
-<td>tr
-</td>
-<td> -
-</td>
-<td> -
-</td>
-<td>150
-</td>
-<td>ns
-</td></tr></table>
+<td>Rise time</td>
+<td>tr</td>
+<td>-</td>
+<td>-</td>
+<td>150</td>
+<td>ns</td>
+</tr>
+</table>
 
 ![](https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/VFD-lcd-module-trtx.jpg)
 

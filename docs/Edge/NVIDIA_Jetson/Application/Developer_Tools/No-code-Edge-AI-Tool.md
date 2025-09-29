@@ -213,7 +213,7 @@ For **object detection** block, the settings are as follows.
     - 5 captions per image
     - 250,000 people with keypoints
 
-    <div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/node-red/22.png"/></div>
+    <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/node-red/22.png"/></div>
 
 Once you have done so, click on the **deploy** button in the top right hand corner of the interface and the program stream will start running.
 
@@ -457,11 +457,11 @@ If there is no docker started as in the picture above, try restarting the docker
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

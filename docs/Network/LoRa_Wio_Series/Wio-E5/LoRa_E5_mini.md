@@ -17,7 +17,8 @@ last_update:
 <!-- <p style="text-align:center"><a href="https://www.seeedstudio.com/LoRa-E5-mini-STM32WLE5JC-p-4869.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> -->
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/LoRa-E5-mini-STM32WLE5JC-p-4869.html"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/LoRa-E5-mini-STM32WLE5JC-p-4869.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -124,6 +125,7 @@ If you are unfamiliar with LoRa® and LoRaWAN® technology, please check out thi
 </tr>
 </tbody>
 </table>
+
 <div></div>
 <div></div>
 <div></div>
@@ -172,6 +174,7 @@ The AT command firmware contains a bootloader for DFU and the AT application. Th
 
 - Factory AT Firmware is programmed with RDP(Read Protection) Level 1, developers need to remove RDP first with STM32Cube Programmer. Note that regression RDP to level 0 will cause a flash memory mass to erase and the Factory AT Firmware can't be restored again.
 - The "PB13/SPI_SCK/BOOT" pin on the Wio-E5 module is just a normal GPIO, not the "BOOT0" pin of the MCU. This "PB13/SPI_SCK/BOOT" pin is used in the bootloader of the Factory AT firmware, to decide to jump to APP or stay in bootloader(for DFU). The real "BOOT0" pin doesn't pinout to the module, so users need to be careful when developing the low-power applications
+
 :::
 
 **2. Clock Configuration**
@@ -213,7 +216,7 @@ The AT command firmware contains a bootloader for DFU and the AT application. Th
 | Command Format | Return | Description |
 | --- | --- | --- |
 | AT | +AT: OK | Test command |
-| AT+VER | +VER: $MAJOR.$MINOR.$PATCH <br></br> +VER: 4.0.11 | Check Firmware version |
+| AT+VER | +VER: \$MAJOR.\$MINOR.\$PATCH <br></br> +VER: 4.0.11 | Check Firmware version |
 | AT+ID // Read all, DevAddr( ABP), DevEui( OTAA), AppEui( OTAA)<br></br>AT+ID = DevAddr // Read Device Address<br></br>AT+ID = DevEui // Read DevEui<br></br>AT+ID = AppEui // Read AppEui | +ID: DevAddr, xx: xx: xx:xx<br></br>+ID: DevEui, xx:xx:xx:xx:xx:xx:xx:xx<br></br>+ID: AppEui13, xx:xx:xx:xx:xx:xx:xx | Use to check the ID of the LoRaWAN module. ID is treated as big endian numbers. |
 | AT+ID = DevAddr, “01234567” // Set new DevAddr<br></br>AT+ID = DevEui, “0123456789ABCDEF” // Set new DevEui<br></br>AT+ID = AppEui, “0123456789ABCDEF” // Set new AppEui | +ID: DevAddr, 01:23:45:67<br></br>+ID: DevEui, 01:23:45:67:89:AB:CD:EF<br></br>+ID: AppEui, 01:23:45:67:89:AB:CD:EF | Change the ID |
 | AT+RESET | +RESET: OK | Reset the module |
@@ -418,6 +421,14 @@ This application will connect Wio-E5 mini with TTN (The Things Network) and send
 - **Step 2.** Extract the ZIP file and navigate to `LoRaWan-E5-Node > Projects > Applications > LoRaWAN > LoRaWAN_End_Node > STM32CubeIDE`
 
 - **Step 3.** Double click the **.project** file
+
+  **Note:** For MAC, it should take one of the options below to open the project:
+
+  - **1.** Navigate to `Wio-E5-Node > Projects > Applications > LoRaWAN > LoRaWAN_End_Node`. Doulble click file "LoRaWAN_End_Node.ioc".
+
+  - **2.** Use "Import Projects from File System or Archieve" like below images.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/MAC.png" alt="pir" width={600} height="auto" /></p>
 
 - **Step 4.** Right click on the project and click **Properties**
 
@@ -649,11 +660,11 @@ Please submit any technical issue into our [forum](http://forum.seeedstudio.com/
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

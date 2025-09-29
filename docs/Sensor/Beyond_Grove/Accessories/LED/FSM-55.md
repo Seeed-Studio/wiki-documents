@@ -36,8 +36,7 @@ When you use the PCB design for yourself, please modify it for your own purpose.
 Firmware is available as Free Software under GPLv3+.
 
 *   http://git.gniibe.org/gitweb/?p=chopstx/chopstx.git;h=refs/heads/cortex-m0-support
-<pre> $ git clone --branch cortex-m0-support git://git.gniibe.org/chopstx/chopstx.git
-</pre>
+<pre>$ git clone --branch cortex-m0-support git://git.gniibe.org/chopstx/chopstx.git</pre>
 
 The main program is under: example-fsm-55 directory.
 
@@ -54,16 +53,14 @@ I use my own tool, which originally written for Gnuk Project (for FST-01).
 I needed to modify the tool (stlinkv2.py) so that it can work with Cortex-M0 MCU.
 
 *   http://git.gniibe.org/gitweb/?p=gnuk/gnuk.git;h=refs/heads/stlink-m0-support
-<pre> $ git clone --branch stlink-m0-support git://git.gniibe.org/gnuk/gnuk.git
-</pre>
+<pre>$ git clone --branch stlink-m0-support git://git.gniibe.org/gnuk/gnuk.git</pre>
 
 It was originally developed for FST-01.  And there is something specific to FST-01 like SPI flash checking.  You need to invoke it with -i option (inhibit SPI flash checking) for FSM-55.
 
 `
 `
 
-<pre> $ stlinkv2.py -i ...
-</pre>
+<pre>$ stlinkv2.py -i ...</pre>
 
 ##   Reasons: Free Tools are very important for us!
 

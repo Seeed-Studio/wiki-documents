@@ -31,7 +31,7 @@ Seeed Studio XIAO ESP32C3 supports WiFi connectivity with IEEE 802.11b/g/n. This
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/cable-connect.png" alt="pir" width={120} height="auto" /></div>
 
-## Mode 1: STA Mode (Station Mode) - Scan WiFi networks 
+## Mode 1: STA Mode (Station Mode) - Scan WiFi networks
 
 ### Scan Wi-Fi access points
 
@@ -155,6 +155,7 @@ void loop() {
   delay(5000);
 }
 ```
+
   </TabItem>
 </Tabs>
 
@@ -353,11 +354,11 @@ For more information on this section, please refer to the relevant tutorials.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

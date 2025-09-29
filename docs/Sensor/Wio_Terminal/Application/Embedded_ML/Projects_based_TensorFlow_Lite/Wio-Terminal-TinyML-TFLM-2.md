@@ -27,12 +27,15 @@ You will learn how to apply model optimization techniques, that will allow not o
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-TFLM-2/result.gif" /></div>
 
 This is the end result, you can see there are current temperature,  humidity and atmospheric  pressure values displayed on the screen,  together with city name,  predicted weather type and predicted  precipitation chance – and in the bottom of the screen there is a log output field, which you can easily re-purpose for displaying extreme weather information or other relevant information.  While it looks good and useful as it is, there is a lot of things you  can add yourself – for example above mentioned news/tweets output on  the  screen or using deep sleep mode to conserve energy and make it  battery  powered and so on.
+
 In this project we will be dealing with time series data, as we did multiple times before - the only big difference this time is that the time period is much larger for weather prediction. We are going to take a measurement every hour and perform prediction on 24 hours of data. Also since we're going to predict the average weather type for next 24 hours, additionally we will predict a precipitation chance for next 24 hours, with the same model. In order to do that we will utilize Keras Functional API and multi-output model.
 
 Within multi-output model there is going to be "a stem", common for both outputs, which going to "branch out" to two different outputs. Main benefit of using multi-output model as compared to two independent models here is that the data and learned features used for predicting weather type and precipitation chance are highly related.
 
 If you are making this project on Windows, first thing you’ll need to do is to download nightly version of Arduino IDE, since current stable version 1.18.3 will not compile sketches with a lot of   library dependencies (the issue is that linker command during  compilation exceeds maximum length on Windows).
+
 Second, you need to make sure you have 1.8.2 version of Seeed SAMD board definitions in Arduino IDE.
+
 Finally,  since we’re using a Convolutional neural  network and build it with Keras API, it contains an operation not  supported by current stable  version of Tensorflow Micro. Browsing  Tensorflow issues on Github I found that there is a pull request for adding this op (EXPAND_DIMS) to  list of available ops, but it was not merged into master at the time of making this video. You can git clone the Tensorflow repository,  switch to PR branch and compile Arduino library by  executing./tensorflow/lite/micro/tools/ci_build/test_arduino.sh on   Linux machine – the resulting library can be found in   tensorflow/lite/micro/tools/make/gen/arduino_x86_64/prj/tensorflow_lite.zip.   Alternatively, you can download already compiled  library from this project Github repository and place it into  your  Arduino sketches libraries folder – just make sure you only have  one  Tensorflow lite library at the time!
 
 ## Understanding the data

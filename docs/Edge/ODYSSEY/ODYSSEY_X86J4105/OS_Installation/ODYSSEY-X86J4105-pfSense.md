@@ -30,7 +30,7 @@ For more, you also visit the official [pfSense documents](https://docs.netgate.c
 
 - A Working Computer
 
-- USB Drive x 2 (<8GB is recommended)
+- USB Drive x 2 (less than 8GB is recommended)
 
 - A Monitor
 

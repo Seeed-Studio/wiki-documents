@@ -21,8 +21,8 @@ sku:
   <div className="left-icon" style={{display: 'table-cell', verticalAlign: 'middle', backgroundColor: '#FC4A1A', paddingTop: 10, boxSizing: 'border-box', height: 'auto', width: 38, textAlign: 'center'}}><img style={{width: 26, verticalAlign: 'middle'}} src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Danger.svg" alt="attention icon" /></div>
   <div className="right-desc" style={{display: 'table-cell', verticalAlign: 'middle', paddingLeft: 15, boxSizing: 'border-box', width: 'calc(95% - 38px)'}}>
     <p style={{color: '#000000', fontWeight: 'bold', marginTop: 10}}>Important Notes</p>
-    <p style={{color: '#000000', fontSize: 14}}> It <b>wipes the old BIOS settings</b>, so you would need to <b>re-activate</b> your Windows(if using Windows) again (wipes the activation key, needs Internet to activate again). <br />
-    </p></div>
+    <p style={{color: '#000000', fontSize: 14}}> It <b>wipes the old BIOS settings</b>, so you would need to <b>re-activate</b> your Windows(if using Windows) again (wipes the activation key, needs Internet to activate again). <br /></p>
+  </div>
 </div>
 
 ## Upgrading BIOS

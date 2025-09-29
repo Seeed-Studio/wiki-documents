@@ -11,5 +11,9 @@
     "no-hard-tabs": true,
     "no-trailing-spaces": {
       "br_spaces": 2
-    }
+    },
+    "MD004": {
+      "style": "dash"
+    },
+    "MD034": false
   }

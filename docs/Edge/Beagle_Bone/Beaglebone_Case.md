@@ -14,7 +14,7 @@ last_update:
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/1130070001_4.jpg" /></div>
 
-The acrylic case is used for BeagleBone®, like the Raspberry PI B+ case.It’s made of acrylic sheet. manufacture by laser cutting, CNC milling, and hot bending. almost all handmade, Looks very compact and beautiful, Only 4 pieces sheets in total, so easy to assembled. It's strong enought, not easy break like other 6 acrylic sheets case. In the box rounded corners and beveled edges  .you will feel very comfortable when you hold it.
+The acrylic case is used for BeagleBone®, like the Raspberry PI B+ case.It's made of acrylic sheet. manufacture by laser cutting, CNC milling, and hot bending. almost all handmade, Looks very compact and beautiful, Only 4 pieces sheets in total, so easy to assembled. It's strong enought, not easy break like other 6 acrylic sheets case. In the box rounded corners and beveled edges  .you will feel very comfortable when you hold it.
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/BeagleBone-Case-p-2285.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png"/></a></p>
 
@@ -61,76 +61,59 @@ Assembly diagram is as follows:
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/20141016183208.jpg" /></div>
 
 <table cellSpacing={0} width="80%">
-  <tbody><tr>
-      <th scope="col"> Part
-      </th>
-      <th scope="col"> Package
-      </th>
-      <th scope="col"> Qty
-      </th></tr>
+  <tbody>
     <tr>
-      <th scope="row"> Top Case
-      </th>
-      <td> 4mm Thickness
-      </td>
-      <td> 1
-      </td></tr>
+      <th scope="col"> Part </th>
+      <th scope="col"> Package </th>
+      <th scope="col"> Qty </th>
+    </tr>
     <tr>
-      <th scope="row"> Bottom Case
-      </th>
-      <td> 4mm Thickness
-      </td>
-      <td> 1
-      </td></tr>
+      <th scope="row"> Top Case </th>
+      <td> 4mm Thickness </td>
+      <td> 1 </td>
+    </tr>
     <tr>
-      <th scope="row"> Side Sheet 1
-      </th>
-      <td> 2.5mm Thickness
-      </td>
-      <td> 1
-      </td></tr>
+      <th scope="row"> Bottom Case </th>
+      <td> 4mm Thickness </td>
+      <td> 1 </td>
+    </tr>
     <tr>
-      <th scope="row"> Side Sheet 2
-      </th>
-      <td> 2.5mm Thickness
-      </td>
-      <td> 1
-      </td></tr>
+      <th scope="row"> Side Sheet 1 </th>
+      <td> 2.5mm Thickness </td>
+      <td> 1 </td>
+    </tr>
     <tr>
-      <th scope="row"> Metal Screw
-      </th>
-      <td> M3*4
-      </td>
-      <td> 4
-      </td></tr>
+      <th scope="row"> Side Sheet 2 </th>
+      <td> 2.5mm Thickness </td>
+      <td> 1 </td>
+    </tr>
     <tr>
-      <th scope="row">Nylon Screw
-      </th>
-      <td> M3*6
-      </td>
-      <td> 4
-      </td></tr>
+      <th scope="row"> Metal Screw </th>
+      <td> M3*4 </td>
+      <td> 4 </td>
+    </tr>
     <tr>
-      <th scope="row"> Screw Column
-      </th>
-      <td> M3*8
-      </td>
-      <td> 4
-      </td></tr>
+      <th scope="row"> Nylon Screw </th>
+      <td> M3*6 </td>
+      <td> 4 </td>
+    </tr>
     <tr>
-      <th scope="row">Nylon Rivet
-      </th>
-      <td> R2048
-      </td>
-      <td> 4
-      </td></tr>
+      <th scope="row"> Screw Column </th>
+      <td> M3*8 </td>
+      <td> 4 </td>
+    </tr>
     <tr>
-      <th scope="row"> Silicone Cushion
-      </th>
-      <td> Ø10X3
-      </td>
-      <td> 4
-      </td></tr></tbody></table>
+      <th scope="row"> Nylon Rivet </th>
+      <td> R2048 </td>
+      <td> 4 </td>
+    </tr>
+    <tr>
+      <th scope="row"> Silicone Cushion </th>
+      <td> Ø10X3 </td>
+      <td> 4 </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Tech Support & Product Discussion
 

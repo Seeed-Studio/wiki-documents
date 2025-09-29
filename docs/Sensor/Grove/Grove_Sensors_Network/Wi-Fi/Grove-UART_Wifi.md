@@ -58,7 +58,7 @@ Grove - UART WiFi is a serial transceiver module featuring the ubiquitous ESP826
 * Integrated temperature sensor
 * Serial UART Interface
 * Multi-queue QoS management
-* Wake up and transmit packets in < 2ms
+* Wake up and transmit packets in &lt; 2ms
 * Metal shielding
 * On-board ceramic antenna
 * Reset switch
@@ -94,11 +94,11 @@ Here is block diagram of Grove - UART WiF module which consists of following par
 * AT command set
 * SDIO 1.1/2.0, SPI, UART
 * Five power states: OFF, DEEP_SLEEP, SLEEP, WAKEUP and ON.
-* Standby power consumption of < 1.0mW (DTIM=3)
+* Standby power consumption of &lt; 1.0mW (DTIM=3)
 * Integrated TR switch, balun, LNA, power amplifier and matching network
 * Integrated PLLs, regulators, DCXO and power management units
 * +19.5dBm output power in 802.11b mode
-* Power down leakage current of <10uA
+* Power down leakage current of &lt;10uA
 * Hardware accelerators for CCMP (CBC-MAC, counter mode), TKIP (MIC, RC4), WAPI (SMS4), WEP (RC4), CRC
 * WPA/WPA2 PSK, and WPS driver
 * A-MPDU & A-MSDU aggregation & 0.4ms guard interval
@@ -151,9 +151,9 @@ After this section, you can make Grove - UART WiFi run with only few steps.
 |<a href="https://www.seeedstudio.com/Seeeduino-Lite-p-1487.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove---OLED-Display-0.96%22-p-781.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Uart-Wifi-p-2495.html" target="_blank">Get One Now</a>|
 
 :::note
-    **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
+    **Note 1:** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
 
-    **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy
+    **Note 2:** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy
 :::
 
 #### Hardware

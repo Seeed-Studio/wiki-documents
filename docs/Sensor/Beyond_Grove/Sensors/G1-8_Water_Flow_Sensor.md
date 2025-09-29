@@ -30,62 +30,52 @@ We have a comprehensive line of water flow sensors in different diameters. Check
 
 ##  Specification
 
-<table >
-<tr>
-<td>Mini. Wokring Voltage
-</td>
-<td>DC 4.5V
-</td></tr>
-<tr>
-<td>Max. Working Current
-</td>
-<td>15mA(DC 5V)
-</td></tr>
-<tr>
-<td width="400px">Working Voltage
-</td>
-<td width="400px">5V～24V
-</td></tr>
-<tr>
-<td>Flow Rate Range
-</td>
-<td>0.3~6L/min
-</td></tr>
-<tr>
-<td>Load Capacity
-</td>
-<td>≤10mA(DC 5V)
-</td></tr>
-<tr>
-<td>Operating Temperature
-</td>
-<td>≤80℃
-</td></tr>
-<tr>
-<td>Liquid Temperature
-</td>
-<td>≤120℃
-</td></tr>
-<tr>
-<td>Operating Humidity
-</td>
-<td>35%～90%RH
-</td></tr>
-<tr>
-<td>Water Pressure
-</td>
-<td>≤0.8MPa
-</td></tr>
-<tr>
-<td>Storage Temperature
-</td>
-<td>-25℃～+80℃
-</td></tr>
-<tr>
-<td>Storage Humidity
-</td>
-<td>25%～95%RH
-</td></tr></table>
+<table>
+  <tr>
+    <td>Mini. Wokring Voltage</td>
+    <td>DC 4.5V</td>
+  </tr>
+  <tr>
+    <td>Max. Working Current</td>
+    <td>15mA(DC 5V)</td>
+  </tr>
+  <tr>
+    <td width="400px">Working Voltage</td>
+    <td width="400px">5V～24V</td>
+  </tr>
+  <tr>
+    <td>Flow Rate Range</td>
+    <td>0.3~6L/min</td>
+  </tr>
+  <tr>
+    <td>Load Capacity</td>
+    <td>≤10mA(DC 5V)</td>
+  </tr>
+  <tr>
+    <td>Operating Temperature</td>
+    <td>≤80℃</td>
+  </tr>
+  <tr>
+    <td>Liquid Temperature</td>
+    <td>≤120℃</td>
+  </tr>
+  <tr>
+    <td>Operating Humidity</td>
+    <td>35%～90%RH</td>
+  </tr>
+  <tr>
+    <td>Water Pressure</td>
+    <td>≤0.8MPa</td>
+  </tr>
+  <tr>
+    <td>Storage Temperature</td>
+    <td>-25℃～+80℃</td>
+  </tr>
+  <tr>
+    <td>Storage Humidity</td>
+    <td>25%～95%RH</td>
+  </tr>
+</table>
 
 ##  Getting Started
 
@@ -163,27 +153,24 @@ The external diameter of thread the connections use is 1.4mm.
 
 Pulse frequency (Hz) in Horizontal Test= 7.5Q, Q is flow rate in L/min. (Results in +/- 3% range)
 
-<table >
-<tr>
-<td width="400px">Output pulse high level
-</td>
-<td width="400px">Signal voltage &gt;4.5 V( input DC 5 V)
-</td></tr>
-<tr>
-<td>Output pulse low level
-</td>
-<td>Signal voltage &lt;0.5V( input DC 5V)
-</td></tr>
-<tr>
-<td>Precision
-</td>
-<td>3% (Flow rate from 1L/min to 10L/min)
-</td></tr>
-<tr>
-<td>Output signal duty cycle
-</td>
-<td>40%～60%
-</td></tr></table>
+<table>
+  <tr>
+    <td width="400px">Output pulse high level</td>
+    <td width="400px">Signal voltage &gt;4.5 V( input DC 5 V)</td>
+  </tr>
+  <tr>
+    <td>Output pulse low level</td>
+    <td>Signal voltage &lt;0.5V( input DC 5V)</td>
+  </tr>
+  <tr>
+    <td>Precision</td>
+    <td>3% (Flow rate from 1L/min to 10L/min)</td>
+  </tr>
+  <tr>
+    <td>Output signal duty cycle</td>
+    <td>40%～60%</td>
+  </tr>
+</table>
 
 ##  Resource
 

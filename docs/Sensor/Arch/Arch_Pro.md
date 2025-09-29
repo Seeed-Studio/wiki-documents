@@ -67,7 +67,7 @@ There is [a monochrome version](https://seeed-studio.github.io/Artwork/images/ar
 
 <div className="admonition note">
   <p className="admonition-title">Note</p>
-  The Arch Pro silkscreen for the Grove connectors is labeled 3V3 on top of the PCB and 5V on the underside. Grove Vcc is by default 3V3, but can be changed to 5V by moving R50 to R51. SPI Vcc pin can be set by populating R52 (3V3) or R53 (5V) with 0R - neither populated by default.
+  <p>The Arch Pro silkscreen for the Grove connectors is labeled 3V3 on top of the PCB and 5V on the underside. Grove Vcc is by default 3V3, but can be changed to 5V by moving R50 to R51. SPI Vcc pin can be set by populating R52 (3V3) or R53 (5V) with 0R - neither populated by default.</p>
 </div>
 
 
@@ -146,8 +146,8 @@ Update or Restore Firmware
 
 The latest firmware version for the Arch Pro is v0221 built on Jan 28 2015. To check your firmware version and build date, open the MBED.HTM or DETAILS.TXT of your MBED disk in a text editor.
 
--   \[[Firmware v221 2015-01-28 for Arch Pro](https://developer.mbed.org/media/uploads/yihui/lpc11u35_lpc1768_if_mbed_20150128.bin)\] Fix Mac OS X 10.10 Yosemite read only file system bug
--   \[[Firmware v0203 2014-09-02 for Arch Pro](https://github.com/xiongyihui/CMSIS-DAP/raw/arch_pro/interface/mdk/lpc11u35/lpc11u35_lpc1768_if_mbed_bootloader.bin)\]
+-   [Firmware v221 2015-01-28 for Arch Pro](https://developer.mbed.org/media/uploads/yihui/lpc11u35_lpc1768_if_mbed_20150128.bin) Fix Mac OS X 10.10 Yosemite read only file system bug
+-   [Firmware v0203 2014-09-02 for Arch Pro](https://github.com/xiongyihui/CMSIS-DAP/raw/arch_pro/interface/mdk/lpc11u35/lpc11u35_lpc1768_if_mbed_bootloader.bin)
 
 To update:
 
@@ -159,16 +159,9 @@ To update:
 
 <div class="admonition note">
 <p class="admonition-title">Notes</p>
-<ul>
-<li>LocalFileSystem does not work:
-As the Arch Pro does not have external flash to store files, the LocalFileSystem is not available for this board.</li>
-
-<li>P0_27 & P0_28 do not work with DigitalOut:
-P0_28 & P0_27 are open-drain digital I/O for compatible with I2C. External pull-up resistors are needed to provide output functionality.</li>
-
-<li>USB Serial Communication:
-In Windows, install the mbed Windows serial port driver to use USB Serial Communication. Have a look at <a href="https://developer.mbed.org/handbook/Windows-serial-configuration">Windows Serial Configuration</a></li>
-</ul>
+<p>LocalFileSystem does not work: As the Arch Pro does not have external flash to store files, the LocalFileSystem is not available for this board.</p>
+<p>P0_27 & P0_28 do not work with DigitalOut: P0_28 & P0_27 are open-drain digital I/O for compatible with I2C. External pull-up resistors are needed to provide output functionality.</p>
+<p>USB Serial Communication: In Windows, install the mbed Windows serial port driver to use USB Serial Communication. Have a look at <a href="https://developer.mbed.org/handbook/Windows-serial-configuration">Windows Serial Configuration</a></p>
 </div>
 
 

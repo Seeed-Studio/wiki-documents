@@ -23,7 +23,7 @@ There is also a video version of this tutorial:
 
 ## 1. Prerequisites
 
-For this tutorial you'll need a supported device. Follow [**Wio Terminal Edge Impulse**](http://wiki.seeedstudio.com/Wio-Terminal-Edge-Impulse) tutorial fist before the followings.
+For this tutorial you'll need a supported device. Follow [**Wio Terminal Edge Impulse**](https://wiki.seeedstudio.com/Wio-Terminal-Edge-Impulse) tutorial fist before the followings.
 
 Apart from **Wio Terminal**, here are other supported devices.
 
@@ -265,4 +265,4 @@ Edge Impulse helps you unlock this data. By processing data directly on the devi
 
 - [Edge Impulse Continuous motion recognition](https://docs.edgeimpulse.com/docs/continuous-motion-recognition)
 
-- [Wio Terminal Edge Impulse Getting Started](http://wiki.seeedstudio.com/Wio-Terminal-Edge-Impulse)
+- [Wio Terminal Edge Impulse Getting Started](https://wiki.seeedstudio.com/Wio-Terminal-Edge-Impulse)

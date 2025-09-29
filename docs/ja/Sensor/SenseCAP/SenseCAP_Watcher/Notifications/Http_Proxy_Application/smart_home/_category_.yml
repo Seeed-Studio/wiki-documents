@@ -1,0 +1,10 @@
+position: 1 # float position is supported
+label: 'スマートホーム'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: smart_home_with_watcher
+link:
+  type: generated-index
+  slug: ja/smart_main_page
+  title: Watcherを使ったスマートホーム
+  description: スマートホームでのWatcherの使用に焦点を当てています。

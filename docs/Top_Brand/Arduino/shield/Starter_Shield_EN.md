@@ -28,7 +28,7 @@ Starter Shield is a perfect start for beginners of Arduino world. You can learn 
 
 This is a example [How to make tiny tiger Machine](https://www.instructables.com/id/How-to-Make-Your-Tiny-Tiger-Machine/) used by Starter Shield.
 
-Starter Shield contains some basic electronic resources, like buttons, sensors, buzzer and display. There is a great way to learn how to solder.  Starter Shield is a through-hole soldering kit for beginners. After assembling the kit, you’ll have mastered the basics of through-hole soldering and you’ll have a geek style alarm clock that works with your Arduino.
+Starter Shield contains some basic electronic resources, like buttons, sensors, buzzer and display. There is a great way to learn how to solder.  Starter Shield is a through-hole soldering kit for beginners. After assembling the kit, you'll have mastered the basics of through-hole soldering and you'll have a geek style alarm clock that works with your Arduino.
 
 Model: [SLD90400P](https://www.seeedstudio.com/depot/tick-tock-shield-p-1371.html?cPath=6_7)
 
@@ -141,95 +141,40 @@ You are supposed to finish the soldering of your Tick Tock Shield before moving 
 
 Here we start to present you 7 demos from easy to difficult. They involve usage of all hardware resources on Tick Tock Shield:
 
-* Demo 1: Sweep The LEDs
-* Demo 2: Control LEDs By Keys
-* Demo 3: Change The Pitch Of Buzzer By Keys
-* Demo 4: Display Temperature
-* Demo 5: Make A Light Sensor Controlled LED
-* Demo 6: Display Numerical Characters
-* Demo 7: Real Time Clock
-
-Each demo caontains detailed comments in the .ino file. To figure out how every line affects the turnout, you have to study the sketch and comments carefully.
-
-OK, let's check out what the Tick Tock Shield is capable of.
-
-![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Complete_Tick_Shield.JPG)
-
-### Preparation: Install the Hardware and Software  
-
-1. Plug Tick Tock Shield onto Arduino board. Connect Arduino to PC via USB cable as show below.
-
-![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Connect_Tick_Shield.jpg)
-
-2. Download [Starter Shield Library](https://github.com/Seeed-Studio/Starter_Shield_Libraries)
-
-3. Unzip and put them in the libraries file of Arduino IDE by the path: ..\arduino-1.0.1\libraries.
-
-**Note**
-
-<dl><dd>1) Libraries MsTimer2 and Timerone are packed in Tick Tock Shield Library we prvide above. We download them from Arduino website. If you already have them in your libraries file, them no need to add them once again.
-
-</dd><dd>2) Through all 7 demos in Tick Tock Shield library, we define:
-
-<dl><dd><dl><dd>K3 - menu key
-</dd><dd>K2 - increase key
-</dd><dd>K1 - decrease key
-</dd><dd>D4 - LED_CLOCK_ADJUST
-
-</dd><dd>D3 - LED_ALARM_ADJUST
-
-</dd><dd>D2 - LED_ALARM_ENABLE
-
-</dd><dd>D1 - LED_BRIGHT_ADJUST
-
-</dd></dl>
-</dd></dl>
-</dd></dl>
-
-### Getting Started: Fun With Tick Tock Shield  
-
-From easy to difficult, we prepared a series of demos for you to explore what your Tick Tock Shield is capable of. Follow me to have fun with it.
-
 **Demo 1: Sweep The LEDs**
 
-<dl><dd>1. This demo only involves the usage of the most basic actuator - LEDs.
+1. This demo only involves the usage of the most basic actuator - LEDs.
 
-</dd><dd>2. Restart the Arduino IDE. Open the example "RunLED" via the path: File --&gt; Examples --&gt; TickTockShield--&gt; RunLED.
+2. Restart the Arduino IDE. Open the example "RunLED" via the path: File --&gt; Examples --&gt; TickTockShield--&gt; RunLED.
 
-![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Open_RunLED_Code.jpg)
+   ![](https://files.seeedstudio.com/wiki/Starter_Shield_EN/img/Open_RunLED_Code.jpg)
 
-</dd><dd>3. This demo can sweep 4 LEDs with a settable speed. You can change the sweep speed by changing the parameter of the function "runLED(speed)". Find further illutration of the funtion in its comment.
+3. This demo can sweep 4 LEDs with a settable speed. You can change the sweep speed by changing the parameter of the function "runLED(speed)". Find further illutration of the funtion in its comment.
 
-</dd><dd>4. Click the upload button to upload the program to the Arduino.
+4. Click the upload button to upload the program to the Arduino.
 
-</dd><dd>5. You can see four LED lights turn on and off from left to right at a given speed after the program is uploaded.
-
-</dd></dl>
+5. You can see four LED lights turn on and off from left to right at a given speed after the program is uploaded.
 
 **Demo 2: Control LEDs By Keys**
 
 This demo show you how to control LEDs with the most basic input - buttons.
 
-<dl><dd>1. Open the example "ControlLED" in the same way as open the “RunLED” above.
+1. Open the example "ControlLED" in the same way as open the "RunLED" above.
 
-</dd><dd>2. This demo can turn on or off four LEDs by keys. We set two flags to store the status of this test, TEST_START and TEST_END. Every time the “menu” key gets pressed, the status toggles between TEST_START and TEST_END. In the status of TEST_START, "increase" key can turn on one more LED from right to left every time it gets pressed. The "decrease" key has an inverse effect as the "increase" key.
-
-</dd></dl>
+2. This demo can turn on or off four LEDs by keys. We set two flags to store the status of this test, TEST_START and TEST_END. Every time the "menu" key gets pressed, the status toggles between TEST_START and TEST_END. In the status of TEST_START, "increase" key can turn on one more LED from right to left every time it gets pressed. The "decrease" key has an inverse effect as the "increase" key.
 
 **Demo 3: Change The Pitch Of Buzzer By Keys**
-**This demo involves how to make a sound with buzzer, and because you have already known how to use buttons, in this demo, we use buttons to increase or decrease the pitch of buzzer.
+This demo involves how to make a sound with buzzer, and because you have already known how to use buttons, in this demo, we use buttons to increase or decrease the pitch of buzzer.
 
-<dl><dd>1. Open the example "changeThePitch".
+1. Open the example "changeThePitch".
 
-</dd><dd>2. Every time the “increase” key gets pressed, the pitch of the buzzer will rise up. And when the “decrease” key gets pressed, the pitch will fall down.
-
-</dd></dl>
+2. Every time the "increase" key gets pressed, the pitch of the buzzer will rise up. And when the "decrease" key gets pressed, the pitch will fall down.
 
 **Demo 4: Display Temperature**
 
 Get started with sensors. First we have here is the temperature sensor. Try to read its value and display it on the 7 segment display.
 
-1. Open the example “MeasureTemprature”.
+1. Open the example "MeasureTemprature".
 2. The 7-segment Display will display current temperature read from temperature sensor as shown below.
 3. If you find in the picture below, the contrast is not strong enough, try a lower view angle. This principle also apply to following demos which contain usage of 7-segment display.
 
@@ -239,7 +184,7 @@ Get started with sensors. First we have here is the temperature sensor. Try to r
 
 Is it convenient if the brightness of display can auto adjust itself according to the ambient light? This demo shows you how to do this by using a light sensor.
 
-1. Open the example “SensorControlBrightness” in the same way.
+1. Open the example "SensorControlBrightness" in the same way.
 
 2. This example can change the brightness of BRIGHT_ADJUST Indicator according to the ambient light intensity. The darker the environment is, the lighter the LED turns. Picture on the right is the turnout.
 
@@ -251,7 +196,7 @@ Is it convenient if the brightness of display can auto adjust itself according t
 
 This demo shows you how to control the content of 7 segment display.
 
-1. Open the example “CharacterFlow”.
+1. Open the example "CharacterFlow".
 
 2. This example can run numeric characters 0, 1, 2, 3, 4, 5, 6, 7, 8 ,9, A, b, C, d, E, F from right to left.
 
@@ -488,7 +433,7 @@ Example:
 Find out which key gets pressed. Return the pin number of the key pressed. And return "-1" if no keys is pressed.
 
 ```cpp
-if((flag_scan_again)&amp;&amp;(KEY_MENU == ticktockshield.scanKey()))
+if((flag_scan_again)&&(KEY_MENU == ticktockshield.scanKey()))
       {
         ticktockshield.writeToAdjustArea();
         ticktockshield.processKey();

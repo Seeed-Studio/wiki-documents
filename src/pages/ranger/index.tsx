@@ -160,7 +160,7 @@ function emailRender() {
 								<div id="mc_embed_signup_scroll" className={styles.newsletter_form_wrap}>
 									<input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="Enter Email Address" ></input>
 									<button type="submit" name="subscribe" id="mc-embedded-subscribe" className="button subscribe">
-										<span className="fa fa-angle-right"> > </span>
+										<span className="fa fa-angle-right"> {'>'} </span>
 									</button>
 								</div>
 							</form>

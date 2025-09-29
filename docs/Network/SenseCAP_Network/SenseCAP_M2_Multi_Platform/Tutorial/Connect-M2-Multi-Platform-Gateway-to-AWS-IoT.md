@@ -1,9 +1,10 @@
-﻿---
+---
 description: Connect SenseCAP M2 Multi-Platform Gateway to AWS
 title: Connecting to AWS IoT
 keywords:
 - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT
 last_update:
   date: 08/29/2023
   author: Jessie
@@ -92,7 +93,7 @@ Publish to AWS IoT Core message broker
 **Permissions**: Select an existing service role > IoT Wireless Gateway Cert Manager Role
 
 :::tip Note
-Adestination name can only have alphanumeric, - (hyphen)and \_ (underscore) characters and it can't have any spaces.
+Adestination name can only have alphanumeric, - (hyphen)and _ (underscore) characters and it can't have any spaces.
 :::
 
 

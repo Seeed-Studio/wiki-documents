@@ -296,7 +296,7 @@ void loop()
 
 - **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to **115200**.
 
-:::tipsuccess
+:::tip
 If every thing goes well, when you open the Serial Monitor, you will see the temperature value and the alert information.
 :::
 
@@ -349,9 +349,9 @@ channel 0generate interruption!!!
 
 As you can see, there is a hysteresis when the temperature rises and the temperature drops trigger an interrupt. e.g., when the temperature rises, when it reaches 28℃, the alert pin0 will trigger, and when the temperature drops, the limit point becomes 26℃. Only when the temperature become lower than 26 ℃, the alert pin0 will release.
 
-$$
+```
 hysteresis= 28℃-26℃ = 2℃
-$$
+```
 
 Alert pin 1, alert pin2 and alert pin3 follow the same principle. You can change the  hysteresis value and the limit by modify the line 23 and line 26.
 

@@ -19,7 +19,7 @@ The Seeed Studio XIAO SAMD21, which used to be named Seeeduino XIAO, is the firs
 Seeed Studio XIAO SAMD21 has 14 PINs, which can be used for 11 digital interfaces, 11 mock interfaces, 10 PWM interfaces (d1-d10), 1 DAC output pin D0, 1 SWD pad interface, 1 I2C interface, 1 SPI interface, 1 UART interface, Serial communication indicator (T/R), Blink light (L) through pin multiplexing. The colors of LEDs(Power, L,RX,TX) are green, yellow, blue, and blue. Moreover, Seeed Studio XIAO SAMD21 has a Type-C interface that can supply power and download code. There are two reset buttons, you can short-connect them to reset the board.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -37,7 +37,7 @@ There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus
 
 ### **CircuitPython on Seeed Studio XIAO SAMD21**
 
-- Get started with [**CircuitPython on Seeed Studio XIAO SAMD21 **](http://wiki.seeedstudio.com/Seeeduino-XIAO-CircuitPython).
+- Get started with [**CircuitPython on Seeed Studio XIAO SAMD21 **](https://wiki.seeedstudio.com/Seeeduino-XIAO-CircuitPython).
 
 ## **Features**
 
@@ -84,7 +84,7 @@ The built-in DC-DC converter circuit able to change 5V voltage into 3.3V allows 
 XIAO SAMD21 currently only supports battery power supply and **cannot connect to Type-C while a battery is connected**, as it may pose a safety risk.
 
 Please pay attention to use, do not lift the shield cover.
-:::   
+:::
 
 ### **Enter Bootloader Mode**
 
@@ -287,7 +287,6 @@ You can, of course, open the serial monitor to view the voltage values stream by
 
 Thank you to [Aleksei Tertychnyi](https://github.com/WeSpeakEnglish) for submitting the code, all related functionalities were developed and contributed by him.
 
-
 ```cpp
 #define DAC_PIN A0 // Make code a bit more legible
 float x = 0; // Value to take the sin of
@@ -355,8 +354,7 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 - **Step 1. You need to Install an Arduino Software.**
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
-    </a>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
 </div>
 
 **Launch the Arduino application**
@@ -378,7 +376,7 @@ Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 
 Click on **File > Preference**, and fill Additional Boards Manager URLs with the url below:
 
-*<https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json>*
+*https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json*
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png" alt="pir" width={600} height="auto" /></p>
 
@@ -389,7 +387,7 @@ Click **Tools-> Board-> Boards Manager...**, print  keyword "**Seeed Studio XIAO
 
 - **Step 4. Select your board and port**
 
-After installing the board, click **Tools-> Board**, find "**Seeed Studio XIAO **" and select it. Now you have already set up the board of Seeed Studio XIAO SAMD21 for Arduino IDE.
+After installing the board, click **Tools-> Board**, find "**Seeed Studio XIAO**" and select it. Now you have already set up the board of Seeed Studio XIAO SAMD21 for Arduino IDE.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/1.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -439,10 +437,7 @@ the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet
 
 - **[STEP]** [Seeed Studio XIAO SAMD21 3D Model](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/seeeduino-xiao-samd21-3d-model.zip)
 
-- **[ZIP]** [Seeed Studio XIAO SAMD21 Certification files](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO-SAMD21-Certification.zip)
-
 - 🔗 **[Kicad]** [Seeed Studio XIAO SAMD21 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-
 
 ## Course Resources
 
@@ -450,17 +445,16 @@ the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet
 
 - **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

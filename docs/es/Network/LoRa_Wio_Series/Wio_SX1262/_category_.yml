@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'Wio-SX1262'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: wio_sx1262
+link:
+  type: generated-index
+  slug: es/wio_sx1262_class
+  title: Wio-SX1262
+  description: Documentación del Producto Wio-SX1262.

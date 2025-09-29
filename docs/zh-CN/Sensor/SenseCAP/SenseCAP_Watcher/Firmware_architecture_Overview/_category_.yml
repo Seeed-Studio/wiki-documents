@@ -1,0 +1,10 @@
+position: 6 # float position is supported
+label: '固件架构概述'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: watcher_firmware_architecture_overview
+link:
+  type: generated-index
+  slug: cn/watcher_firmware_architecture_main_page
+  title: 固件架构概述
+  description: 介绍 SenseCAP Watcher 开源固件的软件框架和开发指南。

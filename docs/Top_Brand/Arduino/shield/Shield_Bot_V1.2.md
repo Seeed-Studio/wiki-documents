@@ -77,8 +77,8 @@ Hardware Overview
 - **Arduino Shield Expansion Headers**: Shield Bot can truly stack other shields.
 
 :::note
-<ol><li>If S5 is enabled you can not use grove ports j14 and j13.</li>
-<li>You may only use ONE of the Arduino's serial line, UART grove port or j11 as they all share the D1/TX line.</li></ol>
+1. If S5 is enabled you can not use grove ports j14 and j13.
+2. You may only use ONE of the Arduino's serial line, UART grove port or j11 as they all share the D1/TX line.
 :::
 
 Status Lights
@@ -125,9 +125,8 @@ We've built a nice library for the Shield Bot with useful functions to control y
 The battery is needed when you want to make Shield Bot run on the ground.
 
 :::note
-<ol><li>
-Once the battery is installed, you can charge battery with a mini-b USB cable. When the battery is charging, a red LED will be on. When it is done charging, a green LED will be lit.</li>
-<li>When upload the code, you need connect the USB port of your Seeeduino to your PC. The USB port on the shield bot is only used for charging for battery.</li></ol>
+1. Once the battery is installed, you can charge battery with a mini-b USB cable. When the battery is charging, a red LED will be on. When it is done charging, a green LED will be lit.
+2. When upload the code, you need connect the USB port of your Seeeduino to your PC. The USB port on the shield bot is only used for charging for battery.
 :::
 
 ### Demo 1: Drive motors to Run
@@ -175,7 +174,7 @@ This is a beautifully designed, though not quite finished, 2 player heads up sim
 
 **4. HackPHX-Plotter**
 
-The device is very close to knocking off the Der Kritzler 2d drawing machine which is a vertical x,y table with makerslide and had the ingenious idea of bolting the tires of the Shield bot down such that when it was put in reverse, it lifted the pen off the drawing surface :) They even worked with the designer to come up with a PC side user interface!
+The device is very close to knocking off the Der Kritzler 2d drawing machine which is a vertical x,y table with makerslide and had the ingenious idea of bolting the tires of the Shield bot down such that when it was put in reverse, it lifted the pen off the drawing surface :) They even worked with the designer to come up with a PC side user interface!
 
 ![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.2/img/Team8.jpg)
 
@@ -226,7 +225,7 @@ Shieldbot shieldbot = Shieldbot(); //decares a Shieldbot object
 
 *Description*: All purpose drive call. Calls leftMotor and rightMotor directly.
 
-*left*: between -128 (left motor backwards 100% of max speed), 0 (standing still), and 127 (left motor forwards 100% of max speed) :*right*: between -128 (right motor backwards 100% of max speed), 0 (standing still), and 127 (right motor forwards 100% of max speed)
+*left*: between -128 (left motor backwards 100% of max speed), 0 (standing still), and 127 (left motor forwards 100% of max speed) :*right*: between -128 (right motor backwards 100% of max speed), 0 (standing still), and 127 (right motor forwards 100% of max speed)
 
 **<u> stop()</u>**
 

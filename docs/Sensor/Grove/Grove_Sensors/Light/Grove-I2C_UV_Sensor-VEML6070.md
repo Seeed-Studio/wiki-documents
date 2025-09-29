@@ -203,7 +203,7 @@ The library file may be updated. This code may not be applicable to the updated 
 
 - **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to **115200**.
 
-:::tipsuccess
+:::tip
 If every thing goes well, when you use UV light to illuminate this module, you will see information like:
 :::
 
@@ -341,7 +341,7 @@ if __name__ == '__main__':
 	main()
 ```
 
-:::tipsuccess
+:::tip
 If everything goes well, you will be able to see the following result
 :::
 

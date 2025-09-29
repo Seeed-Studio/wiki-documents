@@ -77,7 +77,7 @@ The Grove - Thumb Joystick is an analog device that outputs analog signal rangin
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Thumb_Joystick/img/Bgjoy1_small.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Thumb-Joystick-p-935.html)|
 
-- **Step 2.** Connect the module to the **A0/A1** of Grove - Base Shieldby using the 4-pin grove cable.
+- **Step 2.** Connect the module to the `A0`/`A1` of Grove - Base Shield by using the 4-pin grove cable.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
@@ -91,8 +91,8 @@ If we don't have Grove Base Shield, We also can directly connect Grove-Thumb Joy
 |-----------------|-------------------------|
 | 5V              | Red                     |
 | GND             | Black                   |
-| A1              | White                   |
-| A0              | Yellow                  |
+| `A1`            | White                   |
+| `A0`            | Yellow                  |
 
 #### Software
 
@@ -134,7 +134,7 @@ The output value from the analog port of Arduino can be converted to the corresp
 
 #### Hardware
 
-**Step 1.** Connect a Grove - Thumb Joystick to port A0 of a Base Shield.
+**Step 1.** Connect a Grove - Thumb Joystick to port `A0` of a Base Shield.
 
 **Step 2.** Plug the Base Shield to your Seeeduino/Arduino.
 
@@ -154,7 +154,7 @@ If this is your first time using Codecraft, see also [Guide for Codecraft using 
 
 Upload the program to your Arduino/Seeeduino.
 
-:::tipsuccess
+:::tip
 When the code finishes uploaded, you will see the coordinate of X and Y displayed in the Serial Monitor.
 :::
 
@@ -170,7 +170,7 @@ When the code finishes uploaded, you will see the coordinate of X and Y displaye
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Thumb-Joystick-p-935.html)|
 
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
-- **Step 3**. Connect the Thumb Joystick  to port A0 of the Base Hat.
+- **Step 3**. Connect the Thumb Joystick to port `A0` of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Thumb_Joystick/img/Thumb_Hat.jpg)
@@ -203,7 +203,7 @@ python3 grove_thumb_joystick.py 0
 ```
 
 :::note
-you can excute the program with ++python grove_thumb_joystick.py pin++, where pin could be one of {0, 2, 4, 6} in the ADC group and connect the device to the corresponding slot {A0, A2, A4, A6}.
+you can excute the program with ++python grove_thumb_joystick.py pin++, where pin could be one of {0, 2, 4, 6} in the ADC group and connect the device to the corresponding slot {`A0`, `A2`, `A4`, `A6`}.
 :::
 
 Following is the grove_thumb_joystick.py code.
@@ -250,7 +250,7 @@ if __name__ == '__main__':
 
 ```
 
-:::tipsuccess
+:::tip
 If everything goes well, you will be able to see the following result
 :::
 
@@ -287,7 +287,7 @@ KeyboardInterrupt
 You can quit this program by simply press ++ctrl+c++.
 
 :::note
-You may have noticed that for the analog port, the silkscreen pin number is something like **A1, A0**, however in the command we use parameter **0** and **1**, just the same as digital port. So please make sure you plug the module into the correct port, otherwise there may be pin conflicts.
+You may have noticed that for the analog port, the silkscreen pin number is something like **`A1`, `A0`**, however in the command we use parameter **0** and **1**, just the same as digital port. So please make sure you plug the module into the correct port, otherwise there may be pin conflicts.
 :::
 
 ### Play With Raspberry Pi (with GrovePi_Plus)
@@ -302,7 +302,7 @@ You may have noticed that for the analog port, the silkscreen pin number is some
 |[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Thumb-Joystick-p-935.html)|
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
-- **Step 3.** Connect Grove-Thumb Joystick ranger to **A0** port of GrovePi_Plus.
+- **Step 3.** Connect Grove-Thumb Joystick ranger to **`A0`** port of GrovePi_Plus.
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Thumb_Joystick/img/Pi_Joystick%20connection.jpg)
@@ -421,11 +421,11 @@ sudo python3 grove_thumb_joystick.py
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

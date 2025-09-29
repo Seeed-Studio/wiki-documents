@@ -48,12 +48,12 @@ If you want to follow this tutorial through everything, you will need to prepare
  </tr>
  <tr>
     <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
     </div></td>
     <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Relay-add-on-module-for-XIAO-p-6310.html">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Relay-add-on-module-for-XIAO-p-6310.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
     </div></td>
@@ -63,7 +63,7 @@ If you want to follow this tutorial through everything, you will need to prepare
 The content of this tutorial will broadly go through the following steps.
 
 1. [Select your Home Assistant environment](#select-your-home-assistant-environment)
-2. [Install and cofigure ESPHome in Home Assistant](#install-and-configure-esphome-in-home-assistant)
+2. Install and cofigure ESPHome in Home Assistant
 3. [Configure the XIAO ESP32C3 and ESPHome connection](#configure-the-xiao-esp32c3-and-esphome-connection)
 4. [Add Relay Module to Home Assistant Dashboard](#add-relay-module-to-home-assistant-dashboard)
 
@@ -72,7 +72,7 @@ The content of this tutorial will broadly go through the following steps.
 We've created a quick flash firmware page for the XIAO, you can use the site below directly to flash Relay's firmware for the XIAO you have without programming. The site will automatically detect the chip of the XIAO you are connecting to, without having to choose, and directly flash the XIAO firmware version that corresponds to the ESP32 chip.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/">
+    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Firmware Flasher 🖱️</font></span></strong>
     </a>
 </div>
@@ -99,7 +99,6 @@ If you have the Home Assistant OS installed, it has an Add-on Store, which makes
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/79.png" /></div>
 
-
 In the Add-on Store, you can search for and install ESPHome.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/80.png" /></div>
@@ -109,7 +108,7 @@ In the Add-on Store, you can search for and install ESPHome.
 We've created a quick flash firmware page for the XIAO, you can use the site below directly to flash Relay's firmware for the XIAO you have without programming. The site will automatically detect the chip of the XIAO you are connecting to, without having to choose, and directly flash the XIAO firmware version that corresponds to the ESP32 chip.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/">
+    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Firmware Flasher 🖱️</font></span></strong>
     </a>
 </div>
@@ -118,7 +117,7 @@ We've created a quick flash firmware page for the XIAO, you can use the site bel
 
 After flashing the firmware, you can see that there is a wireless network named **seedstudio-relay-module**. Please connect to this network and enter `192.168.4.1` in your browser to configure the network for your device. Please use the same network as your Home Assistant.
 
-Go to **setting**, and **Devices & services** 
+Go to **setting**, and **Devices & services**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/5.png" /></div>
 
@@ -153,7 +152,8 @@ You will see the Relay Control appear here
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/11.png" /></div>
 
 ### Step 7. Use relay module to control a table lamp
-We can click the switch to see if the relay work well. If you see the little green light on the board when you click the switch, it means work well! 
+
+We can click the switch to see if the relay work well. If you see the little green light on the board when you click the switch, it means work well!
 
 <div class="table-center">
 <iframe width="800" height="450" src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/relay.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -179,11 +179,11 @@ Congratulations on successfully completing your journey on Relay Module For XIAO
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

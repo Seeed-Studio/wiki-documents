@@ -15,11 +15,10 @@ last_update:
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/60GHzradar/newpic.png"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
-
 
 ## Introduction
 
@@ -103,11 +102,12 @@ If you encounter the wrong firmware or radar anomaly, firmware malfunction, etc.
 | Jlink_MR60BHA1-V230904.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/Jlink_MR60BHA1-V230904.bin) |
 
 :::caution
+
 1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
 
 2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **J-link**.
-:::
 
+:::
 
 **To update your radar to the latest version**
 
@@ -180,6 +180,7 @@ Considering that J-link is expensive, it is too extravagant to buy a J-link for 
 | UART_MR60BHA1-230904.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/UART_MR60BHA1-230904.bin) |
 
 :::caution
+
 1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
 
 2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **UART**.
@@ -589,7 +590,7 @@ boolean existence;
 
 - If you want to use **XIAO ESP32C3** for the later routines, please refer to [this tutorial](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#software-setup) to finish adding.
 
-:::cautionAttention
+:::caution
 For **XIAO nRF52840**, please select **Seeed nRF52 mbed-enabled Boards**, otherwise an error may be reported when running programs.
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/XIAO-BLE/SeeednRFmbed.png"/></div>
 :::
@@ -932,7 +933,7 @@ Upload program. Opening your serial monitor to a baud rate of 115200 should show
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/4.png"/></div>
 
-:::cautionAttention
+:::caution
 If you want to see waveform data, switch the sensor to real-time data transmission mode. After switching modes, the sensor may need to be re-powered to take effect.
 :::
 
@@ -1407,7 +1408,7 @@ At the same time, you can also send data frames to the Sensor via the software's
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/40.png"/></div>
 
-:::cautionAttention
+:::caution
 If you choose **ASCII** as the format for sending data, each data set needs to be prefixed with **0x**. If you choose **HEX**, then each set of data does not need to be prefixed with **0x**.
 :::
 
@@ -1436,11 +1437,11 @@ If you choose **ASCII** as the format for sending data, each data set needs to b
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

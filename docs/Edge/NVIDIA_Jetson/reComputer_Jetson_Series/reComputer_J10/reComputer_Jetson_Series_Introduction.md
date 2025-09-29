@@ -23,7 +23,6 @@ last_update:
 
 reComputer for Jetson series are compact edge computers built with NVIDIA advanced AI embedded systems: reComputer J10 (Nano) and reComputer J20 (Xavier NX). With rich extension modules, industrial peripherals, thermal management combined with decades of Seeed’s hardware expertise, reComputer for Jetson is ready to help you accelerate and scale the next-gen AI product emerging in diverse AI scenarios.
 
-
 The series is compatible with NVIDIA Jetson software stack, cloud-native workflows, industry-leading AI frameworks, helping deliver seamless AI integration. Currently, we have launched four of them as shown below:
 
 | Product                 | [reComputer J1010](https://www.seeedstudio.com/Jetson-10-1-A0-p-5336.html ) | [reComputer J1020](https://www.seeedstudio.com/Jetson-10-1-H0-p-5335.html) | [reComputer J2011](https://www.seeedstudio.com/Jetson-20-1-H1-p-5328.html)   | [reComputer J2012](https://www.seeedstudio.com/Jetson-20-1-H2-p-5329.html)   |
@@ -196,12 +195,11 @@ We here present you more complete tables about NVIDIA® Jetson Module Powered De
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

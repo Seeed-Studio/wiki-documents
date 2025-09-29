@@ -32,7 +32,7 @@ Second , We need to make sure the sd card is in ext4 format, which can be seen v
 
 Click blue are and then click on green area to select "Format Partiton"
 
-<div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/Boot_NVIDIA_System_from_SD_card_for_Jetson101/disk_fix_1.jpg" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Boot_NVIDIA_System_from_SD_card_for_Jetson101/disk_fix_1.jpg" /></div>
 
 
 Click on green area to select "Internal disk for use with Linux systems only (Ext4)"
@@ -66,19 +66,19 @@ We are supposed to change the configuration in "/boot/extlinux/extlinux.conf".
 
     After we boot from the emmc on the carrier board, we want to modify it to boot from the SD card. We need to make sure that the previous process, including the system burn to the sd card, and the sd card drivers are installed properly. Modify the parameters after root to the address of the device we are booting from. When we have completed our changes, reboot the system.
 
-    **Before reboot Modify "/boot/extlinux/extlinux.conf" After reboot view "/media/seeed/{xxx-xxx}/boot/extlinux/extlinux.conf"**
+    **Before reboot Modify "/boot/extlinux/extlinux.conf" After reboot view "/media/seeed/\{xxx-xxx\}/boot/extlinux/extlinux.conf"**
 
     <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Boot_NVIDIA_System_from_SD_card_for_Jetson101/config_3.png" /></div>
 
-
-    !!!Note
-        Our configuration file after booting the system from the sd card is "/media/seeed/{xxx-xxx}/boot/extlinux/extlinux.conf" and the configuration file after booting the system from the onboard emmc is in "/boot/extlinux/extlinux.conf" . They are the same files from which the device reads the configuration and chooses where to boot the system after power-up, and the relative paths change when the system has finished booting.
+    :::note
+    Our configuration file after booting the system from the sd card is "/media/seeed/\{xxx-xxx\}/boot/extlinux/extlinux.conf" and the configuration file after booting the system from the onboard emmc is in "/boot/extlinux/extlinux.conf" . They are the same files from which the device reads the configuration and chooses where to boot the system after power-up, and the relative paths change when the system has finished booting.
+    :::
 
 - Boot from board emmc
 
     We want to change back to booting from emmc after booting from an SD card or we need to change the SD card for some purpose. Then we need to change the device back to boot from emmc first. We should make the following changes.
 
-    **Before reboot Modify "/media/seeed/{xxx-xxx}/boot/extlinux/extlinux.conf" After reboot view "/boot/extlinux/extlinux.conf"**
+    **Before reboot Modify "/media/seeed/\{xxx-xxx\}/boot/extlinux/extlinux.conf" After reboot view "/boot/extlinux/extlinux.conf"**
 
     <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Boot_NVIDIA_System_from_SD_card_for_Jetson101/config_4.png" /></div>
 

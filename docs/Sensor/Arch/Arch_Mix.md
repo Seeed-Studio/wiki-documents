@@ -10,16 +10,15 @@ last_update:
   author: jianjing Huang
 ---
 
-
 ![](https://files.seeedstudio.com/wiki/Arch_Mix/img/main1.jpg)
 
 Arch Mix is a thin, lightweight development board based on NXP i.MX RT1052 processor(3020 CoreMark/1284 DMIPS @ 600 MHz). Which makes it suitable for industrial control, especially for scenes with large code and high real-time application requirements.
 
-The i.MX RT1052 is a new processor family featuring NXP’s advanced implementation of the Arm Cortex®-M7 core. Currently, the i.MX RT1052 is the highest performing Cortex-M7 solution delivering 3036 CoreMarks, which is 13 times better than the LPC1788 microcontroller. In addition to the high-speed performance it provides fast real-time responsiveness. The i.MX RT1050 also has rich audio and video features, including LCD display, basic 2D graphics, camera interface, SPDIF, and I2S audio interface.
+The i.MX RT1052 is a new processor family featuring NXP's advanced implementation of the Arm Cortex®-M7 core. Currently, the i.MX RT1052 is the highest performing Cortex-M7 solution delivering 3036 CoreMarks, which is 13 times better than the LPC1788 microcontroller. In addition to the high-speed performance it provides fast real-time responsiveness. The i.MX RT1050 also has rich audio and video features, including LCD display, basic 2D graphics, camera interface, SPDIF, and I2S audio interface.
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Arch-Mix-p-2901.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
-:::cautionattention
+:::caution
 The Initial Firmware of Arch Mix is RT-Thread which is depreciated, please follow this wiki to flash the Arduino Bootloader into Arch Mix and use it as Arduino Dev board.
 :::
 
@@ -97,7 +96,7 @@ The Initial Firmware of Arch Mix is RT-Thread which is depreciated, please follo
 
 Please supply power through the Micro-USB **OTG** port.
 
-:::cautionDanger
+:::caution Danger
 
 - The input power supply voltage is 5V, can not exceed 5.5V.  
 - All digital and analog IO interface levels are 3.3V. Please do not input more than 3.3V, otherwise the CPU may be damaged.  

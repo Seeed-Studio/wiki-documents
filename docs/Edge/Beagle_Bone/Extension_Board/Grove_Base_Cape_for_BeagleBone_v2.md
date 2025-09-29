@@ -33,48 +33,48 @@ The cape provides 12 easy-to-use Grove connectors to do plug-and-play with the b
 <table>
   <tbody><tr>
       <td> Output voltage </td>
-      <td> 3.3 V or 5 V(switchable)
-      </td></tr>
+      <td> 3.3 V or 5 V(switchable)</td>
+      </tr>
     <tr>
       <td>  Maximum output current </td>
-      <td> 500 mA at 3.3V, 500 mA at 5V
-      </td></tr>
+      <td> 500 mA at 3.3V, 500 mA at 5V</td>
+      </tr>
     <tr>
       <td> Digital Grove Ports </td>
-      <td> 6 , share same pins with UART1(labeled) and UART4(labeled)
-      </td></tr>
+      <td> 6 , share same pins with UART1(labeled) and UART4(labeled)</td>
+      </tr>
     <tr>
       <td> Analog Grove Ports </td>
-      <td> 2
-      </td></tr>
+      <td> 2</td>
+      </tr>
     <tr>
       <td> I<sup>2</sup>C Grove Ports </td>
-      <td> 4
-      </td></tr>
+      <td> 4</td>
+      </tr>
     <tr>
       <td> UART Grove Ports </td>
-      <td> 2 (UART1, UART4)
-      </td></tr>
+      <td> 2 (UART1, UART4)</td>
+      </tr>
     <tr>
       <td> EEPROM </td>
-      <td> 256kb (Model: CAT24C256WI)
-      </td></tr>
+      <td> 256kb (Model: CAT24C256WI)</td>
+      </tr>
     <tr>
       <td> Dimensions </td>
-      <td> 70 mm(Length) × 50 mm(width)
-      </td></tr></tbody></table>
+      <td> 70 mm(Length) × 50 mm(width)</td>
+      </tr></tbody></table>
 
 ### Parts list
 
 <table>
   <tbody><tr>
       <th>Parts name </th>
-      <th> Quantity
-      </th></tr>
+      <th> Quantity</th>
+      </tr>
     <tr>
       <td>Grove Base Cape for BeagleBone® v2 </td>
-      <td> 1 PCS
-      </td></tr></tbody></table>
+      <td> 1 PCS</td>
+      </tr></tbody></table>
 
 ## Hardware overview
 

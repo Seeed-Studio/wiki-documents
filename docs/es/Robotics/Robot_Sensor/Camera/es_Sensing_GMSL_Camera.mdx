@@ -1,0 +1,223 @@
+---
+description: Mostrar a las personas la cámara GMSL2 Sensing y su uso.
+title: Cámara GMSL Sensing
+keywords:
+- Jetson Orin Series
+- reComputer Robotics
+- Computer Vision
+- Autonomous Driving
+- Industrial Robot
+- Sensing World
+- AI Camera
+- Stereo Camera
+- Depth Camera
+- GMSL2
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /es/sensing_gmsl_cameras
+last_update:
+  date: 2025-08-21
+  author: Kane
+---
+
+import { Image, Flex } from "antd";
+import SensingGMSLCamTable from '@site/src/components/robotics/SensingGMSLCam';
+import RoboticsFooter from '@site/src/components/robotics/RoboticsFooter'
+import ProductBanner from '@site/src/components/robotics/ProductBanner'
+import JetsonIOStepper from '@site/src/components/robotics/JetsonIOStepper'
+
+export const steps = [
+  {
+    title: 'Configurar el conector CSI de 24 pines de Jetson',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Configure_24pin_CSI.webp",
+  },
+  {
+    title: 'Configurar para hardware compatible',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Select_Compatiable_Hardware.webp",
+  },
+  {
+    title: 'Seleccionar el Overlay',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/Select_Sensing_Overlay_3G.webp",
+  },
+  {
+    title: 'Guardar cambios de pines',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Save_Pin_Changes.webp",
+  },
+  {
+    title: 'Guardar y reiniciar para reconfigurar pines',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Save_and_Reboot.webp",
+  },
+  {
+    title: 'Presionar cualquier tecla para reiniciar',
+    src: 'https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/Confirm_Sensing_Overlay_3G.webp'
+  }
+];
+
+# Cámaras GMSL2 SENSING
+
+<ProductBanner 
+  imageUrl="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-101090101-3mp-gmsl2-camera-module-190-degree.jpg" 
+  linkUrl="https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html"
+  lang="es"
+/>
+
+Proporcionamos diferentes cámaras GMSL2 que cubren varias resoluciones, velocidades de transferencia, etc. Estas cámaras se pueden usar para aplicaciones en muchos campos. Por ejemplo:
+
++ Automotriz
++ ADAS + Fusión de Visualización
++ Imágenes de Alto Rango Dinámico
++ Conducción Autónoma
++ Robótica
+
+Consulte las especificaciones a continuación para más detalles.
+
+## Especificaciones
+
+
+<SensingGMSLCamTable lang="es" />
+
+
+## Primeros Pasos
+
+Usaremos reComputer Robotics J4012 para la demostración, lo que podrías necesitar
+
++ Cámara GMSL2 SENSING
++ [Un cable Mini-Fakra](https://www.seeedstudio.com/Mini-fakra-Coaxial-Cable-4-in-1-0-5m-Female-to-Female-p-6484.html)
++ [Placa de extensión GMSL2 de reComputer Robotics](https://www.seeedstudio.com/reComputer-Robotics-GMSL-board-p-6511.html)
+
+
+### Configuración del Dispositivo
+
+Conecte el cable Mini Fakra con la cámara, había 4 canales en reComputer Robotics J30/J40, usamos la cámara `SG3S-ISX031C-GMSL2-F` y está conectada al canal **'1'** (letra de serigrafía **'B'**).
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={400} style={{
+      borderRadius: 12,
+      boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  }} 
+  src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/Sensing_Camera_Connection.webp" />
+</Flex>
+
+Antes de comenzar, familiaricémonos con los 4 canales ya que los usaremos durante nuestras configuraciones más adelante.
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={400} style={{
+      borderRadius: 12,
+      boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  }} 
+  src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/reComputer_Robotics_Top_Panel.webp" />
+</Flex>
+
+Estos 4 canales están etiquetados como **'A'**, **'B'**, **'C'** y **'D'** en el dispositivo,
+recomendamos a nuestros clientes conectar la cámara con el orden alfabético dado,
+en cuyo caso sus dispositivos de video se mapearán como **'/dev/video0'**, **'/dev/video1'**, **'/dev/video2'**, **'/dev/video3'** en su Jetson Linux correspondiente.
+
+Pero si solo tiene una cámara conectada, solo se mostrará 'video0'.
+
+A continuación, vamos a configurar la superposición del árbol de dispositivos con Jetson IO para habilitar nuestro dispositivo (no verá nodos de video en la carpeta **'/dev'** hasta que lo configure y reinicie).
+
+### Configurar Jetson IO
+
+Lance JetsonIO con
+
+``` sh
+sudo /opt/nvidia/jetson-io/jetson-io.py
+```
+
+Siga las configuraciones a continuación paso a paso
+
+<JetsonIOStepper steps={steps} lang="es" />
+
+:::note
+Durante el paso anterior, si está usando la cámara de 6Gbps, seleccione la superposición **'Seeed GMSL 1X4 6G'** en el paso 3. Las cámaras de 6Gbps son:
+
++ SG3S-ISX031C-GMSL2-H
++ SG8S-AR0820C-5300-G2A-H
++ SG2-IMX390C-5200-G2A-H
++ SG2-AR0233C-5200-G2A-H
+
+:::
+
+### Configurar Información de Video
+
+En caso de que no haya instalado `v4l-utils`
+
+``` sh
+sudo apt-get update 
+sudo apt-get install v4l-utils -y
+```
+
++ Sincronización de Fotogramas
+
+``` sh
+v4l2-ctl -d /dev/video0 --set-ctrl=trig_mode=1
+```
+
+:::note
+Puede alternar **'trig_mode=0'** para deshabilitar la sincronización de fotogramas. O usar **'trig_mode=1'** para habilitar la sincronización de fotogramas cuando tenga múltiples cámaras conectadas.
+:::
+
+
++ Formato de Video
+
+``` sh
+v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0  -d /dev/video0
+```
+
+:::note
+Dependiendo de qué cámara esté usando, podría haber diferentes 'sensor_mode' como se predefine aquí, principalmente:
+
+|Modo del Sensor|Tipo de Fotograma|
+|   :----:  | :----:   |
+|0|YUYV8_1X16/1920x1536|
+|1|YUYV8_1X16/1920x1080|
+|2|YUYV8_1X16/3840x2160|
+
+
+:::
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={600} src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/Sensing_Camera_Set_Video_Info.webp" />
+</Flex>
+
+
+### Lanzamiento Gst
+
+Lance el visor con `gst-launch-1.0`
+
+``` sh
+gst-launch-1.0 v4l2src device=/dev/video0 ! \
+    video/x-raw,format=YUY2,width=1920,height=1080,framerate=30/1 ! \
+    videoconvert ! videoscale ! xvimagesink
+```
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={600} style={{
+      borderRadius: 12,
+      boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  }} 
+  src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/To_Boldly_Go_Where_No_One_Has_Gone_Before.webp" />
+</Flex>
+
+
+## Recursos Adicionales
+
+Hoja de Datos
+
++ [SG3S-ISX031C-GMSL2-F](https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/datasheet/SG3S-ISX031C-GMSL2F_Datasheet.pdf)
++ [SG3S-ISX031C-GMSL2-H](https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/datasheet/SG3S-ISX031C-GMSL2-Hxxx_cn_Datasheet.pdf)
++ [SG8S-AR0820C-5300-G2A-H](https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/datasheet/SG8S-AR0820C-5300-G2A-H_Datasheet.pdf)
++ [SG2-AR0233C-5200-G2A-H](https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/datasheet/SG2-AR0233C-5200-G2A-H_Datasheet.pdf)
++ [SG2-IMX390C-5200-G2A-H](https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/datasheet/SG2-IMX390C-5200-G2A-H_Datasheet.pdf)
+## Soporte Técnico y Discusión de Productos
+
+¡Gracias por elegir nuestros productos! Asegúrese de seguirnos en las plataformas a continuación para obtener las últimas noticias y soporte.
+
+<RoboticsFooter lang="es" />

@@ -1,0 +1,10 @@
+position: 2
+label: 'Edificio Inteligente'
+collapsible: true
+collapsed: true
+className: _smart-building
+link:
+  type: generated-index
+  slug: es/smart-building
+  title: Edificio Inteligente
+  description: Soluciones de edificios inteligentes.

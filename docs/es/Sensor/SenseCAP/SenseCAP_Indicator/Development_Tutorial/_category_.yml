@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'Tutorial de Desarrollo'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: indicator_dev
+link:
+  type: generated-index
+  slug: es/Develop_with_SenseCAP_Indicator
+  title: Desarrollar con SenseCAP Indicator
+  description: Este tutorial te guiará a través del proceso de desarrollo con SenseCAP Indicator.

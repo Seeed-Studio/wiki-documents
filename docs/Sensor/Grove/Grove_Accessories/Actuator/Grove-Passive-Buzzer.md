@@ -218,7 +218,7 @@ Connect the Buzzer with "PWM" on the Grove Base Hat.
 
 One-click installation, quick start, what ever you call, with the single command below, we can install/update all dependencies and latest grove.py.
 
-:::attention
+:::warning
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you **cannot use this command line**.
 :::
 
@@ -239,7 +239,7 @@ curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | sudo b
 
 Besides the one-click installation, you can also install all the dependencies and latest grove.py step by step.
 
-:::attention
+:::warning
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
 

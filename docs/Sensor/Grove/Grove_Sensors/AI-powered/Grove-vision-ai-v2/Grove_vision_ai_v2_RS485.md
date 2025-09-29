@@ -15,9 +15,14 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_V2AI/photo/connectv2.jpg" style={{width:500, height:'auto'}}/></div>
 
+:::tip
+
+If you need to use the RS485 expansion board in conjunction with Vision AI V2, you will need to re-solder new header pins to the back of the RS485 expansion board.
+
+:::
+
 
 ### Hadware Preparation
-
 
 <table align="center">
     <tr>
@@ -34,28 +39,27 @@ last_update:
     </tr>
         <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-            <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">
+            <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-            <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html">
+            <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-            <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5647-69-1-FOV-Camera-module-for-Raspberry-Pi-3B-4B-p-5484.html">
+            <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5647-69-1-FOV-Camera-module-for-Raspberry-Pi-3B-4B-p-5484.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-            <a class="get_one_now_item" href="https://www.seeedstudio.com/RS485-Breakout-Board-for-XIAO-p-6306.html">
+            <a class="get_one_now_item" href="https://www.seeedstudio.com/RS485-Breakout-Board-for-XIAO-p-6306.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
 </table>
-
 
 ### Connection method
 
@@ -63,15 +67,11 @@ First of all, prepare two expansion boards, two XIAO series development boards, 
 
 **Step 1 . Prepare two RS485 expansion boards and two XIAO series development boards and connect the pins according to the following figure**
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_V2AI/photo/connect_modifg.png" style={{width:700, height:'auto'}}/></div>
 
 **Step 2 . Prepare Vision AI V2 to be mounted on the reverse side of one of the two RS485 expansion boards as a sender**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_V2AI/photo/11.jpg" style={{width:500, height:'auto'}}/></div>
-
-
-
 
 :::tip
 If you are using an RS485 expansion board for the first time and are not sure how to wire it, click on this link(https://wiki.seeedstudio.com/XIAO-RS485-Expansion-Board/)
@@ -80,9 +80,6 @@ If you don't know how to burn the model and add the model output code, click on 
 
 For better subsequent use, do not skip these two steps！
 :::
-
-
-
 
 ## Software Prearation
 
@@ -174,25 +171,29 @@ void loop()
 
 ### Code Detailed Functions
 
-
 - **Library Inclusion**
-    - Include the `HardwareSerial` library to use hardware serial functionality.
-    - Include the `Seeed_Arduino_SSCMA` library for AI module control.
+  - Include the `HardwareSerial` library to use hardware serial functionality.
+  - Include the `Seeed_Arduino_SSCMA` library for AI module control.
 
-- **Serial Object Creation** 
+- **Serial Object Creation**
+
     ```cpp
     HardwareSerial Serial3(1); 
     HardwareSerial atSerial(0);
     ```
+
     Create Serial3 and atSerial objects for serial communication.
 
-- **AI Object Creation** 
+- **AI Object Creation**
+
     ```cpp
     SSCMA AI;
     ```
+
     Create an instance of the SSCMA class for AI processing.
 
 - **Performance Metrics**
+
     ```cpp
     Serial.print("perf: prepocess=");
    Serial.print(AI.perf().prepocess);
@@ -201,10 +202,11 @@ void loop()
    Serial.print(", postpocess=");
    Serial.println(AI.perf().postprocess);
     ```
+
     Print performance metrics of the AI processing stages: preprocessing, inference, and postprocessing.
 
-
 - **Detected Boxes Loop**
+
     ```cpp
 
     for (int i = 0; i < AI.boxes().size(); i++) {
@@ -224,9 +226,11 @@ void loop()
         Serial.println(AI.boxes()[i].h);
     }
     ```
+
     Loop through detected boxes and print their details, including target, score, and bounding box coordinates.
 
 - **Detected Classes Loop**
+
     ```cpp
     for (int i = 0; i < AI.classes().size(); i++) {
        Serial.print("Class[");
@@ -234,19 +238,20 @@ void loop()
        Serial.print("] target=");
        Serial.println(AI.classes()[i].target);
     ```
+
     Loop through detected classes and print their targets.
 
+- **Macro Definition**
 
-- **Macro Definition** 
     ```cpp
     pinMode(enable_pin, OUTPUT); // Set the enable pin as an output
     digitalWrite(enable_pin, LOW);
     ```
+
     Define the enable pin as D2.
 
-
-
 - **Send Message**
+
     ```cpp
     // Check the target class and send corresponding status
     if (AI.classes()[i].target == 0) {
@@ -261,8 +266,6 @@ void loop()
     ```
 
     Determine whether a person is detected, if a person is detected it is sent to the receiver PEOPLE DETECTED, if no person is detected it is sent to the receiver NO PEOPLE DETECTED.
-
-
 
 ### Receiver Code
 
@@ -299,19 +302,22 @@ void loop() {
 ### Code Detailed Functions
 
 - **Library Inclusion**
-    - Include the `HardwareSerial` library to use hardware serial functionality.
+  - Include the `HardwareSerial` library to use hardware serial functionality.
 
 - **Serial Object Creation**
-    - Create a `Serial3` object using UART2.
+  - Create a `Serial3` object using UART2.
 
-- **Macro Definition** 
+- **Macro Definition**
+
     ```cpp
     pinMode(enable_pin, OUTPUT); // Set the enable pin as an output
     digitalWrite(enable_pin, LOW);
     ```
+
     Define the enable pin as D2.
 
-- **Setup Function** 
+- **Setup Function**
+
     ```cpp
     Serial3.begin(115200, SERIAL_8N1, 7, 6);
     ```
@@ -322,27 +328,26 @@ void loop() {
     while(!Serial3);
     while(!Serial); 
     ```
+
     Wait for the all serial ports to be ready, set the enable pin as output, and pull it low to enable the device.
 
 - **Loop Function**
-    - `if (Serial3.available());`: wCheck every 100 milliseconds if there is data available on Serial3.
-    - `String receivedData = Serial3.readStringUntil('\n');`:If data is available, read it until a newline character and print the received data to the main serial.
+  - `if (Serial3.available());`: wCheck every 100 milliseconds if there is data available on Serial3.
+  - `String receivedData = Serial3.readStringUntil('\n');`:If data is available, read it until a newline character and print the received data to the main serial.
 - **Print results**
+
     ```cpp
     Serial.print("Received data: "); 
     Serial.println(receivedData); 
     ```
+
     Printing the sender's message
-
-
-
 
 ### Results Chart
 
 However, the camera will send **“people detected”** when it recognizes a person and **"no people detected"** when it does not recognize a person, and the receiver will display the result of the sender's recognition on the serial port.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_V2AI/photo/result.png" style={{width:1000, height:'auto'}}/></div>
-
 
 ## Tech Support & Product Discussion
 

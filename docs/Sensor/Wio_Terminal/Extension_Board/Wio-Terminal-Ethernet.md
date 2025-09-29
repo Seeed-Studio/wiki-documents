@@ -560,7 +560,7 @@ This the workaround of connecting to twitter, which may not be safe, do it under
 
 Get a token to post a message using OAuth by clicking [**here**](http://arduino-tweet.appspot.com/oauth/twitter/login).
 
->Please visit <http://arduino-tweet.appspot.com/> for more reference.
+>Please visit [http://arduino-tweet.appspot.com/](http://arduino-tweet.appspot.com/) for more reference.
 
 ### Example Code
 

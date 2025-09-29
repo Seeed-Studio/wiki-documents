@@ -1,0 +1,5 @@
+position: 2 # float position is supported
+label: 'Using a model'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: sensecraft_ai_Tutorials_Using a model

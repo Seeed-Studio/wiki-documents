@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
 slug: /recomputer_r
 last_update:
-  date: 01/08/2025
-  author: Joshua Lee
+  date: 09/15/2025
+  author: Kasun Thushara
 ---
 
 <!-- ---
@@ -21,65 +21,77 @@ sku: 113991274
 tags:
 --- -->
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width="600" height="auto"/></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
 <br />
 
-The reComputer R1000 edge IoT controller is built on the high-performance Raspberry Pi CM4 platform, featuring a quad-core A72 processor with a maximum support of 8GB RAM and 32GB eMMC. Equipped with dual Ethernet interfaces that can be flexibly configured, it also includes 3 isolated RS485 channels supporting BACnet, Modbus RTU, Modbus TCP/IP protocols. 
+The reComputer R1000 edge IoT controller is built on the high-performance Raspberry Pi CM4 platform, featuring a quad-core A72 processor with a maximum support of 8GB RAM and 32GB eMMC. Equipped with dual Ethernet interfaces that can be flexibly configured, it also includes 3 isolated RS485 channels supporting BACnet, Modbus RTU, Modbus TCP/IP protocols.
 With robust IoT network communication capabilities, the R1000 series supports multiple wireless communication options including 4G, LoRa®, Wi-Fi/BLE, allowing for flexible configurations to serve as corresponding wireless gateways. This controller is well-suited for remote device management, energy management, and various other scenarios in the field of smart buildings.
-
 
 ## Feature
 
 ### Designed for Building Automation System
-* Multiple isolated RS485 channels supports high and low speeds communication.
-* Supports BACnet, Modbus RTU, and Modbus TCP/IP protocol
-* Up to 8GB RAM supports the processing of thousands of data points, ensuring efficient performance
-* Clear dual-sided LED indicators help check operational status quickly
-* High-quality metal case, compatible with DIN-rail and Wall installation 
-* Supports Yocto and Buildroot for customized OS
+
+- Multiple isolated RS485 channels supports high and low speeds communication.
+
+- Supports BACnet, Modbus RTU, and Modbus TCP/IP protocol
+- Up to 8GB RAM supports the processing of thousands of data points, ensuring efficient performance
+- Clear dual-sided LED indicators help check operational status quickly
+- High-quality metal case, compatible with DIN-rail and Wall installation
+- Supports Yocto and Buildroot for customized OS
+
 ### Powerful Performance
-* Powered by Raspberry Pi CM4 
-* Broadcom BCM2711 quad-core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz 
-* Up to 8GB RAM and 32GB eMMC
+
+- Powered by Raspberry Pi CM4
+
+- Broadcom BCM2711 quad-core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz
+- Up to 8GB RAM and 32GB eMMC
+
 ### Rich Wireless Capabilities
-* On-chip Wi-Fi
-* On-chip BLE
-* Mini-PCIe1: LTE, USB LoRa®, USB Zigbee
-* Mini-PCIe2: SPI LoRa®, USB LoRa®, USB Zigbee
+
+- On-chip Wi-Fi
+
+- On-chip BLE
+- Mini-PCIe1: LTE, USB LoRa®, USB Zigbee
+- Mini-PCIe2: SPI LoRa®, USB LoRa®, USB Zigbee
+
 ### Rich Interfaces
-* 3x RS485 (isolated)
-* 1x 10M/100M/1000M Ethernet (Support PoE)
-* 1x 10M/100M Ethernet
-* 1x HDMI 2.0
-* 2x Type-A USB2.0 
-* 1x Type-C USB2.0 (USB console for OS update)
-* 1x SIM card slot
+
+- 3x RS485 (isolated)
+
+- 1x 10M/100M/1000M Ethernet (Support PoE)
+- 1x 10M/100M Ethernet
+- 1x HDMI 2.0
+- 2x Type-A USB2.0
+- 1x Type-C USB2.0 (USB console for OS update)
+- 1x SIM card slot
+
 ### Safety and Reliability
-* Hardware Watchdog
-* UPS Supercapacitor(optional)
-* Metal casing with PC side panels
-* ESD: EN61000-4-2,level 3
-* EFT: EN61000-4-4, level 2
-* Surge: EN61000-4-5, level 2
-* Production Lifetime: reComputer R1000 will remain in production until at least December 2030
+
+- Hardware Watchdog
+
+- UPS Supercapacitor(optional)
+- Metal casing with PC side panels
+- ESD: EN61000-4-2,level 3
+- EFT: EN61000-4-4, level 2
+- Surge: EN61000-4-5, level 2
+- Production Lifetime: reComputer R1000 will remain in production until at least December 2030
 
 > \*4G and LoRa® modules does not come with reComputer R1000 by default, please purchase the relevant modules accordingly.
 
 ## Naming Conventions
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig11.png" alt="pir" width="800" height="auto"/></p>
 
 ## Specifications
 
 <div class="table-center">
-
 <table >
   <tbody>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -342,7 +354,6 @@ With robust IoT network communication capabilities, the R1000 series supports mu
     </tr>
   </tbody>
 </table>
-
 </div>
 
 ## Hardware Overview
@@ -355,13 +366,11 @@ With robust IoT network communication capabilities, the R1000 series supports mu
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig02.png" /></div>
 
-
 ## Power Diagram
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig13.png" /></div>
 
 The reComputer R1000 supports three power supply options: AC, DC terminal and PoE port. By default, the reComputer R1000 is powered through the AC/DC terminal (Official regional power adapter SKU:110061505/110061506), while **the PoE power supply(PoE module, SKU:110991925) is optional**. This provides flexibility in power supply selection and allows for easy integration with various power sources.
-
 
 ### 2-Pin Power terminal
 
@@ -377,8 +386,8 @@ The power solution utilizes a bridge rectifier diode for reverse polarity protec
 
 With the PoE module installed, the ETH0 port of reComputer R1000 can support PoE power supply, providing a convenient and efficientway to power the device over Ethernet. This option simplifies the installation process and reduces the amount of cabling required, making it an ideal solution for applications with limited power sources or where power outlets are not readily available.
 
-* PoE input: Range 44~57V; Typical 48V 
-* PoE output: 12V, 1.1A Max.
+- PoE input: Range 44~57V; Typical 48V
+- PoE output: 12V, 1.1A Max.
 
 :::note
 It's worth noting that the PoE module provided with the reComputer R1000 is compliant with the IEEE 802.3af standard and can provide a maximum power supply of 12.95W. Therefore, if there is a need to connect high-power peripherals such as SSD or 4G modules, the PoE power supply may not be sufficient. In this case, it's recommended to use the AC/DC terminal for power supply instead to ensure stable and reliable operation of the device.
@@ -406,14 +415,13 @@ Please note that after shutting down, please wait for at least 10 seconds before
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig12.png" /></div>
 
-###  IIC Diagram
+### IIC Diagram
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig10.png" /></div>
 
-## Interface 
+## Interface
 
 <div class="table-center">
-
 <table >
   <tbody>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -475,7 +483,6 @@ Please note that after shutting down, please wait for at least 10 seconds before
     </tr>
   </tbody>
 </table>
-
 </div>
 
 To query GPIO mappings and offsets, please use following command:
@@ -483,6 +490,7 @@ To query GPIO mappings and offsets, please use following command:
 ```bash
 cat /sys/kernel/debug/gpio
 ```
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/16.png" /></div>
 
 ### LED Indicator Status
@@ -635,7 +643,6 @@ The Boot Switch of the reComputer R1000 is connected to the nRPI_BOOT pin of CM4
 
 </div>
 
-
 ### USB
 
 <div align="left"><img width={150} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig20.png" /></div>
@@ -659,14 +666,13 @@ Running this command should display information about the USB devices connected 
 
 If the USB hub is functioning properly, you should see its details listed in the output of the **lsusb** command. If it's not listed, there may be an issue with the hub or its connection to the system. In such cases, you may need to troubleshoot the USB hub or its connections.
 
-
 ### SIM Slot
 
 <div style={{ position: 'relative', left: '150px' }}>
-    <img 
-        width="40" 
-        src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig19.png" 
-        style={{ transform: 'rotate(90deg)', position: 'absolute', top: '0', left: '0', transformOrigin: 'left top' }} 
+    <img
+        width="40"
+        src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig19.png"
+        style={{ transform: 'rotate(90deg)', position: 'absolute', top: '0', left: '0', transformOrigin: 'left top' }}
     />
 </div>
 <br />
@@ -684,7 +690,7 @@ Please note that the standard version of reComputer R1000 does not come with a 4
 The SSD slot on the reComputer R1000 is designed to accommodate NVMe M.2 2280 SSDs for 128GB, 256GB, 512GB and 1TB in capacity. This slot allows for high-speed storage expansion, enabling users to enhance the performance and capacity of their system.
 
 To list the disks, including the SSD, you can use the *fdisk -l* command. Here's how:
- 
+
 ```bash
 sudo fdisk -l
 ```
@@ -752,6 +758,7 @@ The reComputer R1000 features a native HDMI interface from CM4, supporting up to
 The reComputer R1000 features an RTC circuit that comes pre-installed with a CR2032 battery, enabling it to maintain timekeeping functionality even in the event of power loss.
 
 To test the Real-Time Clock (RTC) functionality, follow these steps:
+
 1. Disable automatic time synchronization:
 
 ```bash
@@ -803,27 +810,27 @@ sudo vim /etc/watchdog.conf
 Modify the configuration as follows:
 
 ```bash
-watchdog-device		= /dev/watchdog
+watchdog-device  = /dev/watchdog
 # Uncomment and edit this line for hardware timeout values that differ
 # from the default of one minute.vi
-watchdog-timeout	= 120
+watchdog-timeout = 120
 # If your watchdog trips by itself when the first timeout interval
 # elapses then try uncommenting the line below and changing the
 # value to 'yes'.
-#watchdog-refresh-use-settimeout	= auto
+#watchdog-refresh-use-settimeout = auto
 # If you have a buggy watchdog device (e.g. some IPMI implementations)
 # try uncommenting this line and setting it to 'yes'.
-#watchdog-refresh-ignore-errors	= no
+#watchdog-refresh-ignore-errors = no
 # ====================== Other system settings ========================
 #
 # Interval between tests. Should be a couple of seconds shorter than
 # the hardware time-out value.
-interval		= 15
-max-load-1		= 24
-#max-load-5		= 18
-#max-load-15		= 12
-realtime		= yes
-priority		= 1
+interval  = 15
+max-load-1  = 24
+#max-load-5  = 18
+#max-load-15  = 12
+realtime  = yes
+priority  = 1
 ```
 
 You can adjust other settings as needed.
@@ -854,7 +861,6 @@ The reComputer R1000 supports a rich selection of expansion modules and accessor
 Here is the accessories and optional modules list:
 
 <div class="table-center">
-
 <table >
   <tbody>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -976,14 +982,11 @@ Here is the accessories and optional modules list:
       <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>SuperCAP UPS LTC3350 Module</td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110992004</td>
     </tr>
-
-
   </tbody>
 </table>
-
 </div>
 
-The reComputer R1000 mainboard features two Mini-PCIe slots. Mini-PCIe slot 1 supports 4G module, LoRa® module using the USB protocol and Zigbee module using USB protocol; while Mini-PCIe slot 2 supports LoRa® module using the USB and SPI protocol and Zigbee module using USB protocol. 
+The reComputer R1000 mainboard features two Mini-PCIe slots. Mini-PCIe slot 1 supports 4G module, LoRa® module using the USB protocol and Zigbee module using USB protocol; while Mini-PCIe slot 2 supports LoRa® module using the USB and SPI protocol and Zigbee module using USB protocol.
 
 :::note
 Can not plug in 2 LoRa® modules on board.
@@ -1083,15 +1086,13 @@ exit
 
 ### 4G Module
 
-
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113991135--lte-cat-4-ec25-eux-mini-pcie-font_1.jpg" alt="pir" width={300} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
-
 
 The reComputer R1000 mainboard features two Mini-PCIe slots, with Mini-PCIe slot 1 supporting a 4G module using the USB protocol. The EC25 4G module from Quectel has been fully tested to be compatible with the reComputer R1000.
 
@@ -1100,7 +1101,6 @@ Please note that if you require 4G functionality, it is necessary to purchase th
 :::
 
 To interact with a 4G module using AT commands via minicom, follow these steps:
-
 
 **Step 1.** Please put in the 4G enabled sim-card in the [sim card slot](/recomputer_r/#sim-slot), before you power up the system.
 
@@ -1155,8 +1155,6 @@ You can also use the command `ifconfig` to query the networking status of reComp
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image33.png"/></div>
 
-
-
 ### LoRa® Module
 
 :::note
@@ -1164,7 +1162,6 @@ Both two Mini-PCIe slots supports LoRa® module using the USB protocol. Meanwhil
 <br />
 Please note that if you require LoRa® functionality, it is necessary to purchase the corresponding LoRa® module and external antenna.
 :::
-
 
 <!-- Code -->
 
@@ -1177,7 +1174,7 @@ import TabItem from '@theme/TabItem';
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/114992967-spi-us915.jpg" alt="pir" width={300} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM1302-LoRaWAN-Gateway-Module-SPI-US-915-p-5454.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM1302-LoRaWAN-Gateway-Module-SPI-US-915-p-5454.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -1185,7 +1182,6 @@ import TabItem from '@theme/TabItem';
 <br />
 
 **Step 1.** Please refer to the [LoraWAN® Module Hardware assembly](/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna) guide to install `WM1302 SPI LoraWAN® Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen.
-
 
 **Step 2.** type `sudo raspi-config` in command line to open Raspberry Pi Software Configuration Tool:
 
@@ -1206,6 +1202,10 @@ sudo vim ./libloragw/inc/loragw_i2c.h
 ```
 
 Change `#define I2C_DEVICE "/dev/i2c-1"` to `#define I2C_DEVICE "/dev/i2c-3"`.
+
+:::important
+If you are using version 1.1 reComputer R1000 please change to `#define I2C_DEVICE "/dev/i2c-6"`
+:::
 
 ```bash
 sudo make
@@ -1239,6 +1239,10 @@ vim global_conf.json.sx1250.EU868
 
 Change `"com_path": "/dev/spidev0.0"` to `"com_path": "/dev/spidev0.1"`
 
+:::important
+If you are using version 1.1 reComputer R1000 please change to `"com_path": "/dev/spidev1.1"`
+:::
+
 **Step 6.** Start LoraWAN® Module
 
 Then run the following code to start LoraWAN® Module according to your WM1302 operation frequence version.
@@ -1254,13 +1258,12 @@ cd ~/sx1302_hal/packet_forwarder
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114992991-wio-wm1302-lorawan-gateway-module-_spi_---us915-m---first.jpg" alt="pir" width={300} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
 **Step 1.** Please refer to the [LoraWAN® Module Hardware assembly](/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna) guide to install `WM1302 USB LoraWAN®  Module` into the `4G Mini PCIe slot` which you should see the *`4G`* slikscreen.
-
 
 **Step 2.** type `sudo raspi-config` in command line to open Raspberry Pi Software Configuration Tool:
 
@@ -1304,32 +1307,58 @@ SX1261_RESET_PIN=579     # SX1261 reset (LBT / Spectral Scan)
 cp ./tools/reset_lgw.sh ./packet_forwarder/
 ```
 
-**Step 5.** Modify the content of the `global_conf.json.sx1250.EU868.usb` configuration file:
+**Step 5.** Load the WM1302-USB module
+
+```bash
+# Check the device
+lsusb
+```
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/check_lora_device.png" /></div>
+
+```bash
+# Use the ID number to find the port number
+sudo dmesg | grep 5740
+# Load ACM module 
+sudo modprobe cdc_acm
+```
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/load_lora_device.png" /></div>
+
+**Step 6.** Find the device file
+
+```bash
+sudo dmesg | grep 1-1.3.3
+```
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/ACM.png" /></div>
+
+**Step 7.** Modify the content of the `global_conf.json.sx1250.EU868.USB` configuration file:
 
 ```sh
 cd packet_forwarder
-vim global_conf.json.sx1250.EU868.usb
+vim global_conf.json.sx1250.EU868.USB
 ```
 
-Change `"com_path": "/dev/spidev0.0"` to `"com_path": "/dev/spidev0.1"`
+Change `"com_path": "/dev/ttyACM0"` to `"com_path": "/dev/ttyACM4"`
 
-**Step 6.** Start LoraWAN® Module
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/change_file.png" /></div>
+
+**Step 8.** Start LoraWAN® Module
 
 Then run the following code to start LoraWAN® Module according to your WM1302 operation frequence version.
 
 ```sh
 cd ~/sx1302_hal/packet_forwarder
-./lora_pkt_fwd -c global_conf.json.sx1250.EU868.usb
+./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
 ```
 
 This command specifies the configuration file to be used for LoRa® USB.
-
 
 </TabItem>
 </Tabs>
 
 <!-- Code END -->
-
 
 ### Zigbee Module
 
@@ -1340,7 +1369,7 @@ Please note that if you require Zigbee functionality, it is necessary to purchas
 [Please click here for assemble instruction](/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna).
 :::
 
-#### Set up reComputer R1000 with Zigbee module as Zigbee Coordinator:
+#### Set up reComputer R1000 with Zigbee module as Zigbee Coordinator
 
 **Step 1.** Check Serial Ports:
 Use the following command to check available serial ports:
@@ -1356,10 +1385,11 @@ sudo apt-get install cutecom
 ```
 
 **Step 3.** Configure the setting and Open communication:
-* Configure the baudrate as 115200
-* Tick 'Hex output' at the bottom
-* Select correct Device port, for example: /dev/ttyACM0
-* Then click 'Open' to set up communication
+
+- Configure the baudrate as 115200
+- Tick 'Hex output' at the bottom
+- Select correct Device port, for example: /dev/ttyACM0
+- Then click 'Open' to set up communication
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/zigbee1.png" /></div>
 
@@ -1371,9 +1401,11 @@ For more detail information, please refer to [E18-MS1PA2-IPX](https://www.ebyte.
 Follow these steps to configure the first Zigbee module after checking module is at HEX code mode:
 
 - Set as coordinator: Send command `55 04 00 05 00 05`, expect response `55 04 00 05 00 05`.<br />
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/zigbeecommand.png" /></div>
 
 - Reset device: Press reset button or send command `55 07 00 04 00 FF FF 00 04`.<br />
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/zigbeecommand2.png" /></div>
 
 - Network formation: Send command `55 03 00 02 02`.<br />
@@ -1384,14 +1416,14 @@ For check digit calculation, can use such [Block Check Character calculator](htt
 :::
 
 **Step 5.** Check Device Status:
-Send command `5 03 00 00 00` to check the device status. Expect a response similar to `55 2a 00 00 00 01 XX XX XX XX`, where `XX` represents device information. 
+Send command `5 03 00 00 00` to check the device status. Expect a response similar to `55 2a 00 00 00 01 XX XX XX XX`, where `XX` represents device information.
 
 **Step 6.** Enter Transparent Mode:
-If network formation is successful, enter transparent mode by sending command `55 07 00 11 00 03 00 01 13`. Both modules should be in transparent mode for direct communication. Don't forget to set Input mode as *None*. To exit transparent mode, send `+++`. 
+If network formation is successful, enter transparent mode by sending command `55 07 00 11 00 03 00 01 13`. Both modules should be in transparent mode for direct communication. Don't forget to set Input mode as *None*. To exit transparent mode, send `+++`.
  <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/zigbeecommand4.png" /></div>
 
-
 **Step 7.** Additional Notes:
+
 - If router configuration fails, the device may already be a coordinator. Leave the network using command `55 07 00 04 02 xx xx xx`.
 - Test transmission power using commands `55 04 0D 00 00 0D` (query) and `55 04 0D 01 XX XX` (set).
 
@@ -1434,13 +1466,11 @@ The reComputer R1000 supports 2280 NVMe SSD and AI accelerator(Hailo) through th
   </tr>
   </tbody>
 </table>
-
 </div>
 
 :::note
 Please note that:<br />
 1- The speed test results may vary depending on the SSD model, testing method, and testing environment. The values provided here are for reference purposes only and were obtained in Seeed's laboratory.<br />
-
 
 There are two main uses for SSD cards:<br />
 1.High Capacity Storage: SSD cards can be utilized for high-capacity storage needs.<br />
@@ -1464,7 +1494,6 @@ ls /dev | grep tpm
 
 If you see **tpm0** and **tpmrm0** in the output, it means that TPM (Trusted Platform Module) devices are detected and available on your system. This indicates that the TPM hardware is recognized and accessible, which is a good sign. You can proceed with using TPM-related functionalities or applications knowing that the devices are present and accessible.
 
-
 ### UPS
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/30.png" /></div>
@@ -1486,16 +1515,18 @@ For UPS function please contact us for more information, and the alarm signal is
 
 A GPIO25 between CPU and DC/AC power in is used to alarm CPU when the 5V power supply is down. Then the CPU should do something urgent in a script before energy exhaustion of super capacitor and run a `$ shutdown`
 <br />
-Another way to use this function is Initiate a shutdown when GPIO pin changes. The given GPIO pin is configured as an input key that generates KEY_POWER events. This event is handled by systemd-logind by initiating a shutdown. 
-Use `/boot/overlays/README` as reference, then modify `/boot/config.txt`. 
+Another way to use this function is Initiate a shutdown when GPIO pin changes. The given GPIO pin is configured as an input key that generates KEY_POWER events. This event is handled by systemd-logind by initiating a shutdown.
+Use `/boot/overlays/README` as reference, then modify `/boot/config.txt`.
 
 ```bash
 dtoverlay=gpio-shutdown,gpio_pin=25,active_low=1
 ```
 
 :::note
-1.  For UPS function please contact us for more information.
-2.  The alarm signal is active LOW.
+
+1. For UPS function please contact us for more information.
+2. The alarm signal is active LOW.
+
 :::
 
 The python code below is a demo for detecting the working mode of supercapacitor UPS through GPIO25, and automatically saving data and shut down when the system is powered off.
@@ -1531,34 +1562,30 @@ while True:
     os.system('sudo shutdown -h now')
 ```
 
-
-
-###  DSI & Speaker
+### DSI & Speaker
 
 One DSI (J24)and one 4-pin Spearker (J7)interfaces are reserved on board, for special usage. Users are requested to purchase plug-ins according to your own needs.
 
-
-
-
 ## Additional Resources
 
-*  [User manual-reComputer R1000](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputerR_UserManual_version01.pdf)
-*  [User manual-reComputer R1000 in Chinese](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputerR_UserManual_CN_version01.pdf )
-*  [reComputer R1000 3D File](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000.stp)
-*  [reComputer R1000 Schematic Desing, PCB Desing](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_schematic_design_files.zip)
-*  [reComputer R1000 Flyer](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_flyer.pdf)
-*  [reComputer R1000 Flyer in Chinese](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_flyer_CN.pdf)
-*  [reComputer R1000 v1.1 Pin Assignment](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_v1_1_Pin_Assignment.xlsx)
+- [User manual-reComputer R1000](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputerR_UserManual_version01.pdf)
+- [User manual-reComputer R1000 in Chinese](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputerR_UserManual_CN_version01.pdf )
+- [reComputer R1000 3D File](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000.stp)
+- [reComputer R1000 Schematic Desing, PCB Desing](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_schematic_design_files.zip)
+- [reComputer R1000 Flyer](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_flyer.pdf)
+- [reComputer R1000 Flyer in Chinese](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_flyer_CN.pdf)
+- [reComputer R1000 v1.1 Pin Assignment](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_v1_1_Pin_Assignment.xlsx)
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

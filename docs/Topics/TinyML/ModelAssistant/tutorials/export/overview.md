@@ -25,7 +25,7 @@ exported model type, e.g. `--targets onnx` or `--targets tflite`.
 - [PyTorch to ONNX](/ModelAssistant_Tutorials_Export_PyTorch_2_ONNX): Converts PyTorch model and `.pth`
   weights to ONNX model `.onnx`
 
-- [PyTorch to TFLite](/ModelAssistant_Tutorials_Export_PyTorch_2_TFlite): Converts PyTorch model and `.pth`
+- [PyTorch to TFLite](/ModelAssistant_Tutorials_Export_PyTorch_2_TFLite): Converts PyTorch model and `.pth`
   weights to TFLite model `.tflite`
 
 :::tip

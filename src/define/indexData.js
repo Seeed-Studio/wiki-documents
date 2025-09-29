@@ -393,14 +393,16 @@ export const exploreList = [
     link: '/cn/Getting_Started/',
     children: [
       {
-        title: '矽递科技Wiki文档平台',
-        link:
-          '/cn/Getting_Started/',
+        title: 'Wiki 矽递科技 (中文)',
+        link: '/cn/Getting_Started/',
       },
       {
-        title: 'Plataforma Wiki de SeeedStudio (Español)',
-        link:
-          '/es/SeeedStudio_XIAO_Series_Introduction',
+        title: 'Wiki SeeedStudio (日本語)',
+        link: '/ja/Getting_Started/',
+      },
+      {
+        title: 'Wiki SeeedStudio (Español)',
+        link: '/es/Getting_Started/',
       },
     ],
   },

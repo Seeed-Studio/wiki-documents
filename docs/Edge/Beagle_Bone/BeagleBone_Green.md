@@ -18,13 +18,13 @@ Boot Linux in under 10 seconds and get started on development in less than 5 min
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-p-2504.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-p-2504.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.amazon.com/dp/B01AIC5AP4">
+    <a class="get_one_now_item" href="https://www.amazon.com/dp/B01AIC5AP4" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get on amazon.com </font></span></strong>
     </a>
 </div>
@@ -372,9 +372,13 @@ You will need some expansion board when you start a project. There're many cape 
 
 Please replace a stable power supply and try again. Usually mobile phone USB power adapter is more stable than that computer USB. Or you can remove the capacitor C162.
 
- ![](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/Capatictor.png)
+![](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/Capatictor.png)
 
-**3: What is the operating temperature range of the Seeed Studio BeagleBone® Green?**
+:::note
+The BeagleBone Green was revised in 2021, and the capacitor C162 mentioned above is no longer present on the updated boards. This FAQ applies only to BeagleBone Green versions released before 2021.
+:::
+
+**3. What is the operating temperature range of the Seeed Studio BeagleBone® Green?**
 
 BeagleBone® Green works in the temperature range of 0-75 Deg Celsius.
 

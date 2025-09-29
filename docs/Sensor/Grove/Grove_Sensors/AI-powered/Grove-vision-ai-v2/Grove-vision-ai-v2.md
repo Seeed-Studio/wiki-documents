@@ -15,7 +15,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/00.jpg" style={{width:700, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -170,7 +170,7 @@ Before connecting the Grove Vision AI V2 to your computer, keep the BOOT button 
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/connect_vision_ai_v2_to_ha" class="getting_started_label2"> Connecting to Home Assistant</a>
+          <a href= "/sensecraft-ai/application/application-for-homeassistant" class="getting_started_label2"> Connecting to Home Assistant</a>
           <br/>Integrating Grove Vision AI V2 into Home Assistant
       </div>
   </div>

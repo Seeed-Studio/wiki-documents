@@ -22,7 +22,6 @@ In this wiki, we will teach you how to train your own AI model for your specific
 
 [Seeed SenseCAP A1101](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) - **LoRaWAN Vision AI Sensor** is an image recognition AI sensor designed for developers. SenseCAP A1101 - LoRaWAN Vision AI Sensor combines TinyML AI technology and LoRaWAN long-range transmission to enable a low-power, high-performance AI device solution for both indoor and outdoor use.<br />This sensor features Himax's high-performance, low-power AI vision solution which supports the Google TensorFlow Lite framework and multiple TinyML AI platforms.<br />
 
-
 It is fully supported by Edge Impulse which means you will be able to sample raw data from the camera, build models, and deploy trained machine learning models to the module directly from the studio without any programming required. SenseCAP - Vision AI Module is available for purchase directly from [Seeed Studio Bazaar](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html).
 
 - SenseCAP A1101 - LoRaWAN Vision AI Sensor
@@ -30,9 +29,6 @@ It is fully supported by Edge Impulse which means you will be able to sample raw
 - Windows/ Linux/ Mac with internet access
 
 <div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p1.jpg"/></div>
-
-
-
 
 ## Software praparation
 
@@ -55,7 +51,6 @@ With all the software in place it's time to connect the A1101 to Edge Impulse.
 :::caution **Note:**
 If you purchased the device after **March 30, 2023**, then you don't need to update the firmware of EI, please jump directly to [STEP3](https://wiki.seeedstudio.com/One-Stop-Model-Training-with-Edge-Impulse/#step-3-setting-keys) Setting keys. Please note that updating the firmware of EI will overwrite the default model.
 :::
-
 
 ### Step 1. Update BL702 chip firmware
 
@@ -136,43 +131,45 @@ Finally, once a model is trained, it can be easily deployed to the A1101 – Vis
 <div align="center"><img width ={700} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p17.png"/></div>
 
 ## Deploy model to A1101 - Vision AI
+
 After building the machine learning model and downloading the Edge Impulse firmware from Edge Impulse Studio, deploy the model uf2 to SenseCAP - Vision AI by following **steps 1 and 2** under [Update Edge Impulse firmware section](https://docs.edgeimpulse.com/docs/development-platforms/officially-supported-mcu-targets/seeed-sensecap-a1101#2.-update-edge-impulse-firmware).
 Drag and drop the **firmware.uf2** file from EDGE IMPULSE to **SENSECAP** drive.
 
 When you run this on your local interface:
+
 ```
 edge-impulse-daemon --debug
 ```
+
 It will ask you to click a URL, then you will see a live preview of the camera on your device.
 
 <div align="center"><img width ={700} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/p33.png"/></div>
 
-##  Configure your model on the SenseCap Mate
+## Configure your model on the SenseCap Mate
 
-- Download [SenseCAP Mate](https://wiki.seeedstudio.com/Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP/#docusaurus_skipToContent_fallback) 
-   - [Android](https://play.google.com/store/apps/details?id=cc.seeed.sensecapmate&hl=en&gl=US)
-   - [iOS](https://apps.apple.com/gb/app/sensecap-mate/id1619944834)
+- Download [SenseCAP Mate](https://wiki.seeedstudio.com/Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP/#docusaurus_skipToContent_fallback)
+  - [Android](https://play.google.com/store/apps/details?id=cc.seeed.sensecapmate&hl=en&gl=US)
+  - [iOS](https://apps.apple.com/gb/app/sensecap-mate/id1619944834)
 - Open SenseCAP Mate and login
 
 <div align="center"><img width ={600} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p10.png"/></div>
 
 - Under **Config** screen, select **Vision AI Sensor**
 
-
 <div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p11.jpg"/></div>
 
 - Press and hold the configuration button on the SenseCap A1101 for 3 seconds to enter bluetooth pairing mode
+
 <div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p12.jpg"/></div>
 <div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p13.jpg"/></div>
 
-
 - Click **Setup** and it will start scanning for nearby SenseCAP A1101 devices- Go to **Settings** and make sure **Object Detection** and **User Defined 1** is selected. If not, select it and click **Send**
+
 <div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p14.jpg"/></div>
 
 - Go to **General** and click **Detect**
+
 <div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p15.jpg"/></div>
-
-
 
 - [Click here](https://files.seeedstudio.com/grove_ai_vision/index.html) to open a preview window of the camera stream
 
@@ -188,19 +185,16 @@ It will ask you to click a URL, then you will see a live preview of the camera o
 
 For example, as you can see above, the cat are being detected with bounding boxes around them. Here "0" corresponds to each detection of the same class. If you have multiple classes, they will be named as 0,1,2,3,4 and so on. Also the confidence score for each detected apple (0.72 in above demo) is being displayed!
 
-
 ## Tech Support & Product Discussion
-
-
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

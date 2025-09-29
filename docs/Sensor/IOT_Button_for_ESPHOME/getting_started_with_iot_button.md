@@ -11,251 +11,269 @@ last_update:
   author: Citric
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/1.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-IoT-Button-p-6419.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-IoT-Button-p-6419.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
 ## Introduction
 
+The IoT Button is a versatile smart switch offering dual Home Assistant integrations through ESPHome (via Wi-Fi) and Zigbee. Powered by the ESP32-C6, it features customizable RGB LED indicators, programmable event triggers for multiple press patterns, USB-C charging, and flexible mounting options - everything you need for intuitive smart home control.
 
-The IoT Button is a versatile smart switch offering dual Home Assistant integrations through ESPHome and Zigbee. Powered by ESP32-C6, it features customizable RGB LED indicators, programmable event triggers, USB-C charging, and flexible mounting options - everything you need for intuitive smart home control.
+This guide will walk you through setting up your IoT Button, whether you have the **V1 hardware (which shipped with ESPHome firmware)** or the **V2 hardware (which ships with Zigbee firmware)**.
 
 ### Features
 
-- Home Assistant Ready 
-- One Switch, Customizable Actions
-- Reliable Power Supply
-- Easy Mounting Solution
-- Open for Customization
+- **Home Assistant Ready**: Seamless integration via ESPHome or the Zigbee Home Automation (ZHA) integration.
+- **One Switch, Customizable Actions**: Supports single-press, double-press, and long-press actions to trigger different automations.
+- **Reliable Power Supply**: Powered by a standard 18650 rechargeable battery with a convenient USB-C charging port.
+- **Easy Mounting Solution**: Compact design that can be placed anywhere or mounted for easy access.
+- **Open for Customization**: Both hardware versions support flashing either ESPHome or Zigbee firmware, allowing you to choose the best protocol for your needs.
 
 ## Hardware Overview
 
-Before everything starts, it is quite essential to have some basic parameters of the product. The following table provides information about the characteristics of IoT Button.
+Before everything starts, it is quite essential to have some basic parameters of the product. The following table provides information about the characteristics of both V1 and V2 of the IoT Button.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Parameter</th>
-			<th>Description</th>
-		</tr>
-		<tr>
-			<td>MCU</td>
-			<td>Espressif ESP32-C6</td>
-		</tr>
-		<tr>
-			<td>Flash</td>
-			<td>4MB</td>
-		</tr>
+ <table align="center">
+  <tr>
+   <th>Parameter</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>MCU</td>
+   <td>Espressif ESP32-C6</td>
+  </tr>
+  <tr>
+   <td>Flash</td>
+   <td>4MB</td>
+  </tr>
         <tr>
-			<td>LED</td>
-			<td>User RGB LED: WS2812B (GPIO19 To use it, you need to enable GPIO18 at the same time.)<br />Charge LED: Green<br />User LED: Blue (GPIO2)</td>
-		</tr>
+   <td>LED</td>
+   <td>User RGB LED: WS2812B (GPIO19, requires GPIO18 to be enabled)<br />Charge LED: Green<br />User LED (Blue): GPIO2 (V1) / GPIO3 (V2)<br />Low Battery LED (Red): GPIO14 (<b>V2 only</b>)</td>
+  </tr>
         <tr>
-			<td>Wireless</td>
-			<td>2.4GHz Wi-Fi<br />Zigbee</td>
-		</tr>
+   <td>Wireless</td>
+   <td>2.4GHz Wi-Fi<br />Zigbee 3.0</td>
+  </tr>
         <tr>
-			<td>Battery</td>
-			<td>3.6V Li-ion 18650 Rechargeable battery</td>
-		</tr>
+   <td>Battery</td>
+   <td>3.6V Li-ion 18650 Rechargeable battery</td>
+  </tr>
         <tr>
-			<td>Charging Interface</td>
-			<td>USB Type-C</td>
-		</tr>
+   <td>Battery Monitoring</td>
+   <td>ADC for voltage reading (<b>V2 only</b>, GPIO1)</td>
+  </tr>
         <tr>
-			<td>Battery Protection</td>
-			<td>Reverse polarity protection</td>
-		</tr>
+   <td>Charging Interface</td>
+   <td>USB Type-C</td>
+  </tr>
         <tr>
-			<td>Firmware Update</td>
-			<td>Support OTA</td>
-		</tr>
+   <td>Battery Protection</td>
+   <td>Reverse polarity protection</td>
+  </tr>
         <tr>
-			<td>Dimensions</td>
-			<td>92x32x25 mm</td>
-		</tr>
-	</table>
+   <td>Firmware Update</td>
+   <td>Support OTA (Over-the-Air)</td>
+  </tr>
+        <tr>
+   <td>Dimensions</td>
+   <td>92x32x25 mm</td>
+  </tr>
+ </table>
 </div>
-
-
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/3.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/4.png" style={{width:800, height:'auto'}}/></div>
 
-
-
 ## Getting Started
 
 ### Step 1: Initial Setup
 
-When you first receive your IoT Button, it's essential to perform an initial activation step before use. Please follow these instructions:
+When you first receive your IoT Button, it's essential to perform an initial activation step before use. This applies to **both V1 and V2** hardware.
 
-1. Use a standard 5V USB Type-C data cable to connect the IoT Button to a power source
-2. **This initial power connection is crucial as it activates the built-in battery**
-3. **Without this activation step, the device will not function properly**
-
-The IoT Button comes pre-loaded with ESPHome-compatible firmware, so once activated, you can proceed directly to integrating it with Home Assistant following the steps below.
+1. Use a standard 5V USB Type-C data cable to connect the IoT Button to a power source (like a USB charger or computer).
+2. **This initial power connection is crucial as it activates the built-in battery's protection circuit.**
+3. **Without this activation step, the device will not function properly on battery power.**
 
 :::note
 Make sure to use a compliant 5V USB Type-C cable for the activation process. Using non-standard cables may result in improper activation.
 :::
 
-### Step 2: Setting Up Home Assistant
+### Step 2: Choose Your Connection Method
 
-1. **Installation**: For optimal performance, it's recommended to install [Home Assistant OS](https://www.home-assistant.io/installation/) on a Raspberry Pi. Follow the official installation guide on the Home Assistant website.
+The IoT Button offers two primary ways to connect to Home Assistant. Your choice will depend on the hardware version you have or the protocol you prefer.
 
-    :::tip install Home Assistant
-    We have also written how to install Home Assistant for some of Seeed Studio products, please refer to them.
+- **IoT Button V1** comes pre-loaded with **ESPHome** firmware. Please follow **Method 1**.
+- **IoT Button V2** comes pre-loaded with **Zigbee** firmware. Please follow **Method 2**.
 
-    - [Getting Started with Home Assistant on ODYSSEY-X86](/ODYSSEY-X86-Home-Assistant)
-    - [Getting Started with Home Assistant on reTerminal](/reTerminal_Home_Assistant)
-    - [Getting Started with Home Assistant on LinkStar H68K/reRouter CM4](/h68k-ha-esphome)
-    :::
+If you are an advanced user, you can flash either firmware onto either hardware version. See the "Advanced Usage" section for more details.
 
-    Alternatively, you can click the button below to shop Home Assistant Green or Home Assistant Yellow to use Home Assistant directly.
+---
 
-    <div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html">
-                <strong><span><font color={'FFFFFF'} size={"3"}>Home Assistant Green</font></span></strong>
-        </a>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Yellow-Kit-with-selectable-CM4-p-5680.html">
-                <strong><span><font color={'FFFFFF'} size={"3"}>Home Assistant Yellow</font></span></strong>
-        </a>
-    </div><br />
+### Method 1: ESPHome (Wi-Fi) Integration
 
-2. **Enabling ESPHome Add-on**:
-   - Access the Home Assistant dashboard.
-   - Navigate to the "Add-ons" section and search for the ESPHome add-on.
-   - Click "Install" and then "Start" to enable it.
+This method is the default for **V1 hardware** and is for users who want to connect their IoT Button to Home Assistant via Wi-Fi.
+
+#### 1. Set Up Home Assistant
+
+For optimal performance, it's recommended to install [Home Assistant OS](https://www.home-assistant.io/installation/) on a device like a Raspberry Pi or Home Assistant Green.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"3"}>Shop Home Assistant Green</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Yellow-Kit-with-selectable-CM4-p-5680.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"3"}>Shop Home Assistant Yellow</font></span></strong>
+    </a>
+</div><br />
+
+Once Home Assistant is running, ensure the **ESPHome add-on** is installed and started from the Add-on store.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/5.png" style={{width:1000, height:'auto'}}/></div>
 
-By gathering the necessary components and setting up Home Assistant with the ESPHome add-on, you'll be ready to proceed with the integration of the IoT Button.
+#### 2. Flash/Update ESPHome Firmware (If Necessary)
 
-
-
-### Step 2: Preparing the Kit
-
-By default, your device comes pre-flashed with firmware for IoT Button. However, there are two scenarios where you may need to update the firmware:
-
-1. **Re-flashing the Firmware**: If the existing firmware is corrupted or you need to start fresh.
-2. **Upgrading the Firmware**: If there is a newer version of the firmware with improved functionality.
-
-There are two simple methods for flashing the firmware:
+Your device comes pre-flashed. You only need to perform this step if you want to update to the [latest firmware version](https://github.com/Seeed-Studio/xiao-esphome-projects/releases) or if the existing firmware is corrupted.
 
 <Tabs>
 <TabItem value='Web Tool'>
 
-You can use this [Web Tool](https://seeed-projects.github.io/Seeed_IoT_Button/) for an easy and direct method to flash your firmware. Simply follow the on-screen instructions.
+The easiest method is to use our [**XIAO ESPHome Projects Firmware Flasher**](https://gadgets.seeed.cc/).
 
-- Click the `CONNECT` button to initiate the connection. The tool will automatically update the firmware.
-
-If something goes wrong, follow the on-screen troubleshooting steps or switch to the `ESPHome Web` method to complete the process.
+1. Connect your IoT Button to your computer via a USB cable.
+2. On the flasher page, find "Seeed Studio IoT Button" and click **INSTALL**.
+3. Select the correct COM port from the popup dialog.
+4. The browser will automatically download and flash the latest ESPHome firmware to your device.
 
 </TabItem>
 <TabItem value='ESPHome Web'>
 
-For this method, you'll need to download the `bin` firmware file from [here](https://github.com/limengdu/MR60FDA2_ESPHome_external_components/releases)(you'll need to unzip the downloaded file).
+Alternatively, you can use the official [ESPHome Web](https://web.esphome.io/) tool.
 
-1. Connect the IoT Button to your PC.
-2. Visit the [ESPHome Web](https://web.esphome.io/) page.
-3. Select the firmware file with the `*.factory.bin` suffix.
-
-Watch the following video for a detailed walkthrough of flashing the firmware via ESPHome Web:
-
-<iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Install firmware via ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+1. Download the latest `*.factory.bin` firmware file from the [GitHub Releases page](https://github.com/Seeed-Studio/xiao-esphome-projects/releases).
+2. Connect the IoT Button to your PC.
+3. Visit the [ESPHome Web](https://web.esphome.io/) page, click **CONNECT**, and choose the correct COM port.
+4. Click **INSTALL** and select the `.bin` file you downloaded.
 
 </TabItem>
 </Tabs>
 
-With either method, you'll have your firmware updated and ready for integration with Home Assistant.
+#### 3. Connect to Wi-Fi and Home Assistant
 
-#### Connect to the kit's hotspot
-
-With the firmware, you could power on the IoT Button, and a Wi-Fi access point will appear: `seeedstudio-iot-button`.
-
-Navigate to `192.168.4.1` to configure your Home Assistant server's local network settings. 
+1. After flashing, the IoT Button will create a Wi-Fi access point named `seeedstudio-iot-button`.
+2. Connect to this Wi-Fi network from your phone or computer.
+3. A captive portal should open automatically. If not, navigate to `192.168.4.1` in your browser.
+4. Select your home Wi-Fi network (SSID) and enter the password. The button will then connect to your network.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60fda2/opt-for-wifi-ap.jpg" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60fda2/ha-enter-psw.jpg" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
+#### 4. Add the Device in Home Assistant
 
-### Step 3: Discovering and Adding the Device in Home Assistant {#discovering-and-adding-the-device-in-home-assistant}
+Once the IoT Button is on the same network as your Home Assistant server, it should be automatically discovered.
 
-In this section, we'll go through the process using the Home Assistant app, where the logic is the same as on the web.
+1. Navigate to **Settings > Devices & Services**.
+2. Under the "Discovered" section, you should see `Seeed Studio IoT Button`.
+3. Click **CONFIGURE**, then **SUBMIT**, and assign the device to an area (e.g., Living Room).
 
-1. **Open the App**: Once you launch the app, select your Home Assistant server. The app will automatically find your server.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/18.png" style={{width:1000, height:'auto'}}/></div>
 
-  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-server-option.JPG" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
+#### 5. Create Automations with ESPHome
 
-2. **Create an Account**: If you haven't created an account, you'll need to do so. After that, log in with your credentials.
+The ESPHome firmware exposes different press patterns as separate switches.
 
-  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-login.JPG" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
+1. Go to **Settings > Automations & Scenes** and click **CREATE AUTOMATION**.
+2. For the **Trigger**, select `Device` and choose your IoT Button.
+3. Select a trigger type from the list, such as:
+    - `Single-press action`
+    - `Double-press action`
+    - `Long-press action`
+4. For the **Action**, choose the device or service you want to control (e.g., `light.toggle`).
+5. Save the automation.
 
-3. **Navigate to the Integration Page**: Once logged in, go to the "Integrations" page in Home Assistant. If you have installed the ESPHome add-on and both the IoT Button and your Home Assistant server are on the same network, you should see the device `Seeed Studio IoT Button` appear under discovered devices.
+---
 
-4. **Add the Device**: Click to add the device to your Home Assistant setup.
-  
-  Click the `CONFIGURE` button, confirm by pressing the `SUBMIT` button, and assign the device to your preferred area (e.g., Living Room). After this, the device will be managed through your ESPHome integration, enabling full control and monitoring in Home Assistant.
+### Method 2: Zigbee Integration
 
-  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/18.png" style={{width:1000, height:'auto'}}/></div>
+This method is the default for **V2 hardware** and is for users who want to connect their IoT Button to a Zigbee mesh network.
 
-  :::note
-  If the prompt does not require you to assign an area during the setup process, you can manually assign it later by navigating to the "Integrations" section in Home Assistant, selecting your device, and configuring the area from there.
-  :::
+#### 1. Set Up Zigbee in Home Assistant
 
-## Creating Automations with the IoT Button
+Before pairing, you need a Zigbee coordinator connected to your Home Assistant instance.
 
-Now that your IoT Button is set up, you can create automations to control devices in your smart home. Let's create a simple automation that turns on a light when you press the button.
+1. **Install a Zigbee Coordinator**: Connect a coordinator like the [Home Assistant SkyConnect](https://www.seeedstudio.com/Home-Assistant-SkyConnect-p-5479.html) to your server.
+2. **Set Up Zigbee Home Automation (ZHA)**:
+    - Go to **Settings > Devices & Services**.
+    - Click **Add Integration** and search for **Zigbee Home Automation**.
+    - Follow the prompts to set up ZHA with your coordinator.
 
-1. In Home Assistant, go to **Settings** > **Automations & scenes**.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/5.png" style={{width:1000, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/21.png" style={{width:1000, height:'auto'}}/></div>
+#### 2. Pair the IoT Button with Home Assistant
 
-2. Click **CREATE AUTOMATION**.
+1. In Home Assistant, navigate to the **Zigbee Home Automation** integration page.
+2. Click **Add Device** to put your coordinator in pairing mode.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/22.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/15.png" style={{width:1000, height:'auto'}}/></div>
 
-3. Set up your automation:
+3. Press the button on your IoT Button once to wake it and initiate pairing.
+    - If it doesn't pair, the device may have gone to sleep. Press it again.
+    - To force pairing, press and hold the button for **more than 5 seconds**. This triggers a factory reset and puts the device directly into pairing mode. The RGB LED will flash to confirm.
+4. Home Assistant should discover the device as **Seeed Studio IoT_Button**.
+5. The device will appear with multiple entities: a binary sensor for real-time state and several switches for different click actions.
 
-- **Name**: Give your automation a descriptive name, like "IoT Button Single Press - Turn On Light"
-- **Trigger**: Select "State" as the trigger type
-   - Entity: Select "Switch 1" (for single press)
-   - From: "off"
-   - To: "on"
-- **Action**: Choose the device you want to control
-   - For example, select a light and set it to turn on
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/iot_button_zigbee/2.png" style={{width:1000, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/23.png" style={{width:1000, height:'auto'}}/></div>
+#### 3. Create Automations with Zigbee
 
-4. Click **SAVE** to create the automation.
+Once paired, you can create automations based on the button's actions.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/24.png" style={{width:1000, height:'auto'}}/></div>
+1. Go to **Settings > Automations & Scenes** and click **CREATE AUTOMATION**.
+2. For the **Trigger**, select `Device` and find your IoT Button.
+3. ZHA exposes the clicks as device actions. Select the desired trigger from the list, for example:
+    - `"remote_button_short_press"`
+    - `"remote_button_double_press"`
+    - `"remote_button_long_press"`
+4. Configure the **Action** you want to perform.
+5. Save the automation.
 
-## Advanced Usage: Controlling Different Devices with Different Press Patterns
+Example automation in Home Assistant YAML to toggle a light with a **double click**:
 
-One of the powerful features of the IoT Button configuration is the ability to detect different press patterns. Here are some ideas for using each pattern:
+```yaml
+alias: IoT Button Double Click - Toggle Living Room Light
+description: ""
+trigger:
+  - platform: device
+    domain: zha
+    device_id: YOUR_DEVICE_ID_HERE # Replace with your button's device ID
+    type: "remote_button_double_press" # The exact type may vary, select it from the UI
+action:
+  - service: light.toggle
+    target:
+      entity_id: light.living_room
+mode: single
+```
 
-1. **Single Press (Switch 1)**:
-   - Turn on/off lights in the current room
-   - Toggle a frequently used device
+## Advanced Usage: Switching Firmware
 
-2. **Double Press (Switch 2)**:
-   - Activate a scene (e.g., "Movie Night" that dims lights and turns on the TV)
-   - Control a group of devices simultaneously
+One of the key features of the IoT Button is its flexibility. You can switch between ESPHome and Zigbee firmware on **either V1 or V2 hardware**.
 
-3. **Long Press (Switch 3)**:
-   - Activate security features (arm/disarm alarm)
-   - Trigger emergency routines
-   - Power off multiple devices at once
+- (Not recommended) **To switch to ESPHome**: If your button is running Zigbee firmware and you want to use Wi-Fi, simply follow the flashing instructions in **Method 1, Step 2** to install the ESPHome firmware.
 
-To set up these advanced automations, create additional automations following the steps above, but select the appropriate switch (Switch 1, 2, or 3) as the trigger and configure the desired actions.
+- **To switch to Zigbee**: If your button is running ESPHome and you want to join a Zigbee network, you will need to compile and flash the [Zigbee firmware using Arduino IDE](https://wiki.seeedstudio.com/seeed_iot_button_with_zigbee/). After flashing, follow the pairing steps in **Method 2**.
 
+## Resources
+
+- **[GITHUB]** [Seeed IoT Button Github Repository](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/seeedstudio-iot-button)
+- **[PDF]** [Seeed IoT Button SCH PDF](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed_IoT_Button_SCH.pdf)
+- **[SCH&PCB]** [Seeed IoT Button SCH & PCB](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed_IoT_Button_SCH&PCB.zip)
 
 ## Tech Support & Product Discussion
 
@@ -270,4 +288,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

@@ -15,6 +15,10 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+:::danger About the scope of radar use in Home Assistant
+The RADAR firmware updates and the ESPHome YAML updates are 2 different pieces of software. The ESPHome YAML can be updated OTA, while the RADAR board can ONLY be updated via USB inside the case, with specialized software that SEEED provides. You can customize the ESPHome software, you [can NOT customize the RADAR firmware](https://wiki.seeedstudio.com/getting_started_with_mr60bha2_mmwave_kit/#module-firmware-upgrade). Seeed Studio only allows RADAR customization if your doing a business application.
+:::
+
 ## Introduction {#introduction}
 
 The MR60BHA2 is a 60GHz mmWave Breathing and Heartbeat Detection Sensor module designed for integration with the XIAO ESP32C6 microcontroller. This advanced sensor utilizes millimeter-wave technology to provide non-invasive monitoring of vital signs and presence detection.
@@ -38,7 +42,7 @@ This integration empowers users to enhance their smart home systems with advance
       <tr>
          <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
-               <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+               <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
             </div>
          </td>
       </tr>
@@ -50,7 +54,7 @@ This integration empowers users to enhance their smart home systems with advance
 To effectively integrate the MR60BHA2 mmWave Sensor with Home Assistant using the XIAO ESP32C6, follow these essential steps:
 
 :::caution
-Please make sure you have [upgrade the firmware](getting_started_with_mr60bha2.md#module-firmware-upgrade) of MR60BHA2 module to the latest version.  
+Please make sure you have [upgrade the firmware](/getting_started_with_mr60bha2_mmwave_kit#module-firmware-upgrade) of MR60BHA2 module to the latest version.  
 The latest firmware adds human presence detection and personnel detection feature.
 :::
 
@@ -225,108 +229,113 @@ To get started with ESPHome, follow these steps:
 2. **Create a New Configuration**: Click on the device to open its configuration. Here, you can adjust settings such as the sensor's sensitivity, reporting intervals, and output formats. ESPHome uses a YAML configuration format, which is user-friendly and allows you to define various parameters. You can use the following template YAML file as a starting point for your configuration, which is designed specifically for the MR60BHA2 Sensor:
 
   ```yaml showLineNumbers title=example/mr60bha2.yaml
-  # template from https://github.com/limengdu/MR60BHA2_ESPHome_external_components
+    # template from https://github.com/limengdu/MR60BHA2_ESPHome_external_components
+    substitutions:
+      name: "seeedstudio-mr60bha2-kit"
+      friendly_name: "seeedstudio-mr60bha2-kit"
 
-  substitutions:
-    name: "seeedstudio-mr60bha2-kit"
-    friendly_name: "Seeed Studio MR60BHA2 Kit"
+    esphome:
+      name: "${name}"
+      friendly_name: "${friendly_name}"
+      name_add_mac_suffix: true
+      project:
+        name: "seeedstudio.mr60bha2_kit"
+        version: "3.5"
+      platformio_options:
+        board_upload.maximum_size: 4194304
+      min_version: "2024.3.2" # Fix logger compile error on ESP32-C6 esphome#6323
 
-  esphome:
-    name: "${name}"
-    friendly_name: "${friendly_name}"
-    name_add_mac_suffix: true
-    project:
-      name: "seeedstudio.mr60bha2_kit"
-      version: "2.0"
-    platformio_options:
-      board_upload.maximum_size: 4194304
-    min_version: "2024.3.2" # Fix logger compile error on ESP32-C6 esphome#6323
 
-  esp32:
-    board: esp32-c6-devkitc-1
-    variant: esp32c6
-    flash_size: 4MB # upload.flash_size
-    framework:
-      type: esp-idf
+    esp32:
+      board: esp32-c6-devkitc-1
+      variant: esp32c6
+      flash_size: 4MB # upload.flash_size
+      framework:
+        type: esp-idf
 
-  external_components:
-    - source:
-        type: git
-        url: https://github.com/limengdu/MR60BHA2_ESPHome_external_components
-        ref: main
-      components: [ seeed_mr60bha2 ]
-      refresh: 0s
+    # If you want to experience the latest components, you can remove this comment.
+    # external_components:
+    #   - source:
+    #       type: git
+    #       url: https://github.com/limengdu/MR60BHA2_ESPHome_external_components
+    #       ref: main
+    #     components: [ seeed_mr60bha2 ]
+    #     refresh: 0s
 
-  # Enable logging
-  logger:
-    hardware_uart: USB_SERIAL_JTAG
-    level: DEBUG
+    # Enable logging
+    logger:
+      hardware_uart: USB_SERIAL_JTAG
+      level: DEBUG
 
-  # Enable Home Assistant API
-  api:
+    # Enable Home Assistant API
+    api:
 
-  ota:
-    - platform: esphome
+    ota:
+      - platform: esphome
 
+    # It is highly recommended to use secrets
   wifi:
-    # Enable fallback hotspot (captive portal) in case wifi connection fails
-    ap:
-      ssid: "seeedstudio-mr60bha2"
+    ssid: !secret wifi_ssid
+    password: !secret wifi_password
 
-  captive_portal:
+      ap:
+        ssid: "seeedstudio-mr60bha2"
 
-  # For XIAO ESP32C6 Onboard LED
-  # light:
-  #   - platform: status_led
-  #     name: "Switch state"
-  #     pin: GPIO15
 
-  light:
-    - platform: esp32_rmt_led_strip
-      id: led_ring
-      name: "Seeed MR60BHA2 RGB Light"
-      pin: GPIO1
-      num_leds: 1
-      rmt_channel: 0
-      rgb_order: GRB
-      chipset: ws2812
+    captive_portal:
 
-  i2c:
-    sda: GPIO22
-    scl: GPIO23
-    scan: true
-    id: bus_a
+    # For XIAO ESP32C6 Onboard LED
+    # light:
+    #   - platform: status_led
+    #     name: "Switch state"
+    #     pin: GPIO15
 
-  uart:
-    id: uart_bus
-    baud_rate: 115200
-    rx_pin: 17
-    tx_pin: 16
-    parity: NONE
-    stop_bits: 1
 
-  seeed_mr60bha2:
-    id: my_seeed_mr60bha2
+    light:
+      - platform: esp32_rmt_led_strip
+        id: led_ring
+        name: "Seeed MR60BHA2 RGB Light"
+        pin: GPIO1
+        num_leds: 1
+        rgb_order: GRB
+        chipset: ws2812
 
-  binary_sensor:
-    - platform: seeed_mr60bha2
-      people_exist:
-        name: "Person Information"
+    i2c:
+      sda: GPIO22
+      scl: GPIO23
+      scan: true
+      id: bus_a
 
-  sensor:
-    - platform: bh1750
-      name: "Seeed MR60BHA2 Illuminance"
-      address: 0x23
-      update_interval: 1s
-    - platform: seeed_mr60bha2
-      breath_rate:
-        name: "Real-time respiratory rate"
-      heart_rate:
-        name: "Real-time heart rate"
-      distance:
-        name: "Distance to detection object"
-      target_num:
-        name: "Target Number"
+    uart:
+      id: uart_bus
+      baud_rate: 115200
+      rx_pin: 17
+      tx_pin: 16
+      parity: NONE
+      stop_bits: 1
+
+    seeed_mr60bha2:
+      id: my_seeed_mr60bha2
+
+    binary_sensor:
+      - platform: seeed_mr60bha2
+        has_target:
+          name: "Person Information"
+
+    sensor:
+      - platform: bh1750
+        name: "Seeed MR60BHA2 Illuminance"
+        address: 0x23
+        update_interval: 1s
+      - platform: seeed_mr60bha2
+        breath_rate:
+          name: "Real-time respiratory rate"
+        heart_rate:
+          name: "Real-time heart rate"
+        distance:
+          name: "Distance to detection object"
+        num_targets:
+          name: "Target number"
   ```
 
 3. **Customize Functionality**: You can enhance the sensor's capabilities by exploring various features available in ESPHome, allowing for flexible adjustments to suit your specific needs.
@@ -344,6 +353,81 @@ Through these steps, you can maximize the functionality of your MR60BHA2 mmWave 
 - [ESPHome — ESPHome](https://esphome.io/)
 - [Installation - Home Assistant](https://www.home-assistant.io/installation/)
 - [limengdu/MR60BHA2_ESPHome_external_components](https://github.com/limengdu/MR60BHA2_ESPHome_external_components)
+
+## Troubleshooting
+
+### Explanation of Radar Sensor Data Reporting Mechanism (For v1.6.12 and later)
+
+This Part details the timing, accuracy, and required conditions for data reported by the radar sensor's various detection functions. It is intended to help users better understand and utilize the sensor data.
+
+---
+
+### 1. Human Static Presence
+
+- **Function Description**:
+    Detects the presence of a stationary human target within a specified area.
+- **Key Parameter**:
+  - **Effective Detection Range**: Up to **4 meters**.
+- **Data Reporting Logic**:
+  - Reports a "Presence" status when a human target is detected in the area.
+  - Reports a "No Presence" status when the area is clear of human targets.
+  - **Note**: The 4-meter detection range is exclusive to the Human Static Presence function. It does not apply to other features like Breathing & Heartbeat Detection or Target Distance Detection, which have their own, shorter effective ranges. This function's sole purpose is to determine presence or absence, not to provide detailed data.
+
+---
+
+### 2. Breathing & Heartbeat Detection
+
+- **Function Description**:
+    Performs non-contact vital sign detection on a single, stationary human target.
+- **Key Parameters**:
+  - **Effective Detection Range**: Approximately **1.5 meters**.
+  - **Detection Target**: A single, stationary human.
+- **Necessary Operating Conditions**:
+  - **Target Stillness**: The person being monitored must remain completely still.
+  - **Device Stability**: The radar device must be securely mounted, with no shaking or vibration.
+  - **Single Target**: Only one person should be within the detection range.
+- **Data Reporting Logic**:
+  - **Normal Reporting**: When all the above conditions are met, the radar reports real-time breathing and heart rate values.
+  - **Abnormal Reporting Scenarios**:
+    - **Target Beyond 1.5m**: When a detected target is beyond the 1.5-meter effective range, the breathing and heart rate data will **stop updating** and be held at the last valid measurement.
+    - **No Target in Core Zone**: When no target is detected within the 0.5 to 1.5-meter core detection zone, the breathing and heart rate values will be actively reported as **0**.
+- **Note**: Please be aware of environmental interference. Micro-movements from sources like fans, air conditioners, or swaying curtains can sometimes be misinterpreted by the sensor. In such cases, the radar might report a non-zero **heart rate** value even when no human target is detected (and the breathing rate is reported as 0).
+
+---
+
+### 3. Target Distance Detection
+
+- **Applicable Firmware**: `1.6.10` and newer.
+- **Function Description**:
+    Detects and reports the straight-line distance between the radar and a target.
+- **Key Parameter**:
+  - **Maximum Effective Detection Range**: **5 meters**.
+- **Data Reporting Logic and Limitations**:
+  - **No Target State**: When no targets are detected, the distance value is reported as **0**.
+  - **Target(s) Detected**: When one or more targets are detected within the 5-meter range, the radar reports the distance of the target **closest** to the sensor.
+  - **Data Not Updated (Holds Last Value)**: The distance value will stop updating if the closest target is at or moves beyond the 5-meter effective detection range. In this case, the value will be held at the last valid measurement.
+- **Tracking Performance**:
+    To ensure the stability of stationary targets at close range, the radar's tracking strategy is optimized for different distances. The performance is detailed in the table below:
+
+| Distance Range | Target State | Tracking Performance & Notes |
+| :--- | :--- | :--- |
+| **0.5m ~ 1.5m** | Stationary | **Tracking Success Rate > 96%**. Performance is very stable. |
+| **1.5m ~ 3m** | Stationary | **Tracking Success Rate > 90%**. Performance is stable. |
+| **3m ~ 5m** | Stationary | Tracking stability decreases, with occasional target loss. Version 1.6.12 shows an 80% improvement over previous versions. |
+| **Approaching** | Moving | When a target moves towards the radar from a distance, stable tracking typically begins when the person reaches approximately **3 meters**. |
+| **Moving Away** | Moving | When a target moves away from the radar, tracking can extend **beyond 5 meters**. |
+
+---
+
+### 4. Environment Occupant Count
+
+- **Function Description**:
+    Provides a preliminary, estimated count of individuals within the detection area.
+- **Data Explanation**:
+  - This function is currently in a developmental stage and should be considered experimental. The returned value is a rough estimation derived from complex signal analysis.
+  - Its accuracy is heavily influenced by factors such as the overlapping of signals from multiple people, individual postures, and movement patterns.
+  - Consequently, **this feature is not suitable for applications that depend on precise occupant numbers**.
+  - We are actively working on refining the underlying algorithm and expect to deliver substantial accuracy improvements in future firmware releases.
 
 ## Tech Support & Product Discussion
 

@@ -15,16 +15,11 @@ last_update:
 
 The content of this chapter will guide users how to connect the [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) to InfluxDB through TTN.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/influx_sense.png" alt="pir" width={800} height="auto" /></p>
 
 Before starting the setup, please check [Connect SenseCAP T1000 to TTS](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN) to connect your SenseCAP T1000 Tracker to TTS first.
 
-
-
-
 ## Preparation
-
 
 Before ste up the InfluxDB, we need to in install the Telegraf agent (version 1.9.2 or higher) .
 
@@ -35,7 +30,6 @@ Before ste up the InfluxDB, we need to in install the Telegraf agent (version 1.
 Log in to your [InfluxDB Cloud](https://us-east-1-1.aws.cloud2.influxdata.com/).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/buckets.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Create Bucket
 
@@ -49,7 +43,6 @@ Click the **Create Bucket** button to create a new bucket.
 
 Name your bucket, choose how long the data will remain in the database and then click **Create**.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/create_done.png" alt="pir" width={800} height="auto" /></p>
 
 ### Generate Tokens
@@ -60,15 +53,11 @@ Navigate to **API TOKENS** tab and click the **GENERATE API TOKEN** button to cr
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/create_done.png" alt="pir" width={800} height="auto" /></p>
 
-
 ## Configure the Telegraf
-
 
 ### MQTT Integration
 
-
 This section shows you how to configure your Telegraf agent with MQTT Consumer plugin used for connecting to TTS MQTT Server.
-
 
 Navigate to **TELEGRAF** tab and click **CREATE CONFIGURATION**
 
@@ -78,9 +67,7 @@ Select your bucket we created before, and select system.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/create_telegraf.png" alt="pir" width={800} height="auto" /></p>
 
-
 Name your configuration, select Create and Verify and then Finish.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/download_config.png" alt="pir" width={800} height="auto" /></p>
 
@@ -123,8 +110,8 @@ Run the Telegraf agent in your terminal with the following command:
 ```cpp
 telegraf --config /path/to/custom/telegraf.conf
 ```
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/connected_MQTT.png" alt="pir" width={800} height="auto" /></p>
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/connected_MQTT.png" alt="pir" width={800} height="auto" /></p>
 
 ### HTTP Integration
 
@@ -174,8 +161,6 @@ MEASUREMENT: matt_sonsumer <br />
 _field: uplink_message_decoded_payload <br />
 topic: v3/...
 
-
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/map-done.png" alt="pir" width={800} height="auto" /></p>
 
 You can also click **SAVE AS** in the upper right corner to save this explorer as a Dashboard cell.
@@ -184,13 +169,9 @@ You can also click **SAVE AS** in the upper right corner to save this explorer a
 
 ## Dashboards(Optional)
 
-
 A dashboard is where you visualize and interact with data in real time. You can customize the dashboard according to your needs.
-
 
 Navigate to **Dashboard** tab and click **Create Dashbaord**.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/create_dashboard.png" alt="pir" width={800} height="auto" /></p>
-
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/influx_dashbaord.png" alt="pir" width={800} height="auto" /></p>

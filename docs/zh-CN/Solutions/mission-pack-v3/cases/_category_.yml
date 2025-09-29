@@ -1,0 +1,11 @@
+position: 3
+label: '案例学习'
+collapsible: true
+collapsed: true
+className: _mission-pack
+link:
+  type: generated-index
+  slug:  cn/mp-applications-v3
+  title: 案例学习
+  description: |
+    探索 Mission Pack 在不同领域的应用案例，了解其实际效果。

@@ -75,7 +75,7 @@ target remote localhost:3333
 
 - Load the Arduino Bootloader from the Arduino Board library root path:
 
-> You may also find the bootloader for Seeed SAMD boards here: <https://github.com/Seeed-Studio/ArduinoCore-samd/tree/master/bootloaders>
+> You may also find the bootloader for Seeed SAMD boards here: [https://github.com/Seeed-Studio/ArduinoCore-samd/tree/master/bootloaders](https://github.com/Seeed-Studio/ArduinoCore-samd/tree/master/bootloaders)
 
 **Note:** You may need to change `ansonhe` to your username or adjust to your correct path.
 

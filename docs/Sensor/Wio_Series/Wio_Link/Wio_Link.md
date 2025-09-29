@@ -19,7 +19,6 @@ In order to simplify all these steps, at the end of 2015, Seeed Studio initiated
 
 [![](https://files.seeedstudio.com/wiki/Wio_Link/image/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Link-p-2604.html)
 
-
 :::caution
      The Wio IFTTT function is EOL. But Wio APP is available. You can use the API from Wio APP to read sensor status and control the actuator. 
 :::
@@ -38,7 +37,9 @@ In order to simplify all these steps, at the end of 2015, Seeed Studio initiated
 ![](https://files.seeedstudio.com/wiki/Wio_Link/image/Wio_Link_Banner.gif)
 
 ## Specification
+
 ----
+
 |General|Value|Power Management|Value|
 |:---|---|:---|---:|
 |**Size**|55mm * 48mm|**DC Current Per I/O Pin**|12mA|
@@ -47,9 +48,10 @@ In order to simplify all these steps, at the end of 2015, Seeed Studio initiated
 |**Wi-Fi Network Protocol**|802.11b/g/n|**Output DC Current**|1000mA MAX
 |**Wi-Fi Encryption Technology**|WEP/TKIP/AES|**Operating Voltage**|3.3V|
 |**Grove Connectors**|6 |**Charge Current**|500mA MAX|
-|**Flash**|	4MB (W25Q32B)|
+|**Flash**| 4MB (W25Q32B)|
 
 ## Make with Wio Link
+
 ----
 Wio Link is well designed to provide simple Wi-Fi solutions for projects like:
 
@@ -58,8 +60,6 @@ Wio Link is well designed to provide simple Wi-Fi solutions for projects like:
 - Funny Toys
 - Web of Things
 - Internet of Things
-
-
 
 In fact, we have already designed many projects in our [**recipe**](https://community.seeedstudio.com/projects.html?t=Wio), come and visit it to find some interesting projects or even share you own projects, I am sure it will gain a lot of fans for you ~
 
@@ -76,20 +76,22 @@ In fact, we have already designed many projects in our [**recipe**](https://comm
 :::note
        * Some of the recipe are made for Wio Node, but it can apply to Wio Link too.
 :::
+
 ## Hardware Overview
+
 ---
 
 ![](https://files.seeedstudio.com/wiki/Wio_Link/image/Hardware%20overview.jpg)
 
 |Part|Function|
 |---|---|
-|MCU	|ESP8266|
-|Digital Port 0	|GPIO 14|
-|Digital Port 1|	GPIO 12|
-|Digital Port 2	|GPIO 13|
-|Analog Port	|A3|
-|UART Port|	Pin 1 & Pin 3|
-|I2C Port|	Pin 4 & Pin 5|
+|MCU |ESP8266|
+|Digital Port 0 |GPIO 14|
+|Digital Port 1| GPIO 12|
+|Digital Port 2 |GPIO 13|
+|Analog Port |A3|
+|UART Port| Pin 1 & Pin 3|
+|I2C Port| Pin 4 & Pin 5|
 |Status Light|Blue LED is the WiFi status indicator, Red LED indicates the working status
 |Configure Button| To configure and manage your Wio Link|
 |Battery Holder|JST2.0|
@@ -97,6 +99,7 @@ In fact, we have already designed many projects in our [**recipe**](https://comm
 |Reset Button| To reset the MCU|
 
 ### Status LEDs
+
 Near to the FUNCTION button there’re 2 status Leds, a blue one and a red one. The BLUE led is the network status indicating led. It has the following blink patterns:
 
 - breathing Under configuration mode
@@ -111,7 +114,8 @@ Near to the FUNCTION button there’re 2 status Leds, a blue one and a red one. 
 :::
 The RED led is another status led which indicates the power status of Grove modules. All the six Grove interface’s VCC converge together and can be controlled with GPIO 15. When the node is in deep sleep mode, all the grove modules lose their power too. The RED led will light on when Grove modules are powered and will go off when Grove modules aren’t powered.
 
-### Bonus!
+### Bonus
+
 Wio Link has an inbuilt LiPo battery charger, so you can charge 3.7v LiPo battery through JST 2.0 Port when USB is connecting.
 
 ![](https://files.seeedstudio.com/wiki/Wio_Link/image/500px-Wio_Link_Battery.jpg)
@@ -119,7 +123,9 @@ Wio Link has an inbuilt LiPo battery charger, so you can charge 3.7v LiPo batter
 :::note
      * Battery needs to be bought separately. Please visit [Bazaar](https://www.seeedstudio.com/s/Battery.html) where we arranged many choices for you.
 :::
+
 ## Get Started
+
 ---
 
 Let us build a very basic LED application with Wio Link, in this application you will be able to control LED by your smartphone in about 5 minutes. Before we start, please make sure you have below things on hand:
@@ -133,7 +139,9 @@ Let us build a very basic LED application with Wio Link, in this application you
     * A smartphone is needed as well (Android OS version 4.1 or advanced, iOS version 7 or advanced)
     * Grove - LED include a Grove cable already
 :::
+
 ### **STEP 1:** Install Android/iOS App
+
 You need to install the Wio Link App to manage and configure your Wio Link devices.
 
 Download the Android or iOS App and install. Or you can go to App Store of Apple or Google Market and search "Wio Link", you will find it.
@@ -145,7 +153,9 @@ Download the Android or iOS App and install. Or you can go to App Store of Apple
 :::note
     * Make sure your Android OS version is 4.1 or advanced, iOS version is 7 or advanced.
 :::
+
 ### **STEP 2:** Create your Account
+
 - If it is your first time to use Wio APP, it may require GPS authorization, please approve it, then sign up.
 - If you already have an account, check the server location before logging in.
 
@@ -155,6 +165,7 @@ Download the Android or iOS App and install. Or you can go to App Store of Apple
 [![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)
 
 ### **STEP 3**: Connect Wio Link Wi-Fi AP
+
 - Push and hold the CONFIG button until the blue LED turns into breathing mode (i.e. blinking with fade in & fade out effect). It means that Wio Link has turned to configuration mode successfully and can be detected by the Wio App.
 
 ![](https://files.seeedstudio.com/wiki/Wio_Link/image/WioLink_Configure-middle.png)
@@ -177,6 +188,7 @@ Download the Android or iOS App and install. Or you can go to App Store of Apple
 ![](https://files.seeedstudio.com/wiki/Wio_Link/image/Step3-3.png)
 
 ### **STEP 4:** Virtually interconnect modules with Wio Link and update firmware
+
 - Click the Wio Link and you will be in the main interface.
 - There are 6 grove connectors, select the first one on the left.
 - Because LED is output devices. Choose output category
@@ -190,14 +202,14 @@ Download the Android or iOS App and install. Or you can go to App Store of Apple
 ![](https://files.seeedstudio.com/wiki/Wio_Link/image/Wio_Link_Grove_LED%20middle.JPG)
 
 ### **STEP 5**: Test application using APIs
+
 - Now that  you have successfully connect the LED to Wio Link, click "View API" to check the API of Wio Link
 - Input "1" or "0" in the "Test Request" area, and click "Post" button and see what will happen.
 
 ![](https://files.seeedstudio.com/wiki/Wio_Link/image/Step5.png)
 
-
-
 ## Get started with IFTTT & DoButton
+
 ---
 Dont't know how to code? Don't worry, with the help of [IFTTT](https://en.wikipedia.org/wiki/IFTTT), even if you know nothing about coding, you are still able to build some simple projects.
 
@@ -212,15 +224,15 @@ If you already have an IFTTT account,click [here](https://ifttt.com/recipes/sear
 
 What is DoButton? DoButton is one of IFTTT's application that empowers you to create your own personalized button with just a tap, it is very suitable for building IoT projects and control it through your smartphone, here are two examples to show you how to use IFTTT&DoButton to make useful applications.
 
-### Example:
+### Example
 
 |**IFTTT**|**DoButton**|
 |:---|:---|
 |[**Recipe**][DIY an Automatic Garden Irrigation without coding](https://community.seeedstudio.com/project_detail.html?id=1080)|[**Recipe**][How to feed your pets when you're not home](https://community.seeedstudio.com/project_detail.html?id=1066)|
 |[**Video**][How to use ITFFF](https://vimeo.com/148590984)|[**Video**][How to use DoButton](https://vimeo.com/146988454)|
 
-
 ## Guide for advanced users
+
 ----
 Feel those examples too simple? Wanna make more complicated projects? Here are the best guides for advanced users to hack things with Wio Link. By these guides, advanced users are able to know more detail information about Wio Link, deploy private server, even write module driver for Wio Link.
 
@@ -234,6 +246,7 @@ The guide covers:
 - How to write module driver for Wio Link?
 
 ## Advanced Tutorial
+
 If you have successfully controlled the grove-led with your smartphone, and want to try something more difficult and not that complicated, why not try this tutorial, after learning it, you will be able to  build a temperature and humidity monitor and light up the RGB Led strip with Wio Link.
 
 Before you start, please check if you have below devices on hand.
@@ -242,7 +255,6 @@ Before you start, please check if you have below devices on hand.
 |:---:|:---:|
 |![](https://files.seeedstudio.com/wiki/Wio_Link/image/RGB%20LED%20Strip.jpg)|![](https://files.seeedstudio.com/wiki/Wio_Link/image/grove-T%26H%20sensor.jpg)|
 |[Get One Now](https://www.seeedstudio.com/s/led%20strip.html)|[Get One Now](https://www.seeedstudio.com/Grove-Temp%26Humi-Sensor-p-745.html)|
-
 
 - Step1: Remove the Grove LED from the grove connector, plug the Led strip to Wio Link and drag the same module to Wio Link in the App.
 - Update the firmware.
@@ -261,6 +273,7 @@ Before you start, please check if you have below devices on hand.
 - Step4: Control the light of Led strip by changing RGB value.
 
 Because the Wio Link App read hex RGB value, RGB value need to be converted to hex value. Here I would like to recommend the website [RGB t0 Hex](https://www.rgbtohex.net/). Just by inputting RGB value for the 3 RGB elements (Red, Green, Blue), the website will converts the RGB value to hex very easily. Here is some example.
+
 - Input 255, 0, 0
 
 ![](https://files.seeedstudio.com/wiki/Wio_Link/image/RGB%20255%200%200.png)
@@ -278,8 +291,8 @@ Then input how many Leds you want to lighten and the hex value in the app, here 
 
 You can also specific which part of the strip be lighted and give a special color to it, or even make like blink in rainbow mode. A lot of amazing functions are waiting for your exploration!
 
-
 ## Resource
+
 ---
 
 Hardware
@@ -299,37 +312,33 @@ More documentation and references
 - [How to write module driver for Wio Link](https://github.com/Seeed-Studio/Wio_Link/wiki/How-to-write-module-driver-for-Wio-Link%3F)
 - [iot.seeed.cc](http://iot.seeed.cc/index.html) to get more info.
 
-
 ## FAQ
+
 ----
 Here are some questions that we usually received from new users. If you have any other issues when you are using Wio Link or other Wio products, welcome to the [Community of Wio](https://community.seeedstudio.com/topics.html?t=Wio) where there are many professional users waiting to give you advices and also many advanced users providing plenty of ideas on how to use Wio products!
 
 **1. Power & Battery － Does Wio Link come with a Lipo battery?**
 
 Nope. Each Wio Link goes with a micro USB cable for charging or you can purchase a 3.7V Lipo battery from our Bazaar. Here’s the specs for your reference:
+
 - maximum input voltage: 4.2V;
 - maximum charging current: 500mA.
-
 
 **2. Power & Battery - Can I use a power adapter with Wio Link? Which type? And common battery holders?**
 
 There are two ways to power the Wio Link, Micro USB cable or a 3.7V Lipo battery. If both Micro USB and battery are plugged into the board, the battery will be charged by the USB power. You can use all kinds of power adapter which can connect with Micro USB cable and 5Vdc output. The battery holder is a JST-2.0 connector.
 
-
 **3. Power Consumption - What’s the power consumption of Wio Link?**
 
 The average power consumption is 70mA. With a battery of 700mAh, it can keep alive up to 10 hours. There are Low-Power-APIs which allows you to change the Wio Link from working-mode to sleeping-mode. It will reduce average power consumption to 150uA or less.
-
 
 **4. Grove Cables - Are the Groves equipped with cables in all kits?**
 
 Yes, we have each Grove modules packed with one standard 4-pin Grove cable.
 
-
 **5. RESTful APIs - Where are the endpoints? The calls aren't required to go through some cloud servers are they? Is it an internet connection required or can they be made all through a local network?**
 
 We deploy the REST API server to iot.seeed.cc, so you can get access to sensor and actuator from iot.seeed.cc. At the moment, Wio Link must connect to the Internet. Also, we will open-source the server so as to enable users deploy local servers in very simple Docker way. With local servers deployed, they can utilize the compiling and data exchange service locally instead of going online.
-
 
 **6. Programming Methods Supported - Will other programming methods be supported, such as Arduino IDE?**
 
@@ -337,19 +346,16 @@ Wio Link can be programed with Arduino IDE, in that case it will lose the functi
 
 If you would like to interact with Arduino or RPI, you can develop a 3rd-party module driver and here’s the guide: https://github.com/Seeed-Studio/Wio_Link/wiki/How-to-write-module-driver-for-Wio-Link%3F and example driver: https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/tree/master/grove_example
 
-
 **7. Platform Supported -Does Wio Link support Windows Platform?**
 
 By now Wio Link provides Android and iOS two mobile Apps. We have all services as RESTful API, such like user accounts and OTA, following API documents, the third-party developers can build their own applications say Mobile Apps or Desktop Apps.
 Wio Link is an community friendly project. It won't be limited to a certain platform. We really expect people can play with Wio Link in their way.
-
 
 **8. Can I use Wio Link to interact with existing systems?**
 
 Yes. Who Link can interact with your existing system in several ways. First, connect any GPIO of Wio Link to other system, select “Generic Digital Input” or “Generic Digital Output” virtual Grove modules in the mobile App, then send/read signals to/from the existing system with RESTful API calls. Second, connect the analog port of Wio Link to other system, select “Generic Analog Input” virtual Grove module in the mobile App, then read analog measurement for some physical quantity of your existing system. Third, to interact with existing system more flexible, you can develop a 3rd party module driver in which dispatch the requests from internet to your existing system through I2C or UART interface. We have a guide[1] about how to develop 3rd party module driver and also we can provide technical support for your development.
 
 [1]https://github.com/Seeed-Studio/Wio_Link#how-to-write-module-driver-for-wio-link
-
 
 **9. How many Groves supported on Wio Link?**
 
@@ -445,22 +451,23 @@ Here's the list of supported Groves so far:
 | 1043 | Fail connect to Wifi     | Please check your internet connection and try again.Or click "Setting" go to manual settings view.                                 |
 | 1044 | Connection Error         | Please check your internet connection and try again.If still can’t solve the problem, please try FAQ section and contact us. |
 
-## Project 
+## Project
 
 **LED Sound Meter using Wio-Link and Node-Red**: SeeedStudio Grove sound sensor and LED strip attached to Wio-Link being driven by a Node-Red flow.
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/potnik/led-sound-meter-using-wio-link-and-node-red-259e02/embed' width='350'></iframe>
 
 ## Tech Support & Product Discussion
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

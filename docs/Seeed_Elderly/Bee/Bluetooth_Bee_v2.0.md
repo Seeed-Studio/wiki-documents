@@ -22,58 +22,62 @@ It uses CSR Bluecore 04-External single chip Bluetooth system with CMOS technolo
 
 ##   Features
 ---
-###   Hardware Features
+### Hardware Features
 
-*   Typical -80dBm sensitivity.
+- Typical -80dBm sensitivity.
 
-*   Up to +4dBm RF transmit power.
+- Up to +4dBm RF transmit power.
 
-*   Fully Qualified Bluetooth V2.0+EDR 3Mbps Modulation.
+- Fully Qualified Bluetooth V2.0+EDR 3Mbps Modulation.
 
-*   Low Power 1.8V Operation, 1.8 to 3.6V I/O.
+- Low Power 1.8V Operation, 1.8 to 3.6V I/O.
 
-*   PIO control.
+- PIO control.
 
-*   UART interface with programmable baud rate.
+- UART interface with programmable baud rate.
 
-*   Integrated PCB antenna.
+- Integrated PCB antenna.
 
-*   Bee compatible headers.
+- Bee compatible headers.
 
-###   Software Features
+### Software Features
 
-*   Default Baud rate: 38400, Data bits:8, Stop bit:1,Parity:No parity, Data control: has.
+- Default Baud rate: 38400, Data bits:8, Stop bit:1,Parity:No parity, Data control: has.
 
-*   Supported baud rate: 9600,19200,38400,57600,115200,230400,460800.
+- Supported baud rate: 9600,19200,38400,57600,115200,230400,460800.
 
-*   Use CTS and RTS to control the data stream.
+- Use CTS and RTS to control the data stream.
 
-*   When a rising pulse is detected in PIO0, device will be disconnected.
+- When a rising pulse is detected in PIO0, device will be disconnected.
 
-*   Status instruction port PIO1: low-disconnected, high-connected;
+- Status instruction port PIO1: low-disconnected, high-connected;
 
-*   PIO10 is connected to red led, PIO11 is connected to green led. When master and slave are paired, red and green led blinks 1time / 2s in interval, while disconnected only green led blinks 2 times/ s.
+- PIO10 is connected to red led, PIO11 is connected to green led. When master and slave are paired, red and green led blinks 1time / 2s in interval, while disconnected only green led blinks 2 times/ s.
 
-*   Auto-connect the last device on power as default.
+- Auto-connect the last device on power as default.
 
-*   Permit matched device connect by default.
+- Permit matched device connect by default.
 
-*   Default PINCODE:0000.
+- Default PINCODE:0000.
 
-*   Auto-reconnect in 30 min when disconnected as a result of beyond the range of connection.
+- Auto-reconnect in 30 min when disconnected as a result of beyond the range of connection.
 
-:::cautions
+:::caution
     The supply voltage of this module is 3.3V, higher than this may cause permanent damage to the device.
 c;;;
-##   Hardware Installation
+
+## Hardware Installation
+
 ---
-###   Connecting Bluetooth to PC through Uart Bee
+
+### Connecting Bluetooth to PC through Uart Bee
 
 <!-- The Bluetooth provides a standard XBee socket. In here we use a [UartSBee V5](/UartSBee_v5) to connect Bluetooth and PC, ensure the supply voltage was selected as 3.3V by slider. -->
 
 |![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToPC.jpg)|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToPCSet.jpg)
 |---|---|
-###   Connecting Bluetooth to Arduino
+
+### Connecting Bluetooth to Arduino
 
 <!-- Here we use [XBee Shield](/XBee_Shield_V2.0) as a bridge between Bluetooth and [Seeeduino Lotus](/Seeeduino_Lotus). -->
 
@@ -82,95 +86,78 @@ Since the hardware UART of Seeedino was used as debug with PC, We choose D2 and 
 |![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToArduino.jpg)|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToArduinoSet.jpg)
 |---|---|
 
-##   Software Instruction
+## Software Instruction
+
 ---
-###   Conventions
 
-*   Factory default setting:
+### Conventions
 
-    *   Name: HMSoft;
+- Factory default setting:
 
-        *   Baud: 9600, N, 8, 1;
+  - Name: HMSoft;
 
-        *   Pin code: 1234;
+    - Baud: 9600, N, 8, 1;
 
-        *   transmit Version.
+    - Pin code: 1234;
 
-*   AT Command format:
-    *   Uppercase AT command format. string format, without any other symbol. (e.g. \r or \n).
+    - transmit Version.
 
-        *   Any incorrect command would be no response.
+- AT Command format:
+  - Uppercase AT command format. string format, without any other symbol. (e.g. \r or \n).
 
-###   AT Commands(to be continued...)
+    - Any incorrect command would be no response.
+
+### AT Commands(to be continued...)
 
 **1. Test Command**
 
-<table >
+<table>
 <tr>
-<th> Send
-</th>
-<th> Receive
-</th>
-<th> Parameter
-</th></tr>
+<th>Send</th>
+<th>Receive</th>
+<th>Parameter</th>
+</tr>
 <tr>
-<td width="300"> AT
-</td>
-<td width="300"> OK
-</td>
-<td width="300"> None
-</td></tr></table>
+<td width="300">AT</td>
+<td width="300">OK</td>
+<td width="300">None</td>
+</tr>
+</table>
 
 **2. Query/Set baud rate**
 
-<!-- <table >
+<!-- <table>
 <tr>
-<th> Send
-</th>
-<th> Receive
-</th>
-<th> Parameter
-</th></tr>
+<th>Send</th>
+<th>Receive</th>
+<th>Parameter</th>
+</tr>
 <tr>
-<td width="300"> AT+BAUD?
+<td width="300">AT+BAUD?</td>
+<td width="300">OK+Set:[para1]</td>
+<td rowspan="2" width="300">Para1: Baud rate No.
+
+<dl>1---------1200</dl>
+<dl>2---------2400</dl>
+<dl>3---------4800</dl>
+<dl>4---------9600</dl>
+<dl>5---------19200</dl>
+<dl>6---------38400</dl>
+<dl>7---------57600</dl>
+<dl>8---------115200</dl>
+<dl>9---------230400</dl>
+<dl>A---------460800</dl>
+<dl>B---------921600</dl>
+<dl>C---------1382400</dl>
+
+Default: 4(9600)
 </td>
-<td width="300"> OK+Set:[para1]
-</td>
-<td rowspan="2" width="300"> Para1: Baud rate No.
-
-<dl>1---------1200
-
-<dl>2---------2400
-
-<dl>3---------4800
-
-<dl>4---------9600
-
-<dl>5---------19200
-
-<dl>6---------38400
-
-<dl>7---------57600
-
-<dl>8---------115200
-
-<dl>9---------230400
-
-<dl>A---------460800
-
-<dl>B---------921600
-
-<dl>C---------1382400
-
-<dl>Default: 4(9600)
-
-</td></tr>
-
+</tr>
 <tr>
-<td width="300"> AT+BAUD[para1]
-</td>
-<td width="300"> OK+Set:[para1]
-</td></tr></table> -->
+<td width="300">AT+BAUD[para1]</td>
+<td width="300">OK+Set:[para1]</td>
+</tr>
+</table> -->
 
 **3. Query/Set Parity bit**
 
@@ -761,7 +748,7 @@ AT+VERSION?
 </td>
 <td rowspan="2" width="300"> Para1: 0, 1
 
-<dl>0: When module is powered on, only respond the AT Command, don’t do anything. until AT + WORK is received
+<dl>0: When module is powered on, only respond the AT Command, don't do anything. until AT + WORK is received
 
 <dl>1: When power on, work immediately
 
@@ -884,7 +871,7 @@ Default: 0
 </td>
 <td width="300"> OK+TPIO:[para1]
 </td>
-<td rowspan="2" width="300"> Para1 value is between 0000 and 9999 ms If value &gt;0, when PIO states is changed, module will send PIO states string to remote device delay this value.
+<td rowspan="2" width="300"> Para1 value is between 0000 and 9999 ms If value >0, when PIO states is changed, module will send PIO states string to remote device delay this value.
 
 <dl>Default: 0 send once
 
@@ -997,7 +984,7 @@ Default: 0
 </td>
 <td width="300"> Par1 value is 0, 1.
 
-<dl>0: Don’t notify(default)
+<dl>0: Don't notify(default)
 
 <dl>1:Notify when connected or disconnected
 
@@ -1033,89 +1020,10 @@ Default: 0
 
 </td></tr></table> -->
 
-##   Programming
+## Programming
 
-###   Configure the Bluetooth module with Serial Port under Windows
+### Configure the Bluetooth module with Serial Port under Windows
 
 This section shows how to configure Bluetooth with PC, some basic methods of setting could be learn.
 
-Set up hardware connection refer to “Hardware Installation” section. You will find the blue LED on the module flashes illustrate no connection is set up.
-
-Open a serial terminal and set Baud Rate:9600, Databits: 8, Stopbits: 1 and No Flow Control. Send “AT” to Bluetooth with the serial terminal and “OK” will be return if all goes well. The Bluetooth only respond AT commands when no connection was set up, or all commands were seen as string and sent out. You can distinguish the status through LED indicates.
-
-![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-AT.png)
-
-Then some useful configurations could be sent. Here’s are some samples of commands and response.
-
-1. Test serial connection, send “AT”, will return “OK”.
-
-2. Obtain firmware version, send “AT+VERSION?”, return “OK+VERSION:HMSoft V621”.
-
-3. Restore factory settings, send “AT+DEFAULT”, return “OK+DEFAULT”.
-
-4. Restart module, send “AT+RESTART”, return ”OK+RESTART”.
-
-5. Reset baud rate of serial port, send “AT+BAUD4”, return “OK+Set:9600”.
-
-6. Enable authentication, send “AT+AUTH1”, return “OK+SetAuth:1”.
-
-7. Query module address , send “AT+LADD?”, return “OK+LADD:000EEACF1A57”.
-
-8. Query Last Connected Device Address , send “AT+RADD?”, return “OK+RADD:000000000000”.
-
-9. Set Module name, send “AT+NAMEHM-01”, return “OK+Set:HM-01”.
-
-10. Set Pin Code, send “AT+PIN8888”, return “OK+SetPin:8888”.
-
-11. Enable notify information of connection, send “AT+NOTI1”, return “OK+Set:1”.
-
-12. Set to master mode, send “AT+ROLEM”, return “OK+Set:M”.
-
-Or Set to Slave mode, send “AT+ROLES”, return “OK+Set:S”.
-
-We use two Bluetooth connected with PC, one was set as Central while the other is Peripheral. Several seconds later they find each other and the LED stop flash, connected!
-
-###   Communicate with Android
-
-This kind of Bluetooth module is compatible with Bluetooth Specification V2.1+EDR、V2.0+EDR、V2.1、V2.0, it can communicate with any device has one of these protocols. We use a Android phone to demonstrate how to use a cellphone to interact with Bluetooth module.
-
-Power the module and configure it as Slave role(send “AT+ROLES” to module). Search and install an APP called “Bluetooth SPP pro” in Android phone. Launch the app, it will scan all Bluetooth device automatically. Select “HMSoft” and touch “Connect” button, and then “Byte stream mode”. Then we can send data to PC, write some words in the text field at the bottom of the Phone and hit send button. Also PC can transfer data to phone with serial terminal.
-
-|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Screenshot_2015-01-09-14-37-42.png)|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Screenshot_2015-01-09-14-38-43.png)
-|---|---|
-|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Screenshot_2015-01-09-14-38-48.png)|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Screenshot_2015-01-09-14-39-52.png)|
-
-![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Dialog_with_Android.png)
-
-###   Data transmission between Two Arduinos
-
-Are you ready to code? It’s time to do something after practice. Prepare a pair of Bluetooth, and Arduino or other platform to control them. Here we use two Arduino Uno. Set up the connection as mentioned in section “Hardware Installation”.
-
-The program of Central and Peripheral use the same code, the only difference is the micro define at the beginning of the program. To assign the Bluetooth to Central role, Just need to modify the text to “#define MASTER 1”, or “#define MASTER 1” if Peripheral role was assigned.
-
-The initialization program flow please refer to the following flow chart. First of all we need to distinguish the presetting baud rate of the Bluetooth. After this, send commands to restore factory settings, and change baud rate from 115200 to 9600 since software serial will not working well at high baud rate. Then other parameters were configured to the Bluetooth with Reset command in the final.
-
-![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Init-flowchat.png)
-
-After the initialization, the Central and Peripheral will do different things, the Central will send message to Peripheral interval and print what received from Peripheral while the Peripheral only responds the Central.
-
-<!-- Click [here](https://github.com/Seeed-Studio/HM-13_SW) to download the test code and open HM-13_SW.ino with Arduino IDE, compile and download to Arduino Uno. Remember to configure the Bluetooth to different role by modify the macro at the beginning. If you have any problem about how to start Arduino, please click [here](/Getting_Started_with_Seeeduino) for some help. -->
-
-After downloading program, open two serial terminal windows, the LEDs on Bluetooth will flash, several seconds later, they stop to flash and keep on, this indicates that they connected to each other. According to the program is written, the Central sends message to the Peripheral continually and get feedback every time.
-
-![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Debug_Output_Master.png)
-![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Debug_Output_Slave.png)
-
-## Tech Support & Product Discussion
-
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
-
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-</div>
+Set up hardware connection refer to "Hardware Installation" section. You will find the blue LED on the module flashes illustrate no connection is set up.

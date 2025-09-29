@@ -24,7 +24,8 @@ import TabItem from '@theme/TabItem';
 
 <div class="button-container">
 <a class="button-style" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html">
-        Get One Now 🖱️</a>
+        Get One Now 🖱️
+</a>
 </div>
 
 Unlock the full potential of your smart home by integrating the SenseCAP Indicator with Home Assistant. This powerful combination allows you to monitor and control your environment with unprecedented ease.
@@ -164,7 +165,6 @@ When using the official Mosquitto Broker add-on in Home Assistant, you may need 
 
 [^ref]: [MQTT default credential - GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/ba2fe1c04d486f802e12b763ffb6efbc71bb5d80/examples/indicator_ha/main/ha_config.h#L10C1-L14C70)
 
-
 4. In the user creation form:
    - Enter a username of your choice. default is `indicator-usr`[^ref].
    - Create a strong password. default is `indicator-password`.
@@ -193,13 +193,12 @@ There are two projects available for integrating SenseCAP Indicator with Home As
 This project is specifically designed for Home Assistant integration.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-<a class="github_item" href="https://github.com/Love4yzp/sensecap-indicator-ha">
+<a class="github_item" href="https://github.com/Love4yzp/sensecap-indicator-ha" target="_blank" rel="noopener noreferrer">
 
 <strong><span><font color={'FFFFFF'} size={"4"}>Get The Firmware</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
 
 </a>
 </div>
-
 
 Or use Git to clone the repository:
 
@@ -207,13 +206,13 @@ Or use Git to clone the repository:
 git clone https://github.com/Love4yzp/sensecap-indicator-ha
 ```
 
-</TabItem> 
+</TabItem>
 <TabItem value="SenseCAP_Indicator_ESP32" label="SenseCAP_Indicator_ESP32">
 
 This project includes more examples and features for the SenseCAP Indicator.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-<a class="github_item" href="https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32">
+<a class="github_item" href="https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32" target="_blank" rel="noopener noreferrer">
 
 <strong><span><font color={'FFFFFF'} size={"4"}>Get The Firmware</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
 
@@ -226,28 +225,28 @@ Or use Git to clone the repository:
 git clone https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32
 ```
 
-</TabItem> 
+</TabItem>
 </Tabs>
 
 ### Step 2: Navigate to the Project Directory
 
 Once you've downloaded or cloned the project, navigate to the appropriate directory:
 
-<Tabs groupId="project-ha"> 
+<Tabs groupId="project-ha">
 <TabItem value="sensecap-indicator-ha" label="sensecap-indicator-ha">
 
 ```bash
 cd sensecap-indicator-ha
 ```
 
-</TabItem> 
+</TabItem>
 <TabItem value="SenseCAP_Indicator_ESP32" label="SenseCAP_Indicator_ESP32">
 
 ```bash
 cd SenseCAP_Indicator_ESP32/examples/indicator_ha
 ```
 
-</TabItem> 
+</TabItem>
 </Tabs>
 
 ### Step 3: Build, Flash, and Monitor the Project
@@ -260,11 +259,12 @@ idf.py -p PORT build flash monitor
 
 Replace `PORT` with the appropriate port for your device (e.g., `COM3` on Windows or `/dev/ttyUSB0` on Linux).
 
-:::tip 
+:::tip
 If you're unsure about your device's port:
 
 - On Windows: Check Device Manager under "Ports (COM & LPT)"
-- On Linux/macOS: Run `ls /dev/tty*` in the terminal 
+- On Linux/macOS: Run `ls /dev/tty*` in the terminal
+
 :::
 
 This command will:
@@ -279,8 +279,8 @@ To exit the serial monitor, press `Ctrl-]`.
 
 After flashing the firmware, the serial monitor will display output from your SenseCAP Indicator. Look for messages indicating successful connection to your Wi-Fi network and MQTT broker.
 
-:::caution 
-Ensure that your SenseCAP Indicator is connected to the same network as your Home Assistant instance, and that your MQTT broker is properly configured and accessible. 
+:::caution
+Ensure that your SenseCAP Indicator is connected to the same network as your Home Assistant instance, and that your MQTT broker is properly configured and accessible.
 :::
 
 Once you've successfully flashed and verified the firmware on your SenseCAP Indicator, you're ready to proceed with integrating it into Home Assistant using the MQTT integration.
@@ -317,7 +317,6 @@ To modify the `configuration.yaml` file:
 
 <details>
 <summary>Click to expand and copy the MQTT configuration for SenseCAP Indicator</summary>
-
 
 ```yaml
 # Example configuration.yaml entry | SenseCAP Indicator MQTT Configuration
@@ -419,7 +418,7 @@ mqtt:
 1. Save the changes to the `configuration.yaml` file.
 
 :::caution
-If your Home Assistant setup doesn't support add-ons (e.g., Home Assistant Container), you'll need to modify the `configuration.yaml` file through a terminal or SSH connection. 
+If your Home Assistant setup doesn't support add-ons (e.g., Home Assistant Container), you'll need to modify the `configuration.yaml` file through a terminal or SSH connection.
 :::
 
 ### Step 2: Applying the Configuration Changes
@@ -432,9 +431,9 @@ After modifying the `configuration.yaml` file, you need to apply the changes:
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_ALL_YAML.png" alt="YAML Configuration in Developer Tools"/></div>
 
-
 :::note
 if something went wrong, you could
+
 - Click on the "Check Configuration" button to verify your changes.
 - If the configuration check passes, click on the "Restart" button to apply the new configuration.
 
@@ -567,7 +566,6 @@ Congratulations! You've successfully configured your Home Assistant dashboard to
 4. **Home Assistant Installation Guide**: If you're new to Home Assistant, this guide will help you get it installed and set up. You can find it [here](https://www.home-assistant.io/installation/).
 5. **Getting Started Guide for ESP-IDF**: This guide provides full steps to configure and use ESP-IDF to build projects. You can access it [here](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html).
 6. [Home Assistant Concepts and terminology](https://www.home-assistant.io/getting-started/concepts-terminology/)
-
 
 ## Reference
 

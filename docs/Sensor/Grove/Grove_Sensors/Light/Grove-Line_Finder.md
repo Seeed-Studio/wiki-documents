@@ -142,7 +142,7 @@ If this is your first time using Codecraft, see also [Guide for Codecraft using 
 
 Upload the program to your Arduino/Seeeduino.
 
-:::tipsuccess
+:::tip
 When the code finishes uploaded, you will see line found or not in Serial Monitor.
 :::
 

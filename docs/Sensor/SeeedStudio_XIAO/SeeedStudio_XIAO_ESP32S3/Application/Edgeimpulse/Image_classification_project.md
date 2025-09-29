@@ -23,7 +23,7 @@ We are running the machine learning model on our XIAO and feeding camera stream 
 ### Things needed
 
 - XIAO ESP32-Sense
-- <32GB MicroSD card
+- &lt;32GB MicroSD card
 - Type-C Cable
 - Arduino IDE
 - Edge Impulse Account
@@ -61,7 +61,7 @@ We now have a new fully XIAO ESP32S3 Sense-compatible powerful camera, the OV564
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/ov5640.gif" style={{width:500, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -69,8 +69,7 @@ We now have a new fully XIAO ESP32S3 Sense-compatible powerful camera, the OV564
 - **Step 1.** Download and Install the stable version of Arduino IDE according to your operating system.
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
-    </a>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
 </div>
 
 #### 1.1.2 Install XIAO-ESP32S3 Sense on Arduino
@@ -78,7 +77,7 @@ We now have a new fully XIAO ESP32S3 Sense-compatible powerful camera, the OV564
 - **Step 1.** Add ESP32 board package to your Arduino IDE.
 
   Navigate to **File > Preferences**, and fill **"Additional Boards Manager URLs"** with the url below:
-  _<https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json>_
+  *https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json*
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/6.png" style={{width:800, height:'auto'}}/></div>
 
@@ -170,7 +169,7 @@ Choose the zip file you just downloaded，and if the library install correct, yo
 
 ## Step 3. Run the example sketch
 
-Even though Edge Impulse has not released its SDK for ESP32S3 using the ESP NN accelerator, thanks to Dmitry Maslov, we can have its assembly optimizations restored and fixed for ESP32-S3. This solution is not official yet, and EI will include it in EI SDK once they fix conflicts with other boards.
+<!-- Even though Edge Impulse has not released its SDK for ESP32S3 using the ESP NN accelerator, thanks to Dmitry Maslov, we can have its assembly optimizations restored and fixed for ESP32-S3. This solution is not official yet, and EI will include it in EI SDK once they fix conflicts with other boards.
 
 :::caution
 For now, this only works with the non-EON version. So, you should also keep the the option **Enable EON Compiler** not selected.
@@ -187,7 +186,7 @@ Before we use the downloaded library, we need to enable the **ESP NN** Accelerat
 
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/10.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/10.png" style={{width:800, height:'auto'}}/></div> -->
 
 Copy the below inference code and paste to your Arduino IDE.
 
@@ -526,7 +525,7 @@ static int ei_camera_get_data(size_t offset, size_t length, float *out_ptr)
 #endif
 ```
 
-Make sure to replace the **"#include <XIAO_esp32S3_CatDog2_inferencing.h>"** with the library you generated. The upload the code and point to the Cat or Dog images or actual once, we can see the results Serial monitor.
+Make sure to replace the **`#include <XIAO_esp32S3_CatDog2_inferencing.h>`** with the library you generated. The upload the code and point to the Cat or Dog images or actual once, we can see the results Serial monitor.
 
 Congrats to you 🙌 on completing the tinyML image classification project.
 
@@ -550,8 +549,6 @@ Congrats to you 🙌 on completing the tinyML image classification project.
 
 <!-- - **[STEP]** [Seeed Studio XIAO ESP32S3 3D Model]() -->
 
-<!-- - **[ZIP]** [Seeed Studio XIAO ESP32S3 Certification files]() -->
-
 ### For Seeed Studio XIAO ESP32S3 Sense
 
 - **[PDF]** [Seeed Studio XIAO ESP32S3 Sense Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH.pdf)
@@ -570,15 +567,13 @@ Congrats to you 🙌 on completing the tinyML image classification project.
 
 <!-- - **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D Model]() -->
 
-<!-- - **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense Certification files]() -->
-
 ### Other
 
 - **[STP]** [XIAO ESP32S3 Sense housing design (top)](<https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(top).stp>)
 
 - **[STP]** [XIAO ESP32S3 Sense housing design (bottom)](<https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(bottom).stp>)
 
-_The remaining open source material is being compiled, so stay tuned!_
+*The remaining open source material is being compiled, so stay tuned!*
 
 ## Tech Support & Product Discussion
 

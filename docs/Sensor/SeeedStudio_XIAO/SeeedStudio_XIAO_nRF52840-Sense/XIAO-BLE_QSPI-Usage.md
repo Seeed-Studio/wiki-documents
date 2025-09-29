@@ -16,7 +16,6 @@ last_update:
 Special thanks to community users **JM_Laird** and **Haakonish** for their support and help with this tutorial! The program used in this article was sourced from Github user **PMCheetham** and the source can be found **[HERE](https://github.com/PMCheetham/SEEED_nRF52840_QSPI/tree/main)**.
 :::
 
-
 Welcome to this tutorial on using QSPI Flash on XIAO nRF52840 and XIAO nRF52840 Sense! XIAO is a powerful and compact board that features 256 KB RAM, 1 MB Flash, and 2 MB onboard Flash. In this tutorial, you will learn how to utilize the QSPI Flash on XIAO boards, which can greatly expand the storage capacity and speed up your projects. Let's get started!
 
 The following is a sample program provided by PMCheetham that works well with the XIAO nRF52840 Sense. With the following program you can freely use the QSPI Flash on the XIAO.
@@ -381,20 +380,16 @@ The program is only available for **mbed** boards, so please select the XIAO nRF
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new7.png" alt="pir" width={800} height="auto" /></p>
 
-
 ## Tech Support & Product Discussion
-
-.
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

@@ -39,7 +39,7 @@ Download the Xadow APP for Pebble Time
 
 You can follow the instructions to download the Xadow APP for Pebble Time, access the GPS information and Tag ID on your Pebble Time.
 
-The Demo App can be downloaded from <https://github.com/Seeed-Studio/Xadow_Strap/raw/master/build/pebbleapp_jack.pbw>. You can download it from your smart phone or send it from your PC to smart phone. Then select to open it with "Pebble Time" App in your phone. You will have an option to install the demo App into your Pebble Time.
+The Demo App can be downloaded from [pebbleapp_jack.pbw 下载地址](https://github.com/Seeed-Studio/Xadow_Strap/raw/master/build/pebbleapp_jack.pbw). You can download it from your smart phone or send it from your PC to smart phone. Then select to open it with "Pebble Time" App in your phone. You will have an option to install the demo App into your Pebble Time.
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Pebble_Time_Adapter/img/Xadow_Pebble_Time_Adapter_APP_UI.png)
 
@@ -48,7 +48,7 @@ Programming Guide
 
 ### Talking to the Adapter
 
-The firmware of the adapter implements the protocol described on pebble's official documentation: <http://developer.getpebble.com/guides/hardware/smartstrap-protocol/>
+The firmware of the adapter implements the protocol described on pebble's official documentation: [Pebble Smartstrap Protocol](http://developer.getpebble.com/guides/hardware/smartstrap-protocol/)
 
 So the resources which can be called from the watchapp side are as following:
 
@@ -151,13 +151,13 @@ So the resources which can be called from the watchapp side are as following:
 </tbody>
 </table>
 
-The source code of the demo pebble app can be downloaded at github: <https://github.com/Seeed-Studio/Xadow_Strap>
+The source code of the demo pebble app can be downloaded at github: [Xadow_Strap Repository](https://github.com/Seeed-Studio/Xadow_Strap)
 
 This app is only for demonstration of partial attribute call, please feel free to imagine your own fantastic pebble app based on the ability of GPS, NFC and more on.
 
 ### Programming the Adapter
 
-The adapter is built with LPC11U35 and running mbed software inside. The initial firmware is located at mbed.org. Please take a look at <https://developer.mbed.org/teams/Seeed/code/xadow_smartstrap_for_pebble/>
+The adapter is built with LPC11U35 and running mbed software inside. The initial firmware is located at mbed.org. Please take a look at [Xadow Smartstrap for Pebble](https://developer.mbed.org/teams/Seeed/code/xadow_smartstrap_for_pebble/)
 
 The eagle schematic of the adapter can be downloaded [here:](https://files.seeedstudio.com/wiki/Xadow_Pebble_Time_Adapter/res/Xadow_Pebble_Time_Adapter.rar)
 

@@ -14,10 +14,10 @@ last_update:
 
 BeagleBone® Blue is based on the extremely successful open-source hardware design of BeagleBone® Black, a high-expansion, maker-focused, community-supported open hardware computer, created by the BeagleBoard.Org Foundation.
 
-BeagleBone® Blue combines the high-performance flexible WiFi/Bluetooth WiLink™ interface of the BeagleBone® Black Wireless and the robotics capabilities of the Robotics Cape from Strawson Design.  BeagleBone® Blue has onboard 2 cell (2S) LiPo battery management with charger and battery level LEDs, 8 servo motor outputs, 4 DC motor drivers, 4 quadrature encoder inputs, a wide array of GPIO and serial protocol connectors including CAN, a 9 axis IMU and barometer, 4 ADC inputs, a PC USB interface, an USB 2.0 host port, a reset button, a power button, two user configurable buttons and six indicating LEDs.  Built on Octavo Systems’ System-In-Package that integrates a high-performance TI ARM processor and 512MB of DDR3, BeagleBone® Blue boots Linux in around 10 seconds and gets you started developing through your web browser in less than 5 minutes with just a single USB cable.
+BeagleBone® Blue combines the high-performance flexible WiFi/Bluetooth WiLink™ interface of the BeagleBone® Black Wireless and the robotics capabilities of the Robotics Cape from Strawson Design.  BeagleBone® Blue has onboard 2 cell (2S) LiPo battery management with charger and battery level LEDs, 8 servo motor outputs, 4 DC motor drivers, 4 quadrature encoder inputs, a wide array of GPIO and serial protocol connectors including CAN, a 9 axis IMU and barometer, 4 ADC inputs, a PC USB interface, an USB 2.0 host port, a reset button, a power button, two user configurable buttons and six indicating LEDs.  Built on Octavo Systems' System-In-Package that integrates a high-performance TI ARM processor and 512MB of DDR3, BeagleBone® Blue boots Linux in around 10 seconds and gets you started developing through your web browser in less than 5 minutes with just a single USB cable.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -26,30 +26,30 @@ BeagleBone® Blue combines the high-performance flexible WiFi/Bluetooth WiLink�
 
 ----
 
-* **Processor: Octavo Systems OSD3358 1GHz ARM® Cortex-A8**
-  * 512MB DDR3 RAM
-  * Integrated power management
-  * 2×32-bit 200-MHz programmable real-time units (PRUs)
-  * ARM Cortex-M3
-  * On-board 4GB 8-bit eMMC flash storage programmed with Debian Linux
+- **Processor: Octavo Systems OSD3358 1GHz ARM® Cortex-A8**
+  - 512MB DDR3 RAM
+  - Integrated power management
+  - 2×32-bit 200-MHz programmable real-time units (PRUs)
+  - ARM Cortex-M3
+  - On-board 4GB 8-bit eMMC flash storage programmed with Debian Linux
 
-* **Connectivity and sensors**
-  * Battery: 2-cell LiPo support with balancing, 9-18V charger input
-  * Wireless: 802.11bgn, Bluetooth 4.1 and BLE
-  * Motor control: 8 6V servo out, 4 DC motor out, 4 quadrature encoder in
-  * Sensors: 9 axis IMU, barometer
-  * Connectivity: HighSpeed USB 2.0 client and host
-  * User interface: 11 user programmable LEDs, 2 user programmable buttons
-  * Easy connect interfaces for adding additional sensors such as:
-    * GPS, DSM2 radio, UARTs, SPI, I2C, 1.8V analog, 3.3V GPIOs
+- **Connectivity and sensors**
+  - Battery: 2-cell LiPo support with balancing, 9-18V charger input
+  - Wireless: 802.11bgn, Bluetooth 4.1 and BLE
+  - Motor control: 8 6V servo out, 4 DC motor out, 4 quadrature encoder in
+  - Sensors: 9 axis IMU, barometer
+  - Connectivity: HighSpeed USB 2.0 client and host
+  - User interface: 11 user programmable LEDs, 2 user programmable buttons
+  - Easy connect interfaces for adding additional sensors such as:
+    - GPS, DSM2 radio, UARTs, SPI, I2C, 1.8V analog, 3.3V GPIOs
 
-* **Software Compatibility**
-  * [Debian](http://elinux.org/Beagleboard:BeagleBoneBlack_Debian)
-  * [ROS](https://dscl.lcsr.jhu.edu/home/courses/me530707_2017_edumip_ros)
-  * [ArduPilot](https://github.com/mirkix/ardupilotblue)
-  * Graphical programming with [LabVIEW](https://github.com/ktalke12/Labview-MiP)
-  * Cloud9 IDE on Node.js w/ BoneScript library
-  * Plus much more
+- **Software Compatibility**
+  - [Debian](http://elinux.org/Beagleboard:BeagleBoneBlack_Debian)
+  - [ROS](https://dscl.lcsr.jhu.edu/home/courses/me530707_2017_edumip_ros)
+  - [ArduPilot](https://github.com/mirkix/ardupilotblue)
+  - Graphical programming with [LabVIEW](https://github.com/ktalke12/Labview-MiP)
+  - Cloud9 IDE on Node.js w/ BoneScript library
+  - Plus much more
 
 ## Specification
 
@@ -175,15 +175,15 @@ BeagleBone® Blue combines the high-performance flexible WiFi/Bluetooth WiLink�
 
 ## Application Ideas
 
-* Internet of Things
+- Internet of Things
 
-* Smart House
-* Industrial
-* Automation & Process Control
-* Human Machine Interface
-* motor control
-* UAV control
-* Robot
+- Smart House
+- Industrial
+- Automation & Process Control
+- Human Machine Interface
+- motor control
+- UAV control
+- Robot
 
 ## Hardware Overview
 
@@ -211,7 +211,7 @@ The Debian distribution is provied for the boards. The file you download will ha
 
 **iii.** Download and install [Etcher](https://etcher.io/)
 
-Click to download <a href="https://etcher.io/">Etcher</a> here, and burn the ```*.img.xz``` file directly to your SD card with Etcher. Or unzip the ```*.img.xz``` file to a ```*.img``` file, then burn it to SD card with other image writing tools.
+Click to download here, and burn the ```*.img.xz``` file directly to your SD card with Etcher. Or unzip the ```*.img.xz``` file to a ```*.img``` file, then burn it to SD card with other image writing tools.
 
 Click the Plus icon to add the image you just download, the software will automatically select the SD card you plug. Then click Flash! to start burning. It will takes about 20 minutes to flash.
 
@@ -226,16 +226,16 @@ Connect the BeagleBone® Blue to your computer with the Micro-USB Cable.
 <div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/connect.jpg" /></div>
 
 :::caution
-Please plug the USB cable gently, otherwise you may damage the interface.Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click <a href="https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html"><B>here</B></a> to buy. If you want to use the Motor Control modules of BeagleBone® Blue, the power supply via USB Port is not sufficiant, you need to use DC-DC Port or 2S battery.
+Please plug the USB cable gently, otherwise you may damage the interface.Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click here to buy. If you want to use the Motor Control modules of BeagleBone® Blue, the power supply via USB Port is not sufficiant, you need to use DC-DC Port or 2S battery.
 :::
 
 You'll see the power (PWR or ON) LED lit steadily. Within a minute or so, you should see the other LEDs blinking in their default configurations.
 
-* USR0 is typically configured at boot to blink in a heartbeat pattern
-* USR1 is typically configured at boot to light during SD (microSD) card accesses
-* USR2 is typically configured at boot to light during CPU activity
-* USR3 is typically configured at boot to light during eMMC accesses
-* WIFI LED is typically configured at boot to light with WiFi network association (BeagleBone® Blue only)
+- USR0 is typically configured at boot to blink in a heartbeat pattern
+- USR1 is typically configured at boot to light during SD (microSD) card accesses
+- USR2 is typically configured at boot to light during CPU activity
+- USR3 is typically configured at boot to light during eMMC accesses
+- WIFI LED is typically configured at boot to light with WiFi network association (BeagleBone® Blue only)
 
 With the latest images, it should no longer be necessary to install drivers for your operating system to give you network-over-USB access to your Beagle. In case you are running an older image, an older operating system or need additional drivers for serial access to older boards, links to the old drivers are below.
 
@@ -258,7 +258,7 @@ With the latest images, it should no longer be necessary to install drivers for 
       <tr>
         <td className="tg-v0nz">Windows <br />(64-bit)</td>
         <td className="tg-l0dh"><a href="https://beagleboard.org/static/Drivers/Windows/BONE_D64.exe" target="_blank" rel="noopener noreferrer">64-bit installer</a><br /></td>
-        <td className="tg-gvcd" rowSpan={2}>If in doubt, try the 64-bit installer first.<br /><br />● Windows Driver Certification warning may pop up two or three times. Click "Ignore", "Install" or "Run"<br />● To check if you're running 32 or 64-bit Windows see this <a href="https://support.microsoft.com/kb/827218" target="_blank" rel="noopener noreferrer">Link</a>.<br />● On systems without the latest service release, you may get an error (0xc000007b). In that case, please click this <a href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523" target="_blank" rel="noopener noreferrer">Link</a> to install and retry.<br />● You may need to reboot Windows.<br />● These drivers have been tested to work up to Windows 10.</td>
+        <td className="tg-gvcd" rowSpan={2}>If in doubt, try the 64-bit installer first.<br /><br />● Windows Driver Certification warning may pop up two or three times. Click "Ignore", "Install" or "Run"<br />● To check if you're running 32 or 64-bit Windows see this here<a href="https://support.microsoft.com/kb/827218" target="_blank" rel="noopener noreferrer">Link</a>.<br />● On systems without the latest service release, you may get an error (0xc000007b). In that case, please click this here to install and retry.<br />● You may need to reboot Windows.<br />● These drivers have been tested to work up to Windows 10.</td>
       </tr>
       <tr>
         <td className="tg-v0nz">Windows <br />(32-bit)</td>
@@ -852,7 +852,7 @@ The list belew is the Grove modules that work well with BeagleBone® Blue.
 
 ## FAQs
 
-Please click **[here](http://support.seeedstudio.com/knowledgebase/articles/1826437-seeeduino-v4-2-sku-102010026)** to see all BeagleBone® Blue FAQs.
+Please click here to see all BeagleBone® Blue FAQs.
 
 ## Schematic Online Viewer
 
@@ -863,24 +863,24 @@ Please click **[here](http://support.seeedstudio.com/knowledgebase/articles/1826
 
 -----
 
-* **[Schematic]** [BeagleBone® Blue Schematic](https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/BeagleBone_Blue_eagle-file.zip)
-* **[Grove]** [BeagleBone® Blue Grove Compatibility List.xlsx](https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/res/Beaglebone%20Blue%20Grove%20Compatibility%20List.xlsx)
-* **[MoreReading]** [BeagleBoard Main Page](http://beagleboard.org/)
-* **[MoreReading]** [BeagleBoard Getting Started](http://beagleboard.org/getting-started)
-* **[MoreReading]** [Troubleshooting](http://beagleboard.org/getting-started#troubleshooting)
-* **[MoreReading]** [Hardware documentation](http://beagleboard.org/getting-started#hardware)
-* **[MoreReading]** [Projects of BeagleBoard](http://beagleboard.org/project)
+- **[Schematic]** [BeagleBone® Blue Schematic](https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/BeagleBone_Blue_eagle-file.zip)
+- **[Grove]** [BeagleBone® Blue Grove Compatibility List.xlsx](https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/res/Beaglebone%20Blue%20Grove%20Compatibility%20List.xlsx)
+- **[MoreReading]** [BeagleBoard Main Page](http://beagleboard.org/)
+- **[MoreReading]** [BeagleBoard Getting Started](http://beagleboard.org/getting-started)
+- **[MoreReading]** [Troubleshooting](http://beagleboard.org/getting-started#troubleshooting)
+- **[MoreReading]** [Hardware documentation](http://beagleboard.org/getting-started#hardware)
+- **[MoreReading]** [Projects of BeagleBoard](http://beagleboard.org/project)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

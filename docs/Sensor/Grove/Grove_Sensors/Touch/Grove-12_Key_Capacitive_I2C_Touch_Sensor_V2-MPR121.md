@@ -105,7 +105,7 @@ For the CH0 ~ CH11, once the electrode capacitance data is acquired, the electro
 
 ![](https://files.seeedstudio.com/wiki/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/img/pin_map_back_1.jpg)
 
-:::cautionDanger
+:::caution
 The central pad is connected to the address wire, you can change the I2C address by cutting the wire and re-welding it. For the safety of you and others, please be careful with knife or welding gun you may use.
 :::
 
@@ -253,7 +253,7 @@ void loop()
 
 - **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the `ctrl`+`shift`+`m` key at the same time. Set the baud rate to **115200**.
 
-:::tipsuccess
+:::tip
 If everything goes well, you will get the result. When you touch the CH0 ~ CH11 pads, it will trigger **key ?pressed** and **key ?release**
 :::
 
@@ -409,7 +409,7 @@ if __name__  == '__main__':
     main()
 ```
 
-:::tipsuccess
+:::tip
 If everything goes well, you will get the result. When you touch the CH0 ~ CH11 pads, it will trigger **channel # pressed** and **Channel # released** with corresponding pressure values.
 :::
 

@@ -29,25 +29,23 @@ Grove - LED is designed for the beginners of Arduino/Seeeduino to monitor contro
 ---
 <table>
   <tbody><tr>
-      <td width={400}> **Item**
-      </td>
-      <td width={400}> **Description**
-      </td></tr>
+      <td width={400}> **Item**</td>
+      <td width={400}> **Description**</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> LED Control Mode
-      </td>
-      <td> Digital Pin of Arduino
-      </td></tr>
+      <td> LED Control Mode</td>
+      <td> Digital Pin of Arduino</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Working Voltage
-      </td>
-      <td> 5V
-      </td></tr>
+      <td> Working Voltage</td>
+      <td> 5V</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Supply Mode
-      </td>
-      <td> Grove Interface
-      </td></tr></tbody></table>
+      <td> Supply Mode</td>
+      <td> Grove Interface</td>
+    </tr>
+  </tbody>
+</table>
 
 
 ##  Get Started with Aduino

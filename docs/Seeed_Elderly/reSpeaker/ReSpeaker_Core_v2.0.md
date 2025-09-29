@@ -280,6 +280,7 @@ This wiki is based on the **respeaker-debian-9-lxqt-sd-20180610-4gb.img.xz** ima
 
 - **Step 3.** Click to download [Etcher](https://etcher.io/)here, and burn the ```*.img.xz``` file directly to your SD card with Etcher. Or unzip the ```*.img.xz``` file to a ```*.img``` file, then burn it to SD card with other image writing tools.
 <br />
+
 <br />Click the Plus icon to add the image you just download, the software will automatically select the SD card you plug.Then click Flash! to start burning. It will take about 10 minutes to finish.
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/v2-flash-sd.png)
@@ -763,7 +764,7 @@ pin 1091 = 1
 
 **B. Use UPM Library**
 
-The UPM project implements sensors' driver based on the MRAA library, so we no longer need to care about the GPIO programming or what the I2C address of a sensor, all the default informations and logics for a particular sensor has been wrapped into a UPM library. UPM has supported bunch of sensors. <https://iotdk.intel.com/docs/master/upm/modules.html>. But please note that we didnt confirm every sensor works on the ReSpeaker Core v2.0.
+The UPM project implements sensors' driver based on the MRAA library, so we no longer need to care about the GPIO programming or what the I2C address of a sensor, all the default informations and logics for a particular sensor has been wrapped into a UPM library. UPM has supported bunch of sensors. [UPM modules](https://iotdk.intel.com/docs/master/upm/modules.html). But please note that we didnt confirm every sensor works on the ReSpeaker Core v2.0.
 
 **Example for Grove Digital Light Sensor**
 
@@ -961,7 +962,7 @@ on the new pads, as shown below：
 
 Here are the detail instructions.
 
-- Step 1. git clone <https://github.com/respeaker/image_builder>
+- Step 1. git clone [image_builder repository](https://github.com/respeaker/image_builder)
 - Step 2. modify the upload path @ /publish/respeaker.io_stable.sh
 - Step 3. sudo ./publish/respeaker.io_stable.sh
 
@@ -1033,12 +1034,11 @@ The basic function of the reception service is to greet visitors, make them feel
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

@@ -18,8 +18,7 @@ last_update:
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/xUX47UnT7xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <div class="button-container">
-    <a class="button-style" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html">
-            Get One Now 🖱️</a>
+  <a class="button-style" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html">Get One Now 🖱️</a>
 </div>
 
 SenseCAP Indicator is a powerful tool that harnesses the capabilities of OpenAI's ChatGPT and DALL·E models through API integration. Developed by OpenAI, a renowned name in the field of artificial intelligence, SenseCAP Indicator allows users to experience the fascinating potential of AI in various scenarios.

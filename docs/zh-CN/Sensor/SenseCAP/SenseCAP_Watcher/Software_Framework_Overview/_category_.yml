@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: '软件框架概述'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: 'watcher_software_framework_overview'
+link:
+  type: generated-index
+  slug: cn/watcher_software_framework_overview
+  title: Watcher 软件框架概述
+  description: 本节重点介绍 Watcher 的软件框架，包括如何在本地部署 Watcher 的 AI 服务、任务流程等内容。

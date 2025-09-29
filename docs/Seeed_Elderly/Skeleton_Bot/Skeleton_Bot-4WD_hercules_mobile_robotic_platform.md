@@ -44,362 +44,245 @@ Hercules is a suite of open-platform. It is convenient for users to install all 
 
 <table  cellspacing="0" width="80%">
 <tr>
-<th scope="col">
-</th>
-<th scope="col"> Parts Name
-</th>
-<th scope="col"> Specification
-</th>
-<th scope="col"> Material
-</th>
-<th scope="col"> Quantity
-</th></tr>
+<th scope="col"></th>
+<th scope="col"> Parts Name</th>
+<th scope="col"> Specification</th>
+<th scope="col"> Material</th>
+<th scope="col"> Quantity</th>
+</tr>
 <tr>
-<th scope="row"> 1
-</th>
-<td> Bracket-1
-</td>
-<td> 200*35*20mm*3.0mm
-</td>
-<td> L Aluminum extrusion 6061
-</td>
-<td> 2 pcs
-</td></tr>
+<th scope="row"> 1</th>
+<td> Bracket-1</td>
+<td> 200*35*20mm*3.0mm</td>
+<td> L Aluminum extrusion 6061</td>
+<td> 2 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 2
-</th>
-<td> Bracket-2
-</td>
-<td> 135*35*20mm*3.0mm
-</td>
-<td> L Aluminum extrusion 6061
-</td>
-<td> 2 pcs
-</td></tr>
+<th scope="row"> 2</th>
+<td> Bracket-2</td>
+<td> 135*35*20mm*3.0mm</td>
+<td> L Aluminum extrusion 6061</td>
+<td> 2 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 3
-</th>
-<td> Reducing-Motor
-</td>
-<td> 25GA-370
-</td>
-<td> 310rpm DC6V stalling torque：70kg
-</td>
-<td> 2 pcs
-</td></tr>
+<th scope="row"> 3</th>
+<td> Reducing-Motor</td>
+<td> 25GA-370</td>
+<td> 310rpm DC6V stalling torque：70kg</td>
+<td> 2 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 4
-</th>
-<td> Reducing-Motor with encoder
-</td>
-<td> 25GA-370
-</td>
-<td> 310rpm DC6V stalling torque：≥7.0 Kg.cm
-</td>
-<td> 2 pcs
-</td></tr>
+<th scope="row"> 4</th>
+<td> Reducing-Motor with encoder</td>
+<td> 25GA-370</td>
+<td> 310rpm DC6V stalling torque：≥7.0 Kg.cm</td>
+<td> 2 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 5
-</th>
-<td> Bracket Adapter Plate
-</td>
-<td> 29*12*2.0mm
-</td>
-<td> cold rolled plate
-</td>
-<td> 4 pcs
-</td></tr>
+<th scope="row"> 5</th>
+<td> Bracket Adapter Plate</td>
+<td> 29*12*2.0mm</td>
+<td> cold rolled plate</td>
+<td> 4 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 6
-</th>
-<td> Screw
-</td>
-<td> 3*10mm
-</td>
-<td> Metal
-</td>
-<td> 30 pcs
-</td></tr>
+<th scope="row"> 6</th>
+<td> Screw</td>
+<td> 3*10mm</td>
+<td> Metal</td>
+<td> 30 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 7
-</th>
-<td> nut
-</td>
-<td> M3*2.5mm
-</td>
-<td> Metal
-</td>
-<td> 4 pcs
-</td></tr>
+<th scope="row"> 7</th>
+<td> nut</td>
+<td> M3*2.5mm</td>
+<td> Metal</td>
+<td> 4 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 8
-</th>
-<td> Motor-connector
-</td>
-<td> Ф4mm*W12mm*L18mm
-</td>
-<td> Metal
-</td>
-<td> 4 pcs
-</td></tr>
+<th scope="row"> 8</th>
+<td> Motor-connector</td>
+<td> Ф4mm*W12mm*L18mm</td>
+<td> Metal</td>
+<td> 4 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 9
-</th>
-<td> Wheel
-</td>
-<td> Ф85mm*W31mm
-</td>
-<td> plastic+rubber
-</td>
-<td> 4 pcs
-</td></tr>
+<th scope="row"> 9</th>
+<td> Wheel</td>
+<td> Ф85mm*W31mm</td>
+<td> plastic+rubber</td>
+<td> 4 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 10
-</th>
-<td> Spring Shim
-</td>
-<td> Ф7mm*Ф4mm
-</td>
-<td> Metal
-</td>
-<td> 4 pcs
-</td></tr>
+<th scope="row"> 10</th>
+<td> Spring Shim</td>
+<td> Ф7mm*Ф4mm</td>
+<td> Metal</td>
+<td> 4 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 11
-</th>
-<td> Screw
-</td>
-<td> M4*8mm
-</td>
-<td> Metal
-</td>
-<td> 4 pcs
-</td></tr>
+<th scope="row"> 11</th>
+<td> Screw</td>
+<td> M4*8mm</td>
+<td> Metal</td>
+<td> 4 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 12
-</th>
-<td> Under-plate
-</td>
-<td> 199*129*2.0mm
-</td>
-<td> Tea black  Acrylic
-</td>
-<td> 1 pcs
-</td></tr>
+<th scope="row"> 12</th>
+<td> Under-plate</td>
+<td> 199*129*2.0mm</td>
+<td> Tea black  Acrylic</td>
+<td> 1 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 13
-</th>
-<td> washer
-</td>
-<td> Ф5.0*Ф3*5mm
-</td>
-<td> PA
-</td>
-<td> 4 pcs
-</td></tr>
+<th scope="row"> 13</th>
+<td> washer</td>
+<td> Ф5.0*Ф3*5mm</td>
+<td> PA</td>
+<td> 4 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 14
-</th>
-<td> power swicth
-</td>
-<td> /
-</td>
-<td> /
-</td>
-<td> 1 pcs
-</td></tr>
+<th scope="row"> 14</th>
+<td> power swicth</td>
+<td> /</td>
+<td> /</td>
+<td> 1 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 15
-</th>
-<td> [Hercules Dual 15A 6-20V Motor Controller](/Hercules_Dual_15A_6-20V_Motor_Controller)
-</td>
-<td>
-</td>
-<td>
-</td>
-<td> 1 pcs
-</td></tr>
+<th scope="row"> 15</th>
+<td> [Hercules Dual 15A 6-20V Motor Controller](/Hercules_Dual_15A_6-20V_Motor_Controller)</td>
+<td></td>
+<td></td>
+<td> 1 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 16
-</th>
-<td> Screw
-</td>
-<td> M3*21mm
-</td>
-<td> Metal
-</td>
-<td> 4 pcs
-</td></tr>
+<th scope="row"> 16</th>
+<td> Screw</td>
+<td> M3*21mm</td>
+<td> Metal</td>
+<td> 4 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 17
-</th>
-<td> Acylic-plate
-</td>
-<td> 53*12*2.0mm
-</td>
-<td> Transparent Acrylic
-</td>
-<td> 2 pcs
-</td></tr>
+<th scope="row"> 17</th>
+<td> Acylic-plate</td>
+<td> 53*12*2.0mm</td>
+<td> Transparent Acrylic</td>
+<td> 2 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 18
-</th>
-<td> cover-plate
-</td>
-<td> 184*132*2.0mm
-</td>
-<td> Tea black  Acrylic
-</td>
-<td> 1 pcs
-</td></tr>
+<th scope="row"> 18</th>
+<td> cover-plate</td>
+<td> 184*132*2.0mm</td>
+<td> Tea black  Acrylic</td>
+<td> 1 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 19
-</th>
-<td> Cu pillar
-</td>
-<td> M3*30mm-6mm
-</td>
-<td> signal stud
-</td>
-<td> 4 pcs
-</td></tr>
+<th scope="row"> 19</th>
+<td> Cu pillar</td>
+<td> M3*30mm-6mm</td>
+<td> signal stud</td>
+<td> 4 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 20
-</th>
-<td> Top-plate
-</td>
-<td> 216*138*1.5mm
-</td>
-<td> AL plat
-</td>
-<td> 1 pcs
-</td></tr>
+<th scope="row"> 20</th>
+<td> Top-plate</td>
+<td> 216*138*1.5mm</td>
+<td> AL plat</td>
+<td> 1 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 21
-</th>
-<td> Screw
-</td>
-<td> M3*21mm
-</td>
-<td> Metal
-</td>
-<td> 4 pcs
-</td></tr>
+<th scope="row"> 21</th>
+<td> Screw</td>
+<td> M3*21mm</td>
+<td> Metal</td>
+<td> 4 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 22
-</th>
-<td> Screw-driver
-</td>
-<td> M3-85mm
-</td>
-<td> /
-</td>
-<td> 1 pcs
-</td></tr>
+<th scope="row"> 22</th>
+<td> Screw-driver</td>
+<td> M3-85mm</td>
+<td> /</td>
+<td> 1 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 23
-</th>
-<td> Screw-driver
-</td>
-<td> 2.5-53mm
-</td>
-<td>  /
-</td>
-<td> 1 pcs
-</td></tr>
+<th scope="row"> 23</th>
+<td> Screw-driver</td>
+<td> 2.5-53mm</td>
+<td>  /</td>
+<td> 1 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 24
-</th>
-<td>Power  cable
-</td>
-<td> 150mm
-</td>
-<td>  /
-</td>
-<td> 1 pcs
-</td></tr>
+<th scope="row"> 24</th>
+<td>Power  cable</td>
+<td> 150mm</td>
+<td>  /</td>
+<td> 1 pcs</td>
+</tr>
 <tr>
-<th scope="row"> 25
-</th>
-<td> wire
-</td>
-<td> 160mm
-</td>
-<td> /
-</td>
-<td> 1 pcs
-</td></tr></table>
+<th scope="row"> 25</th>
+<td> wire</td>
+<td> 160mm</td>
+<td> /</td>
+<td> 1 pcs</td>
+</tr></table>
 
 **Note:**
 
-<dl><dd> 1) For details about the control panel, please refer [here](https://www.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller)
-</dd><dd> 2) The product specification of 25GA-370 Reducing-Motor.
-</dd></dl>
+<dl>
+<dd> 1) For details about the control panel, please refer [here](https://www.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller)</dd>
+<dd> 2) The product specification of 25GA-370 Reducing-Motor.</dd>
+</dl>
 <table  cellspacing="0" width="80%">
 <tr>
-<th colspan="2" scope="col"> Item
-</th>
-<th scope="col"> Parameter
-</th></tr>
+<th colspan="2" scope="col"> Item</th>
+<th scope="col"> Parameter</th>
+</tr>
 <tr>
-<th colspan="2" scope="row">Working  Voltage
-</th>
-<td> 4.0-7.0 DCV
-</td></tr>
+<th colspan="2" scope="row">Working  Voltage</th>
+<td> 4.0-7.0 DCV</td>
+</tr>
 <tr>
-<th colspan="2" scope="row"> Rotation
-</th>
-<td> CCW
-</td></tr>
+<th colspan="2" scope="row"> Rotation</th>
+<td> CCW</td>
+</tr>
 <tr>
-<th rowspan="2"> No Load
-</th>
-<td> Current
-</td>
-<td> 280mA
-</td></tr>
+<th rowspan="2"> No Load</th>
+<td> Current</td>
+<td> 280mA</td>
+</tr>
 <tr>
-<td> Speed
-</td>
-<td> 310±12% r/min
-</td></tr>
+<td> Speed</td>
+<td> 310±12% r/min</td>
+</tr>
 <tr>
-<th rowspan="2"> Load
-</th>
-<td> Current
-</td>
-<td> 1600mA(max)
-</td></tr>
+<th rowspan="2"> Load</th>
+<td> Current</td>
+<td> 1600mA(max)</td>
+</tr>
 <tr>
-<td> Speed
-</td>
-<td> 260±12% rpm
-</td></tr>
+<td> Speed</td>
+<td> 260±12% rpm</td>
+</tr>
 <tr>
-<th colspan="2" scope="row"> Rotation
-</th>
-<td> CCW
-</td></tr>
+<th colspan="2" scope="row"> Rotation</th>
+<td> CCW</td>
+</tr>
 <tr>
-<th colspan="2" scope="row"> Startup Voltage
-</th>
-<td> ≤1.2V
-</td></tr>
+<th colspan="2" scope="row"> Startup Voltage</th>
+<td> ≤1.2V</td>
+</tr>
 <tr>
-<th colspan="2" scope="row">Load Torque
-</th>
-<td> 1500.0 g.cm
-</td></tr>
+<th colspan="2" scope="row">Load Torque</th>
+<td> 1500.0 g.cm</td>
+</tr>
 <tr>
-<th colspan="2" scope="row"> stalling torque
-</th>
-<td> ≥7.0 Kg.cm
-</td></tr>
+<th colspan="2" scope="row"> stalling torque</th>
+<td> ≥7.0 Kg.cm</td>
+</tr>
 <tr>
-<th colspan="2" scope="row"> Stalling Current
-</th>
-<td> ≤9.0A
-</td></tr></table>
+<th colspan="2" scope="row"> Stalling Current</th>
+<td> ≤9.0A</td>
+</tr></table>
 
 ##  Assemble diagrams
 ---

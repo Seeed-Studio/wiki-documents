@@ -296,7 +296,7 @@ void loop(void)
 
 - **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Then set the baud rate **115200**.
 
-:::tipsuccess
+:::tip
      If every thing goes well, you will get the result.
 :::
 

@@ -23,15 +23,13 @@ Click on "Products" in the top menu bar to see the dropdown options, and then se
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/1.png" style={{width:800, height:'auto'}}/></div>
 
-
 ### Step 2 . Setup training type
 
 :::tip
 **_We recommend using Grove Vision AI (V2) to collect training data from the camera here , Because Watcher uses the same chip as Grove Vision AI V2 (Arm Cortex-M55), so Grove Vision AI V2 was chosen to train Watcher's model , the best device to use for taking photos is the one deployed to, which will directly affect the final accuracy._**
 :::
 
-For convenience, a computer camera is used here to capture data . 
-
+For convenience, a computer camera is used here to capture data .
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -48,7 +46,6 @@ For convenience, a computer camera is used here to capture data .
 In Collect Classification Data you can add the category you want , in here , I added car and doll as my category and modified the tags.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/3.png" style={{width:800, height:'auto'}}/></div>
-
 
 :::tip
 The more data obtained and the clearer the pixels, the better the training results will be.
@@ -71,7 +68,6 @@ Please provide your **Model Name**, **Model Excerpt**, **Model Introduction**, *
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/5(2).png" style={{width:800, height:'auto'}}/></div>
 
-
 :::tip
 Select SenseCAP Watcher and Grove-Vision AI V2 in Supported Devices.
 :::
@@ -81,11 +77,13 @@ Select SenseCAP Watcher and Grove-Vision AI V2 in Supported Devices.
 You can choose the AI Framework you want based on your model.
 
 Confidence Threshold
+
 - Confidence refers to the level of certainty or probability assigned by a model to its predictions.
 
 - Confidence is the degree of certainty or probability that a model has of its predicted results. It is usually expressed as a percentage, ranging from 0% to 100%.
 
 IOU Threshold
+
 - IoU is used to assess the accuracy of predicted bounding boxes compared to truth bounding boxes.
 
 - IoU is an important indicator for evaluating the performance of object detection models. It measures the degree of overlap between the predicted bounding box and the actual bounding box.
@@ -101,19 +99,18 @@ Return to Pretrained Models and click on My Own Models to see the model you have
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/7.png" style={{width:800, height:'auto'}}/></div>
 
-
-
-
-
 ## SenseCraft APP Setup Watcher
 
 ### Step 1 . Choose your Watcher
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/20.jpg" style={{width:300, height:'auto'}}/></div>
 
 ### Step 2 . Find Manually Set Up Task and enter
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/21.jpg" style={{width:300, height:'auto'}}/></div>
 
 ### Step 3 . Check 'Use TinyML Model'
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/22.jpg" style={{width:300, height:'auto'}}/></div>
 
 ### Step 4 . Find the model you deployed
@@ -135,13 +132,11 @@ Set the task name so that you can directly send it to the viewer to execute your
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/25.jpg" style={{width:300, height:'auto'}}/></div>
 
-
 ### Step 7 . Wait Watcher Deploy Model
 
 Once you have selected the AI model and set the corresponding parameters, you can wait for the viewer to download it
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/26.jpg" style={{width:500, height:'auto'}}/></div>
-
 
 :::tip
 During this period, the download may fail due to other external issues. You only need to reselect and set the parameters, and continue downloading.
@@ -156,6 +151,7 @@ During this period, the download may fail due to other external issues. You only
 This is the simple display effect of my AI model on Watcher , Looking forward to everyone's AI models shining brightly on Watcher!
 
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">

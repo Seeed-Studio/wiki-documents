@@ -31,79 +31,56 @@ Specifications
 -------------
 
 <table border={1} cellSpacing={0} style={{width: 500, height: 442}} width={800}>
-  <tbody><tr>
-      <th align="center" scope="col" style={{width: '50%'}}> Item
-      </th>
-      <th align="center" scope="col"> Min
-      </th>
-      <th align="center" scope="col"> Typical
-      </th>
-      <th align="center" scope="col"> Max
-      </th>
-      <th align="center" scope="col"> Unit
-      </th></tr>
+  <tbody>
     <tr>
-      <th scope="row"> Input Voltage Range
-      </th>
-      <td align="center"> -25
-      </td>
-      <td align="center"> /
-      </td>
-      <td align="center"> 25
-      </td>
-      <td align="center"> V
-      </td></tr>
+      <th align="center" scope="col" style={{width: '50%'}}>Item</th>
+      <th align="center" scope="col">Min</th>
+      <th align="center" scope="col">Typical</th>
+      <th align="center" scope="col">Max</th>
+      <th align="center" scope="col">Unit</th>
+    </tr>
     <tr>
-      <th scope="row"> Input Threshold Low(VCC=3.3V/5.0V)
-      </th>
-      <td align="center"> 0.6 / 0.8
-      </td>
-      <td align="center"> 1.2 / 1.5
-      </td>
-      <td align="center"> /
-      </td>
-      <td align="center"> V
-      </td></tr>
+      <th scope="row">Input Voltage Range</th>
+      <td align="center">-25</td>
+      <td align="center">/</td>
+      <td align="center">25</td>
+      <td align="center">V</td>
+    </tr>
     <tr>
-      <th scope="row"> Input Threshold High (VCC=3.3V/5.0V)
-      </th>
-      <td align="center"> /
-      </td>
-      <td align="center"> 1.5 / 1.8
-      </td>
-      <td align="center"> 2.4 / 2.4
-      </td>
-      <td align="center"> V
-      </td></tr>
+      <th scope="row">Input Threshold Low(VCC=3.3V/5.0V)</th>
+      <td align="center">0.6 / 0.8</td>
+      <td align="center">1.2 / 1.5</td>
+      <td align="center">/</td>
+      <td align="center">V</td>
+    </tr>
     <tr>
-      <th scope="row"> Maximum Data Rate
-      </th>
-      <td align="center"> 120
-      </td>
-      <td align="center"> 235
-      </td>
-      <td align="center">
-      </td>
-      <td align="center"> kHz
-      </td></tr>
+      <th scope="row">Input Threshold High (VCC=3.3V/5.0V)</th>
+      <td align="center">/</td>
+      <td align="center">1.5 / 1.8</td>
+      <td align="center">2.4 / 2.4</td>
+      <td align="center">V</td>
+    </tr>
     <tr>
-      <th scope="row"> Operating Temperature
-      </th>
-      <td align="center"> 0
-      </td>
-      <td align="center"> /
-      </td>
-      <td align="center"> 70
-      </td>
-      <td align="center"> ℃
-      </td></tr>
+      <th scope="row">Maximum Data Rate</th>
+      <td align="center">120</td>
+      <td align="center">235</td>
+      <td align="center"></td>
+      <td align="center">kHz</td>
+    </tr>
     <tr>
-      <th scope="row"> Dimension
-      </th>
-      <td align="center" colSpan={3}> 91.20 *56.15*32
-      </td>
-      <td align="center"> mm
-      </td></tr></tbody></table>
+      <th scope="row">Operating Temperature</th>
+      <td align="center">0</td>
+      <td align="center">/</td>
+      <td align="center">70</td>
+      <td align="center">℃</td>
+    </tr>
+    <tr>
+      <th scope="row">Dimension</th>
+      <td align="center" colSpan={3}>91.20 *56.15*32</td>
+      <td align="center">mm</td>
+    </tr>
+  </tbody>
+</table>
 
 Hardware Overview
 ------------------
@@ -144,7 +121,7 @@ Using serial COM ports to Configure system on Raspberry Pi.
 Resources
 --------
 
-- [Raspberry\_Pi\_RS232\_Board\_v1.0\_sch\_pcb](https://files.seeedstudio.com/wiki/Raspberry_Pi_R232_Board_v1.0/res/Raspberry_Pi_RS232_Board_v1.0_sch_pcb.zip)
+- [Raspberry_Pi_RS232_Board_v1.0_sch_pcb](https://files.seeedstudio.com/wiki/Raspberry_Pi_R232_Board_v1.0/res/Raspberry_Pi_RS232_Board_v1.0_sch_pcb.zip)
 - [MAX3232](https://files.seeedstudio.com/wiki/Raspberry_Pi_R232_Board_v1.0/res/MAX3232.pdf)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Raspberry_Pi_R232_Board_v1.0 -->

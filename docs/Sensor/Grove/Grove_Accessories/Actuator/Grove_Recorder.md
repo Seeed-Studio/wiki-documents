@@ -40,84 +40,70 @@ Grove - Recorder is based on the ISD1820P chip, and can record 8-20 secs of audi
 ![](https://files.seeedstudio.com/wiki/Grove_Recorder/img/Recorder_Bottom1.jpg)
 ![](https://files.seeedstudio.com/wiki/Grove_Recorder/img/Recorder_Top1.jpg)
 
-<dl><dt>① LED Indicator
-</dt><dd>Modes:
-<dl><dd>Record: Red LED light stays ON from the beginning of the recording duration until the end.
-</dd><dd>Playback: Red LED flashes to signal end of audio playback.
-</dd></dl>
-</dd></dl>
-<dl><dt>② Sampling resistor
-</dt><dd>You can set the recording duration and sampling rate by change sampling resistor (R6) based on the following table:
-</dd></dl>
+<dl>
+  <dt>① LED Indicator</dt>
+  <dd>
+    Modes:
+    <dl>
+      <dd>Record: Red LED light stays ON from the beginning of the recording duration until the end.</dd>
+      <dd>Playback: Red LED flashes to signal end of audio playback.</dd>
+    </dl>
+  </dd>
+</dl>
+<dl><dt>② Sampling resistor</dt><dd>You can set the recording duration and sampling rate by change sampling resistor (R6) based on the following table:</dd></dl>
 <table  cellspacing="0" width="50%">
 <tr>
-<th scope="col"> ROSC
-</th>
-<th scope="col"> Duration
-</th>
-<th scope="col"> Sampling Frequency
-</th>
-<th scope="col"> Input Bandwidth
-</th></tr>
+<th scope="col"> ROSC</th>
+<th scope="col"> Duration</th>
+<th scope="col"> Sampling Frequency</th>
+<th scope="col"> Input Bandwidth</th>
+</tr>
 <tr>
-<th scope="row"> 80 KΩ
-</th>
-<td> 8 secs
-</td>
-<td> 8.0 KHz
-</td>
-<td> 3.4 KHz
-</td></tr>
+<th scope="row"> 80 KΩ</th>
+<td> 8 secs</td>
+<td> 8.0 KHz</td>
+<td> 3.4 KHz</td>
+</tr>
 <tr>
-<th scope="row"> 100 KΩ (default)
-</th>
-<td> 10 secs
-</td>
-<td> 6.4 KHz
-</td>
-<td> 2.6 KHz
-</td></tr>
+<th scope="row"> 100 KΩ (default)</th>
+<td> 10 secs</td>
+<td> 6.4 KHz</td>
+<td> 2.6 KHz</td>
+</tr>
 <tr>
-<th scope="row"> 120 KΩ
-</th>
-<td> 12 secs
-</td>
-<td> 5.3 KHz
-</td>
-<td> 2.3 KHz
-</td></tr>
+<th scope="row"> 120 KΩ</th>
+<td> 12 secs</td>
+<td> 5.3 KHz</td>
+<td> 2.3 KHz</td>
+</tr>
 <tr>
-<th scope="row"> 160 KΩ
-</th>
-<td> 16 secs
-</td>
-<td> 4.0 KHz
-</td>
-<td> 1.7 KHz
-</td></tr>
+<th scope="row"> 160 KΩ</th>
+<td> 16 secs</td>
+<td> 4.0 KHz</td>
+<td> 1.7 KHz</td>
+</tr>
 <tr>
-<th scope="row"> 200 KΩ
-</th>
-<td> 20 secs
-</td>
-<td> 3.2 KHz
-</td>
-<td> 1.3 KHz
-</td></tr>
+<th scope="row"> 200 KΩ</th>
+<td> 20 secs</td>
+<td> 3.2 KHz</td>
+<td> 1.3 KHz</td>
+</tr>
 </table>
-<dl><dt>③ Playback resistor
-</dt><dd>Modes:
-<dl><dd>Cycle: R8 is place 0Ω resistor
-</dd><dd>Single: R8 is not  place resistor
-</dd></dl>
-</dd></dl>
-<dl><dt>④ Play Key
-</dt><dd>Not used currently
-</dd><dt>⑤ REC Key
-</dt><dt>⑥ Grove Interface
-</dt><dt>⑦ Loudspeaker Interface
-</dt><dt>⑧ REC IC：ISD1820P
-</dt></dl>
+<dl>
+  <dt>③ Playback resistor</dt>
+  <dd>
+    Modes:
+    <dl>
+      <dd>Cycle: R8 is place 0Ω resistor</dd>
+      <dd>Single: R8 is not  place resistor</dd>
+    </dl>
+  </dd>
+</dl>
+<dl><dt>④ Play Key</dt><dd>Not used currently</dd></dl>
+<dl><dt>⑤ REC Key</dt><dd></dd></dl>
+<dl><dt>⑥ Grove Interface</dt><dd></dd></dl>
+<dl><dt>⑦ Loudspeaker Interface</dt><dd></dd></dl>
+<dl><dt>⑧ REC IC：ISD1820P</dt><dd></dd></dl>
 
 ## Usage
 

@@ -11,11 +11,6 @@ last_update:
 ---
 # **Wi-Fi**
 
-
-
-
-
-
 [**Examples**](https://github.com/espressif/esp-idf/tree/master/examples/wifi)
 
 This [directory](https://github.com/espressif/esp-idf/tree/master/examples/wifi) contains a series of project examples that demonstrate Wi-Fi functionality and provides code that you can copy and adapt into your own projects.
@@ -47,11 +42,8 @@ Most examples have a project-specific "Example Configuration" section here (for 
 Follow the printed instructions to flash, or run
 `idf.py -p PORT flash`
 
-
-
-
 # **Tech Support**
 
 Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.com/invite/QqMgVwHT3X) to ask your questions!
 
-If you have large order or customization requirement, please contact iot@seeed.cc
+If you have large order or customization requirement, please contact [iot@seeed.cc](mailto:iot@seeed.cc)

@@ -4,7 +4,7 @@ title: Flash Opensource Firmware to M2 Gateway
 image: https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/m2-white.webp
 slug: /flash_opensource_firmware_to_m2_gateway
 last_update:
-  date: 12/11/2024
+  date: 4/22/2025
   author: Leo
 ---
 
@@ -80,27 +80,9 @@ After compiling, you can find the firmware named `openwrt-21.02.0-ramips-mt76x8-
 
 ## Flash the firmware
 
-You can flash the firmware into your gateway in one of two ways
+You can flash the firmware into your gateway in one of three ways
 
-### Get and Flash firmware via TFTP
-
-Before you begin, you will need to install the TFTP server tool on your computer and place the firmware in the appropriate directory.
-
-**Step 1:** Use a Type-C cable to connect the device to the computer, and use a network cable to place the device and the computer in the same LAN.
-
-**Step 2:** Connect to the device using the serial port called `USB-SERIAL CH340` with **baud rate 57600**
-
-**Step 3:** Restart the device. When the device enters uboot, **select command 2** to enter the system update.
-
-**Step 4:** Enter **device ip**, where the device ip network segment must be the network segment of your own network; enter **server ip**, which is the IP of your computer, and enter **the name of the firmware** to be flashed (the file suffix must be included)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/opensource3.png" alt="pir" width={800} height="auto" /></p>
-
-**Step 5:** Wait for the firmware update to complete. The gateway will start installing the firmware and the LED will enter the orange slow blinking state until the installation is completed.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/opensource4.png" alt="pir" width={800} height="auto" /></p>
-
-### Get and Flash firmware via Luci
+### Flash firmware via Luci
 
 Login Luci and navigate to **System** > **Backup/Flash Firmware**
 
@@ -120,6 +102,46 @@ When the upload is complete, confirm that the uploaded firmware information is c
 
 After that, the gateway will start installing the firmware and the LED will enter the orange slow blinking state until the installation is completed.
 
+### Flash firmware via TFTP
+
+Before you begin, you will need to install the TFTP server tool on your computer and place the firmware in the appropriate directory.
+
+**Step 1:** Use a Type-C cable to connect the device to the computer, and use a network cable to place the device and the computer in the same LAN.
+
+**Step 2:** Connect to the device using the serial port called `USB-SERIAL CH340` with **baudrate 57600**.
+
+**Step 3:** Restart the device. When the device enters uboot, **select command 2** to enter the system update.
+
+**Step 4:** Enter **device ip**, where the device ip network segment must be the network segment of your own network; enter **server ip**, which is the IP of your computer, and enter **the name of the firmware** to be flashed (the file suffix must be included).
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/opensource3.png" alt="pir" width={800} height="auto" /></p>
+
+**Step 5:** Wait for the firmware update to complete. The gateway will start installing the firmware and the LED will enter the orange slow blinking state until the installation is completed.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/opensource4.png" alt="pir" width={800} height="auto" /></p>
+
+### Flash firmware via Serial
+
+:::tip
+Before you begin the following step, we recommend download the lastest version of [TeraTerm](https://github.com/TeraTermProject/teraterm/releases) as the following operations in this wiki are all based on TeraTerm.
+:::
+
+**Step 1:** Use a Type-C cable to connect the device to the computer.
+
+**Step 2:** Connect to the device using the serial port called `USB-SERIAL CH340` with **baudrate 57600**.
+
+**Step 3:** Restart the device. When the device enters uboot, **select command 0** to enter the system update.
+
+**Step 4:** Switch the buadrate to 230400, then press ENTER. The device will then prompt `Ready for binary (kermit) download to 0x80100000 at 230400 bps...`
+
+**Step 5:** Upload the firmware using kermit protocol. Teraterm has provide kermit transmit tool. you can refer to the image upload firmware below.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/opensource12.png" alt="pir" width={800} height="auto" /></p>
+
+**Step 6:** Wait for the firmware to finish uploading, after which the device will prompt `Switch baudrate to 57600 bps and press ESC...`. Follow the device prompts. Then device will automatically install the firmware and reboot.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/opensource11.png" alt="pir" width={800} height="auto" /></p>
+
 ## Login into Console
 
 After the firmware is installed, the device will automatically open an AP hotspot, name **SenseCAP_XXXX**
@@ -136,6 +158,7 @@ Login into console with username **root** and **no password**
 
 ## Resources
 
+- \[**Website**\] <a  href="https://koen.vervloesem.eu/blog/how-to-install-alternative-firmware-to-the-sensecap-m2-data-only-lorawan-indoor-gateway/" target="_blank"><span> How to install alternative firmware to the SenseCAP M2 Data Only LoRaWAN Indoor Gateway - By Koen Vervloesem</span></a>
 - \[**Website**\] <a  href="https://github.com/Seeed-Solution/LoRa_Gateway_OpenWRT" target="_blank"><span> GitHub-Seeed-Solution/Lora_Gateway_OpenWRT</span></a>
 - \[**Website**\] <a  href="https://openwrt.org/" target="_blank"><span> OpenWrt offical website</span></a>
 - \[**PDF**\] <a  href="https://files.seeedstudio.com/products/SenseCAP/M2OpensourceHarewareDescription.pdf" target="_blank"><span> M2 Gateway Hardware Description</span></a>

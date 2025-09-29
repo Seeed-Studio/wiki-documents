@@ -33,7 +33,7 @@ Before you start this project, you may need to prepare your hardware and softwar
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
@@ -81,7 +81,7 @@ sudo minicom -D /dev/ttyAMA*
 ```
 The `ttyAMA*` should be `ttyAMA2, ttyAMA3 or ttyAMA4` depends on which RS485 you use.
 
-And then type `Ctal+A` then type `C` you will see minicom like below:
+And then type `Ctal+A` then type `Z` you will see minicom like below:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/RS485_fix/minicom0.png" alt="pir" width="700" height="auto" /></div>
 

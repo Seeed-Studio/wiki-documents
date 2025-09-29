@@ -45,63 +45,15 @@ Assembly diagram is as follows:
 
 ![](https://files.seeedstudio.com/wiki/Skeleton_box_for_Beaglebone/img/Skeleton_box_for_Beaglebone_15.bmp)
 
-<table cellSpacing={0} width="80%">
-  <tbody><tr>
-      <th scope="col"> Part
-      </th>
-      <th scope="col"> Package
-      </th>
-      <th scope="col"> Qty
-      </th></tr>
-    <tr>
-      <th scope="row"> Bracket
-      </th>
-      <td> 1.5mm aluminum plate stamping molding, black sand anodized
-      </td>
-      <td> 2
-      </td></tr>
-    <tr>
-      <th scope="row">Beagle Bottom Cover
-      </th>
-      <td> 2.5mm Thickness
-      </td>
-      <td> 1
-      </td></tr>
-    <tr>
-      <th scope="row">Beagle Top Cover
-      </th>
-      <td> 2.5mm Thickness
-      </td>
-      <td> 1
-      </td></tr>
-    <tr>
-      <th scope="row">Rivet（black）
-      </th>
-      <td> R2056
-      </td>
-      <td> 20
-      </td></tr>
-    <tr>
-      <th scope="row"> Screw
-      </th>
-      <td> M3X5
-      </td>
-      <td> 4
-      </td></tr>
-    <tr>
-      <th scope="row">Nylon screw pillor
-      </th>
-      <td> M3X5X6
-      </td>
-      <td> 4
-      </td></tr>
-    <tr>
-      <th scope="row">Nylon Nut
-      </th>
-      <td> M3X2.5
-      </td>
-      <td> 4
-      </td></tr></tbody></table>
+| Part | Package | Qty |
+|---|---|---|
+| Bracket | 1.5mm aluminum plate stamping molding, black sand anodized | 2 |
+| Beagle Bottom Cover | 2.5mm Thickness | 1 |
+| Beagle Top Cover | 2.5mm Thickness | 1 |
+| Rivet（black） | R2056 | 20 |
+| Screw | M3X5 | 4 |
+| Nylon screw pillor | M3X5X6 | 4 |
+| Nylon Nut | M3X2.5 | 4 |
 
 ## Tech Support & Product Discussion
 

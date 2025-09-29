@@ -63,9 +63,9 @@ When you successfully create the PlatformIO file, there will be many files appea
 You need to copy the following code and replace the content in platform.ini file.
 
 ```
-[env:seeed_xiao_samd21]
+[env:seeed_xiao_samd]
 platform = https://github.com/Seeed-Studio/platform-seeedboards.git
-board = seeed-xiao-samd21
+board = seeed-xiao-samd
 framework = arduino
 ```
 

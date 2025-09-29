@@ -128,7 +128,7 @@ param_scheduler=[
 
 ## Training Model
 
-Training the model requires using our previously configured SSCMA working environment, if you follow our [Installation](ModelAssistant_Introduce_Installation) guide using Conda to install SSCMA in a virtual environment named `sscma`, please first make sure that you are currently in the virtual environment.
+Training the model requires using our previously configured SSCMA working environment, if you follow our [Installation](/ModelAssistant_Introduce_Installation) guide using Conda to install SSCMA in a virtual environment named `sscma`, please first make sure that you are currently in the virtual environment.
 
 Then, in the SSCMA project root directory, we execute the following command to train an end-to-end meter PFLD model.
 
@@ -180,7 +180,7 @@ If you want a real-time preview while testing, you can append a parameter `--sho
 
 ### Evaluation
 
-In order to further test and evaluate the model on a realistic edge computing device, you need to export the model. In the process of exporting the model, SSCMA will do some optimization on the model, such as model pruning, distillation, etc. You can refer to the [Export](ModelAssistant_Tutorials_Export_Overview) section to learn more about how to export models.
+In order to further test and evaluate the model on a realistic edge computing device, you need to export the model. In the process of exporting the model, SSCMA will do some optimization on the model, such as model pruning, distillation, etc. You can refer to the [Export](/ModelAssistant_Tutorials_Export_Overview) section to learn more about how to export models.
 
 ### Deployment
 

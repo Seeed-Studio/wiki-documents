@@ -11,7 +11,6 @@ last_update:
 ---
 
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/openwrt-wiki-thumb.png" alt="pir" width="1000" height="auto"/></p>
 
 OpenWrt is an open-source Linux operating system which runs on embedded devices/ routers. It offers more features, performance and security than a traditional router. It has a filesystem that’s fully writable and includes a package management system. You can make use of these packages to suit your applications in various ways.
@@ -270,6 +269,7 @@ dd if=/tmp/upload/openwrt-x86-64-generic-ext4-combined-efi.img of=/dev/sda
 :::note
 **/dev/sda** correponds to the storage device connected
 :::
+
 - **Step 11.** Once it's finished flashing to the storage device, reboot the board, remove the USB drive and it will start to boot OpenWrt from the connected storage device.
 
 ## Run OpenWrt
@@ -338,6 +338,7 @@ Make sure to change the IP address of the LAN interface on the ODYSSEY board to 
 :::note
 Make sure both devices are not on the same IP range on the LAN interface
 :::
+
 - **Step 3.** Install **iperf3** network performance test tool on both devices
 
 ```sh
@@ -403,6 +404,7 @@ Here you can see the speed is close to 1Gbps
 :::
 
 ## FAQ
+
 For details, please click [**here**](/FAQs_For_openWrt)
 
 ## Resources
@@ -415,17 +417,16 @@ For details, please click [**here**](/FAQs_For_openWrt)
 
 - **[Download]** [R23.5 OpenWrt Images](https://firmware-selector.openwrt.org/?version=23.05.2&target=bcm27xx%2Fbcm2711&id=rpi-4)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

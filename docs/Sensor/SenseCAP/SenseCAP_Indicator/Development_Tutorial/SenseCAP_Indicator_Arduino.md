@@ -35,7 +35,7 @@ I am using SenseCAP Indicator as the hardware here and there are four types of s
     </tr>
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1S-p-5645.html">
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1S-p-5645.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
@@ -49,7 +49,7 @@ The Indicator is designed with two MCU where there are RP2040 and ESP32S3 workin
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_6.png"/></div>
 
-Based on the diagram above we know that: 
+Based on the diagram above we know that:
 
 1. All the sensors are connected to RP2040 Microcontroller using I2C protocol
 2. There is one I2C IO expander module using the PCA9535 IC
@@ -65,8 +65,7 @@ Thus, if the Sensecap Indicator plugged into the Computer you will be presented 
 We are using Arduino here.
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
-    </a>
+  <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
 </div>
 
 :::note
@@ -948,7 +947,6 @@ void loop()
 }
 
 
-
 void onPacketReceived(const uint8_t *buffer, size_t size) {
 
   
@@ -1025,7 +1023,7 @@ Congratulation now you can develop the Sensecap Indicator using Arduino IDE!
 
 <h2>What's More</h2>
 
-1. There is still Phase ONE for the development and what is not configured in this tutorial is the touchscreen part. I already try few arduino library for the FT6336 module but none have a successful result. 
+1. There is still Phase ONE for the development and what is not configured in this tutorial is the touchscreen part. I already try few arduino library for the FT6336 module but none have a successful result.
 2. This due to the INT Pin and RESET pin of the FT6366 module connected to the PCA9535 I2C expander and it need to configured manually in the library. I might get back to try this in the future.
 
 - By the way, for more understanding on using the Arduino GFX library you can visit the [Arduino_GFX github page](https://github.com/moononournation/Arduino_GFX)
@@ -1049,11 +1047,11 @@ Thanks to [LongDirtyAnimAlf](https://github.com/LongDirtyAnimAlf) for helping up
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

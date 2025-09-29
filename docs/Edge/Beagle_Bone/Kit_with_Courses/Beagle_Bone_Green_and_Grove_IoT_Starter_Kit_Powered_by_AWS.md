@@ -208,7 +208,7 @@ Enter the examples folder.
 
 ![](https://files.seeedstudio.com/wiki/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/BbgAWSexamples.png)
 
-Create a new file named grove\_temperature\_sensor.py.
+Create a new file named grove_temperature_sensor.py.
 
     # vim grove_temperature_sensor.py
 
@@ -310,7 +310,7 @@ if __name__ == '__main__':
             print "Error"
 ```
 
-Create a new file named python\_sensor.py.
+Create a new file named python_sensor.py.
 
     #vim  python_sensor.py
 

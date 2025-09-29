@@ -32,45 +32,38 @@ usage with industrial performance.
 
 <table>
 <tr>
-<td width="400px"> Supply voltage
-</td>
-<td width="200px"> 5V
-</td></tr>
+<td width="400px"> Supply voltage</td>
+<td width="200px"> 5V</td>
+</tr>
 <tr>
-<td> Global Current Consumption
-</td>
-<td> 15 mA
-</td></tr>
+<td> Global Current Consumption</td>
+<td> 15 mA</td>
+</tr>
 <tr>
-<td>Ultrasonic Frequency
-</td>
-<td> 40k Hz
-</td></tr>
+<td>Ultrasonic Frequency</td>
+<td> 40k Hz</td>
+</tr>
 <tr>
-<td> Maximal Range
-</td>
-<td> 400 cm
-</td></tr>
+<td> Maximal Range</td>
+<td> 400 cm</td>
+</tr>
 <tr>
-<td> Minimal Range
-</td>
-<td> 3 cm
-</td></tr>
+<td> Minimal Range</td>
+<td> 3 cm</td>
+</tr>
 <tr>
-<td> Resolution
-</td>
-<td> 1 cm
-</td></tr>
+<td> Resolution</td>
+<td> 1 cm</td>
+</tr>
 <tr>
-<td> Trigger Pulse Width
-</td>
-<td> 10 μs
-</td></tr>
+<td> Trigger Pulse Width</td>
+<td> 10 μs</td>
+</tr>
 <tr>
-<td> Outline Dimension
-</td>
-<td> 43x20x15 mm
-</td></tr></table>
+<td> Outline Dimension</td>
+<td> 43x20x15 mm</td>
+</tr>
+</table>
 
 ## Getting started
 

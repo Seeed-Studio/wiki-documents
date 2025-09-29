@@ -90,7 +90,7 @@ You can operate the following function while you connecting the Wappsto. For fur
    - Blockly NoCode programming
    - Blockly javascript programming
    - Set up automations and interactions between all devices and services you have connected on Wappsto
-   - Twitter and Wappsto:bit cross-automation example: <https://bit.wappsto.com/project/wappsto-blocks/>
+   - Twitter and Wappsto:bit cross-automation example: [https://bit.wappsto.com/project/wappsto-blocks/](https://bit.wappsto.com/project/wappsto-blocks/)
 
 ### Sometimes overlooked features of Wappsto
 
@@ -127,16 +127,16 @@ It is also assumed you have created a account on [Wappsto](https://wappsto.com/)
 
 ### Arduino IDE installed on your PC
 
-If you do not have this, see <https://www.arduino.cc/en/Guide>
+If you do not have this, see [https://www.arduino.cc/en/Guide](https://www.arduino.cc/en/Guide)
 
 #### Install ArduinoJson library
 
-From the library manager you need to install ArduinoJson library - see <https://arduinojson.org/v6/doc/installation/> for more details.
+From the library manager you need to install ArduinoJson library - see [https://arduinojson.org/v6/doc/installation/](https://arduinojson.org/v6/doc/installation/) for more details.
 
 #### Install this wappsto library
 
 To install this library in Arduino Ide, download this project as a zip-file, click "Code" and choose "Download ZIP".
-Then choose "Sketch"->"Include Library"->"Add .Zip Library..." See <https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries> for details.
+Then choose "Sketch"->"Include Library"->"Add .Zip Library..." See [https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries) for details.
 
 ### Generate certificates and id for a new device
 
@@ -196,7 +196,7 @@ If you get a "not allowed to access" values on the device you have created, it i
 
 Since you would be the manfactorer you will still see the device on your list of networks, you can see it is online, but you will not be able to see values or control the device.
 
-To claim a device, go to the "IoT Devices" tab on <https://wappsto.com/devices> click the "+ Add an IoT device" button in the top right corner, and enter the network UUID int the box.
+To claim a device, go to the "IoT Devices" tab on [https://wappsto.com/devices](https://wappsto.com/devices) click the "+ Add an IoT device" button in the top right corner, and enter the network UUID int the box.
 
 If you click the delete button for a network, it will remove the ownership of the device, so it can be claimed by another user. Once a device have been claimed it can not be claimed by another.
 
@@ -226,7 +226,7 @@ Note that that "name" for device and value object have extra functionality, and 
 
 The library will ask Wappsto if an device/value exists with that name before creating it, so it will link to the right value. If nothing have this name a new will be created. If a parent have multiple children with the same name the library will choose the first available.
 
-If you change a name a new one will be created, but the old will not be delete. This you will have to do yourself, eg. using <https://wappsto.com/devices>
+If you change a name a new one will be created, but the old will not be delete. This you will have to do yourself, eg. using [https://wappsto.com/devices](https://wappsto.com/devices)
 
 ### Initialize Wappsto
 

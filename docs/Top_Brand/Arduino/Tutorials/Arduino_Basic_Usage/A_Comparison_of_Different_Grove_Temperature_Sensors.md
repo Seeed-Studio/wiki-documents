@@ -26,9 +26,11 @@ Before you looking at the table, there are several things that need to be consid
 Is it the ambient air temperature in the room or a specific enclosure? Is it an air vent for airflow or a water tank for liquid? Or maybe an electronic system that may encounter high voltage and cause heating? Things like these would affect your choice of sensors based on cost budget, power consumption, safety factors, response time, and even the distance from sensor to instrument. For example, if you are measuring the temperature in your room, you might just need a cheap, low-cost thermometer that does not need to be very sensitive. But if your object is a greenhouse for growing plants, you might need a high accurate and sensitive sensor that precisely measures both the temperature and humidity.
 
 ### Secondly, what is the expected range of temperature to be measured?
+
 The expected range of temperature to be measured is very important. If the object's temperature exceeds the sensor's measuring range, it may result in irreversible damage to the sensor module or even the system that is connected to the sensor.
 
 ### Another consideration is, how accurate do you need it to be?
+
 Temperature sensors like thermocouples have very wide measuring range and are adequate to be used in harsh environment, but they usually lack of accuracy and long-term stability. The accuracy of measurement is critical in some cases like medical devices, wearable devices and some home facilities etc. Sensors with higher accuracy usually have higher cost and they have to be used very carefully to avoid physical damage on it (some may require not touching it with bare hand).
 
 # Specification
@@ -80,11 +82,11 @@ More details please download below list.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

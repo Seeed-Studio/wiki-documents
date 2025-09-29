@@ -9,8 +9,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /using_lvgl_and_tft_on_round_display
 last_update:
-  date: 01/17/2024
-  author: Spencer
+  date: 09/12/2024
+  author: Citric
 ---
 
 # Using LVGL and TFT on the Seeed Studio Round Display for all XIAO series
@@ -18,7 +18,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/000.jpg" style={{width:600, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -26,7 +26,7 @@ last_update:
 <br></br>
 
 
-Thank you for purchased Seeed Studio Round Display products. In this section of the tutorial, we will focus on how to use the `TFT_eSPI` library and `LVGL` library to draw various rich and interesting dial patterns on the Round Display, and introduce the usage of some common functions of these two useful but complex libraries from simple to deep. Through the content of this tutorial, I hope you can use this product to draw your ideal dial pattern. Have a great learning experience!
+Thank you for purchased Seeed Studio Round Display products. In this section of the tutorial, we will focus on how to use the `Seeed_GFX` library and `LVGL` library to draw various rich and interesting dial patterns on the Round Display, and introduce the usage of some common functions of these two useful but complex libraries from simple to deep. Through the content of this tutorial, I hope you can use this product to draw your ideal dial pattern. Have a great learning experience!
 
 ## Getting Started
 
@@ -37,65 +37,65 @@ Before you enter the study, we would like you to be prepared for the following.
 For demonstration purposes, this tutorial will use the **XIAO ESP32S3** as the master control.
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio Round Display for XIAO</th>
-	    <th>Seeed Studio XIAO ESP32S3</th>
-	</tr>
+ <tr>
+     <th>Seeed Studio Round Display for XIAO</th>
+     <th>Seeed Studio XIAO ESP32S3</th>
+ </tr>
     <tr>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/rounddisplay.jpg" style={{width:210, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:210, height:'auto'}}/></div></td>
     </tr>
-	<tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html"> 
+ <tr>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 If you want to use other XIAO products, the tutorials and methods in this article are also applicable.
 
 <table align="center">
-	<tr>
-		<th>Seeed Studio XIAO SAMD21</th>
-		<th>Seeed Studio XIAO RP2040</th>
-		<th>Seeed Studio XIAO nRF52840 (Sense)</th>
-		<th>Seeed Studio XIAO ESP32C3</th>
-	</tr>
-	<tr>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" style={{width:400, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoblesense.jpg" style={{width:500, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoesp32c3.jpg" style={{width:450, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+  <th>Seeed Studio XIAO SAMD21</th>
+  <th>Seeed Studio XIAO RP2040</th>
+  <th>Seeed Studio XIAO nRF52840 (Sense)</th>
+  <th>Seeed Studio XIAO ESP32C3</th>
+ </tr>
+ <tr>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" style={{width:400, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoblesense.jpg" style={{width:500, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoesp32c3.jpg" style={{width:450, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html">
+      </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html">
+      </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html">
+      </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 When installing the XIAO with Round Display, please let the XIAO's Type-C connector face the outside of the Round Display, and then connect each pin against the dual 7-pin headers.
@@ -106,9 +106,9 @@ When installing the XIAO with Round Display, please let the XIAO's Type-C connec
 
 This part has been described in detail in the [Basic Wiki](https://wiki.seeedstudio.com/get_start_round_display#software-preparation), so you can jump directly to read it.
 
-## Drawing simple dials using the TFT_eSPI library
+## Drawing simple dials using the Seeed_GFX library
 
-TFT_eSPI is a feature rich Arduino IDE compatible graphics and fonts library for 32 bit processors. The TFT library provided by the XIAO Round Display is based on the library after the compatibility of XIAO and XIAO Round Display, which supports the use of the whole series of XIAO.
+[Seeed_GFX](https://github.com/Seeed-Studio/Seeed_GFX) (Based on modifications to the TFT_eSPI library, with deep support for Seeed's display products) is a feature rich Arduino IDE compatible graphics and fonts library for 32 bit processors. The TFT library provided by the XIAO Round Display is based on the library after the compatibility of XIAO and XIAO Round Display, which supports the use of the whole series of XIAO.
 
 ### Common Interfaces for TFT Library
 
@@ -334,7 +334,7 @@ void loop() {
 
 The general format for using the TFT_eSprite library is as follows.
 
-```c
+```cpp
 #include <TFT_eSPI.h>
 
 TFT_eSPI tft = TFT_eSPI();
@@ -361,19 +361,19 @@ In the above example code, when the program exits the `loop()` function, `spr.de
 
 For more information about the TFT library functions and its use, we recommend reading the **TFT_eSPI.h** and **TFT_eSPI.cpp** files in the library.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/1.png" style={{width:400, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/1.png" style={{width:300, height:'auto'}}/></div>
 
 ### About the TFT library customization options
 
-Sometimes we need to use some custom font libraries or some features that are not enabled to save space. At this point we will need to modify the contents of the **Setup66_Seeed_XIAO_RoundDisplay.h** file.
+Sometimes we need to use some custom font libraries or some features that are not enabled to save space. At this point we will need to modify the contents of the **Setup66_Seeed_XIAO_Round.h** file.
 
-- The default path for this file on **Windows** systems is: 
+- The default path for this file on **Windows** systems is:
 
-`C:\Users\{UserName}\Documents\Arduino\libraries\TFT_eSPI\User_Setups\Setup66_Seeed_XIAO_RoundDisplay.h`
+`C:\Users\{UserName}\Documents\Arduino\libraries\Seeed_GFX\User_Setups\Setup66_Seeed_XIAO_Round.h`
 
-- The default path for this file on **MacOS** systems is: 
+- The default path for this file on **MacOS** systems is:
 
-`\Users\{UserName}\Documents\Arduino\libraries\TFT_eSPI\User_Setups\Setup66_Seeed_XIAO_RoundDisplay.h`
+`\Users\{UserName}\Documents\Arduino\libraries\Seeed_GFX\User_Setups\Setup66_Seeed_XIAO_Round.h`
 
 Please turn on or off some unnecessary functions according to the actual usage.
 For example, if you want to use custom fonts, then you should uncomment `#define SMOOTH_FONT`, otherwise, you will probably get errors when running.
@@ -385,7 +385,7 @@ Of course, the header files of your custom fonts should be saved in the same dir
 We have written a dial program for the Round Display that can be used directly. Due to the memory space limitation of some XIAO models, this program only performs the basic hand movement function and is not designed for other functions. Users can use this program to learn the use of TFT library and the function of pointer movement, and complete the development of more complex dials according to the actual situation.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/tree/main/tft_espi-base-dial">
+    <a class="github_item" href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/tree/main/tft_espi-base-dial" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
@@ -413,14 +413,13 @@ In addition to reading the extensive LVGL official documentation and writing our
 Next, we will give you a brief introduction to the use of the software on the round screen, configuration methods, to help you can quickly get started using the software to design some interfaces.
 
 :::caution
-We recommend you to use the **v1.2.3** version of SquareLine Studio. After testing, the v1.3.0 version can have compatibility problems with the tft_eSPI library.
+We recommend you to use the **v1.5.1** version of SquareLine Studio. This is also the latest software version at the time of writing this Wiki.
 
 Environment used in the preparation of this tutorial:
 
-1. **[TFT_eSPI library](https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/main/libraries/TFT_eSPI.zip)** by Bodmer, version: **2.5.22**
+1. **[Seeed_GFX library](https://github.com/Seeed-Studio/Seeed_GFX)** by Bodmer, modified by Seeed Studio.
 
-2. **[LVGL library](https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/tree/main/libraries/lvgl)** by kisvegabor, embeddedt, pete-pjb, version: **8.2.0**
-
+2. **[SeeedStudio_lvgl library](https://github.com/Seeed-Projects/SeeedStudio_lvgl)** by kisvegabor, embeddedt, pete-pjb, modified by Seeed Studio.
 :::
 
 #### Step1. Download the SuqareLine Studio
@@ -500,36 +499,40 @@ At this point, you can see that there are already a series of properties in the 
 
 > **Layout**: You can use a layout to automatically arrange the children of a widget. If the layout is enabled the children's X and Y value can't be adjusted manually, unless the `IGNORE_LAYOUT` or the `FLOATING` flag is enabled on the children.
 
->    **Main Flags**
->    - **Hidden** - Make the object hidden. (Like it wasn't there at all.)
->    - **Clickable** - Make the object clickable by input devices
->    - **Click focusable** - Add focused state to the object when clicked
->    - **Checkable** - Toggle checked state when the object is clicked
->    - **Snappable** - If scroll snap is enabled on the parent it can snap to this object
->    - **Press lock** - Keep the object pressed even if the press slid from the object
->    - **Event bubble** - Propagate the events to the parent too
->    - **Gesture bubble** - Propagate the events to the parent too
->   - **Adv hittest** - Allow performing more accurate hit (click) test. E.g. accounting for rounded corners
->    - **Ignore layout** - Make the object positionable by the layouts
->    - **Floating** - Do not scroll the object when the parent scrolls and ignore layout
+> **Main Flags**
+>
+> - **Hidden** - Make the object hidden. (Like it wasn't there at all.)
+> - **Clickable** - Make the object clickable by input devices
+> - **Click focusable** - Add focused state to the object when clicked
+> - **Checkable** - Toggle checked state when the object is clicked
+> - **Snappable** - If scroll snap is enabled on the parent it can snap to this object
+> - **Press lock** - Keep the object pressed even if the press slid from the object
+> - **Event bubble** - Propagate the events to the parent too
+> - **Gesture bubble** - Propagate the events to the parent too
+> - **Adv hittest** - Allow performing more accurate hit (click) test. E.g. accounting for rounded corners
+> - **Ignore layout** - Make the object positionable by the layouts
+> - **Floating** - Do not scroll the object when the parent scrolls and ignore layout
 
->   **Scroll Flags**
->   - **Scrollable** - Make the object scrollable
->   - **Scroll elastic** - Allow scrolling inside but with slower speed
->   - **Scroll momentum** - Make the object scroll further when "thrown"
->   - **Scroll one** - Allow scrolling only one snappable children
->   - **Scroll chain** - Allow propagating the scroll to a parent
->   - **Scroll on focus** - Automatically scroll object to make it visible when focused
+> **Scroll Flags**
+>
+> - **Scrollable** - Make the object scrollable
+> - **Scroll elastic** - Allow scrolling inside but with slower speed
+> - **Scroll momentum** - Make the object scroll further when "thrown"
+> - **Scroll one** - Allow scrolling only one snappable children
+> - **Scroll chain** - Allow propagating the scroll to a parent
+> - **Scroll on focus** - Automatically scroll object to make it visible when focused
 
 >**Scroll Settings**
->   - **Scroll direction** - Scrollbars are displayed according to a configured
->   - **Scrollbar mode** - Scrollbars are displayed according to a configured mode. The following modes exist:
->       - **Off** - Never show the scrollbars
->       - **On** - Always show the scrollbars
->       - **Active** - Show scroll bars while a object is being scrolled
->       - **Auto** - Show scroll bars when the content is large enough to be scrolled
+>
+> - **Scroll direction** - Scrollbars are displayed according to a configured
+> - **Scrollbar mode** - Scrollbars are displayed according to a configured mode. The following modes exist:
+>   - **Off** - Never show the scrollbars
+>   - **On** - Always show the scrollbars
+>   - **Active** - Show scroll bars while a object is being scrolled
+>   - **Auto** - Show scroll bars when the content is large enough to be scrolled
 
 > **States**: The object can be in a combination of the following states:
+>
 > - **Clickable** - Toggled or checked state
 > - **Disable** - Disabled state
 > - **Focusable** - Focused via keypad or encoder or clicked via touchpad/mouse
@@ -540,11 +543,12 @@ At this point, you can see that there are already a series of properties in the 
 > **State**: You can create a custom style to each state.
 >
 > **Style Properties**: Style Properties are the parameters to be set for the styles.
+>
 > - **Arc**: Arc Style can be used in those widgets which have the Arc component.
->    - **Line color** - The color of the line
->    - **Arc width** - The width of the arc
->    - **Arc rounded** - The ends of the arc line are rounded
->    - **Arc image** - The background image for the arc line
+>   - **Line color** - The color of the line
+>   - **Arc width** - The width of the arc
+>   - **Arc rounded** - The ends of the arc line are rounded
+>   - **Arc image** - The background image for the arc line
 > - **Background**: Background Style is the background of the widgets. You can create gradients or make the corners of the background rounded.
 >   - **Color and alpha** - Set the background color and alpha of the object.
 >   - **Gradient color** - Set the gradient color of the background.
@@ -560,10 +564,10 @@ At this point, you can see that there are already a series of properties in the 
 >   - **Bg image tiled** - If enabled, background image will be tiled
 > - **Blend**: By using Blend Style, you can mix the pixel colors of the current widget part with the colors of the object followed by.
 >   - **Blend mode** - Choose from four options.
->       - **Normal** - Default state
->       - **Additive** - Adding up pixels
->       - **Subtractive** - Subtract pixels
->       - **Multiply** - Multiply pixels
+>     - **Normal** - Default state
+>     - **Additive** - Adding up pixels
+>     - **Subtractive** - Subtract pixels
+>     - **Multiply** - Multiply pixels
 >   - **Blend opacity** - Here you can set the opacity of the widget part
 > - **Border**: Using Border, you can draw a border around the selected object onto the inner lines.
 >   - **Border color** - The color of the border
@@ -591,53 +595,54 @@ At this point, you can see that there are already a series of properties in the 
 Line spacing - The space between the lines
 >   - **Text align** - The direction of text alignment
 >   - **Text decor** - You can overline or underline the text
->       - **None** - Normal text
->       - **Understand** - Underlined text
->       - **Strikethrough** - Overlined text
->       - **Text font** - The font of the text
+>     - **None** - Normal text
+>     - **Understand** - Underlined text
+>     - **Strikethrough** - Overlined text
+>     - **Text font** - The font of the text
 >
 > **Event Properties**: Adding events, you can create different interactions to widgets, for instance change the screen, play an animation, etc. by pressing a button.
+>
 > - **Add Event**: At the bottom of the Inspector Panel, you can find the ADD EVENT button. Firstly, you should name the event, then choose a trigger to start it.
 >   - **Event name** - The name of the event
 >   - **Event Trigger** - The interaction of event start
->       - **Pressed** - An object has been pressed
->       - **Clicked** - An object was pressed for a short period of time, then released. Not called if scrolled
->       - **Long pressed** - An object has been pressed for a longer period of time
->       - **Long pressed repeat** - Called after `long_press_time` in every `long_press_repeat_time` ms. Not called if scrolled
->       - **Focused** - An object is focused
->       - **Defocused** - An object is unfocused
->       - **Value changed** - The value of the object has been changed.
->       - **Ready** - A process has finished
->       - **Cancel** - A process has been cancelled
->       - **Screen loaded** - A screen was loaded, called when all animations are finished
->       - **Screen unloaded** - A screen was unloaded, called when all animations are finished
->       - **Screen load start** - A screen load started, fired when the screen change delay is expired
->       - **Screen unload start** - A screen unload started, fired immediately when lv_scr_load/lv_scr_load_anim is called
->           - **Checked** - A widget chacked
->           - **Unchecked** - A widget unchecked
->           - **Gesture** - Finger-touch sliding direction
+>     - **Pressed** - An object has been pressed
+>     - **Clicked** - An object was pressed for a short period of time, then released. Not called if scrolled
+>     - **Long pressed** - An object has been pressed for a longer period of time
+>     - **Long pressed repeat** - Called after `long_press_time` in every `long_press_repeat_time` ms. Not called if scrolled
+>     - **Focused** - An object is focused
+>     - **Defocused** - An object is unfocused
+>     - **Value changed** - The value of the object has been changed.
+>     - **Ready** - A process has finished
+>     - **Cancel** - A process has been cancelled
+>     - **Screen loaded** - A screen was loaded, called when all animations are finished
+>     - **Screen unloaded** - A screen was unloaded, called when all animations are finished
+>     - **Screen load start** - A screen load started, fired when the screen change delay is expired
+>     - **Screen unload start** - A screen unload started, fired immediately when lv_scr_load/lv_scr_load_anim is called
+>       - **Checked** - A widget chacked
+>       - **Unchecked** - A widget unchecked
+>       - **Gesture** - Finger-touch sliding direction
 > - **Add Event**
 >   - **Actions**: Actions are those elements of the event, which start when trigger happen.
->       - **Call function**: Using the Call function action, you can add a function name that the event can refer to. This function will be created into the ui__events.c or ui_events.py file during the exporting process.
->       - **Change Screen**: You can change among screens with this action.
->           - **Screen to** - The screen you would like to change to
->           - **Fade mode** - The animation during changing the screen
->           - **Speed** - The speed of changing the screen
->           - **Delay** - The delay of changing the screen
->       - **Increment Arc**: You can modify the value of the Arc Widget.
->       - **Increment Bar**: You can modify the value of the Bar Widget.
->       - **Increment Slider**: You can modify the value of the Slider Widget.
->       - **Modify Flag**: You can modify the flag state of a widget.
->       - **Play Animation**: You can play the animations created in the Animation Panel.
->           - **Animation** - The selected animation
->           - **Target** - Target widget you would like to use the animation on
->           - **Delay** - The delay time of the animation
->       - **Set Opacity**: The opacity of the selected widget.
->       - **Set Flag**: Set the value for the flag state of the widget.
->       - **Set Property**: Change the property value of the widget.
->       - **Set text value from arc**: Display the Arc Widget value on a Label Widget by using this action.
->       - **Set text value from slider**: Display the Slider Widget value on a Label Widget by using this action.
->       - **Set text value when checked**: Change the text of a Label Widget depending on the checked or unchecked state of the target object.
+>     - **Call function**: Using the Call function action, you can add a function name that the event can refer to. This function will be created into the ui__events.c or ui_events.py file during the exporting process.
+>     - **Change Screen**: You can change among screens with this action.
+>       - **Screen to** - The screen you would like to change to
+>       - **Fade mode** - The animation during changing the screen
+>       - **Speed** - The speed of changing the screen
+>       - **Delay** - The delay of changing the screen
+>     - **Increment Arc**: You can modify the value of the Arc Widget.
+>     - **Increment Bar**: You can modify the value of the Bar Widget.
+>     - **Increment Slider**: You can modify the value of the Slider Widget.
+>     - **Modify Flag**: You can modify the flag state of a widget.
+>     - **Play Animation**: You can play the animations created in the Animation Panel.
+>       - **Animation** - The selected animation
+>       - **Target** - Target widget you would like to use the animation on
+>       - **Delay** - The delay time of the animation
+>     - **Set Opacity**: The opacity of the selected widget.
+>     - **Set Flag**: Set the value for the flag state of the widget.
+>     - **Set Property**: Change the property value of the widget.
+>     - **Set text value from arc**: Display the Arc Widget value on a Label Widget by using this action.
+>     - **Set text value from slider**: Display the Slider Widget value on a Label Widget by using this action.
+>     - **Set text value when checked**: Change the text of a Label Widget depending on the checked or unchecked state of the target object.
 
 ##### Panel Usage
 
@@ -742,16 +747,16 @@ Transform is set for image placement. The Pivot in the Image tab below sets the 
 Once you have all the pointer positions determined, you can start adding new animation effects. The animation effect settings for different pointers can be found in the following figure.
 
 <table align="center">
-	<tr>
-	    <th>Second</th>
-	    <th>Minute </th>
+ <tr>
+     <th>Second</th>
+     <th>Minute </th>
         <th>Hour</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/25.png" style={{width:300, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/26.png" style={{width:300, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/25.png" style={{width:300, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/26.png" style={{width:300, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/27.png" style={{width:300, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
 </table>
 
 Finally, we just set the animation of the pointer movement to play while the main screen loads.
@@ -778,6 +783,7 @@ The above tutorials have basically covered 80% of the software usage scenarios, 
 3. Be sure to give a unique name to all your components and animations, events, etc.
 
     The software can only save you the time of drawing some patterns and animations, but more complex effects may require you to program them later to achieve. Then it's important to be able to quickly find where your components are located in the code. Naming components, events and animations is key!
+
 :::
 
 #### Step5. Export and application of programs
@@ -788,55 +794,66 @@ Once your dial UI is drawn, you can consider exporting the UI to a program and u
 
 Then select the path to save and the code will be exported automatically. The exported project template will have the following files in it.
 
-- libraries
-- ui
+- **libraries**: This folder directory provides all the libraries you need to use in your project. For our tutorial, the *lvgl* and *TFT_eSPI* libraries in this directory are **not needed**, but the *ui* and *lv_conf.h* are **useful** for us.
+- **ui**: Inside is the project program for Arduino, the .ino file.
 - REANME.md
 
-And what we need are the files under the ui folder. We can open the ino file directly under the ui folder. Then, we need to make changes to the following files to ensure that the program will compile smoothly.
+What we need to do, then, is to first put the required libraries and configuration files into the Arduino's libraries folder. Then modify the .ino file to make sure the functionality works.
 
-- **ui.h**: The section that contains the library, only `#include "lvgl.h"` is kept.
+Please copy the **ui** folder and the **lv_conf.h** file from the libraries folder directory exported by SquareLine Studio to the root directory of your Arduino library.
 
-<table align="center">
-	<tr>
-	    <th>Before modification</th>
-	    <th>After Modification</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/32.png" style={{width:600, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/33.png" style={{width:600, height:'auto'}}/></div></td>
-	</tr>
-</table>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/101.png" style={{width:1000, height:'auto'}}/></div>
 
-- **ui.ino**: Turn on the touch screen function and set the dial rotation direction.
+Then, we can open the .ino file directly under the ui folder. Then, we need to make changes to the following files to ensure that the program will compile smoothly.
+
+- **ui.ino**:
 
 <table align="center">
-	<tr>
-	    <th>Before modification</th>
-	    <th>After Modification</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/34.png" style={{width:600, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/35.png" style={{width:600, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+  <th>Descriptions</th>
+     <th>Screenshot</th>
+     <th>Code Segment</th>
+ </tr>
+ <tr>
+  <th>Defining the TFT library to be used and importing the round screen library</th>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/102.png" style={{width:600, height:'auto'}}/></div></td>
+  <td><a href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/f286996e967549de94891a63b58327e488bd46a3/ui/ui.ino#L1" target="_blank"><b>View Example Code</b></a></td>
+ </tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/36.png" style={{width:600, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/37.png" style={{width:600, height:'auto'}}/></div></td>
-	</tr>
+  <th>Comment out duplicate definitions of the tft class</th>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/103.png" style={{width:600, height:'auto'}}/></div></td>
+  <td><a href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/f286996e967549de94891a63b58327e488bd46a3/ui/ui.ino#L20" target="_blank"><b>View Example Code</b></a></td>
+ </tr>
+ <tr>
+  <th>Rewriting touch functions</th>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/104.png" style={{width:600, height:'auto'}}/></div></td>
+  <td><a href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/f286996e967549de94891a63b58327e488bd46a3/ui/ui.ino#L46" target="_blank"><b>View Example Code</b></a></td>
+ </tr>
+ <tr>
+  <th>Add Initialise screen function and initialise touch function</th>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/105.png" style={{width:600, height:'auto'}}/></div></td>
+  <td><a href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/f286996e967549de94891a63b58327e488bd46a3/ui/ui.ino#L86" target="_blank"><b>View Example Code</b></a></td>
+ </tr>
+ <tr>
+  <th>Screen rotate</th>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/106.png" style={{width:600, height:'auto'}}/></div></td>
+  <td><a href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/f286996e967549de94891a63b58327e488bd46a3/ui/ui.ino#L94" target="_blank"><b>View Example Code</b></a></td>
+ </tr>
 </table>
 
 Then you can choose which XIAO you use to compile and upload.
 
 ### About the LVGL library customization options
 
-If you follow the steps above and still get some "Undefined" error messages during compilation, you may not have configured `lvconf.h` for customization.
+If you encounter an error message that some components are not defined after compiling, then you most likely did not replace the **lv_conf.h** file in the root directory of the Arduino library with the **lv_conf.h** file exported by SquareLine Studio.
 
-To save memory on the motherboard, the lvconf.h file we provide disables some of the lvgl features. But if you use these functions in your dial drawing, you need to turn them on manually.
+To save memory on the motherboard, the lv_conf.h file default provide disables some of the lvgl features. But if you use these functions in your dial drawing, you need to turn them on manually.
 
-- The default path for the `lvconf.h` on **Windows** systems is: 
+- The default path for the `lv_conf.h` on **Windows** systems is:
 
 `C:\Users\{UserName}\Documents\Arduino\libraries`
 
-- The default path for the `lvconf.h` on **MacOS** systems is: 
+- The default path for the `lv_conf.h` on **MacOS** systems is:
 
 `\Users\{UserName}\Documents\Arduino\libraries`
 
@@ -848,7 +865,6 @@ Then all we need to do is to change the 0 after this font in the lv_conf.h file 
 
 If you encounter a similar error, you can double-check that the customization feature is enabled.
 
-
 ### LVGL-based dial program
 
 We have created two dial styles for the circular screen for users' reference. Due to the complex UI logic, this will require a certain amount of performance and memory on the XIAO motherboard. If your XIAO is compiling the following dial program with insufficient memory error, then you may need to upgrade your XIAO or reduce the functionality of the dials.
@@ -856,7 +872,7 @@ We have created two dial styles for the circular screen for users' reference. Du
 - Dial Style I:
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/tree/main/ui">
+    <a class="github_item" href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/tree/main/ui" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
@@ -864,26 +880,21 @@ We have created two dial styles for the circular screen for users' reference. Du
 <!-- - Dial Style II:
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/tree/main/tft_espi-base-dial">
+    <a class="github_item" href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/tree/main/tft_espi-base-dial" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div> -->
 
 ## Tech Support & Product Discussion
 
-
-
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-

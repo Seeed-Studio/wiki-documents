@@ -128,28 +128,22 @@ Library has used examples of them just to understand how they work.
 
 Initialization RF-module as follows:
 
-<pre>...
-
-//RF24 radio(CE,CSN);
-RF24 radio(7,8);
-
-...</pre>
+```
+... //RF24 radio(CE,CSN); RF24 radio(7,8); ...
+```
 
 Initialize LCD-display is as follows:
 
-<pre>...
-
-//LCD5110 myGLCD(DC,RST,CS);
-LCD5110 myGLCD(5,6,3);
-
-...</pre>
+```
+... //LCD5110 myGLCD(DC,RST,CS); LCD5110 myGLCD(5,6,3); ...
+```
 
 ## Simple demonstration
 
 ```cpp
 
-#include &lt;SPI.h&gt;
-#include &lt;LCD5110_Graph_SPI.h&gt;
+#include <SPI.h>
+#include <LCD5110_Graph_SPI.h>
 #include "EmonLib.h"   
 
 #define WINDOW 15
@@ -190,7 +184,7 @@ void setup(void)
     myGLCD.update();
     Irms[0] = emon1.calcIrms(1480); // the first value in the measurement obviously "crooked"
       //Serial.println("calculate delta");
-      for (int i=0; i&lt;WINDOW; i++) {
+      for (int i=0; i<WINDOW; i++) {
         Irms[i] = emon1.calcIrms(1480);
         cIrms = cIrms + Irms[i];
         delay(100);
@@ -312,34 +306,29 @@ void loop()
 ## Version Tracker
 
 <table cellPadding={5} cellSpacing={0}>
-  <tbody><tr>
-      <td width={150}> Revision
-      </td>
-      <td width={450}> Description
-      </td>
-      <td width={80}> Release
-      </td></tr>
+  <tbody>
+    <tr>
+      <td width={150}>Revision</td>
+      <td width={450}>Description</td>
+      <td width={80}>Release</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> 1.0
-      </td>
-      <td> Public version
-      </td>
-      <td> 01.04.2014
-      </td></tr>
+      <td>1.0</td>
+      <td>Public version</td>
+      <td>01.04.2014</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> 0.9b
-      </td>
-      <td> Public version (Not produced)
-      </td>
-      <td> 20.10.2013
-      </td></tr>
+      <td>0.9b</td>
+      <td>Public version (Not produced)</td>
+      <td>20.10.2013</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> 0.9
-      </td>
-      <td> Prototype
-      </td>
-      <td> 10.09.2013
-      </td></tr></tbody></table>
+      <td>0.9</td>
+      <td>Prototype</td>
+      <td>10.09.2013</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Questions and Answers
 

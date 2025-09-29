@@ -107,21 +107,9 @@ void loop()  {
 
 ## Version Tracker
 
-<table cellPadding={5} cellSpacing={0}>
-  <tbody><tr>
-      <td width={150}> <strong>Revision</strong>
-      </td>
-      <td width={450}> <strong>Description</strong>
-      </td>
-      <td width={80}> <strong>Release</strong>
-      </td></tr>
-    <tr style={{fontSize: '90%'}}>
-      <td> 1.0 rev 1
-      </td>
-      <td> Public version
-      </td>
-      <td> 19.11.2015
-      </td></tr></tbody></table>
+| Revision | Description | Release |
+|----------|-------------|---------|
+| 1.0 rev 1 | Public version | 19.11.2015 |
 
 ## Tech Support & Product Discussion
 

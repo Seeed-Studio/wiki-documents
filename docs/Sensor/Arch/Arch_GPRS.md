@@ -172,13 +172,12 @@ To enter the USB ISP mode, connect the Arch with your computer and long press it
 
 - on linux
 
-    1.if the disk is not mounted, mount the disk at {mnt_dir}
-
-    2.dd if={new_firmware.bin} of={mnt_dir}/firmware.bin conv=notrunc
+    1.if the disk is not mounted, mount the disk at /path/to/mount
+    2.dd if=new_firmware.bin of=/path/to/mount/firmware.bin conv=notrunc
 
 - on mac you'll need to use Terminal to run the following script to copy you're .bin file to your Arch
 
-    1.dd if={new_firmare.bin} of=/Volumes/CRP\ DISABLD/firmware.bin conv=notrunc**
+    1.dd if=new_firmware.bin of=/Volumes/CRP\ DISABLD/firmware.bin conv=notrunc
 
    If you're so inclined, you can also create an **Automator** application to support drag-and-drop of the file to your board.  Just create a "Run Shell Script" with the following command:
 
@@ -196,7 +195,7 @@ Arch GPRS doesn't come with [an mbed interface](https://mbed.org/handbook/mbed-H
 
 ## Schematic Online Viewer
 
-<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Arch_GPRS/res/Arch_GPRS_Eagle_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Arch_GPRS/res/Arch_GPRS_Eagle_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
 ## Resources ##

@@ -489,3 +489,421 @@ html[data-theme='light'] {
 
   }
 }
+
+
+
+// 轮换页容器
+.bazaar_carousel_container {
+  position: relative;
+  padding: 3rem 0 2rem 0; // 增加上边距，向下移动整个板块
+  transition: all 0.3s ease;
+}
+
+// Get Involved 标题容器
+.get_involved_header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.get_involved_title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000000; // 改为纯黑色
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+// Dark模式 - 标题样式
+html[data-theme='dark'] .get_involved_title {
+  color: #f9fafb;
+}
+
+// 内容区域容器 - 新增，用于包装除标题外的所有内容
+.get_involved_content_wrapper {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+// Dark模式 - 内容区域容器
+html[data-theme='dark'] .get_involved_content_wrapper {
+  background: #2c2f32;
+  border: 1px solid #6b7280;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+// 项目标签导航
+.project_tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+// Dark模式 - 项目标签导航
+html[data-theme='dark'] .project_tabs {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project_tab {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: none;
+  background-color: #f5f5f5;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 0;
+  
+  &:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  
+  &:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  // 选中状态 - 统一使用#89b929
+  &.active {
+    background-color: #89b929 !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    position: relative;
+  }
+
+  // 悬浮状态 - 非选中项也使用#89b929
+  &:not(.active):hover {
+    background-color: #89b929 !important;
+    color: white !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Dark模式 - 项目标签
+html[data-theme='dark'] .project_tab {
+  background-color: #374151;
+  color: #e5e7eb;
+
+  &:not(.active):hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  &.active {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+}
+
+// 项目标题样式
+.bazaar_carousel_title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 1rem 0 2rem 0;
+  text-align: center;
+  transition: color 0.5s ease;
+  color: #89b929;
+}
+
+// 主要内容行
+.bazaar_carousel_row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+// 左侧内容区域
+.bazaar_carousel_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    transition: color 0.5s ease;
+    font-weight: 600;
+    color: #89b929;
+  }
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #333;
+    white-space: pre-line;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+}
+
+// Dark模式 - 内容区域
+html[data-theme='dark'] .bazaar_carousel_content {
+  p {
+    color: #e5e7eb;
+  }
+}
+
+// 联系信息
+.bazaar_carousel_contact {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #333;
+  opacity: 0.9;
+
+  a {
+    text-decoration: underline;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #89b929;
+
+    &:hover {
+      opacity: 0.8;
+      text-decoration: none;
+      color: #a3c947;
+    }
+  }
+}
+
+// Dark模式 - 联系信息
+html[data-theme='dark'] .bazaar_carousel_contact {
+  color: #e5e7eb;
+}
+
+// 按钮容器
+.bazaar_carousel_buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+
+  a {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid;
+
+    &.btn_primary {
+      background-color: #89b929;
+      border-color: #89b929;
+      color: white;
+
+      &:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    &.btn_secondary {
+      background-color: transparent;
+      border-color: #89b929;
+      color: #89b929;
+
+      &:hover {
+        opacity: 0.8;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+// Dark模式 - 按钮
+html[data-theme='dark'] .bazaar_carousel_buttons {
+  a {
+    &.btn_primary:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+// 右侧图片容器
+.bazaar_carousel_image_wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+
+    .image_overlay {
+      opacity: 0.7;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+}
+
+// 图片覆盖层
+.image_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+// 响应式设计
+@media (max-width: 900px) {
+  .bazaar_carousel_container {
+    padding: 2rem 0 2rem 0; // 移动端减少上边距
+  }
+
+  .get_involved_title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .get_involved_header {
+    margin-bottom: 1.5rem;
+    justify-content: center;
+  }
+
+  .get_involved_content_wrapper {
+    padding: 1.5rem; // 移动端减少内边距
+  }
+
+  .project_tabs {
+    margin-bottom: 1.5rem;
+    flex-direction: column;
+    border-radius: 8px;
+    
+    .project_tab {
+      border-radius: 0 !important;
+      
+      &:first-child {
+        border-top-left-radius: 8px !important;
+        border-top-right-radius: 8px !important;
+      }
+      
+      &:last-child {
+        border-bottom-left-radius: 8px !important;
+        border-bottom-right-radius: 8px !important;
+      }
+    }
+  }
+
+  .bazaar_carousel_title {
+    font-size: 24px;
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  .bazaar_carousel_row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .bazaar_carousel_image_wrapper {
+    order: 2;
+    width: 100%;
+    margin: 0.3rem 0 0.6rem 0;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+
+  .bazaar_carousel_content {
+    order: 3;
+    text-align: left;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0;
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  .bazaar_carousel_contact {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .bazaar_carousel_buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+      padding: 0.75rem 1.8rem;
+      font-size: 1rem;
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .get_involved_title {
+    font-size: 26px;
+  }
+
+  .get_involved_content_wrapper {
+    padding: 1rem; // 小屏幕进一步减少内边距
+  }
+
+  .project_tabs {
+    .project_tab {
+      font-size: 0.9rem;
+      padding: 0.8rem 1rem;
+    }
+  }
+
+  .bazaar_carousel_title {
+    font-size: 20px;
+  }
+
+  .bazaar_carousel_buttons {
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      width: 80%;
+      text-align: center;
+    }
+  }
+}

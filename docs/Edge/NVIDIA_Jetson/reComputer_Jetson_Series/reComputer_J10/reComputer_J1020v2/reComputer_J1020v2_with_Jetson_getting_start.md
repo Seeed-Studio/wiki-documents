@@ -15,7 +15,7 @@ last_update:
 <div align="center"><img width ="800" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/110061441.jpg"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J1020-v2-w-o-power-adapter-p-5608.html">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J1020-v2-w-o-power-adapter-p-5608.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
@@ -70,69 +70,64 @@ For solution providers, reComputer J1020 v2 is preinstalled with Jetpack 4.6.1, 
     </tr>
     <tr>
       <td>Video Decoder</td>
-      <td colspan='2'>4K60 | 2x 4K30 | 4x 1080p60 | 8x 1080p30 | 9x 720p60 (H.265 & H.264)
-      </td>
+      <td colspan='2'>4K60 | 2x 4K30 | 4x 1080p60 | 8x 1080p30 | 9x 720p60 (H.265 & H.264)</td>
       <td>4Kp60 | 2x 4Kp30 | 8x 1080p30 | 18x 720p30 (H.264/H.265)</td>
     </tr>
     <tr>
       <td>Gigabit Ethernet</td>
-      <td colspan='3' align='center'>1*RJ45 Gigabit Ethernet Connector (10/100/1000)</td>
+      <td colspan='3' align='center'>1\*RJ45 Gigabit Ethernet Connector (10/100/1000)</td>
     </tr>
     <tr>
       <td>USB</td>
-      <td>1 * USB 3.0 Type A; 
-2 * USB 2.0 Type A;
-1 * USB Type C for device mode;
-1 * USB Type C for 5V power input</td>
-      <td>4 * USB 3.0 Type-A ；
-1 * Micro-USB port for device mode;</td>
-      <td>4 * USB 3.0 Type-A; 
-1 * Micro-USB port for 5V power input  or for device mode</td>
+      <td>1 \* USB 3.0 Type A;
+2 \* USB 2.0 Type A;
+1 \* USB Type C for device mode;
+1 \* USB Type C for 5V power input</td>
+      <td>4 \* USB 3.0 Type-A ；
+1 \* Micro-USB port for device mode;</td>
+      <td>4 \* USB 3.0 Type-A;
+1 \* Micro-USB port for 5V power input  or for device mode</td>
     </tr>
     <tr>
       <td>CSI Camera Connect</td>
-      <td colspan='3' align='center'>2*CSI Camera (15 pos, 1mm pitch, MIPI CSI-2 )</td>
+      <td colspan='3' align='center'>2\*CSI Camera (15 pos, 1mm pitch, MIPI CSI-2 )</td>
     </tr>
     <tr>
       <td>Display</td>
-      <td>1*HDMI Type A</td>
-      <td colspan='2' align='center'>1*HDMI Type A; 
-1*DP</td>
+      <td>1\*HDMI Type A</td>
+      <td colspan='2' align='center'>1\*HDMI Type A; 1\*DP</td>
     </tr>
     <tr>
       <td>FAN</td>
-      <td colspan='3' align='center'>1* FAN connetcor (5V PWM)</td>
+      <td colspan='3' align='center'>1\* FAN connetcor (5V PWM)</td>
     </tr>
     <tr>
       <td>M.2 KEY E</td>
-      <td>1*M.2 Key E</td>
-      <td>1*M.2 Key E (Disabled)</td>
-      <td>1*M.2 Key E</td>
+      <td>1\*M.2 Key E</td>
+      <td>1\*M.2 Key E (Disabled)</td>
+      <td>1\*M.2 Key E</td>
     </tr>
     <tr>
       <td>M.2 KEY M</td>
       <td>-</td>
-      <td>1*M.2 Key M</td>
+      <td>1\*M.2 Key M</td>
       <td>-</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td>1*RTC Socket</td>
-      <td>1*RTC Socket
-1*RTC 2-pin</td>
+      <td>1\*RTC Socket</td>
+      <td>1\*RTC Socket 1\*RTC 2-pin</td>
       <td>-</td>
     </tr>
     <tr>
       <td>Multifunctional port</td>
-      <td colspan='3' align='center'>1* 40-Pin header</td>
+      <td colspan='3' align='center'>1\* 40-Pin header</td>
     </tr>
     <tr>
       <td>Power Supply</td>
       <td>USB-Type C 5V⎓3A</td>
-      <td>	
-9-12V Power adapter not included(Barrel Jack 5.5/2.5mm)</td>
-      <td>DC Jack 5V⎓4A；
-Micro-USB 5V⎓2A</td>
+      <td>9-12V Power adapter not included(Barrel Jack 5.5/2.5mm)</td>
+      <td>DC Jack 5V⎓4A；Micro-USB 5V⎓2A</td>
     </tr>
     <tr>
       <td>Mechanical</td>

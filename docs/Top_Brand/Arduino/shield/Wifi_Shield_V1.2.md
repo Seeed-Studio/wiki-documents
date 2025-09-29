@@ -32,20 +32,62 @@ This WiFi shield features the RN171 TCP/IP module to allow your Arduino/Seeeduin
 
 ## Specification
 
-|Item|Value|
-|---|---|
-| Operate voltage | 3.3~5.5 V |
-| Compatible board directly | Arduino Uno/Seeeduino |
-| Current | 25~400mA |
-| Transmit power | 0-10 dBm |
-| Frequency | 2402~2480 MHz |
-| Channal | 0~13 |
-| Network rate | 1-11 Mbps for 802.11b/6-54Mbps for 802.11g |
-| Dimension | 60X56X19 mm |
-| Net Weight | 24±1 g |
-| Secure WiFi authentication | WEP-128, WPA-PSK (TKIP), WPA2-PSK (AES) |
-| Built-in networking applications | DHCP client, DNS client, ARP, ICMP ping, FTP, TELNET, HTTP, UDP, TCP |
-| Certification | RN171 : FCC, CE |
+<table>
+  <tbody>
+    <tr>
+      <td>Item</td>
+      <td>Value</td>
+    </tr>
+    <tr>
+      <td>Operate voltage</td>
+      <td>3.3~5.5 V</td>
+    </tr>
+    <tr>
+      <td>Compatible board directly</td>
+      <td>Arduino Uno/Seeeduino</td>
+    </tr>
+    <tr>
+      <td>Current</td>
+      <td>25~400mA</td>
+    </tr>
+    <tr>
+      <td>Transmit power</td>
+      <td>0-10 dBm</td>
+    </tr>
+    <tr>
+      <td>Frequency</td>
+      <td>2402~2480 MHz</td>
+    </tr>
+    <tr>
+      <td>Channal</td>
+      <td>0~13</td>
+    </tr>
+    <tr>
+      <td>Network rate</td>
+      <td>1-11 Mbps for 802.11b/6-54Mbps for 802.11g</td>
+    </tr>
+    <tr>
+      <td>Dimension</td>
+      <td>60X56X19 mm</td>
+    </tr>
+    <tr>
+      <td>Net Weight</td>
+      <td>24±1 g</td>
+    </tr>
+    <tr>
+      <td>Secure WiFi authentication</td>
+      <td>WEP-128, WPA-PSK (TKIP), WPA2-PSK (AES)</td>
+    </tr>
+    <tr>
+      <td>Built-in networking applications</td>
+      <td>DHCP client, DNS client, ARP, ICMP ping, FTP, TELNET, HTTP, UDP, TCP</td>
+    </tr>
+    <tr>
+      <td>Certification</td>
+      <td>RN171 : FCC, CE</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Shield Interface and Components
 
@@ -68,7 +110,7 @@ The WiFi shield is compatible with any Arduino/Seeeduino development board as it
 
 **5.UART/Serial Select area:** Two jumper rows to let you select which RX and TX pins you want to use to communicate with the Arduino.
 
-**6.Grove connectors:** Analog I2C Grove (if using Arduino UNO or Seeeduino) for pins A4&A5 and Digital Serial Grove for D8&D9\. The voltage VCC is dependent on the power supply of the board.
+**6.Grove connectors:** Analog I2C Grove (if using Arduino UNO or Seeeduino) for pins A4&A5 and Digital Serial Grove for D8&D9. The voltage VCC is dependent on the power supply of the board.
 
 ### Pins Used / Shield Compatibility
 
@@ -96,12 +138,40 @@ Diagram of how the RN171 module is interfaced to the Arduino
 
 ### LED Status Indicators
 
-|Label |Description |Status| Hardware Connection|
-|---|---|---|---|
-|D5 |Green LED. Indicates the association status.| **OFF**: means the module is not associated with a network.**Solid ON**: indicates that it is associated and Internet access is OK| Connected to GPIO6 of the RN171 module|
-|D1 |Red LED. Indicates the TCP/IP connection status.| **Solid ON**: connected over TCP.**Fast Toggle (2 times/second)**: No IP address or module is in command mode.**Slow Toggle (once/second)**: IP address is OK.|Connected to GPIO4 of the RN171 module|
-|RST |Red LED. WiFi module reset status.| **Solid ON**: The reset button (WIFI_RST) is been pressed.|Connected to Reset of the RN171 module.|
-|PWR |Green LED. Indicates WiFi module's power up status.| **Solid ON**:The module/shield is powered up.| Connected to the 3.3V output of the LD1117 voltage regulator.|
+<table>
+  <tbody>
+    <tr>
+      <td>Label</td>
+      <td>Description</td>
+      <td>Status</td>
+      <td>Hardware Connection</td>
+    </tr>
+    <tr>
+      <td>D5</td>
+      <td>Green LED. Indicates the association status.</td>
+      <td><strong>OFF</strong>: means the module is not associated with a network.<br/><strong>Solid ON</strong>: indicates that it is associated and Internet access is OK</td>
+      <td>Connected to GPIO6 of the RN171 module</td>
+    </tr>
+    <tr>
+      <td>D1</td>
+      <td>Red LED. Indicates the TCP/IP connection status.</td>
+      <td><strong>Solid ON</strong>: connected over TCP.<br/><strong>Fast Toggle (2 times/second)</strong>: No IP address or module is in command mode.<br/><strong>Slow Toggle (once/second)</strong>: IP address is OK.</td>
+      <td>Connected to GPIO4 of the RN171 module</td>
+    </tr>
+    <tr>
+      <td>RST</td>
+      <td>Red LED. WiFi module reset status.</td>
+      <td><strong>Solid ON</strong>: The reset button (WIFI_RST) is been pressed.</td>
+      <td>Connected to Reset of the RN171 module.</td>
+    </tr>
+    <tr>
+      <td>PWR</td>
+      <td>Green LED. Indicates WiFi module's power up status.</td>
+      <td><strong>Solid ON</strong>:The module/shield is powered up.</td>
+      <td>Connected to the 3.3V output of the LD1117 voltage regulator.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## WiFi Library
 
@@ -277,13 +347,13 @@ The WiFly RN-171 module in the WiFi shield can operate in two modes: data, and c
 **To enter command mode, follow these steps:**
 
 1.Open the Arduino Serial monitor.
-2.Set the serial monitor to “No line ending”, baud rate to 9600.
+2.Set the serial monitor to "No line ending", baud rate to 9600.
 3.Type "$$" into the Arduino Serial Monitor and press enter.
-4.The module will respond with the letters “CMD”, indicating that it has entered command mode.
+4.The module will respond with the letters "CMD", indicating that it has entered command mode.
 
 **Let's go ahead and test some commands, do the following:**
 
-1.In the Arduino Serial monitor window, select “Carriage return” and a baud rate of 9600.
+1.In the Arduino Serial monitor window, select "Carriage return" and a baud rate of 9600.
 2.Now type each of the commands in the table below into the Arduino Serial Monitor and press enter.
 3.The module will output a response, as described in the table, for each command.
 
@@ -307,10 +377,10 @@ Do the following:
 1.Upload the code in Example One to your Arduino board
 
 2.**Enter command mode:**
-    1.Set the serial monitor to “No line ending”, baud rate to 9600.
+    1.Set the serial monitor to "No line ending", baud rate to 9600.
     2.Type *$$* into the Arduino Serial Monitor and press enter.
 
-3.Set the serial monitor to “Carriage return”.
+3.Set the serial monitor to "Carriage return".
 
 4.**Scan for available access points:**
     1.Type *scan* and press enter. The Arduino serial monitor window will output a list of comma separated values for each access point the WiFi shield has found. From left to right the third value is the security mode, the last value is the SSID. This example shows a security mode of 4 with an SSID name MySSID: 01,01,-88,**04**,1104,1c,00,45:56:78:be:93:1f,**MySSID**
@@ -340,9 +410,9 @@ A description of the commands you entered in the steps above is available in the
 | Number | Commands | Description |
 |---|---|---|
 | 1 | scan | This command performs an active probe scan of access points on all 13 channels. When you use this command, the module returns the MAC address, signal strength, SSID name, and security mode of the access points it finds. |
-| 2 | set wlan auth 4 | Find the value that corresponds to the security protocol on your access point. Then, tell the WiFly what security protocol to use, it is the number shown in **Fijure 1** that corresponds to the access point's security protocol. Here we choose “4”. |
+| 2 | set wlan auth 4 | Find the value that corresponds to the security protocol on your access point. Then, tell the WiFly what security protocol to use, it is the number shown in **Fijure 1** that corresponds to the access point's security protocol. Here we choose "4". |
 | 3 | set wlan phrase seeed-mkt | Tell the WiFi shield your passphrase. |
-| 4 | join SEEED-MKT | Tell the WiFi shield to join, “SEEED-MKT“ is the name of the access point we choose to connect. After sending the command the module should now connect and print out information about the connection. (If the connection is failed, try to send the command again until it works ) |
+| 4 | join SEEED-MKT | Tell the WiFi shield to join, "SEEED-MKT" is the name of the access point we choose to connect. After sending the command the module should now connect and print out information about the connection. (If the connection is failed, try to send the command again until it works ) |
 
  Figure 1
 
@@ -361,7 +431,7 @@ A description of the commands you entered in the steps above is available in the
 
 Now that you know how to connect to an access point by typing each command it's time to use the libraries and examples we provide.
 
-To see code required to connect to an access point go to “File -> Examples -> Wifi_Shield -> wifi_test”. Change the code to use your own SSID (access point name), and KEY (your access point's password), then upload the sketch to your Arduino IDE.
+To see code required to connect to an access point go to "File -> Examples -> Wifi_Shield -> wifi_test". Change the code to use your own SSID (access point name), and KEY (your access point's password), then upload the sketch to your Arduino IDE.
 
 ```cpp
 #define SSID      " SEEED-MKT "
@@ -818,7 +888,7 @@ The name of the API we'll use is [OpenWeatherMap](http://openweathermap.org/api)
 
 Let us go ahead and retrieve the weather JSON string for San Francisco, US. The URL our WiFi shield needs to visit is the following (you may test it in your web browser):
 
-<http://api.openweathermap.org/data/2.5/weather?q=San%20Francisco>,US
+[http://api.openweathermap.org/data/2.5/weather?q=San%20Francisco,US](http://api.openweathermap.org/data/2.5/weather?q=San%20Francisco,US)
 
 **Step 2: The Arduino Code**
 
@@ -885,7 +955,7 @@ void setup()
   wifly.sendCommand("open\r"); // open connection
   delay(100);  
 
-  wiflyUart.print("GET /data/2.5/weather?q=San%20Francisco,US \n\n");
+  wiflyUart.print("GET data_2_5_weather?q=San%20Francisco,US \n\n");
   delay(1000);
 
 }

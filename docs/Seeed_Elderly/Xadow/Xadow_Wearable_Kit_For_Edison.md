@@ -18,80 +18,82 @@ with Intel Edison.It includes an Edison expansion board named Xadow-Edison and
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Wearable-Kit-For-Intel%C2%AE-Edison-p-2428.html)
 
-##   Part list
+## Part list
 
 <table>
-  <tbody><tr>
+  <tbody>
+  <tr>
       <th> Parts </th>
       <th> Count </th>
       <th> Parts</th>
-      <th> Count
-      </th></tr>
+      <th> Count</th>
+      </tr>
     <tr>
       <td> Xadow - Edison </td>
       <td> 1</td>
       <td> Xadow - 3 Axis Accelerometer</td>
-      <td> 1
-      </td></tr>
+      <td> 1</td>
+      </tr>
     <tr>
       <td> Xadow - Edison Programmer</td>
       <td> 1</td>
       <td> Xadow - Barometer BMP 180</td>
-      <td> 1
-      </td></tr>
+      <td> 1</td>
+      </tr>
     <tr>
       <td> Xadow - Edison SD</td>
       <td> 1</td>
       <td> Battery</td>
-      <td> 1
-      </td></tr>
+      <td> 1</td>
+      </tr>
     <tr>
       <td> Xadow - Q Touch Sensor </td>
       <td> 1</td>
       <td> Digital RGB LED Flexi-Strip</td>
-      <td> 1
-      </td></tr>
+      <td> 1</td>
+      </tr>
     <tr>
       <td> Xadow - NFC </td>
       <td> 1</td>
       <td> Power cable White</td>
-      <td> 5
-      </td></tr>
+      <td> 5</td>
+      </tr>
     <tr>
       <td> Xadow - Breakout</td>
       <td> 3 </td>
       <td> Power cable Red</td>
-      <td> 5
-      </td></tr>
+      <td> 5</td>
+      </tr>
     <tr>
       <td> Xadow - Buzzer </td>
       <td> 1</td>
       <td> Power cable Yellow</td>
-      <td> 5
-      </td></tr>
+      <td> 5</td>
+      </tr>
     <tr>
       <td> Xadow - Vibration Motor </td>
       <td> 1</td>
       <td> FFC cable package</td>
-      <td> 1
-      </td></tr>
+      <td> 1</td>
+      </tr>
     <tr>
       <td> Xadow - OLED </td>
       <td> 1</td>
       <td> Color printed Tutorial</td>
-      <td> 1
-      </td></tr>
+      <td> 1</td>
+      </tr>
     <tr>
       <td>  NFC Tags</td>
       <td> 3</td>
       <td> </td>
-      <td>
-      </td></tr></tbody></table>
+      <td> </td>
+      </tr>
+      </tbody>
+      </table>
 
+## Getting Started
 
-##   Getting Started
-
-###   Connection
+### Connection
 
 Pay attention to the unfilled corner, all the modules’ unfilled corner point to the same direction. The Xadow modules's double sides can connect two modules by FFC  since that xadow can cascade its modules as long as posible like a watch or a necklace, so suitable for wearable prototying.
 
@@ -112,7 +114,7 @@ Pay attention to the unfilled corner, all the modules’ unfilled corner point t
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison09.png)
 
-###   Development Environment
+### Development Environment
 
 1. Installing Edison Arduino IDE and require drivers. Click [here](https://communities.intel.com/docs/DOC-23147) to see the tutorial on the official site.
 
@@ -127,7 +129,6 @@ Pay attention to the unfilled corner, all the modules’ unfilled corner point t
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison16.png)
 
-
 3. IDE Setting
 
 1) Open Arduino IDE. Click “Tools” --&gt; “Board” and select Intel® Edison.
@@ -136,7 +137,6 @@ Pay attention to the unfilled corner, all the modules’ unfilled corner point t
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison17.png)
 
-
 4. Upload Sketch
 
 Click “File” --&gt; “Examples” choose demos download before
@@ -144,16 +144,15 @@ Click “File” --&gt; “Examples” choose demos download before
 ![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison18.png)
 ![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison19.png)
 
+### The Examples
 
-###   The Examples
-
-**Make a LED strip **
+**Make a LED strip**
 
 The LED strip has 3 pins, to connect the strip and the breakout board you can do a simple welding. Connect the VCC pins GND pins, and the signal pin to breakout board’s MISO pin.
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison20.png)
 
-**Prepare NFC tags **
+**Prepare NFC tags**
 
 The NFC demo use three NFC tags as keys to open the led strip, but first you have got the NFC tags they were recorded nothing in. So you have to make them useful tags.
 
@@ -177,7 +176,7 @@ The NFC demo use three NFC tags as keys to open the led strip, but first you hav
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison24.png)
 
-**Example-01: Cool_Light **
+**Example-01: Cool_Light**
 
 **WHAT WE’VE GOT HERE**
 
@@ -185,7 +184,7 @@ In this example, we use an NFC module and a QTouch module to control a RGB LED s
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison27.jpg)
 
-** Upload Sketch **
+**Upload Sketch**
 
 **Click File&gt;Examples&gt;Cool_Light.**
 
@@ -193,14 +192,14 @@ In this example, we use an NFC module and a QTouch module to control a RGB LED s
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison26.png)
 
-** Code Detail **
+**Code Detail**
 
 ```
-#include &lt;Wire.h&gt;
-#include &lt;PN532_I2C.h&gt;
-#include &lt;PN532.h&gt;
-#include &lt;NfcAdapter.h&gt;
-#include &lt;TimerOne.h&gt;
+#include <Wire.h>
+#include <PN532_I2C.h>
+#include <PN532.h>
+#include <NfcAdapter.h>
+#include <TimerOne.h>
 #include "Seeed_QTouch.h"
 #include "Seeed_ws2812.h"
 
@@ -244,9 +243,9 @@ void loop() {
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison33.png)
 
-**Example-02: GlowingThermometer **
+**Example-02: GlowingThermometer**
 
-** WHAT WE’VE GOT HERE **
+**WHAT WE’VE GOT HERE**
 
 In this example we use a barometer module to monitor the atmosphere about temperature air pressure and altitude, these messages show on the OLED module. We setup a secure temperature beteen 20 ℃ ~ 30 ℃, when the temperature is out of the secure range the vibrator will shock and showing warning picture on OLED when temperature over 30 ℃ or less than 20 ℃.
 Now open the demo GlowingThermometer compile and upload the sketch.
@@ -260,10 +259,10 @@ Click File&gt;Examples&gt;GrowingThermometer
 **CODE DETAIL**
 
 ```
-#include &lt;Wire.h&gt;
-#include &lt;SeeedOLED.h&gt;
+#include <Wire.h>
+#include <SeeedOLED.h>
 #include "Barometer.h"
-#include &lt;Seeed_ws2812.h&gt;
+#include <Seeed_ws2812.h>
 
 #define LEDN 5
 #define SIG_PIN 12
@@ -321,12 +320,12 @@ void loop()
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison32.jpg)
 
-:::tips
+:::tip
     You’ll need to warm the Xadow-Barometer module to see what happen when the temperature is out of the secure range.
 :::
 3.As the temperature raising the leds light up one by one and the color change from blue to red.
 
-**Example-03: Edison-Pedometer **
+**Example-03: Edison-Pedometer**
 
 **WHAT WE’VE GOT HERE**
 
@@ -346,17 +345,17 @@ This example shows how to make a pedometer that counts a person’s steps. It us
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison37.png)
 
-**Code Detail **
+**Code Detail**
 
 ```
-#include &lt;Wire.h&gt;
-#include &lt;SeeedOLED.h&gt;
-#include &lt;Wire.h&gt;
-#include &lt;ADXL345.h&gt;
+#include <Wire.h>
+#include <SeeedOLED.h>
+#include <Wire.h>
+#include <ADXL345.h>
 #include "pedometer.h"
-#include &lt;SPI.h&gt;
-#include &lt;WiFi.h&gt;
-#include &lt;TimerOne.h&gt;
+#include <SPI.h>
+#include <WiFi.h>
+#include <TimerOne.h>
 
 #define MINUTES_TO_ALARM  (60) //If you don't walk enough in MINUTES_TO_ALARM minutes, the buzzer beeps 0.5s.
 unsigned long curtime = 0;
@@ -395,7 +394,7 @@ void setup() {
     curtime = millis();              // get the current time
     cursteps = pedometer.stepCount;  // get the current steps
 
-    Timer1.initialize(200000); // set a timer of length 100000 microseconds (or 0.1 sec - or 10Hz =&gt; the led will blink 5 times, 5 cycles of on-and-off, per second)
+    Timer1.initialize(200000); // set a timer of length 100000 microseconds (or 0.1 sec - or 10Hz => the led will blink 5 times, 5 cycles of on-and-off, per second)
     Timer1.attachInterrupt( TimerISR ); // attach the service routine here
 }
 
@@ -412,7 +411,7 @@ void loop() {
     }
 
     //If you don't walk enough in MINUTES_TO_ALARM minutes, the buzzer beeps 0.5s.
-    if((millis()-curtime &gt; MINUTES_TO_ALARM * 60000) &amp;&amp; (pedometer.stepCount - cursteps &lt; MINUTES_TO_ALARM*60/2)){
+    if((millis()-curtime > MINUTES_TO_ALARM * 60000) && (pedometer.stepCount - cursteps < MINUTES_TO_ALARM*60/2)){
         buzzer_on(500);
         curtime = millis();
         cursteps = pedometer.stepCount;
@@ -450,32 +449,30 @@ Here is what it looks like with the watch case:
 
 2. When visiting the web server, a port no. (for example 88) should be added, like this: 192.168.168.157:88
 
-##   Resource
+## Resource
 
-*   [Seeed depot](https://www.seeedstudio.com/depot/)
+- [Seeed depot](https://www.seeedstudio.com/depot/)
 
-*   [source code on github](https://github.com/Seeed-Studio/Xadow_Edison_Demos)
+- [source code on github](https://github.com/Seeed-Studio/Xadow_Edison_Demos)
 
-*   [Edison Pedometer 3D models](https://file.seeedstudi.com/wiki/Xadow_Wearable_Kit_For_Edison/res/Edison_Pedometer_3D_models.zipp)
+- [Edison Pedometer 3D models](https://file.seeedstudi.com/wiki/Xadow_Wearable_Kit_For_Edison/res/Edison_Pedometer_3D_models.zipp)
 
-*   [Intel® Edison official site](https://www.intel.com/content/www/us/en/do-it-yourself/edison.html)
+- [Intel® Edison official site](https://www.intel.com/content/www/us/en/do-it-yourself/edison.html)
 
-*   [Edison Getting Started Guide](https://communities.intel.com/docs/DOC-23147)
+- [Edison Getting Started Guide](https://communities.intel.com/docs/DOC-23147)
 
-*   [Xadow wear](https://community.seeedstudio.com/wear/)
-
-
+- [Xadow wear](https://community.seeedstudio.com/wear/)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

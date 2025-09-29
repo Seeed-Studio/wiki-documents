@@ -1,0 +1,10 @@
+position: 4
+label: '应用场景'
+collapsible: true
+collapsed: true
+link:
+  type: generated-index
+  slug: cn/scenarios-mp-v3
+  title: 应用场景
+  description: |
+    这里提供有关 Mission Pack V3 的应用场景和解决方案，帮助用户更好地理解和使用 Mission Pack。

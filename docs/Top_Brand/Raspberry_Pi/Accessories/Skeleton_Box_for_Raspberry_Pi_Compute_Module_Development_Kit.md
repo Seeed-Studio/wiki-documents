@@ -46,62 +46,49 @@ Assembly diagram is as follows:
 ![](https://files.seeedstudio.com/wiki/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/img/Pic_2104.bmp)
 
 <table cellSpacing={0} width="80%">
-  <tbody><tr>
-      <th scope="col"> Part
-      </th>
-      <th scope="col"> Package
-      </th>
-      <th scope="col"> Qty
-      </th></tr>
+  <tbody>
     <tr>
-      <th scope="row"> Bracket
-      </th>
-      <td> 1.5mm aluminum plate stamping molding, black sand anodized
-      </td>
-      <td> 2
-      </td></tr>
+      <th scope="col">Part</th>
+      <th scope="col">Package</th>
+      <th scope="col">Qty</th>
+    </tr>
     <tr>
-      <th scope="row">Bottom Board
-      </th>
-      <td> 2.5mm Thickness
-      </td>
-      <td> 1
-      </td></tr>
+      <th scope="row">Bracket</th>
+      <td>1.5mm aluminum plate stamping molding, black sand anodized</td>
+      <td>2</td>
+    </tr>
     <tr>
-      <th scope="row">Top Board
-      </th>
-      <td> 2.5mm Thickness
-      </td>
-      <td> 1
-      </td></tr>
+      <th scope="row">Bottom Board</th>
+      <td>2.5mm Thickness</td>
+      <td>1</td>
+    </tr>
     <tr>
-      <th scope="row">Rivet（black）
-      </th>
-      <td> R2056
-      </td>
-      <td> 20
-      </td></tr>
+      <th scope="row">Top Board</th>
+      <td>2.5mm Thickness</td>
+      <td>1</td>
+    </tr>
     <tr>
-      <th scope="row"> Screw
-      </th>
-      <td> M3X5
-      </td>
-      <td> 4
-      </td></tr>
+      <th scope="row">Rivet（black）</th>
+      <td>R2056</td>
+      <td>20</td>
+    </tr>
     <tr>
-      <th scope="row">Nylon screw pillar
-      </th>
-      <td> M3X5+6
-      </td>
-      <td> 4
-      </td></tr>
+      <th scope="row">Screw</th>
+      <td>M3X5</td>
+      <td>4</td>
+    </tr>
     <tr>
-      <th scope="row">Nylon Nut
-      </th>
-      <td> M3X2.6
-      </td>
-      <td> 4
-      </td></tr></tbody></table>
+      <th scope="row">Nylon screw pillar</th>
+      <td>M3X5+6</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th scope="row">Nylon Nut</th>
+      <td>M3X2.6</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Tech Support & Product Discussion
 

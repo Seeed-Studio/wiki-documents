@@ -4,6 +4,7 @@ title: SenseCAP M4 Quick Start
 keywords:
 - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /Network/SenseCAP_Network/SenseCAPMX_Hotspot/Flux_Gateway/SenseCAP_M4_Square/SenseCAP_M4_Quick_Start
 last_update:
   date: 02/14/2023
   author: Matthew

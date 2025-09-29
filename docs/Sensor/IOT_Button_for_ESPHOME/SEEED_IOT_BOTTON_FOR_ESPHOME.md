@@ -18,6 +18,14 @@ last_update:
 
 In this tutorial, we will show you how to connect the Seeed Studio IoT Button to Home Assistant using ESPHome. You'll learn how to set up the button to detect different press patterns (single click, double click, and long press) and trigger different actions in your smart home.
 
+:::note
+If you follow this Wiki to connect the IoT Button to ESPHome, please be aware of the potential limitation:
+
+**Manual Wake-Up and Reconnection Delay:** Each time you want to use the button, you need to manually wake it up by pressing it. After waking up, the device will need to reconnect to the network, which may take a short period before the button can be used again.
+
+If you pick up the IoT Button V2, there will be an additional power detection feature in the ESPHome over the generation.
+:::
+
 ## Materials Required
 
 <div class="table-center">
@@ -30,7 +38,7 @@ In this tutorial, we will show you how to connect the Seeed Studio IoT Button to
     </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-IoT-Button-p-6419.html">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-IoT-Button-p-6419.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
       </div></td>
@@ -86,7 +94,7 @@ For the IoT Button with its built-in ESP32-C6, select "ESP32" as the device type
 
 The easiest way to get started with the IoT Button is to use the Web Flasher tool to install the pre-built ESPHome firmware directly from your browser.
 
-**Step 1**: Visit the [Seeed Studio IoT Button Firmware Flasher](https://seeed-projects.github.io/Seeed_IoT_Button/) website.
+**Step 1**: Visit the [Seeed Studio IoT Button Firmware Flasher](https://gadgets.seeed.cc/) website.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/iot_button_zigbee/3.png" style={{width:800, height:'auto'}}/></div>
 
@@ -103,9 +111,10 @@ The easiest way to get started with the IoT Button is to use the Web Flasher too
 **Step 7**: Once connected, your device should automatically open a configuration page. If not, open a browser and navigate to `http://192.168.4.1`.
 
 **Step 8**: On the configuration page:
-   - Enter your home WiFi network name (SSID) and password
-   - Make sure this is the same network that your Home Assistant is connected to
-   - Click "Save" to apply the settings
+
+- Enter your home WiFi network name (SSID) and password
+- Make sure this is the same network that your Home Assistant is connected to
+- Click "Save" to apply the settings
 
 **Step 9**: The IoT Button will restart and connect to your home WiFi network.
 
@@ -127,119 +136,16 @@ If you prefer to use the ESPHome dashboard for more control over the configurati
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/10.png" style={{width:1000, height:'auto'}}/></div>
 
-```yaml
-substitutions:
-  name: "seeedstudio-iot-button"
-  friendly_name: "Seeed Studio IoT Button"
+Due to frequent code updates, please click on the button posted below to access the Yaml program.
 
-esphome:
-  name: "${name}"
-  friendly_name: "${friendly_name}"
-  name_add_mac_suffix: true
-  project:
-    name: "seeedstudio.iot_button"
-    version: "1.0"
-  platformio_options:
-    board_upload.maximum_size: 4194304
-  min_version: "2024.3.2" # Fix logger compile error on ESP32-C6 esphome#6323
-
-esp32:
-  board: esp32-c6-devkitc-1
-  variant: esp32c6
-  flash_size: 4MB # upload.flash_size
-  framework:
-    type: esp-idf
-
-# Enable logging
-logger:
-  hardware_uart: USB_SERIAL_JTAG
-  level: DEBUG
-
-# Enable Home Assistant API
-api:
-
-ota:
-  - platform: esphome
-
-wifi:
-  # Replace with your WiFi credentials
-  ssid: "Your_WiFi_SSID"
-  password: "Your_WiFi_Password"
-  
-  # Enable fallback hotspot (captive portal) in case wifi connection fails
-  ap:
-    ssid: "seeedstudio-iot-button"
-
-captive_portal:
-
-binary_sensor:
-  - platform: gpio
-    pin:
-      number: GPIO9
-      inverted: True
-    name: "SeeedStudio IoT Button"
-    on_multi_click:
-      - timing:
-          - ON for at most 200ms
-          - OFF for at least 0.5s
-        then:
-          - logger.log: "Single Short Clicked"
-          - switch.toggle: virtual_toggle_1
-      - timing:
-          - ON for at most 200ms
-          - OFF for at most 0.5s
-          - ON for at most 200ms
-          - OFF for at least 0.2s
-        then:
-          - logger.log: "Double Clicked"
-          - switch.toggle: virtual_toggle_2
-      - timing:
-          - ON for 1s to 2.5s
-          - OFF for at least 0.5s
-        then:
-          - logger.log: "Long Press"
-          - switch.toggle: virtual_toggle_3
-
-switch:
-  - platform: template
-    name: "Switch 1"
-    id: virtual_toggle_1
-    optimistic: true
-    turn_on_action:
-      - logger.log: "Single Short Clicked"
-      - logger.log: "Switch 1 turned ON"
-      # Add your switch-on action
-    turn_off_action:
-      - logger.log: "Single Short Clicked"
-      - logger.log: "Switch 1 turned OFF"
-      # Add your closing action
-  
-  - platform: template
-    name: "Switch 2"
-    id: virtual_toggle_2
-    optimistic: true
-    turn_on_action:
-      - logger.log: "Double Clicked"
-      - logger.log: "Switch 2 turned ON"
-      # Add your switch-on action
-    turn_off_action:
-      - logger.log: "Double Clicked"
-      - logger.log: "Switch 2 turned OFF"
-      # Add your closing action
-  
-  - platform: template
-    name: "Switch 3"
-    id: virtual_toggle_3
-    optimistic: true
-    turn_on_action:
-      - logger.log: "Long Press"
-      - logger.log: "Switch 3 turned ON"
-      # Add your switch-on action
-    turn_off_action:
-      - logger.log: "Long Press"
-      - logger.log: "Switch 3 turned OFF"
-      # Add your closing action
-```
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/xiao-esphome-projects/blob/main/projects/seeedstudio-iot-button/seeedstudio-iot-button.yaml" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}>IoT Button V1 Yaml 🖱️</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/xiao-esphome-projects/blob/main/projects/seeedstudio-iot-button/seeedstudio-iot-button-v2.yaml" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}>IoT Button V2 Yaml 🖱️</font></span></strong>
+    </a>
+</div>
 
 :::note
 Make sure to replace "Your_WiFi_SSID" and "Your_WiFi_Password" with your actual WiFi credentials. The WiFi configuration should match the network where your Home Assistant server is running to ensure proper connectivity.
@@ -249,7 +155,7 @@ Make sure to replace "Your_WiFi_SSID" and "Your_WiFi_Password" with your actual 
 
 Let's break down the key parts of this configuration:
 
-1. **ESP32 Configuration**: 
+1. **ESP32 Configuration**:
    - Specifies the ESP32-C6 variant and board type for the IoT Button's built-in chip
    - Sets the flash size to 4MB
    - Uses the ESP-IDF framework which is required for ESP32-C6
@@ -376,16 +282,15 @@ If you encounter issues with your IoT Button, here are some common troubleshooti
 
 ## Troubleshooting
 
-### Q1: Why does my device keep dropping out and not being able to connect to the internet after replacing the battery? I can confirm that the battery is charged.
+### Q1: Why does my device keep dropping out and not being able to connect to the internet after replacing the battery? I can confirm that the battery is charged
 
 After the battery has been removed, due to the chip protection strategy of the 18650 battery, it needs to be activated a bit by a charged USB power cable to work properly.
 
 ## Resources
 
-- **[GITHUB]** [Seeed IoT Button Github Zigbee & ESPHome Repository](https://github.com/Seeed-Projects/Seeed_IoT_Button)
+- **[GITHUB]** [Seeed IoT Button Github Repository](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/seeedstudio-iot-button)
 - **[PDF]** [Seeed IoT Button SCH PDF](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed_IoT_Button_SCH.pdf)
 - **[SCH&PCB]** [Seeed IoT Button SCH & PCB](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed_IoT_Button_SCH&PCB.zip)
-
 
 ## Tech Support & Product Discussion
 

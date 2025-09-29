@@ -12,6 +12,8 @@ last_update:
   author: Jack Mu
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Deploy YOLOv8 object detection model
 
@@ -31,7 +33,7 @@ It is recommended to use the [roboflow](https://universe.roboflow.com/) platform
 
 <TabItem value="pip installation" label="pip">
 
-Install the `ultralytics` package, or by running `pip install -U ultralytics`. Please visit the Python Package Index (PyPI) to learn more about the `ultralytics` package at <https://pypi.org/project/ultralytics/>](<https://pypi.org/project/ultralytics/>).
+Install the `ultralytics` package, or by running `pip install -U ultralytics`. Please visit the Python Package Index (PyPI) to learn more about the `ultralytics` package at [https://pypi.org/project/ultralytics/](https://pypi.org/project/ultralytics/).
 
 ```bash
 # Install using pip
@@ -44,7 +46,7 @@ pip install ultralytics
 
 <TabItem value="conda installation" label="conda">
 
-`Conda` is an alternative package manager to `pip` and can also be used for installation. Visit Anaconda for more details: [https://anaconda.org/conda-forge/ultralytics](https://anaconda.org/conda-forge/ultralytics) . The `Ultralytics` feedstock repository for updating `conda` packages is located at [https://github.com/conda-forge/ultralytics-feedstock/](<https://github.com/conda-forge/ultralytics-feedstock> /).
+`Conda` is an alternative package manager to `pip` and can also be used for installation. Visit Anaconda for more details: [https://anaconda.org/conda-forge/ultralytics](https://anaconda.org/conda-forge/ultralytics) . The `Ultralytics` feedstock repository for updating `conda` packages is located at [https://github.com/conda-forge/ultralytics-feedstock/](https://github.com/conda-forge/ultralytics-feedstock/).
 
 ```bash
 # Install using conda

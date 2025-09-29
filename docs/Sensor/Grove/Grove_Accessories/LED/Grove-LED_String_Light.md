@@ -34,10 +34,10 @@ The Grove - LED String Light module is essentially an LED driver for the LED str
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-LED_String_Light/img/LED_String_Light.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-LED_String_Light/img/LED_String_Light.jpg" alt="pir" width={600} height="auto" /></p>
 
-<dl><dt>① JST 2.0 interface: Used to connect to LED String Lights
-
-</dt><dt>② Grove interface: HIGH on SIG (Pin 1) turns the LED String Lights ON, LOW turns them OFF
-</dt></dl>
+<dl>
+<dt>① JST 2.0 interface: Used to connect to LED String Lights</dt>
+<dt>② Grove interface: HIGH on SIG (Pin 1) turns the LED String Lights ON, LOW turns them OFF</dt>
+</dl>
 
 ##  Usage
 ---

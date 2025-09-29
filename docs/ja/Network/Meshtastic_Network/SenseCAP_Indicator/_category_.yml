@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: 'SenseCAP Indicator'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: sensecap_indicator 
+link:
+  type: generated-index
+  slug: ja/sensecap_indicator_meshtastic_main_page
+  title: SenseCAP Indicator
+  description: SenseCAP Indicator Meshtastic アプリケーション。

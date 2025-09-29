@@ -1,0 +1,8 @@
+position: 1 # float position is supported
+label: 'Panel ePaper XIAO de 7.5"'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: xiao_7_5inch_epaper_panel
+link:
+  type: "doc"
+  id: 'es/Sensor/SeeedStudio_XIAO_Gadgets/xiao_075inch_epaper_panel/es_xiao_075inch_epaper_panel'

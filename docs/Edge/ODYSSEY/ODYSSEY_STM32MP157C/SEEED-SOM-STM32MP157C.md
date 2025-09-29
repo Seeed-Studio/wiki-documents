@@ -69,14 +69,29 @@ Here are the hardware details for Seeed SoM - STM32MP157C:
 </colgroup> -->
 
 <thead>
-  <div>
-    Pin <br />Package <br />Number
-    Pin <br />Number
-    Pin <br />Name
-    Pin <br />Type
-    Optional Function
-    Additional<br />Function
-  </div>
+  <tr>
+    <th><div>
+  Pin<br />Package<br />Number
+</div>
+</th>
+    <th><div>
+  Pin<br />Number
+</div>
+</th>
+    <th><div>
+  Pin<br />Name
+</div>
+</th>
+    <th><div>
+  Pin<br />Type
+</div>
+</th>
+    <th>Optional Function</th>
+    <th><div>
+  Additional<br />Function
+</div>
+</th>
+  </tr>
 </thead>
 
 <tbody>
@@ -2096,6 +2111,9 @@ Here are the hardware details for Seeed SoM - STM32MP157C:
     <td>I/O</td>
     <td><div>
   DFSDM1_CKIN0,LPTIM2_IN2,<br />DFSDM1_DATIN4,SAI2_FS_B,<br />QUADSPI_BK2_NCS,LCD_R5,<br />EVENTOUT
+</div>
+</td>
+    <td><div>
   ADC1_INP10,<br />ADC2_INP10
 </div>
 </td>
@@ -2335,12 +2353,11 @@ Here are the hardware details for Seeed SoM - STM32MP157C:
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

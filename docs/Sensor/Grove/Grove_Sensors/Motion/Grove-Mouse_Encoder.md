@@ -53,9 +53,12 @@ Specifications
 
 <div className="admonition note">
   <p className="admonition-title">Notes</p>
-  <ol><li>There is no knob included in product list. Because we think it will make this encoder more versatile for different environments.</li>
-    <li>You can find <a href="https://files.seeedstudio.com/wiki/Grove-Mouse_Encoder/res/Grove-Mouse_Encoder_Dimensions.pdf">dimensions</a> file in PDF format, and you can customize a knob according to the dimensions.</li><ol>
-    </ol></ol></div>
+  <ol>
+    <li>There is no knob included in product list. Because we think it will make this encoder more versatile for different environments.</li>
+    <li>You can find <a href="https://files.seeedstudio.com/wiki/Grove-Mouse_Encoder/res/Grove-Mouse_Encoder_Dimensions.pdf">dimensions</a> file in PDF format, and you can customize a knob according to the dimensions.</li>
+    <ol></ol>
+  </ol>
+</div>
 
 <div className="admonition tip">
   <p className="admonition-title">Tip</p>

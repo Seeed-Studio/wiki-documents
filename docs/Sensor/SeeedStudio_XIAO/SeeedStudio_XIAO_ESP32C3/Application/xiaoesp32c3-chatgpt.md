@@ -28,11 +28,10 @@ Seeed Studio XIAO ESP32C3 is an IoT mini development board based on the Espressi
 <div align="center"><img width ="200" src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
-
 
 So in this tutorial, we will guide users to learn and use XIAO ESP32C3 WiFiClient and HTTPClient libraries, how to connect to the network, how to publish web pages and the basics of HTTP GET and POST. The goal is to call OpenAI ChatGPT and create your own Q&A website.
 
@@ -85,7 +84,7 @@ All procedures and steps in this tutorial have been completed based on the XIAO 
 - **Step 4.** Add ESP32 board package to your Arduino IDE
 
 Navigate to **File > Preferences**, and fill **"Additional Boards Manager URLs"** with the url below:
-*<https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json>*
+*[https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json](https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json)*
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/4.png"/></div>
 
@@ -157,7 +156,7 @@ This is a very simple WiFi connection program, upload the program to XIAO ESP32C
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/5.png"/></div>
 
-If you are interested in reading more about ESP32C3 applications and functions in WiFi, we recommend reading <a href="https://randomnerdtutorials.com/esp32-useful-wi- fi-functions-arduino/">ESP32 Useful Wi-Fi Library Functions</a>.
+If you are interested in reading more about ESP32C3 applications and functions in WiFi, we recommend reading [ESP32 Useful Wi-Fi Library Functions](https://randomnerdtutorials.com/esp32-useful-wifi-functions-arduino/).
 
 ## Build the embedded web page
 
@@ -497,11 +496,11 @@ Or go one step further and add a voice recognition module to get rid of the keyb
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -24,48 +24,41 @@ This Passive Piezoelectric Type Buzzer is made of plastic, very eye catching col
 
 <table>
 <tr>
-<th> Type
-</th>
-<th> SFB-55
-</th></tr>
+<th> Type </th>
+<th> SFB-55 </th>
+</tr>
 <tr>
-<td width="400px"> Nominal voltage
-</td>
-<td width="400px"> 12
-</td></tr>
+<td width="400px"> Nominal voltage </td>
+<td width="400px"> 12</td>
+</tr>
 <tr>
-<td> Nominal Current
-</td>
-<td> 160
-</td></tr>
+<td> Nominal Current </td>
+<td> 160 </td>
+</tr>
 <tr>
-<td> Voltage range
-</td>
-<td> 8~16
-</td></tr>
+<td> Voltage range</td>
+<td> 8~16</td>
+</tr>
 <tr>
-<td> Maximun power
-</td>
-<td>12
-</td></tr>
+<td> Maximun power</td>
+<td>12</td>
+</tr>
 <tr>
-<td> Sound Output
-</td>
-<td> ≥110
-</td></tr>
+<td> Sound Output </td>
+<td> ≥110 </td>
+</tr>
 <tr>
-<td>Operating Temp
-</td>
-<td> -20~+50
-</td></tr>
+<td>Operating Temp</td>
+<td> -20~+50 </td>
+</tr>
 <tr>
-<td>Storage Temp
-</td></tr>
+<td>Storage Temp</td>
+</tr>
 <tr>
-<td>Weight
-</td>
-<td>80
-</td></tr></table>
+<td>Weight</td>
+<td>80</td>
+</tr>
+</table>
 
 ##   Mechanic Dimensions
 
@@ -75,19 +68,16 @@ This Passive Piezoelectric Type Buzzer is made of plastic, very eye catching col
 
 <table>
 <tr>
-<th> Revision
-</th>
-<th> Descriptions
-</th>
-<th> Release
-</th></tr>
+<th> Revision </th>
+<th> Descriptions </th>
+<th> Release </th>
+</tr>
 <tr>
-<td width="300px"> v0.9b
-</td>
-<td width="500px"> Initial public release
-</td>
-<td width="200px"> Jun 08, 2009
-</td></tr></table>
+<td width="300px"> v0.9b </td>
+<td width="500px"> Initial public release </td>
+<td width="200px"> Jun 08, 2009 </td>
+</tr>
+</table>
 
 ## Tech Support & Product Discussion
  if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 

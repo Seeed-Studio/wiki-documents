@@ -15,9 +15,7 @@ last_update:
 
 Share a way to integrate LoRaWAN® Sensor into Home Assistant.
 
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527151/_HMPRnIpF0p.blob?auto=compress%2Cformat&w=900&h=675&fit=min" alt="pir" width={800} height="auto" /></p>
-
 
 There are already enough intelligent devices(sensors, lights, switches) in the smart home playground, and you might already have multiple Apps from Apple Homekit, Google Home, and Amazon Alexa to serve different devices. It’s highly required to connect all of them with each other in one place. I read the news recently in Sep 2022 that matter 1.0 was released and aim to uniform the ecosystem. however, this will definitely take time.
 
@@ -25,19 +23,17 @@ Actually, before the matter was released years ago, [Home Assistant](https://www
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527037/image_AC7YowxKbT.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
-
 In this series of articles, I will share how I build a decent smart home in Home Assistant and use sensors from Seeed Studio SenseCAP products. And this is the first milestone.
 
 Running a home assistant from scratch and integrating SenseCAP weather sensors.
 
-
 Here are the steps to get there:
 
-* Install home assistant on a Raspberry Pi
-* Get the SenseCAP sensor onboard with App
-* Add MQTT integration and subscribe to the SenseCAP data
-* Add entities with different sensor measurement values.
-* Create a sensor data dashboard
+- Install home assistant on a Raspberry Pi
+- Get the SenseCAP sensor onboard with App
+- Add MQTT integration and subscribe to the SenseCAP data
+- Add entities with different sensor measurement values.
+- Create a sensor data dashboard
 
 ### Install home assistant on a Raspberry Pi
 
@@ -47,12 +43,9 @@ There are many devices and platforms to run home assistant, I happen to have one
 
 Instead of using the Balena etcher to flash the SD card, I prefer using the official [Raspberry Pi Imager](https://www.raspberrypi.com/software/), it is lightweight and simple to use.
 
-
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527038/image_xXpG0MaQJS.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
 Get yourself a Micro SD card bigger than 32GB and plug it into your computer, here I use MacBook as an example.
-
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527041/image_vb64IHZx5B.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
@@ -66,11 +59,9 @@ Select Home Assistant
 
 Select the Home Assistant OS version for RPi4
 
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527045/image_UQdhYJt88T.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
 Then select the SD card drive, be careful, and DO NOT choose the wrong disk, which may format your driver and lose all the valuable data.
-
 
 <img src="https://hackster.imgix.net/uploads/attachments/1527046/image_Le62Kc3fGH.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={470} height="auto" />
 <img src="https://hackster.imgix.net/uploads/attachments/1527047/image_tiE1gwdlBw.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={470} height="auto" />
@@ -85,15 +76,11 @@ go to `http://homeassistant.local:8123/` and wait for the installation to finish
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527051/image_rEn7iALm78.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={400} height="auto" /></p>
 
-Following this [link](https://www.home-assistant.io/getting-started/onboarding/) to register your Home Assistant account and login. 
+Following this [link](https://www.home-assistant.io/getting-started/onboarding/) to register your Home Assistant account and login.
 
 Bingo Finally, you have your Home Assitant installed.
 
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527055/image_5mAwRA0PMG.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
-
-
-
 
 ### Onboard the SenseCAP sensor with App
 
@@ -113,42 +100,37 @@ Next, download SenseCAP Mate App and register an account.
 
 just for your reference, this video is coming from Seeed Studio that demonstrates the basic onboarding process.
 
-
 <iframe class="youtube-video" src="https://youtu.be/TUQ9UmF7e7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Connect the M2 LoRaWAN gateway to the internet with an ethernet cable and connect the antenna before you power it on, when you saw the panel RGB LED stay green, that means the gateway is set well.
-
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527070/image_zEm7RxadAf.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={600} height="auto" /></p>
 
 Now let me onboard the M2 LoRaWAN gateway
 
-* Open the Mate App and go to the "device" tab<br/>
-* Click the "+" icon in the upper right corner to scan the gateway QR code, which is on the device label.<br/>
-* Name your device and set the location.
+- Open the Mate App and go to the "device" tab<br/>
+- Click the "+" icon in the upper right corner to scan the gateway QR code, which is on the device label.<br/>
+- Name your device and set the location.
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527073/image_xoxYLPEmeE.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
-
 in the same way, scan the QR code to onboard the S2120 weather sensor. tap the S2120 sensor, now I can see weather data.
 
-* Air Temperature
-* Air Humidity
-* Light Intensity
-* Barometric Pressure
-* Wind Direction
-* Wind Speed
-* Rainfall Hourly
-* UV Index
+- Air Temperature
+- Air Humidity
+- Light Intensity
+- Barometric Pressure
+- Wind Direction
+- Wind Speed
+- Rainfall Hourly
+- UV Index
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527082/image_Tr85o39OKT.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 and now it is time to go to my roof and install it on a pole.
 
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527110/img_3683_qMfEaREbxR.jpeg?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={600} height="auto" /></p>
 
 I also have another [S2103 CO2, Temperature, and Humidity Sensor](https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html) and [S2105 Soil Moisture, Temperature and EC Sensor](https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html), they share the same benefits in the S210x series and the onboarding process is the same. and they are high quality with industrial standards.
-
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527107/image_Q55T2OnZjs.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={600} height="auto" /></p>
 
@@ -158,22 +140,20 @@ so I also add them to SenseCAP Mate App and install them in my bedroom and flowe
 
 Now, I have everything set on the SenseCAP sensor side.
 
-
-
 ### Add MQTT integration
 
-* **Why do I need the sensor data integrated into the Home Assistant?**
+- **Why do I need the sensor data integrated into the Home Assistant?**
 
 `I can take advantage of the automation flow in Home Asssitant, and the SenseCAP App currently do not have that feature.`
 
-* **What is the process to get the SenseCAP data to Home Assistant?**
+- **What is the process to get the SenseCAP data to Home Assistant?**
 
 `Get your SenseCAP account API key<br/>
 Read the SenseCAP open stream API document(MQTT)<br/>
 Add MQTT integration in Home Assistant<br/>
 Subscribe SenseCAP data via MQTT and using the API key<br/>`
 
-* **Now, Let's get to SenseCAP Portal, here you can find your**
+- **Now, Let's get to SenseCAP Portal, here you can find your**
 
 `OrgID` = Organization ID<br/>
 `Password` = Access API keys
@@ -199,7 +179,6 @@ Go to settings and move into Devices & Services
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527116/image_udflzRbXDp.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 Click add integration button and search MQTT
 
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527118/image_VPTvmh0hMc.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
 Do remember to enable the advanced setting, if you forget to input the Client ID, the setup will fail.
@@ -208,18 +187,13 @@ Do remember to enable the advanced setting, if you forget to input the Client ID
 
 then, you can test if the subscription works, by clicking the CONFIGURE button and listening to the topic
 
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527123/image_Fku83wMfdA.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527121/image_G5lZNHW9P5.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
 wait for a while, there will sensor message.
 
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527122/image_5pGjBZ4ZqZ.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={600} height="auto" /></p>
 Until now, the MQTT client is set successfully.
-
-
-
 
 ### Add entities
 
@@ -238,7 +212,6 @@ go to the setting and move to Add-ons, then
 install it and enable show in the sidebar, and click start.
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527132/image_RNwnNZNnBX.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
-
 
 now this is the important part to modify the YAML file with below scripts
 
@@ -311,11 +284,9 @@ then, restart the Home Assistant
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527134/image_4eyghWeM61.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
-
 after restarting, make sure the MQTT is listening to the SenseCAP topic
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527135/image_2zfIHuOxvC.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
-
 
 then, go to Settings -> Devices and Services -> Entities
 
@@ -323,10 +294,7 @@ wow~~~ all the sensor measurements are listed there.
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527136/image_nf7n2EARnh.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
-
-
 ### Create a sensor data dashboard
-
 
 The last step is to add sensor entities to a dashboard.
 
@@ -347,7 +315,6 @@ Finally, I have made the very basic integration and show SenseCAP sensor data in
 Next, I will spend more time optimizing the UI and making it looks beautiful.
 
 and using ESP32 to add new sensors to Home Assistant.
-
 
 ### Resource
 

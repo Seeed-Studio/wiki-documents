@@ -1,0 +1,10 @@
+position: 4 # float position is supported
+label: 'Resumen del Despliegue de Modelos de IA'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: recamera_ai_model_deployment
+link:
+  type: generated-index
+  slug: es/recamera_ai_model_deployment
+  title: Resumen del Despliegue de Modelos de IA
+  description: Esta sección ofrece un resumen conciso de los procesos de entrenamiento, ajuste fino y despliegue de modelos de IA para reCamera. Comienza con la selección de modelos, discutiendo opciones como YOLO v5/v8/v11 y los criterios para elegir el modelo apropiado basado en diferentes escenarios, con modelos típicos actuales y marcos de trabajo disponibles. Luego, aborda la configuración de parámetros, seguida de los procedimientos complejos de conversión de formato de modelos, que involucra la adaptación de modelos y la traducción de middleware. Posteriormente, cubre la cuantización y compresión de modelos. Finalmente, aborda las fases de despliegue y pruebas, incluyendo consideraciones para el post-procesamiento.

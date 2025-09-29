@@ -23,13 +23,14 @@ import TabItem from '@theme/TabItem';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/energy_meter_appearance.jpg" style={{width:680, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Dual-Smart-Relay-Module-for-XIAO-p-6309.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-2-Channel-Wi-Fi-AC-Energy-Meter-Bundle-Kit.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div><br />
 
 ## Overview
-The **[XIAO 2-Channel Wi-Fi AC Energy Meter](https://www.seeedstudio.com/)** is a smart device from Seeed Studio designed to detect the electricity usage of AC-powered appliances. Its dual-channel configuration supports independent detect of up to two loads, making it an excellent choice for automating a variety of devices in smart home environments.
+
+The **[XIAO 2-Channel Wi-Fi AC Energy Meter](https://www.seeedstudio.com/XIAO-2-Channel-Wi-Fi-AC-Energy-Meter-Bundle-Kit.html)** is a smart device from Seeed Studio designed to detect the electricity usage of AC-powered appliances. Its dual-channel configuration supports independent detect of up to two loads, making it an excellent choice for automating a variety of devices in smart home environments.
 
 This guide provides a detailed walkthrough, including setup, integration, and advanced configuration for users ranging from beginners to smart-home enthusiasts.
 
@@ -62,7 +63,7 @@ This guide provides a detailed walkthrough, including setup, integration, and ad
         </tr>
         <tr>
             <th>Effective Range of Current Detection</th>
-            <td>10mA-35A @ 1mΩ</td>
+            <td>10mA-100A @ 1mΩ (CT Mode)</td>
         </tr>
         <tr>
             <th>Active Electrical Energy</th>
@@ -74,7 +75,7 @@ This guide provides a detailed walkthrough, including setup, integration, and ad
 
 :::warning Safety Warning
 
-Always disconnect AC power before wiring. 
+Always disconnect AC power before wiring.
 
 :::
 
@@ -93,14 +94,14 @@ Always disconnect AC power before wiring.
 
 <br />
 <div style={{ textAlign: 'center' }}>  
-    <img   
-        src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/CT_install_step1.jpg"   
-        style={{   
-            width: '300px',   
-            height: '300px',   
-            borderRadius: '15px',   
-            filter: 'drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3))'   
-        }}   
+    <img
+        src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/CT_install_step1.jpg"
+        style={{
+            width: '300px',
+            height: '300px',
+            borderRadius: '15px',
+            filter: 'drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3))'
+        }}
     />  
 </div>  
 <br />
@@ -109,14 +110,14 @@ Always disconnect AC power before wiring.
 
 <br />
 <div style={{ textAlign: 'center' }}>  
-    <img   
-        src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/CT_install_step2.gif"   
-        style={{   
-            width: '300px',   
-            height: '300px',   
-            borderRadius: '15px',   
-            filter: 'drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3))'   
-        }}   
+    <img
+        src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/CT_install_step2.gif"
+        style={{
+            width: '300px',
+            height: '300px',
+            borderRadius: '15px',
+            filter: 'drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3))'
+        }}
     />  
 </div>  
 <br />
@@ -126,27 +127,26 @@ Always disconnect AC power before wiring.
 When installing the fixture, please ensure that the direction of the current matches the direction indicated by the arrow on the fixture.
 
 <div style={{ textAlign: 'center' }}>  
-    <img   
-        src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/current_flow_direction.jpg"   
-        style={{   
-            width: '300px',   
-            height: '300px',   
-            borderRadius: '15px',   
-            filter: 'drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3))'   
-        }}   
+    <img
+        src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/current_flow_direction.jpg"
+        style={{
+            width: '300px',
+            height: '300px',
+            borderRadius: '15px',
+            filter: 'drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3))'
+        }}
     />  
 </div>  
 <br />
 
 :::
 
-
 ## Getting Started
 
 ### Requirements
 
 1. **Core Components**:
-   - [XIAO 2-Channel Wi-Fi AC Energy Meter](https://www.seeedstudio.com/)
+   - [XIAO 2-Channel Wi-Fi AC Energy Meter](https://www.seeedstudio.com/XIAO-2-Channel-Wi-Fi-AC-Energy-Meter-Bundle-Kit.html)
    - [Non-invasive AC Current Transformer](https://www.seeedstudio.com/Non-invasive-AC-Current-Sensor-100A-ma-p-547.html)
    - [Home Assistant Green](https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html)
 2. **Network**:
@@ -181,7 +181,7 @@ Firefox does not support flashing firmware on ESP devices. Please use Google Chr
 <Tabs>
 <TabItem value='Web Tool'>
 
-You can use this [Web Tool](https://seeed-projects.github.io/6-Channel_Relay_based_on_XIAO_ESP32C6/) for an easy and direct method to flash your firmware. Simply follow the on-screen instructions.
+You can use this [Web Tool](https://gadgets.seeed.cc/) for an easy and direct method to flash your firmware. Simply follow the on-screen instructions. (Please choose **SeeedStuido-2CH-EM**)
 
 - Click the `CONNECT` button to initiate the connection. The tool will automatically update the firmware.
 
@@ -190,7 +190,7 @@ If something goes wrong, follow the on-screen troubleshooting steps or switch to
 </TabItem>
 <TabItem value='ESPHome Web'>
 
-For this method, you'll need to download the `bin` firmware file from [here](https://github.com/Seeed-Projects/6-Channel_Relay_based_on_XIAO_ESP32C6/releases)(you'll need to unzip the downloaded file).
+For this method, you'll need to download the `bin` firmware file from [here](https://github.com/Seeed-Studio/xiao-esphome-projects/releases)(you'll need to unzip the downloaded file).
 
 1. Connect the sensor kit to your PC.
 2. Visit the [ESPHome Web](https://web.esphome.io/) page.
@@ -205,13 +205,10 @@ Watch the following video for a detailed walkthrough of flashing the firmware vi
 
 With either method, you'll have your firmware updated and ready for integration with Home Assistant.
 
-
-
 ### Step 3: Network Configuration
 
 1. **Enable Access Point**:
    - Upon powering up for the first time, the module will create a Wi-Fi network (SSID: `SeeedStudio-2CH-EM`).
-
 
 2. **Access Configuration**:
    - Connect to the network using a phone or PC.
@@ -219,7 +216,6 @@ With either method, you'll have your firmware updated and ready for integration 
    - Enter the SSID and password of your home Wi-Fi network.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/ap_wireless_setting_page.png" style={{width:'auto', height:680, "border-radius": '15px'}}/></div>
-
 
 3. **Home Assistant Integration**:
    - Once connected to the home network, the module will be discoverable in Home Assistant under `Settings -> Devices & Services`.
@@ -237,14 +233,14 @@ This way, you can connect the module to your Home Assistant network and let Home
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/ha_add_new_device.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div> -->
 
 <div style={{ textAlign: 'center' }}>  
-    <img   
-        src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/ha_add_new_device.png"   
-        style={{   
-            width: '680px',   
-            height: 'auto',   
-            borderRadius: '15px',   
-            filter: 'drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3))'   
-        }}   
+    <img
+        src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/ha_add_new_device.png"
+        style={{
+            width: '680px',
+            height: 'auto',
+            borderRadius: '15px',
+            filter: 'drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3))'
+        }}
     />  
 </div>  
 <br />
@@ -257,14 +253,14 @@ After adding the device, you can see a lighting control switch, two channels of 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/ha_overview.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div> -->
 <br />
 <div style={{ textAlign: 'center' }}>  
-    <img   
-        src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/ha_overview.png"   
-        style={{   
-            width: 'auto',   
-            height: '680px',   
-            borderRadius: '15px',   
-            filter: 'drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3))'   
-        }}   
+    <img
+        src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/ha_overview.png"
+        style={{
+            width: 'auto',
+            height: '680px',
+            borderRadius: '15px',
+            filter: 'drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3))'
+        }}
     />  
 </div>  
 
@@ -273,14 +269,14 @@ By clicking on any row icon, you can view the corresponding values and their rec
 <br /><br />
 
 <div style={{ textAlign: 'center' }}>  
-    <img   
-        src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/ha_dashboard_detail.png"   
-        style={{   
-            width: '680px',   
-            height: 'auto',   
-            borderRadius: '15px',   
-            filter: 'drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3))'   
-        }}   
+    <img
+        src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/ha_dashboard_detail.png"
+        style={{
+            width: '680px',
+            height: 'auto',
+            borderRadius: '15px',
+            filter: 'drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3))'
+        }}
     />  
 </div>  
 
@@ -298,8 +294,8 @@ By clicking on any row icon, you can view the corresponding values and their rec
 2. **What should I do if the device suddenly loses power unexpectedly?**
    - When the device suddenly loses power, if you want to remove the fixture of current transformer, please wait until the device restarts and is operating normally before removing it, otherwise it may damage the device.
 
-
 ## Resources
+
 - **GitHub Repository**: Access the ESPHome Firmware at the [Seeed Studio Dual Channel Energy Meter GitHub page](https://github.com/ZhangKeLiang0627/2-Channel_Energy_Meter_based_on_XIAO_ESP32C6)
 
 - **Dual Channel Energy Meter Schematic**: [Seeed_Studio_XIAO_2-Channel_Wi-Fi_AC_Energy_Meter_V1.0.pdf](https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/resource/Seeed_Studio_XIAO_2-Channel_Wi-Fi_AC_Energy_Meter_V1.0.pdf)

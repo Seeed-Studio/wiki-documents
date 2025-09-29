@@ -24,7 +24,7 @@ In this tutorial, we will bring you how to use the microphone of XIAO ESP32S3 Se
     </tr>
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
@@ -57,6 +57,25 @@ XIAO ESP32S3 Sense supports microSD cards up to **32GB**, so if you are ready to
 After formatting, you can insert the microSD card into the microSD card slot. Please note the direction of insertion, the side with the gold finger should face inward.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/66.jpg" style={{width:500, height:'auto'}}/></div>
+
+### Understanding Pins
+
+<div class="table-center">
+	<table align="center">
+    <tr>
+			<th>Pin Number</th>
+			<th>Function Description</th>
+		</tr>
+		<tr>
+			<td align="center">GPIO 41</td>
+			<td align="center">PDM Microphone DATA</td>
+		</tr>
+		<tr>
+			<td align="center">GPIO 42</td>
+			<td align="center">PDM Microphone CLK</td>
+		</tr>
+	</table>
+</div>
 
 ## Detection of sound loudness
 
@@ -177,7 +196,6 @@ if (sample && sample != -1 && sample != 1) {
 ```
 
 The `read()` function is called on the I2S object to read a single audio sample from the I2S interface. The if statement checks the value of the sample variable. If the sample value is not 0, -1, or 1, it is considered a valid audio sample, and the code inside the if block will be executed. In this case, the sample value is printed to the serial console using the `Serial.println()` function.
-
 
 ## Save recorded sound to microSD card
 
@@ -377,7 +395,6 @@ To execute this example, we will need to use the PSRAM function of the ESP-32 ch
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/94.png" style={{width:700, height:'auto'}}/></div>
 
-
 This program is executed only once after the user **turns on the serial monitor**, recording for 20 seconds and saving the recording file to microSD card as "arduino_rec.wav".
 
 When the "." is output every 1 second in the serial monitor, the program execution is finished and you can play the recorded sound file with the help of a card reader.
@@ -428,29 +445,16 @@ For example, in the figure below, there is a problem with the card reading and w
 
 If there are no problems with the card and the recording is quite successful. Then you need to check if the software supports audio playback in WAV format. We recommend using special music playing software to play audio, try not to use video player to play. After actual testing, there are many video players (although they support WAV format) that are unable to play it.
 
-
-
 ## Tech Support & Product Discussion
-
-.
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-
-

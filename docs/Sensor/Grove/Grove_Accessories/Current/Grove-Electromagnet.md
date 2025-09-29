@@ -149,7 +149,7 @@ If this is your first time using Codecraft, see also [Guide for Codecraft using 
 
 Upload the program to your Arduino/Seeeduino.
 
-:::tipsuccess
+:::tip
 When the code finishes uploaded, you can try to bring the ironwork close to the electromagnet. The LED on the Arduino 13 pin will be lighted up when the electromagnet is working.
 :::
 

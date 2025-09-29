@@ -43,40 +43,40 @@ Mini Soldering Iron is a slender, lightweight, accurate temperature-control and 
 <table>
 <tr>
 <td>  Screen </td>
-<td> OLED
-</td></tr>
+<td> OLED</td>
+</tr>
 <tr>
 <td>  USB interface </td>
-<td> USB micro type-B
-</td></tr>
+<td> USB micro type-B</td>
+</tr>
 <tr>
 <td>  Weight </td>
-<td> 33g(power adapter not accounted)
-</td></tr>
+<td> 33g(power adapter not accounted)</td>
+</tr>
 <tr>
 <td>  Power </td>
-<td> 65W
-</td></tr>
+<td> 65W</td>
+</tr>
 <tr>
 <td>  Input voltage(for power adapter) </td>
-<td> 100 ~ 240 V
-</td></tr>
+<td> 100 ~ 240 V</td>
+</tr>
 <tr>
 <td>  Temperature range </td>
-<td> 100 ~ 400 ℃(212 ~ 752 ℉)
-</td></tr>
+<td> 100 ~ 400 ℃(212 ~ 752 ℉)</td>
+</tr>
 <tr>
 <td>  Impedance from tips to ground </td>
-<td> 2 Ω
-</td></tr>
+<td> 2 Ω</td>
+</tr>
 <tr>
 <td>  Temperatures stability </td>
-<td> ± 2%
-</td></tr>
+<td> ± 2%</td>
+</tr>
 <tr>
 <td>  Sleep mode temperature  </td>
-<td> 200℃(392℉), adjustable
-</td></tr></table>
+<td> 200℃(392℉), adjustable</td>
+</tr></table>
 
 ##  Parts list'
 ---
@@ -84,48 +84,48 @@ Mini Soldering Iron is a slender, lightweight, accurate temperature-control and 
 <table>
 <tr>
 <th>Parts name   </th>
-<th> Quantity
-</th></tr>
+<th> Quantity</th>
+</tr>
 <tr>
 <td> Mini Soldering Iron (main part)   </td>
-<td> 1PC
-</td></tr>
+<td> 1PC</td>
+</tr>
 <tr>
 <td> PCB soldering kit </td>
-<td> 1PC
-</td></tr>
+<td> 1PC</td>
+</tr>
 <tr>
 <td> Soldering iron tip type-BC2  </td>
-<td> 1PC
-</td></tr>
+<td> 1PC</td>
+</tr>
 <tr>
 <td> Soldering iron tip type-B2   </td>
-<td> 1PC
-</td></tr>
+<td> 1PC</td>
+</tr>
 <tr>
 <td> Soldering iron holder </td>
-<td> 1PC
-</td></tr>
+<td> 1PC</td>
+</tr>
 <tr>
 <td> PCB soldering kit  </td>
-<td> 1PC
-</td></tr>
+<td> 1PC</td>
+</tr>
 <tr>
 <td> DC5525 power adapter </td>
-<td> 1PC
-</td></tr>
+<td> 1PC</td>
+</tr>
 <tr>
 <td> Earth clamps  </td>
-<td> 1PC
-</td></tr>
+<td> 1PC</td>
+</tr>
 <tr>
 <td> Hex key ( and tow backup screws) </td>
-<td> 1PC
-</td></tr>
+<td> 1PC</td>
+</tr>
 <tr>
 <td> Manual </td>
-<td> 1PC
-</td></tr></table>
+<td> 1PC</td>
+</tr></table>
 
 ##  Getting Started
 ---
@@ -135,17 +135,18 @@ This section shows you how to basic operations with this soldering iron. For mor
 ###  Exploded view
 
 ![](https://files.seeedstudio.com/wiki/Mini_Soldering_Iron/img/Mini_Soldering_Iron_exploded_view_s.jpg)
-<dl><dd> ①. Solder iron tip fixing screw
-</dd><dd> ②. Button A
-</dd><dd> ③. Button B
-</dd><dd> ④. Set screw
-</dd><dd> ⑤. Power port
-</dd><dd> ⑥. Micro USB
-</dd><dd> ⑦. DC5525 12-24V port
-</dd><dd> ⑧. Solder iron tip connection port
-</dd><dd> ⑨. Solder iron connection side
-</dd><dd> ⑩. Solder iron heating element
-</dd></dl>
+<dl>
+<dd> ①. Solder iron tip fixing screw</dd>
+<dd> ②. Button A</dd>
+<dd> ③. Button B</dd>
+<dd> ④. Set screw</dd>
+<dd> ⑤. Power port</dd>
+<dd> ⑥. Micro USB</dd>
+<dd> ⑦. DC5525 12-24V port</dd>
+<dd> ⑧. Solder iron tip connection port</dd>
+<dd> ⑨. Solder iron connection side</dd>
+<dd> ⑩. Solder iron heating element</dd>
+</dl>
 
 ###  Assemble the soldering iron
 

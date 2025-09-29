@@ -60,9 +60,11 @@ msg.payload = {
 };
 return msg;
 ```
+
 ## Part 2. Set up MongoDB
 
 ### Step 3. Create an account
+
 Next, create a MongoDB account or log in if you already have one. If you are new to MongoDB, start by visiting [**mongodb.com**](https://www.mongodb.com) and signing up for a free account.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_mongo_db_image/MongoDB_1.png" style={{width:1000, height:'auto'}}/></div>
@@ -124,10 +126,13 @@ After selecting the MongoDB Shell option, you will be guided to a section titled
 In the connection string, look for the portion that starts after `mongodb+srv://` and continues until you reach a `/` character. This part is your hostname. It typically contains your cluster name followed by `.mongodb.net`.
 
 For example, if your connection string is:
+
 ```sh
 mongosh "mongodb+srv://my-cluster123.mongodb.net" --apiVersion 1 --username my-username
 ```
+
 The hostname would be:
+
 ```sh
 my-cluster123.mongodb.net
 ```
@@ -197,11 +202,11 @@ Congratulations on successfully integrating Watcher with MongoDB! You've opened 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

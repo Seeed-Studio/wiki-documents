@@ -20,7 +20,7 @@ Arch GPRS V2 has a standard Arduino interface as well as [Grove](https://wiki.se
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-Arch GPRS V2 does not come with <a href="https://mbed.org/handbook/mbed-HDK" >an mbed interface</a>. To output debug messages, please try <a href="https://mbed.org/handbook/USBSerial">USBSerial</a>.
+<p>Arch GPRS V2 does not come with <a href="https://mbed.org/handbook/mbed-HDK" >an mbed interface</a>. To output debug messages, please try <a href="https://mbed.org/handbook/USBSerial">USBSerial</a>.</p>
 </div>
 
 Features
@@ -63,8 +63,8 @@ Getting Started
 ![](https://files.seeedstudio.com/wiki/Arch_GPRS_V2/img/Get_started_with_arch.png)
 
 1. Login into the mbed environment from [here](http://www.mbed.org)
-2. Import the [mbed\_blinky](https://mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-GPRS) program
-3. Verify that the code imported in main.cpp in the mbed\_blinky folder in the mbed online Compiler environment is as indicated in the figure above under Step 3. Ensure that the platform selected for compiling the code for is the Seeeduino-Arch. Now go ahead and compile the code. When asked to save the resultant binary file (.bin), save it to a designated folder on your PC.
+2. Import the [mbed_blinky](https://mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-GPRS) program
+3. Verify that the code imported in main.cpp in the mbed_blinky folder in the mbed online Compiler environment is as indicated in the figure above under Step 3. Ensure that the platform selected for compiling the code for is the Seeeduino-Arch. Now go ahead and compile the code. When asked to save the resultant binary file (.bin), save it to a designated folder on your PC.
 4. Now connect your Arch board to your PC and long press the reset button. A removable USB drive named CRP DISABLD should automatically appear on your PC. Go to the CRP DISABLD drive, delete the existing firmware file that you see in the folder and copy the downloaded binary file to CRP DISABLD. Quick press the reset button to run the new binary.
 5. Verify that your code is running successfully by looking at the Arch GPRS V2 board. If the right-most LED from the Pinout shown above is blinking and the other 3 LEDs next to it are all ON, this implies that your code is working.
 
@@ -132,12 +132,12 @@ To enter the USB ISP mode, connect the Arch with your computer and long press it
 
 - On linux
 
-    1. if the disk is not mounted, mount the disk at **{mnt\_dir}**
-    2. **dd if={new\_firmware.bin} of={mnt\_dir}/firmware.bin conv=notrunc**
+    1. if the disk is not mounted, mount the disk at **`{mnt_dir}`**
+    2. **`dd if={new_firmware.bin} of={mnt_dir}/firmware.bin conv=notrunc`**
 
 - On mac you'll need to use Terminal to run the following script to copy you're .bin file to your Arch
 
-    1. **dd if={new\_firmare.bin} of=/Volumes/CRP\\ DISABLD/firmware.bin conv=notrunc**
+    1. **`dd if={new_firmare.bin} of=/Volumes/CRP\\ DISABLD/firmware.bin conv=notrunc`**
 
 If you are so inclined, you can also create an **Automator** application to support drag-and-drop of the file to your board. Just create a "*Run Shell Script*" with the following command:
 

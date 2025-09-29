@@ -20,60 +20,49 @@ Water flow sensor consists of a plastic valve body, a water rotor, and a hall-ef
 ---
 <table>
   <tbody><tr>
-      <td>Mini. Wokring Voltage
-      </td>
-      <td>DC 4.5V
-      </td></tr>
+      <td>Mini. Wokring Voltage</td>
+      <td>DC 4.5V</td>
+    </tr>
     <tr>
-      <td>Max. Working Current
-      </td>
-      <td>15mA(DC 5V)
-      </td></tr>
+      <td>Max. Working Current</td>
+      <td>15mA(DC 5V)</td>
+    </tr>
     <tr>
-      <td width="400px">Working Voltage
-      </td>
-      <td width="400px">5V～24V
-      </td></tr>
+      <td width="400px">Working Voltage</td>
+      <td width="400px">5V～24V</td>
+    </tr>
     <tr>
-      <td>Flow Rate Range
-      </td>
-      <td>1～60L/min
-      </td></tr>
+      <td>Flow Rate Range</td>
+      <td>1～60L/min</td>
+    </tr>
     <tr>
-      <td>Load Capacity
-      </td>
-      <td>≤10mA(DC 5V)
-      </td></tr>
+      <td>Load Capacity</td>
+      <td>≤10mA(DC 5V)</td>
+    </tr>
     <tr>
-      <td>Operating Temperature
-      </td>
-      <td>≤80℃
-      </td></tr>
+      <td>Operating Temperature</td>
+      <td>≤80℃</td>
+    </tr>
     <tr>
-      <td>Liquid Temperature
-      </td>
-      <td>≤120℃
-      </td></tr>
+      <td>Liquid Temperature</td>
+      <td>≤120℃</td>
+    </tr>
     <tr>
-      <td>Operating Humidity
-      </td>
-      <td>35%～90%RH
-      </td></tr>
+      <td>Operating Humidity</td>
+      <td>35%～90%RH</td>
+    </tr>
     <tr>
-      <td>Water Pressure
-      </td>
-      <td>≤1.75MPa(Max 2MPa)
-      </td></tr>
+      <td>Water Pressure</td>
+      <td>≤1.75MPa(Max 2MPa)</td>
+    </tr>
     <tr>
-      <td>Storage Temperature
-      </td>
-      <td>-25℃～+80℃
-      </td></tr>
+      <td>Storage Temperature</td>
+      <td>-25℃～+80℃</td>
+    </tr>
     <tr>
-      <td>Storage Humidity
-      </td>
-      <td>25%～95%RH
-      </td></tr></tbody></table>
+      <td>Storage Humidity</td>
+      <td>25%～95%RH</td>
+    </tr></tbody></table>
 
 ## Mechanic Dimensions
 
@@ -83,137 +72,89 @@ Water flow sensor consists of a plastic valve body, a water rotor, and a hall-ef
 
 <table>
   <tbody><tr>
-      <th>No.
-      </th>
-      <th>Name
-      </th>
-      <th>Quantity
-      </th>
-      <th>Material
-      </th>
-      <th>Note
-      </th></tr>
+      <th>No.</th>
+      <th>Name</th>
+      <th>Quantity</th>
+      <th>Material</th>
+      <th>Note</th>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td width={200}> 1
-      </td>
-      <td width={150}>  Valve body
-      </td>
-      <td width={150}>  1
-      </td>
-      <td width={150}>  PA66+33%glass fiber
-      </td>
-      <td width={150}>
-      </td></tr>
+      <td width={200}>1</td>
+      <td width={150}>Valve body</td>
+      <td width={150}>1</td>
+      <td width={150}>PA66+33%glass fiber</td>
+      <td width={150}></td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td width={200}> 2
-      </td>
-      <td width={150}>  Stainless steel bead
-      </td>
-      <td width={150}>  1
-      </td>
-      <td width={150}>  Stainless steel SUS304
-      </td>
-      <td width={150}>
-      </td></tr>
+      <td width={200}>2</td>
+      <td width={150}>Stainless steel bead</td>
+      <td width={150}>1</td>
+      <td width={150}>Stainless steel SUS304</td>
+      <td width={150}></td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> 3
-      </td>
-      <td>  Axis
-      </td>
-      <td>  1
-      </td>
-      <td>  Stainless steel SUS304
-      </td>
-      <td>
-      </td></tr>
+      <td>3</td>
+      <td>Axis</td>
+      <td>1</td>
+      <td>Stainless steel SUS304</td>
+      <td></td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> 4
-      </td>
-      <td>  Impeller
-      </td>
-      <td>  1
-      </td>
-      <td>  POM
-      </td>
-      <td>
-      </td></tr>
+      <td>4</td>
+      <td>Impeller</td>
+      <td>1</td>
+      <td>POM</td>
+      <td></td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> 5
-      </td>
-      <td>  Ring magnet
-      </td>
-      <td>  1
-      </td>
-      <td>  Ferrite
-      </td>
-      <td>
-      </td></tr>
+      <td>5</td>
+      <td>Ring magnet</td>
+      <td>1</td>
+      <td>Ferrite</td>
+      <td></td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> 6
-      </td>
-      <td>  Middle ring
-      </td>
-      <td>  1
-      </td>
-      <td>  PA66+33%glass fiber
-      </td>
-      <td>
-      </td></tr>
+      <td>6</td>
+      <td>Middle ring</td>
+      <td>1</td>
+      <td>PA66+33%glass fiber</td>
+      <td></td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> 7
-      </td>
-      <td>  O-seal ring
-      </td>
-      <td>  1
-      </td>
-      <td>  Rubber
-      </td>
-      <td>
-      </td></tr>
+      <td>7</td>
+      <td>O-seal ring</td>
+      <td>1</td>
+      <td>Rubber</td>
+      <td></td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> 8
-      </td>
-      <td>  Electronic seal ring
-      </td>
-      <td>  1
-      </td>
-      <td>  Rubber
-      </td>
-      <td>
-      </td></tr>
+      <td>8</td>
+      <td>Electronic seal ring</td>
+      <td>1</td>
+      <td>Rubber</td>
+      <td></td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> 9
-      </td>
-      <td>  Cover
-      </td>
-      <td>  1
-      </td>
-      <td>  PA66+33%glass fiber
-      </td>
-      <td>
-      </td></tr>
+      <td>9</td>
+      <td>Cover</td>
+      <td>1</td>
+      <td>PA66+33%glass fiber</td>
+      <td></td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> 10
-      </td>
-      <td>  Screw
-      </td>
-      <td>  4
-      </td>
-      <td>  Stainless steel SUS304
-      </td>
-      <td>
-      </td></tr>
+      <td>10</td>
+      <td>Screw</td>
+      <td>4</td>
+      <td>Stainless steel SUS304</td>
+      <td></td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> 11
-      </td>
-      <td>  Cable
-      </td>
-      <td>  1
-      </td>
-      <td>  1007 24AWG
-      </td>
-      <td>
-      </td></tr></tbody></table>
+      <td>11</td>
+      <td>Cable</td>
+      <td>1</td>
+      <td>1007 24AWG</td>
+      <td></td>
+    </tr></tbody></table>
 
 ## Usage Example
 
@@ -289,27 +230,24 @@ The external diameter of thread the connections use is 1.4mm.
 ---
 Pulse frequency (Hz) in Horizontal Test= 1*Q, Q is flow rate in L/min. (Results in +/- 3% range)
 
-<table >
-<tr>
-<td width="400px">Output pulse high level
-</td>
-<td width="400px">Signal voltage &gt;4.5 V( input DC 5 V)
-</td></tr>
-<tr>
-<td>Output pulse low level
-</td>
-<td>Signal voltage &lt;0.5V( input DC 5V)
-</td></tr>
-<tr>
-<td>Precision
-</td>
-<td>3% (Flow rate from 1L/min to 10L/min)
-</td></tr>
-<tr>
-<td>Output signal duty cycle
-</td>
-<td>40%～60%
-</td></tr></table>
+<table>
+  <tr>
+    <td width="400px">Output pulse high level</td>
+    <td width="400px">Signal voltage &gt;4.5 V( input DC 5 V)</td>
+  </tr>
+  <tr>
+    <td width="400px">Output pulse low level</td>
+    <td width="400px">Signal voltage &lt;0.5V( input DC 5V)</td>
+  </tr>
+  <tr>
+    <td width="400px">Precision</td>
+    <td width="400px">3% (Flow rate from 1L/min to 10L/min)</td>
+  </tr>
+  <tr>
+    <td width="400px">Output signal duty cycle</td>
+    <td width="400px">40%～60%</td>
+  </tr>
+</table>
 
 ## FAQ
 

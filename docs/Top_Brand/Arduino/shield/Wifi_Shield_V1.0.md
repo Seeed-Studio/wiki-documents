@@ -10,18 +10,6 @@ last_update:
   author: jianjing Huang
 ---
 
-<!-- ---
-name:  Wifi Shield V1.0
-category: Discontinued
-bzurl:
-oldwikiname: Wifi_Shield_V1.0
-prodimagename:
-bzprodimageurl:
-surveyurl: https://www.research.net/r/Wifi_Shield_V1-0
-sku:
-tags:
---- -->
-
 ![](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/img/Wifishield.jpg)
 
 This Wifi Shield utilizes a RN171 wifi module to provide your Arduino/Seeeduino with serial Ethernet's function. It only takes two pins to hook your device up to 802.11b/g wireless networks with this shield. It features an independent antenna which can cover a wider range and transmit stronger signals. With supports for common TCP, UDP and FTP communication protocols, this Wifi Shield can meet needs of most wireless network projects, like smart home networks, robot controls or personal weather stations,etc. We prepared an easy and convenient command set for this shield so that you can use neat and concise code to run the function.
@@ -44,75 +32,55 @@ This Wifi Shield utilizes a RN171 wifi module to provide your Arduino/Seeeduino 
 
 # Specifications #
 
-<table  cellspacing="0" width="80%">
-<tr>
-<th scope="col"> Item
-</th>
-<th scope="col"> Min
-</th>
-<th scope="col"> Typical
-</th>
-<th scope="col"> Max
-</th>
-<th scope="col"> Unit
-</th></tr>
-<tr>
-<th scope="row"> Voltage
-</th>
-<td> 3.3
-</td>
-<td> 5
-</td>
-<td> 5.5
-</td>
-<td> VDC
-</td></tr>
-<tr>
-<th scope="row"> Current
-</th>
-<td> 25
-</td>
-<td> 60
-</td>
-<td> 400
-</td>
-<td> mA
-</td></tr>
-<tr>
-<th scope="row"> Transmit power
-</th>
-<td colspan="3"> 0-10
-</td>
-<td> dBm
-</td></tr>
-<tr>
-<th scope="row"> Frequency
-</th>
-<td colspan="3"> 2402~2480
-</td>
-<td> MHz
-</td></tr>
-<tr>
-<th scope="row">
-<p>Network rate<br/>
-</p>
-</th>
-<td colspan="4"> 1-11 Mbps for 802.11b/6-54Mbps for 802.11g
-</td></tr>
-<tr>
-<th scope="row"> Dimension
-</th>
-<td colspan="3">  60x56x19
-</td>
-<td> mm
-</td></tr>
-<tr>
-<th scope="row"> Net Weight
-</th>
-<td colspan="3">  20±2
-</td>
-<td> g
-</td></tr></table>
+<table cellspacing="0" width="80%">
+  <tbody>
+    <tr>
+      <th scope="col">Item</th>
+      <th scope="col">Min</th>
+      <th scope="col">Typical</th>
+      <th scope="col">Max</th>
+      <th scope="col">Unit</th>
+    </tr>
+    <tr>
+      <th scope="row">Voltage</th>
+      <td>3.3</td>
+      <td>5</td>
+      <td>5.5</td>
+      <td>VDC</td>
+    </tr>
+    <tr>
+      <th scope="row">Current</th>
+      <td>25</td>
+      <td>60</td>
+      <td>400</td>
+      <td>mA</td>
+    </tr>
+    <tr>
+      <th scope="row">Transmit power</th>
+      <td colspan="3">0-10</td>
+      <td>dBm</td>
+    </tr>
+    <tr>
+      <th scope="row">Frequency</th>
+      <td colspan="3">2402~2480</td>
+      <td>MHz</td>
+    </tr>
+    <tr>
+      <th scope="row">Network rate</th>
+      <td colspan="4">1-11 Mbps for 802.11b/6-54Mbps for 802.11g</td>
+    </tr>
+    <tr>
+      <th scope="row">Dimension</th>
+      <td colspan="3">60x56x19</td>
+      <td>mm</td>
+    </tr>
+    <tr>
+      <th scope="row">Net Weight</th>
+      <td colspan="3">20±2</td>
+      <td>g</td>
+    </tr>
+  </tbody>
+</table>
 
 # Interface Function
 
@@ -143,7 +111,7 @@ Ok, time to write some code.
 First you have to make sure that Arduino1.0 has already been installed on your computer.
 
 ![](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/img/Tb2.jpg)
-Download the wifishield library here [Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) and unzip it into the libraries file of Arduino via this path: ..\arduino-1.0\libraries
+Download the wifishield library here [Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) and unzip it into the libraries file of Arduino via this path: <code>..\arduino-1.0\libraries</code>
 Open a new sketch in Arduino-1.0, then copy the following code to your sketch.
 
 ```cpp
@@ -215,7 +183,7 @@ while(!Wifly.connect("192.168.1.164","90"));//connect the remote service
 
 In the upper line, "192.168.1.164" is the remote IP address of the virtual server, and "90" is the port information.
 
-We provide a TCP Client software  [YFTCPServer.zip](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/res/YFTCPServer.zip) and serial port software [SCCOM](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/res/Sscom32E.zip) for testing purpose.
+We provide a TCP Client software  [YFTCPServer.zip](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/res/YFTCPServer.zip) and serial port software [SCCOM](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/res/Sscom32E.zip) for testing purpose.
 
 Open the TCP Client software you will see:
 
@@ -229,7 +197,7 @@ while(!Wifly.connect("192.168.1.164","90"));//connect the remote service
 
 Upload the sketch.
 
-Now run the TCP Client software first, then the serial port software, click the "OpenCom" button, wait until a message "<--Connected!" is printed on the screen of the virtual software.
+Now run the TCP Client software first, then the serial port software, click the "OpenCom" button, wait until a message `<--Connected!` is printed on the screen of the virtual software.
 
 ![](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/img/Wifishield006.jpg)
 

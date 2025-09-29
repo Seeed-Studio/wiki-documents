@@ -363,7 +363,7 @@ while True :
 
 
 - **[Eagle]**  [Grove - Barometer Sensor(BMP180) Eagle File](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP180/res/Barometer_Sensor-BMP180-Eagle_File.zip)
-- **[Library]**  [Barometer\_Sensor Library](https://github.com/Seeed-Studio/Grove_Barometer_Sensor)
+- **[Library]**  [Barometer_Sensor Library](https://github.com/Seeed-Studio/Grove_Barometer_Sensor)
 - **[Datasheet]**  [BMP180 datasheet](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP180/res/BMP180.pdf)
 - **[Altitude Vs. Pressure]** The following is a reference graph plotting out the relationship between altitude above sea level and barometric pressure.
 

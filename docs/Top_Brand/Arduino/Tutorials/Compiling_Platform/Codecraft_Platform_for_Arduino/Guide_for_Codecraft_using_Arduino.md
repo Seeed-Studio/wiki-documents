@@ -151,7 +151,7 @@ The "System running time" block returns the time from Seeeduino/Arduino being po
 
 ![lcd_demo](https://files.seeedstudio.com/wiki/Guide_for_Codecraft_using_Arduino/img/lcd_demo.png)
 
-:::tipsuccess
+:::tip
 When the code finishes uploaded, you can see the backlight color of LCD turn to you set, and "hello, world!" & system running time shown on it.
 :::
 
@@ -201,7 +201,7 @@ Click OK, now buttonState block appeared in Variables tab.
 
 ![relay demo](https://files.seeedstudio.com/wiki/Guide_for_Codecraft_using_Arduino/img/relay_demo.png)
 
-:::tipsuccess
+:::tip
 When the code finishes uploaded, if you push the button, relay will be turned on. Otherwise, relay will be turned off.
 :::
 
@@ -241,7 +241,7 @@ Monitor the sound level in the environment. If it is too loud, flashing an LED a
 
 ![sound demo](https://files.seeedstudio.com/wiki/Guide_for_Codecraft_using_Arduino/img/sound_demo.png)
 
-:::tipsuccess
+:::tip
 When the code finishes uploaded, if the sound in the environment if too loud, the LED will be flashing.
 :::
 
@@ -275,7 +275,7 @@ Using a Grove - Touch Sensor to control Grove - Red LED. When sensor touched, tu
 
 ![touch demo](https://files.seeedstudio.com/wiki/Guide_for_Codecraft_using_Arduino/img/touch_demo.png)
 
-:::tipsuccess
+:::tip
 When the code finishes uploaded, if the sensor is touched, the LED will be turned on. Otherwise the LED will be turned off.
 :::
 
@@ -321,7 +321,7 @@ Display the rotation of Grove - Rotary Angle Sensor in Serial.
 
 ![serial monitor](https://files.seeedstudio.com/wiki/Guide_for_Codecraft_using_Arduino/img/serial_monitor.png)
 
-:::tipsuccess
+:::tip
 Rotate Rotary Angle Sensor, you can see data changes in monitor.
 :::
 
@@ -369,7 +369,7 @@ Other than that, we also need "count with...from...to...step" block in Control t
 
 ![led demo](https://files.seeedstudio.com/wiki/Guide_for_Codecraft_using_Arduino/img/led_demo.png)
 
-:::tipsuccess
+:::tip
 When the code finishes uploaded, you will see the LED breathing.
 :::
 
@@ -405,7 +405,7 @@ Build a program like smart house, when the light intensity falls below the prese
 
 ![lighe demo](https://files.seeedstudio.com/wiki/Guide_for_Codecraft_using_Arduino/img/light_demo.png)
 
-:::tipsuccess
+:::tip
 When the code finishes uploaded, blocking the light to the Light Sensor, the LED will be turned on.
 :::
 
@@ -441,7 +441,7 @@ Using a Grove - Button to control a Grove - Red LED. When button is pushed, turn
 
 ![button demo](https://files.seeedstudio.com/wiki/Guide_for_Codecraft_using_Arduino/img/button_demo.png)
 
-:::tipsuccess
+:::tip
 When the code finishes uploaded, if button is pushed, turn on the LED. Otherwise turn off the LED.
 :::
 
@@ -477,7 +477,7 @@ Using a Grove - Rotary Angle Sensor to control a Grove - Servo.
 
 ![servo demo](https://files.seeedstudio.com/wiki/Guide_for_Codecraft_using_Arduino/img/servo_demo.png)
 
-:::tipsuccess
+:::tip
 When the code finishes uploaded, rotate Rotary Angle Sensor, the angle of the Servo motor will change.
 :::
 

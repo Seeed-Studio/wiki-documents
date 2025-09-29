@@ -129,7 +129,7 @@ SPI_CS pin of V1.2 is connected to **D9** by default. If you want to change to *
 
 ![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/sodder%20the%20middle%20pad%20and%20pad%2010.png)
 
-:::cautionwarning
+:::caution
 Be careful with the box cutter, it's easy to hurt yourself or the PCBA.
 :::
 
@@ -141,7 +141,7 @@ The SPI pins (SCK, MISO, MOSI) are routed to the ICSP pins by default. But for s
 For Arduino UNO, Arduino Mega, Arduino Leonardo and any others AVR based Arduino boards, it works well by default setting.
 :::
 
-:::cautionwarning
+:::caution
 Be careful when you are going to change SPI pins, it's easy to hurt yourself or the PCBA.
 :::
 

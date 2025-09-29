@@ -47,7 +47,7 @@ As the you can see, this module is based on FSR402,Interlink Electronics FSR® 4
 |Analog output|0-650|
 |Non-Actuated Resistance|>10 MΩ|
 |Minimum Resistance|1 KΩ|
-|Device Rise Time|<3 Microseconds|
+|Device Rise Time|&lt;3 Microseconds|
 |Size|L: 75mm W: 20mm H: 11mm|
 |Weight|2.5g|
 |Package size|L: 140mm W: 90mm H: 10mm|
@@ -78,15 +78,15 @@ This module use a DC-DC chip XC6206P332MR to provide a stable 3.3V, as you can s
 
 There are two parts in the picture above, for the left part:
 
-<font color="#EE9A00">``VIN`` = \frac{'{'}3.3*30K{'}'}{'{'}30K+R_f{'}'}$</font>
+<div style={{color:'#EE9A00',fontWeight:'bold',textAlign:'center',padding:'10px',backgroundColor:'var(--ifm-color-emphasis-100)',border:'1px solid var(--ifm-color-emphasis-300)',borderRadius:'5px',margin:'15px 0'}}>V<sub>IN</sub> = (3.3 × 30K) / (30K + R<sub>f</sub>)</div>
 
-For the right part, it's an Emitter follower, we use the amplifier **U1** to isolate the pre-stage and post-stage circuits.
+For the right part, it's an Emitter follower, we use the amplifier U1 to isolate the pre-stage and post-stage circuits.
 
-<font color="#EE9A00">Vout = VIN</font>
+<div style={{color:'#EE9A00',fontWeight:'bold',textAlign:'center',padding:'10px',backgroundColor:'var(--ifm-color-emphasis-100)',border:'1px solid var(--ifm-color-emphasis-300)',borderRadius:'5px',margin:'15px 0'}}>V<sub>out</sub> = V<sub>IN</sub></div>
 
 So, the output is:
 
-<font color="#EE9A00">$Vout = \frac{'{'}3.3*30K{'}'}{'{'}30K+R_f{'}'}$</font>
+<div style={{color:'#EE9A00',fontWeight:'bold',textAlign:'center',padding:'10px',backgroundColor:'var(--ifm-color-emphasis-100)',border:'1px solid var(--ifm-color-emphasis-300)',borderRadius:'5px',margin:'15px 0'}}>V<sub>out</sub> = (3.3 × 30K) / (30K + R<sub>f</sub>)</div>
 
 :::tip
 In this section we only show you part of the schematic, for the full document please refer to the [Resources](#resources)

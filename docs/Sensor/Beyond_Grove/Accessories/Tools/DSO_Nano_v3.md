@@ -61,121 +61,103 @@ To ensure your safety &amp; avoid any damages to the product/connected devices, 
 
 <table>
 <tr>
-<td width="400px"> Display
-</td>
-<td width="600px"> Full Color 2.8" TFT LCD 65K 320×240
-</td></tr>
+<td width="400px">Display</td>
+<td width="600px">Full Color 2.8" TFT LCD 65K 320×240</td>
+</tr>
 <tr>
-<td> Analog bandwidth
-</td>
-<td> 0 - 200KHz
-</td></tr>
+<td>Analog bandwidth</td>
+<td>0 - 200KHz</td>
+</tr>
 <tr>
-<td> Max sample rate
-</td>
-<td> 1Msps 12Bits
-</td></tr>
+<td>Max sample rate</td>
+<td>1Msps 12Bits</td>
+</tr>
 <tr>
-<td> Sample memory depth
-</td>
-<td> 4096 Point
-</td></tr>
+<td>Sample memory depth</td>
+<td>4096 Point</td>
+</tr>
 <tr>
-<td> Horizontal sensitivity
-</td>
-<td> 1uS/Div~10S/Div
-</td></tr>
+<td>Horizontal sensitivity</td>
+<td>1uS/Div~10S/Div</td>
+</tr>
 <tr>
-<td> Horizontal position
-</td>
-<td> adjustable with indicator
-</td></tr>
+<td>Horizontal position</td>
+<td>adjustable with indicator</td>
+</tr>
 <tr>
-<td rowspan="2"> Vertical sensitivity
-</td>
-<td> 10mV/Div~10V/Div (with ×1 probe)
-</td></tr>
+<td rowspan="2">Vertical sensitivity</td>
+<td>10mV/Div~10V/Div (with ×1 probe)</td>
+</tr>
 <tr>
-<td> 0.5V/Div~100V/Div (with ×10 probe)
-</td></tr>
+<td>0.5V/Div~100V/Div (with ×10 probe)</td>
+</tr>
 <tr>
-<td> Vertical position
-</td>
-<td> adjustable with indicator
-</td></tr>
+<td>Vertical position</td>
+<td>adjustable with indicator</td>
+</tr>
 <tr>
-<td> Input impedance
-</td>
-<td> &gt;500KΩ
-</td></tr>
+<td>Input impedance</td>
+<td>&gt;500KΩ</td>
+</tr>
 <tr>
-<td> Max input voltage
-</td>
-<td> 40Vpp (by ×1 probe)
-</td></tr>
+<td>Max input voltage</td>
+<td>40Vpp (by ×1 probe)</td>
+</tr>
 <tr>
-<td> Coupling
-</td>
-<td> DCs
-</td></tr>
+<td>Coupling</td>
+<td>DCs</td>
+</tr>
 <tr>
-<td rowspan="4"> Trig modes
-</td>
-<td> Auto, Normal, Single, None, Scan and Fit
-</td></tr>
+<td rowspan="4">Trig modes</td>
+<td>Auto, Normal, Single, None, Scan and Fit</td>
+</tr>
 <tr>
-<td> Rising/Falling edge/level trigger
-</td></tr>
+<td>Rising/Falling edge/level trigger</td>
+</tr>
 <tr>
-<td> Trig level adjustable with indicator
-</td></tr>
+<td>Trig level adjustable with indicator</td>
+</tr>
 <tr>
-<td> Trig sensitivity adjustable with indicator
-</td></tr>
+<td>Trig sensitivity adjustable with indicator</td>
+</tr>
 <tr>
-<td rowspan="4"> Waveform Functions
-</td>
-<td> Auto measurement: frequency, cycle time, duty cycle, peak voltage, RMS voltage, Average voltage and DC voltage
-</td></tr>
+<td rowspan="4">Waveform Functions</td>
+<td>Auto measurement: frequency, cycle time, duty cycle, peak voltage, RMS voltage, Average voltage and DC voltage</td>
+</tr>
 <tr>
-<td> Precise vertical measurement with markers
-</td></tr>
+<td>Precise vertical measurement with markers</td>
+</tr>
 <tr>
-<td> Precise horizontal measurement with markers
-</td></tr>
+<td>Precise horizontal measurement with markers</td>
+</tr>
 <tr>
-<td> Hold/Run
-</td></tr>
+<td>Hold/Run</td>
+</tr>
 <tr>
-<td> Signal Generator
-</td>
-<td> 10Hz~1MHz square wave
-</td></tr>
+<td>Signal Generator</td>
+<td>10Hz~1MHz square wave</td>
+</tr>
 <tr>
-<td> Waveform storage
-</td>
-<td> Micro SD card
-</td></tr>
+<td>Waveform storage</td>
+<td>Micro SD card</td>
+</tr>
 <tr>
-<td> PC connection via USB
-</td>
-<td> as SD card reader
-</td></tr>
+<td>PC connection via USB</td>
+<td>as SD card reader</td>
+</tr>
 <tr>
-<td> Upgrade
-</td>
-<td> USB
-</td></tr>
+<td>Upgrade</td>
+<td>USB</td>
+</tr>
 <tr>
-<td> Power supply
-</td>
-<td> 500mAh 3.7V Lithium battery / USB
-</td></tr>
+<td>Power supply</td>
+<td>500mAh 3.7V Lithium battery / USB</td>
+</tr>
 <tr>
-<td> Dimension (w/o probe)
-</td>
-<td> 91mm*62mm*13mm
-</td></tr></table>
+<td>Dimension (w/o probe)</td>
+<td>91mm*62mm*13mm</td>
+</tr>
+</table>
 
 ### Structure
 
@@ -220,86 +202,58 @@ The Nano has six triggering modes, accessible in the top left corner of the scre
  **NONE:** Refresh unsynchronized waveform ignoring triggering.
  **FIT:** Automatically adjust vertical and horizontal scale to display waveform.
 
-<table >
-<caption> Comparison table of the triggering modes
-</caption>
+<table>
+<caption>Comparison table of the triggering modes</caption>
 <tr>
-<th> Mode
-</th>
-<th> Trigger
-</th>
-<th> Display Waveform
-</th>
-<th> Synchronization
-</th>
-<th> Example Applications
-</th></tr>
+<th>Mode</th>
+<th>Trigger</th>
+<th>Display Waveform</th>
+<th>Synchronization</th>
+<th>Example Applications</th>
+</tr>
 <tr>
-<td width="150px"> AUTO
-</td>
-<td width="150px"> Yes
-</td>
-<td width="200px"> Always
-</td>
-<td width="200px"> Yes
-</td>
-<td width="300px"> General use
-</td></tr>
+<td width="150px">AUTO</td>
+<td width="150px">Yes</td>
+<td width="200px">Always</td>
+<td width="200px">Yes</td>
+<td width="300px">General use</td>
+</tr>
 <tr>
-<td> NORM
-</td>
-<td> Yes
-</td>
-<td> Triggered
-</td>
-<td> Yes
-</td>
-<td> Only watch periodic signals
-</td></tr>
+<td>NORM</td>
+<td>Yes</td>
+<td>Triggered</td>
+<td>Yes</td>
+<td>Only watch periodic signals</td>
+</tr>
 <tr>
-<td> SING
-</td>
-<td> Yes
-</td>
-<td> Triggered
-</td>
-<td> Auto-hold
-</td>
-<td> Capture a random pulse
-</td></tr>
+<td>SING</td>
+<td>Yes</td>
+<td>Triggered</td>
+<td>Auto-hold</td>
+<td>Capture a random pulse</td>
+</tr>
 <tr>
-<td> SCAN
-</td>
-<td> No
-</td>
-<td> Always
-</td>
-<td> No
-</td>
-<td> Keep monitoring signals
-</td></tr>
+<td>SCAN</td>
+<td>No</td>
+<td>Always</td>
+<td>No</td>
+<td>Keep monitoring signals</td>
+</tr>
 <tr>
-<td> NONE
-</td>
-<td> No
-</td>
-<td> Always
-</td>
-<td> No
-</td>
-<td> Watch an unsynchronized waveform
-</td></tr>
+<td>NONE</td>
+<td>No</td>
+<td>Always</td>
+<td>No</td>
+<td>Watch an unsynchronized waveform</td>
+</tr>
 <tr>
-<td> FIT
-</td>
-<td> Yes
-</td>
-<td> Auto-adjust
-</td>
-<td> Yes
-</td>
-<td> Easily watch periodic signals
-</td></tr></table>
+<td>FIT</td>
+<td>Yes</td>
+<td>Auto-adjust</td>
+<td>Yes</td>
+<td>Easily watch periodic signals</td>
+</tr>
+</table>
 
 To set the triggering level, move cursor to <font color="red">Vt = ??.?mV </font>and press the up/down buttons. Press OK to display or hide the trigger level markers (horizontal green dotted lines). To fine tune triggering, you may tweak the trigger sensitivity range <font color="red">TR </font> and the <font color="red">trigger type</font>. By default the trigger type is set to <font color="red">up S</font> which means the trigger will fire when the signal crosses from the lower trigger line to the higher line. <font color="red">Down S </font>will likewise trigger on a falling signal edge.
 

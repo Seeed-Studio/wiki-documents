@@ -44,8 +44,8 @@ Here Grove - Gas sensor outputs analog signal is connected to AO, so the I2C Add
 **The test code is:**
 ```
 <pre>
-#include &lt;Wire.h&gt;
-#include &lt;Streaming.h&gt;
+#include <Wire.h>
+#include <Streaming.h>
 
 #define ADDR_ADC121             0x58
 
@@ -79,9 +79,9 @@ void read_adc()     //unsigned int *data
 
     Wire.requestFrom(ADDR_ADC121, 2);           // request 2byte from device
     delay(1);
-    if(Wire.available()&lt;=2)
+    if(Wire.available()<=2)
     {
-        getData = (Wire.read()&amp;0x0f)&lt;&lt;8;
+        getData = (Wire.read()&0x0f)<<8;
         getData |= Wire.read();
     }
     Serial.print("getData:");
@@ -130,8 +130,8 @@ Taking Grove - Digital Light Sensor as example, let's learn its usage.
 *
 * By:https://www.seeedstudio.com
 */
-#include &lt;Wire.h&gt;
-#include &lt;Digital_Light_TSL2561.h&gt;
+#include <Wire.h>
+#include <Digital_Light_TSL2561.h>
 void setup()
 {
   Wire.begin();

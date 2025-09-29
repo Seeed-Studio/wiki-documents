@@ -21,7 +21,7 @@ As Seeed Studio XIAO form factor, all Seeed Studio XIAO boards support both [Gro
 Seeed Studio XIAO SAMD21 , Seeed Studio XIAO RP2040, and Seeed Studio XIAO nRF52840 are compatible to the Seeed Studio Expansion Base for XIAO.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -195,7 +195,7 @@ U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset
 
 void setup(void) {
   u8x8.begin();
-  u8x8.setFlipMode(1);   // set number from 1 to 3, the screen word will rotary 180
+  u8x8.setFlipMode(1);   // Enable (1) and disbale (0) 180 degree rotation of the display content
 }
 
 void loop(void) {
@@ -603,7 +603,7 @@ CircuitPython is a programming language designed to simplify experimenting and l
 
 **Step 6.** Now, CircuitPython is loaded on Seeed Studio XIAO SAMD21 ! All you need to do it's to write you python program and name it `main.py` and drag it onto the `CIRCUITPY` drive.
 
-### CircuitPyhton Blink example
+### CircuitPython Blink example
 
 There is a simple example introduce how to use the CirsuitPython on the Seeed Studio XIAO .
 
@@ -1498,7 +1498,6 @@ void loop() {
   }
 
 
-
   if (scd30.isAvailable() && memu == 1) {
     scd30.getCarbonDioxideConcentration(result);
     u8x8.setFont(u8x8_font_chroma48medium8_r);
@@ -1611,7 +1610,7 @@ void loop() {
 - **[SCH]**[**Seeed Studio Expansion Base for XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.sch)
 - **[BRD]**[**Seeed Studio Expansion Base for XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.brd)
 
-## FAQ 
+## FAQ
 
 ### Q1: Does the PMIC on the XIAO Expansion board output power on the 5V pins?
 

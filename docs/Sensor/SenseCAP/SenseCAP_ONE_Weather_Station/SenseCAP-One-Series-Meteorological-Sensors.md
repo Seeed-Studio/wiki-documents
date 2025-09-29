@@ -4,6 +4,7 @@ title:  SenseCAP ONE Compact Weather Station
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors
 last_update:
   date: 1/16/2023
   author: jianjing Huang

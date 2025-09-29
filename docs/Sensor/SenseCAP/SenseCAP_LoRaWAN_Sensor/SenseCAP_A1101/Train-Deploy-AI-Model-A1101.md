@@ -129,7 +129,6 @@ If you followed the above Colab project, you know that you can load 4 models to 
 
 If you directly want to jump to **section 3** which explains how to deploy the trained AI model into SenseCAP A1101 and perform inference, [click here](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101/#3-deploy-the-trained-model-and-perform-inference).
 
-
 ## 2. Train your own AI model with your own dataset
 
 If you want to build specific object detection projects where the public datasets do not have the objects that you want to detect, you might want to build your own dataset.  When you record data for your own dataset, you have to make sure that you cover all angles (360 degrees) of the object, place the object in different environments, different lighting and different weather conditions. After recording your own dataset, you also have to annotate the images in the datset. All these steps will be convered in this section.
@@ -182,7 +181,7 @@ wget https://conda.anaconda.org/conda-forge/osx-arm64/libusb-1.0.26-h1c322ee_100
 conda install libusb-1.0.26-h1c322ee_100.tar.bz2
 ```
 
-:::cautionwarning
+:::caution
 You need to make sure your BootLoader version is greater than 2.0.0 before you can change the firmware to do the following. If you are not sure, please check the BootLoader version by following the steps mentioned in [this section](#check-bootloader-version), and if the version is less than 2.0.0, please update the BootLoader by following the steps mentioned in [this section](#update-bootloader)
 :::
 
@@ -197,7 +196,6 @@ You need to make sure your BootLoader version is greater than 2.0.0 before you c
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/39.png"/></div>
 
 After this you will see a new storage drive shown on your file explorer as **SENSECAP**
-
 
 <div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png"/></div>
 
@@ -353,7 +351,6 @@ Now we will move the **model-1.uf2** that we obtained at the end of the training
 
 After this, you will see a new storage drive shown on your file explorer as **SENSECAP**
 
-
 <div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png"/></div>
 
 - **Step 4.** Drag and drop the **model-1.uf2** file to **SENSECAP** drive
@@ -506,8 +503,10 @@ Eventhough you can load 4 models to the device all at once, please not that only
 - **Step 10.** Now a file named **model-1.uf2** will be generated. This is the file that we will load into the SenseCAP A1101 Module to perform the inference!
 
 ## Check BootLoader Version
+
 - Double click the BOOT button and wait for the removable drive to mount
 - Open INFO_UF2.TXT in the removable drive
+
 <div align="center"><img width="{600}" src="https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/assert/q2.png"/></div>
 
 ## Update BootLoader
@@ -519,7 +518,7 @@ If your SenseCAP A1101 is not recognized by your computer and behaves as no port
 Please download the latest version of the BootLoader file in the link below. The name of the BootLoader is usually `tinyuf2-sensecap_vision_ai_vx.x.x.bin`.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases">
+    <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Firware</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>

@@ -19,7 +19,7 @@ This platform will focus on four main topics as shown in the sidebar, with up-to
 - [Sensors and Sensing](https://wiki.seeedstudio.com/Sensor_Network/)
 - [Networking](https://wiki.seeedstudio.com/Network/)
 - [Edge Computing](https://wiki.seeedstudio.com/Edge_Computing/)
-- [Cloud Services](https://wiki.seeedstudio.com/Cloud/)
+- [SenseCraft & Cloud Services](https://wiki.seeedstudio.com/Cloud/)
     - [Browser-based AI Solution](https://sensecraft.seeed.cc/ai/#/model)
 - [Technology Topics](https://wiki.seeedstudio.com/topicintroduction/)
 - [Contributor Program](https://wiki.seeedstudio.com/Contributor/)
@@ -59,13 +59,13 @@ Thanks for our [contributors](https://wiki.seeedstudio.com/contributors/), the c
 
 [![button](https://files.seeedstudio.com/wiki/wiki-platform/collection_page/NVIDIA_Jetson_collection_front.jpg)](https://wiki.seeedstudio.com/NVIDIA_Jetson/)
 
-### Cloud
+### SenseCraft & Cloud
 
-- [SenseCAP Dashboard](https://wiki.seeedstudio.com/Cloud_Chain/SenseCAP_Dashboard/Dashboard_Basics/)
-- [SenseCAP API](https://wiki.seeedstudio.com/Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction/)
 - [SenseCraft AI](https://wiki.seeedstudio.com/sensecraft_ai_main/)
-
 [![button](https://sensecraft.seeed.cc/wp-content/uploads/2023/11/%E5%88%87%E5%9B%BE-139@2x.png)](https://wiki.seeedstudio.com/sensecraft_ai_main/)
+- [SenseCraft Data Platform - HTTP API](https://wiki.seeedstudio.com/Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction/)
+- [SenseCAP MX Dashboard User Guide](https://wiki.seeedstudio.com/Cloud_Chain/SenseCAP_Dashboard/Dashboard_Basics/)
+
 
 ### Technology Topics and Popular Platforms
 

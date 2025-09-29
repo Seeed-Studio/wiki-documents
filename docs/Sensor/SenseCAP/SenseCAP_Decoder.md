@@ -10,20 +10,16 @@ last_update:
   author: Jessie
 ---
 
-
 SenseCAP decoder is used for decoding the LoRaWAN messages sent from the SenseCAP LoRaWAN® devices. After decoding, users' applications will get more friendly and readable messages.
 
 ### SenseCAP T1000 Tracker
 
 [**SenseCAP T1000**](https://www.seeedstudio.com/sensecap-t1000-tracker?utm_source=emailsig&utm_medium=emailsig&utm_campaign=emailsig) is a compact LoRaWAN® tracker that utilizes GNSS/Wi-Fi/Bluetooth for precise indoor & outdoor location tracking. It boasts self-geo-adaptive capabilities, local data storage, and an impressive months of battery life. Additionally, it is equipped with temperature, light, and motion sensors, making it ideal for a variety of location-based applications.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker_1.png" alt="pir" width={800} height="auto" /></p>
 
-
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️ </font></span></strong>
     </a>
 </div>
@@ -849,6 +845,7 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
+
 </details>
 
 <details>
@@ -1671,6 +1668,7 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
+
 </details>
 
 <details>
@@ -3330,24 +3328,22 @@ exports.handler = async (event) => {
   }
 };
 ```
+
 </details>
 
 ### Wio Tracker 1110 Dev Board
 
-
-The [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) is based on [Wio-WM1110 Wireless Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html) and integrates [Semtech's LR1110](https://www.semtech.com/products/wireless-rf/lora-edge/lr1110) LoRa® transceiver and a multi-purpose radio front-end for geolocation, it's a user-friendly, LoRa-based tracking development platform. 
+The [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) is based on [Wio-WM1110 Wireless Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html) and integrates [Semtech's LR1110](https://www.semtech.com/products/wireless-rf/lora-edge/lr1110) LoRa® transceiver and a multi-purpose radio front-end for geolocation, it's a user-friendly, LoRa-based tracking development platform.
 
 With its compact size and rich interfaces, the Wio Tracker 1110 Dev Board is conveniently equipped with an onboard antenna for easy deployment. It supports the Arduino development environment and LoRaWAN protocol stack, making it ideal for tracking-related IoT projects.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio-tracker.png" alt="pir" width={700} height="auto" /></p>
 
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
     </a>
 </div>
-
 
 #### Decoder
 
@@ -3952,6 +3948,7 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
+
 </details>
 
 <details>
@@ -4556,8 +4553,8 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
-</details>
 
+</details>
 
 <details>
 
@@ -5270,24 +5267,20 @@ function loraWANV2PositiveDataFormat(str) {
     return parseInt(str2, 2) / divisor;
 }
 ```
+
 </details>
-
-
 
 ### SenseCAP S210X LoRaWAN Sensors
 
-[SenseCAP S210X](https://www.seeedstudio.com/catalogsearch/result/?q=s210x) is a series of wireless LoRaWAN® sensors. It can cover a transmission range of 2km in urban scenes and 10km in line-of-sight scenes while keeping lower power consumption during the transmission process. 
-Together with a replaceable battery that supports up to 10 years of usage and an industrial IP66 enclosure. It supports -40 ~ 85℃ operating temperature and can be deployed in harsh environments. SenseCAP S210X is compatible with LoRaWAN® V1.0.3 protocol and can work with LoRaWAN® gateway. 
-
+[SenseCAP S210X](https://www.seeedstudio.com/catalogsearch/result/?q=s210x) is a series of wireless LoRaWAN® sensors. It can cover a transmission range of 2km in urban scenes and 10km in line-of-sight scenes while keeping lower power consumption during the transmission process. Together with a replaceable battery that supports up to 10 years of usage and an industrial IP66 enclosure. It supports -40 ~ 85℃ operating temperature and can be deployed in harsh environments. SenseCAP S210X is compatible with LoRaWAN® V1.0.3 protocol and can work with LoRaWAN® gateway.
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/111_1.png" alt="pir" width={800} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
-
 
 #### Decoder
 
@@ -5947,7 +5940,6 @@ function toBinary(arr) {
 ```
 
 </details>
-
 
 <details>
 
@@ -6954,15 +6946,12 @@ exports.handler = async (event) => {
 
 ### SenseCAP S2100 Data Logger
 
-
-
 [SenseCAP S2100 Data Logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html) is a versatile device that can connect to MODBUS-RTU RS485/Analog/GPIO sensors, allowing for easy transmission of data to the LoRaWAN network. With its LoRa and IP66 design, this device boasts impressive stability and reliability, and can cover a long transmission range while keeping ultra-low power consumption. It is perfect for outdoor use, and can be powered by battery or connected to a 12V external power supply for even greater flexibility. When connected to the 12V power supply, the replaceable built-in battery acts as a backup power source. Additionally, the S2100 Data Logger is optimized for OTA with built-in Bluetooth, making setup and updates quick and simple. To top it off, the S2110 converter enables the S2100 Data Logger to connect to Grove Sensors, making it an excellent choice for DIY industrial-level LoRaWAN sensors and small-scale deployment.
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/Data_Logger/1.png"/></div>
 
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -7592,6 +7581,7 @@ function decodeUplink (input, port) {
     return str
   }
 ```
+
 </details>
 
 </TabItem2>
@@ -8207,6 +8197,7 @@ function bytes2HexString (arrBytes) {
   return str
 }
 ```
+
 </details>
 
 </TabItem2>
@@ -8216,17 +8207,14 @@ function bytes2HexString (arrBytes) {
 
 ---
 
-
 ### SenseCAP S2120 8-in-1 Weather Sensor
 
-
 [SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor](https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html) measures air temperature, humidity, wind speed, wind direction, rainfall, light intensity, UV index, and barometric pressure. It enables low maintenance cost for its ultra-low power consumption, reliable performance, built-in Bluetooth, and app service for OTA configuration and remote device management. It supports multi-scenario applications like backyard, gardens, smart agriculture, meteorology, smart city, etc.
-
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/f/o/font_5.png" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -8638,6 +8626,7 @@ function bytes2HexString (arrBytes) {
   return str
 }
 ```
+
 </details>
 
 </TabItem3>
@@ -9253,6 +9242,7 @@ function Decoder (bytes, port) {
     return str
   }
 ```
+
   </details>
 
 </TabItem3>
@@ -9264,13 +9254,12 @@ function Decoder (bytes, port) {
 
 ### SenseCAP A1101 - LoRaWAN Vision AI Sensor
 
-
 [SenseCAP A1101 - LoRaWAN Vision AI Sensor](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) is a TinyML Edge AI enabled smart image sensor. It supports a variety of AI models such as image recognition, people counting, target detection, meter recoignition etc. It also supports training models with TensorFlow Lite.
 
 <div align="center"><img width ={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/101990962-a1101-first-new-10.17.jpg"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -9639,6 +9628,7 @@ function decodeUplink (input) {
   // var sample = Decoder(["01", "01", "00", "01", "01", "00", "01", "01", "02", "00", "6A", "01", "00", "15", "01", "03", "00", "30", "F1", "F7", "2C", "01", "04", "00", "09", "0C", "13", "14", "01", "05", "00", "7F", "4D", "00", "00", "01", "06", "00", "00", "00", "00", "00", "4C", "BE"], null);
   // console.log(sample);
 ```
+
 </details>
 
 </TabItem4>
@@ -10312,6 +10302,7 @@ function toBinary (arr) {
       .replace(/,/g, '')
 }
 ```
+
 </details>
 
 </TabItem4>
@@ -10321,12 +10312,7 @@ function toBinary (arr) {
 
 ---
 
-
-
-
 ### How to Use
-
-
 
 ##### Preparation
 
@@ -10341,27 +10327,19 @@ We take The Things Stack as an example, please configure the decoder according t
 - Copy and paste the whole contents of `decoder.js` to the `decoder` textarea.
 - Click `save payload functions`
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/decoder-use.png" alt="pir" width={800} height="auto" /></p>
-
-
-
 
 ##### Check the Decoded Messages
 
-You may test the decoding script with a sample payload first. 
+You may test the decoding script with a sample payload first.
 
-To do this, copy a raw data packet like `01 01 10 98 53 00 00 01 02 10 A8 7A 00 00 AF 51` into the `Payload` text input, and select the `FPort` according to the device manual, then click `Test` button. 
-You will see a successfully parsed JSON structure below.
+To do this, copy a raw data packet like `01 01 10 98 53 00 00 01 02 10 A8 7A 00 00 AF 51` into the `Payload` text input, and select the `FPort` according to the device manual, then click `Test` button. You will see a successfully parsed JSON structure below.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/test-decoder.png" alt="pir" width={800} height="auto" /></p>
 
 Then let's check out the magic of the script. We navigate to the `Live Data` tab, and you can expand any uploaded message to check the `Event Fields` in the payload. These fields are just populated by the script.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/check-data
-.png" alt="pir" width={800} height="auto" /></p>
-
-
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/check-data.png" alt="pir" width={800} height="auto" /></p>
 
 If you're subscribing the messages with TTN's MQTT Data API, you will also get parsed JSON payload fields.
 

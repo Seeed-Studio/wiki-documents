@@ -394,7 +394,7 @@ example:
 https://mender.seeedstudio.com
 ```
 
-**Note:** Rememeber to add **<https://>** in the beginning
+**Note:** Rememeber to add **`https://`** in the beginning
 
 Now you can push OTA updates to the clients which are connected to this self-hosted Mender Server!
 

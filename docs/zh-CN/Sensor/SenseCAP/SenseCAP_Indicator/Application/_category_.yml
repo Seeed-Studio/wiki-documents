@@ -1,0 +1,5 @@
+position: 4 
+label: '应用程序'
+collapsible: true 
+collapsed: true 
+className: indicator_application

@@ -17,20 +17,17 @@ last_update:
 
 Before connecting to Helium, you need to configure the basic parameters of your device on SenseCAP Mate APP, check [Get Started](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker) for more details.
 
-* Set the platform to `Helium`, and then copy the `Device EUI`/`APP EUI`/`APP Key`.
+- Set the platform to `Helium`, and then copy the `Device EUI`/`APP EUI`/`APP Key`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/heliumdevice.png" alt="pir" width={300} height="auto" /></p>
 
 ## Helium Console Configuration
 
-The Helium console is no longer open for new accounts. The description for how to connect a T1000 to the Helium Console
-remains here for users that already have an account. For new users, please refer to the ChirpStack LNA steps above or determine
-the necessary steps for your particular LNA based on the two existing examples here.
+The Helium console is no longer open for new accounts. The description for how to connect a T1000 to the Helium Console remains here for users that already have an account. For new users, please refer to the ChirpStack LNA steps above or determine the necessary steps for your particular LNA based on the two existing examples here.
 
 ### Add New Device
 
 Log into your [Helium console](https://console.helium.com), then go to `Devices` section and click on `Add device` button.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-new-helium.png" alt="pir" width={800} height="auto" /></p>
 
@@ -47,7 +44,6 @@ Head to `Function` tab on the panel at the left side. Then click the `Add New Fu
 <p style={{textAlign: 'center'}}><img src="https://downloads.intercomcdn.com/i/o/788631256/c066827c0eaebdc9dbf629d3/Group+3%282%29.png" alt="pir" width={800} height="auto" /></p>
 
 Copy the following code and then save the changes.
-
 
 <details>
 
@@ -902,6 +898,7 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
+
 </details>
 
 ### Check the data
@@ -926,14 +923,9 @@ Given the [1% duty cycle](https://www.thethingsnetwork.org/docs/lorawan/duty-cyc
 
 So if the upload interval you set is less than 4 minutes, real-time data will be temporarily stored in RAM and held until the Helium network triggers data rate and power corrections before uploading.
 
-
-
 ## ChirpStack LNS
 
-
-For new users, to receive the data from a device on the Helium network it must be associated with an LNS (LoraWAN Network Server), typically use one of the [public LNSs](https://docs.helium.com/iot/find-a-lns-provider/), many of which use
-**ChirpStack**, but it's also possible to connect one's own LNS to Helium.
-
+For new users, to receive the data from a device on the Helium network it must be associated with an LNS (LoraWAN Network Server), typically use one of the [public LNSs](https://docs.helium.com/iot/find-a-lns-provider/), many of which use **ChirpStack**, but it's also possible to connect one's own LNS to Helium.
 
 For those familiar with the general process the TL;DR; is:
 
@@ -953,8 +945,7 @@ On the general tab, enter a device profile name you will recognize and select th
 
 LoRaWAN MAC version: `1.0.4`<br/>
 
-The expected uplink interval can be set too, the main thing it controls is when the LNS user interface shows the device
-as active vs. inactive. It has no effect on the delivery of packets through the LNS.
+The expected uplink interval can be set too, the main thing it controls is when the LNS user interface shows the device as active vs. inactive. It has no effect on the delivery of packets through the LNS.
 
 ![image](https://github.com/user-attachments/assets/bb83141f-a447-437b-a29d-27e16a20ce7a)
 
@@ -999,10 +990,7 @@ Once this happens, you should see something like this:
 
 ![image](https://github.com/user-attachments/assets/060873cb-c1d8-40bd-9ad3-7333966d3558)
 
-Once the join process has been performed the T1000 sends data. The LNS responds back with some information about the network
-frequencies and such, but subsequent to that there should only be uplinks with data.
-
-
+Once the join process has been performed the T1000 sends data. The LNS responds back with some information about the network frequencies and such, but subsequent to that there should only be uplinks with data.
 
 ## Resource
 

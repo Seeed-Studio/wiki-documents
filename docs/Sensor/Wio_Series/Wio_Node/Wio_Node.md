@@ -47,6 +47,7 @@ The Wio IFTTT function is EOL. But Wio APP is available. You can use the API fro
 ## Specifications
 
 ----
+
 |General|Value|Power Management|Value|
 |:---|---|:---|---:|
 |**Size**|28mm * 28mm|**DC Current Per I/O Pin**|12mA|
@@ -125,6 +126,7 @@ Wio Node has an inbuilt LiPo battery charger, so you can charge 3.7v LiPo batter
 - Please handle the USB micro type-B socket gently, or you may break the socket apart from the board.
 
 - Battery is not included in the package. But we have arranged plenty of choices for you in [Bazaar](https://www.seeedstudio.com/s/battery.html).
+
 :::
 
 ## Get Started
@@ -142,6 +144,7 @@ Let us build a very basic LED application with Wio Node, in this application you
 - A smartphone is needed as well (Android OS version 4.1 or advanced, iOS version 7 or advanced)
 
 - Grove - LED include a Grove cable already
+
 :::
 
 ### **STEP 1:** Install Android/iOS App
@@ -383,11 +386,11 @@ Here are some questions that we usually received from new users. If you have any
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

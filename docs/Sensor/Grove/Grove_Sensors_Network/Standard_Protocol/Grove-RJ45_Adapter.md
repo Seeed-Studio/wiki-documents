@@ -33,30 +33,26 @@ The Grove-RJ45 Adapter is a module which can convert a standard Grove connector 
 
 <table  cellspacing="0" width="547">
 <tr>
-<th scope="col"> Grove Connecter
-</th>
-<th scope="col"> R45 Connector
-</th></tr>
+<th scope="col">Grove Connecter</th>
+<th scope="col">R45 Connector</th>
+</tr>
 <tr>
-<th scope="row"> VCC
-</th>
-<td> A7
-</td></tr>
+<th scope="row">VCC</th>
+<td>A7</td>
+</tr>
 <tr>
-<th scope="row"> GND
-</th>
-<td> A8
-</td></tr>
+<th scope="row">GND</th>
+<td>A8</td>
+</tr>
 <tr>
-<th scope="row"> D1
-</th>
-<td> A5
-</td></tr>
+<th scope="row">D1</th>
+<td>A5</td>
+</tr>
 <tr>
-<th scope="row"> D2
-</th>
-<td> A4
-</td></tr></table>
+<th scope="row">D2</th>
+<td>A4</td>
+</tr>
+</table>
 
 ## Usage
 

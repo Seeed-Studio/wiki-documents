@@ -121,7 +121,7 @@ If this is your first time using Codecraft, see also [Guide for Codecraft using 
 
 Upload the program to your Arduino/Seeeduino.
 
-:::tipsuccess
+:::tip
 When the code finishes uploaded, the LED will goes on when you touch the Touch Sensor.
 :::
 
@@ -148,7 +148,7 @@ For step 3 you are able to connect the touch sensor to **any GPIO Port** but mak
 
 #### Software
 
-:::cautionattention
+:::caution
 If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
 
@@ -254,7 +254,7 @@ if __name__ == '__main__':
 
 ```
 
-:::tipsuccess
+:::tip
     If everything goes well, you will be able to see the following result
 :::
 

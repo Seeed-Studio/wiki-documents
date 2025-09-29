@@ -407,7 +407,7 @@ sudo apt install openssl
 
 ### Connecting to MQTT Server Example Code
 
-This example demonstrates establishing MQTT connection using Wio Terminal with a MQTT Server. With this, you can use the Wio Terminal to subscribe and publish messages to the MQTT server. Here used a free MQTT Server: <https://test.mosquitto.org/>.
+This example demonstrates establishing MQTT connection using Wio Terminal with a MQTT Server. With this, you can use the Wio Terminal to subscribe and publish messages to the MQTT server. Here used a free MQTT Server: [https://test.mosquitto.org/](https://test.mosquitto.org/).
 
 - Download and Install the [**Arduino MQTT Library**](https://github.com/knolleary/pubsubclient) here.
 
@@ -505,7 +505,7 @@ void loop()
     <source src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/mqtts.mp4" type="video/mp4" />
   </video></div>
 
-This example demonstrates establishing MQTTs connection using Wio Terminal. Here used a free MQTTs Server: <https://test.mosquitto.org/> and sending accelerator data to a topic.
+This example demonstrates establishing MQTTs connection using Wio Terminal. Here used a free MQTTs Server: [https://test.mosquitto.org/](https://test.mosquitto.org/) and sending accelerator data to a topic.
 
 - Download and Install the [**Arduino MQTT Library**](https://github.com/knolleary/pubsubclient) here.
 
@@ -1190,11 +1190,11 @@ void loop() {
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

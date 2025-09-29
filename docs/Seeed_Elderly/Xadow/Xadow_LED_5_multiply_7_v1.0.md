@@ -59,14 +59,14 @@ void setup(void)
     if(error==0)
     {
         DDRB|=0x80;
-        PORTB&amp;=~0x80;
+        PORTB&=~0x80;
     }
 #endif
 
 }
 void loop(void)
 {
-    for(n=0;n&lt;100;n++)
+    for(n=0;n<100;n++)
     {
         dispString(str,strlen(str),150);
         delay(300);
@@ -88,7 +88,7 @@ void dispString(char* data_,uint8_t len,uint16_t time)
     Wire.write(DISP_STRING);
     Wire.write(len);
     Wire.write((uint8_t*)data_,len);
-    Wire.write(time&gt;&gt;8); //high byte of time
+    Wire.write(time>>8); //high byte of time
     Wire.write(time);//low byte of time
     Wire.endTransmission();
 }
@@ -97,7 +97,7 @@ void dispChar(uint8_t data_,uint16_t time)
     Wire.beginTransmission(LEDAddress);
     Wire.write(DISP_CHAR_5X7);
     Wire.write(data_);
-    Wire.write(time&gt;&gt;8); //high byte of time
+    Wire.write(time>>8); //high byte of time
     Wire.write(time);//low byte of time
     Wire.endTransmission();
 }
@@ -125,47 +125,47 @@ void TESTIO(void)
 {
 
     DDRB|=0x0e;
-    PORTB&amp;=~0x0e;
+    PORTB&=~0x0e;
     DDRF|=0x01;
-    PORTF&amp;=~0x01;
-    DDRD&amp;=~0x0f;
+    PORTF&=~0x01;
+    DDRD&=~0x0f;
 
     PORTB|=0x04;
     PORTF|=0x01;
     delay(30);
-    if(!(PIND&amp;0x01))
+    if(!(PIND&0x01))
     {
         error=1;
     }
-    if(PIND&amp;0x02)
+    if(PIND&0x02)
     {
         error=1;
     }
-    if(!(PIND&amp;0x04))
+    if(!(PIND&0x04))
     {
         error=1;
     }
-    if(PIND&amp;0x08)
+    if(PIND&0x08)
     {
         error=1;
     }
-    PORTB&amp;=~0x04;
+    PORTB&=~0x04;
     PORTB|=0x0a;
-    PORTF&amp;=~0x01;
+    PORTF&=~0x01;
     delay(30);
-    if(PIND&amp;0x01)
+    if(PIND&0x01)
     {
         error=1;
     }
-    if(!(PIND&amp;0x02))
+    if(!(PIND&0x02))
     {
         error=1;
     }
-    if(PIND&amp;0x04)
+    if(PIND&0x04)
     {
         error=1;
     }
-    if(!(PIND&amp;0x08))
+    if(!(PIND&0x08))
     {
         error=1;
     }

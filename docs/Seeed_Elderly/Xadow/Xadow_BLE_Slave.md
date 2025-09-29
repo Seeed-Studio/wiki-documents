@@ -136,7 +136,7 @@ void boot(void)
 
 - Click "search" to find the devices. Find the Xadow BLE Slave device and press to start connecting Bluetooth device.
 -
-:::tips
+:::tip
     You should pair phone with BLE module first in the device manager of phone if the 'BlueSPP' can't find the BLE module.
 :::
 ![](https://files.seeedstudio.com/wiki/Xadow_BLE_Slave/img/Search_device.jpg)

@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: '应用程序'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: reterminal_e10xx_applications
+link:
+  type: generated-index
+  slug: cn/reterminal_e10xx_applications
+  title: reTerminal E 系列电子纸显示屏应用程序
+  description: 本文是 reTerminal E 系列电子纸显示屏应用程序的合集页面。

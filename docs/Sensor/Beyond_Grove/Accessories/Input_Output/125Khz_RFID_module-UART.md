@@ -36,84 +36,74 @@ May include key specification and other specifications.
 
 <table>
 <tr>
-<td width="300px"> Frequency
-</td>
-<td width="500px"> 125KHz
-</td></tr>
+<td width="300px">Frequency</td>
+<td width="500px">125KHz</td>
+</tr>
 <tr>
-<td> Baud Rate
-</td>
-<td> 9600 (TTL Electricity Level RS232 format)
-</td></tr>
+<td>Baud Rate</td>
+<td>9600 (TTL Electricity Level RS232 format)</td>
+</tr>
 <tr>
-<td> interface
-</td>
-<td> Weigang26 Or TTL Electricity Level RS232 format
-</td></tr>
+<td>interface</td>
+<td>Weigang26 Or TTL Electricity Level RS232 format</td>
+</tr>
 <tr>
-<td> Power supply
-</td>
-<td> DC 5V（±5%）
-</td></tr>
+<td>Power supply</td>
+<td>DC 5V（±5%）</td>
+</tr>
 <tr>
-<td> Current
-</td>
-<td> &lt;50Ma
-</td></tr>
+<td>Current</td>
+<td>&lt;50Ma</td>
+</tr>
 <tr>
-<td> Operating range
-</td>
-<td> &gt;50mm(Depend on Card/Tag shape, manufacturer)
-</td></tr>
+<td>Operating range</td>
+<td>&gt;50mm(Depend on Card/Tag shape, manufacturer)</td>
+</tr>
 <tr>
-<td> Expand I/O port
-</td>
-<td> N/A
-</td></tr>
+<td>Expand I/O port</td>
+<td>N/A</td>
+</tr>
 <tr>
-<td> Indication light
-</td>
-<td> N/A
-</td></tr>
+<td>Indication light</td>
+<td>N/A</td>
+</tr>
 <tr>
-<td> Working temperature
-</td>
-<td> -10℃~ +70℃
-</td></tr>
+<td>Working temperature</td>
+<td>-10℃~ +70℃</td>
+</tr>
 <tr>
-<td> Storage temperature
-</td>
-<td> -20℃~ +80℃
-</td></tr>
+<td>Storage temperature</td>
+<td>-20℃~ +80℃</td>
+</tr>
 <tr>
-<td> Max. humidity
-</td>
-<td> Relative humidity 0 ~ 95%
-</td></tr>
+<td>Max. humidity</td>
+<td>Relative humidity 0 ~ 95%</td>
+</tr>
 <tr>
-<td> Size
-</td>
-<td> 38.5mm ×19mm×9mm
-</td></tr></table>
+<td>Size</td>
+<td>38.5mm ×19mm×9mm</td>
+</tr>
+</table>
 
 ##   Pin definition and Rating
 
 Look the image below(Mechanic Dimensions), and check the pin definition list here:
 
-<pre> Pin Definition :
- P1:
-   PIN1    TX
-   PIN2    RX
-   PIN3
-   PIN4    GND
-   PIN5    +5V(DC)
- P2:
-   PIN1    ANT1
-   PIN2    ANT2
- P3:
-   PIN1    LED
-   PIN2    +5V(DC)
-   PIN3    GND
+<pre>
+Pin Definition :
+P1:
+  PIN1    TX
+  PIN2    RX
+  PIN3
+  PIN4    GND
+  PIN5    +5V(DC)
+P2:
+  PIN1    ANT1
+  PIN2    ANT2
+P3:
+  PIN1    LED
+  PIN2    +5V(DC)
+  PIN3    GND
 </pre>
 
 ##   Mechanic Dimensions
@@ -128,14 +118,12 @@ Look the image below(Mechanic Dimensions), and check the pin definition list her
 2.  CHECKSUM: card 10byte DATA entire do XOR operation
 <table>
 <tr>
-<td width="100px"> 02
-</td>
-<td width="300px"> 10ASCII Data Characters
-</td>
-<td width="100px"> Chechsum
-</td>
-<td width="100px"> 03
-</td></tr></table>
+<td width="100px">02</td>
+<td width="300px">10ASCII Data Characters</td>
+<td width="100px">Chechsum</td>
+<td width="100px">03</td>
+</tr>
+</table>
 
 Example: card number: 62E3086CED
 

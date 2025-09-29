@@ -22,117 +22,107 @@ RePhone Lumi Kit is specially designed for LED lovers - embedding the Xadow GSM+
 <table>
 <tr>
 <td> Microcontroller </td>
-<td> MT2502
-</td></tr>
+<td> MT2502 </td>
+</tr>
 <tr>
 <td> MCU Core </td>
-<td> 32-bit ARM7EJ-STM RISC processor
-</td></tr>
+<td> 32-bit ARM7EJ-STM RISC processor </td>
+</tr>
 <tr>
 <td> RAM </td>
-<td> 4 MB
-</td></tr>
+<td> 4 MB </td>
+</tr>
 <tr>
 <td> Flash Memory </td>
-<td> 16 MB
-</td></tr>
+<td> 16 MB </td>
+</tr>
 <tr>
 <td> Power Supply </td>
-<td> 3.3 ~ 4.2V(no SIM)/3.5 ~ 4.2V(with SIM)
-</td></tr>
+<td> 3.3 ~ 4.2V(no SIM)/3.5 ~ 4.2V(with SIM) </td>
+</tr>
 <tr>
 <td> Power Consumption </td>
-<td> 20mW/30mW/52mW @ standby(no radio)/standby(GSM)/standby(BT)
-</td></tr>
+<td> 20mW/30mW/52mW @ standby(no radio)/standby(GSM)/standby(BT) </td>
+</tr>
 <tr>
 <td> Quad-band </td>
-<td> 850/900/1800/1900 MHz
-</td></tr>
+<td> 850/900/1800/1900 MHz </td>
+</tr>
 <tr>
 <td> GPRS </td>
-<td> Class 12 modem
-</td></tr>
+<td> Class 12 modem </td>
+</tr>
 <tr>
 <td> Clock Speed </td>
-<td> 260 MHz
-</td></tr>
+<td> 260 MHz </td>
+</tr>
 <tr>
 <td> Connectors </td>
-<td> 35 PIN Connector &amp; 11 PIN Connector for Xadow Modules; JST 1.0 Connector for the battery
-</td></tr>
+<td> 35 PIN Connector &amp; 11 PIN Connector for Xadow Modules; JST 1.0 Connector for the battery </td>
+</tr>
 <tr>
 <td> Interfaces </td>
-<td> LCD, Audio, I2C, SPI, UART, and GPIOs etc
-</td></tr>
+<td> LCD, Audio, I2C, SPI, UART, and GPIOs etc </td>
+</tr>
 <tr>
 <td> Dimensions </td>
-<td> 25.37mm × 20.30mm / 1” × 0.8”
-</td></tr></table>
+<td> 25.37mm × 20.30mm / 1" × 0.8" </td>
+</tr>
+</table>
 
 ###   Xadow Duino
 
 <table>
 <tr>
 <td> Microcontroller </td>
-<td> ATmega32u4
-</td></tr>
+<td> ATmega32u4 </td>
+</tr>
 <tr>
 <td> Power Supply </td>
-<td> 5V via USB, current draw is 1.5A at Max
-
-3.3 ~ 4.2V via battery socket, current draw is 1.5A at Max
-
-3.3 ~ 6V via breakout pins, current draw is 500 mA at Max
-
-3.3 ~ 4.2 V via Xadow GSM+BLE, current draw is 500 mA at Max
-
-</td></tr>
+<td> 5V via USB, current draw is 1.5A at Max 3.3 ~ 4.2V via battery socket, current draw is 1.5A at Max 3.3 ~ 6V via breakout pins, current draw is 500 mA at Max 3.3 ~ 4.2 V via Xadow GSM+BLE, current draw is 500 mA at Max </td>
+</tr>
 <tr>
 <td> Charging Current </td>
-<td> 500 mA
-</td></tr>
+<td> 500 mA </td>
+</tr>
 <tr>
 <td> Flash Memory </td>
-<td> 32 KB (ATmega32u4) of which 4 KB used by bootloader
-</td></tr>
+<td> 32 KB (ATmega32u4) of which 4 KB used by bootloader </td>
+</tr>
 <tr>
 <td> SRAM </td>
-<td> 2.5 KB (ATmega32u4)
-</td></tr>
+<td> 2.5 KB (ATmega32u4) </td>
+</tr>
 <tr>
 <td> EEPROM </td>
-<td> 1 KB (ATmega32u4)
-</td></tr>
+<td> 1 KB (ATmega32u4) </td>
+</tr>
 <tr>
 <td> Clock Speed </td>
-<td> 16 MHz
-</td></tr>
+<td> 16 MHz </td>
+</tr>
 <tr>
 <td> Connector </td>
-<td> 2 × 11 PIN Xadow Connector
-
-Bonding pads for RGB LED WS2812b
-
-</td></tr>
+<td> 2 × 11 PIN Xadow Connector Bonding pads for RGB LED WS2812b </td>
+</tr>
 <tr>
 <td> Interfaces </td>
-<td> Interface with Xadow GSM+BLE through
-
-I2C (7-bit address 0x23)
-
-</td></tr>
+<td> Interface with Xadow GSM+BLE through I2C (7-bit address 0x23) </td>
+</tr>
 <tr>
 <td> Dimensions </td>
-<td> 25.37mm × 20.30mm / 1”× 0.8”
-</td></tr></table>
+<td> 25.37mm × 20.30mm / 1"× 0.8" </td>
+</tr>
+</table>
 
 ###   Xadow GSM Breakout
 
 <table>
 <tr>
 <td> Dimensions </td>
-<td> 25.37mm × 20.30mm / 1” × 0.8”
-</td></tr></table>
+<td> 25.37mm × 20.30mm / 1" × 0.8" </td>
+</tr>
+</table>
 
 ##  Module Connection
 ---

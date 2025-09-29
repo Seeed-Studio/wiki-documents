@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/social-image.webp
 slug: /respeaker_2_mics_pi_hat_raspberry_v2
 last_update:
-  date: 12/11/2024
-  author: Joshua Lee
+  date: 04/18/2025
+  author: Jiahao
 ---
 
 :::caution
@@ -38,14 +38,62 @@ Raspberry Pi Zero Connection
 ### 2. Setup the driver on Raspberry Pi
 
 Make sure that you are running [the latest Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) on your Pi. *(updated at 2024.11.19)*
+<details>
+<summary style={{ color: 'red' }}>Prepare for Raspberry Pi Zero W</summary>
+
+```sh
+## Install kernel 
+sudo apt install flex bison libssl-dev bc build-essential libncurses5-dev libncursesw5-dev linux-headers-6.6.51+rpt-rpi-v6
+git clone --depth=1 --branch rpi-6.6.y https://github.com/raspberrypi/linux.git
+
+## Make target directory
+mkdir ~/tlv320aic3x_i2c_driver
+cd ~/tlv320aic3x_i2c_driver
+## Copy code
+cp ~/linux/sound/soc/codecs/tlv320aic3x.c ~/tlv320aic3x_i2c_driver/
+cp ~/linux/sound/soc/codecs/tlv320aic3x.h ~/tlv320aic3x_i2c_driver/
+cp ~/linux/sound/soc/codecs/tlv320aic3x-i2c.c ~/tlv320aic3x_i2c_driver/
+## Modify Makefile
+nano Makefile
+-------------------
+obj-m += snd-soc-tlv320aic3x-i2c.o
+snd-soc-tlv320aic3x-i2c-objs := tlv320aic3x.o tlv320aic3x-i2c.o
+
+KDIR := /lib/modules/$(shell uname -r)/build
+PWD := $(shell pwd)
+
+all:
+        $(MAKE) -C $(KDIR) M=$(PWD) modules
+
+clean:
+        $(MAKE) -C $(KDIR) M=$(PWD) clean
+
+install:
+        sudo cp snd-soc-tlv320aic3x-i2c.ko /lib/modules/$(shell uname -r)/kernel/sound/soc/codecs/
+        sudo depmod -a
+
+-------------------
+
+## Compile the driver 
+make
+sudo make install
+sudo modprobe snd-soc-tlv320aic3x-i2c
+
+## Check logs
+lsmod | grep tlv320
+dmesg | grep tlv320
+
+```
+
+</details>
 
 - Step 1: Get Device Tree Source (DTS) for the ReSpeaker 2-Mics Pi HAT (V2.0), compile it and install the device tree overlay.
 
 ```bash
-$ curl https://raw.githubusercontent.com/Seeed-Studio/seeed-linux-dtoverlays/refs/heads/master/overlays/rpi/respeaker-2mic-v2_0-overlay.dts -o respeaker-2mic-v2_0-overlay.dts
-$ dtc -I dts respeaker-2mic-v2_0-overlay.dts -o respeaker-2mic-v2_0-overlay.dtbo
-$ sudo dtoverlay respeaker-2mic-v2_0-overlay.dtbo
-$ sudo cp respeaker-2mic-v2_0-overlay.dtbo /boot/firmware/overlays
+curl https://raw.githubusercontent.com/Seeed-Studio/seeed-linux-dtoverlays/refs/heads/master/overlays/rpi/respeaker-2mic-v2_0-overlay.dts -o respeaker-2mic-v2_0-overlay.dts
+dtc -I dts respeaker-2mic-v2_0-overlay.dts -o respeaker-2mic-v2_0-overlay.dtbo
+sudo dtoverlay respeaker-2mic-v2_0-overlay.dtbo
+sudo cp respeaker-2mic-v2_0-overlay.dtbo /boot/firmware/overlays
 ```
 
 - Step 2: Edit `/boot/firmware/config.txt` and add the following lines:
@@ -55,12 +103,14 @@ dtoverlay=respeaker-2mic-v2_0-overlay
 dtoverlay=i2s-mmap
 ```
 
+> **Note:** If your kernel version is greater than 4.0, you don't need to add `dtoverlay=i2s-mmap`.
+
 ![config example](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/dtoverlays.png)
 
 - Step 3: Reboot your Pi.
 
 ```bash
-$ sudo reboot
+sudo reboot
 ```
 
 - Step 4: Check if the device is detected by `aplay` / `arecord`.
@@ -98,7 +148,7 @@ card 2: seeed2micvoicec [seeed2micvoicec], device 0: 1f000a4000.i2s-tlv320aic3x-
 `alsamixer` is a terminal user interface mixer program for the Advanced Linux Sound Architecture (ALSA) that is used to configure sound settings and adjust the volume.
 
 ```bash
-$ alsamixer
+alsamixer
 ```
 
 ![](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/alsamixer.png)
@@ -111,7 +161,7 @@ The Left and right arrow keys are used to select the channel or device and the U
 
 ## Usage overview
 
-To get started, clone <https://github.com/respeaker/mic_hat.git> repository to your Raspberry Pi.
+To get started, clone [https://github.com/respeaker/mic_hat.git](https://github.com/respeaker/mic_hat.git) repository to your Raspberry Pi.
 
 ```bash
 git clone https://github.com/respeaker/mic_hat.git
@@ -130,24 +180,25 @@ pip3 install -r requirements.txt
 To use the LEDs, you need enable SPI interface first. To enable SPI interface, open the Raspberry Pi software configuration tool:
 
 ```bash
-$ sudo raspi-config
+sudo raspi-config
 ```
 
 Choose "3 Interface Options" -> "I4 SPI" to enable SPI interface. Then reboot your Raspberry Pi.
 
 ```bash
-$ sudo reboot
+sudo reboot
 ```
 
 Each on-board APA102 LED has an additional driver chip. The driver chip takes care of receiving the desired color via its input lines, and then holding this color until a new command is received.
 
 ```bash
+cd mic_hat
 python3 interfaces/pixels.py
 ```
 
 <video width={512} height={384} controls preload>
-  <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.mp4" />
   <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.webmhd.webm" />
+  <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.mp4" />
 </video>
 
 ### User Button
@@ -204,6 +255,16 @@ on
 off
 ```
 
+:::note
+It does not work in a virtual environment, you need to exit it first:
+
+```bash
+deactivate
+python3 ~/button.py
+```
+
+:::
+
 ### Record sound with Python
 
 We use [PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) to record sound with Python.
@@ -211,6 +272,7 @@ We use [PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) to
 First, run the following script to get the device index number of ReSpeaker:
 
 ```bash
+cd mic_hit
 python3 recording_examples/get_device_index.py
 ```
 
@@ -252,11 +314,11 @@ Make sure to specify the right output device index in play.py - otherwise PyAudi
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

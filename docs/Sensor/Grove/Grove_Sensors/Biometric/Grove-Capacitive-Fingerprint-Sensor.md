@@ -50,10 +50,10 @@ The new sensors have updated internal algorithms to improve the accuracy of reco
 |Connector|Grove UART|
 |Sensor Resolution|508 DPI|
 |Sensor Pixel|160*160|
-|False Rejection Rate|<1%|
-|False Acceptance Rate|<0.005%|
-|Match Response Time(1:N Mode)|<350ms|
-|Match Response Time(1:1 Mode)|<7ms|
+|False Rejection Rate|&lt;1%|
+|False Acceptance Rate|&lt;0.005%|
+|Match Response Time(1:N Mode)|&lt;350ms|
+|Match Response Time(1:1 Mode)|&lt;7ms|
 |Sensor Size|Φ14.9mm|
 |Frame Size|Φ19mm|
 |Power Consumption|Full speed: ≤40 mA; Sleep: ≤12uA|
@@ -226,7 +226,7 @@ The library file may be updated. This code may not be applicable to the updated 
 
 - **Step 6.** Please put your finger on the touchpad.
 
-:::tipsuccess
+:::tip
 If every thing goes well, when you open the Serial Monitor, it may show as below:
 :::
 

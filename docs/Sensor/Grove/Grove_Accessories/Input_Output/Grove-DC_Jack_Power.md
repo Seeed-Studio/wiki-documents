@@ -54,8 +54,7 @@ Note that the DC - Jack Power Grove module is sold only as part of the above men
 
 ## Troubleshooting
 
-<dl><dt>If the on-board green LED does not light up when you turn ON the ON/OFF switch on the power module:
-</dt></dl>
+<dl><dt>If the on-board green LED does not light up when you turn ON the ON/OFF switch on the power module:</dt></dl>
 
 1. Check your batteries - they may have got discharged
 

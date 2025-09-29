@@ -25,7 +25,9 @@ With the development of the sound sensor, there emerges more and more creative a
 
 This unique "sound camera" is called SeeSV-S205, with an ordinary camera in the middle, but surrounded by sophisticated sound sensors, it can make shooting sound as simple as shooting light. You only need to hold it facing the sound source, and you can see the position of the sound source in the final image.
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/Sensor_sound/IMG/sound sensor.jpg" /><figcaption><b>Figure 1</b>. <i>SeeSV-S205 Sound Camera ( Image from SinaTech, 2013 )</i></figcaption>
+<div align="center">
+  <img src="https://files.seeedstudio.com/wiki/Sensor_sound/IMG/sound sensor.jpg" />
+  <figcaption><b>Figure 1</b>. <i>SeeSV-S205 Sound Camera ( Image from SinaTech, 2013 )</i></figcaption>
 </div>
 
 ### How does a sound sensor work
@@ -34,7 +36,9 @@ The sound sensor has a built-in condenser electret microphone that is sensitive 
 
 #### Sound & Light Interactive Cake
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/Sensor_sound/IMG/birthday cake.png" /><figcaption><b>Figure 2</b>. <i> Working principle of a Sound &amp; Light Interactive Cake  ( Image from Dfrobot, 2019 )</i></figcaption>
+<div align="center">
+  <img src="https://files.seeedstudio.com/wiki/Sensor_sound/IMG/birthday cake.png" />
+  <figcaption><b>Figure 2</b>. <i> Working principle of a Sound &amp; Light Interactive Cake  ( Image from Dfrobot, 2019 )</i></figcaption>
 </div>
 
 There is a black pickup head (MIC) on the sound sensor. When birthday song plays loudly in front of the black pickup head, the sound sensor can feel the vibration of the sound, which generates electrical signals, and lit up the lights on the cake.

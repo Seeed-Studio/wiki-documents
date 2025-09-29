@@ -50,30 +50,31 @@ New version updates output Hi Voltage from Approx. over 4.0V change to Approx ov
 ---
 
 <table>
-<tr>
-<th> Item </th>
-<th> Parameter
-</th></tr>
-<tr>
-<td width="200"> Sensor </td>
-<td width="300"> 5x IR reflectance sensors for line and edge following
-</td></tr>
-<tr>
-<td> Li-ion rechargeable battery </td>
-<td> 900 mAh
-</td></tr>
-<tr>
-<td>Gearmotor </td>
-<td> Two durable 160:1 micro metal gearmotors
-</td></tr>
-<tr>
-<td> Grove Port </td>
-<td> 6x Grove expansion ports
-</td></tr>
-<tr>
-<td>Shield header </td>
-<td> Arduino Shield Expansion Headers
-</td></tr></table>
+  <tr>
+    <th>Item</th>
+    <th>Parameter</th>
+  </tr>
+  <tr>
+    <td width="200">Sensor</td>
+    <td width="300">5x IR reflectance sensors for line and edge following</td>
+  </tr>
+  <tr>
+    <td>Li-ion rechargeable battery</td>
+    <td>900 mAh</td>
+  </tr>
+  <tr>
+    <td>Gearmotor</td>
+    <td>Two durable 160:1 micro metal gearmotors</td>
+  </tr>
+  <tr>
+    <td>Grove Port</td>
+    <td>6x Grove expansion ports</td>
+  </tr>
+  <tr>
+    <td>Shield header</td>
+    <td>Arduino Shield Expansion Headers</td>
+  </tr>
+</table>
 
 ## Charging Specification
 
@@ -81,30 +82,31 @@ New version updates output Hi Voltage from Approx. over 4.0V change to Approx ov
 <font color="red">Charge mode and charge efficiency as the following table:</font>
 
 <table>
-<tr>
-<th> Mode </th>
-<th> Charge Current(A) </th>
-<th> the input power(W) </th>
-<th>Charge power(W) </th>
-<th> Charge Efficiency(%) </th>
-<th>Charge time(h)
-</th></tr>
-<tr>
-<td width="200"> USB Charge  </td>
-<td width="200"> 0.396 </td>
-<td width="200"> 3.94  </td>
-<td width="200"> 3.56 </td>
-<td width="200"> 90.36 </td>
-<td width="200"> 2.50
-</td></tr>
-<tr>
-<td> Vin Charge  </td>
-<td>  0.7 </td>
-<td>   6.78   </td>
-<td>  6.30</td>
-<td>  92.92 </td>
-<td>   1.41
-</td></tr></table>
+  <tr>
+    <th>Mode</th>
+    <th>Charge Current(A)</th>
+    <th>the input power(W)</th>
+    <th>Charge power(W)</th>
+    <th>Charge Efficiency(%)</th>
+    <th>Charge time(h)</th>
+  </tr>
+  <tr>
+    <td width="200">USB Charge</td>
+    <td width="200">0.396</td>
+    <td width="200">3.94</td>
+    <td width="200">3.56</td>
+    <td width="200">90.36</td>
+    <td width="200">2.50</td>
+  </tr>
+  <tr>
+    <td>Vin Charge</td>
+    <td>0.7</td>
+    <td>6.78</td>
+    <td>6.30</td>
+    <td>92.92</td>
+    <td>1.41</td>
+  </tr>
+</table>
 
 ## Interface Function
 
@@ -137,41 +139,42 @@ The Shield Bot has lots of LEDs to show you whats going on!
 ![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/img/Shield_bot_1.2_LEDs.JPG)
 
 <table>
-<tr>
-<th> Light Numbers </th>
-<th> Function </th>
-<th> Status
-</th></tr>
-<tr>
-<td width="200"> D22 </td>
-<td> Power</td>
-<td> Green when Shieldbot is on. When ShieldBot is off, ShieldBot can only charge for battery.
-</td></tr>
-<tr>
-<td> D23 and D24  </td>
-<td> Charging status</td>
-<td> Red means charging, green means done charging.
-</td></tr>
-<tr>
-<td> D18 </td>
-<td> Reset</td>
-<td> Red if reset button is pressed.
-</td></tr>
-<tr>
-<td> D11 and D12  </td>
-<td> Right Motor Indicators </td>
-<td> Green means forwards, red means backwards, both means stopped.
-</td></tr>
-<tr>
-<td> D13 and D15   </td>
-<td> Left Motor Indicators  </td>
-<td> Green means forwards, red means backwards, both means stopped.
-</td></tr>
-<tr>
-<td> D5 D10 D14 D17 D19  </td>
-<td> Light Sensor Indicators  </td>
-<td> Blue if non reflective surface is detected (ex Black tape line).
-</td></tr></table>
+  <tr>
+    <th>Light Numbers</th>
+    <th>Function</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td width="200">D22</td>
+    <td>Power</td>
+    <td>Green when Shieldbot is on. When ShieldBot is off, ShieldBot can only charge for battery.</td>
+  </tr>
+  <tr>
+    <td>D23 and D24</td>
+    <td>Charging status</td>
+    <td>Red means charging, green means done charging.</td>
+  </tr>
+  <tr>
+    <td>D18</td>
+    <td>Reset</td>
+    <td>Red if reset button is pressed.</td>
+  </tr>
+  <tr>
+    <td>D11 and D12</td>
+    <td>Right Motor Indicators</td>
+    <td>Green means forwards, red means backwards, both means stopped.</td>
+  </tr>
+  <tr>
+    <td>D13 and D15</td>
+    <td>Left Motor Indicators</td>
+    <td>Green means forwards, red means backwards, both means stopped.</td>
+  </tr>
+  <tr>
+    <td>D5 D10 D14 D17 D19</td>
+    <td>Light Sensor Indicators</td>
+    <td>Blue if non reflective surface is detected (ex Black tape line).</td>
+  </tr>
+</table>
 
 ## Structure
 
@@ -270,81 +273,68 @@ To use the Shield Bot library simply add the Shield Bot library and declare a Sh
 Shieldbot shieldbot = Shieldbot(); //decares a Shieldbot object
 ```
 
-**<u> setMaxSpeed(int both)</u>**
+**<u>setMaxSpeed(int both)</u>**
 
-<dl><dd>_Description_: set max speed of two motors.
-</dd><dd>_both_:  between 0(basically off) and 255(full speed)
-</dd></dl>
+*Description*: set max speed of two motors.
+*both*: between 0(basically off) and 255(full speed)
 
 **<u>setMaxSpeed(int left, int right)</u>**
 
-<dl><dd>_Description_: Write a max speed to the left and right motor.
-</dd><dd>_left,right_: Left is the speed of the left motor. right is the speed of the right motor. between 0(basically off) and 255(full speed)
-</dd></dl>
+*Description*: Write a max speed to the left and right motor.
+*left,right*: Left is the speed of the left motor. right is the speed of the right motor. between 0(basically off) and 255(full speed)
 
 **<u>rightMotor(char mag)</u>**
 
-<dl><dd>_Description_: Enables the right motor, negative for backwards, positive for forwards. If you make one motor drive slower, it will turn in that direction. If you make the motors turn in opposite direction it will spin.
-</dd><dd>_mag_: the direction to spin the right motor; -128: backwards all the way, 0: donot move, 127: forwards all the way
-</dd></dl>
+*Description*: Enables the right motor, negative for backwards, positive for forwards. If you make one motor drive slower, it will turn in that direction. If you make the motors turn in opposite direction it will spin.
+*mag*: the direction to spin the right motor; -128: backwards all the way, 0: donot move, 127: forwards all the way
 
 **<u>leftMotor(char mag)</u>**
 
-<dl><dd>_Description_: Enables the left motor, negative for backwards, positive for forwards.
-</dd><dd>_mag_: the direction to spin the left motor; -128: backwards all the way, 0: donot move, 127: forwards all the way
-</dd></dl>
+*Description*: Enables the left motor, negative for backwards, positive for forwards.
+*mag*: the direction to spin the left motor; -128: backwards all the way, 0: donot move, 127: forwards all the way
 
 **<u>forward()</u>**
 
-<dl><dd>_Description_: Enables the motors to send the bot straight forward at the setSpeed().
-</dd></dl>
+*Description*: Enables the motors to send the bot straight forward at the setSpeed().
 
 **<u>backward()</u>**
 
-<dl><dd>_Description_: Enables the motors to send the bot straight backward at the setSpeed().
-</dd></dl>
+*Description*: Enables the motors to send the bot straight backward at the setSpeed().
 
 **<u>drive(char left, char right)</u>**
 
-<dl><dd>_Description_: All purpose drive call. Calls leftMotor and rightMotor directly.
-</dd><dd>_left_: between -128 (left motor backwards 100% of max speed), 0 (standing still), and 127 (left motor forwards 100% of max speed) :_right_: between -128 (right motor backwards 100% of max speed), 0 (standing still), and 127 (right motor forwards 100% of max speed)
-</dd></dl>
+*Description*: All purpose drive call. Calls leftMotor and rightMotor directly.
+*left*: between -128 (left motor backwards 100% of max speed), 0 (standing still), and 127 (left motor forwards 100% of max speed)
+*right*: between -128 (right motor backwards 100% of max speed), 0 (standing still), and 127 (right motor forwards 100% of max speed)
 
 **<u>stop()</u>**
 
-<dl><dd>_Description_: Disables the motors. You may also use drive(0,0).
-</dd></dl>
+*Description*: Disables the motors. You may also use drive(0,0).
 
 **<u>stopLeft()</u>**
 
-<dl><dd>_Description_: Disables the left motor. You may also use drive(0,X).
-</dd></dl>
+*Description*: Disables the left motor. You may also use drive(0,X).
 
 **<u>stopRight()</u>**
 
-<dl><dd>_Description_: Disables the right motor. You may also use drive(X,0).
-</dd></dl>
+*Description*: Disables the right motor. You may also use drive(X,0).
 
 **<u>fastStop()</u>**
 
-<dl><dd>_Description_: Disables the right motor. You may also use drive(X,0).
-</dd></dl>
+*Description*: Disables the right motor. You may also use drive(X,0).
 
 **<u>fastStopLeft()</u>**
 
-<dl><dd>_Description_: Disables the left motor quicker. This is considered possibly bad for the motor chip so use at your discretion
-</dd></dl>
+*Description*: Disables the left motor quicker. This is considered possibly bad for the motor chip so use at your discretion
 
 **<u>fastStopRight()</u>**
 
-<dl><dd>_Description_:  Disables the right motor quicker. This is considered possibly bad for the motor chip so use at your discretion
-</dd></dl>
+*Description*:  Disables the right motor quicker. This is considered possibly bad for the motor chip so use at your discretion
 
 **<u>readS1(), readS2(), readS3(), readS4(), readS5()</u>**
 
-<dl><dd>_Description_: Reads any of the 5 light sensors on board. NOTE you NEED to connect the sensors to the arduino ports using the dip switch block (switches TOWARDS the numbers and ON text) These switches would otherwise allow you to use those pins for other things if you didn't want to use your light sensors
-</dd><dd>_Returns_: LOW if the surface reflects (ex. white) and HIGH if the surface doesn't reflect anything (ex BLACK)
-</dd></dl>
+*Description*: Reads any of the 5 light sensors on board. NOTE you NEED to connect the sensors to the arduino ports using the dip switch block (switches TOWARDS the numbers and ON text) These switches would otherwise allow you to use those pins for other things if you didn't want to use your light sensors
+*Returns*: LOW if the surface reflects (ex. white) and HIGH if the surface doesn't reflect anything (ex BLACK)
 
 ![](https://files.seeedstudio.com/wiki/Shield_Bot_V1.1/img/ShieldBot_driveLibrary.png)
 

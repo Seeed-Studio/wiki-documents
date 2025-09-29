@@ -2,6 +2,7 @@
 description: Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Studio is dedicated to realizing interactive digital replica of our physical world. This website is an open source platform with a collection of all wikis currently published by Seeed Studio and updated weekly to showcase our product range and research, which includes digitalisation of the natural environment.
 title: Getting Started with Seeed Studio Wiki Platform
 image: https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg
+slug: /Getting_Started
 last_update:
   date: 08/30/2024
   author: Matthew
@@ -9,11 +10,11 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" alt="pir" width={1000} height="auto" /></p>
 
-## Seeed Studio 
+## Seeed Studio
 
 Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Studio is dedicated to realizing interactive digital replica of our physical world. This website is an open source platform with a collection of all wikis currently published by Seeed Studio and updated weekly to showcase our product range and research, which includes digitalisation of the natural environment.
 
-<!-- We here also present you our current accomplishments and <strong><a href="/Solutions"><span><font color={'8DC215'} size={"4"}>  Solution </font></span></a></strong> and we are looking for your contributions. -->
+{/*We here also present you our current accomplishments and <strong><a href="/Solutions"><span style={{color: '8DC215', fontSize: '1.2em'}}>  Solution </span></a></strong> and we are looking for your contributions.*/}
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/showcase2.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -21,128 +22,125 @@ Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Stud
 
 - This platform will focus on main topics as shown in the sidebar, with up-to-date information on all of our products.
 
-  - <strong><a href="/Sensor_Network"><span><font color={'8DC215'} size={"4"}> Sensors and Sensing</font></span></a></strong>
-  - <strong><a href="/Network"><span><font color={'8DC215'} size={"4"}> Networking</font></span></a></strong>
-  - <strong><a href="/Edge_Computing"><span><font color={'8DC215'} size={"4"}>  Edge Computing </font></span></a></strong>
-  - <strong><a href="/Cloud"><span><font color={'8DC215'} size={"4"}>  Cloud Services</font></span></a></strong>
-  - <strong><a href="/topicintroduction"><span><font color={'8DC215'} size={"4"}>Technology Topics</font></span></a></strong>
-  - <strong><a href="/Contributor"><span><font color={'8DC215'} size={"4"}> Contributor Program</font></span></a></strong>
-  - <strong><a href="/weekly_wiki"><span><font color={'8DC215'} size={"4"}> Weekly Wiki </font></span></a></strong>
+  - <strong><a href="/Sensor_Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> Sensors and Sensing</span></a></strong>
+  - <strong><a href="/Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> Networking</span></a></strong>
+  - <strong><a href="/Edge_Computing"><span style={{color: '8DC215', fontSize: '1.2em'}}>  Edge Computing </span></a></strong>
+  - <strong><a href="/Cloud"><span style={{color: '8DC215', fontSize: '1.2em'}}>  Cloud Services</span></a></strong>
+  - <strong><a href="/topicintroduction"><span style={{color: '8DC215', fontSize: '1.2em'}}>Technology Topics</span></a></strong>
+  - <strong><a href="/Contributor"><span style={{color: '8DC215', fontSize: '1.2em'}}> Contributor Program</span></a></strong>
+  - <strong><a href="/weekly_wiki"><span style={{color: '8DC215', fontSize: '1.2em'}}> Weekly Wiki </span></a></strong>
 
 - You will be able to find detailed documentation of our products for **practical usage** and **troubleshooting**, industrial IoT scenarios, as well as guides on open development tools to help you get started on your own projects.
 
-
-
 ## Sensing and Data Communicating
 
-<div class="all_container">
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#industrial-sensors-and-probes" class="getting_started_label2">SenseCAP Industrial Sensors</a>
+<div className="all_container">
+  <div className="getting_started">
+      <div className="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#industrial-sensors-and-probes" className="getting_started_label2">SenseCAP Industrial Sensors</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#data-logger-with-configuration-guide" class="getting_started_label2"> - Data Logger</a>
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#data-logger-with-configuration-guide" className="getting_started_label2"> - Data Logger</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#gateway-for-multiple-platform" class="getting_started_label2"> - Gateway </a>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#routers-for-other-network-infrastructure" class="getting_started_label2"> - Routers </a>
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#gateway-for-multiple-platform" className="getting_started_label2"> - Gateway </a>
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#routers-for-other-network-infrastructure" className="getting_started_label2"> - Routers </a>
       </div>
   </div>
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#grove-ecosystem-sensors" class="getting_started_label2">Grove Entry-level Sensors</a>
+  <div className="getting_started">
+      <div className="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#grove-ecosystem-sensors" className="getting_started_label2">Grove Entry-level Sensors</a>
           <br/>          <br/>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#grove-communication-modules" class="getting_started_label2">Grove Network Modules </a>
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#grove-communication-modules" className="getting_started_label2">Grove Network Modules </a>
       </div>
   </div>
 </div>
 
 ## Computing Devices, Boards and Modules
 
-<div class="all_container">
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#devices" class="getting_started_label2">Devices</a>
+<div className="all_container">
+  <div className="getting_started">
+      <div className="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#devices" className="getting_started_label2">Devices</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#os-installation--firmware-updating" class="getting_started_label3">> OS Installation and Firmware Updating</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#os-installation--firmware-updating" className="getting_started_label3">> OS Installation and Firmware Updating</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#extensions--carrier-board" class="getting_started_label3">- Carrier Boards</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#extensions--carrier-board" className="getting_started_label3">- Carrier Boards</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#application--software" class="getting_started_label3">- Application / Software</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#application--software" className="getting_started_label3">- Application / Software</a>
       </div>
   </div>
 </div>
 
-<div class="all_container">
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#microcontrollers" class="getting_started_label2">Microcontrollers</a>
+<div className="all_container">
+  <div className="getting_started">
+      <div className="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#microcontrollers" className="getting_started_label2">Microcontrollers</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#easy-iot-applications" class="getting_started_label3">> Easy IoT Applications</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#easy-iot-applications" className="getting_started_label3">> Easy IoT Applications</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#embedded-ml-scenarios" class="getting_started_label3">> Embedded ML Scenarios</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#embedded-ml-scenarios" className="getting_started_label3">> Embedded ML Scenarios</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#extensions" class="getting_started_label3">- Extensions</a>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#accessories" class="getting_started_label3">- Accessories</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#extensions" className="getting_started_label3">- Extensions</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#accessories" className="getting_started_label3">- Accessories</a>
       </div>
   </div>
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#single-board-computers" class="getting_started_label2">Single Board Computers</a>
+  <div className="getting_started">
+      <div className="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#single-board-computers" className="getting_started_label2">Single Board Computers</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#os-installation--firmware-updating-1" class="getting_started_label3">> OS Installation and Firmware Updating</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#os-installation--firmware-updating-1" className="getting_started_label3">> OS Installation and Firmware Updating</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#extensions-1" class="getting_started_label3">- Extensions</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#extensions-1" className="getting_started_label3">- Extensions</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#application--software-1" class="getting_started_label3">- Application / Software</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#application--software-1" className="getting_started_label3">- Application / Software</a>
       </div>
   </div>
 </div>
-
 
 ## Kit with Courses
 
-<div class="all_container">
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses" class="getting_started_label2">Kit with Microcontrollers</a>
+<div className="all_container">
+  <div className="getting_started">
+      <div className="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses" className="getting_started_label2">Kit with Microcontrollers</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#tutorials" class="getting_started_label3">- Demos provided</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#tutorials" className="getting_started_label3">- Demos provided</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses" class="getting_started_label3">- Along with free courses</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses" className="getting_started_label3">- Along with free courses</a>
       </div>
   </div>
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses-1" class="getting_started_label2">Kit with Single Board Computers</a>
+  <div className="getting_started">
+      <div className="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses-1" className="getting_started_label2">Kit with Single Board Computers</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#tutorials--faq" class="getting_started_label3">- Demos provided</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#tutorials--faq" className="getting_started_label3">- Demos provided</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses-1" class="getting_started_label3">- Along with free courses</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses-1" className="getting_started_label3">- Along with free courses</a>
       </div>
   </div>
 </div>
 
 ## Cloud Services
 
-<div class="all_container">
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-cloud-production" class="getting_started_label2">SenseCAP Cloud</a>
+<div className="all_container">
+  <div className="getting_started">
+      <div className="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-cloud-production" className="getting_started_label2">SenseCAP Cloud</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-ai" class="getting_started_label2">SenseCAP AI</a>
-          <br/><a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-hotspot-app" class="getting_started_label3">HotSpot APP</a>,
-          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-mate-app" class="getting_started_label3">Mate APP</a>,
-          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-api" class="getting_started_label3">SenseCAP API</a>
+          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-ai" className="getting_started_label2">SenseCAP AI</a>
+          <br/><a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-hotspot-app" className="getting_started_label3">HotSpot APP</a>,
+          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-mate-app" className="getting_started_label3">Mate APP</a>,
+          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-api" className="getting_started_label3">SenseCAP API</a>
       </div>
   </div>
 </div>
 
 ### Browser-based AI Solution
 
-<strong><a href="https://sensecraft.seeed.cc/ai/#/model"><span><font color={'8DC215'} size={"4"}>Saying goodbye to complex configurations and coding!</font></span></a></strong>
+<strong><a href="https://sensecraft.seeed.cc/ai/#/model"><span style={{color: '8DC215', fontSize: '1.2em'}}>Saying goodbye to complex configurations and coding!</span></a></strong>
 
 ![](https://sensecraft.seeed.cc/wp-content/uploads/2023/11/%E5%88%87%E5%9B%BE-139@2x.png)
 
-## ✨ Contributor Program ✨ 
+## ✨ Contributor Program ✨
 
 In Seeed, we greatly value our community of Seeeders. The Seeed Studio Contributor Program is a collaborative program launched to unite our dear friends from all over the world and co-build innovative solutions together.
 
@@ -160,7 +158,7 @@ We will continue launch our projects wanted, or our contributors presented(sugge
 
 ### More Introduction
 
-<strong><a href="/Contributor"><span><font color={'8DC215'} size={"4"}>Discover more about the Contributor Program by clicking here!</font></span></a></strong>
+<strong><a href="/Contributor"><span style={{color: '8DC215', fontSize: '1.2em'}}>Discover more about the Contributor Program by clicking here!</span></a></strong>
 
 ## Weekly Wiki
 
@@ -172,14 +170,14 @@ We will continue launch our projects wanted, or our contributors presented(sugge
 
 Thank you for choosing our products! We provide many forms of support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+<div className="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
 </div>
 
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div className="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
 </div>
 
 ## Socials

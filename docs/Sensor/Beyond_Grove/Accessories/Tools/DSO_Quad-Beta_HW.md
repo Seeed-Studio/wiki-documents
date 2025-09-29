@@ -35,15 +35,13 @@ You can find the product page for the beta device [here: TES101D2P](https://www.
 
 1. If this is a beta run, will the device be firmware upgradable (via USB) when and if bugs are found?
 
-<dl><dd> Sure, just copy the firmware onto internal USB disk, press "&gt;" while booting up to upgrade.
-</dd></dl>
+<dl><dd> Sure, just copy the firmware onto internal USB disk, press "&gt;" while booting up to upgrade.</dd></dl>
 
 2. If hardware bugs are found, how is that handled? Return beta product for a production one? We will test and ensure major functions of each unit. You may send us back for a production one, but need to cover the freight and price difference. Please understand the risk of beta test.
 
 3. There are two statements in regards to Beta shipping, one in March and the other Jan 20th. Which one is correct?
 
-<dl><dd> Due to component shortage and bug observed, we need to have another revision for beta batch. They will be shipped late Feb or early March.
-</dd></dl>
+<dl><dd> Due to component shortage and bug observed, we need to have another revision for beta batch. They will be shipped late Feb or early March.</dd></dl>
 
 4. Even if this is a beta, you are selling 300 copies so you should put some time in the documentation, and at least sell a working product (YOU DON'T THINK it is enough reliable to put at least a 3 month to 1 year warranty???) I'm not going to buy something you don't even trust!
 
@@ -53,13 +51,11 @@ You can find the product page for the beta device [here: TES101D2P](https://www.
 
 6. What are the user applications?
 
-<dl><dd><span style={{color: 'red'}}>[No official answer]</span>As far as I know, there will be the possibility to boot up different applications that you can store on the U-Disk. I'll add a section to this page collecting ideas for user applications.
-</dd></dl>
+<dl><dd><span style={{color: 'red'}}>[No official answer]</span>As far as I know, there will be the possibility to boot up different applications that you can store on the U-Disk. I'll add a section to this page collecting ideas for user applications.</dd></dl>
 
 7. What is the battery life?
 
-<dl><dd> 8 hours continuous working on 60% LCD brightness. Auto display off on 5 minutes, adjustable in later firmwares.
-</dd></dl>
+<dl><dd> 8 hours continuous working on 60% LCD brightness. Auto display off on 5 minutes, adjustable in later firmwares.</dd></dl>
 
 ## see also
 

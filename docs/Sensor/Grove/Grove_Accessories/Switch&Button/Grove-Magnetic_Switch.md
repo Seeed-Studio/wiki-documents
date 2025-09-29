@@ -321,7 +321,7 @@ If this is your first time using Codecraft, see also [Guide for Codecraft using 
 
 Upload the program to your Arduino/Seeeduino.
 
-:::tipsuccess
+:::tip
 When the code finishes uploaded, move the magnet close to the magnetic switch and you will see the LED on the Arduino 13 pin turns on.
 :::
 

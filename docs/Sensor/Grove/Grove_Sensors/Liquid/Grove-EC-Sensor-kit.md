@@ -13,33 +13,32 @@ last_update:
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/img/110020292.01.png) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/img/110020292.01.png" alt="pir" width={600} height="auto" /></p>
 
-
 <!-- <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-EC-Sensor-Kit-DJS-1C-Black-p-4576.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p>  -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-EC-Sensor-Kit-DJS-1C-Black-p-4576.html)
 With the development of technology,our environments  face large challenge.We need a tool to preliminary test whether the water quality
 are reach the standard.Grove EC Sensor is a analog electrical conductivity meter.The electrical conductivity sensor (EC sensor) measures the electrical conductivity in a solution which usually used for aquaculture and water quality testing. The Grove - Electrical Conductivity Sensor is specially designed for a low-cost system with a relatively high accuracy which can cover most applications. The Grove connector and BNC probe interface make it easy to use and very suitable for Arduino and Raspberry Pi project. This Kit includes an EC probe and a driver board, and the driver board support both 3.3V and 5V system.
 
-
-
 :::note
     This product is non-RoHS certified.
 :::
+
 ## Feature
 
-- Widely used for most applications of aquaculture and water quality testing   
+- Widely used for most applications of aquaculture and water quality testing
 - Compact size for easy deployment  
-- Support with both Arduino and Rasberry Pi 
+- Support with both Arduino and Rasberry Pi
 - Cost-effective
 
 ## Specification
+
 |Items|Values|
 |---|---|
-|Operating voltage	|3.3V/5V|
-|EC Range	|0-2000us/cm|
-|Resolution	|±5%（STP）|
-|Response time	|＜10sec|
-|Probe Interface|	BNC|
-|Operating temperature	|5-80℃|
+|Operating voltage |3.3V/5V|
+|EC Range |0-2000us/cm|
+|Resolution |±5%（STP）|
+|Response time |＜10sec|
+|Probe Interface| BNC|
+|Operating temperature |5-80℃|
 
 ## Platform Supported
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
@@ -58,7 +57,6 @@ are reach the standard.Grove EC Sensor is a analog electrical conductivity meter
 |<p><img src="https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/img/arduinouno.png" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/img/110020292.09.png" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/img/110020292.06.png" alt="pir" width={600} height="auto" /></p>
 |[Get ONE Now](https://www.seeedstudio.com/Arduino-Uno-Rev3-p-694.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-EC-Sensor-Kit-DJS-1C-Black-p-4576.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2.html)|
 
-
 #### Hardware Connection
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/img/hardware.jpg) -->
@@ -74,14 +72,11 @@ are reach the standard.Grove EC Sensor is a analog electrical conductivity meter
 
 - **Step 5.** Run the code and the outcome will display on the screen of **Serial Monitor** in your Arduino IDE.
 
-
 #### Software
 
 :::note
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
-
-
 
 - **Step 1.** Download the [Demo code](https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/res/DFRobot_EC_master.zip).
 
@@ -89,13 +84,13 @@ are reach the standard.Grove EC Sensor is a analog electrical conductivity meter
 
 - **Step 3.** Open the **DFRobot_EC_Test** example file with your Arduino IDE.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/img/110020292.07.png) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/img/110020292.07.png" alt="pir" width={600} height="auto" /></p>
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 #### Software Code
+
 ```cpp
 #include "DFRobot_EC.h"
 #include <EEPROM.h>
@@ -135,7 +130,6 @@ float readTemperature()
 }
 ```
 
-
 :::note
 
      - Before detecting the target solution, the sensor **MUST** be calibrated by conductivity solutions, and it also **MUST** be put into clean water before detecting a new kind of solution and swiped.
@@ -155,7 +149,6 @@ To ensure accuracy, the probe needs to be calibrated for its first use and after
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/img/110020292.02.png" alt="pir" width={600} height="auto" /></p>
 - **Step 6.** Use distilled water to wash the probe ,then absorb the residual water-drops with paper. Insert the probe into the 1413us/cm standard buffer solution, stir gently, until the values are stable. Input enterec command in the serial monitor to enter the calibration mode.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/img/110020292.03.png) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/img/110020292.03.png" alt="pir" width={600} height="auto" /></p>
 - **Step 7.** Input calec commands to start the calibration. The program will automatically identify which of the two standard buffer solutions is present: either 1413us/cm and 12.88ms/cm. In this step, the standard buffer solution is 1413us/cm.
@@ -171,12 +164,10 @@ After you finished the above steps, the first point calibration is completed. Th
 
 After completing the above steps, the two-point calibration is completed, and then it can be used for actual measurement. The relevant parameters in the calibration process have been saved to the EEPROM of the main control board.
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/Grove-EC_Sensor_v1.0_SCH&PCB.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 ## Resources
 
@@ -186,14 +177,15 @@ After completing the above steps, the two-point calibration is completed, and th
 - **[PDF]** [LMV324 Material specification](https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/res/LMV324_Material_specification.pdf)
 
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

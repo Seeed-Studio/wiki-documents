@@ -15,12 +15,10 @@ last_update:
 
 # Getting started with 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6 (MR60FDA2)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:'auto', height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60fda2.jpg" style={{width:500, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html?utm_source=wiki">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div><br />
 
 Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide cutting-edge monitoring solutions for both fall detection and [heartbeat](https://wiki.seeedstudio.com/getting_started_with_mr60bha2_mmwave_kit/) monitoring. Powered by the robust XIAO ESP32 microcontroller with built-in Wi-Fi and Bluetooth connectivity, these modules offer precise and reliable detection capabilities. Whether you need to monitor falls in real-time or track heartbeats with sensitive accuracy, our modules are equipped with state-of-the-art technology, including customizable RGB LEDs and ambient light sensing. With easy expansion options through Grove GPIO ports, these versatile modules are perfect for a wide range of applications, from smart home integration to healthcare monitoring.
@@ -116,7 +114,7 @@ Once your board is set up, proceed with the following steps:
    - Download the [Seeed mmWave library](https://github.com/Love4yzp/Seeed-mmWave-library) from GitHub.
 
   <div class="github_container" style={{textAlign: 'center'}}>
-      <a class="github_item" href="https://github.com/Love4yzp/Seeed-mmWave-library">
+      <a class="github_item" href="https://github.com/Love4yzp/Seeed-mmWave-library" target="_blank" rel="noopener noreferrer">
       <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
       </a>
   </div>
@@ -521,8 +519,7 @@ This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sens
   - Initializes the sensor for communication, setting up the serial connection between the XIAO board and the MR60FDA2 sensor.
 
 - **`mmWave.setInstallationHeight(float height)`**:
-  - Sets the installation height of the radar, which is crucial for accurate fall detection. The `height` parameter specifies the height (in meters) at which the sensor is installed, initialization
-setting parameters is `2.2 m`, with a valid range typically between 1 and 5 meters.
+  - Sets the installation height of the radar, which is crucial for accurate fall detection. The `height` parameter specifies the height (in meters) at which the sensor is installed, initialization setting parameters is `2.2 m`, with a valid range typically between 1 and 5 meters.
 
 - **`mmWave.setThreshold(float threshold)`**:
   - Sets the fall detection threshold. The default fall threshold of the radar is `0.6 m`. This value determines the sensitivity of the radar in terms of detecting falls based on the height and distance from the sensor.
@@ -540,6 +537,12 @@ setting parameters is `2.2 m`, with a valid range typically between 1 and 5 mete
   - Determines whether a fall has been detected. This function returns `true` if a fall is detected and `false` if not.
 
 ## Module firmware upgrade
+
+:::caution
+Modifying the radar firmware is a risky operation, so be sure to read this section carefully before following each step carefully. Please be aware that if a step is not performed correctly, the Radar may become bricked or unusable.
+
+**Special note, if you purchased the Radar MR60BHA2, please do not flash the firmware illegally by the following way, it will surely brick your device!!!!**
+:::
 
 First, connect the XIAO ESP32C6 and MR60FDA2 modules together. Then use the following code to program XIAO.
 
@@ -613,7 +616,7 @@ Then you need to download and unzip the OTA tool and the firmware here.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware-update/5-module-enter-upgrade-mode.png" style={{width:700, height:'auto'}}/></div>
 
-4. Select the firmware to be upgraded. After selection, it will automatically enter the upgrade state. 
+4. Select the firmware to be upgraded. After selection, it will automatically enter the upgrade state.
 
 After the upgrade is completed, it will automatically jump to normal mode. If it does not jump, power off and restart, and then use OTA tool to view the serial port data.
 
@@ -627,11 +630,19 @@ After the upgrade is completed, it will automatically jump to normal mode. If it
 
 6. You need to re-flash the firmware of XIAO ESP32C6 after the upgrade is completed.
 
+:::tip
+If in the above steps you have operated incorrectly causing an anomaly to occur and have been unable to try to burn the firmware again and the radar is not working properly, then the radar may have suffered a brick due to corrupted firmware. The only way to try to recover the device is to refer to the files and documentation **[here](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)**. However, please understand that we do not provide technical support and assistance for the device bricked due to incorrect operation.
+:::
+
 ## Open for Customization
 
 Want to tailor-make the kit to fit your unique applications?
 
-For more information about 3D point cloud data generation and interference zone configuration when customizing mmWave modules. Seeed provides one-stop R&D customization and manufacturing services for fast development from concept to production. Contact us at <iot@seeed.cc> to learn more.
+For more information about 3D point cloud data generation and interference zone configuration when customizing mmWave modules. Seeed provides one-stop R&D customization and manufacturing services for fast development from concept to production. Contact us at [iot@seeed.cc](mailto:iot@seeed.cc) to learn more.
+
+:::danger Customised Service Description
+The firmware and algorithms of the radar are not open source, and complex parameters of the radar such as fall height settings, mounting position settings, etc. require customised services, which may involve additional customisation fees and MOQs.
+:::
 
 ## Resources
 
@@ -644,6 +655,7 @@ For more information about 3D point cloud data generation and interference zone 
 - **mmWave Sensor SCH V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
 - **MR60FDA2 Module Technical Specification**: [MR60FDA2_Fall_Detection_Module_Datasheet.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/MR60FDA2_Fall_Detection_Module_Datasheet.pdf)
 - **MR60FDA2 Tiny Frame Interface Manual**: [Seeed_Studio_TinyFrame_Interface_Fall_detection_V1.1.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_TinyFrame_Interface_Fall_detection_V1.1.pdf)
+- **Radar Firmware Recovery Method via Jlink**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
 
 ## Tech Support & Product Discussion
 

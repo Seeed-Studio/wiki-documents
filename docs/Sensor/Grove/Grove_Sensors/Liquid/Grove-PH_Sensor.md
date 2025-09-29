@@ -41,63 +41,49 @@ Only domestic order will be valid. Do not place an order if your address isn't i
 
 ---
 <center>
-<table  cellspacing="0" width="80%">
+<table cellspacing="0" width="80%">
 <tr>
-<th scope="col"> Item
-</th>
-<th scope="col"> Typical
-</th>
-<th scope="col"> Units
-</th></tr>
+<th scope="col">Item</th>
+<th scope="col">Typical</th>
+<th scope="col">Units</th>
+</tr>
 <tr>
-<th scope="row"> Working Voltage
-</th>
-<td> 5
-</td>
-<td> V
-</td></tr>
+<th scope="row">Working Voltage</th>
+<td>5</td>
+<td>V</td>
+</tr>
 <tr>
-<th scope="row"> Isopotential point
-</th>
-<td> 7±0.5
-</td>
-<td> pH
-</td></tr>
+<th scope="row">Isopotential point</th>
+<td>7±0.5</td>
+<td>pH</td>
+</tr>
 <tr>
-<th scope="row"> Measure Range
-</th>
-<td> 0~14
-</td>
-<td> pH
-</td></tr>
+<th scope="row">Measure Range</th>
+<td>0~14</td>
+<td>pH</td>
+</tr>
 <tr>
-<th scope="row"> pH Sensor Output Range
-</th>
-<td> -414.12 ~ 414.12
-</td>
-<td> mV
-</td></tr>
+<th scope="row">pH Sensor Output Range</th>
+<td>-414.12 ~ 414.12</td>
+<td>mV</td>
+</tr>
 <tr>
-<th scope="row"> Measure Accuracy
-</th>
-<td> &lt;15
-</td>
-<td> mV
-</td></tr>
+<th scope="row">Measure Accuracy</th>
+<td>&lt;15</td>
+<td>mV</td>
+</tr>
 <tr>
-<th scope="row"> Response Time
-</th>
-<td> &lt;2
-</td>
-<td> min
-</td></tr>
+<th scope="row">Response Time</th>
+<td>&lt;2</td>
+<td>min</td>
+</tr>
 <tr>
-<th scope="row"> Temperature Range
-</th>
-<td> 0~60
-</td>
-<td> ℃
-</td></tr></table></center>
+<th scope="row">Temperature Range</th>
+<td>0~60</td>
+<td>℃</td>
+</tr>
+</table>
+</center>
 
 ## Schematic
 
@@ -134,7 +120,7 @@ void loop()
     int sensorValue;
     int m;
     long sensorSum;
-    for(m=0;m&lt;50;m++)
+    for(m=0;m<50;m++)
     {
         sensorValue=analogRead(A0);//Connect the PH Sensor to A0 port
         sensorSum += sensorValue;

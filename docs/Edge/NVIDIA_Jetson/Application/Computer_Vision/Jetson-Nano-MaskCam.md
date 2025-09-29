@@ -197,7 +197,7 @@ If you see a ```ConnectionError``` in the frontend, wait a couple more seconds a
 
 ![](https://files.seeedstudio.com/wiki/Jetson-Nano-MaskCam/tu7.png)
 
-If you wait a couple more seconds and reload the page but it is still a ```ConnectionError``` in the frontend, please make sure the ports: <5432> and <80> are not being occupied or listened up.
+If you wait a couple more seconds and reload the page but it is still a ```ConnectionError``` in the frontend, please make sure the ports: `5432` and `80` are not being occupied or listened up.
 
 If you visit the frontend webpage successfully the first time but failed the next, the best way to solve it currently is to re-install docker.
 
@@ -226,12 +226,11 @@ Finally, you can see the data collected by Jetson Nano transmitting to the Serve
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

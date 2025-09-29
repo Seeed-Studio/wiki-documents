@@ -36,6 +36,7 @@ mkdir jp5 && cd jp5
 wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v5.0/release/jetson_linux_r35.5.0_aarch64.tbz2
 wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v5.0/release/tegra_linux_sample-root-filesystem_r35.5.0_aarch64.tbz2
 ```
+
 :::note
 Where `<root_dir>` is the root directory of the project.
 :::
@@ -43,7 +44,6 @@ Where `<root_dir>` is the root directory of the project.
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/ota/bsp_jp5.png"/>
 </div>
-
 
 ### 1.2 Build System Image of JP5.1.3
 
@@ -127,7 +127,6 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 2 Generate the OTA Package of JP6.0
 
-
 ### 2.1 Prepare the BSP
 
 You need to open a terminal window on the **host PC** and execute the following command to download the NVIDIA Jetpack 6.0 version BSP.
@@ -173,7 +172,6 @@ sudo BASE_BSP=<root_dir>/jp5/Linux_for_Tegra ./tools/ota_tools/version_upgrade/l
 
 After the command finished. You will get the `ota_payload_package.tar.gz` in Linux_for_Tegra/bootloader/jetson-orin-nano-devkit.
 
-
 ## 3 Apply OTA Package on Device
 
 ### 3.1 Prepare work
@@ -189,6 +187,7 @@ tar xf ota_tools_R36.3.0_aarch64.tbz2
 ```
 
 ### 3.2 Apply OTA
+
 ```bash
 cd ~/Linux_for_Tegra/tools/ota_tools/version_upgrade
 sudo ./nv_ota_start.sh /ota/ota_payload_package.tar.gz
@@ -198,17 +197,16 @@ After this command finished successfully. Reboot the device.
 
 Finally, the device upgrade from 5.1.3 to 6.0 successfully.
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -64,46 +64,41 @@ Performance to show:
 ![](https://files.seeedstudio.com/wiki/DC_framework_solenoid_HCNE1-0520/img/HCNE1-0520-3-.jpg)
 
 <table>
-  <tbody><tr>
-      <th>No.
-      </th>
-      <th>Name
-      </th></tr>
+  <tbody>
+    <tr>
+      <th>No.</th>
+      <th>Name</th>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td width={150}> 1
-      </td>
-      <td width={150}>  Fixed framework
-      </td></tr>
+      <td width={150}> 1</td>
+      <td width={150}>  Fixed framework</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td width={150}> 2
-      </td>
-      <td width={150}>  Cover
-      </td></tr>
+      <td width={150}> 2</td>
+      <td width={150}>  Cover</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td width={150}> 3
-      </td>
-      <td width={150}>  Movable core
-      </td></tr>
+      <td width={150}> 3</td>
+      <td width={150}>  Movable core</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td width={150}> 4
-      </td>
-      <td width={150}>  Fixed core
-      </td></tr>
+      <td width={150}> 4</td>
+      <td width={150}>  Fixed core</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td width={150}> 5
-      </td>
-      <td width={150}>  Solenoid axis
-      </td></tr>
+      <td width={150}> 5</td>
+      <td width={150}>  Solenoid axis</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td width={150}> 6
-      </td>
-      <td width={150}>  Solenoid
-      </td></tr>
+      <td width={150}> 6</td>
+      <td width={150}>  Solenoid</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td width={150}> 7
-      </td>
-      <td width={150}>  Conduit
-      </td></tr></tbody></table>
+      <td width={150}> 7</td>
+      <td width={150}>  Conduit</td>
+    </tr>
+  </tbody>
+</table>
 
 
 ![](https://files.seeedstudio.com/wiki/DC_framework_solenoid_HCNE1-0520/img/HCNE1-0520-4-.jpg)

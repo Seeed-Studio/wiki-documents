@@ -1,0 +1,10 @@
+position: 7 # float position is supported
+label: 'Tutorial de Desarrollo'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: wio_tracker_1110_dev_board_development_tutorial
+link:
+  type: generated-index
+  slug: es/wio_tracker_1110_dev_board_development_tutorial_class
+  title: Tutorial de Desarrollo
+  description: Documentación del Tutorial de Desarrollo de la Placa de Desarrollo Wio Tracker 1110.

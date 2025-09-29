@@ -283,24 +283,19 @@ Now, when watcher detect people, it will send message to Node-RED automatically~
 
 ## Part 5. Preview image
 
-If you want to preview the image from Watcher, you need to install a library in Node-RED. 
+If you want to preview the image from Watcher, you need to install a library in Node-RED.
 
 If not, you can ignore this part.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/n1.png" style={{width:800, height:'auto'}}/></div>
 
-After installation, you can find it in **output part**, drag it to where you want to previwe image and connect.
+After installation, you can find it in **output part**, drag it to where you want to preview image and connect.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/n3.png" style={{width:800, height:'auto'}}/></div>
 
-This step is very important. You need to **double click image preview node** and **fill out base64 url in this node**. Don't forget to **click Done and Depley button** on right upper corner. After that, we will preview the image when Watcher message come again~
+This step is very important. You need to **double click image preview node** and **fill out base64 url in this node**. Don't forget to **click Done and Deploy button** on right upper corner. After that, we will preview the image when Watcher message come again~
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/n2.png" style={{width:800, height:'auto'}}/></div>
-
-
-
-
-
 
 Congratulations！Now the data is transmit from Watcher to Node-RED successfully. Next wiki we will walk you through how the data from Watcher to other platform, welcome to try~
 
@@ -309,11 +304,11 @@ Congratulations！Now the data is transmit from Watcher to Node-RED successfully
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

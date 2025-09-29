@@ -28,33 +28,26 @@ Looking for a shell for your electronic prototypes? The Skeleton Box is a handy 
 
 <table  cellspacing="0" width="80%">
 <tr>
-<th scope="col"> Item
-</th>
-<th scope="col"> Typical
-</th>
-<th scope="col"> Unit
-</th></tr>
+<th scope="col"> Item</th>
+<th scope="col"> Typical</th>
+<th scope="col"> Unit</th>
+</tr>
 <tr>
-<th scope="row"> Length
-</th>
-<td> 126.8
-</td>
-<td> mm
-</td></tr>
+<th scope="row"> Length</th>
+<td> 126.8</td>
+<td> mm</td>
+</tr>
 <tr>
-<th scope="row"> Width
-</th>
-<td> 89.2
-</td>
-<td> mm
-</td></tr>
+<th scope="row"> Width</th>
+<td> 89.2</td>
+<td> mm</td>
+</tr>
 <tr>
-<th scope="row"> Height
-</th>
-<td> 30.0
-</td>
-<td> mm
-</td></tr></table>
+<th scope="row"> Height</th>
+<td> 30.0</td>
+<td> mm</td>
+</tr>
+</table>
 
 ##   Usage
 

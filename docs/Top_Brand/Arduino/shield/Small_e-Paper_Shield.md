@@ -11,7 +11,6 @@ last_update:
 ---
 
 
-
 ![](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/img/E_shield_01.jpg)
 ![](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/img/E_shield_02.jpg)
 
@@ -29,111 +28,95 @@ In order to choose the correct library you should know the version of your panel
 
 **Pay attention to your panel's label**:
 
-* if the model name is 'EG020AS012' or 'EM027AS011',then you should choose the old library, please click here [Small e-Paper Library](https://github.com/Seeed-Studio/Small_ePaper_Shield).
+- if the model name is 'EG020AS012' or 'EM027AS011',then you should choose the old library, please click here [Small e-Paper Library](https://github.com/Seeed-Studio/Small_ePaper_Shield).
 
-* if the model name is 'EG020BS011' or 'EM027BS013',then you should choose the new library,please click here [New Panel Library【EPD_V230】](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/EPDV230.zip).
+- if the model name is 'EG020BS011' or 'EM027BS013',then you should choose the new library,please click here [New Panel Library【EPD_V230】](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/EPDV230.zip).
 
 ## Specifications
 
-* Compatible board: Arduino Uno/Leonardo/Arduino Mega
+- Compatible board: Arduino Uno/Leonardo/Arduino Mega
 
-* Operating Voltage: 3.3/5VDC
+- Operating Voltage: 3.3/5VDC
 
-* Operating Current(refresh screen):40mA
+- Operating Current(refresh screen):40mA
 
-* Interface Type: SPI
+- Interface Type: SPI
 
 <font color="Green">
 </font>
 
 ### PINs on Arduino
 
-<table >
-<tr>
-<th> Arduino
-</th>
-<th> E-paper
-</th></tr>
-<tr>
-<td width="150px"> D2
-</td>
-<td width="250px"> M_EPD_PANEL_ON
-</td></tr>
-<tr>
-<td> D3
-</td>
-<td> M_EPD_BORDER
-</td></tr>
-<tr>
-<td> D4
-</td>
-<td> M_/SD_CS
-</td></tr>
-<tr>
-<td> D5
-</td>
-<td> M_EPD_PWM
-</td></tr>
-<tr>
-<td> D6
-</td>
-<td> M_EPD_/RESET
-</td></tr>
-<tr>
-<td> D7
-</td>
-<td> M_EPD_BUSY
-</td></tr>
-<tr>
-<td> D8
-</td>
-<td> M_EPD_DISCHARGE
-</td></tr>
-<tr>
-<td> D9
-</td>
-<td> M_/WORD_STOCK_CS
-</td></tr>
-<tr>
-<td> D10
-</td>
-<td> M_/EPD_CS
-</td></tr>
-<tr>
-<td> ICSP PORT
-</td>
-<td> M_MOSI , M_SCK , M_MISO
-</td></tr>
-<tr>
-<td> A0
-</td>
-<td> M_TEMP_SEN
-</td></tr>
-<tr>
-<td> A1
-</td>
-<td> M_OE123﻿﻿
-</td></tr>
-<tr>
-<td> A2
-</td>
-<td> M_CKV
-</td></tr>
-<tr>
-<td> A3
-</td>
-<td> M_STV_IN
-</td></tr>
-<tr>
-<td> 3.3V
-</td>
-<td> M_VCC_3V3
-</td></tr>
-<tr>
-<td> 5V
-</td>
-<td> M_VCC_5V
-</td></tr></table>
+<table>
+  <tr>
+    <th>Arduino</th>
+    <th>E-paper</th>
+  </tr>
+  <tr>
+    <td width="150px">D2</td>
+    <td width="250px">M_EPD_PANEL_ON</td>
+  </tr>
+  <tr>
+    <td>D3</td>
+    <td>M_EPD_BORDER</td>
+  </tr>
+  <tr>
+    <td>D4</td>
+    <td>M_/SD_CS</td>
+  </tr>
+  <tr>
+    <td>D5</td>
+    <td>M_EPD_PWM</td>
+  </tr>
+  <tr>
+    <td>D6</td>
+    <td>M_EPD_/RESET</td>
+  </tr>
+  <tr>
+    <td>D7</td>
+    <td>M_EPD_BUSY</td>
+  </tr>
+  <tr>
+    <td>D8</td>
+    <td>M_EPD_DISCHARGE</td>
+  </tr>
+  <tr>
+    <td>D9</td>
+    <td>M_/WORD_STOCK_CS</td>
+  </tr>
+  <tr>
+    <td>D10</td>
+    <td>M_/EPD_CS</td>
+  </tr>
+  <tr>
+    <td>ICSP PORT</td>
+    <td>M_MOSI , M_SCK , M_MISO</td>
+  </tr>
+  <tr>
+    <td>A0</td>
+    <td>M_TEMP_SEN</td>
+  </tr>
+  <tr>
+    <td>A1</td>
+    <td>M_OE123﻿﻿</td>
+  </tr>
+  <tr>
+    <td>A2</td>
+    <td>M_CKV</td>
+  </tr>
+  <tr>
+    <td>A3</td>
+    <td>M_STV_IN</td>
+  </tr>
+  <tr>
+    <td>3.3V</td>
+    <td>M_VCC_3V3</td>
+  </tr>
+  <tr>
+    <td>5V</td>
+    <td>M_VCC_5V</td>
+  </tr>
+</table>
 
 ## Demonstration
 
@@ -141,8 +124,8 @@ Small e-Paper Shield can display image, a variety of graphics and texts. There a
 
 ### Hardware Installation
 
-* Connect e-Paper to the FFC interface of Small e-Paper Shield.
-* Plug Small e-Paper Shield to Arduino/Seeeduino and connect it to PC using a USB cable.
+- Connect e-Paper to the FFC interface of Small e-Paper Shield.
+- Plug Small e-Paper Shield to Arduino/Seeeduino and connect it to PC using a USB cable.
 
 ![](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/img/E-Paper_Screen.jpg)
 
@@ -154,27 +137,28 @@ Here we select the 2.0 inch screen as an example to show its display functions.
 
 #### Demo 1: Display texts
 
-* Open the code: File -&gt; Examples -&gt; ePaper -&gt; text as show below:
+- Open the code: File -&gt; Examples -&gt; ePaper -&gt; text as show below:
 
 ![](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/img/Text_Code.jpg)
 
-<dl><dd><font color="red">We need to re-emphasize this note:</font>
-</dd></dl>
-<dl><dd>If you use Arduino UNO, Seeeduino 3.0 and any board that uses Atmega 328P or Atmega32U4 as controller, you should insert an SD card using this demo. The SD card is used to store temporary data because of the little storage space of Atmega328p and Atmega32U4.
-</dd><dd>If you use an Arduino Mega, or any other board that uses Atmega1280 or Atmega2560, you don't need to insert an SD card.
-</dd></dl>
+**Important Note:**
 
-* Change the parameter to match your screen size. You need to change 200 to 270 if your screen is 2.7 inch. And you need to do this change when usisng other examples.
+> We need to re-emphasize this note:
+>
+> - If you use Arduino UNO, Seeeduino 3.0 and any board that uses Atmega 328P or Atmega32U4 as controller, you should insert an SD card using this demo. The SD card is used to store temporary data because of the little storage space of Atmega328p and Atmega32U4.
+> - If you use an Arduino Mega, or any other board that uses Atmega1280 or Atmega2560, you don't need to insert an SD card.
+
+- Change the parameter to match your screen size. You need to change 200 to 270 if your screen is 2.7 inch. And you need to do this change when usisng other examples.
 
 <pre>#define SCREEN_SIZE 200 // choose screen size: 144, 200, 270</pre>
 
-* Upload the code to your microcontroller. Please click [here](https://seeeddoc.github.io/Upload_Code/) if you do not know how to.
+- Upload the code to your microcontroller. Please click [here](https://seeeddoc.github.io/Upload_Code/) if you do not know how to.
 
-* Now you can see this:
+- Now you can see this:
 
 ![](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/img/Display_text.jpg)
 
-* Try to change the display text and display location. You may learn every function usage.
+- Try to change the display text and display location. You may learn every function usage.
 
 #### Demo 2: Display graphic
 
@@ -202,8 +186,8 @@ You need to upload the code to see the result.
 
 Of course, you can change the display image by changing the image's lattice data.
 
-For example, if your e-Paper screen is 2.7 inch, you need to provide the lattice data of 264 X 176 pixel and copy the code to ‘’’static unsigned char image_270[] PROGMEM ={}’’’ in picture.h.
-You need to copy the code for a lattice data of a 200x96 pixel to ‘’’static unsigned char image_200[] PROGMEM ={}’’’  when using a 2.0 inch screen.
+For example, if your e-Paper screen is 2.7 inch, you need to provide the lattice data of 264 X 176 pixel and copy the code to 'static unsigned char image_270[] PROGMEM ={}' in picture.h.
+You need to copy the code for a lattice data of a 200x96 pixel to 'static unsigned char image_200[] PROGMEM ={}'  when using a 2.0 inch screen.
 
 #### How to Display an Image
 
@@ -223,65 +207,65 @@ Small e-Paper library provides complete software interfaces to exercise the capa
 
 _This function is setup screen size._
 
-* sz: can be EPD_1_44, EPD_2_0, EPD_2_7.
+- sz: can be EPD_1_44, EPD_2_0, EPD_2_7.
 
 <u>2. void setDirection(EPD_DIR dir);</u>
 
 _This function is used to set the display direction._
 
-* dir: can be DIRLEFT,DIRRIGHT,DIRNORMAL,DIRDOWN
+- dir: can be DIRLEFT,DIRRIGHT,DIRNORMAL,DIRDOWN
 
 <u>3. int drawChar(char c, int x, int y);</u>
 
 _This function can be used to display char._
 
-* c: the char you want to display.
+- c: the char you want to display.
 
-* x: the starting X-coordinate of char.
+- x: the starting X-coordinate of char.
 
-* y: the starting Y-coordinate of char.
+- y: the starting Y-coordinate of char.
 
 <u>4. int drawString(char *string, int poX, int poY);</u>
 
 _This function can be used to display char._
 
-* *string: the string you want to display.
+- *string: the string you want to display.
 
-* poX: the starting X-coordinate of string.
+- poX: the starting X-coordinate of string.
 
-* poY: the starting Y-coordinate of string.
+- poY: the starting Y-coordinate of string.
 
 <u>5. int drawNumber(long long_num,int poX, int poY);</u>
 
 _This function can be used to display char._
 
-* long_num: the long integer data you want to display. The max is
+- long_num: the long integer data you want to display. The max is
 
-* poX: the starting X-coordinate of data
+- poX: the starting X-coordinate of data
 
-* poY: the starting Y-coordinate of data
+- poY: the starting Y-coordinate of data
 
 <u>6. int drawFloat(float floatNumber,int decimal,int poX, int poY);</u>
 
 _This function can be used to display float number. The display float data is rounding according to the setting decimal place._
 
-* floatNumber: the float number you want to display.
+- floatNumber: the float number you want to display.
 
-* decimal: set the decimal place.
+- decimal: set the decimal place.
 
-* poX: the starting X-coordinate of data.
+- poX: the starting X-coordinate of data.
 
-* poY: the starting Y-coordinate of data.
+- poY: the starting Y-coordinate of data.
 
 <u>7. int drawUnicode(unsigned int uniCode, int x, int y);</u>
 
 _This function can be used to display a Character or a Chinese using unicode. See the page 18 to 24 of the [GT20L16P1Y datasheet](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/GT20L16P1Y_Datasheet.pdf) to find the Char unicode, the characters include Latin、Hebrew、 Thai、Greek、 Kirill and Arabic. The Chinese unicode  can see [GB2312 (Simplified Chinese) character code table](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/Character_code_table.pdf)._
 
-* uniCode:the machine code according to a character or a chinese.
+- uniCode:the machine code according to a character or a chinese.
 
-* x: the starting X-coordinate.
+- x: the starting X-coordinate.
 
-* y: the starting Y-coordinate.
+- y: the starting Y-coordinate.
 
 Note: the character unicode between 0x0020 to 0x007E can directly input via the keyboard. Such as the display of the character 'G' ,the function can be drawUnicode(0x0047, 3,10) or displayChar ('s',3,10);
 
@@ -289,107 +273,108 @@ Note: the character unicode between 0x0020 to 0x007E can directly input via the 
 
 _This function can be used to display several characters and chinese._
 
-* *uniCode: a unicode array.
+- *uniCode: a unicode array.
 
-* len: string length.
+- len: string length.
 
-* x: the starting X-coordinate of string.
+- x: the starting X-coordinate of string.
 
-* y: the starting Y-coordinate of string.
+- y: the starting Y-coordinate of string.
 
 <u>9. void drawLine(int x0, int y0, int x1, int y1);</u>
 
 _This function can be used to display a line._
 
-* x0: the starting X-coordinate of line
+- x0: the starting X-coordinate of line
 
-* y0: the starting Y-coordinate of line
+- y0: the starting Y-coordinate of line
 
-* x1: the end X-coordinate of line
+- x1: the end X-coordinate of line
 
-* y1: the end Y-coordinate of line
+- y1: the end Y-coordinate of line
 
 <u>10. void drawCircle(int poX, int poY, int r);</u>
 
 _This function can be used to draw a circle._
 
-* poX: the X-coordinate of the center
+- poX: the X-coordinate of the center
 
-* poY: the Y-coordinate of the center
-* r: the radius of center
+- poY: the Y-coordinate of the center
+- r: the radius of center
 
 <u>11. void drawHorizontalLine( int poX, int poY, int len);</u>
 
 _This function can be used to draw a horizontal line._
 
-* poX: the starting X-coordinate of the line.
+- poX: the starting X-coordinate of the line.
 
-* poY: the starting Y-coordinate of the line.
+- poY: the starting Y-coordinate of the line.
 
-* len: the length of the line
+- len: the length of the line
 
 <u>12. void drawVerticalLine( int poX, int poY, int len);</u>
 
 _This function can be used to draw a vertical line._
 
-* poX: the starting X-coordinate of the Line.
+- poX: the starting X-coordinate of the Line.
 
-* poY: the starting Y-coordinate of the Line.
+- poY: the starting Y-coordinate of the Line.
 
-* len: the length of the line.
+- len: the length of the line.
 
 <u>13. void drawRectangle(int poX, int poY, int len, int width);</u>
 
 _This function can be used to draw a rectangle._
 
-* poX: the starting X-coordinate of the rectangle.
+- poX: the starting X-coordinate of the rectangle.
 
-* poY: the starting Y-coordinate of the rectangle.
+- poY: the starting Y-coordinate of the rectangle.
 
-* len: the length of the rectangle.
+- len: the length of the rectangle.
 
-* width: the width of the rectangle.
+- width: the width of the rectangle.
 
 <u>14. void fillRectangle(int poX, int poY, int len, int width);</u>
 
 _This function can be used to draw a fill rectangle._
 
-* poX: the starting X-coordinate of the rectangle.
+- poX: the starting X-coordinate of the rectangle.
 
-* poY: the starting Y-coordinate of the rectangle.
+- poY: the starting Y-coordinate of the rectangle.
 
-* len: the length of the rectangle.
+- len: the length of the rectangle.
 
-* width: the width of the rectangle.
+- width: the width of the rectangle.
 
 <u>15. void fillCircle(int poX, int poY, int r);</u>
 
 _This function can be used to draw a fill circle._
 
-* poX: the X-coordinate of the center.
+- poX: the X-coordinate of the center.
 
-* poY: the Y-coordinate of the center.
+- poY: the Y-coordinate of the center.
 
-* r: the radius of center
+- r: the radius of center
 
 **Example:**
 
-<pre>
-    EPAPER.drawRectangle(10, 10, 100, 80);
-    EPAPER.fillCircle(50, 50, 30);
-    EPAPER.fillRectangle(50, 65, 50, 20);
-    EPAPER.drawCircle(150, 50, 10);
-    EPAPER.fillCircle(150, 50, 5);
-    EPAPER.drawHorizontalLine(120, 50, 60);
-    EPAPER.drawVerticalLine(150, 20, 60);</pre>
+```cpp
+EPAPER.drawRectangle(10, 10, 100, 80);
+EPAPER.fillCircle(50, 50, 30);
+EPAPER.fillRectangle(50, 65, 50, 20);
+EPAPER.drawCircle(150, 50, 10);
+EPAPER.fillCircle(150, 50, 5);
+EPAPER.drawHorizontalLine(120, 50, 60);
+EPAPER.drawVerticalLine(150, 20, 60);
+```
 
 <u>16. void drawTraingle( int poX1, int poY1, int poX2, int poY2, int poX3, int poY3);</u>
 
 _This function can be used to draw a triangle. It is formed by three points._
 
-* poX1(poX2,poX3): the X-coordinate of the triangle one point.
+- poX1(poX2,poX3): the X-coordinate of the triangle one point.
 
-* poY1(poY2,poY3): the Y-coordinate of the triangle one point.
+- poY1(poY2,poY3): the Y-coordinate of the triangle one point.
 
 ## Schematic Online Viewer
 
@@ -398,24 +383,24 @@ _This function can be used to draw a triangle. It is formed by three points._
 
 ## Resources
 
-* **[Eagle]** [Small e-Paper Shield Eagle File](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/Small_e-Paper_Shield_V2.1.zip)
-* **[PDF]**[Small e-PaperShield v2.1 pdf](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/Small%20e-PaperShield%20v2.1.pdf)
-* **[EAGLE]**[Small e-PaperShield v2.1 SCH](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/Small%20e-PaperShield%20v2.1.sch)
-* **[Library]**  [Small e-Paper Library](https://github.com/Seeed-Studio/Small_ePaper_Shield)
-* **[Datasheet]** [e-Paper panels Datasheet](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/4P008-00_02_COG_Driver_Interface_Timing_for_smallPlussize.pdf)
-* **[Tool]** [epdImageKit Tool](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/EpdImageKit.zip)
-* **[Library]** [New Panel Library【EPD_V230】](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/EPDV230.zip)
+- **[Eagle]** [Small e-Paper Shield Eagle File](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/Small_e-Paper_Shield_V2.1.zip)
+- **[PDF]**[Small e-PaperShield v2.1 pdf](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/Small%20e-PaperShield%20v2.1.pdf)
+- **[EAGLE]**[Small e-PaperShield v2.1 SCH](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/Small%20e-PaperShield%20v2.1.sch)
+- **[Library]**  [Small e-Paper Library](https://github.com/Seeed-Studio/Small_ePaper_Shield)
+- **[Datasheet]** [e-Paper panels Datasheet](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/4P008-00_02_COG_Driver_Interface_Timing_for_smallPlussize.pdf)
+- **[Tool]** [epdImageKit Tool](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/EpdImageKit.zip)
+- **[Library]** [New Panel Library【EPD_V230】](https://files.seeedstudio.com/wiki/Small_e-Paper_Shield/res/EPDV230.zip)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

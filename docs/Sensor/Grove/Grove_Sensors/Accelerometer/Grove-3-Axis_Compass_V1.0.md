@@ -13,28 +13,27 @@ last_update:
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/img/Grove-3-Axis_Compass_V1.0.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/img/Grove-3-Axis_Compass_V1.0.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 This 3-axis digital compass features a low field magnetic sensing multi-chip module HMC5883L, which provides up to 1° to 2° heading accuracy. HMC5883L consists of high-resolution HMC118X series magneto-resistive sensors, as well as Honeywell developed ASIC containing amplification, automatic degaussing strap drivers, offset cancellation and 12 bit ADC. With peripheral power management circuit added, this is an easy to use and reliable compass module for low cost compassing and magnetometry.
 
 <!-- [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-p-759.html) -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-p-759.html)
 
-
 Specifications
 --------------
 
--   Input Voltage: 3.3V, 5V
--   Sleep Mode Current: 2.5uA
--   Measurement Mode Current: 640uA
--   High resolution
--   Easy to control I2C interface
--   Compatible with either 3.3V or 5.0V development platform
--   Max 116Hz output rate
--   High heading accuracy
+- Input Voltage: 3.3V, 5V
+- Sleep Mode Current: 2.5uA
+- Measurement Mode Current: 640uA
+- High resolution
+- Easy to control I2C interface
+- Compatible with either 3.3V or 5.0V development platform
+- Max 116Hz output rate
+- High heading accuracy
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
+
 Platforms Supported
 -------------------
 
@@ -45,12 +44,11 @@ Platforms Supported
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" alt="pir" width={200} height="auto" /></p>|
 
-
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
-##Getting Started
+## Getting Started
 
 ### Play with Arduino
 
@@ -73,7 +71,6 @@ Now let's start to run your compass.
     <!-- ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/img/Digital_Compass1.jpg) -->
       <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/img/Digital_Compass1.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 4. Replace the value of variable "declinitionAngle" with the one you've figured out already.
 
 5. Upload the Code.
@@ -83,9 +80,6 @@ Now let's start to run your compass.
     <!-- ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/img/Digital_Compass2.jpg) -->
       <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/img/Digital_Compass2.jpg" alt="pir" width={600} height="auto" /></p>
 
-
-
-
 ### Play With Raspberry Pi (with GrovePi_Plus)
 
 1.You should have got a raspberry pi and a grovepi or grovepi+.
@@ -94,18 +88,19 @@ Now let's start to run your compass.
 
 3.Connection
 
--   Plug the sensor to grovepi socket i2c-x(1~3) by using a grove cable.
+- Plug the sensor to grovepi socket i2c-x(1~3) by using a grove cable.
 
 4.Navigate to the demos' directory:
 
        cd yourpath/GrovePi/Software/Python/
 
--   To see the code
+- To see the code
 
 ```
     nano grove_compass_lib.py       
     nano grove_compass_example.py    
 ```
+
 ```
     import grove_compass_lib
     c=grove_compass_lib.compass()
@@ -116,37 +111,35 @@ Now let's start to run your compass.
 ```
 
 5.Run the demo.
+
 ```
     sudo python grove_compass_example.py
 ```
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/res/Grove-3-Axis_Digital_Compass_Eagle_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 Resources
 ---------
 
--   [Grove-3-Axis Digital Compass Eagle File](https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/res/Grove-3-Axis_Digital_Compass_Eagle_File.zip)
--   [HMC5883.pdf](https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/res/HMC5883.pdf "File:HMC5883.pdf")
--   [Digital Compass Library](https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/res/Digital_Compass.zip)
-
+- [Grove-3-Axis Digital Compass Eagle File](https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/res/Grove-3-Axis_Digital_Compass_Eagle_File.zip)
+- [HMC5883.pdf](https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/res/HMC5883.pdf "File:HMC5883.pdf")
+- [Digital Compass Library](https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/res/Digital_Compass.zip)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_3-Axis_Compass_V1.0 -->
 
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

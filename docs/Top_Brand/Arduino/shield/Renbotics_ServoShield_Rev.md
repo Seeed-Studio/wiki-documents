@@ -95,21 +95,9 @@ void loop()
 
 ## Version Tracker
 
-<table>
-<tr>
-<th> Revision
-</th>
-<th> Descriptions
-</th>
-<th> Release
-</th></tr>
-<tr>
-<td width="300px"> v1.1
-</td>
-<td width="500px"> Initial public release
-</td>
-<td width="200px"> Aug 23, 2009
-</td></tr></table>
+| Revision | Descriptions | Release |
+|----------|-------------|---------|
+| v1.1 | Initial public release | Aug 23, 2009 |
 
 ## Resources
 

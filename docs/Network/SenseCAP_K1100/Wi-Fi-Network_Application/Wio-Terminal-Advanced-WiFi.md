@@ -492,7 +492,7 @@ This is an example that sets up a mDNS web server on the Wio Terminal so that ot
 
 - Upload the code to Wio Terminal.
 
-- Access the web server by entering <http://WioTerminal.local/> from the same network using browser, and enter pre-set username and password.
+- Access the web server by entering [http://WioTerminal.local/](http://WioTerminal.local/) from the same network using browser, and enter pre-set username and password.
 
 ```cpp
 #include <rpcWiFi.h>

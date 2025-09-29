@@ -1,0 +1,10 @@
+position: 3
+label: 'Energy Management'
+collapsible: true
+collapsed: true
+className: _energy-management
+link:
+  type: generated-index
+  slug: energy-management
+  title: Energy Management
+  description: Energy management solutions.

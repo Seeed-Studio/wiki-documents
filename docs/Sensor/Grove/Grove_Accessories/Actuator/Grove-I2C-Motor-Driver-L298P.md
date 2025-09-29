@@ -14,12 +14,12 @@ last_update:
 ![](https://files.seeedstudio.com/products/105020093/img/105020093_wiki.png)
 
 Grove - I2C Motor Driver(L298P) is a common-use motor driver for stepping motor and servo motor. It embeds an STM32 chip for burning the code to control the
-motor driver. This is a 2-channel motor driver, each channel can support up to 1A current. You can also use the I2C interface to transmit data from the peripheral microcontroller. The default I2C address is 0x0f and you are able to change the address of Motor driver by connecting the I2C wire hat. The I2C address is selectable from 0x00 to 0X0f.
+motor driver. This is a 2-channel motor driver, each channel can support up to 1A current. You can also use the I2C interface to transmit data from the peripheral microcontroller. The default I2C address is 0x0f and you are able to change the address of Motor driver by connecting the I2C wire hat. The I2C address is selectable from 0x00 to 0x0f.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-L298P-p-4534.html">
-<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-L298P-p-4534.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+  </a>
 </div>
 
 ## Features
@@ -61,7 +61,9 @@ motor driver. This is a 2-channel motor driver, each channel can support up to 1
 
 #### Hardware connection
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/img/I2CMotorDriver-4.jpg" style={{width:'auto', height:400}}/></div>
+<div style={{textAlign:'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/img/I2CMotorDriver-4.jpg" style={{width:'auto', height:400}}/>
+</div>
 
 - **Step 1** Connect Grove - I2C Motor Driver (L298P) to port I2C of Grove-Base Shield.
 
@@ -74,7 +76,7 @@ motor driver. This is a 2-channel motor driver, each channel can support up to 1
 ```cpp
 #include "Grove_I2C_Motor_Driver.h"
 
-#define I2C_ADDRESS 0x0f // default I2C address is 0x0f
+#define I2C_ADDRESS 0x0f /* default I2C address is 0x0f */
 
 void setup() {
     Serial.begin(9600);
@@ -109,7 +111,7 @@ With speed() function, you are able to drive one motor at the speed you want.
 
 - **motor_id** represents which motor to use. You can fill MOTOR1 or MOTOR2.
 
-- **_speed** represents the speed you set to the motor. You can fill -100~100 here. When _speed>0, DC motor runs clockwise, while_speed<0, DC motor runs anticlockwise. And the bigger the absolute value of _speed, the faster the speed of DC motor.
+- **_speed** represents the speed you set to the motor. You can fill -100~100 here. When _speed&gt;0, DC motor runs clockwise, while_speed&lt;0, DC motor runs anticlockwise. And the bigger the absolute value of _speed, the faster the speed of DC motor.
 
 With stop() function, you are able to stop a running DC motor.
 
@@ -126,8 +128,8 @@ void setup() {
     Serial.begin(9600);
     Motor.begin(I2C_ADDRESS);
     // Drive a stepper motor
-    // _step: -1024~1024, when _step>0, stepper motor runs clockwise; _step<0, stepper
-    // motor runs anticlockwise; when _step is 512, the stepper motor will run a complete
+    // \_step: -1024~1024, when \_step>0, stepper motor runs clockwise; \_step<0, stepper
+// motor runs anticlockwise; when \_step is 512, the stepper motor will run a complete
     // turn; if step is 1024, the stepper motor will run 2 turns.
     Motor.StepperRun(-1024);
     Motor.StepperRun(512);
@@ -140,14 +142,18 @@ void loop() {
 
 Take [24BYJ48 Stepper Motor](https://www.seeedstudio.com/Small-Size-and-High-Torque-Stepper-Motor-24BYJ48-p-1922.html) as an example, The hardware installation as shown below:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/img/I2C_Motor_Driver_control_a_Stepper_Motor.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/img/I2C_Motor_Driver_control_a_Stepper_Motor.jpg" style={{width:600, height:'auto'}}/>
+</div>
 
 The connection between **24BYJ48 Stepper Motor** and I2C Motor Driver is as shown below:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/img/I2C_Motor_Driver_Connector.jpg" style={{width:'auto', height:'auto'}}/></div>
+<div style={{textAlign:'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/img/I2C_Motor_Driver_Connector.jpg" style={{width:'auto', height:'auto'}}/>
+</div>
 
 
-- **_step** represents the steps you set to the stepper motor to run. You can fill -1024~1024. When _step>0, stepper motor runs clockwise, while_step<0, stepper motor runs anticlockwise. When _step is 512/-512, the stepper motor will run a complete turn and if_step is 1024/-1024, the stepper motor will run 2 turns. The stepper motor will stop automatically after it finishes its steps.
+- **_step** represents the steps you set to the stepper motor to run. You can fill -1024~1024. When _step&gt;0, stepper motor runs clockwise, while_step&lt;0, stepper motor runs anticlockwise. When _step is 512/-512, the stepper motor will run a complete turn and if_step is 1024/-1024, the stepper motor will run 2 turns. The stepper motor will stop automatically after it finishes its steps.
 
 :::note
 

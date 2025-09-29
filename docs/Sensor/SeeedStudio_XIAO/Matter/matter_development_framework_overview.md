@@ -20,6 +20,7 @@ This article is the fourth tutorial in the Seeed Studio XIAO ESP32 Development M
 - **[Developed on XIAO using Espressif ESP-IDF](https://wiki.seeedstudio.com/xiao_idf)**
 - **[Getting Started with Matter Quickly with XIAO ESP32 Series](https://wiki.seeedstudio.com/getting_started_with_matter)**
 - **[Matter Development with XIAO ESP32 Series](https://wiki.seeedstudio.com/xiao_esp32_matter_env/)**
+
 :::
 
 Embark on an illuminating journey into the world of Matter development with our comprehensive tutorial. Through the lens of the quintessential light example, we'll shed light on the fundamental concepts and knowledge that form the bedrock of Matter development. From clusters and attributes to commands and beyond, this tutorial will equip you with the tools to navigate the Matter framework with confidence. Get ready to flip the switch on your Matter development skills and let's dive into the brilliant world of connected devices!
@@ -69,26 +70,29 @@ First, let's look at the file directories in the ESP-Matter environment and what
 **esp-matter**: This is the root directory of the entire Matter development framework.
 
 **components**: This directory contains various components and is the core of the Matter framework.
-   - esp_matter: This is the implementation of the Matter protocol stack on ESP32, including the data model, application layer logic, etc.
-   - esp_matter_bridge: This component is responsible for bridging ESP devices to other non-ESP devices, achieving interoperability.
-   - esp_matter_console: This is an interactive console based on REPL, used for debugging and controlling Matter devices.
-   - esp_matter_controller: This component implements the functionality of a Matter controller, capable of controlling other Matter devices.
-   - esp_matter_rainmaker: This component integrates with Espressif's RainMaker cloud platform, enabling cloud control.
-   - esp_matter_thread_br: This component implements the Thread Border Router functionality, used for creating Thread networks.
+
+- esp_matter: This is the implementation of the Matter protocol stack on ESP32, including the data model, application layer logic, etc.
+- esp_matter_bridge: This component is responsible for bridging ESP devices to other non-ESP devices, achieving interoperability.
+- esp_matter_console: This is an interactive console based on REPL, used for debugging and controlling Matter devices.
+- esp_matter_controller: This component implements the functionality of a Matter controller, capable of controlling other Matter devices.
+- esp_matter_rainmaker: This component integrates with Espressif's RainMaker cloud platform, enabling cloud control.
+- esp_matter_thread_br: This component implements the Thread Border Router functionality, used for creating Thread networks.
 
 **connectedhomeip**: This is the upstream open-source project of the Matter protocol stack, from which ESP Matter syncs its code.
 
 **device_hal**: This directory contains the hardware abstraction layer drivers.
-   - button_driver: Button driver.
-   - device: Device abstraction, defining generic device interfaces.
-   - led_driver: LED driver.
+
+- button_driver: Button driver.
+- device: Device abstraction, defining generic device interfaces.
+- led_driver: LED driver.
 
 **docs**: This is where ESP-Matter development documents and API reference manuals are stored.
 
 **examples**: Various example codes demonstrating how to use the Matter framework for development.
 
 **tools**: Contains various development tool scripts.
-   - mfg_tool: Tool for generating manufacturer certificates.
+
+- mfg_tool: Tool for generating manufacturer certificates.
 
 **CMakeLists.txt**: CMake build script, defining the compilation rules for the project.
 
@@ -120,11 +124,11 @@ Taking **examples/light** as an example, the structure of the example provided b
 ```
 
 - **main**: This subdirectory contains the main application code and configuration files.
-   - CMakeLists.txt: The CMake build script for the main application.
-   - app_driver.cpp: The driver code for the light application.
-   - app_main.cpp: The main entry point of the light application.
-   - app_priv.h: A header file containing private declarations for the light application.
-   - idf_components.yml: A configuration file for the ESP-IDF components used in the light application.
+  - CMakeLists.txt: The CMake build script for the main application.
+  - app_driver.cpp: The driver code for the light application.
+  - app_main.cpp: The main entry point of the light application.
+  - app_priv.h: A header file containing private declarations for the light application.
+  - idf_components.yml: A configuration file for the ESP-IDF components used in the light application.
 
 - **CMakeLists.txt**: The top-level CMake build script for the light example.
 
@@ -189,9 +193,10 @@ The following diagram shows a simplistic view of how this can be represented in 
 
 **Matter Node**:
 A Matter Node represents a physical device or a logical entity within the Matter ecosystem. It is the top-level component of the Matter data model. Each Matter Node has a unique identifier and can contain one or more Endpoints.
-   - A Matter Node represents **a physical device** in the Matter ecosystem.
-   - It's like a house that can contain multiple Endpoints (rooms).
-   - Each Matter Node has its own unique identifier for recognition and addressing within the network.
+
+- A Matter Node represents **a physical device** in the Matter ecosystem.
+- It's like a house that can contain multiple Endpoints (rooms).
+- Each Matter Node has its own unique identifier for recognition and addressing within the network.
 
 ## Sets the Attribute of the Endpoint
 
@@ -307,7 +312,6 @@ light_config.level_control.lighting.start_up_current_level = DEFAULT_BRIGHTNESS;
 
 `light_config.level_control` is an Attribute defined in Endpoint (esp_matter_endpoint.h). And `light_config.level_control.lighting` is a Attribute defined in Cluster (esp_matter_cluster). With this setting, the system can automatically match the Cluster corresponding to the Attribute without the need for developers to set them manually.
 
-
 ## Setting up the Matter device for the first time with default values
 
 Once the above Attributes, Clusters and Endpoints have been configured, we can start booting the Matter appliance. The steps and methodology for startup are as follows.
@@ -363,6 +367,7 @@ err |= app_driver_light_set_brightness(handle, &val);
    - The `handle` parameter is the LED indicator handle, and `&val` is a pointer to the `esp_matter_attr_val_t` variable containing the desired brightness value.
 
 Here's a summary of the steps:
+
 1. Get the endpoint pointer using `endpoint::get(node, endpoint_id)`.
 2. Get the cluster pointer using `cluster::get(endpoint, LevelControl::Id)`.
 3. Get the attribute pointer using `attribute::get(cluster, LevelControl::Attributes::CurrentLevel::Id)`.
@@ -370,7 +375,6 @@ Here's a summary of the steps:
 5. Set the brightness of the light using `app_driver_light_set_brightness(handle, &val)`, where `handle` is the LED indicator handle associated with the endpoint.
 
 By following these steps, you can obtain the necessary pointers to the cluster and attribute, retrieve the current value of the attribute, and set the brightness of the light accordingly.
-
 
 ## Data updates and deferred persistence
 
@@ -446,44 +450,42 @@ This section demonstrates creating standard endpoints, clusters, attributes, and
 
 The device can be customized by editing the endpoint/device_type creating in the *app_main.cpp* of the example. Examples:
 
--  on_off_light:
+- on_off_light:
 
 ```cpp
    on_off_light::config_t light_config;
    endpoint_t *endpoint = on_off_light::create(node, &light_config, ENDPOINT_FLAG_NONE);
 ```
 
--  temperature_sensor:
+- temperature_sensor:
 
 ```cpp
     esp_matter::endpoint::temperature_sensor::config_t temperature_sensor_config;
     endpoint_t *endpoint = temperature_sensor::create(node, &temperature_sensor_config, ENDPOINT_FLAG_NONE, NULL);
 ```
 
--  fan:
+- fan:
 
 ```cpp
    fan::config_t fan_config;
    endpoint_t *endpoint = fan::create(node, &fan_config, ENDPOINT_FLAG_NONE);
 ```
 
-
--  door_lock:
+- door_lock:
 
 ```cpp
    door_lock::config_t door_lock_config;
    endpoint_t *endpoint = door_lock::create(node, &door_lock_config, ENDPOINT_FLAG_NONE);
 ```
 
--  window_covering_device:
+- window_covering_device:
 
 ```cpp
    window_covering_device::config_t window_covering_device_config(static_cast<uint8_t>(chip::app::Clusters::WindowCovering::EndProductType::kTiltOnlyInteriorBlind));
    endpoint_t *endpoint = window_covering_device::create(node, &window_covering_config, ENDPOINT_FLAG_NONE);
 ```
 
-   The ``window_covering_device`` ``config_t`` structure includes a constructor that allows specifying
-   an end product type different than the default one, which is "Roller shade".
+   The ``window_covering_device`` ``config_t`` structure includes a constructor that allows specifying an end product type different than the default one, which is "Roller shade".
    Once a ``config_t`` instance has been instantiated, its end product type cannot be modified.
 
 - pump
@@ -493,23 +495,21 @@ The device can be customized by editing the endpoint/device_type creating in the
    endpoint_t *endpoint = pump::create(node, &pump_config, ENDPOINT_FLAG_NONE);
 ```
 
-   The ``pump`` ``config_t`` structure includes a constructor that allows specifying
-   maximum pressure, maximum speed and maximum flow values. If they aren't set, they will be set to null by default.
+   The ``pump`` ``config_t`` structure includes a constructor that allows specifying maximum pressure, maximum speed and maximum flow values. If they aren't set, they will be set to null by default.
    Once a ``config_t`` instance has been instantiated, these three values cannot be modified.
-
 
 ### Clusters
 
 Additional clusters can also be added to an endpoint. Examples:
 
--  on_off:
+- on_off:
 
 ```cpp
    on_off::config_t on_off_config;
    cluster_t *cluster = on_off::create(endpoint, &on_off_config, CLUSTER_FLAG_SERVER, on_off::feature::lighting::get_id());
 ```
 
--  temperature_measurement:
+- temperature_measurement:
 
 ```cpp
    temperature_measurement::config_t temperature_measurement_config;
@@ -523,8 +523,7 @@ Additional clusters can also be added to an endpoint. Examples:
    cluster_t *cluster = window_covering::create(endpoint, &window_covering_config, CLUSTER_FLAG_SERVER);
 ```
 
-   The ``window_covering`` ``config_t`` structure includes a constructor that allows specifying
-   an end product type different than the default one, which is "Roller shade".
+   The ``window_covering`` ``config_t`` structure includes a constructor that allows specifying an end product type different than the default one, which is "Roller shade".
    Once a ``config_t`` instance has been instantiated, its end product type cannot be modified.
 
 - pump_configuration_and_control:
@@ -534,8 +533,7 @@ Additional clusters can also be added to an endpoint. Examples:
    cluster_t *cluster = pump_configuration_and_control::create(endpoint, &pump_configuration_and_control_config, CLUSTER_FLAG_SERVER);
 ```
 
-   The ``pump_configuration_and_control`` ``config_t`` structure includes a constructor that allows specifying
-   maximum pressure, maximum speed and maximum flow values. If they aren't set, they will be set to null by default.
+   The ``pump_configuration_and_control`` ``config_t`` structure includes a constructor that allows specifying maximum pressure, maximum speed and maximum flow values. If they aren't set, they will be set to null by default.
    Once a ``config_t`` instance has been instantiated, these three values cannot be modified.
 
 ### Attributes and Commands
@@ -543,27 +541,27 @@ Additional clusters can also be added to an endpoint. Examples:
 Additional attributes and commands can also be added to a cluster.
 Examples:
 
--  attribute: on_off:
+- attribute: on_off:
 
 ```cpp
    bool default_on_off = true;
    attribute_t *attribute = on_off::attribute::create_on_off(cluster, default_on_off);
 ```
 
--  attribute: cluster_revision:
+- attribute: cluster_revision:
 
 ```cpp
    uint16_t default_cluster_revision = 1;
    attribute_t *attribute = global::attribute::create_cluster_revision(cluster, default_cluster_revision);
 ```
 
--  command: toggle:
+- command: toggle:
 
 ```cpp
    command_t *command = on_off::command::create_toggle(cluster);
 ```
 
--  command: move_to_level:
+- command: move_to_level:
 
 ```cpp
    command_t *command = level_control::command::create_move_to_level(cluster);
@@ -582,14 +580,13 @@ Optional features which are applicable to a cluster can also be added.
 
 ### Adding custom data model fields
 
-This section demonstrates creating custom endpoints, clusters, attributes, and commands that are not defined in the Matter specification and can be
-specific to the vendor.
+This section demonstrates creating custom endpoints, clusters, attributes, and commands that are not defined in the Matter specification and can be specific to the vendor.
 
 #### Endpoints
 
 Non-Standard endpoint can be created, without any clusters.
 
--  Endpoint create:
+- Endpoint create:
 
 ```cpp
    endpoint_t *endpoint = endpoint::create(node, ENDPOINT_FLAG_NONE);
@@ -599,7 +596,7 @@ Non-Standard endpoint can be created, without any clusters.
 
 Non-Standard/Custom clusters can also be created:
 
--  Cluster create:
+- Cluster create:
 
 ```cpp
    uint32_t custom_cluster_id = 0x131bfc00;
@@ -610,7 +607,7 @@ Non-Standard/Custom clusters can also be created:
 
 Non-Standard/Custom attributes can also be created on any cluster:
 
--  Attribute create:
+- Attribute create:
 
 ```cpp
    uint32_t custom_attribute_id = 0x0;
@@ -618,7 +615,7 @@ Non-Standard/Custom attributes can also be created on any cluster:
    attribute_t *attribute = attribute::create(cluster, custom_attribute_id, ATTRIBUTE_FLAG_NONE, esp_matter_uint16(default_value);
 ```
 
--  Command create:
+- Command create:
 
 ```cpp
    static esp_err_t command_callback(const ConcreteCommandPath &command_path, TLVReader &tlv_data, void
@@ -631,7 +628,6 @@ Non-Standard/Custom attributes can also be created on any cluster:
    uint32_t custom_command_id = 0x0;
    command_t *command = command::create(cluster, custom_command_id, COMMAND_FLAG_ACCEPTED, command_callback);
 ```
-
 
 The Matter data model organizes these components in a hierarchical manner. A Matter Node contains one or more Endpoints, each representing a specific device type. Each Endpoint consists of multiple Clusters, which group related attributes and commands. Attributes store the state and configuration of a cluster, while commands are used to interact with and control the device.
 

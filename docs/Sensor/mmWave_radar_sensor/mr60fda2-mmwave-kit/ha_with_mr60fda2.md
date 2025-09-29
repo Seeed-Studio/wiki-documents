@@ -16,6 +16,10 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+:::danger About the scope of radar use in Home Assistant
+The RADAR firmware updates and the ESPHome YAML updates are 2 different pieces of software. The ESPHome YAML can be updated OTA, while the RADAR board can ONLY be updated via USB inside the case, with specialized software that SEEED provides. You can customize the ESPHome software, you [can NOT customize the RADAR firmware](https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/#module-firmware-upgrade). Seeed Studio only allows RADAR customization if your doing a business application.
+:::
+
 ## Introduction {#introduction}
 
 The MR60FDA2 is a 60GHz mmWave Fall Detection Sensor module designed for integration with the XIAO ESP32C6 microcontroller. This advanced sensor utilizes millimeter-wave technology to provide non-invasive monitoring of vital signs and presence detection.
@@ -37,7 +41,7 @@ This guide aims to provide a clear and comprehensive walkthrough for integrating
       <tr>
          <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
-               <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html?utm_source=wiki"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+               <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
             </div>
          </td>
       </tr>
@@ -130,7 +134,7 @@ With the firmware, you could power on the sensor kit, and a Wi-Fi access point w
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60fda2/hotspot-name.jpg" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
 
-Navigate to `192.168.4.1` to configure your Home Assistant server's local network settings. 
+Navigate to `192.168.4.1` to configure your Home Assistant server's local network settings.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60fda2/opt-for-wifi-ap.jpg" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
 

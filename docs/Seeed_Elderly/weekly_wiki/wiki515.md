@@ -64,7 +64,7 @@ In this tutorial, you will learn how to utilize the QSPI Flash on XIAO boards, w
 
 ## Existed Wiki Updated
 
-### [Pin Multiplexing on Seeed Studio XIAO ESP32C3](XIAO_ESP32C3_Pin_Multiplexing#note-on-xiao-esp32c3-io-allocation)
+### [Pin Multiplexing on Seeed Studio XIAO ESP32C3](/XIAO_ESP32C3_Pin_Multiplexing#note-on-xiao-esp32c3-io-allocation)
 
 There something you should know about the pin D9 and D6 on Seeed Studio XIAO ESP32C3.
 

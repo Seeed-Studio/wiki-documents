@@ -12,29 +12,11 @@ last_update:
 
 ![enter image description here](https://files.seeedstudio.com/products/107990055/01.png)
 
-Seeed’s ReSpeaker 6-Mic Circular Array Kit
-is an extension board, aka HAT designed for
-Raspberry Pi. It's a circular microphone
-array kit, comes with six microphones and
-designed for AI and voice applications. That
-means you can build a more powerful and
-flexible voice product with Raspberry Pi
-which can integrate Amazon Alexa Voice
-Service, Google Assistant, and so on.
+Seeed’s ReSpeaker 6-Mic Circular Array Kit is an extension board, aka HAT designed for Raspberry Pi. It's a circular microphone array kit, comes with six microphones and designed for AI and voice applications. That means you can build a more powerful and flexible voice product with Raspberry Pi which can integrate Amazon Alexa Voice Service, Google Assistant, and so on.
 
-ReSpeaker 6-Mic Circular Array Kit for
-Raspberry Pi consists of two boards, one is
-voice accessory HAT, another is six
-microphones circular array.
+ReSpeaker 6-Mic Circular Array Kit for Raspberry Pi consists of two boards, one is voice accessory HAT, another is six microphones circular array.
 
-ReSpeaker 6-Mic Circular Array Kit for
-Raspberry Pi support 8 input & 8 output
-channels in Raspbian system. The first 6
-input channel for microphone recording,
-rest of 2 input channel are echo channel of
-playback. The first 2 output channel for
-playing, rest of 6 output channel are
-dummy.
+ReSpeaker 6-Mic Circular Array Kit for Raspberry Pi support 8 input & 8 output channels in Raspbian system. The first 6 input channel for microphone recording, rest of 2 input channel are echo channel of playback. The first 2 output channel for playing, rest of 6 output channel are dummy.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NxZx9nz67Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -633,21 +615,19 @@ A2: Please click raspberry -> Preferences -> Raspberry Pi Configuration, then se
 - **[Dxf]** [ReSpeaker Circular Array for Voice Accessory HAT with 6 Microphone 2D File](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/2d.zip)
 - **[Driver]** [Seeed-Voice Driver](https://github.com/respeaker/seeed-voicecard)
 - **[Algorithms]** [Algorithms includes DOA, VAD, NS](https://github.com/respeaker/mic_array)
-- **[Voice Engine** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
+- **[Voice Engine]** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
 - **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
 
 ## Tech Support & Product Discussion
 
-
-
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

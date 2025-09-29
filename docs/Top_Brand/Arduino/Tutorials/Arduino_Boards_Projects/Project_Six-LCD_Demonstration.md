@@ -33,7 +33,7 @@ _**Now upload the following Arduino sketch:**_
 // Project Six - LCD demonstration
 //
 
-#include &lt;LiquidCrystal.h&gt;
+#include <LiquidCrystal.h>
 
 LiquidCrystal lcd(1,2,3,4,5,6);
 

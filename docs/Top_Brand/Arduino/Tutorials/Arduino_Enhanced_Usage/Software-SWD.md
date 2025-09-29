@@ -59,8 +59,7 @@ Before launching J-Link GDB Server, you will also need to open `Arduino` IDE for
 
 In the settings of Arduino IDE, make sure that the **Show verbose output during compilation and upload** are both ticked.
 
-Under the Arduino sketch you want to debug, click **Compile** (select Wio Termianl as board), and check the log information to get the path of the `.elf` file location. Let's take `Blink`
- as example:
+Under the Arduino sketch you want to debug, click **Compile** (select Wio Termianl as board), and check the log information to get the path of the `.elf` file location. Let's take `Blink` as example:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/SWD/elf.png"/></div>
 

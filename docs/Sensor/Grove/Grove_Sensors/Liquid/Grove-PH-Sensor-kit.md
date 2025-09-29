@@ -210,9 +210,9 @@ double avergearray(int* arr, int number) {
 
 :::tip
 		
-    $k= (PH2-PH1)/(V2-V1)$
+    \$k= (PH2-PH1)/(V2-V1)\$
     
-    $Offset=[(PH2+PH1)-k*(V1+V2)]/2$
+    \$Offset=[(PH2+PH1)-k*(V1+V2)]/2\$
     
     There's a [Calculation Chart](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/Calibration_for_k&offset.xlsx) for furthur help with calibration.
 :::

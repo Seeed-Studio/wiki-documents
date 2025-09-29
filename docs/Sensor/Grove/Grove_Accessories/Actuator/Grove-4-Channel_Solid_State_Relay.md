@@ -114,7 +114,7 @@ The **CTR** is the control signal from the Arduino or other board. It is pulled 
 This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q17** and **Q18** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
 
 :::note
-        In this section we only show you part of the schematic, for the full document please refer to the [Resources](/#resources)
+        In this section we only show you part of the schematic, for the full document please refer to the [Resources](#resources)
 :::
 
 ## Platforms Supported

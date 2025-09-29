@@ -34,7 +34,7 @@ Grove - Ultrasonic ranger is a non-contact distance measurement module which wor
 
 <div align="center"><img width ={600} src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-4/Ultrasonic_Working_Principle.png"/></div>
 
-:::cautionWarning
+:::caution
 Do not hot plug Grove-Ultrasonic-Ranger, otherwise it will damage the  sensor. The measured area must be no less than 0.5 square meters and smooth.
 :::
 
@@ -256,7 +256,7 @@ Okay, the model works, but again all in by itself it is not suitable for actuall
 Find the project in Github repository for this project, under name WioTerminal_Azure_Central.ino and open it in Arduino IDE. After the sketch is uploaded, enter configuration mode by pressing three buttons on top of Wio Terminal and resetting the device.
 
 “In   configuration mode” will be displayed on device screen. Connect to  device with Serial monitor (baud rate 115200, carriage return) and set  WiFi SSID, password and Azure IoT Central credentials (in the following   format ```set_az_iotc your_ID_scope your_primary_key your_device_ID```), which you can get by following these steps:
-• Go to <https://apps.azureiotcentral.com/>
+• Go to [https://apps.azureiotcentral.com/](https://apps.azureiotcentral.com/)
 • If you don’t have a Microsoft account yet, register one.
 • Go to Build -> Custom app. Enter the app name and unique URL (can be similar to app name). Choose Free plan.
 • After an app is created, go to Device Templates. Make a new template of IoT device type. Choose custom model, add three capabilities as in the  below  screenshot and two interfaces (press on Views -> Visualizing  the  device). After finishing that and making sure everything is  correct,  publish the template.

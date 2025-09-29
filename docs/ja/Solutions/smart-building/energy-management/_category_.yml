@@ -1,0 +1,10 @@
+position: 3
+label: 'エネルギー管理'
+collapsible: true
+collapsed: true
+className: _energy-management
+link:
+  type: generated-index
+  slug: ja/energy-management
+  title: エネルギー管理
+  description: エネルギー管理ソリューション。

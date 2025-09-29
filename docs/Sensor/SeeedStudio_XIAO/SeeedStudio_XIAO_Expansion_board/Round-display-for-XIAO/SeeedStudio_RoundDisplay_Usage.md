@@ -16,7 +16,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/79.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -65,9 +65,7 @@ The Round Display also has a charging indicator. It has three states:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/78.jpg" style={{width:500, height:'auto'}}/></div>
 
-
 ### Round Display switch
-
 
 There is also a switch on the Round Display. The switch is used to control the on/off of the display and the power supply to the XIAO. When you flip the switch to OFF, the battery will not power the XIAO and the display screen will turn off. When you turn the switch to ON, the display will light up and the battery will power the XIAO (provided that a power supply battery is installed) to ensure that the program runs.
 
@@ -133,38 +131,37 @@ The RTC function uses the IIC protocol, so it occupies the **D5 (SCL)** and **D4
 The touch screen section uses the four IO ports on the XIAO, which are used as shown in the table below.
 
 <div class="table-center">
-    <table align="center">
-        <tr>
-            <th align="center">XIAO GPIO</th>
-            <th align="center">Touch screen</th>
-        </tr>
-        <tr>
-            <td align="center">D4 (SDA)</td>
-            <td align="center">Touch Screen IIC</td>
-        </tr>
-        <tr>
-            <td align="center">D5 (SCL)</td>
-            <td align="center">Touch Screen IIC</td>
-        </tr>
-        <tr>
-            <td align="center">D3</td>
-            <td align="center">LCD_DC</td>
-        </tr>
-        <tr>
-            <td align="center">D1</td>
-            <td align="center">LCD_CS</td>
-        </tr>
-        <tr>
-            <td align="center">D7</td>
-            <td align="center">TP_INT</td>
-        </tr>
-        <tr>
-            <td align="center">D6</td>
-            <td align="center">Screen backlight</td>
-        </tr>
-    </table>
+  <table align="center">
+    <tr>
+        <th align="center">XIAO GPIO</th>
+        <th align="center">Touch screen</th>
+    </tr>
+    <tr>
+        <td align="center">D4 (SDA)</td>
+        <td align="center">Touch Screen IIC</td>
+    </tr>
+    <tr>
+        <td align="center">D5 (SCL)</td>
+        <td align="center">Touch Screen IIC</td>
+    </tr>
+    <tr>
+        <td align="center">D3</td>
+        <td align="center">LCD_DC</td>
+    </tr>
+    <tr>
+        <td align="center">D1</td>
+        <td align="center">LCD_CS</td>
+    </tr>
+    <tr>
+        <td align="center">D7</td>
+        <td align="center">TP_INT</td>
+    </tr>
+    <tr>
+        <td align="center">D6</td>
+        <td align="center">Screen backlight</td>
+    </tr>
+  </table>
 </div>
-
 
 ## Round Display library Overview
 
@@ -173,7 +170,7 @@ The vast majority of Round Display's software development is based on XIAO's own
 In order to facilitate users to use the functions on Round Display, we wrote a separate library that mainly calls the interfaces of the above libraries to reduce the threshold of independent development by the users themselves when they arrive at a later stage. In this chapter, we will focus on what are the functions of these libraries that I prepared for Round Display and how to use them respectively.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_RoundDisplay">
+    <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_RoundDisplay" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
@@ -222,7 +219,6 @@ So if you need to draw a pattern using Round Display, don't forget to select the
 
 5. `void chsc6x_read( lv_indev_drv_t * indev_driver, lv_indev_data_t * data )`: This function is used to get the coordinate points of the touch screen.
 
-
 ### lv_hardware_test.h
 
 The `lv_hardware_test.h` file is the header file in the sample **HardwareTest** in the Round Display library. This header file prepares most of the hardware usage functions for Round Display.
@@ -248,8 +244,6 @@ The circuit design for this switch is shown below.
 This means that when the switch is closed **(toggled to the ON side)** then the Round Display's battery voltage reading function and display backlight function become available.
 
 When the switch is disconnected **(toggled to the digital side)**, then pins A0 and D6 on the XIAO are the available states.
-
-
 
 ## Measure battery voltage
 
@@ -316,7 +310,6 @@ void loop() {
 :::tip
 This program is not a universal program, and the measured battery percentage may not be accurate. This is because everyone uses different batteries and chips and development boards, so you may need to modify the program according to the actual situation when executing this program. Please refer to the [program annotation](#program-annotation) section of this section for the method of modification.
 :::
-
 
 Select the XIAO board you are using, upload the program, open the serial monitor, and set the baud rate to **115200**. If you have the battery connected and powered on, you should be able to see the battery voltage in the serial monitor.
 
@@ -389,10 +382,10 @@ For example, here are the actual measurements I took using my XIAO RP2040 and ba
 #define BATTERY_FULL_VOL 1791
 ```
 
-
 ## RTC function
 
 RTC function part, we mainly divided into the following four sections to introduce its application.
+
 1. First is for XIAO without network function, you can correct the RTC by manually setting the initial time.
 2. Then power the RTC with the help of coin cell battery to get the accurate time continuously.
 3. For XIAO with network function, you can use the network function to correct the time.
@@ -511,7 +504,6 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/71.png" style={{width:700, height:'auto'}}/></div>
 
-
 ### Network calibration RTC time
 
 For XIAO, which has network capabilities, things seem to get a lot easier. With a network, you don't even need to use a coin cell battery to keep the RTC working out of the box, you just need to network the timing every time you power it up.
@@ -616,7 +608,6 @@ void loop() {
 When you use this program, please fill in the name and password of the network according to your actual situation. After uploading the program, open the serial monitor and set the baud rate to 115200, then you can see the exact time.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/72.png" style={{width:700, height:'auto'}}/></div>
-
 
 ### Simple dial based on RTC time
 
@@ -1135,7 +1126,6 @@ If you already have these libraries installed, you can easily find the examples 
 The examples here are for reference only and not every example will necessarily work. You may need to modify the program to be compatible with the Round Display pinout and hardware definition.
 :::
 
-
 ## Tech Support & Product Discussion
 
 ### Q1: Why do I get an error when I use XIAO nRF52840 (Sense)?
@@ -1148,8 +1138,7 @@ When using the content of this tutorial, two different types of problems may occ
 
 2. Compilation error caused by choosing the wrong development board.
 
-If you are having problems with the compilation process. The error message is usually about an SPI error, for example `'SPI_X' was not declared in this scope`
-. Then it means that you are choosing the wrong type of development board. To use all of this tutorial, you need to use the **non-mbed** version of the XIAO nRF52840. -->
+If you are having problems with the compilation process. The error message is usually about an SPI error, for example `'SPI_X' was not declared in this scope`. Then it means that you are choosing the wrong type of development board. To use all of this tutorial, you need to use the **non-mbed** version of the XIAO nRF52840. -->
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/73.png" style={{width:700, height:'auto'}}/></div>
 
@@ -1169,47 +1158,16 @@ When you encounter this error, please update your **Seeed SAMD** development boa
 
 If there is no problem with the program and it does not show up after uploading it may be that it needs to be reset. Just press the reset button on the XIAO ESP32C3.
 
-
 ## Tech Support & Product Discussion
-
-.
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

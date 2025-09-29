@@ -43,109 +43,82 @@ The MiniSense 100 is a low cost cantilever-type vibration sensor loaded by a mas
 
 <table>
   <tbody><tr>
-      <td width={500}> **Parameter**
-      </td>
-      <td width={250}> **Value**
-      </td>
-      <td width={250}> **Units**
-      </td></tr>
+      <td width={500}> **Parameter**</td>
+      <td width={250}> **Value**</td>
+      <td width={250}> **Units**</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Voltage Sensitivity (open-circuit, baseline)
-      </td>
-      <td>  1.1
-      </td>
-      <td>  V/g
-      </td></tr>
+      <td> Voltage Sensitivity (open-circuit, baseline)</td>
+      <td>  1.1</td>
+      <td>  V/g</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Charge Sensitivity (baseline)
-      </td>
-      <td>  260
-      </td>
-      <td>  pC/g
-      </td></tr>
+      <td> Charge Sensitivity (baseline)</td>
+      <td>  260</td>
+      <td>  pC/g</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Resonance Frequency
-      </td>
-      <td>  75
-      </td>
-      <td>  Hz
-      </td></tr>
+      <td> Resonance Frequency</td>
+      <td>  75</td>
+      <td>  Hz</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Voltage Sensitivity (open-circuit, at resonance)
-      </td>
-      <td>  6
-      </td>
-      <td>  V/g
-      </td></tr>
+      <td> Voltage Sensitivity (open-circuit, at resonance)</td>
+      <td>  6</td>
+      <td>  V/g</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Upper Limiting Frequency (+3 dB)
-      </td>
-      <td>  42
-      </td>
-      <td>  Hz
-      </td></tr>
+      <td> Upper Limiting Frequency (+3 dB)</td>
+      <td>  42</td>
+      <td>  Hz</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Linearity
-      </td>
-      <td>  +/-1
-      </td>
-      <td>  %
-      </td></tr>
+      <td> Linearity</td>
+      <td>  +/-1</td>
+      <td>  %</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Capacitance
-      </td>
-      <td>  244
-      </td>
-      <td>  pF
-      </td></tr>
+      <td> Capacitance</td>
+      <td>  244</td>
+      <td>  pF</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Dissipation Factor
-      </td>
-      <td> 0.018
-      </td>
-      <td> (none)
-      </td></tr>
+      <td> Dissipation Factor</td>
+      <td> 0.018</td>
+      <td> (none)</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Inertial Mass
-      </td>
-      <td>  0.3
-      </td>
-      <td>  gram
-      </td></tr></tbody></table>
+      <td> Inertial Mass</td>
+      <td>  0.3</td>
+      <td>  gram</td>
+    </tr></tbody></table>
 
 
 ###   Environmental Specifications
 
 <table>
   <tbody><tr>
-      <td width={500}> **Parameter**
-      </td>
-      <td width={250}> **Value**
-      </td>
-      <td width={250}> **Units**
-      </td></tr>
+      <td width={500}> **Parameter**</td>
+      <td width={250}> **Value**</td>
+      <td width={250}> **Units**</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Storage Temperature
-      </td>
-      <td colSpan={2} rowSpan={1}>  -40 to +80 deg C
-      </td></tr>
+      <td> Storage Temperature</td>
+      <td colSpan={2} rowSpan={1}>  -40 to +80 deg C</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td>  Operating Temperature
-      </td>
-      <td colSpan={2} rowSpan={1}>  -20 to +60 deg C
-      </td></tr>
+      <td>  Operating Temperature</td>
+      <td colSpan={2} rowSpan={1}>  -20 to +60 deg C</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td colSpan={1} rowSpan={2}> Weight
-      </td>
-      <td>  Minisense 100H
-      </td>
-      <td> 0.5 gram
-      </td></tr>
+      <td colSpan={1} rowSpan={2}> Weight</td>
+      <td>  Minisense 100H</td>
+      <td> 0.5 gram</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td>  Minisense 100V
-      </td>
-      <td> 0.6 gram
-      </td></tr></tbody></table>
+      <td>  Minisense 100V</td>
+      <td> 0.6 gram</td>
+    </tr></tbody></table>
 
 
 

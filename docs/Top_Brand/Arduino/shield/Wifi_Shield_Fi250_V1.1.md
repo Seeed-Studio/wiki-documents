@@ -22,60 +22,54 @@ sku:    103030027
 
 ![](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/img/Fi250_board1.jpg)
 
-Wifi Shield (Fi250) V1.1 is a economic internet solution with Arduino. The Wi-Fi module support IEEE 802.11b/g/n mode, maximum speed up to 65Mbit/s. Wifi Shield (Fi250) V1.1 combine on board antenna; it’s easy to build you project in a small box. The module reserve a UFL connector, you can use an extra antenna to improve the signal range. There is a key on the board, just push one time to change wifi shield as AP mode. The module have a computer interface software, you can control and upgrade the module via USB-UART convertor.
-The wifi shield contain a Micro SD card socket, it’s like a recorder when wifi shield working as TCP, UDP server.
+Wifi Shield (Fi250) V1.1 is a economic internet solution with Arduino. The Wi-Fi module support IEEE 802.11b/g/n mode, maximum speed up to 65Mbit/s. Wifi Shield (Fi250) V1.1 combine on board antenna; it's easy to build you project in a small box. The module reserve a UFL connector, you can use an extra antenna to improve the signal range. There is a key on the board, just push one time to change wifi shield as AP mode. The module have a computer interface software, you can control and upgrade the module via USB-UART convertor.
+The wifi shield contain a Micro SD card socket, it's like a recorder when wifi shield working as TCP, UDP server.
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Wifi-Shield-(Fi250)-V1.1-p-2449.html)
 
 ## Specifications
 
 ---
-<table  cellpadding="1" cellspacing="1" width="555">
-<tr>
-<td> Module
-</td>
-<td>WIZnet FI250
-</td></tr>
-<tr>
-<td> Operating Voltage
-</td>
-<td> 5V or 3.3V (Auto select)
-</td></tr>
-<tr>
-<td> Current
-</td>
-<td> 300mA (maximum)
-</td></tr>
-<tr>
-<td>Single band
-</td>
-<td>2.4GHz IEEE 802.11b/g/n
-</td></tr>
-<tr>
-<td>Antenna
-</td>
-<td>On board PCB antenna (reserver UFL connector)
-</td></tr>
-<tr>
-<td>Memory
-</td>
-<td>1MB Flash Memory, 128KB SRAM, 1MB Serial Flash
-</td></tr>
-<tr>
-<td>Interface
-</td>
-<td>UART(default)/SPI(upgrade firmware)
-</td></tr>
-<tr>
-<td>Dimensions
-</td>
-<td>69.0x53.5x23.5 mm
-</td></tr>
-<tr>
-<td>Weight
-</td>
-<td>
-</td></tr></table>
+<table cellpadding="1" cellspacing="1" width="555">
+  <tbody>
+    <tr>
+      <td>Module</td>
+      <td>WIZnet FI250</td>
+    </tr>
+    <tr>
+      <td>Operating Voltage</td>
+      <td>5V or 3.3V (Auto select)</td>
+    </tr>
+    <tr>
+      <td>Current</td>
+      <td>300mA (maximum)</td>
+    </tr>
+    <tr>
+      <td>Single band</td>
+      <td>2.4GHz IEEE 802.11b/g/n</td>
+    </tr>
+    <tr>
+      <td>Antenna</td>
+      <td>On board PCB antenna (reserver UFL connector)</td>
+    </tr>
+    <tr>
+      <td>Memory</td>
+      <td>1MB Flash Memory, 128KB SRAM, 1MB Serial Flash</td>
+    </tr>
+    <tr>
+      <td>Interface</td>
+      <td>UART(default)/SPI(upgrade firmware)</td>
+    </tr>
+    <tr>
+      <td>Dimensions</td>
+      <td>69.0x53.5x23.5 mm</td>
+    </tr>
+    <tr>
+      <td>Weight</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Usage
 
@@ -224,17 +218,17 @@ void loop() {
 
 ### Reset the module
 
-* If you need to reset the module as factory default. press the function three times as fast speed. The MODE and WIF LED flash, wait the module reset.
+- If you need to reset the module as factory default. press the function three times as fast speed. The MODE and WIF LED flash, wait the module reset.
 
-* If the module reset as default, the baud rate change to 115200. kindly note that.
+- If the module reset as default, the baud rate change to 115200. kindly note that.
 
 ![](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/img/Fi250_reset.png)
 
 ### One press set AP mode
 
-* It's easy to enter AP mode. Press the Function button, wait the WIFI LED change as red. You can scan the wifi signal, WizFi250_AP_*******
+- It's easy to enter AP mode. Press the Function button, wait the WIFI LED change as red. You can scan the wifi signal, WizFi250_AP_*******
 
-* Press the wifi shield Fi250 reset button exit AP mode.
+- Press the wifi shield Fi250 reset button exit AP mode.
 
 ![](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/img/FI2350_AP.png)
 
@@ -260,7 +254,7 @@ Before upgrade your F/W, you may set the module to Program mode (short BOOT jump
 
 ![](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/img/WizFi250_firmware3.png)
 
-* When you update successful, move the jumper and restart the module.
+- When you update successful, move the jumper and restart the module.
 
 ## Schematic Online Viewer
 
@@ -271,28 +265,28 @@ Before upgrade your F/W, you may set the module to Program mode (short BOOT jump
 
 ---
 
-* [Wifi_Shield_(Fi250)_V1.1_sch_pcb.zip](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/res/Eagle_File_Wifi_Shield-Fi250-V1.1_sch_pcb.zip)
+- [Wifi_Shield_(Fi250)_V1.1_sch_pcb.zip](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/res/Eagle_File_Wifi_Shield-Fi250-V1.1_sch_pcb.zip)
 
-* [Wizfi250_programmer_s_guide.pdf](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/res/Wizfi250_programmer_s_guide.pdf)
+- [Wizfi250_programmer_s_guide.pdf](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/res/Wizfi250_programmer_s_guide.pdf)
 
-* [Wizfi250_quick_start_guide.pdf](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/res/Wizfi250_quick_start_guide.pdf)
+- [Wizfi250_quick_start_guide.pdf](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/res/Wizfi250_quick_start_guide.pdf)
 
-* [Wizfi250_datasheet.pdf](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/res/Wizfi250_datasheet.pdf)
+- [Wizfi250_datasheet.pdf](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/res/Wizfi250_datasheet.pdf)
 
-* [Wizfi250 library](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/res/Wizfi250.zip)
+- [Wizfi250 library](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/res/Wizfi250.zip)
 
-* [PDF_Wifi_Shield_(Fi250)_V1.1](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/res/Wifi_Shield-Fi250-V1.1.pdf)
+- [PDF_Wifi_Shield_(Fi250)_V1.1](https://files.seeedstudio.com/wiki/Wifi_Shield_Fi250_V1.1/res/Wifi_Shield-Fi250-V1.1.pdf)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -4,6 +4,7 @@ title: pH Sensor
 keywords:
 - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor
 last_update:
   date: 1/16/2023
   author: jianjing Huang
@@ -23,24 +24,24 @@ This pH Sensor comes with a MODBUS-RTU RS485 serial communications protocol or 4
 
 ## Features
 
-* **High performance:** high accuracy, fast response, good repeatability
-* **Universal protocol:** MODBUS RS-485 or 4~20mA current
-* **Wide-range power supply:** 3.6V ~ 30V
-* **Robustness:** suitable to be immersed in soil or water for a long time
-* **Maintainance-Free:** advanced junction design, no clogging
-* **Durable:** anti-corrosion, automatic temperature compensation
-* **User-friendly:** Easy to install and integrate
+- **High performance:** high accuracy, fast response, good repeatability
+- **Universal protocol:** MODBUS RS-485 or 4~20mA current
+- **Wide-range power supply:** 3.6V ~ 30V
+- **Robustness:** suitable to be immersed in soil or water for a long time
+- **Maintainance-Free:** advanced junction design, no clogging
+- **Durable:** anti-corrosion, automatic temperature compensation
+- **User-friendly:** Easy to install and integrate
 
 ## Applications
 
-* Agriculture: greenhouse, aquaponics, hydroponics, and crop Plantation, etc.
-* Animal Husbandry: pasture, grassland, and meadow
-* Forestry and Horticulture
-* Sewage Treatment
-* Swimming Pools and Spas
-* Scientific Experiments
-* Educational Projects
-* Other environmental monitoring scenarios
+- Agriculture: greenhouse, aquaponics, hydroponics, and crop Plantation, etc.
+- Animal Husbandry: pasture, grassland, and meadow
+- Forestry and Horticulture
+- Sewage Treatment
+- Swimming Pools and Spas
+- Scientific Experiments
+- Educational Projects
+- Other environmental monitoring scenarios
 
 ## Specifications
 
@@ -74,6 +75,7 @@ This pH Sensor comes with a MODBUS-RTU RS485 serial communications protocol or 4
       </tr>
     </tbody>
   </table>
+  
   <div>
     <table className="tg" data-data-style="undefined;table-layout: fixed; width: 677px;"><colgroup><col data-data-style="width: 223px;" /><col data-data-style="width: 454px;" /></colgroup>
       <tbody>
@@ -138,5 +140,5 @@ This pH Sensor comes with a MODBUS-RTU RS485 serial communications protocol or 4
 
 ## Sources
 
-* [pH Sensor Datasheet](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/RS485&4-20mACurrentpHSensor(S-pH-01)-Datasheet.pdf)
-* [pH Sensor User Manual](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/RS485&4-20mACurrentpHSensorUserManual-S-pH-01.pdf)
+- [pH Sensor Datasheet](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/RS485&4-20mACurrentpHSensor(S-pH-01)-Datasheet.pdf)
+- [pH Sensor User Manual](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/RS485&4-20mACurrentpHSensorUserManual-S-pH-01.pdf)

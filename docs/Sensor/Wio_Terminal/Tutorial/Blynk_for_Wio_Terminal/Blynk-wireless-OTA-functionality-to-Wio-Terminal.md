@@ -86,9 +86,9 @@ After the program is successfully uploaded, open the serial port monitor and set
 
 Download Blynk IoT APP：
 
-Android: <https://play.google.com/store/apps/details?id=cloud.blynk&hl=en_IN&gl=US>
+Android: [https://play.google.com/store/apps/details?id=cloud.blynk&hl=en_IN&gl=US](https://play.google.com/store/apps/details?id=cloud.blynk&hl=en_IN&gl=US)
 
-IOS: <https://apps.apple.com/us/app/blynk-iot/id1559317868>
+IOS: [https://apps.apple.com/us/app/blynk-iot/id1559317868](https://apps.apple.com/us/app/blynk-iot/id1559317868)
 
 Log in to the main screen
 

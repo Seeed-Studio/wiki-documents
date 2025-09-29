@@ -226,7 +226,7 @@ void loop()
 The library file may be updated. This code may not be applicable to the updated library file, so we recommend that you use the first two methods.
 :::
 
-:::tipsuccess
+:::tip
   If everything goes well, you will see the following result
 :::
 
@@ -383,7 +383,7 @@ void loop()
 
 ```
 
-:::tipsuccess
+:::tip
         If everything goes well, you will see the following result
 :::
 

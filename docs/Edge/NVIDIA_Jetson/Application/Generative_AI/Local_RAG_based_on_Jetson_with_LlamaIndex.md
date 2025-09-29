@@ -33,15 +33,14 @@ And here we introduce you [RAG based on Jetson](https://github.com/Seeed-Project
 <div class="table-center">
 	<table align="center">
 		<tr>
-			<th>reComputer (based on Jetson with RAM >= 16GB)
-			</th>
+			<th>reComputer (based on Jetson with RAM >= 16GB)</th>
 		</tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recomputerj4012.jpg" style={{width:800, height:'auto'}}/></div></td>
     </tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html">
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html" target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 				</a>
 			</div></td>

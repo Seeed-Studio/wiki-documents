@@ -73,77 +73,58 @@ Assembly diagram is as follows:
 
 ![](https://files.seeedstudio.com/wiki/Raspberry_PI_Bplus_Case/img/20141016191832.jpg)
 
-<table  cellspacing="0" width="80%">
+<table cellSpacing="0" width="80%">
 <tr>
-<th scope="col"> Part
-</th>
-<th scope="col"> Package
-</th>
-<th scope="col"> Qty
-</th></tr>
+<th scope="col">Part</th>
+<th scope="col">Package</th>
+<th scope="col">Qty</th>
+</tr>
 <tr>
-<th scope="row"> Top Case
-</th>
-<td> 4mm Thickness
-</td>
-<td> 1
-</td></tr>
+<th scope="row">Top Case</th>
+<td>4mm Thickness</td>
+<td>1</td>
+</tr>
 <tr>
-<th scope="row"> Bottom Case
-</th>
-<td> 4mm Thickness
-</td>
-<td> 1
-</td></tr>
+<th scope="row">Bottom Case</th>
+<td>4mm Thickness</td>
+<td>1</td>
+</tr>
 <tr>
-<th scope="row"> SD Card Sheet
-</th>
-<td> 2.5mm Thickness
-</td>
-<td> 1
-</td></tr>
+<th scope="row">SD Card Sheet</th>
+<td>2.5mm Thickness</td>
+<td>1</td>
+</tr>
 <tr>
-<th scope="row"> USB Connector Sheet
-</th>
-<td> 2.5mm Thickness
-</td>
-<td> 1
-</td></tr>
+<th scope="row">USB Connector Sheet</th>
+<td>2.5mm Thickness</td>
+<td>1</td>
+</tr>
 <tr>
-<th scope="row"> Metal Screw
-</th>
-<td> M3*4
-</td>
-<td> 4
-</td></tr>
+<th scope="row">Metal Screw</th>
+<td>M3*4</td>
+<td>4</td>
+</tr>
 <tr>
-<th scope="row">Nylon Screw
-</th>
-<td> M3*6
-</td>
-<td> 4
-</td></tr>
+<th scope="row">Nylon Screw</th>
+<td>M3*6</td>
+<td>4</td>
+</tr>
 <tr>
-<th scope="row"> Screw Column
-</th>
-<td> M3*7
-</td>
-<td> 4
-</td></tr>
+<th scope="row">Screw Column</th>
+<td>M3*7</td>
+<td>4</td>
+</tr>
 <tr>
-<th scope="row">Nylon Rivet
-</th>
-<td> R2048
-</td>
-<td> 4
-</td></tr>
+<th scope="row">Nylon Rivet</th>
+<td>R2048</td>
+<td>4</td>
+</tr>
 <tr>
-<th scope="row"> Silicone Cushion
-</th>
-<td> Ø10X3
-</td>
-<td> 4
-</td></tr></table>
+<th scope="row">Silicone Cushion</th>
+<td>Ø10X3</td>
+<td>4</td>
+</tr>
+</table>
 
 ## Tech Support & Product Discussion
 

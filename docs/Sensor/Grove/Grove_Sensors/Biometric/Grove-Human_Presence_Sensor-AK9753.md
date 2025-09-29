@@ -224,11 +224,9 @@ x x x x  millis: 17457
 
 This example detects the presence of IR object. The detection is based on the derivative of the sensor value. If the derivative is greater than a threshold, we think that some IR object entered the view of the sensor. The derivative of each channel is calculated by the following formula:
 
-$$
-derivativeIR1=   \Delta IR1 / \Delta t
-$$
+<div style={{ textAlign: 'center', padding: '15px', backgroundColor: 'var(--ifm-color-emphasis-100)', border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: '5px', margin: '20px 0', fontFamily: 'monospace', fontSize: '16px' }}><strong>derivativeIR1 = ΔIR1 / Δt</strong></div>
 
-$\Delta t$ represents the time interval and $\Delta IR1$ represents output value change of IR Sensor1 during the time interval.
+Δt represents the time interval and ΔIR1 represents output value change of IR Sensor1 during the time interval.
 
 In the output, **O** means no detection, **X** means detected. The order of the outputs corresponds to the physical location of the IR sensors.  
 e.g.
@@ -250,9 +248,7 @@ You can see the following results：
 
 The detection is based on the derivative of the difference value of IR1_IR3 or IR2_IR4. The derivative of IR1_IR3 or IR2_IR4 is calculated by the following formula:
 
-$$
-derivativeIR1\_IR3=\Delta (IR1-IR3)/\Delta t
-$$
+<div style={{ textAlign: 'center', padding: '15px', backgroundColor: 'var(--ifm-color-emphasis-100)', border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: '5px', margin: '20px 0', fontFamily: 'monospace', fontSize: '16px' }}><strong>derivativeIR1_IR3 = Δ(IR1-IR3) / Δt</strong></div>
 
 The meaning of each curve in the figure is:: (in order)
 

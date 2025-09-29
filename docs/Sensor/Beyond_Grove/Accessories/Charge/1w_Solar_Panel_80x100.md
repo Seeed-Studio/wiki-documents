@@ -20,60 +20,49 @@ This is a custom solar panel, which mates directly with many of our development 
 
 <table>
 <tr>
-<th>PET
-</th>
-<th>package
-</th></tr>
+<th>PET</th>
+<th>package</th>
+</tr>
 <tr>
-<td width="400px">Typical peak power
-</td>
-<td width="400px">0.935W
-</td></tr>
+<td width="400px">Typical peak power</td>
+<td width="400px">0.935W</td>
+</tr>
 <tr>
-<td>Voltage at peak power
-</td>
-<td>5.5v
-</td></tr>
+<td>Voltage at peak power</td>
+<td>5.5v</td>
+</tr>
 <tr>
-<td>Current at peak power
-</td>
-<td>170mA
-</td></tr>
+<td>Current at peak power</td>
+<td>170mA</td>
+</tr>
 <tr>
-<td>Length
-</td>
-<td>100 mm
-</td></tr>
+<td>Length</td>
+<td>100 mm</td>
+</tr>
 <tr>
-<td>Width
-</td>
-<td>75 mm
-</td></tr>
+<td>Width</td>
+<td>75 mm</td>
+</tr>
 <tr>
-<td>Depth
-</td>
-<td>1.5 mm
-</td></tr>
+<td>Depth</td>
+<td>1.5 mm</td>
+</tr>
 <tr>
-<td>Weight
-</td>
-<td>33g
-</td></tr>
+<td>Weight</td>
+<td>33g</td>
+</tr>
 <tr>
-<td>Efficiency
-</td>
-<td>15.5%
-</td></tr>
+<td>Efficiency</td>
+<td>15.5%</td>
+</tr>
 <tr>
-<td> Wire diameter
-</td>
-<td> 1.5mm
-</td></tr>
+<td> Wire diameter</td>
+<td> 1.5mm</td>
+</tr>
 <tr>
-<td> connector
-</td>
-<td> 2.0mm JST
-</td></tr></table>
+<td> connector</td>
+<td> 2.0mm JST</td>
+</tr></table>
 
 ## See Also
 

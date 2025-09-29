@@ -44,9 +44,9 @@ To read accelerometer values of each axis on Wio Terminal, simply follow this:
 ```cpp
 void loop() {
     float x_values, y_values, z_values;
-    x_values = lis.getAcceleratationX();
-    y_values = lis.getAcceleratationY();
-    z_values = lis.getAcceleratationZ();
+    x_values = lis.getAccelerationX();
+    y_values = lis.getAccelerationY();
+    z_values = lis.getAccelerationZ();
     delay(50);  // delay to avoid large amount of data being read
     ...
 }

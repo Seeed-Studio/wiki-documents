@@ -80,7 +80,7 @@ In this example, I'll use the system versions already installed on my Windows ma
 </TabItem>
 </Tabs>
 
-If this is your first time running the setup, when you click `Create`, the extension will download and manage the SDK for you. On Windows, the SDK will typically be placed in `%userprofile%\.pico-sdk`. The time it takes to set up depends on your internet speed. Once completed, a new window will open with your project.
+If this is your first time running the setup, when you click `Create`, the extension will download and manage the SDK for you. On Windows, the SDK will typically be placed in `%userprofile%.pico-sdk`. The time it takes to set up depends on your internet speed. Once completed, a new window will open with your project.
 
 #### Step 4: Build the Project
 
@@ -93,9 +93,11 @@ The first time you set up your project, you'll need to manually modify the board
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/sdk/set-xiao-rp2350-board.png" style={{width:500, height:'auto'}}/></div>
 
 **After modifying the board type, clean up the `build` folder** to ensure that it uses the correct board configuration from `%userprofile%/.pico-sdk/sdk/2.0.0/src/boards/include/boards/seeed_xiao_rp2350.h`. Then type the following commands to generate the CMake cache in the build folder:
+
 ```shell
 cmake .. # in build folder
 ```
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/sdk/get-cmake-cache.png" style={{width:500, height:'auto'}}/></div>
 
 This will allow the compile task of the extension to work correctly.
@@ -122,7 +124,6 @@ If your device is in BOOT mode, you can press the **Run** button to compile and 
 
 We've just set up the development environment and successfully created a new project using the Raspberry Pi Pico extension for VSCode. With the project ready and your tools configured, you can easily compile and run your code on the XIAO RP2350, streamlining your development process.
 
-
 ## Example 1: LED Blink
 
 To demonstrate basic SDK usage, the following example details programming the onboard LED to blink:
@@ -144,6 +145,7 @@ int main() {
     }
 }
 ```
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/rp2350-blink.gif" style={{width:400, height:'auto', "border-radius": '12.8px'}}/></div>
 
 ## Example 2: RGB Blink
@@ -267,6 +269,7 @@ int main() {
     }
 }
 ```
+
 </TabItem>
 <TabItem value="ws2812.pio" label="ws2812.pio">
 
@@ -357,6 +360,7 @@ static inline void ws2812_parallel_program_init(PIO pio, uint sm, uint offset, u
 }
 %}
 ```
+
 </TabItem>
 
 <TabItem value="ws2812-cmake" label="CMakeLists.txt">
@@ -542,11 +546,11 @@ This will enable USB support in your project.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/kpY74apCWj" class="button_discord"></a> 
+<a href="https://discord.gg/kpY74apCWj" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>  

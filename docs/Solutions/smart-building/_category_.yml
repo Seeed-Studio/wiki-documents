@@ -1,0 +1,10 @@
+position: 2
+label: 'Smart Building'
+collapsible: true
+collapsed: true
+className: _smart-building
+link:
+  type: generated-index
+  slug: smart-building
+  title: Smart Building
+  description: Smart buildings solutions.

@@ -56,29 +56,28 @@ SSD, also known as Solid State Drives, is often used as the primary storage devi
       <td align="center">110061381</td>
     </tr>
     <tr>
-      <th align="center">Side View
-      </th><td align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/frontview5.png" /></div></td>
+      <th align="center">Side View</th>
+      <td align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/frontview5.png" /></div></td>
       <td align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/frontview5.png" /></div></td>
       <td align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/frontview5.png" /></div></td>
       <td align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/frontview5.png" /></div></td>
     </tr>
     <tr>
-      <th align="center">Equipped Module
-      </th><td align="center">Jetson Nano 4G</td>
+      <th align="center">Equipped Module</th>
+      <td align="center">Jetson Nano 4G</td>
       <td align="center">Jetson Xavier NX 8GB</td>
       <td align="center">Jetson Xavier NX 16GB</td>
       <td align="center">Jetson Xavier NX 8GB</td>
     </tr>
     <tr>
-      <th align="center">Operating carrier Board
-      </th><td align="center">Jetson A206</td>
+      <th align="center">Operating carrier Board</th>
+      <td align="center">Jetson A206</td>
       <td align="center">Jetson A206</td>
       <td align="center">Jetson A206</td>
       <td align="center">J202</td>
     </tr>
   </tbody>
 </table>
-
 
 ### Software And Hardware Requirements
 
@@ -90,25 +89,24 @@ The following conditions need to be met for the expansion solution using SSDs, w
       <th align="center">software and hardware requirements</th>  
     </tr>
     <tr>
-      <th align="center">reComputer for Jetson
-      </th><td align="left">JetPack versions 4.4 ~ 4.6 <br />
+      <th align="center">reComputer for Jetson</th>
+      <td align="left">JetPack versions 4.4 ~ 4.6 <br />
         Carrier board must contain M.2 M-Key slot</td>
     </tr>
     <tr>
-      <th align="center">SSD
-      </th><td align="left">SSD need to be fourth generation extended file system (Ext4) <br />
+      <th align="center">SSD</th>
+      <td align="left">SSD need to be fourth generation extended file system (Ext4) <br />
         M.2 M-Key interface with NVMe protocol <br />
         Recommended capacity ≤ 512 GB</td>
     </tr>
   </tbody>
 </table>
 
-
 !!!Attention
     The updated JetPack version has not been tested for expansion, so the stability or success of the expansion cannot be guaranteed, please follow this tutorial carefully.
 
     The SSD needs to be M.2 M-Key, otherwise it will not match the interface on the carrier board.
-    <div align=center><img width = 300 src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/3.jpeg"/></div>
+    <div align="center"><img width="300" src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/3.jpeg"/></div>
 
     Storage devices with non-extended fourth generation file systems (Ext4) cannot complete expansion operations.
 
@@ -128,40 +126,35 @@ Select your SSD on the left side and then select **Format Disk** in the upper ri
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd1.jpg" /></div>
 
-
 Format your SSD to GPT format. A pop-up window will appear asking you to confirm and enter your user password.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd3.png" /></div>
-
 
 Then, we click on the middle **+** to add a disk character.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd6.png" /></div>
 
-
 Click on "Next".
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd7.png" /></div>
 
-
 Please give your SSD a name and select **Ext4** in the type and click "Create". At this point we have completed the SSD prep according to the expansion requirements.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd8.png" /></div>
-
 
 **Step 3.** Build the root directory to the SSD
 
 Use the git command to download the script files we need to use to reComputer.
 
 ```sh
-$ git clone https://github.com/limengdu/rootOnNVMe.git
-$ cd rootOnNVMe/
+git clone https://github.com/limengdu/rootOnNVMe.git
+cd rootOnNVMe/
 ```
 
 Then execute the following command to build the files from the root directory in the eMMC to the SSD, the wait time for this step depends on the size of the root directory you are using.
 
 ```sh
-$ ./copy-rootfs-ssd.sh
+./copy-rootfs-ssd.sh
 ```
 
 **Step 4.** Configure the environment and complete the expansion
@@ -169,7 +162,7 @@ $ ./copy-rootfs-ssd.sh
 Execute the following command to complete the configuration of rootfs.
 
 ```sh
-$ ./setup-service.sh
+./setup-service.sh
 ```
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/9.png" /></div>
@@ -181,7 +174,6 @@ When you restart reComputer, you will see that the eMMC has become an external s
 !!!Attention
     The default SSD path in the script file is `/dev/nvme0n1p1`, which is also the path assigned by default by reComputer. If you find that your SSD path does not match this with the command `sudo fdisk -l`, change the path of all `/dev/nvme0n1p1` in the files **copy-rootfs-ssd.sh**, **data/setssdroot.service**, and **data/setssdroot.sh** in rootOnNVMe to the path where your SSD is located.
    <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/21.png" /></div>
-
 
     The above expansion will not remove the original root directory contents from the eMMC. If you do not want to boot from the SSD, you can remove the SSD and the system will still boot from the eMMC.
 
@@ -195,24 +187,23 @@ USB storage devices, such as USB flash drives and mobile hard drives, are widely
       <th align="center">reComputer J1010</th>  
     </tr>
     <tr>
-      <th align="center">SKU
-      </th><td align="center">110061362</td>
+      <th align="center">SKU</th>
+      <td align="center">110061362</td>
     </tr>
     <tr>
-      <th align="center">Side View
-      </th><td align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/frontview3_1.png" /></div></td>
+      <th align="center">Side View</th>
+      <td align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/frontview3_1.png" /></div></td>
     </tr>
     <tr>
-      <th align="center">Equipped Module
-      </th><td align="center">Jetson Nano 4G</td>
+      <th align="center">Equipped Module</th>
+      <td align="center">Jetson Nano 4G</td>
     </tr>
     <tr>
-      <th align="center">Operating carrier Board
-      </th><td align="center">J1010 carrier board</td>
+      <th align="center">Operating carrier Board</th>
+      <td align="center">J1010 carrier board</td>
     </tr>
   </tbody>
 </table>
-
 
 The biggest advantage of scaling via USB storage devices over scaling via SSDs is the high degree of convenience of USB devices and the simplicity of removing them.
 However, even with the high-speed USB 3.2 interface, the data transfer rate is far less than that of the standard PCIe bus, so the SSD expansion method is superior in terms of stability, reliability and data transfer speed.
@@ -227,18 +218,17 @@ The following conditions need to be met for the expansion solution using USB, wh
       <th align="center">software and hardware requirements</th>  
     </tr>
     <tr>
-      <th align="center">reComputer for Jetson
-      </th><td align="left">JetPack versions 4.4 ~ 4.6 <br />
+      <th align="center">reComputer for Jetson</th>
+      <td align="left">JetPack versions 4.4 ~ 4.6 <br />
         Equipped Module needs to be Jetson Nano</td>
     </tr>
     <tr>
-      <th align="center">USB storage devices
-      </th><td align="left">USB storage devices need to be fourth generation extended file system (Ext4) <br />
+      <th align="center">USB storage devices</th>
+      <td align="left">USB storage devices need to be fourth generation extended file system (Ext4) <br />
         USB storage device power supply current ≤ 0.5 A</td>
     </tr>
   </tbody>
 </table>
-
 
 !!!Attention
     The updated JetPack version has not been tested for expansion, so the stability or success of the expansion cannot be guaranteed, please follow this tutorial carefully.
@@ -256,8 +246,8 @@ The following conditions need to be met for the expansion solution using USB, wh
 Use the git command to download the script files we need to use to reComputer.
 
 ```sh
-$ git clone https://github.com/limengdu/bootFromUSB.git
-$ cd bootFromUSB
+git clone https://github.com/limengdu/bootFromUSB.git
+cd bootFromUSB
 ```
 
 **Step 2.** Preparing the USB storage device
@@ -270,62 +260,55 @@ Select your USB storage device on the left side and then select **Format Disk** 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/sd1.jpg" /></div>
 
-
 Format your USB storage device to GPT format. A pop-up window will appear asking you to confirm and enter your user password.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/sd2.png" /></div>
-
 
 Then, we click on the middle **+** to add a disk character.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/sd4.png" /></div>
 
-
 Click on "Next".
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/sd5.png" /></div>
 
-
 Please give your USB storage device a name and select **Ext4** in the type and click "Create". At this point we have completed the USB storage device prep according to the expansion requirements.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/sd6.png" /></div>
-
 
 **Step 3.** Mounting a USB storage device
 
 The USB storage device prepared according to **step 2** can be seen in the Disks software as unmounted.
 
 !!!Note
-	If you find that your USB device has been automatically mounted after formatting, skip this step.
+ If you find that your USB device has been automatically mounted after formatting, skip this step.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/60.png" /></div>
-
 
 We use the following command to mount the USB device.
 
 ```sh
-$ mkdir /media/USB/
-$ sudo mount <USB Device Path> /media/USB/
+mkdir /media/USB/
+sudo mount <USB Device Path> /media/USB/
 ```
 
 Where `<USB Device Path>` refers to the path of the USB storage device, this parameter can be seen in Device of the Disks software or can be queried with the command `sudo fdisk -l`. For example, for my USB device, I can mount `/dev/sda1` to `/media/USB/` with the following command.
 
 ```sh
-$ sudo mount /dev/sda1 /media/USB/
+sudo mount /dev/sda1 /media/USB/
 ```
 
 Use the following command to check the mount location of the device.
 
 ```sh
-$ sudo findmnt -rno TARGET <USB Device Path>
+sudo findmnt -rno TARGET <USB Device Path>
 ```
 
 For my USB device, the commands I need to use are:
 
 ```sh
-$ sudo findmnt -rno TARGET /dev/sda1
+sudo findmnt -rno TARGET /dev/sda1
 ```
-
 
 **Step 4.** Copy the system to a USB storage device
 
@@ -347,7 +330,7 @@ usage: ./copyRootToUSB.sh [OPTIONS]
 In general, for regular expansion needs, we can just select `-p` in the parameter `[OPTIONS]` and later we need to add the path of the USB device (e.g. `/dev/sda1`), which we got in **step 3**. For example, for my USB device, the full command I need to use is:
 
 ```sh
-$ ./copyRootToUSB.sh -p /dev/sda1
+./copyRootToUSB.sh -p /dev/sda1
 ```
 
 The length of time this command takes to execute depends on the size of the files stored on your eMMC.
@@ -357,7 +340,7 @@ The length of time this command takes to execute depends on the size of the file
 Just to be sure, we need to look up the UUID of the USB device.
 
 ```sh
-$ ./partUUID.sh 
+./partUUID.sh 
 ```
 
 The default path for this command is **sda1 (/dev/sda1)**, but you can also determine the UUID of other USB devices. specify `/dev/ using` the `-d` flag. For example, for my USB device it would be:
@@ -379,7 +362,7 @@ APPEND ${cbootargs} root=UUID=e34d67bb-83bb-4fc5-b9a4-a1388d2b2be5 rootwait root
 We need to make a backup of the boot configuration file first.
 
 ```sh
-$ sudo cp /boot/extlinux/extlinux.conf /boot/extlinux/extlinux.conf.bak
+sudo cp /boot/extlinux/extlinux.conf /boot/extlinux/extlinux.conf.bak
 ```
 
 This step is the most important and dangerous step in the USB device expansion operation. Edit the `/boot/extlinux/extlinux.conf` file and `/media/nvidia/boot/extlinux/extlinux.conf`, then add an entry to point to the new rootfs, the location is the path of the USB device, fill it in the parameter `<path>` below. The path information is obtained in **step 3**.
@@ -434,7 +417,6 @@ Save the file and restart reComputer, the system root will switch to the USB sto
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/62.png" /></div>
 
-
 ## Restore System Backup Via Serial Console
 
 When your system does not boot properly due to an error, or for some other reason (a common scenario is that the Nvidia icon keeps recurring on boot), then the backup you made during the expansion will play an important role. We understand your anxiety at this moment, but please be patient and follow the steps below to get reComputer into the serial console and we will operate the U-boot to restore your backup.
@@ -447,24 +429,23 @@ When your system does not boot properly due to an error, or for some other reaso
       <th align="center">Description</th>  
     </tr>
     <tr>
-      <th align="center"><div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/7.jpeg" /></div>
-      </th><td align="left">Ubuntu host x1</td>
+      <th align="center"><div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/7.jpeg" /></div></th>
+      <td align="left">Ubuntu host x1</td>
     </tr>
     <tr>
-      <th align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/reComputerheadline.png" /></div>
-      </th><td align="left">Unable to access the system reComputer Jetson x1</td>
+      <th align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/reComputerheadline.png" /></div></th>
+      <td align="left">Unable to access the system reComputer Jetson x1</td>
     </tr>
     <tr>
-      <th align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/5.png" /></div>
-      </th><td align="left"><a href="https://www.seeedstudio.com/USB-To-Uart-5V-3V3-p-1832.html?queryID=cb30ad1a9d75c9ef437912535186b130&objectID=1112&indexName=bazaar_retailer_products">UART to USB module x1</a></td>
+      <th align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/5.png" /></div></th>
+      <td align="left"><a href="https://www.seeedstudio.com/USB-To-Uart-5V-3V3-p-1832.html?queryID=cb30ad1a9d75c9ef437912535186b130&objectID=1112&indexName=bazaar_retailer_products">UART to USB module x1</a></td>
     </tr>
     <tr>
-      <th align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/6.png" /></div>
-      </th><td align="left"><a href="https://www.seeedstudio.com/1-pin-dual-female-jumper-wire-100mm-50pcs-pack-p-260.html?queryID=a51c4491cb6b462a1e844c832c98c52a&objectID=2042&indexName=bazaar_retailer_products">Female to female DuPont wire x3</a></td>
+      <th align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/6.png" /></div></th>
+      <td align="left"><a href="https://www.seeedstudio.com/1-pin-dual-female-jumper-wire-100mm-50pcs-pack-p-260.html?queryID=a51c4491cb6b462a1e844c832c98c52a&objectID=2042&indexName=bazaar_retailer_products">Female to female DuPont wire x3</a></td>
     </tr>
   </tbody>
 </table>
-
 
 ### Steps to access the serial console
 
@@ -499,7 +480,6 @@ Connect the reComputer to the UART to USB module according to the wiring instruc
   </tbody>
 </table>
 
-
 !!!Tip
     The VCC interface between the reComputer and the UART to USB module does not need to be connected.
 
@@ -512,13 +492,13 @@ Connect the reComputer to the UART to USB module according to the wiring instruc
 If your Ubuntu host does not have minicom installed, you can install minicom on your computer with the following command.
 
 ```sh
-$ sudo apt-get install minicom
+sudo apt-get install minicom
 ```
 
 After waiting for the installation to complete, enter the command to start minicom.
 
 ```sh
-$ sudo minicom
+sudo minicom
 ```
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/40.png" /></div>
@@ -534,7 +514,7 @@ In the minicom menu bar, we open the serial port and configure it so that we can
 At this moment, we create a new command line window and enter commands in the window to monitor the access of the new device.
 
 ```sh
-$ dmesg --follow
+dmesg --follow
 ```
 
 At this point we will power up the reComputer and connect the UART to USB module with the reComputer connected to the Ubuntu host via the USB port. The command line window will show the name of the newly connected device, we need to find the fragment starting with **tty** and write it down.
@@ -653,14 +633,15 @@ version   - print monitor, compiler and linker version
 ```
 
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

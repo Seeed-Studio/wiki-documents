@@ -25,41 +25,118 @@ With the SenseCAP [S2110 controller](https://www.seeedstudio.com/SenseCAP-XIAO-L
 The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN® network, built-in 19 Ah battery, and powerful support from APP make the [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) the best choice for industrial applications. The series includes sensors for soil moisture, air temperature and humidity, light intensity, CO2, EC, and an 8-in-1 weather station. Try the latest SenseCAP S210x for your next successful industrial project.
 
 <table style={{marginLeft: 'auto', marginRight: 'auto'}}>
-  <tbody><tr><td colSpan={4} bgcolor="#0e3c49" align="center"><font color="white" size={4}><strong>SenseCAP Industrial Sensor</strong></font></td>
-    </tr>
+  <tbody>
     <tr>
-      <td bgcolor="#0e3c49"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank" /><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank"><img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2100.png" /></a></div>
-      </td>
-      <td bgcolor="#0e3c49"><a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank" /><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank"><img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2101&S2103.png" /></a></div>
-      </td>
-      <td bgcolor="#0e3c49"><a href="https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html" target="_blank" /><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html" target="_blank"><img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2102.png" /></a></div>
-      </td>
-      <td bgcolor="#0e3c49"><a href="https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html" target="_blank" /><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html" target="_blank"><img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2101&S2103.png" /></a></div>
+      <td colSpan={4} bgcolor="#0e3c49" align="center">
+        <font color="white" size={4}><strong>SenseCAP Industrial Sensor</strong></font>
       </td>
     </tr>
     <tr>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank"><strong>S2100 <br /> Data Logger</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank"><strong>S2101 <br /> Air Temp &amp; Humidity</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html" target="_blank"><strong>S2102 <br /> Light</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html" target="_blank"><strong>S2103 <br /> Air Temp &amp; Humidity &amp; CO2</strong></a></td>
+      <td bgcolor="#0e3c49">
+        <div align="center">
+          <a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank">
+            <img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2100.png" />
+          </a>
+        </div>
+      </td>
+      <td bgcolor="#0e3c49">
+        <div align="center">
+          <a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank">
+            <img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2101&S2103.png" />
+          </a>
+        </div>
+      </td>
+      <td bgcolor="#0e3c49">
+        <div align="center">
+          <a href="https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html" target="_blank">
+            <img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2102.png" />
+          </a>
+        </div>
+      </td>
+      <td bgcolor="#0e3c49">
+        <div align="center">
+          <a href="https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html" target="_blank">
+            <img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2101&S2103.png" />
+          </a>
+        </div>
+      </td>
     </tr>
     <tr>
-      <td bgcolor="#0e3c49"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank" /><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank"><img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2104.png" /></a></div>
+      <td bgcolor="#0e3c49" align="center">
+        <a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank">
+          <strong>S2100 <br /> Data Logger</strong>
+        </a>
       </td>
-      <td bgcolor="#0e3c49"><a href="https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html" target="_blank" /><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html" target="_blank"><img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2105.png" /></a></div>
+      <td bgcolor="#0e3c49" align="center">
+        <a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank">
+          <strong>S2101 <br /> Air Temp &amp; Humidity</strong>
+        </a>
       </td>
-      <td bgcolor="#0e3c49"><a href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank" /><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank"><img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2110.png" /></a></div>
+      <td bgcolor="#0e3c49" align="center">
+        <a href="https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html" target="_blank">
+          <strong>S2102 <br /> Light</strong>
+        </a>
       </td>
-      <td bgcolor="#0e3c49"><a href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank" /><div align="center"><a href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank"><img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2120.png" /></a></div>
+      <td bgcolor="#0e3c49" align="center">
+        <a href="https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html" target="_blank">
+          <strong>S2103 <br /> Air Temp &amp; Humidity &amp; CO2</strong>
+        </a>
       </td>
     </tr>
     <tr>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank"><strong>S2104 <br /> Soil Moisture &amp; Temp</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html" target="_blank"><strong>S2105 <br /> Soil Moisture &amp; Temp &amp; EC</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank"><strong>S2110 <br /> LoRaWAN® Controller</strong></a></td>
-      <td bgcolor="#0e3c49" align="center"><a href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank"><strong>S2120 <br /> 8-in-1 Weather Station</strong></a></td>
+      <td bgcolor="#0e3c49">
+        <div align="center">
+          <a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank">
+            <img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2104.png" />
+          </a>
+        </div>
+      </td>
+      <td bgcolor="#0e3c49">
+        <div align="center">
+          <a href="https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html" target="_blank">
+            <img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2105.png" />
+          </a>
+        </div>
+      </td>
+      <td bgcolor="#0e3c49">
+        <div align="center">
+          <a href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank">
+            <img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2110.png" />
+          </a>
+        </div>
+      </td>
+      <td bgcolor="#0e3c49">
+        <div align="center">
+          <a href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank">
+            <img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2120.png" />
+          </a>
+        </div>
+      </td>
     </tr>
-  </tbody></table>
+    <tr>
+      <td bgcolor="#0e3c49" align="center">
+        <a href="https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html" target="_blank">
+          <strong>S2104 <br /> Soil Moisture &amp; Temp</strong>
+        </a>
+      </td>
+      <td bgcolor="#0e3c49" align="center">
+        <a href="https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html" target="_blank">
+          <strong>S2105 <br /> Soil Moisture &amp; Temp &amp; EC</strong>
+        </a>
+      </td>
+      <td bgcolor="#0e3c49" align="center">
+        <a href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank">
+          <strong>S2110 <br /> LoRaWAN® Controller</strong>
+        </a>
+      </td>
+      <td bgcolor="#0e3c49" align="center">
+        <a href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank">
+          <strong>S2120 <br /> 8-in-1 Weather Station</strong>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Grafana
 
@@ -81,7 +158,7 @@ Before doing so, please prepare the following.
 
 **Step 1.** Start Node-RED
 
-Start Node-RED by typing the command `node-red` in the terminal and open a browser and enter the address **<http://localhost:1880>** in the address bar to access the editor of Node-RED.
+Start Node-RED by typing the command `node-red` in the terminal and open a browser and enter the address [http://localhost:1880](http://localhost:1880) in the address bar to access the editor of Node-RED.
 
 **Step 2.** Create MQTT Node
 
@@ -199,7 +276,7 @@ Add **influx.batch** from the storage bar on the left，double-click it to enter
 **Step 2.** Edit **influx.batch** node:
 
 - **Version**: 2.0.
-- **URL**: <http://localhost:8086/>
+- **URL**: http://localhost:8086/
 - **TOKEN**:  Which you generate in **Obtain API Token** Section.
 
 When you have finished click on the **Add** button in the top right hand corner to return to the properties page of the influx batch, at this point please fill in your Orgnization Name and Bucket name.
@@ -217,90 +294,88 @@ Drag out the function node from the function bar on the left, double-click it to
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_nodered_azure/17.png" /></div>
 
 ```javascript
-{
-    var payload = msg.payload;
-    var topic = msg.topic;
-    var strs = topic.split("/");
-    var length = strs.length
-    if (length >= 2) {
-        var measurementId = strs[length - 1]
-        var body = {}
-        var value = payload.value
-        if (measurementId == 4100) {
-            body.co2 = value
-            measurement = "co2"
-        } else if (measurementId == 4103) {
-            body.soilmoisture = value
-            measurement = "soilmoisture"
-        } else if (measurementId == 4150) {
-            body.accelX = value
-            measurement = "accelX"
-        } else if (measurementId == 4151) {
-            body.accelY = value
-            measurement = "accelY"
-        } else if (measurementId == 4152) {
-            body.accelZ = value
-            measurement = "accelZ"
-        } else if (measurementId == 4192) {
-            body.soundintensity = value
-            measurement = "soundintensity"
-        } else if (measurementId == 4193) {
-            body.lightIntensity = value
-            measurement = "lightIntensity"
-        } else if (measurementId == 4195) {
-            body.tvoc = value
-            measurement = "tvoc"
-        } else if (measurementId == 4097) {
-            body.airtemperature = value
-            measurement = "airtemperature"
-        } else if (measurementId == 4098) {
-            body.airhumidity = value
-            measurement = "airhumidity"
-        } else if (measurementId == 4175) {
-            body.AIdetection_1 = value
-            measurement = "AIdetection_1"
-        } else if (measurementId == 4176) {
-            body.AIdetection_2 = value
-            measurement = "AIdetection_2"
-        } else if (measurementId == 4177) {
-            body.AIdetection_3 = value
-            measurement = "AIdetection_3"
-        } else if (measurementId == 4178) {
-            body.AIdetection_4 = value
-            measurement = "AIdetection_4"
-        } else if (measurementId == 4179) {
-            body.AIdetection_5 = value
-            measurement = "AIdetection_5"
-        } else if (measurementId == 4180) {
-            body.AIdetection_6 = value
-            measurement = "AIdetection_6"
-        } else if (measurementId == 4181) {
-            body.AIdetection_7 = value
-            measurement = "AIdetection_7"
-        } else if (measurementId == 4182) {
-            body.AIdetection_8 = value
-            measurement = "AIdetection_8"
-        } else if (measurementId == 4183) {
-            body.AIdetection_9 = value
-            measurement = "AIdetection_9"
-        } else if (measurementId == 4184) {
-            body.AIdetection_10 = value
-            measurement = "AIdetection_10"
-        }
-        msg.payload = [{
-            measurement: measurement,
-            fields: body,
-            tags: {
-                device: "SenseCAP K1100"
-            },
-            timestamp: new Date()
-        }];
+var payload = msg.payload;
+var topic = msg.topic;
+var strs = topic.split("/");
+var length = strs.length
+if (length >= 2) {
+    var measurementId = strs[length - 1]
+    var body = {}
+    var value = payload.value
+    if (measurementId == 4100) {
+        body.co2 = value
+        measurement = "co2"
+    } else if (measurementId == 4103) {
+        body.soilmoisture = value
+        measurement = "soilmoisture"
+    } else if (measurementId == 4150) {
+        body.accelX = value
+        measurement = "accelX"
+    } else if (measurementId == 4151) {
+        body.accelY = value
+        measurement = "accelY"
+    } else if (measurementId == 4152) {
+        body.accelZ = value
+        measurement = "accelZ"
+    } else if (measurementId == 4192) {
+        body.soundintensity = value
+        measurement = "soundintensity"
+    } else if (measurementId == 4193) {
+        body.lightIntensity = value
+        measurement = "lightIntensity"
+    } else if (measurementId == 4195) {
+        body.tvoc = value
+        measurement = "tvoc"
+    } else if (measurementId == 4097) {
+        body.airtemperature = value
+        measurement = "airtemperature"
+    } else if (measurementId == 4098) {
+        body.airhumidity = value
+        measurement = "airhumidity"
+    } else if (measurementId == 4175) {
+        body.AIdetection_1 = value
+        measurement = "AIdetection_1"
+    } else if (measurementId == 4176) {
+        body.AIdetection_2 = value
+        measurement = "AIdetection_2"
+    } else if (measurementId == 4177) {
+        body.AIdetection_3 = value
+        measurement = "AIdetection_3"
+    } else if (measurementId == 4178) {
+        body.AIdetection_4 = value
+        measurement = "AIdetection_4"
+    } else if (measurementId == 4179) {
+        body.AIdetection_5 = value
+        measurement = "AIdetection_5"
+    } else if (measurementId == 4180) {
+        body.AIdetection_6 = value
+        measurement = "AIdetection_6"
+    } else if (measurementId == 4181) {
+        body.AIdetection_7 = value
+        measurement = "AIdetection_7"
+    } else if (measurementId == 4182) {
+        body.AIdetection_8 = value
+        measurement = "AIdetection_8"
+    } else if (measurementId == 4183) {
+        body.AIdetection_9 = value
+        measurement = "AIdetection_9"
+    } else if (measurementId == 4184) {
+        body.AIdetection_10 = value
+        measurement = "AIdetection_10"
     }
-    return msg;
+    msg.payload = [{
+        measurement: measurement,
+        fields: body,
+        tags: {
+            device: "SenseCAP K1100"
+        },
+        timestamp: new Date()
+    }];
 }
+return msg;
 ```
 
-Then we connect all the nodes and click on the **Deploy** button and if everything is set up correctly you will be able to see the mqtt in node showing connected.
+Then we connect all the nodes and click on the **Deploy** button and if everything is set up correctly you will be able to see the mqtt in node showing connected.
 
 If you want to see the logging information of the data, you can add a debug node after the function node.
 
@@ -348,7 +423,7 @@ Then, choose or enter the following:
 
 - **Query Language**: Flux
 - Under HTTP, do the following:
-  - **URL**: <http://localhost:8086/>
+  - **URL**: http://localhost:8086/
 - Under Auth, do the following:
   - Close **Basic auth**.
 - Under InfluxDB Details, do the following:
@@ -366,7 +441,7 @@ Click **Save & Test**. Grafana attempts to connect to the InfluxDB 2.4 data sour
 
 With your InfluxDB connection configured, use Grafana and Flux to query and visualize time series data stored in your InfluxDB instance.
 
-For more information about using Grafana, see the [Grafana documentation](https://grafana.com/docs/). If you’re just learning Flux, see [Get started with Flux](https://docs.influxdata.com/flux/v0.x/get-started/).
+For more information about using Grafana, see the [Grafana documentation](https://grafana.com/docs/). If you're just learning Flux, see [Get started with Flux](https://docs.influxdata.com/flux/v0.x/get-started/).
 
 We also welcome you to submit your data dashboards to us, and we look forward to your work!
 

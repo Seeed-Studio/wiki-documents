@@ -60,8 +60,8 @@ With the build-in LED, you can apply it to many interesting projects, it is real
 |Working voltage|3.3V/5V|
 |Operating Life without Load|100 000 times|
 |LED rated current|50mA|
-|Press Resistance^1^|<100mΩ|
-|Release Resistance^2^|>100MΩ|
+|Press Resistance^1^|&lt;100mΩ|
+|Release Resistance^2^|&gt;100MΩ|
 |Size|L: 40mm W: 20mm H: 13mm|
 |Weight|4.3g|
 |Package size|L: 140mm W: 90mm H: 10mm|
@@ -351,7 +351,7 @@ if __name__ == '__main__':
 
 ```
 
-:::tipsuccess
+:::tip
 If everything goes well, you will be able to see the LED turns on if you press it and turns off if you long press it. If you double click the LED button, the LED will blink.
 :::
 
@@ -390,11 +390,11 @@ You can quit this program by simply press ++ctrl+c++.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

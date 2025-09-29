@@ -20,7 +20,6 @@ We'll then move on to deploying our trained model using the SenseCraft Model Ass
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/0.png" style={{width:1000, height:'auto'}}/></div>
 
-
 From dataset to model landing, we will have the following main steps.
 
 1. [Labelled Datasets](#labelled-datasets) —— This chapter focuses on how to obtain datasets that can be trained into models. There are two main ways to do this. The first is to use the labelled datasets provided by the Roboflow community, and the other is to use your own scenario-specific images as datasets, but you need to manually go through the labelling yourself.
@@ -38,32 +37,31 @@ So let's dive in and begin the exciting process of bringing your data to life.
 Before you start, you may need to prepare the following equipment.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeed Studio XIAO ESP32S3</th>
-			<th>Seeed Studio XIAO ESP32S3 Sense</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO ESP32S3</th>
+   <th>Seeed Studio XIAO ESP32S3 Sense</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 Both the XIAO ESP32S3 and Sense versions can be used as content for this tutorial, but since the standard version of the product does not allow the use of the camera expansion board, we would recommend that you use the Sense version.
-
 
 ## Labelled Datasets
 
@@ -77,12 +75,9 @@ After reviewing and accepting the terms of service, you will be asked to choose 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/1.png" style={{width:800, height:'auto'}}/></div>
 
-
 Then, you will be asked to invite collaborators to your workspace. These collaborators can help you annotate images or manage the vision projects in your workspace. Once you have invited people to your workspace (if you want to), you will be able to create a project.
 
-
 ### Choose how you get your dataset
-
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -136,7 +131,6 @@ You'll then get the **Raw URL** for this model, keep it safe, we'll use that lin
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/26.png" style={{width:1000, height:'auto'}}/></div>
 
-
 :::caution
 If you are using Roboflow for the first time and have absolutely no judgement on the selection of datasets, the step of training a model with a dataset to perform an initial test to see the performance may be essential. This can help you gauge whether the dataset will meet your requirements.
 
@@ -153,7 +147,7 @@ Here, I will use the rock-paper-scissors gesture image as a demo to guide you th
 We highly recommend that you use XIAO ESP32S3 to take pictures of your dataset, which is best for XIAO ESP32S3. A sample programme for XIAO ESP32S3 Sense to take photos can be found in the Wiki link below.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#taking-photos-with-the-camera">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#taking-photos-with-the-camera" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Go to Wiki</font></span></strong>
     </a>
 </div>
@@ -195,7 +189,7 @@ After uploading, you'll need to annotate the images by labeling the hand gesture
 Roboflow offers three different ways of labelling images: Auto Label, Roboflow Labeling and Manual Labeling.
 
 - [**Auto Label**](https://blog.roboflow.com/yolo-world-prompting-tips/): Use a large generalized model to automatically label images.
-- **Roboflow Labeling**: Work with a professional team of human labelers. No minimum volumes. No upfront commitments. Bounding Box annotations start at $0.04 and Polygon annotations start at $0.08.
+- **Roboflow Labeling**: Work with a professional team of human labelers. No minimum volumes. No upfront commitments. Bounding Box annotations start at \$0.04 and Polygon annotations start at \$0.08.
 - **Manual Labeling**: You and your team label your own images.
 
 The following describes the most commonly used method of manual labelling.
@@ -213,7 +207,6 @@ Label each bounding box as "Rock", "Paper", or "Scissors".
 Use the ">" button to move through your dataset, repeating the annotation process for each image.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/14.gif" style={{width:1000, height:'auto'}}/></div>
-
 
 **Step 4: Review and Edit Annotations**
 
@@ -261,17 +254,13 @@ Click on **Continue** and you'll then get the Raw URL for this model. Keep it, w
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/27.png" style={{width:1000, height:'auto'}}/></div>
 
-
 Congratulations! You have successfully used Roboflow to upload, annotate, and export a dataset for a Rock-Paper-Scissors hand gesture detection model. With your dataset ready, you can proceed to train a machine learning model using platforms like Google Colab.
 
 Remember to keep your dataset diverse and well-annotated to improve the accuracy of your future model. Good luck with your model training, and have fun classifying hand gestures with the power of AI!
 </TabItem>
 </Tabs>
 
-
 ## Training Dataset Exported Model
-
-
 
 ### Step 1. Access the Colab Notebook
 
@@ -342,7 +331,6 @@ The next step is to adjust the input parameters of the model. Please jump to the
     load_from=Gesture_Detection_Swift-YOLO_192/pretrain.pth
 ```
 
-
 This command is used to start the training process of a machine learning model, specifically a YOLO (You Only Look Once) model, using the SSCMA (Seeed Studio SenseCraft Model Assistant) framework. The command includes various options to configure the training process. Here’s what each part does:
 
 - `!sscma.train` is the command to initiate the training within the SSCMA framework.
@@ -377,7 +365,7 @@ To customize this command for your own training, you would:
 
 4. Adjust `epochs` to the desired number of training epochs for your model. Recommended values are between 50 and 100.
 
-5. Set `height` and `width` to match the dimensions of the input images for your model. 
+5. Set `height` and `width` to match the dimensions of the input images for your model.
 
 6. Change `data_root` to point to the root directory of your dataset.
 
@@ -406,7 +394,6 @@ Then, re-execute the code block. For the first code block, if all goes well, you
 Next, execute all the code blocks from **Download the pretrain model weights file** to **Export the model**. And please make sure that each code block is free of errors.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/36.png" style={{width:400, height:'auto'}}/></div>
-
 
 :::note
 Warnings that appear in the code can be ignored.
@@ -483,7 +470,6 @@ Once you have found the model files, please download them locally to your comput
 
 So with the steps carried out here, we have successfully exported model files that can be supported by XIAO ESP32S3, next let's deploy the model to the device.
 
-
 ## Upload models via SenseCraft Model Assistant
 
 ### Step 7. Upload Custom model to XIAO ESP32S3
@@ -491,7 +477,7 @@ So with the steps carried out here, we have successfully exported model files th
 Next, we come to the Model Assistant page.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process">
+    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Model Assistant 🖱️</font></span></strong>
     </a>
 </div>
@@ -510,7 +496,6 @@ You will then need to prepare the name of the model, the model file, and the lab
 If you downloaded Roboflow's dataset directly, then you can view the different categories and its order on the Health Check page. Just install the order entered here.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/42.png" style={{width:1000, height:'auto'}}/></div>
-
 
 :::tip
 You don't need to fill in the numbers in **ID:Object**, just fill in the category name directly, the numbers and colons in front of the categories on the image are added automatically.
@@ -532,7 +517,6 @@ Then click Send Model in the bottom right corner. This may take about 3 to 5 min
 
 Having made it this far, congratulations, you have been able to successfully train and deploy a model of your own.
 
-
 ## Common protocols and applications of the model
 
 During the process of uploading a custom model, in addition to the model files that we can visualise being uploaded, there is also the firmware of the device that needs to be transferred to the device. In the device's firmware, there is a set of established communication protocols that specify the format of the model results output, and what the user can do with the models.
@@ -540,12 +524,11 @@ During the process of uploading a custom model, in addition to the model files t
 Due to space issues, we won't be expanding on the specifics of these protocols in this wiki, we'll be detailing this section through documentation on Github. If you are interested in more in-depth development, please go here.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md">
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft Protocols</font></span></strong>
     </a>
 </div>
 <br></br>
-
 
 ## Troubleshooting
 
@@ -588,4 +571,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

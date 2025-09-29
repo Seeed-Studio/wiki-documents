@@ -28,7 +28,7 @@ Model: [SLD80256P](https://www.seeedstudio.com/depot/grove-base-shield-p-754.htm
 
 ![](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/img/Smotoshield2.jpg)
 
-## Features ##
+## Features
 
 - Standard Arduino compatible
 
@@ -46,23 +46,24 @@ Model: [SLD80256P](https://www.seeedstudio.com/depot/grove-base-shield-p-754.htm
 
 The Driver IC and Heat sink may become very hot when working with current more than 1000mA.
 
-## Specifications ##
+## Specifications
 
-|Item|Min|Typical|Max|Unit   |
-|---|---|---|---|---|
-|   Logic Control Voltage|4.5|5|5.5|V |
-|  Motor Supply Voltage|6|/|15|V  |
-| Output Voltage|0|/|Vinput -1|V  |  
-|Output Current( For Each Channel)|/|/|2000 |mA   |
-|  Output Duty range|0%~100% |   |      | /  |
-|  Dimension| 68.5x54.5x29.5  |   |   |  mm |
-| Net Weight|37|||g  |  
+| Item | Min | Typical | Max | Unit |
+|------|-----|---------|-----|------|
+| Logic Control Voltage | 4.5 | 5 | 5.5 | V |
+| Motor Supply Voltage | 6 | / | 15 | V |
+| Output Voltage | 0 | / | Vinput - 1 | V |
+| Output Current (For Each Channel) | / | / | 2000 | mA |
+| Output Duty range | 0% - 100% | | | / |
+| Dimension | 68.5×54.5×29.5 | | | mm |
+| Net Weight | 37 | | | g |
 
-- Recommend maximum duty <50% at full load
+- Recommend maximum duty &lt;50% at full load
 
-## Interface Function ##
+## Interface Function
 
 ![](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/img/Motor_shield-hard3.jpg)
+
 **External Power Jack:** External Power supply for Motor Shield.
 
 **Motor Interface:** Out 1 and Out 2(Out 3 and Out 4) can connect Motor A(B) for DC Motor.
@@ -95,9 +96,9 @@ The following table describes Motor A/B indicator LEDs.
 |  M1-, M1+|Output|/|Outputs of the Bridge A |
 | M2-, M2+|Output|/|Outputs of the Bridge B  |  
 
-## Usage ##
+## Usage
 
-### Hardware Installation ###
+### Hardware Installation
 
 Connect DC motor to the motor shield Output Pins M1+& M1-(M2+& M2-), if using a 4-wire stepper motor, make sure the 4 Pins are correctly connected. Connect the drive voltage (The required voltage depends upon the motor used. Refer to the motor datasheet) to the Power supply terminals.
 
@@ -105,33 +106,33 @@ Connect DC motor to the motor shield Output Pins M1+& M1-(M2+& M2-), if using a 
 
 With the jumper J4 inserted, Arduino can be powered by the drive voltage via an on-board voltage regulator, which regulates the drive voltage to 5v.
 
-### Software ###
+### Software
 
 Download the [Motor shield Demo code](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/res/Grobe-Motor_Shield_Demo_Code.zip) and open the **Motor_shield_demo_code** sketch. Select the corresponding Arduino board in **tools-boards** and serial port in **tools-serial port**.
+
 ![](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/img/Motor_shield.png)
+
 Upload the sketch to your arduino board, then you would found the 2 motors begin to work. If you power the motor shield via the power terminal and the power jumper J4 was inserted, you can remove the USB cable now.
 
 Speed control is achieved through conventional PWM which can be obtained from Arduino's PWM output D9(EA) and D10(EB). Using the function **analogWrite()** to generate the drive PWM:
 
-```
+```cpp
 int speedpinA=9;//enable motor A
 int speedpinB=10;//enable motor B
 int speed =127;//define the speed of motor
     ......
 analogWrite(speedpinA,speed);//AnalogWrite to Generate PWM to control the motor speed
 analogWrite(speedpinB,speed);
-
 ```
 
 And Set the Digital D8(IN1) and D11(IN2) to control the motor attached to OUT1/2, while digital D12(IN3) and D13(IN4) to control motor attached to OUT3/4.
 
-```
+```cpp
 int pinI1=8;//define I1 interface
 int pinI2=11;//define I2 interface
     ......
 digitalWrite(pinI2,HIGH);//turn DC Motor A move clockwise
 digitalWrite(pinI1,LOW);
-
 ```
 
 Follows the logic between EA(B) and INx with motor motion:
@@ -144,7 +145,7 @@ Follows the logic between EA(B) and INx with motor motion:
 |  1|1|0|Anticlockwise |  
 | 1|1|1|Stop  |
 
-```
+```cpp
 /*
  SEEED Studio Stepper Motor Control - one revolution
 
@@ -193,23 +194,22 @@ void loop() {
   myStepper.step(stepsPerRevolution);
   delay(500);
 
-step one revolution in the other direction:
+  // step one revolution in the other direction:
   Serial.println("counterclockwise");
   myStepper.step(-stepsPerRevolution);
   delay(500);
 }
-
 ```
 
-## Version Tracker ##
+## Version Tracker
 
 |  Revision|Descriptions| Release  |  
 |---|---|---|
 | v1.0|V1.0 Release|2012/3/29  |
 
-## Related Projects ##
+## Related Projects
 
-### Motor Shield V2.0 Demo ###
+### Motor Shield V2.0 Demo
 
 ![](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/img/Seeed-Recipe-Motor_Shield_V2.0_.png)
 
@@ -222,7 +222,7 @@ This is a recipe about how to control motors individually with the Seeedstudio 2
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/res/Motorshield09gerber.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-## Resources ##
+## Resources
 
 - **[Datasheet]** [L298datasheet](https://wiki.seeedstudio.com/images/5/5e/L298datasheet.pdf)
 - **[EAGLE]**  [Motor Shield eagle files](https://files.seeedstudio.com/wiki/Motor-Shield_V1.0/res/Motorshield09gerber.zip)
@@ -235,11 +235,11 @@ This is a recipe about how to control motors individually with the Seeedstudio 2
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

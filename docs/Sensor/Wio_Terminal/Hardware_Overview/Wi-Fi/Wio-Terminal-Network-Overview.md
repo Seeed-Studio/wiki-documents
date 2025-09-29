@@ -21,7 +21,7 @@ This wiki introduces how to update the latest firmware for the Wireless Core Rea
 ## Update the Wireless Core Firmware
 
 First, we need to update the firmware for the Realtek RTL8720 Wireless core on the Wio Terminal. **This is essential and must update to the latest firmware before proceeding to examples.**
-        
+
 <div className="tips" style={{display: 'table', tableLayout: 'fixed', backgroundColor: '#F5A9A9', height: 'auto', width: '100%'}}>
   <div className="left-icon" style={{display: 'table-cell', verticalAlign: 'middle', backgroundColor: '#DF0101', paddingTop: 10, boxSizing: 'border-box', height: 'auto', width: 38, textAlign: 'center'}}><img style={{width: 26, verticalAlign: 'middle'}} src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Danger.svg" alt="attention icon" /></div>
   <div className="right-desc" style={{display: 'table-cell', verticalAlign: 'middle', paddingLeft: 15, boxSizing: 'border-box', width: 'calc(95% - 38px)'}}>
@@ -30,16 +30,15 @@ First, we need to update the firmware for the Realtek RTL8720 Wireless core on t
   </div>
 </div>
 
-
 ### Step 1 - Erase the Initial Factory Firmware
 
-When you get your hands on the Wio Terminal for the very first time, you need to erase the initial RTL8720 firmware and flash the latest firmware. We have prepared a tool for this called **ambd_flash_tool**, and when you run this tool, it first enables a serial connection from SAMD51 to RTL8720 in order for the firmware to install on the RTL8720. This is done because you cannot directly communicate with RTL8720. After that, this tool can be used to erase the existing firmware on the RTL8720 and also flash the latest firmware. 
+When you get your hands on the Wio Terminal for the very first time, you need to erase the initial RTL8720 firmware and flash the latest firmware. We have prepared a tool for this called **ambd_flash_tool**, and when you run this tool, it first enables a serial connection from SAMD51 to RTL8720 in order for the firmware to install on the RTL8720. This is done because you cannot directly communicate with RTL8720. After that, this tool can be used to erase the existing firmware on the RTL8720 and also flash the latest firmware.
 
 **NOTE**: You only need to erase the factory firmware for the very first time. Afterwards, you can flash new firmware to overwrite the existing firmware
 
 #### For Windows
 
-- **STEP 1:** Open **Windows PowerShell** on your PC and execute the below commands to download the flashing tool 
+- **STEP 1:** Open **Windows PowerShell** on your PC and execute the below commands to download the flashing tool
 
 ```sh
 cd ~
@@ -70,10 +69,9 @@ cd ambd_flash_tool
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/ambd_tool_win_2.png" alt="pir" width={700} height="auto" /></p>
 
-
 #### For Mac/ Linux
 
-- **STEP 1:** Open **Terminal** on your Mac/Linux and execute the below commands to download the flashing tool 
+- **STEP 1:** Open **Terminal** on your Mac/Linux and execute the below commands to download the flashing tool
 
 ```sh
 cd ~
@@ -108,7 +106,6 @@ python3 ambd_flash_tool.py erase
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/ambd_tool_linux.png" alt="pir" width={750} height="auto" /></p>
 
-
 ### Step 2 - Flash the Latest Firmware
 
 #### For Windows
@@ -117,7 +114,7 @@ python3 ambd_flash_tool.py erase
 
 ```sh
 .\ambd_flash_tool.exe flash
-``` 
+```
 
 #### For Mac/ Linux
 
@@ -141,7 +138,7 @@ If you want to test your code with an old firmware release, you can do so by fol
 
 ```sh
 .\ambd_flash_tool.exe flash -d [RTL8720-firmware-path]
-``` 
+```
 
 **NOTE:** Replace `[RTL8720-firmware-path]` with the path you downloaded the RTL8720 from above. This folder should contain all these 3 files: `km0_boot_all.bin`, `km0_km4_image2.bin` and `km4_boot_all.bin`
 
@@ -157,7 +154,7 @@ If everything goes well, you should see all a successful message. Now you have f
 
 ```sh
 python3 ambd_flash_tool.py flash -d [RTL8720-firmware-path]
-``` 
+```
 
 **NOTE:** Replace `[RTL8720-firmware-path]` with the path you downloaded the RTL8720 from above. This folder should contain all these 3 files: `km0_boot_all.bin`, `km0_km4_image2.bin` and `km4_boot_all.bin`
 
@@ -191,14 +188,14 @@ Once you open **Serial Monitor**, you should see the **firmware version** printe
 :::note
 Please update the **Seeed SAMD ArduinoCore to the latest version (1.8.1)**!
 :::
+
 - **STEP 1:** Open the **Arduino IDE**, and click `Tools` -> `Board` -> `Boards Manager`, and search **Wio Terminal** in the search box
 
 - **STEP 2:** Make sure the latest version (1.8.1) is installed. If not, click on the `Select version` drop-down menu, select the latest version and click `Install`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/ArduinoCore_new.png" alt="pir" width={850} height="auto" /></p>
 
-
-> You can also find the source code of Seeed SAMD ArduinoCore [**here**](https://github.com/Seeed-Studio/ArduinoCore-samd).    
+> You can also find the source code of Seeed SAMD ArduinoCore [**here**](https://github.com/Seeed-Studio/ArduinoCore-samd).
 
 ## Libraries Installation
 
@@ -214,14 +211,13 @@ There are a few Arduino Libraries that are needed for Wireless connectivity. We 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/library_install_1.jpg" alt="pir" width={870} height="auto" /></p>
 
-
 ### Needed Libraries for Wi-Fi
 
 We need the following libraries to get started with Wi-Fi on the Wio Terminal. You can search for these libraries by typing the library name in the search box of Arduino Library Manager.
 
 For your convenience, we have assembled all the libraries together. Hence, for the future docs and update current docs, you only need to install rpcwifi and then it will install all the wifi dependent libraries for you.
 
-- [**Seeed_Arduino_rpcWiFi**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcWiFi) - search for `"seeed rpcwifi"` 
+- [**Seeed_Arduino_rpcWiFi**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcWiFi) - search for `"seeed rpcwifi"`
 
 - [**Seeed_Arduino_rpcUnified**](https://github.com/Seeed-Studio/Seeed_Arduino_rpcUnified) - search for `"seeed rpcunified"`
 
@@ -232,7 +228,6 @@ For your convenience, we have assembled all the libraries together. Hence, for t
 - [**Seeed_Arduino_SFUD**](https://github.com/Seeed-Studio/Seeed_Arduino_SFUD) - search for `"seeed sfud"`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/newliarary.png" alt="pir" width={700} height="auto" /></p>
-
 
 ## Release
 
@@ -249,17 +244,17 @@ For your convenience, we have assembled all the libraries together. Hence, for t
     </tr>
   </tbody></table>
 
-
 ## Tech Support & Product Discussion
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

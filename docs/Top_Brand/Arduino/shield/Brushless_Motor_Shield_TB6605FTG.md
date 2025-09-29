@@ -165,7 +165,7 @@ Download the [Grove-LCD RGB Backlight Library](https://github.com/Seeed-Studio/G
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-:::tipsuccess
+:::tip
 If everything goes well, you can see the DC motor run and the LCD will show the speed. Now you can rotate the potentiometer to control the speed of the motor.  
 :::
 

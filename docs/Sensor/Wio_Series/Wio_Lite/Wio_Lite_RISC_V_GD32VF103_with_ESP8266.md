@@ -16,45 +16,34 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Lite-RISC-V-GD32VF103/img/%E4%BA%A7%E5%93%81%E6%8B%8D%E6%91%84%E6%A8%A1%E6%9D%BF_perspective-09.png" alt="pir" width={600} height="auto" /></p>
 
+Wio Lite RISC-V is a  feather form factor RISC-V development board Based on GD32VF103, with the onboard ESP8266 Wio Core, it also features WiFi function.
 
-Wio Lite RISC-V is a  feather form factor RISC-V development board Based on GD32VF103, with the onboard ESP8266 Wio Core, it also features WiFi function. 
+GD32VF103CBT6 is a Bumblebee core based on Nuclei System Technology. Support RV32IMAC instruction set and ECLIC fast interrupt function. Core power consumption is only 1/3 of that of traditional Cortex-M3.
 
- 
-
-GD32VF103CBT6 is a Bumblebee core based on Nuclei System Technology. Support RV32IMAC instruction set and ECLIC fast interrupt function. Core power consumption is only 1/3 of that of traditional Cortex-M3.   
-
- 
-
-Onboard ESP8266 WiFi core and Lipo charging circuit make it a perfect IoT control board. There is also a micro SD slot at the backside of this board, which can expand system resources. 
-
- 
+Onboard ESP8266 WiFi core and Lipo charging circuit make it a perfect IoT control board. There is also a micro SD slot at the backside of this board, which can expand system resources.
 
 Meanwhile, as a Wio Lite Board, Wio Lite RISC-V definitely can work with the [Grove Shield for Wio Lite](https://www.seeedstudio.com/Grove-Shield-for-Wio-Lite-p-4156.html). With this shield, [over 200 Grove sensors, actuators and displays](https://www.seeedstudio.com/grove.html) are all yours. For instance, you can choose whatever [grove OLED](https://www.seeedstudio.com/catalogsearch/result/?cat=&q=grove+OLED) you like to make it a visual development board.
 
-
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Wio-Lite-RISC-V-GD32VF103-p-4293.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width={200} height={38} border={0} /></a></p>
-
-
 
 ## Features
 
-+ RISC-V MCU GD32VF103CBT6
-+ ESP8266 WiFi Wio Core
-+ Feather form factor
-+ JST2.0 Lipo Port
-+ Onboard SD Slot
-+ USB Type C
+- RISC-V MCU GD32VF103CBT6
+- ESP8266 WiFi Wio Core
+- Feather form factor
+- JST2.0 Lipo Port
+- Onboard SD Slot
+- USB Type C
 
 ## Hardware Overview
+
 ![](https://files.seeedstudio.com/wiki/Wio-Lite-RISC-V-GD32VF103/img/hardware.png)
 
 ### Platform Supported
 
-
 | PlatformIO                                                                                            | Arduino                                                                                             | Raspberry Pi                                                                                      |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/products/102991310/img/platformio-logo.png) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) |
-
 
 ## Getting Started
 
@@ -64,29 +53,26 @@ Meanwhile, as a Wio Lite Board, Wio Lite RISC-V definitely can work with the [Gr
 
 **Materials required**
 
-+ [Wio Lite RISC-V (GD32VF103) - With ESP8266](https://www.seeedstudio.com/Wio-Lite-RISC-V-GD32VF103-p-4293.html)
-+ [USB 3.1 Type C to A Cable](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A.html)
+- [Wio Lite RISC-V (GD32VF103) - With ESP8266](https://www.seeedstudio.com/Wio-Lite-RISC-V-GD32VF103-p-4293.html)
+- [USB 3.1 Type C to A Cable](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A.html)
 
 - **Step 1** Connect the Wio Lite and your PC by USB Type C to A Cable for power and downloading serial port.
-
 
 #### Software
 
 :::note
-	RISC-V GD32 has already supported PlatformIO IDE with Arduino framework, but has not supported Arduino IDE so far.
+ RISC-V GD32 has already supported PlatformIO IDE with Arduino framework, but has not supported Arduino IDE so far.
 :::
-- **Step 1** 
+
+- **Step 1**
 
 Set up the platformIO IDE, platformIO IDE is based on Visual Studio Code.
 Download the [Visual Studio Code](https://code.visualstudio.com/).
 Click the "Extensions" icon, you can find it on the left side of the Visual Studio Code.
 
-
 ![](https://files.seeedstudio.com/wiki/GD32VF103/img/wiki1.png)
 
-
-Type "platformIO" in the search engine to install it. 
-
+Type "platformIO" in the search engine to install it.
 
 ![](https://files.seeedstudio.com/wiki/GD32VF103/img/wiki2.png)
 
@@ -98,9 +84,7 @@ Open PlatformIO IDE and click "New project" to create the project. Type the proj
 
 Edit your code of Arduino framework, click compile botton at the bottom of the Visual Studio  Code.
 
-
 ![](https://files.seeedstudio.com/wiki/GD32VF103/img/wiki5.png)
-
 
 - **Step 4**
 
@@ -110,30 +94,23 @@ The code is compiled to a binary file. You can use [DFU tool](https://files.seee
 
 Press reset botton on the Wio Lite with boot switch on the left and DFU tool will recognise your board after you install the DFU tool frameware.
 
-
 ![](https://files.seeedstudio.com/wiki/GD32VF103/img/wiki6.png)
 
-
-Now turn the boot swich on the right, find your compiled binary file and downlard it to the flash of the board. click "Leave DFU" to let the board disconnect the DFU tool, and your code is correctly burned into your board. 
-
-
+Now turn the boot swich on the right, find your compiled binary file and downlard it to the flash of the board. click "Leave DFU" to let the board disconnect the DFU tool, and your code is correctly burned into your board.
 
 ### Demo of controlling the on-board user LED by the website
-
 
 #### Hardware
 
 **Materials required**
 
-+ [Wio Lite RISC-V (GD32VF103) - With ESP8266](https://www.seeedstudio.com/Wio-Lite-RISC-V-GD32VF103-p-4293.html)
-+ Any USB to TTL adapter like [UartSBee V5](https://www.seeedstudio.com/UartSBee-V5.html)
-+ [USB 3.1 Type C to A Cable](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A.html)
-
+- [Wio Lite RISC-V (GD32VF103) - With ESP8266](https://www.seeedstudio.com/Wio-Lite-RISC-V-GD32VF103-p-4293.html)
+- Any USB to TTL adapter like [UartSBee V5](https://www.seeedstudio.com/UartSBee-V5.html)
+- [USB 3.1 Type C to A Cable](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A.html)
 
 - **Step 1** Use the USB to TTL adapter to connect with the serial port of Wio Lite.(Wio Lite's Serial port is pin PA9-TX. PA10-RX)
 - **Step 2** Use another USB to TTL adapter to connect with the serial port of ESP8266 (If you want to monitor the data transmission of ESP8266)
 - **Step 3** Connect the Wio Lite and your PC by USB Type C to A Cable for power and downloading serial port.
-
 
 #### Software code
 
@@ -378,32 +355,23 @@ void loop()
 }
 
 
-
 ```
 
 - **Step 1** Crate an PlatformIO Arduino framework like above, copy this code and compile it. Use the DFU tool to download it on the board.
 
-
-- **Step 2** Use an Serial assistant like Mobaxterm, set the correct bundrate and the serial port. 
+- **Step 2** Use an Serial assistant like Mobaxterm, set the correct bundrate and the serial port.
 
 - **Step 3** Press reset button, you will see the "AT command" printed on the Serial assistant.
 
 - **Step 4** After printing "AT+CIPSERVER=1,80"; Set your ip address of your ESP8266 for the website address and open it, you will see a website to control the on-board LED after the Serial prints "AT+CIPCLOSE=0".
 
-
 ![](https://files.seeedstudio.com/products/102991310/img/wiki2.png)
-
 
 - **Step 5** Type "on" or "off" and submit, the on-board user LED will be turned on or off. And the statment of LED will be printed on the website. And your on-board LED will follow the statment.
 
-
 ![](https://files.seeedstudio.com/products/102991310/img/wiki3.png)
 
-
-
 ![](https://files.seeedstudio.com/products/102991310/img/wiki4.png)
-
-
 
 ## Resourse
 
@@ -411,18 +379,17 @@ void loop()
 - **[PDF]** [GD32VF103_User_Manual_EN_V1.0](https://files.seeedstudio.com/wiki/Bazaar_Document/GD32VF103_User_Manual_EN_V1.0.pdf)
 - **[Zip]** [DFU Tool](https://files.seeedstudio.com/wiki/GD32VF103/res/GD32_MCU_Dfu_Tool_V3.8.1.5784_1.rar)
 
-
 ## Tech Support & Product Discussion
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

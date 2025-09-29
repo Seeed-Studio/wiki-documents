@@ -203,34 +203,18 @@ We use an external power source, however you could also use the 5V from the Ardu
 
 <table >
 <tr>
-<th>Arduino
-</th>
-<th>Rainbowduino
-</th>
-<caption>
-</caption>
-<td>RESET
-</td>
-<td>DTR
-</td>
-<caption>
-</caption>
-<td>GND
-</td>
-<td>GND
-</td>
-<caption>
-</caption>
-<td>RX
-</td>
-<td>RX
-</td>
-<caption>
-</caption>
-<td>TX
-</td>
-<td>TX
-</td></tr></table>
+<th>Arduino</th>
+<th>Rainbowduino</th>
+<th>RESET</th>
+<th>DTR</th>
+<th>GND</th>
+<th>GND</th>
+<th>RX</th>
+<th>RX</th>
+<th>TX</th>
+<th>TX</th>
+</tr>
+</table>
 
 3.Use UartSB to Upload firmware
 
@@ -263,68 +247,41 @@ STEP 2: connect the buspirate to the rainbowduino ISP connector like this:
 
 <table >
 <tr>
-<th> Buspirate
-
-</th>
-<th> ISP
-
-</th>
-<th> ISP pin
-</th></tr>
+<th> Buspirate</th>
+<th> ISP</th>
+<th> ISP pin</th>
+</tr>
 <tr>
-<td width="80px"> GND
-
-</td>
-<td width="80px"> GND
-
-</td>
-<td width="80px"> 6
-</td></tr>
+<td width="80px"> GND</td>
+<td width="80px"> GND</td>
+<td width="80px"> 6</td>
+</tr>
 <tr>
-<td> +5V
-
-</td>
-<td> Vcc
-
-</td>
-<td> 2
-</td></tr>
+<td> +5V</td>
+<td> Vcc</td>
+<td> 2</td>
+</tr>
 <tr>
-<td> CS
-
-</td>
-<td> RESET
-
-</td>
-<td> 5
-</td></tr>
+<td> CS</td>
+<td> RESET</td>
+<td> 5</td>
+</tr>
 <tr>
-<td> MOSI
-
-</td>
-<td> MOSI
-
-</td>
-<td> 4
-</td></tr>
+<td> MOSI</td>
+<td> MOSI</td>
+<td> 4</td>
+</tr>
 <tr>
-<td> MISO
-
-</td>
-<td> MISO
-
-</td>
-<td> 1
-</td></tr>
+<td> MISO</td>
+<td> MISO</td>
+<td> 1</td>
+</tr>
 <tr>
-<td> SCL/CLK
-
-</td>
-<td> SCK
-
-</td>
-<td> 3
-</td></tr></table>
+<td> SCL/CLK</td>
+<td> SCK</td>
+<td> 3</td>
+</tr>
+</table>
 
 STEP 3: find the correct bootloader (I'm using the tiny optiboot firmware). Copy this file to your freshly compiled avrdude directory.
 
@@ -502,22 +459,18 @@ x
 
 <table>
 <tr>
-<th>Original File
-</th>
-<th>Patched File
-</th>
-<caption>
-</caption>
-<td width="300px">
-</td>
+<th>Original File</th>
+<th>Patched File</th>
+</tr>
+<tr>
+<td width="300px"></td>
+<td width="300px"></td>
 </tr>
 </table>
 
-<pre>#define BUFFER_LENGTH 32
-</pre>
+<pre>#define BUFFER_LENGTH 32</pre>
 
-<pre>#define BUFFER_LENGTH **98**
-</pre>
+<pre>#define BUFFER_LENGTH **98**</pre>
 
 <big>Upload Firmware to Rainbowduino</big>
 
@@ -540,30 +493,26 @@ We use an external power source, however you could also use the 5V from the Ardu
 
 <table>
 <tr>
-<th> Arduino
-</th>
-<th> Rainbowduino
-</th></tr>
+<th> Arduino</th>
+<th> Rainbowduino</th>
+</tr>
 <tr>
-<td width="150px">RESET
-</td>
-<td width="150px">DTR
-</td></tr>
+<td width="150px">RESET</td>
+<td width="150px">DTR</td>
+</tr>
 <tr>
-<td>GND
-</td>
-<td>GND
-</td></tr>
+<td>GND</td>
+<td>GND</td>
+</tr>
 <tr>
-<td>Analog IN 4
-</td>
-<td>SDA
-</td></tr>
+<td>Analog IN 4</td>
+<td>SDA</td>
+</tr>
 <tr>
-<td>Analog IN 5
-</td>
-<td>SDL
-</td></tr></table>
+<td>Analog IN 5</td>
+<td>SDL</td>
+</tr>
+</table>
 
 <big>Install Processing Libraries </big>
 
@@ -694,68 +643,51 @@ Can easily be changed to use I2C; only one file (RainbowDash.pde) needs to be ch
 
 <table>
 <tr>
-<th> PORTD
-</th>
-<th> PORTB
-</th>
-<th> PORTC
-</th></tr>
+<th> PORTD</th>
+<th> PORTB</th>
+<th> PORTC</th>
+</tr>
 <tr>
-<td width="150px">pin02 / PD0 / RXD
-</td>
-<td width="150px">pin14 / PB0 / INT0
-</td>
-<td width="150px">pin23 / PC0 / SDI
-</td></tr>
+<td width="150px">pin02 / PD0 / RXD</td>
+<td width="150px">pin14 / PB0 / INT0</td>
+<td width="150px">pin23 / PC0 / SDI</td>
+</tr>
 <tr>
-<td>pin03 / PD1 / TXD
-</td>
-<td>pin15 / PB1 / INT1
-</td>
-<td>pin24 / PC1 / CLK
-</td></tr>
+<td>pin03 / PD1 / TXD</td>
+<td>pin15 / PB1 / INT1</td>
+<td>pin24 / PC1 / CLK</td>
+</tr>
 <tr>
-<td>pin04 / PD2 / INT0
-</td>
-<td>pin16 / PB2 / INT2
-</td>
-<td>pin25 / PC2 / LE
-</td></tr>
+<td>pin04 / PD2 / INT0</td>
+<td>pin16 / PB2 / INT2</td>
+<td>pin25 / PC2 / LE</td>
+</tr>
 <tr>
-<td>pin05 / PD3 / INT19
-</td>
-<td>pin17 / PB3 / INT3
-</td>
-<td>pin26 / PC3 / OE
-</td></tr>
+<td>pin05 / PD3 / INT19</td>
+<td>pin17 / PB3 / INT3</td>
+<td>pin26 / PC3 / OE</td>
+</tr>
 <tr>
-<td>pin06 / PD4 / INT20
-</td>
-<td>pin18 / PB4 / INT4
-</td>
-<td>pin27 / PC4 / SDA
-</td></tr>
+<td>pin06 / PD4 / INT20</td>
+<td>pin18 / PB4 / INT4</td>
+<td>pin27 / PC4 / SDA</td>
+</tr>
 <tr>
-<td>pin11 / PD5 / INT21
-</td>
-<td>pin19 / PB5 / INT5/SCK
-</td>
-<td>pin28 / PC5 / SDL
-</td></tr>
+<td>pin11 / PD5 / INT21</td>
+<td>pin19 / PB5 / INT5/SCK</td>
+<td>pin28 / PC5 / SDL</td>
+</tr>
 <tr>
-<td>pin12 / PD6 / INT22
-</td>
-<td>
-</td>
-<td>
-</td></tr>
+<td>pin12 / PD6 / INT22</td>
+<td></td>
+<td></td>
+</tr>
 <tr>
-<td>pin13 / PD7 / INT23
-</td>
-<td>
-</td>
-<td>
-</td></tr></table>
+<td>pin13 / PD7 / INT23</td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
 **PORTB** maps to Arduino digital pins 8 to 13 The two high bits (6 &amp; 7) map to the crystal pins and are not usable.
 
@@ -771,40 +703,34 @@ This driver uses the MBI5168. The MBI5168 is a 8bit [shift register](https://en.
 
 <table>
 <tr>
-<th> Name
-</th>
-<th> Desc
-</th></tr>
+<th> Name</th>
+<th> Desc</th>
+</tr>
 <tr>
-<td width="50px">OE
-</td>
-<td width="950px">Output Enabled, when (active) low, the output drivers are enabled; when high, all output drivers are turned OFF (blanked).
-</td></tr>
+<td width="50px">OE</td>
+<td width="950px">Output Enabled, when (active) low, the output drivers are enabled; when high, all output drivers are turned OFF (blanked).</td>
+</tr>
 <tr>
-<td>LE
-</td>
-<td>Data strobe input terminal, Serial data is transfered to the respective latch when LE is high. The data is latched when LE goes low.
-</td></tr>
+<td>LE</td>
+<td>Data strobe input terminal, Serial data is transfered to the respective latch when LE is high. The data is latched when LE goes low.</td>
+</tr>
 <tr>
-<td>SDI
-</td>
-<td>Serial data input to the shift register.
-</td></tr>
+<td>SDI</td>
+<td>Serial data input to the shift register.</td>
+</tr>
 <tr>
-<td>SDO
-</td>
-<td>Serial data output to the following SDI of next driver IC.
-</td></tr>
+<td>SDO</td>
+<td>Serial data output to the following SDI of next driver IC.</td>
+</tr>
 <tr>
-<td>R-EXT
-</td>
-<td>Input terminal used to connect an external resistor dor setting up output current for all output channels.
-</td></tr>
+<td>R-EXT</td>
+<td>Input terminal used to connect an external resistor dor setting up output current for all output channels.</td>
+</tr>
 <tr>
-<td>CLK
-</td>
-<td>Clock input terminal for data shift on rising edge
-</td></tr></table>
+<td>CLK</td>
+<td>Clock input terminal for data shift on rising edge</td>
+</tr>
+</table>
 
 <big>Super Source Driver</big>
 
@@ -823,26 +749,21 @@ The stock firmware (and most 3rd party firmwares) support 12bit color resolution
 
 <table>
 <tr>
-<th> Color Resolution
-</th>
-<th> Payload
-</th>
-<th> Brightness Level
-</th></tr>
+<th> Color Resolution</th>
+<th> Payload</th>
+<th> Brightness Level</th>
+</tr>
 <tr>
-<td width="250px">12 bit (4bit per color), 4096 Colors
-</td>
-<td width="250px">96 bytes (12bit*64=768bit)
-</td>
-<td>16
-</td></tr>
+<td width="250px">12 bit (4bit per color), 4096 Colors</td>
+<td width="250px">96 bytes (12bit*64=768bit)</td>
+<td>16</td>
+</tr>
 <tr>
-<td>15 bit (5bit per color), 32768 Colors
-</td>
-<td>120 bytes (15bit*64=960bit)
-</td>
-<td>32
-</td></tr></table>
+<td>15 bit (5bit per color), 32768 Colors</td>
+<td>120 bytes (15bit*64=960bit)</td>
+<td>32</td>
+</tr>
+</table>
 
 The benefit of using 4bits per color is the data storage, one byte takes 2 color values - thus it's easy to get the color from a byte buffer. Using 5bits per color needs more cpu power or more buffer space (use 2 bytes for 3 color values - wasting 1bit per color).
 

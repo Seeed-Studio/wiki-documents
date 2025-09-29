@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'XIAO RP2350'
+collapsible: true # カテゴリを折りたたみ可能にする
+collapsed: true # デフォルトでカテゴリを開いたままにする
+className: xiao_rp2350
+# link:
+#   type: generated-index
+#   slug: Develop_with_SenseCAP_Indicator
+#   title: SenseCAP Indicatorで開発する
+#   description: このチュートリアルでは、SenseCAP Indicatorを使用した開発プロセスをガイドします。

@@ -47,7 +47,7 @@ esp_err_t tf_module_register(const char *p_name,
                                 tf_module_mgmt_t *mgmt_handle);
 ```
 
-The first three parameters are the name, the description and the version of your FM, they're used internally currently, e.g. matching FM from the registration table, log printing etc., but will be used in the future when the FMs are communicating with a local service. 
+The first three parameters are the name, the description and the version of your FM, they're used internally currently, e.g. matching FM from the registration table, log printing etc., but will be used in the future when the FMs are communicating with a local service.
 
 ```cpp
 // in tf_module_uart_alarm.h
@@ -114,7 +114,7 @@ err:
 }
 ```
 
-The above is our implementation of the `instance` functions. It allocates memory for a struct `tf_module_uart_alarm_t` which we define for holding the parameters of this FM, like the members of a C++  class. In the struct `tf_module_uart_alarm_t` the 1st field is important - `tf_module_t module_base`, in the perspective of C++ programming, `tf_module_t` is the parent class for all the FMs. The `instance` function just give the TFE a pointer to a `tf_module_t` struct. 
+The above is our implementation of the `instance` functions. It allocates memory for a struct `tf_module_uart_alarm_t` which we define for holding the parameters of this FM, like the members of a C++  class. In the struct `tf_module_uart_alarm_t` the 1st field is important - `tf_module_t module_base`, in the perspective of C++ programming, `tf_module_t` is the parent class for all the FMs. The `instance` function just give the TFE a pointer to a `tf_module_t` struct.
 
 ```cpp
 // in tf_module_uart_alarm.h
@@ -136,7 +136,7 @@ tf_module_t *tf_module_uart_alarm_instance(void)
 }
 ```
 
-Two members of `tf_module_t` must be assigned. 
+Two members of `tf_module_t` must be assigned.
 
 ```cpp
 // in tf_module_uart_alarm.c
@@ -146,6 +146,7 @@ tf_module_t *tf_module_uart_alarm_instance(void)
     p_module_ins->module_base.p_module = p_module_ins;
     p_module_ins->module_base.ops = &__g_module_ops;
 ```
+
 `p_module` - a pointer that refers to the instance of the FM itself, this is used for the `destroy` function to get a handler of the instance and release the memory of it.
 `ops` - a struct that contains API functions for operating the FM by the TFE, we will talk this later.
 
@@ -339,7 +340,7 @@ As you see, the `cfg` function is just extracting field values from the cJSON ob
 }
 ```
 
-In the above task flow, the `params` for `uart alarmer` is 
+In the above task flow, the `params` for `uart alarmer` is
 
 ```json
 {
@@ -429,6 +430,7 @@ When we gonna use these event ids? The moment that data is generated, and passes
 We need to post to every subscriber of our output. As you can see, we make a copy of the data for every subscriber.
 
 **THE RULE OF MEMORY ALLOCATION AND RELEASE**
+
 - The data maker FM does the memory allocation for each subscriber
 - The data consumer FM does the memory release after the data is used up.
 
@@ -512,4 +514,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

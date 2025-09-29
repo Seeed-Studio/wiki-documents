@@ -1,0 +1,223 @@
+---
+description: 向人们展示 Sensing GMSL2 相机及其使用方法。
+title: Sensing GMSL 相机
+keywords:
+- Jetson Orin Series
+- reComputer Robotics
+- Computer Vision
+- Autonomous Driving
+- Industrial Robot
+- Sensing World
+- AI Camera
+- Stereo Camera
+- Depth Camera
+- GMSL2
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /cn/sensing_gmsl_cameras
+last_update:
+  date: 2025-08-21
+  author: Kane
+---
+
+import { Image, Flex } from "antd";
+import SensingGMSLCamTable from '@site/src/components/robotics/SensingGMSLCam';
+import RoboticsFooter from '@site/src/components/robotics/RoboticsFooter'
+import ProductBanner from '@site/src/components/robotics/ProductBanner'
+import JetsonIOStepper from '@site/src/components/robotics/JetsonIOStepper'
+
+export const steps = [
+  {
+    title: '配置 Jetson 24 针 CSI 连接器',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Configure_24pin_CSI.webp",
+  },
+  {
+    title: '配置兼容硬件',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Select_Compatiable_Hardware.webp",
+  },
+  {
+    title: '选择覆盖层',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/Select_Sensing_Overlay_3G.webp",
+  },
+  {
+    title: '保存引脚更改',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Save_Pin_Changes.webp",
+  },
+  {
+    title: '保存并重启以重新配置引脚',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Save_and_Reboot.webp",
+  },
+  {
+    title: '按任意键重启',
+    src: 'https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/Confirm_Sensing_Overlay_3G.webp'
+  }
+];
+
+# SENSING GMSL2 相机
+
+<ProductBanner 
+  imageUrl="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-101090101-3mp-gmsl2-camera-module-190-degree.jpg" 
+  linkUrl="https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html" 
+  lang="zh"
+/>
+
+我们提供不同的 GMSL2 相机，涵盖各种分辨率、传输速度等。这些相机可用于许多领域的应用。例如：
+
++ 汽车
++ ADAS + 视觉融合
++ 高动态范围成像
++ 自动驾驶
++ 机器人技术
+
+查看以下规格了解更多详情。
+
+## 规格参数
+
+
+<SensingGMSLCamTable lang="zh" />
+
+
+## 入门指南
+
+我们将使用 reComputer Robotics J4012 进行演示，您可能需要
+
++ SENSING GMSL2 相机
++ [Mini-Fakra 线缆](https://www.seeedstudio.com/Mini-fakra-Coaxial-Cable-4-in-1-0-5m-Female-to-Female-p-6484.html)
++ [reComputer Robotics GMSL2 扩展板](https://www.seeedstudio.com/reComputer-Robotics-GMSL-board-p-6511.html)
+
+
+### 设置设备
+
+将 Mini Fakra 线缆与相机连接，reComputer Robotics J30/J40 上有 4 个通道，我们使用了 `SG3S-ISX031C-GMSL2-F` 相机，它连接到 **'1'** 通道（丝印字母 **'B'**）。
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={400} style={{
+      borderRadius: 12,
+      boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  }} 
+  src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/Sensing_Camera_Connection.webp" />
+</Flex>
+
+在开始之前，让我们熟悉一下这 4 个通道，因为我们稍后在配置过程中会用到它们。
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={400} style={{
+      borderRadius: 12,
+      boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  }} 
+  src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/reComputer_Robotics_Top_Panel.webp" />
+</Flex>
+
+这 4 个通道在设备上标记为 **'A'**、**'B'**、**'C'** 和 **'D'**，
+我们建议客户按照给定的字母顺序连接相机，
+在这种情况下，您的视频设备将相应地映射为 Jetson Linux 上的 **'/dev/video0'**、**'/dev/video1'**、**'/dev/video2'**、**'/dev/video3'**。
+
+但如果您只连接了一个相机，则只会显示 'video0'。
+
+接下来，我们将使用 Jetson IO 配置设备树覆盖层以启用我们的设备（在配置并重启之前，您不会在 **'/dev'** 文件夹下看到视频节点）。
+
+### 配置 Jetson IO
+
+使用以下命令启动 JetsonIO
+
+``` sh
+sudo /opt/nvidia/jetson-io/jetson-io.py
+```
+
+按照以下步骤逐步进行配置
+
+<JetsonIOStepper steps={steps} lang="zh" />
+
+:::note
+在上述步骤中，如果您使用的是 6Gbps 相机，请在步骤 3 中选择 **'Seeed GMSL 1X4 6G'** 覆盖层。6Gbps 相机包括：
+
++ SG3S-ISX031C-GMSL2-H
++ SG8S-AR0820C-5300-G2A-H
++ SG2-IMX390C-5200-G2A-H
++ SG2-AR0233C-5200-G2A-H
+
+:::
+
+### 配置视频信息
+
+如果您尚未安装 `v4l-utils`
+
+``` sh
+sudo apt-get update 
+sudo apt-get install v4l-utils -y
+```
+
++ 帧同步
+
+``` sh
+v4l2-ctl -d /dev/video0 --set-ctrl=trig_mode=1
+```
+
+:::note
+您可以切换 **'trig_mode=0'** 来禁用帧同步。或者在连接多个相机时使用 **'trig_mode=1'** 来启用帧同步。
+:::
+
+
++ 视频格式
+
+``` sh
+v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0  -d /dev/video0
+```
+
+:::note
+根据您使用的相机，可能有不同的预定义 'sensor_mode'，主要包括：
+
+|传感器模式|帧类型|
+|   :----:  | :----:   |
+|0|YUYV8_1X16/1920x1536|
+|1|YUYV8_1X16/1920x1080|
+|2|YUYV8_1X16/3840x2160|
+
+
+:::
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={600} src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/Sensing_Camera_Set_Video_Info.webp" />
+</Flex>
+
+
+### Gst 启动
+
+使用 `gst-launch-1.0` 启动查看器
+
+``` sh
+gst-launch-1.0 v4l2src device=/dev/video0 ! \
+    video/x-raw,format=YUY2,width=1920,height=1080,framerate=30/1 ! \
+    videoconvert ! videoscale ! xvimagesink
+```
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={600} style={{
+      borderRadius: 12,
+      boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  }} 
+  src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/To_Boldly_Go_Where_No_One_Has_Gone_Before.webp" />
+</Flex>
+
+
+## 其他资源
+
+数据手册
+
++ [SG3S-ISX031C-GMSL2-F](https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/datasheet/SG3S-ISX031C-GMSL2F_Datasheet.pdf)
++ [SG3S-ISX031C-GMSL2-H](https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/datasheet/SG3S-ISX031C-GMSL2-Hxxx_cn_Datasheet.pdf)
++ [SG8S-AR0820C-5300-G2A-H](https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/datasheet/SG8S-AR0820C-5300-G2A-H_Datasheet.pdf)
++ [SG2-AR0233C-5200-G2A-H](https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/datasheet/SG2-AR0233C-5200-G2A-H_Datasheet.pdf)
++ [SG2-IMX390C-5200-G2A-H](https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Sensing_GMSL_Cameras/datasheet/SG2-IMX390C-5200-G2A-H_Datasheet.pdf)
+## 技术支持与产品讨论
+
+感谢您选择我们的产品！请确保在以下平台关注我们，以获取最新消息和支持。
+
+<RoboticsFooter lang="zh" />

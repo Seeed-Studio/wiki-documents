@@ -20,19 +20,16 @@ Grove-Serial RF Pro is a low cost, high performance transparent FSK transceiver 
 
 <table>
 <tr>
-<th> Revision
-</th>
-<th> Descriptions
-</th>
-<th> Release
-</th></tr>
+<th> Revision</th>
+<th> Descriptions</th>
+<th> Release</th>
+</tr>
 <tr>
-<td width="300px"> v0.9b
-</td>
-<td width="500px"> Initial public release
-</td>
-<td width="200px"> NA
-</td></tr></table>
+<td width="300px"> v0.9b</td>
+<td width="500px"> Initial public release</td>
+<td width="200px"> NA</td>
+</tr>
+</table>
 
 ## Features
 
@@ -61,88 +58,61 @@ Grove-Serial RF Pro is a low cost, high performance transparent FSK transceiver 
 ---
 <table  cellspacing="0" width="80%">
 <tr>
-<th scope="col"> Item
-</th>
-<th scope="col"> Min
-</th>
-<th scope="col"> Typical
-</th>
-<th scope="col"> Max
-</th>
-<th scope="col"> Unit
-</th></tr>
+<th scope="col"> Item</th>
+<th scope="col"> Min</th>
+<th scope="col"> Typical</th>
+<th scope="col"> Max</th>
+<th scope="col"> Unit</th>
+</tr>
 <tr>
-<td scope="row">Working Voltage
-</td>
-<td> 4.75
-</td>
-<td> 5.0
-</td>
-<td> 5.25
-</td>
-<td> VDC
-</td></tr>
+<td scope="row">Working Voltage</td>
+<td> 4.75</td>
+<td> 5.0</td>
+<td> 5.25</td>
+<td> VDC</td>
+</tr>
 <tr>
-<td scope="row"> Current at sleep mode
-</td>
-<td colspan="3"> 1
-</td>
-<td> uA
-</td></tr>
+<td scope="row"> Current at sleep mode</td>
+<td colspan="3"> 1</td>
+<td> uA</td>
+</tr>
 <tr>
-<td scope="row"> output power
-</td>
-<td> 1
-</td>
-<td> -
-</td>
-<td> 20
-</td>
-<td> dB
-</td></tr>
+<td scope="row"> output power</td>
+<td> 1</td>
+<td> -</td>
+<td> 20</td>
+<td> dB</td>
+</tr>
 <tr>
-<td scope="row"> Communication Speed
-</td>
-<td> 1.2
-</td>
-<td>  -
-</td>
-<td> 115.2
-</td>
-<td> Kbps
-</td></tr>
+<td scope="row"> Communication Speed</td>
+<td> 1.2</td>
+<td>  -</td>
+<td> 115.2</td>
+<td> Kbps</td>
+</tr>
 <tr>
-<td scope="row"> Transmission Distance(Max)
-</td>
-<td colspan="3"> 1
-</td>
-<td> Km
-</td></tr>
+<td scope="row"> Transmission Distance(Max)</td>
+<td colspan="3"> 1</td>
+<td> Km</td>
+</tr>
 <tr>
-<td scope="row"> Sensitivity
-</td>
-<td colspan="3"> -117
-</td>
-<td> dBm
-</td></tr>
+<td scope="row"> Sensitivity</td>
+<td colspan="3"> -117</td>
+<td> dBm</td>
+</tr>
 <tr>
-<td scope="row"> Communication Protocol
-</td>
-<td colspan="3">  UART
-</td>
-<td> /
-</td></tr>
+<td scope="row"> Communication Protocol</td>
+<td colspan="3">  UART</td>
+<td> /</td>
+</tr>
 <tr>
-<td scope="row"> Operate Temperature
-</td>
-<td> -40
-</td>
-<td>  -
-</td>
-<td> +85
-</td>
-<td> ℃
-</td></tr></table>
+<td scope="row"> Operate Temperature</td>
+<td> -40</td>
+<td>  -</td>
+<td> +85</td>
+<td> ℃</td>
+</tr>
+</table>
 
 ## Interface Function
 
@@ -151,47 +121,40 @@ Grove-Serial RF Pro is a low cost, high performance transparent FSK transceiver 
 
 <table >
 <tr>
-<th> Pad Type (5V Logic level)
-</th>
-<th> Description
-</th></tr>
+<th> Pad Type (5V Logic level)</th>
+<th> Description</th>
+</tr>
 <tr>
-<td width="100px"> G(GND)
-</td>
-<td width="450px"> Ground port
-</td></tr>
+<td width="100px"> G(GND)</td>
+<td width="450px"> Ground port</td>
+</tr>
 <tr>
-<td> EN(ENABLE)
-</td>
+<td> EN(ENABLE)</td>
 <td> Set low for normal mode as data transceiver (Default is low with 10k to GND).
-Set high to put into sleep mode.
-</td></tr>
+Set high to put into sleep mode.</td>
+</tr>
 <tr>
-<td> CON(CONFIG)
-</td>
+<td> CON(CONFIG)</td>
 <td> Set low for configuration mode (connect to GND).
-Set high for communication (Default is high).
-</td></tr>
+Set high for communication (Default is high).</td>
+</tr>
 <tr>
-<td> RX
-</td>
-<td> UART Data input
-</td></tr>
+<td> RX</td>
+<td> UART Data input</td>
+</tr>
 <tr>
-<td> TX
-</td>
-<td> UART Data output
-</td></tr>
+<td> TX</td>
+<td> UART Data output</td>
+</tr>
 <tr>
-<td> V(VCC)
-</td>
-<td> Designed for 5V(+)supply
-</td></tr>
+<td> V(VCC)</td>
+<td> Designed for 5V(+)supply</td>
+</tr>
 <tr>
-<td> AT
-</td>
-<td> Antenna pin
-</td></tr></table>
+<td> AT</td>
+<td> Antenna pin</td>
+</tr>
+</table>
 
 ## Getting Started
 
@@ -292,132 +255,73 @@ The following table lists the commands and responses involved in interacting wit
 
 <table>
   <tbody><tr>
-      <th>Instruction(HEX)
-      </th>
-      <th>Description
-      </th>
-      <th>Config instruction(HEX)
-      </th>
-      <th>Return Value
-      </th></tr>
+      <th>Instruction(HEX)</th>
+      <th>Description</th>
+      <th>Config instruction(HEX)</th>
+      <th>Return Value</th>
+      </tr>
     <tr>
-      <td>F0
-      </td>
-      <td>Reset to default parameters (except UART transfer speed), no parameter follows
-      </td>
-      <td width="400px">AA FA F0
-      </td>
-      <td>4F 4B 0D 0A （OK /r/n)
-      </td></tr>
+      <td>F0</td>
+      <td>Reset to default parameters (except UART transfer speed), no parameter follows</td>
+      <td width="400px">AA FA F0</td>
+      <td>4F 4B 0D 0A （OK /r/n)</td>
+      </tr>
     <tr>
-      <td>E1
-      </td>
-      <td>Reading the current Config parameter, no parameter follows
-      </td>
-      <td>AA FA E1
-      </td>
-      <td>16 bytes: (**following the order below**)
-        <pre>working frequency-4 bytes,{"\n"}wireless data rate-4 bytes,{"\n"}receiving bandwidth-2 bytes,{"\n"}frequency deviation-1 byte,{"\n"}transmission power-1 byte,{"\n"}UART transfer speed-4 bytes{"\n"}</pre>
-      </td></tr>
+      <td>E1</td>
+      <td>Reading the current Config parameter, no parameter follows</td>
+      <td>AA FA E1</td>
+      <td>16 bytes: (**following the order below**) <pre>working frequency-4 bytes,{"\n"}wireless data rate-4 bytes,{"\n"}receiving bandwidth-2 bytes,{"\n"}frequency deviation-1 byte,{"\n"}transmission power-1 byte,{"\n"}UART transfer speed-4 bytes{"\n"}</pre></td>
+      </tr>
     <tr>
-      <td>D2
-      </td>
-      <td>Set up working frequency，[parameter]4 byte，[parameter] Unit :Hz.
-        Set up range:
-        *HM-TRP-433: 414000000-454000000Hz;
-        *   HM-TRP-470: 450000000-490000000Hz;
-        *HM-TRP-868: 849000000-889000000Hz;
-        *   HM-TRP-915: 895000000-935000000Hz
-      </td>
-      <td>Example:
-        *Config instruction: AA FA D2 **36 89 CA C0**, set up frequency as 915000000Hz.(**0x36 89 CA C0=915000000**)
-        *   Config instruction: AA FA D2 **19 DE 50 80**, set up frequency as 434000000Hz.(**0x19 DE 50 80=434000000**)
-      </td>
-      <td>4F 4B 0D 0A （OK /r/n)
-      </td></tr>
+      <td>D2</td>
+      <td>Set up working frequency，[parameter]4 byte，[parameter] Unit :Hz. Set up range: *HM-TRP-433: 414000000-454000000Hz; *   HM-TRP-470: 450000000-490000000Hz; *HM-TRP-868: 849000000-889000000Hz; *   HM-TRP-915: 895000000-935000000Hz</td>
+      <td>Example: *Config instruction: AA FA D2 **36 89 CA C0**, set up frequency as 915000000Hz.(**0x36 89 CA C0=915000000**) *   Config instruction: AA FA D2 **19 DE 50 80**, set up frequency as 434000000Hz.(**0x19 DE 50 80=434000000**)</td>
+      <td>4F 4B 0D 0A （OK /r/n)</td>
+      </tr>
     <tr>
-      <td>C3
-      </td>
-      <td>Set up wireless data rate，[parameter]4 byte，[parameter] unit :bps.
-        Set up range:1200-115200 bps
-      </td>
-      <td>Example:
-        *Config instruction: AA FA C3 **00 00 25 80**,set up transfer speed as 9600bps.(**0x00 00 25 80=9600**)
-        *   Config instruction: AA FA C3 **00 00 96 00**, set up transfer speed as 38400bps.(**0x00 00 96 00=38400**)
-      </td>
-      <td>4F 4B 0D 0A （OK /r/n)
-      </td></tr>
+      <td>C3</td>
+      <td>Set up wireless data rate，[parameter]4 byte，[parameter] unit :bps. Set up range:1200-115200 bps</td>
+      <td>Example: *Config instruction: AA FA C3 **00 00 25 80**,set up transfer speed as 9600bps.(**0x00 00 25 80=9600**) *   Config instruction: AA FA C3 **00 00 96 00**, set up transfer speed as 38400bps.(**0x00 00 96 00=38400**)</td>
+      <td>4F 4B 0D 0A （OK /r/n)</td>
+      </tr>
     <tr>
-      <td>B4
-      </td>
-      <td>Set up receiving bandwidth，[parameter]2 byte，[parameter]Unit :KHz
-        Set up range:30-620KHz
-      </td>
-      <td>Example:
-        *Config instruction: AA FA B4 **00 69**, set up receiving band as 105KHz.(**0x00 69=105**)
-        *   Config instruction: AA FA B4 **01 2C**, set up receiving band as 300KHz.(**0x01 2C=300**)
-      </td>
-      <td>4F 4B 0D 0A （OK /r/n)
-      </td></tr>
+      <td>B4</td>
+      <td>Set up receiving bandwidth，[parameter]2 byte，[parameter]Unit :KHz Set up range:30-620KHz</td>
+      <td>Example: *Config instruction: AA FA B4 **00 69**, set up receiving band as 105KHz.(**0x00 69=105**) *   Config instruction: AA FA B4 **01 2C**, set up receiving band as 300KHz.(**0x01 2C=300**)</td>
+      <td>4F 4B 0D 0A （OK /r/n)</td>
+      </tr>
     <tr>
-      <td>A5
-      </td>
-      <td>Set up frequency deviation，[parameter]1 byte，[parameter]Unit :KHz
-        Set up range:10-160KHz
-      </td>
-      <td>Example:
-        *Config instruction: AA FA A5 **23**, set up modulation frequency as 35KHz.(**0x23=35**)
-        *   Config instruction: AA FA A5 **32**, set up modulation frequency as 50KHz.(**0x32=50**)
-      </td>
-      <td>4F 4B 0D 0A （OK /r/n)
-      </td></tr>
+      <td>A5</td>
+      <td>Set up frequency deviation，[parameter]1 byte，[parameter]Unit :KHz Set up range:10-160KHz</td>
+      <td>Example: *Config instruction: AA FA A5 **23**, set up modulation frequency as 35KHz.(**0x23=35**) *   Config instruction: AA FA A5 **32**, set up modulation frequency as 50KHz.(**0x32=50**)</td>
+      <td>4F 4B 0D 0A （OK /r/n)</td>
+      </tr>
     <tr>
-      <td>96
-      </td>
-      <td>Set up transmission power ,[parameter]1 byte，0~7level
-        Set up range:0-7level(1-20 dBm)
-      </td>
-      <td>Example:
-        *Config instruction: AA FA 96 **07**, set up transmission power as level 7 (+20 dBm)
-        *   Config instruction:AA FA 96 **03**, set up transmission power as level 3 (+8 dBm)
-        <pre>Transmission power level{"     "}Transmission power{"\n"}7{"                                 "}+20dBm{"\n"}6{"                                 "}+17dBm{"\n"}5{"                                 "}+14dBm{"\n"}4{"                                 "}+11dBm{"\n"}3{"                                 "}+8dBm{"\n"}2{"                                 "}+5dBm{"\n"}1{"                                 "}+2dBm{"\n"}0{"                                 "}+1dBm{"\n"}</pre>
-      </td>
-      <td>4F 4B 0D 0A （OK /r/n)
-      </td></tr>
+      <td>96</td>
+      <td>Set up transmission power ,[parameter]1 byte，0~7level Set up range:0-7level(1-20 dBm)</td>
+      <td>Example: *Config instruction: AA FA 96 **07**, set up transmission power as level 7 (+20 dBm) *   Config instruction:AA FA 96 **03**, set up transmission power as level 3 (+8 dBm) <pre>Transmission power level{"     "}Transmission power{"\n"}7{"                                 "}+20dBm{"\n"}6{"                                 "}+17dBm{"\n"}5{"                                 "}+14dBm{"\n"}4{"                                 "}+11dBm{"\n"}3{"                                 "}+8dBm{"\n"}2{"                                 "}+5dBm{"\n"}1{"                                 "}+2dBm{"\n"}0{"                                 "}+1dBm{"\n"}</pre></td>
+      <td>4F 4B 0D 0A （OK /r/n)</td>
+      </tr>
     <tr>
-      <td>1E
-      </td>
-      <td>Set up UART transfer speed，[parameter]4 byte，[parameter] unit: bps
-        Set up range:1200-115200 bps
-      </td>
-      <td>Example:
-        *Config Instruction :AA FA 1E **00 00 25 80**,set up speed as 9600bps.(**0x00 00 25 80=9600**)
-        *   Config instruction :AA FA 1E **00 00 96 00**, set up speed as 38400bps.(**0x00 00 96 00=38400**)
-      </td>
-      <td>4F 4B 0D 0A （OK /r/n)
-      </td></tr>
+      <td>1E</td>
+      <td>Set up UART transfer speed，[parameter]4 byte，[parameter] unit: bps Set up range:1200-115200 bps</td>
+      <td>Example: *Config Instruction :AA FA 1E **00 00 25 80**,set up speed as 9600bps.(**0x00 00 25 80=9600**) *   Config instruction :AA FA 1E **00 00 96 00**, set up speed as 38400bps.(**0x00 00 96 00=38400**)</td>
+      <td>4F 4B 0D 0A （OK /r/n)</td>
+      </tr>
     <tr>
-      <td>87
-      </td>
-      <td>Wireless signal strength when receiving useful data, follows no [parameter]
-      </td>
-      <td>Config Instruction：AA FA 87
-        ![](https://files.seeedstudio.com/wiki/Grove-Serial_RF_Pro/img/WirelesssignalstrengthRSSI.jpg)
-      </td>
-      <td>RSSI value is 8 bit, range: 0-255
-      </td></tr>
+      <td>87</td>
+      <td>Wireless signal strength when receiving useful data, follows no [parameter]</td>
+      <td>Config Instruction：AA FA 87<br /><img src="https://files.seeedstudio.com/wiki/Grove-Serial_RF_Pro/img/WirelesssignalstrengthRSSI.jpg" /></td>
+      <td>RSSI value is 8 bit, range: 0-255</td>
+      </tr>
     <tr>
-      <td>78
-      </td>
-      <td>Disturb wireless signal strength, follows no [parameter]
-        Note：
-        *Modulation index : h = Fd/Rb, Range is 0.5 ~ 32.
-        *   If h&gt;1, BW =Rb+2Fd; If h&lt;1, BW =2Rb+ Fd.
-      </td>
-      <td>Config Instruction：AA FA 78
-      </td>
-      <td>RSSI value is 8 bit , range: 0-255
-      </td></tr></tbody></table>
+      <td>78</td>
+      <td>Disturb wireless signal strength, follows no [parameter]<br />Note：<br />*Modulation index : h = Fd/Rb, Range is 0.5 ~ 32.<br />*   If h &gt; 1, BW =Rb+2Fd; If h &lt; 1, BW =2Rb+ Fd.</td>
+      <td>Config Instruction：AA FA 78</td>
+      <td>RSSI value is 8 bit , range: 0-255</td>
+      </tr>
+</tbody>
+</table>
 
 ## Resources
 

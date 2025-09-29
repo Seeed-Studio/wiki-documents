@@ -1,0 +1,10 @@
+position: 3 # float position is supported
+label: '开发教程'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: wio_wm1110_dev_kit_development_tutorial
+link:
+  type: generated-index
+  slug: cn/wio_wm1110_dev_kit__development_tutorial_class
+  title: 开发教程
+  description: Wio-WM1110 开发套件开发教程文档。

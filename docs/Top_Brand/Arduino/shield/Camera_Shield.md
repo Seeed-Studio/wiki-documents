@@ -151,14 +151,14 @@ we use Serial(Software Serial or Hardware serial) to communicate with Camera Shi
 ```cpp
 //use software serial
 SoftwareSerial cameraconnection(2,3);//Rx, Tx
-VC0706 cam = VC0706(&amp;cameraconnection);
+VC0706 cam = VC0706(&cameraconnection);
 ```
 
 or if you want to use the hardware serial, you can do it like below:
 
 ```cpp
 //use hardware serial
-VC0706 cam = VC0706(&amp;Serial1);
+VC0706 cam = VC0706(&Serial1);
 ```
 
 We use the software serial by default. If hardware serial is your choise, you need to modify the code in VC0706_UART head file. Change

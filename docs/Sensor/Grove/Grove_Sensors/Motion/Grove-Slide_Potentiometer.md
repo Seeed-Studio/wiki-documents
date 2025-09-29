@@ -202,7 +202,7 @@ void loop()
 {
     // read the value from the sensor:
     adcIn = analogRead(adcPin);
-    if(adcIn &gt;= 500) digitalWrite(ledPin,HIGH);  // if adc in &gt; 500, led light
+    if(adcIn >= 500) digitalWrite(ledPin,HIGH);  // if adc in > 500, led light
     else digitalWrite(ledPin, LOW);
     Serial.println(adcIn);
     delay(100);
@@ -370,7 +370,7 @@ KeyboardInterrupt
 
 You can quit this program by simply press ++ctrl+c++.
 
-:::notice
+:::note
         You may have noticed that for the analog port, the silkscreen pin number is something like **A0, A1**, however in the command we use parameter **0** and **1**, just the same as digital port. So please make sure you plug the module into the correct port, otherwise there may be pin conflicts.
 :::
 

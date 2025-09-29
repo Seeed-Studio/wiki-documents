@@ -597,7 +597,7 @@ sudo chmod +x lesson_2.py
 sudo ./lesson_2.py
 ```
 
-:::tipsuccess
+:::tip
 If everthing goes well, you will find that when you long press the LED button, the LED will go off and the buzzer will emit a long "Do" sound. However, when you single press it, the LED will light up and the buzzer will make a short "Do" sound.
 :::
 

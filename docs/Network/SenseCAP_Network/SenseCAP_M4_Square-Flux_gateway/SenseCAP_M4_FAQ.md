@@ -4,13 +4,13 @@ title: SenseCAP M4 FAQ
 keywords:
 - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ
 last_update:
   date: 02/14/2023
   author: Matthew
 ---
 
-FAQ
-===
+# FAQ
 
 ### **What's the average flux chain sync time for the node?**
 
@@ -18,11 +18,11 @@ Download and load a 20GB snapshot file, and chain sync for about an hour to catc
 
 ### **Does SenseCAP M4 Square support NIMBUS and STRATUS?**
 
-**No**,SenseCAP M4 Square only support CUMULUS. if need NIMBUS please click [here](https://www.seeedstudio.com/flux?utm_source=discord&utm_campaign=sensecapm4)
+**No**, SenseCAP M4 Square only support CUMULUS. if need NIMBUS please click [here](https://www.seeedstudio.com/flux?utm_source=discord&utm_campaign=sensecapm4)
 
 ### **How to check if my port is open?**
 
-SenseCAP M4 Square opens all ports required by Flux. SenseCAP Hotspot App provides UPNP detection. If the UPNP status is ON, the ports are open. If the status is OFF, please check your router's UPNP. For more detail,please visit [Flux Node Network Setup](https://support.runonflux.io/support/solutions/articles/151000021293-flux-node-network-setup)
+SenseCAP M4 Square opens all ports required by Flux. SenseCAP Hotspot App provides UPNP detection. If the UPNP status is ON, the ports are open. If the status is OFF, please check your router's UPNP. For more detail, please visit [Flux Node Network Setup](https://support.runonflux.io/support/solutions/articles/151000021293-flux-node-network-setup)
 
 ### **Does M4 need static IP and is it possible to run multiple SenseCAP M4 Squares in the same external IP?**
 

@@ -30,13 +30,13 @@ More details about Grove modules please refer [Grove System](https://wiki.seeeds
 ## Specification
 ---
 
-|Item|	Min	|Typical	|Max	|Unit|
+|Item|Min|Typical|Max|Unit|
 |---|---|---|---|---|
-|Working Voltage|	4.7	|5.0|	5.3	|VDC|
-|Measurement Accuracy	|/|<=1|/|	 %|
-|Extern Voltage Range	(select 3)|	0.3	|/|	12.9|	V|
-|Extern Voltage Range (Select 10)|1.0	|/	|43|V|
-|Dimension	|/|24X20|/|	mm|
+|Working Voltage|4.7|5.0|5.3|VDC|
+|Measurement Accuracy|-|&lt;=1|-|%|
+|Extern Voltage Range (select 3)|0.3|-|12.9|V|
+|Extern Voltage Range (Select 10)|1.0|-|43|V|
+|Dimension|-|24X20|-|mm|
 
 ## Platforms Supported
 
@@ -58,7 +58,7 @@ In order to test the precision of this module, I tested some voltage inputs and 
 
 ![](https://files.seeedstudio.com/wiki/Grove-Voltage_Divider/img/Voltage_Divider_Test_Score.jpg)
 
-- As you can see, when the inputs were in the measuring range, the voltage divider has a high accuracy(<1%, that i marked an "OK"). But as the inputs were not in the range, the accuracy gets low(i marked a "NO") Please see [Specification](https://wiki.seeedstudio.com/Grove-Voltage_Divider/#specification) about the specific measurement range.
+- As you can see, when the inputs were in the measuring range, the voltage divider has a high accuracy(&lt;1%, that i marked an "OK"). But as the inputs were not in the range, the accuracy gets low(i marked a "NO") Please see [Specification](https://wiki.seeedstudio.com/Grove-Voltage_Divider/#specification) about the specific measurement range.
 
 And When voltage divider output voltage is higher than VCC (The Grove Operating Voltage and reference of analog read), an indicator will light up to show you the error.
 

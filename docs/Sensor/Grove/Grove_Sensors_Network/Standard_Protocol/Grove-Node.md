@@ -93,80 +93,67 @@ The following Grove modules from Seeedstudio can be used as an **Input**:
 
 <table>
   <tbody><tr>
-      <th>Module name
-      </th>
-      <th>Parameter to measure
-      </th></tr>
+      <th>Module name</th>
+      <th>Parameter to measure</th>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td width={300}> Grove - 80cm Infrared Proximity Sensor
-      </td>
-      <td width={400}> Distance
-      </td></tr>
+      <td width={300}> Grove - 80cm Infrared Proximity Sensor</td>
+      <td width={400}> Distance</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - Button
-      </td>
-      <td colSpan={3} rowSpan={1}>On/Off
-      </td></tr>
+      <td> Grove - Button</td>
+      <td colSpan={3} rowSpan={1}>On/Off</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - Electricity Sensor
-      </td>
-      <td colSpan={3} rowSpan={1}> Electricity
-      </td></tr>
+      <td> Grove - Electricity Sensor</td>
+      <td colSpan={3} rowSpan={1}> Electricity</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - Gas Sensor(MQ2&amp;MQ5)
-      </td>
-      <td colSpan={3} rowSpan={1}> Gas Quality
-      </td></tr>
+      <td> Grove - Gas Sensor(MQ2&amp;MQ5)</td>
+      <td colSpan={3} rowSpan={1}> Gas Quality</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - Light Sensor
-      </td>
-      <td colSpan={3} rowSpan={1}> Light
-      </td></tr>
+      <td> Grove - Light Sensor</td>
+      <td colSpan={3} rowSpan={1}> Light</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - Magnetic Switch
-      </td>
-      <td colSpan={3} rowSpan={1}> Magnetic
-      </td></tr>
+      <td> Grove - Magnetic Switch</td>
+      <td colSpan={3} rowSpan={1}> Magnetic</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - Moisture Sensor
-      </td>
-      <td colSpan={3} rowSpan={1}> Moisture
-      </td></tr>
+      <td> Grove - Moisture Sensor</td>
+      <td colSpan={3} rowSpan={1}> Moisture</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - PIR Motion Sensor
-      </td>
-      <td colSpan={3} rowSpan={1}> PIR Motion
-      </td></tr>
+      <td> Grove - PIR Motion Sensor</td>
+      <td colSpan={3} rowSpan={1}> PIR Motion</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - Rotary Angle Sensor
-      </td>
-      <td colSpan={3} rowSpan={1}> Rotary Angle
-      </td></tr>
+      <td> Grove - Rotary Angle Sensor</td>
+      <td colSpan={3} rowSpan={1}> Rotary Angle</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - Tilt Switch
-      </td>
-      <td colSpan={3} rowSpan={1}>  Object Position
-      </td></tr>
+      <td> Grove - Tilt Switch</td>
+      <td colSpan={3} rowSpan={1}>  Object Position</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - Sound Sensor
-      </td>
-      <td colSpan={3} rowSpan={1}> Sound
-      </td></tr>
+      <td> Grove - Sound Sensor</td>
+      <td colSpan={3} rowSpan={1}> Sound</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - Temperature Sensor
-      </td>
-      <td colSpan={3} rowSpan={1}> Temperature
-      </td></tr>
+      <td> Grove - Temperature Sensor</td>
+      <td colSpan={3} rowSpan={1}> Temperature</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - Touch Sensor
-      </td>
-      <td colSpan={3} rowSpan={1}> Human touch
-      </td></tr>
+      <td> Grove - Touch Sensor</td>
+      <td colSpan={3} rowSpan={1}> Human touch</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - Water Sensor
-      </td>
-      <td colSpan={3} rowSpan={1}> Water
-      </td></tr></tbody></table>
+      <td> Grove - Water Sensor</td>
+      <td colSpan={3} rowSpan={1}> Water</td>
+      </tr>
+    </tbody>
+    </table>
 
 Other analog sensors which is not Grove-compatible need a little small adjustment. Just connect your signal output to pin4 of Grove connector and then the VCC and GND. _Note that only sensors that output an analog or digital 1/0 value can be used with the pre-programmed firmware_
 
@@ -176,30 +163,27 @@ Second, we need an **output** Grove module as an actuator. The following Grove m
 
 <table>
   <tbody><tr>
-      <th>Module name
-      </th>
-      <th>Action when triggered
-      </th></tr>
+      <th>Module name</th>
+      <th>Action when triggered</th>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td width={300}> Grove - Buzzer
-      </td>
-      <td width={400}> Buzzer enabled
-      </td></tr>
+      <td width={300}> Grove - Buzzer</td>
+      <td width={400}> Buzzer enabled</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - LED
-      </td>
-      <td colSpan={3} rowSpan={1}>LED On
-      </td></tr>
+      <td> Grove - LED</td>
+      <td colSpan={3} rowSpan={1}>LED On</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - Vibrator
-      </td>
-      <td colSpan={3} rowSpan={1}> Vibrate
-      </td></tr>
+      <td> Grove - Vibrator</td>
+      <td colSpan={3} rowSpan={1}> Vibrate</td>
+      </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Grove - Relay
-      </td>
-      <td colSpan={3} rowSpan={1}> Swith On/Off other circuits
-      </td></tr></tbody></table>
+      <td> Grove - Relay</td>
+      <td colSpan={3} rowSpan={1}> Swith On/Off other circuits</td>
+      </tr>
+    </tbody>
+    </table>
 
 
 For example, we intend to create a light which automatically turns on if the environment is dark and turns off if otherwise, then we select a [Grove-Light_Sensor](/Grove-Light_Sensor "Grove - Light Sensor") and a Grove-Red_LED. 

@@ -1,12 +1,12 @@
 ---
 description: This tutorial will guide on how to deploy Watcher's AI service locally off the SenseCraft service to use Watcher.
 title: Deploy Watcher's AI capabilities locally
-image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherAI.png
+image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherAI.webp
 slug: /watcher_local_deploy
 sidebar_position: 3
 last_update:
-  date: 10/18/2024
-  author: Citric
+  date: 11/9/2025
+  author: Twelve
 ---
 
 # Deploy Watcher's AI capabilities locally
@@ -14,13 +14,13 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/87.png" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE">
+    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Watcher's Video</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher">
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Github Repository</font></span></strong>
     </a>
 </div><br />
@@ -40,27 +40,26 @@ Users can download the Watcher APP through the following download links:
 - For **Windows**:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_latest.exe">
+    <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_latest.exe" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> For Windows 🖱️</font></span></strong>
     </a>
 </div>
 
-- For **macOS**: 
+- For **macOS**:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_latest.dmg">
+    <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_latest.dmg" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> For macOS 🖱️</font></span></strong>
     </a>
 </div>
 
-- For **Linux**: 
+- For **Linux**:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_arm64_latest.deb">
+    <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_arm64_latest.deb" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> For Linux 🖱️</font></span></strong>
     </a>
 </div><br />
-
 
 Please choose the appropriate download link based on your operating system. The Watcher APP is compatible with Windows, macOS, and major Linux distributions, ensuring a seamless experience across different platforms.
 
@@ -96,7 +95,6 @@ To ensure a smooth and optimal experience when deploying Watcher's AI capabiliti
     </tr>
   </table>
 </div>
-
 
 It's important to note that these are the minimum requirements, and having higher specifications can significantly improve the performance and responsiveness of Watcher's AI services. If you plan to deploy multiple AI services simultaneously or process large amounts of data, we recommend using devices with more advanced hardware configurations.
 
@@ -160,7 +158,7 @@ To deploy Watcher's AI capabilities on a Windows device, follow these simple ste
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/88.png" style={{width:800, height:'auto'}}/></div>
 
-1. Llama 3.1 + LLaVA: If you select this option, Watcher will automatically start downloading the required AI models and associated files. These additional downloads may take some time, as they can be around **10 GB** in size. Ensure that you have a stable and fast internet connection during the model download process to avoid any interruptions or incomplete downloads.
+1. Llama 3.1 + LLaVA: If you select this option, click the Apply button below to start downloading the required AI models and associated files. These additional downloads may take some time, as they can be around **10 GB** in size. Ensure that you have a stable and fast internet connection during the model download process to avoid any interruptions or incomplete downloads.
 
 2. OpenAI: If you prefer to use OpenAI's models, you need to prepare your OpenAI API key in advance. Make sure you have a valid API key and sufficient credits to use the OpenAI models. When prompted, enter your API key to configure Watcher to use OpenAI's services.
 
@@ -185,7 +183,7 @@ Once the copying process is complete, you can close the `.dmg` window.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/90.png" style={{width:800, height:'auto'}}/></div>
 
-1. Llama 3.1 + LLaVA: If you select this option, Watcher will automatically start downloading the required AI models and associated files. These additional downloads may take some time, as they can be around **10 GB** in size. Ensure that you have a stable and fast internet connection during the model download process to avoid any interruptions or incomplete downloads.
+1. Llama 3.1 + LLaVA: If you select this option, click the Apply button below to start downloading the required AI models and associated files. These additional downloads may take some time, as they can be around **10 GB** in size. Ensure that you have a stable and fast internet connection during the model download process to avoid any interruptions or incomplete downloads.
 
 2. OpenAI: If you prefer to use OpenAI's models, you need to prepare your OpenAI API key in advance. Make sure you have a valid API key and sufficient credits to use the OpenAI models. When prompted, enter your API key to configure Watcher to use OpenAI's services.
 
@@ -215,7 +213,7 @@ Replace `watcher_service_x.x.x_arm64.deb` with the actual name of the downloaded
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/92.png" style={{width:800, height:'auto'}}/></div>
 
-1. Llama 3.1 + LLaVA: If you select this option, Watcher will automatically start downloading the required AI models and associated files. These additional downloads may take some time, as they can be around **10 GB** in size. Ensure that you have a stable and fast internet connection during the model download process to avoid any interruptions or incomplete downloads.
+1. Llama 3.1 + LLaVA: If you select this option, click the Apply button below to start downloading the required AI models and associated files. These additional downloads may take some time, as they can be around **10 GB** in size. Ensure that you have a stable and fast internet connection during the model download process to avoid any interruptions or incomplete downloads.
 
 2. OpenAI: If you prefer to use OpenAI's models, you need to prepare your OpenAI API key in advance. Make sure you have a valid API key and sufficient credits to use the OpenAI models. When prompted, enter your API key to configure Watcher to use OpenAI's services.
 
@@ -229,7 +227,7 @@ Similar to the Windows and macOS installations, Watcher will automatically start
 
 To use the local AI services provided by Watcher in the SenseCraft APP, follow these concise steps:
 
-**Step 1**. Open the Watcher APP on your device and click the **CLICK TO START SERVICE** button in the middle-left section. Wait for the button to change to **SERVICE IS STARTED**.
+**Step 1**. Open the Watcher APP on your device and click the **Start Service** button in the bottom-left section. 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/94.png" style={{width:800, height:'auto'}}/></div>
 
@@ -243,15 +241,13 @@ To use the local AI services provided by Watcher in the SenseCraft APP, follow t
 
 **Step 5**. You can now assign tasks to Watcher through the SenseCraft APP, and Watcher will process them using its locally deployed AI capabilities.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/95.png" style={{width:800, height:'auto'}}/></div>
-
 :::caution
 Please note that it is important to make sure that your computer meets the recommended computer configurations in **[Hardware Preparation](#hardware-preparation)**. If it is below the recommended configuration, then you may not receive the recognition results and alarm messages on time, as your computer may be in full swing analysing one of your images, at which point Watcher will appear to be in a constant state of observation.
 :::
 
 By completing these steps, you can harness the power of Watcher's AI services directly on your device, ensuring enhanced privacy and the ability to conveniently customize your own integrated system. With Watcher's AI capabilities running locally, you can perform advanced tasks, analysis, and automation securely and efficiently, all while keeping your data under your control.
 
-We will continue to add tutorials on using **[HTTP Message Block](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool/#http-message-block)** for message push after localised deployment in the Application directory, so stay tuned!
+We will continue to add tutorials on using **[HTTP Message Block](https://wiki.seeedstudio.com/integrate_watcher_to_ha/#step-6-place-the-task-and-configure-the-http-message-block)** for message push after localised deployment in the Application directory, so stay tuned!
 
 ## FAQ
 
@@ -284,5 +280,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

@@ -20,7 +20,6 @@ The BeagleBone® is a versatile platform capable of running a full Linux OS whil
 
 Seeed's [BeagleBone® Green](https://wiki.seeedstudio.com/BeagleBone_Green/) and [BeagleBone® Green Wireless](https://wiki.seeedstudio.com/BeagleBone_Green_Wireless/) are part of the BeagleBone® family and are ready to be customized, manufactured, and deployed **now**.
 
-You can view our customization portfolio [here](#portfolio).
 
 ## **SDKs, HDKs, and Community**
 

@@ -52,74 +52,50 @@ Have you found that setting up an amplifier IC on the breadboard is a troublesom
 ## Specification
 
 ---
-<table  cellspacing="0" width="80%">
-<tr>
-<th colspan="2" scope="col"> Item
-</th>
-<th scope="col"> Min
-</th>
-<th scope="col"> Typical
-</th>
-<th scope="col"> Max
-</th>
-<th scope="col"> Unit
-</th></tr>
-<tr>
-<th colspan="2" scope="row"> Operating Voltage
-</th>
-<td> 2.7
-</td>
-<td> 5.0
-</td>
-<td> 36
-</td>
-<td> VDC
-</td></tr>
-<tr>
-<th colspan="2" scope="row"> Input Voltage
-
-</th>
-<td> 0.1
-</td>
-<td> \
-</td>
-<td> (Vcc-0.8)/Gain
-</td>
-<td> mV
-</td></tr>
-<tr>
-<th colspan="2" scope="row"> Output Voltage
-</th>
-<td> 0
-</td>
-<td> \
-</td>
-<td> Vcc-0.80
-</td>
-<td> mV
-</td></tr>
-<tr>
-<th rowspan="2"> Gain
-</th>
-<td> Select 304
-</td>
-<td> 297.92
-</td>
-<td> 304
-</td>
-<td> 310.08
-</td>
-<td colspan="2" rowspan="2"> /
-</td></tr>
-<tr>
-<td> Select 971
-</td>
-<td> 951.58
-</td>
-<td> 971
-</td>
-<td> 990.42
-</td></tr></table>
+<table cellspacing="0" width="80%">
+  <tr>
+    <th colspan="2" scope="col"> Item</th>
+    <th scope="col"> Min</th>
+    <th scope="col"> Typical</th>
+    <th scope="col"> Max</th>
+    <th scope="col"> Unit</th>
+  </tr>
+  <tr>
+    <th colspan="2" scope="row"> Operating Voltage</th>
+    <td> 2.7</td>
+    <td> 5.0</td>
+    <td> 36</td>
+    <td> VDC</td>
+  </tr>
+  <tr>
+    <th colspan="2" scope="row"> Input Voltage</th>
+    <td> 0.1</td>
+    <td> \\</td>
+    <td> (Vcc-0.8)/Gain</td>
+    <td> mV</td>
+  </tr>
+  <tr>
+    <th colspan="2" scope="row"> Output Voltage</th>
+    <td> 0</td>
+    <td> \\</td>
+    <td> Vcc-0.80</td>
+    <td> mV</td>
+  </tr>
+  <tr>
+    <th rowspan="2"> Gain</th>
+    <td> Select 304</td>
+    <td> 297.92</td>
+    <td> 304</td>
+    <td> 310.08</td>
+    <td colspan="2" rowspan="2"> /</td>
+  </tr>
+  <tr>
+    <td> Select 971</td>
+    <td> 951.58</td>
+    <td> 971</td>
+    <td> 990.42</td>
+  </tr>
+</table>
 
 ## Interface Function
 
@@ -172,7 +148,7 @@ void loop()
     int value;
     float V,Vo;
     float Sum=0;
-    for(i=0;i&lt;10;i++)
+    for(i=0;i<10;i++)
     {
         value=analogRead(4);
         V=value*5.00/1023;

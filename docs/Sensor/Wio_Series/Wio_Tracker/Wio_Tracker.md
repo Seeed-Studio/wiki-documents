@@ -17,8 +17,8 @@ The most attractive thing about Wio must be the virtualizing plug-n-play modules
 
 We have arranged many interesting projects tutorial for you to get started, by using Wio, you are able to water your plant remotely or feed your dog when you aren’t home, wanna dig out what other things you can make with Wio? Check out soon the docs of Wio_Tracker link and Wio_Tracker node, have fun!
 
-
 ## Product List
+
 ---
 
 Here is the list of the Wio_Tracker Boards you can find in the Seeed WiKi. The list will be constantly updated.
@@ -26,17 +26,17 @@ Here is the list of the Wio_Tracker Boards you can find in the Seeed WiKi. The l
 - [Wio LTE Cat.1](https://wiki.seeedstudio.com/Wio_LTE_Cat.1/)
 - [Wio Tracker - GPS, BT3.0, GSM, Arduino Compatible](https://wiki.seeedstudio.com/wio_gps_board/)
 
-
 ## Tech Support & Product Discussion
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

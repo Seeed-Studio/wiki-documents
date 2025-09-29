@@ -73,36 +73,37 @@ For SIM900's Specifications, please refer this PDF file: [SIM900_SPEC.pdf](https
 
 <table  cellspacing="0" width="80%">
 <tr>
-<th scope="col"> Item
-</th><th scope="col"> Min
-</th><th scope="col"> Typical
-</th><th scope="col"> Max
-</th><th scope="col"> Unit
-</th></tr>
+  <th scope="col">Item</th>
+  <th scope="col">Min</th>
+  <th scope="col">Typical</th>
+  <th scope="col">Max</th>
+  <th scope="col">Unit</th>
+</tr>
 <tr>
-<th scope="row"> Voltage
-</th><td>4.8
-</td><td>5.0
-</td><td>5.2
-</td><td>VDC
-</td></tr>
+  <th scope="row">Voltage</th>
+  <td>4.8</td>
+  <td>5.0</td>
+  <td>5.2</td>
+  <td>VDC</td>
+</tr>
 <tr>
-<th scope="row"> Current
-</th><td>/
-</td><td>50
-</td><td>450
-</td><td>mA
-</td></tr>
+  <th scope="row">Current</th>
+  <td>/</td>
+  <td>50</td>
+  <td>450</td>
+  <td>mA</td>
+</tr>
 <tr>
-<th scope="row"> Dimension(with antenna)
-</th><td colspan="3"> 110x58x19
-</td><td>mm
-</td></tr>
+  <th scope="row">Dimension(with antenna)</th>
+  <td colspan="3">110x58x19</td>
+  <td>mm</td>
+</tr>
 <tr>
-<th scope="row"> Net Weight
-</th><td colspan="3"> 76±2
-</td><td>g
-</td></tr></table>
+  <th scope="row">Net Weight</th>
+  <td colspan="3">76±2</td>
+  <td>g</td>
+</tr>
+</table>
 
 ## Interface Function
 
@@ -136,46 +137,40 @@ For SIM900's Specifications, please refer this PDF file: [SIM900_SPEC.pdf](https
 ### Light Status
 
 <table>
-  <tbody><tr>
-      <th> LED
-      </th>
-      <th> State
-      </th>
-      <th> Function
-      </th></tr>
+  <tbody>
     <tr>
-      <td width="300px" rowSpan={2}> Status
-      </td><td width="300px"> Off
-      </td>
-      <td width="400px"> Power Off
-      </td></tr>
+      <th>LED</th>
+      <th>State</th>
+      <th>Function</th>
+    </tr>
     <tr>
-      <td width="300px"> On
-      </td>
-      <td width="400px"> Power On
-      </td></tr>
+      <td width="300px" rowSpan={2}>Status</td>
+      <td width="300px">Off</td>
+      <td width="400px">Power Off</td>
+    </tr>
     <tr>
-      <td width="300px" rowSpan={4}> Netlight
-      </td>
-      <td width="300px"> Off
-      </td>
-      <td width="400px"> SIM900 is not working
-      </td></tr>
+      <td width="300px">On</td>
+      <td width="400px">Power On</td>
+    </tr>
     <tr>
-      <td width="300px"> 64ms On/800ms Off
-      </td>
-      <td width="400px"> SIM900 does not find the network
-      </td></tr>
+      <td width="300px" rowSpan={4}>Netlight</td>
+      <td width="300px">Off</td>
+      <td width="400px">SIM900 is not working</td>
+    </tr>
     <tr>
-      <td width="300px"> 64ms On/3000ms Off
-      </td>
-      <td width="400px"> SIM900 finds the network
-      </td></tr>
+      <td width="300px">64ms On/800ms Off</td>
+      <td width="400px">SIM900 does not find the network</td>
+    </tr>
     <tr>
-      <td width="300px"> 64ms On/300ms Off
-      </td>
-      <td width="400px"> GPRS communication
-      </td></tr></tbody></table>
+      <td width="300px">64ms On/3000ms Off</td>
+      <td width="400px">SIM900 finds the network</td>
+    </tr>
+    <tr>
+      <td width="300px">64ms On/300ms Off</td>
+      <td width="400px">GPRS communication</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Hardware installation
 

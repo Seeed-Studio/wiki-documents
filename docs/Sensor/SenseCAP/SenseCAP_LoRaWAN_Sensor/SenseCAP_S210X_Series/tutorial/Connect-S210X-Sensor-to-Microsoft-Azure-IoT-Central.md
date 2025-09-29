@@ -1,9 +1,10 @@
-﻿---
+---
 description: Connect S210X Sensor to Microsoft Azure IoT Central Via Node-RED
 title: Connect S210X Sensor to Microsoft Azure IoT Central Via Node-RED
 keywords:
 - SenseCAP LoRaWAN Sensor& Microsoft Azure IoT Central
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/Connect-S210X-Sensor-to-Microsoft-Azure-IoT-Central
 last_update:
   date: 7/26/2023
   author: Jessie
@@ -12,11 +13,7 @@ last_update:
 
 SenseCAP S210X is a series of wireless LoRaWAN® sensors. It can cover a transmission range of 2km in urban scenes and 10km in line-of-sight scenes while keeping lower power consumption during the transmission process. Together with a replaceable battery that supports up to 10 years of usage and an industrial IP66 enclosure. It supports -40 ~ 85℃ operating temperature and can be deployed in harsh environments. SenseCAP S210X is compatible with LoRaWAN® V1.0.3 protocol and can work with LoRaWAN® gateway. Users can install the device, bind it using the QR code and configure the network, then data can be viewed from the SenseCAP portal, which supports popular IoT protocols such as HTTP and MQTT.
 
-
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/001.png" alt="pir" width={600} height="auto" /></p>
-
-
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/catalogsearch/result/?q=S210x" target="_blank"><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%202.png" border="0" /></a></p>
 
@@ -30,10 +27,9 @@ This chapter is to make it easier for our users to connect data from the SenseCA
 
 **Node-RED**
 
-Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways. It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click. 
+Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways. It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/002.png" alt="pir" width={600} height="auto" /></p>
-
 
 ### Install Node.Js
 
@@ -54,39 +50,41 @@ If you are using Windows, do not start the command with "sudo".
 :::
 
 This command will install Node-RED as a global module along with its dependencies.
-Once installed as a global module you can use this command to start Node-RED in your terminal. 
+Once installed as a global module you can use this command to start Node-RED in your terminal.
 
 ```cpp
 node-red
 ```
 
-![IMG\_258](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/003.png)
+![IMG_258](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/003.png)
 
 Then you can then access the Node-RED editor by pointing your browser at [http://localhost:1880](http://localhost:1880/).
 
 ### Get the SenseCAP API
+
 Before proceeding to this section, make sure you have bound your S210x device in the SenseCAP console.
 
 Log in to the [**SenseCAP console**](https://sensecap.seeed.cc/portal/#/dashboard). In the drop-down bar to the right of the user name at the top of the dashboard, we can find the **Organization Information**, please select it to get the **Organization ID**
 
-![IMG\_259](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/004.png)
+![IMG_259](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/004.png)
 
 Then, we also need to get the API key for SenseCAP. Please click on **Security -> Access API keys** on the left side of the dashboard. Then Create an Access Key.
 
-![IMG\_260](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/005.png)
+![IMG_260](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/005.png)
 
 Click on the **API ID** you created and you will get her **Access API keys**, please copy it and the **Organization ID**, we will use them in the later steps.
 
-![IMG\_261](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/006.png)
+![IMG_261](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/006.png)
 
 ### Node-RED Configuration
-![IMG\_262](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/007.png)
 
-* **Step 1.** Add a new mqtt-broker node
+![IMG_262](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/007.png)
+
+- **Step 1.** Add a new mqtt-broker node
 
 Drag out an **mqtt in** node, double-click it to enter the configuration page, then click the edit button after **Add new mqtt-broker**.
 
-![IMG\_263](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/008.png)
+![IMG_263](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/008.png)
 
 The configuration of mqtt-broker is required to be filled out as follows:
 
@@ -104,7 +102,7 @@ Client ID format：**org-"Organization ID" "Random ID"**
 
 Example:org-43243\*\*\*23-test
 
-![IMG\_264](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/009.png)
+![IMG_264](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/009.png)
 
 Then we fill in the **Security** options field with the Username and Password:
 
@@ -113,7 +111,7 @@ Username: **org-"Organization ID"**
 **Organization ID:** Your organization ID. We have obtained it before
 
 Password: Fill in the **Access API keys** that we obtained before.
-` `![IMG\_265](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/010.png)
+` `![IMG_265](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/010.png)
 
 Add **Topic**
 
@@ -121,7 +119,6 @@ Topic: Configuring a topic in a specific format determines the kind of device an
 
 Topic format:
 **/device_sensor_data/"OrgID"/"DeviceEUI"/"Channel"/"Reserved"/"MeasurementID"**
-
 
 |OrgID|You can find the id on your organization information|
 | :-: | :- |
@@ -134,21 +131,17 @@ Topic format:
 "+" indicates that this field has no filter conditions and can match all. "/+/+/+/+" means to listen to all "DeviceEUI", "Channel", "Reserved", "MeasurementID"
 :::
 
-Example：/device\_sensor\_data/424988\*\*\*\*44/2CF7F\*\*\*0002/+/+/+
+Example：/device_sensor_data/424988\*\*\*\*44/2CF7F\*\*\*0002/+/+/+
 
 This topic means receiving all remote sensing data of the current device.
 
-![IMG\_266](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/011.png)
+![IMG_266](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/011.png)
 
-* **Step 2.** Add debug node
+- **Step 2.** Add debug node
 
 Drag out a **debug** node, connect to the **mqtt-in** node, then click **Deploy**
 
-After the deployment is successful, you will see "**Connected**" under the **mqtt in** building block, the data reporting interval is determined by the sensor which we connected. After receiving the data, the debug window on the right will display the raw data. ![IMG\_267](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/012.png)
-
-
-
-
+After the deployment is successful, you will see "**Connected**" under the **mqtt in** building block, the data reporting interval is determined by the sensor which we connected. After receiving the data, the debug window on the right will display the raw data. ![IMG_267](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/012.png)
 
 ## **SenseCAP & Node-RED & Azure IoT Central**
 
@@ -158,59 +151,59 @@ The content of this chapter will continue to use the Node-RED introduced earlier
 
 ### Microsoft Azure IoT Central Configuration
 
-* **Step 1.** Log in to Azure IoT Central.
+- **Step 1.** Log in to Azure IoT Central.
 
-Please visit [**Azure IoT Central**](https://apps.azureiotcentral.com/home) website, click **Build** from the navigation menu on the left, and click **Custom apps**. ![IMG\_268](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/013.png)
+Please visit [**Azure IoT Central**](https://apps.azureiotcentral.com/home) website, click **Build** from the navigation menu on the left, and click **Custom apps**. ![IMG_268](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/013.png)
 
-* **Step 2.** Fill in the **Application name** and choose the **Pricing plan**. Application URL will be created automatically when you fill in the application name. 
+- **Step 2.** Fill in the **Application name** and choose the **Pricing plan**. Application URL will be created automatically when you fill in the application name.
 
-![IMG\_269](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/014.png)
+![IMG_269](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/014.png)
 
 Note: If you are a new user of Azure IoT Central, we recommend that you select Free as this will not consume your fees.
 
-![IMG\_270](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/015.png)
+![IMG_270](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/015.png)
 
-* **Step 3.** Click **Create** to create the new application. Now you have successfully set up Azure IoT Central!
+- **Step 3.** Click **Create** to create the new application. Now you have successfully set up Azure IoT Central!
 
-![IMG\_271](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/016.png)
+![IMG_271](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/016.png)
 
-* **Step 4.** Create a Device Template
+- **Step 4.** Create a Device Template
 
 Please create a new device template by clicking on **Device templates** in the left-hand menu bar.
 
-![IMG\_272](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/017.png)
+![IMG_272](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/017.png)
 
 Name your device template and click **create**
 
-![IMG\_273](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/018.png)
+![IMG_273](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/018.png)
 
-![IMG\_274](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/019.png)
+![IMG_274](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/019.png)
 
-* **Step 5.** Create a Device
+- **Step 5.** Create a Device
 
-Click on **Devices -> S2103** under the left menu bar. ![IMG\_275](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/020.png)
+Click on **Devices -> S2103** under the left menu bar. ![IMG_275](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/020.png)
 
-![IMG\_276](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/021.png)
+![IMG_276](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/021.png)
 
 Once you have created the device, you will see the device we have just created under **Device**, please tap into the device and click on the **Connect** button in the top left corner.
 
 Please make a note of this information, which we will use in the next steps.
 
-![IMG\_277](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/022.png)
+![IMG_277](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/022.png)
 
 ### **Node-RED Configuration**
 
-* **Step 1.** Install Azure IoT Paletts
+- **Step 1.** Install Azure IoT Paletts
 
-Click on the upper-right menu bar and select Settings ![IMG\_278](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/023.png)
+Click on the upper-right menu bar and select Settings ![IMG_278](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/023.png)
 
-Search and install "node-red-contrib-azure-iot-central" in the **Paletts - Install** ![IMG\_279](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/024.png)
+Search and install "node-red-contrib-azure-iot-central" in the **Paletts - Install** ![IMG_279](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/024.png)
 
-* **Step 2.** Configure the Azure IoT Central node
+- **Step 2.** Configure the Azure IoT Central node
 
 Drag out the **Azure IoT Central** node from the **function** bar on the left, double-click it to enter the configuration page, then click the edit button to edit **Azure IoT Central** node
 
-![IMG\_280](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/025.png)
+![IMG_280](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/025.png)
 
 The configuration is required to be filled out as follows:
 
@@ -220,15 +213,15 @@ Authentication: SAS
 
 Scope ID/Device ID/Primary Key: We have obtained it before
 
-![IMG\_281](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/026.png)
+![IMG_281](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/026.png)
 
-* **Step 3.** Configure the function node
+- **Step 3.** Configure the function node
 
 Data reporting to Azure IoT Central needs to follow a specific data format, so it's necessary to add a function building block to process the data format.
 
 Drag out the **function** node from the function bar on the left, double-click it to enter the edit page, then copy the code to **On Message.**
 
-![IMG\_282](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/027.png)
+![IMG_282](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/027.png)
 
 **Code**:
 
@@ -255,46 +248,44 @@ Drag out the **function** node from the function bar on the left, double-click i
 }
 ```
 
-
 If you want to see the logging information of the data, you can add a debug node after the function node.
 
-![IMG\_283](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/028.png)
+![IMG_283](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/028.png)
 
 Once the S210X Sensor starts powering up and working and starts sending data to the SenseCAP PaaS server, then we can check the data on Azure IoT Central.
 
 ### **Data Presentation**
+
 The data visible in the **Raw data** column are placed in **Unmodeled data**, so we need to parse the data according to the code above.
 
 Add the capability that you need, then click **save** and **publish**
 
-![IMG\_284](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/029.png)
+![IMG_284](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/029.png)
 
-![IMG\_285](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/030.png)
+![IMG_285](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/030.png)
 
-Then we can clearly check the raw data uploaded by the sensor. ![IMG\_286](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/031.png)
+Then we can clearly check the raw data uploaded by the sensor. ![IMG_286](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/031.png)
 
 If you want to enrich your data dashboard page, you can also configure it to be displayed in Overview.
 
 Click on **Overview** on the left navigation menu.
 
-![IMG\_287](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/032.png)
+![IMG_287](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/032.png)
 
 Collapse **starts with devices** drop-down menu and selects the telemetry that you want to visualize.
 
-![IMG\_288](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/033.png)
+![IMG_288](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/033.png)
 
 Click **Add tile** and you will see the tile added to the Azure IoT Central Dashboard.
 
-![IMG\_289](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/034.png)
+![IMG_289](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/034.png)
 
 So next, customize your sensor data monitoring dashboard to your liking!
 
-After finishing your changes, just click on **save** and **publish** 
+After finishing your changes, just click on **save** and **publish**
 
-![IMG\_290](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/035.png)
+![IMG_290](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/035.png)
 
-![IMG\_291](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/036.png)
+![IMG_291](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/036.png)
 
-You can view your sensor data through your custom dashboard now! ![IMG\_292](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/037.png)
-
-
+You can view your sensor data through your custom dashboard now! ![IMG_292](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/037.png)

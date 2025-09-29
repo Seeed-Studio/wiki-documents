@@ -16,10 +16,9 @@ last_update:
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/wPi-XjeJPNw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-We are pleased to bring you today a brand new project using the XIAO ESP32S3 Sense and Round Display for XIAO! The project aims to first build a speech recognition system using the XIAO ESP32S3 Sense's microphone and Google Cloud's speech-to-text service. The recognized speech text is then used to call OpenAI's interface to ask questions to ChatGPT and return answers. Finally, we display the recognised speech and the content of the answers on screen. 
+We are pleased to bring you today a brand new project using the XIAO ESP32S3 Sense and Round Display for XIAO! The project aims to first build a speech recognition system using the XIAO ESP32S3 Sense's microphone and Google Cloud's speech-to-text service. The recognized speech text is then used to call OpenAI's interface to ask questions to ChatGPT and return answers. Finally, we display the recognised speech and the content of the answers on screen.
 
 This is our intelligent "XIAO" assistant!
-
 
 Let's take a look at some of the general steps required to complete this project.
 
@@ -28,7 +27,6 @@ Let's take a look at some of the general steps required to complete this project
 - [Upload XIAO ESP32S3 Sense recorded sound files to Google Cloud for recognition](#upload-xiao-esp32s3-sense-recorded-sound-files-to-google-cloud-for-recognition)
 - [Deploy ChatGPT on XIAO ESP32S3 Sense](#deploy-chatgpt-on-xiao-esp32s3-sense)
 - [Design of screen display content & Integration of programs](#design-of-screen-display-content--integration-of-programs)
-
 
 The general framework structure can be seen in the diagram below.
 
@@ -54,12 +52,12 @@ If you want to experience the entire programme content in full, you need to have
     </tr>
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html">
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
@@ -182,7 +180,7 @@ Please keep the key in JSON format as we will use it in a later step.
 We have packed the project file needed to complete the entire tutorial and you can download it directly from Github using the button below, or you can download it locally using the Git command.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/XIAO-ESP32S3Sense-Speech2ChatGPT">
+    <a class="github_item" href="https://github.com/limengdu/XIAO-ESP32S3Sense-Speech2ChatGPT" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Project</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
@@ -197,13 +195,11 @@ In the meantime, you can copy the JSON file we prepared in **step 5** to the **N
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3sense-speech2chatgpt/19.png" style={{width:600, height:'auto'}}/></div>
 
-
 ### Step 7. Set your authentication environment variable
 
 In order to set your **GOOGLE_APPLICATION_CREDENTIALS**, you must have a service account associated with your project and have access to the service account's JSON key.
 
 Provide authentication credentials to your application code by setting the environment variable **GOOGLE_APPLICATION_CREDENTIALS**.
-
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -235,13 +231,11 @@ Replace **KEY_PATH** with the path of the JSON file that contains your service a
 
 </TabItem>
 
-
 <TabItem value="MacOS or Linux" label="MacOS or Linux">
 
 ```
 export GOOGLE_APPLICATION_CREDENTIALS="KEY_PATH"
 ```
-
 
 Replace **KEY_PATH** with the path of the JSON file that contains your service account key.
 
@@ -309,8 +303,6 @@ Once the listening has started, just leave the window open and the service will 
 ### Step 10. Check the host IP address
 
 Because the recording files after XIAO need to be uploaded to Google Cloud Services via the host's port number, we need to know the IP address of your computer host.
-
-
 
 <Tabs>
 <TabItem value="Windows" label="Windows">
@@ -801,7 +793,6 @@ Before compiling and uploading the example program, there are a few things you w
 Once you have changed the program to suit your needs and uploaded it you can turn on the serial monitor and start preparing to record what you want to say. After the ten-second recording, Google Cloud will analyse your recording file and return the results of the recognition to you.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3sense-speech2chatgpt/15.png" style={{width:1000, height:'auto'}}/></div>
-
 
 ## Deploy ChatGPT on XIAO ESP32S3 Sense
 
@@ -1365,7 +1356,6 @@ Again, before this program can be used, you will need to make the following chan
 Once modified, upload the program and turn on the serial monitor. After recording, you will see the answer returned by ChatGPT for your question.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3sense-speech2chatgpt/16.png" style={{width:1000, height:'auto'}}/></div>
-
 
 ## Design of screen display content & Integration of programs
 
@@ -2233,22 +2223,16 @@ Once you have uploaded the program and clicked on the screen, the recording task
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3sense-speech2chatgpt/22.jpg" style={{width:600, height:'auto'}}/></div>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-

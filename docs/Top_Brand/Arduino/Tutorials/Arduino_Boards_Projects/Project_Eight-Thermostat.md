@@ -58,12 +58,12 @@ void loop()
   resistance=(float)(1023-q)*10000/q;
   temperature=1/(log(resistance/10000)/z+1/298.15)-273.15;
   d=int(temperature);
-  if (d&gt;=c)
+  if (d>=c)
   {
     digitalWrite(relaypin, HIGH);
     delay(500);
   }
-  if (d&lt;c)
+  if (d<c)
   {
     digitalWrite(relaypin, LOW);
     delay(500);

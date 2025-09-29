@@ -16,15 +16,16 @@ last_update:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/overview.jpg" alt="pir" width={800} height="auto" /></p>
 
 ## 1. SenseCAP M2 Multi-Platform Configuration
+
 ### 1.1 LoRa Network Configuration
+
 **Step 1.** Click **LoRa** and choose **LoRa Network**
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/lora_network.png"/></div>
 
-**Step 2.** Choose Local Network Server mode and fill your MQTT host information **(Include your host, username, password and port).** Then Click **Save&&Apply** 
+**Step 2.** Choose Local Network Server mode and fill your MQTT host information **(Include your host, username, password and port).** Then Click **Save&&Apply**
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/lns.png"/></div>
 
 At this point we have finished the server mode setup, and we wiil configure the ChirpStack later.
-
 
 ### 1.2 ChirpStack Configuration
 
@@ -74,20 +75,21 @@ At this point we have finished the server mode setup, and we wiil configure the 
 When adding a device to the M2 gateway for the **first time**, wait at least **2-5** minutes until the data reported by **up** can be seen in **Events**. Then the device addition initialization is complete. Then we can configure the Home Assistant plug-in.
 :::
 
-
-
-
 ## 2. Home Assistant Configuration
+
 ### 2.1 Install
 
 **1.HACS**
+
 - First installation
   - 1.HACS > Integrations >
-  - 2.Click on top right corner > Custom repositories ： 
+  - 2.Click on top right corner > Custom repositories ：
+
     ```
       Repository: https://github.com/Seeed-Solution/home-assistant-SenseCAP.git
       Category: Intergration
     ```
+
   <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/custom_repositories_2.png"/></div>  
 
   - 3.Click ADD
@@ -95,28 +97,32 @@ When adding a device to the M2 gateway for the **first time**, wait at least **2
 
   <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/custom_repositories_3.png"/></div>  
 
-
 - Update component
     > HACS > Integrations > [`Seeed Studio-SenseCAP`](https://my.home-assistant.io/redirect/hacs_repository/?owner=Seeed-Solution&repository=https%3A%2F%2Fgithub.com%2FSeeed-Solution%2Fhome-assistant-SenseCAP.git) > UPDATE / Redownload
 
 **2.Install via SSH & Web Terminal add-on**
 
 1. Open SSH Terminal and enter the following command:
+
 ```
 cd ~/config/custom_components && git clone https://github.com/Seeed-Solution/home-assistant-SenseCAP.git && cd home-assistant-SenseCAP/custom_components && mv sensecap ../../ && cd ../../ && rm -r home-assistant-SenseCAP
 ```
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/Install.jpg"/></div>
 
 2. Restart HA core
 3. Add Integration
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/add_intergration.png"/></div>
 
-
 ### 2.2 Configuration
+
 1. Enter your MQTT information and Click **SUBMIT**
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/config_1.png"/></div>
 
 2. Waiting for few minutes (**The Uplink time depends on your setting in M2 Chirpstack and SenseCAP Mate APP**), and Click **Notifications** in the left sidebar. Then we can see the SenseCAP Sensors have been automatically added to HA. Click **Check it out** and turn to the Integration
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/config_2.png"/></div>
 
 3. Click on one of the devices and we can see that all of the entities have been automatically created and added to the device. Click **ADD TO DASHBOARD** so as to add all the entites of entire device directly to the dashboard through the form of cards
@@ -168,11 +174,11 @@ The aforementioned constitutes the complete step-by-step tutorial for integratin
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

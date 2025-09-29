@@ -43,29 +43,29 @@ As you can see, there are two versions of chips used in the 2-Channel CAN-BUS(FD
 
 <div align="center">
 <figure>
-  <a href="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
-  <figcaption><b>Figure 1</b>. <i>Hardware overview(MCP2517)</i></figcaption></a>
+  <a href="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" /></a>
+  <figcaption><b>Figure 1</b>. <i>Hardware overview(MCP2517)</i></figcaption>
 </figure>
 </div>
 
 <div align="center">
 <figure>
-  <a href="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block2.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block2.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
-  <figcaption><b>Figure 2</b>. <i>Hardware overview(MCP2517)</i></figcaption></a>
+  <a href="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block2.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block2.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" /></a>
+  <figcaption><b>Figure 2</b>. <i>Hardware overview(MCP2517)</i></figcaption>
 </figure>
 </div>
 
 <div align="center">
 <figure>
-  <a href="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block-diagram.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block-diagram.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
-  <figcaption><b>Figure 3</b>. <i>Block Diagram(MCP2517)</i></figcaption></a>
+  <a href="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block-diagram.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/block-diagram.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" /></a>
+  <figcaption><b>Figure 3</b>. <i>Block Diagram(MCP2517)</i></figcaption>
 </figure>
 </div>
 
 <div align="center">
 <figure>
-  <a href="https://files.seeedstudio.com/wiki/CAN-BUS-FD/CANBUS_REVIEW.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/CANBUS_REVIEW.png" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
-  <figcaption><b>Figure 4</b>. <i>Hardware overview(MCP2518FD)</i></figcaption></a>
+  <a href="https://files.seeedstudio.com/wiki/CAN-BUS-FD/CANBUS_REVIEW.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/CANBUS_REVIEW.png" alt="Raspberry Pi CAN BUS shield" title="hardware overview" /></a>
+  <figcaption><b>Figure 4</b>. <i>Hardware overview(MCP2518FD)</i></figcaption>
 </figure>
 </div>
 
@@ -73,8 +73,8 @@ As you can see, there are two versions of chips used in the 2-Channel CAN-BUS(FD
 
 <div align="center">
 <figure>
-  <a href="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/setup.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/setup.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" />
-  <figcaption><b>Figure 4</b>. <i>Mounting Guide</i></figcaption></a>
+  <a href="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/setup.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/setup.jpg" alt="Raspberry Pi CAN BUS shield" title="hardware overview" /></a>
+  <figcaption><b>Figure 4</b>. <i>Mounting Guide</i></figcaption>
 </figure>
 </div>
 
@@ -231,7 +231,7 @@ cangen can0 -mv
 candump can0
 ```
 
-> You can test the CAN-BUS by connecting two channels by itself using jumpers: 0_L <===> 1_L, 0_H <===> 1_H.
+> You can test the CAN-BUS by connecting two channels by itself using jumpers: 0_L &lt;===&gt; 1_L, 0_H &lt;===&gt; 1_H.
 
 #### Communicate with Arduino CAN BUS Shield
 
@@ -577,9 +577,9 @@ can1: flags=128<NOARP>  mtu 16
 
 You may also connect the channels as follow to test:
 
-0_L <===> 1_L
+0_L &lt;===&gt; 1_L
 
-0_H <===> 1_H
+0_H &lt;===&gt; 1_H
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/CAN-BUS-FD/jetson-connect.png"/></div>
 

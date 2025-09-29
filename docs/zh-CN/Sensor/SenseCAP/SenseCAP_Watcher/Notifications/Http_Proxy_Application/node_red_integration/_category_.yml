@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'Node-RED 集成'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: node_red_integration_with_watcher
+link:
+  type: generated-index
+  slug: cn/node_red_integration_main_page
+  title: Watcher 到 Node-RED 集成
+  description: SenseCAP Watcher wiki 的"Node-RED 集成"部分专注于将 Watcher 与各种消息平台和服务集成，以启用警报和通知功能。这部分对于希望了解其 Watcher 设备状态或接收监控任务重要更新的用户特别有用。

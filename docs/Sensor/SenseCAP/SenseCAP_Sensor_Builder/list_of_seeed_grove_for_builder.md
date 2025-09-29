@@ -430,11 +430,11 @@ The program outputs the sensor value onto the serial monitor. One can also open 
 
 Here in my case, the reading from the multimeter is 220V RMS voltage, while the sensor shows 718.87V on the serial monitor, in order to get an accurate calibration value, we need to do simple math, using the following formula.
 
-![ \dfrac{Mains Voltage}{x} = \dfrac{Sensor voltage}{Initail Calibration}](https://s0.wp.com/latex.php?latex=+%5Cdfrac%7BMains+Voltage%7D%7Bx%7D+%3D+%5Cdfrac%7BSensor+voltage%7D%7BInitail+Calibration%7D&bg=ffffff&fg=000&s=0&201002)
+![Mains Voltage / x = Sensor voltage / Initial Calibration](https://s0.wp.com/latex.php?latex=+%5Cdfrac%7BMains+Voltage%7D%7Bx%7D+%3D+%5Cdfrac%7BSensor+voltage%7D%7BInitail+Calibration%7D&bg=ffffff&fg=000&s=0&201002)
 
 - Step 3: Find the value of x and replace it with Calibration_Value in the program and flash the program to the microcontroller.
 
-![ x = \dfrac{mains voltage \times initial calibration}{Sensor voltage}](https://s0.wp.com/latex.php?latex=+x+%3D+%5Cdfrac%7Bmains+voltage+%5Ctimes+initial+calibration%7D%7BSensor+voltage%7D&bg=ffffff&fg=000&s=0&c=20201002)
+![x = (mains voltage × initial calibration) / Sensor voltage](https://s0.wp.com/latex.php?latex=+x+%3D+%5Cdfrac%7Bmains+voltage+%5Ctimes+initial+calibration%7D%7BSensor+voltage%7D&bg=ffffff&fg=000&s=0&c=20201002)
 You can change the other parameters like Phase_Shift, Number of AC cycles and timeout according to your configuration or keep it default.
 
 ### Reference

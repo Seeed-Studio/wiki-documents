@@ -32,102 +32,72 @@ This kit is used for one way wireless communication at a frequency of 315MHz and
 
 <table  cellspacing="0" width="80%">
 <tr>
-<th scope="col"> Item
-</th>
-<th scope="col"> Min
-</th>
-<th scope="col"> Typical
-</th>
-<th scope="col"> Max
-</th>
-<th scope="col"> Unit
-</th></tr>
+<th scope="col"> Item</th>
+<th scope="col"> Min</th>
+<th scope="col"> Typical</th>
+<th scope="col"> Max</th>
+<th scope="col"> Unit</th>
+</tr>
 <tr>
-<th scope="row"> Working Voltage
-</th>
-<td> 3.0
-</td>
-<td> 5.0
-</td>
-<td> 12.0
-</td>
-<td> VDC
-</td></tr>
+<th scope="row"> Working Voltage</th>
+<td> 3.0</td>
+<td> 5.0</td>
+<td> 12.0</td>
+<td> VDC</td>
+</tr>
 <tr>
-<th scope="row"> Current
-</th>
-<td> 3
-</td>
-<td> /
-</td>
-<td> 10
-</td>
-<td> mA
-</td></tr>
+<th scope="row"> Current</th>
+<td> 3</td>
+<td> /</td>
+<td> 10</td>
+<td> mA</td>
+</tr>
 <tr>
-<th scope="row">Work Mode
-</th>
-<td colspan="3"> ASK
-</td>
-<td> /
-</td></tr>
+<th scope="row">Work Mode</th>
+<td colspan="3"> ASK</td>
+<td> /</td>
+</tr>
 <tr>
-<th scope="row"> Transmit Power(Max)
-</th>
-<td colspan="3"> 15
-</td>
-<td> mW
-</td></tr>
+<th scope="row"> Transmit Power(Max)</th>
+<td colspan="3"> 15</td>
+<td> mW</td>
+</tr>
 <tr>
-<th scope="row"> Working Distance
-</th>
-<td> 40
-</td>
-<td> /
-</td>
-<td> 100
-</td>
-<td> m
-</td></tr></table>
+<th scope="row"> Working Distance</th>
+<td> 40</td>
+<td> /</td>
+<td> 100</td>
+<td> m</td>
+</tr></table>
 
 ### Receiver Module
 
 <table  cellspacing="0" width="80%">
 <tr>
-<th scope="col"> Item
-</th>
-<th scope="col"> Typical
-</th>
-<th scope="col"> Unit
-</th></tr>
+<th scope="col"> Item</th>
+<th scope="col"> Typical</th>
+<th scope="col"> Unit</th>
+</tr>
 <tr>
-<th scope="row"> Working Voltage
-</th>
-<td> 5
-</td>
-<td> VDC
-</td></tr>
+<th scope="row"> Working Voltage</th>
+<td> 5</td>
+<td> VDC</td>
+</tr>
 <tr>
-<th scope="row"> Quiescent Current
-</th>
-<td> 5
-</td>
-<td> mA
-</td></tr>
+<th scope="row"> Quiescent Current</th>
+<td> 5</td>
+<td> mA</td>
+</tr>
 <tr>
-<th scope="row"> Receiver Sensitivity
-</th>
-<td> -103
-</td>
-<td> dBm
-</td></tr>
+<th scope="row"> Receiver Sensitivity</th>
+<td> -103</td>
+<td> dBm</td>
+</tr>
 <tr>
-<th scope="row"> Operating frequency
-</th>
-<td> 315
-</td>
-<td> MHz
-</td></tr></table>
+<th scope="row"> Operating frequency</th>
+<td> 315</td>
+<td> MHz</td>
+</tr></table>
 
 ## Application Ideas
 
@@ -226,19 +196,15 @@ This is just a simple transmitter and receiver instance as a reference.
 
 <table>
 <tr>
-<th> Revision
-</th>
-<th> Descriptions
-</th>
-<th> Release
-</th></tr>
+<th> Revision</th>
+<th> Descriptions</th>
+<th> Release</th>
+</tr>
 <tr>
-<td width="300px"> v0.9b
-</td>
-<td width="500px"> Initial public release
-</td>
-<td width="200px"> 03,Oct,2011
-</td></tr></table>
+<td width="300px"> v0.9b</td>
+<td width="500px"> Initial public release</td>
+<td width="200px"> 03,Oct,2011</td>
+</tr></table>
 
 ## Resources
 

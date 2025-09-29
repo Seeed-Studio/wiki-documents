@@ -9,19 +9,18 @@ last_update:
   date: 1/16/2023
   author: hushuxu
 ---
-Serial communications provide an easy and flexible way for your Arduino board to interact with your computer and other devices. Implementing serial communications involves hardware and software. The hardware provides the electrical signaling between Arduino and the device it is talking to. The software uses the hardware to send bytes or bits that the connected hardware understands. 
+Serial communications provide an easy and flexible way for your Arduino board to interact with your computer and other devices. Implementing serial communications involves hardware and software. The hardware provides the electrical signaling between Arduino and the device it is talking to. The software uses the hardware to send bytes or bits that the connected hardware understands.
 
-Most of arduino boards have at least one Serial, some have multiple serials(Arduino Mega has 4 Serials). 
+Most of arduino boards have at least one Serial, some have multiple serials(Arduino Mega has 4 Serials).
 
 It communicates on digital pins 0 (RX) and 1 (TX) as well as with the computer via USB. So if you connect UART device on pin 0 and pin D1, you have to remove them before downloading program through USB. Or else it will cause upload fails.
 
 Sometimes you need more serial ports than the number of hardware serial ports available. If this is the case, you can use an [Software Serial](https://www.arduino.cc/en/Reference/SoftwareSerial) that uses software to emulate serial hardware. Software serial requires a lot of help from the Arduino controller to send and receive data, so it’s not as fast or efficient as hardware serial.
 
-Some boards, such as the Seeeduino Stalker V3.1 and Seeeduino Ethernet, do not have USB support and require an [adapter](https://www.seeedstudio.com/USB-To-Uart-5V-3V3-p-1832.html) for connecting to your computer that converts TTL to USB. 
+Some boards, such as the Seeeduino Stalker V3.1 and Seeeduino Ethernet, do not have USB support and require an [adapter](https://www.seeedstudio.com/USB-To-Uart-5V-3V3-p-1832.html) for connecting to your computer that converts TTL to USB.
 
 !!!Warning
-    The TX/RX uses TTL logic levels(5v/3.3v). You can not connect it directly to RS232 serial port, which operates at +/-12v. You need the [TTL to RS232 converter](https://www.seeedstudio.com/Grove-RS232-P-2852.html) to change the voltage levels. 
-
+    The TX/RX uses TTL logic levels(5v/3.3v). You can not connect it directly to RS232 serial port, which operates at +/-12v. You need the [TTL to RS232 converter](https://www.seeedstudio.com/Grove-RS232-P-2852.html) to change the voltage levels.
 
 | BOARDs                                            | Micro Controller | USB Serial              | Hardware Serial                                              |                                                                  |                                                         |                         |
 |---------------------------------------------------|------------------|-------------------------|--------------------------------------------------------------|------------------------------------------------------------------|---------------------------------------------------------|-------------------------|
@@ -43,11 +42,11 @@ Some boards, such as the Seeeduino Stalker V3.1 and Seeeduino Ethernet, do not h
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -502,7 +502,7 @@ The EEPROM is an internal memory of the ESP32 microcontroller that allows to kee
 
 The ESP32 microcontroller has a Flash memory area that can be interfaced with like the EEPROM of an Arduino to keep data in memory even after the board is turned off.
 
-:::cautionAttention
+:::caution
 An important thing to note is that EEPROM has a limited size and life span. The memory cells can be read as many times as necessary but the number of write cycles is limited to **100,000**. It is advisable to pay close attention to the size of the stored data and how often you want to update it. The EEPROM memory can store 512 values from 0 to 255 or 128 IP addresses or RFID tags.
 :::
 
@@ -689,7 +689,7 @@ EEPROM.commit();
 
 The following is the completed procedure.
 
-:::cautionAttention
+:::caution
 Please note that you **should not** run this example for a long time. In this example, we will write the EEPROM every ten seconds, and running this example for a long time will **greatly reduce** the life of the EEPROM.
 :::
 
@@ -765,11 +765,11 @@ Upload the code to your board and this is what you should get on the Serial Moni
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

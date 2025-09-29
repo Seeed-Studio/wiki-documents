@@ -55,29 +55,29 @@ Get Started
 ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Get_started_with_mbed.png)
 
 1. Click [this link](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-BLE) to **login or signup to mbed**
-2. Import the mbed\_blinky program
+2. Import the mbed_blinky program
 3. Click the **Compile** icon of the top toolbar to compile the program, then download a compiled hex file.
 4. Drag-n-drop the downloaded hex file into the MBED disk
 
 You can open **main.cpp** to change the program. For example, use the following code to blink the LED every 0.1s
 
-```
-    #include "mbed.h"
+```cpp
+#include "mbed.h"
 
-    DigitalOut led(p30);           // on-board led is connected to p30
+DigitalOut led(p30);           // on-board led is connected to p30
 
-    int main()
-    {
-        while (true) {
-            led = !led;
-            wait(0.1);
-        }
+int main()
+{
+    while (true) {
+        led = !led;
+        wait(0.1);
     }
+}
 ```
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-If you are get a compiling error that 'device.h' is not found, try to update the mbed library to the latest revision in your program.
+<p>If you are get a compiling error that 'device.h' is not found, try to update the mbed library to the latest revision in your program.</p>
 </div>
 
 Applications
@@ -96,65 +96,51 @@ Applications
 
     - Make it run
 
-        1. Download [BLE\_Color\_Pixels\_Arch\_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
+        1. Download [BLE_Color_Pixels_Arch_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
         2. Copy the hex file to the MBED disk of your Arch BLE
         3. Download [the Color Pixels Android app](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
 
-       If you want to change the program, click [this link](https://mbed.org/compiler/#import:/teams/Seeed/code/BLE_Color_Pixels/;platform:Seeed-Arch-BLE) to import the Color Pixels program to mbed online IDE.
+If you want to change the program, click [this link](https://mbed.org/compiler/#import:/teams/Seeed/code/BLE_Color_Pixels/;platform:Seeed-Arch-BLE) to import the Color Pixels program to mbed online IDE.
 
-       If the BLE device is disconnected frequently, we can improve the stability by changing the BLE parameters - Advertising Duration (main.cpp), Min Interval and Max Interval (nRF51822/projectconfig.h)
+If the BLE device is disconnected frequently, we can improve the stability by changing the BLE parameters - Advertising Duration (main.cpp), Min Interval and Max Interval (nRF51822/projectconfig.h)
 
-
-        #define CFG_GAP_CONNECTION_MIN_INTERVAL_MS           20                     /**< Minimum acceptable connection interval */
-        #define CFG_GAP_CONNECTION_MAX_INTERVAL_MS          200                     /**< Maximum acceptable connection interval */
+```cpp
+#define CFG_GAP_CONNECTION_MIN_INTERVAL_MS           20                     /**< Minimum acceptable connection interval */
+#define CFG_GAP_CONNECTION_MAX_INTERVAL_MS          200                     /**< Maximum acceptable connection interval */
+```
 
 2. You can use the Arch Link as a web dashboard.
 
-    ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Arch_link_application1.png)
+    - Hardware
+        - Arch Link
+        - [Grove - Temperature&Humidity Sensor Pro](https://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-Pro-p-838.html)
 
-3. You can also use the Arch Link as a Mobile APP dashboard.
+    ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Web_dashboard_bb.png)
 
-    ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Arch_link_application2.png)
+    - Make it run
 
-Update or Restore Firmware
---------------------------
+        1. Download [Web_Dashboard_Arch_Link.hex](http://tangram.qiniudn.com/Web_Dashboard_Arch_Link.hex)
+        2. Copy the hex file to the MBED disk of your Arch Link
+        3. Connect the Grove - Temperature&Humidity Sensor Pro to I2C Grove connector
+        4. Connect the Arch Link to your PC through USB cable
+        5. Open a web browser and visit [http://mbed.org/media/uploads/yihui/web_dashboard.html](http://mbed.org/media/uploads/yihui/web_dashboard.html)
 
-The latest firmware version for the Arch Link is v0203 built at Jun 4 2015. To check your firmware version and built date, open the MBED.HTM or DETAILS.TXT of your MBED disk in a text editor.
-
-Changelog:
-
-- 2015-06-4 first version
-
-Firmware:
-
-The firmware v0203 2015-06-04 for Arch Link
-To flash a new firmware:
-
-- Hold the Arch Link's button and power it ON
-- A CRP DISABLD disk will show up
-  - On Windows, replace firmware.bin with the above firmware
-  - On Linux/Mac, use command: dd if={new\_firmware.bin} of={firmware.bin} conv=notrunc
+If you want to change the program, click [this link](https://mbed.org/compiler/#import:/teams/Seeed/code/Web_Dashboard/;platform:Seeed-Arch-Link) to import the Web Dashboard program to mbed online IDE.
 
 ## Schematic Online Viewer
 
-<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_Eagle.rar" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_Eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
 Resources
 ---------
 
-- [Arch Link mbed developer platform page](https://developer.mbed.org/platforms/Seeed-Arch-Link/)
-- [Schematic in PDF format](https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_sch.pdf)
-- [Schematic and board files in EAGLE format](https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_Eagle.rar)
-- [LPC11U35 Firmware](https://files.seeedstudio.com/wiki/Arch_Link/res/Lpc11u35_nrf51822_if_mbed.bin.zip)
-- [Seeed BLE color pixels App for android](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
-- [Sources of BLE color pixels App](https://github.com/Seeed-Studio/ble_color_pixels)
-
-See Also
---------
-
-- [Arch BLE](/Arch_BLE)
-- [W5500 Ethernet Shield](/W5500_Ethernet_Shield_v1.0)
+-   [Arch Link mbed developer platform page](https://developer.mbed.org/platforms/Seeed-Arch-Link/)
+-   [Schematic in PDF format](https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_pdf.pdf)
+-   [Schematic and board files in EAGLE format](https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_Eagle.zip)
+-   [LPC11U35 Firmware](https://files.seeedstudio.com/wiki/Arch_Link/res/Lpc11u35_nrf51822_if_mbed.bin.zip)
+-   [Seeed BLE Color Pixels App for Android](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
+-   [Sources of BLE Color Pixels App](https://github.com/Seeed-Studio/ble_color_pixels)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Arch_Link -->
 

@@ -51,7 +51,7 @@ void loop()
     PORTB |= 0x04;
     delay(1000);
     //turn off the vibration motor
-    PORTF &amp;= ~(0x01);
+    PORTF &= ~(0x01);
     PORTB |= 0x04;
     delay(1000);
     //turn on the vibration motor
@@ -60,15 +60,15 @@ void loop()
     delay(1000);
     //turn off the vibration motor
     PORTF |= 0x01;
-    PORTB &amp;= ~(0x04);
+    PORTB &= ~(0x04);
     delay(1000);
     //turn on the vibration motor
     PORTF |= 0x01;
     PORTB |= 0x04;
     delay(1000);
     //turn off the vibration motor
-    PORTF &amp;= ~(0x01);
-    PORTB &amp;= ~(0x04);
+    PORTF &= ~(0x01);
+    PORTB &= ~(0x04);
     delay(1000);
 }</pre>
 ```

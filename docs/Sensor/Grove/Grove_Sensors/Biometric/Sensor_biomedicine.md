@@ -20,7 +20,9 @@ For all the Biomedical sensors in our bazaar, please click [Seeed Studio Bazaar]
 
 The biomedical sensor is a part of the sensor in the field of calibrated biomedicine, and is a conversion device that converts the physiological information of the human body into electrical information having a certain functional relationship therewith. The information it picks up is the physiological information of the human body, and its output is often expressed in electrical signals.
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/Sensor_biomedical/IMG/Biomedicine.png" /><figcaption><b>Figure 1</b>. <i> Applications of biomedical sensors </i></figcaption>
+<div align="center">
+  <img src="https://files.seeedstudio.com/wiki/Sensor_biomedical/IMG/Biomedicine.png" />
+  <figcaption><b>Figure 1</b>. <i> Applications of biomedical sensors </i></figcaption>
 </div>
 
 ## Achievement

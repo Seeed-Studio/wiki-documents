@@ -246,7 +246,7 @@ void loop()
 
 - **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the `ctrl`+`shift`+`m` key at the same time. Set the baud rate to **115200**.
 
-:::tipsuccess
+:::tip
 If every thing goes well, you will get the result. For instance, the default switch is off-High, when you turn the **Switch6** to **ON**, the output will be **POS 6: RAW - LOW ON**.
 :::
 

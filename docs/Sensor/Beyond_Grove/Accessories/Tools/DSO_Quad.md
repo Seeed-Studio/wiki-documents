@@ -124,93 +124,94 @@ See also information on application development for the DSO Quad
 ---
 <table >
 <tr>
-<td> Analog channel *2                </td>
-<td> [CH_A] [CH_B]
-</td></tr>
+<td> Analog channel *2 </td>
+<td> [CH_A] [CH_B] </td>
+</tr>
 <tr>
-<td> Digital channel* 2               </td>
-<td> [CH_C] [CH_D]
-</td></tr>
+<td> Digital channel* 2 </td>
+<td> [CH_C] [CH_D] </td>
+</tr>
 <tr>
-<td> Vertical Scale                    </td>
-<td> 20mV-10V/div (1-2-5 step) on x1 probe / 200mV -100V/div (1-2-5 step) on x10 probe
-</td></tr>
+<td> Vertical Scale </td>
+<td> 20mV-10V/div (1-2-5 step) on x1 probe / 200mV -100V/div (1-2-5 step) on x10 probe </td>
+</tr>
 <tr>
-<td> Vertical resolution               </td>
-<td> 8 bit
-</td></tr>
+<td> Vertical resolution </td>
+<td> 8 bit </td>
+</tr>
 <tr>
-<td> Input coupling                    </td>
-<td> AC/DC
-</td></tr>
+<td> Input coupling </td>
+<td> AC/DC </td>
+</tr>
 <tr>
-<td> Max input voltage                 </td>
-<td> 80Vpp (x1 probe) / 400Vpp (x10 probe)
-</td></tr>
+<td> Max input voltage </td>
+<td> 80Vpp (x1 probe) / 400Vpp (x10 probe) </td>
+</tr>
 <tr>
-<td> Storage                           </td>
-<td> 4K per channel / 8K on single channel
-</td></tr>
+<td> Storage </td>
+<td> 4K per channel / 8K on single channel </td>
+</tr>
 <tr>
-<td> Software trigger type             </td>
-<td> edge, pulse, level (to be added)
-</td></tr>
+<td> Software trigger type </td>
+<td> edge, pulse, level (to be added) </td>
+</tr>
 <tr>
-<td> Hardware trigger type             </td>
-<td> edge
-</td></tr>
+<td> Hardware trigger type </td>
+<td> edge </td>
+</tr>
 <tr>
-<td> Trigger source                    </td>
-<td> CH1/CH2/EXT
-</td></tr>
+<td> Trigger source </td>
+<td> CH1/CH2/EXT </td>
+</tr>
 <tr>
-<td> Trigger mode                      </td>
-<td> Auto, Normal, Single, SCAN, None
-</td></tr>
+<td> Trigger mode </td>
+<td> Auto, Normal, Single, SCAN, None </td>
+</tr>
 <tr>
-<td> Test Signal generator             </td>
-<td> 10Hz to 8MHz 2.8Vpp Square Wave, duty cycle 10~90% adjustable / 10Hz to 20kHz 2.8Vpp Sine, Square, Sawtooth, Triangle wave
-</td></tr>
+<td> Test Signal generator </td>
+<td> 10Hz to 8MHz 2.8Vpp Square Wave, duty cycle 10~90% adjustable / 10Hz to 20kHz 2.8Vpp Sine, Square, Sawtooth, Triangle wave </td>
+</tr>
 <tr>
-<td> Storage                           </td>
-<td> internal 2MB USB disk, BMP, DAT file
-</td></tr>
+<td> Storage </td>
+<td> internal 2MB USB disk, BMP, DAT file </td>
+</tr>
 <tr>
-<td> Auto measure                      </td>
-<td> Vmax, Vmin, Vpp, Vavr, Vrms, Freq, Period, Pulse, Duty
-</td></tr>
+<td> Auto measure </td>
+<td> Vmax, Vmin, Vpp, Vavr, Vrms, Freq, Period, Pulse, Duty </td>
+</tr>
 <tr>
-<td> Cursor measurement                </td>
-<td> Level, Voltage
-</td></tr>
+<td> Cursor measurement </td>
+<td> Level, Voltage </td>
+</tr>
 <tr>
-<td> Display mode                      </td>
-<td> CH1, CH2, EXT, CH1+CH2, CH1-CH2
-</td></tr>
+<td> Display mode </td>
+<td> CH1, CH2, EXT, CH1+CH2, CH1-CH2 </td>
+</tr>
 <tr>
-<td> Sampling mode                     </td>
-<td> real time
-</td></tr>
+<td> Sampling mode </td>
+<td> real time </td>
+</tr>
 <tr>
-<td> Sampling rate                     </td>
-<td> 30S/s - 72MS/s
-</td></tr>
+<td> Sampling rate </td>
+<td> 30S/s - 72MS/s </td>
+</tr>
 <tr>
-<td> Power                             </td>
-<td> LiPo battery
-</td></tr>
+<td> Power </td>
+<td> LiPo battery </td>
+</tr>
 <tr>
-<td> Dimension                         </td>
-<td> 98 *60* 14.5 (mm)
-</td></tr>
+<td> Dimension </td>
+<td> 98 *60* 14.5 (mm) </td>
+</tr>
 <tr>
-<td> Weight                            </td>
-<td> 80g (without battery)
-</td></tr>
+<td> Weight </td>
+<td> 80g (without battery) </td>
+</tr>
 <tr>
-<td> Accesories within Pack            </td>
-<td> 2 mcx osilloscope probe, 2 mcx digital probe
-</td></tr></table>
+<td> Accesories within Pack </td>
+<td> 2 mcx osilloscope probe, 2 mcx digital probe </td>
+</tr>
+</table>
 
 ## Components
 
@@ -220,36 +221,36 @@ Please add links to core components data-sheets like
 <table >
 <tr>
 <td> CPU                 </td>
-<td> 72 Mhz - ARM 32-bit Cortex™-M3 CPU - STM32F103VC [[2]](http://www.st.com/internet/mcu/product/164492.jsp)
-</td></tr>
+<td> 72 Mhz - ARM 32-bit Cortex™-M3 CPU - STM32F103VC [[2]](http://www.st.com/internet/mcu/product/164492.jsp)</td>
+</tr>
 <tr>
 <td> FPGA                </td>
-<td>ICE65F_VQ100 [[3]](http://www.siliconbluetech.com/media/downloads/iCE65L04DiCEDatasheet.pdf)
-</td></tr>
+<td>ICE65F_VQ100 [[3]](http://www.siliconbluetech.com/media/downloads/iCE65L04DiCEDatasheet.pdf)</td>
+</tr>
 <tr>
 <td> TFT                 </td>
-<td>
-</td></tr>
+<td></td>
+</tr>
 <tr>
 <td> ADC                 </td>
-<td> AD9288-40 [[4]](http://www.analog.com/static/imported-files/data_sheets/AD9288.pdf)
-</td></tr>
+<td> AD9288-40 [[4]](http://www.analog.com/static/imported-files/data_sheets/AD9288.pdf)</td>
+</tr>
 <tr>
 <td> OP-Amps             </td>
-<td> OPA2354 [[5]](http://www.datasheetcatalog.org/datasheet/texasinstruments/opa354.pdf)
-</td></tr>
+<td> OPA2354 [[5]](http://www.datasheetcatalog.org/datasheet/texasinstruments/opa354.pdf)</td>
+</tr>
 <tr>
 <td> MOSFET-Switches     </td>
-<td>
-</td></tr>
+<td></td>
+</tr>
 <tr>
 <td> USB-Storage         </td>
-<td>
-</td></tr>
+<td></td>
+</tr>
 <tr>
 <td> (add more here)     </td>
-<td>
-</td></tr></table>
+<td></td>
+</tr></table>
 
 ## Caution
 
@@ -287,33 +288,33 @@ More details and Linux instructions here: [DSO_Quad:Upgrading_Firmware](/DSO_Qua
 <tr>
 <th> File Type </th>
 <th> Filename Format </th>
-<th> Description
-</th></tr>
+<th> Description</th>
+</tr>
 <tr>
 <td> FPGA File </td>
 <td> xxxxFPGA.BIN </td>
-<td> configuration data for the FPGA
-</td></tr>
+<td> configuration data for the FPGA</td>
+</tr>
 <tr>
 <td> Logo File </td>
 <td> logo_xxx.BIN </td>
-<td> Create any 16 color 64*256 .BMP file (filesize = 46.9KB), and change the extension to .INF. This is the image displayed on the splash screen.
-</td></tr>
+<td> Create any 16 color 64*256 .BMP file (filesize = 46.9KB), and change the extension to .INF. This is the image displayed on the splash screen.</td>
+</tr>
 <tr>
 <td> System File </td>
 <td> SYS_xxxx.hex </td>
-<td> ??? (description needed)
-</td></tr>
+<td> ??? (description needed)</td>
+</tr>
 <tr>
 <td> Application File </td>
 <td> APP_xxxx.hex </td>
-<td> ??? (description needed)
-</td></tr>
+<td> ??? (description needed)</td>
+</tr>
 <tr>
 <td> Address File </td>
 <td> xxxx.ADR </td>
-<td> These files tell the device where to put the next .BIN file you upload. There is one for the FPGA file, and one for the LOGO file. The files are named so that you know which goes with which.
-</td></tr></table>
+<td> These files tell the device where to put the next .BIN file you upload. There is one for the FPGA file, and one for the LOGO file. The files are named so that you know which goes with which.</td>
+</tr></table>
 
 **note:** as newer versions become available, these filenames may appear slightly different. The x's represent values that could change over time.
 
@@ -323,86 +324,59 @@ More details and Linux instructions here: [DSO_Quad:Upgrading_Firmware](/DSO_Qua
 
 <table  cellpadding="1" cellspacing="1">
 <tr>
-<td> Begin
-</td>
-<td> End
-</td>
-<td> Size
-</td>
-<td> note
-</td></tr>
+<td> Begin</td>
+<td> End</td>
+<td> Size</td>
+<td> note</td>
+</tr>
 <tr>
-<td> 0x00000
-</td>
-<td> 0x03fff
-</td>
-<td> 16384
-</td>
-<td> DFU
-</td></tr>
+<td> 0x00000</td>
+<td> 0x03fff</td>
+<td> 16384</td>
+<td> DFU</td>
+</tr>
 <tr>
-<td> 0x04000
-</td>
-<td> 0x0bfff
-</td>
-<td> 32768
-</td>
-<td> SYS
-</td></tr>
+<td> 0x04000</td>
+<td> 0x0bfff</td>
+<td> 32768</td>
+<td> SYS</td>
+</tr>
 <tr>
-<td> 0x0c000
-</td>
-<td> 0x13fff
-</td>
-<td> 32768
-</td>
-<td> APP1 (default)
-</td></tr>
+<td> 0x0c000</td>
+<td> 0x13fff</td>
+<td> 32768</td>
+<td> APP1 (default)</td>
+</tr>
 <tr>
-<td> 0x14000
-</td>
-<td> 0x1bfff
-</td>
-<td> 32768
-</td>
-<td> APP2
-</td></tr>
+<td> 0x14000</td>
+<td> 0x1bfff</td>
+<td> 32768</td>
+<td> APP2</td>
+</tr>
 <tr>
-<td> 0x1c000
-</td>
-<td> 0x23fff
-</td>
-<td> 32768
-</td>
-<td> APP3
-</td></tr>
+<td> 0x1c000</td>
+<td> 0x23fff</td>
+<td> 32768</td>
+<td> APP3</td>
+</tr>
 <tr>
-<td> 0x24000
-</td>
-<td> 0x2bfff
-</td>
-<td> 32768
-</td>
-<td> APP4
-</td></tr>
+<td> 0x24000</td>
+<td> 0x2bfff</td>
+<td> 32768</td>
+<td> APP4</td>
+</tr>
 <tr>
-<td> 0x2c000
-</td>
-<td> 0x3d7ff
-</td>
-<td> 71680
-</td>
-<td> FPGA bitstream (Datasheet says maximum size is 533KBit, so this is a bit large)
-</td></tr>
+<td> 0x2c000</td>
+<td> 0x3d7ff</td>
+<td> 71680</td>
+<td> FPGA bitstream (Datasheet says maximum size is 533KBit, so this is a bit large)</td>
+</tr>
 <tr>
-<td> 0x3d800
-</td>
-<td> 0x3ffff
-</td>
-<td> 10240
-</td>
-<td> Logo (bmp, 256x64, 4 bit)
-</td></tr></table>
+<td> 0x3d800</td>
+<td> 0x3ffff</td>
+<td> 10240</td>
+<td> Logo (bmp, 256x64, 4 bit)</td>
+</tr></table>
 
  Note: The flash base address is 0x08000000, but is mirrored by the chip at 0x00000000 when BOOT0 is low.
 

@@ -19,7 +19,9 @@ With the SenseCAP [S2110 controller](https://www.seeedstudio.com/SenseCAP-XIAO-L
 The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN® network, built-in 19 Ah battery, and powerful support from APP make the [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) the best choice for industrial applications. The series includes sensors for soil moisture, air temperature and humidity, light intensity, CO2, EC, and an 8-in-1 weather station. Try the latest SenseCAP S210x for your next successful industrial project.
 
 <table style={{marginLeft: 'auto', marginRight: 'auto'}}>
-  <tbody><tr><td colSpan={4} bgcolor="#0e3c49" align="center"><font color="white" size={4}><strong>SenseCAP Industrial Sensor</strong></font></td>
+  <tbody>
+    <tr>
+      <td colSpan={4} bgcolor="#0e3c49" align="center"><font color="white" size={4}><strong>SenseCAP Industrial Sensor</strong></font></td>
     </tr>
     <tr>
       <td bgcolor="#0e3c49"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank" /><div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank"><img width="100%" src="https://files.seeedstudio.com/wiki/K1100_overview/2/S2100.png" /></a></div>
@@ -100,7 +102,7 @@ YOLO is an abbreviation for the term ‘You Only Look Once’. It is an algorith
 This wiki will be divided into three main sections
 
 1. [Train your own AI model with a public dataset](#jump1)
-2. [Train your own AI model with your own dataset](#jump2)
+2. Train your own AI model with your own dataset
 3. [Deploy the trained AI model into Grove - Vision AI Module](#jump3)
 
 The first section will be the fastest way to build your own AI model with the least number of steps. The second section will take some time and effort to build your own AI model, but it will be definitely worth the knowledge. The third section about deploying the AI model can be done either after first or second section.
@@ -108,7 +110,7 @@ The first section will be the fastest way to build your own AI model with the le
 So there are two ways to follow this wiki:
 
 1. Follow [section 1](#jump1) and then [section 3](#jump3) - fast to follow
-2. Follow [section 2](#jump2) and then [section 3](#jump3) - slow to follow
+2. Follow section 2 and then [section 3](#jump3) - slow to follow
 
 However, we encourage to follow the first way at first and then move onto the second way.
 

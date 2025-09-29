@@ -101,8 +101,10 @@ For more detail about specifications, please check the W600 [Specification V1.0.
 
 <div align="center">
   <figure>
-    <a href="https://files.seeedstudio.com/wiki/W600_Module/img/block.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/W600_Module/img/block.png" alt="block diagram of W600 Module" title="block diagram of W600 Module" />
-      <figcaption><i>click to see the clearer original file</i></figcaption></a>
+    <a href="https://files.seeedstudio.com/wiki/W600_Module/img/block.png" target="_blank">
+      <img src="https://files.seeedstudio.com/wiki/W600_Module/img/block.png" alt="block diagram of W600 Module" title="block diagram of W600 Module"></img>
+    </a>
+    <figcaption><i>click to see the clearer original file</i></figcaption>
   </figure>
 </div>
 
@@ -110,8 +112,10 @@ For more detail about specifications, please check the W600 [Specification V1.0.
 
 <div align="center">
   <figure>
-    <a href="https://files.seeedstudio.com/wiki/W600_Module/img/pinout_w600_module.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/W600_Module/img/pinout_w600_module.jpg" alt="pinout of W600 Module" title="pinout of W600 Module" />
-      <figcaption><i>click to see the clearer original file</i></figcaption></a>
+    <a href="https://files.seeedstudio.com/wiki/W600_Module/img/pinout_w600_module.jpg" target="_blank">
+      <img src="https://files.seeedstudio.com/wiki/W600_Module/img/pinout_w600_module.jpg" alt="pinout of W600 Module" title="pinout of W600 Module"></img>
+    </a>
+    <figcaption><i>click to see the clearer original file</i></figcaption>
   </figure>
 </div>
 

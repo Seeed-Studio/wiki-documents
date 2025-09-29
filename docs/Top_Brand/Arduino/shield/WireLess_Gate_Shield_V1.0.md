@@ -207,14 +207,14 @@ And replace them with:
 Additionally, the file RFM69.cpp need to find the line:
 
 ```cpp
-void RFM69::isr0() { selfPointer-&gt;interruptHandler(); }
+void RFM69::isr0() { selfPointer->interruptHandler(); }
 ```
 
 And replace them with:
 
 ```cpp
-//void RFM69::isr0() { selfPointer-&gt;interruptHandler(); }
-void RFM69::isr1() { selfPointer-&gt;interruptHandler(); }
+//void RFM69::isr0() { selfPointer->interruptHandler(); }
+void RFM69::isr1() { selfPointer->interruptHandler(); }
 ```
 
 Module Initialization RFM69HW as follows:
@@ -654,28 +654,25 @@ void resetRFM69(){
 
 ## Product versions
 
-<table cellPadding={5} cellSpacing={0}>
-  <tbody><tr>
-      <td width={150}> <strong>Revision</strong>
-      </td>
-      <td width={450}> <strong>Description</strong>
-      </td>
-      <td width={80}> <strong>Release</strong>
-      </td></tr>
+<table cellPadding="5" cellSpacing="0">
+  <tbody>
+    <tr>
+      <td width="150"> <strong>Revision</strong> </td>
+      <td width="450"> <strong>Description</strong> </td>
+      <td width="80"> <strong>Release</strong> </td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> 0.9
-      </td>
-      <td> Prototype
-      </td>
-      <td> 05.05.2014
-      </td></tr>
+      <td> 0.9 </td>
+      <td> Prototype </td>
+      <td> 05.05.2014 </td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> 1.0
-      </td>
-      <td> Public version
-      </td>
-      <td> 05.07.2014
-      </td></tr></tbody></table>
+      <td> 1.0 </td>
+      <td> Public version </td>
+      <td> 05.07.2014 </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Applications
 

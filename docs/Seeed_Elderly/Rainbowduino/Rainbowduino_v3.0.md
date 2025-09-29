@@ -49,7 +49,7 @@ Usage
 ### Hardware Setup
 
 :::note
-Always set the slide switch to <span style={{fontWeight: 'bold'}}>USB</span> position for programming the Rainbowduino v3.0. Setting the slide switch to <span style={{fontWeight: 'bold'}}>HOST</span> position makes the onboard FT232 act as UartSBee (This feature is not required for Rainbowduino v3.0 normal operation)
+Always set the slide switch to <b>USB</b> position for programming the Rainbowduino v3.0. Setting the slide switch to <b>HOST</b> position makes the onboard FT232 act as UartSBee (This feature is not required for Rainbowduino v3.0 normal operation)
 :::
 
 Connecting to LED matrix is very straight forward.
@@ -436,6 +436,7 @@ Shapes
 
 **drawChar Demo**
 
+```
     /*
      Rainbowduino v3.0 Library examples:
 
@@ -463,6 +464,7 @@ Shapes
       }
       
     }
+```
 
 Output:
 
@@ -470,8 +472,7 @@ Output:
 
 ## Schematic Online Viewer
 
-<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Rainbowduino_v3.0/res/Rainbowduino_v3.0b_EagleCADFiles.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
-</div>
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Rainbowduino_v3.0/res/Rainbowduino_v3.0b_EagleCADFiles.zip"></div>
 
 Resources
 ---------
@@ -495,11 +496,11 @@ Resources
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

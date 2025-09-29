@@ -107,115 +107,76 @@ The DSO Quad is charged by connecting the USB cable. The LTC4054 battery control
 
 <table>
 <tr>
-<th> Power Switch
-</th>
-<th> USB Cable
-</th>
-<th> Battery
-</th>
-<th> What you see
-</th>
-<th> DSO Quad Power Mode
-</th></tr>
+<th> Power Switch</th>
+<th> USB Cable</th>
+<th> Battery</th>
+<th> What you see</th>
+<th> DSO Quad Power Mode</th>
+</tr>
 <tr>
-<td> OFF
-</td>
-<td> Disconnected
-</td>
-<td> Idle
-</td>
-<td> LEDs off, display off
-</td>
-<td> Powered off
-</td></tr>
+<td> OFF</td>
+<td> Disconnected</td>
+<td> Idle</td>
+<td> LEDs off, display off</td>
+<td> Powered off</td>
+</tr>
 <tr>
-<td> ON
-</td>
-<td> Disconnected
-</td>
-<td> Draining
-</td>
-<td> LEDs off, display on
-</td>
-<td> Normal (power on)
-</td></tr>
+<td> ON</td>
+<td> Disconnected</td>
+<td> Draining</td>
+<td> LEDs off, display on</td>
+<td> Normal (power on)</td>
+</tr>
 <tr>
-<td> ON
-</td>
-<td> Disconnected
-</td>
-<td> Draining
-</td>
-<td> Green LED on, display off
-</td>
-<td> Power save mode: after 600 seconds of no button presses, the screen is blanked
-</td></tr>
+<td> ON</td>
+<td> Disconnected</td>
+<td> Draining</td>
+<td> Green LED on, display off</td>
+<td> Power save mode: after 600 seconds of no button presses, the screen is blanked</td>
+</tr>
 <tr>
-<td> ON
-</td>
-<td> Disconnected
-</td>
-<td> Empty
-</td>
-<td> LEDs off, display off
-</td>
-<td> No battery, power off. Please connect the USB cable: battery needs to be charged
-</td></tr>
+<td> ON</td>
+<td> Disconnected</td>
+<td> Empty</td>
+<td> LEDs off, display off</td>
+<td> No battery, power off. Please connect the USB cable: battery needs to be charged</td>
+</tr>
 <tr>
-<td> ON
-</td>
-<td> Connected to 5V/500mA USB
-</td>
-<td> Idle
-</td>
-<td> Red LED on, display on
-</td>
-<td> Powered on, [battery will not charge while on](https://forum.seeedstudio.com/viewtopic.php?p=6922#p6922)
-</td></tr>
+<td> ON</td>
+<td> Connected to 5V/500mA USB</td>
+<td> Idle</td>
+<td> Red LED on, display on</td>
+<td> Powered on, [battery will not charge while on](https://forum.seeedstudio.com/viewtopic.php?p=6922#p6922)</td>
+</tr>
 <tr>
-<td> OFF
-</td>
-<td> Connected to 5V/500mA USB
-</td>
-<td> Charging
-</td>
-<td> Red LED on, display off
-</td>
-<td> Powered off, battery charging
-</td></tr>
+<td> OFF</td>
+<td> Connected to 5V/500mA USB</td>
+<td> Charging</td>
+<td> Red LED on, display off</td>
+<td> Powered off, battery charging</td>
+</tr>
 <tr>
-<td> OFF
-</td>
-<td> USB port is not supplying power*
-</td>
-<td> Idle
-</td>
-<td> LEDs off, display off
-</td>
-<td> Powered off, unable to charge
-</td></tr>
+<td> OFF</td>
+<td> USB port is not supplying power*</td>
+<td> Idle</td>
+<td> LEDs off, display off</td>
+<td> Powered off, unable to charge</td>
+</tr>
 <tr>
-<td> OFF
-</td>
-<td> Connected to 5V/500mA USB
-</td>
-<td> Full
-</td>
-<td> LEDs off, display off
-</td>
-<td> Powered off, battery is full
-</td></tr>
+<td> OFF</td>
+<td> Connected to 5V/500mA USB</td>
+<td> Full</td>
+<td> LEDs off, display off</td>
+<td> Powered off, battery is full</td>
+</tr>
 <tr>
-<td> OFF
-</td>
-<td> Connected to 5V/500mA USB
-</td>
-<td> No battery installed
-</td>
-<td> Red LED on dimly, display off
-</td>
-<td> Powered off, no battery installed
-</td></tr></table>
+<td> OFF</td>
+<td> Connected to 5V/500mA USB</td>
+<td> No battery installed</td>
+<td> Red LED on dimly, display off</td>
+<td> Powered off, no battery installed</td>
+</tr>
+</table>
 
 *** USB port is not supplying power:** if your DSO quad is not charging, it may be the USB port. Here are some troubleshooting tips:
 
@@ -234,73 +195,34 @@ Here is the latest firmware under special contract with [FPGA(DFU，SYS，APP) v
 
 <table>
 <tr>
-<th> Boot Screen
-</th>
-<th> Hardware Ver
-</th>
-<th> Factory FW
-</th>
-<th> Latest FW Update
-</th>
-<th> Notes
-</th></tr>
+<th> Boot Screen</th>
+<th> Hardware Ver</th>
+<th> Factory FW</th>
+<th> Latest FW Update</th>
+<th> Notes</th>
+</tr>
 <tr>
-<td>
-</td>
-<td> 2.7
-</td>
-<td> APP 2.53
-
-SYS 1.52
-
-FPGA 2.61
-
-</td>
-<td> APP P1.00
-
-SYS B1.52
-
-FPGA 2.61
-
-</td>
-<td> Seeed Studio ships this version.
-
-This firmware has a much better GUI!
-
-(Also, the factory firmware on 2.7 freezed a lot, so this firmware is highly recommended)
-
-![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_hw_ver_26.jpg)
-</td>
-<td> 2.6
-</td>
-<td> APP 2.33
-
-SYS 1.33
-FPGA 2.5
-
-</td>
-<td> APP 2.53
-
-SYS 1.52
-FPGA 2.61
-
-Seeed Studio shipped this version
-
- ![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_hw_ver_22.jpg)
-
- 2.2
- APP
-
-SYS 1.02
-
-</td>
-<td> [APP 2.34?](https://forum.seeedstudio.com/viewtopic.php?p=6760#p6760)
-
-[SYS 1.32?](https://forum.seeedstudio.com/viewtopic.php?p=6760#p6760)
-
-</td>
-<td> Ver 2.2 devices were only given to Beta testers, with a [free upgrade to 2.6](http://ourdev.cn/bbs/bbs_content_all.jsp?bbs_sn=4138839). This version will not receive any further software updates.
-</td></tr></table>
+<td></td>
+<td>2.7</td>
+<td>APP 2.53<br/>SYS 1.52<br/>FPGA 2.</td>
+<td>APP P1.00<br/>SYS B1.52<br/>FPGA 2.61</td>
+<td>Seeed Studio ships this version.<br/>This firmware has a much better GUI!<br/>(Also, the factory firmware on 2.7 freezed a lot, so this firmware is highly recommended)<br/><img src="https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_hw_ver_26.jpg" /></td>
+</tr>
+<tr>
+<td></td>
+<td>2.6</td>
+<td>APP 2.33<br/>SYS 1.33<br/>FPGA 2.5</td>
+<td>APP 2.53<br/>SYS 1.52<br/>FPGA 2.61<br/>Seeed Studio shipped this version<br/><img src="https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_hw_ver_22.jpg" /><br/>2.2 APP<br/>SYS 1.02</td>
+<td>[APP 2.34?](https://forum.seeedstudio.com/viewtopic.php?p=6760#p6760)<br/>[SYS 1.32?](https://forum.seeedstudio.com/viewtopic.php?p=6760#p6760)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ver 2.2 devices were only given to Beta testers, with a <a href="http://ourdev.cn/bbs/bbs_content_all.jsp?bbs_sn=4138839">free upgrade to 2.6</a>. This version will not receive any further software updates.</td>
+</tr>
+</table>
 
 You might find more info on [https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1929](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1929).
 
@@ -354,100 +276,82 @@ The main screen has these blocks:
 
 <table>
 <tr>
-<th> Title
-</th>
-<th> Description of block
-</th></tr>
+<th> Title</th>
+<th> Description of block</th>
+</tr>
 <tr>
-<td> RUN/HOLD
-</td>
-<td> Pausing the scope, and start running again
-</td></tr>
+<td> RUN/HOLD</td>
+<td> Pausing the scope, and start running again</td>
+</tr>
 <tr>
-<td> CH(A)
-</td>
-<td> cyan colored plot and measurements
-</td></tr>
+<td> CH(A)</td>
+<td> cyan colored plot and measurements</td>
+</tr>
 <tr>
-<td> CH(B)
-</td>
-<td> yellow colored plot and measurements
-</td></tr>
+<td> CH(B)</td>
+<td> yellow colored plot and measurements</td>
+</tr>
 <tr>
-<td> CH(C)
-</td>
-<td> purple colored plot and measurements
-</td></tr>
+<td> CH(C)</td>
+<td> purple colored plot and measurements</td>
+</tr>
 <tr>
-<td> CH(D)
-</td>
-<td> green colored plot and measurements
-</td></tr>
+<td> CH(D)</td>
+<td> green colored plot and measurements</td>
+</tr>
 <tr>
-<td> SCAN
-</td>
-<td> brown colored SCAN/AUTO/NORM (NORMAL)/SINGL (SINGLE)/NONE trigger mode
-</td></tr>
+<td> SCAN</td>
+<td> brown colored SCAN/AUTO/NORM (NORMAL)/SINGL (SINGLE)/NONE trigger mode</td>
+</tr>
 <tr>
-<td> Signal Generator
-</td>
-<td> blue colored digital and analog "wave out"
-</td></tr>
+<td> Signal Generator</td>
+<td> blue colored digital and analog "wave out"</td>
+</tr>
 <tr>
-<td> Trigger
-</td>
-<td> All trigger levels (for CH(A) through CH(D)) and the triggering mode
-</td></tr>
+<td> Trigger</td>
+<td> All trigger levels (for CH(A) through CH(D)) and the triggering mode</td>
+</tr>
 <tr>
-<td> YPOS
-</td>
-<td> YPOS
-</td></tr>
+<td> YPOS</td>
+<td> YPOS</td>
+</tr>
 <tr>
-<td> V1
-</td>
-<td> V1
-</td></tr>
+<td> V1</td>
+<td> V1</td>
+</tr>
 <tr>
-<td> V2
-</td>
-<td> V2
-</td></tr>
+<td> V2</td>
+<td> V2</td>
+</tr>
 <tr>
-<td> Horizontal scroller
-</td>
-<td> Horizontal scroller
-</td></tr>
+<td> Horizontal scroller</td>
+<td> Horizontal scroller</td>
+</tr>
 <tr>
-<td> T1
-</td>
-<td> T1
-</td></tr>
+<td> T1</td>
+<td> T1</td>
+</tr>
 <tr>
-<td> T2
-</td>
-<td> T2
-</td></tr>
+<td> T2</td>
+<td> T2</td>
+</tr>
 <tr>
-<td> XPOS
-</td>
-<td> XPOS
-</td></tr>
+<td> XPOS</td>
+<td> XPOS</td>
+</tr>
 <tr>
-<td> Delta V
-</td>
-<td> difference between V1 and V2 markers
-</td></tr>
+<td> Delta V</td>
+<td> difference between V1 and V2 markers</td>
+</tr>
 <tr>
-<td> Delta T
-</td>
-<td> difference between T1 and T2 markers
-</td></tr>
+<td> Delta T</td>
+<td> difference between T1 and T2 markers</td>
+</tr>
 <tr>
-<td> live measurements
-</td>
-<td> customizable measurement read-outs. For example, Vbt, FPS, Vdc, RMS, Max, Min, Vpp, FRQ, DUT, CIR, TL, TH
-</td></tr></table>
+<td> live measurements</td>
+<td> customizable measurement read-outs. For example, Vbt, FPS, Vdc, RMS, Max, Min, Vpp, FRQ, DUT, CIR, TL, TH</td>
+</tr>
+</table>
 
 ### Measuring Voltage
 
@@ -463,28 +367,22 @@ Digital input bandwidth [This forum thread](https://forum.seeedstudio.com/viewto
 
 <table>
 <tr>
-<th> Vpp
-</th>
-<td> Volts peak-to-peak
-</td></tr>
+<th> Vpp</th>
+<td> Volts peak-to-peak</td>
+</tr>
 <tr>
-<th> x1 probe
-</th>
-<td> Measures low voltage signals. Do not exceed 80Vpp or you may damage your DSO Quad. (Can be used as a low impedance probe.)
-</td></tr>
+<th> x1 probe</th>
+<td> Measures low voltage signals. Do not exceed 80Vpp or you may damage your DSO Quad. (Can be used as a low impedance probe.)</td>
+</tr>
 <tr>
-<th> x10 probe
-</th>
-<td> Measures high voltage signals. Do not exceed 400Vpp or you may damage your DSO Quad. (Can be used as a high impedance probe.)
-
-Note that the values on screen are 1/10 of the input, so please multiply by 10 in your head.
-
-</td></tr>
+<th> x10 probe</th>
+<td> Measures high voltage signals. Do not exceed 400Vpp or you may damage your DSO Quad. (Can be used as a high impedance probe.)<br/><br/>Note that the values on screen are 1/10 of the input, so please multiply by 10 in your head.</td>
+</tr>
 <tr>
-<th> ...
-</th>
-<td> ...
-</td></tr></table>
+<th> ...</th>
+<td> ...</td>
+</tr>
+</table>
 
 ### Requirements
 

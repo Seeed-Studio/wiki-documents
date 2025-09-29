@@ -15,7 +15,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/6.jpg" style={{width:400, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div><br />
@@ -29,7 +29,7 @@ It adopts a 8pin interface with the 4pin power supply with backlight and the 4pi
 ### Specifications
 
 <div class="table-center">
-	<table align="center">
+ <table align="center">
         <tbody>
             <tr>
                 <th>Operating voltage</th>
@@ -88,30 +88,29 @@ It adopts a 8pin interface with the 4pin power supply with backlight and the 4pi
 Now we will show you how to use our XIAO nRF52840 board which contains the 6 dof of IMU, Bluetooth and PDM microphone, you may realize that this board with this display is the key components you need to build a digital watch.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO nRF52840</th>
-			<th>1.69-inch LCD SPI Display</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>XIAO nRF52840</th>
+   <th>1.69-inch LCD SPI Display</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/6.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
-
 
 Then, you should connect the pin of display to the XIAO nRF52840 board, please follow the picture below to connect them:
 
@@ -128,7 +127,6 @@ Then, you should connect the pin of display to the XIAO nRF52840 board, please f
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/10.png" style={{width:700, height:'auto'}}/></div>
 
-
 ## Arduino Library Overview
 
 :::tip
@@ -138,7 +136,7 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 Based on the Arduino example program provided by **Waveshare**, we have written an Arduino library for use with the entire XIAO series, and you can go straight to the Github for this library via the button below.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/XIAO_ST7789V2_LCD_Display/tree/main">
+    <a class="github_item" href="https://github.com/limengdu/XIAO_ST7789V2_LCD_Display/tree/main" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -150,148 +148,147 @@ Before we get started developing a sketch, let's look at the available functions
 - `void Init(uint8_t cs = CS_PIN, uint8_t dc = DC_PIN, uint8_t rst = RST_PIN, uint8_t bl = BL_PIN)` —— Common register initialization.
 
     **Input Parameters**
-    - `cs`: Set the chip select pin, the default value is the **D1** pin of the XIAO.
-    - `dc`: Set the DC pin, the default value is the XIAO's **D3** pin.
-    - `rst`: Set the reset pin, the default value is the **D0** pin of the XIAO.
-    - `bl`: Set the backlight control pin, the default value is the **D6** pin of XIAO.
-
+  - `cs`: Set the chip select pin, the default value is the **D1** pin of the XIAO.
+  - `dc`: Set the DC pin, the default value is the XIAO's **D3** pin.
+  - `rst`: Set the reset pin, the default value is the **D0** pin of the XIAO.
+  - `bl`: Set the backlight control pin, the default value is the **D6** pin of XIAO.
 
 - `void SetBacklight(uint16_t Value)` —— Setting backlight.
 
     **Input Parameters**
-    - `Value`: Backlight intensity with values ranging from 0 to 255.
+  - `Value`: Backlight intensity with values ranging from 0 to 255.
 
 - `void Reset(void)` —— Hardware reset.
 
 - `void SetCursor(uint16_t Xstart, uint16_t Ystart, uint16_t Xend, uint16_t Yend)` —— Set the cursor position.
 
     **Input Parameters**
-    - `Xstart`: Start uint16_t x coordinate.
-    - `Ystart`: Start uint16_t y coordinate.
-    - `Xend`: End uint16_t coordinates.
-    - `Yend`: End uint16_t coordinatesen.
+  - `Xstart`: Start uint16_t x coordinate.
+  - `Ystart`: Start uint16_t y coordinate.
+  - `Xend`: End uint16_t coordinates.
+  - `Yend`: End uint16_t coordinatesen.
 
 - `void Clear(uint16_t Color)` —— Clear screen function, refresh the screen to a certain color.
 
     **Input Parameters**
-    - `Color`: The color you want to clear all the screen.
+  - `Color`: The color you want to clear all the screen.
 
 - `void ClearWindow(uint16_t Xstart, uint16_t Ystart, uint16_t Xend, uint16_t Yend, uint16_t color)` —— Refresh a certain area to the same color.
 
     **Input Parameters**
-    - `Xstart`: Start uint16_t x coordinate.
-    - `Ystart`: Start uint16_t y coordinate.
-    - `Xend`: End uint16_t coordinates.
-    - `Yend`: End uint16_t coordinatesen.
-    - `color`: Set the color.
+  - `Xstart`: Start uint16_t x coordinate.
+  - `Ystart`: Start uint16_t y coordinate.
+  - `Xend`: End uint16_t coordinates.
+  - `Yend`: End uint16_t coordinatesen.
+  - `color`: Set the color.
 
 - `void SetWindowColor(uint16_t Xstart, uint16_t Ystart, uint16_t Xend, uint16_t Yend, uint16_t Color)` —— Set the color of an area.
 
     **Input Parameters**
-    - `Xstart`: Start uint16_t x coordinate.
-    - `Ystart`: Start uint16_t y coordinate.
-    - `Xend`: End uint16_t coordinates.
-    - `Yend`: End uint16_t coordinatesen.
-    - `color`: Set the color.
+  - `Xstart`: Start uint16_t x coordinate.
+  - `Ystart`: Start uint16_t y coordinate.
+  - `Xend`: End uint16_t coordinates.
+  - `Yend`: End uint16_t coordinatesen.
+  - `color`: Set the color.
 
 - `void SetUWORD(uint16_t x, uint16_t y, uint16_t Color)` —— Draw a uint16_t.
 
     **Input Parameters**
-    - `x`: Set the X coordinate.
-    - `y`: Set the Y coordinate.
-    - `Color`: Set the color.
+  - `x`: Set the X coordinate.
+  - `y`: Set the Y coordinate.
+  - `Color`: Set the color.
 
 - `void SetRotate(uint16_t Rotate)` —— Select Image Rotate.
 
     **Input Parameters**
-    - `Rotate`: ROTATE_0, ROTATE_90, ROTATE_180, ROTATE_270
+  - `Rotate`: ROTATE_0, ROTATE_90, ROTATE_180, ROTATE_270
 
 - `void SetMirroring(uint8_t mirror)` —— Select Image mirror.
 
     **Input Parameters**
-    - `mirror`: MIRROR_NONE, MIRROR_HORIZONTAL, MIRROR_VERTICAL, MIRROR_ORIGIN
+  - `mirror`: MIRROR_NONE, MIRROR_HORIZONTAL, MIRROR_VERTICAL, MIRROR_ORIGIN
 
 - `void SetPixel(uint16_t Xpoint, uint16_t Ypoint, uint16_t Color)` —— Draw Pixels.
 
     **Input Parameters**
-    - `Xpoint`: At point X.
-    - `Ypoint`: At point Y.
-    - `Color`: Painted colors.
+  - `Xpoint`: At point X.
+  - `Ypoint`: At point Y.
+  - `Color`: Painted colors.
 
 - `void DrawPoint( uint16_t Xpoint, uint16_t Ypoint, uint16_t Color, DOT_PIXEL Dot_Pixel, DOT_STYLE Dot_FillWay)` —— Draw Point (Xpoint, Ypoint) Fill the color.
 
     **Input Parameters**
-    - `Xpoint`: The Xpoint coordinate of the point.
-    - `Ypoint`: The Ypoint coordinate of the point.
-    - `Color`: Set color.
-    - `Dot_Pixel`: point size.
+  - `Xpoint`: The Xpoint coordinate of the point.
+  - `Ypoint`: The Ypoint coordinate of the point.
+  - `Color`: Set color.
+  - `Dot_Pixel`: point size.
 
 - `void DrawLine(uint16_t Xstart, uint16_t Ystart, uint16_t Xend, uint16_t Yend, uint16_t Color, DOT_PIXEL Line_width, LINE_STYLE Line_Style)` —— Draw a line of arbitrary slope.
 
     **Input Parameters**
-    - `Xstart`：Starting Xpoint point coordinates.
-    - `Ystart`：Starting Xpoint point coordinates.
-    - `Xend`：End point Xpoint coordinate.
-    - `Yend`：End point Ypoint coordinate.
-    - `Color`：The color of the line segment.
+  - `Xstart`：Starting Xpoint point coordinates.
+  - `Ystart`：Starting Xpoint point coordinates.
+  - `Xend`：End point Xpoint coordinate.
+  - `Yend`：End point Ypoint coordinate.
+  - `Color`：The color of the line segment.
 
 - `void DrawRectangle(uint16_t Xstart, uint16_t Ystart, uint16_t Xend, uint16_t Yend, uint16_t Color, DOT_PIXEL Line_width, DRAW_FILL Filled)` —— Draw a rectangle.
 
     **Input Parameters**
-    - `Xstart`：Starting Xpoint point coordinates.
-    - `Ystart`：Starting Xpoint point coordinates.
-    - `Xend`：End point Xpoint coordinate.
-    - `Yend`：End point Ypoint coordinate.
-    - `Color`：The color of the line segment.
-    - `Filled`: Whether it is filled--- 1 solid 0：empty
+  - `Xstart`：Starting Xpoint point coordinates.
+  - `Ystart`：Starting Xpoint point coordinates.
+  - `Xend`：End point Xpoint coordinate.
+  - `Yend`：End point Ypoint coordinate.
+  - `Color`：The color of the line segment.
+  - `Filled`: Whether it is filled--- 1 solid 0：empty
 
 - `void DrawCircle(uint16_t X_Center, uint16_t Y_Center, uint16_t Radius, uint16_t Color, DOT_PIXEL Line_width, DRAW_FILL Draw_Fill)` —— Use the 8-point method to draw a circle of the specified size at the specified position.
 
     **Input Parameters**
-    - `X_Center`：Center X coordinate
-    - `Y_Center`：Center Y coordinate
-    - `Radius`：circle Radius
-    - `Color`：The color of the ：circle segment
-    - `Filled`: Whether it is filled: 1 filling 0：Do not.
+  - `X_Center`：Center X coordinate
+  - `Y_Center`：Center Y coordinate
+  - `Radius`：circle Radius
+  - `Color`：The color of the ：circle segment
+  - `Filled`: Whether it is filled: 1 filling 0：Do not.
 
 - `void DrawString_EN(int16_t Xstart, int16_t Ystart, const char * pString, sFONT* Font, int16_t Color_Background, int16_t Color_Foreground)` —— Display the string.
 
     **Input Parameters**
-    - `Xstart`：X coordinate.
-    - `Ystart`：Y coordinate.
-    - `pString`：The first address of the English string to be displayed.
-    - `Font`：A structure pointer that displays a character size.
-    - `Color_Background`: Select the background color of the English character.
-    - `Color_Foreground`: Select the foreground color of the English character.
+  - `Xstart`：X coordinate.
+  - `Ystart`：Y coordinate.
+  - `pString`：The first address of the English string to be displayed.
+  - `Font`：A structure pointer that displays a character size.
+  - `Color_Background`: Select the background color of the English character.
+  - `Color_Foreground`: Select the foreground color of the English character.
 
 - `void DrawNum(int16_t Xpoint, int16_t Ypoint, int32_t Nummber, sFONT* Font, int16_t Color_Background, int16_t Color_Foreground)` —— Display nummber.
 
     **Input Parameters**
-    - `Xstart`：X coordinate.
-    - `Ystart`：Y coordinate.
-    - `Nummber`：The number displayed.
-    - `Font`：A structure pointer that displays a character size.
-    - `Color_Background`: Select the background color of the English character.
-    - `Color_Foreground`: Select the foreground color of the English character.
+  - `Xstart`：X coordinate.
+  - `Ystart`：Y coordinate.
+  - `Nummber`：The number displayed.
+  - `Font`：A structure pointer that displays a character size.
+  - `Color_Background`: Select the background color of the English character.
+  - `Color_Foreground`: Select the foreground color of the English character.
 
 - `void DrawFloatNum(int16_t Xpoint, int16_t Ypoint, double Nummber,  int8_t Decimal_Point, sFONT* Font, int16_t Color_Background, int16_t Color_Foreground)` —— Display float number.
 
     **Input Parameters**
-    - `Xstart`：X coordinate.
-    - `Ystart`：Y coordinate.
-    - `Nummber`：The float data that you want to display.
-    - `Decimal_Point`：Show decimal places.
-    - `Font`: A structure pointer that displays a character size.
-    - `Color`: Select the background color of the English character.
+  - `Xstart`：X coordinate.
+  - `Ystart`：Y coordinate.
+  - `Nummber`：The float data that you want to display.
+  - `Decimal_Point`：Show decimal places.
+  - `Font`: A structure pointer that displays a character size.
+  - `Color`: Select the background color of the English character.
 
 - `void DrawImage(const unsigned char *image, int16_t xStart, int16_t yStart, int16_t W_Image, int16_t H_Image)` —— Display image.
 
     **Input Parameters**
-    - `image`: Image start address.
-    - `xStart`：X starting coordinates.
-    - `yStart`：Y starting coordinates.
-    - `xEnd`: Image width.
-    - `yEnd`: Image height.
+  - `image`: Image start address.
+  - `xStart`：X starting coordinates.
+  - `yStart`：Y starting coordinates.
+  - `xEnd`: Image width.
+  - `yEnd`: Image height.
 
 ### Default Variables
 
@@ -348,7 +345,6 @@ Before we get started developing a sketch, let's look at the available functions
 Since you have downloaded the zip Library, open your Arduino IDE, click on **Sketch > Include Library > Add .ZIP Library**. Choose the zip file you just downloaded，and if the library install correct, you will see **Library added to your libraries** in the notice window. Which means the library is installed successfully.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:800, height:'auto'}}/></div>
-
 
 ## XIAO Example
 
@@ -414,7 +410,6 @@ You will find Seeed Studio logo printed on the display dynamically.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/11.jpg" style={{width:700, height:'auto'}}/></div>
 
-
 ## Troubleshooting
 
 ### 1. The screen does not work when I reprogram it while the screen is connected?
@@ -448,12 +443,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-
-

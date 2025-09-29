@@ -4,12 +4,11 @@ title: SenseCAP M1 FAQ
 keywords:
 - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_FAQ
 last_update:
   date: 02/14/2023
   author: Matthew
 ---
-
-
 
 **How do I find the ETH or Wi-Fi MAC ID?**
 ------------------------------------------
@@ -43,15 +42,15 @@ You could tell from the model name. M1-X, X refers to the RAM. e.g. M1-2915 refe
 
 * * *
 
-**Why isn't my SenseCAP M1 can’t witnessing other Helium Hotspots?**
+**Why isn't my SenseCAP M1 can't witnessing other Helium Hotspots?**
 --------------------------------------------------------------------
 
 Some possible reasons resulting in low RF signals and short distance of transmissions of Helium Hotspots include:
 
-*   Obstacles, including buildings, mountains, and forestry in a comparatively dense environment
-*   Possible Electromagnetic Interference, Line of Sight Interference, Fresnel Zone Interference, or RF Interference existing around cities
-*   Weather Conditions
-*   System Operating Margin, Shadowing, and or Link Badger.
+- Obstacles, including buildings, mountains, and forestry in a comparatively dense environment
+- Possible Electromagnetic Interference, Line of Sight Interference, Fresnel Zone Interference, or RF Interference existing around cities
+- Weather Conditions
+- System Operating Margin, Shadowing, and or Link Badger.
 
 * * *
 
@@ -87,9 +86,9 @@ Hotspots should not be deployed too close to one another. A good rule of thumb i
 **Any extra fees for setting up SenseCAP M1?**
 ----------------------------------------------
 
-The device includes a covered $40 activation fee for users to set up SenseCAP M1 and a $10 fee to set the location of SenseCAP M1 on the Helium App.
+The device includes a covered \$40 activation fee for users to set up SenseCAP M1 and a \$10 fee to set the location of SenseCAP M1 on the Helium App.
 
-You will only pay additional fees if you reassert to another location after the first time, which is about $10. For detailed information about fees, please refer to the Helium Transaction Fees page.
+You will only pay additional fees if you reassert to another location after the first time, which is about \$10. For detailed information about fees, please refer to the Helium Transaction Fees page.
 
 * * *
 
@@ -145,7 +144,7 @@ Yes, the SenseCAP M2 Data Only is a lightspot.
 **Will there be AS923, AU915, IN865, and other frequencies?**
 -------------------------------------------------------------
 
-Currently, there are only US915 (with FCC) and EU868 (with CE) available. Other frequencies are not supported yet. We've noticed the need for different frequencies. The hardware device’s specification is in the range of 902Mhz ~ 928Mhz / 863Mhz ~ 870Mhz, hence it is configurable to different frequencies within this range. HOWEVER, after configuration, the product has to go through specific certifications to be allowed to enter different markets.
+Currently, there are only US915 (with FCC) and EU868 (with CE) available. Other frequencies are not supported yet. We've noticed the need for different frequencies. The hardware device's specification is in the range of 902Mhz ~ 928Mhz / 863Mhz ~ 870Mhz, hence it is configurable to different frequencies within this range. HOWEVER, after configuration, the product has to go through specific certifications to be allowed to enter different markets.
 
 Currently, our team is focusing on the supply chain and manufacturing of US915 and EU868.
 
@@ -191,11 +190,11 @@ The voltage is 5V DC.
 **Do you know the size/measurements of the PCB?**
 -------------------------------------------------
 
-The size of the device is 154\*100\*44 mm and the weight is 370g.
+The size of the device is 154×100×44 mm and the weight is 370g.
 
 * * *
 
-**Some people don’t like 5GHz in their area, is it possible to turn the WiFi off on the hotspot itself?**
+**Some people don't like 5GHz in their area, is it possible to turn the WiFi off on the hotspot itself?**
 ---------------------------------------------------------------------------------------------------------
 
 This device is a Wi-fi transmitter. If it is not connected to the AP, it will automatically stop emitting electromagnetic waves.
@@ -205,7 +204,7 @@ This device is a Wi-fi transmitter. If it is not connected to the AP, it will au
 **Why isn't my SenseCAP M1 not turning to the slow flash mode by pressing the button?**
 ---------------------------------------------------------------------------------------
 
-Please keep pressing the button for 6-10 seconds and don’t release it. Sometimes you may have to hard-press the button on the back. If you need additional support, please visit us on Discord here.  
+Please keep pressing the button for 6-10 seconds and don't release it. Sometimes you may have to hard-press the button on the back. If you need additional support, please visit us on Discord here.  
 Please note that if SenseCAP M1 is updating its firmware, pressing the button may not change the blue LED to slow flash mode, please try 10-15 minutes later.
 
 * * *
@@ -233,8 +232,8 @@ When using an Ethernet cable, please firmly press the Ethernet cable into the po
 **Steps to check your Hotspot Firmware version:**
 -------------------------------------------------
 
-1.  Long press the Hotspot Bluetooth button for 6-10s, the blue LED will be flashing slowly, then pair your hotspot.
-2.  Run Diagnostics and find the Hotspot Firmware version. Alternatively you can use the SenseCAP Dashboard once registered to check your firmware.
+1. Long press the Hotspot Bluetooth button for 6-10s, the blue LED will be flashing slowly, then pair your hotspot.
+2. Run Diagnostics and find the Hotspot Firmware version. Alternatively you can use the SenseCAP Dashboard once registered to check your firmware.
 
 ![SenseCAP M1 Firmware Version](https://www.sensecapmx.com/wp-content/uploads/2022/06/image-1.png)
 
@@ -244,11 +243,16 @@ When using an Ethernet cable, please firmly press the Ethernet cable into the po
 
 * * *
 
-What is transmit power out of SenseCAP M1 without the antenna?
---------------------------------------------------------------
+**What is transmit power out of SenseCAP M1 without the antenna?**
+-----------------------------------------------------------------
 
-<table style={{borderCollapse: 'collapse', width: '100%', height: 125}} border={1}><tbody><tr style={{height: 21}}><td style={{width: '33.3333%', height: 21}}><strong>Frequency Plan</strong></td><td style={{width: '33.3333%', height: 21}}>EU868</td><td style={{width: '33.3333%', height: 21}}>US915</td></tr><tr style={{height: 20}}><td style={{width: '33.3333%', height: 20}}><strong>Certification</strong></td><td style={{width: '33.3333%', height: 20}}>CE</td><td style={{width: '33.3333%', height: 20}}>FCC</td></tr><tr style={{height: 21}}><td style={{width: '33.3333%', height: 21}}><strong>Regulation Max Transmit Power</strong></td><td style={{width: '33.3333%', height: 21}}>14 dBm</td><td style={{width: '33.3333%', height: 21}}>30 dBm</td></tr><tr style={{height: 21}}><td style={{width: '33.3333%', height: 21}}><strong>Transmit Power With Stock Antenna</strong></td><td style={{width: '33.3333%', height: 21}}>13.487 dBm</td><td style={{width: '33.3333%', height: 21}}>26.7 dBm</td></tr><tr style={{height: 21}}><td style={{width: '33.3333%', height: 21}}><strong>Transmit Power Without Antenna</strong></td><td style={{width: '33.3333%', height: 21}}>10.687 dBm</td><td style={{width: '33.3333%', height: 21}}>25 dBm</td></tr><tr style={{height: 21}}><td style={{width: '33.3333%', height: 21}}><strong>Stock Antenna Gain</strong></td><td style={{width: '33.3333%', height: 21}}>2.8 dBi</td><td style={{width: '33.3333%', height: 21}}>2.6 dBi</td></tr></tbody></table>
-
+| Frequency Plan | EU868 | US915 |
+|---|---|---|
+| Certification | CE | FCC |
+| Regulation Max Transmit Power | 14 dBm | 30 dBm |
+| Transmit Power With Stock Antenna | 13.487 dBm | 26.7 dBm |
+| Transmit Power Without Antenna | 10.687 dBm | 25 dBm |
+| Stock Antenna Gain | 2.8 dBi | 2.6 dBi |
 
 * * *
 

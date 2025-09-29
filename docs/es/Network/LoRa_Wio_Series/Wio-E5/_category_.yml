@@ -1,0 +1,10 @@
+position: 1 # float position is supported
+label: 'Wio-E5'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: wio-e5
+link:
+  type: generated-index
+  slug: es/wio_e5_class
+  title: Wio-E5
+  description: Documentación del Producto Wio-E5.

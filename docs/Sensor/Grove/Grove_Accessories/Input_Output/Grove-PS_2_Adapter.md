@@ -29,52 +29,37 @@ The PS/2 Adapter enables you to connect a PS2 device to the Arduino/Seeeduino ma
 ---
 <table  cellspacing="0" width="80%">
 <tr>
-<th scope="col"> Item
-</th>
-<th scope="col"> Min
-</th>
-<th scope="col"> Typical
-</th>
-<th scope="col"> Max
-</th>
-<th scope="col"> Unit
-</th></tr>
+<th scope="col"> Item</th>
+<th scope="col"> Min</th>
+<th scope="col"> Typical</th>
+<th scope="col"> Max</th>
+<th scope="col"> Unit</th>
+</tr>
 <tr>
-<th scope="row"> Voltage
-</th>
-<td> 4.75
-</td>
-<td> 5.0
-</td>
-<td> 5.25
-</td>
-<td> V
-</td></tr>
+<th scope="row"> Voltage</th>
+<td> 4.75</td>
+<td> 5.0</td>
+<td> 5.25</td>
+<td> V</td>
+</tr>
 <tr>
-<th scope="row"> Current
-</th>
-<td colspan="3"> 100
-</td>
-<td> mA
-</td></tr>
+<th scope="row"> Current</th>
+<td colspan="3"> 100</td>
+<td> mA</td>
+</tr>
 <tr>
-<th scope="row"> Communication Mode
-</th>
-<td colspan="3"> PS/2 Communication Protocol
-</td>
-<td> /
-</td></tr>
+<th scope="row"> Communication Mode</th>
+<td colspan="3"> PS/2 Communication Protocol</td>
+<td> /</td>
+</tr>
 <tr>
-<th scope="row"> Clock Frequency
-</th>
-<td> 10
-</td>
-<td> 15
-</td>
-<td> 33
-</td>
-<td> KHZ
-</td></tr></table>
+<th scope="row"> Clock Frequency</th>
+<td> 10</td>
+<td> 15</td>
+<td> 33</td>
+<td> KHZ</td>
+</tr>
+</table>
 
 ## Application Ideas
 
@@ -93,68 +78,48 @@ A PS/2 connector has 6 pins as you can see from the following diagram. Pin 1 and
 
 <table  cellspacing="0" width="702">
 <tr>
-<th scope="col"> Pin
-</th>
-<th scope="col"> Name
-</th>
-<th scope="col"> Function
-</th>
-<th scope="col"> Correspond to the Grove Interface
-</th></tr>
+<th scope="col"> Pin</th>
+<th scope="col"> Name</th>
+<th scope="col"> Function</th>
+<th scope="col"> Correspond to the Grove Interface</th>
+</tr>
 <tr>
-<th scope="row"> 1
-</th>
-<td> +DATA
-</td>
-<td> Data
-</td>
-<td> DATA
-</td></tr>
+<th scope="row"> 1</th>
+<td> +DATA</td>
+<td> Data</td>
+<td> DATA</td>
+</tr>
 <tr>
-<th scope="row"> 2
-</th>
-<td> NC
-</td>
-<td> Reserved
-</td>
-<td> -
-</td></tr>
+<th scope="row"> 2</th>
+<td> NC</td>
+<td> Reserved</td>
+<td> -</td>
+</tr>
 <tr>
-<th scope="row"> 3
-</th>
-<td> GND
-</td>
-<td> GND Line
-</td>
-<td> GND
-</td></tr>
+<th scope="row"> 3</th>
+<td> GND</td>
+<td> GND Line</td>
+<td> GND</td>
+</tr>
 <tr>
-<th scope="row"> 4
-</th>
-<td> Vcc
-</td>
-<td> +5DCV
-</td>
-<td> VCC
-</td></tr>
+<th scope="row"> 4</th>
+<td> Vcc</td>
+<td> +5DCV</td>
+<td> VCC</td>
+</tr>
 <tr>
-<th scope="row"> 5
-</th>
-<td> +CLK
-</td>
-<td> Clock frequency
-</td>
-<td> CLK
-</td></tr>
+<th scope="row"> 5</th>
+<td> +CLK</td>
+<td> Clock frequency</td>
+<td> CLK</td>
+</tr>
 <tr>
-<th scope="row"> 6
-</th>
-<td> NC
-</td>
-<td> Reserved
-</td>
-<td> -
-</td></tr></table>
+<th scope="row"> 6</th>
+<td> NC</td>
+<td> Reserved</td>
+<td> -</td>
+</tr>
+</table>
 
 1.Plug the PS/2 mouse or keyboard to the Grove-PS/2 Adapter, and then connect Grove to the D5/D6 of [Grove - Base Shield](https://www.seeedstudio.com/depot/grove-base-shield-p-754.html?cPath=132_134). You can change the digital port as you like. But, don't forget to change the port number in the definition of the demo code at the same time.
 
@@ -176,7 +141,7 @@ A PS/2 connector has 6 pins as you can see from the following diagram. Pin 1 and
  * and report what it finds. Used the ps2 library.
  */
 
-#include &lt;ps2.h&gt;
+#include <ps2.h>
 
 /*
  * Pin 5 is the ps2 data pin, pin 6 is the clock pin

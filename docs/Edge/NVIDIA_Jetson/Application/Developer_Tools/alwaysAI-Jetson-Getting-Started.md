@@ -271,7 +271,7 @@ Now you will see the following output on the command-line
 
 <div align="center"><img width= "{1000}" src="https://files.seeedstudio.com/wiki/alwaysAI/pics/41.png"/></div>
 
-**Step 3.** Open a web browser and type the **<http://localhost:5000>** to open the video stream
+**Step 3.** Open a web browser and type the **http://localhost:5000** to open the video stream
 
 ```sh
 http://localhost:5000
@@ -289,7 +289,7 @@ The above is another demo using the same model.
 
 Here we will run the object detection on a pre-loaded video file.
 
-**Step 1.** Place the video file inside the alwaysAI project directory of Jetson device. According to our example, it is **/home/{username}/alwaysai/test**
+**Step 1.** Place the video file inside the alwaysAI project directory of Jetson device. According to our example, it is **/home/`<username>`/alwaysai/test**
 
 **Step 2.** On the development computer, open **app.py** file inside the **test** folder that we created before and replace this section of the code
 

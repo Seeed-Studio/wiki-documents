@@ -4,6 +4,7 @@ title: Edge Computing
 keywords:
 - edge computing
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /Seeed_Elderly/Navigation/Edge_Computing_4.7
 last_update:
   date: 01/20/2023
   author: Matthew

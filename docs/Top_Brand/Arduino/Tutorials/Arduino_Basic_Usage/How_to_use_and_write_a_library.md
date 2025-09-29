@@ -58,7 +58,7 @@ To help users to understand the use of the Library, we built an examples folder.
 
 ```cpp
 // demo of calc library
-#include &lt;Calc.h&gt;
+#include <Calc.h>
 
 void setup()
 {

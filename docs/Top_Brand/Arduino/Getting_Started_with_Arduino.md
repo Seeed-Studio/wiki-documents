@@ -22,8 +22,7 @@ prodimagename:
 For every Arduino-supported you might need Arduino IDE to upload the code, for checking whether the board is functioning well and ebabling every application.
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
-    </a>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
 </div>
 
 ### [How to install Arduino Library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library)
@@ -31,8 +30,7 @@ For every Arduino-supported you might need Arduino IDE to upload the code, for c
 We have provided a tutorial about how you install an Arduino library. You should notice that almost all of our library was stored at [Github](https://github.com/Seeed-Studio). We will provide Arduino libraries when a product need a library, like [CAN-BUS Shield V2](https://github.com/Seeed-Studio/Seeed_Arduino_CAN). But for some other simple products, there is no need to write a library such as Grove - Button.
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://wiki.seeedstudio.com/How_to_install_Arduino_Library/"><strong><span><font color={'FFFFFF'} size={"4"}>How to install Arduino Library</font></span></strong>
-    </a>
+    <a class="download_arduino_item" href="https://wiki.seeedstudio.com/How_to_install_Arduino_Library/"><strong><span><font color={'FFFFFF'} size={"4"}>How to install Arduino Library</font></span></strong></a>
 </div>
 
 ### [How to Upload Code](https://wiki.seeedstudio.com/Upload_Code/)
@@ -40,8 +38,7 @@ We have provided a tutorial about how you install an Arduino library. You should
 Here we have another tutorial for uploading the code:
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://wiki.seeedstudio.com/How_to_install_Arduino_Library/"><strong><span><font color={'FFFFFF'} size={"4"}>How to upload the code</font></span></strong>
-    </a>
+    <a class="download_arduino_item" href="https://wiki.seeedstudio.com/How_to_install_Arduino_Library/"><strong><span><font color={'FFFFFF'} size={"4"}>How to upload the code</font></span></strong></a>
 </div>
 
 ## Seeeduino Boards
@@ -49,15 +46,13 @@ Here we have another tutorial for uploading the code:
 ### [How to add Seeed boards to Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://wiki.seeedstudio.com/Seeed_Arduino_Boards/"><strong><span><font color={'FFFFFF'} size={"4"}>Add Seeed boards</font></span></strong>
-    </a>
+    <a class="download_arduino_item" href="https://wiki.seeedstudio.com/Seeed_Arduino_Boards/"><strong><span><font color={'FFFFFF'} size={"4"}>Add Seeed boards</font></span></strong></a>
 </div>
 
 ### [How to Install the driver for Seeeduino](https://wiki.seeedstudio.com/Driver_for_Seeeduino)
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://wiki.seeedstudio.com/Driver_for_Seeeduino"><strong><span><font color={'FFFFFF'} size={"4"}>Install Dirver for Seeeduino</font></span></strong>
-    </a>
+    <a class="download_arduino_item" href="https://wiki.seeedstudio.com/Driver_for_Seeeduino"><strong><span><font color={'FFFFFF'} size={"4"}>Install Dirver for Seeeduino</font></span></strong></a>
 </div>
 
 ## More How-to Tutorials
@@ -126,8 +121,8 @@ and educators. If you're a maker, you can take advantage of its rich community r
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=xiao"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Get One Know </font></span></strong></a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Know More</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=xiao" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Get One Know </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Know More</font></span></strong></a>
 </div>
 
 <br />
@@ -146,8 +141,8 @@ and educators. If you're a maker, you can take advantage of its rich community r
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-p-4509.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Get One Know </font></span></strong></a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Wio Terminal</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-p-4509.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Get One Know </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Wio Terminal</font></span></strong></a>
 </div>
 
 <br />
@@ -166,8 +161,8 @@ and educators. If you're a maker, you can take advantage of its rich community r
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Get One Know </font></span></strong></a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Develop_with_SenseCAP_Indicator/"><strong><span><font color={'FFFFFF'} size={"4"}>📚SenseCAP Indicator</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Get One Know </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Develop_with_SenseCAP_Indicator/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚SenseCAP Indicator</font></span></strong></a>
 </div>
 
 #### More

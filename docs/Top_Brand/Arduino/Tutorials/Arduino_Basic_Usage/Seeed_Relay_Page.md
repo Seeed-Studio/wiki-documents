@@ -22,8 +22,7 @@ Before the start, let's check the seeed relay quick selection diagram.
 
 <div align="center">
   <figure>
-    <a href="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/Relay.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/Relay.png" alt="Seeed relay quick selection diagram" title="Seeed relay quick selection diagram" />
-      <figcaption><b>Figure 1</b>. <i>Seeed relay quick selection diagram, you can click the diagram to view the original file</i></figcaption></a>
+    <a href="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/Relay.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/Relay.png" alt="Seeed relay quick selection diagram" title="Seeed relay quick selection diagram" /><figcaption><b>Figure 1</b>. <i>Seeed relay quick selection diagram, you can click the diagram to view the original file</i></figcaption></a>
   </figure>
 </div>
 
@@ -209,8 +208,7 @@ We also provide a relay shield for arduino, this shield integrates four mechanic
 
 <div align="center">
 <figure>
-  <a href="https://www.seeedstudio.com/Relay-Shield-v3-0-p-2440.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/seeed_relay_shield.jpg" alt="Relay Shield v3.0" title="Relay Shield v3.0" />
-  <figcaption><b>Figure 9</b>. <i>Relay Shield, you can click this figure to check</i></figcaption></a>
+  <a href="https://www.seeedstudio.com/Relay-Shield-v3-0-p-2440.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/seeed_relay_shield.jpg" alt="Relay Shield v3.0" title="Relay Shield v3.0" /><figcaption><b>Figure 9</b>. <i>Relay Shield, you can click this figure to check</i></figcaption></a>
 </figure>
 </div>
 
@@ -220,8 +218,7 @@ You can control the relay through a sound command, isn't it interesting!?
 
 <div align="center">
 <figure>
-  <a href="https://www.seeedstudio.com/Heelight-Relay-p-2935.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/Heelight_Relay.jpg" alt="Heelight Relay" title="Heelight Relay" />
-  <figcaption><b>Figure 10</b>. <i>Heelight Relay, you can click this figure to check this magic relay</i></figcaption></a>
+  <a href="https://www.seeedstudio.com/Heelight-Relay-p-2935.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/Heelight_Relay.jpg" alt="Heelight Relay" title="Heelight Relay" /><figcaption><b>Figure 10</b>. <i>Heelight Relay, you can click this figure to check this magic relay</i></figcaption></a>
 </figure>
 </div>
 
@@ -231,8 +228,7 @@ A wireless relay is a codec-adaptive RF receiver with single channel relay.
 
 <div align="center">
 <figure>
-  <a href="https://www.seeedstudio.com/315MHz-Codec-Adaptive-Wireless-Relay-p-550.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/315MHz%20Codec-Adaptive%20Wireless%20Relay.jpg" alt="Wireless Relay" title="Wireless Relay" />
-  <figcaption><b>Figure 11</b>. <i>Wireless Relay, you can click this figure to check</i></figcaption></a>
+  <a href="https://www.seeedstudio.com/315MHz-Codec-Adaptive-Wireless-Relay-p-550.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/315MHz%20Codec-Adaptive%20Wireless%20Relay.jpg" alt="Wireless Relay" title="Wireless Relay" /><figcaption><b>Figure 11</b>. <i>Wireless Relay, you can click this figure to check</i></figcaption></a>
 </figure>
 </div>
 
@@ -249,11 +245,11 @@ A wireless relay is a codec-adaptive RF receiver with single channel relay.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

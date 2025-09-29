@@ -77,57 +77,43 @@ Usage
 ![](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/img/Get_started_with_mbed.png)
 
 1.  Click [here](<https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-MAX>) to login or signup to mbed
-2.  Import the mbed\_blinky program
+2.  Import the mbed_blinky program
 3.  Click the **Compile** icon of the top toolbar to compile the program, then download a compiled hex file.
 4.  Drag-n-drop the downloaded bin file into the mbed disk
 
 You can open **main.cpp** to change the program. For example, use the following code to blink the LED every 0.1 second
 
-```
-    #include "mbed.h"
+```cpp
+#include "mbed.h"
 
-    DigitalOut led(LED1);          // on-board led is connected to D13
+DigitalOut led(LED1);          // on-board led is connected to D13
 
-    int main()
-    {
-        while (true) {
-            led = !led;
-            wait(0.1);
-        }
+int main()
+{
+    while (true) {
+        led = !led;
+        wait(0.1);
     }
+}
 ```
 
-Debug
------
-
-To enable SWD debug or to get debug message through USB Virtual serial, please install [a driver from mbed](https://developer.mbed.org/handbook/Windows-serial-configuration).
-
-Update or Restore Firmware
---------------------------
-
-The latest firmware version for the Arch Max is v0203 built at Oct 8, 2014. To check your firmware version and built date, open the mbed.HTM file of your mbed disk in a text editor.
-
-[The firmware v0203 2014-10-08 for Arch Max](https://developer.mbed.org/media/uploads/yihui/lpc11u35_nrf51822_if_mbed_v203_20141008.bin)
-
--   Press and hold the Arch Max's button to power it on.
--   A CRP DISABLD disk will show
-    -   On Windows, replace firmware.bin with the above firmware
-    -   On Linux/Mac, enter command: **dd if={new\_firmware.bin} of={firmware.bin} conv=notrunc**
-
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are get a compiling error that 'device.h' is not found, try to update the mbed library to the latest revision in your program.</p>
+</div>
 
 ## Schematic Online Viewer
 
-<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Arch_Max_v1.1/res/ARCH_Max.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Arch_Max_v1.1/res/Arch_Max_v1.1_Eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 Resources
 ---------
 
--   [Schematics Eagle file for ARCH Max](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/res/ARCH_Max.zip)
--   [Schematics PDF file for ARCH Max](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/res/Arch_Max.pdf)
--   [STM32F407 datasheet](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/res/STM32F407.pdf)
+-   [Arch Max v1.1 mbed developer platform page](https://developer.mbed.org/platforms/Seeed-Arch-Max/)
+-   [Schematic in PDF format](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/res/Arch_Max_v1.1_pdf.pdf)
+-   [Schematic and board files in EAGLE format](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/res/Arch_Max_v1.1_Eagle.zip)
+-   [LPC11U35 Firmware](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/res/Lpc11u35_stm32f4xx_if_mbed.bin.zip)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Arch_Max_v1.1 -->
 

@@ -234,7 +234,6 @@ void setBeacon() {
     pAdvertising = BLEDevice::getAdvertising();
 
 
-
     Serial.println("Advertizing started...");
     delay(100);
   }

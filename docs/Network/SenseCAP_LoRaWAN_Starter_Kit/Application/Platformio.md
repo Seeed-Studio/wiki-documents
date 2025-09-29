@@ -25,7 +25,6 @@ If you want to learn about Long Range and its features such as network architect
 
 </div>  
 
-
 ## Introduction
 
 This guide details using the Wio-E5 LoRa Module with XIAO ESP32S3 on PlatformIO, applicable to any Arduino-compatible board.
@@ -36,7 +35,7 @@ Key Learnings:
 2. **LoRaWAN Network Integration**: Steps to connect the Wio-E5 to a LoRaWAN network.
 3. **Uplink and Downlink Implementation**: Managing data transmission to and from the network.
 
-This application modifies the standard hardware setup, incorporating an OLED for direct data visualization and CircleLED for downlink indication, alongside DHT11 sensor data reporting, streamlining the learning process with practical implementations. 
+This application modifies the standard hardware setup, incorporating an OLED for direct data visualization and CircleLED for downlink indication, alongside DHT11 sensor data reporting, streamlining the learning process with practical implementations.
 
 <!-- 上传下达数据的说明 不够清晰 -->
 
@@ -70,6 +69,7 @@ If you're new to PlatformIO or looking to deepen your understanding, you can sta
 
 - [How to Use PlatformIO IDE for Arduino Programming](/Software-PlatformIO) – A beginner-friendly guide to get you started.
 - [PlatformIO Official Website](https://platformio.org/) – For comprehensive and detailed instructions.
+
 :::
 
 #### LoRaWAN Network Server (ChirpStack)
@@ -96,6 +96,7 @@ For those preferring alternative platforms like AWS IoT or TTN, refer to the fol
 
 - [Connecting to AWS IoT](/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/)
 - [Connecting to TTN](/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/)
+
 :::
 
 ## Preparatory work
@@ -106,12 +107,11 @@ Now, let's get started. We'll do following things.
 
 To ensure successful communication with the LoRaWAN network via your Wio-E5 module, there are a couple of key aspects you need to verify:
 
-1. **LoRaWAN Coverage:** 
+1. **LoRaWAN Coverage:**
    - Make sure that your device is within the coverage area of a LoRaWAN network. For instance, in my case, the device is covered by an M2 gateway operating in the EU868 frequency band. This is crucial as the device needs to communicate with a nearby LoRaWAN gateway that supports the same frequency band.
 
-2. **Gateway Link to LNS:** 
+2. **Gateway Link to LNS:**
    - It's also essential to confirm that one of these gateways is linked to the LoRaWAN Network Server (LNS) that you intend to use. This linkage is vital because the gateway not only acts as a bridge between your Wio-E5 device and the network server but also dictates the path your device's data will take to reach the server.
-
 
 #### Get Joining Parameters
 
@@ -181,9 +181,9 @@ In the context of LoRaWAN, DevEUI and AppKey play critical roles in device ident
 
 To begin, you'll create a PlatformIO project. Follow these steps:
 
-1. **Open PlatformIO:** Start by opening the PlatformIO IDE on your computer. 
+1. **Open PlatformIO:** Start by opening the PlatformIO IDE on your computer.
 
-2. **Create a New Project:** Go to the main menu and select **New Project**. 
+2. **Create a New Project:** Go to the main menu and select **New Project**.
 
 Here is an example image showing the new project creation in PlatformIO:
 
@@ -198,7 +198,6 @@ Example of project creation for XIAO ESP32S3:
 <div align="center">
   <img class='border-radius: 10px;' width={500} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Application_Platformio/xiaos3_prj.png"/>
 </div>
-
 
 **Add Necessary Libraries:**
 
@@ -323,6 +322,7 @@ void loop() {
     delay((unsigned int)(Tx_delay_s*1000));/*Convert the value in seconds to miliseconds*/
 }
 ```
+
 Let's build and flash it to the board.
 
 <!-- <div align="center">
@@ -330,7 +330,7 @@ Let's build and flash it to the board.
 </div> -->
 
 <div align="center">
-  <img class='border-radius: 10px;' width={500} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Application_Platformio/flash_success_lorawan_test.png"/> 
+  <img class='border-radius: 10px;' width={500} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Application_Platformio/flash_success_lorawan_test.png"/>
 </div>
 
 <!-- add a flag to build and flash -->
@@ -338,14 +338,13 @@ Let's build and flash it to the board.
 Now we can see there comes the message, and we can see the there is two message out there:
 
 <div align="center">
-  <img class='border-radius: 10px;' width={500} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Application_Platformio/lorawan_event_package.png"/> 
+  <img class='border-radius: 10px;' width={500} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Application_Platformio/lorawan_event_package.png"/>
 </div>
 
 it is easy to understand data `00010203040506070809`, which is from `buffer_binary` array.
 
 there also comes data: `SSBhbSBzZW5kaW5nIHRoaXMgbWVzc2FnZSB0byBhIExvUmEgR2F0ZXdheS4=`, what is that mean? as the package is codeded in base64.
 we can utilize the [base64 Decode](https://emn178.github.io/online-tools/base64_decode.html) to see the string.
-
 
 <div style={{ textAlign: 'center' }}>
 
@@ -373,20 +372,18 @@ If you're experiencing issues with the Grove_LED_Bar library, add the following 
 
 This code defines the `max` and `min` macros, which can help fix compilation errors related to these functions in the library.
 
-
 ## Resources
 
 - [Grove - Wio-E5 | Wiki](/Grove_LoRa_E5_New_Version/)
 - [Wio-E5 AT Command Specification](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf)
 
 #### LoRaE5 Library
+
 There are serval libraries available for the Wio E5 module:
 
 - [andresoliva/LoRa-E5](https://github.com/andresoliva/LoRa-E5)
 - [idreamsi/LoRaE5](https://github.com/idreamsi/LoRaE5)
 - [disk91/Disk91_LoRaE5](https://github.com/disk91/Disk91_LoRaE5)
-
-
 
 ## Tech Support & Product Discussion
 

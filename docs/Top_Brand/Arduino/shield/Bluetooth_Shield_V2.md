@@ -14,19 +14,21 @@ no_comments: false # for Disqus
 
 The Bluetooth Shield integrates a Serial Bluetooth module. It can be easily used with Arduino/Seeedstudio for transparent wireless serial communication. You can choose two pins from Arduino D0 to D7 as Software Serial Ports to communicate with Bluetooth Shield (D0 and D1 is Hardware Serial Port). The shield also has two Grove connectors (one is Digital, the other is Analog) for you to install Grove modules.
 
-##   Features
----
-*   Input Voltage: 3.3V
-*   Baudrate: 9600, 19200, 38400, 57600, 115200, 230400, 460800
-*   Seeeduino/Arduino compatible
-*   Up to10m communication distance in house without obstacle
-*   UART interface (TTL) with programmable baud rate
-*   Default Baud rate: 9600, Data bits: 8, Stop bit: 1, Parity: No parity
-*   Default PINCODE:”1234”
-*   A full set of configuration commands
-*   On board PCB Antenna
+## Features
 
-##   Interface function
+---
+- Input Voltage: 3.3V
+- Baudrate: 9600, 19200, 38400, 57600, 115200, 230400, 460800
+- Seeeduino/Arduino compatible
+- Up to10m communication distance in house without obstacle
+- UART interface (TTL) with programmable baud rate
+- Default Baud rate: 9600, Data bits: 8, Stop bit: 1, Parity: No parity
+- Default PINCODE:”1234”
+- A full set of configuration commands
+- On board PCB Antenna
+
+## Interface function
+
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_Shield_V2.0_K.jpg" alt="pir" width={600} height="auto" /></p>
@@ -55,8 +57,7 @@ The Bluetooth Shield integrates a Serial Bluetooth module. It can be easily used
   </tr>
   </tbody></table>
 
-
-##   Demonstration
+## Demonstration
 
 ### 1：Two Bluetooth Shield Connect
 
@@ -65,40 +66,36 @@ This demo will show you how to connect two Bluetooth shield.
 You need two piece of [Seeeduino V3.0](https://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=6_7),
 One Bluetooth Shield as Master while the other as Slave.
 
-**Hardware Installation **
+**Hardware Installation**
 
 as folowing:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_shield_demo_image0.png" alt="pir" width={600} height="auto" /></p>
 
-
 make sure the right connection of the jumpers
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_shield_demo_image4.jpg" alt="pir" width={600} height="auto" /></p>
 
+**Download Code and Upload**
 
-**Download Code and Upload **
+1. You can download the code in github, click [here](https://github.com/Seeed-Studio/Bluetooth_Shield_V2_Demo_Code/archive/master.zip),then extract it to libraries folder of Arduino.
 
-1.  You can download the code in github, click [here](https://github.com/Seeed-Studio/Bluetooth_Shield_V2_Demo_Code/archive/master.zip),then extract it to libraries folder of Arduino.
+2. Open Arduino IDE, open File -&gt; Examples -&gt; Bluetooth_Shield_V2_Demo_Code -&gt; Master_Button, then you can open the code of Master
 
-2.  Open Arduino IDE, open File -&gt; Examples -&gt; Bluetooth_Shield_V2_Demo_Code -&gt; Master_Button, then you can open the code of Master
+3. Open Arduino IDE, open File -&gt; Examples -&gt; Bluetooth_Shield_V2_Demo_Code -&gt; Slave_led, then you can open the code of Slave
 
-3.  Open Arduino IDE, open File -&gt; Examples -&gt; Bluetooth_Shield_V2_Demo_Code -&gt; Slave_led, then you can open the code of Slave
-
-4.  Click Upload to Upload the code, if you have any problem about how to start Arduino, please click [here](/Getting_Started_with_Seeeduino) for some help.
-
+4. Click Upload to Upload the code, if you have any problem about how to start Arduino, please click [here](/Getting_Started_with_Seeeduino) for some help.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_ide_1.jpg" alt="pir" width={600} height="auto" /></p>
 
 **Check The Result**
 
-1.  After finish Uploading the code to both Master and Slave, reset the two devices meanwhile
+1. After finish Uploading the code to both Master and Slave, reset the two devices meanwhile
 
-2.  You can see the led blink, indicate that devices was initializing and connecting.
+2. You can see the led blink, indicate that devices was initializing and connecting.
 
-3.  After about servel seconds, led on, indicate that Master and Slave had connected.
+3. After about servel seconds, led on, indicate that Master and Slave had connected.
 
 !!!Note
     If the phenomenon is not observed above, try unplugging the power and re-plug in again.
-
 
 ### 2：Connect to Smart Phone
 
@@ -111,14 +108,13 @@ Via a Bluetooth SPP App
 **Hardware Installation**
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_shield_demo_image1.png" alt="pir" width={600} height="auto" /></p>
 
-
 **Download Code and Upload**
 
-1.  You can download the code in github, click [here](https://github.com/Seeed-Studio/Bluetooth_Shield_V2_Demo_Code/archive/master.zip),then extract it to libraries folder of Arduino.
+1. You can download the code in github, click [here](https://github.com/Seeed-Studio/Bluetooth_Shield_V2_Demo_Code/archive/master.zip),then extract it to libraries folder of Arduino.
 
-2.  Open Arduino IDE, File -&gt; Examples -&gt; Bluetooth_Shield_V2_Demo_Code -&gt; Slave_Temperature, then you can open the code
+2. Open Arduino IDE, File -&gt; Examples -&gt; Bluetooth_Shield_V2_Demo_Code -&gt; Slave_Temperature, then you can open the code
 
-3.  Click Upload to Upload the code, if you have any problem about how to start Arduino, please click [here](//Getting_Started_with_Seeeduino) for some help.
+3. Click Upload to Upload the code, if you have any problem about how to start Arduino, please click [here](//Getting_Started_with_Seeeduino) for some help.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_Shield_Demo2.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -134,25 +130,25 @@ Most of this app are useful, just choose one and have try.
 After installing an SPP app, try connecting it to SeeedBTSlave, pin code is: "0000"
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_Shield_App_1.png" alt="pir" width={600} height="auto" /></p>
 
-
 When connect is ok, send 't' to SeeedBTSlave, and you can get the temperature now:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_Shield_get_temp.png" alt="pir" width={600} height="auto" /></p>
 
+## Resources
 
-##   Resources
-*   [Schematic and Layout in Eagle format](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/res/Buletooth_Shield_v2.0_sch_pcb.zip)
+* [Schematic and Layout in Eagle format](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/res/Buletooth_Shield_v2.0_sch_pcb.zip)
 
-*   [module Datasheet](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/res/Bluetooth_en.pdf)
+- [module Datasheet](https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/res/Bluetooth_en.pdf)
 
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

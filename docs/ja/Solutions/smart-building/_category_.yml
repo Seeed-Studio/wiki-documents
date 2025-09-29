@@ -1,0 +1,10 @@
+position: 2
+label: 'スマートビルディング'
+collapsible: true
+collapsed: true
+className: _smart-building
+link:
+  type: generated-index
+  slug: ja/smart-building
+  title: スマートビルディング
+  description: スマートビルディングソリューション。

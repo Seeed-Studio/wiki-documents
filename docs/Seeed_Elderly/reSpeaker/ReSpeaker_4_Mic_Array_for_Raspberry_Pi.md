@@ -20,36 +20,35 @@ Different from [ReSpeaker 2-Mics Pi HAT](https://www.seeedstudio.com/ReSpeaker-2
 <iframe width="800" height="450" src="https://www.youtube.com/embed/IkSfBSf1IRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
 ## Features
 
-* Raspberry Pi compatible (supports Raspberry Pi Zero and Zero W, Raspberry PiB+, Raspberry Pi 2B, Raspberry Pi 3B, Raspberry Pi 3B+, Raspberry Pi3 A+ and Raspberry Pi 4B)
-* 4 Microphones
-* 3 meters radius voice capture
-* 2 Grove Interfaces
-* 12 APA102 User LEDs
-* Software Algorithms: VAD(Voice Activity Detection), DOA(Direction of Arrival) and KWS(Keyword Search)
+- Raspberry Pi compatible (supports Raspberry Pi Zero and Zero W, Raspberry PiB+, Raspberry Pi 2B, Raspberry Pi 3B, Raspberry Pi 3B+, Raspberry Pi3 A+ and Raspberry Pi 4B)
+- 4 Microphones
+- 3 meters radius voice capture
+- 2 Grove Interfaces
+- 12 APA102 User LEDs
+- Software Algorithms: VAD(Voice Activity Detection), DOA(Direction of Arrival) and KWS(Keyword Search)
 
 Note: There is no audio output interface on ReSpeaker 4-Mic Array for Raspberry Pi. It is only for voice capture. We can use the [headphone jack](https://www.raspberrypi.org/documentation/configuration/audio-config.md) on Raspberry Pi for audio output.
 
 ## Application Ideas
 
-* Voice Interaction Application
-* AI Assistant
+- Voice Interaction Application
+- AI Assistant
 
 ## Hardware Overview
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/img/features.png)
 
-* MIC: 4 analog microphones
-* LED: 12 APA102 programable RGB LEDs, connected to SPI interface
-* Raspberry Pi 40-Pin Headers: compatible with Raspberry Pi Zero and Zero W, Raspberry PiB+, Raspberry Pi 2B, Raspberry Pi 3B, Raspberry Pi 3B+, Raspberry Pi3 A+ and Raspberry Pi 4
-* AC108: highly integrated quad-channel ADC with I2S/TDM output transition
-* I2C: Grove I2C port, connected to I2C-1
-* GPIO12: Grove digital port, connected to GPIO12 & GPIO13
+- MIC: 4 analog microphones
+- LED: 12 APA102 programable RGB LEDs, connected to SPI interface
+- Raspberry Pi 40-Pin Headers: compatible with Raspberry Pi Zero and Zero W, Raspberry PiB+, Raspberry Pi 2B, Raspberry Pi 3B, Raspberry Pi 3B+, Raspberry Pi3 A+ and Raspberry Pi 4
+- AC108: highly integrated quad-channel ADC with I2S/TDM output transition
+- I2C: Grove I2C port, connected to I2C-1
+- GPIO12: Grove digital port, connected to GPIO12 & GPIO13
 
 Note: If you use the APA102 RGB LEDs, make sure to write HIGH to `GPIO5` first to enable VCC of the LEDs.
 
@@ -68,7 +67,7 @@ Note: Hot-plugging ReSpeaker 4-Mic Array is not allowed. It will damage the resp
 
 Make sure that you are running [the latest Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspbian/) on your Pi. *(updated at 2021.06.30)*
 
-* Step 1. Get the Seeed voice card source code, install and reboot.
+- Step 1. Get the Seeed voice card source code, install and reboot.
 
 ```
 sudo apt-get update
@@ -78,7 +77,7 @@ sudo ./install.sh
 sudo reboot now
 ```
 
-* Step 2. Then select audio output on Raspberry Pi:
+- Step 2. Then select audio output on Raspberry Pi:
 
 ```sh
 sudo raspi-config
@@ -88,7 +87,7 @@ sudo raspi-config
 # Select Finish
 ```
 
-* Step 3. Check that the sound card name looks like this:
+- Step 3. Check that the sound card name looks like this:
 
 ```sh
 pi@raspberrypi:~ $ arecord -L
@@ -126,7 +125,7 @@ usbstream:CARD=ALSA
 
 If we want to change the `alsa` settings, we can use `sudo alsactl --file=ac108_asound.state store` to save it. And when we need to use the settings again, copy it to: `sudo cp ~/seeed-voicecard/ac108_asound.state /var/lib/alsa/asound.state`
 
-* Step 4. Open Audacity and select **AC108 & 4 channels** as input and **bcm2835 alsa: - (hw:0:0)** as output to test:
+- Step 4. Open Audacity and select **AC108 & 4 channels** as input and **bcm2835 alsa: - (hw:0:0)** as output to test:
 
 ```sh
 sudo apt update
@@ -136,7 +135,7 @@ audacity                      // run audacity
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/img/audacity.png)
 
-* Alternatively if you use Lite Raspbian Pi OS image and don't have GUI, you can record with `arecord` and play with `aplay`:
+- Alternatively if you use Lite Raspbian Pi OS image and don't have GUI, you can record with `arecord` and play with `aplay`:
 
 ```
 sudo apt-get install sox                             //for audio conversion
@@ -148,7 +147,7 @@ aplay stereo.wav                                      // make sure default devic
 
 ## Usage overview
 
-To run the following examples, clone <https://github.com/respeaker/4mics_hat.git> repository to your Raspberry Pi
+To run the following examples, clone [4mics_hat repository](https://github.com/respeaker/4mics_hat.git) repository to your Raspberry Pi
 
 ```
 git clone https://github.com/respeaker/4mics_hat.git
@@ -167,7 +166,7 @@ Each on-board APA102 LED has an additional driver chip. The driver chip takes ca
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/img/rainbow.jpg)
 
-* Step 1. Activate SPI:
+- Step 1. Activate SPI:
 
 ```bash
 sudo raspi-config
@@ -178,7 +177,7 @@ sudo raspi-config
 3. Select Enable SPI
 4. Finally , Exit the tool
 
-* Step 2. Then run the example code, now we can see the LEDs blink like Alexa Assistant.
+- Step 2. Then run the example code, now we can see the LEDs blink like Alexa Assistant.
 
 ```bash
 python3 interfaces/pixels.py
@@ -206,7 +205,7 @@ To record the sound, open ```recording_examples/record.py``` file with nano or o
 python3 recording_examples/record.py
 ```
 
-* Step 6. If you want to extract channel 0 data from 4 channels, have a look at the content of ```record_one_channel.py```. For other channel X, please change [0::4] to [X::4].
+- Step 6. If you want to extract channel 0 data from 4 channels, have a look at the content of ```record_one_channel.py```. For other channel X, please change [0::4] to [X::4].
 
 ```bash
 python3 recording_examples/record_one_channel.py
@@ -223,7 +222,7 @@ aplay -D plughw:0,0 output_one_channel.wav #for Mono sound from one channel
 
 [ODAS](https://github.com/introlab/odas) stands for Open embeddeD Audition System. This is a library dedicated to performing sound source localization, tracking, separation and post-filtering.
 
-* Step 1. Get [ODAS](https://github.com/introlab/odas.git) and build it.
+- Step 1. Get [ODAS](https://github.com/introlab/odas.git) and build it.
 
 The executable file that we will call will be generated in the bin directory
 
@@ -238,7 +237,7 @@ cmake ..
 make
 ```
 
-* Step 2. Get [ODAS Studio](https://github.com/introlab/odas_web)  and run it.
+- Step 2. Get [ODAS Studio](https://github.com/introlab/odas_web)  and run it.
 
 Install nodejs v12.22 and npm 6.14.
 
@@ -277,7 +276,7 @@ sudo apt remove python3 -y
 sudo apt install python2 -y
 ```
 
-* Step 3. The odascore will be at **~/Desktop/odas/build/bin/odaslive**, the config file is at **~/Desktop/odas/config/odaslive/respeaker_4_mic_array.cfg**.
+- Step 3. The odascore will be at **~/Desktop/odas/build/bin/odaslive**, the config file is at **~/Desktop/odas/config/odaslive/respeaker_4_mic_array.cfg**.
 
 We need to modify the configuration to specify the sound card to our device
 
@@ -335,11 +334,11 @@ When configured correctly it will look like this
 
 Picovoice is an end-to-end platform for building voice products on your terms. It enables creating voice experiences similar to Alexa and Google. But it entirely runs 100% on-device. There are advantages of Picovoice:
 
-* **Private**: Everything is processed offline. Intrinsically HIPAA and GDPR compliant.
-* **Reliable**: Runs without needing constant connectivity.
-* **Zero Latency**: Edge-first architecture eliminates unpredictable network delay.
-* **Accurate**: Resilient to noise and reverberation. It outperforms cloud-based alternatives by wide margins.
-* **Cross-Platform**: Design once, deploy anywhere. Build using familiar languages and frameworks.
+- **Private**: Everything is processed offline. Intrinsically HIPAA and GDPR compliant.
+- **Reliable**: Runs without needing constant connectivity.
+- **Zero Latency**: Edge-first architecture eliminates unpredictable network delay.
+- **Accurate**: Resilient to noise and reverberation. It outperforms cloud-based alternatives by wide margins.
+- **Cross-Platform**: Design once, deploy anywhere. Build using familiar languages and frameworks.
 
 ### Picovocie with ReSpeaker 4-Mic Array Getting Started
 
@@ -375,7 +374,7 @@ picovoice_respeaker_demo
 
 Here are voice commands for this demo:
 
-* **Picovoice**
+- **Picovoice**
 
 The demo outputs:
 
@@ -383,7 +382,7 @@ The demo outputs:
 wake word
 ```
 
-* **Turn on the lights**
+- **Turn on the lights**
 
 You should see the lights turned on and the following message in the terminal:
 
@@ -424,11 +423,11 @@ context:
 
 also, you can try this command to change the colour by:
 
-* **Picovoice, set the lights to orange**
+- **Picovoice, set the lights to orange**
 
 Turn off the lights by:
 
-* **Picovoice, turn off all lights**
+- **Picovoice, turn off all lights**
 
 **Demo Video Demonstration**
 
@@ -436,7 +435,7 @@ Turn off the lights by:
 
 ### Demo Source Code
 
-The demo is built with the **[Picovoice SDK](https://github.com/Picovoice/picovoice)**. The demo source code is available on GitHub at <https://github.com/Picovoice/picovoice/tree/master/demo/respeaker>.
+The demo is built with the **[Picovoice SDK](https://github.com/Picovoice/picovoice)**. The demo source code is available on GitHub at [Picovoice Respeaker Demo](https://github.com/Picovoice/picovoice/tree/master/demo/respeaker)
 
 ### Different Wake Words
 
@@ -444,7 +443,7 @@ The [**Picovoice SDK**](https://github.com/Picovoice/picovoice) includes free sa
 
 ### Custom Voice Commands
 
-The lighting commands are defined by a Picovoice *Speech-to-Intent context*. You can design and train contexts by typing in the allowed grammar using Picovoice Console. You can test your changes in-browser as you edit with the microphone button. Go to Picovoice Console (<https://picovoice.ai/console/>) and sign up for an account. Use the **Rhino Speech-to-Intent editor** to make contexts, then train them for Raspberry Pi.
+The lighting commands are defined by a Picovoice *Speech-to-Intent context*. You can design and train contexts by typing in the allowed grammar using Picovoice Console. You can test your changes in-browser as you edit with the microphone button. Go to [Picovoice Console](https://picovoice.ai/console/) and sign up for an account. Use the **Rhino Speech-to-Intent editor** to make contexts, then train them for Raspberry Pi.
 
 <div align="center"><img width ="{700}" src="https://files.seeedstudio.com/wiki/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/respeaker_demo_console_edit.gif"/></div>
 
@@ -458,15 +457,13 @@ To demonstrate the Picovoice's capability we have also prepared a multi wake wor
 
 ### Porcupine
 
-**Porcupine** is a highly-accurate and lightweight wake word engine. It enables building always-listening voice-enabled
-applications. It is
+**Porcupine** is a highly-accurate and lightweight wake word engine. It enables building always-listening voice-enabled applications. It is
 
-* using deep neural networks trained in real-world environments.
-* compact and computationally-efficient. It is perfect for IoT.
-* cross-platform. Raspberry Pi, BeagleBone, Android, iOS, Linux (x86_64), macOS (x86_64), Windows (x86_64), and web
-  browsers are supported. Additionally, enterprise customers have access to the ARM Cortex-M SDK.
-* scalable. It can detect multiple always-listening voice commands with no added runtime footprint.
-* self-service. Developers can train custom wake word models using [Picovoice Console](https://picovoice.ai/console/).
+- using deep neural networks trained in real-world environments.
+- compact and computationally-efficient. It is perfect for IoT.
+- cross-platform. Raspberry Pi, BeagleBone, Android, iOS, Linux (x86_64), macOS (x86_64), Windows (x86_64), and web browsers are supported. Additionally, enterprise customers have access to the ARM Cortex-M SDK.
+- scalable. It can detect multiple always-listening voice commands with no added runtime footprint.
+- self-service. Developers can train custom wake word models using [Picovoice Console](https://picovoice.ai/console/).
 
 #### Multi Wake Word Getting Started
 
@@ -508,19 +505,19 @@ to turn off the lights.
 
 Below are the colors associated with supported wake words for this demo:
 
-* ![#ffff33](https://via.placeholder.com/15/ffff33/000000?text=+) `Alexa`
-* ![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `Bumblebee`
-* ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `Computer`
-* ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `Hey Google`
-* ![#800080](https://via.placeholder.com/15/800080/000000?text=+) `Hey Siri`
-* ![#ff3399](https://via.placeholder.com/15/ff3399/000000?text=+) `Jarvis`
-* ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `Picovoice`
-* ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) `Porcupine`
-* ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `Terminator`
+- ![#ffff33](https://via.placeholder.com/15/ffff33/000000?text=+) `Alexa`
+- ![#ff8000](https://via.placeholder.com/15/ff8000/000000?text=+) `Bumblebee`
+- ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `Computer`
+- ![#ff0000](https://via.placeholder.com/15/ff0000/000000?text=+) `Hey Google`
+- ![#800080](https://via.placeholder.com/15/800080/000000?text=+) `Hey Siri`
+- ![#ff3399](https://via.placeholder.com/15/ff3399/000000?text=+) `Jarvis`
+- ![#00ff00](https://via.placeholder.com/15/00ff00/000000?text=+) `Picovoice`
+- ![#0000ff](https://via.placeholder.com/15/0000ff/000000?text=+) `Porcupine`
+- ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `Terminator`
 
 #### Multiple Wake Word Example Source Code
 
-Please see the complete source code of this example here: <https://github.com/Picovoice/porcupine/tree/master/demo/respeaker>.
+Please see the complete source code of this example here: [Porcupine Respeaker Demo](https://github.com/Picovoice/porcupine/tree/master/demo/respeaker)
 
 ### Picovoice Tech Support
 
@@ -546,27 +543,25 @@ A4: There is a genuine one-off small memory loss when the driver is first loaded
 
 ## Resources
 
-* **[PDF]** [ReSpeaker 4-Mic Array for Raspberry Pi(PDF)](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/src/ReSpeaker%204-Mic%20Array%20for%20Raspberry%20Pi%20%20v1.0.pdf)
-* **[DXF]** [ReSpeaker 4-Mic Array for Raspberry Pi v1.0](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/src/ReSpeaker%204-Mic%20Array%20for%20Raspberry%20Pi%20v1.0.dxf.zip)
-* **[3D]** [ReSpeaker 4-Mic Array for Raspberry Pi v1.0 3D Model](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/src/ReSpeaker%204-Mics%20Pi%20HAT%20v1.0.skp.zip)
-* **[AC108]** [AC108 DataSheet](http://www.x-powers.com/en.php/Info/product_detail/article_id/41)
-* **[Driver]** [Seeed-Voice Driver](https://github.com/respeaker/seeed-voicecard)
-* **[Algorithms]** [Algorithms includes DOA, VAD, NS](https://github.com/respeaker/mic_array)
-* **[Voice Engine** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
-* **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
+- **[PDF]** [ReSpeaker 4-Mic Array for Raspberry Pi(PDF)](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/src/ReSpeaker%204-Mic%20Array%20for%20Raspberry%20Pi%20%20v1.0.pdf)
+- **[DXF]** [ReSpeaker 4-Mic Array for Raspberry Pi v1.0](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/src/ReSpeaker%204-Mic%20Array%20for%20Raspberry%20Pi%20v1.0.dxf.zip)
+- **[3D]** [ReSpeaker 4-Mic Array for Raspberry Pi v1.0 3D Model](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/src/ReSpeaker%204-Mics%20Pi%20HAT%20v1.0.skp.zip)
+- **[AC108]** [AC108 DataSheet](http://www.x-powers.com/en.php/Info/product_detail/article_id/41)
+- **[Driver]** [Seeed-Voice Driver](https://github.com/respeaker/seeed-voicecard)
+- **[Algorithms]** [Algorithms includes DOA, VAD, NS](https://github.com/respeaker/mic_array)
+- **[Voice Engine]** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
+- **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
 
 ## Tech Support & Product Discussion
-
-
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

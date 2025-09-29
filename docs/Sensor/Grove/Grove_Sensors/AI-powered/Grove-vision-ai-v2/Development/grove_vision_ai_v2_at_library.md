@@ -12,28 +12,27 @@ slug: /grove_vision_ai_v2_at
 last_update:
   date: 04/22/2024
   author: Spencer
-mermaid: true
 toc_max_heading_level: 3
 ---
 
 ## Introduction
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Grove Vision AI V2</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/43.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Grove Vision AI V2</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/43.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 The Grove Vision AI V2 is a powerful AI camera module that allows users to deploy off-the-shelf models for vision applications. In addition to its AI capabilities, the Grove Vision AI V2 offers several hardware features and usage options to enhance its functionality and ease of use.
@@ -55,7 +54,7 @@ If you need to flash a new firmware or update the firmware, you can navigate to 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/at-diagram.png" alt="at diagram" width={320} height="auto" /></p>
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md">
+    <a class="github_item" href="https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>Check AT Protocol</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
@@ -70,7 +69,7 @@ To simplify the usage of the AT command set and provide a user-friendly interfac
 The Arduino library maintains compatibility with the latest AT command set, ensuring a consistent and unified approach to interacting with the module. By utilizing this library, users can focus on developing their applications without worrying about the low-level details of the AT commands.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA">
+    <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
@@ -129,7 +128,6 @@ The Arduino library maintains compatibility with the latest AT command set, ensu
 \*⚠️: might not work well
 :::
 
-
 ## Connect the Grove Vision AI V2
 
 <Tabs groupId="grove_connect">
@@ -144,7 +142,7 @@ Using a grove cable to connect the Grove Vision AI V2 to any mcu board.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/00.jpg" width={420} height="auto" /></p>
 
-This way you can use not only **UART** but also **I2C** to establish a connection. 
+This way you can use not only **UART** but also **I2C** to establish a connection.
 
 :::tip Serial Baudrate
 For high responsiveness, Grove vision v2's serial baud rate is `921600` by default.
@@ -236,20 +234,21 @@ void loop()
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
 <table align="center">
-	<tr>
-	    <th>Connect devices</th>
-	    <th>Upload firmware</th>
+ <tr>
+     <th>Connect devices</th>
+     <th>Upload firmware</th>
         <th>Monitor</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_connect.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_code.png" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_connect.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_code.png" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_monitor.png" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
 </table>
 
 ## *Example 2:* Get inference result
@@ -446,31 +445,32 @@ void loop() {
 </Tabs>
 
 <table align="center">
-	<tr>
-	    <th>Connect devices</th>
-	    <th>Upload firmware</th>
+ <tr>
+     <th>Connect devices</th>
+     <th>Upload firmware</th>
       <th>Monitor</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_connect.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/reference_code.png" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_connect.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/reference_code.png" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/reference_monitor.png" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
 </table>
 
 ## *Example 3:* Saving JPEG Images to SD Card
 
 > More details in the [Set action trigger - AT protocol](https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md#set-action-trigger-experimental) section.
 
-The Grove Vision AI V2 module allows saving JPEG images directly to an external SD card. To ensure compatibility, it is recommended to format the SD card as ***FAT32*** with a cluster size of `8192` or use the **exFAT** file system. When saving images, the module automatically creates a default save path named `Grove Vision AI (V2) Export` if it doesn't already exist. 
+The Grove Vision AI V2 module allows saving JPEG images directly to an external SD card. To ensure compatibility, it is recommended to format the SD card as ***FAT32*** with a cluster size of `8192` or use the **exFAT** file system. When saving images, the module automatically creates a default save path named `Grove Vision AI (V2) Export` if it doesn't already exist.
 
 :::info attention
+
 - Make sure the firmware version is greater than 4/18/2024.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/jpeg_format_sd.png" alt="filesystem" width={220} height="auto" /></p>
 
-Within this save path, a new folder is created for each boot session when the save action is triggered, and the folder name is an incremented number. The latest folder name is stored in a hidden file named `.sscma` in the save path, which *should not be modified by the user* to avoid potential errors. 
+Within this save path, a new folder is created for each boot session when the save action is triggered, and the folder name is an incremented number. The latest folder name is stored in a hidden file named `.sscma` in the save path, which *should not be modified by the user* to avoid potential errors.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/export_files.png" alt="export files" width={480} height="auto" /></p>
 
@@ -540,8 +540,8 @@ player = ImagePlayer(parent_directory, switch_time=0.3)  # Customize the image s
 # Start the image player
 player.start()
 ```
-</details>
 
+</details>
 
 When you call `save_jpeg()`, it means you send a AT command `AT+ACTION="save_jpeg()"` to the Grove Vision AI V2 module.
 And you should call it only once.
@@ -561,6 +561,7 @@ void setup()
 ```
 
 ### Complete Code
+
 <Tabs groupId="grove_connect">
 <TabItem value="i2c" label="Grove(I2C)" >
 
@@ -679,19 +680,19 @@ if not working, plz check if the SD card is formatted and inserted correctly.
 </Tabs>
 
 <table align="center">
-	<tr>
-	    <th>Connect devices</th>
-	    <th>Upload firmware</th>
+ <tr>
+     <th>Connect devices</th>
+     <th>Upload firmware</th>
       <th>Monitor</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_connect.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/save_image_code.png" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_connect.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/save_image_code.png" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/save_image_monitor.png" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
 </table>
 
-##  Base64 to JPEG Image {#base64tojpeg}
+## Base64 to JPEG Image {#base64tojpeg}
 
 There are two ways to get the decoded image when you try to get the JPEG image in programming:
 
@@ -795,6 +796,7 @@ void loop() {
   }
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -823,6 +825,7 @@ By leveraging the power of the SDK, users can unlock the full potential of the G
 ### What is the function of invoke? {#faq_invoke}
 
 Every time to get the data value from Grove Vision V2, it is supposed to call the  `invoke` function:
+
 ```cpp
 /**
  * @brief Invoke the algorithm for a specified number of times
@@ -848,10 +851,12 @@ int SSCMA::invoke(int times, bool filter, bool show);
 
 :::info
 If you use `SSCMA.begin()`, it defaults to using I2C (Wire) for communication, as defined in the function header:
+
 ```cpp
 bool begin(TwoWire *wire = &Wire, int32_t rst = -1, uint16_t address = I2C_ADDRESS,
       uint32_t wait_delay = 2, uint32_t clock = SSCMA_IIC_CLOCK);
 ```
+
 :::
 
 ## Resources

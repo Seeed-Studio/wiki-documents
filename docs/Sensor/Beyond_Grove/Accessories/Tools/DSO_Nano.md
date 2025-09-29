@@ -31,55 +31,46 @@ A photo from inside the V2 was posted to the [forum](https://community.seeedstud
 
 <table >
 <tr>
-<td> CPU
-</td>
-<td> ARM Cortex™-M3 (STM32F103VBT6)
-</td></tr>
+<td> CPU</td>
+<td> ARM Cortex™-M3 (STM32F103VBT6)</td>
+</tr>
 <tr>
-<td> RAM
-</td>
-<td> 20k
-</td></tr>
+<td> RAM</td>
+<td> 20k</td>
+</tr>
 <tr>
-<td> Flash ROM
-</td>
-<td> 128k
-</td></tr>
+<td> Flash ROM</td>
+<td> 128k</td>
+</tr>
 <tr>
-<td> Clock frequency
-</td>
-<td> 72MHz
-</td></tr>
+<td> Clock frequency</td>
+<td> 72MHz</td>
+</tr>
 <tr>
-<td> Display
-</td>
-<td> 2.8″ Color TFT LCD
-</td></tr>
+<td> Display</td>
+<td> 2.8″ Color TFT LCD</td>
+</tr>
 <tr>
-<td> Display Resolution
-</td>
-<td> 320×240
-</td></tr>
+<td> Display Resolution</td>
+<td> 320×240</td>
+</tr>
 <tr>
-<td> Display Color
-</td>
-<td> 65K
-</td></tr>
+<td> Display Color</td>
+<td> 65K</td>
+</tr>
 <tr>
-<td> PC connection via USB
-</td>
-<td> as SD card reader
-</td></tr>
+<td> PC connection via USB</td>
+<td> as SD card reader</td>
+</tr>
 <tr>
-<td> Upgrade
-</td>
-<td> by bootloader via USB
-</td></tr>
+<td> Upgrade</td>
+<td> by bootloader via USB</td>
+</tr>
 <tr>
-<td> Power supply
-</td>
-<td> 3.7V Chargeable lithium battery / USB (LTC4054 charger controller)
-</td></tr></table>
+<td> Power supply</td>
+<td> 3.7V Chargeable lithium battery / USB (LTC4054 charger controller)</td>
+</tr>
+</table>
 
 ##   Upgrading the firmware
 ---
@@ -96,120 +87,98 @@ To upgrade the firmware to the latest version, you have a few options:
 ---
 <table >
 <tr>
-<td> Analog bandwidth
-</td>
-<td> 0 - 1MHz
-</td></tr>
+<td> Analog bandwidth</td>
+<td> 0 - 1MHz</td>
+</tr>
 <tr>
-<td> Max sample rate
-</td>
-<td> 1Msps 12Bits
-</td></tr>
+<td> Max sample rate</td>
+<td> 1Msps 12Bits</td>
+</tr>
 <tr>
-<td> Sample memory depth
-</td>
-<td> 4096 Point
-</td></tr>
+<td> Sample memory depth</td>
+<td> 4096 Point</td>
+</tr>
 <tr>
-<td> Horizontal sensitivity
-</td>
-<td> 1μS/Div～10S/Div (1-2-5 Step)
-</td></tr>
+<td> Horizontal sensitivity</td>
+<td> 1μS/Div～10S/Div (1-2-5 Step)</td>
+</tr>
 <tr>
-<td> Horizontal position
-</td>
-<td> adjustable with indicator
-</td></tr>
+<td> Horizontal position</td>
+<td> adjustable with indicator</td>
+</tr>
 <tr>
-<td> Vertical sensitivity
-</td>
-<td> 10mV/Div～10V/Div (with ×1 probe)
-</td></tr>
+<td> Vertical sensitivity</td>
+<td> 10mV/Div～10V/Div (with ×1 probe)</td>
+</tr>
 <tr>
-<td>
-</td>
-<td> 0.5V/Div～100V/Div (with ×10 probe)
-</td></tr>
+<td></td>
+<td> 0.5V/Div～100V/Div (with ×10 probe)</td>
+</tr>
 <tr>
-<td> Vertical position
-</td>
-<td> adjustable with indicator
-</td></tr>
+<td> Vertical position</td>
+<td> adjustable with indicator</td>
+</tr>
 <tr>
-<td> Input impedance
-</td>
-<td> &gt;500KΩ
-</td></tr>
+<td> Input impedance</td>
+<td> &gt;500KΩ</td>
+</tr>
 <tr>
-<td> Max input voltage
-</td>
-<td> 80Vpp (by ×1 probe)
-</td></tr>
+<td> Max input voltage</td>
+<td> 80Vpp (by ×1 probe)</td>
+</tr>
 <tr>
-<td> Coupling
-</td>
-<td> DC
-</td></tr>
+<td> Coupling</td>
+<td> DC</td>
+</tr>
 <tr>
-<td> Trig modes
-</td>
-<td> Auto, Normal, Single, None and Scan
-</td></tr>
+<td> Trig modes</td>
+<td> Auto, Normal, Single, None and Scan</td>
+</tr>
 <tr>
-<td> Functionalities:
-</td>
-<td> Automatic measurement: frequency, cycle, duty,
-</td></tr>
+<td> Functionalities:</td>
+<td> Automatic measurement: frequency, cycle, duty,</td>
+</tr>
 <tr>
-<td>
-</td>
-<td> V<sub>pp</sub>, V<sub>ram</sub>, V<sub>avg</sub> and DC voltage
-</td></tr>
+<td></td>
+<td> V<sub>pp</sub>, V<sub>ram</sub>, V<sub>avg</sub> and DC voltage</td>
+</tr>
 <tr>
-<td>
-</td>
-<td> Precise vertical measurement with markers
-</td></tr>
+<td></td>
+<td> Precise vertical measurement with markers</td>
+</tr>
 <tr>
-<td>
-</td>
-<td> Precise horizontal measurement with markers
-</td></tr>
+<td></td>
+<td> Precise horizontal measurement with markers</td>
+</tr>
 <tr>
-<td>
-</td>
-<td> Rising/falling edge trigger
-</td></tr>
+<td></td>
+<td> Rising/falling edge trigger</td>
+</tr>
 <tr>
-<td>
-</td>
-<td> Trig level adjustable with indicator
-</td></tr>
+<td></td>
+<td> Trig level adjustable with indicator</td>
+</tr>
 <tr>
-<td>
-</td>
-<td> Trig sensitivity adjustable with indicator
-</td></tr>
+<td></td>
+<td> Trig sensitivity adjustable with indicator</td>
+</tr>
 <tr>
-<td>
-</td>
-<td> Hold/run feature
-</td></tr>
+<td></td>
+<td> Hold/run feature</td>
+</tr>
 <tr>
-<td> Test signal
-</td>
-<td> Built-in 10Hz～1MHz (1-2-5 Step)
-</td></tr>
+<td> Test signal</td>
+<td> Built-in 10Hz～1MHz (1-2-5 Step)</td>
+</tr>
 <tr>
-<td> Waveform storage
-</td>
-<td> SD card
-</td></tr>
+<td> Waveform storage</td>
+<td> SD card</td>
+</tr>
 <tr>
-<td> PC connection via USB
-</td>
-<td> as SD card reader
-</td></tr></table>
+<td> PC connection via USB</td>
+<td> as SD card reader</td>
+</tr>
+</table>
 
 ##   Resources
 ---

@@ -160,7 +160,7 @@ Build your own Wifi Scanner with few simple steps, all you need to do is prepare
 [So, why not make one for yourself?](https://community.seeedstudio.com/project_detail.html?id=220)
 
 
-**Primary IoT Make with NodeMcu >ESP8266<**
+**Primary IoT Make with NodeMcu &gt;ESP8266&lt;**
 
 ![](https://files.seeedstudio.com/wiki/WiFi_Serial_Transceiver_Module/img/Recipe-Primary_IoT_Make_with_NodeMcu--ESP8266--.jpg)
 

@@ -28,8 +28,7 @@ The **Grove - Mini Fan** module is a DC motor driver based on the AVR Atmega168 
 * Micro-controller runs Arduino Compatible code
 * Change code to drive Servo motors instead of DC motors
 * Uses Standard 4-pin Grove Cables to connect to other Grove modules
-* <div>
-
+<div>
   <span style={{color: 'red'}}>Note:</span>for latest version(v1.1), the output voltage for motor is updated to 3.3 volts.
 </div>
 
@@ -38,13 +37,14 @@ The **Grove - Mini Fan** module is a DC motor driver based on the AVR Atmega168 
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-Mini_Fan/img/Mini_fan.jpg)
 
-<dl><dt>① UartSBee Interface: Use this interface to change the microcontroller code. Use a [UartSBee](/UartSBee_V4) module to connect to the microcontroller using the Uart interface.
-</dt><dt>② JST 2.0 Interface: Used to connect to a 3.3 volts DC motor(only 3.3 volts)
-</dt><dt>③ Grove Interface
-</dt><dt>④ ICSP Interface
-</dt><dt>⑤ Atmega168 Microcontroller
-</dt><dt>⑥ Servo Interface
-</dt></dl>
+<dl>
+  <dt>① UartSBee Interface: Use this interface to change the microcontroller code. Use a [UartSBee](/UartSBee_V4) module to connect to the microcontroller using the Uart interface.</dt>
+  <dt>② JST 2.0 Interface: Used to connect to a 3.3 volts DC motor(only 3.3 volts)</dt>
+  <dt>③ Grove Interface</dt>
+  <dt>④ ICSP Interface</dt>
+  <dt>⑤ Atmega168 Microcontroller</dt>
+  <dt>⑥ Servo Interface</dt>
+</dl>
 
 ## Usage
 

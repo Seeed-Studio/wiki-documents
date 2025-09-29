@@ -24,6 +24,7 @@ The firmware update is particularly applicable in two scenarios:
 2. If you have developed an application and wish to flash a custom firmware, you can follow [the tutorial provided below](#flash-esp32-s3-frimware-using-espressif-idf).
 
 Briefly, you need this tutorial since:
+
 1. You have a firmware that you need to flash into the ESP32-S3 or RP2040.
 2. You've modified the code, and need to compile it and flash it to the device.
 
@@ -42,8 +43,7 @@ The default shipping firmware of the SenseCAP Indicator is fully open source for
 :::tip You have two options to get the Out of the Box Firmware:
 
 - **Source code:** Before flashing it, you have the option to modify the code as per your requirements. You will need a toolchain([ESP-IDF](#ESP-IDF), [Arduino](#RP_Arduino)) to **compile** it.
-- **Firmware:** Directly flash the pre-compiled binary file without the need for any code modification or compilation. Using tools like [Esptool](#ESPTOOL) and
-[Flash Download Tools](#Flash_Tools).
+- **Firmware:** Directly flash the pre-compiled binary file without the need for any code modification or compilation. Using tools like [Esptool](#ESPTOOL) and [Flash Download Tools](#Flash_Tools).
 :::
 
 **Source Code**
@@ -106,6 +106,7 @@ Navigate yourself to [Using the Command Promp](https://docs.espressif.com/projec
   ```
 
 **Navigate to esp-idf directory**:
+
 1. Run `./install.sh esp32s3`, to add ESP32-S3 support (needed for SenseCAP indicator)
 2. type `./export.sh` to set up the PATH and IDF_PATH variables in the current terminal session.
 
@@ -160,7 +161,6 @@ Please be aware that the provided scripts are tailored for Windows operating sys
 :::
 
 The merge.bat script is particularly useful as it intelligently consolidates the bootloader, partition table, and indicator basis binaries into a single firmware file. Once merged, this firmware can be seamlessly flashed onto the ESP32-S3 using the flash.bat script. When prompted, input the COM port corresponding to your device, and the flashing process will initiate. The complete operation can be summarized as follows:
-
 
 ```sh title="merge.bat"
 esptool.exe --chip esp32s3 ^
@@ -262,6 +262,7 @@ For flashing firmware, you can use the provided `flash.bat` script. This script 
 </details>
 
 #### Merging Binaries
+
 The provided `merge.bat` script can be used to merge the necessary binary files into one firmware file. This script simplifies the process and ensures correct merging for successful flashing, which allows you to flash a sigal bin file as not to [flash separate files](#Address_Note).
 
 <details>
@@ -310,26 +311,27 @@ Follow the steps to flash a pre-compiled firmware:
     </tr>
     <tr>
         <td>
-        <div style={{textAlign: 'center'}}><strong>Chip Type</strong></div>
+            <div style={{textAlign: 'center'}}><strong>Chip Type</strong></div>
         </td>
-        <td><div  style={{textAlign: 'center'}}>ESP32-S3</div>
+        <td>
+            <div style={{textAlign: 'center'}}>ESP32-S3</div>
         </td>
     </tr>
     <tr>
-      <td>
-      <div  style={{textAlign: 'center'}}> <strong>WorkMode</strong></div>
-      </td>
-      <td>
-      <div  style={{textAlign: 'center'}}> Develop </div>
-      </td>
+        <td>
+            <div style={{textAlign: 'center'}}><strong>WorkMode</strong></div>
+        </td>
+        <td>
+            <div style={{textAlign: 'center'}}>Develop</div>
+        </td>
     </tr>
     <tr>
-      <td>
-      <div  style={{textAlign: 'center'}}> <strong>LoadMode</strong></div>
-      </td>
-      <td>
-      <div  style={{textAlign: 'center'}}> UART </div>
-      </td>
+        <td>
+            <div style={{textAlign: 'center'}}><strong>LoadMode</strong></div>
+        </td>
+        <td>
+            <div style={{textAlign: 'center'}}>UART</div>
+        </td>
     </tr>
   </table>
 </div>
@@ -340,7 +342,7 @@ Follow the steps to flash a pre-compiled firmware:
 
 - **Step 4**: In the SPI Download Tab and Click "..." and navigate to the firmware you just downloaded.
 
-* **Step 5**: Configure SPI Flash:
+- **Step 5**: Configure SPI Flash:
 
 <div class="table-center">
   <table align="center">
@@ -350,18 +352,19 @@ Follow the steps to flash a pre-compiled firmware:
     </tr>
     <tr>
         <td>
-        <div style={{textAlign: 'center'}}><strong>SPI SPEED</strong></div>
+            <div style={{textAlign: 'center'}}><strong>SPI SPEED</strong></div>
         </td>
-        <td><div  style={{textAlign: 'center'}}>40MHz</div>
+        <td>
+            <div style={{textAlign: 'center'}}>40MHz</div>
         </td>
     </tr>
     <tr>
-      <td>
-      <div  style={{textAlign: 'center'}}> <strong>SPI MODE</strong></div>
-      </td>
-      <td>
-      <div  style={{textAlign: 'center'}}> DIO </div>
-      </td>
+        <td>
+            <div style={{textAlign: 'center'}}><strong>SPI MODE</strong></div>
+        </td>
+        <td>
+            <div style={{textAlign: 'center'}}>DIO</div>
+        </td>
     </tr>
   </table>
 </div>
@@ -417,8 +420,12 @@ Open your Arduino IDE, click on **Arduino IDE** > **Preferences**, and copy t
 <div class="table-center">
   <table align="center">
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_29.png" style={{width:680, height:'auto'}}/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_80.png" style={{width:680, height:'auto'}}/></div></td>
+        <td>
+            <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_29.png" style={{width:680, height:'auto'}}/></div>
+        </td>
+        <td>
+            <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_80.png" style={{width:680, height:'auto'}}/></div>
+        </td>
     </tr>
   </table>
 </div>
@@ -434,12 +441,13 @@ Search "indicator" and install "Raspberry Pi Pico/RP2040" in the Boards Manager
 - **Step 3**: Add Libraries
 
 :::note **Libraries for reference**
-* Sensirion Core: [Sensirion Arduino Core library](https://github.com/Sensirion/arduino-core)
-* PacketSerial : [Serial communication protoco](https://github.com/bakercp/PacketSerial)
-* Sensirion I2C SGP40 : [SGP40 TVOC sensor library](https://github.com/Sensirion/arduino-i2c-sgp40)
-* Sensirion I2C SCD4x : [SCD41 CO2 sensor library](https://github.com/Sensirion/arduino-i2c-scd4x)
-* Sensirion Gas Index Algorithm : [Transfer index library](https://github.com/Sensirion/arduino-gas-index-algorithm)
-*  Seeed_Arduino_AHT20 : [AHT20 temperature and humidity sensor library](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20)
+
+- Sensirion Core: [Sensirion Arduino Core library](https://github.com/Sensirion/arduino-core)
+- PacketSerial : [Serial communication protoco](https://github.com/bakercp/PacketSerial)
+- Sensirion I2C SGP40 : [SGP40 TVOC sensor library](https://github.com/Sensirion/arduino-i2c-sgp40)
+- Sensirion I2C SCD4x : [SCD41 CO2 sensor library](https://github.com/Sensirion/arduino-i2c-scd4x)
+- Sensirion Gas Index Algorithm : [Transfer index library](https://github.com/Sensirion/arduino-gas-index-algorithm)
+- Seeed_Arduino_AHT20 : [AHT20 temperature and humidity sensor library](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20)
 :::
 
 In the Arduino IDE, you can search for it in the `Library Manager`, e.g. `Seeed_Arduino_AHT20`, and then install it.
@@ -462,9 +470,13 @@ Search "Indicator" and select `Seeed INDICATOR RP2040` board and select the `usb
 <div class="table-center">
   <table align="center">
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/board.png" style={{width:680, height:'auto'}}/></div></td>
+        <td>
+            <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/board.png" style={{width:680, height:'auto'}}/></div>
+        </td>
     </tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/portport.png" style={{width:680, height:'auto'}}/></div></td>
+     <td>
+        <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/portport.png" style={{width:680, height:'auto'}}/></div>
+    </td>
   </table>
 </div>
 
@@ -477,16 +489,23 @@ We provide an example code file, you can modify the code according to your needs
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_35.png"/></div>
 
 - **Step 7**: Verify and Upload the file.
+
 <div class="table-center">
   <table align="center">
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_36.png" style={{width:680, height:'auto'}}/></div></td>
+        <td>
+            <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_36.png" style={{width:680, height:'auto'}}/></div>
+        </td>
     </tr>
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_37.png" style={{width:680, height:'auto'}}/></div></td>
+        <td>
+            <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_37.png" style={{width:680, height:'auto'}}/></div>
+        </td>
     </tr>
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_38.png"style={{width:680, height:'auto'}}/></div></td>
+        <td>
+            <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_38.png" style={{width:680, height:'auto'}}/></div>
+        </td>
     </tr>
   </table>
 </div>
@@ -508,7 +527,6 @@ After the connection is successful, your PC will show a disk.
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/disk.png"/></div>
 
 Copy the [.uf2](https://github.com/Seeed-Solution/sensecap_indicator_rp2040/releases/download/v1.0.0/terminal_rp2040_v1.0.0.uf2) file to the disk, then the disk will log out.
-
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/uf2.png"/></div>
 
@@ -556,7 +574,7 @@ The command format consists of the packet type and packet parameters.
 
 # **Recent Updates**
 
-- 2023-11-17 
+- 2023-11-17
   - Removed patching section
 - 2023-08-25
   - Make Patching section more clear

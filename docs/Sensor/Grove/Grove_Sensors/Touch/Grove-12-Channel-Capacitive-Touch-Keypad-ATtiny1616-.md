@@ -40,8 +40,10 @@ All in all, the Grove 12 button Capacitive Touch Keypad is an easy-to-use module
 
 <div align="center">
 <figure>
-  <a href="https://files.seeedstudio.com/wiki/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/img/pinmap.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/img/pinmap.jpg" alt="Touch Keypad hardware" title="hardware overview" />
-  <figcaption><b>Figure 1</b>. <i>Hardware overview</i></figcaption></a>
+  <a href="https://files.seeedstudio.com/wiki/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/img/pinmap.jpg" target="_blank">
+    <img src="https://files.seeedstudio.com/wiki/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/img/pinmap.jpg" alt="Touch Keypad hardware" title="hardware overview" />
+    <figcaption><b>Figure 1</b>. <i>Hardware overview</i></figcaption>
+  </a>
 </figure>
 </div>
 
@@ -196,7 +198,7 @@ void printData() {
 
 - **Step 4.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the `ctrl`+`shift`+`m` key at the same time. Set the baud rate to **9600**.
 
-:::tipsuccess
+:::tip
 Now, touch the keypad, then the monitor will output the corresponding key.
 :::
 
@@ -310,7 +312,7 @@ python grove_12_channel_touch_keypad.py
 
 ```
 
-:::tipsuccess
+:::tip
     Then touch the keycap, the terminal will output the corresponding key.
 :::
 

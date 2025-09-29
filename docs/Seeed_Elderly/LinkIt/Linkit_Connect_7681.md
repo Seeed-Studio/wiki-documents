@@ -12,7 +12,7 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/Linkit_Connect_7681/img/Linkit_Connect_7681.jpg)
 
-:::dangernote
+:::danger
 Due to the closure of MediaTek Labs, all related links have become invalid. If you need to download relevant files, please search for them on the following link: [https://github.com/MediaTek-Labs](https://github.com/MediaTek-Labs).
 :::
 

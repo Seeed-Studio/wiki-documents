@@ -182,11 +182,13 @@ Pin definition and Rating
 <tr class="even">
 <td>High level (OFF)</td>
 <td>High level (OFF)</td>
-<td>Two situations:
+<td>
+Two situations:
 <ul>
 <li>Input voltage lower than gate voltage</li>
 <li>The input voltage lower than battery voltage</li>
-</ul></td>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>

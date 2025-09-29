@@ -105,52 +105,38 @@ In the simplest configuration the hardware only requires four connections (PWR, 
 ### LED Status Indicators
 
 <table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Label</th>
-<th>Description</th>
-<th>Status</th>
-<th>Hardware Connection</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D5</td>
-<td>Green LED. Indicates the association status.</td>
-<td><strong>OFF:</strong> means the module is not associated with a network.<br />
-<strong>Solid ON:</strong> indicates that it is associated and Internet access is OK</td>
-<td>Connected to GPIO6 of the RN171 module</td>
-</tr>
-<tr class="even">
-<td>D1</td>
-<td>Red LED. Indicates the TCP/IP connection status.</td>
-<td><strong>Solid ON:</strong> connected over TCP.<br />
-
-<p><strong>Fast Toggle (2 times/second):</strong> No IP address or module is in command mode.<br />
-</p>
-<p><strong>Slow Toggle (once/second):</strong> IP address is OK.</p></td>
-<td>Connected to GPIO4 of the RN171 module</td>
-</tr>
-<tr class="odd">
-<td>RST</td>
-<td>Red LED. WiFi module reset status.</td>
-<td><strong>Solid ON:</strong> The reset button (WIFI_RST) is been pressed.<br />
-</td>
-<td>Connected to Reset of the RN171 module.</td>
-</tr>
-<tr class="even">
-<td>PWR</td>
-<td>Green LED. Indicates WiFi module's power up status.</td>
-<td><strong>Solid ON:</strong>The module/shield is powered up.</td>
-<td>Connected to the 3.3V output of the LD1117 voltage regulator.</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <td>Label</td>
+      <td>Description</td>
+      <td>Status</td>
+      <td>Hardware Connection</td>
+    </tr>
+    <tr>
+      <td>D5</td>
+      <td>Green LED. Indicates the association status.</td>
+      <td><strong>OFF</strong>: means the module is not associated with a network.<br/><strong>Solid ON</strong>: indicates that it is associated and Internet access is OK</td>
+      <td>Connected to GPIO6 of the RN171 module</td>
+    </tr>
+    <tr>
+      <td>D1</td>
+      <td>Red LED. Indicates the TCP/IP connection status.</td>
+      <td><strong>Solid ON</strong>: connected over TCP.<br/><strong>Fast Toggle (2 times/second)</strong>: No IP address or module is in command mode.<br/><strong>Slow Toggle (once/second)</strong>: IP address is OK.</td>
+      <td>Connected to GPIO4 of the RN171 module</td>
+    </tr>
+    <tr>
+      <td>RST</td>
+      <td>Red LED. WiFi module reset status.</td>
+      <td><strong>Solid ON</strong>: The reset button (WIFI_RST) is been pressed.</td>
+      <td>Connected to Reset of the RN171 module.</td>
+    </tr>
+    <tr>
+      <td>PWR</td>
+      <td>Green LED. Indicates WiFi module's power up status.</td>
+      <td><strong>Solid ON</strong>:The module/shield is powered up.</td>
+      <td>Connected to the 3.3V output of the LD1117 voltage regulator.</td>
+    </tr>
+  </tbody>
 </table>
 
 WiFi Library
@@ -223,9 +209,9 @@ Here's an example.
 
 As for the code, you need to do some change as well:
 
-````c
+```c
 SoftwareSerial uart(10, 3); // create a serial connection to the WiFi shield TX and RX pins.
-````
+```
 
 #### receive()
 
@@ -339,13 +325,13 @@ The WiFly RN-171 module in the WiFi shield can operate in two modes: data, and c
 To enter command mode, follow these steps:
 
 1. Open the Arduino Serial monitor.
-2. Set the serial monitor to “No line ending”, baud rate to 9600.
+2. Set the serial monitor to "No line ending", baud rate to 9600.
 3. Type "$$$" into the Arduino Serial Monitor and press enter.
-4. The module will respond with the letters “CMD”, indicating that it has entered command mode.
+4. The module will respond with the letters "CMD", indicating that it has entered command mode.
 
 Let's go ahead and test some commands, do the following:
 
-1. In the Arduino Serial monitor window, select “Carriage return” and a baud rate of 9600.
+1. In the Arduino Serial monitor window, select "Carriage return" and a baud rate of 9600.
 2. Now type each of the commands in the table below into the Arduino Serial Monitor and press enter.
 3. The module will output a response, as described in the table, for each command.
 
@@ -368,10 +354,10 @@ Do the following:
 
 1. Upload the code in Example One to your Arduino board
 2. **Enter command mode:**
-    1. Set the serial monitor to “No line ending”, baud rate to 9600.
+    1. Set the serial monitor to "No line ending", baud rate to 9600.
     2. Type *$$$* into the Arduino Serial Monitor and press enter.
 
-3. Set the serial monitor to “Carriage return”.
+3. Set the serial monitor to "Carriage return".
 4. **Scan for available access points:**
     1. Type *scan* and press enter. The Arduino serial monitor window will output a list of comma separated values for each access point the WiFi shield has found. From left to right the third value is the security mode, the last value is the SSID. This example shows a security mode of 4 with an SSID name MySSID: 01,01,-88,**04**,1104,1c,00,45:56:78:be:93:1f,**MySSID**
 
@@ -401,9 +387,9 @@ A description of the commands you entered in the steps above is available in the
 | Number | Commands                  | Description                                                                                                                                                                                                                                                                          |
 |--------|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1      | scan                      | This command performs an active probe scan of access points on all 13 channels. When you use this command, the module returns the MAC address, signal strength, SSID name, and security mode of the access points it finds.                                                          |
-| 2      | set wlan auth 4           | Find the value that corresponds to the security protocol on your access point. Then, tell the WiFly what security protocol to use, it is the number shown in **Figure 1** that corresponds to the access point's security protocol. Here we choose “4”.                              |
+| 2      | set wlan auth 4           | Find the value that corresponds to the security protocol on your access point. Then, tell the WiFly what security protocol to use, it is the number shown in **Figure 1** that corresponds to the access point's security protocol. Here we choose "4".                              |
 | 3      | set wlan phrase seeed-mkt | Tell the WiFi shield your passphrase.                                                                                                                                                                                                                                                |
-| 4      | join SEEED-MKT            | Tell the WiFi shield to join, “SEEED-MKT“ is the name of the access point we choose to connect. After sending the command the module should now connect and print out information about the connection. (If the connection is failed, try to send the command again until it works ) |
+| 4      | join SEEED-MKT            | Tell the WiFi shield to join, "SEEED-MKT" is the name of the access point we choose to connect. After sending the command the module should now connect and print out information about the connection. (If the connection is failed, try to send the command again until it works ) |
 
 | Value | Authentication Mode                   |
 |-------|---------------------------------------|
@@ -422,7 +408,7 @@ A description of the commands you entered in the steps above is available in the
 
 Now that you know how to connect to an access point by typing each command it's time to use the libraries and examples we provide.
 
-To see code required to connect to an access point go to “File -> Examples -> Wifi_Shield -> wifi_test”. Change the code to use your own SSID (access point name), and KEY (your access point's password), then upload the sketch to your Arduino IDE.
+To see code required to connect to an access point go to "File -> Examples -> Wifi_Shield -> wifi_test". Change the code to use your own SSID (access point name), and KEY (your access point's password), then upload the sketch to your Arduino IDE.
 
     #define SSID      " SEEED-MKT "
     #define KEY       " seeed-mkt "
@@ -685,6 +671,9 @@ void setup()
     wifly.sendCommand("set comm open *OPEN*\r"); // set the string that the wifi shield will output when a connection is opened
     delay(100);
 
+    wifly.sendCommand("set ip protocol 2\r"); // set TCP protocol
+    delay(100);
+
     Serial.println("Join " SSID );
     if (wifly.join(SSID, KEY, AUTH)) {
         Serial.println("OK");
@@ -859,7 +848,7 @@ Download the Android Studio project/source form this [link:](https://files.seeed
 
 The RN-171 module in the WiFi shield has the ability to act as an HTML client (a text based web browser essentially), this means that we can use the shield to send and receive data from a web server. In this example you will learn to use the shield with a web Application Programming Interface (API) that displays any city's weather data (i.e. temperature, humidity, etc).
 
-The name of the API we'll use is [OpenWeatherMap](http://openweathermap.org/api), when you send the name of a city and country to this website it returns a JSON string with weather information.  If you want to display the weather for London UK for example, please refer to the toturial in this link <http://openweathermap.org/appid> .Starting from 9 Oct 2015, the website requires users to sign up for a API key before visiting the API. Once you have got the API key, you will be able to visit the following URL <http://api.openweathermap.org/data/2.5/weather?q=London>,uk which would return a JSON string like the following, where the weather data and other information is embedded.
+The name of the API we'll use is [OpenWeatherMap](http://openweathermap.org/api), when you send the name of a city and country to this website it returns a JSON string with weather information.  If you want to display the weather for London UK for example, please refer to the toturial in this link [http://openweathermap.org/appid](http://openweathermap.org/appid) .Starting from 9 Oct 2015, the website requires users to sign up for a API key before visiting the API. Once you have got the API key, you will be able to visit the following URL [http://api.openweathermap.org/data/2.5/weather?q=London,uk](http://api.openweathermap.org/data/2.5/weather?q=London,uk) which would return a JSON string like the following, where the weather data and other information is embedded.
 
 ```
 {
@@ -1277,11 +1266,11 @@ A3: Do not place plastic or any other dielectric material in touch with the ante
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

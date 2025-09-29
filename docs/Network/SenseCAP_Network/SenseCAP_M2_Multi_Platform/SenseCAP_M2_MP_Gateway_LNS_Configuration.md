@@ -4,6 +4,7 @@ title: SenseCAP M2 Multi-Platform Gateway LNS Configuration
 keywords:
 - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration
 last_update:
   date: 08/29/2023
   author: Jessie
@@ -14,17 +15,15 @@ last_update:
 
 Configure the gateway via the Web UI, please check the [Quick Start](https://files.seeedstudio.com/products/SenseCAP%20M2/Quick%20Start%20for%20SenseCAP%20M2%20Multi-Platfrom%20Gateway%20&%20Sensors.pdf) to log into Luci.
 
-
 ### Channel Plan Settings
 
-Navigate to `LoRa` > `Channel Plan` 
+Navigate to `LoRa` > `Channel Plan`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP3.png" alt="pir" width={800} height="auto" /></p>
 
 Select the Region and Frequency plan.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP4.png" alt="pir" width={800} height="auto" /></p>
-
 
 After setting, click `Save&Apply`
 
@@ -44,18 +43,15 @@ Click `Save&Apply` to apply your settings.
 It will take about 1 min to start the process , then you can access the GUI configuration.
 :::
 
-
 ## ChirpStack GUI Configuration
 
 Login to the ChirpStack GUI via `http://localhost:8080`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP.png" alt="pir" width={800} height="auto" /></p>
 
-
 The default account and password: `admin`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP5.png" alt="pir" width={800} height="auto" /></p>
-
 
 Then you will see the dashboard page.
 
@@ -75,7 +71,6 @@ There should be a Region ID, click it and confirm the info, it should be same as
 Navigate to `Tenant` > `Device Profiles`, and click `Add Profile`.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP9.png" alt="pir" width={800} height="auto" /></p>
 
-
 **MAC version**: LoRaWAN 1.0.3
 
 **Regional parameters reversion**: A
@@ -85,8 +80,6 @@ Navigate to `Tenant` > `Device Profiles`, and click `Add Profile`.
 **Expected uplink interval**: Customize, default 3600s
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP10.png" alt="pir" width={800} height="auto" /></p>
-
-
 
 Navigate to `Codec`, and select `JavaScript functions`, copy the [SenseCAP Decoder for TTN](https://github.com/Seeed-Solution/SenseCAP-Decoder) and submit it.
 
@@ -98,12 +91,9 @@ Navigate to `Gateway`, and click `Add Gateway`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP11.png" alt="pir" width={800} height="auto" /></p>
 
-
 Define the Name and Gateway ID(you can click  to randomly generate the ID), then submit it.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP13.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Add Device
 
@@ -117,17 +107,13 @@ Navigate to your application, and click `Add device`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP14.png" alt="pir" width={800} height="auto" /></p>
 
-
-
 Paste your device EUI and select the device profile we added before, then submit it.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP15.png" alt="pir" width={800} height="auto" /></p>
 
-
 Paste the Application key and click submit.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP16.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Check the device status
 
@@ -143,13 +129,14 @@ You can also check the packet details.
 
 This chapter is for cloud service development, the following guideline is for reference.
 
-### MQTT 
+### MQTT
 
 #### Topic
 
-The MQTT integration exposes all events as documented by Event types. 
+The MQTT integration exposes all events as documented by Event types.
 
-The default event topic is: 
+The default event topic is:
+
 ```cpp
 application/APPLICATION_ID/device/DEV_EUI/event/EVENT
 ```
@@ -176,22 +163,21 @@ You can find the Application id on your application tab:
 `+` means to receive all messages
 :::
 
-**Example**: 
+**Example**:
 
-* To receive uplink messages from all devices under a certain gateway:
+- To receive uplink messages from all devices under a certain gateway:
 
 ```cpp
 gateway/<GATEWAY_EUI>/device/+/event/up
 ```
 
-* To receive all messages from all devices under the application:
+- To receive all messages from all devices under the application:
 
 ```cpp
 application/+/device/+/event/+
 ```
 
-
-* To receive all device messages from all gateways:
+- To receive all device messages from all gateways:
 
 ```cpp
 gateway/+/device/+/event/+
@@ -205,19 +191,18 @@ You can check the `gatewayid` to distinguish the gateways.
 
 When the object.valid is true, means the data analysis is successful, then you can traverse the object.messages, and extract the data type you need.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP20.png" alt="pir" width={800} height="auto" /></p>
 
 1) Up event for SenseCAP LoRaWAN S210X Sensors payload example description:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP21.png" alt="pir" width={800} height="auto" /></p>
 
-- `upload\_battery`: Battery
-- `upload\_interval`: upload interval, unit: Second
-- `upload\_version`: Hardware/Firmware Version
-- `report\_telemetry`: Measurement value
+- `upload_battery`: Battery
+- `upload_interval`: upload interval, unit: Second
+- `upload_version`: Hardware/Firmware Version
+- `report_telemetry`: Measurement value
 
-The `measurementId` in the ‘report\_telemetry’ message please check [SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) for more details.
+The `measurementId` in the ‘report_telemetry’ message please check [SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) for more details.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP22.png" alt="pir" width={800} height="auto" /></p>
 
@@ -225,14 +210,13 @@ The `measurementId` in the ‘report\_telemetry’ message please check [SenseCA
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP23.png" alt="pir" width={600} height="auto" /></p>
 
-The `measurementId` in the ‘report\_telemetry’ message please check [SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) for more details.
+The `measurementId` in the ‘report_telemetry’ message please check [SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) for more details.
 
-
- ### HTTP 
+### HTTP
 
 Click `+` in the HTTP tab to add a new HTTP integration.
 
-LNS will send messages as POST to the configured URL. 
+LNS will send messages as POST to the configured URL.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP24.png" alt="pir" width={800} height="auto" /></p>
 
@@ -246,7 +230,6 @@ Support http only, not https.
 
 The HTTP integration will make POST requests to the configured event endpoint or endpoints (multiple URLs can be configured, comma separated). The event URL query parameter indicates the type of the event.
 
-
 The HTTP integration exposes all events as documented by [Event Type](https://www.chirpstack.io/docs/chirpstack/integrations/events.html).
 
 **Example**:
@@ -257,11 +240,11 @@ The HTTP integration exposes all events as documented by [Event Type](https://ww
 ```cpp
 from http.server import HTTPServer, BaseHTTPRequestHandler 
 
-from urllib.parse import urlparse, parse\_qs 
+from urllib.parse import urlparse, parse_qs 
 
-from chirpstack\_api import integration 
+from chirpstack_api import integration 
 
-from google.protobuf.json\_format import Parse 
+from google.protobuf.json_format import Parse 
 
 class Handler(BaseHTTPRequestHandler): 
 
@@ -271,41 +254,41 @@ class Handler(BaseHTTPRequestHandler):
 
 json = False 
 
-def do\_POST(self): 
+def do_POST(self): 
 
-self.send\_response(200) 
+self.send_response(200) 
 
-self.end\_headers() 
+self.end_headers() 
 
-query\_args = parse\_qs(urlparse(self.path).query) 
+query_args = parse_qs(urlparse(self.path).query) 
 
-content\_len = int(self.headers.get('Content-Length', 0)) 
+content_len = int(self.headers.get('Content-Length', 0)) 
 
-body = self.rfile.read(content\_len) 
+body = self.rfile.read(content_len) 
 
-if query\_args["event"][0] == "up": 
+if query_args["event"][0] == "up": 
 
 self.up(body) 
 
-elif query\_args["event"][0] == "join": 
+elif query_args["event"][0] == "join": 
 
 self.join(body) 
 
 else:
 
-print("handler for event %s is not implemented" % query\_args["event"][0]) 
+print("handler for event %s is not implemented" % query_args["event"][0]) 
 
 def up(self, body): 
 
 up = self.unmarshal(body, integration.UplinkEvent()) 
 
-print("Uplink received from: %s with payload: %s" % (up.device\_info.dev\_eui, up.data.hex())) 
+print("Uplink received from: %s with payload: %s" % (up.device_info.dev_eui, up.data.hex())) 
 
 def join(self, body): 
 
 join = self.unmarshal(body, integration.JoinEvent()) 
 
-print("Device: %s joined with DevAddr: %s" % (join.device\_info.dev\_eui, join.dev\_addr)) 
+print("Device: %s joined with DevAddr: %s" % (join.device_info.dev_eui, join.dev_addr)) 
 
 def unmarshal(self, body, pl): 
 
@@ -319,33 +302,29 @@ return pl
 
 httpd = HTTPServer(('', 8090), Handler) 
 
-httpd.serve\_forever() 
+httpd.serve_forever() 
 ```
 
 </details>
 
 ### Downlink
 
-Downlink message: 
+Downlink message:
 
-:::info 
+:::info
 It’s recommended to mark the downlink as retained, Then the command will not be executed repeatedly.
 :::
-
 
 The default Topic is：`application/APPLICATION_ID/device/DEV_EUI/command/down`
 
 `command`: Please check the downlink command in **Device User Manual** for more details.
 
-
-|Topic|application/APPLICATION\_ID/device/DEV\_EUI/command/down|
+|Topic|application/APPLICATION_ID/device/DEV_EUI/command/down|
 | - | :- |
 |devEUI|Device EUI|
 |confirmed|true/false(whether the payload must be sent as confirmed data down or not)|
 |fPort|FPort to use (must be > 0)|
 |data|base64 encoded data (plaintext, will be encrypted by ChirpStack)|
-
-
 
 **Example**:
 
@@ -355,7 +334,7 @@ The default Topic is：`application/APPLICATION_ID/device/DEV_EUI/command/down`
 
 `application/dbf6\*\*\*\*6c92/device/2CF7F1C2\*\*\*/command/down`
 
-**Json：** 
+**Json：**
 
 ```cpp
 {
@@ -378,6 +357,7 @@ The default Topic is：`application/APPLICATION_ID/device/DEV_EUI/command/down`
 `application/dbf6\*\*\*\*6c92/device/2CF7F1C2\*\*\*/command/down`
 
 **Json**：
+
 ```cpp
 {
 
@@ -391,4 +371,3 @@ The default Topic is：`application/APPLICATION_ID/device/DEV_EUI/command/down`
 
 } 
 ```
-

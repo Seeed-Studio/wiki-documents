@@ -42,7 +42,7 @@ Direct contact temperature is an important indicator in many scenarios, especial
 | :- | :- |
 |Range|<p>-50 to 300 ℃ </p><p>(Other range customization contact sales)</p>|
 |Accuracy|±0.5℃|
-|Resolution|0\.1℃|
+|Resolution|0.1℃|
 |**General Parameters**||
 |Product Model|S2107|
 |Microcontroller|Wio-E5|

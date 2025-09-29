@@ -68,149 +68,113 @@ The warnings and wrong operations possible cause dangerous.
 ### Key Specification
 
 <table>
-  <tbody><tr>
-      <td width="400px"> PCB size
-      </td>
-      <td width="400px"> 5.3 x 6.9 x 0.16 cm
-      </td></tr>
+  <tbody>
+    <tr>
+      <td width="400px">PCB size</td>
+      <td width="400px">5.3 x 6.9 x 0.16 cm</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td>  Indicators
-      </td>
-      <td>  Charging ,complete
-      </td></tr>
+      <td>Indicators</td>
+      <td>Charging ,complete</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Power supply
-      </td>
-      <td>4.4VDV-6VDC
-      </td></tr>
+      <td>Power supply</td>
+      <td>4.4VDV-6VDC</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Power Connector
-      </td>
-      <td> Mini USB / JST
-      </td></tr>
+      <td>Power Connector</td>
+      <td>Mini USB / JST</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> RoHS
-      </td>
-      <td> YES
-      </td></tr></tbody></table>
+      <td>RoHS</td>
+      <td>YES</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Charging
 
 <table>
-  <tbody><tr>
-      <th>Specification
-      </th>
-      <th>Min
-      </th>
-      <th>Norm
-      </th>
-      <th>Max
-      </th>
-      <th>Unit
-      </th></tr>
+  <tbody>
+    <tr>
+      <th>Specification</th>
+      <th>Min</th>
+      <th>Norm</th>
+      <th>Max</th>
+      <th>Unit</th>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td width={600}> Input voltage
-      </td>
-      <td width={100}>  4.4
-      </td>
-      <td width={100}>  5
-      </td>
-      <td width={100}>  6
-      </td>
-      <td width={100}>  VDC
-      </td></tr>
+      <td width={600}>Input voltage</td>
+      <td width={100}>4.4</td>
+      <td width={100}>5</td>
+      <td width={100}>6</td>
+      <td width={100}>VDC</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Low power threshold
-      </td>
-      <td>
-      </td>
-      <td>  3.7
-      </td>
-      <td>  3.9
-      </td>
-      <td>  VDC
-      </td></tr>
+      <td>Low power threshold</td>
+      <td></td>
+      <td>3.7</td>
+      <td>3.9</td>
+      <td>VDC</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Charge voltage
-      </td>
-      <td>  4.158
-      </td>
-      <td>  4.2
-      </td>
-      <td>  4.242
-      </td>
-      <td>  VDC
-      </td></tr>
+      <td>Charge voltage</td>
+      <td>4.158</td>
+      <td>4.2</td>
+      <td>4.242</td>
+      <td>VDC</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Precharge threshold
-      </td>
-      <td>  2.9
-      </td>
-      <td>  3
-      </td>
-      <td>  3.1
-      </td>
-      <td>  VDC
-      </td></tr></tbody></table>
+      <td>Precharge threshold</td>
+      <td>2.9</td>
+      <td>3</td>
+      <td>3.1</td>
+      <td>VDC</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Power Supplying
 
 <table>
-  <tbody><tr>
-      <th>Specification
-      </th>
-      <th>Min
-      </th>
-      <th>Norm
-      </th>
-      <th>Max
-      </th>
-      <th>Unit
-      </th></tr>
+  <tbody>
+    <tr>
+      <th>Specification</th>
+      <th>Min</th>
+      <th>Norm</th>
+      <th>Max</th>
+      <th>Unit</th>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td width={600}> Battery voltage
-      </td>
-      <td width={100}>  2.8
-      </td>
-      <td width={100}>  3.7
-      </td>
-      <td width={100}>  4.2
-      </td>
-      <td width={100}>  VDC
-      </td></tr>
+      <td width={600}>Battery voltage</td>
+      <td width={100}>2.8</td>
+      <td width={100}>3.7</td>
+      <td width={100}>4.2</td>
+      <td width={100}>VDC</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Output voltage
-      </td>
-      <td>  4.6
-      </td>
-      <td>  4.8
-      </td>
-      <td>  5.0
-      </td>
-      <td>  VDC
-      </td></tr>
+      <td>Output voltage</td>
+      <td>4.6</td>
+      <td>4.8</td>
+      <td>5.0</td>
+      <td>VDC</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Output current
-      </td>
-      <td>  200
-      </td>
-      <td>  4.2
-      </td>
-      <td>  500
-      </td>
-      <td>  mA
-      </td></tr>
+      <td>Output current</td>
+      <td>200</td>
+      <td>4.2</td>
+      <td>500</td>
+      <td>mA</td>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td> Level up efficiency
-      </td>
-      <td>  70
-      </td>
-      <td>  80
-      </td>
-      <td>  87
-      </td>
-      <td> &nbsp;%
-      </td></tr></tbody></table>
+      <td>Level up efficiency</td>
+      <td>70</td>
+      <td>80</td>
+      <td>87</td>
+      <td>&nbsp;%</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Charging curve
 
@@ -285,20 +249,19 @@ If you have questions or other better design ideas, you can go to our [forum](ht
 ## Version Tracker  
 
 <table>
-  <tbody><tr>
-      <th>Revision
-      </th>
-      <th>Descriptions
-      </th>
-      <th>Release Date
-      </th></tr>
+  <tbody>
+    <tr>
+      <th>Revision</th>
+      <th>Descriptions</th>
+      <th>Release Date</th>
+    </tr>
     <tr style={{fontSize: '90%'}}>
-      <td width={300}> Solar Charger Shield v1.0
-      </td>
-      <td width={500}> Initial public release
-      </td>
-      <td width={200}> May 01, 2010
-      </td></tr></tbody></table>
+      <td width={300}>Solar Charger Shield v1.0</td>
+      <td width={500}>Initial public release</td>
+      <td width={200}>May 01, 2010</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Bug Tracker  
 

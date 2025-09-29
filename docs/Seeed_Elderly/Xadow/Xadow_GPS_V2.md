@@ -38,24 +38,24 @@ Based on the GPS L70 module from Quectel®, the Xadow GPS v2 combines the advanc
 |---|---|
 |**Microcontroller**|	Kinetis KL02|
 |**Core**|	ARM® 32-bit Cortex® -M0+CPU|
-|**Power Supply**	|3.3 ~ 6 V (via breakout pins)|
+|**Power Supply**	|3.3 - 6 V (via breakout pins)|
 |**Flash**|	32 KB|
-|**SRAM**|	4 KB
-|**Clock Speed**|	48 MHz
-|**Power Consumption**	|18mA@Tracking, 21mA@Acquisition
-|**Power Saving**|	Typ. 3mA@AlwaysLocateTM, 7uA@Backup /Mode, 180uA@Standby Mode
-|**Channel**|	22(Tracking) / 66 (Acquisition)
-|**Update Rate**|	1Hz(Default), up to 10Hz
-|**Horizontal Position Accuracy**|	<2.5m CEP
-|**Velocity Accuracy**|	<0.1m/s
-|**Maximum Velocity**|	Max.515m/s
-|**Cold/warm start with EASYTM**|215s/5s
-|**Acquisition Sensitivity**|-145dBm
-|**Tracking Sensitivity**|	-163dBm
-|**Operating Temperature**|-40℃ to 85℃
-|**Protocols	NMEA**|0183/PMTK
-|**Antenna Type**|	Chip antenna
-|**Interface**|	Interface with Xadow GSM+BLE through  / I2C (7-bit address 0x05)
+|**SRAM**|	4 KB|
+|**Clock Speed**|	48 MHz|
+|**Power Consumption**	|18mA@Tracking, 21mA@Acquisition|
+|**Power Saving**|	Typ. 3mA@AlwaysLocateTM, 7uA@Backup /Mode, 180uA@Standby Mode|
+|**Channel**|	22(Tracking) / 66 (Acquisition)|
+|**Update Rate**|	1Hz(Default), up to 10Hz|
+|**Horizontal Position Accuracy**|	&lt;2.5m CEP|
+|**Velocity Accuracy**|	&lt;0.1m/s|
+|**Maximum Velocity**|	Max.515m/s|
+|**Cold/warm start with EASYTM**|215s/5s|
+|**Acquisition Sensitivity**|-145dBm|
+|**Tracking Sensitivity**|	-163dBm|
+|**Operating Temperature**|-40℃ to 85℃|
+|**Protocols	NMEA**|0183/PMTK|
+|**Antenna Type**|	Chip antenna|
+|**Interface**|	Interface with Xadow GSM+BLE through  / I2C (7-bit address 0x05)|
 |**Dimensions**|	25.37mm X 20.30mm / 1” × 0.8”
 
 ## Hardware Overview
@@ -81,8 +81,7 @@ Some frequently asked questions in [RePhone Community](https://community.seeedst
 
 ## Schematic Online Viewer
 
-<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Xadow_GPS_V2/resources/202000729_PCBA%3BXadow%20GPS%20v2.1_schemic%20file.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
-</div>
+<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Xadow_GPS_V2/resources/202000729_PCBA%3BXadow%20GPS%20v2.1_schemic%20file.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}></div>
 
 
 

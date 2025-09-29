@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'XIAO RP2350'
+collapsible: true # make the category collapsible
+collapsed: true # mantener la categoría abierta por defecto
+className: xiao_rp2350
+# link:
+#   type: generated-index
+#   slug: Develop_with_SenseCAP_Indicator
+#   title: Desarrollar con SenseCAP Indicator
+#   description: Este tutorial te guiará a través del proceso de desarrollo con SenseCAP Indicator.

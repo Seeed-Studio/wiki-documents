@@ -21,7 +21,7 @@ The SoM is called **Quark-N, based on Allwinner H3, Quad-core Cortex-A7, and ARM
 The carrier board is called **Atom-N, and Quark-N is connected to Atom-N through the M.2 interface**. Atom-N leads out a row of golden finger pins to realize I/O expansion, **expand SPI, I2C, UART, GPIO, and other interfaces to facilitate the completion of your own design**. Also, it is equipped with **a microphone, MPU6050 motion sensor (accelerometer and gyroscope), onboard 4 buttons (GPIO-KEY, Uboot, Recovery, Reset), IPS display, Wi-Fi/Bluetooth connectivity which greatly expands the possibilities with this product**.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Quantum-Mini-Linux-Development-Kit-p-4749.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Quantum-Mini-Linux-Development-Kit-p-4749.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -133,6 +133,7 @@ The settings by default is configured, if you don't know what you're configuring
 ## Wi-Fi
 
 ### Scipt
+
 The latest image was shipped with a python script to connect the Wi-Fi much easier, replace the `SSID` and `PASSWORD` to yours:
 
 ```sh
@@ -141,6 +142,7 @@ sudo python connect_wifi.py SSID PASSWORD
 ```
 
 ### Manual Connect
+
 Here we use NetworkManager to manager network, please follow though to connect to Wi-Fi:
 
 - Switch to root user:
@@ -336,11 +338,11 @@ The fan holder can be installed as follows:
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

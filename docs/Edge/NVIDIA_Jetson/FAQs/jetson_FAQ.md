@@ -45,16 +45,39 @@ For details, please click [here](/usb_timeout_during_flash)
 
 For details, please click [here](/upgrade_software_packages_for_jetson)
 
-<!-- #### Q10: How to use the OTA (Over-the-Air) method to upgrade the system version of the Jetson device. -->
+<!-- #### Q10: How to use the OTA (Over-the-Air) method to upgrade the system version of the Jetson device. 
 
-<!-- For details, please click [here](/updating_jetpack_with_ota) -->
+For details, please click [here](/updating_jetpack_with_ota) -->
 
 #### Q11: What modifications does Seeed make to NVIDIA's Jetson BSP.
 
 For details, please click [here](/differences_of_l4t_between_seeed_and_nvidia)
 
+#### Q12: How to enable the SPI interface on Jetson-nano?
+For details, please click [here](/enable_spi_interface_on_jetsonnano)
 
-# Tech support
+#### Q13: Why is it that sometimes after completing the flashing process on Jetson, the system fails to boot from the SSD?
+This issue currently occurs when flashing JetPack 5, and NVIDIA has officially documented it. For the solution, please click [here.](/issue_of_jetpack5_failing_to_boot_from_certain_ssd)
+
+#### Q14: How to Build the Source Code Project for Seeed's Jetson BSP?
+For details, please click [here](/how_to_build_the_source_code_project_for_seeed_jetson_bsp)
+
+#### Q15: Why can’t the `apt upgrade` command be executed on reComputer/reServer?
+The kernels and drivers of **reComputer/reServer** are customized. If the `apt upgrade` command is executed, some kernel and driver related packages may be replaced with NVIDIA’s official resources, which could cause software compatibility issues. <mark>Therefore, please do not run `apt upgrade` on any third-party Jetson platforms.</mark>
+
+You can refer to the following instructions to lock the relevant APT sources. This way, if apt upgrade is accidentally executed, the impact will be minimized:
+```bash
+sudo apt-mark hold <package-name>
+
+### For example: 
+sudo apt-mark hold nvidia-l4t-core
+```
+
+#### Q16: If the reComputer/reServer does not have the required `.ko` driver module, how can I compile a usable driver?
+
+For details, please click [here](/how_to_build_the_ko_module_for_seeed_jetson)
+
+## Tech support
 
 Thank you for choosing our products! We are **here** to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

@@ -4,7 +4,7 @@ title: XIAO nRF52840(sense) With NuttX(RTOS)
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nuttx.webp
-slug: /xiao-nrf52840-nuttx
+slug: /xiao_nrf52840_nuttx
 last_update:
     date: 02/12/2025
     author: rcsim

@@ -27,7 +27,7 @@ The SD Card shield v3.0 uses only the the SPI ports of Arduino. The shield is al
 
 The SD Card shield v3.0 makes use of pin 10 as a chip select. Please be sure other stacked shields do not make use of that same pin. See v4.0 of this shield for a version that uses pin 4.
 
-These next lines were user added: This shield works fine for the Arduino Mega 2560, you just have to make the appropriate connections. 4or10 -&gt;53, 11-&gt;51, 12 -&gt;50, and 13 -&gt;52. This arrangement works fine so long as you make sure not to assign anything else to those pins.
+These next lines were user added: This shield works fine for the Arduino Mega 2560, you just have to make the appropriate connections. 4or10 →53, 11→51, 12 →50, and 13 →52. This arrangement works fine so long as you make sure not to assign anything else to those pins.
 
 **Model: [INT106D1P](https://www.seeedstudio.com/depot/sd-card-shield-p-492.html?cPath=109)**
 
@@ -42,61 +42,13 @@ These next lines were user added: This shield works fine for the Arduino Mega 25
 
 ## Specification  
 
-<table  cellspacing="0" width="100%">
-<tr>
-<th scope="col"> Item
-</th>
-<th scope="col"> Min
-</th>
-<th scope="col"> Typical
-</th>
-<th scope="col"> Max
-</th>
-<th scope="col"> Unit
-</th></tr>
-<tr>
-<th scope="row"> Voltage
-</th>
-<td> 2.7
-</td>
-<td> 3.3
-</td>
-<td> 3.6
-</td>
-<td> V
-</td></tr>
-<tr>
-<th scope="row"> Current
-</th>
-<td> 0.159
-</td>
-<td> 40
-</td>
-<td> 200
-</td>
-<td> mA
-</td></tr>
-<tr>
-<th scope="row"> Supported Card Type
-</th>
-<td colspan="3"> SD card(&lt;=2G); Micro SD card(&lt;=2G); SDHC card(&lt;=16G)
-</td>
-<td> /
-</td></tr>
-<tr>
-<th scope="row"> Dimension
-</th>
-<td colspan="3"> 57.15x44.70x19.00
-</td>
-<td> mm
-</td></tr>
-<tr>
-<th scope="row"> Net Weight
-</th>
-<td colspan="3"> 16.6
-</td>
-<td> g
-</td></tr></table>
+| Item | Min | Typical | Max | Unit |
+|------|-----|---------|-----|------|
+| Voltage | 2.7 | 3.3 | 3.6 | V |
+| Current | 0.159 | 40 | 200 | mA |
+| Supported Card Type | SD card(≤2G); Micro SD card(≤2G); SDHC card(≤16G) | | | / |
+| Dimension | 57.15x44.70x19.00 | | | mm |
+| Net Weight | 16.6 | | | g |
 
 ## Interface Function  
 
@@ -140,28 +92,10 @@ With that done, you can take a look at the other library examples for reading, w
 
 ## Version Tracker  
 
-<table  cellspacing="0" width="85%">
-<tr>
-<th scope="col"> Revision
-</th>
-<th scope="col"> Descriptions
-</th>
-<th scope="col"> Release
-</th></tr>
-<tr>
-<td> v3.0
-</td>
-<td> V3.0 Release
-</td>
-<td> 2012/3/29
-</td></tr>
-<tr>
-<td> v3.1
-</td>
-<td> Voltage regulator upgraded to MIC5205
-</td>
-<td> 2012/5/10
-</td></tr></table>
+| Revision | Descriptions | Release |
+|----------|-------------|---------|
+| v3.0 | V3.0 Release | 2012/3/29 |
+| v3.1 | Voltage regulator upgraded to MIC5205 | 2012/5/10 |
 
 ## SD Card Shield v3.1 Schematic Online Viewer
 

@@ -1,0 +1,10 @@
+position: 6 # float position is supported
+label: 'ファームウェアアーキテクチャ概要'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: watcher_firmware_architecture_overview
+link:
+  type: generated-index
+  slug: ja/watcher_firmware_architecture_main_page
+  title: ファームウェアアーキテクチャ概要
+  description: SenseCAP Watcherオープンソースファームウェアのソフトウェアフレームワークと開発ガイドラインを紹介します。

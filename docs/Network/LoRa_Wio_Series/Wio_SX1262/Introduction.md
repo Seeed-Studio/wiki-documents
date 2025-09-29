@@ -12,7 +12,7 @@ last_update:
 <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/33.png" style={{width:900, height:'auto'}}/></div></td>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -28,7 +28,7 @@ The Wio-SX1262 is a low-cost, ultra-low-power, and ultra-compact LoRa® Pure RF 
 - Wio SX1262 support LoRa® modulation for LPWAN use cases and (G)FSK modulation for legacy use cases.
 - Frequency coverage from 868 MHz to 960 MHz.
 - With SPI interface.
-- Wio SX1272-N has SMT-packaged RF pins for easy PCB design, which is means it does not contain IPEX connector. 
+- Wio SX1272-N has SMT-packaged RF pins for easy PCB design, which is means it does not contain IPEX connector.
 
 ### Comparison with other modules
 

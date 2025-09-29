@@ -12,7 +12,7 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688/img/Breakout_for_LinkIt_Smart_7688_product_view_1200.jpg)
 
-:::dangernote
+:::danger
 Due to the closure of MediaTek Labs, all related links have become invalid. If you need to download relevant files, please search for them on the following link: [https://github.com/MediaTek-Labs](https://github.com/MediaTek-Labs).
 :::
 
@@ -45,17 +45,18 @@ Due to the closure of MediaTek Labs, all related links have become invalid. If y
 ##  Specification
 ---
 <table>
-<tr>
-<td> Input voltage </td>
-<td> 5.0V(With USB Power port)
-</td></tr>
-<tr>
-<td> Operating voltage </td>
-<td> 3.3V
-</td></tr>
-<tr>
-<td colspan="2"> Debug pins, Ethernet pins and USB type-A host pins conect with MT7688, Ohter pins connect with ATmega32U4.
-</td></tr></table>
+  <tr>
+    <td> Input voltage </td>
+    <td> 5.0V(With USB Power port)</td>
+  </tr>
+  <tr>
+    <td> Operating voltage </td>
+    <td> 3.3V</td>
+  </tr>
+  <tr>
+    <td colspan="2"> Debug pins, Ethernet pins and USB type-A host pins conect with MT7688, Ohter pins connect with ATmega32U4.</td>
+  </tr>
+</table>
 
 ##  Hardware Overview
 ---
@@ -84,14 +85,15 @@ This section will show those senior customers how to add recording funtion to th
 ###  **Parts list**
 
 <table>
-<tr>
-<th>Parts name   </th>
-<th> Quantity
-</th></tr>
-<tr>
-<td> Breakout for LinkIt Smart 7688 </td>
-<td> 1PCS
-</td></tr></table>
+  <tr>
+    <th>Parts name</th>
+    <th>Quantity</th>
+  </tr>
+  <tr>
+    <td> Breakout for LinkIt Smart 7688 </td>
+    <td> 1PCS </td>
+  </tr>
+</table>
 
 ##  Get started
 

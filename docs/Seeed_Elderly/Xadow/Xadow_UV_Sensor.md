@@ -42,10 +42,11 @@ Xadow UV Sensor can output a voltage value corresponding to UV index. Because th
 <!-- *   Firstly, you should make sure there are [the library:OLED_Display12864](https://files.seeedstudio.com/wiki/Xadow_UV_Sensor/res/OLED_Display12864.zip) in your Arduino Library. If not, please click [here](https://github.com/Seeed-Studio/Grove_OLED_Display_128X64) to download and add it to Arduino Library. Refer to [How to install Arduino Library](/How_to_install_Arduino_Library/) in wiki page, you will familiar with the operation. -->
 
 *   Now you can upload it to Xadow Main Board by copying and pasting them into Arduino IDE.
+
 ```
-#include &lt;Wire.h&gt;
-#include &lt;SeeedOLED.h&gt;
-#include &lt;Streaming.h&gt;
+#include <Wire.h>
+#include <SeeedOLED.h>
+#include <Streaming.h>
 
 #define ADDR_ADC121    0x5A
 
@@ -104,9 +105,9 @@ void readVoltage()     //unsigned int *data
 
     Wire.requestFrom(ADDR_ADC121, 2);           // request 2byte from device
     delay(1);
-    if(Wire.available()&lt;=2)
+    if(Wire.available()<=2)
     {
-        getData = (Wire.read()&amp;0x0f)&lt;&lt;8;
+        getData = (Wire.read()&0x0f)<<8;
         getData |= Wire.read();
     }
     delay(50);
@@ -141,78 +142,59 @@ The Xadow UV Sensor has a seven-bit hardware address which is referred to as a s
 
 <table  cellspacing="0" width="50%">
 <tr>
-<th rowspan="2" scope="col">  Slave Address[A6 - A0]
-</th>
-<th colspan="2" scope="col"> ADR0 and ADR1 inputs state
-</th></tr>
+<th rowspan="2" scope="col">  Slave Address[A6 - A0]</th>
+<th colspan="2" scope="col"> ADR0 and ADR1 inputs state</th>
+</tr>
 <tr>
-<td scope="col"> ADR1
-</td>
-<td scope="col"> ADR0
-</td></tr>
+<td scope="col"> ADR1</td>
+<td scope="col"> ADR0</td>
+</tr>
 <tr>
-<td scope="row"> 1010000(0x50)
-</td>
-<td>Floating
-</td>
-<td>Floating
-</td></tr>
+<td scope="row"> 1010000(0x50)</td>
+<td>Floating</td>
+<td>Floating</td>
+</tr>
 <tr>
-<td scope="row"> 1010001(0x51)
-</td>
-<td> Floating
-</td>
-<td> L
-</td></tr>
+<td scope="row"> 1010001(0x51)</td>
+<td> Floating</td>
+<td> L </td>
+</tr>
 <tr>
-<td scope="row"> 1010010(0x52)
-</td>
-<td> Floating
-</td>
-<td> H
-</td></tr>
+<td scope="row"> 1010010(0x52)</td>
+<td> Floating</td>
+<td> H </td>
+</tr>
 <tr>
-<td scope="row"> 1010100(0x54)
-</td>
-<td> L
-</td>
-<td> Floating
-</td></tr>
+<td scope="row"> 1010100(0x54)</td>
+<td> L </td>
+<td> Floating </td>
+</tr>
 <tr>
-<td scope="row"> 1010101(0x55)
-</td>
-<td>L
-</td>
-<td>L
-</td></tr>
+<td scope="row"> 1010101(0x55) </td>
+<td>L </td>
+<td>L </td>
+</tr>
 <tr>
-<td scope="row"> 1010110(0x56)
-</td>
-<td> L
-</td>
-<td> H
-</td></tr>
+<td scope="row"> 1010110(0x56) </td>
+<td> L </td>
+<td> H </td>
+</tr>
 <tr>
-<td scope="row"> 1011000(0x58)
-</td>
-<td> H
-</td>
-<td> Floating
-</td></tr>
+<td scope="row"> 1011000(0x58) </td>
+<td> H </td>
+<td> Floating </td>
+</tr>
 <tr>
-<td scope="row"> 1011001(0x59)
-</td>
-<td> H
-</td>
-<td> L
-</td></tr>
+<td scope="row"> 1011001(0x59) </td>
+<td> H </td>
+<td> L </td>
+</tr>
 <tr>
-<td scope="row">1011010(default 0x5A)
-</td>
-<td> H
-</td>
-<td> H
-</td></tr></table>
+<td scope="row">1011010(default 0x5A) </td>
+<td> H </td>
+<td> H </td>
+</tr>
+</table>
 
 In default mode, ADR0 and ADR1 are connected to "H"(see the Xadow UV Sensor)
 

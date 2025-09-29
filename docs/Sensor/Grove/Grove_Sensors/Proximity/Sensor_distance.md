@@ -25,7 +25,9 @@ A distance sensor uses ultrasonic or laser to measure the distance among objects
 
 Thanks to its diode-pumped ERBUM: the high efficiency of glass solid-state lasers, the ELEM-DP 10k laser rangefinder module provides a continuous high pulse repetition rate of 10 Hz or 20 Hz. This feature makes this compact laser rangefinder ideal for measuring or tracking the distance of fast moving objects such as aircrafts.
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/Sensor_distance/IMG/distance-sensor.png" /><figcaption><b>Figure 1</b>. <i>Distance Sensor ( Image from Direct Industry, 2020 )</i></figcaption>
+<div align="center">
+  <img src="https://files.seeedstudio.com/wiki/Sensor_distance/IMG/distance-sensor.png" />
+  <figcaption><b>Figure 1</b>. <i>Distance Sensor ( Image from Direct Industry, 2020 )</i></figcaption>
 </div>
 
 ### How does a distance sensor work

@@ -23,26 +23,21 @@ The easy software interface is not the only easy-to-use feature because the Grov
 ---
 <table width="494">
 <tr>
-<th> Revision
-</th>
-<th> Descriptions
-</th>
-<th> Release
-</th></tr>
+<th>Revision</th>
+<th>Descriptions</th>
+<th>Release</th>
+</tr>
 <tr>
-<td> v1.0
-</td>
-<td> Initial public release
-</td>
-<td> May 17th, 2012
-</td></tr>
+<td>v1.0</td>
+<td>Initial public release</td>
+<td>May 17th, 2012</td>
+</tr>
 <tr>
-<td> v1.2
-</td>
-<td> I2C address set by hardware
-</td>
-<td> July 2th, 2012
-</td></tr></table>
+<td>v1.2</td>
+<td>I2C address set by hardware</td>
+<td>July 2th, 2012</td>
+</tr>
+</table>
 
 ## Feature
 
@@ -61,57 +56,42 @@ The easy software interface is not the only easy-to-use feature because the Grov
 ## Specifications
 
 ---
-<table  cellspacing="0" width="80%">
+<table cellspacing="0" width="80%">
 <tr>
-<th scope="col"> Item
-</th>
-<th scope="col"> Min
-</th>
-<th scope="col"> Typical
-</th>
-<th scope="col"> Max
-</th>
-<th scope="col"> Unit
-</th></tr>
+<th scope="col">Item</th>
+<th scope="col">Min</th>
+<th scope="col">Typical</th>
+<th scope="col">Max</th>
+<th scope="col">Unit</th>
+</tr>
 <tr>
-<th scope="row">Working Voltage
-</th>
-<td> 6
-</td>
-<td> -
-</td>
-<td> 15
-</td>
-<td> VDC
-</td></tr>
+<th scope="row">Working Voltage</th>
+<td>6</td>
+<td>-</td>
+<td>15</td>
+<td>VDC</td>
+</tr>
 <tr>
-<th scope="row"> Max Output Current per channel
-</th>
-<td colspan="3">0.5
-</td>
-<td> A
-</td></tr>
+<th scope="row">Max Output Current per channel</th>
+<td colspan="3">0.5</td>
+<td>A</td>
+</tr>
 <tr>
-<th scope="row"> Maximum Total current
-</th>
-<td colspan="3">1.0
-</td>
-<td> A
-</td></tr>
+<th scope="row">Maximum Total current</th>
+<td colspan="3">1.0</td>
+<td>A</td>
+</tr>
 <tr>
-<th scope="row"> Input/output voltage on I2C bus
-</th>
-<td colspan="3"> 5
-</td>
-<td> V
-</td></tr>
+<th scope="row">Input/output voltage on I2C bus</th>
+<td colspan="3">5</td>
+<td>V</td>
+</tr>
 <tr>
-<th scope="row">  Communication protocol
-</th>
-<td colspan="3"> I2C
-</td>
-<td> /
-</td></tr></table>
+<th scope="row">Communication protocol</th>
+<td colspan="3">I2C</td>
+<td>/</td>
+</tr>
+</table>
 
 ## Interface Function
 
@@ -166,10 +146,10 @@ How to drive 2 DC motors
 ![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/img/I2CMotorDriver-4.jpg)
 
 <div>
-  <span style={{color: 'red'}}>**Note:**
-  </span>
-  <dl><dd>The first thing to notice however, is that you need an external power source  your DC motors, the 5v pin on the Arduino can not source enough power to drive 2 motors, you may damage your Arduino if you do.
-    </dd></dl>
+  <span style={{color: 'red'}}>**Note:**</span>
+  <dl>
+    <dd>The first thing to notice however, is that you need an external power source for your DC motors, the 5v pin on the Arduino can not source enough power to drive 2 motors, you may damage your Arduino if you do.</dd>
+  </dl>
 </div>
 
 And then program your Arduino as below:

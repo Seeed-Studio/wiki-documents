@@ -19,6 +19,7 @@ The blog post date can be extracted from filenames, such as:
 
 A blog post folder can be convenient to co-locate blog post images:
 
+<!-- truncate -->
 
 The blog supports tags as well!
 

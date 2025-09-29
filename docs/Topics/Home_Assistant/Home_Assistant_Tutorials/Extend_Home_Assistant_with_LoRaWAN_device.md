@@ -13,26 +13,23 @@ last_update:
 ---
 
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Home_Assistant/ha-xiao1.png" alt="pir" width={1000} height="auto" /></p>
 
 ### Introduction
 
 Home Assistant is an open source smart home platform system, and user can easily connect their own Internet of Things devices to the system for unified management. However, the main special point of the Home Assistant is not just to realize the view of various sensing devices, but to realize the automatic linkage of cross-platform device, only such a smart home platform is enough to have vitality.
 
-
 ### Add LoRaWAN Sensors to Home Assistant
 
 #### Arduino Program Code
 
-* **Hardware**
+- **Hardware**
 
 As shown below, install XIAO onto the expansion board while connecting the E5 module to the GND, 3V3, SDA-4 and SL-5 pins of the board
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Home_Assistant/ha-xiao-hardware.png" alt="pir" width={700} height="auto" /></p>
 
-
-* **Software**
+- **Software**
 
 Make certain modifications to the following code, such as modifying the AppKEY and other essential information of LoRa communication module, so as to be able to access LoRaWAN, and then modify the data we want to send by command: AT+CMSGHEX. For example, I send data by simulating temp and humi here
 
@@ -210,9 +207,6 @@ void loop() {
 }
 ```
 
-
-
-
 #### ChirpStack Configuration
 
 Create a new Device profiles in ChirpStack, and fill in the Payload codec with the following code:
@@ -224,10 +218,10 @@ function decodeUplink(input, port) {
         humi: 0
     };
     var bytes = input['bytes']
-  	bytes = bytes2HexString(bytes)
+   bytes = bytes2HexString(bytes)
   
     decoded.temp = parseInt(bytes.slice(0, 4), 16);
-	decoded.humi = parseInt(bytes.slice(-4), 16);
+ decoded.humi = parseInt(bytes.slice(-4), 16);
 
     let messages = [
         {
@@ -294,12 +288,9 @@ Then click `Submit`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Home_Assistant/ha-xiao3.png" alt="pir" width={800} height="auto" /></p>
 
-
-
 As shown in the following figure, the relevant data is received, indicating that the data is successfully sent
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Home_Assistant/ha-xiao4.png" alt="pir" width={700} height="auto" /></p>
-
 
 #### Home Assistant Configuration
 
@@ -307,12 +298,9 @@ Complete the installation of the Home Assistant intergration with the following 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Home_Assistant/ha-xiao6.png" alt="pir" width={700} height="auto" /></p>
 
-
-
 After adding the device to the overview, we have completed all the process of adding XIAO to the Home Assistant.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Home_Assistant/ha-xiao5.png" alt="pir" width={700} height="auto" /></p>
-
 
 ### Discussion
 
@@ -323,11 +311,11 @@ Home Assistant is a very powerful smart home open source system, we can connect 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

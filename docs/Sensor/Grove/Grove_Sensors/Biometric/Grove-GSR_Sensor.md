@@ -215,7 +215,7 @@ python grove_gsr_sensor.py 0
 
 ```
 
-:::tipsuccess
+:::tip
 If everything goes well, you will be able to see the following result
 :::
 

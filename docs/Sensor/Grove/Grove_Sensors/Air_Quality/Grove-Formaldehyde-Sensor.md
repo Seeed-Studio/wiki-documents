@@ -25,7 +25,7 @@ tags: io_3v3, io_5v, plat_duino, plat_pi
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Formaldehyde-Sensor-SFA30-p-5204.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Formaldehyde-Sensor-SFA30-p-5204.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -48,8 +48,8 @@ Grove Formaldehyde Sensor can detect formaldehyde around 0~1000 ppb with low cro
 |---|---|
 |Supply voltage range|3.3V or 5V
 |Measurement range|0 to 1,000 ppb
-|Response time|<2 min
-|Limit of detection|<20 ppb
+|Response time|&lt;2 min
+|Limit of detection|&lt;20 ppb
 |Interface|I2C / UART
 |Formaldehyde accuracy|±20 ppb or ±20% of measured value, whichever is larger
 
@@ -275,7 +275,7 @@ int main(void) {
 
 ```
 
-:::tipsuccess
+:::tip
 If everything goes well, the following results can be displayed like:
 :::
 

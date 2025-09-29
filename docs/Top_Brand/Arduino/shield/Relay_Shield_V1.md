@@ -159,52 +159,44 @@ Step3: [Control the Transmitter](https://seeeddoc.github.io/315Mhz_RF_link_kits-
 
 ## Version Tracker ##
 
-<div>
-  <h2>  Version Tracker</h2>
-  <table>
-    <tbody><tr>
-        <th>Revision
-        </th>
-        <th>Descriptions
-        </th>
-        <th>Release Date
-        </th></tr>
-      <tr style={{fontSize: '90%'}}>
-        <td width="300px"> Relay shield V1.0
-        </td>
-        <td width="500px"> Initial public release
-        </td>
-        <td width="200px"> 03/31/2010
-        </td></tr>
-      <tr style={{fontSize: '90%'}}>
-        <td> Relay shield V1.1
-        </td>
-        <td>
-        </td>
-        <td>
-        </td></tr>
-      <tr style={{fontSize: '90%'}}>
-        <td> Relay shield V1.2
-        </td>
-        <td>
-        </td>
-        <td>
-        </td></tr>
-      <tr style={{fontSize: '90%'}}>
-        <td> Relay shield V1.3
-        </td>
-        <td>
-          <ol><li>Change the package of 7805
-            </li><li>Make the terminas not touch the USB connector of Arduino
-            </li><li>Add the protection for the multi-power supply when use with Arduino
-            </li><li>Add the thickness of the wires connected to the Relays
-            </li><li>Change the silkcreen to the bottom side of the board
-            </li><li>Add open source hardware logo
-            </li></ol>
-        </td>
-        <td> 12/01/2011
-        </td></tr></tbody></table>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Revision</th>
+      <th>Descriptions</th>
+      <th>Release Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Relay shield V1.0</td>
+      <td>Initial public release</td>
+      <td>03/31/2010</td>
+    </tr>
+    <tr>
+      <td>Relay shield V1.1</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Relay shield V1.2</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Relay shield V1.3</td>
+      <td>
+        1. Change the package of 7805<br/>
+        2. Make the terminas not touch the USB connector of Arduino<br/>
+        3. Add the protection for the multi-power supply when use with Arduino<br/>
+        4. Add the thickness of the wires connected to the Relays<br/>
+        5. Change the silkcreen to the bottom side of the board<br/>
+        6. Add open source hardware logo
+      </td>
+      <td>12/01/2011</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Schematic Online Viewer
 

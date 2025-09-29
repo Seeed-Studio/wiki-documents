@@ -32,10 +32,6 @@ Once the hardware connection is established, you can use a software library, suc
 
 **Note**: The performance of the MicroSD card interface on the RP2040 will depend on factors such as the speed of the SD card, wiring quality and software efficiency, and a maximum SD card of 32GB is supported
 
-
-
-
-
 ## **Example Code**
 
 This example code realizes reading CO2 data and storing the data in SD.
@@ -121,7 +117,6 @@ void sensor_scd4x_get(void) {
 }
 
 
-
 int cnt = 0;
 void setup() {
   Serial.begin(115200);
@@ -174,8 +169,6 @@ void loop() {
 
 
 ```
-
-
 
 # **Tech Support**
 

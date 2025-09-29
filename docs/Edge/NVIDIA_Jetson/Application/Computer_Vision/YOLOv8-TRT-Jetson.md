@@ -34,7 +34,7 @@ Different computer vision tasks will be introduced here such as:
 - [reComputer Jetson](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) or any other NVIDIA Jetson device running JetPack 5.1.1 or higher
 
 :::note
-This wiki has been tested and verified on a [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) and reComputer Industrial J4012[https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html] powered by NVIDIA Jetson orin NX 16GB module 
+This wiki has been tested and verified on a [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) and reComputer Industrial J4012[https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html] powered by NVIDIA Jetson orin NX 16GB module
 :::
 
 ## Flash JetPack to Jetson
@@ -42,6 +42,7 @@ This wiki has been tested and verified on a [reComputer J4012](https://www.seeed
 Now you need to make sure that the Jetson device is flashed with a [JetPack](https://developer.nvidia.com/embedded/jetpack) system. You can either use NVIDIA SDK Manager or command-line to flash JetPack to the device.
 
 For Seeed Jetson-powered devices flashing guides, please refer to the below links:
+
 - [reComputer J1010 | J101](https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack)
 - [reComputer J2021 | J202](https://wiki.seeedstudio.com/reComputer_J2021_J202_Flash_Jetpack)
 - [reComputer J1020 | A206](https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack)
@@ -52,10 +53,10 @@ For Seeed Jetson-powered devices flashing guides, please refer to the below link
 - [Jetson AGX Orin 32GB H01 Kit](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack)
 
 :::note
-Make sure to Flash JetPack version 5.1.1 because that is the version we have verified for this wiki 
+Make sure to Flash JetPack version 5.1.1 because that is the version we have verified for this wiki
 :::
 
-## Deploy YOLOV8 to Jetson in One Line of Code!
+## Deploy YOLOV8 to Jetson in One Line of Code
 
 After you flash the Jetson device with JetPack, you can simply run the below commands to run YOLOv8 models.  This will first download and install the necessary packages, dependencies, setup the environment and download pretrained models from YOLOv8 to perform object detection, Image segmentation, pose estimation and image classifications tasks!
 
@@ -142,7 +143,6 @@ YOLOv8 offers 5 pre-trained PyTorch model weights for object detection, trained 
   </tbody>
 </table>
 
-
 Reference: https://docs.ultralytics.com/tasks/detect
 
 You can choose and download your desired model from the above table and execute the below command to run inference on an image
@@ -153,7 +153,7 @@ yolo detect predict model=yolov8n.pt source='https://ultralytics.com/images/bus.
 
 Here for model, you can change to either yolov8s.pt, yolov8m.pt, yolov8l.pt, yolov8x.pt and it will download the relavant pre-trained model
 
-You can also connect a webcam and execute the below command 
+You can also connect a webcam and execute the below command
 
 ```sh
 yolo detect predict model=yolov8n.pt source='0' show=True
@@ -252,7 +252,7 @@ yolo classify predict model=yolov8n-cls.pt source='https://ultralytics.com/image
 
 Here for model, you can change to either yolov8s-cls.pt, yolov8m-cls.pt, yolov8l-cls.pt, yolov8x-cls.pt and it will download the relavant pre-trained model
 
-You can also connect a webcam and execute the below command 
+You can also connect a webcam and execute the below command
 
 ```sh
 yolo classify predict model=yolov8n-cls.pt source='0' show=True
@@ -352,7 +352,7 @@ yolo segment predict model=yolov8n-seg.pt source='https://ultralytics.com/images
 
 Here for model, you can change to either yolov8s-seg.pt, yolov8m-seg.pt, yolov8l-seg.pt, yolov8x-seg.pt and it will download the relavant pre-trained model
 
-You can also connect a webcam and execute the below command 
+You can also connect a webcam and execute the below command
 
 ```sh
 yolo segment predict model=yolov8n-seg.pt source='0' show=True
@@ -461,7 +461,7 @@ yolo pose predict model=yolov8n-pose.pt source='https://ultralytics.com/images/b
 
 Here for model, you can change to either yolov8s-pose.pt, yolov8m-pose.pt, yolov8l-pose.pt, yolov8x-pose.pt, yolov8x-pose-p6 and it will download the relavant pre-trained model
 
-You can also connect a webcam and execute the below command 
+You can also connect a webcam and execute the below command
 
 ```sh
 yolo pose predict model=yolov8n-pose.pt source='0'
@@ -491,7 +491,7 @@ yolo track model=yolov8n.pt source="https://youtu.be/Zgi9g1ksQHc"
 
 Here for model, you can change to either yolov8n.pt, yolov8s.pt, yolov8m.pt, yolov8l.pt, yolov8x.pt, yolov8n-seg.pt, yolov8s-seg.pt, yolov8m-seg.pt, yolov8l-seg.pt, yolov8x-seg.pt, and it will download the relavant pre-trained model
 
-You can also connect a webcam and execute the below command 
+You can also connect a webcam and execute the below command
 
 ```sh
 yolo track model=yolov8n.pt source="0"
@@ -516,7 +516,7 @@ If you face any errors when executing the above commands, try adding "device=0" 
 
 ## Use TensorRT to Improve Inference Speed
 
-As we mentioned before, if you want to improve the inference speed on the Jetson running YOLOv8 models, you first need to convert the original PyTorch models to TensorRT models. 
+As we mentioned before, if you want to improve the inference speed on the Jetson running YOLOv8 models, you first need to convert the original PyTorch models to TensorRT models.
 
 Follow the steps below to convert YOLOv8 PyTorch models to TensorRT models.
 
@@ -602,17 +602,17 @@ yolo detect predict model=yolov8n.engine source='0' show=True
 
 ### Data Collection and Labelling
 
-If you have a specific AI application and want to bring your own AI model that is suitable for your application, you can collect your own dataset, label them and then train using YOLOv8. 
+If you have a specific AI application and want to bring your own AI model that is suitable for your application, you can collect your own dataset, label them and then train using YOLOv8.
 
 If you do not want to collect data by yourself, you can also choose public datasets which are readily available. You can download a number of publically available datasets such as the [COCO dataset](https://cocodataset.org), [Pascal VOC dataset](http://host.robots.ox.ac.uk/pascal/VOC) and much more. [Roboflow Universe](https://universe.roboflow.com) is a recommended platform which provides a wide-range of datasets and it has [90,000+ datasets with 66+ million images](https://blog.roboflow.com/computer-vision-datasets-and-apis) available for building computer vision models. Also, you can simply search open-source datasets on Google and choose from a variety of datasets available.
 
-If you have your own dataset and want to annotate the images, we recommend you to use the annotation tool provided by [Roboflow](https://roboflow.com). Please follow [this part of the wiki](https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/#annotate-dataset-using-roboflow) to learn more about it. You can also follow [this guide](https://docs.roboflow.com/annotate/use-roboflow-annotate) from Roboflow about annotation. 
+If you have your own dataset and want to annotate the images, we recommend you to use the annotation tool provided by [Roboflow](https://roboflow.com). Please follow [this part of the wiki](https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/#annotate-dataset-using-roboflow) to learn more about it. You can also follow [this guide](https://docs.roboflow.com/annotate/use-roboflow-annotate) from Roboflow about annotation.
 
 ### Training
 
-Here we have 3 methods to train a model. 
+Here we have 3 methods to train a model.
 
-1. First way would be to use [Ultralytics HUB](https://ultralytics.com/hub). You can easily integrate Roboflow into Ultralytics HUB so that all your Roboflow projects will be readily available for training. Here it offers a Google Colab notebook to easily start the training process and also view the training progress in real-time. 
+1. First way would be to use [Ultralytics HUB](https://ultralytics.com/hub). You can easily integrate Roboflow into Ultralytics HUB so that all your Roboflow projects will be readily available for training. Here it offers a Google Colab notebook to easily start the training process and also view the training progress in real-time.
 
 2. Second way would be to use a Google Colab workspace created by us to make the training process easier. Here we use Roboflow API to download the dataset from Roboflow project.
 
@@ -641,7 +641,7 @@ Here we use Ultralytics HUB to load the Roboflow project and then train on Googl
 
 - **Step 5.** Create a new workspace and create a new project under the workspace by following [this wiki guide](https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/#annotate-dataset-using-roboflow) we have prepared. You can also [check here](https://blog.roboflow.com/getting-started-with-roboflow) to learn more from official Roboflow documentation.
 
-- **Step 6.** Once you have a couple of projects inside your workspace, it will look like below 
+- **Step 6.** Once you have a couple of projects inside your workspace, it will look like below
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/12.jpg
 " style={{width:1000, height:'auto'}}/></div>
@@ -721,7 +721,7 @@ Here we use Ultralytics HUB to load the Roboflow project and then train on Googl
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/29.jpg
 " style={{width:750, height:'auto'}}/></div>
 
-- **Step 22** Paste the code cell we copied from Ultralytics HUB before under the **Start** section and run it to start training 
+- **Step 22** Paste the code cell we copied from Ultralytics HUB before under the **Start** section and run it to start training
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/30.jpg
 " style={{width:650, height:'auto'}}/></div>
@@ -754,6 +754,7 @@ Here we use Ultralytics HUB to load the Roboflow project and then train on Googl
 Now you can use this downloaded model with the tasks that we have explained in this wiki before. You just need to replace the model file with your model.
 
 For example:
+
 ```
 yolo detect predict model=<your_model.pt> source='0' show=True
 ```
@@ -781,6 +782,7 @@ After the training is done, you will see an output as follows:
 Now you can use this downloaded model with the tasks that we have explained in this wiki before. You just need to replace the model file with your model.
 
 For example:
+
 ```
 yolo detect predict model=<your_model.pt> source='0' show=True
 ```
@@ -832,6 +834,7 @@ After the training is done, you will see an output as follows:
 Now you can use this downloaded model with the tasks that we have explained in this wiki before. You just need to replace the model file with your model.
 
 For example:
+
 ```
 yolo detect predict model=<your_model.pt> source='0' show=True
 ```
@@ -847,7 +850,7 @@ yolo detect predict model=<your_model.pt> source='0' show=True
 
 ### Preparation
 
-We have done performance benchmarks for all computer vision tasks supported by YOLOv8 running on reComputer J4012/ reComputer Industrial J4012 powered by NVIDIA Jetson Orin NX 16GB module. 
+We have done performance benchmarks for all computer vision tasks supported by YOLOv8 running on reComputer J4012/ reComputer Industrial J4012 powered by NVIDIA Jetson Orin NX 16GB module.
 
 Included in the samples directory is a command-line wrapper tool called [trtexec](https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html#trtexec). trtexec is a tool to use TensorRT without having to develop your own application. The trtexec tool has three main purposes:
 
@@ -968,7 +971,8 @@ Supported by JetPack 5.0 (L4T R34.1) / JetPack 5.0.2 (L4T R35.1) / JetPack 5.1 (
 **URL:** https://developer.download.nvidia.com/compute/redist/jp/v502/pytorch/torch-1.13.0a0+d0d6b1f2.nv22.10-cp38-cp38-linux_aarch64.whl
 
 - **Step 1.** Install torch according to your JetPack version in the following format
-pip3 
+pip3
+
 ```sh
 wget <URL> -O <file_name>
 pip3 install <file_name>
@@ -1026,11 +1030,11 @@ pip3 install numpy==1.20.3
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

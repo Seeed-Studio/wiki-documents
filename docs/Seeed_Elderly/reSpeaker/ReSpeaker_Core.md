@@ -86,8 +86,8 @@ ReSpeaker is an open modular voice interface to hack things around you. Let you 
 - GPIO2/I2S_LRCLK: Drive external encoder/decoder, Left/right channel sample clock
 - GPIO3/I2S_BCLK: Drive external encoder/decoder, Bit clock
 - MCLK_OUT: Master clock for external device
-- HP\_SEL: Headphone channel select. If use ReSpeaker Mic Array to output audio, set HP_SEL high
-- HP\_L: Analog audio left channel from ReSpeaker Mic Array
+- HP_SEL: Headphone channel select. If use ReSpeaker Mic Array to output audio, set HP_SEL high
+- HP_L: Analog audio left channel from ReSpeaker Mic Array
 - HP_R: Analog audio right channel from ReSpeaker Mic Array
 - AGND: Analog ground for audio
 
@@ -189,7 +189,7 @@ If you can't connect Wifi with above methods, please  do the factory reset by en
 :::
 
 After the Wifi function being enabled, we can use SSH to connect Respeaker by below command. We can get the Respeaker IP address from
-<http://192.168.100.1/#!/overview> WAN IP. The password is root.
+&lt;http://192.168.100.1/#!/overview&gt; WAN IP. The password is root.
 
 ```
 ssh root@ssh *.*.*.*
@@ -316,8 +316,8 @@ With Bing Speech API, ReSpeaker can turn on and recognize audio coming from the 
 
 To use Bing Speech API, first you have to get a key of Microsoft Cognitive Services from [here](https://www.microsoft.com/cognitive-services/en-us/speech-api), and copy it to BING_KEY = '' , then save the following code in playmusic.py and run it
 
-```
-//stop mopidy and alexa to avoid USB device occupation
+```sh
+# stop mopidy and alexa to avoid USB device occupation
 /etc/init.d/mopidy stop
 /etc/init.d/alexa stop
 python playmusic.py
@@ -376,7 +376,7 @@ if __name__ == '__main__':
     main()                  
 ```
 
-After "INFO:mic:Start Detecting" coming out, try to say "ReSpeaker" to wake up the program, and say "play music" to let it play music. Then ReSpeaker will play "Tchaikovsky\_Concerto\_No.1p.mp3" in the current path with **madplay** tool.
+After "INFO:mic:Start Detecting" coming out, try to say "ReSpeaker" to wake up the program, and say "play music" to let it play music. Then ReSpeaker will play "Tchaikovsky_Concerto_No.1p.mp3" in the current path with **madplay** tool.
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/bingplaymusic.png)
 
@@ -404,7 +404,7 @@ Rather than the on board MT7688 Wi-FI module which runs the Linux based OpenWrt,
 For example, you can program it with Arduino IDE to have a special DIY piano that is built on 8 cherry tomatoes connecting to the 8 touch sensors of ReSpeaker.
 ![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/fruitpiano2.PNG)
 
-1. git clone <https://github.com/respeaker/piano.git>  On ReSpeaker, download the repository
+1. git clone &lt;https://github.com/respeaker/piano.git&gt;  On ReSpeaker, download the repository
 2. Download [ReSpeaker Arduino Library](https://github.com/respeaker/respeaker_arduino_library) in your computer
 3. Upload [piano.ino](https://github.com/respeaker/piano/blob/master/arduino/piano.ino) to ReSpeaker's Arduino Leonardo (ATmega32U4)
 4. Run python piano.py on ReSpeaker's serial console
@@ -417,7 +417,7 @@ Weather Cloud is an awesome project for ReSpeaker. This cool build turns a ReSpe
 
 In this project, Openwrt is in charge of getting realtime weather information from the Internet, making voice interaction and audio output, while Arduino is responsible for controlling the colorful RGB LEDs.
 
-1. git clone <https://github.com/jerryyip/WeatherCloud.git>  on ReSpeaker, download the repository
+1. git clone &lt;https://github.com/jerryyip/WeatherCloud.git&gt;  on ReSpeaker, download the repository
 2. Download [ReSpeaker Arduino Library](https://github.com/respeaker/respeaker_arduino_library) in your computer
 3. Upload [pixels_pattern.ino](https://github.com/respeaker/respeaker_arduino_library/blob/master/examples/pixels_pattern/pixels_pattern.ino) in ReSpeaker Arduino  Library to ReSpeaker's Arduino
 4. Get OpenWeatherMap appid from [here](http://openweathermap.org/appid) and copy it to appID = "" in main.py, don't forget to add your city in city=""
@@ -504,7 +504,7 @@ orangectl passwd root 12345678  //replace 12345678 with the password you want to
 
 **Q9: How to support google speech or other Speach TO Text(STT) Engine?**
 
-- Install speech\_recognition library following the [guide](https://github.com/respeaker/get_started_with_respeaker/wiki/Use-speech_recognition-python-library)
+- Install speech_recognition library following the [guide](https://github.com/respeaker/get_started_with_respeaker/wiki/Use-speech_recognition-python-library)
 
 **Q10: Failed to run Alexa with error "IOError: [Errno -9998] Invalid number of channels"**
 
@@ -537,13 +537,13 @@ orangectl passwd root 12345678  //replace 12345678 with the password you want to
 **Q17: Respeaker is often wakeup even no voice.**
 
 - We can reduce the false positive rate by increase the threshold in the keyword.txt, but it also reduce the sensibility.
-- Another way is to adapt your voice with current acoustic module, more detail via <http://cmusphinx.sourceforge.net/wiki/tutorialadapt>.
+- Another way is to adapt your voice with current acoustic module, more detail via [http://cmusphinx.sourceforge.net/wiki/tutorialadapt](http://cmusphinx.sourceforge.net/wiki/tutorialadapt).
 - It will effectively improve individual keyword recognition, but may make the recognizer less general.
 
 **Q18: How to control GPIO pins from respeaker?**
 
-- We can use <https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/gpio.py>
-- The example is <https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/spi.py>, which uses GPIOs to simulate SPI
+- We can use [https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/gpio.py](https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/gpio.py)
+- The example is [https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/spi.py](https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/spi.py), which uses GPIOs to simulate SPI
 
 **Q19: How to change wake up word?**
 
@@ -574,11 +574,11 @@ orangectl passwd root 12345678  //replace 12345678 with the password you want to
  if mic.wakeup('respeaker'):
  ```
 
-- The directoy of the keyword is /root/respeaker_python_library/respeaker/pocketsphinx-data
+- The directoy of the keyword is `/root/respeaker_python_library/respeaker/pocketsphinx-data`
 
 **Q20: System recovery by factory image.**
 
-Note: If you can not update your ReSpeaker via Web or can not visit <http://192.168.100.1/home.html>, please click [here](https://s3-us-west-2.amazonaws.com/respeaker.io/firmware/ramips-openwrt-latest-LinkIt7688-squashfs-sysupgrade.bin). to download the lastest firmware on your computer, copy it to a SD card and plug the SD card into ReSpeaker.
+Note: If you can not update your ReSpeaker via Web or can not visit [http://192.168.100.1/home.html](http://192.168.100.1/home.html), please click [here](https://s3-us-west-2.amazonaws.com/respeaker.io/firmware/ramips-openwrt-latest-LinkIt7688-squashfs-sysupgrade.bin). to download the lastest firmware on your computer, copy it to a SD card and plug the SD card into ReSpeaker.
 
 Connect to the [serial console](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker/QuickStart.md#serial-console). of ReSpeaker, type the following command lines to update the firmware:
 
@@ -614,12 +614,11 @@ It will cost about 3 minutes for ReSpeaker to install the firmware and reboot, p
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

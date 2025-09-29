@@ -50,63 +50,72 @@ last_update:
 ## Specification
 
 ---
+
 <table>
 <tr>
-<td> Dimension(big one) </td>
-<td> 25 × 25 × 13 mm
-</td></tr>
+<td>Item</td>
+<td>Value</td>
+</tr>
 <tr>
-<td> Plane dimension(small one)  </td>
-<td> 25 ×25 × 13 mm
-</td></tr>
+<td>Dimension(big one)</td>
+<td>25 × 25 × 13 mm</td>
+</tr>
 <tr>
-<td> Material </td>
-<td> ABS
-</td></tr>
+<td>Plane dimension(small one)</td>
+<td>25 × 25 × 13 mm</td>
+</tr>
 <tr>
-<td> Color </td>
-<td> Blue, green, yellow and red for both sizes for wrapper.
-</td></tr></table>
+<td>Material</td>
+<td>ABS</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>Blue, green, yellow and red for both sizes for wrapper.</td>
+</tr>
+</table>
 
 **Different type of wrapper and corresponding SKU**
 
 <table>
-  <tbody><tr>
-      <td> Product name </td>
-      <td> SKU
-      </td></tr>
-    <tr>
-      <td> Red Grove Wrapper 1*1(4 PCS pack)</td>
-      <td> 110070020
-      </td></tr>
-    <tr>
-      <td> Yellow Grove Wrapper 1*1(4 PCS pack)</td>
-      <td> 110070021
-      </td></tr>
-    <tr>
-      <td> Blue Grove Wrapper 1*1(4 PCS pack)</td>
-      <td> 110070022
-      </td></tr>
-    <tr>
-      <td> Green Grove Wrapper 1*1(4 PCS pack) </td>
-      <td> 110070023
-      </td></tr>
-    <tr>
-      <td> Red Grove Wrapper 1*2(4 PCS pack)</td>
-      <td> 110070024
-      </td></tr>
-    <tr>
-      <td> Yellow Grove Wrapper 1*2(4 PCS pack)</td>
-      <td> 110070025
-      </td></tr>
-    <tr>
-      <td> Blue Grove Wrapper 1*2(4 PCS pack)</td>
-      <td> 110070026
-      </td></tr>
-    <tr>
-      <td> Green Grove Wrapper 1*2(4 PCS pack) </td>
-      <td> 110070027
-      </td></tr></tbody></table>
+<tbody>
+<tr>
+<td>Product name</td>
+<td>SKU</td>
+</tr>
+<tr>
+<td>Red Grove Wrapper 1*1(4 PCS pack)</td>
+<td>110070020</td>
+</tr>
+<tr>
+<td>Yellow Grove Wrapper 1*1(4 PCS pack)</td>
+<td>110070021</td>
+</tr>
+<tr>
+<td>Blue Grove Wrapper 1*1(4 PCS pack)</td>
+<td>110070022</td>
+</tr>
+<tr>
+<td>Green Grove Wrapper 1*1(4 PCS pack)</td>
+<td>110070023</td>
+</tr>
+<tr>
+<td>Red Grove Wrapper 1*2(4 PCS pack)</td>
+<td>110070024</td>
+</tr>
+<tr>
+<td>Yellow Grove Wrapper 1*2(4 PCS pack)</td>
+<td>110070025</td>
+</tr>
+<tr>
+<td>Blue Grove Wrapper 1*2(4 PCS pack)</td>
+<td>110070026</td>
+</tr>
+<tr>
+<td>Green Grove Wrapper 1*2(4 PCS pack)</td>
+<td>110070027</td>
+</tr>
+</tbody>
+</table>
 
 ## Hardware Overview
 
@@ -136,23 +145,24 @@ Note you can also use rivet to replace screw to fasten it on other blocks.
 
 <table>
 <tr>
-<th>Parts name   </th>
-<th> Quantity
-</th></tr>
+<th>Parts name</th>
+<th>Quantity</th>
+</tr>
 <tr>
-<td>Grove - Wrapper(only one size in one color) </td>
-<td> 4 PCS
-</td></tr>
+<td>Grove - Wrapper(only one size in one color)</td>
+<td>4 PCS</td>
+</tr>
 <tr>
-<td>Cross recessed flat head screw PM2.0*H10.0MM
+<td>
+Cross recessed flat head screw PM2.0*H10.0MM
 
 Cross recessed flat head screw CM4.0*H8.0MM
 
 Nut(Silver) M2.0*H1.5mm
-
 </td>
-<td> 8 PCS for each items
-</td></tr></table>
+<td> 8 PCS for each items</td>
+</tr>
+</table>
 
 ## Demos
 

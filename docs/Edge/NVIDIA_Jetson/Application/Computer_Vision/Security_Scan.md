@@ -118,7 +118,7 @@ print(tr.__version__)
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SecurityCheck/Security_Scan_11.png" /></div>
 
->Notice: PyTorch wheels for Raspberry Pi 4 can be find in <https://github.com/Qengineering/PyTorch-Raspberry-Pi-64-OS>
+>Notice: PyTorch wheels for Raspberry Pi 4 can be find in [https://github.com/Qengineering/PyTorch-Raspberry-Pi-64-OS](https://github.com/Qengineering/PyTorch-Raspberry-Pi-64-OS)
 
 **Tritonclient**
 

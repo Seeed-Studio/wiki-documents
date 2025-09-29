@@ -1,0 +1,10 @@
+position: 7 # float position is supported
+label: '开发'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: development
+link:
+  type: generated-index
+  slug: cn/development
+  title: 开发
+  description: 这部分专注于如何使用监视器功能来帮助您的开发工作。

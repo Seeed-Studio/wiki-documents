@@ -4,7 +4,7 @@ title: XIAO RP2350 With NuttX(RTOS)
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nuttx.webp
-slug: /xiao-rp2350-nuttx
+slug: /xiao_rp2350_nuttx
 sidebar_position: 3
 last_update:
     date: 03/11/2025
@@ -12,6 +12,12 @@ last_update:
 ---
 
 # Seeed Studio XIAO RP2350 with NuttX(RTOS)
+
+:::note
+
+Due to changes in software versions, some steps in this documentation may no longer be accurate or up-to-date.
+
+:::
 
 ## Introduction
 
@@ -65,13 +71,13 @@ The Apache Nuttx it's divided into two project:
 To start an application it's necessary to load a configuration on NuttX, calling the command:
 
 ```bash
-./tools/configurate.sh board_name:your_application
+./tools/configure.sh board_name:your_application
 ```
 
 Also it's possible to check the list of board-supported a running the command:
 
 ```bash
-./tools/configurate.sh -L
+./tools/configure.sh -L
 ```
 
 4. Build NuttX (build process will generate the firmware binaries, including nuttx.uf2):
@@ -106,10 +112,10 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Now we select the NSH configuration to the xiao-nrf5200 board:
+Now we select the NSH configuration to the xiao-rp2350 board:
 
 ```bash
-./tools/configurate.sh xiao-rp2350:nsh
+./tools/configure.sh xiao-rp2350:nsh
 ```
 
 Compile the source code.
@@ -171,10 +177,10 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Now we select the NSH configuration to the xiao-nrf5200 board:
+Now we select the NSH configuration to the xiao-rp2350 board:
 
 ```bash
-./tools/configurate.sh xiao-rp2350:usbnsh
+./tools/configure.sh xiao-rp2350:usbnsh
 ```
 
 Compile the source code.
@@ -208,7 +214,7 @@ make distclean
 Select the combo configuration to the xiao-rp2350 board.
 
 ```bash
-./tools/configurate.sh xiao-rp2350:combo
+./tools/configure.sh xiao-rp2350:combo
 ```
 
 Compile de the source code.

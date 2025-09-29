@@ -47,7 +47,7 @@ Specifications
 | Symbols/Graphics functions supported   | Dot, straight line, circle, char, string, number, emoji, image (you can display these symbols by calling API directly in code) |
 | Supported LED matrix size              | 32(row)×64(column)                                                                                                             |
 | Supported color in each LED matrix dot | Dual LEDs (green and red) and a mixed color(yellow), and you can use only one LED in each LED matrix dot                       |
-| Connector for LED matrix               | DBSTAR\_HUB 08A                                                                                                                |
+| Connector for LED matrix               | DBSTAR_HUB 08A                                                                                                                |
 | Protocol for Grove port                | UART                                                                                                                           |
 | Working temperature                    | -40–80 ℃                                                                                                                       |
 | Dimensions                             | 46.5×44 mm                                                                                                                     |
@@ -70,7 +70,7 @@ Hardware Overview
 ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/img/Grove-LED_Matrix_Driver_v1.0_product_components_described_1200_s.jpg)
 
 - **Grove socket**, to connect this product to main control board.
-- **LED matrix port(DBSTAR\_HUB 08A )**, to connect LED matrix. If you can not find a connector like this, you can user jumper wires as an alternative.
+- **LED matrix port(DBSTAR_HUB 08A )**, to connect LED matrix. If you can not find a connector like this, you can user jumper wires as an alternative.
 
 ### **Package includes**(main parts)
 
@@ -107,14 +107,14 @@ Connect all parts as following:
 
 #### Coding Work
 
-You can find more demo sketch at <https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver> and development library at <https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver>
+You can find more demo sketch at &lt;https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver&gt; and development library at &lt;https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver&gt;
 
 1. A typical demo code. You can upload code to main control board with [Codebender](https://codebender.cc).
 
 <iframe frameBorder={0} height={500} src="https://codebender.cc/embed/sketch:300168" width="50%">
 </iframe>
 
-2. Download and upload the code. If you do not know how to upload an Arduino sketch, please visit <https://www.arduino.cc/en/Guide/Windows> for Windows user or <https://www.arduino.cc/en/Guide/MacOSX> for Mac user. You can see the result as below.
+2. Download and upload the code. If you do not know how to upload an Arduino sketch, please visit &lt;https://www.arduino.cc/en/Guide/Windows&gt; for Windows user or &lt;https://www.arduino.cc/en/Guide/MacOSX&gt; for Mac user. You can see the result as below.
 
 ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/img/Grove-LED_Matrix_Driver_v1.0_wiki_demo_result_view_s.jpg)
 

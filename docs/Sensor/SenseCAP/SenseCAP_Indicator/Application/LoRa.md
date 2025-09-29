@@ -40,6 +40,7 @@ From the page, [Dive_into_the_Hardware](/SenseCAP_Indicator_Dive_into_the_Hardwa
 "/></div>
 
 The key components are:
+
 - Semtech SX1262 radio front-end
 - ESP32-S3 MCU
 
@@ -113,6 +114,7 @@ Clone or download the demo code from [this link](https://github.com/Seeed-Soluti
   uint16_t crc16_ccitt(const uint8_t *data, size_t length);
   #endif
   ```
+
   </TabItem>
 
   <TabItem value="XIAO/include/Frame.cpp">
@@ -172,12 +174,12 @@ Clone or download the demo code from [this link](https://github.com/Seeed-Soluti
       return crc & 0xFFFF;
   }
   ```
+
   </TabItem>
 </Tabs>
 
-
-
 #### Step 2.2: Implement sensor data structrue and adapt to the Payload Encoder
+
 <Tabs>
   <TabItem value="XIAO/include/sensor_sen5x.h">
 
@@ -219,6 +221,7 @@ Clone or download the demo code from [this link](https://github.com/Seeed-Soluti
   };
   #endif // PAYLOAD_SEN5X_H
   ```
+
   </TabItem>
   <TabItem value="XIAO/src/sensor_sen5x.cpp">
 
@@ -313,6 +316,7 @@ Clone or download the demo code from [this link](https://github.com/Seeed-Soluti
       return packFrame(_frame);
   }
   ```
+
   </TabItem>
 </Tabs>
 
@@ -369,7 +373,7 @@ Complete the Payload, now we will dive into SenseCAP Indicator to programme the 
 #### Step 3.1: Implement Your Payload Decoder
 
 <Tabs>
-  <Tabitem value="Indicator/main/Frame/frame.h">
+  <TabItem value="Indicator/main/Frame/frame.h">
 
   ```cpp
     #ifndef __SIMPLE_FRAME_H
@@ -407,8 +411,8 @@ Complete the Payload, now we will dive into SenseCAP Indicator to programme the 
     #endif
   ```
 
-  </Tabitem>
-  <Tabitem value="Indicator/main/Frame/frame.c">
+  </TabItem>
+  <TabItem value="Indicator/main/Frame/frame.c">
 
   ```cpp
     #include "frame.h"
@@ -471,7 +475,8 @@ Complete the Payload, now we will dive into SenseCAP Indicator to programme the 
         return crc & 0xFFFF;
     }
   ```
-  </Tabitem>
+
+  </TabItem>
 </Tabs>
 
 #### Step 3.2: Implement Sensor Data Structure
@@ -520,6 +525,7 @@ Complete the Payload, now we will dive into SenseCAP Indicator to programme the 
     void prinSEN5xData( const SEN5xData_t *SEN5x );
     #endif // PAYLOAD_SEN5X_H
   ```
+
   </TabItem>
   <TabItem value="Indicator/main/Sensors/sen5x.c">
 
@@ -549,6 +555,7 @@ Complete the Payload, now we will dive into SenseCAP Indicator to programme the 
     #endif
     }
   ```
+
   </TabItem>
 </Tabs>
 
@@ -633,9 +640,9 @@ static const char *TAG = "app_main";
 #define SENSECAP "\n\
    _____                      _________    ____         \n\
   / ___/___  ____  ________  / ____/   |  / __ \\       \n\
-  \\__ \\/ _ \\/ __ \\/ ___/ _ \\/ /   / /| | / /_/ /   \n\
+  \__ \\/ _ \\/ __ \\/ ___/ _ \\/ /   / /| | / /_/ /   \n\
  ___/ /  __/ / / (__  )  __/ /___/ ___ |/ ____/         \n\
-/____/\\___/_/ /_/____/\\___/\\____/_/  |_/_/           \n\
+/____/\___/_/ /_/____/\___/\____/_/  |_/_/           \n\
 --------------------------------------------------------\n\
  Version: %s %s %s\n\
 --------------------------------------------------------\n\

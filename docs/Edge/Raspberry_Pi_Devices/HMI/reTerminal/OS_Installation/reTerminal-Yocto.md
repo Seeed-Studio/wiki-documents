@@ -11,7 +11,6 @@ last_update:
   author: jianjing Huang
 ---
 
-
 # Yocto for reTerminal
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/yocto-wiki-thumb.jpg" alt="pir" width="500" height="auto"/></p>
@@ -159,7 +158,7 @@ Refer to the following to get familiarized with some useful Bitbake commands
 
 ##### Start compiling the image
 
-- bitbake < image >
+- bitbake `<image>`
 
 This command will start compiling the image. You can add -k to continue compiling even errors are found. While the target that failed and anything depending on it cannot be built, as much as possible will be built before stopping.
 
@@ -177,35 +176,35 @@ bitbake rpi-test-image -k
 
 ##### Show packages in the image
 
-- bitbake -g < image > && cat pn-buildlist | grep -v -e '-native' | grep -v digraph | grep -v -e '-image' | awk '{print $1}' | sort | uniq
+- bitbake -g `<image>` && cat pn-buildlist | grep -v -e '-native' | grep -v digraph | grep -v -e '-image' | awk '\{print $1\}' | sort | uniq
 
 This will save the packages inside the image into a file named **pn-buildlist** and then list them on console
 
 Example:
 
 ```sh
-bitbake -g rpi-test-image && cat pn-buildlist | grep -v -e '-native' | grep -v digraph | grep -v -e '-image' | awk '{print $1}' | sort | uniq
+bitbake -g rpi-test-image && cat pn-buildlist | grep -v -e '-native' | grep -v digraph | grep -v -e '-image' | awk '\{print $1\}' | sort | uniq
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/bitbake-commands/image-packages.png" alt="pir" width="800" height="auto"/></p>
 
 ##### Show package dependencies
 
-- bitbake -g < package > && cat pn-buildlist | grep -v -e '-native' | grep -v digraph | grep -v -e '-image' | awk '{print $1}' | sort | uniq
+- bitbake -g `<package>` && cat pn-buildlist | grep -v -e '-native' | grep -v digraph | grep -v -e '-image' | awk '\{print $1\}' | sort | uniq
 
 This will save the package dependencies into a file named **pn-buildlist** and then list them on console
 
 Example:
 
 ```sh
-bitbake -g i2c-tools && cat pn-buildlist | grep -v -e '-native' | grep -v digraph | grep -v -e '-image' | awk '{print $1}' | sort | uniq
+bitbake -g i2c-tools && cat pn-buildlist | grep -v -e '-native' | grep -v digraph | grep -v -e '-image' | awk '\{print $1\}' | sort | uniq
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/bitbake-commands/package-depends.png" alt="pir" width="800" height="auto"/></p>
 
 ##### Task dependency explorer UI
 
-- bitbake < image > -g -u taskexp
+- bitbake `<image>` -g -u taskexp
 
 This is will helpful to show the Task Dependency Explorer UI. It shows dependencies between tasks
 
@@ -219,7 +218,7 @@ bitbake rpi-test-image -g -u taskexp
 
 ##### Launch devshell for a package
 
-- bitbake < package > -c devshell
+- bitbake `<package>` -c devshell
 
 This will open a new shell where with the neccesary system values already defined for the package
 
@@ -289,7 +288,7 @@ bitbake -s | grep openssl
 
 ##### Save verbose build log
 
-- bitbake -v < image > 2>&1 | tee image_build.log
+- bitbake -v `<image>` 2>&1 | tee image_build.log
 
 This will print (on console) as the image starts building and store the output in **image_build.log** with verbose mode
 
@@ -404,7 +403,7 @@ source toaster start webport=9000
 
   - Layer name: meta-raspberrypi
   - Where is the layer source code?: In a **Git repository**
-  - Git repository URL: <https://github.com/agherzan/meta-raspberrypi.git>
+  - Git repository URL: [https://github.com/agherzan/meta-raspberrypi.git](https://github.com/agherzan/meta-raspberrypi.git)
   - Git revision: 8dc3a310883ea87cd9900442f46f20bb08e57583
 
 - **Step 15.** Click **Import and add to project**
@@ -415,21 +414,21 @@ source toaster start webport=9000
 
   - Layer name: meta-qt5
   - Where is the layer source code?: In a **Git repository**
-  - Git repository URL: <https://github.com/meta-qt5/meta-qt5.git>
+  - Git repository URL: [https://github.com/meta-qt5/meta-qt5.git](https://github.com/meta-qt5/meta-qt5.git)
   - Git revision: master
 
 - **meta-seeed-reterminal**
 
   - Layer name: meta-seeed-reterminal
   - Where is the layer source code?: In a **Git repository**
-  - Git repository URL: <https://github.com/Seeed-Studio/meta-seeed-reterminal.git>
+  - Git repository URL: [https://github.com/Seeed-Studio/meta-seeed-reterminal.git](https://github.com/Seeed-Studio/meta-seeed-reterminal.git)
   - Git revision: main
 
 - **meta-oe**
 
   - Layer name: meta-oe
   - Where is the layer source code?: In a **Git repository**
-  - Git repository URL: <https://github.com/openembedded/meta-openembedded.git>
+  - Git repository URL: [https://github.com/openembedded/meta-openembedded.git](https://github.com/openembedded/meta-openembedded.git)
   - Repository subdirectory: meta-oe
   - Git revision: master
 
@@ -437,7 +436,7 @@ source toaster start webport=9000
 
   - Layer name: meta-python
   - Where is the layer source code?: In a **Git repository**
-  - Git repository URL: <https://github.com/openembedded/meta-openembedded.git>
+  - Git repository URL: [https://github.com/openembedded/meta-openembedded.git](https://github.com/openembedded/meta-openembedded.git)
   - Repository subdirectory: meta-python
   - Git revision: master
 
@@ -559,11 +558,11 @@ This talk mainly focuses on explaining how easily you can create custom Linux im
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -29,375 +29,76 @@ Mesh Bee is a 2.4GHz wireless transceiver from seeed studio. It's based on NXP's
 
 ---
 
-* Range: Indoor/Urban: up to 30m; Outdoor line-of-sight: up to 100m;
-* Receiver Sensitivity: -95dBm
-* Data Transmission Rate: 4800, 9600, 19200, 38400, 57600, 115200 (bps)
-* Working Frequency: unlicensed 2.4GHz band
-* Communication type: Point to Point or Start Network or Mesh Network
-* OTA support: update node's firmware on-the-air
-* Easy-to-Use Serial Interface and rich extendable ports
-* Easy-to-Use AT Command: Setup ZigBee network, Set Serial Baud Rate, etc.
-* Open source Hardware and Firmware
-* Programmable 32-bit RISC CPU: 32M clock, 256KB Flash, 32KB RAM, 4KB EEPROM
-* Socket compatible with the Xbee, so you can plug it into any Xbee socket as a quick replacement.
+- Range: Indoor/Urban: up to 30m; Outdoor line-of-sight: up to 100m;
+- Receiver Sensitivity: -95dBm
+- Data Transmission Rate: 4800, 9600, 19200, 38400, 57600, 115200 (bps)
+- Working Frequency: unlicensed 2.4GHz band
+- Communication type: Point to Point or Start Network or Mesh Network
+- OTA support: update node's firmware on-the-air
+- Easy-to-Use Serial Interface and rich extendable ports
+- Easy-to-Use AT Command: Setup ZigBee network, Set Serial Baud Rate, etc.
+- Open source Hardware and Firmware
+- Programmable 32-bit RISC CPU: 32M clock, 256KB Flash, 32KB RAM, 4KB EEPROM
+- Socket compatible with the Xbee, so you can plug it into any Xbee socket as a quick replacement.
 
 Note: Mesh Bee will not communicate with Xbee as the ZigBee stack versions they're using are different.
 
 ## 3. Specification
 
 ---
-<table>
-<tr>
-<th> Specification
-</th>
-<th> Value
-</th></tr>
-<tr>
-<td width="400px"> Microprocessor
-</td>
-<td width="600px"> JN5168 (32-bit RISC CPU, 32MHz clock speed)
-</td></tr>
-<tr>
-<td> Resources
-</td>
-<td> 256kB/32kB/4kB (Flash/RAM/EEPROM)
-</td></tr>
-<tr>
-<td> PCB size
-</td>
-<td> 24.5mmx30.5mmx0.8mm
-</td></tr>
-<tr>
-<td> Outline Dimension
-</td>
-<td> 24.5mmx30.5mmx9.77mm
-</td></tr>
-<tr>
-<td> Indicators
-</td>
-<td> No
-</td></tr>
-<tr>
-<td> Power supply
-</td>
-<td> 3.3V
-</td></tr>
-<tr>
-<td> IO counts
-</td>
-<td> 12
-</td></tr>
-<tr>
-<td> ADC input
-</td>
-<td> 3(2 multiplexing with IO)
-</td></tr>
-<tr>
-<td> Interfaces
-</td>
-<td> UARTx2, SPI, I2C
-</td></tr>
-<tr>
-<td> Program interface
-</td>
-<td> UART+MISO
-</td></tr>
-<tr>
-<td> Connectivity
-</td>
-<td> Socket compatible with XBee
-</td></tr>
-<tr>
-<td> Communication Protocol
-</td>
-<td> Uart(TTL)
-</td></tr>
-<tr>
-<td> Operating Frequency Band
-</td>
-<td> 2.4GHz
-</td></tr>
-<tr>
-<td> Stack/Software
-</td>
-<td> RF4CE, JenNet-IP , ZigBee Pro
-</td></tr></table>
+
+| Specification | Value |
+|--------------|-------|
+| Microprocessor | JN5168 (32-bit RISC CPU, 32MHz clock speed) |
+| Resources | 256kB/32kB/4kB (Flash/RAM/EEPROM) |
+| PCB size | 24.5mmx30.5mmx0.8mm |
+| Outline Dimension | 24.5mmx30.5mmx9.77mm |
+| Indicators | No |
+| Power supply | 3.3V |
+| IO counts | 12 |
+| ADC input | 3(2 multiplexing with IO) |
+| Interfaces | UARTx2, SPI, I2C |
+| Program interface | UART+MISO |
+| Connectivity | Socket compatible with XBee |
+| Communication Protocol | Uart(TTL) |
+| Operating Frequency Band | 2.4GHz |
+| Stack/Software | RF4CE, JenNet-IP , ZigBee Pro |
 
 ### 3.1 Electrical Characteristics
 
-<table >
-<tr>
-<th> Specification
-</th>
-<th> Min
-</th>
-<th> Typ
-</th>
-<th> Max
-</th>
-<th> Unit
-</th></tr>
-<tr>
-<td width="400px"> Max Input Voltage
-</td>
-<td width="150px"> -0.3
-</td>
-<td width="150px">
-</td>
-<td width="150px"> 3.6
-</td>
-<td width="150px"> V
-</td></tr>
-<tr>
-<td> Working Input Voltage
-</td>
-<td> 2.0
-</td>
-<td> 3.3
-</td>
-<td> 3.6
-</td>
-<td> V
-</td></tr>
-<tr>
-<td> Transmit Current
-</td>
-<td>
-</td>
-<td> 15
-</td>
-<td>
-</td>
-<td> mA
-</td></tr>
-<tr>
-<td> Receive Current
-</td>
-<td>
-</td>
-<td> 17
-</td>
-<td>
-</td>
-<td> mA
-</td></tr>
-<tr>
-<td> Deep Sleep Current
-</td>
-<td>
-</td>
-<td> 0.12
-</td>
-<td>
-</td>
-<td> uA
-</td></tr>
-<tr>
-<td> Operating Temperature
-</td>
-<td> -40
-</td>
-<td>
-</td>
-<td> 125
-</td>
-<td> °C
-</td></tr></table>
+| Specification | Min | Typ | Max | Unit |
+|--------------|-----|-----|-----|------|
+| Max Input Voltage | -0.3 | | 3.6 | V |
+| Working Input Voltage | 2.0 | 3.3 | 3.6 | V |
+| Transmit Current | | 15 | | mA |
+| Receive Current | | 17 | | mA |
+| Deep Sleep Current | | 0.12 | | uA |
+| Operating Temperature | -40 | | | |
 
 ## 4. Pin definition
 
-![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Mesh_Bee_Pin.jpg)
-
-<table >
-<tr>
-<th> Pin
-</th>
-<th> Alternate Functions
-</th>
-<th> Type
-</th>
-<th> Description
-</th></tr>
-<tr>
-<td width="100px"> 3V3
-</td>
-<td width="200px"> -
-</td>
-<td width="200px"> Supply input
-</td>
-<td width="400px"> VCC, +3.3V
-</td></tr>
-<tr>
-<td> TX1
-</td>
-<td> D14
-</td>
-<td> Output
-</td>
-<td> Uart1 Tx port; Digital IO 14
-</td></tr>
-<tr>
-<td> RX1
-</td>
-<td> D15
-</td>
-<td> Input
-</td>
-<td> Uart Rx port; Digital IO 15
-</td></tr>
-<tr>
-<td> DO1
-</td>
-<td> SPIMISO
-</td>
-<td> Input/Output
-</td>
-<td> Digital Output 1; SPI Master In Slave Out Input
-</td></tr>
-<tr>
-<td>  !RST
-</td>
-<td> -
-</td>
-<td> Input
-</td>
-<td> Reset port
-</td></tr>
-<tr>
-<td> D11
-</td>
-<td> PWM1
-</td>
-<td> Input/Output
-</td>
-<td> Digital IO 11 (default usage: RSSI Indicator); PWM1 Output
-</td></tr>
-<tr>
-<td> DO0
-</td>
-<td> SPICLK
-</td>
-<td> Output
-</td>
-<td> Digital Output 0; SPI Master Clock Output
-</td></tr>
-<tr>
-<td> D18
-</td>
-<td> SPIMOSI
-</td>
-<td> Input/Output
-</td>
-<td> Digital IO 18; SPI Master Out Slave In Output
-</td></tr>
-<tr>
-<td> VRef
-</td>
-<td> ADC2
-</td>
-<td> Input
-</td>
-<td> Analogue peripheral reference voltage; ADC input 2
-</td></tr>
-<tr>
-<td> GND
-</td>
-<td> -
-</td>
-<td> GND
-</td>
-<td> GND
-</td></tr>
-<tr>
-<td> TX0
-</td>
-<td> D6
-</td>
-<td> Input/Output
-</td>
-<td> Uart0 Tx port; Digital IO 6
-</td></tr>
-<tr>
-<td> D12
-</td>
-<td> CTS0
-</td>
-<td> Input/Output
-</td>
-<td> Digital IO 12; UART 0 Clear To Send Input
-</td></tr>
-<tr>
-<td> D9
-</td>
-<td> -
-</td>
-<td> Input/Output
-</td>
-<td> Digital IO 9 (default usage: Mesh Bee ON/Sleep Indicator)
-</td></tr>
-<tr>
-<td> RX0
-</td>
-<td> D7
-</td>
-<td> Input/Output
-</td>
-<td> Uart0 Rx port; Digital IO 7
-</td></tr>
-<tr>
-<td> D10
-</td>
-<td> -
-</td>
-<td> Input/Output
-</td>
-<td> Digital IO 10 (default usage: Network Association Indicator)
-</td></tr>
-<tr>
-<td> D13
-</td>
-<td> RTS0
-</td>
-<td> Input/Output
-</td>
-<td> Digital IO 13; UART 0 Request To Send Output
-</td></tr>
-<tr>
-<td> D1
-</td>
-<td> SPISEL2; ADC4
-</td>
-<td> Input/Output
-</td>
-<td> Digital IO 1; SPI Master Select Output 2; ADC input 4
-</td></tr>
-<tr>
-<td> D0
-</td>
-<td> SPISEL1; ADC3
-</td>
-<td> Input/Output
-</td>
-<td> Digital IO 0; SPI Master Select Output 1; ADC input 3
-</td></tr>
-<tr>
-<td> D16
-</td>
-<td> SCL
-</td>
-<td> Input/Output
-</td>
-<td> Digital IO 16; I2C clock
-</td></tr>
-<tr>
-<td> D17
-</td>
-<td> SDA
-</td>
-<td> Input/Output
-</td>
-<td> Digital IO 17; I2C data
-</td></tr></table>
+| Pin Name | Alternate Functions | Type | Description |
+|----------|-------------------|------|-------------|
+| 3V3 | - | Supply input | VCC, +3.3V |
+| TX1 | D14 | Output | Uart1 Tx port; Digital IO 14 |
+| RX1 | D15 | Input | Uart Rx port; Digital IO 15 |
+| DO1 | SPIMISO | Input/Output | Digital Output 1; SPI Master In Slave Out Input |
+| !RST | - | Input | Reset port |
+| D11 | PWM1 | Input/Output | Digital IO 11 (default usage: RSSI Indicator); PWM1 Output |
+| DO0 | SPICLK | Output | Digital Output 0; SPI Master Clock Output |
+| D18 | SPIMOSI | Input/Output | Digital IO 18; SPI Master Out Slave In Output |
+| VRef | ADC2 | Input | Analogue peripheral reference voltage; ADC input 2 |
+| GND | - | GND | GND |
+| TX0 | D6 | Input/Output | Uart0 Tx port; Digital IO 6 |
+| D12 | CTS0 | Input/Output | Digital IO 12; UART 0 Clear To Send Input |
+| D9 | - | Input/Output | Digital IO 9 (default usage: Mesh Bee ON/Sleep Indicator) |
+| RX0 | D7 | Input/Output | Uart0 Rx port; Digital IO 7 |
+| D10 | - | Input/Output | Digital IO 10 (default usage: Network Association Indicator) |
+| D13 | RTS0 | Input/Output | Digital IO 13; UART 0 Request To Send Output |
+| D1 | SPISEL2; ADC4 | Input/Output | Digital IO 1; SPI Master Select Output 2; ADC input 4 |
+| D0 | SPISEL1; ADC3 | Input/Output | Digital IO 0; SPI Master Select Output 1; ADC input 3 |
+| D16 | SCL | Input/Output | Digital IO 16; I2C clock |
+| D17 | SDA | Input/Output | Digital IO 17; I2C data |
 
 Note: Only important alternate functions are listed, may have more, please refer to JN516x data sheet.
 
@@ -422,21 +123,21 @@ JN516x has a specific firmware download interface with a UART and some other pin
 
 To update firmware, follow the steps:
 
-* Step 1: Download the latest firmware from github;
+- Step 1: Download the latest firmware from github;
 
-  * [Mesh_Bee#9.1_Firmware_Downloads](/Mesh_Bee#91-firmware-downloads "Mesh Bee")
+  - [Mesh_Bee#9.1_Firmware_Downloads](/Mesh_Bee#91-firmware-downloads "Mesh Bee")
 
-* Step 2: Configure the UartSBee v5 with FT_Prog;
+- Step 2: Configure the UartSBee v5 with FT_Prog;
 
-  * Download FT_Prog: [File:FT Prog v2.8.2.0.zip](https://files.seeedstudio.com/wiki/Mesh_Bee/res/FT_Prog_v2.8.2.0.zip "File:FT Prog v2.8.2.0.zip") and install. (Windows only)
+  - Download FT_Prog: [File:FT Prog v2.8.2.0.zip](https://files.seeedstudio.com/wiki/Mesh_Bee/res/FT_Prog_v2.8.2.0.zip "File:FT Prog v2.8.2.0.zip") and install. (Windows only)
 
-  * Connect the UartSBee v5 to PC, open FT_Prog and configure it like this:
+  - Connect the UartSBee v5 to PC, open FT_Prog and configure it like this:
 
 ![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/FT_Prog.jpg)
 
-* Step 3: Switch the SW1 to "3V3" and SW3 to "Prog" position;
+- Step 3: Switch the SW1 to "3V3" and SW3 to "Prog" position;
 
-* Step 4: Plug the Mesh Bee module into UartSBee v5 ;
+- Step 4: Plug the Mesh Bee module into UartSBee v5 ;
 
 -Step 5: Flash firmware with "Jennic Flash Programmer";
 
@@ -560,19 +261,19 @@ This is a simple example about remote control with 2 Mesh Bee nodes.
 
 They are:
 
-* [Seeeduino v3](https://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=6_7) x2
+- [Seeeduino v3](https://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=6_7) x2
 
-* XBee shield x2 , version 1/2, picture above shows [XBee Shield v1](https://www.seeedstudio.com/depot/xbee-shield-p-419.html?cPath=73) and [XBee Shield v2](https://www.seeedstudio.com/depot/xbee-shield-v20-p-1375.html?cPath=98_16)
+- XBee shield x2 , version 1/2, picture above shows [XBee Shield v1](https://www.seeedstudio.com/depot/xbee-shield-p-419.html?cPath=73) and [XBee Shield v2](https://www.seeedstudio.com/depot/xbee-shield-v20-p-1375.html?cPath=98_16)
 
-* Mesh Bee x2 (pic above shows the prototype version, the release version maybe different in color)
+- Mesh Bee x2 (pic above shows the prototype version, the release version maybe different in color)
 
-* UartSBee v5 x1
+- UartSBee v5 x1
 
-* [Rotary Angle](https://www.seeedstudio.com/depot/grove-rotary-angle-sensor-p-770.html?cPath=85_52) x1
+- [Rotary Angle](https://www.seeedstudio.com/depot/grove-rotary-angle-sensor-p-770.html?cPath=85_52) x1
 
-* [Servo](https://www.seeedstudio.com/depot/grove-servo-p-1241.html?cPath=39_41) x1
+- [Servo](https://www.seeedstudio.com/depot/grove-servo-p-1241.html?cPath=39_41) x1
 
-* Cables
+- Cables
 
 <big>Step 2: Configure Mesh Bee nodes</big>
 
@@ -777,43 +478,13 @@ ZigBee is a low-power &amp; low-speed networked transmission protocol. So it's n
 
 The data rate specification of Mesh Bee network with 2~3 nodes:
 
-<table>
-<tr>
-<th> Transmission Direction </th>
-<th> Transmit Method </th>
-<th> Packet Period (ms) </th>
-<th> Max Packet Length (bytes)
-</th></tr>
-<tr>
-<td> COO/ROU  </td>
-<td> Broadcast </td>
-<td> 250 </td>
-<td> 50
-</td></tr>
-<tr>
-<td> COO/ROU -&gt; END </td>
-<td> Unicast </td>
-<td> 40 </td>
-<td> 50
-</td></tr>
-<tr>
-<td> END  </td>
-<td> Broadcast </td>
-<td> 150 </td>
-<td> 50
-</td></tr>
-<tr>
-<td> END -&gt; COO/ROU </td>
-<td> Unicast </td>
-<td> 20 </td>
-<td> 25
-</td></tr>
-<tr>
-<td> END -&gt; COO/ROU </td>
-<td> Unicast </td>
-<td> 40 </td>
-<td> 50
-</td></tr></table>
+| Transmission Direction | Transmit Method | Packet Period (ms) | Max Packet Length (bytes) |
+|----------------------|-----------------|-------------------|------------------------|
+| COO/ROU | Broadcast | 250 | 50 |
+| COO/ROU -> END | Unicast | 40 | 50 |
+| END | Broadcast | 150 | 50 |
+| END -> COO/ROU | Unicast | 20 | 25 |
+| END -> COO/ROU | Unicast | 40 | 50 |
 
 The data rate will be lower for a bigger network.
 
@@ -823,23 +494,23 @@ The biggest feature we want to introduce is Mesh Bee supports re-programming. Wh
 
 Mesh Bee uses the chip named JN5168 with a 32-bit RISC core and rich resources:
 
-* Flash/RAM/EEPROM: 256kB/32kB/4kB
+- Flash/RAM/EEPROM: 256kB/32kB/4kB
 
-* Master SPI port with three select outputs
+- Master SPI port with three select outputs
 
-* Slave SPI port
+- Slave SPI port
 
-* 2x UART’s
+- 2x UART's
 
-* 5x PWM (4x timer &amp; 1x counter)
+- 5x PWM (4x timer &amp; 1x counter)
 
-* I2C
+- I2C
 
-* 4 channel 10-bit ADC
+- 4 channel 10-bit ADC
 
-* Comparator
+- Comparator
 
-* Battery &amp; temperature sensor
+- Battery &amp; temperature sensor
 
 With our UartSBee v5 you can easily re-program Mesh Bee. There's just a little step of learning some NXP documents before playing good.
 
@@ -863,11 +534,11 @@ Note: Mesh Bee's factory firmware is developed on top of the Smart Energy profil
 
 To create the development environment you should download:
 
-* JN-SW-4041    SDK Toolchain
+- JN-SW-4041    SDK Toolchain
 
-* JN-SW-4064    ZigBee Smart Energy SDK
+- JN-SW-4064    ZigBee Smart Energy SDK
 
-* JN-SW-4067-JN516x ZigBee Home Automation SDK
+- JN-SW-4067-JN516x ZigBee Home Automation SDK
 
 and then install them on a Windows PC (install JN-SW-4064 after JN-SW-4041).
 
@@ -883,23 +554,23 @@ NXP official resources:
 
 User Guides
 
-* **JN-UG-3048 &lt;ZigBee PRO Stack User Guide&gt; Introduces essential ZigBee PRO concepts and details the ZigBee PRO APIs for developing applications.**
+- **JN-UG-3048 &lt;ZigBee PRO Stack User Guide&gt; Introduces essential ZigBee PRO concepts and details the ZigBee PRO APIs for developing applications.**
 
-* JN-UG-3059 &lt;ZigBee PRO Smart Energy API User Guide&gt; Introduces ZigBee Smart Energy (SE) and details the SE API for developing applications.
+- JN-UG-3059 &lt;ZigBee PRO Smart Energy API User Guide&gt; Introduces ZigBee Smart Energy (SE) and details the SE API for developing applications.
 
-* **JN-UG-3075 &lt;JenOS User Guide&gt;       Details the JenOS APIs used in ZigBee PRO application code to manage OS resources.**
+- **JN-UG-3075 &lt;JenOS User Guide&gt;       Details the JenOS APIs used in ZigBee PRO application code to manage OS resources.**
 
-* JN-UG-3077 &lt;ZigBee Cluster Library User Guide&gt; Describes the NXP implementation of the ZigBee Cluster Library (ZCL).
+- JN-UG-3077 &lt;ZigBee Cluster Library User Guide&gt; Describes the NXP implementation of the ZigBee Cluster Library (ZCL).
 
 Application Notes
 
-* JN-AN-1135 &lt;Smart Energy HAN Solutions Application Note&gt; Provides and describes example Smart Energy Home Area Network solutions
+- JN-AN-1135 &lt;Smart Energy HAN Solutions Application Note&gt; Provides and describes example Smart Energy Home Area Network solutions
 
 Related Documentation
 
-* **JN-DS-JN516x &lt;JN516x Datasheet&gt; Details the JN516x series of micro controllers.**
+- **JN-DS-JN516x &lt;JN516x Datasheet&gt; Details the JN516x series of micro controllers.**
 
-* **JN-UG-3087 &lt;JN516x Integrated Peripherals API User Guide&gt; Details the JN516x Integrated Peripherals API, used in application code to interact with JN516x on-chip peripherals.**
+- **JN-UG-3087 &lt;JN516x Integrated Peripherals API User Guide&gt; Details the JN516x Integrated Peripherals API, used in application code to interact with JN516x on-chip peripherals.**
 
 Download page: [http://www.nxp.com/techzones/wireless-connectivity/smart-energy.html](http://www.nxp.com/techzones/wireless-connectivity/smart-energy.html)
 
@@ -918,15 +589,15 @@ We created a google group for Mesh Bee's general discussion and development rela
 
 ## 9. Resources
 
-* [Eagle file for Mesh Bee v1.0](https://files.seeedstudio.com/wiki/Mesh_Bee/res/Mesh_Bee_v1.0_eagle.zip)
+- [Eagle file for Mesh Bee v1.0](https://files.seeedstudio.com/wiki/Mesh_Bee/res/Mesh_Bee_v1.0_eagle.zip)
 
-* [AT command manual for Mesh Bee V1.0](https://files.seeedstudio.com/wiki/Mesh_Bee/res/AT_command_manual_for_Mesh_Bee_V1.0.pdf)
+- [AT command manual for Mesh Bee V1.0](https://files.seeedstudio.com/wiki/Mesh_Bee/res/AT_command_manual_for_Mesh_Bee_V1.0.pdf)
 
-* [JN5168 datasheet](https://files.seeedstudio.com/wiki/Mesh_Bee/res/JN516X.pdf)
+- [JN5168 datasheet](https://files.seeedstudio.com/wiki/Mesh_Bee/res/JN516X.pdf)
 
-* [Cook Book for v1004](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_Cook_Book.pdf)
+- [Cook Book for v1004](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_Cook_Book.pdf)
 
-* [User Manual for v1004](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_User_Manual_v0.3.pdf)
+- [User Manual for v1004](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_User_Manual_v0.3.pdf)
 
 ### 9.1 Firmware Downloads
 
@@ -952,18 +623,18 @@ End-device's firmware: [https://github.com/Seeed-Studio/Mesh_Bee/raw/v1.0.4/buil
 
 **More information about Mesh Bee's firmware:**
 
-* [Mesh Bee firmware source code on Github](https://github.com/Seeed-Studio/Mesh_Bee)
+- [Mesh Bee firmware source code on Github](https://github.com/Seeed-Studio/Mesh_Bee)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

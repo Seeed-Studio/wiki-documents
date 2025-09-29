@@ -74,7 +74,7 @@ Navigate to the temporary build path folder, and navigate to `libraries` -> `See
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/StaticLibraries/a.png"/></div>
 
-Copy the `Seeed_Arduino_LIS3DHTR.a` file from the {temporary build folder}/libraries/{library name} folder to the **Arduino/libraries/{library name}/src/{Board Framework Flag}** sub-folder of your library folder. In my case, it is placed under **`src/cortex-m4`**.
+Copy the `Seeed_Arduino_LIS3DHTR.a` file from the &#123;temporary build folder&#125;/libraries/&#123;library name&#125; folder to the **Arduino/libraries/&#123;library name&#125;/src/&#123;Board Framework Flag&#125;** sub-folder of your library folder. In my case, it is placed under **`src/cortex-m4`**.
 
 Rename the `.a` file, appending "lib" to the start of the name. In my case, it becomes `libSeeed_Arduino_LIS3DHTR.a`.
 

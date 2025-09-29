@@ -24,52 +24,53 @@ The combination of GSM module and GPS module is what makes RePhone Geo Kit brill
 <table>
 <tr>
 <td> Microcontroller </td>
-<td> MT2502
-</td></tr>
+<td> MT2502 </td>
+</tr>
 <tr>
 <td> MCU Core </td>
-<td> 32-bit ARM7EJ-STM RISC processor
-</td></tr>
+<td> 32-bit ARM7EJ-STM RISC processor </td>
+</tr>
 <tr>
 <td> RAM </td>
-<td> 4 MB
-</td></tr>
+<td> 4 MB </td>
+</tr>
 <tr>
 <td> Flash Memory </td>
-<td> 16 MB
-</td></tr>
+<td> 16 MB </td>
+</tr>
 <tr>
 <td> Power Supply </td>
-<td> 3.3 ~ 4.2V(no SIM)/3.5 ~ 4.2V(with SIM)
-</td></tr>
+<td> 3.3 ~ 4.2V(no SIM)/3.5 ~ 4.2V(with SIM) </td>
+</tr>
 <tr>
 <td> Power Consumption </td>
-<td> 20mW/30mW/52mW @ standby(no radio)/standby(GSM)/standby(BT)
-</td></tr>
+<td> 20mW/30mW/52mW @ standby(no radio)/standby(GSM)/standby(BT) </td>
+</tr>
 <tr>
 <td> Quad-band </td>
-<td> 850/900/1800/1900 MHz
-</td></tr>
+<td> 850/900/1800/1900 MHz </td>
+</tr>
 <tr>
 <td> GPRS </td>
-<td> Class 12 modem
-</td></tr>
+<td> Class 12 modem </td>
+</tr>
 <tr>
 <td> Clock Speed </td>
-<td> 260 MHz
-</td></tr>
+<td> 260 MHz </td>
+</tr>
 <tr>
 <td> Connectors </td>
-<td> 35 PIN Connector &amp; 11 PIN Connector for Xadow Modules; JST 1.0 Connector for the battery
-</td></tr>
+<td> 35 PIN Connector &amp; 11 PIN Connector for Xadow Modules; JST 1.0 Connector for the battery </td>
+</tr>
 <tr>
 <td> Interfaces </td>
-<td> LCD, Audio, I2C, SPI, UART, and GPIOs etc
-</td></tr>
+<td> LCD, Audio, I2C, SPI, UART, and GPIOs etc </td>
+</tr>
 <tr>
 <td> Dimensions </td>
-<td> 25.37mm × 20.30mm / 1” × 0.8”
-</td></tr></table>
+<td> 25.37mm × 20.30mm / 1" × 0.8" </td>
+</tr>
+</table>
 
 ###   Xadow GPS v2
 
@@ -78,94 +79,89 @@ The combination of GSM module and GPS module is what makes RePhone Geo Kit brill
 <table>
 <tr>
 <td> Microcontroller </td>
-<td> Kinetis KL02
-</td></tr>
+<td> Kinetis KL02 </td>
+</tr>
 <tr>
 <td> Core </td>
-<td> ARM® 32-bit Cortex® -M0+CPU
-</td></tr>
+<td> ARM® 32-bit Cortex® -M0+CPU </td>
+</tr>
 <tr>
 <td> Power Supply </td>
-<td> 3.3 ~ 6 V (via breakout pins)
-</td></tr>
+<td> 3.3 ~ 6 V (via breakout pins) </td>
+</tr>
 <tr>
 <td> Flash </td>
-<td> 32 KB
-</td></tr>
+<td> 32 KB </td>
+</tr>
 <tr>
 <td> SRAM </td>
-<td> 4 KB
-</td></tr>
+<td> 4 KB </td>
+</tr>
 <tr>
 <td> Clock Speed </td>
-<td> 48 MHz
-</td></tr>
+<td> 48 MHz </td>
+</tr>
 <tr>
 <td> Power Consumption </td>
-<td> 18mA@Tracking, 21mA@Acquisition
-</td></tr>
+<td> 18mA@Tracking, 21mA@Acquisition </td>
+</tr>
 <tr>
 <td> Power Saving </td>
-<td> Typ. 3mA@AlwaysLocateTM, 7uA@Backup
-
-Mode, 180uA@Standby Mode
-
-</td></tr>
+<td> Typ. 3mA@AlwaysLocateTM, 7uA@Backup Mode, 180uA@Standby Mode </td>
+</tr>
 <tr>
 <td> Channel </td>
-<td> 22(Tracking) / 66 (Acquisition)
-</td></tr>
+<td> 22(Tracking) / 66 (Acquisition) </td>
+</tr>
 <tr>
 <td> Update Rate </td>
-<td> 1Hz(Default), up to 10Hz
-</td></tr>
+<td> 1Hz(Default), up to 10Hz </td>
+</tr>
 <tr>
 <td> Horizontal Position Accuracy </td>
-<td> &lt;2.5m CEP
-</td></tr>
+<td> &lt;2.5m CEP </td>
+</tr>
 <tr>
 <td> Velocity Accuracy </td>
-<td> &lt;0.1m/s
-</td></tr>
+<td> &lt;0.1m/s </td>
+</tr>
 <tr>
 <td> Maximum Velocity </td>
-<td> Max.515m/s
-</td></tr>
+<td> Max.515m/s </td>
+</tr>
 <tr>
 <td> Cold/warm start with EASYTM </td>
-<td> 215s/5s
-</td></tr>
+<td> 215s/5s </td>
+</tr>
 <tr>
 <td> Acquisition Sensitivity </td>
-<td> -145dBm
-</td></tr>
+<td> -145dBm </td>
+</tr>
 <tr>
 <td> Tracking Sensitivity </td>
-<td>-163dBm
-</td></tr>
+<td> -163dBm </td>
+</tr>
 <tr>
 <td> Operating Temperature </td>
-<td> -40℃ to 85℃
-</td></tr>
+<td> -40℃ to 85℃ </td>
+</tr>
 <tr>
 <td> Protocols </td>
-<td> NMEA 0183/PMTK
-</td></tr>
+<td> NMEA 0183/PMTK </td>
+</tr>
 <tr>
 <td> Antenna Type </td>
-<td> Chip antenna
-</td></tr>
+<td> Chip antenna </td>
+</tr>
 <tr>
 <td> Interface </td>
-<td> Interface with Xadow GSM+BLE through
-
-I2C (7-bit address 0x05)
-
-</td></tr>
+<td> Interface with Xadow GSM+BLE through I2C (7-bit address 0x05) </td>
+</tr>
 <tr>
 <td> Dimensions </td>
-<td> 25.37mm X 20.30mm / 1” × 0.8”
-</td></tr></table>
+<td> 25.37mm X 20.30mm / 1" × 0.8" </td>
+</tr>
+</table>
 
 ###   Xadow GSM Breakout
 
@@ -174,8 +170,9 @@ I2C (7-bit address 0x05)
 <table>
 <tr>
 <td> Dimensions </td>
-<td> 25.37mm × 20.30mm / 1” × 0.8”
-</td></tr></table>
+<td> 25.37mm × 20.30mm / 1" × 0.8" </td>
+</tr>
+</table>
 
 ##  Module Connection
 ---

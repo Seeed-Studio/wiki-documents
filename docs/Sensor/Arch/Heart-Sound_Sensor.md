@@ -44,87 +44,76 @@ It's based on a STM32F407VET6 microcontroller with an ARM Cortex-M4F core runnin
 
 ##   Specification  
 
-<table  cellspacing="0" width="80%">
+<table cellspacing="0" width="80%">
+<thead>
 <tr>
-<th scope="col"> Item
-</th>
-<th scope="col"> Typical
-</th></tr>
+<th scope="col">Item</th>
+<th scope="col">Typical</th>
+</tr>
+</thead>
+<tbody>
 <tr>
-<th scope="row"> Work Voltage
-</th>
-<td> 5V
-</td></tr>
+<th scope="row">Work Voltage</th>
+<td>5V</td>
+</tr>
 <tr>
-<th scope="row"> Microcontroller
-</th>
-<td> STM32F407VET6
-</td></tr>
+<th scope="row">Microcontroller</th>
+<td>STM32F407VET6</td>
+</tr>
 <tr>
-<th scope="row"> Flash Memory
-</th>
-<td> 512kB
-</td></tr>
+<th scope="row">Flash Memory</th>
+<td>512kB</td>
+</tr>
 <tr>
-<th scope="row"> RAM
-</th>
-<td> 192kB
-</td></tr>
+<th scope="row">RAM</th>
+<td>192kB</td>
+</tr>
 <tr>
-<th scope="row"> UART
-</th>
-<td> 4
-</td></tr>
+<th scope="row">UART</th>
+<td>4</td>
+</tr>
 <tr>
-<th scope="row"> I2C
-</th>
-<td> 3
-</td></tr>
+<th scope="row">I2C</th>
+<td>3</td>
+</tr>
 <tr>
-<th scope="row"> SPI
-</th>
-<td> 3
-</td></tr>
+<th scope="row">SPI</th>
+<td>3</td>
+</tr>
 <tr>
-<th scope="row"> CAN
-</th>
-<td> 2
-</td></tr>
+<th scope="row">CAN</th>
+<td>2</td>
+</tr>
 <tr>
-<th scope="row"> SDIO
-</th>
-<td> 1
-</td></tr>
+<th scope="row">SDIO</th>
+<td>1</td>
+</tr>
 <tr>
-<th scope="row"> Camera interface
-</th>
-<td> 1
-</td></tr>
+<th scope="row">Camera interface</th>
+<td>1</td>
+</tr>
 <tr>
-<th scope="row"> Eth
-</th>
-<td> 1
-</td></tr>
+<th scope="row">Eth</th>
+<td>1</td>
+</tr>
 <tr>
-<th scope="row"> ADC Channels
-</th>
-<td> 8
-</td></tr>
+<th scope="row">ADC Channels</th>
+<td>8</td>
+</tr>
 <tr>
-<th scope="row"> I/O pins
-</th>
-<td>40
-</td></tr>
+<th scope="row">I/O pins</th>
+<td>40</td>
+</tr>
 <tr>
-<th scope="row"> Digital I/O Max Input Voltage
-</th>
-<td> 5.0V
-</td></tr>
+<th scope="row">Digital I/O Max Input Voltage</th>
+<td>5.0V</td>
+</tr>
 <tr>
-<th scope="row"> Diameter
-</th>
-<td> 90mm x 44mm
-</td></tr></table>
+<th scope="row">Diameter</th>
+<td>90mm x 44mm</td>
+</tr>
+</tbody>
+</table>
 
 ##   Pin definition
 
@@ -174,26 +163,31 @@ The latest firmware version for the Arch Max is v0203 built at Oct 8  2014. To c
 
     *   On Windows, replace firmware.bin with the above firmware
 
-        *   On Linux/Mac, use command: **dd if={new_firmware.bin} of={firmware.bin} conv=notrunc**
+        *   On Linux/Mac, use command: **dd if=new_firmware.bin of=firmware.bin conv=notrunc**
 
 ##   Version
 
 <table>
+<thead>
 <tr>
-<th> Name </th>
-<th> Version </th>
-<th> Note
-</th></tr>
+<th>Name</th>
+<th>Version</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
 <tr>
-<td> Arch Max v1.0 </td>
-<td> v1.0 </td>
-<td> 5V power supplier didn't connect to USB power, user should connect to ext-power
-</td></tr>
+<td>Arch Max v1.0</td>
+<td>v1.0</td>
+<td>5V power supplier didn't connect to USB power, user should connect to ext-power</td>
+</tr>
 <tr>
-<td> Arch Max v1.1 </td>
-<td> v1.1 </td>
-<td> 5V power supplier can connect to USB power
-</td></tr></table>
+<td>Arch Max v1.1</td>
+<td>v1.1</td>
+<td>5V power supplier can connect to USB power</td>
+</tr>
+</tbody>
+</table>
 
 
 ## Schematic Online Viewer

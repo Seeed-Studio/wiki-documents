@@ -12,16 +12,10 @@ last_update:
 
 Grove - High Precision Barometric Pressure Sensor (DPS310)
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-High-Precision-Barometer-Sensor-DPS310/img/Grove-High-Precision-Barometer-Sensor-DPS310-wiki.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-High-Precision-Barometer-Sensor-DPS310/img/Grove-High-Precision-Barometer-Sensor-DPS310-wiki.jpg" alt="pir" width={600} height="auto" /></p>
 
-
-
 Barometer detecting is very useful in enviromental sensing or altitude measuring. The Grove Barometer sensor is besed on infineon DPS310, a miniaturized digital barometer air pressure sensor with high accuracy. It can measure pressure range from 300 to 1200 hPa, with ±0.002hPa precision, which means you can detect altitude change within ±2cm at most.
-
-
-
 
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/Y1.png"  height="48" width="300" /></a></p> -->
 
@@ -31,17 +25,16 @@ Barometer detecting is very useful in enviromental sensing or altitude measuring
 
 We've already released the [Grove - Barometer Sensor (BMP280)](https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280/) and [Grove - Barometer Sensor(BME280)](https://wiki.seeedstudio.com/Grove-Barometer_Sensor-BME280/), let us show you how powerful Grove-DPS310 is through the comparison of the table below.
 
-
 | ITEM | Grove-BMP280 | Grove-BME280 | Grove-DPS310 |
 |------|--------------|--------------|--------------|
-| Pressure Range    | 300 ~ 1100 hPa |	300 ~ 1100 hPa | 300 ~ 1200 hPa	|	
-| Temperature Range |	-40 ~ 85 ℃  |	-40 ~ 85 ℃   |	-40 ~ 85 °C   |
-| Pressure Precision |	 -	 |  -  | ± 0.002 hPa (or ±0.02 m) |
-| Pressure Accuracy(Absolute) |	± 1 hPa (or ±8 m)	|± 1 hPa (or ±8 m)	|± 1 hPa (or ±8 m)|
-| Pressure Accuracy (Relative)|	± 0.12 hPa|	± 0.12 hPa|	± 0.06 hPa (or ±0.5 m)|
-| Pressure Resolution|	0.18 Pa	| 0.18 Pa |	0.06 Pa |
-| Humidity|	 -  |	0 ~ 100%	|  -  |
-| Communication	| I<sup>2</sup>C/SPI |	I<sup>2</sup>C/SPI	| I<sup>2</sup>C/SPI |
+| Pressure Range    | 300 ~ 1100 hPa | 300 ~ 1100 hPa | 300 ~ 1200 hPa | 
+| Temperature Range | -40 ~ 85 ℃  | -40 ~ 85 ℃   | -40 ~ 85 °C   |
+| Pressure Precision |  -  |  -  | ± 0.002 hPa (or ±0.02 m) |
+| Pressure Accuracy(Absolute) | ± 1 hPa (or ±8 m) |± 1 hPa (or ±8 m) |± 1 hPa (or ±8 m)|
+| Pressure Accuracy (Relative)| ± 0.12 hPa| ± 0.12 hPa| ± 0.06 hPa (or ±0.5 m)|
+| Pressure Resolution| 0.18 Pa | 0.18 Pa | 0.06 Pa |
+| Humidity|  -  | 0 ~ 100% |  -  |
+| Communication | I<sup>2</sup>C/SPI | I<sup>2</sup>C/SPI | I<sup>2</sup>C/SPI |
 
 ## Specification
 
@@ -58,60 +51,42 @@ We've already released the [Grove - Barometer Sensor (BMP280)](https://wiki.seee
     When communicating in SPI mode, do not select I<sup>2</sup>C address as 0x76, otherwise SPI will not be able to read data normally (since I<sup>2</sup>C and SPI share pins, I<sup>2</sup>C address as 0x76 is equivalent to MOSI pin grounding).
 :::
 
-## Features 
+## Features
 
- - High Pressure Precision: ± 0.002 hPa (or ±0.02 m)
- - High Pressure Accuracy: ± 0.06 hPa (or ±0.5 m)-Relative; ± 1 hPa (or ±8 m)-Absolute
- - Wide Range: Pressure: 300 –1200 hPa; Temperature: -40 – 85 °C.
- - Easy to Use: Grove IIC (with interrupt) / SPI 
- - Low power consumption
-
+- High Pressure Precision: ± 0.002 hPa (or ±0.02 m)
+- High Pressure Accuracy: ± 0.06 hPa (or ±0.5 m)-Relative; ± 1 hPa (or ±8 m)-Absolute
+- Wide Range: Pressure: 300 –1200 hPa; Temperature: -40 – 85 °C.
+- Easy to Use: Grove IIC (with interrupt) / SPI
+- Low power consumption
 
 ## Typical Applications
 
-
- - Indoor Navigation (floor detection e.g. in shopping malls and parking garages)
- - Health and Sports (accurate elevation gain and vertical speed)
- - Outdoor Navigation (GPS start-up time and accuracy improvement, dead-reckoning e.g. in tunnels)
- - Weather Station('Micro-weather' and local forecasts)
- - Drones (flight stability and height control)
-
+- Indoor Navigation (floor detection e.g. in shopping malls and parking garages)
+- Health and Sports (accurate elevation gain and vertical speed)
+- Outdoor Navigation (GPS start-up time and accuracy improvement, dead-reckoning e.g. in tunnels)
+- Weather Station('Micro-weather' and local forecasts)
+- Drones (flight stability and height control)
 
 :::tip
- 
+
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
 
-
 ## Hardware Overview
-
-
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-High-Precision-Barometer-Sensor-DPS310/img/Grove-High-Precision-Barometer-Sensor-DPS310-pin.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-High-Precision-Barometer-Sensor-DPS310/img/Grove-High-Precision-Barometer-Sensor-DPS310-pin.jpg" alt="pir" width={600} height="auto" /></p>
 
-
-
-
-
-
-
-
-
-
 ## Platforms Supported
-
 
 | Arduino | Raspberry Pi | BeagleBone | Wio | LinkIt ONE |
 |---------|--------------|------------|-----|------------|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" alt="pir" width={600} height="auto" /></p> |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" alt="pir" width={600} height="auto" /></p>  |
 
-
 :::caution
 
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
-
 
 ## Getting Started
 
@@ -120,14 +95,9 @@ We've already released the [Grove - Barometer Sensor (BMP280)](https://wiki.seee
     If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
 
-
-
-
 ### Play With Arduino
 
-
 #### Hardware
-
 
 **Materials required**
 
@@ -136,8 +106,6 @@ We've already released the [Grove - Barometer Sensor (BMP280)](https://wiki.seee
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-High-Precision-Barometer-Sensor-DPS310/img/Grove-High-Precision-Barometer-Sensor-DPS310-thumbnail.jpg" alt="pir" width={600} height="auto" /></p>|
 |[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html)|
 
-
-
 :::note
 
     **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy.
@@ -145,31 +113,24 @@ We've already released the [Grove - Barometer Sensor (BMP280)](https://wiki.seee
     **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 :::
 
-
 - **Step 1.** Connect the Grove - High Precision Barometric Pressure Sensor (DPS310) to port **I<sup>2</sup>C** of Grove-Base Shield.
 
 - **Step 2.** Plug Grove - Base Shield into Seeeduino.
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-
 #### Software
-
 
 :::note
 
     If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
 
-
 - **Step 1.** Download the [DPS310-Pressure-Sensor](https://github.com/Infineon/DPS310-Pressure-Sensor.git) Library from Github.
-
 
 - **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-
 - **Step 3.** Copy the code into Arduino IDE and upload.
-
 
 ```cpp
 #include <Dps310.h>
@@ -251,10 +212,7 @@ void loop()
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-
 - **Step 5.** Open the serial monitor. If every thing goes well and if you simulate a fall, or drop it to the ground, it will tell you if you need help.
-
-
 
 ## Resources
 
@@ -262,27 +220,20 @@ void loop()
 - **[Datasheet]** [DPS310-Datasheet](https://files.seeedstudio.com/wiki/Grove-High-Precision-Barometer-Sensor-DPS310/res/DPS310-datasheet.pdf)
 - **[Zip]** [Grove-High-Precision-Barometer-Sensor-(DPS310)](https://files.seeedstudio.com/wiki/Grove-High-Precision-Barometer-Sensor-DPS310/res/Grove%20-%20High%20Precision%20Barometer%20Sensor%20(DPS310)_v1.0.zip)
 
-
 ## Schematic Online Viewer
-
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-High-Precision-Barometer-Sensor-DPS310/res/Grove%20-%20High%20Precision%20Barometer%20Sensor%20(DPS310)_v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241,241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}} />
 
-
-
 ## Tech Support & Product Discussion
-
-
-
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

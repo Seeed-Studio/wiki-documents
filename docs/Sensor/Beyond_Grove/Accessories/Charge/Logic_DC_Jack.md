@@ -96,15 +96,17 @@ Logic DC Jack is a logic device, which's used to achieve some simple logic funct
 
 This module includes two type of cables and you will use one of it while plugging an input or two inputs onto the input port.
 
-<dl><dd> Situation 1 – One input
-</dd><dd> If the input is only one module, the Logic DC Jack can realize the logic function of AND and NOT. Following is the figure of logic function:
-</dd></dl>
+<dl>
+  <dd> Situation 1 – One input </dd>
+  <dd> If the input is only one module, the Logic DC Jack can realize the logic function of AND and NOT. Following is the figure of logic function: </dd>
+</dl>
 
 ![](https://files.seeedstudio.com/wiki/Logic_DC_Jack/img/Logic_DC_Jack_3.png)
 
-<dl><dd> Situation 2 – Two inputs
-</dd><dd> If the inputs are two modules, this Logic DC Jack can only realize the logic function of AND. Following is the figure of logic function:
-</dd></dl>
+<dl>
+  <dd> Situation 2 – Two inputs </dd>
+  <dd> If the inputs are two modules, this Logic DC Jack can only realize the logic function of AND. Following is the figure of logic function: </dd>
+</dl>
 
 ![](https://files.seeedstudio.com/wiki/Logic_DC_Jack/img/Logic_DC_Jack_4.png)
 

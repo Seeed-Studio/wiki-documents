@@ -71,15 +71,14 @@ In this tutorial we are going to use **XBee ZB firmware** on a **XBee Znet 2.5 M
 <!-- *   Connect the **XBee ZB** to XBee socket of [UartSBee_V3.1](/UartSBee_V3.1 "UartSBee_V3.1") or [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") like this : -->
 <table>
 <tr>
-<th> **XBee ZB** connected to UartSBee_V3.1 for configuration
-</th>
-<th> **XBee ZB** connected to Grove - XBee Carrier for configuration
-</th></tr>
+<th>XBee ZB connected to UartSBee_V3.1 for configuration</th>
+<th>XBee ZB connected to Grove - XBee Carrier for configuration</th>
+</tr>
 <tr>
-<td> ![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/XBee_UartSBee.jpg)
-</td>
-<td> ![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/XBee_Stem-XBee-Carrier.jpg)
-</td></tr></table>
+<td>![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/XBee_UartSBee.jpg)</td>
+<td>![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/XBee_Stem-XBee-Carrier.jpg)</td>
+</tr>
+</table>
 
 *   Install the necessary driver for **FT232RL** chip by following the below steps :
 

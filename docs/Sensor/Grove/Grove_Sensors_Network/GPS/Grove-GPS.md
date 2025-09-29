@@ -17,7 +17,7 @@ last_update:
 This Grove - GPS module is a cost-efficient and field-programmable gadget armed with a SIM28 (u-blox 6 is the old version) and serial communication configuration. It features 22 tracking / 66 acquisition channels GPS receiver. The sensitivity of tracking and acquisition both reach up to -160dBm, making it a great choice for personal navigation projects and location services, as well as an outstanding one among products of the same price class.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-GPS-Module.html"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-GPS-Module.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
 
@@ -383,8 +383,8 @@ GPS is better used outdoors. It is recommended to put your raspberry pi outside 
 - **[Datasheet]** [E-1612-UB Datasheet](https://files.seeedstudio.com/wiki/Grove-GPS/res/E-1612-UB_Datasheets_Sheet.pdf)
 - **[Datasheet]** [U-Blox6 Receiver Description Protocol Spec](https://files.seeedstudio.com/wiki/Grove-GPS/res/U-blox-6-Receiver-Description-Including-Protocol-Specification.zip)
 - **[Software]** [U-Blox u-center GPS evaluation software](https://www.u-blox.com/en/product/u-center-windows)
-- **[Document]**  [SIM28\_DATA\_File](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIM28_DATA_File.zip)
-- **[Document]** [SIMCom\_GPS\_DEMO\_V1.07](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIMCom_GPS_DEMO_V1.07.zip)
+- **[Document]**  [SIM28_DATA_File](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIM28_DATA_File.zip)
+- **[Document]** [SIMCom_GPS_DEMO_V1.07](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIMCom_GPS_DEMO_V1.07.zip)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_GPS -->
 

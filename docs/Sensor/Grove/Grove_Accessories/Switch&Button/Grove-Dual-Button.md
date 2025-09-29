@@ -227,7 +227,7 @@ Connect the passive with PWM pin "12", button "D5", LED "D16".
 
 One-click installation, quick start, what ever you call, with the single command below, we can install/update all dependencies and latest grove.py.
 
-:::cautionattention
+:::caution
 If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you **cannot use this command line**.
 :::
 
@@ -235,7 +235,7 @@ If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you **cannot 
 curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | sudo bash -s -
 ```
 
-:::tipsuccess
+:::tip
 if everything goes well, you will see the following notice.
 
 ```
@@ -249,7 +249,7 @@ if everything goes well, you will see the following notice.
 <br />
 Besides the one-click installation, you can also install all the dependencies and latest grove.py step by step.
 
-:::cautionattention
+:::caution
 If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
 

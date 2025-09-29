@@ -145,7 +145,7 @@ void loop()  {
 }
 ```
 
-5.Upload the code. If you do not know how to upload a Arduino sketch, please visit <https://www.arduino.cc/en/Guide/Windows> for Windows user or <https://www.arduino.cc/en/Guide/MacOSX> for Mac user. You can see the result as below.
+5.Upload the code. If you do not know how to upload a Arduino sketch, please visit [https://www.arduino.cc/en/Guide/Windows](https://www.arduino.cc/en/Guide/Windows) for Windows user or [https://www.arduino.cc/en/Guide/MacOSX](https://www.arduino.cc/en/Guide/MacOSX) for Mac user. You can see the result as below.
 
 6.When the path of light is blocked by some object, you would see "Somebody is here." in Serial Terminal else you will see "Nobody."
 
@@ -176,7 +176,7 @@ Plug Grove - IR Distance Interrupter into port D4 on GrovePi with [Grove cable](
 Run the command in a terminal:
 
 ```
-    nano grove\_infrared\_distance\_interrupt.py
+    nano grove_infrared_distance_interrupt.py
 ```
 
 Copy and save the following code into it.
@@ -209,7 +209,7 @@ while True:
 5.Run the demo, run following command in terminal.
 
 ```
-    sudo python grove\_infrared\_distance\_interrupt.py
+    sudo python grove_infrared_distance_interrupt.py
 ```
 
 ## Schematic Online Viewer
@@ -226,7 +226,7 @@ Resources
 - [LMV358 Datasheet](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/LMV358_datasheet.pdf)
 - [Infrared Reflective Sensor Source Files](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/Grove-Infrared_Reflective_Sensor_v1.0_SourceFile.zip)
 
-This Markdown file was created from <https://www.seeedstudio.com/wiki/Grove_-_IR_Distance_Interrupter_v1.2>
+This Markdown file was created from [https://www.seeedstudio.com/wiki/Grove_-_IR_Distance_Interrupter_v1.2](https://www.seeedstudio.com/wiki/Grove_-_IR_Distance_Interrupter_v1.2)
 
 ## Tech Support & Product Discussion
 

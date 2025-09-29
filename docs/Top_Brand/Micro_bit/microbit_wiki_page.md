@@ -26,7 +26,6 @@ Hello, here is the Micro:bit feature page, welcome. We are here to prepare a gen
 2. [Grove Shield for micro:bit v2.0](https://www.seeedstudio.com/Grove-Shield-for-micro-bit-v2-0-p-3083.html)
 3. [Grove Inventor Kit for micro:bit](https://wiki.seeedstudio.com/Grove_Inventor_Kit_for_microbit/)
 
-
 ## MakeCode tutorial
 
 ### 1.Play with OledDisplay
@@ -35,27 +34,17 @@ Please refer to the github page
 
 [Play with OledDisplay](https://github.com/Microbit-Grove-Library/pxt-OledDisplay)
 
-
-
 ### 2.Play with the Grove - ThumbJoystick
 
 Please refer to the github page
 
 [Play with the Grove - ThumbJoystick](https://github.com/Microbit-Grove-Library/pxt-ThumbJoystick)
 
-
-
 ### 3.play with Grove - VoiceRecognizer
 
 Please refer to the github page
 
 [play with Grove - VoiceRecognizer](https://github.com/Microbit-Grove-Library/pxt-VoiceOrganizer)
-
-
-
-
-
-
 
 ## Micro Python tutorial
 
@@ -65,16 +54,14 @@ Please refer to the github page
 
 [Play with Grove - ThumbJoystick(python)](https://github.com/Microbit-Grove-Library/mpy-ThumbJoystick)
 
-
 ### 2.Use microbit to control WS2812 LEDs
 
 Please download the ppt file
 
 [Use microbit to control WS2812 LEDs](https://files.seeedstudio.com/wiki/Micro-bit_start/Use%20microbit%20to%20control%20WS2812%20LEDs.pptx)
 
-
-
 ## Grove compatible with Micro:bit
+
 <table align="center">
   <tbody>
   <tr>
@@ -359,7 +346,8 @@ Please download the ppt file
   <tr>
     <td><h4><a href="https://www.seeedstudio.com/Grove-2-Channel-Solid-State-Relay-p-3129.html" target="_blank"><span>Grove - 2-Channel Solid State Relay</span></a></h4></td>
     <td><h4>103020134</h4></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td><h4><a href="https://www.seeedstudio.com/Grove-2-Channel-SPDT-Relay-p-3118.html" target="_blank"><span>Grove - 2-Channel SPDT Relay</span></a></h4></td>
     <td><h4>103020132</h4></td>
   </tr>
@@ -390,7 +378,7 @@ Please download the ppt file
   <tr>
     <td><h4>2018/9/27</h4></td>
     <td><h4></h4></td>
-    <td><h4></h4></td>    
+    <td><h4></h4></td>
   </tr>
   <tr>
     <td><h4><a href="https://www.seeedstudio.com/Grove-Vibration-Sensor-(SW-420)-p-3158.html" target="_blank"><span>Grove - Vibration Sensor (SW-420)</span></a></h4></td>
@@ -408,11 +396,11 @@ Please download the ppt file
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

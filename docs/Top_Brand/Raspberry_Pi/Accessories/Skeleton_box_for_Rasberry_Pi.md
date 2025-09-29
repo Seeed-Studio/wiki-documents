@@ -40,62 +40,49 @@ Assembly diagram is as follows:
 ![](https://files.seeedstudio.com/wiki/Skeleton_box_for_Rasberry_Pi/img/Skeleton_Box4.jpg)
 
 <table cellSpacing={0} width="80%">
-  <tbody><tr>
-      <th scope="col"> Part
-      </th>
-      <th scope="col"> Package
-      </th>
-      <th scope="col"> Qty
-      </th></tr>
+  <tbody>
     <tr>
-      <th scope="row"> Bracket
-      </th>
-      <td> 1.5mm aluminum plate stamping molding, black sand anodized
-      </td>
-      <td> 2
-      </td></tr>
+      <th scope="col">Part</th>
+      <th scope="col">Package</th>
+      <th scope="col">Qty</th>
+    </tr>
     <tr>
-      <th scope="row"> Bottom Acrylic
-      </th>
-      <td> 2.5mm Thickness
-      </td>
-      <td> 1
-      </td></tr>
+      <th scope="row">Bracket</th>
+      <td>1.5mm aluminum plate stamping molding, black sand anodized</td>
+      <td>2</td>
+    </tr>
     <tr>
-      <th scope="row">Top Acrylic
-      </th>
-      <td> 2.5mm Thickness
-      </td>
-      <td> 1
-      </td></tr>
+      <th scope="row">Bottom Acrylic</th>
+      <td>2.5mm Thickness</td>
+      <td>1</td>
+    </tr>
     <tr>
-      <th scope="row">Rivet（White）
-      </th>
-      <td> R2056
-      </td>
-      <td> 20
-      </td></tr>
+      <th scope="row">Top Acrylic</th>
+      <td>2.5mm Thickness</td>
+      <td>1</td>
+    </tr>
     <tr>
-      <th scope="row"> Screw
-      </th>
-      <td> M2.5X12
-      </td>
-      <td> 3
-      </td></tr>
+      <th scope="row">Rivet（White）</th>
+      <td>R2056</td>
+      <td>20</td>
+    </tr>
     <tr>
-      <th scope="row">Spacer
-      </th>
-      <td> M3X7X4
-      </td>
-      <td> 4
-      </td></tr>
+      <th scope="row">Screw</th>
+      <td>M2.5X12</td>
+      <td>3</td>
+    </tr>
     <tr>
-      <th scope="row"> Nut
-      </th>
-      <td> M2.5X2
-      </td>
-      <td> 4
-      </td></tr></tbody></table>
+      <th scope="row">Spacer</th>
+      <td>M3X7X4</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th scope="row">Nut</th>
+      <td>M2.5X2</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Tech Support & Product Discussion
 

@@ -4,6 +4,7 @@ title: Optical Rain Gauge RG-15
 keywords:
 - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /Sensor/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15
 last_update:
   date: 10/18/2023
   author: Yvonne
@@ -21,23 +22,23 @@ The RG-15 Optical Rain Gauge features an open-collector output that emulates a c
 
 ## Features
 
-* Industrial-grade: reliable, accurate, and rugged
-* Easy-installation: on weather station masts, buildings, and other infrastructures
-* Maintenance-free: no debris and no clogging
-* Wide application scenarios
+- Industrial-grade: reliable, accurate, and rugged
+- Easy-installation: on weather station masts, buildings, and other infrastructures
+- Maintenance-free: no debris and no clogging
+- Wide application scenarios
 
 ## Applications
 
 ![Applications](https://files.seeedstudio.com/wiki/Industrial-Grade_Optical_Rain_Gauge_RG-15/applications.png)
 
-* Smart Agriculture
-* Smart City
-* Climate Studies
-* Hydrological Network Monitoring
-* Condensation and Frost Sensing
-* Irrigation Control
-* Drop Detection
-* Wiper Control
+- Smart Agriculture
+- Smart City
+- Climate Studies
+- Hydrological Network Monitoring
+- Condensation and Frost Sensing
+- Irrigation Control
+- Drop Detection
+- Wiper Control
 
 ## Specifications
 <!-- <style type="text/css">
@@ -49,6 +50,7 @@ The RG-15 Optical Rain Gauge features an open-collector output that emulates a c
 .tg .tg-2fdn{border-color:#9b9b9b;text-align:left;vertical-align:top}
 .tg .tg-e2cz{background-color:#9b9b9b;border-color:#9b9b9b;color:#ffffff;text-align:left;vertical-align:top}
 </style> -->
+
 <table class="tg" data-style="undefined;table-layout: fixed; width: 743px;"><colgroup> <col data-style="width: 171px;" /> <col data-style="width: 361px;" /> <col data-style="width: 211px;" /> </colgroup>
 <thead>
 <tr><th class="tg-pnhl">Parameter</th><th class="tg-pnhl"><span data-style="font-weight: 400; font-style: normal; text-decoration: none;">Value</span></th><th class="tg-wcsp"><span data-style="font-weight: 400; font-style: normal; text-decoration: none; color: #2f2f2f;">Connection Pins </span></th></tr>
@@ -97,6 +99,6 @@ The RG-15 Optical Rain Gauge features an open-collector output that emulates a c
 
 ## Sources
 
-* [Optical Rain Gauge  Instructions](https://files.seeedstudio.com/products/114992321/res/RG-15_instructions_sw_1.000.pdf)
+- [Optical Rain Gauge  Instructions](https://files.seeedstudio.com/products/114992321/res/RG-15_instructions_sw_1.000.pdf)
 
-* [Optical Rain Gauge Datasheet](https://files.seeedstudio.com/products/114992321/res/RG-15%C2%A0specification.pdf)
+- [Optical Rain Gauge Datasheet](https://files.seeedstudio.com/products/114992321/res/RG-15%C2%A0specification.pdf)

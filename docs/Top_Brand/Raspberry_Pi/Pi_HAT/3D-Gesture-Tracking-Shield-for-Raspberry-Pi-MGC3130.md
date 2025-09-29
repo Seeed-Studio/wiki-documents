@@ -56,7 +56,7 @@ What an amazing module, with the help it, you can use gestures to control lights
 |Main Chip|MGC3130|
 |Detection range|0 to 10 cm|
 |Temperature Range|-20°C to +85°C|
-|Receiver Sensitivity| <1 fF|
+|Receiver Sensitivity| &lt;1 fF|
 |Position Rate|200 positions/sec|
 |Spatial Resolution|up to 150 dpi|
 |Carrier Frequency|44 kHz to 115 kHz|

@@ -47,7 +47,7 @@ Get Started
 ![](https://files.seeedstudio.com/wiki/Arch_BLE/img/Get_started_with_mbed.png)
 
 1.  Click [this link](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-BLE) to **login or signup to mbed**
-2.  Import the mbed\_blinky program
+2.  Import the mbed_blinky program
 3.  Click the **Compile** icon of the top toolbar to compile the program, then download the compiled hex file.
 4.  Drag-n-drop the downloaded hex file into the MBED disk
 
@@ -68,7 +68,7 @@ You can open **main.cpp** to change the program. For example, use the following 
 
 <div className="admonition note">
   <p className="admonition-title">Note</p>
-  If you are get a compiling error that 'device.h' is not found, try to update the mbed library to the latest revision in your program.
+  <p>If you are get a compiling error that 'device.h' is not found, try to update the mbed library to the latest revision in your program.</p>
 </div>
 
 
@@ -88,7 +88,7 @@ Applications
 
     *  Make it run
 
-        1.  Download [BLE\_Color\_Pixels\_Arch\_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
+        1.  Download [BLE_Color_Pixels_Arch_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
         2.  Copy the hex file to the MBED disk of your Arch BLE
         3.  Download [the Color Pixels Android app](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
 
@@ -136,13 +136,13 @@ To flash a new firmware:
 -   Hold the Arch BLE's button and power it ON.
 -   A CRP DISABLD disk will pop up.
     -   On Windows, replace firmware.bin with the above firmware.
-    -   On Linux/Mac, use command: **dd if={new\_firmware.bin} of={firmware.bin} conv=notrunc**
+    -   On Linux/Mac, use command: **dd if=\{new_firmware.bin\} of=\{firmware.bin\} conv=notrunc**
 
 
 
 ## Schematic Online Viewer
 
-<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Arch_BLE/res/Arch_BLE_v1.0_Eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Arch_BLE/res/Arch_BLE_v1.0_Eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
 

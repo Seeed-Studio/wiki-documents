@@ -16,9 +16,7 @@ last_update:
 
 Model: [WLS48188P](https://www.seeedstudio.com/depot/wifi-bee-p-823.html?cPath=139_141&amp;zenid=15bcf2644eb7ecf4b3722eb98c79b074)
 
-
-
-##   Features   ##
+## Features ##
 
 - xBee compatible headers
 
@@ -34,7 +32,7 @@ Model: [WLS48188P](https://www.seeedstudio.com/depot/wifi-bee-p-823.html?cPath=1
 
 - LEDs for PWR and Wi-Fi connection indication.
 
-##   Application Ideas   ##
+## Application Ideas ##
 
 - Wireless Local Area Network
 
@@ -44,13 +42,13 @@ Model: [WLS48188P](https://www.seeedstudio.com/depot/wifi-bee-p-823.html?cPath=1
 - Build endless network applications with [uIP TCP/IP Stack](https://en.wikipedia.org/wiki/UIP_(micro_IP))
 - Ideal for people wanting to learn and experiment with TCP/IP Stack
 
-##   Schematic   ##
+## Schematic ##
 
 ![](https://files.seeedstudio.com/wiki/Wifi_Bee/img/Wifi_Bee_v0.91b.png)
 
 [Click here to open schematic in PDF format](https://wiki.seeedstudio.com/images/9/9f/WifiBee_v0.91b.pdf)
 
-##   Key Specification   ##
+## Key Specification ##
 
  |Item|Minimum| Typical| Maximum
  |---|---|---|---|
@@ -59,18 +57,18 @@ Model: [WLS48188P](https://www.seeedstudio.com/depot/wifi-bee-p-823.html?cPath=1
  |Working frequency|16MHz|||
  |MCU|ATmega328P||||
 
-##   Mechanical Dimensions   ##
+## Mechanical Dimensions ##
 
 Wifi Bee is of 27.2mm x 35.7mm size.
 
 ![](https://files.seeedstudio.com/wiki/Wifi_Bee/img/Wifi_Bee_v0.91b_pcb.png)
 
-##   Hardware  ##
+## Hardware ##
 
 ![](https://files.seeedstudio.com/wiki/Wifi_Bee/img/Seeedstudio_WifiBee_Parts.png)
 **Wifi Bee** - Parts
 
-###   Pin definition & Rating   ###
+### Pin definition & Rating ###
 
 |Pin|#|Pad Type|Description|Arduino Pin Number|
 |---|---|---|---|---|
@@ -92,21 +90,21 @@ Wifi Bee is of 27.2mm x 35.7mm size.
 |INT1|16|Input/Output|ATmega328P PD3|3(DIO)|
 |PC3|17|Input/Output|ATmega328P PC3|3(Analog input)/17(DIO)|
 |PC2|18|Input/Output|ATmega328P PC2|2(Analog input)/16(DIO)|
-|SCLSCL	|19	|Input/Output|	ATmega328P |PC5	5(Analog input)/19(DIO)|
-|SDA	|20|	Input/Output|	ATmega328P PC4	|4(Analog input)/18(DIO)|
+|SCLSCL |19 |Input/Output| ATmega328P |PC5 5(Analog input)/19(DIO)|
+|SDA |20| Input/Output| ATmega328P PC4 |4(Analog input)/18(DIO)|
 
-##   Usage   ##
+## Usage ##
 
-###   Hardware Installation   ###
+### Hardware Installation ###
 
 - The best way to use Wifi Bee is to connect it to [Grove - XBee Carrier](https://seeeddoc.github.io/Grove-XBee_Carrier/) . [Grove - XBee Carrier](https://seeeddoc.github.io/Grove-XBee_Carrier/)  provides USB-UART connectivity for programming and Power Supply with its built-in 3.3V LDO regulator.
 
 ![](https://files.seeedstudio.com/wiki/Wifi_Bee/img/Bee_Stem_Connected_to_Wifi_BEE_and_A_Twig.jpg)
 Grove - XBee Carrier - Connected to **Wifi Bee** and  Powered By USB
 
-###   Programming   ###
+### Programming ###
 
-####   Wireless Network Setup   ####
+#### Wireless Network Setup ####
 
 This section gives a brief overview on setting up a Home Network with a WiFi router suitable for **Wifi Bee**.
 
@@ -132,7 +130,7 @@ Wireless Sensor Network - Sample Architecture with Wifi Bee Nodes
 
 6.Consult the router's user guide for configuring other setting like connecting to internet, etc..
 
-####   Downloading and configuring the Library for running the application examples  ####
+#### Downloading and configuring the Library for running the application examples ####
 
 The application examples uses the WiSheild library of Asynclabs. There is no other dedicated firmware for **Wifi Bee**. This library uses **uip TCP/IP stack** of Adam Dunkels.
 This library is provided under GPL v2 by the original author. Hence, any application that could be built with WiShield should also be GPLv2 compatible.
@@ -165,7 +163,7 @@ This library is provided under GPL v2 by the original author. Hence, any applica
 
 - Next step is to set the **security_type** to security options configured during network setup. Set to 2 (i.e WPA) as configured in Wifi router.
 
-- `//unsigned char security_type = 2;	// 0 - open; 1 - WEP; 2 - WPA; 3 - WPA2 `
+- `//unsigned char security_type = 2; // 0 - open; 1 - WEP; 2 - WPA; 3 - WPA2`
 
 - Also set ` const prog_char security_passphrase[] PROGMEM = {"12345678"} `
 
@@ -189,27 +187,27 @@ This library is provided under GPL v2 by the original author. Hence, any applica
 
 #include <WiShield.h>
 
-#define WIRELESS_MODE_INFRA	1
-#define WIRELESS_MODE_ADHOC	2
+#define WIRELESS_MODE_INFRA 1
+#define WIRELESS_MODE_ADHOC 2
 
 // Wireless configuration parameters ----------------------------------------
-unsigned char local_ip[] = {192,168,0,4};	// IP address of Wifi Bee
-unsigned char gateway_ip[] = {192,168,0,1};	// router or gateway IP address
-unsigned char subnet_mask[] = {255,255,255,0};	// subnet mask for the local Wireless network
-const prog_char ssid[] PROGMEM = {"HOMENETWORK"};	// max 32 bytes
+unsigned char local_ip[] = {192,168,0,4}; // IP address of Wifi Bee
+unsigned char gateway_ip[] = {192,168,0,1}; // router or gateway IP address
+unsigned char subnet_mask[] = {255,255,255,0}; // subnet mask for the local Wireless network
+const prog_char ssid[] PROGMEM = {"HOMENETWORK"}; // max 32 bytes
 
-unsigned char security_type = 2;	// 0 - open; 1 - WEP; 2 - WPA; 3 - WPA2
+unsigned char security_type = 2; // 0 - open; 1 - WEP; 2 - WPA; 3 - WPA2
 
 // WPA/WPA2 passphrase
-const prog_char security_passphrase[] PROGMEM = {"12345678"};	// max 64 characters. The network name.
+const prog_char security_passphrase[] PROGMEM = {"12345678"}; // max 64 characters. The network name.
 
 // WEP 128-bit keys
 // sample HEX keys
-prog_uchar wep_keys[] PROGMEM = {	0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d,	// Key 0
-					0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,	0x00,	// Key 1
-					0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,	0x00,	// Key 2
-					0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,	0x00	// Key 3
-				};
+prog_uchar wep_keys[] PROGMEM = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, // Key 0
+     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Key 1
+     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Key 2
+     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 // Key 3
+    };
 
 // setup the wireless mode
 // infrastructure - connect to AP
@@ -222,7 +220,7 @@ unsigned char security_passphrase_len;
 
 void setup()
 {
-	WiFi.init();
+ WiFi.init();
 }
 
 // This is the webpage that is served up by the webserver
@@ -230,28 +228,28 @@ const prog_char webpage[] PROGMEM = {"HTTP/1.1 200 OK\r\nContent-Type: text/html
 
 void loop()
 {
-	WiFi.run();
+ WiFi.run();
 }
 ```
 
-###   Examples   ###
+### Examples ###
 
-####   Simple Web Server that sends sensor value to Web browser  ####
+#### Simple Web Server that sends sensor value to Web browser ####
 
--  Use the network setup as describe above.
+- Use the network setup as describe above.
 
--  Use the [Grove - XBee Carrier](https://seeeddoc.github.io/Grove-XBee_Carrier/) for programming and power.
+- Use the [Grove - XBee Carrier](https://seeeddoc.github.io/Grove-XBee_Carrier/) for programming and power.
 
--  Configure apps-conf.h, such that only APP_WISERVER mode is used.
+- Configure apps-conf.h, such that only APP_WISERVER mode is used.
 
--  Compile and upload the following sketch to **Wifi Bee** using Arduino IDE as described for above example.
+- Compile and upload the following sketch to **Wifi Bee** using Arduino IDE as described for above example.
 
--  Press the reset button. Wait for the Wifi Bee to connect to WiFi network (Blue LED glows).
+- Press the reset button. Wait for the Wifi Bee to connect to WiFi network (Blue LED glows).
 
--  Verbose information of the network communication can be seen; if, serial port terminal is open in Arduino IDE (with 57600 baud).
+- Verbose information of the network communication can be seen; if, serial port terminal is open in Arduino IDE (with 57600 baud).
 
--  Open a web browser from a PC connected to HOMENETWORK and type the URL `[http://192.168.0.4]`
--  WifiBee serves the Sensor value to browser. The HTML code is written in such a way that it auto refreshes every 10 seconds.
+- Open a web browser from a PC connected to HOMENETWORK and type the URL `[http://192.168.0.4]`
+- WifiBee serves the Sensor value to browser. The HTML code is written in such a way that it auto refreshes every 10 seconds.
 
 ```
 /*
@@ -277,27 +275,27 @@ void loop()
 
 #include <WiServer.h>
 
-#define WIRELESS_MODE_INFRA	1
-#define WIRELESS_MODE_ADHOC	2
+#define WIRELESS_MODE_INFRA 1
+#define WIRELESS_MODE_ADHOC 2
 
 // Wireless configuration parameters ----------------------------------------
-unsigned char local_ip[] = {192,168,0,4};	// IP address of WifiBee
-unsigned char gateway_ip[] = {192,168,0,1};	// router or gateway IP address
-unsigned char subnet_mask[] = {255,255,255,0};	// subnet mask for the local network
-const prog_char ssid[] PROGMEM = {"HOMENETWORK"};	// max 32 bytes
+unsigned char local_ip[] = {192,168,0,4}; // IP address of WifiBee
+unsigned char gateway_ip[] = {192,168,0,1}; // router or gateway IP address
+unsigned char subnet_mask[] = {255,255,255,0}; // subnet mask for the local network
+const prog_char ssid[] PROGMEM = {"HOMENETWORK"}; // max 32 bytes
 
-unsigned char security_type = 2;	// 0 - open; 1 - WEP; 2 - WPA; 3 - WPA2
+unsigned char security_type = 2; // 0 - open; 1 - WEP; 2 - WPA; 3 - WPA2
 
 // WPA/WPA2 passphrase
-const prog_char security_passphrase[] PROGMEM = {"12345678"};	// max 64 characters
+const prog_char security_passphrase[] PROGMEM = {"12345678"}; // max 64 characters
 
 // WEP 128-bit keys
 // sample HEX keys
-prog_uchar wep_keys[] PROGMEM = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d,	// Key 0
-				  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,	// Key 1
-				  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,	// Key 2
-				  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00	// Key 3
-				};
+prog_uchar wep_keys[] PROGMEM = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, // Key 0
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Key 1
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Key 2
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 // Key 3
+    };
 
 // setup the wireless mode
 // infrastructure - connect to AP
@@ -347,23 +345,23 @@ void loop(){
 }
 ```
 
-####   Simple Web Client that sends sensor feeds to Pachube.com  ####
+#### Simple Web Client that sends sensor feeds to Pachube.com ####
 
 ` This section will be revised later `
 
--  Use the network setup as describe above.
+- Use the network setup as describe above.
 
--  Use the [Grove - XBee Carrier](https://seeeddoc.github.io/Grove-XBee_Carrier/)  for programming and power.
+- Use the [Grove - XBee Carrier](https://seeeddoc.github.io/Grove-XBee_Carrier/)  for programming and power.
 
--  Configure apps-conf.h, such that only APP_WISERVER mode is used.
+- Configure apps-conf.h, such that only APP_WISERVER mode is used.
 
--  Compile and upload the following sketch to **Wifi Bee** using Arduino IDE as described for above example.
+- Compile and upload the following sketch to **Wifi Bee** using Arduino IDE as described for above example.
 
--  Press the reset button. Wait for the Wifi Bee to connect to WiFi network (Blue LED glows).
+- Press the reset button. Wait for the Wifi Bee to connect to WiFi network (Blue LED glows).
 
--  Verbose information of the network communication can be seen; if, serial port terminal is open in Arduino IDE (with 57600 baud).
+- Verbose information of the network communication can be seen; if, serial port terminal is open in Arduino IDE (with 57600 baud).
 
--  Wifi Bee periodically feeds the data to Pachube.com
+- Wifi Bee periodically feeds the data to Pachube.com
 
 ```
 /*
@@ -386,27 +384,27 @@ void loop(){
 
 #include <WiServer.h>
 
-#define WIRELESS_MODE_INFRA	1
-#define WIRELESS_MODE_ADHOC	2
+#define WIRELESS_MODE_INFRA 1
+#define WIRELESS_MODE_ADHOC 2
 
 // Wireless configuration parameters ----------------------------------------
-unsigned char local_ip[] = {192,168,0,4};	// IP address of WifiBee
-unsigned char gateway_ip[] = {192,168,0,1};	// router or gateway IP address
-unsigned char subnet_mask[] = {255,255,255,0};	// subnet mask for the local network
+unsigned char local_ip[] = {192,168,0,4}; // IP address of WifiBee
+unsigned char gateway_ip[] = {192,168,0,1}; // router or gateway IP address
+unsigned char subnet_mask[] = {255,255,255,0}; // subnet mask for the local network
 const prog_char ssid[] PROGMEM = {"HOMENETWORK"};// max 32 bytes
 
-unsigned char security_type = 2;	// 0 - open; 1 - WEP; 2 - WPA; 3 - WPA2
+unsigned char security_type = 2; // 0 - open; 1 - WEP; 2 - WPA; 3 - WPA2
 
 // WPA/WPA2 passphrase
-const prog_char security_passphrase[] PROGMEM = {"12345678"};	// max 64 characters
+const prog_char security_passphrase[] PROGMEM = {"12345678"}; // max 64 characters
 
 // WEP 128-bit keys
 // sample HEX keys
 prog_uchar wep_keys[] PROGMEM =
-{ 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d,	// Key 0
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,	// Key 1
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,	// Key 2
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00	// Key 3
+{ 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, // Key 0
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Key 1
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Key 2
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 // Key 3
 };
 
 // setup the wireless mode
@@ -482,7 +480,7 @@ void loop(){
 }
 ```
 
-##   Bill of Materials (BOM) /parts list   ##
+## Bill of Materials (BOM) /parts list ##
 
 |Part|Quantity|Value|Package|
 |---|---|---|---|
@@ -500,33 +498,28 @@ void loop(){
 |WIFI|1|blue|LED0603|
 |X1|1|16MHz|XTAL_3X2|
 
-##   Support   ##
+## Support ##
 
 If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or **wish** to discuss.
 
-##   Version Tracker   ##
+## Version Tracker ##
 
  |Revision|Descriptions|Release|
  |----|----|----|
  |v0.91b|Initial public release|April 6, 2011|
  |v1.0|Change the width of the signal wire from 6 mil to 8 mil|Dec 13, 2011|
 
-
 ## WifiBee v1.0 Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Wifi_Bee/res/WifiBee_v1.0_Eagle_Files.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## WifiBee v0.91b Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://wiki.seeedstudio.com/images/f/ff/Wifi_Bee_v0.91b_eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
-##   Resources   ##
+## Resources ##
 
 - **[Eagle]**[WifiBee v1.0 Eagle Files.zip](https://files.seeedstudio.com/wiki/Wifi_Bee/res/WifiBee_v1.0_Eagle_Files.zip)
 - **[PDF]**[WifiBee v1.0 PCB](https://files.seeedstudio.com/wiki/Wifi_Bee/res/WifiBee%20v1.0%20PCB.pdf)
@@ -541,11 +534,11 @@ If you have questions or other better design ideas, you can go to our [forum](ht
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

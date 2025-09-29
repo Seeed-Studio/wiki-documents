@@ -99,7 +99,7 @@ Grove - 2-Channel Solid State Relay
 The **CTR1** is the control signal from the Arduino or other board. It is pulled down by the 10k R7, if there is no signal, the 'Gate'(port 1) of **Q2** will be 0v, and Q2 is turned off, so that the K1 will be turned off. If **CTR1** becomes 5v, then the Q2 will be turned on. **INT-** of k1 will be connected to the GND of the system, for the K1 there will be 5V between **INT+** and **INT-**, so the K1 will be turned on, and the **LOAD1** will connect to **LOAD2**.
 
 :::note
-        In this section we only show you part of the schematic, for the full document please refer to the [Resources](/#resources)
+        In this section we only show you part of the schematic, for the full document please refer to the [Resources](#resources)
 :::
 
 ## Platforms Supported

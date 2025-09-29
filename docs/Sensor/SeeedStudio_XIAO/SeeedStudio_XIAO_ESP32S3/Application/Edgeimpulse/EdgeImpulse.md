@@ -14,32 +14,31 @@ last_update:
 
 Edge Impulse is the leading development platform for machine learning on edge devices, free for developers, and trusted by enterprises worldwide.
 
-* With Edge Impulse, software developers, engineers, and domain experts can solve real problems using machine learning on edge devices without a Ph.D. or advanced embedded engineering skills. From getting started to MLOps in production, Edge Impulse provides maximum efficiency and speed on a wide range of hardware from MCUs to CPUs.  
+- With Edge Impulse, software developers, engineers, and domain experts can solve real problems using machine learning on edge devices without a Ph.D. or advanced embedded engineering skills. From getting started to MLOps in production, Edge Impulse provides maximum efficiency and speed on a wide range of hardware from MCUs to CPUs.  
 
-<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/MakerGram/workshops/main/docs/tiny-ml-workshop/img/edgeimpulse/EI_homepage.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/MakerGram/workshops/main/docs/tiny-ml-workshop/img/edgeimpulse/EI_homepage.png" style={{width:1000, height:'auto'}}/></div>
 
-With EdgeImpulse we can 
-* Collect dataset from the device direclty 
-* Collect dataset from other source like .zip file, via api or other third party cloud ingestion 
-* Create test and train data and put them in different lables  
-* Train our model 
-* Able to Select approriate ML algoirthms - EI provide recommended ML algorithms based on our dataset
-* Deploy it on our harware 
-* TinyML project collabration with version controlling 
-* and much more that helps you to build tinyML applications. 
-
+With EdgeImpulse we can
+- Collect dataset from the device direclty
+- Collect dataset from other source like .zip file, via api or other third party cloud ingestion
+- Create test and train data and put them in different lables  
+- Train our model
+- Able to Select approriate ML algoirthms - EI provide recommended ML algorithms based on our dataset
+- Deploy it on our harware
+- TinyML project collabration with version controlling
+- and much more that helps you to build tinyML applications.
 
 ### Quick hands-on experience
 
 Before going through the full process of learning Edge Impulse, we provide the full pre-generated arduino libraries and you can see the results by flashing this arduino program from the sketch directly to XIAO ESP32S3 Sense.
 
-<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/EdgeImpulse/src/img/EdegeImpulse-lib.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/EdgeImpulse/src/img/EdegeImpulse-lib.png" style={{width:1000, height:'auto'}}/></div>
 
-### Setup XIAO ESPS3 Sense on Arduino 
+### Setup XIAO ESPS3 Sense on Arduino
 
 Before start using the Edge impulse libraies, we need to setup XIAO ESPS3 on Arduino IDE, please go throgh the guide [here](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
 
-#### Compile and Upload Blink Example 
+#### Compile and Upload Blink Example
 
 ```cpp
 // the setup function runs once when you press reset or power the board
@@ -57,25 +56,23 @@ void loop() {
 }
 ```
 
-Makesure to select the right board and correct port before uploading. 
-
-
+Makesure to select the right board and correct port before uploading.
 
 #### ToDO
+
 - [ ] Install XIAO ESPS3 Board on Arduino IDE
 - [ ] Compile and Upload Blink Example on XIAO ESPS3
- 
 
 ### Available Edge Impulse libraries
 
-We're also moving forward in parallel with making some Edge Impulse exported Arduino libraries that have been verified and edited to work directly with XIAO ESP32S3 Sense. When we are using the Libraries, we have more control in our program and we can make decisions. 
+We're also moving forward in parallel with making some Edge Impulse exported Arduino libraries that have been verified and edited to work directly with XIAO ESP32S3 Sense. When we are using the Libraries, we have more control in our program and we can make decisions.
 
 - [Speech keyword recognition (Yes & No) Arduino Library](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_Esp32_KWS_inferencing.zip)
 - [Fruit identification (apples, bananas, grapes) Arduino Library](https://files.seeedstudio.com/wiki/tinyml-topic/res/xiao-esp32s3-fruits-classify_inferencing.zip)
 
-### How to use the Edge Impulse Arduino Libraries. 
+### How to use the Edge Impulse Arduino Libraries
 
-It's like a generic arduino library, we need to install it on Arduino IDE first and use the example code to run the Demo. 
+It's like a generic arduino library, we need to install it on Arduino IDE first and use the example code to run the Demo.
 
 ### Speech keyword recognition (Yes & No) Arduino Library
 
@@ -83,25 +80,23 @@ It's like a generic arduino library, we need to install it on Arduino IDE first 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oa0BGRXnb8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+### How it's works
 
-### How it's works!
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/img/KWS_Diagram.png" style={{width:1000, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/img/KWS_Diagram.png" style={{width:1000, height:'auto'}}/></div> 
+#### Step 1. Downaload KWS Demo libray
 
+Download [Speech keyword recognition (Yes & No) Arduino Library](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_esp32S3_YesNo_inferencing.zip)  library as .Zip.
 
-#### Step 1. Downaload KWS Demo libray 
-Download [Speech keyword recognition (Yes & No) Arduino Library](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_esp32S3_YesNo_inferencing.zip)  library as .Zip. 
-
-#### Step 2. Add ZIP Library to Arduino IDE. 
+#### Step 2. Add ZIP Library to Arduino IDE
 
 Since you have downloaded the zip Library, open your Arduino IDE, click on Sketch > Include Library > Add .ZIP Library.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:1000, height:'auto'}}/></div>
 
 Choose the zip file you just downloaded，and if the library install correct, you will see Library added to your libraries in the notice window. Which means the library is installed successfully.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/upload_complete.png" style={{width:1000, height:'auto'}}/></div> 
-
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/upload_complete.png" style={{width:1000, height:'auto'}}/></div>
 
 #### Step 3. Run Inferencing Sketch
 
@@ -382,7 +377,8 @@ void loop() {
 #endif
 
 ```
-Copy the above code or download from [here](https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/XIAO_esp32_s3_sense_kWS_Yes_No.ino) and then upload the code to the XIAO. 
+
+Copy the above code or download from [here](https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/XIAO_esp32_s3_sense_kWS_Yes_No.ino) and then upload the code to the XIAO.
 
 ```cpp
  // print the predictions
@@ -415,34 +411,36 @@ In the above code, we can see where did make the decisions to **TURN ON** the **
 <hr></hr>
 
 ### Fruit identification (apples, bananas, grapes) Arduino Library
-#### Step 1. Downaload Fruit identification libray 
+
+#### Step 1. Downaload Fruit identification libray
+
 Download [Fruit identification (apples, bananas, grapes) Arduino Library](https://files.seeedstudio.com/wiki/tinyml-topic/res/xiao-esp32s3-fruits-classify_inferencing.zip)  library as .Zip.
 
-#### Step 2. Add ZIP Library to Arduino IDE. 
+#### Step 2. Add ZIP Library to Arduino IDE
 
 Since you have downloaded the zip Library, open your Arduino IDE, click on Sketch > Include Library > Add .ZIP Library.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:1000, height:'auto'}}/></div>
 
 Choose the zip file you just downloaded，and if the library install correct, you will see Library added to your libraries in the notice window. Which means the library is installed successfully.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/upload_complete.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/upload_complete.png" style={{width:1000, height:'auto'}}/></div>
 
-#### Step 3. Run the example sketch 
+#### Step 3. Run the example sketch
 
 You can find the example sketch under the **Files -> Examples -> xiao-esp323-fruits-classify_inferencing -> XIAO-ESP32S3-Sense**
 
-<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/fruitClassifications_Lib_path.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/fruitClassifications_Lib_path.png" style={{width:1000, height:'auto'}}/></div>
 
-#### Try out the demo. 
+#### Try out the demo
 
-Open the data set sample page from [here](https://www.kaggle.com/kritikseth/fruit-and-vegetable-image-recognition) and open the fruit image, then point the XIAO ESP32S3 camera to the fruit image and see results on the screen. 
-
+Open the data set sample page from [here](https://www.kaggle.com/kritikseth/fruit-and-vegetable-image-recognition) and open the fruit image, then point the XIAO ESP32S3 camera to the fruit image and see results on the screen.
 
 # ToDo
+
 - [ ] Install XIAO ESPS3 on Arduino
-- [ ] Compile and Upload 
-- [ ] Install KWS Arduino library and run example. 
+- [ ] Compile and Upload
+- [ ] Install KWS Arduino library and run example.
 - [ ] Install Image Recongition library and run example.
 
 ## Resources

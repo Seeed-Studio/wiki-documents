@@ -44,190 +44,20 @@ And this Grove - Grove Cape for BeagleBone® Series is an expansion board for Be
 
 The pins decribe mapping to the Grove Cape for BeagleBone® Series board as show below:
 
-<table cellSpacing={0} width="100%">
-  <tbody><tr>
-      <th scope="col"> Grove Interface
-      </th>
-      <th scope="col"> Grove Pin
-      </th>
-      <th scope="col"> A/D
-      </th>
-      <th scope="col"> I²C
-      </th>
-      <th scope="col"> UART
-      </th>
-      <th scope="col"> BeagleBone® Pin
-      </th>
-      <th scope="col"> BeagleBone® function
-      </th></tr>
-    <tr>
-      <td rowSpan={2}> J1
-      </td>
-      <td scope="row"> 1
-      </td>
-      <td>
-      </td>
-      <td> SCL1
-      </td>
-      <td>
-      </td>
-      <td> J8.17
-      </td>
-      <td> gpio[5]/
-      </td></tr>
-    <tr>
-      <th scope="row"> 2
-      </th>
-      <td>
-      </td>
-      <td> SDA1
-      </td>
-      <td>
-      </td>
-      <td> J8.18
-      </td>
-      <td> gpio[4]/
-      </td></tr>
-    <tr>
-      <td rowSpan={2}> J5
-      </td>
-      <td> 1
-      </td>
-      <td>
-      </td>
-      <td> SCL2
-      </td>
-      <td>
-      </td>
-      <td> J8.19
-      </td>
-      <td> gpio[13]/
-      </td></tr>
-    <tr>
-      <td> 2
-      </td>
-      <td>
-      </td>
-      <td> SDA2
-      </td>
-      <td>
-      </td>
-      <td> J8.20
-      </td>
-      <td> gpio[12]/
-      </td></tr>
-    <tr>
-      <td rowSpan={2}> J2
-      </td>
-      <td> 1
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-      <td> RX1
-      </td>
-      <td> J8.26
-      </td>
-      <td> gpio[14]/
-      </td></tr>
-    <tr>
-      <td> 2
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-      <td> TX1
-      </td>
-      <td> J8.24
-      </td>
-      <td> gpio[15]/
-      </td></tr>
-    <tr>
-      <td rowSpan={2}> J6
-      </td>
-      <td> 1
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-      <td> RX2
-      </td>
-      <td> J8.22
-      </td>
-      <td> gpio[2]/
-      </td></tr>
-    <tr>
-      <td> 2
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-      <td> TX2
-      </td>
-      <td> J8.21
-      </td>
-      <td> gpio[3]/
-      </td></tr>
-    <tr>
-      <td rowSpan={2}> J3
-      </td>
-      <td scope="row"> 1
-      </td>
-      <td> AIN0
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-      <td> J8.39
-      </td>
-      <td>
-      </td></tr>
-    <tr>
-      <th scope="row"> 2
-      </th>
-      <td> AIN1
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-      <td> J8.40
-      </td>
-      <td>
-      </td></tr>
-    <tr>
-      <td rowSpan={2}> J7
-      </td>
-      <td scope="row"> 1
-      </td>
-      <td> AIN2
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-      <td> J8.37
-      </td>
-      <td>
-      </td></tr>
-    <tr>
-      <th scope="row"> 2
-      </th>
-      <td> AIN3
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-      <td> J8.38
-      </td>
-      <td>
-      </td></tr></tbody></table>
+| Grove Interface | Grove Pin | A/D | I²C | UART | BeagleBone® Pin | BeagleBone® function |
+|---|---|---|---|---|---|---|
+| J1 | 1 | | SCL1 | | J8.17 | gpio[5]/ |
+| J1 | 2 | | SDA1 | | J8.18 | gpio[4]/ |
+| J5 | 1 | | SCL2 | | J8.19 | gpio[13]/ |
+| J5 | 2 | | SDA2 | | J8.20 | gpio[12]/ |
+| J2 | 1 | | | RX1 | J8.26 | gpio[14]/ |
+| J2 | 2 | | | TX1 | J8.24 | gpio[15]/ |
+| J6 | 1 | | | RX2 | J8.22 | gpio[2]/ |
+| J6 | 2 | | | TX2 | J8.21 | gpio[3]/ |
+| J3 | 1 | AIN0 | | | J8.39 | |
+| J3 | 2 | AIN1 | | | J8.40 | |
+| J7 | 1 | AIN2 | | | J8.37 | |
+| J7 | 2 | AIN3 | | | J8.38 | |
 
 ## Schematic Online Viewer
 
