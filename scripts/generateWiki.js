@@ -16,8 +16,14 @@ const excludedPaths = [
 
 
   // 排除指定文档
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'Watcher-Agent', 'Device Network Setup Guide.md'), //8.20
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_Controller', 'reComputer_R1000', 'recomputer_r.md'), //9.15
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R20xx', 'reComputer_Industrial_R20xx_assembly_guide.md'), //9.28
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R20xx', 'reComputer_Industrial_R20xx_configure_system.md'), //9.28
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R20xx', 'reComputer_Industrial_R20xx_flash_os.md'), //9.28
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R21xx', 'reComputer_Industrial_R21xx_assembly_guide.md'), //9.28
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R21xx', 'reComputer_Industrial_R21xx_configure_system.md'), //9.28
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R21xx', 'reComputer_Industrial_R21xx_flash_os.md'), //9.28
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Application', 'Development_Tools', 'recomputer_use_sqlite.md'), //9.25
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_Build_the_ko_Module_for_Seeed_Jetson.md'), //9.25
 ];
 
 // 递归函数，用于遍历多层文件夹

@@ -6,7 +6,7 @@ keywords:
 - Raspberry pi
 - Edge Controller
 - reComputer Industrial R20xx
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
+image: https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/recomputer-industrail-r2000.webp
 slug: /recomputer_industrial_r20xx_getting_start
 last_update:
   date: 09/28/2025
@@ -882,7 +882,7 @@ The backup duration provided by the UPS heavily relies on the system load. Below
 | Idle                  | 15           | Testing under idle conditions with official driver program loaded  |
 | Full load of CPU      | 6            | stress -c 4 -t 10m -v &       |
 
-:::Note
+:::note
 For UPS function please contact us for more information, and the alarm signal is active LOW.
 :::
 
