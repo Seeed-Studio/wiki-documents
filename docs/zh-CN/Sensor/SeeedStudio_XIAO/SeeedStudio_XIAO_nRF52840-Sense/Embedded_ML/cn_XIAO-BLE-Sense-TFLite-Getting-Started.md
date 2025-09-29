@@ -36,7 +36,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/add-zip.png" alt="pir" width={600} height="auto" /></p>
 
-- **步骤 4.** 导航到 `File > Examples > Seeeed Arduino LSM6DS3 > IMU_Capture` 打开 **IMU_Capture.ino**
+- **步骤 4.** 导航到 `File > Examples > Seeed Arduino LSM6DS3 > IMU_Capture` 打开 **IMU_Capture.ino**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/select-IMUCapture-2.png" alt="pir" width={500} height="auto" /></p>
 

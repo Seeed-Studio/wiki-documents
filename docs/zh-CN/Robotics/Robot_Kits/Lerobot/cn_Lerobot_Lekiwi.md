@@ -95,7 +95,7 @@ Seeed Studio 仅对硬件本身的质量负责。教程严格按照官方文档�
 - Torch 2.6  
 
 **对于 Jetson Orin:**
-- Jetson JetPack 6.2  
+- Jetson JetPack 6.0
 - Python 3.10  
 - Torch 2.3+  
 

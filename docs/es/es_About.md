@@ -1,6 +1,6 @@
 ---
-title: Acerca de Seeeed
-name: About Seeeed
+title: Acerca de Seeed
+name: About Seeed
 nointro:
 authors:
   name: Gao Wei

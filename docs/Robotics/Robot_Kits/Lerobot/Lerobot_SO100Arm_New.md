@@ -291,7 +291,7 @@ If you encounter an error like this, you can use this command too.
 cd ~/lerobot && pip install -e ".[feetech]"
 ```
 
-For Jetson Jetpack 6.0+ devices (please make sure to install [Pytorch-gpu and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) from step 5 before executing this step):
+For Jetson Jetpack 6.0+ devices (please make sure to install [Pytorch-gpu and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) from step 5 before executing this step):
 
 ```bash
 conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
@@ -739,24 +739,25 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 ```
 
 **Record function**
- 
+
 The **record** function provides a suite of tools for capturing and managing data during robot operation.  
 
-**1. Data Storage** 
- 
+**1. Data Storage**
+
 - Data is stored using the `LeRobotDataset` format and is stored on disk during recording.
 - By default, the dataset is pushed to your Hugging Face page after recording.  
 - To disable uploading, use: `--dataset.push_to_hub=False`
 
-**2. Checkpointing and Resuming** 
+**2. Checkpointing and Resuming**
 
 - Checkpoints are automatically created during recording.  
-- To resume after an interruption, re-run the same command with: `--resume=true ` 
+- To resume after an interruption, re-run the same command with: `--resume=true`
 
 ⚠️ Critical Note: When resuming, set `--dataset.num_episodes` to the number of additional episodes to record (not the targeted total number of episodes in the dataset).  
-- To start recording from scratch, **manually delete** the dataset directory. 
 
-**3. Recording Parameters** 
+- To start recording from scratch, **manually delete** the dataset directory.
+
+**3. Recording Parameters**
 
 Set the flow of data recording using command-line arguments:
 
@@ -765,7 +766,7 @@ Set the flow of data recording using command-line arguments:
 | --dataset.episode_time_s | Duration per data episode (seconds) | 60 |  
 | --dataset.reset_time_s | Environment reset time after each episode (seconds) | 60 |  
 | --dataset.num_episodes | Total episodes to record | 50 |  
- 
+
 **4. Keyboard Controls During Recording**
 
 Control the data recording flow using keyboard shortcuts:
@@ -775,7 +776,7 @@ Control the data recording flow using keyboard shortcuts:
 | → (Right Arrow) | Early-stop current episode/reset; move to next. |  
 | ← (Left Arrow) | Cancel current episode; re-record it. |  
 | ESC | Stop session immediately, encode videos, and upload dataset. |  
- 
+
 **Tips for Gathering Data**
 
 - Task Suggestion: Grasp objects at different locations and place them in a bin.  
@@ -787,17 +788,17 @@ Control the data recording flow using keyboard shortcuts:
 - Progression:  
   - Start with reliable grasping before adding variations (new locations, techniques, camera adjustments).  
   - Avoid rapid complexity increases to prevent failures.  
- 
+
 💡 Rule of Thumb: You should be able to do the task yourself by only looking at the camera images.  
- 
+
 If you want to dive deeper into this important topic, you can check out the [blog post](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) we wrote on what makes a good dataset.
 
-**Troubleshooting** 
+**Troubleshooting**
 
 Linux-specific Issue:  
 If Right Arrow/Left Arrow/ESC keys are unresponsive during recording:  
-- Verify the `$DISPLAY` environment variable is set (see [pynput limitations](https://pynput.readthedocs.io/en/latest/limitations.html)).  
 
+- Verify the `$DISPLAY` environment variable is set (see [pynput limitations](https://pynput.readthedocs.io/en/latest/limitations.html)).  
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=-eDB73KgUksyJXa-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -1036,6 +1037,7 @@ lerobot-eval \
   --eval.batch_size=2 \
   --eval.n_episodes=3
 ```
+
 - `--env.task` picks the suite (`libero_object`, `libero_spatial`, etc.).
 - `--eval.batch_size` controls how many environments run in parallel.
 - `--eval.n_episodes` sets how many episodes to run in total.

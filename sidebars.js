@@ -1862,6 +1862,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ha',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_tflm',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2',
                   ],
                 },
               ],
@@ -2990,6 +2991,38 @@ const sidebars = {
                 'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_AI_Industrial_R2000/reComputer_AI_Industrial_R2000_Flash_OS'
               ]
             },
+            {
+              type: 'category',
+              label: 'reComputer-Industrial-R20xx',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: 'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/reComputer_Industrial_R20xx_getting_start'
+              },
+              items: [
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/reComputer_Industrial_R20xx_getting_start',
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/reComputer_Industrial_R20xx_flash_os',
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/reComputer_Industrial_R20xx_configure_system',
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/reComputer_Industrial_R20xx_assembly_guide'
+              ]
+            },
+            {
+              type: 'category',
+              label: 'reComputer-Industrial-R21xx',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: 'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/reComputer_Industrial_R21xx_getting_start'
+              },
+              items: [
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/reComputer_Industrial_R21xx_getting_start',
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/reComputer_Industrial_R21xx_flash_os',
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/reComputer_Industrial_R21xx_configure_system',
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/reComputer_Industrial_R21xx_assembly_guide'
+              ]
+            },
           ]
         },
         {
@@ -3288,6 +3321,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'OpenRemote',
+                  items: [
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/openremote/recomputer_r1x_openremote',
+                  ]
+                },
+                {
+                  type: 'category',
                   label: 'Others',
                   items: [
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/Mender-Client-reTerminal',
@@ -3349,7 +3389,7 @@ const sidebars = {
                   type: 'category',
                   label: 'NVR',
                   items: [
-                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/gan_detection_with_frigate_nvr_on_r2000',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/gun_detection_with_frigate_nvr_on_r2000',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/frigate_home_assistant_recomputer_r2000',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/frigate_nvr_with_raspberrypi_5',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/reterminal_frigate',
@@ -6225,11 +6265,13 @@ const sidebars = {
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_Pin_Multiplexing',
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_Built-in-Sensor',
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_Power_Consumptions',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_MicroPython',
             {
               type: 'category',
               label: '无线连接',
               items: [
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_Bluetooth_Usage',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_Matter_Use',
               ],
             },
             {
@@ -6484,6 +6526,16 @@ const sidebars = {
           ],
         },
         'zh-CN/Sensor/SeeedStudio_XIAO/cn_XIAO_FAQ',
+      ],
+    },
+    {
+      type: 'category',
+      label: '电子纸',
+      items: [
+        {
+          type: 'autogenerated',
+          dirName: 'zh-CN/Sensor/Epaper/EE04',
+        },
       ],
     },
     {
@@ -6897,6 +6949,7 @@ const sidebars = {
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ha',
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_edgeimpulse',
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_tflm',
+                    'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ros2',
                   ],
                 },
               ],
@@ -8323,6 +8376,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'OpenRemote',
+                  items: [
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/openremote/cn_recomputer_r1x_openremote',
+                  ]
+                },
+                {
+                  type: 'category',
                   label: '其他',
                   items: [
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_Mender-Client-reTerminal',
@@ -8384,7 +8444,7 @@ const sidebars = {
                   type: 'category',
                   label: 'NVR',
                   items: [
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_gan_detection_with_frigate_nvr_on_r2000',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_gun_detection_with_frigate_nvr_on_r2000',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_frigate_home_assistant_recomputer_r2000',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_frigate_nvr_with_raspberrypi_5',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_reterminal_frigate',
@@ -8421,6 +8481,7 @@ const sidebars = {
               items: [
                 'zh-CN/Edge/Raspberry_Pi_Devices/Application/Development_Tools/cn_recomputer_use_uv_to_build_package',
                 'zh-CN/Edge/Raspberry_Pi_Devices/Application/Development_Tools/cn_recomputer_use_docker',
+                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Development_Tools/cn_recomputer_use_sqlite',
               ]
             }
           ]
@@ -9415,7 +9476,7 @@ const sidebars = {
         'zh-CN/Contribution/Contributors/Contribution-Guide/cn_quick_pull_request',
       ],
     },
-    'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
+    'zh-CN/Contribution/Contributors/cn_Scale-up-Your-Creation-with-Fusion',
     {
       type: 'doc',
       id: 'zh-CN/Top_Brand/cn_PopularPlatforms',
@@ -11167,11 +11228,13 @@ const sidebars = {
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_Pin_Multiplexing',
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_Built-in-Sensor',
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_Power_Consumptions',
+            'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_MicroPython',
             {
               type: 'category',
               label: 'Conexión Inalámbrica',
               items: [
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_Bluetooth_Usage',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_Matter_Use',
               ],
             },
             {
@@ -11426,6 +11489,16 @@ const sidebars = {
           ],
         },
         'es/Sensor/SeeedStudio_XIAO/es_XIAO_FAQ',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Papel electrónico',
+      items: [
+        {
+          type: 'autogenerated',
+          dirName: 'es/Sensor/Epaper/EE04',
+        },
       ],
     },
     {
@@ -11839,6 +11912,7 @@ const sidebars = {
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_ha',
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_edgeimpulse',
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_tflm',
+                    'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_ros2',
                   ],
                 },
               ],
@@ -13265,6 +13339,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'OpenRemote',
+                  items: [
+                    'es/Edge/Raspberry_Pi_Devices/Application/AIoT/openremote/es_recomputer_r1x_openremote',
+                  ]
+                },
+                {
+                  type: 'category',
                   label: 'Otros',
                   items: [
                     'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_Mender-Client-reTerminal',
@@ -13326,7 +13407,7 @@ const sidebars = {
                   type: 'category',
                   label: 'NVR',
                   items: [
-                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_gan_detection_with_frigate_nvr_on_r2000',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_gun_detection_with_frigate_nvr_on_r2000',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_frigate_home_assistant_recomputer_r2000',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_frigate_nvr_with_raspberrypi_5',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_reterminal_frigate',
@@ -13363,6 +13444,7 @@ const sidebars = {
               items: [
                 'es/Edge/Raspberry_Pi_Devices/Application/Development_Tools/es_recomputer_use_uv_to_build_package',
                 'es/Edge/Raspberry_Pi_Devices/Application/Development_Tools/es_recomputer_use_docker',
+                'es/Edge/Raspberry_Pi_Devices/Application/Development_Tools/es_recomputer_use_sqlite',
               ]
             }
           ]
@@ -14360,7 +14442,7 @@ const sidebars = {
         'es/Contribution/Contributors/Contribution-Guide/es_quick_pull_request',
       ],
     },
-    'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
+    'es/Contribution/Contributors/es_Scale-up-Your-Creation-with-Fusion',
     {
       type: 'doc',
       id: 'es/Top_Brand/es_PopularPlatforms',
@@ -16109,11 +16191,13 @@ const sidebars = {
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Pin_Multiplexing',
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Built-in-Sensor',
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Power_Consumptions',
+            'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_MicroPython',
             {
               type: 'category',
               label: 'ワイヤレス接続',
               items: [
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Bluetooth_Usage',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Matter_Use',
               ],
             },
             {
@@ -16368,6 +16452,16 @@ const sidebars = {
           ],
         },
         'ja/Sensor/SeeedStudio_XIAO/ja_XIAO_FAQ',
+      ],
+    },
+    {
+      type: 'category',
+      label: '電子ペーパー',
+      items: [
+        {
+          type: 'autogenerated',
+          dirName: 'ja/Sensor/Epaper/EE04',
+        },
       ],
     },
     {
@@ -16781,6 +16875,7 @@ const sidebars = {
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ha',
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_edgeimpulse',
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_tflm',
+                    'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ros2',
                   ],
                 },
               ],
@@ -18207,6 +18302,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'OpenRemote',
+                  items: [
+                    'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/openremote/ja_recomputer_r1x_openremote',
+                  ]
+                },
+                {
+                  type: 'category',
                   label: 'その他',
                   items: [
                     'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_Mender-Client-reTerminal',
@@ -18268,7 +18370,7 @@ const sidebars = {
                   type: 'category',
                   label: 'NVR',
                   items: [
-                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_gan_detection_with_frigate_nvr_on_r2000',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_gun_detection_with_frigate_nvr_on_r2000',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_frigate_home_assistant_recomputer_r2000',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_frigate_nvr_with_raspberrypi_5',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_reterminal_frigate',
@@ -18305,6 +18407,7 @@ const sidebars = {
               items: [
                 'ja/Edge/Raspberry_Pi_Devices/Application/Development_Tools/ja_recomputer_use_uv_to_build_package',
                 'ja/Edge/Raspberry_Pi_Devices/Application/Development_Tools/ja_recomputer_use_docker',
+                'ja/Edge/Raspberry_Pi_Devices/Application/Development_Tools/ja_recomputer_use_sqlite',
               ]
             }
           ]
@@ -19302,7 +19405,7 @@ const sidebars = {
         'ja/Contribution/Contributors/Contribution-Guide/ja_quick_pull_request',
       ],
     },
-    'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
+    'ja/Contribution/Contributors/ja_Scale-up-Your-Creation-with-Fusion',
     {
       type: 'doc',
       id: 'ja/Top_Brand/ja_PopularPlatforms',
