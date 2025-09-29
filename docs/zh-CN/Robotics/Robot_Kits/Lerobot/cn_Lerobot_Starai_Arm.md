@@ -744,7 +744,7 @@ lerobot-train \
 从某个检查点恢复训练。
 
 ```bash
-python -m lerobot.scripts.train \
+lerobot-train \
   --config_path=outputs/train/act_viola_test/checkpoints/last/pretrained_model/train_config.json \
   --resume=true
 ```
