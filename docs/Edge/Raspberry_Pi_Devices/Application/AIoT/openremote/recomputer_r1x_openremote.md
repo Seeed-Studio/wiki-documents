@@ -167,12 +167,9 @@ Now that the HTTP API Agent is created, configure it with the following details:
 
 Click **Save** to confirm the configuration.
 
-<<<<<<< HEAD
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote3.png" alt="pir" width={800} height="auto" /></p>
 
-
-=======
->>>>>>> d39912a091b24e85ddcf1b545826c7b2b11bd6d6
 ### Create the Weather Asset
 
 **Add a New Weather Asset**
@@ -184,11 +181,10 @@ Click **Save** to confirm the configuration.
 
 The weather asset will now appear in the list as a child of the HTTP API Agent. You can change its parent if desired.
 
-<<<<<<< HEAD
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote4.png" alt="pir" width={800} height="auto" /></p>
 
-=======
->>>>>>> d39912a091b24e85ddcf1b545826c7b2b11bd6d6
+
 ### Add the Agent Links
 
 **Modify Asset Configuration**
@@ -206,13 +202,11 @@ Go to **Modify Mode** by clicking the toggle at the top of the asset page. In th
   - **Value filters:** `JsonPathFilter-2`
   - **Path (JSON):** `$.main.humidity`
 
-<<<<<<< HEAD
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote5.png" alt="pir" width={800} height="auto" /></p>
 
 ### Setup the Temperature Attribute:
-=======
-### Setup the Temperature Attribute
->>>>>>> d39912a091b24e85ddcf1b545826c7b2b11bd6d6
+
 
 - Expand the **temperature** attribute.
 - Click **Add configuration item** and select **Agent link**.
