@@ -144,6 +144,7 @@ reComputer Industrial R21xx 支持两种电源供应选项：DC 端子和 PoE �
 
 reComputer Industrial R21xx 通过端子提供 9~36V 的 DC 电压。电源通过 2 针电源端子块连接器连接。
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2-pin_power_terminal_2.png" style={{width:100, height:'auto'}}/></div>
+
 要为 reComputer Industrial R21xx 接地，接地线可以固定到电源端子右侧的螺丝上。
 
 **PoE**
@@ -358,7 +359,8 @@ reComputer Industrial R21xx 系列设备包含 1x RS232 端口，6 针 3.5mm 间
         <td>RS232-1_TX </td>
       </tr>
       <tr>
-        <td>4</td>        <td>RS232-1_RX</td>
+        <td>4</td>
+        <td>RS232-1_RX</td>
       </tr>
       <tr>
         <td>6</td>
@@ -644,6 +646,7 @@ reComputer Industrial R2000 上的 M.2 M-KEY 2280 插槽设计用于容纳 NVMe 
 > 2. **带镜像的启动盘：** 另一种用法是将 SSD 既用作大容量存储，又用于存储系统镜像，允许直接从 SSD 卡启动。
 >  
 > 需要注意的是，市场上并非所有 SSD 卡都支持第二种用法。因此，如果您打算将其用作启动盘并且不确定购买哪种型号，我们建议选择我们推荐的 2TB SSD（SKU 114993467）。此型号已经过测试并验证了启动功能，降低了兼容性问题的风险，并最大限度地减少了试错成本。
+
 reComputer Industrial R2000 上的 M.2 M-KEY 2280 插槽专为容纳 PCIE M.2 AI 加速器而设计。R21xx-12 系列已预装了 Hailo-8 M.2 AI 加速器，性能高达 26TOPS。
 
 ### Mini-PCIe 插槽
@@ -863,6 +866,7 @@ Mini-PCIe 插槽支持使用 USB 协议的 Zigbee 模块，允许将 Zigbee 功�
 
 > 注意  
 > 请注意，如果您需要 Zigbee 功能，需要购买相应的 Zigbee 模块和外部天线，并按照第 4.5 节"组装 4G/LoRa®/Zigbee 模块和天线"中的说明进行操作。
+
 ### SSD
 
 reComputer Industrial R2000 通过使用 PCIe 插槽（J7）支持 2280 NVMe SSD。需要注意的是，CM5 的 PCIe 是 gen2.0，最大理论速度为 5Gbps。如果您使用的是 Gen3.0 或更高版本的 SSD，可能无法达到 SSD 的最大速度。经过测试，安装了 SSD 的 reTerminal DM 可以达到最大写入速度 230MB/s 和最大读取速度 370MB/s。如果您不确定哪些 SSD 兼容，可以按照下面的配件列表进行购买。

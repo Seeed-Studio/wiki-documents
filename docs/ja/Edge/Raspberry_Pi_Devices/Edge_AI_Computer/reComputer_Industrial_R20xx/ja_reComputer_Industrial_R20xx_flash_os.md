@@ -218,6 +218,7 @@ SDカードスロットに簡単にアクセスできる場合は、Piの電源�
 設定が確認されます。Enterを押します：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_4.png" alt="pir" width="800" height="auto" /></div>
+
 **ステップ 4**：`Back`を選択するかEscキーを押して最初の画面に戻ります。その後、右カーソルキーを使用してFinishに移動します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_5.png" alt="pir" width="800" height="auto" /></div>

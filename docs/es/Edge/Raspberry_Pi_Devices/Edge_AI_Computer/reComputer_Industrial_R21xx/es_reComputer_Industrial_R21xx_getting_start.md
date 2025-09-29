@@ -144,6 +144,7 @@ El reComputer Industrial R21xx soporta dos opciones de fuente de alimentación: 
 
 El reComputer Industrial R21xx se suministra con un voltaje DC de terminal de 9~36V. La fuente de alimentación se conecta a través del conector de bloque de terminales de alimentación de 2 pines.
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2-pin_power_terminal_2.png" style={{width:100, height:'auto'}}/></div>
+
 Para conectar a tierra el reComputer Industrial R21xx, el cable de tierra se puede asegurar al tornillo ubicado a la derecha del terminal de alimentación.
 
 **PoE**
@@ -358,7 +359,8 @@ Los pines del terminal se definen como sigue:
         <td>RS232-1_TX </td>
       </tr>
       <tr>
-        <td>4</td>        <td>RS232-1_RX</td>
+        <td>4</td>
+        <td>RS232-1_RX</td>
       </tr>
       <tr>
         <td>6</td>
@@ -644,6 +646,7 @@ La ranura M.2 M-KEY 2280 en el reComputer Industrial R2000 está diseñada para 
 > 2. **Unidad de Arranque con Imagen:** Otro uso implica usar el SSD tanto como almacenamiento de alta capacidad como para almacenar imágenes del sistema, permitiendo arrancar directamente desde la tarjeta SSD.
 >  
 > Es importante tener en cuenta que no todas las tarjetas SSD disponibles en el mercado soportan el segundo uso. Por lo tanto, si tiene la intención de usarla como unidad de arranque y no está seguro sobre qué modelo comprar, recomendamos optar por nuestro SSD de 2TB recomendado (SKU 114993467). Este modelo ha sido probado y verificado para funcionalidad de arranque, reduciendo el riesgo de problemas de compatibilidad y minimizando los costos de prueba y error.
+
 La ranura M.2 M-KEY 2280 en el reComputer Industrial R2000 está diseñada para acomodar aceleradores de IA PCIE M.2. Y la serie R21xx-12 ha sido preinstalada con una aceleración de IA Hailo-8 M.2 de hasta 26TOPS.
 
 ### Ranura Mini-PCIe
@@ -863,6 +866,7 @@ La ranura Mini-PCIe ofrece soporte para módulos Zigbee utilizando el protocolo 
 
 > Nota  
 > Por favor tenga en cuenta que si requiere funcionalidad Zigbee, es necesario comprar el módulo Zigbee correspondiente y la antena externa, y seguir las instrucciones en la sección 4.5 "Ensamblar Módulo y Antena 4G/LoRa®/Zigbee".
+
 ### SSD
 
 El reComputer Industrial R2000 soporta SSD NVMe 2280 mediante el uso de una ranura PCIe (J7). Es importante tener en cuenta que el PCIe del CM5 es gen2.0 con una velocidad teórica máxima de 5Gbps. Si está utilizando un SSD Gen3.0 o superior, es posible que no pueda alcanzar la velocidad máxima del SSD. Después de las pruebas, el reTerminal DM con SSD instalado puede alcanzar una velocidad máxima de escritura de 230MB/s y una velocidad máxima de lectura de 370MB/s. Si no está seguro de qué SSDs son compatibles, puede comprar siguiendo la lista de accesorios a continuación.
@@ -894,7 +898,7 @@ La duración de respaldo proporcionada por el UPS depende en gran medida de la c
 | Inactivo                  | 15           | Prueba bajo condiciones de inactividad con programa controlador oficial cargado  |
 | Carga completa de CPU      | 6            | stress -c 4 -t 10m -v &       |
 
-:::Note
+:::note
 Para la función UPS, póngase en contacto con nosotros para obtener más información, y la señal de alarma está activa en BAJO.
 :::
 

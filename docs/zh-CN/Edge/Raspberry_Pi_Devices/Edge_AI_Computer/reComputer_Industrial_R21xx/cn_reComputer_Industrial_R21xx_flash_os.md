@@ -218,6 +218,7 @@ rpi-imager
 配置将被确认。按回车：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_4.png" alt="pir" width="800" height="auto" /></div>
+
 **步骤 4**：通过选择 `Back` 或按 Esc 键返回第一个屏幕。然后使用右光标键导航到 Finish。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_5.png" alt="pir" width="800" height="auto" /></div>

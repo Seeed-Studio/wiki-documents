@@ -218,6 +218,7 @@ Desplázate hacia abajo a `Opciones Avanzadas` y presiona Enter:
 La configuración será confirmada. Presiona Enter:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_4.png" alt="pir" width="800" height="auto" /></div>
+
 **Paso 4**: Regresa a la primera pantalla seleccionando `Back` o presionando la tecla Esc. Luego navega a Finish usando la tecla de cursor derecha.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_5.png" alt="pir" width="800" height="auto" /></div>

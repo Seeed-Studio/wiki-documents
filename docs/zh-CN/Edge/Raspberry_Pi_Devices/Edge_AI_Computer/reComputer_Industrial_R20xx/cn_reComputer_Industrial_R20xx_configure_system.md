@@ -353,6 +353,7 @@ nano power_5g.sh
 ```
 
 使用 sudo nano 打开并输入以下命令，然后按 ***ctrl+x*** 保存并退出。
+
 ```bash
 #!/bin/bash
 
@@ -557,7 +558,7 @@ sudo minicom -D /dev/ttyACM1
 sudo minicom -D /dev/ttyACM2
 ```
 
-:::Note
+:::note
  如果有扩展板，编号需要向后移动一位，例如***/dev/ttyAcM2***，***/dev/ttyAcM3***。
 :::
 
@@ -570,7 +571,7 @@ sudo minicom -D /dev/ttyACM2
 
 - 所有"YES"显示后，按 Enter 返回，然后选择 Exit 退出。
 
-:::Note
+:::note
 
 以 ACM2 和 ACM3 为例：
 如果您想从 ACM2 发送到 ACM3，ACM2 需要重新设置：***ctrl+A***，然后按***Z***，再按***E***，然后启动串口写命令。此时您可以在 ACM2 中随意打印字符串，同时可以在 ACM3 中看到 ACM2 的内容；
@@ -622,7 +623,8 @@ reComputer Industrial R20xx 包含 8 个 DI 端口，用户可以根据实际需
         <th>对应的扩展 GPIO</th>
       </tr>
     </thead>
-    <tbody>      <tr>
+    <tbody>
+      <tr>
         <td rowspan="8">8</td>
         <td>DI1</td>
         <td>GPIO588</td>
@@ -961,6 +963,7 @@ CPU 和直流电源输入之间的 GPIO6 用于在电源断开时向 CPU 发出�
 1. 硬件连接。
 
 请确保 UPS 设备的 ***'CM5_UPS_DET'*** 引脚连接到 R20xx 设备的 GPIO16 引脚。
+
 2. 修改配置文件。
 
 - 打开终端。
@@ -1044,7 +1047,7 @@ while True:
 sudo python3 ups_shutdown.py
 ```
 
-:::Note
+:::note
  使用 `sudo` 确保脚本有足够的权限执行关机命令。
 :::
 
@@ -1060,7 +1063,7 @@ sudo python3 ups_shutdown.py
 - 重新连接电源。
 - 检查系统数据是否完整并正常启动。
 
-:::Note
+:::note
 
 1. 有关 UPS 功能，请联系我们获取更多信息。
 2. 报警信号为低电平有效。
@@ -1096,7 +1099,7 @@ python basic_pipelines/detection_simple.py
 要关闭应用程序，请按 ***`Ctrl+C`*** 。
 这是检测示例的轻量级版本，主要专注于展示 Hailo 性能，同时最小化 CPU 负载。内部 GStreamer 视频处理管道通过最小化视频处理任务进行简化，并使用 YOLOv6 Nano 模型。
 
-:::Note
+:::note
 如果您购买的 reComputer 不包含 Hailo-8，并且您正在考虑购买 Hailo 设备进行集成，请参考官方 Hailo 文档 (https://github.com/hailo-ai) 来配置固件和环境，并运行示例以验证设备可以正常使用。
 :::
 

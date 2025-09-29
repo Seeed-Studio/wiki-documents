@@ -143,6 +143,7 @@ El reComputer Industrial R20xx soporta dos opciones de fuente de alimentación: 
 
 El reComputer Industrial R2000 se suministra con un voltaje DC de terminal de 9~36V. La fuente de alimentación se conecta a través del conector de bloque de terminales de alimentación de 2 pines.
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2-pin_power_terminal_2.png" style={{width:100, height:'auto'}}/></div>
+
 Para conectar a tierra el reComputer Industrial R2000, el cable de tierra se puede asegurar al tornillo ubicado a la derecha del terminal de alimentación.
 
 **PoE**
@@ -362,7 +363,8 @@ Los pines del terminal se definen como sigue:
       </tr>
     </thead>
     <tbody>
-      <tr>        <td rowspan="3"><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/232_introduction_1.png" style={{width:300, height:'auto'}}/></td>
+      <tr>
+        <td rowspan="3"><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/232_introduction_1.png" style={{width:300, height:'auto'}}/></td>
         <td>2</td>
         <td>RS232-1_TX </td>
       </tr>
@@ -634,6 +636,7 @@ La ranura MiniPCIe en el reComputer Industrial R2000 está diseñada para acomod
 ### Orificio de Reinicio
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/reset.jpg" style={{width:200, height:'auto'}}/></div>
+
 Hay un Mini Interruptor de Botón ubicado en el orificio de reinicio del reComputer AI Industrial R2135. Al presionar este botón con un objeto delgado, se puede reiniciar el CM4. Este pin cuando está en alto señala que el CM4 ha iniciado. Llevar este pin a bajo reinicia el módulo.
 
 ### Ranura M.2 B-KEY
@@ -851,6 +854,7 @@ La ranura Mini-PCIe ofrece soporte para módulos Zigbee utilizando el protocolo 
 ### SSD
 
 El reComputer Industrial R2000 soporta SSD NVMe 2280 a través del uso de una ranura PCIe(J7). Es importante tener en cuenta que el PCIe del CM5 es gen2.0 con una velocidad teórica máxima de 5Gbps. Si está usando un SSD Gen3.0 o superior, puede que no sea capaz de alcanzar la velocidad máxima del SSD. Después de las pruebas, el reTerminal DM con SSD instalado puede alcanzar una velocidad máxima de escritura de 230MB/s y una velocidad máxima de lectura de 370MB/s. Si no está seguro de qué SSDs son compatibles, puede comprar siguiendo la lista de accesorios a continuación.
+
 > Nota
 > Tenga en cuenta que:
 > Los resultados de las pruebas de velocidad pueden variar dependiendo del modelo de SSD, el método de prueba y el entorno de prueba. Los valores proporcionados aquí son solo para fines de referencia y se obtuvieron en el laboratorio de Seeed.
@@ -878,7 +882,7 @@ La duración de respaldo proporcionada por el UPS depende en gran medida de la c
 | Inactivo                  | 15           | Prueba bajo condiciones de inactividad con programa controlador oficial cargado  |
 | Carga completa de CPU      | 6            | stress -c 4 -t 10m -v &       |
 
-:::Note
+:::note
 Para la función UPS, por favor contáctenos para más información, y la señal de alarma está activa en BAJO.
 :::
 

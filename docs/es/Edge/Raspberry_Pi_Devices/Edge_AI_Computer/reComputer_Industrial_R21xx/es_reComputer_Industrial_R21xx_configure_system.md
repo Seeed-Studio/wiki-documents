@@ -351,6 +351,7 @@ Para interactuar con un módulo 5G/4G usando comandos AT a través de minicom, s
 ```bash
 nano power_5g.sh
 ```
+
 Abrir con sudo nano e introducir el siguiente comando, luego presionar ***ctrl+x*** para guardar y salir.
 
 ```bash
@@ -556,7 +557,7 @@ sudo minicom -D /dev/ttyACM1
 sudo minicom -D /dev/ttyACM2
 ```
 
-:::Note
+:::note
  Si hay una placa de expansión, el número necesita moverse hacia atrás un lugar, por ejemplo ***/dev/ttyAcM2***, ***/dev/ttyAcM3***.
 :::
 
@@ -569,7 +570,7 @@ sudo minicom -D /dev/ttyACM2
 
 - Después de que todos los "YES" se muestren, presionar Enter para regresar, y luego seleccionar Exit para salir.
 
-:::Note
+:::note
 
 Tomando ACM2 y ACM3 como ejemplo:
 Si quieres enviar de ACM2 a ACM3, ACM2 necesita configurarse nuevamente: ***ctrl+A***, luego presionar ***Z*** y luego ***E***, y luego iniciar el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM2 a voluntad, y puedes ver el contenido de ACM2 en ACM3 al mismo tiempo;
@@ -626,7 +627,8 @@ reComputer Industrial R21xx contiene 4x puertos DI, el usuario puede configurar 
       <tr>
         <th>Número de puertos</th>
         <th>Puertos DI</th>
-        <th>GPIO extendido correspondiente</th>      </tr>
+        <th>GPIO extendido correspondiente</th>
+      </tr>
     </thead>
     <tbody>
       <tr>
@@ -969,6 +971,7 @@ ls /dev | grep tpm
 **Interpretando la Salida:**  
 
 Si ves ***tpm0*** y ***tpmrm0*** en la salida, significa que los dispositivos TPM (Módulo de Plataforma Confiable) son detectados y están disponibles en tu sistema. Esto indica que el hardware TPM es reconocido y accesible, lo cual es una buena señal. Puedes proceder con el uso de funcionalidades o aplicaciones relacionadas con TPM sabiendo que los dispositivos están presentes y accesibles.
+
 ## ATECC608A
 
 Para interactuar con el dispositivo ATECC608A y generar un número de serie aleatorio, sigue estos pasos:
@@ -1125,7 +1128,7 @@ Guardar y salir del editor (presiona ***`Ctrl+O`*** para guardar, ***`Enter`*** 
 sudo python3 ups_shutdown.py
 ```
 
-:::Note
+:::note
  Usa `sudo` para asegurar que el script tenga permisos suficientes para ejecutar el comando de apagado.
 :::
 
@@ -1141,7 +1144,7 @@ sudo python3 ups_shutdown.py
 - Reconectar la fuente de alimentación.
 - Verificar si los datos del sistema están completos y se inicia normalmente.
 
-:::Note
+:::note
 
 1. Para la función UPS por favor contáctanos para más información.
 2. La señal de alarma es activa LOW.
@@ -1177,7 +1180,7 @@ python basic_pipelines/detection_simple.py
 Para cerrar la aplicación, presiona ***`Ctrl+C`*** .
 Esta es una versión ligera del ejemplo de detección, enfocándose principalmente en demostrar el rendimiento de Hailo mientras minimiza la carga de la CPU. El pipeline interno de procesamiento de video GStreamer se simplifica minimizando las tareas de procesamiento de video, y se usa el modelo YOLOv6 Nano.
 
-:::Note
+:::note
 Si el reComputer que compraste no incluye Hailo-8 y estás considerando comprar un dispositivo Hailo para integración, por favor consulta la documentación oficial de Hailo (https://github.com/hailo-ai) para configurar el firmware y el entorno, y ejecutar los ejemplos para verificar que el dispositivo pueda usarse normalmente.
 :::
 

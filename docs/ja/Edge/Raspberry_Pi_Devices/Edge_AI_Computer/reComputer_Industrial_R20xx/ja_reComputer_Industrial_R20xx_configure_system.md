@@ -353,6 +353,7 @@ nano power_5g.sh
 ```
 
 sudo nanoで開き、以下のコマンドを入力し、***ctrl+x***を押して保存して終了します。
+
 ```bash
 #!/bin/bash
 
@@ -557,7 +558,7 @@ sudo minicom -D /dev/ttyACM1
 sudo minicom -D /dev/ttyACM2
 ```
 
-:::Note
+:::note
  拡張ボードがある場合、番号を1つ後ろにずらす必要があります。例えば***/dev/ttyAcM2***、***/dev/ttyAcM3***。
 :::
 
@@ -570,7 +571,7 @@ sudo minicom -D /dev/ttyACM2
 
 - すべて「YES」が表示されたら、Enterを押して戻り、Exitを選択して終了します。
 
-:::Note
+:::note
 
 ACM2とACM3を例とします：
 ACM2からACM3に送信したい場合、ACM2を再度設定する必要があります：***ctrl+A***、次に***Z***を押してから***E***を押し、シリアルポート書き込みコマンドを開始します。この時、ACM2で自由に文字列を印刷でき、同時にACM3でACM2の内容を確認できます；
@@ -622,7 +623,8 @@ reComputer Industrial R20xxには8つのDIポートが含まれており、ユ�
         <th>対応する拡張GPIO</th>
       </tr>
     </thead>
-    <tbody>      <tr>
+    <tbody>
+      <tr>
         <td rowspan="8">8</td>
         <td>DI1</td>
         <td>GPIO588</td>
@@ -961,6 +963,7 @@ CPUとDC電源入力の間のGPIO6は、電源が落ちたときにCPUに警告�
 1. ハードウェア接続。
 
 UPSデバイスの***'CM5_UPS_DET'***ピンがR20xxデバイスのGPIO16ピンに接続されていることを確認してください。
+
 2. 設定ファイルを変更します。
 
 - ターミナルを開きます。
@@ -1044,7 +1047,7 @@ while True:
 sudo python3 ups_shutdown.py
 ```
 
-:::Note
+:::note
  スクリプトがシャットダウンコマンドを実行するのに十分な権限を持つように、`sudo`を使用してください。
 :::
 
@@ -1060,7 +1063,7 @@ sudo python3 ups_shutdown.py
 - 電源を再接続します。
 - システムデータが完全で正常に起動するかを確認します。
 
-:::Note
+:::note
 
 1. UPS機能については、詳細情報をお問い合わせください。
 2. アラーム信号はアクティブLOWです。
@@ -1096,7 +1099,7 @@ python basic_pipelines/detection_simple.py
 アプリケーションを終了するには、***`Ctrl+C`*** を押してください。
 これは検出例の軽量版で、主にCPU負荷を最小限に抑えながらHailoのパフォーマンスを実証することに焦点を当てています。内部のGStreamerビデオ処理パイプラインは、ビデオ処理タスクを最小限に抑えることで簡素化され、YOLOv6 Nanoモデルが使用されています。
 
-:::Note
+:::note
 ご購入のreComputerにHailo-8が含まれておらず、統合用のHailoデバイスの購入をご検討の場合は、Hailoの公式ドキュメント（https://github.com/hailo-ai）を参照してファームウェアと環境を設定し、例を実行してデバイスが正常に使用できることを確認してください。
 :::
 

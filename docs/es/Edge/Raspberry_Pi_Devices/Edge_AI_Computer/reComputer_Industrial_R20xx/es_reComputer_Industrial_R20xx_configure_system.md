@@ -353,6 +353,7 @@ nano power_5g.sh
 ```
 
 Abre con sudo nano e ingresa el siguiente comando, luego presiona ***ctrl+x*** para guardar y salir.
+
 ```bash
 #!/bin/bash
 
@@ -557,7 +558,7 @@ sudo minicom -D /dev/ttyACM1
 sudo minicom -D /dev/ttyACM2
 ```
 
-:::Note
+:::note
  Si hay una placa de expansión, el número necesita moverse hacia atrás un lugar, por ejemplo ***/dev/ttyAcM2***, ***/dev/ttyAcM3***.
 :::
 
@@ -570,7 +571,7 @@ sudo minicom -D /dev/ttyACM2
 
 - Después de que todos los "YES" se muestren, presionar Enter para regresar, y luego seleccionar Exit para salir.
 
-:::Note
+:::note
 
 Tomando ACM2 y ACM3 como ejemplo:
 Si quieres enviar desde ACM2 a ACM3, ACM2 necesita configurarse nuevamente: ***ctrl+A***, luego presionar ***Z*** y luego ***E***, y luego iniciar el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM2 a voluntad, y puedes ver el contenido de ACM2 en ACM3 al mismo tiempo;
@@ -622,7 +623,8 @@ reComputer Industrial R20xx contiene 8x puertos DI, el usuario puede configurar 
         <th>GPIO extendido correspondiente</th>
       </tr>
     </thead>
-    <tbody>      <tr>
+    <tbody>
+      <tr>
         <td rowspan="8">8</td>
         <td>DI1</td>
         <td>GPIO588</td>
@@ -961,6 +963,7 @@ Otra forma de usar esta función es Iniciar un apagado cuando el pin GPIO cambia
 1. Conexión de hardware.
 
 Por favor asegúrate de que el pin ***'CM5_UPS_DET'*** del dispositivo UPS esté conectado al pin GPIO16 del dispositivo R20xx.
+
 2. Modificar el archivo de configuración.
 
 - Abrir la terminal.
@@ -1044,7 +1047,7 @@ Guardar y salir del editor (presionar ***`Ctrl+O`*** para guardar, ***`Enter`***
 sudo python3 ups_shutdown.py
 ```
 
-:::Note
+:::note
  Usar `sudo` para asegurar que el script tenga permisos suficientes para ejecutar el comando de apagado.
 :::
 
@@ -1060,7 +1063,7 @@ sudo python3 ups_shutdown.py
 - Reconectar la fuente de alimentación.
 - Verificar si los datos del sistema están completos y se inicia normalmente.
 
-:::Note
+:::note
 
 1. Para la función UPS, por favor contáctanos para más información.
 2. La señal de alarma es activa en BAJO.
@@ -1096,7 +1099,7 @@ python basic_pipelines/detection_simple.py
 Para cerrar la aplicación, presionar ***`Ctrl+C`*** .
 Esta es una versión ligera del ejemplo de detección, enfocándose principalmente en demostrar el rendimiento de Hailo mientras minimiza la carga de CPU. El pipeline interno de procesamiento de video GStreamer está simplificado minimizando las tareas de procesamiento de video, y se utiliza el modelo YOLOv6 Nano.
 
-:::Note
+:::note
 Si el reComputer que compraste no incluye Hailo-8 y estás considerando comprar un dispositivo Hailo para integración, por favor consulta la documentación oficial de Hailo (https://github.com/hailo-ai) para configurar el firmware y el entorno, y ejecutar los ejemplos para verificar que el dispositivo pueda usarse normalmente.
 :::
 

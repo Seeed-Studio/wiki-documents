@@ -351,6 +351,7 @@ sudo  ./lora_pkt_fwd  -c  global_conf.json.sx1250.EU868.USB
 ```bash
 nano power_5g.sh
 ```
+
 使用 sudo nano 打开并输入以下命令，然后按 ***ctrl+x*** 保存并退出。
 
 ```bash
@@ -556,7 +557,7 @@ sudo minicom -D /dev/ttyACM1
 sudo minicom -D /dev/ttyACM2
 ```
 
-:::Note
+:::note
  如果有扩展板，编号需要向后移动一位，例如 ***/dev/ttyAcM2***，***/dev/ttyAcM3***。
 :::
 
@@ -569,7 +570,7 @@ sudo minicom -D /dev/ttyACM2
 
 - 所有 "YES" 显示后，按 Enter 返回，然后选择 Exit 退出。
 
-:::Note
+:::note
 
 以 ACM2 和 ACM3 为例：
 如果您想从 ACM2 发送到 ACM3，ACM2 需要重新设置：***ctrl+A***，然后按 ***Z***，再按 ***E***，然后启动串口写命令。此时您可以在 ACM2 中随意打印字符串，同时可以在 ACM3 中看到 ACM2 的内容；
@@ -626,7 +627,8 @@ reComputer Industrial R21xx 包含 4x DI 端口，用户可以根据实际需要
       <tr>
         <th>端口数量</th>
         <th>DI 端口</th>
-        <th>对应的扩展 GPIO</th>      </tr>
+        <th>对应的扩展 GPIO</th>
+      </tr>
     </thead>
     <tbody>
       <tr>
@@ -969,6 +971,7 @@ ls /dev | grep tpm
 **解释输出：**  
 
 如果您在输出中看到 ***tpm0*** 和 ***tpmrm0***，这意味着检测到 TPM（可信平台模块）设备并且在您的系统上可用。这表明 TPM 硬件被识别并且可访问，这是一个好兆头。您可以继续使用 TPM 相关功能或应用程序，知道设备存在且可访问。
+
 ## ATECC608A
 
 要与 ATECC608A 设备交互并生成随机序列号，请按照以下步骤操作：
@@ -1125,7 +1128,7 @@ while True:
 sudo python3 ups_shutdown.py
 ```
 
-:::Note
+:::note
  使用 `sudo` 确保脚本有足够的权限执行关机命令。
 :::
 
@@ -1141,7 +1144,7 @@ sudo python3 ups_shutdown.py
 - 重新连接电源。
 - 检查系统数据是否完整并正常启动。
 
-:::Note
+:::note
 
 1. 有关 UPS 功能，请联系我们获取更多信息。
 2. 警报信号为低电平有效。
@@ -1177,7 +1180,7 @@ python basic_pipelines/detection_simple.py
 要关闭应用程序，请按 ***`Ctrl+C`***。
 这是检测示例的轻量级版本，主要专注于展示 Hailo 性能，同时最小化 CPU 负载。内部 GStreamer 视频处理管道通过最小化视频处理任务进行简化，并使用 YOLOv6 Nano 模型。
 
-:::Note
+:::note
 如果您购买的 reComputer 不包含 Hailo-8，并且您正在考虑购买 Hailo 设备进行集成，请参考官方 Hailo 文档 (https://github.com/hailo-ai) 来配置固件和环境，并运行示例以验证设备可以正常使用。
 :::
 

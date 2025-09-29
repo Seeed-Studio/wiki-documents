@@ -143,6 +143,7 @@ reComputer Industrial R20xx 支持两种电源供应选项：DC 端子和 PoE �
 
 reComputer Industrial R2000 通过端子提供 9~36V 的 DC 电压。电源通过 2 针电源端子块连接器连接。
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2-pin_power_terminal_2.png" style={{width:100, height:'auto'}}/></div>
+
 要为 reComputer Industrial R2000 接地，接地线可以固定到电源端子右侧的螺丝上。
 
 **PoE**
@@ -362,7 +363,8 @@ reComputer Industrial R2000 系列设备包括 1x RS232 端口，6 针 3.5mm 间
       </tr>
     </thead>
     <tbody>
-      <tr>        <td rowspan="3"><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/232_introduction_1.png" style={{width:300, height:'auto'}}/></td>
+      <tr>
+        <td rowspan="3"><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/232_introduction_1.png" style={{width:300, height:'auto'}}/></td>
         <td>2</td>
         <td>RS232-1_TX </td>
       </tr>
@@ -634,6 +636,7 @@ reComputer Industrial R2000 上的 MiniPCIe 插槽设计用于容纳 4G LTE、US
 ### 复位孔
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/reset.jpg" style={{width:200, height:'auto'}}/></div>
+
 在 reComputer AI Industrial R2135 的复位孔中有一个迷你按钮开关。通过用细物体按压此按钮，可以复位 CM4。此引脚为高电平时表示 CM4 已启动。将此引脚拉低会复位模块。
 
 ### M.2 B-KEY 插槽
@@ -851,6 +854,7 @@ Mini-PCIe 插槽支持使用 USB 协议的 Zigbee 模块，允许将 Zigbee 功�
 ### SSD
 
 reComputer Industrial R2000 通过使用 PCIe 插槽（J7）支持 2280 NVMe SSD。需要注意的是，CM5 的 PCIe 是 gen2.0，最大理论速度为 5Gbps。如果您使用 Gen3.0 或更高版本的 SSD，可能无法达到 SSD 的最大速度。经过测试，安装了 SSD 的 reTerminal DM 可以达到最大写入速度 230MB/s 和最大读取速度 370MB/s。如果您不确定哪些 SSD 兼容，可以按照下面的配件列表进行购买。
+
 > 注意
 > 请注意：
 > 速度测试结果可能因 SSD 型号、测试方法和测试环境而异。此处提供的数值仅供参考，是在 Seeed 实验室中获得的。
@@ -878,7 +882,7 @@ UPS 提供的备用时间很大程度上取决于系统负载。以下是使用�
 | 空闲                  | 15           | 在空闲条件下测试，加载官方驱动程序  |
 | CPU 满载      | 6            | stress -c 4 -t 10m -v &       |
 
-:::Note
+:::note
 有关 UPS 功能，请联系我们获取更多信息，报警信号为低电平有效。
 :::
 

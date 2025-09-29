@@ -144,6 +144,7 @@ reComputer Industrial R21xxは、DCターミナルとPoEポートの2つの電�
 
 reComputer Industrial R21xxは、9~36VのターミナルDC電圧で供給されます。電源は2ピン電源ターミナルブロックコネクタを介して接続されます。
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2-pin_power_terminal_2.png" style={{width:100, height:'auto'}}/></div>
+
 reComputer Industrial R21xxをアースするには、電源端子の右側にあるネジにアース線を固定できます。
 
 **PoE**
@@ -358,7 +359,8 @@ reComputer Industrial R21xxシリーズ機器には1x RS232ポート、6ピン3.
         <td>RS232-1_TX </td>
       </tr>
       <tr>
-        <td>4</td>        <td>RS232-1_RX</td>
+        <td>4</td>
+        <td>RS232-1_RX</td>
       </tr>
       <tr>
         <td>6</td>
@@ -644,6 +646,7 @@ reComputer Industrial R2000のM.2 M-KEY 2280スロットは、128GB、256GB、51
 > 2. **イメージ付きブートドライブ：** もう一つの用途は、SSDを大容量ストレージとシステムイメージの保存の両方に使用し、SSDカードから直接ブートできるようにすることです。
 >  
 > 市場で入手可能なすべてのSSDカードが2番目の用途をサポートしているわけではないことに注意することが重要です。そのため、ブートドライブとして使用する予定で、どのモデルを購入すべきか不明な場合は、推奨する2TB SSD（SKU 114993467）を選択することをお勧めします。このモデルはブート機能についてテストおよび検証済みで、互換性の問題のリスクを軽減し、試行錯誤のコストを最小限に抑えます。
+
 reComputer Industrial R2000のM.2 M-KEY 2280スロットは、PCIE M.2 AIアクセラレータを収容するように設計されています。そして、R21xx-12シリーズには、最大26TOPSのHailo-8 M.2 AIアクセラレーションが事前にインストールされています。
 
 ### Mini-PCIeスロット
@@ -863,6 +866,7 @@ Mini-PCIeスロットは、USBプロトコルを利用するZigbeeモジュー�
 
 > 注意  
 > Zigbee機能が必要な場合は、対応するZigbeeモジュールと外部アンテナを購入し、セクション4.5「4G/LoRa®/Zigbeeモジュールとアンテナの組み立て」の指示に従う必要があることにご注意ください。
+
 ### SSD
 
 reComputer Industrial R2000は、PCIeスロット（J7）を使用して2280 NVMe SSDをサポートします。CM5のPCIeはgen2.0で、最大理論速度は5Gbpsであることに注意が必要です。Gen3.0以上のSSDを使用している場合、SSDの最大速度を達成できない可能性があります。テストの結果、SSDを搭載したreTerminal DMは最大書き込み速度230MB/s、最大読み取り速度370MB/sを達成できます。どのSSDが互換性があるか不明な場合は、以下のアクセサリリストに従って購入できます。
@@ -894,7 +898,7 @@ UPSによって提供されるバックアップ時間は、システム負荷�
 | アイドル                  | 15           | 公式ドライバープログラムがロードされたアイドル状態でのテスト  |
 | CPUフル負荷      | 6            | stress -c 4 -t 10m -v &       |
 
-:::Note
+:::note
 UPS機能については詳細情報をお問い合わせください。アラーム信号はアクティブLOWです。
 :::
 
