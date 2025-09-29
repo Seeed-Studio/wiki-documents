@@ -256,7 +256,7 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 3. Clone Lerobot:
 
 ```bash
-git clone https://github.com/huggingface/lerobot.git ~/lerobot
+git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
 ```
 
 4. When using miniconda, install ffmpeg in your environment:
