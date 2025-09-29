@@ -845,7 +845,7 @@ function escapeRegExp(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-// ===[ NEW ]=== 安全拼接：确保块与块之间至少保留一个换行，避免跨块黏连
+// 安全拼接：确保块与块之间至少保留一个换行，避免跨块黏连
 function joinChunksPreservingNewlines(chunks) {
   if (!Array.isArray(chunks) || chunks.length === 0) return '';
   let out = '';
@@ -1048,7 +1048,7 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
     }
   }
 
-  // ===[ NEW ]=== 兜底：整文行数与原文一致性检查（按当前文件内容）
+  // 整文行数与原文一致性检查（按当前文件内容）
   try {
     const originalTotalLines = (await fs.readFile(filePath, 'utf8'))
       .toString()
@@ -1057,7 +1057,7 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
     let finalTotalLines = finalContent.split('\n').length;
     if (finalTotalLines !== originalTotalLines) {
       console.warn(`⚠️ 拼接后行数不一致: 原文 ${originalTotalLines}, 译文 ${finalTotalLines}。尝试更保守的换行拼接。`);
-      // 极限兜底：强制在块之间都插入换行（即使已有换行也不去掉）
+      // 强制在块之间都插入换行（即使已有换行也不去掉）
       finalContent = translatedChunks.join('\n');
       finalTotalLines = finalContent.split('\n').length;
       console.log(`🧾 兜底后行数: 译文 ${finalTotalLines}`);
@@ -1085,10 +1085,9 @@ async function translateFile(filePath, targetLang) {
     console.log(`📝 翻译文件: ${filePath} -> ${targetLang}`);
     translationStatus.total++;
     
--    const content = await fs.readFile(filePath, 'utf8');
-+    let content = await fs.readFile(filePath, 'utf8');
-+    // 统一换行为 LF，避免 CR 残留导致围栏/解析异常
-+    content = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+    let content = await fs.readFile(filePath, 'utf8');
+    // 统一换行为 LF，避免 CR 残留导致围栏/解析异常
+    content = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
     console.log(`🔍 文件大小: ${content.length} 字符`);
 
     // Front Matter 跳过规则判断（仅 md/mdx 有意义）
