@@ -161,7 +161,7 @@ conda install ffmpeg=7.1.1 -c conda-forge
 
 :::
 
-5. Install LeRobot with dependencies for the feetech motors:
+5. Install LeRobot with dependencies for the starai motors:
 
 ```bash
 cd ~/lerobot && pip install -e ".[starai]"
