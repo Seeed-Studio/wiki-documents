@@ -161,10 +161,14 @@ conda install ffmpeg=7.1.1 -c conda-forge
 
 :::
 
-5. Instalar LeRobot con dependencias para los motores feetech:
+5. Instalar LeRobot con dependencias para los motores starai:
 
 ```bash
 cd ~/lerobot && pip install -e ".[starai]"
+```
+
+```bash
+sudo apt remove brltty
 ```
 
 Para dispositivos Jetson Jetpack (por favor asegúrate de instalar [Pytorch-gpu y Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) desde el paso 5 antes de ejecutar este paso):
@@ -716,7 +720,8 @@ lerobot-train \
   --job_name=act_viola_test \
   --policy.device=cuda \
   --wandb.enable=False \
-  --policy.repo_id=starai/my_policy
+  --policy.repo_id=starai/my_policy\
+  --steps=200000
 ```
 
 <details>
@@ -730,7 +735,8 @@ lerobot-train \
   --job_name=act_bi_viola_test \
   --policy.device=cuda \
   --wandb.enable=False \
-  --policy.repo_id=starai/my_policy
+  --policy.repo_id=starai/my_policy\
+  --steps=200000
 ```
 
 </details>
@@ -745,7 +751,8 @@ Reanudar entrenamiento desde un punto de control específico.
 ```bash
 lerobot-train \
   --config_path=outputs/train/act_bi_viola_test/checkpoints/last/pretrained_model/train_config.json \
-  --resume=true
+  --resume=true\
+  --steps=400000
 ```
 
 <details>

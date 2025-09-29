@@ -8,13 +8,13 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
 slug: /cn/openremote_r1x00
 last_update:
-  date: 9/24/2025
+  date: 9/29/2025
   author: Kasun Thushara
 ---
 
 ## 介绍
 
-OpenRemote 是一个开源物联网平台，旨在简化网络设备的连接和管理。系统的核心是 Manager，这是一个无头 Java 应用程序，充当物联网上下文代理，实时捕获和管理资产状态。通过动态资产建模，您可以表示环境的各种组件——如建筑物、房间和传感器——根据您的特定需求进行定制。用 Groovy、JavaScript 或 JSON 编写的规则基于资产状态变化或事件序列触发操作。例如，这些规则可以在满足某些阈值时通知用户，比如房间湿度上升时。该平台通过代理支持网络设备，代理与第三方 API 和服务协议接口，可以与管理器共同部署或安装在边缘网关上。通过在 Raspberry Pi 驱动的 Recomputer R1000 和 R1100 设备上部署 OpenRemote，您可以在边缘管理您的物联网生态系统，为您的设备提供高效的本地化控制。
+OpenRemote 是一个开源物联网平台，旨在简化网络设备的连接和管理。系统的核心是管理器，这是一个无头 Java 应用程序，充当物联网上下文代理，实时捕获和管理资产状态。通过动态资产建模，您可以表示环境的各种组件——如建筑物、房间和传感器——根据您的特定需求进行定制。用 Groovy、JavaScript 或 JSON 编写的规则基于资产状态变化或事件序列触发操作。例如，这些规则可以在满足某些阈值时通知用户，比如房间湿度上升时。该平台通过代理支持网络设备，代理与第三方 API 和服务协议接口，可以与管理器共同部署或安装在边缘网关上。通过在 Raspberry Pi 驱动的 Recomputer R1000 和 R1100 设备上部署 OpenRemote，您可以在边缘管理您的物联网生态系统，为您的设备提供高效的本地化控制。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width={600} height="auto" /></p>
 
@@ -66,7 +66,7 @@ sudo reboot
 
 **5. 测试 Docker 安装**
 
-重启后，通过运行 `hello-world` 镜像验证 Docker 安装，这将确认 Docker 正常工作。
+重启后，通过运行 `hello-world` 镜像来验证 Docker 安装，这将确认 Docker 正常工作。
 
 ```bash
 docker run hello-world
@@ -114,11 +114,11 @@ docker-compose pull
 docker-compose -p openremote up
 ```
 
-这将启动 OpenRemote Manager 和支持服务。
+这将启动 OpenRemote 管理器和支持服务。
 
 **5. 访问 OpenRemote**
 
-启动后，您可以使用默认凭据登录 OpenRemote Manager：
+启动后，您可以使用默认凭据登录 OpenRemote 管理器：
 
 - **用户名：** `admin`
 - **密码：** `secret`
@@ -143,6 +143,8 @@ docker-compose -p openremote up
 - **名称：** `HTTP API Agent`
 - 点击**添加**。
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote2.png" alt="pir" width={800} height="auto" /></p>
+
 代理现在已创建并具有预配置的属性。您需要配置它以连接到 OpenWeatherMap API。
 
 ### 配置 HTTP API 代理
@@ -163,7 +165,10 @@ docker-compose -p openremote up
 }
 ```
 
-点击**保存**确认配置。
+点击**保存**以确认配置。
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote3.png" alt="pir" width={800} height="auto" /></p>
 
 ### 创建天气资产
 
@@ -175,6 +180,10 @@ docker-compose -p openremote up
 - 点击**添加**。
 
 天气资产现在将作为 HTTP API 代理的子项出现在列表中。如果需要，您可以更改其父项。
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote4.png" alt="pir" width={800} height="auto" /></p>
+
 
 ### 添加代理链接
 
@@ -193,7 +202,11 @@ docker-compose -p openremote up
   - **Value filters：** `JsonPathFilter-2`
   - **Path (JSON)：** `$.main.humidity`
 
-### 设置温度属性
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote5.png" alt="pir" width={800} height="auto" /></p>
+
+### 设置温度属性：
+
 
 - 展开**temperature**属性。
 - 点击**添加配置项**并选择**Agent link**。

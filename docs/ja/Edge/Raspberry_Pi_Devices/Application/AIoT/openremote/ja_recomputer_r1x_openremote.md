@@ -8,19 +8,19 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
 slug: /ja/openremote_r1x00
 last_update:
-  date: 9/24/2025
+  date: 9/29/2025
   author: Kasun Thushara
 ---
 
 ## はじめに
 
-OpenRemoteは、ネットワーク接続されたデバイスの接続と管理を簡素化するために設計されたオープンソースのIoTプラットフォームです。システムの中核となるのはManagerで、これはIoTコンテキストブローカーとして機能するヘッドレスJavaアプリケーションで、アセットの状態をリアルタイムでキャプチャし管理します。動的アセットモデリングにより、建物、部屋、センサーなど、環境のさまざまなコンポーネントを表現でき、特定のニーズに合わせてカスタマイズできます。Groovy、JavaScript、またはJSONで記述されたルールは、アセットの状態変化やイベントシーケンスに基づいてアクションをトリガーします。これらのルールは、例えば部屋の湿度が上昇したときなど、特定の閾値に達したときにユーザーに通知することができます。プラットフォームは、サードパーティAPIやサービスプロトコルとインターフェースするAgentを介してネットワークデバイスをサポートし、マネージャーと同じ場所に配置することも、エッジゲートウェイにインストールすることもできます。Raspberry Pi搭載のRecomputer R1000およびR1100デバイスにOpenRemoteをデプロイすることで、エッジでIoTエコシステムを管理し、デバイスの効率的でローカライズされた制御を提供できます。
+OpenRemoteは、ネットワーク接続されたデバイスの接続と管理を簡素化するために設計されたオープンソースのIoTプラットフォームです。システムの中核となるのはManagerで、これはIoTコンテキストブローカーとして機能するヘッドレスJavaアプリケーションであり、アセットの状態をリアルタイムでキャプチャし管理します。動的アセットモデリングにより、建物、部屋、センサーなど、環境のさまざまなコンポーネントを表現でき、特定のニーズに合わせてカスタマイズできます。Groovy、JavaScript、またはJSONで記述されたルールは、アセット状態の変化やイベントシーケンスに基づいてアクションをトリガーします。これらのルールは、例えば部屋の湿度が上昇したときなど、特定の閾値に達したときにユーザーに通知することができます。プラットフォームは、サードパーティAPIやサービスプロトコルとインターフェースするAgentを介してネットワークデバイスをサポートし、マネージャーと同じ場所に配置することも、エッジゲートウェイにインストールすることもできます。Raspberry Pi搭載のRecomputer R1000およびR1100デバイスにOpenRemoteをデプロイすることで、エッジでIoTエコシステムを管理し、デバイスの効率的でローカライズされた制御を提供できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -58,7 +58,7 @@ sudo usermod -aG docker ${USER}
 
 **4. システムの再起動**
 
-変更が有効になり、ユーザーがDockerグループに追加されるように、システムを再起動します。
+変更を有効にし、ユーザーがDockerグループに追加されるように、システムを再起動します。
 
 ```bash
 sudo reboot
@@ -74,13 +74,13 @@ docker run hello-world
 
 **6. Docker-Composeのインストール**
 
-最後に、マルチコンテナDockerアプリケーションを定義・実行するためのツールであるDocker-Composeをインストールします。インストールするには、以下を実行します：
+最後に、マルチコンテナDockerアプリケーションを定義・実行するためのツールであるDocker-Composeをインストールします。インストールするには、以下を実行してください：
 
 ```bash
 sudo apt install docker-compose
 ```
 
-## Recomputer R1000 / R1100でのOpenRemoteのインストール
+## Recomputer R1000 / R1100でのOpenRemoteインストール
 
 **1. Docker Composeファイルのダウンロード**
 
@@ -143,7 +143,9 @@ OpenWeatherMap APIを使用するには、無料のAPIキーが必要です。[O
 - **名前:** `HTTP API Agent`
 - **Add**をクリックします。
 
-これで、事前設定された属性を持つAgentが作成されました。OpenWeatherMap APIに接続するように設定する必要があります。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote2.png" alt="pir" width={800} height="auto" /></p>
+
+エージェントが事前設定された属性で作成されました。OpenWeatherMap APIに接続するように設定する必要があります。
 
 ### HTTP API Agentの設定
 
@@ -165,6 +167,9 @@ HTTP API Agentが作成されたので、以下の詳細で設定します：
 
 **Save**をクリックして設定を確認します。
 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote3.png" alt="pir" width={800} height="auto" /></p>
+
 ### Weather Assetの作成
 
 **新しいWeather Assetの追加**
@@ -174,12 +179,16 @@ HTTP API Agentが作成されたので、以下の詳細で設定します：
 - **名前:** `Weather Rotterdam`
 - **Add**をクリックします。
 
-weather assetがHTTP API Agentの子としてリストに表示されます。必要に応じて親を変更できます。
+天気アセットがHTTP API Agentの子としてリストに表示されます。必要に応じて親を変更できます。
 
-### Agent Linksの追加
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote4.png" alt="pir" width={800} height="auto" /></p>
+
+
+### Agent Linkの追加
 
 **アセット設定の変更**
-アセットページの上部にあるトグルをクリックして**Modify Mode**に移行します。このモードでは、アセットの属性を変更し、設定を構成できます。
+アセットページ上部のトグルをクリックして**Modify Mode**に移行します。このモードでは、アセットの属性を変更し、設定を構成できます。
 
 ### Humidity属性の設定
 
@@ -188,19 +197,23 @@ weather assetがHTTP API Agentの子としてリストに表示されます。�
 - **HTTP API Agent**を選択します。
 - 以下のパラメータを追加します：
 
-  - **Polling millis:** `60000` (1分ごとにポーリング)
+  - **Polling millis:** `60000` (毎分ポーリング)
   - **Path:** `weather`
   - **Value filters:** `JsonPathFilter-2`
   - **Path (JSON):** `$.main.humidity`
 
-### Temperature属性の設定
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote5.png" alt="pir" width={800} height="auto" /></p>
+
+### Temperature属性の設定：
+
 
 - **temperature**属性を展開します。
 - **Add configuration item**をクリックし、**Agent link**を選択します。
 - **HTTP API Agent**を選択します。
 - 以下のパラメータを追加します：
 
-  - **Polling millis:** `60000` (1分ごとにポーリング)
+  - **Polling millis:** `60000` (毎分ポーリング)
   - **Path:** `weather`
   - **Value filters:** `JsonPathFilter-2`
   - **Path (JSON):** `$.main.temp`
@@ -209,11 +222,11 @@ weather assetがHTTP API Agentの子としてリストに表示されます。�
 
 ### ライブ天気データの表示
 
-属性を追加したら、**View Mode**に切り替えてライブ天気データを確認します。これで、ロッテルダムの現在の気温と湿度がweather assetにリンクされました。
+属性を追加したら、**View Mode**に切り替えてライブ天気データを確認します。これで、天気アセットにリンクされたロッテルダムの現在の気温と湿度が表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote1.png" alt="pir" width={800} height="auto" /></p>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
