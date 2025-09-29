@@ -558,7 +558,7 @@ sudo minicom -D /dev/ttyACM1
 sudo minicom -D /dev/ttyACM2
 ```
 
-:::Note
+:::note
  If there is an expansion board, the number needs to be moved back one place, for example ***/dev/ttyAcM2***, ***/dev/ttyAcM3***.
 :::
 
@@ -571,7 +571,7 @@ sudo minicom -D /dev/ttyACM2
 
 - After all "YES" are displayed, press Enter to return, and then select Exit to exit.
 
-:::Note
+:::note
 
 Take ACM2 and ACM3 as an example:
 If you want to send from ACM2 to ACM3, ACM2 needs to be set up again: ***ctrl+A*** , then press ***Z*** and then ***E*** , and then start the serial port write command. At this time, you can print strings in ACM2 at will, and you can see the contents of ACM2 in ACM3 at the same time;
@@ -1047,7 +1047,7 @@ Save and exit the editor (press ***`Ctrl+O`*** to save, ***`Enter`*** to confirm
 sudo python3 ups_shutdown.py
 ```
 
-:::Note
+:::note
  Use `sudo` to ensure that the script has sufficient permissions to execute the shutdown command.
 :::
 
@@ -1063,7 +1063,7 @@ sudo python3 ups_shutdown.py
 - Reconnect the power supply.
 - Check whether the system data is complete and starts normally.
 
-:::Note
+:::note
 
 1. For UPS function please contact us for more information.
 2. The alarm signal is active LOW.
@@ -1099,7 +1099,7 @@ python basic_pipelines/detection_simple.py
 To close the application, press ***`Ctrl+C`*** .
 This is lightweight version of the detection example, mainly focusing on demonstrating Hailo performance while minimizing CPU load. The internal GStreamer video processing pipeline is simplified by minimizing video processing tasks, and the YOLOv6 Nano model is used.
 
-:::Note
+:::note
 If the reComputer you purchased does not include Hailo-8 and you are considering purchasing a Hailo device for integration, please refer to the official Hailo documentation (https://github.com/hailo-ai) to configure the firmware and environment, and run the examples to verify that the device can be used normally.
 :::
 
