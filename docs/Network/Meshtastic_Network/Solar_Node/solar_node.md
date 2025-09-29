@@ -16,32 +16,27 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.png" alt="pir" width={800} height="auto" /></p>
 
-
-
 It is an economical solar-powered comms node or repeater based on [Meshtastic®](https://meshtastic.org/), integrates the XIAO nRF52840 Plus main controller, the Wio-SX1262 LoRa module. It is specifically designed for areas without network coverage. It supports long-distance communication, precise positioning, and low-power operation. It's suitable for expanding network coverage in outdoor areas.
 
 ## Version Comparison
- 
+
 The Solar Node is available in two variants: [SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html) and [SenseCAP Solar Node P1-Pro](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html).
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-1_1.jpeg" alt="pir" width={800} height="auto" /></p>
-
 
 ## Overview
 
 ### Features
 
-* Integrated with a 5W solar panel, and supports external batteries (which need to be provided by users themselves).
-* The device comes pre-installed with Meshtastic firmware at the factory. It can be seamlessly integrated into the Meshtastic ecosystem.
-* Compatible with the Grove ecosystem, and supports plug-and-play of sensors such as temperature and humidity sensors, light sensors, etc.
-* It is suitable for long-term outdoor use.
-* Supports 8 to 9KM Transmission in open areas. It can be used as an outdoor node or repeater, easily expanding the Mesh network and enhancing network coverage.
+- Integrated with a 5W solar panel, and supports external batteries (which need to be provided by users themselves).
+- The device comes pre-installed with Meshtastic firmware at the factory. It can be seamlessly integrated into the Meshtastic ecosystem.
+- Compatible with the Grove ecosystem, and supports plug-and-play of sensors such as temperature and humidity sensors, light sensors, etc.
+- It is suitable for long-term outdoor use.
+- Supports 8 to 9KM Transmission in open areas. It can be used as an outdoor node or repeater, easily expanding the Mesh network and enhancing network coverage.
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-3.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### Specification
-
 
 <table>
   <tr>
@@ -150,7 +145,6 @@ The Solar Node is available in two variants: [SenseCAP Solar Node P1](https://ww
   </tr>
 </table>
 
-
 ### Button
 
 |Button Action|Description|
@@ -159,8 +153,6 @@ The Solar Node is available in two variants: [SenseCAP Solar Node P1](https://ww
 |Press twice|Update node/location info|
 |Press three times|Switch on/off the GPS|
 |Press for 5s|Power off|
-
-
 
 ### Hardware Overview
 
@@ -174,4 +166,3 @@ The Solar Node is available in two variants: [SenseCAP Solar Node P1](https://ww
 **Diagram**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
-

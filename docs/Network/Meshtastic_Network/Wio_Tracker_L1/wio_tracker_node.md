@@ -21,7 +21,9 @@ The Wio Tracker L1 Series is a low-power, highly extensible [Meshtastic®](https
 :::tip
 The Wio Tracker L1 Series is available in 4 versions—choose the one that best fits your needs.
 :::
+
 ### Series Introduction
+
 <center>
 <iframe width="700" height="395" src="https://www.youtube.com/embed/TTiDN3h7cNk?si=2F0PXFlQmDSefCdX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </center>
