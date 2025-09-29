@@ -845,6 +845,23 @@ function escapeRegExp(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+// 安全拼接：确保块与块之间至少保留一个换行，避免跨块黏连
+function joinChunksPreservingNewlines(chunks) {
+  if (!Array.isArray(chunks) || chunks.length === 0) return '';
+  let out = '';
+  for (let i = 0; i < chunks.length; i++) {
+    const s = chunks[i] ?? '';
+    if (i === 0) {
+      out = s;
+      continue;
+    }
+    // 如果上一段不以 '\n' 结尾，则补一个 '\n'
+    if (!out.endsWith('\n')) out += '\n';
+    out += s;
+  }
+  return out;
+}
+
 // 检查文件是否受保护
 function isProtectedPath(filePath) {
   const normalizedPath = filePath.replace(/\\/g, '/');
@@ -1019,24 +1036,34 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
     finalContent = translatedChunks[0];
   } else {
     const firstChunk = translatedChunks[0];
-    const otherChunks = translatedChunks.slice(1);
-    
-    const frontMatterMatch = firstChunk.match(/^---\n[\s\S]*?\n---\n/);
-    
-    if (frontMatterMatch) {
-      const frontMatter = frontMatterMatch[0];
-      // 不再 trim，避免吞掉空行导致行号错位
-      const firstContent = firstChunk.replace(frontMatterMatch[0], '');
-      
-      // 直接拼接，不额外插入空行，保持逐行对齐
-      finalContent = frontMatter + firstContent;
-      if (otherChunks.length > 0) {
-        finalContent += otherChunks.join('');
-      }
+    const restChunks = translatedChunks.slice(1);
+    const fmMatch = firstChunk.match(/^---\n[\s\S]*?\n---\n/);
+    if (fmMatch) {
+      const frontMatter = fmMatch[0];
+      const firstBody = firstChunk.slice(frontMatter.length);
+      // 保留 front matter + 正文，后续块用安全方式拼接（自动补换行）
+      finalContent = joinChunksPreservingNewlines([frontMatter + firstBody, ...restChunks]);
     } else {
-      // 多块直接无缝拼接，避免 \n\n 造成偏移
-      finalContent = translatedChunks.join('');
+      finalContent = joinChunksPreservingNewlines(translatedChunks);
     }
+  }
+
+  // 整文行数与原文一致性检查（按当前文件内容）
+  try {
+    const originalTotalLines = (await fs.readFile(filePath, 'utf8'))
+      .toString()
+      .replace(/\r\n/g, '\n').replace(/\r/g, '\n')
+      .split('\n').length;
+    let finalTotalLines = finalContent.split('\n').length;
+    if (finalTotalLines !== originalTotalLines) {
+      console.warn(`⚠️ 拼接后行数不一致: 原文 ${originalTotalLines}, 译文 ${finalTotalLines}。尝试更保守的换行拼接。`);
+      // 强制在块之间都插入换行（即使已有换行也不去掉）
+      finalContent = translatedChunks.join('\n');
+      finalTotalLines = finalContent.split('\n').length;
+      console.log(`🧾 兜底后行数: 译文 ${finalTotalLines}`);
+    }
+  } catch (e) {
+    console.warn(`ℹ️ 行数兜底检查失败（非致命）：${e.message}`);
   }
   
   return finalContent;
@@ -1058,7 +1085,9 @@ async function translateFile(filePath, targetLang) {
     console.log(`📝 翻译文件: ${filePath} -> ${targetLang}`);
     translationStatus.total++;
     
-    const content = await fs.readFile(filePath, 'utf8');
+    let content = await fs.readFile(filePath, 'utf8');
+    // 统一换行为 LF，避免 CR 残留导致围栏/解析异常
+    content = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
     console.log(`🔍 文件大小: ${content.length} 字符`);
 
     // Front Matter 跳过规则判断（仅 md/mdx 有意义）
