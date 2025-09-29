@@ -8078,6 +8078,38 @@ const sidebars = {
                 'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_AI_Industrial_R2000/cn_reComputer_AI_Industrial_R2000_Flash_OS',
               ]
             },
+            {
+              type: 'category',
+              label: 'reComputer-Industrial-R20xx',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: 'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/cn_reComputer_Industrial_R20xx_getting_start'
+              },
+              items: [
+                'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/cn_reComputer_Industrial_R20xx_getting_start',
+                'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/cn_reComputer_Industrial_R20xx_flash_os',
+                'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/cn_reComputer_Industrial_R20xx_configure_system',
+                'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/cn_reComputer_Industrial_R20xx_assembly_guide'
+              ]
+            },
+            {
+              type: 'category',
+              label: 'reComputer-Industrial-R21xx',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: 'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/cn_reComputer_Industrial_R21xx_getting_start'
+              },
+              items: [
+                'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/cn_reComputer_Industrial_R21xx_getting_start',
+                'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/cn_reComputer_Industrial_R21xx_flash_os',
+                'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/cn_reComputer_Industrial_R21xx_configure_system',
+                'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/cn_reComputer_Industrial_R21xx_assembly_guide'
+              ]
+            },
           ]
         },
         {
@@ -13041,6 +13073,38 @@ const sidebars = {
                 'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_AI_Industrial_R2000/es_reComputer_AI_Industrial_R2000_Flash_OS',
               ]
             },
+            {
+              type: 'category',
+              label: 'reComputer-Industrial-R20xx',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: 'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/es_reComputer_Industrial_R20xx_getting_start'
+              },
+              items: [
+                'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/es_reComputer_Industrial_R20xx_getting_start',
+                'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/es_reComputer_Industrial_R20xx_flash_os',
+                'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/es_reComputer_Industrial_R20xx_configure_system',
+                'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/es_reComputer_Industrial_R20xx_assembly_guide'
+              ]
+            },
+            {
+              type: 'category',
+              label: 'reComputer-Industrial-R21xx',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: 'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/es_reComputer_Industrial_R21xx_getting_start'
+              },
+              items: [
+                'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/es_reComputer_Industrial_R21xx_getting_start',
+                'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/es_reComputer_Industrial_R21xx_flash_os',
+                'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/es_reComputer_Industrial_R21xx_configure_system',
+                'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/es_reComputer_Industrial_R21xx_assembly_guide'
+              ]
+            },
           ]
         },
         {
@@ -18002,6 +18066,38 @@ const sidebars = {
               items: [
                 'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_AI_Industrial_R2000/ja_reComputer_AI_Industrial_R2135_getting_start',
                 'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_AI_Industrial_R2000/ja_reComputer_AI_Industrial_R2000_Flash_OS',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'reComputer-Industrial-R20xx',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: 'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/ja_reComputer_Industrial_R20xx_getting_start'
+              },
+              items: [
+                'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/ja_reComputer_Industrial_R20xx_getting_start',
+                'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/ja_reComputer_Industrial_R20xx_flash_os',
+                'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/ja_reComputer_Industrial_R20xx_configure_system',
+                'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R20xx/ja_reComputer_Industrial_R20xx_assembly_guide'
+              ]
+            },
+            {
+              type: 'category',
+              label: 'reComputer-Industrial-R21xx',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: 'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/ja_reComputer_Industrial_R21xx_getting_start'
+              },
+              items: [
+                'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/ja_reComputer_Industrial_R21xx_getting_start',
+                'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/ja_reComputer_Industrial_R21xx_flash_os',
+                'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/ja_reComputer_Industrial_R21xx_configure_system',
+                'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/ja_reComputer_Industrial_R21xx_assembly_guide'
               ]
             },
           ]
