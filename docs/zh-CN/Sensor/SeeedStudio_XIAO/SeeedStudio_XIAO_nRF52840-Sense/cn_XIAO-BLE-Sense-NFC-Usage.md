@@ -40,8 +40,8 @@ Seeed nRF52 Boards 版本 1.1.3 和 Seeed nRF52 mbed-enabled Boards 版本 2.9.2
 
 ## 所需软件
 
-- [NFC TagInfo App (Android)](https://play.google.com/store/apps/details?id=com.nxp.taginfolite&hl=en&gl=US)
-- [NFC TagInfo App (Apple)](https://apps.apple.com/us/app/nfc-taginfo-by-nxp/id1246143596)
+- [NFC TagInfo 应用（安卓版）](https://play.google.com/store/apps/details?id=com.nxp.taginfolite&hl=en&gl=US)
+- [NFC TagInfo 应用（苹果版）](https://apps.apple.com/us/app/nfc-taginfo-by-nxp/id1246143596)
 
 ## 硬件连接
 

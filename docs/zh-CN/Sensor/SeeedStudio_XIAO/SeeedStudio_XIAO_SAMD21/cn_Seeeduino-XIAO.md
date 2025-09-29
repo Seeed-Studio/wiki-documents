@@ -150,7 +150,7 @@ void loop() {
 
 #### **AnalogRead**
 
-- Use pin 6 as the analog pin:
+- 使用引脚 6 作为模拟引脚:
 
 ```c
 
@@ -176,7 +176,7 @@ void loop() {
 
 #### **Serial**
 
-- Use pin 6 as the TX pin of UART(RX pin of UART is pin 7):
+- 使用引脚 6 作为 UART 的 TX 引脚（UART 的 RX 引脚是引脚 7）：
 
 ```c
 
@@ -193,7 +193,7 @@ void loop() {
 
 #### **I2C**
 
-- Use pin 5 as the SCL pin of IIC(SDA pin of IIC is pin 4):
+- 使用引脚 5 作为 IIC 的 SCL 引脚（IIC 的 SDA 引脚是引脚 4）：
 
 ```c
 // Wire Master Writer
@@ -230,7 +230,7 @@ void loop()
 
 #### **SPI**
 
-- Use pin 8 as the SCK pin of SPI(MISO pin of SPI is pin 9,MOSI pin of SPI is pin 10):
+- 使用引脚8作为SPI的SCK引脚（SPI的MISO引脚是引脚9，SPI的MOSI引脚是引脚10）：
 
 ```c
 #include <SPI.h>

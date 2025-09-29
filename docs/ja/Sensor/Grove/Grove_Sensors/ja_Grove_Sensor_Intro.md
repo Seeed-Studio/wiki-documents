@@ -510,7 +510,7 @@ Grove センサーには、温度センサー、湿度センサー、光セン�
     <a class="get_one_now_item" href="/ja/Grove-Vision-AI-Module/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove Vision AI Module V2
+#### Grove ビジョン AI モジュール V2
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -530,7 +530,7 @@ Grove センサーには、温度センサー、湿度センサー、光セン�
 </div>
 
 
-#### Grove Smart IR Gesture Sensor (PAJ7660)
+#### Grove スマート IR ジェスチャーセンサー (PAJ7660)
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -634,7 +634,7 @@ Grove センサーには、温度センサー、湿度センサー、光セン�
 </div>
 
 
-#### Grove - TF Mini LiDAR
+#### Grove - TF ミニLiDAR
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -674,7 +674,7 @@ Grove センサーには、温度センサー、湿度センサー、光セン�
 </div>
 
 
-#### Grove - Time of Flight Distance Sensor VL53L0X
+#### Grove - 飛行時間距離センサー VL53L0X
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -694,7 +694,7 @@ Grove センサーには、温度センサー、湿度センサー、光セン�
 </div>
 
 
-#### Grove - 80cm Infrared Proximity Sensor
+#### Grove - 80cm 赤外線近接センサー
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -714,7 +714,7 @@ Grove センサーには、温度センサー、湿度センサー、光セン�
 </div>
 
 
-#### Grove - Gesture V1.0
+#### Grove - ジェスチャー V1.0
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -734,7 +734,7 @@ Grove センサーには、温度センサー、湿度センサー、光セン�
 </div>
 
 
-#### Grove - Adjustable PIR Motion Sensor
+#### Grove - 調整可能なPIRモーションセンサー
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1802,7 +1802,7 @@ Grove - 3軸デジタル加速度センサーは、方向検出、ジェスチ�
     <a class="get_one_now_item" href="/ja/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove 12 Channel Capacitive Touch Keypad (ATtiny1616)
+#### Grove 12チャンネル静電容量式タッチキーパッド（ATtiny1616）
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1824,7 +1824,7 @@ Grove - 3軸デジタル加速度センサーは、方向検出、ジェスチ�
 
 ### 液体
 
-#### Grove - ORP Sensor Kit Pro
+#### Grove - ORP センサーキットプロ
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1844,7 +1844,7 @@ Grove - 3軸デジタル加速度センサーは、方向検出、ジェスチ�
 </div>
 
 
-#### Grove - Water Sensor
+#### Grove - 水センサー
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1863,7 +1863,7 @@ Grove - 3軸デジタル加速度センサーは、方向検出、ジェスチ�
     <a class="get_one_now_item" href="/ja/Grove-Water_Sensor/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove - Water Level Sensor
+#### Grove - 水位センサー
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1883,7 +1883,7 @@ Grove - 3軸デジタル加速度センサーは、方向検出、ジェスチ�
 </div>
 
 
-#### Grove - TDS Sensor
+#### Grove - TDS センサー
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1902,7 +1902,7 @@ Grove - 3軸デジタル加速度センサーは、方向検出、ジェスチ�
     <a class="get_one_now_item" href="/ja/Grove-TDS-Sensor/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove - Turbidity Sensor Meter for Arduino V1.0
+#### Grove - Arduino用濁度センサーメーター V1.0
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">

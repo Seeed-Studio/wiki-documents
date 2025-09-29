@@ -187,7 +187,7 @@ python grove_collision_sensor.py 5
 
 ```
 
-Following is the grove_collision_sensor.py code.
+A continuación se muestra el código grove_collision_sensor.py.
 
 ```python
 
@@ -274,7 +274,7 @@ if __name__ == '__main__':
 ```
 
 :::success
-    If everything goes well, you will be able to see the following result
+    Si todo va bien, podrás ver el siguiente resultado
 :::
 
 ```python

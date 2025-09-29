@@ -129,7 +129,7 @@ void loop() {
 }
 ```
 
-- Open the `platformio.ini` configuration file and check it's correct:
+- Abre el archivo de configuración `platformio.ini` y verifica que sea correcto:
 
 ```ini
 [env:seeed_wio_terminal]

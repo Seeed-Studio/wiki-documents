@@ -43,8 +43,7 @@ last_update:
 ```
 mkdir mender-reterminal && cd mender-reterminal
 ```
-
-Get all of necessary layers:
+获取所有必要的图层：
 
 ```
 git clone -b master git://git.yoctoproject.org/poky layers/poky
@@ -55,7 +54,7 @@ git clone -b dunfell https://github.com/openembedded/meta-openembedded.git layer
 git clone -b dunfell git://github.com/mendersoftware/meta-mender layers/meta-mender
 ```
 
-In order to be compatible with meta-raspberrypi, change the gstreamer version of poky to the latest
+为了与 meta-raspberrypi 兼容，将 poky 的 gstreamer 版本更改为最新版本
 
 ```
 cd layers/poky
@@ -65,8 +64,7 @@ rm -r meta/recipes-multimedia/gstreamer/
 cp -r ../gstreamer/ meta/recipes-multimedia/
 rm -r ../gstreamer/
 ```
-
-Modify the meta-raspberrypi to avoid compile error
+修改 meta-raspberrypi 以避免编译错误
 
 ```
 cd layers/meta-raspberrypi
@@ -74,8 +72,7 @@ rm dynamic-layers/meta-python/recipes-connectivity/lirc/*.bbappend
 sed -i '/^LAYERSERIES_COMPAT_raspberrypi/s/= .*$/= "honister dunfell"/g' conf/layer.conf
 sed -i 's/arm\/armv8a\///g' conf/machine/raspberrypi4-64.conf
 ```
-
-Modify the meta-mender to avoid compile error
+修改 meta-mender 以避免编译错误
 
 ```
 cd layers/meta-mender
@@ -83,8 +80,7 @@ rm meta-mender-raspberrypi/recipes-kernel/linux/linux-raspberrypi-rt_%.bbappend
 sed -i 's/"0x4000"/"0x1f000"/g' meta-mender-raspberrypi/recipes-bsp/u-boot/u-boot-raspberrypi.inc
 sed -i 's/bootfiles/rpi-bootfiles/g' meta-mender-core/classes/mender-part-images.bbclass
 ```
-
-Modify the meta-seeed-cm4 to avoid compile error
+修改 meta-seeed-cm4 以避免编译错误
 
 ```
 cd layers/meta-seeed-cm4
@@ -130,16 +126,14 @@ bitbake-layers add-layer ../layers/meta-mender/meta-mender-demo
 MENDER_SERVER_URL = "https://hosted.mender.io"
 MENDER_TENANT_TOKEN = "<copy token here>"
 ```
-
-Build for Mender Demo Server:
+为 Mender 演示服务器构建：
 
 ```
 # https://docs.mender.io/administration/demo-installation
 #
 MENDER_DEMO_HOST_IP_ADDRESS = "<IP address of Mender demo server>"
 ```
-
-Build for Mender Production/ Self-Hosted (on-prem):
+为 Mender 生产环境/自托管（本地部署）构建：
 
 ```
 # https://docs.mender.io/3.1/system-updates-yocto-project/build-for-production

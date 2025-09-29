@@ -104,8 +104,7 @@ cd ~ && mkdir riva_setup && cd riva_setup
 ngc registry resource download-version nvidia/riva/riva_quickstart_arm64:2.13.1
 cd riva_quickstart_v2.13.1
 ```
-
-Use `Vim` to modify the configuration file.
+使用 `Vim` 来修改配置文件。
 
 ```sh
 vim config.sh
@@ -118,8 +117,7 @@ vim config.sh
 
 # Press the `ESC` on the keyboard to exit edit mode, then use the shortcut `Shift+Z Z` to save the edited content and close the editor.
 ```
-
-The configuration file after editing：
+编辑后的配置文件：
 
 <details>
 
@@ -522,7 +520,7 @@ fi
 
 </details>
 
-Use a similar method to modify `/etc/docker/daemon.json`.
+使用类似的方法修改 `/etc/docker/daemon.json`。
 
 ```sh
 sudo vim /etc/docker/daemon.json
@@ -532,8 +530,7 @@ sudo vim /etc/docker/daemon.json
 
 sudo systemctl restart docker
 ```
-
-The configuration file after editing like this:
+编辑后的配置文件如下：
 
 <details>
 
@@ -553,7 +550,7 @@ The configuration file after editing like this:
 
 </details>
 
-Use the following command to initialize and start Riva:
+使用以下命令来初始化和启动 Riva:
 
 ```sh
 sudo bash riva_init.sh

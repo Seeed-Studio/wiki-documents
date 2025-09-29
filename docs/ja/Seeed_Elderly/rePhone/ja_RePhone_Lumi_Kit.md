@@ -136,7 +136,7 @@ I2C（7ビットアドレス0x23）
 </tr>
 </table>
 
-### Xadow GSM Breakout
+### Xadow GSM ブレイクアウト
 
 <table>
 <tr>

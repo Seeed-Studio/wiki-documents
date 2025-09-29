@@ -148,11 +148,11 @@ python3 ambd_flash_tool.py flash
 
 #### Mac/Linuxの場合
 
-- **STEP 1:** GitHubの [**RTL8720 Firmware**](https://github.com/Seeed-Studio/seeed-ambd-firmware/releases) リポジトリにアクセスします。
+- **ステップ 1:** GitHubの [**RTL8720 Firmware**](https://github.com/Seeed-Studio/seeed-ambd-firmware/releases) リポジトリにアクセスします。
 
-- **STEP 2:** 任意のリリースバージョンを選択し、**xxx-seeed-ambd-firmware-rpc-vxxx.zip** をクリックして **.zip ファイル** としてダウンロードします。
+- **ステップ 2:** 任意のリリースバージョンを選択し、**xxx-seeed-ambd-firmware-rpc-vxxx.zip** をクリックして **.zip ファイル** としてダウンロードします。
 
-- **STEP 3:** 前述のように **terminal** を使用して **ambd_flash_tool** ディレクトリに移動し、以下のコマンドを実行します。
+- **ステップ 3:** 前述のように **terminal** を使用して **ambd_flash_tool** ディレクトリに移動し、以下のコマンドを実行します。
 
 ```sh
 python3 ambd_flash_tool.py flash -d [RTL8720-firmware-path]
@@ -190,9 +190,9 @@ void loop() {
 :::note
 **Seeed SAMD ArduinoCore を最新バージョン (1.8.1) に更新してください！**
 :::
-- **STEP 1:** **Arduino IDE** を開き、`ツール` -> `ボード` -> `ボードマネージャ` をクリックし、検索ボックスに **Wio Terminal** を入力します。
+- **ステップ 1:** **Arduino IDE** を開き、`ツール` -> `ボード` -> `ボードマネージャ` をクリックし、検索ボックスに **Wio Terminal** を入力します。
 
-- **STEP 2:** 最新バージョン (1.8.1) がインストールされていることを確認します。インストールされていない場合は、`バージョンを選択` ドロップダウンメニューをクリックし、最新バージョンを選択して `インストール` をクリックします。
+- **ステップ 2:** 最新バージョン (1.8.1) がインストールされていることを確認します。インストールされていない場合は、`バージョンを選択` ドロップダウンメニューをクリックし、最新バージョンを選択して `インストール` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/ArduinoCore_new.png" alt="pir" width={850} height="auto" /></p>
 
@@ -204,11 +204,11 @@ void loop() {
 
 ### Arduino Library Managerからライブラリをインストールする方法
 
-- **STEP 1:** **Arduino IDE** を開き、`スケッチ` -> `ライブラリを含める` -> `ライブラリを管理...` をクリックします。
+- **ステップ 1:** **Arduino IDE** を開き、`スケッチ` -> `ライブラリを含める` -> `ライブラリを管理...` をクリックします。
 
-- **STEP 2:** 必要なライブラリの**名前**を入力し、ドロップダウンメニューから**最新バージョン**を選択します（利用可能な場合）。
+- **ステップ 2:** 必要なライブラリの**名前**を入力し、ドロップダウンメニューから**最新バージョン**を選択します（利用可能な場合）。
 
-- **STEP 3:** **インストール** をクリックします。
+- **ステップ 3:** **インストール** をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/library_install_1.jpg" alt="pir" width={870} height="auto" /></p>
 

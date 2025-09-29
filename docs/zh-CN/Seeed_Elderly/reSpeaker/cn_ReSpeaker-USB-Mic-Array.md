@@ -196,13 +196,13 @@ cd usb_4_mic_array
 python tuning.py -p
 ```
 
-- Example#1, we can turn off Automatic Gain Control (AGC):
+- 示例#1，我们可以关闭自动增益控制（AGC）：
 
 ```
 sudo python tuning.py AGCONOFF 0
 ```
 
-- Example#2, We can check the DOA angle.
+- 示例#2，我们可以检查DOA角度。
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python tuning.py DOAANGLE
@@ -246,7 +246,7 @@ sudo python setup.py install
 sudo python examples/usb_mic_array.py
 ```
 
-Here is the code of the usb_mic_array.py.
+这是 usb_mic_array.py 的代码。
 
 ```python
 import time
@@ -274,9 +274,9 @@ if __name__ == '__main__':
 
 ```
 
-**For Windows/Mac:** Here is the example to control the leds.
+**对于 Windows/Mac：** 这是控制 LED 灯的示例。
 
-- Step 1. Download pixel_ring.
+- 步骤 1. 下载 pixel_ring.
 
 ```python
 git clone https://github.com/respeaker/pixel_ring.git
@@ -350,7 +350,7 @@ if dev:
             break
 ```
 
-- Step 3. We will see the DOA as below.
+- 步骤 3. 我们将按照以下方式呈现数据.
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python doa.py 
@@ -395,7 +395,7 @@ if dev:
             break
 ```
 
-- Step 3. We will see the DOA as below.
+- 步骤 3. 我们将按照以下方式来呈现数据.
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python VAD.py 
@@ -553,7 +553,7 @@ wf.close()
 
 **For Windows:**
 
-- Step 1. We run below command to install pyaudio.
+- 步骤 1. 我们执行以下命令来安装 pyaudio.
 
 ```
  pip install pyaudio
@@ -731,9 +731,9 @@ VOICEACTIVITY    int 1 0 ro VAD voice activity status.
                                                             1 = true (voice activity)
 ```
 
-**Q2: ImportError: No module named usb.core**
+**Q2: ImportError：没有名为 usb.core 的模块**
 
-A2: Run sudo pip install pyusb to install the pyusb.
+A2: 运行 sudo pip install pyusb 来安装 pyusb。
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python tuning.py DOAANGLE

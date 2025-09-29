@@ -42,17 +42,17 @@ reComputer AI Industrial R2000シリーズは、Raspberry Pi CM5とHailo-8 AIア
 
 ### Windowsホストコンピュータの場合
 
-- **Step 1.** **[こちら](https://www.raspberrypi.org/software/)**から**Raspberry Pi Imager**ソフトウェアをダウンロードします
+- **ステップ 1.** **[こちら](https://www.raspberrypi.org/software/)**から**Raspberry Pi Imager**ソフトウェアをダウンロードします
 
-- **Step 2.** Raspberry Pi Imagerソフトウェアを開きます
+- **ステップ 2.** Raspberry Pi Imagerソフトウェアを開きます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **Step 3.** キーボードで**CTRL + SHIFT + X**を押して**Advanced options**ウィンドウを開きます
+- **ステップ 3.** キーボードで**CTRL + SHIFT + X**を押して**Advanced options**ウィンドウを開きます
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-- **Step 4.** **CHOOSE OS**をクリックして、お好みのOSを選択します
+- **ステップ 4.** **CHOOSE OS**をクリックして、お好みのOSを選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
@@ -64,9 +64,9 @@ reComputer AI Industrial R2000シリーズは、Raspberry Pi CM5とHailo-8 AIア
 
 [Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **Step 5.** **CHOOSE STORAGE**をクリックします
+- **ステップ 5.** **CHOOSE STORAGE**をクリックします
 
-- **Step 6.** 最後に、**WRITE**をクリックします
+- **ステップ 6.** 最後に、**WRITE**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
@@ -79,19 +79,19 @@ reComputer AI Industrial R2000シリーズは、Raspberry Pi CM5とHailo-8 AIア
 ターミナルを開いて```brew -V```と入力し、正しいhomebrew環境がセットアップされているかを確認してください。インストールされているhomebrew環境のバージョンが表示されるはずです。
 :::
 
-- **Step 1.** [このリンク](https://www.raspberrypi.org/software/)にアクセスして**Raspberry Pi Imager**アプリケーションをダウンロードしてインストールします
+- **ステップ 1.** [このリンク](https://www.raspberrypi.org/software/)にアクセスして**Raspberry Pi Imager**アプリケーションをダウンロードしてインストールします
 
-- **Step 2.** **Raspberry Pi Imager**アプリケーションを開きます
+- **ステップ 2.** **Raspberry Pi Imager**アプリケーションを開きます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **Step 3.** キーボードで**CTRL + SHIFT + X**を押して**Advanced options**ウィンドウを開きます
+- **ステップ 3.** キーボードで**CTRL + SHIFT + X**を押して**Advanced options**ウィンドウを開きます
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
 ここで**ホスト名の設定、SSHの有効化、パスワードの設定、wifiの設定、ローカル設定**などを行うことができます
 
-- **Step 4.** **CHOOSE OS**をクリックして、お好みのOSを選択します
+- **ステップ 4.** **CHOOSE OS**をクリックして、お好みのOSを選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
@@ -103,21 +103,21 @@ reComputer AI Industrial R2000シリーズは、Raspberry Pi CM5とHailo-8 AIア
 
 [Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **Step 5.** **CHOOSE STORAGE**をクリックします
+- **ステップ 5.** **CHOOSE STORAGE**をクリックします
 
-- **Step 6.** 最後に、**WRITE**をクリックします
+- **ステップ 6.** 最後に、**WRITE**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
 ### Linuxホストコンピュータの場合
 
-- **Step 1.** snapをダウンロードします
+- **ステップ 1.** snapをダウンロードします
 
 ```sh
 sudo apt install snap
 ```
 
-- **Step 2.** Download **rpi-imager**
+- **ステップ 2.** **rpi-imager** をダウンロードします
 
 ```sh
 snap install rpi-imager

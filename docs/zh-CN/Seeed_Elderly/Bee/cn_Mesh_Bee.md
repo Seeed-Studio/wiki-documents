@@ -124,7 +124,7 @@ JN516x具有一个特定的固件下载接口，包括UART和一些其他引脚�
 
 * 第一步：从GitHub下载最新固件；
 
-  * [Mesh_Bee#9.1_Firmware_Downloads](/cn/Mesh_Bee#91-firmware-downloads "Mesh Bee")
+  * [Mesh_Bee#9.1_Firmware_Downloads](/cn/Mesh_Bee#91-固件下载 "Mesh Bee")
 
 * 第二步：使用FT_Prog配置UartSBee v5；
 

@@ -7,6 +7,7 @@ keywords:
   - 3D Printed Gripper
   - Swappable Gripper
   - Robotics 
+image: https://files.seeedstudio.com/wiki/robotics/projects/end_effectors/dm_gripper/1-100094243--Seeed-Gripper-01.webp
 slug: /dm_gripper
 last_update:
   date: 9/17/2025

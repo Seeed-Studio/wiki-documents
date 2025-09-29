@@ -10,7 +10,7 @@ last_update:
     author: rcsim
 ---
 
-# Seeed Studio XIAO ESP32C3 with NuttX(RTOS)
+# Seeed Studio XIAO ESP32C3 と NuttX(RTOS)
 
 ## はじめに
 
@@ -178,7 +178,7 @@ xiao-esp32c3ボードにgpio設定を選択します。
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+ファームウェアをボードにロードし、miniconやpicocomなどのシリアル通信プログラムを実行してください：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
@@ -219,8 +219,8 @@ IO_INPUT_PIN_PULLDOWN
 GPIOデバイスファイルが作成されたことを確認するには、`ls/dev`と入力してください。入力後、boards/risc-v/esp32c3/esp32c3-xiao/src/esp32c3_gpio.cで宣言定義されたいくつかのgpioが表示されます。これらは以下を表しています：
 
 - GPIO
-  - 1 Input w/ IRQ    -> GPIO3
-  - 1 Output          -> GPIO2
+  - 1つのIRQを持つ入力    -> GPIO3
+  - 1つの出力          -> GPIO2
 
 ```bash
 nsh> ls /dev
@@ -235,8 +235,7 @@ nsh> ls /dev
 nsh> 
 ```
 
-Following these commands to read GPIO1(/dev/gpio1) (with interruption)
-and write at GPIO2(/dev/gpio0).
+これらのコマンドに従ってGPIO1(/dev/gpio1)を読み取り（割り込みあり）、GPIO2(/dev/gpio0)に書き込む。
 
 ```bash
 NuttShell (NSH) NuttX-12.9.0
@@ -297,7 +296,7 @@ xiao-esp32c3ボードにwifi設定を選択します。
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+ファームウェアをボードにロードし、miniconやpicocomなどのシリアル通信プログラムを実行してください：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
@@ -370,7 +369,7 @@ xiao-esp32c3ボードにble設定を選択します。
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+ファームウェアをボードにロードし、miniconやpicocomなどのシリアル通信プログラムを実行してください：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0

@@ -154,8 +154,8 @@ ESP32開発ボードをバージョン3.0.0以上にアップグレードして�
 
 - **ステップ 3.** スマートフォンにLightBlueアプリをダウンロードしてインストールする
 
-  - [LightBlue App (Android)](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=en_US&gl=US)
-  - [LightBlue App (Apple)](https://apps.apple.com/us/app/lightblue/id557428110)
+  - [LightBlue アプリ (Android)](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=en_US&gl=US)
+  - [LightBlue アプリ (Apple)](https://apps.apple.com/us/app/lightblue/id557428110)
 
 - **ステップ 4.** スマートフォンのBluetoothを有効にし、XIAO ESP32C3に近づけて、デバイスをスキャンして**MyESP32**デバイスに接続する
 

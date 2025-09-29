@@ -211,7 +211,7 @@ uf2ファイルのドライブへのコピーが完了すると、ドライブ�
 python3 capture_images_script.py
 ```
 
-By default, it will capture an image every 300ms. If you want to change this, you can run the script in this format
+デフォルトでは、300msごとに画像をキャプチャします。これを変更したい場合は、次の形式でスクリプトを実行できます
 
 ```sh
 python3 capture_images_script.py --interval <time_in_ms>
@@ -434,7 +434,7 @@ cp ~/Downloads/Apples.v1i.yolov5pytorch.zip ~/yolov5-swift
 unzip Apples.v1i.yolov5pytorch.zip
 ```
 
-- **Step 4.** Open **data.yaml** file and edit **train** and **val** directories as follows
+- **ステップ 4.** **data.yaml**ファイルを開き、**train**と**val**ディレクトリを以下のように編集する
 
 ```sh
 train: train/images

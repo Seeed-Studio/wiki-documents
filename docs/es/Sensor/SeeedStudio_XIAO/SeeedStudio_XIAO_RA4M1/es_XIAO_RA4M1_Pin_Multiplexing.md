@@ -525,7 +525,7 @@ En general, este código demuestra cómo usar la biblioteca U8g2 para controlar 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/15.png" style={{width:700, height:'auto'}}/></div>
 
 
-## CAN(XIAO CAN Bus Expansion Board)
+## CAN(Placa de Expansión de Bus XIAO CAN)
 
 ### Preparación de Hardware
 

@@ -585,13 +585,13 @@ http://homeassistant.local:10000/lovelace/0?viewport=1000x1000
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2
 ```
 
-If you are using eink=2, you can also invert the colors by adding the invert parameter:
+如果你使用的是 eink=2，你还可以通过添加 invert 参数来反转颜色：
 
 ```python
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2&invert
 ```
 
-Besides, you can also screenshot other page, for example **To-do lists** page in HA:
+此外，你还可以截取其他页面的屏幕截图，例如 HA 中的**待办事项列表**页面：
 
 ```python
 http://192.168.1.191:10000/todo?viewport=800x480&eink=2&invert

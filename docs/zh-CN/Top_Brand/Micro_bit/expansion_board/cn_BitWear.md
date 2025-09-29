@@ -76,7 +76,7 @@ BitWear 是一个低成本的紧凑型配件，专为 micro:bit 用户制作有�
 转到 MakeCode：
 [https://makecode.microbit.org](https://makecode.microbit.org/)
 
-<!-- - Step 1: Create a new project to enter the workspace. Click the gear icon (for settings) on the blue bar.![](https://cdn.nlark.com/yuque/0/2020/png/2701823/1607655991129-3a81d155-0279-412d-a66f-28ab0f9530cb.png#align=left&display=inline&height=496&originHeight=496&originWidth=1014&size=0&status=done&style=none&width=1014) -->
+<!-- - 步骤 1：创建一个新项目以进入工作区。点击蓝色栏上的齿轮图标（设置）。![](https://cdn.nlark.com/yuque/0/2020/png/2701823/1607655991129-3a81d155-0279-412d-a66f-28ab0f9530cb.png#align=left&display=inline&height=496&originHeight=496&originWidth=1014&size=0&status=done&style=none&width=1014) -->
 ![](https://files.seeedstudio.com/wiki/microbit/bitwear/7.png)
 
 - 步骤 2：从下拉列表中选择扩展，这将带您到扩展页面。

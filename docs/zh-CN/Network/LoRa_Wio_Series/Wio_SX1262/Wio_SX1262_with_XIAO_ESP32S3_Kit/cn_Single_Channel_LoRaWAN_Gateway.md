@@ -84,7 +84,7 @@ py -m esptool --chip esp32s3 -p COM14 -b 460800 --before=default_reset --after=h
 ls /dev/cu*
 ```
 
-then flash using `idf.py`, replace the **port**
+然后使用 `idf.py` 进行刷写，替换 **端口**
 
 ```
 idf.py -p port flash
@@ -96,13 +96,13 @@ idf.py -p port flash
 sudo usermod -a -G dialout $USERNAME
 ```
 
-On a **Windows** setup, let's suppose that the device is mounted as COM14, the above command would be like:
+在 **Windows** 设置中，假设设备挂载为 COM14，上述命令将类似于：
 
 ```
 idf.py -p COM14 flash
 ```
 
-Launch the monitor console to see logs (optional).
+启动监视控制台以查看日志（可选）。
 
 ```
 idf.py -p port monitor
@@ -271,9 +271,9 @@ cd esp-idf/
 ./install.sh
 ```
 
-### Installation of One Channel Hub
+### 安装 One Channel Hub
 
-**Step 1**: Clone the hub to local repository. And navigate to the project path.
+**步骤 1**: 将仓库克隆到本地仓库。并导航到项目路径。
 
 ```linux
 git clone https://github.com/Seeed-Studio/one_channel_hub.git
@@ -281,15 +281,15 @@ git clone https://github.com/Seeed-Studio/one_channel_hub.git
 cd ~/this_project_directory
 ```
 
-**Step 2**: Install required driver
+**步骤 2**: 安装所需驱动
 
-- SX126x driver(sx1261, sx1262, sx1268):
+- SX126x 驱动程序(sx1261, sx1262, sx1268):
 
 ```
 git clone -b v2.3.2 https://github.com/Lora-net/sx126x_driver.git sx126x_driver
 ```
 
-- llcc68 driver:
+- llcc68 驱动程序:
 
 ```
 git clone -b v2.3.2 https://github.com/Lora-net/llcc68_driver.git llcc68_driver
@@ -303,7 +303,7 @@ git clone -b v2.4.1 https://github.com/Lora-net/SWDR001.git lr11xx_driver
 
 ### Build Firmware
 
-**Step 1**: Enter the lorahub directory.
+**步骤 1**: 进入 lorahub 目录。
 
 ```
 cd lorahub
@@ -315,13 +315,13 @@ cd lorahub
 . ~/esp/esp-idf/export.sh
 ```
 
-Configure the ESP32 target to build for.
+配置要构建的 ESP32 目标。
 
 ```
 idf.py set-target esp32s3
 ```
 
-Customize the build if necessary:
+如有必要，自定义构建：
 
 ```
 idf.py menuconfig

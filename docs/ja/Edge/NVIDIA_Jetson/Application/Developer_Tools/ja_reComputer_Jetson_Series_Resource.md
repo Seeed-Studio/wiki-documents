@@ -16,7 +16,7 @@ no_comments: false # for Disqus
 
 # Jetson Resource
 
-## [Jetson software](https://developer.nvidia.com/embedded/develop/software)
+## [Jetson ソフトウェア](https://developer.nvidia.com/embedded/develop/software)
 
 すべてのNVIDIA® Jetson™モジュールと開発者キットは同じソフトウェアスタックによってサポートされており、一度開発すればどこでもデプロイできます。Jetson Softwareは、AIアプリケーションのエンドツーエンド加速を提供し、市場投入時間を短縮するように設計されています。データセンターやクラウドデプロイメントを支えるのと同じ強力なNVIDIAテクノロジーをエッジにもたらします。
 
@@ -32,7 +32,7 @@ JetsonソフトウェアスタックはNVIDIA JetPack™ SDKから始まり、CU
 - [Jetson Linux](https://developer.nvidia.com/embedded/linux-tegra)
 - [Cloud-Native on Jetson](https://developer.nvidia.com/embedded/jetson-cloud-native)
 
-### [NVIDIA TAO and pretrained AI models](https://developer.nvidia.com/tao)
+### [NVIDIA TAO および事前訓練済み AI モデル](https://developer.nvidia.com/tao)
 
 NVIDIA TAOは、データ準備からトレーニング、最適化まで、深層学習ワークフローの時間のかかる部分を簡素化し、価値創出までの時間を短縮します。
 

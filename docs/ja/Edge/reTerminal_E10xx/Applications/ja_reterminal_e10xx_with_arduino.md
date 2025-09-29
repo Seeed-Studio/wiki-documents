@@ -422,7 +422,7 @@ void loop() {
 
 ### Buzzer Control
 
-The reTerminal E Series includes a buzzer on GPIO7 that can produce various tones and alert sounds.
+reTerminal E シリーズには GPIO7 にブザーが搭載されており、様々なトーンやアラート音を生成することができます。
 
 ```cpp
 // reTerminal E Series - Buzzer Control Example

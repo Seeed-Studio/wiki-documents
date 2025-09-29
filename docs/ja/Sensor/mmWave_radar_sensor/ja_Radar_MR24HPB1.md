@@ -10,7 +10,7 @@ last_update:
   author: jianjing Huang
 ---
 
-# 24GHz mmWave Sensor - Human Static Presence Module (MR24HPB1)
+# 24GHz mmWave センサー - 人体静的存在検知モジュール (MR24HPB1)
 
 ![](https://files.seeedstudio.com/wiki/mmWave-radar/radar.jpg)
 
@@ -185,7 +185,7 @@ zipライブラリをダウンロードしたので、Arduino IDEを開き、**S
     </tr>
   </tbody></table>
 
-**Step 2.** Arduino IDEの左上のメニューバーで、**tool**を選択し、使用している開発ボードのタイプを選択して、対応するシリアルポートを選択します。
+**ステップ 2.** Arduino IDEの左上のメニューバーで、**tool**を選択し、使用している開発ボードのタイプを選択して、対応するシリアルポートを選択します。
 
 :::tip
 **MacOS**を使用している場合、デバイスのシリアルポート名は多くの場合**/dev/cu.usbmodem xxx**で始まり、デバイス名で終わります。**Windows**を使用している場合、デバイスのシリアルポート名は多くの場合**COM**で始まり、同様にデバイス名で終わります。

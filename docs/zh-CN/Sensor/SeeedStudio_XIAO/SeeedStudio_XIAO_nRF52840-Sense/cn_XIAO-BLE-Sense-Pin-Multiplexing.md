@@ -50,7 +50,7 @@ void loop() {
 
 ## Digital as PWM
 
-Connect an LED to Pin D10. Then upload the following code to see the LED gradually fading.
+将一个LED连接到引脚D10。然后上传以下代码以观察LED逐渐淡出。
 
 ```cpp
 int ledPin = 10;    // LED connected to digital pin 10

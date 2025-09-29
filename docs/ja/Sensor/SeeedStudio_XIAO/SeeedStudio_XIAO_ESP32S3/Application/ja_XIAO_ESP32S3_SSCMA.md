@@ -260,9 +260,9 @@ Roboflowは画像にラベルを付ける3つの異なる方法を提供して�
 </TabItem>
 </Tabs>
 
-## Training Dataset Exported Model
+## トレーニングデータセットエクスポートモデル
 
-### Step 1. Colab Notebookへのアクセス
+### ステップ 1. Colab Notebookへのアクセス
 
 [SenseCraft Model AssistantのWiki](https://wiki.seeedstudio.com/ja/ModelAssistant_Introduce_Quick_Start/#model-training)で、さまざまな種類のモデルGoogle Colabコードファイルを見つけることができます。どのコードを選択すべきかわからない場合は、モデルのクラス（物体検出または画像分類）に応じて、いずれかを選択できます。
 
@@ -274,7 +274,7 @@ Roboflowは画像にラベルを付ける3つの異なる方法を提供して�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/25.png" style={{width:1000, height:'auto'}}/></div>
 
-### Step 2. Roboflowデータセットの追加
+### ステップ 2. Roboflowデータセットの追加
 
 コードブロックを段階的に正式に実行する前に、コードが準備したデータセットを使用できるように、コードの内容を修正する必要があります。データセットをColabファイルシステムに直接ダウンロードするためのURLを提供する必要があります。
 

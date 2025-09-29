@@ -143,7 +143,7 @@ sudo chmod 755 /mnt/system
 sudo scp sg2002_reCamera_0.1.3_emmc_ota.zip recamera@ip_address:~/
 ```
 
-Then use the bash to deploy.
+然后使用 bash 进行部署。
 
 ```bash
 sudo /mnt/system/upgrade.sh start sg2002_reCamera_0.1.3_emmc_ota.zip

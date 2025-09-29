@@ -11,7 +11,7 @@ last_update:
 ---
 
 
-# Grove Smart IR Gesture Sensor (PAJ7660)
+# Grove スマート IR ジェスチャーセンサー (PAJ7660)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/main.jpg" style={{width:500, height:'auto'}}/></div>
 

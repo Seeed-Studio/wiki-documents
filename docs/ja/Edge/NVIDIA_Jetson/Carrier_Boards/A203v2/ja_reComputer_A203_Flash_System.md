@@ -490,7 +490,7 @@ cp -a -f ${Drive package kernel path} ${Officially unpacked Linux_for_Tegra path
  `${Drive package kernel path}` はカーネルイメージフォルダへのフルパスを示します
  `${Officially unpacked Linux_for_Tegra path}` は公式に提供されたL4T zipパッケージを展開した後のLinux_for_Tegraフォルダへのフルパスを示します。
 
-### Step 5.  ボードへのシステムのフラッシュ
+### ステップ 5.  ボードへのシステムのフラッシュ
 
 この例ではNVIDIA Jetson Nanoモジュールを使用し、以下のコマンドを実行してシステムを直接ボードにフラッシュできます：
 

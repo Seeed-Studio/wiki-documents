@@ -92,7 +92,7 @@ mkdir layers
 cd layers
 ```
 
-- **Step 4.** Clone the following GitHub repo
+- **ステップ 4.** 以下のGitHubリポジトリをクローンする
 
 ```sh
 git clone -b dunfell git://git.yoctoproject.org/poky
@@ -118,7 +118,7 @@ mv -f ../linux/ recipes-kernel/
 cd ../../
 ```
 
-- **Step 7.** Initialize the build environment
+- **ステップ 7.** ビルド環境を初期化する
 
 ```sh
 source layers/poky/oe-init-build-env
@@ -134,7 +134,7 @@ bitbake-layers add-layer ../layers/meta-openembedded/meta-oe
 bitbake-layers add-layer ../layers/meta-openembedded/meta-python
 ```
 
-- **Step 9.** Move back to the **build** directory and execute the following to start compiling
+- **ステップ 9.** **build**ディレクトリに戻り、以下を実行してコンパイルを開始する
 
 ```sh
 MACHINE="seeed-reterminal" bitbake rpi-test-image
@@ -341,7 +341,7 @@ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 git clone -b master git://git.yoctoproject.org/poky
 ```
 
-- **Step 4.** Navigate to the **poky** directory
+- **ステップ 4.** **poky** ディレクトリに移動する
 
 ```sh
 cd poky
@@ -359,13 +359,13 @@ pip3 install --user -r bitbake/toaster-requirements.txt
 git reset --hard 7ade8346b3a09983257589d22aaada47e0eec010
 ```
 
-- **Step 7.** Source the build environment script
+- **ステップ 7.** ビルド環境スクリプトを読み込む
 
 ```sh
 source oe-init-build-env
 ```
 
-- **Step 8.** From the **build** directory, start toaster
+- **ステップ 8.** **build** ディレクトリから、toaster を開始する
 
 ```sh
 source toaster start
@@ -383,32 +383,32 @@ http://127.0.0.1:8000
 source toaster start webport=9000
 ```
 
-- **Step 10.** Toaster ウェブインターフェースに入ったら、**New project** をクリックします
+- **ステップ 10.** Toaster ウェブインターフェースに入ったら、**New project** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/toaster-ui.png" alt="pir" width="1000" height="auto"/></p>
 
-- **Step 11.** **Project name** を入力し、**project type** を **New project** に設定し、**Release** の下で **Local Yocto Project** を選択し、最後に **Create project** をクリックします
+- **ステップ 11.** **Project name** を入力し、**project type** を **New project** に設定し、**Release** の下で **Local Yocto Project** を選択し、最後に **Create project** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/toaster-name.jpg" alt="pir" width="450" height="auto"/></p>
 
-- **Step 12.** **Configuration** タブ内で、**Machine** の下で名前を **raspberrypi4-64** に変更し、**Save** をクリックします
+- **ステップ 12.** **Configuration** タブ内で、**Machine** の下で名前を **raspberrypi4-64** に変更し、**Save** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/toaster-rpi64.png" alt="pir" width="700" height="auto"/></p>
 
-- **Step 13.** **Import layer** をクリックします
+- **ステップ 13.** **Import layer** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/toaster-import-layer.png" alt="pir" width="500" height="auto"/></p>
 
-- **Step 14.** 以下のように情報を入力します
+- **ステップ 14.** 以下のように情報を入力します
 
   - Layer name: meta-raspberrypi
   - Where is the layer source code?: In a **Git repository**
   - Git repository URL: [https://github.com/agherzan/meta-raspberrypi.git](https://github.com/agherzan/meta-raspberrypi.git)
   - Git revision: 8dc3a310883ea87cd9900442f46f20bb08e57583
 
-- **Step 15.** **Import and add to project** をクリックします
+- **ステップ 15.** **Import and add to project** をクリックします
 
-- **Step 16.** 上記の手順を繰り返して、以下のようにさらにレイヤーをインポートします
+- **ステップ 16.** 上記の手順を繰り返して、以下のようにさらにレイヤーをインポートします
 
 - **meta-qt5**
 
@@ -440,20 +440,20 @@ source toaster start webport=9000
   - Repository subdirectory: meta-python
   - Git revision: master
 
-- **Step 17.** すべてのレイヤーがインポートされたら、**Layers** タブをクリックして追加したレイヤーを確認します
+- **ステップ 17.** すべてのレイヤーがインポートされたら、**Layers** タブをクリックして追加したレイヤーを確認します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/toaster-layers.png" alt="pir" width="1000" height="auto"/></p>
 
-- **Step 18.** **BitBake variables** に移動し、以下の新しい変数を追加します
+- **ステップ 18.** **BitBake variables** に移動し、以下の新しい変数を追加します
 
 ```sh
 - Variable:RPI_KERNEL_DEVICETREE_OVERLAYS_append
 - Value: overlays/reTerminal.dtbo overlays/i2c3.dtbo
 ```
 
-**Note:** Make sure to add a space before **overlays/xxxx**
+**注意:** **overlays/xxxx** の前に必ずスペースを追加してください
 
-- **Step 19.** Repeat the same to add the following
+- **ステップ 19.** 同じ手順を繰り返して以下を追加してください
 
 ```sh
 - Variable:PACKAGECONFIG_append_pn-qtbase

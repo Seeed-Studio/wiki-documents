@@ -137,7 +137,7 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 3.克隆 LeRobot 仓库：
 
 ```bash
-git clone https://github.com/servodevelop/lerobot.git
+git clone https://gitee.com/Marlboro1998/lerobot-starai.git ~/lerobot
 ```
 
 并切换到starai-arm-develop分支
@@ -174,7 +174,11 @@ conda install ffmpeg=7.1.1 -c conda-forge
 cd ~/lerobot && pip install -e ".[starai]"
 ```
 
-对于 Jetson Jetpack 6.2 设备（请确保在执行此步骤前按照[此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)第 5 步安装了 Pytorch-gpu 和 Torchvision）：
+```bash
+sudo apt remove brltty
+```
+
+对于 Jetson Jetpack 设备（请确保在执行此步骤前按照[此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch)第 5 步安装了 Pytorch-gpu 和 Torchvision）：
 
 ```bash
 conda install -y -c conda-forge "opencv>=4.10.0.84"  # 通过 conda 安装 OpenCV 和其他依赖，仅适用于 Jetson Jetpack 6.0+
@@ -225,16 +229,16 @@ UC-01 转接板 开关：
 
 ### 手臂端口设置
 
-进入`src`目录：
+进入`~/lerobot`目录：
 
 ```bash
-cd src
+cd ~/lerobot
 ```
 
 在终端输入以下指令来找到两个机械臂对应的端口号：
 
 ```bash
-python -m lerobot.find_port
+lerobot-find-port
 ```
 
 :::tip
@@ -286,8 +290,7 @@ sudo apt remove brltty
 最后，赋予权限。
 
 ```sh
-sudo chmod 666 /dev/ttyUSB0
-sudo chmod 666 /dev/ttyUSB1
+sudo chmod 666 /dev/ttyUSB*
 ```
 :::
 
@@ -320,7 +323,7 @@ sudo chmod 666 /dev/ttyUSB1
 将leader连接到`/dev/ttyUSB0`，或者修改`--teleop.port`，然后执行：
 
 ```bash
-python -m lerobot.calibrate --teleop.type=starai_violin --teleop.port=/dev/ttyUSB0 --teleop.id=my_awesome_staraiviolin_arm
+lerobot-calibrate     --teleop.type=starai_violin --teleop.port=/dev/ttyUSB0 --teleop.id=my_awesome_staraiviolin_arm
 ```
 
 #### follower机械臂
@@ -328,7 +331,7 @@ python -m lerobot.calibrate --teleop.type=starai_violin --teleop.port=/dev/ttyUS
 将follower连接到`/dev/ttyUSB1`，或者修改`--teleop.port`，然后执行：
 
 ```bash
-python -m lerobot.calibrate --robot.type=starai_viola --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraiviola_arm
+lerobot-calibrate     --robot.type=starai_viola --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraiviola_arm
 ```
 
 在运行命令后，需要**手动掰机械臂**，让每个关节达到**极限值**，终端会显示记录的范围数据，做完此操作后按下回车即可。
@@ -347,7 +350,7 @@ python -m lerobot.calibrate --robot.type=starai_viola --robot.port=/dev/ttyUSB1 
 将left_arm_port连接到`/dev/ttyUSB0`，right_arm_port连接到`/dev/ttyUSB2`，或者修改`--teleop.left_arm_port` `--teleop.right_arm_port`，然后执行：
 
 ```bash
-python -m lerobot.calibrate --teleop.type=bi_starai_leader --teleop.left_arm_port=/dev/ttyUSB0 --teleop.right_arm_port=/dev/ttyUSB2 --teleop.id=bi_starai_leader
+lerobot-calibrate     --teleop.type=bi_starai_leader  --teleop.left_arm_port=/dev/ttyUSB0  --teleop.right_arm_port=/dev/ttyUSB2  --teleop.id=bi_starai_leader
 ```
 
 #### follower机械臂
@@ -355,7 +358,7 @@ python -m lerobot.calibrate --teleop.type=bi_starai_leader --teleop.left_arm_por
 将left_arm_port连接到`/dev/ttyUSB1`，right_arm_port连接到`/dev/ttyUSB3`，或者修改`--robot.left_arm_port` `--robot.right_arm_port`，然后执行：
 
 ```bash
-python -m lerobot.calibrate --robot.type=bi_starai_follower --robot.left_arm_port=/dev/ttyUSB1 --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_follower
+lerobot-calibrate     --robot.type=bi_starai_follower  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_follower
 ```
 
 :::tip
@@ -384,7 +387,7 @@ python -m lerobot.calibrate --robot.type=bi_starai_follower --robot.left_arm_por
 您已准备好遥操作您的机器人（不包括摄像头）！运行以下简单脚本：
 
 ```bash
-python -m lerobot.teleoperate \
+lerobot-teleoperate \
     --robot.type=starai_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
@@ -397,7 +400,7 @@ python -m lerobot.teleoperate \
 <summary> 双臂 </summary>
 
 ```bash
-python -m lerobot.teleoperate \
+lerobot-teleoperate \
     --robot.type=bi_starai_follower \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
@@ -427,7 +430,7 @@ python -m lerobot.teleoperate \
 在插入您的两个 USB 摄像头后，运行以下脚本以检查摄像头的端口号，切记摄像头避免插在USB Hub上，USB Hub速率太慢会导致读不到图像数据。
 
 ```bash
-python -m lerobot.find_cameras opencv # or realsense for Intel Realsense cameras
+lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
 ```
 
 终端将打印出以下信息。以我的笔记本为例，笔记本摄像头为Camera0和Camera1，index_or_path分别为2和4。
@@ -466,11 +469,11 @@ Image capture finished. Images saved to outputs/captured_images
 确认外接摄像头后，将摄像头信息替换下方cameras信息您将能够在遥操作时在计算机上显示摄像头：
 
 ```bash
-python -m lerobot.teleoperate \
+lerobot-teleoperate \
     --robot.type=starai_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
     --teleop.type=starai_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
@@ -481,12 +484,12 @@ python -m lerobot.teleoperate \
 <summary> 双臂 </summary>
 
 ```bash
-python -m lerobot.teleoperate \
+lerobot-teleoperate \
     --robot.type=bi_starai_follower \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
     --robot.id=bi_starai_follower \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
     --teleop.type=bi_starai_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
@@ -536,16 +539,16 @@ echo $HF_USER
 记录 10 个回合并上传数据集到 Hub：
 
 ```bash
-python -m lerobot.record \
+lerobot-record \
     --robot.type=starai_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
     --teleop.type=starai_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true \
-    --dataset.repo_id=${HF_USER}/starai \
+    --dataset.repo_id=${HF_USER}/record-test \
     --dataset.episode_time_s=30 \
     --dataset.reset_time_s=30 \
     --dataset.num_episodes=10 \
@@ -557,7 +560,7 @@ python -m lerobot.record \
 <summary> 双臂 </summary>
 
 ```bash
-python -m lerobot.record \
+lerobot-record \
     --robot.type=bi_starai_follower \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
@@ -566,9 +569,9 @@ python -m lerobot.record \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
     --teleop.id=bi_starai_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
     --display_data=true \
-    --dataset.repo_id=starai/record-test_bi_arm \
+    --dataset.repo_id=${HF_USER}/record-test \
     --dataset.episode_time_s=30 \
     --dataset.reset_time_s=30 \
     --dataset.num_episodes=10 \
@@ -592,11 +595,11 @@ python -m lerobot.record \
 **（推荐，下文的教程会以本地数据为主）** 
 
 ```bash
-python -m lerobot.record \
+lerobot-record \
     --robot.type=starai_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
     --teleop.type=starai_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
@@ -605,7 +608,7 @@ python -m lerobot.record \
     --dataset.episode_time_s=30 \
     --dataset.reset_time_s=30 \
     --dataset.num_episodes=10 \
-    --dataset.push_to_hub=False \#修改push_to_hub为false
+    --dataset.push_to_hub=False \
     --dataset.single_task="Grab the black cube"
 ```
 
@@ -613,7 +616,7 @@ python -m lerobot.record \
 <summary> 双臂 </summary>
 
 ```bash
-python -m lerobot.record \
+lerobot-record \
     --robot.type=bi_starai_follower \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
@@ -622,13 +625,13 @@ python -m lerobot.record \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
     --teleop.id=bi_starai_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
     --display_data=true \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode_time_s=30 \
     --dataset.reset_time_s=30 \
     --dataset.num_episodes=10 \
-    --dataset.push_to_hub=False \#修改push_to_hub为false
+    --dataset.push_to_hub=False \
     --dataset.single_task="Grab the black cube"
 ```
 
@@ -681,49 +684,23 @@ python -m lerobot.record \
 :::
 
 
-## 可视化数据集
-
-:::tip
-不稳定，可跳过，可尝试。
-:::
-
-```bash
-echo ${HF_USER}/starai  
-```
-
-如果您使用了 `--dataset.push_to_hub=true` ，并上传了数据，您可以在本地通过以下命令进行可视化：
-
-```bash
-python -m lerobot.scripts.visualize_dataset_html \
-  --repo-id ${HF_USER}/starai
-```
-
-如果您使用了 `--dataset.push_to_hub=false` ，没有上传数据，您可以通过以下命令在本地进行可视化：
-
-```bash
-python -m lerobot.scripts.visualize_dataset_html \
-  --repo-id starai/record-test
-```
-
-这里的`starai/record-test`为采集数据时候自定义的`repo_id`名。
-
 ## 重播一个回合
 
 现在尝试在您的机器人上重播第一个回合:
 
 ```bash
-python -m lerobot.replay \
+lerobot-replay \
     --robot.type=starai_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
     --dataset.repo_id=starai/record-test \
-    --dataset.episode=0 # choose the episode you want to replay
+    --dataset.episode=1 # choose the episode you want to replay
 ```
 <details>
 <summary> 双臂 </summary>
 
 ```bash
-python -m lerobot.replay \
+lerobot-replay \
     --robot.type=bi_starai_follower \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
@@ -738,31 +715,34 @@ python -m lerobot.replay \
 要训练一个控制您机器人策略，以下是一个示例命令：
 
 ```bash
-python -m lerobot.scripts.train \
+lerobot-train \
   --dataset.repo_id=starai/record-test \
   --policy.type=act \
   --output_dir=outputs/train/act_viola_test \
   --job_name=act_viola_test \
   --policy.device=cuda \
   --wandb.enable=False \
-  --policy.repo_id=starai/my_policy
+  --policy.repo_id=starai/my_policy \
+  --steps=200000
 ```
 
 <details>
 <summary> 双臂 </summary>
 
 ```bash
-python -m lerobot.scripts.train \
+lerobot-train \
   --dataset.repo_id=starai/record-test_bi_arm \
   --policy.type=act \
   --output_dir=outputs/train/act_bi_viola_test \
   --job_name=act_bi_viola_test \
   --policy.device=cuda \
   --wandb.enable=False \
-  --policy.repo_id=starai/my_policy
+  --policy.repo_id=starai/my_policy \
+  --steps=200000
 ```
 </details>
 
+1. `--policy.type`支持输入`diffusion,pi0,pi0fast`等策略
 1. 我们提供了数据集作为参数。`dataset.repo_id=starai/record-test`
 2. 我们将从 [`configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/src/lerobot/policies/act/configuration_act.py) 加载配置。重要的是，此策略将自动适应机器人的电机状态、电机动作和相机的数量，并保存在您的数据集中。
 3. 我们提供了 `wandb.enable=true` 来使用 [Weights and Biases](https://docs.wandb.ai/quickstart) 可视化训练图表。这是可选的，但如果您使用它，请确保您已通过运行 `wandb login` 登录。
@@ -770,36 +750,165 @@ python -m lerobot.scripts.train \
 从某个检查点恢复训练。
 
 ```bash
-python -m lerobot.scripts.train \
+lerobot-train \
   --config_path=outputs/train/act_viola_test/checkpoints/last/pretrained_model/train_config.json \
-  --resume=true
+  --resume=true \
+  --steps=400000
 ```
+
+
+
+
+<details>
+<summary>如果训练[SmolVLA](https://huggingface.co/docs/lerobot/smolvla) </summary>
+
+```bash
+pip install -e ".[smolvla]"
+```
+
+### 训练
+```bash
+lerobot-train \
+  --policy.path=lerobot/smolvla_base \ # <- Use pretrained fine-tuned model
+  --dataset.repo_id=${HF_USER}/mydataset \
+  --batch_size=64 \
+  --steps=20000 \
+  --output_dir=outputs/train/my_smolvla \
+  --job_name=my_smolvla_training \
+  --policy.device=cuda \
+  --wandb.enable=true
+```
+
+### 验证
+
+```bash
+lerobot-record \
+  --robot.type=starai_viola \
+  --robot.port=/dev/ttyUSB1 \
+  --robot.id=my_awesome_staraiviola_arm \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
+  --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
+  --dataset.repo_id=${HF_USER}/eval_DATASET_NAME_test \ 
+  --dataset.episode_time_s=50 \
+  --dataset.num_episodes=10 \
+  # <- Teleop optional if you want to teleoperate in between episodes \
+  # --teleop.type=so100_leader \
+  # --teleop.port=/dev/ttyACM0 \
+  # --teleop.id=my_red_leader_arm \
+  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
+```
+
+
+</details>
+
+
+
+<details>
+<summary>如果训练 [Libero](https://huggingface.co/docs/lerobot/libero)</summary>
+
+LIBERO 是一个旨在研究终身机器人学习的基准。这个想法是，机器人不仅会在工厂中进行一次预训练，而且随着时间的推移，它们需要不断学习和适应人类用户。这种持续的适应被称为决策终身学习 （LLDM）， 它是构建成为真正个性化帮手的机器人的关键一步。
+
+  - [LIBERO 论文](https://arxiv.org/abs/2306.03310)
+  - [LIBERO 原始仓库](https://github.com/Lifelong-Robot-Learning/LIBERO)
+
+LIBERO 包括五个任务 ：
+
+- LIBERO-Spatial （libero_spatial） – 需要推理空间关系的任务。
+
+- LIBERO-Object （libero_object） – 以作不同对象为中心的任务。
+
+- LIBERO-Goal （libero_goal） – 机器人必须适应不断变化的目标的目标条件任务。
+
+- LIBERO-90 （libero_90） – LIBERO-100 集合中的 90 个短期任务。
+
+- LIBERO-Long （libero_10） – LIBERO-100 系列中的 10 个长期任务。
+
+这些套件总共涵盖 130 项任务 ，从简单的对象作到复杂的多步骤场景。LIBERO 旨在随着时间的推移而发展，并作为社区可以测试和改进终身学习算法的共享基准。
+
+## 训练
+
+```bash
+lerobot-train \
+  --policy.type=smolvla \
+  --policy.repo_id=${HF_USER}/libero-test \
+  --dataset.repo_id=HuggingFaceVLA/libero \
+  --env.type=libero \
+  --env.task=libero_10 \
+  --output_dir=./outputs/ \
+  --steps=100000 \
+  --batch_size=4 \
+  --eval.batch_size=1 \
+  --eval.n_episodes=1 \
+  --eval_freq=1000 \
+```
+
+
+## 评估
+
+要安装 LIBERO，请按照 LeRobot 官方说明进行作，只需执行： `pip install -e ".[libero]"`
+
+###  单任务评估:
+
+```bash
+lerobot-eval \
+  --policy.path="your-policy-id" \
+  --env.type=libero \
+  --env.task=libero_object \
+  --eval.batch_size=2 \
+  --eval.n_episodes=3
+```
+
+- `--env.task` 选择任务 (libero_object, libero_spatial, etc.).
+
+- `--eval.batch_size` 控制并行运行的环境数量。
+
+- `--eval.n_episodes` 设置总共要运行的剧集数。
+
+### 多任务评估
+
+```bash
+lerobot-eval \
+  --policy.path="your-policy-id" \
+  --env.type=libero \
+  --env.task=libero_object,libero_spatial \
+  --eval.batch_size=1 \
+  --eval.n_episodes=2
+```
+
+- 将逗号分隔的列表传递给 `--env.task` 以进行多套件评估。
+
+</details>
+
 
 ## 评估
 
 运行以下命令记录 10 个评估回合：
 
 ```bash
-python -m lerobot.record  \
+lerobot-record  \
   --robot.type=starai_viola \
   --robot.port=/dev/ttyUSB1 \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
   --robot.id=my_awesome_staraiviola_arm \
   --display_data=false \
   --dataset.repo_id=starai/eval_record-test \
-  --dataset.single_task="Grab the black cube" \
+  --dataset.single_task="Put lego brick into the transparent box" \
   --policy.path=outputs/train/act_viola_test/checkpoints/last/pretrained_model
+  # <- Teleop optional if you want to teleoperate in between episodes \
+  # --teleop.type=starai_violin \
+  # --teleop.port=/dev/ttyUSB0 \
+  # --teleop.id=my_awesome_leader_arm \
 ```
 
 <details>
 <summary> 双臂 </summary>
 
 ```bash
-python -m lerobot.record  \
+lerobot-record  \
     --robot.type=bi_starai_follower \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
     --robot.id=bi_starai_follower \
     --display_data=false \
     --dataset.repo_id=starai/eval_record-test_bi_arm \
@@ -815,6 +924,7 @@ python -m lerobot.record  \
 3. 如果评估阶段遇到`File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/starai/eval_xxxx'`请先删除`eval_`开头的这个文件夹再次运行程序。
 4. 当遇到`mean is infinity. You should either initialize with stats as an argument or use a pretrained model`请注意`--robot.cameras`这个参数中的up和front等关键词必须和采集数据集的时候保持严格一致。
 
+
 ## FAQ
 
 - 如果使用本文档教程，请git clone本文档推荐的github仓库`https://github.com/servodevelop/lerobot.git`。
@@ -829,7 +939,7 @@ python -m lerobot.record  \
 
 - 执行完安装LeRobot可能会自动卸载gpu版本的pytorch，所以需要在手动安装torch-gpu。
 
-- 对于Jetson，请先安装[Pytorch和Torchvsion](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)再执行`conda install -y -c conda-forge ffmpeg`,否则编译torchvision的时候会出现ffmpeg版本不匹配的问题。
+- 对于Jetson，请先安装[Pytorch和Torchvsion](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch)再执行`conda install -y -c conda-forge ffmpeg`,否则编译torchvision的时候会出现ffmpeg版本不匹配的问题。
 
 - 在3060的8G笔记本上训练ACT的50组数据的时间大概为6小时，在4090和A100的电脑上训练50组数据时间大概为2~3小时。
 
@@ -857,9 +967,9 @@ URDF: [URDF](https://github.com/Welt-liu/star-arm-moveit2/tree/main/src/cello_de
 
 Huggingface Project: [Lerobot](https://github.com/huggingface/lerobot/tree/main)
 
-ACT or ALOHA: [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](https://tonyzhaozh.github.io/aloha/)
+ACT 或 ALOHA: [使用低成本硬件学习精细双手操作](https://tonyzhaozh.github.io/aloha/)
 
-VQ-BeT: [VQ-BeT: Behavior Generation with Latent Actions](https://sjlee.cc/vq-bet/)
+VQ-BeT: [VQ-BeT: 使用潜在动作生成行为](https://sjlee.cc/vq-bet/)
 
 Diffusion Policy: [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)
 

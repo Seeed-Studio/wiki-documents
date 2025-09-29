@@ -11,7 +11,7 @@ no_comments: false # for Disqus
 
 ---
 
-# J1010 Boot From SD Card
+# J1010 SDカードからの起動
 
 ## はじめに
 

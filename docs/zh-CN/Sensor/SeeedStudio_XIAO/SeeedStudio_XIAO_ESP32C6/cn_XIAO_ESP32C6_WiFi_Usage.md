@@ -60,189 +60,189 @@ ESP32-C6 提供了广泛的 WiFi 网络功能。通常，我们可以在 ESP32 �
 
 - `WiFiGenericClass::persistent(bool persistent)` -- 是一个用于启用或禁用 ESP32 WiFi 库持久模式的方法。当启用持久模式时，Wi-Fi 配置存储在非易失性存储器 (NVM) 中，即使在断电或重置后也会保留。当禁用持久模式时，配置存储在 RAM 中，在断电或重置后会丢失。
 
- 	- **输入参数**
-  		- **persistent**: 如果参数为 true，则启用持久模式。如果参数为 false，则禁用持久模式。
+  - **输入参数**
+    - **persistent**: 如果参数为 true，则启用持久模式。如果参数为 false，则禁用持久模式。
 
 - `WiFiGenericClass::enableLongRange(bool enable)` -- 该函数用于启用或禁用 WiFi 模块的长距离 (LR) 功能。启用时，LR 功能允许模块连接到比平常更远的 WiFi 网络，但数据传输速率较低。
 
- 	- **输入参数**
-  		- **enable**: 该参数应设置为 true 以启用该功能，设置为 false 以禁用该功能。
+  - **输入参数**
+    - **enable**: 该参数应设置为 true 以启用该功能，设置为 false 以禁用该功能。
 
 - `WiFiGenericClass::mode(wifi_mode_t m)` -- 该函数用于设置设备的 WiFi 模式。
 
- 	- **输入参数**
-  		- **m**: m 参数指定要设置的模式，可以是 wifi_mode_t 枚举中定义的以下常量之一：
-   			- **WIFI_MODE_NULL**: 禁用 WiFi 站点和接入点模式。
-   			- **WIFI_MODE_STA**: 启用 WiFi 站点模式以连接到现有的 WiFi 网络。
-   			- **WIFI_MODE_AP**: 启用接入点模式以创建新的 WiFi 网络。
-   			- **WIFI_MODE_APSTA**: 同时启用 WiFi 站点和接入点模式。
+  - **输入参数**
+    - **m**: m 参数指定要设置的模式，可以是 wifi_mode_t 枚举中定义的以下常量之一：
+      - **WIFI_MODE_NULL**: 禁用 WiFi 站点和接入点模式。
+      - **WIFI_MODE_STA**: 启用 WiFi 站点模式以连接到现有的 WiFi 网络。
+      - **WIFI_MODE_AP**: 启用接入点模式以创建新的 WiFi 网络。
+      - **WIFI_MODE_APSTA**: 同时启用 WiFi 站点和接入点模式。
 
 - `WiFiGenericClass::setSleep(wifi_ps_type_t sleepType)` -- 该函数为 WiFi 模块设置省电模式。
 
- 	- **输入参数**
-  		- **sleepType**: sleepType 参数是一个枚举类型，指定要使用的省电模式类型。有三种可能的睡眠类型：
-   			- **WIFI_PS_NONE**: 这是默认睡眠模式，WiFi 模块不进入省电模式。
-   			- **WIFI_PS_MIN_MODEM**: 在此模式下，WiFi 模块关闭其调制解调器，同时保持与接入点 (AP) 的连接。
-   			- **WIFI_PS_MAX_MODEM**: 在此模式下，WiFi 模块同时关闭调制解调器和站点，这会导致与 AP 断开连接。
+  - **输入参数**
+    - **sleepType**: sleepType 参数是一个枚举类型，指定要使用的省电模式类型。有三种可能的睡眠类型：
+      - **WIFI_PS_NONE**: 这是默认睡眠模式，WiFi 模块不进入省电模式。
+      - **WIFI_PS_MIN_MODEM**: 在此模式下，WiFi 模块关闭其调制解调器，同时保持与接入点 (AP) 的连接。
+      - **WIFI_PS_MAX_MODEM**: 在此模式下，WiFi 模块同时关闭调制解调器和站点，这会导致与 AP 断开连接。
 
 ### STA 功能
 
 - `WiFiSTAClass::status()` -- 返回连接状态。
 
- 	- **输出**: wl_status_t 中定义的值之一。
-  		- **WL_NO_SHIELD**: 此状态码表示 Wi-Fi 模块不存在。
-    - **WL_IDLE_STATUS**: 此状态码表示 Wi-Fi 模块未执行任何操作。
-    - **WL_NO_SSID_AVAIL**: 此状态码表示在扫描期间未找到 Wi-Fi 网络。
-    - **WL_SCAN_COMPLETED**: 此状态码表示 Wi-Fi 扫描已成功完成。
-    - **WL_CONNECTED**: 此状态码表示 ESP32 已成功连接到 Wi-Fi 网络。
-    - **WL_CONNECT_FAILED**: 此状态码表示连接到 Wi-Fi 网络失败。
-    - **WL_CONNECTION_LOST**: 此状态码表示与 Wi-Fi 网络的连接已丢失。
-    - **WL_DISCONNECTED**: 此状态码表示 ESP32 之前连接到 Wi-Fi 网络，但当前未连接到任何网络。
+  - **输出**: wl_status_t 中定义的值之一。
+    - **WL_NO_SHIELD**: 此状态码表示 Wi-Fi 模块不存在。
+  - **WL_IDLE_STATUS**: 此状态码表示 Wi-Fi 模块未执行任何操作。
+  - **WL_NO_SSID_AVAIL**: 此状态码表示在扫描期间未找到 Wi-Fi 网络。
+  - **WL_SCAN_COMPLETED**: 此状态码表示 Wi-Fi 扫描已成功完成。
+  - **WL_CONNECTED**: 此状态码表示 ESP32 已成功连接到 Wi-Fi 网络。
+  - **WL_CONNECT_FAILED**: 此状态码表示连接到 Wi-Fi 网络失败。
+  - **WL_CONNECTION_LOST**: 此状态码表示与 Wi-Fi 网络的连接已丢失。
+  - **WL_DISCONNECTED**: 此状态码表示 ESP32 之前连接到 Wi-Fi 网络，但当前未连接到任何网络。
 
 - `WiFiSTAClass::begin(const char* wpa2_ssid, wpa2_auth_method_t method, const char* wpa2_identity, const char* wpa2_username, const char *wpa2_password, const char* ca_pem, const char* client_crt, const char* client_key, int32_t channel, const uint8_t* bssid, bool connect)` -- 启动与 WPA2 企业级 AP 的 Wifi 连接。
 
- 	- **输入参数** (可选)
-  		- **ssid**: 指向 SSID 字符串的指针。
-  		- **method**: WPA2 的认证方法 (WPA2_AUTH_TLS, WPA2_AUTH_PEAP, WPA2_AUTH_TTLS)
-  		- **wpa2_identity**: 指向实体的指针
-  		- **wpa2_username**: 指向用户名的指针
-  		- **wpa2_password**: 指向密码的指针。
-  		- **ca_pem**: 指向包含 CA 证书的 .pem 文件内容的字符串的指针
-  		- **client_crt**: 指向包含客户端证书的 .crt 文件内容的字符串的指针
-  		- **client_key**: 指向包含客户端密钥的 .key 文件内容的字符串的指针
-  		- **channel**: 可选。AP 的信道
-  		- **bssid**: 可选。AP 的 BSSID / MAC
-  		- **connect**: 可选。调用连接
+  - **输入参数** (可选)
+    - **ssid**: 指向 SSID 字符串的指针。
+    - **method**: WPA2 的认证方法 (WPA2_AUTH_TLS, WPA2_AUTH_PEAP, WPA2_AUTH_TTLS)
+    - **wpa2_identity**: 指向实体的指针
+    - **wpa2_username**: 指向用户名的指针
+    - **wpa2_password**: 指向密码的指针。
+    - **ca_pem**: 指向包含 CA 证书的 .pem 文件内容的字符串的指针
+    - **client_crt**: 指向包含客户端证书的 .crt 文件内容的字符串的指针
+    - **client_key**: 指向包含客户端密钥的 .key 文件内容的字符串的指针
+    - **channel**: 可选。AP 的信道
+    - **bssid**: 可选。AP 的 BSSID / MAC
+    - **connect**: 可选。调用连接
 
 - `WiFiSTAClass::reconnect()` -- 将强制断开连接，然后开始重新连接到 AP。
 
- 	- **输出**: True/False。
+  - **输出**: True/False。
 
 - `WiFiSTAClass::disconnect(bool wifioff, bool eraseap)` -- 断开网络连接。
 
- 	- **输入参数**
-  		- **wifioff**: wifioff `true` 关闭 Wi-Fi 无线电。
-  		- **eraseap**: eraseap `true` 从 NVS 存储器中擦除 AP 配置。
- 
- 	- **输出**: True/False。
+  - **输入参数**
+    - **wifioff**: wifioff `true` 关闭 Wi-Fi 无线电。
+    - **eraseap**: eraseap `true` 从 NVS 存储器中擦除 AP 配置。
+
+  - **输出**: True/False。
 
 - `WiFiSTAClass::config(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dns1, IPAddress dns2)` -- 更改 IP 配置设置，禁用 dhcp 客户端。
 
- 	- **输入参数**
-  		- **local_ip**: 静态 IP 配置。
-  		- **gateway**: 静态网关配置。
-  		- **subnet**: 静态子网掩码。
-  		- **dns1**: 静态 DNS 服务器 1。
-  		- **dns2**: 静态 DNS 服务器 2。
+  - **输入参数**
+    - **local_ip**: 静态 IP 配置。
+    - **gateway**: 静态网关配置。
+    - **subnet**: 静态子网掩码。
+    - **dns1**: 静态 DNS 服务器 1。
+    - **dns2**: 静态 DNS 服务器 2。
 
 - `WiFiSTAClass::setAutoConnect(bool autoConnect)` -- 已弃用。设置ESP32站点在上电时是否自动连接到AP（已记录的）。默认启用自动连接。
 
- 	- **输入参数**
-  		- **autoConnect**: 自动连接布尔值。
+  - **输入参数**
+    - **autoConnect**: 自动连接布尔值。
 
- 	- **输出**: False。
+  - **输出**: False。
 
 - `WiFiSTAClass::waitForConnectResult(unsigned long timeoutLength)` -- 等待WiFi连接达到结果。
 
- 	- **输入参数**
-  		- **timeoutLength**: 该参数指定等待建立连接的最大时间，以毫秒为单位。
+  - **输入参数**
+    - **timeoutLength**: 该参数指定等待建立连接的最大时间，以毫秒为单位。
 
- 	- **输出**: wl_status_t中定义的值之一。
+  - **输出**: wl_status_t中定义的值之一。
 
 - `WiFiSTAClass::localIP()` -- 获取站点接口IP地址。
 
- 	- **输出**: IPAddress站点IP。
+  - **输出**: IPAddress站点IP。
 
 - `WiFiSTAClass::macAddress(uint8_t* mac)` -- 获取站点接口MAC地址。
 
- 	- **输入参数**
-  		- **mac** (可选): 指向长度为WL_MAC_ADDR_LENGTH的uint8_t数组的指针。
+  - **输入参数**
+    - **mac** (可选): 指向长度为WL_MAC_ADDR_LENGTH的uint8_t数组的指针。
 
- 	- **输出**: 指向uint8_t *的指针。
+  - **输出**: 指向uint8_t *的指针。
 
 - `WiFiSTAClass::SSID()` -- 返回与网络关联的当前SSID。
 
- 	- **输出**: SSID。
+  - **输出**: SSID。
 
 - `WiFiSTAClass::RSSI(void)` -- 返回当前网络RSSI。
 
- 	- **输出**: RSSI。
+  - **输出**: RSSI。
 
 ### AP函数
 
 - `WiFiAPClass::softAP(const char* ssid, const char* passphrase, int channel, int ssid_hidden, int max_connection, bool ftm_responder)` -- 这是ESP32-C6 WiFi库中的一个函数。它用于设置SoftAP（软件接入点），允许其他设备连接到ESP32-C6并访问其资源。
 
- 	- **输入参数**
-  		- **ssid**:              指向SSID的指针（最多63个字符）。
-    - **passphrase**:        （WPA2最少8个字符，开放式使用NULL）。
-    - **channel**:           WiFi信道号，1 - 13。
-    - **ssid_hidden**:       网络隐藏（0 = 广播SSID，1 = 隐藏SSID）。
-    - **max_connection**:    最大同时连接客户端数，1 - 4。
+  - **输入参数**
+    - **ssid**:              指向SSID的指针（最多63个字符）。
+  - **passphrase**:        （WPA2最少8个字符，开放式使用NULL）。
+  - **channel**:           WiFi信道号，1 - 13。
+  - **ssid_hidden**:       网络隐藏（0 = 广播SSID，1 = 隐藏SSID）。
+  - **max_connection**:    最大同时连接客户端数，1 - 4。
 
- 	- **输出**: True/False。
+  - **输出**: True/False。
 
 - `WiFiAPClass::softAPgetStationNum()` -- 获取连接到softAP接口的站点/客户端数量。
 
- 	- **输出**: 站点数量。
+  - **输出**: 站点数量。
 
 - `WiFiAPClass::softAPConfig(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dhcp_lease_start)` -- 用于配置SoftAP的函数。
 
- 	- **输入参数**
-  		- **local_ip**:      接入点IP。
-  		- **gateway**:       网关IP。
-  		- **subnet**:        子网掩码。
+  - **输入参数**
+    - **local_ip**:      接入点IP。
+    - **gateway**:       网关IP。
+    - **subnet**:        子网掩码。
 
- 	- **输出**: True/False。
+  - **输出**: True/False。
 
 - `WiFiAPClass::softAPIP()` -- 获取softAP接口IP地址。
 
- 	- **输出**: IPAddress softAP IP。
+  - **输出**: IPAddress softAP IP。
 
 - `WiFiAPClass::softAPmacAddress(uint8_t* mac)` -- 获取softAP接口MAC地址。
 
- 	- **输入参数**
-  		- **mac** (可选):   指向长度为WL_MAC_ADDR_LENGTH的uint8_t数组的指针。
+  - **输入参数**
+    - **mac** (可选):   指向长度为WL_MAC_ADDR_LENGTH的uint8_t数组的指针。
 
- 	- **输出**: 指向uint8_t*的指针或字符串mac。
+  - **输出**: 指向uint8_t*的指针或字符串mac。
 
 ### WiFi扫描函数
 
 - `WiFiScanClass::scanNetworks(bool async, bool show_hidden, bool passive, uint32_t max_ms_per_chan, uint8_t channel, const char * ssid, const uint8_t * bssid)` -- 开始扫描可用的WiFi网络。
 
- 	- **输入参数**
-  		- **async**: 该参数是一个布尔值，决定是否异步执行扫描。如果设置为true，函数立即返回，扫描结果可以稍后通过调用getScanResults()函数获得。如果设置为false，函数将阻塞直到扫描完成。
-  		- **show_hidden**: 该参数是一个布尔值，决定函数是否应在扫描结果中包含隐藏网络。
-  		- **passive**: 该参数是一个布尔值，决定函数是否应执行被动扫描。如果设置为true，函数在扫描期间不会传输任何数据包，这可能需要更长时间，但在某些情况下可能有用。
-  		- **max_ms_per_chan**: 该参数是扫描每个信道的最大时间，以毫秒为单位。
-  		- **channel**: 该参数是要扫描的Wi-Fi信道。如果设置为0，函数将扫描所有可用信道。
-  		- **ssid**: 该参数是指向包含要扫描网络SSID的以null结尾字符串的指针。如果设置为nullptr，函数将扫描所有可用网络。
-  		- **bssid**: 该参数是指向包含要扫描接入点MAC地址的6字节数组的指针。如果设置为nullptr，函数将扫描所有接入点。
+  - **输入参数**
+    - **async**: 该参数是一个布尔值，决定是否异步执行扫描。如果设置为true，函数立即返回，扫描结果可以稍后通过调用getScanResults()函数获得。如果设置为false，函数将阻塞直到扫描完成。
+    - **show_hidden**: 该参数是一个布尔值，决定函数是否应在扫描结果中包含隐藏网络。
+    - **passive**: 该参数是一个布尔值，决定函数是否应执行被动扫描。如果设置为true，函数在扫描期间不会传输任何数据包，这可能需要更长时间，但在某些情况下可能有用。
+    - **max_ms_per_chan**: 该参数是扫描每个信道的最大时间，以毫秒为单位。
+    - **channel**: 该参数是要扫描的Wi-Fi信道。如果设置为0，函数将扫描所有可用信道。
+    - **ssid**: 该参数是指向包含要扫描网络SSID的以null结尾字符串的指针。如果设置为nullptr，函数将扫描所有可用网络。
+    - **bssid**: 该参数是指向包含要扫描接入点MAC地址的6字节数组的指针。如果设置为nullptr，函数将扫描所有接入点。
 
- 	- **输出**: 此函数的返回值是一个整数，表示扫描到的网络数量。
+  - **输出**: 此函数的返回值是一个整数，表示扫描到的网络数量。
 
 - `WiFiScanClass::getNetworkInfo(uint8_t i, String &ssid, uint8_t &encType, int32_t &rssi, uint8_t* &bssid, int32_t &channel)` -- 将扫描到的wifi的所有信息加载到ptr参数中。
 
- 	- **输入参数**
-  		- **i**: 该函数用于检索指定索引i处扫描网络的信息。
-  		- **ssid**: ssid参数是对String变量的引用，函数在其中存储网络的SSID。
-  		- **encType**: encType参数是对uint8_t变量的引用，函数在其中存储网络的加密类型（0 = 开放，1 = WEP，2 = WPA_PSK，3 = WPA2_PSK，4 = WPA_WPA2_PSK）。
-  		- **rssi**: rssi参数是对int32_t变量的引用，函数在其中存储网络的接收信号强度指示（RSSI）。
-  		- **bssid**: bssid参数是对uint8_t*指针的引用，函数在其中存储网络的BSSID（MAC地址）。
-  		- **channel**: channel参数是对int32_t变量的引用，函数在其中存储网络的信道号。
+  - **输入参数**
+    - **i**: 该函数用于检索指定索引i处扫描网络的信息。
+    - **ssid**: ssid参数是对String变量的引用，函数在其中存储网络的SSID。
+    - **encType**: encType参数是对uint8_t变量的引用，函数在其中存储网络的加密类型（0 = 开放，1 = WEP，2 = WPA_PSK，3 = WPA2_PSK，4 = WPA_WPA2_PSK）。
+    - **rssi**: rssi参数是对int32_t变量的引用，函数在其中存储网络的接收信号强度指示（RSSI）。
+    - **bssid**: bssid参数是对uint8_t*指针的引用，函数在其中存储网络的BSSID（MAC地址）。
+    - **channel**: channel参数是对int32_t变量的引用，函数在其中存储网络的信道号。
 
- 	- **输出**: True/False。
+  - **输出**: True/False。
 
 - `WiFiScanClass::SSID(uint8_t i)` -- 返回网络扫描期间发现的SSID。
 
- 	- **输入参数**
-  		- **i**: 指定要从哪个网络项目获取信息。
+  - **输入参数**
+    - **i**: 指定要从哪个网络项目获取信息。
 
- 	- **输出**: 扫描网络列表中指定项目的SSID字符串。
+  - **输出**: 扫描网络列表中指定项目的SSID字符串。
 
 - `WiFiScanClass::RSSI(uint8_t i)` -- 返回scanNetworks期间发现的网络的RSSI。
 
- 	- **输入参数**
-  		- **i**: 指定要从哪个网络项目获取信息。
+  - **输入参数**
+    - **i**: 指定要从哪个网络项目获取信息。
 
 - **输出**: 扫描网络列表中指定项目的 RSSI 有符号值。
 
@@ -250,34 +250,34 @@ ESP32-C6 提供了广泛的 WiFi 网络功能。通常，我们可以在 ESP32 �
 
 - `WiFiClient::connect(IPAddress ip, uint16_t port, int32_t timeout)` -- 此函数在 WiFiClient 库中用于连接到远程 IP 地址和端口，并指定超时值。
 
- 	- **输入参数**
-  		- **ip**:   要连接的服务器的 IP 地址。
-  		- **port**: 要连接的服务器的端口号。
-  		- **timeout** (可选): 等待连接建立的最大时间，以毫秒为单位。如果在此时间内未建立连接，函数将返回错误。如果 timeout 设置为 0，函数将无限期等待连接建立。
+  - **输入参数**
+    - **ip**:   要连接的服务器的 IP 地址。
+    - **port**: 要连接的服务器的端口号。
+    - **timeout** (可选): 等待连接建立的最大时间，以毫秒为单位。如果在此时间内未建立连接，函数将返回错误。如果 timeout 设置为 0，函数将无限期等待连接建立。
 
 - `WiFiClient::stop()` -- 此函数用于断开客户端与服务器的连接并释放客户端使用的套接字/端口。一旦调用此函数，客户端将无法再发送或接收数据。
 
 - `WiFiClient::setTimeout(uint32_t seconds)` -- 此函数设置客户端等待连接建立或接收数据的最大秒数。如果连接或数据传输时间超过指定的超时时间，连接将被关闭。
 
- 	- **输入参数**
-  		- **seconds**:   超时的秒数。
+  - **输入参数**
+    - **seconds**:   超时的秒数。
 
 - `WiFiClient::write(uint8_t data)` -- 通过 WiFiClient 实例向连接的服务器写入单个字节的数据。或者 `WiFiClient::write(const uint8_t *buf, size_t size)`。
 
- 	- **输入参数**
-  		- **data**:   需要通过已建立的网络连接发送的单个字节数据。
+  - **输入参数**
+    - **data**:   需要通过已建立的网络连接发送的单个字节数据。
 
 - `WiFiClient::read()` -- 此函数从连接的服务器读取单个字节的传入数据。它返回读取的字节作为整数值。如果没有可用数据，返回 -1。或者 `read(uint8_t *buf, size_t size)`。
 
- 	- **输出**: 表示接收字节数的整数值。如果返回值为 0，表示服务器已关闭连接。
+  - **输出**: 表示接收字节数的整数值。如果返回值为 0，表示服务器已关闭连接。
 
 - `WiFiClient::peek()` -- 此函数用于检查是否有任何数据可从服务器读取，而不实际读取它。
 
- 	- **输出**: 它返回下一个传入数据字节，而不从接收缓冲区中移除它。如果没有可用数据，返回 -1。
+  - **输出**: 它返回下一个传入数据字节，而不从接收缓冲区中移除它。如果没有可用数据，返回 -1。
 
 - `WiFiClient::available()` -- 此函数用于检查有多少字节的数据可从服务器读取。
 
- 	- **输出**: 它返回一个整数值，表示可读取的字节数。
+  - **输出**: 它返回一个整数值，表示可读取的字节数。
 
 ### WiFi 服务器函数
 
@@ -285,13 +285,13 @@ ESP32-C6 提供了广泛的 WiFi 网络功能。通常，我们可以在 ESP32 �
 
 - `WiFiServer::begin(uint16_t port, int enable)` -- 此函数用于在指定端口上启动服务器。服务器将监听传入的客户端连接。
 
- 	- **输入参数**
-  		- **port**: 要监听的端口号。
-  		- **enable** (可选): 指示服务器启动后是否应立即启用的标志。此标志默认设置为 true。
+  - **输入参数**
+    - **port**: 要监听的端口号。
+    - **enable** (可选): 指示服务器启动后是否应立即启用的标志。此标志默认设置为 true。
 
 - `WiFiServer::hasClient()` -- 此函数用于检查服务器上是否有任何传入的客户端连接可用。此函数可在循环中使用以持续检查新连接。
 
- 	- **输出**: 如果有客户端已连接，返回 WiFiClient 对象；如果没有客户端等待连接，返回 NULL 指针。
+  - **输出**: 如果有客户端已连接，返回 WiFiClient 对象；如果没有客户端等待连接，返回 NULL 指针。
 
 - `WiFiServer::end()` -- 此函数用于停止服务器并释放相关资源。一旦调用，服务器将无法再接受新的客户端连接。任何现有的客户端连接将保持打开状态，直到被客户端或服务器关闭。`WiFiServer::close()` 和 `WiFiServer::stop()` 具有相同的功能。
 
@@ -299,18 +299,18 @@ ESP32-C6 提供了广泛的 WiFi 网络功能。通常，我们可以在 ESP32 �
 
 - `WiFiMulti::addAP(const char* ssid, const char *passphrase)` -- 此函数用于向 WiFiMulti 对象将尝试连接的可用接入点 (AP) 列表中添加新的接入点。
 
- 	- **输入参数**
-  		- **ssid**: 指向 SSID 的指针（最多 63 个字符）。
-  		- **passphrase**: （WPA2 最少 8 个字符，开放网络使用 NULL）。
+  - **输入参数**
+    - **ssid**: 指向 SSID 的指针（最多 63 个字符）。
+    - **passphrase**: （WPA2 最少 8 个字符，开放网络使用 NULL）。
 
- 	- **输出**: True/False
+  - **输出**: True/False
 
 - `WiFiMulti::run(uint32_t connectTimeout)` -- 此函数尝试按顺序连接到已保存的接入点之一，直到成功连接到其中一个。
 
- 	- **输入参数**
-  		- **connectTimeout**: 此参数指定等待连接的最大时间（以毫秒为单位）。如果 connectTimeout 设置为 0，函数将不会超时，并将无限期尝试连接。
+  - **输入参数**
+    - **connectTimeout**: 此参数指定等待连接的最大时间（以毫秒为单位）。如果 connectTimeout 设置为 0，函数将不会超时，并将无限期尝试连接。
 
- 	- **输出**: 状态
+  - **输出**: 状态
 
 ## 扫描附近的WiFi网络
 
@@ -459,7 +459,7 @@ void loop() {
 WiFi.mode(WIFI_STA);
 ```
 
-Then, use `WiFi.begin()` to connect to a network. You must pass as arguments the network SSID and its password:
+然后，使用`WiFi.begin()`来连接网络。你必须传递网络SSID及其密码作为参数：
 
 ```cpp
 WiFi.begin(ssid, password);
@@ -593,7 +593,7 @@ void loop() {
 WiFi.softAP(ssid, password);
 ```
 
-Next, we need to get the access point IP address using the softAPIP() method and print it in the Serial Monitor.
+接下来,我们需要使用softAPIP()方法获取接入点IP地址,并在串口监视器中打印出来。
 
 ```cpp
 IPAddress myIP = WiFi.softAPIP();
@@ -715,7 +715,7 @@ void loop() {
 
 如果这个窗口没有显示，您需要安装以下库依赖项：
 
-- [ArduinoJson](https://github.com/bblanchon/ArduinoJson) (by bblanchon)
+- [ArduinoJson](https://github.com/bblanchon/ArduinoJson) (作者：bblanchon)
 - [TaskScheduler](https://github.com/arkhipenko/TaskScheduler)
 - [AsyncTCP](https://github.com/me-no-dev/AsyncTCP) (ESP32)
 
@@ -749,7 +749,7 @@ String msg = "Hi from node 1 ";
 Scheduler userScheduler; // to control your personal task
 ```
 
-Create a `painlessMesh` object called mesh to handle the mesh network.
+创建一个名为 mesh 的 `painlessMesh` 对象来处理网状网络。
 
 ```cpp
 painlessMesh  mesh;
@@ -761,7 +761,7 @@ painlessMesh  mesh;
 Task taskSendMessage(TASK_SECOND * 1 , TASK_FOREVER, &sendMessage);
 ```
 
-The `sendMessage()` function sends a message to all nodes in the message network (broadcast).
+`sendMessage()` 函数向消息网络中的所有节点发送消息（广播）。
 
 ```cpp
 void sendMessage() {
@@ -780,7 +780,7 @@ void sendMessage() {
 mesh.sendBroadcast(msg);
 ```
 
-Every time a new message is sent, the code changes the interval between messages (one to five seconds).
+每次发送新消息时，代码会改变消息之间的间隔时间（一到五秒）。
 
 ```cpp
 taskSendMessage.setInterval(random(TASK_SECOND * 1, TASK_SECOND * 5));
@@ -826,13 +826,13 @@ void nodeTimeAdjustedCallback(int32_t offset) {
 mesh.setDebugMsgTypes( ERROR | STARTUP );  // set before init() so that you can see startup messages
 ```
 
-Initialize the mesh with the details defined earlier.
+使用先前定义的细节初始化网格。
 
 ```cpp
 mesh.init(MESH_PREFIX, MESH_PASSWORD, &userScheduler, MESH_PORT);
 ```
 
-Assign all the callback functions to their corresponding events.
+将所有回调函数分配给它们对应的事件。
 
 ```cpp
 mesh.onReceive(&receivedCallback);
@@ -847,13 +847,13 @@ mesh.onNodeTimeAdjusted(&nodeTimeAdjustedCallback);
 userScheduler.addTask(taskSendMessage);
 ```
 
-Finally, enable the taskSendMessage, so that the program starts sending the messages to the mesh.
+最后,启用 taskSendMessage,这样程序就会开始向网格发送消息。
 
 ```cpp
 taskSendMessage.enable();
 ```
 
-To keep the mesh running, add `mesh.update()` to the `loop()`.
+为了保持网格运行，在 `loop()` 中添加 `mesh.update()`。
 
 ```cpp
 void loop() {
@@ -870,9 +870,9 @@ void loop() {
 
 以下是原文的参考链接，欢迎通过以下原文链接了解更多关于 ESP32 网络的内容。
 
-- [ESP32 Useful Wi-Fi Library Functions (Arduino IDE)](https://randomnerdtutorials.com/esp32-useful-wi-fi-functions-arduino/)
-- [ESP32 MQTT – Publish and Subscribe with Arduino IDE](https://randomnerdtutorials.com/esp32-mqtt-publish-subscribe-arduino-ide/)
-- [ESP-MESH with ESP32 and ESP8266: Getting Started (painlessMesh library)](https://randomnerdtutorials.com/esp-mesh-esp32-esp8266-painlessmesh/)
+- [ESP32 实用 Wi-Fi 库函数（Arduino IDE）](https://randomnerdtutorials.com/esp32-useful-wi-fi-functions-arduino/)
+- [ESP32 MQTT – 使用 Arduino IDE 发布和订阅](https://randomnerdtutorials.com/esp32-mqtt-publish-subscribe-arduino-ide/)
+- [ESP32 和 ESP8266 的 ESP-MESH：入门（painlessMesh 库）](https://randomnerdtutorials.com/esp-mesh-esp32-esp8266-painlessmesh/)
 
 有关使用 ESP32 开发板的更多信息，请阅读 Random Nerd Tutorials 的官方网站。
 
@@ -880,7 +880,7 @@ void loop() {
 
 并参考这些文档以了解更多关于 Arduino API 的详细信息：
 
-- [WiFi - Arduino Reference](https://www.arduino.cc/en/Reference/WiFi)
+- [WiFi - Arduino 参考文档](https://www.arduino.cc/en/Reference/WiFi)
 - [Wi-Fi API - Arduino ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/wifi.html)
 
 ## 技术支持与产品讨论

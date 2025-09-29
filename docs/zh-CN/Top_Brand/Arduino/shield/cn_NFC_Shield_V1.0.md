@@ -287,7 +287,7 @@ cid = nfc.readPassiveTargetID(PN532_MIFARE_ISO14443A);
 
 ```
 
-uint32_t authenticateBlock(uint8_t cardnumber, uint32_t cid, uint8_t blockaddress ,uint8_t authtype, uint8_t * keys)
+uint32_t 验证块(uint8_t 卡号, uint32_t cid, uint8_t 块地址, uint8_t 认证类型, uint8_t * 密钥)
 
 此方法用于在读/写操作之前使用密钥对内存块进行身份验证。成功时返回true。
 
@@ -309,7 +309,7 @@ nfc.authenticateBlock(1, id ,3,KEY_A,keys); //authenticate block 3, id is 32-bit
 
 ```
 
-**uint32_t readMemoryBlock(uint8_t cardnumber,uint8_t blockaddress, uint8_t * block)**
+**uint32_t 读取内存块(uint8_t 卡号,uint8_t 块地址, uint8_t * 块)**
 
 此方法在使用密钥认证后读取内存块。成功时返回true。
 
@@ -327,7 +327,7 @@ nfc.readMemoryBlock(1,3,block); //只有在认证成功时才能执行读取操�
 
 ```
 
-**uint32_t writeMemoryBlock(uint8_t cardnumber,uint8_t blockaddress, uint8_t * block)**
+**uint32_t 写入内存块(uint8_t 卡号,uint8_t 块地址, uint8_t * 块)**
 
 此方法在使用密钥认证后将数据写入内存块。成功时返回true。
 
@@ -349,7 +349,7 @@ nfc.writeMemoryBlock(1,0x08,writeBuffer); //将writeBuffer[]写入块地址0x08�
 
 ```
 
-**uint32_t PN532::configurePeerAsInitiator(uint8_t baudrate)**
+**uint32_t PN532::configurePeerAsInitiator(uint8_t 波特率)**
 
 此方法实现点对点发起者。成功时返回true。
 
@@ -451,11 +451,11 @@ if(nfc.configurePeerAsTarget()) //如果连接无错误
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

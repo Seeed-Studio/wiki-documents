@@ -121,7 +121,7 @@ esptool.py --chip esp32c3 --port /dev/cu.usbmodem11301 --baud 460800 write_flash
 人気のあるツールの一部を以下に示します。
 
 - [Thonny IDE](https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/)
-- [Arduino for micropython](https://docs.arduino.cc/micropython/)
+- [micropython用Arduino](https://docs.arduino.cc/micropython/)
 - [Visual Studio Code pymakr](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/)
 - [uPyCraft IDE](https://randomnerdtutorials.com/install-upycraft-ide-windows-pc-instructions/)
 
@@ -153,7 +153,7 @@ esp.flash_size()
 
 XIAO ESP32C3でThonnyを使用してMicroPythonのセットアップが正常に完了しました。おめでとうございます！
 
-### 2. Arduino Lab for MicroPython
+### 2. MicroPython用Arduino Lab
 
 Arduino lab for MicroPythonをダウンロードし、デバイスをPCに接続します。
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/esp32c3_micropython/7.png" /></div>
@@ -288,7 +288,7 @@ def do_connect():
 
 ```
 
-### Delay and timing
+### 遅延とタイミング
 
 The *time* module:
 

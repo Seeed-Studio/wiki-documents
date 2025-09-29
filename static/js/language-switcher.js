@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-09-18 15:22:18 (北京时间)
-// 多语言页面: 2001 个
+// 生成时间: 2025-09-22 14:55:35 (北京时间)
+// 多语言页面: 2005 个
 
 (function() {
   'use strict';
@@ -1481,6 +1481,12 @@
     "es",
     "ja"
   ],
+  "/chirpstack_lora_gateway_r1x00": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/recomputer_r1000_aws": [
     "cn",
     "en",
@@ -2508,6 +2514,12 @@
     "ja"
   ],
   "/reterminal_e10xx_with_esphome_advanced": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reterminal_e10xx_with_lopaka": [
     "cn",
     "en",
     "es",
@@ -3876,6 +3888,12 @@
     "ja"
   ],
   "/csi_camera_on_ros": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ac1": [
     "cn",
     "en",
     "es",
@@ -7901,6 +7919,12 @@
     "ja"
   ],
   "/respeaker_xvf3800_xiao_rgb": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/respeaker_xvf3800_xiao_tensorflow": [
     "cn",
     "en",
     "es",

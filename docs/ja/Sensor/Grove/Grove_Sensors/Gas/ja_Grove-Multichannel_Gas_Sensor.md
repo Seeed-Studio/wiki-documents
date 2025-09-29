@@ -345,9 +345,9 @@ void loop()
 ---------
 
 -   [Grove - Multichannel Gas Sensor v1.0 sch](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/Grove-Multichannel_Gas_Sensor_v1.0_sch.pdf)
--   [Grove - Multichannel Gas Sensor eagle files](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/Grove-Multichannel_Gas_Sensor_v1.0_eagle_files.zip)
--   [Arduino Library & Grove/Xadow firmware](https://github.com/Seeed-Studio/Mutichannel_Gas_Sensor)
--   [MiCS-6814 Datasheet](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/MiCS-6814_Datasheet.pdf)
+-   [Grove - Multichannel Gas Sensor eagleファイル](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/Grove-Multichannel_Gas_Sensor_v1.0_eagle_files.zip)
+-   [Arduinoライブラリ & Grove/Xadowファームウェア](https://github.com/Seeed-Studio/Mutichannel_Gas_Sensor)
+-   [MiCS-6814 データシート](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/res/MiCS-6814_Datasheet.pdf)
 
 <!-- このMarkdownファイルはhttps://www.seeedstudio.com/wiki/Grove_-_Multichannel_Gas_Sensorから作成されました -->
 

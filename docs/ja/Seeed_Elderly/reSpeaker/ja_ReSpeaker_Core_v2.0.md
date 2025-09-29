@@ -349,7 +349,7 @@ ls /dev/cu.usb* (Mac)
 ls /dev/ttyACM* (Linux)
 ```
 
-You should get back something like:
+次のようなものが返ってくるはずです：
 
 ```
 /dev/cu.usbmodem14XX where XX will vary depending on which USB port you used (on Mac)
@@ -382,7 +382,7 @@ ReSpeaker v2.0用のWi-Fiを選択し、```Enter```キーを押してWi-Fiパス
 ip address
 ```
 
-In the example below, we can see that this ReSpeaker's IP address is ```192.168.7.108```
+以下の例では、このReSpeakerのIPアドレスが```192.168.7.108```であることがわかります
 
 ```
 root@v2:/home/respeaker# ip address
@@ -618,7 +618,7 @@ respeaker@v2:~$ ps aux|grep pulse|grep -v grep
 respeak+  1109  0.0  0.7 363272  7932 ?        S<l  01:01   0:00 /usr/bin/pulseaudio --start --log-target=syslog
 ```
 
-If it's not, please refer to PulseAudio's documentation to enable the auto-spawn of PulseAudio. Then test via:
+もしそうでなければ、PulseAudioの自動起動を有効にするためにPulseAudioのドキュメントを参照してください。その後、以下でテストしてください：
 
 ```
 parecord --channels=8 --rate=16000 --format=s16le hello2.wav
@@ -833,7 +833,7 @@ if __name__ == '__main__':
     main()
 ```
 
-The result should be something like:
+結果は次のようになるはずです：
 
 ``` python
 respeaker@v2:~$ python tsl2561.py       
@@ -873,7 +873,7 @@ Light value is 31
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Ap.png)
 
-- **ステップ1.** 以下のコマンドを実行してReSpeaker Core v2.0のApを有効化します。
+- **ステップ 1.** 以下のコマンドを実行してReSpeaker Core v2.0のApを有効化します。
 
 ```
 sudo systemctl enable re-wifi.service
@@ -881,21 +881,21 @@ sudo reboot -f
 
 ```
 
-- **Step 2.** ReSpeaker Core v2.0のAPにアクセスします。ReSpeaker Core v2.0が再起動した後、スマートフォンまたはコンピューターでWiFiを検索してください。AP名は
+- **ステップ 2.** ReSpeaker Core v2.0のAPにアクセスします。ReSpeaker Core v2.0が再起動した後、スマートフォンまたはコンピューターでWiFiを検索してください。AP名は
    **ReSpeaker_xxxx**のようなものが見つかります。ユーザー名は**respeaker**、パスワードも**respeaker**です。
 
-- **Step 3.** これで、Putty、SSHモードを使用してシリアルコンソールにアクセスできます。Wlan1のIPは**192.168.42.1**です。この IPを使用して接続を設定する必要があります。
+- **ステップ 3.** これで、Putty、SSHモードを使用してシリアルコンソールにアクセスできます。Wlan1のIPは**192.168.42.1**です。この IPを使用して接続を設定する必要があります。
 ReSpeaker Core v2.0のユーザー名は**respeaker**、パスワードは**respeaker**です。
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/AP2.png)
 
-- **Step 3.** シリアルコンソールにアクセスしたら、[WiFiの設定](https://wiki.seeedstudio.com/ja/ReSpeaker_Core_v2.0/#a-wi-fi-setting-up)を行うことができます。
+- **ステップ 3.** シリアルコンソールにアクセスしたら、[WiFiの設定](https://wiki.seeedstudio.com/ja/ReSpeaker_Core_v2.0/#a-wi-fi-setting-up)を行うことができます。
 
 **Q3: 音量を調整するにはどうすればよいですか？**
 
 **A3:** Alsamixerを使用して再生音量とキャプチャ感度を調整できます。
 
-- **Step 1.** 以下のコードを入力してAlsamixerを開きます：
+- **ステップ 1.** 以下のコードを入力してAlsamixerを開きます：
 
 ```
 alsamixer

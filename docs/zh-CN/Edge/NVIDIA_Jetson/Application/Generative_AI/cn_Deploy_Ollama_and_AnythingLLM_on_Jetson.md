@@ -70,13 +70,13 @@ sudo apt install python3-pip
 pip3 install jetson-examples
 ```
 
-**Step2.** To deploy ollama on Jetson device with a single command, we can run:
+**步骤2.** 要使用单个命令在 Jetson 设备上部署 ollama，我们可以运行：
 
 ```bash
 reComputer run ollama
 ```
 
-**Step3.** Download the Llama3 large model using Ollama:
+**步骤3.** 使用 Ollama 下载 Llama3 large model:
 
 ```bash
 ollama run llama3

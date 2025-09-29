@@ -175,7 +175,7 @@ if __name__ == '__main__':
 
 ```
 
-Step 3. After completing the above steps, you will be able to obtain the Tracker's location information!
+步骤 3. 完成以上步骤后，你就能获取追踪器的位置信息了！
 
 ```
 {'location': {'lat': 22.5769055, 'lng': 113.9222236}, 'accuracy': 20}

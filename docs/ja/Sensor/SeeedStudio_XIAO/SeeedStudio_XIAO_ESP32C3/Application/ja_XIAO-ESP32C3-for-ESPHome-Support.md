@@ -503,7 +503,7 @@ sensor:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/37.png"style={{width:900, height:'auto'}}/></div>
 
-<!-- #### Grove -Smart Air Quality Sensor (SGP41)
+<!--#### Grove -スマート空気品質センサー (SGP41)
 
 SGP41デジタルガスセンサーは、SensirionのCMOSens®技術を使用しており、単一チップ上で完全で使いやすいセンサーシステムを提供します。室内空気中の揮発性有機化合物（VOC）と窒素酸化物（NOx）の濃度を測定し、デジタル出力信号を提供できます。さらに、このセンサーは優れた長期安定性と寿命を持っています。[こちらをクリック](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html?queryID=3ac9c3a1ed9e1a56a66b142e8282868a&objectID=5687&indexName=bazaar_retailer_products)して購入してください。
 

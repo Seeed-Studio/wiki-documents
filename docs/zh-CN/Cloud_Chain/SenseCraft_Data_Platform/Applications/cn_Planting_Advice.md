@@ -901,7 +901,7 @@ const char* dataNum_1 = "4097";  //Air temperature
 const char* dataNum_2 = "4098";  //Air humidity
 ```
 
-In addition to this, there are two lines in the code that parse the Access API.
+除此之外，代码中还有两行用于解析访问API。
 
 ```cpp
 String base64Credentials = base64::encode("YOUR-API-ID:YOUR-ACCESS-API-KEY");

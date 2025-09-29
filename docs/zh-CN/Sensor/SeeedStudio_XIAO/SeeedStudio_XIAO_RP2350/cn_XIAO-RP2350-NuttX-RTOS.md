@@ -74,7 +74,7 @@ Apache Nuttx 分为两个项目：
 ./tools/configure.sh board_name:your_application
 ```
 
-Also it's possible to check the list of board-supported a running the command:
+还可以通过运行以下命令来检查支持的板卡列表:
 
 ```bash
 ./tools/configure.sh -L
@@ -112,7 +112,7 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Now we select the NSH configuration to the xiao-rp2350 board:
+现在我们将 NSH 配置选择到 xiao-rp2350 开发板上：
 
 ```bash
 ./tools/configure.sh xiao-rp2350:nsh
@@ -137,7 +137,7 @@ NuttShell (NSH) NuttX-12.8.0
 nsh> 
 ```
 
-Typing `?`, you will access the available options for commands and built-in applications.
+输入 `?`，您将访问可用的命令和内置应用程序选项。
 
 ```bash
 nsh> ?
@@ -177,7 +177,7 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Now we select the NSH configuration to the xiao-rp2350 board:
+现在我们将 NSH 配置选择到 xiao-rp2350 开发板上：
 
 ```bash
 ./tools/configure.sh xiao-rp2350:usbnsh
@@ -189,13 +189,13 @@ Compile the source code.
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+将固件加载到您的开发板中，运行串行通信程序，如 minicon 或 picocom：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
 ```
 
-You must to press Enter 3 times, and then this message will show in the terminal.
+你必须按 Enter 键 3 次，然后这条消息将显示在终端中。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -211,19 +211,19 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Select the combo configuration to the xiao-rp2350 board.
+选择组合配置到 xiao-rp2350 板。
 
 ```bash
 ./tools/configure.sh xiao-rp2350:combo
 ```
 
-Compile de the source code.
+编译 translation 代码。
 
 ```bash
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+将固件加载到您的开发板中，运行串行通信程序，如 minicon 或 picocom：
 
 ```bash
 picocom -b 115200 /dev/ttyUSB0
@@ -265,7 +265,7 @@ IO_INPUT_PIN_PULLDOWN
 
 - 板载 LED：
   - 黄色            -> GPIO25
- 
+
 - GPIO：
   - 1 个输入           -> GPIO27
   - 1 个中断输入 -> GPIO26
@@ -286,7 +286,7 @@ nsh> ls /dev
 nsh> 
 ```
 
-Following these commands to read gpio27 and gpio26 (with interruption) and write at gpio28.
+按照以下命令读取 gpio27 和 gpio26（带中断）并在 gpio28 处写入。
 
 ```bash
 nsh> gpio -w 1 /dev/gpio26
@@ -332,12 +332,12 @@ led_daemon: LED set 0x01
 led_daemon: LED set 0x00
 ```
 
-The Seeed Studio XIAO RP2350 also has a WS2812 addressable LED that can be tested using ws2812 application:
+Seeed Studio XIAO RP2350 还有一个可寻址的 LED，可以使用 ws2812 应用程序进行测试：
+
 ```bash
 NuttShell (NSH) NuttX-12.8.0
 nsh> ws2812
 ```
-
 
 查看下面的视频演示，包含 gpio、leds 和 ws2812 示例：
 
@@ -346,7 +346,6 @@ nsh> ws2812
     <source src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/Nuttx/xiao-rp2350-nuttx-demo.mp4" type="video/mp4" />
   </video>
 </div>
-
 
 有关 NuttX RTOS 的更多信息，请访问 [NuttX 文档](https://nuttx.apache.org/docs/latest/index.html)
 

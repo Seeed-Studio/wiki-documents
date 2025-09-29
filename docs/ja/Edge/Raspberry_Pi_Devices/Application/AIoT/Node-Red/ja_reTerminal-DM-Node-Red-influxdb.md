@@ -53,9 +53,9 @@ Raspberry Pi搭載HMIであるreTerminal DMに[InfluxDB](https://www.influxdata.
 sudo apt update
 ```
 
-**Step 2**: Add the InfluxDB Repository
+**ステップ 2**: InfluxDBリポジトリを追加する
 
-Add the InfluxDB GPG key and repository to your system.
+InfluxDB GPG キーとリポジトリをシステムに追加してください。
 
 Add the GPG key:
 
@@ -184,7 +184,7 @@ sudo nano /etc/influxdb/influxdb.conf
 sudo systemctl restart influxdb
 ```
 
-**Step 6**. Connect to InfluxDB with the admin user:
+**ステップ 6**. 管理者ユーザーでInfluxDBに接続する：
 
 ```sh
 influx -username admin -password <password>

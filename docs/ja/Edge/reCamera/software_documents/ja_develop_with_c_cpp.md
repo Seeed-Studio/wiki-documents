@@ -73,7 +73,7 @@ sudo scp helloworld recamera@{recamera_IP}:/home/recamera/
 
 実行可能ファイルが正常に転送されました。
 
-**Step4**：reCamera端末で実行可能ファイルを実行します。
+**ステップ4**：reCamera端末で実行可能ファイルを実行します。
 
 ```bash
 ./helloworld

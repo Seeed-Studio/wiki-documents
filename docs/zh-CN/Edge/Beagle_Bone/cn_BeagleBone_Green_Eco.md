@@ -16,7 +16,6 @@ last_update:
 
 在 10 秒内启动 Linux，仅用一根 USB 线缆即可在 5 分钟内开始开发。
 
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Eco-p-6540.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
@@ -27,23 +26,23 @@ last_update:
 
 **特性 1：强大的核心与实时处理**
 
-* 集成 TI AM3358 1GHz ARM® Cortex-A8 处理器，配备 NEON™ SIMD 协处理器以实现加速处理。还包括双核可编程实时单元 (PRU-ICSS)，用于确定性、低延迟控制，这对工业自动化和机器人技术至关重要。
+- 集成 TI AM3358 1GHz ARM® Cortex-A8 处理器，配备 NEON™ SIMD 协处理器以实现加速处理。还包括双核可编程实时单元 (PRU-ICSS)，用于确定性、低延迟控制，这对工业自动化和机器人技术至关重要。
 
 **特性 2：环保电源管理**
 
-* 采用先进的 TI TPS6521403 PMIC，具有 PFM 模式和动态电压调节等功能。这显著优化了功耗，使其非常适合对能耗敏感和电池供电的应用。
+- 采用先进的 TI TPS6521403 PMIC，具有 PFM 模式和动态电压调节等功能。这显著优化了功耗，使其非常适合对能耗敏感和电池供电的应用。
 
 **特性 3：4 倍存储容量与 10 倍网络速度**
 
-* 配备 16GB 板载 eMMC 存储（增加四倍）并升级连接性，采用千兆以太网端口，提供比前代产品高达 10 倍的带宽，实现高速、稳定的网络通信。
+- 配备 16GB 板载 eMMC 存储（增加四倍）并升级连接性，采用千兆以太网端口，提供比前代产品高达 10 倍的带宽，实现高速、稳定的网络通信。
 
 **特性 4：丰富的现代连接性**
 
-* 配备升级的高速接口，包括千兆以太网端口和现代 USB Type-C 端口，用于电源和数据传输。为了快速原型设计，还包括两个内置 Grove 连接器（I2C 和 UART）Grove - Seeed Studio，可轻松、免焊接地连接到 Seeed Studio 广泛的传感器和执行器生态系统。
+- 配备升级的高速接口，包括千兆以太网端口和现代 USB Type-C 端口，用于电源和数据传输。为了快速原型设计，还包括两个内置 Grove 连接器（I2C 和 UART）Grove - Seeed Studio，可轻松、免焊接地连接到 Seeed Studio 广泛的传感器和执行器生态系统。
 
 **特性 5：开发就绪**
 
-* 预装了 BeagleBoard.org® 基金会指定的 Debian 软件镜像，提供强大且熟悉的 Linux 环境，配备完善的工具和库，简化您的开发过程。
+- 预装了 BeagleBoard.org® 基金会指定的 Debian 软件镜像，提供强大且熟悉的 Linux 环境，配备完善的工具和库，简化您的开发过程。
 
 ## 规格参数
 
@@ -68,17 +67,15 @@ last_update:
 |            | 重量                  | 40g                                                                                                                    | 45g                                                                                           |
 |            | 工作温度              | **-40 ~ 85℃**                                                                                                              | 0 ~ 75℃                                                                                       |
 
-
-
 ## 应用场景
 
-* 物联网
-* 智能家居
-* 工业应用
-* 自动化与过程控制
-* 人机界面
-* 传感器集线器
-* 机器人
+- 物联网
+- 智能家居
+- 工业应用
+- 自动化与过程控制
+- 人机界面
+- 传感器集线器
+- 机器人
 
 ## 硬件概述
 
@@ -89,32 +86,36 @@ BeagleBone® Green Eco 基于德州仪器的 AM335x ARM Cortex-A8 处理器构�
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/Functional-Block-Diagram.png" /></div>
 
-
 **处理器**
 BeagleBone® Green Eco 集成了德州仪器 AM335x 1GHz ARM® Cortex-A8 处理器，在单个 SoC 内结合了计算处理、图形加速和实时控制功能。该架构实现了带有 NEON™ SIMD 引擎和 VFPv3 浮点单元的 ARMv7-A，可高效执行复杂的计算任务，同时保持嵌入式应用的功耗效率。
 一个显著特性是可编程实时单元子系统和工业通信子系统 (PRU-ICSS)，包含独立于主 ARM 处理器运行的双 32 位 RISC 核心。这些 PRU 能够实现亚微秒响应时间的确定性实时控制和专用工业通信协议的实现。AM335x 通过 TI 的 Processor SDK 和开发环境支持包括 Linux 在内的高级操作系统和实时操作系统。
-* AM335x 1GHz ARM® Cortex-A8 处理器，15.0mm x 15.0mm，NFBGA (324)
-* NEON™ SIMD 协处理器和 VFPv3 浮点单元，用于加速媒体和信号处理* PowerVR SGX™ 图形加速器，支持 OpenGL ES 2.0
-* 双 32 位 PRU-ICSS，用于实时工业通信和控制
-* 支持工业接口，包括 EtherCAT、PROFINET 和 PROFIBUS
+
+- AM335x 1GHz ARM® Cortex-A8 处理器，15.0mm x 15.0mm，NFBGA (324)
+- NEON™ SIMD 协处理器和 VFPv3 浮点单元，用于加速媒体和信号处理
+- PowerVR SGX™ 图形加速器，支持 OpenGL ES 2.0
+- 双 32 位 PRU-ICSS，用于实时工业通信和控制
+- 支持工业接口，包括 EtherCAT、PROFINET 和 PROFIBUS
 
 **内存和存储**
 BeagleBone® Green Eco 包括：
-* 1x 512MB (4Gb) DDR3L RAM (Kingston D2516ECMDXGJDI-U)，16 位接口
-* 1x 16GB eMMC 板载闪存存储 (Kingston EMMC16G-WW28)，MMC1 8 位接口
-* 1x 32Kbit EEPROM (FMD FT24C32A-ELRT)，通过 I2C0 连接
-* MicroSD 卡槽，MMC0 4 位接口，用于可扩展存储
+
+- 1x 512MB (4Gb) DDR3L RAM (Kingston D2516ECMDXGJDI-U)，16 位接口
+- 1x 16GB eMMC 板载闪存存储 (Kingston EMMC16G-WW28)，MMC1 8 位接口
+- 1x 32Kbit EEPROM (FMD FT24C32A-ELRT)，通过 I2C0 连接
+- MicroSD 卡槽，MMC0 4 位接口，用于可扩展存储
 
 **接口和外设**
 BeagleBone® Green Eco 支持：
-* 千兆以太网连接
-* 1x USB 2.0 Type-C 端口，用于供电和通信
-* 1x USB 2.0 主机接口，Type-A
+
+- 千兆以太网连接
+- 1x USB 2.0 Type-C 端口，用于供电和通信
+- 1x USB 2.0 主机接口，Type-A
 
 **扩展连接器/接头，支持应用特定的扩展板**
-* 2x 46 针接头
-* 1x 6 针 UART0 接头
-* 两个 Grove 连接器（一个 I2C 和一个 UART），便于连接到 Grove 传感器和执行器生态系统
+
+- 2x 46 针接头
+- 1x 6 针 UART0 接头
+- 两个 Grove 连接器（一个 I2C 和一个 UART），便于连接到 Grove 传感器和执行器生态系统
 
 **接头引脚定义**
 
@@ -145,7 +146,6 @@ BeagleBone® Green Eco 支持：
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/4.png" /></div>
 
-
 **UART**
 
 :::note
@@ -170,7 +170,6 @@ BeagleBone® Green Eco 支持：
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/7.png" /></div>
 
-
 ## 入门指南
 
 :::note
@@ -185,10 +184,10 @@ Seeed Studio BeagleBone® Green 将作为闪存驱动器运行，为您提供文
 
 您将看到 PWR LED 稳定点亮。在 10 秒内，您应该看到其他 LED 以其默认配置闪烁。
 
-* D2 在启动时配置为以心跳模式闪烁
-* D3 在启动时配置为在 microSD 卡访问期间点亮
-* D4 在启动时配置为在 CPU 活动期间点亮
-* D5 在启动时配置为在 eMMC 访问期间点亮
+- D2 在启动时配置为以心跳模式闪烁
+- D3 在启动时配置为在 microSD 卡访问期间点亮
+- D4 在启动时配置为在 CPU 活动期间点亮
+- D5 在启动时配置为在 eMMC 访问期间点亮
 
 **步骤 2. 安装驱动程序**
 
@@ -204,11 +203,12 @@ Seeed Studio BeagleBone® Green 将作为闪存驱动器运行，为您提供文
 :::note
     对于 Windows 系统，请注意：
 
-* Windows 驱动程序认证警告可能会弹出两到三次。点击"忽略"、"安装"或"运行"
-* 要检查您运行的是 32 位还是 64 位 Windows，请参见[此处](https://support.microsoft.com/kb/827218)。
-* 在没有最新服务版本的系统上，您可能会遇到错误 (0xc000007b)。在这种情况下，请[安装](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523)并重试：
-* 您可能需要重启 Windows。
-* 这些驱动程序已测试可在 Windows 10 及以下版本上工作
+- Windows 驱动程序认证警告可能会弹出两到三次。点击"忽略"、"安装"或"运行"
+- 要检查您运行的是 32 位还是 64 位 Windows，请参见[此处](https://support.microsoft.com/kb/827218)。
+- 在没有最新服务版本的系统上，您可能会遇到错误 (0xc000007b)。在这种情况下，请[安装](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523)并重试：
+- 您可能需要重启 Windows。
+- 这些驱动程序已测试可在 Windows 10 及以下版本上工作
+
 :::
 
 :::note
@@ -242,7 +242,7 @@ Seeed Studio BeagleBone® Green 将作为闪存驱动器运行，为您提供文
 
 首先，您必须在这里下载合适的镜像。
 
-[![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/down_latest_image.png)](https://beagleboard.org/latest-images)
+[![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/down_latest_image.png)](https://www.beagleboard.org/distros/beaglebone-black-debian-12-11-2025-08-07-iot-vscode-v6-12-x)
 
 :::note
 由于大小需要，此下载可能需要约 30 分钟或更长时间。
@@ -276,9 +276,10 @@ Seeed Studio BeagleBone® Green 将作为闪存驱动器运行，为您提供文
 
 :::note
 
-* 您可能会看到关于损坏设备的警告。只要您指向您的 SD 卡进行写入，接受这个警告是没问题的。
-* 此时您不应该将 BeagleBone® 连接到计算机。
-* 此过程可能需要长达 10 分钟。
+- 您可能会看到关于损坏设备的警告。只要您指向您的 SD 卡进行写入，接受这个警告是没问题的。
+- 此时您不应该将 BeagleBone® 连接到计算机。
+- 此过程可能需要长达 10 分钟。
+
 :::
 
 **步骤 5. 从 SD 卡启动您的开发板**
@@ -307,6 +308,7 @@ Seeed Studio BeagleBone® Green 将作为闪存驱动器运行，为您提供文
 :::note
 如果您没有发现上述跟踪灯，请按 RESET 按钮重置开发板。
 :::
+
 当刷写完成时，所有 4 个 USRx LED 将**熄灭**。最新的 Debian 刷写镜像会在完成后自动关闭开发板。这可能需要**10 分钟**。关闭开发板电源，取出 SD 卡并重新上电即可完成。
 
 ## Seeed Studio BeagleBone® Green 的 Grove 模块
@@ -362,35 +364,33 @@ Grove 是一个模块化、标准化的连接器原型系统。Grove 采用积�
 |![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product6.jpg)|
 |[立即购买！](https://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)|[立即购买！](https://www.seeedstudio.com/5-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2642.html)|[立即购买！](https://www.seeedstudio.com/7-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2643.html)|
 
-
 ## 参考资料
 
 有许多参考资料可以帮助您获取有关该开发板的更多信息。
 
-* [BeagleBoard 主页](https://beagleboard.org/)
-* [BeagleBoard 入门指南](https://beagleboard.org/getting-started)
-* [故障排除](https://beagleboard.org/getting-started#troubleshooting)
-* [硬件文档](https://beagleboard.org/getting-started#hardware)
-* [BeagleBoard 项目](https://beagleboard.org/project)
-* [Seeed Studio BeagleBone® Green Eco 的 CE 认证](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-CE.pdf)
-* [Seeed Studio BeagleBone® Green Eco 的 FCC 认证](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-FCC.pdf)
+- [BeagleBoard 主页](https://beagleboard.org/)
+- [BeagleBoard 入门指南](https://beagleboard.org/getting-started)
+- [故障排除](https://beagleboard.org/getting-started#troubleshooting)
+- [硬件文档](https://beagleboard.org/getting-started#hardware)
+- [BeagleBoard 项目](https://beagleboard.org/project)
+- [Seeed Studio BeagleBone® Green Eco 的 CE 认证](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-CE.pdf)
+- [Seeed Studio BeagleBone® Green Eco 的 FCC 认证](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-FCC.pdf)
 
 ## 资源
 
-* **[PDF]** [AM335X 数据手册](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
-* **[PDF]** [Seeed Studio BeagleBone Green Eco 原理图](https://files.seeedstudio.com/products/102111198/res/BeagleBone%20Green%20Eco_V1.0_SCH_250814.pdf)
+- **[PDF]** [AM335X 数据手册](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
+- **[PDF]** [Seeed Studio BeagleBone Green Eco 原理图](https://files.seeedstudio.com/products/102111198/res/BeagleBone%20Green%20Eco_V1.0_SCH_250814.pdf)
 
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

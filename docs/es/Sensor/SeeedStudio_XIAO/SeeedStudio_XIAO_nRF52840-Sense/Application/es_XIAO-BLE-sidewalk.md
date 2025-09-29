@@ -251,7 +251,7 @@ Verifica la ruta del manifiesto actual:
 west manifest --path
 ```
 
-The path returned should be similar to the following format.
+La ruta devuelta debe ser similar al siguiente formato.
 
 ```
 > /path-to-ncs-folder/nrf/west.yml
@@ -279,7 +279,7 @@ Verifica la nueva ruta del manifiesto:
 west manifest --path
 ```
 
-The path returned should be similar to the following format.
+La ruta devuelta debe ser similar al siguiente formato.
 
 ```
 > /path-to-ncs-folder/sidewalk/west.yml

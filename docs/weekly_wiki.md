@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/15/2025
+  date: 09/29/2025
   author: Frank
 ---
 
@@ -17,53 +17,71 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 15th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 29th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Seeed Studio BeagleBone® Green Eco](https://wiki.seeedstudio.com/getting_started_with_seeedstudio_beaglebone_green_eco/)
+### [reComputer Industrial R20xx Getting Started](https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/1-102111198-Seeed-Studio-BeagleBoneR-Green-Eco.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" alt="pir" width={800} height="auto" /></p>
 
-**The Seeed Studio BeagleBone® Green Eco** is an industrial-grade, open-source single-board computer, co-developed with the BeagleBoard.org® Foundation and powered by the robust **TI AM3358 SoC**. This "Eco" version is engineered for high efficiency, incorporating an advanced TI power management chip (TPS6521403) to ensure optimized energy consumption. It is well-equipped for demanding applications with a generous 16GB of onboard eMMC storage and a Gigabit Ethernet port for high-speed network connectivity.
+The reComputer Industrial R20xx, powered by Raspberry Pi CM5, is an adaptable edge AI/IOT conrollert  with AI capabilities. It features comprehensive industrial interfaces **(2x Ethernet, 4xUSB, 3x RS485, 1x RS232, 8x DI and 8x DO)** and flexible wireless connectivity options **(4G/5G, LoRa®, Wi-Fi/BLE),** making it ideal for diverse industrial applications.
 
-### [Getting started with AmazingHand](https://wiki.seeedstudio.com/hand_amazinghand/)
+### [reComputer Industrial R21xx Getting Started](https://wiki.seeedstudio.com/recomputer_industrial_R21xx_getting_start/)
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/pollen-robotics/AmazingHand/main/assets/Patterns_Overview.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/6/-/6-recomputer-industrail-r2100.jpg" alt="pir" width={800} height="auto" /></p>
 
-The **AmazingHand** is an open-source robotic hand project designed to make research and experimentation with humanoid manipulation accessible and affordable. Traditional robotic hands are often prohibitively expensive and rely on complex, bulky forearm actuators. The AmazingHand solves this by integrating all its motors directly into a compact, 3D-printable design.
+The reComputer Industrial R21xx, powered by Raspberry Pi CM5, is an adaptable edge AI computer  with AI capabilities. It features comprehensive industrial interfaces **(2x Ethernet, 4xUSB, 2x RS485, 2x RS232, 2x CAN FD, 4x DI and 4x DO)** and flexible wireless connectivity options (4G/5G, LoRa®, Wi-Fi/BLE), making it ideal for diverse industrial applications.
 
-### [Crowd Flow Heatmap with Home Assistant](https://wiki.seeedstudio.com/crowd-flow-monitoring/)
+### [Getting Started with XIAO ePaper Display EE04](https://wiki.seeedstudio.com/epaper_ee04/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/lovelace-heatmap-card-config.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" alt="pir" width={800} height="auto" /></p>
 
-Want a clear view of how people move through a space? With **Home Assistant** and a **Floorplan Heatmap**, you can do just that. This solution lets you overlay person-hour data onto your floor plan, making it easy to see how the space is being used at a glance.
+Powered by **XIAO ESP32-S3** Plus, the display board EE04 supports both **24-pin** and **50-pin** ePaper displays. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
 
-### [Using XIAO ESP32-C3 on MicroBlocks](https://wiki.seeedstudio.com/xiao_esp32c3_microblocks/)
+### [ROS2 on ReSpeaker XVF3800](https://wiki.seeedstudio.com/respeaker_xvf3800_ros2/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/microblocks.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/ros/RoS2reSpeakerXVF3800.gif" alt="pir" width={800} height="auto" /></p>
 
-MicroBlocks is a blocks-language that makes it easy for beginners (9 years to adults) to program microcontrollers. Yet in spite of its apparent simplicity, MicroBlocks is a powerful programming language with better performance than MicroPython; the ability to control GPIO pins and interface to peripherals via I2C, SPI, and serial; and nearly 200 extension libraries. This document explains how to use the Seeed Studio XIAO ESP32-C3 with MicroBlocks, including firmware installation, connection methods, and basic examples (such as blinking an LED), helping you get started quickly with block-based programming.
+This project demonstrates the integration of the ReSpeaker XVF3800 with ROS2 for robotic applications, focusing on speech detection and Direction of Arrival (DOA) estimation. Using the Turtlesim node, we simulate robotic control based on speech input, enabling precise movement through PID control. The tutorial covers the setup of the ROS2 environment, configuration of the ReSpeaker XVF3800, and how to apply speech commands for controlling a robot. By the end, users will understand how to connect voice interfaces with robotics and use basic control algorithms for navigation.
 
-In addition, we also provide tutorial documents for **[XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_microblocks/)**, **[XIAO RP2040](https://wiki.seeedstudio.com/xiao_rp2040_microblocks/)**, **[XIAO RP2350](https://wiki.seeedstudio.com/xiao_rp2350_microblocks/)**, **[XIAO SAMD21](https://wiki.seeedstudio.com/xiao_samd21_microblocks/)**, and **[XIAO nRF52840](https://wiki.seeedstudio.com/xiao_ble_microblocks/)**.
+### [Deploying OpenRemote on reComputer R1x Manage IoT Devices at the Edge](https://wiki.seeedstudio.com/openremote_r1x00/)
 
-### [Power Consumptions Example for XIAO nRF54L15 (PlatformIO)](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_power_consumptions/)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width={600} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/new/6.png" alt="pir" width={800} height="auto" /></p>
+OpenRemote is a fully open-source IoT platform that simplifies the connection of networked devices to mobile and web applications. With the ability to deploy on Raspberry Pi-powered devices like Recomputer R1000 and R1100, OpenRemote provides a flexible edge solution for managing and controlling IoT devices in your environment.
 
-This document presents the power consumption of the Seeed Studio XIAO nRF54L15 Sense in different operating modes, covering BLE advertising and ultra-low-power System Off mode, with code examples and test data based on PlatformIO.
+### [Use SQLite on reComputer](https://wiki.seeedstudio.com/use_sqlite_on_recomputer/)
 
-### [Use Zoneminder on reComputer](https://wiki.seeedstudio.com/zoneminder_on_recomputer/)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/sqlite/sqlite.jpg" alt="pir" width={400} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/zoneminder/zone_m.png" alt="pir" width={600} height="auto" /></p>
+This wiki explains how to use the [SQlite](https://sqlite.org/) on reComputer box. SQLite is a lightweight, embedded relational database management system widely used in mobile devices, desktop applications, and embedded systems. It does not require a separate server process; the database is stored directly in a single ordinary disk file. SQLite is simple to use and offers excellent performance. It supports standard SQL syntax and is suitable for small to medium-sized data storage needs. Due to its zero-configuration and easy deployment features, SQLite has become the preferred database engine for many projects.
 
-[Zoneminder](https://github.com/ZoneMinder/zoneminder) is an open-source video surveillance software that allows you to monitor and manage security cameras. It supports various types of cameras, including IP cameras, USB webcams, and analog cameras. ZoneMinder offers features like motion detection, video recording, alarm notifications, and remote viewing through a web interface. It's highly customizable, making it suitable for both personal and professional surveillance needs. Plus, being open-source, it’s free to use and can be adapted to different setups.
+### [MicroPython for Seeed Studio XIAO nRF54L15 Sense](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_micropython/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_1.jpg" alt="pir" width={800} height="auto" /></p>
+
+This tutorial aims to introduce how to use MicroPython on Thonny based on XIAO nRF54L15.
+[MicroPython](https://github.com/micropython/micropython/wiki) is a Python interprer with a partial native code compilation feature. It provides a subset of Python 3.5 features, implemented for embedded processors and constrained systems. It is different from CPython and you can read more about the differences [here](https://github.com/micropython/micropython/wiki/Differences).
+
+### [Seeed Studio XIAO nRF54L15 Matter](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_matter/)
+
+With the rise of Matter as a unified connectivity standard promoted by the Connectivity Standards Alliance (CSA), the nRF54L15 provides a robust development platform to explore and validate Matter applications. Its high performance, low power consumption, and integrated multiprotocol radio make it well suited for both consumer smart home products and industrial IoT devices.
+In this documentation, we will walk through the Matter example applications available in the Nordic SDK for the nRF54L15. These examples demonstrate key features such as device onboarding, secure communication, and interaction with common ecosystems like Apple HomeKit, Google Home, and Amazon Alexa.
+
+### [How to Build the Driver Module for Seeed's Jetson BSP](https://wiki.seeedstudio.com/how_to_build_the_ko_module_for_seeed_jetson/)
+
+When the required `.ko` driver module is not available in reComputer/reServer, you can compile the driver module on Jetson and load it. This wiki demonstrates the specific steps and important notes, using JetPack 6.2 as an example.
 
 ## Existing Wiki Updated
 
-### [Grove Beginner Kit For Arduino](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/)
+### [Getting Started with Seeed Studio XIAO nRF54L15(Sense)](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/)
 
-We updated the examples for [SPA06-003](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/#for-spa06-003-new-version-after-october-2025).
+We have added an operation example for [Restore factory settings](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/#restore-factory-settings).
+
+### [Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/)
+
+We have added some [other algorithms](https://wiki.seeedstudio.com/lerobot_so100m_new/#other-algorithm) for training a policy.
 
 ## The Efforts of Contributor
 
@@ -204,5 +222,7 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.8.25th](/Seeed_Elderly/weekly_wiki/wiki250825)
 - [weekly wiki on 2025.9.01st](/Seeed_Elderly/weekly_wiki/wiki250901)
 - [weekly wiki on 2025.9.08th](/Seeed_Elderly/weekly_wiki/wiki250908)
+- [weekly wiki on 2025.9.15th](/Seeed_Elderly/weekly_wiki/wiki250915)
+- [weekly wiki on 2025.9.22nd](/Seeed_Elderly/weekly_wiki/wiki250922)
 
 </details>

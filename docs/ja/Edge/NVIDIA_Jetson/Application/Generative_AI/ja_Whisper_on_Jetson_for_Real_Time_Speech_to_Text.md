@@ -74,7 +74,7 @@ sudo apt update && sudo apt install ffmpeg
 arecord -D hw:2,0 --dump-hw-params #set microphone rate to 16000
 ```
 
-#### Step2. Test environment
+#### ステップ2. テスト環境
 
 ```shell
 python test.py

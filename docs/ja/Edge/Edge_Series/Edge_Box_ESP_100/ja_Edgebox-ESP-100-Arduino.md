@@ -773,21 +773,21 @@ EdgeBox-ESP-100の消費電力は、アプリケーション、動作モード�
 
 #### ハードウェア
 
-- STEP 1: ケースを取り外してプログラミングポートを見つける
+- ステップ 1: ケースを取り外してプログラミングポートを見つける
 
-- STEP 1-1: 2つの黒い六角穴付きボルトを見つけて取り外してください
+- ステップ 1-1: 2つの黒い六角穴付きボルトを見つけて取り外してください
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/remove_case.png" alt="pir" width={500} height="auto" /></div>
 
-- STEP 1-2: 次に3つのM.3 PH2プラスヘッドネジを取り外します。
+- ステップ 1-2: 次に3つのM.3 PH2プラスヘッドネジを取り外します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/remove_PH.png" alt="pir" width={500} height="auto" /></div>
 
-- STEP 1-3: これでプログラミングポートを見つけることができるはずです。
+- ステップ 1-3: これでプログラミングポートを見つけることができるはずです。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/programming_port.png" alt="pir" width={300} height="auto" /></div>
 
-- STEP 2: USB-to-SerialをEdgebox-ESP-100に接続する
+- ステップ 2: USB-to-SerialをEdgebox-ESP-100に接続する
 
 接続は以下のように行ってください
 
@@ -833,15 +833,15 @@ EdgeBox-ESP-100の消費電力は、アプリケーション、動作モード�
 
 #### ソフトウェア
 
-- STEP 1: [Arduino公式ウェブサイト](https://www.arduino.cc/en/software)からArdunio IDE 2.0.Xをダウンロードし、インストールします。
+- ステップ 1: [Arduino公式ウェブサイト](https://www.arduino.cc/en/software)からArdunio IDE 2.0.Xをダウンロードし、インストールします。
 
-- STEP 2: ボードマネージャーからESP32を見つけてインストールします。
+- ステップ 2: ボードマネージャーからESP32を見つけてインストールします。
 
-- STEP 2-1: Arduino IDEを開き、`Board Tab`（2番目のタブ）をクリックして`Board Manager`を開きます
+- ステップ 2-1: Arduino IDEを開き、`Board Tab`（2番目のタブ）をクリックして`Board Manager`を開きます
   
-- STEP 2-2: 検索バーに**`ESP32`**と入力してEnterキーを押すと、esp32ボードライブラリがリストに表示されます。
+- ステップ 2-2: 検索バーに**`ESP32`**と入力してEnterキーを押すと、esp32ボードライブラリがリストに表示されます。
 
-- STEP 2-3: バージョンドロップダウンメニューから最新バージョンを選択します。例えば、このwikiが書かれた時点での最新バージョンは**`version 2.0.7`**です
+- ステップ 2-3: バージョンドロップダウンメニューから最新バージョンを選択します。例えば、このwikiが書かれた時点での最新バージョンは**`version 2.0.7`**です
 
 :::note
 
@@ -849,7 +849,7 @@ esp32ボードライブラリのバージョン >= **`2.0.7`** をインスト�
 
 :::
 
-- STEP 2-4: `Install`をクリックします
+- ステップ 2-4: `Install`をクリックします
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/download_board.png" alt="pir" width="auto" height="auto" /></div>
 
@@ -903,7 +903,7 @@ void loop() {
 
 #### コードのアップロード
 
-- STEP 1: USB-To-Serialアダプターをお使いのPCに接続し、Edgebox-ESP-100とUSB-To-Serialコンバーターの接続をプログラムダウンロードモードに設定してください。
+- ステップ 1: USB-To-Serialアダプターをお使いのPCに接続し、Edgebox-ESP-100とUSB-To-Serialコンバーターの接続をプログラムダウンロードモードに設定してください。
 
 :::note
 
@@ -911,23 +911,23 @@ void loop() {
 
 :::
 
-- STEP 2: Edgebox-ESP-100の電源を入れます
+- ステップ 2: Edgebox-ESP-100の電源を入れます
 
-- STEP 3: ボードとPORTSを選択します
+- ステップ 3: ボードとPORTSを選択します
 
-- STEP 3-1: ボードとポート選択ウィンドウを開きます
+- ステップ 3-1: ボードとポート選択ウィンドウを開きます
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/select_boardandport.png" alt="pir" width="auto" height="auto" /></div>
 
-- STEP 3: `ボードとポート選択ウィンドウ`からボードとPORTSを選択します。この場合、検索バーにedgeboxと入力し、ボードとしてEdgebox-ESP-100を選択し、お使いのUSB-to-Serialアダプターに応じてポートを選択します。その後、**`OK`**を押して確認します。
+- ステップ 3: `ボードとポート選択ウィンドウ`からボードとPORTSを選択します。この場合、検索バーにedgeboxと入力し、ボードとしてEdgebox-ESP-100を選択し、お使いのUSB-to-Serialアダプターに応じてポートを選択します。その後、**`OK`**を押して確認します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/selectboard.png" alt="pir" width="auto" height="auto" /></div>
 
-- STEP 4: コードアップロードボタンを押してコードをアップロードします。
+- ステップ 4: コードアップロードボタンを押してコードをアップロードします。
   
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/uploadcode.png" alt="pir" width="auto" height="auto" /></div>
 
-- STEP 5: 電源をリセットして、Edgebox-ESP-100がソレノイドを制御している様子を監視します。
+- ステップ 5: 電源をリセットして、Edgebox-ESP-100がソレノイドを制御している様子を監視します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/demo.gif" alt="pir" width="auto" height="auto" /></div>
 

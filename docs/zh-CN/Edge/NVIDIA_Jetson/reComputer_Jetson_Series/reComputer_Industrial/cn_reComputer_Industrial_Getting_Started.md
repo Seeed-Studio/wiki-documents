@@ -405,7 +405,7 @@ import TabItem from '@theme/TabItem';
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows
+- **步骤 3:** 导航到之前提取的文件并按如下方式执行刷写命令
 
 ```sh
 cd mfi_xxxx
@@ -522,7 +522,7 @@ sudo depmod -a
 sudo reboot
 ```
 
-Futhermore, if you want to install SDK components such as CUDA, cuDNN, TensorRT, please execute the following
+此外，如果你想安装 SDK 组件，如 CUDA、cuDNN、TensorRT，请执行以下操作
 
 ```sh
 sudo apt update
@@ -600,7 +600,7 @@ sudo apt install nvidia-jetpack -y
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows
+- **步骤 3:** 导航到之前提取的文件并按如下方式执行刷写命令
 
 ```sh
 cd mfi_xxxx
@@ -675,7 +675,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows
+- **步骤 3:** 导航到之前提取的文件并按如下方式执行刷写命令
 
 ```sh
 cd mfi_xxxx
@@ -751,7 +751,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows
+- **步骤 3:** 导航到之前提取的文件并按如下方式执行刷写命令
 
 ```sh
 cd mfi_xxxx
@@ -821,7 +821,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows
+- **步骤 3:** 导航到之前提取的文件并按如下方式执行刷写命令
 
 ```sh
 cd mfi_xxxx

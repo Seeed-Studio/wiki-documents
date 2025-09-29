@@ -103,7 +103,7 @@ To set GPIO12 to LOW
 echo 0 > value
 ```
 
-**Step 5:** To set the GPIO pin that you exported back to default state, execute the following
+**步骤 5:** 要将您导出的 GPIO 引脚设置回默认状态，请执行以下操作
 
 ```sh
 cd ..
@@ -160,7 +160,7 @@ To set GPIO12 to LOW
 echo 0 > value
 ```
 
-**Step 7:** To set the GPIO pin that you exported back to default state, execute the following
+**步骤 7:** 要将您导出的 GPIO 引脚设置回默认状态，请执行以下操作
 
 ```sh
 cd ..

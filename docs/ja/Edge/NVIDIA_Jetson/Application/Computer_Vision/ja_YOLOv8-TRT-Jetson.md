@@ -696,57 +696,57 @@ yolo detect predict model=yolov8n.engine source='0' show=True
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/25.jpg
 " style={{width:1000, height:'auto'}}/></div>
 
-- **Step 17** `Runtime > Change runtime type` に移動します
+- **ステップ 17** `Runtime > Change runtime type` に移動します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/26.jpg
 " style={{width:500, height:'auto'}}/></div>
 
-- **Step 18** **Hardware accelerator** で **GPU** を選択し、**GPU type** で利用可能な最高のものを選択して **Save** をクリックします
+- **ステップ 18** **Hardware accelerator** で **GPU** を選択し、**GPU type** で利用可能な最高のものを選択して **Save** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/27.jpg
 " style={{width:500, height:'auto'}}/></div>
 
-- **Step 19** **Connect** をクリックします
+- **ステップ 19** **Connect** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/28.jpg
 " style={{width:250, height:'auto'}}/></div>
 
-- **Step 20** **RAM, Disk** ボタンをクリックしてハードウェアリソースの使用状況を確認します
+- **ステップ 20** **RAM, Disk** ボタンをクリックしてハードウェアリソースの使用状況を確認します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/31.jpg
 " style={{width:600, height:'auto'}}/></div>
 
-- **Step 21** **Play** ボタンをクリックして最初のコードセルを実行します
+- **ステップ 21** **Play** ボタンをクリックして最初のコードセルを実行します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/29.jpg
 " style={{width:750, height:'auto'}}/></div>
 
-- **Step 22** 先ほど Ultralytics HUB からコピーしたコードセルを **Start** セクションの下に貼り付けて実行し、トレーニングを開始します
+- **ステップ 22** 先ほど Ultralytics HUB からコピーしたコードセルを **Start** セクションの下に貼り付けて実行し、トレーニングを開始します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/30.jpg
 " style={{width:650, height:'auto'}}/></div>
 
-- **Step 23** Ultralytics HUB に戻ると、**Connected** というメッセージが表示されます。**Done** をクリックします
+- **ステップ 23** Ultralytics HUB に戻ると、**Connected** というメッセージが表示されます。**Done** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/32.jpg
 " style={{width:1000, height:'auto'}}/></div>
 
-- **Step 24** ここで、Google Colab でモデルがトレーニングされている間、**Box Loss、Class Loss、Object Loss** がリアルタイムで表示されます
+- **ステップ 24** ここで、Google Colab でモデルがトレーニングされている間、**Box Loss、Class Loss、Object Loss** がリアルタイムで表示されます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/33.jpg
 " style={{width:1000, height:'auto'}}/></div>
 
-- **Step 25** トレーニングが完了すると、Google Colab で以下の出力が表示されます
+- **ステップ 25** トレーニングが完了すると、Google Colab で以下の出力が表示されます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/34.jpg
 " style={{width:1000, height:'auto'}}/></div>
 
-- **Step 26** Ultralytics HUB に戻り、**Preview** タブに移動してテスト画像をアップロードし、トレーニング済みモデルの性能を確認します
+- **ステップ 26** Ultralytics HUB に戻り、**Preview** タブに移動してテスト画像をアップロードし、トレーニング済みモデルの性能を確認します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/35.jpg
 " style={{width:1000, height:'auto'}}/></div>
 
-- **Step 26** 最後に **Deploy** タブに移動し、YOLOv8 で推論するために好みの形式でトレーニング済みモデルをダウンロードします。ここでは PyTorch を選択しました。
+- **ステップ 26** 最後に **Deploy** タブに移動し、YOLOv8 で推論するために好みの形式でトレーニング済みモデルをダウンロードします。ここでは PyTorch を選択しました。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/36.png
 " style={{width:1000, height:'auto'}}/></div>

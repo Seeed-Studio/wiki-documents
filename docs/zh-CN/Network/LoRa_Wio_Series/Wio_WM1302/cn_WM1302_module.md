@@ -209,8 +209,7 @@ sudo apt install -y git
 cd ~
 git clone https://github.com/Lora-net/sx1302_hal
 ```
-
-Move to `sx1302_hal` folder and compile everything:
+移动到 `sx1302_hal` 文件夹并编译所有内容：
 
 ```shell
 cd ~/sx1302_hal
@@ -248,7 +247,7 @@ CoreCell ADC reset through GPIO13...
 ...
 ```
 
-To determine if the system you are running on still has the **sysfs interface**, you can run the following command:
+要确定你正在运行的系统是否仍然具有**sysfs接口**，你可以运行以下命令：
 
 ```shell
 ls /sys/class/gpio
