@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
 slug: /openremote_r1x00
 last_update:
-  date: 9/24/2025
+  date: 9/29/2025
   author: Kasun Thushara
 ---
 
@@ -143,6 +143,8 @@ To use the OpenWeatherMap API, you need a free API key. Register for a free acco
 - **Name:** `HTTP API Agent`
 - Click **Add**.
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote2.png" alt="pir" width={800} height="auto" /></p>
+
 The agent is now created with pre-configured attributes. You will need to configure it to connect to the OpenWeatherMap API.
 
 ### Configure the HTTP API Agent
@@ -165,6 +167,9 @@ Now that the HTTP API Agent is created, configure it with the following details:
 
 Click **Save** to confirm the configuration.
 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote3.png" alt="pir" width={800} height="auto" /></p>
+
 ### Create the Weather Asset
 
 **Add a New Weather Asset**
@@ -175,6 +180,10 @@ Click **Save** to confirm the configuration.
 - Click **Add**.
 
 The weather asset will now appear in the list as a child of the HTTP API Agent. You can change its parent if desired.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote4.png" alt="pir" width={800} height="auto" /></p>
+
 
 ### Add the Agent Links
 
@@ -193,7 +202,11 @@ Go to **Modify Mode** by clicking the toggle at the top of the asset page. In th
   - **Value filters:** `JsonPathFilter-2`
   - **Path (JSON):** `$.main.humidity`
 
-### Setup the Temperature Attribute
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote5.png" alt="pir" width={800} height="auto" /></p>
+
+### Setup the Temperature Attribute:
+
 
 - Expand the **temperature** attribute.
 - Click **Add configuration item** and select **Agent link**.
