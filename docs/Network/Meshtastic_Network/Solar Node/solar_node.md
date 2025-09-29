@@ -18,7 +18,7 @@ last_update:
 
 
 
-It is an economical solar-powered comms node or repeater based on Meshtastic, integrates the XIAO nRF52840 Plus main controller, the Wio-SX1262 LoRa module. It is specifically designed for areas without network coverage. It supports long-distance communication, precise positioning, and low-power operation. It's suitable for expanding network coverage in outdoor areas.
+It is an economical solar-powered comms node or repeater based on [Meshtastic®](https://meshtastic.org/), integrates the XIAO nRF52840 Plus main controller, the Wio-SX1262 LoRa module. It is specifically designed for areas without network coverage. It supports long-distance communication, precise positioning, and low-power operation. It's suitable for expanding network coverage in outdoor areas.
 
 ## Version Comparison
  
