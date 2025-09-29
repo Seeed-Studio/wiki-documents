@@ -161,10 +161,14 @@ conda install ffmpeg=7.1.1 -c conda-forge
 
 :::
 
-5. feetechモーター用の依存関係を含むLeRobotのインストール：
+5. staraiモーター用の依存関係を含むLeRobotのインストール：
 
 ```bash
 cd ~/lerobot && pip install -e ".[starai]"
+```
+
+```bash
+sudo apt remove brltty
 ```
 
 Jetson Jetpackデバイスの場合（このステップを実行する前に、ステップ5から[Pytorch-gpuとTorchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch)をインストールしてください）：
@@ -716,7 +720,8 @@ lerobot-train \
   --job_name=act_viola_test \
   --policy.device=cuda \
   --wandb.enable=False \
-  --policy.repo_id=starai/my_policy
+  --policy.repo_id=starai/my_policy\
+  --steps=200000
 ```
 
 <details>
@@ -730,7 +735,8 @@ lerobot-train \
   --job_name=act_bi_viola_test \
   --policy.device=cuda \
   --wandb.enable=False \
-  --policy.repo_id=starai/my_policy
+  --policy.repo_id=starai/my_policy\
+  --steps=200000
 ```
 
 </details>
@@ -745,7 +751,8 @@ lerobot-train \
 ```bash
 lerobot-train \
   --config_path=outputs/train/act_bi_viola_test/checkpoints/last/pretrained_model/train_config.json \
-  --resume=true
+  --resume=true\
+  --steps=400000
 ```
 
 <details>

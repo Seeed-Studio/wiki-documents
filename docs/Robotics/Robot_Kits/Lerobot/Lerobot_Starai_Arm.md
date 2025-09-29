@@ -180,7 +180,6 @@ pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
 conda install -y -c conda-forge ffmpeg
 conda uninstall numpy
 pip3 install numpy==1.26.0  # This should match torchvision
-
 ```
 
 6. Check Pytorch and Torchvision
