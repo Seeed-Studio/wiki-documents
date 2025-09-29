@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/22/2025
+  date: 09/29/2025
   author: Frank
 ---
 
@@ -17,57 +17,71 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 22nd, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 29th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with AC1](https://wiki.seeedstudio.com/ac1/)
+### [reComputer Industrial R20xx Getting Started](https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/ac1/ac1_1.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" alt="pir" width={800} height="auto" /></p>
 
-Active Camera, invented by RoboSense, is a groundbreaking category in robotic vision designed to tackle the challenges of mobility perception and operational cognition.
-The AC1, the first in this series, integrates multiple sensors to deliver hardware-level fusion of depth information, image data, and motion posture data, synchronized in time and space. This enables robots to capture comprehensive environmental details, overcoming interference from sunlight and highly reflective surfaces, and adapting to diverse indoor and outdoor scenarios.
-In this wiki, we will demonstrate the detailed process of using AC1 together with reComputer Robotics.
+The reComputer Industrial R20xx, powered by Raspberry Pi CM5, is an adaptable edge AI/IOT conrollert  with AI capabilities. It features comprehensive industrial interfaces **(2x Ethernet, 4xUSB, 3x RS485, 1x RS232, 8x DI and 8x DO)** and flexible wireless connectivity options **(4G/5G, LoRa®, Wi-Fi/BLE),** making it ideal for diverse industrial applications.
 
-### [Getting Started with reTerminal E Series ePaper Display and EEZStudio](https://wiki.seeedstudio.com/reterminal_e10xx_with_eezstudio/)
+### [reComputer Industrial R21xx Getting Started](https://wiki.seeedstudio.com/recomputer_industrial_R21xx_getting_start/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/6/-/6-recomputer-industrail-r2100.jpg" alt="pir" width={800} height="auto" /></p>
 
-This guide will walk you through designing a professional user interface for the reTerminal E Series using the visual design tool **EEZStudio**. You will learn how to create UI elements, generate the necessary code, and finally deploy it to the device using the Arduino IDE. This process allows you to build custom interfaces with excellent visibility and ultra-low power consumption, ideal for HMI applications.
+The reComputer Industrial R21xx, powered by Raspberry Pi CM5, is an adaptable edge AI computer  with AI capabilities. It features comprehensive industrial interfaces **(2x Ethernet, 4xUSB, 2x RS485, 2x RS232, 2x CAN FD, 4x DI and 4x DO)** and flexible wireless connectivity options (4G/5G, LoRa®, Wi-Fi/BLE), making it ideal for diverse industrial applications.
 
-### [reTerminal E Series ePaper Display Work with Lopaka](https://wiki.seeedstudio.com/reterminal_e10xx_with_lopaka/)
+### [Getting Started with XIAO ePaper Display EE04](https://wiki.seeedstudio.com/epaper_ee04/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" alt="pir" width={800} height="auto" /></p>
 
-This article mainly describes how to use the Lopaka website to create exquisite user interfaces and apply them in the reTerminal E series.
+Powered by **XIAO ESP32-S3** Plus, the display board EE04 supports both **24-pin** and **50-pin** ePaper displays. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
 
-### [DM_Gripper – Open-Source Assembly Guide](https://wiki.seeedstudio.com/dm_gripper/)
+### [ROS2 on ReSpeaker XVF3800](https://wiki.seeedstudio.com/respeaker_xvf3800_ros2/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/end_effectors/dm_gripper/1-100094243--Seeed-Gripper-01.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/ros/RoS2reSpeakerXVF3800.gif" alt="pir" width={800} height="auto" /></p>
 
-The **DM_Gripper** is an open-source, **3D-printed robotic gripper** designed around the **DM-4310-2EC motor**. Its modular design emphasizes ease of assembly and disassembly, enabling both hobbyists and robotics developers to **rapidly prototype, customize, and scale** their projects.
+This project demonstrates the integration of the ReSpeaker XVF3800 with ROS2 for robotic applications, focusing on speech detection and Direction of Arrival (DOA) estimation. Using the Turtlesim node, we simulate robotic control based on speech input, enabling precise movement through PID control. The tutorial covers the setup of the ROS2 environment, configuration of the ReSpeaker XVF3800, and how to apply speech commands for controlling a robot. By the end, users will understand how to connect voice interfaces with robotics and use basic control algorithms for navigation.
 
-### [SenseCAP Watcher - AI Assistant that actively interacts with the world](https://wiki.seeedstudio.com/hello_watcher_llms/)
+### [Deploying OpenRemote on reComputer R1x Manage IoT Devices at the Edge](https://wiki.seeedstudio.com/openremote_r1x00/)
 
-<iframe class="youtube-video-r" src="https://www.youtube.com/embed/6UDVsv953Tw?si=6OYFfx4orpC5p90d" title="SenseCAP Watcher for Xiaozhi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width={600} height="auto" /></p>
 
-Watcher's "Keen Eye" is powered by a powerful **On-Device AI Vision Chip (Himax)**, enabling rapid local processing for object recognition and target tracking. Combined with the expandable **XiaoZhi** assistant firmware, it's more than just a camera—it's a dedicated AI assistant that evolves and understands your needs.
+OpenRemote is a fully open-source IoT platform that simplifies the connection of networked devices to mobile and web applications. With the ability to deploy on Raspberry Pi-powered devices like Recomputer R1000 and R1100, OpenRemote provides a flexible edge solution for managing and controlling IoT devices in your environment.
 
-### [TensorFlow Lite on ReSpeaker XVF3800](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_tensorflow/)
+### [Use SQLite on reComputer](https://wiki.seeedstudio.com/use_sqlite_on_recomputer/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/sqlite/sqlite.jpg" alt="pir" width={400} height="auto" /></p>
 
-In this tutorial, you’ll build a custom voice recognition system on the Seeed XIAO ESP32 with the XVF3800 ReSpeaker using TensorFlow Lite Micro. We’ll cover data collection, preprocessing, model training, TFLite conversion, and deployment, resulting in a microcontroller-based system that can recognize spoken commands in real time.
+This wiki explains how to use the [SQlite](https://sqlite.org/) on reComputer box. SQLite is a lightweight, embedded relational database management system widely used in mobile devices, desktop applications, and embedded systems. It does not require a separate server process; the database is stored directly in a single ordinary disk file. SQLite is simple to use and offers excellent performance. It supports standard SQL syntax and is suitable for small to medium-sized data storage needs. Due to its zero-configuration and easy deployment features, SQLite has become the preferred database engine for many projects.
 
-### [ChirpStack R1X Gateway Integration with SenseCAP S2101](https://wiki.seeedstudio.com/chirpstack_lora_gateway_r1x00/)
+### [MicroPython for Seeed Studio XIAO nRF54L15 Sense](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_micropython/)
 
-This guide shows how to set up a LoRaWAN gateway on the Seeed reComputer R11 (powered by Raspberry Pi) with the WM1302 module. Using Docker, ChirpStack, and the Semtech Packet Forwarder, you can build a scalable gateway that streams IoT data via MQTT from devices like the SenseCAP S2101.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_1.jpg" alt="pir" width={800} height="auto" /></p>
+
+This tutorial aims to introduce how to use MicroPython on Thonny based on XIAO nRF54L15.
+[MicroPython](https://github.com/micropython/micropython/wiki) is a Python interprer with a partial native code compilation feature. It provides a subset of Python 3.5 features, implemented for embedded processors and constrained systems. It is different from CPython and you can read more about the differences [here](https://github.com/micropython/micropython/wiki/Differences).
+
+### [Seeed Studio XIAO nRF54L15 Matter](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_matter/)
+
+With the rise of Matter as a unified connectivity standard promoted by the Connectivity Standards Alliance (CSA), the nRF54L15 provides a robust development platform to explore and validate Matter applications. Its high performance, low power consumption, and integrated multiprotocol radio make it well suited for both consumer smart home products and industrial IoT devices.
+In this documentation, we will walk through the Matter example applications available in the Nordic SDK for the nRF54L15. These examples demonstrate key features such as device onboarding, secure communication, and interaction with common ecosystems like Apple HomeKit, Google Home, and Amazon Alexa.
+
+### [How to Build the Driver Module for Seeed's Jetson BSP](https://wiki.seeedstudio.com/how_to_build_the_ko_module_for_seeed_jetson/)
+
+When the required `.ko` driver module is not available in reComputer/reServer, you can compile the driver module on Jetson and load it. This wiki demonstrates the specific steps and important notes, using JetPack 6.2 as an example.
 
 ## Existing Wiki Updated
 
-### [Smart Home Voice Control with Home Assistant](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_home_assistant/)
+### [Getting Started with Seeed Studio XIAO nRF54L15(Sense)](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/)
 
-We added content about the [YAML description](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_home_assistant/#yaml-description).
+We have added an operation example for [Restore factory settings](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/#restore-factory-settings).
+
+### [Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/)
+
+We have added some [other algorithms](https://wiki.seeedstudio.com/lerobot_so100m_new/#other-algorithm) for training a policy.
 
 ## The Efforts of Contributor
 
@@ -209,5 +223,6 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.9.01st](/Seeed_Elderly/weekly_wiki/wiki250901)
 - [weekly wiki on 2025.9.08th](/Seeed_Elderly/weekly_wiki/wiki250908)
 - [weekly wiki on 2025.9.15th](/Seeed_Elderly/weekly_wiki/wiki250915)
+- [weekly wiki on 2025.9.22nd](/Seeed_Elderly/weekly_wiki/wiki250922)
 
 </details>
