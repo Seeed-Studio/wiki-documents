@@ -28,7 +28,7 @@ NuttX 支持大量且不断扩展的开发板。[官方文档](https://nuttx.apa
 
 Nuttx 文档为不同平台提供了[指南](https://nuttx.apache.org/docs/latest/quickstart/install.html)。对于 Seeed Studio XIAO ESP32C6，请按照以下步骤操作：
 
-1. 下载 Espressif esptool(https://docs.espressif.com/projects/esptool/en/latest/esp32/)：
+1. 下载 [Espressif esptool](https://docs.espressif.com/projects/esptool/en/latest/esp32/)：
 
     ```bash
     ~/nuttxspace/nuttx$ esptool.py version
