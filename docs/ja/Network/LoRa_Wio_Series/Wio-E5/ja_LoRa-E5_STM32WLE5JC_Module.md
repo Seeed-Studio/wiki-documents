@@ -377,22 +377,22 @@ ATコマンドファームウェアには、DFU用のブートローダーとAT�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/7.png" alt="pir" width={600} height="auto" /></p>
 
-- **Step 7.** **+ Add end device** をクリックします
+- **ステップ 7.** **+ Add end device** をクリックします
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/8.png" alt="pir" width="500" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/8.png" alt="pir" width={600} height="auto" /></p>
 
-- **Step 8.** **Manually** をクリックして、登録認証情報を手動で入力します
+- **ステップ 8.** **Manually** をクリックして、登録認証情報を手動で入力します
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/9.png" alt="pir" width="420" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/9.png" alt="pir" width={600} height="auto" /></p>
 
-- **Step 9.** お住まいの地域に応じて **Frequency plan** を選択します。また、このデバイスを接続するゲートウェイと同じ周波数を使用することを確認してください。**LoRaWAN® version** として **MAC V1.0.2** を、**Regional Parameters version** として **PHY V1.0.2 REV B** を選択します。これらの設定は Wio-E5 の LoraWAN® スタックに対応しています。
+- **ステップ 9.** お住まいの地域に応じて **Frequency plan** を選択します。また、このデバイスを接続するゲートウェイと同じ周波数を使用することを確認してください。**LoRaWAN® version** として **MAC V1.0.2** を、**Regional Parameters version** として **PHY V1.0.2 REV B** を選択します。これらの設定は Wio-E5 の LoraWAN® スタックに対応しています。
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/10.png" alt="pir" width="450" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/10.png" alt="pir" width={600} height="auto" /></p>
 
-- **Step 10.** Wio-E5 モジュールがシリアルコンソール経由でまだアクセス可能な状態で、シリアルモニターで以下の AT コマンドを送信します：
+- **ステップ 10.** Wio-E5 モジュールがシリアルコンソール経由でまだアクセス可能な状態で、シリアルモニターで以下の AT コマンドを送信します：
 
   - `AT+ID=DevEui` で Device EUI を取得
   - `AT+ID=AppEui` で App EUI を取得
@@ -409,14 +409,14 @@ Tx: AT+KEY=APPKEY,"2B7E151628AED2A6ABF7158809CF4F3C"
 Rx: +KEY: APPKEY 2B7E151628AED2A6ABF7158809CF4F3C
 ```
 
-- **Step 11.** 上記の情報を**DevEUI**、**AppEUI**、**AppKey**フィールドにコピー＆ペーストします。**End device ID**フィールドは**DevEUI**を入力すると自動的に入力されます。最後に**Register end device**をクリックします
+- **ステップ 11.** 上記の情報を**DevEUI**、**AppEUI**、**AppKey**フィールドにコピー＆ペーストします。**End device ID**フィールドは**DevEUI**を入力すると自動的に入力されます。最後に**Register end device**をクリックします
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/12.png" alt="pir" width="450" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/12.png" alt="pir" width={600} height="auto" /></p>
 
-- **Step 12.** LoRaWAN®ゲートウェイをTTNコンソールに登録します。[こちら](https://wiki.seeedstudio.com/ja/The-Things-Indoor-Gateway/#step-2-gateway-registration-on-ttn-console)に示されている手順を参照してください
+- **ステップ 12.** LoRaWAN®ゲートウェイをTTNコンソールに登録します。[こちら](https://wiki.seeedstudio.com/ja/The-Things-Indoor-Gateway/#step-2-gateway-registration-on-ttn-console)に示されている手順を参照してください
 
-- **Step 13.** TTNに接続するために以下のATコマンドを入力します
+- **ステップ 13.** TTNに接続するために以下のATコマンドを入力します
 
 ```
 // If you are using US915
@@ -595,7 +595,7 @@ SDKでプログラムする前に工場出荷時のATファームウェアを消
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/se-identity.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/se-identity.png" alt="pir" width={600} height="auto" /></p>
 
-- **Step 9.** デフォルトのLoRaWAN®リージョンは`EU868`です。`LoRaWAN/App/lora_app.h`の`ACTIVE_REGION`マクロ定義を設定することで変更できます。
+- **ステップ 9.** デフォルトのLoRaWAN®リージョンは`EU868`です。`LoRaWAN/App/lora_app.h`の`ACTIVE_REGION`マクロ定義を設定することで変更できます。
 
 ```c
 // LoRaWAN/App/lora_app.h

@@ -12,9 +12,9 @@ last_update:
 ---
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/400px-Gesture_sensor_3.png" 
-    style={{ width: 480, height: 'auto', "border-radius": '12.8px' }} 
+  <img
+    src="https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/400px-Gesture_sensor_3.png"
+    style={{ width: 480, height: 'auto', "border-radius": '12.8px' }}
   />
 </div>
 
@@ -905,7 +905,7 @@ if __name__ == "__main__":
 :::success
     Si todo va bien, podrás ver el siguiente resultado
 :::
- 
+
 ```shell
 pi@raspberrypi:~/grove.py/grove $ python3 grove_gesture_sensor.py 
 wake-up finish.
@@ -1027,7 +1027,7 @@ while True:
  time.sleep(.1)
 ```
 
-- **Step 4.** Here is the screen output.
+- **Paso 4.** Aquí está la salida de pantalla.
 
 ```cpp showLineNumbers
 pi@raspberrypi:~/Dexter/GrovePi/Software/Python/grove_gesture_sensor $ python3 gesture_value.py 
@@ -1109,11 +1109,11 @@ Definimos algunos datos de registro de gestos, consulta la siguiente tabla.
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

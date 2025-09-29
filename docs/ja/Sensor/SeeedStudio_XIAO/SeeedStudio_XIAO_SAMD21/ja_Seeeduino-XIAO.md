@@ -35,7 +35,7 @@ Seeed Studio XIAO SAMD21は14個のPINを持ち、ピン多重化により11個�
 |Seeed Studio XIAO SAMD21 GPIO使用方法|Seeed Studio XIAO SAMD21とGPS（UART）|
 |Seeed Studio XIAO SAMD21リソース|シングルサイクルIOBUS|
 
-### **CircuitPython on Seeed Studio XIAO SAMD21**
+### **Seeed Studio XIAO SAMD21でのCircuitPython**
 
 - [**Seeed Studio XIAO SAMD21 での CircuitPython**](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO-CircuitPython)を始めましょう。
 
@@ -230,7 +230,7 @@ void loop()
 
 #### **SPI**
 
-- Use pin 8 as the SCK pin of SPI(MISO pin of SPI is pin 9,MOSI pin of SPI is pin 10):
+- SPIのSCKピンとしてピン8を使用する（SPIのMISOピンはピン9、SPIのMOSIピンはピン10）：
 
 ```c
 #include <SPI.h>

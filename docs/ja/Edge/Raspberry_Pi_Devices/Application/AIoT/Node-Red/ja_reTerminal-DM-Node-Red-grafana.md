@@ -75,9 +75,9 @@ echo "deb [signed-by=/usr/share/keyrings/grafana-archive-keyrings.gpg] https://a
 sudo apt update
 ```
 
-## Installing Grafana on reTerminal DM
+## reTerminal への Grafana のインストール DM
 
-Install the latest version of Grafana by running the following command:
+以下のコマンドを実行して、Grafanaの最新バージョンをインストールしてください：
 
 ```bash
 sudo apt install grafana

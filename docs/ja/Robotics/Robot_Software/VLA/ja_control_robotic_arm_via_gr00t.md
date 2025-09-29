@@ -49,7 +49,7 @@ python lerobot/scripts/control_robot.py \
 
 ### Orbbec Camera SDK のセットアップ
 
-Step1. 1.OrbbecSDK をクローンします。
+ステップ1. 1.OrbbecSDK をクローンします。
 
 ```bash
 cd ~/

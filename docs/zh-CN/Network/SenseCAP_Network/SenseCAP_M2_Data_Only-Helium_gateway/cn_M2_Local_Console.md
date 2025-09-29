@@ -26,7 +26,7 @@ last_update:
 
 **注意**：您的计算机和设备应连接到同一个路由器/网络。
 
-![SenseCAP M2 Local Console Step 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-3.png)
+![SenseCAP M2 Local Console 步骤 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-3.png)
 
 *   **步骤 2**：获取您设备的 IP 地址
 
@@ -43,7 +43,7 @@ last_update:
 
 **出于安全考虑，每个设备都有唯一的密码。登录后，您可以更改密码。**
 
-![SenseCAP M2 Local Console Step 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-4.png)
+![SenseCAP M2 Local Console 步骤 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-4.png)
 
 *   **步骤 4**：在电脑上打开浏览器并登录
 

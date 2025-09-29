@@ -167,7 +167,7 @@ Hailo AI Software Suiteは、ハードウェアアクセラレータ上でAIモ�
 sudo apt install snap
 ```
 
-- **Step 2.** Download **rpi-imager**
+- **ステップ 2.** **rpi-imager** をダウンロードします
 
 ```sh
 snap install rpi-imager

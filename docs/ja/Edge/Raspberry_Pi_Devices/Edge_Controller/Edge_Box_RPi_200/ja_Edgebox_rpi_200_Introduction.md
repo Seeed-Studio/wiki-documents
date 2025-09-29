@@ -13,7 +13,6 @@ last_update:
 
 ## はじめに
 
-
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:400, height:'auto'}}/></div>
 
 EdgeBox-RPI-200シリーズは、多様な産業用アプリケーション向けに設計されたRaspberry Piベースのオールインワン産業用エッジコンピューティングコントローラーです。高いスケーラビリティと堅牢なハードウェアを誇り、広範なRaspberry Pi産業用ソフトウェアエコシステムとシームレスに統合されます。これにより、スマート自動化および産業用IoT（IIoT）ソリューションに最適な選択肢となっています。
@@ -40,13 +39,11 @@ EdgeBox-RPI-200シリーズは、多様な産業用アプリケーション向�
 
 **Raspberry Piエコシステム：** Codesys、Node Red、MQTT、OPC UA、Ignitionなどと互換性。
 
-
 ## 仕様
-
 
 | パラメータ                | 詳細                                        |
 |---------------------------|---------------------------------------------|
-|**基本**                   |                        |                                        
+|**基本**                   |                        |
 | CPUコア                   | 4コア Raspberry Pi CM4                      |
 | メモリ                    | 1GB 2GB 4GB 8GB                             |
 | ストレージ                | 8GB16GB 32GB                                |
@@ -78,6 +75,7 @@ EdgeBox-RPI-200シリーズは、多様な産業用アプリケーション向�
 ## Raspberry Pi 産業用ソフトウェアエコシステム
 
 優れた Raspberry Pi 産業用ソフトウェアエコシステムにより、EdgeBox には豊富なソフトウェアと自律プラットフォームがサポートされていることがわかります。
+
 - [**Codesys**](https://wiki.seeedstudio.com/ja/Edgebox-rpi-200-codesys/)
 - [**Ignition**](https://wiki.seeedstudio.com/ja/Edgebox-rpi-200-ignition-edge/)
 - [**N3uron**](https://wiki.seeedstudio.com/ja/Edgebox-rpi-200-n3uron/)
@@ -99,7 +97,6 @@ EdgeBox-RPI-200シリーズは、多様な産業用アプリケーション向�
 ## 初回起動
 
 **ステップ 01:** 電源線をピン番号 1 と 2 に接続します。ピン番号 1 は電源用、ピン番号 2 はグランド用です。
-
 
 <center><img width={700} src="https://files.seeedstudio.com/wiki/Edge_Box/Edgebox_intro/power.PNG" /></center>
 
@@ -127,20 +124,19 @@ Edge Box-200 は、Raspberry Pi OS がプリインストールされた状態で
 sudo raspi-config
 ```
 
-:::note 
+:::note
 新しいOSインストールの場合、Raspberry Pi CM4のブートモード選択機能を含む最小限の開発ボードを購入する必要があります。[Dual Gigabit Ethernet NICs Carrier Board](https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html)はこの目的に最適です。
 :::
 
-**Step 04:** 次にinterfaceオプションを選択します
+**ステップ 04:** 次にinterfaceオプションを選択します
 
 <center><img width={700} src="https://files.seeedstudio.com/wiki/Edge_Box/Edgebox_intro/rpiconfig.PNG" /></center>
 
-
-**Step 05:** 次にVNCを選択して有効にします
+**ステップ 05:** 次にVNCを選択して有効にします
 
 <center><img width={700} src="https://files.seeedstudio.com/wiki/Edge_Box/Edgebox_intro/rpiconfig2.PNG" /></center>
 
-**Step 06:** 次にEdgeBoxを再起動します 
+**ステップ 06:** 次にEdgeBoxを再起動します
 
 ```sh
 sudo reboot
@@ -158,7 +154,7 @@ sudo reboot
 
 <center><img width={700} src="https://files.seeedstudio.com/wiki/Edge_Box/Edgebox_intro/serial.PNG" /></center>
 
-:::note 
+:::note
 RS485用の120オーム終端抵抗は内部に設置されています。RS485_GND信号は「GND」信号から絶縁されています。シールド付きツイストペア線を使用する場合、RS485_GNDはシールドに接続されます。
 :::
 
@@ -172,11 +168,13 @@ RS485用の120オーム終端抵抗は内部に設置されています。RS485_
 
 <center><img width={500} src="https://files.seeedstudio.com/wiki/Edge_Box/Edgebox_intro/digital1.PNG" /></center>
 
-:::note 
+:::note
+
 - 入力のDC電圧は24V（±10%）です。
 - 出力のDC電圧は60V未満である必要があり、電流容量は500maです。
 - 入力のチャンネル0とチャンネル1は互いに絶縁されています
 - 出力のチャンネル0とチャンネル1は互いに絶縁されています
+
 :::
 
 ## 追加リソース
@@ -187,15 +185,14 @@ RS485用の120オーム終端抵抗は内部に設置されています。RS485_
 
 ## 技術サポート
 
-
 当社の製品をお選びいただき、ありがとうございます！当社の製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

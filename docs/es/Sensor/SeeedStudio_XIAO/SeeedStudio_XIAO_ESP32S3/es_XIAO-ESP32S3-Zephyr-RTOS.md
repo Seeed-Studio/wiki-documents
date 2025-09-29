@@ -119,8 +119,8 @@ west build -p always -b xiao_esp32s3 samples/bluetooth/observer
 west flash
 west espressif monitor
 ```
+Verás una consola disponible para enviar comandos a la placa:
 
-You will see a console available for sending commands to the board:
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
 Starting Observer Demo

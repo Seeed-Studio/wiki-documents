@@ -156,7 +156,7 @@ Después de haber elegido un conjunto de datos público, necesitamos entrenar el
 
 Haz clic [aquí](https://colab.research.google.com/gist/lakshanthad/b47a1d1a9b4fac43449948524de7d374/yolov5-training-for-sensecap-a1101.ipynb) para abrir un espacio de trabajo de Google Colab ya preparado, revisa los pasos mencionados en el espacio de trabajo y ejecuta las celdas de código una por una.
 
-**Nota:** En Google Colab, en la celda de código bajo **Step 4**, puedes copiar directamente el fragmento de código de Roboflow como se mencionó anteriormente
+**Nota:** En Google Colab, en la celda de código bajo **Paso 4**, puedes copiar directamente el fragmento de código de Roboflow como se mencionó anteriormente
 
 Te guiará a través de lo siguiente:
 

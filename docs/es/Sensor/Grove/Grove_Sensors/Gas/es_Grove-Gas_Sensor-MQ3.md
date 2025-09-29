@@ -14,14 +14,12 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/img/wiki.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 El módulo Grove - Sensor de Gas(MQ3) es útil para la detección de fugas de gas (en el hogar y la industria). Es adecuado para detectar <font color="Blue">Alcohol, Bencina, CH4, Hexano, GLP, CO.</font> Debido a su alta sensibilidad y tiempo de respuesta rápido, las mediciones se pueden tomar lo antes posible. La sensibilidad del sensor se puede ajustar usando el potenciómetro.
 
 <div class="admonition danger">
 <p class="admonition-title">Nota</p>
 El valor del sensor solo refleja la tendencia aproximada de la concentración de gas en un rango de error permisible, NO representa la concentración exacta de gas. La detección de ciertos componentes en el aire generalmente requiere un instrumento más preciso y costoso, lo cual no se puede hacer con un solo sensor de gas. Si tu proyecto está dirigido a obtener la concentración de gas a un nivel muy preciso, entonces no recomendamos este sensor de gas.
 </div>
-
 
 <!-- |Sensor|Gas Type|Compra ahora|
 |---|---|---|
@@ -70,6 +68,7 @@ El valor del sensor solo refleja la tendencia aproximada de la concentración de
 :::tip
     Hemos lanzado la [Guía de Selección de Sensores de Gas de Seeed](https://wiki.seeedstudio.com/es/Seeed_Gas_Sensor_Selection_Guide/), te ayudará a elegir el sensor de gas que mejor se adapte a tus necesidades.
 :::
+
 ## Características
 
 - Alta sensibilidad al alcohol y pequeña sensibilidad a la bencina
@@ -79,6 +78,7 @@ El valor del sensor solo refleja la tendencia aproximada de la concentración de
 :::tip
     Más detalles sobre los módulos Grove consulta [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
 :::
+
 ## Especificaciones
 
 | Elemento | Parámetro               | Mín  | Típico     | Máx | Unidad |
@@ -111,7 +111,6 @@ Es posible conectar el módulo Grove directamente a Arduino usando cables jumper
 
 El voltaje de salida del sensor de gas aumenta cuando la concentración de gas aumenta. La sensibilidad se puede ajustar variando el potenciómetro. <font color="Red">Tenga en cuenta que el mejor tiempo de precalentamiento para el sensor es superior a 24 horas</font>. Para información detallada sobre el sensor MQ-3, consulte la hoja de datos proporcionada en la sección **Recursos**.
 
-
 ## Plataformas Compatibles
 
 |Arduino|Raspberry|ArduPy|
@@ -134,7 +133,6 @@ El voltaje de salida del sensor de gas aumenta cuando la concentración de gas a
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/img/Read_Gas_Sensor_data.jpg) -->
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/img/Read_Gas_Sensor_data.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 Conecta el Grove - Gas Sensor(MQ3) al puerto A0 como se muestra en la imagen anterior.
 
@@ -245,7 +243,6 @@ Ahora, podemos obtener la concentración de gas de la figura a continuación.
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/img/GAS_Sensor_3.png" alt="pir" width={600} height="auto" /></p>
 
-
 Según la figura, podemos ver que la concentración mínima que podemos probar es 0.1mg/L y la máxima es 10mg/L. Sin embargo, no podemos proporcionar una fórmula porque la relación entre la proporción y la concentración es no lineal. Pero también, podemos convertir mg/L a ppm, puede ser conveniente para nosotros observar el valor.
 
 ### Jugar con Raspberry Pi (Con Grove Base Hat para Raspberry Pi)
@@ -263,7 +260,6 @@ Según la figura, podemos ver que la concentración mínima que podemos probar e
 - **Paso 3**. Conecta el Grove - Gas Sensor(MQ3) al puerto A0 del Base Hat.
 - **Paso 4**. Conecta el Raspberry Pi a la PC a través del cable USB.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/img/With_Hat.jpg) -->
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/img/With_Hat.jpg" alt="pir" width={600} height="auto" /></p>
@@ -275,7 +271,7 @@ Según la figura, podemos ver que la concentración mínima que podemos probar e
 #### Software
 
 - **Paso 1**. Sigue [Setting Software](https://wiki.seeedstudio.com/es/Grove_Base_Hat_for_Raspberry_Pi/#installation) para configurar el entorno de desarrollo.
-- **Paso 2**. Descarga el archivo fuente clonando la librería grove.py. 
+- **Paso 2**. Descarga el archivo fuente clonando la librería grove.py.
 
 ```sh
 cd ~
@@ -291,7 +287,6 @@ nano grove_gas_sensor_mq3.py
 ```
 
 Luego debes copiar el siguiente código en este archivo y presionar ++ctrl+x++ para salir y guardar.
-
 
 ```python
 import math
@@ -331,16 +326,16 @@ if __name__ == '__main__':
 
 ```
 
-- **Step 4**. Excute below commands to run code.
+- **Paso 4**. Ejecuta los siguientes comandos para ejecutar el código.
 
-```python 
+```python
 python grove_gas_sensor_mq3.py  0
 ```
-
 
 :::success
     Si todo va bien, podrás ver el siguiente resultado
 :::
+
 ```python
 pi@raspberrypi:~/grove.py/grove $ python grove_gas_sensor_mq3.py 0
 Detecting...
@@ -368,6 +363,7 @@ Puedes salir de este programa simplemente presionando ++ctrl+c++.
 :::note
         Puede que hayas notado que para el puerto analógico, el número de pin en la serigrafía es algo como **A0, A1**, sin embargo en el comando usamos el parámetro **0** y **1**, igual que el puerto digital. Así que por favor asegúrate de conectar el módulo en el puerto correcto, de lo contrario puede haber conflictos de pines.
 :::
+
 ### Jugar Con Wio Terminal (ArduPy)
 
 #### Hardware
@@ -386,7 +382,6 @@ Puedes salir de este programa simplemente presionando ++ctrl+c++.
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/img/WT-MQ3.png) -->
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/img/WT-MQ3.png" alt="pir" width={600} height="auto" /></p>
-
 
 #### Software
 
@@ -439,7 +434,7 @@ aip shell -n -c "runfile <YourPythonFilePath>"
 # aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-mq3.py"
 ```
 
-- **Step 5.** We will see the gas value display on terminal as below, and displaying on the Wio Terminal LCD screen.
+- **Paso 5.** Veremos la visualización del valor del gas en la terminal como se muestra a continuación, y se mostrará en la pantalla de la Wio Terminal LCD.
 
 ```python
 ansonhe@Ansons-Macbook-Pro ~:aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-mq3.py"
@@ -463,40 +458,39 @@ MQ3 Gas Sensor Reading is:  632
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/img/Ardupy-MQ3.png" alt="pir" width={600} height="auto" /></p>
 
-
 ## Visor de Esquemático en Línea
+
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/res/Gas_Sensor_Eagle_files.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 Recursos
 ---------
 
 **Lectura Sugerida / Referencias**
 
--   Cómo elegir un Sensor de Gas
--   [Qué es LEL](https://en.wikipedia.org/wiki/Flammability_limit)
+- Cómo elegir un Sensor de Gas
+- [Qué es LEL](https://en.wikipedia.org/wiki/Flammability_limit)
 
 **Esquemático**
 
--   [Grove Sensor de Gas - archivos EAGLE (Esquemático y Placa)](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/res/Gas_Sensor_Eagle_files.zip)
--   [Grove Sensor de Gas - Esquemático PDF](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/res/Gas_Sensor_Schematic.pdf)
+- [Grove Sensor de Gas - archivos EAGLE (Esquemático y Placa)](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/res/Gas_Sensor_Eagle_files.zip)
+- [Grove Sensor de Gas - Esquemático PDF](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/res/Gas_Sensor_Schematic.pdf)
 
 **Hoja de Datos**
 
--   [Hoja de Datos MQ-3](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/res/MQ-3.pdf)
+- [Hoja de Datos MQ-3](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/res/MQ-3.pdf)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Gas_Sensor(MQ3) -->
 
 ## Soporte Técnico y Discusión de Productos
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 

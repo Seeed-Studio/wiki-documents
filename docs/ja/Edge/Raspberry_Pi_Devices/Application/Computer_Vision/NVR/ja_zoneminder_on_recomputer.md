@@ -74,7 +74,7 @@ sudo apt upgrade -y
 sudo apt install apache2 mariadb-server
 ```
 
-Switch into root user and create database and database user.
+rootユーザーに切り替えて、データベースとデータベースユーザーを作成します。
 
 ```bash
 sudo su

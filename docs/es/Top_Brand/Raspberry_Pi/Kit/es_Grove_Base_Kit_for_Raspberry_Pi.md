@@ -62,6 +62,7 @@ PWM: El Puerto PWM Grove se conecta al pin GPIO/BCM pin12(PWM0) y GPIO/BCM pin13
 - El pin GPIO/BCM pin18 también está marcado como PWM0, en realidad el GPIO/BCM 12 y el GPIO/BCM 18 comparten el mismo canal PWM, así que no pueden configurarse a diferentes velocidades.
 
 - La salida del conector de audio también usa PWM 0 y PWM 1, así que no puedes tener salida de audio en ese conector y usar los PWMs al mismo tiempo.
+
 :::
 
 UART: El puerto UART Grove se conecta al GPIO14(UART0 TX) y GPIO15(UART0 RX). UART se usa comúnmente en la Pi como una forma conveniente de controlarla sobre el GPIO, o acceder a los mensajes de arranque del kernel desde la consola serie (habilitada por defecto). También puede usarse como una forma de interfaz con un Arduino, ATmega con bootloader, ESP8266, etc con tu Pi.
@@ -809,7 +810,7 @@ if __name__ == '__main__':
     main()
 ```
 
-Step 3：run the program
+Paso 3: ejecute el programa
 
 ```bash
 sudo chmod +x lesson_4.py
@@ -1267,11 +1268,11 @@ pi@raspberrypi:~/grove.py $
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -81,7 +81,7 @@ import TabItem from '@theme/TabItem';
 sudo apt update
 ```
 
-- **Step 3.** Install dependencies
+- **步骤 3.** 安装依赖
 
 ```sh
 sudo apt-get install \
@@ -96,13 +96,13 @@ dbus \
 systemd-journal-remote -y
 ```
 
-- **Step 4.** Fix broken installations
+- **步骤 4.** 修复损坏的安装
 
 ```sh
 sudo apt --fix-broken install
 ```
 
-- **Step 5.** Restart reTerminal
+- **步骤 5.** 重启 reTerminal
 
 ```sh
 sudo reboot
@@ -182,7 +182,7 @@ systemd.unified_cgroup_hierarchy=false apparmor=1 security=apparmor
 wget <copied_link>
 ```
 
-For example:
+例如：
 
 ```sh
 wget https://github.com/home-assistant/os-agent/releases/download/1.3.0/os-agent_1.3.0_linux_armv7.deb
@@ -194,7 +194,7 @@ wget https://github.com/home-assistant/os-agent/releases/download/1.3.0/os-agent
 sudo dpkg -i os-agent_<version_number>_linux_armv7.deb
 ```
 
-For example:
+例如：
 
 ```sh
 sudo dpkg -i os-agent_1.3.0_linux_armv7.deb
@@ -304,7 +304,7 @@ sudo nano autostart
 @chromium-browser --kiosk --incognito --disable-pinch --overscroll-history-navigation=0 homeassistant.local:8123
 ```
 
-- **Step 4.** Reboot reTerminal
+- **步骤 4.** 重启 reTerminal
 
 ```sh
 sudo reboot 
@@ -375,7 +375,7 @@ Reboot the system:
 sudo reboot
 ```
 
-#### Step 4: Install Docker
+#### 步骤 4：安装 Docker
 
 ```bash
 sudo curl -fsSL get.docker.com | sh

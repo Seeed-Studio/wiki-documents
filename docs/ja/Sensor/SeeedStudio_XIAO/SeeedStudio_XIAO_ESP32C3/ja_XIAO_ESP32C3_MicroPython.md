@@ -99,11 +99,11 @@ XIAO ESP32C3をMicroPythonでプログラムできるようにするには、2�
 
 ```https://micropython.org/download/esp32c3/```
 
-3. Put the latest firm in this file location and open the file in CMD
+3. 最新のファームをこのファイル場所に置き、CMDでファイルを開く
 
 ```your own file location\esptool-master\esptool```
 
-4. Flash the firmware by entering this command in CMD （enter bootloader mode before flashing）
+4. CMD にこのコマンドを入力してファームウェアをフラッシュします （フラッシュする前にブートローダーモードに入ってください）
 
 ```cpp
 esptool.exe --chip esp32c3 --port COM10 --baud 921600 --before default_reset --after hard_reset --no-stub  write_flash --flash_mode dio --flash_freq 80m 0x0 esp32c3-usb-20230426-v1.20.0.bin

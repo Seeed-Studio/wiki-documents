@@ -247,9 +247,9 @@ if (rc != PNG_SUCCESS) {
 png.decode(NULL, 0);
 ```
 
-- Loads and decodes the current background PNG using the *png.openFLASH()* function
+- *png.openFLASH()* 関数を使用して現在の背景 PNG を読み込み、デコードする
 
-### Touch interaction
+### タッチ操作
 
 ```cpp
 if (chsc6x_is_pressed()) {
@@ -276,7 +276,7 @@ void setup() {
 }
 ```
 
-- Initializes the display, touch input and snow particles
+- ディスプレイ、タッチ入力、雪の粒子を初期化する
 
 - **Main loop:**
 
@@ -506,7 +506,7 @@ void loop() {
 - このプロジェクトは、Seeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) によってサポートされています。
 - [Bruno Santos](https://github.com/orgs/Seeed-Studio/projects/6/views/1?sliceBy%5Bvalue%5D=feiticeir0&pane=issue&itemId=90657934&issue=Seeed-Studio%7Cwiki-documents%7C1993) に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/contributors/)されます。
 
-## Tech Support & Product Discussion
+## 技術サポート・製品ディスカッション
 
 私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 

@@ -135,7 +135,7 @@ Wio Linkを使って非常に基本的なLEDアプリケーションを構築し
     * Grove - LEDにはすでにGroveケーブルが含まれています
 :::
 
-### **STEP 1:** Android/iOSアプリをインストール
+### **ステップ 1:** Android/iOSアプリをインストール
 Wio Linkデバイスを管理および設定するために、Wio Linkアプリをインストールする必要があります。
 
 AndroidまたはiOSアプリをダウンロードしてインストールしてください。または、AppleのApp StoreやGoogle Marketで「Wio Link」と検索すると見つかります。
@@ -148,7 +148,7 @@ AndroidまたはiOSアプリをダウンロードしてインストールして�
     * Android OSバージョンが4.1以上、iOSバージョンが7以上であることを確認してください。
 :::
 
-### **STEP 2:** アカウントを作成
+### **ステップ 2:** アカウントを作成
 - 初めてWio APPを使用する場合、GPS認証が必要になることがあります。承認した後、サインアップしてください。
 - すでにアカウントをお持ちの場合は、ログイン前にサーバーの場所を確認してください。
 
@@ -158,7 +158,7 @@ AndroidまたはiOSアプリをダウンロードしてインストールして�
 
 [![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)
 
-### **STEP 3:** Wio Link Wi-Fi APに接続
+### **ステップ 3:** Wio Link Wi-Fi APに接続
 - CONFIGボタンを押し続けて青色LEDが呼吸モード（フェードイン＆フェードアウト効果で点滅）になるまで待ちます。これにより、Wio Linkが設定モードに成功して移行し、Wio Appによって検出可能になります。
 
 ![](https://files.seeedstudio.com/wiki/Wio_Link/image/WioLink_Configure-middle.png)
@@ -180,7 +180,7 @@ AndroidまたはiOSアプリをダウンロードしてインストールして�
 
 ![](https://files.seeedstudio.com/wiki/Wio_Link/image/Step3-3.png)
 
-### **STEP 4:** モジュールを仮想的にWio Linkと接続し、ファームウェアを更新
+### **ステップ 4:** モジュールを仮想的にWio Linkと接続し、ファームウェアを更新
 - Wio Linkをクリックすると、メインインターフェースに移動します。
 - 6つのGroveコネクタが表示されます。左側の最初のコネクタを選択します。
 - LEDは出力デバイスであるため、出力カテゴリを選択します。
@@ -193,7 +193,7 @@ AndroidまたはiOSアプリをダウンロードしてインストールして�
 
 ![](https://files.seeedstudio.com/wiki/Wio_Link/image/Wio_Link_Grove_LED%20middle.JPG)
 
-### **STEP 5**: APIを使用してアプリケーションをテストする
+### **ステップ 5**: APIを使用してアプリケーションをテストする
 - LEDをWio Linkに正常に接続したら、「View API」をクリックしてWio LinkのAPIを確認します。
 - 「Test Request」エリアに「1」または「0」を入力し、「Post」ボタンをクリックして何が起こるか確認してください。
 

@@ -1,8 +1,6 @@
 ---
 description: OpenRemote is a fully open-source IoT platform that simplifies the connection of networked devices to mobile and web applications. With the ability to deploy on Raspberry Pi-powered devices like Recomputer R1000 and R1100, OpenRemote provides a flexible edge solution for managing and controlling IoT devices in your environment
-
 title: Deploying OpenRemote on reComputer R1x Manage IoT Devices at the Edge
-
 keywords:
 - IIoT
 - OpenRemote
@@ -14,9 +12,9 @@ last_update:
   author: Kasun Thushara
 ---
 
-## Introduction 
+## Introduction
 
-OpenRemote is an open-source IoT platform designed to simplify the connection and management of networked devices. At the heart of the system is the Manager, a headless Java application that acts as an IoT context broker, capturing and managing the asset states in real-time. Through dynamic asset modeling, you can represent various components of your environment—such as buildings, rooms, and sensors—tailoring it to your specific needs. Rules written in Groovy, JavaScript, or JSON trigger actions based on asset state changes or event sequences. These rules can, for example, notify users when certain thresholds are met, like when humidity rises in a room. The platform supports networked devices via Agents, which interface with third-party APIs and service protocols, and can be co-located with the manager or installed on edge gateways. By deploying OpenRemote on Raspberry Pi-powered Recomputer R1000 and R1100 devices, you can manage your IoT ecosystem at the edge, providing efficient, localized control over your devices. 
+OpenRemote is an open-source IoT platform designed to simplify the connection and management of networked devices. At the heart of the system is the Manager, a headless Java application that acts as an IoT context broker, capturing and managing the asset states in real-time. Through dynamic asset modeling, you can represent various components of your environment—such as buildings, rooms, and sensors—tailoring it to your specific needs. Rules written in Groovy, JavaScript, or JSON trigger actions based on asset state changes or event sequences. These rules can, for example, notify users when certain thresholds are met, like when humidity rises in a room. The platform supports networked devices via Agents, which interface with third-party APIs and service protocols, and can be co-located with the manager or installed on edge gateways. By deploying OpenRemote on Raspberry Pi-powered Recomputer R1000 and R1100 devices, you can manage your IoT ecosystem at the edge, providing efficient, localized control over your devices.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width={600} height="auto" /></p>
 
@@ -26,10 +24,7 @@ OpenRemote is an open-source IoT platform designed to simplify the connection an
     </a>
 </div>
 
-
-
-## Installing Docker and Docker-Compose 
-
+## Installing Docker and Docker-Compose
 
 Follow these steps to install Docker and Docker-Compose on your Ubuntu system:
 
@@ -85,10 +80,7 @@ Finally, install Docker-Compose, which is a tool for defining and running multi-
 sudo apt install docker-compose
 ```
 
-
 ## Installing OpenRemote on Recomputer R1000 / R1100
-
-
 
 **1. Download the Docker Compose File**
 
@@ -98,7 +90,6 @@ Fetch the official `docker-compose.yml` file directly from the OpenRemote reposi
 wget https://raw.githubusercontent.com/openremote/openremote/master/docker-compose.yml
 ```
 
-
 **2. Navigate to the Directory**
 
 Change into the directory where the YAML file is located:
@@ -107,8 +98,6 @@ Change into the directory where the YAML file is located:
 cd /path/to/yaml
 ```
 
-
-
 **3. Pull Docker Images**
 
 Download the required Docker images:
@@ -116,8 +105,6 @@ Download the required Docker images:
 ```bash
 docker-compose pull
 ```
-
-
 
 **4. Start OpenRemote**
 
@@ -129,34 +116,27 @@ docker-compose -p openremote up
 
 This will launch the OpenRemote Manager and supporting services.
 
-
-
 **5. Access OpenRemote**
 
 Once started, you can log in to the OpenRemote Manager with the default credentials:
 
-* **Username:** `admin`
-* **Password:** `secret`
-
+- **Username:** `admin`
+- **Password:** `secret`
 
 You now have OpenRemote running on your Recomputer R1000 / R1100 as an **edge IoT platform** to manage and control your connected devices.
 
-
-## Working with HTTP Protocol 
+## Working with HTTP Protocol
 
 Follow these steps to integrate OpenWeatherMap API with OpenRemote on your Recomputer R1000 / R1100. This guide covers how to create an Agent for the weather data, link it to an asset, and set up the configuration.
-
-
 
 ### Obtain OpenWeatherMap API Key
 
 To use the OpenWeatherMap API, you need a free API key. Register for a free account at [OpenWeatherMap](https://openweathermap.org/) and obtain your API key.
 
-
-
 ### Create the Agent
 
 **Create the HTTP API Agent**  
+
 - Navigate to the **Assets** page.
 - Click the **+** icon at the top of the asset list on the left to add a new **Agent** or **Asset**.
 - In the dialog that appears, select **HTTP Agent** from the list.
@@ -187,52 +167,62 @@ Now that the HTTP API Agent is created, configure it with the following details:
 
 Click **Save** to confirm the configuration.
 
+<<<<<<< HEAD
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote3.png" alt="pir" width={800} height="auto" /></p>
 
 
+=======
+>>>>>>> d39912a091b24e85ddcf1b545826c7b2b11bd6d6
 ### Create the Weather Asset
 
 **Add a New Weather Asset**
 
-* Click the **+** icon to add an asset.
-* Select **Weather Asset** from the list.
-* **Name:** `Weather Rotterdam`
-* Click **Add**.
+- Click the **+** icon to add an asset.
+- Select **Weather Asset** from the list.
+- **Name:** `Weather Rotterdam`
+- Click **Add**.
 
 The weather asset will now appear in the list as a child of the HTTP API Agent. You can change its parent if desired.
 
+<<<<<<< HEAD
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote4.png" alt="pir" width={800} height="auto" /></p>
 
+=======
+>>>>>>> d39912a091b24e85ddcf1b545826c7b2b11bd6d6
 ### Add the Agent Links
 
 **Modify Asset Configuration**
 Go to **Modify Mode** by clicking the toggle at the top of the asset page. In this mode, you can alter the attributes of an asset and configure its settings.
 
-### Setup the Humidity Attribute:
+### Setup the Humidity Attribute
 
-* Expand the **humidity** attribute.
-* Click **Add configuration item** and select **Agent link**.
-* Select the **HTTP API Agent**.
-* Add the following parameters:
+- Expand the **humidity** attribute.
+- Click **Add configuration item** and select **Agent link**.
+- Select the **HTTP API Agent**.
+- Add the following parameters:
 
-  * **Polling millis:** `60000` (poll every minute)
-  * **Path:** `weather`
-  * **Value filters:** `JsonPathFilter-2`
-  * **Path (JSON):** `$.main.humidity`
+  - **Polling millis:** `60000` (poll every minute)
+  - **Path:** `weather`
+  - **Value filters:** `JsonPathFilter-2`
+  - **Path (JSON):** `$.main.humidity`
 
+<<<<<<< HEAD
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote5.png" alt="pir" width={800} height="auto" /></p>
 
 ### Setup the Temperature Attribute:
+=======
+### Setup the Temperature Attribute
+>>>>>>> d39912a091b24e85ddcf1b545826c7b2b11bd6d6
 
-* Expand the **temperature** attribute.
-* Click **Add configuration item** and select **Agent link**.
-* Select the **HTTP API Agent**.
-* Add the following parameters:
+- Expand the **temperature** attribute.
+- Click **Add configuration item** and select **Agent link**.
+- Select the **HTTP API Agent**.
+- Add the following parameters:
 
-  * **Polling millis:** `60000` (poll every minute)
-  * **Path:** `weather`
-  * **Value filters:** `JsonPathFilter-2`
-  * **Path (JSON):** `$.main.temp`
+  - **Polling millis:** `60000` (poll every minute)
+  - **Path:** `weather`
+  - **Value filters:** `JsonPathFilter-2`
+  - **Path (JSON):** `$.main.temp`
 
 Click **Save** at the top right to apply these changes.
 
@@ -255,11 +245,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-

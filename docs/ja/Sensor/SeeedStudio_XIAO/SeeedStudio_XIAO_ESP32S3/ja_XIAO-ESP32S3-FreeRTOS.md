@@ -13,7 +13,7 @@ last_update:
   author: Priyanshu Roy
 ---
 
-# XIAO ESP32S3(Sense) With FreeRTOS
+# XIAO ESP32S3（センス）とFreeRTOS
 
 このwikiは[Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/)の[FreeRTOS](https://freertos.org/)サポートについて説明します。このガイドの支援により、ボードで利用可能な機能セットを活用できるようになります。
 
@@ -130,7 +130,7 @@ Done! You can now compile ESP-IDF projects.
 idf.py
 ```
 
-should show the following output :
+次の出力を表示するはずです：
 
 ```shell
 Usage: idf.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
@@ -678,7 +678,7 @@ OV3660モデルを使用している場合は、それを駆動できるよう�
     s->set_colorbar(s, 0);                   // 0 = disable , 1 = enable
   ```
 
-  - Defines a function takePicture() to capture an image and save it to SD card.
+  - 画像をキャプチャしてSDカードに保存するtakePicture()関数を定義します。
 
   ```c
   void takePicture()
@@ -697,7 +697,7 @@ OV3660モデルを使用している場合は、それを駆動できるよう�
   }
   ```
 
-  - Creates a task cameraTakePicture_5_sec() to continuously take pictures every 5 seconds.
+  - 5秒ごとに継続的に写真を撮影するタスクcameraTakePicture_5_sec()を作成します。
 
   ```c
   void cameraTakePicture_5_sec(void *pvParameters)
@@ -863,7 +863,7 @@ void saveJpegToSdcard(camera_fb_t *);
   }
   ```
 
-  - Provides functions to save JPEG images to the SD card.
+  - SDカードにJPEG画像を保存する機能を提供します。
 
   ```c
   uint16_t lastKnownFile = 0;

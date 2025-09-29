@@ -159,7 +159,7 @@ Run-->Configure Interpreterに移動し、Thonnyオプションのインター�
 ['__class__', '__name__', 'A0', 'A1', 'A2', 'A4', 'A5', 'A6', 'D0', 'D1', 'D10', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'I2C', 'LP_I2C_SCL', 'LP_I2C_SDA', 'LP_UART_RXD', 'LP_UART_TXD', 'MISO', 'MOSI', 'MTCK', 'MTDI', 'MTDO', 'MTMS', 'RX', 'SCK', 'SCL', 'SDA', 'SPI', 'TX', 'UART', '__dict__', 'board_id']
 ```
 
-### 2. CircuitPython Web Workflow
+### 2. CircuitPython Web ワークフロー
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/5.png" /></div>
 [CircuitPython コードエディタ](https://code.circuitpython.org/)は、CircuitPython の最新バージョンを実行している ESP32 ベースのデバイス上でファイルを編集する際に、より充実した豊かな体験を提供します。

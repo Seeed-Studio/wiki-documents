@@ -55,7 +55,7 @@ git clone -b dunfell https://github.com/openembedded/meta-openembedded.git layer
 git clone -b dunfell git://github.com/mendersoftware/meta-mender layers/meta-mender
 ```
 
-In order to be compatible with meta-raspberrypi, change the gstreamer version of poky to the latest
+meta-raspberrypiとの互換性を保つため、pokyのgstreamerバージョンを最新版に変更する
 
 ```
 cd layers/poky
@@ -228,11 +228,11 @@ root@seeed-reterminal-mender:~#
 私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -36,9 +36,9 @@ GMSL機能を有効にするには、J501キャリアボードと[GMSL拡張ボ�
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/gmsl_connectoin.png"/>
 </div>
 
-- **Step1.** J501キャリアボードに銅製スタンドオフを取り付けます。
-- **Step2.** GMSL拡張ボードをJ501キャリアボードに接続し、ネジで固定します。
-- **Step3.** GMSLカメラを接続します。
+- **ステップ1.** J501キャリアボードに銅製スタンドオフを取り付けます。
+- **ステップ2.** GMSL拡張ボードをJ501キャリアボードに接続し、ネジで固定します。
+- **ステップ3.** GMSLカメラを接続します。
 
 ### 使用方法
 
@@ -46,7 +46,7 @@ GMSL機能を有効にするには、J501キャリアボードと[GMSL拡張ボ�
 GMSL機能を有効にする前に、GMSL拡張ボードドライバーを含むJetPackバージョンがインストールされていることを確認してください。
 :::
 
-**Step1.** jetsonデバイスのターミナルで、以下のコマンドを入力して、接続されたカメラが正しく認識されているかを確認します。
+**ステップ1.** jetsonデバイスのターミナルで、以下のコマンドを入力して、接続されたカメラが正しく認識されているかを確認します。
 
 ```bash
 ls /dev/video*
@@ -62,7 +62,7 @@ ls /dev/video*
 sudo apt install v4l-utils
 ```
 
-**Step3.** Set the channel format for the serializer and deserializer.
+**ステップ3.** シリアライザーとデシリアライザーのチャネル形式を設定します。
 
 ```bash
 media-ctl -d /dev/media0 --set-v4l2 '"ser_0_ch_0":1[fmt:YUYV8_1X16/1920x1536]'
@@ -87,7 +87,7 @@ media-ctl -d /dev/media0 --set-v4l2 '"des_1_ch_3":0[fmt:YUYV8_1X16/1920x1536]'
 デバイスが再起動するたびに、シリアライザーとデシリアライザーのチャンネル形式を設定する必要があります。
 :::
 
-**Step4.** 以下のコマンドを使用して、カメラを素早く起動し、ビデオストリームを表示するウィンドウを開くことができます。
+**ステップ4.** 以下のコマンドを使用して、カメラを素早く起動し、ビデオストリームを表示するウィンドウを開くことができます。
 
 ```bash
 gst-launch-1.0 v4l2src device=/dev/video0  ! xvimagesink -ev 
@@ -142,10 +142,10 @@ M.2 Key Mは高速ソリッドステートドライブ（SSD）用に設計さ�
 
 ### サポートされているSSDは以下の通りです：
 
-- [128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
-- [256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
-- [512GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
-- [1TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
+- [128GB NVMe M.2 PCle Gen3x4 2280 内蔵 SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
+- [256GB NVMe M.2 PCle Gen3x4 2280 内蔵 SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
+- [512GB NVMe M.2 PCle Gen3x4 2280 内蔵 SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
+- [1TB NVMe M.2 PCle Gen3x4 2280 内蔵 SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
 
 ### 使用方法
 
@@ -248,15 +248,15 @@ sudo apt install minicom -y
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-**Step3.** Ctrl+Aを押してからEを押してローカルエコーをオンにします。
+**ステップ3.** Ctrl+Aを押してからEを押してローカルエコーをオンにします。
 
-**Step4.** コマンド「AT」を入力してEnterを押します。「OK」という応答が表示されれば、4Gモジュールが正常に動作しています。
+**ステップ4.** コマンド「AT」を入力してEnterを押します。「OK」という応答が表示されれば、4Gモジュールが正常に動作しています。
 
 <div align="center">
   <img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/22.jpg"/>
 </div>
 
-**Step5.** コマンド「ATI」を入力してモジュール情報を確認します。
+**ステップ5.** コマンド「ATI」を入力してモジュール情報を確認します。
 
 <div align="center">
   <img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/23.png"/>
@@ -383,7 +383,7 @@ cd PP.04
 DI/DOピン割り当てテーブルを参照して、GPIO番号とBGA番号を確認できます。上記の例では、DI1ピンの場合、GPIO番号は444、BGA番号はPP.04です。
 :::
 
-**Step3.** 以下を実行してステータスを確認します：
+**ステップ3.** 以下を実行してステータスを確認します：
 
 ```bash
 cat value
@@ -443,11 +443,11 @@ CANバスをテストしてインターフェースするには、以下に示�
 
 ### USB to CANアダプターでの使用方法
 
-**Step1.** 使用しているUSB to CANアダプターのドライバーをメーカーのWebサイトからダウンロードしてインストールします。私たちの場合、使用したアダプターに応じて、ドライバーは[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver)で見つけることができます。
+**ステップ1.** 使用しているUSB to CANアダプターのドライバーをメーカーのWebサイトからダウンロードしてインストールします。私たちの場合、使用したアダプターに応じて、ドライバーは[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver)で見つけることができます。
 
-**Step2.** 一部のアダプターには、CANデバイスと通信するためのPC用の必要なソフトウェアも付属しています。私たちの場合、使用したアダプターに応じて、[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)で見つけることができるソフトウェアをダウンロードしてインストールしました。
+**ステップ2.** 一部のアダプターには、CANデバイスと通信するためのPC用の必要なソフトウェアも付属しています。私たちの場合、使用したアダプターに応じて、[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)で見つけることができるソフトウェアをダウンロードしてインストールしました。
 
-**Step3.** JetsonのCANインターフェースを初期化します。
+**ステップ3.** JetsonのCANインターフェースを初期化します。
 
 Jetsonで**`can_init.sh`**という名前の新しいファイルを作成し、以下の内容を記述します：
 
@@ -476,7 +476,7 @@ sudo ip link set can1 up
 
 ```
 
-Then, run the file we just created in the Jetson terminal window:
+次に、Jetson のターミナルウィンドウで、今作成したファイルを実行します：
 
 ```bash
 sudo apt-get install gpiod
@@ -485,37 +485,37 @@ sudo chmod +x can_init.sh
 ./can_init.sh
 ```
 
-**Step4.** ターミナルでifconfigと入力すると、CANインターフェースが有効になっていることが確認できます。
+**ステップ4.** ターミナルでifconfigと入力すると、CANインターフェースが有効になっていることが確認できます。
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/can.png"/>
 </div>
 
-**Step5.** 以前にインストールしたCANソフトウェアを開きます。この場合、使用しているCANアダプターに応じてインストールしたソフトウェアを開きます。
+**ステップ5.** 以前にインストールしたCANソフトウェアを開きます。この場合、使用しているCANアダプターに応じてインストールしたソフトウェアを開きます。
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/42.jpg"/>
 </div>
 
-**Step6.** USB to CANアダプターをPCに接続し、Windowsの検索バーで検索して**デバイスマネージャー**を開きます。接続されたアダプターが**ポート (COM & LPT)**の下に表示されます。ここに表示されているシリアルポートをメモしてください。下の画像によると、シリアルポートは**COM9**です。
+**ステップ6.** USB to CANアダプターをPCに接続し、Windowsの検索バーで検索して**デバイスマネージャー**を開きます。接続されたアダプターが**ポート (COM & LPT)**の下に表示されます。ここに表示されているシリアルポートをメモしてください。下の画像によると、シリアルポートは**COM9**です。
 
 <div align="center">
   <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/43.png"/>
 </div>
 
-**Step7.** CANソフトウェアを開き、**COM**セクションの横にある**Refresh**をクリックし、ドロップダウンメニューをクリックして接続されたアダプターに応じてシリアルポートを選択します。**COM bps**はデフォルトのままにして、**Open**をクリックします。
+**ステップ7.** CANソフトウェアを開き、**COM**セクションの横にある**Refresh**をクリックし、ドロップダウンメニューをクリックして接続されたアダプターに応じてシリアルポートを選択します。**COM bps**はデフォルトのままにして、**Open**をクリックします。
 
 <div align="center">
   <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/44.jpg"/>
 </div>
 
-**Step8.** **Mode**と**CAN bps**はデフォルトのままにし、**Type**を**Standard frame**に変更して**Set and Start**をクリックします。
+**ステップ8.** **Mode**と**CAN bps**はデフォルトのままにし、**Type**を**Standard frame**に変更して**Set and Start**をクリックします。
 
 <div align="center">
   <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/45.png"/>
 </div>
 
-**Step9.** reComputer Industrialで、以下のコマンドを実行してPCにCAN信号を送信します：
+**ステップ9.** reComputer Industrialで、以下のコマンドを実行してPCにCAN信号を送信します：
 
 ```sh
 cansend can0 123#abcdabcd
@@ -533,7 +533,7 @@ cansend can0 123#abcdabcd
 candump can0 &
 ```
 
-**Step11.** CANソフトウェアで、**Send a single frame**をクリックします：
+**ステップ11.** CANソフトウェアで、**Send a single frame**をクリックします：
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/47.png"/>
@@ -602,11 +602,11 @@ import TabItem from '@theme/TabItem';
 
 ### 使用方法
 
-**Step1.** 上記のようにRTCバッテリーを接続します。
+**ステップ1.** 上記のようにRTCバッテリーを接続します。
 
-**Step2.** J501の電源を入れます。
+**ステップ2.** J501の電源を入れます。
 
-**Step3.** Ubuntuデスクトップで、右上角のドロップダウンメニューをクリックし、`Settings > Date & Time`に移動し、イーサネットケーブルでネットワークに接続して**Automatic Date & Time**を選択し、日付/時刻を自動的に取得します。
+**ステップ3.** Ubuntuデスクトップで、右上角のドロップダウンメニューをクリックし、`Settings > Date & Time`に移動し、イーサネットケーブルでネットワークに接続して**Automatic Date & Time**を選択し、日付/時刻を自動的に取得します。
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/13.png"/>
@@ -616,7 +616,7 @@ import TabItem from '@theme/TabItem';
 イーサネット経由でインターネットに接続していない場合は、ここで日付/時刻を手動で設定できます。
 :::
 
-**Step4.** ターミナルウィンドウを開き、以下のコマンドを実行してハードウェアクロック時刻を確認します：
+**ステップ4.** ターミナルウィンドウを開き、以下のコマンドを実行してハードウェアクロック時刻を確認します：
 
 ```bash
 sudo hwclock
@@ -628,23 +628,23 @@ sudo hwclock
   <img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/14.png"/>
 </div>
 
-**Step5.** 以下のコマンドを入力して、ハードウェアクロック時刻を現在のシステムクロック時刻に変更します：
+**ステップ5.** 以下のコマンドを入力して、ハードウェアクロック時刻を現在のシステムクロック時刻に変更します：
 
 ```bash
 sudo hwclock --systohc
 ```
 
-**Step6.** インターネットから時刻を取得しないようにするため、接続されているイーサネットケーブルをすべて取り外し、ボードを再起動してください：
+**ステップ6.** インターネットから時刻を取得しないようにするため、接続されているイーサネットケーブルをすべて取り外し、ボードを再起動してください：
 
 ```bash
 sudo reboot
 ```
 
-**Step7.** ハードウェアクロック時刻を確認して、デバイスの電源がオフになっても日付/時刻が同じままであることを確認します。
+**ステップ7.** ハードウェアクロック時刻を確認して、デバイスの電源がオフになっても日付/時刻が同じままであることを確認します。
 
 次に、各起動時にハードウェアクロックからシステムクロックを常に同期するスクリプトを作成します。
 
-**Step8.** お好みのテキストエディタを使用して新しいシェルスクリプトを作成します。ここでは**vi**テキストエディタを使用します
+**ステップ8.** お好みのテキストエディタを使用して新しいシェルスクリプトを作成します。ここでは**vi**テキストエディタを使用します
 
 ```bash
 sudo vi /usr/bin/hwtosys.sh 
@@ -658,7 +658,7 @@ sudo vi /usr/bin/hwtosys.sh
 sudo hwclock --hctosys
 ```
 
-**Step10.** Make the script executable.
+**ステップ10.** スクリプトを実行可能にする。
 
 ```bash
 sudo chmod +x /usr/bin/hwtosys.sh 
@@ -702,7 +702,7 @@ sudo systemctl start hwtosys.service
 sudo systemctl status hwtosys.service
 ```
 
-**Step16** ボードを再起動すると、システムクロックがハードウェアクロックと同期されていることが確認できます。
+**ステップ16** ボードを再起動すると、システムクロックがハードウェアクロックと同期されていることが確認できます。
 
 ## ファン
 

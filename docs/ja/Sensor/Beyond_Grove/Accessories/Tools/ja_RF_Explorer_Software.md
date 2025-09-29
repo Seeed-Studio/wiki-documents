@@ -32,7 +32,7 @@ RF Explorer シリーズのアナライザーおよびジェネレーターは�
 
 ## RF Explorer 用 Windows ソフトウェアオプション
 
-### [RF Explorer for Windows](http://www.rf-explorer.com/windows)  
+### [RF Explorer for Windows](http://www.rf-explorer.com/windows)
 
 ![](https://files.seeedstudio.com/wiki/RF_Explorer_Software/img/Windows.jpg)
 

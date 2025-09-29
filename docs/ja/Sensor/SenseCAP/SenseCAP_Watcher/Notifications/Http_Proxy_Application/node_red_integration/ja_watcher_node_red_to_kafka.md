@@ -128,7 +128,7 @@ kafka-console-consumer.sh --bootstrap-server kafka:9092 --from-beginning --topic
 
 ## Part 3. Node-REDでKafkaメッセージモジュールを実行する
 
-### Step 4. Kafkaメッセージモジュールをインストールする
+### ステップ 4. Kafkaメッセージモジュールをインストールする
 
 1. **Manage palette**をクリックします。Node_REDをまだインストールしていない場合は、[こちらをクリックしてください](https://wiki.seeedstudio.com/ja/watcher_to_node_red/)。
 
@@ -138,13 +138,13 @@ kafka-console-consumer.sh --bootstrap-server kafka:9092 --from-beginning --topic
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_kafka_image/4.png" style={{width:600, height:'auto'}}/></div>
 
-### Step 5. Kafkaメッセージモジュールを設定する
+### ステップ 5. Kafkaメッセージモジュールを設定する
 
 1. これらのモジュール（**inject, kafka producer, kafka consumer, debug**）をワークスペースにドラッグします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_kafka_image/5.png" style={{width:800, height:'auto'}}/></div>
 
-2. **Kafka Producer**をダブルクリックして設定します。Step 3を実行する際は、**新しいブローカーを追加**する必要があります。
+2. **Kafka Producer**をダブルクリックして設定します。ステップ 3を実行する際は、**新しいブローカーを追加**する必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_kafka_image/6.png" style={{width:800, height:'auto'}}/></div>
 

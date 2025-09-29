@@ -100,7 +100,7 @@ Recomendamos instalar la última versión del SO Raspberry Pi de 64 bits desde s
 
 :::note
 
-Before deploying a model on resource-constrained devices like the Raspberry Pi, it's often essential to conduct model conversion and quantization to ensure optimal performance. This process involves several steps: converting a PyTorch model (in .pt format) to a TensorFlow Lite (TFLite) model with quantization, specifically to the uint8 data type. You can train your custom dataset and convert it into a TFLite model using this Colab notebook. We have outlined a step-by-step process for training within the Colab environment. Please follow these instructions, obtain the **data.yaml** file and **best-int8.tflite** file, and return to this wiki for further guidance.
+Antes de desplegar un modelo en dispositivos con recursos limitados como la Raspberry Pi, a menudo es esencial realizar la conversión y la cuantización del modelo para garantizar un rendimiento óptimo. Este proceso implica varios pasos: convertir un modelo de PyTorch (en formato .pt) a un modelo de TensorFlow Lite (TFLite) con cuantización, específicamente al tipo de datos uint8. Puede entrenar su conjunto de datos personalizado y convertirlo a un modelo TFLite usando este cuaderno de Colab. Hemos descrito un proceso paso a paso para el entrenamiento dentro del entorno de Colab. Siga estas instrucciones, obtenga el archivo **data.yaml** y el archivo **best-int8.tflite**, y regrese a este wiki para más orientación.
 
 :::
 
@@ -134,7 +134,7 @@ python detect.py --weight best-int8.tflite --img 224 --source <your source > --n
 ```
 
 :::note
-You can explore the official Ultralytics GitHub site at [https://github.com/ultralytics/yolov5](https://github.com/ultralytics/yolov5) to learn how to use the `detect.py` script and discover the various sources you can utilize for feeding images or video streams into the YOLOv5 model.
+Puedes explorar el sitio oficial de Ultralytics GitHub en [https://github.com/ultralytics/yolov5](https://github.com/ultralytics/yolov5) para aprender cómo usar el script `detect.py` y descubrir las diversas fuentes que puedes utilizar para alimentar imágenes o flujos de video al modelo YOLOv5.
 :::
 
 ## Ejecutar en Edge TPU

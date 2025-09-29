@@ -10,7 +10,7 @@ last_update:
   author: timo614
 ---
 
-# XIAO ESP32S3(sense) With Zephyr(RTOS)
+# XIAO ESP32S3（感覚）とZephyr（RTOS）
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-esp32s3.png"/></div>
 
@@ -120,7 +120,7 @@ west flash
 west espressif monitor
 ```
 
-You will see a console available for sending commands to the board:
+ボードにコマンドを送信するためのコンソールが表示されます：
 
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***

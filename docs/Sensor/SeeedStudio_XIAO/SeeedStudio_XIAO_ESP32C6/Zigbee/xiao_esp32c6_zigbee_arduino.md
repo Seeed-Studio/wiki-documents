@@ -23,7 +23,7 @@ This tutorial guides you through implementing [Zigbee](https://en.wikipedia.org/
 
 :::note Prerequisite: Arduino Development Setup
 
-If you haven't prepared your Arduino IDE, refer to the **[Getting Started Guide](https://chatgpt.com/xiao_esp32c6_getting_started/#software-preparation)**. Make sure the **esp-arduino board version** is **v3.0.6 or later**, which supports Zigbee functionality.
+If you haven't prepared your Arduino IDE, refer to the **[Getting Started Guide](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/#software-preparation)**. Make sure the **esp-arduino board version** is **v3.0.6 or later**, which supports Zigbee functionality.
 
 :::
 
@@ -520,7 +520,6 @@ void loop() {
 :::tip
 The official routines are still being continuously updated, our documentation may not be able to synchronize the latest programs at the first time, if there is any discrepancy, please refer to **[Espressif's program examples](https://github.com/espressif/arduino-esp32/blob/3.0.7/libraries/Zigbee/examples/Zigbee_On_Off_Switch/Zigbee_On_Off_Switch.ino)**.
 :::
-
 
 ```cpp title=Zigbee_On_Off_Switch.ino showLineNumbers
 #ifndef ZIGBEE_MODE_ZCZR

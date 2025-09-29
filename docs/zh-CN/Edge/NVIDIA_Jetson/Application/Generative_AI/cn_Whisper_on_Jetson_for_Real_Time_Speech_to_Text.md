@@ -74,7 +74,7 @@ sudo apt update && sudo apt install ffmpeg
 arecord -D hw:2,0 --dump-hw-params #set microphone rate to 16000
 ```
 
-#### Step2. Test environment
+#### 步骤 2. 测试环境
 
 ```shell
 python test.py
@@ -96,7 +96,7 @@ python main.py
 
 <iframe width="800" height="400" src="https://www.youtube.com/embed/KR0GYqUuo5Y?si=uSGUkKmCSZmaq5f7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Riva vs Whisper
+## Riva 与 Whisper 对比
 
 Riva 以其先进的 AI 驱动语音识别和自然语言处理而闻名，为用户提供实时转录、翻译和口语对话分析功能。
 
