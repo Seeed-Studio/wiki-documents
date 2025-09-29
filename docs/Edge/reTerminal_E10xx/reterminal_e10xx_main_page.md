@@ -105,7 +105,7 @@ Create rich graphical interfaces using LVGL and the visual SquareLine Studio des
 
 - [SenseCraft HMI Documentation](https://wiki.seeedstudio.com/sensecraft_hmi_overview/)
 - [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
-<!-- - [GitHub Repository](/reterminal_e10xx_main_page) -->
+- [reTerminal MIC Radio Certificate](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_MIC_Radio_Certificate.pdf)
 
 ## FCC Notice
 

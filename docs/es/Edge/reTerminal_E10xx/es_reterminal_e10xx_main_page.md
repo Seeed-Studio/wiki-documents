@@ -105,7 +105,7 @@ Create rich graphical interfaces using LVGL and the visual SquareLine Studio des
 
 - [Documentación de SenseCraft HMI](https://wiki.seeedstudio.com/es/sensecraft_hmi_overview/)
 - [Hoja de datos ESP32-S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
-<!-- - [GitHub Repository](/es/reterminal_e10xx_main_page) -->
+- [Certificado de radio MIC de reTerminal](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_MIC_Radio_Certificate.pdf)
 
 ## Aviso FCC
 
@@ -123,7 +123,7 @@ Nota: Este equipo ha sido probado y se ha encontrado que cumple con los límites
 
 – Conectar el equipo a una toma en un circuito diferente al que está conectado el receptor.
 
-– Consultar al distribuidor o a un técnico experimentado en radio/TV para obtener ayuda. Este dispositivo cumple con los límites de exposición a radiación FCC establecidos para un entorno no controlado. Este dispositivo debe instalarse y operarse con una distancia mínima de 20cm entre el radiador y su cuerpo.
+– Consultar al distribuidor o a un técnico experimentado en radio/TV para obtener ayuda. Este dispositivo cumple con los límites de exposición a radiación FCC establecidos para un ambiente no controlado. Este dispositivo debe instalarse y operarse con una distancia mínima de 20cm entre el radiador y su cuerpo.
 
 ## Soporte técnico y discusión del producto
 
