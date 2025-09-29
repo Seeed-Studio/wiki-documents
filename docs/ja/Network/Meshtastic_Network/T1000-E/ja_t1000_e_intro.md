@@ -13,11 +13,11 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/intro-e.png" alt="pir" width={800} height="auto" /></p>
 
-Meshtastic向けに設計された高性能トラッカーで、クレジットカードサイズの小型設計により、ポケットに簡単に収まり、資産に取り付けることができます。Semtech社のLR1110、Nordic社のnRF52840、Mediatek社のAG3335 GPSモジュールを搭載し、Meshtasticユーザーに高精度、低消費電力の測位・通信ソリューションを提供します。
+これは[Meshtastic®](https://meshtastic.org/)向けに設計された高性能トラッカーで、クレジットカードほどの小さなサイズで、ポケットに簡単に収まったり、資産に取り付けたりできます。Semtech社のLR1110、Nordic社のnRF52840、Mediatek社のAG3335 GPSモジュールを内蔵し、[Meshtastic®](https://meshtastic.org/)ユーザーに高精度、低消費電力の測位・通信ソリューションを提供します。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -30,20 +30,20 @@ Meshtastic向けに設計された高性能トラッカーで、クレジット�
 ### 特徴
 
 - **マルチプロトコル対応**: nRF52840とLR1110を搭載し、Bluetooth 5.0、Thread、Zigbee、LoRaをサポートし、幅広いデバイスとネットワークとの互換性を確保します。
-- **強力な測位機能**: Mediatek社のAG3335 GPSチップを統合し、高精度測位サービスを提供します。
-- **拡張可能なインターフェース**: 4つのポゴピンを設計し、DFU（Device Firmware Upgrade）、シリアルログ、APIインターフェース用のUSBインターフェースをサポートし、デバイス管理とデバッグを簡素化します。
-- **オープンソースサポート**: Meshtasticオープンソースメッシュネットワーキングプロトコルと互換性があり、長距離・低消費電力通信ニーズに適しています。
+- **強力な測位機能**: Mediatek社のAG3335 GPSチップを統合し、高精度の測位サービスを提供します。
+- **拡張可能なインターフェース**: 4つのポゴピンで設計され、DFU（Device Firmware Upgrade）、シリアルログ、APIインターフェース用のUSBインターフェースをサポートし、デバイス管理とデバッグを簡素化します。
+- **オープンソース対応**: Meshtasticオープンソースメッシュネットワーキングプロトコルと互換性があり、長距離・低消費電力通信ニーズに適しています。
 
 ### 仕様
 
 **一般**
 
-|**ネットワークプロトコル**|LoRa、Bluetooth v5.1|
+|**ネットワークプロトコル**|LoRa, Bluetooth v5.1|
 | :- | :- |
-|**温度**|<p>範囲: -20 to 60℃;</p><p>精度: ± 1℃ (最小 ±0.5℃、最大 ±1℃)</p><p>分解能: 0.1℃</p>|
+|**温度**|<p>範囲: -20 to 60℃;</p><p>精度: ± 1℃ (最小 ±0.5℃, 最大 ±1℃)</p><p>分解能: 0.1℃</p>|
 |**光**|0 to 100% (0%は暗闇、100%は最も明るい)|
-|**LEDとブザー**|ステータス表示用1×LEDと1×ブザー|
-|**ボタン**|操作用1×ボタン|
+|**LEDとブザー**|ステータス表示用1個のLEDと1個のブザー|
+|**ボタン**|操作用1個のボタン|
 |**アンテナ**|内蔵 (GNSS/LoRa/Wi-Fi/BLE)|
 |**通信距離**|2 to 5km (アンテナ、設置、環境に依存)|
 |**IP等級**|IP65|
@@ -89,7 +89,7 @@ Meshtastic向けに設計された高性能トラッカーで、クレジット�
 |- |- |- |
 |1回押し|電源オン|上昇メロディー|
 |2回押し|ノード/位置情報更新|-|
-|3回押し|GPS オン/オフ切り替え|-|
+|3回押し|GPSのオン/オフ切り替え|-|
 |5秒間長押し|電源オフ|下降メロディー|
 
 ### LED

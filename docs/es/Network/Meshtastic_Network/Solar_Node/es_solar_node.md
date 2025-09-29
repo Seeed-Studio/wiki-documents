@@ -13,33 +13,30 @@ last_update:
 ---
 
 
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.png" alt="pir" width={800} height="auto" /></p>
 
-
-Es un nodo de comunicaciones o repetidor económico alimentado por energía solar basado en Meshtastic, que integra el controlador principal XIAO nRF52840 Plus y el módulo LoRa Wio-SX1262. Está específicamente diseñado para áreas sin cobertura de red. Soporta comunicación de larga distancia, posicionamiento preciso y operación de bajo consumo. Es adecuado para expandir la cobertura de red en áreas exteriores.
+Es un nodo de comunicaciones o repetidor económico alimentado por energía solar basado en [Meshtastic®](https://meshtastic.org/), que integra el controlador principal XIAO nRF52840 Plus y el módulo LoRa Wio-SX1262. Está específicamente diseñado para áreas sin cobertura de red. Soporta comunicación de larga distancia, posicionamiento preciso y operación de bajo consumo. Es adecuado para expandir la cobertura de red en áreas exteriores.
 
 ## Comparación de Versiones
- 
+
 El Solar Node está disponible en dos variantes: [SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html) y [SenseCAP Solar Node P1-Pro](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html).
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-1_1.jpeg" alt="pir" width={800} height="auto" /></p>
-
 
 ## Descripción General
 
 ### Características
 
-* Integrado con un panel solar de 5W, y soporta baterías externas (que deben ser proporcionadas por los usuarios).
-* El dispositivo viene preinstalado con firmware Meshtastic de fábrica. Puede integrarse perfectamente en el ecosistema Meshtastic.
-* Compatible con el ecosistema Grove, y soporta plug-and-play de sensores como sensores de temperatura y humedad, sensores de luz, etc.
-* Es adecuado para uso exterior a largo plazo.
-* Soporta transmisión de 8 a 9KM en áreas abiertas. Puede usarse como nodo exterior o repetidor, expandiendo fácilmente la red Mesh y mejorando la cobertura de red.
+- Integrado con un panel solar de 5W, y soporta baterías externas (que deben ser proporcionadas por los usuarios).
+- El dispositivo viene preinstalado con firmware Meshtastic de fábrica. Puede integrarse perfectamente en el ecosistema Meshtastic.
+- Compatible con el ecosistema Grove, y soporta plug-and-play de sensores como sensores de temperatura y humedad, sensores de luz, etc.
+- Es adecuado para uso exterior a largo plazo.
+- Soporta transmisión de 8 a 9KM en áreas abiertas. Puede usarse como nodo exterior o repetidor, expandiendo fácilmente la red Mesh y mejorando la cobertura de red.
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-3.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### Especificaciones
-
 
 <table>
   <tr>
@@ -148,7 +145,6 @@ El Solar Node está disponible en dos variantes: [SenseCAP Solar Node P1](https:
   </tr>
 </table>
 
-
 ### Botón
 
 |Acción del Botón|Descripción|
@@ -157,7 +153,6 @@ El Solar Node está disponible en dos variantes: [SenseCAP Solar Node P1](https:
 |Presionar dos veces|Actualizar información del nodo/ubicación|
 |Presionar tres veces|Encender/apagar el GPS|
 |Presionar por 5s|Apagar|
-
 
 ### Descripción General del Hardware
 

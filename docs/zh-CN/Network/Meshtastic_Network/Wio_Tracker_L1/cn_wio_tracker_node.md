@@ -14,13 +14,21 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.jpg" alt="pir" width={600} height="auto" /></p>
 
-Wio Tracker L1 系列是一款低功耗、高度可扩展的 Meshtastic 节点，具有 LoRa（862–930 MHz）、用于高效处理的 nRF52840 以及用于精确位置跟踪的 L76K GPS 模块。该产品设计灵活，支持 OLED 和 E-Ink 显示屏，以及太阳能电池板和电池供电，非常适合各种物联网和离网应用。
+Wio Tracker L1 系列是一款低功耗、高度可扩展的 [Meshtastic®](https://meshtastic.org/) 节点，具有 LoRa（862–930 MHz）、用于高效处理的 nRF52840 和用于精确位置跟踪的 L76K GPS 模块。设计灵活，支持 OLED 和 E-Ink 显示屏，以及太阳能电池板和电池供电，使其成为各种物联网和离网应用的理想选择。
 
-## 版本对比
+## L1 系列型号
 
 :::tip
-Wio Tracker L1 系列提供 4 个版本——选择最适合您需求的版本。
+Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求的版本。
 :::
+
+### 系列介绍
+
+<center>
+<iframe width="700" height="395" src="https://www.youtube.com/embed/TTiDN3h7cNk?si=2F0PXFlQmDSefCdX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+
+### 版本对比
 
 |产品名称|Wio Tracker L1 Lite|Wio Tracker L1|Wio Tracker L1 Pro|Wio Tracker L1 E-Ink|
 |------------------|------------------|--------------------------|-----------------------|-----------------------|
@@ -37,16 +45,16 @@ Wio Tracker L1 系列提供 4 个版本——选择最适合您需求的版本�
 ### 特性
 
 - **预装 Meshtastic 固件**
-开箱即用，预装 Meshtastic 固件，设置无缝衔接。
+开箱即用，预装 Meshtastic 固件，设置简单无缝。
 
 - **三重电源供应选项**
 支持 Type-C 快充、太阳能输入和锂离子电池供电，可灵活部署在各种环境中——非常适合户外和移动应用。
 
-- **灵活的显示屏支持**
+- **灵活的显示支持**
 可选 1.3 英寸 OLED 和 2.13 英寸 E-Ink 屏幕，为不同的功耗和视觉反馈需求提供多样化的显示选项。
 
 - **高扩展性**
-完全兼容 Grove 生态系统，并包含 PTH 接头和 SWD 调试接口，用于自定义硬件扩展和高级开发。
+完全兼容 Grove 生态系统，包含 PTH 接头和 SWD 调试接口，用于自定义硬件扩展和高级开发。
 
 ### 规格参数
 
@@ -54,17 +62,17 @@ Wio Tracker L1 系列提供 4 个版本——选择最适合您需求的版本�
   <tr>
     <th colspan="1">处理器</th>
     <th colspan="1">
-      Nordic nRF52840<br />ARM® Cortex®-M4 with FPU 运行频率高达 64 MHz
+      Nordic nRF52840<br />ARM® Cortex®-M4 带 FPU，运行频率高达 64 MHz
     </th>
   </tr>
   <tr>
-    <td colspan="1">片上存储器</td>
+    <td colspan="1">片上存储</td>
     <td colspan="1">1 MB 闪存和 256 kB RAM</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="2">无线</td>
     <td colspan="1">
-      LoRa: 基于 <a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>，支持 862-930MHz
+      LoRa：基于 <a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>，支持 862-930MHz
     </td>
   </tr>
   <tr>
@@ -72,51 +80,51 @@ Wio Tracker L1 系列提供 4 个版本——选择最适合您需求的版本�
   </tr>
   <tr>
     <td colspan="1">GPS</td>
-    <td colspan="1">L76K (GPS, 北斗, GLONASS, QZSS)</td>
+    <td colspan="1">L76K（GPS、北斗、GLONASS、QZSS）</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">接口</td>
-    <td colspan="1">Grove *1: UART/IIC/GPIO</td>
+    <td colspan="1">Grove *1：UART/IIC/GPIO</td>
   </tr>
   <tr>
-    <td colspan="1">镀通孔（PTH）: UART/IIC/GPIO/模拟</td>
+    <td colspan="1">镀通孔（PTH）：UART/IIC/GPIO/模拟</td>
   </tr>
   <tr>
-    <td colspan="1">为 SWD 预留的焊接焊盘</td>
+    <td colspan="1">为 SWD 预留焊接焊盘</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">电源输入</td>
-    <td colspan="1">USB Type-C: 5V — 1A</td>
+    <td colspan="1">USB Type-C：5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">太阳能板: 5V — 1A</td>
+    <td colspan="1">太阳能电池板：5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">锂电池: 3.7V — 1A</td>
+    <td colspan="1">锂电池：3.7V — 1A</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">OLED 屏幕</td>
-    <td colspan="1">尺寸: 1.3 英寸</td>
+    <td colspan="1">尺寸：1.3 英寸</td>
   </tr>
   <tr>
-    <td colspan="1">分辨率: 128 × 64 像素</td>
+    <td colspan="1">分辨率：128 × 64 像素</td>
   </tr>
   <tr>
-    <td colspan="1">有效区域 (mm): 34.5 × 23.0</td>
+    <td colspan="1">有效区域（毫米）：34.5 × 23.0</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">E-Ink 屏幕</td>
-    <td colspan="1">尺寸: 2.13 英寸</td>
+    <td colspan="1">尺寸：2.13 英寸</td>
   </tr>
   <tr>
-    <td colspan="1">分辨率: 122 × 250 像素</td>
+    <td colspan="1">分辨率：122 × 250 像素</td>
   </tr>
   <tr>
-    <td colspan="1">有效区域 (mm): 48.55 × 23.7046</td>
+    <td colspan="1">有效区域（毫米）：48.55 × 23.7046</td>
   </tr>
   <tr>
     <td colspan="1">认证</td>
-    <td colspan="1">FCC, CE, RoHS</td>
+    <td colspan="1">FCC、CE、RoHS</td>
   </tr>
 </table>
 
@@ -131,6 +139,6 @@ Wio Tracker L1 系列提供 4 个版本——选择最适合您需求的版本�
 **Wio Tracker L1 Pro**
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio_tracker_l1-pro.png" alt="pir" width={800} height="auto" /></p>
 
-**图表**
+**示意图**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/l1-diagram.png" alt="pir" width={800} height="auto" /></p>
