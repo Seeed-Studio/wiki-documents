@@ -408,6 +408,7 @@ ${glossaryPairs}
 [LINE_3]   - First item
 [LINE_4]   - [BLE Scanner](#ble-scanner)
 [LINE_5]     - Nested item
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 
 正确输出：
 [LINE_0] ## 入门指南
@@ -416,6 +417,7 @@ ${glossaryPairs}
 [LINE_3]   - 第一项
 [LINE_4]   - [BLE 扫描器](#ble-扫描器)
 [LINE_5]     - 嵌套项
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
 
 错误输出（绝对禁止）：
 [LINE_0] ## 入门指南
@@ -424,6 +426,7 @@ ${glossaryPairs}
 [LINE_3] - 第一项  ❌ 缩进丢失
 [LINE_4]   - [BLE 扫描器](#ble 扫描器)  ❌ 锚点中有空格
 [LINE_5]   - 嵌套项  ❌ 缩进级别错误
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </example>
 </instruction>
 
