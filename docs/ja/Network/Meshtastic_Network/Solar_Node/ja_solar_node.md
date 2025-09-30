@@ -1,5 +1,5 @@
 ---
-description: SenseCAP Solar Node for Meshtastic & LoRa
+description: Meshtastic & LoRa用SenseCAP Solar Node
 title:  SenseCAP Solar Node
 keywords:
 - Meshtastic
@@ -13,33 +13,30 @@ last_update:
 ---
 
 
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.png" alt="pir" width={800} height="auto" /></p>
 
-
-これは、Meshtasticベースの経済的なソーラー駆動通信ノードまたはリピーターで、XIAO nRF52840 Plusメインコントローラー、Wio-SX1262 LoRaモジュールを統合しています。ネットワークカバレッジのないエリア専用に設計されています。長距離通信、精密な位置決定、低消費電力動作をサポートします。屋外エリアでのネットワークカバレッジ拡張に適しています。
+[Meshtastic®](https://meshtastic.org/)をベースとした経済的なソーラー駆動通信ノードまたはリピーターで、XIAO nRF52840 Plusメインコントローラー、Wio-SX1262 LoRaモジュールを統合しています。ネットワークカバレッジのないエリア向けに特別に設計されています。長距離通信、精密な位置決定、低消費電力動作をサポートします。屋外エリアでのネットワークカバレッジ拡張に適しています。
 
 ## バージョン比較
- 
+
 Solar Nodeは2つのバリエーションで利用可能です：[SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html)と[SenseCAP Solar Node P1-Pro](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html)。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-1_1.jpeg" alt="pir" width={800} height="auto" /></p>
-
 
 ## 概要
 
 ### 特徴
 
-* 5Wソーラーパネルを統合し、外部バッテリーをサポート（ユーザー自身で提供する必要があります）。
-* デバイスには工場でMeshtasticファームウェアがプリインストールされています。Meshtasticエコシステムにシームレスに統合できます。
-* Groveエコシステムと互換性があり、温湿度センサー、光センサーなどのセンサーのプラグアンドプレイをサポートします。
-* 長期間の屋外使用に適しています。
-* 開放エリアで8〜9KMの伝送をサポート。屋外ノードまたはリピーターとして使用でき、Meshネットワークを簡単に拡張し、ネットワークカバレッジを向上させます。
+- 5Wソーラーパネルを統合し、外部バッテリーをサポート（ユーザー自身で提供する必要があります）。
+- デバイスには工場でMeshtasticファームウェアがプリインストールされています。Meshtasticエコシステムにシームレスに統合できます。
+- Groveエコシステムと互換性があり、温湿度センサー、光センサーなどのセンサーのプラグアンドプレイをサポートします。
+- 長期間の屋外使用に適しています。
+- 開放エリアで8〜9KMの伝送をサポートします。屋外ノードまたはリピーターとして使用でき、Meshネットワークを簡単に拡張し、ネットワークカバレッジを向上させます。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-3.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### 仕様
-
 
 <table>
   <tr>
@@ -75,9 +72,9 @@ Solar Nodeは2つのバリエーションで利用可能です：[SenseCAP Solar
   <tr>
     <td>
       <p>GNSS:</p>
-      <p>GPS L1 C/A：1575.42MHz</p>
-      <p>GLONASS L1：1602MHz</p>
-      <p>BeiDou B1：1561.098MHz</p>
+      <p>GPS L1 C/A: 1575.42MHz</p>
+      <p>GLONASS L1: 1602MHz</p>
+      <p>BeiDou B1: 1561.098MHz</p>
     </td>
   </tr>
   <tr>
@@ -89,7 +86,7 @@ Solar Nodeは2つのバリエーションで利用可能です：[SenseCAP Solar
   </tr>
   <tr>
     <td rowSpan="2"><b>インターフェース</b></td>
-    <td>Grove *1：IIC/GPIO/UART</td>
+    <td>Grove *1: IIC/GPIO/UART</td>
   </tr>
   <tr>
     <td>USB-Cデバッグ</td>
@@ -119,11 +116,11 @@ Solar Nodeは2つのバリエーションで利用可能です：[SenseCAP Solar
   </tr>
   <tr>
     <td><b>電源供給</b></td>
-    <td>Type-C：5V 1A</td>
+    <td>Type-C: 5V 1A</td>
   </tr>
   <tr>
     <td></td>
-    <td>ソーラー電源供給：5V 1A</td>
+    <td>ソーラー電源供給: 5V 1A</td>
   </tr>
   <tr>
     <td><b>防水等級</b></td>
@@ -148,7 +145,6 @@ Solar Nodeは2つのバリエーションで利用可能です：[SenseCAP Solar
   </tr>
 </table>
 
-
 ### ボタン
 
 |ボタン操作|説明|
@@ -157,7 +153,6 @@ Solar Nodeは2つのバリエーションで利用可能です：[SenseCAP Solar
 |2回押す|ノード/位置情報を更新|
 |3回押す|GPSのオン/オフを切り替え|
 |5秒間押す|電源オフ|
-
 
 ### ハードウェア概要
 
@@ -168,6 +163,6 @@ Solar Nodeは2つのバリエーションで利用可能です：[SenseCAP Solar
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/accessory.png" alt="pir" width={800} height="auto" /></p>
 
-**図表**
+**図**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>

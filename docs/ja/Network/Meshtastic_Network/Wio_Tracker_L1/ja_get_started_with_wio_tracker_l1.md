@@ -1,6 +1,6 @@
 ---
 description: Wio Tracker L1シリーズの使用開始
-title: Wio Tracker L1の使用開始
+title:  Wio Tracker L1の使用開始
 keywords:
 - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
@@ -11,6 +11,37 @@ last_update:
   author: Jessie
 ---
 
+## ビデオチュートリアル
+
+### パート1 開封
+
+<center>
+<iframe width="700" height="395" src="https://www.youtube.com/embed/Wi_YmE76YcY?si=Ad-pUhle5X9QppPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+
+### パート2 ファームウェア書き込み
+
+<center>
+<iframe width="700" height="395" src="https://www.youtube.com/embed/hcjai4J1894?si=S_jaEfXVThWXscVJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+
+### パート3 デバイス使用方法
+
+<center>
+<iframe width="700" height="395" src="https://www.youtube.com/embed/Q97w2ompPtI?si=yLbAgE4cBbT6NbHS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+
+### パート4 スマートフォン接続
+
+<center>
+<iframe width="700" height="395" src="https://www.youtube.com/embed/OFtUwN3z0tI?si=9zr3j-hLuoj0-CXi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+
+### パート5 異なる状態
+
+<center>
+<iframe width="700" height="395" src="https://www.youtube.com/embed/eZa8kfUD2e4?si=3Fe_30obcercIXXO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
 
 ## 使用開始
 
@@ -18,52 +49,52 @@ last_update:
 フラッシュを消去しないでください。デバイスが損傷する可能性があります。
 :::
 
-### ファームウェアのフラッシュ
+### ファームウェア書き込み
 
 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)にアクセスしてください。
 
-対象デバイスを`Seeed Wio Tracker L1`に選択し、最新のファームウェアを選択して、`Flash`をクリックしてください。
+対象デバイスを`Seeed Wio Tracker L1`に選択し、最新のファームウェアを選択して、`Flash`をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
-デバイスの電源を入れ、`Enter DFU Mode`をクリックすると、`Tracker L1`という名前のシリアルポートが表示されます。それをクリックして接続すると、`Tracker L1`という名前のドライバが表示されるはずです。
+デバイスの電源を入れ、`Enter DFU Mode`をクリックすると、`Tracker L1`という名前のシリアルポートが表示されます。それをクリックして接続すると、`Tracker L1`という名前のドライバが表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-UF2ファイルをDFUドライブにドラッグしてください。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされるはずです。
+UF2ファイルをDFUドライブにドラッグします。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアが書き込まれます。
 
-### デバイスの電源投入
+### デバイスの電源を入れる
 
-USBケーブルを接続してデバイスをアクティベートしてください。
+USBケーブルを接続してデバイスをアクティベートします。
 
-### アプリ経由での接続
+### アプリ経由で接続
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="IOSアプリ">
+<TabItem value="ios" label="IOS App">
 
-- Bluetoothパネルで対象デバイスを選択してください。
+- Bluetoothパネルで対象デバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-- ディスプレイに表示されたコードを入力し、`OK`をクリックしてデバイスに接続してください。
+- ディスプレイに表示されたコードを入力し、`OK`をクリックしてデバイスに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Androidアプリ">
+<TabItem value="android" label="Android App">
 
-- `+`をクリックして対象デバイスを選択してください。
+- `+`をクリックして対象デバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-- コードを入力し（デフォルトコードは`123456`）、`OK`をクリックしてデバイスに接続してください。
+- コード（デフォルトコードは`123456`）を入力し、`OK`をクリックしてデバイスに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -75,13 +106,13 @@ import TabItem from '@theme/TabItem';
 メッシュ通信を開始するには、地域を設定する必要があります。この設定はデバイスが使用する周波数範囲を制御し、地域の場所に応じて設定する必要があります。
 
 <Tabs>
-<TabItem value="ios" label="IOSアプリ">
+<TabItem value="ios" label="IOS App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Androidアプリ">
+<TabItem value="android" label="Android App">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
@@ -98,17 +129,17 @@ import TabItem from '@theme/TabItem';
 より包括的なリストについては、[国別LoRa地域](https://meshtastic.org/docs/configuration/region-by-country/)を参照してください。
 
 :::info
-**EU_868**は、1時間ごとのデューティサイクル制限10%を遵守する必要があり、これは1時間のローリングベースで毎分計算されます。制限に達した場合、再び許可されるまでデバイスは送信を停止します。
+**EU_868**は、1時間のローリングベースで毎分計算される10%の時間デューティサイクル制限に従う必要があります。制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
 デバイスにLoRa地域を設定したので、ニーズに合わせて[LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/)の設定を続けることができます。
 
 ### FAQ
 
-#### DFUモードへの手動入力
+#### DFUモードの手動入力
 
-デバイスをPCに接続し、`Reset`ボタンを2回押してください。黄色のLEDが点灯し続け、`Tracker L1`という名前の新しいUSBドライブがPCに表示されます。
+デバイスをPCに接続し、`Reset`ボタンをダブルプレスします。黄色のLEDが点灯し続け、`Tracker L1`という名前の新しいUSBドライブがPCに表示されます。
 
-#### DFUモードからの退出
+#### DFUモードの終了
 
-`Reset`ボタンを1回押してDFUモードを終了してください。
+`Reset`ボタンを一度押してDFUモードを終了します。
