@@ -372,6 +372,7 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
    - URL链接
    - HTML标签
    - 专有名词：${termsList.split('\n').slice(0, 5).join(', ')}等
+   - **界面/字段/按钮等英文 UI 名称**（通常出现在引号 "..."、加粗 **...**、或菜单路径 File > Preferences 等），请保持英文原文，不要翻译。
 
 2. **术语表（强制翻译）**：以下术语若出现，必须严格使用右侧译法（不允许其它译法）：
 ${glossaryPairs}
