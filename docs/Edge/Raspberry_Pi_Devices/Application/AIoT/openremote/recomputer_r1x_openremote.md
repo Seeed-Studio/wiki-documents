@@ -8,13 +8,13 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
 slug: /openremote_r1x00
 last_update:
-  date: 9/29/2025
+  date: 9/30/2025
   author: Kasun Thushara
 ---
 
 ## Introduction
 
-OpenRemote is an open-source IoT platform designed to simplify the connection and management of networked devices. At the heart of the system is the Manager, a headless Java application that acts as an IoT context broker, capturing and managing the asset states in real-time. Through dynamic asset modeling, you can represent various components of your environment—such as buildings, rooms, and sensors—tailoring it to your specific needs. Rules written in Groovy, JavaScript, or JSON trigger actions based on asset state changes or event sequences. These rules can, for example, notify users when certain thresholds are met, like when humidity rises in a room. The platform supports networked devices via Agents, which interface with third-party APIs and service protocols, and can be co-located with the manager or installed on edge gateways. By deploying OpenRemote on Raspberry Pi-powered Recomputer R1000 and R1100 devices, you can manage your IoT ecosystem at the edge, providing efficient, localized control over your devices.
+[OpenRemote](https://openremote.io/) is an open-source IoT platform designed to simplify the connection and management of networked devices. At the heart of the system is the Manager, a headless Java application that acts as an IoT context broker, capturing and managing the asset states in real-time. Through dynamic asset modeling, you can represent various components of your environment—such as buildings, rooms, and sensors—tailoring it to your specific needs. Rules written in Groovy, JavaScript, or JSON trigger actions based on asset state changes or event sequences. These rules can, for example, notify users when certain thresholds are met, like when humidity rises in a room. The platform supports networked devices via Agents, which interface with third-party APIs and service protocols, and can be co-located with the manager or installed on edge gateways. By deploying OpenRemote on Raspberry Pi-powered Recomputer R1000 and R1100 devices, you can manage your IoT ecosystem at the edge, providing efficient, localized control over your devices.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width={600} height="auto" /></p>
 
@@ -27,6 +27,9 @@ OpenRemote is an open-source IoT platform designed to simplify the connection an
 ## Installing Docker and Docker-Compose
 
 Follow these steps to install Docker and Docker-Compose on your Ubuntu system:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremoter11.jpg" alt="pir" width={600} height="auto" /></p>
+
 
 **1. Update System Packages**
 
@@ -225,6 +228,117 @@ Click **Save** at the top right to apply these changes.
 Once you’ve added the attributes, switch to **View Mode** to see the live weather data. You now have the current temperature and humidity for Rotterdam linked to the weather asset.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote1.png" alt="pir" width={800} height="auto" /></p>
+
+
+## MQTT Agent with ChirpStack LoRaWAN Gateway Integration
+
+This tutorial will guide you through the process of integrating an MQTT Agent with ChirpStack and configuring it on your OpenRemote manager for use with devices like the Dragino LHT65 and SenseCap S210x sensors. Before proceeding, ensure you have installed ChirpStack on your ReComputer R1X device and paired a device (e.g., SenseCap S210X). For ChirpStack installation details, refer to the official [ChirpStack LoRa Gateway on ReComputer R1X](https://wiki.seeedstudio.com/chirpstack_lora_gateway_r1x00/) guide.
+
+### Prerequisites
+
+- OpenRemote Manager UI running.
+- ChirpStack LoRaWAN Gateway installed on your ReComputer R1X device.
+- A LoRaWAN device  SenseCap S210X.
+
+### Create the OpenRemote MQTT Agent
+
+1. **Log in to the OpenRemote Manager UI**:  
+   Open your browser and go to OpenRemote Manager UI
+
+2. **Navigate to the Assets Page**:  
+   On the left side of the page, click on the **Assets** tab.
+
+3. **Create a new MQTT Agent**:  
+   - Click the **+** button in the asset tree on the left.
+   - In the **Add asset** dialog, select **MQTT Agent** from the list of asset types.
+   - Name the asset **ChirpStack MQTT Agent**.
+   - Click **ADD** to create the asset.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote6.png" alt="pir" width={800} height="auto" /></p>
+
+4. **Configure the MQTT Agent**:
+   - Click **Modify** to edit the asset configuration.
+   - Set the following attributes:
+     - **Host**: The IP address of your ChirpStack server (e.g., `10.0.0.208`).
+     - **Port**: `1883` (default MQTT port).
+   - Click **SAVE** to save your changes.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote7.png" alt="pir" width={800} height="auto" /></p>
+
+### Create the OpenRemote LoRaWAN Device Asset
+
+1. **Add a new LoRaWAN Device**:
+   - In the **Assets** page, click **+** in the asset tree on the left.
+   - In the **Add asset** dialog, select **Thing Asset**.
+   - Name the asset **S2101** (or your specific device name).
+   - Click **ADD** to create the asset.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote8.png" alt="pir" width={800} height="auto" /></p>
+
+2. **Modify the Device Asset**:
+   - Click **Modify** to edit the asset configuration.
+
+3. **Add a Custom Attribute for Temperature**:
+   - Click **ADD ATTRIBUTE** to add a new attribute.
+   - In the **Add attribute** dialog, configure the following:
+     - **Type**: **Custom attribute**
+     - **Name**: **Temperature**
+     - **Value type**: **Number**
+   - Click **ADD** to save the attribute.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote9.png" alt="pir" width={800} height="auto" /></p>
+
+4. **Add Configuration Items for MQTT Agent**:
+   - Expand the **Temperature** attribute and click **ADD CONFIGURATION ITEMS**.
+   - In the **Add configuration items** dialog, configure as follows:
+     - **Select**: **Agent link**
+   - Click **ADD** to create the link to the MQTT Agent.
+   - Expand the **Agent link** configuration item and set the **Agent ID**:
+     - **Agent ID**: **ChirpStack MQTT Agent**.
+   - Click **ADD** to save the Agent link.
+
+### Configure MQTT Subscription for Sensor Data
+
+1. **Add a Parameter for MQTT Topic**:
+   - Click **ADD PARAMETER** to add a new configuration item.
+   - In the **Add parameter** dialog, select **Subscription Topic** and click **ADD**.
+
+2. **Configure the MQTT Subscription Topic**:
+   - Edit the **Subscription Topic** field with the following ChirpStack MQTT topic format:
+     ```
+     application/+/device/+/event/up
+     ```
+   - This topic will subscribe to incoming sensor data from the LoRaWAN device.
+
+3. **Add Value Filters**:
+   - Click **ADD** to add a new **Value Filters** parameter.
+   - Expand the **Value Filters** section and click **ADD ITEM**.
+   - In the **Add item** dialog, select **JSON Path** and click **ADD**.
+
+4. **Configure the JSON Path for Sensor Data**:
+   - Expand the newly created **JSON Path** item and set the **Path** to:
+     ```
+     $.object.messages[?(@.measurementId==4097)].measurementValue
+     ```
+   - This is an example for the SenseCap S2101 data decoder. Adjust the path as necessary for your specific device.
+   - Enable the **Return First** option.
+
+5. **Save Configuration**:
+   - Once all configurations are set, click **SAVE** to finalize the setup.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote10.png" alt="pir" width={800} height="auto" /></p>
+
+### Test the Integration
+
+1. **Check MQTT Communication**:  
+   Ensure that the MQTT Agent is connected to the ChirpStack server and that the topic `application/+/device/+/event/up` is receiving data.
+
+2. **Monitor the Temperature**:  
+   The **SenseCap S2101** (or your configured device) should now send temperature readings, and the OpenRemote manager will display these values under the **Temperature** attribute.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote11.png" alt="pir" width={800} height="auto" /></p>
+
 
 ## Tech Support & Product Discussion
 
