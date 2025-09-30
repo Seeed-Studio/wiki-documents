@@ -370,7 +370,8 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
    - 代码块内容（\`\`\`之间的内容）
    - 行内代码（\`之间的内容）
    - URL链接
-   - HTML标签
+   - HTML 标签**结构**与**属性**保持不变（不要新增/删除/重排标签；不要修改属性名/属性值）
+   - 但标签之间的**可见文本内容要翻译**（例如 <span>、<strong>、<font> 内部的文字）
    - 专有名词：${termsList.split('\n').slice(0, 5).join(', ')}等
    - **界面/字段/按钮等英文 UI 名称**（通常出现在引号 "..."、加粗 **...**、或菜单路径 File > Preferences 等），请保持英文原文，不要翻译。
 
