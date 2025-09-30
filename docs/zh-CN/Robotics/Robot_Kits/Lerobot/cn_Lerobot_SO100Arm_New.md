@@ -251,7 +251,7 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 3. 克隆 Lerobot 仓库：
 
 ```bash
-git clone https://github.com/huggingface/lerobot.git ~/lerobot
+git clone https://gitee.com/Marlboro1998/lerobot.git ~/lerobot
 ```
 
 4. 使用 miniconda 时，在环境中安装 ffmpeg：
