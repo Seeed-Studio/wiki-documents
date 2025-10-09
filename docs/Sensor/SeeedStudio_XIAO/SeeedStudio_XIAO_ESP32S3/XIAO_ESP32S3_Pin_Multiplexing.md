@@ -68,6 +68,10 @@ Before we begin, let's review all the pins that the XIAO ESP32S3 has and its fun
  </tr>
 </table>
 
+:::caution
+Although the XIAO ESP32-S3 assigns GPIO41 and GPIO42 to pins A11 and A12, due to the nature of the ESP32-S3 chip, pins A11 and A12 do not support ADC functionality. Please be sure to distinguish and differentiate between them.
+:::
+
 - 5V - This is 5v out from the USB port. You can also use this as a voltage input but you must have some sort of diode (schottky, signal, power) between your external power source and this pin with anode to battery, cathode to 5V pin.
 
 - 3V3 - This is the regulated output from the onboard regulator. You can draw 700mA
@@ -283,7 +287,7 @@ Due to the limited number of pins on the ESP32-S3, D11 and D12 on the Sense expa
 :::caution
 As can be seen from the picture, due to the space limitations of XIAO, many wire layouts are very compact. Therefore, when cutting the connection between J1 and J2, please be very careful not to cut outside the white line, otherwise it may cause the development board to malfunction!
 
-For the two additional pins D11 and D12 on the XIAO ESP32S3 Sense, we have not macro-defined the pins. That is, you can't use D11/A11 or D12/A12 to control these two pins yet, but you can control these two pins by using the GPIO numbers, GPIO12 and GPIO13, respectively. we will submit the macro definitions for these two pins as soon as possible, and once the submission is done, then you can D/A the pin definitions.
+Although the XIAO ESP32-S3 assigns GPIO41 and GPIO42 to pins A11 and A12, due to the nature of the ESP32-S3 chip, pins A11 and A12 do not support ADC functionality. Please be sure to distinguish and differentiate between them.
 :::
 
 :::tip
@@ -432,6 +436,10 @@ If the program runs successfully, you will see the following running effect.
 ## Analog
 
 On XIAO ESP32S3, among the 11 built-in GPIO pins, except for D6 and D7 pins used for serial communication, the remaining 9 pins support Analog function. You can use these GPIO pins with analog functionality to read values from sensors that produce analog signals, such as oxygen sensors, light intensity sensors, and so on.
+
+:::caution
+Although the XIAO ESP32-S3 assigns GPIO41 and GPIO42 to pins A11 and A12, due to the nature of the ESP32-S3 chip, pins A11 and A12 do not support ADC functionality. Please be sure to distinguish and differentiate between them.
+:::
 
 ### Hardware Preparation
 
