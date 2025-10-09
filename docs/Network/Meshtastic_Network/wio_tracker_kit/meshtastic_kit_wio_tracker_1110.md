@@ -21,7 +21,7 @@ last_update:
     </a>
 </div>
 
-Featuring a Wio Tracker 1110 Dev Board (based on Nordic nRF52840 for BLE, Semtech LR1110 for LoRa), [Grove Air530 GPS Module](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html), [Grove0.96" OLED Display](https://www.seeedstudio.com/Grove-OLED-Display-0-96.html) and native compatibility with Meshtastic firmware, it's a plug and play dev kit for you to build your low-power Meshtatstic tracker device.
+Featuring a Wio Tracker 1110 Dev Board (based on Nordic nRF52840 for BLE, Semtech LR1110 for LoRa), [Grove Air530 GPS Module](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html), [Grove0.96" OLED Display](https://www.seeedstudio.com/Grove-OLED-Display-0-96.html) and native compatibility with [Meshtastic®](https://meshtastic.org/) firmware, it's a plug and play dev kit for you to build your low-power Meshtatstic tracker device.
 
 ### Features
 

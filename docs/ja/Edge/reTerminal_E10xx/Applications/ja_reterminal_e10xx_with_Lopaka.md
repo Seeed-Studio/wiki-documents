@@ -1,11 +1,11 @@
 ---
-description: この記事では、主にLopakaウェブサイトを使用して精巧なユーザーインターフェースを作成し、reTerminal Eシリーズに適用する方法について説明します。
+description: この記事では主に、Lopakaウェブサイトを使用して精巧なユーザーインターフェースを作成し、reTerminal Eシリーズに適用する方法について説明します。
 title: reTerminal EシリーズePaperディスプレイとLopakaの連携
-image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.webp
 slug: /ja/reterminal_e10xx_with_lopaka
 sidebar_position: 2
 last_update:
-  date: 12/9/2025
+  date: 9/12/2025
   author: Martin
 ---
 
@@ -130,7 +130,7 @@ Lopakaは、組み込みグラフィックス開発専用に設計されたグ�
 - **「歯車」**: プロジェクトを管理するために、ここでプロジェクト名を再定義し、画面のサイズと背景色を調整できますが、プロジェクトを削除または再作成しない限り、Platformの変更はサポートされていません。
 - **ツールバー**: このツールバー行の機能は、選択、ペイント、文字列、長方形、円、線、画像です。
 - **スライダー**: ここで、キャンバスのサイズを調整でき、詳細な操作を実行できます。
-- **ForkとSHARE**: 他の人のプロジェクトをフォークし、自分のプロジェクトを共有できます。
+- **ForkとSHARE**: 他の人のプロジェクトをforkしたり、自分のプロジェクトを共有したりできます。
 - **Price Gally Blog Feedback**: Priceでは、追加機能にアクセスするためにLopakaの異なるレベルにサブスクライブできます。Gallyはオープンソースエンジニアリングマーケットプレイスです。BlogはLopakaの更新ログです。Feedbackはフィードバックを提供します。
 - **ショートカット**: これらはいくつかのショートカットキーのヒントです。
 
@@ -139,7 +139,7 @@ Lopakaは、組み込みグラフィックス開発専用に設計されたグ�
 - 「String」を選択し、キャンバスをクリックします。
 - 右列で「Font」を選択し、Adafruit 5×7などのフォントを選択します。
 - 内容「Hello World!」を入力し、「Size」を6として選択し、好きな色を選択します。ここでは緑を選択します。
-- 次に、画面の中央位置に移動します。その後、「CODE」内で必要なプロジェクトコードが生成されます。
+- 次に、画面の中央位置に移動します。その後、必要なプロジェクトコードが「CODE」内で生成されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -155,14 +155,14 @@ Seeed_GFXライブラリを使用します。これは、さまざまなSeeed St
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
 **ステップ2.** Arduino IDEでZIPファイルを追加してライブラリをインストールします。**Sketch > Include Library > Add .ZIP Library**に移動し、ダウンロードしたZIPファイルを選択します。
 
 :::note
-以前にTFT_eSPIライブラリをインストールしている場合、競合を避けるためにArduinoライブラリフォルダから一時的に削除または名前を変更する必要がある場合があります。Seeed_GFXは、Seeed Studioディスプレイ用の追加機能を持つTFT_eSPIのフォークです。
+以前にTFT_eSPIライブラリをインストールしている場合、Seeed_GFXはSeeed Studioディスプレイ用の追加機能を持つTFT_eSPIのフォークであるため、競合を避けるためにArduinoライブラリフォルダから一時的に削除または名前を変更する必要がある場合があります。
 :::
 
 ### reTerminal E1002のプログラミング
@@ -177,13 +177,14 @@ Seeed_GFXライブラリを使用します。これは、さまざまなSeeed St
 
 **ステップ3.** [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/)に移動し、デバイスリストから**reTerminal E1002**を選択します。
 
-**ステップ4.** 生成された設定コードをコピーし、`driver.h`ファイルに貼り付けます。コードは次のようになります：
+**ステップ4.** 生成された設定コードをコピーして`driver.h`ファイルに貼り付けます。コードは次のようになります：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 521 // reTerminal E1002 (UC8179C)
 ```
 
 :::tip
+
 reTerminal E1001を使用している場合は、以下のコードをコピーしてください
 
 ```cpp
@@ -287,8 +288,8 @@ void loop()
 
 :::tip
 
-- reTerminal E1001を使用したい場合は、リンクを参照してください：[reTerminal E1001のプログラミング](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino/)
-- GxEPD2ライブラリを使用したい場合は、リンクを参照してください：[GxEPD2ライブラリの使用](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino/)
+- reTerminal E1001を使用したい場合は、以下のリンクを参照してください：[reTerminal E1001のプログラミング](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
+- GxEPD2ライブラリを使用したい場合は、以下のリンクを参照してください：[GxEPD2ライブラリの使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/)
 
 :::
 
@@ -936,14 +937,14 @@ void loop()
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

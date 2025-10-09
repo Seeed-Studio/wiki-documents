@@ -93,7 +93,7 @@ El OLED 128×64 utiliza todos los pines del chip SSD1308; el punto de origen por
 | Seeeduino V4 | Base Shield | Grove - OLED Display 0.96inch |
 |--------------|-------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/grove%20oled%200.96_s.jpg" alt="pir" width={600} height="auto" /></p>|
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|
+|[Obtener Uno Ahora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|
 
 - **Paso 2.** Conecte Grove OLED Display 128×64 al puerto I2C del Grove Base Shield.
 - **Paso 3.** Inserte Grove - Base Shield en Seeeduino.
@@ -159,7 +159,7 @@ void loop(void) {
 | Raspberry pi                                                                                                                  | Grove Base Hat for RasPi                                                                                                                      | Grove - OLED Display 0.96 inch                                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" alt="pir" width={600} height="auto" /></p> | <p><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p> | <p><img src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/grove%20oled%200.96_s.jpg" alt="pir" width={600} height="auto" /></p> |
-| [Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)                                                 | [Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)                                                        | [Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)                                                              |
+| [Obtener Uno Ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)                                                 | [Obtener Uno Ahora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)                                                        | [Obtener Uno Ahora](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)                                                              |
 
 - **Paso 2**. Inserte Grove Base Hat en la Raspberry.
 - **Paso 3**. Conecte la pantalla OLED al puerto **I^2^C** del Base Hat.

@@ -3,7 +3,7 @@ description: Getting Started with EE04
 title: Getting Started with EE04
 keywords:
   - epaper
-image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/10.webp
+image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
 sidebar_position: 1
 slug: /epaper_ee04
 last_update:
@@ -38,6 +38,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 Powered by **XIAO ESP32-S3** Plus, the display board EE04 supports both **24-pin** and **50-pin** ePaper displays. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
 
 ### Featrue
+
 - **Powered by XIAO ESP32-S3 Plus:** Works immediately when connected to a compatible ePaper display.
 - **Versatile Display Support:** Compatible with a wide range of ePaper screens, supporting both 24-Pin and 50-Pin interfaces with easy switching via jumper caps.
 - **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
@@ -145,15 +146,14 @@ Powered by **XIAO ESP32-S3** Plus, the display board EE04 supports both **24-pin
 - **Smart Thermostat Display**: Show temperature and humidity levels, as well as control settings for your smart thermostat.
 - **Digital Photo Frame**: Create a WiFi-enabled digital photo frame that can display images from your smart home network.
 
-
 ## Hardware Overiew
-
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
 
-
 ### Supported eInk
+
 #### 24-Pin Connector
+
 - [1.54-inch E-paper - Dotmatix 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
 - [2.13-inch E-Paper -Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
 - [2.13-inch E-Paper - Quadruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
@@ -170,12 +170,15 @@ Powered by **XIAO ESP32-S3** Plus, the display board EE04 supports both **24-pin
 
 :::tip
 When using the XIAO ePaper Display Board, make sure to set the jumper according to the ePaper display type:
+
 - For 24 Pin ePaper displays → set the jumper to 24 Pin
 
 ⚠️ Using the wrong jumper setting may cause the ePaper to fail to display or show abnormal content. Always double-check the jumper position before powering on.
 
 :::
+
 #### 50-Pin Connector
+
 - [7.3-inch E-paper - Seven-Color 800x480](https://www.seeedstudio.com/7-3-Seven-Color-ePaper-Display-with-800x480-Pixels-p-5787.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
@@ -188,7 +191,6 @@ When using the XIAO ePaper Display Board, make sure to set the jumper according 
 :::
 
 ## Software Overiew
-
 
 ### Install Seeed Arduino GFX Library
 
@@ -236,6 +238,7 @@ There are 4 basic examples, open a basic example you like:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
 ## Getting Start
+
 Here, we use a 5.83-inch display as an example. The steps are the same for all 24-pin screens; the only difference is selecting the appropriate screen size in the driver.
 
 Create a **new "driver.h" file** and paste those code into it. The code should be like:
@@ -253,7 +256,6 @@ After that, go to **Tools** -> **Board** -> **XIAO ESP32S3** and **Tools** -> **
 
 Now you will see the feedback in your epaper screen! Following are the results of Helloworld examples.
 
-
 :::tip
 ⚠️ Note: ePaper Cable Orientation
 When connecting the ePaper display to the XIAO ePaper Display Board, make sure the FPC cable is inserted in the correct direction.
@@ -269,6 +271,7 @@ The image below shows the correct connection:
 The EE04 features three user-programmable buttons that can be used for various control purposes. This section demonstrates how to read button states and respond to button presses using Arduino.
 
 On the EE04, the three buttons are connected to the ESP32-S3:
+
 - KEY1 (GPIO2_D1/A1)
 - KEY2 (GPIO3_D2/A2)
 - KEY3 (GPIO5_D4/A4)
@@ -366,8 +369,8 @@ void loop() {
 ```
 
 ## Resources
-- **[PDF]** [Seeed Studio XIAO ePaper Display EE04 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE04/EE04.pdf)
 
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE04 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE04/EE04.pdf)
 
 ## Tech Support & Product Discussion
 
