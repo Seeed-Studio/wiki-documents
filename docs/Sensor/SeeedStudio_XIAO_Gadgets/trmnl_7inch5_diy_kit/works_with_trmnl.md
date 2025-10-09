@@ -356,7 +356,7 @@ Your expertise and commitment have made this integration possible and greatly im
 
 ### How to reconfigure the network?
 
-Press and hold the Key1 (the button next to the Reset button) for five seconds. The device will return to the initial TRMNL interface and activate the AP.
+Press and hold the Key3 (the button next to the Reset button) for five seconds. The device will return to the initial TRMNL interface and activate the AP.
 
 ## Resources
 
