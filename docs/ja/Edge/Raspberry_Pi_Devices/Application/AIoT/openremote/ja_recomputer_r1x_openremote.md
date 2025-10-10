@@ -30,7 +30,6 @@ UbuntuシステムにDockerとDocker-Composeをインストールするには、
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremoter11.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 **1. システムパッケージの更新**
 
 まず、パッケージリストを更新し、インストール済みパッケージをアップグレードして、システムが最新の状態であることを確認します。
@@ -170,7 +169,6 @@ HTTP API Agentが作成されたので、以下の詳細で設定します：
 
 **Save**をクリックして設定を確認します。
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote3.png" alt="pir" width={800} height="auto" /></p>
 
 ### Weather Assetの作成
@@ -184,9 +182,7 @@ HTTP API Agentが作成されたので、以下の詳細で設定します：
 
 weather assetがHTTP API Agentの子としてリストに表示されます。必要に応じて親を変更できます。
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote4.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Agent Linkの追加
 
@@ -205,11 +201,9 @@ weather assetがHTTP API Agentの子としてリストに表示されます。�
   - **Value filters:** `JsonPathFilter-2`
   - **Path (JSON):** `$.main.humidity`
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote5.png" alt="pir" width={800} height="auto" /></p>
 
 ### Temperature属性の設定：
-
 
 - **temperature**属性を展開します。
 - **Add configuration item**をクリックし、**Agent link**を選択します。
@@ -228,7 +222,6 @@ weather assetがHTTP API Agentの子としてリストに表示されます。�
 属性を追加したら、**View Mode**に切り替えてライブ天気データを確認します。これで、weather assetにリンクされたロッテルダムの現在の気温と湿度が表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote1.png" alt="pir" width={800} height="auto" /></p>
-
 
 ## ChirpStack LoRaWANゲートウェイ統合でのMQTT Agent
 
@@ -305,9 +298,11 @@ weather assetがHTTP API Agentの子としてリストに表示されます。�
 
 2. **MQTTサブスクリプショントピックを設定**：
    - **Subscription Topic**フィールドを以下のChirpStack MQTTトピック形式で編集します：
+
      ```
      application/+/device/+/event/up
      ```
+
    - このトピックはLoRaWANデバイスからの受信センサーデータをサブスクライブします。
 
 3. **Value Filtersを追加**：
@@ -317,9 +312,11 @@ weather assetがHTTP API Agentの子としてリストに表示されます。�
 
 4. **センサーデータ用のJSON Pathを設定**：
    - 新しく作成された**JSON Path**項目を展開し、**Path**を以下に設定します：
+
      ```
      $.object.messages[?(@.measurementId==4097)].measurementValue
      ```
+
    - これはSenseCap S2101データデコーダーの例です。特定のデバイスに応じてパスを調整してください。
    - **Return First**オプションを有効にします。
 
@@ -336,9 +333,7 @@ weather assetがHTTP API Agentの子としてリストに表示されます。�
 2. **温度を監視**：  
    **SenseCap S2101**（または設定したデバイス）が温度測定値を送信し、OpenRemoteマネージャーが**Temperature**属性の下にこれらの値を表示するはずです。
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote11.png" alt="pir" width={800} height="auto" /></p>
-
 
 ## 技術サポート & 製品ディスカッション
 
