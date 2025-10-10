@@ -294,25 +294,24 @@ sudo chmod 666 /dev/ttyUSB*
 
 ## Calibrate
 
-### For Initial Calibration
+For videos covering the StarAI Robotic Arm from unboxing to teleoperation, you may refer to:
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/02lxxF9Cvy8?si=IGJda5nXkYEbm2N6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-Please rotate each joint left and right to the corresponding positions.
+Move the robotic arm to the initial position of the robotic arm (as shown in the figure below) and place it in standby mode, then reconnect the power supply. For the initial position of the new version of the robotic arm, special attention should be paid to ensuring that the servos of Joints 3, 4, and 5 strictly align with the positions in the figure.
 
-### For Re-Calibration
 
-Follow the on-screen prompt: enter the letter "c" and press the Enter key.
+| **Violin Leader Arm** | **Viola Follower Arm** |
+|:---------:|:---------:|
+| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_rest.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_rest.jpg) |
 
-Below are the reference values. Under normal circumstances, the actual limit reference values should fall within the range of **±10°** of these references.
+Initial position of the old-version robotic arm (special attention should be paid to ensuring that the servos of Joints 3, 4, and 5 strictly align with the positions in the figure; the initial position of the new-version robotic arm can also be used as a reference):
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png" />
+</div>
 
-| Servo ID | Lower Angle Limit (°) | Upper Angle Limit (°) | Notes                                          |
-| -------- | --------------------- | --------------------- | ---------------------------------------------- |
-| motor\_0 | -180°                 | 180°                  | Rotate to the limit position                   |
-| motor\_1 | -90°                  | 90°                   | Rotate to the limit position                   |
-| motor\_2 | -90°                  | 90°                   | Rotate to the limit position                   |
-| motor\_3 | -180°                 | 180°                  | No limit; rotate to the reference angle limits |
-| motor\_4 | -90°                  | 90°                   | Rotate to the limit position                   |
-| motor\_5 | -180°                 | 180°                  | No limit; rotate to the reference angle limits |
-| motor\_6 | 0°                    | 100°                  | Rotate to the limit position                   |
 
 :::tip
 Taking PC (Linux) and Jetson board as examples, the `first` USB device inserted will be mapped to `ttyUSB0`, and the `second` USB device inserted will be mapped to `ttyUSB1`.
@@ -328,6 +327,8 @@ Connect the leader to `/dev/ttyUSB0`, or modify the `--teleop.port` parameter, a
 lerobot-calibrate     --teleop.type=starai_violin --teleop.port=/dev/ttyUSB0 --teleop.id=my_awesome_staraiviolin_arm
 ```
 
+After startup, you will see the encoder values of each joint. You need to manually calibrate each joint one by one: rotate each joint to its maximum and minimum positions. For joints without limit stops, the rotation range must not exceed 180° clockwise or 180° counterclockwise. After calibrating all joints, press Enter to save the settings.
+
 #### Follower Robotic Arm
 
 Connect the follower to `/dev/ttyUSB1`, or modify the `--teleop.port` parameter, and then execute:
@@ -336,7 +337,7 @@ Connect the follower to `/dev/ttyUSB1`, or modify the `--teleop.port` parameter,
 lerobot-calibrate     --robot.type=starai_viola --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraiviola_arm
 ```
 
-After running the command, you need to **manually move the robotic arm** to allow each joint to reach its **limit position**. The terminal will display the recorded range data. Once this operation is completed, press Enter.
+After startup, you will see the encoder values of each joint. You need to manually calibrate each joint one by one: rotate each joint to its maximum and minimum positions. For joints without limit stops, the rotation range must not exceed 180° clockwise or 180° counterclockwise. After calibrating all joints, press Enter to save the settings.
 
 :::tip
 The calibration files will be saved to the following paths: `~/.cache/huggingface/lerobot/calibration/robots` and `~/.cache/huggingface/lerobot/calibration/teleoperators`.
@@ -355,6 +356,8 @@ Connect `left_arm_port` to `/dev/ttyUSB0` and `right_arm_port` to `/dev/ttyUSB2`
 lerobot-calibrate     --teleop.type=bi_starai_leader  --teleop.left_arm_port=/dev/ttyUSB0  --teleop.right_arm_port=/dev/ttyUSB2  --teleop.id=bi_starai_leader
 ```
 
+After startup, you will see the encoder values of each joint. You need to manually calibrate each joint one by one: rotate each joint to its maximum and minimum positions. For joints without limit stops, the rotation range must not exceed 180° clockwise or 180° counterclockwise. After calibrating all joints, press Enter to save the settings.
+
 #### Follower Robotic Arm
 
 Connect `left_arm_port` to `/dev/ttyUSB1` and `right_arm_port` to `/dev/ttyUSB3`, or modify the `--robot.left_arm_port` and `--robot.right_arm_port` parameters, and then execute:
@@ -362,6 +365,8 @@ Connect `left_arm_port` to `/dev/ttyUSB1` and `right_arm_port` to `/dev/ttyUSB3`
 ```bash
 lerobot-calibrate     --robot.type=bi_starai_follower  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_follower
 ```
+
+After startup, you will see the encoder values of each joint. You need to manually calibrate each joint one by one: rotate each joint to its maximum and minimum positions. For joints without limit stops, the rotation range must not exceed 180° clockwise or 180° counterclockwise. After calibrating all joints, press Enter to save the settings.
 
 :::tip
 
@@ -376,7 +381,7 @@ If using a dual-arm setup, you need to manually modify the robotic arm file type
 ## Teleoperate
 
 <div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/Uz-x-2P2xaE?si=HJTjALt5yFntR6-s" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="https://www.youtube.com/embed/02lxxF9Cvy8?si=IGJda5nXkYEbm2N6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 Move the arm to the position shown in the diagram and set it to standby.

@@ -174,10 +174,6 @@ conda install ffmpeg=7.1.1 -c conda-forge
 cd ~/lerobot && pip install -e ".[starai]"
 ```
 
-```bash
-sudo apt remove brltty
-```
-
 对于 Jetson Jetpack 设备（请确保在执行此步骤前按照[此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch)第 5 步安装了 Pytorch-gpu 和 Torchvision）：
 
 ```bash
@@ -296,27 +292,25 @@ sudo chmod 666 /dev/ttyUSB*
 
 ### 单臂校准设置
 
-如果是第一次校准，请对每个关节左右转动到对应位置。
+机械臂开箱到遥操作视频可参考：
 
-如果是重新校准，按照命令提示输入字母c后按Enter键。
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115348342901390&bvid=BV1Pt47zGEEc&cid=32960351835&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-下面是参考值,通常情况下，真实的限位参考值的±10°范围内。
+ 
 
-| 舵机ID  | 角度下限参考值 | 角度上限参考值 | 备注                               |
-| ------- | -------------: | -------------: | ---------------------------------- |
-| motor_0 |          -180° |           180° | 转动到限位处                       |
-| motor_1 |           -90° |            90° | 转动到限位处                       |
-| motor_2 |           -90° |            90° | 转动到限位处                       |
-| motor_3 |          -180° |           180° | 没有限位，需转动到角度上下限参考值 |
-| motor_4 |           -90° |            90° | 转动到限位处                       |
-| motor_5 |          -180° |           180° | 没有限位，需转动到角度上下限参考值 |
-| motor_6 |             0° |           100° | 转动到限位处                       |
+将手臂移动至下图**机械臂初始位置**待机, 然后再重新接上电源。新版本机械臂初始位置，（需要特别关注3，4，5号关节舵机与图片需要严格对应）：
 
-:::tip
-以PC(linux)和jetson板卡为例，`第一个`插入usb接口会映射为`ttyUSB0`，`第二个`插入usb接口会映射为`ttyUSB1`。
+| **Violin Leader Arm初始位置** | **Viola Follower Arm初始位置** |
+|:---------:|:---------:|
+| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_rest.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_rest.jpg) |
 
-在运行代码前请注意leader和follower的映射接口。
-:::
+老版本机械臂初始位置（需要特别关注3，4，5号关节舵机与图片需要严格对应，也可以参考新版本机械臂初始位置）：
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png" />
+</div>
 
 #### leader机械臂
 
@@ -326,6 +320,9 @@ sudo chmod 666 /dev/ttyUSB*
 lerobot-calibrate     --teleop.type=starai_violin --teleop.port=/dev/ttyUSB0 --teleop.id=my_awesome_staraiviolin_arm
 ```
 
+启动后你会看到各个关节的编码器值，需要你逐一对每个关节进行手动校准，将每个关节旋转到最大值和和最小值，没有限位的关节，最大不超过顺时针及逆时针180°。校准完所有关节后点击回车即可保存。
+
+
 #### follower机械臂
 
 将follower连接到`/dev/ttyUSB1`，或者修改`--teleop.port`，然后执行：
@@ -334,7 +331,8 @@ lerobot-calibrate     --teleop.type=starai_violin --teleop.port=/dev/ttyUSB0 --t
 lerobot-calibrate     --robot.type=starai_viola --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraiviola_arm
 ```
 
-在运行命令后，需要**手动掰机械臂**，让每个关节达到**极限值**，终端会显示记录的范围数据，做完此操作后按下回车即可。
+启动后你会看到各个关节的编码器值，需要你逐一对每个关节进行手动校准，将每个关节旋转到最大值和和最小值，没有限位的关节，最大不超过顺时针及逆时针180°。校准完所有关节后点击回车即可保存。
+
 
 :::tip
 校准的文件会保存到以下路径`~/.cache/huggingface/lerobot/calibration/robots`和`~/.cache/huggingface/lerobot/calibration/teleoperators`下。
@@ -352,6 +350,8 @@ lerobot-calibrate     --robot.type=starai_viola --robot.port=/dev/ttyUSB1 --robo
 ```bash
 lerobot-calibrate     --teleop.type=bi_starai_leader  --teleop.left_arm_port=/dev/ttyUSB0  --teleop.right_arm_port=/dev/ttyUSB2  --teleop.id=bi_starai_leader
 ```
+启动后你会看到各个关节的编码器值，需要你逐一对每个关节进行手动校准，将每个关节旋转到最大值和和最小值，没有限位的关节，最大不超过顺时针及逆时针180°。校准完所有关节后点击回车即可保存。
+
 
 #### follower机械臂
 
@@ -360,6 +360,8 @@ lerobot-calibrate     --teleop.type=bi_starai_leader  --teleop.left_arm_port=/de
 ```bash
 lerobot-calibrate     --robot.type=bi_starai_follower  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_follower
 ```
+
+启动后你会看到各个关节的编码器值，需要你逐一对每个关节进行手动校准，将每个关节旋转到最大值和和最小值，没有限位的关节，最大不超过顺时针及逆时针180°。校准完所有关节后点击回车即可保存。
 
 :::tip
 
@@ -374,7 +376,7 @@ lerobot-calibrate     --robot.type=bi_starai_follower  --robot.left_arm_port=/de
 ## 遥控操作
 
 <div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/Uz-x-2P2xaE?si=HJTjALt5yFntR6-s" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115348342901390&bvid=BV1Pt47zGEEc&cid=32960351835&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 将手臂移动至图上位置待机。
@@ -722,8 +724,7 @@ lerobot-train \
   --job_name=act_viola_test \
   --policy.device=cuda \
   --wandb.enable=False \
-  --policy.repo_id=starai/my_policy \
-  --steps=200000
+  --policy.repo_id=starai/my_policy
 ```
 
 <details>
@@ -737,8 +738,7 @@ lerobot-train \
   --job_name=act_bi_viola_test \
   --policy.device=cuda \
   --wandb.enable=False \
-  --policy.repo_id=starai/my_policy \
-  --steps=200000
+  --policy.repo_id=starai/my_policy
 ```
 </details>
 
@@ -750,10 +750,9 @@ lerobot-train \
 从某个检查点恢复训练。
 
 ```bash
-lerobot-train \
+python -m lerobot.scripts.train \
   --config_path=outputs/train/act_viola_test/checkpoints/last/pretrained_model/train_config.json \
-  --resume=true \
-  --steps=400000
+  --resume=true
 ```
 
 
