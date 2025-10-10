@@ -32,7 +32,7 @@ last_update:
 ## 前提条件
 
 - [Ubuntu Host PC](https://developer.nvidia.com/sdk-manager)（ネイティブまたはVMware Workstation Playerを使用したVM）
-- Jetson AGX Xavier H01 Kit
+- Jetson AGX Orin H01 Kit
 - USB Type-Cデータ転送ケーブル
 
 ## Force Recovery Modeに入る
