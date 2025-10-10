@@ -137,7 +137,7 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 3.克隆 LeRobot 仓库：
 
 ```bash
-git clone https://gitee.com/Marlboro1998/lerobot-starai.git ~/lerobot
+git clone https://github.com/Seeed-Projects/lerobot-starai.git ~/lerobot
 ```
 
 并切换到starai-arm-develop分支
