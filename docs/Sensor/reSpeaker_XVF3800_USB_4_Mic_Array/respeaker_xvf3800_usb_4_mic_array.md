@@ -413,7 +413,16 @@ arecord -D plughw:4,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
 
 ---
 
-3. **Playback**:
+3. **Adjusting Volume for ReSpeaker XVF3800 on ALSA**
+
+```bash
+alsamixer
+```
+In alsamixer, use the left/right arrow keys to navigate to the correct sound device.Use the up arrow key to increase the volume.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alsa.png" alt="pir" width={600} height="auto"/></p>
+
+4. **Playback**:
 
 ```bash
 aplay -D plughw:4,0 output.wav

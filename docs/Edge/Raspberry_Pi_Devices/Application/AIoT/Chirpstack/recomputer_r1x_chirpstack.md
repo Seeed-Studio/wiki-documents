@@ -16,6 +16,8 @@ last_update:
 
 ## Introduction
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/overall.jpg" alt="pir" width={700} height="auto" /></p>
+
 This guide walks you through setting up a complete LoRaWAN gateway solution using ChirpStack on the Seeed reComputer R11 edge controller, powered by Raspberry Pi. With the WM1302 LoRa concentrator module, the R1X device functions as a powerful gateway capable of reliable long-range wireless communication. By configuring the Semtech Packet Forwarder, LoRa data can be seamlessly transmitted to ChirpStack, which manages network and application layers. We will use Docker to simplify the installation and deployment of ChirpStack services, ensuring a modular and scalable setup. Finally, the system integrates with MQTT, enabling secure and real-time IoT data streaming from LoRa devices like the SenseCAP S2101 sensor to applications accessible anywhere in the world.
 
 ## Hardware Required

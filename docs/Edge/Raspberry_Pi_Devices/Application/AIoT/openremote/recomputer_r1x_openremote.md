@@ -16,8 +16,6 @@ last_update:
 
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/overall.jpg" alt="pir" width={600} height="auto" /></p>
-
 [OpenRemote](https://openremote.io/) is an open-source IoT platform designed to simplify the connection and management of networked devices. At the heart of the system is the Manager, a headless Java application that acts as an IoT context broker, capturing and managing the asset states in real-time. Through dynamic asset modeling, you can represent various components of your environment—such as buildings, rooms, and sensors—tailoring it to your specific needs. Rules written in Groovy, JavaScript, or JSON trigger actions based on asset state changes or event sequences. These rules can, for example, notify users when certain thresholds are met, like when humidity rises in a room. The platform supports networked devices via Agents, which interface with third-party APIs and service protocols, and can be co-located with the manager or installed on edge gateways. By deploying OpenRemote on Raspberry Pi-powered Recomputer R1000 and R1100 devices, you can manage your IoT ecosystem at the edge, providing efficient, localized control over your devices.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width={600} height="auto" /></p>
