@@ -370,8 +370,10 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
    - 代码块内容（\`\`\`之间的内容）
    - 行内代码（\`之间的内容）
    - URL链接
-   - HTML标签
+   - HTML 标签**结构**与**属性**保持不变（不要新增/删除/重排标签；不要修改属性名/属性值）
+   - 但标签之间的**可见文本内容要翻译**（例如 <span>、<strong>、<font> 内部的文字）
    - 专有名词：${termsList.split('\n').slice(0, 5).join(', ')}等
+   - **界面/字段/按钮等英文 UI 名称**（通常出现在引号 "..."、加粗 **...**、或菜单路径 File > Preferences 等），请保持英文原文，不要翻译。
 
 2. **术语表（强制翻译）**：以下术语若出现，必须严格使用右侧译法（不允许其它译法）：
 ${glossaryPairs}
@@ -406,6 +408,7 @@ ${glossaryPairs}
 [LINE_3]   - First item
 [LINE_4]   - [BLE Scanner](#ble-scanner)
 [LINE_5]     - Nested item
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 
 正确输出：
 [LINE_0] ## 入门指南
@@ -414,6 +417,7 @@ ${glossaryPairs}
 [LINE_3]   - 第一项
 [LINE_4]   - [BLE 扫描器](#ble-扫描器)
 [LINE_5]     - 嵌套项
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
 
 错误输出（绝对禁止）：
 [LINE_0] ## 入门指南
@@ -422,6 +426,7 @@ ${glossaryPairs}
 [LINE_3] - 第一项  ❌ 缩进丢失
 [LINE_4]   - [BLE 扫描器](#ble 扫描器)  ❌ 锚点中有空格
 [LINE_5]   - 嵌套项  ❌ 缩进级别错误
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </example>
 </instruction>
 
