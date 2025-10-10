@@ -463,14 +463,47 @@ After the program starts, the Hover Lock Technology remains functional.
    pip install -r requirements.txt
    ```
 
-4. Clone the Orbbec SDK into the lerobot directory
+   Force downgrade the `numpy` version to `1.26.0`
+    ```bash
+    pip install numpy==1.26.0
+    ```
+  Red error messages can be ignored.
+
+4. Clone the Orbbec SDK into the `~/lerobot/src/cameras` directory
 
   ```bash
   cd ~/lerobot/src/cameras
   git clone https://github.com/ZhuYaoHui1998/orbbec.git
   ```
 
-- 🚀 Step 3: Function Call and Examples
+5. Modify utils.py and __init__.py
+- Find `utils.py` in the `~/lerobot/src/lerobot/cameras` directory, and add the following code at line 40:
+
+```python
+elif cfg.type == "orbbec":
+            from .realsense.camera_orbbec import OrbbecCamera
+
+            cameras[key] = OrbbecCamera(cfg)
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/utils.png" />
+</div>
+
+- Find `__init__.py` in the `~/lerobot/src/lerobot/cameras` directory, and add the following code at line 18:
+
+```python
+from .orbbec.configuration_orbbec import OrbbecCameraConfig
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
+</div>
+
+
+- 🚀 Step 2: Function Call and Examples
 
 In all the following examples, replace `starai_viola` with the actual model of the robotic arm you are using (e.g., `so100` / `so101`).
 
@@ -483,12 +516,19 @@ lerobot-teleoperate \
     --robot.type=starai_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ front: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:(20,600)}}" \
+    --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
     --teleop.type=starai_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
 ```
+
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/orbbec_result.png" />
+</div>
+
 
 For subsequent tasks such as data collection, training, and evaluation, the process is the same as that for regular RGB commands. You only need to replace the relevant part in the regular RGB command with:
   ```

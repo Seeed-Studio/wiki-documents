@@ -459,14 +459,49 @@ lerobot-teleoperate \
    pip install -r requirements.txt
    ```
 
-4.将orbbec sdk克隆到lerobot目录下
+  强制降低`numpy`版本到`1.26.0`
+    ```bash
+    pip install numpy==1.26.0
+    ```
+  可以忽略红色报错。
+
+4.将orbbec sdk克隆到`~/lerobot/src/cameras`目录下
 
   ```bash
   cd ~/lerobot/src/cameras
   git clone https://github.com/ZhuYaoHui1998/orbbec.git
   ```
 
--  🚀 步骤 3：函数调用与示例
+5.修改utils.py和__init__.py
+- 在`~/lerobot/src/lerobot/cameras`目录下找到`utils.py`，在`40`行处添加如下代码：
+
+```python
+elif cfg.type == "orbbec":
+            from .realsense.camera_orbbec import OrbbecCamera
+
+            cameras[key] = OrbbecCamera(cfg)
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/utils.png" />
+</div>
+
+- 在`~/lerobot/src/lerobot/cameras`目录下找到`__init__.py`，在`18`行处添加如下代码：
+
+```python
+from .orbbec.configuration_orbbec import OrbbecCameraConfig
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
+</div>
+
+
+
+
+-  🚀 步骤 2：函数调用与示例
 
 以下示例均需将 `starai_viola` 替换为你所使用实际机械臂型号（如 `so100` / `so101`）。
 
@@ -479,18 +514,26 @@ lerobot-teleoperate \
     --robot.type=starai_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ front: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:(20,600)}}" \
+    --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
     --teleop.type=starai_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
 ```
 
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/orbbec_result.png" />
+</div>
+
+
+
 后续采集数据、训练及评估任务与常规RGB命令一样，只需要把:
 
 ```bash
-  --robot.cameras="{ front: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:(20,600)}}" \
+  --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
 ```
+
 
 替换到常规rgb命令中即可，你也可以再后面添加额外的单目RGB相机。
 
