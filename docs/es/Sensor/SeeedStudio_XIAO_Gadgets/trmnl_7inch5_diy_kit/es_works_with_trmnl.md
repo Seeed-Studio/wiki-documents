@@ -1,5 +1,5 @@
 ---
-description: Este artículo describe cómo usar el Kit DIY TRMNL 7.5inch(OG) para trabajar con TRMNL.
+description: Este artículo describe cómo usar el TRMNL 7.5inch(OG) DIY Kit para trabajar con TRMNL.
 title: funciona con TRMNL
 keywords:
 - ePaper display
@@ -12,7 +12,7 @@ last_update:
   author: Allen
 ---
 
-# Kit DIY TRMNL 7.5inch(OG) Funciona con TRMNL
+# TRMNL 7.5inch(OG) DIY Kit Funciona con TRMNL
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/4.jpeg" style={{width:1000, height:'auto'}}/></div>
 
@@ -142,15 +142,15 @@ Una vez que tengas tus materiales y hayas comprado el acceso a TRMNL, puedes pro
 Si obtuviste un kit completamente nuevo, tendrá firmware en el interior. Así que puedes omitir este paso.
 :::
 
-Para hacer que tu kit DIY TRMNL 7.5inch(OG) funcione con TRMNL, necesitas flashear el firmware apropiado en tu dispositivo. Hay tres métodos recomendados:
+Para hacer que tu TRMNL 7.5inch(OG) DIY kit funcione con TRMNL, necesitas flashear el firmware apropiado en tu dispositivo. Hay tres métodos recomendados:
 
-#### Método 1: Flashear vía Flasheador Web de TRMNL (Más Fácil)
+#### Método 1: Flashear vía TRMNL Web Flasher (Más Fácil)
 
 :::tip
 Por favor usa el firmware **FW 1.5.12** o más nuevo para compatibilidad con Seeed.
 :::
 
-1. **Ve al Flasheador Web de TRMNL**
+1. **Ve al TRMNL Web Flasher**
 
    - Visita [https://usetrmnl.com/flash](https://usetrmnl.com/flash)
    - Esta herramienta te permite flashear tu dispositivo directamente desde tu navegador.
@@ -198,7 +198,7 @@ Hay veces cuando actualizamos nuestro código y necesitamos enviar PR a TRMNL y 
 
 5. **Conectar tu Dispositivo**
 
-   - Conecta tu kit DIY TRMNL 7.5inch(OG).
+   - Conecta tu TRMNL 7.5inch(OG) DIY kit.
 
 6. **Construir y Subir**
 
@@ -214,13 +214,13 @@ Hay veces cuando actualizamos nuestro código y necesitamos enviar PR a TRMNL y 
 
 ## Configurar Wi-Fi y Enviar Listas de Reproducción a TRMNL
 
-Para usar tu kit DIY TRMNL 7.5inch(OG) con TRMNL y enviar listas de reproducción, primero necesitas conectar el dispositivo a tu red Wi-Fi. Este proceso se llama "modo de emparejamiento WiFi" y se hace a través de un portal cautivo simple. Por favor sigue los pasos a continuación:
+Para usar tu TRMNL 7.5inch(OG) DIY kit con TRMNL y enviar listas de reproducción, primero necesitas conectar el dispositivo a tu red Wi-Fi. Este proceso se llama "modo de emparejamiento WiFi" y se hace a través de un portal cautivo simple. Por favor sigue los pasos a continuación:
 
 > 💡 **¿Problemas con Wi-Fi?** Si encuentras problemas conectando tu dispositivo a Wi-Fi, por favor consulta la [Guía de Solución de Problemas de Wi-Fi del Dispositivo TRMNL](https://help.usetrmnl.com/en/articles/10193157-device-wifi-troubleshooting) para soluciones a problemas comunes de red y compatibilidad de router.
 
 ### Encender y Entrar en Modo de Aprovisionamiento
 
-- Después de flashear el firmware TRMNL y encender tu dispositivo, entrará automáticamente en modo de aprovisionamiento si aún no está conectado a Wi-Fi.
+- Después de flashear el firmware TRMNL y encender tu dispositivo, automáticamente entrará en modo de aprovisionamiento si aún no está conectado a Wi-Fi.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/216.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -234,7 +234,7 @@ Para usar tu kit DIY TRMNL 7.5inch(OG) con TRMNL y enviar listas de reproducció
 ### Abrir el Portal Cautivo
 
 - Una vez conectado, abre un navegador web (como Chrome o Edge).
-- El dispositivo debería redirigirte automáticamente a la página de configuración de TRMNL. Si no lo hace, visita manualmente [http://4.3.2.1](http://4.3.2.1) en tu navegador.
+- El dispositivo debería redirigirte automáticamente a la página de configuración TRMNL. Si no lo hace, visita manualmente [http://4.3.2.1](http://4.3.2.1) en tu navegador.
 
 ### Introducir tus Credenciales de Wi-Fi
 
@@ -263,15 +263,15 @@ Para usar tu kit DIY TRMNL 7.5inch(OG) con TRMNL y enviar listas de reproducció
 >
 > Para más detalles y capturas de pantalla, consulta la guía oficial: [Finding your TRMNL MAC address](https://help.usetrmnl.com/en/articles/10614205-finding-your-trmnl-mac-address)
 
-### Acceder a la Interfaz Web de TRMNL
+### Acceder a la Interfaz Web TRMNL
 
 Después de que tu kit DIY TRMNL 7.5inch(OG) esté conectado a tu Wi-Fi y hayas registrado su dirección MAC (Device ID), puedes agregarlo a tu cuenta TRMNL:
 
-1. **Abrir la Interfaz Web de TRMNL**  
-   - En tu computadora o dispositivo móvil, abre un navegador y ve a la [interfaz web de TRMNL](https://trmnl.app).
+1. **Abrir la Interfaz Web TRMNL**  
+   - En tu computadora o dispositivo móvil, abre un navegador y ve a la [interfaz web TRMNL](https://trmnl.app).
 
 2. **Ir a la Página de Dispositivos**  
-   - En la interfaz de TRMNL, navega a la sección **Devices**.
+   - En la interfaz TRMNL, navega a la sección **Devices**.
 
 3. **Agregar un Nuevo Dispositivo**  
    - Haz clic en el botón **Add new device**, que generalmente se encuentra en la esquina superior derecha o en el centro de la página de Dispositivos.
@@ -284,7 +284,7 @@ Después de que tu kit DIY TRMNL 7.5inch(OG) esté conectado a tu Wi-Fi y hayas 
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/212.png" style={{width:700, height:'auto'}}/></div>
 
-5. **Registrar la Dirección MAC del Dispositivo XIAO 7.5"**
+5. **Registrar la dirección MAC del dispositivo XIAO 7.5"**
 
    Para establecer una conexión entre el panel de papel electrónico XIAO y TRMNL, necesitamos vincular la dirección MAC correcta del dispositivo dentro de la página de configuración de TRMNL.
 
@@ -388,8 +388,8 @@ En la parte superior de la página de Plugins, verás todos los plugins que ya h
 
 Debajo de tus plugins conectados, encontrarás el mercado de plugins. Aquí puedes navegar, buscar y descubrir nuevos plugins para agregar a tu dispositivo. Los plugins están organizados por categorías y etiquetas (como #productivity, #news, #ecommerce, etc.), facilitando encontrar lo que necesitas.
 
-- **Navegar y Buscar**: Usa la barra de búsqueda o etiquetas para encontrar rápidamente plugins que te interesen.
-- **Agregar Plugins**: Haz clic en cualquier plugin para conectarlo a tu cuenta y comenzar a usarlo en tu lista de reproducción.
+- **Browse & Search**: Usa la barra de búsqueda o etiquetas para encontrar rápidamente plugins que te interesen.
+- **Add Plugins**: Haz clic en cualquier plugin para conectarlo a tu cuenta y comenzar a usarlo en tu lista de reproducción.
 
 Los desarrolladores incluso pueden crear y publicar sus propios plugins para que otros los usen, haciendo que el ecosistema se expanda continuamente con nuevas posibilidades ([aprende más sobre la creación de plugins](https://docs.usetrmnl.com/go/plugin-marketplace/introduction)).
 

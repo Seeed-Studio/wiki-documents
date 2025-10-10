@@ -30,7 +30,7 @@ TRMNLは、ますます注意散漫になるデジタル世界において、人
 
 TRMNLの核心は、テクノロジーは絶え間ない注意を要求することなく私たちの生活を向上させるべきだという哲学に基づいています。このプラットフォームは、E Ink®ディスプレイを通じて重要な情報を一目で確認できるエレガントな方法を提供し、より思慮深く、侵入的でないテクノロジー体験を創造します。
 
-### なぜTRMNLを使うのか？
+### なぜTRMNLを使用するのか？
 
 TRMNLの統合により、いくつかの魅力的な利点がもたらされます：
 
@@ -147,7 +147,7 @@ TRMNL 7.5inch(OG) DIYキットをTRMNLと連携させるには、デバイスに
 #### 方法1: TRMNL Web Flasherで書き込み（最も簡単）
 
 :::tip
-Seeed互換性のために**FW 1.5.12**以降のファームウェアを使用してください。
+Seeed互換性のため、**FW 1.5.12**以降のファームウェアを使用してください。
 :::
 
 1. **TRMNL Web Flasherにアクセス**
@@ -403,14 +403,14 @@ TRMNLの使用について質問がある場合や、より高度な機能を探
 
 時々、間違ったプログラムを使用すると、XIAOがポートを失ったり、正常に機能しなくなったりすることがあります。一般的な問題には以下があります：
 
-- XIAOがコンピュータに接続されているが、*ポート番号が見つからない*。
-- XIAOが接続され、ポート番号が表示されるが、*プログラムのアップロードが失敗する*。
+- XIAO がコンピュータに接続されているが、*ポート番号が見つからない*。
+- XIAO が接続され、ポート番号が表示されるが、*プログラムのアップロードが失敗する*。
 
 上記の2つの状況に遭遇した場合、XIAOをBootLoaderモードにすることで、デバイスが認識されない問題やアップロード失敗の問題の大部分を解決できます。具体的な方法は以下の通りです：
 
-- **ステップ1**. XIAO ESP32S3の`BOOT`ボタンを離さずに押し続けます。
-- **ステップ2**. `BOOT`ボタンを押し続けたまま、データケーブルでコンピュータに接続します。コンピュータに接続した後、`BOOT`ボタンを離します。
-- **ステップ3**. プログラムをアップロードするか、ファームウェアをフラッシュして、XIAO ESP32S3の動作を確認します。
+- **ステップ 1**. XIAO ESP32S3 の `BOOT` ボタンを離さずに押し続けます。
+- **ステップ 2**. `BOOT` ボタンを押したまま、データケーブルでコンピュータに接続します。コンピュータに接続した後、`BOOT` ボタンを離します。
+- **ステップ 3**. プログラムをアップロードするか、ファームウェアをフラッシュして XIAO ESP32S3 の動作を確認します。
 
 ## 特別な謝辞
 
@@ -426,14 +426,14 @@ Key3（Resetボタンの隣のボタン）を5秒間押し続けます。デバ�
 
 ## リソース
 
-- **[ファームウェア]** [TRMNL ePaper Library (GitHub)](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)
-- **[ハードウェア]** [Driver Board SCH](https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/XIAO_ePaper_driver_board_sch.pdf)
-- **[印刷可能]** [三角形ベース](https://www.printables.com/model/1354873)  
-- **[印刷可能]** [保護付き三角形ベース](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)  
-- **[印刷可能]** [L字型ベース](https://www.printables.com/model/1354879)  
+- **[ファームウェア]** [TRMNL ePaper ライブラリ（GitHub）](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)
+- **[ハードウェア]** [ドライバーボード回路図](https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/XIAO_ePaper_driver_board_sch.pdf)
+- **[3D プリント]** [三角形ベース](https://www.printables.com/model/1354873)  
+- **[3D プリント]** [保護付き三角形ベース](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)  
+- **[3D プリント]** [L 字型ベース](https://www.printables.com/model/1354879)  
 - **[Thingiverse]** [三角形ベース](https://www.thingiverse.com/thing:7091094)
 - **[Thingiverse]** [保護付き三角形ベース](https://www.thingiverse.com/thing:7097231)
-- **[Thingiverse]** [L字型ベース](https://www.thingiverse.com/thing:7091096)
+- **[Thingiverse]** [L 字型ベース](https://www.thingiverse.com/thing:7091096)
 - **[Makerworld]** [三角形ベース](https://makerworld.com/en/models/1625037-trmnl-7-5-og-diy-triangular-prism-shell-kit)
 - **[Makerworld]** [保護付き三角形ベース](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
 - **[Makerworld]** [L字型ベース](https://makerworld.com/en/models/1625065-trmnl-7-5-og-diy-l-shaped-case-kit)
