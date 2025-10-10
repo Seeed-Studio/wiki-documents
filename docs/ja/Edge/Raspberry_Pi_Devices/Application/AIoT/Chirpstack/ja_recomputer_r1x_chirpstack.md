@@ -16,6 +16,8 @@ last_update:
 
 ## はじめに
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/overall.jpg" alt="pir" width={700} height="auto" /></p>
+
 このガイドでは、Raspberry Piを搭載したSeeed reComputer R11エッジコントローラーでChirpStackを使用して、完全なLoRaWANゲートウェイソリューションを設定する手順を説明します。WM1302 LoRaコンセントレーターモジュールにより、R1Xデバイスは信頼性の高い長距離無線通信が可能な強力なゲートウェイとして機能します。Semtech Packet Forwarderを設定することで、LoRaデータをChirpStackにシームレスに送信でき、ChirpStackがネットワーク層とアプリケーション層を管理します。Dockerを使用してChirpStackサービスのインストールと展開を簡素化し、モジュラーでスケーラブルなセットアップを確保します。最後に、システムはMQTTと統合され、SenseCAP S2101センサーなどのLoRaデバイスから世界中のどこからでもアクセス可能なアプリケーションへの安全でリアルタイムなIoTデータストリーミングを可能にします。
 
 ## 必要なハードウェア
@@ -456,6 +458,7 @@ function toBinary(arr) {
         return bin;
     }).join('');
 }
+
 ```
 
 </details>

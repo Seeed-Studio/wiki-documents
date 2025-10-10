@@ -30,7 +30,6 @@ Follow these steps to install Docker and Docker-Compose on your Ubuntu system:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremoter11.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 **1. Update System Packages**
 
 First, update the package list and upgrade the installed packages to ensure your system is up-to-date.
@@ -170,7 +169,6 @@ Now that the HTTP API Agent is created, configure it with the following details:
 
 Click **Save** to confirm the configuration.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote3.png" alt="pir" width={800} height="auto" /></p>
 
 ### Create the Weather Asset
@@ -184,9 +182,7 @@ Click **Save** to confirm the configuration.
 
 The weather asset will now appear in the list as a child of the HTTP API Agent. You can change its parent if desired.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote4.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Add the Agent Links
 
@@ -205,11 +201,9 @@ Go to **Modify Mode** by clicking the toggle at the top of the asset page. In th
   - **Value filters:** `JsonPathFilter-2`
   - **Path (JSON):** `$.main.humidity`
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote5.png" alt="pir" width={800} height="auto" /></p>
 
-### Setup the Temperature Attribute:
-
+### Setup the Temperature Attribute
 
 - Expand the **temperature** attribute.
 - Click **Add configuration item** and select **Agent link**.
@@ -228,7 +222,6 @@ Click **Save** at the top right to apply these changes.
 Once you’ve added the attributes, switch to **View Mode** to see the live weather data. You now have the current temperature and humidity for Rotterdam linked to the weather asset.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote1.png" alt="pir" width={800} height="auto" /></p>
-
 
 ## MQTT Agent with ChirpStack LoRaWAN Gateway Integration
 
@@ -305,9 +298,11 @@ This tutorial will guide you through the process of integrating an MQTT Agent wi
 
 2. **Configure the MQTT Subscription Topic**:
    - Edit the **Subscription Topic** field with the following ChirpStack MQTT topic format:
+
      ```
      application/+/device/+/event/up
      ```
+
    - This topic will subscribe to incoming sensor data from the LoRaWAN device.
 
 3. **Add Value Filters**:
@@ -317,9 +312,11 @@ This tutorial will guide you through the process of integrating an MQTT Agent wi
 
 4. **Configure the JSON Path for Sensor Data**:
    - Expand the newly created **JSON Path** item and set the **Path** to:
+
      ```
      $.object.messages[?(@.measurementId==4097)].measurementValue
      ```
+
    - This is an example for the SenseCap S2101 data decoder. Adjust the path as necessary for your specific device.
    - Enable the **Return First** option.
 
@@ -336,9 +333,7 @@ This tutorial will guide you through the process of integrating an MQTT Agent wi
 2. **Monitor the Temperature**:  
    The **SenseCap S2101** (or your configured device) should now send temperature readings, and the OpenRemote manager will display these values under the **Temperature** attribute.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote11.png" alt="pir" width={800} height="auto" /></p>
-
 
 ## Tech Support & Product Discussion
 
