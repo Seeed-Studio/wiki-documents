@@ -131,7 +131,7 @@ const content = {
     flashDuration: "The flash command may run for 2–10 minutes.",
     step3Connect: "Step 3:",
     connectDisplay:
-      "Connect the Jetson to a display using the HDMI connector on the board and finish the initial configuration setup:",
+      "Connect the Jetson to a display using the connector on the board (HDMI or Type-C, depending on your carrier board) and finish the initial configuration setup:",
     systemConfiguration: "Please complete the System Configuration according to your needs.",
     step4Optional: "Step 4 (Optional):",
     installJetpack: "Install Nvidia Jetpack SDK",

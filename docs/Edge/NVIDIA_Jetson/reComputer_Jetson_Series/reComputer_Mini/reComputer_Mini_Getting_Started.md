@@ -451,7 +451,7 @@ You will see the following output if the flashing process is successful
 The flash command may run for 2-10 minutes.
 :::
 
-**Step 3:** Connect the J501 to a display using the HDMI connector on the board and finish the initial configuration setup:
+**Step 3:** Connect the J401 to a display using the **USB Type-C with DisplayPort** on the board and finish the initial configuration setup:
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
