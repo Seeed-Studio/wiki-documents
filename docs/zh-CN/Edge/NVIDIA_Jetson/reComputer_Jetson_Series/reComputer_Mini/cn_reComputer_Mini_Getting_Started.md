@@ -451,7 +451,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 刷写命令可能需要运行 2-10 分钟。
 :::
 
-**步骤 3：** 使用板上的 HDMI 连接器将 J501 连接到显示器，并完成初始配置设置：
+**步骤3：** 使用主板上的 **带有 DisplayPort 功能的 USB Type-C** 将 J401 连接到显示器，并完成初始配置设置。
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>

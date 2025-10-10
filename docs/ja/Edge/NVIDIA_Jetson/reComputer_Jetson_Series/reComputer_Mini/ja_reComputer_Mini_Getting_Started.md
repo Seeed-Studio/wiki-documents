@@ -451,7 +451,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 フラッシュコマンドは2-10分間実行される場合があります。
 :::
 
-**ステップ3:** ボード上のHDMIコネクタを使用してJ501をディスプレイに接続し、初期設定セットアップを完了します：
+**ステップ3：** ボード上の **DisplayPort 対応 USB Type-C** を使用して J401 をディスプレイに接続し、初期設定を完了します。
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
