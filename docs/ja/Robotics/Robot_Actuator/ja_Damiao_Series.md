@@ -21,6 +21,10 @@ last_update:
     <img width={400}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.png" />
 </div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Gripper-01-p-6561.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+</a></div>
 
 ## 仕様
 
@@ -192,6 +196,7 @@ CANデータ（16進数形式）をコピーして、シリアルポートデバ
 </div>
 
 モーターが回転を開始します。CANデータ（16進数形式）をコピーして、シリアルポートデバッグツールを使用してモーターを駆動することもできます。
+
 ### 速度制御モード
 
 1. パラメータ設定セクションで、​Read Param をクリックして現在のモーターパラメータを表示します。

@@ -14,12 +14,17 @@ last_update:
 ---
 
 # 达妙43系列电机快速入门指南
+
 本文档将介绍如何快速上手达妙43系列电机，以及如何在reComputer Mini Jetson Orin上使用C++和Python控制电机。
 
 <div align="center">
-    <img width={400} 
+    <img width={400}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.png" />
 </div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Gripper-01-p-6561.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+</a></div>
 
 ## 技术规格
 
@@ -34,9 +39,8 @@ last_update:
 | J4340P-2EC | 9 | 27 | 52.5 | 36 | 40 | 57*56.5 | ~375 | 24 | 15-32 | 3 | 8 | 33.929 | 14 | CAN/CANFD | 磁编双编码 | 内置 | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261 | 9.59E-05 | 12.5 | 8 | 28 | 81.197 |
 | J4340P-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57*56.5 | ~375 | 48 | 15-52 | 2.5 | 9 | 33.929 | 14 | CAN/CANFD | 磁编双编码 | 内置 | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261 | 9.59E-05 | 12.5 | 8 | 28 | 81.197 |
 
-
 ## 核心特性
- 
+
 1. **支持CAN总线 & CANFD协议**
 2. **双编码器设计**
 3. **高扭矩密度**
@@ -44,8 +48,11 @@ last_update:
 5. **中空轴结构**
 
 ## 快速入门
+
 ### 使用前的环境准备
+
 **Windows PC端准备**
+
 - 下载[达妙调试工具](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/Debugging_Tools_v.1.6.8.8.exe)
 - 下载[USB转CAN工具](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/USB2CAN_2.0.0.3.exe)
 
@@ -54,13 +61,14 @@ last_update:
 我们采用CAN通信方式，需要通过USB-CAN转换器连接Windows上位机进行调试。
 
 <div align="center">
-    <img width={500} 
+    <img width={500}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/circcuit.jpg" />
 </div>
 
 注意需要为电机单独提供24V电源，同时将USB接口连接至电脑。
 
 ### 使用`Debugging_Tools_v.1.6.8.8.exe`测试电机
+
 软件底部可切换中英文界面。
 
 | **配置串口连接参数** | **连接电机** | **读取参数** | **设置CAN ID** |**写入参数** |
@@ -84,6 +92,7 @@ last_update:
 :::
 
 #### **(1) 基本参数**  
+
 - **NPP**: 电机极对数，通过校准自动确定  
 - **UV**: 当供电电压低于阈值(最低15V)时，驱动器将停止工作  
 - **OV**: 设置电压上限。驱动器上电时检查供电电压，若超限则禁用操作(仅在上电时检查一次)  
@@ -97,9 +106,11 @@ last_update:
 - **过流保护**: 最大相电流限制(百分比)  
 
 #### **(2) 电机参数**  
+
 - 由驱动器自动识别。更换驱动板时需要重新校准。参数持久化存储在驱动器中  
 
 #### **(3) 指令缩放(幅值设置)**  
+
 - **PMAX**: 在MIT模式下缩放指令输入；在其他模式下缩放反馈输出。参考CAN协议了解映射规则  
 - **VMAX**: 同PMAX  
 - **TMAX**: 同PMAX  
@@ -109,6 +120,7 @@ last_update:
 > **注意**: 驱动器使用MIT通信协议格式  
 
 #### **(4) 控制设置**  
+
 - **控制模式**:  
   - **MIT模式**  
   - **位置-速度模式**(梯形加减速)  
@@ -117,6 +129,7 @@ last_update:
 - **速度KP/KI, 位置KP/KI**: 速度和位置环的PID参数  
 
 ### MIT控制模式
+
 **1. MIT扭矩控制模式:**
 
 1. 在参数设置区域点击读取参数显示当前电机参数
@@ -128,40 +141,43 @@ last_update:
 4. 点击写入参数保存所有设置
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/7.png" />
 </div>
 
 5. 在测试标签页点击"使能电机"按钮(Ente)
 
 6. 在MIT控制区域:
- - 设置扭矩(Nm)为1
- - 点击更新→发送
+
+- 设置扭矩(Nm)为1
+- 点击更新→发送
 
 电机将开始旋转
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/6.png" />
 </div>
 
 您也可以复制CAN数据(16进制格式)使用串口调试工具驱动电机
 
 <div align="center">
-    <img width={400} 
+    <img width={400}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/8.png" />
 </div>
 
 **2. MIT速度控制模式:**
+
 1. 在测试标签页点击"使能电机"按钮(Ente)
 
 2. 在MIT控制区域:
- - 设置速度(rad/s)为5
- - 设置KD(N*s/r)为1
- - 点击更新→发送
+
+- 设置速度(rad/s)为5
+- 设置KD(N*s/r)为1
+- 点击更新→发送
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/9.png" />
 </div>
 
@@ -169,19 +185,20 @@ last_update:
 您也可以复制CAN数据使用串口调试工具驱动电机
 
 **3. MIT位置控制模式:**
+
 1. 在测试标签页点击"使能电机"按钮(Ente)
 
 2. 可使用"保存零点"将当前位置设为零点
 
-
 3. 在MIT控制区域:
- - 设置位置(rad)为3.14
- - 设置KP(N/r)为2
- - 设置KD(N*s/r)为1
- - 点击更新→发送
+
+- 设置位置(rad)为3.14
+- 设置KP(N/r)为2
+- 设置KD(N*s/r)为1
+- 点击更新→发送
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/10.png" />
 </div>
 
@@ -199,18 +216,19 @@ last_update:
 4. 点击写入参数保存所有设置
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/11.png" />
 </div>
 
 5. 在测试标签页点击"使能电机"按钮(Ente)
 
 6. 在速度控制区域:
- - 设置速度(rad/s)为5
- - 点击更新→发送
+
+- 设置速度(rad/s)为5
+- 点击更新→发送
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/12.png" />
 </div>
 
@@ -228,19 +246,20 @@ last_update:
 4. 点击写入参数保存所有设置
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/13.png" />
 </div>
 
 5. 在测试标签页点击"使能电机"按钮(Ente)
 
 6. 在位置控制区域:
- - 设置位置为3.14
- - 设置速度(rad/s)为5
- - 点击更新→发送
+
+- 设置位置为3.14
+- 设置速度(rad/s)为5
+- 点击更新→发送
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/14.png" />
 </div>
 
@@ -261,8 +280,6 @@ last_update:
   <img width ="800" src="https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/hexfellow/fig5.jpg"/>  
 </div>
 
-
-
 有关CAN使用的更多细节，可参考此[wiki](https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_hardware_interfaces_usage/#can)。
 
 ### 启用CAN接口
@@ -270,7 +287,7 @@ last_update:
 **步骤1:** 使用CAN0和CAN1前，请移除底盖并将两个120Ω终端电阻拨至ON位置
 
 <div align="center">
-    <img width={300} 
+    <img width={300}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/7.png" />
 </div>
 
@@ -285,7 +302,7 @@ reComputer Mini的CAN接口H/L引脚与电机的H/L相反，因此需要反转XT
 </div>
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/15.jpg" />
 </div>
 
@@ -294,17 +311,21 @@ reComputer Mini的CAN接口H/L引脚与电机的H/L相反，因此需要反转XT
 :::
 
 #### 启用Jetson CAN通信
+
 打开终端输入以下命令拉高GPIO引脚激活CAN0:
+
 ```bash
 gpioset --mode=wait 0 43=0
 ```
 
 若使用JST接口的CAN1，则拉高106引脚
+
 ```bash
 gpioset --mode=wait 0 106=0
 ```
 
 保持此终端开启，新建终端配置CAN0
+
 ```bash
 sudo modprobe mttcan
 sudo ip link set can0 type can bitrate 1000000
@@ -316,18 +337,22 @@ sudo ip link set can0 up
 #### 安装与编译
 
 - **安装CMake**  
+
 ```shell
 sudo apt update  
 sudo apt install cmake  
 ```  
 
 - **安装CAN工具**  
+
 ```shell
 sudo apt install can-utils  
 ```  
 
 - **下载并编译程序**  
+
 1. 创建工作空间并克隆仓库:  
+
 ```shell
 mkdir -p ~/orin_ws/src  
 cd ~/orin_ws/src  
@@ -335,6 +360,7 @@ git clone https://gitee.com/xauter/orin-control.git
 ```  
 
 2. 编译:  
+
 ```shell
 cd ~/orin_ws/src/orin-control/dm_hw  
 mkdir build  
@@ -347,26 +373,31 @@ make
 
 1. **检查CAN设备**  
 打开终端运行:  
+
 ```shell
 ip -brief link | grep can  
 ```  
 
 2. **运行程序**  
 在build文件夹执行:  
+
 ```shell
 cd ~/orin_ws/src/orin-control/dm_hw/build  
 ./dm_main  
 ```  
+
 电机将亮起绿灯并以正弦速度旋转
 
 ### Python控制
 
 - **安装Python环境**  
+
 ```bash
 pip install python-can numpy
 ```
 
 - **创建脚本目录**  
+
 ```bash
 mkdir -p ~/damiao/scripts
 ```
@@ -377,11 +408,11 @@ mkdir -p ~/damiao/scripts
 cd ~/damiao/scripts
 touch damiao_motor.py
 ```
+
 将以下代码复制到damiao_motor.py
 
 <details>
 <summary>damiao_motor.py</summary>
-
 
 ```python
 ## This is a derivative of the following software.
@@ -1238,7 +1269,6 @@ class DamiaoPort:
 <details>
 <summary>damiao_test.py</summary>
 
-
 ```python
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
@@ -1310,6 +1340,7 @@ if __name__ == "__main__":
 </details>
 
 - **运行damiao_test.py**
+
 ```bash
 python damiao_test.py
 ```
@@ -1323,11 +1354,11 @@ python damiao_test.py
 感谢选择我们的产品！我们提供多种支持渠道确保您获得最佳使用体验。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
