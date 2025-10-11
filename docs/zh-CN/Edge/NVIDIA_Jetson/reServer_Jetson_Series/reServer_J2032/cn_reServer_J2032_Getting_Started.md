@@ -636,8 +636,7 @@ sudo apt update
 sudo apt install -y git
 git clone https://github.com/Lora-net/sx1302_hal
 ```
-
-Move to sx1302_hal folder and build the program:
+移动到 sx1302_hal 文件夹并构建程序：
 
 ```
 cd ~/sx1302_hal
@@ -724,7 +723,7 @@ AT+QCFG="usbnet"
 AT+QCFG="usbnet",1
 ```
 
-Then enter the following command to force the modem to reboot:
+然后输入以下命令强制调制解调器重启：
 
 ```
 AT+CFUN=1,1

@@ -203,7 +203,7 @@ TFT_eSPI tft = TFT_eSPI(SCREEN_WIDTH, SCREEN_HEIGHT);
 #define USE_TFT_ESPI_LIBRARY
 ```
 
-- If you want to use the Arduino GFX library:
+- 如果你想使用 Arduino GFX 库：
 
 ```cpp
 #define USE_ARDUINO_GFX_LIBRARY
@@ -1009,7 +1009,7 @@ void loop() {
 }
 ```
 
-### XIAO ESP32S3 & XIAO ESP32S3 Sense & XIAO ESP32C3
+### XIAO ESP32S3 和 XIAO ESP32S3 感知 & XIAO ESP32C3
 
 由于ESP32系列具有非常强大的文件系统支持，我们为XIAO ESP32编写了一系列关于如何使用文件系统和保存microSD卡的示例，您可以通过以下链接学习使用。
 

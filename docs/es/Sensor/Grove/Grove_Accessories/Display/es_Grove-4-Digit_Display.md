@@ -22,17 +22,18 @@ El módulo Grove - Pantalla de 4 Dígitos es un módulo de 12 pines. En este mó
 
 | Versión del Producto              | Cambios                                   | Fecha de Lanzamiento |
 |------------------------------|-------------------------------------------|---------------|
-|Grove - Pantalla de 4 Dígitos V1.0  | Inicial                                   | Mayo 2012      |     
+|Grove - Pantalla de 4 Dígitos V1.0  | Inicial                                   | Mayo 2012      |
 
 ## Características
 
--   Pantalla alfanumérica roja de 4 dígitos
--   Interfaz compatible con Grove (3.3V/5V)
--   8 niveles de luminosidad ajustables
+- Pantalla alfanumérica roja de 4 dígitos
+- Interfaz compatible con Grove (3.3V/5V)
+- 8 niveles de luminosidad ajustables
 
 :::tip
     Para más detalles sobre los módulos Grove, consulte [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
 :::
+
 ## Especificaciones
 
 <table border="2" cellspacing="0" width="58.2%">
@@ -113,9 +114,9 @@ g
 
 ## Ideas de Aplicación
 
--   Visualización de hora
--   Cronómetro
--   Visualización de entrada de sensores
+- Visualización de hora
+- Cronómetro
+- Visualización de entrada de sensores
 
 ## Plataformas Compatibles
 
@@ -155,8 +156,9 @@ g
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/image/seeeduino_digital_led.jpg" alt="pir" width={600} height="auto" /></p>
 
 :::note
-	Si no tenemos Grove Base Shield, también podemos conectar directamente Grove-4-Digit Display al Seeeduino como se muestra a continuación. También podemos conectar Grove-4-Digit Display a otro puerto digital Grove.
+ Si no tenemos Grove Base Shield, también podemos conectar directamente Grove-4-Digit Display al Seeeduino como se muestra a continuación. También podemos conectar Grove-4-Digit Display a otro puerto digital Grove.
 :::
+
 | Seeeduino |  Grove-4-Digit Display |
 |-----------|-----------------|
 | 5V        | Rojo            |
@@ -172,9 +174,9 @@ g
 - **Paso 1.** Descarga la [Librería Grove-4-Digit Display](https://github.com/Seeed-Studio/Grove_4Digital_Display/archive/master.zip) y la [Librería TimerOne](https://code.google.com/p/arduino-timerone/downloads/detail?name=TimerOne-v9.zip&can=2&q=).
 - **Paso 2.** Consulta [Cómo instalar librería](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library) para instalar la librería para Arduino.
 - **Paso 3.** Sigue las instrucciones a continuación para seleccionar el código en Arduino IDE y subirlo. Si no sabes cómo subir el código, por favor revisa [cómo subir código](https://wiki.seeedstudio.com/es/Upload_Code/). Hay 3 ejemplos como se muestra a continuación.
-    - Pantalla de Reloj
-    - Flujo de Números
-    - Cronómetro
+  - Pantalla de Reloj
+  - Flujo de Números
+  - Cronómetro
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/image/arduino_example.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/image/arduino_example.jpg" alt="pir" width={600} height="auto" /></p>
@@ -224,10 +226,8 @@ Sube el programa a tu Arduino/Seeeduino.
 - **Paso 3**. Conecta la pantalla de 4 dígitos al puerto 12 del Base Hat.
 - **Paso 4**. Conecta el Raspberry Pi a la PC a través del cable USB.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/image/Digit_Hat.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/image/Digit_Hat.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 :::note
     Para el paso 3 puedes conectar la pantalla a **cualquier GPIO Puerto** pero asegúrate de cambiar el comando con el número de puerto correspondiente.
@@ -236,7 +236,7 @@ Sube el programa a tu Arduino/Seeeduino.
 #### Software
 
 - **Paso 1**. Sigue [Configuración de Software](https://wiki.seeedstudio.com/es/Grove_Base_Hat_for_Raspberry_Pi/#installation) para configurar el entorno de desarrollo.
-- **Paso 2**. Descarga el archivo fuente clonando la biblioteca grove.py. 
+- **Paso 2**. Descarga el archivo fuente clonando la biblioteca grove.py.
 
 ```
 cd ~
@@ -252,7 +252,7 @@ python grove_4_digit_display.py 12 13
 
 ```
 
-Following is the grove_4_digit_display.py code.
+A continuación se muestra el código grove_4_digit_display.py.
 
 ```python
 
@@ -487,7 +487,6 @@ if __name__ == '__main__':
 
 Puedes salir de este programa simplemente presionando ++ctrl+c++.
 
-
 ### Jugar Con Raspberry Pi (con GrovePi_Plus)
 
 **Hardware**
@@ -518,7 +517,6 @@ git clone https://github.com/DexterInd/GrovePi.git
 ```
 
 - **Paso 3.** Ejecuta los siguientes comandos para monitorear el volumen.
-
 
 ```python
 cd ~/GrovePi/Software/Python
@@ -654,7 +652,7 @@ while True:
 
 ```
 
-- **Paso 4.** Veremos el Grove-4-Digit Display como se muestra a continuación. 
+- **Paso 4.** Veremos el Grove-4-Digit Display como se muestra a continuación.
 
 ```python
 pi@raspberrypi:~/GrovePi/Software/Python $ python grove_4_digit_display.py 
@@ -670,7 +668,6 @@ Test 9) Monitor analog pin
 Test 10) Switch all on
 Test 11) Switch all off
 ```
-
 
 ### Jugar con TI LaunchPad
 
@@ -722,12 +719,10 @@ void loop()
 }
 ```
 
-
 ## Visor Esquemático Online
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_4_Digit_Display/resource/Grove%20-%204-Digit%20Display%20V1.0%20eagle%20files.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 ## Recursos
 
@@ -744,7 +739,7 @@ void loop()
 
 Inspirados por OVERWATCH, hemos creado un juguete de Pistola Láser de Madera muy genial para divertirnos estos días!
 
-La Pistola Láser de Madera y el Objetivo de la Pistola están basados en una placa Arduino llamada Seeeduino Lotus. El emisor láser en la Pistola Láser está controlado para disparar pulsos láser para "activar" el Objetivo de la Pistola. Y hay 3 sensores de luz en el Objetivo de la Pistola para detectar el pulso láser. Parece muy simple, ¿verdad? Si estás interesado en nuestro proyecto, ¡por favor haz uno para ti o tu hijo! Vale la pena pasar un día haciéndolo como regalo de Navidad.    
+La Pistola Láser de Madera y el Objetivo de la Pistola están basados en una placa Arduino llamada Seeeduino Lotus. El emisor láser en la Pistola Láser está controlado para disparar pulsos láser para "activar" el Objetivo de la Pistola. Y hay 3 sensores de luz en el Objetivo de la Pistola para detectar el pulso láser. Parece muy simple, ¿verdad? Si estás interesado en nuestro proyecto, ¡por favor haz uno para ti o tu hijo! Vale la pena pasar un día haciéndolo como regalo de Navidad.
 
 ## Proyectos
 
@@ -757,14 +752,15 @@ La Pistola Láser de Madera y el Objetivo de la Pistola están basados en una pl
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ingo-lohs/clock-grove-4-digit-display-using-photon-7c4369/embed' width='350'></iframe>
 
 ## Soporte Técnico y Discusión de Productos
+
 ¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

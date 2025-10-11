@@ -8,8 +8,7 @@ last_update:
   author: MicroBlocks
 ---
 
-# Using XIAO RP2040 on MicroBlocks
-
+# XIAO RP2040 with MicroBlocks
 
 ## MicroBlocks
 

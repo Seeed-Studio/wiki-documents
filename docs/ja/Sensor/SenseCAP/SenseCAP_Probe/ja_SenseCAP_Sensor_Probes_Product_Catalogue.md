@@ -188,7 +188,7 @@ SKU [101990860](https://www.seeedstudio.com/Liquid-Level-Sensor-RS485-p-5005.htm
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Sensor_Probes_Product_Catalogue/Picture34.png" alt="pir" width={600} height="auto" /></p>
 
-## Industrial EC & TDS Sensor MODBUS-RTU RS485 & 0-2V Analog Voltage
+## 産業用 EC & TDS センサー MODBUS-RTU RS485 & 0-2V アナログ電圧
 
 With Hook-up Wires [314990634](https://www.seeedstudio.com/EC-RS485-p-4848.html)
 

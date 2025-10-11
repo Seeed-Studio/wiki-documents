@@ -81,7 +81,7 @@ import TabItem from '@theme/TabItem';
 sudo apt update
 ```
 
-- **Step 3.** Install dependencies
+- **步骤 3.** 安装依赖
 
 ```sh
 sudo apt-get install \
@@ -96,43 +96,43 @@ dbus \
 systemd-journal-remote -y
 ```
 
-- **Step 4.** Fix broken installations
+- **步骤 4.** 修复损坏的安装
 
 ```sh
 sudo apt --fix-broken install
 ```
 
-- **Step 5.** Restart reTerminal
+- **步骤 5.** 重启 reTerminal
 
 ```sh
 sudo reboot
 ```
 
-- **Step 6.** Download official Docker script
+- **步骤 6.** 下载官方 Docker 脚本
 
 ```sh
 curl -fsSL https://get.docker.com -o get-docker.sh
 ```
 
-- **Step 7.** Run the Docker script
+- **步骤 7.** 运行 Docker 脚本
 
 ```sh
 sudo sh get-docker.sh
 ```
 
-- **Step 8.** Add Docker user to the system
+- **步骤 8.** 将Docker用户添加到系统中
 
 ```sh
 sudo usermod -aG docker pi
 ```
 
-- **Step 9.** Check whether Docker is working properly
+- **步骤 9.** 检查Docker是否正常工作
 
 ```sh
 docker --version
 ```
 
-If you see an output like below, that means Docker is installed properly
+如果你看到如下输出，表示 Docker 已正确安装
 
 ```
 Docker version 20.10.18, build b40c2f6
@@ -150,7 +150,7 @@ Home Assistant Supervisor 的兼容性依赖于特定的 Docker CGroup v1。为�
 sudo nano /etc/default/grub
 ```
 
-- **Add this line and save it.**
+- **添加此行并保存。**
 
 ```sh
 systemd.unified_cgroup_hierarchy=false
@@ -182,19 +182,19 @@ systemd.unified_cgroup_hierarchy=false apparmor=1 security=apparmor
 wget <copied_link>
 ```
 
-For example:
+例如：
 
 ```sh
 wget https://github.com/home-assistant/os-agent/releases/download/1.3.0/os-agent_1.3.0_linux_armv7.deb
 ```
 
-- **Step 12.** Install Home Asssitant OS Agent
+- **步骤 12。** 安装 Home Assistant OS 代理
 
 ```sh
 sudo dpkg -i os-agent_<version_number>_linux_armv7.deb
 ```
 
-For example:
+例如：
 
 ```sh
 sudo dpkg -i os-agent_1.3.0_linux_armv7.deb
@@ -210,13 +210,13 @@ sudo dpkg -i os-agent_1.3.0_linux_armv7.deb
 wget https://github.com/home-assistant/supervised-installer/releases/download/1.3.0/homeassistant-supervised.deb
 ```
 
-- **Step 14.** Install Home Assistant-Supervised
+- **步骤 14。** 安装Home Assistant-Supervised
 
 ```sh
 sudo dpkg -i homeassistant-supervised.deb
 ```
 
-- **Step 15.** If there are any errors in the installation, pleae run the bellow command to fix broken installations
+- **步骤 15。** 如果安装过程中出现任何错误，请运行以下命令来修复损坏的安装
 
 ```sh
 sudo apt --fix-broken install
@@ -242,13 +242,13 @@ sudo apt --fix-broken install
 sudo systemctl enable dhcpcd
 ```
 
-- Disable the networking service with the command:
+- 使用以下命令禁用网络服务：
 
 ```sh
 sudo systemctl disable networking
 ```
 
-- Reboot the Raspberry Pi to apply the changes:
+- 重启树莓派以应用更改：
 
 ```sh
 sudo reboot
@@ -264,9 +264,9 @@ sudo reboot
 sudo systemctl enable NetworkManager
 ```
 
-## View Home Assistant Dashboard UI on web browser
+## 在网页浏览器上查看 Home Assistant 仪表板 UI
 
-- **Step 1.** On a web browser, type the following URL
+- **步骤 1.** 在网页浏览器中，输入以下网址
 
 ```sh
 homeassistant.local:8123
@@ -292,19 +292,19 @@ homeassistant.local:8123
 cd /etc/xdg/lxsession/LXDE-pi/
 ```
 
-- **Step 2.** Open **autostart** file with **nano text editor**
+- **步骤 2.** 使用 **nano 文本编辑器**打开 **autostart** 文件
 
 ```sh
 sudo nano autostart
 ```
 
-- **Step 3.** Add the following line to the end of the file
+- **步骤 3.** 在文件末尾添加以下行
 
 ```sh
 @chromium-browser --kiosk --incognito --disable-pinch --overscroll-history-navigation=0 homeassistant.local:8123
 ```
 
-- **Step 4.** Reboot reTerminal
+- **步骤 4.** 重启 reTerminal
 
 ```sh
 sudo reboot 
@@ -340,15 +340,15 @@ sudo apt update
 sudo apt-get install -y jq wget curl udisks2 apparmor-utils libglib2.0-bin network-manager dbus systemd-journal-remote systemd-resolved
 ```
 
-#### Step 2: Start and Enable Network Manager
+#### 步骤 2: 启动并启用网络管理器
 
-Check the status of Network Manager
+检查 Network Manager 的状态
 
 ```bash
 sudo systemctl status NetworkManager.service
 ```
 
-NetworkManager does not start, start and enable
+NetworkManager 无法启动，启动并启用
 
 ```bash
 sudo systemctl start NetworkManager
@@ -363,7 +363,7 @@ sudo systemctl enable NetworkManager
 sudo nano /boot/firmware/cmdline.txt
 ```
 
-Add the following at the end of the line:
+在行尾添加以下内容：
 
 ```bash
 systemd.unified_cgroup_hierarchy=false lsm=apparmor
@@ -375,7 +375,7 @@ Reboot the system:
 sudo reboot
 ```
 
-#### Step 4: Install Docker
+#### 步骤 4：安装 Docker
 
 ```bash
 sudo curl -fsSL get.docker.com | sh
@@ -390,7 +390,7 @@ wget https://github.com/home-assistant/os-agent/releases/download/1.6.0/os-agent
 sudo dpkg -i os-agent_1.6.0_linux_aarch64.deb
 ```
 
-#### Step 6: Install Home Assistant Supervised
+#### 步骤 6: 安装 Home Assistant Supervised
 
 ```bash
 wget https://github.com/home-assistant/supervised-installer/releases/download/1.6.0/homeassistant-supervised.deb

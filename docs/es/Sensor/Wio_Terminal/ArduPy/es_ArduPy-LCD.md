@@ -34,7 +34,6 @@ class machine.LCD(self)
 
 Construye un nuevo objeto LCD.
 
-
 ## Referencia de Métodos
 
 ```py
@@ -236,7 +235,7 @@ Convierte el modelo de color RGB a código de color de 16 bits. Por ejemplo, pue
 LCD.color16to8()
 ```
 
-Converts 16 bit color to 8 bit.
+Convierte color de 16 bits a 8 bits.
 
 ```py
 LCD.width # Width of LCD, 320
@@ -278,7 +277,6 @@ Aquí se mostrarán algunos gráficos dibujados usando la API LCD.
 
 <div align="center"><img src="https://blog.seeedstudio.com/wp-content/uploads/2020/06/Piechart-1-2.gif" /></div>
 
-
 Por favor encuentra el código completo [aquí](https://www.seeedstudio.com/blog/2020/06/17/piechart-and-meters-reading-using-wio-terminal-and-ardupy/).
 
 ### Medidor Analógico
@@ -292,11 +290,11 @@ Por favor encuentra el código completo [aquí](https://www.seeedstudio.com/blog
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

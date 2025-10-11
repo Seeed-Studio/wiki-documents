@@ -174,7 +174,7 @@ Si cambias la frecuencia del motor DC, la frecuencia de los otros motores DC tam
 
 *MotorName*: 1 ~ 4 representa Motor1 ~ Motor4.
 
-*Direction*: 1 significa sentido horario. 2 significa sentido antihorario. 3 Detiene el motor.
+*Dirección*: 1 significa sentido horario. 2 significa sentido antihorario. 3 Detiene el motor.
 
 *PWMDuty*: 0 ~ 100 representa 0%~ 100% del ciclo de trabajo pwm.
 

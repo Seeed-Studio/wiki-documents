@@ -526,6 +526,10 @@ sudo docker run --rm -it \
 
 ## Data Collection Using the SO-ARM
 
+For a detailed tutorial on data collection, please refer to the following link:  
+[https://wiki.seeedstudio.com/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#record-the-dataset)  
+**This link contains a complete tutorial for the SO-ARM, covering configuration, assembly, calibration, data collection, training, and inference.**
+
 Data collection for the lerobot robotic arm can be performed either on a PC or directly on a Jetson device.
 
 - Method 1: Collect data using Jetson
@@ -545,15 +549,17 @@ To stream two USB cameras simultaneously on Thor, after connecting one camera to
 
 ### Lerobot Environment Setup
 
-**Miniconda Installation**
+The development environment setup process for Lerobot can be found in the subsection of the following link:  
+[https://wiki.seeedstudio.com/lerobot_so100m_new/#install-lerobot](https://wiki.seeedstudio.com/lerobot_so100m_new/#install-lerobot)
 
+<!--
+**Miniconda Installation**
 ```bash
 #Jetson 
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
 chmod +x Miniconda3-latest-Linux-aarch64.sh
 ./Miniconda3-latest-Linux-aarch64.sh
 source ~/.bashrc
-
 
 #PC 
 mkdir -p ~/miniconda3
@@ -600,17 +606,24 @@ pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
 conda install -y -c conda-forge ffmpeg
 conda uninstall numpy
 pip3 install numpy==1.26.0  # This should match torchvision
-```
+``` -->
 
-### Servo Calibration
+### Configure the motors
 
-The servo calibration process is not elaborated in detail in this document. Please refer to the following article for more information:
+The motors on each joint of the SO-ARM need to be configured before assembly. The configuration steps can be found in the subsection of the following link:
+[https://wiki.seeedstudio.com/lerobot_so100m_new/#configure-the-motors](https://wiki.seeedstudio.com/lerobot_so100m_new/#configure-the-motors)
 
-[click me](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#%E6%A0%A1%E5%87%86%E8%88%B5%E6%9C%BA%E5%B9%B6%E7%BB%84%E8%A3%85%E6%9C%BA%E6%A2%B0%E8%87%82)
+### Assembly
+
+The installation process of the SO-ARM’s master and follower arms can be found in the subsection of the following link:  
+[https://wiki.seeedstudio.com/lerobot_so100m_new/#assembly](https://wiki.seeedstudio.com/lerobot_so100m_new/#assembly)
 
 ### SO-ARM Calibration
 
-First, ensure that the connection is working properly and the ports corresponding to the robotic arms are correctly recognized.
+After the SO-ARM has been fully assembled, calibration is required. Please refer to the subsection of the following link for the calibration procedure:  
+[https://wiki.seeedstudio.com/lerobot_so100m_new/#calibrate](https://wiki.seeedstudio.com/lerobot_so100m_new/#calibrate)
+
+<!-- First, ensure that the connection is working properly and the ports corresponding to the robotic arms are correctly recognized.
 
 ```bash
 python -m lerobot.find_port
@@ -627,7 +640,7 @@ The port of this MotorsBus is /dev/ttyACM0
 Reconnect the USB cable.
 ```
 
-The port for the leader arm is likely`/dev/ttyACM0`. The port for the follower arm is likely:：`/dev/ttyACM1`
+The port for the leader arm is likely`/dev/ttyACM0`. The port for the follower arm is likely:：`/dev/ttyACM1` -->
 
 :::note
 **When calibrating the robotic arms, please do NOT connect any USB cameras, as this may cause port conflicts or incorrect port assignments.**
@@ -635,7 +648,7 @@ The port for the leader arm is likely`/dev/ttyACM0`. The port for the follower a
 
 **After running the calibration script, manually move each joint of the robotic arm to ensure that it reaches its full range of motion! Failure to do so may result in a mismatch between the poses of the leader and follower arms during teleoperation.**
 
-```bash
+<!-- ```bash
 # Grant permission to access the serial ports
 sudo chmod 666 /dev/ttyACM* # This needs to be done each time the USB device is replugged
 
@@ -664,18 +677,22 @@ python -m lerobot.teleoperate \
     --teleop.id=my_awesome_leader_arm
 ```
 
-Use the leader arm to teleoperate the follower arm. Ensure that the two arms mirror each other’s pose correctly. If not, recalibration is required.
+Use the leader arm to teleoperate the follower arm. Ensure that the two arms mirror each other’s pose correctly. If not, recalibration is required. -->
 
-### Camera Installation
+### Camera Add
 
-It is generally recommended to install one camera on the wrist joint of the robotic arm, and another camera on the desktop surface, to ensure proper coverage of the arm’s posture.
+It is generally recommended to install one camera on the wrist/gripper  of the robotic arm, and another camera on the desktop surface, to ensure proper coverage of the arm’s posture.
 <mark>The specific installation approach depends on your application scenario; the example shown below is for reference only.</mark>
-<div align="center">
+
+For details, please refer to the subsection of the following link:  
+[https://wiki.seeedstudio.com/lerobot_so100m_new/#add-cameras](https://wiki.seeedstudio.com/lerobot_so100m_new/#add-cameras)
+
+<!-- <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/camdata1.png" height="450"/>
   <img src="https://files.seeedstudio.com/wiki/other/camdata2.png" height="450"/>
-</div>
+</div> -->
 
-Run the following script to ensure that the system correctly detects the connected USB cameras and that the cameras can be accessed properly:
+<!-- Run the following script to ensure that the system correctly detects the connected USB cameras and that the cameras can be accessed properly:
 
 ```bash
 # Use 'opencv' for standard RGB cameras. For Intel Realsense cameras, replace 'opencv' with 'realsense'.
@@ -716,11 +733,14 @@ python -m lerobot.teleoperate \
     --display_data=true
 ```
 
-Here, `--robot.cameras`need the correct camera configuration and ID.
+Here, `--robot.cameras`need the correct camera configuration and ID. -->
 
 ### Data Collection
 
-If the SO-ARM is intended to record data locally, refer to the following command-line parameters:
+After completing both the camera installation and the robotic arm calibration, the dataset collection procedure can be found in the subsection of the following link:  
+[https://wiki.seeedstudio.com/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#record-the-dataset)
+
+<!-- If the SO-ARM is intended to record data locally, refer to the following command-line parameters:
 
 ```bash
 python -m lerobot.record \
@@ -780,15 +800,18 @@ python -m lerobot.record \
     --dataset.push_to_hub=true \
     --dataset.episode_time_s=30 \
     --dataset.reset_time_s=30 
-```
+``` 
 
 :::tip
 The collected data will be saved locally under `~/.cache/huggingface/lerobot` directory!
-:::
+:::-->
 
 ### Visualizing Collected Data
 
-**Visualize Cloud-based Dataset**
+To visualize the data collected on the SO-ARM, please refer to the subsection of the following link:  
+[https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset)
+
+<!-- **Visualize Cloud-based Dataset**
 
 ```bash
 python -m lerobot.scripts.visualize_dataset_html \
@@ -814,11 +837,14 @@ python -m lerobot.replay \
 ```
 
 The parameter `--dataset.episode=0` specifies which episode to replay on the follower arm.
-For example: running this script will cause the follower arm to execute the exact actions recorded during `episode_0`.
+For example: running this script will cause the follower arm to execute the exact actions recorded during `episode_0`. -->
 
 ### Policy Training
 
-If you plan to train the policy locally, you may refer to the following command:
+Based on the collected data, the procedure for training a Policy can be found in the subsection of the following link:  
+[https://wiki.seeedstudio.com/lerobot_so100m_new/#train-a-policy](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-a-policy)
+
+<!-- If you plan to train the policy locally, you may refer to the following command:
 
 ```bash
 python -m lerobot.scripts.train \
@@ -836,7 +862,7 @@ python -m lerobot.scripts.train \
 
 `--policy.push_to_hub=false\`: Whether to upload the trained weights to the cloud (Hugging Face Hub)
 
-`--steps`: Number of training steps
+`--steps`: Number of training steps -->
 
 :::tip
 In the following sections, we will introduce a cloud-based training platform and demonstrate basic usage. You may choose to complete training more efficiently on the remote server.

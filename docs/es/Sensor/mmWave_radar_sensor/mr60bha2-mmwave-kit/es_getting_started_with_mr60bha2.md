@@ -1,6 +1,6 @@
 ---
-description: Comenzando con el Kit de Sensor de Detección de Respiración y Latidos de 60GHz mmWave con XIAO ESP32C6 (MR60BHA2)
-title: Comenzando con MR60BHA2
+description: Introducción al Kit de Sensor de Detección de Respiración y Latidos de 60GHz mmWave con XIAO ESP32C6 (MR60BHA2)
+title: Introducción al MR60BHA2
 keywords:
 - mmwave
 - radar
@@ -13,14 +13,14 @@ last_update:
   author: Spencer
 ---
 
-# Comenzando con el Kit de Sensor de Detección de Respiración y Latidos de 60GHz mmWave con XIAO ESP32C6 (MR60BHA2)
+# Introducción al Kit de Sensor de Detección de Respiración y Latidos de 60GHz mmWave con XIAO ESP32C6 (MR60BHA2)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2.jpg" style={{width:500, height:'auto'}}/></div>
 
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong></a>
 </div><br />
 
 Presentamos nuestros avanzados **Módulos de Sensor mmWave** para XIAO, diseñados para proporcionar soluciones de monitoreo de vanguardia tanto para [detección de caídas](https://wiki.seeedstudio.com/es/getting_started_with_mr60fda2_mmwave_kit/) como para monitoreo de latidos cardíacos. Impulsados por el robusto microcontrolador XIAO ESP32 con conectividad Wi-Fi y Bluetooth integrada, estos módulos ofrecen capacidades de detección precisas y confiables. Ya sea que necesites monitorear caídas en tiempo real o rastrear latidos cardíacos con precisión sensible, nuestros módulos están equipados con tecnología de última generación, incluyendo LEDs RGB personalizables y detección de luz ambiente. Con opciones de expansión fáciles a través de puertos Grove GPIO, estos módulos versátiles son perfectos para una amplia gama de aplicaciones, desde integración de hogar inteligente hasta monitoreo de salud.
@@ -50,14 +50,14 @@ Presentamos nuestros avanzados **Módulos de Sensor mmWave** para XIAO, diseñad
 | **Rango de Detección**      | Detección de Presencia Estática Humana: hasta 6 Metros<br />Detección de Respiración y Latidos: 1.5 Metros|
 | **MCU**                  | Seeed Studio XIAO ESP32C6 |
 | **LED**                  | LED RGB WS2812 |
-| **Botón**               | Reinicio |
+| **Botón**               | Reset |
 | **Sensor de Luz**         | BH1750 Rango: 1 a 65,535 lux con mediciones ajustables hasta 100,000 lux |
 | **Conectividad**         | 1 Puerto GPIO (D0, D10) |
 | **Espaciado de Pines**   | 2.54mm |
 | **Fuente de Alimentación**         | Entrada 5V/1A |
 | **Consumo de energía**    | 0.5w: Modo Standby<br />0.8w: Modo Activación<br />1.4w: trabajo con estado Grove Relay |
 
-## Aplicación
+## Aplicaciones
 
 - Sistemas de Seguridad
 - Monitoreo de Salud
@@ -72,7 +72,7 @@ Presentamos nuestros avanzados **Módulos de Sensor mmWave** para XIAO, diseñad
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/6-mmWave-size.jpg" style={{width:'auto', height:'auto', "border-radius": '6.6px'}}/></div> -->
 
-## Comenzando
+## Primeros Pasos
 
 ### Método de instalación y rango de detección
 
@@ -86,13 +86,13 @@ Presentamos nuestros avanzados **Módulos de Sensor mmWave** para XIAO, diseñad
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/tilt_installation.png" style={{width:600, height:'auto'}}/></div>
 
 :::note
-Por favor usa este módulo en un espacio abierto, y mantente fuera de los siguientes escenarios dentro del rango de detección para prevenir interferencia con el módulo:
+Por favor usa este módulo en un espacio abierto, y mantente fuera de los siguientes escenarios dentro del rango de detección para prevenir interferencias con el módulo:
 
 - Múltiples radares instalados demasiado cerca entre sí  
 - El viento mueve cortinas y balancea plantas
 - Flujo de agua y película de agua  
-- Grandes áreas de reflexiones metálicas y de espejos  
-- Detección a través de vidrio y tableros de madera delgados  
+- Grandes áreas de reflejos metálicos y de espejos  
+- Detección a través de vidrio y tablones de madera delgados  
 - Ubicación de instalación propensa a vibraciones  
 - Uso de fuentes de alimentación de baja calidad  
 
@@ -108,13 +108,13 @@ Por defecto, el MR60BHA2 viene pre-ensamblado con el [XIAO ESP32C6](/es/xiao_esp
 
 Si esta es tu primera vez usando Arduino con la serie XIAO, sigue la guía de configuración apropiada para tu placa:
 
-- **XIAO ESP32S3**: Consulta la [Guía de Inicio de XIAO ESP32S3](https://wiki.seeedstudio.com/es/xiao_esp32s3_getting_started/).
-- **XIAO ESP32C3**: Sigue la guía [Comenzando con Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/es/XIAO_ESP32C3_Getting_Started/).
-- **XIAO ESP32C6**: Sigue la guía [Comenzando con Seeed Studio XIAO ESP32C6](https://wiki.seeedstudio.com/es/xiao_esp32c6_getting_started/).
+- **XIAO ESP32S3**: Consulta la [Guía de Introducción XIAO ESP32S3](https://wiki.seeedstudio.com/es/xiao_esp32s3_getting_started/).
+- **XIAO ESP32C3**: Sigue la guía [Introducción a Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/es/XIAO_ESP32C3_Getting_Started/).
+- **XIAO ESP32C6**: Sigue la guía [Introducción a Seeed Studio XIAO ESP32C6](https://wiki.seeedstudio.com/es/xiao_esp32c6_getting_started/).
 
 Una vez que tu placa esté configurada, procede con los siguientes pasos:
 
-1. **Descarga la Librería Seeed mmWave**:
+1. **Descargar la Librería Seeed mmWave**:
 
    - Descarga la [librería Seeed mmWave](https://github.com/Love4yzp/Seeed-mmWave-library) desde GitHub.
 
@@ -123,21 +123,21 @@ Una vez que tu placa esté configurada, procede con los siguientes pasos:
       <strong><span><font color={'FFFFFF'} size={"4"}> Descargar el Código</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
       </a>
   </div>
-2. **Instala la Librería en Arduino IDE**:
+2. **Instalar la Librería en Arduino IDE**:
    - Abre el Arduino IDE.
-   - Navega a **Sketch > Incluir Librería > Añadir Librería .ZIP...**.
+   - Navega a **Sketch > Include Library > Add .ZIP Library...**.
    - Selecciona el archivo `.zip` descargado para instalar la librería.
-3. **Conecta tu Placa XIAO**:
+3. **Conectar tu Placa XIAO**:
    - Conecta tu placa XIAO a tu computadora vía USB.
-   - En el Arduino IDE, ve a **Herramientas > Placa** y selecciona tu modelo de placa XIAO.
-   - Elige el puerto correcto bajo **Herramientas > Puerto**.
-4. **Carga un Sketch de Ejemplo**:
-   - Ve a **Archivo > Ejemplos > Seeed Arduino mmWave**.
+   - En el Arduino IDE, ve a **Tools > Board** y selecciona tu modelo de placa XIAO.
+   - Elige el puerto correcto bajo **Tools > Port**.
+4. **Cargar un Sketch de Ejemplo**:
+   - Ve a **File > Examples > Seeed Arduino mmWave**.
    - Selecciona el ejemplo relevante para Detección de Latidos.
    - Revisa el código y haz cualquier ajuste necesario.
-5. **Sube el Sketch**:
-   - Haz clic en **Subir** para cargar el código a tu placa XIAO.
-   - Abre el **Monitor Serie** en el Arduino IDE para ver los datos del sensor en tiempo real.
+5. **Subir el Sketch**:
+   - Haz clic en **Upload** para cargar el código a tu placa XIAO.
+   - Abre el **Serial Monitor** en el Arduino IDE para ver los datos del sensor en tiempo real.
 
 <!-- ## Hardware Connections -->
 
@@ -193,7 +193,6 @@ if (mmWave.update(100)) {
  }
 }
 }
-
 ```
 
 La salida será la siguiente en el Monitor Serie de Arduino:
@@ -207,7 +206,7 @@ Si los datos devueltos no son `0`, indica la existencia de un ser vivo dentro de
 Este ejemplo demuestra cómo usar el sensor **MR60BHA2** para la detección humana.
 
 :::caution
-Por favor, asegúrate de haber [actualizado el firmware](#actualización-del-firmware-del-módulo) del módulo MR60BHA2 a la última versión.  
+Por favor, asegúrese de haber [actualizado el firmware](#module-firmware-upgrade) del módulo MR60BHA2 a la versión más reciente.  
 El firmware más reciente añade detección de presencia humana y funciones relacionadas con objetos humanos.
 :::
 
@@ -264,7 +263,7 @@ La salida será la siguiente en el Monitor Serie de Arduino:
 
 :::note
 La respiración y la frecuencia cardíaca se pueden detectar dentro de 1.5 metros, y la presencia se puede detectar dentro de un rango de 1.5 a 6 metros.  
-Cuando hay personas dentro del rango de 1.5M, el módulo entrará en el modo de detección de latidos y respiración.   
+Cuando hay personas dentro del rango de 1.5M, el módulo entrará en el modo de detección de latidos y respiración.
 En este modo, la sensibilidad de la función de detección humana puede disminuir.  
 :::
 
@@ -347,9 +346,9 @@ Este ejemplo demuestra cómo controlar un LED RGB usando la biblioteca NeoPixel.
 
 - **Paso 1.** Descargar la biblioteca `Adafruit_NeoPixel`
 
-Navega a **Sketch > Include Liarbry > Manage Libraries...**, y busca **Adafruit_NeoPixel**, instala la última versión.
+Navegar a **Sketch > Include Liarbry > Manage Libraries...**, y buscar **Adafruit_NeoPixel**, instalar la versión más reciente.
 
-- **Paso 2.** Copia el siguiente código a un nuevo sketch:
+- **Paso 2.** Copiar el siguiente código a un nuevo sketch:
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
@@ -384,7 +383,7 @@ for (int i = 255; i >= 0; i--) {
 }
 ```
 
-- **Paso 3.** Selecciona la placa correcta y el número de puerto para cargar el programa.
+- **Paso 3.** Seleccionar la placa correcta y el número de puerto para cargar el programa.
 
 Una vez que el programa se haya cargado exitosamente, verás el LED RGB en el lado derecho de los Módulos de Sensor mmWave parpadeando.
 
@@ -396,9 +395,9 @@ Este ejemplo muestra cómo leer valores de intensidad de luz usando el sensor BH
 
 - **Paso 1.** Descargar la biblioteca `hp_BH1750`
 
-Navega a **Sketch > Include Liarbry > Manage Libraries...**, y busca **hp_BH1750**, instala la última versión.
+Navegar a **Sketch > Include Liarbry > Manage Libraries...**, y buscar **hp_BH1750**, instalar la versión más reciente.
 
-- **Paso 2.** Copia el siguiente código a un nuevo sketch:
+- **Paso 2.** Copiar el siguiente código a un nuevo sketch:
 
 ```cpp
 #include <Arduino.h>
@@ -430,7 +429,7 @@ if (BH1750.hasValue()) {
 }
 ```
 
-- **Paso 3.** Selecciona la placa correcta y el número de puerto para cargar el programa.
+- **Paso 3.** Seleccionar la placa correcta y el número de puerto para cargar el programa.
 
 La salida será la siguiente en el Monitor Serie de Arduino:
 
@@ -440,13 +439,13 @@ La salida será la siguiente en el Monitor Serie de Arduino:
 
 ## API del Módulo de Respiración
 
-Este ejemplo usa la clase `SEEED_MR60BHA2` para interactuar con el sensor MR60BHA2 para monitoreo cardíaco y respiratorio. Aquí está lo que hace cada función clave:
+Este ejemplo usa la clase `SEEED_MR60BHA2` para interfaz con el sensor MR60BHA2 para monitoreo cardíaco y respiratorio. Aquí está lo que hace cada función clave:
 
 - **`mmWave.begin(&mmWaveSerial)`**:
   - Inicializa el sensor para comunicación usando la interfaz serie especificada. Establece la conexión entre la placa XIAO y el sensor MR60BHA2.
 
 - **`mmWave.update(100)`**:
-  - Actualiza los datos del sensor. El parámetro `100` es un valor de tiempo de espera en milisegundos, especificando cuánto tiempo esperar a que el sensor proporcione nuevos datos. Si hay nuevos datos disponibles dentro de este marco de tiempo, la función devuelve `true`.
+  - Actualiza los datos del sensor. El parámetro `100` es un valor de tiempo de espera en milisegundos, especificando cuánto tiempo esperar para que el sensor proporcione nuevos datos. Si hay nuevos datos disponibles dentro de este marco de tiempo, la función devuelve `true`.
 
 - **`mmWave.getHeartBreathPhases(float &total_phase, float &breath_phase, float &heart_phase)`**:
   - Recupera la información de fase relacionada con las actividades cardíacas y respiratorias.
@@ -491,8 +490,7 @@ This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sens
   - Initializes the sensor for communication, similar to the breath module, setting up the serial connection between the XIAO board and the MR60FDA2 sensor.
 
 - **`mmWave.setInstallationHeight(float height)`**:
-  - Sets the installation height of the radar, which is crucial for accurate fall detection. The `height` parameter specifies the height (in meters) at which the sensor is installed, with a valid range typically between 1 and 5 meters.
-
+  - Establece la altura de instalación del radar, que es crucial para la detección precisa de caídas. El parámetro `height` especifica la altura (en metros) a la que se instala el sensor, con un rango válido típicamente entre 1 y 5 metros.
 
 - **`mmWave.setThreshold(float threshold)`**:
   - Establece el umbral de detección de caídas. Este valor determina la sensibilidad del radar en términos de detectar caídas basándose en la altura y distancia del sensor.
@@ -501,7 +499,7 @@ This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sens
   - Ajusta la sensibilidad del radar para la detección de caídas. El valor de sensibilidad típicamente varía de 3 a 10, con valores más altos haciendo que el sensor sea más receptivo a posibles caídas.
 
 - **`mmWave.getRadarParameters(float &height, float &threshold, uint32_t &sensitivity)`**:
-  - Recupera los parámetros de configuración actuales del radar, incluyendo la altura de instalación, umbral de detección de caídas y configuraciones de sensibilidad. Estos parámetros se devuelven a través de las variables de referencia.
+  - Recupera los parámetros de configuración actuales del radar, incluyendo altura de instalación, umbral de detección de caídas y configuraciones de sensibilidad. Estos parámetros se devuelven a través de las variables de referencia.
 
 - **`mmWave.getHuman()`**:
   - Verifica si se detecta presencia humana por el radar. Devuelve `true` si se detecta un humano, y `false` en caso contrario.
@@ -515,6 +513,14 @@ This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sens
 Modificar el firmware del radar es una operación riesgosa, así que asegúrate de leer esta sección cuidadosamente antes de seguir cada paso con cuidado. Ten en cuenta que si un paso no se realiza correctamente, el Radar puede quedar inutilizado o inservible.
 
 **Nota especial, si compraste el Fall Radar MR60FDA2, por favor no flashees el firmware ilegalmente de la siguiente manera, ¡¡¡¡seguramente dañará tu dispositivo!!!!**
+:::
+
+:::tip
+Si prefieres no leer el texto, también puedes consultar **[el video](https://youtu.be/uic8__FFzos)** para actualizar el firmware. Dado que el firmware ESPHome para XIAO será sobrescrito a continuación, es posible que necesites volver a flashear el firmware ESPHome para XIAO en esta [página web](https://limengdu.github.io/MR60BHA2_ESPHome_external_components/) después de actualizar el firmware del radar.
+
+<div class="table-center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uic8__FFzos?si=ijBJOLMk9Z5szwSX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 :::
 
 Primero, conecta los módulos XIAO ESP32C6 y MR60BHA2 juntos. Luego usa el siguiente código para programar XIAO.
@@ -571,25 +577,51 @@ Verás los datos originales enviados por el módulo.
 Luego necesitas descargar y descomprimir la herramienta OTA y el firmware aquí.
 
 :::note
-El firmware 1.6.5 tiene la siguiente actualización:
-1. Se corrigió el problema de que la respiración y la frecuencia cardíaca a veces no se detectaban cuando el cuerpo humano estaba en reposo.
+El firmware 1.6.12 tiene las siguientes actualizaciones:
+
+1. Corregida la pérdida de objetivo cuando está estacionario dentro de 1.5 metros.
+
+2. Optimizada la estabilidad de seguimiento para objetivos que se mueven entre 0-3 metros, resolviendo imprecisiones previas en las coordenadas del objetivo. Sin embargo, la tasa de actualización de informes ha disminuido.
+
+3. Precisión de respiración y frecuencia cardíaca—Sin actualizaciones en esta versión. Continúa la optimización del entrenamiento de aprendizaje automático relacionado. Se lanzará una actualización de firmware para mejorar la precisión de respiración y frecuencia cardíaca alrededor de fin de mes. El algoritmo anterior de respiración y frecuencia cardíaca tenía problemas fundamentales, que han sido abordados.
+
 :::
 
 - **Herramienta de actualización de firmware MR60BHA2**: [MR60BHA2_OTA.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_OTA.zip)
-- **Firmware MR60BHA2 v1.6.10**: [MR60BHA2_eeprom_1.6.10.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.10.bin)
+- **Firmware MR60BHA2 v1.6.12**: [MR60BHA2_eeprom_1.6.12.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.12.bin)
 
 <details>
 
 <summary>Haz clic aquí para previsualizar la versión anterior</summary>
 
 - **Firmware MR60BHA2 v1.6.4**: [MR60BHA2_eeprom_1.6.4.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.4.bin)
+
+:::note
+El firmware 1.6.4 tiene las siguientes actualizaciones:
+
+1. Optimizada la función de detección de respiración y frecuencia cardíaca, corrigiendo el error donde pequeños movimientos corporales causaban pérdida de datos.  
+2. Mejorada la función de detección de presencia 3D: la respiración y frecuencia cardíaca pueden detectarse dentro de 1.5 metros, y la presencia puede detectarse dentro de un rango de 1.5 a 6 metros.  
+3. Agregada una función de detección de personal, capaz de detectar hasta tres individuos dentro de un rango de 6 metros.
+
+:::
+
 - **Firmware MR60BHA2 v1.6.5**: [MR60BHA2_eeprom_1.6.5.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.5.bin)
 
 :::note
-El firmware 1.6.4 tiene la siguiente actualización:
-1. Se optimizó la función de detección de respiración y frecuencia cardíaca, corrigiendo el error donde pequeños movimientos corporales causaban pérdida de datos.  
-2. Se mejoró la función de detección de presencia 3D: la respiración y frecuencia cardíaca se pueden detectar dentro de 1.5 metros, y la presencia se puede detectar en un rango de 1.5 a 6 metros.  
-3. Se agregó una función de detección de personal, capaz de detectar hasta tres individuos dentro de un rango de 6 metros.
+El firmware 1.6.5 tiene las siguientes actualizaciones:
+
+1. Corregido el problema de que la respiración y frecuencia cardíaca a veces no se detectaban cuando el cuerpo humano estaba en reposo.
+
+:::
+
+- **Firmware MR60BHA2 v1.6.10**: [MR60BHA2_eeprom_1.6.10.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.10.bin)
+
+:::note
+El firmware 1.6.10 tiene las siguientes actualizaciones:
+
+1. Optimizada la mecánica de respiración para resolver el problema donde la duración de retención de la respiración no disminuye.
+2. Agregada funcionalidad de recolección de datos.
+
 :::
 
 </details>
@@ -610,7 +642,7 @@ El firmware 1.6.4 tiene la siguiente actualización:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware-update/5-module-enter-upgrade-mode.png" style={{width:700, height:'auto'}}/></div>
 
-4. Selecciona el firmware a actualizar. Después de la selección, entrará automáticamente al estado de actualización. 
+4. Selecciona el firmware a actualizar. Después de la selección, entrará automáticamente al estado de actualización.
 
 Después de que se complete la actualización, saltará automáticamente al modo normal. Si no salta, apaga y reinicia, y luego usa la herramienta OTA para ver los datos del puerto serie.
 
@@ -625,17 +657,17 @@ Después de que se complete la actualización, saltará automáticamente al modo
 6. Necesitas volver a flashear el firmware de XIAO ESP32C6 después de que se complete la actualización.
 
 :::tip
-Si en los pasos anteriores has operado incorrectamente causando que ocurra una anomalía y no has podido intentar grabar el firmware nuevamente y el radar no está funcionando correctamente, entonces el radar puede haber sufrido un daño debido a firmware corrupto. La única manera de intentar recuperar el dispositivo es referirse a los archivos y documentación **[aquí](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)**. Sin embargo, por favor entiende que no proporcionamos soporte técnico y asistencia para el dispositivo dañado debido a operación incorrecta.
+Si en los pasos anteriores has operado incorrectamente causando que ocurra una anomalía y no has podido intentar grabar el firmware nuevamente y el radar no está funcionando correctamente, entonces el radar puede haber sufrido un brick debido a firmware corrupto. La única manera de intentar recuperar el dispositivo es consultar los archivos y documentación **[aquí](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)**. Sin embargo, por favor entiende que no proporcionamos soporte técnico y asistencia para el dispositivo dañado debido a operación incorrecta.
 :::
 
 ## Abierto para Personalización
 
 ¿Quieres personalizar el kit para que se ajuste a tus aplicaciones únicas?
 
-Para más información sobre la generación de datos de nube de puntos 3D y configuración de zona de interferencia al personalizar módulos mmWave. Seeed proporciona servicios de personalización de I+D y fabricación integral para desarrollo rápido desde concepto hasta producción. Contáctanos en [iot@seeed.cc](mailto:iot@seeed.cc) para obtener más información.
+Para más información sobre la generación de datos de nube de puntos 3D y configuración de zona de interferencia al personalizar módulos mmWave. Seeed proporciona servicios de personalización y fabricación de I+D integral para desarrollo rápido desde concepto hasta producción. Contáctanos en [iot@seeed.cc](mailto:iot@seeed.cc) para obtener más información.
 
 :::danger Descripción del Servicio Personalizado
-El firmware y los algoritmos del radar no son de código abierto, y parámetros complejos del radar como la nube de puntos 3D, la distancia de detección, el alcance, etc., requieren servicios personalizados, lo que puede implicar tarifas de personalización adicionales y MOQ.
+El firmware y algoritmos del radar no son de código abierto, y los parámetros complejos del radar como nube de puntos 3D, distancia de detección, rango, etc., requieren servicios personalizados, que pueden involucrar tarifas de personalización adicionales y MOQs.
 :::
 
 ## Recursos
@@ -644,17 +676,16 @@ El firmware y los algoritmos del radar no son de código abierto, y parámetros 
 - **Repositorio GitHub**: Accede al código base completo y documentación en la [página GitHub de la Librería mmWave de Seeed](https://github.com/Love4yzp/Seeed-mmWave-library).
 - **Documentación ESPHome**: Para mayor personalización e integración, consulta la [documentación de ESPHome](https://esphome.io/).
 - **Herramienta de actualización de firmware MR60BHA2**: [MR60BHA2_OTA.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_OTA.zip)
-- **Firmware MR60BHA2 v1.6.5**: [MR60BHA2_eeprom_1.6.5.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.5.bin)
+- **Firmware MR60BHA2 v1.6.12**: [MR60BHA2_eeprom_1.6.12.bin](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/MR60BHA2_eeprom_1.6.12.bin)
 - **Software GUI MR60BHA2**: [Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware/Seeed_Studio_mmWave_Sensor_MR60BHA2_GUI.zip)
-- **Esquemático del Sensor mmWave SCH V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
+- **Esquemático del Sensor mmWave V1.0**: [mmWave_Sensor_SCH_V1.0.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/sch/mmWave_Sensor_SCH_V1.0.pdf)
 - **Especificación Técnica del Módulo MR60BHA2**: [MR60BHA2_Breathing_and_Heartbeat_Module.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/MR60BHA2_Breathing_and_Heartbeat_Module.pdf)
 - **Manual de Interfaz Tiny Frame MR60BHA2**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)
 - **Método de Recuperación de Firmware del Radar vía Jlink**: [Radar_Firmware_Recovery_Method-Jlink.zip](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/Radar_Firmware_Recovery_Method-Jlink.zip)
 
+## Soporte Técnico y Discusión de Productos
 
-## Soporte Técnico y Discusión del Producto
-
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="table-center">
   <div class="button_tech_support_container">

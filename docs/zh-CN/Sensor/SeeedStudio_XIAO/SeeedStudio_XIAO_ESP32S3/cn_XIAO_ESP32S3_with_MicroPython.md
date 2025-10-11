@@ -51,8 +51,7 @@ ESP32_GENERIC_S3-20230602-v1.23.0.bin
 ```Linux
 dmesg | grep tty
 ```
-
-Alternatively, you can list serial devices using *ls*:
+或者，您可以使用 *ls* 列出串行设备：
 
 ```
 ls /dev/ttyS* /dev/ttyUSB*
@@ -116,7 +115,7 @@ esptool.py --chip esp32s3 --port /dev/cu.usbmodem11301 --baud 460800 write_flash
 下面列出了一些流行的工具。
 
 - [Thonny IDE](https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/)
-- [Arduino for micropython](https://docs.arduino.cc/micropython/)
+- [Arduino 用于 MicroPython](https://docs.arduino.cc/micropython/)
 - [Visual Studio Code pymakr](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/)
 - [uPyCraft IDE](https://randomnerdtutorials.com/install-upycraft-ide-windows-pc-instructions/)
   
@@ -266,7 +265,7 @@ ap.config(max_clients=10) # set how many clients can connect to the network
 ap.active(True)         # activate the interface
 ```
 
-A useful function for connecting to your local WiFi network is:
+一个用于连接到本地 WiFi 网络的有用函数是：
 
 ```python
 def do_connect():
@@ -488,17 +487,17 @@ i2c = I2C(0, scl=Pin(6), sda=Pin(5), freq=400000)
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>

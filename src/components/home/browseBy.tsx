@@ -16,11 +16,21 @@ function IndexLatestedViki(props) {
       moreLink:'https://wiki.seeedstudio.com/edge_ai_topic/',
       docList: [
         {
+          "path": "/gun_detection_with_frigate_nvr_on_r2000",
+          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/gun_detection.gif",
+          "title": "Gun detection with Frigate NVR on R2xxx",
+        },
+        {
+          "path": "/openremote_r1x00",
+          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/openremote.webp",
+          "title": "Deploying OpenRemote on reComputer R - Manage IoT Devices at the Edge",
+        },
+        {
           "path": "/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson",
           "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/speech_subtitle.gif",
           "title": "Speech Subtitle Generation on Nvidia Jetson",
         },
-                {
+        {
           "path": "/alwaysAI-Jetson-Getting-Started",
           "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/object_detection_alwaysai.gif",
           "title": "Object Detection with AlwaysAI",
@@ -44,16 +54,6 @@ function IndexLatestedViki(props) {
           "path": "/CVEDIA-Jetson-Getting-Started",
           "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/CVEDIA-RT.gif",
           "title": "Getting Started with CVEDIA-RT on NVIDIA® Jetson Devices",
-        },
-        {
-          "path": "/No-code-Edge-AI-Tool",
-          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/no_code_edge_ai_tool.webp",
-          "title": "No code Edge AI Tool",
-        },
-        {
-          "path": "https://wiki.seeedstudio.com/How_to_run_local_llm_text_to_image_on_reComputer/",
-          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/local_llm_text_to_image.webp",
-          "title": "Run a Local LLM Text-to-Image on reComputer",
         }
       ]
     },
@@ -108,6 +108,36 @@ function IndexLatestedViki(props) {
       moreLink:'https://wiki.seeedstudio.com/Raspberry_Pi/',
       docList: [
         {
+          "path": "/r2000_series_getting_start",
+          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/recomputer-ai-r2000.webp",
+          "title": "Getting Started with reComputer AI R20",
+        }, 
+        {
+          "path": "/recomputer_ai_industrial_r2135_getting_start",
+          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/recomputer-industrial-r2135.webp",
+          "title": "Getting Started with reComputer AI Industrial R21",
+        },
+        {
+          "path": "/recomputer_industrial_r20xx_getting_start",
+          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/recomputer-industrial-r20xx.webp",
+          "title": "Getting Started with reComputer Industrial R20",
+        },
+        {
+          "path": "/recomputer_industrial_R21xx_getting_start",
+          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/recomputer-industrial-r21xx.webp",
+          "title": "Getting Started with reComputer Industrial R21",
+        },
+        {
+          "path": "/recomputer_r",
+          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/recomputer-r1000.webp",
+          "title": "Getting Started with reComputer R10",
+        }, 
+        {
+          "path": "/recomputer_r1100_intro",
+          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/recomputer-r1100.webp",
+          "title": "Getting Started with reComputer R11",
+        },
+        {
           "path": "/reTerminal",
           "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/reTerminal.webp",
           "title": "Getting Started with reTerminal",
@@ -116,36 +146,6 @@ function IndexLatestedViki(props) {
           "path": "/recomputer_r1000_flash_OS",
           "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/reComputer_R1025.webp",
           "title": "reComputer R1000 Raspbian OS to eMMC",
-        },
-        {
-          "path": "/Edge_Box_introduction",
-          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/EdgeBox_RPi_200.webp",
-          "title": "Getting Started Edge Box RPI-200",
-        }, 
-        {
-          "path": "/reTerminal-hardware-interfaces-usage",
-          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/HW_overview.webp",
-          "title": "Hardware and Interfaces Usage",
-        },
-        {
-          "path": "/pose_based_light_control_with_nodered_and_rpi_with_aikit",
-          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/Node-Red.webp",
-          "title": "Pose-Based Light Control with Node-Red and Raspberry Pi with AIkit",
-        },
-        {
-          "path": "/Edgebox-rpi-200-codesys",
-          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/new_project.webp",
-          "title": "Codesys for Edge Box RPi 200",
-        },
-        {
-          "path": "/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection",
-          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/yolov8_result.webp",
-          "title": "AI Kit with Raspberry Pi 5 about YOLOv8n object detection",
-        }, 
-        {
-          "path": "/reTerminal-DM_intro_FUXA",
-          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/fuxa-editor.webp",
-          "title": "Getting Start with FUXA - Web Based SCADA Tool",
         }
       ]
     },
@@ -202,6 +202,16 @@ function IndexLatestedViki(props) {
       moreLink:'https://wiki.seeedstudio.com/home_assistant_topic/',
       docList: [
         {
+          "path": "/respeaker_xvf3800_xiao_home_assistant",
+          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/respeaker-xmos-xvf3800-with-ha.webp",
+          "title": "Smart Home Voice Control on ReSpeaker XVF3800 with Home Assistant",
+        },
+        {
+          "path": "/r2000_series_frigate_and_home_assistant",
+          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/frigate-on-recomputer-r2000-with-ha.webp",
+          "title": "Frigate NVR and Hailo on reComputer R2xxx connect with Home Assistant",
+        },
+        {
           "path": "/xiao-esp32c3-esphome",
           "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/c3_accesses_ha.webp",
           "title": "XIAO ESP32C3 accesses Home Assistant via ESPHome service",
@@ -230,16 +240,6 @@ function IndexLatestedViki(props) {
           "path": "/home_assistant_sensecap",
           "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/config_11.webp",
           "title": "SenseCAP Integration for Home Assistant",
-        },
-        {
-          "path": "/sensecraft_homeassistant_userguide",
-          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/SenseCraft-HomeAssistantimage50.webp",
-          "title": "SenseCraft-HomeAssistant User Manual",
-        },
-        {
-          "path": "/ha_xiao_esp32",
-          "image": "https://files.seeedstudio.com/wiki/Homepage_browseby/ha-xiao5.webp",
-          "title": "XIAO ESP32S3 for Home Assistant",
         }
       ]
     }

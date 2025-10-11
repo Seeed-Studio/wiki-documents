@@ -178,13 +178,13 @@ unzip A607-Orin-NX-JP5.1.1.zip
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例如（用户名："nvidia"，密码："nvidia"，设备名称："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
 ```
 
-**Step 6:** Flash the system to either NVMe SSD or USB Flash drive
+**步骤 6:** 将系统刷写到 NVMe SSD 或 USB 闪存驱动器
 
 #### NVMe SSD
 
@@ -251,13 +251,13 @@ unzip A607-Orin-Nano-4GB-JP5.1.1.zip
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例如（用户名："nvidia"，密码："nvidia"，设备名称："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
 ```
 
-**Step 6:** Flash the system to either NVMe SSD or USB Flash drive
+**步骤 6:** 将系统刷写到 NVMe SSD 或 USB 闪存驱动器
 
 #### NVMe SSD
 
@@ -360,15 +360,14 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo ./apply_binaries.sh
 ```
 
-**Step 4:** Extract **A607_Jetpack_6.1.tar.gz**:
+**步骤 4：** 解压 **A607_Jetpack_6.1.tar.gz**：
 
 ```sh
 cd ..
 tar xf A607_Jetpack_6.1.tar.gz
 sudo cp -r 607_jetpack6.1/Linux_for_Tegra/* Linux_for_Tegra/
 ```
-
-**Step 5:** Flash the system to either NVMe SSD:
+**步骤 5:** 将系统刷写到 NVMe SSD:
 
 ```sh
 cd Linux_for_Tegra
@@ -396,14 +395,14 @@ cd /lib/modules/5.10.104-tegra/kernel/drivers/net/wireless/realtek/
 sudo mkdir rtl8723du
 ```
 
-**Step 3:** Copy the previously downloaded **8723du.ko** file to the newly created directory
+**步骤 3:** 将之前下载的 **8723du.ko** 文件复制到新创建的目录中
 
 ```sh
 cd ~
 sudo cp 8723du.ko /lib/modules/5.10.104-tegra/kernel/drivers/net/wireless/realtek/rtl8723du
 ```
 
-**Step 4:** Enable the driver
+**步骤 4：** 启用驱动程序
 
 ```sh
 sudo modprobe cfg80211
@@ -413,7 +412,7 @@ sudo modprobe 8723du
 sudo echo 8723du >> /etc/modules
 ```
 
-**Step 5:** Reboot the device
+**步骤 5：** 重启设备
 
 ```sh
 sudo reboot

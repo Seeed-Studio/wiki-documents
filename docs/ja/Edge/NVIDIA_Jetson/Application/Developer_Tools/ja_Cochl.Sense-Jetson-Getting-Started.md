@@ -52,7 +52,7 @@ Cochl.Sense は複数のハードウェアプラットフォームでサポー�
 - [reComputer Jetson](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) または JetPack 4.6 以上を実行している他の NVIDIA Jetson デバイス
 - 16 ビット深度オーディオ、22,050 Hz のサンプリングレートをサポートする USB マイクロフォン
 
-## Flash JetPack to Jetson
+## Flash JetPack を Jetson に
 
 次に、Jetsonデバイスに[JetPack](https://developer.nvidia.com/embedded/jetpack)システムがフラッシュされていることを確認する必要があります。これにはCUDA、TensorRT、cuDNNなどのSDKコンポーネントが含まれています。NVIDIA SDK Managerまたはコマンドラインを使用してJetPackをデバイスにフラッシュできます。
 

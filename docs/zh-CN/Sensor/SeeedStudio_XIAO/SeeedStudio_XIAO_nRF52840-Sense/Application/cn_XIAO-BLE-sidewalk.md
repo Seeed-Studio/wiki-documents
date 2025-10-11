@@ -100,13 +100,13 @@ XIAO nRF52840 是一个通过 Amazon Sidewalk 认证的无线模块，通过 Ama
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
             <td></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Red-LED-Button.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
             <td></td>
@@ -232,8 +232,7 @@ Nordic Semiconductor 的 Amazon Sidewalk 解决方案基于 nRF Connect SDK v2.3
 ```
 git clone https://github.com/nrfconnect/sdk-sidewalk.git sidewalk
 ```
-
-**Step 9**. Install Python requirements for Amazon Sidewalk.
+**步骤 9**. 安装 Amazon Sidewalk 的 Python 依赖项。
 
 ```
 pip install -r sidewalk/requirements.txt
@@ -251,7 +250,7 @@ pip install -r sidewalk/requirements.txt
 west manifest --path
 ```
 
-The path returned should be similar to the following format.
+返回的路径应类似于以下格式。
 
 ```
 > /path-to-ncs-folder/nrf/west.yml
@@ -279,7 +278,7 @@ west update
 west manifest --path
 ```
 
-The path returned should be similar to the following format.
+返回的路径应类似于以下格式。
 
 ```
 > /path-to-ncs-folder/sidewalk/west.yml
@@ -329,14 +328,14 @@ git clone https://github.com/aws-samples/aws-iot-core-for-amazon-sidewalk-sample
 aws configure
 ```
 
-The window will then ask you to enter your keys, please enter them separately and enter to confirm.
+然后窗口会要求您输入密钥，请分别输入并按回车键确认。
 
 ```
 aws_access_key_id = YOUR_ACCESS_KEY
 aws_secret_access_key = YOUR_SECRET_KEY
 ```
 
-This is followed by the choice of country and region, here we need to select **us-east-1**.
+接下来是选择国家和地区,这里我们需要选择 **us-east-1**。
 
 ```
 region=us-east-1

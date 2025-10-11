@@ -27,7 +27,7 @@ Arduinoの大規模プロジェクトのコンパイル時間を短縮するた�
 
 Arduinoライブラリを例として取り上げ、それを事前コンパイル済みライブラリに変換してみましょう。ここでは、Arduinoライブラリとして [**Seeed_Arduino_LIS3DHTR**](https://github.com/Seeed-Studio/Seeed_Arduino_LIS3DHTR) を使用し、ボードオプションとして [**Wio Terminal**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) を使用します。
 
-**STEP1. Arduinoライブラリの設定**
+**ステップ1. Arduinoライブラリの設定**
 
 ライブラリのルートパスに移動し、`library.properties` ファイルを開いて以下を追加し、ファイルを保存します。
 
@@ -37,13 +37,13 @@ dot_a_linkage=true
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/StaticLibraries/dot.png"/></div>
 
-**STEP2. Arduino IDEのセットアップ**
+**ステップ2. Arduino IDEのセットアップ**
 
 Arduino IDEを開き、**設定** に移動します。「**コンパイルとアップロード時に詳細な出力を表示**」がチェックされていることを確認してください。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/StaticLibraries/Arduino-IDE.png"/></div>
 
-**STEP3. 一時ビルド場所とボードフレームワークフラグの取得**
+**ステップ3. 一時ビルド場所とボードフレームワークフラグの取得**
 
 ボードとして **Wio Terminal** を選択します。ライブラリの **#includeディレクティブ** を含む任意のスケッチをコンパイルします。これは最低限のスケッチでも構いません。私の場合は、`#include<LIS3DHTR.h>` です。
 
@@ -69,7 +69,7 @@ Arduino IDEを開き、**設定** に移動します。「**コンパイルと�
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/StaticLibraries/mcu.png"/></div>
 
-**STEP4. `.a` ファイルをライブラリフォルダにコピー**
+**ステップ4. `.a` ファイルをライブラリフォルダにコピー**
 
 一時ビルドパスフォルダに移動し、`libraries` -> `Seeed_Arduino_LIS3DHTR` に移動すると、`Seeed_Arduino_LIS3DHTR.a` ファイルが表示されます。
 
@@ -81,7 +81,7 @@ Arduino IDEを開き、**設定** に移動します。「**コンパイルと�
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/StaticLibraries/library.png"/></div>
 
-**STEP5. 事前コンパイル済みフラグの追加**
+**ステップ5. 事前コンパイル済みフラグの追加**
 
 次に、`library.properties` に戻り、`dot_a_linkage=true` を削除して以下のフラグを追加します：
 

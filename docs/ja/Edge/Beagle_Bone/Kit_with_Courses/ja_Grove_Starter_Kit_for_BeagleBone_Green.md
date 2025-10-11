@@ -30,7 +30,7 @@ BeagleBone® GreenとGroveを使用して素晴らしいプロジェクトを作
 部品リスト
 ---------
 
-### Grove - I2C Hub
+### Grove - I2C ハブ
 
 ![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_for_BeagleBone_Green/img/I2c_hub_b.jpg)
 
@@ -40,7 +40,7 @@ Universal 4 Pin to X2 4 Pinケーブルを使用して、最大7つのI2Cデバ�
 
 このモジュールに関する詳細情報を知りたい場合は、[**こちら**](/ja/Grove-I2C_Hub)をクリックしてください。
 
-### Grove - Button
+### Grove - ボタン
 
 ![](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_for_BeagleBone_Green/img/Button1.jpg)
 

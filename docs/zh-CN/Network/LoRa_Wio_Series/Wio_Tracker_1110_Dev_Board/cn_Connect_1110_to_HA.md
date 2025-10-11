@@ -59,8 +59,7 @@ Home Assistant 社区商店为您提供了一个强大的用户界面来处理�
 ```cpp
 cd /config
 ```
-
-Download and run the HACS installation script:
+下载并运行 HACS 安装脚本：
 
 ```cpp
 wget -q -O - https://install.hacs.xyz | bash -

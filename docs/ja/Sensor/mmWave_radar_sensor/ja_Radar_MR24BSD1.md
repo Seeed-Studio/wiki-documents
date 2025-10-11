@@ -15,7 +15,7 @@ last_update:
 <div align="center"><img width ="{800}" src="https://files.seeedstudio.com/wiki/60GHzradar/1.jpeg"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Sleep-Breathing-Monitoring-Module-p-5304.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Sleep-Breathing-Monitoring-Module-p-5304.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong></a>
 </div>
 
 ## 概要
@@ -260,7 +260,7 @@ zip ライブラリをダウンロードしたので、Arduino IDE を開き、*
 
 <br />
 
-**Step 2.** Arduino IDEの左上のメニューバーで、**tool**を選択し、使用している開発ボードのタイプを選択し、対応するシリアルポートを選択します。
+**ステップ 2.** Arduino IDEの左上のメニューバーで、**tool**を選択し、使用している開発ボードのタイプを選択し、対応するシリアルポートを選択します。
 
 :::tip
 **MacOS**を使用している場合、デバイスのシリアルポート名は多くの場合**/dev/cu.usbmodem xxx**で始まり、デバイス名で終わります。**Windows**を使用している場合、デバイスのシリアルポート名は多くの場合**COM**で始まり、同様にデバイス名で終わります。

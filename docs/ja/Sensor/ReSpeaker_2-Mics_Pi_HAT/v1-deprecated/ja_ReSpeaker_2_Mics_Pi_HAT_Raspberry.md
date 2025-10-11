@@ -149,7 +149,7 @@ python3 interfaces/pixels.py
 
 オンボードのユーザーボタンがあり、GPIO17 に接続されています。これを Python と RPi.GPIO を使用して検出してみましょう。
 
-Step 4 でクローンした mic_hat フォルダリポジトリから以下のコードを実行してください。
+ステップ 4 でクローンした mic_hat フォルダリポジトリから以下のコードを実行してください。
 
 ```bash
 python3 interfaces/button.py
@@ -299,11 +299,11 @@ context:
 
 また、以下のコマンドで色を変更することができます：
 
-- **Picovoice, set the lights to orange**
+- **Picovoice、ライトをオレンジに設定して**
 
 ライトを消すには以下のコマンドを使用します：
 
-- **Picovoice, turn off all lights**
+- **Picovoice、すべてのライトを消して**
 
 **デモ動画の実演**
 
@@ -527,11 +527,11 @@ context:
 
 また、以下のコマンドを試して色を変更できます：
 
-- **Picovoice, set the lights to orange**
+- **Picovoice、ライトをオレンジに設定して**
 
 ライトを消すには以下のコマンドを使用します：
 
-- **Picovoice, turn off all lights**
+- **Picovoice、すべてのライトを消して**
 
 **デモ動画の紹介**
 

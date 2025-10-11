@@ -67,7 +67,7 @@ Grove - NFC 支持 I2C 和 UART，[Seeed Arduino NFC 库](https://github.com/See
 - [Seeeduino V4.2(ATMega328P)](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html) x1
 - [Seeeduino Lotus V1.1](https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface.html) x1
 - [Grove - RS485](https://www.seeedstudio.com/Grove-RS485-p-2924.html) x1
-- [Grove Base Shield V2.0](https://www.seeedstudio.com/Base-Shield-V2.html) x1
+- [Grove 基础扩展板 V2.0](https://www.seeedstudio.com/Base-Shield-V2.html) x1
 
 **连接材料**
 

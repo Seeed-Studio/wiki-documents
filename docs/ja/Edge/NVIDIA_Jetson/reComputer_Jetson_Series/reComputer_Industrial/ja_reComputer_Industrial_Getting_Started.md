@@ -488,7 +488,7 @@ sudo unzip xxxx.zip # Replace xxxx with the driver file name
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/126.png"/></div>
 
-- **Step 4:** **Linux_for_Tegra**ディレクトリに移動し、以下のようにflashコマンドを実行します
+- **ステップ 4:** **Linux_for_Tegra**ディレクトリに移動し、以下のようにflashコマンドを実行します
 
 ```sh
 cd Linux_for_Tegra
@@ -815,7 +815,7 @@ Ubuntuホストマシンで、ターミナルを開き、コマンド `sha256sum
 現在、新しいバージョンのreComputerを設計中です。ご期待ください！
 :::
 
-- **Step 2:** 生成されたファイルを展開する
+- **ステップ 2:** 生成されたファイルを展開する
 
 ```sh
 sudo tar -xvf <file_name>.tar.gz

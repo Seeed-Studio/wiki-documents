@@ -35,7 +35,7 @@ no_comments: false # for Disqus
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -73,7 +73,7 @@ sudo reboot
 
 ```
 
-### Install dkms
+### dkmsをインストール
 
 ```
 sudo apt-get install dkms
@@ -94,13 +94,13 @@ python -m venv hailo_env
 source hailo_env/bin/activate
 ```
 
-### Install hailort-4.19.0-cp311-cp311-linux_aarch64.whl
+### hailort-4.19.0-cp311-cp311-linux_aarch64.whlをインストール
 
 ```
 pip install hailort-4.19.0-cp311-cp311-linux_aarch64.whl 
 ```
 
-### Check if the software is installed
+### ソフトウェアがインストールされているかを確認する
 
 ```
 hailortcli fw-control identify
@@ -212,7 +212,7 @@ class Platform(Enum):
         return self.value
 ```
 
-#### Install tappas
+#### tappasをインストール
 
 ```
 ./install.sh --skip-hailort --target-platform rpi5

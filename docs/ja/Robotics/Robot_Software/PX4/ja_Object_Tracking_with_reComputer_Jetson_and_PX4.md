@@ -150,7 +150,7 @@ wget -O yolo11n.pt https://github.com/ultralytics/assets/releases/download/v8.3.
 yolo export model=/path/to/yolo11n.pt format=engine device=0 half=True dynamic=True
 ```
 
-## Install the ROS2 package for target tracking
+## ターゲット追跡用のROS2パッケージをインストールする
 
 ```bash
 cd /path/to/your/work_space/src

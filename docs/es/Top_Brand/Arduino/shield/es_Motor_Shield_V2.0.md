@@ -337,9 +337,9 @@ Aquí te mostraremos cómo funciona este Motor Shield a través de una demostrac
     <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/motor%20shield_s.jpg" alt="pir" width={200} height="auto" /></p></td>
   </tr>
   <tr>
-    <td><h4><a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank"><span>Get ONE Now</span></a></h4></td>
-    <td><h4><a href="https://www.seeedstudio.com/Small-Size-and-High-Torque-Stepper-Motor-24BYJ48-p-1922.html" target="_blank"><span>Get ONE Now</span></a></h4></td>
-    <td><h4><a href="https://www.seeedstudio.com/Motor-Shield-V2.0-p-1377.html" target="_blank"><span>Get ONE Now</span></a></h4></td>
+    <td><h4><a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank"><span>Obtener Uno Ahora</span></a></h4></td>
+    <td><h4><a href="https://www.seeedstudio.com/Small-Size-and-High-Torque-Stepper-Motor-24BYJ48-p-1922.html" target="_blank"><span>Obtener Uno Ahora</span></a></h4></td>
+    <td><h4><a href="https://www.seeedstudio.com/Motor-Shield-V2.0-p-1377.html" target="_blank"><span>Obtener Uno Ahora</span></a></h4></td>
   </tr>  
   </tbody></table>
 

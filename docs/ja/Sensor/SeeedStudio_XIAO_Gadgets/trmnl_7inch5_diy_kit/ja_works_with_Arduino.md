@@ -13,17 +13,83 @@ last_update:
 ---
 
 
-# TRMNL 7.5" (OG) DIY KitをArduinoで始める
+# ArduinoでTRMNL 7.5" (OG) DIY Kitを始める
 
 ## はじめに
 
-TRMNL 7.5" (OG) DIY Kitは、強力なXIAO ESP32-S3 Plusを中核とする多機能開発プラットフォームです。このDIY Kitは、ESP32-S3の処理能力と美しい7.5インチePaperディスプレイを組み合わせ、低消費電力の情報表示プロジェクトに最適な基盤を提供します。このガイドでは、Arduinoフレームワークを使用してTRMNL DIY Kitをプログラミングすることに焦点を当て、様々なハードウェア機能を活用するための必要な知識を提供します。
+TRMNL 7.5" (OG) DIY Kitは、強力なXIAO ESP32-S3 Plusを中核とする多用途開発プラットフォームです。このDIY Kitは、ESP32-S3の処理能力と美しい7.5インチePaperディスプレイを組み合わせ、低消費電力の情報表示プロジェクトに最適な基盤を提供します。このガイドでは、Arduinoフレームワークを使用してTRMNL DIY Kitをプログラミングすることに焦点を当て、様々なハードウェア機能を活用するための必要な知識を提供します。
 
-## はじめに
+## 始めに
 
 具体的な機能に入る前に、TRMNL 7.5" (OG) DIY Kit用の開発環境をセットアップしましょう。
 
-### 環境準備
+### 機器の取り付け
+
+**ステップ1. ディスプレイをドライバーボードに接続**  
+FPCケーブルをXIAO ePaper Display Boardのコネクタに合わせ、ラッチを固定して確実な接続を確保します。  
+
+:::tip
+FPCケーブルの金属面は上向きにする必要があります。そうでないと、コンテンツが表示されません。
+
+以下の取り付けチュートリアルに従ってください。多くの人が間違えます。
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/2.jpg" style={{width:600, height:'auto'}}/></div>
+
+**ステップ2. バッテリーの取り付け**  
+バッテリーケーブルをドライバーボードのJSTコネクタに接続し、正しい極性（赤線を+、黒線を-）を確認します。  
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/3.jpg" style={{width:600, height:'auto'}}/></div>
+
+**ステップ3. エンクロージャーの組み立て（オプション）**  
+
+:::tip
+画面のフレキシブルケーブルは非常に壊れやすいことにご注意ください。操作時は注意してください。損傷すると、画面全体が動作しなくなります。
+:::
+[Resource part](#resources)からオープンソースのエンクロージャー部品を印刷し、内部にコンポーネントを組み立てます。  
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/4.jpeg" style={{width:600, height:'auto'}}/></div>
+
+まず、ドライバーボードとバッテリーを組み立てます。
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/base.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+TRMNLキットが正常に動作するかテストします。
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/test.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+画面をケースに差し込み、FPCケーブルを外に出します。
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/cable.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+FPC延長ケーブルを接続し、ケース全体を組み立てます。
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/assembly.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+L字型エンクロージャーも非常に似ています。
+
+<div class="table-center">
+<iframe width="300" height="500" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/Lshape.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+:::tip
+TRMNLキットがルーターから遠い場合は、アンテナをケースの外に移動できます。より良いパフォーマンスが得られます。
+:::
+
+### 環境の準備
 
 TRMNL DIY KitをArduinoでプログラミングするには、ESP32サポート付きのArduino IDEをセットアップする必要があります。
 
@@ -31,7 +97,7 @@ TRMNL DIY KitをArduinoでプログラミングするには、ESP32サポート�
 Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
-**ステップ 1.** [Arduino IDE](https://www.arduino.cc/en/software)をダウンロードしてインストールし、Arduinoアプリケーションを起動します。
+**ステップ1.** [Arduino IDE](https://www.arduino.cc/en/software)をダウンロードしてインストールし、Arduinoアプリケーションを起動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -41,37 +107,37 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
     </a>
 </div><br />
 
-**ステップ 2.** Arduino IDEにESP32ボードサポートを追加します。
+**ステップ2.** Arduino IDEにESP32ボードサポートを追加します。
 
-Arduino IDEで、**File > Preferences**に移動し、「Additional Boards Manager URLs」フィールドに以下のURLを追加します：
+Arduino IDEで、**File > Preferences**に移動し、"Additional Boards Manager URLs"フィールドに以下のURLを追加します：
 
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
 
-**ステップ 3.** ESP32ボードパッケージをインストールします。
+**ステップ3.** ESP32ボードパッケージをインストールします。
 
-**Tools > Board > Boards Manager**に移動し、「esp32」を検索してEspressif SystemsのESP32パッケージをインストールします。
+**Tools > Board > Boards Manager**に移動し、"esp32"を検索してEspressif SystemsのESP32パッケージをインストールします。
 
-**ステップ 4.** 正しいボードを選択します。
+**ステップ4.** 正しいボードを選択します。
 
-**Tools > Board > ESP32 Arduino**に移動し、「XIAO_ESP32S3_PLUS」を選択します。
+**Tools > Board > ESP32 Arduino**に移動し、"XIAO_ESP32S3_PLUS"を選択します。
 
-**ステップ 5.** USB-Cケーブルを使用してTRMNL DIY Kitをコンピュータに接続します。
+**ステップ5.** USB-CケーブルでTRMNL DIY Kitをコンピューターに接続します。
 
-**ステップ 6.** **Tools > Port**から正しいポートを選択します。
+**ステップ6.** **Tools > Port**から正しいポートを選択します。
 
-## Arduinoサンプル
+## Arduinoの例
 
-それでは、ArduinoコードサンプルでTRMNL DIY Kitの主要機能を探ってみましょう。
+それでは、Arduinoコード例を使ってTRMNL DIY Kitの主要機能を探ってみましょう。
 
 ### ユーザーボタン
 
-TRMNL DIY Kitには3つのユーザープログラマブルボタン（D1、D2、D4）と1つのリセットボタンがあります。ボタンの押下を検出する簡単なサンプルを作成してみましょう。
+TRMNL DIY Kitには、3つのユーザープログラマブルボタン（D1、D2、D4）と1つのリセットボタンがあります。ボタンの押下を検出する簡単な例を作成しましょう。
 
-#### ボタンテストサンプル
+#### ボタンテストの例
 
-このサンプルでは、3つのユーザーボタンの状態を読み取り、その状態をシリアルモニターに出力します。
+この例では、3つのユーザーボタンの状態を読み取り、その状態をシリアルモニターに出力します。
 
 ```cpp
 // TRMNL DIY Kit - Button Test Example
@@ -87,9 +153,9 @@ void setup() {
   while (!Serial) {
     ; // Wait for serial port to connect
   }
-  
+
   Serial.println("TRMNL DIY Kit - Button Test");
-  
+
   // Configure button pins as inputs with internal pull-up resistors
   pinMode(BUTTON_D1, INPUT_PULLUP);
   pinMode(BUTTON_D2, INPUT_PULLUP);
@@ -101,7 +167,7 @@ void loop() {
   bool d1Pressed = !digitalRead(BUTTON_D1);
   bool d2Pressed = !digitalRead(BUTTON_D2);
   bool d4Pressed = !digitalRead(BUTTON_D4);
-  
+
   // Print button states if any button is pressed
   if (d1Pressed || d2Pressed || d4Pressed) {
     Serial.print("Button D1: ");
@@ -110,7 +176,7 @@ void loop() {
     Serial.print(d2Pressed ? "PRESSED" : "released");
     Serial.print(" | Button D4: ");
     Serial.println(d4Pressed ? "PRESSED" : "released");
-    
+
     // Add a small delay to avoid repeated readings
     delay(200);
   }
@@ -121,21 +187,21 @@ void loop() {
 
 1. 3つのユーザーボタン（D1、D2、D4）のピン定数を定義します。
 
-2. `setup()` 関数では、シリアル通信を初期化し、ボタンピンを内部プルアップ抵抗付きの入力として設定します。
+2. `setup()`関数で、シリアル通信を初期化し、ボタンピンを内部プルアップ抵抗付きの入力として設定します。
 
-3. `loop()` 関数では、各ボタンの状態を読み取ります。プルアップ抵抗を使用しているため、ボタンが押されるとピンはLOWを読み取ります。
+3. `loop()`関数で、各ボタンの状態を読み取ります。プルアップ抵抗を使用しているため、ボタンが押されるとピンはLOWを読み取ります。
 
-4. 読み取り値を反転（`!` 演算子を使用）して、`true` が「押下」、`false` が「解放」を意味するようにします。
+4. 読み取り値を反転（`!`演算子で）して、`true`が「押下」、`false`が「解放」を意味するようにします。
 
 5. いずれかのボタンが押されると、すべてのボタンの状態をシリアルモニターに出力します。
 
-6. 小さな遅延により、ボタンが押し続けられた際の急速な繰り返し読み取りを防ぎます。
+6. 小さな遅延により、ボタンが押し続けられたときの急速な繰り返し読み取りを防ぎます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/TRMNL_DIY_Kit/6_button_test_serial.png" style={{width:1000, height:'auto'}}/></div>
 
 ### バッテリー電圧監視
 
-TRMNL 7.5" (OG) DIY キットには、ピンD0（GPIO1）に接続されたバッテリー電圧を監視する回路が含まれています。この設計の重要な特徴は、ADC電源を有効/無効にする制御ピン（GPIO6）も含まれていることで、測定を行っていない時のバッテリー消費を節約できます。
+TRMNL 7.5" (OG) DIY Kitには、ピンD0（GPIO1）に接続されたバッテリー電圧を監視する回路が含まれています。この設計の重要な特徴は、ADC電源を有効/無効にする制御ピン（GPIO6）も含まれていることで、測定を積極的に行わないときのバッテリー節約に役立ちます。
 
 #### バッテリー電圧監視の例
 
@@ -153,13 +219,13 @@ void setup() {
   while (!Serial) {
     ; // Wait for serial port to connect
   }
-  
+
   Serial.println("TRMNL DIY Kit - Battery Voltage Monitoring Example");
-  
+
   // Configure ADC_EN
   pinMode(ADC_EN_PIN, OUTPUT);
   digitalWrite(ADC_EN_PIN, LOW);  // Start with ADC disabled to save power
-  
+
   // Configure ADC
   analogReadResolution(12);
   analogSetPinAttenuation(BATTERY_PIN, ADC_11db);
@@ -168,12 +234,12 @@ void setup() {
 void loop() {
   // Read battery voltage
   float voltage = readBatteryVoltage();
-  
+
   // Print the results
   Serial.print("Battery Voltage: ");
   Serial.print(voltage, 2);  // Print with 2 decimal places
   Serial.println("V");
-  
+
   // Determine battery level
   String batteryStatus;
   if (voltage >= 4.0) {
@@ -187,11 +253,11 @@ void loop() {
   } else {
     batteryStatus = "Critical";
   }
-  
+
   Serial.print("Battery Status: ");
   Serial.println(batteryStatus);
   Serial.println();
-  
+
   // Wait for a while before the next reading
   delay(5000);  // 5 seconds
 }
@@ -200,21 +266,21 @@ float readBatteryVoltage() {
   // Enable ADC
   digitalWrite(ADC_EN_PIN, HIGH);
   delay(10);  // Short delay to stabilize
-  
+
   // Read 30 times and average for more stable readings
   long sum = 0;
   for(int i = 0; i < 30; i++) {
     sum += analogRead(BATTERY_PIN);
     delayMicroseconds(100);
   }
-  
+
   // Disable ADC to save power
   digitalWrite(ADC_EN_PIN, LOW);
-  
+
   // Calculate voltage
   float adc_avg = sum / 30.0;
   float voltage = (adc_avg / 4095.0) * 3.6 * 2.0 * CALIBRATION_FACTOR;
-  
+
   return voltage;
 }
 ```
@@ -223,13 +289,13 @@ float readBatteryVoltage() {
 
 1. 2つの重要なピンを定義します：
 
-- `BATTERY_PIN` (GPIO1/A0)：バッテリー電圧分圧器に接続
+- `BATTERY_PIN` (GPIO1/A0): バッテリー電圧分圧器に接続
 
-- `ADC_EN_PIN` (GPIO6/A5)：ADC測定回路への電源を制御
+- `ADC_EN_PIN` (GPIO6/A5): ADC測定回路への電源を制御
 
-2. 電圧読み取り精度を微調整するための `CALIBRATION_FACTOR` (0.968) を定義します。
+2. 電圧読み取り精度を微調整するために`CALIBRATION_FACTOR`（0.968）を定義します。
 
-3. `setup()` 関数内で：
+3. `setup()`関数内で：
 
 - シリアル通信を初期化
 
@@ -239,23 +305,23 @@ float readBatteryVoltage() {
 
 - バッテリーピンに適切な減衰を設定
 
-4. `loop()` 関数内で：
+4. `loop()`関数内で：
 
-- `readBatteryVoltage()` を呼び出して現在のバッテリー電圧を取得
+- `readBatteryVoltage()`を呼び出して現在のバッテリー電圧を取得
 
 - 電圧をシリアルモニターに出力
 
-- 電圧しきい値に基づいてバッテリー状態を判定・表示
+- 電圧しきい値に基づいてバッテリー状態を判定し表示
 
 - 次の読み取りまで5秒間待機
 
-5. `readBatteryVoltage()` 関数：
+5. `readBatteryVoltage()`関数：
 
-- ADC_ENピンをHIGHに設定してADC回路を有効化
+- ADC_EN_PINをHIGHに設定してADC回路を有効化
 
 - 回路が安定するまで短時間待機
 
-- より安定した結果を得るために30回読み取りを行い平均化
+- より安定した結果を得るために30回の読み取りを行い平均化
 
 - 電力節約のためADC回路を無効化
 
@@ -271,15 +337,15 @@ float readBatteryVoltage() {
 
 **省電力設計：**
 
-この実装の主要な特徴は、使用していない時にバッテリー測定回路を無効にできることです。TRMNL DIYキットは低消費電力用に設計されており、このアプローチは実際の測定が必要な時のみ電圧分圧回路に電力を供給することで、バッテリー寿命を延ばすのに役立ちます。
+この実装の重要な特徴は、使用していないときにバッテリー測定回路を無効にできることです。TRMNL DIYキットは低消費電力を目的として設計されており、このアプローチは実際の測定が必要なときのみ電圧分圧回路に電力を供給することで、バッテリー寿命の延長に役立ちます。
 
-校正係数（0.968）は電圧分圧器の部品公差を補償し、正確な読み取りを確保するのに役立ちます。マルチメーターでの測定と比較して読み取り値が一貫してずれている場合、この値は特定のボードに対して微調整が必要な場合があります。
+校正係数（0.968）は電圧分圧器のコンポーネント許容差を補償し、正確な読み取りを確保するのに役立ちます。マルチメーターでの測定と比較して読み取り値が一貫してずれている場合、この値は特定のボードに対して微調整が必要な場合があります。
 
-複数回の読み取りを行い平均化することで、ノイズを減らし、より安定した電圧測定を提供します。これは、小さな電圧変化が残容量を決定するために重要となるバッテリー監視において特に重要です。
+複数の読み取りを行い平均化することで、ノイズを減らし、より安定した電圧測定を提供します。これは、小さな電圧変化が残容量の判定に重要なバッテリー監視において特に重要です。
 
 ## ePaperディスプレイ
 
-TRMNL 7.5"（OG）DIYキットは、様々な照明条件下で明確な視認性と超低消費電力を提供する美しい7.5インチ白黒ePaperディスプレイを特徴としています。このセクションでは、Arduinoを使用してePaperディスプレイを設定・制御する方法を探ります。
+TRMNL 7.5"（OG）DIYキットは、様々な照明条件での明確な視認性と超低消費電力を提供する美しい7.5インチ白黒ePaperディスプレイを特徴としています。このセクションでは、Arduinoを使用してePaperディスプレイを設定し制御する方法を探ります。
 
 ### ハードウェアセットアップ
 
@@ -301,7 +367,7 @@ TRMNL 7.5"（OG）DIYキットは、様々な照明条件下で明確な視認�
 
 ### ソフトウェアセットアップ
 
-ePaperディスプレイを制御するために、様々なSeeed Studioディスプレイデバイスに包括的なサポートを提供するSeeed_GFXライブラリを使用します。
+ePaperディスプレイを制御するために、様々なSeeed Studioディスプレイデバイスの包括的なサポートを提供するSeeed_GFXライブラリを使用します。
 
 **ステップ1.** GitHubからSeeed_GFXライブラリをダウンロードします：
 
@@ -311,38 +377,38 @@ ePaperディスプレイを制御するために、様々なSeeed Studioディ�
     </a>
 </div><br />
 
-**ステップ2.** Arduino IDEでZIPファイルを追加してライブラリをインストールします。**スケッチ > ライブラリをインクルード > .ZIP形式のライブラリをインストール** に移動し、ダウンロードしたZIPファイルを選択します。
+**ステップ2.** Arduino IDEでZIPファイルを追加してライブラリをインストールします。**Sketch > Include Library > Add .ZIP Library**に移動し、ダウンロードしたZIPファイルを選択します。
 
 :::note
-以前にTFT_eSPIライブラリをインストールしている場合、Seeed_GFXはTFT_eSPIの追加機能付きフォークであるため、競合を避けるためにArduinoライブラリフォルダから一時的に削除または名前を変更する必要がある場合があります。
+以前にTFT_eSPIライブラリをインストールしている場合、競合を避けるためにArduinoライブラリフォルダから一時的に削除または名前を変更する必要がある場合があります。Seeed_GFXは追加機能を持つTFT_eSPIのフォークです。
 :::
 
-**ステップ3.** Seeed_GFXライブラリからサンプルスケッチを開きます：**ファイル > Seeed_GFX > Examples > ePaper > Basic > Clock**
+**ステップ3.** Seeed_GFXライブラリからサンプルスケッチを開きます：**File > Seeed_GFX > Examples > ePaper > Basic > Clock**
 
-**ステップ4.** サンプルタブの横にある矢印をクリックして「New Tab」を選択し、Arduinoスケッチと同じフォルダに `driver.h` という名前の新しいファイルを作成します。
+**ステップ4.** サンプルタブの横にある矢印をクリックして"New Tab"を選択し、Arduinoスケッチと同じフォルダに`driver.h`という名前の新しいファイルを作成します。
 
-**ステップ5.** 新しいファイルに `driver.h` と名前を付けます。
+**ステップ5.** 新しいファイルに`driver.h`と名前を付けます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/TRMNL_DIY_Kit/12_create_driver_h.png" style={{width:1000, height:'auto'}}/></div>
 
-**ステップ6.** [Seeed GFX設定ツール](https://seeed-studio.github.io/Seeed_GFX/)に移動し、画像に示すように「TRMNL 7.5" (OG) DIY Kit」を選択します。
+**ステップ6.** [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/)に移動し、画像に示すように"TRMNL 7.5" (OG) DIY Kit"を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/TRMNL_DIY_Kit/13_display_config_tool.png" style={{width:700, height:'auto'}}/></div>
 
-**ステップ7.** 生成されたコードをコピーし、作成した `driver.h` ファイルに貼り付けます。コードは以下のようになります：
+**ステップ7.** 生成されたコードをコピーし、作成した`driver.h`ファイルに貼り付けます。コードは次のようになります：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen (UC8179)
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EE04
 ```
 
-ステップ 8. これで例をTRMNL DIYキットにアップロードして、ePaperディスプレイの動作を確認できます！
+ステップ8. これでサンプルをTRMNL DIYキットにアップロードし、ePaperディスプレイの動作を確認できます！
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/TRMNL_DIY_Kit/18_upload_sketch.jpg" style={{width:700, height:'auto'}}/></div>
 
 ### 基本的なePaperディスプレイの例
 
-ePaperディスプレイにグラフィックを描画する方法を示すシンプルなアナログ時計の例を見てみましょう。[この例](https://github.com/Seeed-Studio/Seeed_GFX/blob/master/examples/ePaper/Basic/Clock/Clock.ino)は、時針、分針、秒針を持つクラシックな時計の文字盤を作成します。
+ePaperディスプレイにグラフィックを描画する方法を示すシンプルなアナログ時計の例を探ってみましょう。[この例](https://github.com/Seeed-Studio/Seeed_GFX/blob/master/examples/ePaper/Basic/Clock/Clock.ino)は、時針、分針、秒針を持つクラシックな時計の文字盤を作成します。
 
 ```cpp
 #include <SPI.h>
@@ -493,16 +559,16 @@ static uint8_t conv2d(const char *p)
 #endif
 ```
 
-**時計の例の動作原理：**
+**時計サンプルの動作原理：**
 
-この洗練された例は、ePaperディスプレイ上にクラシックなアナログ時計を作成します。その動作原理を詳しく見てみましょう：
+この洗練されたサンプルは、ePaperディスプレイ上にクラシックなアナログ時計を作成します。その動作原理を詳しく見てみましょう：
 
 1. **初期化と設定：**
-   - コードは`#ifdef EPAPER_ENABLE`による条件コンパイルを使用して、e-paperディスプレイサポートを持つハードウェア上でのみ実行されることを保証します。
+   - コードは`#ifdef EPAPER_ENABLE`による条件コンパイルを使用して、e-paperディスプレイサポートを持つハードウェアでのみ実行されるようにしています。
    - 時計の針の位置とその前の位置を追跡するための変数を宣言します。
    - 初期時刻は`__TIME__`マクロを使用してスケッチのコンパイル時刻に基づいて設定されます。
 
-2. **セットアップ関数：**
+2. **Setup関数：**
    - `epaper.begin()`でe-paperディスプレイを初期化します。
    - `epaper.fillScreen(TFT_WHITE)`を使用してディスプレイを白で背景として塗りつぶします。
    - 時計の文字盤を白い内部を持つ黒い円として描画します。
@@ -512,40 +578,40 @@ static uint8_t conv2d(const char *p)
    - ディスプレイの下部に「Time flies」のテキストを追加します。
    - 最後に`epaper.update()`を呼び出して物理ディスプレイを更新します。
 
-3. **ループ関数：**
+3. **Loop関数：**
    - 毎秒（`millis()`が`targetTime`を超えたとき）、時計の針を更新します。
    - 必要に応じて秒、分、時間をインクリメントします。
    - 現在の時刻に基づいて各針の角度を計算します。
    - 針の位置は三角関数を使用して計算されます：
-     - 時針：1時間あたり30度（分による調整を加える）
-     - 分針：1分あたり6度（秒による調整を加える）
+     - 時針：1時間あたり30度（分による調整を含む）
+     - 分針：1分あたり6度（秒による調整を含む）
      - 秒針：1秒あたり6度
-   - 不要な更新を減らしてディスプレイの寿命を延ばすため、時針と分針は1分に1回のみ（秒 = 0のとき）消去して再描画します。
+   - 不要な更新を減らしてディスプレイの寿命を延ばすため、時針と分針は1分に1回（秒 = 0のとき）のみ消去して再描画します。
    - 秒針は毎秒、前の位置を消去して新しい位置に描画することで更新されます。
    - すべての針を描画した後、中央の点を更新し、`epaper.update()`を呼び出して物理ディスプレイを更新します。
 
 4. **ヘルパー関数：**
    - `conv2d`関数は数値の文字列表現を整数値に変換し、コンパイル時の時、分、秒の値を解析するために使用されます。
 
-**この例に関する重要な注意事項：**
+**このサンプルに関する重要な注意事項：**
 
-1. **ディスプレイ更新：** LCDやOLEDディスプレイとは異なり、ePaperディスプレイは頻繁な更新用に設計されていません。この例は毎秒ディスプレイを更新しますが、これはデモンストレーション目的では問題ありませんが、実際のアプリケーションでは、ディスプレイの寿命を延ばすためにより少ない頻度で更新することをお勧めします。
+1. **ディスプレイ更新：** LCDやOLEDディスプレイとは異なり、ePaperディスプレイは頻繁な更新用に設計されていません。このサンプルは毎秒ディスプレイを更新しますが、これはデモンストレーション目的では問題ありませんが、実際のアプリケーションでは、ディスプレイの寿命を延ばすためにより少ない頻度で更新することをお勧めします。
 
-2. **部分更新：** この例は、ディスプレイの必要な部分のみを消去して再描画することで部分更新を実演しており、これは画面全体を更新するよりも効率的です。
+2. **部分更新：** このサンプルは、ディスプレイの必要な部分のみを消去して再描画することで部分更新を実演しており、これは画面全体を更新するよりも効率的です。
 
-3. **条件コンパイル：** `#ifdef EPAPER_ENABLE`ディレクティブは、e-paperディスプレイがシステムで適切に設定されている場合にのみコードがコンパイルされ実行されることを保証します。
+3. **条件コンパイル：** `#ifdef EPAPER_ENABLE`ディレクティブにより、e-paperディスプレイがシステムで適切に設定されている場合にのみコードがコンパイルされ実行されることが保証されます。
 
-4. **描画関数：** この例は様々な描画関数を紹介しています：
+4. **描画関数：** このサンプルは様々な描画関数を紹介しています：
    - `fillCircle()`：時計の文字盤を作成
    - `drawLine()`：時計の針と時間マーカーを描画
    - `drawPixel()`と`fillCircle()`：分マーカー用
    - `drawCentreString()`：中央揃えテキスト用
 
-このアナログ時計の例は、TRMNL 7.5" (OG) DIY KitのePaperディスプレイ上で独自のグラフィカルアプリケーションを作成するための優れた出発点を提供します。
+このアナログ時計サンプルは、TRMNL 7.5" (OG) DIY KitのePaperディスプレイ上で独自のグラフィカルアプリケーションを作成するための優れた出発点を提供します。
 
 ### 描画とテキスト関数
 
-Seeed_GFXライブラリは、ディスプレイ上に描画するための多くの関数を提供します：
+Seeed_GFXライブラリは、ディスプレイに描画するための多くの関数を提供しています：
 
 - `display.drawPixel(x, y, color)`：単一のピクセルを描画
 - `display.drawLine(x0, y0, x1, y1, color)`：線を描画
@@ -568,9 +634,9 @@ Seeed_GFXライブラリは、ディスプレイ上に描画するための多�
 
 描画操作の後は、物理ディスプレイを更新するために`display.update()`を呼び出すことを忘れないでください。
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品でのご体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="table-center">
   <div class="button_tech_support_container">

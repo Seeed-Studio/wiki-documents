@@ -337,7 +337,7 @@ void loop() {}
 ```
 
 :::info
-For details to see CASIC Protocol Messages of Quectel_L76K_GNSS.
+有关详细信息请参阅 Quectel_L76K_GNSS 的 CASIC 协议消息。
 
 ```c
 struct CASIC_Messages {  

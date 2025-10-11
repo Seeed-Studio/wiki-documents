@@ -77,12 +77,12 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
@@ -119,8 +119,8 @@ west build -p always -b xiao_esp32s3 samples/bluetooth/observer
 west flash
 west espressif monitor
 ```
+Verás una consola disponible para enviar comandos a la placa:
 
-You will see a console available for sending commands to the board:
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
 Starting Observer Demo

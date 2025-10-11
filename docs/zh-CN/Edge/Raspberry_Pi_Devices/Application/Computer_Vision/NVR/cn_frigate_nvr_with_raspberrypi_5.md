@@ -82,7 +82,7 @@ sudo apt update
 sudo apt install dkms
 ```
 
-Get Hailo PCIe Driver from [GitHub](https://github.com/hailo-ai/hailort-drivers).
+从 [GitHub](https://github.com/hailo-ai/hailort-drivers) 获取 Hailo PCIe 驱动程序。
 
 ```bash
 git clone https://github.com/hailo-ai/hailort-drivers
@@ -90,13 +90,13 @@ cd hailort-drivers/linux/pcie
 git checkout 24e7ff2fb58fab7029024c1a1d3f2d1914f56d7b
 ```
 
-Then, install the Hailo PCIe driver.
+然后，安装 Hailo PCIe 驱动程序。
 
 ```bash
 sudo make install_dkms
 ```
 
-After installation, download firmware for Hailo and copy it to the `/lib/firmware/hailo` directory.
+安装完成后，下载 Hailo 的固件并将其复制到 `/lib/firmware/hailo` 目录。
 
 ```bash
 cd ../..
@@ -111,7 +111,7 @@ sudo cp hailo8_fw*.bin /lib/firmware/hailo/hailo8_fw.bin
 options hailo_pci force_desc_page_size=4096
 ```
 
-Restart the system to take effect.
+重启系统以使更改生效。
 
 ```bash
 sudo reboot
@@ -249,19 +249,20 @@ $ ls /dev/hailo*
 打开 config.txt
 
 ```
-sudo nano /boot/firmware/config.txt 
+sudo nano /boot/firmware/config.txt
 ```
 
-Add the following text to config.txt
+将以下文本添加到 config.txt
 
 ```
+
 dtparam=pciex1_gen=3
 dtoverlay=pciex1-compat-pi5,no-mip
 ```
 
-Then use `Ctrl+x` to save the file and reboot the AI box
+然后使用 `Ctrl+x` 保存文件并重启 AI 设备
 
-### Install docker and hailo-all
+### 安装 docker 和 hailo-all
 
 ```
 sudo apt update
@@ -270,18 +271,17 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker $USER
 sudo apt install docker-compose-plugin
-```
 
 ### Create yml file
 
-Create frigate.yml for docker compose to run frigate
+创建 frigate.yml 用于 docker compose 运行 frigate
 
 ```
 cd ~
 sudo nano frigate.yml
 ```
 
-Here is an example of frigate.yml
+这是 frigate.yml 的一个示例
 
 ```
 version: "3.9"
@@ -312,7 +312,7 @@ services:
             - 5003:5003
 ```
 
-Download yolo model and create config.yml.
+下载 yolo 模型并创建 config.yml。
 
 ```
 mkdir config && cd config && mkdir model_cache
@@ -321,7 +321,7 @@ cd model_cache && wget https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZ
 cd .. && nano config.yml
 ```
 
-Here is an example of config.yml
+这是 config.yml 的一个示例
 
 ```yml
 database:
@@ -418,9 +418,9 @@ camera_groups:
       - yard1
 ```
 
-### Pull docker image and run frigate
+### 拉取 docker 镜像并运行 frigate
 
-Pull frigate_seeed image
+拉取 frigate_seeed 镜像
 
 ```
 cd ~

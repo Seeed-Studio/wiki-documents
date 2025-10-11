@@ -134,8 +134,7 @@ esphome/esphome:latest
 ```sh
 vi configuration.yaml
 ```
-
-Add following content to the end of `configuration.yaml`.
+将以下内容添加到 `configuration.yaml` 的末尾。
 
 ```
 # Example configuration.yaml entry

@@ -621,7 +621,7 @@ Radio.SetMaxPayloadLength( MODEM_LORA, 255 );
 Radio.Rx( 0 ); // Continuous Rx
 ```
 
-#### Step 3.4: Compile and Flash the Code to the SenseCAP Indicator
+#### ステップ 3.4: コードをコンパイルしてSenseCAP Indicatorにフラッシュする
 
 ```cpp
 /**

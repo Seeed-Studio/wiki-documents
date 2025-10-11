@@ -86,7 +86,7 @@ SSHでreTerminal DMにアクセスできたら、以下の手順に進んでく�
 cd .node-red/
 ```
 
-STEP 2: Modbus ノードのインストール
+ステップ 2: Modbus ノードのインストール
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/npm-install-node.png" /></div><br />
 
@@ -94,7 +94,7 @@ STEP 2: Modbus ノードのインストール
 npm install node-red-contrib-modbus
 ```
 
-STEP 3: ノードがインストールされたら、以下のコマンドでNode-REDサービスを再起動してください：
+ステップ 3: ノードがインストールされたら、以下のコマンドでNode-REDサービスを再起動してください：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-red-restart.png" /></div><br />
 
@@ -174,52 +174,52 @@ java -jar ModbusMechanic.jar
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/ModbusMechanic.png" /></div>
 
-STEP 2-3: 以下に示すように、`ModbusMechanic`の`Serial Settings Port`を同じように設定してください
+ステップ 2-3: 以下に示すように、`ModbusMechanic`の`Serial Settings Port`を同じように設定してください
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/ModbusMechanic-config.png" /></div>
 
-STEP 3: `Slave Simulator`のセットアップ
+ステップ 3: `Slave Simulator`のセットアップ
 
-STEP 3-1: `ModbusMechanic`のToolsから`Slave Simulator`を開く
+ステップ 3-1: `ModbusMechanic`のToolsから`Slave Simulator`を開く
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/slave-sim.png" /></div>
 
-STEP 3-2: ポップアップから`RTU`を選択する1 Mbit
+ステップ 3-2: ポップアップから`RTU`を選択する1 Mbit
 
-STEP 3-4-2: `Register number`として`1`を入力する
+ステップ 3-4-2: `Register number`として`1`を入力する
 
-STEP 3-4-3: `Data type`として`U int 16`を選択する
+ステップ 3-4-3: `Data type`として`U int 16`を選択する
 
-STEP 3-4-4: `Value`として`120`を入力する
+ステップ 3-4-4: `Value`として`120`を入力する
 
-STEP 3-4-5: `Word Swap`をチェックする
+ステップ 3-4-5: `Word Swap`をチェックする
 
-STEP 3-4-6: `Add`をクリックして確定する
+ステップ 3-4-6: `Add`をクリックして確定する
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/slave-sim-settings.png" /></div>
 
-STEP 3-5: 以下の画像と同様の設定になっているはずです
+ステップ 3-5: 以下の画像と同様の設定になっているはずです
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/add-slave-input-data.png" /></div>
 
-STEP 3-6: STEPS 4-4を繰り返して、以下に示すように2つのレジスタを追加します。`Register 2`は`Value 12`、`Register 3`は`Value 1`とします
+ステップ 3-6: ステップS 4-4を繰り返して、以下に示すように2つのレジスタを追加します。`Register 2`は`Value 12`、`Register 3`は`Value 1`とします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/slave-sim-sample-setting.png" /></div>
 
 
 #### フローの編集
 
-STEP 1: `Modbus Read`を`Flow Editor`パネルにドラッグする
+ステップ 1: `Modbus Read`を`Flow Editor`パネルにドラッグする
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/drag-modbus-read.png" /></div>
 
-STEP 2: Modbusサーバーの設定
+ステップ 2: Modbusサーバーの設定
 
-STEP 2-1: `Modbus Read`をダブルクリックして`Node editor panel`を開く
+ステップ 2-1: `Modbus Read`をダブルクリックして`Node editor panel`を開く
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/modbus-read-node-editor.png" /></div>
 
-STEP 2-2: サーバー設定オプションの`鉛筆`アイコンをクリックする
+ステップ 2-2: サーバー設定オプションの`鉛筆`アイコンをクリックする
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/modbus-server-config-button.png" /></div>
 
@@ -227,22 +227,22 @@ STEP 2-2: サーバー設定オプションの`鉛筆`アイコンをクリッ�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/modbus-client-config.png" /></div>
 
-STEP 2-3: 以下の画像に示すように、Modbusポートを設定するために以下の手順を注意深く実行してください。
+ステップ 2-3: 以下の画像に示すように、Modbusポートを設定するために以下の手順を注意深く実行してください。
 
-STEP 2-3-1: ドロップダウンリストからタイプをSerial Expertに設定する
+ステップ 2-3-1: ドロップダウンリストからタイプをSerial Expertに設定する
 
-STEP 2-3-2: シリアルポート`/dev/ttyCH343USB1`を選択する
+ステップ 2-3-2: シリアルポート`/dev/ttyCH343USB1`を選択する
 
-STEP 2-3-3: 以下の画像に示すようにシリアルポートオプションを設定する
+ステップ 2-3-3: 以下の画像に示すようにシリアルポートオプションを設定する
 
-STEP 2-3-4: 以下の画像に示すように追加のModbusサーバーポートオプションを設定する
+ステップ 2-3-4: 以下の画像に示すように追加のModbusサーバーポートオプションを設定する
 
-STEP 2-3-5: `Add`または`Update`をクリックして変更を適用する。
+ステップ 2-3-5: `Add`または`Update`をクリックして変更を適用する。
 
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/config-modbus.png" /></div>
 
-STEP 3: 以下の画像に示すようにModbus-Readノードを設定し、`Done`をクリックする
+ステップ 3: 以下の画像に示すようにModbus-Readノードを設定し、`Done`をクリックする
 
 :::note
 
@@ -253,7 +253,7 @@ STEP 3: 以下の画像に示すようにModbus-Readノードを設定し、`Don
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/config-modbus-read.png" /></div>
 
 
-STEP 4: `debug node`と`Modbus Response node`を見つけてドラッグし、以下に示すようにノードを接続する
+ステップ 4: `debug node`と`Modbus Response node`を見つけてドラッグし、以下に示すようにノードを接続する
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/modbus-responese.gif" /></div>
 

@@ -8,7 +8,7 @@ keywords:
   - XIAO
   - nRF54L15
 last_update:
-  date: 11/9/2025
+  date: 9/11/2025
   author: Jason
 ---
 

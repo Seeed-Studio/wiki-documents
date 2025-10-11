@@ -44,7 +44,7 @@ sudo apt-get install python3-dev python3-venv python3-pip python3-opencv camke g
 pip install pybind11
 ```
 
-**Step 2.** Install the necessary packages for building the project:
+**ステップ 2.** プロジェクトをビルドするために必要なパッケージをインストールします：
 
 ```bash
 cd pyorbbecsdk

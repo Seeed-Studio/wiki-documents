@@ -235,7 +235,7 @@ ESP-IDF 框架提供了一个强大的配置工具叫做 **menuconfig**，它提
 idf.py menuconfig
 ```
 
-This will display a text-based UI with configuration categories:
+这将显示一个基于文本的UI,其中包含配置类别:
 
 ```
     Application Configuration  --->
@@ -367,14 +367,13 @@ idf.py build
    ```bash
    idf.py build
    ```
-
-4. **Flash the project to XIAO ESP32-C3**:
+4. **将项目烧录到 XIAO ESP32-C3**：
 
    ```bash
    idf.py -p /dev/ttyUSB0 flash
    ```
 
-   Note: Your port might be different (Windows: COM3, COM4, etc.)
+   注意：您的端口可能不同（Windows：COM3、COM4等）
 
 5. **Monitor the output** (optional):
 
@@ -421,7 +420,7 @@ idf.py build
    cd ~/Desktop/xiao_ibeacon/test_scripts
    ```
 
-2. Run the setup script to create and configure a virtual environment:
+2. 运行安装脚本来创建和配置虚拟环境：
 
    ```bash
    # On Linux/macOS
@@ -464,7 +463,7 @@ BLE 扫描器脚本（`ble_beacon_scanner.py`）扫描 BLE 广播并显示来自
 python ble_beacon_scanner.py
 ```
 
-The script will display a nicely formatted output with the latest sensor readings:
+该脚本将显示一个格式良好的输出,其中包含最新的传感器读数:
 
 ```
 ╔═══════════════════════════════════════════════╗

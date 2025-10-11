@@ -90,7 +90,7 @@ no_comments: false # for Disqus
 sudo apt install python3.11
 ```
 
-Create yolo_env as your virtual environment
+创建 yolo_env 作为你的虚拟环境
 
 ```
 python3.11 -m venv yolo_env
@@ -144,7 +144,7 @@ cd ~
 sudo apt install python3.8
 ```
 
-Create hailo_env as your virtual environment
+创建 hailo_env 作为你的虚拟环境
 
 ```
 python3.8 -m venv hailo_env
@@ -173,7 +173,7 @@ pip install hailo_dataflow_compiler-3.27.0-py3-none-linux_x86_64.whl
 pip install hailo_model_zoo-2.11.0-py3-none-any.whl 
 ```
 
-Test whether `hailo_model_zoo` is functioning correctly.
+测试 `hailo_model_zoo` 是否正常运行。
 
 ```
 hailomz -h
@@ -189,14 +189,14 @@ cd yolomodel/runs/detect/retrain_yolov8n/weights
 git clone https://github.com/hailo-ai/hailo_model_zoo.git
 ```
 
-Install coco dataset for evaluate/optimize/compile the yolov8n model
+安装 coco 数据集以评估/优化/编译 yolov8n 模型
 
 ```
 python hailo_model_zoo/datasets/create_coco_tfrecord.py val2017
 python hailo_model_zoo/datasets/create_coco_tfrecord.py calib2017
 ```
 
-### Use `hailo_model_zoo` to parse the model
+### 使用 `hailo_model_zoo` 解析模型
 
 ```
 hailomz parse --hw-arch hailo8l --ckpt ./best.onnx yolov8n
@@ -241,7 +241,7 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-### Set pcie to gen2/gen3(gen3 is faster than gen2)
+### 将 pcie 设置为 gen2/gen3（gen3 比 gen2 更快）
 
 Add following text to ```/boot/firmware/config.txt```
 
@@ -296,7 +296,7 @@ git clone https://github.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-
 cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L
 ```
 
-### Copy your model to the raspberry pi5
+### 将你的模型复制到树莓派 pi5
 
 Make a directory named `hailomodel`
 
@@ -314,7 +314,7 @@ scp -r ./yolomodel/runs/detect/retrain_yolov8n/weights/yolov8n.hef username@ip /
 
 ### Change code
 
-Find line 105 and 106 in `object-detection-hailo.py`, and change the code like below:
+在 `object-detection-hailo.py` 文件中找到第 105 行和第 106 行，并按如下方式修改代码：
 
 ```
         elif args.network == "yolov8n":

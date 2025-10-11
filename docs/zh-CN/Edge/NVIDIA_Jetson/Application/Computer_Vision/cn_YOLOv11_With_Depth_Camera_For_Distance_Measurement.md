@@ -44,7 +44,7 @@ sudo apt-get install python3-dev python3-venv python3-pip python3-opencv camke g
 pip install pybind11
 ```
 
-**Step 2.** Install the necessary packages for building the project:
+**步骤 2.** 安装构建项目所需的必要包：
 
 ```bash
 cd pyorbbecsdk
@@ -80,7 +80,7 @@ python setup.py bdist_wheel
 pip install dist/*.whl
 ```
 
-**Step 5.** (Optional) Generate stubs for better IntelliSense support in your IDE:
+**步骤 5.** (可选) 为您的IDE生成存根以获得更好的IntelliSense支持：
 
 ```bash
 source env.sh
@@ -198,8 +198,7 @@ cd tensorrtx/yolo11
 ```bash
 wget -O yolo11n.pt https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt
 ```
-
-**Step 3.** Generate the .wts file:
+**步骤 3.** 生成 .wts 文件：
 
 ```bash
 python gen_wts.py -w yolo11n.pt -o yolo11n.wts -t detect

@@ -266,6 +266,24 @@
         "sha256": "84ae723e6a78568dfb11aa85fc0a4f70504c58e2f339071b237aa0a4785a2591"
     },
     {
+        "product": "j4012classic",
+        "l4t": "36.4.3",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdcCLLY0ZBdIl5YpQk9n1jUBRnqIhjpDHZxo4_6OaxIbYg?e=R7rEqU",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-devit-orin-nx-16g-j40-6.2-36.4.3-2025-07-14.tar.gz",
+        "foldername": "mfi_recomputer-orin",
+        "sha256": "489f2b5d41655208eb2c5cfd980162b77d3871ad9ea06cd55c05fbb8b747500f"
+    },
+    {
+        "product": "j4011classic",
+        "l4t": "36.4.3",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ETW85CuJ9p5Gtefm7r7Hh74B6VvKATStF5B0SyfANjMZ2Q?e=CPj7HB",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-devit-orin-nx-8g-j40-6.2-36.4.3-2025-07-14.tar.gz",
+        "foldername": "mfi_recomputer-orin",
+        "sha256": "dcc74cab5f38e62c7a892de6dfd547ebd61c5b5b71c5ef9f5a0ef675518ef062"
+    },
+    {
         "product": "j3011classic",
         "l4t": "36.4.3",
         "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcyQPZeI9glGmENtN2a4A2oBizsgTMATEMEMZCPI06aWJg?e=ctPbmU",

@@ -301,6 +301,7 @@ Por favor consulta la tabla a continuación para preparar la máquina host.
 **Paso 2.** Enciende el reComputer conectando el cable incluido del adaptador de corriente y conecta la placa con la PC host Ubuntu con un cable de transmisión de datos USB Tipo-C
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/2.png"/></div>
+
 **Paso 3.** En la PC host Linux, abra una ventana de Terminal e ingrese el comando `lsusb`. Si el contenido devuelto tiene una de las siguientes salidas según el Jetson SoM que use, entonces la placa está en modo de recuperación forzada.
 
 - Para Orin NX 16GB: **0955:7323 NVidia Corp**
@@ -545,7 +546,8 @@ Aquí instalaremos Jetpack 5.1.3 en el reComputer.
 </table>
 </div>
 
-:::infoPara verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
+:::info
+Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
 
 En una máquina host Ubuntu, abre la terminal y ejecuta el comando `sha256sum <Archivo>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, confirma que el firmware que descargaste está completo e intacto.
 :::
@@ -780,6 +782,11 @@ Por favor completa la **Configuración del Sistema** según tus necesidades.
 
 Aquí usaremos NVIDIA L4T 36.4.3 para instalar Jetpack 6.2 en el reComputer
 
+:::danger
+Si estás utilizando un módulo **Orin NX 16GB/8GB**, **no habilites el modo MAXN SUPER**.  
+La capacidad de refrigeración de la placa base reComputer J401 es insuficiente para soportarlo, y forzar este modo puede provocar daños permanentes en el módulo.
+:::
+
 **Paso 1:** Descarga la imagen del sistema a tu PC Ubuntu correspondiente al módulo Jetson que estés usando:
 
 <div class="table-center">
@@ -792,6 +799,20 @@ Aquí usaremos NVIDIA L4T 36.4.3 para instalar Jetpack 6.2 en el reComputer
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>Orin NX 16GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdcCLLY0ZBdIl5YpQk9n1jUBRnqIhjpDHZxo4_6OaxIbYg?e=R7rEqU" target="_blank" rel="noopener noreferrer">Download</a>
+      </td>
+      <td>489F2B5D41655208EB2C5CFD980162B77D3871AD9EA06CD55C05FBB8B747500F</td>
+    </tr>
+    <tr>
+      <td>Orin NX 8GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ETW85CuJ9p5Gtefm7r7Hh74B6VvKATStF5B0SyfANjMZ2Q?e=CPj7HB" target="_blank" rel="noopener noreferrer">Download</a>
+      </td>
+      <td>DCC74CAB5F38E62C7A892DE6DFD547EBD61C5B5B71C5EF9F5A0EF675518EF062 </td>
+    </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>
@@ -809,6 +830,7 @@ Aquí usaremos NVIDIA L4T 36.4.3 para instalar Jetpack 6.2 en el reComputer
   </tbody>
 </table>
 </div>
+
 :::info
 Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
 

@@ -62,7 +62,7 @@ CVEDIA-RT 支持以下平台：
 tar -xzvf <filename.tar.gz>
 ```
 
-**Step 2:** Inside the extracted folder on the Jetson device, run the installer script
+**步骤 2:** 在 Jetson 设备上的解压文件夹内，运行安装脚本
 
 ```sh
 sudo ./install.sh

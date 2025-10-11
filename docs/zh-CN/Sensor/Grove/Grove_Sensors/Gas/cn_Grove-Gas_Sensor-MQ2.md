@@ -18,7 +18,7 @@ last_update:
 
 Grove - 气体传感器(MQ2)模块适用于气体泄漏检测（家庭和工业）。它适合检测H2、LPG、CH4、CO、酒精、烟雾或丙烷。由于其高灵敏度和快速响应时间，可以尽快进行测量。传感器的灵敏度可以通过电位器进行调节。
 
-<!-- |Sensor|Gas Type|Get One Now|
+<!-- |Sensor|Gas Type|立即获取|
 |:---:|---|---|
 |[MQ2](https://wiki.seeedstudio.com/cn/Grove-Gas_Sensor-MQ2/)|Combustible Gas, Smoke|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|
 |[MQ3](https://wiki.seeedstudio.com/cn/Grove-Gas_Sensor-MQ3/)|Alcohol Vapor|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor%28MQ3%29-p-1418.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|

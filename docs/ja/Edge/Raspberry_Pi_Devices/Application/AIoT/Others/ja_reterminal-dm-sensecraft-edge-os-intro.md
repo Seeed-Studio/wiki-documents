@@ -207,17 +207,17 @@ SenseCraft Edge更新の場合：
 
 ##### ローカル更新
 
-<!-- STEP 1: Please download the update files and save it to an USB storage device -->
+<!-- ステップ 1: アップデートファイルをダウンロードして USB ストレージデバイスに保存してください -->
 
-STEP 1: `ローカル更新`ボタンをクリックしてください
+ステップ 1: `ローカル更新`ボタンをクリックしてください
 
 以下のポップアップウィンドウが表示されます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/sensecraft-edge/local-update.png" /></div>
 
-STEP 2: 上記の画像に示されているように、更新ファイルが入ったUSBストレージデバイスをreTerminal DMに挿入してください。
+ステップ 2: 上記の画像に示されているように、更新ファイルが入ったUSBストレージデバイスをreTerminal DMに挿入してください。
 
-STEP 3: ポップアップウィンドウで`次へ`をクリックしてください。`次へ`をクリックした後は読み込みに時間がかかりますので、しばらくお待ちください。
+ステップ 3: ポップアップウィンドウで`次へ`をクリックしてください。`次へ`をクリックした後は読み込みに時間がかかりますので、しばらくお待ちください。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/sensecraft-edge/select-update-file.png" /></div>
 
@@ -232,7 +232,7 @@ USBに何らかのエラーがある場合、`USBフラッシュドライブが�
 システムの更新をより簡単にするために、良好なUSBストレージデバイスを使用し、FAT32またはEXT4にフォーマットされていること、USBストレージサイズが64GB以下であることを確認してください。
 :::
 
-STEP 4: 次へをクリックして更新プロセスを待ちます
+ステップ 4: 次へをクリックして更新プロセスを待ちます
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/sensecraft-edge/local-updating.png" /></div>
 
@@ -252,15 +252,15 @@ STEP 4: 次へをクリックして更新プロセスを待ちます
 
 PINを設定する手順:
 
-STEP 1: PIN設定ボタンをクリックして切り替え、PIN設定プロセスに入ります
+ステップ 1: PIN設定ボタンをクリックして切り替え、PIN設定プロセスに入ります
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/sensecraft-edge/toggle-pin-setting.png" /></div>
 
-STEP 2: 8桁のPINコードを入力してください
+ステップ 2: 8桁のPINコードを入力してください
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/sensecraft-edge/set-pin.png" /></div>
 
-STEP 3: 確認のため8桁のPINコードを再度入力してください
+ステップ 3: 確認のため8桁のPINコードを再度入力してください
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/sensecraft-edge/set-pin-confirm.png" /></div>
 
@@ -271,19 +271,19 @@ STEP 3: 確認のため8桁のPINコードを再度入力してください
 この手順は、すでにPINコードが設定されている場合にのみ有効です
 :::
 
-STEP 1: RESETボタンをクリックします
+ステップ 1: RESETボタンをクリックします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/sensecraft-edge/reset-pins.png" /></div>
 
-STEP 2: リセットプロセスを確認するため、現在のPINコードを入力してください
+ステップ 2: リセットプロセスを確認するため、現在のPINコードを入力してください
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/sensecraft-edge/enter-pin-to-reset.png" /></div>
 
-STEP 3: 新しい8桁のPINコードを入力してください
+ステップ 3: 新しい8桁のPINコードを入力してください
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/sensecraft-edge/set-pin.png" /></div>
 
-STEP 4: 確認のため新しい8桁のPINコードを再度入力してください
+ステップ 4: 確認のため新しい8桁のPINコードを再度入力してください
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/sensecraft-edge/set-pin-confirm.png" /></div>
 

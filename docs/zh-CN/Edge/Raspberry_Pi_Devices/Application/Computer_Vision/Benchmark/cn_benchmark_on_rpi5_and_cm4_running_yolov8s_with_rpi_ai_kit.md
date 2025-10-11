@@ -99,8 +99,7 @@ import TabItem from '@theme/TabItem';
 sudo apt update
 sudo apt full-upgrade
 ```
-
-#### Set pcie to gen2/gen3(gen3 is faster than gen2)
+#### 将 pcie 设置为 gen2/gen3（gen3 比 gen2 更快）
 
 Add following text to ```/boot/firmware/config.txt```
 

@@ -55,7 +55,7 @@ reServerは、Nvidia Jetsonプラットフォームをベースとしたエッ�
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong></a>
 </div>
 
 ## はじめに
@@ -85,7 +85,7 @@ sudo apt install nvidia-jetson-services
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/ai-nvr/jps.png" />
 </div>
 
-### Step2. ingress設定の変更
+### ステップ2. ingress設定の変更
 
 `/opt/nvidia/jetson/services/ingress/config/` ディレクトリで、ai-nvr-nginx.conf という名前の新しいファイルを作成し、以下の内容を記入します：
 
@@ -152,7 +152,7 @@ sudo systemctl start jetson-vst
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/ai-nvr/webui.png" />
 </div>
 
-### Step5. AI NVR設定ファイルをダウンロードする
+### ステップ5. AI NVR設定ファイルをダウンロードする
 
 ブラウザを開いて[ダウンロードページ](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/jps/resources/reference-workflow-and-resources)に移動します。
 
@@ -171,7 +171,7 @@ tar -xvf ai_nvr-1.1.0.tar.gz
 cd ai_nvr
 ```
 
-### Step6. DeepStream 設定ファイルの修正
+### ステップ6. DeepStream 設定ファイルの修正
 
 モデルの推論結果をリアルタイムで確認できるようにするため、DeepStreamの入力方法を修正する必要があります。ここでは、RTSP出力として設定できます。
 
@@ -317,7 +317,7 @@ WDM_WL_NAME_IGNORE_REGEX: ".*deepstream.*"
 ...
 ```
 
-### Step7. AI NVRアプリケーションを開始する
+### ステップ7. AI NVRアプリケーションを開始する
 
 Jetsonターミナルで、適切なコマンドを入力してAI NVRアプリケーションを開始します。
 

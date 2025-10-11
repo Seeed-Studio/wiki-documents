@@ -28,18 +28,18 @@ last_update:
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-Seeed Studio XIAO ESP32S3は、様々な周辺インターフェースとGPIOピンを備えた強力で多用途な開発ボードです。これらのピンは、他のデバイスとの通信、アナログセンサーの読み取り、LEDの制御など、様々な目的に使用できます。このチュートリアルでは、XIAO ESP32S3とその関連ボードであるXIAO ESP32S3 Senseのピン配置を探り、これらのピンを異なる目的で使用する方法を学びます。具体的には、1x UART、1x lIC、1x lIS、1x SPI、11x GPIO（PWM）、9xADC、1x ユーザーLED、1x 充電LED、1x リセットボタン、1x ブートボタン、そしてXIAO ESP32S3 Senseの場合は1x B2Bコネクタ（追加の2つのGPIOを含む）の使用方法を説明します。このチュートリアルの終わりには、XIAO ESP32S3のピン配置をよく理解し、プロジェクトで効果的に使用できるようになります。
+Seeed Studio XIAO ESP32S3は、様々な周辺インターフェースとGPIOピンを備えた強力で多用途な開発ボードです。これらのピンは、他のデバイスとの通信、アナログセンサーの読み取り、LEDの制御など、様々な目的に使用できます。このチュートリアルでは、XIAO ESP32S3とその関連ボードであるXIAO ESP32S3 Senseのピン配置を探索し、これらのピンを異なる目的で使用する方法を学びます。具体的には、1x UART、1x I2C、1x I2S、1x SPI、11x GPIO（PWM）、9x ADC、1x ユーザーLED、1x 充電LED、1x リセットボタン、1x Bootボタン、そしてXIAO ESP32S3 Senseの場合は1x B2Bコネクタ（追加の2つのGPIOを含む）の使用方法を説明します。このチュートリアルの終わりには、XIAO ESP32S3のピン配置をよく理解し、プロジェクトで効果的に使用できるようになります。
 
 ## 入門
 
@@ -68,9 +68,13 @@ Seeed Studio XIAO ESP32S3は、様々な周辺インターフェースとGPIOピ
  </tr>
 </table>
 
+:::caution
+XIAO ESP32-S3はGPIO41とGPIO42をピンA11とA12に割り当てていますが、ESP32-S3チップの性質上、ピンA11とA12はADC機能をサポートしていません。必ず区別して使い分けてください。
+:::
+
 - 5V - これはUSBポートからの5V出力です。電圧入力としても使用できますが、外部電源とこのピンの間に何らかのダイオード（ショットキー、信号、電力）を配置し、アノードをバッテリー側、カソードを5Vピン側にする必要があります。
 
-- 3V3 - これはオンボードレギュレータからの調整された出力です。700mAまで引き出すことができます。
+- 3V3 - これはオンボードレギュレータからの調整された出力です。700mAまで供給できます。
 
 - GND - 電源/データ/信号グランド
 
@@ -157,11 +161,11 @@ Seeed Studio XIAO ESP32S3は、様々な周辺インターフェースとGPIOピ
   </tr>
     <tr>
    <td align="center">GPIO 39</td>
-   <td align="center">カメラ SCL</td>
+   <td align="center">Camera SCL</td>
   </tr>
     <tr>
    <td align="center">GPIO 40</td>
-   <td align="center">カメラ SDA</td>
+   <td align="center">Camera SDA</td>
   </tr>
     <tr>
    <td align="center">GPIO 47</td>
@@ -178,7 +182,7 @@ Seeed Studio XIAO ESP32S3は、様々な周辺インターフェースとGPIOピ
 
 このチュートリアルに従って各ピンの機能を使用するには、事前にピンをはんだ付けすることをお勧めします。
 
-XIAO ESP32S3の小型サイズのため、ヘッダーをはんだ付けする際は注意してください。異なるピンを一緒に接着したり、シールドや他のコンポーネントにはんだを付着させたりしないでください。そうしないと、XIAOがショートしたり正常に動作しなくなる可能性があり、これによって生じる結果はユーザーが負担することになります。
+XIAO ESP32S3の小型サイズのため、ヘッダーをはんだ付けする際は注意してください。異なるピンを一緒に接着したり、シールドや他の部品にはんだを付着させたりしないでください。そうしないと、XIAOがショートしたり正常に動作しなくなる可能性があり、これによって生じる結果はユーザーが負担することになります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/4.jpg" style={{width:400, height:'auto'}}/></div>
 
@@ -188,7 +192,7 @@ Senseバージョンを選択した場合、おめでとうございます！追
 
 ## デジタル
 
-XIAO ESP32S3は最大11個の通常のGPIOピンと9個のアナログピンを持っています。この例では、XIAO ESP32S3、XIAO拡張ボード、リレーを使用して、読み取りと書き込みのために異なるデジタルピンを使用する方法を実演します。
+XIAO ESP32S3は最大11個の通常のGPIOピンと9個のアナログピンを持っています。この例では、XIAO ESP32S3、XIAO拡張ボード、リレーを使用して、異なるデジタルピンを読み書きに使用する方法を実演します。
 
 ### ハードウェアの準備
 
@@ -208,22 +212,22 @@ XIAO ESP32S3は最大11個の通常のGPIOピンと9個のアナログピンを�
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
@@ -231,7 +235,7 @@ XIAO ESP32S3は最大11個の通常のGPIOピンと9個のアナログピンを�
 
 XIAO ESP32S3またはSenseを拡張ボードに取り付け、Groveケーブルを使用してリレーを拡張ボードの**A0/D0**インターフェースに接続してください。最後に、USB-CケーブルでXIAOをコンピューターに接続します。
 
-### ソフトウェア実装
+### ソフトウェアの実装
 
 この例では、XIAO拡張ボードに接続されたボタンを使用してリレーのオン/オフ状態を制御する実装を行います。ボタンが押されるとリレーがオンになり、ボタンが離されるとリレーがオフになります。
 
@@ -270,20 +274,20 @@ void loop() {
 デジタル機能を使用したい場合は、ピン番号の接頭辞として文字「D」を使用する必要があります（例：D4、D5）。逆に、ピンのアナログ機能を使用したい場合は、ピン番号の接頭辞として文字「A」を使用する必要があります（例：A4、A5）。
 :::
 
-### Senseバージョンの場合
+### Sense版について
 
-XIAO ESP32S3 Senseの場合、XIAOの11個のデジタルピンに加えて、拡張ボード上の2つのピン（**D11**と**D12**）も使用できます。これらを使用したい場合は、以下の手順に従ってください。
+XIAO ESP32S3 Senseでは、XIAOの11個のデジタルピンに加えて、拡張ボード上の2つのピン（**D11**と**D12**）も使用できます。これらを使用したい場合は、以下の手順に従ってください。
 
 #### ステップ1. J1とJ2の接続を切断する
 
-ESP32-S3のピン数が限られているため、Sense拡張ボード上のD11とD12は、デフォルトでマイクロフォン用に予約されています。D11とD12を他の目的で使用する必要がある場合は、Sense拡張ボードを裏返し、2つのはんだパッド間の白い線に沿って、鋭いナイフでJ1とJ2の接続を切断できます。
+ESP32-S3のピン数が限られているため、Sense拡張ボード上のD11とD12は、デフォルトでマイクロフォン用に予約されています。D11とD12を他の目的で使用する必要がある場合は、Sense拡張ボードを裏返し、2つのはんだパッド間の白い線に沿って、鋭いナイフでJ1とJ2の接続を切断してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/20.png" style={{width:400, height:'auto'}}/></div>
 
 :::caution
-画像からわかるように、XIAOのスペース制限により、多くの配線レイアウトが非常にコンパクトです。そのため、J1とJ2の接続を切断する際は、白い線の外側を切らないよう十分注意してください。そうしないと、開発ボードが故障する可能性があります！
+画像からわかるように、XIAOのスペース制限により、多くの配線レイアウトが非常にコンパクトになっています。そのため、J1とJ2の接続を切断する際は、白い線の外側を切らないよう十分注意してください。そうしないと、開発ボードが故障する可能性があります！
 
-XIAO ESP32S3 Senseの追加の2つのピンD11とD12については、まだピンのマクロ定義を行っていません。つまり、これらの2つのピンを制御するためにD11/A11やD12/A12をまだ使用できませんが、GPIO番号（それぞれGPIO12とGPIO13）を使用してこれらの2つのピンを制御できます。これらの2つのピンのマクロ定義をできるだけ早く提出し、提出が完了したら、D/Aピン定義を使用できるようになります。
+XIAO ESP32-S3はGPIO41とGPIO42をピンA11とA12に割り当てていますが、ESP32-S3チップの性質上、ピンA11とA12はADC機能をサポートしていません。必ず区別して使い分けてください。
 :::
 
 :::tip
@@ -310,12 +314,12 @@ J1とJ2の接続を切断した後、拡張ボード上のマイクロフォン�
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
@@ -343,15 +347,15 @@ void loop() {
 }
 ```
 
-上記の方法は、[PWMとしてのデジタル](#pwmとしてのデジタル)と[アナログ](#アナログ)セクションにも適用できます。使用したい拡張ボードのピン番号を変更するだけです。これについては後で繰り返しません。
+上記の方法は、[Digital as PWM](#digital-as-pwm)と[Analog](#analog)セクションにも適用できます。使用したい拡張ボードのピン番号を変更するだけです。これについては後で繰り返しません。
 
 :::caution
-XIAO ESP32S3 Senseの追加の2つのピンD11とD12については、まだピンのマクロ定義を行っていません。つまり、これらの2つのピンを制御するためにD11/A11やD12/A12をまだ使用できませんが、GPIO番号（それぞれGPIO42とGPIO41）を使用してこれらの2つのピンを制御できます。これらの2つのピンのマクロ定義をできるだけ早く提出し、提出が完了したら、D/Aピン定義を使用できるようになります。
+XIAO ESP32S3 Senseの追加の2つのピンD11とD12については、まだピンのマクロ定義を行っていません。つまり、これらの2つのピンを制御するためにD11/A11やD12/A12をまだ使用することはできませんが、GPIO番号（それぞれGPIO42とGPIO41）を使用してこれらの2つのピンを制御することができます。これらの2つのピンのマクロ定義をできるだけ早く提出し、提出が完了すれば、D/Aピン定義を使用できるようになります。
 :::
 
-## PWMとしてのデジタル
+## Digital as PWM
 
-XIAO ESP32S3のすべてのGPIOピンはPWM出力をサポートしています。そのため、任意のピンを使用してPWMを出力し、ライトの明るさを調整したり、サーボを制御したりできます。
+XIAO ESP32S3のすべてのGPIOピンはPWM出力をサポートしています。そのため、任意のピンを使用してPWMを出力し、ライトの明るさを調整したり、サーボを制御したりすることができます。
 
 ### ハードウェアの準備
 
@@ -371,28 +375,28 @@ XIAO ESP32S3のすべてのGPIOピンはPWM出力をサポートしています�
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-p-852.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-XIAO ESP32S3またはSenseを拡張ボードに取り付け、Groveケーブルを使用してVariable Color LEDを拡張ボードのA0/D0インターフェースに接続してください。最後に、USB-CケーブルでXIAOをコンピューターに接続してください。
+XIAO ESP32S3またはSenseを拡張ボードに取り付け、Groveケーブルを使用してVariable Color LEDを拡張ボードのA0/D0インターフェースに接続してください。最後に、USB-CケーブルでXIAOをコンピューターに接続します。
 
 ### ソフトウェアの実装
 
@@ -425,13 +429,17 @@ void loop() {
 }
 ```
 
-プログラムが正常に実行されると、以下の実行効果が見られます。
+プログラムが正常に実行されると、以下のような実行効果が見られます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/22.gif" style={{width:500, height:'auto'}}/></div>
 
-## アナログ
+## Analog
 
 XIAO ESP32S3では、内蔵の11個のGPIOピンのうち、シリアル通信に使用されるD6とD7ピンを除く残りの9個のピンがアナログ機能をサポートしています。これらのアナログ機能を持つGPIOピンを使用して、酸素センサーや光強度センサーなど、アナログ信号を生成するセンサーから値を読み取ることができます。
+
+:::caution
+XIAO ESP32-S3はGPIO41とGPIO42をピンA11とA12に割り当てていますが、ESP32-S3チップの性質上、ピンA11とA12はADC機能をサポートしていません。必ず区別して使い分けてください。
+:::
 
 ### ハードウェアの準備
 
@@ -445,38 +453,38 @@ XIAO ESP32S3では、内蔵の11個のGPIOピンのうち、シリアル通信�
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:500, height:'auto'}}/></div></td>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:500, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:500, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/cover.jpg" style={{width:500, height:'auto'}}/></div></td>
  </tr>
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Oxygen-Sensor-ME2-O2-f20.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-XIAO ESP32S3またはSenseを拡張ボードに取り付け、Grove ケーブルで酸素センサーを拡張ボードのA0/D0インターフェースに接続してください。最後に、USB-CケーブルでXIAOをコンピューターに接続します。
+XIAO ESP32S3またはSenseを拡張ボードに取り付け、Groveケーブルで酸素センサーを拡張ボードのA0/D0インターフェースに接続してください。最後に、USB-CケーブルでXIAOをコンピューターに接続します。
 
 ### ソフトウェア実装
 
-以下のプログラムでは、`analogRead()`メソッドを使用してセンサーのアナログ値を読み取り、シリアルインターフェースを使用してセンサーの結果を出力します。
+以下のプログラムでは、`analogRead()`メソッドを使用してセンサーのアナログ値を読み取り、Serialインターフェースを使用してセンサーの結果を出力します。
 
 ```cpp
 // Grove - Gas Sensor(O2) test code
@@ -546,29 +554,29 @@ float readConcentration()
 ```
 
 :::tip
-ピンのアナログ機能を使用したい場合は、A4、A5のようにピン番号の接頭辞として文字「A」を使用する必要があります。逆に、デジタル機能を使用したい場合は、D4、D5のようにピン番号の接頭辞として文字「D」を使用する必要があります。
+ピンのアナログ機能を使用したい場合は、A4、A5のようにピン番号の前に文字「A」を付ける必要があります。逆に、デジタル機能を使用したい場合は、D4、D5のようにピン番号の前に文字「D」を付ける必要があります。
 :::
 
-プログラムをアップロードした後、Arduino IDEでシリアルモニターを開き、ボーレートを9600に設定します。酸素センサーのウォームアップを待つと、正確な酸素濃度値を確認できるようになります。
+プログラムをアップロードした後、Arduino IDEでSerial Monitorを開き、ボーレートを9600に設定します。酸素センサーのウォームアップを待つと、正確な酸素濃度値を確認できるようになります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/23.png" style={{width:600, height:'auto'}}/></div>
 
-## シリアル
+## Serial
 
-Arduino IDEで作業する際、シリアル通信は多くのプロジェクトの重要な部分です。Arduino IDEでシリアルを使用するには、まずシリアルモニターウィンドウを開く必要があります。これは、ツールバーの**シリアルモニター**アイコンをクリックするか、**Ctrl+Shift+M**ショートカットキーを押すことで実行できます。
+Arduino IDEで作業する際、Serial通信は多くのプロジェクトで重要な部分です。Arduino IDEでSerialを使用するには、まずSerial Monitorウィンドウを開く必要があります。これは、ツールバーの**Serial Monitor**アイコンをクリックするか、**Ctrl+Shift+M**ショートカットキーを押すことで実行できます。
 
 ### 一般的な使用方法
 
-よく使用されるシリアル関数には以下があります：
+よく使用されるSerial関数には以下があります：
 
 - `Serial.begin()` -- 指定されたボーレートで通信を初期化します
-- `Serial.print()` -- 読み取り可能な形式でデータをシリアルポートに送信します
-- `Serial.write()` -- バイナリデータをシリアルポートに送信します
-- `Serial.available()` -- シリアルポートから読み取り可能なデータがあるかどうかを確認します
-- `Serial.read()` -- シリアルポートから1バイトのデータを読み取ります
-- `Serial.flush()` -- 送信シリアルデータの送信完了を待ちます
+- `Serial.print()` -- 読み取り可能な形式でSerialポートにデータを送信します
+- `Serial.write()` -- Serialポートにバイナリデータを送信します
+- `Serial.available()` -- Serialポートから読み取り可能なデータがあるかどうかを確認します
+- `Serial.read()` -- Serialポートから1バイトのデータを読み取ります
+- `Serial.flush()` -- 送信中のシリアルデータの送信完了を待ちます
 
-これらのシリアル関数を使用することで、Arduinoボードとコンピューター間でデータを送受信でき、インタラクティブなプロジェクトを作成する多くの可能性が開かれます。
+これらのSerial関数を使用することで、Arduinoボードとコンピューター間でデータを送受信でき、インタラクティブなプロジェクトを作成する多くの可能性が開かれます。
 
 以下はサンプルプログラムです：
 
@@ -596,13 +604,13 @@ void loop() {
 }
 ```
 
-このコードでは、まず`setup()`関数で`Serial.begin()`関数を使用してボーレート**9600**でシリアル通信を初期化します。次に、`loop()`関数で`Serial.print()`関数を使用して「Hello World!」をシリアルポートに送信します。
+このコードでは、まず`setup()`関数内で`Serial.begin()`関数を使用してボーレート**9600**でSerial通信を初期化します。次に、`loop()`関数内で`Serial.print()`関数を使用して「Hello World!」をSerialポートに送信します。
 
-また、`Serial.available()`関数を使用してシリアルポートから読み取り可能なデータがあるかどうかを確認します。データがある場合、`Serial.read()`関数を使用して受信バイトを読み取り、incomingByteという変数に格納します。その後、`Serial.print()`と`Serial.println()`関数を使用して「I received: 」に続いてincomingByteの値をシリアルモニターに出力します。
+また、`Serial.available()`関数を使用してSerialポートから読み取り可能なデータがあるかどうかを確認します。データがある場合は、`Serial.read()`関数を使用して受信バイトを読み取り、incomingByteという変数に格納します。その後、`Serial.print()`と`Serial.println()`関数を使用して「I received: 」に続いてincomingByteの値をSerial monitorに出力します。
 
-最後に、`delay()`関数を追加してループを繰り返す前に1秒間待機します。このコードは、Arduino IDEでシリアルポートを通じてデータを送受信するためによく使用されるシリアル関数の使用方法を示しています。
+最後に、`delay()`関数を追加してループを繰り返す前に1秒間待機します。このコードは、Arduino IDEでSerialポートを通じてデータを送受信するために一般的に使用されるSerial関数の使用方法を示しています。
 
-プログラムをアップロードした後、Arduino IDEでシリアルモニターを開き、ボーレートを9600に設定します。シリアルモニターに以下のメッセージが表示され、毎秒「Hello World!」が出力されます。また、シリアルモニターを通じてXIAO ESP32S3にコンテンツを送信でき、XIAOは送信したコンテンツの各バイトを出力します。
+プログラムをアップロードした後、Arduino IDEでSerial Monitorを開き、ボーレートを9600に設定します。シリアルモニターに以下のメッセージが表示され、毎秒「Hello World!」が出力されます。また、シリアルモニターを通じてXIAO ESP32S3にコンテンツを送信でき、XIAOは送信したコンテンツの各バイトを出力します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/24.png" style={{width:600, height:'auto'}}/></div>
 
@@ -620,7 +628,7 @@ void loop() {
   - `rxPin`：受信ピン
   - `txPin`：送信ピン
 
-注目すべき点は、デジタルピンポートを使用して定義する場合、ここは`#define RX_PIN D7`、`#define TX_PIN D6`とする必要があり、GPIOピンポートを使用して定義する場合、ここは`#define RX_PIN 44`、`#define TX_PIN 43`とする必要があることです。具体的なパラメータについては、異なるXIAOシリーズのピン図を参照してください。
+注目すべき点は、デジタルピンポートを使用して定義する場合、ここは`#define RX_PIN D7`、`#define TX_PIN D6`とする必要があり、GPIOピンポートを使用して定義する場合、ここは`#define RX_PIN 44`、`#define TX_PIN 43`とする必要があることです。特定のパラメータについては、異なるXIAOシリーズのピン図を参照してください。
 
 以下はサンプルプログラムです：
 
@@ -644,21 +652,21 @@ void loop() {
 }
 ```
 
-プログラムをアップロードした後、Arduino IDEでシリアルモニターを開き、ボーレートを115200に設定します。その後、シリアルモニターのSerialを通じてXIAO ESP32S3に任意のコンテンツを送信でき、XIAOは送信したコンテンツの各バイトを出力します。ここでは、「Hello Everyone」と入力し、結果チャートは以下のとおりです。
+プログラムをアップロードした後、Arduino IDEでSerial Monitorを開き、ボーレートを115200に設定します。その後、シリアルモニターSerialを通じてXIAO ESP32S3に任意のコンテンツを送信でき、XIAOは送信したコンテンツの各バイトを出力します。ここでは、「Hello Everyone」と入力し、結果チャートは以下のとおりです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/114.png" style={{width:600, height:'auto'}}/></div>
 
-### ソフトウェアシリアルの使用方法
+### ソフトウェアSerialの使用方法
 
 1つのハードウェアシリアルポートでは不十分だと感じる場合は、ESP32のソフトウェアシリアル機能を使用して、いくつかのピンをソフトウェアシリアルとして設定し、シリアルポートの数を拡張することもできます。
 
-もちろん、ハードウェアシリアルポートをマッピングする2番目の方法を使用することをお勧めします。これはESP32の独自機能だからです。詳細については、[その他のハードウェアシリアル](#その他のハードウェアシリアル)セクションをお読みください。
+もちろん、ESP32の独自機能であるハードウェアシリアルポートをマッピングする2番目の方法を使用することをお勧めします。詳細については、[その他のハードウェアSerial](#その他のハードウェア-serial)セクションをお読みください。
 
-ESP32シリーズチップ製品の場合、ソフトシリアルポートを使用する必要がある場合は、サードパーティのソフトシリアルポートライブラリを別途ダウンロードする必要があります。ここで参考資料を提供します。
+ESP32シリーズチップ製品の場合、ソフトシリアルポートを使用する必要がある場合は、サードパーティのソフトシリアルポートライブラリを別途ダウンロードする必要があります。ここでは参考資料を提供します。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/plerup/espsoftwareserial" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -706,7 +714,7 @@ void loop() {
 }
 ```
 
-このプログラムでは、まず`SoftwareSerial.h`ライブラリをインクルードしてソフトウェアシリアルを使用します。次に、ピン2と3をそれぞれRXとTXとして使用してmySerialという新しいSoftwareSerialオブジェクトを作成します。
+このプログラムでは、まずソフトウェアシリアルを使用するために`SoftwareSerial.h`ライブラリをインクルードします。次に、ピン2と3をそれぞれRXとTXとして使用してmySerialという新しいSoftwareSerialオブジェクトを作成します。
 
 `setup()`関数では、ハードウェアシリアル（`Serial.begin()`）とソフトウェアシリアル（`mySerial.begin()`）の両方を初期化します。
 
@@ -717,7 +725,7 @@ void loop() {
 最後に、`delay()`関数を追加してループを繰り返す前に1秒間待機します。
 
 :::note
-ESP32-S3でソフトウェアシリアルを使用するには、他の目的で使用されていないRXとTXの適切なピンを選択する必要があることに注意してください。この例では、RXとTXにそれぞれピン9と10を使用しています。
+ESP32-S3でソフトウェアシリアルを使用するには、他の目的で使用されていないRXとTXに適切なピンを選択する必要があることに注意してください。この例では、RXとTXにそれぞれピン9と10を使用しています。
 :::
 
 ### その他のハードウェアシリアル
@@ -772,17 +780,17 @@ void loop()
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
@@ -792,7 +800,7 @@ void loop()
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/Seeed-Studio-MR60BHA1-Sensor/" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -885,7 +893,7 @@ void loop()
 }
 ```
 
-プログラムをアップロードし、シリアルモニターを開いてボーレートを115200に設定してください。
+プログラムをアップロードしてから、シリアルモニターを開いてボーレートを115200に設定してください。
 
 すべてが正常に動作すれば、シリアルモニターにデータメッセージが表示されます。
 
@@ -911,23 +919,23 @@ XIAO ESP32S3にはI2Cインターフェースがあり、多くのセンサー�
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-XIAO拡張ボード上のOLEDディスプレイはI2Cプロトコルを使用し、ボード上のI2C回路を通じてXIAOのI2Cインターフェースに接続されています。そのため、XIAOを拡張ボードに直接接続し、プログラムを作成してスクリーンにコンテンツを表示することができます。
+XIAO拡張ボード上のOLEDディスプレイはI2Cプロトコルを使用し、ボード上のI2C回路を通じてXIAOのI2Cインターフェースに接続されています。そのため、XIAOを拡張ボードに直接差し込んで、画面にコンテンツを表示するようにプログラムできます。
 
 ### ソフトウェア実装
 
@@ -939,7 +947,7 @@ XIAO拡張ボード上のOLEDディスプレイはI2Cプロトコルを使用し
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -964,7 +972,7 @@ void loop(void) {
 }
 ```
 
-コードの最初の数行では、Arduino.h、U8x8lib.h、Wire.hなどの必要なライブラリをインクルードしています。U8x8lib.hライブラリはOLEDディスプレイを制御する機能を提供し、Wire.hライブラリはI2C通信の機能を提供します。
+コードの最初の数行では、Arduino.h、U8x8lib.h、Wire.hなどの必要なライブラリをインクルードしています。U8x8lib.hライブラリはOLEDディスプレイを制御する関数を提供し、Wire.hライブラリはI2C通信用の関数を提供します。
 
 `setup()`関数では、`u8x8.begin()`関数を使用してOLEDディスプレイを初期化します。また、`u8x8.setFlipMode()`関数を使用してディスプレイのフリップモードを設定し、画面を180度回転させます。
 
@@ -994,23 +1002,23 @@ ESP32-S3チップは複数の周辺機器を統合しており、フラッシュ
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-上記のハードウェアを準備した後、ジャンパーワイヤーを使用してXIAOとOLEDのSPIインターフェースを接続します。配線方法については以下の図を参照してください。
+上記のハードウェアを準備した後、ジャンパーワイヤーを使用してXIAOとOLEDのSPIインターフェースを接続します。配線方法については、以下の図を参照してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/30.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -1022,7 +1030,7 @@ u8g2ライブラリをインストールします。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -1072,26 +1080,26 @@ Sense拡張ボードに提供されているはんだパッドインターフェ
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/36.JPG" style={{width:300, height:'auto'}}/></div></td>
  </tr>
   <tr>
-    <td>白い細い線に沿ってカットし、はんだパッドの接続を切断します。</td>
+    <td>白い細い線に沿って切断し、はんだパッドの接続を切断します。</td>
     <td>2つのはんだパッドをはんだ付けして接続します。</td>
   </tr>
 </table>
 
 :::caution
-画像からわかるように、XIAOのスペース制限により、多くの配線レイアウトが非常にコンパクトです。したがって、J3の接続をカットする際は、白い線の外側をカットしないよう十分注意してください。そうしないと開発ボードが故障する可能性があります！
+画像からわかるように、XIAOのスペース制限により、多くの配線レイアウトが非常にコンパクトです。したがって、J3の接続を切断する際は、白い線の外側を切断しないよう十分注意してください。そうしないと開発ボードが故障する可能性があります！
 :::
 
 :::caution
-常識的な理解のため、上記ではJ3をSDカード機能のオン/オフを切り替えるインターフェースとして簡単に説明しましたが、これは実際には不正確です。実際の回路接続は以下に示されています。J3をカットすることで、実際にはR4からR6のプルアップ抵抗が切断され、これがSDカード機能が無効になり、SPI機能が正常に復元される主な理由です。
+常識的な理解のため、上記ではJ3をSDカード機能のオン/オフを切り替えるインターフェースとして簡単に説明しましたが、これは実際には不正確です。実際の回路接続は以下に示されています。J3を切断すると、実際にはR4からR6のプルアップ抵抗が切断され、これがSDカード機能が無効になり、SPI機能が正常に復元される主な理由です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/93.png" style={{width:800, height:'auto'}}/></div>
 :::
 
 ## タッチピン
 
-上記で説明した一般的な機能ピンに加えて、XIAO ESP32S3/XIAO ESP32S3 Senseには、A0～A5、A8～A10の9つのタッチ検出ピンもあります。
+上記で説明した一般的な機能ピンに加えて、XIAO ESP32S3/XIAO ESP32S3 Senseには9つのタッチ検出ピンA0〜A5、A8〜A10もあります。
 
-アナログ値を読み取ることで、ピンがタッチされたかどうかを確認できます。これは非常に便利です。以下のプログラムは、ピンA5がタッチされたかどうかを検出するために使用されます。
+アナログ値を読み取ることでピンがタッチされたかどうかを確認でき、これは非常に便利です。以下のプログラムは、ピンA5がタッチされたかどうかを検出するために使用されます。
 
 ```c
 const int touch_pin = A5;
@@ -1107,7 +1115,7 @@ void loop(void) {
 }
 ```
 
-プログラムをアップロードした後、シリアルモニターを開き、ボーレートを9600に設定します。次にピンA5をタッチすると、アナログ読み取り値がタッチする前の値よりも大幅に大きくなることがわかります。
+プログラムをアップロードした後、シリアルモニターを開いてボーレートを9600に設定します。次にピンA5をタッチすると、アナログ読み取り値がタッチする前の値よりも大幅に大きくなることがわかります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/32.gif" style={{width:600, height:'auto'}}/></div>
 
@@ -1127,15 +1135,15 @@ ESP32-S3のJTAG（Joint Test Action Group）インターフェースは、開発
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/35.png" style={{width:200, height:'auto'}}/></div>
 
-ESP32-S3のJTAGインターフェースは、以下の目的で使用できます：
+ESP32-S3のJTAGインターフェースは以下の目的で使用できます：
 
 1. デバッグ：JTAGインターフェースは、ESP32-S3チップでのデバッグとシングルステップ実行に使用でき、開発者がコードエラーを見つけて解決するのに役立ちます。
 
 2. プログラムの書き込み：JTAGインターフェースを通じて、プログラムやデバッグファームウェアをESP32-S3チップにロードできます。
 
-3. CPU状態の読み取り：JTAGインターフェースは、デバッグとテストのためにESP32-S3チップのCPU状態、メモリ内容、レジスタ値を読み取るために使用できます。
+3. CPU状態の読み取り：JTAGインターフェースは、ESP32-S3チップのCPU状態、メモリ内容、レジスタ値を読み取るために使用でき、デバッグとテストに役立ちます。
 
-JTAGインターフェースを使用するには、専用のハードウェアデバイスとソフトウェアツール、および対応する専門知識とスキルが必要であることに注意してください。したがって、一般的に、JTAGインターフェースは開発、デバッグ、テストなどの特定のシナリオでのみ使用されます。一般ユーザーにとって、ESP32-S3の他の機能とインターフェースを使用することで十分です。
+JTAGインターフェースの使用には専用のハードウェアデバイスとソフトウェアツール、および対応する専門知識とスキルが必要であることに注意してください。したがって、一般的に、JTAGインターフェースは開発、デバッグ、テストなどの特定のシナリオでのみ使用されます。一般ユーザーにとって、ESP32-S3の他の機能とインターフェースを使用することで十分です。
 
 JTAGデバッグについてさらに詳しく知りたい場合は、公式の[ESP32ドキュメント](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/jtag-debugging/index.html)をお読みください。
 
@@ -1155,7 +1163,7 @@ A: このタイプのエラーが発生した場合は、**USB CDC On Boot**ス�
 
 A: 以下は、[ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/libraries.html)によって提供されるサポート/非サポート機能のリストです。2023年4月10日現在。
 
-| 周辺機器      | ESP32         | ESP32-S2      | ESP32-C3      | ESP32-S3      | コメント               |
+| 周辺機器        | ESP32         | ESP32-S2      | ESP32-C3      | ESP32-S3      | コメント               |
 |---------------|---------------|---------------|---------------|---------------|------------------------|
 | ADC           | Yes           | Yes           | Yes           | Yes           |                        |
 | Bluetooth     | Yes           | Not Supported | Not Supported | Not Supported | Bluetooth Classic      |
@@ -1185,12 +1193,12 @@ A: 以下は、[ESP32](https://docs.espressif.com/projects/arduino-esp32/en/late
 A: Arduino IDEで以下の方法を使用してデバッグメッセージの出力をオフにすることができます：**Tool -> Core Debug Level: -> None**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/90.png" style={{width:500, height:'auto'}}/></div>
-s
-ただし、この方法は常に機能するとは限りません。実際、ESP32-S3のデバッグ情報は常にシリアルポートから出力され、これは変更できません。申し訳ございませんが、これは正常に動作していることをお知らせしたいという熱意の表れです。
+
+ただし、この方法は常に機能するとは限りません。実際、ESP32-S3のデバッグ情報は常にシリアルポートから出力され、これは変更できません。申し訳ありませんが、これは正常に動作していることをお知らせしたいという熱意の表れです。
 
 ### Q4: J3の接続を切断したのに、なぜD8とD9ピンがまだハイレベルになるのですか？microSDカードへの書き込みがまだ成功する可能性があるのはなぜですか？
 
-SDカードの設計において、正しい回路にはmicroSDカードが正常に動作するためのプルアップ抵抗が必要です。J3を切断した後でもピンレベルとカードの読み書きが正常である場合、これは単に幸運な状況である可能性があり、この場合のカードの読み書きは推奨しません。書き込んだデータが失われる問題を引き起こす可能性があります。一方、D8とD9ピンは、J3を切断した後にローレベルを書き込むことでレベルを変更できます。
+SDカードの設計において、正しい回路にはmicroSDカードが正常に動作するためのプルアップ抵抗が必要です。J3を切断した後でもピンレベルとカードの読み書きが正常である場合、これは単に幸運な状況である可能性があり、この場合のカードの読み書きは書き込んだデータを失う問題を引き起こす可能性があるため、推奨しません。一方、D8とD9ピンは、J3を切断した後にローレベルを書き込むことでレベルを変更できます。
 
 ## 技術サポート & 製品ディスカッション
 

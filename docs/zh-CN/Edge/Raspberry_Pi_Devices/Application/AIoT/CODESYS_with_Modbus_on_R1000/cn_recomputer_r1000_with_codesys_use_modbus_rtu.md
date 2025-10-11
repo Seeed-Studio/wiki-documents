@@ -39,8 +39,8 @@ last_update:
 
 ## 软件准备
 
-- [CODESYS Development System V3](https://store.codesys.com/de/codesys.html)
-- [CODESYS Control for Raspberry Pi SL](https://store.codesys.com/de/codesys-control-for-raspberry-pi-sl.html)
+- [CODESYS 开发系统 V3](https://store.codesys.com/de/codesys.html)
+- [CODESYS 树莓派控制系统 SL](https://store.codesys.com/de/codesys-control-for-raspberry-pi-sl.html)
 
 ## 开始使用
 
@@ -70,7 +70,7 @@ Add the following content:
     Linux.Devicefile.3=/dev/ttyAMAx
 ```
 
-Then enter the following command to restart the CODESYS service:
+然后输入以下命令重启 CODESYS 服务：
 
 ```shell
     sudo systemctl restart codesyscontrol.service

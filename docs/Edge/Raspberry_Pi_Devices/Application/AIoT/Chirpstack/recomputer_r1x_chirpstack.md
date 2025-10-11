@@ -1,7 +1,7 @@
 ---
 description: Learn how to build a LoRaWAN gateway using ChirpStack on Raspberry Pi–powered reComputer R11. Configure the R1X00 gateway, Packet Forwarder, and SenseCAP S2101 sensors to stream IoT data via MQTT. Access your LoRa devices and applications securely from anywhere in the world.
 
-title: ChirpStack R1X00 Gateway Integration with SenseCAP S2101
+title: ChirpStack R1X Gateway Integration with SenseCAP S2101
 
 keywords:
 - ChripStack
@@ -16,7 +16,9 @@ last_update:
 
 ## Introduction
 
-This guide walks you through setting up a complete LoRaWAN gateway solution using ChirpStack on the Seeed reComputer R11 edge controller, powered by Raspberry Pi. With the WM1302 LoRa concentrator module, the R11 device functions as a powerful gateway capable of reliable long-range wireless communication. By configuring the Semtech Packet Forwarder, LoRa data can be seamlessly transmitted to ChirpStack, which manages network and application layers. We will use Docker to simplify the installation and deployment of ChirpStack services, ensuring a modular and scalable setup. Finally, the system integrates with MQTT, enabling secure and real-time IoT data streaming from LoRa devices like the SenseCAP S2101 sensor to applications accessible anywhere in the world.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/overall.jpg" alt="pir" width={700} height="auto" /></p>
+
+This guide walks you through setting up a complete LoRaWAN gateway solution using ChirpStack on the Seeed reComputer R11 edge controller, powered by Raspberry Pi. With the WM1302 LoRa concentrator module, the R1X device functions as a powerful gateway capable of reliable long-range wireless communication. By configuring the Semtech Packet Forwarder, LoRa data can be seamlessly transmitted to ChirpStack, which manages network and application layers. We will use Docker to simplify the installation and deployment of ChirpStack services, ensuring a modular and scalable setup. Finally, the system integrates with MQTT, enabling secure and real-time IoT data streaming from LoRa devices like the SenseCAP S2101 sensor to applications accessible anywhere in the world.
 
 ## Hardware Required
 
@@ -52,38 +54,44 @@ This guide walks you through setting up a complete LoRaWAN gateway solution usin
 
 ## Docker Installation Guide
 
-
 **1. Update System Packages**
+
 ```bash
 sudo apt update
 sudo apt upgrade
 ```
 
 **2. Install Docker**
+
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
 **3. Add User to Docker Group**
+
 ```bash
 sudo usermod -aG docker ${USER}
 ```
 
 **4. Reboot System**
+
 ```bash
 sudo reboot
 ```
 
 **5. Verify Installation**
+
 ```bash
 docker run hello-world
 ```
 
 **6. Install Docker Compose**
+
 ```bash
 sudo apt install docker-compose
 ```
+
 Perfect I’ll reformat your **Packet Forwarder setup** into the same structured wiki style you’re using:
 
 ---
@@ -117,14 +125,14 @@ Update the **gateway_conf** section to point to your ChirpStack server:
 }
 ```
 
-> Replace `AA555A0000000000` with your actual Gateway ID. We will keep as it is 
+> Replace `AA555A0000000000` with your actual Gateway ID. We will keep as it is
 > Use the correct JSON file for your LoRaWAN region, depending on the module you purchased.
 
 Save the file and exit:
 
-* Press **CTRL + X**,
-* Then **Y**,
-* And finally **Enter**.
+- Press **CTRL + X**,
+- Then **Y**,
+- And finally **Enter**.
 
 **2. Start Packet Forwarder**
 
@@ -133,7 +141,6 @@ Run the Packet Forwarder using the updated configuration:
 ```bash
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
-
 
 Here’s your **“Make Gateway” section** in the same wiki style:
 
@@ -184,8 +191,8 @@ Password: admin
 
 2. Enter the following details:
 
-   * **Gateway ID**: `AA555A0000000000` (replace with your actual Gateway ID)
-   * **Name**: Give a descriptive name for your gateway
+   - **Gateway ID**: `AA555A0000000000` (replace with your actual Gateway ID)
+   - **Name**: Give a descriptive name for your gateway
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -199,20 +206,19 @@ Password: admin
 
 To connect a LoRaWAN device (e.g., **SenseCAP S2101**) to ChirpStack, you first need to create a **Device Profile**.
 
-
 1. Navigate to **Device Profiles → Create Device Profile**
 
 2. Enter the following details:
 
-   * **Name**: Give a descriptive name for your device profile
-   * **Region**: Select the region/sub-band that matches your device and gateway (e.g., `US915`)
+   - **Name**: Give a descriptive name for your device profile
+   - **Region**: Select the region/sub-band that matches your device and gateway (e.g., `US915`)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image4.png" alt="pir" width={800} height="auto" /></p>   
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image4.png" alt="pir" width={800} height="auto" /></p>
 
 3. Navigate to the **Codec** tab:
 
-   * Select **JavaScript Functions**
-   * Paste the codec for your device
+   - Select **JavaScript Functions**
+   - Paste the codec for your device
 
 > ⚠️ The codec is specific to your LoRa device. For example, if you are using **Seeed S201x**, you can use the code below.
 > If you are using a different device, consult the manufacturer for the correct codec.
@@ -453,16 +459,13 @@ function toBinary(arr) {
     }).join('');
 }
 
-
 ```
+
 </details>
-
-
 
 ## Add Device
 
 Once the **Device Profile** is created, you can register your LoRaWAN device with ChirpStack.
-
 
 1. Navigate to **Tenant → Application** and click **Add Application**
 
@@ -471,21 +474,20 @@ Once the **Device Profile** is created, you can register your LoRaWAN device wit
 2. Enter a **Name** for your application and save it
 3. Open your newly created application and click **Add Device**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image7.png" alt="pir" width={800} height="auto" /></p> 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image7.png" alt="pir" width={800} height="auto" /></p>
 
 4. Enter the following details:
 
-   * **Device EUI**: Paste the EUI from your LoRa device (found in the device datasheet or configuration software, e.g., SenseCAP application)
-   * **Device Profile**: Select the device profile you created earlier
+   - **Device EUI**: Paste the EUI from your LoRa device (found in the device datasheet or configuration software, e.g., SenseCAP application)
+   - **Device Profile**: Select the device profile you created earlier
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image8.png" alt="pir" width={800} height="auto" /></p> 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image8.png" alt="pir" width={800} height="auto" /></p>
 
 5. Enter the **Application Key** and click **Submit**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image9.png" alt="pir" width={800} height="auto" /></p> 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image9.png" alt="pir" width={800} height="auto" /></p>
 
 > ⚠️ Device EUI and Application Key can be obtained from your LoRa device datasheet or configuration software. For **SenseCAP devices**, you can use the SenseCAP application to view or reconfigure these settings.
-
 
 Here’s a polished version of your **“Check Device Status”** section in your wiki style, keeping it consistent with the previous sections:
 
@@ -495,33 +497,31 @@ Here’s a polished version of your **“Check Device Status”** section in you
 
 After adding your LoRaWAN device, you can verify that it is properly connected and transmitting data.
 
-
 1. Navigate to your application and select the device you added
 2. Go to the **Events** tab
 
-   * You should see a **join packet** when the device successfully joins the network
+   - You should see a **join packet** when the device successfully joins the network
 
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image10.png" alt="pir" width={800} height="auto" /></p> 
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image10.png" alt="pir" width={800} height="auto" /></p>
 
 3. Click on the packets to view **detailed information**
 
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image11.png" alt="pir" width={500} height="auto" /></p> 
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image11.png" alt="pir" width={500} height="auto" /></p>
 
-   * For example, you can see the **temperature and humidity data** reported by devices like the SenseCAP S2101
-
+- For example, you can see the **temperature and humidity data** reported by devices like the SenseCAP S2101
 
 ## MQTT Integration
 
 ChirpStack uses **MQTT** to stream data from LoRaWAN devices to applications or dashboards. You can monitor these messages in real-time.
 
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image12.png" alt="pir" width={800} height="auto" /></p> 
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image12.png" alt="pir" width={800} height="auto" /></p>
 
 1. Connect your PC to the **same network** as the reComputer R11 gateway
 2. Use an MQTT client such as **MQTT Explorer** to subscribe to topics
 3. Configure the MQTT client:
 
-   * **Host**: IP address of your reComputer R11
-   * **Port**: `1883`
+   - **Host**: IP address of your reComputer R11
+   - **Port**: `1883`
 4. Once connected, you will see a **tree of topics** representing your devices, for example:
 
 ```
@@ -530,8 +530,7 @@ application/c853ffcd-53f0-4de3-83b9-5467ff895f76/device/2cf7f1c043500402/event/u
 
 5. Expanding the topic will show **uplink messages** containing sensor data, such as temperature and humidity for devices like the SenseCAP S2101
 
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image13.png" alt="pir" width={800} height="auto" /></p> 
-
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image13.png" alt="pir" width={800} height="auto" /></p>
 
 ## Node-RED Integration
 
@@ -541,9 +540,9 @@ You can visualize LoRaWAN device data in **Node-RED** using MQTT nodes and custo
 
 2. Configure the MQTT node:
 
-   * **Server**: IP of your reComputer R11 (e.g., `10.0.0.208`)
-   * **Port**: `1883`
-   * **Topic**: `application/+/device/+/event/up`
+   - **Server**: IP of your reComputer R11 (e.g., `10.0.0.208`)
+   - **Port**: `1883`
+   - **Topic**: `application/+/device/+/event/up`
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image15.png" alt="pir" width={600} height="auto" /></p>
 
@@ -551,7 +550,7 @@ You can visualize LoRaWAN device data in **Node-RED** using MQTT nodes and custo
 
 3. Add a **Function node** to decode the MQTT message payload
 
-   * For example, extract **temperature** and **humidity** from the JSON object
+   - For example, extract **temperature** and **humidity** from the JSON object
 
 ```javascript
    // Get the JSON payload
@@ -596,7 +595,6 @@ return [tempMsg, humMsg];
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image16.png" alt="pir" width={600} height="auto" /></p>
     <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image17.png" alt="pir" width={600} height="auto" /></p>
-
 
 ## Tech Support & Product Discussion
 

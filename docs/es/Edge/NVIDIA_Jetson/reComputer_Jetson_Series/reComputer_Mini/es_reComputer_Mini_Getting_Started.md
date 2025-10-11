@@ -451,7 +451,7 @@ Verás la siguiente salida si el proceso de flasheo es exitoso
 El comando de flasheo puede ejecutarse entre 2 y 10 minutos.
 :::
 
-**Paso 3:** Conecta el J501 a una pantalla usando el conector HDMI en la placa y completa la configuración inicial:
+**Paso 3:** Conecta el J401 a una pantalla utilizando el **USB Type-C con DisplayPort** en la placa y completa la configuración inicial.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>

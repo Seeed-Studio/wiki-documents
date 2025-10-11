@@ -261,8 +261,7 @@ reComputer Mini载板有两个4针GH-1.25 UART接口：**UART1**和**UART-DEBUG*
 sudo apt update
 sudo apt install cutecom
 ```
-
-Open **Cutecom** in two different terminals.
+在两个不同的终端中打开 **Cutecom**。
 
 ```bash
 sudo cutecom
@@ -345,14 +344,12 @@ sudo apt update
 sudo apt install python3-pip -y
 sudo pip3 install jetson-stats
 ```
-
-Then reboot your reComputer Mini:
+然后重启您的 reComputer Mini：
 
 ```bash
 sudo reboot
 ```
-
-After installing **jtop**, you can lanch it in terminal:
+安装 **jtop** 后，你可以在终端中启动它：
 
 ```bash
 jtop
@@ -423,13 +420,13 @@ sudo apt-get update
 sudo apt-get install can-utils
 ```
 
-Open a **Terminal 1** and enter the following command to monitor the number of bytes of data sent from `can0`:
+打开一个**终端 1**并输入以下命令来监控从`can0`发送的数据字节数：
 
 ```bash
 watch -n 1 'ifconfig can0 | grep "TX packets"'
 ```
 
-Open a **Terminal 2** . Pull the script for testing CAN communication from GitHub and run it:
+打开一个**终端 2**。从 GitHub 拉取用于测试 CAN 通信的脚本并运行它：
 
 ```bash
 git clone https://github.com/jjjadand/Mini_CANtest.git
@@ -503,7 +500,7 @@ sudo apt update
 sudo apt-get install i2c-tools
 ```
 
-Then, enter the following command in the terminal to view the mapped names on the IIC bus.
+然后，在终端中输入以下命令以查看 IIC 总线上的映射名称。
 
 ```bash
 i2cdetect -l

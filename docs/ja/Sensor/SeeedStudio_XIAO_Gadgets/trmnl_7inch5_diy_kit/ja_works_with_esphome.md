@@ -33,9 +33,9 @@ Home Assistantは、スマートホームデバイスを単一の統合インタ
 
 ### なぜHome Assistantなのか？
 
-- **ローカル制御**: 多くのクラウドベースソリューションとは異なり、Home Assistantはネットワーク上でローカルに動作するため、データのプライバシーが保護され、インターネット接続がなくても自動化が機能します。
+- **ローカル制御**: 多くのクラウドベースソリューションとは異なり、Home Assistantはネットワーク上でローカルに動作するため、データのプライバシーが保たれ、インターネット接続がなくても自動化が機能します。
 
-- **豊富なデバイスサポート**: Home Assistantは数千種類の異なるスマートホームデバイスやサービスと統合でき、高い汎用性と将来性を提供します。
+- **豊富なデバイスサポート**: Home Assistantは数千種類のスマートホームデバイスやサービスと統合でき、高い汎用性と将来性を提供します。
 
 - **強力な自動化**: 時間、デバイス状態、センサー読み取り値など、さまざまなトリガーに応答する高度な自動化ルールを作成できます。
 
@@ -47,17 +47,17 @@ Home Assistantは、スマートホームデバイスを単一の統合インタ
 
 ### なぜTRMNL 7.5inch(OG) DIY KitとHome Assistantなのか？
 
-TRMNL 7.5inch(OG) DIY Kitは、いくつかの理由でHome Assistantの優れたコンパニオンです：
+TRMNL 7.5inch(OG) DIY KitがHome Assistantの優れたコンパニオンである理由はいくつかあります：
 
-1. **エネルギー効率**: e-paperディスプレイはコンテンツを更新する時のみ電力を消費するため、天気予報、カレンダーイベント、システムステータスなどの持続的な情報表示に最適です。
+1. **省エネルギー**: e-paperディスプレイはコンテンツ更新時のみ電力を消費するため、天気予報、カレンダーイベント、システム状態などの持続的な情報表示に最適です。
 
-2. **優れた視認性**: LCDスクリーンとは異なり、e-paperディスプレイは直射日光を含むあらゆる照明条件下で読みやすく、壁掛けホームコントロールパネルに理想的です。
+2. **優れた視認性**: LCDスクリーンとは異なり、e-paperディスプレイは直射日光を含むあらゆる照明条件で読みやすく、壁掛けホームコントロールパネルに理想的です。
 
-3. **長いバッテリー寿命**: ディープスリープモードと組み合わせることで、貴重な情報を一目で確認できる状態を保ちながら、単一のバッテリー充電で数ヶ月間動作できます。
+3. **長いバッテリー寿命**: ディープスリープモードと組み合わせることで、一目で価値ある情報を提供しながら、単一のバッテリー充電で数ヶ月間動作できます。
 
 4. **柔軟な統合**: ESPHomeを通じて、ディスプレイはHome Assistantとシームレスに統合され、スマートホームシステムからのあらゆるデータをエレガントで常時表示可能な形式で表示できます。
 
-これらの利点により、TRMNL 7.5inch(OG) DIY Kitは、Home Assistantセットアップ用のエネルギー効率的で常時オンの情報ディスプレイを作成するのに理想的な選択肢となります。
+これらの利点により、TRMNL 7.5inch(OG) DIY KitはHome Assistantセットアップ用の省エネルギーで常時オンの情報ディスプレイを作成するのに理想的な選択肢となります。
 
 ### ESPHome統合
 
@@ -65,7 +65,7 @@ ESPHomeは、ESP8266/ESP32デバイス専用に設計されたオープンソー
 
 このシステムは、YAML設定をESPデバイス上で動作する完全機能のファームウェアに変換することで動作します。このファームウェアは、ネットワークへの接続、Home Assistantとの通信、ePaperディスプレイの制御といった複雑なタスクをすべて処理します。Home Assistantと組み合わせることで、ESPHomeは高度なホームオートメーションディスプレイとコントロールを作成するための堅牢なプラットフォームを提供します。
 
-セットアップ方法と、この多機能ディスプレイを最大限に活用する方法を探ってみましょう。
+セットアップ方法とこの多用途ディスプレイを最大限に活用する方法を探ってみましょう。
 
 ## はじめに
 
@@ -86,63 +86,129 @@ ESPHomeは、ESP8266/ESP32デバイス専用に設計されたオープンソー
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/TRMNL-7-5-Inch-OG-DIY-Kit-p-6481.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-Home Assistant Green は、ホームオートメーションを実現する最も簡単でプライバシーに配慮した方法です。簡単なセットアップを提供し、すべてのスマートデバイスを1つのシステムで制御でき、すべてのデータはデフォルトでローカルに保存されます。このボードは繁栄している Home Assistant エコシステムの恩恵を受け、オープンソースによって毎月改善されています。
+Home Assistant Greenは、ホームオートメーションを実現する最も簡単でプライバシーに配慮した方法です。簡単なセットアップを提供し、すべてのスマートデバイスを単一のシステムで制御でき、すべてのデータはデフォルトでローカルに保存されます。このボードは活発なHome Assistantエコシステムの恩恵を受け、オープンソースにより毎月改善されています。
 
-このチュートリアルでは、Home Assistant Green を Home Assistant ホストとして使用することをお勧めしますが、Supervisor を搭載した任意の Home Assistant ホストを使用することもできます。
+このチュートリアルでは、Home Assistant GreenをHome Assistantホストとして使用することをお勧めしますが、Supervisorを備えた任意のHome Assistantホストを使用することもできます。
 
-:::tip Home Assistant をインストール
-Seeed Studio 製品の一部に Home Assistant をインストールする方法も書いていますので、参考にしてください。
+:::tip Home Assistantのインストール
+Seeed Studio製品の一部にHome Assistantをインストールする方法も書いていますので、参考にしてください。
 
-- **[ODYSSEY-X86 で Home Assistant を始める](https://wiki.seeedstudio.com/ja/ODYSSEY-X86-Home-Assistant/)**
-- **[reTerminal で Home Assistant を始める](https://wiki.seeedstudio.com/ja/reTerminal_Home_Assistant/)**
-- **[LinkStar H68K/reRouter CM4 で Home Assistant を始める](https://wiki.seeedstudio.com/ja/h68k-ha-esphome/)**
+- **[ODYSSEY-X86でHome Assistantを始める](https://wiki.seeedstudio.com/ja/ODYSSEY-X86-Home-Assistant/)**
+- **[reTerminalでHome Assistantを始める](https://wiki.seeedstudio.com/ja/reTerminal_Home_Assistant/)**
+- **[LinkStar H68K/reRouter CM4でHome Assistantを始める](https://wiki.seeedstudio.com/ja/h68k-ha-esphome/)**
 
-Seeed Studio 製品を使用していない場合は、公式 Home Assistant ウェブサイトで他の製品に Home Assistant をインストールする方法を確認して学習することもできます。
+Seeed Studio製品を使用していない場合は、Home Assistant公式ウェブサイトで他の製品にHome Assistantをインストールする方法を確認して学習することもできます。
 
-- **[Home Assistant インストール](https://www.home-assistant.io/installation/)**
+- **[Home Assistantインストール](https://www.home-assistant.io/installation/)**
 :::
 
-### ステップ 1. ESPHome をインストール
+### 機器の設置
 
-すでに ESPHome をインストールしている場合は、このステップをスキップできます。
+**ステップ1. ディスプレイをドライバーボードに接続**  
+FPCケーブルをXIAO ePaper Display Boardのコネクタに合わせ、ラッチを固定して確実な接続を確保します。  
 
-**Settings** -> **Add-ons** -> **ADD-ON STORE** に移動します
+:::tip
+FPCケーブルの金属面は上向きにする必要があります。そうでないと、コンテンツが表示されません。
+
+以下のインストールチュートリアルに従ってください。多くの人が間違えます。
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/2.jpg" style={{width:600, height:'auto'}}/></div>
+
+**ステップ2. バッテリーの取り付け**  
+バッテリーケーブルをドライバーボードのJSTコネクタに接続し、正しい極性（赤線を+、黒線を-）を確認します。  
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/3.jpg" style={{width:600, height:'auto'}}/></div>
+
+**ステップ3. エンクロージャーの組み立て（オプション）**  
+
+:::tip
+スクリーンのフレキシブルケーブルは非常に壊れやすいことに注意してください。操作時は注意してください。損傷すると、スクリーン全体が動作しなくなります。
+:::
+[リソース部分](#resources)からオープンソースエンクロージャー部品を印刷し、内部にコンポーネントを組み立てます。  
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/4.jpeg" style={{width:600, height:'auto'}}/></div>
+
+まず、ドライバーボードとバッテリーを組み立てます。
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/base.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+TRMNLキットが正常に動作するかテストします。
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/test.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+スクリーンをケースに差し込み、FPCを外に出します。
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/cable.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+FPC延長ケーブルを接続し、ケース全体を組み立てます。
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/assembly.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+L字型エンクロージャーも非常に似ています。
+
+<div class="table-center">
+<iframe width="300" height="500" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/Lshape.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+:::tip
+TRMNLキットがルーターから遠い場合は、アンテナをケースの外に移動できます。より良いパフォーマンスが得られます。
+:::
+
+### ステップ1. ESPHomeのインストール
+
+すでにESPHomeをインストールしている場合は、このステップをスキップできます。
+
+**Settings** -> **Add-ons** -> **ADD-ON STORE**に移動します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/01.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/02.png" style={{width:800, height:'auto'}}/></div>
 
-ESPHome を検索してクリックします。**INSTALL** をクリックし、**START** をクリックします。
+ESPHomeを検索してクリックします。**INSTALL**と**START**をクリックします。
 
 :::tip
-アドオンストアで ESPHome が見つからない場合は、アドオンをサポートする Home Assistant インストール（Home Assistant OS や supervised インストールなど）を使用していることを確認してください。他のインストールタイプ（Home Assistant Container など）の場合は、Docker を使用して ESPHome Device Builder を独立して実行する必要がある場合があります。詳細については、[公式 ESPHome ドキュメント](https://esphome.io/guides/getting_started_hassio)を参照してください。
+アドオンストアでESPHomeが見つからない場合は、アドオンをサポートするHome Assistantインストール（Home Assistant OSまたは監視付きインストールなど）を使用していることを確認してください。他のインストールタイプ（Home Assistant Containerなど）の場合、DockerでESPHome Device Builderを独立して実行する必要がある場合があります。詳細については、[公式ESPHomeドキュメント](https://esphome.io/guides/getting_started_hassio)を参照してください。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/03.png" style={{width:800, height:'auto'}}/></div>
 
-その後、ESPHome Builder がサイドバーに表示されます。
+その後、ESPHome Builderがサイドバーに表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/04.png" style={{width:800, height:'auto'}}/></div>
 
-### ステップ 2. 新しいデバイスを追加
+### ステップ2. 新しいデバイスを追加
 
-ESPHome に移動し、**NEW DEVICE** をクリックします。
+ESPHomeに移動し、**NEW DEVICE**をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/06.png" style={{width:800, height:'auto'}}/></div>
 
-お好みのデバイス名を付け、チップタイプに **ESP32-S3** を選択し、**SKIP** をクリックします。
+デバイスに好きな名前を付け、チップタイプに**ESP32-S3**を選択し、**SKIP**をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -151,21 +217,21 @@ ESPHome に移動し、**NEW DEVICE** をクリックします。
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-新しいデバイスを作成した後、**EDIT** をクリックします。
+新しいデバイスを作成した後、**EDIT**をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/4.png" style={{width:800, height:'auto'}}/></div>
 
-デフォルトで生成されたコード内で、esp32 のフレームワークが `esp-idf` になっている場合がありますが、これを `arduino` に変更する必要があります。
+デフォルトで生成されたコード内で、esp32のフレームワークが`esp-idf`になっている場合がありますが、これを`arduino`に変更する必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_arduino.png" style={{width:600, height:'auto'}}/></div>
 
-### ステップ 3. ファームウェアをインストール
+### ステップ3. ファームウェアのインストール
 
 これは非常に基本的な例で、ディスプレイに「Hello World!」を表示します。
 
 **主な目的は、デバイスにファームウェアをインストールするさまざまな方法を示すことです。**
 
-以下に示すように、下記のコードをコピーして `captive_portal` の後に貼り付けることができます。
+以下のコードをコピーして、下図のように`captive_portal`の後に貼り付けることができます。
 
 ```yaml
 # define font to display words
@@ -208,7 +274,7 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が遠くにある�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
-このウェブサイトを開いて、ファームウェアをePaperパネルにアップロードします。
+このウェブサイトを開き、ファームウェアをePaperパネルにアップロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/63.png" style={{width:800, height:'auto'}}/></div>
 
@@ -224,11 +290,11 @@ USBケーブルを使用して**ePaperパネルをコンピューターに接続
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
-usbmodemxxx（WindowsではCOMxxx）を選択してconnectをクリックします。[問題が発生しましたか？こちらをクリック。](#Q4)
+usbmodemxxx（WindowsではCOMxxx）を選択し、connectをクリックします。[問題が発生しましたか？こちらをクリック。](#Q4)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
-**INSTALL**をクリックして、先ほどダウンロードしたファームウェアを選択します。
+**INSTALL**をクリックし、先ほどダウンロードしたファームウェアを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/69.png" style={{width:500, height:'auto'}}/></div>
 
@@ -247,9 +313,9 @@ usbmodemxxx（WindowsではCOMxxx）を選択してconnectをクリックしま�
 Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある場合は、より簡単なのでこの方法をお勧めします。
 :::
 
-デバイスにコードをインストールする前に、USBケーブルを使用して**このデバイスをHome Assistantを実行しているRaspberry PiまたはHA Green（Yellow）などに接続**する必要があります。
+コードをデバイスにインストールする前に、USBケーブルを使用して**このデバイスをHome Assistantを実行しているRaspberry PiまたはHA Green（Yellow）などに接続**する必要があります。
 
-画像に従ってオプションをクリックし、デバイスにコードをインストールします。[デバイスがディープスリープモードの時にポートが見つからない？](#port)
+画像に従ってオプションをクリックし、コードをデバイスにインストールします。[デバイスがディープスリープモードの時にポートが見つからない？](#port)
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/6.png" style={{width:'70%', height:'auto'}}/></div>
@@ -268,12 +334,12 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある�
 <TabItem value='Install through Wi-Fi'>
 
 :::tip
-これは最も簡単な方法ですが、初回プログラムインストール時には、まず左側の方法を使用してePaper Panelにプログラムをアップロードする必要があります。その後、wifi経由でアップロードできます。また、この方法が機能するためには、YAMLの設定に適切に設定された`ota`と`api`セクションが有効な暗号化キーと共に含まれていることを確認してください。
+これは最も簡単な方法ですが、初回プログラムインストール時には、まず左側の方法を使用してePaper Panelにプログラムをアップロードする必要があります。その後、wifiでアップロードできます。また、この方法が機能するためには、YAMLの設定に有効な暗号化キーを持つ適切に設定された`ota`と`api`セクションが含まれていることを確認してください。
 :::
 
 この方法では、ePaperパネルを何にも接続する必要がなく、オンラインであることを確認するだけです。
 
-オプションをクリックすると、ファームウェアが自動的にePaper panelにインストールされます。
+オプションをクリックすると、ファームウェアが自動的にePaperパネルにインストールされます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:500, height:'auto'}}/></div>
 
@@ -287,13 +353,13 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある�
 </TabItem>
 </Tabs>
 
-## Basic usages
+## 基本的な使用方法
 
-### 1. Display shape
+### 1. 図形の表示
 
 この例では、ディスプレイに図形を表示します。
 
-以下のコードをコピーして、以下の画像のように**captive_portal**部分に貼り付けることができます。
+以下のコードをコピーして、下図のように**captive_portal**部分に貼り付けることができます。
 
 ```yaml
 spi:
@@ -322,30 +388,30 @@ display:
 
 以下の画像のようなフィードバックが表示されると、コードが正常に実行されていることを意味します。
 
-より多くの使用方法については、[こちらをクリック](https://esphome.io/components/display/)してご覧ください。
+より多くの使用方法については、[こちらをクリック](https://esphome.io/components/display/)してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/37.png" style={{width:600, height:'auto'}}/></div>
 
-### 2. HAで情報を表示する
+### 2. HAの情報を表示
 
 この例では、HAの情報をディスプレイに表示します。
 
 まず最初に、このデバイスをHAに追加する必要があります。そうしないと、HAから情報を取得できません。
 
-HAにデバイスが表示されない場合は、上記のデモを最初に実行する必要があります。上記のデモを実行した後、HAでデバイスを確認できます。
+HAがデバイスを表示しない場合は、まず上記のデモを実行する必要があります。上記のデモを実行した後、HAでデバイスを確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/10.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
 
-そして、**SUBMIT**と**FINISH**をクリックします。
+その後、**SUBMIT**と**FINISH**をクリックします。
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%', marginLeft:'8%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/12.png" style={{width:'100%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/13.png" style={{width:'68%', height:'auto'}}/></div>
 </div>
 
-ESPHomeをインストールして新しいデバイスを追加した後、以下のコードをコピーして、以下に示すように`captive_portal`の後に貼り付けることができます。
+ESPHomeをインストールして新しいデバイスを追加した後、以下のコードをコピーして、下図のように`captive_portal`の後に貼り付けることができます。
 
 ```yaml
 # Define font to show info
@@ -400,7 +466,7 @@ display:
       it.printf(100, 200, id(myFont), "%.1f", id(myPressure).state);
 ```
 
-これらのコードをあなたのデバイスにインストールしてください。
+これらのコードをデバイスにインストールします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/15.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -409,29 +475,29 @@ display:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/39.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-もしあなたのHome Assistantに天気関連のコンポーネントがないことがわかった場合、統合機能の中から**Open-Meteo**という統合をダウンロードできます。
+Home Assistantに天気関連のコンポーネントがない場合は、統合機能から**Open-Meteo**という統合をダウンロードできます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_weather.png" style={{width:800, height:'auto'}}/></div>
 :::
 
-以下の画像のようなフィードバックが表示されたら、コードが正常に実行されていることを意味します。
+以下の画像のようなフィードバックが表示されれば、コードが正常に実行されていることを意味します。
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/14.png" style={{width:'100%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/34.png" style={{width:'80%', height:'auto'}}/></div>
 </div>
 
-### 3. アイコンを表示する {#ttf}
+### 3. アイコンの表示 {#ttf}
 
 この例では、ディスプレイにアイコンを表示します。
 
-まず、File Editorアドオンをインストールする必要があります。**Studio Code Server**を検索してクリックしてください。**INSTALL**をクリックして**START**してください。
+まず、File Editorアドオンをインストールする必要があります。**Studio Code Server**を検索してクリックします。**INSTALL**をクリックして**START**します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/17.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/18.png" style={{width:800, height:'auto'}}/></div>
 
-そして<span id="ttf">次に</span>、**fonts**という新しいフォルダを作成し、このファイルをダウンロードして**fontsフォルダに入れてください**。
+そして<span id="ttf">、</span>**fonts**という新しいフォルダを作成し、このファイルをダウンロードして**fontsフォルダに入れます**。
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/font_ttf.zip" target="_blank">
@@ -441,7 +507,7 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/19.png" style={{width:800, height:'auto'}}/></div>
 
-以下のコードをコピーして、以下に示すように`captive_portal`の後に貼り付けることができます。
+以下のコードをコピーして、下図のように`captive_portal`の後に貼り付けることができます。
 
 ```yaml
 font:
@@ -475,45 +541,45 @@ display:
       it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
 ```
 
-以下の画像のようなフィードバックが表示されると、コードが正常に実行されていることを意味します。
+以下の画像のようなフィードバックが表示されれば、コードが正常に実行されていることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/35.png" style={{width:600, height:'auto'}}/></div>
 
-他のアイコンを使用したい場合は、下のボタンをクリックしてさらに探索できます。
+他のアイコンを使用したい場合は、下のボタンをクリックして詳細を確認できます。
 
 <div align="center">
 <a href="https://pictogrammers.com/library/mdi/" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>アイコンウェブサイトはこちらをクリック</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>アイコンサイトはこちら</button></p>
 </a>
 </div>
 
-使用したいアイコンを選択してください。
+使用したいアイコンを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/41.png" style={{width:800, height:'auto'}}/></div>
 
-コードをコピーして、以下の画像のように **captive_portal** 部分に貼り付けてください。
+コードをコピーして、以下の画像のように**captive_portal**部分に貼り付けます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/42.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/43.png" style={{width:800, height:'auto'}}/></div>
 
-### 4. 画像を表示する {#image}
+### 4. 画像の表示 {#image}
 
-この例では、お好みの画像をディスプレイに表示する方法を示します。
+この例では、お好みの画像をディスプレイに表示します。
 
-前の例と同様に、**Studio Code Server** をインストールし、画像を保存するために **image** という新しいフォルダを作成する必要があります。
+前の例と同様に、**Studio Code Server**をインストールし、画像を保存するために**image**という新しいフォルダを作成する必要があります。
 
-そして、**image** フォルダに画像を入れてください。下のボタンをクリックして画像をダウンロードして試すことができます。
+そして、**image**フォルダに画像を入れます。試しに画像をダウンロードするには、下のボタンをクリックしてください。
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.jpg" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>ダウンロードはこちらをクリック</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>ここをクリックしてダウンロード</button></p>
 </a>
 </div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
-下のコードをコピーして、以下に示すように `captive_portal` の後に貼り付けることができます。
+以下のコードをコピーして、下図のように`captive_portal`の後に貼り付けることができます。
 
 ```yaml
 image:
@@ -541,19 +607,19 @@ display:
       it.image(0, 0, id(myImage));
 ```
 
-以下の画像のようなフィードバックが表示されると、コードが正常に実行されていることを意味します。
+以下の画像のようなフィードバックが表示されれば、コードが正常に実行されていることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.png" style={{width:600, height:'auto'}}/></div>
 
-## デモ 1. Home Assistant ダッシュボードのスクリーンショットを撮る
+## デモ 1. Home Assistantダッシュボードのスクリーンショットを撮る
 
-この例では、ディスプレイにHAのスクリーンショットを表示します。
+この例では、HAのスクリーンショットをディスプレイに表示します。
 
-まず、スクリーンショット用のアドオン **Puppet** をインストールする必要があります。[こちらをクリックしてインストールしてください。](https://github.com/balloob/home-assistant-addons/tree/main/puppet)
+まず、スクリーンショットアドオン**Puppet**をインストールする必要があります。[こちらをクリックしてインストールしてください。](https://github.com/balloob/home-assistant-addons/tree/main/puppet)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/83.jpg" style={{width:800, height:'auto'}}/></div>
 
-バージョンは **1.11.4以上** である必要があることにご注意ください。インストール後、**設定ページ** に移動します。このアドオン用のaccess_tokenを作成する必要があります。
+バージョンは**1.11.4以上**である必要があることに注意してください。インストール後、**Configuration page**に移動します。このアドオン用のaccess_tokenを作成する必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/96.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -561,11 +627,11 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/88.jpg" style={{width:800, height:'auto'}}/></div>
 
-**セキュリティページ** の下部に移動してトークンを作成し、それをコピーして **Puppet** アドオンに貼り付けます。
+**Security page**の下部に移動してトークンを作成し、それをコピーして**Puppet**アドオンに貼り付けます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/85.jpg" style={{width:800, height:'auto'}}/></div>
 
-Puppetアドオンを **再起動** することを忘れないでください。
+Puppetアドオンを**再起動**することを忘れないでください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/95.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -579,29 +645,29 @@ Puppetアドオンを **再起動** することを忘れないでください�
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000
 ```
 
-E Ink®ディスプレイのカラーパレットを削減するには、einkパラメータを追加できます。この値は使用する色数（黒を含む）を表します。例えば、2色のE Ink®ディスプレイの場合：
+E Ink®ディスプレイのカラーパレットを削減するには、einkパラメータを追加できます。値は使用する色数（黒を含む）を表します。例えば、2色のE Ink®ディスプレイの場合：
 
 ```python
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2
 ```
 
-eink=2を使用している場合、invertパラメータを追加することで色を反転させることもできます：
+eink=2を使用している場合、invertパラメータを追加して色を反転することもできます：
 
 ```python
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2&invert
 ```
 
-Besides, you can also screenshot other page, for example **To-do lists** page in HA:
+また、他のページのスクリーンショットも撮ることができます。例えば、HAの**To-do lists**ページ：
 
 ```python
 http://192.168.1.191:10000/todo?viewport=800x480&eink=2&invert
 ```
 
-ブラウザでこのリンクを入力することで、スクリーンショットの効果を確認できます。
+このリンクをブラウザに入力することで、スクリーンショットの効果を確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/92.jpg" style={{width:800, height:'auto'}}/></div>
 
-以下のコードをコピーして、下図のように `captive_portal` の後に貼り付けることができます。
+以下のコードをコピーして、下図のように`captive_portal`の後に貼り付けることができます。
 
 ```yaml
 http_request:
@@ -626,6 +692,7 @@ spi:
 
 display:
   - platform: waveshare_epaper
+    id: main_display
     model: 7.50inv2
     cs_pin: GPIO44
     dc_pin: GPIO10
@@ -638,14 +705,14 @@ display:
       it.image(0, 0, id(dashboard_image));
 ```
 
-フィードバックが以下の画像のように表示されれば、コードが正常に実行されていることを意味します。
+以下の画像のようなフィードバックが表示されたら、コードが正常に実行されていることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/94.jpg" style={{width:600, height:'auto'}}/></div>
 
-## Demo2. ディープスリープモード
+## デモ2. ディープスリープモード
 
 :::tip
-ディープスリープモード中は、デバイスに直接コードをアップロードできません。ダウンロードモードに入る必要があります。[こちらをクリックしてQ3にジャンプしてください。](#port)
+ディープスリープモード中は、デバイスに直接コードをアップロードできません。ダウンロードモードに入る必要があります。[Q3にジャンプするにはここをクリック](#port)
 :::
 
 この例では、ディープスリープモードを使用して電力を節約する方法を示します。6時間ごとに情報を更新します。
@@ -699,27 +766,27 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/90.jpg" style={{width:600, height:'auto'}}/></div>
 
-## Demo 3. 包括的な例
+## デモ3. 包括的な例
 
 :::tip
-より良く理解していただくために、まず上記の基本的な使用方法を実行することを強くお勧めします。
+より良く理解するために、まず上記の基本的な使用方法を実行することを強くお勧めします。
 :::
 
-この例では、TRMNL 7.5インチ電子ペーパーDIYキット用の包括的なESPHome設定を実演します。このYAMLコードは複数の機能を統合して、Home Assistantとシームレスに連携するスマートでインタラクティブなディスプレイパネルを作成します。
+この例では、TRMNL 7.5インチe-paper DIYキット用の包括的なESPHome設定を示します。YAMLコードは複数の機能を統合して、Home Assistantとシームレスに連携するスマートでインタラクティブなディスプレイパネルを作成します。
 
 **目的と機能：**
 
-- この設定により、デバイスはWi-FiとHome Assistantに接続でき、APIとOTAアップデートの両方をサポートして簡単な管理を可能にします。
+- この設定により、デバイスはWi-FiとHome Assistantに接続し、簡単な管理のためにAPIとOTAアップデートの両方をサポートします。
 
-- 電子ペーパーディスプレイを設定して、物理ボタンで制御される2つの切り替え可能なページに異なるタイプの情報を表示します。
+- 物理ボタンで制御される2つの切り替え可能なページで、e-paperディスプレイにさまざまなタイプの情報を表示するように設定します。
 
 - デバイスはバッテリー電圧を読み取り、バッテリーの割合を計算し、対応するバッテリーアイコンと値を表示します。
 
-- 天気状況と温度はHome Assistantから取得され、適切なアイコンと単位で表示されます。
+- 天気の状況と温度はHome Assistantから取得され、適切なアイコンと単位で表示されます。
 
 - 現在の時刻と日付も表示され、Home Assistantと同期されます。
 
-この例では、センサー読み取り値、Home Assistantデータ、ユーザー入力を組み合わせて、ESPHomeとTRMNL 7.5インチ電子ペーパーキットを使用して機能豊富な常時オンスマートディスプレイを構築する方法を紹介します。
+この例では、センサー読み取り値、Home Assistantデータ、ユーザー入力を組み合わせて、ESPHomeとTRMNL 7.5インチe-paperキットを使用して機能豊富な常時オンスマートディスプレイを構築する方法を紹介します。
 
 <details>
 
@@ -741,7 +808,7 @@ esp32:
   board: esp32-s3-devkitc-1
   framework:
     type: arduino
-    
+
 # Enable logging
 logger:
 
@@ -1042,7 +1109,7 @@ display:
 
 </details>
 
-以下の画像のようなフィードバックが表示された場合、コードが正常に実行されていることを意味します。
+以下の画像のようなフィードバックが表示されたら、コードが正常に実行されていることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_demo3_byod.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -1050,13 +1117,13 @@ display:
 
 ### Q1: データが表示されないのはなぜですか？
 
-この場合、設定 -> デバイスとサービス -> 統合に移動して、デバイスを**再設定**する必要があります。ePaper Panelが見つからない場合は、HAを再起動してみてください。
+この場合、Settings -> Devices & Services -> Integrations に移動してデバイスを**RECONGFIGURE**する必要があります。ePaper Penalが見つからない場合は、HAを再起動してみてください。
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
 ### Q2: Home Assistantでこれらのデータを取得できないのはなぜですか？ {#port}
 
-この場合、設定 -> デバイスとサービス -> 統合に移動して、デバイスをHAに**追加**する必要があります。
+この場合、Settings -> Devices & Services -> Integrations に移動してデバイスをHAに**ADD**する必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
 
@@ -1083,15 +1150,15 @@ display:
 
 何度か抜き差しを試すか、プロンプトに従ってドライバーをインストールしてください。
 
-### <span id="Q5">Q5</span>: Wi-Fiでのプログラムアップロードが失敗しますか？
+### <span id="Q5">Q5</span>: Wi-Fiプログラムのアップロードが失敗しましたか？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/74.png" style={{width:800, height:'auto'}}/></div>
 
-この場合、ePaper Panelがオフラインまたはディープスリープモードになっています。オンラインにするか、起動してください。
+この場合、epaperパネルがオフラインまたはディープスリープモードになっています。オンラインにするか、起動してください。
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

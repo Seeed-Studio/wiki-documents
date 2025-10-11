@@ -244,7 +244,7 @@ dfu-util -l
 brew install dfu-util
 ```
 
-- Check if the device is detected:
+- 检查设备是否被检测到：
 
 ```bash
 dfu-util -l
@@ -276,7 +276,7 @@ Found DFU: [2886:001a] ver=0202, devnum=3, cfg=1, intf=4, path="2-1.1.4", alt=0,
 sudo apt install dfu-util
 ```
 
-- Connect the XVF3800 and check detection:
+- 连接XVF3800并检查检测：
 
 ```bash
 sudo dfu-util -l
@@ -312,7 +312,7 @@ Found DFU: [2886:001a] ver=0202, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, n
 dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ```
 
-- On Linux, run it with sudo
+- 在 Linux 上，使用 sudo 运行它
 
 ```bash
 sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
@@ -409,11 +409,21 @@ card 4: Array [reSpeaker XVF3800 4-Mic Array], device 0: USB Audio [USB Audio]
 arecord -D plughw:4,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
 ```
 
- Replace `4` with your actual sound card number
+将 `4` 替换为你实际的声卡编号
 
 ---
 
-3. **Playback**:
+3. **在 ALSA 上调整 ReSpeaker XVF3800 的音量**
+
+```bash
+alsamixer
+```
+
+在 alsamixer 中，使用 **左右方向键** 来切换到正确的声卡设备。使用 **上方向键** 来提高音量。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alsa.png" alt="pir" width={600} height="auto"/></p>
+
+4. **播放**：
 
 ```bash
 aplay -D plughw:4,0 output.wav
@@ -695,7 +705,7 @@ VERSION 2 0 2
 
 ---
 
-**LED Control (Same as Windows, prefix with ./)**
+**LED 控制（与 Windows 相同，前缀为 ./）**
 
 ```bash
 ./xvf_host led_effect 1
@@ -811,7 +821,7 @@ AEC_SPENERGY_VALUES 2080656 0 2083455 2080656
 ./xvf_host AUDIO_MGR_OP_L 3 0
 ```
 
-Set right channel to Far End (reference) data
+将右声道设置为远端（参考）数据
 
 ```bash
 ./xvf_host AUDIO_MGR_OP_R 5 0

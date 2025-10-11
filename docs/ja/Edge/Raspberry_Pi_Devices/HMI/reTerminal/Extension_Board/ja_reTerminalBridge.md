@@ -45,7 +45,7 @@ sudo ./scripts/reTerminal.sh
 ```
 
 :::note
-For **32bit OS** you will need to add following step before execute `sudo ./scripts/reTerminal.sh`
+**32bit OS**の場合、`sudo ./scripts/reTerminal.sh`を実行する前に以下のステップを追加する必要があります
 
 ```
 echo arm_64bit=0 | sudo tee -a /boot/config.txt
@@ -227,7 +227,7 @@ sudo nano /boot/config.txt
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image5.jpg"/></div>
 
-**Step 4.** CANインターフェースはネットワークインターフェースと同じように動作します。```ifconfig -a```（インターフェース設定）を使用して様々な統計情報を取得できるはずです。
+**ステップ 4.** CANインターフェースはネットワークインターフェースと同じように動作します。```ifconfig -a```（インターフェース設定）を使用して様々な統計情報を取得できるはずです。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image6.jpg"/></div>
 
@@ -235,7 +235,7 @@ sudo nano /boot/config.txt
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image7.jpg"/></div>
 
-**Step 5.** 以下のコマンドを使用してCANインターフェースを手動で起動できます：
+**ステップ 5.** 以下のコマンドを使用してCANインターフェースを手動で起動できます：
 
 ```sh
 sudo ip link set can0 up type can bitrate 500000
@@ -313,7 +313,7 @@ int main(int argc, char **argv)
 }
 ```
 
-Another reTerminal compiles and runs the code that receives the data.
+別のreTerminalがデータを受信するコードをコンパイルして実行します。
 
 ```sh
 gcc canreceive.c -o canreceive
@@ -717,7 +717,7 @@ except KeyboardInterrupt:
 git clone https://github.com/esnet/iperf.git
 ```
 
-**Step 2.** Use the following codes to install the **iperf3**
+**ステップ 2.** 以下のコードを使用して**iperf3**をインストールしてください
 
 ```
 cd iperf
@@ -791,7 +791,7 @@ cd sx1302_hal
 sudo make
 ```
 
-**Step 4.** Configure the reset script. First download the file to **sx1302_hal/packet_forwarder** use the command
+**ステップ 4.** リセットスクリプトを設定します。まず **sx1302_hal/packet_forwarder** にファイルをダウンロードし、次のコマンドを使用します
 
 ```
 cd sx1302_hal/packet_forwarder
@@ -816,7 +816,7 @@ $ ./lora_pkt_fwd -c global_conf.json.sx1250.EU868
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image20.jpg"/></div>
 
-**Step 5.** [TTN ウェブサイト](https://www.thethingsnetwork.org/)でサインアップし、アカウントにログインします。アカウントをお持ちでない場合は登録してください。その後、Gateway インターフェースに入り、「Get Starting」をクリックします。
+**ステップ 5.** [TTN ウェブサイト](https://www.thethingsnetwork.org/)でサインアップし、アカウントにログインします。アカウントをお持ちでない場合は登録してください。その後、Gateway インターフェースに入り、「Get Starting」をクリックします。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa1.png"/></div>
 
@@ -832,11 +832,11 @@ $ ./lora_pkt_fwd -c global_conf.json.sx1250.EU868
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image22.jpg"/></div>
 
-その中で、**Gateway EUI** の値は **step 4** でテストを実行した際にログに表示されます。Lora オプションの Frequency plan（ヨーロッパ版を例とする）では **Europe 863-870 MHz (SF9 for RX2 - recommended)** を選択します。その後、**Create gateway** をクリックします。
+その中で、**Gateway EUI** の値は **ステップ 4** でテストを実行した際にログに表示されます。Lora オプションの Frequency plan（ヨーロッパ版を例とする）では **Europe 863-870 MHz (SF9 for RX2 - recommended)** を選択します。その後、**Create gateway** をクリックします。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image23.jpg"/></div>
 
-**Step 6.** （ヨーロッパ版を例とする）
+**ステップ 6.** （ヨーロッパ版を例とする）
 SPI 版の場合、**sx1302_hal/packet_forwarder** の **global_conf.json.sx1250.EU868** を編集します。
 
 USB 版の場合、**sx1302_hal/packet_forwarder** の **global_conf.json.sx1250.EU868.USB** を編集します。
@@ -851,7 +851,7 @@ USB 版の場合、**sx1302_hal/packet_forwarder** の **global_conf.json.sx1250
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image24.jpg"/></div>
 
-**Step 7.** **step 4** のコマンドを再度実行すると、後でウェブページでデバイスの接続情報を確認できます。
+**ステップ 7.** **ステップ 4** のコマンドを再度実行すると、後でウェブページでデバイスの接続情報を確認できます。
 
 ```sh
 USB version
@@ -1224,7 +1224,9 @@ sudo aplay -Dhw:0 test.wav
 4. 昨日E10をインストールしましたが、バッテリー情報（充電レベル）は正確ですか？充電器から取り出したばかりでも赤（0%）と表示されます。
 
 ```
+
 Kernel: 5.10.103-v8+ aarch64 bits: 64 Console: tty 0 Distro: Debian GNU/Linux 10
+
 ```
 
 電力表示機能：まだ開発されていませんが、あなたの声は届いており、この機能の開発をスケジュールに入れる予定です

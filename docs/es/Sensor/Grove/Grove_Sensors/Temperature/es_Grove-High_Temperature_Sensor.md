@@ -52,7 +52,6 @@ Los sensores industriales de la serie SenseCAP S210x proporcionan una experienci
 |-------------------------------------------|---------|----------------------|
 | Grove - Sensor de Alta Temperatura V1.0 | Inicial | 25 Feb 2014  |
 
-
 ## Especificaciones
 
 | Parámetro                                     | Valor/Rango                         |
@@ -111,7 +110,6 @@ Las plataformas mencionadas anteriormente como compatibles son una indicación d
 | 5V               |  Rojo   |
 | A1               | Blanco  |
 | A0               | Amarillo |
-
 
 #### Software
 
@@ -246,7 +244,7 @@ if __name__ == "__main__":
         sys.exit(0)
 ```
 
-- Step 4. We will see the temperature display on terminal as below.
+- Paso 4. Veremos la visualización de temperatura en la terminal como se muestra a continuación.
 
 ```txt
 pi@raspberrypi:~/GrovePi/Software/Python/grove_hightemperature_sensor $ python3 high_temperature_example.py
@@ -295,12 +293,11 @@ pi@raspberrypi:~/GrovePi/Software/Python/grove_hightemperature_sensor $ python3 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
