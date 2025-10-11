@@ -32,7 +32,7 @@ last_update:
 ## 前提条件
 
 - [Ubuntu主机PC](https://developer.nvidia.com/sdk-manager)（原生或使用VMware Workstation Player的虚拟机）。
-- Jetson AGX Xavier H01套件。
+- Jetson AGX Orin H01套件。
 - USB Type-C数据传输线
 
 ## 进入强制恢复模式

@@ -5,5 +5,6 @@
     "baseUrl": ".",
     "moduleResolution": "Node16",
     "module": "Node16"
-  }
+  },
+  "include": ["src", "**/*.d.ts"]
 }
