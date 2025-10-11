@@ -19,7 +19,6 @@ last_update:
 
 This wiki describes deploying a VLM (Visual Learning Model) on the [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html), using a USB camera as the input for the VLM. When the system detects a safe situation, the signal light will turn green via RS485 control. In dangerous situations, such as a fire or the presence of someone with a weapon, the signal light will turn yellow. When the light sensor detects the signal from the warehouse light being turned off via RS485, the signal light will turn red.
 
-
 ## Prerequisites
 
 <div align="center">
@@ -35,15 +34,14 @@ This wiki describes deploying a VLM (Visual Learning Model) on the [reComputer I
 
 > **Note on Required Components:**
 > In addition to the Jetson, the following RS485 components are required:
-> *   An RS485 hub to split one interface into two.
-> *   An RS485 color-changing light.
-> *   An RS485 light sensor.
-
+>
+> - An RS485 hub to split one interface into two.
+> - An RS485 color-changing light.
+> - An RS485 light sensor.
 
 ## Initialize system environment
 
 1. After installing the initial system with JP6, you need to check the installation of `CUDA` and other libraries. You can verify and install them by running `sudo apt-get install nvidia-jetpack`.
-
 
 2. Install [ollama](https://ollama.com/download) use command like below:
 
@@ -56,7 +54,6 @@ curl -fsSL https://ollama.com/install.sh | sh
 ```bash
 ollama run llava-llama3:8b
 ```
-
 
 ## Install project
 
@@ -90,13 +87,11 @@ source .venv/bin/activate
 
 2. Open a web browser, then input `localhost:5002` to open the application interface
 
-
 ## Result
 
 As demonstrated in the video, the warehouse light indicates green during normal operations, yellow in dangerous situations such as when someone is holding a knife, and red when the light sensor detects no light—signaling a failure in the warehouse lighting, while also allowing interaction with historical data and queries via the VLM model for desired information.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/J0sS-1zQid8?list=PLpH_4mf13-A1EnNUgEMTsy2PxejFllSGM" title="Build a Local AI Watchdog for Industrial Safety with reComputer J4012 powered by NVIDIA Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 
 ## Tech Support & Product Discussion
 
