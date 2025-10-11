@@ -91,7 +91,9 @@ source .venv/bin/activate
 
 ビデオで実演されているように、倉庫ライトは通常の操作中は緑色を示し、ナイフを持った人がいるなどの危険な状況では黄色を示し、光センサーが光を検出しない場合（倉庫照明の故障を示す）は赤色を示します。また、VLMモデルを介して履歴データや必要な情報のクエリとの相互作用も可能です。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/J0sS-1zQid8?list=PLpH_4mf13-A1EnNUgEMTsy2PxejFllSGM" title="Build a Local AI Watchdog for Industrial Safety with reComputer J4012 powered by NVIDIA Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 技術サポート & 製品ディスカッション
 

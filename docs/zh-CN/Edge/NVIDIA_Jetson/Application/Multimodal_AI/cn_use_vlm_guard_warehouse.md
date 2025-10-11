@@ -91,7 +91,9 @@ source .venv/bin/activate
 
 如视频所示，仓库灯在正常操作期间显示绿色，在危险情况下（如有人持刀）显示黄色，当光传感器检测不到光线时显示红色——表示仓库照明故障，同时还允许通过 VLM 模型与历史数据和查询进行交互以获取所需信息。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/J0sS-1zQid8?list=PLpH_4mf13-A1EnNUgEMTsy2PxejFllSGM" title="Build a Local AI Watchdog for Industrial Safety with reComputer J4012 powered by NVIDIA Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 技术支持与产品讨论
 

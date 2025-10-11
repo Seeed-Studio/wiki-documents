@@ -91,7 +91,9 @@ source .venv/bin/activate
 
 Como se demuestra en el video, la luz del almacén indica verde durante operaciones normales, amarillo en situaciones peligrosas como cuando alguien está sosteniendo un cuchillo, y rojo cuando el sensor de luz no detecta luz—señalando una falla en la iluminación del almacén, mientras también permite la interacción con datos históricos y consultas a través del modelo VLM para obtener la información deseada.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/J0sS-1zQid8?list=PLpH_4mf13-A1EnNUgEMTsy2PxejFllSGM" title="Build a Local AI Watchdog for Industrial Safety with reComputer J4012 powered by NVIDIA Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Soporte Técnico y Discusión de Productos
 
