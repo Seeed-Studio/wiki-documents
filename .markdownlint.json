@@ -18,5 +18,7 @@
     "MD004": {
       "style": "dash"
     },
-    "MD034": false
+    "MD034": false,
+    "MD049": { "style": "asterisk" },
+    "MD050": { "style": "asterisk" }
   }
