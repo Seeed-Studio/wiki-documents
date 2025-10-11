@@ -16,6 +16,8 @@ last_update:
 
 ## 介绍
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/overall.jpg" alt="pir" width={700} height="auto" /></p>
+
 本指南将引导您在基于 Raspberry Pi 的 Seeed reComputer R11 边缘控制器上使用 ChirpStack 设置完整的 LoRaWAN 网关解决方案。借助 WM1302 LoRa 集中器模块，R1X 设备可作为功能强大的网关，能够实现可靠的长距离无线通信。通过配置 Semtech 数据包转发器，LoRa 数据可以无缝传输到 ChirpStack，后者管理网络和应用层。我们将使用 Docker 来简化 ChirpStack 服务的安装和部署，确保模块化和可扩展的设置。最后，系统与 MQTT 集成，实现从 LoRa 设备（如 SenseCAP S2101 传感器）到世界任何地方可访问的应用程序的安全实时物联网数据流。
 
 ## 所需硬件

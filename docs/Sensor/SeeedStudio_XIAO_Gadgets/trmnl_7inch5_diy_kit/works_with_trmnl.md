@@ -44,6 +44,72 @@ By combining TRMNL's powerful platform with our high-quality E Ink® display, we
 
 ## Getting Started with TRMNL
 
+### Equipment Installation
+
+**Step 1. Connect Display to Driver Board**  
+Align the FPC cable with the connector on the XIAO ePaper Display Board, then secure the latch to ensure a firm connection.  
+
+:::tip
+The metal side of the FPC cable should face upwards, otherwise, no content will be displayed.
+
+Please follow the installation tutorial below, many people get it wrong.
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/2.jpg" style={{width:600, height:'auto'}}/></div>
+
+**Step 2. Attach Battery**  
+Connect the battery cable to the JST connector on the driver board, ensuring correct polarity (red wire to +, black to -).  
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/3.jpg" style={{width:600, height:'auto'}}/></div>
+
+**Step 3. Enclosure Assembly (Optional)**  
+
+:::tip
+Please note that the screen's flexible cable is very fragile. Be careful when operating. If it gets damaged, the entire screen will stop working.
+:::
+Print open-source enclosure parts from [Resource part](#resources) and assemble the components inside.  
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/4.jpeg" style={{width:600, height:'auto'}}/></div>
+
+First, assemble driver board and battery.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/base.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+Test TRMNL kit if it works well.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/test.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+Plug the screen into the case and make the FPC able out.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/cable.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+Connect FPC extension cable and assemble the whole case.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/assembly.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+L-Shape enclosure is very similar.
+
+<div class="table-center">
+<iframe width="300" height="500" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/Lshape.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+:::tip
+If your TRMNL kit far away from your router, you can move the antenna outside the case. It would have better performance.
+:::
+
 ### TRMNL Account Setup and TRMNL Access
 
 Before connecting your kit to TRMNL, you'll need to:
