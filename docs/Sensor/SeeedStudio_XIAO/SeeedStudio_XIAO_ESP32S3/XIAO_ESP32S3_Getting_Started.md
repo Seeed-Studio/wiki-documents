@@ -537,7 +537,7 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 - **Step 4.** Close the Arduino IDE and reopen it.-->
 
 <Tabs>
-<TabItem value="(Sense)" label="for XIAO ESP32S2 (Sense)" default>
+<TabItem value="(Sense)" label="for XIAO ESP32S3 (Sense)" default>
 
 Also, search for **xiao** in the development board on the left. select **XIAO_ESP32S3**.
 
