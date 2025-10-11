@@ -9166,6 +9166,7 @@ const sidebars = {
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_Orbbec_Depth_Camera',
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_ORB_SLAM3_with_Orbbec_Gemini2',
+            'zh-CN/Robotics/Robot_Sensor/Camera/cn_Pycuvslam_On_reComputer',
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_Orbbec_Gemini_335Lg',
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_Sensing_GMSL_Camera',
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_CSI_Camera',
@@ -14165,6 +14166,7 @@ const sidebars = {
             'es/Robotics/Robot_Sensor/Camera/es_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
             'es/Robotics/Robot_Sensor/Camera/es_Orbbec_Depth_Camera',
             'es/Robotics/Robot_Sensor/Camera/es_ORB_SLAM3_with_Orbbec_Gemini2',
+            'es/Robotics/Robot_Sensor/Camera/es_Pycuvslam_On_reComputer',
             'es/Robotics/Robot_Sensor/Camera/es_Orbbec_Gemini_335Lg',
             'es/Robotics/Robot_Sensor/Camera/es_Sensing_GMSL_Camera',
             'es/Robotics/Robot_Sensor/Camera/es_CSI_Camera',
@@ -19160,6 +19162,7 @@ const sidebars = {
             'ja/Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
             'ja/Robotics/Robot_Sensor/Camera/ja_Orbbec_Depth_Camera',
             'ja/Robotics/Robot_Sensor/Camera/ja_ORB_SLAM3_with_Orbbec_Gemini2',
+            'ja/Robotics/Robot_Sensor/Camera/ja_Pycuvslam_On_reComputer',
             'ja/Robotics/Robot_Sensor/Camera/ja_Orbbec_Gemini_335Lg',
             'ja/Robotics/Robot_Sensor/Camera/ja_Sensing_GMSL_Camera',
             'ja/Robotics/Robot_Sensor/Camera/ja_CSI_Camera',
@@ -20097,7 +20100,6 @@ const sidebars = {
     'ja/ja_About',
     'ja/ja_License',
   ]
-}
+};
 
-
-module.exports = sidebars
+export default sidebars;
