@@ -5,11 +5,16 @@ image: https://files.seeedstudio.com/wiki/watcher_ha/10.png
 slug: /integrate_watcher_to_ha
 sidebar_position: 1
 last_update:
-  date: 08/20/2024
-  author: Citric
+  date: 10/11/2025
+  author: Twelve
 ---
 
 # Integrate Watcher to Home Assistant
+
+:::caution Note
+This tutorial does not apply to the Xiaozhi firmware version.  
+For Xiaozhi firmware, please visit the [Xiaozhi Watcher Guide](https://wiki.seeedstudio.com/ha_dify_watcher_llms/) for detailed instructions.
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/10.png" style={{width:1000, height:'auto'}}/></div>
 
