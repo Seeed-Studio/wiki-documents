@@ -26,7 +26,6 @@ This article will introduce how to get started with Damiao 43 series motors and 
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
-
 ## Specification
 
 Here's the completed table with all parameters filled in for all motor models:
