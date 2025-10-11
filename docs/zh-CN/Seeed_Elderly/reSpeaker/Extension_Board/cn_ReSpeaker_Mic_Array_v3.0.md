@@ -192,7 +192,9 @@ sudo python dfu.py --download MicArrayV3_firmware/1_channel_dfu_4.0.0_firmware.b
 
 这是关于 DOA 和 AEC 的视频。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/XivM-6PRgX8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ### 安装 DFU 和 LED 控制驱动
 

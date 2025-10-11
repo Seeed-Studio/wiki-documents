@@ -14,7 +14,9 @@ last_update:
 
 # 基于 XIAO ESP32S3 的迷你 ChatGPT 语音助手
 
+<div class="video-container">
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/wPi-XjeJPNw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 我们很高兴今天为您带来一个全新的项目，使用 XIAO ESP32S3 Sense 和 XIAO 圆形显示屏！该项目旨在首先使用 XIAO ESP32S3 Sense 的麦克风和 Google Cloud 的语音转文本服务构建语音识别系统。然后使用识别的语音文本调用 OpenAI 的接口向 ChatGPT 提问并返回答案。最后，我们在屏幕上显示识别的语音和答案内容。
 

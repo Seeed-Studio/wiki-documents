@@ -21,7 +21,9 @@ LTE CAT.1 Pi HATはLTEカテゴリ1ネットワーク向けに設計されてお
 LTE CAT.1 Pi HATはUARTおよびUSBインターフェースをサポートしています。UARTを使用することで、Raspberry Piは特別なドライバーなしでATコマンドを介してLTE CAT.1 Pi HATと通信できます。これにより迅速なプロトタイピング構築に適しています。
 
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/nQmORk9_EQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 
 

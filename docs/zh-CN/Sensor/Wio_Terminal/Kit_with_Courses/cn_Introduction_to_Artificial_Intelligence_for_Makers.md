@@ -55,7 +55,9 @@ AI在今天无处不在。"数据挖掘"、"人工智能"、"人工神经网络"
 
 然后神经网络主导了视觉领域，特别是分类和分割问题，卷积神经网络是近年来赢得众多竞赛的最突出方法之一。它在图像识别方面有着出色的结果。
 Nvidia 为 Jetson Nano 构建了许多[视觉演示](https://github.com/dusty-nv/jetson-inference)，我们测试了其中两个用于分类和人脸检测的演示：
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/U0rNdI9pl_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 艺术
 

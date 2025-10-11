@@ -512,7 +512,9 @@ aip shell -n -c "runfile <YourPythonFilePath>"
 
 Este es el video de introducción de este producto, demostraciones simples, puedes intentarlo.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3slfeHKSSCw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **Proyecto de Control Remoto Universal IR Grove**：¿Tienes múltiples controles remotos? ¿Tienes un Arduino? Opera múltiples dispositivos con una sola pulsación de un control remoto IR Keyes.
 

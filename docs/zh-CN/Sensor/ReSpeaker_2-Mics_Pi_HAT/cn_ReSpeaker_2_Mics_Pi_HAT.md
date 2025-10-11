@@ -117,7 +117,9 @@ Mycroft Precise是Apache-2.0许可证项目，这意味着您可以修改和分�
 
 **您的个人家庭咖啡师通过这台语音控制咖啡机变为现实**：一台开源、隐私设计的咖啡机，可以保护您最喜欢的咖啡和咖啡因摄入计划的隐私。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4gN1bvl24ZM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技术支持与产品讨论
 

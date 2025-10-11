@@ -88,7 +88,9 @@ En tu terminal(Ctrl+Alt+T), ingresa ``` ffmpeg -version``` si obtienes algo como
 ```shell
 python main.py
 ``` 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/KR0GYqUuo5Y?si=uSGUkKmCSZmaq5f7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Riva vs Whisper
 
@@ -98,7 +100,9 @@ Whisper es un sistema de reconocimiento automático de voz (ASR) entrenado con 6
 
 En el próximo video comparativo, compararemos la capacidad de [Riva](https://wiki.seeedstudio.com/es/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson/) y Whisper en Conversión de Voz a Texto desarrollado en Nvidia Jetson.
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/2l7yus611DI?si=XdEjwzpZdJkLC8aB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Perspectivas del Proyecto
 

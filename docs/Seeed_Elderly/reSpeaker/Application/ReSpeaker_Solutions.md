@@ -23,7 +23,9 @@ The ReSpeaker series is a family of development boards designed to enable a futu
 If you want to experience voice interface, or you want to try to implement your idea, grab a kit, or a development board [here](https://www.seeedstudio.com/series/Respeaker-10.html)!
 
 Example:
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/tdIsCRXKoVI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## **Integrate Quickly with Our SDKs & HDKs**
 

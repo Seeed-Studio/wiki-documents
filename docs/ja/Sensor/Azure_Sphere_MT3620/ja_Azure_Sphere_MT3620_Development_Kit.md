@@ -30,7 +30,9 @@ MT3620 のソフトウェア開発は、強力な Microsoft Visual Studio IDE �
 - [Visual Studio](https://visualstudio.microsoft.com/)（Community、Enterprise、Professional のいずれかをサポート）と Azure Sphere 拡張機能をインストールし、開発ボードを USB 経由で PC に接続して、これまでにないレベルのセキュリティを備えた IoT アプリケーションの開発を開始します。
 - MT3620 Dev Board を Azure Sphere 用に使用するには、最新の Windows 更新プログラムを適用した Windows 10 PC と [Azure Sphere ソフトウェア開発キット](http://aka.ms/AzureSphereSDK) SDK が必要です。
 
+<div class="video-container">
 <iframe width="600" height="450" src="https://www.youtube.com/embed/iiDF26HNh-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 |製品名 | 購入方法|
 |----------------|-----------|
@@ -359,7 +361,9 @@ Groveベースシールドの電圧スイッチが**3.3v**に設定されてい�
 
 詳細な操作については、以下のビデオを参照してください。
 
+<div class="video-container">
 <iframe width="1000" height="669" src="https://www.youtube.com/embed/KXThR9RUNvw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## リソース
 

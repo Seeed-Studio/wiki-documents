@@ -366,7 +366,7 @@ En una máquina host Ubuntu, abre la terminal y ejecuta el comando `sha256sum <A
 Antes de que podamos continuar con los pasos de instalación, necesitamos asegurarnos de que la placa esté en modo de recuperación forzada.
 :::
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="450" src="https://www.youtube.com/embed/HEIXFkizP5Y" title="Enter Force Recovery Mode (reComputer Mini)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -410,7 +410,9 @@ El reComputer Jetson J30/40 Mini ha lanzado un script de flasheo de un clic, que
 wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && sudo chmod 777 ./flashing.sh && ./flashing.sh
 ```
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFBzTlyOjhE?si=uNN-l5VVGbAyGnot" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::caution
 Descargo de responsabilidad: El script de flasheo de un clic tiene como objetivo hacer que el flasheo de jetpack sea más rápido. La versión actual es una versión beta y puede tener muchos problemas. Esperamos su comprensión. Si hay problemas de flasheo, siga los pasos de `Flashear el Dispositivo Paso a Paso` a continuación y proporcione comentarios en nuestro [canal Discord de Jetson](https://discord.com/channels/862602258452578314/930732339624026152). Los solucionaremos rápidamente y mejoraremos esta función en un futuro cercano.

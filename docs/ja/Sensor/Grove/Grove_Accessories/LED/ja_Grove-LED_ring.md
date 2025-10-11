@@ -18,7 +18,9 @@ last_update:
 Grove - RGB LEDリング (20 - WS2813 Mini) は、[WS2813デジタルRGB LEDリング](https://www.seeedstudio.com/WS2813-Digital-RGB-LED-Ring-p-2871.html) のミニバージョンです。このRGB LEDリングは、LED内部にマイクロコントローラーを組み込んだ3535サイズのLEDです。WS2813は、ドライバーチップがLED内部にあるため、各LEDがアドレス指定可能です。  
 各LEDは一定電流駆動を持っているため、電圧が変化しても色が非常に安定しています。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/zQj8RRJcZsk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Min-p-3227.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p> -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Min-p-3227.html)

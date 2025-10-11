@@ -359,7 +359,9 @@ Seeed oled 96*96 demo.
 - 第七步：使用远程调试工具访问设备。
 - 第八步：按照视频教程以三种不同方式操作示例。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NgH3Ot9pM1Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## 资源
 

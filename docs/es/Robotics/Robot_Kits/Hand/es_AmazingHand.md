@@ -404,6 +404,7 @@ Controla la mano robótica en tiempo real reflejando los movimientos de tu propi
   height: 0,
   overflow: 'hidden',
 }}>
+  <div class="video-container">
   <iframe
     style={{
       position: 'absolute',
@@ -418,6 +419,7 @@ Controla la mano robótica en tiempo real reflejando los movimientos de tu propi
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen>
   </iframe>
+  </div>
 </div>
 
 Para ejecutar esta demostración, necesitarás dos archivos: `index.html` para la interfaz del navegador y `backend.py` para el procesamiento del lado del servidor.

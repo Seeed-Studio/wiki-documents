@@ -42,7 +42,7 @@ reComputer J401B viene con un conector mini PCIe que soporta 4G.
 - Paso2. Conectar las Antenas
 - Paso3. Insertar la Tarjeta SIM
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="450" src="https://www.youtube.com/embed/q5nV0RqvceU" title="Assembling 4g module for j401b" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -52,7 +52,7 @@ reComputer J401B viene con un conector mini PCIe que soporta 4G.
 
 - Paso2. Abrir un navegador para probar si la red 4G está funcionando correctamente.
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/IJEvmHhrmbc" title="J401B 4G Network Usage" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

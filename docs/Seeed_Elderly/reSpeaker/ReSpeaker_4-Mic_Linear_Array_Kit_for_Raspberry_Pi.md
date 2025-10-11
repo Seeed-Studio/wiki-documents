@@ -16,7 +16,9 @@ Seeed’s ReSpeaker 4-Mic Linear Array Kit is an extension board, aka HAT design
 
 ReSpeaker 4-Mic Linear Array Kit for Raspberry Pi consists of two boards, one is voice accessory HAT, another is four microphones linear array.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NxZx9nz67Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ReSpeaker 4-Mic Linear Array Kit for Raspberry Pi support 8 input & 8 output channels in Raspberry Pi OS. The first 6 input channels for microphone recording (only first 4 input channels are valid capture data), rest of 2 input channel are echo channel of playback. The first 2 output channel are for sound output, the rest of 6 output channels are dummy.
 

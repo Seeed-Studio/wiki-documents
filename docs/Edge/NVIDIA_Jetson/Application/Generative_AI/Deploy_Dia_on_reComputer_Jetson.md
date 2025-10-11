@@ -145,7 +145,7 @@ In the demonstration video, I used DeepSeek to generate a dialogue introducing S
 [S2] Couldn’t agree more!
 ```
 
-<div align="center">
+<div class="video-container">
     <iframe width="900" height="506" src="https://www.youtube.com/embed/g9jQzwnsHr0" title="Deploy Dia on reComputer Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

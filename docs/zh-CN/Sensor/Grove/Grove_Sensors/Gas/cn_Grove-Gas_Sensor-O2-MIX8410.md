@@ -19,7 +19,9 @@ Grove - 氧气传感器(MIX8410)是一种用于测试空气中氧气浓度的传
 
 Grove - 氧气传感器(MIX8410)相比旧版本Grove - 氧气传感器(ME2-O2-Ф20)是一个新发布的版本。那么我们在哪些方面进行了更新呢？新版本采用了先进的防泄漏处理，大大降低了泄漏概率，解决了旧版本的泄漏问题。新版本的输出电流更低，因此电解液消耗更慢，传感器寿命更长。此外，新旧版本的底部引脚、物理尺寸、顶部驱动板和使用方法都是相同的。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Oxygen-Sensor-MIX8410-p-4697.html"><img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/get_one_now.png" alt="pir" width={600} height="auto" /></a></p> 
 

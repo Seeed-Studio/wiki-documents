@@ -20,7 +20,9 @@ last_update:
 
 更多详细信息和视觉效果，请观看相应的视频！
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qbpVltzvL6Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 您将学习如何应用模型优化技术，这不仅允许运行中等规模的卷积神经网络，还能同时运行这个时尚的 GUI 和 WiFi 连接，并且可以连续运行数天和数月！
 

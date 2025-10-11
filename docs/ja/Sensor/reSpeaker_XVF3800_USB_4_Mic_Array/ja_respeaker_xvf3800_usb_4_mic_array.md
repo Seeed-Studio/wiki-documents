@@ -118,7 +118,7 @@ reSpeaker XVF3800は、外部制御用に3つの入力ピン（GPI）と5つの�
 
 音声の入力方向に従って LED アレイが動作する様子を体験できます。
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="400"
           src="https://www.youtube.com/embed/nYxsTq_2bw4"
           title="ReSpeaker XVF3800 Plug & Play: Boot Light Show and DOA Demo"

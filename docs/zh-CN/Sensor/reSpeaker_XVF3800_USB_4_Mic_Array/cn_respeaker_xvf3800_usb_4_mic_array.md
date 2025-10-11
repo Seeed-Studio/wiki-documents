@@ -118,7 +118,7 @@ reSpeaker XVF3800 暴露了 3 个输入引脚 (GPI) 和 5 个输出引脚 (GPO) 
 
 您可以体验 LED 阵列跟随语音输入方向的功能。
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="400"
           src="https://www.youtube.com/embed/nYxsTq_2bw4"
           title="ReSpeaker XVF3800 Plug & Play: Boot Light Show and DOA Demo"

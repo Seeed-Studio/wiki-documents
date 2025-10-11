@@ -133,7 +133,9 @@ Los resultados de FPS e inferencia en la tabla de Ejemplo se proporcionan para m
 Dado que reTerminal está basado en Raspberry Pi 4, no tiene aceleradores de hardware adicionales para inferencia de redes neuronales, por lo que solo se pueden aplicar métodos de optimización estándar para inferencia en CPU.
 La descripción general en video de este tema se presenta aquí:
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/BEDEscDQFxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 A continuación se presenta una breve descripción general de los métodos de optimización de inferencia en CPU:
 

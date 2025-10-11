@@ -16,7 +16,9 @@ last_update:
 
 Grove - ラウドネスセンサーは、環境音を検出するために設計されています。LM2904アンプと内蔵マイクを基に、マイクから受信した高周波信号を増幅およびフィルタリングし、正のエンベロープを出力します。これはArduinoの信号取得に使用されます。出力値は音入力のレベルに依存します。不要な信号の干渉を避けるために、入力信号はモジュール内で2回フィルタリングされます。また、出力ゲインを手動で調整できるネジ式ポテンショメータが搭載されています。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/EhZ7uDvoALE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-Loudness-Sensor-p-1382.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width={200} height={38} border={0} /></a></p>
 

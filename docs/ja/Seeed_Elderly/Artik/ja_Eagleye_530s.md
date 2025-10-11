@@ -24,7 +24,9 @@ Samsung ARTIK™は、エンタープライズグレードのシステムオン�
 
 Eagleye 530sは、多くの「メイカー」ハードウェアアクセサリとピン互換性があるため、Samsung ARTIK™開発者は広範な「メイカー」アクセサリ市場に簡単にアクセスできます。これにより、市販のセンサー（例：[GrovePi+](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)、[Groveセンサー](https://www.seeedstudio.com/grove.html)）、音声認識（例：[ReSpeaker 2-mic array](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html)、[ReSpeaker 4-mic array](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html)）、リレー、GPS、セルラー接続などを使用して、機能豊富な概念実証（PoC）や製品化準備が整った製品を簡単にプロトタイプ化および構築できます。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4IR768d8Ins" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Eagleye-530s-p-3035.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="200" height="38"  border={0} /></a></p>
 

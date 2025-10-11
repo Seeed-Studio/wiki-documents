@@ -21,7 +21,9 @@ El LTE CAT.1 Pi HAT está diseñado para redes LTE Categoría 1 y con respaldo 2
 
 El LTE CAT.1 Pi HAT soporta interfaces UART y USB. Por UART, Raspberry Pi se comunica con LTE CAT.1 Pi HAT vía comando AT sin ningún controlador especial. Es muy adecuado para construir prototipos rápidamente.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/nQmORk9_EQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 |Versión|Enlaces|
 |--|--|

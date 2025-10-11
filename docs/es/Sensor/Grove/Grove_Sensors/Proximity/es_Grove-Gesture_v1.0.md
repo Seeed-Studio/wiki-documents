@@ -28,7 +28,9 @@ El sensor en Grove - Gesture es PAJ7620U2 que integra la función de reconocimie
 
 Aplicación: Puedes usar Gesture como un dispositivo de entrada para controlar otro grove, o una computadora, teléfono móvil, auto inteligente, robot, y más con un simple movimiento de tu mano.
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/i9hnRPuCx-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Características
 

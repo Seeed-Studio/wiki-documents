@@ -414,7 +414,7 @@ python -m lerobot.common.robots.lekiwi.sound_follow
 
 プログラムを起動すると、ロボットは音源の方向に回転し、継続的に「頭」を入力音声の方向に合わせます。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/uI_leYm_m-w" title="A Sound Follow Robot Powered by reSpeaker and Lekiwi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

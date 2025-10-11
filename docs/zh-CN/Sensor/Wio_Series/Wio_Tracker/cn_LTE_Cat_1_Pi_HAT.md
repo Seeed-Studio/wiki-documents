@@ -20,7 +20,9 @@ LTE CAT.1 Pi HAT专为LTE Category 1网络设计，并支持2G回退（仅限欧
 
 LTE CAT.1 Pi HAT支持UART和USB接口。通过UART，Raspberry Pi可以通过AT命令与LTE CAT.1 Pi HAT通信，无需任何特殊驱动程序。它非常适合快速构建原型。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/nQmORk9_EQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 |版本|链接|
 |--|--|

@@ -61,7 +61,9 @@ git clone --recursive https://github.com/littlevgl/pc_simulator.git
 
 ### ホストPC上で
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/UrSkzbuuGaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 EdgeLineはLVGL用のWYSIWYGエディタで、ユーザーがインターフェースを作成し、ターゲットデバイスで使用するためのC/Micropythonコードをエクスポートできます。現在はベータ段階で機能が限定されており、WindowsとLinuxの両方で利用可能です。
 

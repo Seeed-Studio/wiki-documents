@@ -329,7 +329,9 @@ reComputer Jetson J30/40 では、Jetpack 5.1.1、5.1.2、6.0 のフラッシュ
 wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && sudo chmod 777 ./flashing.sh && ./flashing.sh
 ```
 
+<div class="video-container">
 <iframe width="960" height="480" src="https://www.youtube.com/embed/_YfpJAhhT-g?si=OJxCcPqWauYEp9LR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::caution
 免責事項：ワンクリックフラッシュスクリプトは jetpack フラッシュを高速化することを目的としています。現在のバージョンはベータ版であり、多くの問題がある可能性があります。ご理解をお願いいたします。フラッシュに問題がある場合は、以下の `デバイスをステップバイステップでフラッシュする` に従い、[Discord Jetson チャンネル](https://discord.com/channels/862602258452578314/930732339624026152) でフィードバックをお寄せください。迅速に修正し、近い将来にこの機能を改善いたします。

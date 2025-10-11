@@ -15,7 +15,9 @@ last_update:
 
 Seeed Studio BeagleBone® Green Wirelessは、[BeagleBoard.org](https://beagleboard.org)とSeeed Studioの共同開発による製品です。これは[BeagleBone® Black](https://beagleboard.org/black)のオープンソースハードウェア設計に基づいており、差別化されたバージョンとして開発されました。Seeed Studio BeagleBone® Green Wirelessには、高性能で柔軟なWiFi/Bluetoothインターフェースと2つのGroveコネクタが搭載されており、Groveセンサーの大家族に簡単に接続できます。オンボードのHDMIとEthernetは、これらのワイヤレス機能とGroveコネクタのために取り除かれています。
 
+<div class="video-container">
 <iframe width="700" height="600" src="https://www.youtube.com/embed/tlA97rhKG10" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Wireless-p-2650.html" target="_blank">

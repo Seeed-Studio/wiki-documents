@@ -44,7 +44,9 @@ TinyMLの可能性は本当に広大です。
 
 Seeed EDUチームは、Wio Terminalを使用してTinyMLを始めるための決定的なステップバイステップコースを作成しました。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL5efXgSvwk9UCtJ6JKTyWAccSVfTXSlA3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 以下のリンクをクリックすることで、PDF形式のコースとコース資料をダウンロードできます。また、以前にSeeed StudioブログやHackster.ioサイトで公開された単独プロジェクトも見つけることができます。コース内のプロジェクトと単独プロジェクトの両方では、デバイスのプログラミングにArduino IDEを使用し、モデルのトレーニングと推論にはEdge ImpulseとTensorflow Lite for Microcontrollersを組み合わせて使用しています。
 

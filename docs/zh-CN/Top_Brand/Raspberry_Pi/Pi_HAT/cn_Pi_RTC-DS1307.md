@@ -179,7 +179,9 @@ hwclock --help
 
 这是本产品的介绍视频
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SKJ9iXhx0mc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技术支持与产品讨论
 
