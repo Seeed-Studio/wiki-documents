@@ -517,6 +517,10 @@ Modifying the radar firmware is a risky operation, so be sure to read this secti
 
 :::tip
 If you'd rather not read the text, you can also refer to **[the video](https://youtu.be/uic8__FFzos)** to update the firmware. Since the ESPHome firmware for XIAO will be overwritten below, you may need to reflash the ESPHome firmware for XIAO on this [webpage](https://limengdu.github.io/MR60BHA2_ESPHome_external_components/) after updating the radar's firmware.
+
+<div class="table-center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uic8__FFzos?si=ijBJOLMk9Z5szwSX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 :::
 
 First, connect the XIAO ESP32C6 and MR60BHA2 modules together. Then use the following code to program XIAO.
