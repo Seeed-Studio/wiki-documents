@@ -386,7 +386,7 @@ Asegúrate de que tu dispositivo esté apagado y desconectado de cualquier fuent
 
 ***Nota de Compra:*** Al comprar tu XIAO ESP32S3 Sense, es importante tener en cuenta que solo **los modelos equipados con cámara** vienen con un disipador de calor incluido. Si tienes una versión del ESP32S3 que no incluye cámara, necesitarás comprar un disipador de calor por separado.
 
-***Consejo de Instalación:*** Prioriza cubrir el PAD Térmico con el disipador de calor, ya que está directamente sobre el chip ESP32S3, la fuente principal de calor. La alineación adecuada asegura una disipación óptima del calor, y ten en cuenta mantener los pines BAT lo más despejados posible.
+***Consejo de Instalación:*** Prioriza cubrir el PAD Térmico con el disipador de calor, ya que está directamente sobre el chip ESP32S3, la fuente principal de calor. La alineación adecuada asegura una disipación óptima del calor, y nota mantener los pines BAT lo más despejados posible.
 :::
 
 Ahora, comencemos el proceso de instalación:
@@ -400,14 +400,14 @@ Comienza removiendo la cubierta protectora del disipador de calor para exponer e
 ***Paso 2. Ensamblar el Disipador de Calor:***
 
 <Tabs>
-  <TabItem value="single" label="Single Heat Sink" default>
+  <TabItem value="single" label="Disipador de Calor Simple" default>
 
 Esta opción más pequeña y compacta es suficiente para uso regular y permite acceso completo a todos los pines GPIO.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/pin-single-heat-sink-install.jpg" style={{width:400, height:'auto'}}/></div>
 
   </TabItem>
-  <TabItem value="dual" label="Dual Heat Sinks">
+  <TabItem value="dual" label="Disipadores de Calor Dobles">
 
 La opción más grande proporciona refrigeración superior, que es ideal para tareas de alto rendimiento pero puede limitar el acceso a algunos pines GPIO.
 
@@ -432,7 +432,7 @@ La herramienta de programación recomendada para el XIAO ESP32S3 es el Arduino I
 Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
-- **Paso 1.** Descarga e instala la versión estable del Arduino IDE según tu sistema operativo.
+- **Paso 1.** Descarga e instala la versión estable de Arduino IDE según tu sistema operativo.
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Descargar Arduino IDE</font></span></strong></a>
@@ -445,7 +445,7 @@ Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que co
 <Tabs>
 <TabItem value='For Windows'>
 
-Navega a **File > Preferences**, y completa **"Additional Boards Manager URLs"** con la URL de abajo:
+Navega a **File > Preferences**, y completa **"Additional Boards Manager URLs"** con la url de abajo:
 
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -468,7 +468,7 @@ En la parte superior del Arduino IDE, puedes seleccionar el puerto directamente.
 </TabItem>
 <TabItem value='For Mac OS'>
 
-Navega a **Arduino IDE > Preferences**, y completa **"Additional Boards Manager URLs"** con la URL de abajo:
+Navega a **Arduino IDE > Preferences**, y completa **"Additional Boards Manager URLs"** con la url de abajo:
 
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -537,14 +537,14 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 - **Step 4.** Close the Arduino IDE and reopen it.-->
 
 <Tabs>
-<TabItem value="(Sense)" label="for XIAO ESP32S2 (Sense)" default>
+<TabItem value="(Sense)" label="para XIAO ESP32S3 (Sense)" default>
 
 También, busca **xiao** en la placa de desarrollo de la izquierda. selecciona **XIAO_ESP32S3**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/10.png" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Plus" label="for XIAO ESP32S3 Plus" default>
+<TabItem value="Plus" label="para XIAO ESP32S3 Plus" default>
 
 Se lanzará pronto; mantente atento a futuras actualizaciones.
 
@@ -661,7 +661,7 @@ Conecta el XIAO a tu computadora y ejecuta el script **boot_uf2.bat**. El XIAO a
 
 **Paso 4**: Copiar el Archivo UF2 al XIAO ESP32S3
 
-Accede a la unidad USB del XIAO ESP32S3 y copia el archivo UF2 convertido a ella. Una vez que se complete la copia, la unidad USB del XIAO desaparecerá automáticamente, y el programa comenzará a ejecutarse.
+Accede a la unidad USB del XIAO ESP32S3 y copia el archivo UF2 convertido a ella. Una vez que se complete la copia, la unidad USB del XIAO desaparecerá automáticamente y el programa comenzará a ejecutarse.
 
 :::tip
 
@@ -697,7 +697,7 @@ El proyecto está compuesto por personalizar el bootloader de segunda etapa de I
 
 Si encuentras el problema anterior, se recomienda que primero intentes presionar el botón de reset en el XIAO ESP32S3 para tratar de hacer que el programa funcione nuevamente. Si el problema persiste, por favor revisa nuevamente tu programa y lee los métodos proporcionados en **[Modo BootLoader](#bootloader-mode)** para restaurar el dispositivo.
 
-### P2: ¿Por qué mi XIAO tiene el problema de no estar alineado en las esquinas redondeadas? ¿Es esto un problema de calidad?
+### P2: ¿Por qué mi XIAO tiene el problema de no estar al ras en las esquinas redondeadas? ¿Es esto un problema de calidad?
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/corners.png" style={{width:500, height:'auto'}}/></div>
 

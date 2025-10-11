@@ -82,7 +82,7 @@ Seeed Studio XIAO ESP32S3 Sense 集成了摄像头传感器、数字麦克风和
   <td align="center"> - </td>
  </tr>
     <tr>
-     <th>存储</th>
+     <th>内存</th>
      <td align="center">片上 8M PSRAM 和 8MB Flash</td>
         <td align="center">片上 8M PSRAM 和 8MB Flash <br></br> 板载 SD 卡插槽，支持 32GB FAT</td>
   <td align="center">片上 8M PSRAM 和 <strong>16MB</strong> Flash</td>
@@ -148,9 +148,9 @@ Seeed Studio XIAO ESP32S3 Sense 集成了摄像头传感器、数字麦克风和
 ### 特性
 
 - **强大的 MCU 板**：集成 ESP32S3 32 位双核 Xtensa 处理器芯片，运行频率高达 240 MHz，配备多个开发端口，支持 Arduino / MicroPython
-- **高级功能**（Sense 版本）：可拆卸的 **OV2640 摄像头传感器，分辨率 1600x1200** 和 **OV3660 摄像头传感器，分辨率 2048x1536**，兼容 OV5640 摄像头传感器，集成额外的数字麦克风
+- **高级功能**（适用于 Sense）：可拆卸的 **OV2640 摄像头传感器，分辨率 1600x1200** 和 **OV3660 摄像头传感器，分辨率 2048x1536**，兼容 OV5640 摄像头传感器，集成额外的数字麦克风
 - **精心设计的电源**：锂电池充电管理功能，提供 4 种功耗模式，允许深度睡眠模式下功耗低至 14μA
-- **大容量存储带来更多可能性**：提供 8MB PSRAM 和 8MB FLASH（**Plus** 版本为 16MB），支持 SD 卡插槽用于外部 32GB FAT 存储（仅适用于 XIAO ESP32S3）
+- **大容量内存带来更多可能性**：提供 8MB PSRAM 和 8MB FLASH（**Plus** 版本为 16MB），支持 SD 卡插槽用于外部 32GB FAT 内存（仅适用于 XIAO ESP32S3）
 - **出色的射频性能**：支持 2.4GHz Wi-Fi 和 BLE 双无线通信，连接 U.FL 天线时支持 100m+ 远程通信
 - **拇指大小的紧凑设计**：21 x 17.8mm，采用 XIAO 经典外形，适合空间受限的项目，如可穿戴设备
 
@@ -288,7 +288,7 @@ GPIO0、GPIO45 和 GPIO46 在芯片复位时连接到芯片内部的弱上拉/�
 
 2. **XIAO ESP32S3 Sense**
 
-XIAO ESP32S3 Sense 出厂时预装了 WebCam 示例程序。您可以通过给 XIAO 安装好天线并通电来使用此程序。有关详细信息，您可以阅读关于此程序的 Wiki。
+XIAO ESP32S3 Sense 出厂时预装了 WebCam 示例程序。您可以通过给 XIAO 安装好天线并通电来使用此程序。有关详细信息，您可以阅读有关此程序的 Wiki。
 
 - [视频流](https://wiki.seeedstudio.com/cn/xiao_esp32s3_camera_usage#project-ii-video-streaming)
 
@@ -298,9 +298,9 @@ XIAO ESP32S3 Sense 出厂时预装了 WebCam 示例程序。您可以通过给 X
 
 #### 焊接排针
 
-XIAO ESP32S3 默认出厂时不带排针，您需要准备自己的排针并将其焊接到 XIAO 的相应引脚上，这样您就可以连接到扩展板或传感器。
+XIAO ESP32S3 默认出厂时不带排针，您需要准备自己的排针并将其焊接到 XIAO 的相应引脚上，以便您可以连接到扩展板或传感器。
 
-由于 XIAO ESP32S3 的微型尺寸，焊接排针时请小心，不要将不同的引脚粘在一起，也不要将焊料粘到屏蔽层或其他组件上。否则，可能会导致 XIAO 短路或无法正常工作，由此造成的后果将由用户承担。
+由于 XIAO ESP32S3 的微型尺寸，焊接排针时请小心，不要将不同的引脚粘在一起，也不要将焊料粘到屏蔽层或其他组件上。否则，可能导致 XIAO 短路或无法正常工作，由此造成的后果将由用户承担。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/4.jpg" style={{width:400, height:'auto'}}/></div>
 
@@ -339,7 +339,7 @@ XIAO ESP32S3 默认出厂时不带排针，您需要准备自己的排针并将�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-Wiki 中关于摄像头的所有程序都与 OV5640、OV2640 和 OV3660 摄像头兼容。
+Wiki 中所有关于摄像头的程序都与 OV5640、OV2640 和 OV3660 摄像头兼容。
 :::
 
 #### 安装升级版散热器
@@ -435,7 +435,7 @@ XIAO ESP32S3 推荐的编程工具是 Arduino IDE，因此作为软件准备的�
 - **步骤 1.** 根据您的操作系统下载并安装稳定版本的 Arduino IDE。
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>下载 Arduino IDE</font></span></strong></a>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
 </div>
 
 - **步骤 2.** 启动 Arduino 应用程序。
@@ -458,7 +458,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/9.png" style={{width:1000, height:'auto'}}/></div>
 
 :::caution
-XIAO ESP32S3 的板载包需要 **2.0.8** 及以上版本才可用。
+XIAO ESP32S3 的开发板包需要 **2.0.8** 及以上版本才可用。
 :::
 
 - **步骤 4.** 选择您的开发板和端口。
@@ -488,12 +488,12 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/9.png" style={{width:1000, height:'auto'}}/></div>
 
 :::caution
-XIAO ESP32S3 的板载包需要 **2.0.8** 及以上版本才可用。
+XIAO ESP32S3 的开发板包需要 **2.0.8** 及以上版本才可用。
 :::
 
 - **步骤 4.** 选择您的开发板和端口。
 
-在 Arduino IDE 顶部，您可以直接选择端口。这很可能是名称中包含 "usbmodem" 或 "usbserial" 的端口。如果您不确定，请拔出并重新插入以查看哪个端口消失了。
+在 Arduino IDE 顶部，您可以直接选择端口。这很可能是名称中包含 "usbmodem" 或 "usbserial" 的端口。如果您不确定，请拔出再插入以查看哪个端口消失了。
 
 </TabItem>
 </Tabs>
@@ -537,7 +537,7 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 - **Step 4.** Close the Arduino IDE and reopen it.-->
 
 <Tabs>
-<TabItem value="(Sense)" label="适用于 XIAO ESP32S2 (Sense)" default>
+<TabItem value="(Sense)" label="适用于 XIAO ESP32S3 (Sense)" default>
 
 同时，在左侧的开发板中搜索 **xiao**。选择 **XIAO_ESP32S3**。
 
@@ -695,7 +695,7 @@ XIAO ESP32S3 系列内置电源管理芯片，允许 XIAO ESP32S3 通过电池�
 
 ### Q1：如果上传程序失败/程序运行异常/找不到设备端口，我应该怎么办？
 
-如果您遇到上述问题，建议您首先尝试按下 XIAO ESP32S3 上的复位按钮，尝试让程序重新运行。如果问题仍然存在，请重新检查您的程序并阅读 **[BootLoader 模式](#bootloader-模式)** 中提供的方法来恢复设备。
+如果您遇到上述问题，建议您首先尝试按下 XIAO ESP32S3 上的复位按钮，尝试让程序重新运行。如果问题仍然存在，请重新检查您的程序并阅读 **[BootLoader 模式](#bootloader-mode)** 中提供的方法来恢复设备。
 
 ### Q2：为什么我的 XIAO 在圆角处有不齐平的问题？这是质量问题吗？
 
