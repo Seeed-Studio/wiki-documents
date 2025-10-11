@@ -5,7 +5,7 @@ image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherAI.png
 slug: /cn/watcher_local_deploy
 sidebar_position: 3
 last_update:
-  date: 11/9/2025
+  date: 9/11/2025
   author: Twelve
 ---
 

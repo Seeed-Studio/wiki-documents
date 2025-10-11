@@ -91,7 +91,9 @@ source .venv/bin/activate
 
 As demonstrated in the video, the warehouse light indicates green during normal operations, yellow in dangerous situations such as when someone is holding a knife, and red when the light sensor detects no light—signaling a failure in the warehouse lighting, while also allowing interaction with historical data and queries via the VLM model for desired information.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/J0sS-1zQid8?list=PLpH_4mf13-A1EnNUgEMTsy2PxejFllSGM" title="Build a Local AI Watchdog for Industrial Safety with reComputer J4012 powered by NVIDIA Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Tech Support & Product Discussion
 
