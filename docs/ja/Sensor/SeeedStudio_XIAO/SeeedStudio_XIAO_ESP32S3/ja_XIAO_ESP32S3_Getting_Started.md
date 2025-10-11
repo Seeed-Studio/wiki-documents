@@ -52,7 +52,7 @@ import TabItem from '@theme/TabItem';
 
 Seeed Studio XIAOシリーズは、類似したハードウェア構造を共有する小型開発ボードで、そのサイズは文字通り親指サイズです。コードネーム「XIAO」は、その半分の特徴である「Tiny（小さい）」を表し、もう半分は「Puissant（強力）」を表します。
 
-Seeed Studio XIAO ESP32S3 Senseは、カメラセンサー、デジタルマイクロフォン、SDカードサポートを統合しています。組み込みML計算能力と撮影機能を組み合わせることで、この開発ボードはインテリジェント音声・視覚AIを始めるための優れたツールになります。
+Seeed Studio XIAO ESP32S3 Senseは、カメラセンサー、デジタルマイクロフォン、SDカードサポートを統合しています。組み込みML計算能力と撮影機能を組み合わせることで、この開発ボードはインテリジェント音声・視覚AIを始めるための優れたツールとなります。
 
 :::tip
 **OV2640カメラ**は廃止され、その後のXIAO ESP32S3 Senseでは**OV3660カメラ**モデルを使用しています。ただし、カメラ用のWikiサンプルコードは引き続き適用されます。
@@ -110,7 +110,7 @@ Seeed Studio XIAO ESP32S3 Senseは、カメラセンサー、デジタルマイ�
  </tr>
  <tr>
      <td align="center"> - </td>
-        <td align="center">ウェブカメラWebアプリケーション： <br></br> - Type-C： <br></br> - - 平均消費電力：5V/<strong>220mA</strong> <br></br> - バッテリー： <br></br> - - 平均消費電力：4.2V/<strong>212mA</strong></td>
+        <td align="center">ウェブカムWebアプリケーション： <br></br> - Type-C： <br></br> - - 平均消費電力：5V/<strong>220mA</strong> <br></br> - バッテリー： <br></br> - - 平均消費電力：4.2V/<strong>212mA</strong></td>
   <td align="center"> - </td>
  </tr>
  <tr>
@@ -128,13 +128,13 @@ Seeed Studio XIAO ESP32S3 Senseは、カメラセンサー、デジタルマイ�
   <td>モデムスリープモデル：<strong>3.8V/26.5 mA</strong> <br></br> ライトスリープモデル：<strong>3.8V/2.2 mA</strong> <br></br> ディープスリープモデル：<strong>3.8V/69 μA</strong></td>
     </tr>
     <tr>
-        <th>Wi-Fi有効時消費電力</th>
+        <th>Wi-Fi有効時の消費電力</th>
         <td align="center">アクティブモデル：<strong>~ 100 mA</strong></td>
         <td align="center">アクティブモデル：<strong>~ 110 mA</strong>（拡張ボード付き）</td>
   <td align="center">アクティブモデル：<strong>~ 85 mA</strong></td>
     </tr>
     <tr>
-        <th>BLE有効時消費電力</th>
+        <th>BLE有効時の消費電力</th>
         <td align="center">アクティブモデル：<strong>~ 85 mA</strong></td>
         <td align="center">アクティブモデル：<strong>~ 102 mA</strong>（拡張ボード付き）</td>
   <td align="center">アクティブモデル：<strong>~ 77 mA</strong></td>
@@ -147,12 +147,12 @@ Seeed Studio XIAO ESP32S3 Senseは、カメラセンサー、デジタルマイ�
 
 ### 特徴
 
-- **強力なMCUボード**：最大240MHzで動作するESP32S3 32ビット、デュアルコア、Xtensaプロセッサチップを搭載、複数の開発ポートを実装、Arduino / MicroPython対応
-- **高度な機能**（Sense用）：取り外し可能な**1600x1200解像度対応OV2640カメラセンサー**と**2048x1536対応OV3660カメラセンサー**（OV5640カメラセンサーと互換）、追加のデジタルマイクロフォンを統合
+- **強力なMCUボード**：最大240MHzで動作するESP32S3 32ビット、デュアルコア、Xtensaプロセッサチップを搭載し、複数の開発ポートを実装、Arduino / MicroPython対応
+- **高度な機能**（Sense用）：1600x1200解像度対応の着脱可能な**OV2640カメラセンサー**と2048x1536対応の**OV3660カメラセンサー**（OV5640カメラセンサーと互換）、追加のデジタルマイクロフォンを統合
 - **精巧な電源設計**：リチウムバッテリー充電管理機能、14μAという低消費電力のディープスリープモードを含む4つの消費電力モデルを提供
-- **より多くの可能性のための大容量メモリ**：8MB PSRAMと8MB FLASH（**Plus**バージョンでは16MB）を提供、外部32GB FATメモリ用SDカードスロット対応（XIAO ESP32S3のみ）
+- **より多くの可能性のための大容量メモリ**：8MB PSRAMと8MB FLASH（**Plus**バージョンでは16MB）を提供、外部32GB FATメモリ用のSDカードスロット対応（XIAO ESP32S3のみ）
 - **優れたRF性能**：2.4GHz Wi-FiとBLEデュアルワイヤレス通信対応、U.FLアンテナ接続時100m+の遠距離通信対応
-- **親指サイズのコンパクト設計**：21 x 17.8mm、XIAOの定番フォームファクターを採用、ウェアラブルデバイスなどスペースが限られたプロジェクトに適している
+- **親指サイズのコンパクト設計**：21 x 17.8mm、XIAOの定番フォームファクターを採用し、ウェアラブルデバイスなどのスペース制限のあるプロジェクトに適している
 
 <table align="center">
  <tr>
@@ -351,7 +351,7 @@ Wiki のカメラに関するすべてのプログラムは、OV5640、OV2640、
 
 私たちのテストでは、元のセットアップに対するアップグレードされたヒートシンクの利点が実証されています：
 
-| テストサンプル           | 背面のピーク温度 |
+| テストサンプル           | 背面の最高温度 |
 | --------------------- | ---------------------------- |
 | **ヒートシンクなし** | 63.6°C                       |
 | **デュアルヒートシンク付き** | 53.5°C (🔻10°C)           |
@@ -435,17 +435,17 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
 - **ステップ1.** お使いのオペレーティングシステムに応じて、Arduino IDEの安定版をダウンロードしてインストールしてください。
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDEをダウンロード</font></span></strong></a>
 </div>
 
-- **ステップ2.** Arduinoアプリケーションを起動してください。
+- **ステップ2.** Arduinoアプリケーションを起動します。
 
-- **ステップ3.** Arduino IDEにESP32ボードパッケージを追加してください。
+- **ステップ3.** Arduino IDEにESP32ボードパッケージを追加します。
 
 <Tabs>
 <TabItem value='For Windows'>
 
-**File > Preferences**に移動し、**"Additional Boards Manager URLs"**に以下のURLを入力してください：
+**File > Preferences**に移動し、**"Additional Boards Manager URLs"**に以下のURLを入力します：
 
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -453,7 +453,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/6.png" style={{width:800, height:'auto'}}/></div>
 
-**Tools > Board > Boards Manager...**に移動し、検索ボックスにキーワード**esp32**を入力し、**esp32**の最新バージョンを選択してインストールしてください。
+**Tools > Board > Boards Manager...**に移動し、検索ボックスにキーワード**esp32**を入力し、**esp32**の最新バージョンを選択してインストールします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/9.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -461,14 +461,14 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 XIAO ESP32S3のオンボードパッケージには**2.0.8**以上のバージョンが必要です。
 :::
 
-- **ステップ4.** ボードとポートを選択してください。
+- **ステップ4.** ボードとポートを選択します。
 
 Arduino IDEの上部で、ポートを直接選択できます。これはおそらくCOM3以上になります（**COM1**と**COM2**は通常ハードウェアシリアルポート用に予約されています）。
 
 </TabItem>
 <TabItem value='For Mac OS'>
 
-**Arduino IDE > Preferences**に移動し、**"Additional Boards Manager URLs"**に以下のURLを入力してください：
+**Arduino IDE > Preferences**に移動し、**"Additional Boards Manager URLs"**に以下のURLを入力します：
 
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -483,7 +483,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
   </table>
 </div>
 
-**Tools > Board > Boards Manager...**に移動し、検索ボックスにキーワード**esp32**を入力し、**esp32**の最新バージョンを選択してインストールしてください。
+**Tools > Board > Boards Manager...**に移動し、検索ボックスにキーワード**esp32**を入力し、**esp32**の最新バージョンを選択してインストールします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/9.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -491,9 +491,9 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 XIAO ESP32S3のオンボードパッケージには**2.0.8**以上のバージョンが必要です。
 :::
 
-- **ステップ4.** ボードとポートを選択してください。
+- **ステップ4.** ボードとポートを選択します。
 
-Arduino IDEの上部でポートを直接選択できます。これはおそらく名前に「usbmodem」または「usbserial」が含まれているものです。不明な場合は、プラグを抜いて再度接続し、どのポートが消えるかを確認してください。
+Arduino IDEの上部で、ポートを直接選択できます。これはおそらく名前に"usbmodem"または"usbserial"が含まれているものです。不明な場合は、プラグを抜いて再度接続し、どのポートが消えるかを確認してください。
 
 </TabItem>
 </Tabs>
@@ -537,9 +537,9 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 - **Step 4.** Close the Arduino IDE and reopen it.-->
 
 <Tabs>
-<TabItem value="(Sense)" label="for XIAO ESP32S2 (Sense)" default>
+<TabItem value="(Sense)" label="for XIAO ESP32S3 (Sense)" default>
 
-また、左側の開発ボードで**xiao**を検索してください。**XIAO_ESP32S3**を選択してください。
+また、左側の開発ボードで**xiao**を検索します。**XIAO_ESP32S3**を選択してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/10.png" style={{width:600, height:'auto'}}/></div>
 
@@ -555,15 +555,15 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 
 ### BootLoaderモード
 
-時々、間違ったプログラムを使用するとXIAOがポートを失ったり、正しく機能しなくなったりすることがあります。一般的な問題には以下があります：
+時々、間違ったプログラムを使用すると、XIAOがポートを失ったり、正しく機能しなくなったりすることがあります。一般的な問題には以下があります：
 
 - XIAOがコンピュータに接続されているが、*ポート番号が見つからない*。
 - XIAOが接続され、ポート番号が表示されるが、*プログラムのアップロードが失敗する*。
 
 上記の2つの状況に遭遇した場合、XIAOをBootLoaderモードにすることで、デバイスの認識不良やアップロード失敗の問題の大部分を解決できます。具体的な方法は：
 
-- **ステップ1**. XIAO ESP32S3の`BOOT`ボタンを離さずに押し続けてください。
-- **ステップ2**. `BOOT`ボタンを押したまま、データケーブルでコンピュータに接続してください。コンピュータに接続した後、`BOOT`ボタンを離してください。
+- **ステップ1**. XIAO ESP32S3の`BOOT`ボタンを離さずに押し続けます。
+- **ステップ2**. `BOOT`ボタンを押したまま、データケーブルでコンピュータに接続します。コンピュータに接続した後、`BOOT`ボタンを離します。
 - **ステップ 3**. **File > Examples > 01.Basics > Blink** プログラムをアップロードして、XIAO ESP32S3の動作を確認します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/15.gif" style={{width:500, height:'auto'}}/></div>
@@ -675,7 +675,7 @@ XIAO ESP32S3のUSBドライブにアクセスし、変換されたUF2ファイ�
 別のUF2ファイルをアップロードするためにUF2 BootLoaderモードに再入する必要がある場合は、**Reset** ボタンを押してから **Boot** ボタンを素早く押します。boot_uf2.batスクリプトを再度実行する必要はありません。
 
 :::note
-Reset、次にBootを素早く押してください！
+Resetを押してから、素早くBootを押してください！
 :::
 
 </TabItem>
@@ -701,11 +701,11 @@ Reset、次にBootを素早く押してください！
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/corners.png" style={{width:500, height:'auto'}}/></div>
 
-まず、これは品質の問題ではなく、XIAOの正常な機能に影響しないことを明記しておきます。
+まず、これは品質の問題ではなく、XIAOの正常な機能に影響を与えないことを明記しておきます。
 
 XIAO ESP32S3は高い統合度のため、すべてのXIAOの中で最も複雑であり、PCBは工場生産で組み合わせる必要があります。高い統合度のため、スプライシングボード接続は4つの角の丸い部分にのみ配置でき、これが画像の角の丸い部分が不均一になる問題を引き起こします。この問題が後続の生産で解決されるよう、プロセスの改善に努めます。
 
-### Q3: リソースセクションで提供されているXIAO ESP32S3のファクトリーファームウェアをフラッシュする方法は？
+### Q3: リソースセクションで提供されているXIAO ESP32S3にファクトリーファームウェアをフラッシュする方法は？
 
 リソースセクションで提供されているスクリプトはWindowsをサポートしています。zipファイルをダウンロードすると、以下のファイルが見つかります：
 
