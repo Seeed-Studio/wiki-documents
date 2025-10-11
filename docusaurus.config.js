@@ -661,6 +661,7 @@ module.exports = (async () => {
           theme: lightCodeTheme,
           darkTheme: darkCodeTheme,
         },
+        contextualSearch: true,
         typesense: {
           typesenseCollectionName: 'wiki_platform_test_1743938099',
           typesenseServerConfig: {
@@ -687,7 +688,6 @@ module.exports = (async () => {
             }
             return searchParameters;
           },
-          contextualSearch: true,
         },
         announcementBar: {
           id: 'support_us',
