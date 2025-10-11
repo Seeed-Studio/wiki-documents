@@ -22,7 +22,6 @@ last_update:
     src="https://media.githubusercontent.com/media/NVlabs/PyCuVSLAM/main/pycuvslam.gif" />
 </div>
 
-
 ## Introduction
 
 <div style={{ textAlign: "justify" }}>
@@ -41,11 +40,10 @@ last_update:
 
 ## Prerequisites
 
-- __reComputer__ preinstalled Jetpack 6.2
-- __RGB Camera__
-- __RGB-D Camera ([Orbbec Gemini2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html) recommended)__
-- __[ROS2 Humble](https://wiki.seeedstudio.com/install_ros2_humble/)__ environment installed
-
+- **reComputer** preinstalled Jetpack 6.2
+- **RGB Camera**
+- **RGB-D Camera ([Orbbec Gemini2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html) recommended)**
+- **[ROS2 Humble](https://wiki.seeedstudio.com/install_ros2_humble/)** environment installed
 
 ## Installation
 
@@ -128,6 +126,7 @@ ros2 run v4l2_camera v4l2_camera_node
 ```
 
 The default topics published are:
+
 - `/image_raw` - Raw camera image
 - `/camera` - Camera info
 
@@ -146,9 +145,11 @@ ros2 run camera_calibration cameracalibrator \
 ```
 
 :::note
+
 - `--size 8x6` refers to the number of inner corners (8×6 = 48 corners for a 9×7 grid)
 - `--square 0.025` refers to the square size in meters (25mm)
 - Move the camera around to capture images from different angles until the `CALIBRATE` button lights up
+
 :::
 
 <div align="center">
@@ -164,7 +165,6 @@ After successful calibration, you will obtain camera parameters in the terminal 
 </div>
 
 ### Run the example
-
 
 <details>
 <summary> mono_slam.py </summary>
@@ -775,17 +775,21 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
 </details>
 
 Run the example script:
+
 ```bash
 python mono_slam.py --config /path/to/your/Camera parameters yaml file
 ```
+
 :::note
 You need to modify `/path/to/your/Camera parameters yaml file` to the yaml file where your camera parameters are saved. The content of the yaml file is as follows:
 
 <details>
 <summary> gemini2_calibrated_config.yaml </summary>
+
 ```yaml
 # Monocular Camera Calibration Configuration File
 
@@ -825,10 +829,10 @@ slam_optimization:
     slow_motion: true
     rich_texture: true
 ```
+
 </details>
 
 :::
-
 
 <div align="center">
     <img width={1000}
@@ -842,7 +846,6 @@ slam_optimization:
 <div style={{ textAlign: "justify" }}>
 Monocular-Depth Visual Odometry requires pixel-to-pixel correspondence between camera and depth images. The [Orbbec Gemini 2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html) is a stereo structured-light / active stereo IR 3D camera that provides both depth and RGB (color) outputs. One of its key features is hardware-accelerated depth-to-color alignment (D2C, depth → color), meaning the depth map and the RGB image are spatially aligned at the pixel level before the data reach your host computer. This reduces the computational load on your host processor and simplifies fusion of depth + color for applications like 3D reconstruction, SLAM, object detection with depth, etc.
 </div>
-
 
 **Step 1.** Install Orbbec ROS2 Driver:
 
@@ -875,6 +878,7 @@ colcon build --packages-select orbbec_camera_msgs
 source ./install/setup.bash
 ros2 launch orbbec_camera gemini2.launch.py
 ```
+
 :::note
 You can check whether the camera node can start normally by observing whether the camera data topic is published normally.
 <div align="center">
@@ -950,7 +954,6 @@ translation:
 ```
 
 ### Run the example
-
 
 <details>
 <summary> rgbd_slam.py </summary>
@@ -2055,6 +2058,7 @@ if __name__ == "__main__":
 ```bash
 python rgbd_slam.py --config examples/gemini2_calibrated_config.yaml --resolution 1280x720 --enable-distortion --enhance-depth
 ```
+
 the yaml file is as follow:
 <details>
 <summary> gemini2_calibrated_config.yaml </summary>
@@ -2112,7 +2116,6 @@ depth_to_color_transform:
     <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/rgbd.gif" />
 </div>
-
 
 ## Resources
 
