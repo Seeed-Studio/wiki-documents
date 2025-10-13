@@ -134,6 +134,13 @@ cd usbboot
 sudo apt install libusb-1.0-0-dev
 ```
 
+:::note
+for macos user, following below:
+```
+brew install libusb pkg-config
+```
+:::
+
 - **Step 7.** Build and install the usbboot tool
 
 ```sh
