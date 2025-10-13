@@ -63,6 +63,10 @@ SenseCAP Indicator is a 4-inch touchscreen device designed for [Meshtastic®](ht
 
 ### Flash Application Firmware
 
+:::caution note
+Before flashing the firmware, please make sure that the indicator you purchased is the version for Meshtastic. Do not flash the Meshtastic firmware onto an indicator that is not compatible with Meshtastic. This may cause hardware damage.
+:::
+
 **Video Instruction**
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/55Sz8kHSyV4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

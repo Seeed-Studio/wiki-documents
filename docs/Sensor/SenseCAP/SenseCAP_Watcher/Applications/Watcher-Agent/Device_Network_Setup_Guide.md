@@ -11,8 +11,10 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /device_network_setup
 last_update:
-  date: 09/19/2025
+  date: 10/13/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
 
 # Device Network Setup Guide
@@ -126,6 +128,10 @@ If you have previously paired to a network, restart device and press the scroll 
 **Q: What should I do if the configuration page doesn't load automatically?**
 
 A: Manually navigate to `http://192.168.4.1` in web browser while connected to the Watcher-XXXX network.
+
+**Q: How to access other Wi-Fi networks?**
+
+A: When "Scanning Wi-Fi" is displayed upon startup, press the scroll wheel to enter the wifi configuration mode. The configured wifi will be saved.
 
 ## Technical Support
 

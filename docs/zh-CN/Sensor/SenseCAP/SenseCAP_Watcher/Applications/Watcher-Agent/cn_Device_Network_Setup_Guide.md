@@ -11,16 +11,13 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /cn/device_network_setup
 last_update:
-  date: 09/19/2025
+  date: 10/13/2025
   author: Twelve
 ---
 
 # 设备网络设置指南
 
 本文档将指导您完成 SenseCAP Watcher Agent 的网络配置过程。按照这些步骤，您可以轻松地将设备连接到网络并开始使用。
-
-以下视频是关于如何使用 Web 控制面板配置设备的分步教程。
-<div class="table-center"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6UDVsv953Tw?si=0yD96_pQq1cMjjAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 ## 前提条件
 
@@ -84,7 +81,7 @@ WiFi 扫描页面可能需要大约 5 秒钟加载 - 请不要关闭或取消页
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/firmware/activation.jpg" style={{width:300, height:'auto'}}/></div> 
 
 步骤 2. 注册设备
-- 访问 [SenseCraft AI-Watcher Agent 平台](https://sensecraft.seeed.cc/ai/watcher-agent)
+- 访问 [小智AI 官方平台](https://xiaozhi.me)
 - 根据此 [WiKi](https://wiki.seeedstudio.com/cn/watcher_web_control_panel/) 配置您的 Agent
 
 ### 基本操作
@@ -107,6 +104,9 @@ WiFi 扫描页面可能需要大约 5 秒钟加载 - 请不要关闭或取消页
    - 按一次滚轮
    - 设备将重新进入网络配置模式
 
+6. 唤醒词
+   - 设备待命时，可通过“你好小智”唤醒词唤醒设备。 
+
 ## 故障排除
 
 如果您遇到连接问题：
@@ -126,6 +126,10 @@ WiFi 扫描页面可能需要大约 5 秒钟加载 - 请不要关闭或取消页
 **问：如果配置页面没有自动加载，我应该怎么办？**
 
 答：在连接到 Watcher-XXXX 网络时，在网络浏览器中手动导航到 `http://192.168.4.1`。
+
+**问:如何接入其他Wi-Fi网络？**
+
+答：开机显示“扫描Wi-Fi”时按下滚轮，即可进入配网模式。已配置网络会保存。
 
 ## 技术支持
 
