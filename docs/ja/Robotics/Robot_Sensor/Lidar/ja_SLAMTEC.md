@@ -41,7 +41,7 @@ last_update:
     </a>
     <a href="#S2-series" className="nav-item">
       <img width={100} src="https://files.seeedstudio.com/wiki/robotics/Sensor/Lidar/slamtec/S2.png" className="nav-icon" alt="Slamtec LiDAR"/>
-      <span className="text">S2 Series</span>
+      <span className="text">S2シリーズ</span>
       <div className="hover-effect"></div>
     </a>
     <a href="#S2-series" className="nav-item">
@@ -89,7 +89,7 @@ last_update:
       <span className="text">A3M1</span>
     </a>
     <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=A1M8%20Datasheet-,Dev%20Kit%20User%20Manual,-A3M1%20Dev%20Kit" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">A2 Series</span>
+      <span className="text">A2シリーズ</span>
     </a>
     <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=A1M8%20Datasheet-,Dev%20Kit%20User%20Manual,-A3M1%20Dev%20Kit" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">A1M8</span>
@@ -101,13 +101,13 @@ last_update:
 
 <div className="card-container">
     <a href="https://wiki.slamtec.com/display/SD#Slamtec%E5%BC%80%E5%8F%91%E8%80%85%E4%B8%AD%E5%BF%83-rplidar" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">Developer Center</span>
+      <span className="text">開発者センター</span>
     </a>
     <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=SDK%20%26-,Protocol,-Online%20documents" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">Communication Protocol</span>
+      <span className="text">通信プロトコル</span>
     </a>
     <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=and%20Repair%20Guide-,SDK%20%26,-Protocol" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">SDK User Manual</span>
+      <span className="text">SDKユーザーマニュアル</span>
     </a>
     <a href="https://github.com/slamtec/rplidar_sdk" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Github</span>
@@ -145,7 +145,7 @@ last_update:
 </div>
 </div>
 
-## 📦 Sシリーズ LiDAR {#S2-series}
+## 📦 S シリーズ LiDAR {#S2-series}
 
 <div class="category-group">
   <div className="category-card robot-kits">
@@ -185,19 +185,19 @@ last_update:
 
 <div className="card-container">
     <a href="https://wiki.slamtec.com/display/SD#Slamtec%E5%BC%80%E5%8F%91%E8%80%85%E4%B8%AD%E5%BF%83-rplidar" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">Developer Center</span>
+      <span className="text">開発者センター</span>
     </a>
     <a href="https://www.slamtec.com/en/Support#rplidar-s2:~:text=Kit%20User%20Manual-,Protocol,-S2%20S2L%20S2P" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">S2 S2L Protocol</span>
+      <span className="text">S2 S2L プロトコル</span>
     </a>
     <a href="https://www.slamtec.com/en/Support#rplidar-s2:~:text=Kit%20User%20Manual-,Protocol,-S2%20S2L%20S2P" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">S2E Protocol</span>
+      <span className="text">S2E プロトコル</span>
     </a>
     <a href="https://www.slamtec.com/en/Support#rplidar-s3:~:text=S3%20User%20Manual-,Protocol,-Protocol" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">S3 Protocol</span>
+      <span className="text">S3 プロトコル</span>
     </a>
     <a href="https://www.slamtec.com/en/Support#rplidar-s2:~:text=S2E%20Protocol-,SDk,-SDK%20User%20Manual" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">SDK User Manual</span>
+      <span className="text">SDK ユーザーマニュアル</span>
     </a>
     <a href="https://github.com/slamtec/rplidar_sdk" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Github</span>
