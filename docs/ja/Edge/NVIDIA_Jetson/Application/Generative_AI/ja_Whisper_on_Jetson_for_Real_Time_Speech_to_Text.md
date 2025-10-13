@@ -94,7 +94,9 @@ python test.py
 python main.py
 ```
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/KR0GYqUuo5Y?si=uSGUkKmCSZmaq5f7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Riva vs Whisper
 
@@ -104,7 +106,9 @@ Whisperは、ウェブから収集された68万時間の多言語・多タス�
 
 今後の比較動画では、Nvidia Jetson上で開発された音声テキスト変換における[Riva](https://wiki.seeedstudio.com/ja/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson/)とWhisperの能力を比較します。
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/2l7yus611DI?si=XdEjwzpZdJkLC8aB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## プロジェクトの展望
 

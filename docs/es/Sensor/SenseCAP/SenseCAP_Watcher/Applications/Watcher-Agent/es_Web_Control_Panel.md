@@ -22,7 +22,7 @@ last_update:
 El Panel de Control Web de SenseCAP Watcher (Beta) proporciona una interfaz basada en web para gestionar tu dispositivo Watcher y configurar sus ajustes de Agent. Esta versión beta incluye características esenciales para la gestión de dispositivos y personalización del Agent.
 
 El siguiente video sirve como un tutorial paso a paso sobre cómo configurar tu dispositivo usando el Panel de Control Web.
-<div class="table-center"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6UDVsv953Tw?si=0yD96_pQq1cMjjAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div class="video-container"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6UDVsv953Tw?si=0yD96_pQq1cMjjAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 ## Características Actuales
 

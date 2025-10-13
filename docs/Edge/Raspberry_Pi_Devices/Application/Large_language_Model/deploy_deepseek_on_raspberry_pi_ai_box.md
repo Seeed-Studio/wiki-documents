@@ -76,7 +76,9 @@ ollama run deepseek-r1
 
 In this demonstration, I used the DeepSeek 1.5b model. You can choose which model to use based on your needs and the capacity of your hardware.
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/qo2iv5RLgbA" title="How to deploy deepseek on raspberry pi AI box?  #deepseek #raspberrypi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 
 ## Tech Support & Product Discussion

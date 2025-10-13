@@ -65,7 +65,9 @@ SenseCAP Indicator 是一款专为 [Meshtastic®](https://meshtastic.org/) 设�
 
 **视频教程**
 
+<div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/55Sz8kHSyV4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
 

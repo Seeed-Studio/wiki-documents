@@ -25,7 +25,9 @@ Freescale MPR121をベースにしたこのセンサーは、完全に独立し�
 
 このセンサーは、[Grove - I2Cタッチセンサー](https://www.seeedstudio.com/Grove-I2C-Touch-Sensor-p-840.html)のアップグレード版です。お客様の1人である松澤隆氏のニーズに応えるため、I2Cアドレスを変更可能にし、さらに旧バージョンよりも安価にしました。そのため、Grove製品全般に関するご提案があれば、ぜひお寄せください。私たちは常にお客様の声に耳を傾けています。それが新たなアップグレードや新しいGrove製品の誕生につながるかもしれません。ご提案は[Grove 100+](https://www.seeedstudio.com/grove_100)ページにご記入ください。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/CPq4VSAXBgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html
 " target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
@@ -437,7 +439,9 @@ if __name__  == '__main__':
 
 この製品の紹介ビデオです。簡単なデモを含んでおり、試してみることができます。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ds7kBVdeY4U?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **リーフピアノ**: タッチセンサーを使用してピアノを作り、葉をピアノのキーとして使用しました。
 

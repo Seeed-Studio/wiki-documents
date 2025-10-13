@@ -14,7 +14,9 @@ last_update:
 
 Grove - I2C High Accuracy Temp&Humi Sensor(SHT35) está basado en SHT3x-DIS, que es la próxima generación de sensores de temperatura y humedad de Sensirion. Se basa en un nuevo chip sensor CMOSens® que está en el corazón de la nueva plataforma de humedad y temperatura de Sensirion. El SHT3x-DIS tiene mayor inteligencia, confiabilidad y especificaciones de precisión mejoradas en comparación con su predecesor. Su funcionalidad incluye procesamiento de señal mejorado, dos direcciones I2C distintivas y seleccionables por el usuario y velocidades de comunicación de hasta 1 MHz.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/MwLEawbP0ZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center' }}><a href="https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp%26Humi-Sensor%28SHT35%29-p-3182.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 

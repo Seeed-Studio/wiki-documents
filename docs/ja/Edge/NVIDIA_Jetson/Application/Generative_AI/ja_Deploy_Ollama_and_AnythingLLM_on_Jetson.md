@@ -199,7 +199,7 @@ And so, the village thrived, and Eliza’s adventures became the stuff of legend
 
 ここでは、設定したローカル個人アシスタントを使用して、必要な情報を照会します。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/JjPfXNqhO1g" title="Local AI Assistant : Deploy Ollama and AnytingLLM on Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

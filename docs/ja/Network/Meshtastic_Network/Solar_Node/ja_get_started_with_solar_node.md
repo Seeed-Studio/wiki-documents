@@ -185,7 +185,7 @@ import TabItem from '@theme/TabItem';
 
 - ビデオを通じて、設置と初期化プロセス全体を完了できます。
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/smQe7G0Bbsk?si=kcB8BdoxiwpZqB4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -193,7 +193,7 @@ import TabItem from '@theme/TabItem';
 
 - このビデオを通じてセンサーを取り付けることができます。
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -201,7 +201,7 @@ import TabItem from '@theme/TabItem';
 
 - このビデオを見て、アンテナをファイバーグラス製のものに交換できます。
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

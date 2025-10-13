@@ -16,7 +16,9 @@ last_update:
 
 我们可以在三种检测模式之间切换来获取读数。它们是红外模式、全光谱模式和人眼可见模式。当在人眼可见模式下运行时，该传感器将给出接近您眼睛感受的读数。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" /></a></p>
 

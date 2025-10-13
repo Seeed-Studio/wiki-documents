@@ -69,7 +69,9 @@ edge-impulse-daemon
 
 最初のプロジェクトでは、単一の光センサーを使用してじゃんけんのジェスチャーを分類する簡単なニューラルネットワークを迅速にトレーニングしてデプロイしてみましょう。詳細とビデオチュートリアルについては、対応するビデオをご覧ください！
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iCmlKyAp8eQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## トレーニングデータの取得
 

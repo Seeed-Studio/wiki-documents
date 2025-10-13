@@ -402,59 +402,87 @@ Not used: C:\Users\Dave\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd
 
 ### 第1课 - Hello World
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/af_I0n5iyzk" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 第2课 - 绘制形状
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IFRiGpK4HK8" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 第3课 - 显示字体
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aZ9LYoS8w24" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 第4课 - 显示图像和简单UI
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/P8CQtByWfS4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 第5课 - 折线图和直方图
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OnYLy7k-4T4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 第6课 - 使用Grove模块
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NeFotsklchc" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 第7课 - 通信协议
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kn9WJn2FRkI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 第8课 - 内置硬件/传感器 第1部分 | 3个按钮和5向开关
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tVd4L7Hzj7M" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 第9课 - 内置硬件/传感器 第2部分 | 麦克风和蜂鸣器
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aYEI9UGIBvo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 第10课 - 内置硬件/传感器 第3部分 | 加速度计和光传感器
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3dw-Ony6CIE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 第11课 - 使用内置红外发射器制作电视遥控器
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/C9AlljLst2o" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 第12课 - 使用Wio Terminal的智能花园项目
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NQt-XLcSIwA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 第13课 - 将Wio Terminal用作PC鼠标
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QIR_yqQnYPY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 第14课 - 将Wio Terminal用作PC键盘
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JLrP058LDr8" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 由CAVEDU Education支持的Wio Terminal深度学习
 

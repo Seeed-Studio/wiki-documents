@@ -773,7 +773,9 @@ actuator.setAcceleration(1200, AccelerationType.VELOCITY_PLANNING_ACCELERATION)
 actuator.setAcceleration(1000, AccelerationType.VELOCITY_PLANNING_DECELERATION)
 ```
 
+<div class="video-container">
 <iframe width="960" height="640" src="https://www.youtube.com/embed/0HLx3iQitXg?si=Z39mFeatUdp4j9dh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Soporte Técnico y Discusión de Productos
 

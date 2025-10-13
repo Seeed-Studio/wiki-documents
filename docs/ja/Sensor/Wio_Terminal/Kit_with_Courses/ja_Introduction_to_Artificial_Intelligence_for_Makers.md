@@ -57,7 +57,9 @@ Wikipediaによると：
 
 その後、ニューラルネットワークがビジョン分野、特に分類とセグメンテーションの問題を支配するようになり、畳み込みニューラルネットワーク (Convolutional Neural Network) は近年多くのコンペティションで勝利を収めた最も注目すべきアプローチの一つとなりました。画像認識において優れた成果を上げています。
 Nvidia は Jetson Nano 用に多くの [Vision Demos](https://github.com/dusty-nv/jetson-inference) を構築しており、分類と顔検出のための 2 つのデモをテストしました：
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/U0rNdI9pl_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### アート
 

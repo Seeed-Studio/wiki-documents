@@ -73,7 +73,9 @@ last_update:
 
 ## 视频说明
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/7NptcHkVcpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## 在 TTN 上注册和设置
 

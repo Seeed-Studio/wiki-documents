@@ -160,7 +160,9 @@ FirefoxはESPデバイスでのファームウェアフラッシュをサポー�
 
 ESPHome Webを介してファームウェアをフラッシュする詳細な手順については、以下のビデオをご覧ください：
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Install firmware via ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 </TabItem>
 </Tabs>

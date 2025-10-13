@@ -240,7 +240,9 @@ The minimum speed accuracy that the sensor is capable of detecting is 52cm/s, wh
 
 ## Project
 
-<p><iframe src="https://www.youtube.com/embed/-HMEW2DN6Wg" width="560" height="315" frameborder="0" allowfullscreen=""></iframe></p>
+<p><div class="video-container">
+<iframe src="https://www.youtube.com/embed/-HMEW2DN6Wg" width="560" height="315" frameborder="0" allowfullscreen=""></iframe>
+</div></p>
 
 ## Tech Support & Product Discussion
 

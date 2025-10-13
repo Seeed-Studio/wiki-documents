@@ -329,7 +329,9 @@ reComputer Jetson J30/40 已推出一键刷写脚本，支持刷写 Jetpack 5.1.
 wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && sudo chmod 777 ./flashing.sh && ./flashing.sh
 ```
 
+<div class="video-container">
 <iframe width="960" height="480" src="https://www.youtube.com/embed/_YfpJAhhT-g?si=OJxCcPqWauYEp9LR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::caution
 免责声明：一键刷写脚本旨在使 jetpack 刷写更快。当前版本是测试版，可能存在许多问题。希望您能理解。如果有刷写问题，请按照下面的`逐步刷写设备`进行操作，并在我们的 [Discord Jetson 频道](https://discord.com/channels/862602258452578314/930732339624026152)中提供反馈。我们将及时修复这些问题，并在不久的将来改进此功能。

@@ -166,7 +166,7 @@ bash ./run.sh object-detection
 
 Comparamos la velocidad de inferencia de YOLOv8 para detección de objetos con resolución de entrada 640*640 antes y después de la aceleración usando el kit de IA. Los resultados muestran que antes de la aceleración, la velocidad de inferencia era solo de 0.75 FPS, mientras que después de la aceleración, alcanzó 29.5 FPS.
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/yZ0IlqLZ86E" title="YOLOv8 Object Detection on reComputer R1000(CM4-Powered Edge Gateway) with Hailo-8L" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

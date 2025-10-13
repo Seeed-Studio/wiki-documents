@@ -133,7 +133,9 @@ Si se necesita reactivación, por favor envía la dirección STA Mac del disposi
 
 Puedes ver un tutorial detallado en el video a continuación:
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/6UDVsv953Tw?si=6OYFfx4orpC5p90d" title="SenseCAP Watcher for Xiaozhi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Actualizaciones de Modelo y Firmware: Personaliza Habilidades Exclusivas
 

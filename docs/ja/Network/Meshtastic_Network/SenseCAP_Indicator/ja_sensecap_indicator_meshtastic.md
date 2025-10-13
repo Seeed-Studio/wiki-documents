@@ -65,7 +65,9 @@ SenseCAP Indicator は、[Meshtastic®](https://meshtastic.org/) 向けに設計
 
 **ビデオ説明**
 
+<div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/55Sz8kHSyV4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 [Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスしてください。
 

@@ -22,7 +22,7 @@ last_update:
 SenseCAP Watcher Web コントロールパネル（ベータ版）は、Watcher デバイスの管理と Agent 設定の構成を行うための Web ベースのインターフェースを提供します。このベータ版には、デバイス管理と Agent カスタマイズのための基本機能が含まれています。
 
 以下の動画は、Web コントロールパネルを使用してデバイスを設定する方法のステップバイステップチュートリアルです。
-<div class="table-center"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6UDVsv953Tw?si=0yD96_pQq1cMjjAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div class="video-container"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6UDVsv953Tw?si=0yD96_pQq1cMjjAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 ## 現在の機能
 

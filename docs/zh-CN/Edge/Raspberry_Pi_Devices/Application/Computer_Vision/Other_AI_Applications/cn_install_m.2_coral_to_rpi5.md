@@ -264,7 +264,9 @@ python3 examples/classify_image.py \
 
 我们已经成功在树莓派 5 上安装了 M.2 Coral 加速器并测试了 Edge TPU。我们还在 Coral M.2 加速器上运行了 YOLOv8s 模型，使用 int8 量化，输入尺寸为 640x640，批处理大小为 1。推理时间约为 800-1000ms，相当于大约 1.1 帧每秒（FPS）。
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/4c8UX06d9Tg" title="Raspberry Pi AI: YOLOv8s Object Detection with Int8 Format Using M.2 Coral Accelerator on RPi 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 技术支持与产品讨论
 

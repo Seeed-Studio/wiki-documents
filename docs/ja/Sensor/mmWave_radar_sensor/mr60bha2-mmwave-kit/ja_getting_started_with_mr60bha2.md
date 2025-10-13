@@ -518,7 +518,7 @@ This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sens
 :::tip
 テキストを読みたくない場合は、**[動画](https://youtu.be/uic8__FFzos)**を参照してファームウェアを更新することもできます。以下でXIAOのESPHomeファームウェアが上書きされるため、レーダーのファームウェア更新後にこの[ウェブページ](https://limengdu.github.io/MR60BHA2_ESPHome_external_components/)でXIAOのESPHomeファームウェアを再書き込みする必要がある場合があります。
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uic8__FFzos?si=ijBJOLMk9Z5szwSX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 :::

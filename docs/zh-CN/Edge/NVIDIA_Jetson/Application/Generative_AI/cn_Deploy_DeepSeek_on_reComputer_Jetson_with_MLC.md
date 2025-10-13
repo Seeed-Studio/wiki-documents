@@ -252,7 +252,7 @@ print(f"Tokens per second: {tokens_per_second:.2f} tokens/second")
 
 在演示视频中，Jetson 设备的功耗仅略低于 20W，却实现了令人印象深刻的推理速度。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/ohd_T95br90" title="deploy deepseek on jetson with mlc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

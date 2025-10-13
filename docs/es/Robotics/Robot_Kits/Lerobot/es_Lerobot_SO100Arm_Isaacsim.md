@@ -21,7 +21,9 @@ El [SO-100ARM](https://github.com/TheRobotStudio/SO-ARM100) es un proyecto de br
 
 Este wiki proporciona instrucciones sobre cómo importar el brazo robótico SO100 Arm Kit en la plataforma de simulación Isaac Sim de NVIDIA y controlarlo usando ROS2 y scripts de Python.
 
+<div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/buiqdmNQKwY?si=CvovjaHNQy2nZsR2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Introducción del Proyecto
 
@@ -169,7 +171,9 @@ Las partes impresas en 3D y las abrazaderas de mesa no están incluidas en el pr
 
 **Para una comprensión más clara de esta parte, por favor realice las conexiones de acción y configuraciones básicas de parámetros según el contenido del video.**
 
+<div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/buiqdmNQKwY?si=sHjysqfqxPVz-r3T&amp;start=92" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
   **Paso 3. Reproducir**
 
@@ -302,7 +306,9 @@ if __name__ == "__main__":
 
 </details>
 
+<div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/buiqdmNQKwY?si=3CizpKK3Nhj4Vlp9&amp;start=232" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Citas
 

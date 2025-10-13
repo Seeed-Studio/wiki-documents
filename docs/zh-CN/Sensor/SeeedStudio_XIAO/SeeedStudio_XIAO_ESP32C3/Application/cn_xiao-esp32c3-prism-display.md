@@ -13,7 +13,9 @@ last_update:
 
 # XIAO ESP32C3 棱镜显示器
 
+<div class="video-container">
 <iframe class="youtube-video" src="https://www.youtube.com/embed/wSJa8HP0BkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 
 ## 入门指南

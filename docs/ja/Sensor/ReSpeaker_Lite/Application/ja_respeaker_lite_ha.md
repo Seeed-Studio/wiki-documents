@@ -20,7 +20,9 @@ last_update:
 
 この章では、[ReSpeaker Lite Voice Assistant Kit](https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-p-5929.html)を使用してSonoffスマートスイッチを接続し、照明スイッチの音声制御を実現します。
 
+<div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/I9KOY2ik5nw" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 
 

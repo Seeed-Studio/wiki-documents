@@ -373,7 +373,7 @@ Ubuntuホストマシンでターミナルを開き、`sha256sum <File>`コマ�
 インストール手順に進む前に、ボードが強制リカバリモードになっていることを確認する必要があります。
 :::
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="450" src="https://www.youtube.com/embed/HEIXFkizP5Y" title="Enter Force Recovery Mode (reComputer Mini)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -417,7 +417,9 @@ reComputer Jetson J30/40 Miniはワンクリックフラッシュスクリプト
 wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && sudo chmod 777 ./flashing.sh && ./flashing.sh
 ```
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFBzTlyOjhE?si=uNN-l5VVGbAyGnot" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::caution
 免責事項：ワンクリックフラッシュスクリプトは、jetpackフラッシュをより迅速にすることを目的としています。現在のバージョンはベータ版であり、多くの問題がある可能性があります。ご理解をお願いいたします。フラッシュの問題がある場合は、以下の`Flash The Device Step by Step`に従い、[Discord Jetsonチャンネル](https://discord.com/channels/862602258452578314/930732339624026152)でフィードバックをお寄せください。迅速に修正し、近い将来この機能を改善いたします。

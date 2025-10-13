@@ -20,7 +20,7 @@ last_update:
 このドキュメントは、SenseCAP Watcher Agentのネットワーク設定プロセスをガイドします。以下の手順に従って、デバイスをネットワークに簡単に接続し、開始してください。
 
 以下のビデオは、Web制御パネルを使用してデバイスを設定する方法のステップバイステップチュートリアルです。
-<div class="table-center"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6UDVsv953Tw?si=0yD96_pQq1cMjjAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div class="video-container"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6UDVsv953Tw?si=0yD96_pQq1cMjjAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 ## 前提条件
 

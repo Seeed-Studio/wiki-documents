@@ -68,7 +68,9 @@ That's all! Your device is now connected to Edge Impulse. To verify this, [go to
 
 For your first project, let’s quickly train and deploy a simple neural network for classifying rock-paper-scissors gestures with just a single light sensor. For more details and video tutorial, watch the corresponding video!
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iCmlKyAp8eQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Training data acquisition
 

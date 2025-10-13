@@ -97,7 +97,7 @@ Una vez que el modelo haya terminado de cargar, puedes ingresar tu consulta en l
 
 En el video de demostración, el dispositivo Jetson opera a solo 20W pero logra una velocidad de inferencia impresionante.
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/7EYq9Y8Jp8o" title="deploy deepseek on jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

@@ -253,7 +253,7 @@ The calculation results show that the inference speed of the MLC-compiled deepse
 
 In the demonstration video, the Jetson device operates at just under 20W yet achieves an impressive inference speed.
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/ohd_T95br90" title="deploy deepseek on jetson with mlc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
