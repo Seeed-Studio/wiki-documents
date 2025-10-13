@@ -6,14 +6,14 @@ keywords:
 - LLava
 - RS485
 - VLM
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/reComputer-Industrial/reComputer-Industrial-J4012.webp
 slug: /vlm
 last_update:
   date: 10/10/2025
   author: Jiahao Li
 ---
 
-# how to use LLaVa on the reComputer Industrial J4012 to monitor your warehouse
+# How to use LLaVa on the reComputer Industrial J4012 to monitor your warehouse
 
 ## Introduction
 
