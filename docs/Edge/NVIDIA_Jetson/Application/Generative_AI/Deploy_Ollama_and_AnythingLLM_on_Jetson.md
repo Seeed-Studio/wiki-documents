@@ -199,7 +199,7 @@ And so, the village thrived, and Eliza’s adventures became the stuff of legend
 
 Here, we use the configured local personal assistant to query the information we need.
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/JjPfXNqhO1g" title="Local AI Assistant : Deploy Ollama and AnytingLLM on Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

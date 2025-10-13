@@ -87,10 +87,6 @@ This script has preconfigured flashing toolchain commands. If you are using it f
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_boards_1.png" style={{width:600, height:'auto'}}/></div>
 
-:::tip
-This firmware has preset the flashing toolchain instructions. If this is the first time you are using it, it might take a little time.
-:::
-
 **Step 3.** Upload the boards file
 
 - Open the view, select "File", and the file manager path will be displayed on the left sidebar.

@@ -118,7 +118,7 @@ reSpeaker XVF3800 暴露了 3 个输入引脚 (GPI) 和 5 个输出引脚 (GPO) 
 
 您可以体验 LED 阵列跟随语音输入方向的功能。
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="400"
           src="https://www.youtube.com/embed/nYxsTq_2bw4"
           title="ReSpeaker XVF3800 Plug & Play: Boot Light Show and DOA Demo"
@@ -413,7 +413,17 @@ arecord -D plughw:4,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
 
 ---
 
-3. **Playback**:
+3. **在 ALSA 上调整 ReSpeaker XVF3800 的音量**
+
+```bash
+alsamixer
+```
+
+在 alsamixer 中，使用 **左右方向键** 来切换到正确的声卡设备。使用 **上方向键** 来提高音量。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alsa.png" alt="pir" width={600} height="auto"/></p>
+
+4. **播放**：
 
 ```bash
 aplay -D plughw:4,0 output.wav

@@ -17,7 +17,9 @@ ReSpeaker 4-Mic Array for Raspberry Pi は、AI と音声アプリケーショ�
 
 [ReSpeaker 2-Mics Pi HAT](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html) とは異なり、このボードは AC108 をベースに開発されています。AC108 は、高精細音声キャプチャ用の I2S/TDM 出力変換機能を備えた高度に統合されたクアッドチャンネル ADC で、デバイスが 3 メートル半径内の音を拾うことを可能にします。さらに、この 4-Mics バージョンには、12 個の APA102 プログラマブル LED を備えた LED リングが搭載されています。この 4 つのマイクロフォンと LED リングにより、Raspberry Pi は VAD（音声活動検出）、DOA（到来方向推定）、KWS（キーワード検索）を実行し、Amazon Echo や Google Home のように LED リングを介して方向を表示する能力を持つことができます。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/IkSfBSf1IRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong></a>

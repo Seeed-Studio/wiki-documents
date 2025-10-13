@@ -400,7 +400,7 @@ Wio Terminal es una placa de desarrollo potente y fácil de usar diseñada para 
 
 Wio Terminal soporta una gama de lenguajes de programación incluyendo Arduino, MicroPython, CircuitPython, y más, facilitando que los desarrolladores puedan comenzar. Con su diseño compacto y portátil, Wio Terminal es ideal para una amplia gama de proyectos, desde crear dispositivos inteligentes hasta construir prototipos para aplicaciones industriales.
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="960" height="500" src="https://www.youtube.com/embed/3Fp3W9VJUL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 

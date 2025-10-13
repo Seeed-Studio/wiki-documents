@@ -546,7 +546,9 @@ Para probar la imagen Yocto anterior con reTerminal, puedes visitar la [wiki de 
 
 Esta charla se enfoca principalmente en explicar qué tan fácilmente puedes crear imágenes Linux personalizadas para Placas Portadoras CM4, X86 y Placas STM32 usando el proyecto Yocto. Además, al final de la charla, hay dos demos HMI basadas en Qt, LVGL, y una demo para mostrar actualizaciones OTA seguras y robustas a estos SBCs usando Mender.
 
-<p style={{textAlign: 'center'}}><iframe width="720" height="480" src="https://www.youtube.com/embed/OHT9f_NOEpA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<div class="video-container">
+<iframe width="720" height="480" src="https://www.youtube.com/embed/OHT9f_NOEpA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Recursos
 

@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-09-30 11:23:55 (北京时间)
-// 多语言页面: 2019 个
+// 生成时间: 2025-10-13 11:27:53 (北京时间)
+// 多语言页面: 2022 个
 
 (function() {
   'use strict';
@@ -864,6 +864,12 @@
     "ja"
   ],
   "/speech_vlm": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/vlm": [
     "cn",
     "en",
     "es",
@@ -3983,6 +3989,12 @@
     "es",
     "ja"
   ],
+  "/pycuvslam_recomputer_robotics": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/sensing_gmsl_cameras": [
     "cn",
     "en",
@@ -5736,6 +5748,12 @@
     "ja"
   ],
   "/epaper_ee04": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/e04_with_platformio": [
     "cn",
     "en",
     "es",

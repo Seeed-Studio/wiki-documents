@@ -1,13 +1,13 @@
 ---
-description: SenseCAP_T1000_tracker_Introduction
+description: SenseCAP_T1000_tracker_Introducción
 title: Introducción
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/SenseCAP_T1000_tracker/Introduction
 last_update:
-  date: 9/11/2023
-  author: Jessie
+  date: 10/11/2025
+  author: Twelve
 ---
 
 
@@ -37,7 +37,7 @@ last_update:
 
 ### Posicionamiento Preciso
 
-GNSS, Wifi, BLE, 3 tecnologías de posicionamiento para soluciones tanto interiores como exteriores.
+GNSS, Wifi, BLE, 3 tecnologías de posicionamiento para soluciones tanto en interiores como en exteriores.
 
 **Posicionamiento GNSS (Exterior)**
 
@@ -47,7 +47,7 @@ El rastreador obtendrá la ubicación en exteriores a través del sistema sateli
 
 **Posicionamiento Wi-Fi (Interior)**
 
-El rastreador escanea la dirección MAC y RSSI de Wi-Fi/Bluetooth cercanos y lo carga a través de LoRaWAN. El servidor de aplicaciones necesita calcular la ubicación geográfica real basándose en la dirección MAC y la intensidad de señal (RSSI).
+El rastreador escanea la dirección MAC y RSSI de Wi-Fi/Bluetooth cercanos y lo carga a través de LoRaWAN. El servidor de aplicaciones necesita calcular la ubicación geográfica real basada en la dirección MAC y la intensidad de señal (RSSI).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/by_wifi.png" alt="pir" width={800} height="auto" /></p>
 
@@ -59,13 +59,13 @@ Cuando la cobertura de señal LoRaWAN es débil o no hay cobertura de red, los d
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/cache.png" alt="pir" width={800} height="auto" /></p>
 
-### Adaptabilidad Inter-Regional
+### Adaptabilidad Trans-Regional
 
-T1000 proporciona cambio de región LoRaWAN® global sin interrupciones, ajustándose automáticamente al plan de frecuencia LoRaWAN® apropiado basado en las coordenadas de ubicación detectadas, asegurando rendimiento óptimo a través de Europa, pan-América y más allá.
+T1000 proporciona un cambio de región LoRaWAN® global sin interrupciones, ajustándose automáticamente al plan de frecuencia LoRaWAN® apropiado basado en las coordenadas de ubicación detectadas, asegurando un rendimiento óptimo en Europa, pan-América y más allá.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/earth.gif" alt="pir" width={800} height="auto" /></p>
 
-### Meses de Vida de Batería
+### Meses de Duración de Batería
 
 Alimentado por el LR1110 y con bajo consumo de energía, la batería dura 3 meses con intervalo de carga de 1 hora en modo solo GPS.
 
@@ -73,13 +73,13 @@ Alimentado por el LR1110 y con bajo consumo de energía, la batería dura 3 mese
 
 ### Sensores de Temperatura, Luz y Movimiento
 
-Los sensores de temperatura y luz están incluidos para hacer seguimiento de los datos ambientales en movimiento. Por ejemplo, los datos de temperatura pueden usarse para inferir la posibilidad de que la comida/vacuna se eche a perder. Los datos de luz muestran si es visto por ojos no deseados.
+Se incluyen sensores de temperatura y luz para hacer seguimiento de los datos ambientales en movimiento. Por ejemplo, los datos de temperatura pueden usarse para inferir la posibilidad de que la comida/vacuna se eche a perder. Los datos de luz muestran si es visto por ojos no deseados.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/sensor.png" alt="pir" width={800} height="auto" /></p>
 
 ### Red de Gateway Descentralizada para Procedencia de Ubicación
 
-La red descentralizada de Helium está construida sobre un mecanismo de confianza donde cada gateway comparte su ubicación, y Helium valida la autenticidad de estas ubicaciones. Al usar Helium con T1000, mediante verificación cruzada de la ubicación del gateway, puedes tener una ubicación aproximada del T1000. Esto proporciona una capa adicional de validación, aumentando la validez de los datos comparado con otras redes.
+La red descentralizada de Helium está construida sobre un mecanismo de confianza donde cada gateway comparte su ubicación, y Helium valida la autenticidad de estas ubicaciones. Al usar Helium con T1000, mediante la verificación cruzada de la ubicación del gateway, puedes tener una ubicación aproximada del T1000. Esto proporciona una capa adicional de validación, aumentando la validez de los datos comparado con otras redes.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/helium_map.png" alt="pir" width={800} height="auto" /></p>
 
@@ -101,19 +101,15 @@ Sensor de movimiento para detectar anomalías, botón SOS para reporte de emerge
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/applications.png" alt="pir" width={800} height="auto" /></p>
 
-## Especificación
+## Especificaciones
 
-### Especificación del Modelo
+### Especificaciones del Modelo
 
-Proporcionamos dos soluciones diferentes para los usuarios, y viene en cuatro versiones: A, B, C y D. T1000 A/B soporta posicionamiento GNSS regular, mientras que T1000 C/D soporta el Servicio de Geolocalización LoRa Cloud.
+Proporcionamos dos soluciones diferentes para los usuarios, y viene en cuatro versiones: A, B, C y D. T1000 A/B soportan posicionamiento GNSS regular, mientras que T1000 C/D soportan el Servicio de Geolocalización LoRa Cloud.
 
-- **T1000-A/T1000-B**: Datos GNSS sin cifrado especial.
+- **T1000-A/T1000-B**: Datos GNSS sin encriptación especial.
 
-- **T1000-C/T1000-D**: Datos GNSS cifrados vía Semtech LoRa Edge, los datos GNSS necesitan ser descifrados a través de [LoRa Cloud](https://www.loracloud.com/).
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/model_spec2.png" alt="pir" width={800} height="auto" /></p>
-
-<p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/blog/wp-content/uploads/2023/06/%E7%94%BB%E6%9D%BF-11@1.5x.png" alt="pir" width={800} height="auto" /></p>
+- **T1000-C/T1000-D**: Datos GNSS encriptados vía Semtech LoRa Edge, los datos GNSS necesitan ser desencriptados a través de [LoRa Cloud](https://www.loracloud.com/).
 
 ### Parámetros Generales
 
@@ -150,8 +146,8 @@ Proporcionamos dos soluciones diferentes para los usuarios, y viene en cuatro ve
 
 |Capacidad de Batería|Batería de litio recargable, 700mAh|
 | :- | :- |
-|\*Estimaciones de Vida de Batería|4 meses con una sola carga (enlace ascendente cada 1 hora, solo datos GNSS)|
-|Monitoreo de Vida de Batería|Nivel de batería de enlace ascendente periódico|
+|\*Estimaciones de Duración de Batería|4 meses con una sola carga (enlace ascendente cada 1 hora, solo datos GNSS)|
+|Monitoreo de Duración de Batería|Nivel de batería de enlace ascendente periódico|
 |Cable de Carga (Adaptador no incluido)|Cable de carga magnético USB, 1 metro|
-|<a name="ole_link9"></a>Voltaje de Entrada de Alimentación|4.7 a 5.5V DC|
+|<a name="ole_link9"></a>Voltaje de Entrada de Energía|4.7 a 5.5V DC|
 |Límite de Temperatura de Carga|0 a +45℃ (Más allá del rango de temperatura, la carga será limitada, y el LED parpadeará rápidamente)|

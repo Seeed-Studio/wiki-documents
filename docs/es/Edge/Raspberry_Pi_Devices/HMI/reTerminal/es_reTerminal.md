@@ -710,7 +710,9 @@ Después de que la imagen esté instalada, no necesitas instalar el controlador 
 
 Por favor revisa el video a continuación sobre cómo desmontar reTerminal:
 
-<p align="center"><iframe width="800" height="500" src="https://www.youtube.com/embed/hAfdb603emw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>></p>
+<div class="video-container">
+<iframe width="800" height="500" src="https://www.youtube.com/embed/hAfdb603emw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## FAQ
 

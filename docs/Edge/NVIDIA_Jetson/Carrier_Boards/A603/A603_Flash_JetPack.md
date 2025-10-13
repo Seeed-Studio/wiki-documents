@@ -152,7 +152,7 @@ On an Ubuntu host machine, open the terminal and run the command `sha256sum <Fil
 
 Here is a video for flashing JetPack 6.1 onto the A603 carrier board + Orin Nx 16GB module. You can refer to the video and the detailed steps below to flash your device.
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/qN4GxscUGW0" title="A603 JetPack6.1 Installation Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

@@ -118,7 +118,7 @@ reSpeaker XVF3800は、外部制御用に3つの入力ピン（GPI）と5つの�
 
 音声の入力方向に従って LED アレイが動作する様子を体験できます。
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="400"
           src="https://www.youtube.com/embed/nYxsTq_2bw4"
           title="ReSpeaker XVF3800 Plug & Play: Boot Light Show and DOA Demo"
@@ -413,7 +413,17 @@ arecord -D plughw:4,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
 
 ---
 
-3. **再生**:
+3. **ALSAでReSpeaker XVF3800の音量を調整する**
+
+```bash
+alsamixer
+```
+
+alsamixer では、左右の矢印キーを使用して正しいサウンドデバイスに移動します。上矢印キーを使用して音量を上げます。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alsa.png" alt="pir" width={600} height="auto"/></p>
+
+4. **再生**:
 
 ```bash
 aplay -D plughw:4,0 output.wav
@@ -501,6 +511,8 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 VERSION 2 0 2
 ```
 
+---
+
 **LED制御**
 
 | コマンド | 例 | 説明 |
@@ -511,7 +523,6 @@ VERSION 2 0 2
 | `led_brightness` | `xvf_host.exe led_brightness 255` | 明度を設定 |
 | `led_gammify` | `xvf_host.exe led_gammify 1` | ガンマ補正を有効化 |
 | `led_doa_color` | `xvf_host.exe led_doa_color 0x0000ff 0xff0000` | DoAベース/方向カラーを設定 |
-
 
 🟠 例（ブリーズオレンジ）：
 
@@ -650,7 +661,6 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 | **AUDIO_MGR_SYS_DELAY**  | マイクとスピーカー信号間の遅延         |
 | **PP_AGCMAXGAIN**        | 最大自動ゲイン制御レベル              |
 | **AEC_ASROUTGAIN**       | ASRビーム出力のゲイン                      |
-
 
 より詳細なドキュメントと高度なコマンドについては、公式GitHubリポジトリをご覧ください：  
 [ReSpeaker XVF3800 Host Control README](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md)

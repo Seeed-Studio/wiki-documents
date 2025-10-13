@@ -43,7 +43,9 @@ Lo mismo ocurre con el reconocimiento automático de voz – mientras que la det
 
 El equipo EDU de Seeed ha creado un curso definitivo paso a paso sobre cómo comenzar con TinyML usando Wio Terminal.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL5efXgSvwk9UCtJ6JKTyWAccSVfTXSlA3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Puedes descargar el curso en formato PDF y materiales del curso haciendo clic en los enlaces de abajo. Adicionalmente, puedes encontrar proyectos independientes publicados previamente en el blog de Seeed studio y el sitio Hackster.io - tanto los proyectos en el curso como los proyectos independientes hacen uso del IDE de Arduino para programar los dispositivos y una mezcla de Edge Impulse y Tensorflow Lite para Microcontroladores para entrenamiento de modelos e inferencia.
 

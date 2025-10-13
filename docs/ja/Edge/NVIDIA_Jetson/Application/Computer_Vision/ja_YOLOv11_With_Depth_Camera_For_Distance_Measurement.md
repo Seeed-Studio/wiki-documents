@@ -981,7 +981,9 @@ if __name__ == "__main__":
 スクリプトは検出結果と、指定された2つのオブジェクト（例：カップとマウス）間の測定距離をリアルタイムで表示します。ウィンドウの左側には検出ボックス付きのRGB画像が表示されます。右側には深度マップと距離が表示されます。動画では、測定誤差が一般的に1センチメートル以内であることが確認できます：
 </div>
 
+<div class="video-container">
 <iframe width="960" height="371" src="https://www.youtube.com/embed/r_zLhj-waj0" title="Measure distance with depth camera" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::note
 <div style={{ textAlign: "justify" }}>

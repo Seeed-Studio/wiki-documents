@@ -70,7 +70,9 @@ ESP-IDFのバージョンはv5.0以上である必要があります。古いバ
 
 新しいユーザーの場合、このビデオは以下の手順をよりよく理解するのに役立つかもしれません：
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/oqJz6zKfc4A?si=glzTFfR7m392eITb" title="Set Up the ESP-IDF Toolchain for SenseCAP Indicator on Windows" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 #### **ツールチェーンのインストール**
 

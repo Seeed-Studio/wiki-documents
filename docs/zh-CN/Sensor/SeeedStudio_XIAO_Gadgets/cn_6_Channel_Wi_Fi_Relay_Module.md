@@ -160,7 +160,9 @@ Firefox不支持在ESP设备上刷写固件。请使用Google Chrome或Microsoft
 
 观看以下视频，了解通过ESPHome Web刷写固件的详细步骤：
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Install firmware via ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 </TabItem>
 </Tabs>

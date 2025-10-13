@@ -22,7 +22,9 @@ Eagleye 530s 是一个高性能、经过测试、成本效益高且可用于生�
 
 由于 Eagleye 530s 与许多“创客”硬件配件针脚兼容，它使 Samsung ARTIK™ 开发人员能够轻松利用广泛的“创客”配件市场，并使用现成的传感器（例如 [GrovePi+](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)、[Grove 传感器](https://www.seeedstudio.com/grove.html)）、语音识别（例如 [ReSpeaker 2-mic array](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html) 和 [ReSpeaker 4-mic array](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html)）、继电器、GPS、蜂窝连接等进行原型设计和构建，为企业开发人员创建功能丰富的概念验证 (PoC) 或生产就绪产品提供了许多选择。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4IR768d8Ins" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Eagleye-530s-p-3035.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="200" height="38"  border={0} /></a></p>
 

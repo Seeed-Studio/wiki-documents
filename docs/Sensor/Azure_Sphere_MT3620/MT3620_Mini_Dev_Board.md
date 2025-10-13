@@ -378,7 +378,9 @@ On top of the box , there is a warning light ,which will flash when the door is 
 - Step 7. Use the Remote Debug Tool to access the device.  
 - Step 8. Follow the video to operate the example in 3 different ways.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NgH3Ot9pM1Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Resource
 

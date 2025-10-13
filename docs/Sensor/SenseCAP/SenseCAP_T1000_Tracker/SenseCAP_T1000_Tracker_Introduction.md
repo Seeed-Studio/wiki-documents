@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_tracker/Introduction
 last_update:
-  date: 9/11/2023
-  author: Jessie
+  date: 10/11/2025
+  author: Twelve
 ---
 
 
@@ -110,10 +110,6 @@ We provide two different solutions for users, and comes in four versions: A, B, 
 - **T1000-A/T1000-B**: GNSS data without special encryption.
 
 - **T1000-C/T1000-D**: GNSS data encrypted via Semtech LoRa Edge, GNSS data needs to be decrypted through [LoRa Cloud](https://www.loracloud.com/).
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/model_spec2.png" alt="pir" width={800} height="auto" /></p>
-
-<p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/blog/wp-content/uploads/2023/06/%E7%94%BB%E6%9D%BF-11@1.5x.png" alt="pir" width={800} height="auto" /></p>
 
 ### General Parameters
 

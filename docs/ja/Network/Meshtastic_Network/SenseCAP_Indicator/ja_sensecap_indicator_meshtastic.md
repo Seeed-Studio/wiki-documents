@@ -1,6 +1,6 @@
 ---
-description: SenseCAP Indicator for Meshtastic の使用開始
-title: Indicator for Meshtastic の使用開始
+description: Meshtastic用SenseCAP Indicatorの使用開始
+title: Meshtastic用Indicatorの使用開始
 keywords:
 - Meshtastic
 - Indicator
@@ -23,35 +23,35 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1L-for-Meshtastic-p-6304.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>
 
-SenseCAP Indicator は、[Meshtastic®](https://meshtastic.org/) 向けに設計された4インチタッチスクリーンデバイスで、ESP32とRP2040のデュアルMCUを搭載し、Wi-Fi、BLE、LoRa® をサポートしています。オープンソースの強力なIoT開発プラットフォームです。
+SenseCAP Indicatorは、[Meshtastic®](https://meshtastic.org/)向けに設計された4インチタッチスクリーンデバイスで、ESP32とRP2040のデュアルMCUを搭載し、Wi-Fi、BLE、LoRa®をサポートしています。オープンソースの強力なIoT開発プラットフォームです。
 
 ## 概要
 
 ### 特徴
 
-- **Meshtastic サポート：** Meshtastic ファームウェアがプリフラッシュされており、電源を入れるだけですぐに動作します。Meshtastic Flasher を使用してファームウェアをアップグレードすることも可能です。<br/>
-- **デュアル MCU と豊富な GPIO：** 強力な ESP32S3 と RP2040 デュアル MCU を搭載し、400以上の Grove 互換 GPIO により柔軟な拡張オプションを提供します。<br/>
-- **IoT 接続用ローカル LoRa® ハブ：** Semtech SX1262 LoRa® チップを統合し、チュートリアルを通じて LoRaWAN® シングルチャネルゲートウェイに変換できます。または、Wi-Fi 経由で LoRa® デバイスを Matter などの人気 IoT プラットフォームに接続できます。<br/>
-- **完全オープンソースプラットフォーム：** 広範な ESP32 と Raspberry Pi オープンソースエコシステムを活用して、無限のアプリケーション可能性を実現します。<br/>
-- **複数のアプリケーションシナリオに適用：** Meshtastic デスクトップノードやカーノード、LoRaWAN® シングルチャネルゲートウェイとして使用できます。
+- **Meshtasticサポート：** Meshtasticファームウェアがプリフラッシュされており、電源を入れるだけですぐに動作します。Meshtastic Flasherを使用してファームウェアをアップグレードすることも可能です。<br/>
+- **デュアルMCUと豊富なGPIO：** 強力なESP32S3とRP2040のデュアルMCUと、400以上のGrove互換GPIOを搭載し、柔軟な拡張オプションを提供します。<br/>
+- **IoT接続用ローカルLoRa®ハブ：** Semtech SX1262 LoRa®チップを統合し、チュートリアルを通じてLoRaWAN®シングルチャネルゲートウェイに変換できます。また、Wi-Fi経由でLoRa®デバイスをMatterなどの人気IoTプラットフォームに接続することも可能です。<br/>
+- **完全オープンソースプラットフォーム：** ESP32とRaspberry Piの豊富なオープンソースエコシステムを活用し、無限のアプリケーション可能性を提供します。<br/>
+- **複数のアプリケーションシナリオに対応：** Meshtasticデスクトップノードやカーノード、LoRaWAN®シングルチャネルゲートウェイとして使用できます。
 
 ### 仕様
 
 |スクリーン|3.95インチ、静電容量式RGBタッチスクリーン|
 | :- | :- |
-|**スクリーン解像度**|480 x 480 ピクセル|
+|**スクリーン解像度**|480 x 480ピクセル|
 |**電源供給**|5V-DC、1A|
 |**バッテリー**|N/A|
-|**プロセッサ**|<p>**ESP32-S3:** Xtensa® デュアルコア 32ビット 最大240MHz</p><p>**RP2040:** デュアル ARM Cortex-M0+ 最大133MHz</p>|
+|**プロセッサ**|<p>**ESP32-S3:** Xtensa®デュアルコア32ビット最大240MHz</p><p>**RP2040:** デュアルARM Cortex-M0+最大133MHz</p>|
 |**フラッシュ**|<p>**ESP32-S3:** 8MB</p><p>**RP2040:** 2MB</p>|
-|**外部ストレージ**|最大32GB Micro SDカードをサポート（別売り）|
+|**外部ストレージ**|最大32GB Micro SDカード対応（別売）|
 |**Wi-Fi**|802.11b/g/n、2.4GHz|
 |**Bluetooth**|Bluetooth 5.0 LE|
-|**LoRa(SX1262**)|862-930MHzをサポート|
+|**LoRa(SX1262**)|862-930MHzサポート|
 |**ブザー（未開発）**|MLT-8530、共振周波数：2700Hz|
 |**認証**|CE/FCC|
 
@@ -63,13 +63,19 @@ SenseCAP Indicator は、[Meshtastic®](https://meshtastic.org/) 向けに設計
 
 ### アプリケーションファームウェアのフラッシュ
 
+:::caution note
+ファームウェアをフラッシュする前に、購入したIndicatorがMeshtastic対応版であることを確認してください。Meshtastic非対応のIndicatorにMeshtasticファームウェアをフラッシュしないでください。ハードウェアの損傷を引き起こす可能性があります。
+:::
+
 **ビデオ説明**
 
+<div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/55Sz8kHSyV4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
-[Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスしてください。
+[Meshtastic Web Flasher](https://flasher.meshtastic.org/)にアクセスしてください。
 
-ターゲットデバイスを `Seeed SenseCAP Indicator` に選択し、最新のファームウェアを選択して、`Flash` をクリックします。
+ターゲットデバイスを`Seeed SenseCAP Indicator`に選択し、最新のファームウェアを選択して、`Flash`をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-flash.png" alt="pir" width={800} height="auto" /></p>
 
@@ -77,22 +83,22 @@ USBケーブルを接続しながらボタンを押し続けます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/press-button.png" alt="pir" width={400} height="auto" /></p>
 
-`Full Erase and Install` を有効にし、`Erase Flash and Install` をクリックします。
+`Full Erase and Install`を有効にし、`Erase Flash and Install`をクリックします。
 
-2つのポートが表示されるので、`USB serial port` を選択して `Connect` をクリックします。
+2つのポートが表示されるので、`USB serial port`を選択して`Connect`をクリックします。
 
 :::caution note
-INDICATOR RP2040 ではなく、`USB Serial` を選択してください。
+INDICATOR RP2040ではなく、`USB Serial`を選択してください。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect11.png" alt="pir" width={800} height="auto" /></p>
 
-### GPS ファームウェアのフラッシュ（オプション）
+### GPSファームウェアのフラッシュ（オプション）
 
-SenseCAP Indicator には GPS が内蔵されていないため、GPS 位置情報を取得するには [Grove GPS Module](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html) が必要です。<br/>
-GPS モジュールを Grove ポートに接続してから、GPS ファームウェアをフラッシュします。
+SenseCAP IndicatorにはGPSが内蔵されていないため、GPS位置情報を取得するには[Grove GPSモジュール](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html)が必要です。<br/>
+GPSモジュールをGroveポートに接続してから、GPSファームウェアをフラッシュします。
 
-- **[GPS ファームウェアダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/meshtastic_gps.ino.uf2)**
+- **[GPSファームウェアダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/meshtastic_gps.ino.uf2)**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps-connect.png" alt="pir" width={800} height="auto" /></p>
 
@@ -100,16 +106,16 @@ GPS モジュールを Grove ポートに接続してから、GPS ファーム�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_56.png" alt="pir" width={600} height="auto" /></p>
 
-`UF2` ファイルをダウンロードして `RPI-RP2` ドライブにコピーします。ファイルがダウンロードされ、デバイスが再起動した後にファームウェアがフラッシュされます。
+`UF2`ファイルをダウンロードし、`RPI-RP2`ドライブにコピーします。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/disk.png" alt="pir" width={600} height="auto" /></p>
 
 ## 使用開始
 
-`Meshtastic` アプリをダウンロード：
+`Meshtastic`アプリをダウンロード：
 
-- [IOS App](https://meshtastic.org/docs/category/apple-apps/)
-- [Android App](https://meshtastic.org/docs/category/android-app/)
+- [IOSアプリ](https://meshtastic.org/docs/category/apple-apps/)
+- [Androidアプリ](https://meshtastic.org/docs/category/android-app/)
 
 ### アプリ経由での接続
 
@@ -122,25 +128,25 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="IOSアプリ">
 
-- Bluetooth パネルでターゲットデバイスを選択します。
+- Bluetoothパネルでターゲットデバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-- コードを入力して `Pair` をクリックしてデバイスに接続します。
+- コードを入力し、`Pair`をクリックしてデバイスに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair111.png" alt="pir" width={800} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Android App">
+<TabItem value="android" label="Androidアプリ">
 
-- `+` をクリックしてターゲットデバイスを選択します。
+- `+`をクリックしてターゲットデバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-- コード（デフォルトコードは `123456`）を入力して `OK` をクリックしてデバイスに接続します。
+- コード（デフォルトコードは`123456`）を入力し、`OK`をクリックしてデバイスに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -152,13 +158,13 @@ import TabItem from '@theme/TabItem';
 メッシュ通信を開始するには、地域を設定する必要があります。この設定は、デバイスが使用する周波数範囲を制御し、地域の場所に応じて設定する必要があります。
 
 <Tabs>
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="IOSアプリ">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Android App">
+<TabItem value="android" label="Androidアプリ">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
@@ -166,19 +172,19 @@ import TabItem from '@theme/TabItem';
 
 **地域リスト**
 
-|**地域コード**|**説明**|**周波数範囲 (MHz)**|**デューティサイクル (%)**|**電力制限 (dBm)**|
+|**地域コード**|**説明**|**周波数範囲（MHz）**|**デューティサイクル（%）**|**電力制限（dBm）**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|未設定|N/A|N/A|N/A|
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
-|EU_868|欧州連合 868MHz|869.4 - 869.65|10|27|
+|EU_868|欧州連合868MHz|869.4 - 869.65|10|27|
 
-より包括的なリストについては、[国別 LoRa 地域](https://meshtastic.org/docs/configuration/region-by-country/) を参照してください。
+より包括的なリストについては、[国別LoRa地域](https://meshtastic.org/docs/configuration/region-by-country/)を参照してください。
 
 :::info
-**EU_868** は、1時間ごとのデューティサイクル制限10%を遵守する必要があり、これは1時間のローリングベースで毎分計算されます。制限に達すると、再び許可されるまでデバイスは送信を停止します。
+**EU_868**は、1時間ごとのデューティサイクル制限10%を遵守する必要があり、これは1時間のローリングベースで毎分計算されます。制限に達した場合、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスで LoRa 地域を設定したので、ニーズに合わせて [LoRa 設定](https://meshtastic.org/docs/configuration/radio/lora/) を構成することができます。
+デバイスでLoRa地域を設定したので、ニーズに合わせて[LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/)の設定を続けることができます。
 
 ### キーボード
 
@@ -202,18 +208,18 @@ import TabItem from '@theme/TabItem';
 
 ### FAQ
 
-#### RP2040 部分
+#### RP2040部分
 
-RP2040 はまだ開発されていないため、`ブザー`/`SD カード`/`マップ` 機能はまだ利用できません。Meshtastic と協力して最適化を進めています。
+RP2040はまだ開発されていないため、`ブザー`/`SDカード`/`マップ`機能はまだ利用できません。Meshtasticと協力して最適化を進めています。
 
-#### ロール選択
+#### 役割選択
 
 :::caution
-`Repeater` ロールを選択しないでください。デバイスが繰り返し再起動する原因となります。
+`Repeater`役割を選択しないでください。デバイスが繰り返し再起動する原因となります。
 :::
 
-#### GPS モジュール
+#### GPSモジュール
 
-GPS モジュールを接続していない場合は、`Meshtastic` アプリで GPS 機能を無効にしてください。そうしないと、デバイスが GPS モジュールを探し続け、画面の起動に長時間かかる原因となります。
+GPSモジュールを接続していない場合は、`Meshtastic`アプリでGPS機能を無効にしてください。そうしないと、デバイスがGPSモジュールを探し続け、画面の起動に長時間かかる原因となります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps-module.png" alt="pir" width={600} height="auto" /></p>

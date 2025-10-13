@@ -27,7 +27,9 @@ sumados juntos para crear un solo electrodo grande.
 Basado en el Freescale MPR121, este sensor tiene 12 electrodos completamente independientes con autoconfiguración incorporada. Gracias a la interfaz I2C, puedes detectar todas las señales de los 12 electrodos con solo un puerto Grove, y la dirección I2C es configurable por hardware, desde 0X5B hasta 0X5D. Esto también hace posible que múltiples
 **Grove - Sensor Táctil Capacitivo I2C de 12 Teclas V3 (MPR121)** se usen juntos para expansiones de canales en un solo sistema, puedes construir un sistema táctil que contenga máx. 36 electrodos.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/CPq4VSAXBgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121-p-4694.html
 " target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
@@ -90,7 +92,9 @@ Las plataformas mencionadas anteriormente como compatibles son una indicación d
 
 Este es el video de introducción de este producto, demostraciones simples, puedes intentarlo.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ds7kBVdeY4U?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **Piano de Hojas**: Hicimos un piano usando un sensor táctil, así como hojas para las teclas del piano.
 

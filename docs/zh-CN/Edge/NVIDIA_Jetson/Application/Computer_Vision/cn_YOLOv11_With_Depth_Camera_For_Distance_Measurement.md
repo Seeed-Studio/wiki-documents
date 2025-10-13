@@ -980,7 +980,9 @@ if __name__ == "__main__":
 脚本将实时显示检测结果以及两个指定对象（例如杯子和鼠标）之间的测量距离。窗口左侧显示带有检测框的RGB图像。右侧显示深度图和距离。在视频中，您可以看到测量误差通常在一厘米以内：
 </div>
 
+<div class="video-container">
 <iframe width="960" height="371" src="https://www.youtube.com/embed/r_zLhj-waj0" title="Measure distance with depth camera" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::note
 <div style={{ textAlign: "justify" }}>

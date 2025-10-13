@@ -638,7 +638,9 @@ aplay hello3.wav
 
 [ReSpeaker Core V2 & Wio Link Tutorial](https://wiki.seeedstudio.com/ja/ReSpeaker_Core_V2_&_Wio_Link/)に従って、ReSpeaker Core V2を使用してIFTTT経由でWio Linkを制御してください。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/OJ0i6QrZCSM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## GPIOで遊ぶ
 
@@ -1002,7 +1004,9 @@ ReSpeaker Core v2.0を再度接続してください。
 
 このデモでは、ReSpeaker Core v2.0を使用してAlexaと会話します。友達のようにReSpeaker Core v2.0に質問したり会話したりできます。さらに、この製品はGoogle AssistantやBingとも連携できます。ホットワードはSnowboyで、もちろん独自のウェイクアップワードを作成することもできます。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/q7b8iLqRiPY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 <br />
 
@@ -1012,7 +1016,9 @@ ReSpeaker Core v2.0を再度接続してください。
 
 高度なアルゴリズムと6つの高品質マイクロフォンにより、結果は驚くべきものです！16メートル（52フィート）離れた場所からReSpeaker Core v2.0をウェイクアップできます！
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/PpcwvOLlpEw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **ReSpeaker Core v2.0 - 音声受付システム**
 
@@ -1020,14 +1026,18 @@ ReSpeaker Core v2.0を再度接続してください。
 
 あなたの家や職場の前にこのような音声受付システムがあったらどうでしょうか？クールではありませんか？
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/tdIsCRXKoVI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 <br />
 
 **ReSpeaker Core v2.0 - シンプル音声受付システム**
 
 受付サービスの基本機能は、訪問者を迎え、歓迎の気持ちを伝え、オフィスへの不正アクセスを防ぐことです。ReSpeaker Core v2.0の機能を活用して音声受付サービスを設計しました。このシステムは訪問者と対話し、訪問される人にメッセージを送ることができます。将来的には、小さなオフィス従業員の電話リストデータベースを設計し、従業員がシステムにメッセージを送ると、システムがReSpeaker Core v2.0のGPIO機能を使用して訪問者のためにドアを開けることができます。Microsoft Bing Speech to textサービスとTwilio/Tencentメッセージ APIを使用してPythonスクリプトを作成しました。詳細については、[ReSpeaker音声受付システム](https://project.seeedstudio.com/SeeedStudio/respeaker-voice-reception-system-209a6c)を参照してください。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/-nTOa3LLpVo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技術サポート & 製品ディスカッション
 

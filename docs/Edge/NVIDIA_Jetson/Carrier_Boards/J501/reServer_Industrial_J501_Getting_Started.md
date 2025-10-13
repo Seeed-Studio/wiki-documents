@@ -307,7 +307,7 @@ On an Ubuntu host machine, open the terminal and run the command `sha256sum <Fil
 Before we can move on to the installation steps, we need to make sure that the board is in force recovery mode.
 :::
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/CGMGZGqZPKM" title="J501 Enter Force Recovery Mode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

@@ -37,7 +37,7 @@ NVIDIA Jetson Orin Nano™ Super Developer Kit 是一款紧凑而强大的计算
 - 步骤 3：配置并刷写系统。
 观看视频，沉浸式体验每个步骤。
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="480" src="https://www.youtube.com/embed/VhuSCMM7iN0" title="Update Orin Nano Developer Kit to Super Kit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -45,7 +45,7 @@ NVIDIA Jetson Orin Nano™ Super Developer Kit 是一款紧凑而强大的计算
 
 ### 全性能释放
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="480" src="https://www.youtube.com/embed/Xlr3gO7tRfM" title="Power Consumption of Orin Nano Super Developer Kit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -57,7 +57,7 @@ Jetson Orin cpu 和 gpu 烤机程序[下载链接](https://github.com/anseeto/je
 
 ### 推理速度提升
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="480" src="https://www.youtube.com/embed/gyHM9xJCPxw" title="Ollama on Jetson Orin Nano Super Developer Kit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

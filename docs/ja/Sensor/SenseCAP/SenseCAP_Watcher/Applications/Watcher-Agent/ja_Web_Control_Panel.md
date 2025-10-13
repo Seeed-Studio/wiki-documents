@@ -11,8 +11,10 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /ja/watcher_web_control_panel
 last_update:
-  date: 09/11/2025
+  date: 10/13/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
 
 # Web コントロールパネル ベータ版ガイド
@@ -22,7 +24,7 @@ last_update:
 SenseCAP Watcher Web コントロールパネル（ベータ版）は、Watcher デバイスの管理と Agent 設定の構成を行うための Web ベースのインターフェースを提供します。このベータ版には、デバイス管理と Agent カスタマイズのための基本機能が含まれています。
 
 以下の動画は、Web コントロールパネルを使用してデバイスを設定する方法のステップバイステップチュートリアルです。
-<div class="table-center"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6UDVsv953Tw?si=0yD96_pQq1cMjjAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div class="video-container"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6UDVsv953Tw?si=0yD96_pQq1cMjjAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 ## 現在の機能
 
@@ -40,9 +42,9 @@ Web コントロールパネルのベータ版には、以下の主要機能が�
 1. [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home) にアクセスします
 2. コントロールパネルにアクセスするには、ページの右上角にある Watcher Agent をクリックします。
    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/navigate.jpg" style={{width:800, height:'auto'}}/></div>
-3. 「Bind Device」ボタンをクリックします
+3. "Bind Device" ボタンをクリックします
    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/page1.jpg" style={{width:300, height:'auto'}}/></div> 
-4. 画面の指示に従い、デバイスに表示される6桁の認証コードを入力します
+4. 画面の指示に従い、デバイスに表示される 6 桁の認証コードを入力します
 
 
 
@@ -60,7 +62,7 @@ Web コントロールパネルのベータ版には、以下の主要機能が�
 :::note
 この機能は Agent のウェイクワードを変更しません。
 Agent のウェイクワードは、ファームウェアをコンパイルする際にのみ変更できます。
-デフォルトのウェイクアップワードは「Jarvis」です。
+デフォルトのウェイクアップワードは "Jarvis" です。
 :::
 
 
@@ -96,7 +98,7 @@ Agent のウェイクワードは、ファームウェアをコンパイルす�
 - 操作
 
 :::note
-これは Web コントロールパネルのベータ版であり、機能は将来のリリースで更新または変更される可能性があります。最新の機能については、定期的にアップデートを確認してください。
+これは Web コントロールパネルのベータ版であり、将来のリリースで機能が更新または変更される可能性があります。最新の機能については、定期的にアップデートを確認してください。
 :::
 
 ## 技術サポート

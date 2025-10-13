@@ -185,7 +185,7 @@ Since the device will be used outdoors for extended periods, please avoid instal
 
 - You can complete the entire installation and initialization process through a video.
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/smQe7G0Bbsk?si=kcB8BdoxiwpZqB4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -193,7 +193,7 @@ Since the device will be used outdoors for extended periods, please avoid instal
 
 - You can install your sensor through this video.
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -201,7 +201,7 @@ Since the device will be used outdoors for extended periods, please avoid instal
 
 - You can replace the antenna with a fiberglass one by watching this video.
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

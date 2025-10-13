@@ -24,7 +24,9 @@ last_update:
 
 更多详细信息和视觉效果，请观看相应的视频！
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CVq4cet5jgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 有不同类型的语音识别任务——我们可以大致将它们分为三组：
 
@@ -238,7 +240,9 @@ void DMAC_1_Handler() {
 
 查看这个关于此主题的TinyML演讲，了解更多信息并找到论文链接！
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YmJrr1D191k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 我们鼓励您分叉代码仓库，尝试在自己的数据集上进行训练，也许尝试实现更高级的架构或模型训练技术。如果您这样做，请不要犹豫在这里给我留言或在 Github 上提交 PR！
 

@@ -5,11 +5,16 @@ image: https://files.seeedstudio.com/wiki/watcher_ha/10.png
 slug: /es/integrate_watcher_to_ha
 sidebar_position: 1
 last_update:
-  date: 08/20/2024
-  author: Citric
+  date: 10/11/2025
+  author: Twelve
 ---
 
 # Integrar Watcher a Home Assistant
+
+:::caution Nota
+Este tutorial no se aplica a la versión de firmware Xiaozhi.  
+Para el firmware Xiaozhi, visite la [Guía de Xiaozhi Watcher](https://wiki.seeedstudio.com/es/ha_dify_watcher_llms/) para obtener instrucciones detalladas.
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/10.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -19,9 +24,9 @@ En esta wiki integral, te guiaremos a través del proceso de integrar Watcher co
 
 A continuación se presenta el marco de contenido principal de este artículo.
 
-1. [Instalación del plugin HACS](#installing-the-hacs-plugin): Instalar la Tienda Comunitaria de Home Assistant (HACS) para habilitar la instalación del plugin SenseCraft de Seeed Studio dentro de Home Assistant.
-2. [Instalación del plugin SenseCraft](#installing-the-sensecraft-plugin): Instalar el plugin SenseCraft de Seeed Studio, que permite el despliegue rápido de los productos de Seeed Studio en Home Assistant.
-3. [Integrar SenseCAP Watcher en Home Assistant](#integrate-sensecap-watcher-into-home-assistant): Integrar SenseCAP Watcher en Home Assistant y configurar un panel visual para la configuración.
+1. [Instalación del plugin HACS](#instalación-del-plugin-hacs): Instalar Home Assistant Community Store (HACS) para habilitar la instalación del plugin SenseCraft de Seeed Studio dentro de Home Assistant.
+2. [Instalación del plugin SenseCraft](#instalación-del-plugin-sensecraft): Instalar el plugin SenseCraft de Seeed Studio, que permite el despliegue rápido de los productos de Seeed Studio en Home Assistant.
+3. [Integrar SenseCAP Watcher en Home Assistant](#integrar-sensecap-watcher-en-home-assistant): Integrar SenseCAP Watcher en Home Assistant y configurar un panel visual para la configuración.
 
 ## Comenzando
 
@@ -58,19 +63,19 @@ Home Assistant Green es la forma más fácil y centrada en la privacidad de auto
 
 Recomendamos usar Home Assistant Green como el host de Home Assistant para este tutorial, o puedes usar cualquier host de Home Assistant con un Supervisor.
 
-## Instalando el plugin HACS
+## Instalación del plugin HACS
 
 ### Paso 1. Abrir el Modo Avanzado en Home Assistant
 
-Para desbloquear todo el potencial de Home Assistant y obtener acceso a características avanzadas, puedes habilitar el "Modo Avanzado" en la interfaz de usuario.
+Para desbloquear todo el potencial de Home Assistant y obtener acceso a características avanzadas, puedes habilitar el "Advanced Mode" en la interfaz de usuario.
 
-Navega a tu [interfaz web de Home Assistant](http://homeassistant.local:8123). Haz clic en el ícono de tu perfil en la esquina inferior izquierda de la barra lateral de Home Assistant. En tu página de perfil, desplázate hacia abajo para encontrar el interruptor de **Modo Avanzado**. Cambia el interruptor a la posición de encendido.
+Navega a tu [interfaz web de Home Assistant](http://homeassistant.local:8123). Haz clic en el ícono de tu perfil en la esquina inferior izquierda de la barra lateral de Home Assistant. En tu página de perfil, desplázate hacia abajo para encontrar el interruptor **Advanced Mode**. Cambia el interruptor a la posición de encendido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/2.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Paso 2. Instalar Terminal & SSH
 
-Haz clic en **Configuración** en la barra lateral para acceder al menú de configuración. Haz clic en **Complementos** para acceder a la tienda de complementos.
+Haz clic en **Settings** en la barra lateral para acceder al menú de configuración. Haz clic en **Add-ons** para acceder a la tienda de complementos.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/3.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -78,7 +83,7 @@ Usa la barra de búsqueda o navega a través de los complementos disponibles par
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/4.png" style={{width:1000, height:'auto'}}/></div>
 
-Una vez que hayas localizado **Terminal & SSH**, haz clic en él para ver los detalles. En la página del complemento, verás una descripción general, documentación y opciones de configuración. Para instalar el complemento, haz clic en el botón **Instalar**.
+Una vez que hayas localizado **Terminal & SSH**, haz clic en él para ver los detalles. En la página del complemento, verás una descripción general, documentación y opciones de configuración. Para instalar el complemento, haz clic en el botón **Install**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/5.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -96,25 +101,25 @@ Ejecuta el siguiente comando para descargar y ejecutar el script de instalación
 wget -q -O - https://install.hacs.xyz | bash -
 ```
 
-Después de que el script de instalación haya terminado, necesitas reiniciar Home Assistant para aplicar los cambios. Puedes reiniciar Home Assistant a través de la interfaz de usuario yendo a **Configuración > Sistema > Reiniciar**.
+Después de que el script de instalación haya terminado, necesitas reiniciar Home Assistant para aplicar los cambios. Puedes reiniciar Home Assistant a través de la interfaz yendo a **Settings > System > Restart**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/6.png" style={{width:1000, height:'auto'}}/></div>
 
-Después del reinicio, haz clic en **Configuración** en la barra lateral para abrir el menú de configuración. Dentro del menú de configuración, navega a **Dispositivos y Servicios**.
+Después del reinicio, haz clic en **Settings** en la barra lateral para abrir el menú de configuración. Dentro del menú de configuración, navega a **Devices & Services**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/7.png" style={{width:1000, height:'auto'}}/></div>
 
-Haz clic en **AÑADIR INTEGRACIÓN** para agregar una nueva integración a tu configuración de Home Assistant.
+Haz clic en **ADD INTEGRATION** para agregar una nueva integración a tu configuración de Home Assistant.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/8.png" style={{width:1000, height:'auto'}}/></div>
 
-En la barra de búsqueda, escribe **HACS** para buscar la integración de la Tienda Comunitaria de Home Assistant.
+En la barra de búsqueda, escribe **HACS** para buscar la integración de Home Assistant Community Store.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/9.png" style={{width:1000, height:'auto'}}/></div>
 
-Si se encuentra HACS, debería aparecer en la lista de integraciones disponibles. Haz clic en ella para iniciar el proceso de instalación.
+Si se encuentra HACS, debería aparecer en la lista de integraciones disponibles. Haz clic en él para iniciar el proceso de instalación.
 
-Puede aparecer un acuerdo de licencia o términos de servicio. Lee el acuerdo cuidadosamente, y si estás de acuerdo con los términos, marca todas las casillas para indicar tu conformidad. Haz clic en **ENVIAR** para proceder con la instalación.
+Puede aparecer un acuerdo de licencia o términos de servicio. Lee el acuerdo cuidadosamente, y si estás de acuerdo con los términos, marca todas las casillas para indicar tu acuerdo. Haz clic en **SUBMIT** para proceder con la instalación.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/10.png" style={{width:600, height:'auto'}}/></div>
 
@@ -122,7 +127,7 @@ A continuación, se te pedirá que inicies sesión con tu cuenta de GitHub. Esto
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/11.png" style={{width:600, height:'auto'}}/></div>
 
-Sigue las instrucciones para autorizar a Home Assistant a acceder a tu cuenta de GitHub. Esto típicamente implicará ingresar un código de verificación proporcionado por GitHub para confirmar tu identidad.
+Sigue las instrucciones para autorizar a Home Assistant a acceder a tu cuenta de GitHub. Esto típicamente involucrará ingresar un código de verificación proporcionado por GitHub para confirmar tu identidad.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/12.png" style={{width:600, height:'auto'}}/></div>
 
@@ -136,11 +141,11 @@ Es posible que necesites reiniciar Home Assistant para que HACS se integre compl
 
 ### Paso 4. Instalación del plugin SenseCraft a través de HACS
 
-Busca HACS en la barra lateral y haz clic en él para abrir la interfaz de HACS. En la esquina inferior derecha, encontrarás un botón de menú (tres puntos o un signo más, dependiendo de tu versión de HACS). Haz clic en **Repositorios personalizados**.
+Busca HACS en la barra lateral y haz clic en él para abrir la interfaz de HACS. En la esquina inferior derecha, encontrarás un botón de menú (tres puntos o un signo más, dependiendo de tu versión de HACS). Haz clic en **Custom repositories**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/14.png" style={{width:1000, height:'auto'}}/></div>
 
-Aparecerá un cuadro de diálogo pidiéndote que ingreses la URL del repositorio. Aquí, ingresarás la URL del repositorio personalizado para la integración SenseCraft. Después de ingresar la URL, selecciona la categoría (para la integración SenseCraft, seleccionarías **Integración**).
+Aparecerá un cuadro de diálogo pidiéndote que ingreses la URL del repositorio. Aquí, ingresarás la URL del repositorio personalizado para la integración SenseCraft. Después de ingresar la URL, selecciona la categoría (para la integración SenseCraft, seleccionarías **Integration**).
 
 ```
 https://github.com/Seeed-Solution/SenseCraft-HomeAssistant.git
@@ -162,7 +167,7 @@ En este punto, hemos completado exitosamente la instalación del plugin SenseCra
 
 ### Paso 5. Agregar Watcher desde SenseCraft
 
-En la página de **Settings**, elige **Devices & Services**.
+En la página **Settings**, elige **Devices & Services**.
 
 Luego haz clic en el botón **ADD INTEGRATION** en la esquina inferior derecha y busca **SenseCraft**.
 
@@ -180,7 +185,7 @@ Luego selecciona **Watcher** en las opciones de dispositivo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/4.png" style={{width:500, height:'auto'}}/></div>
 
-Dentro de la siguiente página, por favor ingresa el EUI del dispositivo Watcher, puedes encontrar el EUI de Watcher dentro de la [configuración de Watcher en la APP SenseCraft](https://wiki.seeedstudio.com/es/integrate_watcher_to_ha/#step-6-place-the-task-and-configure-the-http-message-block).
+En la siguiente página, por favor ingresa el EUI del dispositivo Watcher, puedes encontrar el EUI del Watcher dentro de la [configuración del Watcher en la APP SenseCraft](https://wiki.seeedstudio.com/es/integrate_watcher_to_ha/#step-6-place-the-task-and-configure-the-http-message-block).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/5.png" style={{width:500, height:'auto'}}/></div>
 
@@ -188,15 +193,15 @@ Dentro de la siguiente página, por favor ingresa el EUI del dispositivo Watcher
 ¡Por favor asegúrate de que el EUI esté todo en mayúsculas!
 :::
 
-Después de **SUBMIT**, el componente de Watcher para Home Assistant será agregado automáticamente para mostrarse dentro del Dashboard, el cual debería estar en un estado sin datos por ahora.
+Después de **SUBMIT**, el componente de Home Assistant del Watcher se agregará automáticamente para mostrarse dentro del Dashboard, que debería estar en un estado sin datos por ahora.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/6.png" style={{width:1000, height:'auto'}}/></div>
 
-### Paso 6. Colocar la tarea y configurar el Bloque de Mensaje HTTP
+### Paso 6. Colocar la tarea y configurar el bloque de mensaje HTTP
 
-Para que los datos de Watcher lleguen a Home Assistant, entonces necesitas tener Watcher en un estado donde la tarea esté ejecutándose y configurar el Bloque de Mensaje HTTP para enviar un flujo de alarmas a Home Assistant.
+Para que los datos del Watcher lleguen a Home Assistant, necesitas tener el Watcher en un estado donde la tarea esté ejecutándose y configurar el bloque de mensaje HTTP para enviar un flujo de alarmas a Home Assistant.
 
-Por ejemplo, ahora estoy colocando una tarea en Watcher para detectar si un gato está comiendo.
+Por ejemplo, ahora estoy colocando una tarea en el Watcher para detectar si un gato está comiendo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/23.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -204,17 +209,17 @@ Dentro de **Detail Config**, encuentra 'If yes, then do the following' y marca l
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/7.png" style={{width:250, height:'auto'}}/></div><br />
 
-Luego haz clic en el botón **Go Setup** y configura la información de Home Assistant ahí para asegurar que los datos puedan llegar a Home Assistant.
+Luego haz clic en el botón **Go Setup** y configura la información de Home Assistant allí para asegurar que los datos puedan llegar a Home Assistant.
 
-- **HTTP URL**: Llena la dirección IP completa de Home Assistant, número de puerto 8887. ej. `http://192.168.1.151:8887`.
+- **HTTP URL**: Completa la dirección IP completa de Home Assistant, número de puerto 8887. ej. `http://192.168.1.151:8887`.
 
 - **HTTP Token**: deja espacios en blanco al escribir.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/8.png" style={{width:250, height:'auto'}}/></div><br />
 
-Después de confirmar que está llenado correctamente, haz clic en Update Now en la parte inferior. entonces la tarea es enviada a Watcher.
+Después de confirmar que está completado correctamente, haz clic en Update Now en la parte inferior. luego la tarea se envía al Watcher.
 
-A continuación, cuando Watcher detecte que tu gato está comiendo, activa una alarma y reporta los datos del sensor a Home Assistant. basándote en esto, eres libre de configurar la automatización de tu hogar inteligente a continuación.
+A continuación, cuando el Watcher detecte que tu gato está comiendo, activará una alarma y reportará los datos del sensor a Home Assistant. basándote en esto, eres libre de configurar la automatización de tu hogar inteligente a continuación.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/10.png" style={{width:1000, height:'auto'}}/></div>
 

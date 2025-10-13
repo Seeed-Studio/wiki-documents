@@ -264,7 +264,9 @@ The result should be:
 
 We have successfully installed the M.2 Coral accelerator on a Raspberry Pi 5 and tested the Edge TPU. We also ran the YOLOv8s model on the Coral M.2 Accelerator with int8 quantization, using an input size of 640x640 and a batch size of 1. The inference time is approximately 800-1000ms, which translates to around 1.1 frames per second (FPS).
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/4c8UX06d9Tg" title="Raspberry Pi AI: YOLOv8s Object Detection with Int8 Format Using M.2 Coral Accelerator on RPi 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Tech Support & Product Discussion
 

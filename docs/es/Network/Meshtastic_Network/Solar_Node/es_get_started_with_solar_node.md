@@ -185,7 +185,7 @@ Dado que el dispositivo se utilizará al aire libre durante períodos prolongado
 
 - Puede completar todo el proceso de instalación e inicialización a través de un video.
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/smQe7G0Bbsk?si=kcB8BdoxiwpZqB4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -193,7 +193,7 @@ Dado que el dispositivo se utilizará al aire libre durante períodos prolongado
 
 - Puede instalar su sensor a través de este video.
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -201,7 +201,7 @@ Dado que el dispositivo se utilizará al aire libre durante períodos prolongado
 
 - Puede reemplazar la antena con una de fibra de vidrio viendo este video.
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

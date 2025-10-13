@@ -358,7 +358,9 @@ sudo systemctl stop lightdm
 
 Frigateは、AIを使用したリアルタイム物体検出のために設計されたオープンソースのNVR（ネットワークビデオレコーダー）です。既存のカメラと統合し、TensorFlowやCoralなどの機械学習モデルを使用して、ビデオフィードで物体検出を実行します。Frigateは低遅延と高性能ビデオ処理に最適化されており、動き検出、ライブビデオストリーム、自動アラートなどの機能を提供します。
 
+<div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/thmI3dz9Ugs" title="Cost-Effective AI Surveillance: Frigate on Raspberry Pi 5 with Hailo8 on PCIe3.0 to Dual M.2 hat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 > **注意:**
 > **このプロジェクトについてさらに詳しく知りたい場合は、この[リンク](https://wiki.seeedstudio.com/ja/frigate_nvr_with_raspberrypi_5/)を参照してください。**
@@ -367,7 +369,9 @@ Frigateは、AIを使用したリアルタイム物体検出のために設計�
 
 YOLO（You Only Look Once）シリーズのモデルは、速度と精度のために設計されたリアルタイム物体検出モデルのファミリーです。領域提案と分類を別々に実行する従来の物体検出手法とは異なり、YOLOはニューラルネットワークの単一の順伝播で両方のタスクを実行するため、はるかに高速です。YOLOモデルは画像をグリッドに分割し、各グリッドセルのバウンディングボックスとクラス確率を予測します。長年にわたって、YOLOは様々なバージョンを通じて進化し、精度、速度、小さな物体を検出する能力が改善されています。YOLOv4、YOLOv5、そして最近のYOLOv7とYOLOv8モデルは、監視、自動運転車、ロボティクスなどのアプリケーションで広く使用されています。
 
+<div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/olaSVKmt9YI" title="Raspberry Pi AI: YOLOv8 Object Detection - 240fps Video Input, Pi 5 PCIe Gen2 vs Gen3 Benchmark" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 > **注意:**
 > **このプロジェクトについてさらに詳しく知りたい場合は、この[リンク](https://wiki.seeedstudio.com/ja/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)を参照してください**。
@@ -376,7 +380,9 @@ YOLO（You Only Look Once）シリーズのモデルは、速度と精度のた�
 
 CLIP（Contrastive Language-Image Pretraining）は、OpenAIによって開発された機械学習モデルで、画像とテキストを一緒に理解することができます。画像と対応するテキスト記述を関連付けるように訓練されており、両方のモダリティを含むタスクを実行することができます。CLIPはゼロショット学習が可能で、これらのカテゴリで特別に訓練されることなく、画像内の物体や概念を認識することができます。画像分類、物体検出、さらには画像のテキスト記述生成など、様々なタスクで強力な性能を示しています。
 
+<div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/JMHtqSmAGCA" title="CLIP Zero Shot Classification on Raspberry Pi 5 with Hailo AI Accelerator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 > **注意:**
 > **このプロジェクトについてさらに詳しく知りたい場合は、この[リンク](https://wiki.seeedstudio.com/ja/clip_application_on_rpi5_with_ai_kit/)を参照してください。**

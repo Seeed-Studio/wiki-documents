@@ -185,7 +185,7 @@ import TabItem from '@theme/TabItem';
 
 - 您可以通过视频完成整个安装和初始化过程。
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/smQe7G0Bbsk?si=kcB8BdoxiwpZqB4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -193,7 +193,7 @@ import TabItem from '@theme/TabItem';
 
 - 您可以通过此视频安装传感器。
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -201,7 +201,7 @@ import TabItem from '@theme/TabItem';
 
 - 您可以通过观看此视频将天线更换为玻璃纤维天线。
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

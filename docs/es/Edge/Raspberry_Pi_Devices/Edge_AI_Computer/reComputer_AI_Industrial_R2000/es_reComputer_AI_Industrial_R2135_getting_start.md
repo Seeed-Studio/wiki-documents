@@ -888,7 +888,9 @@ sudo fdisk -l | grep sda
 
 Frigate es un NVR (Grabador de Video en Red) de código abierto diseñado para detección de objetos en tiempo real usando IA. Se integra con cámaras existentes y utiliza modelos de aprendizaje automático, como TensorFlow y Coral, para realizar detección de objetos en transmisiones de video. Frigate está optimizado para procesamiento de video de baja latencia y alto rendimiento, ofreciendo características como detección de movimiento, transmisiones de video en vivo y alertas automatizadas.
 
+<div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/thmI3dz9Ugs" title="Cost-Effective AI Surveillance: Frigate on Raspberry Pi 5 with Hailo8 on PCIe3.0 to Dual M.2 hat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 > **Nota:**
 > **Si quieres aprender más sobre este proyecto, por favor consulta este [enlace](https://wiki.seeedstudio.com/es/frigate_nvr_with_raspberrypi_5/).**
@@ -897,7 +899,9 @@ Frigate es un NVR (Grabador de Video en Red) de código abierto diseñado para d
 
 La serie de modelos YOLO (You Only Look Once) es una familia de modelos de detección de objetos en tiempo real diseñados para velocidad y precisión. A diferencia de los métodos tradicionales de detección de objetos que realizan propuesta de regiones y clasificación por separado, YOLO realiza ambas tareas en un solo paso hacia adelante de la red neuronal, haciéndolo mucho más rápido. Los modelos YOLO dividen la imagen en una cuadrícula y predicen cajas delimitadoras y probabilidades de clase para cada celda de la cuadrícula. A lo largo de los años, YOLO ha evolucionado a través de varias versiones, con mejoras en precisión, velocidad y la capacidad de detectar objetos más pequeños. Los modelos YOLOv4, YOLOv5, y los recientes YOLOv7 y YOLOv8 son ampliamente utilizados para aplicaciones como vigilancia, vehículos autónomos y robótica.
 
+<div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/olaSVKmt9YI" title="Raspberry Pi AI: YOLOv8 Object Detection - 240fps Video Input, Pi 5 PCIe Gen2 vs Gen3 Benchmark" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 > **Nota:**
 > **Si quieres aprender más sobre este proyecto, por favor consulta este [enlace](https://wiki.seeedstudio.com/es/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)**.
@@ -906,7 +910,9 @@ La serie de modelos YOLO (You Only Look Once) es una familia de modelos de detec
 
 CLIP (Contrastive Language-Image Pretraining) es un modelo de aprendizaje automático desarrollado por OpenAI que puede entender imágenes y texto juntos. Está entrenado para asociar imágenes con descripciones textuales correspondientes, permitiéndole realizar tareas que involucran ambas modalidades. CLIP es capaz de aprendizaje de cero disparos, lo que significa que puede reconocer objetos y conceptos en imágenes sin necesidad de ser específicamente entrenado en esas categorías. Ha mostrado un rendimiento sólido en una variedad de tareas, como clasificación de imágenes, detección de objetos e incluso generación de descripciones textuales de imágenes.
 
+<div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/JMHtqSmAGCA" title="CLIP Zero Shot Classification on Raspberry Pi 5 with Hailo AI Accelerator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 > **Nota:**
 > **Si quieres aprender más sobre este proyecto, por favor consulta este [enlace](https://wiki.seeedstudio.com/es/clip_application_on_rpi5_with_ai_kit/).**

@@ -21,7 +21,9 @@ Wio LTEと2G版を比較すると、3つの主要なアップデートがあり�
 
 Wio LTEは、デバイスがGPS衛星に接続し、取り付けられたアイテムのリアルタイム位置を提供できる屋外プロジェクトに適しています。LTEは広い帯域幅を提供し、ユーザーとデバイス間のはるかに高速なインタラクションを可能にします。自転車シェアリングサービス、ペットや家畜の追跡、車両の位置特定、さらには子供の追跡などのプロジェクトを構築する場合、Wio LTEが最適なソリューションです。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/D6DX5P9ncrc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 :::caution
     USB電源供給が不十分な場合に備えて、常に3.7V Lipoバッテリーを接続してください。

@@ -27,7 +27,9 @@ summed together to create a single large electrode.
 Based on Freescale MPR121, this sensor has 12 completely independent electrodes with build-in autoconfiguration. Thanks to the I2C interface, you can detect all the 12 electrodes signals with only one Grove port, and the I2C address is hardware configurable, from 0X5B to 0X5D. This also makes it possible for multiple
 **Grove - 12 Key Capacitive I2C Touch Sensor V3 (MPR121)** to be used together for channel expansions in a single system, you can build a touch system that contains max. 36 electrodes.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/CPq4VSAXBgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121-p-4694.html
 " target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
@@ -90,7 +92,9 @@ The platforms mentioned above as supported is/are an indication of the module's 
 
 This is the introduction Video of this product, simple demos, you can have a try.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ds7kBVdeY4U?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **Leaf Piano**: We made a piano using a touch sensor, as well as leaves for piano keys.
 

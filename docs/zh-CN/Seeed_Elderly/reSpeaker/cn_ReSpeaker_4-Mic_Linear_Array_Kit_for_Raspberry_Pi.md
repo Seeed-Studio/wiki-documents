@@ -16,7 +16,9 @@ Seeed 的 ReSpeaker 4-Mic Linear Array Kit 是一款为树莓派设计的扩展�
 
 ReSpeaker 4-Mic Linear Array Kit for Raspberry Pi 由两块板组成，一块是语音配件 HAT，另一块是四麦克风线性阵列。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NxZx9nz67Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ReSpeaker 4-Mic Linear Array Kit for Raspberry Pi 在树莓派操作系统中支持 8 个输入和 8 个输出通道。前 6 个输入通道用于麦克风录音（只有前 4 个输入通道是有效的捕获数据），其余 2 个输入通道是播放的回声通道。前 2 个输出通道用于声音输出，其余 6 个输出通道是虚拟通道。
 

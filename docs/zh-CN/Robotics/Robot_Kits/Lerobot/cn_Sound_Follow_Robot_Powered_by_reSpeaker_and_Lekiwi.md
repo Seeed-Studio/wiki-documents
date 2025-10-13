@@ -413,7 +413,7 @@ python -m lerobot.common.robots.lekiwi.sound_follow
 
 启动程序后，机器人将朝向声音源旋转，持续调整其“头部”方向以对准传入音频的方向。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/uI_leYm_m-w" title="A Sound Follow Robot Powered by reSpeaker and Lekiwi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

@@ -352,7 +352,9 @@ If everthing goes well, you will see.
 
 This is the introduction Video of this product, simple demos, you can have a try.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NG0E-qs8zgQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Tech Support & Product Discussion
 

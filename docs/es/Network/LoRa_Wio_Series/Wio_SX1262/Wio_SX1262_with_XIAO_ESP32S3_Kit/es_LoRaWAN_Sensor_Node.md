@@ -73,7 +73,9 @@ Esta wiki proporciona una guía paso a paso sobre la configuración del Kit XIAO
 
 ## Instrucciones en Video
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/7NptcHkVcpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Registro y Configuración en TTN
 
