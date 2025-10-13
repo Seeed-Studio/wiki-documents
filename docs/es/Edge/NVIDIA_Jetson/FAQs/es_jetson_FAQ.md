@@ -77,6 +77,11 @@ sudo apt-mark hold nvidia-l4t-core
 
 Para más detalles, haz clic [aquí](/es/how_to_build_the_ko_module_for_seeed_jetson)
 
+#### P17：¿Cómo cifrar el disco de Jetson antes de flashear la imagen?
+
+Para más detalles, haz clic [aquí](/es/how_to_encrypt_the_disk_for_jetson)
+
+
 ## Soporte técnico
 
 ¡Gracias por elegir nuestros productos! Estamos **aquí** para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
