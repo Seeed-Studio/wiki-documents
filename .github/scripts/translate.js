@@ -373,7 +373,8 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
    - HTML 标签**结构**与**属性**保持不变（不要新增/删除/重排标签；不要修改属性名/属性值）
    - 但标签之间的**可见文本内容要翻译**（例如 <span>、<strong>、<font> 内部的文字）
    - 专有名词：${termsList.split('\n').slice(0, 5).join(', ')}等
-   - **界面/字段/按钮等英文 UI 名称**（通常出现在引号 "..."、加粗 **...**、或菜单路径 File > Preferences 等），请保持英文原文，不要翻译。
+   - **教程中引用的目标软件或系统界面的英文元素**（如 App 内的菜单项、按钮名称、字段名、设置项等，通常出现在引号 "..."、加粗 **...**、或菜单路径 File > Preferences 等），请保持英文原文，不要翻译，以便与实际界面一致。
+   - 但**网页自身的 HTML 或 JSX 标签内的可见文字**（例如 <span>、<strong>、<font>、导航链接、标题等）若是文档页面展示给读者看的内容，应正常翻译。
 
 2. **术语表（强制翻译）**：以下术语若出现，必须严格使用右侧译法（不允许其它译法）：
 ${glossaryPairs}
@@ -409,6 +410,8 @@ ${glossaryPairs}
 [LINE_4]   - [BLE Scanner](#ble-scanner)
 [LINE_5]     - Nested item
 [LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+[LINE_7] Click "Settings" in the app (File > Preferences).
+[LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>
 
 正确输出：
 [LINE_0] ## 入门指南
@@ -418,6 +421,8 @@ ${glossaryPairs}
 [LINE_4]   - [BLE 扫描器](#ble-扫描器)
 [LINE_5]     - 嵌套项
 [LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+[LINE_7] 在应用中点击 "Settings"（File > Preferences）。
+[LINE_8] <a className="nav-item"><span className="text">开发者中心</span></a>
 
 错误输出（绝对禁止）：
 [LINE_0] ## 入门指南
@@ -426,7 +431,9 @@ ${glossaryPairs}
 [LINE_3] - 第一项  ❌ 缩进丢失
 [LINE_4]   - [BLE 扫描器](#ble 扫描器)  ❌ 锚点中有空格
 [LINE_5]   - 嵌套项  ❌ 缩进级别错误
-[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>  ❌ HTML/JSX 可见文本未翻译（应为“立即购买”）
+[LINE_7] 在应用中点击 “设置” （文件 > 首选项）。  ❌ 不应翻译软件界面内的菜单路径或按钮名称
+[LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>  ❌ 网页自身的可见文本未翻译
 </example>
 </instruction>
 
