@@ -14,7 +14,7 @@ last_update:
   author: Kasun Thushara
 ---
 
-# reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 MQTT Audio Streaming 
+# reSpeaker XVF3800 USB マイクアレイと XIAO ESP32S3 MQTT オーディオストリーミング
 
 ## 概要
 
@@ -25,7 +25,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 

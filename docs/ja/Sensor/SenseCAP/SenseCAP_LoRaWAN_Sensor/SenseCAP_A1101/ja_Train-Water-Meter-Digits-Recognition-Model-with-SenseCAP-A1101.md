@@ -62,7 +62,7 @@ pip3 install libusb1
 brew install conda
 ```
 
-- **Step 3.** Download libusb
+- **ステップ 3.** libusb をダウンロードします
 
 ```sh
 wget https://conda.anaconda.org/conda-forge/osx-arm64/libusb-1.0.26-h1c322ee_100.tar.bz2
@@ -104,7 +104,7 @@ uf2ファイルのドライブへのコピーが完了すると、ドライブ�
 python3 capture_images_script.py
 ```
 
-By default, it will capture an image every 300ms. If you want to change this, you can run the script in this format
+デフォルトでは、300msごとに画像をキャプチャします。これを変更したい場合は、次の形式でスクリプトを実行できます
 
 ```sh
 python3 capture_images_script.py --interval <time_in_ms>

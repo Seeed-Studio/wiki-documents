@@ -67,7 +67,7 @@ import TabItem from '@theme/TabItem';
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -89,8 +89,7 @@ git clone https://github.com/Lora-net/sx1302_hal
 cd sx1302_hal
 sudo make
 ```
-
-**Step 7.** Copy the reset_lgw.sh script
+**步骤 7.** 复制 reset_lgw.sh 脚本
 
 ```
 cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
@@ -184,8 +183,7 @@ cd sx1302_hal
 git checkout Edgebox-RPI-200
 sudo make
 ```
-
-**Step 7.** Copy the reset_lgw.sh script
+**步骤 7.** 复制 reset_lgw.sh 脚本
 
 ```sh
 cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/

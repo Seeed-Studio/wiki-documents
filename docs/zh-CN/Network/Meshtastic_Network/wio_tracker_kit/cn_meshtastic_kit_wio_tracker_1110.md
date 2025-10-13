@@ -1,6 +1,6 @@
 ---
-description: 开始使用 Wio Tracker Dev Kit for Meshtastic®
-title: Meshtastic® 套件入门指南
+description: 开始使用 Wio Tracker Dev Kit for Meshtastic® 
+title:  Meshtastic® 套件入门指南
 keywords:
 - Meshtastic
 - Tracker
@@ -21,7 +21,7 @@ last_update:
     </a>
 </div>
 
-该套件配备了 Wio Tracker 1110 开发板（基于 Nordic nRF52840 实现 BLE，Semtech LR1110 实现 LoRa）、[Grove Air530 GPS 模块](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html)、[Grove 0.96" OLED 显示屏](https://www.seeedstudio.com/Grove-OLED-Display-0-96.html)，并原生兼容 Meshtastic 固件，是一个即插即用的开发套件，帮助您构建低功耗 Meshtastic 追踪设备。
+该套件配备了 Wio Tracker 1110 开发板（基于 Nordic nRF52840 的 BLE 和 Semtech LR1110 的 LoRa）、[Grove Air530 GPS 模块](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html)、[Grove0.96" OLED 显示屏](https://www.seeedstudio.com/Grove-OLED-Display-0-96.html)，并原生兼容 [Meshtastic®](https://meshtastic.org/) 固件，是一个即插即用的开发套件，让您构建低功耗 Meshtastic 追踪设备。
 
 ### 特性
 
@@ -34,7 +34,7 @@ last_update:
 ### 规格参数
 
 <table>
-<tr><th colspan="3"><b>通用参数</b></th></tr>
+<tr><th colspan="3"><b>通用</b></th></tr>
 <tr><td colspan="1" rowspan="2"><b>供电电压</b></td><td colspan="2">5V (USB 2.0 Type-C)</td></tr>
 <tr><td colspan="1">电池连接器</td><td colspan="1">3.7V</td></tr>
 <tr><td colspan="1" rowspan="3"><b>接口</b></td><td colspan="1">RFIO</td><td colspan="1"><p>GNSS 天线连接器* 1</p><p>LoRa 天线连接器* 1</p></td></tr>
@@ -42,33 +42,33 @@ last_update:
 <tr><td colspan="1">Grove 接口</td><td colspan="1"><p>ADC* 1I2C* 1UART* 1</p><p>Digital*3</p></td></tr>
 <tr><td colspan="1" rowspan="2"><b>按键</b></td><td colspan="1">USER</td><td colspan="1">可配置按键</td></tr>
 <tr><td colspan="1">RESET</td><td colspan="1">复位</td></tr>
-<tr><td colspan="1"><b>外部 FLASH 存储</b></td><td colspan="2">4M</td></tr>
+<tr><td colspan="1"><b>外部 FLASH 存储器</b></td><td colspan="2">4M</td></tr>
 <tr><td colspan="3"><b>LoRa® 和定位 (Semtech LR1110)</b></td></tr>
 <tr><td colspan="1"><b>LoRaWAN® 协议</b></td><td colspan="2">V1.0.4</td></tr>
 <tr><td colspan="1"><b>频率计划</b></td><td colspan="2">863&#126;928MHz</td></tr>
 <tr><td colspan="1"><b>灵敏度</b></td><td colspan="2"><p>-125dBm @125K/SF7</p><p>-141dBm @125K/SF12</p></td></tr>
 <tr><td colspan="1"><b>输出功率</b></td><td colspan="2">20dBm max @LoRa®</td></tr>
-<tr><td colspan="1"><b>定位技术</b></td><td colspan="2">GNSS(GPS/北斗), WiFi 嗅探</td></tr>
-<tr><td colspan="1"><b>通信距离</b></td><td colspan="2">2&#126;10km (取决于天线和环境)</td></tr>
+<tr><td colspan="1"><b>定位技术</b></td><td colspan="2">GNSS(GPS/BeiDou), WiFi Sniffer</td></tr>
+<tr><td colspan="1"><b>范围</b></td><td colspan="2">2&#126;10km（取决于天线和环境）</td></tr>
 <tr><td colspan="3"><b>蓝牙(Nordic nRF52840)</b></td></tr>
 <tr><td colspan="1"><b>蓝牙</b></td><td colspan="2">Bluetooth 5.3</td></tr>
 <tr><td colspan="1"><b>Flash</b></td><td colspan="2">1MB</td></tr>
 <tr><td colspan="1"><b>RAM</b></td><td colspan="2">256KB</td></tr>
-<tr><td colspan="1"><b>协议</b></td><td colspan="2">Bluetooth LE, Bluetooth mesh, Thread, Zigbee, 802.15.4, ANT 和 2.4 GHz 专有协议栈</td></tr>
+<tr><td colspan="1"><b>协议</b></td><td colspan="2">Bluetooth LE, Bluetooth mesh, Thread, Zigbee, 802.15.4, ANT and 2.4 GHz proprietary stacks</td></tr>
 <tr><td colspan="1"><b>输出功率</b></td><td colspan="2">6dBm max @Bluetooth</td></tr>
 <tr><td colspan="3"><b>板载传感器 -- 温湿度传感器 (SHT41)</b></td></tr>
 <tr><td colspan="1"></td><td colspan="1"><b>范围</b></td><td colspan="1"><b>精度</b></td></tr>
 <tr><td colspan="1"><b>温度</b></td><td colspan="1">-40&#126;85°C</td><td colspan="1">± 0.2°C</td></tr>
 <tr><td colspan="1"><b>湿度</b></td><td colspan="1">0&#126;100%RH</td><td colspan="1">±1.8%RH</td></tr>
-<tr><td colspan="3"><b>板载传感器 -- 3轴加速度计( 未使用 )</b></td></tr>
+<tr><td colspan="3"><b>板载传感器 -- 3 轴加速度计（未使用）</b></td></tr>
 <tr><td colspan="1"><b>范围</b></td><td colspan="2">±2g, 4g, 8g, 16g</td></tr>
 <tr><td colspan="1"><b>带宽</b></td><td colspan="2">0.5Hz &#126; 625Hz</td></tr>
 <tr><td colspan="1"><b>灵敏度 (LSB/g)</b></td><td colspan="2">1000 (±2g) &#126; 83 (±16g)</td></tr>
 </table>
 
-**Grove - OLED 显示屏 0.96 英寸**
+**Grove - OLED Display 0.96 inch**
 
-|**电源电压 (VCC)**|3.3 / 5 V|
+|**供电电压 (VCC)**|3.3 / 5 V|
 | :- | :- |
 |**驱动 IC**|SSD1308Z|
 |**显示颜色**|白色|
@@ -79,16 +79,15 @@ last_update:
 |**点尺寸**|0.15(W)×0.15 (H) mm|
 |**宽工作温度范围**|-20&#126;70 ℃|
 
-
 ## 开始使用
 
 ### 硬件连接
 
-将 `Grove-GPS 模块` 连接到 `UART` 端口，将 `Grove-OLED 显示屏` 连接到 `I2C` 端口。
+将 `Grove-GPS 模块` 连接到 `UART` 端口，将 `Grove-OLED Display` 连接到 `I2C` 端口。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/mesh-grove.png" alt="pir" width={800} height="auto" /></p>
 
-给板子上电。
+给开发板上电。
 
 ### 配置
 
@@ -113,7 +112,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pin-code.png" alt="pir" width={400} height="auto" /></p>
 
-- 输入代码，然后点击 `配对` 来连接设备。
+- 输入代码，然后点击 `Pair` 连接设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -131,7 +130,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pin-code.png" alt="pir" width={400} height="auto" /></p>
 
-- 输入代码，然后点击 `确定` 来连接设备。
+- 输入代码，然后点击 `OK` 连接设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -139,13 +138,13 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="web" label="Web Client">
 
-打开 [Web Client](https://client.meshtastic.org/)，点击 `新建连接`。
+打开 [Web Client](https://client.meshtastic.org/)，点击 `New Connection`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/web-new.png" alt="pir" width={600} height="auto" /></p>
 
 - **通过蓝牙连接**
 
- 启用您 PC 的蓝牙，并选择 `蓝牙` 选项卡来连接新设备。
+ 启用您 PC 的蓝牙，选择 `Bluetooth` 选项卡连接新设备。
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/ble-new.png" alt="pir" width={600} height="auto" /></p>
 
@@ -155,11 +154,11 @@ import TabItem from '@theme/TabItem';
 
 - **通过串口连接**
 
- 将板子连接到您的 PC，并选择 `串口` 选项卡来连接新设备。
+ 将开发板连接到您的 PC，选择 `Serial` 选项卡连接新设备。
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/web-serial-new.png" alt="pir" width={600} height="auto" /></p>
 
- 您可以通过以下方式检查端口：
+ 您可以通过以下方式查看端口：
 
  ```
  ls /dev/cu.*
@@ -173,14 +172,14 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="cli" label="CLI">
 
-该库提供了一个命令行界面（CLI），用于管理 Meshtastic 节点的用户设置，并为通过网状无线电发送和接收消息提供了简单的 API。
+该库提供了一个命令行界面（CLI）用于管理 Meshtastic 节点的用户设置，并提供了一个简单的 API 用于通过网状无线电发送和接收消息。
 
 </TabItem>
 </Tabs>
 
 #### 参数配置
 
-为了开始在网状网络上通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的区域位置进行设置。
+为了开始在网状网络上通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的地理位置进行设置。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -201,12 +200,13 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="cli" label="CLI">
 
-运行以下命令，将 `REGION-CODE` 替换为根据您的区域位置在上面列出的区域代码。
+运行以下命令，将 `REGION-CODE` 替换为根据您的地理位置上面列出的区域代码。
 
 ```
 meshtastic --set lora.region <REGION-CODE>
 ```
 
+例如：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/cli-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
@@ -239,20 +239,20 @@ meshtastic --set lora.region <REGION-CODE>
 |LORA_24|全球 2.4 GHz 频段|2400.0 - 2483.5|100|10|
 
 :::info
-**EU_433** 和 **EU_868** 必须遵守每小时 10% 的占空比限制，该限制基于滚动 1 小时基础每分钟计算。如果达到此限制，您的设备将停止传输，直到再次被允许。
+**EU_433** 和 **EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时基础每分钟计算。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
-现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何[附加配置](https://meshtastic.org/docs/configuration/)以满足您的需求。
+现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何[额外配置](https://meshtastic.org/docs/configuration/)以满足您的需求。
 
 ## 资源
 
 [Wio Tracker 1110 Dev Board v1.0_SCH](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%201110%20v1.0_SCH_PDF_20230822.pdf)
 
-[Meshtastic Doc](https://meshtastic.org/docs/introduction/)
+[Meshtastic 文档](https://meshtastic.org/docs/introduction/)
 
-[Github-Meshtastic Firmware](https://github.com/meshtastic/firmware/blob/master/boards/wio-tracker-wm1110.json)
+[Github-Meshtastic 固件](https://github.com/meshtastic/firmware/blob/master/boards/wio-tracker-wm1110.json)
 
-[外壳文件(3D打印)](https://files.seeedstudio.com/products/E24070201/wio%20tracker%20723.stp)
+[外壳文件(3D 打印)](https://files.seeedstudio.com/products/E24070201/wio%20tracker%20723.stp)
 
 [外壳文件(亚克力)](https://files.seeedstudio.com/products/114993370/%E4%BA%9A%E5%85%8B%E5%8A%9B%E5%A4%96%E5%A3%B3%E5%9B%BE%E7%BA%B8.zip)
 

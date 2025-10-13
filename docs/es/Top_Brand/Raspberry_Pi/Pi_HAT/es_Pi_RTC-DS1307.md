@@ -140,7 +140,7 @@ sudo hwclock -r
 
 ___
 
-Set the system time from the hardware clock
+Establecer la hora del sistema desde el reloj de hardware
 
 ```
 sudo hwclock -s
@@ -148,7 +148,7 @@ sudo hwclock -s
 
 ___
 
-Set the hardware clock from the current system time
+Establecer el reloj de hardware desde la hora actual del sistema
 
 ```
 sudo hwclock -w
@@ -179,7 +179,9 @@ hwclock --help
 
 Este es el video de introducción de este producto
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SKJ9iXhx0mc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Soporte Técnico y Discusión del Producto
 

@@ -1,6 +1,6 @@
 ---
 description: MicroBlocksでXIAO RP2350を使用する。
-title: MicroBlocksでXIAO RP2350を使用する
+title: XIAO RP2350とMicroBlocks
 image: https://files.seeedstudio.com/wiki/microblocks/microblocks.png
 slug: /ja/xiao_rp2350_microblocks
 last_update:
@@ -8,27 +8,30 @@ last_update:
   author: MicroBlocks
 ---
 
-## MicroBlocksでXIAO RP2350を使用する
+## XIAO RP2350とMicroBlocks
 
 ### MicroBlocks
 
-MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラミングできるブロック言語です。見た目のシンプルさにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語です。GPIOピンを制御し、I2C、SPI、シリアル経由で周辺機器とインターフェースする機能、そして約200の拡張ライブラリを提供します。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、迅速なプロトタイピングとテストにMicroBlocksを好んで使用しています。
+MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラミングできるブロック言語です。見た目の単純さにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語で、GPIOピンの制御やI2C、SPI、シリアル経由での周辺機器とのインターフェース機能、そして約200の拡張ライブラリを備えています。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、迅速なプロトタイピングとテストにMicroBlocksを好んで使用しています。
 
 ### XIAO RP2350のピン配置とハードウェア機能
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-rp2350-pinout.png" style={{width:600, height:'auto'}}/></div><br />
 
 ピン0..18はGPIOピンです。（**注意：GPIO 11-18はボードの裏面のパッドです。**）
-ピン0..2はアナログ入力として使用できます。このボードには、ピン19に黄色のユーザーLED（反転）とピン20に単一のRGB LED（NeoPixel）があります。
+ピン0..2はアナログ入力として使用できます。このボードにはピン19に黄色のユーザーLED（反転）があり、
+ピン20に単一のRGB LED（NeoPixel）があります。
 
 ### MicroBlocksファームウェアのインストール
 
 ブートローダーモードに入るには、小さなB（boot）ボタンを押しながらR（reset）ボタンをクリックします。**RP2350**という名前の仮想USBドライブが表示されます。
 
-[vmフォルダ](https://microblocks.fun/downloads/latest/vm)から[ファームウェアファイル](https://microblocks.fun/downloads/latest/vm/vm_xiao_rp2350.uf2)をダウンロードし、そのファイルを仮想USBドライブにドラッグします。
+[ファームウェアファイル](https://microblocks.fun/downloads/latest/vm/vm_xiao_rp2350.uf2)を
+[vmフォルダ](https://microblocks.fun/downloads/latest/vm)からダウンロードし、
+そのファイルを仮想USBドライブにドラッグします。
 
 ファームウェアがインストールされ、数秒後に仮想USBドライブが消えます。
-ディスクが適切に取り出されなかったという警告は無視してください。
+ディスクが正しく取り出されなかったという警告は無視してください。
 
 ### ボードをMicroBlocksに接続する
 
@@ -57,12 +60,14 @@ MicroBlocksは**ライブ**コーディング環境なので、コーディン�
 ブロックやスクリプトをクリックして実行します。
 ブロックをスクリプトペインにドラッグして組み立て、スクリプトを作成します。
 
-コードは永続的なフラッシュメモリに保存され、ボードがMicroBlocksエディターに接続されていなくても実行できます。
-**when started**ブロックの下にあるスクリプトは、ボードに電源が供給されたときに実行されます。
+コードは永続的なフラッシュメモリに保存され、ボードが
+MicroBlocksエディターに接続されていなくても実行できます。
+**when started**ブロックの下にあるスクリプトは、ボードに電源が入ったときに実行されます。
 
 MicroBlocksは並行処理をサポートしています。最大10個のスクリプトを同時に実行できます。
 
-多くの組み込みブロックに加えて、MicroBlocksには追加機能と周辺機器をサポートする約200のライブラリがあります。
+多くの組み込みブロックに加えて、MicroBlocksには約200のライブラリがあり、
+追加機能と周辺機器をサポートしています。
 **Add Library**ボタンをクリックしてライブラリを追加します。
 
 ### 例
@@ -75,11 +80,12 @@ MicroBlocksは並行処理をサポートしています。最大10個のスク�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-rp2350-neopixel.png" style={{width:200, height:'auto'}}/></div>
 
-[ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)には、さらに多くの例が含まれています。
+[ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)には
+多くの追加例が含まれています。
 
-## 特別な謝辞
+## 特別な感謝
 
-記事を執筆してくださったMicroBlocksのJohnさんに特別な感謝を申し上げます。
+この記事を執筆してくれたMicroBlocksのJohnに特別な感謝を。
 
 ### MicroBlocksリソース
 

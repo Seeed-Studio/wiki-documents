@@ -43,15 +43,15 @@ Grove I2C 电机驱动器是 Grove 系列的新成员，具有同样易于使用
 
 ---
 
-* Grove 兼容
+- Grove 兼容
 
-* I2C 接口
+- I2C 接口
 
-* 可控制电机的速度和方向
+- 可控制电机的速度和方向
 
-* 通道数量：2
+- 通道数量：2
 
-* 可通过硬件更改从地址
+- 可通过硬件更改从地址
 
 ## 规格
 
@@ -117,9 +117,9 @@ Grove I2C 电机驱动器是 Grove 系列的新成员，具有同样易于使用
 
 ---
 
-* 当电流超过 1A 时，板子会非常热。请勿用手触碰！
+- 当电流超过 1A 时，板子会非常热。请勿用手触碰！
 
-* 支持 Arduino IDE（1.0 或更高版本）。
+- 支持 Arduino IDE（1.0 或更高版本）。
 
 ## 使用方法
 
@@ -130,11 +130,11 @@ I2C 电机驱动器基于 L298 芯片。L298 不仅是一个双电机驱动器�
 
 ### 设置 I2C 电机驱动器的地址
 
-* 通过拨码开关设置地址，这是新 I2C 电机驱动器新增的功能。
+- 通过拨码开关设置地址，这是新 I2C 电机驱动器新增的功能。
 
 ![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/img/I2CMotorDriver-9.jpg)
 
-* 然后确保程序中的地址设置与 I2C 电机驱动器上的地址设置相同。程序中的默认地址设置为 0x0f。
+- 然后确保程序中的地址设置与 I2C 电机驱动器上的地址设置相同。程序中的默认地址设置为 0x0f。
 
 ```
 #define I2CMotorDriverAdd         0x0f   // 设置 I2C 电机驱动器的地址
@@ -244,7 +244,7 @@ MotorSpeedSetAB(100,100);//定义电机1和电机2的速度；
 delay(10); //需要这个延迟
 ```
 
-**2. void MotorPWMFrequenceSet(unsigned char Frequence)**
+**2. void 电机PWM频率设置(无符号字符 频率)**
 
 _描述：设置PWM的预分频频率，默认值为 0x03。_
 
@@ -279,26 +279,26 @@ _描述：同时调整电机的方向和速度。_
 
 ---
 
-* [Grove - I2C 电机驱动器 Eagle 文件](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/Grove-I2C_Motor_Driver_Source_File.zip)
+- [Grove - I2C 电机驱动器 Eagle 文件](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/Grove-I2C_Motor_Driver_Source_File.zip)
 
-* [I2C 电机驱动器 V1.2 示例代码](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/I2CMotorDriver12Demo.zip)
+- [I2C 电机驱动器 V1.2 示例代码](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/I2CMotorDriver12Demo.zip)
 
-* [L298 数据手册](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/L298datasheet.pdf)
+- [L298 数据手册](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/L298datasheet.pdf)
 
-* [78M05 数据手册](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/ST_78M05DataSheet.pdf)
+- [78M05 数据手册](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/ST_78M05DataSheet.pdf)
 
-* [文件：使用 ISP 烧录 Atmega8 固件](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/Burn_firmware_for_Atmega8_using_ISP.zip)
+- [文件：使用 ISP 烧录 Atmega8 固件](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/Burn_firmware_for_Atmega8_using_ISP.zip)
 
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们致力于为您提供各种支持，以确保您使用我们的产品时体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

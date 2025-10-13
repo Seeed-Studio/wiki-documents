@@ -16,10 +16,9 @@ last_update:
 
 Linuxを10秒以内で起動し、USBケーブル1本だけで5分以内に開発を開始できます。
 
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Eco-p-6540.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -27,23 +26,23 @@ Linuxを10秒以内で起動し、USBケーブル1本だけで5分以内に開�
 
 **特徴1：強力なコア＆リアルタイム処理**
 
-* TI AM3358 1GHz ARM® Cortex-A8プロセッサを統合し、処理を高速化するNEON™ SIMDコプロセッサを搭載しています。また、産業オートメーションやロボティクスに重要な決定論的で低遅延制御のためのデュアルコアプログラマブルリアルタイムユニット（PRU-ICSS）も含まれています。
+- TI AM3358 1GHz ARM® Cortex-A8プロセッサを統合し、処理を高速化するNEON™ SIMDコプロセッサを搭載しています。また、産業オートメーションやロボティクスに重要な決定論的で低遅延制御のためのデュアルコアプログラマブルリアルタイムユニット（PRU-ICSS）も含まれています。
 
 **特徴2：エコフレンドリーな電源管理**
 
-* PFMモードと動的電圧スケーリングなどの機能を備えた先進的なTI TPS6521403 PMICを使用しています。これにより電力消費が大幅に最適化され、エネルギーに敏感なアプリケーションやバッテリー駆動アプリケーションに理想的です。
+- PFMモードと動的電圧スケーリングなどの機能を備えた先進的なTI TPS6521403 PMICを使用しています。これにより電力消費が大幅に最適化され、エネルギーに敏感なアプリケーションやバッテリー駆動アプリケーションに理想的です。
 
 **特徴3：4倍のストレージ容量＆10倍のネットワーク速度**
 
-* 16GBのオンボードeMMCストレージ（4倍の増加）で大幅に向上し、ギガビットイーサネットポートで接続性をアップグレードし、高速で安定したネットワーク通信のために前世代の最大10倍の帯域幅を提供します。
+- 16GBのオンボードeMMCストレージ（4倍の増加）で大幅に向上し、ギガビットイーサネットポートで接続性をアップグレードし、高速で安定したネットワーク通信のために前世代の最大10倍の帯域幅を提供します。
 
 **特徴4：豊富でモダンな接続性**
 
-* ギガビットイーサネットポートと電源・データ用のモダンなUSB Type-Cポートを含む、アップグレードされた高速インターフェースを搭載しています。迅速なプロトタイピングのために、2つの内蔵Groveコネクタ（I2C & UART）Grove - Seeed Studioも含まれており、Seeed Studioの豊富なセンサーとアクチュエータのエコシステムへの簡単でハンダ付け不要の接続を可能にします。
+- ギガビットイーサネットポートと電源・データ用のモダンなUSB Type-Cポートを含む、アップグレードされた高速インターフェースを搭載しています。迅速なプロトタイピングのために、2つの内蔵Groveコネクタ（I2C & UART）Grove - Seeed Studioも含まれており、Seeed Studioの豊富なセンサーとアクチュエータのエコシステムへの簡単でハンダ付け不要の接続を可能にします。
 
 **特徴5：開発準備完了**
 
-* BeagleBoard.org®財団が指定したDebianソフトウェアイメージがプリロードされており、開発プロセスを合理化するための確立されたツールとライブラリを備えた堅牢で馴染みのあるLinux環境を提供します。
+- BeagleBoard.org®財団が指定したDebianソフトウェアイメージがプリロードされており、開発プロセスを合理化するための確立されたツールとライブラリを備えた堅牢で馴染みのあるLinux環境を提供します。
 
 ## 仕様
 
@@ -68,17 +67,15 @@ Linuxを10秒以内で起動し、USBケーブル1本だけで5分以内に開�
 |            | 重量                | 40g                                                                                                                    | 45g                                                                                           |
 |            | 動作温度 | **-40 ~ 85℃**                                                                                                              | 0 ~ 75℃                                                                                       |
 
-
-
 ## アプリケーションアイデア
 
-* モノのインターネット
-* スマートハウス
-* 産業
-* オートメーション＆プロセス制御
-* ヒューマンマシンインターフェース
-* センサーハブ
-* ロボット
+- モノのインターネット
+- スマートハウス
+- 産業
+- オートメーション＆プロセス制御
+- ヒューマンマシンインターフェース
+- センサーハブ
+- ロボット
 
 ## ハードウェア概要
 
@@ -89,32 +86,36 @@ BeagleBone® Green EcoはTexas InstrumentsのAM335x ARM Cortex-A8プロセッサ
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/Functional-Block-Diagram.png" /></div>
 
-
 **プロセッサ**
 BeagleBone® Green EcoはTexas Instruments AM335x 1GHz ARM® Cortex-A8プロセッサを統合しており、単一のSoC内で計算処理、グラフィックス加速、リアルタイム制御機能を組み合わせています。アーキテクチャはNEON™ SIMDエンジンとVFPv3浮動小数点ユニットを備えたARMv7-Aを実装し、組み込みアプリケーションの電力効率を維持しながら複雑な計算タスクの効率的な実行を可能にします。
 特徴的な機能は、メインARMプロセッサから独立して動作するデュアル32ビットRISCコアで構成されるプログラマブルリアルタイムユニットサブシステムおよび産業通信サブシステム（PRU-ICSS）です。これらのPRUは、サブマイクロ秒の応答時間での決定論的リアルタイム制御と、特殊な産業通信プロトコルの実装を可能にします。AM335xは、TIのProcessor SDKと開発環境を通じて、Linuxを含む高レベルオペレーティングシステムとリアルタイムオペレーティングシステムをサポートします。
-* AM335x 1GHz ARM® Cortex-A8プロセッサ、15.0mm x 15.0mm、NFBGA (324)
-* メディアと信号処理を高速化するNEON™ SIMDコプロセッサとVFPv3浮動小数点ユニット* PowerVR SGX™ Graphics Accelerator supporting OpenGL ES 2.0
-* リアルタイム産業通信・制御用デュアル32ビットPRU-ICSS
-* EtherCAT、PROFINET、PROFIBUSを含む産業インターフェースのサポート
+
+- AM335x 1GHz ARM® Cortex-A8プロセッサ、15.0mm x 15.0mm、NFBGA (324)
+- メディアと信号処理を高速化するNEON™ SIMDコプロセッサとVFPv3浮動小数点ユニット
+- PowerVR SGX™ Graphics Accelerator supporting OpenGL ES 2.0
+- リアルタイム産業通信・制御用デュアル32ビットPRU-ICSS
+- EtherCAT、PROFINET、PROFIBUSを含む産業インターフェースのサポート
 
 **メモリとストレージ**
 BeagleBone® Green Ecoには以下が含まれます：
-* 1x 512MB (4Gb) DDR3L RAM (Kingston D2516ECMDXGJDI-U) 16ビットインターフェース付き
-* 1x 16GB eMMCオンボードフラッシュストレージ (Kingston EMMC16G-WW28) MMC1 8ビットインターフェース付き
-* 1x 32Kbit EEPROM (FMD FT24C32A-ELRT) I2C0経由で接続
-* 拡張可能ストレージ用MMC0 4ビットインターフェース付きMicroSDカードスロット
+
+- 1x 512MB (4Gb) DDR3L RAM (Kingston D2516ECMDXGJDI-U) 16ビットインターフェース付き
+- 1x 16GB eMMCオンボードフラッシュストレージ (Kingston EMMC16G-WW28) MMC1 8ビットインターフェース付き
+- 1x 32Kbit EEPROM (FMD FT24C32A-ELRT) I2C0経由で接続
+- 拡張可能ストレージ用MMC0 4ビットインターフェース付きMicroSDカードスロット
 
 **インターフェースと周辺機器**
 BeagleBone® Green Ecoは以下をサポートします：
-* ギガビットイーサネット接続
-* 1x USB 2.0 Type-Cポート（電源と通信用）
-* 1x USB 2.0ホストインターフェース、Type-A
+
+- ギガビットイーサネット接続
+- 1x USB 2.0 Type-Cポート（電源と通信用）
+- 1x USB 2.0ホストインターフェース、Type-A
 
 **アプリケーション固有のケープをサポートする拡張コネクタ/ヘッダー**
-* 2x 46ピンヘッダー
-* 1x 6ピンUART0ヘッダー
-* 2つのGroveコネクタ（1つはI2C、1つはUART）でGroveエコシステムのセンサーとアクチュエーターに簡単接続
+
+- 2x 46ピンヘッダー
+- 1x 6ピンUART0ヘッダー
+- 2つのGroveコネクタ（1つはI2C、1つはUART）でGroveエコシステムのセンサーとアクチュエーターに簡単接続
 
 **ヘッダーピン定義**
 
@@ -145,7 +146,6 @@ BeagleBone® Green Ecoは以下をサポートします：
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/4.png" /></div>
 
-
 **UART**
 
 :::note
@@ -170,7 +170,6 @@ UART0ピンにアクセスしてデバッグケーブルを接続するための
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/7.png" /></div>
 
-
 ## 入門ガイド
 
 :::note
@@ -185,10 +184,10 @@ Seeed Studio BeagleBone® Greenはフラッシュドライブとして動作し�
 
 PWR LEDが点灯し続けているのが確認できます。10秒以内に、他のLEDがデフォルト設定で点滅しているのが確認できるはずです。
 
-* D2は起動時にハートビートパターンで点滅するように設定されています
-* D3は起動時にmicroSDカードアクセス中に点灯するように設定されています
-* D4は起動時にCPUアクティビティ中に点灯するように設定されています
-* D5は起動時にeMMCアクセス中に点灯するように設定されています
+- D2は起動時にハートビートパターンで点滅するように設定されています
+- D3は起動時にmicroSDカードアクセス中に点灯するように設定されています
+- D4は起動時にCPUアクティビティ中に点灯するように設定されています
+- D5は起動時にeMMCアクセス中に点灯するように設定されています
 
 **ステップ2. ドライバーのインストール**
 
@@ -204,11 +203,12 @@ PWR LEDが点灯し続けているのが確認できます。10秒以内に、�
 :::note
     Windowsシステムの場合、以下にご注意ください：
 
-* Windowsドライバー認証警告が2〜3回ポップアップする場合があります。「無視」、「インストール」、または「実行」をクリックしてください
-* 32ビットまたは64ビットWindowsを実行しているかを確認するには、[こちら](https://support.microsoft.com/kb/827218)を参照してください。
-* 最新のサービスリリースがないシステムでは、エラー（0xc000007b）が発生する場合があります。その場合は、[インストール](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523)してから再試行してください：
-* Windowsの再起動が必要な場合があります。
-* これらのドライバーはWindows 10まで動作することがテストされています
+- Windowsドライバー認証警告が2〜3回ポップアップする場合があります。「無視」、「インストール」、または「実行」をクリックしてください
+- 32ビットまたは64ビットWindowsを実行しているかを確認するには、[こちら](https://support.microsoft.com/kb/827218)を参照してください。
+- 最新のサービスリリースがないシステムでは、エラー（0xc000007b）が発生する場合があります。その場合は、[インストール](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523)してから再試行してください：
+- Windowsの再起動が必要な場合があります。
+- これらのドライバーはWindows 10まで動作することがテストされています
+
 :::
 
 :::note
@@ -242,7 +242,7 @@ ChromeまたはFirefox（Internet Explorerは動作しません）を使用し�
 
 まず、こちらから適切なイメージをダウンロードする必要があります。
 
-[![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/down_latest_image.png)](https://beagleboard.org/latest-images)
+[![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/down_latest_image.png)](https://www.beagleboard.org/distros/beaglebone-black-debian-12-11-2025-08-07-iot-vscode-v6-12-x)
 
 :::note
 サイズの関係で、このダウンロードには30分以上かかる場合があります。
@@ -276,9 +276,10 @@ ChromeまたはFirefox（Internet Explorerは動作しません）を使用し�
 
 :::note
 
-* デバイスの損傷に関する警告が表示される場合があります。書き込み先がSDカードを指している限り、これを受け入れても問題ありません。
-* この時点でBeagleBone®をコンピューターに接続しないでください。
-* このプロセスには最大10分かかる場合があります。
+- デバイスの損傷に関する警告が表示される場合があります。書き込み先がSDカードを指している限り、これを受け入れても問題ありません。
+- この時点でBeagleBone®をコンピューターに接続しないでください。
+- このプロセスには最大10分かかる場合があります。
+
 :::
 
 **ステップ5. SDカードからボードを起動**
@@ -307,6 +308,7 @@ SDカードを（まず電源を切った）ボードに挿入します。その
 :::note
 上記のトレーシングライトが見つからない場合は、RESETボタンを押してボードをリセットしてください。
 :::
+
 フラッシュが完了すると、4つのUSRx LEDがすべて**消灯**します。最新のDebianフラッシャーイメージは、完了時に自動的にボードの電源を切ります。これには最大**10分**かかる場合があります。ボードの電源を切り、SDカードを取り外してから再度電源を入れて完了です。
 
 ## Seeed Studio BeagleBone® Green用Grove
@@ -362,35 +364,33 @@ Groveは、モジュラー式の標準化されたコネクタープロトタイ
 |![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product6.jpg)|
 |[今すぐ購入！](https://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)|[今すぐ購入！](https://www.seeedstudio.com/5-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2642.html)|[今すぐ購入！](https://www.seeedstudio.com/7-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2643.html)|
 
-
 ## 参考資料
 
 ボードに関するより多くの情報を得るのに役立つ多くの参考資料があります。
 
-* [BeagleBoardメインページ](https://beagleboard.org/)
-* [BeagleBoardスタートガイド](https://beagleboard.org/getting-started)
-* [トラブルシューティング](https://beagleboard.org/getting-started#troubleshooting)
-* [ハードウェアドキュメント](https://beagleboard.org/getting-started#hardware)
-* [BeagleBoardのプロジェクト](https://beagleboard.org/project)
-* [Seeed Studio BeagleBone® Green EcoのCE認証](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-CE.pdf)
-* [Seeed Studio BeagleBone® Green EcoのFCC認証](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-FCC.pdf)
+- [BeagleBoardメインページ](https://beagleboard.org/)
+- [BeagleBoardスタートガイド](https://beagleboard.org/getting-started)
+- [トラブルシューティング](https://beagleboard.org/getting-started#troubleshooting)
+- [ハードウェアドキュメント](https://beagleboard.org/getting-started#hardware)
+- [BeagleBoardのプロジェクト](https://beagleboard.org/project)
+- [Seeed Studio BeagleBone® Green EcoのCE認証](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-CE.pdf)
+- [Seeed Studio BeagleBone® Green EcoのFCC認証](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-FCC.pdf)
 
 ## リソース
 
-* **[PDF]** [AM335X データシート](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
-* **[PDF]** [Seeed Studio BeagleBone Green Eco 回路図](https://files.seeedstudio.com/products/102111198/res/BeagleBone%20Green%20Eco_V1.0_SCH_250814.pdf)
+- **[PDF]** [AM335X データシート](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
+- **[PDF]** [Seeed Studio BeagleBone Green Eco 回路図](https://files.seeedstudio.com/products/102111198/res/BeagleBone%20Green%20Eco_V1.0_SCH_250814.pdf)
 
 ## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます！弊社製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

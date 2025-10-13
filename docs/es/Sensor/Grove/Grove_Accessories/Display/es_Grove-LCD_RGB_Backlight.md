@@ -269,7 +269,7 @@ cd ~/GrovePi/Software/Python/grove_rgb_lcd
 python3 grove_rgb_lcd.py
 ```
 
-Here is the grove_rgb_lcd.py code.
+Aquí está el código grove_rgb_lcd.py.
 
 ```python
 import time,sys
@@ -452,9 +452,13 @@ delay(500);
 
 **Módulo LCD RGB Grove**:
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yniND_abVos" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tbdTTC3Jmgk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Soporte Técnico y Discusión de Productos
 

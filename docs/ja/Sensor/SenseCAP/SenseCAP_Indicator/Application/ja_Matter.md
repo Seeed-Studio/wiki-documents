@@ -15,7 +15,9 @@ last_update:
 
 # SenseCAP Indicator - Matter アプリケーション開発
 
+<div class="video-container">
 <iframe class="youtube-video" src="https://www.youtube.com/embed/LCIWqwmCZ54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## はじめに
 
@@ -29,7 +31,7 @@ SenseCAP Indicatorにはタッチスクリーンが搭載されており、強�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -86,7 +88,9 @@ idf.py build flash monitor
 
 ### 標準機能
 
+<div class="video-container">
 <iframe class="youtube-video" src="https://www.youtube.com/embed/mBhrYeyQQeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 Indicator Matterアプリケーションは、標準ファームウェアと同様の方法でセンサーデータを閲覧することができます。デバイスを読み込むと、あなたの位置に基づいて設定された時計画面が表示され、正確な時刻を提供します。画面には右と左にスライドすることを検出するイベントがあり、時刻、センサー表示、設定画面を循環します。
 

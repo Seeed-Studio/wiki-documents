@@ -155,7 +155,9 @@ We have also designed an Acrylic Case for building your own NAS into a enclosure
 
 - Explaining Computers Video on FreeNAS on Odyssey-X86:
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qyz91Q_JrBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Other useful applications:
 

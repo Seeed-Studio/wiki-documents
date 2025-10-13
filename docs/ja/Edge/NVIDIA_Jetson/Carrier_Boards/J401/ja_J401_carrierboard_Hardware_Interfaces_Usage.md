@@ -134,7 +134,7 @@ CSI は Camera Serial Interface の略です。これは、イメージセンサ
 
   - [Raspberry Pi High Quality Camera](https://www.seeedstudio.com/Raspberry-Pi-High-Quality-Cam-p-4463.html)
   - [Raspberry Pi HQ Camera - M12 mount](https://www.seeedstudio.com/Raspberry-Pi-HQ-Camera-M12-mount-p-5578.html)
-  - [High Quality Camera for Raspberry Pi](https://www.seeedstudio.com/High-Quality-Camera-For-Raspberry-Pi-Compute-Module-Jetson-Nano-p-4729.html)
+  - [Raspberry Pi用高品質カメラ](https://www.seeedstudio.com/High-Quality-Camera-For-Raspberry-Pi-Compute-Module-Jetson-Nano-p-4729.html)
 
 ### 接続概要
 
@@ -271,7 +271,7 @@ sudo vi /usr/bin/hwtosys.sh
 sudo hwclock --hctosys
 ```
 
-- **Step 10:** Make the script executable.
+- **ステップ 10:** スクリプトを実行可能にします。
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
@@ -309,13 +309,13 @@ sudo systemctl enable hwtosys.service
 sudo systemctl start hwtosys.service
 ```
 
-- **Step 15:** Verify the script is up and running as a systemd service.
+- **ステップ 15:** スクリプトがsystemdサービスとして起動し、実行されていることを確認する。
 
 ```sh
 sudo systemctl status hwtosys.service
 ```
 
-- **Step 16:** ボードを再起動すると、システムクロックがハードウェアクロックと同期されていることが確認できます。
+- **ステップ 16:** ボードを再起動すると、システムクロックがハードウェアクロックと同期されていることが確認できます。
 
 ## ファン制御
 
@@ -332,7 +332,7 @@ nvfancontrol.confを変更したい場合は、必ず[こちら](https://docs.nv
 <Tabs>
 <TabItem value="Method 1" label="Method 1">
 
-- **Step 1:** nvfancontrol systemdサービスを停止します。
+- **ステップ 1:** nvfancontrol systemdサービスを停止します。
 
 ```
 sudo systemctl stop nvfancontrol

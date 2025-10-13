@@ -35,7 +35,7 @@ CLIPなどの生成AI vision transformerにより、オープンボキャブラ�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/reComputer/Application/reComputer_J4012.png" target="_blank" rel="noopener noreferrer">
-      <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -93,7 +93,7 @@ sudo systemctl restart jetson-vst
 sudo docker compose up -d
 ```
 
-To check if all required containers have started, you can run the following command:
+必要なコンテナがすべて起動しているかを確認するには、次のコマンドを実行できます：
 
 ```bash
 sudo docker ps

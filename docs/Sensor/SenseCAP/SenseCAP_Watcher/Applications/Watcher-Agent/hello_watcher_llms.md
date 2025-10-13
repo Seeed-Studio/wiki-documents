@@ -13,7 +13,7 @@ keywords:
 - Yolo
 - Assistant
 - MCP
-# image:
+image: https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/display.webp
 slug: /hello_watcher_llms
 sidebar_position: 1
 last_update:
@@ -133,7 +133,9 @@ If reactivation is needed, please send the device's STA Mac address (can be obta
 
 You can watch a detailed tutorial in the video below:
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/6UDVsv953Tw?si=6OYFfx4orpC5p90d" title="SenseCAP Watcher for Xiaozhi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Model and Firmware Updates: Customize Exclusive Skills
 

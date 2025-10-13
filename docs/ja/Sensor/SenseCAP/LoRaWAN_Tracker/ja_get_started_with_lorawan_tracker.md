@@ -372,7 +372,7 @@ SenseCraft APPにログインします。
 
 ### デバイスデータビュー
 
-#### SenseCAP Mate App
+#### SenseCAP Mate アプリ
 
 アプリで位置を確認してください。
 

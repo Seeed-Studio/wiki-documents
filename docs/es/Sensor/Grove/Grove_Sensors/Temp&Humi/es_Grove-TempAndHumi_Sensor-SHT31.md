@@ -18,7 +18,9 @@ La precisión típica de este módulo puede ser **±2%RH** (para humedad relativ
 
 Usar el sensor es fácil. Para [Seeeduino](https://www.seeedstudio.com/depot/Seeeduino-V42-p-2517.html?cPath=6_7) (compatible con Arduino), simplemente conecta esta placa de conexión con la placa de control principal a través del [cable Grove](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57). Luego usa la biblioteca proporcionada y el código de ejemplo/demo disponible en GitHub para obtener tus datos. Si estás usando un Arduino sin un Base Shield, simplemente conecta el pin VIN al pin de voltaje de 5V, GND a tierra, SCL al Reloj I2C (Analógico 5) y SDA a Datos I2C (Analógico 4).
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/MwLEawbP0ZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center' }}><a href="https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp-Humi-Sensor-SHT35.html?queryID=77b7436dc353691bf84e59c7496c9f8f&objectID=35&indexName=bazaar_retailer_products" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
@@ -134,7 +136,6 @@ Los sensores industriales de la serie SenseCAP S210x proporcionan una experienci
 | GND           | Negro                   |
 | SDA           | Blanco                   |
 | SCL           | Amarillo                  |
-
 
 #### Software
 
@@ -294,7 +295,7 @@ if __name__ == "__main__":
 ```
 
 :::tip
-If everything goes well, you will be able to see temperature and humidity
+Si todo va bien, podrás ver la temperatura y la humedad
 :::
 
 ```python
@@ -343,12 +344,11 @@ Tenemos esta parte disponible en [geppetto](https://geppetto.seeedstudio.com/), 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

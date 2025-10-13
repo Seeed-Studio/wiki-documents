@@ -80,7 +80,7 @@ pip install triton-3.3.0-cp310-cp310-linux_aarch64.whl
 
 ### Download and Install Dia
 
-1. Clone Dia's source code on your Jetson device using this terminal command:
+1. 使用以下终端命令在您的 Jetson 设备上克隆 Dia 的源代码：
 
 ```bash
 git clone https://github.com/nari-labs/dia.git
@@ -145,7 +145,7 @@ python app.py
 [S2] Couldn’t agree more!
 ```
 
-<div align="center">
+<div class="video-container">
     <iframe width="900" height="506" src="https://www.youtube.com/embed/g9jQzwnsHr0" title="Deploy Dia on reComputer Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

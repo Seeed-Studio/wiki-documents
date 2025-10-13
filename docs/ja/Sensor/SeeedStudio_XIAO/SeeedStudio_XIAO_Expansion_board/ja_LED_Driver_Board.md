@@ -18,7 +18,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/LED-Driver-Board-for-Seeed-Studio-XIAO-p-6451.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div><br />
 
@@ -288,27 +288,27 @@ MG24は現在、標準のNeoPixelライブラリでサポートされていま�
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/LED-Driver-Board-for-Seeed-Studio-XIAO-p-6451.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-RGB-LED-Stick-15-WS2813-Mini-p-4270.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-**Step 2.** 以下のように Seeed Studio XIAO RP2350、LED Driver Board for XIAO、および Grove - RGB LED Stick (15-WS2813 Mini) を接続します：
+**ステップ 2.** 以下のように Seeed Studio XIAO RP2350、LED Driver Board for XIAO、および Grove - RGB LED Stick (15-WS2813 Mini) を接続します：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/rp2350_ledDriver_led.jpg" style={{width:700, height:'auto'}}/></div>
 
-**Step 3.** 以下のサンプルプログラムは、3つのNeoPixelを含むLEDを制御し、3つのビーズそれぞれが**赤**、**緑**、**青**の色を表示するようにします
+**ステップ 3.** 以下のサンプルプログラムは、3つのNeoPixelを含むLEDを制御し、3つのビーズそれぞれが**赤**、**緑**、**青**の色を表示するようにします
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
@@ -368,12 +368,12 @@ void loop() {
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/LED-Driver-Board-for-Seeed-Studio-XIAO-p-6451.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -490,7 +490,7 @@ void loop() {
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
-          <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+          <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
@@ -543,17 +543,17 @@ ESPHomeが正常に読み込まれると、以下のウィンドウが表示さ�
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/LED-Driver-Board-for-Seeed-Studio-XIAO-p-6451.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -562,35 +562,35 @@ ESPHomeが正常に読み込まれると、以下のウィンドウが表示さ�
  </tr>
 </table>
 
-**Step 2.** 以下のようにSeeed Studio XIAO ESP32S3、LED Driver Board for XIAO、WS2812 LEDを接続します：
+**ステップ 2.** 以下のようにSeeed Studio XIAO ESP32S3、LED Driver Board for XIAO、WS2812 LEDを接続します：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/esp32s3_ledDriver_led.jpg" style={{width:700, height:'auto'}}/></div>
 
-**Step 3.** ESPHomeページを開き、**+ NEW DEVICE**をクリックします
+**ステップ 3.** ESPHomeページを開き、**+ NEW DEVICE**をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/5.png" style={{width:900, height:'auto'}}/></div>
 
-**Step 4.** CONTINUEをクリックします
+**ステップ 4.** CONTINUEをクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/6.png" style={{width:900, height:'auto'}}/></div>
 
-**Step 5.** デバイスの**Name**を入力し、**Network name**や**Password**などのWiFi認証情報を入力します。その後、**NEXT**をクリックします
+**ステップ 5.** デバイスの**Name**を入力し、**Network name**や**Password**などのWiFi認証情報を入力します。その後、**NEXT**をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/1.png" style={{width:400, height:'auto'}}/></div>
 
-**Step 6.** **ESP32-S3**を選択してクリックします
+**ステップ 6.** **ESP32-S3**を選択してクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/2.png" style={{width:400, height:'auto'}}/></div>
 
-**Step 7.** このボードを手動で設定するため、**SKIP**をクリックします
+**ステップ 7.** このボードを手動で設定するため、**SKIP**をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/14.png" style={{width:400, height:'auto'}}/></div>
 
-**Step 8.** 新しく作成されたボードの下にある**EDIT**をクリックします
+**ステップ 8.** 新しく作成されたボードの下にある**EDIT**をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/3.png" style={{width:400, height:'auto'}}/></div>
 
-**Step 9.** 以下のコードを.yamlファイルの末尾にコピーします。XIAO ESP32S3はDHT11センサーから温度を読み取り、目標値からの温度差に基づいてRGB LEDの色を変更します。寒い場合は青、暑い場合は赤、正常な場合は緑を使用します。
+**ステップ 9.** 以下のコードを.yamlファイルの末尾にコピーします。XIAO ESP32S3はDHT11センサーから温度を読み取り、目標値からの温度差に基づいてRGB LEDの色を変更します。寒い場合は青、暑い場合は赤、正常な場合は緑を使用します。
 
 ```yaml
 # DHT11 temperature and humidity sensor
@@ -746,12 +746,12 @@ interval:
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/LED-Driver-Board-for-Seeed-Studio-XIAO-p-6451.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>

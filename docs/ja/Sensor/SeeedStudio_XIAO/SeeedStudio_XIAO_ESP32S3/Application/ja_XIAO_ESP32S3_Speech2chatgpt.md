@@ -14,7 +14,9 @@ last_update:
 
 # XIAO ESP32S3 Senseを基にしたミニチュアChatGPT音声アシスタント
 
+<div class="video-container">
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/wPi-XjeJPNw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 本日は、XIAO ESP32S3 SenseとXIAO用のラウンドディスプレイを使用した新しいプロジェクトをご紹介します。このプロジェクトでは、まずXIAO ESP32S3 SenseのマイクとGoogle Cloudの音声からテキストへのサービスを使用して音声認識システムを構築します。認識された音声テキストを使用してOpenAIのインターフェースを呼び出し、ChatGPTに質問をして回答を得ます。最後に、認識された音声と回答内容を画面に表示します。
 

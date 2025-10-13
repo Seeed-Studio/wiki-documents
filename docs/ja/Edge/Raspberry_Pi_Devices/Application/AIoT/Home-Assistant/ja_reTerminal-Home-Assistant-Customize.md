@@ -278,7 +278,7 @@ Google Drive Backupアドオンを使用すると、自動バックアップを�
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/59.png"/></div>
 
-## HACS (Home Assistant Community Store)
+## HACS (Home Assistant コミュニティストア)
 
 それでは、Home AssistantでHACSを探索してみましょう！HACSは多数の統合機能とフロントエンドのカスタマイズオプションを提供します。ここでは以下の設定方法を紹介します
 
@@ -299,7 +299,7 @@ wget -O - https://get.hacs.xyz | bash -
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Home-Assistant/61.png"/></div>
 
-- **Step 3.** HACS のインストールが完了したら、以下のコマンドで Home Assistant を再起動します
+- **ステップ 3.** HACS のインストールが完了したら、以下のコマンドで Home Assistant を再起動します
 
 ```sh
 ha ha restart
@@ -360,11 +360,11 @@ frontend:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Home-Assistant/78.jpg"/></div>
 
-- **Step 4.** 保存ボタンをクリックします
+- **ステップ 4.** 保存ボタンをクリックします
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Home-Assistant/79.png"/></div>
 
-- **Step 5.** 作成した設定が有効かどうかを確認することがベストプラクティスです。そうしないと、次回Home Assistantの起動に失敗します。**Developer Tools**に移動し、**CHECK CONFIGURATION**をクリックします
+- **ステップ 5.** 作成した設定が有効かどうかを確認することがベストプラクティスです。そうしないと、次回Home Assistantの起動に失敗します。**Developer Tools**に移動し、**CHECK CONFIGURATION**をクリックします
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/80.png"/></div>
 
@@ -372,31 +372,31 @@ frontend:
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/81.png"/></div>
 
-- **Step 6.** **RESTART**をクリックしてHome Assistantを再起動します
+- **ステップ 6.** **RESTART**をクリックしてHome Assistantを再起動します
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/82.png"/></div>
 
-- **Step 7.** **HACS**ウィンドウ内で、**Frontend**をクリックします
+- **ステップ 7.** **HACS**ウィンドウ内で、**Frontend**をクリックします
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/74.png"/></div>
 
-- **Step 8.** **+ EXPLORE & DOWNLOAD REPOSITORIES**をクリックします
+- **ステップ 8.** **+ EXPLORE & DOWNLOAD REPOSITORIES**をクリックします
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/75.jpg"/></div>
 
-- **Step 9.** ここでは多くのテーマが表示されます。例として、iOSテーマをインストールします。**iOS**を検索し、**iOS Themes - Dark Mode and Light Mode**を選択します
+- **ステップ 9.** ここでは多くのテーマが表示されます。例として、iOSテーマをインストールします。**iOS**を検索し、**iOS Themes - Dark Mode and Light Mode**を選択します
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/85.png"/></div>
 
-- **Step 10.** **DOWNLOAD**をクリックします
+- **ステップ 10.** **DOWNLOAD**をクリックします
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/86.png"/></div>
 
-- **Step 11.** プロンプトに対して再度**DOWNLOAD**をクリックします
+- **ステップ 11.** プロンプトに対して再度**DOWNLOAD**をクリックします
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Home-Assistant/87.png"/></div>
 
-- **Step 12.** ダウンロードが完了したら、ユーザー名をクリックし、**Theme**の下で**ios-dark-mode-blue-red**を選択します。お好みに応じて、このテーマの他の色も選択できます
+- **ステップ 12.** ダウンロードが完了したら、ユーザー名をクリックし、**Theme**の下で**ios-dark-mode-blue-red**を選択します。お好みに応じて、このテーマの他の色も選択できます
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/88.jpg"/></div>
 
@@ -412,59 +412,59 @@ frontend:
 
 この天気カードをインストールする前に、天気情報を取得するために**openweathermap**に接続する必要があります。そして、openweathermapに接続する前に、openweathermapからAPIキーを取得する必要があります。
 
-- **Step 1.** [このリンク](https://home.openweathermap.org/users/sign_up)にアクセスして、openweathermapアカウントにサインアップします
+- **ステップ 1.** [このリンク](https://home.openweathermap.org/users/sign_up)にアクセスして、openweathermapアカウントにサインアップします
 
-- **Step 2.** [このリンク](https://home.openweathermap.org/users/sign_in)にアクセスして、新しく作成したアカウントにサインインします
+- **ステップ 2.** [このリンク](https://home.openweathermap.org/users/sign_in)にアクセスして、新しく作成したアカウントにサインインします
 
-- **Step 3.** アカウント名の下で、**My API keys**をクリックします
+- **ステップ 3.** アカウント名の下で、**My API keys**をクリックします
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Home-Assistant/97.png"/></div>
 
-- **Step 4.** APIキー名を入力し、**Generate**をクリックします
+- **ステップ 4.** APIキー名を入力し、**Generate**をクリックします
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Home-Assistant/98.png"/></div>
 
-- **Step 5.** 生成されたAPIキーをコピーします
+- **ステップ 5.** 生成されたAPIキーをコピーします
 
 <div align="center"><img width={650} src="https://files.seeedstudio.com/wiki/Home-Assistant/99.png"/></div>
 
 次に、このAPIキーを追加します
 
-- **Step 6.** Home Assistantで、**Settings > Devices & Services > Integrations > + ADD INTEGRATION**に移動し、**OpenWeathermap**を検索してクリックします
+- **ステップ 6.** Home Assistantで、**Settings > Devices & Services > Integrations > + ADD INTEGRATION**に移動し、**OpenWeathermap**を検索してクリックします
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/96.png"/></div>
 
-- **Step 7.** コピーした**API key**を貼り付け、あなたの場所に応じて**Latitude and Logitude**を変更し（これは簡単なGoogle検索で見つけることができます）、Modeを**hourly**に変更して**SUBMIT**をクリックします
+- **ステップ 7.** コピーした**API key**を貼り付け、あなたの場所に応じて**Latitude and Logitude**を変更し（これは簡単なGoogle検索で見つけることができます）、Modeを**hourly**に変更して**SUBMIT**をクリックします
 
 <div align="center"><img width={350} src="https://files.seeedstudio.com/wiki/Home-Assistant/101.png"/></div>
 
-- **Step 8.** **Finish**をクリックします
+- **ステップ 8.** **Finish**をクリックします
 
 <div align="center"><img width={350} src="https://files.seeedstudio.com/wiki/Home-Assistant/102.png"/></div>
 
 次に、HACSから天気カードをインストールします
 
-- **Step 9.** **HACS > Frontend > + EXPLORE & DOWNLOAD REPOSITORIES**に移動します
+- **ステップ 9.** **HACS > Frontend > + EXPLORE & DOWNLOAD REPOSITORIES**に移動します
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/90.jpg"/></div>
 
-- **Step 10.** **weather**と入力し、**Weather Card**をクリックします
+- **ステップ 10.** **weather**と入力し、**Weather Card**をクリックします
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/91.png"/></div>
 
-- **Step 11.** **DOWNLOAD**をクリックします
+- **ステップ 11.** **DOWNLOAD**をクリックします
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/92.png"/></div>
 
-- **Step 12.** プロンプトに対して再度**DOWNLOAD**をクリックします
+- **ステップ 12.** プロンプトに対して再度**DOWNLOAD**をクリックします
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Home-Assistant/93.png"/></div>
 
-- **Step 13.** **Overview**ページで、以前と同様に**+ ADD CARD**ページに移動し、**Custom: Weather Card**をクリックします
+- **ステップ 13.** **Overview**ページで、以前と同様に**+ ADD CARD**ページに移動し、**Custom: Weather Card**をクリックします
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/103.png"/></div>
 
-- **Step 14.** 以前に入力した**Latitude and Logitude**に応じて**City Name**を入力し、**SAVE**をクリックします
+- **ステップ 14.** 以前に入力した**Latitude and Logitude**に応じて**City Name**を入力し、**SAVE**をクリックします
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/104.png"/></div>
 

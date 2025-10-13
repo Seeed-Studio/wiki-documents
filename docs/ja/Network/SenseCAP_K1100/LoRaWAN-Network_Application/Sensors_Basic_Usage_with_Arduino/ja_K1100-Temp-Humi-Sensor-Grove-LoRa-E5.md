@@ -11,7 +11,7 @@ last_update:
 ---
 
 
-# Grove Temp&Humi Sensor (SHT40)
+# Grove 温湿度センサー (SHT40)
 
 このセクションでは、センサーの動作原理、Wio Terminal を使用してセンサーデータを取得する方法、そして Wio Terminal と Grove - Wio-E5 を使用してデータを送信する方法について詳しく説明します。
 

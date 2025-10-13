@@ -94,13 +94,13 @@ Encapsulamos la estructura de decisión en un archivo '.cpp'. Puedes encontrar i
 :::note
  Si no tenemos Grove Base Shield, también podemos conectar directamente Grove - Air Quality Sensor al Seeeduino como se muestra a continuación.
 :::
+
 | Seeeduino       | Grove - Air Quality Sensor |
 |---------------|-------------------------|
 | 5V           | Rojo                     |
 | GND           | Negro                   |
 | Sin Conexión | Blanco                   |
 | A0            | Amarillo                  |
-
 
 #### Software
 
@@ -337,7 +337,7 @@ if __name__ == '__main__':
 ```
 
 :::tip
-    If everything goes well, you will be able to see the following result:
+    Si todo va bien, podrás ver el siguiente resultado:
 :::
 
 ```python
@@ -382,7 +382,6 @@ Puedes usar este sensor para detectar la calidad del aire. Presiona ++ctrl+c++ p
 |--------------|--------------|-----------------------------|
 |<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" alt="pir" style={{height: 180, objectFit: 'contain'}} /></div>|<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg" alt="pir" style={{height: 180, objectFit: 'contain'}} /></div>|<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Air_Quality_Sensor_v1.3/img/Grove%20Air%20Quality%20Sensor_big.jpg" alt="pir" style={{height: 180, objectFit: 'contain'}} /></div>|
 |[Consigue Uno Ahora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Consigue Uno Ahora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Consigue Uno Ahora](https://www.seeedstudio.com/Grove-Air-quality-sensor-v1.3-p-2439.html)|
-
 
 - **Paso 2.** Conecta el GrovePi_Plus al Raspberry.
 - **Paso 3.** Conecta Grove-MOSFET ranger al puerto **A0** del GrovePi_Plus.
@@ -443,7 +442,6 @@ sudo python grove_air_quality_sensor.py
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Air_Quality_Sensor_v1.3/img/pi_result.png" alt="pir" width={600} height="auto" /></p>
 
-
 ### Jugar con ESP-IDF
 
 #### Hardware
@@ -484,8 +482,8 @@ sudo python grove_air_quality_sensor.py
   - Conecta el VCC del sensor a 3.3V
   - Conecta el GND del sensor a GND
   - Conecta el SIG del sensor a un pin GPIO compatible con ADC (por ejemplo, GPIO34)
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Air_Quality_Sensor_v1.3/img/ESP32_Grove_AirQuality.png" alt="pir" width={600} height="auto" /></p>
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Air_Quality_Sensor_v1.3/img/ESP32_Grove_AirQuality.png" alt="pir" width={600} height="auto" /></p>
 
 #### Software
 
@@ -505,6 +503,7 @@ idf.py menuconfig
 ```
 
 Navega a "Component config → Grove Analog Air Quality Sensor" para configurar:
+
 - Número de unidad ADC (0 para ADC1, 1 para ADC2)
 - Canal ADC (que coincida con tu conexión GPIO)
 - Atenuación ADC (por defecto: ADC_ATTEN_DB_12 para 3.3V)
@@ -626,12 +625,12 @@ I (6309) grove_aqs: Air quality reading: Raw=283, Voltage=206mV, Quality=Fresh
 ## Soporte Técnico y Discusión del Producto
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 
@@ -642,4 +641,3 @@ Con el [controlador S2110](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Con
 La carcasa IP66, la configuración Bluetooth, la compatibilidad con la red global LoRaWAN®, la batería integrada de 19 Ah y el potente soporte de la APP hacen del [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP&product_module=Device) la mejor opción para aplicaciones industriales. La serie incluye sensores para humedad del suelo, temperatura y humedad del aire, intensidad de luz, CO2, EC, y una estación meteorológica 8 en 1. Prueba el último SenseCAP S210x para tu próximo proyecto industrial exitoso.
 
 <div align="center"><a href="https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP" target="_blank"><img width={800} src="https://files.seeedstudio.com/wiki/K1100_overview/sensecap.png" /></a></div>
-

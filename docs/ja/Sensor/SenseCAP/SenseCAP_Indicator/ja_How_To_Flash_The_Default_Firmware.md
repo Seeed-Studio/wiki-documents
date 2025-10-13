@@ -70,7 +70,9 @@ ESP-IDFのバージョンはv5.0以上である必要があります。古いバ
 
 新しいユーザーの場合、このビデオは以下の手順をよりよく理解するのに役立つかもしれません：
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/oqJz6zKfc4A?si=glzTFfR7m392eITb" title="Set Up the ESP-IDF Toolchain for SenseCAP Indicator on Windows" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 #### **ツールチェーンのインストール**
 
@@ -181,7 +183,7 @@ esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z ^
 0x10000 ../../build/indicator_basis.bin
 ```
 
-And for a straightforward flashing process using the merged firmware:
+そして、マージされたファームウェアを使用した簡単なフラッシュプロセスについては：
 
 ```sh title="flash.bat"
 esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z 0x0 indicator_basis_v1.0.0.bin
@@ -338,11 +340,11 @@ esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z 0x0 indicato
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_59.png"/></div>
 
-- **Step 3**: USB type-CケーブルでSenseCAP Indicatorをラップトップに接続します。
+- **ステップ 3**: USB type-CケーブルでSenseCAP Indicatorをラップトップに接続します。
 
-- **Step 4**: SPIダウンロードタブで「...」をクリックし、先ほどダウンロードしたファームウェアに移動します。
+- **ステップ 4**: SPIダウンロードタブで「...」をクリックし、先ほどダウンロードしたファームウェアに移動します。
 
-- **Step 5**: SPIフラッシュを設定します：
+- **ステップ 5**: SPIフラッシュを設定します：
 
 <div class="table-center">
   <table align="center">

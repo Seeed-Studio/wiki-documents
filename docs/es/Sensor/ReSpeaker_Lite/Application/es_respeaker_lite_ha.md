@@ -19,7 +19,9 @@ Imagínate esto: estás cómodamente en tu sofá, y con solo un simple grito al 
 
 En este capítulo usaremos el [ReSpeaker Lite Voice Assistant Kit](https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-p-5929.html) para conectar el interruptor inteligente Sonoff y realizar control por voz del interruptor de luz.
 
+<div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/I9KOY2ik5nw" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ## Hardware Requerido
 

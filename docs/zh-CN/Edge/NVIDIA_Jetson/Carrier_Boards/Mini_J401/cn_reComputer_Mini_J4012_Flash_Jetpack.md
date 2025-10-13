@@ -364,7 +364,7 @@ Jetpack6 镜像文件大约为 **16.7GB**，下载时间约为 60 分钟。请�
 在进行安装步骤之前，我们需要确保开发板处于强制恢复模式。
 :::
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="450" src="https://www.youtube.com/embed/HEIXFkizP5Y" title="Enter Force Recovery Mode (reComputer Mini)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -408,7 +408,9 @@ reComputer Jetson J30/40 Mini 已推出一键刷写脚本，支持刷写 Jetpack
 wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && sudo chmod 777 ./flashing.sh && ./flashing.sh
 ```
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFBzTlyOjhE?si=uNN-l5VVGbAyGnot" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::caution
 免责声明：一键刷写脚本旨在使 jetpack 刷写更快速。当前版本是测试版，可能存在许多问题。希望您能理解。如果出现刷写问题，请按照下面的`逐步刷写设备`进行操作，并在我们的 [Discord Jetson 频道](https://discord.com/channels/862602258452578314/930732339624026152)中提供反馈。我们将及时修复这些问题，并在不久的将来改进此功能。
@@ -426,7 +428,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**Step 2:** Execute the following command to flash jetpack system to the NVMe SSD:
+**步骤 2:** 执行以下命令将 jetpack 系统刷写到 NVMe SSD：
 
 ```bash
 cd mfi_xxxx

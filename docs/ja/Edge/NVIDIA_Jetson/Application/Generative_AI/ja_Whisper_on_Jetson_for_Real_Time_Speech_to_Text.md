@@ -46,12 +46,12 @@ no_comments: false # for Disqus
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J3011-p-5682.html?queryID=c1e6f0b0bd38a98233ce64bce8083a22&objectID=5682&indexName=bazaar_retailer_products" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-Mic-Array-v2-0.html?queryID=2baffb980bdb6d5e65b2b3f511657cb2&objectID=139&indexName=bazaar_retailer_products" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -74,7 +74,7 @@ sudo apt update && sudo apt install ffmpeg
 arecord -D hw:2,0 --dump-hw-params #set microphone rate to 16000
 ```
 
-#### Step2. Test environment
+#### ステップ2. テスト環境
 
 ```shell
 python test.py
@@ -94,7 +94,9 @@ python test.py
 python main.py
 ```
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/KR0GYqUuo5Y?si=uSGUkKmCSZmaq5f7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Riva vs Whisper
 
@@ -104,7 +106,9 @@ Whisperは、ウェブから収集された68万時間の多言語・多タス�
 
 今後の比較動画では、Nvidia Jetson上で開発された音声テキスト変換における[Riva](https://wiki.seeedstudio.com/ja/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson/)とWhisperの能力を比較します。
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/2l7yus611DI?si=XdEjwzpZdJkLC8aB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## プロジェクトの展望
 

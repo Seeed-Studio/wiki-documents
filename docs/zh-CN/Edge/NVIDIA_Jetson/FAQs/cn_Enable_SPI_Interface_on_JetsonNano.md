@@ -165,7 +165,7 @@ cd spidev-test/
 gcc spidev_test.c -o spidev_test
 ```
 
-Run the test program and specify `spidev0.0` (corresponding to **SPI1**):
+运行测试程序并指定`spidev0.0`（对应于**SPI1**）：
 
 ```bash
 ./spidev_test -v -D /dev/spidev0.0 -p "Test"

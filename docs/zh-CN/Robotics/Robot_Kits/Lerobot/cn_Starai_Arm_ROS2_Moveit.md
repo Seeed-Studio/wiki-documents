@@ -149,7 +149,7 @@ ros2 launch viola_configure demo.launch.py
 
 ### 使用真实的机械臂
 
-#### Step 1:开启手臂控制节点
+#### 步骤 1:开启手臂控制节点
 
 启动手臂硬件驱动，手臂会移动到零位。
 
@@ -157,13 +157,13 @@ ros2 launch viola_configure demo.launch.py
 ros2 launch viola_moveit_config driver.launch.py
 ```
 
-#### Step 2: 启动Moveit2节点
+#### 步骤 2: 启动Moveit2节点
 
 ```bash
 ros2 launch viola_moveit_config actual_robot_demo.launch.py
 ```
 
-#### Step 3: 手臂末端位姿读写示例
+#### 步骤 3: 手臂末端位姿读写示例
 
 ```bash
 ros2 launch viola_moveit_config moveit_write_read.launch.py
@@ -181,7 +181,7 @@ ros2 launch cello_moveit_config demo.launch.py
 
 ### 使用真实的机械臂
 
-#### Step 1:开启手臂控制节点
+#### 步骤 1:开启手臂控制节点
 
 启动手臂硬件驱动，手臂会移动到零位。
 
@@ -189,13 +189,13 @@ ros2 launch cello_moveit_config demo.launch.py
 ros2 launch cello_moveit_config driver.launch.py
 ```
 
-#### Step 2: 启动Moveit2节点
+#### 步骤 2: 启动Moveit2节点
 
 ```bash
 ros2 launch cello_moveit_config actual_robot_demo.launch.py
 ```
 
-#### Step 3: 手臂末端位姿读写示例
+#### 步骤 3: 手臂末端位姿读写示例
 
 ```bash
 ros2 launch cello_moveit_config moveit_write_read.launch.py

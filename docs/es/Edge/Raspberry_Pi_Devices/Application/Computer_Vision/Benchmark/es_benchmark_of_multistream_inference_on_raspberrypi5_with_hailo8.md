@@ -275,7 +275,7 @@ Todos los resultados se basan en inferencia con un tamaño de entrada del modelo
 
 </div>
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/CHxg7qWTMYw" title="Multistream Inference on Hailo8 with RPi5 AI Box" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

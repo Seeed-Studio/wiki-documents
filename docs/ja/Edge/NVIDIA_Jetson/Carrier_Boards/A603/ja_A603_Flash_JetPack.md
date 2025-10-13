@@ -152,7 +152,7 @@ Ubuntuホストマシンで、ターミナルを開き、コマンド `sha256sum
 
 こちらは、A603キャリアボード + Orin Nx 16GBモジュールにJetPack 6.1をフラッシュする動画です。動画と以下の詳細な手順を参考にして、デバイスをフラッシュできます。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/qN4GxscUGW0" title="A603 JetPack6.1 Installation Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -206,7 +206,7 @@ unzip A603-Orin-NX-JP5.1.1.zip
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例えば（ユーザー名："nvidia"、パスワード："nvidia"、デバイス名："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
@@ -265,7 +265,7 @@ unzip A603-Orin-NX-JP5.1.1.zip
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例えば（ユーザー名："nvidia"、パスワード："nvidia"、デバイス名："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
@@ -322,7 +322,7 @@ unzip A603-JP5.1.2.zip
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例えば（ユーザー名："nvidia"、パスワード："nvidia"、デバイス名："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
@@ -365,7 +365,7 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-**Step 3:** デバイスをリカバリモードにする。フラッシュを行うためには、デバイスをリカバリモードにする必要があります。以下の手順でリカバリモードに入ります：
+**ステップ 3:** デバイスをリカバリモードにする。フラッシュを行うためには、デバイスをリカバリモードにする必要があります。以下の手順でリカバリモードに入ります：
 
 1. キャリアボード上のRECピンとGNDピンをショートさせます。
 2. Micro USBデータケーブルを使用してキャリアボードをPCに接続します。
@@ -376,7 +376,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
    - 7523: Orin Nano 8G
    - 7623: Orin Nano 4G
 
-**Step 4:** デバイスをフラッシュする。
+**ステップ 4:** デバイスをフラッシュする。
 
    ```bash
    sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" --showlogs --network usb0 jetson-orin-nano-devkit internal
@@ -444,7 +444,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例えば（ユーザー名："nvidia"、パスワード："nvidia"、デバイス名："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
@@ -522,6 +522,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
      ```
 
    完了すると、デバイスはシステムに起動できます。
+
 :::
 
 </TabItem>
@@ -553,7 +554,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo ./apply_binaries.sh
 ```
 
-**Step 3:** デバイスをリカバリモードにする。フラッシュを行うためには、デバイスをリカバリモードにする必要があります。以下の手順でリカバリモードに入ります：
+**ステップ 3:** デバイスをリカバリモードにする。フラッシュを行うためには、デバイスをリカバリモードにする必要があります。以下の手順でリカバリモードに入ります：
 
 1. キャリアボード上のRECピンとGNDピンをショートさせます。
 2. Micro USBデータケーブルを使用してキャリアボードをPCに接続します。
@@ -564,7 +565,7 @@ sudo ./apply_binaries.sh
    - 7523: Orin Nano 8G
    - 7623: Orin Nano 4G
 
-**Step 4:** デバイスをフラッシュする。
+**ステップ 4:** デバイスをフラッシュする。
 
 ```bash
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
@@ -590,6 +591,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
      ```
 
    完了すると、デバイスはシステムに起動できるようになります。
+
 :::
 
 </TabItem>
@@ -631,7 +633,7 @@ sudo modprobe mttcan
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/check_can.png"/>
 </div>
 
-**Step4.** can0インターフェースを起動します：
+**ステップ4.** can0インターフェースを起動します：
 
 ```sh
 sudo ip link set can0 type can bitrate 500000
@@ -649,7 +651,7 @@ sudo ip link set can0 up
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/ifconfig.png"/>
 </div>
 
-**Step5.** データの送信（can-utilsのインストールが必要）。反対側では、CAN拡張ボード付きのMCUを使用してデータを受信しました。
+**ステップ5.** データの送信（can-utilsのインストールが必要）。反対側では、CAN拡張ボード付きのMCUを使用してデータを受信しました。
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/hardware.png"/>
@@ -661,7 +663,7 @@ jetsonターミナルで`cansend can0 123#11.22.33.50`を実行します：
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/cansend.png"/>
 </div>
 
-**Step6.** データの受信。反対側では、CAN拡張ボード付きのMCUを使用してデータを送信しました。
+**ステップ6.** データの受信。反対側では、CAN拡張ボード付きのMCUを使用してデータを送信しました。
 
 jetsonターミナルで`candump can0`を実行します：
 <div align="center">

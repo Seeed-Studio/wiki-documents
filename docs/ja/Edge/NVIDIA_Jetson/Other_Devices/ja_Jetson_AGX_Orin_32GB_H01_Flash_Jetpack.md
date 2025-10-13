@@ -15,7 +15,7 @@ last_update:
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/6.png"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong></a>
 </div>
 
 :::info
@@ -32,7 +32,7 @@ last_update:
 ## 前提条件
 
 - [Ubuntu Host PC](https://developer.nvidia.com/sdk-manager)（ネイティブまたはVMware Workstation Playerを使用したVM）
-- Jetson AGX Xavier H01 Kit
+- Jetson AGX Orin H01 Kit
 - USB Type-Cデータ転送ケーブル
 
 ## Force Recovery Modeに入る
@@ -247,7 +247,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo ./apply_binaries.sh
 ```
 
-- **Step 4:** Extract **A605_Jetpack_6.1.tar.gz**:
+- **ステップ 4:** **A605_Jetpack_6.1.tar.gz** を解凍します:
 
 ```bash
 cd ..
@@ -318,7 +318,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo ./apply_binaries.sh
 ```
 
-- **Step 4:** Extract **605_jp62.tar.gz**:
+- **ステップ 4:** **605_jp62.tar.gz** を解凍します:
 
 ```bash
 cd ..
@@ -326,7 +326,7 @@ tar xf 605_jp62.tar.gz
 sudo cp -r 605_jp62/Linux_for_Tegra/* Linux_for_Tegra/
 ```
 
-- **Step 5:** Flash the system to the eMMC:
+- **ステップ 5:** システムをeMMCにフラッシュする：
 
 ```bash
 cd Linux_for_Tegra

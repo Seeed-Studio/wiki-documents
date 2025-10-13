@@ -28,7 +28,7 @@ Groveスターターキットには、1つのGrove Base Hat（Raspberry Pi用）
 
 ### 製品詳細
 
-#### Grove Base Hat
+#### Grove ベースハット
 
 **[Raspberry Pi用Grove Base Hat](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)**
 

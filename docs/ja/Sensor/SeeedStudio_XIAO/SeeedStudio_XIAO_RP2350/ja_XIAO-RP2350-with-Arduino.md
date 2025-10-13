@@ -12,7 +12,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Seeed Studio XIAO RP2350 with Arduino
+# Seeed Studio XIAO RP2350 と Arduino
 
 Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/earlephilhower/arduino-pico)のおかげで、Arduinoによるプログラミングをサポートしています。このガイドでは、RP2350 ボードでArduinoをセットアップして使い始める方法を説明します。
 

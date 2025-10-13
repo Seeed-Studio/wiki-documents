@@ -44,7 +44,7 @@ FUXA は堅牢な Web ベースソフトウェアとして、スケーラブル�
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
    <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
@@ -77,7 +77,7 @@ npm -v
 
 ```
 
-**Next Install FUXA from NPM**
+**次に NPM から FUXA をインストールします**
 
 ```sh
 sudo npm install -g --unsafe-perm @frangoteam/fuxa-min

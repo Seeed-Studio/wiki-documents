@@ -68,7 +68,9 @@ edge-impulse-daemon
 
 对于您的第一个项目，让我们快速训练和部署一个简单的神经网络，仅使用单个光传感器来分类石头剪刀布手势。更多详细信息和视频教程，请观看相应的视频！
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iCmlKyAp8eQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## 训练数据获取
 

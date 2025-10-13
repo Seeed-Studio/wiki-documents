@@ -10,7 +10,7 @@ last_update:
   author: shuxu hu
 ---
 
-# **Seeed Studio XIAO RP2040 with MicroPython**
+# **Seeed Studio XIAO RP2040 と MicroPython**
 
 ## **MicroPython の紹介**
 
@@ -81,7 +81,7 @@ tim = Timer(-1)
 tim.init(period=1000, mode=Timer.PERIODIC, callback=fun)
 ```
 
-- **Step 4**. 「Run current script」ボタンをクリックしてコードをアップロードします。初回の場合、Thonnyはコードファイルをどこに保存するかを尋ねます。**This Computer**と**Raspberry Pi Pico**のどちらでも構いません。
+- **ステップ 4**. 「Run current script」ボタンをクリックしてコードをアップロードします。初回の場合、Thonnyはコードファイルをどこに保存するかを尋ねます。**This Computer**と**Raspberry Pi Pico**のどちらでも構いません。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
@@ -95,9 +95,9 @@ tim.init(period=1000, mode=Timer.PERIODIC, callback=fun)
 
 Seeed Studio XIAO RP2040にはRGB LEDが搭載されており、MicroPythonを使用してそれを点灯させます。サードパーティライブラリが必要なので、まず追加のライブラリを追加する必要があります。
 
-- **Step 1**. [ws2812.py](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/ws2812.py)ライブラリをダウンロードし、Thonnyで開きます。
+- **ステップ 1**. [ws2812.py](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/ws2812.py)ライブラリをダウンロードし、Thonnyで開きます。
 
-- **Step 2**. 「File-->Save as」をクリックしてライブラリを保存します。
+- **ステップ 2**. 「File-->Save as」をクリックしてライブラリを保存します。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk4.png" /></div>
 
@@ -109,7 +109,7 @@ Seeed Studio XIAO RP2040にはRGB LEDが搭載されており、MicroPythonを�
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk6.png" /></div>
 
-- **Step 3**. 以下のコードをThonnyにコピーします。
+- **ステップ 3**. 以下のコードをThonnyにコピーします。
 
 ```cpp
 from ws2812 import WS2812
@@ -137,7 +137,7 @@ while True:
         utime.sleep(0.2)
 ```
 
-- **Step 4**. 「Run current script」ボタンをクリックしてコードをアップロードします。初回の場合、Thonnyはコードファイルを保存する場所を尋ねます。**This Computer**と**Raspberry Pi Pico**のどちらでも構いません。
+- **ステップ 4**. 「Run current script」ボタンをクリックしてコードをアップロードします。初回の場合、Thonnyはコードファイルを保存する場所を尋ねます。**This Computer**と**Raspberry Pi Pico**のどちらでも構いません。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
@@ -153,9 +153,9 @@ while True:
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_15.png" /></div>
 
-- **Step 1**. [ssd1306.py](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/ssd1306.py)ライブラリをダウンロードし、Thonnyで開きます。
+- **ステップ 1**. [ssd1306.py](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/ssd1306.py)ライブラリをダウンロードし、Thonnyで開きます。
 
-- **Step 2**. 「File-->Save as」をクリックし、ライブラリを「Raspberry Pi Pico」に保存します。
+- **ステップ 2**. 「File-->Save as」をクリックし、ライブラリを「Raspberry Pi Pico」に保存します。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk4.png" /></div>
 
@@ -167,7 +167,7 @@ while True:
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk8.png" /></div>
 
-- **Step 3**. 以下のコードをThonnyにコピーします。
+- **ステップ 3**. 以下のコードをThonnyにコピーします。
 
 ```cpp
 from ssd1306 import SSD1306_I2C
@@ -196,7 +196,7 @@ while True:
 
 私たちのパートナーである**Neil**が、MicroPythonを使用してXIAO用のコマンドラインコンソールプログラムを作成しました。このプログラムを使用すると、ファイルのアップロード、ダウンロード、削除を簡単に行うことができます。XIAOへの貢献に感謝いたします！
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 詳しく見る</font></span></strong></a></div>
 
 ## 追加リソース
 

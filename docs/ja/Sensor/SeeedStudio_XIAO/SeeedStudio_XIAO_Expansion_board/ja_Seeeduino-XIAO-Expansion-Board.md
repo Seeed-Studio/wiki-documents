@@ -735,7 +735,7 @@ Arduinoモードに戻りたい場合は、Arduino IDEで任意のプログラ�
 
 - [**Seeed Studio XIAO SAMD21**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-- [**Seeed Studio Expansion Base for XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+- [**Seeed Studio XIAO用拡張ベース**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
 - [**Grove ミニ扇風機**](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1.html)
 - [**Grove-Servo**](https://www.seeedstudio.com/Grove-Servo.html)
@@ -853,11 +853,11 @@ void loop() {
 
 - [**Seeed Studio XIAO **](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-- [**Seeed Studio Expansion Base for XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+- [**Seeed Studio XIAO用拡張ベース**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
-- [**Grove - I2C Mini Motor Driver**](https://www.seeedstudio.com/Grove-I2C-Mini-Motor-Driver.html)
-- [**DC Motor**](https://www.seeedstudio.com/130-DC-Motor-p-2023.html)
-- [**Grove - IR (Infrared) Receiver**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
+- [**Grove - I2C ミニモータードライバー**](https://www.seeedstudio.com/Grove-I2C-Mini-Motor-Driver.html)
+- [**DC モーター**](https://www.seeedstudio.com/130-DC-Motor-p-2023.html)
+- [**Grove - IR (赤外線) レシーバー**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
 
 **ハードウェア接続**
 
@@ -973,9 +973,9 @@ void delayUntil(unsigned long elapsedTime) {
 
 - [**Seeed Studio XIAO SAMD21 **](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-- [**Seeed Studio Expansion Base for XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+- [**Seeed Studio XIAO用拡張ベース**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
-- [**Seeed Grove - Capacitive Fingerprint Scanner/Sensor**](https://www.hackster.io/products/buy/80263?s=BAhJIhMzNzA5MzAsUHJvamVjdAY6BkVG%0A)
+- [**Seeed Grove - 静電容量式指紋スキャナー/センサー**](https://www.hackster.io/products/buy/80263?s=BAhJIhMzNzA5MzAsUHJvamVjdAY6BkVG%0A)
 
 - [**Seeed Grove RGB LED Ring - 24**](https://www.hackster.io/products/buy/80264?s=BAhJIhMzNzA5MzAsUHJvamVjdAY6BkVG%0A)
 
@@ -1187,9 +1187,9 @@ void colorWipe(uint32_t c, uint8_t wait) {
 
 - [**Seeed Studio XIAO SAMD21 **](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-- [**Seeed Studio Expansion Base for XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+- [**Seeed Studio XIAO用拡張ベース**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
-- [**Seeed Grove - Capacitive Fingerprint Scanner/Sensor**](https://www.hackster.io/products/buy/81052?s=BAhJIhMzNzQxMDUsUHJvamVjdAY6BkVG%0A)
+- [**Seeed Grove - 静電容量式指紋スキャナー/センサー**](https://www.hackster.io/products/buy/81052?s=BAhJIhMzNzQxMDUsUHJvamVjdAY6BkVG%0A)
 
 - [**Seeed Grove - Electromagnet**](https://www.hackster.io/products/buy/32769?s=BAhJIhMzNzQxMDUsUHJvamVjdAY6BkVG%0A)
 
@@ -1312,13 +1312,13 @@ void setup() {
 
 - [**Seeed Studio XIAO SAMD21 **](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-- [**Seeed Studio Expansion Base for XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+- [**Seeed Studio XIAO用拡張ベース**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
-- [**Seeed Grove - CO2 & Temperature & Humidity Sensor for Arduino (SCD30) - 3-in-1**](https://www.hackster.io/products/buy/80471?s=BAhJIhMzNzE2NzQsUHJvamVjdAY6BkVG%0A)
+- [**Seeed Grove - CO2 & Arduino用温度・湿度センサー (SCD30) - 3-in-1**](https://www.hackster.io/products/buy/80471?s=BAhJIhMzNzE2NzQsUHJvamVjdAY6BkVG%0A)
 
-- [**Seeed Grove - Laser PM2.5 Dust Sensor - Arduino Compatible - HM3301**](https://www.hackster.io/products/buy/80472?s=BAhJIhMzNzE2NzQsUHJvamVjdAY6BkVG%0A)
+- [**Seeed Grove - レーザー PM2.5 ダストセンサー - Arduino互換 - HM3301**](https://www.hackster.io/products/buy/80472?s=BAhJIhMzNzE2NzQsUHJvamVjdAY6BkVG%0A)
 
-- [**Seeed Grove - Dust Sensor（PPD42NS）**](https://www.hackster.io/products/buy/30140?s=BAhJIhMzNzE2NzQsUHJvamVjdAY6BkVG%0A)
+- [**Seeed Grove - ダストセンサー（PPD42NS）**](https://www.hackster.io/products/buy/30140?s=BAhJIhMzNzE2NzQsUHJvamVjdAY6BkVG%0A)
 
 **ハードウェア接続**
 
@@ -1541,9 +1541,9 @@ void loop() {
 
 - [**Seeed Studio XIAO SAMD21 **](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-- [**Seeed Studio Expansion Base for XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+- [**Seeed Studio XIAO用拡張ベース**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
-- [**Seeed Grove - Finger-clip Heart Rate Sensor**](https://www.hackster.io/products/buy/80359?s=BAhJIhMzNzExNzMsUHJvamVjdAY6BkVG%0A)
+- [**Seeed Grove - 指クリップ式心拍センサー**](https://www.hackster.io/products/buy/80359?s=BAhJIhMzNzExNzMsUHJvamVjdAY6BkVG%0A)
 
 **ハードウェア接続**
 

@@ -15,7 +15,9 @@ last_update:
 
 Este Sensor de Polvo proporciona una buena indicación de la calidad del aire en un entorno midiendo la concentración de polvo. El nivel de Material Particulado (nivel PM) en el aire se mide contando el tiempo de Ocupación de Pulso Bajo (tiempo LPO) en una unidad de tiempo determinada. El tiempo LPO es proporcional a la concentración de PM. Este sensor puede proporcionar datos confiables para sistemas purificadores de aire; es sensible a PM de diámetro 1μm.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4df5kaaKa6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 :::caution
 
@@ -25,6 +27,7 @@ Este Sensor de Polvo proporciona una buena indicación de la calidad del aire en
   - Se requiere un tiempo de precalentamiento de 3 min al usarlo por primera vez.
   - La operación arbitraria puede causar daños inesperados.
   - Los siguientes widgets (marcados con rectángulo rojo) se usan solo para la configuración de fábrica. Por favor **NO** cambie la configuración predeterminada.
+
 :::
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Dust-Sensor-p-1050.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border="0" /></a></p>
@@ -115,7 +118,6 @@ Si no tenemos el Shield Base Grove, también podemos conectar directamente el Se
 | NC        | Blanco           |
 | D8        | Amarillo          |
 
-
 **Software**
 
 - **Paso 1.** Por favor copia el código de abajo al IDE de Arduino y súbelo al arduino. Si no sabes cómo subir el código, por favor revisa [cómo subir código](https://wiki.seeedstudio.com/es/Upload_Code/).
@@ -187,7 +189,6 @@ Podemos ver que la concentración de polvo es muy baja en la noche, pero es más
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Dust_Sensor/img/Dust_sensor%20-_s.JPG)|
 |[Obtener Uno Ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Grove-Dust-Sensor-p-1050.html)|
 
-
 - **Paso 2.** Conecta el GrovePi_Plus al Raspberry.
 - **Paso 3.** Conecta el Grove-Dust Sensor al puerto **D2** del GrovePi_Plus.
 - **Paso 4.** Conecta el Raspberry a la PC a través del cable USB.
@@ -235,7 +236,7 @@ while True:
 
 ```
 
-- **Step 4.** We will see the dust status as below.
+- **Paso 4.** Veremos el estado del polvo como se muestra a continuación.
 
 ```python
 pi@raspberrypi:~/GrovePi/Software/Python $ python grove_dust_sensor.py 
@@ -294,12 +295,12 @@ R1: La señal de salida del Sensor de Polvo necesita ser reducida a lógica de 3
 ## Soporte Técnico y Discusión de Productos
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 

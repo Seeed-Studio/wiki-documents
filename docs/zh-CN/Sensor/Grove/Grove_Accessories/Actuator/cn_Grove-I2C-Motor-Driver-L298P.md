@@ -127,8 +127,8 @@ void setup() {
     Serial.begin(9600);
     Motor.begin(I2C_ADDRESS);
     // 驱动步进电机
-    // \_step: -1024~1024，当 \_step > 0 时，步进电机顺时针运行；当 \_step < 0 时，步进电机逆时针运行；
-    // 当 \_step 为 512 时，步进电机将完成一次完整转动；如果 \_step 为 1024，步进电机将完成两次转动。
+    // _step: -1024~1024，当 _step > 0 时，步进电机顺时针运行；当 _step < 0 时，步进电机逆时针运行；
+    // 当 _step 为 512 时，步进电机将完成一次完整转动；如果 _step 为 1024，步进电机将完成两次转动。
     Motor.StepperRun(-1024);
     Motor.StepperRun(512);
 }

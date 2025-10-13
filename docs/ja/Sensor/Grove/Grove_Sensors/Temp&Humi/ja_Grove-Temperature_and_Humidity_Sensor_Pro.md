@@ -260,9 +260,9 @@ DHT22, humidity 42.0%, temperature 29.1*
 
 #### ソフトウェア
 
-GrovePiを初めて使用する場合は、この部分をステップごとに実行してください。GrovePiに慣れている場合は、**Step1**と**Step2**をスキップできます。
+GrovePiを初めて使用する場合は、この部分をステップごとに実行してください。GrovePiに慣れている場合は、**ステップ1**と**ステップ2**をスキップできます。
 
-- **Step 1.** ソフトウェアのセットアップ。コマンドラインで以下のコマンドを入力してください：
+- **ステップ 1.** ソフトウェアのセットアップ。コマンドラインで以下のコマンドを入力してください：
 
 :::caution
 **Raspberry Pi with Raspberrypi OS >= Bullseye**を使用している場合、**このコマンドラインは使用できません**。
@@ -286,13 +286,13 @@ git clone https://github.com/DexterInd/GrovePi.git
 
 この部分の詳細については、[Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/)を参照してください。
 
-- **Step 2.** [Updating the Firmware](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/updating-firmware/)に従って、GrovePiの最新ファームウェアを更新してください。
+- **ステップ 2.** [Updating the Firmware](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/updating-firmware/)に従って、GrovePiの最新ファームウェアを更新してください。
 
 :::note
 ファームウェアを更新することを強くお勧めします。一部のセンサーでは、更新しないとエラーが発生する可能性があります。
 :::
 
-- **Step 3.** パラメータの設定
+- **ステップ 3.** パラメータの設定
 
 :::caution
 **Raspberry Pi with Raspberrypi OS >= Bullseye**を使用している場合、**Python3のみ**でこのコマンドラインを使用する必要があります。
@@ -339,7 +339,7 @@ while True:
 
 次に、++ctrl+x++を押してnanoを終了します。++y++を押して変更を保存します。
 
-- **Step 4.** 以下のコマンドを実行して結果を確認します。
+- **ステップ 4.** 以下のコマンドを実行して結果を確認します。
 
 ```
 sudo python3 grove_dht_pro.py

@@ -13,7 +13,6 @@ last_update:
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/img/Twig-Gas_Sensor.bmp) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/img/Twig-Gas_Sensor.bmp" alt="pir" width={600} height="auto" /></p>
 
-
 El módulo Grove - Sensor de Gas(MQ5) es útil para la detección de fugas de gas (en el hogar y la industria). Es adecuado para detectar <font color="Blue">H2, GLP, CH4, CO, Alcohol</font>. Debido a su alta sensibilidad y tiempo de respuesta rápido, las mediciones se pueden tomar tan pronto como sea posible. La sensibilidad del sensor se puede ajustar usando el potenciómetro.
 
 <div class="admonition danger">
@@ -21,8 +20,7 @@ El módulo Grove - Sensor de Gas(MQ5) es útil para la detección de fugas de ga
 El valor del sensor solo refleja la tendencia aproximada de la concentración de gas en un rango de error permisible, NO representa la concentración exacta de gas. La detección de ciertos componentes en el aire generalmente requiere un instrumento más preciso y costoso, lo cual no se puede hacer con un solo sensor de gas. Si tu proyecto está dirigido a obtener la concentración de gas a un nivel muy preciso, entonces no recomendamos este sensor de gas.
 </div>
 
-
-<!-- |Sensor|Gas Type|Get One Now|
+<!-- |Sensor|Gas Type|Compra ahora|
 |---|---|---|
 |MQ2|Combustible Gas, Smoke|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-937.html)|
 |MQ3|Alcohol Vapor|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-1418.html)|
@@ -69,12 +67,12 @@ El valor del sensor solo refleja la tendencia aproximada de la concentración de
 :::tip
     Hemos lanzado la [Guía de Selección de Sensores de Gas de Seeed](https://wiki.seeedstudio.com/es/Seeed_Gas_Sensor_Selection_Guide/), te ayudará a elegir el sensor de gas que mejor se adapte a tus necesidades.
 :::
+
 ## Características
 
-
--  Amplio alcance de detección
--  Estable y larga vida útil
--  Respuesta rápida y alta sensibilidad
+- Amplio alcance de detección
+- Estable y larga vida útil
+- Respuesta rápida y alta sensibilidad
 
 ## Especificaciones
 
@@ -89,9 +87,8 @@ El valor del sensor solo refleja la tendencia aproximada de la concentración de
 
 ## Aplicaciones
 
--  Detección de fugas de gas.
--  Juguetes.
-
+- Detección de fugas de gas.
+- Juguetes.
 
 ## Descripción del Hardware
 
@@ -108,9 +105,7 @@ Es posible conectar el módulo Grove directamente a Arduino usando cables jumper
 
 El voltaje de salida del sensor de gas aumenta cuando la concentración de gas aumenta. La sensibilidad se puede ajustar variando el potenciómetro. <font color="Red">Tenga en cuenta que el mejor tiempo de precalentamiento para el sensor es superior a 24 horas</font>. Para información detallada sobre el sensor MQ-5, consulte la hoja de datos proporcionada en la sección **Recursos**.
 
-
 ## Plataformas Compatibles
-
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -125,8 +120,7 @@ El voltaje de salida del sensor de gas aumenta cuando la concentración de gas a
     Las plataformas mencionadas anteriormente como compatibles son una indicación de la compatibilidad de software o teórica del módulo. Solo proporcionamos biblioteca de software o ejemplos de código para la plataforma Arduino en la mayoría de los casos. No es posible proporcionar biblioteca de software / código de demostración para todas las plataformas MCU posibles. Por lo tanto, los usuarios tienen que escribir su propia biblioteca de software.
 :::
 
-
-##Primeros Pasos
+## Primeros Pasos
 
 ### Jugar Con Arduino
 
@@ -140,7 +134,6 @@ El voltaje de salida del sensor de gas aumenta cuando la concentración de gas a
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/img/Read_Gas_Sensor_data_MQ2_MQ5.jpg) -->
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/img/Read_Gas_Sensor_data_MQ2_MQ5.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 Conecta el Grove - Gas Sensor(MQ5) al puerto A0 como se muestra en la imagen anterior.
 
@@ -253,9 +246,7 @@ Ahora, podemos obtener la concentración de gas de la figura a continuación.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/img/Gas_Sensor_4.png" alt="pir" width={600} height="auto" /></p>
 
-
 Según la figura, podemos ver que la concentración mínima que podemos probar es 200ppm y la máxima es 10000ppm, en otras palabras, podemos obtener una concentración de gas entre 0.02% y 1%. Sin embargo, no podemos proporcionar una fórmula porque la relación entre la proporción y la concentración es no lineal.
-
 
 ### Jugar con Raspberry Pi (Con Grove Base Hat para Raspberry Pi)
 
@@ -272,11 +263,9 @@ Según la figura, podemos ver que la concentración mínima que podemos probar e
 - **Paso 3**. Conecta el Grove - Gas Sensor(MQ5) al puerto A0 del Base Hat.
 - **Paso 4**. Conecta el Raspberry Pi a la PC a través del cable USB.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_MQ5/image/With_Hat.jpg) -->
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_MQ5/image/With_Hat.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 :::note
     Para el paso 3 puedes conectar el Grove - Gas Sensor(MQ5) a **cualquier Puerto Analógico** pero asegúrate de cambiar el comando con el número de puerto correspondiente.
@@ -285,7 +274,7 @@ Según la figura, podemos ver que la concentración mínima que podemos probar e
 #### Software
 
 - **Paso 1**. Sigue [Setting Software](https://wiki.seeedstudio.com/es/Grove_Base_Hat_for_Raspberry_Pi/#installation) para configurar el entorno de desarrollo.
-- **Paso 2**. Descarga el archivo fuente clonando la biblioteca grove.py. 
+- **Paso 2**. Descarga el archivo fuente clonando la biblioteca grove.py.
 
 ```
 cd ~
@@ -302,7 +291,6 @@ nano grove_gas_sensor_mq5.py
 ```
 
 Luego debes copiar el siguiente código en este archivo y presionar ++ctrl+x++ para salir y guardar.
-
 
 ```python
 
@@ -343,18 +331,18 @@ if __name__ == '__main__':
 
 ```
 
-- **Step 4**. Excute below commands to run code.
+- **Paso 4**. Ejecuta los siguientes comandos para ejecutar el código.
 
-```python 
+```python
 
 python grove_gas_sensor_mq5.py  0
 
 ```
 
-
 :::success
     Si todo va bien, podrás ver el siguiente resultado
 :::
+
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ python grove_gas_sensor_mq5.py  0
@@ -373,7 +361,6 @@ KeyboardInterrupt
 
 ```
 
-
 Puedes salir de este programa simplemente presionando ++ctrl+c++.
 
 :::note
@@ -383,42 +370,40 @@ Puedes salir de este programa simplemente presionando ++ctrl+c++.
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/res/Gas_Sensor_Eagle_files.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 ## Recursos
 
 **Lectura Sugerida / Referencias**
 
--   Cómo elegir un Sensor de Gas
--   [Qué es LEL](https://en.wikipedia.org/wiki/Flammability_limit)
+- Cómo elegir un Sensor de Gas
+- [Qué es LEL](https://en.wikipedia.org/wiki/Flammability_limit)
 
 **Esquemático**
 
--   [Grove Sensor de Gas - archivos EAGLE (Esquemático y Placa)](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/res/Gas_Sensor_Eagle_files.zip)
--   [Grove Sensor de Gas - Esquemático PDF](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/res/Gas_Sensor_Schematic.pdf)
+- [Grove Sensor de Gas - archivos EAGLE (Esquemático y Placa)](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/res/Gas_Sensor_Eagle_files.zip)
+- [Grove Sensor de Gas - Esquemático PDF](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/res/Gas_Sensor_Schematic.pdf)
 
 **Hoja de Datos**
 
--   [Hoja de Datos MQ-5](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/res/MQ-5.pdf)
+- [Hoja de Datos MQ-5](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/res/MQ-5.pdf)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Gas_Sensor(MQ5) -->
 
 ## Soporte Técnico y Discusión de Productos
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 
 ## Actualizable a Sensores Industriales
+
 Con el [controlador S2110](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) y el [registrador de datos S2100](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html) de SenseCAP, puedes convertir fácilmente el Grove en un sensor LoRaWAN®. Seeed no solo te ayuda con el prototipado sino que también te ofrece la posibilidad de expandir tu proyecto con la serie SenseCAP de [sensores industriales](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP) robustos.
 
 La carcasa IP66, configuración Bluetooth, compatibilidad con la red global LoRaWAN®, batería integrada de 19 Ah, y el potente soporte de la APP hacen del [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP&product_module=Device) la mejor opción para aplicaciones industriales. La serie incluye sensores para humedad del suelo, temperatura y humedad del aire, intensidad de luz, CO2, EC, y una estación meteorológica 8 en 1. Prueba el último SenseCAP S210x para tu próximo proyecto industrial exitoso.
 
 <div align="center"><a href="https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP" target="_blank"><img width={800} src="https://files.seeedstudio.com/wiki/K1100_overview/sensecap.png" /></a></div>
-
-

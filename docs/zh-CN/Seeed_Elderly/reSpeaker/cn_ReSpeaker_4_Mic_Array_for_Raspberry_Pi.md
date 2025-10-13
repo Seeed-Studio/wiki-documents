@@ -17,7 +17,9 @@ ReSpeaker 4-Mic Array for Raspberry Pi 是一款专为 Raspberry Pi 设计的四
 
 与 [ReSpeaker 2-Mics Pi HAT](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html) 不同，这款板子基于 AC108 开发，这是一个高度集成的四通道 ADC，具有 I2S/TDM 输出转换功能，用于高清语音捕获，使设备能够在 3 米半径内拾取声音。此外，这个 4-Mics 版本配备了一个 LED 环，包含 12 个 APA102 可编程 LED。通过这 4 个麦克风和 LED 环，Raspberry Pi 将具备进行 VAD（语音活动检测）、估算 DOA（到达方向）、执行 KWS（关键词搜索）并通过 LED 环显示方向的能力，就像 Amazon Echo 或 Google Home 一样。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/IkSfBSf1IRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
@@ -77,7 +79,7 @@ sudo ./install.sh
 sudo reboot now
 ```
 
-- Step 2. Then select audio output on Raspberry Pi:
+- 步骤 2. 然后在树莓派上选择音频输出:
 
 ```sh
 sudo raspi-config
@@ -193,7 +195,7 @@ python3 interfaces/pixels.py
 python3 recording_examples/get_device_index.py
 ```
 
-You will see the device ID as below.
+您将看到如下所示的设备 ID。
 
 ```txt
 Input Device id  2  -  seeed-4mic-voicecard: - (hw:1,0)
@@ -211,7 +213,7 @@ python3 recording_examples/record.py
 python3 recording_examples/record_one_channel.py
 ```
 
-To play the recorded samples you can either use aplay system utility, for example
+要播放录制的样本，您可以使用 aplay 系统实用程序，例如
 
 ```bash
 aplay -f cd -Dhw:0 output.wav #for Stereo sound
@@ -237,7 +239,7 @@ cmake ..
 make
 ```
 
-- Step 2. Get [ODAS Studio](https://github.com/introlab/odas_web)  and run it.
+- 步骤 2. 获取 [ODAS Studio](https://github.com/introlab/odas_web) 并运行它。
 
 Install nodejs v12.22 and npm 6.14.
 
@@ -247,14 +249,14 @@ sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 ```
 
-Ensure that the relevant compilation tools are installed
+确保已安装相关的编译工具
 
 ```bash
 sudo apt -y install gcc g++ make
 sudo apt -y install nodejs
 ```
 
-Installing odas_web dependencies with npm
+使用 npm 安装 odas_web 依赖项
 
 ```bash
 cd ~/Desktop
@@ -269,7 +271,7 @@ npm install
 npm start
 ```
 
-Or we can downgrade Python to 2.7 for building old election-rebuild module. (We do not have to do this step)
+或者我们可以将Python降级到2.7版本来构建旧的election-rebuild模块。（我们不必执行这一步）
 
 ```bash
 sudo apt remove python3 -y
@@ -284,7 +286,7 @@ sudo apt install python2 -y
 arecord -l  #type this commond  make sure u have arecord installed
 ```
 
-You will see something like the following output
+你会看到类似以下的输出
 
 ```bash
 pi@raspberrypi:~/Desktop/odas/config/odaslive $ arecord -l
@@ -294,7 +296,7 @@ card 3: seeed4micvoicec [seeed-4mic-voicecard], device 0: bcm2835-i2s-ac10x-code
   Subdevice #0: subdevice #0
 ```
 
-Change the sound card designation in 18th line , in the cfg configuration file
+在 cfg 配置文件中，修改 18th 行的声卡指定
 
 ```bash
 vim ~/Desktop/odas/config/odaslive/respeaker_4_mic_array.cfg
@@ -372,7 +374,7 @@ picovoice_respeaker_demo
 
 ### Voice Commands
 
-Here are voice commands for this demo:
+以下是此演示的语音命令：
 
 - **Picovoice**
 
@@ -384,7 +386,7 @@ wake word
 
 - **Turn on the lights**
 
-You should see the lights turned on and the following message in the terminal:
+你应该看到灯亮起，并在终端中看到以下消息：
 
 ```config
 {
@@ -423,11 +425,11 @@ context:
 
 另外，您也可以尝试使用此命令来改变颜色：
 
-- **Picovoice, set the lights to orange**
+- **Picovoice，把灯光设置为橙色**
 
 通过以下命令关闭灯光：
 
-- **Picovoice, turn off all lights**
+- **Picovoice，关闭所有灯**
 
 **演示视频展示**
 
@@ -475,13 +477,13 @@ pip3 install ppnrespeakerdemo
 
 #### Multi Wake Word Usage
 
-Run the following in terminal after the driver installation:
+驱动程序安装完成后，在终端中运行以下命令：
 
 ```sh
 porcupine_respeaker_demo
 ```
 
-Wait for the demo to initialize and print `[Listening]` in the terminal. Say:
+等待演示初始化并在终端中打印 `[Listening]`。说：
 
 > Picovoice
 
@@ -543,14 +545,14 @@ A4: 当驱动程序首次加载时（启动后），确实存在一次性的小�
 
 ## 资源
 
-- **[PDF]** [ReSpeaker 4-Mic Array for Raspberry Pi(PDF)](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/src/ReSpeaker%204-Mic%20Array%20for%20Raspberry%20Pi%20%20v1.0.pdf)
-- **[DXF]** [ReSpeaker 4-Mic Array for Raspberry Pi v1.0](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/src/ReSpeaker%204-Mic%20Array%20for%20Raspberry%20Pi%20v1.0.dxf.zip)
-- **[3D]** [ReSpeaker 4-Mic Array for Raspberry Pi v1.0 3D Model](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/src/ReSpeaker%204-Mics%20Pi%20HAT%20v1.0.skp.zip)
+- **[PDF]** [ReSpeaker 树莓派 4 麦克风阵列(PDF)](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/src/ReSpeaker%204-Mic%20Array%20for%20Raspberry%20Pi%20%20v1.0.pdf)
+- **[DXF]** [ReSpeaker 树莓派 4 麦克风阵列 v1.0](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/src/ReSpeaker%204-Mic%20Array%20for%20Raspberry%20Pi%20v1.0.dxf.zip)
+- **[3D]** [ReSpeaker 树莓派 4 麦克风阵列 v1.0 3D 模型](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/src/ReSpeaker%204-Mics%20Pi%20HAT%20v1.0.skp.zip)
 - **[AC108]** [AC108 DataSheet](http://www.x-powers.com/en.php/Info/product_detail/article_id/41)
-- **[Driver]** [Seeed-Voice Driver](https://github.com/respeaker/seeed-voicecard)
-- **[Algorithms]** [Algorithms includes DOA, VAD, NS](https://github.com/respeaker/mic_array)
-- **[Voice Engine]** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
-- **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
+- **[驱动程序]** [Seeed-Voice 驱动程序](https://github.com/respeaker/seeed-voicecard)
+- **[算法]** [算法包括 DOA、VAD、NS](https://github.com/respeaker/mic_array)
+- **[语音引擎]** [语音引擎项目，提供创建语音启用对象的构建模块](https://github.com/voice-engine/voice-engine)
+- **[算法]** [AEC](https://github.com/voice-engine/ec)
 
 ## 技术支持与产品讨论
 

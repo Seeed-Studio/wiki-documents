@@ -178,20 +178,17 @@ Deci 支持以下与 Jetson 相关的硬件：
 ```sh
 sudo apt update 
 ```
-
-- **Step 2.** Install pip package manager
+- **步骤 2.** 安装pip包管理器
 
 ```sh
 sudo apt install python3-pip
 ```
-
-- **Step 3.** Update pip to the latest version
+- **步骤 3.** 将 pip 更新到最新版本
 
 ```sh
 python3 -m pip install -U pip
 ```
-
-- **Step 4.** Install INFERY for Jetson
+- **步骤 4.** 为 Jetson 安装 INFERY
 
 ```sh
 sudo python3 -m pip install https://deci-packages-public.s3.amazonaws.com/infery_jetson-3.2.2-cp36-cp36m-linux_aarch64.whl
@@ -242,7 +239,7 @@ infery_manager -INFO- Successfully loaded YOLOX_Nano.onnx to the GPU.
 model.benchmark(batch_size=1)
 ```
 
-The following will be the output for the **YOLOX_Nano** model
+以下将是 **YOLOX_Nano** 模型的输出
 
 ```sh
 base_inferencer -INFO- Benchmarking the model in batch size 1 and dimensions [(3, 416, 416)]...

@@ -10,7 +10,7 @@ last_update:
   author: timo614
 ---
 
-# XIAO SAMD21 With Zephyr(RTOS)
+# XIAO SAMD21 と Zephyr(RTOS)
 
 <div align="center"><img width ="{100}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-samd21.png"/></div>
 
@@ -141,12 +141,12 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
@@ -296,7 +296,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/subsys/fs/littlefs -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-Double press RESET or short the RST pin to the GND:
+RESETをダブルプレスするか、RSTピンをGNDにショートしてください：
 
 ```
 west flash
@@ -385,7 +385,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/modules/tflite-micro/hello_world -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-Double press RESET or short the RST pin to the GND:
+RESETをダブルプレスするか、RSTピンをGNDにショートしてください：
 
 ```
 west flash
@@ -443,7 +443,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/drivers/display -- -DSHIELD=seeed_xiao_expansion_board
 ```
 
-Double press RESET or short the RST pin to the GND:
+RESETをダブルプレスするか、RSTピンをGNDにショートしてください：
 
 ```
 west flash
@@ -674,7 +674,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/sht31.overlay $(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-Double press RESET or short the RST pin to the GND:
+RESETをダブルプレスするか、RSTピンをGNDにショートしてください：
 
 ```
 west flash
@@ -752,7 +752,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.conf
 ```
 
-Double press RESET or short the RST pin to the GND:
+RESETをダブルプレスするか、RSTピンをGNDにショートしてください：
 
 ```
 west flash

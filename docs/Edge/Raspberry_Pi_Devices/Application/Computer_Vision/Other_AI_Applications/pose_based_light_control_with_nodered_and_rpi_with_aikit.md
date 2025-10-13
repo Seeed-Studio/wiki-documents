@@ -161,7 +161,7 @@ python3 video_receiver.py
 
 We showed this demonstration in a youtube live broadcast which begin at ```19:47```. And you can see the light will turn on when the host clap her hands, then the light will turn off when the host wave her hand, enjoy this demo:
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/v-S6_tH75NI" title="Making Next Gadget: AI Boosted RPi for Real World Applications" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

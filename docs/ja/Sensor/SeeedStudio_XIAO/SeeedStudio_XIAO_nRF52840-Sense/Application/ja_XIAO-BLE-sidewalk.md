@@ -55,7 +55,7 @@ Amazon Sidewalkは現在米国で利用可能です。開発者は、Sidewalk対
 
     Amazon Sidewalkは、ネットワーク上を移動するデータを保護し、顧客データとプライバシー保護を確保するために、複数のプライバシーとセキュリティ機能を備えて設計されています。
 
-## Seeed Studio XIAO nRF52840 for Amazon Sidewalk
+## Amazon Sidewalk用Seeed Studio XIAO nRF52840
 
 XIAO nRF52840は、Amazon Sidewalk認定のワイヤレスモジュールで、Amazon SidewalkネットワークでBluetooth Low Energyラジオ技術を介してIoTデバイス接続を提供します。
 
@@ -100,13 +100,13 @@ XIAO nRF52840は、Amazon Sidewalk認定のワイヤレスモジュールで、A
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
             <td></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Red-LED-Button.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
             <td></td>
@@ -136,12 +136,12 @@ XIAO nRF52840は、Amazon Sidewalk認定のワイヤレスモジュールで、A
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -173,25 +173,25 @@ Toolchain Managerアプリケーションを使用してnRF Connect SDKを自動
 
 Toolchain Managerは、nRF Connect SDKのインストールを簡素化するさまざまなアプリケーションを提供するクロスプラットフォームツールであるnRF Connect for Desktopから利用できます。ツールとアプリケーションの両方が、Windows、Linux、macOSで利用できます。
 
-**ステップ1**. お使いのオペレーティングシステム用の[nRF Connect for Desktop](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Connect-for-desktop)をダウンロードします。
+**ステップ 1**. お使いのオペレーティングシステム用の[nRF Connect for Desktop](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Connect-for-desktop)をダウンロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/1.png" style={{width:1000, height:'auto'}}/></div>
 
-**ステップ2**. マシンにツールをインストールして実行します。
+**ステップ 2**. マシンにツールをインストールして実行します。
 
-**ステップ3**. **APPS**セクションで、**Toolchain Manager**の横にある**Install**をクリックします。
+**ステップ 3**. **APPS**セクションで、**Toolchain Manager**の横にある**Install**をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/2.png" style={{width:600, height:'auto'}}/></div>
 
-**ステップ4**. アプリがマシンにインストールされ、**Install**ボタンが**Open**に変わります。
+**ステップ 4**. アプリがマシンにインストールされ、**Install**ボタンが**Open**に変わります。
 
-**ステップ5**. nRF Connect for DesktopでToolchain Managerを開きます。
+**ステップ 5**. nRF Connect for DesktopでToolchain Managerを開きます。
 
 ナビゲーションバーの**SDK ENVIRONMENTS**をクリックして、nRF Connect SDKをインストールする場所を指定します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/3.png" style={{width:600, height:'auto'}}/></div>
 
-**ステップ6**. SDK ENVIRONMENTSで、インストールしたい**nRF Connect SDKバージョン**の横にある**Install**ボタンをクリックします。
+**ステップ 6**. SDK ENVIRONMENTSで、インストールしたい**nRF Connect SDKバージョン**の横にある**Install**ボタンをクリックします。
 
 選択したnRF Connect SDKバージョンがマシンにインストールされます。Installボタンが**Open VS Code**に変わります。
 
@@ -210,7 +210,7 @@ Toolchain Managerは、nRF Connect SDKのインストールを簡素化するさ
 - Visual Studio CodeとnRF Connect for VS Code拡張機能を使用
 - コマンドラインを使用
 
-**ステップ7**. 私たちのプロジェクトでは、コマンドラインの使用で十分です。インストールしたバージョンの横にある下矢印をクリックし、**Open bash**を選択します。
+**ステップ 7**. 私たちのプロジェクトでは、コマンドラインの使用で十分です。インストールしたバージョンの横にある下矢印をクリックし、**Open bash**を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/23.png" style={{width:600, height:'auto'}}/></div>
 
@@ -227,7 +227,7 @@ Toolchain Managerは、nRF Connect SDKのインストールを簡素化するさ
 |___ ...
 ```
 
-**Step 8**. [Amazon Sidewalk アプリケーションリポジトリ](https://github.com/nrfconnect/sdk-sidewalk)を sdk-sidewalk リポジトリから nRF Connect SDK フォルダにクローンし、以下のコマンドを実行して `sidewalk` という名前を付けます：
+**ステップ 8**. [Amazon Sidewalk アプリケーションリポジトリ](https://github.com/nrfconnect/sdk-sidewalk)を sdk-sidewalk リポジトリから nRF Connect SDK フォルダにクローンし、以下のコマンドを実行して `sidewalk` という名前を付けます：
 
 ```
 git clone https://github.com/nrfconnect/sdk-sidewalk.git sidewalk
@@ -297,7 +297,7 @@ Amazon Sidewalk製品の設定に関する元のチュートリアルは[こち�
 
 次に、デバイスがキーを介してあなたのAWSアカウントに接続されるように、AWSクラウドサービスを設定する必要があります。
 
-**ステップ1**. Amazon Sidewalk Sample IoT Appリポジトリをローカルマシンにダウンロードします。新しいターミナルを開き（Windowsを使用している場合は、新しいPowershellを開く）、以下のコマンドを入力してリポジトリをクローンします。
+**ステップ 1**. Amazon Sidewalk Sample IoT Appリポジトリをローカルマシンにダウンロードします。新しいターミナルを開き（Windowsを使用している場合は、新しいPowershellを開く）、以下のコマンドを入力してリポジトリをクローンします。
 
 ```
 git clone https://github.com/aws-samples/aws-iot-core-for-amazon-sidewalk-sample-app.git
@@ -336,7 +336,7 @@ aws_access_key_id = YOUR_ACCESS_KEY
 aws_secret_access_key = YOUR_SECRET_KEY
 ```
 
-This is followed by the choice of country and region, here we need to select **us-east-1**.
+これに続いて国と地域の選択があり、ここでは**us-east-1**を選択する必要があります。
 
 ```
 region=us-east-1

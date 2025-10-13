@@ -271,14 +271,13 @@ ls /dev/tty*
 ```
 idf.py set-target esp32c6
 ```
-
-Build the project by running:
+通过运行以下命令构建项目：
 
 ```
 idf.py build
 ```
 
-To flash the binaries that you just built for the ESP32 in the previous step, you need to run the following command:
+要刷写你在上一步为 ESP32 构建的二进制文件,你需要运行以下命令:
 
 ```
 idf.py -p PORT flash
@@ -435,7 +434,7 @@ ESP_ERROR_CHECK(esp_zb_start(false));
 esp_zb_main_loop_iteration();
 ```
 
-The `esp_zb_app_signal_handler` function is responsible for handling various signals from the Zigbee application layer.
+`esp_zb_app_signal_handler` 函数负责处理来自 Zigbee 应用层的各种信号。
 
 ```cpp
 void esp_zb_app_signal_handler(esp_zb_app_signal_t *signal_struct)

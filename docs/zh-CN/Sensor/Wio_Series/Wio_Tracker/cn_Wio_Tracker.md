@@ -24,7 +24,7 @@ Wio 最吸引人的地方必须是通过移动应用程序将即插即用模块�
 这里是你可以在 Seeed WiKi 中找到的 Wio_Tracker 开发板列表。该列表将不断更新。
 
 - [Wio LTE Cat.1](https://wiki.seeedstudio.com/cn/Wio_LTE_Cat.1/)
-- [Wio Tracker - GPS, BT3.0, GSM, Arduino Compatible](https://wiki.seeedstudio.com/cn/wio_gps_board/)
+- [Wio Tracker - GPS、BT3.0、GSM，兼容Arduino](https://wiki.seeedstudio.com/cn/wio_gps_board/)
 
 
 ## 技术支持与产品讨论

@@ -23,7 +23,6 @@ no_comments: false # for Disqus
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Boot_NVIDIA_System_from_SD_card_for_Jetson101/S.png" /></div>
 
-
 ### ステップ 1 . リポジトリのクローン
 
 右クリックしてターミナルを開き、以下のコマンドを実行して関連するコードをダウンロードします：
@@ -97,13 +96,12 @@ sudo /opt/nvidia/jetson-io/config-by-hardware.py -n "reComputer sdmmc"
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Boot_NVIDIA_System_from_SD_card_for_Jetson101/fix01.png" /></div>
 
-
 !!!Note
     初回インストール完了後にjtopを実行するには、**再起動**が必要な場合があります。
 
-<!-- ## Move system to SD card
+<!-- ## システムをSDカードに移動
 
-First, we need to clone the script include the tools we need.
+まず、必要なツールを含むスクリプトをクローンする必要があります。
 
 ```bash
 git clone https://github.com/limengdu/bootFromUSB
@@ -169,7 +167,6 @@ cd bootFromUSB
   <p style={{}}><a href="https://github.com/Seeed-Studio/seeed-linux-dtoverlays/blob/master/overlays/jetsonnano/jetson-sdmmc-overlay.dts" target="_blank" /></p><div align="center"><a href="https://github.com/Seeed-Studio/seeed-linux-dtoverlays/blob/master/overlays/jetsonnano/jetson-sdmmc-overlay.dts" target="_blank"><img width={300} src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></a></div><p />
 </div>
 
-
 - **ステップ1**. このリポジトリをクローンし、以下のコードを変更します。
 
     ```bash
@@ -197,12 +194,11 @@ cd bootFromUSB
 弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しております。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

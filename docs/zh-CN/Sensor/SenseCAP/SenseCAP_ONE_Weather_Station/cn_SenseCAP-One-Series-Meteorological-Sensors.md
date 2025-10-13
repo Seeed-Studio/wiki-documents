@@ -131,7 +131,7 @@ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n
 bash n 10
 ```
 
-The next step is to enable hardware serial on /dev/ttyS0. In your terminal window, run the Raspi Config tool with:
+下一步是在 /dev/ttyS0 上启用硬件串口。在终端窗口中运行以下命令打开 Raspi Config 工具：
 
 ```
 sudo raspi-config

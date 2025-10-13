@@ -317,8 +317,7 @@ AT+CH=NUM,0-2
 AT+MODE=LWOTAA
 AT+JOIN
 ```
-
-The output on serial monitor will be as follows:
+串行监视器上的输出将如下所示：
 
 ```
 Tx: AT+DR=US915

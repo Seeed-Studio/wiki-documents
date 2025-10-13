@@ -85,7 +85,7 @@ sudo vi /etc/docker/daemon.json
 sudo systemctl restart docker
 ```
 
-Set the default logging driver to the local logging driver as shown in the example below.
+デフォルトのロギングドライバーを、以下の例に示すようにローカルロギングドライバーに設定してください。
 
 ```cpp
 "log-driver": "local"

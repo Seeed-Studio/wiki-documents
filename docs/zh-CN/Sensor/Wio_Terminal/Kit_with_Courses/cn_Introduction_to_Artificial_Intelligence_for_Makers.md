@@ -55,7 +55,9 @@ AI在今天无处不在。"数据挖掘"、"人工智能"、"人工神经网络"
 
 然后神经网络主导了视觉领域，特别是分类和分割问题，卷积神经网络是近年来赢得众多竞赛的最突出方法之一。它在图像识别方面有着出色的结果。
 Nvidia 为 Jetson Nano 构建了许多[视觉演示](https://github.com/dusty-nv/jetson-inference)，我们测试了其中两个用于分类和人脸检测的演示：
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/U0rNdI9pl_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 艺术
 
@@ -148,9 +150,9 @@ AI 在今天无处不在，从消费者应用到企业应用。开发者开始�
 ### 视频教程
 
 1. [ScaledML 2019](https://www.youtube.com/playlist?list=PLRM2gQVaW_wWXoUnSfZTxpgDmNaAS1RtG)
-2. [A New Golden Age for Computer Architecture History, Challenges, and Opportunities.](https://www.youtube.com/watch?v=uyc_pDBJotI&t=767s)
-3. [SysML 18: Perspectives and Challenges.](https://www.youtube.com/watch?v=4inIBmY8dQI&t=26s)
-4. [RL Course by David Silver](https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLzuuYNsE1EZAXYR4FJ75jcJseBmo4KQ9-)
+2. [计算机架构的新黄金时代：历史、挑战和机遇。](https://www.youtube.com/watch?v=uyc_pDBJotI&t=767s)
+3. [SysML 18：前景和挑战。](https://www.youtube.com/watch?v=4inIBmY8dQI&t=26s)
+4. [David Silver的RL课程](https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLzuuYNsE1EZAXYR4FJ75jcJseBmo4KQ9-)
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 

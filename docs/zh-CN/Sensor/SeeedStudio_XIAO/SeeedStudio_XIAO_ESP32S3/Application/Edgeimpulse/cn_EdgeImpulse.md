@@ -78,7 +78,9 @@ void loop() {
 
 #### 演示
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oa0BGRXnb8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ### 工作原理
 
@@ -445,7 +447,7 @@ void loop() {
 
 ## 资源
 
-- **[GITHUB]** [SenseCraft Model Assistant Models](https://github.com/Seeed-Studio/edgelab-model-zoo/tree/main/detection)
-- **[GITHUB]** [Project Github](https://github.com/Mjrovai/XIAO-ESP32S3-Sense)
-- **[EDGE-IMPULSE]** [edge impulse KWS demo](https://studio.edgeimpulse.com/public/270277/latest)
-- **[EDGE-IMPULSE]** [edge impulse Fruits classify demo](https://studio.edgeimpulse.com/public/269519/latest)
+- **[GITHUB]** [SenseCraft模型助手模型](https://github.com/Seeed-Studio/edgelab-model-zoo/tree/main/detection)
+- **[GITHUB]** [项目Github](https://github.com/Mjrovai/XIAO-ESP32S3-Sense)
+- **[EDGE-IMPULSE]** [edge impulse KWS演示](https://studio.edgeimpulse.com/public/270277/latest)
+- **[EDGE-IMPULSE]** [edge impulse水果分类演示](https://studio.edgeimpulse.com/public/269519/latest)

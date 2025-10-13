@@ -16,7 +16,9 @@ Este módulo está basado en el convertidor de luz a digital I2C TSL2561 para tr
 
 Podemos cambiar entre tres modos de detección para tomar las lecturas. Estos son el modo infrarrojo, espectro completo y modo visible humano. Cuando funciona en el modo visible humano, este sensor te dará lecturas muy cercanas a las sensaciones de tus ojos.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" /></a></p>
 
@@ -547,7 +549,7 @@ if __name__ == "__main__":
         main()
 ```
 
-- **Step 3.** Run the demo.
+- **Paso 3.** Ejecuta la demostración.
 
 ```
 sudo python3 grove_i2c_digital_light_sensor.py

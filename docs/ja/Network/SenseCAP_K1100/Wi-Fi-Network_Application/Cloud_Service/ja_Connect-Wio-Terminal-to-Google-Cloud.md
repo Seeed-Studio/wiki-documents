@@ -94,49 +94,49 @@ IP66 ハウジング、Bluetooth 設定、グローバル LoRaWAN® ネットワ
 
 #### 初期設定
 
-- **STEP 1:** [こちら](https://console.cloud.google.com/)にアクセスして新しいプロジェクトを作成します。
+- **ステップ 1:** [こちら](https://console.cloud.google.com/)にアクセスして新しいプロジェクトを作成します。
 
 **注意:** ログインを求められた場合は、Google アカウントにログインしてください。
 
-- **STEP 2:** **プロジェクトを選択**メニューをクリックします。
+- **ステップ 2:** **プロジェクトを選択**メニューをクリックします。
 
-- **STEP 3:** **新しいプロジェクト**をクリックし、**プロジェクト名**を入力します。
+- **ステップ 3:** **新しいプロジェクト**をクリックし、**プロジェクト名**を入力します。
 
-- **STEP 4:** **作成**をクリックします。
+- **ステップ 4:** **作成**をクリックします。
 
-- **STEP 5:** Cloud プロジェクトの課金を有効にします。これは、ロボットではないことを確認するために必要であり、課金されることはありません。ナビゲーションメニューで「課金」を選択し、設定を進めてください。
+- **ステップ 5:** Cloud プロジェクトの課金を有効にします。これは、ロボットではないことを確認するために必要であり、課金されることはありません。ナビゲーションメニューで「課金」を選択し、設定を進めてください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/1111111.png" alt="pir" width={500} height="auto" /></p>
 
-- **STEP 6:** [こちら](https://console.cloud.google.com/flows/enableapi?apiid=cloudiot.googleapis.com%2Cpubsub&authuser=3&_ga=2.254170561.853675115.1607885458-878786893.1606048800)にアクセスして、Cloud IoT Core と Cloud Pub/Sub API を有効にします。
+- **ステップ 6:** [こちら](https://console.cloud.google.com/flows/enableapi?apiid=cloudiot.googleapis.com%2Cpubsub&authuser=3&_ga=2.254170561.853675115.1607885458-878786893.1606048800)にアクセスして、Cloud IoT Core と Cloud Pub/Sub API を有効にします。
 
 **注意:** ドロップダウンメニューから、先ほど作成したプロジェクトを選択してください。
 
 #### デバイスレジストリを作成する
 
-- **STEP 1:** Cloud コンソールの [Google Cloud IoT Core ページ](https://console.cloud.google.com/iot/registries) にアクセスします。
+- **ステップ 1:** Cloud コンソールの [Google Cloud IoT Core ページ](https://console.cloud.google.com/iot/registries) にアクセスします。
 
-- **STEP 2:** **レジストリを作成**をクリックします。
+- **ステップ 2:** **レジストリを作成**をクリックします。
 
-- **STEP 3:** **レジストリ ID** を入力します。
+- **ステップ 3:** **レジストリ ID** を入力します。
 
 **注意:** これはレジストリの名前です。
 
-- **STEP 4:** **リージョン**を選択します。
+- **ステップ 4:** **リージョン**を選択します。
 
 **注意:** 米国にいる場合は、リージョンとして us-central1 を選択します。米国外の場合は、希望するリージョンを選択してください。
 
-- **STEP 5:** **Cloud Pub/Sub トピックを選択**ドロップダウンリストで、**トピックを作成**を選択し、希望する**トピック ID**を入力します。
+- **ステップ 5:** **Cloud Pub/Sub トピックを選択**ドロップダウンリストで、**トピックを作成**を選択し、希望する**トピック ID**を入力します。
 
-- **STEP 6:** **トピックを作成**をクリックします。
+- **ステップ 6:** **トピックを作成**をクリックします。
 
-- **STEP 7:** **詳細オプションを表示**をクリックします。
+- **ステップ 7:** **詳細オプションを表示**をクリックします。
 
-- **STEP 8:** **デバイス状態トピック**と**証明書値**フィールドはオプションなので、空白のままにします。
+- **ステップ 8:** **デバイス状態トピック**と**証明書値**フィールドはオプションなので、空白のままにします。
 
-- **STEP 9:** **プロトコル**として **MQTT** を選択します。
+- **ステップ 9:** **プロトコル**として **MQTT** を選択します。
 
-- **STEP 10:** Cloud IoT Core ページで **作成** をクリックします。
+- **ステップ 10:** Cloud IoT Core ページで **作成** をクリックします。
 
 これで、デバイスのテレメトリイベントを公開するための Cloud Pub/Sub トピックを持つデバイスレジストリが作成されました。
 
@@ -149,9 +149,9 @@ Cloud IoT Core は公開鍵 (または非対称) 認証を使用します。
 
 Cloud IoT Core は RSA と楕円曲線アルゴリズムをサポートしており、このチュートリアルでは楕円曲線キーを使用します。
 
-- **STEP 1:** PC 上に新しいフォルダを作成します。
+- **ステップ 1:** PC 上に新しいフォルダを作成します。
 
-- **STEP 2:** ターミナルウィンドウからフォルダに移動し、以下のコマンドを入力して P-256 楕円曲線キーのペアを生成します。
+- **ステップ 2:** ターミナルウィンドウからフォルダに移動し、以下のコマンドを入力して P-256 楕円曲線キーのペアを生成します。
 
 ```sh
 openssl ecparam -genkey -name prime256v1 -noout -out ec_private.pem
@@ -169,37 +169,37 @@ openssl ec -in ec_private.pem -pubout -out ec_public.pem
 
 秘密鍵のバイトを抽出し、後で作成する Arduino プロジェクトの秘密鍵文字列にコピーする必要があります。これらの鍵を保存して後で使用します。
 
-- **STEP 1:** ターミナルウィンドウを開き、以前生成した楕円曲線キーのペアを含むフォルダに移動します。
+- **ステップ 1:** ターミナルウィンドウを開き、以前生成した楕円曲線キーのペアを含むフォルダに移動します。
 
-- **STEP 2:** 以下のコマンドを入力します。
+- **ステップ 2:** 以下のコマンドを入力します。
 
 ```sh
 openssl ec -in ec_private.pem -noout -text
 ```
 
-- **STEP 3:** **priv:** の下に生成された秘密鍵バイトをコピーして、メモ帳に貼り付けて保存します。
+- **ステップ 3:** **priv:** の下に生成された秘密鍵バイトをコピーして、メモ帳に貼り付けて保存します。
 
 #### レジストリにデバイスを追加する
 
-- **STEP 1:** [レジストリページ](https://console.cloud.google.com/iot/registries)にアクセスし、以前作成したレジストリを選択します。
+- **ステップ 1:** [レジストリページ](https://console.cloud.google.com/iot/registries)にアクセスし、以前作成したレジストリを選択します。
 
-- **STEP 2:** **デバイス**タブを選択し、**デバイスを作成**をクリックします。
+- **ステップ 2:** **デバイス**タブを選択し、**デバイスを作成**をクリックします。
 
-- **STEP 3:** **デバイス ID** を入力します。
+- **ステップ 3:** **デバイス ID** を入力します。
 
-- **STEP 4:** **デバイスメタデータ**フィールドはオプションなので、空白のままにします。
+- **ステップ 4:** **デバイスメタデータ**フィールドはオプションなので、空白のままにします。
 
-- **STEP 5:** **通信、クラウドログ、認証**ドロップダウンメニューをクリックします。
+- **ステップ 5:** **通信、クラウドログ、認証**ドロップダウンメニューをクリックします。
 
-- **STEP 6:** **デバイス通信**で **許可** を選択します。
+- **ステップ 6:** **デバイス通信**で **許可** を選択します。
 
-- **STEP 7:** **認証**フィールド内の **入力方法**で **アップロード** を選択します。
+- **ステップ 7:** **認証**フィールド内の **入力方法**で **アップロード** を選択します。
 
-- **STEP 8:** **公開鍵形式**ドロップダウンメニューから **ES256** を選択します。
+- **ステップ 8:** **公開鍵形式**ドロップダウンメニューから **ES256** を選択します。
 
-- **STEP 9:** **公開鍵値**の下で **参照**ボタンを押し、以前作成した楕円曲線キーのペアフォルダに移動して **ec_public.pem** を選択します。
+- **ステップ 9:** **公開鍵値**の下で **参照**ボタンを押し、以前作成した楕円曲線キーのペアフォルダに移動して **ec_public.pem** を選択します。
 
-- **STEP 10:** **作成**をクリックします。
+- **ステップ 10:** **作成**をクリックします。
 
 これで、レジストリにデバイスを追加しました。デバイスの詳細ページに ES256 キーが表示されます。
 
@@ -207,21 +207,21 @@ openssl ec -in ec_private.pem -noout -text
 
 デバイスレジストリを作成し、トピックを作成し、そのレジストリにデバイスを追加したので、次に進んで、作成したトピックを購読するサブスクライバーを作成し、Wio Terminal からテレメトリデータを取得します。
 
-- **STEP 1:** Google Cloud コンソールの検索バーに **Pub** と入力し、結果から **Pub/Sub** を選択します。
+- **ステップ 1:** Google Cloud コンソールの検索バーに **Pub** と入力し、結果から **Pub/Sub** を選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/333333.png" alt="pir" width={700} height="auto" /></p>
 
-- **STEP 2:** ナビゲーションメニューで **サブスクリプション** をクリックします。
+- **ステップ 2:** ナビゲーションメニューで **サブスクリプション** をクリックします。
 
-- **STEP 3:** **CREATE SUBSCRIPTION** をクリックします。
+- **ステップ 3:** **CREATE SUBSCRIPTION** をクリックします。
 
-- **STEP 4:** 任意の **Subscription ID** を入力します。
+- **ステップ 4:** 任意の **Subscription ID** を入力します。
 
-- **STEP 5:** **Select a Cloud Pub/Sub topic** ドロップダウンメニューから、以前作成した **Pub/Sub topic** を選択します。
+- **ステップ 5:** **Select a Cloud Pub/Sub topic** ドロップダウンメニューから、以前作成した **Pub/Sub topic** を選択します。
 
-- **STEP 6:** 配信タイプとして **Pull** を選択します。
+- **ステップ 6:** 配信タイプとして **Pull** を選択します。
 
-- **STEP 7:** **Create** をクリックします。
+- **ステップ 7:** **Create** をクリックします。
 
 これで Google Cloud IoT Core の設定が完了しました。次に、Arduino IDE を使用して Wio Terminal の設定に進みます。
 
@@ -236,26 +236,26 @@ openssl ec -in ec_private.pem -noout -text
 
 これらのライブラリをダウンロードする手順：
 
-- **STEP 1:** Arduino IDE を開きます。
-- **STEP 2:** `Sketch > Include Library > Manage Libraries` に移動します。
-- **STEP 3:** 検索ボックスに **lwMQTT** と **Google Cloud IoT** を入力し、ライブラリをインストールします。
+- **ステップ 1:** Arduino IDE を開きます。
+- **ステップ 2:** `Sketch > Include Library > Manage Libraries` に移動します。
+- **ステップ 3:** 検索ボックスに **lwMQTT** と **Google Cloud IoT** を入力し、ライブラリをインストールします。
 
 #### 資格情報とアカウント情報の設定
 
 次に、**ciotc_config.h** ファイルに Wi-Fi の資格情報と Google Cloud IoT Core の情報を設定します。
 
-- **STEP 1:** Arduino IDE 内で、`File > Examples > Google Cloud IoT JWT > Esp32-lwmqtt` に移動します。
+- **ステップ 1:** Arduino IDE 内で、`File > Examples > Google Cloud IoT JWT > Esp32-lwmqtt` に移動します。
 
-- **STEP 2:** **ciotc_config.h** を開きます。
+- **ステップ 2:** **ciotc_config.h** を開きます。
 
-- **STEP 3:** **Wi-Fi ネットワークの詳細** を変更します。
+- **ステップ 3:** **Wi-Fi ネットワークの詳細** を変更します。
 
 ```cpp
 const char *ssid = "Enter_SSID";
 const char *password = "Enter_Password";
 ```
 
-- **STEP 4:** **Google Cloud IoT の詳細** を変更します。
+- **ステップ 4:** **Google Cloud IoT の詳細** を変更します。
 
 ```cpp
 const char *project_id = "Enter_Project_ID";
@@ -264,7 +264,7 @@ const char *registry_id = "Enter_Registry_ID";
 const char *device_id = "Enter_Device_ID";
 ```
 
-- **STEP 5:** **ec_private.pem** から取得したプライベートキーのバイトをコピーし、事前に保存した内容を入力します。
+- **ステップ 5:** **ec_private.pem** から取得したプライベートキーのバイトをコピーし、事前に保存した内容を入力します。
 
 ```cpp
 const char *private_key_str =
@@ -471,17 +471,17 @@ void setupCloudIoT(){
 
 次に、Wio Terminal から送信されるテレメトリデータを表示する必要があります。この例では、Wi-Fi 信号強度がテレメトリデータとして送信されます。
 
-- **STEP 1:** Google Cloud Console の **Pub/Sub** にアクセスします。
+- **ステップ 1:** Google Cloud Console の **Pub/Sub** にアクセスします。
 
 **注意:** Google Cloud Console の検索バーで **Pub** を検索できます。
 
-- **STEP 2:** ナビゲーションメニュー内の **Subscriptions** に移動します。
+- **ステップ 2:** ナビゲーションメニュー内の **Subscriptions** に移動します。
 
-- **STEP 3:** 以前に作成したサブスクリプション ID を選択します。
+- **ステップ 3:** 以前に作成したサブスクリプション ID を選択します。
 
-- **STEP 4:** **VIEW MESSAGES** をクリックします。
+- **ステップ 4:** **VIEW MESSAGES** をクリックします。
 
-- **STEP 5:** **PULL** をクリックすると、以下のように受信したテレメトリデータが表示されます。
+- **ステップ 5:** **PULL** をクリックすると、以下のように受信したテレメトリデータが表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/6666666.png" alt="pir" width={950} height="auto" /></p>
 
@@ -491,33 +491,33 @@ Wio Terminal に任意のセンサーを追加して、Google Cloud IoT Core に
 
 #### Google Cloud IoT の設定
 
-- **STEP 1:** Google Cloud Console の **IoT Core** にアクセスします。
+- **ステップ 1:** Google Cloud Console の **IoT Core** にアクセスします。
 
 **注意:** Google Cloud Console の検索バーで **IoT Core** を検索できます。
 
-- **STEP 2:** 以前に作成したレジストリを選択します。
+- **ステップ 2:** 以前に作成したレジストリを選択します。
 
-- **STEP 3:** Cloud **Pub/Sub topics** の下で **Add or edit topics** を選択します。
+- **ステップ 3:** Cloud **Pub/Sub topics** の下で **Add or edit topics** を選択します。
 
-- **STEP 4:** **ADD ADDITIONAL TOPIC** をクリックします。
+- **ステップ 4:** **ADD ADDITIONAL TOPIC** をクリックします。
 
-- **STEP 5:** **Select a Cloud Pub/Sub topic** のドロップダウンメニューから **CREATE A TOPIC** をクリックします。
+- **ステップ 5:** **Select a Cloud Pub/Sub topic** のドロップダウンメニューから **CREATE A TOPIC** をクリックします。
 
-- **STEP 6:** **Topic ID** を入力し、**CREATE TOPIC** をクリックします。
+- **ステップ 6:** **Topic ID** を入力し、**CREATE TOPIC** をクリックします。
 
-- **STEP 7:** **Subfolder** 列内に **Subfolder name** を入力します。
+- **ステップ 7:** **Subfolder** 列内に **Subfolder name** を入力します。
 
 **注意:** サブフォルダ名は Arduino コード内でトピックに関連付けるために使用されます。
 
-- **STEP 8:** **UPDATE** をクリックします。
+- **ステップ 8:** **UPDATE** をクリックします。
 
-- **STEP 9:** 以前説明したように新しいサブスクリプションを作成します。
+- **ステップ 9:** 以前説明したように新しいサブスクリプションを作成します。
 
 #### Arduino の設定
 
 **Esp32-lwmqtt.ino** に移動し、以下を追加します。
 
-- **STEP 1:** ループの後に、内蔵光センサー用の以下を追加します。
+- **ステップ 1:** ループの後に、内蔵光センサー用の以下を追加します。
 
 ```cpp
 void loop() {
@@ -525,7 +525,7 @@ void loop() {
   light = map(light,0,1023,0,100); // センサー値をマッピングする
 ```
 
-- **STEP 2:** サブフォルダ名を含むトピックを追加します。
+- **ステップ 2:** サブフォルダ名を含むトピックを追加します。
 
 ```cpp
     publishTelemetry(getDefaultSensor());
@@ -555,13 +555,13 @@ Grove - Temperature and Humidity Sensor (DHT11) を Wio Terminal の Grove - Dig
 
 #### Arduino のソフトウェア設定
 
-- **STEP 1:** [Grove - Temperature and Humidity Sensor repo](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor) にアクセスし、zip ファイルとしてダウンロードします。
+- **ステップ 1:** [Grove - Temperature and Humidity Sensor repo](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor) にアクセスし、zip ファイルとしてダウンロードします。
 
-- **STEP 2:** Arduino を開き、`Sketch > Include Library > Add .ZIP Library` に移動して、ダウンロードしたライブラリを選択してインストールします。
+- **ステップ 2:** Arduino を開き、`Sketch > Include Library > Add .ZIP Library` に移動して、ダウンロードしたライブラリを選択してインストールします。
 
 以前使用した **Esp32-lwmqtt.ino** に移動し、以下を追加します。
 
-- **STEP 1:** **#include "esp32-mqtt.h"** の後に以下を追加します。
+- **ステップ 1:** **#include "esp32-mqtt.h"** の後に以下を追加します。
 
 ```cpp
 #include "DHT.h" //DHT ライブラリ
@@ -571,13 +571,13 @@ Grove - Temperature and Humidity Sensor (DHT11) を Wio Terminal の Grove - Dig
 DHT dht(DHTPIN, DHTTYPE); //DHT センサーを初期化
 ```
 
-- **STEP 2:** **setup** 内に以下を追加して DHT センサーを開始します。
+- **ステップ 2:** **setup** 内に以下を追加して DHT センサーを開始します。
 
 ```cpp
 dht.begin(); 
 ```
 
-- **STEP 3:** **void loop()** 内の **if loop** に以下を追加します。
+- **ステップ 3:** **void loop()** 内の **if loop** に以下を追加します。
 
 ```cpp
 int temperature = dht.readTemperature(); // 温度を格納する変数を割り当てる
@@ -592,21 +592,21 @@ publishTelemetry(payload);
 
 **注意:** ここでは、すべてのデータを文字列として influxDB に解析します。influxDB は時系列データベースであるため、**time** の解析が重要です。また、**pushTelemetry** 関数は、このチュートリアルの最初に作成したデフォルトのトピックにデータを送信します。
 
-- **STEP 4:** コードを Wio Terminal にアップロードします。
+- **ステップ 4:** コードを Wio Terminal にアップロードします。
 
 #### Google Cloud IoT のセットアップ
 
-- **STEP 1:** [こちら](https://github.com/lakshanthad/esp32-cloud-iot-core-k8s) のリポジトリを訪問し、ZIP ファイルとしてダウンロードします。
+- **ステップ 1:** [こちら](https://github.com/lakshanthad/esp32-cloud-iot-core-k8s) のリポジトリを訪問し、ZIP ファイルとしてダウンロードします。
 
-- **STEP 2:** ダウンロードした ZIP ファイルを解凍します。
+- **ステップ 2:** ダウンロードした ZIP ファイルを解凍します。
 
-- **STEP 3:** Google Cloud Console を開き、[Google Kubernetes Engine](https://console.cloud.google.com/kubernetes/list) に移動し、システムの初期化を待ちます。
+- **ステップ 3:** Google Cloud Console を開き、[Google Kubernetes Engine](https://console.cloud.google.com/kubernetes/list) に移動し、システムの初期化を待ちます。
 
-- **STEP 4:** 右上のボタンを押して Cloud Shell を起動します。
+- **ステップ 4:** 右上のボタンを押して Cloud Shell を起動します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Google_Cloud_IoT/cloud_shell_1.png" alt="pir" width={700} height="auto" /></p>
 
-- **STEP 5:** 以下のコマンドを入力して、gcloud コマンドラインツールのデフォルトを設定します。
+- **ステップ 5:** 以下のコマンドを入力して、gcloud コマンドラインツールのデフォルトを設定します。
 
 ```sh
 export ZONE=<enter_zone> # 例: us-central1-a, 詳細は https://cloud.google.com/compute/docs/regions-zones/#available を参照
@@ -615,7 +615,7 @@ gcloud config set project $PROJECT_ID
 gcloud config set compute/zone $ZONE
 ```
 
-- **STEP 6:** 以下のコマンドを入力して、n1-standard-1 ノードを 1 つ持つ GKE クラスターを作成します。
+- **ステップ 6:** 以下のコマンドを入力して、n1-standard-1 ノードを 1 つ持つ GKE クラスターを作成します。
 
 ```sh
 gcloud container clusters create influxdb-grafana \
@@ -624,7 +624,7 @@ gcloud container clusters create influxdb-grafana \
                 --zone $ZONE
 ```
 
-- **STEP 7:** 以下のコマンドを入力して、InfluxDB と Grafana の認証情報を保存するシークレットを作成します。
+- **ステップ 7:** 以下のコマンドを入力して、InfluxDB と Grafana の認証情報を保存するシークレットを作成します。
 
 ```sh
 kubectl create secret generic influxdb-grafana \
@@ -636,17 +636,17 @@ kubectl create secret generic influxdb-grafana \
 
 **注意:** influxdb / grafana のユーザー名とパスワードはお好みに応じて変更できます。
 
-- **STEP 8:** Google Shell 内で **Open Editor** をクリックします。
+- **ステップ 8:** Google Shell 内で **Open Editor** をクリックします。
 
-- **STEP 9:** 先ほどダウンロードして解凍したフォルダを **Cloud Shell Editor** にドラッグ＆ドロップします。
+- **ステップ 9:** 先ほどダウンロードして解凍したフォルダを **Cloud Shell Editor** にドラッグ＆ドロップします。
 
-- **STEP 10:** **Open Terminal** をクリックしてターミナルに戻ります。以下を入力して **05-influxdb_grafana_k8s** ディレクトリに移動します。
+- **ステップ 10:** **Open Terminal** をクリックしてターミナルに戻ります。以下を入力して **05-influxdb_grafana_k8s** ディレクトリに移動します。
 
 ```sh
 cd esp32-cloud-iot-core-k8s-master/05-influxdb_grafana_k8s
 ```
 
-- **STEP 11:** 以下のコマンドを入力して、InfluxDB と Grafana を Kubernetes にデプロイします。
+- **ステップ 11:** 以下のコマンドを入力して、InfluxDB と Grafana を Kubernetes にデプロイします。
 
 ```sh
 kubectl create -f k8s/
@@ -654,31 +654,31 @@ kubectl create -f k8s/
 
 #### Grafana のセットアップ
 
-- **STEP 1:** 以下を入力して、サービスの外部 IP / ポートを確認します。
+- **ステップ 1:** 以下を入力して、サービスの外部 IP / ポートを確認します。
 
 ```sh
 kubectl get services
 ```
 
-- **STEP 2:** Grafana の外部 IP をコピーします。
+- **ステップ 2:** Grafana の外部 IP をコピーします。
 
-- **STEP 3:** `http://<grafana service external ip>:3000` にアクセスします。
+- **ステップ 3:** `http://<grafana service external ip>:3000` にアクセスします。
 
 **注意:** コピーした Grafana の外部 IP を `<grafana service external ip>` に貼り付けます。
 
-- **STEP 4:** 先ほど設定した認証情報で Grafana にログインします。
+- **ステップ 4:** 先ほど設定した認証情報で Grafana にログインします。
 
-- **STEP 5:** 歯車アイコンをクリックし、`Configuration > Data Sources` に移動します。
+- **ステップ 5:** 歯車アイコンをクリックし、`Configuration > Data Sources` に移動します。
 
-- **STEP 6:** **Add data source** をクリックし、**influxDB** を選択します。
+- **ステップ 6:** **Add data source** をクリックし、**influxDB** を選択します。
 
-- **STEP 7:** **URL** フィールドに以下を入力します。
+- **ステップ 7:** **URL** フィールドに以下を入力します。
 
 ```sh
 http://influxdb:8086
 ```
 
-- **STEP 8:** **Database** フィールドに以下を入力し、**Save & Test** をクリックします。
+- **ステップ 8:** **Database** フィールドに以下を入力し、**Save & Test** をクリックします。
 
 ```sh
 iot
@@ -690,29 +690,29 @@ iot
 
 次に、Pub/Sub のトピックから InfluxDB にデータを送信し、InfluxDB のデータを Grafana のインタラクティブなダッシュボードで表示するための Google Cloud Function を作成します。
 
-- **STEP 1:** **Google Cloud Console** に戻り、**Cloud Shell** を開きます。
+- **ステップ 1:** **Google Cloud Console** に戻り、**Cloud Shell** を開きます。
 
-- **STEP 2:** 以下を入力して **Cloud Functions API** を有効にします。
+- **ステップ 2:** 以下を入力して **Cloud Functions API** を有効にします。
 
 ```sh
 gcloud services enable cloudfunctions.googleapis.com
 ```
 
-- **STEP 3:** 以下を入力して **06-cloud_function** ディレクトリに移動します。
+- **ステップ 3:** 以下を入力して **06-cloud_function** ディレクトリに移動します。
 
 ```sh
 cd esp32-cloud-iot-core-k8s-master/06-cloud_function
 ```
 
-- **STEP 4:** **vim テキストエディタ**で **main.py** を開きます。
+- **ステップ 4:** **vim テキストエディタ**で **main.py** を開きます。
 
 ```sh
 cd esp32-cloud-iot-core-k8s-master/06-cloud_function
 ```
 
-- **STEP 5:** キーボードで **i** を押して **編集モード** に入ります。
+- **ステップ 5:** キーボードで **i** を押して **編集モード** に入ります。
 
-- **STEP 6:** **_get_influxdb_client 関数**内の **InfluxDB 変数**（ホスト、ポート、ユーザー名、パスワード）を変更します。
+- **ステップ 6:** **_get_influxdb_client 関数**内の **InfluxDB 変数**（ホスト、ポート、ユーザー名、パスワード）を変更します。
 
 **注意:** 以下を Cloud Shell で入力して外部 IP をコピーし、InfluxDB ホストを取得します。
 
@@ -720,9 +720,9 @@ cd esp32-cloud-iot-core-k8s-master/06-cloud_function
 kubectl get services
 ```
 
-- **STEP 7:** **:wq** を入力してファイルを保存します。
+- **ステップ 7:** **:wq** を入力してファイルを保存します。
 
-- **STEP 8:** 以下を入力して **Cloud Function** をデプロイします。
+- **ステップ 8:** 以下を入力して **Cloud Function** をデプロイします。
 
 ```sh
 export PUBSUB_TOPIC="enter_topic-name>"
@@ -732,35 +732,35 @@ gcloud functions deploy iotcore_pubsub_to_influxdb --runtime python37 --trigger-
 
 #### Grafana のセットアップに戻る
 
-- **STEP 1:** Grafana を開き、`Dashboards > Manage` に移動します。
+- **ステップ 1:** Grafana を開き、`Dashboards > Manage` に移動します。
 
-- **STEP 2:** **New Dashboard** をクリックし、**Add new panel** をクリックします。
+- **ステップ 2:** **New Dashboard** をクリックし、**Add new panel** をクリックします。
 
-- **STEP 3:** **Visualization** に移動し、**Graph** をクリックします。
+- **ステップ 3:** **Visualization** に移動し、**Graph** をクリックします。
 
-- **STEP 4:** **Query** の **FROM** タブで **select measurement** をクリックし、ドロップダウンメニューから **temperature** を選択します。
+- **ステップ 4:** **Query** の **FROM** タブで **select measurement** をクリックし、ドロップダウンメニューから **temperature** を選択します。
 
-- **STEP 5:** **+ Query** をクリックし、**step 12** と同じ手順を **humidity** に対して繰り返します。
+- **ステップ 5:** **+ Query** をクリックし、**ステップ 12** と同じ手順を **humidity** に対して繰り返します。
 
-- **STEP 6:** 他の設定をお好みに応じて変更します。
+- **ステップ 6:** 他の設定をお好みに応じて変更します。
 
-- **STEP 7:** **Apply** をクリックします。
+- **ステップ 7:** **Apply** をクリックします。
 
-- **STEP 8:** **Add panel** をクリックし、**Add new panel** をクリックします。
+- **ステップ 8:** **Add panel** をクリックし、**Add new panel** をクリックします。
 
-- **STEP 9:** **Visualization** に移動し、**Gauge** をクリックします。
+- **ステップ 9:** **Visualization** に移動し、**Gauge** をクリックします。
 
-- **STEP 10:** **Query** の **FROM** タブで **select measurement** をクリックし、ドロップダウンメニューから **temperature** を選択します。
+- **ステップ 10:** **Query** の **FROM** タブで **select measurement** をクリックし、ドロップダウンメニューから **temperature** を選択します。
 
-- **STEP 11:** **Field** タブで、**Unit** の下にあるドロップダウンメニューから `Temperature > Celcius` を選択します。
+- **ステップ 11:** **Field** タブで、**Unit** の下にあるドロップダウンメニューから `Temperature > Celcius` を選択します。
 
-- **STEP 12:** ゲージの最小値と最大値を **Min** と **Max** に入力します。
+- **ステップ 12:** ゲージの最小値と最大値を **Min** と **Max** に入力します。
 
-- **STEP 13:** **Display name** に `Temperature` と入力します。
+- **ステップ 13:** **Display name** に `Temperature` と入力します。
 
-- **STEP 14:** **humidity** に対して **step 15** 以降を繰り返します。
+- **ステップ 14:** **humidity** に対して **ステップ 15** 以降を繰り返します。
 
-- **STEP 15:** **Apply** をクリックします。
+- **ステップ 15:** **Apply** をクリックします。
 
 これで Grafana に作成したダッシュボードが表示されます。
 

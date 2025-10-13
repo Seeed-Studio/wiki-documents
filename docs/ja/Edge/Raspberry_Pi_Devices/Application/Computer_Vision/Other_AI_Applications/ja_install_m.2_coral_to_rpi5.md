@@ -41,17 +41,17 @@ no_comments: false # for Disqus
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-M-2-HAT-for-Raspberry-Pi-5-p-5881.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Coral-M-2-Accelerator-B-M-key-p-4411.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -210,7 +210,7 @@ sudo reboot
 
 ```
 
-## Check Edge TPU
+## エッジをチェック TPU
 
 ```
 lspci -nn | grep 089a
@@ -264,7 +264,9 @@ python3 examples/classify_image.py \
 
 Raspberry Pi 5にM.2 Coralアクセラレータを正常にインストールし、Edge TPUをテストしました。また、Coral M.2アクセラレータ上でint8量子化を使用してYOLOv8sモデルを実行し、入力サイズ640x640、バッチサイズ1で動作させました。推論時間は約800-1000msで、これは約1.1フレーム毎秒（FPS）に相当します。
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/4c8UX06d9Tg" title="Raspberry Pi AI: YOLOv8s Object Detection with Int8 Format Using M.2 Coral Accelerator on RPi 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 技術サポート & 製品ディスカッション
 

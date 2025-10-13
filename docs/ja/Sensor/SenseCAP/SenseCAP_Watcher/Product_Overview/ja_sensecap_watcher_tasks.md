@@ -38,7 +38,7 @@ Watcherをコントロールし、その全ポテンシャルを解き放つ準�
 
 ## SenseCAP Watcher 高度な設定
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ono_v759R0Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -116,7 +116,7 @@ SenseCraft AI の一部のサービスの使用には料金が発生する場合
 
 この機能により、Watcherデバイスや画像ベースの入力を必要とせずに、LLMと直接やり取りすることができます。チャットインターフェースにメッセージやクエリを入力するだけで、LLMが適切に応答します。詳細については[Type the task](#type-the-task)を参照してください。
 
-#### Local AI + Cloud-based LLM Service
+#### ローカル AI + クラウドベース LLM サービス
 
 Watcherデバイスの第3の動作モードは、Local AIサービスとクラウドベースのLLMサービスの組み合わせです。**このモードは、WatcherのローカルAIサービスが指定されたオブジェクトを認識したが、オブジェクトの行動や状態を判断するためにLLMクラウドサービスからのさらなる分析が必要な場合に作動します**。
 

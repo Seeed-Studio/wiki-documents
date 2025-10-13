@@ -106,7 +106,7 @@ En esta parte, usamos el Grove - Red LED Button como ejemplo. Las siguientes par
 | Seeeduino V4.2 | Base Shield| Grove- Red LED Button |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Red_LED_Button/img/IMG_0068a.jpg)|
-|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Red-LED-Button-p-3096.html" target="_blank">Get One Now</a>|
+|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Compra ahora</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Compra ahora</a>|<a href="https://www.seeedstudio.com/Grove-Red-LED-Button-p-3096.html" target="_blank">Compra ahora</a>|
 
 - **Paso 1.** Grove- Red LED Button al puerto **D3** del Grove-Base Shield.
 
@@ -270,7 +270,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 
-- **Step 3**. Excute below commands to run the code.
+- **Paso 3**. Ejecuta los siguientes comandos para ejecutar el código.
 
 ```
 cd grove.py/grove

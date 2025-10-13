@@ -107,7 +107,7 @@ Blynkコンソールにログインしたら、スタートアップウィザー
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/K1101/5.png" /></div>
 
-**Step 2** で作成したテンプレート名を **TEMPLATE** ドロップダウンリストから選択し、この場合は **wio terminal vision ai** と呼ばれています。そして、**DEVICE NAME** ダイアログボックスにデバイス名を入力してください。
+**ステップ 2** で作成したテンプレート名を **TEMPLATE** ドロップダウンリストから選択し、この場合は **wio terminal vision ai** と呼ばれています。そして、**DEVICE NAME** ダイアログボックスにデバイス名を入力してください。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/K1101/6.png" /></div>
 
@@ -280,7 +280,7 @@ char ssid[] = "";
 char pass[] = "";
 ```
 
-最初の3行の定義は、**Step 3**のプロセスで自動生成されたBlynkデバイス情報です。これをコピーして最初の3行に置き換えてください。
+最初の3行の定義は、**ステップ 3**のプロセスで自動生成されたBlynkデバイス情報です。これをコピーして最初の3行に置き換えてください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1101/7.png" /></div>
 
@@ -299,7 +299,7 @@ char pass[] = "yyds2022";
 このクイックスタートガイドをテストする際には、個人のホットスポットを使用することをお勧めします。不安定な公共ネットワークよりも安定しています。
 :::
 
-### Step 6. Blynk Web Dashboard の設定
+### ステップ 6. Blynk Web Dashboard の設定
 
 Blynkコンソールに戻り、上記のファームウェアコードに基づいてダッシュボードウィジェットを設定します。まず、再作成したテンプレートを選択し、右上にある**Edit**ボタンをクリックします。
 
@@ -309,7 +309,7 @@ Blynkコンソールに戻り、上記のファームウェアコードに基づ
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1101/11.png" /></div>
 
-**Step 5**では、仮想ピン4と仮想ピン5を使用して、Grove Vision AIモジュールの検出データ（人数カウントや推論信頼度のパーセンテージデータ）を送信しました。
+**ステップ 5**では、仮想ピン4と仮想ピン5を使用して、Grove Vision AIモジュールの検出データ（人数カウントや推論信頼度のパーセンテージデータ）を送信しました。
 
 ```c
 Blynk.virtualWrite(V5, data.confidence); // 信頼度
@@ -332,9 +332,9 @@ Blynk.virtualWrite(V4, len); // 人数カウント
 
 データ情報レイアウトの設定が完了したら、右上の**Save And Apply**ボタンをクリックしてください。
 
-### Step 7. コードをアップロードしてデータを観察する
+### ステップ 7. コードをアップロードしてデータを観察する
 
-最後に、Groveケーブルを使用してGrove Vision AIモジュールとWio Terminalの左側のGroveポートを接続し、Step 7後に更新されたファームウェアをアップロードしてください。その後、Blynkデバイスコンソールに戻ります。
+最後に、Groveケーブルを使用してGrove Vision AIモジュールとWio Terminalの左側のGroveポートを接続し、ステップ 7後に更新されたファームウェアをアップロードしてください。その後、Blynkデバイスコンソールに戻ります。
 Grove Vision AIモジュールが有効な検出を行うと、人数カウント値と検出信頼度値が更新されるのが確認できます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1101/17.png" /></div>

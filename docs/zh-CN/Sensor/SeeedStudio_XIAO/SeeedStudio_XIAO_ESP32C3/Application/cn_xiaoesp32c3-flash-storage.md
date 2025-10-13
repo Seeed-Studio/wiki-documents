@@ -22,7 +22,7 @@ last_update:
 
 本文的绝大部分内容来自[**RandomNerdTutorials.com**](https://randomnerdtutorials.com/)，一些程序和描述已经稍作修改以适配XIAO ESP32C3。特别感谢[**RandomNerdTutorials.com**](https://randomnerdtutorials.com/)提供的教程和方法。以下是原始资源的直接链接。
 
-- [ESP32 Flash Memory – Store Permanent Data (Write and Read)](https://randomnerdtutorials.com/esp32-flash-memory/)
+- [ESP32 Flash 存储器 - 存储永久数据（写入和读取）](https://randomnerdtutorials.com/esp32-flash-memory/)
 
 - [Arduino EEPROM Explained – Remember Last LED State](https://randomnerdtutorials.com/arduino-eeprom-explained-remember-last-led-state/)
 
@@ -62,13 +62,13 @@ preferences.begin("my-app", false);
 preferences.clear();
 ```
 
-**Func 3**. Remove a key from the opened namespace:
+**功能 3**. 从已打开的命名空间中移除一个键：
 
 ```c
 preferences.remove(key);
 ```
 
-**Func 4**. Use the `end()` method to close the preferences under the opened namespace:
+**Func 4**. 使用 `end()` 方法关闭已打开命名空间下的首选项：
 
 ```c
 preferences.end();
@@ -242,13 +242,13 @@ void loop() {
 #include <Preferences.h>
 ```
 
-**Step 2.** Then, you must initiate an instance of the Preferences library. You can call it preferences, for example:
+**步骤 2.** 然后，你必须初始化一个 Preferences 库的实例。你可以将其命名为 preferences，例如：
 
 ```c
 Preferences preferences;
 ```
 
-**Step 3.** In the `setup()`, initialize the Serial Monitor at a baud rate of 115200.
+**步骤 3.** 在`setup()`中，以115200的波特率初始化串口监视器。
 
 ```c
 Serial.begin(115200);
@@ -281,7 +281,7 @@ namespace {
 }
 ```
 
-You can also have multiple namespaces with the same key (but each key with its value):
+您还可以拥有多个具有相同键的命名空间（但每个键都有其对应的值）：
 
 ```c
 namespace1{
@@ -292,7 +292,7 @@ namespace2{
 }
 ```
 
-For example, store the new value on the “counter” key:
+例如，将新值存储在"counter"键上：
 
 ```c
 preferences.putUInt("counter", counter);
@@ -304,7 +304,7 @@ preferences.putUInt("counter", counter);
 unsigned int counter = preferences.getUInt("counter", 0);
 ```
 
-So, your data is structured in this way:
+因此，你的数据是以这种方式结构化的：
 
 ```c
 my-app{
@@ -322,7 +322,7 @@ my-app{
 preferences.putString("ssid", ssid);
 ```
 
-Add another key called password to save the password value (password variable):
+添加另一个名为 password 的键来保存密码值（password 变量）：
 
 ```c
 preferences.putString("password", password);
@@ -352,7 +352,7 @@ String password = preferences.getString("password", "");
 preferences.end();
 ```
 
-- The Store/get Key:value Pair data complete procedure is shown below.
+- 存储/获取键值对数据的完整过程如下所示。
 
 ```c
 #include <Preferences.h>
@@ -540,7 +540,7 @@ EEPROM.write(address, value);
 EEPROM.put(address, value);
 ```
 
-For example, to write 9 on address 0, you’ll have:
+例如，要在地址 0 写入 9，你将会有：
 
 ```c
 EEPROM.write(0, 9);
@@ -564,7 +564,7 @@ EEPROM.read(address);
 EEPROM.get(address);
 ```
 
-For example, to read the byte stored previously in address 0.:
+例如，要读取先前存储在地址 0 中的字节：
 
 ```c
 EEPROM.read(0);
@@ -588,7 +588,7 @@ EEPROM.read(0);
 EEPROM.update(address, value);
 ```
 
-At the moment, we have 9 stored in the address 0. So, if we call:
+目前，我们在地址0中存储了9。因此，如果我们调用：
 
 ```c
 EEPROM.update(0, 9);
@@ -620,7 +620,7 @@ EEPROM.update(0, 9);
 #define EEPROM_SIZE 1
 ```
 
-We also define other variables that are required to make this sketch work.
+我们还定义了其他使这个草图能够工作所需的变量。
 
 ```c
 // constants won't change. They're used here to set pin numbers:
@@ -637,7 +637,7 @@ unsigned long previousMillis = 0;  // will store last time LED was updated
 const long interval = 10000;  // interval at which to blink (milliseconds)
 ```
 
-In the `setup()` you initialize the EEPROM with the predefined size.
+在 `setup()` 中，你使用预定义的大小初始化 EEPROM。
 
 ```c
 EEPROM.begin(EEPROM_SIZE);
@@ -651,7 +651,7 @@ EEPROM.begin(EEPROM_SIZE);
 digitalWrite (ledPin, ledState);
 ```
 
-In the `loop()` function section, all we need to do is flip the state of the LED over a period of time.
+在 `loop()` 函数部分，我们只需要在一段时间内翻转 LED 的状态。
 
 ```c
 // check to see if it's time to blink the LED; that is, if the difference
@@ -681,7 +681,7 @@ if (currentMillis - previousMillis >= interval) {
 EEPROM.write(0, ledState);
 ```
 
-Finally, we use the EEPROM.commit() for the changes to take effect.
+最后，我们使用EEPROM.commit()来使更改生效。
 
 ```c
 EEPROM.commit();

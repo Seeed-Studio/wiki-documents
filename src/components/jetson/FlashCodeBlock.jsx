@@ -131,7 +131,7 @@ const content = {
     flashDuration: "The flash command may run for 2–10 minutes.",
     step3Connect: "Step 3:",
     connectDisplay:
-      "Connect the Jetson to a display using the HDMI connector on the board and finish the initial configuration setup:",
+      "Connect the Jetson to a display using the connector on the board (HDMI or Type-C, depending on your carrier board) and finish the initial configuration setup:",
     systemConfiguration: "Please complete the System Configuration according to your needs.",
     step4Optional: "Step 4 (Optional):",
     installJetpack: "Install Nvidia Jetpack SDK",
@@ -259,7 +259,7 @@ const content = {
     flashSuccess: "若刷写成功，你将看到类似如下的输出：",
     flashDuration: "刷写过程可能持续 2–10 分钟。",
     step3Connect: "步骤 3：",
-    connectDisplay: "通过板载 HDMI 将 Jetson 连接到显示器，并完成初始设置：",
+    connectDisplay: "将 Jetson 使用主板上的连接器（HDMI 或 Type-C，取决于所使用的载板）连接到显示器，并完成初始配置设置：",
     systemConfiguration: "请根据需要完成系统初始化配置。",
     step4Optional: "步骤 4（可选）：",
     installJetpack: "安装 NVIDIA JetPack SDK",
@@ -383,7 +383,7 @@ const content = {
     flashDuration: "フラッシュ処理は 2〜10 分かかる場合があります。",
     step3Connect: "手順 3：",
     connectDisplay:
-      "ボード上の HDMI 端子で Jetson をディスプレイに接続し、初期設定を完了します：",
+      "Jetson をボード上のコネクタ（HDMI または Type-C。使用するキャリアボードによって異なります）を使用してディスプレイに接続し、初期設定を完了します：",
     systemConfiguration: "必要に応じてシステム初期設定を完了してください。",
     step4Optional: "手順 4（任意）：",
     installJetpack: "NVIDIA JetPack SDK をインストール",
@@ -511,7 +511,7 @@ const content = {
     flashDuration: "El comando de flasheo puede tardar entre 2 y 10 minutos.",
     step3Connect: "Paso 3:",
     connectDisplay:
-      "Conecte el Jetson a un monitor mediante el conector HDMI de la placa y complete la configuración inicial:",
+      "Conecta el Jetson a una pantalla utilizando el conector en la placa (HDMI o Type-C, dependiendo de tu placa portadora) y completa la configuración inicial:",
     systemConfiguration:
       "Complete la configuración inicial del sistema según sus necesidades.",
     step4Optional: "Paso 4 (opcional):",
@@ -1122,6 +1122,16 @@ export const RecoveryClassic = ({ lang = 'en' }) => {
           src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb_f.png"
           alt={texts.lsusbResult}
         />
+      </div>
+      <div
+        className="alert alert--danger"
+        role="alert"
+        style={{ marginTop: '1em' }}
+      >
+        If you are using an <strong>Orin NX 16GB/8GB</strong> module, 
+        <strong> do not enable MAXN SUPER mode</strong>. <br />
+        The cooling capacity of the reComputer J401 carrier board is insufficient 
+        to support it, and forcing this mode may result in permanent damage to the module.
       </div>
     </div>
   );

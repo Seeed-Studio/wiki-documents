@@ -76,11 +76,11 @@ ESPHome está disponible como un **Complemento de Home Assistant** y se puede in
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/1.png" style={{width:900, height:'auto'}}/></div>
 
 <!--  
-- **Step 1.** To quickly setup ESPHome on Home Asssistant, click the below button
+- **Paso 1.** Para configurar rápidamente ESPHome en Home Assistant, haz clic en el botón de abajo
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/4.png" width="300">
 
-- **Step 2.** Once you see the following pop-up, click **OPEN LINK**
+- **Paso 2.** Una vez que veas el siguiente mensaje emergente, haz clic en **ABRIR ENLACE**
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/5.png" width="300">
 
@@ -95,21 +95,21 @@ ESPHome está disponible como un **Complemento de Home Assistant** y se puede in
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/3.png" style={{width:900, height:'auto'}}/></div>
 
-
 <!-- 
-- **Step 3.** Click **INSTALL**
+- **Paso 3.** Haz clic en **INSTALAR**
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/6.png" width="700">
 
-- **Step 4.** Enable all the options and click **START**
+- **Paso 4.** Habilita todas las opciones y haz clic en **INICIAR**
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/7.png" width="700">
 
-- **Step 5.** Click **OPEN WEB UI** or **ESPHOME from the side-panel**
+- **Paso 5.** Haz clic en **ABRIR INTERFAZ WEB** o **ESPHOME desde el panel lateral**
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/8.png" width="700">
 
 -->
+
 <br />
 Verás la siguiente ventana si ESPHome se carga exitosamente
 

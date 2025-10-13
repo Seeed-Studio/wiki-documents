@@ -509,7 +509,9 @@ aip shell -n -c "runfile <YourPythonFilePath>"
 
 这是该产品的介绍视频，包含简单演示，您可以尝试一下。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3slfeHKSSCw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 
 **Grove 红外通用遥控项目**：有多个遥控器？有一个 Arduino？使用 Keyes 红外遥控器的单键操作控制多个设备。

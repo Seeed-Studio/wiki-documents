@@ -140,19 +140,19 @@ node.send({ payload: msg.payload.value[0].image_url });
    npm install aws4
    ```
 
-2. If that doesn't work, you might need to reinstall the `request` package:
+2. 如果那样不起作用，你可能需要重新安装 `request` 包：
 
    ```sh
    npm install request
    ```
 
-3. If the problem persists, you may need to reinstall the WhatsApp node:
+3. 如果问题仍然存在，您可能需要重新安装 WhatsApp 节点：
 
    ```sh
    npm install node-red-contrib-whatsapp-cmb
    ```
 
-4. As a last resort, you could try clearing your npm cache and reinstalling all dependencies:
+4. 作为最后的办法，你可以尝试清除 npm 缓存并重新安装所有依赖：
 
    ```sh
     npm cache clean --force

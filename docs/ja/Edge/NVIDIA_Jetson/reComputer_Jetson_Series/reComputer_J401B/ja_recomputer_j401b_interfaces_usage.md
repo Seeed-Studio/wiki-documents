@@ -20,7 +20,7 @@ last_update:
 このwikiでは、reComputer J401Bの様々なハードウェアとインターフェースについて紹介し、プロジェクトのアイデアを拡張するための使用方法を説明します。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401B-optional-accessories.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401B-optional-accessories.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong></a>
 </div>
 
 ## Mini-PCIe
@@ -42,7 +42,7 @@ reComputer J401Bには、4Gをサポートするmini PCIeコネクタが搭載�
 - ステップ2. アンテナを取り付ける
 - ステップ3. SIMカードを挿入する
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="450" src="https://www.youtube.com/embed/q5nV0RqvceU" title="Assembling 4g module for j401b" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -52,7 +52,7 @@ reComputer J401Bには、4Gをサポートするmini PCIeコネクタが搭載�
 
 - ステップ2. ブラウザを開いて、4Gネットワークが正常に機能しているかテストします。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/IJEvmHhrmbc" title="J401B 4G Network Usage" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -162,7 +162,7 @@ CSI は Camera Serial Interface の略です。これは、イメージセンサ
 
   - [Raspberry Pi High Quality Camera](https://www.seeedstudio.com/Raspberry-Pi-High-Quality-Cam-p-4463.html)
   - [Raspberry Pi HQ Camera - M12 mount](https://www.seeedstudio.com/Raspberry-Pi-HQ-Camera-M12-mount-p-5578.html)
-  - [High Quality Camera for Raspberry Pi](https://www.seeedstudio.com/High-Quality-Camera-For-Raspberry-Pi-Compute-Module-Jetson-Nano-p-4729.html)
+  - [Raspberry Pi用高品質カメラ](https://www.seeedstudio.com/High-Quality-Camera-For-Raspberry-Pi-Compute-Module-Jetson-Nano-p-4729.html)
 
 ### 接続概要
 
@@ -299,7 +299,7 @@ sudo vi /usr/bin/hwtosys.sh
 sudo hwclock --hctosys
 ```
 
-- **Step 10:** Make the script executable.
+- **ステップ 10:** スクリプトを実行可能にします。
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
@@ -337,13 +337,13 @@ sudo systemctl enable hwtosys.service
 sudo systemctl start hwtosys.service
 ```
 
-- **Step 15:** Verify the script is up and running as a systemd service.
+- **ステップ 15:** スクリプトがsystemdサービスとして起動し、実行されていることを確認する。
 
 ```sh
 sudo systemctl status hwtosys.service
 ```
 
-- **Step 16:** ボードを再起動すると、システムクロックがハードウェアクロックと同期されていることが確認できます。
+- **ステップ 16:** ボードを再起動すると、システムクロックがハードウェアクロックと同期されていることが確認できます。
 
 ## ファン制御
 
@@ -360,7 +360,7 @@ nvfancontrol.confを変更したい場合は、必ず[こちら](https://docs.nv
 <Tabs>
 <TabItem value="Method 1" label="Method 1">
 
-- **Step 1:** nvfancontrol systemdサービスを停止します。
+- **ステップ 1:** nvfancontrol systemdサービスを停止します。
 
 ```
 sudo systemctl stop nvfancontrol

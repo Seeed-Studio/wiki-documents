@@ -44,7 +44,6 @@ Este Grove - Sensor ultrasónico de distancia es un módulo de medición de dist
 |Señal de disparo|10uS TTL|
 |Señal de eco|TTL|
 
-
 :::tip
     Más detalles sobre los módulos Grove consulte [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
 :::
@@ -95,7 +94,6 @@ Este Grove - Sensor ultrasónico de distancia es un módulo de medición de dist
 | Sin Conexión | Blanco                   |
 | D7            | Amarillo                  |
 
-
 #### Software
 
 - **Paso 1.** Descarga la  [Librería UltrasonicRanger](https://github.com/Seeed-Studio/Seeed_Arduino_UltrasonicRanger/archive/master.zip)  desde Github.
@@ -130,7 +128,7 @@ void loop()
 }
 ```
 
-- **Step 4.** We will see the distance display on terminal as below.
+- **Paso 4.** Veremos la visualización de la distancia en la terminal como se muestra a continuación.
 
 ```sh
 The distance to obstacles in front is:
@@ -178,7 +176,7 @@ Sube el programa a tu Arduino/Seeeduino.
 
 - **Paso 1**. Elementos utilizados en este proyecto:
 
-| Raspberry pi | Grove Base Hat para RasPi| Grove - Ultrasonic Ranger |
+| Raspberry pi | Grove Base Hat para RasPi| Grove - Sensor Ultrasónico de Distancia |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Ultrasonic_small.jpg)|
 |[Consigue UNO Ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Consigue UNO Ahora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Consigue UNO Ahora](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
@@ -326,7 +324,7 @@ Puedes salir de este programa simplemente presionando ++ctrl+c++.
 
 - **Paso 1.** Prepara los siguientes elementos:
 
-| Raspberry pi | GrovePi_Plus | Grove - Ultrasonic Ranger |
+| Raspberry pi | GrovePi_Plus | Grove - Sensor Ultrasónico |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Ultrasonic_small.jpg)|
 |[Obtener Uno Ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
@@ -385,7 +383,7 @@ while True:
         print "Error"
 ```
 
-- **Step 4.** We will see the distance display on terminal as below.
+- **Paso 4.** Veremos la visualización de la distancia en la terminal como se muestra a continuación.
 
 ```python
 pi@raspberrypi:~/GrovePi/Software/Python $ python3 grove_ultrasonic.py
@@ -408,7 +406,7 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python3 grove_ultrasonic.py
 
 - **Paso 1.** Prepara los siguientes elementos:
 
-| Wio Terminal | Grove - Ultrasonic Ranger |
+| Wio Terminal | Grove - Sensor Ultrasónico de Distancia |
 |--------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Ultrasonic_small.jpg)|
 |[Consigue Uno Ahora](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Consigue Uno Ahora](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
@@ -475,7 +473,7 @@ aip shell -n -c "runfile <YourPythonFilePath>"
 # aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-ultrasonic.py"
 ```
 
-- **Step 5.** We will see the distance display on terminal as below, and displaying on the Wio Terminal LCD screen.
+- **Paso 5.** Veremos la visualización de la distancia en la terminal como se muestra a continuación, y se mostrará en la pantalla de Wio Terminal LCD.
 
 ```python
 ansonhe@Ansons-Macbook-Pro ~:aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-ultrasonic.py"
@@ -561,11 +559,11 @@ void loop()
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

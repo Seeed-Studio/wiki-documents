@@ -36,7 +36,7 @@ no_comments: false # for Disqus
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -252,7 +252,7 @@ config.txtを開く
 sudo nano /boot/firmware/config.txt 
 ```
 
-Add the following text to config.txt
+以下のテキストをconfig.txtに追加してください
 
 ```
 dtparam=pciex1_gen=3
@@ -272,9 +272,9 @@ sudo usermod -aG docker $USER
 sudo apt install docker-compose-plugin
 ```
 
-### Create yml file
+### yml ファイルを作成します
 
-Create frigate.yml for docker compose to run frigate
+docker composeでfrigateを実行するためのfrigate.ymlを作成する
 
 ```
 cd ~

@@ -67,17 +67,17 @@ last_update:
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -92,7 +92,7 @@ XIAO ESP32C3 没有板载LED，所以如果您使用的是XIAO ESP32C3，您可�
 
 由于ESP-IDF开发框架面向的是更专业的软件开发者，使用门槛比Arduino要高。相关的文档和资料也会比Arduino少。为了让XIAO用户尽快开始使用ESP-IDF，并减少在开发环境配置中遇到问题的可能性，我们将以视频和图文的形式来展示环境的配置。本节是视频部分，如果您想跟着视频操作，可以参考这个视频来安装和配置ESP-IDF环境，最终点亮XIAO ESP32C6的板载LED。
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="900" height="450" src="https://www.youtube.com/embed/QdPmsGDd7zs?si=5r_OO2EwZMX8D_HM?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
@@ -200,8 +200,7 @@ idf.py --version
 ```
 nano ~/.bashrc
 ```
-
-Add the following to the end of the `.bashrc` file.
+将以下内容添加到 `.bashrc` 文件的末尾。
 
 ```
 alias get_idf='. ~/esp/esp-idf/export.sh'

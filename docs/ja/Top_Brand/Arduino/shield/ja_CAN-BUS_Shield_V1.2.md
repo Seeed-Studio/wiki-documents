@@ -155,7 +155,7 @@ CAN-BUS Shieldの動作を示す簡単な例を以下に示します。この例
 この例は[Arduino IDEバージョン1.6.9](https://www.arduino.cc/download_handler.php?f=/arduino-1.6.9-windows.zip)で構築されています。
 :::
 
-**STEP1: 必要なもの**
+**ステップ1: 必要なもの**
 
 |名前|機能|数量|リンク|
 |----|--------|---|----|
@@ -163,7 +163,7 @@ CAN-BUS Shieldの動作を示す簡単な例を以下に示します。この例
 |Seeeduino V4.2|コントローラー|2|[リンク](https://www.seeedstudio.com/item_detail.html?p_id=2517)|
 |ジャンパーワイヤ|接続|2|[リンク](https://www.seeedstudio.com/item_detail.html?p_id=234)|
 
-**STEP2: ハードウェア接続**
+**ステップ2: ハードウェア接続**
 
 各CAN-BUS ShieldをSeeeduino V4.2に挿入し、2つのCAN-BUS Shieldをジャンパーワイヤで接続します。以下の画像のように接続します。
 
@@ -173,7 +173,7 @@ CAN-BUS Shieldの動作を示す簡単な例を以下に示します。この例
     CAN_HをCAN_Hに、CAN_LをCAN_Lに接続してください。
 :::
 
-**STEP3: ソフトウェア**
+**ステップ3: ソフトウェア**
 
 [Arduinoライブラリのインストール方法](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/)の手順に従ってCAN BUS Shieldライブラリをインストールしてください。
 
@@ -194,7 +194,7 @@ CAN-BUS Shieldの動作を示す簡単な例を以下に示します。この例
 **受信確認**の例を開きます（**ファイル > Examples > CAN_BUS_Shield-master > receive_check**）そして**スレーブ**にアップロードします。
 ![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/receive%20check%20example.png)
 
-**STEP4: 結果を確認**
+**ステップ4: 結果を確認**
 
 Arduino IDEのシリアルモニターを開きます（**スレーブ**）。マスターから送信されたデータを確認できます。
 
@@ -379,7 +379,7 @@ case (CAN_xxxKBPS):
 
 CAN-BUSシールドを使用して素晴らしいプロジェクトを作りたい場合、以下のプロジェクトを参考にしてください。
 
-### Volkswagen CAN BUS Gaming
+### Volkswagen CAN BUS ゲーミング
 
 ![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/project1.JPG)
 

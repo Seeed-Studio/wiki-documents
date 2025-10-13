@@ -369,7 +369,7 @@ cd ~
 git clone https://github.com/DexterInd/GrovePi.git
 ```
 
-- **Step 3.** 以下のコマンドを実行して、Grove-Moisture Sensor を使用して土壌の湿度を測定します。
+- **ステップ 3.** 以下のコマンドを実行して、Grove-Moisture Sensor を使用して土壌の湿度を測定します。
 
 ```
 cd ~/GrovePi/Software/Python
@@ -404,7 +404,7 @@ while True:
         print ("Error")
 ```
 
-- **Step 4.** 以下のように、ターミナルに湿度が表示されます。
+- **ステップ 4.** 以下のように、ターミナルに湿度が表示されます。
 
 ```
 pi@raspberrypi:~/GrovePi/Software/Python $ python grove_moisture_sensor.py

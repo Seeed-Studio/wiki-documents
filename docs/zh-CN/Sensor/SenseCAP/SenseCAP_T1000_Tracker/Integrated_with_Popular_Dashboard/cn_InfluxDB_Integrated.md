@@ -105,7 +105,7 @@ last_update:
 INFLUX_TOKEN="paste your token here"
 ```
 
-Run the Telegraf agent in your terminal with the following command:
+在终端中使用以下命令运行 Telegraf 代理：
 
 ```cpp
 telegraf --config /path/to/custom/telegraf.conf
@@ -144,7 +144,7 @@ telegraf --config /path/to/custom/telegraf.conf
 INFLUX_TOKEN="paste your token here"
 ```
 
-Start the Telegraf agent by running the following command in the terminal:
+通过在终端中运行以下命令来启动 Telegraf 代理：
 
 ```cpp
 telegraf --config /path/to/custom/telegraf.conf

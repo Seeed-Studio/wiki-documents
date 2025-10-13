@@ -23,7 +23,9 @@ ReSpeaker 系列是一系列开发板，旨在实现语音接口成为日常人�
 如果您想体验语音接口，或者您想尝试实现您的想法，请在[这里](https://www.seeedstudio.com/series/Respeaker-10.html)获取套件或开发板！
 
 示例：
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/tdIsCRXKoVI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## **使用我们的 SDK 和 HDK 快速集成**
 

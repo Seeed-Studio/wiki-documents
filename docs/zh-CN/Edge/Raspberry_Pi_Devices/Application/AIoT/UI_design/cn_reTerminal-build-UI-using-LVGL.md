@@ -53,7 +53,7 @@ LVGL 提供了创建嵌入式 GUI 所需的一切，具有易于使用的图形�
 sudo apt-get update && sudo apt-get install build-essential libsdl2-dev cmake  -y
 ```
 
-Then clone the simulator project and the related sub modules:
+然后克隆模拟器项目和相关子模块：
 
 ```bash
 git clone --recursive https://github.com/littlevgl/pc_simulator.git
@@ -61,7 +61,9 @@ git clone --recursive https://github.com/littlevgl/pc_simulator.git
 
 ### 在主机PC上
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/UrSkzbuuGaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 EdgeLine 是 LVGL 的所见即所得编辑器，允许用户创建界面，然后导出 C/Micropython 代码以在目标设备上使用。它目前处于测试阶段，功能有限，可用于 Windows 和 Linux。
 
@@ -96,7 +98,7 @@ cmake ..
 make -j4
 ```
 
-The binary will be in pc_simulator/build/bin/main, and can be run by typing that command:
+二进制文件将位于 pc_simulator/build/bin/main，可以通过输入该命令来运行：
 
 ```bash
 DISPLAY=:0 ./bin/main
@@ -115,7 +117,7 @@ static void window_create(monitor_t * m)
 
 ```
 
-Additionally, change screen resolution in pc_simulator/lv_drv_conf.h #L90
+另外，在 pc_simulator/lv_drv_conf.h 中更改屏幕分辨率 #L90
 
 ```conf
 /*-------------------
@@ -130,7 +132,7 @@ Additionally, change screen resolution in pc_simulator/lv_drv_conf.h #L90
 #  define MONITOR_VER_RES     720
 ```
 
-Recompile and execute the binary to see demo application full screen!
+重新编译并执行二进制文件以全屏查看演示应用程序！
 
 ```bash
 make -j4
@@ -349,7 +351,7 @@ cmake ..
 make -j4
 ```
 
-The binary will be in ../bin/main, and can be run by typing that command:
+二进制文件将位于 ../bin/main，可以通过输入该命令来运行:
 
 ```bash
 DISPLAY=:0 ./../bin/main

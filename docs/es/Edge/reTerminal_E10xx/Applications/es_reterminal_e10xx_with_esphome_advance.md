@@ -1306,22 +1306,22 @@ En este caso, debes ir a Configuración -> Dispositivos y Servicios -> Integraci
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
 
-<!-- ### Q3: How can I upload a new program when device is in deep sleep mode?
+<!-- ### P3: ¿Cómo puedo cargar un nuevo programa cuando el dispositivo está en modo de suspensión profunda?
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/103.png" style={{width:'100%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/102.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-When the device is in deep sleep mode, you can't upload a new program directly. Follow these steps to enter download mode:
+Cuando el dispositivo está en modo de suspensión profunda, no puedes cargar un nuevo programa directamente. Sigue estos pasos para entrar en modo de descarga:
 
-Step 1. Make sure the device is turned on. Then, press and hold the **Boot** button located next to the USB-C port on the XIAO ESP32-S3 Plus.
+Paso 1. Asegúrate de que el dispositivo esté encendido. Luego, mantén presionado el botón **Boot** ubicado junto al puerto USB-C en el XIAO ESP32-S3 Plus.
 
-Step 2. While holding the **Boot** button, press the **Reset** button once, then release the **Boot** button.
+Paso 2. Mientras mantienes presionado el botón **Boot**, presiona el botón **Reset** una vez y luego suelta el botón **Boot**.
 
-Step 3. Turn off the battery switch and unplug the power cable.
+Paso 3. Apaga el interruptor de la batería y desconecta el cable de alimentación.
 
-Step 4. Finally, replug the cable and upload a new program. -->
+Paso 4. Finalmente, vuelve a conectar el cable y carga un nuevo programa. -->
 
 ### P3: ¿Falló la carga del programa por Wi-Fi?
 

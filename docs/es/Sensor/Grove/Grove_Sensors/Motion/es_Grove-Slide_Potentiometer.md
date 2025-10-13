@@ -16,18 +16,18 @@ last_update:
 
 El módulo Grove - Potenciómetro Deslizante incorpora una resistencia variable lineal con una resistencia máxima de 10KΩ. Cuando mueves el deslizador de un lado al otro, su voltaje de salida variará desde 0 V hasta el Vcc que apliques. Se conecta a otros módulos Grove a través de un **Cable Grove** estándar de 4 pines. Tres de los pines están conectados a OUT (Pin 1), Vcc (Pin 3) y GND (Pin 4), mientras que el cuarto pin (Pin 2) está conectado a un LED indicador verde integrado. El LED se utiliza para representar visualmente el cambio de resistencia en el potenciómetro.
 
-
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-Slide-Potentiometer-p-1196.html)
 Características
 --------
 
--   Longitud de deslizamiento de 30 mm
--   Conicidad de resistencia lineal
--   Compatible con Grove
+- Longitud de deslizamiento de 30 mm
+- Conicidad de resistencia lineal
+- Compatible con Grove
 
 :::tip
     Para más detalles sobre los módulos Grove, consulta [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
 :::
+
 Ideas de Aplicación
 -----------------
 
@@ -37,7 +37,6 @@ Aquí tienes algunos proyectos para tu referencia.
 |----------------------------------------------------------------------|------------------------------------------------------------------------|
 |<p><img src="https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/img/Recipe-Arduino_BoomBox.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/img/Recipe-Arduino_BeatBox.jpg" alt="pir" width={600} height="auto" /></p>  |
 | [¡Hazlo AHORA!](https://community.seeedstudio.com/project_detail.html?id=171)       | [¡Hazlo AHORA!](https://community.seeedstudio.com/project_detail.html?id=187)         |
-
 
 Especificaciones
 --------------
@@ -162,13 +161,13 @@ Como se muestra a continuación, el Grove - Potenciómetro Deslizante puede ser 
 
 Sigue estos pasos para construir un circuito Grove de muestra usando este módulo pero sin usar ninguna placa microcontroladora:
 
-1.  Conecta el módulo potenciómetro deslizante al lado de entrada de tu circuito (a la izquierda del módulo de alimentación). En el lado de salida del circuito, puedes usar una gama de módulos de Interfaz de Usuario (Grove - LED Rojo, Grove - Cadena de Luces LED, Grove - Mini Ventilador, Grove - Zumbador, Grove - Grabadora etc.)
-2.  Alimenta el circuito cuando esté completo.
-3.  El módulo potenciómetro deslizante ahora puede ser usado para activar una salida. Por ejemplo:
+1. Conecta el módulo potenciómetro deslizante al lado de entrada de tu circuito (a la izquierda del módulo de alimentación). En el lado de salida del circuito, puedes usar una gama de módulos de Interfaz de Usuario (Grove - LED Rojo, Grove - Cadena de Luces LED, Grove - Mini Ventilador, Grove - Zumbador, Grove - Grabadora etc.)
+2. Alimenta el circuito cuando esté completo.
+3. El módulo potenciómetro deslizante ahora puede ser usado para activar una salida. Por ejemplo:
 
-    -   Cuando se usa en conjunto con un módulo de salida Grove - LED Rojo, observa que el brillo del LED aumenta a medida que mueves el deslizador de GND a Vcc. En Vcc, la resistencia del potenciómetro es mínima y el LED brilla más intensamente. El mismo comportamiento puede verse cuando el potenciómetro deslizante se usa con el módulo Grove - Cadena de Luces LED - mientras más voltaje apliques llevando el deslizador hacia la marca Vcc, más brillantes se volverán las luces LED.
-    -   De manera similar, puedes usar el potenciómetro deslizante para variar la velocidad de tu Grove - Mini Ventilador o la frecuencia con la que suena tu módulo Grove - Zumbador
-    -   El potenciómetro deslizante también puede ser usado como un interruptor ON/OFF para cualquier circuito. Lleva el deslizador a la posición Vcc para encenderlo y muévelo hacia abajo a GND para apagar un circuito.
+    - Cuando se usa en conjunto con un módulo de salida Grove - LED Rojo, observa que el brillo del LED aumenta a medida que mueves el deslizador de GND a Vcc. En Vcc, la resistencia del potenciómetro es mínima y el LED brilla más intensamente. El mismo comportamiento puede verse cuando el potenciómetro deslizante se usa con el módulo Grove - Cadena de Luces LED - mientras más voltaje apliques llevando el deslizador hacia la marca Vcc, más brillantes se volverán las luces LED.
+    - De manera similar, puedes usar el potenciómetro deslizante para variar la velocidad de tu Grove - Mini Ventilador o la frecuencia con la que suena tu módulo Grove - Zumbador
+    - El potenciómetro deslizante también puede ser usado como un interruptor ON/OFF para cualquier circuito. Lleva el deslizador a la posición Vcc para encenderlo y muévelo hacia abajo a GND para apagar un circuito.
 
 En términos de elegir un módulo de alimentación, puedes usar ya sea el módulo Grove - Alimentación USB o el módulo Grove - Alimentación Jack DC para construir circuitos Grove independientes.
 
@@ -249,6 +248,7 @@ Sube el programa a tu Arduino/Seeeduino.
 :::success
     Cuando el código termine de subirse, desliza el Potenciómetro Deslizante, verás el valor del sensor mostrado en el Monitor Serie. Y si deslizas más allá de la mitad del Potenciómetro, el LED en él se encenderá.
 :::
+
 ### Jugar con Raspberry Pi (Con Grove Base Hat para Raspberry Pi)
 
 #### Hardware
@@ -264,10 +264,8 @@ Sube el programa a tu Arduino/Seeeduino.
 - **Paso 3**. Conecta el Potenciómetro Deslizante al puerto A0 del Base Hat.
 - **Paso 4**. Conecta el Raspberry Pi a la PC a través del cable USB.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/img/Slide_Hat.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/img/Slide_Hat.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 :::note
     Para el paso 3 puedes conectar el potenciómetro deslizante a **cualquier Puerto Analógico** pero asegúrate de cambiar el comando con el número de puerto correspondiente.
@@ -278,8 +276,9 @@ Sube el programa a tu Arduino/Seeeduino.
 :::note
      Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usar esta línea de comandos **solo con Python3**.
 :::
+
 - **Paso 1**. Sigue [Configuración de Software](https://wiki.seeedstudio.com/es/Grove_Base_Hat_for_Raspberry_Pi/#installation) para configurar el entorno de desarrollo.
-- **Paso 2**. Descarga el archivo fuente clonando la biblioteca grove.py. 
+- **Paso 2**. Descarga el archivo fuente clonando la biblioteca grove.py.
 
 ```
 cd ~
@@ -335,8 +334,9 @@ if __name__ == '__main__':
 ```
 
 :::success
-    If everything goes well, you will be able to see the following result
-:::   
+    Si todo va bien, podrás ver el siguiente resultado
+:::
+
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ python3 grove_slide_potentiometer.py 0
@@ -364,15 +364,14 @@ KeyboardInterrupt
 
 ```
 
-
 Puedes salir de este programa simplemente presionando ++ctrl+c++.
 
 :::note
         Puede que hayas notado que para el puerto analógico, el número de pin en la serigrafía es algo como **A0, A1**, sin embargo en el comando usamos el parámetro **0** y **1**, igual que el puerto digital. Así que por favor asegúrate de conectar el módulo en el puerto correcto, de lo contrario puede haber conflictos de pines.
 :::
 
-
 ### Jugar Con Raspberry Pi (con GrovePi_Plus)
+
 :::note
      Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usar esta línea de comandos **solo con Python3**.
 :::
@@ -383,7 +382,7 @@ Puedes salir de este programa simplemente presionando ++ctrl+c++.
 
 3.Conexión
 
--   Conecta el sensor al socket A0 del grovepi usando un cable grove.
+- Conecta el sensor al socket A0 del grovepi usando un cable grove.
 
 4.Navega al directorio de las demos:
 
@@ -391,7 +390,7 @@ Puedes salir de este programa simplemente presionando ++ctrl+c++.
     cd yourpath/GrovePi/Software/Python/
 ```
 
--   Para ver el código
+- Para ver el código
 
 ```
     nano grove_slide_potentiometer.py   # "Ctrl+x" to exit #
@@ -431,25 +430,23 @@ while True:
 ```
 
 5.Ejecuta la demostración.
+
 ```
 sudo python3 grove_slide_potentiometer.py
 ```
-
 
 ## Visor de Esquemas en Línea
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/res/Sliding_Potentiometer.rar" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 Recursos
 --------
 
--   [Archivo Eagle del Potenciómetro Deslizante](https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/res/Sliding_Potentiometer.rar)
--   [Potenciómetro Deslizante en PDF](https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/res/Sliding_protentiometer_sch.pdf)
--   [Hoja de datos del Potenciómetro Deslizante](https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/res/Sliding_potentiometer_datasheet.pdf)
--   [Archivo CDC de Codecraft](https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/res/Grove_Slide_Potentiometer_CDC_File.zip)
-
+- [Archivo Eagle del Potenciómetro Deslizante](https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/res/Sliding_Potentiometer.rar)
+- [Potenciómetro Deslizante en PDF](https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/res/Sliding_protentiometer_sch.pdf)
+- [Hoja de datos del Potenciómetro Deslizante](https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/res/Sliding_potentiometer_datasheet.pdf)
+- [Archivo CDC de Codecraft](https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/res/Grove_Slide_Potentiometer_CDC_File.zip)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Slide_Potentiometer -->
 
@@ -460,14 +457,15 @@ Recursos
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/kishima7/raspberry-pi-music-server-f5a0ae/embed' width='350'></iframe>
 
 ## Soporte Técnico y Discusión de Productos
+
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

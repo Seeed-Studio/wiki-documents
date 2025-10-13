@@ -54,10 +54,10 @@ Arduino IDE和C++的基础知识
 
 材料包括本手册和来自SEEED studio的"Getting Started with the TinyML Kit"。开始学习所需的一切都包含在这个盒装课程中。
 
-- [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)
-- [Grove - Ultrasonic Sensor](https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html)
-- [Grove - Temp&Humi&Barometer Sensor (BME280)](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)
-- [Grove cables](https://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-5-PCs-Pack-p-749.html)
+- [Wio 终端](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)
+- [Grove - 超声波传感器](https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html)
+- [Grove - 温湿度气压传感器 (BME280)](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)
+- [Grove 线缆](https://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-5-PCs-Pack-p-749.html)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/HarvardKit/HarvardCourse1a.png" alt="pir" width="500" height="auto"/></p>
 
