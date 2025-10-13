@@ -34,7 +34,7 @@ SenseCAP Indicator 是一款专为 [Meshtastic®](https://meshtastic.org/) 设�
 ### 特性
 
 - **支持 Meshtastic：** 预装 Meshtastic 固件，通电即可使用。您也可以使用 Meshtastic Flasher 升级固件。<br/>
-- **双 MCU 和丰富的 GPIO：** 配备强大的 ESP32S3 和 RP2040 双 MCU，以及超过 400 个 Grove 兼容的 GPIO，提供灵活的扩展选项。<br/>
+- **双 MCU 和丰富的 GPIO：** 配备强大的 ESP32S3 和 RP2040 双 MCU，以及超过 400 个 Grove 兼容 GPIO，提供灵活的扩展选项。<br/>
 - **本地 LoRa® 物联网连接中心：** 集成 Semtech SX1262 LoRa® 芯片，设备可通过教程转换为 LoRaWAN® 单通道网关。或者，通过 Wi-Fi 将 LoRa® 设备连接到 Matter 等流行的物联网平台。<br/>
 - **完全开源平台：** 利用广泛的 ESP32 和 Raspberry Pi 开源生态系统，实现无限的应用可能性。<br/>
 - **适用于多种应用场景：** 可用作 Meshtastic 桌面节点或车载节点，以及 LoRaWAN® 单通道网关。
@@ -63,6 +63,10 @@ SenseCAP Indicator 是一款专为 [Meshtastic®](https://meshtastic.org/) 设�
 
 ### 刷写应用固件
 
+:::caution note
+在刷写固件之前，请确保您购买的指示器是 Meshtastic 版本。请勿将 Meshtastic 固件刷写到不兼容 Meshtastic 的指示器上。这可能会导致硬件损坏。
+:::
+
 **视频教程**
 
 <div class="video-container">
@@ -75,7 +79,7 @@ SenseCAP Indicator 是一款专为 [Meshtastic®](https://meshtastic.org/) 设�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-flash.png" alt="pir" width={800} height="auto" /></p>
 
-在插入 USB 线缆的同时按住按钮。
+在插入 USB 线缆时按住按钮。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/press-button.png" alt="pir" width={400} height="auto" /></p>
 
@@ -174,10 +178,10 @@ import TabItem from '@theme/TabItem';
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
+参考 [各国 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，每分钟在滚动 1 小时基础上计算。如果达到限制，您的设备将停止传输，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时计算每分钟。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
 现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
@@ -196,7 +200,7 @@ import TabItem from '@theme/TabItem';
 <iframe width="500" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/keyboard-usage.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-#### 版本 2.6 +
+#### 版本 2.6 以上
 
 <div class="table-center">
 <iframe width="500" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/keyboard-usage2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

@@ -11,8 +11,10 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /es/watcher_web_control_panel
 last_update:
-  date: 09/11/2025
+  date: 10/13/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
 
 # Guía del Panel de Control Web Beta
@@ -40,7 +42,7 @@ La versión beta del Panel de Control Web incluye las siguientes característica
 1. Ingresa a la [Plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai/home)
 2. Para acceder al Panel de Control, haz clic en Watcher Agent en la esquina superior derecha de la página.
    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/navigate.jpg" style={{width:800, height:'auto'}}/></div>
-3. Haz clic en el botón "Vincular Dispositivo"
+3. Haz clic en el botón "Bind Device"
    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/page1.jpg" style={{width:300, height:'auto'}}/></div> 
 4. Sigue las instrucciones en pantalla e ingresa el código de verificación de 6 dígitos mostrado en el dispositivo
 
@@ -67,19 +69,19 @@ La palabra de activación predeterminada es "Jarvis".
 ### Voz del Personaje
 - Selecciona diferentes voces
 
-### Introducción del Rol/Prompt
+### Introducción/Prompt del Rol
 1. Elige entre plantillas de rol predefinidas
 2. Crea plantillas de rol personalizadas
 3. Modifica plantillas existentes
 :::note
-El Apodo del Asistente establecido arriba solo funcionará si se agrega `assistant nickname` a la Introducción del Rol.
+El Apodo del Asistente configurado arriba solo funcionará si se agrega `assistant nickname` a la Introducción del Rol.
 Para obtener la hora actual, necesitas agregar: __DATE__
 :::
 
 
-### Ver Historial
-- Acceder a registros de chat
-- Ver mensajes individuales
+### Visualización del Historial
+- Accede a los registros de chat
+- Ve mensajes individuales
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/history%20del.jpg" style={{width:600, height:'auto'}}/></div> 
 
 ## Información del Dispositivo
