@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_I
 slug: /Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator
 sidebar_position: 1
 last_update:
-  date: 7/11/2024
-  author: Spencer
+  date: 10/13/2025
+  author: Twelve
 ---
 
 ## Overview
@@ -30,6 +30,10 @@ SenseCAP Indicator is a fully open source powerful IoT development platform for 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png"/>
 </div>
+
+:::caution note
+Please do not flash the Meshtastic firmware on indicators that do not support Meshtastic. This may cause hardware damage. If you want to purchase the device for Meshtastic, please buy this [Sensecap Indicator for Meshtastic](https://wiki.seeedstudio.com/sensecap_indicator_meshtastic).
+:::
 
 ## Features
 
