@@ -436,10 +436,10 @@ After the program starts, the Hover Lock Technology remains functional.
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
-
 - 🚀 Step 1: Install the Orbbec SDK Dependent Environment
 
 1. Clone the `pyorbbec` repository
+
    ```bash
    cd ~/
    git clone https://github.com/orbbec/pyorbbecsdk.git
@@ -448,20 +448,24 @@ After the program starts, the Hover Lock Technology remains functional.
 2. Download and install the corresponding **.whl file** for the SDK  
    Go to [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases),  
    select and install based on your Python version. For example:
+
    ```bash
    pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
    ```
 
 3. Install dependencies in the `pyorbbec` directory
+
    ```bash
    cd ~/pyorbbecsdk
    pip install -r requirements.txt
    ```
 
    Force downgrade the `numpy` version to `1.26.0`
+
     ```bash
     pip install numpy==1.26.0
     ```
+
   Red error messages can be ignored.
 
 4. Clone the Orbbec SDK into the `~/lerobot/src/cameras` directory
@@ -471,7 +475,8 @@ After the program starts, the Hover Lock Technology remains functional.
   git clone https://github.com/ZhuYaoHui1998/orbbec.git
   ```
 
-5. Modify utils.py and __init__.py
+5. Modify utils.py and **init**.py
+
 - Find `utils.py` in the `~/lerobot/src/lerobot/cameras` directory, and add the following code at line 40:
 
 ```python
@@ -497,11 +502,9 @@ from .orbbec.configuration_orbbec import OrbbecCameraConfig
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
 </div>
 
-
 - 🚀 Step 2: Function Call and Examples
 
 In all the following examples, replace `starai_viola` with the actual model of the robotic arm you are using (e.g., `so100` / `so101`).
-
 
 We have added the `focus_area` hyperparameter. Since depth data that is too far away is meaningless for the robotic arm (it cannot reach or grasp objects), depth data less than or greater than the `focus_area` will be displayed in black. The default `focus_area` is (20, 600).  
 Currently, the only supported resolution is width: 640, height: 880.
@@ -518,19 +521,18 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/orbbec_result.png" />
 </div>
 
-
 For subsequent tasks such as data collection, training, and evaluation, the process is the same as that for regular RGB commands. You only need to replace the relevant part in the regular RGB command with:
+
   ```
   --robot.cameras="{ front: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:(20,600)}}" \
   ```
-You can also add an additional monocular RGB camera afterward.
 
+You can also add an additional monocular RGB camera afterward.
 
 </details>
 
