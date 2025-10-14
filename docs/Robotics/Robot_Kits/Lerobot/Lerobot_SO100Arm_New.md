@@ -642,7 +642,7 @@ The teleoperate command will automatically:
 
 ```python
 elif cfg.type == "orbbec":
-            from .realsense.camera_orbbec import OrbbecCamera
+            from .orbbec.camera_orbbec import OrbbecCamera
 
             cameras[key] = OrbbecCamera(cfg)
 ```

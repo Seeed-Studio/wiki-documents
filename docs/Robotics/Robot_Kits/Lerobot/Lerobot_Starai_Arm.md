@@ -481,7 +481,7 @@ After the program starts, the Hover Lock Technology remains functional.
 
 ```python
 elif cfg.type == "orbbec":
-            from .realsense.camera_orbbec import OrbbecCamera
+            from .orbbec.camera_orbbec import OrbbecCamera
 
             cameras[key] = OrbbecCamera(cfg)
 ```
