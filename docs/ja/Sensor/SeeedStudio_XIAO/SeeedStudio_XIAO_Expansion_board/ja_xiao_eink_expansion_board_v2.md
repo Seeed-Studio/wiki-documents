@@ -131,37 +131,37 @@ ePaper ドライバーボードは24ピンFPCコネクタ、効率的で安全�
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
       </a>
   </div></td>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
       </a>
   </div></td>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
       </a>
   </div></td>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-**STEP 2.** XIAOをXIAOソケットに挿入：ピンを合わせて、XIAOをボード上のXIAOソケットに優しく挿入します。
+**ステップ 2.** XIAOをXIAOソケットに挿入：ピンを合わせて、XIAOをボード上のXIAOソケットに優しく挿入します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/connect_xiao.gif" style={{width:700, height:'auto'}}/></div>
 
-**STEP 3.** eInkをFPCコネクタに挿入：E-paperを24ピンFPCコネクタにePaper Breakout Board上で慎重にスライドして挿入します。
+**ステップ 3.** eInkをFPCコネクタに挿入：E-paperを24ピンFPCコネクタにePaper Breakout Board上で慎重にスライドして挿入します。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/connect_eink.gif" style={{width:700, height:'auto'}}/></div>
 
 ### ソフトウェア準備
@@ -171,7 +171,7 @@ ePaper ドライバーボードは24ピンFPCコネクタ、効率的で安全�
 Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
-**Step 1.** Arduinoアプリケーションを起動します。
+**ステップ 1.** Arduinoアプリケーションを起動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -181,7 +181,7 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
     </a>
 </div>
 
-**Step 2.** 開発ボードモデルを選択し、Arduino IDEに追加します。
+**ステップ 2.** 開発ボードモデルを選択し、Arduino IDEに追加します。
 
 - 後のルーチンで**Seeed Studio XIAO SAMD21**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO/#software)**を参照して追加を完了してください。
 
@@ -195,7 +195,7 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
 
 ## Seeed Arduino LCDライブラリのインストール
 
-**Step 3.** Seeed Arduino LCDライブラリをインストールします
+**ステップ 3.** Seeed Arduino LCDライブラリをインストールします
 
 :::tip
 このライブラリはTFTライブラリと同じ機能を持ち、互換性がありません。TFTライブラリや他の類似のディスプレイライブラリをインストールしている場合は、まずアンインストールしてください。

@@ -25,7 +25,9 @@ last_update:
 
 Freescale MPR121をベースにしたこのセンサーは、完全に独立した12個の電極を備え、自動構成機能を内蔵しています。I2Cインターフェースのおかげで、1つのGroveポートで12個の電極信号をすべて検出でき、I2Cアドレスは0X5Bから0X5Dまでハードウェアで設定可能です。これにより、複数の**Grove - 12 Key Capacitive I2C Touch Sensor V3 (MPR121)** を1つのシステムで使用してチャンネルを拡張することが可能になり、最大36個の電極を含むタッチシステムを構築できます。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/CPq4VSAXBgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121-p-4694.html
 " target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
@@ -87,7 +89,9 @@ CH0 ~ CH11については、電極の静電容量データが取得されると�
 
 この製品の紹介ビデオと簡単なデモです。ぜひお試しください。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ds7kBVdeY4U?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **リーフピアノ**: タッチセンサーと葉をピアノの鍵盤として使用してピアノを作りました。
 

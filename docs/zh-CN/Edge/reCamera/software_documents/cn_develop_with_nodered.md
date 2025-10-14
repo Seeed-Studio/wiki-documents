@@ -116,7 +116,7 @@ Node-RED 的目标是让任何人都能构建收集、转换和可视化数据�
 
 - 1. 选择 `On Device` 模型。reCamera [默认](https://wiki.seeedstudio.com/cn/recamera_on_device_models)包含几个 Yolo 模型。
 - 2. 从 `SenseCraft Zoo` 选择模型。有几个公共模型可供选择，如手势和水果。用户也可以上传自己的模型，并将其公开以贡献社区。
-- 3. `上传您自己的模型`到 reCamera。通过遵循[将模型转换为 reCamera](https://wiki.seeedstudio.com/convert xxx) 的说明，用户可以将自己的 AI 模型转换为 INT8 cvimodel 格式以适应 reCamera。然后将模型上传到 reCamera 进行部署。模型上传后，请在 `Labels` 字段中列出模型的类别。
+- 3. `上传您自己的模型`到 reCamera。通过遵循[将模型转换为 reCamera](https://wiki.seeedstudio.com/cn/recamera_model_conversion/) 的说明，用户可以将自己的 AI 模型转换为 INT8 cvimodel 格式以适应 reCamera。然后将模型上传到 reCamera 进行部署。模型上传后，请在 `Labels` 字段中列出模型的类别。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/model_classes.png" /></div>
 

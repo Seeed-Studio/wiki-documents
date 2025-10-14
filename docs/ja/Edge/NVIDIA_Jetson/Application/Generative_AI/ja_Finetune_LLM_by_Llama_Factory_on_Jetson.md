@@ -126,14 +126,14 @@ http://127.0.0.1:7860
 最後に、ファインチューニングされたモデルでLlama-Factoryを使用して、実際に中国語での会話能力を獲得したかどうかをテストできます。具体的な手順は以下の通りです。
 
 
-**Step1.** Llama-Factory WebUIでファインチューニングされたモデルを読み込みます。
+**ステップ1.** Llama-Factory WebUIでファインチューニングされたモデルを読み込みます。
 
 <div align="center">
     <img width={800} 
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/load_model.png" />
 </div>
 
-**Step2.** `Input` テキストボックスに中国語のプロンプトを入力し、`Submit` ボタンをクリックして、`Chatbot` テキストボックスで大規模言語モデルの出力結果を確認します。
+**ステップ2.** `Input` テキストボックスに中国語のプロンプトを入力し、`Submit` ボタンをクリックして、`Chatbot` テキストボックスで大規模言語モデルの出力結果を確認します。
 
 <div align="center">
     <img width={800} 
@@ -145,7 +145,7 @@ http://127.0.0.1:7860
 
 ### デモンストレーション
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="450" src="https://www.youtube.com/embed/OaGEn7pVve0" title="Finetune LLM by Llama-Factory on Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

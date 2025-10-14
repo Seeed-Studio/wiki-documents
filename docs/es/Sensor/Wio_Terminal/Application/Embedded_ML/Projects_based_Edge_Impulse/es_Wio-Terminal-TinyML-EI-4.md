@@ -24,7 +24,9 @@ También utilizaremos el servicio Microsoft Azure IoT Central para almacenar los
 
 ¡Para más detalles y tutorial en video, mira el video correspondiente!
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pt1maDNXznI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Entendiendo los datos
 
@@ -184,7 +186,7 @@ Ultrasonic ultrasonic(0);
 TFT_eSPI tft;
 ```
 
-In setup function, initialize LCD screen
+En la función de configuración, inicializar la pantalla LCD
 
 ```cpp
     tft.begin();

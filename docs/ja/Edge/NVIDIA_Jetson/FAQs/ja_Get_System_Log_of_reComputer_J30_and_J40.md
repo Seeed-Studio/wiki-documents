@@ -39,7 +39,7 @@ last_update:
 
 ## システムログの取得
 
-**Step1.** コンピュータに認識されたUSB2TTLモジュールの識別番号を取得します。
+**ステップ1.** コンピュータに認識されたUSB2TTLモジュールの識別番号を取得します。
 
 :::note
 コンピュータがWindowsを実行している場合、デバイスマネージャーで認識された識別番号を確認できます。
@@ -57,7 +57,7 @@ last_update:
 
 **Setp3.** Jetsonの電源を入れます。すべてが正常に動作している場合、シリアルポートデバッグツールウィンドウにシステムブートログが表示されます。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/rwiKgF91mNE" title="Get Sys Log of reComputer J30/J40" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

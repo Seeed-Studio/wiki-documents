@@ -240,6 +240,10 @@ The B2B connector of XIAO ESP32S3 Plus is compatible with [Wio-SX1262 extension 
 
 </Tabs>
 
+:::caution
+Although the XIAO ESP32-S3 assigns GPIO41 and GPIO42 to pins A11 and A12, due to the nature of the ESP32-S3 chip, pins A11 and A12 do not support ADC functionality. Please be sure to distinguish and differentiate between them.
+:::
+
 ### Power Pins
 
 - 5V - This is 5v out from the USB port. You can also use this as a voltage input but you must have some sort of diode (schottky, signal, power) between your external power source and this pin with anode to battery, cathode to 5V pin.
@@ -533,7 +537,7 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 - **Step 4.** Close the Arduino IDE and reopen it.-->
 
 <Tabs>
-<TabItem value="(Sense)" label="for XIAO ESP32S2 (Sense)" default>
+<TabItem value="(Sense)" label="for XIAO ESP32S3 (Sense)" default>
 
 Also, search for **xiao** in the development board on the left. select **XIAO_ESP32S3**.
 

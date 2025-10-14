@@ -3,6 +3,14 @@ const fs = require('fs').promises;
 const path = require('path');
 const { execSync } = require('child_process');
 
+// 使用 js-yaml 解析 Front Matter（若不可用，则回退正则）
+let yaml;
+try {
+  yaml = require('js-yaml');
+} catch (e) {
+  console.log('ℹ️ 未安装 js-yaml，将使用简易解析回退逻辑');
+}
+
 const anthropic = new Anthropic({
   apiKey: process.env.TRANSLATION_API_KEY
 });
@@ -49,6 +57,19 @@ const PRESERVE_TERMS = {
     'Home Assistant': 'Home Assistant'
 };
 
+// 术语表：强制把英文术语译成指定目标语言短语（优先从 .github/scripts/glossary.json 读取；不存在则使用内置空表）
+let GLOSSARY = { "zh-CN": {}, "ja": {}, "es": {} };
+(async () => {
+  try {
+    const gPath = path.join(__dirname, 'glossary.json');
+    const raw = await fs.readFile(gPath, 'utf8');
+    const obj = JSON.parse(raw);
+    if (obj && typeof obj === 'object') GLOSSARY = { ...GLOSSARY, ...obj };
+  } catch (e) {
+    console.log('ℹ️ 未找到自定义术语表 glossary.json，使用内置空表');
+  }
+})();
+
 // 文档保护列表
 const PROTECTED_PATHS = [
   'docs/Getting_Started.md',
@@ -65,6 +86,8 @@ const translationStatus = {
   moved: 0,
   deleted: 0,
   protected: 0,
+  // 被 front matter 跳过的次数
+  skipped: 0,
   errors: []
 };
 
@@ -91,7 +114,7 @@ function preprocessDocument(content, startsInsideCodeBlock = false) {
       indent: indent,
       content: trimmedContent,
       isEmpty: line.trim() === '',
-      inCodeBlockLine: false, // 新增：标记该行是否属于代码块（含围栏行）
+      inCodeBlockLine: false, // 标记该行是否属于代码块（含围栏行）
     };
 
     // 根据围栏切换代码块状态，并标记当前行
@@ -123,7 +146,7 @@ function preprocessDocument(content, startsInsideCodeBlock = false) {
     processed: processedLines.join('\n'),
     lineMetadata: lineMetadata,
     totalLines: lines.length,
-    endsInsideCodeBlock: inCodeBlock // PATCH: 返回块末状态
+    endsInsideCodeBlock: inCodeBlock // 返回块末状态
   };
 }
 
@@ -252,12 +275,12 @@ function intelligentSplit(lines, maxSize) {
   let inTable = false;
   let lastHeaderIndex = -1;
   
-  // PATCH: 将换行字节也计入阈值，避免边界误差
+  // 将换行字节也计入阈值，避免边界误差
   const NL_BYTES = Buffer.byteLength('\n', 'utf8');
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    // PATCH: 统计“行+换行”的字节数
+    // 统计“行+换行”的字节数
     const lineSize = Buffer.byteLength(line, 'utf8') + NL_BYTES;
     
     // 检测代码块
@@ -315,9 +338,16 @@ function intelligentSplit(lines, maxSize) {
 // 提示词生成
 function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkInfo = null) {
   const langName = LANGUAGE_CONFIG[targetLang].name;
+
+  // 术语保护（不翻译/不改写）展示前 5 个示例，避免提示太长
   const termsList = Object.entries(PRESERVE_TERMS)
     .map(([original, preserved]) => `- ${original} → ${preserved}`)
     .join('\n');
+
+  // 术语表（强制翻译为指定译法）
+  const glossaryPairs = Object.entries(GLOSSARY?.[targetLang] || {})
+    .map(([src, dst]) => `- ${src} → ${dst}`)
+    .join('\n') || '（无）';
 
   let prompt = `<instruction>
 你是一个专业的技术文档翻译助手。你的任务是将Markdown文档从英文翻译成${langName}。
@@ -340,24 +370,30 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
    - 代码块内容（\`\`\`之间的内容）
    - 行内代码（\`之间的内容）
    - URL链接
-   - HTML标签
+   - HTML 标签**结构**与**属性**保持不变（不要新增/删除/重排标签；不要修改属性名/属性值）
+   - 但标签之间的**可见文本内容要翻译**（例如 <span>、<strong>、<font> 内部的文字）
    - 专有名词：${termsList.split('\n').slice(0, 5).join(', ')}等
+   - **教程中引用的目标软件或系统界面的英文元素**（如 App 内的菜单项、按钮名称、字段名、设置项等，通常出现在引号 "..."、加粗 **...**、或菜单路径 File > Preferences 等），请保持英文原文，不要翻译，以便与实际界面一致。
+   - 但**网页自身的 HTML 或 JSX 标签内的可见文字**（例如 <span>、<strong>、<font>、导航链接、标题等）若是文档页面展示给读者看的内容，应正常翻译。
 
-2. **Front Matter处理**：
+2. **术语表（强制翻译）**：以下术语若出现，必须严格使用右侧译法（不允许其它译法）：
+${glossaryPairs}
+
+3. **Front Matter处理**：
    - 只翻译title和description字段的值
    - slug字段添加前缀：${pathPrefix}
 
-3. **缩进保持**：
+4. **缩进保持**：
    - 如果原文有缩进，译文必须保持相同的缩进
    - 列表项的缩进级别必须保持不变
    - 代码块内的缩进必须完全保留
 
-4. **锚点链接处理**：
+5. **锚点链接处理**：
    - 在[文本](#锚点)格式中，锚点部分的空格用连字符替换
    - 例如：[Some Text](#some-text) → [一些文本](#一些-文本)
    - 注意：锚点中绝不能有空格，必须用连字符连接
 
-5. **严格禁止**：
+6. **严格禁止**：
    - 添加或删除任何行
    - 改变任何缩进
    - 添加原文没有的\`\`\`代码块标记
@@ -373,6 +409,9 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
 [LINE_3]   - First item
 [LINE_4]   - [BLE Scanner](#ble-scanner)
 [LINE_5]     - Nested item
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+[LINE_7] Click "Settings" in the app (File > Preferences).
+[LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>
 
 正确输出：
 [LINE_0] ## 入门指南
@@ -381,6 +420,9 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
 [LINE_3]   - 第一项
 [LINE_4]   - [BLE 扫描器](#ble-扫描器)
 [LINE_5]     - 嵌套项
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+[LINE_7] 在应用中点击 "Settings"（File > Preferences）。
+[LINE_8] <a className="nav-item"><span className="text">开发者中心</span></a>
 
 错误输出（绝对禁止）：
 [LINE_0] ## 入门指南
@@ -389,6 +431,9 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
 [LINE_3] - 第一项  ❌ 缩进丢失
 [LINE_4]   - [BLE 扫描器](#ble 扫描器)  ❌ 锚点中有空格
 [LINE_5]   - 嵌套项  ❌ 缩进级别错误
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>  ❌ HTML/JSX 可见文本未翻译（应为“立即购买”）
+[LINE_7] 在应用中点击 “设置” （文件 > 首选项）。  ❌ 不应翻译软件界面内的菜单路径或按钮名称
+[LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>  ❌ 网页自身的可见文本未翻译
 </example>
 </instruction>
 
@@ -564,14 +609,16 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
 
       let translatedContent = response.content[0].text;
 
-      // ✅ 先做链接/排版修复（此时代码块仍是占位符，不会被改动）
+      // 先做链接/排版修复（此时代码块仍是占位符，不会被改动）
       translatedContent = fixAnchorLinks(translatedContent);
       translatedContent = processInternalLinks(translatedContent, targetLang);
       if (targetLang === 'zh-CN') {
         translatedContent = addChineseEnglishSpacing(translatedContent);
       }
+      // 应用术语表
+      translatedContent = applyGlossary(translatedContent, targetLang);
 
-      // ✅ 最后一步再恢复行号/缩进，并把代码块整行原样回写
+      // 最后一步再恢复行号/缩进，并把代码块整行原样回写
       translatedContent = postprocessDocument(translatedContent, lineMetadata, totalLines);
 
       // 验证翻译结果（针对最终文本）
@@ -750,6 +797,83 @@ function addChineseEnglishSpacing(content) {
   return tempContent;
 }
 
+// 在非代码行、且行内反引号之外，应用术语表替换
+function applyGlossary(content, targetLang) {
+  const map = GLOSSARY?.[targetLang] || {};
+  const entries = Object.entries(map);
+  if (!entries.length) return content;
+
+  const lines = content.split('\n');
+  const out = [];
+
+  // 用于跳过代码块（围栏）整行
+  let inFence = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    let line = lines[i];
+
+    // 跳过 [LINE_x] 标记本身（只处理其后的内容）
+    const m = line.match(/^(\[LINE_\d+\])(.*)$/);
+    if (!m) { out.push(line); continue; }
+    const prefix = m[1];
+    let body = m[2];
+
+    // 追踪围栏状态
+    const trimmed = body.trimStart();
+    const isFence = trimmed.startsWith('```');
+    if (isFence) {
+      inFence = !inFence;
+      out.push(prefix + body);
+      continue;
+    }
+    if (inFence) { out.push(prefix + body); continue; }
+
+    // 保护行内反引号片段：分段替换
+    // 例如: 文本 `code Trilateration` 文本
+    const parts = body.split(/(`[^`]*`)/g); // 奇数索引处为反引号片段
+    for (let pi = 0; pi < parts.length; pi++) {
+      const seg = parts[pi];
+      // 反引号片段保持不变
+      if (seg.startsWith('`') && seg.endsWith('`')) continue;
+
+      // 对可替换片段做术语替换（使用 \b 边界，避免误伤）
+      let replaced = seg;
+      for (const [src, dst] of entries) {
+        // 仅匹配独立词；若需要大小写不敏感可加 'i'
+        const re = new RegExp(`\\b${escapeRegExp(src)}\\b`, 'g');
+        replaced = replaced.replace(re, dst);
+      }
+      parts[pi] = replaced;
+    }
+
+    out.push(prefix + parts.join(''));
+  }
+
+  return out.join('\n');
+}
+
+// 简单的正则转义
+function escapeRegExp(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// 安全拼接：确保块与块之间至少保留一个换行，避免跨块黏连
+function joinChunksPreservingNewlines(chunks) {
+  if (!Array.isArray(chunks) || chunks.length === 0) return '';
+  let out = '';
+  for (let i = 0; i < chunks.length; i++) {
+    const s = chunks[i] ?? '';
+    if (i === 0) {
+      out = s;
+      continue;
+    }
+    // 如果上一段不以 '\n' 结尾，则补一个 '\n'
+    if (!out.endsWith('\n')) out += '\n';
+    out += s;
+  }
+  return out;
+}
+
 // 检查文件是否受保护
 function isProtectedPath(filePath) {
   const normalizedPath = filePath.replace(/\\/g, '/');
@@ -793,6 +917,47 @@ function generateTargetPath(originalPath, targetLang) {
   return targetPath;
 }
 
+// ===== Front Matter 工具（支持黑名单 translation.skip / 白名单 translation.only）=====
+function extractFrontMatter(raw) {
+  const m = raw.match(/^---\n([\s\S]*?)\n---\n/);
+  return m ? m[1] : null;
+}
+
+function parseFrontMatterObj(fmText) {
+  if (!fmText) return {};
+  if (yaml) {
+    try { return yaml.load(fmText) || {}; } catch {}
+  }
+  // 回退：简易解析，仅抓 translation.skip / translation.only
+  const obj = {};
+  // translation.skip: [zh-CN, ...]
+  const skipMatch = fmText.match(/translation:\s*[\s\S]*?skip:\s*\[([^\]]*)\]/m);
+  if (skipMatch) {
+    obj.translation = obj.translation || {};
+    obj.translation.skip = skipMatch[1].split(',').map(s => s.trim().replace(/^['"]|['"]$/g,'')).filter(Boolean);
+  }
+  // translation.only: [ja, es]
+  const onlyMatch = fmText.match(/translation:\s*[\s\S]*?only:\s*\[([^\]]*)\]/m);
+  if (onlyMatch) {
+    obj.translation = obj.translation || {};
+    obj.translation.only = onlyMatch[1].split(',').map(s => s.trim().replace(/^['"]|['"]$/g,'')).filter(Boolean);
+  }
+  return obj;
+}
+
+function shouldSkipLangByFrontMatter(frontMatterObj, targetLang) {
+  if (!frontMatterObj || typeof frontMatterObj !== 'object') return false;
+  const t = frontMatterObj.translation || {};
+  // 黑名单 skip：包含当前语言则跳过
+  if (Array.isArray(t.skip)) {
+    const lowered = t.skip.map(x => String(x));
+    if (lowered.includes(targetLang)) return true;
+  }
+  // 白名单 only：存在 only 且不包含当前语言 → 跳过
+  if (Array.isArray(t.only) && !t.only.includes(targetLang)) return true;
+  return false;
+}
+
 // 翻译_category.yml文件
 async function translateCategoryFile(filePath, targetLang) {
   try {
@@ -834,7 +999,7 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
   
   console.log(`📚 开始翻译文档 ${filePath} 到 ${langConfig.name} (共${chunks.length}块)`);
   
-  // PATCH: 跨块延续代码块状态
+  // 跨块延续代码块状态
   let carryInCode = false;
   
   for (let i = 0; i < chunks.length; i++) {
@@ -883,24 +1048,34 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
     finalContent = translatedChunks[0];
   } else {
     const firstChunk = translatedChunks[0];
-    const otherChunks = translatedChunks.slice(1);
-    
-    const frontMatterMatch = firstChunk.match(/^---\n[\s\S]*?\n---\n/);
-    
-    if (frontMatterMatch) {
-      const frontMatter = frontMatterMatch[0];
-      // PATCH: 不再 trim，避免吞掉空行导致行号错位
-      const firstContent = firstChunk.replace(frontMatterMatch[0], '');
-      
-      // PATCH: 直接拼接，不额外插入空行，保持逐行对齐
-      finalContent = frontMatter + firstContent;
-      if (otherChunks.length > 0) {
-        finalContent += otherChunks.join('');
-      }
+    const restChunks = translatedChunks.slice(1);
+    const fmMatch = firstChunk.match(/^---\n[\s\S]*?\n---\n/);
+    if (fmMatch) {
+      const frontMatter = fmMatch[0];
+      const firstBody = firstChunk.slice(frontMatter.length);
+      // 保留 front matter + 正文，后续块用安全方式拼接（自动补换行）
+      finalContent = joinChunksPreservingNewlines([frontMatter + firstBody, ...restChunks]);
     } else {
-      // PATCH: 多块直接无缝拼接，避免 \n\n 造成偏移
-      finalContent = translatedChunks.join('');
+      finalContent = joinChunksPreservingNewlines(translatedChunks);
     }
+  }
+
+  // 整文行数与原文一致性检查（按当前文件内容）
+  try {
+    const originalTotalLines = (await fs.readFile(filePath, 'utf8'))
+      .toString()
+      .replace(/\r\n/g, '\n').replace(/\r/g, '\n')
+      .split('\n').length;
+    let finalTotalLines = finalContent.split('\n').length;
+    if (finalTotalLines !== originalTotalLines) {
+      console.warn(`⚠️ 拼接后行数不一致: 原文 ${originalTotalLines}, 译文 ${finalTotalLines}。尝试更保守的换行拼接。`);
+      // 强制在块之间都插入换行（即使已有换行也不去掉）
+      finalContent = translatedChunks.join('\n');
+      finalTotalLines = finalContent.split('\n').length;
+      console.log(`🧾 兜底后行数: 译文 ${finalTotalLines}`);
+    }
+  } catch (e) {
+    console.warn(`ℹ️ 行数兜底检查失败（非致命）：${e.message}`);
   }
   
   return finalContent;
@@ -922,8 +1097,22 @@ async function translateFile(filePath, targetLang) {
     console.log(`📝 翻译文件: ${filePath} -> ${targetLang}`);
     translationStatus.total++;
     
-    const content = await fs.readFile(filePath, 'utf8');
+    let content = await fs.readFile(filePath, 'utf8');
+    // 统一换行为 LF，避免 CR 残留导致围栏/解析异常
+    content = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
     console.log(`🔍 文件大小: ${content.length} 字符`);
+
+    // Front Matter 跳过规则判断（仅 md/mdx 有意义）
+    if (/\.(md|mdx)$/i.test(filePath)) {
+      const fmText = extractFrontMatter(content);
+      const fmObj = parseFrontMatterObj(fmText);
+      if (shouldSkipLangByFrontMatter(fmObj, targetLang)) {
+        console.log(`🚫 Front Matter 指定跳过 ${targetLang}，不生成该语言译文: ${filePath}`);
+        translationStatus.skipped++;
+        // 返回“成功但跳过”，以便后续报告能统计到
+        return { success: true, path: generateTargetPath(filePath, targetLang), action: 'skipped_by_frontmatter' };
+      }
+    }
     
     // 使用智能分块
     const chunks = smartChunkDocument(content, 10000);
@@ -1117,6 +1306,7 @@ async function deleteTranslationFile(filePath, targetLang) {
 function generateProgressReport(languages, results) {
   const successCount = results.filter(r => r.success).length;
   const failCount = results.filter(r => !r.success).length;
+  const skippedList = results.filter(r => r.success && r.action === 'skipped_by_frontmatter');
   
   let report = `#### 📊 翻译完成报告\n\n`;
   report += `**目标语言:** ${languages.map(l => LANGUAGE_CONFIG[l]?.name || l).join(', ')}\n`;
@@ -1124,13 +1314,24 @@ function generateProgressReport(languages, results) {
   report += `**统计信息:**\n`;
   report += `- ✅ 成功: ${successCount}\n`;
   report += `- ❌ 失败: ${failCount}\n`;
+  report += `- ⏭️ 跳过: ${skippedList.length}\n`;
   report += `- 📊 总计: ${successCount + failCount}\n\n`;
   
-  if (results.some(r => r.success)) {
-    report += `**成功处理的文件:**\n`;
-    results.filter(r => r.success).forEach(r => {
+  if (skippedList.length) {
+    report += `**因 Front Matter 跳过的文件:**\n`;
+    skippedList.forEach(r => {
       report += `- ${r.path}\n`;
     });
+    report += '\n';
+  }
+
+  if (results.some(r => r.success && r.action !== 'skipped_by_frontmatter')) {
+    report += `**成功处理的文件:**\n`;
+    results
+      .filter(r => r.success && r.action !== 'skipped_by_frontmatter')
+      .forEach(r => {
+        report += `- ${r.path}\n`;
+      });
     report += '\n';
   }
   
@@ -1215,8 +1416,8 @@ async function main() {
     r.action === 'renamed_and_retranslated' ||
     r.action === 'moved' ||
     r.action === 'deleted' ||
-    (!r.action)  // 兼容旧返回（最好配合 B 改动后可去掉）
-  ) && r.action !== 'skipped' && r.action !== 'protected');
+    (!r.action)  // 兼容旧返回
+  ) && r.action !== 'skipped' && r.action !== 'protected' && r.action !== 'skipped_by_frontmatter');
   
   if (hasChanges) {
     console.log('\n🚀 设置触发其他工作流标志...');

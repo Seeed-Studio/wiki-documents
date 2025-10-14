@@ -60,17 +60,17 @@ Wi-FiやBluetoothとの比較：
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -273,7 +273,7 @@ void espnow_deinit(){
 }
 ```
 
-#### Resolution Part1 Code
+#### 解決 Part1 コード
 
 インクルードライブラリ
 
@@ -323,7 +323,7 @@ void espnow_deinit(){
 - `NO_PMK_KEY`
   - 役割 : 暗号化なしでデバイスをペアリングすることを選択する
 
-### Part 2. XIAO ESP32C3 Receiver Code
+### パート2. XIAO ESP32C3 受信機コード
 
 ```c
 #include<Arduino.h>
@@ -473,7 +473,7 @@ void Association_SenderXIAOS3_peer(){
 }
 ```
 
-#### Resolution Part2 Code
+#### 解決 Part2 コード
 
 インクルードライブラリ
 
@@ -521,7 +521,7 @@ void Association_SenderXIAOS3_peer(){
 - `NO_PMK_KEY`
   - 役割：暗号化なしでデバイスをペアリングすることを選択する
 
-### Part 3. XIAO ESP32C6 Receiver Code
+### パート3. XIAO ESP32C6 受信機コード
 
 ```c
 #include<Arduino.h>
@@ -670,7 +670,7 @@ void Association_SenderXIAOS3_peer(){
 }
 ```
 
-#### Resolution Part3 Code
+#### 解決 Part3 コード
 
 インクルードライブラリ
 

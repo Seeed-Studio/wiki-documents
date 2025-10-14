@@ -75,7 +75,7 @@ WatcherからNode-REDにメッセージを送信する方法がまだわから�
 
 ### すべての結果を取得する
 
-**Step 1.** Watcherでタスクを実行します。
+**ステップ 1.** Watcherでタスクを実行します。
 
 まず最初に、以下の動画に従ってWatcherでタスクを実行する必要があります。詳細を知りたい場合は[こちらをクリックしてください](https://wiki.seeedstudio.com/ja/getting_started_with_watcher_task/)。
 
@@ -83,11 +83,11 @@ WatcherからNode-REDにメッセージを送信する方法がまだわから�
 <iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-**Step 2.** sensecap **OpenStream**モジュールと**debug**モジュールをワークスペースにドラッグし、設定します。設定方法がわからない場合は、[こちらをクリックしてください](https://wiki.seeedstudio.com/ja/watcher_to_node_red/)。それらを接続し、右上角の**Deploy**ボタンをクリックします。
+**ステップ 2.** sensecap **OpenStream**モジュールと**debug**モジュールをワークスペースにドラッグし、設定します。設定方法がわからない場合は、[こちらをクリックしてください](https://wiki.seeedstudio.com/ja/watcher_to_node_red/)。それらを接続し、右上角の**Deploy**ボタンをクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_twilio_image/101.png" style={{width:700, height:'auto'}}/></div>
 
-**Step 3.** **debugページ**と携帯電話の**Twilioメッセージ**の両方でメッセージを受信します。
+**ステップ 3.** **debugページ**と携帯電話の**Twilioメッセージ**の両方でメッセージを受信します。
 
 <div class="table-center">
   <table align="center">
@@ -134,9 +134,9 @@ msg.payload = {
 return msg;
 ```
 
-**Step 2.** Watcherでタスクを実行します。タスクの実行方法がわからない場合は、[こちらを参照してください。](https://wiki.seeedstudio.com/ja/getting_started_with_watcher_task)
+**ステップ 2.** Watcherでタスクを実行します。タスクの実行方法がわからない場合は、[こちらを参照してください。](https://wiki.seeedstudio.com/ja/getting_started_with_watcher_task)
 
-**Step 3.** **デバッグページ**と**携帯電話のTwilioメッセージ**の両方でメッセージを受信します。
+**ステップ 3.** **デバッグページ**と**携帯電話のTwilioメッセージ**の両方でメッセージを受信します。
 
 <div class="table-center">
   <table align="center">

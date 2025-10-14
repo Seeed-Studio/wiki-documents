@@ -125,22 +125,22 @@ MM-IoT-SDK アーキテクチャは複数のレイヤーで構成されていま
         <tr>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
                 </a>
             </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
                 </a>
             </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
                 </a>
             </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-Halow-Module-for-XIAO-p-6395.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
                 </a>
             </div></td>
         </tr>
@@ -166,12 +166,12 @@ MM-IoT-SDK アーキテクチャは複数のレイヤーで構成されていま
         <tr>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/LoRa-Indoor-Antenna-Kit-860-930MHz-3dBi-295mm-p-5434.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
                 </a>
             </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/External-Antenna-915MHZ-2-6dBi-SMA-L195mm-p-5047.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
                 </a>
             </div></td>
         </tr>
@@ -191,7 +191,7 @@ WiFi-Halowモジュールにアンテナを接続するには、**SMA to I-PEX�
         <tr>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/UF-L-SMA-K-1-13-120mm-p-5046.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
                 </a>
             </div></td>
         </tr>
@@ -256,7 +256,7 @@ esp-idf --version
 brew install cmake ninja dfu-util
 ```
 
-**Step 2.** Download and install ESP-IDF
+**ステップ 2.** ESP-IDFをダウンロードしてインストールする
 
 ```bash
 mkdir -p ~/esp
@@ -266,7 +266,7 @@ cd esp-idf
 ./install.sh esp32s3
 ```
 
-**Step 3.** Set up the environment variables
+**ステップ 3.** 環境変数を設定する
 
 ```bash
 . $HOME/esp/esp-idf/export.sh
@@ -298,7 +298,7 @@ cd esp-idf
 ./install.sh esp32s3
 ```
 
-**Step 3.** Set up the environment variables
+**ステップ 3.** 環境変数を設定する
 
 ```bash
 . $HOME/esp/esp-idf/export.sh
@@ -316,7 +316,7 @@ cd esp-idf
 :::note
 ESP-IDF v5.1.1のインストールに関するより詳細な手順については、Espressifの公式ドキュメントを参照してください：
 
-- [ESP-IDF Get Started Guide](https://docs.espressif.com/projects/esp-idf/en/v5.1.1/esp32s3/get-started/index.html)
+- [ESP-IDF 開始ガイド](https://docs.espressif.com/projects/esp-idf/en/v5.1.1/esp32s3/get-started/index.html)
 
 :::
 
@@ -408,7 +408,7 @@ source ~/.zshrc
 
 <TabItem value="Linux" label="Linux">
 
-**Step 1.** Clone the repository
+**ステップ 1.** リポジトリをクローンします
 
 ```bash
 cd ~
@@ -662,7 +662,7 @@ IPv4テストの場合、ゲートウェイで以下のコマンドを実行し�
 iperf -c <device_ip> -p <port> -i 1 -u -b 20M
 ```
 
-For IPv6 testing, execute this command on your gateway:
+IPv6テストの場合、ゲートウェイで次のコマンドを実行してください：
 
 ```bash
 iperf -c <device_ip>%wlan0 -p <port> -i 1 -V -u -b 20M

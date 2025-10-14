@@ -77,12 +77,12 @@ ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/1.png" style={{width:900, height:'auto'}}/></div>
 
-<!-- - **Step 1.** To quickly setup ESPHome on Home Asssistant, click the below button -->
+<!-- - **步骤 1.** 要在 Home Assistant 上快速设置 ESPHome，请点击下面的按钮 -->
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/4.png"style={{width:300, height:'auto'}}/></div> -->
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/4.png" style={{width:300, height:'auto'}}/></div> -->
 
-<!-- - **Step 2.** Once you see the following pop-up, click **OPEN LINK** -->
+<!-- - **步骤 2.** 当你看到以下弹窗时，点击 **OPEN LINK** -->
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/5.png"style={{width:300, height:'auto'}}/></div> -->
 
@@ -96,7 +96,7 @@ ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/3.png" style={{width:900, height:'auto'}}/></div>
 
-<!-- - **Step 3.** Click **OPEN WEB UI** or **ESPHOME from the side-panel** -->
+<!-- - **步骤 3.** 点击 **OPEN WEB UI** 或 **侧边栏中的 ESPHOME** -->
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/8.png"style={{width:700, height:'auto'}}/></div> -->
 

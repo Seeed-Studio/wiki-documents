@@ -11,7 +11,7 @@ last_update:
 ---
 <!-- ---
 name:  Wifi Shield V1.2
-category: Discontinued
+category: 已停产
 bzurl:
 oldwikiname: Wifi_shield_v1.2
 prodimagename:

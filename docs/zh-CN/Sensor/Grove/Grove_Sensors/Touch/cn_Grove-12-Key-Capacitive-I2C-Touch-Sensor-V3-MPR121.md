@@ -25,7 +25,9 @@ last_update:
 
 基于飞思卡尔 MPR121，该传感器具有 12 个完全独立的电极，内置自动配置功能。得益于 I2C 接口，您只需一个 Grove 端口即可检测所有 12 个电极信号，I2C 地址可硬件配置，从 0X5B 到 0X5D。这也使得多个 **Grove - 12 键电容式 I2C 触摸传感器 V3 (MPR121)** 可以在单个系统中一起使用进行通道扩展，您可以构建一个包含最多 36 个电极的触摸系统。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/CPq4VSAXBgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121-p-4694.html
 " target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
@@ -88,7 +90,9 @@ last_update:
 
 这是本产品的介绍视频，包含简单的演示，您可以尝试一下。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ds7kBVdeY4U?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **叶子钢琴**：我们使用触摸传感器制作了一架钢琴，并用叶子作为钢琴键。
 

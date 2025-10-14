@@ -18,7 +18,9 @@ last_update:
 このプロジェクトでは、Wio TerminalとEdge Impulseを使用してオーディオシーン分類器をトレーニングおよびデプロイする方法を学びます。
 詳細やビデオチュートリアルについては、対応するビデオをご覧ください！
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2BISspenUng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## コンピュータにおける音声処理
 

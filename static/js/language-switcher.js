@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-09-18 15:22:18 (北京时间)
-// 多语言页面: 2001 个
+// 生成时间: 2025-10-13 11:27:53 (北京时间)
+// 多语言页面: 2022 个
 
 (function() {
   'use strict';
@@ -869,6 +869,12 @@
     "es",
     "ja"
   ],
+  "/vlm": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/reComputer_A203_Flash_System": [
     "cn",
     "en",
@@ -972,6 +978,12 @@
     "ja"
   ],
   "/get_the_system_log_of_recomputer_j30_and_j40": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/how_to_build_the_ko_module_for_seeed_jetson": [
     "cn",
     "en",
     "es",
@@ -1481,6 +1493,12 @@
     "es",
     "ja"
   ],
+  "/chirpstack_lora_gateway_r1x00": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/recomputer_r1000_aws": [
     "cn",
     "en",
@@ -1859,6 +1877,12 @@
     "es",
     "ja"
   ],
+  "/openremote_r1x00": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/Mender-Client-reTerminal": [
     "cn",
     "en",
@@ -1943,12 +1967,6 @@
     "es",
     "ja"
   ],
-  "/firearm_detection_with_frigate_nvr_on_r2000": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/r2000_series_frigate_and_home_assistant": [
     "cn",
     "en",
@@ -1956,6 +1974,12 @@
     "ja"
   ],
   "/frigate_nvr_with_raspberrypi_5": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/gun_detection_with_frigate_nvr_on_r2000": [
     "cn",
     "en",
     "es",
@@ -2093,6 +2117,12 @@
     "es",
     "ja"
   ],
+  "/use_sqlite_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/use_uv_to_build_package_on_recomputer": [
     "cn",
     "en",
@@ -2124,6 +2154,54 @@
     "ja"
   ],
   "/r2000_series_getting_start": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_r20xx_assembly_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_r20xx_configure_system": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_r2000_flash_os": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_r20xx_getting_start": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_R21xx_assembly_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_R21xx_configure_system": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_r21xx_flash_os": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_R21xx_getting_start": [
     "cn",
     "en",
     "es",
@@ -2513,6 +2591,12 @@
     "es",
     "ja"
   ],
+  "/reterminal_e10xx_with_lopaka": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/reterminal_e10xx_trmnl": [
     "cn",
     "en",
@@ -2526,12 +2610,6 @@
     "ja"
   ],
   "/getting_started_with_reterminal_e1002": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/reterminal_e10xx_firmware": [
     "cn",
     "en",
     "es",
@@ -3071,18 +3149,6 @@
     "es",
     "ja"
   ],
-  "/get_started_with_meshtastic_wio_tracker_l1": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/wio_tracker_l1_node": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/flash_meshtastic_kit": [
     "cn",
     "en",
@@ -3090,6 +3156,18 @@
     "ja"
   ],
   "/meshtastic_kit_wio_tracker_1110": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/get_started_with_meshtastic_wio_tracker_l1": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/wio_tracker_l1_node": [
     "cn",
     "en",
     "es",
@@ -3881,6 +3959,12 @@
     "es",
     "ja"
   ],
+  "/ac1": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/orbbec_gemini2": [
     "cn",
     "en",
@@ -3900,6 +3984,12 @@
     "ja"
   ],
   "/orb_slam3_orbbec_gemini2": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/pycuvslam_recomputer_robotics": [
     "cn",
     "en",
     "es",
@@ -4271,12 +4361,6 @@
     "es",
     "ja"
   ],
-  "/Grove Maker Kit for Intel Joule": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/Grove-Base_Shield_for_IOIO-OTG": [
     "cn",
     "en",
@@ -4296,6 +4380,12 @@
     "ja"
   ],
   "/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Grove Maker Kit for Intel Joule": [
     "cn",
     "en",
     "es",
@@ -5652,6 +5742,18 @@
     "ja"
   ],
   "/Wireless_Sensor_Node-Solar_Kit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/epaper_ee04": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/e04_with_platformio": [
     "cn",
     "en",
     "es",
@@ -7906,6 +8008,18 @@
     "es",
     "ja"
   ],
+  "/respeaker_xvf3800_ros2": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/respeaker_xvf3800_xiao_tensorflow": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/respeaker_xvf3800_xiao_udp_audio_stream": [
     "cn",
     "en",
@@ -8589,6 +8703,18 @@
     "es",
     "ja"
   ],
+  "/xiao_nrf54l15_sense_matter": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_nrf54l15_sense_micropython": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_nrf54l15_sense_pin_multiplexing": [
     "cn",
     "en",
@@ -9027,48 +9153,6 @@
     "es",
     "ja"
   ],
-  "/Seeeduino-Stalker_v3": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Seeeduino_Stalker": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Seeeduino_Stalker_v1.0": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Seeeduino_Stalker_v2.3": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Seeeduino_Stalker_V3-Waterproof_Solar_Kit": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Seeeduino_Stalker_V3.1": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Seeeduino_Stalker_v3_enclosure": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/Seeeduino-Cortex-M0": [
     "cn",
     "en",
@@ -9160,6 +9244,48 @@
     "ja"
   ],
   "/Seeeduino_Mega_Protoshield_Kit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Seeeduino-Stalker_v3": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Seeeduino_Stalker": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Seeeduino_Stalker_v1.0": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Seeeduino_Stalker_v2.3": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Seeeduino_Stalker_V3-Waterproof_Solar_Kit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Seeeduino_Stalker_V3.1": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Seeeduino_Stalker_v3_enclosure": [
     "cn",
     "en",
     "es",
@@ -9759,13 +9885,13 @@
     "es",
     "ja"
   ],
-  "/SenseCAP_T1000_tracker_Ubidots_Helium": [
+  "/SenseCAP_T1000_tracker_Ubidots_TTS": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/SenseCAP_T1000_tracker_Ubidots_TTS": [
+  "/SenseCAP_T1000_tracker_Ubidots_Helium": [
     "cn",
     "en",
     "es",
@@ -11006,6 +11132,24 @@
     "es",
     "ja"
   ],
+  "/Grove-Creator-Kit-1": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Grove-Mixer_Pack_V2": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Grove-Toy_Kit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/Grove-Beginner-Kit-for-Arduino-education-pack": [
     "cn",
     "en",
@@ -11025,24 +11169,6 @@
     "ja"
   ],
   "/Grove_Beginner_Kit_for_Arduino": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Grove-Creator-Kit-1": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Grove-Mixer_Pack_V2": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Grove-Toy_Kit": [
     "cn",
     "en",
     "es",

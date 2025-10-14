@@ -168,8 +168,8 @@ void loop() {
 Home Assistantを始める最初のステップは、デバイスにインストールすることです。ステップバイステップのガイドは[こちら](https://www.home-assistant.io/installation/)をご参照ください。
 
 - [XIAO-ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html)
-- [Grove Base for XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html)
-- [Grove - Offline Speech Recognizer Module](https://www.seeedstudio.com/Grove-Offline-Voice-Recognition-Module-p-5861.html)
+- [XIAO用Groveベース](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html)
+- [Grove - オフライン音声認識モジュール](https://www.seeedstudio.com/Grove-Offline-Voice-Recognition-Module-p-5861.html)
 
 :::tip
 

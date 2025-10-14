@@ -21,7 +21,7 @@ EdgeBox-RPi-200シリーズは、複数の産業用途を組み合わせたRaspb
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -93,7 +93,7 @@ mmcblk0boot1 179:64   0    4M  1 disk
 ```
 
 :::note
-If you see the output as following, which you probably does for the first time boot:
+初回起動時に以下のような出力が表示される場合（おそらく初回起動時に表示されるでしょう）：
 
 ```sh
 pi@raspberrypi:~ $ lsblk

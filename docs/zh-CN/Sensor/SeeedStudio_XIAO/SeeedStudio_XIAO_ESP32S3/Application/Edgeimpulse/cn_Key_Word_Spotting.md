@@ -417,15 +417,15 @@ Edge Impulse 将打包所有需要的库、预处理函数和训练好的模型�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/9.png" style={{width:600, height:'auto'}}/></div>
 
-<!-- Even though Edge Impulse has not released its SDK for ESP32S3 using the ESP NN accelerator, thanks to Dmitry Maslov, we can have its assembly optimizations restored and fixed for ESP32-S3. This solution is not official yet, and EI will include it in EI SDK once they fix conflicts with other boards.
+<!-- 尽管 Edge Impulse 尚未发布其使用 ESP NN 加速器的 ESP32S3 的 SDK，但多亏了 Dmitry Maslov，我们可以恢复并修复其针对 ESP32-S3 的汇编优化。这个解决方案目前还不是官方的，一旦 EI 解决了与其他开发板的冲突，他们就会将其包含在 EI SDK 中。
 
 :::caution
-For now, this only works with the non-EON version. So, you should also keep the the option **Enable EON Compiler** not selected.
+目前，这仅适用于非EON版本。因此，您还应保持**启用EON编译器**选项未被选中。
 :::
 
-When the Build button is selected, a Zip file will be created and downloaded to your computer.
+当选择"构建"按钮时，将创建一个Zip文件并下载到您的计算机。
 
-Before we use the downloaded library, we need to enable the **ESP NN** Accelerator. For that, you can download a preliminary version from the [project GitHub](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/blob/main/ESP-NN.zip), unzip it, and replace the ESP NN folder with it under:`src/edge-impulse-sdk/porting/espressif/ESP-NN`, in your Arduino library folder.
+在我们使用下载的库之前，我们需要启用 **ESP NN** 加速器。为此，您可以从 [项目 GitHub](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/blob/main/ESP-NN.zip) 下载一个初步版本，解压缩，并用它替换 Arduino 库文件夹中的 `src/edge-impulse-sdk/porting/espressif/ESP-NN` 下的 ESP NN 文件夹。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/10.png" style={{width:800, height:'auto'}}/></div> -->
 
@@ -1026,5 +1026,5 @@ static void microphone_inference_end(void)
 
 MJRoBot 还有很多关于 XIAO ESP32S3 的有趣项目。
 
-- [Exploring Machine Learning with the new XIAO ESP32S3](https://www.hackster.io/mjrobot/exploring-machine-learning-with-the-new-xiao-esp32s3-6463e5)
-- [TinyML Made Easy: Image Classification](https://www.hackster.io/mjrobot/tinyml-made-easy-image-classification-cb42ae)
+- [使用新的 XIAO ESP32S3 探索机器学习](https://www.hackster.io/mjrobot/exploring-machine-learning-with-the-new-xiao-esp32s3-6463e5)
+- [TinyML 变得简单：图像分类](https://www.hackster.io/mjrobot/tinyml-made-easy-image-classification-cb42ae)

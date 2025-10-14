@@ -111,7 +111,6 @@ Puedes ver que utilizamos columnas de nylon durante el ensamblaje para evitar co
 
 :bulb: **Nota:** El 2 Channel CAN BUS FD Shield para Pi solo es compatible con la versión de kernel 6.6.42 e inferiores.
 
-
 También necesitamos dos [cables puente macho a macho](https://www.seeedstudio.com/Breadboard-Jumper-Wire-Pack-241mm-200mm-160mm-117m-p-234.html) y cables de alimentación para alimentar esas placas.
 
 ### Conexión de Hardware
@@ -126,7 +125,6 @@ También necesitamos dos [cables puente macho a macho](https://www.seeedstudio.c
 |---|---|
 |CAN_0_L|CANL|
 |CAN_0_H|CANH|
-
 
 :::tip
     Puedes encontrar la serigrafía en la parte posterior del shield.
@@ -220,7 +218,7 @@ sudo ifconfig can0 txqueuelen 65536
 sudo ifconfig can1 txqueuelen 65536
 ```
 
-- **Step 7**. Open two terminal windows and enter the following commands in the Windows to test can fd protocol.
+- **Paso 7**. Abre dos ventanas de terminal e introduce los siguientes comandos en Windows para probar el protocolo can fd.
 
 ```sh
 #send data
@@ -989,7 +987,7 @@ void loop() {
 }
 ```
 
-**Code for Wio Terminal + 2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD)**
+**Código para Wio Terminal + Shield de 2 Canales CAN-BUS(FD) para Raspberry Pi (MCP2518FD)**
 
 ```cpp
 #include <SPI.h>
@@ -1258,15 +1256,14 @@ void loop() {
 
 ## Soporte Técnico y Discusión de Productos
 
-
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

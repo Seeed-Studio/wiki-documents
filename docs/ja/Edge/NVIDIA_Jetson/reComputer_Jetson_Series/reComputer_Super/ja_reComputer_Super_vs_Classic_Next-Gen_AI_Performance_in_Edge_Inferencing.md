@@ -22,7 +22,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
 </a></div>
 
 ## はじめに
@@ -47,7 +47,7 @@ reComputer Superシリーズは、reComputer Classicを大幅に強化し、AI�
 **ステップ3.** Ollamaからdeepseek-r1:7bモデルをプルします。
 :::
 
-<div align="center">
+<div class="video-container">
 <iframe width="682" height="480" src="https://www.youtube.com/embed/nD1w-odV-ZU" title="Deepseek Inference on reComputer Classic and reComputer Super" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -78,7 +78,7 @@ JetsonデバイスにOllamaをデプロイしたい場合は、[このチュー�
 **ステップ4.** [このリポジトリ](https://github.com/wang-xinyu/tensorrtx/tree/master/yolo11)のyolo11_det_trt.pyスクリプトを参照して推論を実行します。
 :::
 
-<div align="center">
+<div class="video-container">
 <iframe width="682" height="480" src="https://www.youtube.com/embed/ELbltFieez4" title="Yolo Inference on reComputer Classic and reComputer Super" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

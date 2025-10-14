@@ -19,7 +19,9 @@ Grove - Laser PM2.5 センサー (HM3301) は、新世代のレーザー粉塵�
 
 このモジュールは、粉塵検出器、スマート空気清浄機、スマートエアコン、スマート換気ファン、空気品質テスト、霧計、環境モニタリングおよび関連製品やアプリケーションに適しています。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/zQj8RRJcZsk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Laser-PM2-5-Sensor-HM3301.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 

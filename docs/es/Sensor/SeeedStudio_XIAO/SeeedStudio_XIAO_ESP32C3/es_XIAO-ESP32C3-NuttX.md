@@ -77,6 +77,7 @@ También es posible verificar la lista de placas compatibles ejecutando el coman
     ./tools/configure.sh xiao-esp32c3:usbnsh
     make V=1
     ```
+
 5. Los botones RESET y BOOT se pueden usar para entrar al modo "Bootloader" manteniendo presionada la tecla BOOT mientras se enciende y luego presionando la tecla RESET una vez.
 
 6. Cargar el firmware usando esptool.py:
@@ -129,7 +130,7 @@ NuttX  12.9.0 6b4bc72626-dirty Apr 26 2025 17:40:37 risc-v esp32c3-xiao
 nsh> 
 ```
 
-Typing `?`, you will access the available options for commands and built-in applications.
+Escribiendo `?`, accederás a las opciones disponibles para comandos y aplicaciones integradas.
 
 ```bash
 nsh> ?
@@ -218,7 +219,7 @@ IO_INPUT_PIN_PULLDOWN
 ```
 
 Para confirmar que se crearon los archivos de dispositivo GPIO, escribe `ls/dev`. Después de escribir, puedes ver que algunos gpios fueron declarados definidos en boards/risc-v/esp32c3/esp32c3-xiao/src/esp32c3_gpio.c, que representan:
- 
+
 - GPIOs
   - 1 Entrada con IRQ    -> GPIO3
   - 1 Salida             -> GPIO2
@@ -236,8 +237,8 @@ nsh> ls /dev
 nsh> 
 ```
 
-Following these commands to read GPIO1(/dev/gpio1) (with interruption)
-and write at GPIO2(/dev/gpio0).
+Siguiendo estos comandos para leer GPIO1(/dev/gpio1) (con interrupción)
+y escribir en GPIO2(/dev/gpio0).
 
 ```bash
 NuttShell (NSH) NuttX-12.9.0
@@ -354,7 +355,6 @@ Esta configuración se utiliza para habilitar el Bluetooth Low Energy (BLE) del 
 
 Comencemos limpiando la configuración anterior:
 
-
 ```bash
 cd ~/nuttxspace/nuttx
 make distclean
@@ -384,7 +384,6 @@ nsh>
 ```
 
 Ahora podemos usar comandos BT como se documenta en [btsak NuttX documentation](https://nuttx.apache.org/docs/latest/applications/wireless/btsak/index.html) ,
-
 
 ```bash
 NuttShell (NSH) NuttX-12.9.0
@@ -421,7 +420,6 @@ Consulta el video a continuación con la demostración para ble:
     <source src="https://files.seeedstudio.com/wiki/XIAO-ESP32C3-NuttX/xiao-esp32c3-nuttx-ble.mp4" type="video/mp4" />
   </video>
 </div>
-
 
 Para más información sobre NuttX RTOS, por favor visita [Documentación de NuttX](https://nuttx.apache.org/docs/latest/index.html)
 

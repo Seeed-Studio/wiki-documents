@@ -32,7 +32,7 @@ This wiki will guide you how to install JetPack to Jetson AGX Orin 32GB H01 Kit.
 ## Prerequisites
 
 - [Ubuntu Host PC](https://developer.nvidia.com/sdk-manager) (native or VM using VMware Workstation Player).
-- Jetson AGX Xavier H01 Kit.
+- Jetson AGX Orin H01 Kit.
 - USB Type-C data transmission cable
 
 ## Enter Force Recovery Mode

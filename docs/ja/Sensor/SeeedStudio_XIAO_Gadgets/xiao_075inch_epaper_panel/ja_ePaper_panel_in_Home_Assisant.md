@@ -21,7 +21,7 @@ import TabItem from '@theme/TabItem';
 <br></br>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong></a>
 </div>
 
 ## Home Assistantの紹介
@@ -41,7 +41,7 @@ Home Assistantは、スマートホームデバイスを単一の統合インタ
 - **カスタマイズ可能なダッシュボード**: 最も重要な情報を表示する独自のユーザーインターフェースを設計できます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Learn More 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 詳しく見る 🖱️</font></span></strong></a>
 </div>
 
 ### Home AssistantでE-Paperディスプレイを使う理由
@@ -85,12 +85,12 @@ ESPHomeは、ESP8266/ESP32デバイス専用に設計されたオープンソー
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
@@ -619,7 +619,7 @@ eink=2を使用している場合、invertパラメータを追加すること�
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2&invert
 ```
 
-Besides, you can also screenshot other page, for example **To-do lists** page in HA:
+さらに、他のページのスクリーンショットも撮ることができます。例えば、HAの**To-doリスト**ページなどです：
 
 ```python
 http://192.168.1.191:10000/todo?viewport=800x480&eink=2&invert

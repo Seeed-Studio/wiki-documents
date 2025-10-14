@@ -8,14 +8,13 @@ last_update:
   author: MicroBlocks
 ---
 
-# XIAO RP2040をMicroBlocksで使用する
-
+# XIAO RP2040 と MicroBlocks
 
 ## MicroBlocks
 
-MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラミングできるブロック言語です。見た目のシンプルさにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語です。GPIOピンの制御やI2C、SPI、シリアル経由での周辺機器とのインターフェース機能、そして約200の拡張ライブラリを提供します。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、ラピッドプロトタイピングやテストにMicroBlocksを好んで使用しています。
+MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラミングできるブロック言語です。見た目のシンプルさにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語で、GPIOピンの制御やI2C、SPI、シリアル経由での周辺機器とのインターフェース機能、そして約200の拡張ライブラリを備えています。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、ラピッドプロトタイピングやテストにMicroBlocksを好んで使用しています。
 
-### XIAO RP2040のピン配置とハードウェア機能
+### XIAO RP2040 ピン配置とハードウェア機能
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-rp2040-overview.jpg" style={{width:600, height:'auto'}}/></div><br />
 
@@ -23,7 +22,7 @@ MicroBlocksは、初心者（9歳から大人まで）がマイクロコント�
 
 このボードには11個のGPIOピン（ピン0..10）があります。ピン0..3はアナログ入力として使用できます。
 また、3つの小さなLEDがあります：赤（ピン11、ユーザーLED）、緑（ピン12）、青（ピン13）。
-すべてのLEDは反転しています：LEDを点灯させるには、関連するピンをLOWに設定します。
+すべてのLEDは反転しています：LEDを点灯させるには、対応するピンをLOWに設定します。
 
 このボードには、ピン14に単一のRGB LED（NeoPixel）もあります。
 
@@ -32,8 +31,9 @@ MicroBlocksは、初心者（9歳から大人まで）がマイクロコント�
 ブートローダーモードに入るには、R（リセット）ボタンをクリックしながらB（ブート）ボタンを押し続けます。
 3つのLEDがすべて点灯し、**RPI-RP2**という名前の仮想USBドライブが表示されます。
 
-[vmフォルダ](https://microblocks.fun/downloads/latest/vm)から[ファームウェアファイル](https://microblocks.fun/downloads/latest/vm/vm_xiao_rp2040.uf2)をダウンロードし、
-そのファイルを仮想USBドライブにドラッグします。
+[ファームウェアファイル](https://microblocks.fun/downloads/latest/vm/vm_xiao_rp2040.uf2)を
+[vmフォルダ](https://microblocks.fun/downloads/latest/vm)から
+ダウンロードし、そのファイルを仮想USBドライブにドラッグします。
 
 ファームウェアがインストールされ、数秒後に仮想USBドライブが消えます。
 ディスクが適切に取り出されなかったという警告は無視してください。
@@ -65,12 +65,14 @@ MicroBlocksは**ライブ**コーディング環境なので、コーディン�
 ブロックやスクリプトをクリックして実行します。
 ブロックをスクリプトペインにドラッグして組み立て、スクリプトを作成します。
 
-コードは永続的なフラッシュメモリに保存され、ボードがMicroBlocksエディターに接続されていなくても実行できます。
-**when started**ブロックの下にあるスクリプトは、ボードの電源が入ったときに実行されます。
+コードは永続的なフラッシュメモリに保存され、ボードが
+MicroBlocksエディターに接続されていなくても実行できます。
+**when started**ブロックの下にあるスクリプトは、ボードに電源が供給されたときに実行されます。
 
 MicroBlocksは並行処理をサポートしています。最大10個のスクリプトを同時に実行できます。
 
-多くの組み込みブロックに加えて、MicroBlocksには追加機能や周辺機器をサポートする約200のライブラリがあります。
+多くの組み込みブロックに加えて、MicroBlocksには約200のライブラリがあり、
+追加機能や周辺機器をサポートしています。
 **Add Library**ボタンをクリックしてライブラリを追加します。
 
 ## 例
@@ -83,11 +85,12 @@ MicroBlocksは並行処理をサポートしています。最大10個のスク�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-rp2040-neopixel.png" style={{width:300, height:'auto'}}/></div>
 
-[ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)には、さらに多くの例が含まれています。
+[ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)には
+多くの追加例が含まれています。
 
-## 特別な謝辞
+## 特別な感謝
 
-この記事を執筆してくださったMicroBlocksのJohnさんに特別な感謝を申し上げます。
+この記事を執筆してくれたMicroBlocksのJohnに特別な感謝を。
 
 ## MicroBlocksリソース
 

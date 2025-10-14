@@ -545,7 +545,9 @@ To test the above Yocto image with reTerminal, you can visit the [reTerminal Har
 
 This talk mainly focuses on explaining how easily you can create custom Linux images for CM4 Carrier Boards, X86, and STM32 Boards using Yocto project. Also, at the end of the talk, there are two HMI demos based on Qt, LVGL, and a demo to showcase secure and robust OTA updates to these SBCs using Mender.
 
-<p style={{textAlign: 'center'}}><iframe width="720" height="480" src="https://www.youtube.com/embed/OHT9f_NOEpA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<div class="video-container">
+<iframe width="720" height="480" src="https://www.youtube.com/embed/OHT9f_NOEpA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Resources
 

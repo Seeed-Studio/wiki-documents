@@ -15,7 +15,9 @@ last_update:
 
 # SenseCAP Indicator - Matter 应用程序开发
 
+<div class="video-container">
 <iframe class="youtube-video" src="https://www.youtube.com/embed/LCIWqwmCZ54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## 介绍
 
@@ -86,7 +88,9 @@ idf.py build flash monitor
 
 ### 标准功能
 
+<div class="video-container">
 <iframe class="youtube-video" src="https://www.youtube.com/embed/mBhrYeyQQeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 Indicator Matter 应用程序允许以类似于标准固件的方式浏览传感器数据。加载设备后显示时钟屏幕，该屏幕根据您的位置配置，为您提供准确的时间。屏幕具有检测向右和向左滑动的事件，以在时间、传感器显示和设置屏幕之间循环切换。
 

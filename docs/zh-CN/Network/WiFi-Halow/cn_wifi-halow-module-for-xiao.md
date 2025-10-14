@@ -256,7 +256,7 @@ Install the required packages:
 brew install cmake ninja dfu-util
 ```
 
-**Step 2.** Download and install ESP-IDF
+**步骤 2.** 下载并安装ESP-IDF
 
 ```bash
 mkdir -p ~/esp
@@ -266,7 +266,7 @@ cd esp-idf
 ./install.sh esp32s3
 ```
 
-**Step 3.** Set up the environment variables
+**步骤 3.** 设置环境变量
 
 ```bash
 . $HOME/esp/esp-idf/export.sh
@@ -286,9 +286,9 @@ cd esp-idf
 sudo apt-get install git wget flex bison gperf python3 python3-pip python3-setuptools cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
 ```
 
-For other distributions, please install equivalent packages.
+对于其他发行版，请安装相应的软件包。
 
-**Step 2.** Download and install ESP-IDF
+**步骤 2.** 下载并安装ESP-IDF
 
 ```bash
 mkdir -p ~/esp
@@ -298,7 +298,7 @@ cd esp-idf
 ./install.sh esp32s3
 ```
 
-**Step 3.** Set up the environment variables
+**步骤 3.** 设置环境变量
 
 ```bash
 . $HOME/esp/esp-idf/export.sh
@@ -334,7 +334,7 @@ cd %USERPROFILE%
 git clone https://github.com/Seeed-Studio/mm-iot-esp32.git
 ```
 
-**Step 2.** Export IDF variables
+**步骤 2.** 导出 IDF 变量
 
 ```bash
 cd %USERPROFILE%\mm-iot-esp32
@@ -369,14 +369,14 @@ cd ~
 git clone https://github.com/Seeed-Studio/mm-iot-esp32.git
 ```
 
-**Step 2.** Export IDF variables
+**步骤 2.** 导出 IDF 变量
 
 ```bash
 cd ~/mm-iot-esp32
 source export.sh
 ```
 
-**Step 3.** Set MMIOT_ROOT environment variable
+**步骤 3.** 设置 MMIOT_ROOT 环境变量
 
 For temporary use:
 
@@ -384,7 +384,7 @@ For temporary use:
 export MMIOT_ROOT=~/mm-iot-esp32
 ```
 
-For permanent use, add to your shell configuration file:
+对于永久使用，请添加到您的 shell 配置文件中：
 
 ```bash
 # For bash users (add to ~/.bash_profile or ~/.bashrc)
@@ -394,7 +394,7 @@ echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.bash_profile
 echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.zshrc
 ```
 
-Then reload your shell configuration:
+然后重新加载你的 shell 配置：
 
 ```bash
 # For bash
@@ -415,14 +415,14 @@ cd ~
 git clone https://github.com/Seeed-Studio/mm-iot-esp32.git
 ```
 
-**Step 2.** Export IDF variables
+**步骤 2.** 导出 IDF 变量
 
 ```bash
 cd ~/mm-iot-esp32
 source export.sh
 ```
 
-**Step 3.** Set MMIOT_ROOT environment variable
+**步骤 3.** 设置 MMIOT_ROOT 环境变量
 
 For temporary use:
 
@@ -430,7 +430,7 @@ For temporary use:
 export MMIOT_ROOT=~/mm-iot-esp32
 ```
 
-For permanent use, add to your shell configuration file:
+对于永久使用，请添加到您的 shell 配置文件中：
 
 ```bash
 # For bash users
@@ -440,7 +440,7 @@ echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.bashrc
 echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.zshrc
 ```
 
-Then reload your shell configuration:
+然后重新加载你的 shell 配置：
 
 ```bash
 # For bash
@@ -555,7 +555,7 @@ cd ~/mm-iot-esp32/example/scan
 nano main/src/mm_app_loadconfig.c
 ```
 
-2. Locate and modify the country code line:
+2. 定位并修改国家代码行：
 
 ```c
 #define COUNTRY_CODE "US"  // Must use "US" as the product is only available for North America
@@ -617,15 +617,15 @@ idf.py flash monitor
 cd ~/mm-iot-esp32/example/iperf
 ```
 
-### Step 2: Configure Network Settings
+### 步骤 2：配置网络设置
 
-1. Open the configuration file:
+1. 打开配置文件：
 
 ```bash
 nano main/src/mm_app_loadconfig.c
 ```
 
-2. Modify the following parameters:
+2. 修改以下参数：
 
 ```cpp
 // Set country code (must be "US" for North America)
@@ -662,7 +662,7 @@ idf.py flash monitor
 iperf -c <device_ip> -p <port> -i 1 -u -b 20M
 ```
 
-For IPv6 testing, execute this command on your gateway:
+对于 IPv6 测试，在您的网关上执行以下命令：
 
 ```bash
 iperf -c <device_ip>%wlan0 -p <port> -i 1 -V -u -b 20M
@@ -706,15 +706,15 @@ iperf -c <device_ip>%wlan0 -p <port> -i 1 -V -u -b 20M
 cd ~/mm-iot-esp32/example/web_camera_serve
 ```
 
-### Step 2: Configure Network Settings
+### 步骤 2：配置网络设置
 
-1. Open the configuration file:
+1. 打开配置文件：
 
 ```bash
 nano main/src/mm_app_loadconfig.c
 ```
 
-2. Modify the Wi-Fi HaLow credentials:
+2. 修改 Wi-Fi HaLow 凭据：
 
 ```cpp
 // Set your Wi-Fi HaLow network credentials

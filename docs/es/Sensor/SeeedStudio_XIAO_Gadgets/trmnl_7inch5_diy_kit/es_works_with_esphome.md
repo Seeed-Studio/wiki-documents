@@ -1,5 +1,5 @@
 ---
-description: Este artículo describe cómo usar el Kit DIY TRMNL 7.5inch(OG) para trabajar con ESPHome.
+description: Este artículo describe cómo usar el TRMNL 7.5inch(OG) DIY Kit para trabajar con ESPHome.
 title: funciona con ESPHome
 keywords:
 - ePaper display
@@ -15,7 +15,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Kit DIY TRMNL 7.5inch(OG) Funciona con ESPHome
+# TRMNL 7.5inch(OG) DIY Kit Funciona con ESPHome
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/byod_main.png" style={{width:900, height:'auto'}}/></div>
 
@@ -35,7 +35,7 @@ Home Assistant es una poderosa plataforma de automatización del hogar de códig
 
 - **Control Local**: A diferencia de muchas soluciones basadas en la nube, Home Assistant se ejecuta localmente en tu red, asegurando que tus datos permanezcan privados y que tus automatizaciones funcionen incluso sin acceso a internet.
 
-- **Amplio Soporte de Dispositivos**: Home Assistant se integra con miles de diferentes dispositivos y servicios domésticos inteligentes, haciéndolo altamente versátil y preparado para el futuro.
+- **Amplio Soporte de Dispositivos**: Home Assistant se integra con miles de diferentes dispositivos y servicios domésticos inteligentes, haciéndolo altamente versátil y a prueba de futuro.
 
 - **Automatización Poderosa**: Crea reglas de automatización sofisticadas que pueden responder a varios disparadores como tiempo, estados de dispositivos, lecturas de sensores y más.
 
@@ -45,23 +45,23 @@ Home Assistant es una poderosa plataforma de automatización del hogar de códig
     <a class="get_one_now_item" href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Aprender Más 🖱️</font></span></strong></a>
 </div>
 
-### ¿Por qué el Kit DIY TRMNL 7.5inch(OG) con Home Assistant?
+### ¿Por qué TRMNL 7.5inch(OG) DIY Kit con Home Assistant?
 
-El Kit DIY TRMNL 7.5inch(OG) es un excelente compañero para Home Assistant por varias razones:
+El TRMNL 7.5inch(OG) DIY Kit es un excelente compañero para Home Assistant por varias razones:
 
 1. **Eficiencia Energética**: La pantalla de papel electrónico solo consume energía al actualizar contenido, haciéndola perfecta para mostrar información persistente como pronósticos del tiempo, eventos del calendario o estado del sistema.
 
 2. **Visibilidad Clara**: A diferencia de las pantallas LCD, las pantallas de papel electrónico son fácilmente legibles en cualquier condición de iluminación, incluyendo luz solar directa, haciéndolas ideales para paneles de control doméstico montados en la pared.
 
-3. **Larga Duración de Batería**: Combinada con el modo de sueño profundo, la pantalla puede operar durante meses con una sola carga de batería mientras sigue proporcionando información valiosa de un vistazo.
+3. **Larga Duración de Batería**: Combinado con el modo de sueño profundo, la pantalla puede operar durante meses con una sola carga de batería mientras proporciona información valiosa de un vistazo.
 
 4. **Integración Flexible**: A través de ESPHome, la pantalla se integra perfectamente con Home Assistant, permitiéndote mostrar cualquier dato de tu sistema doméstico inteligente en un formato elegante y siempre visible.
 
-Estas ventajas hacen del Kit DIY TRMNL 7.5inch(OG) una opción ideal para crear una pantalla de información energéticamente eficiente y siempre encendida para tu configuración de Home Assistant.
+Estas ventajas hacen del TRMNL 7.5inch(OG) DIY Kit una opción ideal para crear una pantalla de información energéticamente eficiente y siempre encendida para tu configuración de Home Assistant.
 
 ### Integración con ESPHome
 
-ESPHome es una herramienta de creación de firmware de código abierto específicamente diseñada para dispositivos ESP8266/ESP32. Te permite crear firmware personalizado usando archivos de configuración YAML simples, que luego pueden ser flasheados a tu dispositivo. Para el Kit DIY TRMNL 7.5inch(OG), ESPHome sirve como el middleware esencial que habilita la comunicación entre el dispositivo y Home Assistant.
+ESPHome es una herramienta de creación de firmware de código abierto específicamente diseñada para dispositivos ESP8266/ESP32. Te permite crear firmware personalizado usando archivos de configuración YAML simples, que luego pueden ser flasheados a tu dispositivo. Para el TRMNL 7.5inch(OG) DIY Kit, ESPHome sirve como el middleware esencial que permite la comunicación entre el dispositivo y Home Assistant.
 
 El sistema funciona convirtiendo tu configuración YAML en firmware completamente funcional que se ejecuta en tu dispositivo ESP. Este firmware maneja todas las tareas complejas de conectarse a tu red, comunicarse con Home Assistant y controlar la pantalla ePaper. Cuando se combina con Home Assistant, ESPHome proporciona una plataforma robusta para crear pantallas y controles de automatización del hogar sofisticados.
 
@@ -86,12 +86,12 @@ Antes de que comience el contenido del tutorial de este artículo, es posible qu
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/TRMNL-7-5-Inch-OG-DIY-Kit-p-6481.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
@@ -109,9 +109,75 @@ También hemos escrito cómo instalar Home Assistant para algunos productos de S
 - **[Comenzando con Home Assistant en reTerminal](https://wiki.seeedstudio.com/es/reTerminal_Home_Assistant/)**
 - **[Comenzando con Home Assistant en LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/es/h68k-ha-esphome/)**
 
-Si no estás usando un producto de Seeed Studio, también puedes consultar y aprender cómo instalar Home Assistant para otros productos en el sitio web oficial de Home Assistant.
+Si no estás usando un producto de Seeed Studio, también puedes verificar y aprender cómo instalar Home Assistant para otros productos en el sitio web oficial de Home Assistant.
 
 - **[Instalación de Home Assistant](https://www.home-assistant.io/installation/)**
+:::
+
+### Instalación del Equipo
+
+**Paso 1. Conectar la Pantalla a la Placa del Controlador**  
+Alinea el cable FPC con el conector en la XIAO ePaper Display Board, luego asegura el pestillo para garantizar una conexión firme.  
+
+:::tip
+El lado metálico del cable FPC debe estar hacia arriba, de lo contrario, no se mostrará contenido.
+
+Por favor sigue el tutorial de instalación a continuación, muchas personas se equivocan.
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/2.jpg" style={{width:600, height:'auto'}}/></div>
+
+**Paso 2. Conectar la Batería**  
+Conecta el cable de la batería al conector JST en la placa del controlador, asegurando la polaridad correcta (cable rojo a +, negro a -).  
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/3.jpg" style={{width:600, height:'auto'}}/></div>
+
+**Paso 3. Ensamblaje de la Carcasa (Opcional)**  
+
+:::tip
+Ten en cuenta que el cable flexible de la pantalla es muy frágil. Ten cuidado al operar. Si se daña, toda la pantalla dejará de funcionar.
+:::
+Imprime las partes de la carcasa de código abierto de la [parte de Recursos](#resources) y ensambla los componentes dentro.  
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/4.jpeg" style={{width:600, height:'auto'}}/></div>
+
+Primero, ensambla la placa del controlador y la batería.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/base.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+Prueba el kit TRMNL si funciona bien.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/test.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+Conecta la pantalla en la carcasa y haz que el FPC pueda salir.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/cable.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+Conecta el cable de extensión FPC y ensambla toda la carcasa.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/assembly.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+La carcasa en forma de L es muy similar.
+
+<div class="table-center">
+<iframe width="300" height="500" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/Lshape.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+:::tip
+Si tu kit TRMNL está lejos de tu router, puedes mover la antena fuera de la carcasa. Tendría mejor rendimiento.
 :::
 
 ### Paso 1. Instalar ESPHome
@@ -127,12 +193,12 @@ Ve a **Settings** -> **Add-ons** -> **ADD-ON STORE**
 Busca ESPHome y haz clic en él. Haz clic en **INSTALL** y **START**.
 
 :::tip
-Si no puedes encontrar ESPHome en la tienda de complementos, asegúrate de estar usando una instalación de Home Assistant que soporte complementos (como Home Assistant OS o instalaciones supervisadas). Para otros tipos de instalación (como Home Assistant Container), es posible que necesites ejecutar el Constructor de Dispositivos ESPHome de forma independiente usando Docker. Consulta la [documentación oficial de ESPHome](https://esphome.io/guides/getting_started_hassio) para más detalles.
+Si no puedes encontrar ESPHome en la tienda de complementos, asegúrate de estar usando una instalación de Home Assistant que soporte complementos (como Home Assistant OS o instalaciones supervisadas). Para otros tipos de instalación (como Home Assistant Container), es posible que necesites ejecutar el ESPHome Device Builder de forma independiente usando Docker. Consulta la [documentación oficial de ESPHome](https://esphome.io/guides/getting_started_hassio) para más detalles.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/03.png" style={{width:800, height:'auto'}}/></div>
 
-Y luego, el Constructor ESPHome aparecerá en la barra lateral.
+Y luego, ESPHome Builder aparecerá en la barra lateral.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/04.png" style={{width:800, height:'auto'}}/></div>
 
@@ -195,16 +261,16 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/BYOD_helloworld.png" style={{width:1000, height:'auto'}}/></div>
 
-Haz clic en **INSTALAR** para instalar el código en el dispositivo y verás la siguiente imagen.
+Haz clic en **INSTALL** para instalar el código en el dispositivo y verás la siguiente imagen.
 
 <Tabs>
-<TabItem value='Instalar a través del navegador'>
+<TabItem value='Install through browser'>
 
 :::tip
 Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está lejos de ti, recomendamos usar este método. Puedes instalarlo con la computadora que tengas a mano.
 :::
 
-Primero, necesitas hacer clic en **Descarga manual** para descargar el firmware compilado.
+Primero, necesitas hacer clic en **Manual download** para descargar el firmware compilado.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
@@ -220,19 +286,19 @@ Selecciona formato Factory.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/65.png" style={{width:500, height:'auto'}}/></div>
 
-Usa un cable USB para **conectar el panel ePaper a tu computadora** y haz clic en **CONECTAR**.
+Usa un cable USB para **conectar el panel ePaper a tu computadora** y haz clic en **CONNECT**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
-Selecciona usbmodemxxx (Windows es COMxxx) y haz clic en conectar. [¿Encontraste un problema? Haz clic aquí.](#Q4)
+Selecciona usbmodemxxx (Windows es COMxxx) y haz clic en connect. [¿Encontraste un problema? Haz clic aquí.](#Q4)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
-Haz clic en **INSTALAR** y selecciona el firmware que acabas de descargar.
+Haz clic en **INSTALL** y selecciona el firmware que acabas de descargar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/69.png" style={{width:500, height:'auto'}}/></div>
 
-Espera un momento y verás '¡Hola mundo!' en la pantalla ～
+Espera un momento y verás '¡Hello world!' en la pantalla ～
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/71.png" style={{width:'100%', height:'auto'}}/></div>
@@ -241,7 +307,7 @@ Espera un momento y verás '¡Hola mundo!' en la pantalla ～
 
 </TabItem>
 
-<TabItem value='Instalar a través del host'>
+<TabItem value='Install through host'>
 
 :::tip
 Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está cerca, recomendamos usar este método ya que es más simple.
@@ -265,10 +331,10 @@ Espera un momento y verás la retroalimentación como la siguiente imagen. Signi
 
 </TabItem>
 
-<TabItem value='Instalar a través de Wi-Fi'>
+<TabItem value='Install through Wi-Fi'>
 
 :::tip
-Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de encriptación válidas para que este método funcione.
+Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de cifrado válidas para que este método funcione.
 :::
 
 De esta manera, no necesitas conectar el panel ePaper a nada, solo asegúrate de que esté en línea.
@@ -330,9 +396,9 @@ También puedes [hacer clic aquí](https://esphome.io/components/display/) para 
 
 Este ejemplo mostrará la información en HA en la pantalla.
 
-En primer lugar, necesitas agregar este dispositivo a HA. De lo contrario, no puedes obtener la información de HA.
+Primero que todo, necesitas agregar este dispositivo a HA. De lo contrario, no puedes obtener la información de HA.
 
-Si HA no muestra el dispositivo, deberías ejecutar la demostración anterior primero. Después de ejecutar la demostración anterior, puedes ver el dispositivo en HA.
+Si HA no muestra el dispositivo, debes ejecutar la demostración anterior primero. Después de ejecutar la demostración anterior, puedes ver el dispositivo en HA.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -404,7 +470,7 @@ Instala esos códigos en tu dispositivo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/15.png" style={{width:1000, height:'auto'}}/></div>
 
-La función del código es obtener **clima**, **temperatura** y **presión** de HA y mostrarlos en la pantalla.
+La función del código es obtener **weather**, **temperature** y **pressure** de HA y mostrarlos en la pantalla.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/39.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -414,7 +480,7 @@ Si encuentras que tu Home Assistant no tiene un componente relacionado con el cl
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_weather.png" style={{width:800, height:'auto'}}/></div>
 :::
 
-Cuando veas la retroalimentación como la siguiente imagen, significa que el código se está ejecutando exitosamente.
+Cuando veas la retroalimentación como la siguiente imagen, significa que el código se está ejecutando correctamente.
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/14.png" style={{width:'100%', height:'auto'}}/></div>
@@ -425,7 +491,7 @@ Cuando veas la retroalimentación como la siguiente imagen, significa que el có
 
 Este ejemplo mostrará un icono en la pantalla.
 
-Primero, necesitamos instalar un complemento de Editor de Archivos. Busca **Studio Code Server** y haz clic en él. Haz clic en **INSTALL** y **START**.
+Primero, necesitamos instalar un complemento de File Editor. Busca **Studio Code Server** y haz clic en él. Haz clic en **INSTALL** y **START**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/17.png" style={{width:800, height:'auto'}}/></div>
 
@@ -441,7 +507,7 @@ Y <span id="ttf">luego</span>, crea una nueva carpeta llamada **fonts** y descar
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/19.png" style={{width:800, height:'auto'}}/></div>
 
-Puedes copiar el código de abajo y pegarlo después de `captive_portal` como se muestra a continuación.
+Puedes copiar el código a continuación y pegarlo después de `captive_portal` como se muestra a continuación.
 
 ```yaml
 font:
@@ -475,7 +541,7 @@ display:
       it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
 ```
 
-Cuando veas la retroalimentación como la siguiente imagen, significa que el código se está ejecutando exitosamente.
+Cuando veas la retroalimentación como la siguiente imagen, significa que el código se está ejecutando correctamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/35.png" style={{width:600, height:'auto'}}/></div>
 
@@ -483,11 +549,11 @@ Si quieres usar otros iconos, puedes hacer clic en el botón de abajo para explo
 
 <div align="center">
 <a href="https://pictogrammers.com/library/mdi/" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Haz clic aquí para ir al sitio web de iconos</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Haz clic aquí para el sitio web de iconos</button></p>
 </a>
 </div>
 
-Selecciona un icono que desees.
+Selecciona un icono que quieras.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/41.png" style={{width:800, height:'auto'}}/></div>
 
@@ -503,7 +569,7 @@ Este ejemplo mostrará cualquier imagen que te guste en la pantalla.
 
 Como en el ejemplo anterior, necesitamos instalar **Studio Code Server** y crear una nueva carpeta llamada **image** para guardar la imagen.
 
-Y luego pon una imagen en la carpeta **image**. Puedes hacer clic en el botón de abajo para descargar una imagen y probarla.
+Y luego pon una imagen en la carpeta **image**. Puedes hacer clic en el botón de abajo para descargar una imagen y probar.
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.jpg" target="_blank">
@@ -513,7 +579,7 @@ Y luego pon una imagen en la carpeta **image**. Puedes hacer clic en el botón d
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
-Puedes copiar el código de abajo y pegarlo después de `captive_portal` como se muestra a continuación.
+Puedes copiar el código a continuación y pegarlo después de `captive_portal` como se muestra a continuación.
 
 ```yaml
 image:
@@ -541,7 +607,7 @@ display:
       it.image(0, 0, id(myImage));
 ```
 
-Cuando veas la retroalimentación como la siguiente imagen, significa que el código se está ejecutando exitosamente.
+Cuando veas la retroalimentación como la siguiente imagen, significa que el código se está ejecutando correctamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.png" style={{width:600, height:'auto'}}/></div>
 
@@ -553,7 +619,7 @@ Primero, necesitas instalar un complemento de captura de pantalla **Puppet**, [h
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/83.jpg" style={{width:800, height:'auto'}}/></div>
 
-Ten en cuenta que la versión debe ser **superior o igual a 1.11.4**. Después de la instalación, ve a la **página de Configuración**. Necesitamos crear un access_token para este complemento.
+Ten en cuenta que la versión debe ser **superior o igual a 1.11.4**. Después de la instalación, ve a la **Configuration page**. Necesitamos crear un access_token para este complemento.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/96.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -561,7 +627,7 @@ Ve al siguiente paso para crear un token y pegarlo aquí.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/88.jpg" style={{width:800, height:'auto'}}/></div>
 
-Ve al final de la **página de Seguridad** y crea un token, luego cópialo y pégalo en el complemento **Puppet**.
+Ve al final de la **Security page** y crea un token, luego cópialo y pégalo en el complemento **Puppet**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/85.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -569,9 +635,9 @@ Recuerda **reiniciar** el complemento Puppet.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/95.jpg" style={{width:800, height:'auto'}}/></div>
 
-Iniciar el complemento lanzará un nuevo servidor en el puerto 10000. Cualquier ruta que solicites devolverá una captura de pantalla de esa página. Necesitarás especificar el tamaño de ventana gráfica que desees.
+Iniciar el complemento lanzará un nuevo servidor en el puerto 10000. Cualquier ruta que solicites devolverá una captura de pantalla de esa página. Necesitarás especificar el tamaño de ventana gráfica que deseas.
 
-Por ejemplo, para obtener una captura de pantalla de 1000px x 1000px de tu panel predeterminado, solicita:
+Por ejemplo, para obtener una captura de pantalla de 1000px x 1000px de tu panel de control predeterminado, solicita:
 
 ```python
 # http://192.168.1.191:10000/lovelace/0?viewport=1000x1000(My address)
@@ -579,19 +645,19 @@ Por ejemplo, para obtener una captura de pantalla de 1000px x 1000px de tu panel
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000
 ```
 
-Para reducir la paleta de colores para pantallas E Ink®, puedes añadir el parámetro eink. El valor representa el número de colores (incluyendo el negro) a usar. Por ejemplo, para una pantalla E Ink® de 2 colores:
+Para reducir la paleta de colores para pantallas E Ink®, puedes agregar el parámetro eink. El valor representa el número de colores (incluyendo el negro) a usar. Por ejemplo, para una pantalla E Ink® de 2 colores:
 
 ```python
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2
 ```
 
-Si estás usando eink=2, también puedes invertir los colores añadiendo el parámetro invert:
+Si estás usando eink=2, también puedes invertir los colores agregando el parámetro invert:
 
 ```python
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2&invert
 ```
 
-Además, también puedes capturar pantalla de otras páginas, por ejemplo la página de **Listas de tareas** en HA:
+Además, también puedes capturar otras páginas, por ejemplo la página **To-do lists** en HA:
 
 ```python
 http://192.168.1.191:10000/todo?viewport=800x480&eink=2&invert
@@ -626,6 +692,7 @@ spi:
 
 display:
   - platform: waveshare_epaper
+    id: main_display
     model: 7.50inv2
     cs_pin: GPIO44
     dc_pin: GPIO10
@@ -702,24 +769,24 @@ Verás un contador. Se incrementará en uno cada vez que se despierte.
 ## Demo 3. Ejemplo integral
 
 :::tip
-Para que entiendas mejor, te recomendamos encarecidamente que ejecutes primero los usos básicos anteriores.
+Para que entiendas mejor, recomendamos encarecidamente que ejecutes primero los usos básicos anteriores.
 :::
 
-Este ejemplo demuestra una configuración integral de ESPHome para el kit DIY de papel electrónico TRMNL de 7.5 pulgadas. El código YAML integra múltiples características para crear un panel de visualización inteligente e interactivo que funciona perfectamente con Home Assistant.
+Este ejemplo demuestra una configuración integral de ESPHome para el kit DIY de papel electrónico TRMNL de 7.5 pulgadas. El código YAML integra múltiples características para crear un panel de pantalla inteligente e interactivo que funciona perfectamente con Home Assistant.
 
 **Propósito y Funcionalidad:**
 
-- La configuración permite que el dispositivo se conecte a Wi-Fi y Home Assistant, soportando tanto API como actualizaciones OTA para una gestión fácil.
+- La configuración permite al dispositivo conectarse a Wi-Fi y Home Assistant, soportando tanto API como actualizaciones OTA para una gestión fácil.
 
 - Configura la pantalla de papel electrónico para mostrar diferentes tipos de información en dos páginas intercambiables, controladas por botones físicos.
 
-- El dispositivo lee el voltaje de la batería, calcula el porcentaje de la batería, y muestra un icono de batería correspondiente y el valor.
+- El dispositivo lee el voltaje de la batería, calcula el porcentaje de la batería y muestra un icono de batería correspondiente y el valor.
 
-- Las condiciones meteorológicas y la temperatura se obtienen de Home Assistant y se muestran con iconos y unidades apropiados.
+- Las condiciones climáticas y la temperatura se obtienen de Home Assistant y se muestran con iconos y unidades apropiadas.
 
 - La hora y fecha actuales también se muestran, sincronizadas con Home Assistant.
 
-Este ejemplo muestra cómo combinar lecturas de sensores, datos de Home Assistant, y entrada del usuario para construir una pantalla inteligente rica en características y siempre encendida usando ESPHome y el kit de papel electrónico TRMNL de 7.5 pulgadas.
+Este ejemplo muestra cómo combinar lecturas de sensores, datos de Home Assistant y entrada del usuario para construir una pantalla inteligente rica en características y siempre encendida usando ESPHome y el kit de papel electrónico TRMNL de 7.5 pulgadas.
 
 <details>
 
@@ -741,7 +808,7 @@ esp32:
   board: esp32-s3-devkitc-1
   framework:
     type: arduino
-    
+
 # Enable logging
 logger:
 
@@ -1042,21 +1109,21 @@ display:
 
 </details>
 
-Cuando veas la retroalimentación como la siguiente imagen, significa que el código se está ejecutando exitosamente.
+Cuando veas la retroalimentación como en la siguiente imagen, significa que el código se está ejecutando correctamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_demo3_byod.jpg" style={{width:800, height:'auto'}}/></div>
 
-## FAQ
+## Preguntas Frecuentes
 
 ### P1: ¿Por qué no hay datos?
 
-En este caso, debes ir a Configuración -> Dispositivos y Servicios -> Integraciones para **RECONFIGURAR** el dispositivo. ¿No encuentras tu Panel ePaper? Intenta reiniciar HA.
+En este caso, debes ir a Settings -> Devices & Services -> Integrations para **RECONFIGURAR** el dispositivo. ¿No encuentras tu Panel ePaper? Intenta reiniciar HA.
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
 ### P2: ¿Por qué no puedo obtener esos datos en Home Assistant? {#port}
 
-En este caso, debes ir a Configuración -> Dispositivos y Servicios -> Integraciones para **AÑADIR** tu dispositivo a HA.
+En este caso, debes ir a Settings -> Devices & Services -> Integrations para **AGREGAR** tu dispositivo a HA.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
 
@@ -1087,9 +1154,9 @@ Intenta desconectarlo y volver a conectarlo varias veces, o simplemente instala 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/74.png" style={{width:800, height:'auto'}}/></div>
 
-En este caso, tu panel epaper está desconectado o en modo de sueño profundo. Por favor, ponlo en línea o despiértalo.
+En este caso, tu panel epaper está desconectado o en modo de sueño profundo. Por favor, conéctalo o despiértalo.
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

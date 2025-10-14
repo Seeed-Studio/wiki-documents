@@ -18,7 +18,9 @@ ReSpeaker 6-Mic Circular Array Kit for Raspberry Piは2つのボードで構成�
 
 ReSpeaker 6-Mic Circular Array Kit for Raspberry PiはRaspbianシステムで8入力・8出力チャンネルをサポートします。最初の6つの入力チャンネルはマイクロフォン録音用、残りの2つの入力チャンネルは再生のエコーチャンネルです。最初の2つの出力チャンネルは再生用、残りの6つの出力チャンネルはダミーです。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NxZx9nz67Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/ReSpeaker-6-Mic-Circular-Array-Kit-for-Raspberry-Pi-p-3067.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
@@ -197,7 +199,7 @@ plughw:CARD=seeed8micvoicec,DEV=0
     Hardware device with all software conversions 
 ```
 
-Use the following command to check the play device.
+再生デバイスを確認するには、次のコマンドを使用してください。
 
 ```
 pi@raspberrypi:~ $ aplay -L
@@ -258,9 +260,9 @@ plughw:CARD=seeed8micvoicec,DEV=0
 
 ```
 
-**Step 3. Record and Play**
+**ステップ 3. 録音と再生**
 
-You can record then play, or you can record and play at the same time.
+録音してから再生することも、録音と再生を同時に行うこともできます。
 
 ```
 #It will capture sound on AC108 and save as a.wav
@@ -321,7 +323,7 @@ LEDが点灯して動作するのが確認できます。`python examples/respea
 
 [ODAS](https://github.com/introlab/odas) は Open embeddeD Audition System の略です。これは音源定位、追跡、分離、後処理フィルタリングを実行するための専用ライブラリです。それでは楽しんでみましょう。
 
-- Step 1. ODAS を取得してビルドします。
+- ステップ 1. ODAS を取得してビルドします。
 
 ```
 sudo apt-get install libfftw3-dev libconfig-dev libasound2-dev libgconf-2-4
@@ -333,9 +335,9 @@ cmake ..
 make
 ```
 
-- Step 2. [ODAS Studio](https://github.com/introlab/odas_web/releases) を取得して開きます。
+- ステップ 2. [ODAS Studio](https://github.com/introlab/odas_web/releases) を取得して開きます。
 
-- Step 3. odascore は **odas/bin/odaslive** にあり、**設定ファイル** は [こちら](https://raw.githubusercontent.com/xiongyihui/odas/master/config/odaslive/respeaker_6_mic_array.cfg) にあります。
+- ステップ 3. odascore は **odas/bin/odaslive** にあり、**設定ファイル** は [こちら](https://raw.githubusercontent.com/xiongyihui/odas/master/config/odaslive/respeaker_6_mic_array.cfg) にあります。
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/img/odas.png)
 
@@ -343,7 +345,7 @@ make
 
 音声抽出には [PyAudio python ライブラリ](https://people.csail.mit.edu/hubert/pyaudio/) を使用します。
 
-- Step 1, 6 Mic pi hat のデバイスインデックス番号を取得するために、以下のスクリプトを実行する必要があります：
+- ステップ 1, 6 Mic pi hat のデバイスインデックス番号を取得するために、以下のスクリプトを実行する必要があります：
 
 ```python
 sudo pip install pyaudio
@@ -351,7 +353,7 @@ cd ~
 nano get_index.py
 ```
 
-- Step 2, copy below code and paste on get_index.py.
+- ステップ 2, 以下のコードをコピーしてget_index.pyに貼り付けてください。
 
 ```python
 import pyaudio
@@ -557,7 +559,7 @@ if __name__ == '__main__':
     main()
 ```
 
-- Step 2. Let's say snowboy and here is output of DOA.
+- ステップ 2. snowboyと言って、ここにDOAの出力があります。
 
 ```shell
 (env) pi@raspberrypi:~/voice-engine/examples/respeaker_6mic_array_for_pi $ python kws_doa.py 
@@ -618,7 +620,7 @@ A2: raspberry -> Preferences -> Raspberry Pi Configurationをクリックし、I
 - **[Voice Engine]** [音声対応オブジェクトを作成するためのビルディングブロックを提供するVoice Engineプロジェクト](https://github.com/voice-engine/voice-engine)
 - **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
 
-## Tech Support & Product Discussion
+## 技術サポート・製品ディスカッション
 
 私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 

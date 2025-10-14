@@ -15,7 +15,9 @@ last_update:
 
 El Grove - Sensor de Sonoridad está diseñado para detectar el sonido del entorno. Basado en el amplificador LM2904 y un micrófono integrado, amplifica y filtra la señal de alta frecuencia que recibe del micrófono, y emite una envolvente positiva. Esto se utiliza para la adquisición de señales de Arduino. El valor de salida depende del nivel de entrada de sonido. Para evitar perturbaciones de señal innecesarias, la señal de entrada pasará por dos veces de filtrado dentro del módulo. Hay un potenciómetro de tornillo que permite ajustes manuales a la ganancia de salida.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/EhZ7uDvoALE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-Loudness-Sensor-p-1382.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width={200} height={38} border={0} /></a></p>
 
@@ -88,7 +90,6 @@ El Grove - Sensor de Sonoridad está diseñado para detectar el sonido del entor
 | GND       | Negro           |
 | NC        | Blanco           |
 | A0        | Amarillo          |
-
 
 **Software**
 
@@ -194,7 +195,7 @@ if __name__ == '__main__':
 ```
 
 :::success
-    If everything goes well, you will be able to see the following result:
+    Si todo va bien, podrás ver el siguiente resultado:
 :::
 
 ```python
@@ -331,11 +332,11 @@ La carcasa IP66, configuración Bluetooth, compatibilidad con la red global LoRa
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

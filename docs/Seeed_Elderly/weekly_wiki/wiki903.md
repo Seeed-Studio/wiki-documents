@@ -47,7 +47,9 @@ The firmware designed for XIAO ESP32S3 Sense is made by our friend, shariltumin 
 
 Thanks our contributor Tim for establishing a demo of how to use the **Matter SDK** to build enriched applications for the SenseCAP Indicator.
 
+<div class="video-container">
 <iframe class="youtube-video" src="https://www.youtube.com/embed/LCIWqwmCZ54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ### [Reorgizing the wiki of Grove - Wio-e5 uploading the data and adding a new one as uploading data to Helium Cloud](https://wiki.seeedstudio.com/Grove_Wio_E5_Helium_Demo/)
 

@@ -156,7 +156,9 @@ NAS をエンクロージャに組み込むためのアクリルケースも設�
 
 - ODYSSEY-X86 上で FreeNAS を使用する方法に関する Explaining Computers の動画:
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qyz91Q_JrBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 その他の便利なアプリケーション:
 

@@ -22,7 +22,9 @@ Como se mencionó anteriormente, el Eagleye530s está basado en el SoM ARTIK 530
 
 Dado que el Eagleye 530s es compatible en pines con muchos accesorios de hardware "maker", permite a los desarrolladores de Samsung ARTIK™ acceder fácilmente al extenso mercado de accesorios "maker" y crear prototipos y construir con sensores disponibles comercialmente (ej. [GrovePi+](https://www.seeedstudio.com/GrovePi%2B-p-2241.html),[sensores Grove](https://www.seeedstudio.com/grove.html)), reconocimiento de voz (ej. [ReSpeaker 2-mic array](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html) y [ReSpeaker 4-mic array](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html)), relés, GPS, conectividad celular, y más, proporcionando muchas opciones para desarrolladores empresariales que crean pruebas de concepto (PoC) ricas en características o productos listos para producción.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4IR768d8Ins" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Eagleye-530s-p-3035.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="200" height="38"  border={0} /></a></p>
 

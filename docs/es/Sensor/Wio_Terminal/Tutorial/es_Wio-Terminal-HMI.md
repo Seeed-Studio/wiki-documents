@@ -135,7 +135,6 @@ sudo poweroff
 
 ¡Ahora deberías ver que tu Wio Terminal muestra el escritorio de la Raspberry Pi! Si cargaste el firmware `USBDisplayAndMouseControl` en el Wio Terminal, ¡incluso puedes usar los botones y los interruptores de 5 direcciones para controlar el ratón de la Raspberry Pi!
 
-
 !!!Note
     Esta versión del controlador de pantalla USB no admite intercambio en caliente.
 
@@ -227,7 +226,6 @@ Modo Espejo:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminanl-HMI/display-4.png"/></div>
 
-
 ```py
 # Four-screen clone display
 ```
@@ -246,7 +244,7 @@ sudo apt install python3 python3-distutils python3-pyqt5 python3-pip python3-num
 sudo pip3 install pyqtgraph
 ```
 
-- Export macros for the screen:
+- Exportar macros para la pantalla:
 
 ```sh
 export QT_QPA_PLATFORM=linuxfb:fb=/dev/fb1
@@ -414,18 +412,16 @@ Este controlador de pantalla USB también funciona en tu PC. Por favor revisa **
 
 **R.** Mientras el Wio Terminal aún esté conectado a la Raspberry Pi, navega a: `seeed-linux-usbdisp/drivers/linux-driver` y ejecuta el comando: `make & sudo make install`. Después de eso ejecuta: `sudo reboot`
 
-
 ## Soporte Técnico y Discusión de Productos
-
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

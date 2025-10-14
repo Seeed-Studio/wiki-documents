@@ -29,7 +29,7 @@ last_update:
 
 Esta es la Guía de Inicio Rápido de SenseCAP Watcher que te ayudará a desembalar y usar el dispositivo por primera vez.
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yufEUFEB0Ic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 

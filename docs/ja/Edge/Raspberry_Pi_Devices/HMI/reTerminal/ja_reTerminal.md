@@ -421,13 +421,15 @@ brew install libusb
 brew install pkg-config
 ```
 
-- **Step 4.** Build using make
+- **ステップ 4.** make を使ってビルドします
+
 
 ```sh
 make
 ```
 
-- **Step 5.** Run the binary
+- **ステップ 5.** バイナリを実行します
+
 
 ```sh
 sudo ./rpiboot
@@ -504,7 +506,7 @@ cd usbboot
 make
 ```
 
-- **Step 6.** Run the usbboot tool and it will wait for a connection
+- **ステップ 6.** usbbootツールを実行すると、接続を待機します
 
 ```sh
 sudo ./rpiboot
@@ -708,7 +710,9 @@ sudo reboot
 
 reTerminalの分解方法については、以下の動画をご確認ください：
 
-<p align="center"><iframe width="800" height="500" src="https://www.youtube.com/embed/hAfdb603emw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>></p>
+<div class="video-container">
+<iframe width="800" height="500" src="https://www.youtube.com/embed/hAfdb603emw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## FAQ
 

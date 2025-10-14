@@ -21,7 +21,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-optional-accessories.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱</font></span></strong>
     </a>
 </div>
 
@@ -85,7 +85,7 @@ bluetoothctl
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/bluetoothctl.png"/>
 </div>
 
-## M.2 Key M for SSD
+## M.2 SSDのキーM
 
 M.2 Key Mは高速ソリッドステートドライブ（SSD）用に設計されたインターフェースで、超高速データ転送速度を提供し、高性能アプリケーションに最適です。
 
@@ -423,13 +423,13 @@ sudo apt-get update
 sudo apt-get install can-utils
 ```
 
-Open a **Terminal 1** and enter the following command to monitor the number of bytes of data sent from `can0`:
+**ターミナル1**を開き、以下のコマンドを入力して`can0`から送信されるデータのバイト数を監視してください：
 
 ```bash
 watch -n 1 'ifconfig can0 | grep "TX packets"'
 ```
 
-Open a **Terminal 2** . Pull the script for testing CAN communication from GitHub and run it:
+**ターミナル2**を開く。GitHubからCAN通信をテストするためのスクリプトを取得して実行する：
 
 ```bash
 git clone https://github.com/jjjadand/Mini_CANtest.git

@@ -25,7 +25,9 @@ BME280 是 BMP180 的升级版本，与 BMP180 相比，BME280 在多个方面�
 典型应用：增强 GPS 导航、室外/室内导航、天气预报或任何其他需要精确大气压读数的项目。
 
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)
 

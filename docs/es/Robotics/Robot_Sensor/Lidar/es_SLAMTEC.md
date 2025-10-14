@@ -14,6 +14,7 @@ last_update:
   author: ZhuYaohui
 ---
 
+
 # 📡 Centro de Documentación LiDAR de Slamtec
 
 <div className="quick-nav-container">
@@ -66,16 +67,16 @@ last_update:
 ### Hoja de Datos
 
 <div className="card-container">
-    <a href="https://download.slamtec.com/api/download/rplidar-a3m1-datasheet/1.9?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=Documents-,Datasheet,-A3M1%20Datasheet" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">A3M1</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-a2m8-datasheet/2.6?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=Documents-,Datasheet,-A3M1%20Datasheet" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">A2M8</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-a2m12-datasheet/1.0?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=Documents-,Datasheet,-A3M1%20Datasheet" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">A2M12</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-a1m8-datasheet/3.2?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=Documents-,Datasheet,-A3M1%20Datasheet" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">A1M8</span>
     </a>
 </div>
@@ -84,13 +85,13 @@ last_update:
 
 <div className="card-container">
   <nav className="quick-nav">
-    <a href="https://download.slamtec.com/api/download/rplidarkit-a3m1-usermanual/1.4?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=A1M8%20Datasheet-,Dev%20Kit%20User%20Manual,-A3M1%20Dev%20Kit" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">A3M1</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidarkit-a2-manual/1.2?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=A1M8%20Datasheet-,Dev%20Kit%20User%20Manual,-A3M1%20Dev%20Kit" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Serie A2</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidarkit-a1m8-usermaunal/2.2?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=A1M8%20Datasheet-,Dev%20Kit%20User%20Manual,-A3M1%20Dev%20Kit" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">A1M8</span>
     </a>
   </nav>
@@ -102,11 +103,11 @@ last_update:
     <a href="https://wiki.slamtec.com/display/SD#Slamtec%E5%BC%80%E5%8F%91%E8%80%85%E4%B8%AD%E5%BF%83-rplidar" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Centro de Desarrolladores</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-protocol/2.4?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=SDK%20%26-,Protocol,-Online%20documents" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Protocolo de Comunicación</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-sdk-manual/2.0?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">Manual de Usuario SDK</span>
+    <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=and%20Repair%20Guide-,SDK%20%26,-Protocol" className="nav-item" target="_blank" rel="noopener noreferrer">
+      <span className="text">Manual de Usuario del SDK</span>
     </a>
     <a href="https://github.com/slamtec/rplidar_sdk" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Github</span>
@@ -122,22 +123,22 @@ last_update:
 ### Modelos 3D
 
 <div className="card-container">
-    <a href="https://download.slamtec.com/api/download/rplidar-a2m4-r1-model-3d-stl/1.0?lang=netural" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=RPLIDAR%20A3M1%20Dev%20Kit" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">A3M1.stl</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-a2m4-r1-model-2d-pdf/1.0?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=RPLIDAR%20A3M1%20Dev%20Kit" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">A3M1.pdf</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-a2m4-r1-model-3d-stl/1.0?lang=netural" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=RPLIDAR%20A2M4%20Dev%20Kit" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">A2.stl</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-a2m4-r1-model-2d-pdf/1.0?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=RPLIDAR%20A2M4%20Dev%20Kit" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">A2.pdf</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-devkit-a1m8-r1-model-3d-stl/2.0?lang=netural" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=RPLIDAR%20A1M8%20Dev%20Kit" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">A1.stl</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-devkit-a1m8-r1-model-2d-pdf/2.0?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=RPLIDAR%20A1M8%20Dev%20Kit" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">A1.pdf</span>
     </a>
 </div>
@@ -152,16 +153,16 @@ last_update:
 ### Hoja de Datos
 
 <div className="card-container">
-    <a href="https://download.slamtec.com/api/download/rplidar-s2m1-Rx-datasheet/2.3?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-s2:~:text=Documents-,Datasheet,-S2%20Datasheet" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">S2</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-s2m1-RxE-datasheet/1.8?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-s2:~:text=Documents-,Datasheet,-S2%20Datasheet" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">S2E</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-s2m1-RxL-datasheet/2.2?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-s2:~:text=Documents-,Datasheet,-S2%20Datasheet" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">S2L</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-s3-datasheet/2?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-s3:~:text=Documents-,Datasheet,-S3%20Datasheet" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">S3</span>
     </a>
 </div>
@@ -169,13 +170,13 @@ last_update:
 ### Manual de Usuario
 
 <div className="card-container">
-    <a href="https://download.slamtec.com/api/download/rplidar-s2-usermanual/1.2?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-s2:~:text=S2P%20Datasheet-,User%20Manual,-S2%20S2L%20S2P" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">S2 S2L</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-s2e-usermaunal/1.1?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-s2:~:text=S2P%20Datasheet-,User%20Manual,-S2%20S2L%20S2P" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">S2E</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-s3-usermanual/1?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-s3:~:text=S3%20Datasheet-,User%20Manual,-S3%20User%20Manual" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">S3</span>
     </a>
 </div>
@@ -186,17 +187,17 @@ last_update:
     <a href="https://wiki.slamtec.com/display/SD#Slamtec%E5%BC%80%E5%8F%91%E8%80%85%E4%B8%AD%E5%BF%83-rplidar" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Centro de Desarrolladores</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-s2-protocol/2.4?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-s2:~:text=Kit%20User%20Manual-,Protocol,-S2%20S2L%20S2P" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Protocolo S2 S2L</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-s2e-protocol/1.0?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-s2:~:text=Kit%20User%20Manual-,Protocol,-S2%20S2L%20S2P" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Protocolo S2E</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-s3-protocol/1?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-s3:~:text=S3%20User%20Manual-,Protocol,-Protocol" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Protocolo S3</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-sdk-s2-manual/2.0?lang=en" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">Manual de Usuario SDK</span>
+    <a href="https://www.slamtec.com/en/Support#rplidar-s2:~:text=S2E%20Protocol-,SDk,-SDK%20User%20Manual" className="nav-item" target="_blank" rel="noopener noreferrer">
+      <span className="text">Manual de Usuario del SDK</span>
     </a>
     <a href="https://github.com/slamtec/rplidar_sdk" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Github</span>
@@ -213,13 +214,13 @@ last_update:
 
 <div className="card-container">
   <nav className="quick-nav">
-    <a href="https://download.slamtec.com/api/download/rplidar-s2-model-3d-stl/1.0?lang=netural" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-s2:~:text=3D%20Models-,RPLIDAR%20S2%20Dev%20Kit,-STL" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">S2.stl</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-s2-model-2d-pdf/1.0?lang=netural" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-s2:~:text=3D%20Models-,RPLIDAR%20S2%20Dev%20Kit,-STL" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">S2.pdf</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-s3-model-3d-stp/1?lang=netural" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-s2:~:text=3D%20Models-,RPLIDAR%20S2%20Dev%20Kit,-STL" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">S3.stp</span>
     </a>
   </nav>
@@ -235,7 +236,7 @@ last_update:
 ### Hoja de Datos
 
 <div className="card-container">
-    <a href="https://download.slamtec.com/api/download/rplidar-c1-datasheet/1?lang=zh-cn" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-c1:~:text=Documents-,Datasheet,-C1%20Datasheet" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">C1M1</span>
     </a>
 </div>
@@ -243,7 +244,7 @@ last_update:
 ### Manual de Usuario
 
 <div className="card-container">
-    <a href="https://download.slamtec.com/api/download/rplidar-c1-usermanual/1.1?lang=zh-cn" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-c1:~:text=C1%20Datasheet-,User%20Manual,-C1%20User%20Manual" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">C1M1</span>
     </a>
 </div>
@@ -254,10 +255,10 @@ last_update:
     <a href="https://wiki.slamtec.com/display/SD#Slamtec%E5%BC%80%E5%8F%91%E8%80%85%E4%B8%AD%E5%BF%83-rplidar" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Centro de Desarrolladores</span>
     </a>
-    <a href="https://download.slamtec.com/api/download/rplidar-c1-protocol/1?lang=zh-cn" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-c1:~:text=C1%20User%20Manual-,Protocol,-Protocol" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Protocolo C1</span>
     </a>
-    <a href="https://bucket-download.slamtec.com/6a128ec31e98b713a855a4f40648f5accb0a699a/LR002_SLAMTEC_rplidar_sdk_v2.0_cn.pdf" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-c1:~:text=GitHub%20Repository-,SDk,-SDK%20User%20Manual" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Manual de Usuario SDK</span>
     </a>
     <a href="https://github.com/slamtec/rplidar_sdk" className="nav-item" target="_blank" rel="noopener noreferrer">
@@ -275,7 +276,7 @@ last_update:
 
 <div className="card-container">
   <nav className="quick-nav">
-    <a href="https://download.slamtec.com/api/download/rplidar-c1-model-3d-stp/1?lang=netural" className="nav-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.slamtec.com/en/Support#rplidar-c1:~:text=ROS2-,3D%20Models,-RPLIDAR%20C1%20Dev" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">C1.stp</span>
     </a>
   </nav>
@@ -480,12 +481,12 @@ html[data-theme='dark'] .category-card:hover {
   z-index: -1;
 }
 
-/* Modo Dark - Efecto de luz flotante */
+/* Dark模式 - 悬浮光效 */
 html[data-theme='dark'] .category-card:hover::after {
   background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
 }
 
-/* Animación de enlaces */
+/* 链接动画 */
 .category-card a {
   position: relative;
   display: inline-block;
@@ -494,7 +495,7 @@ html[data-theme='dark'] .category-card:hover::after {
   color: #333;
 }
 
-/* Modo Dark - Enlaces */
+/* Dark模式 - 链接 */
 html[data-theme='dark'] .category-card a {
   color: #d1d5db;
 }
@@ -504,7 +505,7 @@ html[data-theme='dark'] .category-card a {
   transform: translateX(5px);
 }
 
-/* Modo Dark - Hover de enlaces */
+/* Dark模式 - 链接悬浮 */
 html[data-theme='dark'] .category-card a:hover {
   color: #60a5fa;
 }
@@ -520,7 +521,7 @@ html[data-theme='dark'] .category-card a:hover {
   transition: width 0.3s;
 }
 
-/* Modo Dark - Subrayado de enlaces */
+/* Dark模式 - 链接下划线 */
 html[data-theme='dark'] .category-card a::after {
   background: #60a5fa;
 }
@@ -529,7 +530,7 @@ html[data-theme='dark'] .category-card a::after {
   width: 100%;
 }
 
-/* Mejora de estilos de etiquetas */
+/* 标签样式增强 */
 .tag {
   font-size: 0.75rem;
   padding: 2px 8px;
@@ -544,7 +545,7 @@ html[data-theme='dark'] .category-card a::after {
   box-shadow: 0 2px 4px rgba(0,100,0,0.1);
 }
 
-/* Modo Dark - Etiqueta Stable */
+/* Dark模式 - Stable标签 */
 html[data-theme='dark'] .stable {
   background: #065f46;
   color: #a7f3d0;
@@ -557,7 +558,7 @@ html[data-theme='dark'] .stable {
   box-shadow: 0 2px 4px rgba(200,0,0,0.1);
 }
 
-/* Modo Dark - Etiqueta Recommended */
+/* Dark模式 - Recommended标签 */
 html[data-theme='dark'] .recommended {
   background: #7f1d1d;
   color: #fca5a5;
@@ -569,24 +570,24 @@ html[data-theme='dark'] .recommended {
   box-shadow: 0 6px 10px rgba(0,0,0,0.1);
 }
 
-/* Modo Dark - Efecto de clic */
+/* Dark模式 - 点击效果 */
 html[data-theme='dark'] .category-card:active {
   box-shadow: 0 6px 10px rgba(0,0,0,0.4);
 }
 
-/* Optimización responsiva */
+/* 响应式优化 */
 @media (max-width: 768px) {
   .nav-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .category-card {
     width: 100%;
-    margin-top: 0.5rem; /* Tarjeta pegada al título */
+    margin-top: 0.5rem; /* 卡片紧贴标题 */
   }
 }
 
-/* Modo Dark - Texto de títulos */
+/* Dark模式 - 标题文字 */
 html[data-theme='dark'] h1,
 html[data-theme='dark'] h2,
 html[data-theme='dark'] h3,
@@ -596,14 +597,14 @@ html[data-theme='dark'] h6 {
   color: #f9fafb;
 }
 
-/* Modo Dark - Texto del cuerpo */
+/* Dark模式 - 正文文字 */
 html[data-theme='dark'] p,
 html[data-theme='dark'] li,
 html[data-theme='dark'] strong {
   color: #e5e7eb;
 }
 
-/* Modo Dark - Bloques de cita */
+/* Dark模式 - 引用块 */
 html[data-theme='dark'] blockquote {
   color: #9ca3af;
   border-left-color: #4b5563;

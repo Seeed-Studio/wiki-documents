@@ -67,17 +67,17 @@ En esta sección, detallaremos cómo configurar el uso de ESP-IDF en el entorno 
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
 				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+				<strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
 				</a>
 			</div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
 				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+				<strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
 				</a>
 			</div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
 				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+				<strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
 				</a>
 			</div></td>
 		</tr>
@@ -92,7 +92,7 @@ El XIAO ESP32C3 no tiene un LED integrado, por lo que si estás usando el XIAO E
 
 Dado que el framework de desarrollo ESP-IDF está dirigido a desarrolladores de software más profesionales, el umbral para usarlo es más alto que el de Arduino. Los documentos e información relacionados serán menores que los de Arduino. Para permitir que los usuarios de XIAO comiencen a usar ESP-IDF lo antes posible, y reducir la posibilidad de encontrar problemas en la configuración del entorno de desarrollo, presentaremos la configuración del entorno en forma de video y gráficos. Esta sección es la parte del video, si quieres seguir junto con el video, puedes referirte a este video para instalar y configurar el entorno ESP-IDF y finalmente encender los LEDs integrados del XIAO ESP32C6.
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="900" height="450" src="https://www.youtube.com/embed/QdPmsGDd7zs?si=5r_OO2EwZMX8D_HM?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 

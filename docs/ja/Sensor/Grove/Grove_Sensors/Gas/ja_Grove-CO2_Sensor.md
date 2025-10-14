@@ -17,7 +17,9 @@ last_update:
 
 Grove - CO2 センサーモジュールは、高感度・高解像度の赤外線CO2センサーです。赤外線CO2センサーMH-Z16は汎用の小型センサーで、非分散型赤外線（NDIR）技術を利用して空気中のCO2を検出します。選択性が良く、酸素依存性がなく、長寿命で、内蔵温度センサーによる温度補償機能を備えています。また、UART出力を持ち、使いやすい設計です。このセンサーは、HVACや室内空気質モニタリング、産業プロセスモニタリングと安全性、農業および畜産生産プロセスモニタリングなど、幅広い用途に使用できます。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-CO2-Sensor-p-1863.html)
 

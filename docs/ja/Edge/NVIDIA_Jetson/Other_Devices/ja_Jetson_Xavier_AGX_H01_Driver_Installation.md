@@ -28,7 +28,7 @@ tags:
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputerzhongwen/first_1.png" /></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Jetson-Xavier-AGX-H01-Kit-p-5283.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Jetson-Xavier-AGX-H01-Kit-p-5283.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong></a>
 </div>
 
 このwikiでは、Jetson Xavier AGX H01 Kitにドライバーをインストールする方法を説明します。これを実現するためのいくつかの方法があります。
@@ -47,7 +47,7 @@ tags:
 
 ドライバーをインストールする前に、ボードをForce Recovery Modelに設定する必要があります。
 
-#### Force Recovery Model
+#### 強制回復モデル
 
 ボードにはリカバリーボタンがあり、これは3つのボタンの中央にあります。リカバリーボタンを押したまま電源を入れると、Force Recovery Modelに入ります。
 

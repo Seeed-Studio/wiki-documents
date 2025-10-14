@@ -301,6 +301,7 @@ reComputer J40/ J30 系列在随附的 NVMe SSD 上预装了 JetPack 5.1，因�
 **步骤 2.** 通过连接电源适配器的随附线缆为 reComputer 供电，并使用 USB Type-C 数据传输线将板子与 Ubuntu 主机 PC 连接
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/2.png"/></div>
+
 **步骤 3.** 在 Linux 主机 PC 上，打开终端窗口并输入命令 `lsusb`。如果返回的内容根据您使用的 Jetson SoM 有以下输出之一，则板子处于强制恢复模式。
 
 - 对于 Orin NX 16GB：**0955:7323 NVidia Corp**
@@ -328,7 +329,9 @@ reComputer Jetson J30/40 已推出一键刷写脚本，支持刷写 Jetpack 5.1.
 wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && sudo chmod 777 ./flashing.sh && ./flashing.sh
 ```
 
+<div class="video-container">
 <iframe width="960" height="480" src="https://www.youtube.com/embed/_YfpJAhhT-g?si=OJxCcPqWauYEp9LR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::caution
 免责声明：一键刷写脚本旨在使 jetpack 刷写更快。当前版本是测试版，可能存在许多问题。希望您能理解。如果有刷写问题，请按照下面的`逐步刷写设备`进行操作，并在我们的 [Discord Jetson 频道](https://discord.com/channels/862602258452578314/930732339624026152)中提供反馈。我们将及时修复这些问题，并在不久的将来改进此功能。
@@ -545,7 +548,8 @@ sudo apt install nvidia-jetpack
 </table>
 </div>
 
-:::info要验证下载固件的完整性，您可以比较 SHA256 哈希值。
+:::info
+要验证下载固件的完整性，您可以比较 SHA256 哈希值。
 
 在 Ubuntu 主机上，打开终端并运行命令`sha256sum <File>`来获取下载文件的 SHA256 哈希值。如果结果哈希值与 wiki 中提供的 SHA256 哈希值匹配，则确认您下载的固件是完整且完好的。
 :::
@@ -780,6 +784,11 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 这里我们将使用 NVIDIA L4T 36.4.3 在 reComputer 上安装 Jetpack 6.2
 
+:::danger
+如果你使用的是 **Orin NX 16GB/8GB** 模块，**请不要启用 MAXN SUPER 模式**。  
+reComputer J401 载板的散热能力不足以支持该模式，强行开启可能会对模块造成永久性损坏。
+:::
+
 **步骤 1：** 将对应您使用的 Jetson 模块的系统镜像下载到您的 Ubuntu PC：
 
 <div class="table-center">
@@ -792,6 +801,20 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>Orin NX 16GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdcCLLY0ZBdIl5YpQk9n1jUBRnqIhjpDHZxo4_6OaxIbYg?e=R7rEqU" target="_blank" rel="noopener noreferrer">Download</a>
+      </td>
+      <td>489F2B5D41655208EB2C5CFD980162B77D3871AD9EA06CD55C05FBB8B747500F</td>
+    </tr>
+    <tr>
+      <td>Orin NX 8GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ETW85CuJ9p5Gtefm7r7Hh74B6VvKATStF5B0SyfANjMZ2Q?e=CPj7HB" target="_blank" rel="noopener noreferrer">Download</a>
+      </td>
+      <td>DCC74CAB5F38E62C7A892DE6DFD547EBD61C5B5B71C5EF9F5A0EF675518EF062 </td>
+    </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>
@@ -809,6 +832,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
   </tbody>
 </table>
 </div>
+
 :::info
 为了验证下载固件的完整性，您可以比较 SHA256 哈希值。
 

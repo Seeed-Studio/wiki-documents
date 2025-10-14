@@ -63,7 +63,9 @@ Después de flashear el firmware y descargar la aplicación Meshtastic, la placa
 
 **Paso 5**: Termina el reinicio, el estado del dispositivo puede verificarse en la aplicación Meshtastic y la pantalla OLED.
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/dzqx32lBJso" title="Configuring Wio-SX1262 with XIAO ESP32S3 kit as Meshtastic device" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ### Método 2: Herramienta de puerto serie
 
@@ -103,7 +105,9 @@ Una vez conectado, puedes comenzar a enviar y recibir mensajes a través de la r
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/3.gif" style={{width:350, height:'auto'}}/></div>
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/vJN_4A8s4z0" title="Configuring Wio-SX1262 with XIAO ESP32S3 kit as Meshtastic device" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Conexión de Sensores
 
@@ -148,7 +152,7 @@ En la aplicación meshtastic, el Wio-SX1262 con el kit XIAO esp32s3 es capaz de 
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>

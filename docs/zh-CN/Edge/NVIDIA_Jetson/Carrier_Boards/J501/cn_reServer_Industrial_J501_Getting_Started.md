@@ -307,7 +307,7 @@ jetpack5 镜像文件大约为 **4.5GB**，下载时间约为 15 分钟。Jetpac
 在我们进行安装步骤之前，需要确保开发板处于强制恢复模式。
 :::
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/CGMGZGqZPKM" title="J501 Enter Force Recovery Mode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -350,7 +350,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**Step 2:** Execute the following command to flash jetpack system to the NVMe SSD:
+**步骤 2:** 执行以下命令将 jetpack 系统刷写到 NVMe SSD：
 
 ```bash
 cd mfi_xxxx

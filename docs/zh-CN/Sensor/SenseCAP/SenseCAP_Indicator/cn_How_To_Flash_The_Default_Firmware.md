@@ -71,7 +71,9 @@ ESP-IDF 版本必须大于 v5.0。如果您使用的是较旧版本，您需要�
 
 对于新用户，这个视频可能会帮助您更好地理解以下步骤：
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/oqJz6zKfc4A?si=glzTFfR7m392eITb" title="Set Up the ESP-IDF Toolchain for SenseCAP Indicator on Windows" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 #### **工具链安装**
 
@@ -182,7 +184,7 @@ esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z ^
 0x10000 ../../build/indicator_basis.bin
 ```
 
-And for a straightforward flashing process using the merged firmware:
+对于使用合并固件的简单刷机过程：
 
 ```sh title="flash.bat"
 esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z 0x0 indicator_basis_v1.0.0.bin
@@ -443,12 +445,12 @@ RP2040 开发工具利用 Arduino 来增强您的编码体验。
 
 :::note **参考库文件**
 
-- Sensirion Core: [Sensirion Arduino Core library](https://github.com/Sensirion/arduino-core)
-- PacketSerial : [Serial communication protoco](https://github.com/bakercp/PacketSerial)
-- Sensirion I2C SGP40 : [SGP40 TVOC sensor library](https://github.com/Sensirion/arduino-i2c-sgp40)
-- Sensirion I2C SCD4x : [SCD41 CO2 sensor library](https://github.com/Sensirion/arduino-i2c-scd4x)
-- Sensirion Gas Index Algorithm : [Transfer index library](https://github.com/Sensirion/arduino-gas-index-algorithm)
-- Seeed_Arduino_AHT20 : [AHT20 temperature and humidity sensor library](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20)
+- Sensirion Core: [Sensirion Arduino Core 库](https://github.com/Sensirion/arduino-core)
+- PacketSerial : [串行通信协议](https://github.com/bakercp/PacketSerial)
+- Sensirion I2C SGP40 : [SGP40 TVOC 传感器库](https://github.com/Sensirion/arduino-i2c-sgp40)
+- Sensirion I2C SCD4x : [SCD41 CO2 传感器库](https://github.com/Sensirion/arduino-i2c-scd4x)
+- Sensirion Gas Index Algorithm : [转换指数库](https://github.com/Sensirion/arduino-gas-index-algorithm)
+- Seeed_Arduino_AHT20 : [AHT20 温度和湿度传感器库](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20)
 :::
 
 在 Arduino IDE 中，您可以在`库管理器`中搜索，例如 `Seeed_Arduino_AHT20`，然后安装它。

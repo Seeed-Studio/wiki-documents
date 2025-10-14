@@ -18,7 +18,9 @@ Seeed 的 ReSpeaker 6-Mic 圆形阵列套件是一款为树莓派设计的扩展
 
 适用于树莓派的 ReSpeaker 6-Mic 圆形阵列套件在 Raspbian 系统中支持 8 个输入和 8 个输出通道。前 6 个输入通道用于麦克风录音，其余 2 个输入通道是播放的回声通道。前 2 个输出通道用于播放，其余 6 个输出通道为虚拟通道。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NxZx9nz67Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/ReSpeaker-6-Mic-Circular-Array-Kit-for-Raspberry-Pi-p-3067.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
@@ -162,9 +164,9 @@ sudo reboot
 
 ```
 
-**Step 2. Check the Sound Card**
+**步骤 2. 检查声卡**
 
-Tap the command below to check the record device.
+点击下方的命令来检查录音设备。
 
 ```
 pi@raspberrypi:~ $ arecord -L
@@ -197,7 +199,7 @@ plughw:CARD=seeed8micvoicec,DEV=0
     Hardware device with all software conversions 
 ```
 
-Use the following command to check the play device.
+使用以下命令检查播放设备。
 
 ```
 pi@raspberrypi:~ $ aplay -L
@@ -258,9 +260,9 @@ plughw:CARD=seeed8micvoicec,DEV=0
 
 ```
 
-**Step 3. Record and Play**
+**步骤 3. 录制并播放**
 
-You can record then play, or you can record and play at the same time.
+你可以先录制然后播放，或者可以同时录制和播放。
 
 ```
 #It will capture sound on AC108 and save as a.wav
@@ -351,7 +353,7 @@ cd ~
 nano get_index.py
 ```
 
-- Step 2, copy below code and paste on get_index.py.
+- 步骤 2, 复制下面的代码并粘贴到 get_index.py 中。
 
 ```python
 import pyaudio
@@ -373,7 +375,7 @@ for i in range(0, numdevices):
 Input Device id  2  -  seeed-8mic-voicecard: - (hw:1,0)
 ```
 
-- Step 5, change `RESPEAKER_INDEX = 2` to index number. Run python script record.py to record a speech.
+- 步骤 5，将 `RESPEAKER_INDEX = 2` 改为索引号。运行 Python 脚本 record.py 来录制语音。
 
 ```python
 import pyaudio
@@ -500,14 +502,14 @@ pip install dist/*.whl
 
 **Let's say snowboy**
 
-- Step 1. Run the kws_doa.py
+- 步骤 1. 运行 kws_doa.py
 
 ```shell
 cd ~/voice-engine/examples/respeaker_6mic_array_for_pi/
 python kws_doa.py
 ```
 
-Here is the code of the kws_doa.py
+这是 kws_doa.py 的代码
 
 ```python
 """
@@ -557,7 +559,7 @@ if __name__ == '__main__':
     main()
 ```
 
-- Step 2. Let's say snowboy and here is output of DOA.
+- 步骤 2. 让我们说雪人，这里是 DOA 的输出。
 
 ```shell
 (env) pi@raspberrypi:~/voice-engine/examples/respeaker_6mic_array_for_pi $ python kws_doa.py 

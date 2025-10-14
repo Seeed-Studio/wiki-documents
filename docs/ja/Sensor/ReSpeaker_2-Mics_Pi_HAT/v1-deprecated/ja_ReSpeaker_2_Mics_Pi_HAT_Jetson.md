@@ -33,7 +33,7 @@ Jetson Nano 接続
 これは JetPack 4.5.1 でテストされています。他のバージョンの場合、```ls /usr/src/linux-headers-*``` コマンドでカーネルヘッダーのバージョン番号を確認する必要があります。
 :::
 
-**STEP 1.** リポジトリをクローンする
+**ステップ 1.** リポジトリをクローンする
 
 ```sh
 cd ~
@@ -41,32 +41,32 @@ git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays
 cd ~/seeed-linux-dtoverlays
 ```
 
-**STEP 2.** dtbo とドライバーをビルドする
+**ステップ 2.** dtbo とドライバーをビルドする
 
 ```sh
 export CUSTOM_MOD_FILTER_OUT="lis3lv02d mcp25xxfd gt9xx seeed-voicecard"
 KBUILD=/usr/src/linux-headers-4.9.201-tegra-ubuntu18.04_aarch64/kernel-4.9 make all_jetsonnano
 ```
 
-**STEP 3.** ドライバーをインストールする
+**ステップ 3.** ドライバーをインストールする
 
 ```sh
 sudo -E KBUILD=/usr/src/linux-headers-4.9.201-tegra-ubuntu18.04_aarch64/kernel-4.9 make install_jetsonnano
 ```
 
-**STEP 4.** dtbo をインストールする
+**ステップ 4.** dtbo をインストールする
 
 ```sh
 sudo /opt/nvidia/jetson-io/config-by-hardware.py -n "Seeed Voice Card 2MIC"
 ```
 
-**STEP 5.** 再起動する
+**ステップ 5.** 再起動する
 
 ```sh
 sudo reboot
 ```
 
-**STEP 6.** Alsa ウィジェット設定を復元する
+**ステップ 6.** Alsa ウィジェット設定を復元する
 
 :::note
 ログイン後、サウンドカードがビジー状態になるまで少し待つ必要があります。
@@ -77,7 +77,7 @@ cd ~/seeed-linux-dtoverlays
 alsactl -f extras/wm8960_asound.state-jetson-nano restore 1
 ```
 
-**STEP 7.** ```aplay -l``` と ```arecord -l``` コマンドを使用して、サウンドカード名がソースコード seeed-voicecard と一致していることを確認します。
+**ステップ 7.** ```aplay -l``` と ```arecord -l``` コマンドを使用して、サウンドカード名がソースコード seeed-voicecard と一致していることを確認します。
 
 ```
 jetson@jetson:~$ aplay -l

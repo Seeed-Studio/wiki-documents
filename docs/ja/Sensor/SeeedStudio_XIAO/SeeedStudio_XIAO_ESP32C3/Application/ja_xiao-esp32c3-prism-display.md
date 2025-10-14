@@ -11,9 +11,11 @@ last_update:
   author: timo614
 ---
 
-# XIAO ESP32C3 Prism Display
+# XIAO ESP32C3 プリズムディスプレイ
 
+<div class="video-container">
 <iframe class="youtube-video" src="https://www.youtube.com/embed/wSJa8HP0BkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 
 ## はじめに

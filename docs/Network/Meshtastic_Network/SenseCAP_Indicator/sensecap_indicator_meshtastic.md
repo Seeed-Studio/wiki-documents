@@ -27,7 +27,7 @@ last_update:
     </a>
 </div>
 
-SenseCAP Indicator is a 4-inch touchscreen device designed for Meshtastic®, powered by dual MCUs, the ESP32 and RP2040, and supports Wi-Fi, BLE, and LoRa®. It is an open-source, powerful IoT development platform.
+SenseCAP Indicator is a 4-inch touchscreen device designed for [Meshtastic®](https://meshtastic.org/), powered by dual MCUs, the ESP32 and RP2040, and supports Wi-Fi, BLE, and LoRa®. It is an open-source, powerful IoT development platform.
 
 ## Introduction
 
@@ -65,7 +65,9 @@ SenseCAP Indicator is a 4-inch touchscreen device designed for Meshtastic®, pow
 
 **Video Instruction**
 
+<div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/55Sz8kHSyV4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 

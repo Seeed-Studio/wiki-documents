@@ -285,7 +285,9 @@ POS 6: RAW - LOW ON
 
 この製品の紹介動画です。簡単なデモが含まれており、試してみることができます。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wz1GzW2-VW4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技術サポート & 製品ディスカッション
 

@@ -307,7 +307,7 @@ Ubuntuホストマシンで、ターミナルを開き、`sha256sum <File>`コ�
 インストール手順に進む前に、ボードが強制リカバリモードになっていることを確認する必要があります。
 :::
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/CGMGZGqZPKM" title="J501 Enter Force Recovery Mode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -350,7 +350,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**Step 2:** Execute the following command to flash jetpack system to the NVMe SSD:
+**ステップ 2:** 次のコマンドを実行して、jetpackシステムをNVMe SSDにフラッシュします：
 
 ```bash
 cd mfi_xxxx

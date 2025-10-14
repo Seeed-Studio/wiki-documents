@@ -15,7 +15,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取</font></span></strong>
     </a>
     <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Watcher's Video</font></span></strong>
@@ -59,7 +59,7 @@ WatcherデバイスのBasic Settingsメニューでは、ユーザーエクス�
 
 これらの設定にアクセスして変更するには、WatcherデバイスのBasic Settingsメニューに移動し、直感的なインターフェースを使用して希望する変更を行います。
 
-### SenseCraft Remote Control
+### SenseCraft リモートコントロール
 
 SenseCraft Remote Control機能は、WatcherデバイスがSenseCraftクラウドサービスとどのように通信するかを決定する重要な設定です。有効にすると、この機能はWatcherとSenseCraftクラウド間の通信チャネルを確立し、クラウドベースの大規模言語モデル（LLM）やリモート通知機能などの幅広い高度な機能とサービスにアクセスできるようになります。
 

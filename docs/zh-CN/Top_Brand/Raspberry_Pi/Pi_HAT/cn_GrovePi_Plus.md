@@ -150,12 +150,12 @@ git clone https://github.com/DexterInd/GrovePi.git
 
 * [17. Grove-Electromagnet](https://wiki.seeedstudio.com/cn/Grove-Electromagnet#With_Raspberry_Pi)
 
-* [18. Grove-Flame_Sensor](https://wiki.seeedstudio.com/cn/Grove-Flame_Sensor#With_Raspberry_Pi)
-* [19. Grove-Gas_Sensor-MQ2](https://wiki.seeedstudio.com/cn/Grove-Gas_Sensor-MQ2#With_Raspberry_Pi)
+* [18. Grove-火焰传感器](https://wiki.seeedstudio.com/cn/Grove-Flame_Sensor#With_Raspberry_Pi)
+* [19. Grove-气体传感器-MQ2](https://wiki.seeedstudio.com/cn/Grove-Gas_Sensor-MQ2#With_Raspberry_Pi)
 * [20. Grove-Gesture_v1.0](https://wiki.seeedstudio.com/cn/Grove-Gesture_v1.0#With_Raspberry_Pi)
 * [21. Grove-GPS](https://wiki.seeedstudio.com/cn/Grove-GPS#With_Raspberry_Pi)
-* [22. Grove-High_Temperature_Sensor](https://wiki.seeedstudio.com/cn/Grove-High_Temperature_Sensor#With_Raspberry_Pi)
-* [23. Grove-Infrared_Reflective_Sensor](https://wiki.seeedstudio.com/cn/Grove-Infrared_Reflective_Sensor#With_Raspberry_Pi)
+* [22. Grove-高温传感器](https://wiki.seeedstudio.com/cn/Grove-High_Temperature_Sensor#With_Raspberry_Pi)
+* [23. Grove-红外反射传感器](https://wiki.seeedstudio.com/cn/Grove-Infrared_Reflective_Sensor#With_Raspberry_Pi)
 
 ## 原理图在线查看器
 

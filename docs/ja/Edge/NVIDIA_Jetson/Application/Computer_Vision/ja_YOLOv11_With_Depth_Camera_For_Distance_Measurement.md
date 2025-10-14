@@ -44,7 +44,7 @@ sudo apt-get install python3-dev python3-venv python3-pip python3-opencv camke g
 pip install pybind11
 ```
 
-**Step 2.** Install the necessary packages for building the project:
+**ステップ 2.** プロジェクトをビルドするために必要なパッケージをインストールします：
 
 ```bash
 cd pyorbbecsdk
@@ -981,7 +981,9 @@ if __name__ == "__main__":
 スクリプトは検出結果と、指定された2つのオブジェクト（例：カップとマウス）間の測定距離をリアルタイムで表示します。ウィンドウの左側には検出ボックス付きのRGB画像が表示されます。右側には深度マップと距離が表示されます。動画では、測定誤差が一般的に1センチメートル以内であることが確認できます：
 </div>
 
+<div class="video-container">
 <iframe width="960" height="371" src="https://www.youtube.com/embed/r_zLhj-waj0" title="Measure distance with depth camera" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::note
 <div style={{ textAlign: "justify" }}>

@@ -1,6 +1,6 @@
 ---
-description: Using XIAO ESP32-C3 on MicroBlocks.
-title: Using XIAO ESP32-C3 on MicroBlocks
+description: XIAO ESP32-C3 with MicroBlocks
+title: XIAO ESP32-C3 with MicroBlocks
 image: https://files.seeedstudio.com/wiki/microblocks/microblocks.png
 slug: /xiao_esp32c3_microblocks
 last_update:
@@ -8,7 +8,7 @@ last_update:
   author: MicroBlocks
 ---
 
-# Using XIAO ESP32-C3 on MicroBlocks
+# XIAO ESP32-C3 with MicroBlocks
 
 ## MicroBlocks
 

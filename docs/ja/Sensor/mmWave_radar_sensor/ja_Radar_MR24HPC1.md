@@ -11,13 +11,13 @@ last_update:
 ---
 
 
-# 24GHz mmWave Sensor - Human Static Presence Module Lite (MR24HPC1)
+# 24GHz mmWave センサー - 人体静的存在検知モジュール Lite (MR24HPC1)
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/0.jpg" style={{width:500, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -323,7 +323,7 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
 
 <p style={{textAlign: 'center'}}><a href="https://github.com/limengdu/Seeed_24GHz_Human_Static_Presence_Module_Lite" target="_blank"><div align="center"><img width ="{300}" src="https://files.seeedstudio.com/wiki/seeed_logo/DOWNLOAD.png" /></div></a></p>
 
-#### Function {#function}
+#### 関数 {#function}
 
 スケッチの開発を始める前に、ライブラリで利用可能な関数を見てみましょう。
 

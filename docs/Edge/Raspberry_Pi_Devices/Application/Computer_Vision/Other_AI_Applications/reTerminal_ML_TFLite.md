@@ -133,7 +133,9 @@ The FPS and inference results in the Example table are given for INT8 quantized 
 Since reTerminal is Raspberry Pi 4 based, it has no additional hardware accelerators for neural network inference, thus only standard optimization methods for CPU inference can be applied.
 The video overview of this topic is presented here:
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/BEDEscDQFxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Below is the brief overview of CPU inference optimization methods:
 

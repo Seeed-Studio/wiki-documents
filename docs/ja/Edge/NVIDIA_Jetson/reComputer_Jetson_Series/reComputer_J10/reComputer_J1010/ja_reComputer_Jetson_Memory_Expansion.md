@@ -250,7 +250,7 @@ git clone https://github.com/limengdu/bootFromUSB.git
 cd bootFromUSB
 ```
 
-**Step 2.** USBストレージデバイスの準備
+**ステップ 2.** USBストレージデバイスの準備
 
 USBストレージデバイスをreComputerに接続し、ショートカット`Ctrl+F`を使用するか、左上角のUbuntuアイコンをクリックして**Disks**を検索することで、Ubuntu 18.04に付属のDisksツールを開きます。
 
@@ -276,9 +276,9 @@ USBストレージデバイスに名前を付け、タイプで**Ext4**を選択
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/sd6.png" /></div>
 
-**Step 3.** USBストレージデバイスのマウント
+**ステップ 3.** USBストレージデバイスのマウント
 
-**step 2**に従って準備されたUSBストレージデバイスは、Disksソフトウェアでアンマウント状態として表示されます。
+**ステップ 2**に従って準備されたUSBストレージデバイスは、Disksソフトウェアでアンマウント状態として表示されます。
 
 !!!Note
  フォーマット後にUSBデバイスが自動的にマウントされていることがわかった場合は、このステップをスキップしてください。
@@ -298,7 +298,7 @@ sudo mount <USB Device Path> /media/USB/
 sudo mount /dev/sda1 /media/USB/
 ```
 
-Use the following command to check the mount location of the device.
+次のコマンドを使用して、デバイスのマウント場所を確認してください。
 
 ```sh
 sudo findmnt -rno TARGET <USB Device Path>

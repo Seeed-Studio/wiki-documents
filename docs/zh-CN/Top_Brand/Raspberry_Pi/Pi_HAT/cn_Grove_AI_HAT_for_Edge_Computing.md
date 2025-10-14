@@ -22,7 +22,9 @@ MAix M1 是一款功能强大的 RISC-V 600MHz AI 模块，具有双核 64 位 C
 
 我们希望这款开发板能够帮助您进行边缘计算、AI 视觉、语音识别和其他 AI 项目，请尽情享受吧。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/5BF3ExL1HOQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-AI-HAT-for-Edge-Computing-p-4026.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 

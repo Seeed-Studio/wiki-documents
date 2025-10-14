@@ -233,7 +233,9 @@ Since performance is key, this light sensor offers a wide dynamic and spectrum d
 
 ### Tutorials on Grove - Light Sensor v1.1
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZvFswNYY2mU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 - [What is a light sensor? Types, Uses, Arduino Guide](https://www.seeedstudio.com/blog/2020/01/08/what-is-a-light-sensor-types-uses-arduino-guide/)
 

@@ -35,7 +35,7 @@ no_comments: false # for Disqus
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
 				<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
 				</a>
 			</div></td>
 		</tr>
@@ -76,7 +76,9 @@ ollama run deepseek-r1
 
 このデモンストレーションでは、DeepSeek 1.5bモデルを使用しました。ニーズとハードウェアの容量に基づいて、使用するモデルを選択できます。
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/qo2iv5RLgbA" title="How to deploy deepseek on raspberry pi AI box?  #deepseek #raspberrypi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 
 ## 技術サポート & 製品ディスカッション

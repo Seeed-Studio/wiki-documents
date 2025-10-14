@@ -234,7 +234,7 @@ python3 grove_tilt_switch.py 12
 
 ```
 
-Following is the grove_tilt_switch.py code.
+A continuación se muestra el código grove_tilt_switch.py.
 
 ```python
 
@@ -316,7 +316,7 @@ if __name__ == '__main__':
 ```
 
 :::success
-    If everything goes well, you will be able to see the following result when you touch the tilt switch
+    Si todo va bien, podrás ver el siguiente resultado cuando toques el interruptor de inclinación
 :::
 
 ```python

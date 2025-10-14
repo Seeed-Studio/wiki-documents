@@ -29,7 +29,6 @@ reTerminal 出厂预装 Raspberry Pi OS。因此，您只需连接电源即可�
 | 09/03/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.6 | v1.6 | IO 扩展芯片从 MCP23008-E 更改为 PCA9554，<br />加密芯片从 ATECC608A-SSHDA-B 更改为 ATECC608A-TNGTLSS-G [更多信息](#../reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g) |
 | 11/02/2021 | 2021-09-14-Raspbian(modified)-32-bit | V1.8 | v1.6 |  |
 
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
@@ -334,7 +333,6 @@ reTerminal 开箱即用，预装了 Raspberry Pi OS。所以我们可以直接�
 
 > **注意：** Seeed 打包的最新系统镜像，包含适当的驱动程序：[pi-gen-expand](https://github.com/Seeed-Studio/pi-gen-expand)
 
-
 - **步骤 1.** 移除 4 个橡胶盖，拧下下面的 4 个螺丝打开 reTerminal 后壳
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-1.png" alt="pir" width="450" height="auto"/></p>
@@ -411,25 +409,25 @@ git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-- **Step 2.** Install **libusb**
+- **步骤 2.** 安装 **libusb**
 
 ```sh
 brew install libusb
 ```
 
-- **Step 3.** Install **pkg-config**
+- **步骤 3.** 安装 **pkg-config**
 
 ```sh
 brew install pkg-config
 ```
 
-- **Step 4.** Build using make
+- **步骤 4.** 使用 make 构建
 
 ```sh
 make
 ```
 
-- **Step 5.** Run the binary
+- **步骤 5.** 运行二进制文件
 
 ```sh
 sudo ./rpiboot
@@ -479,13 +477,13 @@ sudo ./rpiboot
 sudo apt-get update
 ```
 
-- **Step 2.** Install **Git** by the following command
+- **步骤 2.** 通过以下命令安装 **Git**
 
 ```sh
 sudo apt install git pkg-config make gcc libusb-1.0-0-dev
 ```
 
-- **Step 3.** Git might produce an error if the date is not set properly. Type the following to correct this
+- **步骤 3.** 如果日期设置不正确，Git 可能会产生错误。输入以下内容来纠正这个问题
 
 ```sh
 sudo date MMDDhhmm
@@ -500,13 +498,13 @@ git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-- **Step 5.** Build and install the usbboot tool
+- **步骤 5.** 构建并安装 usbboot 工具
 
 ```sh
 make
 ```
 
-- **Step 6.** Run the usbboot tool and it will wait for a connection
+- **步骤 6.** 运行 usbboot 工具，它将等待连接
 
 ```sh
 sudo ./rpiboot
@@ -596,14 +594,14 @@ raspberry
 ssh pi@raspberrypi.local
 ```
 
-- **Step 2.** Type **yes** for the following message
+- **步骤 2.** 对以下消息输入 **yes**
 
 ```sh
 ECDSA key fingerprint is SHA256:XXXXXXX.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-- **Step 3.** When it asks for the password, type the following
+- **步骤 3.** 当它要求输入密码时，请输入以下内容
 
 ```sh
 raspberry
@@ -624,7 +622,7 @@ sudo apt install git -y
 git clone --depth 1 https://github.com/Seeed-Studio/seeed-linux-dtoverlays
 ```
 
-- **Step 2.** Enter the repo
+- **步骤 2.** 进入仓库
 
 ```sh
 cd seeed-linux-dtoverlays
@@ -632,6 +630,7 @@ cd seeed-linux-dtoverlays
 
 :::note
 对于 **32位操作系统**，您需要在执行 `sudo ./scripts/reTerminal.sh` 之前添加以下步骤。完成安装后，请记住**重启** reTerminal 以使更改生效。
+
 ```
 echo arm_64bit=0 | sudo tee -a /boot/config.txt
 sudo reboot
@@ -647,7 +646,7 @@ sudo ./scripts/reTerminal.sh
 
 :::note
 
-Type the following if you don't want to upgrade the kernel at the same time:
+如果您不想同时升级内核，请输入以下内容：
 
 ```sh
 sudo ./scripts/reTerminal.sh --keep-kernel
@@ -658,7 +657,6 @@ sudo ./scripts/reTerminal.sh --keep-kernel
 如果您已成功安装驱动程序，您将看到以下输出
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/driver-success.png" alt="pir" width="1000" height="auto"/></p>
-
 
 - **步骤 4.** 重启 reTerminal
 
@@ -710,7 +708,9 @@ sudo reboot
 
 请查看下面关于如何拆解 reTerminal 的视频：
 
-<p align="center"><iframe width="800" height="500" src="https://www.youtube.com/embed/hAfdb603emw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>></p>
+<div class="video-container">
+<iframe width="800" height="500" src="https://www.youtube.com/embed/hAfdb603emw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## 常见问题
 
@@ -737,11 +737,11 @@ sudo reboot
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -16,7 +16,9 @@ last_update:
 El Grove - Anillo LED RGB (20 - WS2813 Mini) es una versión mini del [Anillo LED RGB Digital WS2813](https://www.seeedstudio.com/WS2813-Digital-RGB-LED-Ring-p-2871.html). El Anillo LED RGB está compuesto por LEDs de tamaño 3535 con un microcontrolador integrado dentro del LED. Los WS2813 son direccionables individualmente ya que el chip controlador está ubicado dentro del LED.
 Cada LED tiene una corriente constante de alimentación, por lo que el color será muy consistente incluso si cambia el voltaje.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/zQj8RRJcZsk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Min-p-3227.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p> -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Min-p-3227.html)

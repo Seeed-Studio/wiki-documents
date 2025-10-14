@@ -101,23 +101,23 @@ cd /home/seeed/Documents/llama.cpp  # cd `path_of_llama.cpp`
 pip install .
 ```
 
-Step3. Run the model conversion process.
+步骤3. 运行模型转换过程。
 
 ```bash
 python convert_hf_to_gguf.py --outfile /home/seeed/Downloads/gpt-oss /home/seeed/Documents/gpt-oss-gguf/
 # python convert_hf_to_gguf.py --outfile <path_of_input_model> <path_of_output_model>
 ```
 
-Step4. Model Quantization.
+步骤4. 模型量化。
 
 ```bash
 ./build/bin/llama-quantize /home/seeed/Documents/gpt-oss-gguf/Gpt-Oss-32x2.4B-F16.gguf /home/seeed/Documents/gpt-oss-gguf-Q4/Gpt-Oss-32x2.4B-Q4.gguf Q4_K
 # ./build/bin/llama-quantize <path_of_f16_gguf_model> <path_of_output_model> <quantization_method>
 ```
 
-## Launch GPT-OSS by llama.cpp
+## 通过 llama.cpp 启动 GPT-OSS
 
-Now we can attempt to launch the inference program in the Jetson terminal.
+现在我们可以尝试在 Jetson 终端中启动推理程序。
 
 ```bash
 ./build/bin/llama-cli -m /home/seeed/Documents/gpt-oss-gguf/Gpt-Oss-32x2.4B-F16.gguf -ngl 40

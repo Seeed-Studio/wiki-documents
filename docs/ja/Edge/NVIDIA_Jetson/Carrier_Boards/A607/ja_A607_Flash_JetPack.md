@@ -16,7 +16,7 @@ last_update:
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/A607/1.png" /></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/A607-Carrier-Board-for-Jetson-Orin-NX-Nano-p-5634.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/A607-Carrier-Board-for-Jetson-Orin-NX-Nano-p-5634.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong></a>
 </div>
 
 このwikiでは、NVIDIA Jetson Orin NXモジュールとNVIDIA Jetson Orin Nanoモジュールの両方をサポートするA607 Carrier Boardに接続されたNVMe SSDに[Jetpack](https://developer.nvidia.com/embedded/jetpack)をフラッシュする方法を説明します。
@@ -178,7 +178,7 @@ unzip A607-Orin-NX-JP5.1.1.zip
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例えば（ユーザー名："nvidia"、パスワード："nvidia"、デバイス名："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
@@ -251,7 +251,7 @@ unzip A607-Orin-Nano-4GB-JP5.1.1.zip
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例えば（ユーザー名："nvidia"、パスワード："nvidia"、デバイス名："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
@@ -360,7 +360,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo ./apply_binaries.sh
 ```
 
-**Step 4:** Extract **A607_Jetpack_6.1.tar.gz**:
+**ステップ 4:** Extract **A607_Jetpack_6.1.tar.gz**:
 
 ```sh
 cd ..

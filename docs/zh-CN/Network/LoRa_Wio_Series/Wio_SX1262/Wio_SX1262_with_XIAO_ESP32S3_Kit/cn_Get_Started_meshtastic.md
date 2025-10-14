@@ -62,7 +62,9 @@ Meshtastic 为用户提供了多个平台软件可供选择，包括 Android 应
 
 **步骤 5**：完成重启后，可以在 Meshtastic 应用程序和 OLED 显示屏上检查设备状态。
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/dzqx32lBJso" title="Configuring Wio-SX1262 with XIAO ESP32S3 kit as Meshtastic device" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ### 方法 2：串口工具
 
@@ -102,7 +104,9 @@ nodenum 的最后四位数字是 meshtastic 应用程序发现的设备编号 ID
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/3.gif" style={{width:350, height:'auto'}}/></div>
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/vJN_4A8s4z0" title="Configuring Wio-SX1262 with XIAO ESP32S3 kit as Meshtastic device" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 传感器连接
 

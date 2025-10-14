@@ -22,10 +22,10 @@ import TabItem from '@theme/TabItem';
 <br></br>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/TRMNL-7-5-Inch-OG-DIY-Kit-p-6481.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/TRMNL-7-5-Inch-OG-DIY-Kit-p-6481.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong></a>
 </div>
 
-## [Home Assistant](https://www.home-assistant.io/) 介绍
+## [Home Assistant](https://www.home-assistant.io/) 简介
 
 Home Assistant 是一个功能强大的开源家庭自动化平台，允许您从一个统一的界面控制和监控智能家居设备。它充当智能家居的中央枢纽，使您能够自动化日常任务、监控传感器并创建更智能的生活空间。
 
@@ -33,9 +33,9 @@ Home Assistant 是一个功能强大的开源家庭自动化平台，允许您�
 
 ### 为什么选择 Home Assistant？
 
-- **本地控制**：与许多基于云的解决方案不同，Home Assistant 在您的网络上本地运行，确保您的数据保持私密，即使没有互联网连接，您的自动化功能也能正常工作。
+- **本地控制**：与许多基于云的解决方案不同，Home Assistant 在您的网络上本地运行，确保您的数据保持私密，即使没有互联网连接，您的自动化也能正常工作。
 
-- **广泛的设备支持**：Home Assistant 集成了数千种不同的智能家居设备和服务，使其具有高度的通用性和面向未来的特性。
+- **广泛的设备支持**：Home Assistant 与数千种不同的智能家居设备和服务集成，使其具有高度的通用性和面向未来的特性。
 
 - **强大的自动化**：创建复杂的自动化规则，可以响应各种触发器，如时间、设备状态、传感器读数等。
 
@@ -53,23 +53,23 @@ TRMNL 7.5inch(OG) DIY Kit 是 Home Assistant 的绝佳伴侣，原因如下：
 
 2. **清晰可见**：与 LCD 屏幕不同，电子纸显示屏在任何光照条件下都易于阅读，包括直射阳光，使其成为壁挂式家庭控制面板的理想选择。
 
-3. **长电池续航**：结合深度睡眠模式，显示屏可以在单次电池充电下运行数月，同时仍能提供一目了然的有价值信息。
+3. **长电池续航**：结合深度睡眠模式，显示屏可以在单次电池充电下运行数月，同时仍能一目了然地提供有价值的信息。
 
 4. **灵活集成**：通过 ESPHome，显示屏与 Home Assistant 无缝集成，允许您以优雅、始终可见的格式显示智能家居系统中的任何数据。
 
-这些优势使 TRMNL 7.5inch(OG) DIY Kit 成为为您的 Home Assistant 设置创建节能、始终在线信息显示屏的理想选择。
+这些优势使 TRMNL 7.5inch(OG) DIY Kit 成为为您的 Home Assistant 设置创建节能、始终在线信息显示的理想选择。
 
 ### ESPHome 集成
 
-ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允许您使用简单的 YAML 配置文件创建自定义固件，然后可以将其刷写到您的设备上。对于 TRMNL 7.5inch(OG) DIY Kit，ESPHome 作为重要的中间件，实现设备与 Home Assistant 之间的通信。
+ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允许您使用简单的 YAML 配置文件创建自定义固件，然后可以刷写到您的设备上。对于 TRMNL 7.5inch(OG) DIY Kit，ESPHome 充当设备与 Home Assistant 之间通信的重要中间件。
 
-该系统通过将您的 YAML 配置转换为在 ESP 设备上运行的功能齐全的固件来工作。该固件处理连接到网络、与 Home Assistant 通信以及控制电子纸显示屏的所有复杂任务。当与 Home Assistant 结合使用时，ESPHome 为创建复杂的家庭自动化显示屏和控制器提供了强大的平台。
+该系统通过将您的 YAML 配置转换为在 ESP 设备上运行的功能齐全的固件来工作。该固件处理连接到网络、与 Home Assistant 通信以及控制电子纸显示屏的所有复杂任务。当与 Home Assistant 结合使用时，ESPHome 为创建复杂的家庭自动化显示和控制提供了强大的平台。
 
 让我们探索如何设置并充分利用这个多功能显示屏。
 
-## 开始使用
+## 入门指南
 
-在本文教程内容开始之前，您可能需要准备以下硬件。
+在本文的教程内容开始之前，您可能需要准备以下硬件。
 
 ### 所需材料
 
@@ -86,19 +86,19 @@ ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/TRMNL-7-5-Inch-OG-DIY-Kit-p-6481.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方式。它提供了轻松的设置，让您可以用一个系统控制所有智能设备，默认情况下所有数据都存储在本地。这块板子受益于蓬勃发展的 Home Assistant 生态系统，并且每个月都会通过开源得到改进。
+Home Assistant Green 是自动化家居最简单、最注重隐私的方式。它提供轻松的设置，允许您用一个系统控制所有智能设备，默认情况下所有数据都存储在本地。该板受益于蓬勃发展的 Home Assistant 生态系统，并将通过开源每月改进。
 
 我们建议在本教程中使用 Home Assistant Green 作为 Home Assistant 主机，或者您可以使用任何带有 Supervisor 的 Home Assistant 主机。
 
@@ -109,9 +109,75 @@ Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方�
 - **[在 reTerminal 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/reTerminal_Home_Assistant/)**
 - **[在 LinkStar H68K/reRouter CM4 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/h68k-ha-esphome/)**
 
-如果您没有使用 Seeed Studio 产品，您也可以在官方 Home Assistant 网站上查看并学习如何为其他产品安装 Home Assistant。
+如果您没有使用 Seeed Studio 产品，您也可以在 Home Assistant 官方网站上查看并学习如何为其他产品安装 Home Assistant。
 
 - **[Home Assistant 安装](https://www.home-assistant.io/installation/)**
+:::
+
+### 设备安装
+
+**步骤 1. 将显示屏连接到驱动板**  
+将 FPC 电缆与 XIAO ePaper Display Board 上的连接器对齐，然后固定锁扣以确保牢固连接。  
+
+:::tip
+FPC 电缆的金属面应朝上，否则不会显示任何内容。
+
+请按照下面的安装教程操作，很多人都搞错了。
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/2.jpg" style={{width:600, height:'auto'}}/></div>
+
+**步骤 2. 连接电池**  
+将电池电缆连接到驱动板上的 JST 连接器，确保极性正确（红线接 +，黑线接 -）。  
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/3.jpg" style={{width:600, height:'auto'}}/></div>
+
+**步骤 3. 外壳组装（可选）**  
+
+:::tip
+请注意屏幕的柔性电缆非常脆弱。操作时要小心。如果损坏，整个屏幕将停止工作。
+:::
+从[资源部分](#resources)打印开源外壳部件并在内部组装组件。  
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/4.jpeg" style={{width:600, height:'auto'}}/></div>
+
+首先，组装驱动板和电池。
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/base.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+测试 TRMNL 套件是否工作正常。
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/test.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+将屏幕插入外壳并使 FPC 能够伸出。
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/cable.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+连接 FPC 延长电缆并组装整个外壳。
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/assembly.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+L 形外壳非常相似。
+
+<div class="table-center">
+<iframe width="300" height="500" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/Lshape.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+:::tip
+如果您的 TRMNL 套件距离路由器很远，您可以将天线移到外壳外面。这样会有更好的性能。
 :::
 
 ### 步骤 1. 安装 ESPHome
@@ -127,7 +193,7 @@ Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方�
 搜索 ESPHome 并点击它。点击 **INSTALL** 和 **START**。
 
 :::tip
-如果您在附加组件商店中找不到 ESPHome，请确保您使用的是支持附加组件的 Home Assistant 安装（如 Home Assistant OS 或监督安装）。对于其他安装类型（如 Home Assistant Container），您可能需要使用 Docker 独立运行 ESPHome Device Builder。有关更多详细信息，请参阅[官方 ESPHome 文档](https://esphome.io/guides/getting_started_hassio)。
+如果您在附加组件商店中找不到 ESPHome，请确保您使用的是支持附加组件的 Home Assistant 安装（如 Home Assistant OS 或监督安装）。对于其他安装类型（如 Home Assistant Container），您可能需要使用 Docker 独立运行 ESPHome Device Builder。有关更多详细信息，请参阅 [官方 ESPHome 文档](https://esphome.io/guides/getting_started_hassio)。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/03.png" style={{width:800, height:'auto'}}/></div>
@@ -142,7 +208,7 @@ Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/06.png" style={{width:800, height:'auto'}}/></div>
 
-给设备起一个您喜欢的名称，选择 **ESP32-S3** 作为芯片类型，然后点击 **SKIP**。
+为设备起一个您喜欢的名称，选择 **ESP32-S3** 作为芯片类型，然后点击 **SKIP**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -195,20 +261,20 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/BYOD_helloworld.png" style={{width:1000, height:'auto'}}/></div>
 
-点击 **INSTALL** 将代码安装到设备上，您将看到以下图像。
+点击 **INSTALL** 将代码安装到设备，您将看到以下图像。
 
 <Tabs>
-<TabItem value='通过浏览器安装'>
+<TabItem value='Install through browser'>
 
 :::tip
-如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）距离您较远，我们建议使用此方法。您可以使用手边的计算机进行安装。
+如果您的 Home Assistant 主机（树莓派/Green/Yellow 等）距离您很远，我们建议使用此方法。您可以使用手边的计算机进行安装。
 :::
 
 首先，您需要点击 **Manual download** 下载编译好的固件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
-打开这个网站，我们将在这里将固件上传到电子纸面板。
+打开这个网站，我们将在这里上传固件到电子纸面板。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/63.png" style={{width:800, height:'auto'}}/></div>
 
@@ -228,11 +294,11 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
-点击 **INSTALL** 并选择您刚才下载的固件。
+点击 **INSTALL** 并选择您刚刚下载的固件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/69.png" style={{width:500, height:'auto'}}/></div>
 
-稍等片刻，您将在显示屏上看到 'Hello world!' ～
+稍等片刻，您将在显示屏上看到"Hello world!"～
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/71.png" style={{width:'100%', height:'auto'}}/></div>
@@ -241,22 +307,22 @@ display:
 
 </TabItem>
 
-<TabItem value='通过主机安装'>
+<TabItem value='Install through host'>
 
 :::tip
-如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）就在附近，我们建议使用此方法，因为它更简单。
+如果您的 Home Assistant 主机（树莓派/Green/Yellow 等）就在附近，我们建议使用此方法，因为它更简单。
 :::
 
-在将代码安装到设备之前，您需要使用 USB 线缆**将此设备连接到运行 Home Assistant 的 Raspberry Pi 或 HA Green(Yellow) 等设备**。
+在将代码安装到设备之前，您需要使用 USB 线缆**将此设备连接到运行 Home Assistant 的树莓派或 HA Green（Yellow）等**。
 
-按照图像中的选项点击，将代码安装到设备。[设备在深度睡眠模式下找不到端口？](#port)
+按照图像中的选项点击以将代码安装到设备。[设备在深度睡眠模式下找不到端口？](#port)
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/6.png" style={{width:'70%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/7.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-稍等片刻，您将看到如下图所示的反馈。这意味着代码正在成功运行。
+稍等片刻，您将看到如下图所示的反馈。这意味着代码运行成功。
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/9.png" style={{width:'100%', height:'auto'}}/></div>
@@ -265,10 +331,10 @@ display:
 
 </TabItem>
 
-<TabItem value='通过 Wi-Fi 安装'>
+<TabItem value='Install through Wi-Fi'>
 
 :::tip
-这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到电子纸面板。之后，您可以通过 wifi 上传。另外，确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，此方法才能正常工作。
+这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到电子纸面板。之后，您可以通过 wifi 上传。另外，请确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，以便此方法正常工作。
 :::
 
 通过这种方式，您不需要将电子纸面板连接到任何设备，只需确保它在线即可。
@@ -320,7 +386,7 @@ display:
       it.filled_circle(250, 105, 25);
 ```
 
-当您看到如下图所示的反馈时，表示代码正在成功运行。
+当您看到如下图所示的反馈时，表示代码运行成功。
 
 您也可以[点击这里](https://esphome.io/components/display/)查看更多用法。
 
@@ -330,7 +396,7 @@ display:
 
 此示例将在显示屏上显示 HA 中的信息。
 
-首先，您需要将此设备添加到 HA 中。否则，您无法从 HA 获取信息。
+首先，您需要将此设备添加到 HA。否则，您无法从 HA 获取信息。
 
 如果 HA 没有显示设备，您应该先运行上面的演示。运行上面的演示后，您可以在 HA 中看到设备。
 
@@ -404,12 +470,12 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/15.png" style={{width:1000, height:'auto'}}/></div>
 
-代码的功能是从 HA 获取**天气**、**温度**和**气压**信息，并在显示屏上显示它们。
+代码的功能是从 HA 获取**天气**、**温度**和**气压**信息并在显示屏上显示。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/39.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-如果您发现您的 Home Assistant 没有天气相关的组件，您可以从集成中下载一个名为 **Open-Meteo** 的集成。
+如果您发现您的 Home Assistant 没有天气相关组件，您可以从集成中下载一个名为 **Open-Meteo** 的集成。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_weather.png" style={{width:800, height:'auto'}}/></div>
 :::
@@ -475,15 +541,15 @@ display:
       it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
 ```
 
-当您看到如下图所示的反馈时，表示代码正在成功运行。
+当您看到如下图所示的反馈时，说明代码运行成功。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/35.png" style={{width:600, height:'auto'}}/></div>
 
-如果您想使用其他图标，可以点击下面的按钮来探索更多选项。
+如果您想使用其他图标，可以点击下面的按钮探索更多。
 
 <div align="center">
 <a href="https://pictogrammers.com/library/mdi/" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击这里访问图标网站</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处访问图标网站</button></p>
 </a>
 </div>
 
@@ -503,11 +569,11 @@ display:
 
 与前面的示例一样，我们需要安装 **Studio Code Server** 并创建一个名为 **image** 的新文件夹来保存图像。
 
-然后将图像放入 **image** 文件夹中。您可以点击下面的按钮下载一张图像来试试。
+然后将图像放入 **image** 文件夹。您可以点击下面的按钮下载一张图像来试试。
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.jpg" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击这里下载</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处下载</button></p>
 </a>
 </div>
 
@@ -541,7 +607,7 @@ display:
       it.image(0, 0, id(myImage));
 ```
 
-当您看到如下图所示的反馈时，表示代码正在成功运行。
+当您看到如下图所示的反馈时，说明代码运行成功。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.png" style={{width:600, height:'auto'}}/></div>
 
@@ -553,7 +619,7 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/83.jpg" style={{width:800, height:'auto'}}/></div>
 
-请注意版本应该**高于或等于 1.11.4**。安装后，转到**配置页面**。我们需要为此插件创建一个 access_token。
+请注意版本应该**高于或等于 1.11.4**。安装后，转到 **Configuration page**。我们需要为此插件创建一个 access_token。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/96.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -561,11 +627,11 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/88.jpg" style={{width:800, height:'auto'}}/></div>
 
-转到**安全页面**的底部并创建一个令牌，然后复制并粘贴到 **Puppet** 插件中。
+转到 **Security page** 底部并创建一个令牌，然后复制并粘贴到 **Puppet** 插件中。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/85.jpg" style={{width:800, height:'auto'}}/></div>
 
-记住要**重启** Puppet 插件。
+记得**重启** Puppet 插件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/95.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -579,25 +645,25 @@ display:
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000
 ```
 
-为了减少 E Ink® 显示屏的调色板，您可以添加 eink 参数。该值表示要使用的颜色数量（包括黑色）。例如，对于 2 色 E Ink® 显示屏：
+要为 E Ink® 显示屏减少调色板，您可以添加 eink 参数。该值表示要使用的颜色数量（包括黑色）。例如，对于 2 色 E Ink® 显示屏：
 
 ```python
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2
 ```
 
-If you are using eink=2, you can also invert the colors by adding the invert parameter:
+如果您使用 eink=2，您还可以通过添加 invert 参数来反转颜色：
 
 ```python
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2&invert
 ```
 
-Besides, you can also screenshot other page, for example **To-do lists** page in HA:
+此外，您还可以截取其他页面，例如 HA 中的 **To-do lists** 页面：
 
 ```python
 http://192.168.1.191:10000/todo?viewport=800x480&eink=2&invert
 ```
 
-您可以在浏览器中输入此链接查看截图效果。
+您可以在浏览器中输入此链接来查看截图效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/92.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -626,6 +692,7 @@ spi:
 
 display:
   - platform: waveshare_epaper
+    id: main_display
     model: 7.50inv2
     cs_pin: GPIO44
     dc_pin: GPIO10
@@ -638,17 +705,17 @@ display:
       it.image(0, 0, id(dashboard_image));
 ```
 
-当您看到如下图所示的反馈时，表示代码正在成功运行。
+当您看到如下图所示的反馈时，说明代码运行成功。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/94.jpg" style={{width:600, height:'auto'}}/></div>
 
-## Demo2. 深度睡眠模式
+## 演示 2. 深度睡眠模式
 
 :::tip
-在深度睡眠模式下，您无法直接向设备上传代码。您需要进入下载模式。[点击这里跳转到Q3。](#port)
+在深度睡眠模式下，您无法直接向设备上传代码。您需要进入下载模式。[点击此处跳转到 Q3。](#port)
 :::
 
-此示例将展示如何使用深度睡眠模式来节省电力。每6小时更新一次信息。
+此示例将展示如何使用深度睡眠模式来节省电力。每 6 小时更新一次信息。
 
 您可以复制下面的代码并将其粘贴到 `captive_portal` 之后，如下所示。
 
@@ -695,7 +762,7 @@ display:
       it.printf(100, 100, id(font1), "Wakeup count: %d", id(sleep_counter));
 ```
 
-您将看到一个计数器。它每次唤醒时都会增加一。
+您将看到一个计数器。每次唤醒时它都会增加一。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/90.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -705,21 +772,21 @@ display:
 为了让您更好地理解，我们强烈建议您首先运行上面的基本用法。
 :::
 
-此示例演示了 TRMNL 7.5 英寸电子纸 DIY 套件的综合 ESPHome 配置。YAML 代码集成了多个功能，创建了一个智能、交互式显示面板，可与 Home Assistant 无缝协作。
+此示例演示了 TRMNL 7.5 英寸电子纸 DIY 套件的综合 ESPHome 配置。YAML 代码集成了多个功能，创建了一个与 Home Assistant 无缝协作的智能交互式显示面板。
 
 **目的和功能：**
 
-- 该配置使设备能够连接到 Wi-Fi 和 Home Assistant，支持 API 和 OTA 更新，便于管理。
+- 该配置使设备能够连接到 Wi-Fi 和 Home Assistant，支持 API 和 OTA 更新以便于管理。
 
-- 它设置电子纸显示屏在两个可切换的页面上显示不同类型的信息，通过物理按钮控制。
+- 它设置电子纸显示屏在两个可切换页面上显示不同类型的信息，由物理按钮控制。
 
 - 设备读取电池电压，计算电池百分比，并显示相应的电池图标和数值。
 
-- 天气状况和温度从 Home Assistant 获取并显示相应的图标和单位。
+- 天气状况和温度从 Home Assistant 获取，并显示相应的图标和单位。
 
 - 当前时间和日期也会显示，与 Home Assistant 同步。
 
-此示例展示了如何结合传感器读数、Home Assistant 数据和用户输入，使用 ESPHome 和 TRMNL 7.5 英寸电子纸套件构建功能丰富的常开智能显示屏。
+此示例展示了如何结合传感器读数、Home Assistant 数据和用户输入，使用 ESPHome 和 TRMNL 7.5 英寸电子纸套件构建功能丰富的常亮智能显示屏。
 
 <details>
 
@@ -741,7 +808,7 @@ esp32:
   board: esp32-s3-devkitc-1
   framework:
     type: arduino
-    
+
 # Enable logging
 logger:
 
@@ -1050,13 +1117,13 @@ display:
 
 ### Q1: 为什么没有数据？
 
-在这种情况下，您应该转到设置 -> 设备和服务 -> 集成来**重新配置**设备。没有找到您的电子纸面板？尝试重启 HA。
+在这种情况下，您应该转到 Settings -> Devices & Services -> Integrations 来**重新配置**设备。没有找到您的电子纸面板？尝试重启 HA。
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
-### Q2: 为什么我无法在Home Assistant中获取这些数据？ {#port}
+### Q2: 为什么我无法在 Home Assistant 中获取这些数据？ {#port}
 
-在这种情况下，您应该转到设置 -> 设备和服务 -> 集成来**添加**您的设备到 HA。
+在这种情况下，您应该转到 Settings -> Devices & Services -> Integrations 来**添加**您的设备到 HA。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
 
@@ -1069,21 +1136,21 @@ display:
 
 当设备处于深度睡眠模式时，您无法直接上传新程序。
 
-1. 首先，确保设备已开启。然后，按住位于 XIAO ESP32-S3 Plus 上 USB-C 端口旁边的**Boot**按钮。
+1. 首先，确保设备已开启。然后，按住位于 XIAO ESP32-S3 Plus 上 USB-C 端口旁边的 **Boot** 按钮。
 
-2. 在按住**Boot**按钮的同时，按一次**Reset**按钮，然后松开**Boot**按钮。
+2. 在按住 **Boot** 按钮的同时，按一次 **Reset** 按钮，然后松开 **Boot** 按钮。
 
 3. 之后，关闭电池开关并拔掉电源线。
 
-4. 最后，重新插入线缆并上传新程序。
+4. 最后，重新插入电缆并上传新程序。
 
-### <span id="Q4">Q4</span>: TRMNL 7.5英寸(OG) DIY套件无法连接到您的计算机？
+### <span id="Q4">Q4</span>: TRMNL 7.5inch(OG) DIY Kit 无法连接到您的计算机？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/68.png" style={{width:600, height:'auto'}}/></div>
 
 尝试多次拔插，或者根据提示安装驱动程序。
 
-### <span id="Q5">Q5</span>: Wi-Fi上传程序失败？
+### <span id="Q5">Q5</span>: Wi-Fi 上传程序失败？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/74.png" style={{width:800, height:'auto'}}/></div>
 

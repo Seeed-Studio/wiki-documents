@@ -245,7 +245,7 @@ The distance between the COIN is 5~10mm
 
 **Basic demo**
 
-Code for basic_demo.ino
+Código para basic_demo.ino
 
 ```cpp
 
@@ -298,7 +298,7 @@ void loop()
 ```
 
 :::success
-    If everything goes well, you will see the following result
+    Si todo va bien, verás el siguiente resultado
 :::
 
 ```cpp
@@ -440,11 +440,11 @@ En los ejemplos basic_demo y muti_channel_demo, puedes tener en cuenta que cada 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

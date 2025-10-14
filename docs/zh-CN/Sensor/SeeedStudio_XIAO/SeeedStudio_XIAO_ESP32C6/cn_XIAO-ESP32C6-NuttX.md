@@ -28,7 +28,7 @@ NuttX 支持大量且不断扩展的开发板。[官方文档](https://nuttx.apa
 
 Nuttx 文档为不同平台提供了[指南](https://nuttx.apache.org/docs/latest/quickstart/install.html)。对于 Seeed Studio XIAO ESP32C6，请按照以下步骤操作：
 
-1. 下载 Espressif esptool(https://docs.espressif.com/projects/esptool/en/latest/esp32/)：
+1. 下载 [Espressif esptool](https://docs.espressif.com/projects/esptool/en/latest/esp32/)：
 
     ```bash
     ~/nuttxspace/nuttx$ esptool.py version
@@ -63,7 +63,7 @@ Apache Nuttx 分为两个项目：
 ./tools/configurate.sh board_name:your_application
 ```
 
-Also it's possible to check the list of board-supported a running the command:
+还可以通过运行以下命令来检查支持的板卡列表:
 
 ```bash
 ./tools/configurate.sh -L
@@ -101,7 +101,7 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Now we select the NSH configuration to the esp32c6-xiao board:
+现在我们将 NSH 配置选择到 esp32c6-xiao 开发板上：
 
 ```bash
 ./tools/configurate.sh esp32c6-xiao:usbnsh
@@ -128,7 +128,7 @@ NuttX  12.9.0 ebf883ba72 May  8 2025 17:15:47 risc-v esp32c6-xiao
 nsh> 
 ```
 
-Typing `?`, you will access the available options for commands and built-in applications.
+输入 `?`，您将访问可用的命令和内置应用程序选项。
 
 ```bash
 nsh> ?
@@ -166,19 +166,19 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Select the gpio configuration to the xiao-esp32c6 board.
+选择 gpio 配置以适用于 xiao-esp32c6 开发板。
 
 ```bash
 ./tools/configurate.sh esp32c6-xiao:gpio
 ```
 
-Compile de the source code.
+编译 translation 代码。
 
 ```bash
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+将固件加载到您的开发板中，运行串行通信程序，如 minicon 或 picocom：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
@@ -235,8 +235,7 @@ nsh> ls /dev
 nsh> 
 ```
 
-Following these commands to read GPIO1(/dev/gpio1) (with interruption)
-and write at GPIO2(/dev/gpio0).
+按照以下命令读取 GPIO1(/dev/gpio1)（可中断）并写入 GPIO2(/dev/gpio0)。
 
 ```bash
 NuttShell (NSH) NuttX-12.9.0
@@ -277,19 +276,19 @@ cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-Select the wifi configuration to the xiao-esp32c6 board.
+选择 wifi 配置到 xiao-esp32c6 开发板。
 
 ```bash
 ./tools/configurate.sh esp32c6-xiao:wifi
 ```
 
-Compile de the source code.
+编译 translation 代码。
 
 ```bash
 make -j
 ```
 
-Load the firmware into you board, run a serial communication program such as minicon or picocom:
+将固件加载到您的开发板中，运行串行通信程序，如 minicon 或 picocom：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0

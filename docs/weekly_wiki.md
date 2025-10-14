@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/15/2025
+  date: 09/29/2025
   author: Frank
 ---
 
@@ -17,53 +17,59 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 15th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is October 13th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Seeed Studio BeagleBone® Green Eco](https://wiki.seeedstudio.com/getting_started_with_seeedstudio_beaglebone_green_eco/)
+### [XIAO ePaper Display Board EE04 with PlatfromIO](https://wiki.seeedstudio.com/e04_with_platformio/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/1-102111198-Seeed-Studio-BeagleBoneR-Green-Eco.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" alt="pir" width={800} height="auto" /></p>
 
-**The Seeed Studio BeagleBone® Green Eco** is an industrial-grade, open-source single-board computer, co-developed with the BeagleBoard.org® Foundation and powered by the robust **TI AM3358 SoC**. This "Eco" version is engineered for high efficiency, incorporating an advanced TI power management chip (TPS6521403) to ensure optimized energy consumption. It is well-equipped for demanding applications with a generous 16GB of onboard eMMC storage and a Gigabit Ethernet port for high-speed network connectivity.
+<div style={{ textAlign: "justify" }}>
 
-### [Getting started with AmazingHand](https://wiki.seeedstudio.com/hand_amazinghand/)
+This document provides a guide on how to use the XIAO ePaper Display Board EE04 with PlatformIO, including hardware setup, project creation, code uploading, button control, and battery voltage detection examples.
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/pollen-robotics/AmazingHand/main/assets/Patterns_Overview.jpg" alt="pir" width={800} height="auto" /></p>
+</div>
 
-The **AmazingHand** is an open-source robotic hand project designed to make research and experimentation with humanoid manipulation accessible and affordable. Traditional robotic hands are often prohibitively expensive and rely on complex, bulky forearm actuators. The AmazingHand solves this by integrating all its motors directly into a compact, 3D-printable design.
+### [PyCuVSLAM with reComputer](https://wiki.seeedstudio.com/pycuvslam_recomputer_robotics/)
 
-### [Crowd Flow Heatmap with Home Assistant](https://wiki.seeedstudio.com/crowd-flow-monitoring/)
+<p style={{textAlign: 'center'}}><img src="https://media.githubusercontent.com/media/NVlabs/PyCuVSLAM/main/pycuvslam.gif" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/lovelace-heatmap-card-config.png" alt="pir" width={800} height="auto" /></p>
+<div style={{ textAlign: "justify" }}>
 
-Want a clear view of how people move through a space? With **Home Assistant** and a **Floorplan Heatmap**, you can do just that. This solution lets you overlay person-hour data onto your floor plan, making it easy to see how the space is being used at a glance.
+[PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM) is NVIDIA's GPU-accelerated visual odometry and SLAM library cuVSLAM's Python wrapper. It supports monocular, stereo, RGB-D, multi-camera, and visual-inertial (IMU) modes, providing a simple Python API that can directly interface with camera streams and output real-time camera poses, map points, and loop closure information. The underlying CUDA optimization enables high-precision, low-latency SLAM inference on both PC and Jetson devices, making it suitable for robotic navigation, drone positioning, and 3D perception applications.This wiki will provide instructions on how to deploy pycuvslam on reComputer.
 
-### [Using XIAO ESP32-C3 on MicroBlocks](https://wiki.seeedstudio.com/xiao_esp32c3_microblocks/)
+</div>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/microblocks.png" alt="pir" width={800} height="auto" /></p>
+### [How to use LLaVa on the reComputer Industrial J4012 to monitor your warehouse](https://wiki.seeedstudio.com/vlm/)
 
-MicroBlocks is a blocks-language that makes it easy for beginners (9 years to adults) to program microcontrollers. Yet in spite of its apparent simplicity, MicroBlocks is a powerful programming language with better performance than MicroPython; the ability to control GPIO pins and interface to peripherals via I2C, SPI, and serial; and nearly 200 extension libraries. This document explains how to use the Seeed Studio XIAO ESP32-C3 with MicroBlocks, including firmware installation, connection methods, and basic examples (such as blinking an LED), helping you get started quickly with block-based programming.
+<div class="video-container">
+<iframe width="800" height="450" src="https://www.youtube.com/embed/J0sS-1zQid8?list=PLpH_4mf13-A1EnNUgEMTsy2PxejFllSGM" title="Build a Local AI Watchdog for Industrial Safety with reComputer J4012 powered by NVIDIA Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-In addition, we also provide tutorial documents for **[XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_microblocks/)**, **[XIAO RP2040](https://wiki.seeedstudio.com/xiao_rp2040_microblocks/)**, **[XIAO RP2350](https://wiki.seeedstudio.com/xiao_rp2350_microblocks/)**, **[XIAO SAMD21](https://wiki.seeedstudio.com/xiao_samd21_microblocks/)**, and **[XIAO nRF52840](https://wiki.seeedstudio.com/xiao_ble_microblocks/)**.
+<div style={{ textAlign: "justify" }}>
 
-### [Power Consumptions Example for XIAO nRF54L15 (PlatformIO)](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_power_consumptions/)
+This wiki describes deploying a VLM (Visual Learning Model) on the [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html), using a USB camera as the input for the VLM. When the system detects a safe situation, the signal light will turn green via RS485 control. In dangerous situations, such as a fire or the presence of someone with a weapon, the signal light will turn yellow. When the light sensor detects the signal from the warehouse light being turned off via RS485, the signal light will turn red.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/new/6.png" alt="pir" width={800} height="auto" /></p>
-
-This document presents the power consumption of the Seeed Studio XIAO nRF54L15 Sense in different operating modes, covering BLE advertising and ultra-low-power System Off mode, with code examples and test data based on PlatformIO.
-
-### [Use Zoneminder on reComputer](https://wiki.seeedstudio.com/zoneminder_on_recomputer/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/zoneminder/zone_m.png" alt="pir" width={600} height="auto" /></p>
-
-[Zoneminder](https://github.com/ZoneMinder/zoneminder) is an open-source video surveillance software that allows you to monitor and manage security cameras. It supports various types of cameras, including IP cameras, USB webcams, and analog cameras. ZoneMinder offers features like motion detection, video recording, alarm notifications, and remote viewing through a web interface. It's highly customizable, making it suitable for both personal and professional surveillance needs. Plus, being open-source, it’s free to use and can be adapted to different setups.
+</div>
 
 ## Existing Wiki Updated
 
-### [Grove Beginner Kit For Arduino](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/)
+### [Deploying OpenRemote on reComputer R1x Manage IoT Devices at the Edge](https://wiki.seeedstudio.com/openremote_r1x00/)
 
-We updated the examples for [SPA06-003](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/#for-spa06-003-new-version-after-october-2025).
+We have added an operation example of [MQTT Agent with ChirpStack LoRaWAN Gateway Integration](https://wiki.seeedstudio.com/openremote_r1x00/#mqtt-agent-with-chirpstack-lorawan-gateway-integration).
+
+### [Seeed Studio XIAO nRF54L15 Matter](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_matter/)
+
+We have added an operation example of [Matter Hub Config](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_matter/#matter-hub-config).
+
+### [Getting Started with TRMNL 7.5" (OG) DIY Kit in Arduino](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino/)
+
+We have added an operation demo of [Equipment Installatio](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino/#equipment-installation).
+
+### [Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/)
+
+We have provided a tutorial on how to use the device with the [Orbbec Gemini2 Depth Camera](https://wiki.seeedstudio.com/lerobot_so100m_new/#add-cameras).
 
 ## The Efforts of Contributor
 
@@ -150,12 +156,12 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2024.8.05th](/Seeed_Elderly/weekly_wiki/wiki240805)
 - [weekly wiki on 2024.8.12th](/Seeed_Elderly/weekly_wiki/wiki240812)
 - [weekly wiki on 2024.8.19th](/Seeed_Elderly/weekly_wiki/wiki240819)
-- [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/wiki240826) -->
+- [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/wiki240826)
 - [weekly wiki on 2024.9.02nd](/Seeed_Elderly/weekly_wiki/wiki240902)
 - [weekly wiki on 2024.9.09th](/Seeed_Elderly/weekly_wiki/wiki240909)
 - [weekly wiki on 2024.9.16th](/Seeed_Elderly/weekly_wiki/wiki240918)
 - [weekly wiki on 2024.9.23rd](/Seeed_Elderly/weekly_wiki/wiki240923)
-- [weekly wiki on 2024.9.30th](/Seeed_Elderly/weekly_wiki/wiki240930)
+- [weekly wiki on 2024.9.30th](/Seeed_Elderly/weekly_wiki/wiki240930) -->
 - [weekly wiki on 2024.10.07th](/Seeed_Elderly/weekly_wiki/wiki241007)
 - [weekly wiki on 2024.10.14th](/Seeed_Elderly/weekly_wiki/wiki241014)
 - [weekly wiki on 2024.10.21th](/Seeed_Elderly/weekly_wiki/wiki241021)
@@ -204,5 +210,8 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.8.25th](/Seeed_Elderly/weekly_wiki/wiki250825)
 - [weekly wiki on 2025.9.01st](/Seeed_Elderly/weekly_wiki/wiki250901)
 - [weekly wiki on 2025.9.08th](/Seeed_Elderly/weekly_wiki/wiki250908)
+- [weekly wiki on 2025.9.15th](/Seeed_Elderly/weekly_wiki/wiki250915)
+- [weekly wiki on 2025.9.22nd](/Seeed_Elderly/weekly_wiki/wiki250922)
+- [weekly wiki on 2025.9.29th](/Seeed_Elderly/weekly_wiki/wiki250929)
 
 </details>

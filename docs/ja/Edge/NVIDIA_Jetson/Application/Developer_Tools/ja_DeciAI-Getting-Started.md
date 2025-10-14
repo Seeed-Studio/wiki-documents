@@ -179,13 +179,13 @@ Deci Labプラットフォームを使用してベースモデルと最適化モ
 sudo apt update 
 ```
 
-- **Step 2.** Install pip package manager
+- **ステップ 2.** pipパッケージマネージャーをインストールする
 
 ```sh
 sudo apt install python3-pip
 ```
 
-- **Step 3.** Update pip to the latest version
+- **ステップ 3.** pipを最新バージョンに更新する
 
 ```sh
 python3 -m pip install -U pip

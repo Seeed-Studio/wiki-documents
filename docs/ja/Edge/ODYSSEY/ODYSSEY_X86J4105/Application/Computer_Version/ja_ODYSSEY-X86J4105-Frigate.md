@@ -35,11 +35,11 @@ Frigate NVR は、セキュリティカメラにローカル処理された AI �
 
 このガイドでは、Seeed Studio の [Odyssey Blue](https://www.seeedstudio.com/odyssey-blue-j4125-128gb-p-4921.html?queryID=e375797339bbfbdd78f5c9f94af936ee&objectID=4921&indexName=bazaar_retailer_products) と [Coral USB Accelerator](https://www.seeedstudio.com/coral-usb-accelerator-p-2899.html?queryID=8e8780bcccd9a9418d210fa8827db40f&objectID=2899&indexName=bazaar_retailer_products) を使用して、RTSP カメラストリームでローカル AI 検出を実行するための Frigate Docker 環境を設定する方法を説明します。Home Assistant アドオンのセットアップについては、続報をお待ちください！
 
-**STEP 1:** [Odyssey Blue](https://www.seeedstudio.com/odyssey-blue-j4125-128gb-p-4921.html?queryID=e375797339bbfbdd78f5c9f94af936ee&objectID=4921&indexName=bazaar_retailer_products) に Debian 11 をインストールしていることを確認してください
+**ステップ 1:** [Odyssey Blue](https://www.seeedstudio.com/odyssey-blue-j4125-128gb-p-4921.html?queryID=e375797339bbfbdd78f5c9f94af936ee&objectID=4921&indexName=bazaar_retailer_products) に Debian 11 をインストールしていることを確認してください
 
 [Debian 11](https://cdimage.debian.org/debian-cd/current/amd64/iso-dvd/debian-11.4.0-amd64-DVD-1.iso) OS イメージをダウンロードし、[こちら](https://wiki.seeedstudio.com/ja/ODYSSEY-X86J4105-Installing-OS/) のセットアップガイドに従って [Odyssey Blue](https://www.seeedstudio.com/odyssey-blue-j4125-128gb-p-4921.html?queryID=e375797339bbfbdd78f5c9f94af936ee&objectID=4921&indexName=bazaar_retailer_products) に Debian 11 オペレーティングシステムをインストールしてください。
 
-**STEP 2:** Debian 11 に Docker Engine と Docker Compose をインストールしていることを確認してください
+**ステップ 2:** Debian 11 に Docker Engine と Docker Compose をインストールしていることを確認してください
 
 [Debian に Docker Engine をインストールする](https://docs.docker.com/engine/install/debian/#install-using-the-repository) ガイドに従って Docker Engine と Docker Compose をインストールしてください。
 
@@ -55,7 +55,7 @@ docker -v
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105-Projects/Frigate/check_docker_version.png" /></div>
 
-**STEP 3:** Frigate Docker ファイルを作成する
+**ステップ 3:** Frigate Docker ファイルを作成する
 
 ターミナルアプリで以下のコマンドを入力して、vi テキストエディタを使用して Frigate Docker ファイルを作成します：
 
@@ -127,7 +127,7 @@ services:
       FRIGATE_RTSP_PASSWORD: "password"
 ```
 
-**STEP 4:** Frigateの設定ファイルを作成する
+**ステップ 4:** Frigateの設定ファイルを作成する
 
 ターミナルアプリで以下のコマンドを入力して設定フォルダを作成します：
 
@@ -276,7 +276,7 @@ record:
         cup: 3
 ```
 
-**STEP 5:** Frigate Dockerコンテナを起動する
+**ステップ 5:** Frigate Dockerコンテナを起動する
 
 ```bash
 1 cd ~/Documents/frigate
@@ -289,7 +289,7 @@ record:
 sudo docker logs frigate
 ```
 
-**STEP 6:** FrigateのWebフロントエンドを表示する
+**ステップ 6:** FrigateのWebフロントエンドを表示する
 
 以下のコマンドをターミナルで入力して、[Odyssey Blue](https://www.seeedstudio.com/odyssey-blue-j4125-128gb-p-4921.html?queryID=e375797339bbfbdd78f5c9f94af936ee&objectID=4921&indexName=bazaar_retailer_products)サーバーのIPアドレスを確認してください：
 

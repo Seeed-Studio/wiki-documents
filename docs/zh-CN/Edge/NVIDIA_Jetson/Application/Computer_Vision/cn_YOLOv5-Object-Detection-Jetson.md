@@ -349,14 +349,14 @@ cp ~/Downloads/pink-flowers.v1i.yolov5pytorch.zip ~/yolov5
 unzip pink-flowers.v1i.yolov5pytorch.zip
 ```
 
-- **Step 3.** Open **data.yaml** file and edit **train** and **val** directories as follows
+- **步骤 3.** 打开 **data.yaml** 文件并按如下方式编辑 **train** 和 **val** 目录
 
 ```sh
 train: train/images
 val: valid/images
 ```
 
-- **Step 4.** Execute the following to start training
+- **步骤 4.** 执行以下操作以开始训练
 
 ```sh
 python3 train.py --data data.yaml --img-size 640 --batch-size -1 --epoch 100 --weights yolov5n6.pt
@@ -388,13 +388,13 @@ sudo apt install -y python3-pip
 pip3 install --upgrade pip
 ```
 
-- **Step 2.** Clone the following repo
+- **步骤 2.** 克隆以下仓库
 
 ```sh
 git clone https://github.com/ultralytics/yolov5
 ```
 
-- **Step 3.** Open **requirements.txt**
+- **步骤 3.** 打开 **requirements.txt**
 
 ```sh
 cd yolov5
@@ -418,13 +418,13 @@ numpy==1.19.4
 sudo apt install -y libfreetype6-dev
 ```
 
-- **Step 6.** Install the necessary packages
+- **步骤 6.** 安装必要的软件包
 
 ```sh
 pip3 install -r requirements.txt
 ```
 
-- **Step 7.** Install torch
+- **步骤 7.** 安装 torch
 
 ```sh
 cd ~
@@ -433,7 +433,7 @@ wget https://nvidia.box.com/shared/static/fjtbno0vpo676a25cgvuqc1wty0fkkg6.whl -
 pip3 install torch-1.10.0-cp36-cp36m-linux_aarch64.whl
 ```
 
-- **Step 8.** Install torchvision
+- **步骤 8.** 安装 torchvision
 
 ```sh
 sudo apt install -y libjpeg-dev zlib1g-dev
@@ -442,7 +442,7 @@ cd torchvision
 sudo python3 setup.py install 
 ```
 
-- **Step 9.** Clone the following repo
+- **步骤 9.** 克隆以下仓库
 
 ```sh
 cd ~
@@ -457,53 +457,53 @@ git clone https://github.com/wang-xinyu/tensorrtx
 cp tensorrtx/yolov5/gen_wts.py yolov5
 ```
 
-- **Step 12.** Generate **.wts** file from PyTorch with **.pt**
+- **步骤 12.** 从带有 **.pt** 的 PyTorch 生成 **.wts** 文件
 
 ```sh
 cd yolov5
 python3 gen_wts.py -w best.pt -o best.wts
 ```
 
-- **Step 13.** Navigate to **tensorrtx/yolov5**
+- **步骤 13。** 导航到 **tensorrtx/yolov5**
 
 ```sh
 cd ~
 cd tensorrtx/yolov5
 ```
 
-- **Step 14.** Open **yololayer.h** with **vi text editor**
+- **步骤 14。** 使用 **vi 文本编辑器**打开 **yololayer.h**
 
 ```sh
 vi yololayer.h
 ```
 
-- **Step 15.** Change **CLASS_NUM** to the number of classes your model is trained. In our example, it is 2
+- **步骤 15.** 将 **CLASS_NUM** 更改为你的模型训练的类别数量。在我们的示例中，它是 2
 
 ```sh
 CLASS_NUM = 2
 ```
 
-- **Step 16.** Create a new **build** directory and navigate inside
+- **步骤 16.** 创建一个新的 **build** 目录并进入其中
 
 ```sh
 mkdir build 
 cd build
 ```
 
-- **Step 17.** Copy the previously generated **best.wts** file into this **build** directory
+- **步骤 17.** 将之前生成的 **best.wts** 文件复制到这个 **build** 目录中
 
 ```sh
 cp ~/yolov5/best.wts .
 ```
 
-- **Step 18.** Compile it
+- **步骤 18.** 编译它
 
 ```sh
 cmake ..
 make
 ```
 
-- **Step 19.** Serialize the model
+- **步骤 19.** 序列化模型
 
 ```sh
 sudo ./yolov5 -s [.wts] [.engine] [n/s/m/l/x/n6/s6/m6/l6/x6 or c/c6 gd gw]
@@ -561,13 +561,13 @@ sudo apt install -y python3-pip
 pip3 install --upgrade pip
 ```
 
-- **Step 3.** Clone the following repo
+- **步骤 3.** 克隆以下仓库
 
 ```sh
 git clone https://github.com/ultralytics/yolov5
 ```
 
-- **Step 4.** Open **requirements.txt**
+- **步骤 4.** 打开 **requirements.txt**
 
 ```sh
 cd yolov5
@@ -591,13 +591,13 @@ numpy==1.19.4
 sudo apt install -y libfreetype6-dev
 ```
 
-- **Step 7.** Install the necessary packages
+- **步骤 7.** 安装必要的软件包
 
 ```sh
 pip3 install -r requirements.txt
 ```
 
-- **Step 8.** Install torch
+- **步骤 8.** 安装 torch
 
 ```sh
 cd ~
@@ -606,7 +606,7 @@ wget https://nvidia.box.com/shared/static/fjtbno0vpo676a25cgvuqc1wty0fkkg6.whl -
 pip3 install torch-1.10.0-cp36-cp36m-linux_aarch64.whl
 ```
 
-- **Step 9.** Install torchvision
+- **步骤 9.** 安装 torchvision
 
 ```sh
 sudo apt install -y libjpeg-dev zlib1g-dev
@@ -615,33 +615,33 @@ cd torchvision
 sudo python3 setup.py install 
 ```
 
-- **Step 10.** Clone the following repo
+- **步骤 10。** 克隆以下仓库
 
 ```sh
 cd ~
 git clone https://github.com/marcoslucianops/DeepStream-Yolo
 ```
 
-- **Step 11.** Copy **gen_wts_yoloV5.py** from **DeepStream-Yolo/utils** into **yolov5** directory
+- **步骤 11.** 将 **gen_wts_yoloV5.py** 从 **DeepStream-Yolo/utils** 复制到 **yolov5** 目录
 
 ```sh
 cp DeepStream-Yolo/utils/gen_wts_yoloV5.py yolov5
 ```
 
-- **Step 12.** Inside the yolov5 repo, download **pt file** from YOLOv5 releases (example for YOLOv5s 6.1)
+- **步骤 12.** 在 yolov5 仓库内，从 YOLOv5 发布中下载 **pt 文件**（以 YOLOv5s 6.1 为例）
 
 ```sh
 cd yolov5
 wget https://github.com/ultralytics/yolov5/releases/download/v6.1/yolov5s.pt
 ```
 
-- **Step 13.** Generate the **cfg** and **wts** files
+- **步骤 13。** 生成 **cfg** 和 **wts** 文件
 
 ```sh
 python3 gen_wts_yoloV5.py -w yolov5s.pt
 ```
 
-**Note**: To change the inference size (defaut: 640)
+**注意**：要更改推理大小（默认值：640）
 
 ```sh
 -s SIZE
@@ -655,14 +655,14 @@ or
 -s 1280 1280
 ```
 
-- **Step 14.** Copy the generated **cfg** and **wts** files into the **DeepStream-Yolo** folder
+- **步骤 14.** 将生成的 **cfg** 和 **wts** 文件复制到 **DeepStream-Yolo** 文件夹中
 
 ```sh
 cp yolov5s.cfg ~/DeepStream-Yolo
 cp yolov5s.wts ~/DeepStream-Yolo
 ```
 
-- **Step 15.** Open the **DeepStream-Yolo** folder and compile the library
+- **步骤 15.** 打开 **DeepStream-Yolo** 文件夹并编译库
 
 ```sh
 cd ~/DeepStream-Yolo
@@ -672,7 +672,7 @@ CUDA_VER=11.4 make -C nvdsinfer_custom_impl_Yolo
 CUDA_VER=10.2 make -C nvdsinfer_custom_impl_Yolo
 ```
 
-- **Step 16.** Edit the **config_infer_primary_yoloV5.txt** file according to your model
+- **步骤 16.** 根据你的模型编辑 **config_infer_primary_yoloV5.txt** 文件
 
 ```sh
 [property]
@@ -682,7 +682,7 @@ model-file=yolov5s.wts
 ...
 ```
 
-- **Step 17.** Edit the **deepstream_app_config** file
+- **步骤 17。**编辑**deepstream_app_config**文件
 
 ```sh
 ...
@@ -691,7 +691,7 @@ model-file=yolov5s.wts
 config-file=config_infer_primary_yoloV5.txt
 ```
 
-- **Step 18.** Run the inference
+- **步骤 18.** 运行推理
 
 ```sh
 deepstream-app -c deepstream_app_config.txt
@@ -711,7 +711,7 @@ deepstream-app -c deepstream_app_config.txt
 sudo apt-get install libopencv-dev
 ```
 
-- **Step 2.** Compile/recompile the **nvdsinfer_custom_impl_Yolo** library with OpenCV support
+- **步骤 2.** 使用 OpenCV 支持编译/重新编译 **nvdsinfer_custom_impl_Yolo** 库
 
 ```sh
 cd ~/DeepStream-Yolo
@@ -729,7 +729,7 @@ CUDA_VER=10.2 OPENCV=1 make -C nvdsinfer_custom_impl_Yolo
 mkdir calibration
 ```
 
-- **Step 5.** Run the following to select 1000 random images from COCO dataset to run calibration
+- **步骤 5.** 运行以下命令从COCO数据集中选择1000张随机图像来进行校准
 
 ```sh
 for jpg in $(ls -1 val2017/*.jpg | sort -R | head -1000); do \
@@ -745,14 +745,14 @@ done
 realpath calibration/*jpg > calibration.txt
 ```
 
-- **Step 7.** Set environment variables
+- **步骤 7.** 设置环境变量
 
 ```sh
 export INT8_CALIB_IMG_PATH=calibration.txt
 export INT8_CALIB_BATCH_SIZE=1
 ```
 
-- **Step 8.** Update the **config_infer_primary_yoloV5.txt** file
+- **步骤 8.** 更新 **config_infer_primary_yoloV5.txt** 文件
 
 From
 
@@ -776,7 +776,7 @@ network-mode=1
 ...
 ```
 
-- **Step 9.** Run the inference
+- **步骤 9.** 运行推理
 
 ```sh
 deepstream-app -c deepstream_app_config.txt
@@ -989,11 +989,11 @@ deepstream-app -c deepstream_app_config.txt
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

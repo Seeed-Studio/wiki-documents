@@ -33,7 +33,7 @@ last_update:
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
    <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
@@ -75,9 +75,9 @@ echo "deb [signed-by=/usr/share/keyrings/grafana-archive-keyrings.gpg] https://a
 sudo apt update
 ```
 
-## Installing Grafana on reComputer R1000
+## reComputer R1000 への Grafana のインストール
 
-Install the latest version of Grafana by running the following command:
+以下のコマンドを実行して、Grafanaの最新バージョンをインストールしてください：
 
 ```bash
 sudo apt install grafana

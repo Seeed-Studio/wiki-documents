@@ -371,11 +371,11 @@ M.2 Key M está diseñado para SSDs NVMe de alta velocidad, proporcionando trans
 
 ### Los SSDs soportados son los siguientes
 
-- [128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
-- [256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
-- [512GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
-- [1TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
-- [2TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
+- [128GB NVMe M.2 PCle Gen3x4 2280 SSD Interno](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
+- [256GB NVMe M.2 PCle Gen3x4 2280 SSD Interno](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
+- [512GB NVMe M.2 PCle Gen3x4 2280 SSD Interno](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
+- [1TB NVMe M.2 PCle Gen3x4 2280 SSD Interno](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
+- [2TB NVMe M.2 PCle Gen3x4 2280 SSD Interno](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
 
 ### Conexión de Hardware
 

@@ -210,7 +210,7 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
 
 <details>
 
-<summary>If your ESP32 version is 3.0.x. Click here to preview the full program</summary>
+<summary>如果你的 ESP32 版本是 3.0.x。点击此处预览完整程序</summary>
 
 ```cpp
 /* 
@@ -732,7 +732,7 @@ static void microphone_inference_end(void)
 
 <details>
 
-<summary>If your ESP32 version is 3.0.x. Click here to preview the full program</summary>
+<summary>如果你的 ESP32 版本是 3.0.x。点击此处预览完整程序</summary>
 
 ```cpp
 /* Edge Impulse Arduino examples
@@ -1032,8 +1032,8 @@ static void microphone_inference_end(void)
 
 MJRoBot 还有很多关于 XIAO ESP32S3 的有趣项目。
 
-- [Exploring Machine Learning with the new XIAO ESP32S3](https://www.hackster.io/mjrobot/exploring-machine-learning-with-the-new-xiao-esp32s3-6463e5)
-- [TinyML Made Easy: Image Classification](https://www.hackster.io/mjrobot/tinyml-made-easy-image-classification-cb42ae)
+- [使用新的 XIAO ESP32S3 探索机器学习](https://www.hackster.io/mjrobot/exploring-machine-learning-with-the-new-xiao-esp32s3-6463e5)
+- [TinyML 变得简单：图像分类](https://www.hackster.io/mjrobot/tinyml-made-easy-image-classification-cb42ae)
 
 ## 资源
 

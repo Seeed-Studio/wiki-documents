@@ -70,13 +70,13 @@ sudo apt install python3-pip
 pip3 install jetson-examples
 ```
 
-**Step2.** To deploy ollama on Jetson device with a single command, we can run:
+**步骤2.** 要使用单个命令在 Jetson 设备上部署 ollama，我们可以运行：
 
 ```bash
 reComputer run ollama
 ```
 
-**Step3.** Download the Llama3 large model using Ollama:
+**步骤3.** 使用 Ollama 下载 Llama3 large model:
 
 ```bash
 ollama run llama3
@@ -199,7 +199,7 @@ And so, the village thrived, and Eliza’s adventures became the stuff of legend
 
 在这里，我们使用配置好的本地个人助手来查询我们需要的信息。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/JjPfXNqhO1g" title="Local AI Assistant : Deploy Ollama and AnytingLLM on Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

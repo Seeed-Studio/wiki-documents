@@ -57,9 +57,9 @@ last_update:
 pip install esptool
 ```
 
-**Step 2**: XIAO ESP32S3 をPCに接続します。
+**ステップ 2**: XIAO ESP32S3 をPCに接続します。
 
-**Step 3**: ダウンロードしたファイルに移動してターミナル/コマンドを開き、**esptool.py** コマンドを実行します。
+**ステップ 3**: ダウンロードしたファイルに移動してターミナル/コマンドを開き、**esptool.py** コマンドを実行します。
 
 - Linux/macOS の場合
 
