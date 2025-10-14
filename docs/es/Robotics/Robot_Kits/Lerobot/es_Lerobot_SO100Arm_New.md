@@ -50,7 +50,7 @@ Este wiki proporciona el tutorial de ensamblaje y depuración para el SO ARM10x 
 4. **Compatible con Nvidia**: Despliega este kit de brazo con reComputer Mini J4012 Orin NX 16 GB.
 5. **Aplicación Multi-Escenario**: Es aplicable a campos como educación, investigación científica, producción automatizada y robótica, ayudando a los usuarios a lograr operaciones de robot eficientes y precisas en varias tareas complejas.
 
-## Novedades
+## Novedades:
 
 - Optimización del cableado: Comparado con SO-ARM100, SO-ARM101 presenta un cableado mejorado que previene problemas de desconexión previamente vistos en la articulación 3. El nuevo diseño de cableado también ya no limita el rango de movimiento de las articulaciones.
 - Diferentes relaciones de engranajes para el brazo líder: El brazo líder ahora usa motores con relaciones de engranajes optimizadas, mejorando el rendimiento y eliminando la necesidad de cajas de engranajes externas.
@@ -589,6 +589,7 @@ El comando teleoperate automáticamente:
 
 ## Agregar cámaras
 
+
 <details>
 <summary> Si usas la Cámara de Profundidad Orbbec Gemini2 </summary>
 
@@ -601,10 +602,10 @@ El comando teleoperate automáticamente:
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
 </a></div>
 
+
 - 🚀 Paso 1: Instalar el Entorno Dependiente del SDK de Orbbec
 
 1. Clona el repositorio `pyorbbec`
-
    ```bash
    cd ~/
    git clone https://github.com/orbbec/pyorbbecsdk.git
@@ -613,24 +614,20 @@ El comando teleoperate automáticamente:
 2. Descarga e instala el **archivo .whl** correspondiente para el SDK  
    Ve a [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases),  
    selecciona e instala basándote en tu versión de Python. Por ejemplo:
-
    ```bash
    pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
    ```
 
 3. Instala las dependencias en el directorio `pyorbbec`
-
    ```bash
    cd ~/pyorbbecsdk
    pip install -r requirements.txt
    ```
 
    Fuerza la degradación de la versión de `numpy` a `1.26.0`
-
     ```bash
     pip install numpy==1.26.0
     ```
-
   Los mensajes de error rojos pueden ser ignorados.
 
 4. Clona el SDK de Orbbec en el directorio `~/lerobot/src/cameras`
@@ -640,13 +637,12 @@ El comando teleoperate automáticamente:
   git clone https://github.com/ZhuYaoHui1998/orbbec.git
   ```
 
-5. Modifica utils.py y **init**.py
-
+5. Modifica utils.py y __init__.py
 - Encuentra `utils.py` en el directorio `~/lerobot/src/lerobot/cameras`, y agrega el siguiente código en la línea 40:
 
 ```python
 elif cfg.type == "orbbec":
-            from .orbbec.camera_orbbec import OrbbecCamera
+            from .realsense.camera_orbbec import OrbbecCamera
 
             cameras[key] = OrbbecCamera(cfg)
 ```
@@ -667,9 +663,11 @@ from .orbbec.configuration_orbbec import OrbbecCameraConfig
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
 </div>
 
+
 - 🚀 Paso 2: Llamada de Función y Ejemplos
 
 En todos los siguientes ejemplos, reemplaza `so101_follower` con el modelo real del brazo robótico que estés usando (ej., `so100` / `so101`).
+
 
 Hemos agregado el hiperparámetro `focus_area`. Dado que los datos de profundidad que están demasiado lejos no tienen sentido para el brazo robótico (no puede alcanzar o agarrar objetos), los datos de profundidad menores o mayores que el `focus_area` se mostrarán en negro. El `focus_area` predeterminado es (20, 600).  
 Actualmente, la única resolución soportada es ancho: 640, alto: 880.
@@ -686,10 +684,13 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
+
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/orbbec_result.png" />
 </div>
+
+
 
 Para tareas posteriores como recolección de datos, entrenamiento y evaluación, el proceso es el mismo que para comandos RGB regulares. Solo necesitas reemplazar la parte relevante en el comando RGB regular con:
 
@@ -699,7 +700,10 @@ Para tareas posteriores como recolección de datos, entrenamiento y evaluación,
 
 También puedes agregar una cámara RGB monocular adicional después.
 
+
 </details>
+
+
 
 :::tip
 Los códigos SO100 y SO101 son compatibles. Los usuarios de SO100 pueden utilizar directamente los parámetros y código de SO101 para la operación.

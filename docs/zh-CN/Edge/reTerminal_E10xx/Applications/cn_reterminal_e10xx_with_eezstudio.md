@@ -1,7 +1,7 @@
 ---
 description: 使用 EEZStudio 并部署到 Arduino 用于应用目的
 title: reTerminal E 系列 ePaper 显示屏与 EEZ Studio 配合使用
-image: https://files.seeedstudio.com/wiki/EEZStudio/eez.webp
+image: https://files.seeedstudio.com/wiki/EEZ Studio/eez.webp
 slug: /cn/reterminal_e10xx_with_eezstudio
 sidebar_position: 6
 last_update:
@@ -12,7 +12,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# reTerminal E 系列 ePaper 显示屏与 EEZStudio 入门指南
+# reTerminal E 系列 ePaper 显示屏与 EEZ Studio 入门指南
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -507,7 +507,7 @@ void loop()
 
 - 状态更新：`lastKey0State = currentKey0State;` 这一行至关重要。它保存当前按键状态以供下次 `loop()` 迭代使用，使下次状态比较成为可能。
 
-- 电子墨水刷新：`e1002_display_should_refresh()` 和 `e1002_display_refresh()` 管理电子墨水屏幕刷新。与 LCD 屏幕不同，电子墨水无法实时刷新。它通常需要在特定间隔进行选择性或全屏刷新以节省电力并延长使用寿命。此代码实现了按需刷新机制。
+- 电子墨水刷新：`e1002_display_should_refresh()` 和 `e1002_display_refresh()` 管理电子墨水屏幕刷新。与 LCD 屏幕不同，电子墨水无法实时刷新。它通常需要在特定间隔进行选择性或全屏刷新以节省电力并延长寿命。此代码实现了按需刷新机制。
 
 - `delay(10):`这是一个简单的软件防抖措施，防止程序将物理按键抖动误解为多次按压。
 

@@ -589,6 +589,7 @@ lerobot-teleoperate \
 
 ## カメラの追加
 
+
 <details>
 <summary> Orbbec Gemini2 Depth Cameraを使用する場合 </summary>
 
@@ -601,10 +602,10 @@ lerobot-teleoperate \
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
 </a></div>
 
+
 - 🚀 ステップ1：Orbbec SDK依存環境のインストール
 
 1. `pyorbbec`リポジトリをクローンします
-
    ```bash
    cd ~/
    git clone https://github.com/orbbec/pyorbbecsdk.git
@@ -613,24 +614,20 @@ lerobot-teleoperate \
 2. 対応する**.whlファイル**をダウンロードしてSDKをインストールします  
    [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases)にアクセスし、  
    Pythonバージョンに基づいて選択してインストールしてください。例：
-
    ```bash
    pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
    ```
 
 3. `pyorbbec`ディレクトリで依存関係をインストールします
-
    ```bash
    cd ~/pyorbbecsdk
    pip install -r requirements.txt
    ```
 
    `numpy`バージョンを`1.26.0`に強制ダウングレードします
-
     ```bash
     pip install numpy==1.26.0
     ```
-
   赤いエラーメッセージは無視できます。
 
 4. Orbbec SDKを`~/lerobot/src/cameras`ディレクトリにクローンします
@@ -641,12 +638,11 @@ lerobot-teleoperate \
   ```
 
 5. utils.pyと__init__.pyを修正します
-
 - `~/lerobot/src/lerobot/cameras`ディレクトリの`utils.py`を見つけ、40行目に以下のコードを追加してください：
 
 ```python
 elif cfg.type == "orbbec":
-            from .orbbec.camera_orbbec import OrbbecCamera
+            from .realsense.camera_orbbec import OrbbecCamera
 
             cameras[key] = OrbbecCamera(cfg)
 ```
@@ -667,9 +663,11 @@ from .orbbec.configuration_orbbec import OrbbecCameraConfig
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
 </div>
 
+
 - 🚀 ステップ2：関数呼び出しと例
 
 以下のすべての例では、`so101_follower`を実際に使用しているロボットアームのモデル（例：`so100` / `so101`）に置き換えてください。
+
 
 `focus_area`ハイパーパラメータを追加しました。遠すぎる深度データはロボットアームにとって意味がない（到達や把握ができない物体）ため、`focus_area`未満または超過の深度データは黒で表示されます。デフォルトの`focus_area`は(20, 600)です。  
 現在サポートされている解像度は幅：640、高さ：880のみです。
@@ -686,10 +684,13 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
+
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/orbbec_result.png" />
 </div>
+
+
 
 データ収集、トレーニング、評価などの後続タスクについては、通常のRGBコマンドと同じプロセスです。通常のRGBコマンドの関連部分を以下に置き換えるだけです：
 
@@ -699,7 +700,10 @@ lerobot-teleoperate \
 
 その後、追加の単眼RGBカメラを追加することもできます。
 
+
 </details>
+
+
 
 :::tip
 SO100とSO101のコードは互換性があります。SO100のユーザーは、SO101のパラメータとコードを直接利用して操作できます。

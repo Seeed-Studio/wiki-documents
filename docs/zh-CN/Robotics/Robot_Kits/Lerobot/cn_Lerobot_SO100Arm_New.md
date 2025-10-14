@@ -654,7 +654,7 @@ lerobot-teleoperate \
 
 ```python
 elif cfg.type == "orbbec":
-            from .orbbec.camera_orbbec import OrbbecCamera
+            from .realsense.camera_orbbec import OrbbecCamera
 
             cameras[key] = OrbbecCamera(cfg)
 ```
