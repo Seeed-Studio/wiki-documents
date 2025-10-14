@@ -11,6 +11,8 @@ slug: /lerobot_starai_arm
 last_update:
   date: 10/13/2025
   author: LiShanghang
+translation:
+  skip: [ zh-CN ]
 ---
 
 # Getting started with StarAI Robot Arm with LeRobot
