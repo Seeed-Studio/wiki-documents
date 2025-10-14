@@ -1,7 +1,7 @@
 ---
 description: Usando EEZStudio y desplegando en Arduino para propósitos de aplicación
 title: Pantalla ePaper de reTerminal E Series funcionando con EEZ Studio
-image: https://files.seeedstudio.com/wiki/EEZ Studio/eez.webp
+image: https://files.seeedstudio.com/wiki/EEZStudio/eez.webp
 slug: /es/reterminal_e10xx_with_eezstudio
 sidebar_position: 6
 last_update:
