@@ -1,7 +1,7 @@
 ---
 description: Using EEZStudio and deploying to Arduino for application purposes
 title: reTerminal E Series ePaper Display Work with EEZ Studio
-image: https://files.seeedstudio.com/wiki/EEZ Studio/eez.webp
+image: https://files.seeedstudio.com/wiki/EEZStudio/eez.webp
 slug: /reterminal_e10xx_with_eezstudio
 sidebar_position: 6
 last_update:

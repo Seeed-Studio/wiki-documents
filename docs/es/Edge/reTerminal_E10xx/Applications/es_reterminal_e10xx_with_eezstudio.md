@@ -12,7 +12,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Comenzando con la Pantalla ePaper de reTerminal E Series y EEZStudio
+# Comenzando con la Pantalla ePaper de reTerminal E Series y EEZ Studio
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -384,7 +384,7 @@ La pantalla ePaper a todo color soporta colores rojo, negro y blanco, permitiend
 </TabItem>
 </Tabs>
 
-## Desplegando el Proyecto de EEZ Studio a Arduino
+## Desplegando el Proyecto EEZ Studio a Arduino
 
 Estos dos archivos de controlador subyacentes deben agregarse a nuestro directorio del proyecto.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/00.png" style={{width:800, height:'auto'}}/></div>
