@@ -54,8 +54,8 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
     <div className="row">
       {/* 添加 Head 组件用于动态 meta 标签 */}
       <Head>
-        {sku && <meta name="sku" content={sku} />}
-        {docType && <meta name="type" content={docType} />}
+        {sku && <meta name="docsearch:sku_tag" content={sku} />}
+        {docType && <meta name="docsearch:doc_type_tag" content={docType} />}
       </Head>
       
       {/* 添加数据属性到静态 HTML 元素 */}

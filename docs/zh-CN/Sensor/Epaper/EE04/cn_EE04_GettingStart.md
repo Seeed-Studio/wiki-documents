@@ -3,7 +3,7 @@ description: EE04 入门指南
 title: EE04 入门指南
 keywords:
   - epaper
-image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/10.webp
+image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
 sidebar_position: 1
 slug: /cn/epaper_ee04
 last_update:
@@ -15,12 +15,12 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# XIAO ePaper Display EE04 入门指南
+# XIAO ePaper 显示屏 EE04 入门指南
 
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>XIAO ePaper Display Board EE04</th>
+        <th>XIAO ePaper 显示板 EE04</th>
     </tr>
     <tr>
     <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg"/></div>
@@ -42,7 +42,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 - **由 XIAO ESP32-S3 Plus 驱动：** 连接兼容的电子纸显示屏后即可立即工作。
 - **多功能显示支持：** 兼容多种电子纸屏幕，支持 24 针和 50 针接口，通过跳线帽轻松切换。
 - **带开关的电池连接器：** 提供简单的电池连接并集成开关，实现高效的电源管理和节能。
-- **用户友好的按钮：** 包括 1 个复位按钮和 3 个用户可编程按钮，为项目加速和可定制功能提供灵活性。
+- **用户友好的按钮：** 包括 1 个复位按钮和 3 个用户可编程按钮，为项目加速和自定义功能提供灵活性。
 
 ### 规格参数
 
@@ -87,9 +87,9 @@ import Steppers from '@site/src/components/utils/Stepper';
     <thead>
         <tr>
             <th>产品</th>
-            <th>ePaper Display Board EE04</th>
-<th><a href="https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/">ePaper Breakout</a></th>
-<th><a href="https://wiki.seeedstudio.com/cn/xiao_eink_expansion_board_v2/">ePaper Driver Board</a></th>
+            <th>电子纸显示板 EE04</th>
+<th><a href="https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/">电子纸扩展板</a></th>
+<th><a href="https://wiki.seeedstudio.com/cn/xiao_eink_expansion_board_v2/">电子纸驱动板</a></th>
         </tr>
     </thead>
     <tbody>
@@ -100,7 +100,7 @@ import Steppers from '@site/src/components/utils/Stepper';
             <td>XIAO 系列</td>
         </tr>
         <tr>
-            <th>兼容的电子纸显示屏</th>
+            <th>兼容电子纸显示屏</th>
             <td>24 针电子纸<br />50 针电子纸</td>
             <td>24 针电子纸</td>
             <td>24 针电子纸</td>
@@ -146,7 +146,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 - **智能恒温器显示**：显示温度和湿度水平，以及智能恒温器的控制设置。
 - **数字相框**：创建支持 WiFi 的数字相框，可以显示来自智能家居网络的图像。
 
-## 硬件概述
+## 硬件概览
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
 
@@ -161,7 +161,6 @@ import Steppers from '@site/src/components/utils/Stepper';
 - [2.9 英寸电子纸 - 四色 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
 - [4.2 英寸电子纸 - 单色 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
 - [4.26 英寸电子纸 - 单色 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [5.65 英寸电子纸 - 七色 600x480](https://www.seeedstudio.com/5-65-Seven-Color-ePaper-Display-with-600x480-Pixels-p-5786.html)
 - [5.83 英寸电子纸 - 单色 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
 - [7.5 英寸电子纸 - 单色 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 - [7.5 英寸电子纸 - 三色 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
@@ -169,11 +168,11 @@ import Steppers from '@site/src/components/utils/Stepper';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/37.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-使用 XIAO ePaper Display Board 时，请确保根据电子纸显示屏类型设置跳线：
+使用 XIAO ePaper 显示板时，请确保根据电子纸显示屏类型设置跳线：
 
 - 对于 24 针电子纸显示屏 → 将跳线设置为 24 针
 
-⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。在通电前请务必仔细检查跳线位置。
+⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。上电前请务必仔细检查跳线位置。
 
 :::
 
@@ -183,21 +182,21 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
 :::tip
-使用 XIAO ePaper Display Board 时，请确保根据电子纸显示屏类型设置跳线：
+使用 XIAO ePaper 显示板时，请确保根据电子纸显示屏类型设置跳线：
 - 对于 50 针电子纸显示屏 → 将跳线设置为 50 针
 
-⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。在通电前请务必仔细检查跳线位置。
+⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。上电前请务必仔细检查跳线位置。
 
 :::
 
-## 软件概述
+## 软件概览
 
 ### 安装 Seeed Arduino GFX 库
 
 **步骤 3.** 安装 Seeed Arduino LCD 库
 
 :::tip
-此库与 TFT 库具有相同功能但不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。
+此库与 TFT 库具有相同功能，但不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。
 :::
 
 从 GitHub 下载并安装 Seeed GFX 库。
@@ -237,7 +236,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
-## 入门指南
+## 开始使用
 
 这里，我们以 5.83 英寸显示屏为例。所有 24 针屏幕的步骤都相同；唯一的区别是在驱动程序中选择适当的屏幕尺寸。
 
@@ -250,7 +249,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EE04
 ```
 
-之后，转到 **工具** -> **开发板** -> **XIAO ESP32S3** 和 **工具** -> **端口** -> **选择您的开发板连接的端口**。然后点击 **上传** 来上传代码。
+之后，转到 **Tools** -> **Board** -> **XIAO ESP32S3** 和 **Tools** -> **Port** -> **选择您的开发板连接的端口**。然后点击 **Upload** 上传代码。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/32.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -260,7 +259,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 ⚠️ 注意：电子纸电缆方向
 将电子纸显示屏连接到 XIAO 电子纸显示板时，请确保 FPC 电缆插入方向正确。
 
-⚠️ 不要反向连接！倒置插入电缆可能导致电子纸无法显示，甚至损坏屏幕/开发板。
+⚠️ 不要反向连接！倒插电缆可能导致电子纸无法显示，甚至损坏屏幕/开发板。
 下图显示了正确的连接方式：
 :::
 

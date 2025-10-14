@@ -1,6 +1,6 @@
 ---
 description: Grove GestureセンサーPAJ7660の使い方。
-title: Grove Smart IR Gesture Sensor (PAJ7660)
+title: Grove スマート IR ジェスチャーセンサー (PAJ7660)
 keywords:
 - ジェスチャー
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -24,7 +24,7 @@ last_update:
 
 ## 概要
 
-Grove Smart IR Gesture Sensorは、赤外線カメラセンサーを搭載し、AIアルゴリズムを適用したインテリジェントなジェスチャー認識モジュールです。15種類以上のジェスチャーを広範囲で検出でき、IICおよびSPI通信の両方をサポートします。このモジュールは、Grove、Type-C、およびSeeed Studio XIAOとの直接接続も可能です。
+Grove スマート IR ジェスチャーセンサーは、赤外線カメラセンサーを搭載し、AIアルゴリズムを適用したインテリジェントなジェスチャー認識モジュールです。15種類以上のジェスチャーを広範囲で検出でき、IICおよびSPI通信の両方をサポートします。このモジュールは、Grove、Type-C、およびSeeed Studio XIAOとの直接接続も可能です。
 
 ### 特徴
 
@@ -148,7 +148,7 @@ Grove Smart IR Gesture Sensorは、赤外線カメラセンサーを搭載し、
 
 ### ハードウェアタイプ
 
-Grove Smart IR Gesture Sensorは、IIC、SPI、USBの幅広い通信プロトコルをサポートしています。異なるモードは、背面の4ポジションDIPスイッチで直接選択できます。
+Grove スマート IR ジェスチャーセンサーは、IIC、SPI、USBの幅広い通信プロトコルをサポートしています。異なるモードは、背面の4ポジションDIPスイッチで直接選択できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/back.png" style={{width:400, height:'auto'}}/></div>
 

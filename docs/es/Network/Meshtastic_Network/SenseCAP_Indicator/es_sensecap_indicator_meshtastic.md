@@ -35,7 +35,7 @@ SenseCAP Indicator es un dispositivo de pantalla táctil de 4 pulgadas diseñado
 
 - **Soporta Meshtastic:** Pre-cargado con firmware de Meshtastic, está listo para funcionar una vez encendido. También puede actualizar el firmware usando Meshtastic Flasher.<br/>
 - **MCUs Duales y GPIOs Abundantes:** Equipado con potentes MCUs duales ESP32S3 y RP2040 y más de 400 GPIOs compatibles con Grove para opciones de expansión flexibles.<br/>
-- **Hub LoRa® Local para Conectividad IoT:** Integrado con el chip LoRa® Semtech SX1262, el dispositivo puede convertirse en un Gateway LoRaWAN® de Canal Único a través de tutorial. Alternativamente, conecte dispositivos LoRa® a plataformas IoT populares como Matter a través de Wi-Fi.<br/>
+- **Hub LoRa® Local para Conectividad IoT:** Integrado con el chip LoRa® Semtech SX1262, el dispositivo puede convertirse en un Gateway LoRaWAN® de Canal Único a través del tutorial. Alternativamente, conecte dispositivos LoRa® a plataformas IoT populares como Matter a través de Wi-Fi.<br/>
 - **Plataforma Completamente de Código Abierto:** Aproveche el extenso ecosistema de código abierto de ESP32 y Raspberry Pi para infinitas posibilidades de aplicación.<br/>
 - **Adecuado para Múltiples Escenarios de Aplicación:** Puede usarse como un nodo de escritorio Meshtastic o un nodo de automóvil, así como un Gateway LoRaWAN® de Canal Único.
 
@@ -63,6 +63,10 @@ SenseCAP Indicator es un dispositivo de pantalla táctil de 4 pulgadas diseñado
 
 ### Flashear Firmware de Aplicación
 
+:::caution note
+Antes de flashear el firmware, asegúrese de que el indicator que compró sea la versión para Meshtastic. No flashee el firmware de Meshtastic en un indicator que no sea compatible con Meshtastic. Esto puede causar daño al hardware.
+:::
+
 **Instrucciones en Video**
 
 <div class="video-container">
@@ -71,7 +75,7 @@ SenseCAP Indicator es un dispositivo de pantalla táctil de 4 pulgadas diseñado
 
 Visite [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
-Seleccione el dispositivo objetivo a `Seeed SenseCAP Indicator` y elija el firmware más reciente, luego haga clic en `Flash`.
+Seleccione el dispositivo objetivo como `Seeed SenseCAP Indicator` y elija el firmware más reciente, luego haga clic en `Flash`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-flash.png" alt="pir" width={800} height="auto" /></p>
 
@@ -91,7 +95,7 @@ Por favor seleccione el `USB Serial`, no el INDICATOR RP2040.
 
 ### Flashear Firmware GPS(opcional)
 
-El SenseCAP Indicator no tiene GPS integrado, para obtener la ubicación GPS, se requiere un [Módulo GPS Grove](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html).<br/>
+El SenseCAP Indicator no tiene GPS integrado, para obtener la ubicación GPS, se requiere un [Grove GPS Module](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html).<br/>
 Conecte el Módulo GPS al puerto Grove y luego flashee el firmware GPS.
 
 - **[Descarga de Firmware GPS](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/meshtastic_gps.ino.uf2)**
@@ -113,7 +117,7 @@ Descargue la App `Meshtastic`:
 - [App IOS](https://meshtastic.org/docs/category/apple-apps/)
 - [App Android](https://meshtastic.org/docs/category/android-app/)
 
-### Conectar vía App
+### Conectar a través de la App
 
 - Encienda el dispositivo, la página del dispositivo mostrará la dirección mac del dispositivo actual.
 
@@ -206,7 +210,7 @@ El uso del teclado de la versión 2.5.xx(El firmware de fábrica es v2.5.11.) y 
 
 #### Parte RP2040
 
-RP2040 aún no ha sido desarrollado, por lo que las funciones de `zumbador`/`tarjeta SD`/`mapa` no están disponibles aún. Estamos trabajando con Meshtastic para optimizarlo.
+RP2040 aún no ha sido desarrollado, por lo que las funciones de `buzzer`/`SD card`/`map` aún no están disponibles. Estamos trabajando con Meshtastic para optimizarlo.
 
 #### Selección de Rol
 
