@@ -1,6 +1,6 @@
 ---
 description: PlatfromIO with EE04
-title: XIAO ePaper Display Board EE04 with PlatfromIO
+title: XIAO 電子ペーパーディスプレイボード EE04 と PlatformIO
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/10.webp
