@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 ## Introducción
 
-Esta guía te llevará a través del diseño de una interfaz de usuario profesional para la serie reTerminal E utilizando la herramienta de diseño visual (**EEZ Studio**)[https://www.envox.eu/studio/studio-introduction/]. Aprenderás cómo crear elementos de UI, generar el código necesario y finalmente desplegarlo en el dispositivo usando el IDE de Arduino. Este proceso te permite construir interfaces personalizadas con excelente visibilidad y consumo de energía ultra bajo, ideal para aplicaciones HMI.
+Esta guía te llevará a través del diseño de una interfaz de usuario profesional para la serie reTerminal E utilizando la herramienta de diseño visual [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/). Aprenderás cómo crear elementos de UI, generar el código necesario y finalmente desplegarlo en el dispositivo usando el IDE de Arduino. Este proceso te permite construir interfaces personalizadas con excelente visibilidad y consumo de energía ultra bajo, ideal para aplicaciones HMI.
 
 ### Materiales Requeridos
 
@@ -384,7 +384,7 @@ La pantalla ePaper a todo color soporta colores rojo, negro y blanco, permitiend
 </TabItem>
 </Tabs>
 
-## Desplegando el Proyecto EEZ Studio a Arduino
+## Desplegando el Proyecto de EEZ Studio a Arduino
 
 Estos dos archivos de controlador subyacentes deben agregarse a nuestro directorio del proyecto.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/00.png" style={{width:800, height:'auto'}}/></div>
