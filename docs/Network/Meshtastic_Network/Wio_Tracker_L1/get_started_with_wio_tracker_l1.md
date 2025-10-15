@@ -152,19 +152,19 @@ You can add sensor to the device via the grove interface. The following sensors 
   </tr>
   <tr>
     <td>Temperature</td>
-    <td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html)、PCT2075</td>
+    <td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html) 、PCT2075</td>
   </tr>
   <tr>
-    <td>Temperature &amp; Humidity</td>
+    <td>Temperature & Humidity</td>
     <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
   </tr>
   <tr>
-    <td>Temperature &amp; Humidity &amp; Pressure</td>
+    <td>Temperature & Humidity & Pressure</td>
     <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
   </tr>
   <tr>
     <td rowspan="2">Other</td>
-    <td>Heart Rate &amp; SpO₂</td>
+    <td>Heart Rate & SpO₂</td>
     <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
   </tr>
   <tr>
