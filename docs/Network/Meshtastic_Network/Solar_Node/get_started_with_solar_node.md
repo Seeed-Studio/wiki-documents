@@ -139,6 +139,7 @@ Since the device will be used outdoors for extended periods, please avoid instal
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/part-list.png" alt="pir" width={800} height="auto" /></p>
 
 ### Step-by-step Installation Guidance
+
 - Step1: Connect part 1 to the bottom of the device using washers and screws.
 
 <div class="table-center">
@@ -199,8 +200,38 @@ Since the device will be used outdoors for extended periods, please avoid instal
 
 - The following sensors have been verified to be compatible with the Grove interface on the device.
 
-<table><tr><th colspan="2">Sensor type</th><th colspan="1">Sensor Model</th></tr><tr><td rowspan="4">Environmental Sensor</td><td>Pressure</td><td>BMP085</td></tr><tr><td>Temperature</td><td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html)、PCT2075</td></tr><tr><td>Temperature & Humidity</td><td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td></tr><tr><td>Temperature & Humidity & Pressure</td><td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td></tr><tr><td rowspan="2">Other</td><td>Heart Rate & SpO₂</td><td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td></tr><tr><td>I2C Keyboard</td><td>CardKB</td></tr></table>
-
+<table>
+  <tr>
+    <th colspan="2">Sensor type</th>
+    <th colspan="1">Sensor Model</th>
+  </tr>
+  <tr>
+    <td rowspan="4">Environmental Sensor</td>
+    <td>Pressure</td>
+    <td>BMP085</td>
+  </tr>
+  <tr>
+    <td>Temperature</td>
+    <td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html)、PCT2075</td>
+  </tr>
+  <tr>
+    <td>Temperature &amp; Humidity</td>
+    <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
+  </tr>
+  <tr>
+    <td>Temperature &amp; Humidity &amp; Pressure</td>
+    <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Other</td>
+    <td>Heart Rate &amp; SpO₂</td>
+    <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
+  </tr>
+  <tr>
+    <td>I2C Keyboard</td>
+    <td>CardKB</td>
+  </tr>
+</table>
 
 ### Upgrate atenna (Optional)
 
@@ -244,9 +275,9 @@ The figures below are for reference only; actual consumption may vary based on r
 
 ### Signal Quality
 
-  - **SNR** reflects the quality of the communication link. Normal device usually operates above -7 dB. Device with a SNR lower than -10 dB indicates poor performance.
+- **SNR** reflects the quality of the communication link. Normal device usually operates above -7 dB. Device with a SNR lower than -10 dB indicates poor performance.
 
-  - **RSSI** is determined jointly by the device and its surrounding environment. Normal device usually operates above -110 dBm. Device with an RSSI lower than -115 dBm is considered to have poor performance. 
+- **RSSI** is determined jointly by the device and its surrounding environment. Normal device usually operates above -110 dBm. Device with an RSSI lower than -115 dBm is considered to have poor performance.
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
 
