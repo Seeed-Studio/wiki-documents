@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 ## 介绍
 
-本指南将引导您使用可视化设计工具 (**EEZ Studio**)[https://www.envox.eu/studio/studio-introduction/] 为 reTerminal E 系列设计专业的用户界面。您将学习如何创建 UI 元素、生成必要的代码，并最终使用 Arduino IDE 将其部署到设备上。这个过程允许您构建具有出色可见性和超低功耗的自定义界面，非常适合 HMI 应用。
+本指南将引导您使用可视化设计工具 [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/) 为 reTerminal E 系列设计专业的用户界面。您将学习如何创建 UI 元素、生成必要的代码，并最终使用 Arduino IDE 将其部署到设备上。这个过程允许您构建具有出色可见性和超低功耗的自定义界面，非常适合 HMI 应用。
 
 ### 所需材料
 
@@ -186,7 +186,7 @@ UI（用户界面）设计在嵌入式产品开发中至关重要，因为它直
 - Themes: 定义整体界面美学，支持快速切换如明/暗模式。
 - Groups: 将多个小部件组织在一起，便于统一管理和布局。
 
-在本教程中，我将指导您设计网站或应用程序主页的 UI。一旦您掌握了核心技术，您就能够轻松应用它们来创建任何您想要的界面。
+在本教程中，我将指导您设计网站或应用程序主页的 UI。一旦您掌握了核心技术，您就能够轻松地应用它们来创建任何您想要的界面。
 
 此页面由五个组件组成：
 
@@ -316,7 +316,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ## ePaper 显示屏编程
 
-**reTerminal E1001 配备 7.5 英寸黑白 ePaper 显示屏**，而 **reTerminal E1002 配备 7.3 英寸全彩 ePaper 显示屏**。两种显示屏都在各种光照条件下提供出色的可视性，功耗极低，非常适合需要始终开启显示且功耗最小的工业应用。
+**reTerminal E1001 配备 7.5 英寸黑白 ePaper 显示屏**，而 **reTerminal E1002 配备 7.3 英寸全彩 ePaper 显示屏**。两种显示屏都在各种光照条件下提供出色的可视性，功耗极低，非常适合需要始终显示且功耗最小的工业应用。
 
 ### 使用 Seeed_GFX 库
 
@@ -337,7 +337,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 :::
 
 <Tabs>
-<TabItem value="Programming reTerminal E1001" label="Programming reTerminal E1001" default>
+<TabItem value="Programming reTerminal E1001" label="编程 reTerminal E1001" default>
 #### 编程 reTerminal E1001（7.5 英寸黑白 ePaper）
 
 让我们探索一个简单的示例，演示在黑白 ePaper 显示屏上的基本绘图操作。
@@ -359,11 +359,11 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 ```
 
 </TabItem>
-<TabItem value="Programming reTerminal E1002" label="Programming reTerminal E1002">
+<TabItem value="Programming reTerminal E1002" label="编程 reTerminal E1002">
 
 #### 编程 reTerminal E1002（7.3 英寸全彩 ePaper）
 
-全彩 ePaper 显示屏支持红色、黑色和白色，允许创建更丰富的视觉界面。
+全彩 ePaper 显示屏支持红色、黑色和白色，允许更丰富的视觉界面。
 
 **步骤 1.** 从 Seeed_GFX 库打开彩色示例代码：**File > Examples > Seeed_GFX > ePaper > Colorful > HelloWorld**
 
