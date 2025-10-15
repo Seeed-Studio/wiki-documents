@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 ## Introduction
 
-This guide will walk you through designing a professional user interface for the reTerminal E Series using the visual design tool (**EEZ Studio**)[https://www.envox.eu/studio/studio-introduction/]. You will learn how to create UI elements, generate the necessary code, and finally deploy it to the device using the Arduino IDE. This process allows you to build custom interfaces with excellent visibility and ultra-low power consumption, ideal for HMI applications.
+This guide will walk you through designing a professional user interface for the reTerminal E Series using the visual design tool [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/). You will learn how to create UI elements, generate the necessary code, and finally deploy it to the device using the Arduino IDE. This process allows you to build custom interfaces with excellent visibility and ultra-low power consumption, ideal for HMI applications.
 
 ### Materials Required
 
