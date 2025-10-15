@@ -1,6 +1,6 @@
 ---
-description: Grove-Temperature_Sensor
-title: Grove-Temperature_Sensor
+description: Grove - 温度センサー
+title: Grove - 温度センサー
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -13,7 +13,7 @@ last_update:
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor/img/Temperature1.jpg" /></div>
 
-Grove - Temperature Sensor は、[サーミスタ](http://www.legacydistribution.co.uk/downloads/NTC-thermistors/TTC03.pdf)を使用して周囲温度を検出します。サーミスタの抵抗は周囲温度が下がると増加します。この特性を利用して周囲温度を計算します。このセンサーの検出可能範囲は -40 ～ 125ºC で、精度は ±1.5ºC です。
+Grove - 温度センサーは、[サーミスタ](http://www.legacydistribution.co.uk/downloads/NTC-thermistors/TTC03.pdf)を使用して周囲温度を検出します。サーミスタの抵抗は周囲温度が下がると増加します。この特性を利用して周囲温度を計算します。このセンサーの検出可能範囲は -40 ～ 125ºC で、精度は ±1.5ºC です。
 
 <p style={{textAlign: 'center' }}><a href="https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
