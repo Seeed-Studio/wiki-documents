@@ -1,6 +1,6 @@
 ---
 description: Comience con SenseCAP Solar Node para Meshtastic y LoRa
-title:  Comience con SenseCAP Solar Node
+title: Comience con SenseCAP Solar Node
 keywords:
 - Meshtastic
 - Solar
@@ -36,7 +36,7 @@ Arrastre el archivo UF2 a la unidad DFU. El firmware debería flashearse despué
 ### Instalar Batería y Módulo GPS (Opcional)
 
 :::tip
-Batería Recomendada: Batería de Iones de Litio 18650 3.6V (Botón Superior).
+Batería Recomendada: Batería de Iones de Litio 18650 3.6V (Polo Positivo Plano).
 :::
 
 La versión P1-Pro tiene batería y módulo GPS integrados, para la versión P1, el usuario necesita instalar la batería y el módulo GPS manualmente si es necesario.
@@ -56,7 +56,7 @@ La versión P1-Pro tiene batería y módulo GPS integrados, para la versión P1,
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-Asegúrese de que la carcasa esté correctamente montada y los tornillos estén firmemente apretados para mantener la integridad impermeable del dispositivo.
+Asegúrese de que la carcasa esté montada correctamente y los tornillos estén firmemente apretados para mantener la integridad impermeable del dispositivo.
 :::
 
 ### Encender el dispositivo
@@ -123,7 +123,7 @@ Para comenzar a comunicarse a través de la malla, debe establecer su región. E
 Consulte [Región LoRa por País](https://meshtastic.org/docs/configuration/region-by-country/) para una lista más completa.
 
 :::info
-**EU_868** debe adherirse a una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto en una base móvil de 1 hora. Su dispositivo dejará de transmitir si lo alcanza, hasta que se permita nuevamente.
+**EU_868** debe adherirse a una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto en una base móvil de 1 hora. Su dispositivo dejará de transmitir si lo alcanza, hasta que se le permita nuevamente.
 :::
 
 Ahora que ha establecido la región LoRa en su dispositivo, puede continuar configurando cualquier [Configuración LoRa](https://meshtastic.org/docs/configuration/radio/lora/) para satisfacer sus necesidades.
@@ -131,7 +131,7 @@ Ahora que ha establecido la región LoRa en su dispositivo, puede continuar conf
 ## Instalación
 
 :::danger note
-Dado que el dispositivo se utilizará al aire libre durante períodos prolongados, evite instalar el panel en posición horizontal. Se recomienda una instalación inclinada o diagonal para prevenir la acumulación de agua. Además, asegúrese de que todos los tornillos estén bien apretados y la cubierta esté correctamente instalada. Para una protección impermeable mejorada, también puede considerar aplicar medidas de sellado adicionales.
+Dado que el dispositivo se utilizará al aire libre durante períodos prolongados, evite instalar el panel en posición horizontal. Se recomienda una instalación inclinada o diagonal para prevenir la acumulación de agua. Además, asegúrese de que todos los tornillos estén firmemente apretados y la cubierta esté instalada correctamente. Para una protección impermeable mejorada, también puede considerar aplicar medidas de sellado adicionales.
 :::
 
 - **Lista de Partes**
@@ -139,6 +139,7 @@ Dado que el dispositivo se utilizará al aire libre durante períodos prolongado
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/part-list.png" alt="pir" width={800} height="auto" /></p>
 
 ### Guía de Instalación Paso a Paso
+
 - Paso1: Conecte la parte 1 a la parte inferior del dispositivo usando arandelas y tornillos.
 
 <div class="table-center">
@@ -197,6 +198,41 @@ Dado que el dispositivo se utilizará al aire libre durante períodos prolongado
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+- Los siguientes sensores han sido verificados como compatibles con la interfaz Grove en el dispositivo.
+
+<table>
+  <tr>
+    <th colspan="2">Tipo de sensor</th>
+    <th colspan="1">Modelo de Sensor</th>
+  </tr>
+  <tr>
+    <td rowspan="4">Sensor Ambiental</td>
+    <td>Presión</td>
+    <td>BMP085</td>
+  </tr>
+  <tr>
+    <td>Temperatura</td>
+    <td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html)、PCT2075</td>
+  </tr>
+  <tr>
+    <td>Temperatura y Humedad</td>
+    <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
+  </tr>
+  <tr>
+    <td>Temperatura, Humedad y Presión</td>
+    <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Otros</td>
+    <td>Frecuencia Cardíaca y SpO₂</td>
+    <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
+  </tr>
+  <tr>
+    <td>Teclado I2C</td>
+    <td>CardKB</td>
+  </tr>
+</table>
+
 ### Actualizar antena (Opcional)
 
 - Puede reemplazar la antena con una de fibra de vidrio viendo este video.
@@ -205,7 +241,7 @@ Dado que el dispositivo se utilizará al aire libre durante períodos prolongado
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## FAQ
+## Preguntas Frecuentes
 
 ### Consumo de Energía
 
@@ -216,13 +252,13 @@ Las cifras a continuación son solo de referencia; el consumo real puede variar 
 
 |Descripción|Consumo|
 |---|---|
-|Corriente de trabajo GPS_LED|1.02 mA|
+|Corriente de trabajo del GPS_LED|1.02 mA|
 |Encendido pero no activado|56.195 μA|
 |Encendido y activado|611 μA|
 
 **Ejemplo:**
 
-|Capacidad de batería |Vida útil de la batería|
+|Capacidad de la batería |Vida útil de la batería|
 |---|---|
 |3350|136.8|
 |12000|490.2|
@@ -234,7 +270,15 @@ Las cifras a continuación son solo de referencia; el consumo real puede variar 
 |Corriente Estática|10.65 mA|
 |Corriente de Transmisión EU868|157.74 mA|
 |Corriente de Transmisión US915|205.22 mA|
-|Corriente de Operación GPS|50 mA|
-|Corriente de Operación GPS_LED|1.02 mA|
+|Corriente de Operación del GPS|50 mA|
+|Corriente de Operación del GPS_LED|1.02 mA|
 
-Más detalles consulte [Tabla de Cálculo de Vida Útil de Batería del Nodo Solar](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Solar%20Node%20Battery%20Life%20Calculation%20Table.xlsx)
+### Calidad de la Señal
+
+- **SNR** refleja la calidad del enlace de comunicación. Los dispositivos normales suelen operar por encima de -7 dB. Un dispositivo con un SNR inferior a -10 dB indica un rendimiento deficiente.
+
+- **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. Los dispositivos normales suelen operar por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente.
+
+      Para lograr el mejor efecto de señal, utilice el dispositivo en un área abierta y sin obstrucciones con interferencia mínima.
+
+Para más detalles consulte [Tabla de Cálculo de Vida Útil de la Batería del Nodo Solar](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Solar%20Node%20Battery%20Life%20Calculation%20Table.xlsx)

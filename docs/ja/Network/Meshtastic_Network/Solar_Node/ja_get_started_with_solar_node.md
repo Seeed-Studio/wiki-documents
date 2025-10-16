@@ -27,11 +27,11 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
 
-`Enter DFU Mode`をクリックすると、`XIAO-xxx`という名前のシリアルポートが表示されます。それをクリックして接続すると、`XIAO-xxx`という名前のドライバが表示されるはずです。
+`Enter DFU Mode`をクリックすると、`XIAO-xxx`という名前のシリアルポートが表示されるので、それをクリックして接続してください。`XIAO-xxx`という名前のドライバが表示されるはずです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-UF2ファイルをDFUドライブにドラッグしてください。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされるはずです。
+UF2ファイルをDFUドライブにドラッグしてください。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされます。
 
 ### バッテリーとGPSモジュールの取り付け（オプション）
 
@@ -97,7 +97,7 @@ import TabItem from '@theme/TabItem';
 
 ### パラメータの設定
 
-メッシュ通信を開始するには、地域を設定する必要があります。この設定は、デバイスが使用する周波数範囲を制御し、地域の場所に応じて設定する必要があります。
+メッシュ通信を開始するには、地域を設定する必要があります。この設定はデバイスが使用する周波数範囲を制御し、地域の場所に応じて設定する必要があります。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -131,7 +131,7 @@ import TabItem from '@theme/TabItem';
 ## 設置
 
 :::danger note
-デバイスは長期間屋外で使用されるため、パネルを水平位置に設置することは避けてください。水の蓄積を防ぐため、傾斜または斜めの設置をお勧めします。さらに、すべてのネジがしっかりと締められ、カバーが適切に取り付けられていることを確認してください。防水保護を強化するために、追加のシール対策を検討することもできます。
+デバイスは長期間屋外で使用されるため、パネルを水平位置に設置することは避けてください。水の蓄積を防ぐため、傾斜または斜めの設置をお勧めします。また、すべてのネジがしっかりと締められ、カバーが適切に取り付けられていることを確認してください。防水保護を強化するため、追加のシール対策を検討することもできます。
 :::
 
 - **部品リスト**
@@ -139,6 +139,7 @@ import TabItem from '@theme/TabItem';
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/part-list.png" alt="pir" width={800} height="auto" /></p>
 
 ### ステップバイステップ設置ガイダンス
+
 - ステップ1：ワッシャーとネジを使用して、パーツ1をデバイスの底部に接続します。
 
 <div class="table-center">
@@ -183,7 +184,7 @@ import TabItem from '@theme/TabItem';
 
 ### 完全な設置ガイダンス
 
-- ビデオを通じて、設置と初期化プロセス全体を完了できます。
+- ビデオを通じて全体の設置と初期化プロセスを完了できます。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/smQe7G0Bbsk?si=kcB8BdoxiwpZqB4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -196,6 +197,41 @@ import TabItem from '@theme/TabItem';
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+- 以下のセンサーは、デバイスのGroveインターフェースとの互換性が確認されています。
+
+<table>
+  <tr>
+    <th colspan="2">センサータイプ</th>
+    <th colspan="1">センサーモデル</th>
+  </tr>
+  <tr>
+    <td rowspan="4">環境センサー</td>
+    <td>圧力</td>
+    <td>BMP085</td>
+  </tr>
+  <tr>
+    <td>温度</td>
+    <td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html)、PCT2075</td>
+  </tr>
+  <tr>
+    <td>温度・湿度</td>
+    <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
+  </tr>
+  <tr>
+    <td>温度・湿度・圧力</td>
+    <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
+  </tr>
+  <tr>
+    <td rowspan="2">その他</td>
+    <td>心拍数・SpO₂</td>
+    <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
+  </tr>
+  <tr>
+    <td>I2Cキーボード</td>
+    <td>CardKB</td>
+  </tr>
+</table>
 
 ### アンテナのアップグレード（オプション）
 
@@ -210,15 +246,15 @@ import TabItem from '@theme/TabItem';
 ### 消費電力
 
 消費電力は主にデータ送信頻度やGPS更新レートなどの要因に依存します。
-以下の数値は参考値のみです。実際の消費量は実際の使用条件によって異なる場合があります。
+以下の数値は参考値のみであり、実際の使用条件によって実際の消費量は異なる場合があります。
 
 - **シャットダウンスリープモード消費電力**
 
 |説明|消費量|
 |---|---|
 |GPS_LED動作電流|1.02 mA|
-|電源投入済みだが未アクティベート|56.195 μA|
-|電源投入済みかつアクティベート済み|611 μA|
+|電源投入済みだが未アクティブ|56.195 μA|
+|電源投入済みかつアクティブ|611 μA|
 
 **例：**
 
@@ -237,4 +273,12 @@ import TabItem from '@theme/TabItem';
 |GPS動作電流|50 mA|
 |GPS_LED動作電流|1.02 mA|
 
-詳細については、[Solar Nodeバッテリー寿命計算表](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Solar%20Node%20Battery%20Life%20Calculation%20Table.xlsx)をご確認ください。
+### 信号品質
+
+- **SNR**は通信リンクの品質を反映します。通常のデバイスは-7 dB以上で動作します。SNRが-10 dB未満のデバイスは性能が悪いことを示します。
+
+- **RSSI**はデバイスとその周辺環境によって共同で決定されます。通常のデバイスは-110 dBm以上で動作します。RSSIが-115 dBm未満のデバイスは性能が悪いと考えられます。
+
+      最良の信号効果を得るために、干渉が最小限の開放的で障害物のない場所でデバイスを使用してください。
+
+詳細については[Solar Node Battery Life Calculation Table](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Solar%20Node%20Battery%20Life%20Calculation%20Table.xlsx)をご確認ください

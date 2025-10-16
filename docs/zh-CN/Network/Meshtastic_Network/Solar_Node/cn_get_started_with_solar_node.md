@@ -63,7 +63,7 @@ P1-Pro 版本内置电池和 GPS 模块，对于 P1 版本，如果需要，用�
 
 连接 USB 线缆以激活设备。
 
-### 通过应用程序连接
+### 通过应用连接
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -120,13 +120,13 @@ import TabItem from '@theme/TabItem';
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
+参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 
 :::info
 **EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时基础每分钟计算。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
-现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
+现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
 
 ## 安装
 
@@ -139,6 +139,7 @@ import TabItem from '@theme/TabItem';
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/part-list.png" alt="pir" width={800} height="auto" /></p>
 
 ### 分步安装指导
+
 - 步骤 1：使用垫圈和螺丝将零件 1 连接到设备底部。
 
 <div class="table-center">
@@ -197,6 +198,41 @@ import TabItem from '@theme/TabItem';
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+- 以下传感器已验证与设备上的 Grove 接口兼容。
+
+<table>
+  <tr>
+    <th colspan="2">传感器类型</th>
+    <th colspan="1">传感器型号</th>
+  </tr>
+  <tr>
+    <td rowspan="4">环境传感器</td>
+    <td>压力</td>
+    <td>BMP085</td>
+  </tr>
+  <tr>
+    <td>温度</td>
+    <td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html)、PCT2075</td>
+  </tr>
+  <tr>
+    <td>温度和湿度</td>
+    <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
+  </tr>
+  <tr>
+    <td>温度、湿度和压力</td>
+    <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
+  </tr>
+  <tr>
+    <td rowspan="2">其他</td>
+    <td>心率和血氧</td>
+    <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
+  </tr>
+  <tr>
+    <td>I2C 键盘</td>
+    <td>CardKB</td>
+  </tr>
+</table>
+
 ### 升级天线（可选）
 
 - 您可以通过观看此视频将天线更换为玻璃纤维天线。
@@ -210,15 +246,15 @@ import TabItem from '@theme/TabItem';
 ### 功耗
 
 功耗主要取决于数据传输频率和 GPS 更新速率等因素。
-以下数据仅供参考；实际消耗可能因实际使用条件而异。
+以下数据仅供参考；实际功耗可能因实际使用条件而有所不同。
 
 - **关机睡眠模式功耗**
 
-|描述|消耗|
+|描述|功耗|
 |---|---|
 |GPS_LED 工作电流|1.02 mA|
 |已供电但未激活|56.195 μA|
-|已供电并激活|611 μA|
+|已供电且已激活|611 μA|
 
 **示例：**
 
@@ -237,4 +273,12 @@ import TabItem from '@theme/TabItem';
 |GPS 工作电流|50 mA|
 |GPS_LED 工作电流|1.02 mA|
 
-更多详情请查看 [Solar Node 电池寿命计算表](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Solar%20Node%20Battery%20Life%20Calculation%20Table.xlsx)
+### 信号质量
+
+- **SNR** 反映通信链路的质量。正常设备通常在 -7 dB 以上工作。SNR 低于 -10 dB 的设备表示性能较差。
+
+- **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
+
+      为了获得最佳信号效果，请在开阔、无遮挡、干扰最小的区域使用设备。
+
+更多详情请查看 [太阳能节点电池寿命计算表](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Solar%20Node%20Battery%20Life%20Calculation%20Table.xlsx)

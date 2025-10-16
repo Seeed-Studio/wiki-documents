@@ -1,6 +1,6 @@
 ---
-description: Wio Tracker L1シリーズの使用開始
-title:  Wio Tracker L1の使用開始
+description: Wio Tracker L1 シリーズの使用開始
+title:  Wio Tracker L1 の使用開始
 keywords:
 - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
@@ -15,23 +15,25 @@ last_update:
 
 ### パート1 開封
 
+L1、L1 Lite、または L1 E-Ink モデルを初めて使用する際は、USB 電源に接続した後、電源スイッチを上に持ち上げて電源を入れてください。
+
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Wi_YmE76YcY?si=Ad-pUhle5X9QppPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### パート2 ファームウェア書き込み
+### パート2 ファームウェアの書き込み
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/hcjai4J1894?si=S_jaEfXVThWXscVJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### パート3 デバイス使用方法
+### パート3 デバイスの使用
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Q97w2ompPtI?si=yLbAgE4cBbT6NbHS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### パート4 スマートフォン接続
+### パート4 スマートフォンとの接続
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/OFtUwN3z0tI?si=9zr3j-hLuoj0-CXi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -49,27 +51,27 @@ last_update:
 フラッシュを消去しないでください。デバイスが損傷する可能性があります。
 :::
 
-### ファームウェア書き込み
+### ファームウェアの書き込み
 
-[Meshtastic Web Flasher](https://flasher.meshtastic.org/)にアクセスしてください。
+[Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスしてください。
 
-対象デバイスを`Seeed Wio Tracker L1`に選択し、最新のファームウェアを選択して、`Flash`をクリックします。
+対象デバイスを `Seeed Wio Tracker L1` に選択し、最新のファームウェアを選択して、`Flash` をクリックしてください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
-デバイスの電源を入れ、`Enter DFU Mode`をクリックすると、`Tracker L1`という名前のシリアルポートが表示されます。それをクリックして接続すると、`Tracker L1`という名前のドライバが表示されます。
+デバイスの電源を入れ、`Enter DFU Mode` をクリックすると、`Tracker L1` という名前のシリアルポートが表示されるので、それをクリックして接続してください。`Tracker L1` という名前のドライバが表示されるはずです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-UF2ファイルをDFUドライブにドラッグします。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアが書き込まれます。
+UF2 ファイルを DFU ドライブにドラッグしてください。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアが書き込まれます。
 
 ### デバイスの電源を入れる
 
-USBケーブルを接続してデバイスをアクティベートします。
+USB ケーブルを接続してデバイスをアクティベートしてください。電源スイッチを上に持ち上げて電源を入れてください。
 
-### アプリ経由で接続
+### アプリ経由での接続
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -78,11 +80,11 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="ios" label="IOS App">
 
-- Bluetoothパネルで対象デバイスを選択します。
+- Bluetooth パネルで対象デバイスを選択してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-- ディスプレイに表示されたコードを入力し、`OK`をクリックしてデバイスに接続します。
+- ディスプレイに表示されたコードを入力し、`OK` をクリックしてデバイスに接続してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -90,11 +92,11 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="android" label="Android App">
 
-- `+`をクリックして対象デバイスを選択します。
+- `+` をクリックして対象デバイスを選択してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-- コード（デフォルトコードは`123456`）を入力し、`OK`をクリックしてデバイスに接続します。
+- コード（デフォルトコードは `123456`）を入力し、`OK` をクリックしてデバイスに接続してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -103,7 +105,7 @@ import TabItem from '@theme/TabItem';
 
 ### パラメータの設定
 
-メッシュ通信を開始するには、地域を設定する必要があります。この設定はデバイスが使用する周波数範囲を制御し、地域の場所に応じて設定する必要があります。
+メッシュ通信を開始するには、地域を設定する必要があります。この設定は、デバイスが使用する周波数範囲を制御し、地域の場所に応じて設定する必要があります。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -126,20 +128,65 @@ import TabItem from '@theme/TabItem';
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
 |EU_868|欧州連合 868MHz|869.4 - 869.65|10|27|
 
-より包括的なリストについては、[国別LoRa地域](https://meshtastic.org/docs/configuration/region-by-country/)を参照してください。
+より包括的なリストについては、[国別 LoRa 地域](https://meshtastic.org/docs/configuration/region-by-country/) を参照してください。
 
 :::info
-**EU_868**は、1時間のローリングベースで毎分計算される10%の時間デューティサイクル制限に従う必要があります。制限に達すると、再び許可されるまでデバイスは送信を停止します。
+**EU_868** は、1時間のローリングベースで毎分計算される10%の時間あたりデューティサイクル制限に従う必要があります。制限に達した場合、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスにLoRa地域を設定したので、ニーズに合わせて[LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/)の設定を続けることができます。
+デバイスに LoRa 地域を設定したので、ニーズに合わせて [LoRa 設定](https://meshtastic.org/docs/configuration/radio/lora/) の設定を続けることができます。
+
+### センサー接続
+
+Grove インターフェース経由でデバイスにセンサーを追加できます。以下のセンサーは、デバイスの Grove インターフェースとの互換性が確認されています。
+
+<table>
+  <tr>
+    <th colspan="2">センサータイプ</th>
+    <th colspan="1">センサーモデル</th>
+  </tr>
+  <tr>
+    <td rowspan="4">環境センサー</td>
+    <td>気圧</td>
+    <td>BMP085</td>
+  </tr>
+  <tr>
+    <td>温度</td>
+    <td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html) 、PCT2075</td>
+  </tr>
+  <tr>
+    <td>温度・湿度</td>
+    <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
+  </tr>
+  <tr>
+    <td>温度・湿度・気圧</td>
+    <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
+  </tr>
+  <tr>
+    <td rowspan="2">その他</td>
+    <td>心拍数・SpO₂</td>
+    <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
+  </tr>
+  <tr>
+    <td>I2C キーボード</td>
+    <td>CardKB</td>
+  </tr>
+</table>
 
 ### FAQ
 
-#### DFUモードの手動入力
+#### DFU モードへの手動入力
 
-デバイスをPCに接続し、`Reset`ボタンをダブルプレスします。黄色のLEDが点灯し続け、`Tracker L1`という名前の新しいUSBドライブがPCに表示されます。
+デバイスを PC に接続し、`Reset` ボタンを2回押してください。黄色の LED が点灯し続け、PC に `Tracker L1` という名前の新しい USB ドライブが表示されます。
 
-#### DFUモードの終了
+#### DFU モードの終了
 
-`Reset`ボタンを一度押してDFUモードを終了します。
+`Reset` ボタンを1回押して DFU モードを終了してください。
+
+#### 信号品質
+
+- **SNR** は通信リンクの品質を反映します。通常のデバイスは -7 dB 以上で動作します。SNR が -10 dB 未満のデバイスは性能が悪いことを示します。
+
+- **RSSI** はデバイスとその周辺環境によって共同で決定されます。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm 未満のデバイスは性能が悪いと考えられます。
+
+      最良の信号効果を得るために、干渉が最小限で障害物のない開放的な場所でデバイスを使用してください。
