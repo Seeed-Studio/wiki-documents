@@ -5,17 +5,36 @@ import '../../css/indexPage.css'
 
 import { exploreList ,startedList} from '../../define/indexData'
 
+// ✅ 新增：语言与链接工具（只用到三个）
+import { detectLocaleFromPath, localizeHref, localizedLink } from '../../pages/home/lib/locale';
+
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
 
 const getIndexImage = (src) => {
   return src && require(`../../../assets/index/${src}`).default;
+};
+
+// ✅ 新增：根据是否为 http(s) 选择 localizeHref / localizedLink
+function linkFor(rawHref: string, pathname: string) {
+  if (!rawHref) return rawHref;
+  const locale = detectLocaleFromPath(pathname || '/');
+
+  // 绝对链接：只对 wiki.seeedstudio.com 加语言前缀；其他域名原样返回
+  if (/^https?:\/\//i.test(rawHref)) {
+    return localizeHref(rawHref, locale);
+  }
+
+  // 相对路径（站内链接）：自动加 /cn /ja /es 前缀（英文为空）
+  return localizedLink(rawHref, locale);
 }
 
 const renderNa = (list, isExplore?: boolean) => {
   const htmlElement = document.documentElement;
   const dataTheme = htmlElement.getAttribute('data-theme');
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '/'; // ✅ 当前路径用于判定语言
+
   var navbar = document.querySelector('.navbar');
   var navContainer:any = navbar.querySelector('.nav_container');
   if (isExplore) {
@@ -27,16 +46,19 @@ const renderNa = (list, isExplore?: boolean) => {
   list.forEach((item, index) => {
     let cHtm = ''
     item.children.forEach((cItem, index) => {
-      cHtm += `<a class="home_nav_item_a" href="${cItem.link}" target="_blank" >${cItem.title}</a>`
+      // ✅ 子级链接走 linkFor
+      cHtm += `<a class="home_nav_item_a" href="${linkFor(cItem.link, pathname)}" target="_blank">${cItem.title}</a>`
       if (cItem.children && cItem.children.length > 0) {
         cItem.children.forEach((ccItem, index) => {
-          cHtm += `<a class="home_nav_item_a sub  ${cItem.split ? 'split' : ''}" href="${ccItem.link}" target="_blank" > - ${ccItem.title}</a>`
+          // ✅ 孙级链接走 linkFor
+          cHtm += `<a class="home_nav_item_a sub  ${cItem.split ? 'split' : ''}" href="${linkFor(ccItem.link, pathname)}" target="_blank"> - ${ccItem.title}</a>`
         })
       }
     })
+    // ✅ 顶部图片链接也走 linkFor
     html += `
         <div class="home_nav_item">
-        <a href="${item.link}" class="home_nav_item_img" target="_blank" > <img src="${getIndexImage(item.img + `${dataTheme === 'light' ? '_light' : ''}.png`)}" alt="" /></a>
+        <a href="${linkFor(item.link, pathname)}" class="home_nav_item_img" target="_blank"> <img src="${getIndexImage(item.img + `${dataTheme === 'light' ? '_light' : ''}.png`)}" alt="" /></a>
         <div class="nav_item_box">
         ${cHtm}
         </div>
