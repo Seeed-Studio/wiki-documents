@@ -148,6 +148,8 @@ Here’s your **“Make Gateway” section** in the same wiki style:
 
 ## Start Gateway
 
+For Download the docker Compose file you need to visit this page on reComputer and Download it. [Link](https://www.chirpstack.io/docs/getting-started/docker.html)
+
 After installing ChirpStack, you can register your **R11 LoRa gateway** and start processing data.
 
 **Start ChirpStack Services**
@@ -487,11 +489,6 @@ Once the **Device Profile** is created, you can register your LoRaWAN device wit
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image9.png" alt="pir" width={800} height="auto" /></p>
 
-> ⚠️ Device EUI and Application Key can be obtained from your LoRa device datasheet or configuration software. For **SenseCAP devices**, you can use the SenseCAP application to view or reconfigure these settings.
-
-Here’s a polished version of your **“Check Device Status”** section in your wiki style, keeping it consistent with the previous sections:
-
----
 
 ## Check Device Status
 
