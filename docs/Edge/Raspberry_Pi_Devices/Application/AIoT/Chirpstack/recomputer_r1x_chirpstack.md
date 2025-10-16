@@ -150,6 +150,26 @@ Here’s your **“Make Gateway” section** in the same wiki style:
 
 For Download the docker Compose file you need to visit this page on reComputer and Download it. [Link](https://www.chirpstack.io/docs/getting-started/docker.html)
 
+Then modify the frequency band according to your settings in yaml file 
+
+```yml
+ chirpstack-gateway-bridge:
+    image: chirpstack/chirpstack-gateway-bridge:4
+    restart: unless-stopped
+    ports:
+      - "1700:1700/udp"
+    volumes:
+      - ./configuration/chirpstack-gateway-bridge:/etc/chirpstack-gateway-bridge
+    environment:
+      - INTEGRATION__MQTT__EVENT_TOPIC_TEMPLATE=us915_0/gateway/{{ .GatewayID }}/event/{{ .EventType }}
+      - INTEGRATION__MQTT__STATE_TOPIC_TEMPLATE=us915_0/gateway/{{ .GatewayID }}/state/{{ .StateType }}
+      - INTEGRATION__MQTT__COMMAND_TOPIC_TEMPLATE=us915_0/gateway/{{ .GatewayID }}/command/#
+    depends_on:
+      - mosquitto
+
+```
+
+
 After installing ChirpStack, you can register your **R11 LoRa gateway** and start processing data.
 
 **Start ChirpStack Services**
