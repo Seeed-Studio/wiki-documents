@@ -449,6 +449,14 @@ When you have completed the above steps, then you can follow this [step](https:/
 
  Check if the port is correct, or try another port.
 
+### Signal Quality
+
+  - **SNR** reflects the quality of the communication link. Normal device usually operates above -7 dB. Device with a SNR lower than -10 dB indicates poor performance.
+
+  - **RSSI** is determined jointly by the device and its surrounding environment. Normal device usually operates above -110 dBm. Device with an RSSI lower than -115 dBm is considered to have poor performance. 
+
+      To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
+
 ## Resource
 
 [Meshtastic Doc](https://meshtastic.org/docs/introduction/)
