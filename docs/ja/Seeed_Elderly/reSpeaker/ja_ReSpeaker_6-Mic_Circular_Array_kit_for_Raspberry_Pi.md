@@ -18,7 +18,9 @@ ReSpeaker 6-Mic Circular Array Kit for Raspberry Piは2つのボードで構成�
 
 ReSpeaker 6-Mic Circular Array Kit for Raspberry PiはRaspbianシステムで8入力・8出力チャンネルをサポートします。最初の6つの入力チャンネルはマイクロフォン録音用、残りの2つの入力チャンネルは再生のエコーチャンネルです。最初の2つの出力チャンネルは再生用、残りの6つの出力チャンネルはダミーです。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NxZx9nz67Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/ReSpeaker-6-Mic-Circular-Array-Kit-for-Raspberry-Pi-p-3067.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 

@@ -133,7 +133,9 @@ Watcherの「目」（カメラ）が画像をキャプチャ → 「視覚神�
 
 以下のビデオで詳細なチュートリアルをご覧いただけます：
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/6UDVsv953Tw?si=6OYFfx4orpC5p90d" title="SenseCAP Watcher for Xiaozhi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## モデルとファームウェアの更新：専用スキルのカスタマイズ
 

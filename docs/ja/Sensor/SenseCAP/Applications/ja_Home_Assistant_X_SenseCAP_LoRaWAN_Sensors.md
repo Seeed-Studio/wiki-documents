@@ -100,7 +100,9 @@ Weather Stationは標準的なLoRaWANデバイスとして動作するため、�
 
 参考までに、こちらはSeeed Studioによる基本的なオンボーディングプロセスを説明した動画です。
 
+<div class="video-container">
 <iframe class="youtube-video" src="https://youtu.be/TUQ9UmF7e7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 M2 LoRaWANゲートウェイをイーサネットケーブルでインターネットに接続し、電源を入れる前にアンテナを接続します。パネルのRGB LEDが緑色で点灯したら、ゲートウェイが正常に設定されたことを意味します。
 

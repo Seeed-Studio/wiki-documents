@@ -658,7 +658,7 @@ if __name__ == "__main__":
 
 Our inference tests were conducted on a laptop equipped with an RTX 4080 GPU. While the inference accuracy proved excellent, we observed noticeable arm movement jitter due to the large VLA model size. Nevertheless, the system successfully accomplishes all intended tasks.
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="480" src="https://www.youtube.com/embed/nOTwjHGjE_Q" title="AI-Powered Control of the Robotic Arm via GR00T" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

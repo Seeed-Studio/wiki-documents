@@ -258,14 +258,14 @@ last_update:
 <div class="intro_container">
     <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>温度 & 湿度</font></div>
-            <a href="/ja/Grove-Temperature-Humidity-Sensor-DH20" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>,
+            <a href="/ja/Grove-Temperature-Humidity-Sensor-DH20" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-Temperature_and_Humidity_Sensor_Pro" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
             <br/>
-            <a href="/ja/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> AHT20</font></span></a>,
+            <a href="/ja/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> AHT20</font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HDC1000</font></span></a>
             <br/>
-            <a href="/ja/Grove-TempAndHumi_Sensor-SHT31" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>,
-            <a href="/ja/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT35 </font></span></a>,
+            <a href="/ja/Grove-TempAndHumi_Sensor-SHT31" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a><span><font size="2">,</font></span>
+            <a href="/ja/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT35 </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-SHT4x" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x </font></span></a>
             <br/>
     </div>
@@ -283,7 +283,7 @@ last_update:
             <br/>
             <a href="/ja/Grove_SEN5X_All_in_One" target="_blank"><span><font color={'FFFFFF'} size={"2"}>NOx/PM/VOC/RH/温度</font></span></a>
             <br/>
-            <a href="/ja/Grove-CO2_&_Temperature_&_Humidity_Sensor-SCD41" target="_blank"><span><font color={'FFFFFF'} size={"2"}>CO2/温度/湿度</font></span></a>,
+            <a href="/ja/Grove-CO2_&_Temperature_&_Humidity_Sensor-SCD41" target="_blank"><span><font color={'FFFFFF'} size={"2"}>CO2/温度/湿度</font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931" target="_blank"><span><font color={'FFFFFF'} size={"2"}> その他... </font></span></a>
             <br/>
     </div>
@@ -306,12 +306,12 @@ last_update:
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>近接センサー</font></div>
-            <a href="/ja/Grove-Time_of_Flight_Distance_Sensor-VL53L0X" target="_blank"><span><font color={'FFFFFF'} size={"2"}> TOF</font></span></a>,
+            <a href="/ja/Grove-Time_of_Flight_Distance_Sensor-VL53L0X" target="_blank"><span><font color={'FFFFFF'} size={"2"}> TOF</font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-80cm_Infrared_Proximity_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 赤外線</font></span></a>
             <br/>
             <a href="/ja/Grove-Gesture_v1.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ジェスチャー</font></span></a>
             <br/>
-            <a href="/ja/Grove-Doppler-Radar" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ドップラー</font></span></a>,
+            <a href="/ja/Grove-Doppler-Radar" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ドップラー</font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-Ultrasonic_Ranger" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 超音波</font></span></a>
             <br/>
     </div>
@@ -329,7 +329,7 @@ last_update:
             <a href="/ja/Grove-Gas_Sensor-O2-MIX8410" target="_blank"><span><font color={'FFFFFF'} size={"2"}> O₂ </font></span></a>
             <a href="/ja/Grove-CO2_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> CO₂ </font></span></a>
             <br/>
-            <a href="/ja/Grove-HCHO_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HCHO </font></span></a>,
+            <a href="/ja/Grove-HCHO_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HCHO </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-VOC_and_eCO2_Gas_Sensor-SGP30" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SGP30 </font></span></a>
             <br/>
             <a href="/ja/Grove-Multichannel-Gas-Sensor-V2" target="_blank"><span><font color={'FFFFFF'} size={"2"}> マルチチャンネルガス </font></span></a>
@@ -342,29 +342,29 @@ last_update:
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>気圧計</font></div>
             <a href="/ja/Grove-Barometer-High-Accuracy" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HP206F  </font></span></a>
             <br/>
-            <a href="/ja/Grove-Barometer_Sensor-BME280" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  BME280  </font></span></a>,
+            <a href="/ja/Grove-Barometer_Sensor-BME280" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  BME280  </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-Barometer_Sensor-BMP280" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  BMP280  </font></span></a>
             <br/>
-            <a href="/ja/Grove-High-Precision-Barometric-Pressure-Sensor-DPS310" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DPS310 </font></span></a>,
+            <a href="/ja/Grove-High-Precision-Barometric-Pressure-Sensor-DPS310" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DPS310 </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-Integrated-Pressure-Sensor-Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  MPX5700AP  </font></span></a>
             <br/>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>加速度計</font></div>
-            <a href="/ja/Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 3軸 </font></span></a>,
+            <a href="/ja/Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 3軸 </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-6-Axis_Accelerometer&Gyroscope_BMI088" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 6軸 </font></span></a>
             <br/>
-            <a href="/ja/Grove-IMU_9DOF_v2.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 9軸 </font></span></a>,
+            <a href="/ja/Grove-IMU_9DOF_v2.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 9軸 </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-IMU_10DOF_v2.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 10軸 </font></span></a>
             <br/>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>光</font></div>
-            <a href="/ja/Grove-Digital_Light_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 光 </font></span></a>,
-            <a href="/ja/Grove-UV_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> UV </font></span></a>,
+            <a href="/ja/Grove-Digital_Light_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 光 </font></span></a><span><font size="2">,</font></span>
+            <a href="/ja/Grove-UV_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> UV </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-Infrared_Receiver" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 赤外線 </font></span></a>
             <br/>
-            <a href="/ja/Grove-Line_Finder" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ラインファインダー </font></span></a>,
+            <a href="/ja/Grove-Line_Finder" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ラインファインダー </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-Luminance_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 輝度 </font></span></a>
             <br/>
             <a href="/ja/Grove-Sunlight_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 太陽光（複数の光） </font></span></a>
@@ -383,7 +383,7 @@ last_update:
 <div class="intro_container">
     <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>音</font></div>
-            <a href="/ja/Grove-Sound_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 音 </font></span></a>,
+            <a href="/ja/Grove-Sound_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 音 </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-Loudness_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 音量 </font></span></a>
             <br/>
             <a href="/ja/Grove-Recorder_v3.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> レコーダー </font></span></a>
@@ -394,29 +394,29 @@ last_update:
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>タッチ</font></div>
             <a href="/ja/Grove-Touch_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> タッチ </font></span></a>
             <br/>
-            <a href="/ja/Grove-2_Channel_Inductive_Sensor-LDC1612" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 誘導型 </font></span></a>,
+            <a href="/ja/Grove-2_Channel_Inductive_Sensor-LDC1612" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 誘導型 </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 静電容量型 </font></span></a>
             <br/>
             <a href="/ja/Grove-Round_Force_Sensor_FSR402" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 円形力感知型 </font></span></a>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>液体</font></div>
-            <a href="/ja/Grove-Water_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 水 </font></span></a>,
+            <a href="/ja/Grove-Water_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 水 </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-Water-Level-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 水位 </font></span></a>
             <br/>
-            <a href="/ja/Grove-EC-Sensor-kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> EC </font></span></a>,
+            <a href="/ja/Grove-EC-Sensor-kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> EC </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-TDS-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> TDS </font></span></a>
             <br/>
-            <a href="/ja/Grove-PH-Sensor-kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PH </font></span></a>,
+            <a href="/ja/Grove-PH-Sensor-kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PH </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-ORP-Sensor-Pro" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ORP </font></span></a>
             <br/>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>モーション</font></div>
-            <a href="/ja/Grove-PIR_Motion_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PIRモーション </font></span></a>,
+            <a href="/ja/Grove-PIR_Motion_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PIRモーション </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-Mouse_Encoder" target="_blank"><span><font color={'FFFFFF'} size={"2"}> マウス </font></span></a>
             <br/>
-            <a href="/ja/Grove-Piezo_Vibration_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 振動 </font></span></a>,
+            <a href="/ja/Grove-Piezo_Vibration_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 振動 </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Grove-Collision_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 衝突 </font></span></a>
             <br/>
             <a href="/ja/Grove-Slide_Potentiometer" target="_blank"><span><font color={'FFFFFF'} size={"2"}> スライドポテンショメータ </font></span></a>
@@ -510,7 +510,7 @@ last_update:
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>mmWaveレーダーセンサー</font></div>
             <a href="/ja/Radar_MR24HPC1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 24GHz mmWave 人体静止検知モジュール Lite - パラメーター設定可能</font></span></a>
             <br/>
-            <a href="/ja/Radar_MR24FDB1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 24GHz mmWave 転倒検知センサー </font></span></a>,
+            <a href="/ja/Radar_MR24FDB1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 24GHz mmWave 転倒検知センサー </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Radar_MR24HPB1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 24GHz mmWave 人体静止検知センサー</font></span></a>
             <br/>
             <a href="/ja/Radar_MR24BSD1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 60GHz mmWave 睡眠呼吸モニタリングモジュール</font></span></a>
@@ -539,10 +539,10 @@ last_update:
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>センサー</font></div>
             <a href="/ja/Ultra_Sonic_range_measurement_module" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 超音波距離測定モジュール</font></span></a>
             <br/>
-            <a href="/ja/Water-Flow-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 水流センサー </font></span></a>,
+            <a href="/ja/Water-Flow-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 水流センサー </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Gear_Stepper_Motor_Driver_Pack" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ギアステッパーモータードライバーパック</font></span></a>
             <br/>
-            <a href="/ja/Photo_Reflective_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> フォトリフレクティブセンサー </font></span></a>,
+            <a href="/ja/Photo_Reflective_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> フォトリフレクティブセンサー </font></span></a><span><font size="2">,</font></span>
             <a href="/ja/G3-4_Water_Flow_sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 重量センサー </font></span></a>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
@@ -584,14 +584,14 @@ last_update:
             <br/>
             <a href="/ja/K1100_sensecap_node-red" target="_blank"><span><font color={'FFFFFF'} size={"3"}>  > SenseCAP & Node-Red を使用したクラウドサービス</font></span></a>
             <br/>
-            <span><font color={'FFFFFF'} size={"2"}> 統合済み</font></span><a href="/ja/K1100_SenseCAP_to_Azure_IoT_Central" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Azure IoT</font></span></a>,
-            <a href="/ja/K1100_SenseCAP_to_PowerBI" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Power BI</font></span></a>,
+            <span><font color={'FFFFFF'} size={"2"}> 統合済み</font></span><a href="/ja/K1100_SenseCAP_to_Azure_IoT_Central" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Azure IoT</font></span></a><span><font size="2">,</font></span>
+            <a href="/ja/K1100_SenseCAP_to_PowerBI" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Power BI</font></span></a><span><font size="2">,</font></span>
             <a href="/ja/K1100_SenseCAP_to_influxdb" target="_blank"><span><font color={'FFFFFF'} size={"2"}> InfluxDB</font></span></a>
             <br/>
             <a href="/ja/Helium-Introduction" target="_blank"><span><font color={'FFFFFF'} size={"3"}>  > Helium クラウドサービス</font></span></a>
             <br/>
-            <span><font color={'FFFFFF'} size={"2"}> 統合済み</font></span><a href="/ja/Integrate-into-Azure-IoT-Hub" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Azure IoT</font></span></a>,
-            <a href="/ja/Integrate_into_Google_Sheets_via_Helium" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Google Sheets</font></span></a>,
+            <span><font color={'FFFFFF'} size={"2"}> 統合済み</font></span><a href="/ja/Integrate-into-Azure-IoT-Hub" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Azure IoT</font></span></a><span><font size="2">,</font></span>
+            <a href="/ja/Integrate_into_Google_Sheets_via_Helium" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Google Sheets</font></span></a><span><font size="2">,</font></span>
             <a href="/ja/Connect_AWS_via_helium" target="_blank"><span><font color={'FFFFFF'} size={"2"}> AWS IOT</font></span></a>
             <br/>
             <a href="/ja/TTN-Introduction" target="_blank"><span><font color={'FFFFFF'} size={"3"}> > TTN クラウドサービス</font></span></a>

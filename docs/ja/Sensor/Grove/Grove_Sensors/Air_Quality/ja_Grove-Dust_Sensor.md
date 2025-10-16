@@ -15,7 +15,9 @@ last_update:
 
 このダストセンサーは、環境内の空気質を示す良い指標を提供し、ダスト濃度を測定します。空気中の粒子状物質レベル（PMレベル）は、一定時間内の低パルス占有時間（LPO時間）をカウントすることで測定されます。LPO時間はPM濃度に比例します。このセンサーは空気清浄システムに信頼性のあるデータを提供でき、直径1μmのPMに反応します。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4df5kaaKa6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 :::caution
 

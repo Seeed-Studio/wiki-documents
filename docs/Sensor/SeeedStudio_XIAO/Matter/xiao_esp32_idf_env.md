@@ -92,7 +92,7 @@ The XIAO ESP32C3 does not have an on-board LED, so if you are using the XIAO ESP
 
 Since the ESP-IDF development framework is aimed at more professional software developers, the threshold for using it is higher than that of Arduino. The related documents and information will be less than Arduino. In order to let XIAO users start using ESP-IDF as soon as possible, and reduce the possibility of encountering problems in the configuration of the development environment, we will present the configuration of the environment in the form of video and graphics. This section is the video part, if you want to follow along with the video, you can refer to this video to install and configure the ESP-IDF environment and finally light up the on-board LEDs of the XIAO ESP32C6.
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="900" height="450" src="https://www.youtube.com/embed/QdPmsGDd7zs?si=5r_OO2EwZMX8D_HM?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 

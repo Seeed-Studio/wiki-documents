@@ -197,13 +197,17 @@ Con una precisión de posicionamiento horizontal de 2.5m, precisión de posicion
 
 **Velocímetro LED para Bicicleta**: ¿Quieres saber qué tan rápido estás pedaleando? Con este velocímetro DIY para bicicleta, usando tecnología GPS para detección de velocidad, ¡puedes saber qué tan rápido vas! También cuenta con un LED RGB para indicar la velocidad al ciclista. Visita [aquí](https://create.arduino.cc/projecthub/JeremySCook/gps-led-bike-speedometer-c8f956?ref=tag&ref_id=gps&offset=26) para información detallada.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=CeStrH-5Llo&feature=emb_rel_end" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **Asistente GPS Personal**: Este proyecto es un dispositivo que te permite monitorear personas y cosas, y te dice continuamente su ubicación, y los valores de los sensores conectados a él. Una de las características te permite establecer valores límite para los sensores, y cuando estos son excedidos se te envía una alerta SMS. También puedes establecer restricciones de algunos lugares, donde se te darán alertas cuando el dispositivo salga del área. También es posible comunicarse con el dispositivo a través de SMS, para obtener información sobre él.
 
 Visita [aquí](https://create.arduino.cc/projecthub/Momy93/sandro-your-personal-gps-assistant-26dfa3?ref=tag&ref_id=gps&offset=32) para información detallada.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://youtu.be/3lcP4YtxlCg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Recurso
 

@@ -21,7 +21,9 @@ Wio Tracker（无线输入输出）是一个开源网关，可实现更快的物
 
 Wio LTE 非常适合户外项目，设备可以连接到 GPS 卫星并提供其所附物品的实时位置。LTE 提供宽带宽，允许用户和设备之间更快的交互。如果您要构建共享单车服务、跟踪宠物或牲畜、定位车辆，甚至跟踪儿童等项目，Wio LTE 是最佳解决方案。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/D6DX5P9ncrc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 :::caution
     请始终插入 3.7V 锂电池，以防 USB 电源供应不足。

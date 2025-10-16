@@ -23,13 +23,17 @@ Today is June 5th and a brand new week has begun! Check out what Seeed did last 
 
 Welcome to the Seeed SenseCAP Indicator and Home Assistant development tutorial. This guide will walk you through the steps to integrate the SenseCAP Indicator with Home Assistant using the Home Assistant Yellow.
 
+<div class="video-container">
 <iframe class="youtube-video" src="https://www.youtube.com/embed/PKMcutZDjDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ### [Miniature ChatGPT Voice Assistant based on XIAO ESP32S3](/xiao_esp32s3_speech2chatgpt)
 
 We are pleased to bring you today a brand new project using the XIAO ESP32S3 Sense and Round Display for XIAO! The project aims to first build a speech recognition system using the XIAO ESP32S3 Sense's microphone and Google Cloud's speech-to-text service. The recognized speech text is then used to call OpenAI's interface to ask questions to ChatGPT and return answers. Finally, we display the recognised speech and the content of the answers on screen.
 
+<div class="video-container">
 <iframe width="958" height="400" src="https://www.youtube.com/embed/wPi-XjeJPNw" title="Miniature ChatGPT Voice Assistant with Smallest Display and XIAO ESP32S3 Sense" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ### [reTerminal DM SenseCraft Edge OS Getting Started](/reterminal-dm-sensecraft-edge-os-intro)
 

@@ -981,7 +981,9 @@ if __name__ == "__main__":
 El script mostrará los resultados de detección y la distancia medida entre dos objetos especificados (por ejemplo, taza y ratón) en tiempo real. El lado izquierdo de la ventana muestra la imagen RGB con cajas de detección. El lado derecho muestra el mapa de profundidad y la distancia. En el video, puedes ver que el error de medición generalmente está dentro de un centímetro:
 </div>
 
+<div class="video-container">
 <iframe width="960" height="371" src="https://www.youtube.com/embed/r_zLhj-waj0" title="Measure distance with depth camera" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::note
 <div style={{ textAlign: "justify" }}>

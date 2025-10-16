@@ -32,17 +32,17 @@ import TabItem from '@theme/TabItem';
  <tr>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-   <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
+   <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
    </a>
   </div></td>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-   <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
+   <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
    </a>
   </div></td>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32S3-Plus-p-6361.html" target="_blank">
-   <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
+   <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
    </a>
   </div></td>
  </tr>
@@ -50,12 +50,12 @@ import TabItem from '@theme/TabItem';
 
 ## Introducción
 
-La Serie Seeed Studio XIAO son placas de desarrollo diminutas que comparten una estructura de hardware similar, donde el tamaño es literalmente del tamaño de un pulgar. El nombre en código "XIAO" aquí representa su característica "Tiny" (Pequeño), y la otra mitad será "Puissant" (Potente).
+La Serie Seeed Studio XIAO son placas de desarrollo diminutas que comparten una estructura de hardware similar, donde el tamaño es literalmente del tamaño de un pulgar. El nombre en código "XIAO" aquí representa su característica "Tiny" (Pequeño), y la otra mitad será "Puissant" (Poderoso).
 
 Seeed Studio XIAO ESP32S3 Sense integra sensor de cámara, micrófono digital y soporte para tarjeta SD. Combinando el poder de cómputo de ML embebido y capacidad fotográfica, esta placa de desarrollo puede ser tu gran herramienta para comenzar con IA de voz e visión inteligente.
 
 :::tip
-La **cámara OV2640** ha sido descontinuada, y el subsecuente XIAO ESP32S3 Sense utiliza el modelo de **cámara OV3660**. Sin embargo, el código de ejemplo Wiki para la cámara sigue siendo aplicable.
+La **cámara OV2640** ha sido descontinuada, y el subsecuente XIAO ESP32S3 Sense usa el modelo de **cámara OV3660**. Sin embargo, el código de ejemplo Wiki para la cámara aún se aplica.
 :::
 
 ### Especificaciones
@@ -83,15 +83,15 @@ La **cámara OV2640** ha sido descontinuada, y el subsecuente XIAO ESP32S3 Sense
  </tr>
     <tr>
      <th>Memoria</th>
-     <td align="center">8M PSRAM integrada y 8MB Flash</td>
-        <td align="center">8M PSRAM integrada y 8MB Flash <br></br> Ranura para tarjeta SD integrada, soporta 32GB FAT</td>
-  <td align="center">8M PSRAM integrada y <strong>16MB</strong> Flash</td>
+     <td align="center">8M PSRAM integrado y 8MB Flash</td>
+        <td align="center">8M PSRAM integrado y 8MB Flash <br></br> Ranura para tarjeta SD integrada, soporta 32GB FAT</td>
+  <td align="center">8M PSRAM integrado y <strong>16MB</strong> Flash</td>
  </tr>
     <tr>
      <th>Interfaz</th>
-     <td>1x UART, 1x IIC, 1x IIS, 1x SPI, 11x GPIOs (PWM), 9x ADC, 1x LED de Usuario, 1x LED de Carga  <br></br> 1x Botón Reset, 1x Botón Boot</td>
-        <td>1x UART, 1x IIC, 1x IIS, 1x SPI, 11x GPIOs (PWM), 9x ADC, 1x LED de Usuario, 1x LED de Carga, 1x Conector B2B (con 2 GPIOs adicionales), 1x Botón Reset, 1x Botón Boot</td>
-  <td><strong>2</strong>x UART, 1x IIC, 1x IIS, <strong>2</strong>x SPI, <strong>18</strong>x GPIOs (PWM), 9x ADC, 1x LED de Usuario, 1x LED de Carga, 1x Conector B2B, 1x Botón Reset, 1x Botón Boot</td>
+     <td>1x UART, 1x IIC, 1x IIS, 1x SPI, 11x GPIOs (PWM), 9x ADC, 1x LED de Usuario, 1x LED de Carga  <br></br> 1x Botón de Reset, 1x Botón de Boot</td>
+        <td>1x UART, 1x IIC, 1x IIS, 1x SPI, 11x GPIOs (PWM), 9x ADC, 1x LED de Usuario, 1x LED de Carga, 1x Conector B2B (con 2 GPIOs adicionales), 1x Botón de Reset, 1x Botón de Boot</td>
+  <td><strong>2</strong>x UART, 1x IIC, 1x IIS, <strong>2</strong>x SPI, <strong>18</strong>x GPIOs (PWM), 9x ADC, 1x LED de Usuario, 1x LED de Carga, 1x Conector B2B, 1x Botón de Reset, 1x Botón de Boot</td>
  </tr>
     <tr>
      <th>Dimensiones</th>
@@ -124,7 +124,7 @@ La **cámara OV2640** ha sido descontinuada, y el subsecuente XIAO ESP32S3 Sense
     <tr>
         <th>Modelo de Bajo Consumo de Energía</th>
         <td>Modelo Modem-sleep: <strong>3.8V/25 mA</strong> <br></br> Modelo Light-sleep: <strong>3.8V/2 mA</strong> <br></br> Modelo Deep Sleep: <strong>3.8V/14 μA</strong></td>
-        <td>Sin periféricos: <br></br> - Modelo Modem-sleep: <strong>3.8V/25.5 mA</strong> <br></br> - Modelo Light-sleep: <strong>3.8V/2.4 mA</strong> <br></br> - Modelo Deep Sleep: <strong>3.8V/63.768 μA</strong> <br></br> Conectar la cámara: <br></br> - Modelo Modem-sleep: <strong>3.8V/44.57 mA</strong> <br></br> - Modelo Light-sleep: <strong>3.8V/5.47 mA</strong> <br></br> - Modelo Deep Sleep: <strong>3.8V/3.00 mA</strong> <br></br> Conectando una tarjeta SD: <br></br> - Modelo Modem-sleep: <strong>3.8V/32.8 mA</strong> <br></br> - Modelo Light-sleep: <strong>3.8V/3.48 mA</strong> <br></br> - Modelo Deep Sleep: <strong>3.8V/1.08 mA</strong><br></br> Conectar simultáneamente la cámara y la tarjeta SD: <br></br> - Modelo Modem-sleep: <strong>3.8V/55.72 mA</strong> <br></br> - Modelo Light-sleep: <strong>3.8V/6.56 mA</strong> <br></br> - Modelo Deep Sleep: <strong>3.8V/3.98 mA</strong></td>
+        <td>Sin ningún periférico: <br></br> - Modelo Modem-sleep: <strong>3.8V/25.5 mA</strong> <br></br> - Modelo Light-sleep: <strong>3.8V/2.4 mA</strong> <br></br> - Modelo Deep Sleep: <strong>3.8V/63.768 μA</strong> <br></br> Conectar la cámara: <br></br> - Modelo Modem-sleep: <strong>3.8V/44.57 mA</strong> <br></br> - Modelo Light-sleep: <strong>3.8V/5.47 mA</strong> <br></br> - Modelo Deep Sleep: <strong>3.8V/3.00 mA</strong> <br></br> Conectando una tarjeta SD: <br></br> - Modelo Modem-sleep: <strong>3.8V/32.8 mA</strong> <br></br> - Modelo Light-sleep: <strong>3.8V/3.48 mA</strong> <br></br> - Modelo Deep Sleep: <strong>3.8V/1.08 mA</strong><br></br> Conectar simultáneamente la cámara y la tarjeta SD: <br></br> - Modelo Modem-sleep: <strong>3.8V/55.72 mA</strong> <br></br> - Modelo Light-sleep: <strong>3.8V/6.56 mA</strong> <br></br> - Modelo Deep Sleep: <strong>3.8V/3.98 mA</strong></td>
   <td>Modelo Modem-sleep: <strong>3.8V/26.5 mA</strong> <br></br> Modelo Light-sleep: <strong>3.8V/2.2 mA</strong> <br></br> Modelo Deep Sleep: <strong>3.8V/69 μA</strong></td>
     </tr>
     <tr>
@@ -149,7 +149,7 @@ La **cámara OV2640** ha sido descontinuada, y el subsecuente XIAO ESP32S3 Sense
 
 - **Placa MCU Potente**: Incorpora el chip procesador ESP32S3 de 32-bit, dual-core, Xtensa operando hasta 240 MHz, montado con múltiples puertos de desarrollo, compatible con Arduino / MicroPython
 - **Funcionalidad Avanzada** (para Sense): Sensor de cámara **OV2640 desmontable para resolución 1600x1200** y **sensor de cámara OV3660 para 2048x1536** compatible con sensor de cámara OV5640, integrando micrófono digital adicional
-- **Diseño de Alimentación Elaborado**: Capacidad de gestión de carga de batería de litio, ofrece 4 modelos de consumo de energía que permiten modo de sueño profundo con consumo de energía tan bajo como 14μA
+- **Diseño de Alimentación Elaborado**: Capacidad de gestión de carga de batería de litio, ofrece 4 modelos de consumo de energía que permite modo de sueño profundo con consumo de energía tan bajo como 14μA
 - **Gran Memoria para más Posibilidades**: Ofrece 8MB PSRAM y 8MB FLASH (16MB en versión **Plus**), soporta ranura para tarjeta SD para memoria FAT externa de 32GB (solo para XIAO ESP32S3)
 - **Rendimiento RF Excepcional**: Soporta comunicación inalámbrica dual Wi-Fi 2.4GHz y BLE, soporta comunicación remota de 100m+ cuando se conecta con antena U.FL
 - **Diseño Compacto del Tamaño de un Pulgar**: 21 x 17.8mm, adoptando el factor de forma clásico de XIAO, adecuado para proyectos con espacio limitado como dispositivos portátiles
@@ -386,7 +386,7 @@ Asegúrate de que tu dispositivo esté apagado y desconectado de cualquier fuent
 
 ***Nota de Compra:*** Al comprar tu XIAO ESP32S3 Sense, es importante tener en cuenta que solo **los modelos equipados con cámara** vienen con un disipador de calor incluido. Si tienes una versión del ESP32S3 que no incluye cámara, necesitarás comprar un disipador de calor por separado.
 
-***Consejo de Instalación:*** Prioriza cubrir el PAD Térmico con el disipador de calor, ya que está directamente sobre el chip ESP32S3, la fuente principal de calor. La alineación adecuada asegura una disipación óptima del calor, y ten en cuenta mantener los pines BAT lo más despejados posible.
+***Consejo de Instalación:*** Prioriza cubrir la Almohadilla Térmica con el disipador de calor, ya que está directamente sobre el chip ESP32S3, la fuente principal de calor. La alineación adecuada asegura una disipación óptima del calor, y nota mantener los pines BAT lo más despejados posible.
 :::
 
 Ahora, comencemos el proceso de instalación:
@@ -400,14 +400,14 @@ Comienza removiendo la cubierta protectora del disipador de calor para exponer e
 ***Paso 2. Ensamblar el Disipador de Calor:***
 
 <Tabs>
-  <TabItem value="single" label="Single Heat Sink" default>
+  <TabItem value="single" label="Disipador de Calor Simple" default>
 
 Esta opción más pequeña y compacta es suficiente para uso regular y permite acceso completo a todos los pines GPIO.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/pin-single-heat-sink-install.jpg" style={{width:400, height:'auto'}}/></div>
 
   </TabItem>
-  <TabItem value="dual" label="Dual Heat Sinks">
+  <TabItem value="dual" label="Disipadores de Calor Dobles">
 
 La opción más grande proporciona refrigeración superior, que es ideal para tareas de alto rendimiento pero puede limitar el acceso a algunos pines GPIO.
 
@@ -429,7 +429,7 @@ Después de la instalación, asegúrate de que todo esté correctamente asegurad
 La herramienta de programación recomendada para el XIAO ESP32S3 es el Arduino IDE, por lo que como parte de la preparación del software, necesitarás completar la instalación de Arduino.
 
 :::tip
-Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
+Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Comenzando con Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
 - **Paso 1.** Descarga e instala la versión estable del Arduino IDE según tu sistema operativo.
@@ -445,7 +445,7 @@ Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que co
 <Tabs>
 <TabItem value='For Windows'>
 
-Navega a **File > Preferences**, y completa **"Additional Boards Manager URLs"** con la URL de abajo:
+Navega a **File > Preferences**, y completa **"Additional Boards Manager URLs"** con la url de abajo:
 
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -468,7 +468,7 @@ En la parte superior del Arduino IDE, puedes seleccionar el puerto directamente.
 </TabItem>
 <TabItem value='For Mac OS'>
 
-Navega a **Arduino IDE > Preferences**, y completa **"Additional Boards Manager URLs"** con la URL de abajo:
+Navega a **Arduino IDE > Preferences**, y completa **"Additional Boards Manager URLs"** con la url de abajo:
 
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -493,7 +493,7 @@ El paquete de placa para XIAO ESP32S3 requiere la versión **2.0.8** y superior 
 
 - **Paso 4.** Selecciona tu placa y puerto.
 
-En la parte superior del Arduino IDE puedes seleccionar directamente el puerto. Probablemente será el que tenga "usbmodem" o "usbserial" en el nombre. Si no estás seguro, desconecta y conecta nuevamente para ver qué puerto falta.
+En la parte superior del Arduino IDE puedes seleccionar directamente el puerto. Probablemente será el que tenga "usbmodem" o "usbserial" en el nombre. Si no estás seguro, desconecta y conecta de nuevo para ver qué puerto falta.
 
 </TabItem>
 </Tabs>
@@ -537,14 +537,14 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 - **Step 4.** Close the Arduino IDE and reopen it.-->
 
 <Tabs>
-<TabItem value="(Sense)" label="for XIAO ESP32S2 (Sense)" default>
+<TabItem value="(Sense)" label="para XIAO ESP32S3 (Sense)" default>
 
-También, busca **xiao** en la placa de desarrollo de la izquierda. selecciona **XIAO_ESP32S3**.
+También, busca **xiao** en la placa de desarrollo a la izquierda. selecciona **XIAO_ESP32S3**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/10.png" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Plus" label="for XIAO ESP32S3 Plus" default>
+<TabItem value="Plus" label="para XIAO ESP32S3 Plus" default>
 
 Se lanzará pronto; mantente atento a futuras actualizaciones.
 
@@ -557,7 +557,7 @@ Con esta preparación, puedes comenzar a escribir programas para XIAO ESP32S3 pa
 
 A veces, usar el programa incorrecto puede hacer que el XIAO pierda su puerto o no funcione correctamente. Los problemas comunes incluyen:
 
-- El XIAO está conectado a la computadora, pero *no se encuentra ningún número de puerto*.
+- El XIAO está conectado a la computadora, pero *no se encuentra número de puerto*.
 - El XIAO está conectado, y aparece un número de puerto, pero *la carga del programa falla*.
 
 Cuando encuentres las dos situaciones anteriores, puedes intentar poner el XIAO en modo BootLoader, que puede resolver la mayoría de los problemas de dispositivos no reconocidos y cargas fallidas. El método específico es:
@@ -568,9 +568,9 @@ Cuando encuentres las dos situaciones anteriores, puedes intentar poner el XIAO 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/15.gif" style={{width:500, height:'auto'}}/></div>
 
-### Reset
+### Reinicio
 
-Cuando el programa funciona de manera anormal, puedes presionar `Reset` una vez durante el encendido para que XIAO vuelva a ejecutar el programa subido.
+Cuando el programa funciona de manera anormal, puedes presionar `Reset` una vez durante el encendido para que XIAO vuelva a ejecutar el programa cargado.
 
 Cuando mantienes presionada la tecla `BOOT` mientras enciendes y luego presionas la tecla `Reset` una vez, también puedes entrar al modo BootLoader.
 
@@ -628,7 +628,7 @@ Al mismo tiempo, diseñamos una luz indicadora roja para la carga de la batería
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/104.jpg" style={{width:600, height:'auto'}}/></div>
 
-## UF2 BootLoader
+## BootLoader UF2
 
 Entendemos que algunos usuarios buscan flashear archivos UF2 directamente al XIAO, lo que habilitará el proceso de flasheo de programas en lotes. Aquí describiremos este método.
 
@@ -653,15 +653,15 @@ Después de compilar y guardar un programa de Arduino, puedes exportar el archiv
 
 Copia el archivo `BIN` al directorio **xiaos3-bin2uf2** que extrajiste anteriormente. Luego, ejecuta el script **convert_uf2.bat** para generar un archivo UF2, que requerirá el nombre de tu archivo `bin`.
 
-**Paso 3**: Entrar al Modo UF2 BootLoader
+**Paso 3**: Entrar al Modo BootLoader UF2
 
-Conecta el XIAO a tu computadora y ejecuta el script **boot_uf2.bat**. El XIAO aparecerá en tu computadora como una unidad USB, indicando que ha entrado exitosamente al modo UF2 BootLoader.
+Conecta el XIAO a tu computadora y ejecuta el script **boot_uf2.bat**. El XIAO aparecerá en tu computadora como una unidad USB, indicando que ha entrado exitosamente al modo BootLoader UF2.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/107.png" style={{width:800, height:'auto'}}/></div>
 
 **Paso 4**: Copiar el Archivo UF2 al XIAO ESP32S3
 
-Accede a la unidad USB del XIAO ESP32S3 y copia el archivo UF2 convertido a ella. Una vez que se complete la copia, la unidad USB del XIAO desaparecerá automáticamente, y el programa comenzará a ejecutarse.
+Accede a la unidad USB del XIAO ESP32S3 y copia el archivo UF2 convertido a ella. Una vez que se complete la copia, la unidad USB del XIAO desaparecerá automáticamente y el programa comenzará a ejecutarse.
 
 :::tip
 
@@ -670,9 +670,9 @@ Accede a la unidad USB del XIAO ESP32S3 y copia el archivo UF2 convertido a ella
 
 :::
 
-**Paso 5**: Volver a Entrar al Modo UF2 BootLoader
+**Paso 5**: Volver a Entrar al Modo BootLoader UF2
 
-Si necesitas volver a entrar al modo UF2 BootLoader para subir otro archivo UF2, presiona rápidamente el botón **Reset** seguido del botón **Boot**. No hay necesidad de ejecutar el script boot_uf2.bat nuevamente.
+Si necesitas volver a entrar al modo BootLoader UF2 para subir otro archivo UF2, presiona rápidamente el botón **Reset** seguido del botón **Boot**. No hay necesidad de ejecutar el script boot_uf2.bat nuevamente.
 
 :::note
 ¡Presiona Reset, luego Boot, rápidamente!
@@ -695,7 +695,7 @@ El proyecto está compuesto por personalizar el bootloader de segunda etapa de I
 
 ### P1: ¿Qué debo hacer si falla la subida del programa/el programa funciona de manera anormal/no se encuentra el puerto del dispositivo?
 
-Si encuentras el problema anterior, se recomienda que primero intentes presionar el botón de reset en el XIAO ESP32S3 para tratar de hacer que el programa funcione nuevamente. Si el problema persiste, por favor revisa nuevamente tu programa y lee los métodos proporcionados en **[Modo BootLoader](#bootloader-mode)** para restaurar el dispositivo.
+Si encuentras el problema anterior, se recomienda que primero intentes presionar el botón de reinicio en el XIAO ESP32S3 para tratar de hacer que el programa funcione nuevamente. Si el problema persiste, por favor revisa nuevamente tu programa y lee los métodos proporcionados en **[Modo BootLoader](#bootloader-mode)** para restaurar el dispositivo.
 
 ### P2: ¿Por qué mi XIAO tiene el problema de no estar alineado en las esquinas redondeadas? ¿Es esto un problema de calidad?
 
@@ -776,12 +776,12 @@ Para flashear el firmware, simplemente ejecuta el archivo `.bat` apropiado. Si e
 
 ### Para Seeed Studio XIAO ESP32S3 Plus
 
-- **[ZIP]** [Esquemático de Seeed Studio XIAO ESP32S3 Plus](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1.0_SCH_PCB.zip)
+- **[PDF]** [Esquemático de Seeed Studio XIAO ESP32S3 Plus](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_SCH_PDF.pdf)
 - **[ZIP]** [Librerías KiCAD de Seeed Studio XIAO ESP32S3 Plus](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_KiCAD_Library2.zip)
 - **[DXF]** [Dimensiones de Seeed Studio XIAO ESP32S3 Plus en DXF (superior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/TOP.dxf)
 - **[DXF]** [Dimensiones de Seeed Studio XIAO ESP32S3 Plus en DXF (inferior)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/BOTTOM.dxf)
 - **[XLSX]** [Hoja de pines de Seeed Studio XIAO ESP32S3 Plus](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_Pinout.xlsx)
-- **[ZIP]** [Archivo KiCAD de Seeed Studio XIAO ESP32S3 Plus](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_V1.0_SCH%26PCB_KICAD.zip)
+- **[ZIP]** [Archivo KiCAD de Seeed Studio XIAO ESP32S3 Plus](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1_SCH_PCB.zip)
 - **[ZIP]** [Base Seeed Studio XIAO Plus con pads inferiores expuestos](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip)
 - **[ZIP]** [Base Seeed Studio XIAO Plus sin pads inferiores expuestos](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
 

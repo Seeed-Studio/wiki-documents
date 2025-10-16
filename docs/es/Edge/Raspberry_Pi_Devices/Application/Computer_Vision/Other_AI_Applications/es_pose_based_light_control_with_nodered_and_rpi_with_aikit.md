@@ -161,7 +161,7 @@ python3 video_receiver.py
 
 Mostramos esta demostración en una transmisión en vivo de YouTube que comienza en ```19:47```. Y puedes ver que la luz se encenderá cuando la presentadora aplauda, luego la luz se apagará cuando la presentadora agite su mano, disfruta esta demostración:
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/v-S6_tH75NI" title="Making Next Gadget: AI Boosted RPi for Real World Applications" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

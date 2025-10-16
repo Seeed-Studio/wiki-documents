@@ -117,7 +117,7 @@ XIAOに加えて、WS281xモデルのライトバーまたはライトビーズ�
 
 ## ビデオチュートリアル
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="750" height="450" src="https://www.youtube.com/embed/bhHVbRe_Gtw?si=iH-oouOl_ItkG7vF?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 

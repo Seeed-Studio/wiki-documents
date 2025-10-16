@@ -11,8 +11,10 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /device_network_setup
 last_update:
-  date: 09/19/2025
+  date: 10/13/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
 
 # Device Network Setup Guide
@@ -20,7 +22,7 @@ last_update:
 This document will guide you through the network configuration process for your SenseCAP Watcher Agent. Follow these steps to easily connect your device to your network and get started.
 
 The following video serves as a step-by-step tutorial on how to configure your device using the Web Control Panel.
-<div class="table-center"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6UDVsv953Tw?si=0yD96_pQq1cMjjAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div class="video-container"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6UDVsv953Tw?si=0yD96_pQq1cMjjAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 ## Prerequisites
 
@@ -126,6 +128,10 @@ If you have previously paired to a network, restart device and press the scroll 
 **Q: What should I do if the configuration page doesn't load automatically?**
 
 A: Manually navigate to `http://192.168.4.1` in web browser while connected to the Watcher-XXXX network.
+
+**Q: How to access other Wi-Fi networks?**
+
+A: When "Scanning Wi-Fi" is displayed upon startup, press the scroll wheel to enter the wifi configuration mode. The configured wifi will be saved.
 
 ## Technical Support
 

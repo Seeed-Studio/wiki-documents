@@ -20,7 +20,9 @@ En este proyecto vamos a usar Wio Terminal y Tensorflow Lite para Microcontrolad
 
 ¡Para más detalles y visuales, mira el video correspondiente!
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qbpVltzvL6Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Aprenderás cómo aplicar técnicas de optimización de modelos, que permitirán no solo ejecutar una red neuronal convolucional de tamaño mediano, sino también tener esta elegante GUI y conexión WiFi funcionando al mismo tiempo durante días y meses seguidos.
 

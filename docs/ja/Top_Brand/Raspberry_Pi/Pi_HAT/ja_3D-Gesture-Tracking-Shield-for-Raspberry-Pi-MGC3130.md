@@ -35,7 +35,9 @@ Microchipの特許技術であるGestIC®テクノロジーのおかげで、こ
 
 なんて素晴らしいモジュールでしょう！これを使えば、ジェスチャーでライト、テレビ、スピーカーなどを操作できます。想像力を解き放ち、さらに魔法のようなプロジェクトを作りましょう。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/iLav34w77ns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130-p-4073.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
@@ -165,7 +167,9 @@ make clean && make
 - **Tap electrode**：特定のエリアを指でタップすると、「中央」「東」「西」「南」「北」が取得されます。
 - **Double Tap electrode**：特定のエリアを指でダブルタップすると、「中央」「東」「西」「南」「北」が取得されます。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/__9Vas2kGHw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## 回路図オンラインビューア
 

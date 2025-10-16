@@ -169,7 +169,9 @@ sudo python dfu.py --download 1_channel_firmware.bin
 
 以下は DOA と AEC に関するビデオです。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/gGVQ-9f7azs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### DFU と LED 制御ドライバーのインストール
 
@@ -628,7 +630,9 @@ make
 
 - ステップ 4. 4チャンネルの生音声データを含む6_channels_firmware.binでマイクアレイをアップグレードします。
 
+<div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/K5gZabfaaPI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## FAQ
 

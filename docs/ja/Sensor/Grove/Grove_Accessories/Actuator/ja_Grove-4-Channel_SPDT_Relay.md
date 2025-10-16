@@ -387,7 +387,9 @@ ST32シリーズのチップが世界的に品薄となり、価格が数回上�
 
 この製品の紹介ビデオです。簡単なデモも含まれており、試してみることができます。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5NBdUr5D-8M?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **ホームオートメーションとモニタリング:** RSL10 Sense DB ベースのシステムで、スマートフォンアプリや Alexa を使用して温度、湿度、光の強度をモニタリングおよび制御できます。
 
@@ -395,7 +397,9 @@ ST32シリーズのチップが世界的に品薄となり、価格が数回上�
 
 **Grove - 4-Channel SPDT Relay:** Seeekers の皆さん！これは #newproductsTuesday セグメントの第2週目です。このビデオでは新しい Grove - 4-Channel SPDT Relay の製品紹介と興味深いデモが行われます。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=5NBdUr5D-8M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技術サポートと製品ディスカッション
 

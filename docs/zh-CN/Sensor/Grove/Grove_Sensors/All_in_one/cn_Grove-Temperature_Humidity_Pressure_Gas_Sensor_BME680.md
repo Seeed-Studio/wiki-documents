@@ -322,7 +322,9 @@ I (3701) BME680_EXAMPLE:   Data Valid: Yes
 
 这是该产品的介绍视频，包含简单的演示，您可以尝试一下。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/O3oHtW2TlXY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技术支持与产品讨论
 

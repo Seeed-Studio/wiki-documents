@@ -691,6 +691,7 @@ void loop() {
 
 #### Demostración
 
+<div class="video-container">
 <iframe
   className="youtube-video-r"
   src="https://www.youtube.com/embed/Z2NROYx7hcQ"
@@ -699,6 +700,7 @@ void loop() {
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   style={{ width: '380px', height: '640px' }}
 ></iframe>
+</div>
 
 ¡Felicidades por completar exitosamente tu proyecto de iluminación controlada por Zigbee! Hay muchas más aplicaciones emocionantes de Zigbee esperando que las explores. ¡Sigue con el excelente trabajo!
 

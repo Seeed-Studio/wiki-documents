@@ -23,7 +23,9 @@ MAix M1は、デュアルコア64ビットCPU、230GMULps 16ビットKPU（ニ�
 
 このボードがエッジコンピューティング、AIビジョン、音声認識、その他のAIプロジェクトに役立つことを願っています。ぜひ楽しんでください。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/5BF3ExL1HOQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-AI-HAT-for-Edge-Computing-p-4026.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 

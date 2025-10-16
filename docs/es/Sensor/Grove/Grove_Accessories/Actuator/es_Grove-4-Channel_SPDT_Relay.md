@@ -388,7 +388,9 @@ Debido a que los chips de la serie ST32 están agotados globalmente, los precios
 
 Este es el video de introducción de este producto, demostraciones simples, puedes intentarlo.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5NBdUr5D-8M?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **Automatización y Monitoreo del Hogar:** Un sistema basado en RSL10 Sense DB que puede monitorear y controlar la temperatura, humedad e intensidad de luz mediante una aplicación de smartphone y Alexa.
 
@@ -396,7 +398,9 @@ Este es el video de introducción de este producto, demostraciones simples, pued
 
 **Grove - 4-Channel SPDT Relay:** ¡¡¡Hola Seeekers!!! Esta es la segunda semana de nuestro segmento #newproductsTuesday. Habrá una presentación del producto de nuestro nuevo Grove - 4-Channel SPDT Relay en este video y también una demostración genial e interesante.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=5NBdUr5D-8M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Soporte Técnico y Discusión de Productos
 

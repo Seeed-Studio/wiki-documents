@@ -15,7 +15,9 @@ last_update:
 
 Grove - MP3 v2.0 es un módulo de audio compacto y de tamaño pequeño. Soporta varias operaciones de archivos de audio para archivos de formato MP3, WAV y WMV, como reproducción aleatoria de música, reproducir música en archivos específicos, y más. Con comunicación serie, puedes usar todos los comandos predefinidos o combinaciones de comandos para realizar todas las operaciones en archivos de música. Este módulo también soporta sistemas de archivos generales como FAT16 y FAT32. Tiene una interfaz Grove UART, un conector de audio de 3.5 mm y una ranura micro-SD. Con este módulo, puedes añadir algo de sonido a tus aplicaciones silenciosas.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/3FMlt_aqhOc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-MP3-v2-0-p-2597.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width={210} height={41} border={0} /></a></p>
 

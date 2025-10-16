@@ -16,7 +16,9 @@ last_update:
 
 Grove - MP3 v2.0は、小型でコンパクトなオーディオモジュールです。このモジュールは、MP3、WAV、WMV形式のオーディオファイルに対して、ランダム再生や特定ファイルの再生など、さまざまな操作をサポートします。シリアル通信を使用することで、すべての事前定義されたコマンドやコマンドの組み合わせを利用して、音楽ファイルに対するすべての操作を実行できます。また、このモジュールはFAT16やFAT32などの一般的なファイルシステムにも対応しています。Grove UARTインターフェース、3.5 mmオーディオジャック、micro-SDスロットを備えており、このモジュールを使用することで、静かなアプリケーションに音を追加することができます。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/3FMlt_aqhOc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-MP3-v2-0-p-2597.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width={210} height={41} border={0} /></a></p>
 

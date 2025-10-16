@@ -378,7 +378,9 @@ En la parte superior de la caja, hay una luz de advertencia, que parpadeará cua
 - Paso 7. Usar la Herramienta de Depuración Remota para acceder al dispositivo.
 - Paso 8. Seguir el video para operar el ejemplo de 3 maneras diferentes.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NgH3Ot9pM1Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Recursos
 

@@ -117,7 +117,7 @@ This tutorial will use the **XIAO ESP32C3** as an example to give you an overvie
 
 ## Video Tutorials
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="750" height="450" src="https://www.youtube.com/embed/bhHVbRe_Gtw?si=iH-oouOl_ItkG7vF?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 

@@ -375,59 +375,87 @@ You may refer to the specific library lists here: [https://github.com/Seeed-Stud
 
 ### Lesson 1 - Hello World
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/af_I0n5iyzk" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lesson 2 - Drawing Shapes
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IFRiGpK4HK8" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lesson 3 - Displaying Fonts
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aZ9LYoS8w24" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lesson 4 - Displaying Images and Simple UI
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/P8CQtByWfS4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lesson 5 - Line Charts and Histograms
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OnYLy7k-4T4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lesson 6 -  Using Grove Modules
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NeFotsklchc" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lesson 7 -  Communication Protocols
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kn9WJn2FRkI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lesson 8 -  Built-In Hardware/Sensors Part 1 | 3 Buttons & 5-Way Switch
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tVd4L7Hzj7M" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lesson 9 -  Built-In Hardware/ Sensors Part 2 | Microphone & Buzzer
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aYEI9UGIBvo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lesson 10 -  Built-In Hardware/ Sensors Part 3 | Accelerometer & Light Sensor
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3dw-Ony6CIE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lesson 11 -  Build a TV Remote using the built-in IR Emitter
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/C9AlljLst2o" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lesson 12 -  Smart Garden Project using Wio Terminal
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NQt-XLcSIwA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lesson 13 -  Use Wio Terminal as a Mouse for PC
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QIR_yqQnYPY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lesson 14 -  Use Wio Terminal as a Keyboard for PC
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JLrP058LDr8" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Wio Terminal in Deep Learning supproted by CAVEDU Education
 

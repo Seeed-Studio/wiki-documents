@@ -253,7 +253,7 @@ Los resultados del cálculo muestran que la velocidad de inferencia del modelo d
 
 En el video de demostración, el dispositivo Jetson opera con poco menos de 20W pero logra una velocidad de inferencia impresionante.
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/ohd_T95br90" title="deploy deepseek on jetson with mlc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

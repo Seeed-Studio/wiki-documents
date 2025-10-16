@@ -19,11 +19,11 @@ last_update:
 
 详情请点击[这里](/cn/solution_of_insufficient_space)
 
-#### Q3: 如何解决 reComputer 与 VEYE 相机的兼容性问题？
+#### Q3: 如何解决 reComputer 与 VEYE 摄像头的兼容性问题？
 
 详情请点击[这里](/cn/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera)
 
-#### Q4: 如何解决 IMX477 相机与 A603 载板的兼容性问题？
+#### Q4: 如何解决 IMX477 摄像头与 A603 载板的兼容性问题？
 
 详情请点击[这里](/cn/Use_IMX477_Camera_with_A603_Jetson_Carrier_Board)
 
@@ -38,8 +38,8 @@ last_update:
 #### Q7: 刷写设备后无法使用 USB-A 端口、以太网端口或没有 HDMI 显示。
 **A:** 请检查文件完整性（例如，我们提供了 SHA256 校验和），对于某些载板（特别是 A60X 系列），确保驱动程序补丁已成功复制/应用到 **Linux_for_tegra** 目录。有些文件需要 **sudo** 权限，当您复制目录时，确保在命令中包含 **-r** 参数。
 
-#### Q8: 执行"sudo apt-get update && sudo apt-get upgrade"命令后，我的系统崩溃/无法启动/黑屏/丢失外设驱动程序。
-**A:** 这些问题可以归结为**"为什么我不能在自定义载板上使用 apt upgrade 升级系统？"** 简短的答案是：**不要**在**自定义/第三方**载板上运行 apt upgrade 命令。此外，避免运行包含 apt upgrade 命令的任何脚本或在 Ubuntu 中使用 GUI 更新工具。来自服务器的 Debian 包不考虑我们自定义板的特定设计，强制升级可能导致不兼容问题，可能会损坏您的设备。此过程仅与官方开发套件兼容。要解决这些问题，请按照我们的指南重新刷写 JetPack。
+#### Q8: 执行 "sudo apt-get update && sudo apt-get upgrade" 命令后，我的系统崩溃/无法启动/黑屏/丢失外设驱动程序。
+**A:** 这些问题可以归结为 **"为什么我不能在自定义载板上使用 apt upgrade 升级系统？"** 简短的答案是：**不要**在**自定义/第三方**载板上运行 apt upgrade 命令。此外，避免运行包含 apt upgrade 命令的任何脚本或在 Ubuntu 中使用 GUI 更新工具。来自服务器的 Debian 包不考虑我们自定义板的特定设计，强制升级可能导致不兼容问题，可能会损坏您的设备。此过程仅与官方开发套件兼容。要解决这些问题，请按照我们的指南重新刷写 JetPack。
 
 #### Q9: 如果您告诉我不能执行 apt upgrade，我如何升级软件包？如果不升级软件会有安全风险吗？
 
@@ -76,6 +76,11 @@ sudo apt-mark hold nvidia-l4t-core
 #### Q16: 如果 reComputer/reServer 没有所需的 `.ko` 驱动模块，我如何编译可用的驱动程序？
 
 详情请点击[这里](/cn/how_to_build_the_ko_module_for_seeed_jetson)
+
+#### Q17：如何在刷写镜像之前加密 Jetson 的磁盘？
+
+详情请点击[这里](/cn/how_to_encrypt_the_disk_for_jetson)
+
 
 ## 技术支持
 

@@ -29,7 +29,7 @@ last_update:
 
 これはSenseCAP Watcherクイックスターターガイドで、初回のデバイスの開封と実際の操作をサポートします。
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yufEUFEB0Ic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 

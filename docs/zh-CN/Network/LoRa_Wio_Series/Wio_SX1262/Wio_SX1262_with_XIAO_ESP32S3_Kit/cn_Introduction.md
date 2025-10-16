@@ -160,7 +160,9 @@ Seeed 为这款 XIAO ESP32S3 & Wio-SX1262 套件提供了 3 种应用：
 
 ## 视频说明
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/AGPZ9xnX3gs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## 资源
 

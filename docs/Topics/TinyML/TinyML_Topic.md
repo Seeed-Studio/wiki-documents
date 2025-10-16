@@ -402,7 +402,7 @@ Wio Terminal is a powerful and easy-to-use development board designed for makers
 
 Wio Terminal supports a range of programming languages including Arduino, MicroPython, CircuitPython, and more, making it easy for developers to get started. With its compact and portable design, Wio Terminal is ideal for a wide range of projects, from creating smart devices to building prototypes for industrial applications.
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="960" height="500" src="https://www.youtube.com/embed/3Fp3W9VJUL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 

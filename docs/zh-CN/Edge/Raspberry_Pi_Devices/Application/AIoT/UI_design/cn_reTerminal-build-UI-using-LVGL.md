@@ -61,7 +61,9 @@ git clone --recursive https://github.com/littlevgl/pc_simulator.git
 
 ### 在主机PC上
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/UrSkzbuuGaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 EdgeLine 是 LVGL 的所见即所得编辑器，允许用户创建界面，然后导出 C/Micropython 代码以在目标设备上使用。它目前处于测试阶段，功能有限，可用于 Windows 和 Linux。
 

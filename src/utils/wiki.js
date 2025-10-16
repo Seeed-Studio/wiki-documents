@@ -1,16 +1,30 @@
 const docList = [
   [
     {
-      "path": "/xiao_nrf54l15_sense_power_consumptions",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.webp",
-      "title": "Power Consumptions Example for XIAO nRF54L15 (PlatformIO)",
-      "date": "11/9/2025"
+      "path": "/pycuvslam_recomputer_robotics",
+      "image": "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/rgb_homepage.gif",
+      "title": "PyCuVSLAM with reComputer",
+      "date": "2025-10-10T00:00:00.000Z"
     },
     {
-      "path": "/watcher_local_deploy",
-      "image": "https://files.seeedstudio.com/wiki/watcher_getting_started/watcherAI.webp",
-      "title": "Deploy Watcher's AI capabilities locally",
-      "date": "11/9/2025"
+      "path": "/vlm",
+      "image": "https://files.seeedstudio.com/wiki/reComputer-Industrial/reComputer-Industrial-J4012.webp",
+      "title": "How to use LLaVa on the reComputer Industrial J4012 to monitor your warehouse",
+      "date": "10/10/2025"
+    }
+  ],
+  [
+    {
+      "path": "/e04_with_platformio",
+      "image": "https://files.seeedstudio.com/wiki/Epaper/EE04/pio_show_1.webp",
+      "title": "XIAO ePaper Display Board EE04 with PlatfromIO",
+      "date": "10/10/2025"
+    },
+    {
+      "path": "/EE04_with_esphome_advanced",
+      "image": "https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp",
+      "title": "EE04 ePaper Display Work with ESPHome for Home Assistant",
+      "date": "10/07/2025"
     }
   ],
   [
@@ -67,20 +81,6 @@ const docList = [
       "image": "https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.webp",
       "title": "Seeed Studio XIAO nRF54L15 Matter",
       "date": "9/22/2025"
-    }
-  ],
-  [
-    {
-      "path": "/reterminal_e10xx_trmnl",
-      "image": "https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.webp",
-      "title": "reTerminal E Series ePaper Display Works with TRMNL",
-      "date": "09/19/2025"
-    },
-    {
-      "path": "/respeaker_xvf3800_xiao_tensorflow",
-      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp",
-      "title": "TensorFlow Lite on ReSpeaker XVF3800",
-      "date": "9/19/2025"
     }
   ]
 ];

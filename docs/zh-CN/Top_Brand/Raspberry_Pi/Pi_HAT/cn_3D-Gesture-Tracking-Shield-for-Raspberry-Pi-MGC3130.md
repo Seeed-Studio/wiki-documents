@@ -34,7 +34,9 @@ last_update:
 
 多么神奇的模块，有了它的帮助，你可以用手势控制灯光、电视、音响...只需释放你的想象力，创造更多神奇的项目。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/iLav34w77ns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130-p-4073.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
@@ -164,7 +166,9 @@ make clean && make
 - **Tap electrode**: 在特定区域轻敲手指，您将得到 Center、East、West、South 和 North。  
 - **Double Tap electrode**: 在特定区域双击手指，您将得到 Center、East、West、South 和 North。  
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/__9Vas2kGHw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## 原理图在线查看器
 

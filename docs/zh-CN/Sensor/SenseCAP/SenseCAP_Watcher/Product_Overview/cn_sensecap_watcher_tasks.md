@@ -38,7 +38,7 @@ Watcher 是一个强大的工具，依靠用户发出的命令来执行各种监
 
 ## SenseCAP Watcher 高级配置
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ono_v759R0Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 

@@ -15,7 +15,9 @@ last_update:
 
 El Grove - Sensor de Sonoridad está diseñado para detectar el sonido del entorno. Basado en el amplificador LM2904 y un micrófono integrado, amplifica y filtra la señal de alta frecuencia que recibe del micrófono, y emite una envolvente positiva. Esto se utiliza para la adquisición de señales de Arduino. El valor de salida depende del nivel de entrada de sonido. Para evitar perturbaciones de señal innecesarias, la señal de entrada pasará por dos veces de filtrado dentro del módulo. Hay un potenciómetro de tornillo que permite ajustes manuales a la ganancia de salida.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/EhZ7uDvoALE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-Loudness-Sensor-p-1382.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width={200} height={38} border={0} /></a></p>
 

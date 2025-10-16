@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-09-30 11:23:55 (北京时间)
-// 多语言页面: 2019 个
+// 生成时间: 2025-10-16 10:36:33 (北京时间)
+// 多语言页面: 2025 个
 
 (function() {
   'use strict';
@@ -869,6 +869,12 @@
     "es",
     "ja"
   ],
+  "/vlm": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/reComputer_A203_Flash_System": [
     "cn",
     "en",
@@ -935,6 +941,12 @@
     "es",
     "ja"
   ],
+  "/recomputer_j501_mini_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/j401_mini_carrierboard_hardware_interfaces_usage": [
     "cn",
     "en",
@@ -984,6 +996,12 @@
     "ja"
   ],
   "/how_to_build_the_source_code_project_for_seeed_jetson_bsp": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/how_to_encrypt_the_disk_for_jetson": [
     "cn",
     "en",
     "es",
@@ -3983,6 +4001,12 @@
     "es",
     "ja"
   ],
+  "/pycuvslam_recomputer_robotics": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/sensing_gmsl_cameras": [
     "cn",
     "en",
@@ -5735,7 +5759,19 @@
     "es",
     "ja"
   ],
+  "/EE04_with_esphome_advanced": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/epaper_ee04": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/e04_with_platformio": [
     "cn",
     "en",
     "es",

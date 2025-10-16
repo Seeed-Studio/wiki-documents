@@ -24,9 +24,9 @@ La Serie Wio Tracker L1 está disponible en 4 versiones—elige la que mejor se 
 
 ### Introducción de la Serie
 
-<center>
+<div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/TTiDN3h7cNk?si=2F0PXFlQmDSefCdX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</center>
+</div>
 
 ### Comparación de Versiones
 

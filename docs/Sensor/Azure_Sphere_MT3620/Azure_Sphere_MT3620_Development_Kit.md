@@ -29,7 +29,9 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
 - Install [Visual Studio](https://visualstudio.microsoft.com/) (Support Community, Enterprise or Professional) and the Azure Sphere extension, plug the development board into a PC over USB, and start developing IoT applications with unprecedented levels of security.
 - To use the MT3620 Dev Board for Azure Sphere, you’ll need a Windows 10 PC with the latest Windows Updates, along with [Azure Sphere software development kit](http://aka.ms/AzureSphereSDK) SDK.
 
+<div class="video-container">
 <iframe width="600" height="450" src="https://www.youtube.com/embed/iiDF26HNh-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 |Product Name | How to Buy|
 |----------------|-----------|
@@ -375,7 +377,9 @@ If you do not know how to upload the code, please check [how to upload code](htt
 
 For detail operation, please refer to the video.
 
+<div class="video-container">
 <iframe width="1000" height="669" src="https://www.youtube.com/embed/KXThR9RUNvw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Resource
 

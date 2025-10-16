@@ -658,7 +658,7 @@ if __name__ == "__main__":
 
 私たちの推論テストは、RTX 4080 GPUを搭載したラップトップで実施されました。推論精度は優秀でしたが、大型VLAモデルのサイズにより、アームの動きに顕著なジッターが観察されました。それにもかかわらず、システムは意図されたすべてのタスクを正常に達成しています。
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="480" src="https://www.youtube.com/embed/nOTwjHGjE_Q" title="AI-Powered Control of the Robotic Arm via GR00T" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

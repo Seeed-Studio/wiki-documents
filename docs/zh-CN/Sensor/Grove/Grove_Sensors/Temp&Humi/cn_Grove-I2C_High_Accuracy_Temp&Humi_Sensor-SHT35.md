@@ -14,7 +14,9 @@ last_update:
 
 Grove - I2C 高精度温湿度传感器(SHT35) 基于 SHT3x-DIS，这是 Sensirion 下一代温湿度传感器。它建立在新的 CMOSens® 传感器芯片基础上，该芯片是 Sensirion 新型湿度和温度平台的核心。与前代产品相比，SHT3x-DIS 具有更高的智能性、可靠性和改进的精度规格。其功能包括增强的信号处理、两个独特的用户可选择 I2C 地址以及高达 1 MHz 的通信速度。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/MwLEawbP0ZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center' }}><a href="https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp%26Humi-Sensor%28SHT35%29-p-3182.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 

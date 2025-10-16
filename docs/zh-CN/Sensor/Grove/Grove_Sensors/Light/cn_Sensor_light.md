@@ -233,7 +233,9 @@ last_update:
 
 ### Grove - 光传感器 v1.1 教程
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZvFswNYY2mU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 - [什么是光传感器？类型、用途、Arduino指南](https://www.seeedstudio.com/blog/2020/01/08/what-is-a-light-sensor-types-uses-arduino-guide/)
 

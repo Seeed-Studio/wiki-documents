@@ -118,7 +118,9 @@ Mycroft PreciseはApache-2.0ライセンスプロジェクトであり、これ�
 
 **音声対応のコーヒーマシンで自宅のバリスタが実現**: オープンソースでプライバシーを重視した設計のコーヒーマシン。お気に入りのコーヒーやカフェインスケジュールをプライベートに保つことができます。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4gN1bvl24ZM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技術サポートと製品ディスカッション
 

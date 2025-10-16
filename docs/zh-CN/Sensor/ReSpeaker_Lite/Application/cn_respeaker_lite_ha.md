@@ -19,7 +19,9 @@ last_update:
 
 在本章中，我们将使用[ReSpeaker Lite语音助手套件](https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-p-5929.html)连接Sonoff智能开关，实现语音控制灯光开关。
 
+<div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/I9KOY2ik5nw" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ## 所需硬件
 
