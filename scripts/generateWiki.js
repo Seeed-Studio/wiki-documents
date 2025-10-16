@@ -26,6 +26,13 @@ const excludedPaths = [
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_Build_the_ko_Module_for_Seeed_Jetson.md'), //9.25
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T1000_Tracker', 'SenseCAP_T1000_Tracker_Introduction.md'), //10.11
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Notifications', 'Http_Proxy_Application', 'smart_home', 'integrate_watcher_to_ha.md'), //10.11
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Other_Devices', 'Jetson_AGX_Orin_32GB_H01_Flash_Jetpack.md'), //10.14
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Carrier_Boards', 'J501_Mini', 'reServer_Industrial_J501_Getting_Started.md'), //10.13
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'Lerobot', 'Lerobot_Starai_Arm.md'), //10.13
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Indicator', 'Introduction.md'), //10.13
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'Watcher-Agent', 'Device_Network_Setup_Guide.md'), //10.13
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'Watcher-Agent', 'Web_Control_Panel.md'), //10.13
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_Encrypt_the_Disk_for_Jetson.md'), //10.11
 ];
 
 // 递归函数，用于遍历多层文件夹
