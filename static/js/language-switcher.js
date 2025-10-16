@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-10-13 11:27:53 (北京时间)
-// 多语言页面: 2022 个
+// 生成时间: 2025-10-16 10:36:33 (北京时间)
+// 多语言页面: 2025 个
 
 (function() {
   'use strict';
@@ -941,6 +941,12 @@
     "es",
     "ja"
   ],
+  "/recomputer_j501_mini_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/j401_mini_carrierboard_hardware_interfaces_usage": [
     "cn",
     "en",
@@ -990,6 +996,12 @@
     "ja"
   ],
   "/how_to_build_the_source_code_project_for_seeed_jetson_bsp": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/how_to_encrypt_the_disk_for_jetson": [
     "cn",
     "en",
     "es",
@@ -5742,6 +5754,12 @@
     "ja"
   ],
   "/Wireless_Sensor_Node-Solar_Kit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/EE04_with_esphome_advanced": [
     "cn",
     "en",
     "es",
