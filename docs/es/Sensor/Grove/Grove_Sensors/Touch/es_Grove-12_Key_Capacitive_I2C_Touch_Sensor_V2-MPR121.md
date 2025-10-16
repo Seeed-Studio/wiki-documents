@@ -25,7 +25,9 @@ Basado en el Freescale MPR121, este sensor tiene 12 electrodos completamente ind
 
 Este sensor es una versión mejorada del [Grove - Sensor Táctil I2C](https://www.seeedstudio.com/Grove-I2C-Touch-Sensor-p-840.html), para satisfacer las necesidades de Matsuzawa.Takashi (uno de nuestros clientes), hicimos la dirección I2C cambiable, e incluso más barata que la versión anterior. Así que si tienes alguna sugerencia sobre todos los Groves, por favor escríbenos. Siempre escucharemos tu voz, puede hacer otra mejora, incluso un nuevo grove. Por favor escribe amablemente tus sugerencias en la página [Grove 100+](https://www.seeedstudio.com/grove_100).
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/CPq4VSAXBgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html
 " target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
@@ -439,7 +441,9 @@ Si todo va bien, obtendrás el resultado. Cuando toques las almohadillas CH0 ~ C
 
 Este es el video de introducción de este producto, demostraciones simples, puedes intentarlo.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ds7kBVdeY4U?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **Piano de Hojas**: Hicimos un piano usando un sensor táctil, así como hojas para las teclas del piano.
 

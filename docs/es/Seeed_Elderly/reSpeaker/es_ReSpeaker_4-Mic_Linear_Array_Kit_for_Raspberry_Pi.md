@@ -26,7 +26,9 @@ Raspberry Pi consta de dos placas, una es
 el HAT accesorio de voz, la otra es la matriz lineal de cuatro
 micrófonos.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NxZx9nz67Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 El ReSpeaker 4-Mic Linear Array Kit para
 Raspberry Pi soporta 8 canales de entrada y 8 de salida

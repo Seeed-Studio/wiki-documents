@@ -24,6 +24,8 @@ const excludedPaths = [
   path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R21xx', 'reComputer_Industrial_R21xx_flash_os.md'), //9.28
   path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Application', 'Development_Tools', 'recomputer_use_sqlite.md'), //9.25
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_Build_the_ko_Module_for_Seeed_Jetson.md'), //9.25
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T1000_Tracker', 'SenseCAP_T1000_Tracker_Introduction.md'), //10.11
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Notifications', 'Http_Proxy_Application', 'smart_home', 'integrate_watcher_to_ha.md'), //10.11
 ];
 
 // 递归函数，用于遍历多层文件夹

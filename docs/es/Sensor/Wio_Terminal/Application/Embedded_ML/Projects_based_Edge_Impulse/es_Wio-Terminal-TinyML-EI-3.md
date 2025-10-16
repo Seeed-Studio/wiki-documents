@@ -17,7 +17,9 @@ last_update:
 En este proyecto aprenderemos cómo entrenar y desplegar un clasificador de escenas de audio con Wio Terminal y Edge Impulse.
 ¡Para más detalles y tutorial en video, mira el video correspondiente!
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2BISspenUng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Procesamiento de sonido en computadoras
 

@@ -253,7 +253,7 @@ print(f"Tokens per second: {tokens_per_second:.2f} tokens/second")
 
 デモンストレーション動画では、Jetsonデバイスが20W未満で動作しながら、印象的な推論速度を実現しています。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/ohd_T95br90" title="deploy deepseek on jetson with mlc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

@@ -337,7 +337,7 @@ bash run.sh object-detection-hailo
 
 这是我们演示在 Raspberry Pi 5 上训练 YOLOv8n 模型并部署的视频。我们将批处理大小设置为 8，输入尺寸设置为 640x640，输入视频帧率设置为 240 fps。实现的推理速度为 136.7 fps，对于大多数应用场景来说都是非常快的。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/mVNrEVpvvuc" title="YOLOv8n Object Detection on Raspberry Pi 5 with AI Kit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

@@ -170,13 +170,17 @@ GPSモジュールには多くの利用方法があります。特に、これ�
 
 **LEDバイクスピードメーター**: 自分がどれだけ速く走っているか知りたいですか？このDIYバイクスピードメーターでは、GPS技術を使用して速度を測定し、どれだけ速く走っているかを確認できます。また、速度をライダーに示すRGB LEDも搭載しています。詳細情報は[こちら](https://create.arduino.cc/projecthub/JeremySCook/gps-led-bike-speedometer-c8f956?ref=tag&ref_id=gps&offset=26)をご覧ください。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=CeStrH-5Llo&feature=emb_rel_end" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **個人GPSアシスタント**: このプロジェクトは、人や物を監視し、その位置や接続されたセンサーの値を継続的に知らせるデバイスです。センサーの制限値を設定する機能があり、これを超えるとSMSアラートが送信されます。また、特定の場所からの制限を設定することができ、デバイスがそのエリアを離れると通知が届きます。さらに、SMSを通じてデバイスと通信し、情報を取得することも可能です。
 
 詳細情報は[こちら](https://create.arduino.cc/projecthub/Momy93/sandro-your-personal-gps-assistant-26dfa3?ref=tag&ref_id=gps&offset=32)をご覧ください。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://youtu.be/3lcP4YtxlCg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## リソース
 

@@ -545,7 +545,9 @@ source toaster start webport=9000
 
 这个演讲主要专注于解释如何使用 Yocto 项目轻松地为 CM4 载板、X86 和 STM32 开发板创建自定义 Linux 镜像。此外，在演讲的最后，还有两个基于 Qt、LVGL 的 HMI 演示，以及一个展示使用 Mender 对这些 SBC 进行安全可靠的 OTA 更新的演示。
 
-<p style={{textAlign: 'center'}}><iframe width="720" height="480" src="https://www.youtube.com/embed/OHT9f_NOEpA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<div class="video-container">
+<iframe width="720" height="480" src="https://www.youtube.com/embed/OHT9f_NOEpA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## 资源
 

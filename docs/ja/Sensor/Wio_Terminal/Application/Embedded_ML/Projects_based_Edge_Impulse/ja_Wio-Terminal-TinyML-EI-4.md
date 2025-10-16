@@ -25,7 +25,9 @@ last_update:
 
 詳細やビデオチュートリアルについては、対応するビデオをご覧ください！
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pt1maDNXznI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## データの理解
 

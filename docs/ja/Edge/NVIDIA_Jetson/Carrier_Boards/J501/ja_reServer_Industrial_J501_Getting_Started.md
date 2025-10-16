@@ -307,7 +307,7 @@ Ubuntuホストマシンで、ターミナルを開き、`sha256sum <File>`コ�
 インストール手順に進む前に、ボードが強制リカバリモードになっていることを確認する必要があります。
 :::
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/CGMGZGqZPKM" title="J501 Enter Force Recovery Mode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

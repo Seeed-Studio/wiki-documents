@@ -133,7 +133,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 由于 reTerminal 基于 Raspberry Pi 4，它没有用于神经网络推理的额外硬件加速器，因此只能应用 CPU 推理的标准优化方法。
 此主题的视频概述在这里：
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/BEDEscDQFxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 以下是 CPU 推理优化方法的简要概述：
 

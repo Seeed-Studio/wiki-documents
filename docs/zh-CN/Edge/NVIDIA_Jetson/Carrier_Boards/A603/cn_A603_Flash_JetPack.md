@@ -152,7 +152,7 @@ A603 载板是一款功能强大的扩展板，支持 Jetson Orin™ NX/Nano 模
 
 这里有一个将 JetPack 6.1 刷写到 A603 载板 + Orin Nx 16GB 模块的视频。您可以参考视频和下面的详细步骤来刷写您的设备。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/qN4GxscUGW0" title="A603 JetPack6.1 Installation Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

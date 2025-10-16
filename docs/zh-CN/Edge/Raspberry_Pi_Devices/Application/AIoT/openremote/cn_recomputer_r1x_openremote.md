@@ -30,7 +30,6 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremoter11.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 **1. 更新系统包**
 
 首先，更新包列表并升级已安装的包，以确保您的系统是最新的。
@@ -170,7 +169,6 @@ docker-compose -p openremote up
 
 点击 **Save** 确认配置。
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote3.png" alt="pir" width={800} height="auto" /></p>
 
 ### 创建天气资产
@@ -184,9 +182,7 @@ docker-compose -p openremote up
 
 天气资产现在将作为 HTTP API Agent 的子项出现在列表中。如果需要，您可以更改其父项。
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote4.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### 添加 Agent 链接
 
@@ -205,11 +201,9 @@ docker-compose -p openremote up
   - **Value filters：** `JsonPathFilter-2`
   - **Path (JSON)：** `$.main.humidity`
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote5.png" alt="pir" width={800} height="auto" /></p>
 
 ### 设置温度属性：
-
 
 - 展开 **temperature** 属性。
 - 点击 **Add configuration item** 并选择 **Agent link**。
@@ -228,7 +222,6 @@ docker-compose -p openremote up
 添加属性后，切换到 **View Mode** 查看实时天气数据。现在您已经将鹿特丹的当前温度和湿度链接到天气资产。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote1.png" alt="pir" width={800} height="auto" /></p>
-
 
 ## MQTT Agent 与 ChirpStack LoRaWAN 网关集成
 
@@ -305,9 +298,11 @@ docker-compose -p openremote up
 
 2. **配置 MQTT 订阅主题**：
    - 使用以下 ChirpStack MQTT 主题格式编辑 **Subscription Topic** 字段：
+
      ```
      application/+/device/+/event/up
      ```
+
    - 此主题将订阅来自 LoRaWAN 设备的传入传感器数据。
 
 3. **添加值过滤器**：
@@ -317,9 +312,11 @@ docker-compose -p openremote up
 
 4. **配置传感器数据的 JSON 路径**：
    - 展开新创建的 **JSON Path** 项并将 **Path** 设置为：
+
      ```
      $.object.messages[?(@.measurementId==4097)].measurementValue
      ```
+
    - 这是 SenseCap S2101 数据解码器的示例。根据您的具体设备需要调整路径。
    - 启用 **Return First** 选项。
 
@@ -336,9 +333,7 @@ docker-compose -p openremote up
 2. **监控温度**：  
    **SenseCap S2101**（或您配置的设备）现在应该发送温度读数，OpenRemote 管理器将在 **Temperature** 属性下显示这些值。
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote11.png" alt="pir" width={800} height="auto" /></p>
-
 
 ## 技术支持与产品讨论
 

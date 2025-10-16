@@ -17,71 +17,59 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 29th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is October 13th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [reComputer Industrial R20xx Getting Started](https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/)
-
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" alt="pir" width={800} height="auto" /></p>
-
-The reComputer Industrial R20xx, powered by Raspberry Pi CM5, is an adaptable edge AI/IOT conrollert  with AI capabilities. It features comprehensive industrial interfaces **(2x Ethernet, 4xUSB, 3x RS485, 1x RS232, 8x DI and 8x DO)** and flexible wireless connectivity options **(4G/5G, LoRa®, Wi-Fi/BLE),** making it ideal for diverse industrial applications.
-
-### [reComputer Industrial R21xx Getting Started](https://wiki.seeedstudio.com/recomputer_industrial_R21xx_getting_start/)
-
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/6/-/6-recomputer-industrail-r2100.jpg" alt="pir" width={800} height="auto" /></p>
-
-The reComputer Industrial R21xx, powered by Raspberry Pi CM5, is an adaptable edge AI computer  with AI capabilities. It features comprehensive industrial interfaces **(2x Ethernet, 4xUSB, 2x RS485, 2x RS232, 2x CAN FD, 4x DI and 4x DO)** and flexible wireless connectivity options (4G/5G, LoRa®, Wi-Fi/BLE), making it ideal for diverse industrial applications.
-
-### [Getting Started with XIAO ePaper Display EE04](https://wiki.seeedstudio.com/epaper_ee04/)
+### [XIAO ePaper Display Board EE04 with PlatfromIO](https://wiki.seeedstudio.com/e04_with_platformio/)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" alt="pir" width={800} height="auto" /></p>
 
-Powered by **XIAO ESP32-S3** Plus, the display board EE04 supports both **24-pin** and **50-pin** ePaper displays. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
+<div style={{ textAlign: "justify" }}>
 
-### [ROS2 on ReSpeaker XVF3800](https://wiki.seeedstudio.com/respeaker_xvf3800_ros2/)
+This document provides a guide on how to use the XIAO ePaper Display Board EE04 with PlatformIO, including hardware setup, project creation, code uploading, button control, and battery voltage detection examples.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/ros/RoS2reSpeakerXVF3800.gif" alt="pir" width={800} height="auto" /></p>
+</div>
 
-This project demonstrates the integration of the ReSpeaker XVF3800 with ROS2 for robotic applications, focusing on speech detection and Direction of Arrival (DOA) estimation. Using the Turtlesim node, we simulate robotic control based on speech input, enabling precise movement through PID control. The tutorial covers the setup of the ROS2 environment, configuration of the ReSpeaker XVF3800, and how to apply speech commands for controlling a robot. By the end, users will understand how to connect voice interfaces with robotics and use basic control algorithms for navigation.
+### [PyCuVSLAM with reComputer](https://wiki.seeedstudio.com/pycuvslam_recomputer_robotics/)
 
-### [Deploying OpenRemote on reComputer R1x Manage IoT Devices at the Edge](https://wiki.seeedstudio.com/openremote_r1x00/)
+<p style={{textAlign: 'center'}}><img src="https://media.githubusercontent.com/media/NVlabs/PyCuVSLAM/main/pycuvslam.gif" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width={600} height="auto" /></p>
+<div style={{ textAlign: "justify" }}>
 
-OpenRemote is a fully open-source IoT platform that simplifies the connection of networked devices to mobile and web applications. With the ability to deploy on Raspberry Pi-powered devices like Recomputer R1000 and R1100, OpenRemote provides a flexible edge solution for managing and controlling IoT devices in your environment.
+[PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM) is NVIDIA's GPU-accelerated visual odometry and SLAM library cuVSLAM's Python wrapper. It supports monocular, stereo, RGB-D, multi-camera, and visual-inertial (IMU) modes, providing a simple Python API that can directly interface with camera streams and output real-time camera poses, map points, and loop closure information. The underlying CUDA optimization enables high-precision, low-latency SLAM inference on both PC and Jetson devices, making it suitable for robotic navigation, drone positioning, and 3D perception applications.This wiki will provide instructions on how to deploy pycuvslam on reComputer.
 
-### [Use SQLite on reComputer](https://wiki.seeedstudio.com/use_sqlite_on_recomputer/)
+</div>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/sqlite/sqlite.jpg" alt="pir" width={400} height="auto" /></p>
+### [How to use LLaVa on the reComputer Industrial J4012 to monitor your warehouse](https://wiki.seeedstudio.com/vlm/)
 
-This wiki explains how to use the [SQlite](https://sqlite.org/) on reComputer box. SQLite is a lightweight, embedded relational database management system widely used in mobile devices, desktop applications, and embedded systems. It does not require a separate server process; the database is stored directly in a single ordinary disk file. SQLite is simple to use and offers excellent performance. It supports standard SQL syntax and is suitable for small to medium-sized data storage needs. Due to its zero-configuration and easy deployment features, SQLite has become the preferred database engine for many projects.
+<div class="video-container">
+<iframe width="800" height="450" src="https://www.youtube.com/embed/J0sS-1zQid8?list=PLpH_4mf13-A1EnNUgEMTsy2PxejFllSGM" title="Build a Local AI Watchdog for Industrial Safety with reComputer J4012 powered by NVIDIA Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-### [MicroPython for Seeed Studio XIAO nRF54L15 Sense](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_micropython/)
+<div style={{ textAlign: "justify" }}>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_1.jpg" alt="pir" width={800} height="auto" /></p>
+This wiki describes deploying a VLM (Visual Learning Model) on the [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html), using a USB camera as the input for the VLM. When the system detects a safe situation, the signal light will turn green via RS485 control. In dangerous situations, such as a fire or the presence of someone with a weapon, the signal light will turn yellow. When the light sensor detects the signal from the warehouse light being turned off via RS485, the signal light will turn red.
 
-This tutorial aims to introduce how to use MicroPython on Thonny based on XIAO nRF54L15.
-[MicroPython](https://github.com/micropython/micropython/wiki) is a Python interprer with a partial native code compilation feature. It provides a subset of Python 3.5 features, implemented for embedded processors and constrained systems. It is different from CPython and you can read more about the differences [here](https://github.com/micropython/micropython/wiki/Differences).
-
-### [Seeed Studio XIAO nRF54L15 Matter](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_matter/)
-
-With the rise of Matter as a unified connectivity standard promoted by the Connectivity Standards Alliance (CSA), the nRF54L15 provides a robust development platform to explore and validate Matter applications. Its high performance, low power consumption, and integrated multiprotocol radio make it well suited for both consumer smart home products and industrial IoT devices.
-In this documentation, we will walk through the Matter example applications available in the Nordic SDK for the nRF54L15. These examples demonstrate key features such as device onboarding, secure communication, and interaction with common ecosystems like Apple HomeKit, Google Home, and Amazon Alexa.
-
-### [How to Build the Driver Module for Seeed's Jetson BSP](https://wiki.seeedstudio.com/how_to_build_the_ko_module_for_seeed_jetson/)
-
-When the required `.ko` driver module is not available in reComputer/reServer, you can compile the driver module on Jetson and load it. This wiki demonstrates the specific steps and important notes, using JetPack 6.2 as an example.
+</div>
 
 ## Existing Wiki Updated
 
-### [Getting Started with Seeed Studio XIAO nRF54L15(Sense)](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/)
+### [Deploying OpenRemote on reComputer R1x Manage IoT Devices at the Edge](https://wiki.seeedstudio.com/openremote_r1x00/)
 
-We have added an operation example for [Restore factory settings](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/#restore-factory-settings).
+We have added an operation example of [MQTT Agent with ChirpStack LoRaWAN Gateway Integration](https://wiki.seeedstudio.com/openremote_r1x00/#mqtt-agent-with-chirpstack-lorawan-gateway-integration).
+
+### [Seeed Studio XIAO nRF54L15 Matter](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_matter/)
+
+We have added an operation example of [Matter Hub Config](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_matter/#matter-hub-config).
+
+### [Getting Started with TRMNL 7.5" (OG) DIY Kit in Arduino](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino/)
+
+We have added an operation demo of [Equipment Installatio](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino/#equipment-installation).
 
 ### [Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/)
 
-We have added some [other algorithms](https://wiki.seeedstudio.com/lerobot_so100m_new/#other-algorithm) for training a policy.
+We have provided a tutorial on how to use the device with the [Orbbec Gemini2 Depth Camera](https://wiki.seeedstudio.com/lerobot_so100m_new/#add-cameras).
 
 ## The Efforts of Contributor
 
@@ -168,12 +156,12 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2024.8.05th](/Seeed_Elderly/weekly_wiki/wiki240805)
 - [weekly wiki on 2024.8.12th](/Seeed_Elderly/weekly_wiki/wiki240812)
 - [weekly wiki on 2024.8.19th](/Seeed_Elderly/weekly_wiki/wiki240819)
-- [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/wiki240826) -->
+- [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/wiki240826)
 - [weekly wiki on 2024.9.02nd](/Seeed_Elderly/weekly_wiki/wiki240902)
 - [weekly wiki on 2024.9.09th](/Seeed_Elderly/weekly_wiki/wiki240909)
 - [weekly wiki on 2024.9.16th](/Seeed_Elderly/weekly_wiki/wiki240918)
 - [weekly wiki on 2024.9.23rd](/Seeed_Elderly/weekly_wiki/wiki240923)
-- [weekly wiki on 2024.9.30th](/Seeed_Elderly/weekly_wiki/wiki240930)
+- [weekly wiki on 2024.9.30th](/Seeed_Elderly/weekly_wiki/wiki240930) -->
 - [weekly wiki on 2024.10.07th](/Seeed_Elderly/weekly_wiki/wiki241007)
 - [weekly wiki on 2024.10.14th](/Seeed_Elderly/weekly_wiki/wiki241014)
 - [weekly wiki on 2024.10.21th](/Seeed_Elderly/weekly_wiki/wiki241021)
@@ -224,5 +212,6 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.9.08th](/Seeed_Elderly/weekly_wiki/wiki250908)
 - [weekly wiki on 2025.9.15th](/Seeed_Elderly/weekly_wiki/wiki250915)
 - [weekly wiki on 2025.9.22nd](/Seeed_Elderly/weekly_wiki/wiki250922)
+- [weekly wiki on 2025.9.29th](/Seeed_Elderly/weekly_wiki/wiki250929)
 
 </details>

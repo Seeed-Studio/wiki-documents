@@ -121,7 +121,9 @@ Para este método, necesitarás descargar el archivo de firmware `bin` desde [aq
 
 Mira el siguiente video para un recorrido detallado de flashear el firmware vía ESPHome Web:
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Install firmware via ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 </TabItem>
 </Tabs>

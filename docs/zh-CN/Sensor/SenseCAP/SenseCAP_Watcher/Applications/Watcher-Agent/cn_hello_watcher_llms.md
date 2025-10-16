@@ -135,7 +135,9 @@ Watcher 的“眼睛”（摄像头）捕捉图像 → “视觉神经”（Hima
 
 您可以通过以下视频观看详细教程：
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/6UDVsv953Tw?si=6OYFfx4orpC5p90d" title="SenseCAP Watcher for Xiaozhi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## 模型及固件更新：定制专属技能
 

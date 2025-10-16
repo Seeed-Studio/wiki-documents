@@ -337,7 +337,7 @@ bash run.sh object-detection-hailo
 
 Here is the video in which we demonstrate the process of training the YOLOv8n model and deploying it on the Raspberry Pi 5. We set the batch size to 8, the input size to 640x640, and the input video frame rate to 240 fps. The inference speed achieved is 136.7 fps, which is exceptionally fast for most application scenarios.
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/mVNrEVpvvuc" title="YOLOv8n Object Detection on Raspberry Pi 5 with AI Kit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

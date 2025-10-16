@@ -17,7 +17,9 @@ Una guía detallada y fácil de seguir para la instalación de la carcasa que te
 
 Mira el video y asegúrate de que tu dispositivo esté perfectamente alojado y listo para usar:
 
+<div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/tTrhbSSWpeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Recomendaciones para el Diseño de Carcasa Personalizada
 

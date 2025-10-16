@@ -14,7 +14,7 @@ last_update:
 
 # Watcher 到 Node-RED 快速入门
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/Ono_v759R0Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 

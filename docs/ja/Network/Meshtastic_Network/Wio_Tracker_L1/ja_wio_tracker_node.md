@@ -24,9 +24,9 @@ Wio Tracker L1シリーズは4つのバージョンで利用可能です—あ�
 
 ### シリーズ紹介
 
-<center>
+<div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/TTiDN3h7cNk?si=2F0PXFlQmDSefCdX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</center>
+</div>
 
 ### バージョン比較
 

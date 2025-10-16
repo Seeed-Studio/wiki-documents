@@ -21,7 +21,9 @@ last_update:
 
 詳細やビジュアルについては、対応する動画をご覧ください！
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qbpVltzvL6Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 モデル最適化技術を適用する方法を学びます。この技術により、中規模の畳み込みニューラルネットワークを実行するだけでなく、この洗練されたGUIやWiFi接続を同時に数日から数ヶ月間実行することが可能になります。
 

@@ -172,7 +172,9 @@ IoTボタンにはESPHome互換のファームウェアがプリロードされ�
 
 以下の動画で、ESPHome Webを使用したファームウェアフラッシュの詳細な手順をご覧ください：
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="ESPHome Webを使用したファームウェアのインストール" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 </TabItem>
 </Tabs>

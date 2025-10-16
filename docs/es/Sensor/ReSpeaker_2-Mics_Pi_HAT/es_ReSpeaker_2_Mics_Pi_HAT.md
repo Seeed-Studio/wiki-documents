@@ -117,7 +117,9 @@ Mycroft Precise es un proyecto con Licencia Apache-2.0, lo que significa que pue
 
 **Tu barista personal del hogar cobra vida con esta máquina de café habilitada por voz**: Una máquina de café de código abierto, diseñada para la privacidad, que mantiene privados tu café favorito y tu horario de cafeína.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4gN1bvl24ZM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Soporte Técnico y Discusión de Productos
 

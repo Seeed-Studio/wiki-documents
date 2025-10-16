@@ -17,7 +17,9 @@ last_update:
 
 Grove - Sensor de Oxígeno(ME2-O2-Ф20) es un tipo de sensor para probar la concentración de oxígeno en el aire, que se basa en el principio de la celda electroquímica para el trabajo original. Puedes conocer claramente la concentración actual de oxígeno cuando produces valores de voltaje proporcionales a la concentración de oxígeno y te refieres al gráfico de características lineales de concentración de oxígeno. Es muy adecuado para detectar la concentración de oxígeno en la protección del medio ambiente. Grove - Sensor de Gas(O2) es un módulo de reacción orgánica, puede proporcionar una pequeña corriente mientras se coloca en el aire, no necesitamos proporcionarle una alimentación externa, y el voltaje de salida cambiará a medida que la corriente de tiempo cambie.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 [<p><img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/get_one_now.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/grove-gas-sensoro2-p-1541.html)
 

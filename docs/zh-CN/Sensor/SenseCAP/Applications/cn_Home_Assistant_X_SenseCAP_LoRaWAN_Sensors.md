@@ -100,7 +100,9 @@ SenseCAP 是一系列工业传感器设备和网关产品，其中，S210x LoRaW
 
 仅供您参考，这个视频来自 Seeed Studio，演示了基本的入网过程。
 
+<div class="video-container">
 <iframe class="youtube-video" src="https://youtu.be/TUQ9UmF7e7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 用网线将 M2 LoRaWAN 网关连接到互联网，并在通电前连接天线，当您看到面板 RGB LED 保持绿色时，这意味着网关设置良好。
 

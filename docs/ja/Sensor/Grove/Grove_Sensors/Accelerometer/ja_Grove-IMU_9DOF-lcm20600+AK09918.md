@@ -446,7 +446,9 @@ Heading: 21.76
 
 この製品の紹介動画です。簡単なデモが含まれており、試してみることができます。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oFmvKxoZIuw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 
 ## 技術サポートと製品ディスカッション

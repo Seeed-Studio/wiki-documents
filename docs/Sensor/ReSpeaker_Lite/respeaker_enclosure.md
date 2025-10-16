@@ -19,7 +19,9 @@ A detailed, easy-to-follow enclosure installation guide to help you safely assem
 
 Watch the video and ensure your device is perfectly housed and ready to use:
 
+<div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/tTrhbSSWpeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Custom Enclosure Design Recommendations
 

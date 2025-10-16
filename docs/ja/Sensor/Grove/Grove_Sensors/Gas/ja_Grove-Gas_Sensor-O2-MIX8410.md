@@ -21,7 +21,9 @@ Grove - 酸素センサー(MIX8410)は、空気中の酸素濃度を測定する
 
 Grove - 酸素センサー(MIX8410)は、以前のバージョンであるGrove - 酸素センサー(ME2-O2-Ф20)と比較して新しいリリースバージョンです。では、どのような点が更新されたのでしょうか？新しいバージョンでは、先進的な漏れ防止処理が施されており、漏れの可能性が大幅に減少し、旧バージョンの漏れ問題が解決されています。新しいバージョンの出力電流は低くなり、その結果、電解液の消費が遅くなり、センサーの寿命が長くなります。さらに、新旧バージョンの底部ピン、物理的寸法、上部ドライバーボード、使用方法は同じです。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 [<p><img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/get_one_now.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-Oxygen-Sensor-MIX8410-p-4697.html) 
 

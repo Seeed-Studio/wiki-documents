@@ -23,7 +23,9 @@ Usar el sensor es fácil. Para [Seeeduino](https://www.seeedstudio.com/depot/See
 
 Aplicaciones típicas: Mejora de navegación GPS, navegación exterior/interior, pronóstico del tiempo, o cualquier otro proyecto que requiera lectura precisa de presión atmosférica.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)
 

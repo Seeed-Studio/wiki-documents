@@ -28,7 +28,9 @@ Grove - 手势传感器上的传感器是 PAJ7620U2，它将手势识别功能�
 
 应用：您可以使用手势传感器作为输入设备，通过简单的手部挥动来控制其他 Grove 模块、计算机、手机、智能汽车、机器人等。
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/i9hnRPuCx-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## 特性
 

@@ -15,7 +15,9 @@ last_update:
 
 Grove - I2C 高精度温湿度センサー(SHT35)は、Sensirion社の次世代温湿度センサーであるSHT3x-DISをベースにしています。このセンサーは、Sensirion社の新しい湿度および温度プラットフォームの中核をなす新しいCMOSens®センサーチップを採用しています。SHT3x-DISは、前世代と比較してインテリジェンス、信頼性、精度仕様が向上しています。その機能には、強化された信号処理、2つの異なるユーザー選択可能なI2Cアドレス、および最大1 MHzの通信速度が含まれます。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/MwLEawbP0ZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center' }}><a href="https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp%26Humi-Sensor%28SHT35%29-p-3182.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 

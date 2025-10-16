@@ -57,7 +57,7 @@ Si tu computadora ejecuta Windows, puedes encontrar el número de identificació
 
 **Paso3.** Enciende el Jetson. Si todo funciona correctamente, deberías ver los registros de arranque del sistema en la ventana de la herramienta de depuración de puerto serie.
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/rwiKgF91mNE" title="Get Sys Log of reComputer J30/J40" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

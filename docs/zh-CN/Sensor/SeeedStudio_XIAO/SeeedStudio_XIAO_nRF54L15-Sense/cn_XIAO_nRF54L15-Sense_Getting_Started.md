@@ -226,7 +226,7 @@ export const Highlight = ({children, color}) => (
 
 nRF Connect SDK (NCS) 是 Nordic Semiconductor 提供的可扩展、统一的软件开发套件，专门为基于 Nordic nRF52、nRF53、nRF54、nRF70 和 nRF91 系列的无线设备构建低功耗无线应用而设计。
 
-NCS 提供了丰富的现成示例应用程序、协议栈、库和硬件驱动程序生态系统，旨在简化开发过程并加快产品上市时间。其模块化和可配置的特性为开发人员提供了灵活性，既可以为内存受限的设备构建尺寸优化的软件，也可以为更高级和复杂的应用程序构建强大的功能。NCS 是托管在 GitHub 上的开源项目，为 Visual Studio Code 等集成开发环境提供出色的支持。
+NCS 提供了丰富的现成示例应用程序、协议栈、库和硬件驱动程序生态系统，旨在简化开发过程并加快产品上市时间。其模块化和可配置的特性为开发者提供了灵活性，既可以为内存受限的设备构建尺寸优化的软件，也可以为更高级和复杂的应用程序构建强大的功能。NCS 是托管在 GitHub 上的开源项目，为 Visual Studio Code 等集成开发环境提供出色的支持。
 
 ### 在 VSCode 中使用 nRF Connect SDK
 
@@ -296,73 +296,73 @@ You should see the following output:
 [00:00:02] ###### 100% [Install packages] Install packages
 ``` -->
 
-#### VScode 配置开发板并构建烧录文件
+#### VScode configures the board and builds the burn-in file
 
-打开 VS Code，在插件中心搜索 **nRF Connect for VS Code Extension Pack**。此插件包会自动安装 nRF Connect 所需的其他 VS Code 插件。
+Open VS Code and search for nRF Connect for VS Code Extension Pack in the Plugin Center. This plugin pack will automatically install other VS Code plugins required for nRF Connect.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn8.png" style={{width:600, height:'auto'}}/></div>
 <br />
-**nRF Connect for VS Code 扩展**使开发者能够利用流行的 Visual Studio Code 集成开发环境（VS Code IDE）来开发、构建、调试和部署基于 Nordic nRF Connect SDK（软件开发包）的嵌入式应用程序。该扩展包含许多实用的开发工具，例如：编译器接口、链接器、完整的构建系统、支持 RTOS 的调试器、与 nRF Connect SDK 的无缝对接、设备树可视化编辑器，以及集成的串口终端。
+The nRF Connect for VS Code extension enables developers to utilize the popular Visual Studio Code Integrated Development Environment (VS Code IDE) to develop, build, debug and deploy embedded applications based on Nordic's nRF Connect SDK (Software Development Kit). The extension includes useful development tools such as a compiler interface, linker, complete build system, RTOS-enabled debugger, seamless interfacing with the nRF Connect SDK, device tree visualization editor, and an integrated serial terminal.
 
-nRF Connect 扩展包包含以下组件：
+The nRF Connect extension package for VS Code includes the following components:
 
-- nRF Connect for VS Code：主扩展，提供构建系统与 nRF Connect SDK 之间的接口，以及 SDK 版本和工具链管理接口。  
-- nRF DeviceTree：提供设备树语言支持和设备树可视化编辑器。  
-- nRF Kconfig：提供 Kconfig 语言支持。  
-- nRF Terminal：串口和 RTT 终端。  
-- Microsoft C/C++：为 C/C++ 添加语言支持，包括 IntelliSense 功能。  
-- CMake：CMake 语言支持。  
-- GNU Linker Mapping Files：支持链接器映射文件。  
-我们可以通过扩展下载任意所需版本的 nRF Connect SDK 及其工具链。完整的 nRF Connect for VS Code 文档请参考：https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html  
+- nRF Connect for VS Code: The main extension contains the interface between the build system and the nRF Connect SDK, as well as an interface to manage the nRF Connect SDK version and toolchain.
+- nRF DeviceTree: Provides device tree language support and a device tree visualization editor.
+- nRF Kconfig: Provides Kconfig language support.
+- nRF Terminal: Serial and RTT terminals.
+- Microsoft C/C++: Adds language support for C/C++, including features of IntelliSense.
+- CMake: CMake language support.
+- GNU Linker Mapping Files: Support for linker mapping files.
+We can download any preferred version of the nRF Connect SDK and its toolchain via the extension. The full nRF Connect for VS Code documentation is available at https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html.
 
-#### 安装工具链
+#### Installing the toolchain
 
-工具链（Toolchain）是一组协同工作的工具，用于构建 nRF Connect SDK 应用程序，包括汇编器、编译器、链接器和 CMake 组件。  
-首次打开 nRF Connect for VS Code 时，系统会提示安装工具链。如果扩展未检测到你电脑上已安装的工具链，就会出现此提示。  
-点击 **Install Toolchain**，系统会列出可下载和安装的工具链版本。请选择与你计划使用的 nRF Connect SDK 版本相匹配的工具链版本。我们始终建议使用 nRF Connect SDK 的最新标记版本。  
+The toolchain is a collection of tools that work together to build nRF Connect SDK applications, including assembler, compiler, linker, and CMake components.
+The first time you open nRF Connect for VS Code, you will be prompted to install the toolchain. This usually happens if the extension does not detect any installed toolchain on your computer.
+Click Install Toolchain and a list of toolchain versions will be listed that can be downloaded and installed on your computer. Select the version of the toolchain that matches the version of the nRF Connect SDK you plan to use. We always recommend using the latest tagged version of the nRF Connect SDK.
 
-默认情况下，nRF Connect for VS Code 仅显示工具链的 Released 标签页（即稳定版本）。如果你在评估新功能，想使用 Preview 标签页或其他类型的版本（例如 Customer Sampling -cs），请点击 Show all toolchain versions，如下所示：
+By default, nRF Connect for VS Code only displays the Released tab (i.e., the stable version) of the toolchain. If you are evaluating a new feature and would like to use the Preview tab or another type of tab (e.g. Customer Sampling -cs), click on "Show all toolchain versions" as shown below:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/toolchain2.png" style={{width:800, height:'auto'}}/></div>
 
 :::note
-**这里的工具链版本是 3.0.1 或以上**
+**The ToolChain here is 3.0.1 or above**
 :::
 
-#### 安装 nRF Connect SDK
+#### Installing the nRF Connect SDK
 
-在 VS Code 的 nRF Connect 扩展中，点击 Manage SDK。从 Manage SDK 菜单中，我们可以安装或卸载 nRF Connect SDK 版本。由于这是我们第一次使用该扩展，界面将只显示两个选项。
+In the nRF Connect extension for VS Code, click on Manage SDK. from the Manage SDK menu, we can install or uninstall the nRF Connect SDK version. Since this is the first time we are using the extension, the interface will only show two options.
 
-点击 Install SDK 将列出所有可下载并本地安装的 nRF Connect SDK 版本。选择您项目开发所需的 nRF Connect SDK 版本。
+Clicking Install SDK will list all available nRF Connect SDK versions that can be downloaded and installed locally. Select the version of the nRF Connect SDK that is required for the development of your project.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/install_sdk.png" style={{width:800, height:'auto'}}/></div>
 
-如果您已经在 VS Code 中打开了 SDK 文件夹，您将看到 Manage west workspace 而不是 Manage SDK 菜单选项。要解决此问题，请在 VS Code 中打开另一个窗口或文件夹。
+If you have opened the SDK folder in VS Code, instead of the Manage SDK menu option, you will see the Manage west workspace. To resolve this issue, open another window or folder in VS Code.
 
 :::note
-**这里的 nRF Connect SDK 版本是 3.0.1 或以上**
+**The nRF Connect SDK here is 3.0.1 or above**
 :::
 
 :::tip
-如果您没有看到这些选项中的任何一个，请确保您已安装最新版本的 nRF Connect for VS Code 扩展包。
-需要注意的是，nRF Connect SDK 是独立于 IDE 的，这意味着您可以选择使用任何 IDE 或完全不使用。nRF Connect SDK 可通过 https://www.nordicsemi.com/Products/Development-tools/nRF-Util (nrfutil) 命令行界面 (CLI) 下载和安装 nRF Connect。但是，我们强烈建议将我们的 nRF Connect for VS Code 扩展与 VS Code 一起使用，因为它不仅集成了便捷的图形用户界面 (GUI) 和高效的命令行界面 (CLI)，还包含许多将大大简化固件开发的功能。配置其他 IDE 以与 nRF Connect SDK 配合使用需要额外的手动步骤，超出了本课程的范围。
+If you do not see either of these options, make sure you have the latest version of the nRF Connect for VS Code extension package installed.
+It is important to note that the nRF Connect SDK is IDE independent, which means you can choose to use any IDE or none at all. The nRF Connect SDK is available via the https://www.nordicsemi.com/Products/Development-tools/nRF-Util (nrfutil) command line The  (nrfutil) command line interface (CLI) will download and install nRF Connect. However, we highly recommend using our nRF Connect for VS Code extension with VS Code, as it integrates not only a convenient graphical user interface (GUI) and an efficient command line interface (CLI), but also includes a number of features that will greatly simplify firmware development. Configuring other IDEs to work with the nRF Connect SDK requires additional manual steps beyond the scope of this course.
 :::
 
-#### 创建用户程序
+#### Creating User Programs
 
-在本练习中，我们将基于 blinky 示例编写一个简单的应用程序来控制开发板上的闪烁 LED。这同样适用于所有支持的 Nordic Semiconductor 开发板（nRF54、nRF53、nRF52、nRF70 或 nRF91 系列）。目标是确保构建和烧录示例所需的所有工具都正确设置。重点是学习如何使用"复制示例"模板创建应用程序、构建它并将其烧录到 Nordic 芯片开发板！
+In this exercise we will write a simple application based on the blinky example to control blinking LEDs on a development board. The same applies to all supported NordicSemiconductor development boards (nRF54, nRF53, nRF52, nRF70 or nRF91 series). The goal is to make sure that all the tools needed to build and burn the example are set up correctly. The focus is on learning how to create an application, build it and burn it to a Nordic chip development board using the "Copy Example" template!
 
-- 在 VS Code 中，点击 nRF Connect 扩展图标。在欢迎视图中，点击 Create New Application。
+- In VS Code, click the nRF Connect extension icon. In the Welcome view, click Create New Application.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project1.png" style={{width:800, height:'auto'}}/></div>
 
-- 在搜索栏中输入 blinky 并选择第二个 Blinky 示例（路径 zephyr/samples/basic/blinky），如下所示。
+- Type blinky in the search bar and select the second Blinky sample (path zephyr/samples/basic/blinky), as shown below.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project2.png" style={{width:800, height:'auto'}}/></div>
 
-Blinky 示例将使开发板上的 LED1 持续闪烁。
-我们的第一个应用程序将基于 Blinky 示例。Blinky 示例源自 nRF Connect SDK 中的 Zephyr 模块，因此您将在示例路径中看到 zephyr 名称：zephyr\samples\basic\blinky。
+The Blinky example will cause the LED1 on the development board to blink continuously.
+Our first application will be based on the Blinky example. The Blinky example is derived from the Zephyr mold block in the nRF Connect SDK, so you will see the zephyr name in the sample path: zephyr\samples\basic\blinky.
 
-#### 添加 XIAO nRF54L15 开发板
+#### Add XIAO nRF54L15 Board
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -374,11 +374,11 @@ Blinky 示例将使开发板上的 LED1 持续闪烁。
 
 要在 VS Code 中为 nRF Connect 配置您的开发板，您可以按照以下步骤操作：
 
-- 打开 VS Code 并转到设置。
+- 打开 VS Code 并转到 Settings。
 
 - 在搜索框中输入 nRF Connect。
 
-- 找到 Board Roots 设置项并点击 Edit in settings.json。
+- 找到 Board Roots 设置项并在 settings.json 中点击 Edit。
 
 - 将下载的 XIAO nRF54L15 板文件的 `zephyr` 路径添加到 boardRoots 数组中。
 
@@ -404,12 +404,12 @@ Blinky 示例将使开发板上的 LED1 持续闪烁。
 **1.打开 PowerShell（以管理员身份运行）：**
 
 - 在 Windows 搜索栏中，输入 "PowerShell"。
-- 右键点击 "Windows PowerShell" 并选择 "以管理员身份运行"。
+- 右键点击 "Windows PowerShell" 并选择 "Run as administrator"。
 
 **2.检查 PowerShell 执行策略：**
 
-- 输入 `Get-ExecutionPolicy` 并按回车。
-- 输入 `Get-ExecutionPolicy -List` 并按回车。
+- 输入 `Get-ExecutionPolicy` 并按 Enter。
+- 输入 `Get-ExecutionPolicy -List` 并按 Enter。
 
 **3.安装 Chocolatey：**
 
@@ -431,7 +431,7 @@ choco install openocd
 
 **5.验证 OpenOCD 安装：**
 
-- 输入 `Get-Command openocd` 并按回车。
+- 输入 `Get-Command openocd` 并按 Enter。
 
 - 如果安装成功，此命令将显示 openocd.exe 的路径。
 
@@ -473,7 +473,7 @@ brew install openocd
 
 **4.验证 OpenOCD 安装：**
 
-- 输入 `which openocd` 并按回车。
+- 输入 `which openocd` 并按 Enter。
 
 - 如果安装成功，此命令将显示 `openocd` 可执行文件的路径。
 
@@ -554,7 +554,7 @@ return 0;
 **LED 设备定义**：
 
 - `#define LED0_NODE DT_ALIAS(led0)`：检索 "led0" 别名的设备树节点标识符，实现对 LED 的硬件无关引用。
-- `static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios)`：使用设备树节点创建 GPIO 规范结构（`led`），包含 LED 的硬件详细信息（引脚、端口）。此处的构建错误表示硬件不受支持。
+- `static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios)`：使用设备树节点创建 GPIO 规范结构（`led`），包含 LED 的硬件详细信息（引脚、端口）。此处的构建错误表示不支持的硬件。
 
 **main() 函数初始化**：
 
@@ -579,7 +579,7 @@ return 0;
   - `led_state = !led_state`：将软件状态标志与硬件状态同步。
 
 - **日志和延迟**：
-  - `printf("LED state: %s\n", led_state ? "ON" : "OFF")`：通过串口输出打印当前 LED 状态。
+  - `printf("LED state: %s\n", led_state ? "ON" : "OFF")`：通过串行输出打印当前 LED 状态。
   - `k_msleep(SLEEP_TIME_MS)`：使用 Zephyr 的 RTOS 延迟函数暂停 1000ms（1 秒），控制闪烁频率。
 
 #### 深入了解 nRF Connect SDK 内部原理
@@ -596,10 +596,10 @@ return 0;
 
 ## 恢复出厂设置
 
-对于 XIAO nRF54L15 板，提供了出厂重置脚本来从不良状态恢复板子（例如，当由于内部 NVM 写保护而无法上传时）。此脚本将执行闪存的批量擦除并编程出厂固件。
+对于 XIAO nRF54L15 板，提供了出厂重置脚本来从错误状态恢复板子（例如，当由于内部 NVM 写保护而无法上传时）。此脚本将执行闪存的批量擦除并编程出厂固件。
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="hhttps://github.com/Jasionf/platform-seeedboards/tree/main/scripts/factory_reset" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Factory Reset</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 出厂重置</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -608,21 +608,250 @@ return 0;
 **使用方法**
 脚本将自动创建和管理本地 Python 虚拟环境来安装必要的工具，因此可以开箱即用。
 
+### Window
+
 - 对于 Windows：导航到 scripts/factory_reset 目录并运行：
 
 ```cpp
 .\factory_reset.bat
 ```
 
+### Linux-MacOS
 - 对于 Linux 和 macOS：导航到 scripts/factory_reset 目录并运行：
 
 ```cpp
 bash factory_reset.sh
 ```
 
-## 访问 J-Link 引脚进行程序烧录
+## 无线切换模式
 
-如果您想使用 JLink 进行编程，可以按照以下步骤操作。但是，我们建议您使用 Seeed Studio XIAO nRF54L15 板上内置的串口进行编程，这会更加方便。
+此示例演示如何控制 Seeed Studio XIAO nRF54L15 上的 RF 开关在板载
+
+:::
+以下示例适用于 PlatformIO 和 nRF Connect SDK。它可以直接在 PlatformIO 中使用，而 SDK 需要手动添加文件。请参考此[链接](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_getting_started/#battery-powered-board)
+:::
+
+<div style={{textAlign:'center'}}>
+    <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/IN_antenna.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:400, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>外部天线</em></p>
+</div>
+
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-rfsw" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div>
+
+- 陶瓷天线和外部天线。
+
+- 按下用户按钮（SW0）在陶瓷天线和外部天线之间切换。
+
+- 用户 LED 指示当前天线选择（LED 亮表示外部天线，LED 灭表示陶瓷天线）。
+
+- 启动时的默认天线可以通过 prj.conf 配置。
+
+```cpp
+/*
+ * Copyright (c) 2024 Seeed Technology Co.,Ltd
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <zephyr/kernel.h>
+#include <zephyr/device.h>
+#include <zephyr/drivers/gpio.h>
+#include <zephyr/logging/log.h>
+#include <zephyr/devicetree.h>
+
+LOG_MODULE_REGISTER(app, CONFIG_LOG_DEFAULT_LEVEL);
+
+/* Devicetree node identifiers */
+#define RFSW_REGULATOR_NODE DT_NODELABEL(rfsw_ctl)
+#define SW0_NODE            DT_ALIAS(sw0)
+#define LED0_NODE           DT_ALIAS(led0)
+
+/* State variables */
+static uint8_t onoff_flag = 0;
+#ifdef CONFIG_DEFAULT_ANTENNA_EXTERNAL
+static bool is_external_antenna = true;
+#else
+static bool is_external_antenna = false;
+#endif
+
+/* GPIO device specs */
+/* Manually build gpio_dt_spec for rfsw_ctl */
+static const struct gpio_dt_spec rfsw_gpio = {
+	.port = DEVICE_DT_GET(DT_GPIO_CTLR(RFSW_REGULATOR_NODE, enable_gpios)),
+	.pin = DT_GPIO_PIN(RFSW_REGULATOR_NODE, enable_gpios),
+	.dt_flags = DT_GPIO_FLAGS(RFSW_REGULATOR_NODE, enable_gpios),
+};
+static const struct gpio_dt_spec button = GPIO_DT_SPEC_GET(SW0_NODE, gpios);
+static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
+
+/* Button callback data */
+static struct gpio_callback button_cb_data;
+
+/* Forward declarations */
+void button_pressed(const struct device *dev, struct gpio_callback *cb, uint32_t pins);
+void update_antenna_switch(void);
+
+/* Function to update antenna switch and LED */
+void update_antenna_switch(void)
+{
+    int ret;
+    is_external_antenna = !is_external_antenna;
+
+    if (is_external_antenna) {
+        /* Switch to external antenna */
+        LOG_INF("Switching to External Antenna");
+
+        // To get a physical high level (Inactive state), we need to set the logic to '0'
+        ret = gpio_pin_set_dt(&rfsw_gpio, 0); 
+        if (ret < 0) {
+            LOG_ERR("Error setting rfsw-ctl to physical HIGH: %d\n", ret);
+        }
+
+        // Turn on the LED (set 0 for on)
+        ret = gpio_pin_set_dt(&led, 0); 
+        if (ret < 0) {
+            LOG_ERR("Error turning on LED: %d\n", ret);
+        }
+
+    } else {
+        /* Switch back to ceramic antenna */
+        LOG_INF("Switching to Ceramic Antenna");
+
+        // To get a physical low level (Active state), we need to set the logic to '1'
+        ret = gpio_pin_set_dt(&rfsw_gpio, 1); 
+        if (ret < 0) {
+            LOG_ERR("Error setting rfsw-ctl to physical LOW: %d\n", ret);
+        }
+
+        // Turn off the LED (set 1 for off)
+        ret = gpio_pin_set_dt(&led, 1);
+        if (ret < 0) {
+            LOG_ERR("Error turning off LED: %d\n", ret);
+        }
+    }
+}
+
+/* Button pressed callback function */
+void button_pressed(const struct device *dev, struct gpio_callback *cb,
+                    uint32_t pins)
+{
+    update_antenna_switch();
+}
+
+int main(void)
+{
+    int ret;
+
+    /* Check if GPIO devices are ready */
+    if (!gpio_is_ready_dt(&rfsw_gpio)) {
+        LOG_ERR("RF switch control GPIO not ready\n");
+        return -1;
+    }
+    if (!gpio_is_ready_dt(&button)) {
+        LOG_ERR("Button GPIO not ready\n");
+        return -1;
+    }
+    if (!gpio_is_ready_dt(&led)) {
+        LOG_ERR("LED GPIO not ready\n");
+        return -1;
+    }
+
+    /* Configure GPIO pins */
+    ret = gpio_pin_configure_dt(&rfsw_gpio, GPIO_OUTPUT);
+    if (ret < 0) {
+        LOG_ERR("Error configuring rfsw-ctl: %d\n", ret);
+        return ret;
+    }
+
+    /* Configure LED as output, default off */
+    ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE);
+    if (ret < 0) {
+        LOG_ERR("Error configuring LED: %d\n", ret);
+        return ret;
+    }
+
+    /* Set initial LED state based on antenna selection */
+    if (is_external_antenna) {
+        // External antenna
+        LOG_INF("Initial state: External Antenna");
+        ret = gpio_pin_set_dt(&rfsw_gpio, 0);
+        if (ret < 0) {
+            LOG_ERR("Error setting rfsw-ctl to physical HIGH: %d\n", ret);
+        }
+        ret = gpio_pin_set_dt(&led, 0);  // Turn on LED
+        if (ret < 0) {
+            LOG_ERR("Error turning on LED: %d\n", ret);
+        }
+    } else {
+        // Ceramic antenna
+        LOG_INF("Initial state: Ceramic Antenna");
+        ret = gpio_pin_set_dt(&rfsw_gpio, 1);
+        if (ret < 0) {
+            LOG_ERR("Error setting rfsw-ctl to physical LOW: %d\n", ret);
+        }
+        ret = gpio_pin_set_dt(&led, 1);  // Turn off LED
+        if (ret < 0) {
+            LOG_ERR("Error turning off LED: %d\n", ret);
+        }
+    }
+
+    /* Configure button as input */
+    ret = gpio_pin_configure_dt(&button, GPIO_INPUT);
+    if (ret < 0) {
+        LOG_ERR("Error configuring button: %d\n", ret);
+        return ret;
+    }
+
+    /* Configure button interrupt */
+    ret = gpio_pin_interrupt_configure_dt(&button, GPIO_INT_EDGE_TO_ACTIVE);
+    if (ret < 0) {
+        LOG_ERR("Error configuring button interrupt: %d\n", ret);
+        return ret;
+    }
+
+    /* Initialize button callback */
+    gpio_init_callback(&button_cb_data, button_pressed, BIT(button.pin));
+    gpio_add_callback(button.port, &button_cb_data);
+
+    LOG_INF("Antenna switch example started. Press SW0 to switch.\n");
+    return 0;
+}
+```
+
+:::tip
+如果您希望在外部天线或内部天线之间切换，您需要修改 zephyr/prj.conf 文件。
+取消注释 # CONFIG_DEFAULT_ANTENNA_EXTERNAL=y 以启用外部天线。如果使用内部天线，请注释掉该行。
+:::
+
+```cpp
+CONFIG_GPIO=y
+CONFIG_SERIAL=y
+CONFIG_LOG=y
+CONFIG_CONSOLE=y
+CONFIG_UART_CONSOLE=y
+CONFIG_SHELL_BACKEND_SERIAL=y
+CONFIG_SHELL_BACKEND_DUMMY=n
+CONFIG_PM_DEVICE=y
+CONFIG_NRFX_POWER=y
+CONFIG_POWEROFF=y
+
+CONFIG_BT=y
+CONFIG_BT_PERIPHERAL=y
+CONFIG_BT_DEVICE_NAME="zephyr-ble"
+
+# Enable this option to default to external antenna
+# CONFIG_DEFAULT_ANTENNA_EXTERNAL=y
+```
+
+
+
+## 访问 J-Link 引脚以烧录程序
+
+如果您想使用 JLink 进行编程，可以按照以下步骤操作。但是，我们建议您使用 Seeed Studio XIAO nRF54L15 板上内置的串口进行编程，这样会更加方便。
 
 **所需硬件**
 
@@ -645,17 +874,17 @@ bash factory_reset.sh
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link4.jpg" alt="pir" width={700} height="auto" /></p>
 
-- **步骤 3.** 点击"Target"然后选择"Connect"。
+- **步骤 3.** 点击 "Target" 然后选择 "Connect"。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link3.jpg" alt="pir" width={700} height="auto" /></p>
 
-- **步骤 4.** 将 bin 或 [hex 文件](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/zephyr.hex) 拖拽到软件中。然后按顺序按下 F4 和 F5。重新刷写完成。
+- **步骤 4.** 将 bin 或 [hex 文件](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/zephyr.hex) 拖拽到软件中。然后依次按下 F4 和 F5。重新烧录完成。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link2.jpg" alt="pir" width={700} height="auto" /></p>
 
 ## 电池供电板
 
-XIAO nRF54L15 内置电源管理芯片，允许 XIAO nRF54L15 通过电池独立供电，或通过 XIAO nRF54L15 的 USB 端口为电池充电。
+XIAO nRF54L15 内置电源管理芯片，允许 XIAO nRF54L15 使用电池独立供电，或通过 XIAO nRF54L15 的 USB 端口为电池充电。
 
 如果您想为 XIAO 连接电池，我们建议您购买合格的可充电 3.7V 锂电池。焊接电池时，请注意区分正负极。
 
@@ -667,7 +896,7 @@ XIAO nRF54L15 内置电源管理芯片，允许 XIAO nRF54L15 通过电池独立
 **电池使用说明：**
 
 1. 请使用符合规格的合格电池。
-2. 使用电池时，XIAO 可以通过数据线连接到您的计算机设备，请放心，XIAO 内置电路保护芯片，是安全的。
+2. 使用电池时，XIAO 可以通过数据线连接到您的计算机设备，请放心，XIAO 内置电路保护芯片，使用安全。
 3. XIAO nRF54L15 在电池供电时不会有任何 LED 亮起（除非您编写了特定程序），请不要通过 LED 状态来判断 XIAO nRF54L15 是否工作，请通过您的程序合理判断。
 
 同时，我们为电池充电设计了红色指示灯，通过指示灯显示来告知用户电池当前的充电状态。
@@ -686,18 +915,18 @@ XIAO nRF54L15 集成了电池电压检测功能，该功能以使用 TPS22916CYF
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/battery_A.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:600, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>电池检测示意图</em></p>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>电池检测原理图</em></p>
 </div>
 
 TPS22916CYFPR 芯片的作用：
 
-- 它是一个智能电源开关，按需控制电池电压的通断。当需要测量电池电压时，它会打开，将电池连接到分压电路；当不需要测量时，它会关闭，断开连接。
+- 它是一个智能电源开关，按需控制电池电压的通断。当需要测量电池电压时，它会开启，将电池连接到分压电路；当不需要测量时，它会关闭，断开连接。
 
 - 这个功能帮助我们做什么？
-通过这种按需切换机制，芯片大大减少了不必要的电流消耗，有效延长电池寿命。结合后续的分压电路和 nRF54L15 的 ADC（模数转换器），XIAO nRF54L15 能够准确监控电池的剩余电量，为电池供电的低功耗应用（如物联网设备）提供重要的续航优化。
+通过这种按需切换机制，该芯片大大减少了不必要的电流消耗，有效延长电池寿命。结合后续的分压电路和 nRF54L15 的 ADC（模数转换器），XIAO nRF54L15 能够准确监控电池的剩余电量，为电池供电的低功耗应用（如物联网设备）提供重要的续航优化。
 
 :::note
-以下示例代码是为 PlatformIO 设计的，但它也与 nRF Connect SDK 兼容。
+以下示例代码是为 PlatformIO 设计的，但它也兼容 nRF Connect SDK。
 
 在 PlatformIO 中使用 XIAO nRF54L15
 如果您想在 PlatformIO 中使用 XIAO nRF54L15，请参考此教程进行配置：[XIAO nRF54L15 PlatformIO 配置](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_with_platform_io/)。
@@ -709,13 +938,13 @@ TPS22916CYFPR 芯片的作用：
     </a>
 </div><br />
 
-### 添加 overlay 并修改 conf 文件
+### 添加覆盖文件并修改配置文件
 
 如果您想在 nRF Connect SDK 中使用此电池例程，您需要添加 app.overlay 并修改 prj.conf 文件。
 
 - 在项目目录下创建一个名为 `app.overlay` 的新文件。然后将以下代码粘贴到其中，最后按 Ctrl + S 保存。
 
-  - overlay 文件扩展了硬件描述层，通过设备树自定义物理硬件连接。它不修改代码逻辑，而是声明实际的硬件细节，以确保驱动程序能够正确初始化物理设备。
+  - 覆盖文件扩展了硬件描述层，通过设备树自定义物理硬件连接。它不修改代码逻辑，而是声明实际的硬件细节，以确保驱动程序能够正确初始化物理设备。
 <br />
   <details>
 
@@ -1107,7 +1336,7 @@ int main(void)
 
 - **[PDF]** [Seeed Studio XIAO nRF54L15 原理图](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Schematic.pdf)
 
-- **[ZIP]** [Seeed Studio XIAO nRF54L15 KiCAD 库](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_KICAD.zip)
+- **[ZIP]** [Seeed Studio XIAO nRF54L15 KiCAD 库文件](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_KICAD.zip)
 
 - **[DXF]** [Seeed Studio XIAO nRF54L15 DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip)
 
@@ -1117,7 +1346,7 @@ int main(void)
 
 - **[PDF]** [Seeed Studio XIAO nRF54L15 Sense 原理图](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_Schematic.pdf)
 
-- **[ZIP]** [Seeed Studio XIAO nRF54L15 Sense KiCAD 库](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_KICAD.zip)
+- **[ZIP]** [Seeed Studio XIAO nRF54L15 Sense KiCAD 库文件](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_KICAD.zip)
 
 - **[DXF]** [Seeed Studio XIAO nRF54L15 Sense DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip)
 

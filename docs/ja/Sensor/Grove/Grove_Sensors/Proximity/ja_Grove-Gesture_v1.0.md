@@ -29,7 +29,9 @@ Grove - Gesture のセンサーは PAJ7620U2 で、ジェスチャー認識機�
 
 用途: Gesture を入力デバイスとして使用し、他の Grove モジュール、コンピュータ、携帯電話、スマートカー、ロボットなどを手の簡単なスワイプで制御できます。
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/i9hnRPuCx-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## 特徴
 

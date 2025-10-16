@@ -1,6 +1,6 @@
 ---
 description: Using EEZStudio and deploying to Arduino for application purposes
-title: reTerminal E Series ePaper Display Work with EEZStudio
+title: reTerminal E Series ePaper Display Work with EEZ Studio
 image: https://files.seeedstudio.com/wiki/EEZStudio/eez.webp
 slug: /reterminal_e10xx_with_eezstudio
 sidebar_position: 6
@@ -12,13 +12,13 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Getting Started with reTerminal E Series ePaper Display and EEZStudio
+# Getting Started with reTerminal E Series ePaper Display and EEZ Studio
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez.jpg" style={{width:600, height:'auto'}}/></div>
 
 ## Introduction
 
-This guide will walk you through designing a professional user interface for the reTerminal E Series using the visual design tool **EEZStudio**. You will learn how to create UI elements, generate the necessary code, and finally deploy it to the device using the Arduino IDE. This process allows you to build custom interfaces with excellent visibility and ultra-low power consumption, ideal for HMI applications.
+This guide will walk you through designing a professional user interface for the reTerminal E Series using the visual design tool [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/). You will learn how to create UI elements, generate the necessary code, and finally deploy it to the device using the Arduino IDE. This process allows you to build custom interfaces with excellent visibility and ultra-low power consumption, ideal for HMI applications.
 
 ### Materials Required
 
@@ -61,7 +61,6 @@ In short, EEZ Studio acts as a bridge between hardware and software, enabling yo
 - Rapid Prototyping – Quickly test and validate design ideas, saving development time and cost.
 - Cross-platform Support – Build applications that can run on multiple operating systems and embedded targets.
 - Integration with Hardware – Directly connect and control lab instruments, IoT devices, and custom boards.
-- Extensible with Scripting – Use Lua scripting to add logic, automation, and advanced functionality.
 - Open Source Ecosystem – Benefit from a community-driven toolset with transparency and flexibility.
 
 With EEZ Studio, you can move from concept to working prototype in a fraction of the time, while ensuring that your designs are both professional and adaptable to future requirements.
@@ -90,18 +89,13 @@ Although EEZ Studio and SquareLine Studio are both GUI design tools, they focus 
             <td>Embedded UI developers, hobbyists, IoT product designers</td>
         </tr>
         <tr>
-            <th>Extensibility</th>
-            <td>Supports Lua scripting for logic, automation, and device control</td>
-            <td>Limited scripting (mainly relies on C code after export)</td>
-        </tr>
-        <tr>
             <th>Hardware Integration</th>
             <td>Direct integration with instruments, measurement devices, and automation systems</td>
             <td>Mostly focused on display/UI generation, not external device integration</td>
         </tr>
         <tr>
             <th>Open Source</th>
-            <td>Community-driven, transparent, extensible</td>
+            <td>Community-driven, transparent, extensible Premium/paid technical support is available</td>
             <td>Closed-source, commercial product with licensing</td>
         </tr>
         <tr>
@@ -121,7 +115,10 @@ Although EEZ Studio and SquareLine Studio are both GUI design tools, they focus 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez90.jpg" style={{width:1000, height:'auto'}}/></div>
 <br></br>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez91.jpg" style={{width:1000, height:'auto'}}/></div>
-### Creat Project
+
+## Create Project
+
+### Starting a New LVGL Project
 
 At the top of the EEZ Studio interface, click the “CREATE” button.
 In the project template list on the left, locate and select the “LVGL” project.
@@ -131,6 +128,38 @@ In the project template list on the left, locate and select the “LVGL” proje
 - `Location:` Specify the storage path for project files on your computer.The default path typically points to a default project folder within your EEZ Studio download or installation directory (e.g., C:\Users\YourUser\Documents\EEZ Studio\Projects or a similar path).If you need to change the storage location, click the folder icon (or ellipsis ...) to the right of the Location text box.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/01.jpg" style={{width:900, height:'auto'}}/></div>
+
+### Project Settings Configuration
+
+When building your LVGL UI project for the E-paper reTerminal, you need to configure the EEZ Studio Project Settings properly to ensure that the generated UI files are compatible with your Arduino or embedded environment.
+
+Step 1. Open Project Settings
+
+Click the ⚙️ (Settings) icon on the top toolbar, as shown below.
+This will open the Project Settings panel on the right side of the workspace.
+
+Step 2. Configure Build Output and LVGL Include
+
+Under General → Build, locate the following fields:
+
+- LVGL include: Input lvgl.h to include the correct LVGL header during compilation.
+
+💡 This ensures the generated UI code can correctly reference the LVGL library during build.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez_setting2.png" style={{width:900, height:'auto'}}/></div>
+
+<br></br>
+
+Step 3. Set Display Resolution
+
+Next, still under Settings → General, configure your display’s resolution:
+- Display width: 800
+- Display height: 480
+
+🧩 These parameters define the target E-paper screen resolution for the UI layout and coordinate mapping.
+Make sure the values match your specific E-paper model (for example, 7.5-inch E-paper – 800×480).
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez_setting.png" style={{width:900, height:'auto'}}/></div>
 
 ### Project Parameter Settings & UI Interface Design
 
@@ -356,6 +385,12 @@ The full color ePaper display supports red, black, and white colors, allowing fo
 </Tabs>
 
 ## Deploying the EEZ Studio Project to Arduino
+
+These two underlying driver files need to be added to our project directory.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/00.png" style={{width:800, height:'auto'}}/></div>
+
+- [e1002_display.cpp](https://files.seeedstudio.com/wiki/EEZStudio/e1002_display.cpp)
+- [e1002_display.h](https://files.seeedstudio.com/wiki/EEZStudio/e1002_display.h)
 
 Port the following project files (including four files) to the Arduino Library for use in Arduino projects.
 The `EEZ_UI file` is generated during the build process in EEZStudio. You need to locate the path where you saved it.

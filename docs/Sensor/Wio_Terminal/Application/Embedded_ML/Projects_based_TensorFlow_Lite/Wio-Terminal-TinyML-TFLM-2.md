@@ -20,7 +20,9 @@ In this project we’re going to use Wio Terminal and Tensorflow Lite for Microc
 
 For more details and visuals, watch the corresponding video!
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qbpVltzvL6Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 You will learn how to apply model optimization techniques, that will allow not only to run medium-sized Convolutional neural network, but also to have this sleeky GUI and WiFi connection all running at the same time for days and month at the time!
 
