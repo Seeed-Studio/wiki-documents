@@ -203,12 +203,6 @@ display:
 <TabItem value="For E1002" label="For E1002">
 
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
 
 # define font to display words
 font:
@@ -222,9 +216,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
