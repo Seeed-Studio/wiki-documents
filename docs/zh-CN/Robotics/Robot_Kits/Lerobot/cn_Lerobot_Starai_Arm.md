@@ -13,7 +13,7 @@ last_update:
   author: LiShanghang
 ---
 
-# 基于 LeRobot 的华馨京 StarAI 机械臂入门教程
+# 基于 LeRobot 的 StarAI 机械臂入门教程
 
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115064656956649&bvid=BV1wJYDzEE2s&cid=32243908802&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
