@@ -1109,7 +1109,7 @@ You may install and log in to Brev CLI on your local Ubuntu host, then attempt t
 
 Q2: How do I upload data to the training platform?
 
-Use the following command: `scp <local-file-path> <brev-instance-name>:<remote-file-path>`,例如`scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
+Use the following command: `scp <local-file-path> <brev-instance-name>:<remote-file-path>`,for example `scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
 
 ## References
 
