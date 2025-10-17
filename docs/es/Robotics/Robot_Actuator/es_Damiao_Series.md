@@ -21,6 +21,10 @@ Este artículo presentará cómo comenzar con los motores de la serie Damiao 43 
     <img width={400}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.png" />
 </div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Gripper-01-p-6561.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo ahora 🖱️</font></span></strong>
+</a></div>
 
 ## Especificaciones
 
@@ -192,6 +196,7 @@ El motor comenzará a girar. También puedes copiar los datos CAN (en formato he
 </div>
 
 El motor comenzará a girar. También puedes copiar los datos CAN (en formato hexadecimal) y usar una herramienta de depuración de puerto serie para controlar el motor.
+
 ### Modo de Control de Velocidad
 
 1. En la sección Establecer Parámetros, haga clic en ​Leer Param para mostrar los parámetros actuales del motor.
@@ -1314,7 +1319,9 @@ if __name__ == "__main__":
 python damiao_test.py
 ```
 
+<div class="video-container">
 <iframe width="960" height="640" src="https://www.youtube.com/embed/e5hajjlaXAM?si=mTwNAeU5cfQEIuOc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 El motor se iluminará en **verde** y rotará a una **velocidad sinusoidal**.
 

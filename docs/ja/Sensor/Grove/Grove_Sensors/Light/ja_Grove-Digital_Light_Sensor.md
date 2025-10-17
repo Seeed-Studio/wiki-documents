@@ -17,7 +17,9 @@ last_update:
 
 3つの検出モードを切り替えて測定を行うことができます。それらは赤外線モード、全スペクトルモード、人間の目に見えるモードです。人間の目に見えるモードで動作している場合、このセンサーは目で感じるのに近い測定値を提供します。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" /></a></p>
 

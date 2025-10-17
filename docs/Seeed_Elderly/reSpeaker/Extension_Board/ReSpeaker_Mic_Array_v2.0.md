@@ -191,7 +191,9 @@ Channel5 Audio(Playback data):
 
 Here is the video about the DOA and AEC.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/XivM-6PRgX8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ### Install DFU and LED Control Driver  
 

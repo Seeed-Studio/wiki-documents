@@ -151,7 +151,7 @@ En una máquina host Ubuntu, abre la terminal y ejecuta el comando `sha256sum <A
 
 Aquí hay un video para flashear JetPack 6.1 en la placa portadora A603 + módulo Orin Nx 16GB. Puedes consultar el video y los pasos detallados a continuación para flashear tu dispositivo.
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/qN4GxscUGW0" title="A603 JetPack6.1 Installation Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

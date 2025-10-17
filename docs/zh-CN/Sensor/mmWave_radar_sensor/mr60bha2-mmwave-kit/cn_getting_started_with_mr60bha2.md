@@ -518,7 +518,7 @@ This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sens
 :::tip
 如果您不想阅读文本，也可以参考**[视频](https://youtu.be/uic8__FFzos)**来更新固件。由于下面会覆盖 XIAO 的 ESPHome 固件，您可能需要在更新雷达固件后在此[网页](https://limengdu.github.io/MR60BHA2_ESPHome_external_components/)上重新刷写 XIAO 的 ESPHome 固件。
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uic8__FFzos?si=ijBJOLMk9Z5szwSX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 :::

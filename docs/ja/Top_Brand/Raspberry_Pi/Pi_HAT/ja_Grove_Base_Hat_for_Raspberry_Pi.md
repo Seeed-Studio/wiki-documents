@@ -502,7 +502,9 @@ ST32シリーズのチップが世界的に品薄となり、価格が数回に�
 
 この製品の紹介動画です。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0dFQWwXOOBI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技術サポートと製品ディスカッション
 

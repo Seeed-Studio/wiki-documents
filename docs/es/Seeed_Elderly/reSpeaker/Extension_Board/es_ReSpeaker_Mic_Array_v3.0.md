@@ -192,7 +192,9 @@ Audio del Canal5 (datos de reproducción):
 
 Aquí está el video sobre DOA y AEC.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/XivM-6PRgX8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ### Instalar Controlador DFU y Control de LED  
 

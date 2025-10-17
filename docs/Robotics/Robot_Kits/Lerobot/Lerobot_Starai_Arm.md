@@ -9,8 +9,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
 slug: /lerobot_starai_arm
 last_update:
-  date: 9/16/2025
+  date: 10/13/2025
   author: LiShanghang
+translation:
+  skip: [ zh-CN ]
 ---
 
 # Getting started with StarAI Robot Arm with LeRobot
@@ -136,12 +138,6 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 git clone https://github.com/Seeed-Projects/lerobot-starai.git ~/lerobot
 ```
 
-Switch to the starai-arm-develop branch.
-
-```bash
-git checkout starai-arm-develop
-```
-
 4. When using miniconda, install ffmpeg in your environment:
 
 ```bash
@@ -161,14 +157,10 @@ conda install ffmpeg=7.1.1 -c conda-forge
 
 :::
 
-5. Install LeRobot with dependencies for the starai motors:
+5. Install LeRobot:
 
 ```bash
-cd ~/lerobot && pip install -e ".[starai]"
-```
-
-```bash
-sudo apt remove brltty
+cd ~/lerobot && pip install -e .
 ```
 
 For Jetson Jetpack devices (please make sure to install [Pytorch-gpu and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) from step 5 before executing this step):
@@ -182,7 +174,14 @@ conda uninstall numpy
 pip3 install numpy==1.26.0  # This should match torchvision
 ```
 
-6. Check Pytorch and Torchvision
+6.Install Fashionstar Motor Dependencies:
+
+```bash
+pip install lerobot_teleoperator_violin    #使用 pip 安装violin
+pip install lerobot_robot_viola    #使用 pip 安装viola
+```
+
+7. Check Pytorch and Torchvision
 
 Since installing the lerobot environment via pip will uninstall the original Pytorch and Torchvision and install the CPU versions of Pytorch and Torchvision, you need to perform a check in Python.
 
@@ -294,24 +293,25 @@ sudo chmod 666 /dev/ttyUSB*
 
 ## Calibrate
 
-For videos covering the StarAI Robotic Arm from unboxing to teleoperation, you may refer to:
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/02lxxF9Cvy8?si=IGJda5nXkYEbm2N6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+### For Initial Calibration
 
-Move the robotic arm to the initial position of the robotic arm (as shown in the figure below) and place it in standby mode, then reconnect the power supply. For the initial position of the new version of the robotic arm, special attention should be paid to ensuring that the servos of Joints 3, 4, and 5 strictly align with the positions in the figure.
+Please rotate each joint left and right to the corresponding positions.
 
+### For Re-Calibration
 
-| **Violin Leader Arm** | **Viola Follower Arm** |
-|:---------:|:---------:|
-| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_rest.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_rest.jpg) |
+Follow the on-screen prompt: enter the letter "c" and press the Enter key.
 
-Initial position of the old-version robotic arm (special attention should be paid to ensuring that the servos of Joints 3, 4, and 5 strictly align with the positions in the figure; the initial position of the new-version robotic arm can also be used as a reference):
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png" />
-</div>
+Below are the reference values. Under normal circumstances, the actual limit reference values should fall within the range of **±10°** of these references.
 
+| Servo ID | Lower Angle Limit (°) | Upper Angle Limit (°) | Notes                                          |
+| -------- | --------------------- | --------------------- | ---------------------------------------------- |
+| motor\_0 | -180°                 | 180°                  | Rotate to the limit position                   |
+| motor\_1 | -90°                  | 90°                   | Rotate to the limit position                   |
+| motor\_2 | -90°                  | 90°                   | Rotate to the limit position                   |
+| motor\_3 | -180°                 | 180°                  | No limit; rotate to the reference angle limits |
+| motor\_4 | -90°                  | 90°                   | Rotate to the limit position                   |
+| motor\_5 | -180°                 | 180°                  | No limit; rotate to the reference angle limits |
+| motor\_6 | 0°                    | 100°                  | Rotate to the limit position                   |
 
 :::tip
 Taking PC (Linux) and Jetson board as examples, the `first` USB device inserted will be mapped to `ttyUSB0`, and the `second` USB device inserted will be mapped to `ttyUSB1`.
@@ -324,20 +324,18 @@ Please pay attention to the mapping interfaces of the leader and follower before
 Connect the leader to `/dev/ttyUSB0`, or modify the `--teleop.port` parameter, and then execute:
 
 ```bash
-lerobot-calibrate     --teleop.type=starai_violin --teleop.port=/dev/ttyUSB0 --teleop.id=my_awesome_staraiviolin_arm
+lerobot-calibrate     --teleop.type=lerobot_teleoperator_violin --teleop.port=/dev/ttyUSB0 --teleop.id=my_awesome_staraiviolin_arm
 ```
-
-After startup, you will see the encoder values of each joint. You need to manually calibrate each joint one by one: rotate each joint to its maximum and minimum positions. For joints without limit stops, the rotation range must not exceed 180° clockwise or 180° counterclockwise. After calibrating all joints, press Enter to save the settings.
 
 #### Follower Robotic Arm
 
 Connect the follower to `/dev/ttyUSB1`, or modify the `--teleop.port` parameter, and then execute:
 
 ```bash
-lerobot-calibrate     --robot.type=starai_viola --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraiviola_arm
+lerobot-calibrate     --robot.type=lerobot_robot_viola --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraiviola_arm
 ```
 
-After startup, you will see the encoder values of each joint. You need to manually calibrate each joint one by one: rotate each joint to its maximum and minimum positions. For joints without limit stops, the rotation range must not exceed 180° clockwise or 180° counterclockwise. After calibrating all joints, press Enter to save the settings.
+After running the command, you need to **manually move the robotic arm** to allow each joint to reach its **limit position**. The terminal will display the recorded range data. Once this operation is completed, press Enter.
 
 :::tip
 The calibration files will be saved to the following paths: `~/.cache/huggingface/lerobot/calibration/robots` and `~/.cache/huggingface/lerobot/calibration/teleoperators`.
@@ -353,20 +351,16 @@ The calibration files will be saved to the following paths: `~/.cache/huggingfac
 Connect `left_arm_port` to `/dev/ttyUSB0` and `right_arm_port` to `/dev/ttyUSB2`, or modify the `--teleop.left_arm_port` and `--teleop.right_arm_port` parameters, and then execute:
 
 ```bash
-lerobot-calibrate     --teleop.type=bi_starai_leader  --teleop.left_arm_port=/dev/ttyUSB0  --teleop.right_arm_port=/dev/ttyUSB2  --teleop.id=bi_starai_leader
+lerobot-calibrate     --teleop.type=lerobot_teleoperator_bimanual_leader  --teleop.left_arm_port=/dev/ttyUSB0  --teleop.right_arm_port=/dev/ttyUSB2  --teleop.id=bi_starai_violin_leader
 ```
-
-After startup, you will see the encoder values of each joint. You need to manually calibrate each joint one by one: rotate each joint to its maximum and minimum positions. For joints without limit stops, the rotation range must not exceed 180° clockwise or 180° counterclockwise. After calibrating all joints, press Enter to save the settings.
 
 #### Follower Robotic Arm
 
 Connect `left_arm_port` to `/dev/ttyUSB1` and `right_arm_port` to `/dev/ttyUSB3`, or modify the `--robot.left_arm_port` and `--robot.right_arm_port` parameters, and then execute:
 
 ```bash
-lerobot-calibrate     --robot.type=bi_starai_follower  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_follower
+lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_name=starai_viola  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_viola_follower
 ```
-
-After startup, you will see the encoder values of each joint. You need to manually calibrate each joint one by one: rotate each joint to its maximum and minimum positions. For joints without limit stops, the rotation range must not exceed 180° clockwise or 180° counterclockwise. After calibrating all joints, press Enter to save the settings.
 
 :::tip
 
@@ -381,7 +375,7 @@ If using a dual-arm setup, you need to manually modify the robotic arm file type
 ## Teleoperate
 
 <div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/02lxxF9Cvy8?si=IGJda5nXkYEbm2N6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="https://www.youtube.com/embed/Uz-x-2P2xaE?si=HJTjALt5yFntR6-s" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 Move the arm to the position shown in the diagram and set it to standby.
@@ -395,10 +389,10 @@ Then you are ready to teleoperate your robot (It won't display the cameras)! Run
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=starai_viola \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --teleop.type=starai_violin \
+    --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm
 ```
@@ -408,14 +402,15 @@ lerobot-teleoperate \
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=bi_starai_follower \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.id=bi_starai_follower \
-    --teleop.type=bi_starai_leader \
+    --robot.id=bi_starai_viola_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
-    --teleop.id=bi_starai_leader
+    --teleop.id=bi_starai_violin_leader
 ```
 
 </details>
@@ -441,10 +436,10 @@ After the program starts, the Hover Lock Technology remains functional.
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
-
 - 🚀 Step 1: Install the Orbbec SDK Dependent Environment
 
 1. Clone the `pyorbbec` repository
+
    ```bash
    cd ~/
    git clone https://github.com/orbbec/pyorbbecsdk.git
@@ -453,20 +448,24 @@ After the program starts, the Hover Lock Technology remains functional.
 2. Download and install the corresponding **.whl file** for the SDK  
    Go to [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases),  
    select and install based on your Python version. For example:
+
    ```bash
    pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
    ```
 
 3. Install dependencies in the `pyorbbec` directory
+
    ```bash
    cd ~/pyorbbecsdk
    pip install -r requirements.txt
    ```
 
    Force downgrade the `numpy` version to `1.26.0`
+
     ```bash
     pip install numpy==1.26.0
     ```
+
   Red error messages can be ignored.
 
 4. Clone the Orbbec SDK into the `~/lerobot/src/cameras` directory
@@ -476,12 +475,13 @@ After the program starts, the Hover Lock Technology remains functional.
   git clone https://github.com/ZhuYaoHui1998/orbbec.git
   ```
 
-5. Modify utils.py and __init__.py
+5. Modify utils.py and **init**.py
+
 - Find `utils.py` in the `~/lerobot/src/lerobot/cameras` directory, and add the following code at line 40:
 
 ```python
 elif cfg.type == "orbbec":
-            from .realsense.camera_orbbec import OrbbecCamera
+            from .orbbec.camera_orbbec import OrbbecCamera
 
             cameras[key] = OrbbecCamera(cfg)
 ```
@@ -502,11 +502,9 @@ from .orbbec.configuration_orbbec import OrbbecCameraConfig
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
 </div>
 
-
 - 🚀 Step 2: Function Call and Examples
 
 In all the following examples, replace `starai_viola` with the actual model of the robotic arm you are using (e.g., `so100` / `so101`).
-
 
 We have added the `focus_area` hyperparameter. Since depth data that is too far away is meaningless for the robotic arm (it cannot reach or grasp objects), depth data less than or greater than the `focus_area` will be displayed in black. The default `focus_area` is (20, 600).  
 Currently, the only supported resolution is width: 640, height: 880.
@@ -523,27 +521,24 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/orbbec_result.png" />
 </div>
 
-
 For subsequent tasks such as data collection, training, and evaluation, the process is the same as that for regular RGB commands. You only need to replace the relevant part in the regular RGB command with:
+
   ```
   --robot.cameras="{ front: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:(20,600)}}" \
   ```
-You can also add an additional monocular RGB camera afterward.
 
+You can also add an additional monocular RGB camera afterward.
 
 </details>
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/-p8K_-XxW8U?si=UmYWvEyKNPpTRxDC" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
-
 
 After inserting your two USB cameras, run the following script to check the port numbers of the cameras. It is important to remember that the camera must not be connected to a USB Hub; instead, it should be plugged directly into the device. The slower speed of a USB Hub may result in the inability to read image data.
 
@@ -588,15 +583,14 @@ After confirming the external cameras, replace the camera information below with
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=starai_viola \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
-    --teleop.type=starai_violin \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
-    
 ```
 
 <details>
@@ -604,15 +598,16 @@ lerobot-teleoperate \
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=bi_starai_follower \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.id=bi_starai_follower \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
-    --teleop.type=bi_starai_leader \
+    --robot.id=bi_starai_viola_follower \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
-    --teleop.id=bi_starai_leader \
+    --teleop.id=bi_starai_violin_leader \
     --display_data=true
 ```
 
@@ -659,15 +654,15 @@ Record 10 episodes and upload your dataset to the hub:
 
 ```bash
 lerobot-record \
-    --robot.type=starai_viola \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
-    --teleop.type=starai_violin \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true \
-    --dataset.repo_id=${HF_USER}/record-test \
+    --dataset.repo_id=starai/record-test \
     --dataset.episode_time_s=30 \
     --dataset.reset_time_s=30 \
     --dataset.num_episodes=10 \
@@ -680,17 +675,18 @@ lerobot-record \
 
 ```bash
 lerobot-record \
-    --robot.type=bi_starai_follower \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.id=bi_starai_follower \
-    --teleop.type=bi_starai_leader \
+    --robot.id=bi_starai_viola_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
-    --teleop.id=bi_starai_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
+    --teleop.id=bi_starai_violin_leader \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
     --display_data=true \
-    --dataset.repo_id=${HF_USER}/record-test \
+    --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode_time_s=30 \
     --dataset.reset_time_s=30 \
     --dataset.num_episodes=10 \
@@ -713,11 +709,11 @@ Not uploading to Hub:
 
 ```bash
 lerobot-record \
-    --robot.type=starai_viola \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
-    --teleop.type=starai_violin \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true \
@@ -734,15 +730,16 @@ lerobot-record \
 
 ```bash
 lerobot-record \
-    --robot.type=bi_starai_follower \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.id=bi_starai_follower \
-    --teleop.type=bi_starai_leader \
+    --robot.id=bi_starai_viola_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
-    --teleop.id=bi_starai_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
+    --teleop.id=bi_starai_violin_leader \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
     --display_data=true \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode_time_s=30 \
@@ -803,7 +800,7 @@ Now try to replay the first episode on your robot:
 
 ```bash
 lerobot-replay \
-    --robot.type=starai_viola \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
     --dataset.repo_id=starai/record-test \
@@ -815,10 +812,11 @@ lerobot-replay \
 
 ```bash
 lerobot-replay \
-    --robot.type=bi_starai_follower \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.id=bi_starai_follower \
+    --robot.id=bi_starai_viola_follower \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode=0 # choose the episode you want to replay
 ```

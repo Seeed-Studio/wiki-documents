@@ -981,7 +981,9 @@ if __name__ == "__main__":
 The script will display the detection results and the measured distance between two specified objects (e.g., cup and mouse) in real time.The left side of the window shows the RGB image with detection boxes.The right side shows the depth map and distance.In the video, you can see that the measurement error is generally within one centimeter:
 </div>
 
+<div class="video-container">
 <iframe width="960" height="371" src="https://www.youtube.com/embed/r_zLhj-waj0" title="Measure distance with depth camera" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::note
 <div style={{ textAlign: "justify" }}>

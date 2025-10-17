@@ -474,9 +474,13 @@ If you want to know how the algorithm of temperature coming, please refer to the
 
 **Temperature sensor Grove module**:
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wjL7xOGqAqg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vI9pkmiK8EM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Tech Support & Product Discussion
 

@@ -70,7 +70,9 @@ The ESP-IDF version must be greater than v5.0. If you're using an older version,
 
 For newer users, this video may help you better understand the steps below:
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/oqJz6zKfc4A?si=glzTFfR7m392eITb" title="Set Up the ESP-IDF Toolchain for SenseCAP Indicator on Windows" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 #### **Toolchain Installation**
 

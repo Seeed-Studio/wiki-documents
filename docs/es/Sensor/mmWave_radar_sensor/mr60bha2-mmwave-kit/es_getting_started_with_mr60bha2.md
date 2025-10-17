@@ -518,7 +518,7 @@ Modificar el firmware del radar es una operación riesgosa, así que asegúrate 
 :::tip
 Si prefieres no leer el texto, también puedes consultar **[el video](https://youtu.be/uic8__FFzos)** para actualizar el firmware. Dado que el firmware ESPHome para XIAO será sobrescrito a continuación, es posible que necesites volver a flashear el firmware ESPHome para XIAO en esta [página web](https://limengdu.github.io/MR60BHA2_ESPHome_external_components/) después de actualizar el firmware del radar.
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uic8__FFzos?si=ijBJOLMk9Z5szwSX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 :::

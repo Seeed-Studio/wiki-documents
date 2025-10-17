@@ -15,7 +15,9 @@ last_update:
 
 Grove - 响度传感器专为检测环境声音而设计。基于LM2904放大器和内置麦克风，它放大并过滤从麦克风接收到的高频信号，并输出正包络。这用于Arduino的信号采集。输出值取决于声音输入的级别。为了避免不必要的信号干扰，输入信号将在模块内部经过两次过滤。有一个螺丝电位器，可以手动调节输出增益。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/EhZ7uDvoALE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-Loudness-Sensor-p-1382.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width={200} height={38} border={0} /></a></p>
 

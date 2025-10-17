@@ -15,11 +15,11 @@ last_update:
   author: Zibo
 ---
 
-# Hardware de la placa portadora Robotics J401 y Primeros Pasos
+# Hardware de la placa portadora Robotics J401 y Guía de inicio
 
 El reComputer Robotics J401 es una placa portadora de IA de borde compacta y de alto rendimiento diseñada para robótica avanzada. Compatible con módulos NVIDIA Jetson Orin Nano/Orin NX en modo Super/MAXN, ofrece hasta 157 TOPS de rendimiento de IA. Equipado con amplias opciones de conectividad—incluyendo puertos Ethernet Gigabit duales, ranuras M.2 para módulos 5G y Wi-Fi/BT, 6 puertos USB 3.2, CAN, GMSL2 (a través de expansión opcional), I2C y UART—sirve como un cerebro robótico potente capaz de procesar datos complejos de varios sensores. Preinstalado con JetPack 6 y Linux BSP, asegura un despliegue sin problemas.​
 
-Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1, el reComputer Robotics J401 conecta la toma de decisiones impulsada por modelos de lenguaje grandes con el control de robótica física, como la planificación de movimiento y la fusión de sensores. Ideal para el desarrollo rápido de robots autónomos, acelera el tiempo de comercialización con interfaces listas para usar y frameworks de IA optimizados.
+Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1, el reComputer Robotics J401 conecta la toma de decisiones impulsada por modelos de lenguaje grandes con el control físico de robótica, como la planificación de movimiento y la fusión de sensores. Ideal para el desarrollo rápido de robots autónomos, acelera el tiempo de comercialización con interfaces listas para usar y frameworks de IA optimizados.
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomputer-robotics-carrier-board.png"/>
@@ -44,20 +44,20 @@ Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1
 ## Lista de Partes
 
 - Placa Portadora reComputer Robotics J401 x 1
-- Fuente de Alimentación y placa de expansión JST x 1
+- Fuente de alimentación y placa de expansión JST x 1
 - Cable XT30 a DC x 1
 - Cable USB, Tipo A a Tipo C x 1
-- Disipador de Calor para placa de expansión x 1
+- Disipador de calor para placa de expansión x 1
 - Espárrago(M3*30) x 5
 - Tuerca hexagonal M3 x 5
-- Tornillo(CM2.5*L.4) para Módulo Jetson y M.2 Key M x3
+- Tornillo(CM2.5*L.4) para módulo Jetson y M.2 Key M x3
 - Tornillo(CM2*3.0) para M.2 Key E x1
 - Espárrago(M2*2.0) para M.2 Key B x1
 - Tornillo(CM3*4.0) para M.2 Key B x1
-- Manual de Usuario x 1
+- Manual de usuario x 1
 
 :::note
-1.Por favor diseñe una solución robusta de disipación de calor según la Guía de Diseño Térmico, cuando esté en suministro de alta tensión y temperatura de funcionamiento.
+1.Por favor diseñe una solución robusta de disipación de calor según la Guía de Diseño Térmico, cuando esté en fuente de alimentación de alto voltaje y temperatura de operación.
 2.Por favor adjunte el disipador de calor para el módulo para un mejor rendimiento.
 3.Durante la operación con entrada de alto voltaje y alta carga, por favor no toque el disipador de calor para prevenir quemaduras.
 4.Recomendación de Adaptador de Energía para Validación, por favor use el adaptador de energía recomendado en el sitio web oficial de Seeed.
@@ -129,7 +129,7 @@ Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1
     </tr>
     <tr>
       <td>Ventilador</td>
-      <td>1x Conector de Ventilador de 4 pines (5V PWM);<br />1x Conector de Ventilador de 4 pines (12V PWM)</td>
+      <td>1x Conector de ventilador de 4 pines (5V PWM);<br />1x Conector de ventilador de 4 pines (12V PWM)</td>
     </tr>
     <tr>
       <td>Puerto de Extensión</td>
@@ -177,7 +177,7 @@ Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1
       <td>Escritorio, Montaje en pared</td>
     </tr>
     <tr>
-      <th rowSpan="1">Temperatura de Funcionamiento</th>
+      <th rowSpan="1">Temperatura de Operación</th>
       <td colSpan="2">-20℃~60℃ (Modo 25W);<br />-20℃~55℃ (Modo MAXN);<br />(con disipador de calor reComputer Robotics con ventilador)</td>
     </tr>
     <tr>
@@ -291,7 +291,7 @@ Para verificar la integridad del firmware descargado, puede comparar el valor ha
 En una máquina host Ubuntu, abra la terminal y ejecute el comando `sha256sum <Archivo>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, confirma que el firmware que descargó está completo e intacto.
 :::
 
-### Entrar en Modo de Recuperación Forzada
+### Entrar al Modo de Recuperación Forzada
 
 :::info
 Antes de que podamos continuar con los pasos de instalación, necesitamos asegurarnos de que la placa esté en modo de recuperación forzada.
@@ -300,6 +300,7 @@ Antes de que podamos continuar con los pasos de instalación, necesitamos asegur
 <details>
 
 <summary> Paso a Paso </summary>
+
 **Paso 1.** Cambie el interruptor al modo RESET.
 
 <div align="center">
@@ -358,7 +359,7 @@ El comando de flasheo puede ejecutarse durante 2-10 minutos.
 </div>
 
 :::info
-Por favor complete la **Configuración del Sistema** según sus necesidades.
+Por favor complete la **System Configuration** según sus necesidades.
 :::
 
 ## Uso de Interfaces
@@ -367,15 +368,15 @@ Lo siguiente introducirá las diversas interfaces de la placa Robotics J401 y c�
 
 ## M.2 Key M
 
-M.2 Key M está diseñado para SSDs NVMe de alta velocidad, proporcionando transferencia de datos ultra rápida para aplicaciones de robótica.
+M.2 Key M está diseñado para SSD NVMe de alta velocidad, proporcionando transferencia de datos ultra rápida para aplicaciones de robótica.
 
-### Los SSDs soportados son los siguientes
+### Los SSD compatibles son los siguientes
 
-- [128GB NVMe M.2 PCle Gen3x4 2280 SSD Interno](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
-- [256GB NVMe M.2 PCle Gen3x4 2280 SSD Interno](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
-- [512GB NVMe M.2 PCle Gen3x4 2280 SSD Interno](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
-- [1TB NVMe M.2 PCle Gen3x4 2280 SSD Interno](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
-- [2TB NVMe M.2 PCle Gen3x4 2280 SSD Interno](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
+- [128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
+- [256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
+- [512GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
+- [1TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
+- [2TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
 
 ### Conexión de Hardware
 
@@ -403,7 +404,7 @@ Por favor ejecute el comando `sudo rm /home/seeed/ssd/test` para eliminar los ar
 
 ## M.2 Key B
 
-Ranura M.2 Key B para expansión de Módulo 5G, habilitando conectividad celular de alta velocidad para escenarios de robótica y AI de borde.
+Ranura M.2 Key B para expansión de módulo 5G, habilitando conectividad celular de alta velocidad para escenarios de robótica e IA de borde.
 
 ### Conexión de Hardware
 
@@ -544,7 +545,7 @@ iperf3 -c <server_ip> -B <bind_ip>
 
 :::info
 `<server_ip>` es la dirección IP del servidor iperf3. El cliente se conectará a este servidor para realizar una prueba de ancho de banda.
-`<bind_ip>` vincula la dirección IP local especificada como la fuente del tráfico de prueba.
+`<bind_ip>` vincula la dirección IP local especificada como fuente del tráfico de prueba.
 :::
 
 <div align="center">
@@ -553,7 +554,7 @@ iperf3 -c <server_ip> -B <bind_ip>
 
 ## LED
 
-El reComputer Jetson Robotics J401 cuenta con 3 indicadores LED (PWR, ACT y User LED) que proporcionan retroalimentación de estado clara para alimentación, actividad del sistema y funciones definidas por el usuario.
+El reComputer Jetson Robotics J401 cuenta con 3 indicadores LED (PWR, ACT y User LED) que proporcionan retroalimentación clara de estado para alimentación, actividad del sistema y funciones definidas por el usuario.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/led.jpg"/>
@@ -596,7 +597,8 @@ gpioset --mode=time --sec=1 2 2=0
 
 Ejecute el script para probar el LED RGB.
 
-<div align="center">  <img width="400" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/rgb_led.gif"/>
+<div align="center">
+  <img width="400" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/rgb_led.gif"/>
 </div>
 
 ## USB
@@ -634,49 +636,49 @@ Ejecutar el script con el nombre de tu dispositivo USB como argumento.
 
 Usando este puerto serie, a través del cable de datos USB C, puedes monitorear la información de depuración de entrada y salida en el lado del PC.
 
-**Paso1.** Cambiar el interruptor al modo de depuración.
+**Paso 1.** Cambiar el interruptor al modo de depuración.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug.jpg"/>
 </div>
 
-**Paso2.** Conectar el PC a través de un cable de datos USB, descargar el [Controlador CP210X](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) en tu PC.
+**Paso 2.** Conectar el PC a través de un cable de datos USB, descargar el [CP210X Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) en tu PC.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/download_driver.png"/>
 </div>
 
-**Paso3.** Conectar el PC a través de un cable de datos USB, extraer el archivo descargado e instalar el controlador en tu PC.
+**Paso 3.** Conectar el PC a través de un cable de datos USB, extraer el archivo descargado e instalar el controlador en tu PC.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png"/>
 </div>
 
-**Paso4.** Abrir el Administrador de Dispositivos en tu PC Windows y verificar el número de puerto COM asignado al reComputer Super. Debería aparecer bajo "Puertos (COM y LPT)" como "Silicon Labs CP210x USB to UART Bridge (COMX)", donde X es el número del puerto COM.
+**Paso 4.** Abrir el Device Manager en tu PC con Windows y verificar el número de puerto COM asignado al reComputer Super. Debería aparecer bajo "Ports (COM & LPT)" como "Silicon Labs CP210x USB to UART Bridge (COMX)", donde X es el número del puerto COM.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/com4.png"/>
 </div>
 
-**Paso5.** Abrir la herramienta de puerto serie (Aquí, usamos la herramienta MobaXterm como ejemplo), crear una nueva sesión.
+**Paso 5.** Abrir la herramienta de puerto serie (Aquí, usamos la herramienta MobaXterm como ejemplo), crear una nueva sesión.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/1.png"/>
 </div>
 
-**Paso6.** Seleccionar la herramienta Serial.
+**Paso 6.** Seleccionar la herramienta Serial.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/2.png"/>
 </div>
 
-**Paso7.** Seleccionar el puerto serie correspondiente, establecer la velocidad de baudios a 115200 y hacer clic en "OK".
+**Paso 7.** Seleccionar el puerto serie correspondiente, establecer la velocidad de baudios a 115200 y hacer clic en "OK".
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug1.png"/>
 </div>
 
-**Paso8.** Iniciar sesión en tu reComputer Super con el nombre de usuario y contraseña.
+**Paso 8.** Iniciar sesión en tu reComputer Super con el nombre de usuario y contraseña.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug2.png"/>
@@ -892,7 +894,8 @@ gpioset --mode=time --sec=100 2 5=0
 **Paso 2.** Conectar la herramienta USB a TTL al puerto UART del Robotics J401 y al PC.
 
 **Paso 3.** Abrir la herramienta de puerto serie en el lado del PC (Aquí, usamos la herramienta xcom como ejemplo.) y establecer la velocidad de baudios a 115200.
-**Paso 4.** Crea un script simple de Python para comunicación serial:
+
+**Paso 4.** Crea un script simple de Python para comunicación serie:
 
 ```python
 
@@ -930,7 +933,7 @@ python3 uart_test.py
 ## I2C
 
 Robotics J401 proporciona dos interfaces I2C (IIC0 e IIC1) a través de conectores JST estándar de 4 pines.
-Permite la conexión fácil de sensores y periféricos para la expansión del sistema.
+Permite una conexión fácil de sensores y periféricos para la expansión del sistema.
 
 ### Conexión de Hardware
 
@@ -1034,7 +1037,7 @@ Podemos ver que el dispositivo conectado a IIC0 está configurado en la direcci�
 
 ## Puerto de Expansión
 
-La placa portadora Robotics j401 cuenta con un Conector de Expansión de Cámara para placa de extensión GMSL. Puede conectar y operar simultáneamente cuatro cámaras GMSL al mismo tiempo.
+La placa portadora Robotics j401 cuenta con un Header de Expansión de Cámara para placa de extensión GMSL. Puede conectar y operar simultáneamente cuatro cámaras GMSL al mismo tiempo.
 
 ### Conexión de Hardware
 
@@ -1050,7 +1053,7 @@ Los siguientes son los modelos de cámara GMSL que ya hemos soportado:
 - SG2-AR0233C-5200-G2A
 - SG2-IMX390C-5200-G2A
 - SG8S-AR0820C-5300-G2A
-- Orbbec Gemini 335Lg
+- [Orbbec Gemini 335Lg](https://www.seeedstudio.com/Orbbec-Gemini-335LG-3D-Camera-p-6541.html)
 
 ### Instrucciones de Uso
 
@@ -1094,7 +1097,7 @@ cd OrbbecViewer_v2.4.8_202507031357_a1355db_linux_aarch64
 ./OrbbecViewer
 ```
 
-La primera vez que lo enciendas, es posible que necesites actualizar el firmware.
+La primera vez que lo enciendas, podrías necesitar actualizar el firmware.
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/update.png"/>
 </div>
@@ -1106,68 +1109,59 @@ Abriendo el flujo de datos, puedes ver el video de la cámara.
 
 ### Usar las cámaras de la Serie SGxxx
 
-**paso 1.** Configura el formato de canal para el serializador y deserializador. El número de interfaz en la figura corresponde al número de serializador/deserializador.
-
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/interface.jpg"/>
-</div>
-
-```bash
-media-ctl -d /dev/media0 --set-v4l2 '"ser_0_ch_0":1[fmt:YUYV8_1X16/1920x1080]'
-media-ctl -d /dev/media0 --set-v4l2 '"des_ch_0":0[fmt:YUYV8_1X16/1920x1080]'
-media-ctl -d /dev/media0 --set-v4l2 '"ser_1_ch_0":1[fmt:YUYV8_1X16/1920x1080]'
-media-ctl -d /dev/media0 --set-v4l2 '"des_ch_1":0[fmt:YUYV8_1X16/1920x1080]'
-media-ctl -d /dev/media0 --set-v4l2 '"ser_2_ch_0":1[fmt:YUYV8_1X16/1920x1536]'
-media-ctl -d /dev/media0 --set-v4l2 '"des_ch_2":0[fmt:YUYV8_1X16/1920x1536]'
-media-ctl -d /dev/media0 --set-v4l2 '"ser_3_ch_0":1[fmt:YUYV8_1X16/3840x2160]'
-media-ctl -d /dev/media0 --set-v4l2 '"des_ch_3":0[fmt:YUYV8_1X16/3840x2160]' 
-```
-
-:::note
-`ser_0_ch_0` es el primer canal del decodificador, `des_ch_0` es el serializador en la primera cámara, y lo mismo se aplica a los demás. Si la cámara conectada tiene una resolución diferente, entonces la configuración aquí se basará en el formato real de la cámara.
-Necesitamos configurar el formato de canal para el serializador y deserializador cada vez que el dispositivo se reinicie.
-:::
-
-**paso 2.** Configura la resolución de la cámara.
+**paso 1.** Configurar el modo de sincronización de fotogramas (¡No está habilitado por defecto!).
 
 :::info
 Aquí demostramos cómo configurar cámaras de diferentes modelos y resoluciones.
 :::
 
 ```bash
-v4l2-ctl -V --set-fmt-video=width=1920,height=1080 -c sensor_mode=1  -d /dev/video0
-v4l2-ctl -V --set-fmt-video=width=1920,height=1080 -c sensor_mode=1  -d /dev/video1
-v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0  -d /dev/video2
-v4l2-ctl -V --set-fmt-video=width=3840,height=2160 -c sensor_mode=2  -d /dev/video3 
+#enables frame synchronization
+v4l2-ctl -d /dev/video0 --set-ctrl=trig_mode=1
+#Set the frame rate of the camera
+v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0 --stream-mmap -d /dev/video0
+#Set the camera format
+v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0 -d /dev/video0
 ```
-
 :::note
-`--set-fmt-video` sigue la resolución que se selecciona basándose en la cámara que está conectada. El sensor_mode también se elige en consecuencia. Actualmente, hay tres opciones de sensor_mode, cada una correspondiente a una resolución diferente.
+`trig_mode = 1` habilita la sincronización de fotogramas, mientras que `trig_mode = 0` deshabilita la sincronización de fotogramas. La configuración predeterminada es deshabilitar la sincronización de fotogramas.
 
+`--set-fmt-video` sigue la resolución que se selecciona basada en la cámara que está conectada. Actualmente, hay tres opciones de sensor_mode, cada una correspondiente a una resolución diferente.
 - sensor_mode=0 -------> YUYV8_1X16/1920x1536
 - sensor_mode=1 -------> YUYV8_1X16/1920x1080
 - sensor_mode=2 -------> YUYV8_1X16/3840x2160
-
 :::
 
-**paso 3.** Inicia la cámara.
+**paso 2.** Iniciar la cámara.
 
 ```bash
-gst-launch-1.0 v4l2src device=/dev/video0 ! \
-'video/x-raw,width=1920,height=1080,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+gst-launch-1.0 \
+    v4l2src device=/dev/video0 ! \
+    video/x-raw,format=YUY2,width=1920,height=1080,framerate=30/1 ! \
+    videoconvert ! \
+    videoscale ! \
+    xvimagesink
 
-gst-launch-1.0 v4l2src device=/dev/video1 ! \
-'video/x-raw,width=1920,height=1080,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+gst-launch-1.0 \
+    v4l2src device=/dev/video1 ! \
+    video/x-raw,format=YUY2,width=1920,height=1080,framerate=30/1 ! \
+    videoconvert ! \
+    videoscale ! \
+    xvimagesink
 
-gst-launch-1.0 v4l2src device=/dev/video2 ! \
-'video/x-raw,width=1920,height=1536,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+gst-launch-1.0 \
+    v4l2src device=/dev/video2 ! \
+    video/x-raw,format=YUY2,width=1536,height=1080,framerate=30/1 ! \
+    videoconvert ! \
+    videoscale ! \
+    xvimagesink
 
-gst-launch-1.0 v4l2src device=/dev/video3 ! \
-'video/x-raw,width=3840,height=2160,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+gst-launch-1.0 \
+    v4l2src device=/dev/video3 ! \
+    video/x-raw,format=YUY2,width=3840,height=2160,framerate=30/1 ! \
+    videoconvert ! \
+    videoscale ! \
+    xvimagesink
 ```
 
 <div align="center">
@@ -1191,6 +1185,7 @@ El reComputer Jetson Robotics J401 está equipado con un DP1.4 (incluido en Type
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
+
 <div class="button_tech_support_container">
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>

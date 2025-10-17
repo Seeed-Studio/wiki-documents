@@ -3,7 +3,7 @@ description: PlatfromIO with EE04
 title: EE04 with PlatfromIO
 keywords:
   - epaper
-image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/10.webp
+image: https://files.seeedstudio.com/wiki/Epaper/EE04/pio_show_1.webp
 sidebar_position: 1
 slug: /ee04_with_platformio
 last_update:

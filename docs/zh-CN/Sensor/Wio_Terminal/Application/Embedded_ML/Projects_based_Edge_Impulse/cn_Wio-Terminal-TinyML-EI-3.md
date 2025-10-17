@@ -17,7 +17,9 @@ last_update:
 在这个项目中，我们将学习如何使用 Wio Terminal 和 Edge Impulse 训练和部署音频场景分类器。
 更多详细信息和视频教程，请观看相应的视频！
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2BISspenUng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## 计算机中的声音处理
 

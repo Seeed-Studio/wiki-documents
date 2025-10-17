@@ -16,7 +16,9 @@ last_update:
 
 Grove - CO2 传感器模块是一款高灵敏度、高分辨率的红外 CO2 传感器。红外 CO2 传感器 MH-Z16 是一款通用型小型传感器，采用非分散红外 (NDIR) 原理检测空气中的 CO2，具有良好的选择性、不依赖氧气、使用寿命长、内置温度传感器、温度补偿、UART 输出等特点，使用方便。它可广泛应用于暖通空调和室内空气质量监测、工业过程监测和安全、农业和畜牧业生产过程监测。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-CO2-Sensor-p-1863.html)
 

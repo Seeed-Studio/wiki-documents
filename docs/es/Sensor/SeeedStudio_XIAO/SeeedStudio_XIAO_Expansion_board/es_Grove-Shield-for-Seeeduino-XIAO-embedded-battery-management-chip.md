@@ -240,7 +240,9 @@ La precisión mínima de velocidad que el sensor es capaz de detectar es 52cm/s,
 
 ## Proyecto
 
-<p><iframe src="https://www.youtube.com/embed/-HMEW2DN6Wg" width="560" height="315" frameborder="0" allowfullscreen=""></iframe></p>
+<p><div class="video-container">
+<iframe src="https://www.youtube.com/embed/-HMEW2DN6Wg" width="560" height="315" frameborder="0" allowfullscreen=""></iframe>
+</div></p>
 
 ## Soporte Técnico y Discusión de Productos
 

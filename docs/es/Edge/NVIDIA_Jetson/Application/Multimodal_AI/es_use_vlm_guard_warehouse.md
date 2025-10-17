@@ -13,7 +13,7 @@ last_update:
   author: Jiahao Li
 ---
 
-# cómo usar LLaVa en el reComputer Industrial J4012 para monitorear tu almacén
+# Cómo usar LLaVa en el reComputer Industrial J4012 para monitorear tu almacén
 
 ## Introducción
 

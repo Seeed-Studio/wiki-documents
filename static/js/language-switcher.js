@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-10-11 14:13:43 (北京时间)
-// 多语言页面: 2021 个
+// 生成时间: 2025-10-17 09:44:32 (北京时间)
+// 多语言页面: 2026 个
 
 (function() {
   'use strict';
@@ -569,6 +569,12 @@
     "es",
     "ja"
   ],
+  "/deploy_visual_perception_engine_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/How_to_Train_and_Deploy_YOLOv8_on_reComputer": [
     "cn",
     "en",
@@ -941,6 +947,12 @@
     "es",
     "ja"
   ],
+  "/recomputer_j501_mini_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/j401_mini_carrierboard_hardware_interfaces_usage": [
     "cn",
     "en",
@@ -990,6 +1002,12 @@
     "ja"
   ],
   "/how_to_build_the_source_code_project_for_seeed_jetson_bsp": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/how_to_encrypt_the_disk_for_jetson": [
     "cn",
     "en",
     "es",
@@ -5747,7 +5765,19 @@
     "es",
     "ja"
   ],
+  "/EE04_with_esphome_advanced": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/epaper_ee04": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/e04_with_platformio": [
     "cn",
     "en",
     "es",

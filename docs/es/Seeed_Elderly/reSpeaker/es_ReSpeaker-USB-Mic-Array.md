@@ -169,7 +169,9 @@ Audio del Canal5 (datos de reproducción):
 
 Aquí está el video sobre DOA y AEC.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/gGVQ-9f7azs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Instalar Controlador DFU y Control de LED  
 
@@ -628,7 +630,9 @@ make
 
 - Paso 4. Actualiza el arreglo de micrófonos con 6_channels_firmware.bin que incluye datos de audio sin procesar de 4 canales.
 
+<div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/K5gZabfaaPI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## FAQ
 

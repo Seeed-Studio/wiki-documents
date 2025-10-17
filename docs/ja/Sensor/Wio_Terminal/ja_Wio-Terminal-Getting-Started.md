@@ -243,59 +243,87 @@ seeed-SAMDデバイスを使用する場合は、seeedフォルダ内のライ�
 
 ### レッスン 1 - Hello World
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/af_I0n5iyzk" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### レッスン 2 - 図形の描画
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IFRiGpK4HK8" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### レッスン 3 - フォントの表示
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aZ9LYoS8w24" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### レッスン 4 - 画像の表示と簡単なUI
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/P8CQtByWfS4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### レッスン 5 - 折れ線グラフとヒストグラム
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OnYLy7k-4T4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### レッスン 6 - Groveモジュールの使用
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NeFotsklchc" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### レッスン 7 - 通信プロトコル
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kn9WJn2FRkI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### レッスン 8 - 内蔵ハードウェア/センサー パート1 | 3つのボタンと5方向スイッチ
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tVd4L7Hzj7M" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### レッスン 9 - 内蔵ハードウェア/センサー パート2 | マイクとブザー
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aYEI9UGIBvo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### レッスン 10 - 内蔵ハードウェア/センサー パート3 | 加速度センサーと光センサー
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3dw-Ony6CIE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### レッスン 11 - 内蔵IRエミッターを使用してテレビリモコンを作成
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/C9AlljLst2o" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### レッスン 12 - Wio Terminal を使用したスマートガーデンプロジェクト
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NQt-XLcSIwA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### レッスン 13 - Wio Terminal をPCのマウスとして使用
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QIR_yqQnYPY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### レッスン 14 - Wio Terminal をPCのキーボードとして使用
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JLrP058LDr8" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Wio Terminal における深層学習（CAVEDU Educationによるサポート）
 

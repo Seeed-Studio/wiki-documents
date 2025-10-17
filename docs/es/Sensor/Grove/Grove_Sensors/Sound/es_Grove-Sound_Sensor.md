@@ -15,7 +15,9 @@ last_update:
 
 Grove - Sensor de Sonido puede detectar la intensidad del sonido del entorno. El componente principal del módulo es un micrófono simple, que está basado en el amplificador L358 y un micrófono electret. La salida de este módulo es analógica y puede ser fácilmente muestreada y probada por un Seeeduino.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/EhZ7uDvoALE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="{200}" height="{38}" border="{0}" /></a></p>
 
@@ -428,9 +430,13 @@ sudo python3 grove_sound_sensor.py
 
 **Módulo sensor de sonido Grove**:
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N19VfMYyn60" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NfFlz8KEFxw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Actualizable a Sensores Industriales
 

@@ -15,7 +15,9 @@ last_update:
 
 Grove - MP3 v2.0 是一个小型且紧凑的音频模块。它支持对 MP3、WAV 和 WMV 格式的音频文件进行各种操作，例如随机播放音乐、播放特定文件中的音乐等。通过串行通信，您可以使用所有预定义的命令或命令组合来操作音乐文件。该模块还支持 FAT16 和 FAT32 等通用文件系统。它配备了 Grove UART 接口、3.5 mm 音频插孔和 micro-SD 卡槽。使用该模块，您可以为您的静音应用程序增添一些声音。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/3FMlt_aqhOc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-MP3-v2-0-p-2597.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width={210} height={41} border={0} /></a></p>
 

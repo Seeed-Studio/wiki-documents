@@ -15,7 +15,9 @@ last_update:
 
 Este Sensor de Polvo proporciona una buena indicación de la calidad del aire en un entorno midiendo la concentración de polvo. El nivel de Material Particulado (nivel PM) en el aire se mide contando el tiempo de Ocupación de Pulso Bajo (tiempo LPO) en una unidad de tiempo determinada. El tiempo LPO es proporcional a la concentración de PM. Este sensor puede proporcionar datos confiables para sistemas purificadores de aire; es sensible a PM de diámetro 1μm.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4df5kaaKa6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 :::caution
 

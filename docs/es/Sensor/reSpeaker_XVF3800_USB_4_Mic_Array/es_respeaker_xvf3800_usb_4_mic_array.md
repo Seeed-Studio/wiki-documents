@@ -118,7 +118,7 @@ El reSpeaker XVF3800 expone 3 pines de entrada (GPI) y 5 pines de salida (GPO) p
 
 Puedes experimentar con el arreglo de LEDs siguiendo la dirección de la voz entrante.
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="400"
           src="https://www.youtube.com/embed/nYxsTq_2bw4"
           title="ReSpeaker XVF3800 Plug & Play: Boot Light Show and DOA Demo"

@@ -169,7 +169,9 @@ sudo python dfu.py --download 1_channel_firmware.bin
 
 这是关于 DOA 和 AEC 的视频。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/gGVQ-9f7azs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### 安装 DFU 和 LED 控制驱动程序
 
@@ -628,7 +630,9 @@ make
 
 - 步骤 4. 使用包含 4 通道原始音频数据的 6_channels_firmware.bin 升级麦克风阵列。
 
+<div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/K5gZabfaaPI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 常见问题
 

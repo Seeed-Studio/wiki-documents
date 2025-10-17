@@ -29,7 +29,7 @@ last_update:
 
 This is SenseCAP Watcher Quick Starter Guide which will help you unbox and get hands-on the device for the first time.
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yufEUFEB0Ic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 

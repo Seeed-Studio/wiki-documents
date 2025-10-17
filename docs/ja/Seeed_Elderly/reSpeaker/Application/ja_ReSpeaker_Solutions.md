@@ -23,7 +23,9 @@ ReSpeakerシリーズは、音声インターフェースが日常的な人間�
 音声インターフェースを体験したい、またはアイデアの実装を試してみたい場合は、キットまたは開発ボードを[こちら](https://www.seeedstudio.com/series/Respeaker-10.html)で入手してください！
 
 例：
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/tdIsCRXKoVI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## **SDK & HDKによる迅速な統合**
 

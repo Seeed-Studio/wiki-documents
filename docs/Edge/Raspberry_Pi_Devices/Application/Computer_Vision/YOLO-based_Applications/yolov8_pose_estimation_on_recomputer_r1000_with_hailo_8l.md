@@ -166,7 +166,7 @@ bash ./run.sh pose-estimation
 
 We compared the inference speed of YOLOv8 for pose estimation with input 640*640 resolution before and after acceleration using the AI kit. The results show that prior to acceleration, the inference speed was only 0.5 FPS, whereas after acceleration, it reached 27 FPS.
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/OwIrMppQzUU" title="Raspberry Pi AI: YOLOv8 Pose Estimation on reComputer R1000(CM4-powered Edge Gateway) with Hailo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
