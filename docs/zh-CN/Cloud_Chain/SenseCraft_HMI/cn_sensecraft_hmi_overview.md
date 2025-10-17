@@ -25,7 +25,7 @@ last_update:
 
 - **实时数据集成**：连接天气、股票、GitHub、YouTube 等数据源
 
-- **多种显示功能**：提供图库、画布、RSS 和 Web 功能满足不同用例
+- **多种显示功能**：Gallery、Canvas、RSS 和 Web 功能满足不同使用场景
 
 - **即用模板**：为常见应用预设计的布局
 
@@ -33,47 +33,9 @@ last_update:
 
 - **设备传感器集成**：自动显示设备的温度、湿度和电池数据
 
+## 入门指南
 
-## 兼容设备
-
-SenseCraft HMI 目前支持以下 Seeed Studio 设备：
-
-### [reTerminal E 系列](https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/)
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.jpg" style={{width:500, height:'auto'}}/></div>
-    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/25.jpg" style={{width:500, height:'auto'}}/></div>
-</div><br />
-
-reTerminal E 系列电子纸显示器将强大的计算能力与电子纸显示技术相结合，非常适合数字标牌、信息仪表板和交互式显示应用。该系列包括两个具有不同显示能力的型号：
-
-#### [reTerminal E1001](https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1001/)
-
-reTerminal E1001 配备 7.5 英寸单色电子纸显示屏，具有 4 级灰度功能。凭借 800×480 分辨率，它提供清晰的文本和清楚的图像，同时消耗最少的电力。单色显示屏非常适合文本易读性和电池寿命是优先考虑的应用。
-
-**主要特性**
-
-- **美观、即用的电子纸显示屏**
-- **超低功耗，3 个月电池续航**
-- **使用 SenseCraft HMI 进行无代码 UI 设计和部署**
-- **兼容流行的软件平台**
-- **灵活的硬件和软件定制**
-
-#### [reTerminal E1002](https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1002/)
-
-reTerminal E1002 配备鲜艳的 7.3 英寸六色电子纸显示屏，采用 ACeP（高级彩色电子纸）技术。这款彩色显示屏提供与电子纸技术相同的功耗效率优势，同时允许使用多种颜色创建更具视觉吸引力的内容，使其非常适合视觉区分和美观外观很重要的应用。
-
-**主要特性**
-
-- **美观、即用的 E Ink® Spectra™6 彩色电子纸显示屏**
-- **超低功耗，3 个月电池续航**
-- **使用 SenseCraft HMI 进行无代码 UI 设计和部署**
-- **兼容流行的软件平台**
-- **灵活的硬件和软件定制**
-
-## 开始使用
-
-要开始使用 SenseCraft HMI：
+开始使用 SenseCraft HMI：
 
 1. **访问平台**：访问 [SenseCraft HMI](https://sensecraft.seeed.cc/hmi)
 
@@ -81,35 +43,80 @@ reTerminal E1002 配备鲜艳的 7.3 英寸六色电子纸显示屏，采用 ACe
 
 3. **连接您的设备**：按照屏幕上的说明配对您的兼容设备
 
-4. **选择功能**：根据您的需求从图库、画布、RSS 或网页功能中选择
+4. **选择功能**：根据您的需求从 Gallery、Canvas、RSS 或 Web 功能中选择
 
 5. **设计您的界面**：使用直观的工具创建您的显示界面
 
-6. **部署到设备**：一键将您的设计发送到已连接的设备
+6. **部署到设备**：一键将您的设计发送到连接的设备
+
+## 入门指南
+
+### [入门指南](https://sensecraft-hmi-docs.seeed.cc/en/guides/getting-started/)
+
+了解如何创建您的 SenseCraft HMI 账户并访问平台。
+
+### [固件更新和刷写](https://sensecraft-hmi-docs.seeed.cc/en/guides/firmware-update/)
+
+在您的电子纸显示设备上更新和刷写固件的完整指南。
+
+### [工作区界面指南](https://sensecraft-hmi-docs.seeed.cc/en/guides/workspace-interface/)
+
+理解和使用核心工具栏、设备状态栏和页面管理功能的综合指南。
+
+### [高级工具](https://sensecraft-hmi-docs.seeed.cc/en/guides/advanced-tools/)
+
+了解如何使用固件刷写器和图像抖动工具来优化您的设备和内容。
+
+### [部署到您的设备](https://sensecraft-hmi-docs.seeed.cc/en/guides/deploying-to-device/)
+
+将您的 SenseCraft HMI 项目部署到电子纸显示设备的分步指南。
 
 ## 功能文档
 
-SenseCraft HMI 提供多个专门的功能，每个功能都针对不同的显示需求而设计：
+SenseCraft HMI 提供多个专门功能，每个功能都为不同的显示需求而设计：
 
-### [AI 生成功能](https://wiki.seeedstudio.com/cn/sensecraft_hmi_ai_generation/)
+### [AI 生成功能](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-ai-generator/)
 
 通过简单地用自然语言描述您想要的内容来创建美观的布局和图像，无需设计技能。
 
-### [图库功能](https://wiki.seeedstudio.com/cn/sensecraft_hmi_gallery/)
+### [Gallery 功能](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-gallery/)
 
 将您的设备转换为数字相框，具有可自定义的图像显示、过渡效果和视觉效果。
 
-### [画布功能](https://wiki.seeedstudio.com/cn/sensecraft_hmi_canvas/)
+### [Canvas 功能](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-canvas/)
 
-设计自定义界面和仪表板，将静态元素与来自各种来源的动态数据相结合。
+设计自定义界面和仪表板，结合静态元素和来自各种来源的动态数据。
 
-### [RSS 功能](https://wiki.seeedstudio.com/cn/sensecraft_hmi_rss/)
+### [RSS 功能](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-rss/)
 
-使用 RSS 源显示来自新闻媒体、博客和其他信息来源的自动更新内容。
+使用 RSS 源显示来自新闻媒体、博客和其他信息源的自动更新内容。
 
-### [网页功能](https://wiki.seeedstudio.com/cn/sensecraft_hmi_web/)
+### [Web 功能](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-web/)
 
 直接在您的设备上显示网页内容，非常适合仪表板、文档或监控系统。
+
+## 其他资源
+
+### [支持的硬件](https://sensecraft-hmi-docs.seeed.cc/en/supported-hardware/)
+
+支持设备和硬件要求的完整列表。
+
+### [视频指南](https://sensecraft-hmi-docs.seeed.cc/en/video-guide/)
+
+SenseCraft HMI 平台的分步视频教程。
+
+### [定价](https://sensecraft-hmi-docs.seeed.cc/en/pricing/)
+
+当前定价信息和计划。
+
+### [发布说明](https://sensecraft-hmi-docs.seeed.cc/en/release-notes/)
+
+SenseCraft HMI 平台的最新更新和版本历史。
+
+## 资源
+
+- [SenseCraft HMI 平台](https://sensecraft.seeed.cc/hmi)
+- [兼容设备 - reTerminal E 系列](https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/)
 
 ## 技术支持与产品讨论
 
