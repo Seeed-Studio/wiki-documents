@@ -66,7 +66,7 @@ last_update:
   <img width ="700" src="https://files.seeedstudio.com/wiki/other/38.2-iso.png"/>
 </div>
 
-在主机上安装 Balena Etcher。要下载安装程序，请点击[这里](https://etcher.balena.io/#:~:text=DOWNLOAD-,Download%20Etcher,-ASSET)并根据您的主机操作系统选择适当的版本：
+在主机上安装 Balena Etcher。要下载安装程序，请点击[这里](https://etcher.balena.io/#:~:text=DOWNLOAD-,Download%20Etcher,-ASSET)并根据您的主机操作系统选择合适的版本：
 <div align="center">
   <img width ="700" src="https://files.seeedstudio.com/wiki/other/balena.jpg"/>
 </div>
@@ -93,7 +93,7 @@ last_update:
 
 <p></p>
 
-启动 Thor 并进入启动界面。选择 `Boot Manager`，然后选择插入 Thor 的 USB 驱动器（根据您的 USB 驱动器名称）。按 Esc 返回上一个菜单，然后选择 `Continue`：
+启动 Thor 并进入引导界面。选择 `Boot Manager`，然后选择插入 Thor 的 USB 驱动器（根据您的 USB 驱动器名称）。按 Esc 返回上一个菜单，然后选择 `Continue`：
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/BootM.png" width="300"/>
   <img src="https://files.seeedstudio.com/wiki/other/selectU.png" width="300"/>
@@ -126,7 +126,7 @@ last_update:
 
 ## Thor 上的基本开发环境设置
 
-本节提供了如何在 Thor 上安装常用软件依赖项以用于开发目的的示例。这些依赖项旨在促进后续开发。
+本节提供了如何在 Thor 上安装常用软件依赖项以进行开发的示例。这些依赖项旨在促进后续开发。
 
 请注意，列出的依赖项**仅供参考**——请根据各自项目的要求安装其他软件包。
 
@@ -182,7 +182,7 @@ conda --version
 
 其他用于 thor 的预编译依赖项 `.whl` 文件可以在[**这里**](https://pypi.jetson-ai-lab.io/sbsa/cu130)找到。
 
-如果预期的 wheel 文件不可用，开发者需要自己构建所需的依赖项以完成开发环境的设置。
+如果预期的 wheel 文件不可用，开发者需要自己构建所需的依赖项来完成开发环境的设置。
 
 ### **安装其他依赖项**
 
@@ -552,65 +552,11 @@ lerobot 机械臂的数据收集可以在 PC 上执行，也可以直接在 Jets
 Lerobot 的开发环境设置过程可以在以下链接的子部分中找到：  
 [https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#install-lerobot](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#install-lerobot)
 
-<!--
-**Miniconda 安装**
-```bash
-#Jetson 
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
-chmod +x Miniconda3-latest-Linux-aarch64.sh
-./Miniconda3-latest-Linux-aarch64.sh
-source ~/.bashrc
 
-#PC 
-mkdir -p ~/miniconda3
-cd miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm ~/miniconda3/miniconda.sh
-source ~/miniconda3/bin/activate
-conda init --all
-```
-
-**依赖项安装**
-
-```bash
-conda create -y -n lerobot python=3.10 && conda activate lerobot
-
-# Use the latest version maintained by Seeed
-git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
-conda install ffmpeg -c conda-forge
-```
-
-**安装 lerobot**
-
-:::note
-**在运行安装命令之前，请确保已安装支持 GPU 的 PyTorch 和 TorchVision 版本！**
-:::
-
-要验证您安装的 PyTorch 是否使用 GPU 支持，请在终端中输入以下内容：
-
-```bash
-import torch
-print(torch.cuda.is_available())
-```
-
-如果您计划在 Jetson 设备上收集数据，可以参考前面的部分来安装 PyTorch，或查看这篇[文章](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)
-
-确认 PyTorch 已正确安装后，在终端中运行以下命令：
-
-```bash
-cd ~/lerobot && pip install -e ".[feetech]"
-conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
-conda remove opencv   # Uninstall OpenCV 
-pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
-conda install -y -c conda-forge ffmpeg
-conda uninstall numpy
-pip3 install numpy==1.26.0  # This should match torchvision
-``` -->
 
 ### 配置电机
 
-SO-ARM 每个关节上的电机需要在组装前进行配置。配置步骤可以在以下链接的子部分中找到：
+SO-ARM 各关节上的电机需要在组装前进行配置。配置步骤可以在以下链接的子部分中找到：
 [https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#configure-the-motors](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#configure-the-motors)
 
 ### 组装
@@ -623,24 +569,7 @@ SO-ARM 主臂和从臂的安装过程可以在以下链接的子部分中找到�
 SO-ARM 完全组装后，需要进行校准。校准程序请参考以下链接的子部分：  
 [https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#calibrate](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#calibrate)
 
-<!-- 首先，确保连接正常工作，并且正确识别机械臂对应的端口。
 
-```bash
-python -m lerobot.find_port
-
-OUTPUT：
-
-Finding all available ports for the MotorBus.
-['/dev/ttyACM0', '/dev/ttyACM1']
-Remove the usb cable from your MotorsBus and press Enter when done.
-
-[...Disconnect corresponding leader or follower arm and press Enter...]
-
-The port of this MotorsBus is /dev/ttyACM0
-Reconnect the USB cable.
-```
-
-主臂的端口可能是`/dev/ttyACM0`。从臂的端口可能是：`/dev/ttyACM1` -->
 
 :::note
 **校准机械臂时，请不要连接任何 USB 摄像头，因为这可能导致端口冲突或端口分配错误。**
@@ -648,262 +577,79 @@ Reconnect the USB cable.
 
 **运行校准脚本后，手动移动机械臂的每个关节，确保其达到完整的运动范围！否则可能导致遥操作期间主臂和从臂姿态不匹配。**
 
-<!-- ```bash
-# 授予访问串行端口的权限
-sudo chmod 666 /dev/ttyACM* # 每次重新插拔 USB 设备时都需要执行此操作
 
-# 校准从臂
-python -m lerobot.calibrate \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm
 
-# 校准从臂
-python -m lerobot.calibrate \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm
-```
+### 摄像头添加
 
-Once both the leader and follower arms are calibrated, run the teleoperation test script:
+通常建议在机械臂的腕部/夹爪上安装一个摄像头，在桌面表面安装另一个摄像头，以确保对机械臂姿态的适当覆盖。
+<mark>具体的安装方法取决于您的应用场景；下面显示的示例仅供参考。</mark>
 
-```bash
-python -m lerobot.teleoperate \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm
-```
+详细信息请参考以下链接的子部分：  
+[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#add-cameras](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#add-cameras)
 
-Use the leader arm to teleoperate the follower arm. Ensure that the two arms mirror each other’s pose correctly. If not, recalibration is required. -->
 
-### Camera Add
 
-It is generally recommended to install one camera on the wrist/gripper  of the robotic arm, and another camera on the desktop surface, to ensure proper coverage of the arm’s posture.
-<mark>The specific installation approach depends on your application scenario; the example shown below is for reference only.</mark>
+### 数据收集
 
-For details, please refer to the subsection of the following link:  
-[https://wiki.seeedstudio.com/lerobot_so100m_new/#add-cameras](https://wiki.seeedstudio.com/lerobot_so100m_new/#add-cameras)
+完成摄像头安装和机械臂校准后，数据集收集程序可以在以下链接的子部分中找到：  
+[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#record-the-dataset)
 
-<!-- <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/camdata1.png" height="450"/>
-  <img src="https://files.seeedstudio.com/wiki/other/camdata2.png" height="450"/>
-</div> -->
 
-<!-- Run the following script to ensure that the system correctly detects the connected USB cameras and that the cameras can be accessed properly:
 
-```bash
-# 对于标准 RGB 摄像头使用 'opencv'。对于 Intel Realsense 摄像头，将 'opencv' 替换为 'realsense'。
-python -m lerobot.find_cameras opencv
-```
+### 可视化收集的数据
 
-If the cameras are correctly detected and accessible, the terminal will display:
+要可视化在 SO-ARM 上收集的数据，请参考以下链接的子部分：  
+[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#visualize-the-dataset)
 
-```bash
---- 检测到的摄像头 ---
-摄像头 #0:
-  名称: OpenCV Camera @ 0
-  类型: OpenCV
-  Id: 0
-  后端 api: AVFOUNDATION
-  默认流配置文件:
-    格式: 16.0
-    宽度: 1920
-    高度: 1080
-    帧率: 15.0
---------------------
-(更多摄像头 ...)
-```
 
-The terminal will output a list of available camera IDs. Be sure to take note of the IDs to ensure that your program can correctly access the cameras!
 
-To test camera usage during teleoperation:
+### 策略训练
 
-```bash
-python -m lerobot.teleoperate \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm \
-    --display_data=true
-```
+基于收集的数据，训练策略的程序可以在以下链接的子部分中找到：  
+[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#train-a-policy](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#train-a-policy)
 
-Here, `--robot.cameras`need the correct camera configuration and ID. -->
 
-### Data Collection
-
-After completing both the camera installation and the robotic arm calibration, the dataset collection procedure can be found in the subsection of the following link:  
-[https://wiki.seeedstudio.com/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#record-the-dataset)
-
-<!-- If the SO-ARM is intended to record data locally, refer to the following command-line parameters:
-
-```bash
-python -m lerobot.record \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ wrist: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, front: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm \
-    --display_data=true \
-    --dataset.repo_id=seeed_studio/test \
-    --dataset.num_episodes=20 \
-    --dataset.single_task="Grab the black cube" \
-    --dataset.push_to_hub=false \
-    --dataset.episode_time_s=30 \
-    --dataset.reset_time_s=30 
-```
-
-`--dataset.repo_id`: Specifies the name of the dataset folder
-
-`--dataset.single_task`: Description of the task
-
-`--dataset.num_episodes`: Number of samples to collect
-
-`--dataset.episode_time_s`: Duration (in seconds) of each recorded sample
-
-`--dataset.reset_time_s`: Time (in seconds) to reset the environment
-
-:::note
-**If the data collection process is interrupted unexpectedly, you can re-run the data collection script with the `--resume=true` flag to continue from where it left off.**
-:::
-
-If you wish to sync the collected data to Hugging Face, you must configure your HUGGINGFACE_TOKEN before recording:
-
-```bash
-hf auth login --token ${HUGGINGFACE_TOKEN} --add-to-git-credential
-
-# 将 ${HUGGINGFACE_TOKEN} 替换为您实际的 Hugging Face 访问令牌
-git config --global credential.helper store
-HF_USER=$(hf auth whoami | head -n 1)
-echo $HF_USER
-
-# 记录并上传数据集到 Hugging Face
-python -m lerobot.record \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm \
-    --display_data=true \
-    --dataset.repo_id=${HF_USER}/record-test \
-    --dataset.num_episodes=20 \
-    --dataset.single_task="Grab the black cube" \
-    --dataset.push_to_hub=true \
-    --dataset.episode_time_s=30 \
-    --dataset.reset_time_s=30 
-``` 
 
 :::tip
-The collected data will be saved locally under `~/.cache/huggingface/lerobot` directory!
-:::-->
-
-### Visualizing Collected Data
-
-To visualize the data collected on the SO-ARM, please refer to the subsection of the following link:  
-[https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset)
-
-<!-- **Visualize Cloud-based Dataset**
-
-```bash
-python -m lerobot.scripts.visualize_dataset_html \
-  --repo-id ${HF_USER}/so101_test \
-```
-
-**Visualize Local Dataset**
-
-```bash
-python -m lerobot.scripts.visualize_dataset_html \
-  --repo-id seeed_studio/so101_test \
-```
-
-**Replay a Recorded Episode**
-
-```bash
-python -m lerobot.replay \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm \
-    --dataset.repo_id=${HF_USER}/so101_test \
-    --dataset.episode=0
-```
-
-The parameter `--dataset.episode=0` specifies which episode to replay on the follower arm.
-For example: running this script will cause the follower arm to execute the exact actions recorded during `episode_0`. -->
-
-### Policy Training
-
-Based on the collected data, the procedure for training a Policy can be found in the subsection of the following link:  
-[https://wiki.seeedstudio.com/lerobot_so100m_new/#train-a-policy](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-a-policy)
-
-<!-- If you plan to train the policy locally, you may refer to the following command:
-
-```bash
-python -m lerobot.scripts.train \
-  --dataset.repo_id=seeed_studio/test \
-  --policy.type=act \
-  --output_dir=outputs/train/act_so101_test \
-  --job_name=act_so101_test \
-  --policy.device=cuda \
-  --wandb.enable=false \
-  --policy.push_to_hub=false\
-  --steps=300000 
-```
-
-`--policy.type`: Specify the policy type to be trained
-
-`--policy.push_to_hub=false\`: Whether to upload the trained weights to the cloud (Hugging Face Hub)
-
-`--steps`: Number of training steps -->
-
-:::tip
-In the following sections, we will introduce a cloud-based training platform and demonstrate basic usage. You may choose to complete training more efficiently on the remote server.
+在以下部分中，我们将介绍基于云的训练平台并演示基本用法。您可以选择在远程服务器上更高效地完成训练。
 :::
 
 :::note
-If you choose to train the policy in the cloud, make sure that your dataset is uploaded to the cloud server in advance, or downloaded from the Hugging Face Hub. However, due to potential network issues when downloading directly from the Hugging Face Hub, it is strongly recommended to manually upload the dataset to your cloud server.
+如果您选择在云端训练策略，请确保您的数据集提前上传到云服务器，或从 Hugging Face Hub 下载。但是，由于直接从 Hugging Face Hub 下载时可能出现网络问题，强烈建议手动将数据集上传到您的云服务器。
 :::
 
-## Use NVIDIA Brev for training policies
+## 使用 NVIDIA Brev 训练策略
 
-NVIDIA Brev provides streamlined access to NVIDIA GPU instances on popular cloud platforms, automatic environment setup, and flexible deployment options, enabling developers to start experimenting instantly.
+NVIDIA Brev 提供对流行云平台上 NVIDIA GPU 实例的简化访问、自动环境设置和灵活的部署选项，使开发人员能够立即开始实验。
 
-Platform access URL:
+平台访问 URL：
 [https://login.brev.nvidia.com/signin](https://login.brev.nvidia.com/signin)
 
-You will need to register an account to use the platform. This section introduces the basic usage of the training platform.
+您需要注册一个账户才能使用该平台。本节介绍训练平台的基本用法。
 
-### Enabling the Cloud-Based Training Platform
+### 启用基于云的训练平台
 
-**Step-by-Step Instructions**
+**分步说明**
 
-- Create a Cloud Server Instance -step 1
+- 创建云服务器实例 - 步骤 1
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train0.png" width="600"/>
 </div>
 
-- Create a Cloud Server Instance -step 2
+- 创建云服务器实例 - 步骤 2
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train1.png" width="600"/>
 </div>
 
-- Create a Cloud Server Instance -step 3
+- 创建云服务器实例 - 步骤 3
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train2.png" width="600"/>
 </div>
 
-**Launch the Web-Based Jupyter Notebook**：
+**启动基于 Web 的 Jupyter Notebook**：
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/jnote0.png" width="600"/>
 </div>
@@ -911,11 +657,11 @@ You will need to register an account to use the platform. This section introduce
   <img src="https://files.seeedstudio.com/wiki/other/jnote1.png" width="600"/>
 </div>
 
-### Training the Model and Exporting from the Server
+### 训练模型并从服务器导出
 
-**Developers can train models directly within the notebook terminal. Below is an example for training an act model and exporting it from the server afterward.**
+**开发人员可以直接在 notebook 终端中训练模型。以下是训练 act 模型并随后从服务器导出的示例。**
 
-Install Conda on the server:
+在服务器上安装 Conda：
 
 ```bash
 mkdir -p ~/miniconda3
@@ -926,7 +672,7 @@ source ~/miniconda3/bin/activate
 conda init --all
 ```
 
-Install lerobot projectt:
+安装 lerobot 项目：
 
 ```bash
 conda create -y -n lerobot python=3.10 && conda activate lerobot
@@ -934,7 +680,7 @@ git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
 cd ~/lerobot && pip install -e ".[feetech]"
 ```
 
-Train the ACT model:
+训练 ACT 模型：
 
 ```bash
 python -m lerobot.scripts.train \
@@ -953,25 +699,25 @@ python -m lerobot.scripts.train \
 </div>
 
 :::note
-If you want to train or fine-tune Gr00t on a server, you can refer to this [link](https://github.com/NVIDIA/Isaac-GR00T).
+如果您想在服务器上训练或微调 Gr00t，可以参考此[链接](https://github.com/NVIDIA/Isaac-GR00T)。
 :::
 
-**After training is completed, you may want to download the model to your local machine. But he Jupyter Notebook sidebar does not support direct navigation into model training folders.**
+**训练完成后，您可能希望将模型下载到本地机器。但 Jupyter Notebook 侧边栏不支持直接导航到模型训练文件夹。**
 
-Solution is that: First compress the target folder into a `.zip` or `.tar.gz` archive, then download the archive file through the notebook interface. Refer to the figure below for an example.
+解决方案是：首先将目标文件夹压缩为 `.zip` 或 `.tar.gz` 存档，然后通过 notebook 界面下载存档文件。参考下图示例。
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train5.png" width="600"/>
 </div>
 
-## Isaac GR00T N1.5 Inference on Thor
+## 在 Thor 上进行 Isaac GR00T N1.5 推理
 
-Jetson AGX Thor, as a powerful edge computing and deployment platform, provides sufficient resources to support large-scale model inference. In this section, building upon the previously introduced content, we demonstrate how to run inference for GR00T N1.5 on Thor.
+Jetson AGX Thor 作为强大的边缘计算和部署平台，提供了足够的资源来支持大规模模型推理。在本节中，基于之前介绍的内容，我们演示如何在 Thor 上运行 GR00T N1.5 的推理。
 
-GR00T N1.5 is an open-source baseline system released by NVIDIA Research in the field of robot learning. It aims to provide a unified framework for embodied AI training and inference, particularly focusing on imitation learning and policy learning driven by large-scale models.
+GR00T N1.5 是 NVIDIA Research 在机器人学习领域发布的开源基线系统。它旨在为具身 AI 训练和推理提供统一框架，特别专注于模仿学习和由大规模模型驱动的策略学习。
 
-### Preparation
+### 准备工作
 
-The pre-trained models of GR00T N1.5 are available via **Hugging Faces**. You can download them from the following link:
+GR00T N1.5 的预训练模型可通过 **Hugging Faces** 获得。您可以从以下链接下载：
 
 [https://huggingface.co/nvidia/GR00T-N1.5-3B/tree/main](https://huggingface.co/nvidia/GR00T-N1.5-3B/tree/main)
 
@@ -979,9 +725,9 @@ The pre-trained models of GR00T N1.5 are available via **Hugging Faces**. You ca
   <img src="https://files.seeedstudio.com/wiki/other/gr00tD.png" width="600"/>
 </div>
 
-All dependencies required for GR00T inference have been pre-configured in a dedicated Docker image.
+GR00T 推理所需的所有依赖项都已在专用 Docker 镜像中预配置。
 
-Use the following command to start the container:
+使用以下命令启动容器：
 
 ```bash
 sudo docker run --rm -it \
@@ -996,7 +742,7 @@ sudo docker run --rm -it \
   lerobot:r38.2.aarch64-cu130-24.04
 ```
 
-Git clone the source code of Gr00t,and install it:
+Git 克隆 Gr00t 的源代码并安装：
 
 ```bash
 git clone https://github.com/NVIDIA/Isaac-GR00T.git
@@ -1005,13 +751,13 @@ pip install --upgrade setuptools
 pip install -e .[thor]
 ```
 
-Gr00t is fully compatible with the datasets collected using the lerobot framework. Refer to the previous "**Data Collection**" section to prepare your dataset for fine-tuning the Gr00t model.
+Gr00t 完全兼容使用 lerobot 框架收集的数据集。请参考前面的"**数据收集**"部分来准备您的数据集，以便对 Gr00t 模型进行微调。
 
-### Model Fine-Tuning
+### 模型微调
 
-**The fine-tuning process can be executed either on the provided cloud training platform or directly inside the Docker container on Thor**.
+**微调过程可以在提供的云训练平台上执行，也可以直接在 Thor 上的 Docker 容器内执行**。
 
-If you have not downloaded any pretrained GR00T model and do not plan to use a custom version, you may use the following command to fine-tune based on the Hugging Face weights:
+如果您尚未下载任何预训练的 GR00T 模型且不打算使用自定义版本，您可以使用以下命令基于 Hugging Face 权重进行微调：
 
 ```bash
 python scripts/gr00t_finetune.py \
@@ -1023,9 +769,9 @@ python scripts/gr00t_finetune.py \
    --video-backend torchvision_av
 ```
 
-This script will automatically download the pretrained GR00T model from Hugging Face and begin the fine-tuning process.
+此脚本将自动从 Hugging Face 下载预训练的 GR00T 模型并开始微调过程。
 
-If you wish to use a locally stored pretrained GR00T model, modify the command as follows:
+如果您希望使用本地存储的预训练 GR00T 模型，请按如下方式修改命令：
 
 ```bash
 python scripts/gr00t_finetune.py \
@@ -1038,20 +784,20 @@ python scripts/gr00t_finetune.py \
    --base-model-path ./pretrained/GR00T-N1.5-3
 ```
 
-`--dataset-path` is the file path of collection data from SO-ARM.
+`--dataset-path` 是来自 SO-ARM 的收集数据的文件路径。
 
 :::note
-The default fine-tuning settings require ~25G of VRAM. If you don't have that much VRAM, try adding the `--no-tune_diffusion_model` flag to the gr00t_finetune.py script.
+默认的微调设置需要约 25G 的 VRAM。如果您没有那么多 VRAM，请尝试在 gr00t_finetune.py 脚本中添加 `--no-tune_diffusion_model` 标志。
 :::
 
-### Running Inference with GR00T N1.5
+### 使用 GR00T N1.5 运行推理
 
-To achieve optimal performance, it is recommended to replicate the real-world setup used during data collection as closely as possible when deploying fine-tuned GR00T models. This is because the model's generalization capabilities are limited.
+为了获得最佳性能，建议在部署微调后的 GR00T 模型时尽可能复制数据收集期间使用的真实世界设置。这是因为模型的泛化能力有限。
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/deploy.jpg" width="400"/>
 </div>
 
-Inside the Docker container, open a terminal and launch the GR00T inference service:
+在 Docker 容器内，打开终端并启动 GR00T 推理服务：
 
 ```bash
 python scripts/inference_service.py --server \
@@ -1061,18 +807,18 @@ python scripts/inference_service.py --server \
     --denoising-steps 4
 ```
 
-Upon successful launch, the terminal should display logs similar to:
+成功启动后，终端应显示类似以下的日志：
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/deploy1.png" width="600"/>
 </div>
 
-Open another terminal, and use the following command to enter the same container from a different shell:
+打开另一个终端，使用以下命令从不同的 shell 进入同一个容器：
 
 ```bash
 sudo docker exec -it <container id> /bin/bahs
 ```
 
-Then, in this second shell, start the inference client:
+然后，在第二个 shell 中，启动推理客户端：
 
 ```bash
   python examples/eval_lerobot.py \
@@ -1084,41 +830,41 @@ Then, in this second shell, start the inference client:
     --lang_instruction="Grab pens and place into pen holder."
 ```
 
-When the client process starts successfully, the following output should appear:
+当客户端进程成功启动时，应出现以下输出：
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/deploy2.png" width="600"/>
 </div>
 
 :::tip
-During the first run of the client process, you must calibrate the arm's servos. The calibration process is the same as described earlier.
+在首次运行客户端进程时，您必须校准机械臂的舵机。校准过程与前面描述的相同。
 
-Make sure each joint moves to its full range of motion to ensure proper teleoperation and inference behavior.
+确保每个关节都移动到其完整的运动范围，以确保正确的遥操作和推理行为。
 :::
 
-Once everything is set up, GR00T N1.5 can be successfully deployed on Jetson AGX Thor. The system and hardware environment are now verified to support full inference:
+一旦一切设置完成，GR00T N1.5 就可以成功部署在 Jetson AGX Thor 上。系统和硬件环境现在已验证支持完整推理：
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/123.gif" width="600"/>
 </div>
 
-## FAQ
+## 常见问题
 
-Q1: The Brev CLI tool doesn't work on the cloud training platform?
+Q1：Brev CLI 工具在云训练平台上不工作？
 
-This is often due to network issues.
-You may install and log in to Brev CLI on your local Ubuntu host, then attempt to connect to your cloud instance using SSH from your local terminal.
+这通常是由于网络问题造成的。
+您可以在本地 Ubuntu 主机上安装并登录 Brev CLI，然后尝试从本地终端使用 SSH 连接到您的云实例。
 
-Q2: How do I upload data to the training platform?
+Q2：如何将数据上传到训练平台？
 
-Use the following command: `scp <local-file-path> <brev-instance-name>:<remote-file-path>`,例如`scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
+使用以下命令：`scp <local-file-path> <brev-instance-name>:<remote-file-path>`，例如 `scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
 
-## References
+## 参考资料
 
 - https://developer.nvidia.com/embedded/jetpack
 - https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning
 
-## Tech Support & Product Discussion
+## 技术支持与产品讨论
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
