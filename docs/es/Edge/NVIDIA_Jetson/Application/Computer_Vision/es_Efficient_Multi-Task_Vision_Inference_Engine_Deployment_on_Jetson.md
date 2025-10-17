@@ -23,34 +23,27 @@ last_update:
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/demo.gif"/>
 </div>
 
-
 ## Introducción
 
 <div style={{ textAlign: "justify" }}>
 [Visual Perception Engine](https://github.com/nasa-jpl/visual-perception-engine) es un framework de vanguardia que revoluciona la percepción robótica eliminando cálculos redundantes a través de redes backbone compartidas. A diferencia de los enfoques tradicionales donde cada tarea visual se ejecuta independientemente, VPEngine utiliza un backbone de modelo base unificado (por ejemplo, DINOv2) para extraer características de imagen solo una vez, que luego son reutilizadas por múltiples cabezas de tareas. Este enfoque reduce significativamente la sobrecarga de memoria y la transferencia de datos CPU-GPU mientras soporta programación dinámica de tareas e integración perfecta con ROS2. Esta wiki te mostrará cómo usar reComputer Robotics en conjunto con cámaras GMSL para desplegar el Visual Perception Engine en el borde.
 </div>
 
-
 <div align="center">
     <img width={700}
      src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" />
 </div>
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html" target="_blank">
 <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
 </a></div>
 
-
 ## Prerrequisitos
 
-- __[reComputer Robotics](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)__ (Jetson Orin NX 16GB) con JetPack 6.2
+- **[reComputer Robotics](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)** (Jetson Orin NX 16GB) con JetPack 6.2
 - [GMSL Boar](https://www.seeedstudio.com/reComputer-Robotics-GMSL-board-p-6511.html)
 - [3MP GMSL2 Camera](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html)
-
-
-
 
 ## Características Técnicas Destacadas
 
@@ -62,12 +55,9 @@ last_update:
 
 - **Simplificando la Integración del Sistema Robótico**: Proporciona nodos C++ de ROS2 (Humble) para fácil integración en pilas de software robótico existentes, soportando publicación de resultados vía tópicos ROS y ajuste dinámico de parámetros.
 
-
-
 ## Configuración del Entorno
 
 **Paso 1.** Instalar Conda
-
 
 ```bash
 # Download and install Miniconda
@@ -87,6 +77,7 @@ conda activate v_engine
 
 **Paso 3.** Instalar Torch, Torchvision y Verificar Disponibilidad de CUDA
 Descargar el wheel:
+
 - [torch](https://seeedstudio88-my.sharepoint.com/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2Ftorch%5Ftorchvision%2FJP61%2Ftorch%2D2%2E5%2E0a0%2B872d972e41%2Env24%2E08%2E17622132%2Dcp310%2Dcp310%2Dlinux%5Faarch64%2Ewhl&parent=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2Ftorch%5Ftorchvision%2FJP61&ga=1)
 - [torchvision](https://seeedstudio88-my.sharepoint.com/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2Ftorch%5Ftorchvision%2FJP61%2Ftorchvision%2D0%2E20%2E0a0%2Bafc54f7%2Dcp310%2Dcp310%2Dlinux%5Faarch64%2Ewhl&parent=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2Ftorch%5Ftorchvision%2FJP61&ga=1)
 - Jetpack 6.2 requiere que se instalen algunas dependencias. Primero, instala esto, luego usa pip para instalar torch y torchvision.
@@ -103,6 +94,7 @@ python -c "import torch; print(f'CUDA available: {torch.cuda.is_available()}'); 
 ```
 
 **Salida Esperada:**
+
 ```
 CUDA available: True
 CUDA version: 12.6
@@ -136,13 +128,13 @@ pip install cuda-python==12.6.0
 pip install pytest
 ```
 
-
 **Paso 5.** Configurar TensorRT y Verificar Instalación de TensorRT del Sistema
 
 ```bash
 # Check TensorRT installation
 find /usr -name "tensorrt" -type d 2>/dev/null | head -5
 ```
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/tensorrt_path.png"/>
 </div>
@@ -185,10 +177,10 @@ print("TRT module:", trt.__file__)
 
 PY
 ```
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/tensorrt_import.png"/>
 </div>
-
 
 **Paso 7.** Clonar e Instalar torch2trt
 
@@ -238,10 +230,10 @@ ln -s /usr/lib/aarch64-linux-gnu/libstdc++.so.6 $CONDA_PREFIX/lib/libstdc++.so.6
 # Verify the fix
 python -c "import tensorrt as trt, torch2trt; print('TRT', trt.__version__, 'torch2trt OK')"
 ```
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/erro2_check.png"/>
 </div>
-
 
 **Paso 9.** Configurar CUDA MPS y Establecer Variables de Entorno CUDA
 
@@ -288,12 +280,11 @@ else:
     print('CUDA not available')
 "
 ```
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/test_cuda.png"/>
 </div>
 **Salida Esperada:** Debería mostrar la disponibilidad de CUDA y las operaciones de GPU funcionando
-
-
 
 **Paso 12.** Instalar Visual Perception Engine
 
@@ -307,11 +298,11 @@ pip install --no-deps -e .
 # Verify package installation
 pip show vp_engine
 ```
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/test_vp_engine.png"/>
 </div>
 **Salida Esperada:** Debería mostrar información del paquete vp_engine
-
 
 **Paso 13.** Descargar Checkpoints del Modelo
 
@@ -322,9 +313,11 @@ mkdir -p models/checkpoints
 
 :::note
 Necesitas descargar manualmente los archivos del modelo desde el siguiente enlace:
+
 - Visita: https://drive.google.com/drive/folders/1SWMlEqOE_7EWPCkMloDTXG1_mZAmeW3-
 - Descarga todos los archivos de modelo requeridos
 - Coloca los archivos en el directorio `models/checkpoints/`
+
 :::
 
 **Paso 14.** Exportar Modelos a TensorRT
@@ -351,6 +344,7 @@ except Exception as e:
     exit(1)
 "
 ```
+
 El proceso de exportación del modelo es bastante largo. ¡Por favor ten paciencia y espera!
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/export_engine.png"/>
@@ -621,9 +615,11 @@ def main():
 if __name__ == "__main__":
     sys.exit(main())
 ```
+
 </details>
 
 **Salida Esperada:**
+
 ```
 ============================================================
 Visual Perception Engine - JetPack 6.2 Installation Test
@@ -678,6 +674,7 @@ source ~/.bashrc
 ```
 
 ## Pruebas de Rendimiento
+
 Puedes preparar cuatro videos y colocarlos en el directorio `resources`. Luego ejecuta el siguiente script:
 <details>
 <summary> demo.py </summary>
@@ -1652,6 +1649,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
 </details>
 
 ```bash
@@ -1661,6 +1659,7 @@ python demo.py \
     --resolution 640x480 \
     --models depth segmentation segmentation depth
 ```
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/video_demo.gif"/>
 </div>
@@ -1671,6 +1670,7 @@ Durante la ejecución de este script, al monitorear el uso de recursos del siste
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/gpu_usage.png"/>
 </div>
 :::
+
 ## Entrada de cámara en tiempo real para inferencia
 
 :::note
@@ -1681,7 +1681,6 @@ Modifique el contenido en el archivo `./src/vp_engine/engine.py` dentro del proy
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/modify.png"/>
 </div>
-
 
 <details>
 <summary> realtime_inference.py </summary>
@@ -2541,6 +2540,7 @@ python realtime_inference.py \
     --seg-alpha 0.7 \
     --display-scale 0.75
 ```
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/demo.gif"/>
 </div>
@@ -2550,7 +2550,9 @@ Este ejemplo utiliza el modelo preentrenado oficial, sin ningún entrenamiento e
 :::
 
 ## Otras Aplicaciones
+
 :::info
+
 - **Desarrollo eficiente de percepción robótica**
 
 En el desarrollo de robots, ¡la percepción visual eficiente es de gran importancia! Con el framework de razonamiento visual eficiente mencionado anteriormente, combinado con la aceleración GPU eficiente de odometría visual, puede mejorar la eficiencia de utilización de recursos en el desarrollo de robots de borde!
@@ -2562,9 +2564,9 @@ Combinando este [algoritmo SLAM visual](https://wiki.seeedstudio.com/es/pycuvsla
 :::note
 Debido a que habilitar el software de grabación de pantalla consumirá una cierta cantidad de recursos del sistema, resulta en un aumento en el retraso de inferencia!
 :::
+
 - **Conducción inteligente**
 - **Sistemas de monitoreo inteligente de borde**
-
 
 ## Recursos
 
