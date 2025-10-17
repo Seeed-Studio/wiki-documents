@@ -1,6 +1,6 @@
 ---
-description: This wiki provides a comprehensive, step-by-step guide for deploying the Visual Perception Engine (VPEngine) on reComputer Jetson Series devices, specifically Jetson Orin NX 16GB. It covers environment setup, installation of key dependencies (PyTorch, TensorRT, CUDA, ROS2), model export, and troubleshooting for compatibility issues. The guide highlights VPEngine’s ability to perform efficient, parallel multi-task vision inference—including object detection, depth estimation, and semantic segmentation—by sharing backbone features and optimizing GPU resource usage. It also includes performance testing scripts, real-time multi-camera inference examples, and practical tips for maximizing edge AI efficiency in robotics and intelligent monitoring applications.
-title: Efficient Multi-Task Vision Inference Engine Deployment on Jetson
+description: このwikiは、reComputer Jetsonシリーズデバイス、特にJetson Orin NX 16GBにVisual Perception Engine（VPEngine）を展開するための包括的なステップバイステップガイドを提供します。環境設定、主要な依存関係（PyTorch、TensorRT、CUDA、ROS2）のインストール、モデルエクスポート、互換性問題のトラブルシューティングをカバーしています。このガイドでは、VPEngineがバックボーン機能を共有し、GPU リソース使用量を最適化することで、効率的で並列なマルチタスクビジョン推論（物体検出、深度推定、セマンティックセグメンテーションを含む）を実行する能力を強調しています。また、パフォーマンステストスクリプト、リアルタイムマルチカメラ推論の例、ロボティクスとインテリジェント監視アプリケーションでエッジAI効率を最大化するための実用的なヒントも含まれています。
+title: Jetsonでの効率的なマルチタスクビジョン推論エンジンの展開
 keywords:
 - Visual Perception Engine
 - VPEngine
@@ -13,7 +13,7 @@ keywords:
 - ROS2
 - Robotics
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/video.webp
-slug: /deploy_visual_perception_engine_recomputer
+slug: /ja/deploy_visual_perception_engine_recomputer
 last_update:
   date: 2025-10-13
   author: Zibo
@@ -23,10 +23,10 @@ last_update:
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/demo.gif"/>
 </div>
 
-## Introduction
+## はじめに
 
 <div style={{ textAlign: "justify" }}>
-[Visual Perception Engine](https://github.com/nasa-jpl/visual-perception-engine) is a cutting-edge framework that revolutionizes robotic perception by eliminating redundant computations through shared backbone networks. Unlike traditional approaches where each visual task runs independently, VPEngine uses a unified base model backbone (e.g., DINOv2) to extract image features only once, which are then reused by multiple task heads. This approach significantly reduces memory overhead and CPU-GPU data transfer while supporting dynamic task scheduling and seamless ROS2 integration.This wiki will show you how to use reComputer Robotics in conjunction with GMSL cameras to deploy the Visual Perception Engine to the edge.
+[Visual Perception Engine](https://github.com/nasa-jpl/visual-perception-engine)は、共有バックボーンネットワークを通じて冗長な計算を排除することで、ロボット知覚を革新する最先端のフレームワークです。各視覚タスクが独立して実行される従来のアプローチとは異なり、VPEngineは統一されたベースモデルバックボーン（例：DINOv2）を使用して画像特徴を一度だけ抽出し、それを複数のタスクヘッドで再利用します。このアプローチにより、メモリオーバーヘッドとCPU-GPUデータ転送を大幅に削減しながら、動的タスクスケジューリングとシームレスなROS2統合をサポートします。このwikiでは、reComputer RoboticsをGMSLカメラと組み合わせて使用し、Visual Perception Engineをエッジに展開する方法を紹介します。
 </div>
 
 <div align="center">
@@ -36,28 +36,28 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
 </a></div>
 
-## Prerequisites
+## 前提条件
 
-- **[reComputer Robotics](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)** (Jetson Orin NX 16GB) with JetPack 6.2
+- **[reComputer Robotics](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)** （Jetson Orin NX 16GB）JetPack 6.2搭載
 - [GMSL Boar](https://www.seeedstudio.com/reComputer-Robotics-GMSL-board-p-6511.html)
 - [3MP GMSL2 Camera](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html)
 
-## Technical Highlights
+## 技術的ハイライト
 
-- **Eliminating Redundant Computations**:Traditional solutions run each visual task independently, leading to repetitive image preprocessing and backbone network feature extraction. VPEngine shares a unified base model backbone to extract image features only once, which are then reused by multiple task heads.
+- **冗長な計算の排除**：従来のソリューションでは、各視覚タスクが独立して実行され、反復的な画像前処理とバックボーンネットワーク特徴抽出が発生します。VPEngineは統一されたベースモデルバックボーンを共有して画像特徴を一度だけ抽出し、それを複数のタスクヘッドで再利用します。
 
-- **Reducing Memory Overhead and CPU-GPU Data Transfer**:All tasks run in parallel on the GPU, with features shared directly through GPU memory pointers. This avoids frequent GPU ↔ CPU data copying, significantly improving efficiency.
+- **メモリオーバーヘッドとCPU-GPUデータ転送の削減**：すべてのタスクがGPU上で並列実行され、特徴はGPUメモリポインタを通じて直接共有されます。これにより、頻繁なGPU ↔ CPUデータコピーを回避し、効率を大幅に向上させます。
 
-- **Supporting Dynamic Task Scheduling**:Different tasks can be configured with different inference frequencies (e.g., depth estimation at 50Hz, semantic segmentation at 10Hz) and adjusted dynamically during runtime to adapt to the perception needs of robots at different stages.
+- **動的タスクスケジューリングのサポート**：異なるタスクを異なる推論頻度で設定でき（例：深度推定50Hz、セマンティックセグメンテーション10Hz）、実行時に動的に調整して、異なる段階でのロボットの知覚ニーズに適応できます。
 
-- **Simplifying Robot System Integration**:It provides ROS2 (Humble) C++ nodes for easy integration into existing robot software stacks, supporting result publication via ROS topics and dynamic parameter adjustment.
+- **ロボットシステム統合の簡素化**：既存のロボットソフトウェアスタックへの簡単な統合のためのROS2（Humble）C++ノードを提供し、ROSトピックを介した結果の公開と動的パラメータ調整をサポートします。
 
-## Environment Setup
+## 環境設定
 
-**Step 1.** Install Conda
+**ステップ 1.** Condaのインストール
 
 ```bash
 # Download and install Miniconda
@@ -67,7 +67,7 @@ chmod +x Miniconda3-latest-Linux-aarch64.sh
 source ~/.bashrc
 ```
 
-**Step 2.** Create and Activate Environment
+**ステップ 2.** 環境の作成とアクティベート
 
 ```bash
 # Create v_engine environment
@@ -75,13 +75,13 @@ conda create -n v_engine python=3.10
 conda activate v_engine
 ```
 
-**Step 3.** Install Torch、Torchvision and Verify CUDA Availability
-Download the wheel:
+**ステップ 3.** Torch、TorchvisionのインストールとCUDA可用性の確認
+wheelをダウンロード：
 
 - [torch](https://seeedstudio88-my.sharepoint.com/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2Ftorch%5Ftorchvision%2FJP61%2Ftorch%2D2%2E5%2E0a0%2B872d972e41%2Env24%2E08%2E17622132%2Dcp310%2Dcp310%2Dlinux%5Faarch64%2Ewhl&parent=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2Ftorch%5Ftorchvision%2FJP61&ga=1)
 - [torchvision](https://seeedstudio88-my.sharepoint.com/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2Ftorch%5Ftorchvision%2FJP61%2Ftorchvision%2D0%2E20%2E0a0%2Bafc54f7%2Dcp310%2Dcp310%2Dlinux%5Faarch64%2Ewhl&parent=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2Ftorch%5Ftorchvision%2FJP61&ga=1)
-- Jetpack 6.2 requires some dependencies to be installed. First, install this, then use pip to install torch and torchvision.
-Please follow the instructions inside to install:
+- Jetpack 6.2では、いくつかの依存関係をインストールする必要があります。まずこれをインストールしてから、pipを使用してtorchとtorchvisionをインストールしてください。
+以下の指示に従ってインストールしてください：
 [cuSPARSELt 0.8.1 Downloads | NVIDIA Developer](https://developer.nvidia.com/cusparselt-downloads?target_os=Linux&target_arch=aarch64-jetson&Compilation=Native&Distribution=Ubuntu&target_version=22.04&target_type=deb_local)
 
 <div align="center">
@@ -93,14 +93,14 @@ Please follow the instructions inside to install:
 python -c "import torch; print(f'CUDA available: {torch.cuda.is_available()}'); print(f'CUDA version: {torch.version.cuda}')"
 ```
 
-**Expected Output:**
+**期待される出力：**
 
 ```
 CUDA available: True
 CUDA version: 12.6
 ```
 
-**Step 4.** Upgrade pip and Install Basic Tools
+**ステップ 4.** pipのアップグレードと基本ツールのインストール
 
 ```bash
 # Upgrade pip
@@ -128,7 +128,7 @@ pip install cuda-python==12.6.0
 pip install pytest
 ```
 
-**Step 5.** Configure TensorRT and Check System TensorRT Installation
+**ステップ 5.** TensorRTの設定とシステムTensorRTインストールの確認
 
 ```bash
 # Check TensorRT installation
@@ -139,9 +139,9 @@ find /usr -name "tensorrt" -type d 2>/dev/null | head -5
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/tensorrt_path.png"/>
 </div>
 
-**Expected Output:** Should display TensorRT related directories
+**期待される出力：** TensorRT関連のディレクトリが表示されるはずです
 
-**Step 6.** Link TensorRT Modules
+**ステップ 6.** TensorRTモジュールのリンク
 
 ```bash
 # Get Python package path
@@ -182,7 +182,7 @@ PY
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/tensorrt_import.png"/>
 </div>
 
-**Step 7.** Clone and Install torch2trt
+**ステップ 7.** torch2trtのクローンとインストール
 
 ```bash
 # Clone torch2trt repository
@@ -198,14 +198,14 @@ cd -
 rm -rf /tmp/torch2trt
 ```
 
-**Step 8.** Fix Library Compatibility Issues
+**ステップ 8.** ライブラリ互換性問題の修正
 
-If you encounter GLIBCXX_3.4.30 symbol errors:
+GLIBCXX_3.4.30シンボルエラーが発生した場合：
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/erro1.png"/>
 </div>
 
-The libstdc++.so.6 file in the conda environment is outdated and does not have the symbol GLIBCXX_3.4.30. However, the TensorRT dynamic library /usr/lib/aarch64-linux-gnu/libnvinfer.so.10 in the system requires this symbol!
+conda環境のlibstdc++.so.6ファイルが古く、GLIBCXX_3.4.30シンボルを持っていません。しかし、システムのTensorRT動的ライブラリ/usr/lib/aarch64-linux-gnu/libnvinfer.so.10はこのシンボルを必要とします！
 
 ```bash
 # Check library versions
@@ -235,7 +235,7 @@ python -c "import tensorrt as trt, torch2trt; print('TRT', trt.__version__, 'tor
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/erro2_check.png"/>
 </div>
 
-**Step 9.** Setup CUDA MPS and Set CUDA Environment Variables
+**ステップ 9.** CUDA MPSの設定とCUDA環境変数の設定
 
 ```bash
 # Set CUDA environment variables
@@ -246,7 +246,7 @@ export CUDA_MPS_LOG_DIRECTORY=/tmp/nvidia-mps/log
 mkdir -p $CUDA_MPS_PIPE_DIRECTORY $CUDA_MPS_LOG_DIRECTORY
 ```
 
-**Step 10.** Start CUDA MPS Daemon
+**ステップ 10.** CUDA MPSデーモンの開始
 
 ```bash
 # Check for existing MPS processes
@@ -262,9 +262,9 @@ nvidia-cuda-mps-control -d
 pgrep -f "nvidia-cuda-mps-control"
 ```
 
-**Expected Output:** Should display process ID
+**期待される出力：** プロセスIDが表示されるはずです
 
-**Step 11.** Test CUDA MPS Functionality
+**ステップ 11.** CUDA MPS機能のテスト
 
 ```bash
 # Test CUDA MPS
@@ -284,9 +284,9 @@ else:
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/test_cuda.png"/>
 </div>
-**Expected Output:** Should display CUDA availability and GPU operations working
+**期待される出力：** CUDA の可用性と GPU 操作が動作していることが表示されるはずです
 
-**Step 12.** Install Visual Perception Engine
+**ステップ 12.** Visual Perception Engine をインストール
 
 ```bash
 # Enter project directory
@@ -302,9 +302,9 @@ pip show vp_engine
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/test_vp_engine.png"/>
 </div>
-**Expected Output:** Should display vp_engine package information
+**期待される出力：** vp_engine パッケージ情報が表示されるはずです
 
-**Step 13.** Download Model Checkpoints
+**ステップ 13.** モデルチェックポイントをダウンロード
 
 ```bash
 # Create model directory
@@ -312,15 +312,15 @@ mkdir -p models/checkpoints
 ```
 
 :::note
-You need to manually download model files from the following link:
+以下のリンクからモデルファイルを手動でダウンロードする必要があります：
 
-- Visit: https://drive.google.com/drive/folders/1SWMlEqOE_7EWPCkMloDTXG1_mZAmeW3-
-- Download all required model files
-- Place files in the `models/checkpoints/` directory
+- 訪問先: https://drive.google.com/drive/folders/1SWMlEqOE_7EWPCkMloDTXG1_mZAmeW3-
+- 必要なすべてのモデルファイルをダウンロード
+- ファイルを `models/checkpoints/` ディレクトリに配置
 
 :::
 
-**Step 14.** Export Models to TensorRT
+**ステップ 14.** モデルを TensorRT にエクスポート
 
 ```bash
 # Verify model files
@@ -345,14 +345,14 @@ except Exception as e:
 "
 ```
 
-The process of model export is rather lengthy. Please be patient and wait!
+モデルエクスポートのプロセスは非常に長時間かかります。辛抱強くお待ちください！
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/export_engine.png"/>
 </div>
 
-**Step 15.** Run Installation Test
+**ステップ 15.** インストールテストを実行
 
-Create a comprehensive test script to verify the installation:
+インストールを検証するための包括的なテストスクリプトを作成します：
 
 <details>
 <summary> test.py </summary>
@@ -374,81 +374,81 @@ import cv2
 def test_imports():
     """Test that all required packages can be imported."""
     print("Testing package imports...")
-    
+
     try:
         import torch
         print(f"✓ PyTorch {torch.__version__}")
     except ImportError as e:
         print(f"✗ PyTorch import failed: {e}")
         return False
-    
+
     try:
         import torchvision
         print(f"✓ TorchVision {torchvision.__version__}")
     except ImportError as e:
         print(f"✗ TorchVision import failed: {e}")
         return False
-    
+
     try:
         import onnx
         print(f"✓ ONNX {onnx.__version__}")
     except ImportError as e:
         print(f"✗ ONNX import failed: {e}")
         return False
-    
+
     try:
         import onnxruntime
         print(f"✓ ONNXRuntime {onnxruntime.__version__}")
     except ImportError as e:
         print(f"✗ ONNXRuntime import failed: {e}")
         return False
-    
+
     try:
         import tensorrt as trt
         print(f"✓ TensorRT {trt.__version__}")
     except ImportError as e:
         print(f"✗ TensorRT import failed: {e}")
         return False
-    
+
     try:
         import torch2trt
         print("✓ torch2trt")
     except ImportError as e:
         print(f"✗ torch2trt import failed: {e}")
         return False
-    
+
     try:
         import cuda
         print("✓ CUDA Python")
     except ImportError as e:
         print(f"✗ CUDA Python import failed: {e}")
         return False
-    
+
     return True
 
 def test_cuda():
     """Test CUDA functionality."""
     print("\nTesting CUDA functionality...")
-    
+
     try:
         import torch
-        
+
         if not torch.cuda.is_available():
             print("✗ CUDA not available")
             return False
-        
+
         print(f"✓ CUDA available: {torch.cuda.get_device_name(0)}")
         print(f"✓ CUDA version: {torch.version.cuda}")
         print(f"✓ GPU memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB")
-        
+
         # Test basic tensor operations
         x = torch.randn(1000, 1000).cuda()
         y = torch.randn(1000, 1000).cuda()
         z = torch.mm(x, y)
         print("✓ GPU tensor operations working")
-        
+
         return True
-        
+
     except Exception as e:
         print(f"✗ CUDA test failed: {e}")
         return False
@@ -456,16 +456,16 @@ def test_cuda():
 def test_vp_engine_import():
     """Test Visual Perception Engine import."""
     print("\nTesting Visual Perception Engine import...")
-    
+
     try:
         # Add current directory to path
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-        
+
         from src.vp_engine import Engine
         print("✓ Visual Perception Engine imported successfully")
-        
+
         return True
-        
+
     except Exception as e:
         print(f"✗ Visual Perception Engine import failed: {e}")
         traceback.print_exc()
@@ -474,22 +474,22 @@ def test_vp_engine_import():
 def test_model_registry():
     """Test model registry functionality."""
     print("\nTesting model registry...")
-    
+
     try:
         from src.model_management.registry import ModelRegistry
-        
+
         # Check if registry file exists
         registry_path = "model_registry/registry.jsonl"
         if not os.path.exists(registry_path):
             print("⚠ Model registry file not found - models not exported yet")
             return True
-        
+
         registry = ModelRegistry(registry_path)
         models = registry.get_registered_models()
         print(f"✓ Model registry loaded: {len(models)} models found")
-        
+
         return True
-        
+
     except Exception as e:
         print(f"✗ Model registry test failed: {e}")
         return False
@@ -497,20 +497,20 @@ def test_model_registry():
 def test_config():
     """Test configuration loading."""
     print("\nTesting configuration...")
-    
+
     try:
         from src.vp_engine.config import Config
-        
+
         config_path = "configs/default.json"
         if not os.path.exists(config_path):
             print(f"✗ Configuration file not found: {config_path}")
             return False
-        
+
         config = Config(config_path)
         print("✓ Configuration loaded successfully")
-        
+
         return True
-        
+
     except Exception as e:
         print(f"✗ Configuration test failed: {e}")
         return False
@@ -518,19 +518,19 @@ def test_config():
 def test_cuda_mps():
     """Test CUDA MPS functionality."""
     print("\nTesting CUDA MPS...")
-    
+
     try:
         import torch
-        
+
         # Check if MPS is enabled
         if 'CUDA_MPS_PIPE_DIRECTORY' in os.environ:
             print("✓ CUDA MPS environment variables set")
         else:
             print("⚠ CUDA MPS environment variables not set")
-        
+
         # Test multi-process CUDA usage (simplified test)
         import multiprocessing as mp
-        
+
         # Simple test without complex function pickling
         try:
             # Test basic CUDA operations in current process
@@ -539,18 +539,18 @@ def test_cuda_mps():
             z = torch.mm(x, y)
             result = z.sum().item()
             print("✓ CUDA operations working in current process")
-            
+
             # Test if MPS is enabled by checking environment
             if 'CUDA_MPS_PIPE_DIRECTORY' in os.environ:
                 print("✓ CUDA MPS environment variables set")
             else:
                 print("⚠ CUDA MPS environment variables not set")
-                
+
         except Exception as e:
             print(f"✗ CUDA operations failed: {e}")
             return False
         return True
-        
+
     except Exception as e:
         print(f"✗ CUDA MPS test failed: {e}")
         return False
@@ -558,18 +558,18 @@ def test_cuda_mps():
 def test_opencv():
     """Test OpenCV functionality."""
     print("\nTesting OpenCV...")
-    
+
     try:
         import cv2
         print(f"✓ OpenCV {cv2.__version__}")
-        
+
         # Test image operations
         img = np.random.randint(0, 255, (480, 640, 3), dtype=np.uint8)
         resized = cv2.resize(img, (1920, 1080))
         print("✓ OpenCV image operations working")
-        
+
         return True
-        
+
     except Exception as e:
         print(f"✗ OpenCV test failed: {e}")
         return False
@@ -579,7 +579,7 @@ def main():
     print("=" * 60)
     print("Visual Perception Engine - JetPack 6.2 Installation Test")
     print("=" * 60)
-    
+
     tests = [
         test_imports,
         test_cuda,
@@ -589,10 +589,10 @@ def main():
         test_config,
         test_model_registry,
     ]
-    
+
     passed = 0
     total = len(tests)
-    
+
     for test in tests:
         try:
             if test():
@@ -600,11 +600,11 @@ def main():
         except Exception as e:
             print(f"✗ Test {test.__name__} failed with exception: {e}")
             traceback.print_exc()
-    
+
     print("\n" + "=" * 60)
     print(f"Test Results: {passed}/{total} tests passed")
     print("=" * 60)
-    
+
     if passed == total:
         print("🎉 All tests passed! Visual Perception Engine is ready to use.")
         return 0
@@ -618,7 +618,7 @@ if __name__ == "__main__":
 
 </details>
 
-**Expected Output:**
+**期待される出力：**
 
 ```
 ============================================================
@@ -661,7 +661,7 @@ Test Results: 7/7 tests passed
 🎉 All tests passed! Visual Perception Engine is ready to use.
 ```
 
-**Step 16.** Set Persistent Environment Variables:
+**ステップ 16.** 永続的な環境変数を設定：
 
 ```bash
 # Add environment variables to .bashrc
@@ -673,9 +673,9 @@ echo 'export CUDA_MPS_LOG_DIRECTORY=/tmp/nvidia-mps/log' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-## Performance Testing
+## パフォーマンステスト
 
-You can prepare four videos and place them in the `resources` directory. Then run the following script:
+4つの動画を準備して `resources` ディレクトリに配置し、以下のスクリプトを実行できます：
 <details>
 <summary> demo.py </summary>
 
@@ -692,24 +692,24 @@ Supports processing multiple video files simultaneously with different models.
 Usage:
     # Use all 4 videos from resources folder with 4 models
     python video_multi_task_inference.py --use-resources
-    
+
     # Maximum performance mode (ultra-high FPS)
     python video_multi_task_inference.py \
         --videos resources/demo1.mp4 resources/demo2.mp4 resources/demo3.mp4 resources/demo4.mp4 \
         --models depth segmentation segmentation depth \
         --resolution 640x480 \
         --fast-mode
-    
+
     # Performance mode (high FPS with good quality)
     python video_multi_task_inference.py \
         --videos resources/demo1.mp4 resources/demo2.mp4 resources/demo3.mp4 resources/demo4.mp4 \
         --models depth segmentation segmentation depth \
         --resolution 640x480 \
         --performance-mode
-    
+
     # Use specific models with resources videos
     python video_multi_task_inference.py --use-resources --models depth segmentation
-    
+
     # Use custom videos
     python video_multi_task_inference.py --videos video1.mp4 video2.mp4 --models depth segmentation
 """
@@ -734,64 +734,64 @@ from vp_engine import Engine
 
 class FPSCounter:
     """Simple FPS counter with moving average."""
-    
+
     def __init__(self, window_size: int = 10):  # Smaller window for more responsive FPS
         self.window_size = window_size
         self.timestamps = deque(maxlen=window_size)
         self.last_fps = 0.0
-        
+
     def tick(self):
         """Record a new frame timestamp."""
         self.timestamps.append(time.time())
-        
+
     def get_fps(self) -> float:
         """Get current FPS based on moving window."""
         if len(self.timestamps) < 2:
             return self.last_fps
-        
+
         # Calculate FPS based on recent frames
         time_diff = self.timestamps[-1] - self.timestamps[0]
         if time_diff <= 0:
             return self.last_fps
-        
+
         # Calculate FPS and smooth it
         current_fps = (len(self.timestamps) - 1) / time_diff
-        
+
         # Smooth the FPS to avoid jitter
         if self.last_fps == 0:
             self.last_fps = current_fps
         else:
             # Exponential moving average for smoother display
             self.last_fps = 0.7 * self.last_fps + 0.3 * current_fps
-        
+
         return self.last_fps
 
 
 class VideoProcessor:
     """Process videos with VPE framework - flexible model count."""
-    
+
     def __init__(self, model_configs: dict, registry_path: str, input_resolution: tuple = (960, 640)):
         self.model_configs = model_configs  # {'model_name': {'config_path': str, 'video_path': str, 'display_name': str}}
         self.registry_path = registry_path
         self.input_resolution = input_resolution  # (width, height)
-        
+
         # FPS counters for all models
         self.fps_counters = {}
         self.results = {}
-        
+
         # Result caching to prevent flickering
         self.last_valid_results = {}
         self.result_stability_count = {}
-        
+
         for model_name in self.model_configs.keys():
             self.fps_counters[model_name] = FPSCounter()
             self.results[model_name] = []
             self.last_valid_results[model_name] = None
             self.result_stability_count[model_name] = 0
-        
+
     def create_config_files(self):
         """Create configuration files for all models dynamically."""
-        
+
         # Common foundation model config
         foundation_config = {
             "preprocessing_function": "DINOV2PreprocessingTorch",
@@ -799,13 +799,13 @@ class VideoProcessor:
             "alias": "DINOV2",
             "rate": 100
         }
-        
+
         common_settings = {
             "logging": {"log_level": "INFO", "log_to_console": False},
             "canonical_image_shape_hwc": [self.input_resolution[1], self.input_resolution[0], 3],
             "queue_sizes": {"input": 2, "intermediate": 2, "output": 10}
         }
-        
+
         # Model definitions
         model_definitions = {
             'depth': {
@@ -848,7 +848,7 @@ class VideoProcessor:
                 "output_dir": "runs/seg2_test"
             }
         }
-        
+
         # Create configs for each model
         for model_name, model_config in self.model_configs.items():
             # Use the original model type for configuration
@@ -856,7 +856,7 @@ class VideoProcessor:
             if model_type not in model_definitions:
                 print(f"Warning: Unknown model type '{model_name}', skipping...")
                 continue
-                
+
             model_def = model_definitions[model_type]
             config = {
                 "foundation_model": foundation_config.copy(),
@@ -865,27 +865,27 @@ class VideoProcessor:
                 "logging": {**common_settings["logging"], "log_file": model_def["log_file"]},
                 "output_dir": model_def["output_dir"]
             }
-            
+
             # Write config file
             with open(model_config['config_path'], 'w') as f:
                 json.dump(config, f, indent=2)
-    
+
     def setup_vpe_engines(self):
         """Setup all VPE engines dynamically."""
         self.engines = {}
-        
+
         for model_name, model_config in self.model_configs.items():
             display_name = model_config.get('display_name', model_name)
             print(f"Setting up VPE {display_name} engine...")
-            
+
             engine = Engine(model_config['config_path'], self.registry_path)
             engine.build()
             engine.start_inference()
             self.engines[model_name] = engine
-        
+
         print(f"All {len(self.engines)} VPE engines ready!")
-        
-    
+
+
     def process_videos(self, max_frames: int = 300, display: bool = True, performance_mode: bool = False, smooth_mode: bool = False, display_interval: int = 1, fast_mode: bool = False):
         """Process videos with VPE framework - optimized for high performance."""
 
@@ -910,10 +910,10 @@ class VideoProcessor:
         else:
             print("Normal mode: Good balance of speed and quality")
         print("Press 'q' to quit early")
-        
+
         # Performance optimization settings
         num_models = len(self.model_configs)
-        
+
         if fast_mode:
             print("Fast mode: Ultra-high speed with minimal processing")
         elif performance_mode:
@@ -922,46 +922,46 @@ class VideoProcessor:
             print("Smooth mode: Balanced performance and display quality")
         else:
             print("Normal mode: Good balance of speed and quality")
-        
+
         try:
             while frame_count < max_frames:
                 # Read frames from all videos
                 frames = {}
                 all_ret = True
-                
+
                 for model_name, cap in caps.items():
                     ret, frame = cap.read()
                     if not ret:
                         all_ret = False
                         break
                     frames[model_name] = frame
-                
+
                 if not all_ret:
                     break
-                
+
                 frame_count += 1
-                
+
                 # Resize all frames to specified size for faster inference
                 # Use INTER_LINEAR for better performance
                 for model_name, frame in frames.items():
                     frames[model_name] = cv2.resize(frame, self.input_resolution, interpolation=cv2.INTER_LINEAR)
-                
+
                 # Process all models in real-time (immediate processing for visualization)
                 results = {}
-                
+
                 # Process each model immediately for real-time visualization
                 for model_name, frame in frames.items():
                     try:
                         # Always tick FPS counter for each frame processed
                         self.fps_counters[model_name].tick()
-                        
+
                         # Submit and get result immediately
                         current_time = time.time()
                         self.engines[model_name].input_image(frame, current_time)
-                        
+
                         # Adjust delay based on performance mode and stability
                         stability_factor = min(1.0, self.result_stability_count[model_name] * 0.1)
-                        
+
                         if fast_mode:
                             base_delay = 0.0002
                         elif performance_mode:
@@ -970,11 +970,11 @@ class VideoProcessor:
                             base_delay = 0.001
                         else:
                             base_delay = 0.002
-                        
+
                         # Increase delay slightly if we're getting unstable results
                         adjusted_delay = base_delay * (1.0 + stability_factor)
                         time.sleep(adjusted_delay)
-                        
+
                         # Get result immediately
                         result = self.engines[model_name].get_head_output(0)
                         if result is not None:
@@ -996,7 +996,7 @@ class VideoProcessor:
                         # Use cached result on error
                         if self.last_valid_results[model_name] is not None:
                             results[model_name] = self.last_valid_results[model_name]
-                
+
                 # Display results every frame for real-time visualization
                 if display:
                     if fast_mode:
@@ -1011,59 +1011,59 @@ class VideoProcessor:
                     else:
                         # Normal mode: full display
                         self.display_results(frames, results)
-                    
+
                     # Check for quit with minimal wait
                     if cv2.waitKey(1) & 0xFF == ord('q'):
                         break
-                
+
                 # Record FPS every 10 frames
                 if frame_count % 10 == 0:
                     self.record_fps_stats(frame_count, time.time() - start_time)
-                    
+
         finally:
             # Release all video captures
             for cap in caps.values():
                 cap.release()
             cv2.destroyAllWindows()
-            
+
         # Final statistics
         self.print_final_stats(frame_count, time.time() - start_time)
-    
+
     def process_vpe_model(self, model_name: str, frame: np.ndarray) -> Optional[np.ndarray]:
         """Process frame with specified VPE model."""
         try:
             # Input image with timestamp
             timestamp = time.time()
             self.engines[model_name].input_image(frame, timestamp)
-            
+
             # Try to get output
             time.sleep(0.01)  # Small delay to allow processing
             result = self.engines[model_name].get_head_output(0)
-            
+
             if result is not None:
                 self.fps_counters[model_name].tick()
                 return result
-                
+
         except Exception as e:
             print(f"VPE {model_name} error: {e}")
-        
+
         return None
-    
+
     def display_results(self, frames: dict, results: dict, skip_display=False, skip_heavy_processing=False):
         """Display VPE results for all models - optimized for performance."""
         if skip_display:
             return
-        
+
         # Skip heavy processing in performance/fast mode
         if skip_heavy_processing:
             # Minimal processing for maximum speed
             # Skip some expensive operations like detailed text rendering
             pass
-        
+
         # Calculate grid layout based on number of models
         # New layout: 2 rows x N columns (first row: input videos, second row: results)
         num_models = len(self.model_configs)
-        
+
         if num_models == 1:
             cols = 1
             rows = 2  # 1 column, 2 rows
@@ -1079,7 +1079,7 @@ class VideoProcessor:
         else:
             cols = min(num_models, 4)  # Max 4 columns
             rows = 2
-        
+
         # Optimized display sizes for 2-row layout with larger windows
         if num_models == 1:
             display_height = 600
@@ -1096,16 +1096,16 @@ class VideoProcessor:
         else:
             display_height = 400
             display_width = 500
-        
+
         # Process all frames and results - separate input and result rows
         input_images = []  # First row: input videos
         result_images = []  # Second row: inference results
-        
+
         for model_name, model_config in self.model_configs.items():
             # Input frame
             frame = frames[model_name]
             frame_small = cv2.resize(frame, (display_width, display_height))
-            
+
             # Result frame with stability improvements
             result = results.get(model_name)
             if result is not None:
@@ -1141,13 +1141,13 @@ class VideoProcessor:
                     thickness = max(1, int(font_scale * 2))
                     cv2.putText(result_disp, "Initializing...", (50, display_height//2), 
                                cv2.FONT_HERSHEY_SIMPLEX, font_scale, (255, 255, 255), thickness)
-            
+
             # Add text labels and FPS (optimized for performance and visibility)
             def add_text(img, text, fps=None, status="running"):
                 # Calculate font size based on image dimensions for better visibility
                 img_height, img_width = img.shape[:2]
                 base_font_scale = max(0.4, min(1.2, img_width / 500.0))  # Scale with image size, range 0.4-1.2
-                
+
                 if skip_heavy_processing:
                     # Fast/Performance mode: larger font for visibility
                     font_scale = base_font_scale * 0.8
@@ -1158,11 +1158,11 @@ class VideoProcessor:
                     font_scale = base_font_scale
                     thickness = max(2, int(base_font_scale * 2.5))
                     font = cv2.FONT_HERSHEY_SIMPLEX
-                
+
                 img = img.copy()
-                
+
                 # No background rectangle - clean text display
-                
+
                 # Status indicator with high contrast colors
                 if status == "cached":
                     color = (0, 255, 255)  # Yellow for cached
@@ -1172,17 +1172,17 @@ class VideoProcessor:
                 else:
                     color = (255, 255, 255)  # White for better visibility
                     status_text = ""
-                
+
                 # Main text
                 cv2.putText(img, text, (5, 20), font, font_scale, color, thickness)
-                
+
                 # FPS text with high contrast color
                 if fps is not None:
                     fps_text = f"{fps:.0f} fps"
                     cv2.putText(img, fps_text, (5, 40), font, font_scale * 0.8, (255, 255, 0), thickness)
-                
+
                 return img
-            
+
             # Simplified display names - short task type
             task_short = {
                 'depth': 'DEPTH',
@@ -1190,10 +1190,10 @@ class VideoProcessor:
                 'detection': 'DET',
                 'segmentation2': 'SEG2'
             }.get(model_name, model_name.upper())
-            
+
             # Input frame - no text overlay, just clean video
             frame_with_text = frame_small
-            
+
             # Determine status for result display
             if result is not None:
                 status = "processing"
@@ -1201,33 +1201,33 @@ class VideoProcessor:
                 status = "cached"
             else:
                 status = "initializing"
-            
+
             # Result frame - show text with task name and FPS
             result_with_text = add_text(result_disp, f"{task_short}", 
                                       self.fps_counters[model_name].get_fps(), status)
-            
+
             # Add to separate rows
             input_images.append(frame_with_text)
             result_images.append(result_with_text)
-        
+
         # Create 2-row grid layout (input row + result row)
         # First row: input videos, Second row: inference results
-        
+
         # Pad input images to match number of columns
         while len(input_images) < cols:
             input_images.append(np.zeros((display_height, display_width, 3), dtype=np.uint8))
-        
+
         # Pad result images to match number of columns  
         while len(result_images) < cols:
             result_images.append(np.zeros((display_height, display_width, 3), dtype=np.uint8))
-        
+
         # Create the two rows
         input_row = np.hstack(input_images[:cols])  # First row: input videos
         result_row = np.hstack(result_images[:cols])  # Second row: inference results
-        
+
         # Combine rows vertically
         full_display = np.vstack([input_row, result_row])
-        
+
         # Scale down if the display is too large for screen
         max_width = 1920  # Maximum display width
         if full_display.shape[1] > max_width:
@@ -1235,21 +1235,21 @@ class VideoProcessor:
             new_height = int(full_display.shape[0] * scale_factor)
             new_width = int(full_display.shape[1] * scale_factor)
             full_display = cv2.resize(full_display, (new_width, new_height), interpolation=cv2.INTER_LINEAR)
-        
+
         cv2.imshow(f"VPE Demo - {num_models} Models (2x{cols} Layout)", full_display)
-    
+
     def visualize_object_detection_on_frame(self, detection_result, input_frame, width, height):
         """Create visualization for object detection results on the input frame."""
         labels, scores, boxes = detection_result
-        
+
         # Start with the input frame
         canvas = input_frame.copy()
-        
+
         # Draw detection info as text overlay
         y_offset = 30
         cv2.putText(canvas, f"Detections: {len(labels)}", (10, y_offset), 
                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
-        
+
         if len(labels) > 0:
             # Draw boxes if available
             if len(boxes) > 0 and boxes.shape[1] == 4:
@@ -1262,18 +1262,18 @@ class VideoProcessor:
                         y1 = int(y1 * height)
                         x2 = int(x2 * width)
                         y2 = int(y2 * height)
-                        
+
                         # Ensure coordinates are within bounds
                         x1 = max(0, min(x1, width-1))
                         y1 = max(0, min(y1, height-1))
                         x2 = max(0, min(x2, width-1))
                         y2 = max(0, min(y2, height-1))
-                        
+
                         # Draw rectangle with different colors
                         color = [(0, 255, 255), (255, 0, 255), (255, 255, 0), (0, 255, 0), (255, 0, 0), 
                                 (255, 128, 0), (128, 255, 0), (0, 128, 255), (255, 0, 128), (128, 0, 255)][i % 10]
                         cv2.rectangle(canvas, (x1, y1), (x2, y2), color, 3)
-                        
+
                         # Draw label with background
                         label_text = f"Obj{i+1}: {scores[i]:.2f}"
                         label_size = cv2.getTextSize(label_text, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)[0]
@@ -1284,40 +1284,40 @@ class VideoProcessor:
             y_offset += 30
             cv2.putText(canvas, "No detections", (10, y_offset), 
                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
-        
+
         return canvas
-    
+
     def visualize_object_detection(self, detection_result, width, height):
         """Create visualization for object detection results (legacy method)."""
         labels, scores, boxes = detection_result
-        
+
         # Create a canvas with gradient background instead of black
         canvas = np.zeros((height, width, 3), dtype=np.uint8)
         # Add a subtle gradient background
         for i in range(height):
             canvas[i, :] = [int(20 + i * 0.1), int(20 + i * 0.1), int(40 + i * 0.1)]
-        
+
         # Draw detection info as text
         y_offset = 30
         cv2.putText(canvas, f"Detections: {len(labels)}", (10, y_offset), 
                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
-        
+
         if len(labels) > 0:
             y_offset += 30
             cv2.putText(canvas, f"Labels: {labels.flatten()[:5]}", (10, y_offset), 
                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
-            
+
             y_offset += 25
             scores_text = ", ".join([f"{s:.2f}" for s in scores.flatten()[:5]])
             cv2.putText(canvas, f"Scores: {scores_text}", (10, y_offset), 
                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
-            
+
             # Draw boxes if available
             if len(boxes) > 0 and boxes.shape[1] == 4:
                 y_offset += 25
                 cv2.putText(canvas, f"Boxes: {boxes.shape[0]} found", (10, y_offset), 
                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
-                
+
                 # Draw sample boxes with better visualization
                 for i, box in enumerate(boxes[:5]):  # Show first 5 boxes
                     if len(box) == 4:
@@ -1327,17 +1327,17 @@ class VideoProcessor:
                         y1 = int(y1 * height)
                         x2 = int(x2 * width)
                         y2 = int(y2 * height)
-                        
+
                         # Ensure coordinates are within bounds
                         x1 = max(0, min(x1, width-1))
                         y1 = max(0, min(y1, height-1))
                         x2 = max(0, min(x2, width-1))
                         y2 = max(0, min(y2, height-1))
-                        
+
                         # Draw rectangle with different colors
                         color = [(0, 255, 255), (255, 0, 255), (255, 255, 0), (0, 255, 0), (255, 0, 0)][i % 5]
                         cv2.rectangle(canvas, (x1, y1), (x2, y2), color, 3)
-                        
+
                         # Draw label with background
                         label_text = f"Obj{i+1}: {scores[i]:.2f}"
                         label_size = cv2.getTextSize(label_text, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)[0]
@@ -1348,19 +1348,19 @@ class VideoProcessor:
             y_offset += 30
             cv2.putText(canvas, "No detections", (10, y_offset), 
                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
-        
+
         return canvas
-    
+
     def record_fps_stats(self, frame_count: int, elapsed_time: float):
         """Record FPS statistics for all models."""
         overall_fps = frame_count / elapsed_time
-        
+
         stats = {
             'frame': frame_count,
             'elapsed_time': elapsed_time,
             'overall_fps': overall_fps
         }
-        
+
         # Collect FPS for all models
         fps_info = []
         for model_name, fps_counter in self.fps_counters.items():
@@ -1368,22 +1368,22 @@ class VideoProcessor:
             stats[f'{model_name}_fps'] = fps
             fps_info.append(f"{model_name}: {fps:.1f}")
             self.results[model_name].append(fps)
-        
+
         print(f"Frame {frame_count}: Overall FPS: {overall_fps:.1f}, " + ", ".join(fps_info))
-    
+
     def print_final_stats(self, total_frames: int, total_time: float):
         """Print final performance statistics for all models."""
         print("\n" + "="*80)
         print("VISUAL PERCEPTION ENGINE PERFORMANCE REPORT")
         print("="*80)
-        
+
         overall_fps = total_frames / total_time
         print(f"Total Frames Processed: {total_frames}")
         print(f"Total Time: {total_time:.2f}s")
         print(f"Overall Processing FPS: {overall_fps:.2f}")
-        
+
         print(f"\nVPE Model Performance ({len(self.model_configs)} models):")
-        
+
         # Calculate statistics for all models
         model_stats = {}
         for model_name, results in self.results.items():
@@ -1391,17 +1391,17 @@ class VideoProcessor:
                 avg_fps = np.mean(results)
                 max_fps = np.max(results)
                 model_stats[model_name] = {'avg': avg_fps, 'max': max_fps}
-                
+
                 display_name = self.model_configs[model_name].get('display_name', model_name)
                 print(f"{display_name:<25} - Avg: {avg_fps:.2f} FPS, Max: {max_fps:.2f} FPS")
-        
+
         print("\nPerformance Summary:")
         if model_stats:
             # Calculate combined average
             all_avg_fps = [stats['avg'] for stats in model_stats.values()]
             combined_avg = np.mean(all_avg_fps)
             print(f"Combined Average FPS: {combined_avg:.2f}")
-            
+
             # Performance assessment
             if combined_avg > 25:
                 print("🚀 Excellent performance! Framework optimizations working well.")
@@ -1411,16 +1411,16 @@ class VideoProcessor:
                 print("⚠️  Moderate performance. Consider reducing resolution or model count.")
             else:
                 print("❌ Low performance. Check GPU utilization and model complexity.")
-            
+
             # Individual model performance
             print(f"\nModel Performance Ranking:")
             sorted_models = sorted(model_stats.items(), key=lambda x: x[1]['avg'], reverse=True)
             for i, (model_name, stats) in enumerate(sorted_models, 1):
                 display_name = self.model_configs[model_name].get('display_name', model_name)
                 print(f"  {i}. {display_name}: {stats['avg']:.1f} FPS")
-            
+
         print("="*80)
-    
+
     def cleanup(self):
         """Cleanup resources."""
         print("Stopping VPE engines...")
@@ -1442,7 +1442,7 @@ class VideoProcessor:
                             pass
         except Exception as e:
             print(f"  ⚠️  Error during cleanup: {e}")
-        
+
         print("Closing video captures...")
         try:
             if hasattr(self, 'video_captures'):
@@ -1454,17 +1454,17 @@ class VideoProcessor:
                         print(f"  ⚠️  Error releasing {video_path}: {e}")
         except Exception as e:
             print(f"  ⚠️  Error releasing video captures: {e}")
-        
+
         print("Closing OpenCV windows...")
         try:
             cv2.destroyAllWindows()
         except Exception as e:
             print(f"  ⚠️  Error closing windows: {e}")
-        
+
         # Force garbage collection to help with cleanup
         import gc
         gc.collect()
-        
+
         print("Cleanup completed!")
 
 
@@ -1486,14 +1486,14 @@ def main():
     parser.add_argument("--display-interval", type=int, default=1, help="Display interval (deprecated - now displays every frame)")
     parser.add_argument("--registry", default="model_registry/registry.jsonl", help="Model registry path")
     parser.add_argument("--resolution", default="960x640", help="Input resolution (WIDTHxHEIGHT)")
-    
+
     args = parser.parse_args()
-    
+
     # Parse resolution
     try:
         width, height = map(int, args.resolution.split('x'))
         input_resolution = (width, height)
-        
+
         # Resolution info
         total_pixels = width * height
         if total_pixels <= 640 * 480:
@@ -1506,13 +1506,13 @@ def main():
             print("🎯 Quality mode: High resolution for better quality")
         else:
             print("⚠️  High resolution: May impact performance significantly")
-            
+
         print(f"Input resolution: {width}x{height} ({total_pixels:,} pixels)")
-        
+
     except ValueError:
         print(f"Invalid resolution format: {args.resolution}. Use format like '960x640'")
         return
-    
+
     # Handle video files
     if args.use_resources:
         # Use all 4 videos from resources folder
@@ -1522,23 +1522,23 @@ def main():
             'resources/demo3.mp4',
             'resources/demo4.mp4'
         ]
-        
+
         # Check if all resource videos exist
         missing_videos = []
         for video in resource_videos:
             if not os.path.exists(video):
                 missing_videos.append(video)
-        
+
         if missing_videos:
             print(f"Error: Missing resource videos: {missing_videos}")
             return
-        
+
         # Use first N videos for N models
         video_files = resource_videos[:len(args.models)]
         print(f"Using {len(video_files)} videos from resources folder:")
         for i, video in enumerate(video_files):
             print(f"  {i+1}. {video}")
-            
+
     elif args.videos:
         if len(args.videos) != len(args.models):
             print(f"Error: Number of videos ({len(args.videos)}) must match number of models ({len(args.models)})")
@@ -1553,20 +1553,20 @@ def main():
             'segmentation2': 'resources/demo2.mp4'
         }
         video_files = [default_videos[model] for model in args.models]
-    
+
     # Check if video files exist
     for i, video_path in enumerate(video_files):
         if not os.path.exists(video_path):
             print(f"Error: Video file not found: {video_path}")
             return
-    
+
     # Create model configurations
     model_configs = {}
     temp_config_files = []
-    
+
     # Count occurrences of each model type to create unique names
     model_counts = {}
-    
+
     for i, model_name in enumerate(args.models):
         # Create unique key for duplicate models
         if model_name in model_counts:
@@ -1575,10 +1575,10 @@ def main():
         else:
             model_counts[model_name] = 1
             unique_key = model_name
-        
+
         config_path = f"temp_{unique_key}_config.json"
         temp_config_files.append(config_path)
-        
+
         # Create display name with index for duplicates
         base_display_name = {
             'depth': 'Depth Estimation',
@@ -1586,30 +1586,30 @@ def main():
             'detection': 'Object Detection',
             'segmentation2': 'Semantic Segmentation (ADE20K)'
         }[model_name]
-        
+
         if model_counts[model_name] > 1:
             display_name = f"{base_display_name} #{model_counts[model_name]}"
         else:
             display_name = base_display_name
-        
+
         model_configs[unique_key] = {
             'config_path': config_path,
             'video_path': video_files[i],
             'display_name': display_name,
             'model_type': model_name  # Store original model type
         }
-    
+
     print(f"Running {len(model_configs)} models: {', '.join(args.models)}")
-    
+
     processor = VideoProcessor(model_configs, args.registry, input_resolution)
-    
+
     try:
         print("Creating configuration files...")
         processor.create_config_files()
-        
+
         print("Setting up VPE engines...")
         processor.setup_vpe_engines()
-        
+
         print("Starting video processing...")
         processor.process_videos(
             max_frames=args.max_frames,
@@ -1619,7 +1619,7 @@ def main():
             display_interval=args.display_interval,
             fast_mode=args.fast_mode
         )
-        
+
     except KeyboardInterrupt:
         print("\nInterrupted by user")
     except Exception as e:
@@ -1632,7 +1632,7 @@ def main():
             processor.cleanup()
         except Exception as e:
             print(f"Error during cleanup: {e}")
-        
+
         # Remove temporary config files
         print("Removing temporary config files...")
         for config_file in temp_config_files:
@@ -1642,7 +1642,7 @@ def main():
                     print(f"  ✓ Removed {config_file}")
             except Exception as e:
                 print(f"  ⚠️  Error removing {config_file}: {e}")
-        
+
         print("All cleanup completed!")
 
 
@@ -1665,19 +1665,19 @@ python demo.py \
 </div>
 
 :::info
-During the execution of this script, by monitoring system resource usage through `jtop`, it can be observed that the GPU memory usage is relatively low, which demonstrates the efficiency of this framework!
+このスクリプトの実行中に、`jtop`を通じてシステムリソースの使用状況を監視することで、GPU メモリ使用量が比較的低いことが観察でき、このフレームワークの効率性を実証しています！
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/gpu_usage.png"/>
 </div>
 :::
 
-## Real-time camera input for inference
+## リアルタイムカメラ入力による推論
 
 :::note
-Before running the following script, please configure the format of your GMSL camera as per [this wiki](https://wiki.seeedstudio.com/recomputer_jetson_robotics_j401_getting_started/#use-the-cameras-of-sgxxx-series)!
+以下のスクリプトを実行する前に、[このwiki](https://wiki.seeedstudio.com/ja/recomputer_jetson_robotics_j401_getting_started/#use-the-cameras-of-sgxxx-series)に従ってGMSLカメラの形式を設定してください！
 :::
 
-Modify the content in the file `./src/vp_engine/engine.py` within the project. Change the content around line 184 to the content as shown in the following figure.
+プロジェクト内の`./src/vp_engine/engine.py`ファイルの内容を変更します。184行目付近の内容を以下の図に示すような内容に変更してください。
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/modify.png"/>
 </div>
@@ -1712,14 +1712,14 @@ Display:
 Usage:
     # Default (2 cameras: depth + segmentation)
     python realtime_multi_camera_inference.py
-    
+
     # 4 cameras with performance optimizations
     python realtime_multi_camera_inference.py \
         --camera-ids 0 1 2 3 \
         --models depth depth segmentation segmentation \
         --resolution 640x480 \
         --display-scale 0.5
-    
+
     # Maximum FPS mode (no display, lower resolution)
     python realtime_multi_camera_inference.py \
         --camera-ids 0 1 2 3 \
@@ -1727,10 +1727,10 @@ Usage:
         --resolution 480x320 \
         --no-display \
         --duration 60
-    
+
     # Adjust segmentation overlay transparency
     python realtime_multi_camera_inference.py --seg-alpha 0.7
-    
+
     # Smaller display for better performance
     python realtime_multi_camera_inference.py --display-scale 0.5
 """
@@ -1756,17 +1756,17 @@ from vp_engine import Engine
 
 class FPSCounter:
     """Thread-safe FPS counter with moving average."""
-    
+
     def __init__(self, window_size: int = 30):
         self.window_size = window_size
         self.timestamps = deque(maxlen=window_size)
         self.lock = threading.Lock()
-        
+
     def tick(self):
         """Record a new frame timestamp."""
         with self.lock:
             self.timestamps.append(time.time())
-        
+
     def get_fps(self) -> float:
         """Get current FPS based on moving window."""
         with self.lock:
@@ -1780,50 +1780,50 @@ class FPSCounter:
 
 class CameraCapture:
     """Thread-safe camera capture with frame buffering."""
-    
+
     def __init__(self, camera_id: int, resolution: Tuple[int, int] = (960, 640), buffer_size: int = 2):
         self.camera_id = camera_id
         self.resolution = resolution  # (width, height)
         self.buffer_size = buffer_size
-        
+
         self.frame_queue = Queue(maxsize=buffer_size)
         self.running = False
         self.thread = None
         self.cap = None
         self.fps_counter = FPSCounter()
-        
+
     def start(self):
         """Start camera capture thread."""
         print(f"  Opening camera {self.camera_id}...")
-        
+
         # Try different backends for better performance
         self.cap = cv2.VideoCapture(self.camera_id, cv2.CAP_V4L2)
-        
+
         if not self.cap.isOpened():
             # Fallback to default backend
             self.cap = cv2.VideoCapture(self.camera_id)
-        
+
         if not self.cap.isOpened():
             raise RuntimeError(f"Failed to open camera {self.camera_id}")
-        
+
         # Set camera properties for performance
         self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, self.resolution[0])
         self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self.resolution[1])
         self.cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)  # Minimize buffer lag
-        
+
         # Try to set FPS if supported
         self.cap.set(cv2.CAP_PROP_FPS, 30)
-        
+
         actual_width = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))
         actual_height = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         print(f"    Camera {self.camera_id}: {actual_width}x{actual_height}")
-        
+
         self.running = True
         self.thread = threading.Thread(target=self._capture_loop, daemon=True)
         self.thread.start()
-        
+
         print(f"  ✓ Camera {self.camera_id} started")
-        
+
     def _capture_loop(self):
         """Continuous capture loop running in separate thread."""
         while self.running:
@@ -1832,11 +1832,11 @@ class CameraCapture:
                 print(f"Warning: Failed to read from camera {self.camera_id}")
                 time.sleep(0.1)
                 continue
-            
+
             # Resize if needed
             if frame.shape[1] != self.resolution[0] or frame.shape[0] != self.resolution[1]:
                 frame = cv2.resize(frame, self.resolution, interpolation=cv2.INTER_LINEAR)
-            
+
             # Update queue (drop old frames if full)
             try:
                 self.frame_queue.put(frame, block=False)
@@ -1847,16 +1847,16 @@ class CameraCapture:
                     self.frame_queue.put(frame, block=False)
                 except:
                     pass
-            
+
             self.fps_counter.tick()
-    
+
     def get_frame(self, timeout: float = 0.1) -> Optional[np.ndarray]:
         """Get latest frame from queue."""
         try:
             return self.frame_queue.get(timeout=timeout)
         except Empty:
             return None
-    
+
     def stop(self):
         """Stop camera capture."""
         self.running = False
@@ -1869,12 +1869,12 @@ class CameraCapture:
 
 class MultiCameraProcessor:
     """Process multiple camera streams with VPE framework - optimized for performance."""
-    
+
     def __init__(self, camera_configs: dict, registry_path: str, input_resolution: tuple = (960, 640), 
                  segmentation_alpha: float = 0.6, enable_display: bool = True, display_scale: float = 1.0):
         """
         Initialize multi-camera processor.
-        
+
         Args:
             camera_configs: {
                 'camera_name': {
@@ -1895,29 +1895,29 @@ class MultiCameraProcessor:
         self.segmentation_alpha = segmentation_alpha
         self.enable_display = enable_display
         self.display_scale = display_scale
-        
+
         # Camera captures
         self.cameras = {}
-        
+
         # FPS counters for inference
         self.inference_fps_counters = {}
         self.results = {}
-        
+
         # Latest results cache
         self.latest_results = {}
-        
+
         for camera_name in self.camera_configs.keys():
             self.inference_fps_counters[camera_name] = FPSCounter()
             self.results[camera_name] = []
             self.latest_results[camera_name] = None
-        
+
         # Performance tracking
         self.total_frames_processed = 0
         self.start_time = None
-        
+
     def create_config_files(self):
         """Create configuration files for all models dynamically."""
-        
+
         # Common foundation model config
         foundation_config = {
             "preprocessing_function": "DINOV2PreprocessingTorch",
@@ -1925,13 +1925,13 @@ class MultiCameraProcessor:
             "alias": "DINOV2",
             "rate": 100
         }
-        
+
         common_settings = {
             "logging": {"log_level": "INFO", "log_to_console": False},
             "canonical_image_shape_hwc": [self.input_resolution[1], self.input_resolution[0], 3],
             "queue_sizes": {"input": 2, "intermediate": 2, "output": 10}
         }
-        
+
         # Model definitions
         model_definitions = {
             'depth': {
@@ -1955,20 +1955,20 @@ class MultiCameraProcessor:
                 "output_dir": "runs/seg_camera"
             }
         }
-        
+
         # Create configs for each camera
         for camera_name, camera_config in self.camera_configs.items():
             model_type = camera_config['model_type']
             if model_type not in model_definitions:
                 print(f"Warning: Unknown model type '{model_type}', skipping...")
                 continue
-                
+
             model_def = model_definitions[model_type]
-            
+
             # Create unique output directory for each camera
             output_dir = f"{model_def['output_dir']}_{camera_name}"
             log_file = f"{model_type}_{camera_name}_log.txt"
-            
+
             config = {
                 "foundation_model": foundation_config.copy(),
                 "model_heads": model_def["model_heads"],
@@ -1976,38 +1976,38 @@ class MultiCameraProcessor:
                 "logging": {**common_settings["logging"], "log_file": log_file},
                 "output_dir": output_dir
             }
-            
+
             # Write config file
             with open(camera_config['config_path'], 'w') as f:
                 json.dump(config, f, indent=2)
-    
+
     def setup_cameras(self):
         """Setup all camera captures."""
         print("Setting up cameras...")
-        
+
         for camera_name, camera_config in self.camera_configs.items():
             camera_id = camera_config['camera_id']
             camera = CameraCapture(camera_id, self.input_resolution, buffer_size=2)
             camera.start()
             self.cameras[camera_name] = camera
-        
+
         print(f"All {len(self.cameras)} cameras ready!")
-    
+
     def setup_vpe_engines(self):
         """Setup all VPE engines dynamically."""
         self.engines = {}
-        
+
         for camera_name, camera_config in self.camera_configs.items():
             display_name = camera_config.get('display_name', camera_name)
             print(f"Setting up VPE engine for {display_name}...")
-            
+
             engine = Engine(camera_config['config_path'], self.registry_path)
             engine.build()
             engine.start_inference()
             self.engines[camera_name] = engine
-        
+
         print(f"All {len(self.engines)} VPE engines ready!")
-    
+
     def process_all_cameras_batch(self) -> int:
         """
         Process all cameras in batch mode for better performance.
@@ -2015,14 +2015,14 @@ class MultiCameraProcessor:
         """
         successful_count = 0
         current_time = time.time()
-        
+
         # Phase 1: Submit all frames to engines (fast, non-blocking)
         submitted = {}
         for camera_name in self.camera_configs.keys():
             try:
                 camera = self.cameras[camera_name]
                 engine = self.engines[camera_name]
-                
+
                 # Get frame from camera (non-blocking)
                 frame = camera.get_frame(timeout=0.0001)
                 if frame is not None:
@@ -2032,20 +2032,20 @@ class MultiCameraProcessor:
             except Exception as e:
                 if "CUDA" not in str(e):
                     print(f"Error submitting {camera_name}: {e}")
-        
+
         # Small delay to allow batch processing
         if len(submitted) > 0:
             time.sleep(0.003)  # Reduced delay for batch mode
-        
+
         # Phase 2: Collect all available results (fast, non-blocking)
         for camera_name in submitted.keys():
             try:
                 engine = self.engines[camera_name]
                 fps_counter = self.inference_fps_counters[camera_name]
-                
+
                 # Try to get output (non-blocking)
                 result = engine.get_head_output(0)
-                
+
                 if result is not None:
                     # Update latest result
                     self.latest_results[camera_name] = (submitted[camera_name], result, current_time)
@@ -2055,83 +2055,83 @@ class MultiCameraProcessor:
             except Exception as e:
                 if "CUDA" not in str(e):
                     print(f"Error collecting {camera_name}: {e}")
-        
+
         return successful_count
-    
+
     def run_inference(self, duration: int = 300):
         """
         Run inference on all cameras for specified duration.
-        
+
         Args:
             duration: Duration in seconds (0 = infinite)
         """
         print(f"\nStarting real-time inference on {len(self.cameras)} cameras...")
         print("Press 'q' to quit\n")
-        
+
         self.running = True
         self.start_time = time.time()
-        
+
         # Main processing loop - batch processing for better performance
         frame_count = 0
         last_stats_time = time.time()
         stats_interval = 5.0  # Print stats every 5 seconds
         display_counter = 0
-        
+
         # Adaptive display frequency based on number of cameras
         num_cameras = len(self.camera_configs)
         display_interval = 2 if num_cameras >= 4 else 1  # Reduce display overhead for 4+ cameras
-        
+
         print(f"Starting with display interval: {display_interval} (lower = more frequent)")
-        
+
         try:
             while self.running:
                 current_time = time.time()
                 elapsed_time = current_time - self.start_time
-                
+
                 # Check duration
                 if duration > 0 and elapsed_time > duration:
                     print(f"\nReached duration limit of {duration}s")
                     break
-                
+
                 # Process all cameras in batch mode (parallel submission)
                 successful_count = self.process_all_cameras_batch()
-                
+
                 # Small delay only if no frames were processed
                 if successful_count == 0:
                     time.sleep(0.001)
-                
+
                 # Display results with reduced frequency for better performance
                 display_counter += 1
                 if display_counter >= display_interval:
                     if hasattr(self, 'enable_display') and self.enable_display:
                         self.display_results()
-                        
+
                         # Check for quit
                         key = cv2.waitKey(1) & 0xFF
                         if key == ord('q'):
                             print("\nQuitting...")
                             break
                     display_counter = 0
-                
+
                 frame_count += 1
-                
+
                 # Print statistics periodically
                 if current_time - last_stats_time > stats_interval:
                     self.print_stats(elapsed_time)
                     last_stats_time = current_time
-                
+
         except KeyboardInterrupt:
             print("\nInterrupted by user")
         finally:
             self.running = False
-        
+
         # Final statistics
         self.print_final_stats(time.time() - self.start_time)
-    
+
     def display_results(self):
         """Display results from all cameras in a grid layout."""
         num_cameras = len(self.camera_configs)
-        
+
         # Grid layout - adjust based on number of cameras
         # Now each camera only shows one image (inference result), so we can make them bigger
         if num_cameras == 1:
@@ -2159,34 +2159,34 @@ class MultiCameraProcessor:
             base_width = 480
             cols = 2
             rows = (num_cameras + 1) // 2
-        
+
         # Apply display scale
         display_height = int(base_height * self.display_scale)
         display_width = int(base_width * self.display_scale)
-        
+
         # Collect display images
         display_images = []
-        
+
         for camera_name, camera_config in self.camera_configs.items():
             display_name = camera_config.get('display_name', camera_name)
             model_type = camera_config['model_type']
-            
+
             # Get latest result
             latest = self.latest_results[camera_name]
-            
+
             if latest is not None:
                 frame, result, timestamp = latest
-                
+
                 # Resize original frame
                 frame_small = cv2.resize(frame, (display_width, display_height))
-                
+
                 # Handle different result types
                 if isinstance(result, np.ndarray):
                     # Check if this is a segmentation result (needs overlay)
                     if model_type == 'segmentation':
                         # Create overlay: blend segmentation mask with original image
                         result_resized = cv2.resize(result, (display_width, display_height))
-                        
+
                         # Blend with configurable alpha
                         # alpha: weight for original image (higher = more original visible)
                         result_disp = cv2.addWeighted(frame_small, self.segmentation_alpha, 
@@ -2199,29 +2199,29 @@ class MultiCameraProcessor:
                     result_disp = frame_small.copy()
                 else:
                     result_disp = np.zeros((display_height, display_width, 3), dtype=np.uint8)
-                
+
                 # Add labels and FPS info
                 fps = self.inference_fps_counters[camera_name].get_fps()
                 camera_fps = self.cameras[camera_name].fps_counter.get_fps()
-                
+
                 # Calculate text size based on display width for better scaling
                 font_scale = display_width / 640.0  # Scale relative to 640px width
                 text_thickness = max(1, int(font_scale * 2))
-                
+
                 # Add semi-transparent background for text
                 overlay = result_disp.copy()
                 bg_width = int(display_width * 0.4)  # 40% of width
                 bg_height = int(display_height * 0.12)  # 12% of height
                 cv2.rectangle(overlay, (5, 5), (bg_width, bg_height), (0, 0, 0), -1)
                 result_disp = cv2.addWeighted(overlay, 0.6, result_disp, 0.4, 0)
-                
+
                 # Add text with adaptive size
                 y_offset = int(display_height * 0.05)
                 cv2.putText(result_disp, f"{display_name}", (10, y_offset), 
                            cv2.FONT_HERSHEY_SIMPLEX, font_scale * 0.6, (0, 255, 0), text_thickness)
                 cv2.putText(result_disp, f"FPS: {fps:.1f}", (10, y_offset + int(display_height * 0.05)), 
                            cv2.FONT_HERSHEY_SIMPLEX, font_scale * 0.5, (0, 255, 255), text_thickness)
-                
+
                 # Only use the result display (no input frame)
                 combined = result_disp
             else:
@@ -2233,9 +2233,9 @@ class MultiCameraProcessor:
                 cv2.putText(combined, "Initializing...", 
                            (50, display_height // 2 + 20), 
                            cv2.FONT_HERSHEY_SIMPLEX, 0.6, (200, 200, 200), 2)
-            
+
             display_images.append(combined)
-        
+
         # Create grid layout (now each camera only shows one image)
         if num_cameras == 1:
             # Single camera - just display it
@@ -2246,7 +2246,7 @@ class MultiCameraProcessor:
         else:
             # Dynamic grid for 3+ cameras
             rows_images = []
-            
+
             for i in range(rows):
                 row_imgs = []
                 for j in range(cols):
@@ -2256,91 +2256,91 @@ class MultiCameraProcessor:
                     else:
                         # Add empty placeholder
                         row_imgs.append(np.zeros((display_height, display_width, 3), dtype=np.uint8))
-                        
+
                 if len(row_imgs) > 0:
                     rows_images.append(np.hstack(row_imgs))
-            
+
             if len(rows_images) > 0:
                 full_display = np.vstack(rows_images)
             else:
                 full_display = np.zeros((display_height, display_width, 3), dtype=np.uint8)
-        
+
         cv2.imshow(f"Multi-Camera VPE - {num_cameras} Cameras", full_display)
-    
+
     def print_stats(self, elapsed_time: float):
         """Print current statistics."""
         print(f"\n--- Statistics at {elapsed_time:.1f}s ---")
-        
+
         for camera_name, camera_config in self.camera_configs.items():
             display_name = camera_config.get('display_name', camera_name)
             camera_fps = self.cameras[camera_name].fps_counter.get_fps()
             inference_fps = self.inference_fps_counters[camera_name].get_fps()
-            
+
             print(f"  {display_name:<25} Camera: {camera_fps:>5.1f} FPS  |  Inference: {inference_fps:>5.1f} FPS")
-    
+
     def print_final_stats(self, total_time: float):
         """Print final performance statistics."""
         print("\n" + "="*80)
         print("MULTI-CAMERA VPE PERFORMANCE REPORT")
         print("="*80)
-        
+
         print(f"Total Runtime: {total_time:.2f}s")
         print(f"Number of Cameras: {len(self.cameras)}")
-        
+
         print(f"\nPer-Camera Performance:")
-        
+
         # Group by model type
         depth_cameras = []
         seg_cameras = []
-        
+
         for camera_name, camera_config in self.camera_configs.items():
             display_name = camera_config.get('display_name', camera_name)
             model_type = camera_config['model_type']
-            
+
             results = self.results[camera_name]
             if results:
                 avg_fps = np.mean(results)
                 max_fps = np.max(results)
                 min_fps = np.min(results)
-                
+
                 stats = {
                     'name': display_name,
                     'avg': avg_fps,
                     'max': max_fps,
                     'min': min_fps
                 }
-                
+
                 if model_type == 'depth':
                     depth_cameras.append(stats)
                 else:
                     seg_cameras.append(stats)
-                
+
                 print(f"\n  {display_name}")
                 print(f"    Average FPS: {avg_fps:.2f}")
                 print(f"    Max FPS:     {max_fps:.2f}")
                 print(f"    Min FPS:     {min_fps:.2f}")
-        
+
         # Summary by model type
         print(f"\nPerformance by Model Type:")
-        
+
         if depth_cameras:
             avg_depth = np.mean([cam['avg'] for cam in depth_cameras])
             print(f"  Depth Estimation:     {avg_depth:.2f} FPS (avg across {len(depth_cameras)} cameras)")
-        
+
         if seg_cameras:
             avg_seg = np.mean([cam['avg'] for cam in seg_cameras])
             print(f"  Semantic Segmentation: {avg_seg:.2f} FPS (avg across {len(seg_cameras)} cameras)")
-        
+
         # Overall assessment
         all_fps = []
         for results in self.results.values():
             if results:
                 all_fps.extend(results)
-        
+
         if all_fps:
             overall_avg = np.mean(all_fps)
             print(f"\nOverall Average FPS: {overall_avg:.2f}")
-            
+
             if overall_avg > 20:
                 print("🚀 Excellent performance! Multi-camera system running smoothly.")
             elif overall_avg > 12:
@@ -2349,13 +2349,13 @@ class MultiCameraProcessor:
                 print("⚠️  Moderate performance. Consider optimization or resolution reduction.")
             else:
                 print("❌ Low performance. Check system resources and configuration.")
-        
+
         print("="*80)
-    
+
     def cleanup(self):
         """Cleanup all resources."""
         print("\nCleaning up...")
-        
+
         # Stop cameras
         print("Stopping cameras...")
         for camera_name, camera in self.cameras.items():
@@ -2363,7 +2363,7 @@ class MultiCameraProcessor:
                 camera.stop()
             except Exception as e:
                 print(f"  Error stopping camera {camera_name}: {e}")
-        
+
         # Stop VPE engines
         print("Stopping VPE engines...")
         if hasattr(self, 'engines'):
@@ -2374,18 +2374,18 @@ class MultiCameraProcessor:
                     print(f"  ✓ Engine for {camera_name} stopped")
                 except Exception as e:
                     print(f"  ⚠️  Error stopping engine for {camera_name}: {e}")
-        
+
         # Close OpenCV windows
         print("Closing windows...")
         try:
             cv2.destroyAllWindows()
         except Exception as e:
             print(f"  Error closing windows: {e}")
-        
+
         # Force garbage collection
         import gc
         gc.collect()
-        
+
         print("Cleanup completed!")
 
 
@@ -2409,52 +2409,52 @@ def main():
                        help="Disable display (headless mode for maximum FPS)")
     parser.add_argument("--display-scale", type=float, default=1.0,
                        help="Display resolution scale (0.5=half size, 1.0=normal, 2.0=double)")
-    
+
     args = parser.parse_args()
-    
+
     # Validate camera count
     if len(args.camera_ids) < 1 or len(args.camera_ids) > 4:
         print("Error: 1-4 cameras supported")
         return
-    
+
     if len(args.models) != len(args.camera_ids):
         print(f"Error: Number of models ({len(args.models)}) must match number of cameras ({len(args.camera_ids)})")
         return
-    
+
     # Parse resolution
     try:
         width, height = map(int, args.resolution.split('x'))
         input_resolution = (width, height)
-        
+
         total_pixels = width * height
         print(f"Resolution: {width}x{height} ({total_pixels:,} pixels per camera)")
         print(f"Total throughput: {total_pixels * 4:,} pixels across 4 cameras")
-        
+
     except ValueError:
         print(f"Invalid resolution format: {args.resolution}. Use format like '960x640'")
         return
-    
+
     # Create camera configurations dynamically
     camera_configs = {}
-    
+
     model_display_names = {
         'depth': 'Depth',
         'segmentation': 'Segmentation'
     }
-    
+
     for i, (camera_id, model_type) in enumerate(zip(args.camera_ids, args.models)):
         camera_key = f'camera{i}'
         model_suffix = 'depth' if model_type == 'depth' else 'seg'
-        
+
         camera_configs[camera_key] = {
             'camera_id': camera_id,
             'model_type': model_type,
             'config_path': f'temp_camera{i}_{model_suffix}_config.json',
             'display_name': f'Camera {camera_id} - {model_display_names[model_type]}'
         }
-    
+
     temp_config_files = [config['config_path'] for config in camera_configs.values()]
-    
+
     print("="*80)
     print("REAL-TIME MULTI-CAMERA VPE INFERENCE")
     print("="*80)
@@ -2463,42 +2463,42 @@ def main():
     for camera_name, config in camera_configs.items():
         print(f"  • {config['display_name']}")
     print("\n" + "="*80 + "\n")
-    
+
     # Validate and clamp segmentation alpha
     seg_alpha = max(0.0, min(1.0, args.seg_alpha))
     if seg_alpha != args.seg_alpha:
         print(f"Warning: seg-alpha clamped to valid range [0.0, 1.0]: {seg_alpha:.2f}")
-    
+
     # Validate display scale
     display_scale = max(0.25, min(2.0, args.display_scale))
     if display_scale != args.display_scale:
         print(f"Warning: display-scale clamped to valid range [0.25, 2.0]: {display_scale:.2f}")
-    
+
     # Display mode
     enable_display = not args.no_display
     if not enable_display:
         print("Running in headless mode (no display)")
-    
+
     processor = MultiCameraProcessor(camera_configs, args.registry, input_resolution, 
                                     seg_alpha, enable_display, display_scale)
-    
+
     try:
         print("Creating configuration files...")
         processor.create_config_files()
-        
+
         print("\nSetting up cameras...")
         processor.setup_cameras()
-        
+
         # Small delay to let cameras warm up
         print("Warming up cameras...")
         time.sleep(2)
-        
+
         print("\nSetting up VPE engines...")
         processor.setup_vpe_engines()
-        
+
         # Start inference
         processor.run_inference(duration=args.duration)
-        
+
     except KeyboardInterrupt:
         print("\nInterrupted by user")
     except Exception as e:
@@ -2511,7 +2511,7 @@ def main():
             processor.cleanup()
         except Exception as e:
             print(f"Error during cleanup: {e}")
-        
+
         # Remove temporary config files
         print("\nRemoving temporary config files...")
         for config_file in temp_config_files:
@@ -2521,7 +2521,7 @@ def main():
                     print(f"  ✓ Removed {config_file}")
             except Exception as e:
                 print(f"  ⚠️  Error removing {config_file}: {e}")
-        
+
         print("\nAll done!")
 
 
@@ -2546,37 +2546,37 @@ python realtime_inference.py \
 </div>
 
 :::note
-This example uses the official pre-trained model, without any specific task training and fine-tuning. Moreover, our camera is a GMSL camera with significant distortion. Therefore, the inference result might not be very satisfactory. This case is mainly intended to demonstrate to you the efficiency of resource utilization of this framework and its advantages!
+この例では、特定のタスクトレーニングやファインチューニングを行わない公式の事前訓練済みモデルを使用しています。さらに、私たちのカメラは大きな歪みを持つGMSLカメラです。そのため、推論結果はあまり満足のいくものではない可能性があります。このケースは主に、このフレームワークのリソース利用効率とその利点をデモンストレーションすることを目的としています！
 :::
 
-## Other Applications
+## その他のアプリケーション
 
 :::info
 
-- **Efficient robot perception development**
+- **効率的なロボット知覚開発**
 
-In the development of robots, efficient visual perception is of great significance! With the above efficient visual reasoning framework, combined with the efficient GPU acceleration of visual odometry, it can enhance the efficiency of resource utilization in the development of edge-end robots!
-Combining this wiki-deployed [visual SLAM algorithm](https://wiki.seeedstudio.com/pycuvslam_recomputer_robotics/) enables efficient robot development on Jetson!
+ロボットの開発において、効率的な視覚知覚は非常に重要です！上記の効率的な視覚推論フレームワークと、視覚オドメトリの効率的なGPUアクセラレーションを組み合わせることで、エッジ端ロボット開発におけるリソース利用効率を向上させることができます！
+このwikiでデプロイされた[視覚SLAMアルゴリズム](https://wiki.seeedstudio.com/ja/pycuvslam_recomputer_robotics/)と組み合わせることで、Jetson上での効率的なロボット開発が可能になります！
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/mix.gif"/>
 </div>
 :::note
-Because enabling the screen recording software will consume a certain amount of system resources, it results in an increase in inference delay!
+画面録画ソフトウェアを有効にすると一定量のシステムリソースを消費するため、推論遅延が増加します！
 :::
 
-- **Intelligent driving**
-- **Edge intelligent monitoring systems**
+- **自動運転**
+- **エッジインテリジェント監視システム**
 
-## Resources
+## リソース
 
 - [Visual Perception Engine Repository](https://github.com/nasa-jpl/visual-perception-engine)
 - [TensorRT Documentation](https://docs.nvidia.com/deeplearning/tensorrt/)
 - [CUDA Programming Guide](https://docs.nvidia.com/cuda/)
 
-## Tech Support & Product Discussion
+## 技術サポート & 製品ディスカッション
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

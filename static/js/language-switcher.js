@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-10-16 10:36:33 (北京时间)
-// 多语言页面: 2025 个
+// 生成时间: 2025-10-17 09:44:32 (北京时间)
+// 多语言页面: 2026 个
 
 (function() {
   'use strict';
@@ -564,6 +564,12 @@
     "ja"
   ],
   "/deploy_frigate_on_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/deploy_visual_perception_engine_recomputer": [
     "cn",
     "en",
     "es",
