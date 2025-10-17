@@ -1,18 +1,18 @@
 ---
 description: PlatfromIO with EE04
-title: XIAO ePaper Display Board EE04 with PlatfromIO
+title: EE04 with PlatfromIO
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/10.webp
 sidebar_position: 1
-slug: /e04_with_platformio
+slug: /ee04_with_platformio
 last_update:
   date: 10/10/2025
   author: Zeller
 ---
+# XIAO ePaper Display Board(ESP32-S3) EE04 with PlatfromIO
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/
-platformIO_nrf54l15.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_ui_1.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## PlatformIO Introduce
 
@@ -22,11 +22,12 @@ Crucially, PlatformIO bridges the gap for developers familiar with Arduino, enab
 
 ### Hardware Preparation
 
-You need to prepare a XIAO ePaper Display Board EE04 along with screens of the supported size.
+You need to prepare a XIAO ePaper Display Board EE04 along with screens of the supported size.The 24-pin 800×480 7.5-inch ink screen used in this tutorial is an example.
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>XIAO ePaper Display Board EE04</th>
+        <th>XIAO ePaper Display Board(ESP32-S3) - EE04</th>
+        <th>7.5" Monochrome eInk</th>
     </tr>
     <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:300, height:'auto'}}/></div>
@@ -35,17 +36,19 @@ You need to prepare a XIAO ePaper Display Board EE04 along with screens of the s
                 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
     </div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/7.5-inch-elink_1.jpg" style={{width:300, height:'auto'}}/></div>
+    <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html" target="_blank">
+                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+    </div></td>
     </tr>
  </table>
 </div>
 
-The XIAO ePaper Display Board EE04 supports screens of different sizes and pin numbers. The 24-pin 800×480 7.5-inch ink screen used in this tutorial is an example.<br/>
-
-**Link**:  [Supported screen link](https://wiki.seeedstudio.com/epaper_ee04/#supported-eink)
-
 ### Download Vscode
 
-Download according to the system you are using[Vscode](https://code.visualstudio.com/download)
+Download according to the system you are using [Vscode](https://code.visualstudio.com/download)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -397,7 +400,7 @@ Code Explanation:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_battery_1.png" style={{width:800, height:'auto'}}/></div>
 
-## Dashboard Demo
+## UI Design
 
 EE04 enables you to carry out various creative designs, such as dashboards and image displays. By combining with buttons, it allows for the switching between multiple pages. Here is an example of a dashboard.
 
@@ -406,28 +409,6 @@ In this routine, the operation of drawing the dashboard is carried out based on 
 
 LVGL Official Documentation: [LVGL docs](https://docs.lvgl.io/master/examples.html#get-started)
 :::
-
-### Hardware
-
-You need to prepare an XIAO ePaper Display Board EE04 and a 7.5-inch screen with a resolution of 800*480.
-
-<div class="table-center">
-<table align="center">
-    <tr>
-        <th>XIAO ePaper Display Board EE04</th>
-    </tr>
-    <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:300, height:'auto'}}/></div>
-    <div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-        </a>
-    </div></td>
-    </tr>
- </table>
-</div>
-
-**Link**:  [Screen link](https://wiki.seeedstudio.com/epaper_ee04/#supported-eink)
 
 ### Software
 
@@ -650,7 +631,7 @@ void loop()
 
 </details>
 
-### Effect Demonstration:
+### Effect Demonstration
 
 Pressing the buttons on the EE04 board can switch to the corresponding UI interface:
 
@@ -674,10 +655,10 @@ Pressing the buttons on the EE04 board can switch to the corresponding UI interf
  </table>
 </div>
 
-Click on the link, find the **Resources** title, and select the 3D shell file you want to print.<br/>
-[3D shell file resources](https://wiki.seeedstudio.com/cn/trmnl_7inch5_diy_kit_main_page/)
+### Resource
 
-<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_3d_resource.png" style={{width:400, height:'auto'}}/></div> -->
+- **7.5" Monochrome eInk Enclosure (3D Model)**: [Download from Printables](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)
+
 
 ## Tech Support & Product Discussion
 
