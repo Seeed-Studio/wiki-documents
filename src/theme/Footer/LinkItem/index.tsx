@@ -6,6 +6,7 @@ import {
   detectLocaleFromPath,
   localizeHref,
   type Locale,
+  isLocaleHomePath,
 } from '../../../pages/home/lib/locale';
 
 // 可选：Footer 常用 label 翻译（命中才替换）
@@ -107,6 +108,7 @@ export default function FooterLinkItemWrapper(
 ) {
   const {pathname} = useLocation();
   const locale = detectLocaleFromPath(pathname);
+  const isHome = isLocaleHomePath(pathname);
 
   const nextProps = {...props} as any;
 
@@ -117,10 +119,12 @@ export default function FooterLinkItemWrapper(
       nextItem.label = translateLabel(nextItem.label, locale);
     }
 
-    if (typeof nextItem.to === 'string') {
-      nextItem.to = localizeHref(nextItem.to, locale);
-    } else if (typeof nextItem.href === 'string') {
-      nextItem.href = localizeHref(nextItem.href, locale);
+    if (isHome) {
+      if (typeof nextItem.to === 'string') {
+        nextItem.to = localizeHref(nextItem.to, locale);
+      } else if (typeof nextItem.href === 'string') {
+        nextItem.href = localizeHref(nextItem.href, locale);
+      }
     }
 
     nextProps.item = nextItem;

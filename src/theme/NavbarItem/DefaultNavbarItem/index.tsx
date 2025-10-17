@@ -6,6 +6,7 @@ import {
   detectLocaleFromPath,
   localizeHref,
   type Locale,
+  isLocaleHomePath,
 } from '../../../pages/home/lib/locale';
 
 // 可选：给 Navbar 常用 label 做翻译（命中才替换；没命中就保持原文）
@@ -55,6 +56,7 @@ export default function DefaultNavbarItemWrapper(
 ) {
   const {pathname} = useLocation();
   const locale = detectLocaleFromPath(pathname);
+  const isHome = isLocaleHomePath(pathname);
 
   const nextProps = {...props} as any;
 
@@ -63,10 +65,12 @@ export default function DefaultNavbarItemWrapper(
   }
 
   // 仅站内/wiki 链接加前缀；外链保持不变
-  if (typeof nextProps.to === 'string') {
-    nextProps.to = localizeHref(nextProps.to, locale);
-  } else if (typeof nextProps.href === 'string') {
-    nextProps.href = localizeHref(nextProps.href, locale);
+  if (isHome) {
+    if (typeof nextProps.to === 'string') {
+      nextProps.to = localizeHref(nextProps.to, locale);
+    } else if (typeof nextProps.href === 'string') {
+      nextProps.href = localizeHref(nextProps.href, locale);
+    }
   }
 
   return <OriginalDefaultNavbarItem {...nextProps} />;
