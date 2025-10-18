@@ -177,8 +177,8 @@ pip3 install numpy==1.26.0  # This should match torchvision
 6.Install Fashionstar Motor Dependencies:
 
 ```bash
-pip install lerobot_teleoperator_violin    #使用 pip 安装violin
-pip install lerobot_robot_viola    #使用 pip 安装viola
+pip install lerobot_teleoperator_bimanual_leader
+pip install lerobot_robot_bimanual_follower
 ```
 
 7. Check Pytorch and Torchvision
