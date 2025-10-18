@@ -184,6 +184,8 @@ pip3 install numpy==1.26.0  # 该版本需与 torchvision 兼容
 ```bash
 pip install lerobot_teleoperator_violin    #使用 pip 安装violin
 pip install lerobot_robot_viola    #使用 pip 安装viola
+pip install lerobot_teleoperator_bimanual_leader
+pip install lerobot_robot_bimanual_follower
 ```
 
 7.检查 Pytorch 和 Torchvision
