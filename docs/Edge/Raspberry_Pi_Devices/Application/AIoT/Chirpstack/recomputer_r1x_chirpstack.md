@@ -139,9 +139,7 @@ Run the Packet Forwarder using the updated configuration:
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
-Here’s your **“Make Gateway” section** in the same wiki style:
 
----
 
 ## Start Gateway
 
