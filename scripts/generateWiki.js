@@ -33,6 +33,8 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'Watcher-Agent', 'Device_Network_Setup_Guide.md'), //10.13
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'Watcher-Agent', 'Web_Control_Panel.md'), //10.13
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_Encrypt_the_Disk_for_Jetson.md'), //10.11
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'Device_Network_Setup_Guide.md'), //10.13
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'Web_Control_Panel.md'), //10.13
 ];
 
 // 递归函数，用于遍历多层文件夹

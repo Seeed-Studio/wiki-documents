@@ -20,7 +20,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ビジュアルトリガーと AI フラッシュ
+# SenseCAP Watcher で AI モデルを書き込む
 
 ## 概要
 
