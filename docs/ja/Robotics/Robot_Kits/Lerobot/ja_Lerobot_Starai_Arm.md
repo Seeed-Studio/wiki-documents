@@ -21,7 +21,7 @@ translation:
 <iframe width="900" height="600" src="https://www.youtube.com/embed/IJKTeBYAG7k?si=iS-jqT27fDjeI6yX" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-| **フォロワー Viola** | **リーダー Violin** | **フォロワー Cello** |
+| **Follower Viola** | **Leader Violin** | **Follower Cello** |
 |:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello.png) |
 
@@ -56,7 +56,7 @@ translation:
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello.jpg" />
 </div>
 
-| 項目                 | フォロワーアーム \| Viola                             | リーダーアーム \|Violin                                |    フォロワーアーム \|Cello    |
+| 項目                 | Follower Arm \| Viola                             | Leder Arm \|Violin                                |    Follower Arm \|Cello    |
 | -------------------- | ------------------------------------------------- | ------------------------------------------------- |-----------------|
 | 自由度   | 6+1                                               | 6+1                                               | 6+1             |
 | リーチ                | 470mm                                             | 470mm                                             | 670mm |
@@ -643,7 +643,7 @@ Violin&Viola:
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=lerobot_robot_viola \
+    --robot.type=robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
     --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
@@ -964,7 +964,7 @@ Parameter Description
 
 キーボードショートカットを使用してデータ記録ワークフローを制御します：
 
-- **右矢印キー（→）**を押す：現在のエピソードを早期停止または時間をリセットし、次のエピソードに移動します。
+- **右矢印キー（→）**を押す：現在のエピソードを早期停止するか時間をリセットし、次のエピソードに移動します。
 - **左矢印キー（←）**を押す：現在のエピソードをキャンセルして再記録します。
 - **ESC**を押す：セッションを即座に停止し、ビデオをエンコードしてデータセットをアップロードします。
 

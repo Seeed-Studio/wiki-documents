@@ -145,7 +145,7 @@ conda install ffmpeg -c conda-forge
 ```
 
 :::tip
-Esto usualmente instala ffmpeg 7.X para tu plataforma compilado con el codificador libsvtav1. Si libsvtav1 no es soportado (verifica codificadores soportados con ffmpeg -encoders), puedes:
+Esto usualmente instala ffmpeg 7.X para tu plataforma compilado con el codificador libsvtav1. Si libsvtav1 no es soportado (verifica los codificadores soportados con ffmpeg -encoders), puedes:
 
 - [En cualquier plataforma] Instalar explícitamente ffmpeg 7.X usando:
 
@@ -196,7 +196,7 @@ Si estás usando un dispositivo Jetson, instala Pytorch y Torchvision según [es
 
 ### Desempacando el Brazo Robótico
 
-El Kit del Brazo Robótico Incluye
+El Kit de Brazo Robótico Incluye
 
 - Brazo líder
 - Brazo seguidor
@@ -643,7 +643,7 @@ Violin&Viola:
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=lerobot_robot_viola \
+    --robot.type=robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
     --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
