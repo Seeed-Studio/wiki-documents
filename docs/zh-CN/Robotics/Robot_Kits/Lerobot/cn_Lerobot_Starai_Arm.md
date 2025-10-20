@@ -13,7 +13,7 @@ last_update:
   author: LiShanghang
 ---
 
-# 基于 LeRobot 的华馨京 StarAI 机械臂入门教程
+# 基于 LeRobot 的 StarAI 机械臂入门教程
 
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115064656956649&bvid=BV1wJYDzEE2s&cid=32243908802&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -182,8 +182,8 @@ pip3 install numpy==1.26.0  # 该版本需与 torchvision 兼容
 6.安装 Fashionstar 电机依赖：
 
 ```bash
-pip install lerobot_teleoperator_violin    #使用 pip 安装violin
-pip install lerobot_robot_viola    #使用 pip 安装viola
+pip install lerobot_teleoperator_bimanual_leader
+pip install lerobot_robot_bimanual_follower
 ```
 
 7.检查 Pytorch 和 Torchvision
@@ -327,9 +327,17 @@ lerobot-calibrate     --teleop.type=lerobot_teleoperator_violin --teleop.port=/d
 
 将follower连接到`/dev/ttyUSB1`，或者修改`--teleop.port`，然后执行：
 
+Viola:
+
 ```bash
 lerobot-calibrate     --robot.type=lerobot_robot_viola --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraiviola_arm
 ```
+
+或者是Cello:
+```bash
+lerobot-calibrate     --robot.type=lerobot_robot_cello --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraicello_arm
+```
+
 
 在运行命令后，需要**手动掰机械臂**，让每个关节达到**极限值**，终端会显示记录的范围数据，做完此操作后按下回车即可。
 
@@ -354,8 +362,15 @@ lerobot-calibrate     --teleop.type=lerobot_teleoperator_bimanual_leader  --tele
 
 将left_arm_port连接到`/dev/ttyUSB1`，right_arm_port连接到`/dev/ttyUSB3`，或者修改`--robot.left_arm_port` `--robot.right_arm_port`，然后执行：
 
+Viola:
+
 ```bash
 lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_name=starai_viola  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_viola_follower
+```
+
+或者是Cello:
+```bash
+lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_name=starai_cello  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_cello_follower
 ```
 
 :::tip
@@ -383,6 +398,8 @@ lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_
 
 您已准备好遥操作您的机器人（不包括摄像头）！运行以下简单脚本：
 
+Violin&Viola:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_viola \
@@ -393,9 +410,22 @@ lerobot-teleoperate \
     --teleop.id=my_awesome_staraiviolin_arm
 ```
 
+Violin&Cello:
+```bash
+lerobot-teleoperate \
+    --robot.type=lerobot_robot_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --teleop.type=lerobot_teleoperator_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm
+```
+
+
 <details>
 <summary> 双臂 </summary>
 
+Violin&Viola:
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -403,6 +433,20 @@ lerobot-teleoperate \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
     --robot.id=bi_starai_viola_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
+    --teleop.left_arm_port=/dev/ttyUSB0 \
+    --teleop.right_arm_port=/dev/ttyUSB2 \
+    --teleop.id=bi_starai_violin_leader
+```
+
+Violin&Cello:
+```bash
+lerobot-teleoperate \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.id=bi_starai_cello_follower \
     --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
@@ -505,11 +549,26 @@ from .orbbec.configuration_orbbec import OrbbecCameraConfig
 我们加入了focus_area超参数，因为过远的深度数据对于机械臂没有意义（抓取不到），因此小于或者大于focus_area的深度数据将会变为黑色,默认的focus_area是(20,600)
 目前支持的分辨率只限于 width: 640, height: 880
 
+Violin&Viola:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=starai_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
+    --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+    --teleop.type=starai_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm \
+    --display_data=true
+```
+
+Violin&Cello:
+```bash
+lerobot-teleoperate \
+    --robot.type=starai_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
     --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
     --teleop.type=starai_violin \
     --teleop.port=/dev/ttyUSB0 \
@@ -586,9 +645,11 @@ Image capture finished. Images saved to outputs/captured_images
 
 确认外接摄像头后，将摄像头信息替换下方cameras信息您将能够在遥操作时在计算机上显示摄像头：
 
+Violin&Viola:
+
 ```bash
 lerobot-teleoperate \
-    --robot.type=lerobot_robot_viola \
+    --robot.type=robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
     --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
@@ -598,8 +659,24 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
+Violin&Cello:
+```bash
+lerobot-teleoperate \
+    --robot.type=robot_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm \
+    --display_data=true
+```
+
+
 <details>
 <summary> 双臂 </summary>
+
+Violin&Viola:
 
 ```bash
 lerobot-teleoperate \
@@ -615,7 +692,26 @@ lerobot-teleoperate \
     --teleop.id=bi_starai_violin_leader \
     --display_data=true
 ```
+
+Violin&Cello:
+```bash
+lerobot-teleoperate \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.id=bi_starai_cello_follower \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
+    --teleop.left_arm_port=/dev/ttyUSB0 \
+    --teleop.right_arm_port=/dev/ttyUSB2 \
+    --teleop.id=bi_starai_violin_leader \
+    --display_data=true
+```
+
 </details>
+
+
 
 :::tip
 
@@ -657,6 +753,8 @@ echo $HF_USER
 
 记录 10 个回合并上传数据集到 Hub：
 
+Violin&Viola:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_viola \
@@ -675,9 +773,29 @@ lerobot-record \
     --dataset.single_task="Grab the black cube"
 ```
 
+Violin&Cello:
+```bash
+lerobot-record \
+    --robot.type=lerobot_robot_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm \
+    --display_data=true \
+    --dataset.repo_id=starai/record-test \
+    --dataset.episode_time_s=30 \
+    --dataset.reset_time_s=30 \
+    --dataset.num_episodes=10 \
+    --dataset.push_to_hub=True \
+    --dataset.single_task="Grab the black cube"
+```
+
 <details>
 <summary> 双臂 </summary>
 
+Violin&Viola:
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -699,11 +817,28 @@ lerobot-record \
     --dataset.single_task="Grab the black cube"
 ```
 
-:::tip
+Violin&Cello:
+```bash
+lerobot-record \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.id=bi_starai_cello_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
+    --teleop.left_arm_port=/dev/ttyUSB0 \
+    --teleop.right_arm_port=/dev/ttyUSB2 \
+    --teleop.id=bi_starai_violin_leader \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --display_data=true \
+    --dataset.repo_id=starai/record-test_bi_arm \
+    --dataset.episode_time_s=30 \
+    --dataset.reset_time_s=30 \
+    --dataset.num_episodes=10 \
+    --dataset.push_to_hub=True \
+    --dataset.single_task="Grab the black cube"
+```
 
-为了区分单双臂，这里的`--dataset.repo_id`命名为`starai/record-test_bi_arm`。
-
-:::
 
 </details>
 
@@ -712,8 +847,8 @@ lerobot-record \
 :::
 
 不上传到Hub:
-**（推荐，下文的教程会以本地数据为主）** 
 
+Violin&Viola:
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_viola \
@@ -732,9 +867,29 @@ lerobot-record \
     --dataset.single_task="Grab the black cube"
 ```
 
+Violin&Cello:
+```bash
+lerobot-record \
+    --robot.type=lerobot_robot_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm \
+    --display_data=true \
+    --dataset.repo_id=starai/record-test \
+    --dataset.episode_time_s=30 \
+    --dataset.reset_time_s=30 \
+    --dataset.num_episodes=10 \
+    --dataset.push_to_hub=False \
+    --dataset.single_task="Grab the black cube"
+```
+
 <details>
 <summary> 双臂 </summary>
 
+Violin&Viola:
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -742,6 +897,28 @@ lerobot-record \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
     --robot.id=bi_starai_viola_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
+    --teleop.left_arm_port=/dev/ttyUSB0 \
+    --teleop.right_arm_port=/dev/ttyUSB2 \
+    --teleop.id=bi_starai_violin_leader \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --display_data=true \
+    --dataset.repo_id=starai/record-test_bi_arm \
+    --dataset.episode_time_s=30 \
+    --dataset.reset_time_s=30 \
+    --dataset.num_episodes=10 \
+    --dataset.push_to_hub=False \
+    --dataset.single_task="Grab the black cube"
+```
+
+Violin&Cello:
+```bash
+lerobot-record \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.id=bi_starai_cello_follower \
     --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
@@ -809,6 +986,7 @@ lerobot-record \
 
 现在尝试在您的机器人上重播第一个回合:
 
+Viola:
 ```bash
 lerobot-replay \
     --robot.type=lerobot_robot_viola \
@@ -817,9 +995,21 @@ lerobot-replay \
     --dataset.repo_id=starai/record-test \
     --dataset.episode=1 # choose the episode you want to replay
 ```
+
+Cello:
+```bash
+lerobot-replay \
+    --robot.type=lerobot_robot_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --dataset.repo_id=starai/record-test \
+    --dataset.episode=1 # choose the episode you want to replay
+```
+
 <details>
 <summary> 双臂 </summary>
 
+Viola:
 ```bash
 lerobot-replay \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -830,12 +1020,25 @@ lerobot-replay \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode=0 # choose the episode you want to replay
 ```
+Cello:
+```bash
+lerobot-replay \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.id=bi_starai_cello_follower \
+    --dataset.repo_id=starai/record-test_bi_arm \
+    --dataset.episode=0 # choose the episode you want to replay
+```
+
 </details>
 
 ## 训练
 
 要训练一个控制您机器人策略，以下是一个示例命令：
 
+Viola:
 ```bash
 lerobot-train \
   --dataset.repo_id=starai/record-test \
@@ -848,9 +1051,23 @@ lerobot-train \
   --steps=200000
 ```
 
+Cello:
+```bash
+lerobot-train \
+  --dataset.repo_id=starai/record-test \
+  --policy.type=act \
+  --output_dir=outputs/train/act_cello_test \
+  --job_name=act_cello_test \
+  --policy.device=cuda \
+  --wandb.enable=False \
+  --policy.repo_id=starai/my_policy \
+  --steps=200000
+```
+
 <details>
 <summary> 双臂 </summary>
 
+Viola:
 ```bash
 lerobot-train \
   --dataset.repo_id=starai/record-test_bi_arm \
@@ -862,6 +1079,20 @@ lerobot-train \
   --policy.repo_id=starai/my_policy \
   --steps=200000
 ```
+
+Cello:
+```bash
+lerobot-train \
+  --dataset.repo_id=starai/record-test_bi_arm \
+  --policy.type=act \
+  --output_dir=outputs/train/act_bi_cello_test \
+  --job_name=act_bi_cello_test \
+  --policy.device=cuda \
+  --wandb.enable=False \
+  --policy.repo_id=starai/my_policy \
+  --steps=200000
+```
+
 </details>
 
 1. `--policy.type`支持输入`diffusion,pi0,pi0fast`等策略
@@ -871,9 +1102,18 @@ lerobot-train \
 
 从某个检查点恢复训练。
 
+Viola:
 ```bash
 lerobot-train \
   --config_path=outputs/train/act_viola_test/checkpoints/last/pretrained_model/train_config.json \
+  --resume=true \
+  --steps=400000
+```
+
+Cello:
+```bash
+lerobot-train \
+  --config_path=outputs/train/act_cello_test/checkpoints/last/pretrained_model/train_config.json \
   --resume=true \
   --steps=400000
 ```
@@ -1006,18 +1246,36 @@ lerobot-eval \
 
 运行以下命令记录 10 个评估回合：
 
+Viola:
 ```bash
 lerobot-record  \
-  --robot.type=starai_viola \
+  --robot.type=lerobot_robot_viola \
   --robot.port=/dev/ttyUSB1 \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
   --robot.id=my_awesome_staraiviola_arm \
   --display_data=false \
   --dataset.repo_id=starai/eval_record-test \
   --dataset.single_task="Put lego brick into the transparent box" \
   --policy.path=outputs/train/act_viola_test/checkpoints/last/pretrained_model
   # <- Teleop optional if you want to teleoperate in between episodes \
-  # --teleop.type=starai_violin \
+  # --teleop.type=lerobot_teleoperator_violin \
+  # --teleop.port=/dev/ttyUSB0 \
+  # --teleop.id=my_awesome_leader_arm \
+```
+
+Cello:
+```bash
+lerobot-record  \
+  --robot.type=lerobot_robot_cello \
+  --robot.port=/dev/ttyUSB1 \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+  --robot.id=my_awesome_staraicello_arm \
+  --display_data=false \
+  --dataset.repo_id=starai/eval_record-test \
+  --dataset.single_task="Put lego brick into the transparent box" \
+  --policy.path=outputs/train/act_viola_test/checkpoints/last/pretrained_model
+  # <- Teleop optional if you want to teleoperate in between episodes \
+  # --teleop.type=lerobot_teleoperator_violin \
   # --teleop.port=/dev/ttyUSB0 \
   # --teleop.id=my_awesome_leader_arm \
 ```
@@ -1025,17 +1283,34 @@ lerobot-record  \
 <details>
 <summary> 双臂 </summary>
 
+Viola:
 ```bash
 lerobot-record  \
-    --robot.type=bi_starai_follower \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
-    --robot.id=bi_starai_follower \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30}}" \
+    --robot.id=bi_starai_viola_follower \
     --display_data=false \
     --dataset.repo_id=starai/eval_record-test_bi_arm \
     --dataset.single_task="test" \
     --policy.path=outputs/train/act_bi_viola_test/checkpoints/last/pretrained_model
+```
+
+Cello:
+```bash
+lerobot-record  \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30}}" \
+    --robot.id=bi_starai_cello_follower \
+    --display_data=false \
+    --dataset.repo_id=starai/eval_record-test_bi_arm \
+    --dataset.single_task="test" \
+    --policy.path=outputs/train/act_bi_cello_test/checkpoints/last/pretrained_model
 ```
 </details>
 
