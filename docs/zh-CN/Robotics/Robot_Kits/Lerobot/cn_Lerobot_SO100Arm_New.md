@@ -251,7 +251,7 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 3. 克隆 Lerobot 仓库：
 
 ```bash
-git clone https://gitee.com/Marlboro1998/lerobot.git ~/lerobot
+git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
 ```
 
 4. 使用 miniconda 时，在环境中安装 ffmpeg：
@@ -898,6 +898,13 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 | →（右箭头） | 提前终止当前剧集/重置；进入下一个。 |
 | ←（左箭头） | 取消当前剧集；重新录制。 |
 | ESC | 立即停止会话，编码视频，并上传数据集。 |
+
+:::tip
+如果你的键盘按下后没有反应，可能你需要降低你pynput的版本，例如安装个1.6.8版本的。
+```bash
+pip install pynput==1.6.8
+```
+:::
 
 **数据收集技巧**
 
