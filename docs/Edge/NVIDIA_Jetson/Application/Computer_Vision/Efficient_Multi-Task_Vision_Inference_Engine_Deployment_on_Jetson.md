@@ -12,7 +12,7 @@ keywords:
 - CUDA
 - ROS2
 - Robotics
-image: https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/video.webp
+image: https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/video_demo_preview.gif
 slug: /deploy_visual_perception_engine_recomputer
 last_update:
   date: 2025-10-13
