@@ -553,11 +553,11 @@ Violin&Viola:
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=starai_viola \
+    --robot.type=lerobot_starai_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
     --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
-    --teleop.type=starai_violin \
+    --teleop.type=lerobot_starai_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
@@ -566,11 +566,11 @@ lerobot-teleoperate \
 Violin&Cello:
 ```bash
 lerobot-teleoperate \
-    --robot.type=starai_cello \
+    --robot.type=lerobot_starai_cello \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraicello_arm \
     --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
-    --teleop.type=starai_violin \
+    --teleop.type=lerobot_starai_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
@@ -649,7 +649,7 @@ Violin&Viola:
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=robot_viola \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
     --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
@@ -662,7 +662,7 @@ lerobot-teleoperate \
 Violin&Cello:
 ```bash
 lerobot-teleoperate \
-    --robot.type=robot_cello \
+    --robot.type=lerobot_robot_cello \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraicello_arm \
     --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
