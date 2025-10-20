@@ -1,4 +1,4 @@
-position: 7 # float position is supported
+position: 8 # float position is supported
 label: 'SenseCAP Watcher for Xiaozhi AI'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
