@@ -203,7 +203,6 @@ Robotic Arm Kit Includes
 - Controller (handle)
 - Parallel gripper
 - Installation tools (screws, hex wrench)
-- Power supply ×2
 - C-clamp ×2
 - UC-01 debuging board ×2
 
