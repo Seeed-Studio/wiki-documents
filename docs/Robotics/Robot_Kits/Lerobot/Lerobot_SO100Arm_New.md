@@ -891,6 +891,14 @@ Control the data recording flow using keyboard shortcuts:
 | ← (Left Arrow) | Cancel current episode; re-record it. |  
 | ESC | Stop session immediately, encode videos, and upload dataset. |  
 
+
+:::tip
+If keyboard not work, you may need install other version of pynput.
+```bash
+pip install pynput==1.6.8
+```
+:::
+
 **Tips for Gathering Data**
 
 - Task Suggestion: Grasp objects at different locations and place them in a bin.  
