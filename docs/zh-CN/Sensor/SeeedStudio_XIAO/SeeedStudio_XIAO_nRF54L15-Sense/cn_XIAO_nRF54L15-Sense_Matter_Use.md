@@ -24,12 +24,12 @@ Nordic Semiconductor 的 nRF54L15 是为物联网设计的下一代超低功耗�
 
 随着 Matter 作为连接标准联盟（CSA）推广的统一连接标准的兴起，nRF54L15 提供了一个强大的开发平台来探索和验证 Matter 应用。其高性能、低功耗和集成的多协议无线电使其非常适合消费级智能家居产品和工业物联网设备。
 
-在本文档中，我们将介绍 Nordic SDK 中为 nRF54L15 提供的 Matter 示例应用程序。这些示例演示了关键功能，如设备入网、安全通信以及与 Apple HomeKit、Google Home 和 Amazon Alexa 等常见生态系统的交互。
+在本文档中，我们将介绍 nRF54L15 Nordic SDK 中可用的 Matter 示例应用程序。这些示例演示了关键功能，如设备入网、安全通信以及与 Apple HomeKit、Google Home 和 Amazon Alexa 等常见生态系统的交互。
 
 
 ## 先决条件
 
-要开始在 XIAO nRF54L15 上开发 Matter 应用程序，请确保准备好以下硬件和软件组件。
+要开始在 XIAO nRF54L15 上开发 Matter 应用程序，请确保以下硬件和软件组件已准备就绪。
 
 ### 硬件
 
@@ -76,7 +76,7 @@ Nordic Semiconductor 的 nRF54L15 是为物联网设计的下一代超低功耗�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/matter_54l15.png" style={{width:900, height:'auto'}}/></div>
 
 
-编程后，示例会自动启动 Bluetooth® LE 广播，并准备将 Matter 设备配置到支持 Matter 的 Thread 网络中。示例使用 LED 来显示连接状态。
+编程后，示例会自动启动 Bluetooth® LE 广播，并为 Matter 设备准备加入支持 Matter 的 Thread 网络。示例使用 LED 显示连接状态。
 
 示例可以在以下模式之一中运行：
 
@@ -117,9 +117,16 @@ Nordic Semiconductor 的 nRF54L15 是为物联网设计的下一代超低功耗�
 - [pm_static_xiao_nrf54l15_nrf54l15_cpuapp.yml](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/pm_static_xiao_nrf54l15_nrf54l15_cpuapp.yml)
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/5.png" style={{width:600, height:'auto'}}/></div>
 
+
+### Sysbuild 配置
+
+- [sysbuild.conf](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/sysbuild.conf)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/00000.png" style={{width:600, height:'auto'}}/></div>
+
+
 ### 构建项目
 - 打开 Add Build Configuration 窗口。
-- 在 SDK 字段中，选择所需版本（例如，nRF Connect SDK v3.0.2）。
+- 在 SDK 字段中，选择所需版本（例如 nRF Connect SDK v3.0.2）。
 - 在 Toolchain 字段中，选择匹配的版本。
 - 对于 Board target：`xiao_nrf54l15/nrf54l15/cpuapp`
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/16.png" style={{width:600, height:'auto'}}/></div>
@@ -133,7 +140,7 @@ Nordic Semiconductor 的 nRF54L15 是为物联网设计的下一代超低功耗�
 
 
 ### 添加 Matter 设备
-编译并将固件烧录到 XIAO nRF54L15 后，您可以使用 nRF Serial Terminal 工具查看调试日志并获取设备配置二维码。
+编译并将固件烧录到 XIAO nRF54L15 后，您可以使用 nRF Serial Terminal 工具查看调试日志并获取设备配网二维码。
 
 **步骤 1.** 打开 Manager Toolchains 并启动 Terminal Tools。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/10.png" style={{width:900, height:'auto'}}/></div>
@@ -144,7 +151,7 @@ Nordic Semiconductor 的 nRF54L15 是为物联网设计的下一代超低功耗�
 **步骤 3.** 从弹出菜单中，选择与您的 XIAO nRF54L15 对应的串口。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/12.png" style={{width:900, height:'auto'}}/></div>
 
-**步骤 4.** 终端打开后，您将在日志中看到打印的配置二维码链接。复制此链接并在浏览器中打开以生成 Matter 设备二维码。
+**步骤 4.** 终端打开后，您将在日志中看到打印的配网二维码链接。复制此链接并在浏览器中打开以生成 Matter 设备二维码。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/13.png" style={{width:900, height:'auto'}}/></div>
 
 **步骤 5.** 使用兼容 Matter 的平台扫描此二维码以添加您的设备。
@@ -158,7 +165,7 @@ Nordic Semiconductor 的 nRF54L15 是为物联网设计的下一代超低功耗�
 
 ### 在 Alexa App 中添加 Matter 设备
 
-- 转到 Home：打开 Alexa App 并点击右上角的 "+" 按钮。
+- 前往 Home：打开 Alexa App 并点击右上角的 "+" 按钮。
 - Add Device：从菜单中选择 "Device"。
 - Choose Device Type：在设备列表中选择 "Matter"。
 - Scan QR Code：在 Matter 设置屏幕上，点击 "Scan QR Code" 并扫描设备上的二维码（或选择输入数字代码）。
@@ -171,9 +178,9 @@ Nordic Semiconductor 的 nRF54L15 是为物联网设计的下一代超低功耗�
     </tr>
 </table>
 
-- Rename Device：设置完成后，为您的设备命名，例如 "Thermostat"，然后点击 Update Name。
-- Device Appears in List：添加后，您将在设备列表中看到新的恒温器。
-- Control Device：打开恒温器控制页面来调节温度（例如，制冷至 79°F，制热至 68°F）并设置模式（例如，Auto）。
+- 重命名设备：设置完成后，为您的设备命名，例如"Thermostat"，然后点击 Update Name。
+- 设备出现在列表中：添加后，您将在设备列表中看到新的 Thermostat。
+- 控制设备：打开 Thermostat 控制页面来调节温度（例如，制冷至 79°F，制热至 68°F）并设置模式（例如，Auto）。
 
 <table align="center">
     <tr>
@@ -188,7 +195,7 @@ Nordic Semiconductor 的 nRF54L15 是为物联网设计的下一代超低功耗�
 
 ### default_zap/
 - thermostat.zap
-  - ZAP 配置文件，定义了 Matter 恒温器应用程序的集群和属性设置。
+  - ZAP 配置文件，定义了 Matter 恒温器应用的集群和属性设置。
 - zap-generated/
   - 基于 .zap 配置从 ZAP 工具自动生成的源文件。
 
@@ -204,7 +211,7 @@ Nordic Semiconductor 的 nRF54L15 是为物联网设计的下一代超低功耗�
 
 - `temp_sensor_manager.cpp` / `temp_sensor_manager.h`
   - 管理传感器数据收集。
-  - 为高级组件提供处理后的温度值。
+  - 为更高级别的组件提供处理后的温度值。
   - temperature_manager.cpp / temperature_manager.h
   - 监督温度控制逻辑。
   - 与 Matter 属性（例如，当前温度、设定点）接口。
