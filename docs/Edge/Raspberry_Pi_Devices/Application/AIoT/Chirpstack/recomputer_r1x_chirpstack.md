@@ -92,9 +92,6 @@ docker run hello-world
 sudo apt install docker-compose
 ```
 
-Perfect I’ll reformat your **Packet Forwarder setup** into the same structured wiki style you’re using:
-
----
 
 ## Run Packet Forwarder
 
