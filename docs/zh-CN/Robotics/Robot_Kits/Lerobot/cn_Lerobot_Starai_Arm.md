@@ -209,7 +209,6 @@ print(torch.cuda.is_available())
 - 手柄
 - 平行夹爪
 - 安装工具（螺丝、内六角扳手）
-- 电源 x2
 - C型夹具 x2
 - UC-01 转接板 x2
 
