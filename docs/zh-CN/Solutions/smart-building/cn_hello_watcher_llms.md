@@ -13,8 +13,8 @@ keywords:
   - Yolo
   - Assistant
   - MCP
-# image:
-slug: /cn/hello_watcher_llms
+image: https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/display.webp
+slug: /cn/solutions/hello_watcher_llms
 sidebar_position: 1
 last_update:
   date: 09/12/2025
@@ -24,8 +24,8 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-:::info Imagine this
-想象一下：当你步入书房，桌上的 SenseCAP Watcher 立即感知到你的到来。屏幕亮起，它微笑着向你致意，并显示出今天的待办事项——无需你开口，甚至不需要任何操作。
+:::info 想象一下：
+当你步入书房，桌上的 SenseCAP Watcher 立即感知到你的到来。屏幕亮起，它微笑着向你致意，并显示出今天的待办事项——无需你开口，甚至不需要任何操作。
 :::
 
 SenseCAP Watcher，正重新定义人与设备的交互方式。
@@ -43,56 +43,56 @@ Watcher 的“慧眼”依托于强大的**端侧 AI 视觉芯片（Himax）**�
       <h2><a href="https://www.seeedstudio.com/SenseCAP-Watcher-XIAOZHI-EN-p-6532.html?utm=wiki&utm=hello_watcher_llms">SenseCAP Watcher</a></h2>
       <p>一款集端侧AI视觉与灵活开发环境于一身的智能设备，旨在帮助你轻松构建与部署个性化AI应用。</p>
   </div>
-	<ul class="info-list">
-		<li class="info-item">
-			<div class="info-icon">
-				<svg
-					xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 21v-1.5M12 5.25v13.5m-3.75-13.5v13.5m-3.75-13.5v13.5m11.25-13.5v13.5m3.75-13.5v13.5m-1.5-13.5H9.75v13.5h9.75V5.25z" />
-				</svg>
-			</div>
-			<div class="info-content">
-				<h3>离线运行的“火眼金睛”：高效端侧视觉处理</h3>
-				<p>搭载高性能 AI 视觉芯片（Himax），所有图像处理均在设备本地完成。响应迅捷，同时更好地保护您的隐私——数据无需上传至云端。</p>
-			</div>
-		</li>
-		<li class="info-item">
-			<div class="info-icon">
-				<svg
-					xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-				</svg>
-			</div>
-			<div class="info-content">
-				<h3>零代码构建 AI 应用，像搭乐高一样简单</h3>
-				<p>借助 SenseCraft AI 平台，只需鼠标点点操作即可部署AI模型，快速搭建适用于特定场景的应用程序。AI 模型部署变得如修图般轻松，完全无需编程基础。</p>
-			</div>
-		</li>
-		<li class="info-item">
-			<div class="info-icon">
-				<svg
-					xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-				</svg>
-			</div>
-			<div class="info-content">
-				<h3>灵活集成平台与工具</h3>
-				<p>基于小智 MCP 架构，可自由定义新的 AI 工具，并快速接入本地或云端服务，无缝融入现有智能系统。</p>
-			</div>
-		</li>
-		<li class="info-item">
-			<div class="info-icon">
-				<svg
-					xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
-				</svg>
-			</div>
-			<div class="info-content">
-				<h3>硬件可扩展：额外接口支持</h3>
-				<p>提供 GPIO 扩展接口，可轻松连接各类传感器与执行器，实现深度定制，支持更多创意落地。</p>
-			</div>
-		</li>
-	</ul>
+ <ul class="info-list">
+  <li class="info-item">
+   <div class="info-icon">
+    <svg
+     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 21v-1.5M12 5.25v13.5m-3.75-13.5v13.5m-3.75-13.5v13.5m11.25-13.5v13.5m3.75-13.5v13.5m-1.5-13.5H9.75v13.5h9.75V5.25z" />
+    </svg>
+   </div>
+   <div class="info-content">
+    <h3>离线运行的“火眼金睛”：高效端侧视觉处理</h3>
+    <p>搭载高性能 AI 视觉芯片（Himax），所有图像处理均在设备本地完成。响应迅捷，同时更好地保护您的隐私——数据无需上传至云端。</p>
+   </div>
+  </li>
+  <li class="info-item">
+   <div class="info-icon">
+    <svg
+     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+     <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+   </div>
+   <div class="info-content">
+    <h3>零代码构建 AI 应用，像搭乐高一样简单</h3>
+    <p>借助 SenseCraft AI 平台，只需鼠标点点操作即可部署AI模型，快速搭建适用于特定场景的应用程序。AI 模型部署变得如修图般轻松，完全无需编程基础。</p>
+   </div>
+  </li>
+  <li class="info-item">
+   <div class="info-icon">
+    <svg
+     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+     <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+    </svg>
+   </div>
+   <div class="info-content">
+    <h3>灵活集成平台与工具</h3>
+    <p>基于小智 MCP 架构，可自由定义新的 AI 工具，并快速接入本地或云端服务，无缝融入现有智能系统。</p>
+   </div>
+  </li>
+  <li class="info-item">
+   <div class="info-icon">
+    <svg
+     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+    </svg>
+   </div>
+   <div class="info-content">
+    <h3>硬件可扩展：额外接口支持</h3>
+    <p>提供 GPIO 扩展接口，可轻松连接各类传感器与执行器，实现深度定制，支持更多创意落地。</p>
+   </div>
+  </li>
+ </ul>
 </div>
 
 ## 工作原理
@@ -119,16 +119,16 @@ Watcher 的“眼睛”（摄像头）捕捉图像 → “视觉神经”（Hima
 
 只需三步，即可激活你的 Watcher：
 
-1.  **启动设备**：通过 Type-C 数据线供电；若使用电池，长按侧边按键开机。
-2.  **连接网络**：设备启动后将生成一个 Wi-Fi 热点，使用手机或电脑连接此热点。｜「[Watcher 网络配置](/cn/device_network_setup)」
-3.  **配置与激活**：在浏览器中访问 `192.168.4.1`，为 Watcher 配置 Wi-Fi，并按照指引在 SenseCraft AI 平台上完成激活。｜「[Watcher Web 控制台](/cn/watcher_web_control_panel/)」
+1. **启动设备**：通过 Type-C 数据线供电；若使用电池，长按侧边按键开机。
+2. **连接网络**：设备启动后将生成一个 Wi-Fi 热点，使用手机或电脑连接此热点。｜「[Watcher 网络配置](/cn/device_network_setup)」
+3. **配置与激活**：在浏览器中访问 `192.168.4.1`，为 Watcher 配置 Wi-Fi，并按照指引在 SenseCraft AI 平台上完成激活。｜「[Watcher Web 控制台](/cn/watcher_web_control_panel/)」
 
 :::info[激活提示]
 若无法成功激活，请确认验证码填写正确且设备鉴权信息未丢失。以下操作通常会导致鉴权信息丢失：
 
-1.  固件被其他程序覆盖。
-2.  进行大版本固件更新前未备份鉴权信息。
-3.  刷写了全新的固件。
+1. 固件被其他程序覆盖。
+2. 进行大版本固件更新前未备份鉴权信息。
+3. 刷写了全新的固件。
 
 如需重新激活，请将设备的 STA Mac 地址（可从串口日志中获取）发送至 sensecap@seeed.cc 获取协助。请参阅：[烧录认证信息](/cn/flash_watcher_agent_firmware/#flashing-authentication-info)。
 :::
@@ -184,7 +184,7 @@ Coming Soon.
 
   ```shell
   cd xiaozhi-esp32
-  idf.py --set-target esp32s3
+  idf.py set-target esp32s3
   idf.py menuconfig  # 在图形化界面中选择板卡类型为 SenseCAP Watcher
   idf.py build flash monitor
   ```

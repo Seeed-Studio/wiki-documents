@@ -1,18 +1,18 @@
 ---
 description: PlatfromIO con EE04
-title: XIAO ePaper Display Board EE04 con PlatfromIO
+title: EE04 con PlatfromIO
 keywords:
   - epaper
-image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/10.webp
+image: https://files.seeedstudio.com/wiki/Epaper/EE04/pio_show_1.webp
 sidebar_position: 1
-slug: /es/e04_with_platformio
+slug: /es/ee04_with_platformio
 last_update:
   date: 10/10/2025
   author: Zeller
 ---
+# Placa de Pantalla ePaper XIAO (ESP32-S3) EE04 con PlatfromIO
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/
-platformIO_nrf54l15.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_ui_1.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## Introducción a PlatformIO
 
@@ -22,11 +22,12 @@ Crucialmente, PlatformIO cierra la brecha para los desarrolladores familiarizado
 
 ### Preparación del Hardware
 
-Necesitas preparar una XIAO ePaper Display Board EE04 junto con pantallas del tamaño soportado.
+Necesitas preparar una Placa de Pantalla ePaper XIAO EE04 junto con pantallas del tamaño soportado. La pantalla de tinta de 7.5 pulgadas de 800×480 con 24 pines utilizada en este tutorial es un ejemplo.
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>XIAO ePaper Display Board EE04</th>
+        <th>Placa de Pantalla ePaper XIAO (ESP32-S3) - EE04</th>
+        <th>eInk Monocromática de 7.5"</th>
     </tr>
     <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:300, height:'auto'}}/></div>
@@ -35,17 +36,19 @@ Necesitas preparar una XIAO ePaper Display Board EE04 junto con pantallas del ta
                 <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
         </a>
     </div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/7.5-inch-elink_1.jpg" style={{width:300, height:'auto'}}/></div>
+    <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html" target="_blank">
+                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
+        </a>
+    </div></td>
     </tr>
  </table>
 </div>
 
-La XIAO ePaper Display Board EE04 soporta pantallas de diferentes tamaños y números de pines. La pantalla de tinta de 7.5 pulgadas de 800×480 con 24 pines utilizada en este tutorial es un ejemplo.<br/>
-
-**Enlace**:  [Enlace de pantallas soportadas](https://wiki.seeedstudio.com/es/epaper_ee04/#supported-eink)
-
 ### Descargar Vscode
 
-Descarga según el sistema que estés usando[Vscode](https://code.visualstudio.com/download)
+Descarga según el sistema que estés usando [Vscode](https://code.visualstudio.com/download)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -94,7 +97,7 @@ Usaremos la librería Seeed_GFX, que proporciona soporte integral para varios di
 [Herramienta de Configuración Seeed GFX](https://seeed-studio.github.io/Seeed_GFX/)
 
 - En la página de la herramienta, selecciona la especificación de pantalla que estás usando. Aquí, la opción seleccionada es una pantalla de papel electrónico monocromática de 7.5 pulgadas.
-- Selecciona la XIAO ePaper Display Board EE04 para la placa controladora, y luego se generará el código del controlador correspondiente.
+- Selecciona la Placa de Pantalla ePaper XIAO EE04 para la placa controladora, y luego se generará el código del controlador correspondiente.
 
 ```cpp
 #define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen （UC8179）
@@ -158,19 +161,19 @@ void loop()
 
 ### Botón de usuario
 
-La EE04 cuenta con tres botones programables por el usuario que pueden utilizarse para varios propósitos de control. Esta sección demuestra cómo leer los estados de los botones y responder a las pulsaciones de botones usando Arduino.
+El EE04 cuenta con tres botones programables por el usuario que pueden utilizarse para varios propósitos de control. Esta sección demuestra cómo leer los estados de los botones y responder a las pulsaciones de botones usando Arduino.
 
-En la EE04, los tres botones están conectados al ESP32-S3:
+En el EE04, los tres botones están conectados al ESP32-S3:
 
 - KEY1 (GPIO2_D1/A1)
 - KEY2 (GPIO3_D2/A2)
 - KEY3 (GPIO5_D4/A4)
 
-Todos los botones son activos en bajo, lo que significa que leen LOW cuando se presionan y HIGH cuando se liberan.
+Todos los botones son activos-bajo, lo que significa que leen LOW cuando se presionan y HIGH cuando se liberan.
 
 Ejemplo Básico de Lectura de Botones
 
-Este ejemplo demuestra cómo detectar pulsaciones de botones e imprimir mensajes en el monitor serie.
+Este ejemplo demuestra cómo detectar pulsaciones de botones e imprimir mensajes al monitor serie.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/39.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -259,13 +262,13 @@ void loop() {
 }
 ```
 
-Explicación del código:
+Explicación del Código:
 
-- **Análisis de funciones principales**
+- **Análisis de Funciones Principales**
 
 1. **`pinMode(pin, mode)`**  
    - Función: Configura el modo del pin.  
-   - El modo `INPUT_PULLUP` se utiliza aquí para habilitar la resistencia pull-up interna. Esto hace que el pin produzca un nivel alto (HIGH) por defecto cuando el botón no está presionado, y produzca un nivel bajo (LOW) cuando el botón está presionado (ya que se conecta a tierra).
+   - El modo `INPUT_PULLUP` se utiliza aquí para habilitar la resistencia pull-up interna. Esto hace que el pin genere un nivel alto (HIGH) por defecto cuando el botón no está presionado, y genere un nivel bajo (LOW) cuando el botón está presionado (ya que se conecta a tierra).
 
 2. **`digitalRead(pin)`**  
    - Función: Lee el estado del nivel (HIGH o LOW) del pin especificado.  
@@ -278,29 +281,29 @@ Explicación del código:
    - Función: Pausa el programa durante un número específico de milisegundos.  
    - Se utiliza en dos escenarios aquí: primero, para esperar la conexión del puerto serie en `setup()`; segundo, para retrasar 50ms después de que cambie el estado del botón. Esto logra el anti-rebote por hardware "esperando a que desaparezca la vibración", evitando activaciones falsas.
 
-- **Análisis de lógica principal**
+- **Análisis de Lógica Principal**
 
-1. **Detección por comparación de estados**  
+1. **Detección por Comparación de Estados**  
    - Registra el "estado anterior" de cada botón (como `lastKey0State`), y lee el "estado actual" en el bucle.  
    - Si el "estado actual ≠ estado anterior", indica que el botón ha sido activado (presionado o liberado).
 
-2. **Juicio de acción del botón**  
+2. **Juicio de Acción del Botón**  
    - Cuando el estado cambia de HIGH a LOW: se determina como "presionado" (muestra "pressed").  
    - Cuando el estado cambia de LOW a HIGH: se determina como "liberado" (muestra "released").  
    - Después de cada cambio de estado, actualiza el "estado anterior" al estado actual, que sirve como referencia para la siguiente comparación.
 
-3. **Ejecución del bucle**  
+3. **Ejecución del Bucle**  
    - La función `loop()` se ejecuta en un bucle infinito, ejecutando repetidamente el proceso de "leer el estado → comparar el estado → mostrar el resultado" para lograr detección en tiempo real.
 
-- Demostración del efecto:
+- Demostración del Efecto:
 
 El Monitor Serie puede mostrar el estado del puerto serie.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_button_1.png" style={{width:800, height:'auto'}}/></div>
 
-### Voltaje de la batería
+### Voltaje de la Batería
 
-- La placa de pantalla ePaper XIAO EE04 está alimentada por una batería de litio de 3.7V - 4.2V. Además, hay una interfaz ADC para que puedas medir el voltaje y monitorear el voltaje de la batería en tiempo real.
+- La Placa de Pantalla ePaper XIAO EE04 está alimentada por una batería de litio de 3.7V - 4.2V. Además, hay una interfaz ADC para que puedas medir el voltaje y monitorear el voltaje de la batería en tiempo real.
 - El pin de medición ADC es `A0 (GPIO1)`, y el pin de habilitación ADC es `D5 (GPIO_6)`.
 
 Conectar：
@@ -355,79 +358,57 @@ void loop() {
 }
 ```
 
-Explicación del código:
+Explicación del Código:
 
-- Funciones principales:
+- Funciones Principales:
 
-  - **Adquisición de voltaje de batería**: Leer el voltaje de batería dividido por resistencias a través del pin ADC (el voltaje de la batería puede exceder el voltaje de referencia ADC de Arduino, requiriendo división primero).
-  - **Optimización de precisión**: Reducir la interferencia de ruido del circuito promediando múltiples muestras.
-  - **Conversión de voltaje**: Convertir la señal digital del ADC al voltaje real de la batería (considerando la relación de división de voltaje y el voltaje de referencia).
-  - **Salida serie**: Imprimir periódicamente el voltaje medido a través del puerto serie para que dispositivos externos (ej., computadora) puedan verlo.
+  - **Adquisición de Voltaje de Batería**: Leer el voltaje de batería dividido por resistencias a través del pin ADC (el voltaje de la batería puede exceder el voltaje de referencia ADC de Arduino, requiriendo división primero).
+  - **Optimización de Precisión**: Reducir la interferencia de ruido del circuito promediando múltiples muestras.
+  - **Conversión de Voltaje**: Convertir la señal digital del ADC al voltaje real de la batería (considerando la relación de división de voltaje y el voltaje de referencia).
+  - **Salida Serie**: Imprimir periódicamente el voltaje medido a través del puerto serie para que dispositivos externos (ej., computadora) puedan verlo.
 
-- Funciones principales y roles
+- Funciones Principales y Roles
 
-  - `setup()` (Función de inicialización)
+  - `setup()` (Función de Inicialización)
 
     - **Rol**: Se ejecuta una vez al inicio del programa para configurar hardware y parámetros.
-    - **Operaciones clave**:
+    - **Operaciones Clave**:
       - `Serial.begin(115200)`: Inicializar comunicación serie (velocidad de baudios 115200) para salida de datos de voltaje.
       - `analogReadResolution(12)`: Establecer resolución ADC a 12-bit (rango de lectura: 0~4095) para mayor precisión.
       - `pinMode(BATTERY_ADC, INPUT)`: Establecer pin de detección de batería (A0) en modo entrada para señales analógicas.
       - `pinMode(ADC_EN, OUTPUT)` & `digitalWrite(ADC_EN, HIGH)`: Habilitar módulo ADC (para uso de bajo consumo: encender solo al medir).
 
-  - `loop()` (Función de bucle principal)
+  - `loop()` (Función de Bucle Principal)
 
-    - **Rol**: Se ejecuta repetidamente después de la inicialización para detección periódica de voltaje y salida.
-    - **Operaciones clave**:
+    - **Rol**: Se ejecuta repetidamente después de la inicialización para detección y salida periódica de voltaje.
+    - **Operaciones Clave**:
       - Llamar `readBatteryVoltage()` para obtener el voltaje actual de la batería.
       - Usar `Serial.print()`/`Serial.println()` para imprimir voltaje formateado (2 decimales, ej., "Battery Voltage: 3.82 V").
       - `delay(500)`: Establecer intervalo de 0.5 segundos entre mediciones.
 
-  - `readBatteryVoltage()` (Función de medición principal)
+  - `readBatteryVoltage()` (Función de Medición Principal)
 
     - **Rol**: Leer señales ADC, optimizar resultados y convertir a voltaje real.
-    - **Operaciones clave**:
-      - **Muestreo promedio**: Leer ADC 10 veces, sumar, luego promediar (reducir ruido).
+    - **Operaciones Clave**:
+      - **Muestreo Promedio**: Leer ADC 10 veces, sumar, luego promediar (reducir ruido).
       - `analogRead(BATTERY_ADC)`: Leer voltaje analógico del pin A0 (devuelve 0~4095).
       - `delay(2)`: Intervalo de 2ms entre muestras para estabilidad.
-      - **Cálculo de voltaje**: Usar fórmula `(adcValue / 4095.0) * 3.3 * VOLTAGE_DIVIDER_RATIO` para obtener voltaje real de batería.
+      - **Cálculo de Voltaje**: Usar fórmula `(adcValue / 4095.0) * 3.3 * VOLTAGE_DIVIDER_RATIO` para obtener voltaje real de batería.
       - Devolver el voltaje calculado (tipo float) para que `loop()` lo use.
 
-- Demostración del efecto:
+- Demostración del Efecto:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_battery_1.png" style={{width:800, height:'auto'}}/></div>
 
-## Demo de panel de control
+## Diseño de UI
 
-EE04 te permite realizar varios diseños creativos, como paneles de control y visualización de imágenes. Al combinarse con botones, permite cambiar entre múltiples páginas. Aquí hay un ejemplo de un panel de control.
+EE04 te permite realizar varios diseños creativos, como tableros de control y visualización de imágenes. Al combinarse con botones, permite cambiar entre múltiples páginas. Aquí hay un ejemplo de un tablero de control.
 
 :::tip
-En esta rutina, la operación de dibujar el panel de control se lleva a cabo basándose en la biblioteca LVGL.
+En esta rutina, la operación de dibujar el tablero de control se realiza basándose en la biblioteca LVGL.
 
-Documentación oficial de LVGL: [LVGL docs](https://docs.lvgl.io/master/examples.html#get-started)
+Documentación Oficial de LVGL: [LVGL docs](https://docs.lvgl.io/master/examples.html#get-started)
 :::
-
-### Hardware
-
-Necesitas preparar una placa de pantalla ePaper XIAO EE04 y una pantalla de 7.5 pulgadas con una resolución de 800*480.
-
-<div class="table-center">
-<table align="center">
-    <tr>
-        <th>Placa de pantalla ePaper XIAO EE04</th>
-    </tr>
-    <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:300, height:'auto'}}/></div>
-    <div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener ahora 🖱️</font></span></strong>
-        </a>
-    </div></td>
-    </tr>
- </table>
-</div>
-
-**Enlace**:  [Enlace de pantalla](https://wiki.seeedstudio.com/es/epaper_ee04/#supported-eink)
 
 ### Software
 
@@ -650,7 +631,7 @@ void loop()
 
 </details>
 
-### Demostración del Efecto:
+### Demostración del Efecto
 
 Presionar los botones en la placa EE04 puede cambiar a la interfaz de usuario correspondiente:
 
@@ -674,14 +655,14 @@ Presionar los botones en la placa EE04 puede cambiar a la interfaz de usuario co
  </table>
 </div>
 
-Haz clic en el enlace, busca el título **Resources** y selecciona el archivo de carcasa 3D que deseas imprimir.<br/>
-[Recursos de archivos de carcasa 3D](https://wiki.seeedstudio.com/cn/trmnl_7inch5_diy_kit_main_page/)
+### Recursos
 
-<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_3d_resource.png" style={{width:400, height:'auto'}}/></div> -->
+- **Carcasa para eInk Monocromático de 7.5" (Modelo 3D)**: [Descargar desde Printables](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)
+
 
 ## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

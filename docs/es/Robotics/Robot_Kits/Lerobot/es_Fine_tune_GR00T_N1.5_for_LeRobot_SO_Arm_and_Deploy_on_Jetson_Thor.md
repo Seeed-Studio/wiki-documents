@@ -1,5 +1,5 @@
 ---
-description: Este wiki presenta cómo comenzar con NVIDIA Jetson Thor y proporciona flujos de trabajo de ejemplo para implementar proyectos de IA y robótica en Thor. También se proporcionan instrucciones detalladas paso a paso y documentación de referencia.
+description: Este wiki introduce cómo comenzar con NVIDIA Jetson Thor y proporciona flujos de trabajo de ejemplo para implementar proyectos de IA y robótica en Thor. También se proporcionan instrucciones detalladas paso a paso y documentación de referencia.
 title: Ajustar Isaac GR00T N1.5 para el Brazo LeRobot SO-101 e Implementar en Jetson Thor 
 
 keywords:
@@ -13,7 +13,7 @@ last_update:
   author: AI&Robotics Group
 ---
 
-# Ajustar GR00T N1.5 para el Brazo LeRobot SO-101 e Implementar en Jetson AGX Thor
+# Ajustar GR00T N1.5 para el Brazo LeRobot SO-101 e Implementar en NVIDIA Jetson AGX Thor
 
 ## Introducción
 
@@ -52,9 +52,9 @@ Los elementos de hardware incluidos en la caja son una unidad Thor y un adaptado
 ### Flashear la Imagen del Sistema Thor
 
 A partir del **10 de septiembre de 2025**, la última versión disponible de imagen del sistema para Thor es **38.2**. Si necesitas volver a flashear el sistema para Thor, por favor sigue las instrucciones en esta sección.
-Elementos Requeridos para Flashear:
+Elementos Requeridos para el Flasheo:
 
-- Un dispositivo host con más de 25 GB de espacio disponible en disco (compatible con OS Ubuntu o Windows)
+- Un dispositivo host con más de 25 GB de espacio disponible en disco (compatible con Ubuntu o Windows OS)
 - Una unidad USB con capacidad de al menos 16 GB
 - Un monitor y cable de pantalla DP/HDMI
 - Un entorno de suministro de energía capaz de entregar más de 240 W
@@ -130,7 +130,7 @@ Esta sección proporciona ejemplos de cómo instalar dependencias de software co
 
 Ten en cuenta que las dependencias listadas son **solo para referencia**—por favor instala paquetes adicionales según los requisitos de sus proyectos individuales.
 
-### Instalación de Dependencias de Desarrollo Esenciales
+### Instalación de Dependencias Esenciales de Desarrollo
 
 **Instalación del SDK JetPack**
 <p></p>
@@ -175,7 +175,7 @@ conda --version
 
 **Instalación de la Versión GPU de PyTorch**
 
-Compilar la versión GPU de PyTorch desde el código fuente en Thor puede resultar en problemas de compatibilidad. Para conveniencia, proporcionamos un archivo `.whl` precompilado para ayudar a los desarrolladores a configurar rápidamente un entorno de desarrollo habilitado para PyTorch en Thor.
+Compilar la versión GPU de PyTorch desde el código fuente en Thor puede resultar en problemas de compatibilidad. Por conveniencia, proporcionamos un archivo `.whl` precompilado para ayudar a los desarrolladores a configurar rápidamente un entorno de desarrollo habilitado para PyTorch en Thor.
 
 Aquí se proporciona un archivo wheel precompilado para instalar PyTorch 2.9 en Thor. Este archivo fue compilado en un entorno `Python 3.10 + CUDA 13`.
 Haz clic [**aquí**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVe_c8F4DR9CluC049HCYoMBP3UXta1kqLEDTvkcYU6s-A?e=d9VEzN) para descargar el archivo `.whl`.
@@ -530,10 +530,10 @@ Para un tutorial detallado sobre la recolección de datos, consulte el siguiente
 [https://wiki.seeedstudio.com/es/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#record-the-dataset)  
 **Este enlace contiene un tutorial completo para el SO-ARM, que cubre configuración, ensamblaje, calibración, recolección de datos, entrenamiento e inferencia.**
 
-La recolección de datos para el brazo robótico lerobot se puede realizar ya sea en una PC o directamente en un dispositivo Jetson.
+La recolección de datos para el brazo robótico lerobot se puede realizar en una PC o directamente en un dispositivo Jetson.
 
-- Método 1: Recolectar datos usando Jetson
-- Método 2: Recolectar datos usando una PC Ubuntu
+- Método 1: Recopilar datos usando Jetson
+- Método 2: Recopilar datos usando una PC Ubuntu
 
 Los procedimientos de recolección de datos son esencialmente los mismos para ambos métodos.
 
@@ -552,61 +552,7 @@ Para transmitir dos cámaras USB simultáneamente en Thor, después de conectar 
 El proceso de configuración del entorno de desarrollo para Lerobot se puede encontrar en la subsección del siguiente enlace:  
 [https://wiki.seeedstudio.com/es/lerobot_so100m_new/#install-lerobot](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#install-lerobot)
 
-<!--
-**Instalación de Miniconda**
-```bash
-#Jetson 
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
-chmod +x Miniconda3-latest-Linux-aarch64.sh
-./Miniconda3-latest-Linux-aarch64.sh
-source ~/.bashrc
 
-#PC 
-mkdir -p ~/miniconda3
-cd miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm ~/miniconda3/miniconda.sh
-source ~/miniconda3/bin/activate
-conda init --all
-```
-
-**Instalación de Dependencias**
-
-```bash
-conda create -y -n lerobot python=3.10 && conda activate lerobot
-
-# Use the latest version maintained by Seeed
-git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
-conda install ffmpeg -c conda-forge
-```
-
-**Instalando lerobot**
-
-:::note
-**¡Antes de ejecutar el comando de instalación, asegúrese de que las versiones de PyTorch y TorchVision con soporte para GPU ya estén instaladas!**
-:::
-
-Para verificar que su PyTorch instalado esté usando soporte para GPU, ingrese lo siguiente en la terminal:
-
-```bash
-import torch
-print(torch.cuda.is_available())
-```
-
-Si planea recolectar datos en un dispositivo Jetson, puede consultar las secciones anteriores para instalar PyTorch, o revisar este [artículo](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)
-
-Una vez que se confirme que PyTorch está instalado correctamente, ejecute lo siguiente en la terminal:
-
-```bash
-cd ~/lerobot && pip install -e ".[feetech]"
-conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
-conda remove opencv   # Uninstall OpenCV 
-pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
-conda install -y -c conda-forge ffmpeg
-conda uninstall numpy
-pip3 install numpy==1.26.0  # This should match torchvision
-``` -->
 
 ### Configurar los motores
 
@@ -623,287 +569,87 @@ El proceso de instalación de los brazos maestro y seguidor del SO-ARM se puede 
 Después de que el SO-ARM haya sido completamente ensamblado, se requiere calibración. Consulte la subsección del siguiente enlace para el procedimiento de calibración:  
 [https://wiki.seeedstudio.com/es/lerobot_so100m_new/#calibrate](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#calibrate)
 
-<!-- First, ensure that the connection is working properly and the ports corresponding to the robotic arms are correctly recognized.
 
-```bash
-python -m lerobot.find_port
-
-OUTPUT：
-
-Finding all available ports for the MotorBus.
-['/dev/ttyACM0', '/dev/ttyACM1']
-Remove the usb cable from your MotorsBus and press Enter when done.
-
-[...Disconnect corresponding leader or follower arm and press Enter...]
-
-The port of this MotorsBus is /dev/ttyACM0
-Reconnect the USB cable.
-```
-
-The port for the leader arm is likely`/dev/ttyACM0`. The port for the follower arm is likely:：`/dev/ttyACM1` -->
 
 :::note
-**Al calibrar los brazos robóticos, por favor NO conecte ninguna cámara USB, ya que esto puede causar conflictos de puertos o asignaciones incorrectas de puertos.**
+**Al calibrar los brazos robóticos, por favor NO conecte ninguna cámara USB, ya que esto puede causar conflictos de puerto o asignaciones incorrectas de puerto.**
 :::
 
-**¡Después de ejecutar el script de calibración, mueva manualmente cada articulación del brazo robótico para asegurar que alcance su rango completo de movimiento! No hacerlo puede resultar en una discrepancia entre las poses de los brazos líder y seguidor durante la teleoperación.**
+**Después de ejecutar el script de calibración, mueva manualmente cada articulación del brazo robótico para asegurar que alcance su rango completo de movimiento! No hacerlo puede resultar en una discrepancia entre las poses de los brazos líder y seguidor durante la teleoperación.**
 
-<!-- ```bash
-# Grant permission to access the serial ports
-sudo chmod 666 /dev/ttyACM* # This needs to be done each time the USB device is replugged
 
-# Calibrate the follower arm
-python -m lerobot.calibrate \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm
 
-# Calibrate the follower arm
-python -m lerobot.calibrate \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm
-```
+### Agregar Cámara
 
-Once both the leader and follower arms are calibrated, run the teleoperation test script:
+Generalmente se recomienda instalar una cámara en la muñeca/pinza del brazo robótico, y otra cámara en la superficie del escritorio, para asegurar una cobertura adecuada de la postura del brazo.
+<mark>El enfoque de instalación específico depende de su escenario de aplicación; el ejemplo mostrado a continuación es solo para referencia.</mark>
 
-```bash
-python -m lerobot.teleoperate \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm
-```
+Para más detalles, consulte la subsección del siguiente enlace:  
+[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#add-cameras](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#add-cameras)
 
-Use the leader arm to teleoperate the follower arm. Ensure that the two arms mirror each other’s pose correctly. If not, recalibration is required. -->
 
-### Camera Add
 
-It is generally recommended to install one camera on the wrist/gripper  of the robotic arm, and another camera on the desktop surface, to ensure proper coverage of the arm’s posture.
-<mark>The specific installation approach depends on your application scenario; the example shown below is for reference only.</mark>
+### Recolección de Datos
 
-For details, please refer to the subsection of the following link:  
-[https://wiki.seeedstudio.com/lerobot_so100m_new/#add-cameras](https://wiki.seeedstudio.com/lerobot_so100m_new/#add-cameras)
+Después de completar tanto la instalación de la cámara como la calibración del brazo robótico, el procedimiento de recolección del conjunto de datos se puede encontrar en la subsección del siguiente enlace:  
+[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#record-the-dataset)
 
-<!-- <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/camdata1.png" height="450"/>
-  <img src="https://files.seeedstudio.com/wiki/other/camdata2.png" height="450"/>
-</div> -->
 
-<!-- Run the following script to ensure that the system correctly detects the connected USB cameras and that the cameras can be accessed properly:
 
-```bash
-# Use 'opencv' for standard RGB cameras. For Intel Realsense cameras, replace 'opencv' with 'realsense'.
-python -m lerobot.find_cameras opencv
-```
+### Visualización de Datos Recopilados
 
-If the cameras are correctly detected and accessible, the terminal will display:
+Para visualizar los datos recopilados en el SO-ARM, consulte la subsección del siguiente enlace:  
+[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#visualize-the-dataset)
 
-```bash
---- Detected Cameras ---
-Camera #0:
-  Name: OpenCV Camera @ 0
-  Type: OpenCV
-  Id: 0
-  Backend api: AVFOUNDATION
-  Default stream profile:
-    Format: 16.0
-    Width: 1920
-    Height: 1080
-    Fps: 15.0
---------------------
-(more cameras ...)
-```
 
-The terminal will output a list of available camera IDs. Be sure to take note of the IDs to ensure that your program can correctly access the cameras!
 
-To test camera usage during teleoperation:
+### Entrenamiento de Políticas
 
-```bash
-python -m lerobot.teleoperate \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm \
-    --display_data=true
-```
+Basado en los datos recopilados, el procedimiento para entrenar una Política se puede encontrar en la subsección del siguiente enlace:  
+[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#train-a-policy](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#train-a-policy)
 
-Here, `--robot.cameras`need the correct camera configuration and ID. -->
 
-### Data Collection
-
-After completing both the camera installation and the robotic arm calibration, the dataset collection procedure can be found in the subsection of the following link:  
-[https://wiki.seeedstudio.com/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#record-the-dataset)
-
-<!-- If the SO-ARM is intended to record data locally, refer to the following command-line parameters:
-
-```bash
-python -m lerobot.record \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ wrist: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, front: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm \
-    --display_data=true \
-    --dataset.repo_id=seeed_studio/test \
-    --dataset.num_episodes=20 \
-    --dataset.single_task="Grab the black cube" \
-    --dataset.push_to_hub=false \
-    --dataset.episode_time_s=30 \
-    --dataset.reset_time_s=30 
-```
-
-`--dataset.repo_id`: Specifies the name of the dataset folder
-
-`--dataset.single_task`: Description of the task
-
-`--dataset.num_episodes`: Number of samples to collect
-
-`--dataset.episode_time_s`: Duration (in seconds) of each recorded sample
-
-`--dataset.reset_time_s`: Time (in seconds) to reset the environment
-
-:::note
-**If the data collection process is interrupted unexpectedly, you can re-run the data collection script with the `--resume=true` flag to continue from where it left off.**
-:::
-
-If you wish to sync the collected data to Hugging Face, you must configure your HUGGINGFACE_TOKEN before recording:
-
-```bash
-hf auth login --token ${HUGGINGFACE_TOKEN} --add-to-git-credential
-
-# Reemplaza ${HUGGINGFACE_TOKEN} con tu token de acceso real de Hugging Face
-git config --global credential.helper store
-HF_USER=$(hf auth whoami | head -n 1)
-echo $HF_USER
-
-# Grabar y subir el conjunto de datos a Hugging Face
-python -m lerobot.record \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm \
-    --display_data=true \
-    --dataset.repo_id=${HF_USER}/record-test \
-    --dataset.num_episodes=20 \
-    --dataset.single_task="Grab the black cube" \
-    --dataset.push_to_hub=true \
-    --dataset.episode_time_s=30 \
-    --dataset.reset_time_s=30 
-``` 
 
 :::tip
-The collected data will be saved locally under `~/.cache/huggingface/lerobot` directory!
-:::-->
-
-### Visualizing Collected Data
-
-To visualize the data collected on the SO-ARM, please refer to the subsection of the following link:  
-[https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset)
-
-<!-- **Visualize Cloud-based Dataset**
-
-```bash
-python -m lerobot.scripts.visualize_dataset_html \
-  --repo-id ${HF_USER}/so101_test \
-```
-
-**Visualize Local Dataset**
-
-```bash
-python -m lerobot.scripts.visualize_dataset_html \
-  --repo-id seeed_studio/so101_test \
-```
-
-**Replay a Recorded Episode**
-
-```bash
-python -m lerobot.replay \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm \
-    --dataset.repo_id=${HF_USER}/so101_test \
-    --dataset.episode=0
-```
-
-The parameter `--dataset.episode=0` specifies which episode to replay on the follower arm.
-For example: running this script will cause the follower arm to execute the exact actions recorded during `episode_0`. -->
-
-### Policy Training
-
-Based on the collected data, the procedure for training a Policy can be found in the subsection of the following link:  
-[https://wiki.seeedstudio.com/lerobot_so100m_new/#train-a-policy](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-a-policy)
-
-<!-- If you plan to train the policy locally, you may refer to the following command:
-
-```bash
-python -m lerobot.scripts.train \
-  --dataset.repo_id=seeed_studio/test \
-  --policy.type=act \
-  --output_dir=outputs/train/act_so101_test \
-  --job_name=act_so101_test \
-  --policy.device=cuda \
-  --wandb.enable=false \
-  --policy.push_to_hub=false\
-  --steps=300000 
-```
-
-`--policy.type`: Specify the policy type to be trained
-
-`--policy.push_to_hub=false\`: Whether to upload the trained weights to the cloud (Hugging Face Hub)
-
-`--steps`: Number of training steps -->
-
-:::tip
-In the following sections, we will introduce a cloud-based training platform and demonstrate basic usage. You may choose to complete training more efficiently on the remote server.
+En las siguientes secciones, introduciremos una plataforma de entrenamiento basada en la nube y demostraremos el uso básico. Puede elegir completar el entrenamiento de manera más eficiente en el servidor remoto.
 :::
 
 :::note
-If you choose to train the policy in the cloud, make sure that your dataset is uploaded to the cloud server in advance, or downloaded from the Hugging Face Hub. However, due to potential network issues when downloading directly from the Hugging Face Hub, it is strongly recommended to manually upload the dataset to your cloud server.
+Si elige entrenar la política en la nube, asegúrese de que su conjunto de datos esté subido al servidor en la nube con anticipación, o descargado desde Hugging Face Hub. Sin embargo, debido a posibles problemas de red al descargar directamente desde Hugging Face Hub, se recomienda encarecidamente subir manualmente el conjunto de datos a su servidor en la nube.
 :::
 
-## Use NVIDIA Brev for training policies
+## Usar NVIDIA Brev para entrenar políticas
 
-NVIDIA Brev provides streamlined access to NVIDIA GPU instances on popular cloud platforms, automatic environment setup, and flexible deployment options, enabling developers to start experimenting instantly.
+NVIDIA Brev proporciona acceso simplificado a instancias GPU de NVIDIA en plataformas de nube populares, configuración automática del entorno y opciones de implementación flexibles, permitiendo a los desarrolladores comenzar a experimentar instantáneamente.
 
-Platform access URL:
+URL de acceso a la plataforma:
 [https://login.brev.nvidia.com/signin](https://login.brev.nvidia.com/signin)
 
-You will need to register an account to use the platform. This section introduces the basic usage of the training platform.
+Necesitará registrar una cuenta para usar la plataforma. Esta sección introduce el uso básico de la plataforma de entrenamiento.
 
-### Enabling the Cloud-Based Training Platform
+### Habilitación de la Plataforma de Entrenamiento Basada en la Nube
 
-**Step-by-Step Instructions**
+**Instrucciones Paso a Paso**
 
-- Create a Cloud Server Instance -step 1
+- Crear una Instancia de Servidor en la Nube - paso 1
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train0.png" width="600"/>
 </div>
 
-- Create a Cloud Server Instance -step 2
+- Crear una Instancia de Servidor en la Nube - paso 2
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train1.png" width="600"/>
 </div>
 
-- Create a Cloud Server Instance -step 3
+- Crear una Instancia de Servidor en la Nube - paso 3
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train2.png" width="600"/>
 </div>
 
-**Launch the Web-Based Jupyter Notebook**：
+**Lanzar el Jupyter Notebook Basado en Web**：
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/jnote0.png" width="600"/>
 </div>
@@ -911,11 +657,11 @@ You will need to register an account to use the platform. This section introduce
   <img src="https://files.seeedstudio.com/wiki/other/jnote1.png" width="600"/>
 </div>
 
-### Training the Model and Exporting from the Server
+### Entrenar el Modelo y Exportar desde el Servidor
 
-**Developers can train models directly within the notebook terminal. Below is an example for training an act model and exporting it from the server afterward.**
+**Los desarrolladores pueden entrenar modelos directamente dentro del terminal del notebook. A continuación se muestra un ejemplo para entrenar un modelo act y exportarlo del servidor posteriormente.**
 
-Install Conda on the server:
+Instalar Conda en el servidor:
 
 ```bash
 mkdir -p ~/miniconda3
@@ -926,7 +672,7 @@ source ~/miniconda3/bin/activate
 conda init --all
 ```
 
-Install lerobot projectt:
+Instalar el proyecto lerobot:
 
 ```bash
 conda create -y -n lerobot python=3.10 && conda activate lerobot
@@ -934,7 +680,7 @@ git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
 cd ~/lerobot && pip install -e ".[feetech]"
 ```
 
-Train the ACT model:
+Entrenar el modelo ACT:
 
 ```bash
 python -m lerobot.scripts.train \
@@ -953,25 +699,25 @@ python -m lerobot.scripts.train \
 </div>
 
 :::note
-If you want to train or fine-tune Gr00t on a server, you can refer to this [link](https://github.com/NVIDIA/Isaac-GR00T).
+Si desea entrenar o ajustar Gr00t en un servidor, puede consultar este [enlace](https://github.com/NVIDIA/Isaac-GR00T).
 :::
 
-**After training is completed, you may want to download the model to your local machine. But he Jupyter Notebook sidebar does not support direct navigation into model training folders.**
+**Después de que se complete el entrenamiento, es posible que desee descargar el modelo a su máquina local. Pero la barra lateral de Jupyter Notebook no admite navegación directa a las carpetas de entrenamiento de modelos.**
 
-Solution is that: First compress the target folder into a `.zip` or `.tar.gz` archive, then download the archive file through the notebook interface. Refer to the figure below for an example.
+La solución es: Primero comprimir la carpeta objetivo en un archivo `.zip` o `.tar.gz`, luego descargar el archivo comprimido a través de la interfaz del notebook. Consulte la figura a continuación para ver un ejemplo.
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train5.png" width="600"/>
 </div>
 
-## Isaac GR00T N1.5 Inference on Thor
+## Inferencia de Isaac GR00T N1.5 en Thor
 
-Jetson AGX Thor, as a powerful edge computing and deployment platform, provides sufficient resources to support large-scale model inference. In this section, building upon the previously introduced content, we demonstrate how to run inference for GR00T N1.5 on Thor.
+Jetson AGX Thor, como una poderosa plataforma de computación y despliegue en el borde, proporciona recursos suficientes para soportar inferencia de modelos a gran escala. En esta sección, basándonos en el contenido previamente introducido, demostramos cómo ejecutar inferencia para GR00T N1.5 en Thor.
 
-GR00T N1.5 is an open-source baseline system released by NVIDIA Research in the field of robot learning. It aims to provide a unified framework for embodied AI training and inference, particularly focusing on imitation learning and policy learning driven by large-scale models.
+GR00T N1.5 es un sistema de línea base de código abierto lanzado por NVIDIA Research en el campo del aprendizaje robótico. Su objetivo es proporcionar un marco unificado para el entrenamiento e inferencia de IA encarnada, enfocándose particularmente en el aprendizaje por imitación y el aprendizaje de políticas impulsado por modelos a gran escala.
 
-### Preparation
+### Preparación
 
-The pre-trained models of GR00T N1.5 are available via **Hugging Faces**. You can download them from the following link:
+Los modelos preentrenados de GR00T N1.5 están disponibles a través de **Hugging Faces**. Puede descargarlos desde el siguiente enlace:
 
 [https://huggingface.co/nvidia/GR00T-N1.5-3B/tree/main](https://huggingface.co/nvidia/GR00T-N1.5-3B/tree/main)
 
@@ -979,9 +725,9 @@ The pre-trained models of GR00T N1.5 are available via **Hugging Faces**. You ca
   <img src="https://files.seeedstudio.com/wiki/other/gr00tD.png" width="600"/>
 </div>
 
-All dependencies required for GR00T inference have been pre-configured in a dedicated Docker image.
+Todas las dependencias requeridas para la inferencia de GR00T han sido preconfiguradas en una imagen Docker dedicada.
 
-Use the following command to start the container:
+Use el siguiente comando para iniciar el contenedor:
 
 ```bash
 sudo docker run --rm -it \
@@ -996,7 +742,7 @@ sudo docker run --rm -it \
   lerobot:r38.2.aarch64-cu130-24.04
 ```
 
-Git clone the source code of Gr00t,and install it:
+Clonar con Git el código fuente de Gr00t, e instalarlo:
 
 ```bash
 git clone https://github.com/NVIDIA/Isaac-GR00T.git
@@ -1005,13 +751,13 @@ pip install --upgrade setuptools
 pip install -e .[thor]
 ```
 
-Gr00t is fully compatible with the datasets collected using the lerobot framework. Refer to the previous "**Data Collection**" section to prepare your dataset for fine-tuning the Gr00t model.
+Gr00t es completamente compatible con los conjuntos de datos recopilados utilizando el framework lerobot. Consulte la sección anterior "**Recopilación de Datos**" para preparar su conjunto de datos para el ajuste fino del modelo Gr00t.
 
-### Model Fine-Tuning
+### Ajuste Fino del Modelo
 
-**The fine-tuning process can be executed either on the provided cloud training platform or directly inside the Docker container on Thor**.
+**El proceso de ajuste fino se puede ejecutar ya sea en la plataforma de entrenamiento en la nube proporcionada o directamente dentro del contenedor Docker en Thor**.
 
-If you have not downloaded any pretrained GR00T model and do not plan to use a custom version, you may use the following command to fine-tune based on the Hugging Face weights:
+Si no ha descargado ningún modelo GR00T preentrenado y no planea usar una versión personalizada, puede usar el siguiente comando para realizar el ajuste fino basado en los pesos de Hugging Face:
 
 ```bash
 python scripts/gr00t_finetune.py \
@@ -1023,9 +769,9 @@ python scripts/gr00t_finetune.py \
    --video-backend torchvision_av
 ```
 
-This script will automatically download the pretrained GR00T model from Hugging Face and begin the fine-tuning process.
+Este script descargará automáticamente el modelo GR00T preentrenado desde Hugging Face y comenzará el proceso de ajuste fino.
 
-If you wish to use a locally stored pretrained GR00T model, modify the command as follows:
+Si desea usar un modelo GR00T preentrenado almacenado localmente, modifique el comando de la siguiente manera:
 
 ```bash
 python scripts/gr00t_finetune.py \
@@ -1038,20 +784,20 @@ python scripts/gr00t_finetune.py \
    --base-model-path ./pretrained/GR00T-N1.5-3
 ```
 
-`--dataset-path` is the file path of collection data from SO-ARM.
+`--dataset-path` es la ruta del archivo de datos de recopilación de SO-ARM.
 
 :::note
-The default fine-tuning settings require ~25G of VRAM. If you don't have that much VRAM, try adding the `--no-tune_diffusion_model` flag to the gr00t_finetune.py script.
+La configuración predeterminada de ajuste fino requiere ~25G de VRAM. Si no tiene tanta VRAM, intente agregar la bandera `--no-tune_diffusion_model` al script gr00t_finetune.py.
 :::
 
-### Running Inference with GR00T N1.5
+### Ejecutando Inferencia con GR00T N1.5
 
-To achieve optimal performance, it is recommended to replicate the real-world setup used during data collection as closely as possible when deploying fine-tuned GR00T models. This is because the model's generalization capabilities are limited.
+Para lograr un rendimiento óptimo, se recomienda replicar lo más fielmente posible la configuración del mundo real utilizada durante la recopilación de datos al implementar modelos GR00T ajustados. Esto se debe a que las capacidades de generalización del modelo son limitadas.
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/deploy.jpg" width="400"/>
 </div>
 
-Inside the Docker container, open a terminal and launch the GR00T inference service:
+Dentro del contenedor Docker, abra una terminal y lance el servicio de inferencia GR00T:
 
 ```bash
 python scripts/inference_service.py --server \
@@ -1061,18 +807,18 @@ python scripts/inference_service.py --server \
     --denoising-steps 4
 ```
 
-Upon successful launch, the terminal should display logs similar to:
+Al lanzarse exitosamente, la terminal debería mostrar registros similares a:
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/deploy1.png" width="600"/>
 </div>
 
-Open another terminal, and use the following command to enter the same container from a different shell:
+Abra otra terminal y use el siguiente comando para ingresar al mismo contenedor desde un shell diferente:
 
 ```bash
 sudo docker exec -it <container id> /bin/bahs
 ```
 
-Then, in this second shell, start the inference client:
+Luego, en este segundo shell, inicie el cliente de inferencia:
 
 ```bash
   python examples/eval_lerobot.py \
@@ -1084,41 +830,41 @@ Then, in this second shell, start the inference client:
     --lang_instruction="Grab pens and place into pen holder."
 ```
 
-When the client process starts successfully, the following output should appear:
+Cuando el proceso del cliente se inicie exitosamente, debería aparecer la siguiente salida:
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/deploy2.png" width="600"/>
 </div>
 
 :::tip
-During the first run of the client process, you must calibrate the arm's servos. The calibration process is the same as described earlier.
+Durante la primera ejecución del proceso del cliente, debe calibrar los servos del brazo. El proceso de calibración es el mismo que se describió anteriormente.
 
-Make sure each joint moves to its full range of motion to ensure proper teleoperation and inference behavior.
+Asegúrese de que cada articulación se mueva a su rango completo de movimiento para garantizar un comportamiento adecuado de teleoperación e inferencia.
 :::
 
-Once everything is set up, GR00T N1.5 can be successfully deployed on Jetson AGX Thor. The system and hardware environment are now verified to support full inference:
+Una vez que todo esté configurado, GR00T N1.5 puede implementarse exitosamente en Jetson AGX Thor. El sistema y el entorno de hardware ahora están verificados para soportar inferencia completa:
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/123.gif" width="600"/>
 </div>
 
 ## FAQ
 
-Q1: The Brev CLI tool doesn't work on the cloud training platform?
+P1: ¿La herramienta Brev CLI no funciona en la plataforma de entrenamiento en la nube?
 
-This is often due to network issues.
-You may install and log in to Brev CLI on your local Ubuntu host, then attempt to connect to your cloud instance using SSH from your local terminal.
+Esto a menudo se debe a problemas de red.
+Puede instalar e iniciar sesión en Brev CLI en su host Ubuntu local, luego intentar conectarse a su instancia en la nube usando SSH desde su terminal local.
 
-Q2: How do I upload data to the training platform?
+P2: ¿Cómo subo datos a la plataforma de entrenamiento?
 
-Use the following command: `scp <local-file-path> <brev-instance-name>:<remote-file-path>`,例如`scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
+Use el siguiente comando: `scp <ruta-archivo-local> <nombre-instancia-brev>:<ruta-archivo-remoto>`, por ejemplo `scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
 
-## References
+## Referencias
 
 - https://developer.nvidia.com/embedded/jetpack
 - https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning
 
-## Tech Support & Product Discussion
+## Soporte Técnico y Discusión del Producto
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

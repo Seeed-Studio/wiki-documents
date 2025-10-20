@@ -1,18 +1,18 @@
 ---
 description: PlatfromIO 与 EE04
-title: XIAO ePaper Display Board EE04 与 PlatfromIO
+title: EE04 与 PlatfromIO
 keywords:
   - epaper
-image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/10.webp
+image: https://files.seeedstudio.com/wiki/Epaper/EE04/pio_show_1.webp
 sidebar_position: 1
-slug: /cn/e04_with_platformio
+slug: /cn/ee04_with_platformio
 last_update:
   date: 10/10/2025
   author: Zeller
 ---
+# XIAO ePaper Display Board(ESP32-S3) EE04 与 PlatfromIO
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/
-platformIO_nrf54l15.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_ui_1.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## PlatformIO 介绍
 
@@ -22,11 +22,12 @@ PlatformIO 是一个强大且高度可扩展的嵌入式系统开发生态系统
 
 ### 硬件准备
 
-您需要准备一个 XIAO ePaper Display Board EE04 以及支持尺寸的屏幕。
+您需要准备一个 XIAO ePaper Display Board EE04 以及支持尺寸的屏幕。本教程以 24 针 800×480 7.5 英寸墨水屏为例。
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>XIAO ePaper Display Board EE04</th>
+        <th>XIAO ePaper Display Board(ESP32-S3) - EE04</th>
+        <th>7.5" 单色电子墨水屏</th>
     </tr>
     <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:300, height:'auto'}}/></div>
@@ -35,13 +36,15 @@ PlatformIO 是一个强大且高度可扩展的嵌入式系统开发生态系统
                 <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
     </div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/7.5-inch-elink_1.jpg" style={{width:300, height:'auto'}}/></div>
+    <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html" target="_blank">
+                <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+        </a>
+    </div></td>
     </tr>
  </table>
 </div>
-
-XIAO ePaper Display Board EE04 支持不同尺寸和引脚数的屏幕。本教程以 24 引脚 800×480 7.5 英寸墨水屏为例。<br/>
-
-**链接**：[支持的屏幕链接](https://wiki.seeedstudio.com/cn/epaper_ee04/#supported-eink)
 
 ### 下载 Vscode
 
@@ -265,24 +268,24 @@ void loop() {
 
 1. **`pinMode(pin, mode)`**  
    - 功能：配置引脚模式。  
-   - 这里使用 `INPUT_PULLUP` 模式来启用内部上拉电阻。这使得引脚在按钮未按下时默认输出高电平（HIGH），当按钮按下时（因为连接到地）输出低电平（LOW）。
+   - 这里使用 `INPUT_PULLUP` 模式来启用内部上拉电阻。这使得引脚在按钮未按下时默认输出高电平（HIGH），当按钮按下时（连接到地）输出低电平（LOW）。
 
 2. **`digitalRead(pin)`**  
    - 功能：读取指定引脚的电平状态（HIGH 或 LOW）。  
-   - 在循环中用于实时获取按钮的当前状态，这有助于判断按钮是否被激活。
+   - 在循环中用于实时获取按钮的当前状态，帮助判断按钮是否被激活。
 
 3. **`Serial.begin(baud)`** 和 **`Serial.println()`**  
-   - 前者初始化串口通信（波特率为 115200），后者向串口输出文本信息。这用于在监视器中显示按钮状态。
+   - 前者初始化串口通信（波特率为 115200），后者向串口输出文本信息。用于在监视器中显示按钮状态。
 
 4. **`delay(ms)`**  
    - 功能：暂停程序指定的毫秒数。  
-   - 这里用于两种场景：首先，在 `setup()` 中等待串口连接；其次，在按钮状态改变后延迟 50ms。这通过"等待抖动消失"来实现硬件防抖，防止误触发。
+   - 这里用于两个场景：首先，在 `setup()` 中等待串口连接；其次，在按钮状态改变后延迟 50ms。这通过"等待抖动消失"实现硬件防抖，防止误触发。
 
 - **核心逻辑分析**
 
 1. **状态比较检测**  
    - 记录每个按钮的"上一次状态"（如 `lastKey0State`），并在循环中读取"当前状态"。  
-   - 如果"当前状态 ≠ 上一次状态"，则表示按钮已被激活（按下或释放）。
+   - 如果"当前状态 ≠ 上一次状态"，则表示按钮被激活（按下或释放）。
 
 2. **按钮动作判断**  
    - 当状态从 HIGH 变为 LOW 时：判断为"按下"（输出 "pressed"）。  
@@ -290,11 +293,11 @@ void loop() {
    - 每次状态改变后，将"上一次状态"更新为当前状态，作为下次比较的参考。
 
 3. **循环执行**  
-   - `loop()` 函数在无限循环中运行，重复执行"读取状态 → 比较状态 → 输出结果"的过程，以实现实时检测。
+   - `loop()` 函数无限循环运行，重复执行"读取状态 → 比较状态 → 输出结果"的过程，实现实时检测。
 
 - 效果演示：
 
-Serial Monitor 可以显示串口的状态。
+串口监视器可以显示串口的状态。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_button_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -397,7 +400,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_battery_1.png" style={{width:800, height:'auto'}}/></div>
 
-## 仪表板演示
+## UI 设计
 
 EE04 使您能够进行各种创意设计，如仪表板和图像显示。通过与按钮结合，可以实现多页面之间的切换。这里是一个仪表板的示例。
 
@@ -406,28 +409,6 @@ EE04 使您能够进行各种创意设计，如仪表板和图像显示。通过
 
 LVGL 官方文档：[LVGL docs](https://docs.lvgl.io/master/examples.html#get-started)
 :::
-
-### 硬件
-
-您需要准备一个 XIAO ePaper Display Board EE04 和一个分辨率为 800*480 的 7.5 英寸屏幕。
-
-<div class="table-center">
-<table align="center">
-    <tr>
-        <th>XIAO ePaper Display Board EE04</th>
-    </tr>
-    <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:300, height:'auto'}}/></div>
-    <div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
-        </a>
-    </div></td>
-    </tr>
- </table>
-</div>
-
-**链接**：[屏幕链接](https://wiki.seeedstudio.com/cn/epaper_ee04/#supported-eink)
 
 ### 软件
 
@@ -650,7 +631,7 @@ void loop()
 
 </details>
 
-### 效果演示：
+### 效果演示
 
 按下 EE04 板上的按钮可以切换到相应的 UI 界面：
 
@@ -674,10 +655,10 @@ void loop()
  </table>
 </div>
 
-点击链接，找到 **Resources** 标题，选择您想要打印的 3D 外壳文件。<br/>
-[3D 外壳文件资源](https://wiki.seeedstudio.com/cn/trmnl_7inch5_diy_kit_main_page/)
+### 资源
 
-<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_3d_resource.png" style={{width:400, height:'auto'}}/></div> -->
+- **7.5" 单色电子墨水屏外壳（3D 模型）**：[从 Printables 下载](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)
+
 
 ## 技术支持与产品讨论
 

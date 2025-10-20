@@ -1,5 +1,5 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-10-13 11:27:53 (北京时间)
+// 生成时间: 2025-10-20 10:43:00 (北京时间)
 // 多语言页面: 2022 个
 
 (function() {
@@ -341,37 +341,7 @@
     "es",
     "ja"
   ],
-  "/sensecraft_hmi_ai_generation": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/sensecraft_hmi_canvas": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/sensecraft_hmi_gallery": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/sensecraft_hmi_overview": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/sensecraft_hmi_rss": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/sensecraft_hmi_web": [
     "cn",
     "en",
     "es",
@@ -564,6 +534,12 @@
     "ja"
   ],
   "/deploy_frigate_on_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/deploy_visual_perception_engine_recomputer": [
     "cn",
     "en",
     "es",
@@ -941,6 +917,12 @@
     "es",
     "ja"
   ],
+  "/recomputer_j501_mini_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/j401_mini_carrierboard_hardware_interfaces_usage": [
     "cn",
     "en",
@@ -990,6 +972,12 @@
     "ja"
   ],
   "/how_to_build_the_source_code_project_for_seeed_jetson_bsp": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/how_to_encrypt_the_disk_for_jetson": [
     "cn",
     "en",
     "es",
@@ -5747,13 +5735,13 @@
     "es",
     "ja"
   ],
-  "/epaper_ee04": [
+  "/EE04_with_esphome_advanced": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/e04_with_platformio": [
+  "/epaper_ee04": [
     "cn",
     "en",
     "es",
@@ -9951,12 +9939,6 @@
     "es",
     "ja"
   ],
-  "/use_case": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/device_network_setup": [
     "cn",
     "en",
@@ -9969,13 +9951,19 @@
     "es",
     "ja"
   ],
-  "/hello_watcher_llms": [
+  "/visual_trigger_and_ai_flash": [
     "cn",
     "en",
     "es",
     "ja"
   ],
   "/watcher_web_control_panel": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/use_case": [
     "cn",
     "en",
     "es",
@@ -10947,6 +10935,12 @@
     "ja"
   ],
   "/ha_dify_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/solutions/hello_watcher_llms": [
     "cn",
     "en",
     "es",
@@ -12147,6 +12141,11 @@
     "ja"
   ],
   "_About/": [
+    "cn",
+    "es",
+    "ja"
+  ],
+  "/e04_with_platformio": [
     "cn",
     "es",
     "ja"
