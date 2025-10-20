@@ -92,10 +92,6 @@ docker run hello-world
 sudo apt install docker-compose
 ```
 
-Perfecto, reformatearé tu configuración de **Packet Forwarder** en el mismo estilo de wiki estructurado que estás usando:
-
----
-
 ## Ejecutar Packet Forwarder
 
 El **concentrador LoRa WM1302** requiere el **Semtech Packet Forwarder** para retransmitir datos entre el módulo LoRa y ChirpStack. El reComputer R11 proporciona una guía de configuración precompilada para módulos LoRa.
@@ -142,15 +138,11 @@ Ejecuta el Packet Forwarder usando la configuración actualizada:
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
-Aquí está tu sección **"Make Gateway"** en el mismo estilo de wiki:
-
----
-
 ## Iniciar Gateway
 
 Para descargar el archivo docker Compose necesitas visitar esta página en reComputer y descargarlo. [Enlace](https://www.chirpstack.io/docs/getting-started/docker.html)
 
-Luego modifica la banda de frecuencia según tu configuración en el archivo yaml 
+Luego modifica la banda de frecuencia según tu configuración en el archivo yaml
 
 ```yml
  chirpstack-gateway-bridge:
@@ -168,7 +160,6 @@ Luego modifica la banda de frecuencia según tu configuración en el archivo yam
       - mosquitto
 
 ```
-
 
 Después de instalar ChirpStack, puedes registrar tu **gateway LoRa R11** y comenzar a procesar datos.
 
@@ -508,7 +499,6 @@ Una vez que se crea el **Device Profile**, puedes registrar tu dispositivo LoRaW
 5. Ingresa la **Application Key** y haz clic en **Submit**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image9.png" alt="pir" width={800} height="auto" /></p>
-
 
 ## Verificar Estado del Dispositivo
 

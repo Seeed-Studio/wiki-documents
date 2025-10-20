@@ -92,10 +92,6 @@ docker run hello-world
 sudo apt install docker-compose
 ```
 
-Perfect I’ll reformat your **Packet Forwarder setup** into the same structured wiki style you’re using:
-
----
-
 ## Run Packet Forwarder
 
 The **WM1302 LoRa concentrator** requires the **Semtech Packet Forwarder** to relay data between the LoRa module and ChirpStack. The reComputer R11 provides a prebuilt setup guide for LoRa modules.
@@ -142,15 +138,11 @@ Run the Packet Forwarder using the updated configuration:
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
-Here’s your **“Make Gateway” section** in the same wiki style:
-
----
-
 ## Start Gateway
 
 For Download the docker Compose file you need to visit this page on reComputer and Download it. [Link](https://www.chirpstack.io/docs/getting-started/docker.html)
 
-Then modify the frequency band according to your settings in yaml file 
+Then modify the frequency band according to your settings in yaml file
 
 ```yml
  chirpstack-gateway-bridge:
@@ -168,7 +160,6 @@ Then modify the frequency band according to your settings in yaml file
       - mosquitto
 
 ```
-
 
 After installing ChirpStack, you can register your **R11 LoRa gateway** and start processing data.
 
@@ -508,7 +499,6 @@ Once the **Device Profile** is created, you can register your LoRaWAN device wit
 5. Enter the **Application Key** and click **Submit**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image9.png" alt="pir" width={800} height="auto" /></p>
-
 
 ## Check Device Status
 
