@@ -51,14 +51,14 @@ import TabItem from '@theme/TabItem';
 
 ### EEZ Studio とは？
 
-EEZ Studio は、主にテスト・測定機器、組み込みデバイス、その他のインタラクティブアプリケーション用のユーザーインターフェース構築のために開発された、現代的なビジュアルプログラミングおよび UI デザイン環境です。ドラッグアンドドロップ GUI デザイン、スクリプト機能、デバイス統合ツールを組み合わせ、開発者、エンジニア、メーカーがゼロから始めることなく、迅速にプロフェッショナルなインターフェースを作成できるようにします。
+EEZ Studio は、主にテスト・測定機器、組み込みデバイス、その他のインタラクティブアプリケーション用のユーザーインターフェース構築のために開発された、現代的なビジュアルプログラミングおよび UI デザイン環境です。ドラッグアンドドロップ GUI デザイン、スクリプト機能、デバイス統合ツールを組み合わせ、開発者、エンジニア、メーカーがゼロから始めることなく、プロフェッショナルなインターフェースを迅速に作成できるようにします。
 
 簡単に言えば、EEZ Studio はハードウェアとソフトウェアの橋渡しとして機能し、ユーザーエクスペリエンスをより効率的に設計、プロトタイプ、デプロイできるようにします。
 
 ### なぜ EEZ Studio を使用するのか？
 
 - ビジュアルインターフェースデザイン – WYSIWYG エディターで複雑な UI を作成し、手動コーディングの必要性を削減
-- 迅速なプロトタイピング – デザインアイデアを素早くテスト・検証し、開発時間とコストを節約
+- 迅速なプロトタイピング – デザインアイデアを素早くテストし検証、開発時間とコストを節約
 - クロスプラットフォームサポート – 複数のオペレーティングシステムと組み込みターゲットで動作するアプリケーションを構築
 - ハードウェアとの統合 – ラボ機器、IoT デバイス、カスタムボードを直接接続・制御
 - オープンソースエコシステム – 透明性と柔軟性を持つコミュニティ主導のツールセットの恩恵
@@ -135,7 +135,7 @@ E-paper reTerminal 用の LVGL UI プロジェクトを構築する際、生成�
 
 ステップ 1. プロジェクト設定を開く
 
-上部ツールバーの ⚙️（Settings）アイコンをクリックします（下図参照）。
+上部ツールバーの ⚙️（設定）アイコンをクリックします（下図参照）。
 これにより、ワークスペースの右側にプロジェクト設定パネルが開きます。
 
 ステップ 2. ビルド出力と LVGL インクルードの構成
@@ -182,7 +182,7 @@ EEZ Studio では、コンポーネントをドラッグアンドドロップす
 
 - Styles: インターフェース要素を統一し再利用するために使用される視覚属性で、一貫性と効率的なメンテナンスを保証します。
 - Bitmap: 背景、アイコン、ロゴなどに一般的に使用され、視覚的プレゼンテーションを向上させます。
-- Fonts: 明確なテキストの読みやすさを確保し、多言語コンテンツとブランドスタイリングをサポートします。
+- Fonts: 多言語コンテンツとブランドスタイリングをサポートしながら、明確なテキストの読みやすさを保証します。
 - Themes: 全体的なインターフェースの美学を定義し、ライト/ダークモードなどの迅速な切り替えを可能にします。
 - Groups: 複数のウィジェットを一緒に整理し、統一された管理とレイアウトを実現します。
 
@@ -296,7 +296,7 @@ Arduino を初めて使用する場合は、[Getting Started with Arduino](https
 
 **ステップ 2.** Arduino IDE に ESP32 ボードサポートを追加します。
 
-Arduino IDE で **File > Preferences** に移動し、"Additional Boards Manager URLs" フィールドに以下の URL を追加します：
+Arduino IDE で、**File > Preferences** に移動し、"Additional Boards Manager URLs" フィールドに以下の URL を追加します：
 
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -320,7 +320,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ### Seeed_GFX ライブラリの使用
 
-ePaper ディスプレイを制御するために、様々な Seeed Studio ディスプレイデバイスに包括的なサポートを提供する Seeed_GFX ライブラリを使用します。
+ePaper ディスプレイを制御するために、様々な Seeed Studio ディスプレイデバイスの包括的なサポートを提供する Seeed_GFX ライブラリを使用します。
 
 **ステップ 1.** GitHub から Seeed_GFX ライブラリをダウンロードします：
 
@@ -333,7 +333,7 @@ ePaper ディスプレイを制御するために、様々な Seeed Studio デ�
 **ステップ 2.** Arduino IDE で ZIP ファイルを追加してライブラリをインストールします。**Sketch > Include Library > Add .ZIP Library** に移動し、ダウンロードした ZIP ファイルを選択します。
 
 :::note
-以前に TFT_eSPI ライブラリをインストールしている場合、Seeed_GFX は Seeed Studio ディスプレイ用の追加機能を持つ TFT_eSPI のフォークであるため、競合を避けるために Arduino ライブラリフォルダから一時的に削除または名前を変更する必要がある場合があります。
+以前に TFT_eSPI ライブラリをインストールしている場合、競合を避けるために Arduino ライブラリフォルダから一時的に削除または名前を変更する必要があります。Seeed_GFX は TFT_eSPI のフォークで、Seeed Studio ディスプレイ用の追加機能を備えています。
 :::
 
 <Tabs>
@@ -386,23 +386,27 @@ ePaper ディスプレイを制御するために、様々な Seeed Studio デ�
 
 ## EEZ Studio プロジェクトの Arduino へのデプロイ
 
+まず、'Tools' メニューバーで OPI PSRAM を見つけて開きます。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/EEZSetting.png" style={{width:500, height:'auto'}}/></div>
+
 これら2つの基盤ドライバファイルをプロジェクトディレクトリに追加する必要があります。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/00.png" style={{width:800, height:'auto'}}/></div>
 
 - [e1002_display.cpp](https://files.seeedstudio.com/wiki/EEZStudio/e1002_display.cpp)
 - [e1002_display.h](https://files.seeedstudio.com/wiki/EEZStudio/e1002_display.h)
 
-以下のプロジェクトファイル（4つのファイルを含む）をArduinoライブラリに移植して、Arduinoプロジェクトで使用します。
-`EEZ_UI file`はEEZStudioのビルドプロセス中に生成されます。保存したパスを見つける必要があります。
+以下のプロジェクトファイル（4つのファイルを含む）をArduino Libraryに移植して、Arduinoプロジェクトで使用します。
+`EEZ_UI file` は EEZStudio のビルドプロセス中に生成されます。保存したパスを見つける必要があります。
 
-- 🔗 **[ZIP]** [コード](https://files.seeedstudio.com/wiki/EEZStudio/E1002_EEZStudio.zip)
+- 🔗 **[ZIP]** [コード](https://files.seeedstudio.com/wiki/EEZStudio/E1002_EEZStudioCode.zip)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/7.jpg" style={{width:800, height:'auto'}}/></div>
 
 <br></br>
 
-以下はUIを実行するメインのArduinoスケッチです：
-3つのボタンは3つの異なる画面に対応し、緑から順番に：HOME\Workstation\Plantの順で開始します。
+以下は UI を実行するメインの Arduino スケッチです：
+3つのボタンが3つの異なる画面に対応し、緑から順番に HOME\Workstation\Plant で開始します。
 
 ```cpp
 #include <TFT_eSPI.h>
@@ -471,7 +475,7 @@ void loop()
     }
 
     if (lastKey2State == HIGH && currentKey2State == LOW) {
-        page_index = SCREEN_ID_PHOTO;
+        page_index = SCREEN_ID_PLANT;
         loadScreen((ScreensEnum)page_index);
         Serial.println("Switched to Setting Screen");
         delay(50);
@@ -493,21 +497,21 @@ void loop()
 
 ```
 
-- `e1002_display_init():` 電子インクディスプレイハードウェアを初期化し、動作パラメータを設定します。
+- `e1002_display_init():` e-inkディスプレイハードウェアを初期化し、動作パラメータを設定します。
 
 - `pinMode(..., INPUT_PULLUP):` ボタンピンを入力モードとして設定し、内部プルアップ抵抗を有効にします。これにより、ボタンが押されていない時はピンが高レベル（HIGH）を維持し、押されると接地に接続されて低レベル（LOW）になります。
 
-- `ui_init()` と `loadScreen():` これらの関数はLVGLユーザーインターフェースライブラリを初期化し、指定された画面を読み込みます。
+- `ui_init()` と `loadScreen():` これらの関数は LVGL ユーザーインターフェースライブラリを初期化し、指定された画面を読み込みます
 
-- `lv_timer_handler():` これはLVGLライブラリの重要な関数で、アニメーションや画面更新などのLVGL内のタイマーイベントを処理します。
+- `lv_timer_handler():` これは LVGL ライブラリの重要な関数で、アニメーションや画面更新などの LVGL 内のタイマーイベントを処理します。
 
 - `if (lastKey0State == HIGH && currentKey0State == LOW):` この行はキーイベント検出の核心です。キーの状態が未押下から押下に変化したかどうかをチェックします。
 
-- 条件が満たされると、プログラムは`page_index`を更新し、`loadScreen()`関数を呼び出して新しいページを読み込みます。
+- 条件が満たされると、プログラムは `page_index` を更新し、`loadScreen()` 関数を呼び出して新しいページを読み込みます。
 
-- 状態更新：`lastKey0State = currentKey0State;` この行は重要です。現在のキー状態を保存して次の`loop()`反復で使用し、次の状態比較を可能にします。
+- 状態更新：`lastKey0State = currentKey0State;` この行は重要です。現在のキー状態を保存して次の `loop()` 反復で使用し、次の状態比較を可能にします。
 
-- 電子インクリフレッシュ：`e1002_display_should_refresh()`と`e1002_display_refresh()`は電子インク画面のリフレッシュを管理します。LCDスクリーンとは異なり、電子インクはリアルタイムでリフレッシュできません。通常、電力を節約し寿命を延ばすために、特定の間隔で選択的または全画面リフレッシュが必要です。このコードはそのオンデマンドリフレッシュメカニズムを実装しています。
+- E-ink リフレッシュ：`e1002_display_should_refresh()` と `e1002_display_refresh()` は E-ink 画面のリフレッシュを管理します。LCD 画面とは異なり、E-ink はリアルタイムでリフレッシュできません。通常、電力を節約し寿命を延ばすために、特定の間隔で選択的または全画面リフレッシュが必要です。このコードはそのオンデマンドリフレッシュメカニズムを実装しています。
 
 - `delay(10)`: これは物理的なキーの振動を複数回の押下として誤解釈することを防ぐための簡単なソフトウェアデバウンス対策です。
 
@@ -532,14 +536,12 @@ void loop()
 
 弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

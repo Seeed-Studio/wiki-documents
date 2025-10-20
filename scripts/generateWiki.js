@@ -8,31 +8,33 @@ const wikiFilePath = path.join(rootDir, '/src/utils/wiki.js');
 
 const docList = [];
 const excludedPaths = [
-  path.join(docsDirectory, 'Seeed_Elderly', 'weekly_wiki'),
-  // 英文扫描阶段排除各语言目录
-  path.join(docsDirectory, 'zh-CN'),
-  path.join(docsDirectory, 'ja'),
-  path.join(docsDirectory, 'es'),
-  path.join(docsDirectory, 'weekly_wiki.md'),
+  path.join(docsDirectory, 'Seeed_Elderly', 'weekly_wiki'), // weekly wiki 的历史目录
+  path.join(docsDirectory, 'zh-CN'), // 排除中文文档的目录
+  path.join(docsDirectory, 'ja'), // 排除日文文档的目录
+  path.join(docsDirectory, 'es'), // 排除西班牙语文档的目录
+  path.join(docsDirectory, 'weekly_wiki.md'), // 排除 weekly wiki 的文件
 
-  // 排除列表
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R20xx', 'reComputer_Industrial_R20xx_assembly_guide.md'),
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R20xx', 'reComputer_Industrial_R20xx_configure_system.md'),
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R20xx', 'reComputer_Industrial_R20xx_flash_os.md'),
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R21xx', 'reComputer_Industrial_R21xx_assembly_guide.md'),
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R21xx', 'reComputer_Industrial_R21xx_configure_system.md'),
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R21xx', 'reComputer_Industrial_R21xx_flash_os.md'),
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Application', 'Development_Tools', 'recomputer_use_sqlite.md'),
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_Build_the_ko_Module_for_Seeed_Jetson.md'),
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T1000_Tracker', 'SenseCAP_T1000_Tracker_Introduction.md'),
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Notifications', 'Http_Proxy_Application', 'smart_home', 'integrate_watcher_to_ha.md'),
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Other_Devices', 'Jetson_AGX_Orin_32GB_H01_Flash_Jetpack.md'),
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Carrier_Boards', 'J501_Mini', 'reServer_Industrial_J501_Getting_Started.md'),
-  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'Lerobot', 'Lerobot_Starai_Arm.md'),
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Indicator', 'Introduction.md'),
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'Watcher-Agent', 'Device_Network_Setup_Guide.md'),
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'Watcher-Agent', 'Web_Control_Panel.md'),
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_Encrypt_the_Disk_for_Jetson.md'),
+
+  // 排除指定文档
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R20xx', 'reComputer_Industrial_R20xx_assembly_guide.md'), //9.28
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R20xx', 'reComputer_Industrial_R20xx_configure_system.md'), //9.28
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R20xx', 'reComputer_Industrial_R20xx_flash_os.md'), //9.28
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R21xx', 'reComputer_Industrial_R21xx_assembly_guide.md'), //9.28
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R21xx', 'reComputer_Industrial_R21xx_configure_system.md'), //9.28
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R21xx', 'reComputer_Industrial_R21xx_flash_os.md'), //9.28
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Application', 'Development_Tools', 'recomputer_use_sqlite.md'), //9.25
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_Build_the_ko_Module_for_Seeed_Jetson.md'), //9.25
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T1000_Tracker', 'SenseCAP_T1000_Tracker_Introduction.md'), //10.11
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Notifications', 'Http_Proxy_Application', 'smart_home', 'integrate_watcher_to_ha.md'), //10.11
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Other_Devices', 'Jetson_AGX_Orin_32GB_H01_Flash_Jetpack.md'), //10.14
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Carrier_Boards', 'J501_Mini', 'reServer_Industrial_J501_Getting_Started.md'), //10.13
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'Lerobot', 'Lerobot_Starai_Arm.md'), //10.13
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Indicator', 'Introduction.md'), //10.13
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'Watcher-Agent', 'Device_Network_Setup_Guide.md'), //10.13
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'Watcher-Agent', 'Web_Control_Panel.md'), //10.13
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_Encrypt_the_Disk_for_Jetson.md'), //10.11
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'Device_Network_Setup_Guide.md'), //10.13
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'Web_Control_Panel.md'), //10.13
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）

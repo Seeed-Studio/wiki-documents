@@ -552,61 +552,7 @@ To stream two USB cameras simultaneously on Thor, after connecting one camera to
 The development environment setup process for Lerobot can be found in the subsection of the following link:  
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#install-lerobot](https://wiki.seeedstudio.com/lerobot_so100m_new/#install-lerobot)
 
-<!--
-**Miniconda Installation**
-```bash
-#Jetson 
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
-chmod +x Miniconda3-latest-Linux-aarch64.sh
-./Miniconda3-latest-Linux-aarch64.sh
-source ~/.bashrc
 
-#PC 
-mkdir -p ~/miniconda3
-cd miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm ~/miniconda3/miniconda.sh
-source ~/miniconda3/bin/activate
-conda init --all
-```
-
-**Dependency Installation**
-
-```bash
-conda create -y -n lerobot python=3.10 && conda activate lerobot
-
-# Use the latest version maintained by Seeed
-git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
-conda install ffmpeg -c conda-forge
-```
-
-**Installing lerobot**
-
-:::note
-**Before running the installation command, make sure that the GPU-supported versions of PyTorch and TorchVision are already installed!**
-:::
-
-To verify that your installed PyTorch is using GPU support, enter the following in the terminal:
-
-```bash
-import torch
-print(torch.cuda.is_available())
-```
-
-If you plan to collect data on a Jetson device, you can refer to the previous sections for installing PyTorch, or check this [article](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)
-
-Once PyTorch is confirmed to be properly installed, run the following in the terminal:
-
-```bash
-cd ~/lerobot && pip install -e ".[feetech]"
-conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
-conda remove opencv   # Uninstall OpenCV 
-pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
-conda install -y -c conda-forge ffmpeg
-conda uninstall numpy
-pip3 install numpy==1.26.0  # This should match torchvision
-``` -->
 
 ### Configure the motors
 
@@ -623,24 +569,7 @@ The installation process of the SO-ARM’s master and follower arms can be found
 After the SO-ARM has been fully assembled, calibration is required. Please refer to the subsection of the following link for the calibration procedure:  
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#calibrate](https://wiki.seeedstudio.com/lerobot_so100m_new/#calibrate)
 
-<!-- First, ensure that the connection is working properly and the ports corresponding to the robotic arms are correctly recognized.
 
-```bash
-python -m lerobot.find_port
-
-OUTPUT：
-
-Finding all available ports for the MotorBus.
-['/dev/ttyACM0', '/dev/ttyACM1']
-Remove the usb cable from your MotorsBus and press Enter when done.
-
-[...Disconnect corresponding leader or follower arm and press Enter...]
-
-The port of this MotorsBus is /dev/ttyACM0
-Reconnect the USB cable.
-```
-
-The port for the leader arm is likely`/dev/ttyACM0`. The port for the follower arm is likely:：`/dev/ttyACM1` -->
 
 :::note
 **When calibrating the robotic arms, please do NOT connect any USB cameras, as this may cause port conflicts or incorrect port assignments.**
@@ -648,36 +577,7 @@ The port for the leader arm is likely`/dev/ttyACM0`. The port for the follower a
 
 **After running the calibration script, manually move each joint of the robotic arm to ensure that it reaches its full range of motion! Failure to do so may result in a mismatch between the poses of the leader and follower arms during teleoperation.**
 
-<!-- ```bash
-# Grant permission to access the serial ports
-sudo chmod 666 /dev/ttyACM* # This needs to be done each time the USB device is replugged
 
-# Calibrate the follower arm
-python -m lerobot.calibrate \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm
-
-# Calibrate the follower arm
-python -m lerobot.calibrate \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm
-```
-
-Once both the leader and follower arms are calibrated, run the teleoperation test script:
-
-```bash
-python -m lerobot.teleoperate \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm
-```
-
-Use the leader arm to teleoperate the follower arm. Ensure that the two arms mirror each other’s pose correctly. If not, recalibration is required. -->
 
 ### Camera Add
 
@@ -687,182 +587,28 @@ It is generally recommended to install one camera on the wrist/gripper  of the r
 For details, please refer to the subsection of the following link:  
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#add-cameras](https://wiki.seeedstudio.com/lerobot_so100m_new/#add-cameras)
 
-<!-- <div align="center">
-  <img src="https://files.seeedstudio.com/wiki/other/camdata1.png" height="450"/>
-  <img src="https://files.seeedstudio.com/wiki/other/camdata2.png" height="450"/>
-</div> -->
 
-<!-- Run the following script to ensure that the system correctly detects the connected USB cameras and that the cameras can be accessed properly:
-
-```bash
-# Use 'opencv' for standard RGB cameras. For Intel Realsense cameras, replace 'opencv' with 'realsense'.
-python -m lerobot.find_cameras opencv
-```
-
-If the cameras are correctly detected and accessible, the terminal will display:
-
-```bash
---- Detected Cameras ---
-Camera #0:
-  Name: OpenCV Camera @ 0
-  Type: OpenCV
-  Id: 0
-  Backend api: AVFOUNDATION
-  Default stream profile:
-    Format: 16.0
-    Width: 1920
-    Height: 1080
-    Fps: 15.0
---------------------
-(more cameras ...)
-```
-
-The terminal will output a list of available camera IDs. Be sure to take note of the IDs to ensure that your program can correctly access the cameras!
-
-To test camera usage during teleoperation:
-
-```bash
-python -m lerobot.teleoperate \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm \
-    --display_data=true
-```
-
-Here, `--robot.cameras`need the correct camera configuration and ID. -->
 
 ### Data Collection
 
 After completing both the camera installation and the robotic arm calibration, the dataset collection procedure can be found in the subsection of the following link:  
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#record-the-dataset)
 
-<!-- If the SO-ARM is intended to record data locally, refer to the following command-line parameters:
 
-```bash
-python -m lerobot.record \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ wrist: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, front: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm \
-    --display_data=true \
-    --dataset.repo_id=seeed_studio/test \
-    --dataset.num_episodes=20 \
-    --dataset.single_task="Grab the black cube" \
-    --dataset.push_to_hub=false \
-    --dataset.episode_time_s=30 \
-    --dataset.reset_time_s=30 
-```
-
-`--dataset.repo_id`: Specifies the name of the dataset folder
-
-`--dataset.single_task`: Description of the task
-
-`--dataset.num_episodes`: Number of samples to collect
-
-`--dataset.episode_time_s`: Duration (in seconds) of each recorded sample
-
-`--dataset.reset_time_s`: Time (in seconds) to reset the environment
-
-:::note
-**If the data collection process is interrupted unexpectedly, you can re-run the data collection script with the `--resume=true` flag to continue from where it left off.**
-:::
-
-If you wish to sync the collected data to Hugging Face, you must configure your HUGGINGFACE_TOKEN before recording:
-
-```bash
-hf auth login --token ${HUGGINGFACE_TOKEN} --add-to-git-credential
-
-# Replace ${HUGGINGFACE_TOKEN} with your actual Hugging Face access token
-git config --global credential.helper store
-HF_USER=$(hf auth whoami | head -n 1)
-echo $HF_USER
-
-# Record and upload the dataset to Hugging Face
-python -m lerobot.record \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm \
-    --display_data=true \
-    --dataset.repo_id=${HF_USER}/record-test \
-    --dataset.num_episodes=20 \
-    --dataset.single_task="Grab the black cube" \
-    --dataset.push_to_hub=true \
-    --dataset.episode_time_s=30 \
-    --dataset.reset_time_s=30 
-``` 
-
-:::tip
-The collected data will be saved locally under `~/.cache/huggingface/lerobot` directory!
-:::-->
 
 ### Visualizing Collected Data
 
 To visualize the data collected on the SO-ARM, please refer to the subsection of the following link:  
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset)
 
-<!-- **Visualize Cloud-based Dataset**
 
-```bash
-python -m lerobot.scripts.visualize_dataset_html \
-  --repo-id ${HF_USER}/so101_test \
-```
-
-**Visualize Local Dataset**
-
-```bash
-python -m lerobot.scripts.visualize_dataset_html \
-  --repo-id seeed_studio/so101_test \
-```
-
-**Replay a Recorded Episode**
-
-```bash
-python -m lerobot.replay \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
-    --robot.id=my_awesome_follower_arm \
-    --dataset.repo_id=${HF_USER}/so101_test \
-    --dataset.episode=0
-```
-
-The parameter `--dataset.episode=0` specifies which episode to replay on the follower arm.
-For example: running this script will cause the follower arm to execute the exact actions recorded during `episode_0`. -->
 
 ### Policy Training
 
 Based on the collected data, the procedure for training a Policy can be found in the subsection of the following link:  
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#train-a-policy](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-a-policy)
 
-<!-- If you plan to train the policy locally, you may refer to the following command:
 
-```bash
-python -m lerobot.scripts.train \
-  --dataset.repo_id=seeed_studio/test \
-  --policy.type=act \
-  --output_dir=outputs/train/act_so101_test \
-  --job_name=act_so101_test \
-  --policy.device=cuda \
-  --wandb.enable=false \
-  --policy.push_to_hub=false\
-  --steps=300000 
-```
-
-`--policy.type`: Specify the policy type to be trained
-
-`--policy.push_to_hub=false\`: Whether to upload the trained weights to the cloud (Hugging Face Hub)
-
-`--steps`: Number of training steps -->
 
 :::tip
 In the following sections, we will introduce a cloud-based training platform and demonstrate basic usage. You may choose to complete training more efficiently on the remote server.
@@ -1109,7 +855,7 @@ You may install and log in to Brev CLI on your local Ubuntu host, then attempt t
 
 Q2: How do I upload data to the training platform?
 
-Use the following command: `scp <local-file-path> <brev-instance-name>:<remote-file-path>`,例如`scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
+Use the following command: `scp <local-file-path> <brev-instance-name>:<remote-file-path>`,for example `scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
 
 ## References
 

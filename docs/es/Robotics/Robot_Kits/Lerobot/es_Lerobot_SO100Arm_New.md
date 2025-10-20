@@ -889,6 +889,16 @@ Controla el flujo de grabación de datos usando atajos de teclado:
 | ← (Flecha Izquierda) | Cancelar episodio actual; volver a grabarlo. |  
 | ESC | Detener sesión inmediatamente, codificar videos y subir conjunto de datos. |  
 
+:::tip
+
+Si el teclado no funciona, es posible que necesites instalar otra versión de pynput.
+
+```bash
+pip install pynput==1.6.8
+```
+
+:::
+
 **Consejos para Recopilar Datos**
 
 - Sugerencia de Tarea: Agarrar objetos en diferentes ubicaciones y colocarlos en un contenedor.  

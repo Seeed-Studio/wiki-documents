@@ -14,18 +14,18 @@ last_update:
 
 [La serie Seeed Studio XIAO](https://www.seeedstudio.com/xiao-series-page), nombrada por la palabra china para "pequeño", comprende pequeñas placas de desarrollo basadas en varias plataformas de hardware de ESP32, SAMD21, RP2040, nRF52840, RP2350 y RA4M1, MG24. Estas placas del tamaño de una uña empaquetan capacidades poderosas en un factor de forma compacto.
 
-Nuestro equipo junto con la comunidad, ha creado una rica colección de wikis, aplicaciones y documentación para hacer el uso y desarrollo con facilidad. Para hacer más eficiente para toda la comunidad localizar estos documentos útiles, los estamos agrupando en esta página como un índice para que puedas localizar el que estás buscando rápidamente.
+Nuestro equipo junto con la comunidad, ha creado una rica colección de wikis, aplicaciones y documentación para facilitar el uso y desarrollo. Para hacer más eficiente para toda la comunidad localizar estos documentos útiles, los estamos agrupando en esta página como un índice para que puedas localizar rápidamente el que estás buscando.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/xiao_topicpage/compatible_software.jpg" /></div>
 
-No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y si quieres contribuir a este ecosistema vibrante (para llenar las partes en blanco), damos la bienvenida [a tus propias contribuciones de tu desarrollo único para inspirar a otros en la comunidad también](https://wiki.seeedstudio.com/es/Contribution-Guide/).
+No podemos hacerlo sin el amor y la contribución que recibimos de la comunidad, y si quieres contribuir a este ecosistema vibrante (para llenar las partes en blanco), damos la bienvenida a [tus propias contribuciones de tu desarrollo único para inspirar a otros en la comunidad también](https://wiki.seeedstudio.com/es/Contribution-Guide/).
 
 ## Tabla de Contenidos
 
 <div align="center">
    <div style={{width: "auto", height: 450, overflowY: 'scroll', border: '1px solid #ccc', padding: '10px', textAlign: 'left',}}>
  <ul>
-  <li><a href="#product_guides"><strong>Guías de Producto (Primeros Pasos, Uso de Pines y más)</strong></a></li>
+  <li><a href="#product_guides"><strong>Guías de Productos (Primeros Pasos, Uso de Pines y más)</strong></a></li>
   <ul>
   <li><a href="#xiao_samd21"><strong>XIAO SAMD21</strong></a></li>
   <li><a href="#xiao_rp2040"><strong>XIAO RP2040</strong></a></li>
@@ -67,7 +67,7 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
   <li><a href="#blecon"><strong>Blecon</strong></a></li>
   <li><a href="https://github.com/marvinroger/async-mqtt-client" target="_blank"><strong>ESP32-MQTT</strong></a></li>
   </ul>
-  <li><a href="#tinyml/embedded_machine_learningtinyml"><strong>Plataformas TinyML/Aprendizaje Automático Embebido</strong></a></li>
+  <li><a href="#tinyml/embedded_machine_learningtinyml"><strong>Plataformas de TinyML/Aprendizaje Automático Embebido</strong></a></li>
   <ul>
   <li><a href="#sensecraft_ai"><strong>SenseCraft AI</strong></a></li>
   <li><a href="#tensorflow_lite"><strong>TensorFlow Lite</strong></a></li>
@@ -113,7 +113,7 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
  </div>
 </div>
 
-## <span id="product_guides">Guías de Producto</span>
+## <span id="product_guides">Guías de Productos</span>
 
 <br></br>
 
@@ -160,8 +160,8 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
             <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/XIAO-BLE-Sense-NFC-Usage/" target="_blank">Uso de NFC</a></th>
   </tr>
   <tr>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/XIAO-BLE-Sense-Bluetooth_Usage/" target="_blank">Lib Bluetooth (Seeed nRF52)</a></th>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/XIAO-BLE-Sense-Bluetooth-Usage/" target="_blank">Lib Bluetooth (Seeed nRF52 mbed)</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/XIAO-BLE-Sense-Bluetooth_Usage/" target="_blank">Librería Bluetooth (Seeed nRF52)</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/XIAO-BLE-Sense-Bluetooth-Usage/" target="_blank">Librería Bluetooth (Seeed nRF52 mbed)</a></th>
             <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
   </tr>
  </table>
@@ -193,7 +193,8 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
 <div class="table-center">
  <table align="center">
   <tr>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_esp32s3_getting_started/" target="_blank">Wiki de Primeros Pasos</a></th>   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_esp32s3_pin_multiplexing/" target="_blank">Uso de Pines</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_esp32s3_getting_started/" target="_blank">Wiki de Primeros Pasos</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_esp32s3_pin_multiplexing/" target="_blank">Uso de Pines</a></th>
             <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_esp32s3_wifi_usage/" target="_blank">Uso de Wi-Fi</a></th>
   </tr>
   <tr>
@@ -275,7 +276,7 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
 <br></br>
 <div><a href="https://platformio.org/"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/platformio.png" style={{width:'auto', height:50}} /></a></div>
 
-<span id="platformio"><strong><a href="https://platformio.org/" target="_blank">PlatformIO</a></strong></span>, la solución IDE más querida para Microsoft Visual Studio Code.
+<span id="platformio"><strong><a href="https://platformio.org/" target="_blank">PlatformIO</a></strong></span>, la solución de IDE más querida para Microsoft Visual Studio Code.
 <br></br>
 <br></br>
 
@@ -321,7 +322,7 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_esp32c6_micropython/" target="_blank">XIAO ESP32C6</a></th>
    <th style={{width:333, height:'auto'}}><a href="https://micropython.org/download/SEEED_XIAO_RP2350/" target="_blank">XIAO RP2350</a></th>
-            <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_micropython/" target="_blank">XIAO nRF54L15</a></th>
   </tr>
  </table>
 </div>
@@ -373,7 +374,7 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
 <br></br>
 <div><a href="https://idf.espressif.com/" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/espressif.png" style={{width:'auto', height:50}} /></a></div>
 
-<span id="esp_idf"><a href="https://idf.espressif.com/" target="_blank"><strong>ESP IDF</strong></a></span>, el Framework de Desarrollo IoT oficial de Espressif para las series ESP32, ESP32-S y ESP32-C de SoCs, proporcionando un SDK autosuficiente para cualquier desarrollo de aplicaciones genéricas en estas plataformas, utilizando lenguajes de programación como C y C++.
+<span id="esp_idf"><a href="https://idf.espressif.com/" target="_blank"><strong>ESP IDF</strong></a></span>, el marco de desarrollo IoT oficial de Espressif para las series ESP32, ESP32-S y ESP32-C de SoCs, proporcionando un SDK autosuficiente para cualquier desarrollo de aplicaciones genéricas en estas plataformas, utilizando lenguajes de programación como C y C++.
 <br></br>
 <br></br>
 
@@ -501,7 +502,7 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
 <br></br>
 <div><a href="https://nuttx.apache.org/" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/nuttxrtos.png" style={{width:'auto', height:80}} /></a></div>
 
-<span id="apache_nuttx_rtos"><strong><a href="https://nuttx.apache.org/" target="_blank">Apache NuttX RTOS</a></strong></span>, un sistema operativo en tiempo real (RTOS) con énfasis en el cumplimiento de estándares y una huella pequeña
+<span id="apache_nuttx_rtos"><strong><a href="https://nuttx.apache.org/" target="_blank">Apache NuttX RTOS</a></strong></span>, un sistema operativo en tiempo real (RTOS) con énfasis en el cumplimiento de estándares y huella pequeña
 <br></br>
 <br></br>
 
@@ -518,7 +519,8 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
             <th style={{width:333, height:'auto'}}><a href="https://nuttx.apache.org/docs/latest/platforms/xtensa/esp32s3/boards/esp32s3-xiao/index.html" target="_blank">XIAO ESP32S3</a></th>
   </tr>
   <tr>
-   <th style={{width:333, height:'auto'}}><a href="https://nuttx.apache.org/docs/latest/platforms/risc-v/esp32c3/boards/esp32c3-xiao/index.html" target="_blank">XIAO ESP32C3</a></th>            <th style={{width:333, height:'auto'}}><a href="https://nuttx.apache.org/docs/latest/platforms/risc-v/esp32c6/boards/esp32c6-xiao/index.html" target="_blank">XIAO ESP32C6</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://nuttx.apache.org/docs/latest/platforms/risc-v/esp32c3/boards/esp32c3-xiao/index.html" target="_blank">XIAO ESP32C3</a></th>
+            <th style={{width:333, height:'auto'}}><a href="https://nuttx.apache.org/docs/latest/platforms/risc-v/esp32c6/boards/esp32c6-xiao/index.html" target="_blank">XIAO ESP32C6</a></th>
    <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
   </tr>
  </table>
@@ -553,7 +555,7 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
 <div class="table-center">
  <table align="center">
   <tr>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_idf/" target="_blank">XIAO ESP32 Series (C3, S3, C6)</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_idf/" target="_blank">Serie XIAO ESP32 (C3, S3, C6)</a></th>
    <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
             <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
   </tr>
@@ -587,7 +589,7 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
 <div class="table-center">
  <table align="center">
   <tr>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_esp32s3_espnow/" target="_blank">XIAO ESP32 Series (ESP32C3, ESP32S3, ESP32S3 Sense, ESP32C6)</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_esp32s3_espnow/" target="_blank">Serie XIAO ESP32 (ESP32C3, ESP32S3, ESP32S3 Sense, ESP32C6)</a></th>
    <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
             <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
   </tr>
@@ -604,7 +606,7 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
 <div class="table-center">
  <table align="center">
   <tr>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/wio_sx1262_xiao_esp32s3_for_meshtastic/" target="_blank">XIAO ESP32S3 for Meshtastic and LoRa</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/wio_sx1262_xiao_esp32s3_for_meshtastic/" target="_blank">XIAO ESP32S3 para Meshtastic y LoRa</a></th>
    <th style={{width:333, height:'auto'}}>XIAO nRF52840 </th>
             <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
   </tr>
@@ -657,7 +659,7 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
 <div class="table-center">
  <table align="center">
   <tr>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_esp32s3_edgelab/" target="_blank">XIAO ESP32S3 Sense (Model Assistant)</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_esp32s3_edgelab/" target="_blank">XIAO ESP32S3 Sense (Asistente de Modelo)</a></th>
    <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
             <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
   </tr>
@@ -693,11 +695,11 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/Seeeduino-XIAO-TinyML/" target="_blank">XIAO SAMD21</a></th>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/XIAO-RP2040-EI/" target="_blank">XIAO RP2040</a></th>
-            <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/XIAOEI/" target="_blank">XIAO nRF52840 (Sense)-Motion Recognition</a></th>
+            <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/XIAOEI/" target="_blank">XIAO nRF52840 (Sense)-Reconocimiento de Movimiento</a></th>
   </tr>
   <tr>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/tinyml_course_Key_Word_Spotting/" target="_blank">XIAO ESP32S3 Sense (Key Word Spotting)</a></th>
-            <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/tinyml_course_Image_classification_project/" target="_blank">XIAO ESP32S3 Sense (Image Classification)</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/tinyml_course_Key_Word_Spotting/" target="_blank">XIAO ESP32S3 Sense (Detección de Palabras Clave)</a></th>
+            <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/tinyml_course_Image_classification_project/" target="_blank">XIAO ESP32S3 Sense (Clasificación de Imágenes)</a></th>
   </tr>
  </table>
 </div>
@@ -707,6 +709,7 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
 <br></br>
 <div><a href="https://www.home-assistant.io/" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/homoassiatant.png" style={{width:'auto', height:50}} /></a></div>
 <div><a href="https://esphome.io/" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/esphome.png" style={{width:'auto', height:50}} /></a></div>
+
 <span id="home_assistant_esphome"><strong><a href="https://www.home-assistant.io/" target="_blank">Home Assistant</a> & <a href="https://esphome.io/" target="_blank">ESPHome</a></strong></span>, un sistema para controlar tus microcontroladores mediante archivos de configuración simples pero potentes y controlarlos remotamente a través de sistemas de automatización del hogar como Home Assistant.
 <br></br>
 <br></br>
@@ -729,7 +732,7 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
 <br></br>
 <div><a href="https://github.com/arendst/Tasmota" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/tasmota.png" style={{width:'auto', height:50}} /></a></div>
 
-<span id="tasmota"><strong><a href="https://github.com/arendst/Tasmota" target="_blank">Tasmota</a></strong></span>, firmware alternativo de código abierto para dispositivos basados en ESP8266 y ESP32 con configuración fácil usando interfaz web, actualizaciones OTA, automatización usando temporizadores o reglas, expandibilidad y control completamente local sobre MQTT, HTTP, Serial o KNX.
+<span id="tasmota"><strong><a href="https://github.com/arendst/Tasmota" target="_blank">Tasmota</a></strong></span>, firmware de código abierto alternativo para dispositivos basados en ESP8266 y ESP32 con configuración fácil usando interfaz web, actualizaciones OTA, automatización usando temporizadores o reglas, expandibilidad y control completamente local sobre MQTT, HTTP, Serial o KNX.
 <br></br>
 <br></br>
 
@@ -845,7 +848,7 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
 <br></br>
 <div><a href="https://github.com/mROS-base/mros2-esp32" target="_blank"><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/mrosbase.png" style={{width:'auto', height:50}} /></a></div>
 
-<span id="mros2_esp32"><strong><a href="https://github.com/mROS-base/mros2-esp32" target="_blank">mROS2-ESP32</a></strong></span>, un entorno de ejecución ligero para nodos ROS en microcontrolador esp32 embebido
+<span id="mros2_esp32"><strong><a href="https://github.com/mROS-base/mros2-esp32" target="_blank">mROS2-ESP32</a></strong></span>, un entorno de ejecución ligero para nodos ROS en microcontroladores esp32 embebidos
 <br></br>
 <br></br>
 
@@ -876,7 +879,8 @@ No podemos hacerlo sin el amor, contribución que recibimos de la comunidad, y s
             <th style={{width:333, height:'auto'}}><a href="https://github.com/Seeed-Studio/fritzing_parts/blob/master/XIAO%20Boards/XIAO%20nRF52840(Sense).fzpz" target="_blank">XIAO nRF52840 (Sense)</a></th>
   </tr>
   <tr>
-   <th style={{width:333, height:'auto'}}><a href="https://github.com/Seeed-Studio/fritzing_parts/blob/master/XIAO%20Boards/XIAO%20ESP32C3.fzpz" target="_blank">XIAO ESP32C3</a></th>   <th style={{width:333, height:'auto'}}><a href="https://github.com/Seeed-Studio/fritzing_parts/blob/master/XIAO%20Boards/XIAO%20ESP32C6.fzpz" target="_blank">XIAO ESP32C6</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://github.com/Seeed-Studio/fritzing_parts/blob/master/XIAO%20Boards/XIAO%20ESP32C3.fzpz" target="_blank">XIAO ESP32C3</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://github.com/Seeed-Studio/fritzing_parts/blob/master/XIAO%20Boards/XIAO%20ESP32C6.fzpz" target="_blank">XIAO ESP32C6</a></th>
             <th style={{width:333, height:'auto'}}><a href="https://github.com/Seeed-Studio/fritzing_parts/blob/master/XIAO%20Boards/XIAO%20ESP32S3(Sense).fzpz" target="_blank">XIAO ESP32S3 (Sense)</a></th>
   </tr>
   <tr>

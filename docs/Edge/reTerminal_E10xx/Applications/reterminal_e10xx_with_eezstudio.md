@@ -386,6 +386,10 @@ The full color ePaper display supports red, black, and white colors, allowing fo
 
 ## Deploying the EEZ Studio Project to Arduino
 
+First, locate OPI PSRAM in the ‘Tools’ menu bar and open it.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/EEZSetting.png" style={{width:500, height:'auto'}}/></div>
+
 These two underlying driver files need to be added to our project directory.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/00.png" style={{width:800, height:'auto'}}/></div>
 
@@ -395,7 +399,7 @@ These two underlying driver files need to be added to our project directory.
 Port the following project files (including four files) to the Arduino Library for use in Arduino projects.
 The `EEZ_UI file` is generated during the build process in EEZStudio. You need to locate the path where you saved it.
 
-- 🔗 **[ZIP]** [Code](https://files.seeedstudio.com/wiki/EEZStudio/E1002_EEZStudio.zip)
+- 🔗 **[ZIP]** [Code](https://files.seeedstudio.com/wiki/EEZStudio/E1002_EEZStudioCode.zip)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/7.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -471,7 +475,7 @@ void loop()
     }
 
     if (lastKey2State == HIGH && currentKey2State == LOW) {
-        page_index = SCREEN_ID_PHOTO;
+        page_index = SCREEN_ID_PLANT;
         loadScreen((ScreensEnum)page_index);
         Serial.println("Switched to Setting Screen");
         delay(50);
@@ -532,14 +536,12 @@ void loop()
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

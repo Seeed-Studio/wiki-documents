@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-10-17 09:44:32 (北京时间)
-// 多语言页面: 2026 个
+// 生成时间: 2025-10-20 14:52:57 (北京时间)
+// 多语言页面: 2022 个
 
 (function() {
   'use strict';
@@ -341,37 +341,7 @@
     "es",
     "ja"
   ],
-  "/sensecraft_hmi_ai_generation": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/sensecraft_hmi_canvas": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/sensecraft_hmi_gallery": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/sensecraft_hmi_overview": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/sensecraft_hmi_rss": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/sensecraft_hmi_web": [
     "cn",
     "en",
     "es",
@@ -5777,7 +5747,7 @@
     "es",
     "ja"
   ],
-  "/e04_with_platformio": [
+  "/ee04_with_platformio": [
     "cn",
     "en",
     "es",
@@ -9975,12 +9945,6 @@
     "es",
     "ja"
   ],
-  "/use_case": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/device_network_setup": [
     "cn",
     "en",
@@ -9993,13 +9957,19 @@
     "es",
     "ja"
   ],
-  "/hello_watcher_llms": [
+  "/visual_trigger_and_ai_flash": [
     "cn",
     "en",
     "es",
     "ja"
   ],
   "/watcher_web_control_panel": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/use_case": [
     "cn",
     "en",
     "es",
@@ -10971,6 +10941,12 @@
     "ja"
   ],
   "/ha_dify_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/solutions/hello_watcher_llms": [
     "cn",
     "en",
     "es",
