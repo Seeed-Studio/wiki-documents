@@ -46,7 +46,7 @@ translation:
 - すぐに使用可能 — 組み立て不要。開封してすぐにAIの世界に飛び込めます。
 - 6+1自由度と470mmのリーチ — 汎用性と精度のために構築されています。
 - デュアルブラシレスバスサーボ駆動 — 最大300gのペイロードでスムーズ、静音、強力。
-- 66mm最大開口の平行グリッパー — クイック交換の柔軟性のためのモジュラーフィンガーチップ。
+- 66mm最大開口のパラレルグリッパー — クイック交換の柔軟性のためのモジュラーフィンガーチップ。
 - 独自のホバーロック技術 — ワンプレスでリーダーアームを任意の位置で瞬時に固定。
 
 ## 仕様
@@ -64,9 +64,9 @@ translation:
 | 再現性        | 2mm                                               | -                                                 | 1mm  |
 | 作業ペイロード      | 300g（70%リーチ時）                            | -                                                 |  750g（70%リーチ時）   |
 | サーボ               | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 |RX18-U100H-M x3<br/> RX8-U50H-M x3<br/> RX8-U51H-M x1|
-| 平行グリッパーキット  | ✅                                                 | -                                                 | ✅   |
-| 手首回転         | Yes                                               | Yes                                               | Yes |
-| 任意位置での保持 | Yes                                               | Yes（ハンドルボタン付き）                          |  Yes|
+| パラレルグリッパーキット  | ✅                                                 | -                                                 | ✅   |
+| 手首回転         | あり                                               | あり                                               | あり |
+| 任意位置での保持 | あり                                               | あり（ハンドルボタン付き）                          |  あり|
 | 手首カメラマウント   |参考3Dプリントファイルを提供 | | 参考3Dプリントファイルを提供
 | LeRobotとの連携   | ✅                                                 | ✅                                                 | ✅|
 | ROS 2との連携     | ✅                                                 | ✅                                                | ✅|
@@ -85,14 +85,14 @@ translation:
 
 ## 初期環境セットアップ
 
-**Ubuntu x86の場合:**
+**Ubuntu x86の場合：**
 
 - Ubuntu 22.04  
 - CUDA 12+  
 - Python 3.10  
 - Torch 2.6  
 
-**Jetson Orinの場合:**
+**Jetson Orinの場合：**
 
 - Jetson JetPack 6.0+  
 - Python 3.10  
@@ -104,8 +104,8 @@ translation:
 
 pytorchやtorchvisionなどの環境は、お使いのCUDAに基づいてインストールする必要があります。
 
-1. Minicondaのインストール:
-Jetsonの場合:
+1. Minicondaのインストール：
+Jetsonの場合：
 
 ```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
@@ -114,7 +114,7 @@ chmod +x Miniconda3-latest-Linux-aarch64.sh
 source ~/.bashrc
 ```
 
-または、X86 Ubuntu 22.04の場合:
+または、X86 Ubuntu 22.04の場合：
 
 ```bash
 mkdir -p ~/miniconda3
@@ -126,19 +126,19 @@ source ~/miniconda3/bin/activate
 conda init --all
 ```
 
-2. lerobot用の新しいconda環境を作成してアクティベート
+2. lerobotのための新しいconda環境を作成してアクティベート
 
 ```bash
 conda create -y -n lerobot python=3.10 && conda activate lerobot
 ```
 
-3. Lerobotのクローン:
+3. Lerobotのクローン：
 
 ```bash
 git clone https://github.com/Seeed-Projects/lerobot-starai.git ~/lerobot
 ```
 
-4. minicondaを使用する場合、環境にffmpegをインストール:
+4. minicondaを使用する場合、環境にffmpegをインストール：
 
 ```bash
 conda install ffmpeg -c conda-forge
@@ -147,7 +147,7 @@ conda install ffmpeg -c conda-forge
 :::tip
 これは通常、libsvtav1エンコーダーでコンパイルされたプラットフォーム用のffmpeg 7.Xをインストールします。libsvtav1がサポートされていない場合（ffmpeg -encodersでサポートされているエンコーダーを確認）、以下を実行できます：
 
-- [すべてのプラットフォーム] 以下を使用してffmpeg 7.Xを明示的にインストール:
+- [すべてのプラットフォーム] 以下を使用してffmpeg 7.Xを明示的にインストール：
 
 ```bash
 conda install ffmpeg=7.1.1 -c conda-forge
@@ -157,13 +157,13 @@ conda install ffmpeg=7.1.1 -c conda-forge
 
 :::
 
-5. LeRobotのインストール:
+5. LeRobotのインストール：
 
 ```bash
 cd ~/lerobot && pip install -e .
 ```
 
-Jetson Jetpackデバイスの場合（このステップを実行する前に、ステップ5から[Pytorch-gpuとTorchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch)をインストールしてください）:
+Jetson Jetpackデバイスの場合（このステップを実行する前に、ステップ5から[Pytorch-gpuとTorchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch)をインストールしてください）：
 
 ```bash
 conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
@@ -174,7 +174,7 @@ conda uninstall numpy
 pip3 install numpy==1.26.0  # This should match torchvision
 ```
 
-6.Fashionstarモーター依存関係のインストール:
+6.Fashionstarモーター依存関係のインストール：
 
 ```bash
 pip install lerobot_teleoperator_bimanual_leader
@@ -201,7 +201,7 @@ Jetsonデバイスを使用している場合は、[このチュートリアル]
 - リーダーアーム
 - フォロワーアーム
 - コントローラー（ハンドル）
-- 平行グリッパー
+- パラレルグリッパー
 - インストールツール（ネジ、六角レンチ）
 - 電源 ×2
 - Cクランプ ×2
@@ -220,7 +220,7 @@ UC-01デバッグボードスイッチ：
 
 ### アームポートの設定
 
-`~/lerobot`ディレクトリに入る:
+`~/lerobot`ディレクトリに入る：
 
 ```bash
 cd ~/lerobot
@@ -238,7 +238,7 @@ usbを取り外すことを忘れないでください。そうしないとイ�
 
 例：
 
-1. リーダーアームのポートを識別する際の出力例（例：Macでは`/dev/tty.usbmodem575E0031751`、Linuxでは`/dev/ttyUSB0`の可能性）:
+1. リーダーアームのポートを識別する際の出力例（例：Macでは`/dev/tty.usbmodem575E0031751`、Linuxでは`/dev/ttyUSB0`の可能性）：
 2. フォロワーアームのポートを識別する際の出力例（例：Macでは `/dev/tty.usbmodem575E0032081`、Linuxでは `/dev/ttyUSB1` の可能性があります）：
 
 :::tip
@@ -556,7 +556,7 @@ Violin&Viola:
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=starai_viola \
+    --robot.type=lerobot_starai_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
     --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
@@ -569,7 +569,7 @@ lerobot-teleoperate \
 Violin&Cello:
 ```bash
 lerobot-teleoperate \
-    --robot.type=starai_cello \
+    --robot.type=lerobot_starai_cello \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraicello_arm \
     --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
@@ -643,7 +643,7 @@ Violin&Viola:
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=robot_viola \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
     --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
@@ -656,7 +656,7 @@ lerobot-teleoperate \
 Violin&Cello:
 ```bash
 lerobot-teleoperate \
-    --robot.type=robot_cello \
+    --robot.type=lerobot_robot_cello \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraicello_arm \
     --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
@@ -944,7 +944,7 @@ lerobot-record \
 #### 2. チェックポイントと再開
 
 - チェックポイントは記録中に自動的に作成されます。
-- 問題が発生した場合、`--resume=true` を指定して同じコマンドを再実行することで再開できます。記録を再開する際は、`--dataset.num_episodes` をデータセット内の目標総エピソード数ではなく、**記録する追加エピソード数**に設定する必要があります！
+- 問題が発生した場合、`--resume=true` を指定して同じコマンドを再実行することで再開できます。記録を再開する際は、`--dataset.num_episodes` をデータセット内の目標総エピソード数ではなく、**追加で記録するエピソード数**に設定する必要があります！
 - 最初から記録を開始するには、データセットディレクトリを**手動で削除**してください。
 
 #### 3. 記録パラメータ
@@ -1114,7 +1114,7 @@ lerobot-train \
 
 
 <details>
-<summary>[SmolVLA ポリシー](https://huggingface.co/docs/lerobot/smolvla)をトレーニングする場合のコマンド: </summary>
+<summary>[SmolVLA ポリシー](https://huggingface.co/docs/lerobot/smolvla)をトレーニングする場合のコマンド： </summary>
 
 ```bash
 pip install -e ".[smolvla]"
@@ -1156,7 +1156,7 @@ lerobot-record \
 </details>
 
 <details>
-<summary>[Libero ポリシー](https://huggingface.co/docs/lerobot/libero)をトレーニングする場合のコマンド: </summary>
+<summary>[Libero ポリシー](https://huggingface.co/docs/lerobot/libero)をトレーニングする場合のコマンド： </summary>
 
 LIBERO は生涯ロボット学習を研究するために設計されたベンチマークです。ロボットは工場で一度だけ事前トレーニングされるのではなく、時間をかけて人間のユーザーと共に学習し適応し続ける必要があるという考えです。この継続的な適応は意思決定における生涯学習（LLDM）と呼ばれ、真にパーソナライズされたヘルパーとなるロボットを構築するための重要なステップです。
 
@@ -1194,7 +1194,7 @@ lerobot-train \
   --eval_freq=1000 \
 ```
 
-## LIBERO での評価  
+## LIBERO での評価
 
 LIBERO をインストールするには、LeRobot の公式手順に従った後、単に `pip install -e ".[libero]"` を実行してください。
 
