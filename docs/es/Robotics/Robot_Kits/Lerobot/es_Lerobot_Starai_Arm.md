@@ -338,10 +338,10 @@ lerobot-calibrate     --robot.type=lerobot_robot_viola --robot.port=/dev/ttyUSB1
 ```
 
 Cello:
+
 ```bash
 lerobot-calibrate     --robot.type=lerobot_robot_cello --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraicello_arm
 ```
-
 
 Después de ejecutar el comando, necesitas **mover manualmente el brazo robótico** para permitir que cada articulación alcance su **posición límite**. La terminal mostrará los datos de rango registrados. Una vez completada esta operación, presiona Enter.
 
@@ -367,11 +367,13 @@ lerobot-calibrate     --teleop.type=lerobot_teleoperator_bimanual_leader  --tele
 Conecta `left_arm_port` a `/dev/ttyUSB1` y `right_arm_port` a `/dev/ttyUSB3`, o modifica los parámetros `--robot.left_arm_port` y `--robot.right_arm_port`, y luego ejecuta:
 
 Viola:
+
 ```bash
 lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_name=starai_viola  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_viola_follower
 ```
 
 Cello:
+
 ```bash
 lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_name=starai_cello  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_cello_follower
 ```
@@ -414,6 +416,7 @@ lerobot-teleoperate \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_cello \
@@ -428,6 +431,7 @@ lerobot-teleoperate \
 <summary> Brazo Dual </summary>
 
 Violin&Viola:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -442,6 +446,7 @@ lerobot-teleoperate \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -551,7 +556,6 @@ En todos los siguientes ejemplos, reemplaza `starai_viola` con el modelo real de
 Hemos añadido el hiperparámetro `focus_area`. Dado que los datos de profundidad que están demasiado lejos no tienen sentido para el brazo robótico (no puede alcanzar o agarrar objetos), los datos de profundidad menores o mayores que el `focus_area` se mostrarán en negro. El `focus_area` predeterminado es (20, 600).  
 Actualmente, la única resolución soportada es ancho: 640, alto: 880.
 
-
 Violin&Viola:
 
 ```bash
@@ -567,6 +571,7 @@ lerobot-teleoperate \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_starai_cello \
@@ -654,6 +659,7 @@ lerobot-teleoperate \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_cello \
@@ -665,8 +671,6 @@ lerobot-teleoperate \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
 ```
-
-
 
 <details>
 <summary> Brazo Dual </summary>
@@ -689,6 +693,7 @@ lerobot-teleoperate \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -703,6 +708,7 @@ lerobot-teleoperate \
     --teleop.id=bi_starai_violin_leader \
     --display_data=true
 ```
+
 </details>
 
 :::tip
@@ -765,6 +771,7 @@ lerobot-record \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_cello \
@@ -783,11 +790,11 @@ lerobot-record \
     --dataset.single_task="Grab the black cube"
 ```
 
-
 <details>
 <summary> Brazo Dual </summary>
 
 Violin&Viola:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -810,6 +817,7 @@ lerobot-record \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -844,6 +852,7 @@ Si no deseas usar la función de carga de dataset de Hugging Face Hub, puedes el
 Sin subir al Hub:
 
 Violin&Viola:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_viola \
@@ -863,6 +872,7 @@ lerobot-record \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_cello \
@@ -881,11 +891,11 @@ lerobot-record \
     --dataset.single_task="Grab the black cube"
 ```
 
-
 <details>
 <summary> Doble Brazo </summary>
 
 Violin&Viola:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -908,6 +918,7 @@ lerobot-record \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -969,9 +980,13 @@ Usa atajos de teclado para controlar el flujo de trabajo de grabación de datos:
 - Presiona **ESC**: Detener inmediatamente la sesión, codificar el video y subir el dataset.
 
 :::tip
-En Linux, si las teclas de flecha izquierda y derecha y la tecla escape no tienen efecto durante la grabación de datos, asegúrate de que la variable de entorno $DISPLAY esté configurada. Ver limitaciones de pynput.
 
-Una vez que te familiarices con la grabación de datos, puedes crear un dataset más grande para entrenamiento. Una buena tarea inicial es agarrar un objeto en diferentes posiciones y colocarlo en una caja pequeña. Recomendamos grabar al menos 50 episodios, con 10 episodios por ubicación. Mantén la cámara fija y conserva un comportamiento de agarre consistente durante toda la grabación. Además, asegúrate de que el objeto que estás manipulando sea visible en la cámara. Una buena regla general es que deberías poder completar la tarea mirando solo la imagen de la cámara.
+Si el teclado no funciona, es posible que necesites instalar otra versión de pynput.
+
+```bash
+pip install pynput==1.6.8
+```
+
 :::
 
 ## Reproducir un episodio
@@ -979,6 +994,7 @@ Una vez que te familiarices con la grabación de datos, puedes crear un dataset 
 Ahora intenta reproducir el primer episodio en tu robot:
 
 Viola:
+
 ```bash
 lerobot-replay \
     --robot.type=lerobot_robot_viola \
@@ -989,6 +1005,7 @@ lerobot-replay \
 ```
 
 Cello:
+
 ```bash
 lerobot-replay \
     --robot.type=lerobot_robot_cello \
@@ -998,11 +1015,11 @@ lerobot-replay \
     --dataset.episode=1 # choose the episode you want to replay
 ```
 
-
 <details>
 <summary> Doble Brazo </summary>
 
 Viola:
+
 ```bash
 lerobot-replay \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -1013,7 +1030,9 @@ lerobot-replay \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode=0 # choose the episode you want to replay
 ```
+
 Cello:
+
 ```bash
 lerobot-replay \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -1032,6 +1051,7 @@ lerobot-replay \
 Para entrenar una política para controlar tu robot, aquí tienes un comando de ejemplo:
 
 Viola:
+
 ```bash
 lerobot-train \
   --dataset.repo_id=starai/record-test \
@@ -1045,6 +1065,7 @@ lerobot-train \
 ```
 
 Cello:
+
 ```bash
 lerobot-train \
   --dataset.repo_id=starai/record-test \
@@ -1057,11 +1078,11 @@ lerobot-train \
   --steps=200000
 ```
 
-
 <details>
 <summary> Doble Brazo </summary>
 
 Viola:
+
 ```bash
 lerobot-train \
   --dataset.repo_id=starai/record-test_bi_arm \
@@ -1075,6 +1096,7 @@ lerobot-train \
 ```
 
 Cello:
+
 ```bash
 lerobot-train \
   --dataset.repo_id=starai/record-test_bi_arm \
@@ -1086,6 +1108,7 @@ lerobot-train \
   --policy.repo_id=starai/my_policy \
   --steps=200000
 ```
+
 </details>
 
 1. `policy.type` soporta entrada `diffusion,pi0,pi0fast`
@@ -1096,6 +1119,7 @@ lerobot-train \
 Reanudar el entrenamiento desde un punto de control específico.
 
 Viola:
+
 ```bash
 lerobot-train \
   --config_path=outputs/train/act_viola_test/checkpoints/last/pretrained_model/train_config.json \
@@ -1104,14 +1128,13 @@ lerobot-train \
 ```
 
 Cello:
+
 ```bash
 lerobot-train \
   --config_path=outputs/train/act_cello_test/checkpoints/last/pretrained_model/train_config.json \
   --resume=true \
   --steps=400000
 ```
-
-
 
 <details>
 <summary>Si entrenas con el comando de [política SmolVLA](https://huggingface.co/docs/lerobot/smolvla): </summary>
@@ -1235,6 +1258,7 @@ lerobot-eval \
 Ejecuta el siguiente comando para grabar 10 episodios de evaluación:
 
 Viola:
+
 ```bash
 lerobot-record  \
   --robot.type=lerobot_robot_viola \
@@ -1252,6 +1276,7 @@ lerobot-record  \
 ```
 
 Cello:
+
 ```bash
 lerobot-record  \
   --robot.type=lerobot_robot_cello \
@@ -1272,6 +1297,7 @@ lerobot-record  \
 <summary> Brazo Dual </summary>
 
 Viola:
+
 ```bash
 lerobot-record  \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -1287,6 +1313,7 @@ lerobot-record  \
 ```
 
 Cello:
+
 ```bash
 lerobot-record  \
     --robot.type=lerobot_robot_bimanual_follower \

@@ -338,10 +338,10 @@ lerobot-calibrate     --robot.type=lerobot_robot_viola --robot.port=/dev/ttyUSB1
 ```
 
 Cello：
+
 ```bash
 lerobot-calibrate     --robot.type=lerobot_robot_cello --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraicello_arm
 ```
-
 
 コマンドを実行した後、各関節が**制限位置**に到達するように**手動でロボットアームを動かす**必要があります。ターミナルには記録された範囲データが表示されます。この操作が完了したら、Enterキーを押してください。
 
@@ -367,11 +367,13 @@ lerobot-calibrate     --teleop.type=lerobot_teleoperator_bimanual_leader  --tele
 `left_arm_port`を`/dev/ttyUSB1`に、`right_arm_port`を`/dev/ttyUSB3`に接続するか、`--robot.left_arm_port`と`--robot.right_arm_port`パラメータを変更してから実行してください：
 
 Viola：
+
 ```bash
 lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_name=starai_viola  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_viola_follower
 ```
 
 Cello：
+
 ```bash
 lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_name=starai_cello  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_cello_follower
 ```
@@ -414,6 +416,7 @@ lerobot-teleoperate \
 ```
 
 Violin&Cello：
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_cello \
@@ -428,6 +431,7 @@ lerobot-teleoperate \
 <summary> デュアルアーム </summary>
 
 Violin&Viola：
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -442,6 +446,7 @@ lerobot-teleoperate \
 ```
 
 Violin&Cello：
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -551,7 +556,6 @@ from .orbbec.configuration_orbbec import OrbbecCameraConfig
 `focus_area` ハイパーパラメータを追加しました。遠すぎる深度データはロボットアームにとって意味がない（到達や把握ができない物体）ため、`focus_area` より小さいまたは大きい深度データは黒で表示されます。デフォルトの `focus_area` は (20, 600) です。  
 現在サポートされている解像度は、幅: 640、高さ: 880 のみです。
 
-
 Violin&Viola:
 
 ```bash
@@ -567,6 +571,7 @@ lerobot-teleoperate \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_starai_cello \
@@ -654,6 +659,7 @@ lerobot-teleoperate \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_cello \
@@ -665,8 +671,6 @@ lerobot-teleoperate \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
 ```
-
-
 
 <details>
 <summary> デュアルアーム </summary>
@@ -689,6 +693,7 @@ lerobot-teleoperate \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -703,6 +708,7 @@ lerobot-teleoperate \
     --teleop.id=bi_starai_violin_leader \
     --display_data=true
 ```
+
 </details>
 
 :::tip
@@ -765,6 +771,7 @@ lerobot-record \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_cello \
@@ -783,11 +790,11 @@ lerobot-record \
     --dataset.single_task="Grab the black cube"
 ```
 
-
 <details>
 <summary> デュアルアーム </summary>
 
 Violin&Viola:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -810,6 +817,7 @@ lerobot-record \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -844,6 +852,7 @@ Hugging Face Hub データセットアップロード機能を使用したくな
 Hub にアップロードしない場合：
 
 Violin&Viola:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_viola \
@@ -863,6 +872,7 @@ lerobot-record \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_cello \
@@ -881,11 +891,11 @@ lerobot-record \
     --dataset.single_task="Grab the black cube"
 ```
 
-
 <details>
 <summary> デュアルアーム </summary>
 
 Violin&Viola:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -908,6 +918,7 @@ lerobot-record \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -969,9 +980,13 @@ Parameter Description
 - **ESC**を押す：セッションを即座に停止し、ビデオをエンコードしてデータセットをアップロードします。
 
 :::tip
-Linux では、データ記録中に左右の矢印キーとエスケープキーが効かない場合、$DISPLAY 環境変数が設定されていることを確認してください。pynput の制限を参照してください。
 
-データ記録に慣れたら、トレーニング用により大きなデータセットを作成できます。良い開始タスクは、異なる位置にあるオブジェクトを掴んで小さな箱に置くことです。少なくとも50エピソード、位置ごとに10エピソードを記録することをお勧めします。記録中はカメラを固定し、一貫した掴み動作を維持してください。また、操作しているオブジェクトがカメラに映っていることを確認してください。良い経験則は、カメラ画像だけを見てタスクを完了できることです。
+キーボードが動作しない場合は、別のバージョンの pynput をインストールする必要があるかもしれません。
+
+```bash
+pip install pynput==1.6.8
+```
+
 :::
 
 ## エピソードの再生
@@ -979,6 +994,7 @@ Linux では、データ記録中に左右の矢印キーとエスケープキ�
 ロボットで最初のエピソードを再生してみましょう：
 
 Viola:
+
 ```bash
 lerobot-replay \
     --robot.type=lerobot_robot_viola \
@@ -989,6 +1005,7 @@ lerobot-replay \
 ```
 
 Cello:
+
 ```bash
 lerobot-replay \
     --robot.type=lerobot_robot_cello \
@@ -998,11 +1015,11 @@ lerobot-replay \
     --dataset.episode=1 # choose the episode you want to replay
 ```
 
-
 <details>
 <summary> デュアルアーム </summary>
 
 Viola:
+
 ```bash
 lerobot-replay \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -1013,7 +1030,9 @@ lerobot-replay \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode=0 # choose the episode you want to replay
 ```
+
 Cello:
+
 ```bash
 lerobot-replay \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -1032,6 +1051,7 @@ lerobot-replay \
 ロボットを制御するポリシーをトレーニングするためのコマンド例は以下の通りです：
 
 Viola:
+
 ```bash
 lerobot-train \
   --dataset.repo_id=starai/record-test \
@@ -1045,6 +1065,7 @@ lerobot-train \
 ```
 
 Cello:
+
 ```bash
 lerobot-train \
   --dataset.repo_id=starai/record-test \
@@ -1057,11 +1078,11 @@ lerobot-train \
   --steps=200000
 ```
 
-
 <details>
 <summary> デュアルアーム </summary>
 
 Viola:
+
 ```bash
 lerobot-train \
   --dataset.repo_id=starai/record-test_bi_arm \
@@ -1075,6 +1096,7 @@ lerobot-train \
 ```
 
 Cello:
+
 ```bash
 lerobot-train \
   --dataset.repo_id=starai/record-test_bi_arm \
@@ -1086,6 +1108,7 @@ lerobot-train \
   --policy.repo_id=starai/my_policy \
   --steps=200000
 ```
+
 </details>
 
 1. `policy.type` は `diffusion,pi0,pi0fast` の入力をサポートします
@@ -1096,6 +1119,7 @@ lerobot-train \
 特定のチェックポイントからトレーニングを再開します。
 
 Viola:
+
 ```bash
 lerobot-train \
   --config_path=outputs/train/act_viola_test/checkpoints/last/pretrained_model/train_config.json \
@@ -1104,14 +1128,13 @@ lerobot-train \
 ```
 
 Cello:
+
 ```bash
 lerobot-train \
   --config_path=outputs/train/act_cello_test/checkpoints/last/pretrained_model/train_config.json \
   --resume=true \
   --steps=400000
 ```
-
-
 
 <details>
 <summary>[SmolVLA ポリシー](https://huggingface.co/docs/lerobot/smolvla)をトレーニングする場合のコマンド： </summary>
@@ -1235,6 +1258,7 @@ lerobot-eval \
 10回の評価エピソードを記録するために以下のコマンドを実行します：
 
 Viola:
+
 ```bash
 lerobot-record  \
   --robot.type=lerobot_robot_viola \
@@ -1252,6 +1276,7 @@ lerobot-record  \
 ```
 
 Cello:
+
 ```bash
 lerobot-record  \
   --robot.type=lerobot_robot_cello \
@@ -1272,6 +1297,7 @@ lerobot-record  \
 <summary> デュアルアーム </summary>
 
 Viola:
+
 ```bash
 lerobot-record  \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -1287,6 +1313,7 @@ lerobot-record  \
 ```
 
 Cello:
+
 ```bash
 lerobot-record  \
     --robot.type=lerobot_robot_bimanual_follower \
