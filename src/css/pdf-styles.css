@@ -1,0 +1,38 @@
+@media print {
+  img {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    display: block;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  .markdown img {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  
+  a {
+    color: #0066cc !important;
+    text-decoration: underline !important;
+  }
+  
+  pre, code {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  
+  table {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+  
+  .pdfButtonContainer {
+    display: none !important;
+  }
+}

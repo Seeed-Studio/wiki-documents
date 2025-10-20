@@ -34,6 +34,7 @@
     "chalk": "^5.4.1",
     "clsx": "^1.2.1",
     "docusaurus-plugin-image-zoom": "^0.1.4",
+    "docusaurus-plugin-papersaurus": "^2.0.3",
     "docusaurus-plugin-sass": "^0.2.2",
     "docusaurus-theme-search-typesense": "^0.25.0",
     "moment": "^2.30.1",

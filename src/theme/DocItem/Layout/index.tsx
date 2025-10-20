@@ -17,6 +17,7 @@ import { useLocation } from '@docusaurus/router';
 import { judgeHomePath } from '../../../utils/jsUtils';
 import TopNav from '../../../components/topNav';
 import Head from '@docusaurus/Head';
+import PdfDownloadButton from '../../../components/PdfDownloadButton';
 
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
@@ -38,7 +39,7 @@ function useDocTOC() {
   };
 }
 
-export default function DocItemLayout({ children }: Props): JSX.Element {
+export default function DocItemLayout({ children }: Props): React.JSX.Element {
   const docTOC = useDocTOC();
   const { frontMatter } = useDoc();
   
@@ -69,6 +70,9 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
           <article>
             <DocBreadcrumbs />
             <DocVersionBadge />
+            <div className={styles.pdfButtonContainer}>
+              <PdfDownloadButton />
+            </div>
             {docTOC.mobile}
             <DocItemContent>{children}</DocItemContent>
             <DocItemFooter />
@@ -77,7 +81,7 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
         </div>
         {!hideComment && <Comment />}
       </div>
-      <TopNav></TopNav>
+      <TopNav>{null}</TopNav>
       {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
     </div>
   );
