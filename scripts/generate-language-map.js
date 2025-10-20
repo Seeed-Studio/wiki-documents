@@ -172,6 +172,11 @@ function generateJavaScriptFile() {
     languageMapping['/'] = HOMEPAGE_LOCALES;
     languageMapping[''] = HOMEPAGE_LOCALES; // 兼容 basePath = '' 的情况
 
+    const SPECIAL_ROUTE_LOCALES = ['en', 'cn', 'ja', 'es'];
+    ['/knowledgebase/', '/knowledgebase'].forEach((slug) => {
+      languageMapping[slug] = SPECIAL_ROUTE_LOCALES;
+    });
+
     const stats = {
       total: allSlugs.size,
       multiLanguage: Object.keys(languageMapping).length,

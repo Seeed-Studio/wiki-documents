@@ -4,13 +4,19 @@ const docList = [
       "path": "/visual_trigger_and_ai_flash",
       "image": "http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp",
       "title": "Flashing AI Models on the SenseCAP Watcher",
-      "date": "10/17/2025"
+      "date": "10/17/2025",
+      "title_cn": "在 SenseCAP Watcher 上烧录 AI 模型",
+      "title_ja": "SenseCAP Watcher で AI モデルを書き込む",
+      "title_es": "Flasheando modelos de IA en el SenseCAP Watcher"
     },
     {
       "path": "/deploy_visual_perception_engine_recomputer",
       "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/video_demo_preview.gif",
       "title": "Efficient Multi-Task Vision Inference Engine Deployment on Jetson",
-      "date": "2025-10-13T00:00:00.000Z"
+      "date": "2025-10-13T00:00:00.000Z",
+      "title_cn": "在 Jetson 上部署高效多任务视觉推理引擎",
+      "title_ja": "Jetsonでの効率的なマルチタスクビジョン推論エンジンの展開",
+      "title_es": "Despliegue de Motor de Inferencia de Visión Multi-Tarea Eficiente en Jetson"
     }
   ],
   [
@@ -38,7 +44,10 @@ const docList = [
       "path": "/ee04_with_platformio",
       "image": "https://files.seeedstudio.com/wiki/Epaper/EE04/pio_show_1.webp",
       "title": "XIAO ePaper Display Board(ESP32-S3) EE04 with PlatfromIO",
-      "date": "10/10/2025"
+      "date": "10/10/2025",
+      "title_cn": "XIAO ePaper Display Board(ESP32-S3) EE04 与 PlatfromIO",
+      "title_ja": "XIAO ePaper Display Board(ESP32-S3) EE04 with PlatfromIO",
+      "title_es": "Placa de Pantalla ePaper XIAO (ESP32-S3) EE04 con PlatfromIO"
     },
     {
       "path": "/EE04_with_esphome_advanced",
