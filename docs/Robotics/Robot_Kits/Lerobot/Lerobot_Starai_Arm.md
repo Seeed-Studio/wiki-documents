@@ -968,10 +968,12 @@ Use keyboard shortcuts to control the data recording workflow:
 - Press **left arrow key (←)**: Cancel the current episode and re-record it.
 - Press **ESC**: Immediately stop the session, encode the video, and upload the dataset.
 
-:::tip
-On Linux, if the left and right arrow keys and the escape key have no effect during data recording, ensure that the $DISPLAY environment variable is set. See pynput limitations.
 
-Once you are familiar with data recording, you can create a larger dataset for training. A good starting task is to grasp an object at different positions and place it in a small box. We recommend recording at least 50 episodes, with 10 episodes per location. Keep the camera fixed and maintain consistent grasping behavior throughout the recording. Also, ensure that the object you are manipulating is visible in the camera. A good rule of thumb is that you should be able to complete the task by looking only at the camera image.
+:::tip
+If keyboard not work, you may need install other version of pynput.
+```bash
+pip install pynput==1.6.8
+```
 :::
 
 ## Replay an episode
