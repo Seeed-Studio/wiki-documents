@@ -168,7 +168,7 @@ Home Assistant Green 是自动化家居最简单、最注重隐私的方式。�
 您可以通过复制下面的代码并将其粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用此示例。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="适用于 E1001" default>
 
 ```yaml
 # define font to display words
@@ -200,7 +200,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="适用于 E1002">
 
 ```yaml
 
@@ -245,7 +245,7 @@ display:
 点击 **INSTALL** 将代码安装到设备上，您将看到以下图像。
 
 <Tabs>
-<TabItem value='Install through browser'>
+<TabItem value='通过浏览器安装'>
 
 :::tip
 如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）距离您较远，我们建议使用此方法。您可以使用手边的计算机进行安装。
@@ -285,7 +285,7 @@ display:
 
 </TabItem>
 
-<TabItem value='Install through host'>
+<TabItem value='通过主机安装'>
 
 :::tip
 如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）就在附近，我们建议使用此方法，因为它更简单。
@@ -306,7 +306,7 @@ display:
 
 </TabItem>
 
-<TabItem value='Install through Wi-Fi'>
+<TabItem value='通过 Wi-Fi 安装'>
 
 :::tip
 这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到电子纸面板。之后，您可以通过 wifi 上传。另外，确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，以便此方法正常工作。
@@ -339,7 +339,7 @@ display:
 您可以通过复制下面的代码并将其粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用此示例。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="适用于 E1001" default>
 
 ```yaml
 spi:
@@ -373,7 +373,7 @@ display:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/38.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="适用于 E1002">
 
 ```yaml
 
@@ -496,7 +496,7 @@ sensor:
 最后，添加显示部分的代码以使用上述值。完整代码如下：
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="适用于 E1001" default>
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -555,7 +555,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="适用于 E1002">
 
 ```yaml
 
@@ -682,7 +682,7 @@ display:
 步骤 6. 在 `captive_portal` 部分之后，将以下代码添加到您的 ESPHome 配置文件中。此代码定义了两种图标字体大小，并配置显示屏显示天气图标。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="适用于 E1001" default>
 
 ```yaml
 # define font to display words
@@ -722,7 +722,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="适用于 E1002">
 
 ```yaml
 
@@ -870,7 +870,7 @@ config/
 步骤 5. 在 `captive_portal` 部分之后，将以下代码添加到您的 ESPHome 配置文件中。此代码定义图像资源并配置显示屏以显示它。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="适用于 E1001" default>
 
 ```yaml
 image:
@@ -902,7 +902,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="适用于 E1002">
 
 ```yaml
 

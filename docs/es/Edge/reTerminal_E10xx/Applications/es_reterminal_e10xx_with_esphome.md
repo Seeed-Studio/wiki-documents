@@ -245,7 +245,7 @@ display:
 Haz clic en **INSTALL** para instalar el código en el dispositivo y verás la siguiente imagen.
 
 <Tabs>
-<TabItem value='Install through browser'>
+<TabItem value='Instalar a través del navegador'>
 
 :::tip
 Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está lejos de ti, recomendamos usar este método. Puedes instalarlo con la computadora que tengas a mano.
@@ -285,7 +285,7 @@ Espera un momento y verás '¡Hola mundo!' en la pantalla ～
 
 </TabItem>
 
-<TabItem value='Install through host'>
+<TabItem value='Instalar a través del host'>
 
 :::tip
 Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está cerca, recomendamos usar este método ya que es más simple.
@@ -306,7 +306,7 @@ Espera un momento y verás la retroalimentación como la siguiente imagen. Signi
 
 </TabItem>
 
-<TabItem value='Install through Wi-Fi'>
+<TabItem value='Instalar a través de Wi-Fi'>
 
 :::tip
 Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de encriptación válidas para que este método funcione.
@@ -496,7 +496,7 @@ Para datos de pronóstico, necesitarás usar las entidades `weather.open_meteo_f
 Finalmente, agrega el código para la sección de pantalla para usar estos valores anteriores. El código completo es el siguiente:
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="Para E1001" default>
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -555,7 +555,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="Para E1002">
 
 ```yaml
 
@@ -682,7 +682,7 @@ Paso 5. Sube el archivo de fuente descargado (`materialdesignicons-webfont.ttf`)
 Paso 6. Agrega el siguiente código a tu archivo de configuración de ESPHome después de la sección `captive_portal`. Este código define dos tamaños de fuente para iconos y configura la pantalla para mostrar iconos meteorológicos.
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="Para E1001" default>
 
 ```yaml
 # define font to display words
@@ -722,7 +722,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="Para E1002">
 
 ```yaml
 

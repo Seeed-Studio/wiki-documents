@@ -200,7 +200,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="E1002 用">
 
 ```yaml
 
@@ -245,7 +245,7 @@ display:
 **INSTALL** をクリックしてコードをデバイスにインストールすると、以下の画像が表示されます。
 
 <Tabs>
-<TabItem value='Install through browser'>
+<TabItem value='ブラウザからインストール'>
 
 :::tip
 Home Assistant ホスト（Raspberry PI/Green/Yellow など）が遠くにある場合は、この方法をお勧めします。手元にあるコンピューターでインストールできます。
@@ -285,7 +285,7 @@ usbmodemxxx（Windows では COMxxx）を選択し、connect をクリックし�
 
 </TabItem>
 
-<TabItem value='Install through host'>
+<TabItem value='ホストからインストール'>
 
 :::tip
 Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある場合は、より簡単なこの方法をお勧めします。
@@ -306,7 +306,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 
 </TabItem>
 
-<TabItem value='Install through Wi-Fi'>
+<TabItem value='Wi-Fiからインストール'>
 
 :::tip
 これは最も簡単な方法ですが、初回プログラムインストール時には、まず左側の方法を使用して ePaper パネルにプログラムをアップロードする必要があります。その後、Wi-Fi 経由でアップロードできます。また、この方法が機能するには、YAML 設定に適切に設定された `ota` および `api` セクションと有効な暗号化キーが含まれていることを確認してください。
@@ -339,7 +339,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 以下のコードをコピーして、Yaml ファイルの `captive_portal` コード行の後に貼り付けることで、この例を使用できます。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="E1001 用" default>
 
 ```yaml
 spi:
@@ -373,7 +373,7 @@ display:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/38.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="E1002 用">
 
 ```yaml
 
@@ -496,7 +496,7 @@ sensor:
 最後に、上記の値を使用するディスプレイセクションのコードを追加します。完全なコードは以下の通りです：
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="E1001 用" default>
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -555,7 +555,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="E1002 用">
 
 ```yaml
 
@@ -682,7 +682,7 @@ display:
 ステップ 6. `captive_portal` セクションの後に、以下のコードを ESPHome 設定ファイルに追加します。このコードは、アイコン用の 2 つのフォントサイズを定義し、天気アイコンを表示するようにディスプレイを設定します。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="E1001 用" default>
 
 ```yaml
 # define font to display words
@@ -722,7 +722,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="E1002 用">
 
 ```yaml
 
@@ -870,7 +870,7 @@ config/
 ステップ5. `captive_portal`セクションの後にESPHome設定ファイルに以下のコードを追加します。このコードは画像リソースを定義し、それを表示するようにディスプレイを設定します。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="E1001 用" default>
 
 ```yaml
 image:
@@ -902,7 +902,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="E1002 用">
 
 ```yaml
 
