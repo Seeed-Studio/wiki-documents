@@ -338,10 +338,10 @@ lerobot-calibrate     --robot.type=lerobot_robot_viola --robot.port=/dev/ttyUSB1
 ```
 
 Cello:
+
 ```bash
 lerobot-calibrate     --robot.type=lerobot_robot_cello --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraicello_arm
 ```
-
 
 After running the command, you need to **manually move the robotic arm** to allow each joint to reach its **limit position**. The terminal will display the recorded range data. Once this operation is completed, press Enter.
 
@@ -367,11 +367,13 @@ lerobot-calibrate     --teleop.type=lerobot_teleoperator_bimanual_leader  --tele
 Connect `left_arm_port` to `/dev/ttyUSB1` and `right_arm_port` to `/dev/ttyUSB3`, or modify the `--robot.left_arm_port` and `--robot.right_arm_port` parameters, and then execute:
 
 Viola:
+
 ```bash
 lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_name=starai_viola  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_viola_follower
 ```
 
 Cello:
+
 ```bash
 lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_name=starai_cello  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_cello_follower
 ```
@@ -414,6 +416,7 @@ lerobot-teleoperate \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_cello \
@@ -428,6 +431,7 @@ lerobot-teleoperate \
 <summary> Dual-Arm </summary>
 
 Violin&Viola:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -442,6 +446,7 @@ lerobot-teleoperate \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -551,7 +556,6 @@ In all the following examples, replace `starai_viola` with the actual model of t
 We have added the `focus_area` hyperparameter. Since depth data that is too far away is meaningless for the robotic arm (it cannot reach or grasp objects), depth data less than or greater than the `focus_area` will be displayed in black. The default `focus_area` is (20, 600).  
 Currently, the only supported resolution is width: 640, height: 880.
 
-
 Violin&Viola:
 
 ```bash
@@ -567,6 +571,7 @@ lerobot-teleoperate \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_starai_cello \
@@ -654,6 +659,7 @@ lerobot-teleoperate \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_cello \
@@ -665,8 +671,6 @@ lerobot-teleoperate \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
 ```
-
-
 
 <details>
 <summary> Dual-Arm </summary>
@@ -689,6 +693,7 @@ lerobot-teleoperate \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-teleoperate \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -703,6 +708,7 @@ lerobot-teleoperate \
     --teleop.id=bi_starai_violin_leader \
     --display_data=true
 ```
+
 </details>
 
 :::tip
@@ -765,6 +771,7 @@ lerobot-record \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_cello \
@@ -783,11 +790,11 @@ lerobot-record \
     --dataset.single_task="Grab the black cube"
 ```
 
-
 <details>
 <summary> Dual-Arm </summary>
 
 Violin&Viola:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -810,6 +817,7 @@ lerobot-record \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -844,6 +852,7 @@ If you do not want to use the Hugging Face Hub dataset upload feature, you can c
 Not uploading to Hub:
 
 Violin&Viola:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_viola \
@@ -863,6 +872,7 @@ lerobot-record \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_cello \
@@ -881,11 +891,11 @@ lerobot-record \
     --dataset.single_task="Grab the black cube"
 ```
 
-
 <details>
 <summary> Dual-Arm </summary>
 
 Violin&Viola:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -908,6 +918,7 @@ lerobot-record \
 ```
 
 Violin&Cello:
+
 ```bash
 lerobot-record \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -968,12 +979,14 @@ Use keyboard shortcuts to control the data recording workflow:
 - Press **left arrow key (←)**: Cancel the current episode and re-record it.
 - Press **ESC**: Immediately stop the session, encode the video, and upload the dataset.
 
-
 :::tip
+
 If keyboard not work, you may need install other version of pynput.
+
 ```bash
 pip install pynput==1.6.8
 ```
+
 :::
 
 ## Replay an episode
@@ -981,6 +994,7 @@ pip install pynput==1.6.8
 Now try to replay the first episode on your robot:
 
 Viola:
+
 ```bash
 lerobot-replay \
     --robot.type=lerobot_robot_viola \
@@ -991,6 +1005,7 @@ lerobot-replay \
 ```
 
 Cello:
+
 ```bash
 lerobot-replay \
     --robot.type=lerobot_robot_cello \
@@ -1000,11 +1015,11 @@ lerobot-replay \
     --dataset.episode=1 # choose the episode you want to replay
 ```
 
-
 <details>
 <summary> Dual-Arm </summary>
 
 Viola:
+
 ```bash
 lerobot-replay \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -1015,7 +1030,9 @@ lerobot-replay \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode=0 # choose the episode you want to replay
 ```
+
 Cello:
+
 ```bash
 lerobot-replay \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -1034,6 +1051,7 @@ lerobot-replay \
 To train a policy to control your robot, here is an example command:
 
 Viola:
+
 ```bash
 lerobot-train \
   --dataset.repo_id=starai/record-test \
@@ -1047,6 +1065,7 @@ lerobot-train \
 ```
 
 Cello:
+
 ```bash
 lerobot-train \
   --dataset.repo_id=starai/record-test \
@@ -1059,11 +1078,11 @@ lerobot-train \
   --steps=200000
 ```
 
-
 <details>
 <summary> Dual-Arm </summary>
 
 Viola:
+
 ```bash
 lerobot-train \
   --dataset.repo_id=starai/record-test_bi_arm \
@@ -1077,6 +1096,7 @@ lerobot-train \
 ```
 
 Cello:
+
 ```bash
 lerobot-train \
   --dataset.repo_id=starai/record-test_bi_arm \
@@ -1088,6 +1108,7 @@ lerobot-train \
   --policy.repo_id=starai/my_policy \
   --steps=200000
 ```
+
 </details>
 
 1. `policy.type` supports input `diffusion,pi0,pi0fast`
@@ -1098,6 +1119,7 @@ lerobot-train \
 Resume training from a specific checkpoint.
 
 Viola:
+
 ```bash
 lerobot-train \
   --config_path=outputs/train/act_viola_test/checkpoints/last/pretrained_model/train_config.json \
@@ -1106,14 +1128,13 @@ lerobot-train \
 ```
 
 Cello:
+
 ```bash
 lerobot-train \
   --config_path=outputs/train/act_cello_test/checkpoints/last/pretrained_model/train_config.json \
   --resume=true \
   --steps=400000
 ```
-
-
 
 <details>
 <summary>If Training [SmolVLA policy](https://huggingface.co/docs/lerobot/smolvla) command: </summary>
@@ -1237,6 +1258,7 @@ lerobot-eval \
 Run the following command to record 10 evaluation episodes:
 
 Viola:
+
 ```bash
 lerobot-record  \
   --robot.type=lerobot_robot_viola \
@@ -1254,6 +1276,7 @@ lerobot-record  \
 ```
 
 Cello:
+
 ```bash
 lerobot-record  \
   --robot.type=lerobot_robot_cello \
@@ -1274,6 +1297,7 @@ lerobot-record  \
 <summary> Dual-Arm </summary>
 
 Viola:
+
 ```bash
 lerobot-record  \
     --robot.type=lerobot_robot_bimanual_follower \
@@ -1289,6 +1313,7 @@ lerobot-record  \
 ```
 
 Cello:
+
 ```bash
 lerobot-record  \
     --robot.type=lerobot_robot_bimanual_follower \
