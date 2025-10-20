@@ -24,6 +24,17 @@ const PdfDownloadButton: React.FC<PdfDownloadButtonProps> = ({ className }) => {
       pdfButton.remove();
     }
 
+    //get page title
+    const pageTitle = document.querySelector('h1')?.textContent || 
+                     document.querySelector('article h1')?.textContent || 
+                     document.title;
+
+    const currentDate = new Date().toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+
     const printWindow = window.open('', '_blank', 'width=800,height=600');
     
     if (!printWindow) {
@@ -94,7 +105,36 @@ const PdfDownloadButton: React.FC<PdfDownloadButtonProps> = ({ className }) => {
           </style>
         </head>
         <body>
-          ${printContent.innerHTML}
+          <!-- PDF Header -->
+          <div class="pdf-header">
+            <div class="pdf-header-left">
+              <span class="pdf-company-name">Seed Studio</span>
+            </div>
+            <div class="pdf-header-center">
+              ${pageTitle}
+            </div>
+            <div class="pdf-header-right">
+              ${currentDate}
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="pdf-content">
+            ${printContent.innerHTML}
+          </div>
+
+          <!-- PDF Footer -->
+          <div class="pdf-footer">
+            <div class="pdf-footer-left">
+              <span class="pdf-company-name">Seed Studio</span>
+            </div>
+            <div class="pdf-footer-center">
+              ${pageTitle}
+            </div>
+            <div class="pdf-footer-right">
+              ${currentDate}
+            </div>
+          </div>
         </body>
       </html>
     `);
