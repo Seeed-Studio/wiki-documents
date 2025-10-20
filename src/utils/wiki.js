@@ -1,6 +1,20 @@
 const docList = [
   [
     {
+      "path": "/visual_trigger_and_ai_flash",
+      "image": "http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp",
+      "title": "Flashing AI Models on the SenseCAP Watcher",
+      "date": "10/17/2025"
+    },
+    {
+      "path": "/deploy_visual_perception_engine_recomputer",
+      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/video_demo_preview.gif",
+      "title": "Efficient Multi-Task Vision Inference Engine Deployment on Jetson",
+      "date": "2025-10-13T00:00:00.000Z"
+    }
+  ],
+  [
+    {
       "path": "/pycuvslam_recomputer_robotics",
       "image": "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/rgb_homepage.gif",
       "title": "PyCuVSLAM with reComputer",
@@ -15,9 +29,9 @@ const docList = [
   ],
   [
     {
-      "path": "/e04_with_platformio",
+      "path": "/ee04_with_platformio",
       "image": "https://files.seeedstudio.com/wiki/Epaper/EE04/pio_show_1.webp",
-      "title": "XIAO ePaper Display Board EE04 with PlatfromIO",
+      "title": "XIAO ePaper Display Board(ESP32-S3) EE04 with PlatfromIO",
       "date": "10/10/2025"
     },
     {
@@ -67,20 +81,6 @@ const docList = [
       "image": "https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp",
       "title": "Getting Started with XIAO ePaper Display EE04",
       "date": "09/25/2025"
-    }
-  ],
-  [
-    {
-      "path": "/xiao_nrf54l15_sense_micropython",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_1.webp",
-      "title": "MicroPython for Seeed Studio XIAO nRF54L15 Sense",
-      "date": "9/23/2025"
-    },
-    {
-      "path": "/xiao_nrf54l15_sense_matter",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.webp",
-      "title": "Seeed Studio XIAO nRF54L15 Matter",
-      "date": "9/22/2025"
     }
   ]
 ];
