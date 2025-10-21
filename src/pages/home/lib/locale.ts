@@ -11,8 +11,8 @@ export const LOCALE_PREFIX: Record<Locale, string> = {
 
 const KNOWN_PREFIXES = Object.values(LOCALE_PREFIX).filter(Boolean);
 
-// 这些路径暂时只有英文文档，不要自动拼接语言前缀
-const EN_ONLY_PATHS = new Set(['/contributors', '/ranger']);
+// 如需指定仅提供英文内容的页面，请在此列表补充路径；当前保持为空以启用完整本地化。
+const EN_ONLY_PATHS = new Set<string>(['/contributors', '/ranger']);
 
 function normalizePath(path: string): string {
   if (!path) return '/';
