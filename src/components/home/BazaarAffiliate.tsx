@@ -12,7 +12,7 @@ const imageMap: Record<string, string> = {
   'bazaar_affiliate_banner.png': affiliateBanner,
 };
 
-// 极小 I18N：主标题与三个 Tab 文案（按各语言习惯微调）
+// 主标题与三个 Tab 文案（按各语言习惯微调）
 const I18N_HEADER_TABS = {
   en: { header: 'Get Involved', tabs: { contributor: 'Contributors', ranger: 'Rangers', affiliate: 'Creator & Affiliate' } },
   cn: { header: '加入我们',       tabs: { contributor: '贡献者',          ranger: '社区大使',                 affiliate: '创作者与推广' } },

@@ -1,4 +1,50 @@
 window.onload = function () {
+  const announcementTranslations = {
+    en: `Collaborate with Seeed - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">Creator</a>, <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Ranger</a>, or <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Contributor</a>, there is always a role ideal for you!`,
+    cn: `与 Seeed 合作 - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">创作者</a>、<a target="_blank" href="https://wiki.seeedstudio.com/ranger/">社区大使</a>， <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">贡献者</a>，总有一个角色适合你！`,
+    ja: `Seeed と協力しましょう - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">クリエイター</a>、<a target="_blank" href="https://wiki.seeedstudio.com/ranger/">コミュニティアンバサダー</a>、または <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">コントリビューター</a>、あなたにぴったりの役割がきっと見つかります！`,
+    es: `Colabora con Seeed - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">Creadores</a>, <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Embajador/a de la comunidad</a> o <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Colaboradores</a>, siempre hay un rol ideal para ti.`,
+  };
+
+  function getLocaleFromPath(pathname) {
+    if (pathname === '/cn' || pathname.startsWith('/cn/')) {
+      return 'cn';
+    }
+    if (pathname === '/ja' || pathname.startsWith('/ja/')) {
+      return 'ja';
+    }
+    if (pathname === '/es' || pathname.startsWith('/es/')) {
+      return 'es';
+    }
+    return 'en';
+  }
+
+  function updateAnnouncementBar() {
+    const el = document.getElementById('announcement-text');
+    if (!el) {
+      return;
+    }
+    const locale = getLocaleFromPath(window.location.pathname || '/');
+    const html = announcementTranslations[locale] || announcementTranslations.en;
+    el.innerHTML = html;
+  }
+
+  updateAnnouncementBar();
+
+  ['pushState', 'replaceState'].forEach((method) => {
+    const original = history[method];
+    history[method] = function () {
+      const result = original.apply(this, arguments);
+      setTimeout(updateAnnouncementBar, 0);
+      return result;
+    };
+  });
+
+  window.addEventListener('popstate', function () {
+    setTimeout(updateAnnouncementBar, 0);
+  });
+
+
   // sidebar location
   setTimeout(() => {
     const list = document.querySelectorAll('.menu__link--active')

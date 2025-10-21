@@ -73,7 +73,6 @@ function localizeHref(href: string, locale: Locale) {
 
 // ---------------------------------------------------------------------------
 
-// ---------- 文案（最小替换：banner & Tech Support 两处） ----------
 import en from './locales/en/home.json';
 import cn from './locales/cn/home.json';
 import ja from './locales/ja/home.json';
@@ -114,7 +113,7 @@ function Caret({ up, ...rest }: { up?: boolean } & React.SVGProps<SVGSVGElement>
   );
 }
 
-// ✅ 仅新增 locale prop，用于显示右侧徽标（EN/CN/JA/ES）
+// 显示右侧徽标（EN/CN/JA/ES）
 function GettingStartedSplit({ mainLink, text, locale }: { mainLink: string; text: string; locale: Locale; }) {
   const [coords, setCoords] = useState<{ left: number; top: number; width: number }>({ left: 0, top: 0, width: 0 });
   const wrapRef = useRef<HTMLDivElement | null>(null);
@@ -200,7 +199,7 @@ function GettingStartedSplit({ mainLink, text, locale }: { mainLink: string; tex
           onClick={onToggleClick}
         >
           <GlobeIconSky style={{ width: '1.2em', height: '1.2em', display: 'block', flex: '0 0 auto' }} />
-          {/* 这里原本是硬编码 EN —— 现在根据当前 locale 显示 EN/CN/JA/ES */}
+          {/* 根据当前 locale 显示 EN/CN/JA/ES */}
           <span style={{ fontWeight: 700, lineHeight: 1 }}>{LOCALE_BADGE[locale]}</span>
           <Caret up={open} style={{ width: '1em', height: '1em', display: 'block', flex: '0 0 auto' }} />
         </span>
