@@ -9,7 +9,7 @@ interface PdfDownloadButtonProps {
 const PdfDownloadButton: React.FC<PdfDownloadButtonProps> = ({ className }) => {
   const location = useLocation();
 
-  const handleDownloadPdf = () => {
+  const handleDownloadPdf = async () => {
     // clean print version for the page
     const printContent = document.querySelector('article')?.cloneNode(true) as HTMLElement;
     
@@ -54,6 +54,25 @@ const PdfDownloadButton: React.FC<PdfDownloadButtonProps> = ({ className }) => {
         }
       })
       .join('\n');
+
+    // Load logo as data URL
+    const toDataUrl = async (url: string): Promise<string> => {
+      try {
+        const resp = await fetch(url);
+        if (!resp.ok) return '';
+        const blob = await resp.blob();
+        return await new Promise<string>((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onloadend = () => resolve(reader.result as string);
+          reader.onerror = reject;
+          reader.readAsDataURL(blob);
+        });
+      } catch (err) {
+        return '';
+      }
+    };
+
+    const logoDataUrl = await toDataUrl(`${window.location.origin}/assets/index/docsImage.png`);
 
     printWindow.document.write(`
       <!DOCTYPE html>
@@ -105,35 +124,9 @@ const PdfDownloadButton: React.FC<PdfDownloadButtonProps> = ({ className }) => {
           </style>
         </head>
         <body>
-          <!-- PDF Header -->
-          <div class="pdf-header">
-            <div class="pdf-header-left">
-              <span class="pdf-company-name">Seed Studio</span>
-            </div>
-            <div class="pdf-header-center">
-              ${pageTitle}
-            </div>
-            <div class="pdf-header-right">
-              ${currentDate}
-            </div>
-          </div>
-
           <!-- Main Content -->
           <div class="pdf-content">
             ${printContent.innerHTML}
-          </div>
-
-          <!-- PDF Footer -->
-          <div class="pdf-footer">
-            <div class="pdf-footer-left">
-              <span class="pdf-company-name">Seed Studio</span>
-            </div>
-            <div class="pdf-footer-center">
-              ${pageTitle}
-            </div>
-            <div class="pdf-footer-right">
-              ${currentDate}
-            </div>
           </div>
         </body>
       </html>

@@ -1,103 +1,31 @@
 @media print {
   @page {
-    margin: 1in 0.75in;
-    @top-left {
-      content: element(pdf-header-left);
-    }
-    @top-center {
-      content: element(pdf-header-center);
-    }
-    @top-right {
-      content: element(pdf-header-right);
-    }
-    @bottom-left {
-      content: element(pdf-footer-left);
-    }
-    @bottom-center {
-      content: element(pdf-footer-center);
-    }
-    @bottom-right {
-      content: element(pdf-footer-right);
-    }
+    margin: 0.75in 0.5in;
+  }
+  
+  /* Hide first page completely */
+  @page :first {
+    display: none;
   }
 
-  .pdf-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    border-bottom: 2px solid #3ECC5F;
-    background: white;
-    font-size: 12px;
-    z-index: 1000;
-  }
-
-  .pdf-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    border-top: 2px solid #3ECC5F;
-    background: white;
-    font-size: 12px;
-    z-index: 1000;
-  }
-
-  .pdf-header-left,
-  .pdf-footer-left {
-    display: flex;
-    align-items: center;
-    flex: 1;
-  }
-
-  .pdf-header-center,
-  .pdf-footer-center {
-    flex: 2;
-    text-align: center;
-    font-weight: bold;
-    font-size: 14px;
-  }
-
-  .pdf-header-right,
-  .pdf-footer-right {
-    flex: 1;
-    text-align: right;
-    font-size: 11px;
-    color: #666;
-  }
-
-  .pdf-company-name {
-    font-weight: bold;
-    color: #3ECC5F;
-    font-size: 13px;
-  }
 
   body {
-    margin-top: 80px !important;
-    margin-bottom: 80px !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .pdf-content {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin: 0;
     padding: 20px;
+    page-break-before: avoid;
+  }
+  
+  .pdf-content > *:first-child {
+    page-break-before: avoid !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 
-  .pdf-header,
-  .pdf-footer {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
 
   .pdf-content > * {
     page-break-inside: avoid;
