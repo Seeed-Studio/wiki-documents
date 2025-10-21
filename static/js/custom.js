@@ -1,4 +1,4 @@
-window.onload = function () {
+function initCustomScripts() {
   const announcementTranslations = {
     en: `Collaborate with Seeed - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">Creator</a>, <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Ranger</a>, or <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Contributor</a>, there is always a role ideal for you!`,
     cn: `与 Seeed 合作 - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">创作者</a>、<a target="_blank" href="https://wiki.seeedstudio.com/ranger/">社区大使</a>， <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">贡献者</a>，总有一个角色适合你！`,
@@ -19,31 +19,57 @@ window.onload = function () {
     return 'en';
   }
 
+  let announcementObserver = null;
+
   function updateAnnouncementBar() {
     const el = document.getElementById('announcement-text');
     if (!el) {
-      return;
+      return false;
     }
     const locale = getLocaleFromPath(window.location.pathname || '/');
     const html = announcementTranslations[locale] || announcementTranslations.en;
-    el.innerHTML = html;
+    if (el.innerHTML !== html) {
+      el.innerHTML = html;
+    }
+    return true;
   }
 
-  updateAnnouncementBar();
+  function ensureAnnouncementBar() {
+    if (updateAnnouncementBar()) {
+      if (announcementObserver) {
+        announcementObserver.disconnect();
+        announcementObserver = null;
+      }
+      return;
+    }
+
+    if (!announcementObserver) {
+      announcementObserver = new MutationObserver(() => {
+        if (updateAnnouncementBar()) {
+          if (announcementObserver) {
+            announcementObserver.disconnect();
+            announcementObserver = null;
+          }
+        }
+      });
+      announcementObserver.observe(document.body, { childList: true, subtree: true });
+    }
+  }
+
+  ensureAnnouncementBar();
 
   ['pushState', 'replaceState'].forEach((method) => {
     const original = history[method];
     history[method] = function () {
       const result = original.apply(this, arguments);
-      setTimeout(updateAnnouncementBar, 0);
+      setTimeout(ensureAnnouncementBar, 0);
       return result;
     };
   });
 
   window.addEventListener('popstate', function () {
-    setTimeout(updateAnnouncementBar, 0);
+    setTimeout(ensureAnnouncementBar, 0);
   });
-
 
   // sidebar location
   setTimeout(() => {
@@ -111,3 +137,8 @@ window.onload = function () {
   }
 }
 
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCustomScripts, { once: true })
+} else {
+  initCustomScripts()
+}
