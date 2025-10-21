@@ -20,7 +20,6 @@ import IndexBrowseBy from '../../components/home/browseBy'
 import { judgeHomePath } from '../../utils/jsUtils'
 // import { useThemeConfig,useColorMode} from '@docusaurus/theme-common';
 const getIndexImage = (src) => {
-  // 路径从 /pages 移到 /pages/home，故向上多一层
   return src && require(`../../../assets/index/${src}`).default;
 }
 
