@@ -1,10 +1,10 @@
-import React, {useMemo} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import ThemedImage from '@theme/ThemedImage';
-import {useThemeConfig} from '@docusaurus/theme-common';
+import {useColorMode, useThemeConfig} from '@docusaurus/theme-common';
 import {useLocation} from '@docusaurus/router';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
 // 支持的语言路径前缀，保持与站点实际启用的语言一致
 const LOCALE_PREFIXES = ['/cn', '/ja', '/es'] as const;
@@ -29,35 +29,48 @@ type LogoConfig = {
   style?: React.CSSProperties;
 };
 
-// 封装主题图像渲染，保留官方主题的浅色/深色切换能力
+// 封装 Logo 图片的主题切换，避免初次渲染时的浅色/深色闪烁
 function LogoThemedImage({
   logo,
   alt,
   imageClassName,
+  defaultMode,
 }: {
   logo: LogoConfig;
   alt: string;
   imageClassName?: string;
+  defaultMode: 'light' | 'dark';
 }) {
-  const sources = {
-    light: useBaseUrl(logo.src),
-    dark: useBaseUrl(logo.srcDark || logo.src),
-  };
-  const themedImage = (
-    <ThemedImage
+  const lightSrc = useBaseUrl(logo.src);
+  const darkSrc = useBaseUrl(logo.srcDark || logo.src);
+  const {colorMode} = useColorMode();
+
+  const [resolvedMode, setResolvedMode] = useState<'light' | 'dark'>(() => {
+    if (ExecutionEnvironment.canUseDOM) {
+      const themeAttr = document.documentElement.getAttribute('data-theme');
+      return themeAttr === 'dark' ? 'dark' : 'light';
+    }
+    return defaultMode;
+  });
+
+  useEffect(() => {
+    setResolvedMode(colorMode === 'dark' ? 'dark' : 'light');
+  }, [colorMode]);
+
+  const image = (
+    <img
       className={logo.className}
-      sources={sources}
+      src={resolvedMode === 'dark' ? darkSrc : lightSrc}
+      alt={alt}
       height={logo.height}
       width={logo.width}
-      alt={alt}
       style={logo.style}
+      loading="eager"
+      decoding="async"
     />
   );
-  return imageClassName ? (
-    <div className={imageClassName}>{themedImage}</div>
-  ) : (
-    themedImage
-  );
+
+  return imageClassName ? <div className={imageClassName}>{image}</div> : image;
 }
 
 type LogoProps = {
@@ -76,6 +89,7 @@ export default function Logo({
   } = useDocusaurusContext();
   const {
     navbar: {title: navbarTitle, logo},
+    colorMode: themeColorMode,
   } = useThemeConfig();
   const location = useLocation();
 
@@ -103,6 +117,7 @@ export default function Logo({
           logo={logo as LogoConfig}
           alt={alt}
           imageClassName={imageClassName}
+          defaultMode={themeColorMode?.defaultMode === 'dark' ? 'dark' : 'light'}
         />
       )}
       {navbarTitle != null && <b className={titleClassName}>{navbarTitle}</b>}
