@@ -228,7 +228,7 @@ The following sample demos guide you through the process of deploying and custom
 
 ### Demo 1 — Gun Detection Alert
 
-This demo shows how to build a Node-RED flow that listens for gun detection events from Frigate via MQTT, then triggers real-time alerts both on a dashboard and through webhook notifications.
+This demo shows how to build a Node-RED flow that listens for gun detection events from **Frigate** via **MQTT**, then triggers *real-time alerts* both on a dashboard and through webhook notifications.
 
 #### Data Pipeline
 
@@ -241,17 +241,22 @@ Frigate (detect gun) → MQTT (publish) → Node-RED (filter/alert) → Dashboar
 
 #### Node-RED Flow Setup
 
-You can import the flow configuration directly into your Node-RED editor using the provided [gist flow.json](https://gist.github.com/Love4yzp/2fccdfa6a2d8e64e2740cd566b9b991c).
+You can import the sample flow directly into your Node-RED editor using the provided flow configuration file ([gist flow.json](https://gist.github.com/Love4yzp/2fccdfa6a2d8e64e2740cd566b9b991c)).
 
-> Adjust the IP address and webhook URL in the flow to match your Frigate setup and notification endpoint.
+> **Note:** Update the IP address and webhook URL in the flow to match your Frigate instance and notification endpoint.
+
+The dashboard entry path is configured as `/frigate`.
+Access the dashboard at: `http://<your_jetson_ip>:1880/dashboard/frigate`
+
+For example: `http://192.168.101.100:1880/dashboard/frigate`.
 
 #### Flow Overview
 
-- MQTT Listener – Subscribes to the topic (e.g., frigate/reviews) to receive detection events.
-- Event Filter – Filters incoming messages to pass through only those labeled as “gun.”
+- MQTT Listener – Subscribes to a specified topic (e.g., frigate/reviews) to receive detection events.
+- Event Filter – Passes through only events labeled as “gun.”
 - Alert Builder – Constructs a detailed alert message including a thumbnail, timestamp, and counter.
 - Dashboard Update – Updates the dashboard with the latest image, event history, and detection counters.
-- Webhook Notification – Sends POST requests to external endpoints such as Enterprise WeChat, Slack, or custom APIs.
+- Webhook Notification – Sends HTTP POST requests to external endpoints, such as Telegram bot, Slack, or custom APIs.
 
 #### Results
 
@@ -259,9 +264,9 @@ You can import the flow configuration directly into your Node-RED editor using t
   <img class="img-responsive" width="680" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/frigateevents.png" alt="Frigate event visualization"/>
 </div>
 
-After setting up this flow, Node-RED will automatically respond to Frigate’s gun detection events by updating your dashboard and sending immediate webhook notifications.
+After setting up this flow, **Node-RED** will automatically respond to **Frigate’s gun detection events** by updating your dashboard and sending immediate webhook notifications.
 
-You can proceed to the [Frigate Configuration section](#frigate-config) to learn how to set up the detection parameters.
+Proceed to the [Frigate Configuration section](#frigate-config) for instructions on setting up the detection parameters.
 
 ## Default Frigate Config {#frigate-config}
 
