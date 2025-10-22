@@ -1,663 +1,569 @@
 ---
-description: This project provides real-time gun detection capabilities via Frigate-on-Jetson
-title: Frigate on Jetson with Node-RED Gun Alerts
+description: Edge AI gun detection system based on Frigate-on-Jetson and Node-RED, supporting Jetson and reComputer R2000 (Hailo) platforms.
+title: AI Gun Detection Solution for Real-Time Edge Alerts
 image: https://files.seeedstudio.com/wiki/solution/crowd_tracking/Node-RED%20Gun%20Alerts1.webp
 slug: /solutions/frigate-on-jetson-nodered-gun-alerts
 last_update:
-  date: 09/05/2025
-  author: lian
+  date: 10/22/2025
+  author: Spencer Y
 ---
 
-This project provides real-time gun detection capabilities via Frigate-on-Jetson, combined with Node-RED to build a visual alert and notification system, enabling automatic threat detection, event alerts, and historical traceability in secured areas.  
+:::note[Notice]
+This project is provided **for educational and demonstration purposes only**.  
+If you intend to deploy it in a real environment, please **ensure compliance with local regulations** and obtain **any required authorizations** before doing so.
+:::
 
-> ⚠️ **Compliance Notice**  
-> This system is only intended for defensive security purposes. Users must ensure compliance with local laws and regulations and obtain relevant monitoring permits.  
+## Overview
 
----
+The Frigate + Node-RED Gun Detection Solution is an edge AI video analytics stack that detects firearms in live camera streams and orchestrates alerting, review, and integrations. Built for privacy-preserving, low‑latency deployments on **AI Boxes**, the NVIDIA **Jetson** series and **reComputer R2000**, it combines an optimized detection engine (Frigate) with a visual automation layer (Node‑RED) and optional LLM‑assisted review.
 
-## 📘 1. System Overview  
+<div align="center">
+  <img class='img-responsive' width={680} src="https://cc.seeedstudio.com/wp-content/uploads/2025/09/archi_2-1.png" alt="solution diagram"/>
+</div>
 
-- Detection Engine: Frigate-on-Jetson (based on YOLOv4-tiny-288 gun detection model, accelerated by TensorRT)  
-- Event Flow: MQTT message push → Node-RED processing  
-- Alert Channels: Node-RED Dashboard real-time alert panel + Webhook push  
-- Hardware Platform: NVIDIA Jetson series (Nano, Xavier, Orin)  
+It delivers a complete AI NVR[^nvr] experience that:
 
-## 🏗️ 2. System Architecture  
+- Detects firearms from live RTSP/HTTP streams in real time.  
+- Automates event alerts, logging, and notifications.  
+- Operates locally to ensure privacy, low latency, and reliability.  
 
-<div style={{textAlign:'center'}}><img  alt="Configuration" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/Architecture%20Diagram.png"/></div>
-- Frigate analyzes real-time video streams and publishes gun detection events to MQTT topics.  
-- Node-RED subscribes to topics such as `frigate/reviews`, parses, logs, and forwards gun events.  
-- The frontend Dashboard displays the latest alert frames and historical records.  
-- Webhook provides instant message push to any platform.  
+[^nvr]: AI NVRs leverage advanced machine learning models to provide **real-time insights and automation capabilities**, while traditional NVRs primarily focus on recording and storing video footage.
+`
 
-## ⚙️ 3. Installation & Deployment
+Follow this guide to deploy the solution if your device isn’t from Seeed’s bundle or you’d like to tailor it to your own setup.
 
-## 3.1 Frigate-on-Jetson Installation
+<table class="table-center">
+  <tr>
+      <th>Campus Safety Management</th>
+  </tr>
+  <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://cc.seeedstudio.com/wp-content/uploads/2025/08/scene_3.png" style={{width:480, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://cc.seeedstudio.com/solutions/campus-safety-management" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Solution Bundle 🖱️</font></span></strong>
+      </a>
+    </div></td>
+  </tr>
+</table>
 
-**GitHub Repository:** [Seeed-Studio/frigate-on-jetson](https://github.com/Seeed-Studio/frigate-on-jetson)
+## Features
 
-### 3.1.1 Environment Requirements
+Traditional NVRs rely on human monitoring, which is slow, inconsistent, and hard to scale. This solution addresses these challenges by focusing on measurable outcomes that deliver immediate value.
+<div class="info-section">
+    <ul class="info-list">
+        <li class="info-item">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <div class="info-content">
+                <h3>Faster Response Time</h3>
+                <p>Achieve instant situational awareness with automated alerts and real-time dashboards, bypassing the delays of manual monitoring.</p>
+            </div>
+        </li>
+        <li class="info-item">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg>
+            </div>
+            <div class="info-content">
+                <h3>Lower False Positives</h3>
+                <p>Utilize optional LLM-assisted verification to intelligently review alerts, significantly reducing false alarms and focusing operator attention.</p>
+            </div>
+        </li>
+        <li class="info-item">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+            </div>
+            <div class="info-content">
+                <h3>Data Sovereignty & Privacy</h3>
+                <p>All inference and data processing happens on-premise with no cloud dependency, ensuring complete data privacy and control.</p>
+            </div>
+        </li>
+        <li class="info-item">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" /></svg>
+            </div>
+            <div class="info-content">
+                <h3>Scalable Multi-Stream Support</h3>
+                <p>Leverage powerful hardware decoding on Jetson and Hailo platforms to monitor multiple camera streams concurrently without performance loss.</p>
+            </div>
+        </li>
+    </ul>
+</div>
 
-- NVIDIA Jetson devices (Nano, Xavier, Orin)  
-- Ubuntu 22.04 + JetPack 6.x  
+## System Architecture
 
-### 3.1.2 One-Click Installation
+The solution is composed of several key modules that work in concert:
+
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/Architecture%20Diagram.png" alt="system architecture"/>
+</div>
+
+- **Frigate** processes live video and publishes detection events via MQTT.
+- **Node-RED** subscribes to these events, orchestrates alerting workflows, and updates the dashboard.
+- **Real-time Dashboard** provides visual monitoring, event review, and system configuration.
+- **Webhooks** enable integration with any third-party systems for notifications and data export.
+
+## Deployment Guide
+
+### Prerequisites
+
+- **AI Boxes/Edge Hardware:** reComputer J3011/J4012 (Jetson Nano/Xavier/Orin Series).
+- **Network Cameras:** RTSP/HTTP streams accessible on the same network.
+- Basic familiarity with Docker, Node-RED, and Frigate configuration.
+
+<!-- 
+This is a ready-to-use AI NVR solution that unifies hardware and software.
+
+- Pre-installed **Frigate** detection engine with a baseline gun model.  
+- Built-in **Node-RED Dashboard** for alert visualization and event management.  
+- Web-based access — configure RTSP streams and start monitoring immediately.   -->
+
+In this page, we'll use the **reComputer J4012 (Jetson Orin™ NX 16GB)** as an example platform. However, the steps are similar for other supported hardware.
+
+### Step 1: Frigate Installation
+
+:::note[Notice]
+Run the following command to install `curl` if it is not already installed:
 
 ```bash
+sudo apt update && sudo apt install -y curl
+```
+
+⚠️ Do not run `sudo apt upgrade`, as it may break Jetson-specific dependencies.
+:::
+
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/Seeed-Studio/frigate-on-jetson" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}>frigate-on-jetson</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div><br />
+
+Use the pre-configured one-click installation script to deploy **Frigate** automatically on your Jetson device.
+
+```shell
 curl -sSL https://raw.githubusercontent.com/Seeed-Studio/frigate-on-jetson/main/install.sh | bash
 ```
 
-### 3.1.3 Access Web Interface
+Once the installation is complete, open your browser and visit `http://<your_jetson_ip>:5000` to access the Frigate web UI and configure your cameras.
 
-```cpp
-http://<JETSON_IP>:5000
-```
+If it didn't work, check if you have lack of permission to run Docker without `sudo`. Refer to the [FAQ section](#docker-permission-denied) for troubleshooting steps. And then rerun the command above.
 
-### 3.1.4 Running Effect Screenshots
+<div style={{textAlign:'center'}}>
+  <img alt="Frigate Homepage" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/homepage%20demo.png" />
+</div>
 
-- Homepage view:Default configuration includes two local videos for demonstration
+On NodeRED, we will subscribe to Frigate's MQTT topics to receive detection events and orchestrate alerting workflows. You can refer to the [Frigate MQTT documentation](https://docs.frigate.video/integrations/mqtt) for more details on the available topics and payloads.
 
-<div style={{textAlign:'center'}}><img  alt="Configuration" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/homepage%20demo.png"/></div>
-- Debugging interface showing detection effect
-<div style={{textAlign:'center'}}><img  alt="Configuration" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/test%20demo.png"/></div>
+### Step 2: Node-RED Setup
 
-## 🟢 3.2 Node-RED Installation
+We use NodeRED as the orchestration layer to handle programming.
 
-### 3.2.1 Docker Deployment
+#### Node-RED Installation
+
+If you haven't installed Node-RED yet, follow the steps below to set it up on your Jetson device.
+
+Run Node-RED in a container with the following command:
 
 ```bash
 sudo docker run -d --restart=always -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
 ```
 
-### 3.2.2 Access Web Interface
+After the container starts, open your browser and visit `http://<your_jetson_ip>:1880` to access the Node-RED editor.
 
-```cpp
-http://<JETSON_IP>:1880/
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/security/nodered-panel.png" alt="nodered-panel"/>
+</div>
+
+#### Node Installation
+
+Before we begin, make sure to install the following Node-RED nodes from the "Manage palette" option in the Node-RED editor:
+
+- `node-red-dashboard` for building the simple fronted dashboard.
+
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/security/nodered-install-dashboard.png" alt="nodered-install-dashboard"/>
+</div>
+
+## Applications
+
+In environments such as campuses, transportation hubs, industrial parks, and public venues, operators need instant response to firearm risks. This solution is designed for:
+
+<div class="info-section">
+    <ul class="info-list">
+        <li class="info-item">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 12.75a.75.75 0 100-1.5.75.75 0 000 1.5z" /><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 15a.75.75 0 100-1.5.75.75 0 000 1.5z" /></svg>
+            </div>
+            <div class="info-content">
+                <h3>Campus & Education</h3>
+                <p>Enable proactive alerts for security teams and facilitate rapid incident review with logged event data and snapshots.</p>
+            </div>
+        </li>
+        <li class="info-item">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-1.875a3.375 3.375 0 013.375-3.375h9.75a3.375 3.375 0 013.375 3.375v1.875m-17.25 4.5h16.5M5.625 13.5a1.875 1.875 0 10-3.75 0 1.875 1.875 0 003.75 0zm12.75 0a1.875 1.875 0 10-3.75 0 1.875 1.875 0 003.75 0z" /></svg>
+            </div>
+            <div class="info-content">
+                <h3>Public Transport Hubs</h3>
+                <p>Deploy multi-camera monitoring across stations and integrate alerts directly into a Security Operations Center (SOC) via webhooks.</p>
+            </div>
+        </li>
+        <li class="info-item">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402a3.75 3.75 0 00-.625-6.25a3.75 3.75 0 00-6.25-.625l-6.402 6.401a3.75 3.75 0 000 5.304m7.496-9.191a3.75 3.75 0 015.304 0l6.401 6.402a3.75 3.75 0 010 5.304l-6.401 6.402a3.75 3.75 0 01-5.304 0l-6.401-6.402a3.75 3.75 0 010-5.304l6.401-6.402z" /></svg>
+            </div>
+            <div class="info-content">
+                <h3>Industrial Parks & Logistics</h3>
+                <p>Secure perimeters, access points, and sensitive zones with automated monitoring that never gets tired or distracted.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<br />
+
+The following sample demos guide you through the process of deploying and customizing the solution.
+
+### Demo 1 — Gun Detection Alert
+
+This demo shows how to build a Node-RED flow that listens for gun detection events from Frigate via MQTT, then triggers real-time alerts both on a dashboard and through webhook notifications.
+
+#### Data Pipeline
+
+Frigate (detect gun) → MQTT (publish) → Node-RED (filter/alert) → Dashboard + Webhook
+
+<div align="center">
+  <img class="img-responsive" width="680" src="https://files.seeedstudio.com/wiki/solution/security/nodered-sample-gun-shot.png" alt="Node-RED gun detection sample"/>
+  <br/>
+</div>
+
+#### Node-RED Flow Setup
+
+You can import the flow configuration directly into your Node-RED editor using the provided [gist flow.json](https://gist.github.com/Love4yzp/2fccdfa6a2d8e64e2740cd566b9b991c).
+
+> Adjust the IP address and webhook URL in the flow to match your Frigate setup and notification endpoint.
+
+#### Flow Overview
+
+- MQTT Listener – Subscribes to the topic (e.g., frigate/reviews) to receive detection events.
+- Event Filter – Filters incoming messages to pass through only those labeled as “gun.”
+- Alert Builder – Constructs a detailed alert message including a thumbnail, timestamp, and counter.
+- Dashboard Update – Updates the dashboard with the latest image, event history, and detection counters.
+- Webhook Notification – Sends POST requests to external endpoints such as Enterprise WeChat, Slack, or custom APIs.
+
+#### Results
+
+<div align="center">
+  <img class="img-responsive" width="680" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/frigateevents.png" alt="Frigate event visualization"/>
+</div>
+
+After setting up this flow, Node-RED will automatically respond to Frigate’s gun detection events by updating your dashboard and sending immediate webhook notifications.
+
+You can proceed to the [Frigate Configuration section](#frigate-config) to learn how to set up the detection parameters.
+
+## Default Frigate Config {#frigate-config}
+
+Quickly navigate to the Frigate configuration page at `http://<your_jetson_ip>:5000/config` to see your current setup.
+
+Frigate uses a YAML file called `config.yml` to define how it runs.
+This file tells Frigate where to find your camera streams, which AI model to use, and how to send detection results through MQTT.
+By adjusting it, you can control how objects are detected, recorded, and displayed.
+
+### Storage Location
+
+By default, Frigate stores video recordings and snapshots under: `/media/frigate` on your Jetson device.
+
+For example:
+
+```bash
+seeed@desktop:/$ docker exec -it frigate /bin/sh
+root@274103ae951b:/opt/frigate# cd /media/frigate/
+root@274103ae951b:/media/frigate# ls
+clips  exports  handgun.mp4  machinegun.mov  recordings
 ```
 
-### 3.2.3 Install Dashboard Plugin
->
-> 💡 **Tip:** The following steps will enable a simple web interface.
+If you plan to keep videos for longer periods, mount this directory to an **external SSD or network drive** to prevent your Jetson’s internal storage from filling up.
 
-- Settings page  
-- → Control Panel  
-- → Install  
-- → Search `@flowfuse/node-red-dashboard`  # 【Used to provide a simple interface】  
-- → Click Install
+### Camera Configuration
 
-## 🟠 3.3 Integration of Frigate and Node-RED
+In Frigate, each camera needs to be defined under the `cameras:` section.
+Every camera block describes where the video stream comes from and how it is decoded before being analyzed by the detection model.
 
-### 3.3.1 Pre-checks
-
-- Ensure that Frigate can be accessed normally  
-- Ensure that the MQTT service is enabled and accessible  
-- Ensure that the Node-RED service is running normally and can be accessed  
-
----
-
-### 3.3.2 Node-RED Workflow Introduction
-
-- MQTT listening (`frigate/reviews`) → Parse gun detection events  
-- Event extraction (Extract Gun Event) → Determine whether it contains gun objects  
-- Alert information construction → Thumbnail path concatenation, time formatting, counter accumulation  
-- Dashboard update → Latest image, history table, counter  
-- Webhook push → Enterprise WeChat bot  
-
-> 💡 **Tip:** The Webhook URL can be replaced with your own notification system as needed.  
-
----
-
-### 3.3.3 Node-RED Workflow JSON (Part 1/3)
-
-> ⚠️ **Important:** After importing, be sure to adjust the corresponding parameters according to the actual situation.
-
-```json
-[{
-  "id": "827a3420678b76d2",
-  "type": "tab",
-  "label": "Frigate Gun Detection",
-  "disabled": false
-}, {
-  "id": "709efb48944e7b98",
-  "type": "mqtt in",
-  "z": "827a3420678b76d2",
-  "name": "Frigate Reviews",
-  "topic": "frigate/reviews",
-  "qos": "2",
-  "datatype": "auto-detect",
-  "broker": "0f948328c1975515",
-  "nl": false,
-  "rap": false,
-  "inputs": 0,
-  "x": 80,
-  "y": 180,
-  "wires": [
-    ["28fa2bd8baf1f87b", "c840be7a3c85bf4d"]
-  ]
-}, {
-  "id": "28fa2bd8baf1f87b",
-  "type": "function",
-  "z": "827a3420678b76d2",
-  "name": "Extract Gun Event",
-  "func": "let after = msg.payload.after;\n\nif (!after || !after.data || !after.data.objects.includes(\"gun\")) {\n    return null;\n}\n\nlet count = flow.get(\"gun_count\") || 0;\ncount++;\nflow.set(\"gun_count\", count);\n\nlet history = flow.get(\"gun_history\") || [];\nhistory.unshift({\n    camera: after.camera,\n    start: new Date(after.start_time * 1000).toLocaleString(),\n    end: after.end_time ? new Date(after.end_time * 1000).toLocaleString() : \"---\",\n    thumb: \"http://192.168.118.111:5000\" + after.thumb_path.replace(\"/media/frigate\", \"\")\n});\nhistory = history.slice(0, 10);\nflow.set(\"gun_history\", history);\n\nmsg.payload = {\n    camera: after.camera,\n    start_time: new Date(after.start_time * 1000).toLocaleString(),\n    end_time: after.end_time ? new Date(after.end_time * 1000).toLocaleString() : \"---\",\n    thumb: \"http://192.168.118.111:5000\" + after.thumb_path.replace(\"/media/frigate\", \"\"),\n    url: \"http://192.168.118.111:5000\" + after.thumb_path.replace(\"/media/frigate\", \"\"),\n    count: count,\n};\n\nreturn msg;",
-  "outputs": 1,
-  "timeout": "",
-  "noerr": 0,
-  "initialize": "",
-  "finalize": "",
-  "libs": [],
-  "x": 330,
-  "y": 240,
-  "wires": [
-    ["6861bbcee3c4a09f", "bc22b4eb2e47f012", "c05e97b33779bd4a"]
-  ]
-}, {
-  "id": "319c9221c9a18dfc",
-  "type": "ui-template",
-  "z": "827a3420678b76d2",
-  "group": "g1h2i3j4k5l6m7n8",
-  "page": "",
-  "ui": "",
-  "name": "Gun Event Card",
-  "order": 2,
-  "width": "0",
-  "height": "0",
-  "format": "<template>\n  <div v-if=\"msg && msg.payload\">\n    <div v-for=\"(cam, name) in msg.payload\" :key=\"name\" style=\"margin-bottom:16px; padding:12px; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1); background:#fff;\">\n      <h3 style=\"color:#0094CE;\">摄像头：{{ name }} </h3>\n        <p style=\"font-size:14px; margin:0;\">\n          <strong>开始：</strong>{{ cam.start }}<br>\n          <strong>结束：</strong>{{ cam.end }}\n        </p>\n        <div :href=\"cam.thumb\" target=\"_blank\">\n          <img :src=\"cam.thumb\" style=\"max-width:100%; border-radius:8px; cursor: zoom-in;\" />\n        </div>\n    </div>\n  </div>\n  <div v-else>\n    <p>等待枪支检测数据...</p>\n  </div>\n</template>\n\n<script>\nexport default {\n  props: ['msg']\n}\n</script>",
-  "storeOutMessages": true,
-  "passthru": true,
-  "templateScope": "local",
-  "className": "",
-  "x": 1020,
-  "y": 100,
-  "wires": [[]]
-}, {
-  "id": "824bcb218744ed40",
-  "type": "ui-text",
-  "z": "827a3420678b76d2",
-  "group": "g1h2i3j4k5l6m7n8",
-  "order": 3,
-  "width": "0",
-  "height": "0",
-  "name": "Gun Count",
-  "label": "枪支检测次数",
-  "format": "<span style='background:#ff4d4f; color:#fff; padding:4px 12px; border-radius:12px; font-weight:bold;'>{{msg.payload.count}}</span>",
-  "layout": "",
-  "style": false,
-  "font": "",
-  "fontSize": "",
-  "color": "#000000",
-  "wrapText": false,
-  "className": "",
-  "x": 1010,
-  "y": 180,
-  "wires": []
-},
-{
-  "id": "6861bbcee3c4a09f",
-  "type": "function",
-  "z": "827a3420678b76d2",
-  "name": "Gun Count Pass",
-  "func": "msg.payload = msg.payload.count;\nreturn msg;",
-  "outputs": 1,
-  "timeout": "",
-  "noerr": 0,
-  "initialize": "",
-  "finalize": "",
-  "libs": [],
-  "x": 620,
-  "y": 180,
-  "wires": [
-    ["824bcb218744ed40"]
-  ]
-}, {
-  "id": "ab0188e1c37351c1",
-  "type": "ui-table",
-  "z": "827a3420678b76d2",
-  "group": "g1h2i3j4k5l6m7n8",
-  "name": "History Table",
-  "label": "",
-  "order": 4,
-  "width": "0",
-  "height": "0",
-  "maxrows": "5",
-  "autocols": false,
-  "showSearch": true,
-  "deselect": true,
-  "selectionType": "none",
-  "columns": [
-    {
-      "title": "摄像头",
-      "key": "camera",
-      "keyType": "key",
-      "type": "text",
-      "width": ""
-    },
-    {
-      "title": "开始",
-      "key": "start",
-      "keyType": "key",
-      "type": "text",
-      "width": ""
-    },
-    {
-      "title": "结束",
-      "key": "end",
-      "keyType": "key",
-      "width": ""
-    },
-    {
-      "title": "截图",
-      "key": "thumb",
-      "keyType": "key",
-      "type": "image",
-      "width": "",
-      "align": "start"
-    }
-  ],
-  "mobileBreakpoint": "sm",
-  "mobileBreakpointType": "defaults",
-  "action": "append",
-  "x": 1010,
-  "y": 300,
-  "wires": [[]]
-}, {
-  "id": "bc22b4eb2e47f012",
-  "type": "function",
-  "z": "827a3420678b76d2",
-  "name": "get history from flow",
-  "func": "msg.payload = flow.get(\"gun_history\") || [];\nreturn msg;",
-  "outputs": 1,
-  "timeout": 0,
-  "noerr": 0,
-  "initialize": "",
-  "finalize": "",
-  "libs": [],
-  "x": 640,
-  "y": 300,
-  "wires": [
-    ["ab0188e1c37351c1"]
-  ]
-}, {
-  "id": "c05e97b33779bd4a",
-  "type": "function",
-  "z": "827a3420678b76d2",
-  "name": "prepare msg for alert",
-  "func": "msg.payload = {\n    \"msgtype\": \"text\",\n    \"text\": {\n        \"content\": msg.payload.camera + \"检测到枪支\"\n    }\n}\nreturn msg;",
-  "outputs": 1,
-  "timeout": 0,
-  "noerr": 0,
-  "initialize": "",
-  "finalize": "",
-  "libs": [],
-  "x": 640,
-  "y": 240,
-  "wires": [
-    ["568e88e840e7b711"]
-  ]
-}, {
-  "id": "c840be7a3c85bf4d",
-  "type": "function",
-  "z": "827a3420678b76d2",
-  "name": "to cameras",
-  "func": "let after = msg.payload.after;\nif (!after || !after.data || !after.data.objects.includes(\"gun\")) return null;\n\n// 读取全局摄像头数据\nlet cameras = flow.get(\"camera_data\") || {};\n\ncameras[after.camera] = {\n    start: new Date(after.start_time*1000).toLocaleString(),\n    end: after.end_time ? new Date(after.end_time*1000).toLocaleString() : \"---\",\n    thumb: \"http://192.168.118.111:5000\" + after.thumb_path.replace(\"/media/frigate\",\"\")\n};\n\n// 存回 Flow\nflow.set(\"camera_data\", cameras);\n\n// 传给 UI 模板渲染\nmsg.payload = cameras;\nreturn msg;",
-  "outputs": 1,
-  "timeout": 0,
-  "noerr": 0,
-  "initialize": "",
-  "finalize": "",
-  "libs": [],
-  "x": 610,
-  "y": 100,
-  "wires": [
-    ["319c9221c9a18dfc"]
-  ]
-}, {
-  "id": "c2c2f98f485df73b",
-  "type": "ui-button",
-  "z": "827a3420678b76d2",
-  "group": "g1h2i3j4k5l6m7n8",
-  "name": "clear",
-  "label": "Clear All Data",
-  "order": 0,
-  "width": 0,
-  "height": 0,
-  "emulateClick": false,
-  "tooltip": "",
-  "color": "",
-  "bgcolor": "",
-  "className": "",
-  "icon": "",
-  "iconPosition": "left",
-  "payload": "{}",
-  "payloadType": "str",
-  "topic": "topic",
-  "topicType": "msg",
-  "buttonColor": "",
-  "textColor": "",
-  "iconColor": "",
-  "enableClick": true,
-  "enablePointerdown": false,
-  "pointerdownPayload": "",
-  "pointerdownPayloadType": "str",
-  "enablePointerup": false,
-  "pointerupPayload": "",
-  "pointerupPayloadType": "str",
-  "x": 110,
-  "y": 420,
-  "wires": [
-    ["1f42f64aaa7aab78"]
-  ]
-}, {
-  "id": "1f42f64aaa7aab78",
-  "type": "function",
-  "z": "827a3420678b76d2",
-  "name": "clean all data in flow",
-  "func": "flow.set(\"camera_data\", {});\nflow.set(\"gun_count\", 0);\nflow.set(\"gun_history\", []);\nreturn msg;",
-  "outputs": 1,
-  "timeout": 0,
-  "noerr": 0,
-  "initialize": "",
-  "finalize": "",
-  "libs": [],
-  "x": 320,
-  "y": 420,
-  "wires": [
-    ["22afdedff5a7e7fd", "beabb7e2f483249f", "44568dce857793da"]
-  ]
-}, {
-  "id": "22afdedff5a7e7fd",
-  "type": "function",
-  "z": "827a3420678b76d2",
-  "name": "clean history",
-  "func": "msg.payload = []\nreturn msg;",
-  "outputs": 1,
-  "timeout": 0,
-  "noerr": 0,
-  "initialize": "",
-  "finalize": "",
-  "libs": [],
-  "x": 610,
-  "y": 460,
-  "wires": [
-    ["ab0188e1c37351c1"]
-  ]
-}, {
-  "id": "beabb7e2f483249f",
-  "type": "function",
-  "z": "827a3420678b76d2",
-  "name": "clean counter",
-  "func": "msg.payload = 0\nreturn msg;",
-  "outputs": 1,
-  "timeout": 0,
-  "noerr": 0,
-  "initialize": "",
-  "finalize": "",
-  "libs": [],
-  "x": 620,
-  "y": 420,
-  "wires": [
-    ["824bcb218744ed40"]
-  ]
-}, {
-  "id": "44568dce857793da",
-  "type": "function",
-  "z": "827a3420678b76d2",
-  "name": "clean snapshot",
-  "func": "msg.payload = {}\nreturn msg;",
-  "outputs": 1,
-  "timeout": 0,
-  "noerr": 0,
-  "initialize": "",
-  "finalize": "",
-  "libs": [],
-  "x": 620,
-  "y": 380,
-  "wires": [
-    ["319c9221c9a18dfc"]
-  ]
-},
-{
-  "id": "f7641cb7c6a84d23",
-  "type": "mqtt in",
-  "z": "827a3420678b76d2",
-  "name": "",
-  "topic": "edgeai/result",
-  "qos": "2",
-  "datatype": "auto-detect",
-  "broker": "0f948328c1975515",
-  "nl": false,
-  "rap": true,
-  "rh": 0,
-  "inputs": 0,
-  "x": 90,
-  "y": 560,
-  "wires": [
-    ["c086c2dfcc39b708"]
-  ]
-}, {
-  "id": "c086c2dfcc39b708",
-  "type": "ui-template",
-  "z": "827a3420678b76d2",
-  "group": "e33e8e2eb3424d08",
-  "page": "",
-  "ui": "",
-  "name": "human tracking",
-  "order": 0,
-  "width": 0,
-  "height": 0,
-  "head": "",
-  "format": "<template>\n    <div>\n        <!-- Conditional Styling using Attribute Binding (\":\") -->\n        <!-- and rendering content inside <tags></tags> with {{ }} -->\n        <p> <span :style=\"{'color' : (count > 5 ? 'red' : 'green' )}\">Current Count: {{ msg.payload.info.person }}</span>\n            <span style=\"margin-left:20px\"><b v-if=\"msg.payload.info.person > 5\">Too many!</b> </span>\n        </p>\n        <!-- Computed Rendering using Vue Computed Variables -->\n        <p class=\"my-class\">enter: {{ msg.payload.line_crossing.enter }}</p>\n        <p class=\"my-class\">exit: {{ msg.payload.line_crossing.exit }}</p>\n        <!-- Conditional Rendering with \"v-if\" -->\n    </div>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                count: 0\n            }\n        },\n        watch: {\n            // watch for any changes of \"count\"\n            count: function () {\n                if (this.count % 5 === 0) {\n                    this.send({payload: 'Multiple of 5'})\n                }\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n            formattedCount: function () {\n                return this.count + ' Apples'\n            }\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n            increase: function () {\n                this.count++\n            }\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n    .my-class {\n        color: red;\n    }\n</style>",
-  "storeOutMessages": true,
-  "passthru": true,
-  "resendOnRefresh": true,
-  "templateScope": "local",
-  "className": "",
-  "x": 1020,
-  "y": 560,
-  "wires": [[]]
-}, {
-  "id": "568e88e840e7b711",
-  "type": "http request",
-  "z": "827a3420678b76d2",
-  "name": "bot webhook send msg",
-  "method": "POST",
-  "ret": "txt",
-  "paytoqs": "ignore",
-  "url": "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxxx35b8-1198-486a-aaec-xxxxb122fd35",
-  "tls": "",
-  "persist": false,
-  "proxy": "",
-  "insecureHTTPParser": false,
-  "authType": "",
-  "senderr": false,
-  "headers": [
-    {
-      "keyType": "other",
-      "keyValue": "Content-Type",
-      "valueType": "other",
-      "valueValue": "application/json"
-    }
-  ],
-  "x": 1050,
-  "y": 420,
-  "wires": [[]]
-}, {
-  "id": "0f948328c1975515",
-  "type": "mqtt-broker",
-  "name": "",
-  "broker": "172.17.0.1",
-  "port": 1883,
-  "clientid": "",
-  "autoConnect": true,
-  "usetls": false,
-  "protocolVersion": 4,
-  "keepalive": 15,
-  "cleansession": true,
-  "autoUnsubscribe": true,
-  "birthTopic": "",
-  "birthQos": "0",
-  "birthPayload": "",
-  "birthMsg": {},
-  "closeTopic": "",
-  "closePayload": "",
-  "closeMsg": {},
-  "willTopic": "",
-  "willQos": "0",
-  "willPayload": "",
-  "willMsg": {},
-  "userProps": "",
-  "sessionExpiry": ""
-}, {
-  "id": "g1h2i3j4k5l6m7n8",
-  "type": "ui-group",
-  "name": "Frigate Events",
-  "page": "h1i2j3k4l5m6n7o8",
-  "width": "10",
-  "height": "17",
-  "order": 1,
-  "showTitle": true,
-  "className": "",
-  "visible": "true",
-  "disabled": "false",
-  "groupType": "default"
-}, {
-  "id": "e33e8e2eb3424d08",
-  "type": "ui-group",
-  "name": "人流追踪",
-  "page": "h1i2j3k4l5m6n7o8",
-  "width": "8",
-  "height": "8",
-  "order": -1,
-  "showTitle": true,
-  "className": "",
-  "visible": "true",
-  "disabled": "false",
-  "groupType": "default"
-}, {
-  "id": "h1i2j3k4l5m6n7o8",
-  "type": "ui-page",
-  "name": "Frigate Page",
-  "ui": "f121584d21d465f1",
-  "path": "/frigate",
-  "icon": "",
-  "layout": "grid",
-  "theme": "6666b6af5668e7b2",
-  "breakpoints": [
-    {
-      "name": "Default",
-      "px": "0",
-      "cols": "3"
-    },
-    {
-      "name": "Tablet",
-      "px": "576",
-      "cols": "6"
-    },
-    {
-      "name": "Small Desktop",
-      "px": "768",
-      "cols": "9"
-    },
-    {
-      "name": "Desktop",
-      "px": "1024",
-      "cols": "12"
-    }
-  ],
-  "order": 1,
-  "className": "",
-  "visible": "true",
-  "disabled": "false"
-}, {
-  "id": "f121584d21d465f1",
-  "type": "ui-base",
-  "name": "My Dashboard",
-  "path": "/dashboard",
-  "headerContent": "page",
-  "titleBarStyle": "default",
-  "showReconnectNotification": true,
-  "notificationDisplayTime": 5,
-  "showDisconnectNotification": true,
-  "allowInstall": true
-}, {
-  "id": "6666b6af5668e7b2",
-  "type": "ui-theme",
-  "name": "Default Theme",
-  "colors": {
-    "surface": "#ffffff",
-    "primary": "#0094CE",
-    "bgPage": "#eeeeee",
-    "groupBg": "#ffffff",
-    "groupOutline": "#cccccc"
-  },
-  "sizes": {
-    "density": "default",
-    "pagePadding": "12px",
-    "groupGap": "12px",
-    "groupBorderRadius": "4px",
-    "widgetGap": "12px"
-  }
-}, {
-  "id": "49e238604cea7858",
-  "type": "global-config",
-  "env": [],
-  "modules": {
-    "@flowfuse/node-red-dashboard": "1.26.0"
-  }
-}]
+```YAML
+cameras:
+  handgun:
+    enabled: true
+    ffmpeg:
+      hwaccel_args: preset-jetson-h264
+      inputs:
+        - path: /media/frigate/handgun.mp4
+          input_args: -stream_loop -1 -re
+          roles:
+            - detect
+  machinegun:
+    enabled: true
+    ffmpeg:
+      hwaccel_args: preset-jetson-h264
+      inputs:
+        - path: /media/frigate/machinegun.mov
+          input_args: -stream_loop -1 -re
+          roles:
+            - detect
 ```
 
-- **MQTT Broker Address** (default: `172.17.0.1:1883`)  
-- **Frigate Service Address** (default: `http://192.168.118.111:5000`)  
+**Explanation:**
 
-> ⚠️ **Reminder:** Be sure to modify to match your own machine’s `JETSON_IP`.  
+- `enabled`: Enables or disables this camera.
+- `ffmpeg`: Defines how Frigate uses FFmpeg to read and decode the video stream.
+  - FFmpeg is a media framework that converts and streams video from files, RTSP cameras, or other sources.
+- `hwaccel_args`: Enables hardware acceleration (e.g., H.264 decoding on Jetson).
+- `inputs`: Lists one or more video inputs.
+  - `path`: The actual video source.
+    - In this example, it’s a local demo file like `/media/frigate/handgun.mp4`.
+    - In real deployments, you can replace it with a live camera stream, such as: `path: rtsp://user:password@192.168.1.21:554/stream1`
+- `input_args`: Extra FFmpeg parameters.
+  - `-stream_loop -1` loops the demo video endlessly.
+  - `-re` ensures playback matches real-time speed.
+- `roles`: Defines how this input is used.
+  - `detect` means the stream is used for object detection.
+  - Other possible roles include `record` or `rtmp` for streaming.
 
-### 🔵 3.4 Running Effect
+:::tip
+Each camera can have multiple inputs — for example, one for detection and another for high-quality recording.
+Frigate automatically manages decoding and frame extraction through FFmpeg for all defined sources.
+:::
 
-Access the following URL in your browser:
+### AI Model and Detection Settings
 
-```cpp
-http://JETSON_IP:1880/dashboard/frigate
+After defining the cameras, the next step is to tell Frigate which AI model to use and how to process each video frame.
+This section defines the detector type, model file path, and detection behavior such as frame size, object tracking, and threshold.
+
+```YAML
+detectors:
+  tensorrt:
+    type: tensorrt
+    device: 0
+
+model:
+  path: /config/model_cache/tensorrt/yolov4-tiny-288_gun_v3.trt
+  width: 288
+  height: 288
+  labelmap_path: /config/guns.txt
+  input_tensor: nchw
+  input_pixel_format: rgb
 ```
 
-<div style={{textAlign:'center'}}><img  alt="Configuration" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/frigateevents.png"/></div>
+**Explanation:**
 
-## 🟣 4. Function Description
+- `detectors`: Defines which AI backend Frigate uses for inference.
+  - `type`: tensorrt tells Frigate to use NVIDIA TensorRT acceleration (optimized for Jetson).
+  - `device`: Specifies the GPU index. For most Jetson devices, use 0.
+- `model`: Points to the AI model file and describes its input format.
+  - `path`: Path to your .trt (TensorRT engine) file.
+  - `width` / height: Input resolution of the model (must match what the model expects).
+  - `labelmap_path`: File that maps class indices to labels, e.g. guns.txt → contains "gun".
+  - `input_tensor`: Defines the tensor layout; nchw = batch, channel, height, width.
+  - `input_pixel_format`: Specifies the pixel format, usually rgb.
 
-### 4.1 Real-time Gun Detection
+:::tip
+TensorRT models are compiled versions of trained networks, optimized for fast GPU inference.
+You can replace this file with your own model if you train a new one — just make sure the width, height, and labels match.
+:::
 
-- Frigate detects guns in camera footage based on the YOLOv4-tiny-288 model  
-- Detection threshold: `0.3`  
-- Detection categories: Person (0), Gun (1)  
+### Object Tracking Configuration
 
-> 📖 **Reference:** For more details, see related configuration files in GitHub:  
-> `frigate-on-jetson/config/config.yml at main · Seeed-Studio/frigate-on-jetson · GitHub`  
+Frigate can detect and track specific types of objects.
+For this project, we only track guns, which keeps the system efficient and focused.
 
----
+```YAML
+objects:
+  track:
+    - gun
+  filters:
+    gun:
+      threshold: 0.3
+```
 
-### 4.2 Alerts and Notifications
+**Explanation:**
 
-- Display the latest captured frame  
-- Historical alert records (including time, camera, screenshot)  
-- Real-time Webhook push (this wiki uses Enterprise WeChat as an example)  
-- Supports integration with other Webhooks  
+- `track`: List of objects to detect and track.
+  - Here it’s only "gun", but you could add more labels (e.g., person, car, etc.) if your model supports them.
+- `filters`: Fine-tune the detection confidence for each object type.
+- `threshold`: Minimum confidence value (0.0–1.0).
+  - A lower value (like 0.3) is more sensitive but may include false positives.
+  - A higher value (like 0.5) makes detection stricter.
 
----
+:::tip
+If you notice too many false detections, try increasing the threshold to 0.5 or higher.
+For smaller objects that are often missed, you can lower it slightly — but balance between accuracy and noise.
+:::
 
-### 4.3 History Records and Counting
+### Recording Settings
 
-- Record the latest 10 alert events  
-- Accumulative counting of alerts  
-- One-click data clearing  
+Once Frigate detects an object, it can record videos and save snapshots for further analysis or alert display.
+These settings control how long recordings are stored and what information is shown in captured images.
 
-## 🟤 5. Application Scenarios
+```YAML
+record:
+  enabled: true
+  retain:
+    days: 3
+    mode: all
+```
 
-- Campus security area gun threat monitoring  
-- Protection in shopping malls / subways / transportation hubs  
-- Perimeter defense and boundary control  
-- Security for temporary events  
+**Explanation:**
 
----
+- `enabled`: Turns on video recording.
+- `retain`: Controls how long to keep recorded files and which type of footage is stored.
+  - `days`: Number of days to keep recordings before automatic deletion.
+  - `mode`:
+    - `all` – continuously record (useful for testing).
+    - `motion` – only record when motion is detected.
+    - `events` – record only when tracked objects (e.g., guns) appear.
 
-📦 **Project Repository:**  
-[GitHub - Seeed-Studio/frigate-on-jetson](https://github.com/Seeed-Studio/frigate-on-jetson)
+:::tip
+For real deployments, use `mode: events` or `mode: motion` to save storage space while keeping useful recordings.
+:::
+
+### Snapshot Settings
+
+```YAML
+snapshots:
+  enabled: true
+  clean_copy: true
+  timestamp: true
+  bounding_box: true
+  crop: false
+  retain:
+    default: 14
+  quality: 95
+```
+
+**Explanation:**
+
+- `enabled`: Enables snapshot saving when a detection event occurs.
+- `clean_copy`: Saves an additional version without detection boxes.
+- `timestamp`: Adds the time and date overlay on the snapshot.
+- `bounding_box`: Draws a box around detected objects.
+- `crop`: When true, saves only the cropped detection area.
+- `retain.default`: Number of days to keep snapshots.
+- `quality`: Sets the image quality (1–100). Higher = better detail but larger file size.
+
+:::tip
+Snapshots are ideal for alerts or dashboards, as they are much smaller than video clips and easy to send via webhook or MQTT.
+:::
+
+### Birdseye View
+
+Frigate also supports a Birdseye view, which displays multiple camera feeds together for a quick overview.
+
+```YAML
+birdseye:
+  enabled: true
+  mode: objects
+```
+
+**Explanation:**
+
+- `enabled`: Turns on the Birdseye composite view.
+- `mode`:
+  - `objects` – only show cameras where objects are currently detected.
+  - `continuous` – always show all camera feeds.
+
+### MQTT Configuration
+
+Frigate communicates its detection events through MQTT, which allows other services — such as Node-RED, Home Assistant, or custom dashboards — to receive real-time updates whenever an object is detected.
+It also provides logging options to help monitor system performance and debug detection issues.
+
+```YAML
+mqtt:
+  enabled: true
+  host: 172.17.0.1
+  port: 1883
+```
+
+**Explanation:**
+
+- `enabled`: Turns on MQTT communication.
+- `host`: The IP address of your MQTT broker.
+  - When using Docker on Jetson, `172.17.0.1` usually refers to the host machine.
+  - Replace with your actual MQTT server IP if you run it on another device.
+- `port`: Default MQTT port, typically 1883.
+
+For more advanced MQTT settings, refer to the [Frigate MQTT documentation](https://docs.frigate.video/integrations/mqtt).
+
+With MQTT enabled, Frigate becomes part of a real-time event network — sending gun detection alerts directly to Node-RED or Home Assistant, where they can trigger dashboards, notifications, or custom workflows.
+
+## Performance & Sizing
+
+| Hardware Platform | Model | FPS (Total) | Stable Streams (≥15 FPS) | Remarks |
+| ----------------- | ----- | ----------- | ------------------------- | ------- |
+| reComputer R2000 (Raspberry Pi + Hailo-8) | YOLOv11-s | 30 | 2 | Compact AI NVR; efficient low-power edge device |
+| reComputer J3011 (Jetson Orin Nano 8 GB) | YOLOv4-tiny-288 | 90 | 6 | Entry-level Jetson; FPS stabilizes after warm-up |
+| reComputer J4012 (Jetson Orin NX 16 GB) | YOLOv4-tiny-288 | 120 | 8 | NVDEC concurrency limit reached; compute headroom remains |
+
+## Resources & Next Steps
+
+- **Solution Bundle:** [Frigate + Node-RED Gun Detection on Jetson](https://cc.seeedstudio.com/solutions/campus-safety-management)
+- **Frigate Documentation:** [https://docs.frigate.video/](https://docs.frigate.video/)
+- **GitHub Repository:** [Seeed-Studio / frigate-on-jetson](https://github.com/Seeed-Studio/frigate-on-jetson)
+- **Node-RED Dashboard Add-on:** [@flowfuse/node-red-dashboard](https://flows.nodered.org/node/@flowfuse/node-red-dashboard)
+
+<!-- Summary
+
+The **Frigate + Node-RED Gun Detection Solution** delivers real-time firearm detection and intelligent alerting on edge AI hardware — from Raspberry Pi + Hailo systems to Jetson Orin series. It offers a modular, open, and production-ready framework for security integrators, enabling private on-premise analytics, instant visualization, and LLM-driven verification while keeping video data under full control.
+
+| Module | Purpose / Value | Key Capabilities |
+| ------ | ---------------- | ---------------- |
+| Real-time Video Monitoring | Observe scene context before and after detection | Multi-RTSP/HTTP stream input; split-screen or carousel views; zoom and PTZ control |
+| Gun Detection Visualization | Confirm detection accuracy visually | Real-time bounding boxes with confidence overlay; frame pause, magnify, and annotate |
+| Event / Alert Queue | Deliver instant alerting and logging | Adjustable confidence and ROI thresholds; popup, sound, light, webhook, email, or SMS actions |
+| Event Replay & Retrieval | Support evidence review and playback | Filter by time, camera, or alert type; jump to pre-event and post-event footage |
+| Detection Log & Export | Enable third-party analytics and reporting | Timestamp, camera, confidence, snapshot metadata; export in CSV or JSON formats |
+| LLM-based Analysis | Reduce false positives and generate summaries | False-positive review for gun/not-gun decisions; semantic summarization and querying (for example, rifle alerts last week); contextual response suggestions for operators | -->
+
+## FAQ
+
+### 1. I cannot install Docker on my Jetson device. What should I do?
+
+If you encounter issues with the default Docker installation script, you can use the following alternative script:
+
+```bash
+bash <(curl -sSL https://linuxmirrors.cn/docker.sh)
+```
+
+For more information, please visit: https://linuxmirrors.cn
+
+### 2. How to know my Jetpack version?
+
+Run the following command on your Jetson device:
+
+```bash
+dpkg -l | grep nvidia-jetpack
+```
+
+The output will show the installed Jetpack version.
+
+### 3. How to update my Jetpack version?
+
+Follow the instructions in [your specific product wiki](/NVIDIA_Jetson).
+
+### 4. “Permission Denied” When Running Docker {#docker-permission-denied}
+
+You don’t have permission to access the Docker daemon.
+Run:
+
+```shell
+sudo usermod -aG docker $USER
+newgrp docker
+```
+
+> Logging out and back in again also applies the new group permissions.
+
+Then verify:
+
+```shell
+docker ps
+```
