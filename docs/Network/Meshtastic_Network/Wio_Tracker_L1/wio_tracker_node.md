@@ -97,10 +97,10 @@ Fully compatible with the Grove ecosystem, and includes PTH headers and an SWD d
     <td colspan="1">USB Type-C: 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Solar Panel: 5V — 1A</td>
+    <td colspan="1">Solar Panel (2.0mm 2p): 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Lithium Battery: 3.7V — 1A</td>
+    <td colspan="1">Lithium Battery (1.25mm 2p JST): 3.7V — 1A</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">OLED Screen</td>

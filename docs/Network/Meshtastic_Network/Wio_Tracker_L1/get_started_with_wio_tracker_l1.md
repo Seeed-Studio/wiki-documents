@@ -10,7 +10,9 @@ last_update:
   date: 6/17/2025
   author: Jessie
 ---
-
+:::tip
+The Wio Tracker L1 Series share the same hardware framework. Although the video guide was for the L1 Pro, it is applicable to all other products in the L1 series.
+:::
 ## Video Tutorial
 
 ### Part 1 Unboxing
@@ -46,10 +48,6 @@ When using the L1, L1 Lite or L1 E-Ink models for the first time, after connecti
 </div>
 
 ## Get Started
-
-:::note
-Do not erase the flash, as this may damage the device.
-:::
 
 ### Flash Firmware
 
