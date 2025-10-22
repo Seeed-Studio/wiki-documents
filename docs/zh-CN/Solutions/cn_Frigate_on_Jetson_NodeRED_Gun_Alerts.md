@@ -228,7 +228,7 @@ sudo docker run -d --restart=always -p 1880:1880 -v node_red_data:/data --name m
 
 ### 演示 1 — 枪支检测警报
 
-此演示展示如何构建一个 Node-RED 流程，通过 MQTT 监听来自 Frigate 的枪支检测事件，然后在仪表板和 webhook 通知中触发实时警报。
+此演示展示如何构建一个 Node-RED 流程，通过 **MQTT** 监听来自 **Frigate** 的枪支检测事件，然后在仪表板和 webhook 通知中触发*实时警报*。
 
 #### 数据管道
 
@@ -241,17 +241,22 @@ Frigate（检测枪支）→ MQTT（发布）→ Node-RED（过滤/警报）→ 
 
 #### Node-RED 流程设置
 
-您可以使用提供的 [gist flow.json](https://gist.github.com/Love4yzp/2fccdfa6a2d8e64e2740cd566b9b991c) 将流程配置直接导入到您的 Node-RED 编辑器中。
+您可以使用提供的流程配置文件（[gist flow.json](https://gist.github.com/Love4yzp/2fccdfa6a2d8e64e2740cd566b9b991c)）直接将示例流程导入到您的 Node-RED 编辑器中。
 
-> 调整流程中的 IP 地址和 webhook URL 以匹配您的 Frigate 设置和通知端点。
+> **注意：** 更新流程中的 IP 地址和 webhook URL 以匹配您的 Frigate 实例和通知端点。
+
+仪表板入口路径配置为 `/frigate`。
+访问仪表板地址：`http://<your_jetson_ip>:1880/dashboard/frigate`
+
+例如：`http://192.168.101.100:1880/dashboard/frigate`。
 
 #### 流程概述
 
-- MQTT 监听器 – 订阅主题（例如 frigate/reviews）以接收检测事件。
-- 事件过滤器 – 过滤传入消息，仅通过标记为"gun"的消息。
-- 警报构建器 – 构建详细的警报消息，包括缩略图、时间戳和计数器。
+- MQTT 监听器 – 订阅指定主题（例如 frigate/reviews）以接收检测事件。
+- 事件过滤器 – 仅通过标记为"gun"的事件。
+- 警报构建器 – 构建包含缩略图、时间戳和计数器的详细警报消息。
 - 仪表板更新 – 使用最新图像、事件历史和检测计数器更新仪表板。
-- Webhook 通知 – 向外部端点（如企业微信、Slack 或自定义 API）发送 POST 请求。
+- Webhook 通知 – 向外部端点发送 HTTP POST 请求，如 Telegram 机器人、Slack 或自定义 API。
 
 #### 结果
 
@@ -259,11 +264,11 @@ Frigate（检测枪支）→ MQTT（发布）→ Node-RED（过滤/警报）→ 
   <img class="img-responsive" width="680" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/frigateevents.png" alt="Frigate event visualization"/>
 </div>
 
-设置此流程后，Node-RED 将自动响应 Frigate 的枪支检测事件，更新您的仪表板并发送即时 webhook 通知。
+设置此流程后，**Node-RED** 将自动响应 **Frigate 的枪支检测事件**，更新您的仪表板并发送即时 webhook 通知。
 
-您可以继续阅读 [Frigate 配置部分](#frigate-配置) 了解如何设置检测参数。
+继续阅读 [Frigate 配置部分](#frigate-config) 以获取设置检测参数的说明。
 
-## 默认 Frigate 配置 {#frigate-配置}
+## 默认 Frigate 配置 {#frigate-config}
 
 快速导航到 Frigate 配置页面 `http://<your_jetson_ip>:5000/config` 查看您当前的设置。
 
@@ -328,7 +333,7 @@ cameras:
   - `-re` 确保播放匹配实时速度。
 - `roles`：定义此输入的使用方式。
   - `detect` 表示流用于对象检测。
-  - 其他可能的角色包括用于流式传输的 `record` 或 `rtmp`。
+  - 其他可能的角色包括 `record` 或 `rtmp` 用于流式传输。
 
 :::tip
 每个摄像头可以有多个输入 — 例如，一个用于检测，另一个用于高质量录制。
@@ -388,22 +393,22 @@ objects:
 
 **说明：**
 
-- `track`：要检测和跟踪的对象列表。
-  - 这里只有"gun"，但如果您的模型支持，您可以添加更多标签（例如 person、car 等）。
-- `filters`：为每种对象类型微调检测置信度。
-- `threshold`：最小置信度值（0.0–1.0）。
+- `track`: 要检测和跟踪的对象列表。
+  - 这里只有 "gun"，但如果您的模型支持，您可以添加更多标签（例如，person、car 等）。
+- `filters`: 为每种对象类型微调检测置信度。
+- `threshold`: 最小置信度值（0.0–1.0）。
   - 较低的值（如 0.3）更敏感，但可能包含误报。
   - 较高的值（如 0.5）使检测更严格。
 
 :::tip
-如果您发现误检太多，请尝试将阈值提高到 0.5 或更高。
-对于经常被遗漏的小物体，您可以稍微降低阈值——但要在准确性和噪声之间取得平衡。
+如果您注意到太多误检，请尝试将阈值提高到 0.5 或更高。
+对于经常被遗漏的较小对象，您可以稍微降低阈值——但要在准确性和噪声之间取得平衡。
 :::
 
 ### 录制设置
 
 一旦 Frigate 检测到对象，它可以录制视频并保存快照以供进一步分析或警报显示。
-这些设置控制录制内容的存储时长以及捕获图像中显示的信息。
+这些设置控制录制内容的存储时间以及捕获图像中显示的信息。
 
 ```YAML
 record:
@@ -415,13 +420,13 @@ record:
 
 **说明：**
 
-- `enabled`：开启视频录制。
-- `retain`：控制录制文件的保存时长以及存储的录像类型。
-  - `days`：自动删除前保留录制内容的天数。
-  - `mode`：
+- `enabled`: 开启视频录制。
+- `retain`: 控制录制文件的保存时间以及存储的录像类型。
+  - `days`: 自动删除前保留录制内容的天数。
+  - `mode`:
     - `all` – 连续录制（适用于测试）。
     - `motion` – 仅在检测到运动时录制。
-    - `events` – 仅在出现跟踪对象（如枪支）时录制。
+    - `events` – 仅在出现跟踪对象（例如枪支）时录制。
 
 :::tip
 对于实际部署，使用 `mode: events` 或 `mode: motion` 来节省存储空间，同时保留有用的录制内容。
@@ -443,13 +448,13 @@ snapshots:
 
 **说明：**
 
-- `enabled`：在检测事件发生时启用快照保存。
-- `clean_copy`：保存不带检测框的额外版本。
-- `timestamp`：在快照上添加时间和日期叠加。
-- `bounding_box`：在检测到的对象周围绘制框。
-- `crop`：为 true 时，仅保存裁剪的检测区域。
-- `retain.default`：保留快照的天数。
-- `quality`：设置图像质量（1–100）。更高 = 更好的细节但文件更大。
+- `enabled`: 在检测事件发生时启用快照保存。
+- `clean_copy`: 保存不带检测框的额外版本。
+- `timestamp`: 在快照上添加时间和日期叠加。
+- `bounding_box`: 在检测到的对象周围绘制框。
+- `crop`: 为 true 时，仅保存裁剪的检测区域。
+- `retain.default`: 保留快照的天数。
+- `quality`: 设置图像质量（1–100）。更高 = 更好的细节但文件更大。
 
 :::tip
 快照非常适合警报或仪表板，因为它们比视频片段小得多，并且易于通过 webhook 或 MQTT 发送。
@@ -467,8 +472,8 @@ birdseye:
 
 **说明：**
 
-- `enabled`：开启鸟瞰复合视图。
-- `mode`：
+- `enabled`: 开启鸟瞰复合视图。
+- `mode`:
   - `objects` – 仅显示当前检测到对象的摄像头。
   - `continuous` – 始终显示所有摄像头画面。
 
@@ -486,30 +491,30 @@ mqtt:
 
 **说明：**
 
-- `enabled`：开启 MQTT 通信。
-- `host`：您的 MQTT 代理的 IP 地址。
+- `enabled`: 开启 MQTT 通信。
+- `host`: 您的 MQTT 代理的 IP 地址。
   - 在 Jetson 上使用 Docker 时，`172.17.0.1` 通常指向主机。
   - 如果您在另一台设备上运行 MQTT 服务器，请替换为实际的 MQTT 服务器 IP。
-- `port`：默认 MQTT 端口，通常为 1883。
+- `port`: 默认 MQTT 端口，通常为 1883。
 
 有关更高级的 MQTT 设置，请参考 [Frigate MQTT 文档](https://docs.frigate.video/integrations/mqtt)。
 
-启用 MQTT 后，Frigate 成为实时事件网络的一部分——将枪支检测警报直接发送到 Node-RED 或 Home Assistant，在那里它们可以触发仪表板、通知或自定义工作流。
+启用 MQTT 后，Frigate 成为实时事件网络的一部分——直接向 Node-RED 或 Home Assistant 发送枪支检测警报，在那里它们可以触发仪表板、通知或自定义工作流。
 
 ## 性能与规格
 
-| 硬件平台 | 模型 | FPS（总计） | 稳定流数（≥15 FPS） | 备注 |
+| 硬件平台 | 模型 | FPS（总计） | 稳定流（≥15 FPS） | 备注 |
 | ----------------- | ----- | ----------- | ------------------------- | ------- |
-| reComputer R2000（Raspberry Pi + Hailo-8） | YOLOv11-s | 30 | 2 | 紧凑型 AI NVR；高效低功耗边缘设备 |
-| reComputer J3011（Jetson Orin Nano 8 GB） | YOLOv4-tiny-288 | 90 | 6 | 入门级 Jetson；预热后 FPS 稳定 |
-| reComputer J4012（Jetson Orin NX 16 GB） | YOLOv4-tiny-288 | 120 | 8 | 达到 NVDEC 并发限制；计算余量仍然充足 |
+| reComputer R2000 (Raspberry Pi + Hailo-8) | YOLOv11-s | 30 | 2 | 紧凑型 AI NVR；高效低功耗边缘设备 |
+| reComputer J3011 (Jetson Orin Nano 8 GB) | YOLOv4-tiny-288 | 90 | 6 | 入门级 Jetson；预热后 FPS 稳定 |
+| reComputer J4012 (Jetson Orin NX 16 GB) | YOLOv4-tiny-288 | 120 | 8 | 达到 NVDEC 并发限制；计算余量仍然存在 |
 
 ## 资源与后续步骤
 
 - **解决方案套件：** [Frigate + Node-RED Gun Detection on Jetson](https://cc.seeedstudio.com/solutions/campus-safety-management)
 - **Frigate 文档：** [https://docs.frigate.video/](https://docs.frigate.video/)
 - **GitHub 仓库：** [Seeed-Studio / frigate-on-jetson](https://github.com/Seeed-Studio/frigate-on-jetson)
-- **Node-RED Dashboard 插件：** [@flowfuse/node-red-dashboard](https://flows.nodered.org/node/@flowfuse/node-red-dashboard)
+- **Node-RED 仪表板插件：** [@flowfuse/node-red-dashboard](https://flows.nodered.org/node/@flowfuse/node-red-dashboard)
 
 <!-- Summary
 
@@ -548,7 +553,7 @@ dpkg -l | grep nvidia-jetpack
 
 ### 3. 如何更新我的 Jetpack 版本？
 
-请按照[您的特定产品 wiki](/cn/NVIDIA_Jetson) 中的说明操作。
+请按照[您的特定产品 wiki](/cn/NVIDIA_Jetson) 中的说明进行操作。
 
 ### 4. 运行 Docker 时出现"Permission Denied" {#docker-permission-denied}
 
