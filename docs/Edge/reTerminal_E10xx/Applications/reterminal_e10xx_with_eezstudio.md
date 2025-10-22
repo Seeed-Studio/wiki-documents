@@ -399,7 +399,7 @@ These two underlying driver files need to be added to our project directory.
 Port the following project files (including four files) to the Arduino Library for use in Arduino projects.
 The `EEZ_UI file` is generated during the build process in EEZStudio. You need to locate the path where you saved it.
 
-- 🔗 **[ZIP]** [Code](https://files.seeedstudio.com/wiki/EEZStudio/E1002_EEZStudioCode.zip)
+- 🔗 **[ZIP]** [Code](https://files.seeedstudio.com/wiki/EEZStudio/E1002-EEZStudioCode.zip)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/7.jpg" style={{width:800, height:'auto'}}/></div>
 
