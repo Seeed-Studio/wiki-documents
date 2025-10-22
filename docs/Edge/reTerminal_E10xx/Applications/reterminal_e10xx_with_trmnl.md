@@ -112,7 +112,29 @@ Please use **FW 1.6.7** or newer firmware for Seeed compatibility.
 
 ---
 
-#### Method 2: Build and Flash from Source (For Advanced Users/Developers)
+#### Method 2: Flash via Sensecraft HMI platform
+
+1. Visit [Sensecraft HMI platform](https://sensecraft.seeed.cc/hmi/device)
+
+2. Select your device
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/164.jpg" style={{width:700, height:'auto'}}/></div>
+
+3. Select TRMNL firmware. If you want to flash HMI firmware, you can also select them. After that, click **Full Flash** and **Flash**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/162.jpg" style={{width:700, height:'auto'}}/></div>
+
+4. Connect your device to computer and select serial port.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/163.jpg" style={{width:700, height:'auto'}}/></div>
+
+5. If goes well, the screen will refresh and display TRMNL logo and MAC address. Now you can play with it.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/165.jpeg" style={{width:700, height:'auto'}}/></div>
+
+---
+
+#### Method 3: Build and Flash from Source (For Advanced Users/Developers)
 
 1. **Clone the Firmware Repository**
 
