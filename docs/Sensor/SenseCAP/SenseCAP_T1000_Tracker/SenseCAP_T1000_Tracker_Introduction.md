@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_tracker/Introduction
 last_update:
-  date: 9/11/2023
-  author: Jessie
+  date: 10/11/2025
+  author: Twelve
 ---
 
 
@@ -16,7 +16,7 @@ last_update:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker_1.png" alt="pir" width={800} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
     </a>
 </div>
@@ -46,24 +46,17 @@ The tracker will get location outdoor via satellite system (GPS/BeiDou/more), th
 
 **Wi-Fi / Bluetooth Positioning (Indoor)**
 
-
 Tracker scan the MAC address and RSSI of nearby Wi-Fi/Bluetooth and upload it through LoRaWAN. The application server needs to calculate the real geographical location based on the MAC address and signal strength (RSSI).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/by_wifi.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Offline Data Storage
 
 Capable of storing 1000+ records locally. The storage capacity of 1 hour upload interval exceeds 40 days.
 
-When the LoRaWAN signal coverage is weak or there is no network coverage, the data will be saved and entered in the next cycle. When the device returns to an area with the LoRaWAN network coverage, it will send the offline data automatically. 
-
-
+When the LoRaWAN signal coverage is weak or there is no network coverage, the data will be saved and entered in the next cycle. When the device returns to an area with the LoRaWAN network coverage, it will send the offline data automatically.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/cache.png" alt="pir" width={800} height="auto" /></p>
-
-
-
 
 ### Cross-Regional Adaptability
 
@@ -71,12 +64,10 @@ T1000 provides seamless global LoRaWAN® region switching, automatically adjusti
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/earth.gif" alt="pir" width={800} height="auto" /></p>
 
-
 ### Months of Battery Life
 
 Powered by the LR1110 and featuring low power consumption, most of the models can lasts for over 3 months of battery life with 1 hour upload interval in GNSS only mode, with the motion sensor disabled.
 (Battery life may vary with configuration parameters such as frequency band, positioning mode, and data upload interval. Please refer to the [Battery Life Calculation](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker/Trcaker_Battery_%20Life_Calculation_T1000_AB.xlsx) for detailed reference)
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/battery_life_new_ABE.png" alt="pir" width={800} height="auto" /></p>
 
@@ -84,17 +75,13 @@ Powered by the LR1110 and featuring low power consumption, most of the models ca
 
 Temperature & light sensors are included to keep track of the environmental data on the go. For example, temp data can be used to inference the possibility if the food / vaccine goes bad. Light data shows if it is seen by unwanted eyes.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/sensor.png" alt="pir" width={800} height="auto" /></p>
-
-
 
 ### Decentralized Gateway Network for location Provenance
 
 Helium’s decentralized network is built on a trust mechanism where every gateway shares its location, and Helium validates the authenticity of these locations. When using Helium with T1000, by cross-checking the gateway’s location, you can have a approximate location of T1000. This provides an additional layer of validation, increasing the data’s validity compared to other networks.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/helium_map.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Emergency Report
 
@@ -108,28 +95,23 @@ Motion sensor to detect anomaly, SOS button for emergency reporting and automati
 
 ## Applications
 
-* International Asset Tracing
-* Search And Rescue
-* Equipment Monitoring
+- International Asset Tracing
+- Search And Rescue
+- Equipment Monitoring
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/applications.png" alt="pir" width={800} height="auto" /></p>
 
- 
 ## Specification
 
 ### Model Specification
 
 We provide two different solutions for users, and comes in three versions: A, B and E.
 
+- **T1000-A/T1000-B**: These two versions are designed for **LoRaWAN network**, supporting indoor (Wi-Fi + Bluetooth) + outdoor positioning (GNSS). T1000-A is equipped with essential features, including a temperature sensor, light sensor, motion sensor, while T1000-B comes without these sensors.
 
-* **T1000-A/T1000-B**: These two versions are designed for **LoRaWAN network**, supporting indoor (Wi-Fi + Bluetooth) + outdoor positioning (GNSS). T1000-A is equipped with essential features, including a temperature sensor, light sensor, motion sensor, while T1000-B comes without these sensors.
-
-
-* **T1000-E**: It features open-source software and is available in two separate versions: one for **LoRaWAN** and the other for **Meshtastic**. Both offer full source code, enabling developers to customize and expand their functions freely.
+- **T1000-E**: It features open-source software and is available in two separate versions: one for **LoRaWAN** and the other for **Meshtastic**. Both offer full source code, enabling developers to customize and expand their functions freely.
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image2_20.png" alt="pir" width={800} height="auto" /></p>
-
-
 
 ### General Parameters
 
@@ -171,7 +153,3 @@ We provide two different solutions for users, and comes in three versions: A, B 
 |Charge Cable (Adapter not included)|USB magnetic charging cable, 1 meter|
 |<a name="ole_link9"></a>Power Input Voltage|4\.7 to 5.5V DC|
 |Charging Temperature Limit|0 to +45℃ (Beyond the temperature range, the charge will be limited, and the LED will blink quickly)|
-
-
-
-
