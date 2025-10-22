@@ -135,7 +135,7 @@ E-paper reTerminal 用の LVGL UI プロジェクトを構築する際、生成�
 
 ステップ 1. プロジェクト設定を開く
 
-上部ツールバーの ⚙️（設定）アイコンをクリックします（下図参照）。
+下図に示すように、上部ツールバーの ⚙️（Settings）アイコンをクリックします。
 これにより、ワークスペースの右側にプロジェクト設定パネルが開きます。
 
 ステップ 2. ビルド出力と LVGL インクルードの構成
@@ -165,9 +165,9 @@ General → Build の下で、以下のフィールドを見つけます：
 
 ### UI インターフェースデザイン
 
-UI（ユーザーインターフェース）デザインは組み込み製品開発において重要で、ユーザーエクスペリエンスを直接決定します。美しく、直感的で、レスポンシブなインターフェースは、製品の使いやすさを向上させるだけでなく、全体的な魅力も高めます。
+UI（ユーザーインターフェース）デザインは組み込み製品開発において重要であり、ユーザーエクスペリエンスを直接決定します。美しく、直感的で、レスポンシブなインターフェースは、製品の使いやすさを向上させるだけでなく、全体的な魅力も高めます。
 
-EEZ Studio では、コンポーネントをドラッグアンドドロップすることでインターフェースを迅速に組み立てることができます。Styles、Fonts、Bitmaps、Themes などのツールを活用して視覚効果を精密に制御し、プロフェッショナルで独特なユーザーエクスペリエンスを作り上げます。
+EEZ Studio では、コンポーネントをドラッグアンドドロップすることでインターフェースを迅速に組み立てることができます。Styles、Fonts、Bitmaps、Themes などのツールを活用して視覚効果を正確に制御し、プロフェッショナルで独特なユーザーエクスペリエンスを作り上げます。
 
 以下は推奨ツールの紹介です：
 
@@ -251,7 +251,7 @@ EEZ Studio では、コンポーネントをドラッグアンドドロップす
 
 ### コード生成とデプロイメント
 
-UI設計を完了した後、プロジェクトを保存してシミュレーターでプレビューする必要があります。確認後、ビルド操作を実行してターゲットハードウェアで実行可能なコードファイルを生成します。
+UI設計が完了したら、プロジェクトを保存してシミュレーターでプレビューする必要があります。確認後、ビルド操作を実行してターゲットハードウェアで実行可能なコードファイルを生成します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a20.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -320,7 +320,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ### Seeed_GFX ライブラリの使用
 
-ePaper ディスプレイを制御するために、様々な Seeed Studio ディスプレイデバイスの包括的なサポートを提供する Seeed_GFX ライブラリを使用します。
+ePaper ディスプレイを制御するために、様々な Seeed Studio ディスプレイデバイスに包括的なサポートを提供する Seeed_GFX ライブラリを使用します。
 
 **ステップ 1.** GitHub から Seeed_GFX ライブラリをダウンロードします：
 
@@ -333,7 +333,7 @@ ePaper ディスプレイを制御するために、様々な Seeed Studio デ�
 **ステップ 2.** Arduino IDE で ZIP ファイルを追加してライブラリをインストールします。**Sketch > Include Library > Add .ZIP Library** に移動し、ダウンロードした ZIP ファイルを選択します。
 
 :::note
-以前に TFT_eSPI ライブラリをインストールしている場合、競合を避けるために Arduino ライブラリフォルダから一時的に削除または名前を変更する必要があります。Seeed_GFX は TFT_eSPI のフォークで、Seeed Studio ディスプレイ用の追加機能を備えています。
+以前に TFT_eSPI ライブラリをインストールしている場合、Seeed_GFX は Seeed Studio ディスプレイ用の追加機能を持つ TFT_eSPI のフォークであるため、競合を避けるために Arduino ライブラリフォルダから一時的に削除または名前を変更する必要がある場合があります。
 :::
 
 <Tabs>
@@ -390,16 +390,16 @@ ePaper ディスプレイを制御するために、様々な Seeed Studio デ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/EEZSetting.png" style={{width:500, height:'auto'}}/></div>
 
-これら2つの基盤ドライバファイルをプロジェクトディレクトリに追加する必要があります。
+これら2つの基盤ドライバーファイルをプロジェクトディレクトリに追加する必要があります。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/00.png" style={{width:800, height:'auto'}}/></div>
 
 - [e1002_display.cpp](https://files.seeedstudio.com/wiki/EEZStudio/e1002_display.cpp)
 - [e1002_display.h](https://files.seeedstudio.com/wiki/EEZStudio/e1002_display.h)
 
-以下のプロジェクトファイル（4つのファイルを含む）をArduino Libraryに移植して、Arduinoプロジェクトで使用します。
+以下のプロジェクトファイル（4つのファイルを含む）をArduinoライブラリに移植して、Arduinoプロジェクトで使用します。
 `EEZ_UI file` は EEZStudio のビルドプロセス中に生成されます。保存したパスを見つける必要があります。
 
-- 🔗 **[ZIP]** [コード](https://files.seeedstudio.com/wiki/EEZStudio/E1002_EEZStudioCode.zip)
+- 🔗 **[ZIP]** [コード](https://files.seeedstudio.com/wiki/EEZStudio/E1002-EEZStudioCode.zip)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/7.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -532,7 +532,7 @@ void loop()
   </table>
 </div>
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
