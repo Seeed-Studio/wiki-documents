@@ -14,8 +14,7 @@ keywords:
 - Assistant
 - MCP
 image: https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/display.webp
-slug: /hello_watcher_llms
-sidebar_position: 1
+slug: /solutions/hello_watcher_llms
 last_update:
   date: 09/16/2025
   author: Spencer
@@ -183,7 +182,7 @@ Coming Soon.
 
   ```shell
   cd xiaozhi-esp32
-  idf.py --set-target esp32s3
+  idf.py set-target esp32s3
   idf.py menuconfig  # In the GUI, select the board type as SenseCAP Watcher
   idf.py build flash monitor
   ```

@@ -17,22 +17,22 @@ import TabItem from '@theme/TabItem';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/cn/reterminal_e10xx_with_esphome" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="/cn/reterminal_e10xx_with_esphome" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong></a>
 </div>
 
 ## [Home Assistant](https://www.home-assistant.io/) 简介
 
-Home Assistant 是一个功能强大的开源家庭自动化平台，允许您从单一统一界面控制和监控智能家居设备。它充当智能家居的中央枢纽，使您能够自动化日常任务、监控传感器并创建更智能的生活空间。
+Home Assistant 是一个功能强大的开源家庭自动化平台，允许您从一个统一的界面控制和监控智能家居设备。它充当智能家居的中央枢纽，使您能够自动化日常任务、监控传感器并创建更智能的生活空间。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/204.png" style={{width:700, height:'auto'}}/></div>
 
 ### 为什么选择 Home Assistant？
 
-- **本地控制**：与许多基于云的解决方案不同，Home Assistant 在您的网络上本地运行，确保您的数据保持私密，即使没有互联网连接，您的自动化功能也能正常工作。
+- **本地控制**：与许多基于云的解决方案不同，Home Assistant 在您的网络上本地运行，确保您的数据保持私密，即使没有互联网连接，您的自动化也能正常工作。
 
 - **广泛的设备支持**：Home Assistant 集成了数千种不同的智能家居设备和服务，使其具有高度的通用性和面向未来的特性。
 
-- **强大的自动化功能**：创建复杂的自动化规则，可以响应各种触发器，如时间、设备状态、传感器读数等。
+- **强大的自动化**：创建复杂的自动化规则，可以响应各种触发器，如时间、设备状态、传感器读数等。
 
 - **可定制的仪表板**：设计您自己的用户界面，显示对您最重要的信息。
 
@@ -48,21 +48,21 @@ reTerminal E 系列 ePaper 显示屏是 Home Assistant 的绝佳伴侣，原因�
 
 2. **清晰可见**：与 LCD 屏幕不同，电子纸显示屏在任何光照条件下都易于阅读，包括直射阳光，使其成为壁挂式家庭控制面板的理想选择。
 
-3. **超长电池续航**：结合深度睡眠模式，显示屏可以在单次电池充电下运行数月，同时仍能提供一目了然的有价值信息。
+3. **长电池续航**：结合深度睡眠模式，显示屏可以在单次电池充电下运行数月，同时仍能一目了然地提供有价值的信息。
 
 4. **灵活集成**：通过 ESPHome，显示屏与 Home Assistant 无缝集成，允许您以优雅、始终可见的格式显示智能家居系统中的任何数据。
 
-这些优势使 reTerminal E 系列 ePaper 显示屏成为为您的 Home Assistant 设置创建节能、始终在线信息显示屏的理想选择。
+这些优势使 reTerminal E 系列 ePaper 显示屏成为为您的 Home Assistant 设置创建节能、始终在线信息显示的理想选择。
 
 ### ESPHome 集成
 
-ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允许您使用简单的 YAML 配置文件创建自定义固件，然后可以将其刷写到您的设备上。对于 reTerminal E 系列，ESPHome 充当重要的中间件，实现设备与 Home Assistant 之间的通信。
+ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允许您使用简单的 YAML 配置文件创建自定义固件，然后可以刷写到您的设备上。对于 reTerminal E 系列，ESPHome 充当设备与 Home Assistant 之间通信的重要中间件。
 
-该系统通过将您的 YAML 配置转换为在 ESP 设备上运行的功能齐全的固件来工作。该固件处理连接到网络、与 Home Assistant 通信以及控制 ePaper 显示屏的所有复杂任务。当与 Home Assistant 结合使用时，ESPHome 为创建复杂的家庭自动化显示屏和控制器提供了强大的平台。
+该系统通过将您的 YAML 配置转换为在 ESP 设备上运行的功能齐全的固件来工作。该固件处理连接到网络、与 Home Assistant 通信以及控制 ePaper 显示屏的所有复杂任务。当与 Home Assistant 结合使用时，ESPHome 为创建复杂的家庭自动化显示和控制提供了强大的平台。
 
 让我们探索如何设置并充分利用这个多功能显示屏。
 
-## 开始使用
+## 入门指南
 
 在本文教程内容开始之前，您可能需要准备以下硬件。
 
@@ -83,24 +83,24 @@ ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-Home Assistant Green 是自动化家居最简单且最注重隐私的方式。它提供了轻松的设置，让您可以用一个系统控制所有智能设备，默认情况下所有数据都存储在本地。这块板子受益于蓬勃发展的 Home Assistant 生态系统，并且每个月都会通过开源得到改进。
+Home Assistant Green 是自动化家居最简单、最注重隐私的方式。它提供轻松的设置，让您只需一个系统就能控制所有智能设备，默认情况下所有数据都存储在本地。该板受益于蓬勃发展的 Home Assistant 生态系统，并将通过开源每月得到改进。
 
 我们建议在本教程中使用 Home Assistant Green 作为 Home Assistant 主机，或者您可以使用任何带有 Supervisor 的 Home Assistant 主机。
 
@@ -111,7 +111,7 @@ Home Assistant Green 是自动化家居最简单且最注重隐私的方式。�
 - **[在 reTerminal 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/reTerminal_Home_Assistant/)**
 - **[在 LinkStar H68K/reRouter CM4 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/h68k-ha-esphome/)**
 
-如果您没有使用 Seeed Studio 产品，您也可以在官方 Home Assistant 网站上查看并学习如何为其他产品安装 Home Assistant。
+如果您没有使用 Seeed Studio 产品，您也可以在 Home Assistant 官方网站上查看并学习如何为其他产品安装 Home Assistant。
 
 - **[Home Assistant 安装](https://www.home-assistant.io/installation/)**
 :::
@@ -135,7 +135,7 @@ Home Assistant Green 是自动化家居最简单且最注重隐私的方式。�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/30.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-如果您在附加组件商店中找不到 ESPHome，请确保您使用的是支持附加组件的 Home Assistant 安装（如 Home Assistant OS 或监督安装）。对于其他安装类型（如 Home Assistant Container），您可能需要使用 Docker 独立运行 ESPHome Device Builder。有关更多详细信息，请参阅[官方 ESPHome 文档](https://esphome.io/guides/getting_started_hassio)。
+如果您在附加组件商店中找不到 ESPHome，请确保您使用的是支持附加组件的 Home Assistant 安装（如 Home Assistant OS 或监督安装）。对于其他安装类型（如 Home Assistant Container），您可能需要使用 Docker 独立运行 ESPHome Device Builder。有关更多详细信息，请参阅 [官方 ESPHome 文档](https://esphome.io/guides/getting_started_hassio)。
 :::
 
 ### 步骤 2. 添加新设备
@@ -155,7 +155,7 @@ Home Assistant Green 是自动化家居最简单且最注重隐私的方式。�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/35.png" style={{width:1000, height:'auto'}}/></div>
 
-<!-- 在默认生成的代码中，esp32 的框架可能是 `esp-idf`，我们需要将其更改为 `arduino`。
+<!-- Inside the default generated code, the framework of esp32 may be `esp-idf`, which we need to change to `arduino`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_arduino.png" style={{width:600, height:'auto'}}/></div> -->
 
@@ -168,7 +168,7 @@ Home Assistant Green 是自动化家居最简单且最注重隐私的方式。�
 您可以通过复制下面的代码并将其粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用此示例。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="适用于 E1001" default>
 
 ```yaml
 # define font to display words
@@ -203,12 +203,6 @@ display:
 <TabItem value="For E1002" label="适用于 E1002">
 
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
 
 # define font to display words
 font:
@@ -222,9 +216,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -261,7 +255,7 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
-打开这个网站，我们将在这里上传固件到电子纸面板。
+打开此网站，我们将在这里将固件上传到电子纸面板。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/63.png" style={{width:800, height:'auto'}}/></div>
 
@@ -269,7 +263,7 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/64.png" style={{width:800, height:'auto'}}/></div>
 
-选择 Factory 格式。
+选择 Factory format。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/65.png" style={{width:500, height:'auto'}}/></div>
 
@@ -281,7 +275,7 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
-点击 **INSTALL** 并选择您刚才下载的固件。
+点击 **INSTALL** 并选择您刚刚下载的固件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/69.png" style={{width:500, height:'auto'}}/></div>
 
@@ -299,7 +293,7 @@ display:
 
 在将代码安装到设备之前，您需要使用 USB 线缆**将此设备连接到运行 Home Assistant 的 Raspberry Pi 或 HA Green（Yellow）等设备**。
 
-按照图像中的选项点击，将代码安装到设备。[设备在深度睡眠模式下找不到端口？](#port)
+按照图像中的选项点击以将代码安装到设备。[在深度睡眠模式下未找到端口？](#port)
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/6.png" style={{width:'70%', height:'auto'}}/></div>
@@ -318,7 +312,7 @@ display:
 这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到电子纸面板。之后，您可以通过 wifi 上传。另外，确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，以便此方法正常工作。
 :::
 
-通过这种方式，您不需要将电子纸面板连接到任何设备，只需确保它在线即可。
+使用这种方法，您不需要将电子纸面板连接到任何设备，只需确保它在线即可。
 
 点击选项，然后固件将自动安装到电子纸面板。
 
@@ -331,21 +325,21 @@ display:
 </TabItem>
 </Tabs>
 
-## ESPHome 中的绘图基础
+## ESPHome 绘图基础
 
 ### 绘制简单图形
 
-这个示例 YAML 代码为 ESPHome 项目配置了 SPI 接口和 reTerminal E 系列电子纸显示屏。`lambda` 部分包含在屏幕上渲染简单形状的绘图命令：
+此示例 YAML 代码为 ESPHome 项目配置了 SPI 接口和 reTerminal E 系列电子纸显示屏。`lambda` 部分包含在屏幕上渲染简单形状的绘图命令：
 
 - 两个矩形（一个位于位置 (10, 10)，大小为 100x50，另一个位于 (150, 10)，大小为 50x50）
-- 一个圆形，位于 (250, 35)，半径为 25
+- 一个位于 (250, 35) 半径为 25 的圆形
 - 两个填充矩形（位于 (10, 80) 和 (150, 80)）
-- 一个填充圆形，位于 (250, 105)，半径为 25
+- 一个位于 (250, 105) 半径为 25 的填充圆形
 
-您可以通过复制下面的代码并将其粘贴到 Yaml 文件中的 `captive_portal` 代码行之后来使用此示例。
+您可以通过复制下面的代码并将其粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用此示例。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="适用于 E1001" default>
 
 ```yaml
 spi:
@@ -374,20 +368,14 @@ display:
       it.filled_circle(250, 105, 25);
 ```
 
-当您看到如下图所示的反馈时，表示代码正在成功运行。
+当您看到如下图所示的反馈时，这意味着代码正在成功运行。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/38.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="适用于 E1002">
 
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
 
 # define font to display words
 font:
@@ -401,9 +389,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -429,52 +417,52 @@ display:
       it.filled_circle(250, 105, 25, WHITE);
 ```
 
-当您看到如下图所示的反馈时，表示代码正在成功运行。
+当您看到如下图所示的反馈时，这意味着代码正在成功运行。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/144.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
 </Tabs>
 
-由于篇幅限制，我们不会过多详述其他图案的绘制方法和原理，如有需要，建议读者阅读[ESPHome这部分的详细示例](https://esphome.io/components/display/)。
+由于篇幅限制，我们不会过多详述其他图案的绘制方法和原理，如有需要，建议读者阅读 [ESPHome 这部分的详细示例](https://esphome.io/components/display/)。
 
-### 从Home Assistant获取值用于显示
+### 从 Home Assistant 获取值用于显示
 
-要在您的reTerminal E系列电子纸显示设备上显示天气数据，您需要从Home Assistant访问温度、天气状况和风速数据。Open-Meteo集成提供可靠的天气数据，可通过开发者工具访问。
+要在您的 reTerminal E 系列电子纸显示设备上显示天气数据，您需要从 Home Assistant 访问温度、天气状况和风速数据。Open-Meteo 集成提供可通过开发者工具访问的可靠天气数据。
 
-#### 安装Open-Meteo集成
+#### 安装 Open-Meteo 集成
 
-步骤1. 打开您的Home Assistant仪表板，导航到**设置** → **设备与服务**。
+步骤 1. 打开您的 Home Assistant 仪表板并导航到 **Settings** → **Devices & Services**。
 
-步骤2. 点击右下角的**添加集成**按钮。
+步骤 2. 点击右下角的 **Add Integration** 按钮。
 
-步骤3. 搜索"Open-Meteo"并从列表中选择它。
+步骤 3. 搜索 "Open-Meteo" 并从列表中选择它。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_weather.png" style={{width:800, height:'auto'}}/></div>
 
-步骤4. 按照配置向导设置您的位置和首选单位。
+步骤 4. 按照配置向导设置您的位置和首选单位。
 
-步骤5. 安装完成后，Open-Meteo集成将在您的Home Assistant实例中创建多个与天气相关的实体。
+步骤 5. 安装完成后，Open-Meteo 集成将在您的 Home Assistant 实例中创建多个与天气相关的实体。
 
 #### 在开发者工具中访问天气数据
 
-安装Open-Meteo集成后，您可以通过开发者工具访问天气数据：
+安装 Open-Meteo 集成后，您可以通过开发者工具访问天气数据：
 
-步骤1. 在您的Home Assistant仪表板中，导航到**开发者工具** → **状态**。
+步骤 1. 在您的 Home Assistant 仪表板中，导航到 **Developer Tools** → **States**。
 
-步骤2. 在过滤框中，输入`weather`来查找主要的天气实体。
+步骤 2. 在过滤框中，输入 `weather` 以查找主要天气实体。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/39.png" style={{width:1000, height:'auto'}}/></div>
 
-步骤3. 点击实体以查看所有可用属性。关键的天气属性包括：
+步骤 3. 点击实体以查看所有可用属性。关键的天气属性包括：
 
-- `temperature`：当前温度（以您配置的单位为准）
-- `wind_bearing`：风向
-- `wind_speed`：风速
+- `temperature`: 当前温度（以您配置的单位显示）
+- `wind_bearing`: 风向
+- `wind_speed`: 风速
 
-#### 在ESPHome中使用天气数据
+#### 在 ESPHome 中使用天气数据
 
-要在您的reTerminal E系列的ESPHome配置中使用这些天气数据，您需要在ESPHome YAML配置中设置Home Assistant API连接：
+要在 reTerminal E 系列的 ESPHome 配置中使用这些天气数据，您需要在 ESPHome YAML 配置中设置 Home Assistant API 连接：
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -499,16 +487,16 @@ sensor:
     internal: true
 ```
 
-此配置在您的 ESPHome 设备中创建传感器实体，从 Home Assistant 天气集成中提取数据。然后您可以使用这些传感器来更新您的 reTerminal E Series ePaper Display 显示屏上的当前天气信息。
+此配置在您的 ESPHome 设备中创建传感器实体，从 Home Assistant 天气集成中提取数据。然后您可以使用这些传感器来更新 reTerminal E 系列电子纸显示屏上的当前天气信息。
 
 :::tip
-对于预报数据，您需要使用 `weather.open_meteo_forecast` 实体，其中包含未来几天的预测值。
+对于预报数据，您需要使用包含未来几天预测值的 `weather.open_meteo_forecast` 实体。
 :::
 
-最后，添加显示部分的代码以使用上述这些值。完整代码如下：
+最后，添加显示部分的代码以使用上述值。完整代码如下：
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="适用于 E1001" default>
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -567,15 +555,9 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="适用于 E1002">
 
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]  
 
 # Example ESPHome configuration to retrieve weather data
 # Get info from HA, as string format
@@ -609,9 +591,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -641,21 +623,21 @@ display:
 </TabItem>
 </Tabs>
 
-在编译上述代码并将其上传到您的设备后，您可能首先会看到屏幕上显示 **NaN**，请不要担心，这是正常的。这是因为设备尚未添加到 Home Assistant 环境中，所以 reTerminal 还无法获取 Home Assistant 数据。我们只需要按照以下步骤添加设备即可。
+编译上述代码并上传到您的设备后，您可能首先会看到屏幕上显示 **NaN**，请不要担心，这是正常的。这是因为设备尚未添加到 Home Assistant 环境中，所以 reTerminal 还无法获取 Home Assistant 数据。我们只需按照以下步骤添加设备即可。
 
-#### 将 reTerminal E 系列 ePaper 显示屏添加到 Home Assistant
+#### 将 reTerminal E 系列电子纸显示屏添加到 Home Assistant
 
-步骤 1. 刷写设备后，返回 Home Assistant 并导航到 **设置 → 设备与服务**。
+步骤 1. 刷写设备后，返回 Home Assistant 并导航到 **Settings → Devices & Services**。
 
-步骤 3. Home Assistant 应该会通过 mDNS 自动发现您的 reTerminal E 系列 ePaper 显示屏设备。如果它出现在已发现的设备部分，请点击配置以添加它。
+步骤 3. Home Assistant 应该会通过 mDNS 自动发现您的 reTerminal E 系列电子纸显示屏设备。如果它出现在已发现设备部分，请点击 Configure 添加它。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
-步骤 4. 如果设备没有自动发现，请点击添加集成并搜索"ESPHome"。
+步骤 4. 如果设备未自动发现，请点击 Add Integration 并搜索 "ESPHome"。
 
-步骤 5. 输入您的 reTerminal E 系列 ePaper 显示屏设备的 IP 地址，如果您设置了 API 加密密钥，也请输入。
+步骤 5. 输入您的 reTerminal E 系列电子纸显示屏设备的 IP 地址，如果您设置了 API 加密密钥，也请输入。
 
-步骤 6. 连接后，您的 reTerminal E 系列 ePaper 显示屏将作为设备出现在 Home Assistant 中，其所有传感器和组件都可用。
+步骤 6. 连接后，您的 reTerminal E 系列电子纸显示屏将作为设备出现在 Home Assistant 中，其所有传感器和组件都可用。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/40.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -667,7 +649,7 @@ display:
 
 ### 绘制 TrueType 字体
 
-此示例演示如何使用 TrueType 字体在您的 reTerminal E 系列 ePaper 显示屏上显示自定义图标。Material Design Icons 提供了大量可缩放的符号，非常适合电子纸显示屏。
+此示例演示如何使用 TrueType 字体在 reTerminal E 系列电子纸显示屏上显示自定义图标。Material Design Icons 提供了大量适合电子纸显示屏的可缩放符号。
 
 #### 安装所需工具
 
@@ -675,7 +657,7 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/17.png" style={{width:1000, height:'auto'}}/></div>
 
-步骤 2. 点击 **安装** 并等待安装完成。安装完成后，点击 **启动** 来启动编辑器。
+步骤 2. 点击 **INSTALL** 并等待安装完成。安装完成后，点击 **START** 启动编辑器。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/18.png" style={{width:800, height:'auto'}}/></div>
 
@@ -697,10 +679,10 @@ display:
 
 #### 为图标配置 ESPHome
 
-步骤 6. 在 `captive_portal` 部分之后，将以下代码添加到您的 ESPHome 配置文件中。此代码为图标定义了两种字体大小，并配置显示屏以显示天气图标。
+步骤 6. 在 `captive_portal` 部分之后，将以下代码添加到您的 ESPHome 配置文件中。此代码定义了两种图标字体大小，并配置显示屏显示天气图标。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="适用于 E1001" default>
 
 ```yaml
 # define font to display words
@@ -743,12 +725,6 @@ display:
 <TabItem value="For E1002" label="适用于 E1002">
 
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
 
 # define font to display words
 font:
@@ -769,9 +745,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -803,7 +779,7 @@ display:
 
 :::
 
-步骤 7. 保存您的配置并将其上传到您的 reTerminal E 系列设备。当您看到如下图所示的反馈时，表示代码正在成功运行。
+步骤 7. 保存您的配置并将其上传到您的 reTerminal E 系列。当您看到如下图所示的反馈时，表示代码运行成功。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/42.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -846,17 +822,17 @@ lambda: |-
   it.printf(100, 200, id(font_mdi_medium), TextAlign::CENTER, "\U000F0123");
 ```
 
-步骤 5. 保存您更新的配置并将其上传到您的设备以查看新图标。
+步骤 5. 保存更新的配置并将其上传到您的设备以查看新图标。
 
 :::tip
-对于天气仪表板，考虑使用像 `F0590`（晴天）、`F0591`（多云）、`F0593`（雨天）和 `F059E`（有风）这样的图标。
+对于天气仪表板，考虑使用 `F0590`（晴天）、`F0591`（多云）、`F0593`（雨天）和 `F059E`（有风）等图标。
 :::
 
-通过将这些图标与我们之前设置的来自 Home Assistant 的天气数据相结合，您可以创建一个动态天气显示，使用适当的图标显示当前条件。
+通过将这些图标与我们之前设置的 Home Assistant 天气数据相结合，您可以创建一个动态天气显示，使用适当的图标显示当前条件。
 
 ### 显示自定义图像
 
-此示例演示如何在您的 reTerminal E Series ePaper Display 电子纸显示器上显示自定义图像。您可以使用此功能显示徽标、图标或任何增强仪表板体验的图形。
+此示例演示如何在您的 reTerminal E 系列 ePaper Display 电子纸显示屏上显示自定义图像。您可以使用此功能显示徽标、图标或任何增强仪表板体验的图形。
 
 #### 准备工作
 
@@ -871,30 +847,30 @@ config/
     └── image/         <- Create this folder
 ```
 
-#### 添加图片
+#### 添加图像
 
-步骤 3. 下载一个示例图片来测试功能。您可以使用下面提供的 WiFi 图标或使用您自己的图片。
+步骤 3. 下载示例图像以测试功能。您可以使用下面提供的 WiFi 图标或使用您自己的图像。
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.jpg" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>下载示例 WiFi 图片</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>下载示例 WiFi 图像</button></p>
 </a>
 </div>
 
-步骤 4. 使用 Studio Code Server 文件管理器将下载的图片上传到您之前创建的 **image** 文件夹中。
+步骤 4. 使用 Studio Code Server 文件管理器将下载的图像上传到您之前创建的 **image** 文件夹。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-为了在电子纸显示器上获得最佳效果，请使用具有清晰黑白区域的高对比度图片。支持 JPG 和 PNG 格式。
+为了在电子纸显示屏上获得最佳效果，请使用具有清晰黑白区域的高对比度图像。支持 JPG 和 PNG 格式。
 :::
 
-#### 配置 ESPHome 进行图片显示
+#### 配置 ESPHome 进行图像显示
 
-步骤 5. 在 `captive_portal` 部分之后，将以下代码添加到您的 ESPHome 配置文件中。此代码定义了图片资源并配置显示器来显示它。
+步骤 5. 在 `captive_portal` 部分之后，将以下代码添加到您的 ESPHome 配置文件中。此代码定义图像资源并配置显示屏以显示它。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="适用于 E1001" default>
 
 ```yaml
 image:
@@ -926,15 +902,10 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="适用于 E1002">
 
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
+
 
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
@@ -949,9 +920,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -968,17 +939,17 @@ display:
 </TabItem>
 </Tabs>
 
-步骤 6. 保存您的配置并将其上传到您的 reTerminal E 系列设备。当更新完成后，您的电子纸显示屏将显示图像。
+步骤 6. 保存您的配置并将其上传到您的 reTerminal E 系列。更新完成后，您的电子纸显示屏将显示图像。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/43.jpg" style={{width:600, height:'auto'}}/></div>
 
 #### 高级图像技术
 
-您可以使用这些额外技术来增强您的图像显示：
+您可以使用以下附加技术增强图像显示：
 
 **定位图像**
 
-要将图像定位到屏幕上的特定坐标：
+要将图像定位在屏幕上的特定坐标：
 
 ```yaml
 lambda: |-
@@ -986,20 +957,20 @@ lambda: |-
   it.image(100, 50, id(myImage));
 ```
 
-**Combining Images with Text**
+**将图像与文本结合**
 
-您可以在同一屏幕上同时显示图像和文本：
+您可以在同一屏幕上显示图像和文本：
 
 ```yaml
 lambda: |-
   // Display image
   it.image(0, 0, id(myImage));
-  
+
   // Add text below or beside the image
   it.printf(400, 400, id(myFont), TextAlign::CENTER, "WiFi Connected");
 ```
 
-**Using Multiple Images**
+**使用多个图像**
 
 要在同一屏幕上显示多个图像，请在配置中定义每个图像：
 
@@ -1009,7 +980,7 @@ image:
     id: wifiImage
     type: BINARY
     resize: 200x200
-  
+
   - file: /config/esphome/image/temperature.png
     id: tempImage
     type: BINARY
@@ -1022,30 +993,30 @@ lambda: |-
 ```
 
 :::caution
-请记住，电子纸显示屏的刷新率有限。`update_interval: 300s` 设置意味着您的显示屏只会每5分钟刷新一次。请根据您的需要调整此值，但请注意频繁刷新可能会缩短电子纸显示屏的使用寿命。
+请记住，电子纸显示屏的刷新率有限。`update_interval: 300s` 设置意味着您的显示屏只会每 5 分钟刷新一次。根据您的需要调整此值，但请注意频繁刷新可能会缩短电子纸显示屏的使用寿命。
 :::
 
-通过将图像与文本和前面示例中涵盖的其他显示元素相结合，您可以在 reTerminal E 系列上创建丰富、信息丰富的仪表板。
+通过将图像与前面示例中涵盖的文本和其他显示元素相结合，您可以在 reTerminal E 系列上创建丰富、信息丰富的仪表板。
 
 ## 继续阅读
 
-由于篇幅限制，本文仅涵盖了设备的一些基本用例和绘图示例。我们将在 [reTerminal E 系列 ePaper 显示屏在 Home Assistant 中的高级 ESPHome 使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced) 的 Wiki 中更详细地介绍 reTerminal 硬件在 ESPHome 上的使用，您可以继续阅读。
+由于篇幅限制，本文仅涵盖了设备的一些基本用例和绘图示例。我们将在 [reTerminal E 系列 ePaper Display 在 Home Assistant 中的高级 ESPHome 用法](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced) 的 Wiki 中更详细地介绍 reTerminal 硬件在 ESPHome 上的使用，您可以继续阅读。
 
 ## 常见问题
 
-### Q1: 为什么没有数据？
+### Q1：为什么没有数据？
 
-在这种情况下，您应该转到设置 -> 设备和服务 -> 集成来**重新配置**设备。没有找到您的 reTerminal？尝试重启 Home Assistant。
+在这种情况下，您应该转到 Settings -> Devices & Services -> Integrations 来**重新配置**设备。没有找到您的 reTerminal？尝试重启 Home Assistant。
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
-### Q2: 为什么我无法在 Home Assistant 中获取这些数据？ {#port}
+### Q2：为什么我无法在 Home Assistant 中获取这些数据？ {#port}
 
-在这种情况下，您应该转到设置 -> 设备和服务 -> 集成来**添加**您的设备到 HA。
+在这种情况下，您应该转到 Settings -> Devices & Services -> Integrations 来**添加**您的设备到 HA。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
-### Q3: reTerminal E 系列 ePaper 显示屏无法连接到您的计算机？
+### Q3：reTerminal E 系列 ePaper Display 无法连接到您的计算机？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/68.png" style={{width:600, height:'auto'}}/></div>
 
@@ -1055,14 +1026,12 @@ lambda: |-
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

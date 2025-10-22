@@ -553,11 +553,11 @@ Violin&Viola:
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=starai_viola \
+    --robot.type=lerobot_starai_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
     --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
-    --teleop.type=starai_violin \
+    --teleop.type=lerobot_starai_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
@@ -566,11 +566,11 @@ lerobot-teleoperate \
 Violin&Cello:
 ```bash
 lerobot-teleoperate \
-    --robot.type=starai_cello \
+    --robot.type=lerobot_starai_cello \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraicello_arm \
     --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
-    --teleop.type=starai_violin \
+    --teleop.type=lerobot_starai_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
@@ -649,7 +649,7 @@ Violin&Viola:
 
 ```bash
 lerobot-teleoperate \
-    --robot.type=robot_viola \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
     --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
@@ -662,7 +662,7 @@ lerobot-teleoperate \
 Violin&Cello:
 ```bash
 lerobot-teleoperate \
-    --robot.type=robot_cello \
+    --robot.type=lerobot_robot_cello \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraicello_arm \
     --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
@@ -974,6 +974,13 @@ lerobot-record \
 
 - 按**左方向键(←)** ：取消当前插曲并重新录制。
 - 按**ESC**：立即停止会话,编码视频并上传数据集。
+  
+:::tip
+如果你的键盘按下后没有反应，可能你需要降低你pynput的版本，例如安装个1.6.8版本的。
+```bash
+pip install pynput==1.6.8
+```
+:::
 
 :::tip
 在 Linux 上,如果左右箭头键和转义键在数据记录过程中没有任何效果,请确保已设置$DISPLAY环境变量。参见 pynput 限制。

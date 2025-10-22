@@ -484,7 +484,7 @@ Search "Indicator" and select `Seeed INDICATOR RP2040` board and select the `usb
 
 - **Step 6**: Open the example code file
 
-**File** -> **Open**, then select the example code file ([.ino file](https://github.com/Seeed-Solution/sensecap_indicator_rp2040/tree/main/examples/terminal_rp2040)).
+**File** -> **Open**, then select the example code file ([.ino file](https://github.com/Seeed-Solution/SenseCAP_Indicator_RP2040/tree/main/examples/indicator_rp2040)).
 
 We provide an example code file, you can modify the code according to your needs.
 
