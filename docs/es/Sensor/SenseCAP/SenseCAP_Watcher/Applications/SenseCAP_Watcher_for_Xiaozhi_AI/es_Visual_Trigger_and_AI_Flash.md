@@ -20,7 +20,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Activación Visual y Flash de IA
+# Flasheando modelos de IA en el SenseCAP Watcher
 
 ## Descripción General
 

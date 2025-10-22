@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/29/2025
+  date: 10/20/2025
   author: Frank
 ---
 
@@ -17,59 +17,49 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is October 13th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is October 20th, and a brand new week has begun! Check out what Seeed Studio did last week!
+
+### [Efficient Multi-Task Vision Inference Engine Deployment on Jetson](https://wiki.seeedstudio.com/deploy_visual_perception_engine_recomputer/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/demo.gif" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+[Visual Perception Engine](https://github.com/nasa-jpl/visual-perception-engine) is a cutting-edge framework that revolutionizes robotic perception by eliminating redundant computations through shared backbone networks. Unlike traditional approaches where each visual task runs independently, VPEngine uses a unified base model backbone (e.g., DINOv2) to extract image features only once, which are then reused by multiple task heads. This approach significantly reduces memory overhead and CPU-GPU data transfer while supporting dynamic task scheduling and seamless ROS2 integration.This wiki will show you how to use reComputer Robotics in conjunction with GMSL cameras to deploy the Visual Perception Engine to the edge.
+
+</div>
+
+### [Flashing AI Models on the SenseCAP Watcher](https://wiki.seeedstudio.com/visual_trigger_and_ai_flash/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This guide focuses on how to flash the SenseCAP Watcher with the Visual Recognition Triggered Conversation firmware and how to replace or update the AI model on the device. It is intended as a hands-on instructional guide for these operations.
+
+</div>
 
 ## Latest Wiki Launched
 
-### [XIAO ePaper Display Board EE04 with PlatfromIO](https://wiki.seeedstudio.com/e04_with_platformio/)
+### [EE04 ePaper Display Work with ESPHome for Home Assistant](https://wiki.seeedstudio.com/EE04_with_esphome_advanced/)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document provides a guide on how to use the XIAO ePaper Display Board EE04 with PlatformIO, including hardware setup, project creation, code uploading, button control, and battery voltage detection examples.
-
-</div>
-
-### [PyCuVSLAM with reComputer](https://wiki.seeedstudio.com/pycuvslam_recomputer_robotics/)
-
-<p style={{textAlign: 'center'}}><img src="https://media.githubusercontent.com/media/NVlabs/PyCuVSLAM/main/pycuvslam.gif" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-[PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM) is NVIDIA's GPU-accelerated visual odometry and SLAM library cuVSLAM's Python wrapper. It supports monocular, stereo, RGB-D, multi-camera, and visual-inertial (IMU) modes, providing a simple Python API that can directly interface with camera streams and output real-time camera poses, map points, and loop closure information. The underlying CUDA optimization enables high-precision, low-latency SLAM inference on both PC and Jetson devices, making it suitable for robotic navigation, drone positioning, and 3D perception applications.This wiki will provide instructions on how to deploy pycuvslam on reComputer.
-
-</div>
-
-### [How to use LLaVa on the reComputer Industrial J4012 to monitor your warehouse](https://wiki.seeedstudio.com/vlm/)
-
-<div class="video-container">
-<iframe width="800" height="450" src="https://www.youtube.com/embed/J0sS-1zQid8?list=PLpH_4mf13-A1EnNUgEMTsy2PxejFllSGM" title="Build a Local AI Watchdog for Industrial Safety with reComputer J4012 powered by NVIDIA Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-<div style={{ textAlign: "justify" }}>
-
-This wiki describes deploying a VLM (Visual Learning Model) on the [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html), using a USB camera as the input for the VLM. When the system detects a safe situation, the signal light will turn green via RS485 control. In dangerous situations, such as a fire or the presence of someone with a weapon, the signal light will turn yellow. When the light sensor detects the signal from the warehouse light being turned off via RS485, the signal light will turn red.
+This document is a detailed tutorial on integrating the **EE04 ePaper Display** with **ESPHome** to create a smart home control panel in **Home Assistant**. It covers hardware preparation, firmware setup, and data display such as weather information. The guide also provides examples of configuring the SPI interface, fonts, graphics, and data retrieval from Home Assistant using **YAML** files.
 
 </div>
 
 ## Existing Wiki Updated
 
-### [Deploying OpenRemote on reComputer R1x Manage IoT Devices at the Edge](https://wiki.seeedstudio.com/openremote_r1x00/)
+### [Getting Started with reTerminal E Series ePaper Display and EEZ Studio](https://wiki.seeedstudio.com/reterminal_e10xx_with_eezstudio/)
 
-We have added an operation example of [MQTT Agent with ChirpStack LoRaWAN Gateway Integration](https://wiki.seeedstudio.com/openremote_r1x00/#mqtt-agent-with-chirpstack-lorawan-gateway-integration).
+We have added an example showing how to [configure the Project Settings](https://wiki.seeedstudio.com/reterminal_e10xx_with_eezstudio/#project-settings-configuration).
 
-### [Seeed Studio XIAO nRF54L15 Matter](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_matter/)
+### [NVIDIA® Jetson AGX Orin 32GB H01 Kit](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/)
 
-We have added an operation example of [Matter Hub Config](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_matter/#matter-hub-config).
-
-### [Getting Started with TRMNL 7.5" (OG) DIY Kit in Arduino](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino/)
-
-We have added an operation demo of [Equipment Installatio](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino/#equipment-installation).
-
-### [Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/)
-
-We have provided a tutorial on how to use the device with the [Orbbec Gemini2 Depth Camera](https://wiki.seeedstudio.com/lerobot_so100m_new/#add-cameras).
+We have added a tutorial on how to flash [**JP5.1.4** onto the **NVIDIA® Jetson AGX Orin 32GB H01 Kit**](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/#flash-to-jetson).
 
 ## The Efforts of Contributor
 
@@ -213,5 +203,6 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.9.15th](/Seeed_Elderly/weekly_wiki/wiki250915)
 - [weekly wiki on 2025.9.22nd](/Seeed_Elderly/weekly_wiki/wiki250922)
 - [weekly wiki on 2025.9.29th](/Seeed_Elderly/weekly_wiki/wiki250929)
+- [weekly wiki on 2025.10.13th](/Seeed_Elderly/weekly_wiki/wiki251013)
 
 </details>
