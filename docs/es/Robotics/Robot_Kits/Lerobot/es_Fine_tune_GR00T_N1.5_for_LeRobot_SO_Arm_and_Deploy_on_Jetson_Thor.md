@@ -1,6 +1,6 @@
 ---
-description: Este wiki introduce cómo comenzar con NVIDIA Jetson Thor y proporciona flujos de trabajo de ejemplo para implementar proyectos de IA y robótica en Thor. También se proporcionan instrucciones detalladas paso a paso y documentación de referencia.
-title: Ajustar Isaac GR00T N1.5 para el Brazo LeRobot SO-101 e Implementar en Jetson Thor 
+description: Este wiki presenta cómo comenzar con NVIDIA Jetson Thor y proporciona flujos de trabajo de ejemplo para implementar proyectos de IA y robótica en Thor. También se proporcionan instrucciones detalladas paso a paso y documentación de referencia.
+title: Ajustar Isaac GR00T N1.5 para el Brazo LeRobot SO-101 e Implementar en Jetson Thor
 
 keywords:
 - Thor
@@ -13,7 +13,7 @@ last_update:
   author: AI&Robotics Group
 ---
 
-# Ajustar GR00T N1.5 para el Brazo LeRobot SO-101 e Implementar en NVIDIA Jetson AGX Thor
+# Ajustar GR00T N1.5 para el Brazo LeRobot SO-101 e Implementar en Jetson AGX Thor
 
 ## Introducción
 
@@ -130,7 +130,7 @@ Esta sección proporciona ejemplos de cómo instalar dependencias de software co
 
 Ten en cuenta que las dependencias listadas son **solo para referencia**—por favor instala paquetes adicionales según los requisitos de sus proyectos individuales.
 
-### Instalación de Dependencias Esenciales de Desarrollo
+### Instalación de Dependencias de Desarrollo Esenciales
 
 **Instalación del SDK JetPack**
 <p></p>
@@ -167,8 +167,9 @@ sudo pip3 install jetson-stats
 Miniconda se utiliza para aislar entornos de desarrollo. Para instalar miniconda, consulta las siguientes instrucciones：
 
 ```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-Linux-x86_64.sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
+chmod +x Miniconda3-latest-Linux-aarch64.sh
+./Miniconda3-latest-Linux-aarch64.sh
 source ~/.bashrc
 conda --version
 ```
@@ -177,14 +178,18 @@ conda --version
 
 Compilar la versión GPU de PyTorch desde el código fuente en Thor puede resultar en problemas de compatibilidad. Por conveniencia, proporcionamos un archivo `.whl` precompilado para ayudar a los desarrolladores a configurar rápidamente un entorno de desarrollo habilitado para PyTorch en Thor.
 
-Aquí se proporciona un archivo wheel precompilado para instalar PyTorch 2.9 en Thor. Este archivo fue compilado en un entorno `Python 3.10 + CUDA 13`.
-Haz clic [**aquí**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVe_c8F4DR9CluC049HCYoMBP3UXta1kqLEDTvkcYU6s-A?e=d9VEzN) para descargar el archivo `.whl`.
+Aquí se proporciona un archivo wheel precompilado para instalar PyTorch 2.9 en Thor. Este archivo fue compilado en un entorno `Python 3.10 + CUDA 13`.  
+haz clic en [**Python 3.10 + CUDA 13 pytorch2.9**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVe_c8F4DR9CluC049HCYoMBP3UXta1kqLEDTvkcYU6s-A?e=vrAjhN) para descargar el archivo `.whl`.  
+haz clic en [**Python 3.10 + CUDA 13 torchvision0.24**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ESDkmxLfCW1MkI8YBfrdWVAB4u3OPvnb4rOhlvw4QvoS_Q?e=YJE0Pr) para descargar el archivo `.whl`.  
+haz clic en [**Python 3.10 + CUDA 13 torchvision0.23**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQYGDJxMk1ZAgJHgEMZIfg8Blcrs2owxx3ZM603WgBXhhA?e=MdWMI9) para descargar el archivo `.whl`.
 
-Otros archivos `.whl` de dependencias precompiladas para thor se pueden encontrar [**aquí**](https://pypi.jetson-ai-lab.io/sbsa/cu130).
+
+Otros archivos `.whl` de dependencias precompiladas <mark>Python **3.12** + CUDA 13</mark> para thor se pueden encontrar en:  
+[**https://pypi.jetson-ai-lab.io/sbsa/cu130**](https://pypi.jetson-ai-lab.io/sbsa/cu130).
 
 Si el archivo wheel esperado no está disponible, el desarrollador necesitará construir las dependencias requeridas por sí mismo para completar la configuración del entorno de desarrollo.
 
-### **Instalación de Dependencias Adicionales**
+### Instalación de Dependencias Adicionales
 
 Este documento proporciona una imagen Docker de referencia para ayudar a los desarrolladores a adaptarse rápidamente al entorno de desarrollo Jetson AGX Thor.
 <mark>Esta imagen es solo para referencia, y los desarrolladores son libres de elegir si usarla basándose en sus necesidades específicas.</mark>
@@ -506,10 +511,15 @@ zipp                      3.23.0                             /opt/venv/lib/pytho
 La imagen se puede descargar directamente desde Docker Hub e incluye dependencias comúnmente utilizadas como `PyTorch`, `TensorRT` y `FlashAttention`:
 
 ```bash
-docker pull johnnync/lerobot:r38.2.aarch64-cu130-24.04
+docker pull johnnync/isaac-gr00t:r38.2.arm64-sbsa-cu130-24.04
 ```
 
-Para ejecutar Docker en Thor, consulte el siguiente comando. Reemplace `your_docker_img:tag` con el nombre y etiqueta de su imagen Docker, o use el ID de la imagen:
+:::warning
+Esta imagen de Docker no admite la invocación de scripts de LeRobot para la inferencia del modelo `ACT`. Si necesita ejecutar el conjunto completo de scripts de LeRobot, utilice un entorno fuera de esta imagen.
+:::
+
+
+Para ejecutar Docker en Thor, consulte el siguiente comando. Reemplace `your_docker_img:tag` con el nombre y etiqueta de su imagen de Docker, o use el ID de la imagen:
 
 ```bash
 sudo docker run --rm -it \
@@ -523,6 +533,8 @@ sudo docker run --rm -it \
   -v /dev:/dev \
   your_docker_img:tag
 ```
+
+
 
 ## Recolección de Datos Usando el SO-ARM
 
@@ -547,7 +559,13 @@ Para transmitir dos cámaras USB simultáneamente en Thor, después de conectar 
   <img src="https://files.seeedstudio.com/wiki/other/hub.png" height="400"/>
 </div>
 
-### Configuración del Entorno Lerobot
+
+El dock USB Type-C debe conectarse a puertos específicos en Thor para asegurar que los periféricos funcionen correctamente, como se muestra a continuación:
+<div align="center">
+  <img src="https://files.seeedstudio.com/wiki/other/thor-typec.png" height="400"/>
+</div>
+
+### Configuración del Entorno Lerobot (opcional)
 
 El proceso de configuración del entorno de desarrollo para Lerobot se puede encontrar en la subsección del siguiente enlace:  
 [https://wiki.seeedstudio.com/es/lerobot_so100m_new/#install-lerobot](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#install-lerobot)
@@ -556,8 +574,10 @@ El proceso de configuración del entorno de desarrollo para Lerobot se puede enc
 
 ### Configurar los motores
 
-Los motores en cada articulación del SO-ARM necesitan ser configurados antes del ensamblaje. Los pasos de configuración se pueden encontrar en la subsección del siguiente enlace:
+
+Los motores en cada articulación del SO-ARM necesitan ser configurados antes del ensamblaje. Los pasos de configuración se pueden encontrar en la subsección del siguiente enlace:    
 [https://wiki.seeedstudio.com/es/lerobot_so100m_new/#configure-the-motors](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#configure-the-motors)
+
 
 ### Ensamblaje
 
@@ -566,16 +586,18 @@ El proceso de instalación de los brazos maestro y seguidor del SO-ARM se puede 
 
 ### Calibración del SO-ARM
 
+
 Después de que el SO-ARM haya sido completamente ensamblado, se requiere calibración. Consulte la subsección del siguiente enlace para el procedimiento de calibración:  
 [https://wiki.seeedstudio.com/es/lerobot_so100m_new/#calibrate](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#calibrate)
 
 
 
 :::note
-**Al calibrar los brazos robóticos, por favor NO conecte ninguna cámara USB, ya que esto puede causar conflictos de puerto o asignaciones incorrectas de puerto.**
+**Al calibrar los brazos robóticos, por favor NO conecte ninguna cámara USB, ya que esto puede causar conflictos de puertos o asignaciones incorrectas de puertos.**
 :::
 
-**Después de ejecutar el script de calibración, mueva manualmente cada articulación del brazo robótico para asegurar que alcance su rango completo de movimiento! No hacerlo puede resultar en una discrepancia entre las poses de los brazos líder y seguidor durante la teleoperación.**
+**Después de ejecutar el script de calibración, mueva manualmente cada articulación del brazo robótico para asegurar que alcance su rango completo de movimiento. No hacerlo puede resultar en una discrepancia entre las poses de los brazos líder y seguidor durante la teleoperación.**
+
 
 
 
@@ -597,6 +619,7 @@ Después de completar tanto la instalación de la cámara como la calibración d
 
 
 ### Visualización de Datos Recopilados
+
 
 Para visualizar los datos recopilados en el SO-ARM, consulte la subsección del siguiente enlace:  
 [https://wiki.seeedstudio.com/es/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#visualize-the-dataset)
@@ -620,7 +643,7 @@ Si elige entrenar la política en la nube, asegúrese de que su conjunto de dato
 
 ## Usar NVIDIA Brev para entrenar políticas
 
-NVIDIA Brev proporciona acceso simplificado a instancias GPU de NVIDIA en plataformas de nube populares, configuración automática del entorno y opciones de implementación flexibles, permitiendo a los desarrolladores comenzar a experimentar instantáneamente.
+NVIDIA Brev proporciona acceso simplificado a instancias de GPU NVIDIA en plataformas de nube populares, configuración automática del entorno y opciones de implementación flexibles, permitiendo a los desarrolladores comenzar a experimentar instantáneamente.
 
 URL de acceso a la plataforma:
 [https://login.brev.nvidia.com/signin](https://login.brev.nvidia.com/signin)
@@ -657,9 +680,9 @@ Necesitará registrar una cuenta para usar la plataforma. Esta sección introduc
   <img src="https://files.seeedstudio.com/wiki/other/jnote1.png" width="600"/>
 </div>
 
-### Entrenar el Modelo y Exportar desde el Servidor
+### Entrenamiento del Modelo y Exportación desde el Servidor
 
-**Los desarrolladores pueden entrenar modelos directamente dentro del terminal del notebook. A continuación se muestra un ejemplo para entrenar un modelo act y exportarlo del servidor posteriormente.**
+**Los desarrolladores pueden entrenar modelos directamente dentro del terminal del notebook. A continuación se muestra un ejemplo para entrenar un GR00T N1.5 y exportarlo desde el servidor después.**
 
 Instalar Conda en el servidor:
 
@@ -672,27 +695,44 @@ source ~/miniconda3/bin/activate
 conda init --all
 ```
 
-Instalar el proyecto lerobot:
-
+Clonar el Repositorio Isaac-GR00T: 
 ```bash
-conda create -y -n lerobot python=3.10 && conda activate lerobot
-git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
-cd ~/lerobot && pip install -e ".[feetech]"
+git clone https://github.com/NVIDIA/Isaac-GR00T
+cd Isaac-GR00T
 ```
 
-Entrenar el modelo ACT:
+Crear el entorno gr00t:
+```bash
+conda create -n gr00t python=3.10
+conda activate gr00t
+pip install --upgrade setuptools
+pip install -e .[base]
+pip install --no-build-isolation flash-attn==2.7.1.post4 
+```
+
+:::warning
+Si entrena o ajusta GR00T en una plataforma de nube, debe usar una GPU con arquitectura Ampere o más nueva (por ejemplo, RTX A6000 o GeForce RTX 4090). **V100 (Volta) no es compatible** para el entrenamiento o ajuste fino de GR00T.
+:::
+
+Para más detalles sobre el ajuste fino del modelo, consulte:
+[https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning#:~:text=1.2%20Configure%20Modality%20File](https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning#:~:text=1.2%20Configure%20Modality%20File)
+
+
+Ajuste fino del modelo GR00T N1.5:
 
 ```bash
-python -m lerobot.scripts.train \
-  --dataset.repo_id=seeedstudio123/test \
-  --policy.type=act \
-  --output_dir=outputs/train/act_so101_test \
-  --job_name=act_so101_test \
-  --policy.device=cuda \
-  --wandb.enable=false \
-  --policy.push_to_hub=false\
-  --steps=300000 
+python scripts/gr00t_finetune.py \
+   --dataset-path ./demo_data/so101-table-cleanup/ \
+   --num-gpus 1 \
+   --output-dir ./so101-checkpoints  \
+   --max-steps 10000 \
+   --data-config so100_dualcam \
+   --video-backend torchvision_av
 ```
+
+:::note
+La configuración predeterminada de ajuste fino requiere ~25G de VRAM. Si no tiene tanta VRAM, intente agregar la bandera `--no-tune_diffusion_model` al script gr00t_finetune.py.
+:::
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train4.png" width="600"/>
@@ -702,22 +742,22 @@ python -m lerobot.scripts.train \
 Si desea entrenar o ajustar Gr00t en un servidor, puede consultar este [enlace](https://github.com/NVIDIA/Isaac-GR00T).
 :::
 
-**Después de que se complete el entrenamiento, es posible que desee descargar el modelo a su máquina local. Pero la barra lateral de Jupyter Notebook no admite navegación directa a las carpetas de entrenamiento de modelos.**
+**Después de que se complete el entrenamiento, es posible que desee descargar el modelo a su máquina local. Pero la barra lateral de Jupyter Notebook no admite navegación directa a las carpetas de entrenamiento del modelo.**
 
-La solución es: Primero comprimir la carpeta objetivo en un archivo `.zip` o `.tar.gz`, luego descargar el archivo comprimido a través de la interfaz del notebook. Consulte la figura a continuación para ver un ejemplo.
+La solución es: Primero comprima la carpeta objetivo en un archivo `.zip` o `.tar.gz`, luego descargue el archivo comprimido a través de la interfaz del notebook. Consulte la figura a continuación para ver un ejemplo.
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train5.png" width="600"/>
 </div>
 
 ## Inferencia de Isaac GR00T N1.5 en Thor
 
-Jetson AGX Thor, como una poderosa plataforma de computación y despliegue en el borde, proporciona recursos suficientes para soportar inferencia de modelos a gran escala. En esta sección, basándonos en el contenido previamente introducido, demostramos cómo ejecutar inferencia para GR00T N1.5 en Thor.
+Jetson AGX Thor, como una poderosa plataforma de computación de borde y despliegue, proporciona recursos suficientes para soportar inferencia de modelos a gran escala. En esta sección, basándonos en el contenido previamente introducido, demostramos cómo ejecutar inferencia para GR00T N1.5 en Thor.
 
-GR00T N1.5 es un sistema de línea base de código abierto lanzado por NVIDIA Research en el campo del aprendizaje robótico. Su objetivo es proporcionar un marco unificado para el entrenamiento e inferencia de IA encarnada, enfocándose particularmente en el aprendizaje por imitación y el aprendizaje de políticas impulsado por modelos a gran escala.
+GR00T N1.5 es un sistema base de código abierto lanzado por NVIDIA Research en el campo del aprendizaje robótico. Su objetivo es proporcionar un marco unificado para el entrenamiento e inferencia de IA encarnada, enfocándose particularmente en el aprendizaje por imitación y el aprendizaje de políticas impulsado por modelos a gran escala.
 
 ### Preparación
 
-Los modelos preentrenados de GR00T N1.5 están disponibles a través de **Hugging Faces**. Puede descargarlos desde el siguiente enlace:
+Los modelos preentrenados de GR00T N1.5 están disponibles a través de **Hugging Faces**. Puedes descargarlos desde el siguiente enlace:
 
 [https://huggingface.co/nvidia/GR00T-N1.5-3B/tree/main](https://huggingface.co/nvidia/GR00T-N1.5-3B/tree/main)
 
@@ -727,7 +767,7 @@ Los modelos preentrenados de GR00T N1.5 están disponibles a través de **Huggin
 
 Todas las dependencias requeridas para la inferencia de GR00T han sido preconfiguradas en una imagen Docker dedicada.
 
-Use el siguiente comando para iniciar el contenedor:
+Usa el siguiente comando para iniciar el contenedor:
 
 ```bash
 sudo docker run --rm -it \
@@ -742,7 +782,7 @@ sudo docker run --rm -it \
   lerobot:r38.2.aarch64-cu130-24.04
 ```
 
-Clonar con Git el código fuente de Gr00t, e instalarlo:
+Clona el código fuente de Gr00t con Git e instálalo:
 
 ```bash
 git clone https://github.com/NVIDIA/Isaac-GR00T.git
@@ -751,13 +791,17 @@ pip install --upgrade setuptools
 pip install -e .[thor]
 ```
 
-Gr00t es completamente compatible con los conjuntos de datos recopilados utilizando el framework lerobot. Consulte la sección anterior "**Recopilación de Datos**" para preparar su conjunto de datos para el ajuste fino del modelo Gr00t.
+Gr00t es completamente compatible con los conjuntos de datos recopilados usando el framework lerobot. Consulta la sección anterior "**Recopilación de Datos**" para preparar tu conjunto de datos para el ajuste fino del modelo Gr00t.
 
-### Ajuste Fino del Modelo
+### Ajuste Fino del Modelo (opcional)
 
-**El proceso de ajuste fino se puede ejecutar ya sea en la plataforma de entrenamiento en la nube proporcionada o directamente dentro del contenedor Docker en Thor**.
+:::warning
+Si ya has realizado el ajuste fino de GR00T N1.5 en NVIDIA Brev, puedes omitir este paso en Thor.
+:::
 
-Si no ha descargado ningún modelo GR00T preentrenado y no planea usar una versión personalizada, puede usar el siguiente comando para realizar el ajuste fino basado en los pesos de Hugging Face:
+**El proceso de ajuste fino puede ejecutarse tanto en la plataforma de entrenamiento en la nube proporcionada como directamente dentro del contenedor Docker en Thor**.
+
+Si no has descargado ningún modelo GR00T preentrenado y no planeas usar una versión personalizada, puedes usar el siguiente comando para realizar el ajuste fino basado en los pesos de Hugging Face:
 
 ```bash
 python scripts/gr00t_finetune.py \
@@ -771,7 +815,7 @@ python scripts/gr00t_finetune.py \
 
 Este script descargará automáticamente el modelo GR00T preentrenado desde Hugging Face y comenzará el proceso de ajuste fino.
 
-Si desea usar un modelo GR00T preentrenado almacenado localmente, modifique el comando de la siguiente manera:
+Si deseas usar un modelo GR00T preentrenado almacenado localmente, modifica el comando de la siguiente manera:
 
 ```bash
 python scripts/gr00t_finetune.py \
@@ -787,17 +831,17 @@ python scripts/gr00t_finetune.py \
 `--dataset-path` es la ruta del archivo de datos de recopilación de SO-ARM.
 
 :::note
-La configuración predeterminada de ajuste fino requiere ~25G de VRAM. Si no tiene tanta VRAM, intente agregar la bandera `--no-tune_diffusion_model` al script gr00t_finetune.py.
+La configuración predeterminada de ajuste fino requiere ~25G de VRAM. Si no tienes tanta VRAM, intenta agregar la bandera `--no-tune_diffusion_model` al script gr00t_finetune.py.
 :::
 
 ### Ejecutando Inferencia con GR00T N1.5
 
-Para lograr un rendimiento óptimo, se recomienda replicar lo más fielmente posible la configuración del mundo real utilizada durante la recopilación de datos al implementar modelos GR00T ajustados. Esto se debe a que las capacidades de generalización del modelo son limitadas.
+Para lograr un rendimiento óptimo, se recomienda replicar lo más fielmente posible la configuración del mundo real utilizada durante la recopilación de datos al desplegar modelos GR00T con ajuste fino. Esto se debe a que las capacidades de generalización del modelo son limitadas.
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/deploy.jpg" width="400"/>
 </div>
 
-Dentro del contenedor Docker, abra una terminal y lance el servicio de inferencia GR00T:
+Dentro del contenedor Docker, abre una terminal y lanza el servicio de inferencia de GR00T:
 
 ```bash
 python scripts/inference_service.py --server \
@@ -812,23 +856,25 @@ Al lanzarse exitosamente, la terminal debería mostrar registros similares a:
   <img src="https://files.seeedstudio.com/wiki/other/deploy1.png" width="600"/>
 </div>
 
-Abra otra terminal y use el siguiente comando para ingresar al mismo contenedor desde un shell diferente:
+Abre otra terminal y usa el siguiente comando para entrar al mismo contenedor desde un shell diferente:
 
 ```bash
 sudo docker exec -it <container id> /bin/bahs
 ```
 
-Luego, en este segundo shell, inicie el cliente de inferencia:
+Luego, en este segundo shell, inicia el cliente de inferencia:
 
 ```bash
-  python examples/eval_lerobot.py \
+  python examples/SO-100/eval_lerobot.py \
     --robot.type=so100_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ wrist: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, front: {type: opencv, index_or_path: 1, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ wrist: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, front: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
     --policy_host=0.0.0.0 \
     --lang_instruction="Grab pens and place into pen holder."
 ```
+
+Reemplaza `index_or_path` con el número de índice de tu cámara; puedes encontrarlo ejecutando `ls /dev/video*`.
 
 Cuando el proceso del cliente se inicie exitosamente, debería aparecer la siguiente salida:
 <div align="center">
@@ -836,26 +882,68 @@ Cuando el proceso del cliente se inicie exitosamente, debería aparecer la sigui
 </div>
 
 :::tip
-Durante la primera ejecución del proceso del cliente, debe calibrar los servos del brazo. El proceso de calibración es el mismo que se describió anteriormente.
+Durante la primera ejecución del proceso del cliente, debes calibrar los servos del brazo. El proceso de calibración es el mismo que se describió anteriormente.
 
-Asegúrese de que cada articulación se mueva a su rango completo de movimiento para garantizar un comportamiento adecuado de teleoperación e inferencia.
+Asegúrate de que cada articulación se mueva a su rango completo de movimiento para garantizar un comportamiento adecuado de teleoperación e inferencia.
 :::
 
-Una vez que todo esté configurado, GR00T N1.5 puede implementarse exitosamente en Jetson AGX Thor. El sistema y el entorno de hardware ahora están verificados para soportar inferencia completa:
+Una vez que todo esté configurado, GR00T N1.5 puede desplegarse exitosamente en Jetson AGX Thor. El sistema y el entorno de hardware ahora están verificados para soportar inferencia completa:
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/123.gif" width="600"/>
 </div>
 
 ## FAQ
 
-P1: ¿La herramienta Brev CLI no funciona en la plataforma de entrenamiento en la nube?
-
+**P1: ¿La herramienta Brev CLI no funciona en la plataforma de entrenamiento en la nube?**  
 Esto a menudo se debe a problemas de red.
-Puede instalar e iniciar sesión en Brev CLI en su host Ubuntu local, luego intentar conectarse a su instancia en la nube usando SSH desde su terminal local.
+Puedes instalar e iniciar sesión en Brev CLI en tu host Ubuntu local, luego intentar conectarte a tu instancia en la nube usando SSH desde tu terminal local.
 
-P2: ¿Cómo subo datos a la plataforma de entrenamiento?
+**P2: ¿Cómo subo datos a la plataforma de entrenamiento?**  
+Usa el siguiente comando: `scp <ruta-archivo-local> <nombre-instancia-brev>:<ruta-archivo-remoto>`, por ejemplo `scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
 
-Use el siguiente comando: `scp <ruta-archivo-local> <nombre-instancia-brev>:<ruta-archivo-remoto>`, por ejemplo `scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
+
+**P3: La pantalla de Thor se pone negra una vez que comienza la instalación**  
+Si usas una memoria USB de instalación de Jetson en un Kit de Desarrollador Jetson AGX Thor que ha sido usado o configurado previamente, necesitas habilitar SoC Display Hand-Off en el `menú de configuración UEFI`.
+De hecho, el flasheo continúa en segundo plano durante este tiempo; después de un rato, aparecerá el escritorio de Ubuntu.
+
+**P4: No tengo salida de video en el monitor (conectado a través de un KVM)**  
+Se sabe que algunos switches/dispositivos KVM no manejan bien la salida de video del Kit de Desarrollador Jetson AGX Thor. Por favor conecta el monitor directamente al Kit de Desarrollador Jetson AGX Thor.
+
+**P5: Después de flashear Thor, HDMI a veces no muestra señal en arranques posteriores**  
+Una solución que ha demostrado ser efectiva es cambiar al conector DisplayPort (DP) para la salida de pantalla.
+
+**P6: No se detecta entrada de teclado durante el flasheo de la imagen de Thor**  
+Recomendamos usar un teclado con cable durante el flasheo. Los teclados inalámbricos pueden tener compatibilidad limitada durante el proceso de flasheo de Thor.
+
+**P7: El ajuste fino en la nube de GR00T reporta "GPU no soportada"**  
+No uses GPUs anteriores a la `arquitectura Ampere` para el ajuste fino en la nube de GR00T. (ej., RTX A6000 o GeForce RTX 4090). V100 (Volta) no es compatible para entrenamiento o ajuste fino de GR00T.
+
+**P8: El nombre del dispositivo serie para la placa controladora del brazo robótico no aparece bajo /dev**  
+El sistema Thor de fábrica no incluye controladores `CH34x`. Si faltan, instálalos desde:
+https://github.com/juliagoda/CH341SER
+
+**P9: El puerto Type-C en Thor no reconoce un hub externo**  
+Para usar un hub externo a través del Type-C de Thor, conéctalo al puerto Type-C más cercano al conector QSFP28. (Ambos puertos Type-C proporcionan energía, pero solo el especificado soporta el hub de manera confiable.)
+<div align="center"> <img src="https://files.seeedstudio.com/wiki/other/thor-typec.png" height="200"/> </div>
+
+**P10: Al flashear con una tarjeta de captura, el sistema luego dice que la contraseña del usuario es incorrecta**  
+Al usar un escritorio de tarjeta de captura durante el flasheo, puede ocurrir un error de entrada de teclado (la entrada no coincide con lo que se escribe). Verifica dos veces la contraseña del usuario mientras la estableces.
+
+**P11: ¿Dónde está el puerto de depuración de Thor?**  
+El puerto de depuración Type-C de Thor está oculto bajo la cubierta magnética. Pueden crearse múltiples nodos de dispositivo serie; usa el que tenga el índice más pequeño para iniciar sesión en Thor vía serie.
+
+**P12: No se pueden ejecutar scripts de LeRobot para inferir ACT en la imagen de GR00T**  
+No recomendamos invocar APIs de LeRobot para inferencia de `ACT` en un entorno Python 3.12. Los scripts de `Calibration` y `find port` están bien. Ten en cuenta que Ubuntu 24 usa Python 3.12 por defecto localmente.
+
+**P13: ¿Cómo verificar la utilización de SM de GPU en Thor?**  
+Ejecuta:
+```bash
+nvidia-smi dmon -s puc
+```  
+Verifica la columna `sm` en la salida.
+
+**P14: No se pueden leer datos del puerto serie del controlador del brazo robótico**  
+No conectes la cámara antes que la placa controladora SO-ARM; hacerlo puede causar un mapeo incorrecto del dispositivo serie. También asegúrate de que se hayan otorgado los permisos del puerto serie.
 
 ## Referencias
 
@@ -864,7 +952,7 @@ Use el siguiente comando: `scp <ruta-archivo-local> <nombre-instancia-brev>:<rut
 
 ## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

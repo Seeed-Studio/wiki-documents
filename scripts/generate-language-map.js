@@ -167,6 +167,16 @@ function generateJavaScriptFile() {
   try {
     const { languageMapping, allSlugs } = generateLanguageMapping();
     
+    // ✅ 首页多语言映射（仅追加，不影响 docs 的自动映射）
+    const HOMEPAGE_LOCALES = ['en', 'cn', 'ja', 'es'];
+    languageMapping['/'] = HOMEPAGE_LOCALES;
+    languageMapping[''] = HOMEPAGE_LOCALES; // 兼容 basePath = '' 的情况
+
+    const SPECIAL_ROUTE_LOCALES = ['en', 'cn', 'ja', 'es'];
+    ['/knowledgebase/', '/knowledgebase'].forEach((slug) => {
+      languageMapping[slug] = SPECIAL_ROUTE_LOCALES;
+    });
+
     const stats = {
       total: allSlugs.size,
       multiLanguage: Object.keys(languageMapping).length,

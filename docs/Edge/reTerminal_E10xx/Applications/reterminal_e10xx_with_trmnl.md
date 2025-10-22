@@ -112,7 +112,29 @@ Please use **FW 1.6.7** or newer firmware for Seeed compatibility.
 
 ---
 
-#### Method 2: Build and Flash from Source (For Advanced Users/Developers)
+#### Method 2: Flash via Sensecraft HMI platform
+
+1. Visit [Sensecraft HMI platform](https://sensecraft.seeed.cc/hmi/device)
+
+2. Select your device
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/164.jpg" style={{width:700, height:'auto'}}/></div>
+
+3. Select TRMNL firmware. If you want to flash HMI firmware, you can also select them. After that, click **Full Flash** and **Flash**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/162.jpg" style={{width:700, height:'auto'}}/></div>
+
+4. Connect your device to computer and select serial port.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/163.jpg" style={{width:700, height:'auto'}}/></div>
+
+5. If goes well, the screen will refresh and display TRMNL logo and MAC address. Now you can play with it.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/165.jpeg" style={{width:700, height:'auto'}}/></div>
+
+---
+
+#### Method 3: Build and Flash from Source (For Advanced Users/Developers)
 
 1. **Clone the Firmware Repository**
 
@@ -357,14 +379,12 @@ Press and hold the Green Button for five seconds. The device will return to the 
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -691,8 +691,7 @@ module.exports = (async () => {
         },
         announcementBar: {
           id: 'support_us',
-          content:
-            'Collaborate with Seeed — <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">Creator</a>, <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Ranger</a>, or <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Contributor</a>, there is always a role ideal for you!',
+          content: '<span id="announcement-text">Collaborate with Seeed - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">Creator</a>, <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Ranger</a>, or <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Contributor</a>, there is always a role ideal for you!</span>',
           backgroundColor: '#013949',
           textColor: '#FFFFFF',
           isCloseable: false,

@@ -1,0 +1,12 @@
+{
+  "banner": {
+    "title": "Plataforma Wiki de Seeed Studio",
+    "description": "Desde 2008, Seeed Studio se ha dedicado, como socio de hardware de IoT, a hacer realidad réplicas digitales interactivas de nuestro mundo físico. Esta es una plataforma abierta que recopila todas las wikis publicadas por Seeed Studio para mostrarte una visión completa de nuestros esfuerzos, la digitalización de entornos naturales y los resultados obtenidos.",
+    "btnGettingStarted": "Primeros pasos",
+    "btnTechnology": "Tecnología"
+  },
+  "techSupport": {
+    "title": "Soporte técnico y debate sobre productos",
+    "desc": "¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte distintos tipos de soporte y asegurar que tu experiencia sea lo más fluida posible. Ponemos a tu disposición varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades."
+  }
+}

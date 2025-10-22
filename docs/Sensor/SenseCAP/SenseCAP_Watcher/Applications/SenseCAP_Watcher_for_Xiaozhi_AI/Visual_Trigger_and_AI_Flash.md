@@ -10,7 +10,7 @@ keywords:
 - Flash
 - Visual
 - Activate
-image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
+image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /visual_trigger_and_ai_flash
 last_update:
   date: 10/20/2025
@@ -20,7 +20,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Visual Trigger and AI Flash
+# Flashing AI Models on the SenseCAP Watcher
 
 ## Overview
 

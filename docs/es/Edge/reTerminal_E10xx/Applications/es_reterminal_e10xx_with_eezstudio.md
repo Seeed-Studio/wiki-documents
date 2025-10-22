@@ -215,7 +215,7 @@ Paso 2. Agregar Panel
 
 Paso 3. Agregar Bitmaps
 
-- Haz clic en el icono Bitmaps en la barra lateral del extremo derecho para agregar una imagen.
+- Haz clic en el icono Bitmaps en la barra lateral derecha para agregar una imagen.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a3.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -239,7 +239,7 @@ Paso 5. Agregar Etiqueta
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a7.jpg" style={{width:900, height:'auto'}}/></div>
 
-- Haz clic en la caja Fonts en la columna del extremo derecho para agregar tus formatos de fuente.
+- Haz clic en la caja Fonts en la columna más a la derecha para agregar tus formatos de fuente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a8.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -316,7 +316,7 @@ Ve a **Tools > Board > ESP32 Arduino** y selecciona **XIAO_ESP32S3**.
 
 ## Programación de la Pantalla ePaper
 
-El **reTerminal E1001 cuenta con una pantalla ePaper de 7.5 pulgadas en blanco y negro**, mientras que el **reTerminal E1002 está equipado con una pantalla ePaper a todo color de 7.3 pulgadas**. Ambas pantallas proporcionan excelente visibilidad en varias condiciones de iluminación con consumo de energía ultra bajo, haciéndolas ideales para aplicaciones industriales que requieren pantallas siempre encendidas con uso mínimo de energía.
+El **reTerminal E1001 cuenta con una pantalla ePaper en blanco y negro de 7.5 pulgadas**, mientras que el **reTerminal E1002 está equipado con una pantalla ePaper a todo color de 7.3 pulgadas**. Ambas pantallas proporcionan excelente visibilidad en diversas condiciones de iluminación con consumo de energía ultra bajo, haciéndolas ideales para aplicaciones industriales que requieren pantallas siempre encendidas con uso mínimo de energía.
 
 ### Usando la Librería Seeed_GFX
 
@@ -338,7 +338,7 @@ Si has instalado previamente la librería TFT_eSPI, es posible que necesites rem
 
 <Tabs>
 <TabItem value="Programming reTerminal E1001" label="Programando reTerminal E1001" default>
-#### Programando reTerminal E1001 (ePaper de 7.5 pulgadas en Blanco y Negro)
+#### Programando reTerminal E1001 (ePaper Blanco y Negro de 7.5 pulgadas)
 
 Exploremos un ejemplo simple que demuestra operaciones básicas de dibujo en la pantalla ePaper en blanco y negro.
 
@@ -399,7 +399,7 @@ Estos dos archivos de controlador subyacentes necesitan ser añadidos a nuestro 
 Porta los siguientes archivos del proyecto (incluyendo cuatro archivos) a la Librería de Arduino para usar en proyectos de Arduino.
 El `archivo EEZ_UI` se genera durante el proceso de construcción en EEZStudio. Necesitas localizar la ruta donde lo guardaste.
 
-- 🔗 **[ZIP]** [Código](https://files.seeedstudio.com/wiki/EEZStudio/E1002_EEZStudioCode.zip)
+- 🔗 **[ZIP]** [Código](https://files.seeedstudio.com/wiki/EEZStudio/E1002-EEZStudioCode.zip)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/7.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -534,16 +534,14 @@ void loop()
 
 ## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

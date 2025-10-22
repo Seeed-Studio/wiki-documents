@@ -20,7 +20,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 视觉触发和 AI 刷写
+# 在 SenseCAP Watcher 上烧录 AI 模型
 
 ## 概述
 
