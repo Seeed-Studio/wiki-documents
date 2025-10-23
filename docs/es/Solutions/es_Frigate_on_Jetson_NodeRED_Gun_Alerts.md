@@ -151,7 +151,7 @@ Una vez que la instalación esté completa, abra su navegador y visite `http://<
 Si no funcionó, verifique si le falta permiso para ejecutar Docker sin `sudo`. Consulte la [sección de FAQ](#docker-permission-denied) para pasos de solución de problemas. Y luego vuelva a ejecutar el comando anterior.
 
 <div style={{textAlign:'center'}}>
-  <img alt="Página de Inicio de Frigate" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/homepage%20demo.png" />
+  <img alt="Página Principal de Frigate" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/homepage%20demo.png" />
 </div>
 
 En NodeRED, nos suscribiremos a los temas MQTT de Frigate para recibir eventos de detección y orquestar flujos de trabajo de alertas. Puede consultar la [documentación MQTT de Frigate](https://docs.frigate.video/integrations/mqtt) para más detalles sobre los temas y cargas útiles disponibles.
@@ -188,7 +188,7 @@ Antes de comenzar, asegúrese de instalar los siguientes nodos de Node-RED desde
 
 ## Aplicaciones
 
-En entornos como campus, centros de transporte, parques industriales y lugares públicos, los operadores necesitan respuesta inmediata a riesgos de armas de fuego. Esta solución está diseñada para:
+En entornos como campus, centros de transporte, parques industriales y lugares públicos, los operadores necesitan respuesta inmediata a los riesgos de armas de fuego. Esta solución está diseñada para:
 
 <div class="info-section">
     <ul class="info-list">
@@ -207,7 +207,7 @@ En entornos como campus, centros de transporte, parques industriales y lugares p
             </div>
             <div class="info-content">
                 <h3>Centros de Transporte Público</h3>
-                <p>Despliega monitoreo multicámara en estaciones e integra alertas directamente en un Centro de Operaciones de Seguridad (SOC) mediante webhooks.</p>
+                <p>Despliega monitoreo multicámara en estaciones e integra alertas directamente en un Centro de Operaciones de Seguridad (SOC) a través de webhooks.</p>
             </div>
         </li>
         <li class="info-item">
@@ -228,7 +228,7 @@ Las siguientes demostraciones de ejemplo te guían a través del proceso de desp
 
 ### Demo 1 — Alerta de Detección de Armas
 
-Esta demo muestra cómo construir un flujo de Node-RED que escucha eventos de detección de armas desde Frigate vía MQTT, luego activa alertas en tiempo real tanto en un panel de control como a través de notificaciones webhook.
+Esta demo muestra cómo construir un flujo de Node-RED que escucha eventos de detección de armas desde **Frigate** a través de **MQTT**, luego activa *alertas en tiempo real* tanto en un panel de control como a través de notificaciones webhook.
 
 #### Pipeline de Datos
 
@@ -241,27 +241,32 @@ Frigate (detectar arma) → MQTT (publicar) → Node-RED (filtrar/alertar) → P
 
 #### Configuración del Flujo Node-RED
 
-Puedes importar la configuración del flujo directamente en tu editor Node-RED usando el [gist flow.json](https://gist.github.com/Love4yzp/2fccdfa6a2d8e64e2740cd566b9b991c) proporcionado.
+Puedes importar el flujo de ejemplo directamente en tu editor Node-RED usando el archivo de configuración de flujo proporcionado ([gist flow.json](https://gist.github.com/Love4yzp/2fccdfa6a2d8e64e2740cd566b9b991c)).
 
-> Ajusta la dirección IP y la URL del webhook en el flujo para que coincidan con tu configuración de Frigate y el endpoint de notificación.
+> **Nota:** Actualiza la dirección IP y la URL del webhook en el flujo para que coincidan con tu instancia de Frigate y el endpoint de notificación.
+
+La ruta de entrada del panel de control está configurada como `/frigate`.
+Accede al panel de control en: `http://<tu_ip_jetson>:1880/dashboard/frigate`
+
+Por ejemplo: `http://192.168.101.100:1880/dashboard/frigate`.
 
 #### Resumen del Flujo
 
-- Escuchador MQTT – Se suscribe al tema (ej., frigate/reviews) para recibir eventos de detección.
-- Filtro de Eventos – Filtra mensajes entrantes para pasar solo aquellos etiquetados como "gun".
+- Escuchador MQTT – Se suscribe a un tema específico (ej., frigate/reviews) para recibir eventos de detección.
+- Filtro de Eventos – Solo deja pasar eventos etiquetados como "gun".
 - Constructor de Alertas – Construye un mensaje de alerta detallado incluyendo una miniatura, marca de tiempo y contador.
-- Actualización del Panel – Actualiza el panel con la imagen más reciente, historial de eventos y contadores de detección.
-- Notificación Webhook – Envía solicitudes POST a endpoints externos como Enterprise WeChat, Slack o APIs personalizadas.
+- Actualización del Panel – Actualiza el panel de control con la imagen más reciente, historial de eventos y contadores de detección.
+- Notificación Webhook – Envía solicitudes HTTP POST a endpoints externos, como bot de Telegram, Slack o APIs personalizadas.
 
 #### Resultados
 
 <div align="center">
-  <img class="img-responsive" width="680" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/frigateevents.png" alt="Visualización de eventos Frigate"/>
+  <img class="img-responsive" width="680" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/frigateevents.png" alt="Visualización de eventos de Frigate"/>
 </div>
 
-Después de configurar este flujo, Node-RED responderá automáticamente a los eventos de detección de armas de Frigate actualizando tu panel de control y enviando notificaciones webhook inmediatas.
+Después de configurar este flujo, **Node-RED** responderá automáticamente a los **eventos de detección de armas de Frigate** actualizando tu panel de control y enviando notificaciones webhook inmediatas.
 
-Puedes proceder a la [sección de Configuración de Frigate](#frigate-config) para aprender cómo configurar los parámetros de detección.
+Continúa con la [sección de Configuración de Frigate](#frigate-config) para instrucciones sobre cómo configurar los parámetros de detección.
 
 ## Configuración Predeterminada de Frigate {#frigate-config}
 
@@ -284,7 +289,7 @@ root@274103ae951b:/media/frigate# ls
 clips  exports  handgun.mp4  machinegun.mov  recordings
 ```
 
-Si planeas mantener videos por períodos más largos, monta este directorio a un **SSD externo o unidad de red** para evitar que el almacenamiento interno de tu Jetson se llene.
+Si planeas mantener videos por períodos más largos, monta este directorio en un **SSD externo o unidad de red** para evitar que el almacenamiento interno de tu Jetson se llene.
 
 ### Configuración de Cámara
 
@@ -389,7 +394,7 @@ objects:
 **Explicación:**
 
 - `track`: Lista de objetos a detectar y rastrear.
-  - Aquí es solo "gun", pero podrías agregar más etiquetas (ej., person, car, etc.) si tu modelo las soporta.
+  - Aquí solo es "gun", pero podrías agregar más etiquetas (ej., person, car, etc.) si tu modelo las soporta.
 - `filters`: Ajusta la confianza de detección para cada tipo de objeto.
 - `threshold`: Valor mínimo de confianza (0.0–1.0).
   - Un valor más bajo (como 0.3) es más sensible pero puede incluir falsos positivos.
@@ -397,7 +402,7 @@ objects:
 
 :::tip
 Si notas demasiadas detecciones falsas, intenta aumentar el umbral a 0.5 o más.
-Para objetos más pequeños que a menudo se pierden, puedes bajarlo ligeramente, pero equilibra entre precisión y ruido.
+Para objetos más pequeños que a menudo se pierden, puedes bajarlo ligeramente — pero equilibra entre precisión y ruido.
 :::
 
 ### Configuración de Grabación
@@ -420,7 +425,7 @@ record:
   - `days`: Número de días para mantener las grabaciones antes de la eliminación automática.
   - `mode`:
     - `all` – grabar continuamente (útil para pruebas).
-    - `motion` – grabar solo cuando se detecta movimiento.
+    - `motion` – solo grabar cuando se detecta movimiento.
     - `events` – grabar solo cuando aparecen objetos rastreados (ej., armas).
 
 :::tip
@@ -445,7 +450,7 @@ snapshots:
 
 - `enabled`: Habilita el guardado de instantáneas cuando ocurre un evento de detección.
 - `clean_copy`: Guarda una versión adicional sin cajas de detección.
-- `timestamp`: Añade la superposición de hora y fecha en la instantánea.
+- `timestamp`: Agrega la superposición de hora y fecha en la instantánea.
 - `bounding_box`: Dibuja una caja alrededor de los objetos detectados.
 - `crop`: Cuando es verdadero, guarda solo el área de detección recortada.
 - `retain.default`: Número de días para mantener las instantáneas.
@@ -469,8 +474,8 @@ birdseye:
 
 - `enabled`: Activa la vista compuesta panorámica.
 - `mode`:
-  - `objects` – mostrar solo cámaras donde se detectan objetos actualmente.
-  - `continuous` – mostrar siempre todos los feeds de cámara.
+  - `objects` – solo mostrar cámaras donde se detectan objetos actualmente.
+  - `continuous` – siempre mostrar todos los feeds de cámara.
 
 ### Configuración MQTT
 
@@ -494,7 +499,7 @@ mqtt:
 
 Para configuraciones MQTT más avanzadas, consulta la [documentación MQTT de Frigate](https://docs.frigate.video/integrations/mqtt).
 
-Con MQTT habilitado, Frigate se convierte en parte de una red de eventos en tiempo real — enviando alertas de detección de armas directamente a Node-RED o Home Assistant, donde pueden activar paneles de control, notificaciones o flujos de trabajo personalizados.
+Con MQTT habilitado, Frigate se convierte en parte de una red de eventos en tiempo real — enviando alertas de detección de armas directamente a Node-RED o Home Assistant, donde pueden activar paneles de control, notificaciones, o flujos de trabajo personalizados.
 
 ## Rendimiento y Dimensionamiento
 
@@ -513,16 +518,16 @@ Con MQTT habilitado, Frigate se convierte en parte de una red de eventos en tiem
 
 <!-- Summary
 
-The **Frigate + Node-RED Gun Detection Solution** delivers real-time firearm detection and intelligent alerting on edge AI hardware — from Raspberry Pi + Hailo systems to Jetson Orin series. It offers a modular, open, and production-ready framework for security integrators, enabling private on-premise analytics, instant visualization, and LLM-driven verification while keeping video data under full control.
+La **Solución de Detección de Armas Frigate + Node-RED** ofrece detección de armas de fuego en tiempo real y alertas inteligentes en hardware AI edge — desde sistemas Raspberry Pi + Hailo hasta la serie Jetson Orin. Ofrece un marco modular, abierto y listo para producción para integradores de seguridad, habilitando análisis privados en las instalaciones, visualización instantánea y verificación impulsada por LLM mientras mantiene los datos de video bajo control total.
 
-| Module | Purpose / Value | Key Capabilities |
-| ------ | ---------------- | ---------------- |
-| Real-time Video Monitoring | Observe scene context before and after detection | Multi-RTSP/HTTP stream input; split-screen or carousel views; zoom and PTZ control |
-| Gun Detection Visualization | Confirm detection accuracy visually | Real-time bounding boxes with confidence overlay; frame pause, magnify, and annotate |
-| Event / Alert Queue | Deliver instant alerting and logging | Adjustable confidence and ROI thresholds; popup, sound, light, webhook, email, or SMS actions |
-| Event Replay & Retrieval | Support evidence review and playback | Filter by time, camera, or alert type; jump to pre-event and post-event footage |
-| Detection Log & Export | Enable third-party analytics and reporting | Timestamp, camera, confidence, snapshot metadata; export in CSV or JSON formats |
-| LLM-based Analysis | Reduce false positives and generate summaries | False-positive review for gun/not-gun decisions; semantic summarization and querying (for example, rifle alerts last week); contextual response suggestions for operators | -->
+| Módulo | Propósito / Valor | Capacidades Clave |
+| ------ | ----------------- | ------------------ |
+| Monitoreo de Video en Tiempo Real | Observar contexto de escena antes y después de la detección | Entrada multi-RTSP/HTTP stream; vistas de pantalla dividida o carrusel; control de zoom y PTZ |
+| Visualización de Detección de Armas | Confirmar precisión de detección visualmente | Cajas delimitadoras en tiempo real con superposición de confianza; pausa de frame, amplificar y anotar |
+| Cola de Eventos / Alertas | Entregar alertas instantáneas y registro | Umbrales de confianza y ROI ajustables; acciones popup, sonido, luz, webhook, email o SMS |
+| Reproducción y Recuperación de Eventos | Soportar revisión de evidencia y reproducción | Filtrar por tiempo, cámara o tipo de alerta; saltar a metraje pre-evento y post-evento |
+| Registro y Exportación de Detección | Habilitar análisis de terceros y reportes | Timestamp, cámara, confianza, metadatos de instantánea; exportar en formatos CSV o JSON |
+| Análisis Basado en LLM | Reducir falsos positivos y generar resúmenes | Revisión de falsos positivos para decisiones arma/no-arma; resumen semántico y consultas (por ejemplo, alertas de rifle la semana pasada); sugerencias de respuesta contextual para operadores | -->
 
 ## FAQ
 
@@ -534,7 +539,7 @@ Si encuentras problemas con el script de instalación predeterminado de Docker, 
 bash <(curl -sSL https://linuxmirrors.cn/docker.sh)
 ```
 
-Para más información, visita: https://linuxmirrors.cn
+Para más información, por favor visita: https://linuxmirrors.cn
 
 ### 2. ¿Cómo saber mi versión de Jetpack?
 
@@ -552,7 +557,7 @@ Sigue las instrucciones en [tu wiki específico del producto](/es/NVIDIA_Jetson)
 
 ### 4. "Permission Denied" Al Ejecutar Docker {#docker-permission-denied}
 
-No tienes permisos para acceder al daemon de Docker.
+No tienes permiso para acceder al daemon de Docker.
 Ejecuta:
 
 ```shell

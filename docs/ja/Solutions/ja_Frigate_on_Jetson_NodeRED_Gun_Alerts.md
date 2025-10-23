@@ -23,7 +23,7 @@ Frigate + Node-RED銃器検出ソリューションは、ライブカメラス�
 
 完全なAI NVR[^nvr]体験を提供します：
 
-- ライブRTSP/HTTPストリームからリアルタイムで銃器を検出。  
+- ライブRTSP/HTTPストリームから銃器をリアルタイムで検出。  
 - イベントアラート、ログ記録、通知を自動化。  
 - プライバシー、低遅延、信頼性を確保するためにローカルで動作。  
 
@@ -50,7 +50,7 @@ Frigate + Node-RED銃器検出ソリューションは、ライブカメラス�
 
 ## 機能
 
-従来のNVRは人間による監視に依存しており、これは遅く、一貫性がなく、スケールが困難です。このソリューションは、即座の価値を提供する測定可能な成果に焦点を当てることで、これらの課題に対処します。
+従来のNVRは人間による監視に依存しており、遅く、一貫性がなく、スケールが困難です。このソリューションは、即座の価値を提供する測定可能な成果に焦点を当てることで、これらの課題に対処します。
 <div class="info-section">
     <ul class="info-list">
         <li class="info-item">
@@ -100,7 +100,7 @@ Frigate + Node-RED銃器検出ソリューションは、ライブカメラス�
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/Architecture%20Diagram.png" alt="system architecture"/>
 </div>
 
-- **Frigate**はライブビデオを処理し、MQTT経由で検出イベントを公開します。
+- **Frigate**はライブビデオを処理し、MQTTを介して検出イベントを公開します。
 - **Node-RED**はこれらのイベントを購読し、アラートワークフローを調整し、ダッシュボードを更新します。
 - **リアルタイムダッシュボード**はビジュアル監視、イベントレビュー、システム設定を提供します。
 - **Webhooks**は通知とデータエクスポートのためのサードパーティシステムとの統合を可能にします。
@@ -154,7 +154,7 @@ curl -sSL https://raw.githubusercontent.com/Seeed-Studio/frigate-on-jetson/main/
   <img alt="Frigate Homepage" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/homepage%20demo.png" />
 </div>
 
-NodeREDでは、FrigateのMQTTトピックを購読して検出イベントを受信し、アラートワークフローを調整します。利用可能なトピックとペイロードの詳細については、[Frigate MQTT documentation](https://docs.frigate.video/integrations/mqtt)を参照してください。
+NodeREDでは、FrigateのMQTTトピックを購読して検出イベントを受信し、アラートワークフローを調整します。利用可能なトピックとペイロードの詳細については、[Frigate MQTTドキュメント](https://docs.frigate.video/integrations/mqtt)を参照してください。
 
 ### ステップ2：Node-REDセットアップ
 
@@ -164,7 +164,7 @@ NodeREDでは、FrigateのMQTTトピックを購読して検出イベントを�
 
 まだNode-REDをインストールしていない場合は、以下の手順に従ってJetsonデバイスにセットアップしてください。
 
-以下のコマンドでコンテナ内でNode-REDを実行します：
+以下のコマンドでNode-REDをコンテナで実行します：
 
 ```bash
 sudo docker run -d --restart=always -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
@@ -228,7 +228,7 @@ sudo docker run -d --restart=always -p 1880:1880 -v node_red_data:/data --name m
 
 ### デモ1 — 銃器検出アラート
 
-このデモでは、MQTT経由でFrigateからの銃器検出イベントをリッスンし、ダッシュボードとwebhook通知の両方でリアルタイムアラートをトリガーするNode-REDフローの構築方法を示します。
+このデモでは、**MQTT**を介して**Frigate**からの銃器検出イベントをリッスンし、ダッシュボードとwebhook通知の両方で*リアルタイムアラート*をトリガーするNode-REDフローの構築方法を示します。
 
 #### データパイプライン
 
@@ -241,17 +241,22 @@ Frigate（銃器検出）→ MQTT（発行）→ Node-RED（フィルタ/アラ�
 
 #### Node-REDフローセットアップ
 
-提供された[gist flow.json](https://gist.github.com/Love4yzp/2fccdfa6a2d8e64e2740cd566b9b991c)を使用して、フロー設定をNode-REDエディターに直接インポートできます。
+提供されたフロー設定ファイル（[gist flow.json](https://gist.github.com/Love4yzp/2fccdfa6a2d8e64e2740cd566b9b991c)）を使用して、サンプルフローをNode-REDエディタに直接インポートできます。
 
-> フロー内のIPアドレスとwebhook URLを、お使いのFrigateセットアップと通知エンドポイントに合わせて調整してください。
+> **注意：** フロー内のIPアドレスとwebhook URLを、お使いのFrigateインスタンスと通知エンドポイントに合わせて更新してください。
+
+ダッシュボードエントリパスは`/frigate`として設定されています。
+ダッシュボードには以下でアクセスできます：`http://<your_jetson_ip>:1880/dashboard/frigate`
+
+例：`http://192.168.101.100:1880/dashboard/frigate`
 
 #### フロー概要
 
-- MQTTリスナー – 検出イベントを受信するためにトピック（例：frigate/reviews）を購読します。
-- イベントフィルター – 受信メッセージをフィルタリングして、「gun」とラベル付けされたもののみを通します。
+- MQTTリスナー – 指定されたトピック（例：frigate/reviews）を購読して検出イベントを受信します。
+- イベントフィルタ – "gun"とラベル付けされたイベントのみを通します。
 - アラートビルダー – サムネイル、タイムスタンプ、カウンターを含む詳細なアラートメッセージを構築します。
 - ダッシュボード更新 – 最新の画像、イベント履歴、検出カウンターでダッシュボードを更新します。
-- Webhook通知 – Enterprise WeChat、Slack、またはカスタムAPIなどの外部エンドポイントにPOSTリクエストを送信します。
+- Webhook通知 – Telegramボット、Slack、カスタムAPIなどの外部エンドポイントにHTTP POSTリクエストを送信します。
 
 #### 結果
 
@@ -259,21 +264,21 @@ Frigate（銃器検出）→ MQTT（発行）→ Node-RED（フィルタ/アラ�
   <img class="img-responsive" width="680" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/frigateevents.png" alt="Frigate event visualization"/>
 </div>
 
-このフローをセットアップした後、Node-REDはFrigateの銃器検出イベントに自動的に応答し、ダッシュボードを更新して即座にwebhook通知を送信します。
+このフローを設定すると、**Node-RED**は**Frigateの銃器検出イベント**に自動的に応答し、ダッシュボードを更新して即座にwebhook通知を送信します。
 
-検出パラメータの設定方法については、[Frigate設定セクション](#frigate-config)に進んでください。
+検出パラメータの設定手順については、[Frigate設定セクション](#frigate-config)に進んでください。
 
 ## デフォルトFrigate設定 {#frigate-config}
 
-`http://<your_jetson_ip>:5000/config`でFrigate設定ページに素早くナビゲートして、現在のセットアップを確認してください。
+`http://<your_jetson_ip>:5000/config`でFrigate設定ページに素早くナビゲートして、現在のセットアップを確認できます。
 
 Frigateは`config.yml`というYAMLファイルを使用して実行方法を定義します。
-このファイルは、カメラストリームの場所、使用するAIモデル、MQTT経由での検出結果の送信方法をFrigateに指示します。
+このファイルは、カメラストリームの場所、使用するAIモデル、MQTT経由で検出結果を送信する方法をFrigateに指示します。
 これを調整することで、オブジェクトの検出、記録、表示方法を制御できます。
 
-### ストレージの場所
+### ストレージ場所
 
-デフォルトでは、FrigateはJetsonデバイスの`/media/frigate`にビデオ録画とスナップショットを保存します。
+デフォルトでは、Frigateはビデオ録画とスナップショットをJetsonデバイスの`/media/frigate`に保存します。
 
 例：
 
@@ -328,7 +333,7 @@ cameras:
   - `-re`は再生がリアルタイム速度に合うことを保証します。
 - `roles`：この入力の使用方法を定義します。
   - `detect`はストリームがオブジェクト検出に使用されることを意味します。
-  - その他の可能な役割には、`record`や`rtmp`（ストリーミング用）があります。
+  - その他の可能な役割には、録画用の`record`やストリーミング用の`rtmp`があります。
 
 :::tip
 各カメラは複数の入力を持つことができます — 例えば、検出用に1つ、高品質録画用に別の1つなど。
@@ -388,21 +393,21 @@ objects:
 
 **説明：**
 
-- `track`：検出・追跡するオブジェクトのリスト。
-  - ここでは「gun」のみですが、モデルがサポートしている場合は、より多くのラベル（例：person、car など）を追加できます。
+- `track`: 検出・追跡するオブジェクトのリスト。
+  - ここでは "gun" のみですが、モデルがサポートしている場合は他のラベル（例：person、car など）を追加できます。
 - `filters`: 各オブジェクトタイプの検出信頼度を微調整します。
 - `threshold`: 最小信頼度値（0.0–1.0）。
-  - 低い値（0.3など）はより敏感ですが、誤検出を含む可能性があります。
-  - 高い値（0.5など）は検出をより厳格にします。
+  - 低い値（0.3 など）はより敏感ですが、誤検出を含む可能性があります。
+  - 高い値（0.5 など）は検出をより厳格にします。
 
 :::tip
-誤検出が多すぎる場合は、閾値を0.5以上に上げてみてください。
+誤検出が多すぎる場合は、閾値を 0.5 以上に上げてみてください。
 見逃されがちな小さなオブジェクトについては、少し下げることもできますが、精度とノイズのバランスを取ってください。
 :::
 
 ### 録画設定
 
-Frigateがオブジェクトを検出すると、さらなる分析やアラート表示のためにビデオを録画し、スナップショットを保存できます。
+Frigate がオブジェクトを検出すると、さらなる分析やアラート表示のためにビデオを録画し、スナップショットを保存できます。
 これらの設定は、録画の保存期間と、キャプチャされた画像に表示される情報を制御します。
 
 ```YAML
@@ -416,7 +421,7 @@ record:
 **説明：**
 
 - `enabled`: ビデオ録画を有効にします。
-- `retain`: 録画ファイルの保存期間と、どのタイプの映像を保存するかを制御します。
+- `retain`: 録画ファイルの保存期間と保存される映像のタイプを制御します。
   - `days`: 自動削除前に録画を保持する日数。
   - `mode`:
     - `all` – 連続録画（テスト用に便利）。
@@ -424,7 +429,7 @@ record:
     - `events` – 追跡されたオブジェクト（例：銃）が現れた時のみ録画。
 
 :::tip
-実際のデプロイメントでは、`mode: events`または`mode: motion`を使用して、有用な録画を保持しながらストレージ容量を節約してください。
+実際のデプロイメントでは、`mode: events` または `mode: motion` を使用して、有用な録画を保持しながらストレージ容量を節約してください。
 :::
 
 ### スナップショット設定
@@ -447,17 +452,17 @@ snapshots:
 - `clean_copy`: 検出ボックスなしの追加バージョンを保存します。
 - `timestamp`: スナップショットに時刻と日付のオーバーレイを追加します。
 - `bounding_box`: 検出されたオブジェクトの周りにボックスを描画します。
-- `crop`: trueの場合、クロップされた検出エリアのみを保存します。
+- `crop`: true の場合、検出エリアのクロップ部分のみを保存します。
 - `retain.default`: スナップショットを保持する日数。
-- `quality`: 画像品質を設定（1–100）。高い値 = より良い詳細だが、ファイルサイズが大きくなります。
+- `quality`: 画像品質を設定（1–100）。高い値 = より良い詳細だがファイルサイズが大きくなります。
 
 :::tip
-スナップショットは、ビデオクリップよりもはるかに小さく、webhookやMQTT経由で送信しやすいため、アラートやダッシュボードに最適です。
+スナップショットは、ビデオクリップよりもはるかに小さく、webhook や MQTT 経由で送信しやすいため、アラートやダッシュボードに最適です。
 :::
 
 ### Birdseye ビュー
 
-Frigateは、複数のカメラフィードを一緒に表示して素早く概要を確認できるBirdseyeビューもサポートしています。
+Frigate は Birdseye ビューもサポートしており、複数のカメラフィードを一緒に表示して素早く概要を確認できます。
 
 ```YAML
 birdseye:
@@ -467,14 +472,14 @@ birdseye:
 
 **説明：**
 
-- `enabled`: Birdseyeコンポジットビューを有効にします。
+- `enabled`: Birdseye 複合ビューを有効にします。
 - `mode`:
   - `objects` – 現在オブジェクトが検出されているカメラのみを表示。
   - `continuous` – 常にすべてのカメラフィードを表示。
 
-### MQTT設定
+### MQTT 設定
 
-Frigateは、MQTT経由で検出イベントを通信します。これにより、Node-RED、Home Assistant、またはカスタムダッシュボードなどの他のサービスが、オブジェクトが検出されるたびにリアルタイム更新を受信できます。
+Frigate は MQTT を通じて検出イベントを通信し、Node-RED、Home Assistant、またはカスタムダッシュボードなどの他のサービスが、オブジェクトが検出されるたびにリアルタイム更新を受信できるようにします。
 また、システムパフォーマンスの監視と検出問題のデバッグに役立つログオプションも提供します。
 
 ```YAML
@@ -486,30 +491,30 @@ mqtt:
 
 **説明：**
 
-- `enabled`: MQTT通信を有効にします。
-- `host`: MQTTブローカーのIPアドレス。
-  - JetsonでDockerを使用する場合、`172.17.0.1`は通常ホストマシンを指します。
-  - 別のデバイスで実行している場合は、実際のMQTTサーバーIPに置き換えてください。
-- `port`: デフォルトのMQTTポート、通常は1883。
+- `enabled`: MQTT 通信を有効にします。
+- `host`: MQTT ブローカーの IP アドレス。
+  - Jetson で Docker を使用する場合、`172.17.0.1` は通常ホストマシンを指します。
+  - 別のデバイスで実行している場合は、実際の MQTT サーバー IP に置き換えてください。
+- `port`: デフォルトの MQTT ポート、通常は 1883。
 
-より高度なMQTT設定については、[Frigate MQTT ドキュメント](https://docs.frigate.video/integrations/mqtt)を参照してください。
+より高度な MQTT 設定については、[Frigate MQTT ドキュメント](https://docs.frigate.video/integrations/mqtt)を参照してください。
 
-MQTTが有効になると、Frigateはリアルタイムイベントネットワークの一部となり、銃検出アラートを直接Node-REDやHome Assistantに送信し、そこでダッシュボード、通知、またはカスタムワークフローをトリガーできます。
+MQTT を有効にすることで、Frigate はリアルタイムイベントネットワークの一部となり、銃検出アラートを Node-RED や Home Assistant に直接送信し、ダッシュボード、通知、またはカスタムワークフローをトリガーできます。
 
-## パフォーマンスとサイジング
+## パフォーマンス & サイジング
 
 | ハードウェアプラットフォーム | モデル | FPS（合計） | 安定ストリーム（≥15 FPS） | 備考 |
 | ----------------- | ----- | ----------- | ------------------------- | ------- |
-| reComputer R2000 (Raspberry Pi + Hailo-8) | YOLOv11-s | 30 | 2 | コンパクトAI NVR；効率的な低電力エッジデバイス |
-| reComputer J3011 (Jetson Orin Nano 8 GB) | YOLOv4-tiny-288 | 90 | 6 | エントリーレベルJetson；ウォームアップ後にFPSが安定 |
-| reComputer J4012 (Jetson Orin NX 16 GB) | YOLOv4-tiny-288 | 120 | 8 | NVDEC同時実行制限に到達；計算余力は残存 |
+| reComputer R2000 (Raspberry Pi + Hailo-8) | YOLOv11-s | 30 | 2 | コンパクト AI NVR；効率的な低電力エッジデバイス |
+| reComputer J3011 (Jetson Orin Nano 8 GB) | YOLOv4-tiny-288 | 90 | 6 | エントリーレベル Jetson；ウォームアップ後に FPS が安定 |
+| reComputer J4012 (Jetson Orin NX 16 GB) | YOLOv4-tiny-288 | 120 | 8 | NVDEC 同時実行制限に到達；計算余力は残存 |
 
-## リソースと次のステップ
+## リソース & 次のステップ
 
 - **ソリューションバンドル:** [Frigate + Node-RED Gun Detection on Jetson](https://cc.seeedstudio.com/solutions/campus-safety-management)
-- **Frigateドキュメント:** [https://docs.frigate.video/](https://docs.frigate.video/)
-- **GitHubリポジトリ:** [Seeed-Studio / frigate-on-jetson](https://github.com/Seeed-Studio/frigate-on-jetson)
-- **Node-REDダッシュボードアドオン:** [@flowfuse/node-red-dashboard](https://flows.nodered.org/node/@flowfuse/node-red-dashboard)
+- **Frigate ドキュメント:** [https://docs.frigate.video/](https://docs.frigate.video/)
+- **GitHub リポジトリ:** [Seeed-Studio / frigate-on-jetson](https://github.com/Seeed-Studio/frigate-on-jetson)
+- **Node-RED ダッシュボードアドオン:** [@flowfuse/node-red-dashboard](https://flows.nodered.org/node/@flowfuse/node-red-dashboard)
 
 <!-- Summary
 
@@ -526,9 +531,9 @@ The **Frigate + Node-RED Gun Detection Solution** delivers real-time firearm det
 
 ## FAQ
 
-### 1. JetsonデバイスにDockerをインストールできません。どうすればよいですか？
+### 1. Jetson デバイスに Docker をインストールできません。どうすればよいですか？
 
-デフォルトのDockerインストールスクリプトで問題が発生した場合は、以下の代替スクリプトを使用できます：
+デフォルトの Docker インストールスクリプトで問題が発生した場合は、以下の代替スクリプトを使用できます：
 
 ```bash
 bash <(curl -sSL https://linuxmirrors.cn/docker.sh)
@@ -536,23 +541,23 @@ bash <(curl -sSL https://linuxmirrors.cn/docker.sh)
 
 詳細については、https://linuxmirrors.cn をご覧ください。
 
-### 2. Jetpackバージョンを確認するには？
+### 2. Jetpack バージョンを確認するには？
 
-Jetsonデバイスで以下のコマンドを実行してください：
+Jetson デバイスで以下のコマンドを実行してください：
 
 ```bash
 dpkg -l | grep nvidia-jetpack
 ```
 
-出力にインストールされているJetpackバージョンが表示されます。
+出力にインストールされている Jetpack バージョンが表示されます。
 
-### 3. Jetpackバージョンを更新するには？
+### 3. Jetpack バージョンを更新するには？
 
-[特定の製品wiki](/ja/NVIDIA_Jetson)の手順に従ってください。
+[特定の製品 wiki](/ja/NVIDIA_Jetson) の手順に従ってください。
 
-### 4. Docker実行時の「Permission Denied」エラー {#docker-permission-denied}
+### 4. Docker 実行時の "Permission Denied" エラー {#docker-permission-denied}
 
-Dockerデーモンにアクセスする権限がありません。
+Docker デーモンにアクセスする権限がありません。
 以下を実行してください：
 
 ```shell
