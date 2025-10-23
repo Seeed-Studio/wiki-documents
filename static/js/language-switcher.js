@@ -1,11 +1,10 @@
-// 语言切换器 - 生产环境优化版（快速注入 / 紧凑数据）
-// 生成时间: 2025-10-23 10:31:48 (北京时间)
-// 多语言页面: 2026 个
+// 语言切换器 - 生产环境优化版（Hydration 友好 / 多行可读数据）
+// 生成时间: 2025-10-23 13:41:53 (北京时间)
+// 多语言页面: 2028 个
 
 (function () {
   'use strict';
 
-  // 生产环境默认关闭调试
   var DEBUG = false;
   function log() {
     if (DEBUG && typeof console !== 'undefined' && console.log) {
@@ -24,6 +23,7 @@
   };
 
   // 内嵌的语言映射数据（多行可读 JSON）
+  // 如需紧凑体积版：把下一行改成 JSON.stringify(languageMapping)（不带 pretty 参数）
   var languageMapping = {
   "/Cloud": [
     "cn",
@@ -9953,7 +9953,19 @@
     "es",
     "ja"
   ],
+  "/extending_grove_with_mcp": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/flash_watcher_agent_firmware": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/mcp_endpoint": [
     "cn",
     "en",
     "es",
@@ -12461,7 +12473,7 @@
       return true;
     }
 
-    // 顶部栏优先显示，避免与侧边栏重复（侧边栏版本保留在代码中但默认不启用）
+    // 顶部栏优先显示，避免与侧边栏重复
     if (!existing) {
       var html = createMobileTopbarLanguageSwitcher(availableLanguages, currentLanguage, basePath);
       if (html) {
@@ -12482,15 +12494,93 @@
     return true;
   }
 
-  // ========= 事件驱动 & 观察器 =========
-  function tryInject() {
-    // 如果导航栏还未渲染，使用 MutationObserver 等待一次
-    if (!getNavbar()) {
-      observeForNavbarOnce();
-      return;
+  // ========= Hydration 友好：等待导航栏“静默稳定”再挂载 =========
+  // 逻辑：观察 navbar（或其父节点）DOM 变动，连续 quietPeriod 毫秒无变动即认为稳定；超时则兜底执行。
+  var HYDRATION_QUIET_PERIOD = 160;   // 静默期阈值（毫秒）：调小更“即时”，调大更“稳”
+  var HYDRATION_MAX_WAIT = 1800;      // 最长等待（毫秒）：避免极端情况下卡死
+
+  function mountAfterNavbarStable(callback) {
+    var navbar = getNavbar();
+    if (!navbar) { observeForNavbarOnce(); return; }
+
+    var root = (navbar.parentNode || navbar);
+    var lastMut = Date.now();
+    var done = false;
+    var timer = null;
+    var timeout = null;
+
+    function finish() {
+      if (done) return;
+      done = true;
+      if (observer) observer.disconnect();
+      if (timer) clearTimeout(timer);
+      if (timeout) clearTimeout(timeout);
+      callback();
     }
+
+    function scheduleCheck() {
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(function () {
+        if (Date.now() - lastMut >= HYDRATION_QUIET_PERIOD) {
+          finish();
+        } else {
+          scheduleCheck();
+        }
+      }, HYDRATION_QUIET_PERIOD);
+    }
+
+    var observer = new MutationObserver(function () {
+      lastMut = Date.now();
+      scheduleCheck();
+    });
+
+    try {
+      observer.observe(root, { childList: true, subtree: true });
+    } catch (_) {
+      // 某些情况下 root 不可观察，直接执行
+      return callback();
+    }
+
+    // 立即安排一次检查（应对“初始就稳定”的情况）
+    scheduleCheck();
+
+    // 兜底：最长等待后强制执行
+    timeout = setTimeout(finish, HYDRATION_MAX_WAIT);
+  }
+
+  // 监听导航栏被 React 重新挂载时，若切换器不在，则补回
+  function watchNavbarForRemoval() {
+    var navbar = getNavbar();
+    if (!navbar) return;
+    if (navbar.__langSwitcherWatch) return;
+
+    var debTimer = null;
+    var observer = new MutationObserver(function () {
+      if (debTimer) clearTimeout(debTimer);
+      debTimer = setTimeout(function () {
+        var hasDesktop = !!document.querySelector('.navbar-language-switcher');
+        var hasMobile = !!document.querySelector('.lang-switcher-inline-mobile');
+        if (!hasDesktop || (isMobileViewport() && !hasMobile)) {
+          mountSwitchers();
+        }
+      }, 60);
+    });
+
+    observer.observe(navbar.parentNode || navbar, { childList: true, subtree: true });
+    navbar.__langSwitcherWatch = observer;
+  }
+
+  function mountSwitchers() {
     injectOrUpdateSwitcher();
     injectOrUpdateMobileTopbarSwitcherLogo();
+    watchNavbarForRemoval();
+  }
+
+  // ========= 事件驱动 & 观察器 =========
+  function tryInject() {
+    if (!getNavbar()) { observeForNavbarOnce(); return; }
+    // 等到导航栏“稳定”后再挂载，避免 Hydration 把我们插入的节点清掉
+    mountAfterNavbarStable(mountSwitchers);
   }
 
   function observeForNavbarOnce() {
@@ -12512,7 +12602,7 @@
     var lastPathname = location.pathname;
     var lastHref = location.href;
 
-    function onRouteChange(source) {
+    function onRouteChange() {
       setTimeout(function () {
         if (location.pathname === lastPathname && location.href === lastHref) return;
         lastPathname = location.pathname;
@@ -12521,12 +12611,12 @@
       }, 80);
     }
 
-    window.addEventListener('popstate', function () { onRouteChange('popstate'); });
+    window.addEventListener('popstate', onRouteChange);
 
     var _pushState = history.pushState;
     var _replaceState = history.replaceState;
-    history.pushState = function () { _pushState.apply(this, arguments); onRouteChange('pushState'); };
-    history.replaceState = function () { _replaceState.apply(this, arguments); onRouteChange('replaceState'); };
+    history.pushState = function () { _pushState.apply(this, arguments); onRouteChange(); };
+    history.replaceState = function () { _replaceState.apply(this, arguments); onRouteChange(); };
 
     document.addEventListener('click', function (e) {
       var link = e.target && e.target.closest ? e.target.closest('a[href]') : null;
@@ -12534,9 +12624,9 @@
       try {
         var url = new URL(link.href);
         if (url.origin === location.origin && url.pathname !== location.pathname) {
-          setTimeout(function () { onRouteChange('click'); }, 120);
+          setTimeout(onRouteChange, 120);
         }
-      } catch (err) { /* 忽略无效URL */ }
+      } catch (err) {}
     }, true);
   }
 
@@ -12544,11 +12634,8 @@
     if (isInitialized) return;
     isInitialized = true;
 
-    // 先尝试一次（若 navbar 未完成渲染，会被 Observer 兜底）
-    tryInject();
-
-    // 只在真实路由变化时触发更新（无持续轮询）
-    setupRouteDetection();
+    tryInject();           // 初次挂载（等待稳定后注入）
+    setupRouteDetection(); // 路由变化时按同样方式处理
 
     // 视口变化时，重算移动端顶栏（轻量 debounce）
     var resizeTimer = null;
