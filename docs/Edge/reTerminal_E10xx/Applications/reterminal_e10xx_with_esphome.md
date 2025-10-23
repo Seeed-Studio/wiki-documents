@@ -862,7 +862,7 @@ Step 4. Upload the downloaded image to the **image** folder you created earlier 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-If you want to display complex and beautiful landscape pictures, it's best to perform image dithering in advance [in our website](https://sensecraft.seeed.cc/hmi/tools?tab=dither) for a better effect. JPG and PNG formats are both supported.
+If you want to display complex and beautiful landscape pictures, it's best to perform image dithering in advance [in our website](https://sensecraft.seeed.cc/hmi/tools/dither) for a better effect. JPG and PNG formats are both supported.
 :::
 
 #### Configuring ESPHome for Image Display
