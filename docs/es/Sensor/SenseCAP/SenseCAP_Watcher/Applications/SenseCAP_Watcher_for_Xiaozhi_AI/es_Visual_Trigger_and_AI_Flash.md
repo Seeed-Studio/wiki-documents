@@ -10,23 +10,23 @@ keywords:
 - Flash
 - Visual
 - Activate
-image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
+image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /es/visual_trigger_and_ai_flash
 last_update:
-  date: 10/17/2025
+  date: 10/20/2025
   author: Twelve
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Flasheando modelos de IA en el SenseCAP Watcher
+# Flasheo de Modelos de IA en el SenseCAP Watcher
 
 ## Descripción General
 
 Agradecimientos especiales a [XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) por sus contribuciones de código abierto que hicieron posible este proyecto.
 
-Esta guía se centra en cómo flashear el SenseCAP Watcher con el firmware de Conversación Activada por Reconocimiento Visual y cómo reemplazar o actualizar el modelo de IA en el dispositivo. Está destinada como una guía instructiva práctica para estas operaciones.
+Esta guía se enfoca en cómo flashear el SenseCAP Watcher con el firmware de Conversación Activada por Reconocimiento Visual y cómo reemplazar o actualizar el modelo de IA en el dispositivo. Está destinada como una guía instructiva práctica para estas operaciones.
 
 Para una introducción completa a las características, aplicaciones y casos de uso del Watcher, consulte: [SenseCAP Watcher - Asistente de IA que interactúa activamente con el mundo](https://wiki.seeedstudio.com/es/solutions/hello_watcher_llms/)
 
@@ -39,14 +39,20 @@ Para una introducción completa a las características, aplicaciones y casos de 
 - PC con Windows  
 
 :::note
-Si está flasheando el **Firmware de Activación Visual**, y su modelo de dispositivo Watcher **no es -EN**, también necesitará flashear manualmente el archivo de autenticación para uso normal (solo se requiere una vez).  
+Si está flasheando el **Firmware de Activación Visual**, y su modelo de dispositivo Watcher **no es -EN**, también necesitará flashear manualmente el archivo de autenticación para uso normal (solo requerido una vez).  
 Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watcher Agent](https://wiki.seeedstudio.com/es/flash_watcher_agent_firmware/).
 :::
 
 ## Proceso de Flasheo de Firmware
 
 <Tabs>
-<TabItem value="sensecraft" label="SenseCraft AI">
+<TabItem value="sensecraft" label="SenseCraft AI" default>
+
+:::caution Nota
+La siguiente guía es para un sitio web de pruebas internas que aún no ha sido lanzado.
+La versión oficial estará disponible pronto.
+Por favor, use otro método para flashear el firmware por ahora.
+:::
 
 - Prerrequisitos
 
@@ -70,7 +76,7 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
 
-- Paso 3. Verifique y Actualice la Versión del Dispositivo
+- Paso 3. Verificar y Actualizar la Versión del Dispositivo
 
   - Haga clic en `Update`
 
@@ -96,15 +102,15 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
 
 </TabItem>
 
-<TabItem value="flasher1" label="Flash Download Tool" default>
+<TabItem value="flasher1" label="Flash Download Tool">
 
 - Prerrequisitos
 
-  - **Firmware de Activación Visual v1.8.8**: [Enlace de Descarga](https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/v1.8.8_sensecap-watcher.zip)
+  - **Firmware de Activación Visual v1.8.8**: [Enlace de Descarga](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 o posterior)
 
-- Paso 1. Conéctese al dispositivo (puerto Type-C en la parte inferior del dispositivo) y abra su Flash Download Tool
+- Paso 1. Conecte al dispositivo (puerto Type-C en la parte inferior del dispositivo) y abra su Flash Download Tool
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting1.jpg" style={{width:300, height:'auto'}}/></div>
 
@@ -146,7 +152,7 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
 
 - Prerrequisitos
 
-  - **Firmware de Activación Visual v1.8.8**: [Enlace de Descarga](https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/v1.8.8_sensecap-watcher.zip)
+  - **Firmware de Activación Visual v1.8.8**: [Enlace de Descarga](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [esptool.py](https://github.com/espressif/esptool)
 
@@ -172,7 +178,7 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
 
   - [ESP-IDF v5.5.1](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#manual-installation)
 
-  - [Repositorio de Código Abierto (Colaboración Xiaozhi AI)](https://github.com/Wvirgil123/xiaozhi-esp32/tree/feat-sscma_invoke)
+  - [Repositorio de Código Abierto (Colaboración Xiaozhi AI)](https://github.com/Wvirgil123/xiaozhi-esp32/tree/main)
 
 - Paso 1. Abra ESP-IDF CMD y navegue a la carpeta del proyecto
   ```shell
@@ -227,7 +233,7 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
 </TabItem>
 </Tabs>
 
-## Proceso de Flasheo del Modelo de IA
+## Proceso de Flasheo de Modelo de IA
 
 ### Prerrequisitos
 - [Plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai/home)
@@ -249,7 +255,7 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
 
 ### Paso 3. Ver el modelo existente y cambiar a un nuevo modelo
 
-- Ver nombre del modelo y versión del modelo
+- Ver el nombre del modelo y la versión del modelo
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI5.png" style={{width:500, height:'auto'}}/></div>
 
@@ -283,6 +289,13 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
 3. **El dispositivo no responde**
    - Usa un pin para presionar suavemente el botón de reset
    - Intenta borrar antes de flashear
+
+4. **El dispositivo no se activa con detección visual**
+   - Verifica si hay mensajes de log relevantes en la salida serial.
+   - La versión de firmware v2.0.3 requiere decir "Turn on inference switch" a Xiaozhi para habilitar esta función.
+
+5. **El serial muestra logs de reconocimiento visual pero el dispositivo aún no puede activarse**
+   - Ve a la plataforma SenseCraft AI y flashea el modelo Person al chip AI.
 
 ## Soporte técnico
 

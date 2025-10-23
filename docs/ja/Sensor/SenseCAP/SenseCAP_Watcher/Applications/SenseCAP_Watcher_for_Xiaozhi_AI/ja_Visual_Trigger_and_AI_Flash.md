@@ -10,17 +10,17 @@ keywords:
 - Flash
 - Visual
 - Activate
-image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
+image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /ja/visual_trigger_and_ai_flash
 last_update:
-  date: 10/17/2025
+  date: 10/20/2025
   author: Twelve
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# SenseCAP Watcher で AI モデルを書き込む
+# SenseCAP Watcher への AI モデルのフラッシュ
 
 ## 概要
 
@@ -46,7 +46,13 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
 ## ファームウェアフラッシュプロセス
 
 <Tabs>
-<TabItem value="sensecraft" label="SenseCraft AI">
+<TabItem value="sensecraft" label="SenseCraft AI" default>
+
+:::caution 注意
+以下のガイドは、まだリリースされていない内部テストウェブサイト用です。
+公式版は間もなく利用可能になります。
+現在は別の方法でファームウェアをフラッシュしてください。
+:::
 
 - 前提条件
 
@@ -96,11 +102,11 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
 
 </TabItem>
 
-<TabItem value="flasher1" label="Flash Download Tool" default>
+<TabItem value="flasher1" label="Flash Download Tool">
 
 - 前提条件
 
-  - **ビジュアルトリガーファームウェア v1.8.8**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/v1.8.8_sensecap-watcher.zip)
+  - **ビジュアルトリガーファームウェア v1.8.8**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 以降)
 
@@ -146,7 +152,7 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
 
 - 前提条件
 
-  - **ビジュアルトリガーファームウェア v1.8.8**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/v1.8.8_sensecap-watcher.zip)
+  - **ビジュアルトリガーファームウェア v1.8.8**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [esptool.py](https://github.com/espressif/esptool)
 
@@ -155,7 +161,7 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
   ```shell
   esptool.py -p /dev/ttyACM0 -b 2000000 write_flash 0 merged-binary.bin
   ```
-  *（注意：システムに応じてポート `/dev/ttyACM0` を調整してください。例：Windows では `COM3`）*
+  *(注意: システムに応じてポート `/dev/ttyACM0` を調整してください。例：Windows では `COM3`)*
 
 - ステップ 2. デバイスの再起動
 
@@ -172,7 +178,7 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
 
   - [ESP-IDF v5.5.1](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#manual-installation)
 
-  - [オープンソースリポジトリ（Xiaozhi AI コラボレーション）](https://github.com/Wvirgil123/xiaozhi-esp32/tree/feat-sscma_invoke)
+  - [オープンソースリポジトリ（Xiaozhi AI コラボレーション）](https://github.com/Wvirgil123/xiaozhi-esp32/tree/main)
 
 - ステップ 1. ESP-IDF CMD を開き、プロジェクトフォルダに移動
   ```shell
@@ -247,17 +253,17 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
 - `Connect` をクリック
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
 
-### ステップ 3. 既存モデルの表示と新しいモデルの変更
+### ステップ 3. 既存のモデルを確認し、新しいモデルに変更する
 
-- モデル名とモデルバージョンの表示
+- モデル名とモデルバージョンを確認
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI5.png" style={{width:500, height:'auto'}}/></div>
 
-- `Select Model...` をクリックし、フラッシュしたいモデルをクリックします
+- `Select Model...` をクリックし、フラッシュしたいモデルをクリック
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI6.png" style={{width:500, height:'auto'}}/></div>
 
-- `Confirm` をクリックします
+- `Confirm` をクリック
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI7.png" style={{width:500, height:'auto'}}/></div>
 
@@ -271,18 +277,25 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
 
 ### よくある問題
 
-1. **COM ポートが検出されない**
-   - 下部の Type-C ポートを使用していることを確認してください
-   - 別の USB ケーブルを試してください
-   - USB ドライバーが正しくインストールされているか確認してください
+1. **COMポートが検出されない**
+   - 下部のType-Cポートを使用していることを確認してください
+   - 別のUSBケーブルを試してください
+   - USBドライバが正しくインストールされているか確認してください
 
 2. **フラッシュが失敗する**
-   - Himax をフラッシュする際は、"A" で終わる COM ポートを選択してください。
-   - ESP32-S3 をフラッシュする際は、"B" で終わる COM ポートを選択してください。
+   - Himaxをフラッシュする際は、「A」で終わるCOMポートを選択してください。
+   - ESP32-S3をフラッシュする際は、「B」で終わるCOMポートを選択してください。
 
 3. **デバイスが応答しない**
    - ピンを使ってリセットボタンを軽く押してください
    - フラッシュ前に消去を試してください
+
+4. **視覚検出でデバイスがウェイクアップしない**
+   - シリアル出力に関連するログメッセージがあるか確認してください。
+   - ファームウェアバージョンv2.0.3では、この機能を有効にするために小智に「Turn on inference switch」と言う必要があります。
+
+5. **シリアルに視覚認識ログが表示されるが、デバイスがまだウェイクアップできない**
+   - SenseCraft AIプラットフォームに移動し、PersonモデルをAIチップにフラッシュしてください。
 
 ## 技術サポート
 
