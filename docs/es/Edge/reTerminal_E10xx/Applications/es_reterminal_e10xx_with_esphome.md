@@ -245,7 +245,7 @@ display:
 Haz clic en **INSTALL** para instalar el código en el dispositivo y verás la siguiente imagen.
 
 <Tabs>
-<TabItem value='Instalar a través del navegador'>
+<TabItem value='Install through browser'>
 
 :::tip
 Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está lejos de ti, recomendamos usar este método. Puedes instalarlo con la computadora que tengas a mano.
@@ -271,7 +271,7 @@ Usa un cable USB para **conectar el panel ePaper a tu computadora** y haz clic e
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
-Selecciona usbmodemxxx (Windows es COMxxx) y haz clic en connect. [¿Encontraste un problema? Haz clic aquí.](#Q4)
+Selecciona usbmodemxxx (en Windows es COMxxx) y haz clic en connect. [¿Encontraste un problema? Haz clic aquí.](#Q4)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
@@ -285,7 +285,7 @@ Espera un momento y verás '¡Hola mundo!' en la pantalla ～
 
 </TabItem>
 
-<TabItem value='Instalar a través del host'>
+<TabItem value='Install through host'>
 
 :::tip
 Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está cerca, recomendamos usar este método ya que es más simple.
@@ -306,7 +306,7 @@ Espera un momento y verás la retroalimentación como la siguiente imagen. Signi
 
 </TabItem>
 
-<TabItem value='Instalar a través de Wi-Fi'>
+<TabItem value='Install through Wi-Fi'>
 
 :::tip
 Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de encriptación válidas para que este método funcione.
@@ -327,9 +327,9 @@ Espera un momento y verás la retroalimentación como la siguiente imagen. Si fa
 
 ## Conceptos básicos para dibujar en ESPHome
 
-### Dibujando Gráficos Simples
+### Dibujando gráficos simples
 
-Este código YAML de ejemplo configura la interfaz SPI y la Pantalla ePaper de la Serie reTerminal E para un proyecto ESPHome. La sección `lambda` contiene comandos de dibujo que renderizan formas simples en la pantalla:
+Este código YAML de ejemplo configura la interfaz SPI y la pantalla ePaper de la serie reTerminal E para un proyecto ESPHome. La sección `lambda` contiene comandos de dibujo que renderizan formas simples en la pantalla:
 
 - Dos rectángulos (uno en la posición (10, 10) con tamaño 100x50, y otro en (150, 10) con tamaño 50x50)
 - Un círculo en (250, 35) con un radio de 25
@@ -428,9 +428,9 @@ Debido a limitaciones de espacio, no elaboraremos demasiado sobre los métodos d
 
 ### Obteniendo valores de Home Assistant para mostrar
 
-Para mostrar datos meteorológicos en tu dispositivo de Pantalla ePaper de la Serie reTerminal E, necesitarás acceder a datos de temperatura, condiciones meteorológicas y velocidad del viento desde Home Assistant. La integración Open-Meteo proporciona datos meteorológicos confiables que se pueden acceder a través de Developer Tools.
+Para mostrar datos meteorológicos en tu dispositivo de pantalla ePaper de la serie reTerminal E, necesitarás acceder a datos de temperatura, condiciones meteorológicas y velocidad del viento desde Home Assistant. La integración Open-Meteo proporciona datos meteorológicos confiables que se pueden acceder a través de Developer Tools.
 
-#### Instalando la Integración Open-Meteo
+#### Instalando la integración Open-Meteo
 
 Paso 1. Abre tu panel de Home Assistant y navega a **Settings** → **Devices & Services**.
 
@@ -444,7 +444,7 @@ Paso 4. Sigue el asistente de configuración para establecer tu ubicación y uni
 
 Paso 5. Una vez instalada, la integración Open-Meteo creará varias entidades relacionadas con el clima en tu instancia de Home Assistant.
 
-#### Accediendo a Datos Meteorológicos en Developer Tools
+#### Accediendo a datos meteorológicos en Developer Tools
 
 Después de instalar la integración Open-Meteo, puedes acceder a los datos meteorológicos a través de Developer Tools:
 
@@ -496,7 +496,7 @@ Para datos de pronóstico, necesitarás usar las entidades `weather.open_meteo_f
 Finalmente, agrega el código para la sección de pantalla para usar estos valores anteriores. El código completo es el siguiente:
 
 <Tabs>
-<TabItem value="For E1001" label="Para E1001" default>
+<TabItem value="For E1001" label="For E1001" default>
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -555,7 +555,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="Para E1002">
+<TabItem value="For E1002" label="For E1002">
 
 ```yaml
 
@@ -682,7 +682,7 @@ Paso 5. Sube el archivo de fuente descargado (`materialdesignicons-webfont.ttf`)
 Paso 6. Agrega el siguiente código a tu archivo de configuración de ESPHome después de la sección `captive_portal`. Este código define dos tamaños de fuente para iconos y configura la pantalla para mostrar iconos meteorológicos.
 
 <Tabs>
-<TabItem value="For E1001" label="Para E1001" default>
+<TabItem value="For E1001" label="For E1001" default>
 
 ```yaml
 # define font to display words
@@ -722,7 +722,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="Para E1002">
+<TabItem value="For E1002" label="For E1002">
 
 ```yaml
 
@@ -815,7 +815,7 @@ glyphs:
   - "\U000F0123" # your new icon
 ```
 
-Y en la lambda de visualización:
+Y en el lambda de visualización:
 
 ```yaml
 lambda: |-
@@ -849,11 +849,11 @@ config/
 
 #### Agregando Imágenes
 
-Paso 3. Descarga una imagen de muestra para probar la funcionalidad. Puedes usar el icono WiFi proporcionado a continuación o usar tu propia imagen.
+Paso 3. Descarga una imagen de muestra para probar la funcionalidad. Puedes usar el icono de WiFi proporcionado a continuación o usar tu propia imagen.
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.jpg" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Descargar Imagen WiFi de Muestra</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Descargar Imagen de WiFi de Muestra</button></p>
 </a>
 </div>
 
@@ -862,12 +862,12 @@ Paso 4. Sube la imagen descargada a la carpeta **image** que creaste anteriormen
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Para mejores resultados en pantallas e-paper, usa imágenes de alto contraste con áreas claras en blanco y negro. Se admiten tanto formatos JPG como PNG.
+Si quieres mostrar imágenes de paisajes complejas y hermosas, es mejor realizar el tramado de imagen por adelantado [en nuestro sitio web](https://sensecraft.seeed.cc/hmi/tools/dither) para un mejor efecto. Se admiten tanto formatos JPG como PNG.
 :::
 
 #### Configurando ESPHome para Visualización de Imágenes
 
-Paso 5. Agrega el siguiente código a tu archivo de configuración de ESPHome después de la sección `captive_portal`. Este código define el recurso de imagen y configura la pantalla para mostrarlo.
+Paso 5. Agrega el siguiente código a tu archivo de configuración de ESPHome después de la sección `captive_portal`. Este código define el recurso de imagen y configura la pantalla para mostrarla.
 
 <Tabs>
 <TabItem value="For E1001" label="Para E1001" default>
@@ -876,9 +876,9 @@ Paso 5. Agrega el siguiente código a tu archivo de configuración de ESPHome de
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
-    type: BINARY                            # Binary mode works best for e-paper
+    type: BINARY                            # Binary works for monochrome, RGB565 works for colorful eink
     resize: 800x480                         # Resize to match display resolution
-    invert_alpha: true                      # Invert colors if needed
+    invert_alpha: true                      # Invert colors is needed
 
 spi:
   clk_pin: GPIO7
@@ -904,15 +904,18 @@ display:
 </TabItem>
 <TabItem value="For E1002" label="Para E1002">
 
+:::tip
+Por favor actualiza tu versión de ESPHome a **2025.10.2** o superior.
+:::
+
 ```yaml
 
 
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
-    type: BINARY                            # Binary mode works best for e-paper
+    type: RGB565                            #  Binary works for monochrome, RGB565 works for colorful eink
     resize: 800x480                         # Resize to match display resolution
-    invert_alpha: true                      # Invert colors if needed
 
 # define SPI interface
 spi:
@@ -1000,7 +1003,7 @@ Al combinar imágenes con texto y otros elementos de visualización cubiertos en
 
 ## Continuar Leyendo
 
-Debido a limitaciones de espacio, este artículo solo cubre algunos casos de uso básicos y ejemplos de dibujo del dispositivo. Cubriremos el uso del hardware del reTerminal en ESPHome con más detalle en el Wiki [Uso Avanzado de ESPHome del reTerminal E Series ePaper Display en Home Assistant](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome_advanced), que puedes continuar leyendo.
+Debido a limitaciones de espacio, este artículo solo cubre algunos casos de uso básicos y ejemplos de dibujo del dispositivo. Cubriremos el uso del hardware del reTerminal en ESPHome con más detalle en el Wiki de [Uso Avanzado de ESPHome del reTerminal E Series ePaper Display en Home Assistant](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome_advanced), que puedes continuar leyendo.
 
 ## FAQ
 
@@ -1022,7 +1025,7 @@ En este caso, debes ir a Settings -> Devices & Services -> Integrations para **A
 
 Intenta desconectarlo y volver a conectarlo varias veces, o simplemente instala el controlador según las indicaciones.
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
