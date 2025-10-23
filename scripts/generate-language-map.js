@@ -9,18 +9,18 @@ const config = {
     en: 'docs',
     cn: 'docs/zh-CN',
     ja: 'docs/ja',
-    es: 'docs/es',
+    es: 'docs/es'
   },
 
   languagePrefixes: {
     en: '',
     cn: '/cn',
     ja: '/ja',
-    es: '/es',
+    es: '/es'
   },
 
   outputFile: 'static/js/language-switcher.js',
-  verbose: true,
+  verbose: true
 };
 
 // 获取所有markdown文件
@@ -39,12 +39,10 @@ function getAllMarkdownFiles(dir) {
       const entries = fs.readdirSync(currentDir, { withFileTypes: true });
 
       for (const entry of entries) {
-        if (
-          entry.name.startsWith('.') ||
-          entry.name === 'node_modules' ||
-          entry.name === '_site' ||
-          entry.name === 'build'
-        ) {
+        if (entry.name.startsWith('.') ||
+            entry.name === 'node_modules' ||
+            entry.name === '_site' ||
+            entry.name === 'build') {
           continue;
         }
 
@@ -57,7 +55,7 @@ function getAllMarkdownFiles(dir) {
           files.push({
             fullPath,
             relativePath: relPath,
-            fileName: entry.name,
+            fileName: entry.name
           });
         }
       }
@@ -119,7 +117,7 @@ function processLanguageDocuments(languageCode, docsPath) {
 
     slugMap.set(slug, {
       file: file.relativePath,
-      language: languageCode,
+      language: languageCode
     });
 
     if (config.verbose) {
@@ -142,7 +140,7 @@ function generateLanguageMapping() {
       if (!allSlugs.has(slug)) {
         allSlugs.set(slug, {
           languages: [],
-          files: {},
+          files: {}
         });
       }
 
@@ -182,7 +180,7 @@ function generateJavaScriptFile() {
     const stats = {
       total: allSlugs.size,
       multiLanguage: Object.keys(languageMapping).length,
-      singleLanguage: allSlugs.size - Object.keys(languageMapping).length,
+      singleLanguage: allSlugs.size - Object.keys(languageMapping).length
     };
 
     console.log('\n📊 统计信息:');
@@ -192,166 +190,145 @@ function generateJavaScriptFile() {
 
     // 生成北京时间
     const now = new Date();
-    const beijingTime = new Date(now.getTime() + 8 * 60 * 60 * 1000);
-    const beijingTimeString =
-      beijingTime.toISOString().replace('T', ' ').slice(0, 19) + ' (北京时间)';
+    const beijingTime = new Date(now.getTime() + (8 * 60 * 60 * 1000));
+    const beijingTimeString = beijingTime.toISOString().replace('T', ' ').slice(0, 19) + ' (北京时间)';
 
-    // 生成生产环境优化版本的JavaScript代码（多行 JSON + Hydration 友好挂载）
-    const jsContent = `// 语言切换器 - 生产环境优化版（Hydration 友好 / 多行可读数据）
+    // 生成生产环境优化版本的JavaScript代码
+    const jsContent = `// 语言切换器 - 生产环境优化版本
 // 生成时间: ${beijingTimeString}
 // 多语言页面: ${stats.multiLanguage} 个
 
-(function () {
+(function() {
   'use strict';
 
-  var DEBUG = false;
-  function log() {
-    if (DEBUG && typeof console !== 'undefined' && console.log) {
-      var args = Array.prototype.slice.call(arguments);
-      args.unshift('🔄 [语言切换器]', new Date().toISOString().slice(11, 23));
-      console.log.apply(console, args);
+  const DEBUG = false; // 生产环境关闭调试
+
+  function log(...args) {
+    if (DEBUG) {
+      console.log('🔄 [生产优化版]', new Date().toISOString().slice(11, 23), ...args);
     }
   }
 
   // 语言配置
-  var languages = {
+  const languages = {
     en: { label: 'English', flag: '🇺🇸', prefix: '' },
     cn: { label: '简体中文', flag: '🇨🇳', prefix: '/cn' },
     ja: { label: '日本語', flag: '🇯🇵', prefix: '/ja' },
     es: { label: 'Español', flag: '🇪🇸', prefix: '/es' }
   };
 
-  // 内嵌的语言映射数据（多行可读 JSON）
-  // 如需紧凑体积版：把下一行改成 JSON.stringify(languageMapping)（不带 pretty 参数）
-  var languageMapping = ${JSON.stringify(languageMapping, null, 2)};
+  // 内嵌的语言映射数据
+  const languageMapping = ${JSON.stringify(languageMapping, null, 2)};
 
-  // ====== 轻量状态 ======
-  var isInitialized = false;
-  var currentPageInfo = null;
-  var cachedNavbar = null;
-  var cachedBrand = null;
-  var domObserver = null;
+  // 生产环境优化的状态管理
+  let isInitialized = false;
+  let currentPageInfo = null;
+  let observerConnected = false;
 
-  // ========= 通用工具 =========
-  function getNavbar() {
-    if (cachedNavbar && document.body.contains(cachedNavbar)) return cachedNavbar;
-    cachedNavbar =
-      document.querySelector('.navbar__items--right') ||
-      document.querySelector('.navbar__items') ||
-      document.querySelector('.navbar');
-    return cachedNavbar;
-  }
-
-  function getBrand() {
-    if (cachedBrand && document.body.contains(cachedBrand)) return cachedBrand;
-    cachedBrand = document.querySelector('.navbar__brand');
-    return cachedBrand;
-  }
-
-  function isMobileViewport() {
-    return window.matchMedia && window.matchMedia('(max-width: 996px)').matches;
-  }
+  // 监控间隔ID
+  let primaryCheckInterval = null;
+  let backupCheckInterval = null;
 
   function getCurrentLanguageAndPath() {
-    var currentPath = window.location.pathname;
-    var detectedLanguage = 'en';
-    var basePath = currentPath;
+    const currentPath = window.location.pathname;
+    let detectedLanguage = 'en';
+    let basePath = currentPath;
 
-    if (currentPath.indexOf('/cn/') === 0) {
+    if (currentPath.startsWith('/cn/')) {
       detectedLanguage = 'cn';
       basePath = currentPath.replace('/cn', '') || '/';
-    } else if (currentPath.indexOf('/ja/') === 0) {
+    } else if (currentPath.startsWith('/ja/')) {
       detectedLanguage = 'ja';
       basePath = currentPath.replace('/ja', '') || '/';
-    } else if (currentPath.indexOf('/es/') === 0) {
+    } else if (currentPath.startsWith('/es/')) {
       detectedLanguage = 'es';
       basePath = currentPath.replace('/es', '') || '/';
     }
 
-    if (basePath.charAt(0) !== '/') {
+    if (!basePath.startsWith('/')) {
       basePath = '/' + basePath;
     }
 
-    return { currentLanguage: detectedLanguage, basePath: basePath };
+    return { currentLanguage: detectedLanguage, basePath };
   }
 
   function findAvailableLanguages(basePath, currentLanguage) {
-    var pathsToTry = [
+    const pathsToTry = [
       basePath,
       basePath.replace(/\\/$/, ''),
-      basePath + (basePath.charAt(basePath.length - 1) === '/' ? '' : '/')
+      basePath + (basePath.endsWith('/') ? '' : '/'),
     ];
 
-    for (var i = 0; i < pathsToTry.length; i++) {
-      var p = pathsToTry[i];
-      if (languageMapping[p]) {
-        var availableLanguages = languageMapping[p];
-        log('🌐 多语言页面', p, availableLanguages);
+    for (const tryPath of pathsToTry) {
+      if (languageMapping[tryPath]) {
+        const availableLanguages = languageMapping[tryPath];
+        log('🌐 找到多语言页面 ' + tryPath + ':', availableLanguages);
         return availableLanguages;
       }
     }
-    log('ℹ️ 单语言页面:', basePath);
+
+    log('ℹ️ 单语言页面: ' + basePath);
     return [currentLanguage];
   }
 
-  // ========= 桌面版 =========
   function createLanguageSwitcher(availableLanguages, currentLanguage, basePath) {
-    if (!availableLanguages || availableLanguages.length <= 1) return null;
+    if (availableLanguages.length <= 1) {
+      return null;
+    }
 
-    var currentLangConfig = languages[currentLanguage];
-    var priority = { en: 0, cn: 1, ja: 2, es: 3 };
-    var sortedLanguages = availableLanguages.slice().sort(function (a, b) {
+    const currentLangConfig = languages[currentLanguage];
+    const priority = { en: 0, cn: 1, ja: 2, es: 3 };
+    const sortedLanguages = [...availableLanguages].sort((a, b) => {
       if (a === currentLanguage) return -1;
       if (b === currentLanguage) return 1;
       return (priority[a] || 999) - (priority[b] || 999);
     });
 
-    var items = sortedLanguages.map(function (langCode) {
-      var lang = languages[langCode];
-      var langPath = lang.prefix + basePath;
-      var isActive = langCode === currentLanguage;
-      return [
-        '    <li>',
-        '      <a class="dropdown__link ' + (isActive ? 'dropdown__link--active' : '') + '"',
-        '         href="' + langPath + '"',
-        '         title="切换到 ' + lang.label + '"',
-        (isActive ? '         aria-current="page">' : '>'),
-        '        <span class="lang-flag">' + lang.flag + '</span>',
-        '        <span class="lang-label">' + lang.label + '</span>',
-        (isActive ? '        <span class="lang-check">✓</span>' : ''),
-        '      </a>',
-        '    </li>'
-      ].join('\\n');
-    }).join('\\n');
-
-    var html = [
+    const switcherHTML = [
       '<div class="navbar__item dropdown dropdown--hoverable navbar-language-switcher navbar_dorp_items" data-page-path="' + basePath + '" data-current-lang="' + currentLanguage + '">',
       '  <a href="#" class="navbar__link" aria-haspopup="true" aria-expanded="false" role="button">',
       '    <span class="lang-flag">' + currentLangConfig.flag + '</span>',
       '    <span class="lang-label">' + currentLangConfig.label + '</span>',
       '  </a>',
       '  <ul class="dropdown__menu">',
-      items,
+      sortedLanguages.map(langCode => {
+        const lang = languages[langCode];
+        const langPath = lang.prefix + basePath;
+        const isActive = langCode === currentLanguage;
+
+        return [
+          '    <li>',
+          '      <a class="dropdown__link ' + (isActive ? 'dropdown__link--active' : '') + '"',
+          '         href="' + langPath + '"',
+          '         title="切换到 ' + lang.label + '"',
+          (isActive ? '         aria-current="page">' : '>'),
+          '        <span class="lang-flag">' + lang.flag + '</span>',
+          '        <span class="lang-label">' + lang.label + '</span>',
+          (isActive ? '        <span class="lang-check">✓</span>' : ''),
+          '      </a>',
+          '    </li>'
+        ].join('\\n');
+      }).join('\\n'),
       '  </ul>',
       '</div>'
     ].join('\\n');
 
-    return html;
+    return switcherHTML;
   }
 
   function injectOrUpdateSwitcher() {
-    var navbar = getNavbar();
+    const navbar = document.querySelector('.navbar__items--right') ||
+                   document.querySelector('.navbar__items') ||
+                   document.querySelector('.navbar');
+
     if (!navbar) {
       log('⏳ 导航栏未找到');
       return false;
     }
 
-    var info = getCurrentLanguageAndPath();
-    var currentLanguage = info.currentLanguage;
-    var basePath = info.basePath;
-
-    var availableLanguages = findAvailableLanguages(basePath, currentLanguage);
-    var existingSwitcher = document.querySelector('.navbar-language-switcher');
+    const { currentLanguage, basePath } = getCurrentLanguageAndPath();
+    const availableLanguages = findAvailableLanguages(basePath, currentLanguage);
+    const existingSwitcher = document.querySelector('.navbar-language-switcher');
 
     // 更新当前页面信息
     currentPageInfo = {
@@ -361,83 +338,224 @@ function generateJavaScriptFile() {
       timestamp: Date.now()
     };
 
-    // 单语言页面：移除后返回
+    // 情况1：不需要切换器
     if (availableLanguages.length <= 1) {
-      if (existingSwitcher) existingSwitcher.remove();
+      if (existingSwitcher) {
+        existingSwitcher.remove();
+        log('🗑️ 移除切换器（单语言页面）');
+      }
       return true;
     }
 
-    // 不存在则创建
+    // 情况2：需要切换器但不存在 - 创建（⚠️ 桌面端逻辑保持不变）
     if (!existingSwitcher) {
-      var switcherHTML = createLanguageSwitcher(availableLanguages, currentLanguage, basePath);
+      const switcherHTML = createLanguageSwitcher(availableLanguages, currentLanguage, basePath);
       if (switcherHTML) {
-        var insertPosition = null;
-        var selectors = ['a[href*="seeedstudio.com"]', '.header-github-link', '.navbar__item:last-child'];
-        for (var i = 0; i < selectors.length; i++) {
-          var el = navbar.querySelector(selectors[i]);
-          if (el) { insertPosition = el; break; }
+        let insertPosition = null;
+        const positionSelectors = [
+          'a[href*="seeedstudio.com"]',
+          '.header-github-link',
+          '.navbar__item:last-child'
+        ];
+
+        for (const selector of positionSelectors) {
+          const element = navbar.querySelector(selector);
+          if (element) {
+            insertPosition = element;
+            break;
+          }
         }
+
         if (insertPosition) {
           insertPosition.insertAdjacentHTML('beforebegin', switcherHTML);
         } else {
           navbar.insertAdjacentHTML('beforeend', switcherHTML);
         }
 
-        var switcherElement = navbar.querySelector('.navbar-language-switcher');
+        const switcherElement = navbar.querySelector('.navbar-language-switcher');
         if (switcherElement) {
-          var switcherButton = switcherElement.querySelector('.navbar__link');
+          const switcherButton = switcherElement.querySelector('.navbar__link');
           if (switcherButton) {
-            switcherButton.addEventListener('click', function (e) { e.preventDefault(); });
+            switcherButton.addEventListener('click', function(e) {
+              e.preventDefault();
+            });
           }
         }
+
         log('✅ 创建新的语言切换器');
         return true;
       }
     }
 
-    // 存在则检查是否需要更新
+    // 情况3：切换器存在 - 检查是否需要更新
     if (existingSwitcher) {
-      var currentPagePath = existingSwitcher.getAttribute('data-page-path');
-      var currentLang = existingSwitcher.getAttribute('data-current-lang');
+      const currentPagePath = existingSwitcher.getAttribute('data-page-path');
+      const currentLang = existingSwitcher.getAttribute('data-current-lang');
+
       if (currentPagePath !== basePath || currentLang !== currentLanguage) {
+        log('🔄 检测到页面变化，更新切换器');
+        log('   从: ' + (currentPagePath || '未知') + ' (' + (currentLang || '未知') + ')');
+        log('   到: ' + basePath + ' (' + currentLanguage + ')');
+
         existingSwitcher.remove();
-        return injectOrUpdateSwitcher(); // 递归重新创建
+        return injectOrUpdateSwitcher(); // 递归调用重新创建
       }
     }
+
     return true;
   }
 
-  // ========= 移动端（Logo 右侧顶栏） =========
-  function createMobileTopbarLanguageSwitcher(availableLanguages, currentLanguage, basePath) {
-    if (!availableLanguages || availableLanguages.length <= 1) return null;
+  // 移动端支持
 
-    var currentLangConfig = languages[currentLanguage];
-    var priority = { en: 0, cn: 1, ja: 2, es: 3 };
-    var sorted = availableLanguages.slice().sort(function (a, b) {
+  function createMobileLanguageSwitcher(availableLanguages, currentLanguage, basePath) {
+    if (availableLanguages.length <= 1) return null;
+
+    const currentLangConfig = languages[currentLanguage];
+    const priority = { en: 0, cn: 1, ja: 2, es: 3 };
+    const sortedLanguages = [...availableLanguages].sort((a, b) => {
       if (a === currentLanguage) return -1;
       if (b === currentLanguage) return 1;
       return (priority[a] || 999) - (priority[b] || 999);
     });
 
-    var itemsHTML = sorted.map(function (code) {
-      var lang = languages[code];
-      var langPath = lang.prefix + basePath;
-      var isActive = code === currentLanguage;
-      return [
-        '<li>',
-        '  <a class="dropdown__link ' + (isActive ? 'dropdown__link--active' : '') + '"',
-        '     href="' + langPath + '"',
-        '     data-lang="' + code + '"',
-        '     title="切换到 ' + lang.label + '"' + (isActive ? ' aria-current="page"' : '') + '>',
-        '    <span class="lang-flag">' + lang.flag + '</span>',
-        '    <span class="lang-label" style="margin-left:.35rem;">' + lang.label + '</span>',
-        (isActive ? '    <span class="lang-check" style="margin-left:auto;">✓</span>' : ''),
-        '  </a>',
-        '</li>'
-      ].join('\\n');
-    }).join('\\n');
+    const header =
+      '<button class="menu__link menu__link--sublist" aria-expanded="false" type="button">' +
+      '<span class="lang-flag">' + currentLangConfig.flag + '</span>' +
+      '<span class="lang-label" style="margin-left: .5rem;">' + currentLangConfig.label + '</span>' +
+      '</button>';
 
-    var switcherHTML = [
+    const listItems = sortedLanguages.map((code) => {
+      const lang = languages[code];
+      const langPath = lang.prefix + basePath;
+      const isActive = code === currentLanguage;
+      return (
+        '<li class="menu__list-item">' +
+        '  <a class="menu__link' + (isActive ? ' menu__link--active' : '') + '" href="' + langPath + '" data-lang="' + code + '">' +
+        '    <span class="lang-flag">' + lang.flag + '</span>' +
+        '    <span class="lang-label" style="margin-left: .5rem;">' + lang.label + '</span>' +
+        (isActive ? '<span class="lang-check" style="margin-left:auto;">✓</span>' : '') +
+        '  </a>' +
+        '</li>'
+      );
+    }).join('');
+
+    const html =
+      '<li class="menu__list-item mobile-language-switcher" data-page-path="' + basePath + '" data-current-lang="' + currentLanguage + '">' +
+      '  <div class="menu__list-item-collapsible">' +
+      header +
+      '    <ul class="menu__list" hidden>' + listItems + '</ul>' +
+      '  </div>' +
+      '</li>';
+
+    return html;
+  }
+
+  function getSidebarMenuList() {
+    const container = document.querySelector('.navbar-sidebar__items .menu__list');
+    return container || null;
+  }
+
+  function bindMobileSwitcherBehavior(li) {
+    const toggle = li.querySelector('.menu__link--sublist');
+    const sublist = li.querySelector('.menu__list');
+    if (toggle && sublist) {
+      toggle.addEventListener('click', function () {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        if (expanded) {
+          sublist.setAttribute('hidden', '');
+        } else {
+          sublist.removeAttribute('hidden');
+        }
+      });
+    }
+
+    li.querySelectorAll('a.menu__link').forEach((a) => {
+      a.addEventListener('click', function () {
+        setTimeout(() => {
+          const body = document.querySelector('body');
+          body && body.classList.remove('navbar-sidebar--show');
+          const backdrop = document.querySelector('.navbar-sidebar__backdrop');
+          backdrop && backdrop.click();
+        }, 50);
+      });
+    });
+  }
+
+  function injectOrUpdateMobileSwitcher() {
+    const sidebarList = getSidebarMenuList();
+    if (!sidebarList) return false;
+
+    const { currentLanguage, basePath } = getCurrentLanguageAndPath();
+    const availableLanguages = findAvailableLanguages(basePath, currentLanguage);
+    const existing = sidebarList.querySelector('.mobile-language-switcher');
+
+    if (availableLanguages.length <= 1) {
+      if (existing) existing.remove();
+      return true;
+    }
+
+    if (!existing) {
+      const html = createMobileLanguageSwitcher(availableLanguages, currentLanguage, basePath);
+      if (html) {
+        sidebarList.insertAdjacentHTML('beforeend', html);
+        const li = sidebarList.querySelector('.mobile-language-switcher');
+        if (li) bindMobileSwitcherBehavior(li);
+        log('✅ 移动端语言切换器已插入（侧边栏）');
+        return true;
+      }
+    }
+
+    if (existing) {
+      const curPath = existing.getAttribute('data-page-path');
+      const curLang = existing.getAttribute('data-current-lang');
+      if (curPath !== basePath || curLang !== currentLanguage) {
+        existing.remove();
+        return injectOrUpdateMobileSwitcher();
+      }
+    }
+
+    return true;
+  }
+
+  function isMobileViewport() {
+    return window.matchMedia && window.matchMedia('(max-width: 996px)').matches;
+  }
+
+  // 与 PC 端一致的 dropdown 结构（dropdown / dropdown__menu / dropdown__link / navbar__link）
+  // 注意：容器不上 .navbar__item，避免被移动端样式隐藏；增加 position:relative 以定位菜单
+  function createMobileTopbarLanguageSwitcher(availableLanguages, currentLanguage, basePath) {
+    if (availableLanguages.length <= 1) return null;
+
+    const currentLangConfig = languages[currentLanguage];
+    const priority = { en: 0, cn: 1, ja: 2, es: 3 };
+    const sorted = [...availableLanguages].sort((a, b) => {
+      if (a === currentLanguage) return -1;
+      if (b === currentLanguage) return 1;
+      return (priority[a] || 999) - (priority[b] || 999);
+    });
+
+    const itemsHTML = sorted
+      .map((code) => {
+        const lang = languages[code];
+        const langPath = lang.prefix + basePath;
+        const isActive = code === currentLanguage;
+        return [
+          '<li>',
+          '  <a class="dropdown__link ' + (isActive ? 'dropdown__link--active' : '') + '"',
+          '     href="' + langPath + '"',
+          '     data-lang="' + code + '"',
+          '     title="切换到 ' + lang.label + '"' + (isActive ? ' aria-current="page"' : '') + '>',
+          '    <span class="lang-flag">' + lang.flag + '</span>',
+          '    <span class="lang-label" style="margin-left:.35rem;">' + lang.label + '</span>',
+          (isActive ? '    <span class="lang-check" style="margin-left:auto;">✓</span>' : ''),
+          '  </a>',
+          '</li>',
+        ].join('\\n');
+      })
+      .join('\\n');
+
+    const switcherHTML = [
       '<div class="dropdown navbar_dorp_items lang-switcher-inline-mobile" data-page-path="' + basePath + '" data-current-lang="' + currentLanguage + '"',
       '     style="display:flex;align-items:center;margin-left:8px;position:relative;">',
       '  <a href="#" class="navbar__link lang-switcher-btn" role="button" aria-haspopup="true" aria-expanded="false"',
@@ -446,7 +564,7 @@ function generateJavaScriptFile() {
       '    <span class="lang-label" style="margin-left:.35rem;">' + currentLangConfig.label + '</span>',
       '  </a>',
       '  <ul class="dropdown__menu" style="min-width: 180px;">',
-      itemsHTML,
+           itemsHTML,
       '  </ul>',
       '</div>',
     ].join('\\n');
@@ -454,9 +572,10 @@ function generateJavaScriptFile() {
     return switcherHTML;
   }
 
+  // 点击展开/收起（移动端无 hover）：通过切换父容器类名 dropdown--show 来控制显示
   function bindMobileTopbarDropdown(container) {
-    var btn = container.querySelector('.lang-switcher-btn');
-    var menu = container.querySelector('.dropdown__menu');
+    const btn = container.querySelector('.lang-switcher-btn');
+    const menu = container.querySelector('.dropdown__menu');
     if (!btn || !menu) return;
 
     function closeMenu() {
@@ -472,54 +591,68 @@ function generateJavaScriptFile() {
     function toggleMenu(e) {
       e.preventDefault();
       e.stopPropagation();
-      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
       if (expanded) closeMenu(); else openMenu();
     }
 
+    // 点击/触摸触发
     btn.addEventListener('click', toggleMenu);
-    btn.addEventListener('touchstart', function (e) { toggleMenu(e); }, { passive: false });
+    btn.addEventListener('touchstart', function(e){ toggleMenu(e); }, {passive:false});
 
-    function outside(e) { if (!container.contains(e.target)) closeMenu(); }
+    // 外击关闭
+    function outside(e) {
+      if (!container.contains(e.target)) closeMenu();
+    }
     document.addEventListener('click', outside);
-    document.addEventListener('touchstart', outside, { passive: true });
+    document.addEventListener('touchstart', outside, {passive:true});
 
+    // 路由或尺寸变化关闭
     window.addEventListener('resize', closeMenu);
     window.addEventListener('orientationchange', closeMenu);
   }
 
   function injectOrUpdateMobileTopbarSwitcherLogo() {
-    var existing = document.querySelector('.lang-switcher-inline-mobile');
+    // 仅在移动端视口处理；切回桌面时自动移除
+    const existing = document.querySelector('.lang-switcher-inline-mobile');
     if (!isMobileViewport()) {
       if (existing) existing.remove();
       return false;
     }
 
-    var brand = getBrand();
+    // 找到 Logo 区域
+    const brand = document.querySelector('.navbar__brand');
     if (!brand) return false;
 
-    var info = getCurrentLanguageAndPath();
-    var currentLanguage = info.currentLanguage;
-    var basePath = info.basePath;
+    const { currentLanguage, basePath } = getCurrentLanguageAndPath();
+    const availableLanguages = findAvailableLanguages(basePath, currentLanguage);
 
-    var availableLanguages = findAvailableLanguages(basePath, currentLanguage);
+    // 不需要切换器
     if (availableLanguages.length <= 1) {
       if (existing) existing.remove();
       return true;
     }
 
     // 顶部栏优先显示，避免与侧边栏重复
+    const sidebarList = (typeof getSidebarMenuList === 'function') && getSidebarMenuList();
+    const mobileSidebarItem = sidebarList && sidebarList.querySelector('.mobile-language-switcher');
+    if (mobileSidebarItem) mobileSidebarItem.remove();
+
+    // 新建或更新
     if (!existing) {
-      var html = createMobileTopbarLanguageSwitcher(availableLanguages, currentLanguage, basePath);
+      const html = createMobileTopbarLanguageSwitcher(availableLanguages, currentLanguage, basePath);
       if (html) {
+        // 插到 Logo 的右侧
         brand.insertAdjacentHTML('afterend', html);
-        var container = document.querySelector('.lang-switcher-inline-mobile');
-        if (container) bindMobileTopbarDropdown(container);
-        log('✅ 移动端顶部栏语言切换器已插入（Logo 右侧）');
+        const container = document.querySelector('.lang-switcher-inline-mobile');
+        if (container) {
+          bindMobileTopbarDropdown(container);
+        }
+        log('✅ 移动端顶部栏语言切换器已插入（Logo 右侧，PC 同款样式）');
         return true;
       }
     } else {
-      var curPath = existing.getAttribute('data-page-path');
-      var curLang = existing.getAttribute('data-current-lang');
+      const curPath = existing.getAttribute('data-page-path');
+      const curLang = existing.getAttribute('data-current-lang');
       if (curPath !== basePath || curLang !== currentLanguage) {
         existing.remove();
         return injectOrUpdateMobileTopbarSwitcherLogo();
@@ -528,167 +661,175 @@ function generateJavaScriptFile() {
     return true;
   }
 
-  // ========= Hydration 友好：等待导航栏“静默稳定”再挂载 =========
-  // 逻辑：观察 navbar（或其父节点）DOM 变动，连续 quietPeriod 毫秒无变动即认为稳定；超时则兜底执行。
-  var HYDRATION_QUIET_PERIOD = 160;   // 静默期阈值（毫秒）：调小更“即时”，调大更“稳”
-  var HYDRATION_MAX_WAIT = 1800;      // 最长等待（毫秒）：避免极端情况下卡死
+  // 生产环境优化的监控策略
+  function startProductionMonitoring() {
+    if (primaryCheckInterval) clearInterval(primaryCheckInterval);
+    if (backupCheckInterval) clearInterval(backupCheckInterval);
 
-  function mountAfterNavbarStable(callback) {
-    var navbar = getNavbar();
-    if (!navbar) { observeForNavbarOnce(); return; }
+    primaryCheckInterval = setInterval(function() {
+      const { currentLanguage, basePath } = getCurrentLanguageAndPath();
 
-    var root = (navbar.parentNode || navbar);
-    var lastMut = Date.now();
-    var done = false;
-    var timer = null;
-    var timeout = null;
+      if (!currentPageInfo ||
+          currentPageInfo.basePath !== basePath ||
+          currentPageInfo.currentLanguage !== currentLanguage) {
 
-    function finish() {
-      if (done) return;
-      done = true;
-      if (observer) observer.disconnect();
-      if (timer) clearTimeout(timer);
-      if (timeout) clearTimeout(timeout);
-      callback();
-    }
-
-    function scheduleCheck() {
-      if (timer) clearTimeout(timer);
-      timer = setTimeout(function () {
-        if (Date.now() - lastMut >= HYDRATION_QUIET_PERIOD) {
-          finish();
-        } else {
-          scheduleCheck();
-        }
-      }, HYDRATION_QUIET_PERIOD);
-    }
-
-    var observer = new MutationObserver(function () {
-      lastMut = Date.now();
-      scheduleCheck();
-    });
-
-    try {
-      observer.observe(root, { childList: true, subtree: true });
-    } catch (_) {
-      // 某些情况下 root 不可观察，直接执行
-      return callback();
-    }
-
-    // 立即安排一次检查（应对“初始就稳定”的情况）
-    scheduleCheck();
-
-    // 兜底：最长等待后强制执行
-    timeout = setTimeout(finish, HYDRATION_MAX_WAIT);
-  }
-
-  // 监听导航栏被 React 重新挂载时，若切换器不在，则补回
-  function watchNavbarForRemoval() {
-    var navbar = getNavbar();
-    if (!navbar) return;
-    if (navbar.__langSwitcherWatch) return;
-
-    var debTimer = null;
-    var observer = new MutationObserver(function () {
-      if (debTimer) clearTimeout(debTimer);
-      debTimer = setTimeout(function () {
-        var hasDesktop = !!document.querySelector('.navbar-language-switcher');
-        var hasMobile = !!document.querySelector('.lang-switcher-inline-mobile');
-        if (!hasDesktop || (isMobileViewport() && !hasMobile)) {
-          mountSwitchers();
-        }
-      }, 60);
-    });
-
-    observer.observe(navbar.parentNode || navbar, { childList: true, subtree: true });
-    navbar.__langSwitcherWatch = observer;
-  }
-
-  function mountSwitchers() {
-    injectOrUpdateSwitcher();
-    injectOrUpdateMobileTopbarSwitcherLogo();
-    watchNavbarForRemoval();
-  }
-
-  // ========= 事件驱动 & 观察器 =========
-  function tryInject() {
-    if (!getNavbar()) { observeForNavbarOnce(); return; }
-    // 等到导航栏“稳定”后再挂载，避免 Hydration 把我们插入的节点清掉
-    mountAfterNavbarStable(mountSwitchers);
-  }
-
-  function observeForNavbarOnce() {
-    if (domObserver) { domObserver.disconnect(); domObserver = null; }
-    if (getNavbar()) return true;
-
-    domObserver = new MutationObserver(function () {
-      if (getNavbar()) {
-        domObserver.disconnect();
-        domObserver = null;
-        tryInject();
+        log('🔄 检测到页面变化，执行更新');
+        injectOrUpdateSwitcher();                 // 桌面端（保持原样）
+        injectOrUpdateMobileTopbarSwitcherLogo(); // 移动端顶部栏（Logo 右侧）
+        // injectOrUpdateMobileSwitcher();        // 如需侧边栏也显示，可另行开启
       }
+    }, 200);
+
+    backupCheckInterval = setInterval(function() {
+      const { currentLanguage, basePath } = getCurrentLanguageAndPath();
+      const availableLanguages = findAvailableLanguages(basePath, currentLanguage);
+      const existingSwitcher = document.querySelector('.navbar-language-switcher');
+      const existingMobileTopbar = document.querySelector('.lang-switcher-inline-mobile');
+
+      if (availableLanguages.length > 1) {
+        if (!existingSwitcher) injectOrUpdateSwitcher();
+        if (!existingMobileTopbar) injectOrUpdateMobileTopbarSwitcherLogo();
+      } else {
+        if (existingSwitcher) existingSwitcher.remove();
+        if (existingMobileTopbar) existingMobileTopbar.remove();
+        const sidebarList = (typeof getSidebarMenuList === 'function') && getSidebarMenuList();
+        const mobileExists = sidebarList && sidebarList.querySelector('.mobile-language-switcher');
+        if (mobileExists) mobileExists.remove();
+        currentPageInfo = null;
+      }
+    }, 2000);
+
+    log('🔧 启动生产环境监控机制');
+
+    // 监听视口变化（横竖屏/缩放）
+    let resizeTimer = null;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        injectOrUpdateMobileTopbarSwitcherLogo();
+      }, 150);
     });
-    domObserver.observe(document.documentElement, { childList: true, subtree: true });
-    return false;
   }
 
-  function setupRouteDetection() {
-    var lastPathname = location.pathname;
-    var lastHref = location.href;
+  // 强化的路由变化检测（专为生产环境设计）
+  function setupProductionRouteDetection() {
+    let lastPathname = location.pathname;
+    let lastHref = location.href;
 
-    function onRouteChange() {
-      setTimeout(function () {
-        if (location.pathname === lastPathname && location.href === lastHref) return;
-        lastPathname = location.pathname;
-        lastHref = location.href;
-        tryInject();
-      }, 80);
+    function handleHistoryChange(source) {
+      setTimeout(function() {
+        if (location.pathname !== lastPathname || location.href !== lastHref) {
+          log('🔄 路由变化 [' + source + ']: ' + lastPathname + ' -> ' + location.pathname);
+          lastPathname = location.pathname;
+          lastHref = location.href;
+
+          setTimeout(function() {
+            injectOrUpdateSwitcher();
+            injectOrUpdateMobileTopbarSwitcherLogo();
+            // setTimeout(injectOrUpdateMobileSwitcher, 50); // 若要侧边栏也显示，可开启
+          }, 100);
+        }
+      }, 50);
     }
 
-    window.addEventListener('popstate', onRouteChange);
+    window.addEventListener('popstate', function() {
+      handleHistoryChange('popstate');
+    });
 
-    var _pushState = history.pushState;
-    var _replaceState = history.replaceState;
-    history.pushState = function () { _pushState.apply(this, arguments); onRouteChange(); };
-    history.replaceState = function () { _replaceState.apply(this, arguments); onRouteChange(); };
+    const originalPushState = history.pushState;
+    const originalReplaceState = history.replaceState;
 
-    document.addEventListener('click', function (e) {
-      var link = e.target && e.target.closest ? e.target.closest('a[href]') : null;
-      if (!link) return;
-      try {
-        var url = new URL(link.href);
-        if (url.origin === location.origin && url.pathname !== location.pathname) {
-          setTimeout(onRouteChange, 120);
+    history.pushState = function() {
+      originalPushState.apply(this, arguments);
+      handleHistoryChange('pushState');
+    };
+
+    history.replaceState = function() {
+      originalReplaceState.apply(this, arguments);
+      handleHistoryChange('replaceState');
+    };
+
+    document.addEventListener('click', function(e) {
+      const link = e.target.closest('a[href]');
+      if (link && link.href) {
+        try {
+          const url = new URL(link.href);
+        if (url.origin === window.location.origin && url.pathname !== lastPathname) {
+            setTimeout(function() {
+              handleHistoryChange('click');
+            }, 150);
+          }
+        } catch (err) {
+          // 忽略无效URL
         }
-      } catch (err) {}
+      }
     }, true);
+
+    setInterval(function() {
+      if (location.pathname !== lastPathname || location.href !== lastHref) {
+        handleHistoryChange('periodic');
+      }
+    }, 1000);
+
+    log('🔧 启动生产环境路由检测');
   }
 
-  function initFast() {
-    if (isInitialized) return;
+  function productionInitialization() {
+    log('🚀 初始化生产环境优化版语言切换器');
+
+    function attemptInitialization() {
+      const navbar = document.querySelector('.navbar__items--right') ||
+                     document.querySelector('.navbar__items');
+
+      if (navbar) {
+        log('✅ 导航栏就绪，开始初始化');
+
+        // 立即执行一次注入
+        injectOrUpdateSwitcher();                  // 桌面端（保持原样）
+        injectOrUpdateMobileTopbarSwitcherLogo();  // 移动端顶部栏（Logo 右侧）
+        // injectOrUpdateMobileSwitcher();          // 如需侧边栏也显示，可开启
+
+        // 启动监控机制
+        setTimeout(function() {
+          startProductionMonitoring();
+          setupProductionRouteDetection();
+        }, 500);
+
+      } else {
+        log('⏳ 等待导航栏加载...');
+        setTimeout(attemptInitialization, 300);
+      }
+    }
+
+    attemptInitialization();
+  }
+
+  function init() {
+    if (isInitialized) {
+      return;
+    }
+
+    log('🚀 启动生产环境优化版语言切换器');
+    log('📊 映射数据包含 ' + Object.keys(languageMapping).length + ' 个多语言页面');
+
     isInitialized = true;
 
-    tryInject();           // 初次挂载（等待稳定后注入）
-    setupRouteDetection(); // 路由变化时按同样方式处理
-
-    // 视口变化时，重算移动端顶栏（轻量 debounce）
-    var resizeTimer = null;
-    window.addEventListener('resize', function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function () {
-        injectOrUpdateMobileTopbarSwitcherLogo();
-      }, 120);
-    });
-    window.addEventListener('orientationchange', function () {
-      injectOrUpdateMobileTopbarSwitcherLogo();
-    });
+    setTimeout(productionInitialization, 800);
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initFast, { once: true });
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    initFast();
+    setTimeout(init, 100);
   }
+
+  setTimeout(function() {
+    if (!isInitialized) {
+      log('🔄 备用初始化触发');
+      init();
+    }
+  }, 2000);
+
 })();
 `;
 
@@ -708,6 +849,7 @@ function generateJavaScriptFile() {
 
     const stats_file = fs.statSync(config.outputFile);
     console.log(`📦 文件大小: ${Math.round(stats_file.size / 1024)}KB`);
+
   } catch (error) {
     console.error('❌ 生成失败:', error);
     process.exit(1);
