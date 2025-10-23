@@ -118,7 +118,7 @@ El reSpeaker XVF3800 expone 3 pines de entrada (GPI) y 5 pines de salida (GPO) p
 
 Puedes experimentar con el arreglo de LEDs siguiendo la dirección de la voz entrante.
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="400"
           src="https://www.youtube.com/embed/nYxsTq_2bw4"
           title="ReSpeaker XVF3800 Plug & Play: Boot Light Show and DOA Demo"
@@ -413,7 +413,17 @@ arecord -D plughw:4,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
 
 ---
 
-3. **Reproducción**:
+3. **Ajustar el volumen para ReSpeaker XVF3800 en ALSA**
+
+```bash
+alsamixer
+```
+
+En alsamixer, usa las teclas de flecha izquierda/derecha para navegar hasta el dispositivo de sonido correcto. Usa la tecla de flecha hacia arriba para aumentar el volumen.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alsa.png" alt="pir" width={600} height="auto"/></p>
+
+4. **Reproducción**:
 
 ```bash
 aplay -D plughw:4,0 output.wav
@@ -500,6 +510,8 @@ Salida esperada:
 Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 VERSION 2 0 2
 ```
+
+---
 
 **Control de LED**
 

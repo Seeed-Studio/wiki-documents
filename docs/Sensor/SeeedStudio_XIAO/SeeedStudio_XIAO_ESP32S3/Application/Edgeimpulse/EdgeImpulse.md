@@ -78,7 +78,9 @@ It's like a generic arduino library, we need to install it on Arduino IDE first 
 
 #### Demo
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oa0BGRXnb8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ### How it's works
 

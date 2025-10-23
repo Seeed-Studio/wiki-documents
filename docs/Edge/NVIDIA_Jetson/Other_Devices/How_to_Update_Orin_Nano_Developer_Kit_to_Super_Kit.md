@@ -38,7 +38,7 @@ As long as you have an Nvidia Jetson Orin Nano 8GB in hand, you can upgrade it b
 - Step 3: Configure and flash the system. 
 Watch the video to immerse yourself in experiencing each step.
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="480" src="https://www.youtube.com/embed/VhuSCMM7iN0" title="Update Orin Nano Developer Kit to Super Kit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -46,7 +46,7 @@ Watch the video to immerse yourself in experiencing each step.
 
 ### Full performance release
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="480" src="https://www.youtube.com/embed/Xlr3gO7tRfM" title="Power Consumption of Orin Nano Super Developer Kit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -58,7 +58,7 @@ Jetson Orin cpu and gpu burn program [download link](https://github.com/anseeto/
 
 ### Improved inference speed
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="480" src="https://www.youtube.com/embed/gyHM9xJCPxw" title="Ollama on Jetson Orin Nano Super Developer Kit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

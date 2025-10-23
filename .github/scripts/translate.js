@@ -370,8 +370,11 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
    - 代码块内容（\`\`\`之间的内容）
    - 行内代码（\`之间的内容）
    - URL链接
-   - HTML标签
+   - HTML 标签**结构**与**属性**保持不变（不要新增/删除/重排标签；不要修改属性名/属性值）
+   - 但标签之间的**可见文本内容要翻译**（例如 <span>、<strong>、<font> 内部的文字）
    - 专有名词：${termsList.split('\n').slice(0, 5).join(', ')}等
+   - **教程中引用的目标软件或系统界面的英文元素**（如 App 内的菜单项、按钮名称、字段名、设置项等，通常出现在引号 "..."、加粗 **...**、或菜单路径 File > Preferences 等），请保持英文原文，不要翻译，以便与实际界面一致。
+   - 但**网页自身的 HTML 或 JSX 标签内的可见文字**（例如 <span>、<strong>、<font>、导航链接、标题等）若是文档页面展示给读者看的内容，应正常翻译。
 
 2. **术语表（强制翻译）**：以下术语若出现，必须严格使用右侧译法（不允许其它译法）：
 ${glossaryPairs}
@@ -406,6 +409,9 @@ ${glossaryPairs}
 [LINE_3]   - First item
 [LINE_4]   - [BLE Scanner](#ble-scanner)
 [LINE_5]     - Nested item
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+[LINE_7] Click "Settings" in the app (File > Preferences).
+[LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>
 
 正确输出：
 [LINE_0] ## 入门指南
@@ -414,6 +420,9 @@ ${glossaryPairs}
 [LINE_3]   - 第一项
 [LINE_4]   - [BLE 扫描器](#ble-扫描器)
 [LINE_5]     - 嵌套项
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+[LINE_7] 在应用中点击 "Settings"（File > Preferences）。
+[LINE_8] <a className="nav-item"><span className="text">开发者中心</span></a>
 
 错误输出（绝对禁止）：
 [LINE_0] ## 入门指南
@@ -422,6 +431,9 @@ ${glossaryPairs}
 [LINE_3] - 第一项  ❌ 缩进丢失
 [LINE_4]   - [BLE 扫描器](#ble 扫描器)  ❌ 锚点中有空格
 [LINE_5]   - 嵌套项  ❌ 缩进级别错误
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>  ❌ HTML/JSX 可见文本未翻译（应为“立即购买”）
+[LINE_7] 在应用中点击 “设置” （文件 > 首选项）。  ❌ 不应翻译软件界面内的菜单路径或按钮名称
+[LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>  ❌ 网页自身的可见文本未翻译
 </example>
 </instruction>
 
@@ -845,6 +857,23 @@ function escapeRegExp(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+// 安全拼接：确保块与块之间至少保留一个换行，避免跨块黏连
+function joinChunksPreservingNewlines(chunks) {
+  if (!Array.isArray(chunks) || chunks.length === 0) return '';
+  let out = '';
+  for (let i = 0; i < chunks.length; i++) {
+    const s = chunks[i] ?? '';
+    if (i === 0) {
+      out = s;
+      continue;
+    }
+    // 如果上一段不以 '\n' 结尾，则补一个 '\n'
+    if (!out.endsWith('\n')) out += '\n';
+    out += s;
+  }
+  return out;
+}
+
 // 检查文件是否受保护
 function isProtectedPath(filePath) {
   const normalizedPath = filePath.replace(/\\/g, '/');
@@ -1019,24 +1048,34 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
     finalContent = translatedChunks[0];
   } else {
     const firstChunk = translatedChunks[0];
-    const otherChunks = translatedChunks.slice(1);
-    
-    const frontMatterMatch = firstChunk.match(/^---\n[\s\S]*?\n---\n/);
-    
-    if (frontMatterMatch) {
-      const frontMatter = frontMatterMatch[0];
-      // 不再 trim，避免吞掉空行导致行号错位
-      const firstContent = firstChunk.replace(frontMatterMatch[0], '');
-      
-      // 直接拼接，不额外插入空行，保持逐行对齐
-      finalContent = frontMatter + firstContent;
-      if (otherChunks.length > 0) {
-        finalContent += otherChunks.join('');
-      }
+    const restChunks = translatedChunks.slice(1);
+    const fmMatch = firstChunk.match(/^---\n[\s\S]*?\n---\n/);
+    if (fmMatch) {
+      const frontMatter = fmMatch[0];
+      const firstBody = firstChunk.slice(frontMatter.length);
+      // 保留 front matter + 正文，后续块用安全方式拼接（自动补换行）
+      finalContent = joinChunksPreservingNewlines([frontMatter + firstBody, ...restChunks]);
     } else {
-      // 多块直接无缝拼接，避免 \n\n 造成偏移
-      finalContent = translatedChunks.join('');
+      finalContent = joinChunksPreservingNewlines(translatedChunks);
     }
+  }
+
+  // 整文行数与原文一致性检查（按当前文件内容）
+  try {
+    const originalTotalLines = (await fs.readFile(filePath, 'utf8'))
+      .toString()
+      .replace(/\r\n/g, '\n').replace(/\r/g, '\n')
+      .split('\n').length;
+    let finalTotalLines = finalContent.split('\n').length;
+    if (finalTotalLines !== originalTotalLines) {
+      console.warn(`⚠️ 拼接后行数不一致: 原文 ${originalTotalLines}, 译文 ${finalTotalLines}。尝试更保守的换行拼接。`);
+      // 强制在块之间都插入换行（即使已有换行也不去掉）
+      finalContent = translatedChunks.join('\n');
+      finalTotalLines = finalContent.split('\n').length;
+      console.log(`🧾 兜底后行数: 译文 ${finalTotalLines}`);
+    }
+  } catch (e) {
+    console.warn(`ℹ️ 行数兜底检查失败（非致命）：${e.message}`);
   }
   
   return finalContent;
@@ -1058,7 +1097,9 @@ async function translateFile(filePath, targetLang) {
     console.log(`📝 翻译文件: ${filePath} -> ${targetLang}`);
     translationStatus.total++;
     
-    const content = await fs.readFile(filePath, 'utf8');
+    let content = await fs.readFile(filePath, 'utf8');
+    // 统一换行为 LF，避免 CR 残留导致围栏/解析异常
+    content = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
     console.log(`🔍 文件大小: ${content.length} 字符`);
 
     // Front Matter 跳过规则判断（仅 md/mdx 有意义）

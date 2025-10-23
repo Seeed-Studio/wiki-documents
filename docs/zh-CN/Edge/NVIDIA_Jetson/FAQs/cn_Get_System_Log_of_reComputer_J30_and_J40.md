@@ -56,7 +56,7 @@ last_update:
 
 **步骤3.** 给Jetson上电。如果一切正常工作，您应该能在串口调试工具窗口中看到系统启动日志。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/rwiKgF91mNE" title="Get Sys Log of reComputer J30/J40" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

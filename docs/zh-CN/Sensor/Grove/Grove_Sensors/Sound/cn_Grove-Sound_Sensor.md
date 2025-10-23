@@ -15,7 +15,9 @@ last_update:
 
 Grove - 声音传感器可以检测环境的声音强度。该模块的主要组件是一个简单的麦克风，基于 L358 放大器和驻极体麦克风。该模块的输出是模拟信号，可以很容易地被 Seeeduino 采样和测试。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/EhZ7uDvoALE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="{200}" height="{38}" border="{0}" /></a></p>
 
@@ -424,9 +426,13 @@ sudo python3 grove_sound_sensor.py
 
 **声音传感器Grove模块**：
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N19VfMYyn60" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NfFlz8KEFxw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 可升级为工业传感器
 

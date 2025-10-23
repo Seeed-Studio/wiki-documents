@@ -6,8 +6,8 @@ tags:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_AGX_Orin_32GB_H01_Flash_Jetpack
 last_update:
-  date: 3/30/2023
-  author: Lakshantha
+  date: 10/14/2025
+  author: Lakshantha/Youjiang
 ---
 
 <!-- # Flash JetPack to NVIDIA® Jetson AGX Orin 32GB H01 Kit  -->
@@ -32,7 +32,7 @@ This wiki will guide you how to install JetPack to Jetson AGX Orin 32GB H01 Kit.
 ## Prerequisites
 
 - [Ubuntu Host PC](https://developer.nvidia.com/sdk-manager) (native or VM using VMware Workstation Player).
-- Jetson AGX Xavier H01 Kit.
+- Jetson AGX Orin H01 Kit.
 - USB Type-C data transmission cable
 
 ## Enter Force Recovery Mode
@@ -41,9 +41,16 @@ This wiki will guide you how to install JetPack to Jetson AGX Orin 32GB H01 Kit.
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/4.jpg"/></div>
 
-- **Step 2:** Connect Jetson AGX Orin 32GB H01 Kit with the Ubuntu host PC with a USB Type-C data transmission cable
+- **Step 2:** Connect Jetson AGX Orin 32GB H01 Kit with the Ubuntu host PC with a USB Type-C data transmission cable.
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/5.jpg"/></div>
+
+- **Step 3:** Use the `lsusb` command on the Ubuntu host machine to verify that the device has entered recovery mode.
+<div align="center"><img width ="900" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/h01/check_rec.png"/></div>
+
+:::info
+If `0955:7223 NVIDIA Corp.` appears in the logs, it indicates that the device has entered recovery mode.
+:::
 
 ## Download the peripheral drivers
 
@@ -73,6 +80,12 @@ First of all, you need to install the peripheral drivers for this board. These a
       <td><a href="https://developer.nvidia.com/embedded/jetson-linux-r3531" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
+      <td>5.1.4</td>
+      <td>35.6.0</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EaRL0XDaYCdFhkBiwvO3b8UBk4HmzRBQgfhYCKlN_ANVpA?e=5ndnMu" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://developer.nvidia.com/embedded/jetson-linux-r3560" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
       <td>6.0</td>
       <td>36.3</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EfdaZCD6wMZPrW_LtMm3eQgBXnPq_8ri8WmKw3nsxXVf1Q?e=uvKRhE" target="_blank" rel="noopener noreferrer">Download</a></td>
@@ -95,6 +108,12 @@ First of all, you need to install the peripheral drivers for this board. These a
 </div>
 
 ## Flash to Jetson
+
+:::danger
+NVIDIA® Jetson AGX Orin 32GB H01 Kit comes pre-installed with the `JetPack 5.1.4` operating system. The default username and password are user: nvidia / password: nvidia. Upon receiving the device, you can directly log into the system and start using it without the need to reflash the system.
+
+If your system becomes corrupted, you can refer to the steps below to reflash the system.
+:::
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -155,6 +174,48 @@ You will see the following output if the flashing process is successful
   - Then continue remaining steps in guidances.
 
 </TabItem>
+
+<TabItem value="JP5.1.4" label="JP5.1.4">
+
+Here we will use: **NVIDIA L4T 35.6.0** to install **Jetpack 5.1.4** on the Jetson AGX Orin 32GB H01 Kit.
+
+Enter the following command in the terminal window of the Ubuntu host machine:
+
+```bash
+wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v6.0/release/jetson_linux_r35.6.0_aarch64.tbz2
+wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v6.0/release/tegra_linux_sample-root-filesystem_r35.6.0_aarch64.tbz2
+
+tar xf jetson_linux_r35.6.0_aarch64.tbz2
+sudo tar xpf tegra_linux_sample-root-filesystem_r35.6.0_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
+cd Linux_for_Tegra/
+sudo ./tools/l4t_flash_prerequisites.sh
+sudo ./apply_binaries.sh
+sudo tar xf 605_jp514.tbz2  # Please copy 605_jp514.tbz2 to the Linux_for_Tegra/ directory before execution.
+
+```
+
+Choose one of the following commands to perform the flashing operation:
+
+(1). Flash the system to eMMC:
+
+```bash
+sudo ./flash.sh jetson-agx-orin-devkit internal
+```
+
+(2). Flash the system to the SSD:
+
+```bash
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
+  -c tools/kernel_flash/flash_l4t_t234_nvme.xml \
+  --showlogs --network usb0 jetson-agx-orin-devkit external
+```
+
+<div align="center"><img width ="900" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/h01/flash_successful.png"/></div>
+
+After the flashing is complete, the device will automatically reboot.
+
+</TabItem>
+
 
 <TabItem value="JP6.0" label="JP6.0">
 

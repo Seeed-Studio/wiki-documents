@@ -34,7 +34,9 @@ This hat communicates with Raspberry Pi via the I2C interface, also we have rese
 
 What an amazing module, with the help it, you can use gestures to control lights, TV, speakers... Just unleash your imagination and create more magical projects.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/iLav34w77ns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130-p-4073.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
@@ -164,7 +166,9 @@ make clean && make
 - **Tap electrode**: Tap your finger on the specific area, you will get Center, East, West, South and North.  
 - **Double Tap electrode**: Double Tap your finger on the specific area, you will get Center, East, West, South and North.  
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/__9Vas2kGHw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Schematic Online Viewer
 

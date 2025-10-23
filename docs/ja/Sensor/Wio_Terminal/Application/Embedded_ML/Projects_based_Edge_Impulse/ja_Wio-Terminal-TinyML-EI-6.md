@@ -23,7 +23,9 @@ last_update:
 
 完全なチュートリアルとビデオデモについては、以下の動画をご覧ください：
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gXs-h3eeT1U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 これが「何をするか」ですが、次は「どうやるか」について説明します。まずは、より馴染みのある例から始めましょう。
 

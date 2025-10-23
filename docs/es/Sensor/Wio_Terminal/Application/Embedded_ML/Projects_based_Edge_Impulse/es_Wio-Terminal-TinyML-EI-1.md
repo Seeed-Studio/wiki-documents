@@ -68,7 +68,9 @@ edge-impulse-daemon
 
 Para tu primer proyecto, vamos a entrenar y desplegar rápidamente una red neuronal simple para clasificar gestos de piedra-papel-tijeras con solo un sensor de luz. ¡Para más detalles y tutorial en video, mira el video correspondiente!
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iCmlKyAp8eQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Adquisición de datos de entrenamiento
 

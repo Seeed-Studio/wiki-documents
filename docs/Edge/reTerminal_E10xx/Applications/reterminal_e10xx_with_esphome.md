@@ -203,12 +203,6 @@ display:
 <TabItem value="For E1002" label="For E1002">
 
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
 
 # define font to display words
 font:
@@ -222,9 +216,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -382,12 +376,6 @@ When you see the feedback like the following image, it means the code is running
 <TabItem value="For E1002" label="For E1002">
 
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
 
 # define font to display words
 font:
@@ -401,9 +389,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -570,12 +558,6 @@ display:
 <TabItem value="For E1002" label="For E1002">
 
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]  
 
 # Example ESPHome configuration to retrieve weather data
 # Get info from HA, as string format
@@ -609,9 +591,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -743,12 +725,6 @@ display:
 <TabItem value="For E1002" label="For E1002">
 
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
 
 # define font to display words
 font:
@@ -769,9 +745,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -929,12 +905,7 @@ display:
 <TabItem value="For E1002" label="For E1002">
 
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
+
 
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
@@ -949,9 +920,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -1055,14 +1026,12 @@ Try unplugging and replugging it several times, or just install the driver accor
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

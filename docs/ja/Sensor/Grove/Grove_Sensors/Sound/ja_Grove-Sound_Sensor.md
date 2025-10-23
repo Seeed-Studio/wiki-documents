@@ -16,7 +16,9 @@ last_update:
 
 Grove - サウンドセンサーは、環境の音の強度を検出することができます。このモジュールの主な構成要素は、L358アンプとエレクトレットマイクを基にしたシンプルなマイクです。このモジュールの出力はアナログであり、Seeeduinoによって簡単にサンプリングおよびテストすることができます。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/EhZ7uDvoALE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="{200}" height="{38}" border="{0}" /></a></p>
 
@@ -418,9 +420,13 @@ sudo python3 grove_sound_sensor.py
 
 **Groveモジュールのサウンドセンサー**:
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N19VfMYyn60" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NfFlz8KEFxw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 産業用センサーへのアップグレード可能
 

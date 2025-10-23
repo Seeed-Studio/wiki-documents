@@ -375,59 +375,87 @@ Puedes consultar las listas específicas de bibliotecas aquí: [https://github.c
 
 ### Lección 1 - Hola Mundo
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/af_I0n5iyzk" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lección 2 - Dibujando Formas
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IFRiGpK4HK8" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lección 3 - Mostrando Fuentes
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aZ9LYoS8w24" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lección 4 - Mostrando Imágenes e Interfaz Simple
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/P8CQtByWfS4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lección 5 - Gráficos de Líneas e Histogramas
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OnYLy7k-4T4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lección 6 - Usando Módulos Grove
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NeFotsklchc" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lección 7 - Protocolos de Comunicación
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kn9WJn2FRkI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lección 8 - Hardware/Sensores Integrados Parte 1 | 3 Botones y Interruptor de 5 Direcciones
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tVd4L7Hzj7M" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lección 9 - Hardware/Sensores Integrados Parte 2 | Micrófono y Zumbador
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aYEI9UGIBvo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lección 10 - Hardware/Sensores Integrados Parte 3 | Acelerómetro y Sensor de Luz
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3dw-Ony6CIE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lección 11 - Construye un Control Remoto de TV usando el Emisor IR integrado
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/C9AlljLst2o" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lección 12 - Proyecto de Jardín Inteligente usando Wio Terminal
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NQt-XLcSIwA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lección 13 - Usa Wio Terminal como Ratón para PC
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QIR_yqQnYPY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Lección 14 - Usa Wio Terminal como Teclado para PC
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JLrP058LDr8" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Wio Terminal en Aprendizaje Profundo con el apoyo de CAVEDU Education
 

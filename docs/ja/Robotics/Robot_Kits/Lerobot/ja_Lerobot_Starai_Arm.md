@@ -1,5 +1,5 @@
 ---
-description: このwikiは、StarAI Robot ArmのデバッグチュートリアルとLerobotフレームワーク内でのデータ収集とトレーニングの実現を提供します。
+description: このwikiは、StarAI Robot ArmのデバッグチュートリアルとLerobotフレームワーク内でのデータ収集とトレーニングの実現方法を提供します。
 title: LeRobotでのStarAI Arm
 keywords:
 - Lerobot
@@ -9,8 +9,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
 slug: /ja/lerobot_starai_arm
 last_update:
-  date: 9/16/2025
+  date: 10/13/2025
   author: LiShanghang
+translation:
+  skip: [ zh-CN ]
 ---
 
 # LeRobotでStarAI Robot Armを始める
@@ -35,7 +37,7 @@ last_update:
 2. **LeRobotとの統合**
    [LeRobot Platform](https://github.com/huggingface/lerobot)との統合を目的として設計されており、実世界のロボットタスクにおける模倣学習のためのPyTorchモデル、データセット、ツール（データ収集、シミュレーション、トレーニング、デプロイメントを含む）を提供します。
 3. **包括的な学習リソース**
-   組み立てとキャリブレーションガイド、カスタム把持タスクの例など、包括的なオープンソース学習リソースを提供し、ユーザーが迅速に開始してロボットアプリケーションを開発できるよう支援します。
+   組み立てと校正ガイド、カスタム把持タスクの例など、包括的なオープンソース学習リソースを提供し、ユーザーが迅速に開始してロボットアプリケーションを開発できるよう支援します。
 4. **Nvidiaとの互換性**
    reComputer Mini J4012 Orin NX 16GBプラットフォームでのデプロイメントをサポートします。
 
@@ -63,8 +65,8 @@ last_update:
 | 作業ペイロード      | 300g（70%リーチ時）                            | -                                                 |  750g（70%リーチ時）   |
 | サーボ               | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 |RX18-U100H-M x3<br/> RX8-U50H-M x3<br/> RX8-U51H-M x1|
 | パラレルグリッパーキット  | ✅                                                 | -                                                 | ✅   |
-| 手首回転         | Yes                                               | Yes                                               | Yes |
-| 任意位置での保持 | Yes                                               | Yes（ハンドルボタン付き）                          |  Yes|
+| 手首回転         | あり                                               | あり                                               | あり |
+| 任意位置での保持 | あり                                               | あり（ハンドルボタン付き）                          |  あり|
 | 手首カメラマウント   |参考3Dプリントファイルを提供 | | 参考3Dプリントファイルを提供
 | LeRobotとの連携   | ✅                                                 | ✅                                                 | ✅|
 | ROS 2との連携     | ✅                                                 | ✅                                                | ✅|
@@ -136,12 +138,6 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 git clone https://github.com/Seeed-Projects/lerobot-starai.git ~/lerobot
 ```
 
-starai-arm-developブランチに切り替えます。
-
-```bash
-git checkout starai-arm-develop
-```
-
 4. minicondaを使用する場合、環境にffmpegをインストール：
 
 ```bash
@@ -161,14 +157,10 @@ conda install ffmpeg=7.1.1 -c conda-forge
 
 :::
 
-5. staraiモーター用の依存関係を含むLeRobotのインストール：
+5. LeRobotのインストール：
 
 ```bash
-cd ~/lerobot && pip install -e ".[starai]"
-```
-
-```bash
-sudo apt remove brltty
+cd ~/lerobot && pip install -e .
 ```
 
 Jetson Jetpackデバイスの場合（このステップを実行する前に、ステップ5から[Pytorch-gpuとTorchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch)をインストールしてください）：
@@ -182,9 +174,16 @@ conda uninstall numpy
 pip3 install numpy==1.26.0  # This should match torchvision
 ```
 
-6. PytorchとTorchvisionの確認
+6.Fashionstarモーター依存関係のインストール：
 
-pipを介してlerobot環境をインストールすると、元のPytorchとTorchvisionがアンインストールされ、CPU版のPytorchとTorchvisionがインストールされるため、Pythonで確認を行う必要があります。
+```bash
+pip install lerobot_teleoperator_bimanual_leader
+pip install lerobot_robot_bimanual_follower
+```
+
+7. PytorchとTorchvisionの確認
+
+pipを介してlerobot環境をインストールすると、元のPytorchとTorchvisionがアンインストールされ、PytorchとTorchvisionのCPUバージョンがインストールされるため、Pythonで確認を行う必要があります。
 
 ```python
 import torch
@@ -195,9 +194,9 @@ print(torch.cuda.is_available())
 
 Jetsonデバイスを使用している場合は、[このチュートリアル](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)に従ってPytorchとTorchvisionをインストールしてください。
 
-### ロボットアームの開封
+### ロボットアームの開梱
 
-ロボットアームキットの内容
+ロボットアームキットに含まれるもの
 
 - リーダーアーム
 - フォロワーアーム
@@ -221,7 +220,7 @@ UC-01デバッグボードスイッチ：
 
 ### アームポートの設定
 
-`~/lerobot`ディレクトリに入ります：
+`~/lerobot`ディレクトリに入る：
 
 ```bash
 cd ~/lerobot
@@ -239,7 +238,7 @@ usbを取り外すことを忘れないでください。そうしないとイ�
 
 例：
 
-1. リーダーアームのポートを識別する際の出力例（例：Macでは`/dev/tty.usbmodem575E0031751`、Linuxでは`/dev/ttyUSB0`の可能性があります）：
+1. リーダーアームのポートを識別する際の出力例（例：Macでは`/dev/tty.usbmodem575E0031751`、Linuxでは`/dev/ttyUSB0`の可能性）：
 2. フォロワーアームのポートを識別する際の出力例（例：Macでは `/dev/tty.usbmodem575E0032081`、Linuxでは `/dev/ttyUSB1` の可能性があります）：
 
 :::tip
@@ -325,15 +324,23 @@ PC（Linux）とJetsonボードを例にとると、`最初に`挿入されたUS
 リーダーを`/dev/ttyUSB0`に接続するか、`--teleop.port`パラメータを変更してから実行してください：
 
 ```bash
-lerobot-calibrate     --teleop.type=starai_violin --teleop.port=/dev/ttyUSB0 --teleop.id=my_awesome_staraiviolin_arm
+lerobot-calibrate     --teleop.type=lerobot_teleoperator_violin --teleop.port=/dev/ttyUSB0 --teleop.id=my_awesome_staraiviolin_arm
 ```
 
 #### フォロワーロボットアーム
 
 フォロワーを`/dev/ttyUSB1`に接続するか、`--teleop.port`パラメータを変更してから実行してください：
 
+Viola：
+
 ```bash
-lerobot-calibrate     --robot.type=starai_viola --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraiviola_arm
+lerobot-calibrate     --robot.type=lerobot_robot_viola --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraiviola_arm
+```
+
+Cello：
+
+```bash
+lerobot-calibrate     --robot.type=lerobot_robot_cello --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraicello_arm
 ```
 
 コマンドを実行した後、各関節が**制限位置**に到達するように**手動でロボットアームを動かす**必要があります。ターミナルには記録された範囲データが表示されます。この操作が完了したら、Enterキーを押してください。
@@ -352,15 +359,23 @@ lerobot-calibrate     --robot.type=starai_viola --robot.port=/dev/ttyUSB1 --robo
 `left_arm_port`を`/dev/ttyUSB0`に、`right_arm_port`を`/dev/ttyUSB2`に接続するか、`--teleop.left_arm_port`と`--teleop.right_arm_port`パラメータを変更してから実行してください：
 
 ```bash
-lerobot-calibrate     --teleop.type=bi_starai_leader  --teleop.left_arm_port=/dev/ttyUSB0  --teleop.right_arm_port=/dev/ttyUSB2  --teleop.id=bi_starai_leader
+lerobot-calibrate     --teleop.type=lerobot_teleoperator_bimanual_leader  --teleop.left_arm_port=/dev/ttyUSB0  --teleop.right_arm_port=/dev/ttyUSB2  --teleop.id=bi_starai_violin_leader
 ```
 
 #### フォロワーロボットアーム
 
 `left_arm_port`を`/dev/ttyUSB1`に、`right_arm_port`を`/dev/ttyUSB3`に接続するか、`--robot.left_arm_port`と`--robot.right_arm_port`パラメータを変更してから実行してください：
 
+Viola：
+
 ```bash
-lerobot-calibrate     --robot.type=bi_starai_follower  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_follower
+lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_name=starai_viola  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_viola_follower
+```
+
+Cello：
+
+```bash
+lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_name=starai_cello  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_cello_follower
 ```
 
 :::tip
@@ -379,7 +394,7 @@ lerobot-calibrate     --robot.type=bi_starai_follower  --robot.left_arm_port=/de
 <iframe width="900" height="600" src="https://www.youtube.com/embed/Uz-x-2P2xaE?si=HJTjALt5yFntR6-s" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-アームを図に示された位置に移動し、スタンバイ状態に設定してください。
+アームを図に示された位置に移動し、待機状態に設定してください。
 
 <div align="center">
     <img width={800}
@@ -388,12 +403,26 @@ lerobot-calibrate     --robot.type=bi_starai_follower  --robot.left_arm_port=/de
 
 これでロボットをテレオペレーションする準備が整いました（カメラは表示されません）！この簡単なスクリプトを実行してください：
 
+Violin&Viola：
+
 ```bash
 lerobot-teleoperate \
-    --robot.type=starai_viola \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --teleop.type=starai_violin \
+    --teleop.type=lerobot_teleoperator_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm
+```
+
+Violin&Cello：
+
+```bash
+lerobot-teleoperate \
+    --robot.type=lerobot_robot_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm
 ```
@@ -401,16 +430,34 @@ lerobot-teleoperate \
 <details>
 <summary> デュアルアーム </summary>
 
+Violin&Viola：
+
 ```bash
 lerobot-teleoperate \
-    --robot.type=bi_starai_follower \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.id=bi_starai_follower \
-    --teleop.type=bi_starai_leader \
+    --robot.id=bi_starai_viola_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
-    --teleop.id=bi_starai_leader
+    --teleop.id=bi_starai_violin_leader
+```
+
+Violin&Cello：
+
+```bash
+lerobot-teleoperate \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.id=bi_starai_cello_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
+    --teleop.left_arm_port=/dev/ttyUSB0 \
+    --teleop.right_arm_port=/dev/ttyUSB2 \
+    --teleop.id=bi_starai_violin_leader
 ```
 
 </details>
@@ -420,21 +467,149 @@ lerobot-teleoperate \
 1. 不足しているキャリブレーションを識別し、キャリブレーション手順を開始します。
 2. ロボットとリモート操作デバイスを接続し、リモート操作を開始します。
 
-プログラム開始後、ホバーロック技術は機能し続けます。
+プログラム開始後、Hover Lock Technologyは機能し続けます。
 
 ## カメラの追加
+
+<details>
+<summary> Orbbec Gemini2 Depth Cameraを使用する場合 </summary>
+
+<div align="center">
+    <img width={800}
+    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" />
+</div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank" rel="noopener noreferrer" >
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+</a></div>
+
+- 🚀 ステップ1：Orbbec SDK依存環境のインストール
+
+1. `pyorbbec`リポジトリをクローンします
+
+   ```bash
+   cd ~/
+   git clone https://github.com/orbbec/pyorbbecsdk.git
+   ```
+
+2. SDK用の対応する**.whlファイル**をダウンロードしてインストールします  
+   [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases)にアクセスし、  
+   Pythonバージョンに基づいて選択してインストールしてください。例：
+
+   ```bash
+   pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
+   ```
+
+3. `pyorbbec`ディレクトリで依存関係をインストールします
+
+   ```bash
+   cd ~/pyorbbecsdk
+   pip install -r requirements.txt
+   ```
+
+   `numpy`バージョンを`1.26.0`に強制ダウングレードします
+
+    ```bash
+    pip install numpy==1.26.0
+    ```
+
+  赤いエラーメッセージは無視できます。
+
+4. Orbbec SDKを`~/lerobot/src/cameras`ディレクトリにクローンします
+
+  ```bash
+  cd ~/lerobot/src/cameras
+  git clone https://github.com/ZhuYaoHui1998/orbbec.git
+  ```
+
+5. utils.pyと**init**.pyを変更します
+
+- `~/lerobot/src/lerobot/cameras`ディレクトリで`utils.py`を見つけ、40行目に以下のコードを追加してください：
+
+```python
+elif cfg.type == "orbbec":
+            from .orbbec.camera_orbbec import OrbbecCamera
+
+            cameras[key] = OrbbecCamera(cfg)
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/utils.png" />
+</div>
+
+- `~/lerobot/src/lerobot/cameras` ディレクトリの `__init__.py` を見つけて、18行目に以下のコードを追加します：
+
+```python
+from .orbbec.configuration_orbbec import OrbbecCameraConfig
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
+</div>
+
+- 🚀 ステップ 2: 関数呼び出しと例
+
+以下のすべての例では、`starai_viola` を実際に使用しているロボットアームのモデル（例：`so100` / `so101`）に置き換えてください。
+
+`focus_area` ハイパーパラメータを追加しました。遠すぎる深度データはロボットアームにとって意味がない（到達や把握ができない物体）ため、`focus_area` より小さいまたは大きい深度データは黒で表示されます。デフォルトの `focus_area` は (20, 600) です。  
+現在サポートされている解像度は、幅: 640、高さ: 880 のみです。
+
+Violin&Viola:
+
+```bash
+lerobot-teleoperate \
+    --robot.type=lerobot_starai_viola \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraiviola_arm \
+    --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+    --teleop.type=starai_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm \
+    --display_data=true
+```
+
+Violin&Cello:
+
+```bash
+lerobot-teleoperate \
+    --robot.type=lerobot_starai_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+    --teleop.type=starai_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm \
+    --display_data=true
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/orbbec_result.png" />
+</div>
+
+データ収集、トレーニング、評価などの後続タスクについては、通常のRGBコマンドと同じプロセスです。通常のRGBコマンドの関連部分を以下に置き換えるだけです：
+
+  ```
+  --robot.cameras="{ front: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:(20,600)}}" \
+  ```
+
+その後、追加の単眼RGBカメラを追加することもできます。
+
+</details>
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/-p8K_-XxW8U?si=UmYWvEyKNPpTRxDC" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-2つのUSBカメラを挿入した後、以下のスクリプトを実行してカメラのポート番号を確認してください。カメラはUSBハブに接続してはならず、デバイスに直接接続する必要があることを覚えておくことが重要です。USBハブの低速度により、画像データを読み取れない場合があります。
+2つのUSBカメラを挿入した後、以下のスクリプトを実行してカメラのポート番号を確認します。カメラはUSBハブに接続してはならず、デバイスに直接接続する必要があることを覚えておくことが重要です。USBハブの低速度により、画像データの読み取りができなくなる可能性があります。
 
 ```bash
 lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
 ```
 
-ターミナルには以下の情報が出力されます。例えば、ラップトップカメラは`index 2`、USBカメラは`index 4`です。
+ターミナルに以下の情報が出力されます。例えば、ラップトップのカメラは `index 2`、USBカメラは `index 4` です。
 
 ```markdown
 --- Detected Cameras ---
@@ -465,37 +640,72 @@ Finalizing image saving...
 Image capture finished. Images saved to outputs/captured_images
 ```
 
-`outputs/images_from_opencv_cameras`ディレクトリで各カメラが撮影した画像を確認し、異なる位置のカメラに対応するポートインデックス情報を検証できます。
+各カメラで撮影された画像は `outputs/images_from_opencv_cameras` ディレクトリで確認でき、異なる位置のカメラに対応するポートインデックス情報を検証できます。
 
 外部カメラを確認した後、以下のカメラ情報を実際のカメラ情報に置き換えると、リモート操作中にコンピュータでカメラを表示できるようになります：
 
+Violin&Viola:
+
 ```bash
 lerobot-teleoperate \
-    --robot.type=starai_viola \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
-    --teleop.type=starai_violin \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
+```
 
+Violin&Cello:
+
+```bash
+lerobot-teleoperate \
+    --robot.type=lerobot_robot_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm \
+    --display_data=true
 ```
 
 <details>
 <summary> デュアルアーム </summary>
 
+Violin&Viola:
+
 ```bash
 lerobot-teleoperate \
-    --robot.type=bi_starai_follower \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.id=bi_starai_follower \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
-    --teleop.type=bi_starai_leader \
+    --robot.id=bi_starai_viola_follower \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
-    --teleop.id=bi_starai_leader \
+    --teleop.id=bi_starai_violin_leader \
+    --display_data=true
+```
+
+Violin&Cello:
+
+```bash
+lerobot-teleoperate \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.id=bi_starai_cello_follower \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
+    --teleop.left_arm_port=/dev/ttyUSB0 \
+    --teleop.right_arm_port=/dev/ttyUSB2 \
+    --teleop.id=bi_starai_violin_leader \
     --display_data=true
 ```
 
@@ -509,7 +719,7 @@ lerobot-teleoperate \
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/rerun-version.png" />
 </div>
 
-この問題を解決するために、rerunのバージョンをダウングレードできます。
+rerunのバージョンをダウングレードして問題を解決できます。
 
 ```bash
 pip3 install rerun-sdk==0.23
@@ -525,7 +735,7 @@ pip3 install rerun-sdk==0.23
 
 テレオペレーションに慣れたら、最初のデータセットを記録できます。
 
-データセットをアップロードするためにHugging Face hubの機能を使用したい場合で、以前に行ったことがない場合は、[Hugging Face設定](https://huggingface.co/settings/tokens)から生成できる書き込みアクセストークンを使用してログインしていることを確認してください：
+データセットのアップロードにHugging Face hubの機能を使用したい場合で、以前に行ったことがない場合は、[Hugging Face設定](https://huggingface.co/settings/tokens)から生成できる書き込みアクセストークンを使用してログインしていることを確認してください：
 
 ```bash
 huggingface-cli login --token ${HUGGINGFACE_TOKEN} --add-to-git-credential
@@ -538,19 +748,41 @@ HF_USER=$(huggingface-cli whoami | head -n 1)
 echo $HF_USER
 ```
 
-10エピソードを記録し、データセットをhubにアップロードします：
+10エピソードを記録し、データセットをハブにアップロードします：
+
+Violin&Viola:
 
 ```bash
 lerobot-record \
-    --robot.type=starai_viola \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
-    --teleop.type=starai_violin \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true \
-    --dataset.repo_id=${HF_USER}/record-test \
+    --dataset.repo_id=starai/record-test \
+    --dataset.episode_time_s=30 \
+    --dataset.reset_time_s=30 \
+    --dataset.num_episodes=10 \
+    --dataset.push_to_hub=True \
+    --dataset.single_task="Grab the black cube"
+```
+
+Violin&Cello:
+
+```bash
+lerobot-record \
+    --robot.type=lerobot_robot_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm \
+    --display_data=true \
+    --dataset.repo_id=starai/record-test \
     --dataset.episode_time_s=30 \
     --dataset.reset_time_s=30 \
     --dataset.num_episodes=10 \
@@ -561,19 +793,45 @@ lerobot-record \
 <details>
 <summary> デュアルアーム </summary>
 
+Violin&Viola:
+
 ```bash
 lerobot-record \
-    --robot.type=bi_starai_follower \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.id=bi_starai_follower \
-    --teleop.type=bi_starai_leader \
+    --robot.id=bi_starai_viola_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
-    --teleop.id=bi_starai_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
+    --teleop.id=bi_starai_violin_leader \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
     --display_data=true \
-    --dataset.repo_id=${HF_USER}/record-test \
+    --dataset.repo_id=starai/record-test_bi_arm \
+    --dataset.episode_time_s=30 \
+    --dataset.reset_time_s=30 \
+    --dataset.num_episodes=10 \
+    --dataset.push_to_hub=True \
+    --dataset.single_task="Grab the black cube"
+```
+
+Violin&Cello:
+
+```bash
+lerobot-record \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.id=bi_starai_cello_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
+    --teleop.left_arm_port=/dev/ttyUSB0 \
+    --teleop.right_arm_port=/dev/ttyUSB2 \
+    --teleop.id=bi_starai_violin_leader \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --display_data=true \
+    --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode_time_s=30 \
     --dataset.reset_time_s=30 \
     --dataset.num_episodes=10 \
@@ -582,25 +840,46 @@ lerobot-record \
 ```
 
 :::tip
-シングルアームとデュアルアームのセットアップを区別するために、ここでの`--dataset.repo_id`は`starai/record-test_bi_arm`と名付けられています。
+シングルアームとデュアルアームのセットアップを区別するため、ここでの `--dataset.repo_id` は `starai/record-test_bi_arm` という名前になっています。
 :::
 
 </details>
 
 :::tip
-Hugging Face Hubデータセットアップロード機能を使用したくない場合は、`--dataset.push_to_hub=false`を選択できます。また、`--dataset.repo_id=${HF_USER}/starai`をカスタムローカルフォルダ名（例：`--dataset.repo_id=starai/record-test`）に置き換えてください。データはシステムのホームディレクトリの`~/.cache/huggingface/lerobot`に保存されます。
+Hugging Face Hub データセットアップロード機能を使用したくない場合は、`--dataset.push_to_hub=false` を選択できます。また、`--dataset.repo_id=${HF_USER}/starai` をカスタムローカルフォルダ名に置き換えてください。例えば、`--dataset.repo_id=starai/record-test` のようにします。データはシステムのホームディレクトリの `~/.cache/huggingface/lerobot` に保存されます。
 :::
 
-Hubにアップロードしない場合：
-**（推奨、以下のチュートリアルはローカルデータに焦点を当てます）**
+Hub にアップロードしない場合：
+
+Violin&Viola:
 
 ```bash
 lerobot-record \
-    --robot.type=starai_viola \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
-    --teleop.type=starai_violin \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm \
+    --display_data=true \
+    --dataset.repo_id=starai/record-test \
+    --dataset.episode_time_s=30 \
+    --dataset.reset_time_s=30 \
+    --dataset.num_episodes=10 \
+    --dataset.push_to_hub=False \
+    --dataset.single_task="Grab the black cube"
+```
+
+Violin&Cello:
+
+```bash
+lerobot-record \
+    --robot.type=lerobot_robot_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true \
@@ -615,17 +894,43 @@ lerobot-record \
 <details>
 <summary> デュアルアーム </summary>
 
+Violin&Viola:
+
 ```bash
 lerobot-record \
-    --robot.type=bi_starai_follower \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.id=bi_starai_follower \
-    --teleop.type=bi_starai_leader \
+    --robot.id=bi_starai_viola_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
-    --teleop.id=bi_starai_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
+    --teleop.id=bi_starai_violin_leader \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --display_data=true \
+    --dataset.repo_id=starai/record-test_bi_arm \
+    --dataset.episode_time_s=30 \
+    --dataset.reset_time_s=30 \
+    --dataset.num_episodes=10 \
+    --dataset.push_to_hub=False \
+    --dataset.single_task="Grab the black cube"
+```
+
+Violin&Cello:
+
+```bash
+lerobot-record \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.id=bi_starai_cello_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
+    --teleop.left_arm_port=/dev/ttyUSB0 \
+    --teleop.right_arm_port=/dev/ttyUSB2 \
+    --teleop.id=bi_starai_violin_leader \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
     --display_data=true \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode_time_s=30 \
@@ -636,21 +941,21 @@ lerobot-record \
 ```
 
 :::tip
-シングルアームとデュアルアームのセットアップを区別するために、ここでの`--dataset.repo_id`は`starai/record-test_bi_arm`と名付けられています。
+シングルアームとデュアルアームのセットアップを区別するため、ここでの `--dataset.repo_id` は `starai/record-test_bi_arm` という名前になっています。
 :::
 
 </details>
 
-- `record`は、ロボット操作中のデータキャプチャと管理のためのツールセットを提供します：
+- `record` は、ロボット操作中のデータキャプチャと管理のためのツールセットを提供します：
 
 #### 1. データストレージ
 
-- データは`LeRobotDataset`形式で保存され、記録プロセス中にディスクに保存されます。
+- データは `LeRobotDataset` 形式で保存され、記録プロセス中にディスクに保存されます。
 
 #### 2. チェックポイントと再開
 
 - チェックポイントは記録中に自動的に作成されます。
-- 問題が発生した場合、`--resume=true`で同じコマンドを再実行することで再開できます。記録を再開する際は、`--dataset.num_episodes`をデータセット内の目標総エピソード数ではなく、**記録する追加エピソード数**に設定する必要があります！
+- 問題が発生した場合、`--resume=true` を指定して同じコマンドを再実行することで再開できます。記録を再開する際は、`--dataset.num_episodes` をデータセット内の目標総エピソード数ではなく、**追加で記録するエピソード数**に設定する必要があります！
 - 最初から記録を開始するには、データセットディレクトリを**手動で削除**してください。
 
 #### 3. 記録パラメータ
@@ -675,20 +980,37 @@ Parameter Description
 - **ESC**を押す：セッションを即座に停止し、ビデオをエンコードしてデータセットをアップロードします。
 
 :::tip
-Linuxでは、データ記録中に左右の矢印キーとエスケープキーが効かない場合、$DISPLAY環境変数が設定されていることを確認してください。pynputの制限を参照してください。
 
-データ記録に慣れたら、トレーニング用により大きなデータセットを作成できます。良い開始タスクは、異なる位置でオブジェクトを掴み、小さな箱に置くことです。少なくとも50エピソード、場所ごとに10エピソードを記録することをお勧めします。カメラを固定し、記録全体を通して一貫した掴み動作を維持してください。また、操作しているオブジェクトがカメラに映っていることを確認してください。良い経験則は、カメラ画像だけを見てタスクを完了できることです。
+キーボードが動作しない場合は、別のバージョンの pynput をインストールする必要があるかもしれません。
+
+```bash
+pip install pynput==1.6.8
+```
+
 :::
 
 ## エピソードの再生
 
 ロボットで最初のエピソードを再生してみましょう：
 
+Viola:
+
 ```bash
 lerobot-replay \
-    --robot.type=starai_viola \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
+    --dataset.repo_id=starai/record-test \
+    --dataset.episode=1 # choose the episode you want to replay
+```
+
+Cello:
+
+```bash
+lerobot-replay \
+    --robot.type=lerobot_robot_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
     --dataset.repo_id=starai/record-test \
     --dataset.episode=1 # choose the episode you want to replay
 ```
@@ -696,12 +1018,28 @@ lerobot-replay \
 <details>
 <summary> デュアルアーム </summary>
 
+Viola:
+
 ```bash
 lerobot-replay \
-    --robot.type=bi_starai_follower \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.id=bi_starai_follower \
+    --robot.id=bi_starai_viola_follower \
+    --dataset.repo_id=starai/record-test_bi_arm \
+    --dataset.episode=0 # choose the episode you want to replay
+```
+
+Cello:
+
+```bash
+lerobot-replay \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.id=bi_starai_cello_follower \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode=0 # choose the episode you want to replay
 ```
@@ -710,7 +1048,9 @@ lerobot-replay \
 
 ## ポリシーのトレーニング
 
-ロボットを制御するポリシーをトレーニングするためのコマンド例です：
+ロボットを制御するポリシーをトレーニングするためのコマンド例は以下の通りです：
+
+Viola:
 
 ```bash
 lerobot-train \
@@ -720,12 +1060,28 @@ lerobot-train \
   --job_name=act_viola_test \
   --policy.device=cuda \
   --wandb.enable=False \
-  --policy.repo_id=starai/my_policy\
+  --policy.repo_id=starai/my_policy \
+  --steps=200000
+```
+
+Cello:
+
+```bash
+lerobot-train \
+  --dataset.repo_id=starai/record-test \
+  --policy.type=act \
+  --output_dir=outputs/train/act_cello_test \
+  --job_name=act_cello_test \
+  --policy.device=cuda \
+  --wandb.enable=False \
+  --policy.repo_id=starai/my_policy \
   --steps=200000
 ```
 
 <details>
 <summary> デュアルアーム </summary>
+
+Viola:
 
 ```bash
 lerobot-train \
@@ -735,28 +1091,53 @@ lerobot-train \
   --job_name=act_bi_viola_test \
   --policy.device=cuda \
   --wandb.enable=False \
-  --policy.repo_id=starai/my_policy\
+  --policy.repo_id=starai/my_policy \
+  --steps=200000
+```
+
+Cello:
+
+```bash
+lerobot-train \
+  --dataset.repo_id=starai/record-test_bi_arm \
+  --policy.type=act \
+  --output_dir=outputs/train/act_bi_cello_test \
+  --job_name=act_bi_cello_test \
+  --policy.device=cuda \
+  --wandb.enable=False \
+  --policy.repo_id=starai/my_policy \
   --steps=200000
 ```
 
 </details>
 
-1. `policy.type`は`diffusion,pi0,pi0fast`の入力をサポートします
+1. `policy.type` は `diffusion,pi0,pi0fast` の入力をサポートします
 1. データセットをパラメータとして提供します：`dataset.repo_id=starai/record-test`。
-2. [`configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/src/lerobot/policies/act/configuration_act.py)から設定を読み込みます。重要なことに、このポリシーはロボットのモーター状態、モーターアクション、カメラ数に自動的に適応し、データセットに保存されます。
-3. トレーニングチャートを可視化するために[Weights and Biases](https://docs.wandb.ai/quickstart)を使用する`wandb.enable=true`を提供します。これはオプションですが、使用する場合は`wandb login`を実行してログインしていることを確認してください。
+2. [`configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/src/lerobot/policies/act/configuration_act.py) から設定を読み込みます。重要なことに、このポリシーはロボットのモーター状態、モーターアクション、カメラの数に自動的に適応し、データセットに保存されます。
+3. トレーニングチャートを可視化するために [Weights and Biases](https://docs.wandb.ai/quickstart) を使用する `wandb.enable=true` を提供します。これはオプションですが、使用する場合は `wandb login` を実行してログインしていることを確認してください。
 
 特定のチェックポイントからトレーニングを再開します。
 
+Viola:
+
 ```bash
 lerobot-train \
-  --config_path=outputs/train/act_bi_viola_test/checkpoints/last/pretrained_model/train_config.json \
-  --resume=true\
+  --config_path=outputs/train/act_viola_test/checkpoints/last/pretrained_model/train_config.json \
+  --resume=true \
+  --steps=400000
+```
+
+Cello:
+
+```bash
+lerobot-train \
+  --config_path=outputs/train/act_cello_test/checkpoints/last/pretrained_model/train_config.json \
+  --resume=true \
   --steps=400000
 ```
 
 <details>
-<summary>[SmolVLA policy](https://huggingface.co/docs/lerobot/smolvla)をトレーニングする場合のコマンド： </summary>
+<summary>[SmolVLA ポリシー](https://huggingface.co/docs/lerobot/smolvla)をトレーニングする場合のコマンド： </summary>
 
 ```bash
 pip install -e ".[smolvla]"
@@ -798,14 +1179,14 @@ lerobot-record \
 </details>
 
 <details>
-<summary>[Libero policy](https://huggingface.co/docs/lerobot/libero)をトレーニングする場合のコマンド： </summary>
+<summary>[Libero ポリシー](https://huggingface.co/docs/lerobot/libero)をトレーニングする場合のコマンド： </summary>
 
-LIBEROは生涯ロボット学習を研究するために設計されたベンチマークです。ロボットは工場で一度だけ事前訓練されるのではなく、時間をかけて人間のユーザーと共に学習し適応し続ける必要があるという考えです。この継続的な適応は意思決定における生涯学習（LLDM）と呼ばれ、真にパーソナライズされたヘルパーとなるロボットを構築するための重要なステップです。
+LIBERO は生涯ロボット学習を研究するために設計されたベンチマークです。ロボットは工場で一度だけ事前トレーニングされるのではなく、時間をかけて人間のユーザーと共に学習し適応し続ける必要があるという考えです。この継続的な適応は意思決定における生涯学習（LLDM）と呼ばれ、真にパーソナライズされたヘルパーとなるロボットを構築するための重要なステップです。
 
-- [LIBERO論文](https://arxiv.org/abs/2306.03310)
-- [オリジナルLIBEROリポジトリ](https://github.com/Lifelong-Robot-Learning/LIBERO)
+- [LIBERO 論文](https://arxiv.org/abs/2306.03310)
+- [オリジナル LIBERO リポジトリ](https://github.com/Lifelong-Robot-Learning/LIBERO)
 
-LIBEROには5つのタスクスイートが含まれています：
+LIBERO には5つのタスクスイートが含まれています：
 
 - LIBERO-Spatial (libero_spatial) – 空間関係についての推論を必要とするタスク。
 
@@ -813,13 +1194,13 @@ LIBEROには5つのタスクスイートが含まれています：
 
 - LIBERO-Goal (libero_goal) – ロボットが変化する目標に適応する必要がある目標条件付きタスク。
 
-- LIBERO-90 (libero_90) – LIBERO-100コレクションからの90の短期間タスク。
+- LIBERO-90 (libero_90) – LIBERO-100 コレクションからの90の短期間タスク。
 
-- LIBERO-Long (libero_10) – LIBERO-100コレクションからの10の長期間タスク。
+- LIBERO-Long (libero_10) – LIBERO-100 コレクションからの10の長期間タスク。
 
-これらのスイートは合わせて130のタスクをカバーし、シンプルなオブジェクト操作から複雑な多段階シナリオまで幅広く含んでいます。LIBEROは時間とともに成長し、コミュニティが生涯学習アルゴリズムをテストし改善できる共有ベンチマークとして機能することを意図しています。
+これらのスイートは合わせて130のタスクをカバーし、シンプルなオブジェクト操作から複雑な多段階シナリオまで幅広く含んでいます。LIBERO は時間とともに成長し、コミュニティが生涯学習アルゴリズムをテストし改善できる共有ベンチマークとして機能することを意図しています。
 
-## LIBEROでのトレーニング
+## LIBERO でのトレーニング
 
 ```bash
 lerobot-train \
@@ -836,11 +1217,11 @@ lerobot-train \
   --eval_freq=1000 \
 ```
 
-## LIBEROでの評価  
+## LIBERO での評価
 
-LIBEROをインストールするには、LeRobotの公式手順に従った後、単に次を実行してください：`pip install -e ".[libero]"`
+LIBERO をインストールするには、LeRobot の公式手順に従った後、単に `pip install -e ".[libero]"` を実行してください。
 
-### 単一スイート評価：
+### 単一スイート評価
 
 ```bash
 lerobot-eval \
@@ -851,11 +1232,11 @@ lerobot-eval \
   --eval.n_episodes=3
 ```
 
-- `--env.task`はスイート（libero_object、libero_spatialなど）を選択します。
+- `--env.task` はスイート（libero_object、libero_spatial など）を選択します。
 
-- `--eval.batch_size`は並列実行する環境の数を制御します。
+- `--eval.batch_size` は並列実行する環境の数を制御します。
 
-- `--eval.n_episodes`は実行するエピソードの総数を設定します。
+- `--eval.n_episodes` は実行するエピソードの総数を設定します。
 
 ### マルチスイート評価
 
@@ -868,26 +1249,46 @@ lerobot-eval \
   --eval.n_episodes=2
 ```
 
-- マルチスイート評価には`--env.task`にカンマ区切りのリストを渡します。
+- マルチスイート評価には `--env.task` にカンマ区切りのリストを渡します。
 
 </details>
 
 ## ポリシーの評価
 
-10回の評価エピソードを記録するには、以下のコマンドを実行してください：
+10回の評価エピソードを記録するために以下のコマンドを実行します：
+
+Viola:
 
 ```bash
 lerobot-record  \
-  --robot.type=starai_viola \
+  --robot.type=lerobot_robot_viola \
   --robot.port=/dev/ttyUSB1 \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
   --robot.id=my_awesome_staraiviola_arm \
   --display_data=false \
   --dataset.repo_id=starai/eval_record-test \
   --dataset.single_task="Put lego brick into the transparent box" \
   --policy.path=outputs/train/act_viola_test/checkpoints/last/pretrained_model
   # <- Teleop optional if you want to teleoperate in between episodes \
-  # --teleop.type=starai_violin \
+  # --teleop.type=lerobot_teleoperator_violin \
+  # --teleop.port=/dev/ttyUSB0 \
+  # --teleop.id=my_awesome_leader_arm \
+```
+
+Cello:
+
+```bash
+lerobot-record  \
+  --robot.type=lerobot_robot_cello \
+  --robot.port=/dev/ttyUSB1 \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+  --robot.id=my_awesome_staraicello_arm \
+  --display_data=false \
+  --dataset.repo_id=starai/eval_record-test \
+  --dataset.single_task="Put lego brick into the transparent box" \
+  --policy.path=outputs/train/act_viola_test/checkpoints/last/pretrained_model
+  # <- Teleop optional if you want to teleoperate in between episodes \
+  # --teleop.type=lerobot_teleoperator_violin \
   # --teleop.port=/dev/ttyUSB0 \
   # --teleop.id=my_awesome_leader_arm \
 ```
@@ -895,54 +1296,73 @@ lerobot-record  \
 <details>
 <summary> デュアルアーム </summary>
 
+Viola:
+
 ```bash
 lerobot-record  \
-    --robot.type=bi_starai_follower \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
-    --robot.id=bi_starai_follower \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30}}" \
+    --robot.id=bi_starai_viola_follower \
     --display_data=false \
     --dataset.repo_id=starai/eval_record-test_bi_arm \
     --dataset.single_task="test" \
     --policy.path=outputs/train/act_bi_viola_test/checkpoints/last/pretrained_model
 ```
 
+Cello:
+
+```bash
+lerobot-record  \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30}}" \
+    --robot.id=bi_starai_cello_follower \
+    --display_data=false \
+    --dataset.repo_id=starai/eval_record-test_bi_arm \
+    --dataset.single_task="test" \
+    --policy.path=outputs/train/act_bi_cello_test/checkpoints/last/pretrained_model
+```
+
 </details>
 
 ご覧のとおり、これは以前にトレーニングデータセットを記録するために使用したコマンドとほぼ同じですが、いくつかの変更があります：
 
-1. `--policy.path`パラメータは、トレーニング済みポリシー重みファイルへのパスを示します（例：`outputs/train/act_viola_test/checkpoints/last/pretrained_model`）。モデル重みをHubにアップロードしている場合は、モデルリポジトリも使用できます（例：`${HF_USER}/starai`）。
+1. `--policy.path` パラメータは、トレーニング済みポリシー重みファイルへのパスを示します（例：`outputs/train/act_viola_test/checkpoints/last/pretrained_model`）。モデル重みを Hub にアップロードしている場合は、モデルリポジトリも使用できます（例：`${HF_USER}/starai`）。
 
-2. 評価データセット`dataset.repo_id`の名前は`eval_`で始まります。この操作により、評価フェーズ専用のビデオとデータが記録され、`starai/eval_record-test`などの`eval_`で始まるフォルダに保存されます。
+2. 評価データセット `dataset.repo_id` の名前は `eval_` で始まります。この操作により、評価フェーズ専用のビデオとデータが記録され、`eval_` で始まるフォルダ（例：`starai/eval_record-test`）に保存されます。
 
-3. 評価フェーズで`File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/starai/eval_xxxx'`が発生した場合は、`eval_`で始まるフォルダを削除してプログラムを再実行してください。
+3. 評価フェーズで `File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/starai/eval_xxxx'` が発生した場合は、`eval_` で始まるフォルダを削除してプログラムを再実行してください。
 
-4. `mean is infinity. You should either initialize with stats as an argument or use a pretrained model`が発生した場合は、`--robot.cameras`パラメータの`up`や`front`などのキーワードがデータ収集フェーズで使用されたものと厳密に一致していることを確認してください。
+4. `mean is infinity. You should either initialize with stats as an argument or use a pretrained model` が発生した場合は、`--robot.cameras` パラメータの `up` や `front` などのキーワードがデータ収集フェーズで使用されたものと厳密に一致していることを確認してください。
 
 ## FAQ
 
-- このドキュメントのチュートリアルを使用している場合は、推奨されるGitHubリポジトリを`git clone`してください：`https://github.com/servodevelop/lerobot.git`。
+- この文書のチュートリアルを使用している場合は、推奨される GitHub リポジトリを `git clone` してください：`https://github.com/servodevelop/lerobot.git`。
 
 - テレオペレーションは正常に動作するが、カメラ付きテレオペレーションで画像インターフェースが表示されない場合は、[こちら](https://github.com/huggingface/lerobot/pull/757/files)を参照してください。
 
-- データセットテレオペレーション中にlibtiffの問題が発生した場合は、libtiffのバージョンを更新してください。
+- データセットテレオペレーション中に libtiff の問題が発生した場合は、libtiff のバージョンを更新してください。
 
   ```bash
   conda install libtiff==4.5.0  # for Ubuntu 22.04, use libtiff==4.5.1
   ```
 
-- LeRobotをインストールした後、GPU版のPyTorchが自動的にアンインストールされる場合があるため、torch-gpuを手動でインストールする必要があります。
+- LeRobot をインストールした後、GPU 版の PyTorch が自動的にアンインストールされる場合があるため、torch-gpu を手動でインストールする必要があります。
 
-- Jetsonの場合は、`conda install -y -c conda-forge ffmpeg`を実行する前に、まず[PyTorchとTorchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)をインストールしてください。そうしないと、torchvisionをコンパイルする際にバージョンの不一致問題が発生します。
+- Jetson の場合は、`conda install -y -c conda-forge ffmpeg` を実行する前に、まず [PyTorch と Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) をインストールしてください。そうしないと、torchvision をコンパイルする際にバージョンの不一致問題が発生します。
 
-- 3060 8GBラップトップでACTデータの50エピソードをトレーニングするには約6時間かかり、4090またはA100コンピュータでは約2-3時間かかります。
+- 3060 8GB ラップトップで ACT データの 50 エピソードをトレーニングするには約 6 時間かかりますが、4090 または A100 コンピューターで 50 エピソードをトレーニングするには約 2-3 時間かかります。
 
-- データ収集中は、カメラの位置と角度の安定性、環境照明を確保し、カメラに映る不安定な背景や歩行者を最小限に抑えてください。そうしないと、デプロイメント環境の大幅な変化により、ロボットアームが正常にオブジェクトを把握できなくなる可能性があります。
+- データ収集中は、カメラの位置と角度の安定性、環境照明を確保し、カメラに映る不安定な背景や歩行者を最小限に抑えてください。そうしないと、展開環境の大幅な変化により、ロボットアームが正常にオブジェクトを把握できなくなる可能性があります。
 
-- データ収集コマンドの`num-episodes`は十分なデータ収集を確保し、途中で手動で一時停止してはいけません。これは、データの平均と分散がデータ収集完了後にのみ計算され、これがトレーニングに必要だからです。
+- データ収集コマンドの `num-episodes` は十分なデータ収集を確保し、途中で手動で一時停止してはいけません。これは、データの平均と分散がデータ収集完了後にのみ計算されるためで、これはトレーニングに必要です。
 
-- プログラムがUSBカメラの画像データを読み取れないと表示する場合は、USBカメラがHubを通じて接続されていないことを確認してください。USBカメラは高速画像転送レートを確保するために、デバイスに直接接続する必要があります。
+- プログラムが USB カメラの画像データを読み取れないというプロンプトが表示される場合は、USB カメラが Hub を通じて接続されていないことを確認してください。USB カメラは高速な画像転送レートを確保するために、デバイスに直接接続する必要があります。
 
 ## 引用
 
@@ -966,7 +1386,7 @@ TD-MPC: [TD-MPC](https://www.nicklashansen.com/td-mpc/)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品でのご体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

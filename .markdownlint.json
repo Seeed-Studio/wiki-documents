@@ -7,6 +7,9 @@
     "MD013": false,
     "MD024": false,
     "MD033": false,
+    "MD025": false,
+    "MD045": false,
+    "MD029": false,
     "first-line-h1": false,
     "no-hard-tabs": true,
     "no-trailing-spaces": {
@@ -15,5 +18,7 @@
     "MD004": {
       "style": "dash"
     },
-    "MD034": false
+    "MD034": false,
+    "MD049": { "style": "asterisk" },
+    "MD050": { "style": "asterisk" }
   }

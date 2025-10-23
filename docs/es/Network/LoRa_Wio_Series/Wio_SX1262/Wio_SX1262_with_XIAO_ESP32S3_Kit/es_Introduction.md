@@ -160,7 +160,9 @@ Antena FPC Original: Solo para **pruebas**. Para requisitos confiables, por favo
 
 ## Instrucciones en Video
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/AGPZ9xnX3gs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Recursos
 

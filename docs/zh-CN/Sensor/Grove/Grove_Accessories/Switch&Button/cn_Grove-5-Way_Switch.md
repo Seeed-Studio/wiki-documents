@@ -301,7 +301,9 @@ Grove 5向触控开关已插入！
 
 这是该产品的介绍视频，包含简单演示，您可以尝试观看。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wz1GzW2-VW4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技术支持与产品讨论
 

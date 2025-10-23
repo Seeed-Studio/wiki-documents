@@ -13,7 +13,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/0.jpg" style={{width:600, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-Halow-mini-PCIe-Module-p-6394.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6108-Wi-Fi-Halow-mini-PCIe-Module-p-6394.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div><br />
@@ -116,7 +116,7 @@ OpenWrtとWi-Fi HaLowの組み合わせにより、小規模な展開から大�
                 </a>
             </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-Halow-mini-PCIe-Module-p-6394.html" target="_blank">
+                <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6108-Wi-Fi-Halow-mini-PCIe-Module-p-6394.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
                 </a>
             </div></td>

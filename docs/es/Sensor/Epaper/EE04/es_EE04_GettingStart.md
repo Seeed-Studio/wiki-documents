@@ -3,7 +3,7 @@ description: Introducción a EE04
 title: Introducción a EE04
 keywords:
   - epaper
-image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/10.webp
+image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
 sidebar_position: 1
 slug: /es/epaper_ee04
 last_update:
@@ -26,7 +26,7 @@ import Steppers from '@site/src/components/utils/Stepper';
     <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg"/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
         </a>
     </div></td>
     </tr>
@@ -35,14 +35,14 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introducción
 
-Alimentada por **XIAO ESP32-S3** Plus, la placa de pantalla EE04 soporta pantallas ePaper de **24 pines** y **50 pines**. Cuenta con un conector de batería JST de 2.0 mm con interruptor de alimentación, IC de carga integrado, y viene con un botón de reinicio y tres botones de usuario. Muy adecuada para proyectos ePaper de bajo consumo como señalización digital, etiquetas electrónicas y tableros de información portátiles.
+Alimentada por **XIAO ESP32-S3** Plus, la placa de pantalla EE04 soporta pantallas ePaper de **24 pines** y **50 pines**. Cuenta con un conector de batería JST de 2.0 mm con interruptor de alimentación, IC de carga integrado, y viene con un botón de reinicio y tres botones de usuario. Ideal para proyectos ePaper de bajo consumo como señalización digital, etiquetas electrónicas y tableros de información portátiles.
 
 ### Características
 
-- **Alimentada por XIAO ESP32-S3 Plus:** Funciona inmediatamente cuando se conecta a una pantalla ePaper compatible.
+- **Alimentado por XIAO ESP32-S3 Plus:** Funciona inmediatamente cuando se conecta a una pantalla ePaper compatible.
 - **Soporte de Pantalla Versátil:** Compatible con una amplia gama de pantallas ePaper, soportando interfaces de 24 pines y 50 pines con cambio fácil mediante tapas de puente.
 - **Conector BAT con Interruptor:** Proporciona conexión simple de batería e integra un interruptor, permitiendo gestión eficiente de energía y ahorro energético.
-- **Botones Amigables al Usuario:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, ofreciendo flexibilidad para aceleración de proyectos y funciones personalizables.
+- **Botones Amigables:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, ofreciendo flexibilidad para aceleración de proyectos y funciones personalizables.
 
 ### Especificaciones
 
@@ -154,17 +154,16 @@ Alimentada por **XIAO ESP32-S3** Plus, la placa de pantalla EE04 soporta pantall
 
 #### Conector de 24 Pines
 
-- [Papel electrónico de 1.54 pulgadas - Dotmatix 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [Papel electrónico de 2.13 pulgadas - Monocromático Flexible 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [Papel electrónico de 2.13 pulgadas - Cuádruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [Papel electrónico de 2.9 pulgadas - Monocolor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [Papel electrónico de 2.9 pulgadas - Color cuádruple 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-- [Papel electrónico de 4.2 pulgadas - Monocolor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [Papel electrónico de 4.26 pulgadas - Monocolor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [Papel electrónico de 5.65 pulgadas - Siete colores 600x480](https://www.seeedstudio.com/5-65-Seven-Color-ePaper-Display-with-600x480-Pixels-p-5786.html)
-- [Papel electrónico de 5.83 pulgadas - Monocolor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [Papel electrónico de 7.5 pulgadas - Monocolor 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
-- [Papel electrónico de 7.5 pulgadas - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
+- [E-paper de 1.54 pulgadas - Dotmatix 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [E-Paper de 2.13 pulgadas - Monocromático Flexible 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [E-Paper de 2.13 pulgadas - Cuádruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [E-paper de 2.9 pulgadas - Monocolor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [E-paper de 2.9 pulgadas - Color cuádruple 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
+- [E-Paper de 4.2 pulgadas - Monocolor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [E-Paper de 4.26 pulgadas - Monocolor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [E-paper de 5.83 pulgadas - Monocolor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [E-paper de 7.5 pulgadas - Monocolor 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [E-paper de 7.5 pulgadas - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/37.png" style={{width:800, height:'auto'}}/></div>
 
@@ -173,34 +172,34 @@ Al usar la Placa de Pantalla ePaper XIAO, asegúrese de configurar el puente seg
 
 - Para pantallas ePaper de 24 Pines → configure el puente a 24 Pines
 
-⚠️ Usar la configuración de puente incorrecta puede causar que el ePaper falle al mostrar o muestre contenido anormal. Siempre verifique dos veces la posición del puente antes de encender.
+⚠️ Usar la configuración incorrecta del puente puede causar que el ePaper falle al mostrar o muestre contenido anormal. Siempre verifique dos veces la posición del puente antes de encender.
 
 :::
 
 #### Conector de 50 Pines
 
-- [Papel electrónico de 7.3 pulgadas - Siete Colores 800x480](https://www.seeedstudio.com/7-3-Seven-Color-ePaper-Display-with-800x480-Pixels-p-5787.html)
+- [E-paper Spectra6 de 7.3 pulgadas](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
 :::tip
 Al usar la Placa de Pantalla ePaper XIAO, asegúrese de configurar el puente según el tipo de pantalla ePaper:
 - Para pantallas ePaper de 50 Pines → configure el puente a 50 Pines
 
-⚠️ Usar la configuración de puente incorrecta puede causar que el ePaper falle al mostrar o muestre contenido anormal. Siempre verifique dos veces la posición del puente antes de encender.
+⚠️ Usar la configuración incorrecta del puente puede causar que el ePaper falle al mostrar o muestre contenido anormal. Siempre verifique dos veces la posición del puente antes de encender.
 
 :::
 
 ## Descripción del Software
 
-### Instalar la Librería Seeed Arduino GFX
+### Instalar la Biblioteca Seeed Arduino GFX
 
-**Paso 3.** Instalar la Librería Seeed Arduino LCD
+**Paso 3.** Instalar la Biblioteca Seeed Arduino LCD
 
 :::tip
-Esta librería tiene la misma función que la librería TFT y no es compatible con ella. Si ha instalado la librería TFT u otras librerías de pantalla similares, por favor desinstálela primero.
+Esta biblioteca tiene la misma función que la biblioteca TFT y no es compatible con ella. Si ha instalado la biblioteca TFT u otras bibliotecas de pantalla similares, por favor desinstálela primero.
 :::
 
-Descargue e instale la librería Seeed GFX desde GitHub.
+Descargue e instale la biblioteca Seeed GFX desde GitHub.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -224,7 +223,7 @@ Así que por favor asegúrese del tipo de sus dispositivos o componentes.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/38.png" style={{width:800, height:'auto'}}/></div>
 
-Después de descargar la librería, vaya a **Sketch** -> **Incluir Librería** -> **Agregar Librería .ZIP** y seleccione la librería descargada.
+Después de descargar la biblioteca, vaya a **Sketch** -> **Include Library** -> **Add .ZIP Library** y seleccione la biblioteca descargada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
@@ -237,11 +236,11 @@ Hay 4 ejemplos básicos, abra un ejemplo básico que le guste:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
-## Comenzando
+## Comenzar
 
 Aquí, usamos una pantalla de 5.83 pulgadas como ejemplo. Los pasos son los mismos para todas las pantallas de 24 pines; la única diferencia es seleccionar el tamaño de pantalla apropiado en el controlador.
 
-Cree un **nuevo archivo "driver.h"** y pegue ese código en él. El código debería ser como:
+Cree un **nuevo archivo "driver.h"** y pegue ese código en él. El código debería ser así:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/40.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -250,7 +249,7 @@ Cree un **nuevo archivo "driver.h"** y pegue ese código en él. El código debe
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EE04
 ```
 
-Después de eso, ve a **Herramientas** -> **Placa** -> **XIAO ESP32S3** y **Herramientas** -> **Puerto** -> **Selecciona el puerto al que está conectada tu placa**. Luego haz clic en **Subir** para subir el código.
+Después de eso, ve a **Tools** -> **Board** -> **XIAO ESP32S3** y **Tools** -> **Port** -> **Selecciona el puerto al que está conectada tu placa**. Luego haz clic en **Upload** para subir el código.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/32.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -374,7 +373,7 @@ void loop() {
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

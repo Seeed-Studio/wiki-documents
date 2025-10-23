@@ -19,7 +19,9 @@ Grove - Oxygen Sensor(MIX8410) is a kind of sensor to test the oxygen concentrat
 
 Grove - Oxygen Sensor(MIX8410) is a new release version compared to the old one Grove - Oxygen Sensor(ME2-O2-Ф20). So in what areas have we updated? The new version has advanced anti-leakage treatment, which greatly reduces the probability of leakage and solves the problem of leakage in the old version.The output current of the new version is lower, so the electrolyte consumption is slower and the sensor life is longer. In addition, the bottom pins, physical dimensions, top driver board, and usage methods of the new and old versions are the same.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Oxygen-Sensor-MIX8410-p-4697.html"><img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/get_one_now.png" alt="pir" width={600} height="auto" /></a></p>
 

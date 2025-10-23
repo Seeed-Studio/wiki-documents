@@ -409,9 +409,13 @@ La Pistola Láser de Madera y el Objetivo de la Pistola están basados en una pl
 
 **Módulos Grove de Botón y LED**:
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RCtsxwx4OaA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/78lVn_-oYaY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Soporte Técnico y Discusión de Productos
 

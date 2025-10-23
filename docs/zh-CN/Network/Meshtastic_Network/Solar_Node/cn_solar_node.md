@@ -1,6 +1,6 @@
 ---
 description: SenseCAP Solar Node for Meshtastic & LoRa
-title:  SenseCAP Solar Node
+title: SenseCAP 太阳能节点
 keywords:
 - Meshtastic
 - Solar
@@ -13,40 +13,37 @@ last_update:
 ---
 
 
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.png" alt="pir" width={800} height="auto" /></p>
 
-
-这是一个基于 Meshtastic 的经济型太阳能供电通信节点或中继器，集成了 XIAO nRF52840 Plus 主控制器和 Wio-SX1262 LoRa 模块。它专为没有网络覆盖的区域而设计。支持长距离通信、精确定位和低功耗运行。适用于扩展户外区域的网络覆盖。
+这是一个基于 [Meshtastic®](https://meshtastic.org/) 的经济型太阳能供电通信节点或中继器，集成了 XIAO nRF52840 Plus 主控制器和 Wio-SX1262 LoRa 模块。它专为没有网络覆盖的区域而设计。支持长距离通信、精确定位和低功耗运行。适用于扩展户外区域的网络覆盖。
 
 ## 版本对比
- 
-Solar Node 有两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html) 和 [SenseCAP Solar Node P1-Pro](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html)。
+
+太阳能节点有两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html) 和 [SenseCAP Solar Node P1-Pro](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html)。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-1_1.jpeg" alt="pir" width={800} height="auto" /></p>
-
 
 ## 概述
 
 ### 特性
 
-* 集成 5W 太阳能板，支持外接电池（需用户自行提供）。
-* 设备出厂预装 Meshtastic 固件。可无缝集成到 Meshtastic 生态系统中。
-* 兼容 Grove 生态系统，支持温湿度传感器、光传感器等传感器的即插即用。
-* 适用于长期户外使用。
-* 在开阔区域支持 8 到 9 公里传输。可用作户外节点或中继器，轻松扩展 Mesh 网络并增强网络覆盖。
+- 集成 5W 太阳能板，支持外接电池（需用户自行提供）。
+- 设备出厂预装 Meshtastic 固件。可无缝集成到 Meshtastic 生态系统中。
+- 兼容 Grove 生态系统，支持温湿度传感器、光传感器等传感器的即插即用。
+- 适用于长期户外使用。
+- 在开阔区域支持 8 到 9 公里传输。可用作户外节点或中继器，轻松扩展 Mesh 网络并增强网络覆盖。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-3.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### 规格参数
-
 
 <table>
   <tr>
     <th><b>主控制器</b></th>
     <th>
       <a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF52840-Plus-p-6359.html" target="_blank">XIAO nRF52840 Plus</a><br />
-      (Nordic nRF52840, ARM® Cortex®-M4 32位处理器带FPU, 64 MHz, 256KB RAM, 1MB Flash, 2MB板载Flash)
+      (Nordic nRF52840, ARM® Cortex®-M4 32 位处理器带 FPU, 64 MHz, 256KB RAM, 1MB Flash, 2MB 板载 Flash)
     </th>
   </tr>
   <tr>
@@ -57,7 +54,7 @@ Solar Node 有两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio.co
     </td>
   </tr>
   <tr>
-    <td><b>GPS 模块（P1-Pro版本）</b></td>
+    <td><b>GPS 模块（P1-Pro 版本）</b></td>
     <td>
       <a href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank">XIAO L76K</a><br />
       (支持 GPS/GLONASS/Galileo)
@@ -123,16 +120,16 @@ Solar Node 有两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio.co
   </tr>
   <tr>
     <td></td>
-    <td>太阳能供电: 5V 1A</td>
+    <td>太阳能供电：5V 1A</td>
   </tr>
   <tr>
     <td><b>防水等级</b></td>
     <td>IPX5</td>
   </tr>
   <tr>
-    <td><b>电池（P1-Pro版本）</b></td>
+    <td><b>电池（P1-Pro 版本）</b></td>
     <td>
-      <p>- 4 x 18650 锂电池（每个3350mAh）</p>
+      <p>- 4 x 18650 锂电池（每个 3350mAh）</p>
       <p>- 支持 Type-C 和太阳能充电。</p>
       <p>- 放电环境：-40～60°C</p>
       <p>- 充电环境：0-50°C</p>
@@ -148,20 +145,18 @@ Solar Node 有两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio.co
   </tr>
 </table>
 
-
 ### 按钮
 
 |按钮操作|描述|
 |--|--|
-|按住3秒|开机|
+|按住 3 秒|开机|
 |按两次|更新节点/位置信息|
-|按三次|开启/关闭GPS|
-|按住5秒|关机|
-
+|按三次|开启/关闭 GPS|
+|按住 5 秒|关机|
 
 ### 硬件概述
 
-**交互项目**
+**交互元件**
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/interactive.png" alt="pir" width={800} height="auto" /></p>
 
 **配件**

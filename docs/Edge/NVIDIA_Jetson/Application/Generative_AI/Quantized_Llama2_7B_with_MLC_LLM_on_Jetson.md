@@ -123,7 +123,9 @@ here is the result:
 
 ## Video of running Llama with MLC on Jetson Orin NX 16GB
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hyhh0Tc6g9Q" title="Llama2-7b on Jetson Orin NX 16GB with MLC 4bit quantization" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Project Outlook
 

@@ -445,9 +445,13 @@ delay(500);
 
 **LCD RGB Grove 模块**：
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yniND_abVos" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tbdTTC3Jmgk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技术支持与产品讨论
 感谢您选择我们的产品！我们致力于为您提供多种支持，以确保您使用我们的产品时体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。

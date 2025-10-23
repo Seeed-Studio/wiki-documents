@@ -169,7 +169,9 @@ Channel5 Audio(Playback data):
 
 Here is the video about the DOA and AEC.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/gGVQ-9f7azs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Install DFU and LED Control Driver  
 
@@ -628,7 +630,9 @@ make
 
 - Step 4. Upgrade mic array with 6_channels_firmware.bin which includes 4 channels raw audio data.
 
+<div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/K5gZabfaaPI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## FAQ
 

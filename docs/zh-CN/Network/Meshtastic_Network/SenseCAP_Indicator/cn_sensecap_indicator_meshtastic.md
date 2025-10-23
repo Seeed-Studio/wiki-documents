@@ -1,6 +1,6 @@
 ---
-description: 开始使用 SenseCAP Indicator 进行 Meshtastic 开发
-title: 开始使用 Indicator 进行 Meshtastic 开发
+description: SenseCAP Indicator for Meshtastic 入门指南
+title: Indicator for Meshtastic 入门指南
 keywords:
 - Meshtastic
 - Indicator
@@ -27,15 +27,15 @@ last_update:
     </a>
 </div>
 
-SenseCAP Indicator 是一款专为 Meshtastic® 设计的 4 英寸触摸屏设备，由双 MCU（ESP32 和 RP2040）驱动，支持 Wi-Fi、BLE 和 LoRa®。它是一个开源的强大物联网开发平台。
+SenseCAP Indicator 是一款专为 [Meshtastic®](https://meshtastic.org/) 设计的 4 英寸触摸屏设备，由双 MCU（ESP32 和 RP2040）驱动，支持 Wi-Fi、BLE 和 LoRa®。它是一个开源、强大的物联网开发平台。
 
 ## 介绍
 
 ### 特性
 
-- **支持 Meshtastic：** 预装 Meshtastic 固件，通电即可工作。您也可以使用 Meshtastic Flasher 升级固件。<br/>
-- **双 MCU 和丰富的 GPIO：** 配备强大的 ESP32S3 和 RP2040 双 MCU，以及超过 400 个 Grove 兼容的 GPIO，提供灵活的扩展选项。<br/>
-- **本地 LoRa® 物联网连接中心：** 集成 Semtech SX1262 LoRa® 芯片，设备可通过教程转换为 LoRaWAN® 单通道网关。或者，通过 Wi-Fi 将 LoRa® 设备连接到流行的物联网平台，如 Matter。<br/>
+- **支持 Meshtastic：** 预装 Meshtastic 固件，通电即可使用。您也可以使用 Meshtastic Flasher 升级固件。<br/>
+- **双 MCU 和丰富的 GPIO：** 配备强大的 ESP32S3 和 RP2040 双 MCU，以及超过 400 个 Grove 兼容 GPIO，提供灵活的扩展选项。<br/>
+- **本地 LoRa® 物联网连接中心：** 集成 Semtech SX1262 LoRa® 芯片，设备可通过教程转换为 LoRaWAN® 单通道网关。或者，通过 Wi-Fi 将 LoRa® 设备连接到 Matter 等流行的物联网平台。<br/>
 - **完全开源平台：** 利用广泛的 ESP32 和 Raspberry Pi 开源生态系统，实现无限的应用可能性。<br/>
 - **适用于多种应用场景：** 可用作 Meshtastic 桌面节点或车载节点，以及 LoRaWAN® 单通道网关。
 
@@ -51,7 +51,7 @@ SenseCAP Indicator 是一款专为 Meshtastic® 设计的 4 英寸触摸屏设�
 |**外部存储**|支持最大 32GB Micro SD 卡（不包含）|
 |**Wi-Fi**|802.11b/g/n，2.4GHz|
 |**蓝牙**|蓝牙 5.0 LE|
-|**LoRa(SX1262)**|支持 862-930MHz|
+|**LoRa(SX1262**)|支持 862-930MHz|
 |**蜂鸣器（尚未开发）**|MLT-8530，谐振频率：2700Hz|
 |**认证**|CE/FCC|
 
@@ -63,13 +63,19 @@ SenseCAP Indicator 是一款专为 Meshtastic® 设计的 4 英寸触摸屏设�
 
 ### 刷写应用固件
 
+:::caution note
+在刷写固件之前，请确保您购买的指示器是 Meshtastic 版本。请勿将 Meshtastic 固件刷写到不兼容 Meshtastic 的指示器上。这可能会导致硬件损坏。
+:::
+
 **视频教程**
 
+<div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/55Sz8kHSyV4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
 
-选择目标设备为 `Seeed SenseCAP Indicator`，选择最新固件，然后点击 `Flash`。
+选择目标设备为 `Seeed SenseCAP Indicator` 并选择最新固件，然后点击 `Flash`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-flash.png" alt="pir" width={800} height="auto" /></p>
 
@@ -89,7 +95,7 @@ SenseCAP Indicator 是一款专为 Meshtastic® 设计的 4 英寸触摸屏设�
 
 ### 刷写 GPS 固件（可选）
 
-SenseCAP Indicator 没有内置 GPS，要获取 GPS 位置，需要一个 [Grove GPS 模块](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html)。<br/>
+SenseCAP Indicator 没有内置 GPS，要获取 GPS 位置，需要 [Grove GPS 模块](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html)。<br/>
 将 GPS 模块连接到 Grove 端口，然后刷写 GPS 固件。
 
 - **[GPS 固件下载](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/meshtastic_gps.ino.uf2)**
@@ -100,11 +106,11 @@ SenseCAP Indicator 没有内置 GPS，要获取 GPS 位置，需要一个 [Grove
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_56.png" alt="pir" width={600} height="auto" /></p>
 
-下载 `UF2` 文件并将其复制到 `RPI-RP2` 驱动器。文件下载完成后固件应该会被刷写，设备会重启。
+下载 `UF2` 文件并将其复制到 `RPI-RP2` 驱动器。文件下载完成后固件将被刷写，设备将重启。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/disk.png" alt="pir" width={600} height="auto" /></p>
 
-## 开始使用
+## 入门指南
 
 下载 `Meshtastic` 应用：
 
@@ -113,7 +119,7 @@ SenseCAP Indicator 没有内置 GPS，要获取 GPS 位置，需要一个 [Grove
 
 ### 通过应用连接
 
-- 打开设备电源，设备页面将显示当前设备的 mac 地址。
+- 打开设备电源，设备页面将显示当前设备的 MAC 地址。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name4.png" alt="pir" width={700} height="auto" /></p>
 
@@ -172,10 +178,10 @@ import TabItem from '@theme/TabItem';
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
+参考 [各国 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时基础每分钟计算。如果达到限制，您的设备将停止传输，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时计算每分钟。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
 现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
@@ -183,18 +189,18 @@ import TabItem from '@theme/TabItem';
 ### 键盘
 
 :::tip note
-版本 2.5.xx（出厂固件为 v2.5.11）和版本 2.6.xx 以上的键盘使用方法不同。请根据您当前的固件版本查看以下内容。
+版本 2.5.xx（出厂固件为 v2.5.11.）和版本 2.6.xx 以上的键盘使用方法不同。请根据您当前的固件版本查看以下内容。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/keyboard-ve.png" alt="pir" width={400} height="auto" /></p>
 
-#### 对于版本 2.5.xx
+#### 版本 2.5.xx
 
 <div class="table-center">
 <iframe width="500" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/keyboard-usage.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-#### 对于版本 2.6 +
+#### 版本 2.6 以上
 
 <div class="table-center">
 <iframe width="500" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/keyboard-usage2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -214,6 +220,6 @@ RP2040 尚未开发完成，因此 `蜂鸣器`/`SD 卡`/`地图` 功能暂时不
 
 #### GPS 模块
 
-如果您没有连接 GPS 模块，请在 `Meshtastic` 应用中禁用 GPS 功能，否则设备将持续尝试寻找 GPS 模块，这会导致设备启动屏幕需要很长时间。
+如果您没有连接 GPS 模块，请在 `Meshtastic` 应用中禁用 GPS 功能，否则设备会一直尝试寻找 GPS 模块，这会导致设备启动屏幕需要很长时间。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps-module.png" alt="pir" width={600} height="auto" /></p>

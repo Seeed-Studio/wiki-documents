@@ -161,7 +161,7 @@ python3 video_receiver.py
 
 我们在 YouTube 直播中展示了这个演示，从 ```19:47``` 开始。您可以看到当主持人拍手时灯会亮起，然后当主持人挥手时灯会熄灭，请欣赏这个演示：
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/v-S6_tH75NI" title="Making Next Gadget: AI Boosted RPi for Real World Applications" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

@@ -15,7 +15,9 @@ last_update:
 
 # SenseCAP Indicator - Desarrollo de Aplicaciones Matter
 
+<div class="video-container">
 <iframe class="youtube-video" src="https://www.youtube.com/embed/LCIWqwmCZ54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Introducción
 
@@ -86,7 +88,9 @@ Después del aprovisionamiento, el dispositivo comenzará a reportar su temperat
 
 ### Funcionalidad estándar
 
+<div class="video-container">
 <iframe class="youtube-video" src="https://www.youtube.com/embed/mBhrYeyQQeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 La aplicación Matter del Indicator permite navegar los datos del sensor de manera similar al firmware estándar. Al cargar, el dispositivo muestra la pantalla del reloj que está configurada basándose en tu ubicación para darte una hora precisa. La pantalla tiene eventos para detectar deslizamientos hacia la derecha e izquierda para alternar entre el tiempo, la visualización del sensor y la pantalla de configuración.
 

@@ -373,7 +373,7 @@ En una máquina anfitriona con Ubuntu, abre la terminal y ejecuta el comando `sh
 Antes de poder continuar con los pasos de instalación, debemos asegurarnos de que la placa esté en modo de recuperación forzada.
 :::
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="450" src="https://www.youtube.com/embed/HEIXFkizP5Y" title="Enter Force Recovery Mode (reComputer Mini)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -417,7 +417,9 @@ El reComputer Jetson J30/40 Mini ha lanzado un script de flasheo de un clic, que
 wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && sudo chmod 777 ./flashing.sh && ./flashing.sh
 ```
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFBzTlyOjhE?si=uNN-l5VVGbAyGnot" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::caution
 Aviso: El script de flasheo con un solo clic tiene como objetivo acelerar el flasheo de JetPack. La versión actual es una beta y puede presentar varios problemas. Esperamos tu comprensión. Si encuentras problemas durante el flasheo, sigue los pasos de `Flashear el Dispositivo Paso a Paso` a continuación y proporciona comentarios en nuestro [canal de Discord de Jetson](https://discord.com/channels/862602258452578314/930732339624026152). Los corregiremos rápidamente y mejoraremos esta función en el futuro cercano.
@@ -451,7 +453,7 @@ Verás la siguiente salida si el proceso de flasheo es exitoso
 El comando de flasheo puede ejecutarse entre 2 y 10 minutos.
 :::
 
-**Paso 3:** Conecta el J501 a una pantalla usando el conector HDMI en la placa y completa la configuración inicial:
+**Paso 3:** Conecta el J401 a una pantalla utilizando el **USB Type-C con DisplayPort** en la placa y completa la configuración inicial.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>

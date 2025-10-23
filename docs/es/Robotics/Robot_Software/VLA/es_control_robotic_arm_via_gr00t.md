@@ -658,7 +658,7 @@ if __name__ == "__main__":
 
 Nuestras pruebas de inferencia se realizaron en una laptop equipada con una GPU RTX 4080. Aunque la precisión de inferencia resultó excelente, observamos un temblor notable en el movimiento del brazo debido al gran tamaño del modelo VLA. Sin embargo, el sistema logra completar exitosamente todas las tareas previstas.
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="480" src="https://www.youtube.com/embed/nOTwjHGjE_Q" title="AI-Powered Control of the Robotic Arm via GR00T" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

@@ -519,7 +519,9 @@ Debido a que los chips de la serie ST32 están agotados globalmente, los precios
 
 Este es el Video de introducción de este producto.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0dFQWwXOOBI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Soporte Técnico y Discusión del Producto
 

@@ -450,7 +450,9 @@ Puedes salir de este programa simplemente presionando **ctrl+c**.
 
 Este es el video de introducción de este producto, demostraciones simples, puedes intentarlo.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HQr6jSmfJs0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Soporte Técnico y Discusión del Producto
 

@@ -16,7 +16,9 @@ last_update:
 
 Grove - RGB LED 环（20 - WS2813 Mini）是 [WS2813 数字 RGB LED 环](https://www.seeedstudio.com/WS2813-Digital-RGB-LED-Ring-p-2871.html) 的迷你版本。RGB LED 环采用 3535 尺寸的 LED，每个 LED 内部嵌入了一个微控制器。WS2813 的驱动芯片位于 LED 内部，因此每个 LED 都是可寻址的。每个 LED 都具有恒流驱动，因此即使电压发生变化，颜色也会非常一致。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/zQj8RRJcZsk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Min-p-3227.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p> -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Min-p-3227.html)

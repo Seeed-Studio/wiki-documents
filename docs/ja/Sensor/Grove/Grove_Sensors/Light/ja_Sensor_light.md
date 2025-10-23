@@ -233,7 +233,9 @@ SiLabs の SI1145 センサーをベースにしたこのセンサーは、低�
 
 ### Grove - Light Sensor v1.1 のチュートリアル
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZvFswNYY2mU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 - [光センサーとは？種類、用途、Arduinoガイド](https://www.seeedstudio.com/blog/2020/01/08/what-is-a-light-sensor-types-uses-arduino-guide/)
 

@@ -16,7 +16,9 @@ SeeedのReSpeaker 4-Mic Linear Array Kitは、Raspberry Pi用に設計された�
 
 Raspberry Pi用ReSpeaker 4-Mic Linear Array Kitは2つのボードで構成されています。1つは音声アクセサリHAT、もう1つは4つのマイクロフォンのリニアアレイです。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NxZx9nz67Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Raspberry Pi用ReSpeaker 4-Mic Linear Array Kitは、Raspberry Pi OSで8入力・8出力チャンネルをサポートします。最初の6つの入力チャンネルはマイクロフォン録音用（最初の4つの入力チャンネルのみが有効なキャプチャデータ）で、残りの2つの入力チャンネルは再生のエコーチャンネルです。最初の2つの出力チャンネルは音声出力用で、残りの6つの出力チャンネルはダミーです。
 

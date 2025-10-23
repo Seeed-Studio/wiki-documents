@@ -24,7 +24,9 @@ En este proyecto vamos a emplear un método más eficiente y analizar directamen
 
 ¡Para más detalles y visuales, mira el video correspondiente!
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CVq4cet5jgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Hay diferentes tipos de tareas de reconocimiento de voz – podemos dividirlas aproximadamente en tres grupos:
 
@@ -238,7 +240,9 @@ Hay múltiples mejoras que se pueden hacer a las arquitecturas básicas de redes
 
 ¡Echa un vistazo a esta charla de TinyML sobre este tema para descubrir más al respecto y encontrar enlaces a los papers!
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YmJrr1D191k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Te animamos a hacer fork del repositorio de código, intentar entrenar en tu propio dataset y quizás intentar implementar arquitecturas más avanzadas o técnicas de entrenamiento de modelos. Si lo haces, ¡no dudes en mencionarme aquí o hacer un PR en Github!
 

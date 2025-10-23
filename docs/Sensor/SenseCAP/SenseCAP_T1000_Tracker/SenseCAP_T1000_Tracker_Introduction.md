@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_tracker/Introduction
 last_update:
-  date: 9/11/2023
-  author: Jessie
+  date: 10/11/2025
+  author: Twelve
 ---
 
 
@@ -29,23 +29,22 @@ last_update:
 |--|--|--|--|--|
 |[SenseCAP T1000-A](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html)|<ul><li>LoRaWAN</li><li>Helium</li></ul>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |[SenseCAP T1000-B](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-B-p-5698.html)|<ul><li>LoRaWAN</li><li>Helium</li></ul>|||
-|[SenseCAP T1000-E](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html)|<ul><li>Meshtastic</li></ul>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
-
+|[SenseCAP T1000-E](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html)|<ul><li>LoRaWAN</li><li>Meshtastic</li></ul>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 :::
 
 ## Features
 
 ### Accurate Positioning
 
-GNSS, Wifi, BLE,3 positioning technologies for both indoor and outdoor solutions.
+GNSS, Wifi, BLE, 3 positioning technologies for both indoor and outdoor solutions.
 
-**GNSS Positioning(Outdoor)**
+**GNSS Positioning (Outdoor)**
 
 The tracker will get location outdoor via satellite system (GPS/BeiDou/more), then uploads the data to server by LoRa wireless.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/located_by_Gnss.png" alt="pir" width={800} height="auto" /></p>
 
-**Wi-Fi Positioning(Indoor)**
+**Wi-Fi / Bluetooth Positioning (Indoor)**
 
 Tracker scan the MAC address and RSSI of nearby Wi-Fi/Bluetooth and upload it through LoRaWAN. The application server needs to calculate the real geographical location based on the MAC address and signal strength (RSSI).
 
@@ -67,11 +66,12 @@ T1000 provides seamless global LoRaWAN® region switching, automatically adjusti
 
 ### Months of Battery Life
 
-Powered by the LR1110 and featuring low power consumption, the battery lasts for 3 months with 1 hour upload interval in GPS-only mode.
+Powered by the LR1110 and featuring low power consumption, most of the models can lasts for over 3 months of battery life with 1 hour upload interval in GNSS only mode, with the motion sensor disabled.
+(Battery life may vary with configuration parameters such as frequency band, positioning mode, and data upload interval. Please refer to the [Battery Life Calculation](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker/Trcaker_Battery_%20Life_Calculation_T1000_AB.xlsx) for detailed reference)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/battery_life.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/battery_life_new_ABE.png" alt="pir" width={800} height="auto" /></p>
 
-### Temp,Light,Motion Sensors
+### Temp, Light, Motion Sensors
 
 Temperature & light sensors are included to keep track of the environmental data on the go. For example, temp data can be used to inference the possibility if the food / vaccine goes bad. Light data shows if it is seen by unwanted eyes.
 
@@ -91,7 +91,7 @@ Motion sensor to detect anomaly, SOS button for emergency reporting and automati
 
 ## Architecture
 
-<p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/blog/wp-content/uploads/2023/06/%E7%B4%A0%E6%9D%9033.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/framework_new.png" alt="pir" width={800} height="auto" /></p>
 
 ## Applications
 
@@ -105,19 +105,17 @@ Motion sensor to detect anomaly, SOS button for emergency reporting and automati
 
 ### Model Specification
 
-We provide two different solutions for users, and comes in four versions: A, B, C, and D. T1000 A/B support regular GNSS positioning, while T1000 C/D support LoRa Cloud Geolocation Service.
+We provide two different solutions for users, and comes in three versions: A, B and E.
 
-- **T1000-A/T1000-B**: GNSS data without special encryption.
+- **T1000-A/T1000-B**: These two versions are designed for **LoRaWAN network**, supporting indoor (Wi-Fi + Bluetooth) + outdoor positioning (GNSS). T1000-A is equipped with essential features, including a temperature sensor, light sensor, motion sensor, while T1000-B comes without these sensors.
 
-- **T1000-C/T1000-D**: GNSS data encrypted via Semtech LoRa Edge, GNSS data needs to be decrypted through [LoRa Cloud](https://www.loracloud.com/).
+- **T1000-E**: It features open-source software and is available in two separate versions: one for **LoRaWAN** and the other for **Meshtastic**. Both offer full source code, enabling developers to customize and expand their functions freely.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/model_spec2.png" alt="pir" width={800} height="auto" /></p>
-
-<p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/blog/wp-content/uploads/2023/06/%E7%94%BB%E6%9D%BF-11@1.5x.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image2_20.png" alt="pir" width={800} height="auto" /></p>
 
 ### General Parameters
 
-|Product Model|T1000-A/T1000-B/T1000-C/T1000-D|
+|Product Model|T1000-A/T1000-B/T1000-E|
 | :- | :- |
 |Backhaul|LoRaWAN® (v1.0.4 Class A)|
 |Bluetooth|Bluetooth v5.1, setting via App|
@@ -138,10 +136,10 @@ We provide two different solutions for users, and comes in four versions: A, B, 
 
 **Location**
 
-|GNSS Constellation|<p>T1000-A/B: GPS/GLONASS/Galileo/BeiDou/QZSS</p><p>T1000-C/D: GPS/ BeiDou</p>|
+|GNSS Constellation|GPS/GLONASS/Galileo/BeiDou/QZSS|
 | :- | :- |
 |GNSS Sensitivity|-145dBm cold start / -160 dBm Tracking|
-|GNSS Location Accuracy|2.5m CEP 50%|
+|GNSS Location Accuracy|2\.5m CEP 50%|
 |Wi-Fi Positioning|Passive scanning, uploads the scanned 4 MAC addresses|
 |Bluetooth Positioning|uploads the scanned 3 best signal MAC addresses of Beacon|
 |Data Cache|Cache 1000 data when there is no LoRaWAN network|
@@ -153,5 +151,5 @@ We provide two different solutions for users, and comes in four versions: A, B, 
 |\*Battery Life Estimates|4 months on a single charge (uplink every 1 hour, only GNSS data)|
 |Battery Life Monitoring|Periodic uplink battery level|
 |Charge Cable (Adapter not included)|USB magnetic charging cable, 1 meter|
-|<a name="ole_link9"></a>Power Input Voltage|4.7 to 5.5V DC|
+|<a name="ole_link9"></a>Power Input Voltage|4\.7 to 5.5V DC|
 |Charging Temperature Limit|0 to +45℃ (Beyond the temperature range, the charge will be limited, and the LED will blink quickly)|
