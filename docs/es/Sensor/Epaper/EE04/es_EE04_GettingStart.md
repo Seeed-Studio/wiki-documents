@@ -178,7 +178,7 @@ Al usar la Placa de Pantalla ePaper XIAO, asegúrese de configurar el puente seg
 
 #### Conector de 50 Pines
 
-- [E-paper de 7.3 pulgadas - Siete Colores 800x480](https://www.seeedstudio.com/7-3-Seven-Color-ePaper-Display-with-800x480-Pixels-p-5787.html)
+- [E-paper Spectra6 de 7.3 pulgadas](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
 :::tip
