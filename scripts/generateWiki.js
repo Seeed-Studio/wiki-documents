@@ -35,6 +35,8 @@ const excludedPaths = [
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_Encrypt_the_Disk_for_Jetson.md'), //10.11
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'Device_Network_Setup_Guide.md'), //10.13
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'Web_Control_Panel.md'), //10.13
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'MCP_Endpoint.md'), //10.22
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'Extending_Grove_with_MCP.md'), //10.22
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）

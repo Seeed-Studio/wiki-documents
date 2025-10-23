@@ -1,7 +1,7 @@
 ---
 description: Edge AI gun detection system based on Frigate-on-Jetson and Node-RED, supporting Jetson and reComputer R2000 (Hailo) platforms.
 title: AI Gun Detection Solution for Real-Time Edge Alerts
-image: https://files.seeedstudio.com/wiki/solution/crowd_tracking/Node-RED%20Gun%20Alerts1.webp
+image: https://files.seeedstudio.com/wiki/solution/crowd_tracking/scene_3.webp
 slug: /solutions/frigate-on-jetson-nodered-gun-alerts
 last_update:
   date: 10/22/2025
