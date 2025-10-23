@@ -311,9 +311,9 @@ Always keep both options disabled to ensure stable operation of your XIAO ePaper
 
 ### Buttons Usage
 
-We have 4 button on this development board. They are RESET,KEY1,KEY2,KEY3 and **we only use RESET and KEY1 button in TRMNL firmware.**
+We have 4 button on this development board. They are RESET,KEY1,KEY2,KEY3 and **we only use RESET and KEY3 button in TRMNL firmware.**
 
-**KEY1 Usage:**
+**KEY3 Usage:**
 
 1. **One Click:** to refresh pages immediately.
 2. **Double Click:** custom function, you can find it in setting page.
