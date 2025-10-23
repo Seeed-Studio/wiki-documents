@@ -2917,7 +2917,7 @@ const sidebars = {
         'Network/TTN_Gateway/The-Things-Indoor-Gateway',
         {
           type: 'category',
-          label: 'Wio-WM6180 WiFi-Halow Devices',
+          label: 'Wio-WM6108 WiFi-Halow Devices',
           items: [
             'Network/WiFi-Halow/wifi-halow-module-for-xiao',
             'Network/WiFi-Halow/wifi-halow-mini-pcie-module',
@@ -8007,7 +8007,7 @@ const sidebars = {
         'zh-CN/Network/TTN_Gateway/cn_The-Things-Indoor-Gateway',
         {
           type: 'category',
-          label: 'Wio-WM6180 WiFi-Halow 设备',
+          label: 'Wio-WM6108 WiFi-Halow 设备',
           items: [
             'zh-CN/Network/WiFi-Halow/cn_wifi-halow-module-for-xiao',
             'zh-CN/Network/WiFi-Halow/cn_wifi-halow-mini-pcie-module',
@@ -13005,7 +13005,7 @@ const sidebars = {
         'es/Network/TTN_Gateway/es_The-Things-Indoor-Gateway',
         {
           type: 'category',
-          label: 'Dispositivos WiFi-Halow Wio-WM6180',
+          label: 'Dispositivos WiFi-Halow Wio-WM6108',
           items: [
             'es/Network/WiFi-Halow/es_wifi-halow-module-for-xiao',
             'es/Network/WiFi-Halow/es_wifi-halow-mini-pcie-module',
@@ -18003,7 +18003,7 @@ const sidebars = {
         'ja/Network/TTN_Gateway/ja_The-Things-Indoor-Gateway',
         {
           type: 'category',
-          label: 'Wio-WM6180 WiFi-Halow Devices',
+          label: 'Wio-WM6108 WiFi-Halow Devices',
           items: [
             'ja/Network/WiFi-Halow/ja_wifi-halow-module-for-xiao',
             'ja/Network/WiFi-Halow/ja_wifi-halow-mini-pcie-module',

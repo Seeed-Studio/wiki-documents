@@ -14,7 +14,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.jpg" alt="pir" width={600} height="auto" /></p>
 
-Wio Tracker L1 系列是一款低功耗、高度可扩展的 [Meshtastic®](https://meshtastic.org/) 节点，具有 LoRa（862–930 MHz）、用于高效处理的 nRF52840 和用于精确位置跟踪的 L76K GPS 模块。设计灵活，支持 OLED 和 E-Ink 显示屏，以及太阳能电池板和电池供电，使其成为各种物联网和离网应用的理想选择。
+Wio Tracker L1 系列是一款低功耗、高度可扩展的 [Meshtastic®](https://meshtastic.org/) 节点，具有 LoRa（862–930 MHz）、用于高效处理的 nRF52840 和用于精确位置跟踪的 L76K GPS 模块。该产品设计灵活，支持 OLED 和 E-Ink 显示屏，以及太阳能电池板和电池供电，非常适合各种物联网和离网应用。
 
 ## L1 系列型号
 
@@ -54,7 +54,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
 可选 1.3 英寸 OLED 和 2.13 英寸 E-Ink 屏幕，为不同的功耗和视觉反馈需求提供多样化的显示选项。
 
 - **高扩展性**
-完全兼容 Grove 生态系统，包含 PTH 接头和 SWD 调试接口，用于自定义硬件扩展和高级开发。
+完全兼容 Grove 生态系统，包含 PTH 接头和 SWD 调试接口，支持自定义硬件扩展和高级开发。
 
 ### 规格参数
 
@@ -62,7 +62,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
   <tr>
     <th colspan="1">处理器</th>
     <th colspan="1">
-      Nordic nRF52840<br />ARM® Cortex®-M4 带 FPU，运行频率高达 64 MHz
+      Nordic nRF52840<br />ARM® Cortex®-M4 with FPU 运行频率高达 64 MHz
     </th>
   </tr>
   <tr>
@@ -97,10 +97,10 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
     <td colspan="1">USB Type-C：5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">太阳能电池板：5V — 1A</td>
+    <td colspan="1">太阳能电池板（2.0mm 2p）：5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">锂电池：3.7V — 1A</td>
+    <td colspan="1">锂电池（1.25mm 2p JST）：3.7V — 1A</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">OLED 屏幕</td>
@@ -110,7 +110,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
     <td colspan="1">分辨率：128 × 64 像素</td>
   </tr>
   <tr>
-    <td colspan="1">有效区域（毫米）：34.5 × 23.0</td>
+    <td colspan="1">有效区域（mm）：34.5 × 23.0</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">E-Ink 屏幕</td>
@@ -120,7 +120,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
     <td colspan="1">分辨率：122 × 250 像素</td>
   </tr>
   <tr>
-    <td colspan="1">有效区域（毫米）：48.55 × 23.7046</td>
+    <td colspan="1">有效区域（mm）：48.55 × 23.7046</td>
   </tr>
   <tr>
     <td colspan="1">认证</td>

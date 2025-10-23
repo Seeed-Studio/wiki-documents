@@ -281,7 +281,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -311,7 +311,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -562,7 +562,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -590,7 +590,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -1303,7 +1303,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1344,7 +1344,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1628,7 +1628,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1661,7 +1661,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
