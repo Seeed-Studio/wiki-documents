@@ -14,7 +14,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.jpg" alt="pir" width={600} height="auto" /></p>
 
-La Serie Wio Tracker L1 es un nodo [Meshtastic®](https://meshtastic.org/) de bajo consumo y altamente extensible que cuenta con LoRa (862–930 MHz), el nRF52840 para procesamiento eficiente, y un módulo GPS L76K para seguimiento preciso de ubicación. Diseñado para flexibilidad, soporta pantallas OLED y E-Ink, así como paneles solares y alimentación por batería, haciéndolo ideal para una amplia gama de aplicaciones IoT y fuera de la red.
+La Serie Wio Tracker L1 es un nodo [Meshtastic®](https://meshtastic.org/) de bajo consumo y alta extensibilidad que cuenta con LoRa (862–930 MHz), el nRF52840 para procesamiento eficiente, y un módulo GPS L76K para seguimiento preciso de ubicación. Diseñado para flexibilidad, soporta pantallas OLED y E-Ink, así como paneles solares y alimentación por batería, haciéndolo ideal para una amplia gama de aplicaciones IoT y fuera de la red.
 
 ## Modelo Serie L1
 
@@ -47,7 +47,7 @@ La Serie Wio Tracker L1 está disponible en 4 versiones—elige la que mejor se 
 - **Pre-cargado con firmware Meshtastic**
 Listo para usar desde el primer momento con firmware Meshtastic preinstalado para una configuración sin problemas.
 
-- **Opciones de Triple Fuente de Alimentación**
+- **Tres Opciones de Alimentación**
 Soporta carga rápida Type-C, entrada solar y alimentación por batería Li-ion para despliegue flexible en varios entornos—ideal para aplicaciones exteriores y móviles.
 
 - **Soporte de Pantalla Flexible**
@@ -97,10 +97,10 @@ Totalmente compatible con el ecosistema Grove, e incluye cabeceras PTH y una int
     <td colspan="1">USB Type-C: 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Panel Solar: 5V — 1A</td>
+    <td colspan="1">Panel Solar (2.0mm 2p): 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Batería de Litio: 3.7V — 1A</td>
+    <td colspan="1">Batería de Litio (1.25mm 2p JST): 3.7V — 1A</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">Pantalla OLED</td>

@@ -10,12 +10,14 @@ last_update:
   date: 6/17/2025
   author: Jessie
 ---
-
+:::tip
+Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L1 Pro 的，但它适用于 L1 系列中的所有其他产品。
+:::
 ## 视频教程
 
 ### 第一部分 开箱
 
-首次使用 L1、L1 Lite 或 L1 E-Ink 型号时，连接 USB 电源后，将电源开关向上拨动以开机。
+首次使用 L1、L1 Lite 或 L1 E-Ink 型号时，连接 USB 电源后，向上拨动电源开关以开机。
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Wi_YmE76YcY?si=Ad-pUhle5X9QppPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -47,10 +49,6 @@ last_update:
 
 ## 入门指南
 
-:::note
-请勿擦除闪存，这可能会损坏设备。
-:::
-
 ### 刷写固件
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
@@ -65,11 +63,11 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-将 UF2 文件拖拽到 DFU 驱动器中。文件下载完成后固件应该会被刷写，设备会重启。
+将 UF2 文件拖拽到 DFU 驱动器。文件下载完成后固件应该会被刷写，设备会重启。
 
 ### 设备开机
 
-连接 USB 线缆激活设备。将电源开关向上拨动以开机。
+连接 USB 线缆激活设备。向上拨动电源开关以开机。
 
 ### 通过应用连接
 
@@ -131,14 +129,14 @@ import TabItem from '@theme/TabItem';
 参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时计算，每分钟计算一次。如果达到限制，您的设备将停止传输，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时基础每分钟计算。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
 现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
 
 ### 传感器连接
 
-您可以通过 Grove 接口为设备添加传感器。以下传感器已验证与设备上的 Grove 接口兼容。
+您可以通过 Grove 接口向设备添加传感器。以下传感器已验证与设备上的 Grove 接口兼容。
 
 <table>
   <tr>
@@ -177,7 +175,7 @@ import TabItem from '@theme/TabItem';
 
 #### 手动进入 DFU 模式
 
-将设备连接到您的电脑，双击 `Reset` 按钮。黄色 LED 将保持常亮，您的电脑上会出现一个名为 `Tracker L1` 的新 USB 驱动器。
+将设备连接到您的 PC，双击 `Reset` 按钮。黄色 LED 将保持常亮，您的 PC 上将出现一个名为 `Tracker L1` 的新 USB 驱动器。
 
 #### 退出 DFU 模式
 
