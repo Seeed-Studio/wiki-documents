@@ -178,7 +178,7 @@ XIAO ePaper Display Board を使用する際は、ePaper ディスプレイの�
 
 #### 50ピンコネクタ
 
-- [7.3インチ E-paper - 7色 800x480](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
+- [7.3インチ Spectra6 E-paper](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
 :::tip
