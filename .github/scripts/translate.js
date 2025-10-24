@@ -422,6 +422,10 @@ ${glossaryPairs}
      - \`<TabItem value="For E1002" label="For E1002">\` → \`<TabItem value="For E1002" label="适用于 E1002">\`
      - \`<TabItem value='Install through browser'>\` → \`<TabItem value='通过浏览器安装'>\`
    - 反例（禁止）：\`<TabItem value="适用于 E1002" label="适用于 E1002">\`（有 label 时不应改 value）
+
+8. **产品系列命名（“… Series” 后缀）**：
+   - 当出现 “… Series” 这类产品线后缀（如 \`reTerminal E Series\`），保留前缀的产品名按术语保护/术语表不变，仅将 \`Series\` 翻译为目标语言（zh-CN → “系列”）。
+   - 示例：\`reTerminal E Series\` → \`reTerminal E 系列\`
 </translation_rules>
 
 <example>
