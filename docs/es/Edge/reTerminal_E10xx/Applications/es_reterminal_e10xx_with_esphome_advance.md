@@ -1,6 +1,6 @@
 ---
-description: Este artículo describe cómo utilizar las capacidades de hardware de la pantalla ePaper de la serie reTerminal E en ESPHome.
-title: Uso Avanzado de ESPHome de la Pantalla ePaper de la Serie reTerminal E en Home Assistant
+description: Este artículo describe cómo utilizar las capacidades de hardware de la pantalla ePaper de reTerminal E Series en ESPHome.
+title: Uso Avanzado de ESPHome de la Pantalla ePaper de reTerminal E Series en Home Assistant
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /es/reterminal_e10xx_with_esphome_advanced
 sidebar_position: 3
@@ -9,18 +9,19 @@ last_update:
   author: Citric
 ---
 
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Uso Avanzado de ESPHome de la Pantalla ePaper de la Serie reTerminal E en Home Assistant
+# Uso Avanzado de ESPHome de la Pantalla ePaper de reTerminal E Series en Home Assistant
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-Este artículo explora configuraciones avanzadas de ESPHome para tu dispositivo de pantalla ePaper de la serie reTerminal E, basándose en los conceptos fundamentales cubiertos en nuestra [guía de Uso Básico de ESPHome](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome). Si eres nuevo en ESPHome o la serie reTerminal E, recomendamos comenzar con la guía básica antes de sumergirte en estas aplicaciones avanzadas.
+Este artículo explora configuraciones avanzadas de ESPHome para tu dispositivo de pantalla ePaper reTerminal E Series, basándose en los conceptos fundamentales cubiertos en nuestra [guía de Uso Básico de ESPHome](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome). Si eres nuevo en ESPHome o en reTerminal E Series, recomendamos comenzar con la guía básica antes de profundizar en estas aplicaciones avanzadas.
 
 ## Capacidades de Hardware
 
-La pantalla ePaper de la serie reTerminal E incluye varios componentes de hardware que pueden ser aprovechados en Home Assistant a través de ESPHome:
+La pantalla ePaper de reTerminal E Series incluye varios componentes de hardware que pueden ser aprovechados en Home Assistant a través de ESPHome:
 
 - Tres botones programables (GPIO3, GPIO4, GPIO5)
 
@@ -34,13 +35,13 @@ La pantalla ePaper de la serie reTerminal E incluye varios componentes de hardwa
 
 Exploremos cómo usar cada uno de estos componentes en aplicaciones prácticas.
 
-## Control de Componentes de Hardware de la Pantalla ePaper de la Serie reTerminal E
+## Control de Componentes de Hardware de la Pantalla ePaper de reTerminal E Series
 
-Exploremos cómo usar cada uno de los componentes de hardware en la pantalla ePaper de la serie reTerminal E en Home Assistant.
+Exploremos cómo usar cada uno de los componentes de hardware en la pantalla ePaper de reTerminal E Series en Home Assistant.
 
 ### Botones y LED
 
-Este ejemplo demuestra cómo usar los tres botones en tu pantalla ePaper de la serie reTerminal E para controlar funciones y proporcionar retroalimentación visual con el LED integrado.
+Este ejemplo demuestra cómo usar los tres botones en tu pantalla ePaper de reTerminal E Series para controlar funciones y proporcionar retroalimentación visual con el LED integrado.
 
 Puedes usar este ejemplo copiando el código a continuación y pegándolo después de la línea de código `captive_portal` en tu archivo Yaml.
 
@@ -114,7 +115,7 @@ Esta configuración:
 
 ### Control del Zumbador
 
-La pantalla ePaper de la serie reTerminal E incluye un zumbador en GPIO45 que puede usarse para proporcionar retroalimentación audible. Aquí te mostramos cómo configurarlo:
+La pantalla ePaper de reTerminal E Series incluye un zumbador en GPIO45 que puede usarse para proporcionar retroalimentación audible. Aquí te mostramos cómo configurarlo:
 
 Puedes usar este ejemplo copiando el código a continuación y pegándolo después de la línea de código `captive_portal` en tu archivo Yaml.
 
@@ -177,7 +178,7 @@ Puedes ajustar el parámetro `frequency` para cambiar el tono del zumbador. Valo
 
 ### Monitoreo de Batería
 
-La pantalla ePaper de la serie reTerminal E puede monitorear su nivel de batería a través de la entrada analógica en GPIO1. Aquí te mostramos cómo configurarlo:
+La pantalla ePaper de reTerminal E Series puede monitorear su nivel de batería a través de la entrada analógica en GPIO1. Aquí te mostramos cómo configurarlo:
 
 ```yaml
 esphome:
@@ -321,11 +322,11 @@ El complemento Puppet lanza un servidor en el puerto 10000 que genera capturas d
 http://homeassistant.local:10000/lovelace/0?viewport=800x480
 ```
 
-Esta URL capturará una captura de pantalla de tu panel predeterminado a resolución 800x480 (perfecto para reTerminal E Series).
+Esta URL capturará una captura de pantalla de tu panel predeterminado a resolución 800x480 (perfecto para reTerminal E 系列).
 
-#### Optimización para E-Paper
+#### Optimización para Papel Electrónico
 
-Para pantallas e-paper, agrega el parámetro `eink` para reducir la paleta de colores:
+Para pantallas de papel electrónico, agrega el parámetro `eink` para reducir la paleta de colores:
 
 ```
 http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2
@@ -464,7 +465,7 @@ display:
 Reemplaza `homeassistant.local` con la dirección IP real de tu Home Assistant si la resolución DNS local no funciona en tu red.
 :::
 
-Cuando tu configuración se haya subido y esté ejecutándose exitosamente, tu Pantalla ePaper reTerminal E Series mostrará una captura de pantalla de tu panel de Home Assistant:
+Cuando tu configuración se haya subido y esté ejecutándose exitosamente, tu Pantalla ePaper reTerminal E 系列 mostrará una captura de pantalla de tu panel de Home Assistant:
 
 <Tabs>
 <TabItem value="For E1001" label="Para E1001" default>
@@ -479,13 +480,13 @@ Cuando tu configuración se haya subido y esté ejecutándose exitosamente, tu P
 </TabItem>
 </Tabs>
 
-## Demo 3: Modo de Sueño Profundo
+## Demo 3: Modo de Suspensión Profunda
 
 :::tip
-Si comienzas a usar el programa de Sueño Profundo, recomendamos que lo uses preferiblemente con el botón blanco del lado derecho y configures el botón blanco del lado derecho como el botón de Despertar del Sueño. De esta manera, cuando quieras actualizar el programa, no te encontrarás con la situación incómoda donde el dispositivo está durmiendo y no puedes subir el programa a través del puerto serie.
+Si comienzas a usar el programa de Suspensión Profunda, recomendamos que lo uses preferiblemente con el botón blanco del lado derecho y configures el botón blanco del lado derecho como el botón de Despertar de Suspensión. De esta manera, cuando quieras actualizar el programa, no te encontrarás con la situación incómoda donde el dispositivo está durmiendo y no puedes subir el programa a través del puerto serie.
 :::
 
-Este ejemplo demuestra cómo usar el modo de sueño profundo para reducir significativamente el consumo de energía, haciendo que tu Pantalla ePaper reTerminal E Series sea adecuada para aplicaciones alimentadas por batería.
+Este ejemplo demuestra cómo usar el modo de suspensión profunda para reducir significativamente el consumo de energía, haciendo que tu Pantalla ePaper reTerminal E 系列 sea adecuada para aplicaciones alimentadas por batería.
 
 Puedes usar este ejemplo copiando el código de abajo y pegándolo después de la línea de código `captive_portal` en tu archivo Yaml.
 
@@ -608,12 +609,12 @@ display:
 
 Esta configuración:
 
-- Crea un contador que persiste a través de los ciclos de sueño
+- Crea un contador que persiste a través de los ciclos de suspensión
 - Configura el dispositivo para despertar durante 30 segundos, luego dormir durante 3 minutos
 - Actualiza la pantalla con el conteo actual de despertares
 - Opcionalmente configura un botón para despertar el dispositivo
 
-Cuando esté ejecutándose, verás un contador incrementar cada vez que el dispositivo despierte del sueño:
+Cuando esté ejecutándose, verás un contador incrementar cada vez que el dispositivo despierte de la suspensión:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/53.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -623,7 +624,7 @@ Cuando esté ejecutándose, verás un contador incrementar cada vez que el dispo
 Para una mejor comprensión, recomendamos encarecidamente que ejecutes primero los ejemplos básicos anteriores antes de probar este ejemplo integral.
 :::
 
-Este ejemplo avanzado combina múltiples características en una solución completa de panel para el reTerminal E Series. Demuestra:
+Este ejemplo avanzado combina múltiples características en una solución completa de panel para el reTerminal E 系列. Demuestra:
 
 1. Visualización del clima y clima interior
 2. Monitoreo de batería con iconos
@@ -1298,7 +1299,7 @@ display:
 
 </details>
 
-Cuando tu configuración se haya cargado y ejecutado exitosamente, la pantalla ePaper de tu reTerminal E Series mostrará un panel completo con datos ambientales, hora y estado de la batería:
+Cuando tu configuración se haya subido y ejecutado exitosamente, la pantalla ePaper de tu reTerminal E Series mostrará un panel completo con datos ambientales, hora y estado de la batería:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/55.gif" style={{width:800, height:'auto'}}/></div>
 
