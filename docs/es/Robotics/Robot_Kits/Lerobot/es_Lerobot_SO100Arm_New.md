@@ -11,6 +11,8 @@ slug: /es/lerobot_so100m_new
 last_update:
   date: 9/26/2025
   author: LiShanghang
+translation:
+  skip: [ zh-CN ]
 ---
 
 # Comenzando con el brazo robótico SO-ARM100 y SO-ARM101 con LeRobot
@@ -77,10 +79,10 @@ Seeed Studio solo es responsable de la calidad del hardware en sí. Los tutorial
     </tr>
     <tr>
       <th></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">Arm Kit</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank">Arm Kit Pro</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">Arm Kit</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank">Arm Kit Pro</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">Kit de Brazo</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank">Kit de Brazo Pro</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">Kit de Brazo</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank">Kit de Brazo Pro</a></th>
     </tr>
   </thead>
   <tbody>
@@ -744,7 +746,7 @@ lerobot-teleoperate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -753,6 +755,11 @@ lerobot-teleoperate \
 
 Si tienes más cámaras, puedes cambiar `--robot.cameras` para agregar cámaras. Debes notar el formato del index_or_path, que está determinado por el último dígito del ID de cámara mostrado por `python -m lerobot.find_cameras opencv`.
 
+:::tip
+Las imágenes en formato `fourcc: "MJPG"` están comprimidas. Puedes probar resoluciones más altas, y también puedes intentar el formato `YUYV`. Sin embargo, este último reducirá la resolución de imagen y FPS, causando retraso en la operación del brazo robótico. Actualmente, bajo el formato `MJPG`, puede soportar 3 cámaras a una resolución de `1920*1080` manteniendo `30FPS`. Dicho esto, conectar 2 cámaras a una computadora a través del mismo USB HUB aún no se recomienda.
+:::
+
+
 Por ejemplo, quieres agregar una cámara lateral:
 
 ```bash
@@ -760,12 +767,17 @@ lerobot-teleoperate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true
 ```
+
+:::tip
+Las imágenes en formato `fourcc: "MJPG"` están comprimidas. Puedes probar resoluciones más altas, y también puedes intentar el formato `YUYV`. Sin embargo, este último reducirá la resolución de imagen y FPS, causando retraso en la operación del brazo robótico. Actualmente, bajo el formato `MJPG`, puede soportar 3 cámaras a una resolución de `1920*1080` manteniendo `30FPS`. Dicho esto, conectar 2 cámaras a una computadora a través del mismo USB HUB aún no se recomienda.
+:::
+
 
 :::tip
 Si encuentras un error como este.
@@ -796,7 +808,7 @@ lerobot-record \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -831,7 +843,7 @@ lerobot-record \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -1115,7 +1127,7 @@ lerobot-record \
   --robot.type=so101_follower \
   --robot.port=/dev/ttyACM0 \ # <- Use your port
   --robot.id=my_blue_follower_arm \ # <- Use your robot id
-  --robot.cameras="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30}}" \ # <- Use your cameras
+  --robot.cameras="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \ # <- Use your cameras
   --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
   --dataset.repo_id=${HF_USER}/eval_DATASET_NAME_test \  # <- This will be the dataset name on HF Hub
   --dataset.episode_time_s=50 \
@@ -1218,7 +1230,7 @@ Puedes usar la función `record` de [`lerobot/record.py`](https://github.com/hug
 lerobot-record \
   --robot.type=so100_follower \
   --robot.port=/dev/ttyACM0 \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video10, width: 640, height: 480, fps: 30}, side: {type: intelrealsense, serial_number_or_name: 233522074606, width: 640, height: 480, fps: 30}}" \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video10, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: intelrealsense, serial_number_or_name: 233522074606, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
   --robot.id=my_awesome_follower_arm \
   --display_data=false \
   --dataset.repo_id=${HF_USER}/eval_so100 \
@@ -1232,7 +1244,7 @@ como:
 lerobot-record \
   --robot.type=so101_follower \
   --robot.port=/dev/ttyACM0 \
-  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
   --robot.id=my_awesome_follower_arm \
   --display_data=false \
   --dataset.repo_id=seeed/eval_test123 \
