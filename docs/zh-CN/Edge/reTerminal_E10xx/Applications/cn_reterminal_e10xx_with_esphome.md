@@ -44,11 +44,11 @@ Home Assistant 是一个功能强大的开源家庭自动化平台，允许您�
 
 reTerminal E 系列 ePaper 显示屏是 Home Assistant 的绝佳伴侣，原因如下：
 
-1. **节能高效**：电子纸显示屏仅在更新内容时消耗电力，非常适合显示持久信息，如天气预报、日历事件或系统状态。
+1. **节能高效**：电子纸显示屏只在更新内容时消耗电力，非常适合显示持久信息，如天气预报、日历事件或系统状态。
 
 2. **清晰可见**：与 LCD 屏幕不同，电子纸显示屏在任何光照条件下都易于阅读，包括直射阳光，使其成为壁挂式家庭控制面板的理想选择。
 
-3. **长电池续航**：结合深度睡眠模式，显示屏可以在单次电池充电下运行数月，同时仍能一目了然地提供有价值的信息。
+3. **长续航时间**：结合深度睡眠模式，显示屏可以在单次电池充电下运行数月，同时仍能一目了然地提供有价值的信息。
 
 4. **灵活集成**：通过 ESPHome，显示屏与 Home Assistant 无缝集成，允许您以优雅、始终可见的格式显示智能家居系统中的任何数据。
 
@@ -135,7 +135,7 @@ Home Assistant Green 是自动化家居最简单、最注重隐私的方式。�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/30.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-如果您在附加组件商店中找不到 ESPHome，请确保您使用的是支持附加组件的 Home Assistant 安装（如 Home Assistant OS 或监督安装）。对于其他安装类型（如 Home Assistant Container），您可能需要使用 Docker 独立运行 ESPHome Device Builder。有关更多详细信息，请参阅 [官方 ESPHome 文档](https://esphome.io/guides/getting_started_hassio)。
+如果您在附加组件商店中找不到 ESPHome，请确保您使用的是支持附加组件的 Home Assistant 安装（如 Home Assistant OS 或监督安装）。对于其他安装类型（如 Home Assistant Container），您可能需要使用 Docker 独立运行 ESPHome Device Builder。有关更多详细信息，请参阅 [ESPHome 官方文档](https://esphome.io/guides/getting_started_hassio)。
 :::
 
 ### 步骤 2. 添加新设备
@@ -168,7 +168,7 @@ Home Assistant Green 是自动化家居最简单、最注重隐私的方式。�
 您可以通过复制下面的代码并将其粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用此示例。
 
 <Tabs>
-<TabItem value="For E1001" label="适用于 E1001" default>
+<TabItem value="For E1001" label="For E1001" default>
 
 ```yaml
 # define font to display words
@@ -200,7 +200,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="适用于 E1002">
+<TabItem value="For E1002" label="For E1002">
 
 ```yaml
 
@@ -245,7 +245,7 @@ display:
 点击 **INSTALL** 将代码安装到设备上，您将看到以下图像。
 
 <Tabs>
-<TabItem value='通过浏览器安装'>
+<TabItem value='Install through browser'>
 
 :::tip
 如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）距离您较远，我们建议使用此方法。您可以使用手边的计算机进行安装。
@@ -285,7 +285,7 @@ display:
 
 </TabItem>
 
-<TabItem value='通过主机安装'>
+<TabItem value='Install through host'>
 
 :::tip
 如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）就在附近，我们建议使用此方法，因为它更简单。
@@ -306,7 +306,7 @@ display:
 
 </TabItem>
 
-<TabItem value='通过 Wi-Fi 安装'>
+<TabItem value='Install through Wi-Fi'>
 
 :::tip
 这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到电子纸面板。之后，您可以通过 wifi 上传。另外，确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，以便此方法正常工作。
@@ -332,14 +332,14 @@ display:
 此示例 YAML 代码为 ESPHome 项目配置了 SPI 接口和 reTerminal E 系列电子纸显示屏。`lambda` 部分包含在屏幕上渲染简单形状的绘图命令：
 
 - 两个矩形（一个位于位置 (10, 10)，大小为 100x50，另一个位于 (150, 10)，大小为 50x50）
-- 一个位于 (250, 35) 半径为 25 的圆形
+- 一个位于 (250, 35) 的圆，半径为 25
 - 两个填充矩形（位于 (10, 80) 和 (150, 80)）
-- 一个位于 (250, 105) 半径为 25 的填充圆形
+- 一个位于 (250, 105) 的填充圆，半径为 25
 
 您可以通过复制下面的代码并将其粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用此示例。
 
 <Tabs>
-<TabItem value="For E1001" label="适用于 E1001" default>
+<TabItem value="For E1001" label="For E1001" default>
 
 ```yaml
 spi:
@@ -373,7 +373,7 @@ display:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/38.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="For E1002" label="适用于 E1002">
+<TabItem value="For E1002" label="For E1002">
 
 ```yaml
 
@@ -496,7 +496,7 @@ sensor:
 最后，添加显示部分的代码以使用上述值。完整代码如下：
 
 <Tabs>
-<TabItem value="For E1001" label="适用于 E1001" default>
+<TabItem value="For E1001" label="For E1001" default>
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -555,7 +555,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="适用于 E1002">
+<TabItem value="For E1002" label="For E1002">
 
 ```yaml
 
@@ -682,7 +682,7 @@ display:
 步骤 6. 在 `captive_portal` 部分之后，将以下代码添加到您的 ESPHome 配置文件中。此代码定义了两种图标字体大小，并配置显示屏显示天气图标。
 
 <Tabs>
-<TabItem value="For E1001" label="适用于 E1001" default>
+<TabItem value="For E1001" label="For E1001" default>
 
 ```yaml
 # define font to display words
@@ -722,7 +722,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="适用于 E1002">
+<TabItem value="For E1002" label="For E1002">
 
 ```yaml
 
@@ -779,7 +779,7 @@ display:
 
 :::
 
-步骤 7. 保存您的配置并将其上传到您的 reTerminal E 系列。当您看到如下图所示的反馈时，表示代码运行成功。
+步骤 7. 保存您的配置并将其上传到您的 reTerminal E Series。当您看到如下图所示的反馈时，表示代码运行成功。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/42.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -799,7 +799,7 @@ Material Design Icons 库包含数千个可在项目中使用的图标。以下�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/41.png" style={{width:800, height:'auto'}}/></div>
 
-步骤 3. 找到您喜欢的图标后，点击它查看详细信息。查找 Unicode 值，格式为 `F0595`。
+步骤 3. 找到喜欢的图标后，点击它查看详细信息。查找 Unicode 值，格式为 `F0595`。
 
 步骤 4. 通过以下方式将 Unicode 值添加到您的 ESPHome 配置中：
 
@@ -832,11 +832,11 @@ lambda: |-
 
 ### 显示自定义图像
 
-此示例演示如何在您的 reTerminal E 系列 ePaper Display 电子纸显示屏上显示自定义图像。您可以使用此功能显示徽标、图标或任何增强仪表板体验的图形。
+此示例演示如何在您的 reTerminal E Series ePaper Display 电子纸显示屏上显示自定义图像。您可以使用此功能显示徽标、图标或任何增强仪表板体验的图形。
 
 #### 准备工作
 
-步骤 1. 确保您已在 Home Assistant 中安装了 **Studio Code Server** 插件。如果您尚未安装，请按照前面示例中的说明进行操作。
+步骤 1. 确保您已在 Home Assistant 中安装了 **Studio Code Server** 插件。如果尚未安装，请按照前面示例中的说明进行操作。
 
 步骤 2. 在您的 ESPHome 配置目录中创建一个名为 **image** 的新文件夹。此文件夹将存储您要显示的图像文件。
 
@@ -849,7 +849,7 @@ config/
 
 #### 添加图像
 
-步骤 3. 下载示例图像以测试功能。您可以使用下面提供的 WiFi 图标或使用您自己的图像。
+步骤 3. 下载示例图像以测试功能。您可以使用下面提供的 WiFi 图标或使用自己的图像。
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.jpg" target="_blank">
@@ -862,23 +862,23 @@ config/
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-为了在电子纸显示屏上获得最佳效果，请使用具有清晰黑白区域的高对比度图像。支持 JPG 和 PNG 格式。
+如果您想显示复杂而美丽的风景图片，最好提前[在我们的网站](https://sensecraft.seeed.cc/hmi/tools/dither)进行图像抖动处理以获得更好的效果。支持 JPG 和 PNG 格式。
 :::
 
 #### 配置 ESPHome 进行图像显示
 
-步骤 5. 在 `captive_portal` 部分之后，将以下代码添加到您的 ESPHome 配置文件中。此代码定义图像资源并配置显示屏以显示它。
+步骤 5. 在 `captive_portal` 部分之后将以下代码添加到您的 ESPHome 配置文件中。此代码定义图像资源并配置显示屏以显示它。
 
 <Tabs>
-<TabItem value="For E1001" label="适用于 E1001" default>
+<TabItem value="For E1001" label="For E1001" default>
 
 ```yaml
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
-    type: BINARY                            # Binary mode works best for e-paper
+    type: BINARY                            # Binary works for monochrome, RGB565 works for colorful eink
     resize: 800x480                         # Resize to match display resolution
-    invert_alpha: true                      # Invert colors if needed
+    invert_alpha: true                      # Invert colors is needed
 
 spi:
   clk_pin: GPIO7
@@ -902,7 +902,11 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="适用于 E1002">
+<TabItem value="For E1002" label="For E1002">
+
+:::tip
+请将您的 ESPHome 版本更新到 **2025.10.2** 以上。
+:::
 
 ```yaml
 
@@ -910,9 +914,8 @@ display:
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
-    type: BINARY                            # Binary mode works best for e-paper
+    type: RGB565                            #  Binary works for monochrome, RGB565 works for colorful eink
     resize: 800x480                         # Resize to match display resolution
-    invert_alpha: true                      # Invert colors if needed
 
 # define SPI interface
 spi:
@@ -939,7 +942,7 @@ display:
 </TabItem>
 </Tabs>
 
-步骤 6. 保存您的配置并将其上传到您的 reTerminal E 系列。更新完成后，您的电子纸显示屏将显示图像。
+步骤 6. 保存您的配置并将其上传到您的 reTerminal E Series。更新完成后，您的电子纸显示屏将显示图像。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/43.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -957,7 +960,7 @@ lambda: |-
   it.image(100, 50, id(myImage));
 ```
 
-**将图像与文本结合**
+**结合图像与文本**
 
 您可以在同一屏幕上显示图像和文本：
 
@@ -993,14 +996,14 @@ lambda: |-
 ```
 
 :::caution
-请记住，电子纸显示屏的刷新率有限。`update_interval: 300s` 设置意味着您的显示屏只会每 5 分钟刷新一次。根据您的需要调整此值，但请注意频繁刷新可能会缩短电子纸显示屏的使用寿命。
+请记住，电子纸显示屏的刷新率有限。`update_interval: 300s` 设置意味着您的显示屏每 5 分钟只刷新一次。根据您的需要调整此值，但请注意频繁刷新可能会缩短电子纸显示屏的使用寿命。
 :::
 
-通过将图像与前面示例中涵盖的文本和其他显示元素相结合，您可以在 reTerminal E 系列上创建丰富、信息丰富的仪表板。
+通过将图像与前面示例中涵盖的文本和其他显示元素相结合，您可以在 reTerminal E Series 上创建丰富、信息丰富的仪表板。
 
 ## 继续阅读
 
-由于篇幅限制，本文仅涵盖了设备的一些基本用例和绘图示例。我们将在 [reTerminal E 系列 ePaper Display 在 Home Assistant 中的高级 ESPHome 用法](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced) 的 Wiki 中更详细地介绍 reTerminal 硬件在 ESPHome 上的使用，您可以继续阅读。
+由于篇幅限制，本文仅涵盖了设备的一些基本用例和绘图示例。我们将在 [reTerminal E Series ePaper Display 在 Home Assistant 中的高级 ESPHome 用法](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced) Wiki 中更详细地介绍 reTerminal 硬件在 ESPHome 上的使用，您可以继续阅读。
 
 ## 常见问题
 
@@ -1016,7 +1019,7 @@ lambda: |-
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
-### Q3：reTerminal E 系列 ePaper Display 无法连接到您的计算机？
+### Q3：reTerminal E Series ePaper Display 无法连接到您的计算机？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/68.png" style={{width:600, height:'auto'}}/></div>
 

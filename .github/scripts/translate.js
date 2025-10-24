@@ -388,10 +388,25 @@ ${glossaryPairs}
    - 列表项的缩进级别必须保持不变
    - 代码块内的缩进必须完全保留
 
-5. **锚点链接处理**：
-   - 在[文本](#锚点)格式中，锚点部分的空格用连字符替换
-   - 例如：[Some Text](#some-text) → [一些文本](#一些-文本)
-   - 注意：锚点中绝不能有空格，必须用连字符连接
+5. **内部链接的锚点（fragment）处理——仅限 Seeed 内部链接（合并规则）**：
+   - 仅当链接满足以下任一条件时处理锚点：
+     1) 以 \`https://wiki.seeedstudio.com/\` 开头；或  
+     2) 为相对链接（以 \`/\` 开头或以 \`#\` 开头）
+   - **不要尝试推断标题位置**。对 \`#\` 后的 fragment 采用如下**机械流程**：
+     - 第一步：将 fragment 中的连字符 \`-\` **视为空格**，还原为一个正常短语/句子（不改变词序，不删除词元）
+     - 第二步：翻译这个短语/句子为目标语言
+     - 第三步：**将译文中的空格恢复为 \`-\`**；若译文中**没有空格**，则**不添加** \`-\`
+   - **禁止出现空格**于最终 fragment；**不得改动** \`#\` 之前的任何部分（域名、路径、查询参数等保持不变）。
+   - 处理要点：
+     - 专有名词/保留词（如 Grove, SenseCAP, API 等）按“术语保护/术语表”规则保留或按指定译法替换；
+     - 仅翻译词语本身，不新增、不删除词元，不改变顺序。
+   - 示例：
+     - \`[BLE Scanner](#ble-scanner)\`  
+       还原：\`ble scanner\` → 译文：\`BLE 扫描器\` → 空格→\`-\` → **\`#BLE-扫描器\`**
+     - \`[Intro](/Sensor/Guide/#hardware-overview)\`  
+       还原：\`hardware overview\` → 译文：\`硬件概述\`（无空格）→ **\`#硬件概述\`**
+     - \`<a href="https://wiki.seeedstudio.com/Sensor/ABC/#getting-started">…\`  
+       还原：\`getting started\` → 译文：\`入门指南\`（无空格）→ **\`#入门指南\`**
 
 6. **严格禁止**：
    - 添加或删除任何行
@@ -399,6 +414,18 @@ ${glossaryPairs}
    - 添加原文没有的\`\`\`代码块标记
    - 改变[LINE_X]标记的位置
    - 在锚点链接的#后面使用空格
+
+7. **组件规则（Docusaurus Tabs，仅 <TabItem>）**：
+   - 若存在 \`label="…"\` 或 \`label='…'\`：**只翻译 label 的值**；不要改动属性名；不要改动其他属性值；此时**不要改动 value**
+   - 若不存在 \`label\`，但存在 \`value="…"\` 或 \`value='…'\`：**翻译 value 的值**
+   - 示例：
+     - \`<TabItem value="For E1002" label="For E1002">\` → \`<TabItem value="For E1002" label="适用于 E1002">\`
+     - \`<TabItem value='Install through browser'>\` → \`<TabItem value='通过浏览器安装'>\`
+   - 反例（禁止）：\`<TabItem value="适用于 E1002" label="适用于 E1002">\`（有 label 时不应改 value）
+
+8. **产品系列命名（“… Series” 后缀）**：
+   - 当出现 “… Series” 这类产品线后缀（如 \`reTerminal E Series\`），保留前缀的产品名按术语保护/术语表不变，仅将 \`Series\` 翻译为目标语言（zh-CN → “系列”）。
+   - 示例：\`reTerminal E Series\` → \`reTerminal E 系列\`
 </translation_rules>
 
 <example>
@@ -412,28 +439,30 @@ ${glossaryPairs}
 [LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 [LINE_7] Click "Settings" in the app (File > Preferences).
 [LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>
+[LINE_9] <TabItem value="For E1002" label="For E1002">
+[LINE_10] See more: [Intro](/Sensor/Guide/#hardware-overview)
+[LINE_11] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#getting-started">Open</a>
 
 正确输出：
 [LINE_0] ## 入门指南
 [LINE_1][EMPTY_LINE]
 [LINE_2] 这是一个关于以下内容的教程：
 [LINE_3]   - 第一项
-[LINE_4]   - [BLE 扫描器](#ble-扫描器)
+[LINE_4]   - [BLE 扫描器](#BLE-扫描器)
 [LINE_5]     - 嵌套项
 [LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
 [LINE_7] 在应用中点击 "Settings"（File > Preferences）。
 [LINE_8] <a className="nav-item"><span className="text">开发者中心</span></a>
+[LINE_9] <TabItem value="For E1002" label="适用于 E1002">
+[LINE_10] 查看更多：[简介](/Sensor/Guide/#硬件概述)
+[LINE_11] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门指南">Open</a>
 
 错误输出（绝对禁止）：
-[LINE_0] ## 入门指南
-[LINE_1][EMPTY_LINE]
-[LINE_2] 这是一个关于以下内容的教程：
-[LINE_3] - 第一项  ❌ 缩进丢失
-[LINE_4]   - [BLE 扫描器](#ble 扫描器)  ❌ 锚点中有空格
-[LINE_5]   - 嵌套项  ❌ 缩进级别错误
-[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>  ❌ HTML/JSX 可见文本未翻译（应为“立即购买”）
-[LINE_7] 在应用中点击 “设置” （文件 > 首选项）。  ❌ 不应翻译软件界面内的菜单路径或按钮名称
-[LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>  ❌ 网页自身的可见文本未翻译
+[LINE_3] - 第一项                                       ❌ 缩进丢失
+[LINE_4]   - [BLE 扫描器](#ble 扫描器)                   ❌ 锚点中出现空格
+[LINE_9] <TabItem value="适用于 E1002" label="适用于 E1002"> ❌ 有 label 时不应改动 value
+[LINE_10] [简介](#/Sensor/Guide/硬件-概述)                 ❌ 不能改动 \`#\` 之前的 URL 结构
+[LINE_11] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门-指南">Open</a> ❌ 未按“还原短语→翻译→空格转连字符”的流程，应为 #入门指南
 </example>
 </instruction>
 
