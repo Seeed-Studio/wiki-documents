@@ -27,7 +27,7 @@ translation:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Fashionstar-Star-Arm-Viola-Violin-p-6497.html" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> ¡Consigue Uno Ahora!!! 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> ¡Consigue Uno Ahora! 🖱️</font></span></strong>
 </a></div>
 
 ## Introducción de Productos
@@ -35,7 +35,7 @@ translation:
 1. **Código Abierto y Amigable para Desarrolladores**
    Es una solución de brazo robótico de 6+1 DoF de código abierto y amigable para desarrolladores de [Fishion Star Technology Limited](https://fashionrobo.com/).
 2. **Integración con LeRobot**
-   Diseñado para integración con [Plataforma LeRobot](https://github.com/huggingface/lerobot), que proporciona modelos PyTorch, conjuntos de datos y herramientas para aprendizaje por imitación en tareas robóticas del mundo real — incluyendo recolección de datos, simulación, entrenamiento y despliegue.
+   Diseñado para integración con [LeRobot Platform](https://github.com/huggingface/lerobot), que proporciona modelos PyTorch, conjuntos de datos y herramientas para aprendizaje por imitación en tareas robóticas del mundo real — incluyendo recolección de datos, simulación, entrenamiento y despliegue.
 3. **Recursos de Aprendizaje Integrales**
    Proporciona recursos de aprendizaje de código abierto integrales como guías de ensamblaje y calibración, y ejemplos de tareas de agarre personalizadas para ayudar a los usuarios a comenzar rápidamente y desarrollar aplicaciones robóticas.
 4. **Compatible con Nvidia**
@@ -47,7 +47,7 @@ translation:
 - 6+1 Grados de Libertad y un Alcance de 470mm — Construido para Versatilidad y Precisión.
 - Alimentado por Servos de Bus Sin Escobillas Duales — Suave, Silencioso y Fuerte con hasta 300g de Carga Útil.
 - Pinza Paralela con Apertura Máxima de 66mm — Puntas de Dedos Modulares para Flexibilidad de Reemplazo Rápido.
-- Tecnología Exclusiva de Bloqueo Flotante — Congela Instantáneamente el Brazo Líder en Cualquier Posición con una Sola Presión.
+- Tecnología Exclusiva Hover Lock — Congela Instantáneamente el Brazo Líder en Cualquier Posición con una Sola Presión.
 
 ## Especificaciones
 
@@ -66,7 +66,7 @@ translation:
 | Servos               | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 |RX18-U100H-M x3<br/> RX8-U50H-M x3<br/> RX8-U51H-M x1|
 | Kit de Pinza Paralela  | ✅                                                 | -                                                 | ✅   |
 | Rotación de Muñeca         | Sí                                               | Sí                                               | Sí |
-| Mantener en Cualquier Posición | Sí                                               | Sí (con botón de mango)                          |  Sí|
+| Mantener en Cualquier Posición | Sí                                               | Sí (con botón del mango)                          |  Sí|
 | Montaje de Cámara en Muñeca   |Proporciona archivos de referencia de impresión 3D | | Proporciona archivos de referencia de impresión 3D
 | Funciona con LeRobot   | ✅                                                 | ✅                                                 | ✅|
 | Funciona con ROS 2     | ✅                                                 | ✅                                                | ✅|
@@ -135,7 +135,7 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 3. Clonar Lerobot:
 
 ```bash
-git clone https://github.com/Seeed-Projects/lerobot-starai.git ~/lerobot
+git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
 ```
 
 4. Cuando uses miniconda, instala ffmpeg en tu entorno:
@@ -145,7 +145,7 @@ conda install ffmpeg -c conda-forge
 ```
 
 :::tip
-Esto usualmente instala ffmpeg 7.X para tu plataforma compilado con el codificador libsvtav1. Si libsvtav1 no es soportado (verifica los codificadores soportados con ffmpeg -encoders), puedes:
+Esto usualmente instala ffmpeg 7.X para tu plataforma compilado con el codificador libsvtav1. Si libsvtav1 no es soportado (verifica codificadores soportados con ffmpeg -encoders), puedes:
 
 - [En cualquier plataforma] Instalar explícitamente ffmpeg 7.X usando:
 
@@ -196,14 +196,13 @@ Si estás usando un dispositivo Jetson, instala Pytorch y Torchvision según [es
 
 ### Desempacando el Brazo Robótico
 
-El Kit de Brazo Robótico Incluye
+El Kit del Brazo Robótico Incluye
 
 - Brazo líder
 - Brazo seguidor
 - Controlador (mango)
 - Pinza paralela
 - Herramientas de instalación (tornillos, llave hexagonal)
-- Fuente de alimentación ×2
 - Abrazadera C ×2
 - Placa de depuración UC-01 ×2
 
@@ -233,7 +232,7 @@ lerobot-find-port
 ```
 
 :::tip
-Recuerda remover el usb, de lo contrario la interfaz no será detectada.
+Recuerda quitar el usb, de lo contrario la interfaz no será detectada.
 :::
 
 Por ejemplo：
@@ -349,7 +348,7 @@ Después de ejecutar el comando, necesitas **mover manualmente el brazo robótic
 Los archivos de calibración se guardarán en las siguientes rutas: `~/.cache/huggingface/lerobot/calibration/robots` y `~/.cache/huggingface/lerobot/calibration/teleoperators`.
 :::
 
-### Configuración de Calibración de Brazo Dual
+### Configuración de Calibración de Doble Brazo
 
 <details>
 <summary> Tutorial </summary>
@@ -380,9 +379,9 @@ lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_
 
 :::tip
 
-La diferencia entre configuraciones de brazo único y brazo dual radica en los parámetros `--teleop.type` y `--robot.type`. Además, las configuraciones de brazo dual requieren puertos USB separados para los brazos izquierdo y derecho, totalizando cuatro puertos USB: `--teleop.left_arm_port`, `--teleop.right_arm_port`, `--robot.left_arm_port`, y `--robot.right_arm_port`.
+La diferencia entre configuraciones de un solo brazo y doble brazo radica en los parámetros `--teleop.type` y `--robot.type`. Además, las configuraciones de doble brazo requieren puertos USB separados para los brazos izquierdo y derecho, totalizando cuatro puertos USB: `--teleop.left_arm_port`, `--teleop.right_arm_port`, `--robot.left_arm_port`, y `--robot.right_arm_port`.
 
-Si usas una configuración de brazo dual, necesitas modificar manualmente los tipos de archivo del brazo robótico `--teleop.type` y `--robot.type`, así como los puertos USB `--teleop.left_arm_port`, `--teleop.right_arm_port`, `--robot.left_arm_port`, y `--robot.right_arm_port`, para adaptarse a los comandos de teleoperación, recolección de datos, entrenamiento y evaluación.
+Si usas una configuración de doble brazo, necesitas modificar manualmente los tipos de archivo del brazo robótico `--teleop.type` y `--robot.type`, así como los puertos USB `--teleop.left_arm_port`, `--teleop.right_arm_port`, `--robot.left_arm_port`, y `--robot.right_arm_port`, para adaptarse a los comandos de teleoperación, recolección de datos, entrenamiento y evaluación.
 
 :::
 
@@ -428,7 +427,7 @@ lerobot-teleoperate \
 ```
 
 <details>
-<summary> Brazo Dual </summary>
+<summary> Doble Brazo </summary>
 
 Violin&Viola:
 
@@ -467,7 +466,7 @@ El comando de operación remota detectará automáticamente los siguientes pará
 1. Identificar cualquier calibración faltante e iniciar el procedimiento de calibración.
 2. Conectar el robot y el dispositivo de operación remota e iniciar la operación remota.
 
-Después de que el programa inicie, la Tecnología Hover Lock permanece funcional.
+Después de que el programa inicie, la Tecnología de Bloqueo Flotante permanece funcional.
 
 ## Agregar cámaras
 
@@ -549,9 +548,9 @@ from .orbbec.configuration_orbbec import OrbbecCameraConfig
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
 </div>
 
-- 🚀 Paso 2: Llamada de Función y Ejemplos
+- 🚀 Paso 2: Llamada de función y ejemplos
 
-En todos los siguientes ejemplos, reemplaza `starai_viola` con el modelo real del brazo robótico que estés usando (ej., `so100` / `so101`).
+En todos los siguientes ejemplos, reemplaza `starai_viola` con el modelo real del brazo robótico que estés usando (por ejemplo, `so100` / `so101`).
 
 Hemos añadido el hiperparámetro `focus_area`. Dado que los datos de profundidad que están demasiado lejos no tienen sentido para el brazo robótico (no puede alcanzar o agarrar objetos), los datos de profundidad menores o mayores que el `focus_area` se mostrarán en negro. El `focus_area` predeterminado es (20, 600).  
 Actualmente, la única resolución soportada es ancho: 640, alto: 880.
@@ -651,12 +650,18 @@ lerobot-teleoperate \
     --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
 ```
+
+
+:::tip
+Las imágenes en formato `fourcc: "MJPG"` están comprimidas. Puedes probar resoluciones más altas, y también puedes intentar el formato `YUYV`. Sin embargo, este último reducirá la resolución de imagen y FPS, causando retraso en la operación del brazo robótico. Actualmente, bajo el formato `MJPG`, puede soportar 3 cámaras a una resolución de `1920*1080` manteniendo `30FPS`. Dicho esto, conectar 2 cámaras a una computadora a través del mismo USB HUB aún no se recomienda.
+:::
+
 
 Violin&Cello:
 
@@ -665,12 +670,18 @@ lerobot-teleoperate \
     --robot.type=lerobot_robot_cello \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraicello_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
 ```
+
+
+:::tip
+Las imágenes en formato `fourcc: "MJPG"` están comprimidas. Puedes probar resoluciones más altas, y también puedes intentar el formato `YUYV`. Sin embargo, este último reducirá la resolución de imagen y FPS, causando retraso en la operación del brazo robótico. Actualmente, bajo el formato `MJPG`, puede soportar 3 cámaras a una resolución de `1920*1080` manteniendo `30FPS`. Dicho esto, conectar 2 cámaras a una computadora a través del mismo USB HUB aún no se recomienda.
+:::
+
 
 <details>
 <summary> Brazo Dual </summary>
@@ -684,7 +695,7 @@ lerobot-teleoperate \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
     --robot.id=bi_starai_viola_follower \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
@@ -701,13 +712,19 @@ lerobot-teleoperate \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
     --robot.id=bi_starai_cello_follower \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
     --teleop.id=bi_starai_violin_leader \
     --display_data=true
 ```
+
+
+:::tip
+Las imágenes en formato `fourcc: "MJPG"` están comprimidas. Puedes probar resoluciones más altas, y también puedes intentar el formato `YUYV`. Sin embargo, este último reducirá la resolución de imagen y FPS, causando retraso en la operación del brazo robótico. Actualmente, bajo el formato `MJPG`, puede soportar 3 cámaras a una resolución de `1920*1080` manteniendo `30FPS`. Dicho esto, conectar 2 cámaras a una computadora a través del mismo USB HUB aún no se recomienda.
+:::
+
 
 </details>
 
@@ -757,7 +774,7 @@ lerobot-record \
     --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
@@ -777,7 +794,7 @@ lerobot-record \
     --robot.type=lerobot_robot_cello \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraicello_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
@@ -806,7 +823,7 @@ lerobot-record \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
     --teleop.id=bi_starai_violin_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --display_data=true \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode_time_s=30 \
@@ -829,7 +846,7 @@ lerobot-record \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
     --teleop.id=bi_starai_violin_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --display_data=true \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode_time_s=30 \
@@ -840,7 +857,7 @@ lerobot-record \
 ```
 
 :::tip
-Para diferenciar entre configuraciones de un solo brazo y de doble brazo, el `--dataset.repo_id` aquí se llama `starai/record-test_bi_arm`.
+Para diferenciar entre configuraciones de brazo único y brazo dual, el `--dataset.repo_id` aquí se llama `starai/record-test_bi_arm`.
 :::
 
 </details>
@@ -858,7 +875,7 @@ lerobot-record \
     --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
@@ -878,7 +895,7 @@ lerobot-record \
     --robot.type=lerobot_robot_cello \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraicello_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
@@ -892,7 +909,7 @@ lerobot-record \
 ```
 
 <details>
-<summary> Doble Brazo </summary>
+<summary> Brazo Dual </summary>
 
 Violin&Viola:
 
@@ -907,7 +924,7 @@ lerobot-record \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
     --teleop.id=bi_starai_violin_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --display_data=true \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode_time_s=30 \
@@ -930,7 +947,7 @@ lerobot-record \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
     --teleop.id=bi_starai_violin_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --display_data=true \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode_time_s=30 \
@@ -941,7 +958,7 @@ lerobot-record \
 ```
 
 :::tip
-Para diferenciar entre configuraciones de un solo brazo y de doble brazo, el `--dataset.repo_id` aquí se llama `starai/record-test_bi_arm`.
+Para diferenciar entre configuraciones de brazo único y brazo dual, el `--dataset.repo_id` aquí se llama `starai/record-test_bi_arm`.
 :::
 
 </details>
@@ -1016,7 +1033,7 @@ lerobot-replay \
 ```
 
 <details>
-<summary> Doble Brazo </summary>
+<summary> Brazo Dual </summary>
 
 Viola:
 
@@ -1079,7 +1096,7 @@ lerobot-train \
 ```
 
 <details>
-<summary> Doble Brazo </summary>
+<summary> Brazo Dual </summary>
 
 Viola:
 
@@ -1111,9 +1128,9 @@ lerobot-train \
 
 </details>
 
-1. `policy.type` soporta entrada `diffusion,pi0,pi0fast`
-1. Proporcionamos el dataset como parámetro: `dataset.repo_id=starai/record-test`.
-2. Cargaremos la configuración desde [`configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/src/lerobot/policies/act/configuration_act.py). Es importante destacar que esta política se adaptará automáticamente a los estados del motor del robot, las acciones del motor y el número de cámaras, y se guardará en tu conjunto de datos.
+1. `policy.type` admite entrada `diffusion,pi0,pi0fast`
+1. Proporcionamos el conjunto de datos como parámetro: `dataset.repo_id=starai/record-test`.
+2. Cargaremos la configuración desde [`configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/src/lerobot/policies/act/configuration_act.py). Importante: esta política se adaptará automáticamente a los estados del motor del robot, las acciones del motor y el número de cámaras, y se guardará en tu conjunto de datos.
 3. Proporcionamos `wandb.enable=true` para usar [Weights and Biases](https://docs.wandb.ai/quickstart) para visualizar gráficos de entrenamiento. Esto es opcional, pero si lo usas, asegúrate de haber iniciado sesión ejecutando `wandb login`.
 
 Reanudar el entrenamiento desde un punto de control específico.
@@ -1137,7 +1154,7 @@ lerobot-train \
 ```
 
 <details>
-<summary>Si entrenas con el comando de [política SmolVLA](https://huggingface.co/docs/lerobot/smolvla): </summary>
+<summary>Si entrenas comando de [política SmolVLA](https://huggingface.co/docs/lerobot/smolvla): </summary>
 
 ```bash
 pip install -e ".[smolvla]"
@@ -1164,7 +1181,7 @@ lerobot-record \
   --robot.type=starai_viola \
   --robot.port=/dev/ttyUSB1 \
   --robot.id=my_awesome_staraiviola_arm \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30, fourcc: "MJPG"}}" \
   --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
   --dataset.repo_id=${HF_USER}/eval_DATASET_NAME_test \ 
   --dataset.episode_time_s=50 \
@@ -1179,7 +1196,7 @@ lerobot-record \
 </details>
 
 <details>
-<summary>Si entrenas con el comando de [política Libero](https://huggingface.co/docs/lerobot/libero): </summary>
+<summary>Si entrenas comando de [política Libero](https://huggingface.co/docs/lerobot/libero): </summary>
 
 LIBERO es un benchmark diseñado para estudiar el aprendizaje robótico de por vida. La idea es que los robots no solo serán preentrenados una vez en una fábrica, sino que necesitarán seguir aprendiendo y adaptándose con sus usuarios humanos a lo largo del tiempo. Esta adaptación continua se llama aprendizaje de por vida en la toma de decisiones (LLDM), y es un paso clave hacia la construcción de robots que se conviertan en verdaderos asistentes personalizados.
 
@@ -1263,7 +1280,7 @@ Viola:
 lerobot-record  \
   --robot.type=lerobot_robot_viola \
   --robot.port=/dev/ttyUSB1 \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
   --robot.id=my_awesome_staraiviola_arm \
   --display_data=false \
   --dataset.repo_id=starai/eval_record-test \
@@ -1281,7 +1298,7 @@ Cello:
 lerobot-record  \
   --robot.type=lerobot_robot_cello \
   --robot.port=/dev/ttyUSB1 \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
   --robot.id=my_awesome_staraicello_arm \
   --display_data=false \
   --dataset.repo_id=starai/eval_record-test \
@@ -1304,7 +1321,7 @@ lerobot-record  \
     --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --robot.id=bi_starai_viola_follower \
     --display_data=false \
     --dataset.repo_id=starai/eval_record-test_bi_arm \
@@ -1320,7 +1337,7 @@ lerobot-record  \
     --robot.arm_name=starai_cello \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --robot.id=bi_starai_cello_follower \
     --display_data=false \
     --dataset.repo_id=starai/eval_record-test_bi_arm \
@@ -1338,15 +1355,15 @@ Como puedes ver, esto es casi lo mismo que el comando usado previamente para gra
 
 3. Si encuentras `File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/starai/eval_xxxx'` durante la fase de evaluación, por favor elimina la carpeta que comience con `eval_` y ejecuta el programa nuevamente.
 
-4. Cuando encuentres `mean is infinity. You should either initialize with stats as an argument or use a pretrained model`, por favor asegúrate de que las palabras clave como `up` y `front` en el parámetro `--robot.cameras` sean estrictamente consistentes con las usadas durante la fase de recolección de datos.
+4. Cuando encuentres `mean is infinity. You should either initialize with stats as an argument or use a pretrained model`, asegúrate de que las palabras clave como `up` y `front` en el parámetro `--robot.cameras` sean estrictamente consistentes con las utilizadas durante la fase de recolección de datos.
 
 ## FAQ
 
-- Si estás usando el tutorial en este documento, por favor haz `git clone` del repositorio de GitHub recomendado: `https://github.com/servodevelop/lerobot.git`.
+- Si estás utilizando el tutorial de este documento, por favor haz `git clone` del repositorio de GitHub recomendado: `https://github.com/servodevelop/lerobot.git`.
 
-- Si la teleoperación funciona normalmente pero la teleoperación con una cámara no muestra la interfaz de imagen, por favor consulta [aquí](https://github.com/huggingface/lerobot/pull/757/files).
+- Si la teleoperación funciona normalmente pero la teleoperación con cámara no muestra la interfaz de imagen, consulta [aquí](https://github.com/huggingface/lerobot/pull/757/files).
 
-- Si encuentras un problema con libtiff durante la teleoperación del conjunto de datos, por favor actualiza la versión de libtiff.
+- Si encuentras un problema con libtiff durante la teleoperación del conjunto de datos, actualiza la versión de libtiff.
 
   ```bash
   conda install libtiff==4.5.0  # for Ubuntu 22.04, use libtiff==4.5.1
@@ -1354,15 +1371,15 @@ Como puedes ver, esto es casi lo mismo que el comando usado previamente para gra
 
 - Después de instalar LeRobot, puede desinstalar automáticamente la versión GPU de PyTorch, por lo que necesitas instalar manualmente torch-gpu.
 
-- Para Jetson, por favor instala primero [PyTorch y Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) antes de ejecutar `conda install -y -c conda-forge ffmpeg`, de lo contrario, habrá un problema de incompatibilidad de versiones al compilar torchvision.
+- Para Jetson, instala primero [PyTorch y Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) antes de ejecutar `conda install -y -c conda-forge ffmpeg`, de lo contrario, habrá un problema de incompatibilidad de versiones al compilar torchvision.
 
 - Entrenar 50 episodios de datos ACT en una laptop 3060 8GB toma aproximadamente 6 horas, mientras que entrenar 50 episodios en una computadora 4090 o A100 toma alrededor de 2-3 horas.
 
-- Durante la recolección de datos, asegúrese de la estabilidad de la posición y ángulo de la cámara, así como la iluminación ambiental, y minimice el fondo inestable y los peatones capturados por la cámara. De lo contrario, cambios significativos en el entorno de despliegue pueden causar que el brazo robótico falle al agarrar objetos normalmente.
+- Durante la recolección de datos, asegura la estabilidad de la posición y ángulo de la cámara, así como la iluminación ambiental, y minimiza el fondo inestable y los peatones capturados por la cámara. De lo contrario, cambios significativos en el entorno de despliegue pueden causar que el brazo robótico falle al agarrar objetos normalmente.
 
-- El `num-episodes` en el comando de recolección de datos debe asegurar suficiente recolección de datos y no debe pausarse manualmente a la mitad. Esto es porque la media y varianza de los datos se calculan solo después de que se completa la recolección de datos, lo cual es necesario para el entrenamiento.
+- El `num-episodes` en el comando de recolección de datos debe asegurar una recolección de datos suficiente y no debe pausarse manualmente a la mitad. Esto es porque la media y varianza de los datos se calculan solo después de que se completa la recolección de datos, lo cual es necesario para el entrenamiento.
 
-- Si el programa indica que no puede leer los datos de imagen de la cámara USB, por favor asegúrese de que la cámara USB no esté conectada a través de un Hub. La cámara USB debe estar conectada directamente al dispositivo para asegurar velocidades rápidas de transmisión de imagen.
+- Si el programa indica que no puede leer los datos de imagen de la cámara USB, asegúrate de que la cámara USB no esté conectada a través de un Hub. La cámara USB debe estar conectada directamente al dispositivo para asegurar velocidades rápidas de transmisión de imagen.
 
 ## Citas
 
@@ -1386,7 +1403,7 @@ TD-MPC: [TD-MPC](https://www.nicklashansen.com/td-mpc/)
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

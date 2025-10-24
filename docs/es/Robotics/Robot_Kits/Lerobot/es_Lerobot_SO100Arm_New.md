@@ -11,12 +11,14 @@ slug: /es/lerobot_so100m_new
 last_update:
   date: 9/26/2025
   author: LiShanghang
+translation:
+  skip: [ zh-CN ]
 ---
 
 # Comenzando con el brazo robótico SO-ARM100 y SO-ARM101 con LeRobot
 
 :::tip
-El mantenimiento de este tutorial se ha actualizado a la última versión de [lerobot](https://huggingface.co/docs/lerobot/index), si deseas consultar el tutorial de la versión anterior, haz clic [aquí](https://wiki.seeedstudio.com/es/lerobot_so100m/).
+El mantenimiento de este tutorial ha sido actualizado a la última versión de [lerobot](https://huggingface.co/docs/lerobot/index), si deseas consultar el tutorial de la versión anterior, por favor haz clic [aquí](https://wiki.seeedstudio.com/es/lerobot_so100m/).
 :::
 
 ## Introducción
@@ -50,7 +52,7 @@ Este wiki proporciona el tutorial de ensamblaje y depuración para el SO ARM10x 
 4. **Compatible con Nvidia**: Despliega este kit de brazo con reComputer Mini J4012 Orin NX 16 GB.
 5. **Aplicación Multi-Escenario**: Es aplicable a campos como educación, investigación científica, producción automatizada y robótica, ayudando a los usuarios a lograr operaciones de robot eficientes y precisas en varias tareas complejas.
 
-## Novedades
+## Novedades:
 
 - Optimización del cableado: Comparado con SO-ARM100, SO-ARM101 presenta un cableado mejorado que previene problemas de desconexión previamente vistos en la articulación 3. El nuevo diseño de cableado también ya no limita el rango de movimiento de las articulaciones.
 - Diferentes relaciones de engranajes para el brazo líder: El brazo líder ahora usa motores con relaciones de engranajes optimizadas, mejorando el rendimiento y eliminando la necesidad de cajas de engranajes externas.
@@ -77,19 +79,19 @@ Seeed Studio solo es responsable de la calidad del hardware en sí. Los tutorial
     </tr>
     <tr>
       <th></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">Arm Kit</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank">Arm Kit Pro</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">Arm Kit</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank">Arm Kit Pro</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">Kit de Brazo</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank">Kit de Brazo Pro</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">Kit de Brazo</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank">Kit de Brazo Pro</a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Brazo Líder</td>
-      <td rowSpan="2">12x motores ST-3215- C001 (7.4V) con relación de engranajes 1:345 para todas las articulaciones</td>
+      <td rowSpan="2">12x motores ST-3215-C001 (7.4V) con relación de engranajes 1:345 para todas las articulaciones</td>
       <td rowSpan="2">12x motores ST-3215-C018/ST-3215-C047 (12V) con relación de engranajes 1:345 para todas las articulaciones</td>
       <td colSpan="2">
-        1x motor ST-3215- C001 (7.4V) con relación de engranajes 1:345 solo para la articulación 2<br />
+        1x motor ST-3215-C001 (7.4V) con relación de engranajes 1:345 solo para la articulación 2<br />
         2x motores ST-3215-C044 (7.4V) con relación de engranajes 1:191 para las articulaciones 1 y 3<br />
         3x motores ST-3215-C046 (7.4V) con relación de engranajes 1:147 para las articulaciones 4, 5 y pinza (articulación 6)
       </td>
@@ -142,7 +144,7 @@ Si compras la versión Arm Kit, ambas fuentes de alimentación son de 5V. Si com
 | Cable USB-C 2 piezas | 1 | ✅ |
 | Fuente de Alimentación2 | 2 | ✅ |
 | Abrazadera de Mesa| 4 | ✅ |
-| Partes impresas en 3D del brazo | 1 | Opcional |
+| Partes impresas en 3D del brazo | 1 | Opción |
 
 ## Entorno del Sistema Inicial
 
@@ -171,7 +173,7 @@ Si compras la versión Arm Kit, ambas fuentes de alimentación son de 5V. Si com
 
   [E. Calibrar](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#calibrate)
 
-  [F. Teleoperación](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#teleoperate)
+  [F. Teleoperar](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#teleoperate)
 
   [G. Agregar cámaras](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#add-cameras)
 
@@ -188,12 +190,12 @@ Si compras la versión Arm Kit, ambas fuentes de alimentación son de 5V. Si com
 ## Guía de Impresión 3D
 
 :::caution
-Siguiendo la actualización oficial de SO101, SO100 ya no será compatible y los archivos fuente serán eliminados según lo oficial, pero los archivos fuente aún se pueden encontrar en nuestro [Makerworld](https://makerworld.com/zh/models/908660). Sin embargo, para los usuarios que han comprado previamente SO100, los tutoriales y métodos de instalación siguen siendo compatibles. La impresión de SO101 es completamente compatible con la instalación del kit de motor de SO100.
+Siguiendo la actualización oficial de SO101, SO100 ya no lo soportará y los archivos fuente serán eliminados según lo oficial, pero los archivos fuente aún se pueden encontrar en nuestro [Makerworld](https://makerworld.com/zh/models/908660). Sin embargo, para los usuarios que han comprado previamente SO100, los tutoriales y métodos de instalación siguen siendo compatibles. La impresión de SO101 es completamente compatible con la instalación del kit de motor de SO100.
 :::
 
 ### Paso 1: Elegir una impresora
 
-Los archivos STL proporcionados están listos para imprimir en muchas impresoras FDM. A continuación se muestran las configuraciones probadas y sugeridas, aunque otras pueden funcionar.
+Los archivos STL proporcionados están listos para imprimir en muchas impresoras FDM. A continuación se muestran las configuraciones probadas y sugeridas aunque otras pueden funcionar.
 
 - Material: PLA+
 - Diámetro de Boquilla y Precisión: diámetro de boquilla de 0.4mm a altura de capa de 0.2mm o boquilla de 0.6mm a altura de capa de 0.4mm.
@@ -324,7 +326,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="SO101" label="SO101">
 
-El proceso de calibración e inicialización del servo para SO-ARM101 es el mismo que el de SO-ARM100 en términos tanto de método como de código. Sin embargo, tenga en cuenta que las relaciones de engranajes para las primeras tres articulaciones del Brazo Líder SO-ARM101 difieren de las de SO-ARM100, por lo que es importante distinguir y calibrarlas cuidadosamente.
+El proceso de calibración e inicialización del servo para SO-ARM101 es el mismo que el de SO-ARM100 en términos tanto de método como de código. Sin embargo, tenga en cuenta que las relaciones de engranajes para las primeras tres articulaciones del Brazo Líder SO-ARM101 difieren de las de SO-ARM100, por lo que es importante distinguirlas y calibrarlas cuidadosamente.
 
 Para configurar los motores, designe un adaptador de servo de bus y 6 motores para su brazo líder, y de manera similar el otro adaptador de servo de bus y 6 motores para el brazo seguidor. Es conveniente etiquetarlos y escribir en cada motor si es para el seguidor F o para el líder L y su ID del 1 al 6. Usamos **F1–F6** para representar las articulaciones 1 a 6 del **Brazo Seguidor**, y **L1–L6** para representar las articulaciones 1 a 6 del **Brazo Líder**. Los detalles correspondientes del modelo de servo, asignaciones de articulaciones y relación de engranajes son los siguientes:
 
@@ -345,7 +347,7 @@ Ahora debe conectar la fuente de alimentación de 5V o 12V al bus del motor. 5V 
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/all_motos.png" />
 </div>
 
-***Los siguientes son los pasos de calibración de código, por favor calibre con el servo de cableado de referencia en la imagen de arriba***
+***Los siguientes son los pasos de calibración del código, por favor calibre con el servo de cableado de referencia en la imagen de arriba***
 
 Encontrar puertos USB asociados a sus brazos
 Para encontrar los puertos correctos para cada brazo, ejecute el script de utilidad dos veces:
@@ -418,7 +420,7 @@ Debería ver la siguiente instrucción.
 Connect the controller board to the 'gripper' motor only and press enter.
 ```
 
-Como se indica, conecte el motor de la pinza. Asegúrese de que sea el único motor conectado a la placa, y que el motor en sí no esté aún conectado en cadena a ningún otro motor. Al presionar [Enter], el script configurará automáticamente el ID y la velocidad de transmisión para ese motor.
+Como se indica, conecte el motor de la pinza. Asegúrese de que sea el único motor conectado a la placa, y que el motor en sí no esté aún conectado en cadena a ningún otro motor. Al presionar [Enter], el script configurará automáticamente el ID y la velocidad de baudios para ese motor.
 
 Luego debería ver el siguiente mensaje:
 
@@ -465,7 +467,7 @@ lerobot-setup-motors \
 :::tip
 
 - El proceso de ensamblaje de brazo dual del SO-ARM101 es el mismo que el del SO-ARM100. Las únicas diferencias son la adición de clips de cable en el SO-ARM101 y las diferentes relaciones de engranajes de los servos de las articulaciones en el Brazo Líder. Por lo tanto, tanto el SO100 como el SO101 pueden instalarse siguiendo el siguiente contenido
-- Antes del ensamblaje, verifique nuevamente su modelo de motor y relación de reducción. Si ha comprado SO100, puede ignorar este paso. Si ha comprado SO101, verifique la siguiente tabla para distinguir F1 a F6 y L1 a L6.
+- Antes del ensamblaje, verifique nuevamente su modelo de motor y relación de reducción. Si ha comprado el SO100, puede ignorar este paso. Si ha comprado el SO101, verifique la siguiente tabla para distinguir F1 a F6 y L1 a L6.
 
 :::
 
@@ -610,7 +612,7 @@ El comando teleoperate automáticamente:
    git clone https://github.com/orbbec/pyorbbecsdk.git
    ```
 
-2. Descarga e instala el **archivo .whl** correspondiente para el SDK  
+2. Descarga e instala el archivo **.whl** correspondiente para el SDK  
    Ve a [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases),  
    selecciona e instala basándote en tu versión de Python. Por ejemplo:
 
@@ -744,7 +746,7 @@ lerobot-teleoperate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -753,6 +755,11 @@ lerobot-teleoperate \
 
 Si tienes más cámaras, puedes cambiar `--robot.cameras` para agregar cámaras. Debes notar el formato del index_or_path, que está determinado por el último dígito del ID de cámara mostrado por `python -m lerobot.find_cameras opencv`.
 
+:::tip
+Las imágenes en formato `fourcc: "MJPG"` están comprimidas. Puedes probar resoluciones más altas, y también puedes intentar el formato `YUYV`. Sin embargo, este último reducirá la resolución de imagen y FPS, causando retraso en la operación del brazo robótico. Actualmente, bajo el formato `MJPG`, puede soportar 3 cámaras a una resolución de `1920*1080` manteniendo `30FPS`. Dicho esto, conectar 2 cámaras a una computadora a través del mismo USB HUB aún no se recomienda.
+:::
+
+
 Por ejemplo, quieres agregar una cámara lateral:
 
 ```bash
@@ -760,12 +767,17 @@ lerobot-teleoperate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true
 ```
+
+:::tip
+Las imágenes en formato `fourcc: "MJPG"` están comprimidas. Puedes probar resoluciones más altas, y también puedes intentar el formato `YUYV`. Sin embargo, este último reducirá la resolución de imagen y FPS, causando retraso en la operación del brazo robótico. Actualmente, bajo el formato `MJPG`, puede soportar 3 cámaras a una resolución de `1920*1080` manteniendo `30FPS`. Dicho esto, conectar 2 cámaras a una computadora a través del mismo USB HUB aún no se recomienda.
+:::
+
 
 :::tip
 Si encuentras un error como este.
@@ -796,7 +808,7 @@ lerobot-record \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -809,29 +821,29 @@ lerobot-record \
     --dataset.reset_time_s=30 
 ```
 
-Entre ellos, `repo_id` se puede modificar de forma personalizada, y `push_to_hub=false`. Finalmente, el conjunto de datos se guardará en el directorio `~/.cache/huggingface/lerobot` en la carpeta de inicio, donde se creará la carpeta `seeedstudio123/test` mencionada anteriormente.
+其中，`repo_id` 可以自定义修改，`push_to_hub=false`。最终，数据集将保存在主文件夹的 `~/.cache/huggingface/lerobot` 目录中，其中将创建前述的 `seeedstudio123/test` 文件夹。
 
-- Si deseas usar las funciones del hub de Hugging Face para subir tu conjunto de datos y no lo has hecho anteriormente, asegúrate de haber iniciado sesión usando un token de acceso de escritura, que se puede generar desde la [configuración de Hugging Face](https://huggingface.co/settings/tokens):
+- 如果您想使用 Hugging Face hub 功能上传数据集，并且之前没有这样做过，请确保您已使用具有写入权限的令牌登录，该令牌可以从 [Hugging Face 设置](https://huggingface.co/settings/tokens) 生成：
 
 ```bash
 huggingface-cli login --token ${HUGGINGFACE_TOKEN} --add-to-git-credential
 ```
 
-Almacena el nombre de tu repositorio de Hugging Face en una variable para ejecutar estos comandos:
+将您的 Hugging Face 仓库名称存储在变量中以运行这些命令：
 
 ```bash
 HF_USER=$(huggingface-cli whoami | head -n 1)
 echo $HF_USER
 ```
 
-Graba 5 episodios y sube tu conjunto de datos al hub:
+记录 5 个片段并将数据集上传到 hub：
 
 ```bash
 lerobot-record \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -844,54 +856,54 @@ lerobot-record \
     --dataset.reset_time_s=30 
 ```
 
-Verás muchas líneas apareciendo como esta:
+您将看到许多类似这样的行出现：
 
 ```bash
 INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)
 ```
 
-**Función record**
+**记录功能**
 
-La función **record** proporciona un conjunto de herramientas para capturar y gestionar datos durante la operación del robot.  
+**record** 功能提供了一套在机器人操作期间捕获和管理数据的工具。
 
-**1. Almacenamiento de Datos**
+**1. 数据存储**
 
-- Los datos se almacenan usando el formato `LeRobotDataset` y se guardan en disco durante la grabación.
-- Por defecto, el conjunto de datos se sube a tu página de Hugging Face después de la grabación.  
-- Para deshabilitar la subida, usa: `--dataset.push_to_hub=False`
+- 数据使用 `LeRobotDataset` 格式存储，并在记录期间存储在磁盘上。
+- 默认情况下，数据集在记录后会推送到您的 Hugging Face 页面。
+- 要禁用上传，请使用：`--dataset.push_to_hub=False`
 
-**2. Puntos de Control y Reanudación**
+**2. 检查点和恢复**
 
-- Los puntos de control se crean automáticamente durante la grabación.  
-- Para reanudar después de una interrupción, vuelve a ejecutar el mismo comando con: `--resume=true`
+- 检查点在记录期间自动创建。
+- 要在中断后恢复，请使用以下参数重新运行相同命令：`--resume=true`
 
-⚠️ Nota Crítica: Al reanudar, establece `--dataset.num_episodes` al número de episodios adicionales a grabar (no el número total objetivo de episodios en el conjunto de datos).  
+⚠️ 重要提示：恢复时，将 `--dataset.num_episodes` 设置为要记录的额外片段数量（而不是数据集中的目标总片段数）。
 
-- Para comenzar a grabar desde cero, **elimina manualmente** el directorio del conjunto de datos.
+- 要从头开始记录，请**手动删除**数据集目录。
 
-**3. Parámetros de Grabación**
+**3. 记录参数**
 
-Configura el flujo de grabación de datos usando argumentos de línea de comandos:
+使用命令行参数设置数据记录流程：
 
-| Parámetro | Descripción | Por defecto |  
-|-----------|-------------|---------|  
-| --dataset.episode_time_s | Duración por episodio de datos (segundos) | 60 |  
-| --dataset.reset_time_s | Tiempo de reinicio del entorno después de cada episodio (segundos) | 60 |  
-| --dataset.num_episodes | Total de episodios a grabar | 50 |  
+| 参数 | 描述 | 默认值 |
+|-----------|-------------|---------|
+| --dataset.episode_time_s | 每个数据片段的持续时间（秒） | 60 |
+| --dataset.reset_time_s | 每个片段后的环境重置时间（秒） | 60 |
+| --dataset.num_episodes | 要记录的总片段数 | 50 |
 
-**4. Controles de Teclado Durante la Grabación**
+**4. 记录期间的键盘控制**
 
-Controla el flujo de grabación de datos usando atajos de teclado:
+使用键盘快捷键控制数据记录流程：
 
-| Tecla | Acción |  
-|-----|--------|  
-| → (Flecha Derecha) | Detener temprano el episodio actual/reiniciar; pasar al siguiente. |  
-| ← (Flecha Izquierda) | Cancelar episodio actual; volver a grabarlo. |  
-| ESC | Detener sesión inmediatamente, codificar videos y subir conjunto de datos. |  
+| 按键 | 操作 |
+|-----|--------|
+| → (右箭头) | 提前停止当前片段/重置；移至下一个。 |
+| ← (左箭头) | 取消当前片段；重新记录。 |
+| ESC | 立即停止会话，编码视频并上传数据集。 |
 
 :::tip
 
-Si el teclado no funciona, es posible que necesites instalar otra versión de pynput.
+如果键盘不工作，您可能需要安装其他版本的 pynput。
 
 ```bash
 pip install pynput==1.6.8
@@ -899,75 +911,75 @@ pip install pynput==1.6.8
 
 :::
 
-**Consejos para Recopilar Datos**
+**数据收集技巧**
 
-- Sugerencia de Tarea: Agarrar objetos en diferentes ubicaciones y colocarlos en un contenedor.  
-- Escala: Grabar ≥50 episodios (10 episodios por ubicación).  
-- Consistencia:  
-  - Mantener las cámaras fijas.  
-  - Mantener comportamiento de agarre idéntico.  
-  - Asegurar que los objetos manipulados sean visibles en las transmisiones de la cámara.  
-- Progresión:  
-  - Comenzar con agarre confiable antes de agregar variaciones (nuevas ubicaciones, técnicas, ajustes de cámara).  
-  - Evitar aumentos rápidos de complejidad para prevenir fallas.  
+- 任务建议：在不同位置抓取物体并将其放入容器中。
+- 规模：记录 ≥50 个片段（每个位置 10 个片段）。
+- 一致性：
+  - 保持摄像头固定。
+  - 保持相同的抓取行为。
+  - 确保操作的物体在摄像头画面中可见。
+- 进展：
+  - 在添加变化（新位置、技术、摄像头调整）之前，先从可靠的抓取开始。
+  - 避免快速增加复杂性以防止失败。
 
-💡 Regla General: Deberías poder hacer la tarea tú mismo solo mirando las imágenes de la cámara.  
+💡 经验法则：您应该能够仅通过查看摄像头图像来完成任务。
 
-Si quieres profundizar en este tema importante, puedes consultar la [publicación del blog](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) que escribimos sobre qué hace un buen conjunto de datos.
+如果您想深入了解这个重要主题，可以查看我们撰写的关于[什么构成好数据集](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset)的博客文章。
 
-**Solución de Problemas**
+**故障排除**
 
-Problema Específico de Linux:  
-Si las teclas Flecha Derecha/Flecha Izquierda/ESC no responden durante la grabación:  
+Linux 特定问题：
+如果在记录期间右箭头/左箭头/ESC 键无响应：
 
-- Verifica que la variable de entorno `$DISPLAY` esté configurada (ver [limitaciones de pynput](https://pynput.readthedocs.io/en/latest/limitations.html)).  
+- 验证 `$DISPLAY` 环境变量已设置（参见 [pynput 限制](https://pynput.readthedocs.io/en/latest/limitations.html)）。
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=-eDB73KgUksyJXa-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Visualizar el conjunto de datos
+## 可视化数据集
 
 :::tip
-Los códigos SO100 y SO101 son compatibles. Los usuarios de SO100 pueden utilizar directamente los parámetros y código de SO101 para la operación.
+SO100 和 SO101 代码兼容。SO100 用户可以直接使用 SO101 的参数和代码进行操作。
 :::
 
-Si subiste tu conjunto de datos al hub con `--control.push_to_hub=true`, puedes [visualizar tu conjunto de datos en línea](https://huggingface.co/spaces/lerobot/visualize_dataset) copiando y pegando tu repo id dado por:
+如果您使用 `--control.push_to_hub=true` 将数据集上传到 hub，您可以通过复制粘贴您的仓库 ID 来[在线可视化您的数据集](https://huggingface.co/spaces/lerobot/visualize_dataset)，仓库 ID 由以下命令给出：
 
 ```bash
 echo ${HF_USER}/so101_test  
 ```
 
-Si no subiste con `--dataset.push_to_hub=false`, también puedes visualizarlo localmente con:
+如果您没有使用 `--dataset.push_to_hub=false` 上传，您也可以使用以下命令在本地可视化：
 
 ```bash
 lerobot-dataset-viz \
   --repo-id ${HF_USER}/so101_test \
 ```
 
-Si subes con `--dataset.push_to_hub=false`, también puedes visualizarlo localmente con:
+如果您使用 `--dataset.push_to_hub=false` 上传，您也可以使用以下命令在本地可视化：
 
 ```bash
 lerobot-dataset-viz \
   --repo-id seeed_123/so101_test \
 ```
 
-**Aquí, `seeed_123` es el nombre personalizado de `repo_id` definido al recopilar datos.**
+**这里，`seeed_123` 是收集数据时定义的自定义 `repo_id` 名称。**
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/visualize_datasets.png" />
 </div>
 
-## Reproducir un episodio
+## 重播片段
 
 :::tip
-Los códigos SO100 y SO101 son compatibles. Los usuarios de SO100 pueden utilizar directamente los parámetros y código de SO101 para la operación.
+SO100 和 SO101 代码兼容。SO100 用户可以直接使用 SO101 的参数和代码进行操作。
 :::
 
-Una función útil es la función `replay`, que te permite reproducir cualquier episodio que hayas grabado o episodios de cualquier conjunto de datos disponible. Esta función te ayuda a probar la repetibilidad de las acciones de tu robot y evaluar la transferibilidad entre robots del mismo modelo.
+一个有用的功能是 `replay` 功能，它允许您重播您记录的任何片段或来自任何数据集的片段。此功能帮助您测试机器人动作的可重复性，并评估同一型号机器人之间的可转移性。
 
-Puedes reproducir el primer episodio en tu robot con el comando de abajo o con el ejemplo de API:
+您可以使用以下命令或 API 示例在机器人上重播第一个片段：
 
 ```bash
 lerobot-replay \
@@ -978,15 +990,15 @@ lerobot-replay \
     --dataset.episode=0
 ```
 
-Tu robot debería replicar movimientos similares a los que grabaste.
+您的机器人应该复制与您记录的动作相似的运动。
 
-## Entrenar una política
+## 训练策略
 
 :::tip
-Los códigos SO100 y SO101 son compatibles. Los usuarios de SO100 pueden utilizar directamente los parámetros y código de SO101 para la operación.
+SO100 和 SO101 代码兼容。SO100 用户可以直接使用 SO101 的参数和代码进行操作。
 :::
 
-Para entrenar una política para controlar tu robot, usa el script [lerobot-train](https://github.com/huggingface/lerobot/blob/main/src/lerobot/scripts/train.py). Se requieren algunos argumentos. Aquí hay un comando de ejemplo:
+要训练控制机器人的策略，请使用 [lerobot-train](https://github.com/huggingface/lerobot/blob/main/src/lerobot/scripts/train.py) 脚本。需要一些参数。以下是示例命令：
 
 ```bash
 lerobot-train \
@@ -999,7 +1011,7 @@ lerobot-train \
   --steps=300000 
 ```
 
-**Si quieres entrenar en un conjunto de datos local, asegúrate de que el `repo_id` coincida con el usado durante la recopilación de datos y agrega `--policy.push_to_hub=False`.**
+**如果您想在本地数据集上训练，请确保 `repo_id` 与数据收集期间使用的匹配，并添加 `--policy.push_to_hub=False`。**
 
 ```bash
 lerobot-train \
@@ -1013,30 +1025,30 @@ lerobot-train \
   --steps=300000 
 ```
 
-Vamos a explicarlo:
+让我们解释一下：
 
-- **Especificación del conjunto de datos**: Proporcionamos el conjunto de datos a través del parámetro `--dataset.repo_id=${HF_USER}/so101_test`.
-- **Pasos de entrenamiento**: Modificamos el número de pasos de entrenamiento usando `--steps=300000`. El algoritmo por defecto usa 800000 pasos, y puedes ajustarlo según la dificultad de tu tarea y observando la pérdida durante el entrenamiento.
-- **Tipo de política**: Proporcionamos la política con `policy.type=act`. De manera similar, puedes cambiar entre políticas como [`act`, `diffusion`, `pi0`, `pi0fast`, `pi0fast`, `sac`, `smolvla`]., que cargará la configuración desde `configuration_act.py`. Importante, esta política se adaptará automáticamente a los estados del motor de tu robot (por ejemplo, `laptop` y `phone`), acciones del motor y el número de cámaras, ya que esta información ya está almacenada en tu conjunto de datos.
-- **Selección de dispositivo**: Proporcionamos `policy.device=cuda` porque estamos entrenando en una GPU Nvidia, pero puedes usar `policy.device=mps` para entrenar en Apple Silicon.
-- **Herramienta de visualización**: Proporcionamos `wandb.enable=true` para visualizar gráficos de entrenamiento usando [Weights and Biases](https://docs.wandb.ai/quickstart). Esto es opcional, pero si lo usas, asegúrate de haber iniciado sesión ejecutando `wandb login`.
+- **数据集规范**：我们通过参数 `--dataset.repo_id=${HF_USER}/so101_test` 提供数据集。
+- **训练步骤**：我们使用 `--steps=300000` 修改训练步骤数。算法默认为 800000 步，您可以根据任务的难度和观察训练期间的损失来调整。
+- **策略类型**：我们使用 `policy.type=act` 提供策略。同样，您可以在策略之间切换，如 [`act`, `diffusion`, `pi0`, `pi0fast`, `pi0fast`, `sac`, `smolvla`]，这将从 `configuration_act.py` 加载配置。重要的是，此策略将自动适应您的机器人（例如，`laptop` 和 `phone`）的电机状态、电机动作和摄像头数量，因为这些信息已存储在您的数据集中。
+- **设备选择**：我们提供 `policy.device=cuda`，因为我们在 Nvidia GPU 上训练，但您可以使用 `policy.device=mps` 在 Apple Silicon 上训练。
+- **可视化工具**：我们提供 `wandb.enable=true` 来使用 [Weights and Biases](https://docs.wandb.ai/quickstart) 可视化训练图表。这是可选的，但如果您使用它，请确保通过运行 `wandb login` 登录。
 
-Si encuentras el siguiente error:
+如果您遇到以下错误：
 
 <div align="center">
     <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/stack_bug.png" />
 </div>
 
-Intenta ejecutar el siguiente comando para resolverlo:
+尝试运行以下命令来解决：
 
 ```bash
 pip install datasets==2.19
 ```
 
-El entrenamiento debería tomar varias horas. Encontrarás puntos de control en `outputs/train/act_so100_test/checkpoints`.
+训练应该需要几个小时。您将在 `outputs/train/act_so100_test/checkpoints` 中找到检查点。
 
-Para reanudar el entrenamiento desde un punto de control, a continuación hay un comando de ejemplo para reanudar desde el punto de control `last` de la política `act_so101_test`:
+Para reanudar el entrenamiento desde un checkpoint, a continuación se muestra un comando de ejemplo para reanudar desde el checkpoint `last` de la política `act_so101_test`:
 
 ```bash
 lerobot-train \
@@ -1044,16 +1056,16 @@ lerobot-train \
   --resume=true
 ```
 
-**Subir puntos de control de política**
+**Subir checkpoints de política**
 
-Una vez que el entrenamiento esté terminado, sube el último punto de control con:
+Una vez que el entrenamiento esté completo, sube el último checkpoint con:
 
 ```bash
 huggingface-cli upload ${HF_USER}/act_so101_test \
   outputs/train/act_so101_test/checkpoints/last/pretrained_model
 ```
 
-También puedes subir puntos de control intermedios con:
+También puedes subir checkpoints intermedios con:
 
 ```bash
 CKPT=010000
@@ -1061,14 +1073,14 @@ huggingface-cli upload ${HF_USER}/act_so101_test${CKPT} \
   outputs/train/act_so101_test/checkpoints/${CKPT}/pretrained_model
 ```
 
-### Otro algoritmo
+### Otros algoritmos
 
 <details>
 <summary> SmolVLA </summary>
 
 [SmolVLA](https://huggingface.co/docs/lerobot/smolvla) es el modelo fundacional ligero de Hugging Face para robótica. Diseñado para un ajuste fino fácil en conjuntos de datos de LeRobot, ¡ayuda a acelerar tu desarrollo!
 
-**Configura tu Entorno**
+**Configura tu entorno**
 
 Instala las dependencias de SmolVLA ejecutando:
 
@@ -1076,7 +1088,7 @@ Instala las dependencias de SmolVLA ejecutando:
 pip install -e ".[smolvla]"
 ```
 
-**Ajusta SmolVLA con tus datos**
+**Ajustar SmolVLA con tus datos**
 
 Usa [smolvla_base](https://hf.co/lerobot/smolvla_base), nuestro modelo preentrenado de 450M, y ajústalo con tus datos. Entrenar el modelo durante 20k pasos tomará aproximadamente ~4 horas en una sola GPU A100. Debes ajustar el número de pasos según el rendimiento y tu caso de uso.
 
@@ -1108,14 +1120,14 @@ lerobot-train --help
 
 **Evalúa el modelo ajustado y ejecútalo en tiempo real**
 
-De manera similar a cuando grabas un episodio, se recomienda que hayas iniciado sesión en el HuggingFace Hub. Puedes seguir los pasos correspondientes: [Record a dataset](https://huggingface.co/docs/lerobot/il_robots). Una vez que hayas iniciado sesión, puedes ejecutar la inferencia en tu configuración haciendo:
+De manera similar a cuando se graba un episodio, se recomienda que hayas iniciado sesión en el HuggingFace Hub. Puedes seguir los pasos correspondientes: [Grabar un conjunto de datos](https://huggingface.co/docs/lerobot/il_robots). Una vez que hayas iniciado sesión, puedes ejecutar inferencia en tu configuración haciendo:
 
 ```bash
 lerobot-record \
   --robot.type=so101_follower \
   --robot.port=/dev/ttyACM0 \ # <- Use your port
   --robot.id=my_blue_follower_arm \ # <- Use your robot id
-  --robot.cameras="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30}}" \ # <- Use your cameras
+  --robot.cameras="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \ # <- Use your cameras
   --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
   --dataset.repo_id=${HF_USER}/eval_DATASET_NAME_test \  # <- This will be the dataset name on HF Hub
   --dataset.episode_time_s=50 \
@@ -1218,7 +1230,7 @@ Puedes usar la función `record` de [`lerobot/record.py`](https://github.com/hug
 lerobot-record \
   --robot.type=so100_follower \
   --robot.port=/dev/ttyACM0 \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video10, width: 640, height: 480, fps: 30}, side: {type: intelrealsense, serial_number_or_name: 233522074606, width: 640, height: 480, fps: 30}}" \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video10, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: intelrealsense, serial_number_or_name: 233522074606, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
   --robot.id=my_awesome_follower_arm \
   --display_data=false \
   --dataset.repo_id=${HF_USER}/eval_so100 \
@@ -1232,7 +1244,7 @@ como:
 lerobot-record \
   --robot.type=so101_follower \
   --robot.port=/dev/ttyACM0 \
-  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
   --robot.id=my_awesome_follower_arm \
   --display_data=false \
   --dataset.repo_id=seeed/eval_test123 \
@@ -1256,7 +1268,7 @@ lerobot-record \
 
 - Si estás siguiendo esta documentación/tutorial, por favor clona el repositorio de GitHub recomendado `https://github.com/Seeed-Projects/lerobot.git`. El repositorio recomendado en esta documentación es una versión estable verificada; el repositorio oficial de Lerobot se actualiza continuamente a la última versión, lo que puede causar problemas imprevistos como diferentes versiones de conjuntos de datos, diferentes comandos, etc.
 
-- Si encuentras el siguiente error al calibrar los IDs de servo:
+- Si encuentras el siguiente error al calibrar IDs de servo:
 
   ```bash
   `Motor ‘gripper’ was not found, Make sure it is connected`
@@ -1270,7 +1282,7 @@ lerobot-record \
   Could not connect on port "/dev/ttyACM0"
   ```
 
-  Y puedes ver que ACM0 existe al ejecutar `ls /dev/ttyACM*`, significa que olvidaste otorgar permisos del puerto serie. Ingresa `sudo chmod 666 /dev/ttyACM*` en la terminal para solucionarlo.
+  Y puedes ver que ACM0 existe cuando ejecutas `ls /dev/ttyACM*`, significa que olvidaste otorgar permisos del puerto serie. Ingresa `sudo chmod 666 /dev/ttyACM*` en la terminal para solucionarlo.
 
 - Si encuentras:
 
@@ -1299,42 +1311,42 @@ lerobot-record \
   Magnitude 30841 exceeds 2047 (max for sign_bit_index=11)
   ```
 
-  Apague y reinicie el brazo robótico, luego intente calibrar nuevamente. Este método también se puede usar si el ángulo MAX alcanza un valor de decenas de miles durante la calibración. Si esto no funciona, necesita recalibrar los servos correspondientes, incluyendo la calibración mediana y la escritura de ID.
+  Apaga y reinicia el brazo robótico, luego intenta calibrar nuevamente. Este método también se puede usar si el ángulo MAX alcanza un valor de decenas de miles durante la calibración. Si esto no funciona, necesitas recalibrar los servos correspondientes, incluyendo la calibración mediana y la escritura de ID.
 
-- Si encuentra durante la fase de evaluación:
+- Si encuentras durante la fase de evaluación:
 
   ```bash
   File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'
   ```
 
-  Por favor, elimine primero la carpeta que comience con `eval_` y luego ejecute el programa nuevamente.
+  Por favor elimina primero la carpeta que comience con `eval_` y luego ejecuta el programa nuevamente.
 
-- Si encuentra durante la fase de evaluación:
+- Si encuentras durante la fase de evaluación:
 
   ```bash
   `mean` is infinity. You should either initialize with `stats` as an argument or use a pretrained model
   ```
 
-  Tenga en cuenta que las palabras clave como "front" y "side" en el parámetro `--robot.cameras` deben ser estrictamente consistentes con las utilizadas al recopilar el conjunto de datos.
+  Ten en cuenta que las palabras clave como "front" y "side" en el parámetro `--robot.cameras` deben ser estrictamente consistentes con las utilizadas al recopilar el conjunto de datos.
 
-- Si ha reparado o reemplazado partes del brazo robótico, por favor elimine completamente los archivos bajo `~/.cache/huggingface/lerobot/calibration/robots` o `~/.cache/huggingface/lerobot/calibration/teleoperators` y recalibre el brazo robótico. De lo contrario, pueden aparecer mensajes de error, ya que la información de calibración se almacena en archivos JSON en estos directorios.
+- Si has reparado o reemplazado partes del brazo robótico, por favor elimina completamente los archivos bajo `~/.cache/huggingface/lerobot/calibration/robots` o `~/.cache/huggingface/lerobot/calibration/teleoperators` y recalibra el brazo robótico. De lo contrario, pueden aparecer mensajes de error, ya que la información de calibración se almacena en archivos JSON en estos directorios.
 
 - Entrenar ACT en 50 conjuntos de datos toma aproximadamente 6 horas en una laptop con RTX 3060 (8GB), y alrededor de 2-3 horas en computadoras con GPUs RTX 4090 o A100.
 
-- Durante la recopilación de datos, asegúrese de que la posición de la cámara, el ángulo y la iluminación ambiental sean estables. Reduzca la cantidad de fondo inestable y peatones capturados por la cámara, ya que cambios excesivos en el entorno de implementación pueden causar que el brazo robótico falle al agarrar correctamente.
+- Durante la recopilación de datos, asegúrate de que la posición de la cámara, el ángulo y la iluminación ambiental sean estables. Reduce la cantidad de fondo inestable y peatones capturados por la cámara, ya que cambios excesivos en el entorno de implementación pueden causar que el brazo robótico falle al agarrar correctamente.
 
-- Para el comando de recopilación de datos, asegúrese de que el parámetro `num-episodes` esté configurado para recopilar datos suficientes. No pause manualmente a la mitad, ya que la media y la varianza de los datos se calculan solo después de que se complete la recopilación de datos, las cuales son necesarias para el entrenamiento.
+- Para el comando de recopilación de datos, asegúrate de que el parámetro `num-episodes` esté configurado para recopilar datos suficientes. No pauses manualmente a la mitad, ya que la media y la varianza de los datos se calculan solo después de que se complete la recopilación de datos, las cuales son necesarias para el entrenamiento.
 
-- Si el programa indica que no puede leer datos de imagen de la cámara USB, asegúrese de que la cámara USB no esté conectada a través de un hub. La cámara USB debe estar conectada directamente al dispositivo para garantizar una velocidad de transmisión de imagen rápida.
+- Si el programa indica que no puede leer datos de imagen de la cámara USB, asegúrate de que la cámara USB no esté conectada a través de un hub. La cámara USB debe estar conectada directamente al dispositivo para garantizar una velocidad de transmisión de imagen rápida.
 
-- Si encuentra un error como `AttributeError: module 'rerun' has no attribute 'scalar'. Did you mean: 'scalars'?`, puede degradar la versión de rerun para resolver el problema.
+- Si encuentras un error como `AttributeError: module 'rerun' has no attribute 'scalar'. Did you mean: 'scalars'?`, puedes degradar la versión de rerun para resolver el problema.
 
 ```bash
 pip3 install rerun-sdk==0.23
 ```
 
 :::tip
-Si encuentra problemas de software o problemas de dependencias del entorno que no se pueden resolver, además de verificar la sección de FAQ al final de este tutorial, por favor reporte el problema oportunamente a la [plataforma LeRobot](https://github.com/huggingface/lerobot) o al [canal Discord de LeRobot](https://discord.gg/8TnwDdjFGU).
+Si encuentras problemas de software o problemas de dependencias del entorno que no se pueden resolver, además de verificar la sección de FAQ al final de este tutorial, por favor reporta el problema oportunamente a la [plataforma LeRobot](https://github.com/huggingface/lerobot) o al [canal de Discord de LeRobot](https://discord.gg/8TnwDdjFGU).
 :::
 
 ## Citas
@@ -1359,7 +1371,7 @@ Dnsty: [Jetson Containers](https://github.com/dusty-nv/jetson-containers/tree/ma
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
