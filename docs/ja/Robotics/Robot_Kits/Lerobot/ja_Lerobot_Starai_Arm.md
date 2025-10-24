@@ -21,7 +21,7 @@ translation:
 <iframe width="900" height="600" src="https://www.youtube.com/embed/IJKTeBYAG7k?si=iS-jqT27fDjeI6yX" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-| **Follower Viola** | **Leader Violin** | **Follower Cello** |
+| **フォロワー Viola** | **リーダー Violin** | **フォロワー Cello** |
 |:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello.png) |
 
@@ -46,7 +46,7 @@ translation:
 - すぐに使用可能 — 組み立て不要。開封してすぐにAIの世界に飛び込めます。
 - 6+1自由度と470mmのリーチ — 汎用性と精度のために構築されています。
 - デュアルブラシレスバスサーボ駆動 — 最大300gのペイロードでスムーズ、静音、強力。
-- 66mm最大開口のパラレルグリッパー — クイック交換の柔軟性のためのモジュラーフィンガーチップ。
+- 最大66mm開口の平行グリッパー — クイック交換の柔軟性のためのモジュラーフィンガーチップ。
 - 独自のホバーロック技術 — ワンプレスでリーダーアームを任意の位置で瞬時に固定。
 
 ## 仕様
@@ -56,17 +56,17 @@ translation:
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello.jpg" />
 </div>
 
-| 項目                 | Follower Arm \| Viola                             | Leder Arm \|Violin                                |    Follower Arm \|Cello    |
+| 項目                 | フォロワーアーム \| Viola                             | リーダーアーム \|Violin                                |    フォロワーアーム \|Cello    |
 | -------------------- | ------------------------------------------------- | ------------------------------------------------- |-----------------|
 | 自由度   | 6+1                                               | 6+1                                               | 6+1             |
 | リーチ                | 470mm                                             | 470mm                                             | 670mm |
 | スパン                 | 940mm                                             | 940mm                                             | 1340mm |
-| 再現性        | 2mm                                               | -                                                 | 1mm  |
+| 繰り返し精度        | 2mm                                               | -                                                 | 1mm  |
 | 作業ペイロード      | 300g（70%リーチ時）                            | -                                                 |  750g（70%リーチ時）   |
 | サーボ               | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 |RX18-U100H-M x3<br/> RX8-U50H-M x3<br/> RX8-U51H-M x1|
-| パラレルグリッパーキット  | ✅                                                 | -                                                 | ✅   |
-| 手首回転         | あり                                               | あり                                               | あり |
-| 任意位置での保持 | あり                                               | あり（ハンドルボタン付き）                          |  あり|
+| 平行グリッパーキット  | ✅                                                 | -                                                 | ✅   |
+| 手首回転         | Yes                                               | Yes                                               | Yes |
+| 任意位置での保持 | Yes                                               | Yes（ハンドルボタン付き）                          |  Yes|
 | 手首カメラマウント   |参考3Dプリントファイルを提供 | | 参考3Dプリントファイルを提供
 | LeRobotとの連携   | ✅                                                 | ✅                                                 | ✅|
 | ROS 2との連携     | ✅                                                 | ✅                                                | ✅|
@@ -135,7 +135,7 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 3. Lerobotのクローン：
 
 ```bash
-git clone https://github.com/Seeed-Projects/lerobot-starai.git ~/lerobot
+git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
 ```
 
 4. minicondaを使用する場合、環境にffmpegをインストール：
@@ -201,9 +201,8 @@ Jetsonデバイスを使用している場合は、[このチュートリアル]
 - リーダーアーム
 - フォロワーアーム
 - コントローラー（ハンドル）
-- パラレルグリッパー
+- 平行グリッパー
 - インストールツール（ネジ、六角レンチ）
-- 電源 ×2
 - Cクランプ ×2
 - UC-01デバッグボード ×2
 
@@ -239,7 +238,7 @@ usbを取り外すことを忘れないでください。そうしないとイ�
 例：
 
 1. リーダーアームのポートを識別する際の出力例（例：Macでは`/dev/tty.usbmodem575E0031751`、Linuxでは`/dev/ttyUSB0`の可能性）：
-2. フォロワーアームのポートを識別する際の出力例（例：Macでは `/dev/tty.usbmodem575E0032081`、Linuxでは `/dev/ttyUSB1` の可能性があります）：
+2. フォロワーアームのポートを識別する際の出力例（例：Macでは `/dev/tty.usbmodem575E0032081`、Linuxでは `/dev/ttyUSB1` など）：
 
 :::tip
 ttyUSB0シリアルポートが識別できない場合は、以下の解決策を試してください：
@@ -303,7 +302,7 @@ sudo chmod 666 /dev/ttyUSB*
 
 以下は参考値です。通常の状況では、実際の制限参考値はこれらの参考値の**±10°**の範囲内に収まるはずです。
 
-| サーボID | 下限角度 (°) | 上限角度 (°) | 備考                                          |
+| サーボID | 下限角度（°） | 上限角度（°） | 備考                                          |
 | -------- | --------------------- | --------------------- | ---------------------------------------------- |
 | motor\_0 | -180°                 | 180°                  | 制限位置まで回転                   |
 | motor\_1 | -90°                  | 90°                   | 制限位置まで回転                   |
@@ -343,7 +342,7 @@ Cello：
 lerobot-calibrate     --robot.type=lerobot_robot_cello --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraicello_arm
 ```
 
-コマンドを実行した後、各関節が**制限位置**に到達するように**手動でロボットアームを動かす**必要があります。ターミナルには記録された範囲データが表示されます。この操作が完了したら、Enterキーを押してください。
+コマンドを実行した後、**手動でロボットアームを動かして**各関節を**制限位置**に到達させる必要があります。ターミナルには記録された範囲データが表示されます。この操作が完了したら、Enterキーを押してください。
 
 :::tip
 キャリブレーションファイルは以下のパスに保存されます：`~/.cache/huggingface/lerobot/calibration/robots`と`~/.cache/huggingface/lerobot/calibration/teleoperators`。
@@ -492,7 +491,7 @@ lerobot-teleoperate \
    git clone https://github.com/orbbec/pyorbbecsdk.git
    ```
 
-2. SDK用の対応する**.whlファイル**をダウンロードしてインストールします  
+2. SDKの対応する**.whlファイル**をダウンロードしてインストールします  
    [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases)にアクセスし、  
    Pythonバージョンに基づいて選択してインストールしてください。例：
 
@@ -538,7 +537,7 @@ elif cfg.type == "orbbec":
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/utils.png" />
 </div>
 
-- `~/lerobot/src/lerobot/cameras` ディレクトリの `__init__.py` を見つけて、18行目に以下のコードを追加します：
+- `~/lerobot/src/lerobot/cameras` ディレクトリの `__init__.py` を見つけて、18行目に以下のコードを追加してください：
 
 ```python
 from .orbbec.configuration_orbbec import OrbbecCameraConfig
@@ -549,12 +548,12 @@ from .orbbec.configuration_orbbec import OrbbecCameraConfig
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
 </div>
 
-- 🚀 ステップ 2: 関数呼び出しと例
+- 🚀 ステップ 2：関数呼び出しと例
 
 以下のすべての例では、`starai_viola` を実際に使用しているロボットアームのモデル（例：`so100` / `so101`）に置き換えてください。
 
-`focus_area` ハイパーパラメータを追加しました。遠すぎる深度データはロボットアームにとって意味がない（到達や把握ができない物体）ため、`focus_area` より小さいまたは大きい深度データは黒で表示されます。デフォルトの `focus_area` は (20, 600) です。  
-現在サポートされている解像度は、幅: 640、高さ: 880 のみです。
+`focus_area` ハイパーパラメータを追加しました。遠すぎる深度データはロボットアームにとって意味がない（到達や把持ができない）ため、`focus_area` より小さいまたは大きい深度データは黒で表示されます。デフォルトの `focus_area` は (20, 600) です。  
+現在サポートされている解像度は、幅：640、高さ：880 のみです。
 
 Violin&Viola:
 
@@ -603,13 +602,13 @@ lerobot-teleoperate \
 <iframe width="900" height="600" src="https://www.youtube.com/embed/-p8K_-XxW8U?si=UmYWvEyKNPpTRxDC" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-2つのUSBカメラを挿入した後、以下のスクリプトを実行してカメラのポート番号を確認します。カメラはUSBハブに接続してはならず、デバイスに直接接続する必要があることを覚えておくことが重要です。USBハブの低速度により、画像データの読み取りができなくなる可能性があります。
+2台のUSBカメラを挿入した後、以下のスクリプトを実行してカメラのポート番号を確認してください。カメラはUSBハブに接続してはならず、デバイスに直接接続する必要があることを覚えておくことが重要です。USBハブの低速度により、画像データの読み取りができなくなる可能性があります。
 
 ```bash
 lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
 ```
 
-ターミナルに以下の情報が出力されます。例えば、ラップトップのカメラは `index 2`、USBカメラは `index 4` です。
+ターミナルは以下の情報を出力します。例えば、ラップトップのカメラは `index 2`、USBカメラは `index 4` です。
 
 ```markdown
 --- Detected Cameras ---
@@ -640,7 +639,7 @@ Finalizing image saving...
 Image capture finished. Images saved to outputs/captured_images
 ```
 
-各カメラで撮影された画像は `outputs/images_from_opencv_cameras` ディレクトリで確認でき、異なる位置のカメラに対応するポートインデックス情報を検証できます。
+`outputs/images_from_opencv_cameras` ディレクトリで各カメラが撮影した画像を確認し、異なる位置のカメラに対応するポートインデックス情報を検証できます。
 
 外部カメラを確認した後、以下のカメラ情報を実際のカメラ情報に置き換えると、リモート操作中にコンピュータでカメラを表示できるようになります：
 
@@ -651,12 +650,18 @@ lerobot-teleoperate \
     --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
 ```
+
+
+:::tip
+`fourcc: "MJPG"` 形式の画像は圧縮されています。より高い解像度を試すことができ、`YUYV` 形式も試すことができます。ただし、後者は画像解像度とFPSを低下させ、ロボットアームの動作にラグを生じさせます。現在、`MJPG` 形式では、`1920*1080` の解像度で3台のカメラをサポートしながら `30FPS` を維持できます。とはいえ、同じUSBハブを介して2台のカメラをコンピュータに接続することは推奨されません。
+:::
+
 
 Violin&Cello:
 
@@ -665,12 +670,18 @@ lerobot-teleoperate \
     --robot.type=lerobot_robot_cello \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraicello_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
 ```
+
+
+:::tip
+`fourcc: "MJPG"` 形式の画像は圧縮されています。より高い解像度を試すことができ、`YUYV` 形式も試すことができます。ただし、後者は画像解像度とFPSを低下させ、ロボットアームの動作にラグを生じさせます。現在、`MJPG` 形式では、`1920*1080` の解像度で3台のカメラをサポートしながら `30FPS` を維持できます。とはいえ、同じUSBハブを介して2台のカメラをコンピュータに接続することは推奨されません。
+:::
+
 
 <details>
 <summary> デュアルアーム </summary>
@@ -684,7 +695,7 @@ lerobot-teleoperate \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
     --robot.id=bi_starai_viola_follower \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
@@ -701,13 +712,19 @@ lerobot-teleoperate \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
     --robot.id=bi_starai_cello_follower \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
     --teleop.id=bi_starai_violin_leader \
     --display_data=true
 ```
+
+
+:::tip
+`fourcc: "MJPG"` 形式の画像は圧縮されています。より高い解像度を試すことができ、`YUYV` 形式も試すことができます。ただし、後者は画像解像度とFPSを低下させ、ロボットアームの動作にラグを生じさせます。現在、`MJPG` 形式では、`1920*1080` の解像度で3台のカメラをサポートしながら `30FPS` を維持できます。とはいえ、同じUSBハブを介して2台のカメラをコンピュータに接続することは推奨されません。
+:::
+
 
 </details>
 
@@ -741,14 +758,14 @@ pip3 install rerun-sdk==0.23
 huggingface-cli login --token ${HUGGINGFACE_TOKEN} --add-to-git-credential
 ```
 
-これらのコマンドを実行するために、Hugging Faceリポジトリ名を変数に保存します：
+これらのコマンドを実行するために、Hugging Faceリポジトリ名を変数に保存してください：
 
 ```bash
 HF_USER=$(huggingface-cli whoami | head -n 1)
 echo $HF_USER
 ```
 
-10エピソードを記録し、データセットをハブにアップロードします：
+10エピソードを記録し、データセットをハブにアップロードしてください：
 
 Violin&Viola:
 
@@ -757,7 +774,7 @@ lerobot-record \
     --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
@@ -777,7 +794,7 @@ lerobot-record \
     --robot.type=lerobot_robot_cello \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraicello_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
@@ -806,7 +823,7 @@ lerobot-record \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
     --teleop.id=bi_starai_violin_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --display_data=true \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode_time_s=30 \
@@ -829,7 +846,7 @@ lerobot-record \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
     --teleop.id=bi_starai_violin_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --display_data=true \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode_time_s=30 \
@@ -840,7 +857,7 @@ lerobot-record \
 ```
 
 :::tip
-シングルアームとデュアルアームのセットアップを区別するため、ここでの `--dataset.repo_id` は `starai/record-test_bi_arm` という名前になっています。
+シングルアームとデュアルアームの設定を区別するため、ここでの `--dataset.repo_id` は `starai/record-test_bi_arm` という名前になっています。
 :::
 
 </details>
@@ -858,7 +875,7 @@ lerobot-record \
     --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
@@ -878,7 +895,7 @@ lerobot-record \
     --robot.type=lerobot_robot_cello \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraicello_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
@@ -907,7 +924,7 @@ lerobot-record \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
     --teleop.id=bi_starai_violin_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --display_data=true \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode_time_s=30 \
@@ -930,7 +947,7 @@ lerobot-record \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
     --teleop.id=bi_starai_violin_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --display_data=true \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode_time_s=30 \
@@ -941,7 +958,7 @@ lerobot-record \
 ```
 
 :::tip
-シングルアームとデュアルアームのセットアップを区別するため、ここでの `--dataset.repo_id` は `starai/record-test_bi_arm` という名前になっています。
+シングルアームとデュアルアームの設定を区別するため、ここでの `--dataset.repo_id` は `starai/record-test_bi_arm` という名前になっています。
 :::
 
 </details>
@@ -975,13 +992,13 @@ Parameter Description
 
 キーボードショートカットを使用してデータ記録ワークフローを制御します：
 
-- **右矢印キー（→）**を押す：現在のエピソードを早期停止するか時間をリセットし、次のエピソードに移動します。
+- **右矢印キー（→）**を押す：現在のエピソードを早期停止または時間をリセットし、次のエピソードに移動します。
 - **左矢印キー（←）**を押す：現在のエピソードをキャンセルして再記録します。
 - **ESC**を押す：セッションを即座に停止し、ビデオをエンコードしてデータセットをアップロードします。
 
 :::tip
 
-キーボードが動作しない場合は、別のバージョンの pynput をインストールする必要があるかもしれません。
+キーボードが動作しない場合は、pynput の別のバージョンをインストールする必要があるかもしれません。
 
 ```bash
 pip install pynput==1.6.8
@@ -1046,9 +1063,9 @@ lerobot-replay \
 
 </details>
 
-## ポリシーのトレーニング
+## ポリシーの訓練
 
-ロボットを制御するポリシーをトレーニングするためのコマンド例は以下の通りです：
+ロボットを制御するポリシーを訓練するためのコマンド例は以下の通りです：
 
 Viola:
 
@@ -1137,7 +1154,7 @@ lerobot-train \
 ```
 
 <details>
-<summary>[SmolVLA ポリシー](https://huggingface.co/docs/lerobot/smolvla)をトレーニングする場合のコマンド： </summary>
+<summary>[SmolVLA ポリシー](https://huggingface.co/docs/lerobot/smolvla) をトレーニングする場合のコマンド： </summary>
 
 ```bash
 pip install -e ".[smolvla]"
@@ -1164,7 +1181,7 @@ lerobot-record \
   --robot.type=starai_viola \
   --robot.port=/dev/ttyUSB1 \
   --robot.id=my_awesome_staraiviola_arm \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30}}" \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30, fourcc: "MJPG"}}" \
   --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
   --dataset.repo_id=${HF_USER}/eval_DATASET_NAME_test \ 
   --dataset.episode_time_s=50 \
@@ -1179,7 +1196,7 @@ lerobot-record \
 </details>
 
 <details>
-<summary>[Libero ポリシー](https://huggingface.co/docs/lerobot/libero)をトレーニングする場合のコマンド： </summary>
+<summary>[Libero ポリシー](https://huggingface.co/docs/lerobot/libero) をトレーニングする場合のコマンド： </summary>
 
 LIBERO は生涯ロボット学習を研究するために設計されたベンチマークです。ロボットは工場で一度だけ事前トレーニングされるのではなく、時間をかけて人間のユーザーと共に学習し適応し続ける必要があるという考えです。この継続的な適応は意思決定における生涯学習（LLDM）と呼ばれ、真にパーソナライズされたヘルパーとなるロボットを構築するための重要なステップです。
 
@@ -1192,13 +1209,13 @@ LIBERO には5つのタスクスイートが含まれています：
 
 - LIBERO-Object (libero_object) – 異なるオブジェクトの操作を中心としたタスク。
 
-- LIBERO-Goal (libero_goal) – ロボットが変化する目標に適応する必要がある目標条件付きタスク。
+- LIBERO-Goal (libero_goal) – ロボットが変化するターゲットに適応する必要がある目標条件付きタスク。
 
 - LIBERO-90 (libero_90) – LIBERO-100 コレクションからの90の短期間タスク。
 
 - LIBERO-Long (libero_10) – LIBERO-100 コレクションからの10の長期間タスク。
 
-これらのスイートは合わせて130のタスクをカバーし、シンプルなオブジェクト操作から複雑な多段階シナリオまで幅広く含んでいます。LIBERO は時間とともに成長し、コミュニティが生涯学習アルゴリズムをテストし改善できる共有ベンチマークとして機能することを意図しています。
+これらのスイートは合わせて130のタスクをカバーし、シンプルなオブジェクト操作から複雑な多段階シナリオまでを含みます。LIBERO は時間とともに成長し、コミュニティが生涯学習アルゴリズムをテストし改善できる共有ベンチマークとして機能することを意図しています。
 
 ## LIBERO でのトレーニング
 
@@ -1217,9 +1234,9 @@ lerobot-train \
   --eval_freq=1000 \
 ```
 
-## LIBERO での評価
+## LIBERO での評価  
 
-LIBERO をインストールするには、LeRobot の公式手順に従った後、単に `pip install -e ".[libero]"` を実行してください。
+LIBERO をインストールするには、LeRobot の公式手順に従った後、単に `pip install -e ".[libero]"` を実行してください
 
 ### 単一スイート評価
 
@@ -1255,7 +1272,7 @@ lerobot-eval \
 
 ## ポリシーの評価
 
-10回の評価エピソードを記録するために以下のコマンドを実行します：
+10回の評価エピソードを記録するには、以下のコマンドを実行してください：
 
 Viola:
 
@@ -1263,7 +1280,7 @@ Viola:
 lerobot-record  \
   --robot.type=lerobot_robot_viola \
   --robot.port=/dev/ttyUSB1 \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
   --robot.id=my_awesome_staraiviola_arm \
   --display_data=false \
   --dataset.repo_id=starai/eval_record-test \
@@ -1281,7 +1298,7 @@ Cello:
 lerobot-record  \
   --robot.type=lerobot_robot_cello \
   --robot.port=/dev/ttyUSB1 \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
   --robot.id=my_awesome_staraicello_arm \
   --display_data=false \
   --dataset.repo_id=starai/eval_record-test \
@@ -1304,7 +1321,7 @@ lerobot-record  \
     --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --robot.id=bi_starai_viola_follower \
     --display_data=false \
     --dataset.repo_id=starai/eval_record-test_bi_arm \
@@ -1320,7 +1337,7 @@ lerobot-record  \
     --robot.arm_name=starai_cello \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --robot.id=bi_starai_cello_follower \
     --display_data=false \
     --dataset.repo_id=starai/eval_record-test_bi_arm \
@@ -1334,35 +1351,35 @@ lerobot-record  \
 
 1. `--policy.path` パラメータは、トレーニング済みポリシー重みファイルへのパスを示します（例：`outputs/train/act_viola_test/checkpoints/last/pretrained_model`）。モデル重みを Hub にアップロードしている場合は、モデルリポジトリも使用できます（例：`${HF_USER}/starai`）。
 
-2. 評価データセット `dataset.repo_id` の名前は `eval_` で始まります。この操作により、評価フェーズ専用のビデオとデータが記録され、`eval_` で始まるフォルダ（例：`starai/eval_record-test`）に保存されます。
+2. 評価データセット `dataset.repo_id` の名前は `eval_` で始まります。この操作により、評価フェーズ専用のビデオとデータが記録され、`starai/eval_record-test` のような `eval_` で始まるフォルダに保存されます。
 
-3. 評価フェーズで `File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/starai/eval_xxxx'` が発生した場合は、`eval_` で始まるフォルダを削除してプログラムを再実行してください。
+3. 評価フェーズで `File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/starai/eval_xxxx'` エラーが発生した場合は、`eval_` で始まるフォルダを削除してプログラムを再実行してください。
 
-4. `mean is infinity. You should either initialize with stats as an argument or use a pretrained model` が発生した場合は、`--robot.cameras` パラメータの `up` や `front` などのキーワードがデータ収集フェーズで使用されたものと厳密に一致していることを確認してください。
+4. `mean is infinity. You should either initialize with stats as an argument or use a pretrained model` エラーが発生した場合は、`--robot.cameras` パラメータの `up` や `front` などのキーワードがデータ収集段階で使用したものと厳密に一致していることを確認してください。
 
 ## FAQ
 
-- この文書のチュートリアルを使用している場合は、推奨される GitHub リポジトリを `git clone` してください：`https://github.com/servodevelop/lerobot.git`。
+- このドキュメントのチュートリアルを使用している場合は、推奨されるGitHubリポジトリを `git clone` してください：`https://github.com/servodevelop/lerobot.git`。
 
 - テレオペレーションは正常に動作するが、カメラ付きテレオペレーションで画像インターフェースが表示されない場合は、[こちら](https://github.com/huggingface/lerobot/pull/757/files)を参照してください。
 
-- データセットテレオペレーション中に libtiff の問題が発生した場合は、libtiff のバージョンを更新してください。
+- データセットテレオペレーション中にlibtiffの問題が発生した場合は、libtiffのバージョンを更新してください。
 
   ```bash
   conda install libtiff==4.5.0  # for Ubuntu 22.04, use libtiff==4.5.1
   ```
 
-- LeRobot をインストールした後、GPU 版の PyTorch が自動的にアンインストールされる場合があるため、torch-gpu を手動でインストールする必要があります。
+- LeRobotをインストールした後、PyTorchのGPUバージョンが自動的にアンインストールされる場合があるため、torch-gpuを手動でインストールする必要があります。
 
-- Jetson の場合は、`conda install -y -c conda-forge ffmpeg` を実行する前に、まず [PyTorch と Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) をインストールしてください。そうしないと、torchvision をコンパイルする際にバージョンの不一致問題が発生します。
+- Jetsonの場合は、`conda install -y -c conda-forge ffmpeg` を実行する前に、まず[PyTorchとTorchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)をインストールしてください。そうしないと、torchvisionをコンパイルする際にバージョンの不一致問題が発生します。
 
-- 3060 8GB ラップトップで ACT データの 50 エピソードをトレーニングするには約 6 時間かかりますが、4090 または A100 コンピューターで 50 エピソードをトレーニングするには約 2-3 時間かかります。
+- 3060 8GBラップトップでACTデータの50エピソードをトレーニングするには約6時間かかり、4090またはA100コンピュータで50エピソードをトレーニングするには約2-3時間かかります。
 
-- データ収集中は、カメラの位置と角度の安定性、環境照明を確保し、カメラに映る不安定な背景や歩行者を最小限に抑えてください。そうしないと、展開環境の大幅な変化により、ロボットアームが正常にオブジェクトを把握できなくなる可能性があります。
+- データ収集中は、カメラの位置と角度の安定性、環境照明を確保し、カメラに映る不安定な背景や歩行者を最小限に抑えてください。そうしないと、デプロイメント環境の大幅な変化により、ロボットアームが正常にオブジェクトを把握できなくなる可能性があります。
 
-- データ収集コマンドの `num-episodes` は十分なデータ収集を確保し、途中で手動で一時停止してはいけません。これは、データの平均と分散がデータ収集完了後にのみ計算されるためで、これはトレーニングに必要です。
+- データ収集コマンドの `num-episodes` は十分なデータ収集を確保し、途中で手動で一時停止してはいけません。これは、データの平均と分散がデータ収集完了後にのみ計算され、これがトレーニングに必要だからです。
 
-- プログラムが USB カメラの画像データを読み取れないというプロンプトが表示される場合は、USB カメラが Hub を通じて接続されていないことを確認してください。USB カメラは高速な画像転送レートを確保するために、デバイスに直接接続する必要があります。
+- プログラムがUSBカメラの画像データを読み取れないというプロンプトが表示される場合は、USBカメラがハブを通じて接続されていないことを確認してください。USBカメラは高速な画像転送レートを確保するため、デバイスに直接接続する必要があります。
 
 ## 引用
 
@@ -1386,7 +1403,7 @@ TD-MPC: [TD-MPC](https://www.nicklashansen.com/td-mpc/)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品でのご体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
