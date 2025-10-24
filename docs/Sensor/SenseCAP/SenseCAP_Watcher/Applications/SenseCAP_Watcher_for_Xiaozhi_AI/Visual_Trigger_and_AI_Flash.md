@@ -48,11 +48,11 @@ For detailed instructions, please refer to [Watcher Agent Firmware Flashing Guid
 <Tabs>
 <TabItem value="sensecraft" label="SenseCraft AI" default>
 
-:::caution Note
+<!-- :::caution Note
 The following guide is for an internal testing website that has not yet been released.
 The official version will be available soon.
 Please use another method to flash the firmware for now.
-:::
+::: -->
 
 - Prerequisites
 
@@ -106,7 +106,7 @@ Please use another method to flash the firmware for now.
 
 - Prerequisites
 
-  - **Visual Trigger Firmware v1.8.8**: [Download Link](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **Visual Trigger Firmware v2.0.3**: [Download Link](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 or later)
 
@@ -152,7 +152,7 @@ Please use another method to flash the firmware for now.
 
 - Prerequisites
 
-  - **Visual Trigger Firmware v1.8.8**: [Download Link](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **Visual Trigger Firmware v2.0.3**: [Download Link](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [esptool.py](https://github.com/espressif/esptool)
 
@@ -232,6 +232,10 @@ Please use another method to flash the firmware for now.
 
 </TabItem>
 </Tabs>
+
+:::note
+Firmware version above v2.0.3 requires saying “Turn on inference switch” to Xiaozhi to enable visual detection.
+:::
 
 ## AI Model Flashing Process
 

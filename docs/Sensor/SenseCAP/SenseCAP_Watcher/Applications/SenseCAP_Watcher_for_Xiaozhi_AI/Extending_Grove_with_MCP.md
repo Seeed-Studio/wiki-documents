@@ -25,16 +25,45 @@ last_update:
 
 This document describes how to use the DHT20 temperature and humidity sensor via the Grove interface on the ESP32-S3-based SenseCAP Watcher development board.
 
+## Hardware Preparation
+
+<table align="center">
+  <tr>
+    <th>SenseCAP Watcher for XiaoZhi</th>
+    <th>Grove - Temperature & Humidity Sensor V2.0 (DHT20)</th>
+  </tr>
+      <tr>
+          <td><div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Grove/Grove4.png" style={{width:230, height:'auto'}}/></div></td>
+          <td><div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Grove/Grove3.png" style={{width:200, height:'auto'}}/></div></td>
+      </tr>
+  <tr>
+    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-XIAOZHI-EN-p-6532.html" target="_blank">
+      <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      </a>
+    </div></td>
+    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html" target="_blank">
+      <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      </a>
+    </div></td>
+  </tr>
+</table>
+
 ## Grove Interface Definition (J5)
+
+<div style={{textAlign:'left'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Grove/Grove1.png" style={{width:400, height:'auto'}}/></div>
 
 According to the hardware schematic, the Grove interface uses the following pins:
 
 | Grove Pin | function | ESP32-S3 Connection |
 |-----------|------|---------------|
-| Pin 1     | VCC  | GROVE_3.3V (3.3V Power) |
+| Pin 1     | SCL  | GPIO48 (I2C0_SCL) |
 | Pin 2     | SDA  | GPIO47 (I2C0_SDA) |
-| Pin 3     | SCL  | GPIO48 (I2C0_SCL) |
+| Pin 3     | VCC  | GROVE_3.3V (3.3V Power) |
 | Pin 4     | GND  | GND |
+
+<div style={{textAlign:'left'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Grove/Grove2.png" style={{width:400, height:'auto'}}/></div>
 
 ## DHT20 Sensor
 
@@ -44,6 +73,10 @@ According to the hardware schematic, the Grove interface uses the following pins
 - Measurement Range:
     - Temperature: -40°C to +80°C (Accuracy: ±0.5°C)
     - Humidity: 0% to 100% RH (Accuracy: ±3% RH)
+
+## Execution Result
+
+<div style={{textAlign:'left'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Grove/Grove5.png" style={{width:800, height:'auto'}}/></div>
 
 ## File Structure
 
@@ -68,6 +101,8 @@ According to the hardware schematic, the Grove interface uses the following pins
 
 - [sensecap_watcher.cc](https://files.seeedstudio.com/wiki/Watcher_Agent/Grove/sensecap_watcher.cc)
 
+- Please refer to [Core Functionality (Internal MCP Tool Interface)](#modified-code-part-and-explanation) for the modified code part.
+
 - You should replace the above file in the following location:
 
     - file location
@@ -78,6 +113,9 @@ According to the hardware schematic, the Grove interface uses the following pins
 
 :::caution Note
 The above example code is for reference only. You should modify it according to your specific sensor model, development environment, and firmware version to ensure proper integration and successful compilation.
+
+- Grove I2C sensors can be connected directly to the I2C bus.  
+- Non-I2C sensors can be connected via available GPIO pins, allowing for flexible integration of various sensor types.
 :::
 
 ## Core Functionality(DHT20 Sensor)
@@ -96,6 +134,7 @@ The DHT20 driver implements the complete initialization process:
     ```
 
 ### 2. Temperature & Humidity Reading
+
 Reading Process:
     - Step1. Trigger measurement: send command [0xAC, 0x33, 0x00]
     - Step2. Wait for measurement: delay 80ms
@@ -111,6 +150,38 @@ Reading Process:
         printf("Temperature: %.2f°C, Humidity: %.2f%%\n", temperature, humidity);
     }
     ```
+
+### 3. I2C Communication Protocol
+
+    | Function | Command/Register | Data |
+    |-----|-----------|------|
+    | Reset Sensor | 0xBA | - |
+    | Configuration Register | 0xE1 | [0x08, 0x00] |
+    | Trigger Measurement | - | [0xAC, 0x33, 0x00] |
+    | Read Status | - | 1 byte |
+    | Read Data | - | 7 bytes |
+
+### 4. Status Byte Definition
+
+    | Bit | Function | Value |
+    |---|-----|---|
+    | bit[7] | Measurement Status | 1=Measuring, 0=Idle |
+    | bit[6:4] | Reserved | - |
+    | bit[3] | Calibration Status | 1=Calibrated, 0=Not Calibrated |
+    | bit[2:0] | Reserved | - |
+
+### 5. Data Parsing Algorithm
+
+```cpp
+// Humidity data (20 bits)
+uint32_t humidity_raw = (data[1] << 12) | (data[2] << 4) | (data[3] >> 4);
+float humidity = humidity_raw * 100.0f / 1048576.0f;
+
+// Temperature data (20 bits)
+uint32_t temperature_raw = ((data[3] & 0x0F) << 16) | (data[4] << 8) | data[5];
+float temperature = temperature_raw * 200.0f / 1048576.0f - 50.0f;
+```
+
 ## Core Functionality(Internal MCP Tool Interface)
 
 ### 1. Function Description
@@ -153,36 +224,114 @@ result = call_tool("self.grove.get_temperature_humidity", {})
     }
     ```
 
-### 4. I2C Communication Protocol
+<a id="modified-code-part-and-explanation"></a>
 
-    | Function | Command/Register | Data |
-    |-----|-----------|------|
-    | Reset Sensor | 0xBA | - |
-    | Configuration Register | 0xE1 | [0x08, 0x00] |
-    | Trigger Measurement | - | [0xAC, 0x33, 0x00] |
-    | Read Status | - | 1 byte |
-    | Read Data | - | 7 bytes |
+### 4. Modified Code Part and Explanation
 
-### 5. Status Byte Definition
+#### Added Header Files Include
 
-    | Bit | Function | Value |
-    |---|-----|---|
-    | bit[7] | Measurement Status | 1=Measuring, 0=Idle |
-    | bit[6:4] | Reserved | - |
-    | bit[3] | Calibration Status | 1=Calibrated, 0=Not Calibrated |
-    | bit[2:0] | Reserved | - |
+- Add the following include statements at the beginning of `sensecap_watcher.cc`:
 
-### 6. Data Parsing Algorithm
+    ```cpp
+    #include "dht20.h"
+    #include "mcp_server.h"
+    ```
+- Purpose
 
-```cpp
-// Humidity data (20 bits)
-uint32_t humidity_raw = (data[1] << 12) | (data[2] << 4) | (data[3] >> 4);
-float humidity = humidity_raw * 100.0f / 1048576.0f;
+    - dht20.h — Introduces the driver APIs for the DHT20 sensor, enabling temperature and humidity reading.
 
-// Temperature data (20 bits)
-uint32_t temperature_raw = ((data[3] & 0x0F) << 16) | (data[4] << 8) | data[5];
-float temperature = temperature_raw * 200.0f / 1048576.0f - 50.0f;
-```
+    - mcp_server.h — Provides APIs related to the internal MCP server, allowing communication and registration of MCP tools.
+
+#### Added Member Variable
+
+- Add the following member variable in the `SensecapWatcher` class:
+
+    ```cpp
+    DHT20* dht20_sensor_ = nullptr;
+    ```
+
+- Purpose
+
+    - `dht20_sensor_` — A pointer to the DHT20 sensor object connected via the Grove interface.  
+      It is used to initialize, store, and access the temperature and humidity sensor throughout the lifecycle of the `SensecapWatcher` instance.  
+    - It is assigned in `InitializeDHT20()` and used by MCP tools to read sensor data.  
+    - Initialized to `nullptr` to indicate the sensor has not yet been set up, with null-checks performed before reading.
+
+#### Added DHT20 Initialization and MCP Tool
+
+- Add the following member function in the `SensecapWatcher` class:
+
+    ```cpp
+    void InitializeDHT20() {
+        ESP_LOGI(TAG, "Initialize DHT20 sensor on Grove port");
+
+        // Create DHT20 sensor instance
+        dht20_sensor_ = new DHT20(i2c_bus_);
+
+        // Initialize and calibrate the sensor
+        esp_err_t ret = dht20_sensor_->Initialize();
+        if (ret != ESP_OK) {
+            ESP_LOGE(TAG, "DHT20 initialization failed: %s", esp_err_to_name(ret));
+            delete dht20_sensor_;
+            dht20_sensor_ = nullptr;
+            return;
+        }
+
+        ESP_LOGI(TAG, "DHT20 sensor initialized successfully");
+
+        // Register MCP tool for reading temperature and humidity
+        auto& mcp_server = McpServer::GetInstance();
+        mcp_server.AddTool("self.grove.get_temperature_humidity",
+            "Read temperature and humidity from the Grove-connected DHT20 sensor.\n"
+            "Return format: {\"temperature\": value(°C), \"humidity\": value(%), \"status\": \"ok\"}\n"
+            "If reading fails, returns an error message.",
+            PropertyList(),
+            [this](const PropertyList&) -> ReturnValue {
+                if (!dht20_sensor_) {
+                    return "{\"error\": \"DHT20 sensor not initialized\"}";
+                }
+
+                float temperature = 0.0f;
+                float humidity = 0.0f;
+
+                esp_err_t ret = dht20_sensor_->ReadTempAndHumidity(temperature, humidity);
+                if (ret != ESP_OK) {
+                    std::string error_msg = "{\"error\": \"Failed to read DHT20: ";
+                    error_msg += esp_err_to_name(ret);
+                    error_msg += "\"}";
+                    return error_msg;
+                }
+
+                // Format response as JSON
+                char buffer[128];
+                snprintf(buffer, sizeof(buffer),
+                        "{\"temperature\": %.2f, \"humidity\": %.2f, \"status\": \"ok\"}",
+                        temperature, humidity);
+                return std::string(buffer);
+            });
+
+        ESP_LOGI(TAG, "DHT20 MCP tool registered: self.grove.get_temperature_humidity");
+    }
+    ```
+
+- Add DHT20 Initialization Call in Constructor
+
+    ```cpp
+    SensecapWatcher() {
+        ...
+        InitializeCamera();
+        InitializeDHT20();  // Initialize Grove DHT20 sensor
+    }
+    ```
+
+- Purpose
+
+    - `InitializeDHT20()` — Initializes the DHT20 sensor on the Grove interface and registers an MCP tool to allow internal access to temperature and humidity data.  
+    - The function creates the `DHT20` instance, calibrates it, and checks for initialization errors.  
+    - If initialization succeeds, it registers the MCP tool `self.grove.get_temperature_humidity` for reading sensor data via JSON.  
+    - Called in the constructor of `SensecapWatcher` to ensure the sensor is ready when the board starts:
+
+
 
 ## Troubleshooting
 
