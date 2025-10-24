@@ -31,7 +31,7 @@ SenseCAP Watcher is redefining how humans and devices interact.
 
 It possesses a unique "Frictionless Trigger" conversational ability, initiating interaction proactively as you approach. This isn't just a technical upgrade; it's a fundamental shift in interaction logic: **For the first time, the initiative transitions from the human to the machine, achieving an experiential leap from "humans adapting to machines" to "machines actively adapting to humans."**
 
-Watcher's "Keen Eye" is powered by a powerful **On-Device AI Vision Chip (Himax)**, enabling rapid local processing for object recognition and target tracking. Combined with the expandable **XiaoZhi** assistant firmware, it's more than just a camera—it's a dedicated AI assistant that evolves and understands your needs.
+Watcher's "Keen Eye" is powered by a powerful **On-Device AI Vision Chip (Himax)**, enabling rapid local processing for object recognition and target tracking. Combined with the expandable assistant firmware, it's more than just a camera—it's a dedicated AI assistant that evolves and understands your needs.
 
 ## Core Advantages
 
@@ -74,7 +74,7 @@ Watcher's "Keen Eye" is powered by a powerful **On-Device AI Vision Chip (Himax)
 			</div>
 			<div class="info-content">
 				<h3>Flexible Integration Platform and Tools</h3>
-				<p>Based on the XiaoZhi MCP architecture, you can freely define new AI tools and quickly integrate local or cloud services, seamlessly fitting into existing smart systems.</p>
+				<p>Based on its flexible MCP architecture, you can freely define new AI tools and quickly integrate local or cloud services, seamlessly fitting into existing smart systems.</p>
 			</div>
 		</li>
 		<li class="info-item">
@@ -102,7 +102,7 @@ SenseCAP Watcher can be thought of as a "modular" intelligent robot, with its co
 
 The process can be simplified as follows:
 
-Watcher's "eyes" (camera) capture images → The "visual nerve" (Himax chip) performs recognition and wakes up XiaoZhi → The "brain" (backend AI, MCP services) understands the context and responds.
+Watcher's "eyes" (camera) capture images → The "visual nerve" (Himax chip) performs recognition and wakes up the assistant → The "brain" (backend AI, MCP services) understands the context and responds.
 
 This modular design offers high flexibility and extensibility.
 
@@ -140,55 +140,9 @@ You can watch a detailed tutorial in the video below:
 
 Developers or advanced users can flash different models or firmware to empower Watcher with more powerful, exclusive capabilities.
 
-### 1. Flashing AI Models
-
-Leveraging the built-in Himax on-device AI vision chip, you can easily deploy new recognition models via the SenseCraft AI platform:
-
-- Connect your computer to the Type-C interface on the bottom of the Watcher.
-- On the SenseCraft AI platform, select `SenseCAP Watcher` under Workspace and choose the port with the **smaller serial number** for model flashing.
-
-  <div align="center">
-    <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/connect-watcher-himax.png" alt="connect-watcher-himax"/>
-  </div>
-
-- If the camera doesn't work properly after flashing, try restarting the device.
-
-### 2. Flashing XiaoZhi Firmware
-
-<Tabs>
-<TabItem value="sensecraft" label="SenseCraft AI">
-
-Coming Soon.
-
-</TabItem>
-<TabItem value="flasher" label="Single File Flash (Recommended)" default>
-
-- **Latest Firmware v1.8.8**: [Download Link](https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/v1.8.8_sensecap-watcher.zip)
-
-- Extract the downloaded firmware package and use the [esptool.py](https://github.com/espressif/esptool) tool to perform the flash:
-
-  ```shell
-  esptool.py -p /dev/ttyACM0 -b 2000000 write_flash 0 merged-binary.bin
-  ```
-  *(Note: Adjust the port `/dev/ttyACM0` according to your system, e.g., `COM3` on Windows)*
-
-</TabItem>
-
-<TabItem value="compile" label="Compile from Source (For Developers)">
-
-- Requires a pre-configured IDF toolchain environment. Clone the code repository: [GitHub Repository](https://github.com/Wvirgil123/xiaozhi-esp32/tree/feat-sscma_invoke)
-
-- Execute the following commands in the project root directory:
-
-  ```shell
-  cd xiaozhi-esp32
-  idf.py set-target esp32s3
-  idf.py menuconfig  # In the GUI, select the board type as SenseCAP Watcher
-  idf.py build flash monitor
-  ```
-
-</TabItem>
-</Tabs>
+For detailed instructions, please refer to the relevant sections in our comprehensive guide:
+- **[AI Model Flashing Process](/visual_trigger_and_ai_flash#ai-model-flashing-process)**
+- **[Firmware Flashing Process](/visual_trigger_and_ai_flash#firmware-flashing-process)**
 
 ## Start a Conversation
 
