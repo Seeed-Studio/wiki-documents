@@ -9,7 +9,6 @@ last_update:
   author: Citric
 ---
 
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
