@@ -1,6 +1,6 @@
 ---
-description: この記事では、Home Assistant で reTerminal E 系列 ePaper ディスプレイのハードウェア機能を ESPHome で活用する方法について説明します。
-title: Home Assistant での reTerminal E 系列 ePaper ディスプレイの高度な ESPHome 使用法
+description: この記事では、Home Assistant で reTerminal E シリーズ ePaper ディスプレイのハードウェア機能を ESPHome で活用する方法について説明します。
+title: Home Assistant での reTerminal E シリーズ ePaper ディスプレイの高度な ESPHome 使用法
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /ja/reterminal_e10xx_with_esphome_advanced
 sidebar_position: 3
@@ -13,15 +13,15 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Home Assistant での reTerminal E 系列 ePaper ディスプレイの高度な ESPHome 使用法
+# Home Assistant での reTerminal E シリーズ ePaper ディスプレイの高度な ESPHome 使用法
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-この記事では、reTerminal E 系列 ePaper ディスプレイデバイスの高度な ESPHome 設定について探求し、[基本的な ESPHome 使用ガイド](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome)で扱った基礎概念を基に構築します。ESPHome や reTerminal E 系列が初めての場合は、これらの高度なアプリケーションに取り組む前に、基本ガイドから始めることをお勧めします。
+この記事では、reTerminal E シリーズ ePaper ディスプレイデバイスの高度な ESPHome 設定について探求し、[基本的な ESPHome 使用ガイド](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome)で扱った基礎概念を基に構築します。ESPHome や reTerminal E シリーズが初めての場合は、これらの高度なアプリケーションに取り組む前に、基本ガイドから始めることをお勧めします。
 
 ## ハードウェア機能
 
-reTerminal E 系列 ePaper ディスプレイには、ESPHome を通じて Home Assistant で活用できるいくつかのハードウェアコンポーネントが含まれています：
+reTerminal E シリーズ ePaper ディスプレイには、ESPHome を通じて Home Assistant で活用できるいくつかのハードウェアコンポーネントが含まれています：
 
 - 3つのプログラマブルボタン（GPIO3、GPIO4、GPIO5）
 
@@ -35,13 +35,13 @@ reTerminal E 系列 ePaper ディスプレイには、ESPHome を通じて Home 
 
 これらの各コンポーネントを実用的なアプリケーションで使用する方法を探ってみましょう。
 
-## reTerminal E 系列 ePaper ディスプレイハードウェアコンポーネント制御
+## reTerminal E シリーズ ePaper ディスプレイハードウェアコンポーネント制御
 
-Home Assistant で reTerminal E 系列 ePaper ディスプレイの各ハードウェアコンポーネントを使用する方法を探ってみましょう。
+Home Assistant で reTerminal E シリーズ ePaper ディスプレイの各ハードウェアコンポーネントを使用する方法を探ってみましょう。
 
 ### ボタンと LED
 
-この例では、reTerminal E 系列 ePaper ディスプレイの3つのボタンを使用して機能を制御し、オンボード LED で視覚的なフィードバックを提供する方法を示します。
+この例では、reTerminal E シリーズ ePaper ディスプレイの3つのボタンを使用して機能を制御し、オンボード LED で視覚的なフィードバックを提供する方法を示します。
 
 以下のコードをコピーして、Yaml ファイルの `captive_portal` コード行の後に貼り付けることで、この例を使用できます。
 
@@ -115,7 +115,7 @@ light:
 
 ### ブザー制御
 
-reTerminal E 系列 ePaper ディスプレイには GPIO45 にブザーが含まれており、音声フィードバックを提供するために使用できます。設定方法は以下の通りです：
+reTerminal E シリーズ ePaper ディスプレイには GPIO45 にブザーが含まれており、音声フィードバックを提供するために使用できます。設定方法は以下の通りです：
 
 以下のコードをコピーして、Yaml ファイルの `captive_portal` コード行の後に貼り付けることで、この例を使用できます。
 
@@ -178,7 +178,7 @@ binary_sensor:
 
 ### バッテリー監視
 
-reTerminal E 系列 ePaper ディスプレイは、GPIO1 のアナログ入力を通じてバッテリーレベルを監視できます。設定方法は以下の通りです：
+reTerminal E シリーズ ePaper ディスプレイは、GPIO1 のアナログ入力を通じてバッテリーレベルを監視できます。設定方法は以下の通りです：
 
 ```yaml
 esphome:
@@ -274,7 +274,7 @@ sensor:
 
 ## デモ 2. Home Assistant ダッシュボードをスクリーンショットとして撮影
 
-この例では、Home Assistant ダッシュボードのスクリーンショットを撮影し、reTerminal E 系列に表示する方法を示します。
+この例では、Home Assistant ダッシュボードのスクリーンショットを撮影し、reTerminal E シリーズに表示する方法を示します。
 
 ### [Puppet](https://github.com/balloob/home-assistant-addons) アドオンのインストール
 
@@ -322,7 +322,7 @@ Puppet アドオンは、Home Assistant の任意のページのスクリーン�
 http://homeassistant.local:10000/lovelace/0?viewport=800x480
 ```
 
-この URL は、800x480 解像度（reTerminal E 系列に最適）でデフォルトダッシュボードのスクリーンショットをキャプチャします。
+この URL は、800x480 解像度（reTerminal E シリーズに最適）でデフォルトダッシュボードのスクリーンショットをキャプチャします。
 
 #### E-Paper 最適化
 
@@ -465,7 +465,7 @@ display:
 ネットワークでローカル DNS 解決が機能しない場合は、`homeassistant.local` を Home Assistant の実際の IP アドレスに置き換えてください。
 :::
 
-設定が正常にアップロードされ実行されると、reTerminal E 系列 ePaper ディスプレイに Home Assistant ダッシュボードのスクリーンショットが表示されます：
+設定が正常にアップロードされ実行されると、reTerminal E シリーズ ePaper ディスプレイに Home Assistant ダッシュボードのスクリーンショットが表示されます：
 
 <Tabs>
 <TabItem value="For E1001" label="E1001 用" default>
@@ -486,7 +486,7 @@ display:
 ディープスリーププログラムの使用を開始する場合は、右側の白いボタンを使用し、右側の白いボタンをスリープウェイクボタンとして設定することをお勧めします。これにより、プログラムを更新したい場合に、デバイスがスリープ状態でシリアルポート経由でプログラムをアップロードできないという困った状況を避けることができます。
 :::
 
-この例では、ディープスリープモードを使用して消費電力を大幅に削減し、reTerminal E 系列 ePaper ディスプレイをバッテリー駆動アプリケーションに適したものにする方法を示します。
+この例では、ディープスリープモードを使用して消費電力を大幅に削減し、reTerminal E シリーズ ePaper ディスプレイをバッテリー駆動アプリケーションに適したものにする方法を示します。
 
 以下のコードをコピーして、Yaml ファイルの `captive_portal` コード行の後に貼り付けることで、この例を使用できます。
 
@@ -624,7 +624,7 @@ display:
 理解を深めるために、この包括的な例を試す前に、上記の基本的な例を最初に実行することを強くお勧めします。
 :::
 
-この高度な例では、複数の機能を組み合わせて reTerminal E 系列の完全なダッシュボードソリューションを作成します。以下を実演します：
+この高度な例では、複数の機能を組み合わせて reTerminal E シリーズの完全なダッシュボードソリューションを作成します。以下を実演します：
 
 1. 天気と室内気候の表示
 2. アイコン付きバッテリー監視
@@ -1299,7 +1299,7 @@ display:
 
 </details>
 
-設定が正常にアップロードされ実行されると、reTerminal E 系列の ePaper ディスプレイには環境データ、時刻、バッテリー状態を含む包括的なダッシュボードが表示されます：
+設定が正常にアップロードされ実行されると、reTerminal E シリーズの ePaper ディスプレイには環境データ、時刻、バッテリー状態を含む包括的なダッシュボードが表示されます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/55.gif" style={{width:800, height:'auto'}}/></div>
 

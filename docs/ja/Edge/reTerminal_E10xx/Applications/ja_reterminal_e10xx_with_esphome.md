@@ -1,6 +1,6 @@
 ---
-description: この記事では、reTerminal E 系列 ePaper ディスプレイを Home Assistant と ESPHome で動作させる方法について説明します。
-title: reTerminal E 系列 ePaper ディスプレイを Home Assistant 用 ESPHome で動作させる
+description: この記事では、reTerminal E シリーズ ePaper ディスプレイを Home Assistant と ESPHome で動作させる方法について説明します。
+title: reTerminal E シリーズ ePaper ディスプレイを Home Assistant 用 ESPHome で動作させる
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /ja/reterminal_e10xx_with_esphome
 sidebar_position: 2
@@ -13,7 +13,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# reTerminal E 系列 ePaper ディスプレイを Home Assistant 用 ESPHome で動作させる
+# reTerminal E シリーズ ePaper ディスプレイを Home Assistant 用 ESPHome で動作させる
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.jpg" style={{width:700, height:'auto'}}/></div><br />
 
@@ -41,9 +41,9 @@ Home Assistant は、スマートホームデバイスを単一の統合イン�
     <a class="get_one_now_item" href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 詳細を見る 🖱️</font></span></strong></a>
 </div>
 
-### なぜ reTerminal E 系列 ePaper ディスプレイと Home Assistant なのか？
+### なぜ reTerminal E シリーズ ePaper ディスプレイと Home Assistant なのか？
 
-reTerminal E 系列 ePaper ディスプレイは、いくつかの理由で Home Assistant の優れたコンパニオンです：
+reTerminal E シリーズ ePaper ディスプレイは、いくつかの理由で Home Assistant の優れたコンパニオンです：
 
 1. **エネルギー効率**: e-paper ディスプレイはコンテンツを更新する時のみ電力を消費するため、天気予報、カレンダーイベント、システム状態などの持続的な情報表示に最適です。
 
@@ -53,11 +53,11 @@ reTerminal E 系列 ePaper ディスプレイは、いくつかの理由で Home
 
 4. **柔軟な統合**: ESPHome を通じて、ディスプレイは Home Assistant とシームレスに統合され、スマートホームシステムからのあらゆるデータをエレガントで常時表示可能な形式で表示できます。
 
-これらの利点により、reTerminal E 系列 ePaper ディスプレイは、Home Assistant セットアップ用のエネルギー効率的で常時オンの情報ディスプレイを作成するのに理想的な選択肢となります。
+これらの利点により、reTerminal E シリーズ ePaper ディスプレイは、Home Assistant セットアップ用のエネルギー効率的で常時オンの情報ディスプレイを作成するのに理想的な選択肢となります。
 
 ### ESPHome 統合
 
-ESPHome は、ESP8266/ESP32 デバイス専用に設計されたオープンソースファームウェア作成ツールです。シンプルな YAML 設定ファイルを使用してカスタムファームウェアを作成し、デバイスにフラッシュできます。reTerminal E 系列では、ESPHome がデバイスと Home Assistant 間の通信を可能にする重要なミドルウェアとして機能します。
+ESPHome は、ESP8266/ESP32 デバイス専用に設計されたオープンソースファームウェア作成ツールです。シンプルな YAML 設定ファイルを使用してカスタムファームウェアを作成し、デバイスにフラッシュできます。reTerminal E シリーズでは、ESPHome がデバイスと Home Assistant 間の通信を可能にする重要なミドルウェアとして機能します。
 
 このシステムは、YAML 設定を ESP デバイス上で動作する完全機能のファームウェアに変換することで動作します。このファームウェアは、ネットワークへの接続、Home Assistant との通信、ePaper ディスプレイの制御といった複雑なタスクをすべて処理します。Home Assistant と組み合わせることで、ESPHome は高度なホームオートメーションディスプレイとコントロールを作成するための堅牢なプラットフォームを提供します。
 
@@ -330,7 +330,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 
 ### 簡単なグラフィックの描画
 
-この YAML コード例は、ESPHome プロジェクト用の SPI インターフェースと reTerminal E 系列 ePaper ディスプレイを設定します。`lambda` セクションには、画面に簡単な図形をレンダリングする描画コマンドが含まれています：
+この YAML コード例は、ESPHome プロジェクト用の SPI インターフェースと reTerminal E シリーズ ePaper ディスプレイを設定します。`lambda` セクションには、画面に簡単な図形をレンダリングする描画コマンドが含まれています：
 
 - 2つの長方形（1つは位置 (10, 10) でサイズ 100x50、もう1つは (150, 10) でサイズ 50x50）
 - 1つの円（位置 (250, 35)、半径 25）
@@ -429,7 +429,7 @@ display:
 
 ### 表示用に Home Assistant から値を取得する
 
-reTerminal E 系列 ePaper ディスプレイデバイスに天気データを表示するには、Home Assistant から温度、天気状況、風速データにアクセスする必要があります。Open-Meteo 統合は、Developer Tools を通じてアクセスできる信頼性の高い天気データを提供します。
+reTerminal E シリーズ ePaper ディスプレイデバイスに天気データを表示するには、Home Assistant から温度、天気状況、風速データにアクセスする必要があります。Open-Meteo 統合は、Developer Tools を通じてアクセスできる信頼性の高い天気データを提供します。
 
 #### Open-Meteo 統合のインストール
 
@@ -463,7 +463,7 @@ Open-Meteo 統合をインストールした後、Developer Tools を通じて�
 
 #### ESPHome での天気データの使用
 
-reTerminal E 系列の ESPHome 設定でこの天気データを使用するには、ESPHome YAML 設定で Home Assistant API 接続を設定する必要があります：
+reTerminal E シリーズの ESPHome 設定でこの天気データを使用するには、ESPHome YAML 設定で Home Assistant API 接続を設定する必要があります：
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -488,7 +488,7 @@ sensor:
     internal: true
 ```
 
-この設定により、ESPHome デバイスに Home Assistant 天気統合からデータを取得するセンサーエンティティが作成されます。これらのセンサーを使用して、reTerminal E 系列 ePaper Display ディスプレイを現在の天気情報で更新できます。
+この設定により、ESPHome デバイスに Home Assistant 天気統合からデータを取得するセンサーエンティティが作成されます。これらのセンサーを使用して、reTerminal E シリーズ ePaper Display ディスプレイを現在の天気情報で更新できます。
 
 :::tip
 予報データについては、将来の日の予測値を含む `weather.open_meteo_forecast` エンティティを使用する必要があります。
@@ -626,19 +626,19 @@ display:
 
 上記のコードをコンパイルしてデバイスにアップロードした後、最初に画面に **NaN** が表示される場合がありますが、心配する必要はありません。これは正常です。これは、デバイスがまだ Home Assistant 環境に追加されていないため、reTerminal がまだ Home Assistant データを取得できていないためです。以下の手順に従ってデバイスを追加するだけです。
 
-#### reTerminal E 系列 ePaper Display を Home Assistant に追加する
+#### reTerminal E シリーズ ePaper Display を Home Assistant に追加する
 
 ステップ 1. デバイスをフラッシュした後、Home Assistant に戻り、**Settings → Devices & Services** に移動します。
 
-ステップ 3. Home Assistant は mDNS を介して reTerminal E 系列 ePaper Display デバイスを自動的に検出するはずです。検出されたデバイスセクションに表示される場合は、Configure をクリックして追加します。
+ステップ 3. Home Assistant は mDNS を介して reTerminal E シリーズ ePaper Display デバイスを自動的に検出するはずです。検出されたデバイスセクションに表示される場合は、Configure をクリックして追加します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
 ステップ 4. デバイスが自動的に検出されない場合は、Add Integration をクリックして "ESPHome" を検索します。
 
-ステップ 5. reTerminal E 系列 ePaper Display デバイスの IP アドレスと、設定した場合は API 暗号化キーを入力します。
+ステップ 5. reTerminal E シリーズ ePaper Display デバイスの IP アドレスと、設定した場合は API 暗号化キーを入力します。
 
-ステップ 6. 接続されると、reTerminal E 系列 ePaper Display が Home Assistant にデバイスとして表示され、すべてのセンサーとコンポーネントが利用可能になります。
+ステップ 6. 接続されると、reTerminal E シリーズ ePaper Display が Home Assistant にデバイスとして表示され、すべてのセンサーとコンポーネントが利用可能になります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/40.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -650,7 +650,7 @@ display:
 
 ### TrueType フォントの描画
 
-この例では、TrueType フォントを使用して reTerminal E 系列 ePaper Display にカスタムアイコンを表示する方法を示します。Material Design Icons は、e-paper ディスプレイに最適な幅広いスケーラブルシンボルを提供します。
+この例では、TrueType フォントを使用して reTerminal E シリーズ ePaper Display にカスタムアイコンを表示する方法を示します。Material Design Icons は、e-paper ディスプレイに最適な幅広いスケーラブルシンボルを提供します。
 
 #### 必要なツールのインストール
 
@@ -780,7 +780,7 @@ display:
 
 :::
 
-ステップ 7. 設定を保存し、reTerminal E 系列にアップロードします。以下の画像のようなフィードバックが表示されれば、コードが正常に実行されています。
+ステップ 7. 設定を保存し、reTerminal E シリーズにアップロードします。以下の画像のようなフィードバックが表示されれば、コードが正常に実行されています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/42.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -833,7 +833,7 @@ lambda: |-
 
 ### カスタム画像の表示
 
-この例では、reTerminal E 系列 ePaper Display e-paper ディスプレイにカスタム画像を表示する方法を説明します。この機能を使用して、ダッシュボード体験を向上させるロゴ、アイコン、またはグラフィックを表示できます。
+この例では、reTerminal E シリーズ ePaper Display e-paper ディスプレイにカスタム画像を表示する方法を説明します。この機能を使用して、ダッシュボード体験を向上させるロゴ、アイコン、またはグラフィックを表示できます。
 
 #### 準備
 
@@ -943,7 +943,7 @@ display:
 </TabItem>
 </Tabs>
 
-ステップ 6. 設定を保存し、reTerminal E 系列にアップロードします。更新が完了すると、e-paper ディスプレイに画像が表示されます。
+ステップ 6. 設定を保存し、reTerminal E シリーズにアップロードします。更新が完了すると、e-paper ディスプレイに画像が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/43.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -1000,11 +1000,11 @@ lambda: |-
 e-paper ディスプレイのリフレッシュレートは制限されていることを覚えておいてください。`update_interval: 300s` 設定は、ディスプレイが5分ごとにのみリフレッシュされることを意味します。ニーズに応じてこの値を調整してください。ただし、頻繁なリフレッシュは e-paper ディスプレイの寿命を短縮する可能性があることに注意してください。
 :::
 
-画像を、前の例で説明したテキストやその他の表示要素と組み合わせることで、reTerminal E 系列で豊富で情報量の多いダッシュボードを作成できます。
+画像を、前の例で説明したテキストやその他の表示要素と組み合わせることで、reTerminal E シリーズで豊富で情報量の多いダッシュボードを作成できます。
 
 ## 続きを読む
 
-スペースの制約により、この記事ではデバイスの基本的な使用例と描画例のみを扱っています。Home Assistant での reTerminal のハードウェアの ESPHome での使用について、[reTerminal E 系列 ePaper Display の Home Assistant での高度な ESPHome 使用法](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced)の Wiki でより詳しく説明しますので、続けてお読みください。
+スペースの制約により、この記事ではデバイスの基本的な使用例と描画例のみを扱っています。Home Assistant での reTerminal のハードウェアの ESPHome での使用について、[reTerminal E シリーズ ePaper Display の Home Assistant での高度な ESPHome 使用法](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced)の Wiki でより詳しく説明しますので、続けてお読みください。
 
 ## FAQ
 
@@ -1020,7 +1020,7 @@ e-paper ディスプレイのリフレッシュレートは制限されている
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
-### Q3: reTerminal E 系列 ePaper Display がコンピューターに接続できませんか？
+### Q3: reTerminal E シリーズ ePaper Display がコンピューターに接続できませんか？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/68.png" style={{width:600, height:'auto'}}/></div>
 

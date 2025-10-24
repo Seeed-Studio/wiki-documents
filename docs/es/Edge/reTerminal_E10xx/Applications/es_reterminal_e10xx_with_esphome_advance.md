@@ -322,7 +322,7 @@ El complemento Puppet lanza un servidor en el puerto 10000 que genera capturas d
 http://homeassistant.local:10000/lovelace/0?viewport=800x480
 ```
 
-Esta URL capturará una captura de pantalla de tu panel predeterminado a resolución 800x480 (perfecto para reTerminal E 系列).
+Esta URL capturará una captura de pantalla de tu panel predeterminado a resolución 800x480 (perfecto para reTerminal E Series).
 
 #### Optimización para Papel Electrónico
 
@@ -465,7 +465,7 @@ display:
 Reemplaza `homeassistant.local` con la dirección IP real de tu Home Assistant si la resolución DNS local no funciona en tu red.
 :::
 
-Cuando tu configuración se haya subido y esté ejecutándose exitosamente, tu Pantalla ePaper reTerminal E 系列 mostrará una captura de pantalla de tu panel de Home Assistant:
+Cuando tu configuración se haya subido y esté ejecutándose exitosamente, tu Pantalla ePaper reTerminal E Series mostrará una captura de pantalla de tu panel de Home Assistant:
 
 <Tabs>
 <TabItem value="For E1001" label="Para E1001" default>
@@ -486,7 +486,7 @@ Cuando tu configuración se haya subido y esté ejecutándose exitosamente, tu P
 Si comienzas a usar el programa de Suspensión Profunda, recomendamos que lo uses preferiblemente con el botón blanco del lado derecho y configures el botón blanco del lado derecho como el botón de Despertar de Suspensión. De esta manera, cuando quieras actualizar el programa, no te encontrarás con la situación incómoda donde el dispositivo está durmiendo y no puedes subir el programa a través del puerto serie.
 :::
 
-Este ejemplo demuestra cómo usar el modo de suspensión profunda para reducir significativamente el consumo de energía, haciendo que tu Pantalla ePaper reTerminal E 系列 sea adecuada para aplicaciones alimentadas por batería.
+Este ejemplo demuestra cómo usar el modo de suspensión profunda para reducir significativamente el consumo de energía, haciendo que tu Pantalla ePaper reTerminal E Series sea adecuada para aplicaciones alimentadas por batería.
 
 Puedes usar este ejemplo copiando el código de abajo y pegándolo después de la línea de código `captive_portal` en tu archivo Yaml.
 
@@ -624,7 +624,7 @@ Cuando esté ejecutándose, verás un contador incrementar cada vez que el dispo
 Para una mejor comprensión, recomendamos encarecidamente que ejecutes primero los ejemplos básicos anteriores antes de probar este ejemplo integral.
 :::
 
-Este ejemplo avanzado combina múltiples características en una solución completa de panel para el reTerminal E 系列. Demuestra:
+Este ejemplo avanzado combina múltiples características en una solución completa de panel para el reTerminal E Series. Demuestra:
 
 1. Visualización del clima y clima interior
 2. Monitoreo de batería con iconos
