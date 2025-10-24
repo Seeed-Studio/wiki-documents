@@ -386,7 +386,9 @@ void setup()
 
 这是该产品的介绍视频，包含简单的演示，您可以尝试一下。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5NBdUr5D-8M?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **家庭自动化与监控：** 一个基于 RSL10 Sense DB 的系统，可以通过智能手机应用和 Alexa 监控和控制温度、湿度和光强。
 
@@ -394,7 +396,9 @@ void setup()
 
 **Grove - 4-Channel SPDT Relay：** 嘿，Seeekers！这是我们 #新产品星期二 的第二周。在这段视频中，我们将展示新产品 Grove - 4-Channel SPDT Relay，并进行一个有趣的演示。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=5NBdUr5D-8M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技术支持与产品讨论
 

@@ -11,6 +11,8 @@ slug: /lerobot_so100m_new
 last_update:
   date: 9/26/2025
   author: LiShanghang
+translation:
+  skip: [ zh-CN ]
 ---
 
 # Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot
@@ -589,6 +591,118 @@ The teleoperate command will automatically:
 
 ## Add cameras
 
+<details>
+<summary> If using the Orbbec Gemini2 Depth Camera </summary>
+
+<div align="center">
+    <img width={800}
+    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" />
+</div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank" rel="noopener noreferrer" >
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
+
+- 🚀 Step 1: Install the Orbbec SDK Dependent Environment
+
+1. Clone the `pyorbbec` repository
+
+   ```bash
+   cd ~/
+   git clone https://github.com/orbbec/pyorbbecsdk.git
+   ```
+
+2. Download and install the corresponding **.whl file** for the SDK  
+   Go to [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases),  
+   select and install based on your Python version. For example:
+
+   ```bash
+   pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
+   ```
+
+3. Install dependencies in the `pyorbbec` directory
+
+   ```bash
+   cd ~/pyorbbecsdk
+   pip install -r requirements.txt
+   ```
+
+   Force downgrade the `numpy` version to `1.26.0`
+
+    ```bash
+    pip install numpy==1.26.0
+    ```
+
+  Red error messages can be ignored.
+
+4. Clone the Orbbec SDK into the `~/lerobot/src/cameras` directory
+
+  ```bash
+  cd ~/lerobot/src/cameras
+  git clone https://github.com/ZhuYaoHui1998/orbbec.git
+  ```
+
+5. Modify utils.py and **init**.py
+
+- Find `utils.py` in the `~/lerobot/src/lerobot/cameras` directory, and add the following code at line 40:
+
+```python
+elif cfg.type == "orbbec":
+            from .orbbec.camera_orbbec import OrbbecCamera
+
+            cameras[key] = OrbbecCamera(cfg)
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/utils.png" />
+</div>
+
+- Find `__init__.py` in the `~/lerobot/src/lerobot/cameras` directory, and add the following code at line 18:
+
+```python
+from .orbbec.configuration_orbbec import OrbbecCameraConfig
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
+</div>
+
+- 🚀 Step 2: Function Call and Examples
+
+In all the following examples, replace `so101_follower` with the actual model of the robotic arm you are using (e.g., `so100` / `so101`).
+
+We have added the `focus_area` hyperparameter. Since depth data that is too far away is meaningless for the robotic arm (it cannot reach or grasp objects), depth data less than or greater than the `focus_area` will be displayed in black. The default `focus_area` is (20, 600).  
+Currently, the only supported resolution is width: 640, height: 880.
+
+```bash
+lerobot-teleoperate \
+    --robot.type=so101_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=my_awesome_follower_arm \
+    --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+    --teleop.type=so101_leader \
+    --teleop.port=/dev/ttyACM1 \
+    --teleop.id=my_awesome_leader_arm \
+    --display_data=true
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/orbbec_result.png" />
+</div>
+
+For subsequent tasks such as data collection, training, and evaluation, the process is the same as that for regular RGB commands. You only need to replace the relevant part in the regular RGB command with:
+
+```bash
+  --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+```
+
+You can also add an additional monocular RGB camera afterward.
+
+</details>
+
 :::tip
 The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
 :::
@@ -632,7 +746,7 @@ lerobot-teleoperate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -641,6 +755,11 @@ lerobot-teleoperate \
 
 If you have more cameras, you can change `--robot.cameras` to add cameras. You should note the format of the index_or_path, which is determined by the last digit of the camera ID output by `python -m lerobot.find_cameras opencv`.
 
+:::tip
+Images in the `fourcc: "MJPG"` format are compressed. You can try higher resolutions, and you may also attempt the `YUYV` format. However, the latter will reduce the image resolution and FPS, leading to lag in the robotic arm's operation. Currently, under the `MJPG` format, it can support 3 cameras at a resolution of `1920*1080` while maintaining `30FPS`. That said, connecting 2 cameras to a computer via the same USB HUB is still not recommended.
+:::
+
+
 For example, you want to add a side camera:
 
 ```bash
@@ -648,12 +767,17 @@ lerobot-teleoperate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true
 ```
+
+:::tip
+Images in the `fourcc: "MJPG"` format are compressed. You can try higher resolutions, and you may also attempt the `YUYV` format. However, the latter will reduce the image resolution and FPS, leading to lag in the robotic arm's operation. Currently, under the `MJPG` format, it can support 3 cameras at a resolution of `1920*1080` while maintaining `30FPS`. That said, connecting 2 cameras to a computer via the same USB HUB is still not recommended.
+:::
+
 
 :::tip
 If you find bug like this.
@@ -684,7 +808,7 @@ lerobot-record \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -719,7 +843,7 @@ lerobot-record \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -776,6 +900,16 @@ Control the data recording flow using keyboard shortcuts:
 | → (Right Arrow) | Early-stop current episode/reset; move to next. |  
 | ← (Left Arrow) | Cancel current episode; re-record it. |  
 | ESC | Stop session immediately, encode videos, and upload dataset. |  
+
+:::tip
+
+If keyboard not work, you may need install other version of pynput.
+
+```bash
+pip install pynput==1.6.8
+```
+
+:::
 
 **Tips for Gathering Data**
 
@@ -993,7 +1127,7 @@ lerobot-record \
   --robot.type=so101_follower \
   --robot.port=/dev/ttyACM0 \ # <- Use your port
   --robot.id=my_blue_follower_arm \ # <- Use your robot id
-  --robot.cameras="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30}}" \ # <- Use your cameras
+  --robot.cameras="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \ # <- Use your cameras
   --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
   --dataset.repo_id=${HF_USER}/eval_DATASET_NAME_test \  # <- This will be the dataset name on HF Hub
   --dataset.episode_time_s=50 \
@@ -1096,7 +1230,7 @@ You can use the `record` function from [`lerobot/record.py`](https://github.com/
 lerobot-record \
   --robot.type=so100_follower \
   --robot.port=/dev/ttyACM0 \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video10, width: 640, height: 480, fps: 30}, side: {type: intelrealsense, serial_number_or_name: 233522074606, width: 640, height: 480, fps: 30}}" \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video10, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: intelrealsense, serial_number_or_name: 233522074606, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
   --robot.id=my_awesome_follower_arm \
   --display_data=false \
   --dataset.repo_id=${HF_USER}/eval_so100 \
@@ -1110,7 +1244,7 @@ such as:
 lerobot-record \
   --robot.type=so101_follower \
   --robot.port=/dev/ttyACM0 \
-  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
   --robot.id=my_awesome_follower_arm \
   --display_data=false \
   --dataset.repo_id=seeed/eval_test123 \

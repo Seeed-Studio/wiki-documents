@@ -24,7 +24,9 @@ We will also utilize Microsoft Azure IoT Central service to store the room occup
 
 For more details and video tutorial, watch the corresponding video!
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pt1maDNXznI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Understanding the data
 

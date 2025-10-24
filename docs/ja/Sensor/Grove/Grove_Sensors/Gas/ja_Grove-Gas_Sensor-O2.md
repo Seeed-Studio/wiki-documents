@@ -20,7 +20,9 @@ last_update:
 
 Grove - 酸素センサー(ME2-O2-Ф20)は、空気中の酸素濃度を測定するセンサーであり、電気化学セルの原理に基づいて動作します。酸素濃度に比例した電圧値を出力し、酸素濃度の線形特性グラフを参照することで、現在の酸素濃度を明確に知ることができます。環境保護における酸素濃度の検出に非常に適しています。Grove - ガスセンサー(O₂)は有機反応モジュールであり、空気中に置くと少量の電流を生成します。外部電源を提供する必要はなく、時間経過に伴い電流が変化すると出力電圧も変化します。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 [<p><img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/get_one_now.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/grove-gas-sensoro2-p-1541.html)
 

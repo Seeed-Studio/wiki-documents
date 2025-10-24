@@ -240,6 +240,10 @@ The B2B connector of XIAO ESP32S3 Plus is compatible with [Wio-SX1262 extension 
 
 </Tabs>
 
+:::caution
+Although the XIAO ESP32-S3 assigns GPIO41 and GPIO42 to pins A11 and A12, due to the nature of the ESP32-S3 chip, pins A11 and A12 do not support ADC functionality. Please be sure to distinguish and differentiate between them.
+:::
+
 ### Power Pins
 
 - 5V - This is 5v out from the USB port. You can also use this as a voltage input but you must have some sort of diode (schottky, signal, power) between your external power source and this pin with anode to battery, cathode to 5V pin.
@@ -533,7 +537,7 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 - **Step 4.** Close the Arduino IDE and reopen it.-->
 
 <Tabs>
-<TabItem value="(Sense)" label="for XIAO ESP32S2 (Sense)" default>
+<TabItem value="(Sense)" label="for XIAO ESP32S3 (Sense)" default>
 
 Also, search for **xiao** in the development board on the left. select **XIAO_ESP32S3**.
 
@@ -772,12 +776,12 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 
 ### For Seeed Studio XIAO ESP32S3 Plus
 
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1.0_SCH_PCB.zip)
+- **[PDF]** [Seeed Studio XIAO ESP32S3 Plus Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_SCH_PDF.pdf)
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCAD Libraries](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_KiCAD_Library2.zip)
 - **[DXF]** [Seeed Studio XIAO ESP32S3 Plus Dimension in DXF (top)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/TOP.dxf)
 - **[DXF]** [Seeed Studio XIAO ESP32S3 Plus Dimension in DXF (bottom)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/BOTTOM.dxf)
 - **[XLSX]** [Seeed Studio XIAO ESP32S3 Plus pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_Pinout.xlsx)
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCAD file](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_V1.0_SCH%26PCB_KICAD.zip)
+- **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCAD file](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1_SCH_PCB.zip)
 - **[ZIP]** [Seeed Studio XIAO Plus Base with botton pad lead out](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip)
 - **[ZIP]** [Seeed Studio XIAO Plus Base without botton pad lead out](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
 

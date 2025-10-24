@@ -19,7 +19,9 @@ last_update:
 Grove - 氧气传感器(ME2-O2-Ф20)是一种用于测试空气中氧气浓度的传感器，基于电化学电池的原理进行工作。当您输出与氧气浓度成正比的电压值并参考氧气浓度线性特性图时，您可以清楚地了解当前的氧气浓度。它非常适合在环境保护中检测氧气浓度。Grove - 气体传感器(O2)是一个有机反应模块，当将其置于空气中时可以提供少量电流，我们不需要为其提供外部电源，输出电压会随着时间电流的变化而变化。
 
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 [<p><img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/get_one_now.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/grove-gas-sensoro2-p-1541.html)
 

@@ -70,7 +70,9 @@ The ESP-IDF version must be greater than v5.0. If you're using an older version,
 
 For newer users, this video may help you better understand the steps below:
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/oqJz6zKfc4A?si=glzTFfR7m392eITb" title="Set Up the ESP-IDF Toolchain for SenseCAP Indicator on Windows" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 #### **Toolchain Installation**
 
@@ -482,7 +484,7 @@ Search "Indicator" and select `Seeed INDICATOR RP2040` board and select the `usb
 
 - **Step 6**: Open the example code file
 
-**File** -> **Open**, then select the example code file ([.ino file](https://github.com/Seeed-Solution/sensecap_indicator_rp2040/tree/main/examples/terminal_rp2040)).
+**File** -> **Open**, then select the example code file ([.ino file](https://github.com/Seeed-Solution/SenseCAP_Indicator_RP2040/tree/main/examples/indicator_rp2040)).
 
 We provide an example code file, you can modify the code according to your needs.
 

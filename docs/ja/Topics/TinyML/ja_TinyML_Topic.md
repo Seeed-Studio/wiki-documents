@@ -405,7 +405,7 @@ Wio Terminalは、メーカー、趣味愛好家、IoT愛好家向けに設計�
 
 Wio TerminalはArduino、MicroPython、CircuitPythonなどの幅広いプログラミング言語をサポートしており、開発者が簡単に始められるようになっています。そのコンパクトで携帯性に優れたデザインにより、スマートデバイスの作成から産業用途のプロトタイプ構築まで、幅広いプロジェクトに最適です。
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="960" height="500" src="https://www.youtube.com/embed/3Fp3W9VJUL4" title="YouTube動画プレーヤー" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 

@@ -55,7 +55,9 @@ Humans can identify any object by just gazing at it for few seconds, it's really
 
 Then Neural Network dominated Vision field, especially the problem of classification and segmentation, and the convolutional neural network is one of the most prominent approaches which won numerous competitions in recent years. It has outstanding results in image recognition.
 Nvidia has built a lot of [Vision Demos](https://github.com/dusty-nv/jetson-inference) for Jetson Nano, and we have tested two of them for classification and face detection:
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/U0rNdI9pl_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Art
 

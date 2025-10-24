@@ -13,7 +13,9 @@ last_update:
 
 # SenseCAP Indicator - ChatGPT - DALL·E Desarrollo de Aplicaciones
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/xUX47UnT7xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 <div class="button-container">
     <a class="button-style" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html">

@@ -1,0 +1,10 @@
+position: 8 # float position is supported
+label: 'SenseCAP Watcher para Xiaozhi AI'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: SenseCAP_Watcher_for_Xiaozhi_AI
+link:
+  type: generated-index
+  slug: es/sensecap_watcher_for_xiaozhi_ai
+  title: SenseCAP Watcher para Xiaozhi AI
+  description: Aprende cómo configurar y usar SenseCAP Watcher con Xiaozhi AI para monitoreo inteligente y automatización.

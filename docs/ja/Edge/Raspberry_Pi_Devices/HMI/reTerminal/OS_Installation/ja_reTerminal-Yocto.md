@@ -545,7 +545,9 @@ Yoctoを使用して既にコンパイル済みのreTerminalシステムイメ�
 
 この講演は主に、Yoctoプロジェクトを使用してCM4キャリアボード、X86、STM32ボード用のカスタムLinuxイメージを簡単に作成する方法について説明することに焦点を当てています。また、講演の最後には、Qt、LVGLに基づく2つのHMIデモと、Menderを使用してこれらのSBCに安全で堅牢なOTAアップデートを提供するデモがあります。
 
-<p style={{textAlign: 'center'}}><iframe width="720" height="480" src="https://www.youtube.com/embed/OHT9f_NOEpA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<div class="video-container">
+<iframe width="720" height="480" src="https://www.youtube.com/embed/OHT9f_NOEpA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## リソース
 

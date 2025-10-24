@@ -29,7 +29,9 @@ MT3620 软件开发支持使用功能强大的 Microsoft Visual Studio IDE：
 - 安装 [Visual Studio](https://visualstudio.microsoft.com/)（支持社区版、企业版或专业版）和 Azure Sphere 扩展，使用 USB 将开发板连接到 PC，并开始开发具有前所未有安全级别的物联网应用程序。
 - 要使用 MT3620 开发板进行 Azure Sphere 开发，您需要一台安装最新 Windows 更新的 Windows 10 PC，以及 [Azure Sphere 软件开发工具包](http://aka.ms/AzureSphereSDK) SDK。
 
+<div class="video-container">
 <iframe width="600" height="450" src="https://www.youtube.com/embed/iiDF26HNh-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 |产品名称 | 购买方式|
 |----------------|-----------|
@@ -375,7 +377,9 @@ line-height:3px
 
 有关详细操作，请参考视频。
 
+<div class="video-container">
 <iframe width="1000" height="669" src="https://www.youtube.com/embed/KXThR9RUNvw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 资源
 

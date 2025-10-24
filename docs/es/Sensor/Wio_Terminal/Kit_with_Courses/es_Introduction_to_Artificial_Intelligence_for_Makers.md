@@ -55,7 +55,9 @@ Los humanos pueden identificar cualquier objeto con solo mirarlo durante unos se
 
 Entonces las Redes Neuronales dominaron el campo de la Visión, especialmente el problema de clasificación y segmentación, y la red neuronal convolucional es uno de los enfoques más prominentes que ganó numerosas competencias en años recientes. Tiene resultados sobresalientes en reconocimiento de imágenes.
 Nvidia ha construido muchas [Demos de Visión](https://github.com/dusty-nv/jetson-inference) para Jetson Nano, y hemos probado dos de ellas para clasificación y detección de rostros:
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/U0rNdI9pl_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Arte
 

@@ -382,7 +382,9 @@ El parámetro **2** es el valor de histéresis.
 
 Este es el video de introducción de este producto, demostraciones simples, puedes intentarlo.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3slfeHKSSCw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Soporte Técnico y Discusión del Producto
 

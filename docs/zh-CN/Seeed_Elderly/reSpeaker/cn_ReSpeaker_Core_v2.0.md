@@ -638,7 +638,9 @@ aplay hello3.wav
 
 请按照 [ReSpeaker Core V2 & Wio Link 教程](https://wiki.seeedstudio.com/cn/ReSpeaker_Core_V2_&_Wio_Link/) 来使用 ReSpeaker Core V2 通过 IFTTT 控制 Wio Link。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/OJ0i6QrZCSM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 与 GPIO 一起使用
 
@@ -1002,7 +1004,9 @@ sudo python usrer_button.py
 
 在这个演示中，我们使用ReSpeaker Core v2.0与Alexa对话。您可以提出任何问题，并像朋友一样与ReSpeaker Core v2.0交谈。此外，该产品还可以与Google Assistant和Bing配合使用。唤醒词是Snowboy，当然您也可以制作自己的唤醒词。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/q7b8iLqRiPY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 <br />
 
@@ -1012,7 +1016,9 @@ sudo python usrer_button.py
 
 凭借先进的算法和六个高质量麦克风，结果令人惊叹！我们可以在16米（52英尺）外唤醒ReSpeaker Core v2.0！
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/PpcwvOLlpEw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **ReSpeaker Core v2.0 - 语音接待系统**
 
@@ -1020,14 +1026,18 @@ sudo python usrer_button.py
 
 在您的房子或工作场所前面有这样一个语音接待系统怎么样？是不是很酷？
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/tdIsCRXKoVI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 <br />
 
 **ReSpeaker Core v2.0 - 简单语音接待系统**
 
 接待服务的基本功能是迎接访客，让他们感到受欢迎，并防止未经授权的人员进入办公室。我们利用ReSpeaker Core v2.0的功能来设计语音接待服务。该系统可以与访客互动，并向被访问的人传递消息。将来，我们可以设计一个小型办公室员工电话列表数据库，员工可以向系统发送消息，系统使用ReSpeaker Core v2.0的GPIO功能为访客开门。我们使用Microsoft Bing语音转文本服务和Twilio/腾讯消息API来编写python脚本。更多信息，请参考[ReSpeaker语音接待系统](https://project.seeedstudio.com/SeeedStudio/respeaker-voice-reception-system-209a6c)。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/-nTOa3LLpVo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技术支持与产品讨论
 

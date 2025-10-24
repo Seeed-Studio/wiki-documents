@@ -370,8 +370,11 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
    - 代码块内容（\`\`\`之间的内容）
    - 行内代码（\`之间的内容）
    - URL链接
-   - HTML标签
+   - HTML 标签**结构**与**属性**保持不变（不要新增/删除/重排标签；不要修改属性名/属性值）
+   - 但标签之间的**可见文本内容要翻译**（例如 <span>、<strong>、<font> 内部的文字）
    - 专有名词：${termsList.split('\n').slice(0, 5).join(', ')}等
+   - **教程中引用的目标软件或系统界面的英文元素**（如 App 内的菜单项、按钮名称、字段名、设置项等，通常出现在引号 "..."、加粗 **...**、或菜单路径 File > Preferences 等），请保持英文原文，不要翻译，以便与实际界面一致。
+   - 但**网页自身的 HTML 或 JSX 标签内的可见文字**（例如 <span>、<strong>、<font>、导航链接、标题等）若是文档页面展示给读者看的内容，应正常翻译。
 
 2. **术语表（强制翻译）**：以下术语若出现，必须严格使用右侧译法（不允许其它译法）：
 ${glossaryPairs}
@@ -385,10 +388,25 @@ ${glossaryPairs}
    - 列表项的缩进级别必须保持不变
    - 代码块内的缩进必须完全保留
 
-5. **锚点链接处理**：
-   - 在[文本](#锚点)格式中，锚点部分的空格用连字符替换
-   - 例如：[Some Text](#some-text) → [一些文本](#一些-文本)
-   - 注意：锚点中绝不能有空格，必须用连字符连接
+5. **内部链接的锚点（fragment）处理——仅限 Seeed 内部链接（合并规则）**：
+   - 仅当链接满足以下任一条件时处理锚点：
+     1) 以 \`https://wiki.seeedstudio.com/\` 开头；或  
+     2) 为相对链接（以 \`/\` 开头或以 \`#\` 开头）
+   - **不要尝试推断标题位置**。对 \`#\` 后的 fragment 采用如下**机械流程**：
+     - 第一步：将 fragment 中的连字符 \`-\` **视为空格**，还原为一个正常短语/句子（不改变词序，不删除词元）
+     - 第二步：翻译这个短语/句子为目标语言
+     - 第三步：**将译文中的空格恢复为 \`-\`**；若译文中**没有空格**，则**不添加** \`-\`
+   - **禁止出现空格**于最终 fragment；**不得改动** \`#\` 之前的任何部分（域名、路径、查询参数等保持不变）。
+   - 处理要点：
+     - 专有名词/保留词（如 Grove, SenseCAP, API 等）按“术语保护/术语表”规则保留或按指定译法替换；
+     - 仅翻译词语本身，不新增、不删除词元，不改变顺序。
+   - 示例：
+     - \`[BLE Scanner](#ble-scanner)\`  
+       还原：\`ble scanner\` → 译文：\`BLE 扫描器\` → 空格→\`-\` → **\`#BLE-扫描器\`**
+     - \`[Intro](/Sensor/Guide/#hardware-overview)\`  
+       还原：\`hardware overview\` → 译文：\`硬件概述\`（无空格）→ **\`#硬件概述\`**
+     - \`<a href="https://wiki.seeedstudio.com/Sensor/ABC/#getting-started">…\`  
+       还原：\`getting started\` → 译文：\`入门指南\`（无空格）→ **\`#入门指南\`**
 
 6. **严格禁止**：
    - 添加或删除任何行
@@ -396,6 +414,18 @@ ${glossaryPairs}
    - 添加原文没有的\`\`\`代码块标记
    - 改变[LINE_X]标记的位置
    - 在锚点链接的#后面使用空格
+
+7. **组件规则（Docusaurus Tabs，仅 <TabItem>）**：
+   - 若存在 \`label="…"\` 或 \`label='…'\`：**只翻译 label 的值**；不要改动属性名；不要改动其他属性值；此时**不要改动 value**
+   - 若不存在 \`label\`，但存在 \`value="…"\` 或 \`value='…'\`：**翻译 value 的值**
+   - 示例：
+     - \`<TabItem value="For E1002" label="For E1002">\` → \`<TabItem value="For E1002" label="适用于 E1002">\`
+     - \`<TabItem value='Install through browser'>\` → \`<TabItem value='通过浏览器安装'>\`
+   - 反例（禁止）：\`<TabItem value="适用于 E1002" label="适用于 E1002">\`（有 label 时不应改 value）
+
+8. **产品系列命名（“… Series” 后缀）**：
+   - 当出现 “… Series” 这类产品线后缀（如 \`reTerminal E Series\`），保留前缀的产品名按术语保护/术语表不变，仅将 \`Series\` 翻译为目标语言（zh-CN → “系列”）。
+   - 示例：\`reTerminal E Series\` → \`reTerminal E 系列\`
 </translation_rules>
 
 <example>
@@ -406,22 +436,33 @@ ${glossaryPairs}
 [LINE_3]   - First item
 [LINE_4]   - [BLE Scanner](#ble-scanner)
 [LINE_5]     - Nested item
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+[LINE_7] Click "Settings" in the app (File > Preferences).
+[LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>
+[LINE_9] <TabItem value="For E1002" label="For E1002">
+[LINE_10] See more: [Intro](/Sensor/Guide/#hardware-overview)
+[LINE_11] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#getting-started">Open</a>
 
 正确输出：
 [LINE_0] ## 入门指南
 [LINE_1][EMPTY_LINE]
 [LINE_2] 这是一个关于以下内容的教程：
 [LINE_3]   - 第一项
-[LINE_4]   - [BLE 扫描器](#ble-扫描器)
+[LINE_4]   - [BLE 扫描器](#BLE-扫描器)
 [LINE_5]     - 嵌套项
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+[LINE_7] 在应用中点击 "Settings"（File > Preferences）。
+[LINE_8] <a className="nav-item"><span className="text">开发者中心</span></a>
+[LINE_9] <TabItem value="For E1002" label="适用于 E1002">
+[LINE_10] 查看更多：[简介](/Sensor/Guide/#硬件概述)
+[LINE_11] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门指南">Open</a>
 
 错误输出（绝对禁止）：
-[LINE_0] ## 入门指南
-[LINE_1][EMPTY_LINE]
-[LINE_2] 这是一个关于以下内容的教程：
-[LINE_3] - 第一项  ❌ 缩进丢失
-[LINE_4]   - [BLE 扫描器](#ble 扫描器)  ❌ 锚点中有空格
-[LINE_5]   - 嵌套项  ❌ 缩进级别错误
+[LINE_3] - 第一项                                       ❌ 缩进丢失
+[LINE_4]   - [BLE 扫描器](#ble 扫描器)                   ❌ 锚点中出现空格
+[LINE_9] <TabItem value="适用于 E1002" label="适用于 E1002"> ❌ 有 label 时不应改动 value
+[LINE_10] [简介](#/Sensor/Guide/硬件-概述)                 ❌ 不能改动 \`#\` 之前的 URL 结构
+[LINE_11] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门-指南">Open</a> ❌ 未按“还原短语→翻译→空格转连字符”的流程，应为 #入门指南
 </example>
 </instruction>
 
@@ -845,6 +886,23 @@ function escapeRegExp(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+// 安全拼接：确保块与块之间至少保留一个换行，避免跨块黏连
+function joinChunksPreservingNewlines(chunks) {
+  if (!Array.isArray(chunks) || chunks.length === 0) return '';
+  let out = '';
+  for (let i = 0; i < chunks.length; i++) {
+    const s = chunks[i] ?? '';
+    if (i === 0) {
+      out = s;
+      continue;
+    }
+    // 如果上一段不以 '\n' 结尾，则补一个 '\n'
+    if (!out.endsWith('\n')) out += '\n';
+    out += s;
+  }
+  return out;
+}
+
 // 检查文件是否受保护
 function isProtectedPath(filePath) {
   const normalizedPath = filePath.replace(/\\/g, '/');
@@ -1019,24 +1077,34 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
     finalContent = translatedChunks[0];
   } else {
     const firstChunk = translatedChunks[0];
-    const otherChunks = translatedChunks.slice(1);
-    
-    const frontMatterMatch = firstChunk.match(/^---\n[\s\S]*?\n---\n/);
-    
-    if (frontMatterMatch) {
-      const frontMatter = frontMatterMatch[0];
-      // 不再 trim，避免吞掉空行导致行号错位
-      const firstContent = firstChunk.replace(frontMatterMatch[0], '');
-      
-      // 直接拼接，不额外插入空行，保持逐行对齐
-      finalContent = frontMatter + firstContent;
-      if (otherChunks.length > 0) {
-        finalContent += otherChunks.join('');
-      }
+    const restChunks = translatedChunks.slice(1);
+    const fmMatch = firstChunk.match(/^---\n[\s\S]*?\n---\n/);
+    if (fmMatch) {
+      const frontMatter = fmMatch[0];
+      const firstBody = firstChunk.slice(frontMatter.length);
+      // 保留 front matter + 正文，后续块用安全方式拼接（自动补换行）
+      finalContent = joinChunksPreservingNewlines([frontMatter + firstBody, ...restChunks]);
     } else {
-      // 多块直接无缝拼接，避免 \n\n 造成偏移
-      finalContent = translatedChunks.join('');
+      finalContent = joinChunksPreservingNewlines(translatedChunks);
     }
+  }
+
+  // 整文行数与原文一致性检查（按当前文件内容）
+  try {
+    const originalTotalLines = (await fs.readFile(filePath, 'utf8'))
+      .toString()
+      .replace(/\r\n/g, '\n').replace(/\r/g, '\n')
+      .split('\n').length;
+    let finalTotalLines = finalContent.split('\n').length;
+    if (finalTotalLines !== originalTotalLines) {
+      console.warn(`⚠️ 拼接后行数不一致: 原文 ${originalTotalLines}, 译文 ${finalTotalLines}。尝试更保守的换行拼接。`);
+      // 强制在块之间都插入换行（即使已有换行也不去掉）
+      finalContent = translatedChunks.join('\n');
+      finalTotalLines = finalContent.split('\n').length;
+      console.log(`🧾 兜底后行数: 译文 ${finalTotalLines}`);
+    }
+  } catch (e) {
+    console.warn(`ℹ️ 行数兜底检查失败（非致命）：${e.message}`);
   }
   
   return finalContent;
@@ -1058,7 +1126,9 @@ async function translateFile(filePath, targetLang) {
     console.log(`📝 翻译文件: ${filePath} -> ${targetLang}`);
     translationStatus.total++;
     
-    const content = await fs.readFile(filePath, 'utf8');
+    let content = await fs.readFile(filePath, 'utf8');
+    // 统一换行为 LF，避免 CR 残留导致围栏/解析异常
+    content = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
     console.log(`🔍 文件大小: ${content.length} 字符`);
 
     // Front Matter 跳过规则判断（仅 md/mdx 有意义）

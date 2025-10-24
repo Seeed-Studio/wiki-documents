@@ -18,7 +18,9 @@ Grove - 激光 PM2.5 传感器 (HM3301) 是新一代激光粉尘检测传感器�
 
 该模块适用于粉尘检测仪、智能空气净化器、智能空调、智能通风风扇、空气质量检测、雾霾仪、环境监测及相关产品和应用。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/zQj8RRJcZsk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Laser-PM2-5-Sensor-HM3301.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 

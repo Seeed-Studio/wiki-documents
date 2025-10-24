@@ -1,6 +1,6 @@
 ---
-description: Comenzar con el Kit de Desarrollo Wio Tracker para Meshtastic® 
-title: Comenzando con el Kit Meshtastic®
+description: Comience con el Kit de Desarrollo Wio Tracker para Meshtastic® 
+title:  Primeros Pasos con el Kit Meshtastic®
 keywords:
 - Meshtastic
 - Tracker
@@ -17,18 +17,18 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Kit-for-Meshtastic.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
     </a>
 </div>
 
-Con una Placa de Desarrollo Wio Tracker 1110 (basada en Nordic nRF52840 para BLE, Semtech LR1110 para LoRa), [Módulo GPS Grove Air530](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html), [Pantalla OLED Grove de 0.96"](https://www.seeedstudio.com/Grove-OLED-Display-0-96.html) y compatibilidad nativa con el firmware Meshtastic, es un kit de desarrollo plug and play para que construyas tu dispositivo rastreador Meshtastic de bajo consumo.
+Con una Placa de Desarrollo Wio Tracker 1110 (basada en Nordic nRF52840 para BLE, Semtech LR1110 para LoRa), [Módulo GPS Grove Air530](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html), [Pantalla OLED Grove de 0.96"](https://www.seeedstudio.com/Grove-OLED-Display-0-96.html) y compatibilidad nativa con el firmware [Meshtastic®](https://meshtastic.org/), es un kit de desarrollo plug and play para construir tu dispositivo rastreador Meshtastic de bajo consumo.
 
 ### Características
 
 - **Configuración Fácil**: Simplemente flashea el firmware para experimentar las potentes características de la red Meshtastic.
 - **Posicionamiento en Tiempo Real**: Equipado con un módulo GPS (Air530), soporta posicionamiento GPS de alta precisión.
 - **Visualización de Información**: Cuenta con una pantalla Grove - OLED Display 0.96" para visualización clara de datos en tiempo real.
-- **Interfaces de Expansión Extensas**: Compatible con el ecosistema Grove, permitiendo expansión fácil con más sensores y módulos.
+- **Interfaces de Expansión Extensas**: Compatible con el ecosistema Grove, permitiendo fácil expansión con más sensores y módulos.
 - **Hardware y Software de Código Abierto**: Soporta desarrollo secundario y personalización, proporcionando recursos de desarrollo ricos y soporte de la comunidad Meshtastic.
 
 ### Especificaciones
@@ -77,9 +77,9 @@ Con una Placa de Desarrollo Wio Tracker 1110 (basada en Nordic nRF52840 para BLE
 |**Área Activa**|21.74(W)×11.175 (H) mm|
 |**Separación de Puntos**|0.17(W)×0.175 (H) mm|
 |**Tamaño de Punto**|0.15(W)×0.15 (H) mm|
-|**Amplio rango de temperatura de operación**|-20&#126;70 ℃|
+|**Amplio rango de temperatura de funcionamiento**|-20&#126;70 ℃|
 
-## Comenzar
+## Primeros Pasos
 
 ### Conexión de Hardware
 
@@ -104,7 +104,7 @@ import TabItem from '@theme/TabItem';
 
 - Descarga la aplicación `Meshtastic`.<br/>
 
-- Selecciona el dispositivo objetivo en el panel de Bluetooth.
+- Selecciona el dispositivo objetivo en el panel Bluetooth.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
@@ -179,20 +179,20 @@ Esta biblioteca proporciona una interfaz de línea de comandos (CLI) para gestio
 
 #### Configuración de Parámetros
 
-Para comenzar a comunicarse a través de la malla, debe establecer su región. Esta configuración controla qué rango de frecuencia utiliza su dispositivo y debe establecerse según su ubicación regional.
+Para comenzar a comunicarse a través de la malla, debes establecer tu región. Esta configuración controla qué rango de frecuencia usa tu dispositivo y debe establecerse según tu ubicación regional.
 
 <Tabs>
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="Aplicación IOS">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Android App">
+<TabItem value="android" label="Aplicación Android">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
-<TabItem value="web" label="Web Client">
+<TabItem value="web" label="Cliente Web">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/web-lora-config.png" alt="pir" width={800} height="auto" /></p>
 
@@ -200,7 +200,7 @@ Para comenzar a comunicarse a través de la malla, debe establecer su región. E
 
 <TabItem value="cli" label="CLI">
 
-Ejecute el siguiente comando, reemplazando `REGION-CODE` con el código de región listado arriba según su ubicación regional.
+Ejecuta el siguiente comando, reemplazando `REGION-CODE` con el código de región listado arriba según tu ubicación regional.
 
 ```
 meshtastic --set lora.region <REGION-CODE>
@@ -218,7 +218,7 @@ Consulta [Región LoRa por País](https://meshtastic.org/docs/configuration/regi
 
 |**Código de Región**|**Descripción**|**Rango de Frecuencia (MHz)**|**Ciclo de Trabajo (%)**|**Límite de Potencia (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|Sin configurar|N/A|N/A|N/A|
+|UNSET|Sin establecer|N/A|N/A|N/A|
 |US|Estados Unidos|902.0 - 928.0|100|30|
 |EU_433|Unión Europea 433MHz|433.0 - 434.0|10|12|
 |EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
@@ -239,10 +239,10 @@ Consulta [Región LoRa por País](https://meshtastic.org/docs/configuration/regi
 |LORA_24|Banda de 2.4 GHz mundial|2400.0 - 2483.5|100|10|
 
 :::info
-**EU_433** y **EU_868** deben cumplir con una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto en una base móvil de 1 hora. Tu dispositivo dejará de transmitir si lo alcanzas, hasta que se permita nuevamente.
+**EU_433** y **EU_868** deben cumplir con una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto en una base móvil de 1 hora. Su dispositivo dejará de transmitir si lo alcanza, hasta que se permita nuevamente.
 :::
 
-Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [configuración adicional](https://meshtastic.org/docs/configuration/) para satisfacer tus necesidades.
+Ahora que ha configurado la región LoRa en su dispositivo, puede continuar configurando cualquier [configuración adicional](https://meshtastic.org/docs/configuration/) para satisfacer sus necesidades.
 
 ## Recursos
 
@@ -256,9 +256,9 @@ Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar co
 
 [Archivo de Carcasa (Acrílico)](https://files.seeedstudio.com/products/114993370/%E4%BA%9A%E5%85%8B%E5%8A%9B%E5%A4%96%E5%A3%B3%E5%9B%BE%E7%BA%B8.zip)
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

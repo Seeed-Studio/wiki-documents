@@ -94,7 +94,9 @@ python test.py
 python main.py
 ```
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/KR0GYqUuo5Y?si=uSGUkKmCSZmaq5f7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Riva 与 Whisper 对比
 
@@ -104,7 +106,9 @@ Whisper 是一个自动语音识别（ASR）系统，在从网络收集的 680,0
 
 在即将到来的对比视频中，我们将比较在 Nvidia Jetson 上开发的 [Riva](https://wiki.seeedstudio.com/cn/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson/) 和 Whisper 在语音转文本方面的能力。
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/2l7yus611DI?si=XdEjwzpZdJkLC8aB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 项目展望
 

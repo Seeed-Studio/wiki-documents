@@ -186,13 +186,17 @@ GPS模块有着众多的应用。特别是，通过这些GPS模块的应用可�
 
 **LED 自行车速度计**：想知道您骑行的速度有多快吗？使用这个 DIY 自行车速度计，采用 GPS 技术进行速度感应，您可以知道自己的骑行速度！它还配有 RGB LED 来向骑行者指示速度。访问[这里](https://create.arduino.cc/projecthub/JeremySCook/gps-led-bike-speedometer-c8f956?ref=tag&ref_id=gps&offset=26)获取详细信息。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=CeStrH-5Llo&feature=emb_rel_end" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **个人 GPS 助手**：这个项目是一个设备，让您监控人员和物品，持续告诉您它们的位置以及连接到它的传感器的数值。其中一个功能允许您为传感器设置限制值，当超过这些值时会向您发送短信警报。您还可以设置某些地方的限制，当设备离开该区域时会向您发出警报。还可以通过短信与设备通信，以获取有关它的信息。
 
 访问[这里](https://create.arduino.cc/projecthub/Momy93/sandro-your-personal-gps-assistant-26dfa3?ref=tag&ref_id=gps&offset=32)获取详细信息。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://youtu.be/3lcP4YtxlCg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 资源
 

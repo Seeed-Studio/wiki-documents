@@ -131,7 +131,7 @@ Para unificar la interfaz, usaremos el pin **D9** como ejemplo en este caso, por
 
 ## Tutoriales en Video
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/g9hBp84xs1E?si=fzE--HA7v8H8R090?si=iH-oouOl_ItkG7vF?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 

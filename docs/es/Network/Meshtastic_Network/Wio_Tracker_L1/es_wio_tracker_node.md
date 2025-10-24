@@ -1,5 +1,5 @@
 ---
-description: Introducción al Nodo Meshtastic Wio Tracker L1
+description: Introducción del Nodo Meshtastic Wio Tracker L1
 title: Nodo Meshtastic Wio Tracker L1
 keywords:
 - Meshtastic
@@ -14,13 +14,21 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.jpg" alt="pir" width={600} height="auto" /></p>
 
-La Serie Wio Tracker L1 es un nodo Meshtastic de bajo consumo y altamente extensible que cuenta con LoRa (862–930 MHz), el nRF52840 para procesamiento eficiente, y un módulo GPS L76K para seguimiento preciso de ubicación. Diseñado para flexibilidad, soporta pantallas OLED y E-Ink, así como paneles solares y alimentación por batería, haciéndolo ideal para una amplia gama de aplicaciones IoT y fuera de la red.
+La Serie Wio Tracker L1 es un nodo [Meshtastic®](https://meshtastic.org/) de bajo consumo y alta extensibilidad que cuenta con LoRa (862–930 MHz), el nRF52840 para procesamiento eficiente, y un módulo GPS L76K para seguimiento preciso de ubicación. Diseñado para flexibilidad, soporta pantallas OLED y E-Ink, así como paneles solares y alimentación por batería, haciéndolo ideal para una amplia gama de aplicaciones IoT y fuera de la red.
 
-## Comparación de Versiones
+## Modelo Serie L1
 
 :::tip
 La Serie Wio Tracker L1 está disponible en 4 versiones—elige la que mejor se adapte a tus necesidades.
 :::
+
+### Introducción de la Serie
+
+<div class="video-container">
+<iframe width="700" height="395" src="https://www.youtube.com/embed/TTiDN3h7cNk?si=2F0PXFlQmDSefCdX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+### Comparación de Versiones
 
 |Nombre del Producto|Wio Tracker L1 Lite|Wio Tracker L1|Wio Tracker L1 Pro|Wio Tracker L1 E-Ink|
 |------------------|------------------|--------------------------|-----------------------|-----------------------|
@@ -39,7 +47,7 @@ La Serie Wio Tracker L1 está disponible en 4 versiones—elige la que mejor se 
 - **Pre-cargado con firmware Meshtastic**
 Listo para usar desde el primer momento con firmware Meshtastic preinstalado para una configuración sin problemas.
 
-- **Triple Opciones de Fuente de Alimentación**
+- **Tres Opciones de Alimentación**
 Soporta carga rápida Type-C, entrada solar y alimentación por batería Li-ion para despliegue flexible en varios entornos—ideal para aplicaciones exteriores y móviles.
 
 - **Soporte de Pantalla Flexible**
@@ -48,7 +56,7 @@ Pantallas opcionales OLED de 1.3 pulgadas y E-Ink de 2.13 pulgadas, ofreciendo o
 - **Alta Expandibilidad**
 Totalmente compatible con el ecosistema Grove, e incluye cabeceras PTH y una interfaz de depuración SWD para expansión de hardware personalizada y desarrollo avanzado.
 
-### Especificación
+### Especificaciones
 
 <table>
   <tr>
@@ -89,10 +97,10 @@ Totalmente compatible con el ecosistema Grove, e incluye cabeceras PTH y una int
     <td colspan="1">USB Type-C: 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Panel Solar: 5V — 1A</td>
+    <td colspan="1">Panel Solar (2.0mm 2p): 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Batería de Litio: 3.7V — 1A</td>
+    <td colspan="1">Batería de Litio (1.25mm 2p JST): 3.7V — 1A</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">Pantalla OLED</td>

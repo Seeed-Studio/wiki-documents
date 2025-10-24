@@ -43,7 +43,9 @@ Same goes for automatic speech recognition – while simple hot word (or voice c
 
 Seeed EDU team has came up with a definitive step-by-step course on how to get started with TinyML using Wio Terminal.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL5efXgSvwk9UCtJ6JKTyWAccSVfTXSlA3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 You can download the course in PDF format and course materials by clicking on the links below. Additionally, you can find stand-alone projects published previously on Seeed studio blog and Hackster.io site - both projects in the course and standalone projects make use Arduino IDE for programming the devices and a mix of Edge Impulse and Tensorflow Lite for Microcontrollers for model training and inference.
 

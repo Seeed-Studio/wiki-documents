@@ -18,7 +18,9 @@ Grove - 温湿度传感器(SHT31) 是一款高可靠性、高精度、快速响�
 
 使用该传感器很简单。对于 [Seeeduino](https://www.seeedstudio.com/depot/Seeeduino-V42-p-2517.html?cPath=6_7)（兼容 Arduino），只需通过 [Grove 线缆](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) 将此分线板与主控板连接即可。然后使用 GitHub 上提供的库和示例/演示代码来获取数据。如果您使用的是没有 Base Shield 的 Arduino，只需将 VIN 引脚连接到 5V 电压引脚，GND 连接到地，SCL 连接到 I2C 时钟（模拟引脚 5），SDA 连接到 I2C 数据（模拟引脚 4）。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/MwLEawbP0ZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center' }}><a href="https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp-Humi-Sensor-SHT35.html?queryID=77b7436dc353691bf84e59c7496c9f8f&objectID=35&indexName=bazaar_retailer_products" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 

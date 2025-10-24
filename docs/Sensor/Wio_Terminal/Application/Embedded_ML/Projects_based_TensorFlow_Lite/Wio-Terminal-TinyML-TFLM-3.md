@@ -24,7 +24,9 @@ In this project we’re going to employ a more efficient method and directly par
 
 For more details and visuals, watch the corresponding video!
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CVq4cet5jgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 There are different types of speech recognition tasks – we can roughly divide them into three groups:
 
@@ -238,7 +240,9 @@ There are multiple improvements that can be made to basic neural network archite
 
 Have a look at this TinyML talk on this topic to find out more about this and find links to the papers!
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YmJrr1D191k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 We encourage you to fork the code repository, try training on your own dataset and perhaps try implementing more advanced architectures or model training techniques. If you do, don’t hesitate to give me a shout out here or make a PR on Github!
 

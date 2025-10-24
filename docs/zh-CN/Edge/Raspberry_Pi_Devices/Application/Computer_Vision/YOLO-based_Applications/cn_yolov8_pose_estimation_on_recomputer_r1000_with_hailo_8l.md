@@ -166,7 +166,7 @@ bash ./run.sh pose-estimation
 
 我们比较了使用 AI 套件加速前后 YOLOv8 在输入分辨率为 640*640 的姿态估计任务中的推理速度。结果显示，加速前推理速度仅为 0.5 FPS，而加速后达到了 27 FPS。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/OwIrMppQzUU" title="Raspberry Pi AI: YOLOv8 Pose Estimation on reComputer R1000(CM4-powered Edge Gateway) with Hailo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

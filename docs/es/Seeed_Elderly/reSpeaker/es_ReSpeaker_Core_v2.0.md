@@ -638,7 +638,9 @@ Hasta ahora hemos aprendido las operaciones básicas de la placa ReSpeaker Core 
 
 Por favor sigue [ReSpeaker Core V2 & Wio Link Tutorial](https://wiki.seeedstudio.com/es/ReSpeaker_Core_V2_&_Wio_Link/) para usar el ReSpeaker Core V2 para controlar Wio Link a través de IFTTT.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/OJ0i6QrZCSM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Jugar con GPIO
 
@@ -1002,7 +1004,9 @@ La causa raíz es que las tarjetas SD antiguas no funcionan con el sistema linux
 
 En esta demostración, usamos ReSpeaker Core v2.0 para hablar con Alexa. Puedes hacer cualquier pregunta y hablar con ReSpeaker Core v2.0 como un amigo. Además, este producto puede funcionar con Google Assistant y Bing también. La palabra de activación es Snowboy, y por supuesto puedes crear tu propia palabra de activación.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/q7b8iLqRiPY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 <br />
 
@@ -1012,7 +1016,9 @@ En esta demostración, hemos probado la distancia de activación de ReSpeaker Co
 
 ¡Con algoritmos avanzados y seis micrófonos de alta calidad, el resultado es increíble! ¡Podemos activar el ReSpeaker Core v2.0 desde 16 metros (52 pies) de distancia!
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/PpcwvOLlpEw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **ReSpeaker Core v2.0 - Sistema de Recepción por Voz**
 
@@ -1020,14 +1026,18 @@ Este sistema inteligente consiste en un asistente de voz (ReSpeaker Core v2.0) y
 
 ¿Qué tal tener un sistema de recepción por voz así en frente de tu casa o espacio de trabajo? ¿No es genial?
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/tdIsCRXKoVI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 <br />
 
 **ReSpeaker Core v2.0 - Sistema Simple de Recepción por Voz**
 
 La función básica del servicio de recepción es saludar a los visitantes, hacerlos sentir bienvenidos y prevenir el acceso no autorizado a la oficina. Aprovechamos las funciones del ReSpeaker Core v2.0 para diseñar un Servicio de Recepción por Voz. El sistema puede interactuar con el visitante y dejar un mensaje a la persona a ser visitada. En el futuro, podemos diseñar una pequeña base de datos de lista telefónica de empleados de oficina, el empleado puede dejar un mensaje al sistema, el sistema usa las funciones GPIO del ReSpeaker Core v2.0 para abrir las puertas para el visitante. Usamos los servicios de voz a texto de Microsoft Bing y las APIs de mensajes de Twilio/Tencent para crear los scripts de python. Para más información, por favor consulte [Sistema de Recepción por Voz ReSpeaker](https://project.seeedstudio.com/SeeedStudio/respeaker-voice-reception-system-209a6c).
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/-nTOa3LLpVo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Soporte Técnico y Discusión de Productos
 

@@ -121,7 +121,9 @@ MR60FDA2 是一个 60GHz 毫米波跌倒检测传感器模块，专为与 XIAO E
 
 观看以下视频了解通过 ESPHome Web 刷写固件的详细步骤：
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Install firmware via ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 </TabItem>
 </Tabs>

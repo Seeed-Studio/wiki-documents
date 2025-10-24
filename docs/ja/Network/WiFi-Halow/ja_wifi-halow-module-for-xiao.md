@@ -1,5 +1,5 @@
 ---
-description: XIAO ESP32S3 と Wio-WM6180 Wi-Fi HaLow モジュールのチュートリアル
+description: XIAO ESP32S3 と Wio-WM6108 Wi-Fi HaLow モジュールのチュートリアル
 title: XIAO 用 Wi-Fi HaLow モジュールの使用開始
 image: https://files.seeedstudio.com/wiki/wifi_halow/pic/20.webp
 slug: /ja/getting_started_with_wifi_halow_module_for_xiao
@@ -15,14 +15,14 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/20.jpg" style={{width:600, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-Halow-Module-for-XIAO-p-6395.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6108-Wi-Fi-Halow-Module-for-XIAO-p-6395.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>
 
 ## はじめに
 
-このチュートリアルでは、Wio-WM6180 Wi-Fi HaLow モジュールと XIAO ESP32S3 を使用して Wi-Fi HaLow クライアントを構築するためのセットアップと使用方法をガイドします。Wi-Fi HaLow（IEEE 802.11ah）は、サブ 1 GHz 周波数帯で動作する長距離・低消費電力の IoT アプリケーション向けに設計されています。ハードウェアのセットアップ、ソフトウェアの設定、そして IoT プロジェクト用の Wi-Fi HaLow 接続を確立する方法をデモンストレーションします。
+このチュートリアルでは、Wio-WM6108 Wi-Fi HaLow モジュールと XIAO ESP32S3 を使用して Wi-Fi HaLow クライアントを構築するためのセットアップと使用方法をガイドします。Wi-Fi HaLow（IEEE 802.11ah）は、サブ 1 GHz 周波数帯で動作する長距離・低消費電力の IoT アプリケーション向けに設計されています。ハードウェアのセットアップ、ソフトウェアの設定、そして IoT プロジェクト用の Wi-Fi HaLow 接続を確立する方法をデモンストレーションします。
 
 ### 主な特徴
 
@@ -34,7 +34,7 @@ last_update:
 
 ## ハードウェア概要
 
-以下の表は、Wio-WM6180 Wi-Fi HaLow モジュールの主要仕様を示しています：
+以下の表は、Wio-WM6108 Wi-Fi HaLow モジュールの主要仕様を示しています：
 
 | 特性 | 値 | 単位 |
 |:-------------:|:-----:|:----:|
@@ -85,11 +85,11 @@ Wi-Fi の親しみやすさと低消費電力・長距離接続の利点を組�
 
 3. **ゲートウェイ**: Wi-Fi HaLow ネットワークと他のネットワーク（例：イーサネットやセルラー）間のブリッジとして機能します。
 
-このチュートリアルでは、Wi-Fi HaLow アクセスポイントに接続するステーション（STA）クライアントとして XIAO ESP32S3 を設定します。XIAO は WM6180 モジュールを使用して HaLow 接続を確立し、維持します。
+このチュートリアルでは、Wi-Fi HaLow アクセスポイントに接続するステーション（STA）クライアントとして XIAO ESP32S3 を設定します。XIAO は WM6108 モジュールを使用して HaLow 接続を確立し、維持します。
 
 ## MM-IoT-SDK フレームワーク
 
-WM6180 モジュールは [MorseMicro の MM-IoT-SDK](https://github.com/MorseMicro/mm-iot-esp32) を利用しており、以下の機能を提供します：
+WM6108 モジュールは [MorseMicro の MM-IoT-SDK](https://github.com/MorseMicro/mm-iot-esp32) を利用しており、以下の機能を提供します：
 
 - **マルチプロトコルサポート**: 様々な IoT プロトコルとのシームレスな統合を可能にします
 - **低消費電力管理**: バッテリー駆動デバイス向けに最適化された消費電力
@@ -114,7 +114,7 @@ MM-IoT-SDK アーキテクチャは複数のレイヤーで構成されていま
             <th>XIAO ESP32S3 Sense</th>
             <th>XIAO ESP32C3</th>
             <th>XIAO ESP32C6</th>
-            <th>Wio-WM6180 Wi-Fi HaLow Module for XIAO</th>
+            <th>Wio-WM6108 Wi-Fi HaLow Module for XIAO</th>
         </tr>
         <tr>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -139,7 +139,7 @@ MM-IoT-SDK アーキテクチャは複数のレイヤーで構成されていま
                 </a>
             </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-Halow-Module-for-XIAO-p-6395.html" target="_blank">
+                <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6108-Wi-Fi-Halow-Module-for-XIAO-p-6395.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
                 </a>
             </div></td>
@@ -563,7 +563,7 @@ nano main/src/mm_app_loadconfig.c
 
 ### ステップ 3: ハードウェアセットアップ
 
-1. Wio-WM6180 Wi-Fi HaLow モジュールを XIAO ESP32S3 に接続します
+1. Wio-WM6108 Wi-Fi HaLow モジュールを XIAO ESP32S3 に接続します
 
 2. XIAO ESP32S3 を USB 経由でコンピュータに接続します
 
@@ -638,7 +638,7 @@ nano main/src/mm_app_loadconfig.c
 
 ### ステップ 3: ハードウェアセットアップ
 
-1. Wio-WM6180 Wi-Fi HaLow モジュールを XIAO ESP32S3 に接続します
+1. Wio-WM6108 Wi-Fi HaLow モジュールを XIAO ESP32S3 に接続します
 2. XIAO ESP32S3 を USB 経由でコンピュータに接続します
 
 ### ステップ 4: ビルドとフラッシュ
@@ -724,7 +724,7 @@ nano main/src/mm_app_loadconfig.c
 
 ### ステップ 3: ハードウェアセットアップ
 
-1. Wio-WM6180 Wi-Fi HaLow モジュールを XIAO ESP32S3 Sense に接続します
+1. Wio-WM6108 Wi-Fi HaLow モジュールを XIAO ESP32S3 Sense に接続します
 2. XIAO ESP32S3 Sense のカメラモジュールが適切に接続されていることを確認します
 3. XIAO ESP32S3 Sense を USB 経由でコンピュータに接続します
 

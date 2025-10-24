@@ -57,7 +57,7 @@ If your computer is running Windows, you can find the recognized identification 
 
 **Setp3.** Power on the Jetson. If everything is working correctly, you should see the system boot logs in the serial port debugging tool window.
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/rwiKgF91mNE" title="Get Sys Log of reComputer J30/J40" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

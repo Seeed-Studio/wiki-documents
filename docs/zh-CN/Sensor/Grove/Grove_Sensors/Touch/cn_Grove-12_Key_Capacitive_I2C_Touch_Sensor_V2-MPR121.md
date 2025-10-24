@@ -26,7 +26,9 @@ last_update:
 
 该传感器是[Grove - I2C触摸传感器](https://www.seeedstudio.com/Grove-I2C-Touch-Sensor-p-840.html)的升级版本，为了满足Matsuzawa.Takashi（我们的一位客户）的需求，我们使I2C地址可更改，甚至比旧版本更便宜。所以如果您对所有Grove产品有任何建议，请随时联系我们。我们将始终倾听您的声音，这可能会带来另一次升级，甚至是一个新的Grove产品。请在[Grove 100+](https://www.seeedstudio.com/grove_100)页面上友善地写下您的建议。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/CPq4VSAXBgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V2-%28MPR121%29-p-3141.html
 " target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
@@ -440,7 +442,9 @@ if __name__  == '__main__':
 
 这是本产品的介绍视频，包含简单的演示，您可以尝试一下。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ds7kBVdeY4U?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **叶子钢琴**：我们使用触摸传感器制作了一架钢琴，并用叶子作为钢琴键。
 

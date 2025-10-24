@@ -15,7 +15,9 @@ last_update:
 
 # SenseCAP Indicator - Matter Application Development
 
+<div class="video-container">
 <iframe class="youtube-video" src="https://www.youtube.com/embed/LCIWqwmCZ54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Introduction
 
@@ -86,7 +88,9 @@ After provisioning the device will begin reporting its temperature and humidity 
 
 ### Standard functionality
 
+<div class="video-container">
 <iframe class="youtube-video" src="https://www.youtube.com/embed/mBhrYeyQQeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 The Indicator Matter application allows for browsing sensor data in a similar way to the standard firmware. Upon loading the device shows the clock screen which is configured based upon your location to give you an accurate time. The screen has events to detect being slid to the right and left to cycle through the time, sensor display, and settings screen.
 

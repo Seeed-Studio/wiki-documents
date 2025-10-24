@@ -100,7 +100,9 @@ A continuación, descarga la aplicación SenseCAP Mate y registra una cuenta.
 
 solo para tu referencia, este video proviene de Seeed Studio que demuestra el proceso básico de incorporación.
 
+<div class="video-container">
 <iframe class="youtube-video" src="https://youtu.be/TUQ9UmF7e7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 Conecta el gateway LoRaWAN M2 a internet con un cable ethernet y conecta la antena antes de encenderlo, cuando veas que el LED RGB del panel permanece verde, eso significa que el gateway está configurado correctamente.
 

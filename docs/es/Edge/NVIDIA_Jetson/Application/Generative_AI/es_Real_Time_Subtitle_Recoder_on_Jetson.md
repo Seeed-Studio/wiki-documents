@@ -120,7 +120,9 @@ git clone https://github.com/Seeed-Projects/Real-time-Subtitle-Recorder-on-Jetso
 cd Real-time-Subtitle-Recorder-on-Jetson
 python3 recorder.py
 ```
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XypO6BlXkCY?si=CczjuOXxak1xAelO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Perspectivas del Proyecto
 

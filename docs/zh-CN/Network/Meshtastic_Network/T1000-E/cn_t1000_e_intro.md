@@ -13,11 +13,11 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/intro-e.png" alt="pir" width={800} height="auto" /></p>
 
-这是一款专为 Meshtastic 设计的高性能追踪器，小如信用卡，可轻松放入口袋或附着在您的资产上。它集成了 Semtech 的 LR1110、Nordic 的 nRF52840 和联发科的 AG3335 GPS 模块，为 Meshtastic 用户提供高精度、低功耗的定位和通信解决方案。
+这是一款专为 [Meshtastic®](https://meshtastic.org/) 设计的高性能追踪器，小如信用卡，可轻松放入口袋或附着在您的资产上。它集成了 Semtech 的 LR1110、Nordic 的 nRF52840 和联发科的 AG3335 GPS 模块，为 [Meshtastic®](https://meshtastic.org/) 用户提供高精度、低功耗的定位和通信解决方案。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -34,9 +34,9 @@ last_update:
 - **可扩展接口**：设计有四个弹簧针，支持 USB 接口用于 DFU（设备固件升级）、串行日志记录和 API 接口，简化设备管理和调试。
 - **开源支持**：兼容 Meshtastic 开源网状网络协议，适用于长距离和低功耗通信需求。
 
-### 规格
+### 规格参数
 
-**通用**
+**通用参数**
 
 |**网络协议**|LoRa, 蓝牙 v5.1|
 | :- | :- |
@@ -47,8 +47,8 @@ last_update:
 |**天线**|内置（GNSS/LoRa/Wi-Fi/BLE）|
 |**通信距离**|2 到 5 公里（取决于天线、安装和环境）|
 |**IP 等级**|IP65|
-|**尺寸**|85 \* 55 \* 6.5 mm|
-|**设备重量**|32g|
+|**尺寸**|85 × 55 × 6.5 毫米|
+|**设备重量**|32 克|
 |**工作温度**|-20℃ 到 +60℃|
 |**工作湿度**|5% - 95%（无冷凝）|
 |**认证**|CE /FCC|
@@ -57,7 +57,7 @@ last_update:
 
 |**电池容量**|可充电锂电池，700mAh|
 | :- | :- |
-|**电池寿命监控**|定期上传电池电量|
+|**电池电量监控**|定期上传电池电量|
 |<p>**充电线**</p><p>**（不含适配器）**</p>|USB 磁吸充电线，1 米|
 |**电源输入电压**|4.7 到 5.5V DC|
 |**充电温度限制**|0 到 +45℃|
@@ -94,7 +94,7 @@ last_update:
 
 ### LED
 
-|设备操作|描述|
+|设备动作|描述|
 |- |- |
 |开机|点亮然后快速闪烁|
 |DFU 模式|常亮|

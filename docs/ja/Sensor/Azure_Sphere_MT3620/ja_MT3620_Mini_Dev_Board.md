@@ -360,7 +360,9 @@ Seeed oled 96*96 demo.
 - ステップ 7. Remote Debug Tool を使用してデバイスにアクセスします。
 - ステップ 8. 動画に従い、例を3つの異なる方法で操作します。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NgH3Ot9pM1Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## リソース
 

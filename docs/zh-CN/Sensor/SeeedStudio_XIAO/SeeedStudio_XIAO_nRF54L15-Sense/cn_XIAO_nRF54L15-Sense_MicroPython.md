@@ -5,7 +5,7 @@ keywords:
 - nRF54L15
 - xiao
 - MicroPython
-image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.webp	
+image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_1.webp
 slug: /cn/xiao_nrf54l15_sense_micropython
 last_update:
   date: 9/23/2025
@@ -35,7 +35,7 @@ Win + R -->
 <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
 </tr>
@@ -87,18 +87,14 @@ git clone https://github.com/Seeed-Studio/micropython-seeed-boards.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_boards_1.png" style={{width:600, height:'auto'}}/></div>
 
-:::tip
-此固件已预设刷写工具链指令。如果这是您第一次使用，可能需要一点时间。
-:::
-
 **步骤 3.** 上传板文件
 
-- 打开视图，选择"文件"，文件管理器路径将显示在左侧边栏。
+- 打开视图，选择 "Files"，文件管理器路径将显示在左侧边栏。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_boards_2.png" style={{width:600, height:'auto'}}/></div>
 
 - 打开克隆或下载文件的路径，并打开 `micropython-seeed-boards\examples`
-- 选择"boards"文件夹并将其上传到闪存。然后，您将能够在 MicroPython 设备/闪存上看到上传的文件。
+- 选择 "boards" 文件夹并将其上传到闪存。然后，您将能够在 MicroPython 设备/闪存上看到上传的文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_boards_3.png" style={{width:600, height:'auto'}}/></div>
 
@@ -133,15 +129,15 @@ finally:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light3.gif" style={{width:400, height:'auto'}}/></div>
 
-## 数字
+## 数字输入输出
 
 ### 硬件
 
 <table align="center">
   <tr>
       <th>Seeed Studio XIAO nRF54L15 Sense</th>
-        <th>Seeed Studio XIAO 扩展板配 Grove OLED</th>
-         <th>Grove - 继电器</th>
+        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
+         <th>Grove - Relay</th>
   </tr>
   <tr>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -151,17 +147,17 @@ finally:
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
     </div></td>
   </tr>
@@ -204,14 +200,15 @@ finally:
     relay.off()
 ```
 
-代码解释：
+代码说明：
 
 - **导入模块**
         - `time` 导入时间模块
         - `Xiao Pin` 从 boards.xiao 模块导入 Seeed Xiao 开发板的引脚控制类，用于操作板上的引脚。
 
 - **定义引脚**
-        - `button = "sw"` 指定按钮连接到开发板的"sw"引脚（这里是 BOOT 引脚）        - `relay = 0` 指定继电器连接到数字引脚 D0。
+        - `button = "sw"` 指定按钮连接到开发板的 "sw" 引脚（这里是 BOOT 引脚）
+        - `relay = 0` 指定继电器连接到数字引脚 D0。
 
 - **主逻辑（try 块）**
         - 当按钮被按下时（状态为 0）→ 继电器被激活（输出为 1）。
@@ -241,22 +238,22 @@ finally:
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-V1-1.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
@@ -266,7 +263,7 @@ finally:
 
   <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/example/adc.py" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -329,7 +326,7 @@ finally:
     pwm.deinit()
 ```
 
-代码说明：
+代码解释：
 
 - **导入依赖库**
         - `time`：用于添加延迟和控制程序的执行节奏。
@@ -373,12 +370,12 @@ finally:
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -389,9 +386,10 @@ finally:
 
   <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/example/imu.py" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
+
 <details>
 
 <summary>代码</summary>
@@ -613,10 +611,10 @@ finally:
 
 - **坐标转换函数**
         - `transformLat(x, y)` 和 `transformLon(x, y)` — 实现 WGS-84 → GCJ-02 转换算法部分的辅助函数（在中国用于地图混淆）。
-        - `bd_encrypt(gg)` — 通过应用额外的偏移和旋转将 GCJ-02 坐标转换为百度的 BD-09 坐标系。
+        - `bd_encrypt(gg)` — 通过应用额外的偏移和旋转将 GCJ-02 坐标转换为百度的 BD-09 坐标系统。
         - `transform(gps)` — 使用基于椭球地球模型的复杂三角函数公式将 WGS-84（原始 GPS）坐标转换为 GCJ-02 的主函数。
         - `L76X_Baidu_Coordinates(gps)` — 将原始 GPS（WGS-84）→ GCJ-02 → BD-09（百度地图格式）转换的包装器。
-        - `L76X_Google_Coordinates(gps)` — 将原始 GPS（WGS-84）→ GCJ-02（中国的谷歌地图格式）转换的包装器。
+        - `L76X_Google_Coordinates(gps)` — 将原始 GPS（WGS-84）→ GCJ-02（中国的 Google 地图格式）转换的包装器。
 
 - **解析 GNRMC 语句**
         - `parse_gnrmc(nmea_sentence)` — 将原始 NMEA `$GNRMC` 或 `$PNRMC` 字符串解析为结构化的 `GNRMC` 对象。
@@ -629,7 +627,7 @@ finally:
         - `print_gps_data(gps)` — 打印人类可读的 GPS 信息，包括：
             - 本地时间（GMT+8）
             - 带半球的原始 WGS-84 坐标
-            - 转换后的 GCJ-02（谷歌兼容）和 BD-09（百度兼容）坐标
+            - 转换后的 GCJ-02（Google 兼容）和 BD-09（百度兼容）坐标
             - 指示定位是否成功的状态消息
 
 - **主逻辑（try 块）**
@@ -658,7 +656,7 @@ finally:
  <table align="center">
   <tr>
    <th>Seeed Studio XIAO nRF54L15 Sense</th>
-   <th>Seeed Studio XIAO 扩展底板</th>
+   <th>Seeed Studio Expansion Board Base for XIAO</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -683,7 +681,7 @@ finally:
 
   <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/example/oled.py" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -894,8 +892,8 @@ ssd1306_draw_text("HELLO WORLD", 20, 4)
 代码说明：
 
 - **导入模块**
-        - `time` 导入时间模块以启用与时间相关的功能，如延迟。
-        - `XiaoI2C` 从 `boards.xiao` 模块导入适用于 Seeed Xiao 开发板的 I2C 通信类，用于初始化和控制 I2C 外设。
+        - `time` 导入时间模块以启用延迟等时间相关功能。
+        - `XiaoI2C` 从 `boards.xiao` 模块导入 Seeed Xiao 开发板的 I2C 通信类，用于初始化和控制 I2C 外设。
 
 - **定义 I2C 配置**
         - `sda = 4` 指定 I2C 总线的 SDA（数据）线连接到数字引脚 D4。
@@ -948,12 +946,12 @@ ssd1306_draw_text("HELLO WORLD", 20, 4)
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ePaper-breakout-Board-for-XIAO-V2-p-6374.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -1173,7 +1171,7 @@ if __name__ == "__main__":
 
 - **模块导入**
         - `time`：启用时间相关功能，如延时。
-        - `XiaoPin 和 XiaoSPI`：从 `boards.xiao` 导入；XiaoPin 用于控制 GPIO 引脚，而 XiaoSPI 处理 SPI 通信。
+        - `XiaoPin and XiaoSPI`：从 `boards.xiao` 导入；XiaoPin 用于控制 GPIO 引脚，而 XiaoSPI 处理 SPI 通信。
 
 - **引脚和 SPI 配置**
         - 定义了特定引脚：复位 (RST)、片选 (CS)、数据/命令 (DC) 和忙碌 (BUSY)。
@@ -1198,7 +1196,7 @@ if __name__ == "__main__":
         - 定义了一个简单的 5x7 像素字体，存储在 `G` 字典中。
         - `glyph(ch)`：检索给定字符对应的像素数据。
         - `text_size()`：计算文本在指定缩放比例下显示时的尺寸。
-        - `text_pixel()`：确定特定位置是否应绘制像素（用于文本渲染）。
+        - `text_pixel()`：确定在特定位置是否应绘制像素（用于文本渲染）。
 
 - **显示更新**
         - **epaper_update_lines(lines)**：更新显示器的核心功能。
@@ -1228,11 +1226,11 @@ if __name__ == "__main__":
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/auto_2.png" style={{width:600, height:'auto'}}/></div>
 
-然后它将显示在 MicroPython 设备/闪存部分下。
+然后它将显示在 MicroPython device/flash 部分下。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/auto_3.png" style={{width:600, height:'auto'}}/></div>
 
-**步骤 2.** 通过按下板载复位按钮，可以实现自动执行效果。
+**步骤 2.** 通过按下板载 Reset 按钮，可以实现自动执行效果。
 
 效果：
 
@@ -1247,11 +1245,11 @@ if __name__ == "__main__":
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

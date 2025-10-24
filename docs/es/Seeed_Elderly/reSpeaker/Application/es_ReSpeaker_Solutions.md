@@ -23,7 +23,9 @@ La serie ReSpeaker es una familia de placas de desarrollo diseñadas para habili
 Si quieres experimentar la interfaz de voz, o quieres intentar implementar tu idea, ¡consigue un kit o una placa de desarrollo [aquí](https://www.seeedstudio.com/series/Respeaker-10.html)!
 
 Ejemplo:
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/tdIsCRXKoVI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## **Integra Rápidamente con Nuestros SDKs y HDKs**
 

@@ -29,7 +29,9 @@ El desarrollo de software para MT3620 es soportado usando el poderoso IDE Micros
 - Instale [Visual Studio](https://visualstudio.microsoft.com/) (Soporta Community, Enterprise o Professional) y la extensión Azure Sphere, conecte la placa de desarrollo a una PC por USB, y comience a desarrollar aplicaciones IoT con niveles de seguridad sin precedentes.
 - Para usar la Placa de Desarrollo MT3620 para Azure Sphere, necesitará una PC con Windows 10 con las últimas Actualizaciones de Windows, junto con el [kit de desarrollo de software Azure Sphere](http://aka.ms/AzureSphereSDK) SDK.
 
+<div class="video-container">
 <iframe width="600" height="450" src="https://www.youtube.com/embed/iiDF26HNh-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 |Nombre del Producto | Cómo Comprar|
 |----------------|-----------|
@@ -373,7 +375,9 @@ Si no sabe cómo cargar el código, por favor revise [cómo cargar código](http
 
 Para una operación detallada, consulte el video.
 
+<div class="video-container">
 <iframe width="1000" height="669" src="https://www.youtube.com/embed/KXThR9RUNvw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Recursos
 

@@ -1,6 +1,6 @@
 ---
 description: Comenzar con la Serie Wio Tracker L1
-title: Comenzar con Wio Tracker L1
+title:  Comenzar con Wio Tracker L1
 keywords:
 - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
@@ -10,13 +10,44 @@ last_update:
   date: 6/17/2025
   author: Jessie
 ---
+:::tip
+La Serie Wio Tracker L1 comparte el mismo marco de hardware. Aunque la guía en video fue para el L1 Pro, es aplicable a todos los demás productos de la serie L1.
+:::
+## Tutorial en Video
 
+### Parte 1 Desempaquetado
+
+Al usar los modelos L1, L1 Lite o L1 E-Ink por primera vez, después de conectar a la fuente de alimentación USB, levanta el interruptor de encendido hacia arriba para encenderlo.
+
+<div class="video-container">
+<iframe width="700" height="395" src="https://www.youtube.com/embed/Wi_YmE76YcY?si=Ad-pUhle5X9QppPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+### Parte 2 Flasheo de Firmware
+
+<div class="video-container">
+<iframe width="700" height="395" src="https://www.youtube.com/embed/hcjai4J1894?si=S_jaEfXVThWXscVJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+### Parte 3 Uso del Dispositivo
+
+<div class="video-container">
+<iframe width="700" height="395" src="https://www.youtube.com/embed/Q97w2ompPtI?si=yLbAgE4cBbT6NbHS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+### Parte 4 Conexión con Teléfono
+
+<div class="video-container">
+<iframe width="700" height="395" src="https://www.youtube.com/embed/OFtUwN3z0tI?si=9zr3j-hLuoj0-CXi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+### Parte 5 Diferentes Estados
+
+<div class="video-container">
+<iframe width="700" height="395" src="https://www.youtube.com/embed/eZa8kfUD2e4?si=3Fe_30obcercIXXO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Comenzar
-
-:::note
-No borres la memoria flash, ya que esto puede dañar el dispositivo.
-:::
 
 ### Flashear Firmware
 
@@ -36,7 +67,7 @@ Arrastra el archivo UF2 a la unidad DFU. El firmware debería flashearse despué
 
 ### Encender el dispositivo
 
-Conecta el cable USB para activar el dispositivo.
+Conecta el cable USB para activar el dispositivo. Levanta el interruptor de encendido hacia arriba para encenderlo.
 
 ### Conectar vía App
 
@@ -45,7 +76,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="App IOS">
+<TabItem value="ios" label="App iOS">
 
 - Selecciona el dispositivo objetivo en el panel de Bluetooth.
 
@@ -75,7 +106,7 @@ import TabItem from '@theme/TabItem';
 Para comenzar a comunicarse a través de la malla, debes establecer tu región. Esta configuración controla qué rango de frecuencia usa tu dispositivo y debe establecerse según tu ubicación regional.
 
 <Tabs>
-<TabItem value="ios" label="App IOS">
+<TabItem value="ios" label="App iOS">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
@@ -103,6 +134,43 @@ Consulta [Región LoRa por País](https://meshtastic.org/docs/configuration/regi
 
 Ahora que has establecido la región LoRa en tu dispositivo, puedes continuar configurando cualquier [Configuración LoRa](https://meshtastic.org/docs/configuration/radio/lora/) para satisfacer tus necesidades.
 
+### Conexión de sensores
+
+Puedes agregar sensores al dispositivo a través de la interfaz Grove. Los siguientes sensores han sido verificados como compatibles con la interfaz Grove del dispositivo.
+
+<table>
+  <tr>
+    <th colspan="2">Tipo de sensor</th>
+    <th colspan="1">Modelo de Sensor</th>
+  </tr>
+  <tr>
+    <td rowspan="4">Sensor Ambiental</td>
+    <td>Presión</td>
+    <td>BMP085</td>
+  </tr>
+  <tr>
+    <td>Temperatura</td>
+    <td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html) 、PCT2075</td>
+  </tr>
+  <tr>
+    <td>Temperatura y Humedad</td>
+    <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
+  </tr>
+  <tr>
+    <td>Temperatura, Humedad y Presión</td>
+    <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Otros</td>
+    <td>Frecuencia Cardíaca y SpO₂</td>
+    <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
+  </tr>
+  <tr>
+    <td>Teclado I2C</td>
+    <td>CardKB</td>
+  </tr>
+</table>
+
 ### FAQ
 
 #### Entrar al Modo DFU Manualmente
@@ -112,3 +180,11 @@ Conecta el dispositivo a tu PC, presiona dos veces el botón `Reset`. El LED ama
 #### Salir del Modo DFU
 
 Presiona el botón `Reset` una vez para salir del modo DFU.
+
+#### Calidad de Señal
+
+- **SNR** refleja la calidad del enlace de comunicación. Los dispositivos normales usualmente operan por encima de -7 dB. Un dispositivo con SNR menor a -10 dB indica un rendimiento deficiente.
+
+- **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. Los dispositivos normales usualmente operan por encima de -110 dBm. Un dispositivo con RSSI menor a -115 dBm se considera que tiene un rendimiento deficiente.
+
+      Para lograr el mejor efecto de señal, por favor usa el dispositivo en un área abierta y sin obstrucciones con interferencia mínima.

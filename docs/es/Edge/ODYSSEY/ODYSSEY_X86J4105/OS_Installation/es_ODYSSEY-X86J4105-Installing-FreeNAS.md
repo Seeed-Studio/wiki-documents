@@ -155,7 +155,9 @@ Si puedes ver esta pantalla entonces has instalado exitosamente FreeNAS y siént
 
 - Video de Explaining Computers sobre FreeNAS en Odyssey-X86:
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qyz91Q_JrBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Otras aplicaciones útiles:
 

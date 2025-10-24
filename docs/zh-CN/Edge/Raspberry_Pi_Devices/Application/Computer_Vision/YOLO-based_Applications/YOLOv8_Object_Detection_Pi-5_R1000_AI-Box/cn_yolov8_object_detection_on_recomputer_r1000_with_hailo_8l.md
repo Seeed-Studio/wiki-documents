@@ -166,7 +166,7 @@ bash ./run.sh object-detection
 
 我们比较了使用 AI 套件加速前后 YOLOv8 在输入分辨率为 640*640 的目标检测任务中的推理速度。结果显示，加速前推理速度仅为 0.75 FPS，而加速后达到了 29.5 FPS。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/yZ0IlqLZ86E" title="YOLOv8 Object Detection on reComputer R1000(CM4-Powered Edge Gateway) with Hailo-8L" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

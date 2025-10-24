@@ -172,7 +172,7 @@ Esta configuración:
 - Configura el Botón 1 para reproducir un patrón de pitido corto cuando se presiona
 
 :::tip
-Puedes ajustar el parámetro `frequency` para cambiar el tono del zumbador. Los valores más altos crean tonos más agudos.
+Puedes ajustar el parámetro `frequency` para cambiar el tono del zumbador. Valores más altos crean tonos más agudos.
 :::
 
 ### Monitoreo de Batería
@@ -321,11 +321,11 @@ El complemento Puppet lanza un servidor en el puerto 10000 que genera capturas d
 http://homeassistant.local:10000/lovelace/0?viewport=800x480
 ```
 
-Esta URL capturará una captura de pantalla de tu panel de control predeterminado a resolución 800x480 (perfecto para reTerminal E Series).
+Esta URL capturará una captura de pantalla de tu panel predeterminado a resolución 800x480 (perfecto para reTerminal E Series).
 
-#### Optimización para Papel Electrónico
+#### Optimización para E-Paper
 
-Para pantallas de papel electrónico, agrega el parámetro `eink` para reducir la paleta de colores:
+Para pantallas e-paper, agrega el parámetro `eink` para reducir la paleta de colores:
 
 ```
 http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2
@@ -349,7 +349,7 @@ Puedes capturar cualquier página de Home Assistant cambiando la ruta de la URL:
 http://homeassistant.local:10000/todo?viewport=800x480&eink=2&invert
 ```
 
-Paso 10. Prueba tu URL de captura de pantalla ingresándola en un navegador web. Deberías ver la captura de pantalla de tu página seleccionada de Home Assistant.
+Prueba tu URL de captura de pantalla ingresándola en un navegador web. Deberías ver la captura de pantalla de tu página seleccionada de Home Assistant.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/92.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -361,30 +361,39 @@ Paso 11. Agrega el siguiente código a tu configuración de ESPHome después de 
 <TabItem value="For E1001" label="Para E1001" default>
 
 ```yaml
-http_request:
-  verify_ssl: false
-  timeout: 10s
-  watchdog_timeout: 15s
 
-online_image:
-  - id: dashboard_image
-    format: PNG
-    type: BINARY
-    buffer_size: 30000
-    url: http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert  # Replace with your Home Assistant address
-    update_interval: 30s
-    on_download_finished:
-      - delay: 0ms
-      - component.update: main_display
+……
+psram:
+  mode: octal
+  speed: 80MHz
+
+……
+
+captive_portal:
 
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
 
+http_request:
+  verify_ssl: false
+  timeout: 20s
+  watchdog_timeout: 25s
+
+online_image:
+  - id: dashboard_image
+    format: PNG
+    type: GRAYSCALE
+    buffer_size: 65536
+    url: http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert
+    update_interval: 1min
+    on_download_finished:
+      - component.update: epaper_display
+
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.50inv2
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -402,38 +411,39 @@ display:
 <TabItem value="For E1002" label="Para E1002">
 
 ```yaml
-# for model 7.3in-e
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
 
-http_request:
-  verify_ssl: false
-  timeout: 10s
-  watchdog_timeout: 15s
+……
+psram:
+  mode: octal
+  speed: 80MHz
 
-online_image:
-  - id: dashboard_image
-    format: PNG
-    type: BINARY
-    buffer_size: 30000
-    url: http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert  # Replace with your Home Assistant address
-    update_interval: 30s
-    on_download_finished:
-      - delay: 0ms
-      - component.update: main_display
+……
+
+captive_portal:
 
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
 
+http_request:
+  verify_ssl: false
+  timeout: 20s
+  watchdog_timeout: 25s
+
+online_image:
+  - id: dashboard_image
+    format: PNG
+    type: RGB565
+    buffer_size: 65536
+    url: http://192.168.1.12:10000/lovelace/0?viewport=800x480
+    update_interval: 1min
+    on_download_finished:
+      - component.update: epaper_display
+
 display:
-  - platform: waveshare_epaper
-    id: main_display
-    model: 7.30in-e
+  - platform: epaper_spi
+    id: epaper_display
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -454,14 +464,25 @@ display:
 Reemplaza `homeassistant.local` con la dirección IP real de tu Home Assistant si la resolución DNS local no funciona en tu red.
 :::
 
-Cuando tu configuración se haya subido y ejecutado exitosamente, tu Pantalla ePaper reTerminal E Series mostrará una captura de pantalla de tu panel de control de Home Assistant:
+Cuando tu configuración se haya subido y esté ejecutándose exitosamente, tu Pantalla ePaper reTerminal E Series mostrará una captura de pantalla de tu panel de Home Assistant:
+
+<Tabs>
+<TabItem value="For E1001" label="Para E1001" default>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/54.jpg" style={{width:600, height:'auto'}}/></div>
+
+</TabItem>
+<TabItem value="For E1002" label="Para E1002">
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/166.jpg" style={{width:600, height:'auto'}}/></div>
+
+</TabItem>
+</Tabs>
 
 ## Demo 3: Modo de Sueño Profundo
 
 :::tip
-Si comienzas a usar el programa de Sueño Profundo, recomendamos que lo uses preferiblemente con el botón blanco del lado derecho y configures el botón blanco del lado derecho como el botón de Despertar del Sueño. De esta manera, cuando quieras actualizar el programa, no encontrarás la situación incómoda donde el dispositivo está durmiendo y no puedes subir el programa a través del puerto serie.
+Si comienzas a usar el programa de Sueño Profundo, recomendamos que lo uses preferiblemente con el botón blanco del lado derecho y configures el botón blanco del lado derecho como el botón de Despertar del Sueño. De esta manera, cuando quieras actualizar el programa, no te encontrarás con la situación incómoda donde el dispositivo está durmiendo y no puedes subir el programa a través del puerto serie.
 :::
 
 Este ejemplo demuestra cómo usar el modo de sueño profundo para reducir significativamente el consumo de energía, haciendo que tu Pantalla ePaper reTerminal E Series sea adecuada para aplicaciones alimentadas por batería.
@@ -602,7 +623,7 @@ Cuando esté ejecutándose, verás un contador incrementar cada vez que el dispo
 Para una mejor comprensión, recomendamos encarecidamente que ejecutes primero los ejemplos básicos anteriores antes de probar este ejemplo integral.
 :::
 
-Este ejemplo avanzado combina múltiples características en una solución completa de panel de control para el reTerminal E Series. Demuestra:
+Este ejemplo avanzado combina múltiples características en una solución completa de panel para el reTerminal E Series. Demuestra:
 
 1. Visualización del clima y clima interior
 2. Monitoreo de batería con iconos
@@ -1292,36 +1313,36 @@ Este ejemplo implementa:
 5. **Visualización de Temperatura y Humedad**: Usando el sensor SHT4x integrado vía I²C
 6. **Iconos Dinámicos**: Los iconos de Material Design cambian según los valores del sensor
 
-## FAQ
+## Preguntas Frecuentes
 
 ### P1: ¿Por qué no hay datos?
 
-En este caso, debes ir a Configuración -> Dispositivos y Servicios -> Integraciones para **RECONFIGURAR** el dispositivo. ¿No encuentras tu Panel ePaper? Intenta reiniciar Home Assistant.
+En este caso, debes ir a Settings -> Devices & Services -> Integrations para **RECONFIGURAR** el dispositivo. ¿No encuentras tu Panel ePaper? Intenta reiniciar Home Assistant.
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
 ### P2: ¿Por qué no puedo obtener esos datos en Home Assistant? {#port}
 
-En este caso, debes ir a Configuración -> Dispositivos y Servicios -> Integraciones para **AGREGAR** tu dispositivo a Home Assistant.
+En este caso, debes ir a Settings -> Devices & Services -> Integrations para **AGREGAR** tu dispositivo a Home Assistant.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
 
-<!-- ### P3: ¿Cómo puedo cargar un nuevo programa cuando el dispositivo está en modo de suspensión profunda?
+<!-- ### Q3: How can I upload a new program when device is in deep sleep mode?
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/103.png" style={{width:'100%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/102.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-Cuando el dispositivo está en modo de suspensión profunda, no puedes cargar un nuevo programa directamente. Sigue estos pasos para entrar en modo de descarga:
+When the device is in deep sleep mode, you can't upload a new program directly. Follow these steps to enter download mode:
 
-Paso 1. Asegúrate de que el dispositivo esté encendido. Luego, mantén presionado el botón **Boot** ubicado junto al puerto USB-C en el XIAO ESP32-S3 Plus.
+Step 1. Make sure the device is turned on. Then, press and hold the **Boot** button located next to the USB-C port on the XIAO ESP32-S3 Plus.
 
-Paso 2. Mientras mantienes presionado el botón **Boot**, presiona el botón **Reset** una vez y luego suelta el botón **Boot**.
+Step 2. While holding the **Boot** button, press the **Reset** button once, then release the **Boot** button.
 
-Paso 3. Apaga el interruptor de la batería y desconecta el cable de alimentación.
+Step 3. Turn off the battery switch and unplug the power cable.
 
-Paso 4. Finalmente, vuelve a conectar el cable y carga un nuevo programa. -->
+Step 4. Finally, replug the cable and upload a new program. -->
 
 ### P3: ¿Falló la carga del programa por Wi-Fi?
 
@@ -1333,14 +1354,12 @@ En este caso, tu dispositivo está desconectado o en modo de suspensión profund
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

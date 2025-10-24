@@ -18,7 +18,9 @@ last_update:
 观看视频并确保您的设备完美安装并准备就绪：
 
 
+<div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/tTrhbSSWpeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 
 ### 定制外壳设计建议
