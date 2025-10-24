@@ -746,7 +746,7 @@ lerobot-teleoperate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -755,6 +755,11 @@ lerobot-teleoperate \
 
 If you have more cameras, you can change `--robot.cameras` to add cameras. You should note the format of the index_or_path, which is determined by the last digit of the camera ID output by `python -m lerobot.find_cameras opencv`.
 
+:::tip
+Images in the `fourcc: "MJPG"` format are compressed. You can try higher resolutions, and you may also attempt the `YUYV` format. However, the latter will reduce the image resolution and FPS, leading to lag in the robotic arm's operation. Currently, under the `MJPG` format, it can support 3 cameras at a resolution of `1920*1080` while maintaining `30FPS`. That said, connecting 2 cameras to a computer via the same USB HUB is still not recommended.
+:::
+
+
 For example, you want to add a side camera:
 
 ```bash
@@ -762,12 +767,17 @@ lerobot-teleoperate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true
 ```
+
+:::tip
+Images in the `fourcc: "MJPG"` format are compressed. You can try higher resolutions, and you may also attempt the `YUYV` format. However, the latter will reduce the image resolution and FPS, leading to lag in the robotic arm's operation. Currently, under the `MJPG` format, it can support 3 cameras at a resolution of `1920*1080` while maintaining `30FPS`. That said, connecting 2 cameras to a computer via the same USB HUB is still not recommended.
+:::
+
 
 :::tip
 If you find bug like this.
@@ -798,7 +808,7 @@ lerobot-record \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -833,7 +843,7 @@ lerobot-record \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -1117,7 +1127,7 @@ lerobot-record \
   --robot.type=so101_follower \
   --robot.port=/dev/ttyACM0 \ # <- Use your port
   --robot.id=my_blue_follower_arm \ # <- Use your robot id
-  --robot.cameras="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30}}" \ # <- Use your cameras
+  --robot.cameras="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \ # <- Use your cameras
   --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
   --dataset.repo_id=${HF_USER}/eval_DATASET_NAME_test \  # <- This will be the dataset name on HF Hub
   --dataset.episode_time_s=50 \
@@ -1220,7 +1230,7 @@ You can use the `record` function from [`lerobot/record.py`](https://github.com/
 lerobot-record \
   --robot.type=so100_follower \
   --robot.port=/dev/ttyACM0 \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video10, width: 640, height: 480, fps: 30}, side: {type: intelrealsense, serial_number_or_name: 233522074606, width: 640, height: 480, fps: 30}}" \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video10, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: intelrealsense, serial_number_or_name: 233522074606, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
   --robot.id=my_awesome_follower_arm \
   --display_data=false \
   --dataset.repo_id=${HF_USER}/eval_so100 \
@@ -1234,7 +1244,7 @@ such as:
 lerobot-record \
   --robot.type=so101_follower \
   --robot.port=/dev/ttyACM0 \
-  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
   --robot.id=my_awesome_follower_arm \
   --display_data=false \
   --dataset.repo_id=seeed/eval_test123 \
