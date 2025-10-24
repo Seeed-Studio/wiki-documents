@@ -48,11 +48,11 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
 <Tabs>
 <TabItem value="sensecraft" label="SenseCraft AI" default>
 
-:::caution 注意
-以下のガイドは、まだリリースされていない内部テストウェブサイト用です。
-公式版は間もなく利用可能になります。
-現在は別の方法でファームウェアをフラッシュしてください。
-:::
+<!-- :::caution Note
+The following guide is for an internal testing website that has not yet been released.
+The official version will be available soon.
+Please use another method to flash the firmware for now.
+::: -->
 
 - 前提条件
 
@@ -68,7 +68,7 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI2.png" style={{width:800, height:'auto'}}/></div>
 
-  - 正しいシリアルポート（"A" で終わる）を選択
+  - 正しいシリアルポート（"A" で終わるもの）を選択
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
 
@@ -82,7 +82,7 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI9.png" style={{width:500, height:'auto'}}/></div>
 
-  - 正しいシリアルポート（"B" で終わる）を選択
+  - 正しいシリアルポート（"B" で終わるもの）を選択
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI10.png" style={{width:500, height:'auto'}}/></div>
 
@@ -106,7 +106,7 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
 
 - 前提条件
 
-  - **ビジュアルトリガーファームウェア v1.8.8**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **ビジュアルトリガーファームウェア v2.0.3**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 以降)
 
@@ -148,11 +148,11 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
 
 </TabItem>
 
-<TabItem value="flasher2" label="Command Line" default>
+<TabItem value="flasher2" label="コマンドライン" default>
 
 - 前提条件
 
-  - **ビジュアルトリガーファームウェア v1.8.8**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **ビジュアルトリガーファームウェア v2.0.3**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [esptool.py](https://github.com/espressif/esptool)
 
@@ -233,6 +233,10 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
 </TabItem>
 </Tabs>
 
+:::note
+v2.0.3 以降のファームウェアバージョンでは、ビジュアル検出を有効にするために Xiaozhi に「Turn on inference switch」と言う必要があります。
+:::
+
 ## AI モデルフラッシュプロセス
 
 ### 前提条件
@@ -247,7 +251,7 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
 -  `Connect` をクリック 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI2.png" style={{width:800, height:'auto'}}/></div>
 
-- 正しいシリアルポート（"A" で終わる）を選択
+- 正しいシリアルポート（"A" で終わるもの）を選択
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
 
 - `Connect` をクリック
@@ -280,7 +284,7 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
 1. **COMポートが検出されない**
    - 下部のType-Cポートを使用していることを確認してください
    - 別のUSBケーブルを試してください
-   - USBドライバが正しくインストールされているか確認してください
+   - USBドライバーが正しくインストールされているか確認してください
 
 2. **フラッシュが失敗する**
    - Himaxをフラッシュする際は、「A」で終わるCOMポートを選択してください。
@@ -294,7 +298,7 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
    - シリアル出力に関連するログメッセージがあるか確認してください。
    - ファームウェアバージョンv2.0.3では、この機能を有効にするために小智に「Turn on inference switch」と言う必要があります。
 
-5. **シリアルに視覚認識ログが表示されるが、デバイスがまだウェイクアップできない**
+5. **シリアルに視覚認識ログが表示されるがデバイスがウェイクアップしない**
    - SenseCraft AIプラットフォームに移動し、PersonモデルをAIチップにフラッシュしてください。
 
 ## 技術サポート
