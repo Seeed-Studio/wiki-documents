@@ -168,6 +168,12 @@ The device remains in a standby state when not awakened, meaning it does not lis
 </video>
 </div>
 
+:::info[How to Enable Visual Wake-Up]
+By default, the visual wake-up feature is disabled. To turn it on, you can say to the Watcher when it's awaked:
+
+**"Hey Watcher, turn on model inference."**
+:::
+
 The current visual wake-up function offers the following configuration options:
 
 - **Target ID** (`target`): Specifies the target ID to detect. This ID depends on the visual model used; the default value is 0.
