@@ -17,7 +17,7 @@ last_update:
 ---
 
 <div align="center">
-    <img width={400} 
+    <img width={400}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orbbec-gemini-2-3d-camera.png" />
 </div>
 
@@ -30,7 +30,6 @@ Orbbec Gemini 2 是一款高性能 RGB-D 相机，配备双眼结构光深度传
 <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
 </a></div>
 
-
 ## 介绍
 
 <div style={{ textAlign: "justify" }}>
@@ -39,16 +38,14 @@ Orbbec Gemini 2 是一款高性能 RGB-D 相机，配备双眼结构光深度传
 
 ## 先决条件
 
-- __[reComputer J30/40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)__ 预装 Jetpack 6.2
-- __Orbbec Gemini2 3D Camera__
-- __[ROS2 Humble](https://wiki.seeedstudio.com/cn/install_ros2_humble/)__ 环境已安装
-
+- **[reComputer J30/40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)** 预装 Jetpack 6.2
+- **Orbbec Gemini2 3D Camera**
+- **[ROS2 Humble](https://wiki.seeedstudio.com/cn/install_ros2_humble/)** 环境已安装
 
 <div align="center">
-    <img width={700} 
+    <img width={700}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recomputerj4012.jpg" />
 </div>
-
 
 ## 安装 Orbbec SDK
 
@@ -63,6 +60,7 @@ unzip OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64.zip
 ```
 
 **步骤 2.** 构建示例并测试：
+
 ```bash
 # Install udev rules
 cd OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64/shared/
@@ -75,16 +73,15 @@ cd ..
 ./setup.sh
 ```
 
-
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/test_sdk.png" />
 </div>
 
 ## 构建 ORB-SLAM3
 
-
 **步骤 1.** 安装系统依赖项：
+
 ```bash
 sudo apt update && sudo apt install -y \
     cmake build-essential libeigen3-dev libopencv-dev \
@@ -120,6 +117,7 @@ sudo make install
 如果遇到 OpenEXR 相关的编译错误，您可能需要修改源代码：
 
 在`./components/pango_image/src/image_io_exr.cpp`中，将：
+
 ```cpp
 #include <ImfChannelList.h>
 #include <ImfFrameBuffer.h>
@@ -128,12 +126,14 @@ sudo make install
 ```
 
 替换为：
+
 ```cpp
 #include <OpenEXR/ImfChannelList.h>
 #include <OpenEXR/ImfFrameBuffer.h>
 #include <OpenEXR/ImfInputFile.h>
 #include <OpenEXR/ImfOutputFile.h>
 ```
+
 :::
 
 **步骤 3.** 编译 ORB-SLAM3 的配置
@@ -143,14 +143,17 @@ cd ~
 git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git
 cd ORB_SLAM3
 ```
+
 ORB-SLAM3 可能与较新的 C++标准存在兼容性问题。修复`monotonic_clock`问题：
 
 ```bash
 # Replace monotonic_clock with steady_clock in all source files
 find Examples -name "*.cc" -exec sed -i 's/monotonic_clock/steady_clock/g' {} \;
 ```
+
 :::info
 例如，在`Examples/Stereo/stereo_euroc.cc`中：
+
 ```cpp
 // Change from:
 std::chrono::monotonic_clock::time_point t1 = std::chrono::monotonic_clock::now();
@@ -158,14 +161,17 @@ std::chrono::monotonic_clock::time_point t1 = std::chrono::monotonic_clock::now(
 // To:
 std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
 ```
+
 :::
 
 **步骤 4.** 测试 Pangolin 是否正确安装：
+
 ```bash
 ./examples/SimpleDisplay/SimpleDisplay
 ```
+
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/v_tool.png" />
 </div>
 
@@ -179,6 +185,7 @@ std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
 :::
 <details>
 <summary> CMakeLists.txt </summary>
+
 ```cmake
 cmake_minimum_required(VERSION 2.8)
 project(ORB_SLAM3)
@@ -621,6 +628,7 @@ endif()
 # endif()
 
 ```
+
 </details>
 
 **步骤 6.** 创建一个使用 Orbbec Gemini2 适配器的 ORB-SLAM3 RGB-D 模式脚本
@@ -629,6 +637,7 @@ endif()
 
 <details>
 <summary> rgbd_orbbec_gemini2_cpp.cc </summary>
+
 ```c++
 /**
 * This file is part of ORB-SLAM3
@@ -878,6 +887,7 @@ int main(int argc, char **argv)
 }
 
 ```
+
 </details>
 
 **步骤 7.** 构建 ORB-SLAM3
@@ -887,13 +897,11 @@ chmod +x build.sh
 ./build.sh
 ```
 
-
 ## 相机标定
 
 <div style={{ textAlign: "justify" }}>
 在运行 ORB-SLAM3 之前，需要对相机进行标定以获取相机的参数配置。这里我们演示使用 ROS 提供的相机标定工具来标定相机并获取其参数。
 </div>
-
 
 **步骤 1.** 安装 Orbbec ROS2 驱动
 
@@ -923,20 +931,21 @@ colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Re
 source ./install/setup.bash
 ros2 launch orbbec_camera gemini2.launch.py
 ```
+
 :::note
 您可以通过观察相机数据话题是否正常发布来检查相机节点是否能正常启动。
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/camera_topic.png" />
 </div>
 :::
-
 
 **步骤 2.** 安装相机标定包
 
 ```bash
 sudo apt install ros-humble-camera-calibration
 ```
+
 **步骤 3.** 下载标定棋盘格
 
 从以下地址下载标定棋盘格
@@ -950,15 +959,18 @@ sudo apt install ros-humble-camera-calibration
 ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
   --ros-args --remap image:=/camera/color/image_raw --remap camera:=/camera/color
 ```
+
 :::note
+
 - `--size 8x6` 指的是内角点的数量（8×6 = 48 个角点，对应 9×7 网格）
 - `--square 0.025` 指的是方格大小，单位为米（25mm）
 - 移动相机从不同角度捕获图像
+
 :::
 
 从不同角度收集图像，自动计算相机参数，并将标定数据保存在工具提示中。
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/cal_tool.png" />
 </div>
 
@@ -973,6 +985,7 @@ ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
 
 <details>
 <summary> Orbbec_Gemini2.yaml </summary>
+
 ```yaml
 %YAML:1.0
 
@@ -1042,19 +1055,17 @@ Viewer.ViewpointF: 500.0
 
 ## 运行 ORB-SLAM3
 
-
-
 ```bash
 # Set Library Path
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 # Run RGB-D mode slam
 ./Examples/RGB-D/rgbd_orbbec_gemini2 Vocabulary/ORBvoc.txt Examples/RGB-D/Orbbec_Gemini2.yaml
 ```
+
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orb_slam3.gif" />
 </div>
-
 
 ## 资源
 
@@ -1067,11 +1078,11 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
