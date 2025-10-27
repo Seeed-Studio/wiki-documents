@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 10/20/2025
+  date: 10/27/2025
   author: Frank
 ---
 
@@ -17,49 +17,35 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is October 20th, and a brand new week has begun! Check out what Seeed Studio did last week!
-
-### [Efficient Multi-Task Vision Inference Engine Deployment on Jetson](https://wiki.seeedstudio.com/deploy_visual_perception_engine_recomputer/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/demo.gif" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-[Visual Perception Engine](https://github.com/nasa-jpl/visual-perception-engine) is a cutting-edge framework that revolutionizes robotic perception by eliminating redundant computations through shared backbone networks. Unlike traditional approaches where each visual task runs independently, VPEngine uses a unified base model backbone (e.g., DINOv2) to extract image features only once, which are then reused by multiple task heads. This approach significantly reduces memory overhead and CPU-GPU data transfer while supporting dynamic task scheduling and seamless ROS2 integration.This wiki will show you how to use reComputer Robotics in conjunction with GMSL cameras to deploy the Visual Perception Engine to the edge.
-
-</div>
-
-### [Flashing AI Models on the SenseCAP Watcher](https://wiki.seeedstudio.com/visual_trigger_and_ai_flash/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This guide focuses on how to flash the SenseCAP Watcher with the Visual Recognition Triggered Conversation firmware and how to replace or update the AI model on the device. It is intended as a hands-on instructional guide for these operations.
-
-</div>
+Today is October 27th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [EE04 ePaper Display Work with ESPHome for Home Assistant](https://wiki.seeedstudio.com/EE04_with_esphome_advanced/)
+### [AI Gun Detection Solution for Real-Time Edge Alerts](https://wiki.seeedstudio.com/solutions/frigate-on-jetson-nodered-gun-alerts/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://cc.seeedstudio.com/wp-content/uploads/2025/08/scene_3.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document is a detailed tutorial on integrating the **EE04 ePaper Display** with **ESPHome** to create a smart home control panel in **Home Assistant**. It covers hardware preparation, firmware setup, and data display such as weather information. The guide also provides examples of configuring the SPI interface, fonts, graphics, and data retrieval from Home Assistant using **YAML** files.
+The Frigate + Node-RED Gun Detection Solution is an edge AI video analytics stack that detects firearms in live camera streams and orchestrates alerting, review, and integrations. Built for privacy-preserving, low‑latency deployments on **AI Boxes**, the NVIDIA **Jetson** series and **reComputer R2000**, it combines an optimized detection engine (Frigate) with a visual automation layer (Node‑RED) and optional LLM‑assisted review.
+
+</div>
+
+### [MCP Integration in SenseCAP Watcher](https://wiki.seeedstudio.com/mcp_endpoint/)
+
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Grove/Grove4.png" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+The [**MCP Endpoint (Model Context Protocol Endpoint)**](https://wiki.seeedstudio.com/mcp_endpoint/) documentation introduces its functionality in **SenseCAP Watcher**, explaining its role in AI systems, configuration methods, and usage examples to help developers quickly integrate and manage custom MCP services. Additionally, we’ve updated [**Extending Grove with MCP**](https://wiki.seeedstudio.com/extending_grove_with_mcp/), which demonstrates how to connect Grove sensors to AI systems through MCP for more flexible data interaction and application development.
 
 </div>
 
 ## Existing Wiki Updated
 
-### [Getting Started with reTerminal E Series ePaper Display and EEZ Studio](https://wiki.seeedstudio.com/reterminal_e10xx_with_eezstudio/)
+### [reTerminal E Series ePaper Display Works with TRMNL](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/)
 
-We have added an example showing how to [configure the Project Settings](https://wiki.seeedstudio.com/reterminal_e10xx_with_eezstudio/#project-settings-configuration).
-
-### [NVIDIA® Jetson AGX Orin 32GB H01 Kit](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/)
-
-We have added a tutorial on how to flash [**JP5.1.4** onto the **NVIDIA® Jetson AGX Orin 32GB H01 Kit**](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/#flash-to-jetson).
+We have added an operation example on how to [flash via the SenseCraft HMI platform](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/#method-2-flash-via-sensecraft-hmi-platform).
 
 ## The Efforts of Contributor
 
@@ -204,5 +190,6 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.9.22nd](/Seeed_Elderly/weekly_wiki/wiki250922)
 - [weekly wiki on 2025.9.29th](/Seeed_Elderly/weekly_wiki/wiki250929)
 - [weekly wiki on 2025.10.13th](/Seeed_Elderly/weekly_wiki/wiki251013)
+- [weekly wiki on 2025.10.20th](/Seeed_Elderly/weekly_wiki/wiki251020)
 
 </details>
