@@ -1379,6 +1379,14 @@ const sidebars = {
           items: [
             {
               type: 'category',
+              label: 'ePaper Breakout Board for XIAO',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ePaper_Breakout_Board_For_XIAO/ePaper_Breakout_Board_with_OEPL',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ePaper_Breakout_Board_For_XIAO/XIAO-eInk-Expansion-Board',
+                ],
+            },
+            {
+              type: 'category',
               label: 'Round Display for XIAO',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/SeeedStudio_Round_Display_for_XIAO',
@@ -1412,7 +1420,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/xiao-rgb-matrix',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/gpio_expander_for_xiao',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-eInk-Expansion-Board',
+            // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-eInk-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/xiao_eink_expansion_board_v2',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-RS485-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Bus_Servo_Driver_Board',
