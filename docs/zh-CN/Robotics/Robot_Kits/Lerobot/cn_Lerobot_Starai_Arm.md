@@ -61,8 +61,7 @@ last_update:
 | -------------------------- | ------------------------------------------ | ----------------------------------------- | ---------------------------------------- |
 | 自由度（Degrees of Freedom） | 6+1                                        | 6+1                                       | 6+1                                      |
 | 最大工作半径（Reach）       | 470毫米                                    | 470毫米                                   | 670毫米                                  |
-| 最大臂展（Span）           | 940毫米                                    | 940毫米                                   | 1340毫米                                 |
-| 重复定位精度（Repeatability） | 2毫米                                      | -                                         | 1毫米                                    |
+| 重复定位精度（Repeatability） | 2毫米                                      | -                                         | 2毫米                                    |
 | 工作负载（Working Payload） | 300克（在70%工作半径下）                   | -                                         | 750克（在70%工作半径下）                 |
 | 伺服电机（Servos）         | RX8-U50H-M × 2<br/>RA8-U25H-M × 4<br/>RA8-U26H-M × 1 | RX8-U50H-M × 2<br/>RA8-U25H-M × 4<br/>RA8-U26H-M × 1 | RX18-U100H-M × 3<br/>RX8-U50H-M × 3<br/>RX8-U51H-M × 1 |
 | 平行夹爪套件（Parallel Gripper Kit） | ✅（支持）                                  | -                                         | ✅（支持）                                |
@@ -290,29 +289,29 @@ sudo chmod 666 /dev/ttyUSB*
 ```
 :::
 
+
 ### 单臂校准设置
 
-如果是第一次校准，请对每个关节左右转动到对应位置。
 
-如果是重新校准，按照命令提示输入字母c后按Enter键。
+机械臂开箱到遥操作视频可参考：
 
-下面是参考值,通常情况下，真实的限位参考值的±10°范围内。
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115348342901390&bvid=BV1Pt47zGEEc&cid=32960351835&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-| 舵机ID  | 角度下限参考值 | 角度上限参考值 | 备注                               |
-| ------- | -------------: | -------------: | ---------------------------------- |
-| motor_0 |          -180° |           180° | 转动到限位处                       |
-| motor_1 |           -90° |            90° | 转动到限位处                       |
-| motor_2 |           -90° |            90° | 转动到限位处                       |
-| motor_3 |          -180° |           180° | 没有限位，需转动到角度上下限参考值 |
-| motor_4 |           -90° |            90° | 转动到限位处                       |
-| motor_5 |          -180° |           180° | 没有限位，需转动到角度上下限参考值 |
-| motor_6 |             0° |           100° | 转动到限位处                       |
 
-:::tip
-以PC(linux)和jetson板卡为例，`第一个`插入usb接口会映射为`ttyUSB0`，`第二个`插入usb接口会映射为`ttyUSB1`。
 
-在运行代码前请注意leader和follower的映射接口。
-:::
+将手臂移动至下图**机械臂初始位置**待机, 然后再重新接上电源。新版本机械臂初始位置，（需要特别关注3，4，5号关节舵机与图片需要严格对应）：
+
+| **Violin Leader Arm初始位置** | **Viola Follower Arm初始位置** |
+|:---------:|:---------:|
+| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_rest.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_rest.jpg) |
+
+老版本机械臂初始位置（需要特别关注3，4，5号关节舵机与图片需要严格对应，也可以参考新版本机械臂初始位置）：
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png" />
+</div>
 
 #### leader机械臂
 
@@ -321,6 +320,9 @@ sudo chmod 666 /dev/ttyUSB*
 ```bash
 lerobot-calibrate     --teleop.type=lerobot_teleoperator_violin --teleop.port=/dev/ttyUSB0 --teleop.id=my_awesome_staraiviolin_arm
 ```
+
+启动后你会看到各个关节的编码器值，需要你逐一对每个关节进行手动校准，将每个关节旋转到最大值和和最小值，没有限位的关节，最大不超过顺时针及逆时针180°。校准完所有关节后点击回车即可保存。
+
 
 #### follower机械臂
 
@@ -338,7 +340,7 @@ lerobot-calibrate     --robot.type=lerobot_robot_cello --robot.port=/dev/ttyUSB1
 ```
 
 
-在运行命令后，需要**手动掰机械臂**，让每个关节达到**极限值**，终端会显示记录的范围数据，做完此操作后按下回车即可。
+启动后你会看到各个关节的编码器值，需要你逐一对每个关节进行手动校准，将每个关节旋转到最大值和和最小值，没有限位的关节，最大不超过顺时针及逆时针180°。校准完所有关节后点击回车即可保存。
 
 :::tip
 校准的文件会保存到以下路径`~/.cache/huggingface/lerobot/calibration/robots`和`~/.cache/huggingface/lerobot/calibration/teleoperators`下。
@@ -357,6 +359,10 @@ lerobot-calibrate     --robot.type=lerobot_robot_cello --robot.port=/dev/ttyUSB1
 lerobot-calibrate     --teleop.type=lerobot_teleoperator_bimanual_leader  --teleop.left_arm_port=/dev/ttyUSB0  --teleop.right_arm_port=/dev/ttyUSB2  --teleop.id=bi_starai_violin_leader
 ```
 
+启动后你会看到各个关节的编码器值，需要你逐一对每个关节进行手动校准，将每个关节旋转到最大值和和最小值，没有限位的关节，最大不超过顺时针及逆时针180°。校准完所有关节后点击回车即可保存。
+
+
+
 #### follower机械臂
 
 将left_arm_port连接到`/dev/ttyUSB1`，right_arm_port连接到`/dev/ttyUSB3`，或者修改`--robot.left_arm_port` `--robot.right_arm_port`，然后执行：
@@ -372,6 +378,9 @@ lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_
 lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_name=starai_cello  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_cello_follower
 ```
 
+启动后你会看到各个关节的编码器值，需要你逐一对每个关节进行手动校准，将每个关节旋转到最大值和和最小值，没有限位的关节，最大不超过顺时针及逆时针180°。校准完所有关节后点击回车即可保存。
+
+
 :::tip
 
 单臂和双臂的区别在于`--teleop.type`和`--robot.type`不一样，同时双臂需要给左右手各一个usb口，总共需要4个usb口`--teleop.left_arm_port` `--teleop.right_arm_port` `--robot.left_arm_port` `--robot.right_arm_port`。
@@ -385,11 +394,18 @@ lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_
 ## 遥控操作
 
 <div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/Uz-x-2P2xaE?si=HJTjALt5yFntR6-s" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115348342901390&bvid=BV1Pt47zGEEc&cid=32960351835&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 将手臂移动至图上位置待机。
 
+
+| **Violin Leader Arm初始位置** | **Viola Follower Arm初始位置** |
+|:---------:|:---------:|
+| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_rest.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_rest.jpg) |
+
+
+老版本机械臂初始位置（需要特别关注3，4，5号关节舵机与图片需要严格对应，也可以参考新版本机械臂初始位置）：
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png" />
@@ -1049,9 +1065,15 @@ lerobot-replay \
 
 </details>
 
-## 训练
+## 训练及评估
 
-要训练一个控制您机器人策略，以下是一个示例命令：
+
+<details>
+<summary>[ACT](https://huggingface.co/docs/lerobot/act) </summary>
+
+参考官方教程[ACT](https://huggingface.co/docs/lerobot/act)
+
+**训练**
 
 Viola:
 ```bash
@@ -1115,149 +1137,9 @@ lerobot-train \
 2. 我们将从 [`configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/src/lerobot/policies/act/configuration_act.py) 加载配置。重要的是，此策略将自动适应机器人的电机状态、电机动作和相机的数量，并保存在您的数据集中。
 3. 我们提供了 `wandb.enable=true` 来使用 [Weights and Biases](https://docs.wandb.ai/quickstart) 可视化训练图表。这是可选的，但如果您使用它，请确保您已通过运行 `wandb login` 登录。
 
-从某个检查点恢复训练。
-
-Viola:
-```bash
-lerobot-train \
-  --config_path=outputs/train/act_viola_test/checkpoints/last/pretrained_model/train_config.json \
-  --resume=true \
-  --steps=400000
-```
-
-Cello:
-```bash
-lerobot-train \
-  --config_path=outputs/train/act_cello_test/checkpoints/last/pretrained_model/train_config.json \
-  --resume=true \
-  --steps=400000
-```
 
 
-
-
-<details>
-<summary>如果训练[SmolVLA](https://huggingface.co/docs/lerobot/smolvla) </summary>
-
-```bash
-pip install -e ".[smolvla]"
-```
-
-### 训练
-```bash
-lerobot-train \
-  --policy.path=lerobot/smolvla_base \ # <- Use pretrained fine-tuned model
-  --dataset.repo_id=${HF_USER}/mydataset \
-  --batch_size=64 \
-  --steps=20000 \
-  --output_dir=outputs/train/my_smolvla \
-  --job_name=my_smolvla_training \
-  --policy.device=cuda \
-  --wandb.enable=true
-```
-
-### 验证
-
-```bash
-lerobot-record \
-  --robot.type=starai_viola \
-  --robot.port=/dev/ttyUSB1 \
-  --robot.id=my_awesome_staraiviola_arm \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30, fourcc: "MJPG"}}" \
-  --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
-  --dataset.repo_id=${HF_USER}/eval_DATASET_NAME_test \ 
-  --dataset.episode_time_s=50 \
-  --dataset.num_episodes=10 \
-  # <- Teleop optional if you want to teleoperate in between episodes \
-  # --teleop.type=so100_leader \
-  # --teleop.port=/dev/ttyACM0 \
-  # --teleop.id=my_red_leader_arm \
-  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
-```
-
-
-</details>
-
-
-
-<details>
-<summary>如果训练 [Libero](https://huggingface.co/docs/lerobot/libero)</summary>
-
-LIBERO 是一个旨在研究终身机器人学习的基准。这个想法是，机器人不仅会在工厂中进行一次预训练，而且随着时间的推移，它们需要不断学习和适应人类用户。这种持续的适应被称为决策终身学习 （LLDM）， 它是构建成为真正个性化帮手的机器人的关键一步。
-
-  - [LIBERO 论文](https://arxiv.org/abs/2306.03310)
-  - [LIBERO 原始仓库](https://github.com/Lifelong-Robot-Learning/LIBERO)
-
-LIBERO 包括五个任务 ：
-
-- LIBERO-Spatial （libero_spatial） – 需要推理空间关系的任务。
-
-- LIBERO-Object （libero_object） – 以作不同对象为中心的任务。
-
-- LIBERO-Goal （libero_goal） – 机器人必须适应不断变化的目标的目标条件任务。
-
-- LIBERO-90 （libero_90） – LIBERO-100 集合中的 90 个短期任务。
-
-- LIBERO-Long （libero_10） – LIBERO-100 系列中的 10 个长期任务。
-
-这些套件总共涵盖 130 项任务 ，从简单的对象作到复杂的多步骤场景。LIBERO 旨在随着时间的推移而发展，并作为社区可以测试和改进终身学习算法的共享基准。
-
-## 训练
-
-```bash
-lerobot-train \
-  --policy.type=smolvla \
-  --policy.repo_id=${HF_USER}/libero-test \
-  --dataset.repo_id=HuggingFaceVLA/libero \
-  --env.type=libero \
-  --env.task=libero_10 \
-  --output_dir=./outputs/ \
-  --steps=100000 \
-  --batch_size=4 \
-  --eval.batch_size=1 \
-  --eval.n_episodes=1 \
-  --eval_freq=1000 \
-```
-
-
-## 评估
-
-要安装 LIBERO，请按照 LeRobot 官方说明进行作，只需执行： `pip install -e ".[libero]"`
-
-###  单任务评估:
-
-```bash
-lerobot-eval \
-  --policy.path="your-policy-id" \
-  --env.type=libero \
-  --env.task=libero_object \
-  --eval.batch_size=2 \
-  --eval.n_episodes=3
-```
-
-- `--env.task` 选择任务 (libero_object, libero_spatial, etc.).
-
-- `--eval.batch_size` 控制并行运行的环境数量。
-
-- `--eval.n_episodes` 设置总共要运行的剧集数。
-
-### 多任务评估
-
-```bash
-lerobot-eval \
-  --policy.path="your-policy-id" \
-  --env.type=libero \
-  --env.task=libero_object,libero_spatial \
-  --eval.batch_size=1 \
-  --eval.n_episodes=2
-```
-
-- 将逗号分隔的列表传递给 `--env.task` 以进行多套件评估。
-
-</details>
-
-
-## 评估
+**评估**
 
 运行以下命令记录 10 个评估回合：
 
@@ -1335,6 +1217,261 @@ lerobot-record  \
 2. 评估数据集的名称`dataset.repo_id`以 `eval_` 开头，这个操作会在你评估的时候为你单独录制评估时候的视频和数据，将保存在eval_开头的文件夹下，例如`starai/eval_record-test`。
 3. 如果评估阶段遇到`File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/starai/eval_xxxx'`请先删除`eval_`开头的这个文件夹再次运行程序。
 4. 当遇到`mean is infinity. You should either initialize with stats as an argument or use a pretrained model`请注意`--robot.cameras`这个参数中的up和front等关键词必须和采集数据集的时候保持严格一致。
+
+
+
+</details>
+
+
+
+
+<details>
+<summary>[SmolVLA](https://huggingface.co/docs/lerobot/smolvla) </summary>
+
+参考官方教程[SmolVLA](https://huggingface.co/docs/lerobot/smolvla)
+
+```bash
+pip install -e ".[smolvla]"
+```
+
+**训练**
+```bash
+lerobot-train \
+  --policy.path=lerobot/smolvla_base \ # <- Use pretrained fine-tuned model
+  --dataset.repo_id=${HF_USER}/mydataset \
+  --batch_size=64 \
+  --steps=20000 \
+  --output_dir=outputs/train/my_smolvla \
+  --job_name=my_smolvla_training \
+  --policy.device=cuda \
+  --wandb.enable=true
+```
+
+**验证**
+
+```bash
+lerobot-record \
+  --robot.type=starai_viola \
+  --robot.port=/dev/ttyUSB1 \
+  --robot.id=my_awesome_staraiviola_arm \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+  --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
+  --dataset.repo_id=${HF_USER}/eval_DATASET_NAME_test \ 
+  --dataset.episode_time_s=50 \
+  --dataset.num_episodes=10 \
+  # <- Teleop optional if you want to teleoperate in between episodes \
+  # --teleop.type=so100_leader \
+  # --teleop.port=/dev/ttyACM0 \
+  # --teleop.id=my_red_leader_arm \
+  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
+```
+
+
+</details>
+
+
+
+<details>
+<summary>[Libero](https://huggingface.co/docs/lerobot/libero)</summary>
+
+参考官方教程[Libero](https://huggingface.co/docs/lerobot/libero)
+
+LIBERO 是一个旨在研究终身机器人学习的基准。这个想法是，机器人不仅会在工厂中进行一次预训练，而且随着时间的推移，它们需要不断学习和适应人类用户。这种持续的适应被称为决策终身学习 （LLDM）， 它是构建成为真正个性化帮手的机器人的关键一步。
+
+  - [LIBERO 论文](https://arxiv.org/abs/2306.03310)
+  - [LIBERO 原始仓库](https://github.com/Lifelong-Robot-Learning/LIBERO)
+
+LIBERO 包括五个任务 ：
+
+- LIBERO-Spatial （libero_spatial） – 需要推理空间关系的任务。
+
+- LIBERO-Object （libero_object） – 以作不同对象为中心的任务。
+
+- LIBERO-Goal （libero_goal） – 机器人必须适应不断变化的目标的目标条件任务。
+
+- LIBERO-90 （libero_90） – LIBERO-100 集合中的 90 个短期任务。
+
+- LIBERO-Long （libero_10） – LIBERO-100 系列中的 10 个长期任务。
+
+这些套件总共涵盖 130 项任务 ，从简单的对象作到复杂的多步骤场景。LIBERO 旨在随着时间的推移而发展，并作为社区可以测试和改进终身学习算法的共享基准。
+
+**训练**
+
+```bash
+lerobot-train \
+  --policy.type=smolvla \
+  --policy.repo_id=${HF_USER}/libero-test \
+  --dataset.repo_id=HuggingFaceVLA/libero \
+  --env.type=libero \
+  --env.task=libero_10 \
+  --output_dir=./outputs/ \
+  --steps=100000 \
+  --batch_size=4 \
+  --eval.batch_size=1 \
+  --eval.n_episodes=1 \
+  --eval_freq=1000 \
+```
+
+**评估**
+
+要安装 LIBERO，请按照 LeRobot 官方说明进行作，只需执行： `pip install -e ".[libero]"`
+
+**单任务评估:**
+
+```bash
+lerobot-eval \
+  --policy.path="your-policy-id" \
+  --env.type=libero \
+  --env.task=libero_object \
+  --eval.batch_size=2 \
+  --eval.n_episodes=3
+```
+
+- `--env.task` 选择任务 (libero_object, libero_spatial, etc.).
+
+- `--eval.batch_size` 控制并行运行的环境数量。
+
+- `--eval.n_episodes` 设置总共要运行的剧集数。
+
+**多任务评估**
+
+```bash
+lerobot-eval \
+  --policy.path="your-policy-id" \
+  --env.type=libero \
+  --env.task=libero_object,libero_spatial \
+  --eval.batch_size=1 \
+  --eval.n_episodes=2
+```
+
+- 将逗号分隔的列表传递给 `--env.task` 以进行多套件评估。
+
+</details>
+
+
+
+
+<details>
+<summary>[Pi0](https://huggingface.co/docs/lerobot/pi0) </summary>
+
+参考官方教程[Pi0](https://huggingface.co/docs/lerobot/pi0) 
+
+```bash
+pip install -e ".[pi]"
+```
+
+**训练**
+```bash
+lerobot-train \
+  --policy.type=pi0 \
+  --dataset.repo_id=seeed/eval_test123 \ 
+  --job_name=pi0_training \
+  --output_dir=outputs/pi0_training \
+  --policy.pretrained_path=lerobot/pi0_base \
+  --policy.compile_model=true \
+  --policy.gradient_checkpointing=true \
+  --policy.dtype=bfloat16 \
+  --steps=20000 \
+  --policy.device=cuda \
+  --batch_size=32 \
+  --wandb.enable=false 
+```
+
+**验证**
+
+```bash
+lerobot-record \
+  --robot.type=starai_viola \
+  --robot.port=/dev/ttyUSB1 \
+  --robot.id=my_awesome_staraiviola_arm \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+  --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
+  --robot.id=my_awesome_staraiviola_arm \
+  --display_data=false \
+  --dataset.repo_id=seeed/eval_test123 \
+  --policy.path=outputs/pi0_training/checkpoints/last/pretrained_model
+```
+
+
+</details>
+
+
+<details>
+<summary>[Pi0.5](https://huggingface.co/docs/lerobot/pi05) </summary>
+
+参考官方教程[Pi0.5](https://huggingface.co/docs/lerobot/pi05) 
+
+```bash
+pip install -e ".[pi]"
+```
+
+**训练**
+```bash
+lerobot-train \
+    --dataset.repo_id=seeed/eval_test123 \ 
+    --policy.type=pi05 \
+    --output_dir=outputs/pi05_training \
+    --job_name=pi05_training \
+    --policy.pretrained_path=lerobot/pi05_base \
+    --policy.compile_model=true \
+    --policy.gradient_checkpointing=true \
+    --wandb.enable=false \
+    --policy.dtype=bfloat16 \
+    --steps=3000 \
+    --policy.device=cuda \
+    --batch_size=32
+```
+
+**验证**
+
+```bash
+lerobot-record \
+  --robot.type=starai_viola \
+  --robot.port=/dev/ttyUSB1 \
+  --robot.id=my_awesome_staraiviola_arm \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+  --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
+  --robot.id=my_awesome_staraiviola_arm \
+  --display_data=false \
+  --dataset.repo_id=seeed/eval_test123 \
+  --policy.path=outputs/pi05_training/checkpoints/last/pretrained_model
+```
+
+
+</details>
+
+
+<details>
+<summary>[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) </summary>
+
+请参考官方教程[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) 
+
+
+</details>
+
+
+
+
+
+
+从某个检查点恢复训练。
+
+Viola:
+```bash
+lerobot-train \
+  --config_path=outputs/train/act_viola_test/checkpoints/last/pretrained_model/train_config.json \
+  --resume=true \
+  --steps=400000
+```
+
+Cello:
+```bash
+lerobot-train \
+  --config_path=outputs/train/act_cello_test/checkpoints/last/pretrained_model/train_config.json \
+  --resume=true \
+  --steps=400000
+```
+
 
 
 ## FAQ
