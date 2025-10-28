@@ -1381,8 +1381,8 @@ const sidebars = {
               type: 'category',
               label: 'ePaper Breakout Board for XIAO',
               items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ePaper_Breakout_Board_For_XIAO/ePaper_Breakout_Board_with_OEPL',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ePaper_Breakout_Board_For_XIAO/XIAO-eInk-Expansion-Board',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ePaper_Breakout_Board_For_XIAO/ePaper_Breakout_Board_with_OEPL',
                 ],
             },
             {

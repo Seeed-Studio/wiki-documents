@@ -1,39 +1,31 @@
 ---
-description: Use the OEPL configuration generator to generate the configuration for the e-paper
-title: OEPL Config Builder for ePaper
+description: Use the OpenEPaperLink configuration generator to generate the configuration for the e-paper
+title: OpenEPaperLink Config Builder for ePaper
 keywords:
 - XIAO eInk Expansion
 - XIAO
 - OEPL Config Builder
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ePaper_Breakout_Board_with_OEPL
+image: https://files.seeedstudio.com/wiki/eInk/xiao-expansion/OEPL_Config_img.webp
+slug: /epaper_breakout_board_with_oepl
+sidebar_position: 2
 last_update:
   date: 10/23/2025
   author: Zovey
 ---
 
-# Use the OEPL config builder to generate the config for the ePaper
+# Usage of the OpenEPaperLink and ePaper config builder
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/OEPL_Config.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/seeed_logo_2.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## Introduction
+
+OpenEPaperLink (The following text will refer to this project as "OEPL") is an alternative protocol and firmware implementation for electronic shelf labels. Multiple Displays are supported with ESP32-based access points and 802.15.4 radio communication.The application scenarios of Open EPaper Link are extensive, ranging from dynamic pricing in high-end retail stores to intelligent book management in libraries, as well as any electronic tag application scenarios where display information needs to be frequently updated.Now, this project is also compatible with nRF52840.
 
 After you purchase the ePaper Breakout Board, you may have the need to replace the electronic paper screen with a different specification. In this tutorial, we will use two tools for the process: OPEL Config Builder is used to modify the parameters of the electronic paper, and OEPL Image Uploader is used to upload images.
 
 [OEPL Config Builder](https://config.openepaperlink.org/) is a low-code electronic paper parameter configuration tool that uses the BLE protocol for wireless transmission. Users no longer need to write complicated configuration codes; they can simply operate the mouse on the website to complete the configuration.
 
 [OEPL Image Uploader](https://atc1441.github.io/ATC_BLE_OEPL_Image_Upload.html) is also a tool that performs wireless transmission via the BLE protocol. The difference is that this tool transmits photos.
-
-### Parameters of Config Builder
-
-- **system_config**: Holds information about host IC and power management pins
-- **manufacturer_data**: Manufacturer identifier and board information
-- **power_option**: Power supply and sleep related options
-- **display**: Display / panel information (optional). Can appear multiple times for devices with several displays.
-- **led**: Optional LED configuration (repeatable).
-- **sensor_data**: Optional sensor readings / definitions (repeatable).
-- **data_bus**: Global bus definitions (I2C/SPI etc).
-- **binary_inputs**: Optional binary inputs (buttons, switches).
 
 ## Hardware Preparation
   
@@ -67,19 +59,26 @@ After you purchase the ePaper Breakout Board, you may have the need to replace t
   </tr>
 </table>
 
+:::tip
+The MCU of the nRF52840 series all support this tool, not limited to the nRF52840 Sense Plus. The ePaper screen only supports a 4.26-inch display. However, we will continue to update in the future to support more screen sizes.
+:::
+
 ## Usage of OEPL Config Builder
 
 ### Step 1: Burn the BLE firmware
 
-The first step is that you can obtain the OEPL_BLE firmware from [the official repository of OEPL](https://github.com/OpenEPaperLink/OEPL_BLE/releases/tag/test7).
+The first step is that you can obtain the OEPL_BLE firmware from the official repository of OEPL.
+
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/OpenEPaperLink/OEPL_BLE/releases/tag/test7" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div>
+
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/hub_oepl.png" style={{width:700, height:'auto'}}/></div>
 
-There are two methods for burning the program. One is to directly open the file management system of the microcontroller, and the other is to use platformio for burning.
-
-- **Method 1**: Open the file management system of the microcontroller
-
-After connecting Seeed Studio XIAO nRF52840 Sense Plus, the ePaper Breakout Board and the screen together.And connecting the computer and nRF52840 with a USB cable, a File Explorer window should pop up(If it doesn't work, you can try pressing the reset button several more times.).
+After connecting Seeed Studio XIAO nRF52840 Sense Plus, the ePaper Breakout Board and the screen together.Then connect the computer to the nRF52840 using a USB data cable, and then press the reset button twice consecutively.Then you will see a file manager pop up on the PC side.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/file_pic.png" style={{width:700, height:'auto'}}/></div>
 
@@ -87,13 +86,9 @@ Then, copy the .uf2 file that was just obtained from the USB drive into the file
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/firmware.jpg" style={{width:700, height:'auto'}}/></div>
 
-- **Method 2**: Use platformio for burning
-
-After extracting the .zip file downloaded from the official repository, it becomes a .pio project. Simply burn it onto the nRF52840(If you have any doubts about how to program the nRF52840 using PlatformIO, please refer to [this tutorial](https://wiki.seeedstudio.com/xiao_nrf52840_with_platform_io/)).
-
 ### Step 2: Use BLE to connect to the Builder
 
-In the Builder interface, connect the devices via the BLE protocol.(If no device is displayed, please reflash the firmware)
+In the Builder interface, connect the devices via the BLE protocol(If no device is displayed, please reflash the firmware).This website can only achieve the following wireless upload function when it is connected via the BLE protocol.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Connect_demo_2.png" style={{width:700, height:'auto'}}/></div>
 
@@ -106,9 +101,26 @@ If the connection is successful, you can see the words "Connected" in the termin
 ### Step 3: Builder panel
 
 Just select the corresponding variables or input parameters on the panel to complete the configuration.
+
+- **Parameters of Config Builder**
+  - **system_config**: Holds information about host IC and power management pins
+  - **manufacturer_data**: Manufacturer identifier and board information
+  - **power_option**: Power supply and sleep related options
+  - **display**: Display / panel information (optional). Can appear multiple times for devices with several displays.
+  - **led**: Optional LED configuration (repeatable).
+  - **sensor_data**: Optional sensor readings / definitions (repeatable).
+  - **data_bus**: Global bus definitions (I2C/SPI etc).
+  - **binary_inputs**: Optional binary inputs (buttons, switches).
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Builder_demo_1.png" style={{width:700, height:'auto'}}/></div>
 
-If you want to save the configuration you have set, you can export it as a.bin, Hex and JSON file within this panel. Conversely, this panel also supports importing JSON files for configuration purposes.4.26 Screen Configuration File [Click here](https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json) to obtain it.
+If you want to save the configuration you have set, you can export it as a.bin, Hex and JSON file within this panel. Conversely, this panel also supports importing JSON files for configuration purposes. The 4.26 screen configuration file can be obtained here.
+
+<div align="center">
+<a href="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json" target="_blank">
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to get</button></p>
+</a>
+</div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Package_import_1.png" style={{width:700, height:'auto'}}/></div>
 
@@ -120,19 +132,31 @@ OEPL Image Uploader is an online electronic paper upload tool, and it also opera
 
 ### Step 1: Connect to the Uploader
 
-The connection method is similar to that of Builder. The device is connected via BLE.However, it should be noted that due to some conflicts between the previous firmware and the pins required for this image upload, some modifications to the firmware are necessary before using this web function. Here, [a new firmware](https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_image.json) is provided for burning. Just follow the steps mentioned earlier to perform the burning process.
+The connection method is similar to that of Builder. The device is connected via BLE.However, it should be noted that due to some conflicts between the previous firmware and the pins required for this image upload, some modifications to the firmware are necessary before using this web function. Here, a new firmware is provided for burning. Just follow the steps mentioned earlier to perform the burning process.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_1.png" style={{width:700, height:'auto'}}/></div>
+<div align="center">
+<a href="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json" target="_blank">
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to get</button></p>
+</a>
+</div>
+
+The variable in the "E-Paper prefix filter(s)" section needs to be changed to "OEPL"; otherwise, the device cannot be retrieved.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_4.png" style={{width:350, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_6.png" style={{width:500, height:'auto'}}/></div>
 
 ### Step 2: Upload Image
 
 Then click the "Select File" button to choose a local file for upload.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_2.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_2.png" style={{width:550, height:'auto'}}/></div>
 
 After the file transfer is completed, simply click the "Upload Image" button to upload it to the electronic paper.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_3.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_5.png" style={{width:350, height:'auto'}}/></div>
+
+When "Upload Complete" is displayed, it indicates that the burning process has been successful! Then you will be able to see that the picture on the screen has changed.
 
 ## Tech Support & Product Discussion
 
