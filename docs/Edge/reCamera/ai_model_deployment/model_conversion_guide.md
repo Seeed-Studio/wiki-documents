@@ -1,3 +1,17 @@
+---
+description: reCamera Workshop Complete Guide
+title: YOLO11n Model Conversion for reCamera
+keywords:
+  - Edge
+  - reCamera
+  - Model Conversion
+image: https://files.seeedstudio.com/wiki/reCamera/013.jpg
+slug: /model_conversion_guide
+last_update:
+  date: 10/28/2025
+  author: Peter
+---
+
 # YOLO11n Model Conversion for reCamera: Complete Guide
 
 ## Table of Contents
