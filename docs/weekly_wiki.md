@@ -23,7 +23,7 @@ Today is October 27th, and a brand new week has begun! Check out what Seeed Stud
 
 ### [AI Gun Detection Solution for Real-Time Edge Alerts](https://wiki.seeedstudio.com/solutions/frigate-on-jetson-nodered-gun-alerts/)
 
-<p style={{textAlign: 'center'}}><img src="https://cc.seeedstudio.com/wp-content/uploads/2025/08/scene_3.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://www.seeed.cc/wp-content/uploads/2025/08/scene_3.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 

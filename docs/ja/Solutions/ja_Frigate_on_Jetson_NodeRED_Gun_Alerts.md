@@ -18,7 +18,7 @@ last_update:
 Frigate + Node-RED銃器検出ソリューションは、ライブカメラストリームで銃器を検出し、アラート、レビュー、統合を調整するエッジAIビデオ分析スタックです。**AI Boxes**、NVIDIA **Jetson**シリーズ、**reComputer R2000**でのプライバシー保護、低遅延展開向けに構築され、最適化された検出エンジン（Frigate）とビジュアル自動化レイヤー（Node‑RED）、オプションのLLM支援レビューを組み合わせています。
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://cc.seeedstudio.com/wp-content/uploads/2025/09/archi_2-1.png" alt="solution diagram"/>
+  <img class='img-responsive' width={680} src="https://www.seeed.cc/wp-content/uploads/2025/09/archi_2-1.png" alt="solution diagram"/>
 </div>
 
 完全なAI NVR[^nvr]体験を提供します：
@@ -37,11 +37,11 @@ Frigate + Node-RED銃器検出ソリューションは、ライブカメラス�
       <th>キャンパス安全管理</th>
   </tr>
   <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://cc.seeedstudio.com/wp-content/uploads/2025/08/scene_3.png" style={{width:480, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://www.seeed.cc/wp-content/uploads/2025/08/scene_3.png" style={{width:480, height:'auto'}}/></div></td>
   </tr>
   <tr>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://cc.seeedstudio.com/solutions/campus-safety-management" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeed.cc/solutions/campus-safety-management" target="_blank">
           <strong><span><font color={'FFFFFF'} size={"4"}> ソリューションバンドル 🖱️</font></span></strong>
       </a>
     </div></td>
@@ -511,7 +511,7 @@ MQTT を有効にすることで、Frigate はリアルタイムイベントネ�
 
 ## リソース & 次のステップ
 
-- **ソリューションバンドル:** [Frigate + Node-RED Gun Detection on Jetson](https://cc.seeedstudio.com/solutions/campus-safety-management)
+- **ソリューションバンドル:** [Frigate + Node-RED Gun Detection on Jetson](https://www.seeed.cc/solutions/campus-safety-management)
 - **Frigate ドキュメント:** [https://docs.frigate.video/](https://docs.frigate.video/)
 - **GitHub リポジトリ:** [Seeed-Studio / frigate-on-jetson](https://github.com/Seeed-Studio/frigate-on-jetson)
 - **Node-RED ダッシュボードアドオン:** [@flowfuse/node-red-dashboard](https://flows.nodered.org/node/@flowfuse/node-red-dashboard)
