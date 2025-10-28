@@ -48,11 +48,11 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="sensecraft" label="SenseCraft AI" default>
 
-:::caution 注意
-以下指南适用于尚未发布的内部测试网站。
-官方版本即将推出。
-请暂时使用其他方法刷写固件。
-:::
+<!-- :::caution Note
+The following guide is for an internal testing website that has not yet been released.
+The official version will be available soon.
+Please use another method to flash the firmware for now.
+::: -->
 
 - 前提条件
 
@@ -106,7 +106,7 @@ import TabItem from '@theme/TabItem';
 
 - 前提条件
 
-  - **视觉触发固件 v1.8.8**：[下载链接](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **视觉触发固件 v2.0.3**：[下载链接](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip)（3.9.6 或更高版本）
 
@@ -148,11 +148,11 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="flasher2" label="Command Line" default>
+<TabItem value="flasher2" label="命令行" default>
 
 - 前提条件
 
-  - **视觉触发固件 v1.8.8**：[下载链接](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **视觉触发固件 v2.0.3**：[下载链接](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [esptool.py](https://github.com/espressif/esptool)
 
@@ -197,11 +197,11 @@ import TabItem from '@theme/TabItem';
 
 - 步骤 4. 将板型设置为 SenseCAP Watcher
 
-  - 选择 Xiaozhi Assistant
+  - 选择小智助手
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig1.png" style={{width:700, height:'auto'}}/></div>
 
-  - 选择 Board Type
+  - 选择板型
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig2.png" style={{width:700, height:'auto'}}/></div>
 
@@ -209,7 +209,7 @@ import TabItem from '@theme/TabItem';
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig3.png" style={{width:700, height:'auto'}}/></div>
 
-- 步骤 5. 根据您的需要配置其他设置（可选）
+- 步骤 5. 根据您的需求配置其他设置（可选）
 
   - 默认显示语言和 AEC（自动回声消除/语音中断处理）
 
@@ -232,6 +232,10 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 </Tabs>
+
+:::note
+v2.0.3 以上版本的固件需要对小智说 "Turn on inference switch" 来启用视觉检测。
+:::
 
 ## AI 模型刷写过程
 
@@ -259,7 +263,7 @@ import TabItem from '@theme/TabItem';
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI5.png" style={{width:500, height:'auto'}}/></div>
 
-- 点击 `Select Model...` 并点击您想要烧录的模型
+- 点击 `Select Model...` 并点击您想要刷写的模型
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI6.png" style={{width:500, height:'auto'}}/></div>
 
@@ -282,20 +286,20 @@ import TabItem from '@theme/TabItem';
    - 尝试使用不同的 USB 线缆
    - 检查 USB 驱动程序是否正确安装
 
-2. **烧录失败**
-   - 烧录 Himax 时，选择以"A"结尾的 COM 端口。
-   - 烧录 ESP32-S3 时，选择以"B"结尾的 COM 端口。
+2. **刷写失败**
+   - 刷写 Himax 时，选择以"A"结尾的 COM 端口。
+   - 刷写 ESP32-S3 时，选择以"B"结尾的 COM 端口。
 
 3. **设备无响应**
    - 使用针轻轻按下复位按钮
-   - 尝试在烧录前先擦除
+   - 尝试在刷写前先擦除
 
 4. **设备无法通过视觉检测唤醒**
    - 检查串口输出中是否有相关的日志消息。
    - 固件版本 v2.0.3 需要对小智说"Turn on inference switch"来启用此功能。
 
 5. **串口显示视觉识别日志但设备仍无法唤醒**
-   - 前往 SenseCraft AI 平台并将 Person 模型烧录到 AI 芯片。
+   - 前往 SenseCraft AI 平台并将 Person 模型刷写到 AI 芯片。
 
 ## 技术支持
 
