@@ -1,0 +1,55 @@
+.pdfButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  margin: 8px 0;
+}
+
+.pdfButton:hover {
+  background-color: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pdfButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pdfIcon {
+  flex-shrink: 0;
+}
+
+.buttonText {
+  white-space: nowrap;
+}
+
+[data-theme='dark'] .pdfButton {
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary-contrast-background);
+}
+
+[data-theme='dark'] .pdfButton:hover {
+  background-color: var(--ifm-color-primary-light);
+}
+
+@media (max-width: 768px) {
+  .pdfButton {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  
+  .buttonText {
+    display: none;
+  }
+}

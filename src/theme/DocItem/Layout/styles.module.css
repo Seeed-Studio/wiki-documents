@@ -8,3 +8,16 @@
     max-width: 75% !important;
   }
 }
+
+.pdfButtonContainer {
+  margin: 16px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .pdfButtonContainer {
+    justify-content: center;
+    margin: 12px 0;
+  }
+}

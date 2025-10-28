@@ -1,0 +1,74 @@
+@media print {
+  @page {
+    margin: 0.75in 0.5in;
+  }
+  
+  /* Hide first page completely */
+  @page :first {
+    display: none;
+  }
+
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .pdf-content {
+    margin: 0;
+    padding: 20px;
+    page-break-before: avoid;
+  }
+  
+  .pdf-content > *:first-child {
+    page-break-before: avoid !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+
+  .pdf-content > * {
+    page-break-inside: avoid;
+  }
+
+  .pdf-content h1:first-child {
+    margin-top: 0;
+  }
+
+  img {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    display: block;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  .markdown img {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  
+  a {
+    color: #0066cc !important;
+    text-decoration: underline !important;
+  }
+  
+  pre, code {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  
+  table {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+  
+  .pdfButtonContainer {
+    display: none !important;
+  }
+}
