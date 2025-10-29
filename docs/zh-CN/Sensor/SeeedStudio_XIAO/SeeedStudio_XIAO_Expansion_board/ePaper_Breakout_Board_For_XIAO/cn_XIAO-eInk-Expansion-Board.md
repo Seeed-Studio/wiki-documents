@@ -2,9 +2,10 @@
 description: ePaper 分线板入门指南
 title: ePaper 分线板
 keywords:
-- XIAO 电子墨水屏 Expansion
+- XIAO eInk Expansion
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/XIAO-电子墨水屏-Expansion-Board
+slug: /cn/XIAO-eInk-Expansion-Board
+sidebar_position: 1
 last_update:
   date: 05/23/2023
   author: Carla
@@ -20,25 +21,25 @@ last_update:
     </a>
 </div><br />
 
-认识 XIAO 电子墨水屏扩展板，这是您轻松驱动 XIAO 系列电子墨水屏显示器的首选解决方案。该板采用 24 针 FPC 连接器设计，为我们的电子墨水屏产品系列提供无缝连接，如果您希望扩展选择，8 针 2.54 排针允许您轻松集成任何您选择的微控制器。将这块板视为您电子墨水屏的"最佳伙伴"，增强其功能并让您的生活更轻松。
+认识 XIAO eInk 扩展板，这是您轻松驱动 eInk 显示屏与 XIAO 系列的首选解决方案。该板采用 24 针 FPC 连接器设计，为我们的 eInk 产品系列提供无缝连接，如果您希望扩展选择，8 针 2.54 排针允许您轻松集成任何您选择的微控制器。将这块板视为您 eInk 的"永远最好的朋友"，增强其功能并让您的生活更轻松。
 
 :::note
-此分线板不包含电子墨水屏显示器；显示器必须单独购买。
+此分线板不包含 eInk 显示屏；显示屏必须单独购买。
 :::
 
-## 介绍
+## 简介
 
 ### 特性
 
-- 24 针 FPC 连接器：为电子墨水屏显示器提供稳固可靠的连接。
+- 24 针 FPC 连接器：为 eInk 显示屏提供稳固可靠的连接。
 - XIAO 插座：允许您使用 XIAO 作为处理器，提供紧凑而强大的控制解决方案。
-- 8 针 2.54 排针：通过让您连接到任何微控制器来提供灵活性，开启无限可能。
+- 8 针 2.54 排针：通过让您连接到任何微控制器来提供灵活性，开启无限可能的世界。
 - 即插即用：专为易用性设计，非常适合初学者和专家。
-- 多功能应用：适用于各种电子墨水屏显示器，从小尺寸到大尺寸。
+- 多功能应用：适用于各种尺寸的 eInk 显示屏，从小到大。
 
 ### 应用
 
-- 数字标牌：使用电子墨水屏分线板创建动态且节能的数字标牌。
+- 数字标牌：使用 eInk 分线板创建动态且节能的数字标牌。
 - 电子阅读器：构建您自己的定制电子阅读器，具有根据您需求定制的功能。
 - 智能家居控制面板：将该板集成到智能家居系统中，打造时尚现代的控制面板。
 - 零售价格标签：创建电子价格标签，实现更高效、更环保的零售体验。
@@ -46,7 +47,7 @@ last_update:
 
 ## 硬件概述
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/电子墨水屏/xiao-expansion/xiao-expansion.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/xiao-expansion.png" style={{width:700, height:'auto'}}/></div>
 
 1. 24 针 FPC 连接器：用于 2.13 英寸 ePaper。
 2. XIAO 插座：用于连接 Seeed Studio XIAO 开发板。
@@ -56,7 +57,7 @@ last_update:
 
 <div class="table-center">
 
-|  电子墨水屏 SPI 引脚 |  XIAO  |
+|  eInk SPI 引脚 |  XIAO  |
 |       ---      |  ---   |
 |      RST       |   D0   |
 |      CS        |   D1   |
@@ -67,7 +68,7 @@ last_update:
 
 </div>
 
-### 支持的电子墨水屏
+### 支持的 eInk
 
 1. [1.54 英寸 E-paper - 点阵 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
 2. [2.13 英寸 E-Paper - 柔性单色 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
@@ -133,12 +134,12 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/connect_xiao.gif" style={{width:700, height:'auto'}}/></div>
 
-**步骤 3.** 将 eInk 插入 FPC 连接器：小心地将您的电子纸滑入电子纸转接板上的 24 针 FPC 连接器。
+**步骤 3.** 将 eInk 插入 FPC 连接器：小心地将您的 E-paper 滑入 ePaper 分线板上的 24 针 FPC 连接器。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/connect_eink.gif" style={{width:700, height:'auto'}}/></div>
 
 ### 软件准备
 
-推荐的编程工具是 Arduino IDE，您需要为 XIAO 配置 Arduino 环境并添加板载包。
+ 推荐的编程工具是 Arduino IDE，您需要为 XIAO 配置 Arduino 环境并添加板载包。
 :::tip
 如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
 :::
@@ -170,7 +171,7 @@ last_update:
 **步骤 3.** 安装 Seeed Arduino LCD 库
 
 :::tip
-此库与 TFT 库具有相同功能但不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。
+此库具有与 TFT 库相同的功能，但与其不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。
 :::
 
 从 GitHub 下载并安装 Seeed GFX 库。
@@ -192,7 +193,7 @@ last_update:
 :::tip
 如果您选择错误，屏幕将不显示任何内容。
 
-所以请确保您的设备或组件类型正确。
+所以请确保您的设备或组件类型。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/epaper_display.jpg" style={{width:600, height:'auto'}}/></div>
@@ -228,14 +229,14 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/153.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::caution
-如果您使用的是 1.54 英寸或 2.9 英寸电子墨水屏，由于其驱动芯片的特性，在使用时钟等动态效果时可能会出现闪烁现象。请放心，这不是程序问题。但是，不建议长时间运行动态效果示例，以免缩短屏幕的使用寿命。
+如果您使用的是 1.54 英寸或 2.9 英寸电子墨水屏，由于其驱动芯片的特性，在使用时钟等动态效果时可能会出现闪烁。请放心，这不是程序问题。但是，不建议长时间运行动态效果示例，以免缩短屏幕的使用寿命。
 
-如果您使用的是 5.83 和 7.5 英寸屏幕，它们有不同的芯片，因此不会出现闪烁现象。
+如果您使用的是 5.83 和 7.5 英寸屏幕，它们有不同的芯片，所以不会有闪烁现象。
 :::
 
 ## 图像提取软件
 
-### 网站使用方法（推荐）
+### 网站的使用（推荐）
 
 这里我使用 7.5 英寸电子墨水屏进行测试
 
@@ -244,11 +245,11 @@ last_update:
 这个 [URL](https://jlamch.net/MXChipWelcome/) 提供了非常便捷的图像提取操作，可以轻松帮助我们实现在电子墨水屏上显示各种图像，让我们开始吧！
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/9191.jpg" style={{width:700, height:'auto'}}/></div>
 
-**步骤 1**. 选择图像
+**步骤 1**。选择图像
 
 首先选择您想要的图像，尽量不要超过 800*480 的尺寸。
 
-**步骤 2**. 图像设置
+**步骤 2**。图像设置
 
 - Canvas Size(s)
   - Canvas Size：设置画布的尺寸。例如，800 x 480 像素意味着画布宽度为 800 像素，高度为 480 像素。
@@ -274,11 +275,11 @@ last_update:
 - Center
   - Center：选择是否将图像在画布上居中。注意：此选项仅在图像大于原始尺寸时有效。
 
-**步骤 3**. 预览
+**步骤 3**。预览
 
 设置完成后，您可以在这里看到图像显示效果的预览
 
-**步骤 4**. 输出
+**步骤 4**。输出
 
 - 复制转换后的代码
 
@@ -290,33 +291,33 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/epaper_display.jpg" style={{width:700, height:'auto'}}/></div>
 
-### Image2lcd 软件使用方法
+### Image2lcd 软件的使用
 
 #### 如何制作图片
 
-使用 Windows 内置的 **画图** 软件创建一张与您使用的屏幕 **分辨率相同** 的图片，并将其保存为 `BMP` 或 `JPG` 文件；
+使用 Windows 内置软件 **Paint** 创建一张与您使用的屏幕**分辨率相同**的图片，并将其保存为 `BMP` 或 `JPG` 文件；
 
 :::note
 您的图片分辨率必须与您使用的屏幕相同，例如，4.2 英寸电子纸是 400 x 300 像素，那么您不能使用 300 x 400 的尺寸，这会导致 image2lcd 输出的 `.h` 文件多出 200 字节。
 :::
 
-图片的颜色应与 Windows 自带画图板的标准颜色一致。画图板的颜色如下：
+图片的颜色应与 Windows 自带画板的标准颜色一致。画板的颜色如下：
 
 <div class="table-center">
 
 |      电子纸      | 颜色 |
 |       ---      |  ---   |
-|1.54英寸电子纸 - 点阵 200x200           | 纯黑白          |
-|2.13英寸电子纸 - 柔性单色 212x104 | 纯黑白          |
-|2.13英寸电子纸 - 四色 212x104          | 黑、白、红、黄 |
-|2.9英寸电子纸 - 单色 128x296           | 纯黑白          |
-|2.9英寸电子纸 - 四色 128x296     | 黑、白、红、黄 |
-|4.2英寸电子纸 - 单色 400x300           | 纯黑白          |
-|4.26英寸电子纸 - 单色 800x480          | 纯黑白          |
-|5.65英寸电子纸 - 七色 600x480        | 黑、白、红、黄、蓝、绿、橙|
-|5.83英寸电子纸 - 单色 648x480          | 纯黑白          |
-|7.5英寸电子纸 - 单色 800x480           | 纯黑白          |
-|7.5英寸电子纸 - 三色 800x480           | 纯黑白          |
+|1.54 英寸电子纸 - 点阵 200x200           | 纯黑白          |
+|2.13 英寸电子纸 - 柔性单色 212x104 | 纯黑白          |
+|2.13 英寸电子纸 - 四色 212x104          | 黑、白、红、黄 |
+|2.9 英寸电子纸 - 单色 128x296           | 纯黑白          |
+|2.9 英寸电子纸 - 四色 128x296     | 黑、白、红、黄 |
+|4.2 英寸电子纸 - 单色 400x300           | 纯黑白          |
+|4.26 英寸电子纸 - 单色 800x480          | 纯黑白          |
+|5.65 英寸电子纸 - 七色 600x480        | 黑、白、红、黄、蓝、绿、橙|
+|5.83 英寸电子纸 - 单色 648x480          | 纯黑白          |
+|7.5 英寸电子纸 - 单色 800x480           | 纯黑白          |
+|7.5 英寸电子纸 - 三色 800x480           | 纯黑白          |
 
 </div>
 
@@ -337,94 +338,94 @@ last_update:
         <th>显示模式</th>
     </tr>
     <tr>
-        <th>1.54英寸电子纸 - 点阵 200x200</th>
+        <th>1.54 英寸电子纸 - 点阵 200x200</th>
         <td align="center">Monochrome</td>
         <td align="center">200x200</td>
         <td align="center">✅</td>
         <td align="center">Mirror left-right</td>
     </tr>
     <tr>
-        <th>2.13英寸电子纸 - 柔性单色 212x104</th>
+        <th>2.13 英寸电子纸 - 柔性单色 212x104</th>
         <td align="center">Monochrome</td>
         <td align="center">104x212</td>
         <td align="center">✅</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>2.13英寸电子纸 - 四色 212x104 </th>
+        <th>2.13 英寸电子纸 - 四色 212x104 </th>
         <td align="center">4 Gray</td>
         <td align="center">104x212</td>
         <td align="center">/</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>2.9英寸电子纸 - 单色 128x296</th>
+        <th>2.9 英寸电子纸 - 单色 128x296</th>
          <td align="center">Monochrome</td>
         <td align="center">128x296</td>
         <td align="center">✅</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>2.9英寸电子纸 - 四色 128x296 </th>
+        <th>2.9 英寸电子纸 - 四色 128x296 </th>
         <td align="center">4 Gray</td>
         <td align="center">128x296</td>
         <td align="center">/</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>4.2英寸电子纸 - 单色 400x300</th>
+        <th>4.2 英寸电子纸 - 单色 400x300</th>
         <td align="center">Monochrome</td>
         <td align="center">400x300</td>
         <td align="center">✅</td>
         <td align="center">Mirror left-right</td>
     </tr>
     <tr>
-        <th>4.26英寸电子纸 - 单色 800x480</th>
+        <th>4.26 英寸电子纸 - 单色 800x480</th>
         <td align="center">Monochrome</td>
         <td align="center">800x480</td>
         <td align="center">/</td>
         <td align="center">Mirror left-right</td>
     </tr>
     <tr>
-        <th>5.65英寸电子纸 - 七色 600x480</th>
+        <th>5.65 英寸电子纸 - 七色 600x480</th>
         <td align="center">256 colors</td>
         <td align="center">600x448</td>
         <td align="center">/</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>5.83英寸电子纸 - 单色 648x480</th>
-        <td align="center">Monochrome</td>
+        <th>5.83 英寸电子纸 - 单色 648x480</th>
+        <td align="center">单色</td>
         <td align="center">600x480</td>
         <td align="center">✅</td>
-        <td align="center">Mirror left-right</td>
+        <td align="center">左右镜像</td>
     </tr>
     <tr>
-        <th>7.5英寸电子纸 - 单色 800x480</th>
-        <td align="center">Monochrome</td>
+        <th>7.5 英寸电子纸 - 单色 800x480</th>
+        <td align="center">单色</td>
         <td align="center">800x480</td>
         <td align="center">✅</td>
-        <td align="center">Mirror left-right</td>
+        <td align="center">左右镜像</td>
     </tr>
     <tr>
-        <th>7.5英寸电子纸 - 三色 800x480</th>
-        <td align="center">Monochrome</td>
+        <th>7.5 英寸电子纸 - 三色 800x480</th>
+        <td align="center">单色</td>
         <td align="center">800x480</td>
         <td align="center">/</td>
-        <td align="center">Normal</td>
+        <td align="center">正常</td>
     </tr>
   </table>
 </div>
 
 :::tip
 
-- 设置最大宽度和高度后，需要点击箭头进行确认。
-- 不要包含头部数据。
+- 设置最大宽度和高度后，需要点击箭头确认。
+- 不要包含头数据。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/2.png" style={{width:700, height:'auto'}}/></div>
 :::
 
-**步骤 3.** 点击"Save"将 lcd 输出数组保存为 `.h` 文件。
+**步骤 3.** 点击 "Save" 将 lcd 输出数组保存为 `.h` 文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/7.png" style={{width:500, height:'auto'}}/></div>
 
