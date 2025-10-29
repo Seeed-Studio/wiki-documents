@@ -5,6 +5,7 @@ keywords:
 - XIAO eInk Expansion
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /XIAO-eInk-Expansion-Board
+sidebar_position: 1
 last_update:
   date: 05/23/2023
   author: Carla
