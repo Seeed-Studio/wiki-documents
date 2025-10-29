@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 29/10/2025
+  date: 10/29/2025
   author: Michelle
 ---
 
