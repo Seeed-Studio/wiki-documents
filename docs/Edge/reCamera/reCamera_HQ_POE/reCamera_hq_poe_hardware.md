@@ -203,7 +203,7 @@ You can check the device's IP address in your router to access it, or connect th
 
  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
 
-In Linux, the most common way to read and write GPIO is using the GPIO sysfs interface. This is implemented by manipulating files such as export, unexport, gpio{N}/direction, and gpio{N}/value (replace {N} with the actual pin number) under the /sys/class/gpio directory, and it is often used in shell scripts.
+In Linux, the most common way to read and write GPIO is using the GPIO sysfs interface. This is implemented by manipulating files such as `export`, `unexport`, `gpio{N}/direction`, and `gpio{N}/value` (replace `{N}` with the actual pin number) under the `/sys/class/gpio` directory, and it is often used in shell scripts.
 
 The reCamera POE backplane has 3 available IO ports. Each port can be configured as an input or output. The IO ports are numbered as follows:
 
