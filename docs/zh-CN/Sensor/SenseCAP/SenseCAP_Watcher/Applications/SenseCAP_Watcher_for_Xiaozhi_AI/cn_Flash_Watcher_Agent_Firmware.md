@@ -1,6 +1,6 @@
 ---
-description: 为您的 SenseCAP Watcher Agent 刷写固件的指南
-title: 刷写 Watcher Agent 固件
+description: 为您的SenseCAP Watcher小智版刷写固件的指南
+title: 刷写Watcher 小智版固件
 sidebar_position: 1
 keywords:
 - SenseCAP
@@ -11,21 +11,17 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /cn/flash_watcher_agent_firmware
 last_update:
-  date: 09/04/2025
+  date: 10/27/2025
   author: Twelve
 ---
 
-# 刷写 Watcher Agent 固件
+# 刷写Watcher 小智版固件
 
 ## 概述
 
-特别感谢 [XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) 的开源贡献，使这个项目成为可能。
+特别感谢 [小智 AI 聊天机器人](https://github.com/78/xiaozhi-esp32) 的开源贡献，使这个项目成为可能。
 
-本指南提供了使用乐鑫 Flash Download Tool 为您的 SenseCAP Watcher 设备刷写 Watcher Agent 固件的说明。
-
-:::danger 注意
-本指南中提供的固件可能需要认证信息。如有需要，请联系 [sensecap@seeed.cc](mailto:sensecap@seeed.cc)。
-:::
+本指南提供了使用乐鑫 Flash Download Tool 为您的 SenseCAP Watcher 设备刷写 Watcher 小智版固件的说明。
 
 ## 前提条件
 
@@ -38,13 +34,7 @@ last_update:
 ### 所需软件
 
 - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 或更高版本)
-- [Watcher Agent 固件二进制文件](https://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)
-
-:::note
-如果您已经拥有 Watcher 设备且其型号**不是 -EN**，您需要在刷写固件后手动刷写认证信息。
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/en_panel.jpg" style={{width:300, height:'auto'}}/></div>
-详情请查看[刷写认证信息](#flashing-authentication-info)。
-:::
+- [Watcher小智版 固件二进制文件](https://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware_cn.bin)
 
 ## 刷写过程
 
@@ -59,7 +49,7 @@ last_update:
 
 ### 步骤 2. 准备固件文件
 
-1. 下载 Watcher Agent 固件[二进制文件](https://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)
+1. 下载 Watcher 小智版固件[二进制文件](https://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware_cn.bin)
 :::caution 注意
 确保所有路径不包含特殊符号。
 :::
@@ -136,48 +126,13 @@ last_update:
 2. **烧录失败**
    - 尝试另一个 COM 端口
    - 检查地址 (0x0) 是否正确输入
+   - 检查二进制文件是否正确被添加和勾选
+   - 尝试先点击Erase擦除后再烧录
 
 3. **设备无响应**
    - 使用针轻轻按下复位按钮
    - 尝试在烧录前先擦除
 
-### 烧录认证信息
-
-如果您的 Watcher 型号**不是 -EN**，您必须在烧录固件后手动烧录认证信息。
-
-**步骤：**
-
-1. 检查您的设备 **MAC 地址**。
-   - 您可以在产品标签上或通过串口找到它。
-   - 如果您使用的是原生固件，您也可以在设备的**设置->关于设备->WI-FI Mac**中找到它。
-
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/en_panel.jpg" style={{width:300, height:'auto'}}/></div>
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/mac.jpg" style={{width:600, height:'auto'}}/></div>
-2. 发送邮件至 **sensecap@seeed.cc**，提供您的 STA MAC 地址并请求认证文件和烧录工具。此脚本将包含在我们发送给您的包中。
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools.jpg" style={{width:500, height:'auto'}}/></div>
-3. 进入 esp-idf 终端并导航到我们发送给您的文件夹，运行 **Python 烧录脚本**。
-:::note
-如果您尚未安装 esp-idf，请访问 [ESP-IDF 网站](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html) 并按照官方指南下载和安装。
-:::
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash1.jpg" style={{width:500, height:'auto'}}/></div>
-4. 按照程序说明输入相应的串口、serialB 并输入 ""BURN"" 进行烧录。
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting3.jpg" style={{width:500, height:'auto'}}/></div>
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash5.jpg" style={{width:800, height:'auto'}}/></div>
-5. 过程完成后，按下设备上的复位按钮。
-6. 完成上述步骤后，您将能够在 [SenseCraft AI-Watcher Agent 平台](https://sensecraft.seeed.cc/ai/watcher-agent) 上注册
-
-:::note
-如果您遇到以下问题，请进入 esp-idf 终端并导航到文件夹，手动输入以下两个命令：
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash4.jpg" style={{width:800, height:'auto'}}/></div>
-
-```bash
-espefuse.py -p <your_correct_serial_port> burn_block_data BLOCK_USR_DATA serial_number
-espefuse.py -p <your_correct_serial_port> burn_key BLOCK_KEY0 license_key HMAC_UP
-```
-
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash2.jpg" style={{width:800, height:'auto'}}/></div>
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash3.jpg" style={{width:800, height:'auto'}}/></div>
-:::
 
 ## 技术支持
 

@@ -9,6 +9,7 @@ last_update:
   author: Citric
 ---
 
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -44,7 +45,7 @@ Home Assistant は、スマートホームデバイスを単一の統合イン�
 
 reTerminal E シリーズ ePaper ディスプレイは、いくつかの理由で Home Assistant の優れたコンパニオンです：
 
-1. **エネルギー効率**: e-paper ディスプレイはコンテンツを更新する時のみ電力を消費するため、天気予報、カレンダーイベント、システムステータスなどの持続的な情報表示に最適です。
+1. **エネルギー効率**: e-paper ディスプレイはコンテンツを更新する時のみ電力を消費するため、天気予報、カレンダーイベント、システム状態などの持続的な情報表示に最適です。
 
 2. **明瞭な視認性**: LCD スクリーンとは異なり、e-paper ディスプレイは直射日光を含むあらゆる照明条件で読みやすく、壁掛けホームコントロールパネルに理想的です。
 
@@ -56,15 +57,15 @@ reTerminal E シリーズ ePaper ディスプレイは、いくつかの理由�
 
 ### ESPHome 統合
 
-ESPHome は、ESP8266/ESP32 デバイス専用に設計されたオープンソースファームウェア作成ツールです。シンプルな YAML 設定ファイルを使用してカスタムファームウェアを作成し、デバイスにフラッシュできます。reTerminal E シリーズにとって、ESPHome はデバイスと Home Assistant 間の通信を可能にする重要なミドルウェアとして機能します。
+ESPHome は、ESP8266/ESP32 デバイス専用に設計されたオープンソースファームウェア作成ツールです。シンプルな YAML 設定ファイルを使用してカスタムファームウェアを作成し、デバイスにフラッシュできます。reTerminal E シリーズでは、ESPHome がデバイスと Home Assistant 間の通信を可能にする重要なミドルウェアとして機能します。
 
 このシステムは、YAML 設定を ESP デバイス上で動作する完全機能のファームウェアに変換することで動作します。このファームウェアは、ネットワークへの接続、Home Assistant との通信、ePaper ディスプレイの制御といった複雑なタスクをすべて処理します。Home Assistant と組み合わせることで、ESPHome は高度なホームオートメーションディスプレイとコントロールを作成するための堅牢なプラットフォームを提供します。
 
 セットアップ方法とこの多用途ディスプレイを最大限に活用する方法を探ってみましょう。
 
-## 始めに
+## 入門
 
-この記事のチュートリアル内容を始める前に、以下のハードウェアを準備する必要があります。
+この記事のチュートリアル内容が始まる前に、以下のハードウェアを準備する必要があります。
 
 ### 必要な材料
 
@@ -105,13 +106,13 @@ Home Assistant Green は、ホームオートメーションを実現する最�
 このチュートリアルでは Home Assistant Green を Home Assistant ホストとして使用することをお勧めしますが、Supervisor を持つ任意の Home Assistant ホストを使用することもできます。
 
 :::tip Home Assistant のインストール
-Seeed Studio 製品の一部について Home Assistant のインストール方法も書いていますので、参考にしてください。
+Seeed Studio 製品の一部に Home Assistant をインストールする方法も書いていますので、参考にしてください。
 
 - **[ODYSSEY-X86 で Home Assistant を始める](https://wiki.seeedstudio.com/ja/ODYSSEY-X86-Home-Assistant/)**
 - **[reTerminal で Home Assistant を始める](https://wiki.seeedstudio.com/ja/reTerminal_Home_Assistant/)**
 - **[LinkStar H68K/reRouter CM4 で Home Assistant を始める](https://wiki.seeedstudio.com/ja/h68k-ha-esphome/)**
 
-Seeed Studio 製品を使用していない場合は、Home Assistant 公式ウェブサイトで他の製品への Home Assistant インストール方法を確認・学習することもできます。
+Seeed Studio 製品を使用していない場合は、Home Assistant 公式ウェブサイトで他の製品に Home Assistant をインストールする方法を確認して学習することもできます。
 
 - **[Home Assistant インストール](https://www.home-assistant.io/installation/)**
 :::
@@ -135,7 +136,7 @@ Seeed Studio 製品を使用していない場合は、Home Assistant 公式ウ�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/30.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-アドオンストアで ESPHome が見つからない場合は、アドオンをサポートする Home Assistant インストール（Home Assistant OS や supervised インストールなど）を使用していることを確認してください。他のインストールタイプ（Home Assistant Container など）の場合は、Docker を使用して ESPHome Device Builder を独立して実行する必要があります。詳細については、[公式 ESPHome ドキュメント](https://esphome.io/guides/getting_started_hassio)を参照してください。
+アドオンストアで ESPHome が見つからない場合は、アドオンをサポートする Home Assistant インストール（Home Assistant OS や supervised インストールなど）を使用していることを確認してください。他のインストールタイプ（Home Assistant Container など）では、Docker を使用して ESPHome Device Builder を独立して実行する必要がある場合があります。詳細については、[公式 ESPHome ドキュメント](https://esphome.io/guides/getting_started_hassio)を参照してください。
 :::
 
 ### ステップ 2. 新しいデバイスを追加
@@ -200,7 +201,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="適用于 E1002">
 
 ```yaml
 
@@ -245,10 +246,10 @@ display:
 **INSTALL** をクリックしてコードをデバイスにインストールすると、以下の画像が表示されます。
 
 <Tabs>
-<TabItem value='Install through browser'>
+<TabItem value='ブラウザ経由でインストール'>
 
 :::tip
-Home Assistant ホスト（Raspberry PI/Green/Yellow など）が遠くにある場合は、この方法をお勧めします。手元にあるコンピューターでインストールできます。
+Home Assistant ホスト（Raspberry PI/Green/Yellow など）が遠くにある場合は、この方法をお勧めします。手元にあるコンピュータでインストールできます。
 :::
 
 まず、**Manual download** をクリックしてコンパイル済みファームウェアをダウンロードする必要があります。
@@ -267,25 +268,25 @@ Factory format を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/65.png" style={{width:500, height:'auto'}}/></div>
 
-USB ケーブルを使用して **ePaper パネルをコンピューターに接続** し、**CONNECT** をクリックします。
+USB ケーブルを使用して **ePaper パネルをコンピュータに接続** し、**CONNECT** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
-usbmodemxxx（Windows では COMxxx）を選択し、connect をクリックします。[問題が発生しましたか？こちらをクリック。](#Q4)
+usbmodemxxx（Windows では COMxxx）を選択して connect をクリックします。[問題が発生しましたか？こちらをクリック。](#Q4)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
-**INSTALL** をクリックし、先ほどダウンロードしたファームウェアを選択します。
+**INSTALL** をクリックして、先ほどダウンロードしたファームウェアを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/69.png" style={{width:500, height:'auto'}}/></div>
 
-しばらく待つと、ディスプレイに「Hello world!」が表示されます～
+しばらく待つと、ディスプレイに「Hello world!」が表示されます ～
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/37.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
 
-<TabItem value='Install through host'>
+<TabItem value='ホスト経由でインストール'>
 
 :::tip
 Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある場合は、より簡単なこの方法をお勧めします。
@@ -306,10 +307,10 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 
 </TabItem>
 
-<TabItem value='Install through Wi-Fi'>
+<TabItem value='Wi-Fi経由でインストール'>
 
 :::tip
-これは最も簡単な方法ですが、初回プログラムインストール時には、まず左側の方法を使用して ePaper パネルにプログラムをアップロードする必要があります。その後、Wi-Fi 経由でアップロードできます。また、この方法が機能するには、YAML 設定に適切に設定された `ota` および `api` セクションと有効な暗号化キーが含まれていることを確認してください。
+これは最も簡単な方法ですが、初回プログラムインストール時には、まず左側の方法を使用して ePaper パネルにプログラムをアップロードする必要があります。その後、wifi 経由でアップロードできます。また、この方法が機能するには、YAML 設定に適切に設定された `ota` と `api` セクションが有効な暗号化キーと共に含まれていることを確認してください。
 :::
 
 この方法では、ePaper パネルを何にも接続する必要がなく、オンラインであることを確認するだけです。
@@ -339,7 +340,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 以下のコードをコピーして、Yaml ファイルの `captive_portal` コード行の後に貼り付けることで、この例を使用できます。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="適用于 E1001" default>
 
 ```yaml
 spi:
@@ -368,12 +369,12 @@ display:
       it.filled_circle(250, 105, 25);
 ```
 
-以下の画像のようなフィードバックが表示されると、コードが正常に実行されていることを意味します。
+以下の画像のようなフィードバックが表示されたら、コードが正常に実行されていることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/38.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="適用于 E1002">
 
 ```yaml
 
@@ -417,16 +418,16 @@ display:
       it.filled_circle(250, 105, 25, WHITE);
 ```
 
-以下の画像のようなフィードバックが表示されると、コードが正常に実行されていることを意味します。
+以下の画像のようなフィードバックが表示されたら、コードが正常に実行されていることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/144.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
 </Tabs>
 
-スペースの制約により、他のパターンの描画方法と原理については詳しく説明しませんが、必要に応じて、読者は [ESPHome のこの部分の詳細な例](https://esphome.io/components/display/) を読むことをお勧めします。
+スペースの制約により、他のパターンの描画方法と原理については詳しく説明しませんが、必要に応じて読者は [ESPHome のこの部分の詳細な例](https://esphome.io/components/display/) を読むことをお勧めします。
 
-### 表示用の Home Assistant からの値の取得
+### 表示用に Home Assistant から値を取得する
 
 reTerminal E シリーズ ePaper ディスプレイデバイスに天気データを表示するには、Home Assistant から温度、天気状況、風速データにアクセスする必要があります。Open-Meteo 統合は、Developer Tools を通じてアクセスできる信頼性の高い天気データを提供します。
 
@@ -462,7 +463,7 @@ Open-Meteo 統合をインストールした後、Developer Tools を通じて�
 
 #### ESPHome での天気データの使用
 
-reTerminal E シリーズでこの天気データを ESPHome 設定で使用するには、ESPHome YAML 設定で Home Assistant API 接続を設定する必要があります：
+reTerminal E シリーズの ESPHome 設定でこの天気データを使用するには、ESPHome YAML 設定で Home Assistant API 接続を設定する必要があります：
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -487,7 +488,7 @@ sensor:
     internal: true
 ```
 
-この設定により、Home Assistant の天気統合からデータを取得する ESPHome デバイス内にセンサーエンティティが作成されます。これらのセンサーを使用して、reTerminal E シリーズ ePaper ディスプレイを現在の天気情報で更新できます。
+この設定により、ESPHome デバイスに Home Assistant 天気統合からデータを取得するセンサーエンティティが作成されます。これらのセンサーを使用して、reTerminal E シリーズ ePaper Display ディスプレイを現在の天気情報で更新できます。
 
 :::tip
 予報データについては、将来の日の予測値を含む `weather.open_meteo_forecast` エンティティを使用する必要があります。
@@ -496,7 +497,7 @@ sensor:
 最後に、上記の値を使用するディスプレイセクションのコードを追加します。完全なコードは以下の通りです：
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="適用于 E1001" default>
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -555,7 +556,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="適用于 E1002">
 
 ```yaml
 
@@ -623,21 +624,21 @@ display:
 </TabItem>
 </Tabs>
 
-上記のコードをコンパイルしてデバイスにアップロードした後、最初に画面に **NaN** が表示される場合がありますが、心配する必要はありません。これは正常な動作です。これは、デバイスがまだ Home Assistant 環境に追加されていないため、reTerminal がまだ Home Assistant データを取得できていないためです。以下の手順に従ってデバイスを追加するだけです。
+上記のコードをコンパイルしてデバイスにアップロードした後、最初に画面に **NaN** が表示される場合がありますが、心配する必要はありません。これは正常です。これは、デバイスがまだ Home Assistant 環境に追加されていないため、reTerminal がまだ Home Assistant データを取得できていないためです。以下の手順に従ってデバイスを追加するだけです。
 
-#### reTerminal E シリーズ ePaper ディスプレイを Home Assistant に追加する
+#### reTerminal E シリーズ ePaper Display を Home Assistant に追加する
 
 ステップ 1. デバイスをフラッシュした後、Home Assistant に戻り、**Settings → Devices & Services** に移動します。
 
-ステップ 3. Home Assistant は mDNS 経由で reTerminal E シリーズ ePaper ディスプレイデバイスを自動的に検出するはずです。検出されたデバイスセクションに表示される場合は、Configure をクリックして追加します。
+ステップ 3. Home Assistant は mDNS を介して reTerminal E シリーズ ePaper Display デバイスを自動的に検出するはずです。検出されたデバイスセクションに表示される場合は、Configure をクリックして追加します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
 ステップ 4. デバイスが自動的に検出されない場合は、Add Integration をクリックして "ESPHome" を検索します。
 
-ステップ 5. reTerminal E シリーズ ePaper ディスプレイデバイスの IP アドレスと、設定した場合は API 暗号化キーを入力します。
+ステップ 5. reTerminal E シリーズ ePaper Display デバイスの IP アドレスと、設定した場合は API 暗号化キーを入力します。
 
-ステップ 6. 接続されると、reTerminal E シリーズ ePaper ディスプレイが Home Assistant にデバイスとして表示され、すべてのセンサーとコンポーネントが利用可能になります。
+ステップ 6. 接続されると、reTerminal E シリーズ ePaper Display が Home Assistant にデバイスとして表示され、すべてのセンサーとコンポーネントが利用可能になります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/40.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -649,7 +650,7 @@ display:
 
 ### TrueType フォントの描画
 
-この例では、TrueType フォントを使用して reTerminal E シリーズ ePaper ディスプレイにカスタムアイコンを表示する方法を示します。Material Design Icons は、e-paper ディスプレイに最適なスケーラブルなシンボルの幅広い範囲を提供します。
+この例では、TrueType フォントを使用して reTerminal E シリーズ ePaper Display にカスタムアイコンを表示する方法を示します。Material Design Icons は、e-paper ディスプレイに最適な幅広いスケーラブルシンボルを提供します。
 
 #### 必要なツールのインストール
 
@@ -682,7 +683,7 @@ display:
 ステップ 6. `captive_portal` セクションの後に、以下のコードを ESPHome 設定ファイルに追加します。このコードは、アイコン用の 2 つのフォントサイズを定義し、天気アイコンを表示するようにディスプレイを設定します。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="適用于 E1001" default>
 
 ```yaml
 # define font to display words
@@ -722,7 +723,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="適用于 E1002">
 
 ```yaml
 
@@ -779,19 +780,19 @@ display:
 
 :::
 
-ステップ 7. 設定を保存し、reTerminal E Seriesにアップロードします。以下の画像のようなフィードバックが表示されれば、コードが正常に実行されています。
+ステップ 7. 設定を保存し、reTerminal E シリーズにアップロードします。以下の画像のようなフィードバックが表示されれば、コードが正常に実行されています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/42.jpg" style={{width:600, height:'auto'}}/></div>
 
 #### 異なるアイコンでのカスタマイズ
 
-Material Design Iconsライブラリには、プロジェクトで使用できる数千のアイコンが含まれています。異なるアイコンを見つけて使用する方法は以下の通りです：
+Material Design Icons ライブラリには、プロジェクトで使用できる数千のアイコンが含まれています。異なるアイコンを見つけて使用する方法は以下の通りです：
 
-ステップ 1. 下のボタンをクリックして、Material Design Iconsのウェブサイトにアクセスします。
+ステップ 1. 下のボタンをクリックして Material Design Icons ウェブサイトにアクセスします。
 
 <div align="center">
 <a href="https://pictogrammers.com/library/mdi/" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Material Design Iconsを閲覧</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Material Design Icons を閲覧</button></p>
 </a>
 </div>
 
@@ -799,14 +800,14 @@ Material Design Iconsライブラリには、プロジェクトで使用でき�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/41.png" style={{width:800, height:'auto'}}/></div>
 
-ステップ 3. 気に入ったアイコンが見つかったら、それをクリックして詳細を表示します。`F0595`の形式のUnicode値を探します。
+ステップ 3. 気に入ったアイコンが見つかったら、それをクリックして詳細を表示します。`F0595` の形式の Unicode 値を探します。
 
-ステップ 4. 以下の方法でESPHome設定にUnicode値を追加します：
+ステップ 4. 以下の方法で Unicode 値を ESPHome 設定に追加します：
 
-- フォント設定の`glyphs`リストに追加する
+- フォント設定の `glyphs` リストに追加する
 - 新しいアイコンを使用するように表示コードを更新する
 
-例えば、Unicode `F0123`の新しいアイコンを使用する場合：
+例えば、Unicode `F0123` の新しいアイコンを使用する場合：
 
 ```yaml
 glyphs:
@@ -828,17 +829,17 @@ lambda: |-
 天気ダッシュボードには、`F0590`（晴れ）、`F0591`（部分的に曇り）、`F0593`（雨）、`F059E`（風）などのアイコンの使用を検討してください。
 :::
 
-これらのアイコンを、先ほど設定したHome Assistantからの天気データと組み合わせることで、適切なアイコンを使用して現在の状況を表示する動的な天気表示を作成できます。
+これらのアイコンを、先ほど設定した Home Assistant からの天気データと組み合わせることで、適切なアイコンを使用して現在の状況を表示する動的な天気表示を作成できます。
 
 ### カスタム画像の表示
 
-この例では、reTerminal E Series ePaper Displayの電子ペーパーディスプレイにカスタム画像を表示する方法を説明します。この機能を使用して、ロゴ、アイコン、またはダッシュボード体験を向上させるグラフィックを表示できます。
+この例では、reTerminal E シリーズ ePaper Display e-paper ディスプレイにカスタム画像を表示する方法を説明します。この機能を使用して、ダッシュボード体験を向上させるロゴ、アイコン、またはグラフィックを表示できます。
 
 #### 準備
 
-ステップ 1. Home Assistantに**Studio Code Server**アドオンがインストールされていることを確認します。まだインストールしていない場合は、前の例の手順に従ってください。
+ステップ 1. Home Assistant に **Studio Code Server** アドオンがインストールされていることを確認します。まだインストールしていない場合は、前の例の手順に従ってください。
 
-ステップ 2. ESPHome設定ディレクトリに**image**という新しいフォルダを作成します。このフォルダには、表示したい画像ファイルを保存します。
+ステップ 2. ESPHome 設定ディレクトリに **image** という新しいフォルダを作成します。このフォルダには、表示したい画像ファイルを保存します。
 
 ```
 config/
@@ -849,28 +850,28 @@ config/
 
 #### 画像の追加
 
-ステップ 3. 機能をテストするためのサンプル画像をダウンロードします。下記のWiFiアイコンを使用するか、独自の画像を使用できます。
+ステップ 3. 機能をテストするためのサンプル画像をダウンロードします。下記の WiFi アイコンを使用するか、独自の画像を使用できます。
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.jpg" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>サンプルWiFi画像をダウンロード</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>サンプル WiFi 画像をダウンロード</button></p>
 </a>
 </div>
 
-ステップ 4. Studio Code Serverのファイルマネージャーを使用して、ダウンロードした画像を先ほど作成した**image**フォルダにアップロードします。
+ステップ 4. Studio Code Server ファイルマネージャーを使用して、ダウンロードした画像を先ほど作成した **image** フォルダにアップロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-複雑で美しい風景写真を表示したい場合は、より良い効果を得るために[当社のウェブサイト](https://sensecraft.seeed.cc/hmi/tools/dither)で事前に画像ディザリングを実行することをお勧めします。JPGとPNG形式の両方がサポートされています。
+複雑で美しい風景写真を表示したい場合は、より良い効果を得るために[当社のウェブサイト](https://sensecraft.seeed.cc/hmi/tools/dither)で事前に画像ディザリングを実行することをお勧めします。JPG と PNG 形式の両方がサポートされています。
 :::
 
-#### 画像表示のためのESPHome設定
+#### 画像表示用の ESPHome 設定
 
-ステップ 5. `captive_portal`セクションの後に、以下のコードをESPHome設定ファイルに追加します。このコードは画像リソースを定義し、それを表示するようにディスプレイを設定します。
+ステップ 5. `captive_portal` セクションの後に、以下のコードを ESPHome 設定ファイルに追加します。このコードは画像リソースを定義し、それを表示するようにディスプレイを設定します。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="適用于 E1001" default>
 
 ```yaml
 image:
@@ -902,10 +903,10 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="適用于 E1002">
 
 :::tip
-ESPHomeのバージョンを**2025.10.2**以上に更新してください。
+ESPHome バージョンを **2025.10.2** 以上に更新してください。
 :::
 
 ```yaml
@@ -942,7 +943,7 @@ display:
 </TabItem>
 </Tabs>
 
-ステップ 6. 設定を保存し、reTerminal E Seriesにアップロードします。更新が完了すると、電子ペーパーディスプレイに画像が表示されます。
+ステップ 6. 設定を保存し、reTerminal E シリーズにアップロードします。更新が完了すると、e-paper ディスプレイに画像が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/43.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -996,30 +997,30 @@ lambda: |-
 ```
 
 :::caution
-電子ペーパーディスプレイのリフレッシュレートは制限されていることを覚えておいてください。`update_interval: 300s`設定は、ディスプレイが5分ごとにのみリフレッシュされることを意味します。必要に応じてこの値を調整してください。ただし、頻繁なリフレッシュは電子ペーパーディスプレイの寿命を短縮する可能性があることに注意してください。
+e-paper ディスプレイのリフレッシュレートは制限されていることを覚えておいてください。`update_interval: 300s` 設定は、ディスプレイが5分ごとにのみリフレッシュされることを意味します。ニーズに応じてこの値を調整してください。ただし、頻繁なリフレッシュは e-paper ディスプレイの寿命を短縮する可能性があることに注意してください。
 :::
 
-画像を、前の例で説明したテキストやその他の表示要素と組み合わせることで、reTerminal E Seriesで豊富で情報量の多いダッシュボードを作成できます。
+画像を、前の例で説明したテキストやその他の表示要素と組み合わせることで、reTerminal E シリーズで豊富で情報量の多いダッシュボードを作成できます。
 
 ## 続きを読む
 
-スペースの制約により、この記事ではデバイスの基本的な使用例と描画例のみを扱っています。reTerminalのハードウェアをESPHomeで使用することについては、[Home AssistantでのreTerminal E Series ePaper Displayの高度なESPHome使用法](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced)のWikiでより詳しく説明しており、続けて読むことができます。
+スペースの制約により、この記事ではデバイスの基本的な使用例と描画例のみを扱っています。Home Assistant での reTerminal のハードウェアの ESPHome での使用について、[reTerminal E シリーズ ePaper Display の Home Assistant での高度な ESPHome 使用法](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced)の Wiki でより詳しく説明しますので、続けてお読みください。
 
 ## FAQ
 
-### Q1: データが表示されないのはなぜですか？
+### Q1: データがないのはなぜですか？
 
-この場合、Settings -> Devices & Services -> Integrationsに移動してデバイスを**再設定**する必要があります。reTerminalが見つからない場合は、Home Assistantを再起動してみてください。
+この場合、Settings -> Devices & Services -> Integrations に移動してデバイスを**再設定**する必要があります。reTerminal が見つからない場合は、Home Assistant を再起動してみてください。
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
-### Q2: Home Assistantでそれらのデータを取得できないのはなぜですか？ {#port}
+### Q2: Home Assistant でそれらのデータを取得できないのはなぜですか？ {#port}
 
-この場合、Settings -> Devices & Services -> Integrationsに移動してデバイスをHAに**追加**する必要があります。
+この場合、Settings -> Devices & Services -> Integrations に移動してデバイスを HA に**追加**する必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
-### Q3: reTerminal E Series ePaper Displayがコンピューターに接続できませんか？
+### Q3: reTerminal E シリーズ ePaper Display がコンピューターに接続できませんか？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/68.png" style={{width:600, height:'auto'}}/></div>
 
@@ -1027,7 +1028,7 @@ lambda: |-
 
 ## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただき、ありがとうございます！当社の製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+当社の製品をお選びいただきありがとうございます！当社の製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

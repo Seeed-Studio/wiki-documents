@@ -24,14 +24,14 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 :::info これを想像してみてください
-あなたが書斎に入ると、机の上のSenseCAP Watcherが瞬時にあなたの存在を感知します。画面が点灯し、笑顔で挨拶し、その日のToDoリストを表示します。あなたが一言も話したり、指一本動かしたりする必要はありません。
+あなたが書斎に入ると、机の上のSenseCAP Watcherが瞬時にあなたの存在を感知します。画面が点灯し、笑顔で挨拶し、その日のToDoリストを表示します—あなたが一言も話したり、指一本動かしたりする必要はありません。
 :::
 
 SenseCAP Watcherは、人間とデバイスの相互作用を再定義しています。
 
 独特な「フリクションレストリガー」会話能力を持ち、あなたが近づくと積極的に相互作用を開始します。これは単なる技術的なアップグレードではありません。相互作用ロジックの根本的な変化です：**初めて、主導権が人間から機械に移行し、「人間が機械に適応する」から「機械が積極的に人間に適応する」への体験的飛躍を実現しています。**
 
-Watcherの「鋭い目」は、強力な**オンデバイスAIビジョンチップ（Himax）**によって駆動され、オブジェクト認識とターゲット追跡のための高速ローカル処理を可能にします。拡張可能な**XiaoZhi**アシスタントファームウェアと組み合わせることで、単なるカメラ以上の存在となり、進化し、あなたのニーズを理解する専用AIアシスタントです。
+Watcherの「鋭い目」は、強力な**オンデバイスAIビジョンチップ（Himax）**によって駆動され、オブジェクト認識とターゲット追跡のための高速ローカル処理を可能にします。拡張可能なアシスタントファームウェアと組み合わせることで、単なるカメラ以上の存在—あなたのニーズを進化し理解する専用AIアシスタントです。
 
 ## 主な利点
 
@@ -50,7 +50,7 @@ Watcherの「鋭い目」は、強力な**オンデバイスAIビジョンチッ
 			</div>
 			<div class="info-content">
 				<h3>オフライン「鋭い目」：効率的なオンデバイスビジョン処理</h3>
-				<p>高性能AIビジョンチップ（Himax）を搭載し、すべての画像処理をデバイス上でローカルに完了します。迅速な応答と強化されたプライバシー保護をお楽しみください。データをクラウドにアップロードする必要はありません。</p>
+				<p>高性能AIビジョンチップ（Himax）を搭載し、すべての画像処理をデバイス上でローカルに完了します。迅速な応答と強化されたプライバシー保護をお楽しみください—あなたのデータをクラウドにアップロードする必要はありません。</p>
 			</div>
 		</li>
 		<li class="info-item">
@@ -61,8 +61,8 @@ Watcherの「鋭い目」は、強力な**オンデバイスAIビジョンチッ
 				</svg>
 			</div>
 			<div class="info-content">
-				<h3>ノーコードでAIアプリを構築、レゴのように簡単</h3>
-				<p>SenseCraft AIプラットフォームを活用してAIモデルをデプロイし、数回のクリックで特定のシナリオ向けアプリケーションを迅速に構築できます。AIモデルのデプロイは写真編集のように簡単になり、プログラミング知識は一切不要です。</p>
+				<h3>ゼロコードでAIアプリを構築、レゴのように簡単</h3>
+				<p>SenseCraft AIプラットフォームを活用してAIモデルをデプロイし、数回のクリックで特定のシナリオ向けアプリケーションを迅速に構築できます。AIモデルのデプロイが写真編集のように簡単になり、プログラミング背景は一切必要ありません。</p>
 			</div>
 		</li>
 		<li class="info-item">
@@ -74,7 +74,7 @@ Watcherの「鋭い目」は、強力な**オンデバイスAIビジョンチッ
 			</div>
 			<div class="info-content">
 				<h3>柔軟な統合プラットフォームとツール</h3>
-				<p>XiaoZhi MCPアーキテクチャに基づいて、新しいAIツールを自由に定義し、ローカルまたはクラウドサービスを迅速に統合して、既存のスマートシステムにシームレスに適合できます。</p>
+				<p>柔軟なMCPアーキテクチャに基づいて、新しいAIツールを自由に定義し、ローカルまたはクラウドサービスを迅速に統合して、既存のスマートシステムにシームレスに適合できます。</p>
 			</div>
 		</li>
 		<li class="info-item">
@@ -86,7 +86,7 @@ Watcherの「鋭い目」は、強力な**オンデバイスAIビジョンチッ
 			</div>
 			<div class="info-content">
 				<h3>ハードウェア拡張性：追加インターフェースサポート</h3>
-				<p>GPIO拡張インターフェースを備え、様々なセンサーやアクチュエーターに簡単に接続でき、深いカスタマイズを可能にし、より創造的な実装をサポートします。</p>
+				<p>GPIO拡張インターフェースを備え、様々なセンサーやアクチュエーターに簡単に接続でき、深いカスタマイゼーションを可能にし、より創造的な実装をサポートします。</p>
 			</div>
 		</li>
 	</ul>
@@ -102,7 +102,7 @@ SenseCAP Watcherは「モジュラー」インテリジェントロボットと�
 
 プロセスは以下のように簡略化できます：
 
-Watcherの「目」（カメラ）が画像をキャプチャ → 「視覚神経」（Himaxチップ）が認識を実行してXiaoZhiを起動 → 「脳」（バックエンドAI、MCPサービス）がコンテキストを理解して応答。
+Watcherの「目」（カメラ）が画像をキャプチャ → 「視覚神経」（Himaxチップ）が認識を実行してアシスタントを起動 → 「脳」（バックエンドAI、MCPサービス）がコンテキストを理解して応答。
 
 このモジュラー設計は高い柔軟性と拡張性を提供します。
 
@@ -117,15 +117,15 @@ Watcherの「目」（カメラ）が画像をキャプチャ → 「視覚神�
 わずか3ステップでWatcherをアクティベートできます：
 
 1.  **デバイスの電源投入**：Type-Cデータケーブルで電源を供給します。バッテリーを使用する場合は、サイドボタンを長押しして電源を入れます。
-2.  **ネットワーク接続**：起動後、デバイスはWi-Fiホットスポットを生成します。お使いの携帯電話またはコンピューターをこのホットスポットに接続してください。| 「[Watcherネットワーク設定](/ja/device_network_setup)」
+2.  **ネットワークに接続**：起動後、デバイスはWi-Fiホットスポットを生成します。お使いの携帯電話またはコンピューターをこのホットスポットに接続してください。| 「[Watcherネットワーク設定](/ja/device_network_setup)」
 3.  **設定とアクティベーション**：ブラウザで`192.168.4.1`にアクセスしてWatcherのWi-Fiを設定し、SenseCraft AIプラットフォームの指示に従ってアクティベーションを完了してください。| 「[Watcher Webコントロールパネル](/ja/watcher_web_control_panel/)」
 
 :::info[アクティベーションのヒント]
 アクティベーションが失敗した場合は、認証コードが正しく、デバイス認証情報が失われていないことを確認してください。以下の操作は通常、認証情報の損失を引き起こします：
 
 1.  ファームウェアが別のプログラムによって上書きされた。
-2.  認証情報をバックアップせずに大規模なファームウェア更新を実行した。
-3.  完全に新しいファームウェアをフラッシュした。
+2.  認証情報をバックアップせずに大規模なファームウェア更新が実行された。
+3.  完全に新しいファームウェアがフラッシュされた。
 
 再アクティベーションが必要な場合は、デバイスのSTA Macアドレス（シリアルログから取得可能）をsensecap@seeed.ccまでお送りください。参照：[認証情報のフラッシュ](/ja/flash_watcher_agent_firmware/#flashing-authentication-info)。
 :::
@@ -140,55 +140,9 @@ Watcherの「目」（カメラ）が画像をキャプチャ → 「視覚神�
 
 開発者や上級ユーザーは、異なるモデルやファームウェアをフラッシュして、Watcherにより強力で専用の機能を与えることができます。
 
-### 1. AIモデルのフラッシュ
-
-内蔵のHimaxオンデバイスAIビジョンチップを活用して、SenseCraft AIプラットフォーム経由で新しい認識モデルを簡単にデプロイできます：
-
-- コンピューターをWatcherの底面のType-Cインターフェースに接続します。
-- SenseCraft AIプラットフォームで、Workspace下の`SenseCAP Watcher`を選択し、**シリアル番号が小さい**ポートを選択してモデルフラッシュを行います。
-
-  <div align="center">
-    <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/connect-watcher-himax.png" alt="connect-watcher-himax"/>
-  </div>
-
-- フラッシュ後にカメラが正常に動作しない場合は、デバイスを再起動してみてください。
-
-### 2. XiaoZhiファームウェアのフラッシュ
-
-<Tabs>
-<TabItem value="sensecraft" label="SenseCraft AI">
-
-近日公開。
-
-</TabItem>
-<TabItem value="flasher" label="単一ファイルフラッシュ（推奨）" default>
-
-- **最新ファームウェア v1.8.8**：[ダウンロードリンク](https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/v1.8.8_sensecap-watcher.zip)
-
-- ダウンロードしたファームウェアパッケージを展開し、[esptool.py](https://github.com/espressif/esptool)ツールを使用してフラッシュを実行します：
-
-  ```shell
-  esptool.py -p /dev/ttyACM0 -b 2000000 write_flash 0 merged-binary.bin
-  ```
-  *（注：お使いのシステムに応じてポート`/dev/ttyACM0`を調整してください。例：Windowsでは`COM3`）*
-
-</TabItem>
-
-<TabItem value="compile" label="ソースからコンパイル（開発者向け）">
-
-- 事前設定されたIDFツールチェーン環境が必要です。コードリポジトリをクローンしてください：[GitHubリポジトリ](https://github.com/Wvirgil123/xiaozhi-esp32/tree/feat-sscma_invoke)
-
-- プロジェクトルートディレクトリで以下のコマンドを実行します：
-
-  ```shell
-  cd xiaozhi-esp32
-  idf.py set-target esp32s3
-  idf.py menuconfig  # In the GUI, select the board type as SenseCAP Watcher
-  idf.py build flash monitor
-  ```
-
-</TabItem>
-</Tabs>
+詳細な手順については、包括的ガイドの関連セクションを参照してください：
+- **[AIモデルフラッシュプロセス](/ja/visual_trigger_and_ai_flash#ai-model-flashing-process)**
+- **[ファームウェアフラッシュプロセス](/ja/visual_trigger_and_ai_flash#firmware-flashing-process)**
 
 ## 会話を開始する
 
@@ -205,42 +159,48 @@ SenseCAP Watcherの基本的な理解ができたので、カメラ機能の使�
 デバイスは起動されていない時はスタンバイ状態を維持し、周囲の会話を聞いていません。起動されると、聞き取りを開始し、ユーザーの指示に基づいて対話や操作を実行できます。
 
 <Tabs>
-<TabItem value="vision" label="Visual Wake-Up" default>
+<TabItem value="vision" label="視覚起動" default>
 
 <div style={{ textAlign: 'center' }}>
 <video width="auto" height="480" controls>
   <source src="https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/vision-trigger-watcher.mp4" type="video/mp4" />
-  お使いのブラウザは動画タグをサポートしていません。
+  Your browser does not support the video tag.
 </video>
 </div>
 
-現在のビジュアルウェイクアップ機能では、以下の設定オプションが提供されています：
+:::info[視覚起動を有効にする方法]
+デフォルトでは、視覚起動機能は無効になっています。有効にするには、Watcherが起動している時に以下のように話しかけてください：
 
-- **ターゲットID** (`target`)：検出するターゲットIDを指定します。このIDは使用するビジュアルモデルに依存し、デフォルト値は0です。
-- **検出時間** (`duration`)：単位は秒で、ビジュアルウェイクアップの感度を調整するために使用されます。デフォルトは1秒です（このデフォルトには1秒のデバウンス処理は含まれません）。
-- **信頼度閾値** (`threshold`)：ビジュアルモデルがオブジェクトを認識するための信頼度の下限で、検出感度を調整するために使用されます。パーセンテージで表され、デフォルトは75%です。
-- **クールダウン期間** (`interval`)：単位は秒で、1つの会話が終了した後、再度トリガーされるまでに必要な待機時間を示し、同じオブジェクトによる頻繁な中断を避けるために使用されます。デフォルトは8秒です。
+**"Hey Watcher, turn on model inference."**
+:::
 
-例えば、`threshold`パラメータを変更することでモデルの感度を調整できます。現在の閾値が厳しすぎると感じる場合は、Watcherに「信頼度閾値を60%に設定してください」と言うだけです。
+現在の視覚起動機能は以下の設定オプションを提供します：
+
+- **ターゲットID**（`target`）：検出するターゲットIDを指定します。このIDは使用される視覚モデルに依存し、デフォルト値は0です。
+- **検出持続時間**（`duration`）：単位は秒で、視覚起動の感度を調整するために使用されます。デフォルトは1秒です（このデフォルトには1秒のデバウンス処理は含まれません）。
+- **信頼度閾値**（`threshold`）：視覚モデルがオブジェクトを認識するための信頼度下限で、検出感度を調整するために使用されます。パーセンテージで表され、デフォルトは75%です。
+- **クールダウン期間** (`interval`): 単位は秒で、1つの会話が終了した後、再度トリガーされるまでに必要な待機時間を示し、同じオブジェクトによる頻繁な中断を避けるために使用されます。デフォルトは8秒です。
+
+例えば、`threshold` パラメータを変更することで、モデルの感度を調整できます。現在の閾値が厳しすぎると感じる場合は、Watcher に「信頼度の閾値を60%に設定してください」と言うだけです。
 
 </TabItem>
 
-<TabItem value="voice" label="Voice Wake-Up">
+<TabItem value="voice" label="音声ウェイクアップ">
 
 <div style={{ textAlign: 'center' }}>
 <video width="auto" height="480" controls>
   <source src="https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/voice-trigger-watcher.mov" type="video/mp4" />
-  お使いのブラウザは動画タグをサポートしていません。
+  Your browser does not support the video tag.
 </video>
 </div>
 
 </TabItem>
 
-<TabItem value="button" label="Button Wake-Up">
+<TabItem value="button" label="ボタンウェイクアップ">
   <div style={{ textAlign: 'center' }}>
   <video width="auto" height="320" controls>
     <source src="https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/click-trigger-watcher.mov" type="video/mp4" />
-    お使いのブラウザは動画タグをサポートしていません。
+    Your browser does not support the video tag.
   </video>
   </div>
 </TabItem>
@@ -248,30 +208,30 @@ SenseCAP Watcherの基本的な理解ができたので、カメラ機能の使�
 
 ### カメラの使用
 
-Watcherに話しかけてください：
+Watcher に話しかけてください：
 
-- `カメラをオンにしてください`
-- `何が見えますか？`
-- `前に何がありますか？`
+- `Please turn on the camera`
+- `What can you see?`
+- `What's in front of you?`
 
 <div style={{ textAlign: 'center' }}>
 <video width="auto" height="320" controls>
   <source src="https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/watcher-activate-camera.mov" type="video/mp4" />
-  お使いのブラウザは動画タグをサポートしていません。
+  Your browser does not support the video tag.
 </video>
 </div>
 
 ## リソース
 
-オンプレミス展開、プライバシー保護、パーソナライズされた知識ベースの構築など、お客様のニーズに応じてSenseCAP Watcherのアプリケーション境界をさらに拡張するのに役立つ高度なリソースをご紹介します：
+ここでは、オンプレミス展開、プライバシー保護、パーソナライズされた知識ベースの構築など、ニーズに応じて SenseCAP Watcher のアプリケーション境界をさらに拡張するのに役立つ高度なリソースをいくつか紹介します：
 
-- [AI会話駆動スマートホーム](/ja/ha_dify_watcher_llms) - SenseCAP Watcherを通じて音声で照明、エアコン、カーテンなどのスマートホームデバイスを直接制御し、手動操作にさよならを告げます。
+- [AI 会話駆動スマートホーム](/ja/ha_dify_watcher_llms) - SenseCAP Watcher を通じて音声で照明、エアコン、カーテンなどのスマートホームデバイスを直接制御し、手動操作にさよならを告げます。
 <!--- [Knowledge Based chatbots](/ja/knowledge_watcher_llms) - Transform SenseCAP Watcher into a virtual exhibition secretary, automatically explaining products and solutions for businesses, with the ability to intelligently identify customer points of interest.-->
 
 ## 参考資料
 
-- [SenseCAP Watcherハードウェア概要](/ja/watcher_hardware_overview) - SenseCAP Watcherのハードウェアリソース、構造設計など。
-- [SenseCAP Watcher操作ガイドライン](/ja/watcher_operation_guideline) - SenseCAP Watcherのオン・オフの基本ロジック。
-- [SenseCAP Watcher用オンデバイスビジョンモデルのトレーニング](/ja/training_model_for_watcher) - データ準備、モデルトレーニング、デプロイメントを含む、SenseCAP Watcher用オンデバイスビジョンモデルのトレーニングガイド。
-- [SenseCAP Watcher - Webコントロールパネル](/ja/watcher_web_control_panel)
+- [SenseCAP Watcher ハードウェア概要](/ja/watcher_hardware_overview) - SenseCAP Watcher のハードウェアリソース、構造設計など。
+- [SenseCAP Watcher 操作ガイドライン](/ja/watcher_operation_guideline) - SenseCAP Watcher の電源オン・オフの基本ロジック。
+- [SenseCAP Watcher 用オンデバイス視覚モデルのトレーニング](/ja/training_model_for_watcher) - データ準備、モデルトレーニング、デプロイメントを含む、SenseCAP Watcher 用オンデバイス視覚モデルのトレーニングガイド。
+- [SenseCAP Watcher - Web コントロールパネル](/ja/watcher_web_control_panel)
 - [SenseCAP Watcher - デバイスネットワーク設定ガイド](/ja/device_network_setup/)
