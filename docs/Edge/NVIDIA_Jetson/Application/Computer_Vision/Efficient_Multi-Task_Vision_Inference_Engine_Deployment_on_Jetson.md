@@ -362,6 +362,7 @@ Create a comprehensive test script to verify the installation:
 
 <details>
 <summary> test.py </summary>
+
 ```python
 #!/usr/bin/env python3
 """
@@ -680,6 +681,7 @@ source ~/.bashrc
 You can prepare four videos and place them in the `resources` directory. Then run the following script:
 <details>
 <summary> demo.py </summary>
+
 ```python
 #!/usr/bin/env python3
 """
@@ -733,7 +735,6 @@ sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 
 from vp_engine import Engine
 
-
 class FPSCounter:
     """Simple FPS counter with moving average."""
     
@@ -767,8 +768,6 @@ class FPSCounter:
             self.last_fps = 0.7 * self.last_fps + 0.3 * current_fps
         
         return self.last_fps
-
-
 
 
 class VideoProcessor:
@@ -1686,6 +1685,7 @@ Modify the content in the file `./src/vp_engine/engine.py` within the project. C
 
 <details>
 <summary> realtime_inference.py </summary>
+
 ```python
 #!/usr/bin/env python3
 """

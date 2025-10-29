@@ -164,9 +164,6 @@ After successful calibration, you will obtain camera parameters in the terminal 
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal3.png" />
 </div>
 
-
-
-
 ### Run the example
 
 <details>
@@ -957,6 +954,7 @@ translation:
 ```
 
 **Step 4.** Set up the Gemini 2 Python SDK
+
 ```bash
 #install pybind11
 pip install pybind11
@@ -985,7 +983,6 @@ export PYTHONPATH=$PYTHONPATH:$(pwd)/install/lib/
 sudo bash ./scripts/install_udev_rules.sh
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
-
 
 ### Run the example
 
