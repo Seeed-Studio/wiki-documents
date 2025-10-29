@@ -42,13 +42,6 @@ reCamera 2002 HQ PoE is equipped with an advanced CMOS sensor for sharper, clear
 | **Memory**             | 256 MB                                                                  |
 | **Video Encoder**      | 5MP @ 30Fps                                                              |
 
-### Basic
-
-| **Parameter**          | **Value**                                                                 |
-|------------------------|---------------------------------------------------------------------------|
-| **eMMC**               | 8GB / 64GB                                                               |
-| **Power Supply**       | 12V DC Jack to XT30 connector                                             |
-| **Power Consumption**  | 12V, 185mA (static)                                                      |
 
 
 | Sensor                | GC2053                             |
@@ -74,16 +67,14 @@ reCamera 2002 HQ PoE is equipped with an advanced CMOS sensor for sharper, clear
 
 Top View             |  Bottom View
 :-------------------------:|:-------------------------:
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
+.<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  .<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
 ### [Sensor Board-S101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
-<!-- 搬运github说明和图 -->
+
 
 Top View             |  Bottom View
 :-------------------------:|:-------------------------:
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/S1_ov5647_UP.png" /></div> | <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/S1_ov5647_Bottom.png" /></div>
+.<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top.png" /></div> |.<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom.png" /></div>
 
 #### ⚙️ features
 
@@ -132,12 +123,27 @@ Top View             |  Bottom View
   </table>
 </div>
 
+#### 💡 [B3_POE](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Base_Board/B3_POE/readme.md)
+
+Up             |  Bottom
+:-------------------------:|:-------------------------:
+.<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top.png" /></div>  |  .<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom.png" /></div>
+
+##### ⚙️ Features:
+
+- 1 x RJ45 port for **802.3af PSE**.
+- 1 x UART port.
+- 1 x Debug port.
+- 3 x IO port.
+
+ <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
+
 ## Hardware Interface
 
 - [Light](#jump2)
 - [Mic & Speaker](#jump3)
-- [WIFI](#jump4)
-- [SD Card](#jump5)
+- [POE](#jump4)
+- [IO](#jump5)
 - [Uart (Debug)](#jump6)
 - [User Button](#jump7)
 
@@ -165,13 +171,6 @@ Example 2: completely turn **red light** off
 echo none | sudo tee /sys/class/leds/red/trigger
 ```
 
-There are four **white** lights, which are the fill lights of the camera. The switch of the fill lights can be controlled by the following instructions.
-
-``` bash
-echo 1 > /sys/devices/platform/leds/leds/white/brightness //light on
-echo 0 > /sys/devices/platform/leds/leds/white/brightness //light off
-```
-
 ### <span id="jump3">Mic & Speaker</span>
 
 The recamera has a microphone and a speaker. You can invoke the microphone and speaker by following the command. The recamera can play audio files in **wav** format.
@@ -184,74 +183,101 @@ sudo arecord -D hw:0,0 -r 16000 -f S16_LE -c 1 -d 5 /home/recamera/test.wav //Re
 sudo aplay -D hw:1,0 /home/recamera/test.wav //Playing audio
 ```
 
-### <span id="jump4">Wi-Fi</span>
+### <span id="jump4">POE</span>
 
-2002w version of reCamera has the Wi-Fi module in hardware.  The Wi-Fi is AP+STA dual mode, which can be used to configure the device network or configure the device in AP mode.
+The POE module is built into the hardware of the reCamera HQ POE version. The WiFi module has been removed. However, you can restore the Wi-Fi function by replacing the core board of the SG2002w.
 
-The **SSID** of wifi in AP mode is: `reCamera_+ the last six bits of MAC`.
+Connect the reCamera to a switch that supports the **POE 802.3af** protocol, and the reCamera device will start up.
 
-The **Passwd** of wifi in AP mode is: `12345678`.
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/poe_connect_recamera.jpg" /></div>
 
-The ssid and passwd of the WiFi_AP can be configured in the `/etc/hostapd_2g4.conf` file on the recamera system.
+You can check the device's IP address in your router to access it, or connect the reCamera via USB and access the terminal to query the wired network IP.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-2.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/router_search.png" /></div>
 
-The reCamera STA configuration file is in **/etc/wpa_supplicant.conf**, where you configure the Wi-Fi account and password to connect to.
-In STA mode, please connect to Wi-Fi in **5G** band.
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/terminal_ipv4_search.png" /></div>
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-3.png" /></div>
+### <span id="jump5">IO</span>
 
-In the terminal, you can scan and connect to Wi-Fi with the following command:
+**Using the GPIO sysfs interface to control I/O**
 
-```bash
-wpa_cli -i wlan0 scan                           #Start a scan
+ <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
 
-wpa_cli -i wlan0 scan_results                   #Returns wifi scan results
+In Linux, the most common way to read and write GPIO is using the GPIO sysfs interface. This is implemented by manipulating files such as export, unexport, gpio{N}/direction, and gpio{N}/value (replace {N} with the actual pin number) under the /sys/class/gpio directory, and it is often used in shell scripts.
 
-wpa_cli add_network                             # Adding a new network,Returns a network ID
-wpa_cli set_network ID ssid "your_wifi_name"    # set network SSID
-wpa_cli set_network ID psk "your_wifi_password" # set network passwd
-wpa_cli enable_network ID                       # enable network and connect
-wpa_cli status                                  # Checking connection status
-```
+The reCamera POE backplane has 3 available IO ports. Each port can be configured as an input or output. The IO ports are numbered as follows:
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-4.png" /></div>
+| IO Port | GPIO Number |
+| ---- | ---- |
+| D1 | 490 |
+| CLK(Multiplexed IO pins) | 487 |
+| SMD(Multiplexed IO pins) | 488 |
 
-### <span id="jump5">SD Card</span>
-
-The SD card slot can expand the storage space of the recamera. After inserting the SD card, you can find the existence of your SD by using the `lsblk` command.
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-5.png" /></div>
-
-Once you have found a storage device like mmcblk1p1, you can mount it to your system using the following command.
-<br/>
-
-Note that recamera only recognizes **ext4** filesystems.
 
 ```bash
-sudo blkid /dev/mmcblk1p1 #If TYPE is not ext4, the filesystem needs to be formatted
-/dev/mmcblk1p1: UUID="F080-C970" BLOCK_SIZE="512" TYPE="exfat" PARTUUID="04ec0085-01"
+echo "490" > /sys/class/gpio/export #Enable pin GPIO490
 
-sudo mkfs.ext4 /dev/mmcblk1p1 #Format the filesystem to ext4
-mkdir /userdata/mmcblk1 #Create a mount file
-sudo mount -t ext4 /dev/mmcblk1p1 /userdata/mmcblk1 #Mount the SD card to the /userdata/mmcblk1 path
+echo "out" > /sys/class/gpio/gpio490/direction #Enable the output mode
+echo 1 > /sys/class/gpio/gpio490/value # Set the pin to a high level
+echo 0 > /sys/class/gpio/gpio490/value # Set the pin to a low level
+
+echo "in" > /sys/class/gpio/gpio490/direction #Enable the input mode
+cat /sys/class/gpio/gpio490/value #Read the pin level
+
+echo "490" > /sys/class/gpio/unexport #Disable pin GPIO490
 ```
 
-Check the mount result by `lsblk`
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-6.png" /></div>
 
 ### <span id="jump6">Uart (Debug)</span>
 
-The base circuit board of the recamera has three contacts tx,rx, and gnd, which serve as the debug serial port of the recamera.
+The POE baseboard of reCamera has two sets of serial ports, namely /ttyS0 (for Debug) and /ttyS3.
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/image-7.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-1.png" /></div>
 
-The device has a serial port baud rate of 115200 and can log into the recamera system.
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top_uart.png" /></div>
+
+The debug serial port of this device has a baud rate of 115200 and supports connection to remote monitoring systems.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-8.png" /></div>
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-9.png" /></div>
+```bash
+#Use the stty tool to query its communication parameters.
+
+stty -F /dev/ttyS3
+```
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-2.png" /></div>
+
+```bash
+# Modify the serial port baud rate, where ispeed refers to the input speed and ospeed refers to the output speed.
+
+stty -F /dev/ttyS3 ispeed 115200 ospeed 115200
+```
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-3.png" /></div>
+
+The default serial port has echo enabled, and you can use the following command to disable it:
+
+```bash
+stty -F /dev/ttyS3 -echo
+```
+
+Serial communication:
+
+```bash
+#Send data
+echo "hello world" > /dev/ttyS3
+echo Hello! > /dev/ttyS3
+#Receive data
+cat /dev/ttyS3
+```
+
+Use the minicom tool to communicate via the serial port:
+
+```bash
+minicom -D /dev/ttyS3 -b 115200
+```
+
 
 ### <span id="jump7">User Button</span>
 
