@@ -1,5 +1,5 @@
 ---
-description: 本 wiki 提供了 reComputer Jetson Robotics J401 载板硬件功能和接口使用的全面介绍。涵盖详细规格、支持的模块、设置说明，以及使用各种接口（如 M.2、以太网、USB、CAN、UART、I2C 和 GMSL2 相机扩展）的实用指南，帮助用户快速开始在 J401 平台上进行机器人开发。
+description: 本 wiki 提供了 reComputer Jetson Robotics J401 载板的硬件特性和接口使用的全面介绍。涵盖详细规格、支持的模块、设置说明，以及使用各种接口（如 M.2、以太网、USB、CAN、UART、I2C 和 GMSL2 相机扩展）的实用指南，帮助用户快速开始在 J401 平台上进行机器人开发。
 title: 接口使用
 tags:
   - J401-Robotics carrier board
@@ -17,7 +17,7 @@ last_update:
 
 # Robotics J401 载板硬件和入门指南
 
-reComputer Robotics J401 是一款紧凑、高性能的边缘 AI 载板，专为先进机器人技术而设计。兼容 NVIDIA Jetson Orin Nano/Orin NX 模块的 Super/MAXN 模式，可提供高达 157 TOPS 的 AI 性能。配备广泛的连接选项——包括双千兆以太网端口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、6 个 USB 3.2 端口、CAN、GMSL2（通过可选扩展）、I2C 和 UART——它作为强大的机器人大脑，能够处理来自各种传感器的复杂数据。预装 JetPack 6 和 Linux BSP，确保无缝部署。
+reComputer Robotics J401 是一款紧凑、高性能的边缘 AI 载板，专为先进机器人设计。兼容 NVIDIA Jetson Orin Nano/Orin NX 模块的 Super/MAXN 模式，可提供高达 157 TOPS 的 AI 性能。配备丰富的连接选项——包括双千兆以太网端口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、6 个 USB 3.2 端口、CAN、GMSL2（通过可选扩展）、I2C 和 UART——它作为强大的机器人大脑，能够处理来自各种传感器的复杂数据。预装 JetPack 6 和 Linux BSP，确保无缝部署。
 
 支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 ROS 2/1 等框架，reComputer Robotics J401 将大语言模型驱动的决策制定与物理机器人控制（如运动规划和传感器融合）连接起来。非常适合自主机器人的快速开发，通过即用型接口和优化的 AI 框架加速产品上市时间。
 
@@ -57,7 +57,7 @@ reComputer Robotics J401 是一款紧凑、高性能的边缘 AI 载板，专为
 - 用户手册 x 1
 
 :::note
-1.在高电压电源和工作温度下，请根据热设计指南设计强大的散热解决方案。
+1.在高电压供电和工作温度下，请根据热设计指南设计稳健的散热解决方案。
 2.请为模块安装散热器以获得更好的性能。
 3.在高电压输入和高负载运行期间，请勿触摸散热器以防烫伤。
 4.验证用电源适配器推荐，请使用 Seeed 官方网站推荐的电源适配器。
@@ -178,7 +178,7 @@ reComputer Robotics J401 是一款紧凑、高性能的边缘 AI 载板，专为
     </tr>
     <tr>
       <th rowSpan="1">工作温度</th>
-      <td colSpan="2">-20℃~60℃ (25W 模式);<br />-20℃~55℃ (MAXN 模式);<br />(配备 reComputer Robotics 散热器和风扇)</td>
+      <td colSpan="2">-20℃~60℃ (25W 模式);<br />-20℃~55℃ (MAXN 模式);<br />(配备 reComputer Robotics 带风扇散热器)</td>
     </tr>
     <tr>
       <th rowSpan="1">保修</th>
@@ -191,14 +191,14 @@ reComputer Robotics J401 是一款紧凑、高性能的边缘 AI 载板，专为
   </tbody>
 </table>
 
-## 刷写 JetPack 操作系统
+## 刷写 JetPack OS
 
 ### 支持的模块
 
-- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
-- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
-- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
-- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
+- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5554.html)
+- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5552.html)
+- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5523.html)
+- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5524.html)
 
 ### 先决条件
 
@@ -256,25 +256,25 @@ reComputer Robotics J401 是一款紧凑、高性能的边缘 AI 载板，专为
       <td rowSpan={4}>6.2</td>
       <td> Orin Nano 4GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Eaq3jfzUJiVJpBSdd0UqtKIB8cRP--j90it2K1Vk7Neo3g?e=sYD5S2">下载</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Eaq3jfzUJiVJpBSdd0UqtKIB8cRP--j90it2K1Vk7Neo3g?e=sYD5S2">Download</a></td>
       <td>c63d1219531245abecc7bbdcafc73d3<br />4f75547454c7af85de40f08396a87e5ee  </td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWIfNPP5Te5CqqiIBwXxilwBeTYuJiXPlO4OVFZxf54-gw?e=fGjs5R">下载</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWIfNPP5Te5CqqiIBwXxilwBeTYuJiXPlO4OVFZxf54-gw?e=fGjs5R">Download</a></td>
       <td>5d1f3cd28eb44ca60132c87ccce5aca<br />f806ee945b486df9061a34de73fbb582b </td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ERskD6LNzTRFkvDuLiSubTsBH8_eEFinmE-mPDvUhYZREg?e=deeaoO">下载</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ERskD6LNzTRFkvDuLiSubTsBH8_eEFinmE-mPDvUhYZREg?e=deeaoO">Download</a></td>
       <td>e7f0c8e6b578d411f81122879f92c76<br />66adfada5ed493a4cc458dc169ca8c1b7  </td>
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ETx2PP9D85dHgzljJ_pJH-0Bsss82nPxMbOkJ-JvPA1hrQ?e=cReLPU">下载</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ETx2PP9D85dHgzljJ_pJH-0Bsss82nPxMbOkJ-JvPA1hrQ?e=cReLPU">Download</a></td>
       <td> b08cbdad8ab6e50222146d3175a9d2<br />627d499bf1d67cfaf69cc737b5bfa9e33a </td>
     </tr>
   </tbody>
@@ -294,7 +294,7 @@ Jetpack6 镜像文件大约 **14.2GB**，下载大约需要 60 分钟。请耐�
 ### 进入强制恢复模式
 
 :::info
-在我们继续安装步骤之前，我们需要确保板子处于强制恢复模式。
+在我们进行安装步骤之前，我们需要确保板子处于强制恢复模式。
 :::
 
 <details>
@@ -309,9 +309,9 @@ Jetpack6 镜像文件大约 **14.2GB**，下载大约需要 60 分钟。请耐�
 
 **步骤 2.** 通过连接电源线为载板供电。
 
-**步骤 3.** 使用 USB Type-C 数据传输线将板子连接到 Ubuntu 主机 PC。
+**步骤 3.** 使用 USB Type-C 数据传输线将载板连接到 Ubuntu 主机 PC。
 
-**步骤 4.** 在 Linux 主机 PC 上，打开终端窗口并输入命令 `lsusb`。如果返回的内容根据您使用的 Jetson SoM 有以下输出之一，则板子处于强制恢复模式。
+**步骤 4.** 在 Linux 主机 PC 上，打开终端窗口并输入命令 `lsusb`。如果返回的内容根据您使用的 Jetson SoM 包含以下输出之一，则载板处于强制恢复模式。
 
 - 对于 Orin NX 16GB：**0955:7323 NVidia Corp**
 - 对于 Orin NX 8GB：**0955:7423 NVidia Corp**
@@ -364,11 +364,11 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 接口使用
 
-以下将介绍 Robotics J401 板的各种接口及其使用方法。
+以下将介绍 Robotics J401 载板的各种接口及其使用方法。
 
 ## M.2 Key M
 
-M.2 Key M 专为高速 NVMe SSD 设计，为机器人应用提供超快数据传输。
+M.2 Key M 专为高速 NVMe SSD 设计，为机器人应用提供超快的数据传输。
 
 ### 支持的 SSD 如下
 
@@ -399,12 +399,12 @@ dd if=/dev/zero of=/home/seeed/ssd/test bs=1024M count=5 conv=fdatasync
 </div>
 
 :::danger
-测试完成后请运行 `sudo rm /home/seeed/ssd/test` 命令删除缓存文件。
+测试完成后，请运行 `sudo rm /home/seeed/ssd/test` 命令删除缓存文件。
 :::
 
 ## M.2 Key B
 
-M.2 Key B 插槽用于 5G 模块扩展，为机器人和边缘 AI 场景提供高速蜂窝连接。
+M.2 Key B 插槽用于 5G 模块扩展，为机器人和边缘 AI 场景提供高速蜂窝网络连接。
 
 ### 硬件连接
 
@@ -427,7 +427,7 @@ lsusb
 </div>
 
 **步骤 2.** 确认驱动程序加载
-确保 5G 模块所需的 option 驱动程序已加载是至关重要的。我们可以使用 lsmod 命令进行检查。
+确保加载 5G 模块所需的 option 驱动程序是至关重要的。我们可以使用 lsmod 命令进行检查。
 
 ```bash
 lsmod | grep option 
@@ -468,7 +468,7 @@ APN（接入点名称）对于移动设备连接网络至关重要。我们将�
 sudo nmcli con add type gsm ifname "*" apn "CMNET" ipv4.method  auto 
 ```
 
-此命令添加新的 GSM（全球移动通信系统）类型连接，指定 APN 为 "CMNET" 并使用自动 IPv4 配置。
+此命令添加一个新的 GSM（全球移动通信系统）类型连接，指定 APN 为 "CMNET" 并使用自动 IPv4 配置。
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/nmcli_con.jpg"/>
 </div>
@@ -483,7 +483,7 @@ sudo nmcli con up "gsm"
 此命令激活 GSM 连接，如果成功，将显示确认消息。
 
 **步骤 7.** 重新验证模块识别
-再次运行 mmcli -L 命令以确保在配置 APN 后模块仍被识别。
+再次运行 mmcli -L 命令，确保在配置 APN 后模块仍然被识别。
 
 ```bash
 mmcli -L 
@@ -554,7 +554,7 @@ iperf3 -c <server_ip> -B <bind_ip>
 
 ## LED
 
-reComputer Jetson Robotics J401 配备 3 个 LED 指示灯（PWR、ACT 和 User LED），为电源、系统活动和用户定义功能提供清晰的状态反馈。
+reComputer Jetson Robotics J401 配备 3 个 LED 指示灯（PWR、ACT 和用户 LED），为电源、系统活动和用户定义功能提供清晰的状态反馈。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/led.jpg"/>
@@ -562,7 +562,7 @@ reComputer Jetson Robotics J401 配备 3 个 LED 指示灯（PWR、ACT 和 User 
 
 ### 使用说明
 
-User LED 是一个 RGB LED，可以显示不同颜色来指示各种状态，需要由用户定义。
+用户 LED 是一个 RGB LED，可以显示不同颜色来指示各种状态，需要由用户定义。
 
 以下是控制 RGB LED 的测试脚本：
 
@@ -603,7 +603,7 @@ gpioset --mode=time --sec=1 2 2=0
 
 ## USB
 
-Robotics j401 载板配备了多种 USB 端口，包括 6 个 USB 3.2 Type-A 端口（5Gbps）、一个带 DP 1.4 的 USB 3.0 Type-C 端口（主机模式）和一个用于设备模式/调试的 USB 2.0 Type-C 端口，提供多样化的连接选项。
+Robotics j401 载板配备多种 USB 端口，包括 6 个 USB 3.2 Type-A 端口（5Gbps）、一个带 DP 1.4 的 USB 3.0 Type-C 端口（主机模式）和一个用于设备模式/调试的 USB 2.0 Type-C 端口，提供多样化的连接选项。
 
 ### USB 速度测试
 
@@ -634,7 +634,7 @@ sudo chmod +x test_usb
 
 ### USB 2.0 Type-C 端口
 
-使用此串口，通过 USB C 数据线，您可以在 PC 端监控输入和输出的调试信息。
+使用此串行端口，通过 USB C 数据线，您可以在 PC 端监控输入和输出的调试信息。
 
 **步骤 1.** 将开关切换到调试模式。
 
@@ -782,7 +782,7 @@ sudo ip link set can1 up
 ```
 
 **步骤 2.** 配置 PC 数据接收软件。
-请按照下图所示配置通信设置。
+请按照以下图片所示配置通信设置。
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can_software.png"/>
 </div>
@@ -895,7 +895,7 @@ gpioset --mode=time --sec=100 2 5=0
 
 **步骤 3.** 在 PC 端打开串口工具（这里我们以 xcom 工具为例）并将波特率设置为 115200。
 
-**步骤 4.** 创建一个简单的 Python 脚本进行串口通信：
+**步骤 4.** 创建一个简单的 Python 脚本进行串行通信：
 
 ```python
 
