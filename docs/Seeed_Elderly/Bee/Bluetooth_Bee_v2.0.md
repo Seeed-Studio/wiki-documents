@@ -8,7 +8,9 @@ slug: /Bluetooth_Bee_v2.0
 last_update:
   date: 1/13/2023
   author: shuxu hu
---- 113050013
+sku: 113050013
+type: gettingstarted
+---
 
 ![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/113050014%201_02.jpg)
 
@@ -20,8 +22,10 @@ It uses CSR Bluecore 04-External single chip Bluetooth system with CMOS technolo
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Bluetooth-Bee-v2.0-p-2373.html)
 
-##   Features
+## Features
+
 ---
+
 ### Hardware Features
 
 - Typical -80dBm sensitivity.
