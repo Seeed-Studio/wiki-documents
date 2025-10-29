@@ -1379,6 +1379,14 @@ const sidebars = {
           items: [
             {
               type: 'category',
+              label: 'ePaper Breakout Board for XIAO',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ePaper_Breakout_Board_For_XIAO/XIAO-eInk-Expansion-Board',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ePaper_Breakout_Board_For_XIAO/ePaper_Breakout_Board_with_OEPL',
+              ],
+            },
+            {
+              type: 'category',
               label: 'Round Display for XIAO',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/SeeedStudio_Round_Display_for_XIAO',
@@ -1412,7 +1420,6 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/xiao-rgb-matrix',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/gpio_expander_for_xiao',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-eInk-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/xiao_eink_expansion_board_v2',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-RS485-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Bus_Servo_Driver_Board',
@@ -2917,7 +2924,7 @@ const sidebars = {
         'Network/TTN_Gateway/The-Things-Indoor-Gateway',
         {
           type: 'category',
-          label: 'Wio-WM6180 WiFi-Halow Devices',
+          label: 'Wio-WM6108 WiFi-Halow Devices',
           items: [
             'Network/WiFi-Halow/wifi-halow-module-for-xiao',
             'Network/WiFi-Halow/wifi-halow-mini-pcie-module',
@@ -6469,6 +6476,14 @@ const sidebars = {
           items: [
             {
               type: 'category',
+              label: '适用于 XIAO 的电子纸扩展板',
+              items: [
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ePaper_Breakout_Board_For_XIAO/cn_XIAO-eInk-Expansion-Board',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ePaper_Breakout_Board_For_XIAO/cn_ePaper_Breakout_Board_with_OEPL',
+              ],
+            },
+            {
+              type: 'category',
               label: 'XIAO 圆形显示屏',
               items: [
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/cn_SeeedStudio_Round_Display_for_XIAO',
@@ -6502,7 +6517,6 @@ const sidebars = {
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/cn_Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/cn_xiao-rgb-matrix',
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/cn_gpio_expander_for_xiao',
-            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/cn_XIAO-eInk-Expansion-Board',
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/cn_xiao_eink_expansion_board_v2',
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/cn_XIAO-RS485-Expansion-Board',
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/cn_Bus_Servo_Driver_Board',
@@ -8007,7 +8021,7 @@ const sidebars = {
         'zh-CN/Network/TTN_Gateway/cn_The-Things-Indoor-Gateway',
         {
           type: 'category',
-          label: 'Wio-WM6180 WiFi-Halow 设备',
+          label: 'Wio-WM6108 WiFi-Halow 设备',
           items: [
             'zh-CN/Network/WiFi-Halow/cn_wifi-halow-module-for-xiao',
             'zh-CN/Network/WiFi-Halow/cn_wifi-halow-mini-pcie-module',
@@ -8770,6 +8784,7 @@ const sidebars = {
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_YOLOv8_custom_classification_model',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_Multi-GMSL_Cameras_for_Real-Time_Object_Detection_and_3D_Reconstruction_on_Jetson_AGX_Orin',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_YOLOv11_With_Depth_Camera_For_Distance_Measurement',
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_Efficient_Multi-Task_Vision_Inference_Engine_Deployment_on_Jetson',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_deploy_frigate_on_jetson',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_AI-NVR_with_Jetson',
               ]
@@ -11466,6 +11481,14 @@ const sidebars = {
           items: [
             {
               type: 'category',
+              label: 'Placa de expansión de papel electrónico para XIAO',
+              items: [
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ePaper_Breakout_Board_For_XIAO/es_XIAO-eInk-Expansion-Board',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ePaper_Breakout_Board_For_XIAO/es_ePaper_Breakout_Board_with_OEPL',
+              ],
+            },
+            {
+              type: 'category',
               label: 'Pantalla Redonda para XIAO',
               items: [
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/es_SeeedStudio_Round_Display_for_XIAO',
@@ -11499,7 +11522,6 @@ const sidebars = {
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/es_Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/es_xiao-rgb-matrix',
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/es_gpio_expander_for_xiao',
-            'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/es_XIAO-eInk-Expansion-Board',
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/es_xiao_eink_expansion_board_v2',
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/es_XIAO-RS485-Expansion-Board',
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/es_Bus_Servo_Driver_Board',
@@ -13004,7 +13026,7 @@ const sidebars = {
         'es/Network/TTN_Gateway/es_The-Things-Indoor-Gateway',
         {
           type: 'category',
-          label: 'Dispositivos WiFi-Halow Wio-WM6180',
+          label: 'Dispositivos WiFi-Halow Wio-WM6108',
           items: [
             'es/Network/WiFi-Halow/es_wifi-halow-module-for-xiao',
             'es/Network/WiFi-Halow/es_wifi-halow-mini-pcie-module',
@@ -13767,6 +13789,7 @@ const sidebars = {
                 'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_YOLOv8_custom_classification_model',
                 'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Multi-GMSL_Cameras_for_Real-Time_Object_Detection_and_3D_Reconstruction_on_Jetson_AGX_Orin',
                 'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_YOLOv11_With_Depth_Camera_For_Distance_Measurement',
+                'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Efficient_Multi-Task_Vision_Inference_Engine_Deployment_on_Jetson',
                 'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_deploy_frigate_on_jetson',
                 'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_AI-NVR_with_Jetson',
               ]
@@ -16463,6 +16486,14 @@ const sidebars = {
           items: [
             {
               type: 'category',
+              label: 'XIAO 用電子ペーパー拡張ボード',
+              items: [
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ePaper_Breakout_Board_For_XIAO/ja_XIAO-eInk-Expansion-Board',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ePaper_Breakout_Board_For_XIAO/ja_ePaper_Breakout_Board_with_OEPL',
+              ],
+            },
+            {
+              type: 'category',
               label: 'XIAO用円形ディスプレイ',
               items: [
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/ja_SeeedStudio_Round_Display_for_XIAO',
@@ -16496,7 +16527,6 @@ const sidebars = {
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_xiao-rgb-matrix',
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_gpio_expander_for_xiao',
-            'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_XIAO-eInk-Expansion-Board',
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_xiao_eink_expansion_board_v2',
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_XIAO-RS485-Expansion-Board',
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_Bus_Servo_Driver_Board',
@@ -18001,7 +18031,7 @@ const sidebars = {
         'ja/Network/TTN_Gateway/ja_The-Things-Indoor-Gateway',
         {
           type: 'category',
-          label: 'Wio-WM6180 WiFi-Halow Devices',
+          label: 'Wio-WM6108 WiFi-Halow Devices',
           items: [
             'ja/Network/WiFi-Halow/ja_wifi-halow-module-for-xiao',
             'ja/Network/WiFi-Halow/ja_wifi-halow-mini-pcie-module',
@@ -18764,6 +18794,7 @@ const sidebars = {
                 'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv8_custom_classification_model',
                 'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Multi-GMSL_Cameras_for_Real-Time_Object_Detection_and_3D_Reconstruction_on_Jetson_AGX_Orin',
                 'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv11_With_Depth_Camera_For_Distance_Measurement',
+                'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Efficient_Multi-Task_Vision_Inference_Engine_Deployment_on_Jetson',
                 'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_deploy_frigate_on_jetson',
                 'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_AI-NVR_with_Jetson',
               ]

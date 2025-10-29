@@ -123,7 +123,7 @@ EEZ Studio 是一个现代化的可视化编程和 UI 设计环境，主要用�
 在 EEZ Studio 界面顶部，点击 "CREATE" 按钮。
 在左侧的项目模板列表中，找到并选择 "LVGL" 项目。
 
-- `Name:` 为您的项目文件命名，为了方便解释我们文章中的后续内容，我们在这里将其称为 EEZ_UI。
+- `Name:` 为您的项目文件命名，为了方便在我们文章中解释后续内容，我们在这里将其称为 EEZ_UI。
 - `LVGL Version:` 指定项目使用的 LVGL 库版本。从下拉菜单中选择 9.x。
 - `Location:` 指定项目文件在您计算机上的存储路径。默认路径通常指向您的 EEZ Studio 下载或安装目录中的默认项目文件夹（例如，C:\Users\YourUser\Documents\EEZ Studio\Projects 或类似路径）。如果您需要更改存储位置，请点击 Location 文本框右侧的文件夹图标（或省略号 ...）。
 
@@ -183,10 +183,10 @@ UI（用户界面）设计在嵌入式产品开发中至关重要，因为它直
 - Styles: 用于统一和重用界面元素的视觉属性，确保一致性和高效维护。
 - Bitmap: 常用于背景、图标、徽标等，以增强视觉呈现。
 - Fonts: 确保文本清晰可读，同时支持多语言内容和品牌样式。
-- Themes: 定义整体界面美学，支持快速切换如明/暗模式。
+- Themes: 定义整体界面美学，支持快速切换如明暗模式。
 - Groups: 将多个小部件组织在一起，便于统一管理和布局。
 
-在本教程中，我将指导您设计网站或应用程序主页的 UI。一旦您掌握了核心技术，您就能够轻松地应用它们来创建任何您想要的界面。
+在本教程中，我将指导您设计网站或应用程序主页的 UI。一旦您掌握了核心技术，您就能够轻松应用它们来创建任何您想要的界面。
 
 此页面由五个组件组成：
 
@@ -316,7 +316,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ## ePaper 显示屏编程
 
-**reTerminal E1001 配备 7.5 英寸黑白 ePaper 显示屏**，而 **reTerminal E1002 配备 7.3 英寸全彩 ePaper 显示屏**。两种显示屏都在各种光照条件下提供出色的可视性，功耗极低，非常适合需要始终显示且功耗最小的工业应用。
+**reTerminal E1001 配备 7.5 英寸黑白 ePaper 显示屏**，而 **reTerminal E1002 配备 7.3 英寸全彩 ePaper 显示屏**。两种显示屏都在各种照明条件下提供出色的可视性，功耗极低，非常适合需要始终开启显示且功耗最小的工业应用。
 
 ### 使用 Seeed_GFX 库
 
@@ -337,7 +337,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 :::
 
 <Tabs>
-<TabItem value="Programming reTerminal E1001" label="编程 reTerminal E1001" default>
+<TabItem value="Programming reTerminal E1001" label="Programming reTerminal E1001" default>
 #### 编程 reTerminal E1001（7.5 英寸黑白 ePaper）
 
 让我们探索一个简单的示例，演示在黑白 ePaper 显示屏上的基本绘图操作。
@@ -359,7 +359,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 ```
 
 </TabItem>
-<TabItem value="Programming reTerminal E1002" label="编程 reTerminal E1002">
+<TabItem value="Programming reTerminal E1002" label="Programming reTerminal E1002">
 
 #### 编程 reTerminal E1002（7.3 英寸全彩 ePaper）
 
@@ -386,6 +386,10 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ## 将 EEZ Studio 项目部署到 Arduino
 
+首先，在 'Tools' 菜单栏中找到 OPI PSRAM 并打开它。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/EEZSetting.png" style={{width:500, height:'auto'}}/></div>
+
 这两个底层驱动文件需要添加到我们的项目目录中。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/00.png" style={{width:800, height:'auto'}}/></div>
 
@@ -395,13 +399,13 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 将以下项目文件（包括四个文件）移植到 Arduino 库中，以便在 Arduino 项目中使用。
 `EEZ_UI 文件`是在 EEZStudio 构建过程中生成的。您需要找到保存它的路径。
 
-- 🔗 **[ZIP]** [代码](https://files.seeedstudio.com/wiki/EEZStudio/E1002_EEZStudio.zip)
+- 🔗 **[ZIP]** [代码](https://files.seeedstudio.com/wiki/EEZStudio/E1002-EEZStudioCode.zip)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/7.jpg" style={{width:800, height:'auto'}}/></div>
 
 <br></br>
 
-以下是运行 UI 的主要 Arduino 代码：
+这是运行 UI 的主要 Arduino 代码：
 三个按钮对应三个不同的屏幕，从绿色开始：依次为 HOME\Workstation\Plant。
 
 ```cpp
@@ -471,7 +475,7 @@ void loop()
     }
 
     if (lastKey2State == HIGH && currentKey2State == LOW) {
-        page_index = SCREEN_ID_PHOTO;
+        page_index = SCREEN_ID_PLANT;
         loadScreen((ScreensEnum)page_index);
         Serial.println("Switched to Setting Screen");
         delay(50);
@@ -493,23 +497,23 @@ void loop()
 
 ```
 
-- `e1002_display_init():`初始化电子墨水显示屏硬件并设置其操作参数。
+- `e1002_display_init():` 初始化电子墨水显示屏硬件并设置其操作参数。
 
-- `pinMode(..., INPUT_PULLUP):`将按钮引脚配置为输入模式并启用内部上拉电阻。这确保了当按钮未按下时引脚保持高电平（HIGH），当按下时连接到地，变为低电平（LOW）。
+- `pinMode(..., INPUT_PULLUP):` 将按钮引脚配置为输入模式并启用内部上拉电阻。这确保了当按钮未按下时引脚保持高电平（HIGH），当按下时连接到地，变为低电平（LOW）。
 
-- `ui_init()` 和 `loadScreen():`这些函数初始化 LVGL 用户界面库并加载指定的屏幕
+- `ui_init()` 和 `loadScreen():` 这些函数初始化 LVGL 用户界面库并加载指定的屏幕
 
-- `lv_timer_handler():`这是 LVGL 库中的一个重要函数，用于处理 LVGL 内的定时器事件，如动画和屏幕更新。
+- `lv_timer_handler():` 这是 LVGL 库中的一个重要函数，用于处理 LVGL 内的定时器事件，如动画和屏幕更新。
 
-- `if (lastKey0State == HIGH && currentKey0State == LOW):`这一行是按键事件检测的核心。它检查按键状态是否从未按下变为按下。
+- `if (lastKey0State == HIGH && currentKey0State == LOW):` 这一行是按键事件检测的核心。它检查按键状态是否从未按下变为按下。
 
 - 当条件满足时，程序更新 `page_index` 并调用 `loadScreen()` 函数加载新页面。
 
-- 状态更新：`lastKey0State = currentKey0State;` 这一行至关重要。它保存当前按键状态以供下次 `loop()` 迭代使用，使下次状态比较成为可能。
+- 状态更新：`lastKey0State = currentKey0State;` 这一行至关重要。它保存当前按键状态以供下一次 `loop()` 迭代使用，使下一次状态比较成为可能。
 
 - 电子墨水刷新：`e1002_display_should_refresh()` 和 `e1002_display_refresh()` 管理电子墨水屏幕刷新。与 LCD 屏幕不同，电子墨水无法实时刷新。它通常需要在特定间隔进行选择性或全屏刷新以节省电力并延长寿命。此代码实现了按需刷新机制。
 
-- `delay(10):`这是一个简单的软件防抖措施，防止程序将物理按键抖动误解为多次按压。
+- `delay(10)`: 这是一个简单的软件防抖措施，防止程序将物理按键抖动误解为多次按压。
 
 ## 界面显示图
 
@@ -530,16 +534,14 @@ void loop()
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您对我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

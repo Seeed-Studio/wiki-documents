@@ -322,7 +322,7 @@ We can't do it without the love, contribution that we get from the community, an
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32c6_micropython/" target="_blank">XIAO ESP32C6</a></th>
    <th style={{width:333, height:'auto'}}><a href="https://micropython.org/download/SEEED_XIAO_RP2350/" target="_blank">XIAO RP2350</a></th>
-            <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_nrf54l15_sense_micropython/" target="_blank">XIAO nRF54L15</a></th>
   </tr>
  </table>
 </div>

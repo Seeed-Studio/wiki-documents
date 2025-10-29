@@ -117,6 +117,13 @@ Navigate to the `sysbuild/mcuboot/boards` directory and add the following two fi
 - [pm_static_xiao_nrf54l15_nrf54l15_cpuapp.yml](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/pm_static_xiao_nrf54l15_nrf54l15_cpuapp.yml)
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/5.png" style={{width:600, height:'auto'}}/></div>
 
+
+### Sysbuild Configuration
+
+- [sysbuild.conf](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/sysbuild.conf)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/00000.png" style={{width:600, height:'auto'}}/></div>
+
+
 ### Build Project
 - Open the Add Build Configuration window.
 - In the SDK field, select the required version (e.g., nRF Connect SDK v3.0.2).

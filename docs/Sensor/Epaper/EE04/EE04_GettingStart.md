@@ -178,7 +178,7 @@ When using the XIAO ePaper Display Board, make sure to set the jumper according 
 
 #### 50-Pin Connector
 
-- [7.3-inch E-paper - Seven-Color 800x480](https://www.seeedstudio.com/7-3-Seven-Color-ePaper-Display-with-800x480-Pixels-p-5787.html)
+- [7.3-inch Spectra6 E-paper](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
 :::tip

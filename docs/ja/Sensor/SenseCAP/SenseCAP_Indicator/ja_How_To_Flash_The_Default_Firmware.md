@@ -1,6 +1,6 @@
 ---
 description: ネイティブファームウェアをフラッシュする
-title: ファームウェアの更新とフラッシュ
+title: ファームウェアの更新とフラッシュ  
 keywords:
 - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -16,7 +16,7 @@ import TabItem from '@theme/TabItem';
 
 # **ネイティブファームウェアをフラッシュする方法**
 
-SenseCAP indicatorには2つのMCU、ESP32-S3とRP2040があります。このチュートリアルでは、開発者が始めるための包括的なガイドを提供します。これには、工場出荷時のネイティブファームウェアのフラッシュと、初期出荷デバイスの最新ファームウェアへの更新が含まれます。
+SenseCAP indicatorには2つのMCU、ESP32-S3とRP2040があります。このチュートリアルは、開発者がオンボードするための包括的なガイドを提供し、工場出荷時のネイティブファームウェアのフラッシュと、初期出荷デバイスの最新ファームウェアへの更新を含みます。
 
 ファームウェアの更新は、特に以下の2つのシナリオで適用されます：
 
@@ -28,11 +28,11 @@ SenseCAP indicatorには2つのMCU、ESP32-S3とRP2040があります。この�
 1. ESP32-S3またはRP2040にフラッシュする必要があるファームウェアがある。
 2. コードを変更し、それをコンパイルしてデバイスにフラッシュする必要がある。
 
-このチュートリアルに入りましょう。
+それでは、このチュートリアルに入りましょう。
 
 ## 準備
 
-始めるために必要なのは、SenseCAP IndicatorとWindows/Mac/Linuxコンピューターだけです。
+開始するために必要なのは、SenseCAP IndicatorとWindows/Mac/Linuxコンピューターだけです。
 
 <div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/usb1.png"/></div>
 
@@ -40,10 +40,10 @@ SenseCAP indicatorには2つのMCU、ESP32-S3とRP2040があります。この�
 
 SenseCAP Indicatorのデフォルト出荷ファームウェアは、ESP32-S3とRP2040の両方で完全にオープンソースです。
 
-:::tip 標準ファームウェアを取得するには2つのオプションがあります：
+:::tip 工場出荷時ファームウェアを取得するには2つのオプションがあります：
 
 - **ソースコード：** フラッシュする前に、要件に応じてコードを変更するオプションがあります。**コンパイル**するためにツールチェーン（[ESP-IDF](#ESP-IDF)、[Arduino](#RP_Arduino)）が必要です。
-- **ファームウェア：** コードの変更やコンパイルを必要とせずに、事前にコンパイルされたバイナリファイルを直接フラッシュします。[Esptool](#ESPTOOL)や[Flash Download Tools](#Flash_Tools)などのツールを使用します。
+- **ファームウェア：** コードの変更やコンパイルを必要とせずに、プリコンパイルされたバイナリファイルを直接フラッシュします。[Esptool](#ESPTOOL)や[Flash Download Tools](#Flash_Tools)などのツールを使用します。
 :::
 
 **ソースコード**
@@ -60,7 +60,7 @@ SenseCAP Indicatorのデフォルト出荷ファームウェアは、ESP32-S3と
 
 ### **ESP-IDF** {#ESP-IDF}
 
-> ESP-IDF（Espressif IoT Development Framework）は、ESP32およびESP8266シリーズのマイクロコントローラー専用のファームウェアとアプリケーションを設計するために、Espressif Systemsが提供するソフトウェア開発フレームワークです。詳細については、[ESP-IDFプログラミングガイド](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/index.html)を参照してください。
+> ESP-IDF（Espressif IoT Development Framework）は、Espressif SystemsがESP32およびESP8266シリーズのマイクロコントローラー専用のファームウェアとアプリケーションを設計するために提供するソフトウェア開発フレームワークです。詳細については、[ESP-IDFプログラミングガイド](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/index.html)を参照してください。
 
 ソースコードをファームウェアにコンパイルすることを選択した場合、コンパイルプロセスを実行するためにESP-IDFが必要です。
 
@@ -68,7 +68,7 @@ SenseCAP Indicatorのデフォルト出荷ファームウェアは、ESP32-S3と
 ESP-IDFのバージョンはv5.0以上である必要があります。古いバージョンを使用している場合は、最新バージョンに更新する必要があります。
 :::
 
-新しいユーザーの場合、このビデオは以下の手順をよりよく理解するのに役立つかもしれません：
+新しいユーザーの場合、このビデオが以下の手順をより良く理解するのに役立つかもしれません：
 
 <div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/oqJz6zKfc4A?si=glzTFfR7m392eITb" title="Set Up the ESP-IDF Toolchain for SenseCAP Indicator on Windows" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -89,7 +89,7 @@ values={[
 
   **オプション1：オフラインインストーラーの使用**
 
-  Windowsユーザーの場合、ESP-IDFオフラインインストーラーを直接ダウンロードするオプションがあります。直接ダウンロードリンクは次のとおりです：[🖱️オフラインインストーラーv5.1.1をダウンロード](https://dl.espressif.com/dl/idf-installer/esp-idf-tools-setup-offline-5.1.1.exe)
+  Windowsユーザーの場合、ESP-IDFオフラインインストーラーを直接ダウンロードするオプションがあります。直接ダウンロードリンクはこちらです：[🖱️オフラインインストーラーv5.1.1をダウンロード](https://dl.espressif.com/dl/idf-installer/esp-idf-tools-setup-offline-5.1.1.exe)
 
   **オプション2：推奨スクリプトの使用**
 
@@ -101,13 +101,13 @@ values={[
 
   > 公式Espressifドキュメント：[LinuxとmacOS用標準ツールチェーンセットアップ](https://docs.espressif.com/projects/esp-idf/en/release-v5.1/esp32/get-started/linux-macos-setup.html)
 
-  LinuxまたはmacOSの場合、このガイドに従ってgitリポジトリのバージョンを変更できます。
+  LinuxまたはMacOSの場合、このガイドに従ってgitリポジトリのバージョンを変更できます。
 
   ```
   git clone --recursive https://github.com/espressif/esp-idf.git
   ```
 
-**esp-idfディレクトリに移動**:
+**esp-idfディレクトリに移動**：
 
 1. `./install.sh esp32s3`を実行して、ESP32-S3サポートを追加します（SenseCAP indicatorに必要）
 2. `./export.sh`と入力して、現在のターミナルセッションでPATHとIDF_PATH変数を設定します。
@@ -118,18 +118,18 @@ values={[
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
 ```
 
-その後、`get_idf` を使用して環境をアクティベートできます。[^refer](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/linux-macos-setup.html#step-4-set-up-the-environment-variables)
+その後、`get_idf`を使用して環境をアクティブ化できます。[^refer](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/linux-macos-setup.html#step-4-set-up-the-environment-variables)
 
 </TabItem>
 </Tabs>
 
 #### プロジェクトのビルドとフラッシュ {#BUILD}
 
-ソースコードをファームウェアにコンパイルする場合は、コンパイルプロセスを実行するためにESP-IDFが必要になります。
+ソースコードをファームウェアにコンパイルすることを選択した場合、コンパイルプロセスを実行するためにESP-IDFが必要です。
 
-<!-- コンパイル済みファームウェアのフラッシュとIDFを使用した直接ファームウェアダウンロードを区別してください！ -->
+<!-- Please differentiate between flashing compiled firmware and directly downloading firmware using IDF! -->
 
-プロジェクトをビルド、フラッシュ、モニターするには、以下のコマンドを実行してください：
+プロジェクトをビルド、フラッシュ、監視するには、以下のコマンドを実行します：
 
 ```
 cd  <your_sdk_path>/examples/indicator_basis/
@@ -137,32 +137,32 @@ idf.py -p PORT build flash monitor
 ```
 
 :::tip
-`PORT`を指定しない場合、IDFは利用可能なポートを自動的に選択します。
+`PORT`なしでは、IDFが利用可能なポートを自動的に選択します。
 :::
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/upgrade.png"/></div>
 
 <!-- Need to change the PIcure -->
 
-ここまでで、`idf.py -p PORT flash`コマンドを入力することで、ファームウェアがESP32-S3に正常にフラッシュされました。
+この時点で、コマンド`idf.py -p PORT flash`を入力することで、ファームウェアがESP32-S3に正常にフラッシュされました。
 
 <!-- Why is this patch not placed in the later Q/A section? Also, are there too few Compile Code instructions? There's no Compile Code, just direct flashing. -->
 
 ### **Esptool** {#ESPTOOL}
 
-> [ESPtool - GitHub](https://github.com/espressif/esptool)は、Pythonベースのオープンソースユーティリティで、Espressifチップ内のROMブートローダーとプラットフォーム非依存の方法で通信する機能を提供します。
+> [ESPtool - GitHub](https://github.com/espressif/esptool)は、Espressifチップ内のROMブートローダーと通信するためのプラットフォーム独立な方法を提供するPythonベースのオープンソースユーティリティです。
 
-Esptoolは、Pythonスクリプトの一部として使用できます。このガイドでは、[Esptoolリリースページ](https://github.com/espressif/esptool/releases)で利用可能な`パッケージソフトウェア`を使用します。お使いのコンピューターのオペレーティングシステムに対応するソフトウェアを選択してください。
+EsptoolはPythonスクリプトの一部として使用できます。このガイドでは、[Esptoolリリースページ](https://github.com/espressif/esptool/releases)で利用可能な`パッケージソフトウェア`を使用します。コンピューターのオペレーティングシステムに対応するソフトウェアを選択してください。
 
-#### フラッシュ用のEsptoolの使用
+#### フラッシュ用Esptoolの使用
 
 ESP32-S3マイクロコントローラーにファームウェアをフラッシュするためにEsptoolを効果的に活用する方法を示す2つのスクリプトが提供されています。
 
-:::note **注意**:
-提供されているスクリプトはWindowsオペレーティングシステム向けに調整されていることにご注意ください。異なるオペレーティングシステムを使用している場合は、お使いの環境に合わせてスクリプトを適応させる必要があります。
+:::note **注意**：
+提供されたスクリプトはWindowsオペレーティングシステム用に調整されていることにご注意ください。異なるオペレーティングシステムを使用している場合は、環境に合わせてスクリプトを適応させる必要があります。
 :::
 
-merge.batスクリプトは、ブートローダー、パーティションテーブル、およびインジケーターベースバイナリを単一のファームウェアファイルに巧妙に統合するため、特に有用です。マージが完了すると、このファームウェアはflash.batスクリプトを使用してESP32-S3にシームレスにフラッシュできます。プロンプトが表示されたら、デバイスに対応するCOMポートを入力すると、フラッシュプロセスが開始されます。完全な操作は以下のように要約できます：
+merge.batスクリプトは、ブートローダー、パーティションテーブル、およびインジケーターベースバイナリを単一のファームウェアファイルに巧妙に統合するため、特に有用です。マージされると、このファームウェアはflash.batスクリプトを使用してESP32-S3にシームレスにフラッシュできます。プロンプトが表示されたら、デバイスに対応するCOMポートを入力すると、フラッシュプロセスが開始されます。完全な操作は以下のように要約できます：
 
 ```sh title="merge.bat"
 esptool.exe --chip esp32s3 ^
@@ -174,7 +174,7 @@ merge_bin -o sensecap_indicator_basis_v1.0.0.bin ^ # Target file name
 0x10000 ../../build/indicator_basis.bin
 ```
 
-または、ファイルをマージしてからフラッシュするのではなく、個別のバイナリファイルをフラッシュしたい場合は、`just_flash.bat` スクリプトを直接使用できます：
+または、ファイルをマージしてからフラッシュする代わりに個別のバイナリファイルをフラッシュしたい場合は、`just_flash.bat`スクリプトを直接使用できます：
 
 ```sh title="just_flash.bat"
 esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z ^
@@ -183,15 +183,15 @@ esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z ^
 0x10000 ../../build/indicator_basis.bin
 ```
 
-そして、マージされたファームウェアを使用した簡単なフラッシュプロセスについては：
+そして、マージされたファームウェアを使用した簡単なフラッシュプロセスの場合：
 
 ```sh title="flash.bat"
 esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z 0x0 indicator_basis_v1.0.0.bin
 ```
 
-> 開始（0x0）アドレスに特に注意してください。特にバイナリをマージしない場合は注意が必要です。個別のバイナリファイルについては、[個別バイナリファイル用Flash Download Tools](#Address_Note)の手順を参照してください。これらのガイドラインに従うことで、エラーのないフラッシュが保証されます。
+> 特にバイナリをマージしない場合は、開始（0x0）アドレスに細心の注意を払ってください。個別のバイナリファイルについては、[個別のバイナリファイル用Flash Download Tools](#Address_Note)の指示を参照してください。これらのガイドラインに従うことで、エラーのないフラッシュが保証されます。
 
-これらのスクリプトを利用するには、コードをプロジェクトフォルダ内の`merge.bat`と`flash.bat`という名前の別々のテキストファイルに保存してください。この整理方法により、アクセスと使用が簡単になります。
+これらのスクリプトを利用するには、コードをプロジェクトフォルダー内の`merge.bat`と`flash.bat`という名前の別々のテキストファイルに保存します。この組織的なアプローチにより、アクセスと使用が簡素化されます。
 
 これらのスクリプトを使用することで、ファームウェアの準備とフラッシュの両方の段階を合理化し、よりスムーズで信頼性の高いプロセスに貢献します。
 
@@ -213,7 +213,7 @@ esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z 0x0 indicato
 
 #### ファームウェアのフラッシュ
 
-ファームウェアのフラッシュには、提供されている`flash.bat`スクリプトを使用できます。このスクリプトは、ESP32-S3マイクロコントローラーにファームウェアをフラッシュするプロセスを簡素化するように設計されています。
+ファームウェアをフラッシュするには、提供された`flash.bat`スクリプトを使用できます。このスクリプトは、ESP32-S3マイクロコントローラーにファームウェアをフラッシュするプロセスを簡素化するように設計されています。
 
 <details>
    <summary>flash.batコードを表示</summary>
@@ -265,7 +265,7 @@ esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z 0x0 indicato
 
 #### バイナリのマージ
 
-提供された `merge.bat` スクリプトを使用して、必要なバイナリファイルを1つのファームウェアファイルにマージできます。このスクリプトはプロセスを簡素化し、フラッシュを成功させるための正しいマージを保証します。これにより、[個別ファイルをフラッシュする](#Address_Note)のではなく、単一のbinファイルをフラッシュできます。
+提供された `merge.bat` スクリプトを使用して、必要なバイナリファイルを1つのファームウェアファイルにマージできます。このスクリプトはプロセスを簡素化し、フラッシュを成功させるための正しいマージを保証します。これにより、[個別ファイルをフラッシュ](#Address_Note)する代わりに、単一のbinファイルをフラッシュできます。
 
 <details>
    <summary>merge.batコードを表示</summary>
@@ -290,20 +290,20 @@ esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z 0x0 indicato
    ```
 </details>
 
-### **Flash Download Tools** (Windows のみ) {#Flash_Tools}
+### **Flash Download Tools**（Windows のみ）{#Flash_Tools}
 
-> **Flash Download Tools** は、ESP8266 および ESP32 シリーズのマイクロコントローラーにファームウェアをプログラムまたはフラッシュするために使用されます。ESP マイクロコントローラーにファームウェアを簡単にフラッシュできるグラフィカルユーザーインターフェース（GUI）を提供します。
+> **Flash Download Tools** は、ESP8266 および ESP32 シリーズのマイクロコントローラーにファームウェアをプログラムまたはフラッシュするために使用されます。ユーザーが ESP マイクロコントローラーに簡単にファームウェアをフラッシュできるグラフィカルユーザーインターフェース（GUI）を提供します。
 
-プリコンパイル済みファームウェアをフラッシュする手順に従ってください：
+プリコンパイルされたファームウェアをフラッシュする手順に従ってください：
 
-**ダウンロード:**
-[Flash Download Tools (Windows のみ)](https://www.espressif.com.cn/en/support/download/other-tools?keys=&field_type_tid%5B%5D=842)
+**ダウンロード：**
+[Flash Download Tools（Windows のみ）](https://www.espressif.com.cn/en/support/download/other-tools?keys=&field_type_tid%5B%5D=842)
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_18.png"/></div>
 
-- **ステップ 1**: `.exe` ファイルを**ダブルクリック**してツールのメインインターフェースに入ります。
+- **ステップ 1**：`.exe` ファイルを**ダブルクリック**して、ツールのメインインターフェースに入ります。
 
-- **ステップ 2**: 以下のオプションを選択します：
+- **ステップ 2**：以下のオプションを選択します：
 
 <div class="table-center">
   <table align="center">
@@ -340,11 +340,11 @@ esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z 0x0 indicato
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_59.png"/></div>
 
-- **ステップ 3**: USB type-CケーブルでSenseCAP Indicatorをラップトップに接続します。
+- **ステップ 3**：SenseCAP Indicator を USB Type-C ケーブルでラップトップに接続します。
 
-- **ステップ 4**: SPIダウンロードタブで「...」をクリックし、先ほどダウンロードしたファームウェアに移動します。
+- **ステップ 4**：SPI Download タブで "..." をクリックし、ダウンロードしたファームウェアに移動します。
 
-- **ステップ 5**: SPIフラッシュを設定します：
+- **ステップ 5**：SPI Flash を設定します：
 
 <div class="table-center">
   <table align="center">
@@ -371,29 +371,29 @@ esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z 0x0 indicato
   </table>
 </div>
 
-- **ステップ 6**: ダウンロードパネルを設定します：
+- **ステップ 6**：Download パネルを設定します：
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator23.png"/></div>
 
-- **COM**: デバイスマネージャーでポートを確認し、USB-SERIALが正しいものです。
-（`ここではCOM4を選択しました`）
-- **Baud**: 921600（推奨値）
+- **COM**：Device Manager でポートを確認し、USB-SERIAL が正しいものです。
+（`ここでは COM4 を選択しました`）
+- **Baud**：921600（推奨値）
 
 <!-- Previous: Click `Start` Downloading -->
 
-次に`START`をクリックして書き込みを開始します。
+次に `START` をクリックしてフラッシュを開始します。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/start.png"/></div>
 
-`FINISH`と表示されたら、ファームウェアの書き込みが完了しています。
+`FINISH` と表示されたら、ファームウェアのフラッシュが完了しています。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/finish.png"/></div>
 
-#### 個別バイナリファイル用のFlash Download Tools {#Address_Note}
+#### 個別バイナリファイル用の Flash Download Tools {#Address_Note}
 
-前述のガイドでは、バイナリファイル「Default_Factory_Firmware_ESP32-S3.bin」は3つのバイナリを1つにマージしたものです。
+前述のガイドでは、バイナリファイル「Default_Factory_Firmware_ESP32-S3.bin」は3つのバイナリを1つにマージしています。
 
-しかし、ESP-IDFを使用してファームウェアをビルドしている場合、単一ファイルを直接書き込むとエラーが発生する可能性があります。代わりに、ビルドした**3つの個別バイナリファイル**を見つけて、以下のように正しいアドレス（独自のアドレスを使用できます）を指定する必要があります：
+ただし、ESP-IDF を使用してファームウェアをビルドしている場合、単一ファイルを直接フラッシュするとエラーが発生する可能性があります。代わりに、ビルドした**3つの個別バイナリファイル**を見つけて、以下のように正しいアドレス（独自のアドレスを使用できます）を指定する必要があります：
 
 - **bootloader.bin** ----> **0x0**
 - **partion-table.bin** ----> **0x6800**
@@ -401,21 +401,21 @@ esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z 0x0 indicato
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/3binfiles.png"/></div>
 
-## **RP2040**用
+## **RP2040** 用
 
-### Arduino IDEによる書き込み {#RP_Arduino}
+### Arduino IDE によるフラッシュ {#RP_Arduino}
 
-RP2040開発ツールはArduinoを活用してコーディング体験を向上させます。
+RP2040 開発ツールは Arduino を活用してコーディング体験を向上させます。
 
-> Arduino IDEはArduinoボード用のコーディング無料ソフトウェアです。ユーザーフレンドリーなインターフェースで、コードを簡単に書いてアップロードできます。C++のシンプル版をベースにしており、ライブラリと例を提供するため、初心者に最適です。
+> Arduino IDE は Arduino ボードをコーディングするための無料ソフトウェアです。ユーザーフレンドリーなインターフェースにより、コードを簡単に書いてアップロードできます。C++ の簡素化されたバージョンに基づいており、ライブラリと例を提供するため、初心者に最適です。
 
-**ダウンロード:**
+**ダウンロード：**
 
-- **ステップ 1**: [Arduino IDE](https://www.arduino.cc/en/software)をインストール
+- **ステップ 1**：[Arduino IDE](https://www.arduino.cc/en/software) をインストールします
 
-- **ステップ 2**: Raspberry Pi Picoボードを追加
+- **ステップ 2**：Raspberry Pi Pico ボードを追加します
 
-Arduino IDEを開き、**Arduino IDE** > **Preferences**をクリックし、以下のURLを**Additional Boards Manager URLs**にコピーします：
+Arduino IDE を開き、**Arduino IDE** > **Preferences** をクリックし、以下の URL を **Additional Boards Manager URLs** にコピーします：
 
 `https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json`
 
@@ -436,38 +436,38 @@ Arduino IDEを開き、**Arduino IDE** > **Preferences**をクリックし、以
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_30.png"/></div>
 
-「indicator」を検索し、Board Manager で「Raspberry Pi Pico/RP2040」をインストールします。
+"indicator" を検索し、Boards Manager で "Raspberry Pi Pico/RP2040" をインストールします
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator.png"/></div>
 
-- **ステップ 3**: ライブラリを追加
+- **ステップ 3**：ライブラリを追加します
 
 :::note **参考ライブラリ**
 
-- Sensirion Core: [Sensirion Arduino Core library](https://github.com/Sensirion/arduino-core)
-- PacketSerial : [Serial communication protoco](https://github.com/bakercp/PacketSerial)
-- Sensirion I2C SGP40 : [SGP40 TVOC sensor library](https://github.com/Sensirion/arduino-i2c-sgp40)
-- Sensirion I2C SCD4x : [SCD41 CO2 sensor library](https://github.com/Sensirion/arduino-i2c-scd4x)
-- Sensirion Gas Index Algorithm : [Transfer index library](https://github.com/Sensirion/arduino-gas-index-algorithm)
-- Seeed_Arduino_AHT20 : [AHT20 temperature and humidity sensor library](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20)
+- Sensirion Core：[Sensirion Arduino Core ライブラリ](https://github.com/Sensirion/arduino-core)
+- PacketSerial：[シリアル通信プロトコル](https://github.com/bakercp/PacketSerial)
+- Sensirion I2C SGP40：[SGP40 TVOC センサーライブラリ](https://github.com/Sensirion/arduino-i2c-sgp40)
+- Sensirion I2C SCD4x：[SCD41 CO2 センサーライブラリ](https://github.com/Sensirion/arduino-i2c-scd4x)
+- Sensirion Gas Index Algorithm：[転送インデックスライブラリ](https://github.com/Sensirion/arduino-gas-index-algorithm)
+- Seeed_Arduino_AHT20：[AHT20 温湿度センサーライブラリ](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20)
 :::
 
-Arduino IDE では、`Library Manager` で検索できます。例えば `Seeed_Arduino_AHT20` を検索してインストールします。
+Arduino IDE では、`Library Manager` で検索できます（例：`Seeed_Arduino_AHT20`）、そしてインストールします。
 
 <details>
-<summary>オフラインインストールのプレビューをクリック</summary>
+<summary>オフラインインストールをプレビューするにはクリック</summary>
 
-*オフライン* でインストールするには、GitHub から **repo zip をダウンロード** し、**Sketch** -> **Include Library** -> **Add .ZIP Library** に移動して、ダウンロードしたライブラリを選択します。
+*オフライン*でインストールするには、GitHub から **repo zip をダウンロード**し、**Sketch** -> **Include Library** -> **Add .ZIP Library** に移動して、ダウンロードしたライブラリを選択します。
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_32.png"/></div>
 
 </details>
 
-- **ステップ 4**: 付属の USB Type-C ケーブルでデバイスを PC に接続します。
+- **ステップ 4**：提供された USB Type-C ケーブルでデバイスを PC に接続します。
 
-- **ステップ 5**: ボードとポートを選択
+- **ステップ 5**：ボードとポートを選択します
 
-「Indicator」を検索し、`Seeed INDICATOR RP2040` ボードを選択して、`usbmodem` シリアルポートを選択します。
+"Indicator" を検索し、`Seeed INDICATOR RP2040` ボードを選択し、`usbmodem` シリアルポートを選択します。
 
 <div class="table-center">
   <table align="center">
@@ -482,15 +482,15 @@ Arduino IDE では、`Library Manager` で検索できます。例えば `Seeed_
   </table>
 </div>
 
-- **ステップ 6**: サンプルコードファイルを開く
+- **ステップ 6**：サンプルコードファイルを開きます
 
-**File** -> **Open**を選択し、サンプルコードファイル（[.inoファイル](https://github.com/Seeed-Solution/sensecap_indicator_rp2040/tree/main/examples/terminal_rp2040)）を選択します。
+**File** -> **Open** で、サンプルコードファイル（[.ino ファイル](https://github.com/Seeed-Solution/SenseCAP_Indicator_RP2040/tree/main/examples/indicator_rp2040)）を選択します。
 
-サンプルコードファイルを提供していますので、必要に応じてコードを修正できます。
+サンプルコードファイルを提供していますので、必要に応じてコードを変更できます。
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_35.png"/></div>
 
-- **ステップ 7**: ファイルを検証してアップロードする
+- **ステップ 7**：ファイルを検証してアップロードします。
 
 <div class="table-center">
   <table align="center">
@@ -512,17 +512,17 @@ Arduino IDE では、`Library Manager` で検索できます。例えば `Seeed_
   </table>
 </div>
 
-ここで、RP2040でのファームウェアのビルドとフラッシュ（ダウンロード）が完了しました。
+これで、RP2040 でのファームウェアのビルドとフラッシュ（ダウンロード）が完了しました。
 
-### .uf2ファイルのフラッシュ
+### .uf2 ファイルのフラッシュ
 
-- **ステップ1**: デバイスをPCに接続
+- **ステップ 1**：デバイスを PC に接続します
 
-針を使ってこの内部ボタンを長押しし、付属のUSB Type-CケーブルでデバイスをPCに接続し、接続後にボタンを離します。
+針を使ってこの内部ボタンを長押しし、提供された USB Type-C ケーブルでデバイスを PC に接続し、接続後にボタンを離します。
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_56.png"/></div>
 
-- **ステップ2**: ファームウェアフラッシュ
+- **ステップ 2**: ファームウェアフラッシュ
 
 接続が成功すると、PCにディスクが表示されます。
 
@@ -534,7 +534,7 @@ Arduino IDE では、`Library Manager` で検索できます。例えば `Seeed_
 
 アップグレードが自動的に実行されます。
 
-## ESP32とRP2040の通信プロトコル
+## ESP32 & RP2040 通信プロトコル
 
 ESP32とRP2040はシリアルポート通信を使用し、[cobs](http://www.stuartcheshire.org/papers/COBSforToN.pdf)通信プロトコルを使用します。デモで使用されるコマンドのリストは以下の通りです：
 
@@ -546,7 +546,7 @@ ESP32とRP2040はシリアルポート通信を使用し、[cobs](http://www.stu
 
 [SenseCAP Indicator ESP32 SDK](https://github.com/Seeed-Solution/sensecap_indicator_esp32.git)
 
-[SenseCAP Indicator RP2040 Demo](https://github.com/Seeed-Solution/sensecap_indicator_rp2040/tree/main)
+[SenseCAP Indicator RP2040 デモ](https://github.com/Seeed-Solution/sensecap_indicator_rp2040/tree/main)
 
 ## FAQ
 
@@ -561,14 +561,14 @@ ESP32とRP2040はシリアルポート通信を使用し、[cobs](http://www.stu
     ]}
     >
     <TabItem value="Win" >
-      デバイスマネージャーでポートを確認してください
-      - "USB Serial Device(COMx)"または"USB 串行设备"はRP2040用です
-      - "USB-SERIAL CH340"はESP32用です
+      Device Manageでポートを確認してください
+      - "USB Serial Device(COMx)" または "USB 串行设备" はRP2040用です
+      - "USB-SERIAL CH340" はESP32用です
       簡単に言うと、CH340ポートはESP32用です。
       <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_39.png"/></div>
     </TabItem>
     <TabItem value="Unix">
-      - "/dev/cu.usbmodem"はRP2040用です
+      - "/dev/cu.usbmodem" はRP2040用です
       <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_40.png"/></div>
     </TabItem>
     </Tabs>
@@ -579,15 +579,15 @@ ESP32とRP2040はシリアルポート通信を使用し、[cobs](http://www.stu
 - 2023-11-17
   - パッチセクションを削除
 - 2023-08-25
-  - パッチセクションをより明確にしました
+  - パッチセクションをより明確に
 - 2023-07-25
-  - Esptoolを使用したファームウェアフラッシュの内容を追加
+  - Esptoolを使用したファームウェアフラッシュのコンテンツを追加
 - 2023-05-29
   - パッチセクションを追加
 
 # **技術サポート**
 
-**SenseCAP Indicatorでお困りですか？サポートいたします！**
+**SenseCAP Indicatorでお困りですか？私たちがサポートいたします！**
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

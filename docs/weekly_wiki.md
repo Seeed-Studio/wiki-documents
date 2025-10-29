@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/29/2025
+  date: 10/27/2025
   author: Frank
 ---
 
@@ -17,59 +17,35 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is October 13th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is October 27th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [XIAO ePaper Display Board EE04 with PlatfromIO](https://wiki.seeedstudio.com/e04_with_platformio/)
+### [AI Gun Detection Solution for Real-Time Edge Alerts](https://wiki.seeedstudio.com/solutions/frigate-on-jetson-nodered-gun-alerts/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This document provides a guide on how to use the XIAO ePaper Display Board EE04 with PlatformIO, including hardware setup, project creation, code uploading, button control, and battery voltage detection examples.
-
-</div>
-
-### [PyCuVSLAM with reComputer](https://wiki.seeedstudio.com/pycuvslam_recomputer_robotics/)
-
-<p style={{textAlign: 'center'}}><img src="https://media.githubusercontent.com/media/NVlabs/PyCuVSLAM/main/pycuvslam.gif" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://www.seeed.cc/wp-content/uploads/2025/08/scene_3.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-[PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM) is NVIDIA's GPU-accelerated visual odometry and SLAM library cuVSLAM's Python wrapper. It supports monocular, stereo, RGB-D, multi-camera, and visual-inertial (IMU) modes, providing a simple Python API that can directly interface with camera streams and output real-time camera poses, map points, and loop closure information. The underlying CUDA optimization enables high-precision, low-latency SLAM inference on both PC and Jetson devices, making it suitable for robotic navigation, drone positioning, and 3D perception applications.This wiki will provide instructions on how to deploy pycuvslam on reComputer.
+The Frigate + Node-RED Gun Detection Solution is an edge AI video analytics stack that detects firearms in live camera streams and orchestrates alerting, review, and integrations. Built for privacy-preserving, low‑latency deployments on **AI Boxes**, the NVIDIA **Jetson** series and **reComputer R2000**, it combines an optimized detection engine (Frigate) with a visual automation layer (Node‑RED) and optional LLM‑assisted review.
 
 </div>
 
-### [How to use LLaVa on the reComputer Industrial J4012 to monitor your warehouse](https://wiki.seeedstudio.com/vlm/)
+### [MCP Integration in SenseCAP Watcher](https://wiki.seeedstudio.com/mcp_endpoint/)
 
-<div class="video-container">
-<iframe width="800" height="450" src="https://www.youtube.com/embed/J0sS-1zQid8?list=PLpH_4mf13-A1EnNUgEMTsy2PxejFllSGM" title="Build a Local AI Watchdog for Industrial Safety with reComputer J4012 powered by NVIDIA Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Grove/Grove4.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki describes deploying a VLM (Visual Learning Model) on the [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html), using a USB camera as the input for the VLM. When the system detects a safe situation, the signal light will turn green via RS485 control. In dangerous situations, such as a fire or the presence of someone with a weapon, the signal light will turn yellow. When the light sensor detects the signal from the warehouse light being turned off via RS485, the signal light will turn red.
+The [**MCP Endpoint (Model Context Protocol Endpoint)**](https://wiki.seeedstudio.com/mcp_endpoint/) documentation introduces its functionality in **SenseCAP Watcher**, explaining its role in AI systems, configuration methods, and usage examples to help developers quickly integrate and manage custom MCP services. Additionally, we’ve updated [**Extending Grove with MCP**](https://wiki.seeedstudio.com/extending_grove_with_mcp/), which demonstrates how to connect Grove sensors to AI systems through MCP for more flexible data interaction and application development.
 
 </div>
 
 ## Existing Wiki Updated
 
-### [Deploying OpenRemote on reComputer R1x Manage IoT Devices at the Edge](https://wiki.seeedstudio.com/openremote_r1x00/)
+### [reTerminal E Series ePaper Display Works with TRMNL](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/)
 
-We have added an operation example of [MQTT Agent with ChirpStack LoRaWAN Gateway Integration](https://wiki.seeedstudio.com/openremote_r1x00/#mqtt-agent-with-chirpstack-lorawan-gateway-integration).
-
-### [Seeed Studio XIAO nRF54L15 Matter](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_matter/)
-
-We have added an operation example of [Matter Hub Config](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_matter/#matter-hub-config).
-
-### [Getting Started with TRMNL 7.5" (OG) DIY Kit in Arduino](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino/)
-
-We have added an operation demo of [Equipment Installatio](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino/#equipment-installation).
-
-### [Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/)
-
-We have provided a tutorial on how to use the device with the [Orbbec Gemini2 Depth Camera](https://wiki.seeedstudio.com/lerobot_so100m_new/#add-cameras).
+We have added an operation example on how to [flash via the SenseCraft HMI platform](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/#method-2-flash-via-sensecraft-hmi-platform).
 
 ## The Efforts of Contributor
 
@@ -213,5 +189,7 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.9.15th](/Seeed_Elderly/weekly_wiki/wiki250915)
 - [weekly wiki on 2025.9.22nd](/Seeed_Elderly/weekly_wiki/wiki250922)
 - [weekly wiki on 2025.9.29th](/Seeed_Elderly/weekly_wiki/wiki250929)
+- [weekly wiki on 2025.10.13th](/Seeed_Elderly/weekly_wiki/wiki251013)
+- [weekly wiki on 2025.10.20th](/Seeed_Elderly/weekly_wiki/wiki251020)
 
 </details>

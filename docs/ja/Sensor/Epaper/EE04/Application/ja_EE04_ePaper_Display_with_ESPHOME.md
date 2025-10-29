@@ -281,7 +281,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -311,7 +311,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -370,7 +370,7 @@ display:
 </Tabs>
 
 
-**INSTALL** をクリックしてデバイスにコードをインストールすると、以下の画像が表示されます。
+**INSTALL** をクリックしてコードをデバイスにインストールすると、以下の画像が表示されます。
 
 <Tabs>
 <TabItem value='Install through browser'>
@@ -399,7 +399,7 @@ USBケーブルを使用して**ePaperパネルをコンピューターに接続
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
-usbmodemxxx（WindowsはCOMxxx）を選択してconnectをクリックします。[問題が発生しましたか？こちらをクリック。](#Q4)
+usbmodemxxx（WindowsではCOMxxx）を選択してconnectをクリックします。[問題が発生しましたか？こちらをクリック。](#Q4)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
@@ -421,7 +421,7 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある�
 
 デバイスにコードをインストールする前に、USBケーブルを使用して**このデバイスをHome Assistantを実行しているRaspberry PiまたはHA Green（Yellow）などに接続**する必要があります。
 
-画像に従ってオプションをクリックし、デバイスにコードをインストールします。[デバイスがディープスリープモードの時にポートが見つからない？](#port)
+画像に従ってオプションをクリックし、デバイスにコードをインストールします。[ディープスリープモード時にポートが見つからない場合は？](#port)
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/6.png" style={{width:'70%', height:'auto'}}/></div>
@@ -437,7 +437,7 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある�
 <TabItem value='Install through Wi-Fi'>
 
 :::tip
-これは最も簡単な方法ですが、初回プログラムインストール時には、まず左側の方法を使用してePaperパネルにプログラムをアップロードする必要があります。その後、wifiでアップロードできます。また、この方法が機能するためには、YAMLの設定に適切に設定された `ota` と `api` セクションが有効な暗号化キーと共に含まれていることを確認してください。
+これは最も簡単な方法ですが、初回プログラムインストール時には、まず左側の方法を使用してePaperパネルにプログラムをアップロードする必要があります。その後、wifiを介してアップロードできます。また、この方法が機能するためには、YAMLの設定に有効な暗号化キーを持つ適切に設定された `ota` と `api` セクションが含まれていることを確認してください。
 :::
 
 この方法では、ePaperパネルを何にも接続する必要がなく、オンラインであることを確認するだけです。
@@ -457,7 +457,7 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある�
 
 ### 簡単なグラフィックの描画
 
-このYAMLコード例は、ESPHomeプロジェクト用にSPIインターフェースとreTerminal E SeriesのePaperディスプレイを設定します。`lambda` セクションには、画面に簡単な図形をレンダリングする描画コマンドが含まれています：
+このサンプルYAMLコードは、ESPHomeプロジェクト用にSPIインターフェースとreTerminal E SeriesのePaperディスプレイを設定します。`lambda` セクションには、画面に簡単な図形をレンダリングする描画コマンドが含まれています：
 
 - 2つの長方形（1つは位置(10, 10)でサイズ100x50、もう1つは(150, 10)でサイズ50x50）
 - 1つの円（位置(250, 35)で半径25）
@@ -562,7 +562,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -590,7 +590,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -669,7 +669,7 @@ EE04 ePaper Display デバイスに天気データを表示するには、Home A
 
 ステップ 4. 設定ウィザードに従って、場所と希望する単位を設定します。
 
-ステップ 5. インストールが完了すると、Open-Meteo 統合は Home Assistant インスタンスにいくつかの天気関連エンティティを作成します。
+ステップ 5. インストールが完了すると、Open-Meteo 統合は Home Assistant インスタンスに複数の天気関連エンティティを作成します。
 
 #### Developer Tools での天気データへのアクセス
 
@@ -1118,7 +1118,7 @@ display:
 
 :::
 
-以下は、フォーマットの改善、画像配置、および追加説明を含む強化されたデモ 3 の内容です：
+以下は、フォーマットの改善、画像配置、および追加説明を含む強化されたデモ 3 のコンテンツです：
 
 ### TrueType フォントの描画
 
@@ -1126,7 +1126,7 @@ display:
 
 #### 必要なツールのインストール
 
-ステップ 1. まず、ファイルを管理するために Studio Code Server アドオンをインストールする必要があります。Home Assistant のアドオンストアに移動し、**Studio Code Server** を検索してクリックします。
+ステップ 1. まず、ファイルを管理するために Studio Code Server アドオンをインストールする必要があります。Home Assistant アドオンストアに移動し、**Studio Code Server** を検索してクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/17.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -1303,7 +1303,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1344,7 +1344,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1456,7 +1456,7 @@ glyphs:
   - "\U000F0123" # your new icon
 ```
 
-そして、ディスプレイのラムダ内で：
+そして、ディスプレイの lambda で：
 
 ```yaml
 lambda: |-
@@ -1498,7 +1498,7 @@ config/
 </a>
 </div>
 
-ステップ 4. Studio Code Server のファイルマネージャーを使用して、ダウンロードした画像を先ほど作成した **image** フォルダにアップロードします。
+ステップ 4. Studio Code Server ファイルマネージャーを使用して、ダウンロードした画像を先ほど作成した **image** フォルダにアップロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
@@ -1628,7 +1628,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1661,7 +1661,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1782,16 +1782,14 @@ lambda: |-
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

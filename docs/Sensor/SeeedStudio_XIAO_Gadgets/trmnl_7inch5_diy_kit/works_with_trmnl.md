@@ -311,9 +311,9 @@ Always keep both options disabled to ensure stable operation of your XIAO ePaper
 
 ### Buttons Usage
 
-We have 4 button on this development board. They are RESET,KEY1,KEY2,KEY3 and **we only use RESET and KEY1 button in TRMNL firmware.**
+We have 4 button on this development board. They are RESET,KEY1,KEY2,KEY3 and **we only use RESET and KEY3 button in TRMNL firmware.**
 
-**KEY1 Usage:**
+**KEY3 Usage:**
 
 1. **One Click:** to refresh pages immediately.
 2. **Double Click:** custom function, you can find it in setting page.
@@ -442,14 +442,12 @@ Press and hold the Key3 (the button next to the Reset button) for five seconds. 
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
