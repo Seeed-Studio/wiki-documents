@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-10-27 10:49:37 (北京时间)
-// 多语言页面: 2028 个
+// 生成时间: 2025-10-29 11:02:26 (北京时间)
+// 多语言页面: 2032 个
 
 (function() {
   'use strict';
@@ -2435,6 +2435,12 @@
     "es",
     "ja"
   ],
+  "/model_conversion_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/recamera_on_device_models": [
     "cn",
     "en",
@@ -2490,6 +2496,18 @@
     "ja"
   ],
   "/recamera_pid_adjustment": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recamera_hd_poe_hardware": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recamera_hd_poe_getting_started": [
     "cn",
     "en",
     "es",
@@ -8428,6 +8446,18 @@
     "es",
     "ja"
   ],
+  "/epaper_breakout_board_with_oepl": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/XIAO-eInk-Expansion-Board": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/gnss_for_xiao": [
     "cn",
     "en",
@@ -8496,11 +8526,6 @@
   ],
   "/xiao-can-bus-expansion": [
     "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/XIAO-eInk-Expansion-Board": [
     "en",
     "es",
     "ja"

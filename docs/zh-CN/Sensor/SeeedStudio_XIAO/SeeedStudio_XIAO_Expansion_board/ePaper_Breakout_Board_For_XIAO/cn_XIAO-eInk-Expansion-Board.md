@@ -245,11 +245,11 @@ last_update:
 这个 [URL](https://jlamch.net/MXChipWelcome/) 提供了非常便捷的图像提取操作，可以轻松帮助我们实现在电子墨水屏上显示各种图像，让我们开始吧！
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/9191.jpg" style={{width:700, height:'auto'}}/></div>
 
-**步骤 1**。选择图像
+**步骤 1**. 选择图像
 
 首先选择您想要的图像，尽量不要超过 800*480 的尺寸。
 
-**步骤 2**。图像设置
+**步骤 2**. 图像设置
 
 - Canvas Size(s)
   - Canvas Size：设置画布的尺寸。例如，800 x 480 像素意味着画布宽度为 800 像素，高度为 480 像素。
@@ -275,11 +275,11 @@ last_update:
 - Center
   - Center：选择是否将图像在画布上居中。注意：此选项仅在图像大于原始尺寸时有效。
 
-**步骤 3**。预览
+**步骤 3**. 预览
 
 设置完成后，您可以在这里看到图像显示效果的预览
 
-**步骤 4**。输出
+**步骤 4**. 输出
 
 - 复制转换后的代码
 
