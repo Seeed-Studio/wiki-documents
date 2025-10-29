@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.web
 slug: /get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 6/17/2025
-  author: Jessie
+  date: 10/29/2025
+  author: Michelle
 ---
 :::tip
 The Wio Tracker L1 Series share the same hardware framework. Although the video guide was for the L1 Pro, it is applicable to all other products in the L1 series.
@@ -22,6 +22,8 @@ When using the L1, L1 Lite or L1 E-Ink models for the first time, after connecti
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Wi_YmE76YcY?si=Ad-pUhle5X9QppPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+
 
 ### Part 2 Firmware Flashing
 
@@ -53,11 +55,18 @@ When using the L1, L1 Lite or L1 E-Ink models for the first time, after connecti
 
 Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
-Select the target device to `Seeed Wio Tracker L1` and choose the latest firmware, then click `Flash`.
+For L1, L1 Lite and L1 Pro, select the target device to `Seeed Wio Tracker L1` and choose the latest firmware, then click `Flash`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
+
+For L1 E-Ink, select the target device to `Seeed Wio Tracker L1 E-Ink` and choose the latest firmware, then click `Flash`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%201.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
+
 
 Switch on the device, click `Enter DFU Mode`, there will be a serial port named `Tracker L1`, click and connect it, and there should be a driver named `Tracker L1` display.
 
@@ -68,6 +77,10 @@ Drag the UF2 file to the DFU drive. Firmware should be flashed after the file is
 ### Power on the device
 
 Connect the USB cable to activate the device. Lift the power switch upwards to turn it on.
+
+:::tip
+If the device doesn't respond when you press the button, please charge it first. Do not use the fast-charging charger.
+:::
 
 ### Connect via App
 
@@ -171,20 +184,26 @@ You can add sensor to the device via the grove interface. The following sensors 
   </tr>
 </table>
 
-### FAQ
+## FAQ
 
-#### Entering DFU Mode Manually
+### Entering DFU Mode Manually
 
 Connect the device to your PC, double-press the `Reset` button. The yellow LED will stay solid, and a new USB drive named `Tracker L1` will appear on your PC.
 
-#### Exiting DFU Mode
+### Exiting DFU Mode
 
 Press the `Reset` button once to exit DFU mode.
 
-#### Signal Quality
+### Signal Quality
 
 - **SNR** reflects the quality of the communication link. Normal device usually operates above -7 dB. Device with a SNR lower than -10 dB indicates poor performance.
 
 - **RSSI** is determined jointly by the device and its surrounding environment. Normal device usually operates above -110 dBm. Device with an RSSI lower than -115 dBm is considered to have poor performance.
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
+## Resource
+- [3D printing reference file](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
+- [Outline File](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
+- [FCC Certification](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
+- [CE Certification](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
+- [Power Consumption Test and Battery Life Calculation](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)

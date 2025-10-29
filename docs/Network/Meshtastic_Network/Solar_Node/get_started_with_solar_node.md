@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 09/11/2025
+  date: 10/29/2025
   author: Michelle
 ---
 
@@ -36,10 +36,12 @@ Drag the UF2 file to the DFU drive. Firmware should be flashed after the file is
 ### Install Battery and GPS Module(Optional)
 
 :::tip
-Recommended Battery: 18650 Lithium-ion Battery 3.6V (Button Top).
+When you need to install or replace the battery, use `Button-top` 18650(3.6V) battery.
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
+P1-Pro version has built-in battery and GPS module, for P1 version, user needs to install the battery and GPS module manually if needed.
 :::
 
-P1-Pro version has built-in battery and GPS module, for P1 version, user needs to install the battery and GPS module manually if needed.
+
 
 - Step 1: Remove all the screws and the cover.
 
@@ -61,7 +63,11 @@ Ensure that the shell is properly mounted and the screws are firmly tightened to
 
 ### Power on the device
 
-Connect the USB cable to activate the device.
+The device needs to be activated by connecting the USB cable for the first use.
+
+:::tip
+If the device doesn't respond when you press the button, please charge it first. Do not use the fast-charging charger.
+:::
 
 ### Connect via App
 
@@ -281,4 +287,5 @@ The figures below are for reference only; actual consumption may vary based on r
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
 
-More details check [Solar Node Battery Life Calculation Table](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Solar%20Node%20Battery%20Life%20Calculation%20Table.xlsx)
+## Resource
+- [Solar Node Battery Life Calculation Table](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)

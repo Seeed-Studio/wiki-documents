@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 5/19/2025
-  author: Jessie
+  date: 29/10/2025
+  author: Michelle
 ---
 
 
@@ -58,6 +58,10 @@ Fully compatible with the Grove ecosystem, and includes PTH headers and an SWD d
 
 ### Specification
 
+:::tip
+The latest batches of L1, L1 Lite and L1 E-Ink all come with a battery adapter cable, converting the 1mm interface to a 2mm interface. This gives you more options for batteries.
+:::
+
 <table>
   <tr>
     <th colspan="1">Processor</th>
@@ -100,7 +104,7 @@ Fully compatible with the Grove ecosystem, and includes PTH headers and an SWD d
     <td colspan="1">Solar Panel (2.0mm 2p): 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Lithium Battery (1.25mm 2p JST): 3.7V — 1A</td>
+    <td colspan="1">Lithium Battery (1mm 2p JST): 3.7V — 1A</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">OLED Screen</td>
