@@ -103,7 +103,7 @@ Currently, the XIAO ePaper Display Board(ESP32-S3) - EE04 only offers HMI firmwa
 
 ### Device Flasher
 
-Click `Tool` in the top menu bar to access our configuration page.
+Click `Tools` in the top menu bar to access our configuration page.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi33.png" style={{width:1000, height:'auto'}}/></div>
 
