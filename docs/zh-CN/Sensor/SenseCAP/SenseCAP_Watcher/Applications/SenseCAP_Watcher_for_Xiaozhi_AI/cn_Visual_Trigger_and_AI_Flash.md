@@ -13,7 +13,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /cn/visual_trigger_and_ai_flash
 last_update:
-  date: 10/20/2025
+  date: 10/30/2025
   author: Twelve
 ---
 
@@ -38,15 +38,10 @@ import TabItem from '@theme/TabItem';
 - USB Type-C 数据线  
 - Windows PC  
 
-:::note
-如果您要刷写 **视觉激活固件**，且您的 Watcher 设备型号 **不是 -EN**，您还需要手动刷写认证文件以正常使用（仅需一次）。  
-详细说明请参考 [Watcher Agent 固件刷写指南](https://wiki.seeedstudio.com/cn/flash_watcher_agent_firmware/)。
-:::
-
 ## 固件刷写过程
 
 <Tabs>
-<TabItem value="sensecraft" label="SenseCraft AI" default>
+<TabItem value="sensecraft" label="SenseCraft AI 官网(仅英文版)" default>
 
 <!-- :::caution Note
 The following guide is for an internal testing website that has not yet been released.
@@ -102,11 +97,11 @@ Please use another method to flash the firmware for now.
 
 </TabItem>
 
-<TabItem value="flasher1" label="Flash Download Tool">
+<TabItem value="flasher1" label="Flash Download Tool 烧录工具">
 
 - 前提条件
 
-  - **视觉触发固件 v2.0.3**：[下载链接](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **视觉触发固件 v2.0.4**：[下载链接](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-cn.bin)
 
   - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip)（3.9.6 或更高版本）
 
@@ -152,7 +147,7 @@ Please use another method to flash the firmware for now.
 
 - 前提条件
 
-  - **视觉触发固件 v2.0.3**：[下载链接](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **视觉触发固件 v2.0.4**：[下载链接](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-cn.bin)
 
   - [esptool.py](https://github.com/espressif/esptool)
 
@@ -234,7 +229,7 @@ Please use another method to flash the firmware for now.
 </Tabs>
 
 :::note
-v2.0.3 以上版本的固件需要对小智说 "Turn on inference switch" 来启用视觉检测。
+v2.0.3 以上版本的固件需要对小智说 "打开推理开关" 来启用视觉检测。
 :::
 
 ## AI 模型刷写过程
@@ -296,10 +291,16 @@ v2.0.3 以上版本的固件需要对小智说 "Turn on inference switch" 来启
 
 4. **设备无法通过视觉检测唤醒**
    - 检查串口输出中是否有相关的日志消息。
-   - 固件版本 v2.0.3 需要对小智说"Turn on inference switch"来启用此功能。
+   - 固件版本 v2.0.3 需要对小智说"打开推理开关"来启用此功能。
 
 5. **串口显示视觉识别日志但设备仍无法唤醒**
    - 前往 SenseCraft AI 平台并将 Person 模型刷写到 AI 芯片。
+
+## Q&A
+
+**提问: 我可以烧录其他的AI视觉模型进入Himax芯片中吗？**
+
+回答: 目前仅支持烧录人脸和人物的视觉模型，其他的模型的烧录请等待AI官网更新。
 
 ## 技术支持
 
