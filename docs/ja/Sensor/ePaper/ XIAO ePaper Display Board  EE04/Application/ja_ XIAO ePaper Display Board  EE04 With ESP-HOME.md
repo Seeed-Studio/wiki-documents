@@ -1,8 +1,8 @@
 ---
-description: Este artículo describe cómo utilizar las capacidades de hardware de la pantalla ePaper de la serie reTerminal E en ESPHome.
-title: Uso de ESPHome de la pantalla ePaper EE04 en Home Assistant
+description: この記事では、XIAO ePaper Display Board EE04のハードウェア機能をESPHomeで活用し、Home Assistantと統合する方法について説明します。
+title: XIAO ePaper Display Board EE04 with ESPHome
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
-slug: /es/EE04_with_esphome_advanced
+slug: /ja/EE04_with_esphome_advanced
 sidebar_position: 2
 last_update:
   date: 10/07/2025
@@ -12,66 +12,66 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Pantalla ePaper EE04 funcionando con ESPHome para Home Assistant
+# EE04 ePaper Display と ESPHome を使用した Home Assistant 連携
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/es/reterminal_e10xx_with_esphome" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="/ja/reterminal_e10xx_with_esphome" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong></a>
 </div>
 
-## Introducción a [Home Assistant](https://www.home-assistant.io/)
+## [Home Assistant](https://www.home-assistant.io/) の紹介
 
-Home Assistant es una potente plataforma de automatización del hogar de código abierto que te permite controlar y monitorear tus dispositivos domésticos inteligentes desde una interfaz única y unificada. Actúa como el centro de control de tu hogar inteligente, permitiéndote automatizar rutinas, monitorear sensores y crear un espacio de vida más inteligente.
+Home Assistant は、スマートホームデバイスを単一の統合インターフェースから制御・監視できる強力なオープンソースホームオートメーションプラットフォームです。スマートホームの中央ハブとして機能し、ルーチンの自動化、センサーの監視、より知的な生活空間の構築を可能にします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/204.png" style={{width:700, height:'auto'}}/></div>
 
-### ¿Por qué Home Assistant?
+### なぜ Home Assistant なのか？
 
-- **Control Local**: A diferencia de muchas soluciones basadas en la nube, Home Assistant se ejecuta localmente en tu red, asegurando que tus datos permanezcan privados y que tus automatizaciones funcionen incluso sin acceso a internet.
+- **ローカル制御**: 多くのクラウドベースソリューションとは異なり、Home Assistant はネットワーク上でローカルに動作するため、データのプライバシーが保たれ、インターネット接続がなくても自動化が機能します。
 
-- **Amplio Soporte de Dispositivos**: Home Assistant se integra con miles de diferentes dispositivos y servicios domésticos inteligentes, haciéndolo altamente versátil y preparado para el futuro.
+- **豊富なデバイスサポート**: Home Assistant は数千種類のスマートホームデバイスやサービスと統合でき、高い汎用性と将来性を提供します。
 
-- **Automatización Potente**: Crea reglas de automatización sofisticadas que pueden responder a varios disparadores como tiempo, estados de dispositivos, lecturas de sensores y más.
+- **強力な自動化**: 時間、デバイス状態、センサー読み取り値などの様々なトリガーに応答する高度な自動化ルールを作成できます。
 
-- **Panel de Control Personalizable**: Diseña tu propia interfaz de usuario para mostrar la información que más te importa.
+- **カスタマイズ可能なダッシュボード**: 最も重要な情報を表示する独自のユーザーインターフェースを設計できます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Aprender Más 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 詳細を見る 🖱️</font></span></strong></a>
 </div>
 
-### ¿Por qué la pantalla ePaper serie EE04 con Home Assistant?
+### なぜ EE04 シリーズ ePaper Display と Home Assistant なのか？
 
-La pantalla ePaper EE04 es un excelente compañero para Home Assistant por varias razones:
+EE04 ePaper Display は、いくつかの理由で Home Assistant の優れたパートナーです：
 
-1. **Eficiencia Energética**: La pantalla de papel electrónico solo consume energía al actualizar el contenido, haciéndola perfecta para mostrar información persistente como pronósticos del tiempo, eventos del calendario o estado del sistema.
+1. **エネルギー効率**: e-paper ディスプレイはコンテンツを更新する時のみ電力を消費するため、天気予報、カレンダーイベント、システム状態などの持続的な情報表示に最適です。
 
-2. **Visibilidad Clara**: A diferencia de las pantallas LCD, las pantallas de papel electrónico son fácilmente legibles en cualquier condición de iluminación, incluyendo luz solar directa, haciéndolas ideales para paneles de control doméstico montados en la pared.
+2. **優れた視認性**: LCD スクリーンとは異なり、e-paper ディスプレイは直射日光を含むあらゆる照明条件で読みやすく、壁掛けホームコントロールパネルに理想的です。
 
-3. **Larga Duración de Batería**: Combinada con el modo de sueño profundo, la pantalla puede operar durante meses con una sola carga de batería mientras proporciona información valiosa de un vistazo.
+3. **長いバッテリー寿命**: ディープスリープモードと組み合わせることで、一目で価値ある情報を提供しながら、単一のバッテリー充電で数ヶ月間動作できます。
 
-4. **Integración Flexible**: A través de ESPHome, la pantalla se integra perfectamente con Home Assistant, permitiéndote mostrar cualquier dato de tu sistema doméstico inteligente en un formato elegante y siempre visible.
+4. **柔軟な統合**: ESPHome を通じて、ディスプレイは Home Assistant とシームレスに統合され、スマートホームシステムからのあらゆるデータをエレガントで常時表示可能な形式で表示できます。
 
-Estas ventajas hacen de la pantalla ePaper EE04 una opción ideal para crear una pantalla de información energéticamente eficiente y siempre encendida para tu configuración de Home Assistant.
+これらの利点により、EE04 ePaper Display は Home Assistant セットアップ用のエネルギー効率的で常時オンの情報ディスプレイを作成するのに理想的な選択肢となります。
 
-### Integración con ESPHome
+### ESPHome 統合
 
-ESPHome es una herramienta de creación de firmware de código abierto específicamente diseñada para dispositivos ESP8266/ESP32. Te permite crear firmware personalizado usando archivos de configuración YAML simples, que luego pueden ser flasheados a tu dispositivo. Para la serie EE04, ESPHome sirve como el middleware esencial que permite la comunicación entre el dispositivo y Home Assistant.
+ESPHome は ESP8266/ESP32 デバイス専用に設計されたオープンソースファームウェア作成ツールです。シンプルな YAML 設定ファイルを使用してカスタムファームウェアを作成し、デバイスにフラッシュできます。EE04 シリーズにとって、ESPHome はデバイスと Home Assistant 間の通信を可能にする重要なミドルウェアとして機能します。
 
-El sistema funciona convirtiendo tu configuración YAML en firmware completamente funcional que se ejecuta en tu dispositivo ESP. Este firmware maneja todas las tareas complejas de conectarse a tu red, comunicarse con Home Assistant y controlar la pantalla ePaper. Cuando se combina con Home Assistant, ESPHome proporciona una plataforma robusta para crear pantallas y controles de automatización del hogar sofisticados.
+このシステムは、YAML 設定を ESP デバイス上で動作する完全機能のファームウェアに変換することで動作します。このファームウェアは、ネットワークへの接続、Home Assistant との通信、ePaper ディスプレイの制御といった複雑なタスクをすべて処理します。Home Assistant と組み合わせることで、ESPHome は高度なホームオートメーションディスプレイとコントロールを作成するための堅牢なプラットフォームを提供します。
 
-Exploremos cómo configurarlo y aprovechar al máximo esta pantalla versátil.
+この多用途ディスプレイのセットアップ方法と最大限の活用方法を探ってみましょう。
 
-## Comenzando
+## 入門ガイド
 
-Antes de que comience el contenido del tutorial de este artículo, es posible que necesites tener el siguiente hardware listo.
+この記事のチュートリアル内容を始める前に、以下のハードウェアを準備する必要があります。
 
-### Materiales Requeridos
+### 必要な材料
 
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Placa de Pantalla ePaper XIAO EE04</th>
+      <th>XIAO ePaper Display Board EE04</th>
       <th>Home Assistant Green</th>
     </tr>
     <tr>
@@ -81,64 +81,64 @@ Antes de que comience el contenido del tutorial de este artículo, es posible qu
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-Home Assistant Green es la forma más fácil y centrada en la privacidad de automatizar tu hogar. Ofrece una configuración sin esfuerzo y te permite controlar todos los dispositivos inteligentes con un solo sistema, donde todos los datos se almacenan localmente por defecto. Esta placa se beneficia del próspero ecosistema de Home Assistant y será mejorada cada mes por código abierto.
+Home Assistant Green は、ホームオートメーションを実現する最も簡単でプライバシーに配慮した方法です。簡単なセットアップを提供し、すべてのスマートデバイスを単一のシステムで制御でき、すべてのデータはデフォルトでローカルに保存されます。このボードは活発な Home Assistant エコシステムの恩恵を受け、オープンソースにより毎月改善されています。
 
-Recomendamos usar Home Assistant Green como el host de Home Assistant para este tutorial, o puedes usar cualquier host de Home Assistant con un Supervisor.
+このチュートリアルでは Home Assistant Green を Home Assistant ホストとして使用することをお勧めしますが、Supervisor を備えた任意の Home Assistant ホストを使用することもできます。
 
-:::tip instalar Home Assistant
-También hemos escrito cómo instalar Home Assistant para algunos productos de Seeed Studio, por favor consúltalos.
+:::tip Home Assistant のインストール
+Seeed Studio 製品の一部について Home Assistant のインストール方法も記載していますので、参考にしてください。
 
-- **[Comenzando con Home Assistant en ODYSSEY-X86](https://wiki.seeedstudio.com/es/ODYSSEY-X86-Home-Assistant/)**
-- **[Comenzando con Home Assistant en LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/es/h68k-ha-esphome/)**
+- **[ODYSSEY-X86 での Home Assistant 入門](https://wiki.seeedstudio.com/ja/ODYSSEY-X86-Home-Assistant/)**
+- **[LinkStar H68K/reRouter CM4 での Home Assistant 入門](https://wiki.seeedstudio.com/ja/h68k-ha-esphome/)**
 
-Si no estás usando un producto de Seeed Studio, también puedes verificar y aprender cómo instalar Home Assistant para otros productos en el sitio web oficial de Home Assistant.
+Seeed Studio 製品を使用していない場合は、Home Assistant 公式ウェブサイトで他の製品への Home Assistant インストール方法を確認・学習することもできます。
 
-- **[Instalación de Home Assistant](https://www.home-assistant.io/installation/)**
+- **[Home Assistant インストール](https://www.home-assistant.io/installation/)**
 :::
 
-### Paso 1. Instalar ESPHome
+### ステップ 1. ESPHome のインストール
 
 :::note
-Si ya has instalado ESPHome, puedes omitir este paso.
+すでに ESPHome をインストールしている場合は、このステップをスキップできます。
 
-El siguiente ejemplo demuestra el proceso usando una pantalla de 7.5 pulgadas. Si usas un tamaño de pantalla diferente, simplemente modifica la configuración del tamaño de pantalla en el código en consecuencia.
+以下の例では 7.5 インチスクリーンを使用したプロセスを示しています。異なるスクリーンサイズを使用する場合は、コード内のスクリーンサイズ設定を適宜変更してください。
 :::
 
-Ve a **Settings** -> **Add-ons** -> **ADD-ON STORE**
+**Settings** -> **Add-ons** -> **ADD-ON STORE** に移動します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/28.png" style={{width:1000, height:'auto'}}/></div>
 
-Ingresa el término de búsqueda **ESPHome**.
+検索語 **ESPHome** を入力します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/29.png" style={{width:1000, height:'auto'}}/></div>
 
-Haz clic en **INSTALL** y **START**.
+**INSTALL** と **START** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/30.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-Si no puedes encontrar ESPHome en la tienda de complementos, asegúrate de estar usando una instalación de Home Assistant que soporte complementos (como Home Assistant OS o instalaciones supervisadas). Para otros tipos de instalación (como Home Assistant Container), es posible que necesites ejecutar el ESPHome Device Builder independientemente usando Docker. Consulta la [documentación oficial de ESPHome](https://esphome.io/guides/getting_started_hassio) para más detalles.
+アドオンストアで ESPHome が見つからない場合は、アドオンをサポートする Home Assistant インストール（Home Assistant OS や supervised インストールなど）を使用していることを確認してください。他のインストールタイプ（Home Assistant Container など）の場合は、Docker を使用して ESPHome Device Builder を独立して実行する必要があります。詳細については、[公式 ESPHome ドキュメント](https://esphome.io/guides/getting_started_hassio)を参照してください。
 :::
 
-### Paso 2. Agregar un nuevo dispositivo
+### ステップ 2. 新しいデバイスの追加
 
-Ve a ESPHome y haz clic en **NEW DEVICE**.
+ESPHome に移動し、**NEW DEVICE** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/31.png" style={{width:1000, height:'auto'}}/></div>
 
-Dale al dispositivo un nombre que te guste y selecciona **ESP32-S3** para el tipo de chip, luego haz clic en **SKIP**.
+お好みのデバイス名を付け、チップタイプに **ESP32-S3** を選択し、**SKIP** をクリックします。
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'80%', marginLeft:'10%'}}>
 
@@ -146,7 +146,7 @@ Dale al dispositivo un nombre que te guste y selecciona **ESP32-S3** para el tip
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/34.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-Después de crear un nuevo dispositivo, haz clic en **EDIT**.
+新しいデバイスを作成した後、**EDIT** をクリックします。
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome6.png" style={{width:900, height:'auto'}}/></div><br />
@@ -155,25 +155,25 @@ Después de crear un nuevo dispositivo, haz clic en **EDIT**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_arduino.png" style={{width:600, height:'auto'}}/></div> -->
 
-### Paso 3. Instalar firmware
+### ステップ 3. ファームウェアのインストール
 
-Este es un ejemplo muy básico y mostrará "¡Hola Mundo!" en la pantalla.
+これは非常に基本的な例で、ディスプレイに「Hello World!」を表示します。
 
-**El propósito principal es mostrarte diferentes formas de instalar firmware en el dispositivo.**
+**主な目的は、デバイスにファームウェアをインストールする様々な方法を示すことです。**
 
-Puedes usar este ejemplo copiando el código de abajo y pegándolo después de la línea de código `captive_portal` en tu archivo Yaml.
+以下のコードをコピーして、Yaml ファイルの `captive_portal` コード行の後に貼り付けることで、この例を使用できます。
 
 :::tip
-- 4.26 Pulgadas Blanco/Negro  
-- 2.13 Pulgadas 122*250 Blanco/Negro/Amarillo/Rojo
-- 2.9 Pulgadas 128*296 Blanco/Negro/Amarillo/Rojo
+- 4.26 インチ 白黒  
+- 2.13 インチ 122*250 白黒/黄/赤
+- 2.9 インチ 128*296 白黒/黄/赤
 
-Estos tipos de pantallas de tinta electrónica aún no son compatibles. Actualizaremos la información relevante en el Wiki en futuras versiones—mantente atento.
+これらのタイプの e-ink ディスプレイはまだサポートされていません。今後のリリースで関連情報を Wiki で更新予定です—お楽しみに。
 :::
-***Los siguientes son tipos de pantalla con conector de 24 pines:***
+***以下は 24 ピンコネクタスクリーンタイプです：***
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Pulgadas" default>
+<TabItem value="1.54 Inch" label="1.54 インチ" default>
 
 ```yaml
 # define font to display words
@@ -203,7 +203,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Pulgadas">
+<TabItem value="2.13 Inch" label="2.13インチ">
 
 ```yaml
 # define font to display words
@@ -233,7 +233,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Pulgadas">
+<TabItem value="2.9 Inch" label="2.9インチ">
 
 ```yaml
 # define font to display words
@@ -264,7 +264,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Pulgadas">
+<TabItem value="4.2 Inch" label="4.2インチ">
 
 ```yaml
 # define font to display words
@@ -294,7 +294,7 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Pulgadas">
+<TabItem value="5.83 Inch" label="5.83インチ">
 
 ```yaml
 # define font to display words
@@ -323,7 +323,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="7.5 Inch" label="7.5 Pulgadas" default>
+<TabItem value="7.5 Inch" label="7.5インチ" default>
 
 ```yaml
 # define font to display words
@@ -357,117 +357,117 @@ display:
 
 <br></br>
 
-***Los siguientes son tipos de pantalla con conector de 50 pines:***
+***以下は50ピンコネクタ画面タイプです：***
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Pulgadas" default>
+<TabItem value="7.3 Inch" label="7.3インチ" default>
 
 :::tip
-La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o posterior, ya que el soporte para esta pantalla se agregó en esa versión. La guía de uso detallada se actualizará en el Wiki pronto.
+7.3インチ電子ペーパーディスプレイには ESPHome v10.15 以降が必要です。このディスプレイのサポートがそのリリースで追加されたためです。詳細な使用ガイドは近日中に Wiki で更新される予定です。
 :::
 
 </TabItem>
 </Tabs>
 
 
-Haz clic en **INSTALL** para instalar el código en el dispositivo y verás la siguiente imagen.
+**INSTALL** をクリックしてコードをデバイスにインストールすると、以下の画像が表示されます。
 
 <Tabs>
-<TabItem value='Install through browser'>
+<TabItem value='ブラウザ経由でインストール'>
 
 :::tip
-Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está lejos de ti, recomendamos usar este método. Puedes instalarlo con la computadora que tengas a mano.
+Home Assistant ホスト（Raspberry PI/Green/Yellow など）が遠くにある場合は、この方法をお勧めします。手元にあるコンピュータでインストールできます。
 :::
 
-Primero, necesitas hacer clic en **Manual download** para descargar el firmware compilado.
+まず、**Manual download** をクリックしてコンパイル済みファームウェアをダウンロードする必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
-Abre este sitio web donde subiremos el firmware al panel de papel electrónico.
+ファームウェアを ePaper パネルにアップロードするこのウェブサイトを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/63.png" style={{width:800, height:'auto'}}/></div>
 
-Regresa a ESPHome para descargar el firmware.
+ESPHome に戻ってファームウェアをダウンロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/64.png" style={{width:800, height:'auto'}}/></div>
 
-Selecciona Factory format.
+Factory format を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/65.png" style={{width:500, height:'auto'}}/></div>
 
-Usa un cable USB para **conectar el panel de papel electrónico a tu computadora** y haz clic en **CONNECT**.
+USB ケーブルを使用して **ePaper パネルをコンピュータに接続** し、**CONNECT** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
-Selecciona usbmodemxxx (en Windows es COMxxx) y haz clic en connect. [¿Encontraste un problema? Haz clic aquí.](#Q4)
+usbmodemxxx（Windows では COMxxx）を選択し、connect をクリックします。[問題が発生しましたか？こちらをクリック。](#Q4)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
-Haz clic en **INSTALL** y selecciona el firmware que acabas de descargar.
+**INSTALL** をクリックし、先ほどダウンロードしたファームウェアを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/69.png" style={{width:800, height:'auto'}}/></div>
 
-Espera un momento y verás '¡Hola mundo!' en la pantalla ～
+しばらく待つと、ディスプレイに 'Hello world!' が表示されます ～
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
 
-<TabItem value='Install through host'>
+<TabItem value='ホスト経由でインストール'>
 
 :::tip
-Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está cerca, recomendamos usar este método ya que es más simple.
+Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある場合は、より簡単なこの方法をお勧めします。
 :::
 
-Antes de instalar el código en el dispositivo, necesitas usar un cable USB para **conectar este dispositivo a tu Raspberry Pi o HA Green(Yellow) etc** que esté ejecutando Home Assistant.
+コードをデバイスにインストールする前に、USB ケーブルを使用して **このデバイスを Home Assistant を実行している Raspberry Pi または HA Green（Yellow）などに接続** する必要があります。
 
-Haz clic en las opciones siguiendo la imagen para instalar el código en el dispositivo. [¿No encontraste el puerto cuando el dispositivo está en modo de suspensión profunda?](#port)
+画像に従ってオプションをクリックし、コードをデバイスにインストールします。[ディープスリープモード時にポートが見つからない場合は？](#port)
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/6.png" style={{width:'70%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/7.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-Espera un momento y verás la retroalimentación como la siguiente imagen. Significa que el código se está ejecutando exitosamente.
+しばらく待つと、以下の画像のようなフィードバックが表示されます。これはコードが正常に実行されていることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
 
-<TabItem value='Install through Wi-Fi'>
+<TabItem value='Wi-Fi経由でインストール'>
 
 :::tip
-Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel de papel electrónico usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de cifrado válidas para que este método funcione.
+これは最も簡単な方法ですが、初回プログラムインストール時には、まず左側の方法を使用して ePaper パネルにプログラムをアップロードする必要があります。その後、wifi 経由でアップロードできます。また、この方法が機能するには、YAML 設定に有効な暗号化キーを持つ適切に設定された `ota` および `api` セクションが含まれていることを確認してください。
 :::
 
-De esta manera, no necesitas conectar el panel de papel electrónico a nada, solo asegúrate de que esté en línea.
+この方法では、ePaper パネルを何にも接続する必要がなく、オンラインであることを確認するだけです。
 
-Haz clic en la opción y luego el firmware se instalará en el panel de papel electrónico automáticamente.
+オプションをクリックすると、ファームウェアが自動的に ePaper パネルにインストールされます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:800, height:'auto'}}/></div>
 
-Espera un momento y verás la retroalimentación como la siguiente imagen. Si falla, puede ser debido a una señal débil. Por favor mueve el dispositivo más cerca de tu router. [¿Encontraste un problema? Haz clic aquí.](#Q4)
+しばらく待つと、以下の画像のようなフィードバックが表示されます。失敗した場合は、信号が弱いことが原因の可能性があります。デバイスをルーターに近づけてください。[問題が発生しましたか？こちらをクリック。](#Q4)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
 </Tabs>
 
-## Conceptos básicos para dibujar en ESPHome
+## ESPHome での描画の基本
 
-### Dibujando Gráficos Simples
+### 簡単なグラフィックの描画
 
-Este código YAML de ejemplo configura la interfaz SPI y la pantalla de papel electrónico de la Serie reTerminal E para un proyecto ESPHome. La sección `lambda` contiene comandos de dibujo que renderizan formas simples en la pantalla:
+この YAML コード例は、ESPHome プロジェクト用の SPI インターフェースと reTerminal E 系列 ePaper ディスプレイを設定します。`lambda` セクションには、画面に簡単な図形をレンダリングする描画コマンドが含まれています：
 
-- Dos rectángulos (uno en la posición (10, 10) con tamaño 100x50, y otro en (150, 10) con tamaño 50x50)
-- Un círculo en (250, 35) con un radio de 25
-- Dos rectángulos rellenos (en (10, 80) y (150, 80))
-- Un círculo relleno en (250, 105) con un radio de 25
+- 2つの長方形（1つは位置 (10, 10) でサイズ 100x50、もう1つは (150, 10) でサイズ 50x50）
+- 1つの円（位置 (250, 35)、半径 25）
+- 2つの塗りつぶし長方形（位置 (10, 80) と (150, 80)）
+- 1つの塗りつぶし円（位置 (250, 105)、半径 25）
 
-Puedes usar este ejemplo copiando el código de abajo y pegándolo después de la línea de código `captive_portal` en tu archivo Yaml.
+以下のコードをコピーして、Yaml ファイルの `captive_portal` コード行の後に貼り付けることで、この例を使用できます。
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Pulgadas" default>
+<TabItem value="1.54 Inch" label="1.54インチ" default>
 
 ```yaml
 spi:
@@ -495,7 +495,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Pulgadas">
+<TabItem value="2.13 Inch" label="2.13インチ">
 
 ```yaml
 spi:
@@ -523,7 +523,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Pulgadas">
+<TabItem value="2.9 Inch" label="2.9インチ">
 
 ```yaml
 spi:
@@ -552,7 +552,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Pulgadas">
+<TabItem value="4.2 Inch" label="4.2インチ">
 
 ```yaml
 spi:
@@ -580,7 +580,7 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="5.83 Inch" label="5.83インチ">
 
 ```yaml
 spi:
@@ -607,7 +607,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="7.5 Inch-24Pin" label="7.5 Inch" default>
+<TabItem value="7.5 Inch-24Pin" label="7.5インチ" default>
 
 ```yaml
 spi:
@@ -637,10 +637,10 @@ display:
 </Tabs>
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3インチ" default>
 
 :::tip
-La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o posterior, ya que el soporte para esta pantalla se agregó en esa versión. La guía de uso detallada se actualizará en el Wiki pronto.
+7.3インチの電子ペーパーディスプレイには ESPHome v10.15 以降が必要です。このディスプレイのサポートはそのリリースで追加されたためです。詳細な使用ガイドは近日中に Wiki で更新される予定です。
 :::
 
 </TabItem>
@@ -648,48 +648,48 @@ La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o post
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome9.jpg" style={{width:500, height:'auto'}}/></div><br />
 
-Cuando veas la retroalimentación como en la siguiente imagen, significa que el código se está ejecutando correctamente.
+次の画像のようなフィードバックが表示されたら、コードが正常に実行されていることを意味します。
 
 
-Debido a las limitaciones de espacio, no elaboraremos demasiado sobre los métodos de dibujo y principios de otros patrones. Si es necesario, se recomienda al lector leer [ESPHome en esta parte de ejemplos detallados](https://esphome.io/components/display/).
+スペースの制約により、他のパターンの描画方法と原理については詳しく説明しませんが、必要に応じて読者は[ESPHome のこの部分の詳細な例](https://esphome.io/components/display/)を読むことをお勧めします。
 
-### Obtener valores de Home Assistant para mostrar
+### Home Assistant から表示用の値を取得する
 
-Para mostrar datos meteorológicos en tu dispositivo EE04 ePaper Display, necesitarás acceder a datos de temperatura, condiciones meteorológicas y velocidad del viento desde Home Assistant. La integración Open-Meteo proporciona datos meteorológicos confiables que se pueden acceder a través de Developer Tools.
+EE04 ePaper Display デバイスに天気データを表示するには、Home Assistant から温度、天気状況、風速データにアクセスする必要があります。Open-Meteo 統合は、Developer Tools を通じてアクセスできる信頼性の高い天気データを提供します。
 
-#### Instalación de la integración Open-Meteo
+#### Open-Meteo 統合のインストール
 
-Paso 1. Abre tu panel de Home Assistant y navega a **Settings** → **Devices & Services**.
+ステップ 1. Home Assistant ダッシュボードを開き、**Settings** → **Devices & Services** に移動します。
 
-Paso 2. Haz clic en el botón **Add Integration** en la esquina inferior derecha.
+ステップ 2. 右下角の **Add Integration** ボタンをクリックします。
 
-Paso 3. Busca "Open-Meteo" y selecciónalo de la lista.
+ステップ 3. "Open-Meteo" を検索し、リストから選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_weather.png" style={{width:800, height:'auto'}}/></div>
 
-Paso 4. Sigue el asistente de configuración para establecer tu ubicación y unidades preferidas.
+ステップ 4. 設定ウィザードに従って、場所と希望する単位を設定します。
 
-Paso 5. Una vez instalada, la integración Open-Meteo creará varias entidades relacionadas con el clima en tu instancia de Home Assistant.
+ステップ 5. インストールが完了すると、Open-Meteo 統合は Home Assistant インスタンスに複数の天気関連エンティティを作成します。
 
-#### Acceso a datos meteorológicos en Developer Tools
+#### Developer Tools での天気データへのアクセス
 
-Después de instalar la integración Open-Meteo, puedes acceder a los datos meteorológicos a través de Developer Tools:
+Open-Meteo 統合をインストールした後、Developer Tools を通じて天気データにアクセスできます：
 
-Paso 1. En tu panel de Home Assistant, navega a **Developer Tools** → **States**.
+ステップ 1. Home Assistant ダッシュボードで、**Developer Tools** → **States** に移動します。
 
-Paso 2. En el cuadro de filtro, escribe `weather` para encontrar la entidad meteorológica principal.
+ステップ 2. フィルターボックスで `weather` と入力して、メインの天気エンティティを見つけます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/39.png" style={{width:1000, height:'auto'}}/></div>
 
-Paso 3. Haz clic en la entidad para ver todos los atributos disponibles. Los atributos meteorológicos clave incluyen:
+ステップ 3. エンティティをクリックして、利用可能なすべての属性を表示します。主要な天気属性には以下が含まれます：
 
-- `temperature`: Temperatura actual (en tus unidades configuradas)
-- `wind_bearing`: Dirección del viento
-- `wind_speed`: Velocidad del viento
+- `temperature`: 現在の温度（設定した単位）
+- `wind_bearing`: 風向
+- `wind_speed`: 風速
 
-#### Uso de datos meteorológicos en ESPHome
+#### ESPHome での天気データの使用
 
-Para usar estos datos meteorológicos en tu configuración ESPHome para el EE04 ePaper Display, necesitarás configurar una conexión API de Home Assistant en tu configuración YAML de ESPHome:
+EE04 ePaper Display の ESPHome 設定でこの天気データを使用するには、ESPHome YAML 設定で Home Assistant API 接続を設定する必要があります：
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -714,16 +714,16 @@ sensor:
     internal: true
 ```
 
-Esta configuración crea entidades de sensor en tu dispositivo ESPHome que extraen datos de la integración meteorológica de Home Assistant. Luego puedes usar estos sensores para actualizar tu pantalla reTerminal E Series ePaper Display con la información meteorológica actual.
+この設定により、Home Assistant の天気統合からデータを取得する ESPHome デバイス内にセンサーエンティティが作成されます。これらのセンサーを使用して、reTerminal E 系列 ePaper Display ディスプレイを現在の天気情報で更新できます。
 
 :::tip
-Para datos de pronóstico, necesitarás usar las entidades `weather.open_meteo_forecast` que contienen valores predichos para días futuros.
+予報データについては、将来の日の予測値を含む `weather.open_meteo_forecast` エンティティを使用する必要があります。
 :::
 
-Finalmente, agrega el código para la sección de pantalla para usar estos valores anteriores. El código completo es el siguiente:
+最後に、上記の値を使用するディスプレイセクションのコードを追加します。完全なコードは以下の通りです：
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
+<TabItem value="1.54 Inch" label="1.54インチ" default>
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -783,7 +783,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Inch">
+<TabItem value="2.13 Inch" label="2.13インチ">
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -843,7 +843,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Inch">
+<TabItem value="2.9 Inch" label="2.9インチ">
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -904,7 +904,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Inch">
+<TabItem value="4.2 Inch" label="4.2インチ">
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -964,7 +964,7 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="5.83 Inch" label="5.83インチ">
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -1023,7 +1023,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="7.5 Inch" label="7.5 Inch" default>
+<TabItem value="7.5 Inch" label="7.5インチ" default>
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -1085,77 +1085,77 @@ display:
 </Tabs>
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3インチ" default>
 
 :::tip
-La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o posterior, ya que el soporte para esta pantalla se agregó en esa versión. La guía de uso detallada se actualizará en el Wiki pronto.
+7.3インチの電子ペーパーディスプレイには ESPHome v10.15 以降が必要です。このディスプレイのサポートはそのリリースで追加されたためです。詳細な使用ガイドは近日中に Wiki で更新される予定です。
 :::
 
 </TabItem>
 </Tabs>
 
-Después de compilar el código anterior y subirlo a tu dispositivo, es posible que primero veas **NaN** mostrado en la pantalla, por favor no te preocupes, esto es normal. Esto se debe a que el dispositivo aún no ha sido agregado al entorno de Home Assistant, por lo que reTerminal aún no ha podido adquirir datos de Home Assistant. Solo necesitamos seguir los pasos a continuación para agregar el dispositivo.
+上記のコードをコンパイルしてデバイスにアップロードした後、最初に画面に **NaN** が表示される場合がありますが、心配する必要はありません。これは正常な動作です。これは、デバイスがまだ Home Assistant 環境に追加されていないため、reTerminal がまだ Home Assistant のデータを取得できていないためです。以下の手順に従ってデバイスを追加するだけです。
 
-#### Agregando la Pantalla ePaper EE04 a Home Assistant
+#### EE04 ePaper Display を Home Assistant に追加する
 
-Paso 1. Después de flashear tu dispositivo, regresa a Home Assistant y navega a **Settings → Devices & Services**.
+ステップ 1. デバイスをフラッシュした後、Home Assistant に戻り、**Settings → Devices & Services** に移動します。
 
-Paso 3. Home Assistant debería descubrir automáticamente tu dispositivo EE04 ePaper Display a través de mDNS. Si aparece en la sección de dispositivos descubiertos, haz clic en Configure para agregarlo.
+ステップ 3. Home Assistant は mDNS を介して EE04 ePaper Display デバイスを自動的に検出するはずです。検出されたデバイスセクションに表示される場合は、Configure をクリックして追加します。
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome7.png" style={{width:900, height:'auto'}}/></div><br />
 
-Paso 4. Si el dispositivo no se descubre automáticamente, haz clic en Add Integration y busca "ESPHome".
+ステップ 4. デバイスが自動的に検出されない場合は、Add Integration をクリックして「ESPHome」を検索します。
 
-Paso 5. Ingresa la dirección IP de tu dispositivo EE04 ePaper Display y la clave de cifrado API si configuraste una.
+ステップ 5. EE04 ePaper Display デバイスの IP アドレスと、設定した場合は API 暗号化キーを入力します。
 
-Paso 6. Una vez conectado, tu EE04 ePaper Display aparecerá como un dispositivo en Home Assistant con todos sus sensores y componentes disponibles.
+ステップ 6. 接続されると、EE04 ePaper Display は Home Assistant でデバイスとして表示され、すべてのセンサーとコンポーネントが利用可能になります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome1.jpg" style={{width:500, height:'auto'}}/></div><br />
 
 :::note
-El programa puede tomar de 2 a 3 minutos desde la finalización de la grabación hasta la visualización final.
+プログラムは書き込み完了から最終表示まで 2〜3 分かかる場合があります。
 
 :::
 
-Aquí está el contenido mejorado de la Demo 3 con formato mejorado, ubicación de imágenes y descripciones adicionales:
+以下は、フォーマットの改善、画像配置、および追加説明を含む強化されたデモ 3 の内容です：
 
-### Dibujando fuentes TrueType
+### TrueType フォントの描画
 
-Este ejemplo demuestra cómo mostrar iconos personalizados en tu EE04 ePaper Display usando fuentes TrueType. Los iconos de Material Design proporcionan una amplia gama de símbolos escalables perfectos para pantallas de papel electrónico.
+この例では、TrueType フォントを使用して EE04 ePaper Display にカスタムアイコンを表示する方法を示します。Material Design Icons は、電子ペーパーディスプレイに最適なスケーラブルなシンボルの幅広い範囲を提供します。
 
-#### Instalando Herramientas Requeridas
+#### 必要なツールのインストール
 
-Paso 1. Primero, necesitamos instalar el complemento Studio Code Server para gestionar archivos. Navega a la tienda de complementos de Home Assistant, busca **Studio Code Server** y haz clic en él.
+ステップ 1. まず、ファイルを管理するために Studio Code Server アドオンをインストールする必要があります。Home Assistant のアドオンストアに移動し、**Studio Code Server** を検索してクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/17.png" style={{width:1000, height:'auto'}}/></div>
 
-Paso 2. Haz clic en **INSTALL** y espera a que se complete la instalación. Una vez instalado, haz clic en **START** para lanzar el editor.
+ステップ 2. **INSTALL** をクリックし、インストールが完了するまで待ちます。インストールが完了したら、**START** をクリックしてエディターを起動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/18.png" style={{width:800, height:'auto'}}/></div>
 
-#### Configurando Fuentes de Iconos
+#### アイコンフォントの設定
 
-Paso 3. Crea una nueva carpeta llamada **fonts** en tu directorio de configuración de ESPHome. Esta carpeta almacenará los archivos de fuente TrueType necesarios para mostrar iconos.
+ステップ 3. ESPHome 設定ディレクトリに **fonts** という新しいフォルダを作成します。このフォルダには、アイコンを表示するために必要な TrueType フォントファイルが保存されます。
 
-Paso 4. Descarga el archivo de fuente de Material Design Icons haciendo clic en el botón de abajo y extrae el contenido.
+ステップ 4. 下のボタンをクリックして Material Design Icons フォントファイルをダウンロードし、内容を展開します。
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/font_ttf.zip" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Descargar Fuente de Material Design Icons</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Material Design Icons フォントをダウンロード</button></p>
 </a>
 </div>
 
-Paso 5. Sube el archivo de fuente descargado (`materialdesignicons-webfont.ttf`) a la carpeta fonts que creaste anteriormente.
+ステップ 5. ダウンロードしたフォントファイル（`materialdesignicons-webfont.ttf`）を、先ほど作成した fonts フォルダにアップロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/19.png" style={{width:800, height:'auto'}}/></div>
 
-#### Configurando ESPHome para Iconos
+#### アイコン用の ESPHome 設定
 
-Paso 6. Agrega el siguiente código a tu archivo de configuración de ESPHome después de la sección `captive_portal`. Este código define dos tamaños de fuente para iconos y configura la pantalla para mostrar iconos del clima.
+ステップ 6. `captive_portal` セクションの後に、以下のコードを ESPHome 設定ファイルに追加します。このコードは、アイコン用の 2 つのフォントサイズを定義し、天気アイコンを表示するようにディスプレイを設定します。
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
+<TabItem value="1.54 Inch" label="1.54インチ" default>
 
 ```yaml
 # define font to display words
@@ -1196,7 +1196,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Inch">
+<TabItem value="2.13 Inch" label="2.13インチ">
 
 ```yaml
 # define font to display words
@@ -1237,7 +1237,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Inch">
+<TabItem value="2.9 Inch" label="2.9インチ">
 
 ```yaml
 # define font to display words
@@ -1279,7 +1279,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Inch">
+<TabItem value="4.2 Inch" label="4.2インチ">
 
 ```yaml
 # define font to display words
@@ -1320,7 +1320,7 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="5.83 Inch" label="5.83インチ">
 
 ```yaml
 # define font to display words
@@ -1360,7 +1360,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="24 Pin" label="7.5 Inch" default>
+<TabItem value="24 Pin" label="7.5インチ" default>
 
 ```yaml
 # define font to display words
@@ -1403,10 +1403,10 @@ display:
 </Tabs>
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3インチ" default>
 
 :::tip
-La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o posterior, ya que el soporte para esta pantalla se agregó en esa versión. La guía de uso detallada se actualizará en el Wiki pronto.
+7.3インチの電子ペーパーディスプレイには ESPHome v10.15 以降が必要です。このディスプレイのサポートはそのリリースで追加されたためです。詳細な使用ガイドは近日中に Wiki で更新される予定です。
 :::
 
 </TabItem>
@@ -1414,40 +1414,40 @@ La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o post
 
 :::note
 
-1. La sección `glyphs` define qué iconos cargar desde el archivo de fuente. Cargar solo los iconos que necesitas ahorra memoria en tu dispositivo.
+1. `glyphs` セクションは、フォントファイルから読み込むアイコンを定義します。必要なアイコンのみを読み込むことで、デバイスのメモリを節約できます。
 
-2. El programa puede tardar de 2 a 3 minutos desde la finalización de la grabación hasta la visualización final.
+2. プログラムは書き込み完了から最終表示まで2〜3分かかる場合があります。
 
 :::
 
-Paso 7. Guarda tu configuración y súbela a tu pantalla ePaper EE04. Cuando veas una respuesta como la siguiente imagen, significa que el código se está ejecutando correctamente.
+ステップ 7. 設定を保存し、EE04 ePaper Display にアップロードします。以下の画像のようなフィードバックが表示されれば、コードが正常に実行されていることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome4.png" style={{width:500, height:'auto'}}/></div><br />
 
-#### Personalización con Diferentes Iconos
+#### 異なるアイコンでのカスタマイズ
 
-La biblioteca de Material Design Icons contiene miles de iconos que puedes usar en tus proyectos. Aquí te mostramos cómo encontrar y usar diferentes iconos:
+Material Design Icons ライブラリには、プロジェクトで使用できる数千のアイコンが含まれています。異なるアイコンを見つけて使用する方法は以下の通りです：
 
-Paso 1. Visita el sitio web de Material Design Icons haciendo clic en el botón de abajo.
+ステップ 1. 下のボタンをクリックして Material Design Icons のウェブサイトにアクセスします。
 
 <div align="center">
 <a href="https://pictogrammers.com/library/mdi/" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Explorar Material Design Icons</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Material Design Icons を閲覧</button></p>
 </a>
 </div>
 
-Paso 2. Busca un icono que quieras usar en tu proyecto. Puedes navegar por categoría o usar la función de búsqueda.
+ステップ 2. プロジェクトで使用したいアイコンを検索します。カテゴリ別に閲覧するか、検索機能を使用できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/41.png" style={{width:800, height:'auto'}}/></div>
 
-Paso 3. Cuando encuentres un icono que te guste, haz clic en él para ver sus detalles. Busca el valor Unicode, que estará en el formato `F0595`.
+ステップ 3. 気に入ったアイコンが見つかったら、それをクリックして詳細を表示します。`F0595` の形式の Unicode 値を探します。
 
-Paso 4. Agrega el valor Unicode a tu configuración de ESPHome:
+ステップ 4. 以下の方法で Unicode 値を ESPHome 設定に追加します：
 
-- Agregándolo a la lista `glyphs` en tu configuración de fuente
-- Actualizando el código de visualización para usar el nuevo icono
+- フォント設定の `glyphs` リストに追加する
+- 新しいアイコンを使用するようにディスプレイコードを更新する
 
-Por ejemplo, para usar un nuevo icono con Unicode `F0123`:
+例えば、Unicode `F0123` の新しいアイコンを使用する場合：
 
 ```yaml
 glyphs:
@@ -1456,30 +1456,30 @@ glyphs:
   - "\U000F0123" # your new icon
 ```
 
-Y en el lambda de visualización:
+そして、ディスプレイのラムダ内で：
 
 ```yaml
 lambda: |-
   it.printf(100, 200, id(font_mdi_medium), TextAlign::CENTER, "\U000F0123");
 ```
 
-Paso 5. Guarda tu configuración actualizada y súbela a tu dispositivo para ver el nuevo icono.
+ステップ 5. 更新した設定を保存し、デバイスにアップロードして新しいアイコンを確認します。
 
 :::tip
-Para paneles meteorológicos, considera usar iconos como `F0590` (soleado), `F0591` (parcialmente nublado), `F0593` (lluvioso) y `F059E` (ventoso).
+天気ダッシュボードには、`F0590`（晴れ）、`F0591`（部分的に曇り）、`F0593`（雨）、`F059E`（風）などのアイコンの使用を検討してください。
 :::
 
-Al combinar estos iconos con los datos meteorológicos de Home Assistant que configuramos anteriormente, puedes crear una visualización meteorológica dinámica que muestre las condiciones actuales usando iconos apropiados.
+これらのアイコンを、先ほど設定した Home Assistant からの天気データと組み合わせることで、適切なアイコンを使用して現在の状況を表示する動的な天気ディスプレイを作成できます。
 
-### Visualización de Imágenes Personalizadas
+### カスタム画像の表示
 
-Este ejemplo demuestra cómo mostrar imágenes personalizadas en tu pantalla de papel electrónico EE04 ePaper Display. Puedes usar esta función para mostrar logotipos, iconos o cualquier gráfico que mejore tu experiencia de panel.
+この例では、EE04 ePaper Display 電子ペーパーディスプレイにカスタム画像を表示する方法を説明します。この機能を使用して、ダッシュボード体験を向上させるロゴ、アイコン、またはグラフィックを表示できます。
 
-#### Preparación
+#### 準備
 
-Paso 1. Asegúrate de tener el complemento **Studio Code Server** instalado en Home Assistant. Si aún no lo has instalado, sigue las instrucciones del ejemplo anterior.
+ステップ 1. Home Assistant に **Studio Code Server** アドオンがインストールされていることを確認します。まだインストールしていない場合は、前の例の手順に従ってください。
 
-Paso 2. Crea una nueva carpeta llamada **image** en tu directorio de configuración de ESPHome. Esta carpeta almacenará los archivos de imagen que quieras mostrar.
+ステップ 2. ESPHome 設定ディレクトリに **image** という新しいフォルダを作成します。このフォルダには、表示したい画像ファイルを保存します。
 
 ```
 config/
@@ -1488,30 +1488,30 @@ config/
     └── image/         <- Create this folder
 ```
 
-#### Agregando Imágenes
+#### 画像の追加
 
-Paso 3. Descarga una imagen de muestra para probar la funcionalidad. Puedes usar el icono WiFi proporcionado a continuación o usar tu propia imagen.
+ステップ 3. 機能をテストするためのサンプル画像をダウンロードします。下記の WiFi アイコンを使用するか、独自の画像を使用できます。
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.jpg" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Descargar Imagen WiFi de Muestra</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>サンプル WiFi 画像をダウンロード</button></p>
 </a>
 </div>
 
-Paso 4. Sube la imagen descargada a la carpeta **image** que creaste anteriormente usando el administrador de archivos de Studio Code Server.
+ステップ 4. Studio Code Server のファイルマネージャーを使用して、ダウンロードした画像を先ほど作成した **image** フォルダにアップロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Para mejores resultados en pantallas de papel electrónico, usa imágenes de alto contraste con áreas claras en blanco y negro. Se admiten tanto formatos JPG como PNG.
+電子ペーパーディスプレイで最良の結果を得るには、明確な黒と白の領域を持つ高コントラストの画像を使用してください。JPG と PNG の両方の形式がサポートされています。
 :::
 
-#### Configurando ESPHome para Visualización de Imágenes
+#### 画像表示のための ESPHome 設定
 
-Paso 5. Agrega el siguiente código a tu archivo de configuración de ESPHome después de la sección `captive_portal`. Este código define el recurso de imagen y configura la pantalla para mostrarlo.
+ステップ 5. `captive_portal` セクションの後に、以下のコードを ESPHome 設定ファイルに追加します。このコードは画像リソースを定義し、それを表示するようにディスプレイを設定します。
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
+<TabItem value="1.54 Inch" label="1.54インチ" default>
 
 ```yaml
 image:
@@ -1544,7 +1544,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Inch">
+<TabItem value="2.13 Inch" label="2.13インチ">
 
 ```yaml
 image:
@@ -1577,7 +1577,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Inch">
+<TabItem value="2.9 Inch" label="2.9インチ">
 
 ```yaml
 image:
@@ -1611,7 +1611,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Inch">
+<TabItem value="4.2 Inch" label="4.2インチ">
 
 ```yaml
 image:
@@ -1644,7 +1644,7 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="5.83 Inch" label="5.83インチ">
 
 ```yaml
 image:
@@ -1676,7 +1676,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="7.5 Inch" label="7.5 Inch" default>
+<TabItem value="7.5 Inch" label="7.5インチ" default>
 
 ```yaml
 image:
@@ -1711,27 +1711,27 @@ display:
 </Tabs>
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3インチ" default>
 
 :::tip
-La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o posterior, ya que el soporte para esta pantalla se agregó en esa versión. La guía de uso detallada se actualizará en el Wiki pronto.
+7.3インチの電子ペーパーディスプレイには ESPHome v10.15 以降が必要です。このディスプレイのサポートはそのリリースで追加されたためです。詳細な使用ガイドは近日中にWikiで更新される予定です。
 :::
 
 </TabItem>
 </Tabs>
 
-Paso 6. Guarda tu configuración y súbela a tu pantalla EE04 ePaper. Cuando se complete la actualización, tu pantalla de papel electrónico mostrará la imagen.
+ステップ 6. 設定を保存し、EE04 ePaper Display にアップロードします。更新が完了すると、電子ペーパーディスプレイに画像が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome2.jpg" style={{width:500, height:'auto'}}/></div><br />
 
 
-#### Técnicas Avanzadas de Imágenes
+#### 高度な画像技術
 
-Puedes mejorar la visualización de tus imágenes con estas técnicas adicionales:
+以下の追加技術で画像表示を向上させることができます：
 
-**Posicionamiento de Imágenes**
+**画像の位置指定**
 
-Para posicionar tu imagen en coordenadas específicas en la pantalla:
+画面上の特定の座標に画像を配置するには：
 
 ```yaml
 lambda: |-
@@ -1739,9 +1739,9 @@ lambda: |-
   it.image(100, 50, id(myImage));
 ```
 
-**Combinando Imágenes con Texto**
+**画像とテキストの組み合わせ**
 
-Puedes mostrar tanto imágenes como texto en la misma pantalla:
+同じ画面に画像とテキストの両方を表示できます：
 
 ```yaml
 lambda: |-
@@ -1752,9 +1752,9 @@ lambda: |-
   it.printf(400, 400, id(myFont), TextAlign::CENTER, "WiFi Connected");
 ```
 
-**Usando Múltiples Imágenes**
+**複数画像の使用**
 
-Para mostrar múltiples imágenes en la misma pantalla, define cada imagen en tu configuración:
+同じ画面に複数の画像を表示するには、設定で各画像を定義します：
 
 ```yaml
 image:
@@ -1775,14 +1775,14 @@ lambda: |-
 ```
 
 :::caution
-Recuerda que las pantallas de papel electrónico tienen tasas de actualización limitadas. La configuración `update_interval: 300s` significa que tu pantalla se actualizará solo cada 5 minutos. Ajusta este valor según tus necesidades, pero ten en cuenta que las actualizaciones frecuentes pueden reducir la vida útil de las pantallas de papel electrónico.
+電子ペーパーディスプレイのリフレッシュレートは制限されていることを覚えておいてください。`update_interval: 300s` 設定は、ディスプレイが5分ごとにのみリフレッシュされることを意味します。必要に応じてこの値を調整してください。ただし、頻繁なリフレッシュは電子ペーパーディスプレイの寿命を短縮する可能性があることに注意してください。
 :::
 
-Al combinar imágenes con texto y otros elementos de visualización cubiertos en ejemplos anteriores, puedes crear paneles informativos ricos en tu EE04
+画像を前の例で説明したテキストやその他の表示要素と組み合わせることで、EE04 上に豊富で情報量の多いダッシュボードを作成できます
 
-## Soporte Técnico y Discusión del Producto
+## 技術サポートと製品ディスカッション
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

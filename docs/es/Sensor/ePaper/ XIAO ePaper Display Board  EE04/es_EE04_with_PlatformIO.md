@@ -1,6 +1,6 @@
 ---
-description: PlatfromIO con EE04
-title: EE04 con PlatfromIO
+description: PlatfromIO con XIAO ePaper Display Board EE04 
+title: XIAO ePaper Display Board EE04 con PlatfromIO
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/pio_show_1.webp
@@ -10,7 +10,7 @@ last_update:
   date: 10/10/2025
   author: Zeller
 ---
-# Placa de Pantalla ePaper XIAO (ESP32-S3) EE04 con PlatfromIO
+# XIAO ePaper Display Board(ESP32-S3) EE04 con PlatfromIO
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_ui_1.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -22,24 +22,24 @@ Crucialmente, PlatformIO cierra la brecha para los desarrolladores familiarizado
 
 ### Preparación del Hardware
 
-Necesitas preparar una Placa de Pantalla ePaper XIAO EE04 junto con pantallas del tamaño soportado. La pantalla de tinta de 7.5 pulgadas de 800×480 con 24 pines utilizada en este tutorial es un ejemplo.
+Necesitas preparar una XIAO ePaper Display Board EE04 junto con pantallas del tamaño soportado. La pantalla de tinta de 7.5 pulgadas de 24 pines 800×480 utilizada en este tutorial es un ejemplo.
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>Placa de Pantalla ePaper XIAO (ESP32-S3) - EE04</th>
-        <th>eInk Monocromática de 7.5"</th>
+        <th>XIAO ePaper Display Board(ESP32-S3) - EE04</th>
+        <th>7.5" Monochrome eInk</th>
     </tr>
     <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:300, height:'auto'}}/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
         </a>
     </div></td>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/7.5-inch-elink_1.jpg" style={{width:300, height:'auto'}}/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
         </a>
     </div></td>
     </tr>
@@ -67,7 +67,7 @@ Abre VSCode, haz clic en Extensions, luego busca PlatformIO y selecciona instala
 - Name: Nombra tu proyecto
 - Board: Selecciona Seeed Studio XIAO ESP32S3
 - Framework: Selecciona Ardunio
-- Location: La ruta de los archivos del proyecto puede establecerse como una ruta personalizada o se puede seleccionar la ruta predeterminada.
+- Location: La ruta de los archivos de ingeniería puede establecerse como una ruta personalizada o se puede seleccionar la ruta predeterminada.
 - Haz clic en "Finish" y espera a que se complete la creación. Luego, abre el archivo del proyecto en el espacio de trabajo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_new_project_2.png" style={{width:800, height:'auto'}}/></div>
@@ -75,7 +75,7 @@ Abre VSCode, haz clic en Extensions, luego busca PlatformIO y selecciona instala
 ### Agregar la librería Seeed GFX
 
 :::tip
-Esta librería tiene la misma función que la librería TFT y no es compatible con ella. Si has instalado la librería TFT u otras librerías de pantalla similares, por favor desinstálalas primero.
+Esta librería tiene la misma función que la librería TFT y no es compatible con ella. Si has instalado la librería TFT u otras librerías de pantalla similares, por favor desinstálala primero.
 :::
 
 Usaremos la librería Seeed_GFX, que proporciona soporte integral para varios dispositivos de pantalla de Seeed Studio.
@@ -97,7 +97,7 @@ Usaremos la librería Seeed_GFX, que proporciona soporte integral para varios di
 [Herramienta de Configuración Seeed GFX](https://seeed-studio.github.io/Seeed_GFX/)
 
 - En la página de la herramienta, selecciona la especificación de pantalla que estás usando. Aquí, la opción seleccionada es una pantalla de papel electrónico monocromática de 7.5 pulgadas.
-- Selecciona la Placa de Pantalla ePaper XIAO EE04 para la placa controladora, y luego se generará el código del controlador correspondiente.
+- Selecciona la XIAO ePaper Display Board EE04 para la placa controladora, y luego se generará el código del controlador correspondiente.
 
 ```cpp
 #define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen （UC8179）
@@ -161,9 +161,9 @@ void loop()
 
 ### Botón de usuario
 
-El EE04 cuenta con tres botones programables por el usuario que pueden utilizarse para varios propósitos de control. Esta sección demuestra cómo leer los estados de los botones y responder a las pulsaciones de botones usando Arduino.
+La EE04 cuenta con tres botones programables por el usuario que pueden utilizarse para varios propósitos de control. Esta sección demuestra cómo leer los estados de los botones y responder a las pulsaciones de botones usando Arduino.
 
-En el EE04, los tres botones están conectados al ESP32-S3:
+En la EE04, los tres botones están conectados al ESP32-S3:
 
 - KEY1 (GPIO2_D1/A1)
 - KEY2 (GPIO3_D2/A2)

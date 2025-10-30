@@ -1,6 +1,6 @@
 ---
-description: 本文介绍如何在 ESPHome 中利用 reTerminal E 系列 ePaper 显示屏的硬件功能。
-title: 在 Home Assistant 中使用 EE04 ePaper 显示屏的 ESPHome 用法
+description: 本文介绍如何在 ESPHome 中利用 XIAO ePaper Display Board EE04 的硬件功能，并将其与 Home Assistant 集成。
+title: XIAO ePaper Display Board EE04 与 ESPHome
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
 slug: /cn/EE04_with_esphome_advanced
 sidebar_position: 2
@@ -12,7 +12,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# EE04 ePaper 显示屏与 ESPHome 配合 Home Assistant 使用
+# EE04 ePaper Display 与 ESPHome 配合 Home Assistant 使用
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:700, height:'auto'}}/></div><br />
 
@@ -30,7 +30,7 @@ Home Assistant 是一个功能强大的开源家庭自动化平台，允许您�
 
 - **本地控制**：与许多基于云的解决方案不同，Home Assistant 在您的网络上本地运行，确保您的数据保持私密，即使没有互联网连接，您的自动化也能正常工作。
 
-- **广泛的设备支持**：Home Assistant 集成了数千种不同的智能家居设备和服务，使其具有高度的通用性和面向未来的特性。
+- **广泛的设备支持**：Home Assistant 与数千种不同的智能家居设备和服务集成，使其具有高度的通用性和面向未来的特性。
 
 - **强大的自动化**：创建复杂的自动化规则，可以响应各种触发器，如时间、设备状态、传感器读数等。
 
@@ -40,9 +40,9 @@ Home Assistant 是一个功能强大的开源家庭自动化平台，允许您�
     <a class="get_one_now_item" href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 了解更多 🖱️</font></span></strong></a>
 </div>
 
-### 为什么 EE04 系列 ePaper 显示屏适合与 Home Assistant 配合使用？
+### 为什么 EE04 系列 ePaper Display 与 Home Assistant 配合使用？
 
-EE04 ePaper 显示屏是 Home Assistant 的绝佳伴侣，原因如下：
+EE04 ePaper Display 是 Home Assistant 的绝佳伴侣，原因如下：
 
 1. **节能高效**：电子纸显示屏仅在更新内容时消耗电力，非常适合显示持久信息，如天气预报、日历事件或系统状态。
 
@@ -52,26 +52,26 @@ EE04 ePaper 显示屏是 Home Assistant 的绝佳伴侣，原因如下：
 
 4. **灵活集成**：通过 ESPHome，显示屏与 Home Assistant 无缝集成，允许您以优雅、始终可见的格式显示智能家居系统中的任何数据。
 
-这些优势使 EE04 ePaper 显示屏成为为您的 Home Assistant 设置创建节能、始终在线信息显示屏的理想选择。
+这些优势使 EE04 ePaper Display 成为为您的 Home Assistant 设置创建节能、始终在线信息显示的理想选择。
 
 ### ESPHome 集成
 
-ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允许您使用简单的 YAML 配置文件创建自定义固件，然后可以刷写到您的设备上。对于 EE04 系列，ESPHome 作为重要的中间件，实现设备与 Home Assistant 之间的通信。
+ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允许您使用简单的 YAML 配置文件创建自定义固件，然后可以将其刷写到您的设备上。对于 EE04 系列，ESPHome 作为重要的中间件，实现设备与 Home Assistant 之间的通信。
 
-该系统通过将您的 YAML 配置转换为在 ESP 设备上运行的功能齐全的固件来工作。该固件处理连接到网络、与 Home Assistant 通信以及控制 ePaper 显示屏的所有复杂任务。当与 Home Assistant 结合使用时，ESPHome 为创建复杂的家庭自动化显示屏和控制器提供了强大的平台。
+该系统通过将您的 YAML 配置转换为在 ESP 设备上运行的功能齐全的固件来工作。该固件处理连接到网络、与 Home Assistant 通信以及控制 ePaper 显示屏的所有复杂任务。当与 Home Assistant 结合使用时，ESPHome 为创建复杂的家庭自动化显示和控制提供了强大的平台。
 
 让我们探索如何设置并充分利用这个多功能显示屏。
 
 ## 入门指南
 
-在本文的教程内容开始之前，您可能需要准备以下硬件。
+在本文教程内容开始之前，您可能需要准备以下硬件。
 
 ### 所需材料
 
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>XIAO ePaper 显示板 EE04</th>
+      <th>XIAO ePaper Display Board EE04</th>
       <th>Home Assistant Green</th>
     </tr>
     <tr>
@@ -98,7 +98,7 @@ Home Assistant Green 是自动化家居最简单、最注重隐私的方式。�
 我们建议在本教程中使用 Home Assistant Green 作为 Home Assistant 主机，或者您可以使用任何带有 Supervisor 的 Home Assistant 主机。
 
 :::tip 安装 Home Assistant
-我们还为一些 Seeed Studio 产品编写了如何安装 Home Assistant 的教程，请参考它们。
+我们还编写了如何为一些 Seeed Studio 产品安装 Home Assistant 的教程，请参考它们。
 
 - **[在 ODYSSEY-X86 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/ODYSSEY-X86-Home-Assistant/)**
 - **[在 LinkStar H68K/reRouter CM4 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/h68k-ha-esphome/)**
@@ -173,7 +173,7 @@ Home Assistant Green 是自动化家居最简单、最注重隐私的方式。�
 ***以下是 24 针连接器屏幕类型：***
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
+<TabItem value="1.54 Inch" label="1.54 英寸" default>
 
 ```yaml
 # define font to display words
@@ -203,7 +203,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Inch">
+<TabItem value="2.13 Inch" label="2.13 英寸">
 
 ```yaml
 # define font to display words
@@ -233,7 +233,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Inch">
+<TabItem value="2.9 Inch" label="2.9 英寸">
 
 ```yaml
 # define font to display words
@@ -264,7 +264,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Inch">
+<TabItem value="4.2 Inch" label="4.2 英寸">
 
 ```yaml
 # define font to display words
@@ -294,7 +294,7 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="5.83 Inch" label="5.83 英寸">
 
 ```yaml
 # define font to display words
@@ -323,7 +323,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="7.5 Inch" label="7.5 Inch" default>
+<TabItem value="7.5 Inch" label="7.5 英寸" default>
 
 ```yaml
 # define font to display words
@@ -360,7 +360,7 @@ display:
 ***以下是 50 针连接器屏幕类型：***
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3 英寸" default>
 
 :::tip
 7.3 英寸电子纸显示屏需要 ESPHome v10.15 或更高版本，因为该版本中添加了对此显示屏的支持。详细使用指南将很快在 Wiki 中更新。
@@ -373,7 +373,7 @@ display:
 点击 **INSTALL** 将代码安装到设备上，您将看到以下图像。
 
 <Tabs>
-<TabItem value='Install through browser'>
+<TabItem value='通过浏览器安装'>
 
 :::tip
 如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）距离您较远，我们建议使用此方法。您可以使用手边的计算机进行安装。
@@ -383,7 +383,7 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
-打开此网站，我们将在这里将固件上传到电子纸面板。
+打开此网站，我们将在此处将固件上传到电子纸面板。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/63.png" style={{width:800, height:'auto'}}/></div>
 
@@ -413,7 +413,7 @@ display:
 
 </TabItem>
 
-<TabItem value='Install through host'>
+<TabItem value='通过主机安装'>
 
 :::tip
 如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）就在附近，我们建议使用此方法，因为它更简单。
@@ -421,7 +421,7 @@ display:
 
 在将代码安装到设备之前，您需要使用 USB 线缆**将此设备连接到运行 Home Assistant 的 Raspberry Pi 或 HA Green（Yellow）等设备**。
 
-按照图像中的选项点击以将代码安装到设备。[设备在深度睡眠模式下找不到端口？](#port)
+按照图像中的选项点击以将代码安装到设备。[设备在深度睡眠模式下未找到端口？](#port)
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/6.png" style={{width:'70%', height:'auto'}}/></div>
@@ -434,7 +434,7 @@ display:
 
 </TabItem>
 
-<TabItem value='Install through Wi-Fi'>
+<TabItem value='通过 Wi-Fi 安装'>
 
 :::tip
 这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到电子纸面板。之后，您可以通过 wifi 上传。另外，请确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，以便此方法正常工作。
@@ -467,7 +467,7 @@ display:
 您可以通过复制下面的代码并将其粘贴到 Yaml 文件中的 `captive_portal` 代码行之后来使用此示例。
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
+<TabItem value="1.54 Inch" label="1.54 英寸" default>
 
 ```yaml
 spi:
@@ -495,7 +495,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Inch">
+<TabItem value="2.13 Inch" label="2.13 英寸">
 
 ```yaml
 spi:
@@ -523,7 +523,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Inch">
+<TabItem value="2.9 Inch" label="2.9 英寸">
 
 ```yaml
 spi:
@@ -552,7 +552,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Inch">
+<TabItem value="4.2 Inch" label="4.2 英寸">
 
 ```yaml
 spi:
@@ -580,7 +580,7 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="5.83 Inch" label="5.83 英寸">
 
 ```yaml
 spi:
@@ -607,7 +607,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="7.5 Inch-24Pin" label="7.5 Inch" default>
+<TabItem value="7.5 Inch-24Pin" label="7.5 英寸" default>
 
 ```yaml
 spi:
@@ -637,7 +637,7 @@ display:
 </Tabs>
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3 英寸" default>
 
 :::tip
 7.3 英寸电子纸显示屏需要 ESPHome v10.15 或更高版本，因为对该显示屏的支持是在该版本中添加的。详细使用指南将很快在 Wiki 中更新。
@@ -723,7 +723,7 @@ sensor:
 最后，添加显示部分的代码以使用上述这些值。完整代码如下：
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
+<TabItem value="1.54 Inch" label="1.54 英寸" default>
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -783,7 +783,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Inch">
+<TabItem value="2.13 Inch" label="2.13 英寸">
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -843,7 +843,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Inch">
+<TabItem value="2.9 Inch" label="2.9 英寸">
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -904,7 +904,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Inch">
+<TabItem value="4.2 Inch" label="4.2 英寸">
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -964,7 +964,7 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="5.83 Inch" label="5.83 英寸">
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -1023,7 +1023,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="7.5 Inch" label="7.5 Inch" default>
+<TabItem value="7.5 Inch" label="7.5 英寸" default>
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -1085,7 +1085,7 @@ display:
 </Tabs>
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3 英寸" default>
 
 :::tip
 7.3 英寸电子纸显示屏需要 ESPHome v10.15 或更高版本，因为对该显示屏的支持是在该版本中添加的。详细使用指南将很快在 Wiki 中更新。
@@ -1094,20 +1094,20 @@ display:
 </TabItem>
 </Tabs>
 
-编译上述代码并上传到您的设备后，您可能首先会看到屏幕上显示 **NaN**，请不要担心，这是正常的。这是因为设备尚未添加到 Home Assistant 环境中，所以 reTerminal 还无法获取 Home Assistant 数据。我们只需要按照以下步骤添加设备即可。
+编译上述代码并将其上传到您的设备后，您可能首先会看到屏幕上显示 **NaN**，请不要担心，这是正常的。这是因为设备尚未添加到 Home Assistant 环境中，所以 reTerminal 尚未能够获取 Home Assistant 数据。我们只需要按照以下步骤添加设备即可。
 
 #### 将 EE04 电子纸显示屏添加到 Home Assistant
 
 步骤 1. 刷写设备后，返回 Home Assistant 并导航到 **Settings → Devices & Services**。
 
-步骤 3. Home Assistant 应该会通过 mDNS 自动发现您的 EE04 电子纸显示屏设备。如果它出现在已发现设备部分，请点击 Configure 添加它。
+步骤 3. Home Assistant 应该会通过 mDNS 自动发现您的 EE04 电子纸显示屏设备。如果它出现在已发现设备部分，请点击 Configure 来添加它。
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome7.png" style={{width:900, height:'auto'}}/></div><br />
 
 步骤 4. 如果设备没有自动发现，请点击 Add Integration 并搜索 "ESPHome"。
 
-步骤 5. 输入您的 EE04 电子纸显示屏设备的 IP 地址，如果您设置了 API 加密密钥，也请输入。
+步骤 5. 输入您的 EE04 电子纸显示屏设备的 IP 地址以及 API 加密密钥（如果您设置了的话）。
 
 步骤 6. 连接后，您的 EE04 电子纸显示屏将作为设备出现在 Home Assistant 中，其所有传感器和组件都可用。
 
@@ -1155,7 +1155,7 @@ display:
 步骤 6. 在 `captive_portal` 部分之后，将以下代码添加到您的 ESPHome 配置文件中。此代码定义了两种图标字体大小，并配置显示屏显示天气图标。
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
+<TabItem value="1.54 Inch" label="1.54 英寸" default>
 
 ```yaml
 # define font to display words
@@ -1196,7 +1196,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Inch">
+<TabItem value="2.13 Inch" label="2.13 英寸">
 
 ```yaml
 # define font to display words
@@ -1237,7 +1237,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Inch">
+<TabItem value="2.9 Inch" label="2.9 英寸">
 
 ```yaml
 # define font to display words
@@ -1279,7 +1279,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Inch">
+<TabItem value="4.2 Inch" label="4.2 英寸">
 
 ```yaml
 # define font to display words
@@ -1320,7 +1320,7 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="5.83 Inch" label="5.83 英寸">
 
 ```yaml
 # define font to display words
@@ -1360,7 +1360,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="24 Pin" label="7.5 Inch" default>
+<TabItem value="24 Pin" label="7.5 英寸" default>
 
 ```yaml
 # define font to display words
@@ -1403,7 +1403,7 @@ display:
 </Tabs>
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3 英寸" default>
 
 :::tip
 7.3 英寸电子纸显示屏需要 ESPHome v10.15 或更高版本，因为对该显示屏的支持是在该版本中添加的。详细使用指南将很快在 Wiki 中更新。
@@ -1426,7 +1426,7 @@ display:
 
 #### 使用不同图标进行自定义
 
-Material Design Icons 库包含数千个可在项目中使用的图标。以下是查找和使用不同图标的方法：
+Material Design Icons 库包含数千个可在您的项目中使用的图标。以下是如何查找和使用不同图标的方法：
 
 步骤 1. 点击下方按钮访问 Material Design Icons 网站。
 
@@ -1466,7 +1466,7 @@ lambda: |-
 步骤 5. 保存更新的配置并将其上传到您的设备以查看新图标。
 
 :::tip
-对于天气仪表板，考虑使用 `F0590`（晴天）、`F0591`（多云）、`F0593`（雨天）和 `F059E`（有风）等图标。
+对于天气仪表板，考虑使用诸如 `F0590`（晴天）、`F0591`（多云）、`F0593`（雨天）和 `F059E`（有风）等图标。
 :::
 
 通过将这些图标与我们之前设置的 Home Assistant 天气数据相结合，您可以创建一个动态天气显示，使用适当的图标显示当前条件。
@@ -1511,7 +1511,7 @@ config/
 步骤 5. 在 `captive_portal` 部分之后，将以下代码添加到您的 ESPHome 配置文件中。此代码定义图像资源并配置显示屏以显示它。
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
+<TabItem value="1.54 Inch" label="1.54 英寸" default>
 
 ```yaml
 image:
@@ -1544,7 +1544,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Inch">
+<TabItem value="2.13 Inch" label="2.13 英寸">
 
 ```yaml
 image:
@@ -1577,7 +1577,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Inch">
+<TabItem value="2.9 Inch" label="2.9 英寸">
 
 ```yaml
 image:
@@ -1611,7 +1611,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Inch">
+<TabItem value="4.2 Inch" label="4.2 英寸">
 
 ```yaml
 image:
@@ -1644,7 +1644,7 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="5.83 Inch" label="5.83 英寸">
 
 ```yaml
 image:
@@ -1676,7 +1676,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="7.5 Inch" label="7.5 Inch" default>
+<TabItem value="7.5 Inch" label="7.5 英寸" default>
 
 ```yaml
 image:
@@ -1711,7 +1711,7 @@ display:
 </Tabs>
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3 英寸" default>
 
 :::tip
 7.3 英寸电子纸显示屏需要 ESPHome v10.15 或更高版本，因为对该显示屏的支持是在该版本中添加的。详细使用指南将很快在 Wiki 中更新。
@@ -1727,7 +1727,7 @@ display:
 
 #### 高级图像技术
 
-您可以使用以下附加技术来增强图像显示：
+您可以使用这些额外技术来增强图像显示：
 
 **定位图像**
 
@@ -1778,7 +1778,7 @@ lambda: |-
 请记住，电子纸显示屏的刷新率有限。`update_interval: 300s` 设置意味着您的显示屏只会每 5 分钟刷新一次。根据您的需要调整此值，但请注意频繁刷新可能会缩短电子纸显示屏的使用寿命。
 :::
 
-通过将图像与前面示例中涵盖的文本和其他显示元素相结合，您可以在 EE04 上创建丰富、信息丰富的仪表板
+通过将图像与前面示例中涵盖的文本和其他显示元素相结合，您可以在 EE04 上创建丰富的信息仪表板
 
 ## 技术支持与产品讨论
 
