@@ -123,7 +123,7 @@ EEZ Studio 是一个现代化的可视化编程和 UI 设计环境，主要用�
 在 EEZ Studio 界面顶部，点击 "CREATE" 按钮。
 在左侧的项目模板列表中，找到并选择 "LVGL" 项目。
 
-- `Name:` 为您的项目文件命名，为了方便解释我们文章中的后续内容，我们在这里将其称为 EEZ_UI。
+- `Name:` 为您的项目文件命名，为了方便在我们文章中解释后续内容，我们在这里将其称为 EEZ_UI。
 - `LVGL Version:` 指定项目使用的 LVGL 库版本。从下拉菜单中选择 9.x。
 - `Location:` 指定项目文件在您计算机上的存储路径。默认路径通常指向您的 EEZ Studio 下载或安装目录中的默认项目文件夹（例如，C:\Users\YourUser\Documents\EEZ Studio\Projects 或类似路径）。如果您需要更改存储位置，请点击 Location 文本框右侧的文件夹图标（或省略号 ...）。
 
@@ -316,7 +316,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ## ePaper 显示屏编程
 
-**reTerminal E1001 配备 7.5 英寸黑白 ePaper 显示屏**，而 **reTerminal E1002 配备 7.3 英寸全彩 ePaper 显示屏**。两种显示屏都在各种光照条件下提供出色的可视性，功耗极低，非常适合需要始终显示且功耗最小的工业应用。
+**reTerminal E1001 配备 7.5 英寸黑白 ePaper 显示屏**，而 **reTerminal E1002 配备 7.3 英寸全彩 ePaper 显示屏**。两种显示屏都在各种照明条件下提供出色的可视性，功耗极低，非常适合需要始终开启显示且功耗最小的工业应用。
 
 ### 使用 Seeed_GFX 库
 
@@ -399,13 +399,13 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 将以下项目文件（包括四个文件）移植到 Arduino 库中，以便在 Arduino 项目中使用。
 `EEZ_UI 文件`是在 EEZStudio 构建过程中生成的。您需要找到保存它的路径。
 
-- 🔗 **[ZIP]** [代码](https://files.seeedstudio.com/wiki/EEZStudio/E1002_EEZStudioCode.zip)
+- 🔗 **[ZIP]** [代码](https://files.seeedstudio.com/wiki/EEZStudio/E1002-EEZStudioCode.zip)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/7.jpg" style={{width:800, height:'auto'}}/></div>
 
 <br></br>
 
-以下是运行 UI 的主要 Arduino 代码：
+这是运行 UI 的主要 Arduino 代码：
 三个按钮对应三个不同的屏幕，从绿色开始：依次为 HOME\Workstation\Plant。
 
 ```cpp
@@ -536,14 +536,12 @@ void loop()
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您对我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

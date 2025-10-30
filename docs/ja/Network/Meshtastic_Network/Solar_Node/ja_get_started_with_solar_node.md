@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /ja/get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 09/11/2025
+  date: 10/29/2025
   author: Michelle
 ---
 
@@ -21,25 +21,27 @@ last_update:
 
 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)にアクセスしてください。
 
-ターゲットデバイスを`Seeed SenseCAP Solar Node`に選択し、最新のファームウェアを選択してから、`Flash`をクリックしてください。
+対象デバイスを`Seeed SenseCAP Solar Node`に選択し、最新のファームウェアを選択してから、`Flash`をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-solar.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
 
-`Enter DFU Mode`をクリックすると、`XIAO-xxx`という名前のシリアルポートが表示されるので、それをクリックして接続してください。`XIAO-xxx`という名前のドライバが表示されるはずです。
+`Enter DFU Mode`をクリックすると、`XIAO-xxx`という名前のシリアルポートが表示されるので、それをクリックして接続すると、`XIAO-xxx`という名前のドライバが表示されるはずです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-UF2ファイルをDFUドライブにドラッグしてください。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされます。
+UF2ファイルをDFUドライブにドラッグします。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされるはずです。
 
 ### バッテリーとGPSモジュールの取り付け（オプション）
 
 :::tip
-推奨バッテリー：18650リチウムイオンバッテリー3.6V（ボタントップ）。
+バッテリーを取り付けまたは交換する必要がある場合は、`Button-top`18650（3.6V）バッテリーを使用してください。
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
+P1-Proバージョンには内蔵バッテリーとGPSモジュールが搭載されており、P1バージョンの場合、必要に応じてユーザーが手動でバッテリーとGPSモジュールを取り付ける必要があります。
 :::
 
-P1-Proバージョンには内蔵バッテリーとGPSモジュールが搭載されています。P1バージョンの場合、必要に応じてユーザーがバッテリーとGPSモジュールを手動で取り付ける必要があります。
+
 
 - ステップ1：すべてのネジとカバーを取り外します。
 
@@ -61,7 +63,11 @@ P1-Proバージョンには内蔵バッテリーとGPSモジュールが搭載�
 
 ### デバイスの電源投入
 
-USBケーブルを接続してデバイスをアクティベートしてください。
+初回使用時は、USBケーブルを接続してデバイスをアクティベートする必要があります。
+
+:::tip
+ボタンを押してもデバイスが応答しない場合は、まず充電してください。急速充電器は使用しないでください。
+:::
 
 ### アプリ経由での接続
 
@@ -70,9 +76,9 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="iOS アプリ">
 
-- Bluetoothパネルでターゲットデバイスを選択します。
+- Bluetoothパネルで対象デバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
@@ -82,9 +88,9 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="Android App">
+<TabItem value="android" label="Android アプリ">
 
-- `+`をクリックしてターゲットデバイスを選択します。
+- `+`をクリックして対象デバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
@@ -97,16 +103,16 @@ import TabItem from '@theme/TabItem';
 
 ### パラメータの設定
 
-メッシュ通信を開始するには、地域を設定する必要があります。この設定はデバイスが使用する周波数範囲を制御し、地域の場所に応じて設定する必要があります。
+メッシュ通信を開始するには、地域を設定する必要があります。この設定は、デバイスが使用する周波数範囲を制御し、地域の場所に応じて設定する必要があります。
 
 <Tabs>
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="iOS アプリ">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Android App">
+<TabItem value="android" label="Android アプリ">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
@@ -114,7 +120,7 @@ import TabItem from '@theme/TabItem';
 
 **地域リスト**
 
-|**地域コード**|**説明**|**周波数範囲 (MHz)**|**デューティサイクル (%)**|**電力制限 (dBm)**|
+|**地域コード**|**説明**|**周波数範囲（MHz）**|**デューティサイクル（%）**|**電力制限（dBm）**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|未設定|N/A|N/A|N/A|
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
@@ -131,7 +137,7 @@ import TabItem from '@theme/TabItem';
 ## 設置
 
 :::danger note
-デバイスは長期間屋外で使用されるため、パネルを水平位置に設置することは避けてください。水の蓄積を防ぐため、傾斜または斜めの設置をお勧めします。また、すべてのネジがしっかりと締められ、カバーが適切に取り付けられていることを確認してください。防水保護を強化するため、追加のシール対策を検討することもできます。
+デバイスは長期間屋外で使用されるため、パネルを水平位置に設置することは避けてください。水の蓄積を防ぐため、傾斜または斜めの設置をお勧めします。さらに、すべてのネジがしっかりと締められ、カバーが適切に取り付けられていることを確認してください。防水保護を強化するために、追加のシール対策を検討することもできます。
 :::
 
 - **部品リスト**
@@ -184,7 +190,7 @@ import TabItem from '@theme/TabItem';
 
 ### 完全な設置ガイダンス
 
-- ビデオを通じて全体の設置と初期化プロセスを完了できます。
+- ビデオを通じて、設置と初期化プロセス全体を完了できます。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/smQe7G0Bbsk?si=kcB8BdoxiwpZqB4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -228,14 +234,14 @@ import TabItem from '@theme/TabItem';
     <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
   </tr>
   <tr>
-    <td>I2Cキーボード</td>
+    <td>I2C キーボード</td>
     <td>CardKB</td>
   </tr>
 </table>
 
 ### アンテナのアップグレード（オプション）
 
-- このビデオを見て、アンテナをファイバーグラス製のものに交換できます。
+- この動画を見て、アンテナをファイバーグラス製のものに交換することができます。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -246,7 +252,7 @@ import TabItem from '@theme/TabItem';
 ### 消費電力
 
 消費電力は主にデータ送信頻度やGPS更新レートなどの要因に依存します。
-以下の数値は参考値のみであり、実際の使用条件によって実際の消費量は異なる場合があります。
+以下の数値は参考値であり、実際の使用条件によって実際の消費量は異なる場合があります。
 
 - **シャットダウンスリープモード消費電力**
 
@@ -281,4 +287,5 @@ import TabItem from '@theme/TabItem';
 
       最良の信号効果を得るために、干渉が最小限の開放的で障害物のない場所でデバイスを使用してください。
 
-詳細については[Solar Node Battery Life Calculation Table](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Solar%20Node%20Battery%20Life%20Calculation%20Table.xlsx)をご確認ください
+## リソース
+- [ソーラーノードバッテリー寿命計算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)

@@ -92,10 +92,6 @@ docker run hello-world
 sudo apt install docker-compose
 ```
 
-完美，我将把您的**数据包转发器设置**重新格式化为您使用的相同结构化 wiki 样式：
-
----
-
 ## 运行数据包转发器
 
 **WM1302 LoRa 集中器**需要 **Semtech 数据包转发器**在 LoRa 模块和 ChirpStack 之间中继数据。reComputer R11 为 LoRa 模块提供了预构建的设置指南。
@@ -142,10 +138,6 @@ nano global_conf.json.sx1250.US915
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
-这是您的**"制作网关"部分**，采用相同的 wiki 样式：
-
----
-
 ## 启动网关
 
 要下载 docker Compose 文件，您需要在 reComputer 上访问此页面并下载它。[链接](https://www.chirpstack.io/docs/getting-started/docker.html)
@@ -168,7 +160,6 @@ nano global_conf.json.sx1250.US915
       - mosquitto
 
 ```
-
 
 安装 ChirpStack 后，您可以注册您的 **R11 LoRa 网关**并开始处理数据。
 
@@ -508,7 +499,6 @@ function toBinary(arr) {
 5. 输入 **Application Key** 并点击 **Submit**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image9.png" alt="pir" width={800} height="auto" /></p>
-
 
 ## 检查设备状态
 
