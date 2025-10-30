@@ -1,6 +1,6 @@
 ---
-description: PlatfromIO 与 EE04
-title: EE04 与 PlatfromIO
+description: PlatfromIO 与 XIAO ePaper Display Board EE04 
+title: XIAO ePaper Display Board EE04 与 PlatfromIO
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/pio_show_1.webp
@@ -75,7 +75,7 @@ PlatformIO 是一个强大且高度可扩展的嵌入式系统开发生态系统
 ### 添加 Seeed GFX 库
 
 :::tip
-此库与 TFT 库具有相同功能但不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。
+此库与 TFT 库具有相同功能，但不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。
 :::
 
 我们将使用 Seeed_GFX 库，它为各种 Seeed Studio 显示设备提供全面支持。
@@ -272,28 +272,28 @@ void loop() {
 
 2. **`digitalRead(pin)`**  
    - 功能：读取指定引脚的电平状态（HIGH 或 LOW）。  
-   - 在循环中用于实时获取按钮的当前状态，帮助判断按钮是否被激活。
+   - 在循环中用于实时获取按钮的当前状态，这有助于判断按钮是否被激活。
 
 3. **`Serial.begin(baud)`** 和 **`Serial.println()`**  
-   - 前者初始化串口通信（波特率为 115200），后者向串口输出文本信息。用于在监视器中显示按钮状态。
+   - 前者初始化串口通信（波特率为 115200），后者向串口输出文本信息。这用于在监视器中显示按钮状态。
 
 4. **`delay(ms)`**  
    - 功能：暂停程序指定的毫秒数。  
-   - 这里用于两个场景：首先，在 `setup()` 中等待串口连接；其次，在按钮状态改变后延迟 50ms。这通过"等待抖动消失"实现硬件防抖，防止误触发。
+   - 这里用于两种场景：首先，在 `setup()` 中等待串口连接；其次，在按钮状态改变后延迟 50ms。这通过"等待抖动消失"来实现硬件防抖，防止误触发。
 
 - **核心逻辑分析**
 
 1. **状态比较检测**  
    - 记录每个按钮的"上一次状态"（如 `lastKey0State`），并在循环中读取"当前状态"。  
-   - 如果"当前状态 ≠ 上一次状态"，则表示按钮被激活（按下或释放）。
+   - 如果"当前状态 ≠ 上一次状态"，则表示按钮已被激活（按下或释放）。
 
 2. **按钮动作判断**  
-   - 当状态从 HIGH 变为 LOW 时：判断为"按下"（输出 "pressed"）。  
-   - 当状态从 LOW 变为 HIGH 时：判断为"释放"（输出 "released"）。  
+   - 当状态从 HIGH 变为 LOW 时：判断为"按下"（输出"pressed"）。  
+   - 当状态从 LOW 变为 HIGH 时：判断为"释放"（输出"released"）。  
    - 每次状态改变后，将"上一次状态"更新为当前状态，作为下次比较的参考。
 
 3. **循环执行**  
-   - `loop()` 函数无限循环运行，重复执行"读取状态 → 比较状态 → 输出结果"的过程，实现实时检测。
+   - `loop()` 函数在无限循环中运行，重复执行"读取状态 → 比较状态 → 输出结果"的过程，以实现实时检测。
 
 - 效果演示：
 
@@ -383,7 +383,7 @@ void loop() {
     - **作用**：初始化后重复运行，用于定期电压检测和输出。
     - **关键操作**：
       - 调用 `readBatteryVoltage()` 获取当前电池电压。
-      - 使用 `Serial.print()`/`Serial.println()` 打印格式化的电压（保留 2 位小数，如 "Battery Voltage: 3.82 V"）。
+      - 使用 `Serial.print()`/`Serial.println()` 打印格式化的电压（保留 2 位小数，如"Battery Voltage: 3.82 V"）。
       - `delay(500)`：设置测量间隔为 0.5 秒。
 
   - `readBatteryVoltage()`（核心测量函数）
@@ -393,7 +393,7 @@ void loop() {
       - **平均采样**：读取 ADC 10 次，求和后取平均值（减少噪声）。
       - `analogRead(BATTERY_ADC)`：从引脚 A0 读取模拟电压（返回 0~4095）。
       - `delay(2)`：采样间隔 2ms 以保证稳定性。
-      - **电压计算**：使用公式 `(adcValue / 4095.0) * 3.3 * VOLTAGE_DIVIDER_RATIO` 获得真实电池电压。
+      - **电压计算**：使用公式 `(adcValue / 4095.0) * 3.3 * VOLTAGE_DIVIDER_RATIO` 获取真实电池电压。
       - 返回计算得到的电压（float 类型）供 `loop()` 使用。
 
 - 效果演示：
@@ -635,8 +635,8 @@ void loop()
 
 按下 EE04 板上的按钮可以切换到相应的 UI 界面：
 
-- KEY1：车辆仪表盘
-- KEY2：智能家居仪表盘
+- KEY1：车辆仪表板
+- KEY2：智能家居仪表板
 - KEY3：超级马里奥
 - 默认：超级马里奥
 

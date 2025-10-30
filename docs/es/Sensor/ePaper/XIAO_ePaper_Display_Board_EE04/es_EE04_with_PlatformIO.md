@@ -1,28 +1,28 @@
 ---
-description: PlatfromIO with EE04
-title: EE04 with PlatfromIO
+description: PlatfromIO con XIAO ePaper Display Board EE04 
+title: XIAO ePaper Display Board EE04 con PlatfromIO
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/pio_show_1.webp
 sidebar_position: 1
-slug: /ja/ee04_with_platformio
+slug: /es/ee04_with_platformio
 last_update:
   date: 10/10/2025
   author: Zeller
 ---
-# XIAO ePaper Display Board(ESP32-S3) EE04 with PlatfromIO
+# XIAO ePaper Display Board(ESP32-S3) EE04 con PlatfromIO
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_ui_1.jpg" style={{width:500, height:'auto'}}/></div>
 
-## PlatformIO の紹介
+## Introducción a PlatformIO
 
-PlatformIO は、組み込みシステム向けに設計された強力で高度に拡張可能な開発エコシステムです。膨大な数の開発ボードとマイクロコントローラーのサポートをシームレスに統合し、比類のない柔軟性を提供します。PlatformIO を際立たせているのは、その優れたスケーラビリティです。特定のボードがネイティブでサポートされていない場合でも、そのアーキテクチャにより、カスタムボード定義を簡単に作成できます。
+PlatformIO se presenta como un ecosistema de desarrollo potente y altamente extensible diseñado para sistemas embebidos. Integra sin problemas el soporte para una amplia gama de placas de desarrollo y microcontroladores, ofreciendo una flexibilidad sin igual. Lo que distingue a PlatformIO es su notable escalabilidad: incluso si tu placa específica no está soportada nativamente, su arquitectura permite definiciones de placas personalizadas de manera sencilla.
 
-重要なことに、PlatformIO は Arduino に慣れ親しんだ開発者のギャップを埋め、関連するライブラリを含めるだけで Arduino スタイルのコードのコンパイルとデプロイを可能にします。
+Crucialmente, PlatformIO cierra la brecha para los desarrolladores familiarizados con Arduino, permitiendo la compilación e implementación de código estilo Arduino simplemente incluyendo las librerías relevantes.
 
-### ハードウェアの準備
+### Preparación del Hardware
 
-サポートされているサイズのスクリーンと一緒に XIAO ePaper Display Board EE04 を準備する必要があります。このチュートリアルでは、24ピン 800×480 7.5インチのインクスクリーンを例として使用します。
+Necesitas preparar una XIAO ePaper Display Board EE04 junto con pantallas del tamaño soportado. La pantalla de tinta de 7.5 pulgadas de 24 pines 800×480 utilizada en este tutorial es un ejemplo.
 <div class="table-center">
 <table align="center">
     <tr>
@@ -33,71 +33,71 @@ PlatformIO は、組み込みシステム向けに設計された強力で高度
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:300, height:'auto'}}/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
         </a>
     </div></td>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/7.5-inch-elink_1.jpg" style={{width:300, height:'auto'}}/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
         </a>
     </div></td>
     </tr>
  </table>
 </div>
 
-### Vscode のダウンロード
+### Descargar Vscode
 
-使用しているシステムに応じて [Vscode](https://code.visualstudio.com/download) をダウンロードしてください
+Descarga según el sistema que estés usando [Vscode](https://code.visualstudio.com/download)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
-### PlatformIO のインストール
+### Instalar PlatformIO
 
-VSCode を開き、Extensions をクリックし、PlatformIO を検索してインストールを選択します。インストールが完了したら、VSCode を再起動します。
+Abre VSCode, haz clic en Extensions, luego busca PlatformIO y selecciona instalar. Después de que se complete la instalación, reinicia VSCode.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:800, height:'auto'}}/></div>
 
-### 新しいプロジェクト
+### Nuevo Proyecto
 
-- PIO Home インターフェースを開き、`New Project` を選択します
+- Abre la interfaz PIO Home y selecciona `New Project`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_new_project_1.png" style={{width:800, height:'auto'}}/></div>
 
-- Name: プロジェクト名を入力します
-- Board: Seeed Studio XIAO ESP32S3 を選択します
-- Framework: Ardunio を選択します
-- Location: エンジニアリングファイルのパスは、カスタムパスとして設定するか、デフォルトパスを選択できます。
-- "Finish" をクリックして、作成が完了するまで待ちます。その後、ワークスペースでプロジェクトファイルを開きます。
+- Name: Nombra tu proyecto
+- Board: Selecciona Seeed Studio XIAO ESP32S3
+- Framework: Selecciona Ardunio
+- Location: La ruta de los archivos de ingeniería puede establecerse como una ruta personalizada o se puede seleccionar la ruta predeterminada.
+- Haz clic en "Finish" y espera a que se complete la creación. Luego, abre el archivo del proyecto en el espacio de trabajo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_new_project_2.png" style={{width:800, height:'auto'}}/></div>
 
-### Seeed GFX ライブラリの追加
+### Agregar la librería Seeed GFX
 
 :::tip
-このライブラリは TFT ライブラリと同じ機能を持ち、互換性がありません。TFT ライブラリまたは他の類似のディスプレイライブラリをインストールしている場合は、まずアンインストールしてください。
+Esta librería tiene la misma función que la librería TFT y no es compatible con ella. Si has instalado la librería TFT u otras librerías de pantalla similares, por favor desinstálala primero.
 :::
 
-様々な Seeed Studio ディスプレイデバイスの包括的なサポートを提供する Seeed_GFX ライブラリを使用します。
+Usaremos la librería Seeed_GFX, que proporciona soporte integral para varios dispositivos de pantalla de Seeed Studio.
 
-**ステップ 1.** GitHub から Seeed_GFX ライブラリをダウンロードします：
+**Paso 1.** Descarga la librería Seeed_GFX desde GitHub:
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>Descargar la Librería</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-**ステップ 2.** 抽出したファイルをプロジェクトファイルの `lib` ディレクトリに移動します。
+**Paso 2.** Mueve los archivos extraídos al directorio `lib` de los archivos del proyecto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_add_library_1.png" style={{width:800, height:'auto'}}/></div>
 
-**ステップ 3.** `driver.h` ファイルを追加します
+**Paso 3.** Agregar archivo `driver.h`
 
-[Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/)
+[Herramienta de Configuración Seeed GFX](https://seeed-studio.github.io/Seeed_GFX/)
 
-- ツールページで、使用しているスクリーンの仕様を選択します。ここでは、7.5インチモノクロ電子ペーパースクリーンが選択されています。
-- ドライバーボードに XIAO ePaper Display Board EE04 を選択すると、対応するドライバーコードが生成されます。
+- En la página de la herramienta, selecciona la especificación de pantalla que estás usando. Aquí, la opción seleccionada es una pantalla de papel electrónico monocromática de 7.5 pulgadas.
+- Selecciona la XIAO ePaper Display Board EE04 para la placa controladora, y luego se generará el código del controlador correspondiente.
 
 ```cpp
 #define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen （UC8179）
@@ -105,19 +105,19 @@ VSCode を開き、Extensions をクリックし、PlatformIO を検索してイ
 ```
 
 :::tip
-間違った選択をすると、スクリーンには何も表示されません。
-そのため、デバイスやコンポーネントのタイプを確認してください。
+Si haces la elección incorrecta, la pantalla no mostrará nada.
+Así que por favor asegúrate del tipo de tus dispositivos o componentes.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_add_driver_1.png" style={{width:800, height:'auto'}}/></div>
 
-- PlatfromIO プロジェクトファイルの `lib` ディレクトリの下に新しい `driver` フォルダを作成し、`driver.h` ファイルを追加します。生成されたヘッダーファイルのコードをコピーし、Ctrl + S を押して保存します。
+- Crea una nueva carpeta `driver` bajo el directorio `lib` del archivo del proyecto PlatfromIO, luego agrega el archivo `driver.h`. Copia el código del archivo de encabezado generado y presiona Ctrl + S para guardar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_add_driver_2.png" style={{width:800, height:'auto'}}/></div>
 
-### アップロード
+### Cargar
 
-コードを `main.cpp` にコピーし、`Build` をクリックし、完了後にアップロードします。
+Copia el código a `main.cpp`, haz clic en `Build`, y después de completarse, carga.
 
 ```cpp
 #include "TFT_eSPI.h"
@@ -155,25 +155,25 @@ void loop()
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_upload_2.png" style={{width:800, height:'auto'}}/></div>
 
-- 効果のデモンストレーション
+- Demostración del efecto
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_show_1.jpg" style={{width:800, height:'auto'}}/></div>
 
-### ユーザーボタン
+### Botón de usuario
 
-EE04 には、様々な制御目的に使用できる3つのユーザープログラマブルボタンが搭載されています。このセクションでは、Arduino を使用してボタンの状態を読み取り、ボタンの押下に応答する方法を説明します。
+La EE04 cuenta con tres botones programables por el usuario que pueden utilizarse para varios propósitos de control. Esta sección demuestra cómo leer los estados de los botones y responder a las pulsaciones de botones usando Arduino.
 
-EE04 では、3つのボタンが ESP32-S3 に接続されています：
+En la EE04, los tres botones están conectados al ESP32-S3:
 
 - KEY1 (GPIO2_D1/A1)
 - KEY2 (GPIO3_D2/A2)
 - KEY3 (GPIO5_D4/A4)
 
-すべてのボタンはアクティブローで、押されたときに LOW を読み取り、離されたときに HIGH を読み取ります。
+Todos los botones son activos-bajo, lo que significa que leen LOW cuando se presionan y HIGH cuando se liberan.
 
-基本的なボタン読み取りの例
+Ejemplo Básico de Lectura de Botones
 
-この例では、ボタンの押下を検出し、シリアルモニターにメッセージを出力する方法を説明します。
+Este ejemplo demuestra cómo detectar pulsaciones de botones e imprimir mensajes al monitor serie.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/39.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -262,55 +262,55 @@ void loop() {
 }
 ```
 
-コード説明：
+Explicación del Código:
 
-- **コア機能分析**
+- **Análisis de Funciones Principales**
 
 1. **`pinMode(pin, mode)`**  
-   - 機能：ピンモードを設定します。  
-   - ここでは`INPUT_PULLUP`モードを使用して内部プルアップ抵抗を有効にします。これにより、ボタンが押されていない時はピンがデフォルトで高レベル（HIGH）を出力し、ボタンが押された時（グランドに接続される）は低レベル（LOW）を出力します。
+   - Función: Configura el modo del pin.  
+   - El modo `INPUT_PULLUP` se utiliza aquí para habilitar la resistencia pull-up interna. Esto hace que el pin genere un nivel alto (HIGH) por defecto cuando el botón no está presionado, y genere un nivel bajo (LOW) cuando el botón está presionado (ya que se conecta a tierra).
 
 2. **`digitalRead(pin)`**  
-   - 機能：指定されたピンのレベル状態（HIGHまたはLOW）を読み取ります。  
-   - ループ内でボタンの現在の状態をリアルタイムで取得するために使用され、ボタンがアクティブになったかどうかを判断するのに役立ちます。
+   - Función: Lee el estado del nivel (HIGH o LOW) del pin especificado.  
+   - Se utiliza en el bucle para obtener el estado actual del botón en tiempo real, lo que ayuda a determinar si el botón ha sido activado.
 
-3. **`Serial.begin(baud)`** と **`Serial.println()`**  
-   - 前者はシリアル通信を初期化し（ボーレート115200）、後者はシリアルポートにテキスト情報を出力します。これはモニターでボタンの状態を表示するために使用されます。
+3. **`Serial.begin(baud)`** y **`Serial.println()`**  
+   - El primero inicializa la comunicación serie (con una velocidad de baudios de 115200), mientras que el segundo envía información de texto al puerto serie. Esto se utiliza para mostrar el estado del botón en el monitor.
 
 4. **`delay(ms)`**  
-   - 機能：指定されたミリ秒数だけプログラムを一時停止します。  
-   - ここでは2つのシナリオで使用されます：まず、`setup()`でシリアルポート接続を待つため；次に、ボタンの状態が変化した後に50ms遅延させます。これは「ジッターが消えるのを待つ」ことでハードウェアデバウンスを実現し、誤トリガーを防ぎます。
+   - Función: Pausa el programa durante un número específico de milisegundos.  
+   - Se utiliza en dos escenarios aquí: primero, para esperar la conexión del puerto serie en `setup()`; segundo, para retrasar 50ms después de que cambie el estado del botón. Esto logra el anti-rebote por hardware "esperando a que desaparezca la vibración", evitando activaciones falsas.
 
-- **コアロジック分析**
+- **Análisis de Lógica Principal**
 
-1. **状態比較検出**  
-   - 各ボタンの「前の状態」（`lastKey0State`など）を記録し、ループで「現在の状態」を読み取ります。  
-   - 「現在の状態 ≠ 前の状態」の場合、ボタンがアクティブになった（押されたまたは離された）ことを示します。
+1. **Detección por Comparación de Estados**  
+   - Registra el "estado anterior" de cada botón (como `lastKey0State`), y lee el "estado actual" en el bucle.  
+   - Si el "estado actual ≠ estado anterior", indica que el botón ha sido activado (presionado o liberado).
 
-2. **ボタンアクション判定**  
-   - 状態がHIGHからLOWに変化した場合：「押された」と判定（"pressed"を出力）。  
-   - 状態がLOWからHIGHに変化した場合：「離された」と判定（"released"を出力）。  
-   - 各状態変化後、「前の状態」を現在の状態に更新し、次の比較の参照として使用します。
+2. **Juicio de Acción del Botón**  
+   - Cuando el estado cambia de HIGH a LOW: se determina como "presionado" (muestra "pressed").  
+   - Cuando el estado cambia de LOW a HIGH: se determina como "liberado" (muestra "released").  
+   - Después de cada cambio de estado, actualiza el "estado anterior" al estado actual, que sirve como referencia para la siguiente comparación.
 
-3. **ループ実行**  
-   - `loop()`関数は無限ループで実行され、「状態を読み取る → 状態を比較する → 結果を出力する」プロセスを繰り返し実行してリアルタイム検出を実現します。
+3. **Ejecución del Bucle**  
+   - La función `loop()` se ejecuta en un bucle infinito, ejecutando repetidamente el proceso de "leer el estado → comparar el estado → mostrar el resultado" para lograr detección en tiempo real.
 
-- 効果デモンストレーション：
+- Demostración del Efecto:
 
-シリアルモニターでシリアルポートの状態を表示できます。
+El Monitor Serie puede mostrar el estado del puerto serie.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_button_1.png" style={{width:800, height:'auto'}}/></div>
 
-### バッテリー電圧
+### Voltaje de la Batería
 
-- XIAO ePaper Display Board EE04は3.7V - 4.2Vリチウムバッテリーで駆動されます。さらに、電圧を測定してバッテリー電圧をリアルタイムで監視するためのADCインターフェースがあります。
-- ADC測定ピンは`A0 (GPIO1)`で、ADC有効ピンは`D5 (GPIO_6)`です。
+- La Placa de Pantalla ePaper XIAO EE04 está alimentada por una batería de litio de 3.7V - 4.2V. Además, hay una interfaz ADC para que puedas medir el voltaje y monitorear el voltaje de la batería en tiempo real.
+- El pin de medición ADC es `A0 (GPIO1)`, y el pin de habilitación ADC es `D5 (GPIO_6)`.
 
-接続：
+Conectar：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_battery_0.png" style={{width:600, height:'auto'}}/></div><br/>
 
-バッテリー電圧を監視するプログラムです。参考用です。
+El programa para monitorear el voltaje de la batería. Es solo para referencia.
 
 ```cpp
 #include <Arduino.h>
@@ -358,76 +358,76 @@ void loop() {
 }
 ```
 
-コード説明：
+Explicación del Código:
 
-- 主な機能：
+- Funciones Principales:
 
-  - **バッテリー電圧取得**：ADCピンを介して抵抗分割されたバッテリー電圧を読み取ります（バッテリー電圧がArduinoのADC基準電圧を超える可能性があるため、まず分割が必要です）。
-  - **精度最適化**：複数のサンプルを平均化することで回路ノイズ干渉を減らします。
-  - **電圧変換**：ADCのデジタル信号を実際のバッテリー電圧に変換します（電圧分割比と基準電圧を考慮）。
-  - **シリアル出力**：測定された電圧を定期的にシリアルポート経由で出力し、外部デバイス（コンピューターなど）で確認できるようにします。
+  - **Adquisición de Voltaje de Batería**: Leer el voltaje de batería dividido por resistencias a través del pin ADC (el voltaje de la batería puede exceder el voltaje de referencia ADC de Arduino, requiriendo división primero).
+  - **Optimización de Precisión**: Reducir la interferencia de ruido del circuito promediando múltiples muestras.
+  - **Conversión de Voltaje**: Convertir la señal digital del ADC al voltaje real de la batería (considerando la relación de división de voltaje y el voltaje de referencia).
+  - **Salida Serie**: Imprimir periódicamente el voltaje medido a través del puerto serie para que dispositivos externos (ej., computadora) puedan verlo.
 
-- コア機能と役割
+- Funciones Principales y Roles
 
-  - `setup()`（初期化関数）
+  - `setup()` (Función de Inicialización)
 
-    - **役割**：プログラム開始時に一度実行され、ハードウェアとパラメータを設定します。
-    - **主要操作**：
-      - `Serial.begin(115200)`：シリアル通信を初期化（ボーレート115200）して電圧データを出力します。
-      - `analogReadResolution(12)`：ADC解像度を12ビット（読み取り範囲：0〜4095）に設定してより高い精度を実現します。
-      - `pinMode(BATTERY_ADC, INPUT)`：バッテリー検出ピン（A0）をアナログ信号用の入力モードに設定します。
-      - `pinMode(ADC_EN, OUTPUT)` & `digitalWrite(ADC_EN, HIGH)`：ADCモジュールを有効にします（低消費電力用：測定時のみオン）。
+    - **Rol**: Se ejecuta una vez al inicio del programa para configurar hardware y parámetros.
+    - **Operaciones Clave**:
+      - `Serial.begin(115200)`: Inicializar comunicación serie (velocidad de baudios 115200) para salida de datos de voltaje.
+      - `analogReadResolution(12)`: Establecer resolución ADC a 12-bit (rango de lectura: 0~4095) para mayor precisión.
+      - `pinMode(BATTERY_ADC, INPUT)`: Establecer pin de detección de batería (A0) en modo entrada para señales analógicas.
+      - `pinMode(ADC_EN, OUTPUT)` & `digitalWrite(ADC_EN, HIGH)`: Habilitar módulo ADC (para uso de bajo consumo: encender solo al medir).
 
-  - `loop()`（メインループ関数）
+  - `loop()` (Función de Bucle Principal)
 
-    - **役割**：初期化後に繰り返し実行され、定期的な電圧検出と出力を行います。
-    - **主要操作**：
-      - `readBatteryVoltage()`を呼び出して現在のバッテリー電圧を取得します。
-      - `Serial.print()`/`Serial.println()`を使用してフォーマットされた電圧を出力します（小数点以下2桁、例："Battery Voltage: 3.82 V"）。
-      - `delay(500)`：測定間隔を0.5秒に設定します。
+    - **Rol**: Se ejecuta repetidamente después de la inicialización para detección y salida periódica de voltaje.
+    - **Operaciones Clave**:
+      - Llamar `readBatteryVoltage()` para obtener el voltaje actual de la batería.
+      - Usar `Serial.print()`/`Serial.println()` para imprimir voltaje formateado (2 decimales, ej., "Battery Voltage: 3.82 V").
+      - `delay(500)`: Establecer intervalo de 0.5 segundos entre mediciones.
 
-  - `readBatteryVoltage()`（コア測定関数）
+  - `readBatteryVoltage()` (Función de Medición Principal)
 
-    - **役割**：ADC信号を読み取り、結果を最適化し、実際の電圧に変換します。
-    - **主要操作**：
-      - **平均サンプリング**：ADCを10回読み取り、合計してから平均化します（ノイズを減らす）。
-      - `analogRead(BATTERY_ADC)`：ピンA0からアナログ電圧を読み取ります（0〜4095を返す）。
-      - `delay(2)`：安定性のためサンプル間に2msの間隔を設けます。
-      - **電圧計算**：式`(adcValue / 4095.0) * 3.3 * VOLTAGE_DIVIDER_RATIO`を使用して実際のバッテリー電圧を取得します。
-      - 計算された電圧（float型）を返し、`loop()`で使用します。
+    - **Rol**: Leer señales ADC, optimizar resultados y convertir a voltaje real.
+    - **Operaciones Clave**:
+      - **Muestreo Promedio**: Leer ADC 10 veces, sumar, luego promediar (reducir ruido).
+      - `analogRead(BATTERY_ADC)`: Leer voltaje analógico del pin A0 (devuelve 0~4095).
+      - `delay(2)`: Intervalo de 2ms entre muestras para estabilidad.
+      - **Cálculo de Voltaje**: Usar fórmula `(adcValue / 4095.0) * 3.3 * VOLTAGE_DIVIDER_RATIO` para obtener voltaje real de batería.
+      - Devolver el voltaje calculado (tipo float) para que `loop()` lo use.
 
-- 効果デモンストレーション：
+- Demostración del Efecto:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_battery_1.png" style={{width:800, height:'auto'}}/></div>
 
-## UI設計
+## Diseño de UI
 
-EE04では、ダッシュボードや画像表示など、さまざまなクリエイティブなデザインを実行できます。ボタンと組み合わせることで、複数のページ間の切り替えが可能になります。以下はダッシュボードの例です。
+EE04 te permite realizar varios diseños creativos, como tableros de control y visualización de imágenes. Al combinarse con botones, permite cambiar entre múltiples páginas. Aquí hay un ejemplo de un tablero de control.
 
 :::tip
-このルーチンでは、ダッシュボードの描画操作はLVGLライブラリに基づいて実行されます。
+En esta rutina, la operación de dibujar el tablero de control se realiza basándose en la biblioteca LVGL.
 
-LVGL公式ドキュメント：[LVGL docs](https://docs.lvgl.io/master/examples.html#get-started)
+Documentación Oficial de LVGL: [LVGL docs](https://docs.lvgl.io/master/examples.html#get-started)
 :::
 
-### ソフトウェア
+### Software
 
-- LVGLライブラリを追加します。PIO HomeインターフェースのLibraryツールでLVGLを検索し、現在のプロジェクトにライブラリを追加することを選択します。LVGL 9.0以上のバージョンを選択することをお勧めします。
+- Agregar la biblioteca LVGL. En la herramienta Library de la interfaz PIO Home, busca LVGL, y luego selecciona agregar la biblioteca al proyecto actual. Se recomienda que elijas una versión de LVGL 9.0 o superior.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_1.png" style={{width:800, height:'auto'}}/></div>
 
-- **lib**ディレクトリ内で
-  - **dashboard**フォルダを作成し、`dashboard_ui.cpp`と`dashboard_ui.h`ファイルを作成します。これらのファイルは主にLGVLの描画コードを格納するために使用されます。
-  - **e1001_display**フォルダを作成し、画面ドライバーファイル`e1001_display.c`と`e1001_display.h`を追加します
-  - **lvgl_conf**フォルダを作成し、LVGLの設定ファイル`lv_conf.h`を追加します。
+- En el directorio **lib**
+  - Crear una carpeta **dashboard** luego crear los archivos `dashboard_ui.cpp` y `dashboard_ui.h`. Estos archivos se utilizan principalmente para almacenar el código de dibujo para LGVL.
+  - Crear la carpeta **e1001_display**, y agregar los archivos del controlador de pantalla `e1001_display.c` y `e1001_display.h`
+  - Crear la carpeta **lvgl_conf** y agregar el archivo de configuración `lv_conf.h` de LVGL.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
-完全な参考コード：[EE04_Dashboard_ui.zip](https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_dashboard_ui.zip)
+Código de referencia completo: [EE04_Dashboard_ui.zip](https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_dashboard_ui.zip)
 
 <details>
 
-<summary>main.cpp コード</summary>
+<summary>Código main.cpp</summary>
 
 ```cpp
 /*
@@ -631,21 +631,21 @@ void loop()
 
 </details>
 
-### 効果デモンストレーション
+### Demostración del Efecto
 
-EE04ボード上のボタンを押すことで、対応するUIインターフェースに切り替えることができます：
+Presionar los botones en la placa EE04 puede cambiar a la interfaz de usuario correspondiente:
 
-- KEY1: 車両ダッシュボード
-- KEY2: スマートホームダッシュボード
-- KEY3: スーパーマリオ
-- デフォルト: スーパーマリオ
+- KEY1: Panel de Control del Vehículo
+- KEY2: Panel de Control SmartHome
+- KEY3: Super Mario
+- Por defecto: Super Mario
 
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>スーパーマリオ</th>
-        <th>車両</th>
-        <th>スマートホーム</th>
+        <th>Super Mario</th>
+        <th>Vehículo</th>
+        <th>SmartHome</th>
     </tr>
     <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_ui_1.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -655,14 +655,14 @@ EE04ボード上のボタンを押すことで、対応するUIインターフ�
  </table>
 </div>
 
-### リソース
+### Recursos
 
-- **7.5" モノクロeInkエンクロージャー（3Dモデル）**: [Printablesからダウンロード](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)
+- **Carcasa para eInk Monocromático de 7.5" (Modelo 3D)**: [Descargar desde Printables](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)
 
 
-## 技術サポート & 製品ディスカッション
+## Soporte Técnico y Discusión del Producto
 
-弊社製品をお選びいただき、ありがとうございます！弊社では、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
