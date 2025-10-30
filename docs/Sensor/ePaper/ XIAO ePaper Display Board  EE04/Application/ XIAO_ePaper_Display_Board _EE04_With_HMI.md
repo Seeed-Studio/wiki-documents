@@ -48,7 +48,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 - [1.54-Inch ePaper - Dotmatix 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
 - [2.13-Inch ePaper -Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
 - [2.13-Inch ePaper - Quadruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [2.9 Inch ePaper - Monocolor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [2.9-Inch ePaper - Monocolor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
 - [2.9-Inch ePaper - Quadruple color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
 - [4.2-Inch ePaper - Monocolor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
 - [4.26-Inch ePaper - Monocolor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
@@ -87,7 +87,7 @@ When using the XIAO ePaper Display Board, make sure to set the jumper according 
 Currently, the XIAO ePaper Display Board(ESP32-S3) - EE04 only offers HMI firmware for the 7.5-inch and 7.3-inch models. Updates will be provided in the future.
 :::
 
-### Sense Craft HMI Visit 
+### SenseCraft HMI Visit 
 
 [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) in your web browser and create an account or `Log in`.
 
@@ -108,9 +108,9 @@ Click `Tools` in the top menu bar to access our configuration page.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi33.png" style={{width:1000, height:'auto'}}/></div>
 
 <Tabs>
-<TabItem value="7.3-Inch ePaper Display" label="7.3-Inch ePaper Display" default>
+<TabItem value="7.3-Inch ePaper Display" label="7.3 Full Color Display 800*480 "default>
 
-***Setp 1 .*** `Select` the 7.3-Inch ePaper display model
+***Setp 1 .*** `Select` the 7.3 "Full Color Display 800*480
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi7.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -120,25 +120,27 @@ Click `Tools` in the top menu bar to access our configuration page.
 
 ***Setp 3 .*** `Scan` the QR code on the ePaper for network configuration.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi36.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi52.png" style={{width:1000, height:'auto'}}/></div>
 <br></br>
 
 :::note
 - Updating the firmware ensures optimal performance and access to the latest features. It's recommended to perform this update before using your device for the first time.
 
 - It is not possible to flash the firmware properly when the device is in the shutdown or sleep state. If you select the correct port for your device but never see the flash firmware progress, then you may need to wake up the device by pressing the green button on the top of the unit and try again.
+
+- Full Flash : Enabling Full Flash clears all device stored information, including WiFi networks and user panel datas.
 :::
 </TabItem>
 
-<TabItem value="7.5-Inch ePaper Display" label="7.5-Inch ePaper Display" default>
+<TabItem value="7.5-Inch ePaper Display" label="7.5 Monochrome Display 800*480 "default>
 
-***Setp 1 .*** Select the 7.5-Inch ePaper display model
+***Setp 1 .*** `Select` the 7.5 "Monochrome Display 800*480
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi8.png" style={{width:1000, height:'auto'}}/></div>
 
 ***Setp 2 .*** Select the latest `firmware` and Click `Flash`
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi6.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi15.png" style={{width:1000, height:'auto'}}/></div>
 
 :::note
 
@@ -194,9 +196,9 @@ The XIAO ePaper Display Board(ESP32-S3) - EE04 integrates seamlessly with the Se
 :::note
 This demonstration uses a 7.3-Inch screen as an example. If replacing with a different size, note the following:
 
-- Confirm the orientation of the screen flex cable (front and back);
-- Verify the number of pin headers matches;
-- Use the corresponding size cover cap;
+- Confirm the orientation of the screen flex cable (front and back).
+- Verify the number of pin headers matches.
+- Use the corresponding size cover cap.
 - Avoid bending or excessive folding when installing the flex cable.
 :::
 
@@ -206,15 +208,16 @@ This demonstration uses a 7.3-Inch screen as an example. If replacing with a dif
 
 Let artificial intelligence design your dashboard! Simply describe what information you want displayed, and the AI Generator will automatically create an attractive, functional layout. This is perfect for quickly generating weather displays, calendars, to-do lists, or informational panels without manual design work.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi25.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi25.png" style={{width:700, height:'auto'}}/></div>
 
+Learn more about AI Generator function. [more](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-ai-generator/)
 
 <br></br>
 
 **Dashboard Preview**
 
 <div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi22.jpg" alt="7.3-Inch ePaper Display" style={{width:650, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
+    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi42.png" alt="7.3-Inch ePaper Display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3-Inch ePaper Display</em></p>
 </div>
 
@@ -222,15 +225,18 @@ Let artificial intelligence design your dashboard! Simply describe what informat
 
 Transform your XIAO ePaper Display Board(ESP32-S3) - EE04 into a digital photo frame with the Gallery feature. Upload your favorite images, and the platform will optimize them for the ePaper display. Create slideshows with custom transition times.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi27.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi27.png" style={{width:700, height:'auto'}}/></div>
+
+Learn more about Gallery function. [more](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-gallery/)
 
 <br></br>
+
 
 **Dashboard Preview**
 
 
 <div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi21.jpg" alt="7.3-Inch ePaper Display" style={{width:650, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
+    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi50.png" alt="7.3-Inch ePaper Display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3-Inch ePaper Display</em></p>
 </div>
 
@@ -244,15 +250,16 @@ Design your dashboard from scratch with Canvas, a drag-and-drop interface offeri
 - Data visualization tools
 - Shapes and dividers for layout organization
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi30.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi30.png" style={{width:700, height:'auto'}}/></div>
 
+Learn more about Canvas function. [more](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-canvas/)
 
 <br></br>
 
 **Dashboard Preview**
 
 <div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi31.jpg" alt="7.3-Inch ePaper Display" style={{width:650, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
+    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi46.png" alt="7.3-Inch ePaper Display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3-Inch ePaper Display</em></p>
 </div>
 
@@ -261,8 +268,9 @@ Design your dashboard from scratch with Canvas, a drag-and-drop interface offeri
 
 Stay updated with your favorite news sources, blogs, or websites by adding RSS feeds to your dashboard. The RSS feature allows you to display headlines, summaries, or full articles from multiple sources.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi26.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi26.png" style={{width:700, height:'auto'}}/></div>
 
+Learn more about RSS Feed Integration. [more](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-rss/)
 
 <br></br>
 
@@ -270,7 +278,7 @@ Stay updated with your favorite news sources, blogs, or websites by adding RSS f
 
 
 <div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi23.png" alt="7.3-Inch ePaper Display" style={{width:650, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
+    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi51.png" alt="7.3-Inch ePaper Display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3-Inch ePaper Display</em></p>
 </div>
 
@@ -278,17 +286,25 @@ Stay updated with your favorite news sources, blogs, or websites by adding RSS f
 
 Let artificial intelligence design your dashboard! Simply describe what information you want displayed, and the AI Generator will automatically create an attractive, functional layout. This is perfect for quickly generating weather displays, calendars, to-do lists, or informational panels without manual design work.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi29.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi29.png" style={{width:700, height:'auto'}}/></div>
+
+Learn more about Web Content Display. [more](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-web/)
 
 <br></br>
 
 **Dashboard Preview**
 
 <div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi24.png" alt="7.3-Inch ePaper Display" style={{width:650, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
+    <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi53.png" alt="7.3-Inch ePaper Display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3-Inch ePaper Display</em></p>
 </div>
 
+
+## Reference & Resources
+
+***SenseCraf HMI***
+
+- [Getting Started with SenseCraft HMI](https://sensecraft-hmi-docs.seeed.cc/en/): Gain a deeper understanding of how to use SenseCraft HMI to help you maximize its capabilities and enhance your projects.
 
 ## Tech Support & Product Discussion
 
