@@ -1,6 +1,6 @@
 ---
-description: This article describes how to utilise the hardware capabilities of the reTerminal E Series ePaper Display on ESPHome.
-title: ESPHome Usage of EE04 ePaper Display in Home Assistant
+description: This article explains how to utilize the hardware features of the XIAO ePaper Display Board EE04 in ESPHome and integrate it with Home Assistant.
+title: XIAO ePaper Display Board EE04 with ESPHome
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
 slug: /EE04_with_esphome_advanced
 sidebar_position: 2

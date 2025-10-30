@@ -1,6 +1,6 @@
 ---
-description: Getting Started with EE04
-title: Getting Started with EE04
+description: Getting Started with XIAO ePaper Display Board(ESP32-S3) - EE04
+title: Getting Started with XIAO ePaper Display Board(ESP32-S3) - EE04
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
@@ -150,20 +150,26 @@ Powered by **XIAO ESP32-S3** Plus, the display board EE04 supports both **24-pin
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
 
-### Supported eInk
+:::tip
+
+This version XIAO ePaper Display Board(ESP32-S3) - EE04 does not support NFC functionality.
+
+:::
+
+### Supported ePaper
 
 #### 24-Pin Connector
 
-- [1.54-inch E-paper - Dotmatix 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [2.13-inch E-Paper -Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [2.13-inch E-Paper - Quadruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [2.9 inch E-paper - Monocolor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [2.9-inch e-paper - Quadruple color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-- [4.2-inch E-Paper - Monocolor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [4.26-inch E-Paper - Monocolor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [5.83-inch E-paper - Monocolor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [7.5-inch E-paper - Monocolor 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
-- [7.5-inch E-paper - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
+- [1.54-inch ePaper - Dotmatix 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [2.13-inch ePaper -Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [2.13-inch ePaper - Quadruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [2.9 inch ePaper - Monocolor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [2.9-inch ePaper - Quadruple color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
+- [4.2-inch ePaper - Monocolor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [4.26-inch ePaper - Monocolor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [5.83-inch ePaper - Monocolor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [7.5-inch ePaper - Monocolor 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [7.5-inch ePaper - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/37.png" style={{width:800, height:'auto'}}/></div>
 
@@ -178,7 +184,7 @@ When using the XIAO ePaper Display Board, make sure to set the jumper according 
 
 #### 50-Pin Connector
 
-- [7.3-inch Spectra6 E-paper](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
+- [7.3-inch Spectra6 ePaper](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
 :::tip
@@ -265,15 +271,29 @@ The image below shows the correct connection:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/32.jpg" style={{width:500, height:'auto'}}/></div>
 
-### User Buttons on XIAO ePaper Display Board
+### User Buttons on XIAO ePaper Display Board(ESP32-S3) - EE04
 
 The EE04 features three user-programmable buttons that can be used for various control purposes. This section demonstrates how to read button states and respond to button presses using Arduino.
 
-On the EE04, the three buttons are connected to the ESP32-S3:
+On the EE04, the three buttons are connected to the XIAO ESP32-S3 Plus:
 
-- KEY1 (GPIO2_D1/A1)
-- KEY2 (GPIO3_D2/A2)
-- KEY3 (GPIO5_D4/A4)
+<table>
+  <thead>
+    <tr>
+      <th>KEY1</th>
+      <th>KEY2</th>
+      <th>KEY3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GPIO2_D1/A1</th>
+      <th>GPIO3_D2/A2</th>
+      <th>GPIO5_D4/A4</th>
+    </tr>
+  </tbody>
+</table>
+
 
 All buttons are active-low, meaning they read LOW when pressed and HIGH when released.
 
@@ -366,6 +386,47 @@ void loop() {
   delay(10); // Small delay to prevent excessive CPU usage
 }
 ```
+
+### User Battery on XIAO ePaper Display Board(ESP32-S3) - EE04
+
+When operating on battery power:
+
+- The device will automatically enter low-power mode between refreshes
+
+- Battery life depends on refresh frequency (typically 3-month on a full charge with default settings)
+
+- The device will display a low battery icon in the top-right corner when the battery level is below 20%
+
+:::tip
+If you want to write some code by yourself to read battery voltage, it will be more precise to add 10ms delay before analogRead() function.
+:::
+
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04battery.jpg" style={{width:700, height:'auto'}}/></div>
+
+```cpp
+#define VOLTAGE_PIN A0
+
+void setup() {
+  Serial.begin(115200);       
+  pinMode(VOLTAGE_PIN, INPUT); /
+}
+
+void loop() {
+  int adcValue = analogRead(VOLTAGE_PIN);   
+  float voltage = (adcValue / 1023.0) * 3.3; 
+
+  Serial.print("ADC Value: ");
+  Serial.print(adcValue);
+  Serial.print("  Voltage: ");
+  Serial.print(voltage, 3);
+  Serial.println(" V");
+
+  delay(10); 
+}
+```
+
+
 
 ## Resources
 
