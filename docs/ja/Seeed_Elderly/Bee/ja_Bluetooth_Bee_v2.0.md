@@ -8,7 +8,9 @@ slug: /ja/Bluetooth_Bee_v2.0
 last_update:
   date: 05/15/2025
   author: shuxu hu
---- 113050013
+sku: 113050013
+type: gettingstarted
+---
 
 ![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/113050014%201_02.jpg)
 
@@ -21,60 +23,64 @@ Bluetooth Beeは、既存のXbeeソケットと互換性があり、透明なワ
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Bluetooth-Bee-v2.0-p-2373.html)
 
 ## 特徴
----
 
+---
 
 ### ハードウェアの特徴
 
-* 典型的な-80dBmの感度。
+- 典型的な-80dBmの感度。
 
-* 最大+4dBmのRF送信出力。
+- 最大+4dBmのRF送信出力。
 
-* 完全認定Bluetooth V2.0+EDR 3Mbps変調。
+- 完全認定Bluetooth V2.0+EDR 3Mbps変調。
 
-* 低消費電力1.8V動作、1.8〜3.6V I/O。
+- 低消費電力1.8V動作、1.8〜3.6V I/O。
 
-* PIO制御。
+- PIO制御。
 
-* プログラム可能なボーレートを備えたUARTインターフェース。
+- プログラム可能なボーレートを備えたUARTインターフェース。
 
-* 統合PCBアンテナ。
+- 統合PCBアンテナ。
 
-* Bee互換ヘッダー。
+- Bee互換ヘッダー。
 
 ### ソフトウェアの特徴
 
-* デフォルトのボーレート: 38400、データビット: 8、ストップビット: 1、パリティ: なし、データ制御: あり。
+- デフォルトのボーレート: 38400、データビット: 8、ストップビット: 1、パリティ: なし、データ制御: あり。
 
-* サポートされるボーレート: 9600、19200、38400、57600、115200、230400、460800。
+- サポートされるボーレート: 9600、19200、38400、57600、115200、230400、460800。
 
-* CTSとRTSを使用してデータストリームを制御。
+- CTSとRTSを使用してデータストリームを制御。
 
-* PIO0で上昇パルスが検出されると、デバイスが切断されます。
+- PIO0で上昇パルスが検出されると、デバイスが切断されます。
 
-* ステータス指示ポートPIO1: 低-切断、高-接続。
+- ステータス指示ポートPIO1: 低-切断、高-接続。
 
-* PIO10は赤色LEDに接続され、PIO11は緑色LEDに接続されています。マスターとスレーブがペアリングされると、赤と緑のLEDが2秒間隔で1回点滅し、切断されると緑のLEDのみが1秒間に2回点滅します。
+- PIO10は赤色LEDに接続され、PIO11は緑色LEDに接続されています。マスターとスレーブがペアリングされると、赤と緑のLEDが2秒間隔で1回点滅し、切断されると緑のLEDのみが1秒間に2回点滅します。
 
-* デフォルトで電源投入時に最後に接続したデバイスに自動接続。
+- デフォルトで電源投入時に最後に接続したデバイスに自動接続。
 
-* デフォルトで一致したデバイスの接続を許可。
+- デフォルトで一致したデバイスの接続を許可。
 
-* デフォルトPINコード: 0000。
+- デフォルトPINコード: 0000。
 
-* 接続範囲外で切断された場合、30分以内に自動再接続。
+- 接続範囲外で切断された場合、30分以内に自動再接続。
 
 :::caution
     このモジュールの供給電圧は3.3Vです。これを超えるとデバイスが永久的に損傷する可能性があります。
 c;;;
+
 ## ハードウェアのインストール
+
 ---
+
 ### UART Beeを介してPCにBluetoothを接続する
 
 <!-- Bluetoothは標準のXBeeソケットを提供します。ここでは、[UartSBee V5](/ja/UartSBee_v5)を使用してBluetoothとPCを接続し、スライダーで供給電圧を3.3Vに設定してください。 -->
 
 |![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToPC.jpg)|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToPCSet.jpg)
 |---|---|
+
 ### ArduinoにBluetoothを接続する
 
 <!-- ここでは、[XBee Shield](/ja/XBee_Shield_V2.0)をBluetoothと[Seeeduino Lotus](/ja/Seeeduino_Lotus)の間のブリッジとして使用します。 -->
@@ -85,23 +91,25 @@ SeeedinoのハードウェアUARTはPCとのデバッグに使用されるため
 |---|---|
 
 ## ソフトウェア説明書
+
 ---
+
 ### 規約
 
-* 工場出荷時のデフォルト設定:
+- 工場出荷時のデフォルト設定:
 
-    * 名前: HMSoft;
+  - 名前: HMSoft;
 
-        * ボーレート: 9600, N, 8, 1;
+    - ボーレート: 9600, N, 8, 1;
 
-        * PINコード: 1234;
+    - PINコード: 1234;
 
-        * バージョン送信。
+    - バージョン送信。
 
-* ATコマンド形式:
-    * 大文字のATコマンド形式。文字列形式で、他の記号（例: \r または \n）は含まない。
+- ATコマンド形式:
+  - 大文字のATコマンド形式。文字列形式で、他の記号（例: \r または \n）は含まない。
 
-        * 誤ったコマンドには応答がありません。
+    - 誤ったコマンドには応答がありません。
 
 ### ATコマンド（続き）
 
@@ -834,11 +842,11 @@ PCに接続された2つのBluetoothを使用し、1つを中央（Central）と
 私たちの製品をお選びいただきありがとうございます！製品をご利用いただく際に、できるだけスムーズな体験をしていただけるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

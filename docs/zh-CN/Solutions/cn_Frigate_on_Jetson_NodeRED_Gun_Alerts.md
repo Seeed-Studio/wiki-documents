@@ -18,7 +18,7 @@ last_update:
 Frigate + Node-RED 枪支检测解决方案是一个边缘 AI 视频分析堆栈，可检测实时摄像头流中的枪支并协调警报、审查和集成。专为在 **AI 盒子**、NVIDIA **Jetson** 系列和 **reComputer R2000** 上进行隐私保护、低延迟部署而构建，它结合了优化的检测引擎（Frigate）、可视化自动化层（Node‑RED）和可选的 LLM 辅助审查。
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://cc.seeedstudio.com/wp-content/uploads/2025/09/archi_2-1.png" alt="solution diagram"/>
+  <img class='img-responsive' width={680} src="https://www.seeed.cc/wp-content/uploads/2025/09/archi_2-1.png" alt="solution diagram"/>
 </div>
 
 它提供完整的 AI NVR[^nvr] 体验：
@@ -37,11 +37,11 @@ Frigate + Node-RED 枪支检测解决方案是一个边缘 AI 视频分析堆栈
       <th>校园安全管理</th>
   </tr>
   <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://cc.seeedstudio.com/wp-content/uploads/2025/08/scene_3.png" style={{width:480, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://www.seeed.cc/wp-content/uploads/2025/08/scene_3.png" style={{width:480, height:'auto'}}/></div></td>
   </tr>
   <tr>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://cc.seeedstudio.com/solutions/campus-safety-management" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeed.cc/solutions/campus-safety-management" target="_blank">
           <strong><span><font color={'FFFFFF'} size={"4"}> 解决方案套装 🖱️</font></span></strong>
       </a>
     </div></td>
@@ -511,7 +511,7 @@ mqtt:
 
 ## 资源与后续步骤
 
-- **解决方案套件：** [Frigate + Node-RED Gun Detection on Jetson](https://cc.seeedstudio.com/solutions/campus-safety-management)
+- **解决方案套件：** [Frigate + Node-RED Gun Detection on Jetson](https://www.seeed.cc/solutions/campus-safety-management)
 - **Frigate 文档：** [https://docs.frigate.video/](https://docs.frigate.video/)
 - **GitHub 仓库：** [Seeed-Studio / frigate-on-jetson](https://github.com/Seeed-Studio/frigate-on-jetson)
 - **Node-RED 仪表板插件：** [@flowfuse/node-red-dashboard](https://flows.nodered.org/node/@flowfuse/node-red-dashboard)

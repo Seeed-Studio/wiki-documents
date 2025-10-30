@@ -8,7 +8,7 @@ keywords:
   - network troubleshoot
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/recamera_network_connection
-sidebar_position: 4
+sidebar_position: 6
 last_update:
   date: 04/08/2025
   author: Parker Hu
@@ -41,41 +41,41 @@ UsbNcm 在 Linux、macOS 和最新的 Windows 系统上是免驱动的。您可�
 
 #### 为 Windows 安装 NCM
 
-**步骤1**：
-按 `win+x` 并选择 `设备管理器`。
-在 `其他设备` 中找到未识别的设备并选择 `更新驱动程序`。
+**步骤 1**：
+按 `win+x` 并选择 `Device Manager`。
+在 `other devices` 中找到未识别的设备并选择 `Update driver`。
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/003.png" /></div>
 
-**步骤2**：
-选择 `浏览我的计算机以查找驱动程序`
+**步骤 2**：
+选择 `Browse my computer for drivers`
 
 <br />
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/004.png" /></div>
 
-**步骤3**：
-选择 `让我从计算机上的可用驱动程序列表中选取`
+**步骤 3**：
+选择 `Let me pick from a list of available drivers on my computer`  
 
 <br />
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/005.png" /></div>
 
-**步骤4**：
-选择 `网络适配器` 然后点击 `下一步`
+**步骤 4**：
+选择 `Network adapters` 然后点击 `next`
 
 <br />
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/014.png" /></div>
 
-**步骤5**：选择 `Microsoft` -> `UsbNcm Host Device` 然后点击下一步。
+**步骤 5**：选择 `Microsoft` -> `UsbNcm Host Device` 然后点击 Next。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/006.png" /></div>
 
-**步骤6**：当弹出警告栏时，选择 `是`
+**步骤 6**：当弹出警告栏时，选择 `Yes`
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/007.png" /></div>
 
-**步骤7**：在终端窗口中输入 ping 192.168.42.1。
+**步骤 7**：在终端窗口中输入 ping 192.168.42.1。
 <br />
 以下输出显示您已成功连接到 reCamera。
 
@@ -96,10 +96,10 @@ UsbNcm 在 Linux、macOS 和最新的 Windows 系统上是免驱动的。您可�
 ### Windows
 
 如果您的 Windows 10 系统计算机在使用 reCamera 的 USB 网络后出现网络访问问题。
-按 `win+x` 点击控制面板。选择所有控制面板项 -> 网络连接。
+按 `win+x` 点击 Control Panel。选择 All Control Panel Items -> Network Connections。
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/010.png" /></div>
 
-右键点击 UsbNcm Host Device。选择 `属性` -> `TCP/IPv4` -> `属性` -> `高级` -> 取消选中 `自动跃点数` -> 在 `接口跃点数` 字段中输入 `255` -> 点击 `确定`
+右键点击 UsbNcm Host Device。选择 `Properties` -> `TCP/IPv4` -> `Properties` -> `Advanced` -> 取消选中 `Automatic metric` -> 在 `Interface metric` 字段中输入 `255` -> 点击 `ok`
 <br />
 
 然后您的网络就恢复了。
@@ -107,33 +107,33 @@ UsbNcm 在 Linux、macOS 和最新的 Windows 系统上是免驱动的。您可�
 
 ### MAC
 
-如果您的计算机运行的是 MacOS。您只需要将计算机网卡 UsbNcm 网卡的优先级设置为最后
+如果您的计算机运行 MacOS。您只需要将计算机网卡 UsbNcm 网卡的优先级设置为最后
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/012.png" /></div>
 
 具体设置如下：
 
-**步骤1**：选择 `系统设置`
+**步骤 1**：选择 `System Settings`
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/015.png" /></div>
 
-**步骤2**：您将看到这个顺序，我们即将更改它。
+**步骤 2**：您将看到这个顺序，我们即将更改它。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/016.png" /></div>
 
-**步骤3**：一直拖到底部，然后点击它。
+**步骤 3**：一直拖到底部，然后点击它。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/017.png" /></div>
 
-**步骤4**：选择 `设置服务顺序`
+**步骤 4**：选择 `Set Service Order`
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/018.png" /></div>
 
-**步骤5**：将 NCM 拖到 Wi-Fi 下方，然后点击 `确定`
+**步骤 5**：将 NCM 拖到 Wi-Fi 下方，然后点击 `ok`
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/019.png" /></div>
 
-**步骤6**：最后，您应该看到显示的设置
+**步骤 6**：最后，您应该看到所示的设置
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/020.png" /></div>
 
@@ -141,7 +141,7 @@ UsbNcm 在 Linux、macOS 和最新的 Windows 系统上是免驱动的。您可�
 
 [reCamera OS](https://github.com/Seeed-Studio/reCamera-OS)
 
-[reCamera Series](https://github.com/Seeed-Studio/OSHW-reCamera-Series)
+[reCamera 系列](https://github.com/Seeed-Studio/OSHW-reCamera-Series)
 
 ## 技术支持与产品讨论
 
