@@ -7,14 +7,14 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /cn/wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 5/19/2025
-  author: Jessie
+  date: 10/29/2025
+  author: Michelle
 ---
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.jpg" alt="pir" width={600} height="auto" /></p>
 
-Wio Tracker L1 系列是一款低功耗、高度可扩展的 [Meshtastic®](https://meshtastic.org/) 节点，具有 LoRa（862–930 MHz）、用于高效处理的 nRF52840 和用于精确位置跟踪的 L76K GPS 模块。该产品设计灵活，支持 OLED 和 E-Ink 显示屏，以及太阳能电池板和电池供电，非常适合各种物联网和离网应用。
+Wio Tracker L1 系列是一款低功耗、高度可扩展的 [Meshtastic®](https://meshtastic.org/) 节点，具有 LoRa（862–930 MHz）、用于高效处理的 nRF52840 和用于精确位置跟踪的 L76K GPS 模块。设计灵活，支持 OLED 和 E-Ink 显示屏，以及太阳能电池板和电池供电，使其成为各种物联网和离网应用的理想选择。
 
 ## L1 系列型号
 
@@ -45,7 +45,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
 ### 特性
 
 - **预装 Meshtastic 固件**
-开箱即用，预装 Meshtastic 固件，设置简单无缝。
+开箱即用，预装 Meshtastic 固件，设置无缝。
 
 - **三重电源供应选项**
 支持 Type-C 快充、太阳能输入和锂离子电池供电，可灵活部署在各种环境中——非常适合户外和移动应用。
@@ -54,9 +54,13 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
 可选 1.3 英寸 OLED 和 2.13 英寸 E-Ink 屏幕，为不同的功耗和视觉反馈需求提供多样化的显示选项。
 
 - **高扩展性**
-完全兼容 Grove 生态系统，包含 PTH 接头和 SWD 调试接口，支持自定义硬件扩展和高级开发。
+完全兼容 Grove 生态系统，并包含 PTH 接头和 SWD 调试接口，用于自定义硬件扩展和高级开发。
 
 ### 规格参数
+
+:::tip
+最新批次的 L1、L1 Lite 和 L1 E-Ink 都配有电池适配线，将 1mm 接口转换为 2mm 接口。这为您提供了更多的电池选择。
+:::
 
 <table>
   <tr>
@@ -90,7 +94,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
     <td colspan="1">镀通孔（PTH）：UART/IIC/GPIO/模拟</td>
   </tr>
   <tr>
-    <td colspan="1">为 SWD 预留焊接焊盘</td>
+    <td colspan="1">为 SWD 预留的焊接焊盘</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">电源输入</td>
@@ -100,7 +104,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
     <td colspan="1">太阳能电池板（2.0mm 2p）：5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">锂电池（1.25mm 2p JST）：3.7V — 1A</td>
+    <td colspan="1">锂电池（1mm 2p JST）：3.7V — 1A</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">OLED 屏幕</td>
