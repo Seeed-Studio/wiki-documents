@@ -18,7 +18,7 @@ last_update:
 
 # reCamera HQ POE 概述
 
-reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的图像。它具有 M12 镜头接口——可灵活地将默认镜头替换为任何兼容的 2MP M12 镜头。还支持 PoE（以太网供电）：无需单独的 USB/DC 电源，只需一根以太网电缆连接到 PoE 交换机即可实现供电和数据传输。
+reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的图像。它具有 M12 镜头接口——可灵活地将默认镜头替换为任何兼容的 2MP M12 镜头。还支持 PoE（以太网供电）：无需单独的 USB/DC 电源，只需一根以太网线连接到 PoE 交换机即可实现供电和数据传输。
 
 
 ## 特性
@@ -69,7 +69,7 @@ reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的�
 :-------------------------:|:-------------------------:
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
-### [传感器板-S101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
+### [传感器板-S4_GC2053](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
 
 
 顶视图             |  底视图
@@ -123,13 +123,13 @@ reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的�
   </table>
 </div>
 
-#### 💡 [B3_POE](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Base_Board/B3_POE/readme.md)
+### [B3_POE](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Base_Board/B3_POE/readme.md)
 
 顶部             |  底部
 :-------------------------:|:-------------------------:
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom.png" /></div>
 
-##### ⚙️ 特性：
+#### ⚙️ 特性：
 
 - 1 x RJ45 端口，支持 **802.3af PSE**。
 - 1 x UART 端口。
@@ -256,7 +256,7 @@ stty -F /dev/ttyS3 ispeed 115200 ospeed 115200
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-3.png" /></div>
 
-默认串口启用了回显功能，您可以使用以下命令禁用它：
+默认串口启用了回显功能，您可以使用以下命令来禁用它：
 
 ```bash
 stty -F /dev/ttyS3 -echo
