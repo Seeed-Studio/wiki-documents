@@ -1,0 +1,10 @@
+position: 3 # float position is supported
+label: 'reCamera HQ POE'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: recamera_hq_poe
+link:
+  type: generated-index
+  slug: cn/recamera_hq_poe
+  title: reCamera HQ POE
+  description: reCamera HQ POE 文档

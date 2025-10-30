@@ -9,6 +9,7 @@ last_update:
   author: Citric
 ---
 
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -172,7 +173,7 @@ binary_sensor:
 - 配置按钮 1 在按下时播放短蜂鸣模式
 
 :::tip
-您可以调整 `frequency` 参数来改变蜂鸣器的音调。更高的值会产生更高音调的声音。
+您可以调整 `frequency` 参数来改变蜂鸣器的音调。较高的值会产生较高音调的声音。
 :::
 
 ### 电池监控
@@ -285,25 +286,25 @@ sensor:
 </a>
 </div>
 
-步骤 2. 在插件页面上，点击"INSTALL"按钮并等待安装完成。
+步骤 2. 在插件页面上，点击 "INSTALL" 按钮并等待安装完成。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/48.png" style={{width:1000, height:'auto'}}/></div>
 
 ### 创建访问令牌
 
-步骤 3. 安装后，转到 Puppet 插件的配置页面。如您所见，这里我们需要输入令牌。您需要为此插件创建一个访问令牌。
+步骤 3. 安装后，转到 Puppet 插件的 Configuration 页面。如您所见，这里我们需要输入令牌。您需要为此插件创建一个访问令牌。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/49.png" style={{width:800, height:'auto'}}/></div>
 
-步骤 4. 通过点击左下角的用户名导航到 Home Assistant 中的个人资料，然后在页面底部选择"长期访问令牌"。
+步骤 4. 通过点击左下角的用户名导航到 Home Assistant 中的个人资料，然后在页面底部选择 "Long-Lived Access Tokens"。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/50.png" style={{width:1000, height:'auto'}}/></div>
 
-步骤 5. 创建一个具有描述性名称的新令牌，如"Puppet Screenshot"，并复制生成的令牌。
+步骤 5. 创建一个具有描述性名称（如 "Puppet Screenshot"）的新令牌并复制生成的令牌。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/51.png" style={{width:800, height:'auto'}}/></div>
 
-步骤 6. 返回 Puppet 插件配置，将令牌粘贴到"Long-Lived Access Token"字段中。
+步骤 6. 返回 Puppet 插件配置，将令牌粘贴到 "Long-Lived Access Token" 字段中。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/52.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -333,9 +334,9 @@ http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2
 
 值 `2` 表示 2 色（黑白）调色板。
 
-#### 反转颜色
+#### 颜色反转
 
-添加 `invert` 参数来反转黑白颜色：
+添加 `invert` 参数以反转黑白颜色：
 
 ```
 http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert
@@ -349,7 +350,7 @@ http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert
 http://homeassistant.local:10000/todo?viewport=800x480&eink=2&invert
 ```
 
-步骤 10. 通过在网络浏览器中输入截图 URL 来测试。您应该能看到所选 Home Assistant 页面的截图。
+通过在网页浏览器中输入截图 URL 来测试。您应该能看到所选 Home Assistant 页面的截图。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/92.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -361,30 +362,39 @@ http://homeassistant.local:10000/todo?viewport=800x480&eink=2&invert
 <TabItem value="For E1001" label="适用于 E1001" default>
 
 ```yaml
-http_request:
-  verify_ssl: false
-  timeout: 10s
-  watchdog_timeout: 15s
 
-online_image:
-  - id: dashboard_image
-    format: PNG
-    type: BINARY
-    buffer_size: 30000
-    url: http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert  # Replace with your Home Assistant address
-    update_interval: 30s
-    on_download_finished:
-      - delay: 0ms
-      - component.update: main_display
+……
+psram:
+  mode: octal
+  speed: 80MHz
+
+……
+
+captive_portal:
 
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
 
+http_request:
+  verify_ssl: false
+  timeout: 20s
+  watchdog_timeout: 25s
+
+online_image:
+  - id: dashboard_image
+    format: PNG
+    type: GRAYSCALE
+    buffer_size: 65536
+    url: http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert
+    update_interval: 1min
+    on_download_finished:
+      - component.update: epaper_display
+
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.50inv2
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -402,38 +412,39 @@ display:
 <TabItem value="For E1002" label="适用于 E1002">
 
 ```yaml
-# for model 7.3in-e
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
 
-http_request:
-  verify_ssl: false
-  timeout: 10s
-  watchdog_timeout: 15s
+……
+psram:
+  mode: octal
+  speed: 80MHz
 
-online_image:
-  - id: dashboard_image
-    format: PNG
-    type: BINARY
-    buffer_size: 30000
-    url: http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert  # Replace with your Home Assistant address
-    update_interval: 30s
-    on_download_finished:
-      - delay: 0ms
-      - component.update: main_display
+……
+
+captive_portal:
 
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
 
+http_request:
+  verify_ssl: false
+  timeout: 20s
+  watchdog_timeout: 25s
+
+online_image:
+  - id: dashboard_image
+    format: PNG
+    type: RGB565
+    buffer_size: 65536
+    url: http://192.168.1.12:10000/lovelace/0?viewport=800x480
+    update_interval: 1min
+    on_download_finished:
+      - component.update: epaper_display
+
 display:
-  - platform: waveshare_epaper
-    id: main_display
-    model: 7.30in-e
+  - platform: epaper_spi
+    id: epaper_display
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -456,7 +467,18 @@ display:
 
 当您的配置成功上传并运行时，您的 reTerminal E 系列电子纸显示器将显示 Home Assistant 仪表板的截图：
 
+<Tabs>
+<TabItem value="For E1001" label="适用于 E1001" default>
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/54.jpg" style={{width:600, height:'auto'}}/></div>
+
+</TabItem>
+<TabItem value="For E1002" label="适用于 E1002">
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/166.jpg" style={{width:600, height:'auto'}}/></div>
+
+</TabItem>
+</Tabs>
 
 ## 演示 3：深度睡眠模式
 
@@ -1288,7 +1310,7 @@ display:
 1. **多页面**：显示屏在两个页面之间切换 - 气候仪表板和时间/日期显示
 2. **按钮导航**：使用 GPIO3 和 GPIO5 上的按钮在页面之间导航
 3. **电池监控**：显示电池电量，并根据充电水平显示相应的图标
-4. **硬件初始化**：启动时启用 SD 卡和电池监控电路
+4. **硬件初始化**：在启动时启用 SD 卡和电池监控电路
 5. **温湿度显示**：通过 I²C 使用板载 SHT4x 传感器
 6. **动态图标**：Material Design 图标根据传感器值变化
 
@@ -1296,13 +1318,13 @@ display:
 
 ### Q1: 为什么没有数据？
 
-在这种情况下，您应该转到设置 -> 设备和服务 -> 集成来**重新配置**设备。没有找到您的 ePaper 面板？尝试重启 Home Assistant。
+在这种情况下，您应该前往 Settings -> Devices & Services -> Integrations 来**重新配置**设备。没有找到您的 ePaper Panel？请尝试重启 Home Assistant。
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
 ### Q2: 为什么我无法在 Home Assistant 中获取这些数据？ {#port}
 
-在这种情况下，您应该转到设置 -> 设备和服务 -> 集成来**添加**您的设备到 Home Assistant。
+在这种情况下，您应该前往 Settings -> Devices & Services -> Integrations 来**添加**您的设备到 Home Assistant。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
 
@@ -1313,15 +1335,15 @@ display:
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/102.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-当设备处于深度睡眠模式时，你无法直接上传新程序。请按照以下步骤进入下载模式：
+When the device is in deep sleep mode, you can't upload a new program directly. Follow these steps to enter download mode:
 
-步骤 1. 确保设备已开机。然后，按住并保持位于 XIAO ESP32-S3 Plus 上 USB-C 端口旁边的**Boot**按钮。
+Step 1. Make sure the device is turned on. Then, press and hold the **Boot** button located next to the USB-C port on the XIAO ESP32-S3 Plus.
 
-步骤 2. 按住 **Boot** 按钮的同时，按一下 **Reset** 按钮，然后松开 **Boot** 按钮。
+Step 2. While holding the **Boot** button, press the **Reset** button once, then release the **Boot** button.
 
-步骤 3. 关闭电池开关并拔掉电源线。
+Step 3. Turn off the battery switch and unplug the power cable.
 
-步骤 4. 最后，重新插入电缆并上传新程序。 -->
+Step 4. Finally, replug the cable and upload a new program. -->
 
 ### Q3: Wi-Fi 上传程序失败？
 

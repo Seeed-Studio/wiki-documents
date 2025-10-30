@@ -30,7 +30,7 @@ Home Assistant 是一个功能强大的开源家庭自动化平台，允许您�
 
 - **本地控制**：与许多基于云的解决方案不同，Home Assistant 在您的网络上本地运行，确保您的数据保持私密，即使没有互联网连接，您的自动化也能正常工作。
 
-- **广泛的设备支持**：Home Assistant 与数千种不同的智能家居设备和服务集成，使其具有高度的通用性和面向未来的特性。
+- **广泛的设备支持**：Home Assistant 集成了数千种不同的智能家居设备和服务，使其具有高度的通用性和面向未来的特性。
 
 - **强大的自动化**：创建复杂的自动化规则，可以响应各种触发器，如时间、设备状态、传感器读数等。
 
@@ -44,7 +44,7 @@ Home Assistant 是一个功能强大的开源家庭自动化平台，允许您�
 
 EE04 ePaper 显示屏是 Home Assistant 的绝佳伴侣，原因如下：
 
-1. **节能高效**：电子纸显示屏只在更新内容时消耗电力，非常适合显示持久信息，如天气预报、日历事件或系统状态。
+1. **节能高效**：电子纸显示屏仅在更新内容时消耗电力，非常适合显示持久信息，如天气预报、日历事件或系统状态。
 
 2. **清晰可见**：与 LCD 屏幕不同，电子纸显示屏在任何光照条件下都易于阅读，包括直射阳光，使其成为壁挂式家庭控制面板的理想选择。
 
@@ -64,7 +64,7 @@ ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允
 
 ## 入门指南
 
-在本文教程内容开始之前，您可能需要准备以下硬件。
+在本文的教程内容开始之前，您可能需要准备以下硬件。
 
 ### 所需材料
 
@@ -93,7 +93,7 @@ ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允
   </table>
 </div>
 
-Home Assistant Green 是自动化家居最简单、最注重隐私的方式。它提供轻松的设置，让您只需一个系统就能控制所有智能设备，所有数据默认本地存储。该板受益于蓬勃发展的 Home Assistant 生态系统，并将通过开源每月得到改进。
+Home Assistant Green 是自动化家居最简单、最注重隐私的方式。它提供轻松的设置，让您只需一个系统就能控制所有智能设备，所有数据默认本地存储。该板受益于蓬勃发展的 Home Assistant 生态系统，并将通过开源每月改进。
 
 我们建议在本教程中使用 Home Assistant Green 作为 Home Assistant 主机，或者您可以使用任何带有 Supervisor 的 Home Assistant 主机。
 
@@ -164,16 +164,16 @@ Home Assistant Green 是自动化家居最简单、最注重隐私的方式。�
 您可以通过复制下面的代码并将其粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用此示例。
 
 :::tip
-- 4.26 英寸黑白屏
-- 2.13 英寸 122*250 黑白黄红屏
-- 2.9 英寸 128*296 黑白黄红屏
+- 4.26 英寸黑/白  
+- 2.13 英寸 122*250 黑/白/黄/红
+- 2.9 英寸 128*296 黑/白/黄/红
 
 这些类型的电子墨水显示屏尚不支持。我们将在未来版本中更新 Wiki 上的相关信息——敬请关注。
 :::
 ***以下是 24 针连接器屏幕类型：***
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 英寸" default>
+<TabItem value="1.54 Inch" label="1.54 Inch" default>
 
 ```yaml
 # define font to display words
@@ -281,7 +281,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -311,7 +311,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -399,7 +399,7 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
-选择 usbmodemxxx（Windows 是 COMxxx）并点击 connect。[遇到问题？点击这里。](#Q4)
+选择 usbmodemxxx（Windows 是 COMxxx）并点击连接。[遇到问题？点击这里。](#Q4)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
@@ -460,9 +460,9 @@ display:
 此示例 YAML 代码为 ESPHome 项目配置了 SPI 接口和 reTerminal E 系列电子纸显示屏。`lambda` 部分包含在屏幕上渲染简单形状的绘图命令：
 
 - 两个矩形（一个位于位置 (10, 10)，大小为 100x50，另一个位于 (150, 10)，大小为 50x50）
-- 一个位于 (250, 35) 的圆，半径为 25
+- 一个圆形，位于 (250, 35)，半径为 25
 - 两个填充矩形（位于 (10, 80) 和 (150, 80)）
-- 一个位于 (250, 105) 的填充圆，半径为 25
+- 一个填充圆形，位于 (250, 105)，半径为 25
 
 您可以通过复制下面的代码并将其粘贴到 Yaml 文件中的 `captive_portal` 代码行之后来使用此示例。
 
@@ -562,7 +562,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -590,7 +590,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -1094,7 +1094,7 @@ display:
 </TabItem>
 </Tabs>
 
-编译上述代码并上传到设备后，您可能首先会看到屏幕上显示 **NaN**，请不要担心，这是正常的。这是因为设备尚未添加到 Home Assistant 环境中，所以 reTerminal 还无法获取 Home Assistant 数据。我们只需要按照以下步骤添加设备即可。
+编译上述代码并上传到您的设备后，您可能首先会看到屏幕上显示 **NaN**，请不要担心，这是正常的。这是因为设备尚未添加到 Home Assistant 环境中，所以 reTerminal 还无法获取 Home Assistant 数据。我们只需要按照以下步骤添加设备即可。
 
 #### 将 EE04 电子纸显示屏添加到 Home Assistant
 
@@ -1122,7 +1122,7 @@ display:
 
 ### 绘制 TrueType 字体
 
-此示例演示如何使用 TrueType 字体在 EE04 电子纸显示屏上显示自定义图标。Material Design Icons 提供了大量适合电子纸显示屏的可缩放符号。
+此示例演示如何使用 TrueType 字体在您的 EE04 电子纸显示屏上显示自定义图标。Material Design Icons 提供了大量可缩放的符号，非常适合电子纸显示屏。
 
 #### 安装所需工具
 
@@ -1303,7 +1303,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1344,7 +1344,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1426,13 +1426,13 @@ display:
 
 #### 使用不同图标进行自定义
 
-Material Design Icons 库包含数千个可在您的项目中使用的图标。以下是如何查找和使用不同图标的方法：
+Material Design Icons 库包含数千个可在项目中使用的图标。以下是查找和使用不同图标的方法：
 
 步骤 1. 点击下方按钮访问 Material Design Icons 网站。
 
 <div align="center">
 <a href="https://pictogrammers.com/library/mdi/" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>浏览 Material Design 图标</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>浏览 Material Design Icons</button></p>
 </a>
 </div>
 
@@ -1628,7 +1628,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1661,7 +1661,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1778,7 +1778,7 @@ lambda: |-
 请记住，电子纸显示屏的刷新率有限。`update_interval: 300s` 设置意味着您的显示屏只会每 5 分钟刷新一次。根据您的需要调整此值，但请注意频繁刷新可能会缩短电子纸显示屏的使用寿命。
 :::
 
-通过将图像与前面示例中涵盖的文本和其他显示元素相结合，您可以在 EE04 上创建丰富的信息仪表板
+通过将图像与前面示例中涵盖的文本和其他显示元素相结合，您可以在 EE04 上创建丰富、信息丰富的仪表板
 
 ## 技术支持与产品讨论
 

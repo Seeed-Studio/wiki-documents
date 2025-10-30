@@ -862,7 +862,7 @@ Step 4. Upload the downloaded image to the **image** folder you created earlier 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-For best results on e-paper displays, use high-contrast images with clear black and white areas. JPG and PNG formats are both supported.
+If you want to display complex and beautiful landscape pictures, it's best to perform image dithering in advance [in our website](https://sensecraft.seeed.cc/hmi/tools/dither) for a better effect. JPG and PNG formats are both supported.
 :::
 
 #### Configuring ESPHome for Image Display
@@ -876,9 +876,9 @@ Step 5. Add the following code to your ESPHome configuration file after the `cap
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
-    type: BINARY                            # Binary mode works best for e-paper
+    type: BINARY                            # Binary works for monochrome, RGB565 works for colorful eink
     resize: 800x480                         # Resize to match display resolution
-    invert_alpha: true                      # Invert colors if needed
+    invert_alpha: true                      # Invert colors is needed
 
 spi:
   clk_pin: GPIO7
@@ -904,15 +904,18 @@ display:
 </TabItem>
 <TabItem value="For E1002" label="For E1002">
 
+:::tip
+Please update your ESPHome version to **2025.10.2** above.
+:::
+
 ```yaml
 
 
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
-    type: BINARY                            # Binary mode works best for e-paper
+    type: RGB565                            #  Binary works for monochrome, RGB565 works for colorful eink
     resize: 800x480                         # Resize to match display resolution
-    invert_alpha: true                      # Invert colors if needed
 
 # define SPI interface
 spi:

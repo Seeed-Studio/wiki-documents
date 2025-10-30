@@ -1,6 +1,6 @@
 ---
 description: 本指南将帮助您快速设置 Seeed Studio XIAO RS485 扩展板并开始使用 RS485 通信。
-title: XIAO 的 RS485 扩展板
+title: XIAO RS485 扩展板
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/rs485_ExpansionBoard/top.webp
@@ -57,14 +57,14 @@ last_update:
   </table>
 </div>
 
-- 5V OUT/IN SWITCH : 这是5V端口的输入和输出，当从机设置为IN档时，作为输入，当主机设置为OUT档时，此端口向外放电，可以连接到传感器为传感器供电。
+- 5V OUT/IN SWITCH：一个是 5V 端口的输入和输出，当从机设置为 IN 档时，作为输入，当主机设置为 OUT 档时，此端口向外放电，可以连接到传感器为传感器供电。
 
-- 120R SWITCH : 120R开关用于确定120欧姆电阻是否接入。485在长距离布线环境中需要在开始和结束处添加120欧姆电阻来进行匹配并确保通信。
+- 120R SWITCH：120R 开关用于确定 120 欧姆电阻是否可访问。485 需要在长布线环境的开始和结束处添加 120 欧姆电阻来进行匹配并确保通信。
 
-- INT : 预留中断端口。
+- INT：保留中断端口。
 
 :::tip
-当用作输入模式时，需要将开关拨到IN，如果用作输出模式，需要将开关拨到OUT以防止烧毁。
+当用作输入模式时，需要将开关转到 IN，如果用作输出模式，需要将开关转到 OUT 以防止烧毁。
 :::
 
 ### 连接示意图
@@ -72,13 +72,19 @@ last_update:
 <div class="table-center">
   <table align="center">
     <tr>
-        <th>两个RS485扩展板连接</th>
+        <th>两个 RS485 扩展板连接</th>
     </tr>
     <tr>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/rs485_ExpansionBoard/connect1.png" style={{width:700, height:'auto'}}/></div></td>
     </tr>
   </table>
 </div>
+
+:::tip
+在此项目中，XIAO ESP32C3 使用 D4 (GPIO6) 和 D5 (GPIO7) 与 RS485 扩展板通信。
+
+如果使用不同的开发板，请根据需要修改相应的引脚配置。
+:::
 
 ## 软件概述
 
@@ -96,7 +102,7 @@ void setup() {
   Serial.begin(115200); // Initialize the hardware serial with a baud rate of 115200
   mySerial.begin(115200, SERIAL_8N1, 7, 6); // RX=D4(GPIO6), TX=D5(GPIO7)
 
-  
+
   // Wait for the hardware serial to be ready
   while(!mySerial);
   // Wait for the hardware serial to be ready
@@ -126,21 +132,21 @@ if (Serial.available()) {
 - `#define enable_pin D2`：定义一个使能引脚，用于控制 RS485 模块的发送和接收状态。
 
 - `setup()`：
-  - `Serial.begin(115200`：以 115200 的波特率初始化硬件串行端口。
+  - `Serial.begin(115200`：以 115200 的波特率初始化硬件串口。
   - `mySerial.begin(115200, SERIAL_8N1, 7, 6);`：RX=D4(GPIO4)，TX=D5(GPIO5)。
-  - `while(!mySerial)`：等待直到硬件串行端口准备好进行通信。
-  - `while(!Serial)`：等待直到硬件串行端口准备好进行通信。
-  - `pinMode(enable_pin, OUTPUT)`：将 enable_pin 配置为输出引脚，用于控制 RS485 模块。
+  - `while(!mySerial)`：等待直到硬件串口准备好进行通信。
+  - `while(!Serial)`：等待直到硬件串口准备好进行通信。
+  - `pinMode(enable_pin, OUTPUT)`：将 enable_pin 配置为输出引脚以控制 RS485 模块。
   - `digitalWrite(enable_pin, HIGH)`：将 enable_pin 设置为 HIGH，配置 RS485 模块为发送模式。
 
 - `loop()`：
-  - `if (receivedData.length() > 0)`：检查硬件串行端口是否有可读取的数据。
-  - `String receivedData = Serial.readStringUntil('\n');`：从硬件串行端口读取数据直到遇到换行符
+  - `if (receivedData.length() > 0)`：检查硬件串口是否有可读取的数据。
+  - `String receivedData = Serial.readStringUntil('\n');`：从硬件串口读取数据直到换行符
   - `Serial.println("Send successfully")`：打印成功消息。
-  - `mySerial.print("Master send information is: ")`：向硬件串行端口发送提示消息。
+  - `mySerial.print("Master send information is: ")`：向硬件串口发送提示消息。
   - `mySerial.println(receivedData)`：将您需要的数据发送到 RS485 扩展板。
 
-### 接收器代码
+### 接收端代码
 
 ```cpp
 #include <HardwareSerial.h>
@@ -151,12 +157,12 @@ HardwareSerial mySerial(1); // Use UART2
 void setup() {
   Serial.begin(115200); // Initialize the hardware serial with a baud rate of 115200
   mySerial.begin(115200, SERIAL_8N1, 7, 6); // RX=D4(GPIO4), TX=D5(GPIO5)
-  
+
   // Wait for the hardware serial to be ready
   while(!Serial);
   // Wait for the hardware serial to be ready
   while(!mySerial);
-  
+
   pinMode(enable_pin, OUTPUT); // Set the enable pin as an output
   digitalWrite(enable_pin, LOW); // Set the enable pin to low
 }
@@ -177,18 +183,18 @@ void loop() {
 - `define enable_pin D2`：定义一个使能引脚，用于控制 RS485 模块的发送和接收状态。
 
 - `setup()`：
-  - `Serial.begin(115200`：以 115200 的波特率初始化硬件串行端口。
+  - `Serial.begin(115200`：以 115200 的波特率初始化硬件串口。
   - `mySerial.begin(115200, SERIAL_8N1, 7, 6);`RX=D4(GPIO4)，TX=D5(GPIO5)。
-  - `while(!Serial)`：等待硬件串行端口准备好进行通信。
-  - `while(!mySerial)`：等待硬件串行端口准备好进行通信。
-  - `pinMode(enable_pin, OUTPUT)`：将 enable_pin 配置为输出引脚，用于控制 RS485 模块。
+  - `while(!Serial)`：等待直到硬件串口准备好进行通信。
+  - `while(!mySerial)`：等待直到硬件串口准备好进行通信。
+  - `pinMode(enable_pin, OUTPUT)`：将 enable_pin 配置为输出引脚以控制 RS485 模块。
   - `digitalWrite(enable_pin, LOW)`：将 enable_pin 设置为低电平，配置 RS485 模块为接收模式。
 
 - `loop()`：
-  - `if (mySerial.available())`：检查硬件串行端口是否有可读取的数据。
+  - `if (mySerial.available())`：检查硬件串口是否有可读取的数据。
   - `String receivedData = mySerial.readStringUntil('\n');`：基于换行符读取字符串
-  - `Serial.print("Received data: ");`：向硬件串行端口打印一条消息，表示已接收到数据。
-  - `Serial.println(receivedData);`：打印发送到接收器 RS485 的数据。
+  - `Serial.print("Received data: ");`：向硬件串口打印消息，指示已接收到数据。
+  - `Serial.println(receivedData);`：打印发送到接收端 RS485 的数据。
 
 ## RS485 传输结果
 

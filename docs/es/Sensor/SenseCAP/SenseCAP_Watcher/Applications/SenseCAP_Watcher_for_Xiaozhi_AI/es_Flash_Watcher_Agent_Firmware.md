@@ -13,6 +13,8 @@ slug: /es/flash_watcher_agent_firmware
 last_update:
   date: 09/04/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
 
 # Flashear Firmware del Watcher Agent
@@ -30,13 +32,16 @@ El firmware proporcionado en esta guía puede requerir información de autentica
 ## Prerrequisitos
 
 ### Hardware Requerido
+
 - Dispositivo SenseCAP Watcher
 - Cable de datos USB Type-C
 - PC con Windows
 
 ### Software Requerido
+
 - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 o posterior)
 - [Archivo binario del firmware Watcher Agent](https://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)
+
 :::note
 Si ya posees un dispositivo Watcher y su modelo **no es -EN**, necesitarás flashear manualmente la información de autenticación después de flashear el firmware.  
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/en_panel.jpg" style={{width:300, height:'auto'}}/></div>
@@ -61,7 +66,6 @@ Para más detalles, por favor consulta [Flashear Información de Autenticación]
 Asegúrate de que todas las rutas no contengan símbolos especiales.
 :::
 
-
 ### Paso 3. Conectar el Dispositivo
 
 1. Conecta tu Watcher a tu computadora usando el puerto Type-C en la parte inferior del dispositivo
@@ -73,7 +77,7 @@ Asegúrate de que todas las rutas no contengan símbolos especiales.
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting1.jpg" style={{width:300, height:'auto'}}/></div>
 
-### Paso 4. Configurar Ajustes del Firmware
+### Paso 4. Configurar Opciones del Firmware
 
 1. Haz clic en el botón "..." en la primera fila para navegar y seleccionar el archivo binario del firmware que descargaste
 2. Asegúrate de que la casilla de verificación junto al archivo de firmware esté seleccionada
@@ -84,10 +88,12 @@ Asegúrate de que todas las rutas no contengan símbolos especiales.
 ### Paso 5. Seleccionar Puerto COM y Configuraciones de Flash
 
 Configura las siguientes opciones:
+
 - SPI SPEED: 80MHz
 - SPI MODE: DIO
 - FLASH SIZE: 32Mbit
 - COM: En el Administrador de Dispositivos, encuentra el puerto COM cuyo nombre termine con "B" — selecciona este para el flasheo.
+
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting4.jpg" style={{width:500, height:'auto'}}/></div>
 
 :::note
@@ -100,13 +106,11 @@ Si el flasheo no comienza después de hacer clic en START, haz clic en STOP y co
 1. Haz clic en el botón `ERASE` para limpiar el firmware existente
 2. Espera a que el proceso de borrado se complete
 
-
 ### Paso 7. Flashear el Firmware
 
 1. Haz clic en el botón `START` para comenzar el flasheo
 2. Deberías ver información de progreso en la ventana de registro
 3. Si no aparece progreso o falla, prueba el otro puerto COM
-
 
 ### Paso 8. Verificar Éxito
 
@@ -140,19 +144,22 @@ El proceso de flasheo está completo cuando veas el mensaje de éxito en la vent
    - Intenta borrar antes de flashear
 
 ### Flashear Información de Autenticación
+
 Si tu modelo de Watcher **no es -EN**, debes flashear manualmente la información de autenticación después de flashear el firmware.  
 
 **Pasos:**
+
 1. Verifica la **dirección MAC** de tu dispositivo.  
    - Puedes encontrarla en la etiqueta del producto o a través del puerto serie.  
-   - Si estás usando el firmware nativo, también puedes encontrarla en **Configuración->Acerca del Dispositivo->WI-FI Mac** del dispositivo.  
+   - Si estás usando el firmware nativo, también puedes encontrarla en **Settings->About Device->WI-FI Mac** del dispositivo.  
+
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/en_panel.jpg" style={{width:300, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/mac.jpg" style={{width:600, height:'auto'}}/></div>
 2. Envía un correo electrónico a **sensecap@seeed.cc** con tu dirección STA MAC y solicita el archivo de autenticación y la herramienta de flasheo. Este script será proporcionado en el paquete que te enviemos.
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools.jpg" style={{width:500, height:'auto'}}/></div>
 3. Ve al terminal esp-idf y navega a la carpeta que te enviamos, ejecuta el **script de flasheo Python**.
 :::note
-Si aún no has instalado esp-idf, ve al [Sitio Web ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html) y sigue la guía oficial para descargarlo e instalarlo. 
+Si aún no has instalado esp-idf, ve al [Sitio Web ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html) y sigue la guía oficial para descargarlo e instalarlo.
 :::
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash1.jpg" style={{width:500, height:'auto'}}/></div>
 4. Sigue las instrucciones del programa e ingresa el puerto serie correspondiente, serialB e ingresa ""BURN"" para flashear.
@@ -164,10 +171,12 @@ Si aún no has instalado esp-idf, ve al [Sitio Web ESP-IDF](https://docs.espress
 :::note
 Si encuentras el siguiente problema, entonces ve al terminal esp-idf y navega a la carpeta e ingresa manualmente los siguientes dos comandos:
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash4.jpg" style={{width:800, height:'auto'}}/></div>
+
 ```bash
 espefuse.py -p <your_correct_serial_port> burn_block_data BLOCK_USR_DATA serial_number
 espefuse.py -p <your_correct_serial_port> burn_key BLOCK_KEY0 license_key HMAC_UP
 ```
+
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash2.jpg" style={{width:800, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash3.jpg" style={{width:800, height:'auto'}}/></div>
 :::

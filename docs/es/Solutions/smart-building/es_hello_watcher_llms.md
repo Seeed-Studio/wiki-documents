@@ -31,7 +31,7 @@ SenseCAP Watcher está redefiniendo cómo los humanos y los dispositivos interac
 
 Posee una capacidad conversacional única de "Activación Sin Fricción", iniciando la interacción de manera proactiva cuando te acercas. Esto no es solo una mejora técnica; es un cambio fundamental en la lógica de interacción: **Por primera vez, la iniciativa pasa del humano a la máquina, logrando un salto experiencial de "humanos adaptándose a las máquinas" a "máquinas adaptándose activamente a los humanos."**
 
-El "Ojo Agudo" de Watcher está impulsado por un poderoso **Chip de Visión AI en el Dispositivo (Himax)**, permitiendo un procesamiento local rápido para reconocimiento de objetos y seguimiento de objetivos. Combinado con el firmware asistente **XiaoZhi** expandible, es más que solo una cámara—es un asistente de IA dedicado que evoluciona y comprende tus necesidades.
+El "Ojo Agudo" de Watcher está impulsado por un poderoso **Chip de Visión AI en el Dispositivo (Himax)**, permitiendo un procesamiento local rápido para el reconocimiento de objetos y seguimiento de objetivos. Combinado con el firmware de asistente expandible, es más que solo una cámara—es un asistente de IA dedicado que evoluciona y comprende tus necesidades.
 
 ## Ventajas Principales
 
@@ -73,8 +73,8 @@ El "Ojo Agudo" de Watcher está impulsado por un poderoso **Chip de Visión AI e
 				</svg>
 			</div>
 			<div class="info-content">
-				<h3>Plataforma y Herramientas de Integración Flexibles</h3>
-				<p>Basado en la arquitectura XiaoZhi MCP, puedes definir libremente nuevas herramientas de IA e integrar rápidamente servicios locales o en la nube, adaptándose perfectamente a los sistemas inteligentes existentes.</p>
+				<h3>Plataforma y Herramientas de Integración Flexible</h3>
+				<p>Basado en su arquitectura MCP flexible, puedes definir libremente nuevas herramientas de IA e integrar rápidamente servicios locales o en la nube, encajando perfectamente en sistemas inteligentes existentes.</p>
 			</div>
 		</li>
 		<li class="info-item">
@@ -86,7 +86,7 @@ El "Ojo Agudo" de Watcher está impulsado por un poderoso **Chip de Visión AI e
 			</div>
 			<div class="info-content">
 				<h3>Expandibilidad de Hardware: Soporte de Interfaces Adicionales</h3>
-				<p>Cuenta con interfaces de expansión GPIO para conectar fácilmente varios sensores y actuadores, permitiendo personalización profunda y soportando implementaciones más creativas.</p>
+				<p>Cuenta con interfaces de expansión GPIO para conexión fácil a varios sensores y actuadores, permitiendo personalización profunda y soportando implementaciones más creativas.</p>
 			</div>
 		</li>
 	</ul>
@@ -94,15 +94,15 @@ El "Ojo Agudo" de Watcher está impulsado por un poderoso **Chip de Visión AI e
 
 ## Cómo Funciona
 
-SenseCAP Watcher puede considerarse como un robot inteligente "modular", con su funcionamiento principal dependiendo de la colaboración de tres componentes principales:
+SenseCAP Watcher puede considerarse como un robot inteligente "modular", con su operación central dependiendo de la colaboración de tres componentes principales:
 
-1.  **Núcleo de Hardware (ESP32S3)**: Impulsa el hardware subyacente, procesa datos de la cámara y mantiene conexiones estables a los servicios en la nube.
+1.  **Núcleo de Hardware (ESP32S3)**: Impulsa el hardware subyacente, procesa datos de la cámara y mantiene conexiones estables a servicios en la nube.
 2.  **Nervio Visual (Chip AI Himax)**: Una poderosa unidad de procesamiento de visión AI en el dispositivo que otorga al dispositivo capacidades de percepción ambiental en tiempo real.
-3.  **Cerebro en la Nube (Servicios Backend)**: Responsable de la configuración de roles de IA, programación de herramientas MCP y gestión unificada de dispositivos.
+3.  **Cerebro en la Nube (Servicios Backend)**: Responsable de la configuración del rol de IA, programación de herramientas MCP y gestión unificada de dispositivos.
 
 El proceso puede simplificarse de la siguiente manera:
 
-Los "ojos" de Watcher (cámara) capturan imágenes → El "nervio visual" (chip Himax) realiza reconocimiento y despierta a XiaoZhi → El "cerebro" (IA backend, servicios MCP) comprende el contexto y responde.
+Los "ojos" de Watcher (cámara) capturan imágenes → El "nervio visual" (chip Himax) realiza reconocimiento y despierta al asistente → El "cerebro" (IA backend, servicios MCP) comprende el contexto y responde.
 
 Este diseño modular ofrece alta flexibilidad y extensibilidad.
 
@@ -140,55 +140,9 @@ Puedes ver un tutorial detallado en el video a continuación:
 
 Los desarrolladores o usuarios avanzados pueden instalar diferentes modelos o firmware para dotar a Watcher con capacidades más poderosas y exclusivas.
 
-### 1. Instalación de Modelos de IA
-
-Aprovechando el chip de visión AI en el dispositivo Himax integrado, puedes desplegar fácilmente nuevos modelos de reconocimiento a través de la plataforma SenseCraft AI:
-
-- Conecta tu computadora a la interfaz Type-C en la parte inferior del Watcher.
-- En la plataforma SenseCraft AI, selecciona `SenseCAP Watcher` bajo Workspace y elige el puerto con el **número de serie menor** para la instalación del modelo.
-
-  <div align="center">
-    <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/connect-watcher-himax.png" alt="connect-watcher-himax"/>
-  </div>
-
-- Si la cámara no funciona correctamente después de la instalación, intenta reiniciar el dispositivo.
-
-### 2. Instalación de Firmware XiaoZhi
-
-<Tabs>
-<TabItem value="sensecraft" label="SenseCraft AI">
-
-Próximamente.
-
-</TabItem>
-<TabItem value="flasher" label="Instalación de Archivo Único (Recomendado)" default>
-
-- **Firmware Más Reciente v1.8.8**: [Enlace de Descarga](https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/v1.8.8_sensecap-watcher.zip)
-
-- Extrae el paquete de firmware descargado y usa la herramienta [esptool.py](https://github.com/espressif/esptool) para realizar la instalación:
-
-  ```shell
-  esptool.py -p /dev/ttyACM0 -b 2000000 write_flash 0 merged-binary.bin
-  ```
-  *(Nota: Ajusta el puerto `/dev/ttyACM0` según tu sistema, ej., `COM3` en Windows)*
-
-</TabItem>
-
-<TabItem value="compile" label="Compilar desde Código Fuente (Para Desarrolladores)">
-
-- Requiere un entorno de cadena de herramientas IDF preconfigurado. Clona el repositorio de código: [Repositorio GitHub](https://github.com/Wvirgil123/xiaozhi-esp32/tree/feat-sscma_invoke)
-
-- Ejecuta los siguientes comandos en el directorio raíz del proyecto:
-
-  ```shell
-  cd xiaozhi-esp32
-  idf.py set-target esp32s3
-  idf.py menuconfig  # In the GUI, select the board type as SenseCAP Watcher
-  idf.py build flash monitor
-  ```
-
-</TabItem>
-</Tabs>
+Para instrucciones detalladas, por favor consulta las secciones relevantes en nuestra guía completa:
+- **[Proceso de Instalación de Modelo AI](/es/visual_trigger_and_ai_flash#ai-model-flashing-process)**
+- **[Proceso de Instalación de Firmware](/es/visual_trigger_and_ai_flash#firmware-flashing-process)**
 
 ## Iniciar una Conversación
 
@@ -205,20 +159,26 @@ Por ejemplo, si el nombre del rol de mi agente está configurado como `Watcher`,
 El dispositivo permanece en estado de espera cuando no está despierto, lo que significa que no escucha las conversaciones del entorno. Una vez despierto, comienza a escuchar y puede participar en diálogos o ejecutar operaciones basadas en las instrucciones del usuario.
 
 <Tabs>
-<TabItem value="vision" label="Activación Visual" default>
+<TabItem value="vision" label="Despertar Visual" default>
 
 <div style={{ textAlign: 'center' }}>
 <video width="auto" height="480" controls>
   <source src="https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/vision-trigger-watcher.mp4" type="video/mp4" />
-  Tu navegador no soporta la etiqueta de video.
+  Your browser does not support the video tag.
 </video>
 </div>
 
-La función actual de activación visual ofrece las siguientes opciones de configuración:
+:::info[Cómo Habilitar el Despertar Visual]
+Por defecto, la función de despertar visual está deshabilitada. Para activarla, puedes decirle al Watcher cuando esté despierto:
 
-- **ID de Objetivo** (`target`): Especifica el ID del objetivo a detectar. Este ID depende del modelo visual utilizado; el valor predeterminado es 0.
-- **Duración de Detección** (`duration`): La unidad es segundos, se utiliza para ajustar la sensibilidad de la activación visual. El valor predeterminado es 1 segundo (este valor predeterminado no incluye el procesamiento de rebote de 1 segundo).
-- **Umbral de Confianza** (`threshold`): El límite inferior de confianza para que el modelo visual reconozca un objeto, utilizado para ajustar la sensibilidad de detección. Se representa como un porcentaje, el valor predeterminado es 75%.
+**"Hey Watcher, turn on model inference."**
+:::
+
+La función actual de despertar visual ofrece las siguientes opciones de configuración:
+
+- **ID de Objetivo** (`target`): Especifica el ID de objetivo a detectar. Este ID depende del modelo visual utilizado; el valor por defecto es 0.
+- **Duración de Detección** (`duration`): La unidad es segundos, utilizada para ajustar la sensibilidad del despertar visual. El valor por defecto es 1 segundo (este valor por defecto no incluye el procesamiento de rebote de 1 segundo).
+- **Umbral de Confianza** (`threshold`): El límite inferior de confianza para que el modelo visual reconozca un objeto, utilizado para ajustar la sensibilidad de detección. Representado como porcentaje, el valor por defecto es 75%.
 - **Período de Enfriamiento** (`interval`): La unidad es segundos, indica el tiempo de espera requerido después de que termine una conversación antes de activarse nuevamente, utilizado para evitar interrupciones frecuentes por el mismo objeto. El valor predeterminado es 8 segundos.
 
 Por ejemplo, puedes ajustar la sensibilidad del modelo modificando el parámetro `threshold`. Si encuentras que el umbral actual es demasiado estricto, simplemente dile a Watcher: "Por favor establece el umbral de confianza al 60%".
@@ -250,9 +210,9 @@ Por ejemplo, puedes ajustar la sensibilidad del modelo modificando el parámetro
 
 Dile a Watcher:
 
-- `Por favor enciende la cámara`
-- `¿Qué puedes ver?`
-- `¿Qué hay frente a ti?`
+- `Please turn on the camera`
+- `What can you see?`
+- `What's in front of you?`
 
 <div style={{ textAlign: 'center' }}>
 <video width="auto" height="320" controls>
@@ -265,13 +225,13 @@ Dile a Watcher:
 
 Aquí tienes algunos recursos avanzados para ayudarte a expandir aún más los límites de aplicación de SenseCAP Watcher según tus necesidades, ya sea para implementación local, protección de privacidad o construcción de bases de conocimiento personalizadas:
 
-- [Hogar Inteligente Impulsado por Conversación IA](/es/ha_dify_watcher_llms) - Controla dispositivos domésticos inteligentes como luces, aire acondicionado y cortinas directamente por voz a través de SenseCAP Watcher, despídete de la operación manual.
+- [Hogar Inteligente Impulsado por Conversación AI](/es/ha_dify_watcher_llms) - Controla dispositivos de hogar inteligente como luces, aire acondicionado y cortinas directamente por voz a través de SenseCAP Watcher, despidiéndote de la operación manual.
 <!--- [Knowledge Based chatbots](/es/knowledge_watcher_llms) - Transform SenseCAP Watcher into a virtual exhibition secretary, automatically explaining products and solutions for businesses, with the ability to intelligently identify customer points of interest.-->
 
 ## Referencias
 
 - [Descripción General del Hardware de SenseCAP Watcher](/es/watcher_hardware_overview) - Recursos de hardware, diseño estructural, etc., de SenseCAP Watcher.
 - [Guía de Operación de SenseCAP Watcher](/es/watcher_operation_guideline) - Lógica básica para encender y apagar SenseCAP Watcher.
-- [Entrenamiento de Modelos de Visión en Dispositivo para SenseCAP Watcher](/es/training_model_for_watcher) - Una guía para entrenar modelos de visión en dispositivo para SenseCAP Watcher, incluyendo preparación de datos, entrenamiento de modelos y implementación.
+- [Entrenamiento de Modelos de Visión en Dispositivo para SenseCAP Watcher](/es/training_model_for_watcher) - Una guía para entrenar modelos de visión en dispositivo para SenseCAP Watcher, incluyendo preparación de datos, entrenamiento de modelos y despliegue.
 - [SenseCAP Watcher - Panel de Control Web](/es/watcher_web_control_panel)
 - [SenseCAP Watcher - Guía de Configuración de Red del Dispositivo](/es/device_network_setup/)

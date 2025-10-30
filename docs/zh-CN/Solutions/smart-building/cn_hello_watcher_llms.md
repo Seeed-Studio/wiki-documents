@@ -2,22 +2,21 @@
 description: 你好 Watcher
 title: SenseCAP Watcher：主动问候你的 AI 助手
 keywords:
-  - Jarvis
-  - SenseCAP Watcher
-  - xiaozhi
-  - AI
-  - LLM
-  - Chat-Bot
-  - SenseCraft AI
-  - Himax
-  - Yolo
-  - Assistant
-  - MCP
+- Jarvis
+- SenseCAP Watcher
+- xiaozhi
+- AI
+- LLM
+- Chat-Bot
+- SenseCraft AI
+- Himax
+- Yolo
+- Assistant
+- MCP
 image: https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/display.webp
 slug: /cn/solutions/hello_watcher_llms
-sidebar_position: 1
 last_update:
-  date: 09/12/2025
+  date: 09/16/2025
   author: Spencer
 ---
 
@@ -32,7 +31,7 @@ SenseCAP Watcher，正重新定义人与设备的交互方式。
 
 它具备独特的“无感触发”对话能力，可在你靠近时主动发起交互。这不仅是一次技术升级，更是一种交互逻辑的根本转变：**主动权首次由人移交至机器，实现了从“人适应机器”到“机器主动适应人”的体验跨越。**
 
-Watcher 的“慧眼”依托于强大的**端侧 AI 视觉芯片（Himax）**，使其能够在本机快速完成物体识别与目标追踪。结合可扩展的**小智**助手固件，它不止是一枚摄像头，更是一位可持续进化、懂你所需的专属AI助手。
+Watcher 的“慧眼”依托于强大的**端侧 AI 视觉芯片（Himax）**，使其能够在本机快速完成物体识别与目标追踪。结合可扩展的助手固件，它不止是一枚摄像头，更是一位可持续进化、懂你所需的专属AI助手。
 
 <!--**(在此嵌入一段约30秒的 YouTube/Bilibili 视频，直观展示 Watcher 的主动交互体验)**-->
 
@@ -41,7 +40,7 @@ Watcher 的“慧眼”依托于强大的**端侧 AI 视觉芯片（Himax）**�
 <div class="info-section">
   <div class="section-header">
       <h2><a href="https://www.seeedstudio.com/SenseCAP-Watcher-XIAOZHI-EN-p-6532.html?utm=wiki&utm=hello_watcher_llms">SenseCAP Watcher</a></h2>
-      <p>一款集端侧AI视觉与灵活开发环境于一身的智能设备，旨在帮助你轻松构建与部署个性化AI应用。</p>
+      <p>一款集成本地 AI 视觉和灵活开发环境的智能设备，旨在帮助您轻松构建和部署个性化 AI 应用。</p>
   </div>
  <ul class="info-list">
   <li class="info-item">
@@ -77,7 +76,7 @@ Watcher 的“慧眼”依托于强大的**端侧 AI 视觉芯片（Himax）**�
    </div>
    <div class="info-content">
     <h3>灵活集成平台与工具</h3>
-    <p>基于小智 MCP 架构，可自由定义新的 AI 工具，并快速接入本地或云端服务，无缝融入现有智能系统。</p>
+    <p>基于其灵活的 MCP 架构，可自由定义新的 AI 工具，并快速接入本地或云端服务，无缝融入现有智能系统。</p>
    </div>
   </li>
   <li class="info-item">
@@ -105,7 +104,7 @@ SenseCAP Watcher 可视为一个“模块化”的智能机器人，其核心由
 
 整个过程可简化为：
 
-Watcher 的“眼睛”（摄像头）捕捉图像 → “视觉神经”（Himax 芯片）进行识别、唤醒小智 → “大脑”（后台 AI、MCP 服务）理解情境并做出响应。
+Watcher 的"眼睛"（摄像头）捕获图像 → "视觉神经"（Himax 芯片）执行识别并唤醒助手 → "大脑"（后端 AI、MCP 服务）理解上下文并响应。
 
 这种模块化设计带来高度的灵活性与扩展性。
 
@@ -143,54 +142,9 @@ Watcher 的“眼睛”（摄像头）捕捉图像 → “视觉神经”（Hima
 
 开发者或高级用户可通过烧录不同的模型或固件，为 Watcher 赋予更强大的专属能力。
 
-### 1. 烧录 AI 模型
-
-借助内置的 Himax 端侧 AI 视觉芯片，您可以通过 SenseCraft AI 平台轻松部署新的识别模型：
-
-- 将电脑连接至 Watcher 底部的 Type-C 接口。
-- 在 SenseCraft AI 平台中选择 Workspace 下的 `SenseCAP Watcher`，并选择**序列号较小**的端口进行模型烧录。
-
-  <div align="center">
-    <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/connect-watcher-himax.png" alt="connect-watcher-himax"/>
-  </div>
-
-- 烧录完成后若摄像头未正常工作，请尝试重启设备。
-
-### 2. 烧录 XiaoZhi 固件
-
-<Tabs>
-<TabItem value="sensecraft" label="SenseCraft AI">
-
-Coming Soon.
-
-</TabItem>
-<TabItem value="flasher" label="单文件烧录（推荐）" default>
-
-- **最新固件 v1.8.8**：[下载地址](https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/v1.8.8_sensecap-watcher.zip)
-
-- 解压下载的固件包，使用 [esptool.py](https://github.com/espressif/esptool) 工具执行烧录：
-
-  ```shell
-  esptool.py -p /dev/ttyACM0 -b 2000000 write_flash 0 merged-binary.bin
-  ```
-
-</TabItem>
-
-<TabItem value="compile" label="从源码编译（开发者适用）">
-
-- 需提前配置好 IDF 工具链环境，并克隆代码仓库：[GitHub 仓库](https://github.com/Wvirgil123/xiaozhi-esp32/tree/feat-sscma_invoke)
-
-- 在项目根目录下执行以下命令：
-
-  ```shell
-  cd xiaozhi-esp32
-  idf.py set-target esp32s3
-  idf.py menuconfig  # 在图形化界面中选择板卡类型为 SenseCAP Watcher
-  idf.py build flash monitor
-  ```
-
-</TabItem>
-</Tabs>
+详细说明请参考我们综合指南中的相关章节：
+- **[AI 模型刷入流程](/cn/visual_trigger_and_ai_flash#AI 模型刷入流程)**
+- **[固件刷入流程](/cn/visual_trigger_and_ai_flash#固件刷入流程)**
 
 ## 开始对话
 
@@ -216,7 +170,13 @@ Coming Soon.
 </video>
 </div>
 
-目前的视觉唤醒功能提供以下配置选项：
+:::info[如何启用视觉唤醒]
+默认情况下，视觉唤醒功能是禁用的。要开启它，您可以在 Watcher 被唤醒时对它说：
+
+**"Hey Watcher, turn on model inference."**
+:::
+
+当前的视觉唤醒功能提供以下配置选项：
 
 - **检测目标编号** (`target`)：指定待检测的目标编号。该编号取决于所使用的视觉模型，默认值为 0。
 - **检测持续时间** (`duration`)：单位为秒，用于调节视觉唤醒的灵敏度。默认值为 1 秒（该默认值未包含 1 秒防抖处理）。

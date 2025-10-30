@@ -5,7 +5,7 @@ import '../../css/indexPage.css'
 
 import { getExploreList, getStartedList } from '../../define/indexData'
 
-// ✅ 新增：语言与链接工具（只用到三个）
+// 语言与链接工具（只用到三个）
 import { detectLocaleFromPath, localizeHref, localizedLink, type Locale } from '../../pages/home/lib/locale';
 
 /**
@@ -16,7 +16,7 @@ const getIndexImage = (src) => {
   return src && require(`../../../assets/index/${src}`).default;
 };
 
-// ✅ 新增：根据是否为 http(s) 选择 localizeHref / localizedLink
+// 根据是否为 http(s) 选择 localizeHref / localizedLink
 function linkFor(rawHref: string, locale: Locale) {
   if (!rawHref) return rawHref;
 
@@ -44,16 +44,16 @@ const renderNa = (list, locale: Locale, isExplore?: boolean) => {
   list.forEach((item, index) => {
     let cHtm = ''
     item.children.forEach((cItem, index) => {
-      // ✅ 子级链接走 linkFor
+      // 子级链接走 linkFor
       cHtm += `<a class="home_nav_item_a" href="${linkFor(cItem.link, locale)}" target="_blank">${cItem.title}</a>`
       if (cItem.children && cItem.children.length > 0) {
         cItem.children.forEach((ccItem, index) => {
-          // ✅ 孙级链接走 linkFor
+          // 孙级链接走 linkFor
           cHtm += `<a class="home_nav_item_a sub  ${cItem.split ? 'split' : ''}" href="${linkFor(ccItem.link, locale)}" target="_blank"> - ${ccItem.title}</a>`
         })
       }
     })
-    // ✅ 顶部图片链接也走 linkFor
+    // 顶部图片链接也走 linkFor
     html += `
         <div class="home_nav_item">
         <a href="${linkFor(item.link, locale)}" class="home_nav_item_img" target="_blank"> <img src="${getIndexImage(item.img + `${dataTheme === 'light' ? '_light' : ''}.png`)}" alt="" /></a>

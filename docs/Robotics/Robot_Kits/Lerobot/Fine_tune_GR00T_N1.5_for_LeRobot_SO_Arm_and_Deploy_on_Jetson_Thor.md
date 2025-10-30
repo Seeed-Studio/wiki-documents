@@ -167,8 +167,9 @@ sudo pip3 install jetson-stats
 Miniconda is used to isolate development environments. To install miniconda, refer to the following instructions：
 
 ```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-Linux-x86_64.sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
+chmod +x Miniconda3-latest-Linux-aarch64.sh
+./Miniconda3-latest-Linux-aarch64.sh
 source ~/.bashrc
 conda --version
 ```
@@ -177,14 +178,18 @@ conda --version
 
 Compiling the GPU version of PyTorch from source on Thor may result in compatibility issues. For convenience, we provide a precompiled `.whl` file to help developers quickly set up a PyTorch-enabled development environment on Thor.
 
-Here, a pre-compiled wheel file is provided for installing PyTorch 2.9 on Thor. This file was compiled in a Python `3.10 + CUDA 13` environment.
-Click [**here**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVe_c8F4DR9CluC049HCYoMBP3UXta1kqLEDTvkcYU6s-A?e=d9VEzN) to download the `.whl` file.
+Here, a pre-compiled wheel file is provided for installing PyTorch 2.9 on Thor. This file was compiled in a  `Python 3.10 + CUDA 13` environment.  
+click [**Python 3.10 + CUDA 13 pytorch2.9**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVe_c8F4DR9CluC049HCYoMBP3UXta1kqLEDTvkcYU6s-A?e=vrAjhN) to download the `.whl` file.  
+click [**Python 3.10 + CUDA 13 torchvision0.24**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ESDkmxLfCW1MkI8YBfrdWVAB4u3OPvnb4rOhlvw4QvoS_Q?e=YJE0Pr) to download the `.whl` file.  
+click [**Python 3.10 + CUDA 13 torchvision0.23**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQYGDJxMk1ZAgJHgEMZIfg8Blcrs2owxx3ZM603WgBXhhA?e=MdWMI9) to download the `.whl` file.
 
-Other precompiled dependency `.whl` files for thor can be found [**here**](https://pypi.jetson-ai-lab.io/sbsa/cu130).
+
+Other <mark>Python **3.12** + CUDA 13</mark> precompiled dependency `.whl` files for thor can be found :  
+[**https://pypi.jetson-ai-lab.io/sbsa/cu130**](https://pypi.jetson-ai-lab.io/sbsa/cu130).
 
 If the expected wheel file is not available, developer will need to build the required dependencies themselves to complete the setup of the development environment.
 
-### **Installing Additional Dependencies**
+### Installing Additional Dependencies
 
 This document provides a reference Docker image to help developers quickly adapt to the Jetson AGX Thor development environment.
 <mark>This image is for reference only, and developers are free to choose whether to use it based on their specific needs.</mark>
@@ -506,8 +511,13 @@ zipp                      3.23.0                             /opt/venv/lib/pytho
 The image can be pulled directly from Docker Hub and includes commonly used dependencies such as `PyTorch`, `TensorRT`, and `FlashAttention`:
 
 ```bash
-docker pull johnnync/lerobot:r38.2.aarch64-cu130-24.04
+docker pull johnnync/isaac-gr00t:r38.2.arm64-sbsa-cu130-24.04
 ```
+
+:::warning
+This Docker image does not support invoking LeRobot scripts for `ACT` model inference. If you need to run the full LeRobot script suite, please use an environment outside this image.
+:::
+
 
 To run Docker on Thor, refer to the following command. Replace `your_docker_img:tag` with your Docker image name and tag, or use the image ID:
 
@@ -523,6 +533,8 @@ sudo docker run --rm -it \
   -v /dev:/dev \
   your_docker_img:tag
 ```
+
+
 
 ## Data Collection Using the SO-ARM
 
@@ -547,7 +559,13 @@ To stream two USB cameras simultaneously on Thor, after connecting one camera to
   <img src="https://files.seeedstudio.com/wiki/other/hub.png" height="400"/>
 </div>
 
-### Lerobot Environment Setup
+
+The USB Type-C dock must be connected to specific ports on Thor to ensure peripherals function properly, as shown below:
+<div align="center">
+  <img src="https://files.seeedstudio.com/wiki/other/thor-typec.png" height="400"/>
+</div>
+
+### Lerobot Environment Setup (optinal)
 
 The development environment setup process for Lerobot can be found in the subsection of the following link:  
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#install-lerobot](https://wiki.seeedstudio.com/lerobot_so100m_new/#install-lerobot)
@@ -556,8 +574,10 @@ The development environment setup process for Lerobot can be found in the subsec
 
 ### Configure the motors
 
-The motors on each joint of the SO-ARM need to be configured before assembly. The configuration steps can be found in the subsection of the following link:
+
+The motors on each joint of the SO-ARM need to be configured before assembly. The configuration steps can be found in the subsection of the following link:    
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#configure-the-motors](https://wiki.seeedstudio.com/lerobot_so100m_new/#configure-the-motors)
+
 
 ### Assembly
 
@@ -565,6 +585,7 @@ The installation process of the SO-ARM’s master and follower arms can be found
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#assembly](https://wiki.seeedstudio.com/lerobot_so100m_new/#assembly)
 
 ### SO-ARM Calibration
+
 
 After the SO-ARM has been fully assembled, calibration is required. Please refer to the subsection of the following link for the calibration procedure:  
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#calibrate](https://wiki.seeedstudio.com/lerobot_so100m_new/#calibrate)
@@ -576,6 +597,7 @@ After the SO-ARM has been fully assembled, calibration is required. Please refer
 :::
 
 **After running the calibration script, manually move each joint of the robotic arm to ensure that it reaches its full range of motion! Failure to do so may result in a mismatch between the poses of the leader and follower arms during teleoperation.**
+
 
 
 
@@ -597,6 +619,7 @@ After completing both the camera installation and the robotic arm calibration, t
 
 
 ### Visualizing Collected Data
+
 
 To visualize the data collected on the SO-ARM, please refer to the subsection of the following link:  
 [https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset)
@@ -659,7 +682,7 @@ You will need to register an account to use the platform. This section introduce
 
 ### Training the Model and Exporting from the Server
 
-**Developers can train models directly within the notebook terminal. Below is an example for training an act model and exporting it from the server afterward.**
+**Developers can train models directly within the notebook terminal. Below is an example for training an GR00T N1.5 and exporting it from the server afterward.**
 
 Install Conda on the server:
 
@@ -672,27 +695,44 @@ source ~/miniconda3/bin/activate
 conda init --all
 ```
 
-Install lerobot projectt:
-
+Clone the Isaac-GR00T Repo: 
 ```bash
-conda create -y -n lerobot python=3.10 && conda activate lerobot
-git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
-cd ~/lerobot && pip install -e ".[feetech]"
+git clone https://github.com/NVIDIA/Isaac-GR00T
+cd Isaac-GR00T
 ```
 
-Train the ACT model:
+Create the gr00t environment:
+```bash
+conda create -n gr00t python=3.10
+conda activate gr00t
+pip install --upgrade setuptools
+pip install -e .[base]
+pip install --no-build-isolation flash-attn==2.7.1.post4 
+```
+
+:::warning
+If you train or fine-tune GR00T on a cloud platform, you must use a GPU with Ampere or newer architecture (e.g., RTX A6000 or GeForce RTX 4090). **V100 (Volta) is not supported** for GR00T training or fine-tuning.
+:::
+
+For more details on fine-tuning the model, please refer to:
+[https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning#:~:text=1.2%20Configure%20Modality%20File](https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning#:~:text=1.2%20Configure%20Modality%20File)
+
+
+Fine-tuning GR00T N1.5 model:
 
 ```bash
-python -m lerobot.scripts.train \
-  --dataset.repo_id=seeedstudio123/test \
-  --policy.type=act \
-  --output_dir=outputs/train/act_so101_test \
-  --job_name=act_so101_test \
-  --policy.device=cuda \
-  --wandb.enable=false \
-  --policy.push_to_hub=false\
-  --steps=300000 
+python scripts/gr00t_finetune.py \
+   --dataset-path ./demo_data/so101-table-cleanup/ \
+   --num-gpus 1 \
+   --output-dir ./so101-checkpoints  \
+   --max-steps 10000 \
+   --data-config so100_dualcam \
+   --video-backend torchvision_av
 ```
+
+:::note
+The default fine-tuning settings require ~25G of VRAM. If you don't have that much VRAM, try adding the `--no-tune_diffusion_model` flag to the gr00t_finetune.py script.
+:::
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train4.png" width="600"/>
@@ -753,7 +793,11 @@ pip install -e .[thor]
 
 Gr00t is fully compatible with the datasets collected using the lerobot framework. Refer to the previous "**Data Collection**" section to prepare your dataset for fine-tuning the Gr00t model.
 
-### Model Fine-Tuning
+### Model Fine-Tuning (optional)
+
+:::warning
+If you’ve already fine-tuned GR00T N1.5 in NVIDIA Brev, you can skip this step on Thor.
+:::
 
 **The fine-tuning process can be executed either on the provided cloud training platform or directly inside the Docker container on Thor**.
 
@@ -821,14 +865,16 @@ sudo docker exec -it <container id> /bin/bahs
 Then, in this second shell, start the inference client:
 
 ```bash
-  python examples/eval_lerobot.py \
+  python examples/SO-100/eval_lerobot.py \
     --robot.type=so100_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ wrist: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, front: {type: opencv, index_or_path: 1, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ wrist: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, front: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
     --policy_host=0.0.0.0 \
     --lang_instruction="Grab pens and place into pen holder."
 ```
+
+Replace `index_or_path` with your camera’s index number; you can find it by running `ls /dev/video*`.
 
 When the client process starts successfully, the following output should appear:
 <div align="center">
@@ -848,14 +894,56 @@ Once everything is set up, GR00T N1.5 can be successfully deployed on Jetson AGX
 
 ## FAQ
 
-Q1: The Brev CLI tool doesn't work on the cloud training platform?
-
+**Q1: The Brev CLI tool doesn't work on the cloud training platform?**  
 This is often due to network issues.
 You may install and log in to Brev CLI on your local Ubuntu host, then attempt to connect to your cloud instance using SSH from your local terminal.
 
-Q2: How do I upload data to the training platform?
+**Q2: How do I upload data to the training platform?**  
+Use the following command: `scp <local-file-path> <brev-instance-name>:<remote-file-path>`,for example`scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
 
-Use the following command: `scp <local-file-path> <brev-instance-name>:<remote-file-path>`,for example `scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
+
+**Q3: Screen of Thor goes black once installation starts**  
+If you use a Jetson installation USB stick on a Jetson AGX Thor Developer Kit that has been previously used or set up, you need to enable SoC Display Hand-Off in the `UEFI setup menu`.
+In fact, flashing continues in the background during this time; after a while, the Ubuntu desktop will appear.
+
+**Q4: I don’t have video output on the monitor (connected through a KVM)**  
+It is known that some KVM switches/devices do not handle video output from the Jetson AGX Thor Developer Kit well. Please connect the monitor directly to the Jetson AGX Thor Developer Kit.
+
+**Q5: After flashing Thor, HDMI sometimes shows no signal on subsequent boots**  
+A workaround that has proven effective is to switch to the DisplayPort (DP) connector for display output.
+
+**Q6: No keyboard input is detected during Thor image flashing**  
+We recommend using a wired keyboard during flashing. Wireless keyboards may have limited compatibility during the Thor flashing process.
+
+**Q7: Cloud fine-tuning of GR00T reports “GPU not supported”**  
+Do not use GPUs older than `Ampere architecture` for cloud fine-tuning of GR00T. (e.g., RTX A6000 or GeForce RTX 4090). V100 (Volta) is not supported for GR00T training or fine-tuning.
+
+**Q8: The serial device name for the robotic arm controller board does not appear under /dev**  
+The stock Thor system does not include `CH34x` drivers. If they are missing, install them from:
+https://github.com/juliagoda/CH341SER
+
+**Q9: The Type-C port on Thor does not recognize an external hub**  
+To use an external hub via Thor’s Type-C, plug it into the Type-C port closest to the QSFP28 connector. (Both Type-C ports provide power, but only the specified one supports the hub reliably.)
+<div align="center"> <img src="https://files.seeedstudio.com/wiki/other/thor-typec.png" height="200"/> </div>
+
+**Q10: When flashing with a capture card, the system later says the user password is incorrect**  
+When using a capture-card desktop during flashing, a keyboard input bug may occur (input not matching what’s typed). Double-check the user password as you set it.
+
+**Q11: Where is Thor’s debug port?**  
+Thor’s Type-C debug port is hidden under the magnetic cover. Multiple serial device nodes may be created; use the one with the smallest index to log in to Thor via serial.
+
+**Q12: Unable to run LeRobot scripts to infer ACT in the GR00T image**  
+We do not recommend invoking LeRobot APIs for `ACT` inference in a Python 3.12 environment. `Calibration` and `find port` scripts are fine. Note that Ubuntu 24 defaults to Python 3.12 locally.
+
+**Q13: How to check GPU SM utilization on Thor?**  
+Run:
+```bash
+nvidia-smi dmon -s puc
+```  
+Check the `sm` column in the output.
+
+**Q14: Unable to read data from the robotic arm driver’s serial port**  
+Do not plug in the camera before the SO-ARM driver board; doing so can cause incorrect serial device mapping. Also ensure the serial port permissions have been granted.
 
 ## References
 

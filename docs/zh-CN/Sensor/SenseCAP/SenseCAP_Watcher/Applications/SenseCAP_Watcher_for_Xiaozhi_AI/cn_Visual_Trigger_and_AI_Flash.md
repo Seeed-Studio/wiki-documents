@@ -1,5 +1,5 @@
 ---
-description: SenseCAP Watcher Agent 固件刷写指南
+description: 为您的 SenseCAP Watcher Agent 刷写固件的指南
 title: 视觉触发和 AI 刷写
 sidebar_position: 4
 keywords:
@@ -10,23 +10,23 @@ keywords:
 - Flash
 - Visual
 - Activate
-image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
+image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /cn/visual_trigger_and_ai_flash
 last_update:
-  date: 10/17/2025
+  date: 10/20/2025
   author: Twelve
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 在 SenseCAP Watcher 上烧录 AI 模型
+# 在 SenseCAP Watcher 上刷写 AI 模型
 
 ## 概述
 
 特别感谢 [XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) 的开源贡献，使这个项目成为可能。
 
-本指南重点介绍如何为 SenseCAP Watcher 刷写视觉识别触发对话固件，以及如何替换或更新设备上的 AI 模型。这是一个针对这些操作的实践指导教程。
+本指南重点介绍如何为 SenseCAP Watcher 刷写视觉识别触发对话固件，以及如何替换或更新设备上的 AI 模型。这是一个针对这些操作的实践指导指南。
 
 有关 Watcher 功能、应用和用例的完整介绍，请参考：[SenseCAP Watcher - 主动与世界交互的 AI 助手](https://wiki.seeedstudio.com/cn/solutions/hello_watcher_llms/)
 
@@ -39,14 +39,20 @@ import TabItem from '@theme/TabItem';
 - Windows PC  
 
 :::note
-如果您要刷写**视觉激活固件**，且您的 Watcher 设备型号**不是 -EN**，您还需要手动刷写认证文件以正常使用（仅需一次）。  
+如果您要刷写 **视觉激活固件**，且您的 Watcher 设备型号 **不是 -EN**，您还需要手动刷写认证文件以正常使用（仅需一次）。  
 详细说明请参考 [Watcher Agent 固件刷写指南](https://wiki.seeedstudio.com/cn/flash_watcher_agent_firmware/)。
 :::
 
 ## 固件刷写过程
 
 <Tabs>
-<TabItem value="sensecraft" label="SenseCraft AI">
+<TabItem value="sensecraft" label="SenseCraft AI" default>
+
+<!-- :::caution Note
+The following guide is for an internal testing website that has not yet been released.
+The official version will be available soon.
+Please use another method to flash the firmware for now.
+::: -->
 
 - 前提条件
 
@@ -96,15 +102,15 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="flasher1" label="Flash Download Tool" default>
+<TabItem value="flasher1" label="Flash Download Tool">
 
 - 前提条件
 
-  - **视觉触发固件 v1.8.8**：[下载链接](https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/v1.8.8_sensecap-watcher.zip)
+  - **视觉触发固件 v2.0.3**：[下载链接](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip)（3.9.6 或更高版本）
 
-- 步骤 1. 连接设备（设备底部的 Type-C 端口）并打开 Flash Download Tool
+- 步骤 1. 连接设备（设备底部的 Type-C 端口）并打开您的 Flash Download Tool
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting1.jpg" style={{width:300, height:'auto'}}/></div>
 
@@ -134,7 +140,7 @@ import TabItem from '@theme/TabItem';
 
 - 步骤 6. 重启设备
 
-  - 找到 Watcher 设备上的复位孔
+  - 找到您的 Watcher 设备上的复位孔
   - 使用针轻轻按下复位按钮
   - 设备将使用新固件重启
 
@@ -142,11 +148,11 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="flasher2" label="Command Line" default>
+<TabItem value="flasher2" label="命令行" default>
 
 - 前提条件
 
-  - **视觉触发固件 v1.8.8**：[下载链接](https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/v1.8.8_sensecap-watcher.zip)
+  - **视觉触发固件 v2.0.3**：[下载链接](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [esptool.py](https://github.com/espressif/esptool)
 
@@ -159,7 +165,7 @@ import TabItem from '@theme/TabItem';
 
 - 步骤 2. 重启设备
 
-  - 找到 Watcher 设备上的复位孔
+  - 找到您的 Watcher 设备上的复位孔
   - 使用针轻轻按下复位按钮
   - 设备将使用新固件重启
 
@@ -172,7 +178,7 @@ import TabItem from '@theme/TabItem';
 
   - [ESP-IDF v5.5.1](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#manual-installation)
 
-  - [开源仓库（小智 AI 合作）](https://github.com/Wvirgil123/xiaozhi-esp32/tree/feat-sscma_invoke)
+  - [开源仓库（小智 AI 合作）](https://github.com/Wvirgil123/xiaozhi-esp32/tree/main)
 
 - 步骤 1. 打开 ESP-IDF CMD 并导航到项目文件夹
   ```shell
@@ -203,7 +209,7 @@ import TabItem from '@theme/TabItem';
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig3.png" style={{width:700, height:'auto'}}/></div>
 
-- 步骤 5. 根据需要配置其他设置（可选）
+- 步骤 5. 根据您的需求配置其他设置（可选）
 
   - 默认显示语言和 AEC（自动回声消除/语音中断处理）
 
@@ -226,6 +232,10 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 </Tabs>
+
+:::note
+v2.0.3 以上版本的固件需要对小智说 "Turn on inference switch" 来启用视觉检测。
+:::
 
 ## AI 模型刷写过程
 
@@ -265,7 +275,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI8.png" style={{width:400, height:'auto'}}/></div>
 
-- 此外，您还可以通过与代理对话来调整阈值
+- 此外，您也可以通过与智能体对话来调整阈值
 
 ## 故障排除
 
@@ -277,12 +287,19 @@ import TabItem from '@theme/TabItem';
    - 检查 USB 驱动程序是否正确安装
 
 2. **刷写失败**
-   - 刷写 Himax 时，选择以 "A" 结尾的 COM 端口。
-   - 刷写 ESP32-S3 时，选择以 "B" 结尾的 COM 端口。
+   - 刷写 Himax 时，选择以"A"结尾的 COM 端口。
+   - 刷写 ESP32-S3 时，选择以"B"结尾的 COM 端口。
 
 3. **设备无响应**
    - 使用针轻轻按下复位按钮
    - 尝试在刷写前先擦除
+
+4. **设备无法通过视觉检测唤醒**
+   - 检查串口输出中是否有相关的日志消息。
+   - 固件版本 v2.0.3 需要对小智说"Turn on inference switch"来启用此功能。
+
+5. **串口显示视觉识别日志但设备仍无法唤醒**
+   - 前往 SenseCraft AI 平台并将 Person 模型刷写到 AI 芯片。
 
 ## 技术支持
 

@@ -10,10 +10,12 @@ last_update:
   date: 6/17/2025
   author: Jessie
 ---
-
+:::tip
+Wio Tracker L1 シリーズは同じハードウェアフレームワークを共有しています。ビデオガイドは L1 Pro 用でしたが、L1 シリーズの他のすべての製品にも適用できます。
+:::
 ## ビデオチュートリアル
 
-### パート1 開封
+### パート 1 開封
 
 L1、L1 Lite、または L1 E-Ink モデルを初めて使用する際は、USB 電源に接続した後、電源スイッチを上に持ち上げて電源を入れてください。
 
@@ -21,35 +23,31 @@ L1、L1 Lite、または L1 E-Ink モデルを初めて使用する際は、USB 
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Wi_YmE76YcY?si=Ad-pUhle5X9QppPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### パート2 ファームウェアの書き込み
+### パート 2 ファームウェアの書き込み
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/hcjai4J1894?si=S_jaEfXVThWXscVJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### パート3 デバイスの使用
+### パート 3 デバイスの使用
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Q97w2ompPtI?si=yLbAgE4cBbT6NbHS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### パート4 スマートフォンとの接続
+### パート 4 スマートフォンとの接続
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/OFtUwN3z0tI?si=9zr3j-hLuoj0-CXi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### パート5 異なる状態
+### パート 5 異なる状態
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/eZa8kfUD2e4?si=3Fe_30obcercIXXO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## 使用開始
-
-:::note
-フラッシュを消去しないでください。デバイスが損傷する可能性があります。
-:::
 
 ### ファームウェアの書き込み
 
@@ -134,7 +132,7 @@ import TabItem from '@theme/TabItem';
 **EU_868** は、1時間のローリングベースで毎分計算される10%の時間あたりデューティサイクル制限に従う必要があります。制限に達した場合、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスに LoRa 地域を設定したので、ニーズに合わせて [LoRa 設定](https://meshtastic.org/docs/configuration/radio/lora/) の設定を続けることができます。
+デバイスに LoRa 地域を設定したので、ニーズに合わせて [LoRa 設定](https://meshtastic.org/docs/configuration/radio/lora/) を構成することができます。
 
 ### センサー接続
 
@@ -177,7 +175,7 @@ Grove インターフェース経由でデバイスにセンサーを追加で�
 
 #### DFU モードへの手動入力
 
-デバイスを PC に接続し、`Reset` ボタンを2回押してください。黄色の LED が点灯し続け、PC に `Tracker L1` という名前の新しい USB ドライブが表示されます。
+デバイスを PC に接続し、`Reset` ボタンを2回押してください。黄色の LED が点灯し続け、`Tracker L1` という名前の新しい USB ドライブが PC に表示されます。
 
 #### DFU モードの終了
 
