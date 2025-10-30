@@ -69,7 +69,7 @@ Top View             |  Bottom View
 :-------------------------:|:-------------------------:
 .<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  .<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
-### [Sensor Board-S101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
+### [Sensor Board-S4_GC2053](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
 
 
 Top View             |  Bottom View
@@ -123,13 +123,13 @@ Top View             |  Bottom View
   </table>
 </div>
 
-#### 💡 [B3_POE](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Base_Board/B3_POE/readme.md)
+### [B3_POE](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Base_Board/B3_POE/readme.md)
 
 Up             |  Bottom
 :-------------------------:|:-------------------------:
 .<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top.png" /></div>  |  .<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom.png" /></div>
 
-##### ⚙️ Features:
+#### ⚙️ Features:
 
 - 1 x RJ45 port for **802.3af PSE**.
 - 1 x UART port.
