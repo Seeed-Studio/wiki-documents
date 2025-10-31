@@ -13,8 +13,10 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /visual_trigger_and_ai_flash
 last_update:
-  date: 10/20/2025
+  date: 10/30/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -106,7 +108,7 @@ Please use another method to flash the firmware for now.
 
 - Prerequisites
 
-  - **Visual Trigger Firmware v2.0.3**: [Download Link](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **Visual Trigger Firmware v2.0.4**: [Download Link](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 or later)
 
@@ -152,7 +154,7 @@ Please use another method to flash the firmware for now.
 
 - Prerequisites
 
-  - **Visual Trigger Firmware v2.0.3**: [Download Link](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **Visual Trigger Firmware v2.0.4**: [Download Link](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [esptool.py](https://github.com/espressif/esptool)
 
@@ -234,7 +236,7 @@ Please use another method to flash the firmware for now.
 </Tabs>
 
 :::note
-Firmware version above v2.0.3 requires saying “Turn on inference switch” to Xiaozhi to enable visual detection.
+Firmware version above v2.0.3 requires saying “Turn on the inference switch” to Xiaozhi to enable visual detection.
 :::
 
 ## AI Model Flashing Process
@@ -300,6 +302,12 @@ Firmware version above v2.0.3 requires saying “Turn on inference switch” to 
 
 5. **Serial shows visual recognition logs but device still cannot wake up**
    - Go to the SenseCraft AI Platform and flash the Person model to the AI chip.
+
+## FAQ
+
+**Q: Can I flash other AI models to Himax?**
+
+A: Currently, only Face and Person models are supported. Flashing other models is not yet supported and will be available in a future update.
 
 ## Technical Support
 

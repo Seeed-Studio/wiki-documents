@@ -1,6 +1,6 @@
 ---
-description: Introducción a EE04
-title: Introducción a EE04
+description: Introducción a la Placa de Pantalla ePaper XIAO (ESP32-S3) - EE04
+title: Introducción a la Placa de Pantalla ePaper XIAO (ESP32-S3) - EE04
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
@@ -15,7 +15,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Introducción a XIAO ePaper Display EE04
+# Introducción a la Pantalla ePaper XIAO EE04
 
 <div class="table-center">
 <table align="center">
@@ -26,7 +26,7 @@ import Steppers from '@site/src/components/utils/Stepper';
     <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg"/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
         </a>
     </div></td>
     </tr>
@@ -72,7 +72,7 @@ Alimentada por **XIAO ESP32-S3** Plus, la placa de pantalla EE04 soporta pantall
     </tr>
     <tr>
       <th>Fuente de Alimentación</th>
-      <td>- Batería Li de 3.7V<br />- USB Tipo-C</td>
+      <td>- Batería Li 3.7V<br />- USB Tipo-C</td>
     </tr>
     <tr>
       <th>Botón</th>
@@ -88,7 +88,7 @@ Alimentada por **XIAO ESP32-S3** Plus, la placa de pantalla EE04 soporta pantall
         <tr>
             <th>Producto</th>
             <th>Placa de Pantalla ePaper EE04</th>
-<th><a href="https://wiki.seeedstudio.com/es/XIAO-eInk-Expansion-Board/">ePaper Breakout</a></th>
+<th><a href="https://wiki.seeedstudio.com/es/XIAO-eInk-Expansion-Board/">Breakout ePaper</a></th>
 <th><a href="https://wiki.seeedstudio.com/es/xiao_eink_expansion_board_v2/">Placa Controladora ePaper</a></th>
         </tr>
     </thead>
@@ -96,14 +96,14 @@ Alimentada por **XIAO ESP32-S3** Plus, la placa de pantalla EE04 soporta pantall
         <tr>
             <th>Procesador</th>
             <td>XIAO ESP32-S3 Plus</td>
-            <td>Serie XIAO</td>
-            <td>Serie XIAO</td>
+            <td>XIAO Series</td>
+            <td>XIAO Series</td>
         </tr>
         <tr>
             <th>Pantallas ePaper Compatibles</th>
-            <td>ePaper de 24 Pines<br />ePaper de 50 Pines</td>
-            <td>ePaper de 24 Pines</td>
-            <td>ePaper de 24 Pines</td>
+            <td>ePaper 24 Pines<br />ePaper 50 Pines</td>
+            <td>ePaper 24 Pines</td>
+            <td>ePaper 24 Pines</td>
         </tr>
         <tr>
             <th>Conector ePaper</th>
@@ -150,20 +150,26 @@ Alimentada por **XIAO ESP32-S3** Plus, la placa de pantalla EE04 soporta pantall
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
 
-### eInk Soportados
+:::tip
+
+Esta versión de la Placa de Pantalla ePaper XIAO (ESP32-S3) - EE04 no soporta funcionalidad NFC.
+
+:::
+
+### ePaper Soportados
 
 #### Conector de 24 Pines
 
-- [E-paper de 1.54 pulgadas - Dotmatix 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [E-Paper de 2.13 pulgadas - Monocromático Flexible 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [E-Paper de 2.13 pulgadas - Cuádruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [E-paper de 2.9 pulgadas - Monocolor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [E-paper de 2.9 pulgadas - Color cuádruple 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-- [E-Paper de 4.2 pulgadas - Monocolor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [E-Paper de 4.26 pulgadas - Monocolor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [E-paper de 5.83 pulgadas - Monocolor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [E-paper de 7.5 pulgadas - Monocolor 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
-- [E-paper de 7.5 pulgadas - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
+- [ePaper de 1.54 pulgadas - Dotmatix 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [ePaper de 2.13 pulgadas - Monocromático Flexible 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [ePaper de 2.13 pulgadas - Cuádruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [ePaper de 2.9 pulgadas - Monocolor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [ePaper de 2.9 pulgadas - Color cuádruple 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
+- [ePaper de 4.2 pulgadas - Monocolor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [ePaper de 4.26 pulgadas - Monocolor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [ePaper de 5.83 pulgadas - Monocolor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [ePaper de 7.5 pulgadas - Monocolor 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [ePaper de 7.5 pulgadas - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/37.png" style={{width:800, height:'auto'}}/></div>
 
@@ -178,7 +184,7 @@ Al usar la Placa de Pantalla ePaper XIAO, asegúrese de configurar el puente seg
 
 #### Conector de 50 Pines
 
-- [E-paper Spectra6 de 7.3 pulgadas](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
+- [ePaper Spectra6 de 7.3 pulgadas](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
 :::tip
@@ -236,7 +242,7 @@ Hay 4 ejemplos básicos, abra un ejemplo básico que le guste:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
-## Comenzar
+## Comenzando
 
 Aquí, usamos una pantalla de 5.83 pulgadas como ejemplo. Los pasos son los mismos para todas las pantallas de 24 pines; la única diferencia es seleccionar el tamaño de pantalla apropiado en el controlador.
 
@@ -265,17 +271,31 @@ La imagen de abajo muestra la conexión correcta:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/32.jpg" style={{width:500, height:'auto'}}/></div>
 
-### Botones de Usuario en la Placa de Pantalla ePaper XIAO
+### Botones de Usuario en la Placa de Pantalla ePaper XIAO (ESP32-S3) - EE04
 
 El EE04 cuenta con tres botones programables por el usuario que pueden utilizarse para varios propósitos de control. Esta sección demuestra cómo leer los estados de los botones y responder a las pulsaciones de botones usando Arduino.
 
-En el EE04, los tres botones están conectados al ESP32-S3:
+En el EE04, los tres botones están conectados al XIAO ESP32-S3 Plus:
 
-- KEY1 (GPIO2_D1/A1)
-- KEY2 (GPIO3_D2/A2)
-- KEY3 (GPIO5_D4/A4)
+<table>
+  <thead>
+    <tr>
+      <th>KEY1</th>
+      <th>KEY2</th>
+      <th>KEY3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GPIO2_D1/A1</th>
+      <th>GPIO3_D2/A2</th>
+      <th>GPIO5_D4/A4</th>
+    </tr>
+  </tbody>
+</table>
 
-Todos los botones son activos-bajo, lo que significa que leen LOW cuando se presionan y HIGH cuando se liberan.
+
+Todos los botones son activos-bajos, lo que significa que leen LOW cuando se presionan y HIGH cuando se liberan.
 
 Ejemplo Básico de Lectura de Botones
 
@@ -367,13 +387,54 @@ void loop() {
 }
 ```
 
+### Batería de Usuario en la Placa de Pantalla ePaper XIAO (ESP32-S3) - EE04
+
+Al operar con energía de batería:
+
+- El dispositivo entrará automáticamente en modo de bajo consumo entre actualizaciones
+
+- La duración de la batería depende de la frecuencia de actualización (típicamente 3 meses con una carga completa con configuraciones predeterminadas)
+
+- El dispositivo mostrará un icono de batería baja en la esquina superior derecha cuando el nivel de batería esté por debajo del 20%
+
+:::tip
+Si quieres escribir código por ti mismo para leer el voltaje de la batería, será más preciso agregar un retraso de 10ms antes de la función analogRead().
+:::
+
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04battery.jpg" style={{width:700, height:'auto'}}/></div>
+
+```cpp
+#define VOLTAGE_PIN A0
+
+void setup() {
+  Serial.begin(115200);       
+  pinMode(VOLTAGE_PIN, INPUT); /
+}
+
+void loop() {
+  int adcValue = analogRead(VOLTAGE_PIN);   
+  float voltage = (adcValue / 1023.0) * 3.3; 
+
+  Serial.print("ADC Value: ");
+  Serial.print(adcValue);
+  Serial.print("  Voltage: ");
+  Serial.print(voltage, 3);
+  Serial.println(" V");
+
+  delay(10); 
+}
+```
+
+
+
 ## Recursos
 
 - **[PDF]** [Esquemático de la Pantalla ePaper XIAO EE04 de Seeed Studio](https://files.seeedstudio.com/wiki/Epaper/EE04/EE04.pdf)
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
