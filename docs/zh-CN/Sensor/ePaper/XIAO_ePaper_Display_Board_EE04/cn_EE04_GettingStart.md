@@ -1,6 +1,6 @@
 ---
-description: EE04 入门指南
-title: EE04 入门指南
+description: XIAO ePaper 显示板（ESP32-S3）- EE04 入门指南
+title: XIAO ePaper 显示板（ESP32-S3）- EE04 入门指南
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
@@ -15,7 +15,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# XIAO ePaper 显示屏 EE04 入门指南
+# XIAO ePaper 显示板 EE04 入门指南
 
 <div class="table-center">
 <table align="center">
@@ -33,9 +33,9 @@ import Steppers from '@site/src/components/utils/Stepper';
  </table>
 </div>
 
-## 介绍
+## 简介
 
-由 **XIAO ESP32-S3** Plus 驱动，显示板 EE04 支持 **24 针**和 **50 针**电子纸显示屏。它配备 JST 2.0 mm 电池连接器和电源开关、内置充电 IC，并配有一个复位按钮和三个用户按钮。非常适合低功耗电子纸项目，如数字标牌、电子标签和便携式信息板。
+由 **XIAO ESP32-S3** Plus 驱动，显示板 EE04 支持 **24 针**和 **50 针**电子纸显示屏。它配备 JST 2.0 mm 电池连接器和电源开关、内置充电 IC，并提供一个复位按钮和三个用户按钮。非常适合低功耗电子纸项目，如数字标牌、电子标签和便携式信息板。
 
 ### 特性
 
@@ -146,11 +146,17 @@ import Steppers from '@site/src/components/utils/Stepper';
 - **智能恒温器显示**：显示温度和湿度水平，以及智能恒温器的控制设置。
 - **数字相框**：创建支持 WiFi 的数字相框，可以显示来自智能家居网络的图像。
 
-## 硬件概览
+## 硬件概述
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
 
-### 支持的电子墨水屏
+:::tip
+
+此版本的 XIAO ePaper 显示板（ESP32-S3）- EE04 不支持 NFC 功能。
+
+:::
+
+### 支持的电子纸
 
 #### 24 针连接器
 
@@ -172,7 +178,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 - 对于 24 针电子纸显示屏 → 将跳线设置为 24 针
 
-⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。上电前请务必仔细检查跳线位置。
+⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。开机前请务必仔细检查跳线位置。
 
 :::
 
@@ -185,11 +191,11 @@ import Steppers from '@site/src/components/utils/Stepper';
 使用 XIAO ePaper 显示板时，请确保根据电子纸显示屏类型设置跳线：
 - 对于 50 针电子纸显示屏 → 将跳线设置为 50 针
 
-⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。上电前请务必仔细检查跳线位置。
+⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。开机前请务必仔细检查跳线位置。
 
 :::
 
-## 软件概览
+## 软件概述
 
 ### 安装 Seeed Arduino GFX 库
 
@@ -218,7 +224,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 :::tip
 如果您选择错误，屏幕将不显示任何内容。
 
-所以请确保您的设备或组件类型正确。
+所以请确保您的设备或组件类型。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/38.png" style={{width:800, height:'auto'}}/></div>
@@ -236,7 +242,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
-## 开始使用
+## 入门指南
 
 这里，我们以 5.83 英寸显示屏为例。所有 24 针屏幕的步骤都相同；唯一的区别是在驱动程序中选择适当的屏幕尺寸。
 
@@ -259,21 +265,35 @@ import Steppers from '@site/src/components/utils/Stepper';
 ⚠️ 注意：电子纸电缆方向
 将电子纸显示屏连接到 XIAO 电子纸显示板时，请确保 FPC 电缆插入方向正确。
 
-⚠️ 不要反向连接！倒插电缆可能导致电子纸无法显示，甚至损坏屏幕/开发板。
+⚠️ 不要反向连接！倒插电缆可能导致电子纸无法显示甚至损坏屏幕/开发板。
 下图显示了正确的连接方式：
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/32.jpg" style={{width:500, height:'auto'}}/></div>
 
-### XIAO 电子纸显示板上的用户按钮
+### XIAO 电子纸显示板（ESP32-S3）- EE04 上的用户按钮
 
 EE04 具有三个用户可编程按钮，可用于各种控制目的。本节演示如何使用 Arduino 读取按钮状态并响应按钮按下。
 
-在 EE04 上，三个按钮连接到 ESP32-S3：
+在 EE04 上，三个按钮连接到 XIAO ESP32-S3 Plus：
 
-- KEY1 (GPIO2_D1/A1)
-- KEY2 (GPIO3_D2/A2)
-- KEY3 (GPIO5_D4/A4)
+<table>
+  <thead>
+    <tr>
+      <th>KEY1</th>
+      <th>KEY2</th>
+      <th>KEY3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GPIO2_D1/A1</th>
+      <th>GPIO3_D2/A2</th>
+      <th>GPIO5_D4/A4</th>
+    </tr>
+  </tbody>
+</table>
+
 
 所有按钮都是低电平有效，这意味着按下时读取为 LOW，释放时读取为 HIGH。
 
@@ -366,6 +386,47 @@ void loop() {
   delay(10); // Small delay to prevent excessive CPU usage
 }
 ```
+
+### XIAO 电子纸显示板（ESP32-S3）- EE04 上的用户电池
+
+使用电池供电时：
+
+- 设备将在刷新之间自动进入低功耗模式
+
+- 电池寿命取决于刷新频率（在默认设置下，满电通常可使用 3 个月）
+
+- 当电池电量低于 20% 时，设备将在右上角显示低电量图标
+
+:::tip
+如果您想自己编写代码来读取电池电压，在 analogRead() 函数之前添加 10ms 延迟会更精确。
+:::
+
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04battery.jpg" style={{width:700, height:'auto'}}/></div>
+
+```cpp
+#define VOLTAGE_PIN A0
+
+void setup() {
+  Serial.begin(115200);       
+  pinMode(VOLTAGE_PIN, INPUT); /
+}
+
+void loop() {
+  int adcValue = analogRead(VOLTAGE_PIN);   
+  float voltage = (adcValue / 1023.0) * 3.3; 
+
+  Serial.print("ADC Value: ");
+  Serial.print(adcValue);
+  Serial.print("  Voltage: ");
+  Serial.print(voltage, 3);
+  Serial.println(" V");
+
+  delay(10); 
+}
+```
+
+
 
 ## 资源
 
