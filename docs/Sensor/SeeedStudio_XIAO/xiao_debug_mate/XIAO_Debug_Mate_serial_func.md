@@ -9,6 +9,10 @@ last_update:
   author: Citric
 ---
 
+Welcome to the documentation for the XIAO Debug Mate UART Monitor. 
+
+This page provides clear guidance on how to use the Debug Mate for serial data monitoring. You will find step-by-step instructions for hardware setup, recommended software tools, and explanations of relevant concepts to help you make the most of the UART monitoring features in development and debugging scenarios.
+
 ## Concepts to Understand Before Using the Serial Monitor
 
 Before diving in, let's clarify two fundamental concepts that are essential for working with serial communication.
@@ -150,7 +154,14 @@ The baud rate menu allows you to select from nine common rates (4800 to 921600).
 *   **Fixed Serial Parameters:** Core serial parameters (8-N-1) are fixed in the firmware. Advanced users can modify the open-source code to change them.
 *   **Single-Source Monitoring:** You can only actively monitor one source (XIAO or Grove) at a time.
 
+## Special Thanks
 
+Special thanks to **啊猫啊狗晒太阳 (Ah Mao Ah Gou Shai Tai Yang)** for the design inspiration for the LED matrix. The design of the Debug Mate's onboard LED indicator is a reference to their excellent open-source project. The original design is very creative and practical.
+
+If you would like to see the original design, you can check out the demonstration video and the author's homepage through the links below.
+
+*   [Original Design Demonstration Video](https://www.bilibili.com/video/BV1Sc411273Y/)
+*   [Author's Bilibili Homepage](https://space.bilibili.com/1155738723)
 
 <div class="table-center">
   <div class="button_tech_support_container">

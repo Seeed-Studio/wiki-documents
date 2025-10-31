@@ -12,6 +12,9 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+Welcome to the official user manual for the XIAO Debug Mate’s DAPLink functionality. This comprehensive guide is designed to help both beginners and advanced users unlock the full potential of their XIAO Debug Mate for professional debugging tasks. Here, you will learn how to connect, configure, and operate the DAPLink debugger, understand essential software tools, and follow best practices to ensure a smooth and productive debugging experience with a wide range of XIAO series development boards. Whether you are troubleshooting complex firmware or streamlining your development workflow, this document provides clear step-by-step instructions, tips, and in-depth technical explanations to support your projects from start to finish.
+
+
 ## An Explanation of Some Debugger Concepts
 
 To effectively use the XIAO Debug Mate's DAPLink functionality, it's helpful to understand the key software components and protocols that work together to make debugging possible. Here’s a breakdown of each concept and how they relate to one another.
@@ -20,7 +23,7 @@ To effectively use the XIAO Debug Mate's DAPLink functionality, it's helpful to 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/gdb.png" style={{width:800, height:'auto'}}/></div>
 
-**GDB**, the GNU Project Debugger, is the core engine of the debugging process. It is a powerful command-line tool that runs on your host computer (PC). GDB is responsible for controlling the execution of your program on the target microcontroller. It allows you to:
+**[GDB](https://www.sourceware.org/gdb/)**, the GNU Project Debugger, is the core engine of the debugging process. It is a powerful command-line tool that runs on your host computer (PC). GDB is responsible for controlling the execution of your program on the target microcontroller. It allows you to:
 *   Start and stop your program.
 *   Set breakpoints to pause execution at specific lines of code.
 *   Step through your code line-by-line.
@@ -30,7 +33,7 @@ Most modern Integrated Development Environments (IDEs) like VS Code (with Platfo
 
 ### OpenOCD/PyOCD
 
-**OpenOCD** (Open On-Chip Debugger) and **PyOCD** are essential "server" applications that run on your host computer. They act as a bridge or translator between the high-level commands from GDB and the low-level signals required by the physical debug probe (in this case, the XIAO Debug Mate).
+**[OpenOCD](https://openocd.org/)** (Open On-Chip Debugger) and **[PyOCD](https://pyocd.io/)** are essential "server" applications that run on your host computer. They act as a bridge or translator between the high-level commands from GDB and the low-level signals required by the physical debug probe (in this case, the XIAO Debug Mate).
 
 When GDB issues a command like "read the value of variable `x`," OpenOCD receives this command, translates it into a sequence of instructions that the debug probe understands, and sends these instructions to the probe over USB.
 
@@ -40,7 +43,7 @@ When GDB issues a command like "read the value of variable `x`," OpenOCD receive
 
 ### CMSIS-DAP
 
-**CMSIS-DAP** (Cortex Microcontroller Software Interface Standard - Debug Access Port) is a standardized protocol that defines how a host computer communicates with a debug probe over USB. Because the XIAO Debug Mate's DAPLink firmware adheres to this standard, it is instantly compatible with a wide range of industry-standard tools like OpenOCD, PyOCD, and Keil MDK, without needing any proprietary drivers or software.
+**[CMSIS-DAP](https://github.com/ARM-software/CMSIS-DAP)** (Cortex Microcontroller Software Interface Standard - Debug Access Port) is a standardized protocol that defines how a host computer communicates with a debug probe over USB. Because the XIAO Debug Mate's DAPLink firmware adheres to this standard, it is instantly compatible with a wide range of industry-standard tools like OpenOCD, PyOCD, and Keil MDK, without needing any proprietary drivers or software.
 
 ### Telnet
 
@@ -271,39 +274,230 @@ On Windows, you will need to install a generic USB driver for the CMSIS-DAP inte
 
 </TabItem>
 <TabItem value="MacOS" label="MacOS">
+
 No driver installation is necessary. macOS has built-in support for CMSIS-DAP devices through its generic USB drivers.
+
 </TabItem>
 <TabItem value="Linux" label="Linux">
+
 No driver installation is necessary. The Linux kernel includes drivers for CMSIS-DAP devices.
+
 </TabItem>
 </Tabs>
 
-#### Install OpenOCD/PyOCD
+#### Install OpenOCD
 
-The easiest way to use OpenOCD is through an IDE that manages it for you.
+:::tip
+Verified: Please use OpenOCD version 0.12.0-7 or later.
+:::
 
-*   **PlatformIO:** If you are using VS Code with the PlatformIO extension, PlatformIO will automatically download and configure the correct version of OpenOCD for your project when you start a debug session. This is the recommended method for most users.
+To ensure compatibility and have access to the latest features, we strongly recommend using the **xPack** version of OpenOCD. System package managers (like Homebrew on macOS or APT on Linux) often provide older, outdated versions which may not work correctly with modern targets.
 
-If you need to install OpenOCD manually:
+:::tip PlatformIO Note
+If you are using VS Code with the PlatformIO extension, PlatformIO will automatically download and configure the correct version of OpenOCD for your project when you start a debug session. If you only use PlatformIO, no manual installation is needed.
+:::
 
 <Tabs>
 <TabItem value="Windows" label="Windows" default>
-You can download pre-compiled Windows binaries from projects like the [xPack OpenOCD release page](https://github.com/xpack-dev-tools/openocd-xpack/releases). Download the archive, extract it to a known location (e.g., `C:\Program Files\OpenOCD`), and add its `bin` directory to your system's PATH environment variable.
+
+On Windows, the manual installation method is straightforward.
+
+1.  **Download the OpenOCD package**
+
+Go to the [xPack OpenOCD releases page](https://github.com/xpack-dev-tools/openocd-xpack/releases). Scroll down to the latest release and find the Windows version (e.g., `xpack-openocd-...-win32-x64.zip`). Download this file.
+
+2.  **Extract the Files**
+
+Right-click the downloaded ZIP file and select "Extract All...". Choose a stable location, such as `C:\Users\YourName\AppData\Local\xPacks\OpenOCD`. After extraction, you will have a folder like `xpack-openocd-0.12.0-7` containing a `bin` directory.
+
+3.  **Add OpenOCD to your System PATH**
+
+This allows you to run `openocd` from any terminal.
+
+    - Search for "Environment Variables" in the Start Menu and select "Edit the system environment variables".
+    - Click **"Environment Variables..."**.
+    - Under "User variables", select the **"Path"** variable and click **"Edit..."**.
+    - Click **"New"** and paste the full path to the `bin` directory you extracted earlier. For example:  
+      `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\bin`
+    - Click OK on all windows to save.
+
+4.  **Verify the Installation**
+
+Open a **new** Command Prompt or PowerShell window and run:
+
+```bash
+openocd --version
+```
+
+If the installation was successful, you will see the version information printed (e.g., `xPack Open On-Chip Debugger 0.12.0+dev-02228`).
+
 </TabItem>
 <TabItem value="MacOS" label="MacOS">
-The simplest way is to use [Homebrew](https://brew.sh/):
+
+This process mirrors the Windows manual setup.
+
+1.  **Download the OpenOCD package**
+
+Go to the [xPack OpenOCD releases page](https://github.com/xpack-dev-tools/openocd-xpack/releases). Find the latest release and download the correct archive for your Mac (e.g., `...-darwin-x64.tar.gz` for Intel or `...-darwin-arm64.tar.gz` for Apple Silicon).
+
+2.  **Extract the Files**
+
+Open a Terminal and run the following commands. We'll create a standard location in your home directory.
+
 ```bash
-brew install open-ocd
+# Create a directory for xPack tools if it doesn't exist
+mkdir -p ~/opt
+
+# Go to the Downloads folder (or wherever you saved the file)
+cd ~/Downloads
+
+# Extract the archive into the opt directory
+tar -xvf xpack-openocd-*.tar.gz -C ~/opt
 ```
+
+3.  **Add OpenOCD to your PATH**
+
+You need to tell your shell where to find the `openocd` executable. The default shell on modern macOS is Zsh.
+
+```bash
+# Add the path to your .zshrc file (for Zsh)
+echo 'export PATH="$HOME/opt/xpack-openocd-0.12.0-7/bin:$PATH"' >> ~/.zshrc
+```
+
+:::note
+Make sure to replace `xpack-openocd-0.12.0-7` with the actual folder name that was created. If you use Bash, edit `~/.bash_profile` instead of `~/.zshrc`.
+:::
+
+4.  **Apply and Verify**
+
+The `PATH` change you made is not active in your current terminal session until the configuration file is reloaded.
+
+Run the following command in your existing terminal:
+
+```bash
+# For Zsh (default on modern macOS)
+source ~/.zshrc
+```
+
+Now, verify the installation by running:
+
+```bash
+openocd --version
+```
+
+You should see the correct xPack version information.
+
 </TabItem>
 <TabItem value="Linux" label="Linux">
-Use your distribution's package manager. For Debian/Ubuntu:
+
+This process mirrors the manual setup on other operating systems.
+
+1.  **Download the OpenOCD package**
+
+Go to the [xPack OpenOCD releases page](https://github.com/xpack-dev-tools/openocd-xpack/releases). Find the latest release and download the Linux archive (`...-linux-x64.tar.gz`).
+
+2.  **Extract the Files**
+
+Open a Terminal and run the following commands.
+
 ```bash
-sudo apt-get update
-sudo apt-get install openocd
+# Create a directory for xPack tools if it doesn't exist
+mkdir -p ~/opt
+
+# Go to the Downloads folder
+cd ~/Downloads
+
+# Extract the archive into the opt directory
+tar -xvf xpack-openocd-*.tar.gz -C ~/opt
 ```
+
+3.  **Add OpenOCD to your PATH**
+
+You need to tell your shell where to find the `openocd` executable. Most Linux distributions use the Bash shell.
+
+```bash
+# Add the path to your .bashrc file
+echo 'export PATH="$HOME/opt/xpack-openocd-0.12.0-7/bin:$PATH"' >> ~/.bashrc
+```
+
+:::note
+Make sure to replace `xpack-openocd-0.12.0-7` with the actual folder name that was created.
+:::
+
+4.  **Apply and Verify**
+
+The `PATH` change you made is not active in your current terminal session until the configuration file is reloaded.
+
+Run the following command in your existing terminal:
+
+```bash
+# For Bash (default on most Linux distros)
+source ~/.bashrc
+```
+
+Now, verify the installation by running:
+
+```bash
+openocd --version
+```
+
+You should see the correct xPack version information.
+
 </TabItem>
 </Tabs>
+
+
+#### Install PyOCD
+
+????????????????????????????
+
+
+#### Understanding the `XIAO_Debug_Mate_DAPLink_Package` Package
+
+Before you can start using the DAPLink Debugger feature, you'll need to download the ZIP file separately. This file contains all the files required for debugging various XIAO boards.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/xiao_debug_mate/res/XIAO_Debug_Mate_DAPLink_Package-v1.0.zip" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Download ZIP file</font></span></strong>
+    </a>
+</div>
+
+
+##### Directory Structure Explanation
+
+After unzipping the file, you will see the following folder structure. Each part has a specific purpose:
+
+```
+XIAO_Debug_Mate_DAPLink_Package/
+├── examples/
+│   ├── Blink_nrf52840.elf
+│   ├── Blink_SAMD21.bin
+│   └── ... (other example firmwares)
+├── target/
+│   ├── XIAO_RA4M1/
+│   │   └── ra4m1.cfg
+│   └── XIAO_SAMD21/
+│       └── at91samd21g18.cfg
+├── XIAO_MG24_Mac_Linux_OpenOCD-v0.12.0/
+│   ├── bin/
+│   │   └── openocd
+│   └── share/
+│       └── ... (OpenOCD scripts)
+└── XIAO_MG24_Win_OpenOCD-v0.12.0/
+    ├── bin/
+    │   └── openocd.exe
+    └── share/
+        └── ... (OpenOCD scripts)
+```
+
+*   **`examples/`**
+    This folder contains pre-compiled example firmware files (e.g., `.bin`, `.elf`, `.hex`) for various XIAO boards, which were exported from Arduino. These will be used in later tutorials to demonstrate how to flash and debug the microcontrollers.
+
+*   **`target/`**
+    This folder contains target configuration (`.cfg`) files for XIAO boards that might be missing from the official OpenOCD distribution. When you use boards like the XIAO SAMD21 or XIAO RA4M1 with your system's existing OpenOCD installation, you will need to manually add these configuration files to your OpenOCD environment. The specific steps for how to do this will be covered later.
+
+*   **`XIAO_MG24_..._OpenOCD-v0.12.0/`**
+    This is a special and very important component for the **XIAO MG24** board. Currently, support for this chip is not available in the official OpenOCD releases or the standard xPack distributions. To solve this, we provide complete, standalone OpenOCD packages for both Windows (`XIAO_MG24_Win_...`) and macOS/Linux (`XIAO_MG24_Mac_Linux_...`). When you are working with the XIAO MG24, you **must** use the `openocd` executable provided within these specific folders.
 
 ### Hardware Preparation
 
@@ -343,7 +537,7 @@ You can also use the XIAO Debug Mate as a generic SWD debug probe for other ARM-
 Once connected, you can configure OpenOCD to use the CMSIS-DAP interface and start your debug session as you would with any other probe.
 
 
-## Telnet Usage
+## Interacting with OpenOCD via Telnet
 
 While modern IDEs provide a graphical interface for debugging, sometimes you need a more direct, low-level way to interact with the debugger. This is where Telnet comes in. OpenOCD runs a Telnet server that allows you to connect directly and send text-based commands to control the target chip. This is incredibly useful for quick checks, scripting automated tasks, or debugging issues when a full IDE isn't available or necessary.
 
@@ -382,45 +576,170 @@ sudo apt-get install telnet
 
 ### Step-by-Step Debugging with Telnet
 
-#### Step 1: Launch the OpenOCD Server
+#### Step 1: Run the OpenOCD Server
 
-First, you need to start the OpenOCD server. This program acts as the bridge between your computer and the XIAO Debug Mate. The command you use will depend on the specific XIAO board you are debugging.
+Find your XIAO board in the list below and follow the specific instructions for your operating system to start the OpenOCD server. This server process will wait for a connection from a debugger like GDB.
 
-Open a new Command Prompt (Windows) or Terminal (macOS/Linux). Then, run the command corresponding to your target board.
+##### For Seeed Studio XIAO SAMD21
 
-> **Note:** These commands assume that `openocd` is in your system's PATH or that you are running the command from the `bin` directory of your OpenOCD installation.
+The standard OpenOCD package does not include the configuration file for the XIAO SAMD21. You must manually copy it from our provided package into your system's OpenOCD installation directory.
 
-*   **For Seeed Studio XIAO SAMD21:**
+**1. Copy the Configuration File**
+
+*   **Source File:** From the `XIAO_Debug_Mate_DAPLink_Package`, find the file: `target/XIAO_SAMD21/at91samd21g18.cfg`.
+*   **Destination Folder:** Copy this file into the `target` script folder of your xPack OpenOCD installation. The path will vary by OS:
+
+    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **macOS / Linux:** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
+
+:::note
+Replace `YourName` and `xpack-openocd-0.12.0-7` with your actual username and the version of OpenOCD you installed.
+:::
+
+**2. Run the OpenOCD Command**
+
+Open a new terminal anywhere on your system and run the corresponding command:
+
+*   **Windows:**
+    ```bash
+    openocd.exe -f interface/cmsis-dap.cfg -f target/at91samd21g18.cfg
+    ```
+*   **macOS / Linux:**
     ```bash
     openocd -f interface/cmsis-dap.cfg -f target/at91samd21g18.cfg
     ```
 
-*   **For Seeed Studio XIAO RP2040:**
+---
+
+##### For Seeed Studio XIAO RP2040
+
+The configuration for RP2040 is included in the standard xPack OpenOCD. Open a terminal and run the command.
+
+*   **Windows:**
+    ```bash
+    openocd.exe -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000"
+    ```
+*   **macOS / Linux:**
     ```bash
     openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000"
     ```
 
-*   **For Seeed Studio XIAO RP2350:**
+---
+
+##### For Seeed Studio XIAO RP2350
+
+The configuration for RP2350 is included in the standard xPack OpenOCD. Open a terminal and run the command.
+
+*   **Windows:**
+    ```bash
+    openocd.exe -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000"
+    ```
+*   **macOS / Linux:**
     ```bash
     openocd -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000"
     ```
 
-*   **For Seeed Studio XIAO nRF52840:**
+---
+
+##### For Seeed Studio XIAO nRF52840
+
+The configuration for nRF52 is included in the standard xPack OpenOCD. Open a terminal and run the command.
+
+*   **Windows:**
+    ```bash
+    openocd.exe -f interface/cmsis-dap.cfg -f target/nrf52.cfg
+    ```
+*   **macOS / Linux:**
     ```bash
     openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg
     ```
 
-*   **For Seeed Studio XIAO RA4M1:**
+---
+
+##### For Seeed Studio XIAO RA4M1
+
+Similar to the SAMD21, the standard OpenOCD package does not include the configuration file for the XIAO RA4M1. You must manually copy it.
+
+**1. Copy the Configuration File**
+
+*   **Source File:** From the `XIAO_Debug_Mate_DAPLink_Package`, find the file: `target/XIAO_RA4M1/ra4m1.cfg`.
+*   **Destination Folder:** Copy this file into the `target` script folder of your xPack OpenOCD installation.
+
+    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **macOS / Linux:** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
+
+:::note
+Replace `YourName` and `xpack-openocd-0.12.0-7` with your actual username and the version of OpenOCD you installed.
+:::
+
+**2. Run the OpenOCD Command**
+
+Open a new terminal anywhere on your system and run the corresponding command:
+
+*   **Windows:**
+    ```bash
+    openocd.exe -f interface/cmsis-dap.cfg -f target/ra4m1.cfg
+    ```
+*   **macOS / Linux:**
     ```bash
     openocd -f interface/cmsis-dap.cfg -f target/ra4m1.cfg
     ```
 
-*   **For Seeed Studio XIAO MG24:**
+---
+
+##### For Seeed Studio XIAO MG24
+
+:::warning[Important]
+The XIAO MG24 requires a special version of OpenOCD that is included in the `XIAO_Debug_Mate_DAPLink_Package`. **Do not** use your system-wide OpenOCD installation. You **must** run the commands from within the specific directory provided in the package.
+:::
+
+**1. Prepare Your Terminal**
+
+Open your command-line tool and navigate into the correct folder for your operating system within the unzipped package.
+
+*   **Windows:**
     ```bash
-    openocd -f interface/cmsis-dap.cfg -f target/efm32s2_g23.cfg -c "reset_config srst_nogate"
+    # Example if you unzipped it on your Desktop:
+    cd C:\Users\YourName\Desktop\XIAO_Debug_Mate_DAPLink_Package\XIAO_MG24_Win_OpenOCD-v0.12.0
+    ```
+*   **macOS / Linux:**
+    ```bash
+    # Example if you unzipped it on your Desktop:
+    cd ~/Desktop/XIAO_Debug_Mate_DAPLink_Package/XIAO_MG24_Mac_Linux_OpenOCD-v0.12.0
     ```
 
-After running the command, you should see output indicating that OpenOCD has found the CMSIS-DAP device and is listening for connections. **Do not close this terminal window.**
+**2. Run the OpenOCD Command**
+
+Once you are inside the correct directory, execute the following command:
+
+*   **Windows:**
+    ```bash
+    bin\openocd.exe -s share/openocd/scripts -f interface/cmsis-dap.cfg -f target/efm32s2_g23.cfg -c "reset_config srst_nogate"
+    ```
+*   **macOS / Linux:**
+    ```bash
+    bin/openocd -s share/openocd/scripts -f interface/cmsis-dap.cfg -f target/efm32s2_g23.cfg -c "reset_config srst_nogate"
+    ```
+
+#### Command Breakdown
+
+Understanding what each part of the command does can help you troubleshoot issues or customize your workflow. Let's break down a typical command:
+
+`bin/openocd -s share/openocd/scripts -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "..."`
+
+*   `bin/openocd` (or `bin\openocd.exe`): This executes the OpenOCD program. We assume it's located in a `bin` sub-directory, which is a standard convention. The name and extension will vary by OS.
+
+*   `-s share/openocd/scripts`: The `-s` flag is crucial. It tells OpenOCD where to **s**earch for its script library. With this path set, OpenOCD can find the files specified by the `-f` flags.
+
+*   `-f interface/cmsis-dap.cfg`: The `-f` flag specifies a con**f**iguration file to load. This first one defines the debug adapter we are using (a standard CMSIS-DAP probe).
+
+*   `-f target/rp2040.cfg`: This second `-f` flag loads the configuration for the target microcontroller (the RP2040 chip on the XIAO board).
+
+*   `-c "..."`: The `-c` flag passes a **c**ommand to OpenOCD after it starts.
+    *   `adapter speed 5000`: (For RP2040/RP2350) Sets the SWD clock speed to 5000 kHz for stable communication.
+    *   `reset_config srst_nogate`: (For MG24) A special reset configuration required for this specific target.
+
+After running one of these commands, OpenOCD will initialize the connection and wait for a debugger, such as GDB, to connect (typically on port 3333). You can then use the debugger to load your program (`load <path/to/your/firmware.elf>`), set breakpoints, and debug your code.
 
 #### Step 2: Connect to the Telnet Server
 
@@ -457,7 +776,14 @@ A typical manual debug session might follow these steps:
 5.  Type `resume` to let the program run normally.
 6.  Type `exit` when you are finished.
 
-## OpenOCD/PyOCD Usage
+
+
+
+
+
+
+
+## Flash the firmware using OpenOCD/PyOCD
 
 Beyond interactive debugging, the XIAO Debug Mate excels at programming (flashing) firmware directly onto a XIAO's microcontroller using command-line tools. The primary tools for this are **OpenOCD** (Open On-Chip Debugger) and **PyOCD**.
 
@@ -465,14 +791,41 @@ This guide will walk you through using these powerful tools to upload pre-compil
 
 ### Prerequisites
 
-1.  **XIAO Debug Mate Firmware Package:** We have prepared a package containing the necessary OpenOCD executables, configuration files, and example firmware. Please download and extract it. Throughout this guide, we will assume you are running commands from within this extracted folder, named `OpenOCD-20251028-0.12.0`.
-    *   `bin/`: Contains the main `openocd` executable and pre-compiled `.elf`, `.hex`, and `.bin` example files for various XIAO boards.
-    *   `mg24-openocd/`: A special, self-contained OpenOCD version required for the XIAO MG24.
-    *   `share/`: Contains essential configuration scripts and board-specific files needed by OpenOCD. Do not delete this folder.
+1.  **OpenOCD Installation:** For all XIAO boards **except the XIAO MG24**, you need to [have OpenOCD installed on your system and accessible from your command line (i.e., added to your system's PATH)](#install-openocd).
 
-2.  **Terminal/Command Prompt:** You will need to be comfortable opening and using a command-line interface.
-    *   **Windows:** Command Prompt (cmd) or PowerShell.
-    *   **macOS/Linux:** Terminal.
+2.  **XIAO Debug Mate Firmware Package:** We have prepared a package containing custom configuration files and example firmware. Please download and extract it. The structure is as follows:
+
+    *   `examples/`: Contains pre-compiled example firmware (`.elf`, `.hex`, `.bin`) for various XIAO boards.
+    *   `target/`: Contains custom OpenOCD configuration files (`.cfg`) required for specific boards like the XIAO SAMD21 and RA4M1.
+    *   `XIAO_MG24_Mac_Linux_OpenOCD-v0.12.0/`: A self-contained OpenOCD for flashing the XIAO MG24 on macOS and Linux.
+    *   `XIAO_MG24_Win_OpenOCD-v0.12.0/`: A self-contained OpenOCD for flashing the XIAO MG24 on Windows.
+
+3.  **Terminal/Command Prompt:** You will need to be comfortable opening and using a command-line interface (e.g., Command Prompt, PowerShell, or Terminal).
+
+#### Command Execution Strategy
+
+*   **Option A (Recommended): Run from the Package Directory**
+
+    All commands in this guide assume you have opened your terminal in the root of the extracted `XIAO_Debug_Mate_DAPLink_Package` folder. This is the simplest method, as relative paths to firmware and configuration files will work directly.
+
+*   **Option B (Advanced): Run from Any Directory**
+
+    If you prefer to run commands from your own project folder, you can use the `-s` flag to tell OpenOCD where to find our package's custom scripts.
+
+    *   **Action Required:** Add `-s <path_to_package_folder>` to your `openocd` command. For example:
+
+        ```bash
+        # Replace <path_to_package_folder> with the actual path
+        openocd -s <path_to_package_folder> -f interface/cmsis-dap.cfg -f target/XIAO_SAMD21/at91samd21g18.cfg ...
+        ```
+
+:::note
+**Windows vs. macOS/Linux:** In all commands, Windows users should use `openocd.exe` instead of `openocd`. We recommend using forward slashes (`/`) in file paths for cross-platform compatibility.
+:::
+
+**To flash your own custom firmware:**
+
+Simply replace the example path (e.g., `examples/Blink_RP2040.elf`) with the path to your own firmware file.
 
 ### Understanding Firmware Files (.bin, .hex, .elf)
 
@@ -484,155 +837,110 @@ When you compile a project, the toolchain produces a file to be uploaded to the 
 
 **How to get these files from your project:**
 
-*   **Arduino IDE:** After compiling your sketch (`Sketch > Verify/Compile`), you can find the output files in a temporary build folder. A simpler way is to use `Sketch > Export compiled Binary`. This will save a `.hex` or `.bin` file (depending on the board) into your sketch folder.
-*   **PlatformIO:** After a successful build, the firmware files are located in your project's `.pio/build/<environment_name>/` directory. You will typically find `firmware.bin`, `firmware.hex`, and `firmware.elf`.
+*   **Arduino IDE:** After compiling (`Sketch > Verify/Compile`), use `Sketch > Export compiled Binary`. This will save a `.hex` or `.bin` file into your sketch folder.
+*   **PlatformIO:** After a successful build, the firmware files (`firmware.bin`, `firmware.hex`, `firmware.elf`) are located in your project's `.pio/build/<environment_name>/` directory.
 
 ### Flashing `.elf` Files
 
-This format is commonly used for ARM Cortex-M0+ based chips like the RP2040.
+This format is ideal for debugging and is used by chips like the RP2040.
 
 #### For Seeed Studio XIAO RP2040 / RP2350
 
-The `.elf` file contains all the necessary information for OpenOCD to program the chip correctly.
+These commands use standard configuration files (`rp2040.cfg`, `rp2350.cfg`) that are included with your main OpenOCD installation. The primary difference between operating systems is the name of the executable: `openocd` on macOS/Linux and `openocd.exe` on Windows.
 
-<Tabs>
-<TabItem value="Windows" label="Windows" default>
+**XIAO RP2040**
 
-Open a Command Prompt in the `OpenOCD-20251028-0.12.0` directory and run the corresponding command. Replace `Blink_RP2040.elf` with the name of your file.
-
-**XIAO RP2040:**
+**On macOS / Linux:**
 ```bash
-bin\openocd-rp2350.exe -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program bin/Blink_RP2040.elf verify reset exit"
+openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program examples/Blink_RP2040.elf verify reset exit"
 ```
 
-**XIAO RP2350:**
-```bash
-bin\openocd-rp2350.exe -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000" -c "program bin/Blink_RP2350.elf verify reset exit"
+**On Windows:**
+```powershell
+# Note the use of "openocd.exe"
+openocd.exe -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program examples/Blink_RP2040.elf verify reset exit"
 ```
 
-</TabItem>
-<TabItem value="macOS/Linux" label="macOS/Linux">
+---
 
-Open a Terminal in the `OpenOCD-20251028-0.12.0` directory and run the corresponding command. Replace `Blink_RP2040.elf` with the name of your file.
+**XIAO RP2350**
 
-**XIAO RP2040:**
+**On macOS / Linux:**
 ```bash
-bin/openocd-rp2350 -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program bin/Blink_RP2040.elf verify reset exit"
+openocd -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000" -c "program examples/Blink_RP2350.elf verify reset exit"
 ```
 
-**XIAO RP2350:**
-```bash
-bin/openocd-rp2350 -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000" -c "program bin/Blink_RP2350.elf verify reset exit"
+**On Windows:**
+```powershell
+# Note the use of "openocd.exe"
+openocd.exe -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000" -c "program examples/Blink_RP2350.elf verify reset exit"
 ```
-
-</TabItem>
-</Tabs>
 
 ### Flashing `.hex` Files
 
-The `.hex` format is versatile and used by several XIAO models.
+The `.hex` format is a versatile standard.
 
-#### For Seeed Studio XIAO RA4M1 (using PyOCD)
+#### For Seeed Studio XIAO RA4M1
 
-This board requires Python and PyOCD.
+You can flash the RA4M1 using either PyOCD or the OpenOCD configuration file we provide.
 
-1.  **Install Prerequisites:** Make sure you have Python 3 installed. Then, open a terminal and install the necessary packages:
+*   **Method 1: Using PyOCD (Recommended)**
+    Ensure you have `pyocd` installed (`pip install -U pyocd`).
     ```bash
-    pip3 install pyocd
-    pyocd pack install r7fa4m1ab
+    pyocd flash -e sector -a 0x0 -t r7fa4m1ab examples/Blink_RA4M1.hex
     ```
 
-2.  **Flash the Firmware:** Run the following command, replacing the example path with the actual path to your `.hex` file.
+*   **Method 2: Using OpenOCD**
+    This command uses the custom `ra4m1.cfg` file from our package.
     ```bash
-    # Replace <path_to_your_file> with the correct path
-    pyocd flash -e sector -a 0x0 -t r7fa4m1ab <path_to_your_file>/Blink_RA4M1.hex
-    ```
-    For example, if you are in the `OpenOCD-20251028-0.12.0` directory:
-    ```bash
-    pyocd flash -e sector -a 0x0 -t r7fa4m1ab bin/Blink_RA4M1.hex
+    openocd -f interface/cmsis-dap.cfg -f target/XIAO_RA4M1/ra4m1.cfg -c "program examples/Blink_RA4M1.hex verify reset exit"
     ```
 
 #### For Seeed Studio XIAO MG24
 
-This board uses a specific version of OpenOCD. You **must** change your directory to `mg24-openocd/bin` before running the command.
+This board requires its dedicated OpenOCD version from the package. You **must** navigate into the correct directory before running the command.
 
-<Tabs>
-<TabItem value="Windows" label="Windows" default>
+1.  **Navigate to the correct directory:**
+    *   **On Windows:** Open a Command Prompt and run:
+        `cd XIAO_MG24_Win_OpenOCD-v0.12.0/bin`
+    *   **On macOS/Linux:** Open a Terminal and run:
+        `cd XIAO_MG24_Mac_Linux_OpenOCD-v0.12.0/bin`
 
-```bash
-# First, change directory:
-cd mg24-openocd/bin
-
-# Then, run the flash command:
-openocd.exe -f interface/cmsis-dap.cfg -f target/efm32s2_g23.cfg -c "init; reset_config srst_nogate; reset halt; program ../../bin/Blink_MG24.hex; reset; exit"
-```
-
-</TabItem>
-<TabItem value="macOS/Linux" label="macOS/Linux">
-
-```bash
-# First, change directory:
-cd mg24-openocd/bin
-
-# Then, run the flash command:
-./openocd -f interface/cmsis-dap.cfg -f target/efm32s2_g23.cfg -c "init; reset_config srst_nogate; reset halt; program ../../bin/Blink_MG24.hex; reset; exit"
-```
-
-</TabItem>
-</Tabs>
+2.  **Run the flash command:**
+    The path to the firmware is now `../../examples/Blink_MG24.hex` because you are two levels deep inside the package directory.
+    ```bash
+    # On Windows, use "openocd.exe". On macOS/Linux, use "./openocd".
+    ./openocd -f interface/cmsis-dap.cfg -f target/efm32s2_g23.cfg -c "init; reset_config srst_nogate; reset halt; program ../../examples/Blink_MG24.hex; reset; exit"
+    ```
 
 ### Flashing Bootloader Files
 
-Sometimes you may need to restore or update a board's bootloader. This is a critical operation that can "un-brick" a device.
+This is a critical operation that can restore a board.
 
 #### For Seeed Studio XIAO SAMD21
 
-This command flashes a `.bin` bootloader file.
-
-<Tabs>
-<TabItem value="Windows" label="Windows" default>
+This command uses the custom `at91samd21g18.cfg` file provided in our package to flash a `.bin` bootloader.
 
 ```bash
-bin\openocd.exe -f interface/cmsis-dap.cfg -f target/at91samd21g18.cfg -c "telnet_port disabled; init; targets; halt; program bin/bootloader-XIAO.bin verify reset; shutdown"
+openocd -f interface/cmsis-dap.cfg -f target/XIAO_SAMD21/at91samd21g18.cfg -c "telnet_port disabled; init; targets; halt; program examples/bootloader-XIAO.bin verify reset; shutdown"
 ```
-
-</TabItem>
-<TabItem value="macOS/Linux" label="macOS/Linux">
-
-```bash
-bin/openocd -f interface/cmsis-dap.cfg -f target/at91samd21g18.cfg -c "telnet_port disabled; init; targets; halt; program bin/bootloader-XIAO.bin verify reset; shutdown"
-```
-
-</TabItem>
-</Tabs>
 
 #### For Seeed Studio XIAO nRF52840
 
-This process involves first downloading the bootloader, then erasing the chip and flashing the new bootloader.
+This process involves downloading the bootloader, then erasing the chip and flashing the new file.
 
-1.  **Download the Bootloader:** Open a terminal and use `wget` to download the official bootloader.
-    ```bash
-    wget https://raw.githubusercontent.com/0hotpotman0/BLE_52840_Core/refs/heads/main/bootloader/Seeed_XIAO_nRF52840_Sense/Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex
-    ```
+1.  **Download the Bootloader:**
+    *   **On macOS/Linux,** use `wget` in your terminal:
+        ```bash
+        wget https://raw.githubusercontent.com/0hotpotman0/BLE_52840_Core/refs/heads/main/bootloader/Seeed_XIAO_nRF52840_Sense/Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex
+        ```
+    *   **On Windows,** open the URL above in your browser and save the `.hex` file into the root of your `XIAO_Debug_Mate_DAPLink_Package` folder.
 
 2.  **Flash the Bootloader:**
-
-<Tabs>
-<TabItem value="Windows" label="Windows" default>
-
-```bash
-bin\openocd.exe -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "init" -c "halt" -c "nrf5 mass_erase" -c "program Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex verify" -c "reset" -c "exit"
-```
-
-</TabItem>
-<TabItem value="macOS/Linux" label="macOS/Linux">
-
-```bash
-bin/openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "init" -c "halt" -c "nrf5 mass_erase" -c "program Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex verify" -c "reset" -c "exit"
-```
-
-</TabItem>
-</Tabs>
+    This command uses the standard `nrf52.cfg` from your OpenOCD installation.
+    ```bash
+    openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "init" -c "halt" -c "nrf5 mass_erase" -c "program Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex verify" -c "reset" -c "exit"
+    ```
 
 ### Flashing Compatibility Summary
 

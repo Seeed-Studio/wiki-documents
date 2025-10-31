@@ -183,7 +183,11 @@ The power analysis function measures the power supplied to the XIAO via its **5V
 
 ### XIAO Debug Mate: Features and Usage
 
-For detailed guides on how to use the DAPLink debugger, UART monitor, and power analyzer with specific IDEs and projects, please refer to our dedicated feature guides (coming soon).
+For detailed guides on how to use the DAPLink debugger, UART monitor, and power analyzer with specific IDEs and projects, please refer to our dedicated feature guides.
+
+- [XIAO Debug Mate DAPLink Debugger](https://wiki.seeedstudio.com/xiao_debug_mate_debug/)
+- [XIAO Debug Mate UART Monitor](https://wiki.seeedstudio.com/xiao_debug_mate_serial/)
+- [XIAO Debug Mate Power Meter](https://wiki.seeedstudio.com/xiao_debug_mate_power/)
 
 ## Reset
 
@@ -211,7 +215,14 @@ Should you need to restore the original factory firmware, you can do so using on
 
 We have prepared a package with easy-to-use flashing scripts for all major operating systems.
 
-1.  Download the firmware package (link to be provided).
+1.  Download the firmware package.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/xiao_debug_mate/res/XIAO_Debug_Mate_Flash_Script.zip" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware ver. 1.0</font></span></strong>
+    </a>
+</div>
+
 2.  Extract the contents of the zip file.
 3.  Put your XIAO Debug Mate into Boot Mode.
 4.  Run the appropriate script for your OS.
@@ -232,36 +243,84 @@ Open a terminal, navigate to the extracted folder, and run the command: `sh flas
 
 If you have `esptool` installed as part of the ESP-IDF or as a Python package, you can flash the firmware manually.
 
-1.  Download the factory firmware `.bin` file (link to be provided).
+1.  Download the factory firmware `.bin` file.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/xiao_debug_mate/res/XIAO_Debug_Mate_Flash_Script.zip" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware ver. 1.0</font></span></strong>
+    </a>
+</div>
+
 2.  Put your XIAO Debug Mate into Boot Mode.
-3.  Open a terminal or command prompt and run the appropriate command below, replacing `[PORT]` with your device's serial port name and `[FIRMWARE_FILE.bin]` with the path to the downloaded firmware.
+3.  Open a terminal or command prompt and run the appropriate command below.
 
 <Tabs>
 <TabItem value="Windows" label="Windows" default>
 
 ```bash
-# Find your port in Device Manager (e.g., COM3)
-esptool.exe --chip esp32s3 --port [PORT] write_flash 0x0 [FIRMWARE_FILE.bin]
+esptool.exe --chip esp32s3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x0 bootloader.bin 0x10000 firmware.bin 0x8000 partitions.bin
 ```
 
 </TabItem>
 <TabItem value="MacOS" label="MacOS">
 
 ```bash
-# Find your port with: ls /dev/tty.usbmodem*
-esptool.py --chip esp32s3 --port [PORT] write_flash 0x0 [FIRMWARE_FILE.bin]
+esptool --chip esp32s3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x0 bootloader.bin 0x10000 firmware.bin 0x8000 partitions.bin
 ```
 
 </TabItem>
 <TabItem value="Linux" label="Linux">
 
 ```bash
-# Find your port with: ls /dev/ttyUSB*
-esptool.py --chip esp32s3 --port [PORT] write_flash 0x0 [FIRMWARE_FILE.bin]
+esptool --chip esp32s3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x0 bootloader.bin 0x10000 firmware.bin 0x8000 partitions.bin
 ```
 
 </TabItem>
 </Tabs>
+
+### Method 3: Using PlatformIO with Open-Source Firmware
+
+The firmware for XIAO Debug Mate is completely open-source and available on [GitHub](https://github.com/Seeed-Studio/OSHW-XIAO-Debug-Mate). If you want to customize the firmware or build it from source, you can use PlatformIO.
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Seeed-Studio/OSHW-XIAO-Debug-Mate.git
+```
+
+2. Navigate to the firmware directory
+
+3. Open the project in PlatformIO:
+   - If using PlatformIO IDE (VS Code extension), open the folder containing `platformio.ini`
+   - Or use PlatformIO Core CLI
+
+4. Put your XIAO Debug Mate into **Boot Mode** as described in the Boot section above.
+
+5. Build and upload the firmware:
+
+<Tabs>
+<TabItem value="PlatformIO IDE" label="PlatformIO IDE" default>
+- Click the "Upload" button in the PlatformIO toolbar
+- Or use the command palette: `PlatformIO: Upload`
+</TabItem>
+<TabItem value="PlatformIO CLI" label="PlatformIO CLI">
+
+```bash
+pio run --target upload
+```
+
+</TabItem>
+</Tabs>
+
+This method allows you to:
+- Modify the firmware to add custom features
+- Build the latest development version
+- Contribute to the open-source project
+- Learn from the source code implementation
+
+:::tip
+Make sure you have PlatformIO installed. You can install it as a VS Code extension or as a standalone CLI tool via pip: `pip install platformio`
+:::
 
 ## Troubleshooting
 
@@ -281,15 +340,23 @@ esptool.py --chip esp32s3 --port [PORT] write_flash 0x0 [FIRMWARE_FILE.bin]
     *   When inserting or removing a XIAO board, apply force **straight up or down**.
     *   **Avoid wiggling or rocking** the XIAO board back and forth, as this can bend the pins, widen the contacts in the female header, and lead to poor connections over time.
 
+## Special Thanks
 
+Special thanks to **啊猫啊狗晒太阳 (Ah Mao Ah Gou Shai Tai Yang)** for the design inspiration for the LED matrix. The design of the Debug Mate's onboard LED indicator is a reference to their excellent open-source project. The original design is very creative and practical.
+
+If you would like to see the original design, you can check out the demonstration video and the author's homepage through the links below.
+
+*   [Original Design Demonstration Video](https://www.bilibili.com/video/BV1Sc411273Y/)
+*   [Author's Bilibili Homepage](https://space.bilibili.com/1155738723)
 
 ## Resources
 
+- **[ZIP]** [Seeed Studio XIAO Debug Mate 3D Printed Case](https://files.seeedstudio.com/wiki/xiao_debug_mate/res/Seeed_Studio_XIAO_Debug_Mate_3D_Printed_Case.zip)
+- **[PDF]** [Seeed Studio XIAO Debug Mate SCH PDF](https://files.seeedstudio.com/wiki/xiao_debug_mate/res/Seeed_Studio_XIAO_Debug_Mate_V1.0_SCH_20250926.pdf)
+- **[ZIP]** [Seeed Studio XIAO Debug Mate SCH&PCB KiCAD Files](https://files.seeedstudio.com/wiki/xiao_debug_mate/res/Seeed_Studio_XIAO_Debug_Mate_V1.0_SCH&PCB_20250926.zip)
+- **[GITHUB]** [Seeed Studio XIAO Debug Mate Firmware Repository](https://github.com/Seeed-Studio/OSHW-XIAO-Debug-Mate)
 
-
-
-
-
+## Tech Support & Product Discussion
 
 <div class="table-center">
   <div class="button_tech_support_container">
