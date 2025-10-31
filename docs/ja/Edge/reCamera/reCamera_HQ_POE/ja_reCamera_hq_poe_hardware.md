@@ -18,7 +18,7 @@ last_update:
 
 # reCamera HQ POE 概要
 
-reCamera 2002 HQ PoE は、より鮮明で明瞭な画像を提供する高度な CMOS センサーを搭載しています。M12 レンズマウントを採用しており、デフォルトレンズを任意の互換性のある 2MP M12 レンズに柔軟に交換できます。また、PoE（Power over Ethernet）をサポートしており、別途 USB/DC 電源は不要で、PoE スイッチへの 1 本のイーサネットケーブルで電源とデータの両方を供給できます。
+reCamera 2002 HQ PoE は、より鮮明でクリアな画像を提供する高度な CMOS センサーを搭載しています。M12 レンズマウントを採用しており、デフォルトレンズを任意の互換性のある 2MP M12 レンズに柔軟に交換できます。また、PoE（Power over Ethernet）をサポートしており、別途 USB/DC 電源は不要で、PoE スイッチへの 1 本のイーサネットケーブルで電源とデータの両方を供給できます。
 
 
 ## 特徴
@@ -46,14 +46,14 @@ reCamera 2002 HQ PoE は、より鮮明で明瞭な画像を提供する高度�
 
 | センサー                | GC2053                             |
 | --------------------- | ---------------------------------- |
-| 光学フォーマット        | 1/2.9inch                          |
+| 光学フォーマット        | 1/2.9 インチ                          |
 | 解像度            | 1920x1080                          |
-| 最大フレームレート        | 30fps@full size                    |
+| 最大フレームレート        | 30fps@フルサイズ                    |
 | レンズマウント            | M12                                |
 | FOV                   | 93°                                |
-| イーサネット              | 100Mbps with PoE                   |
-| USB                   | USB Type-C(2.0)                    |
-| 寸法             | 40x40x45.8mm40x40x53.1mm with lens |
+| イーサネット              | 100Mbps（PoE 対応）                   |
+| USB                   | USB Type-C（2.0）                    |
+| 寸法             | 40x40x45.8mm（レンズ付き 40x40x53.1mm） |
 | 動作温度 | -20～50°C                          |
 | 動作湿度    | 95%                                |
 
@@ -69,7 +69,7 @@ reCamera 2002 HQ PoE は、より鮮明で明瞭な画像を提供する高度�
 :-------------------------:|:-------------------------:
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
-### [センサーボード-S101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
+### [センサーボード-S4_GC2053](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
 
 
 上面図             |  底面図
@@ -123,13 +123,13 @@ reCamera 2002 HQ PoE は、より鮮明で明瞭な画像を提供する高度�
   </table>
 </div>
 
-#### 💡 [B3_POE](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Base_Board/B3_POE/readme.md)
+### [B3_POE](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Base_Board/B3_POE/readme.md)
 
 上面             |  底面
 :-------------------------:|:-------------------------:
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom.png" /></div>
 
-##### ⚙️ 機能：
+#### ⚙️ 機能：
 
 - 1 x **802.3af PSE** 対応 RJ45 ポート。
 - 1 x UART ポート。
@@ -144,18 +144,18 @@ reCamera 2002 HQ PoE は、より鮮明で明瞭な画像を提供する高度�
 - [マイク & スピーカー](#jump3)
 - [POE](#jump4)
 - [IO](#jump5)
-- [Uart (デバッグ)](#jump6)
+- [Uart（デバッグ）](#jump6)
 - [ユーザーボタン](#jump7)
 
 ### <span id="jump2">ライト</span>
 
-reCamera には 3 つのインジケーターがあります。**赤と青**のライトはプログラム可能なインジケーターで、**緑**のインジケーターは電源インジケーターでプログラム不可です。**赤**は CPU のステータスインジケーター、**青**はシステム eMMC の読み取りステータスインジケーターです。
+reCamera には 3 つのインジケーターがあります。**赤と青**のライトはプログラム可能なインジケーターで、**緑**のインジケーターはプログラム不可能な電源インジケーターです。**赤**は CPU のステータスインジケーター、**青**はシステム eMMC の読み取りステータスインジケーターです。
 
 **ライトインジケーターのステータス**：
 
 | LED（色） | ステータス | 説明 |
 | ---- | ---- | ---- |
-| LED1 - 緑 | ON | 電源オン |
+| LED1 - 緑 | 点灯 | 電源オン |
 | LED2 - 赤 | 点滅 | CPU 動作中（ユーザー定義） |
 | LED3 - 青 | 点滅 | eMMC 読み取り/書き込み中 |
 
@@ -165,7 +165,7 @@ reCamera には 3 つのインジケーターがあります。**赤と青**の�
 echo 0 | sudo tee /sys/class/leds/red/brightness
 ```
 
-例 2：**赤色ライト**を完全にオフにする
+例 2：**赤色ライト**を完全に消灯
 
 ``` bash
 echo none | sudo tee /sys/class/leds/red/trigger
@@ -175,7 +175,7 @@ echo none | sudo tee /sys/class/leds/red/trigger
 
 reCamera にはマイクロフォンとスピーカーが搭載されています。以下のコマンドでマイクロフォンとスピーカーを呼び出すことができます。reCamera は **wav** 形式のオーディオファイルを再生できます。
 
-プレーヤーのデフォルト形式：16bit ビットレート、サンプリングレート 16,000
+プレーヤーのデフォルト形式：16 ビットビットレート、サンプリングレート 16,000
 
 ```bash
 sudo arecord -D hw:0,0 -r 16000 -f S16_LE -c 1 -d 5 /home/recamera/test.wav //Record five seconds of audio
@@ -205,7 +205,7 @@ POE モジュールは reCamera HQ POE バージョンのハードウェアに�
 
 Linux では、GPIO の読み書きを行う最も一般的な方法は GPIO sysfs インターフェースを使用することです。これは `/sys/class/gpio` ディレクトリ下の `export`、`unexport`、`gpio{N}/direction`、`gpio{N}/value`（`{N}` を実際のピン番号に置き換える）などのファイルを操作することで実装され、シェルスクリプトでよく使用されます。
 
-reCamera POE バックプレーンには 3 つの利用可能な IO ポートがあります。各ポートは入力または出力として設定できます。IO ポートの番号は以下の通りです：
+reCamera POE ベースプレートには 3 つの利用可能な IO ポートがあります。各ポートは入力または出力として設定できます。IO ポートの番号は以下の通りです：
 
 | IO ポート | GPIO 番号 |
 | ---- | ---- |
@@ -230,7 +230,7 @@ echo "490" > /sys/class/gpio/unexport #Disable pin GPIO490
 
 ### <span id="jump6">Uart（デバッグ）</span>
 
-reCamera の POE ベースボードには 2 組のシリアルポートがあります。/ttyS0（デバッグ用）と /ttyS3 です。
+reCamera の POE ベースボードには 2 セットのシリアルポートがあります：/ttyS0（デバッグ用）と /ttyS3 です。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-1.png" /></div>
 
@@ -272,7 +272,7 @@ echo Hello! > /dev/ttyS3
 cat /dev/ttyS3
 ```
 
-minicomツールを使用してシリアルポート経由で通信する：
+minicomツールを使用してシリアルポート経由で通信します：
 
 ```bash
 minicom -D /dev/ttyS3 -b 115200

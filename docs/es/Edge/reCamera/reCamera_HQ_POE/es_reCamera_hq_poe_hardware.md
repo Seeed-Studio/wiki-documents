@@ -38,9 +38,9 @@ reCamera 2002 HQ PoE está equipada con un sensor CMOS avanzado para imágenes m
 | **CPU**                | C906@1GHz + C906@700MHz                                                  |
 | **Rendimiento AI**     | 1 Tops @ Int8                                                            |
 | **MCU**                | 8051 @ 8KB SRAM                                                          |
-| **Sistema Operativo**   | Linux                                                                     |
-| **Memoria**             | 256 MB                                                                  |
-| **Codificador de Video**      | 5MP @ 30Fps                                                              |
+| **Sistema Operativo**  | Linux                                                                     |
+| **Memoria**            | 256 MB                                                                    |
+| **Codificador de Video** | 5MP @ 30Fps                                                            |
 
 
 
@@ -48,31 +48,31 @@ reCamera 2002 HQ PoE está equipada con un sensor CMOS avanzado para imágenes m
 | --------------------- | ---------------------------------- |
 | Formato Óptico        | 1/2.9inch                          |
 | Resolución            | 1920x1080                          |
-| Velocidad de Fotogramas Máx        | 30fps@tamaño completo                    |
-| montura de lente            | M12                                |
+| Velocidad de Fotogramas Máx. | 30fps@tamaño completo       |
+| montura de lente      | M12                                |
 | FOV                   | 93°                                |
 | Ethernet              | 100Mbps con PoE                   |
-| USB                   | USB Type-C(2.0)                    |
+| USB                   | USB Type-C(2.0)                   |
 | Dimensión             | 40x40x45.8mm40x40x53.1mm con lente |
-| Temperatura de Operación | -20～50°C                          |
-| Humedad de Operación    | 95%                                |
+| Temperatura de Operación | -20～50°C                       |
+| Humedad de Operación  | 95%                                |
 
 
 ### [Placa Principal-C101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#core-board)
 <!-- 搬运github说明和图 -->
-| Placa         | Características                           | Versión |
+| Placa         | Características                    | Versión |
 | ------------- | ---------------------------------- | ------------ |
 | C1_2002w    | - eMMC <br /> - Módulo WiFi/BLE <br /> - Antena integrada <br /> - Conector de antena externa| 1.2 |
 | C1_2002       | - eMMC <br /> - SDIO adicional a placa base <br /> - UART adicional a placa base | 1.2 |
 
-Vista Superior             |  Vista Inferior
+Vista Superior           |  Vista Inferior
 :-------------------------:|:-------------------------:
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
-### [Placa de Sensor-S101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
+### [Placa de Sensor-S4_GC2053](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
 
 
-Vista Superior             |  Vista Inferior
+Vista Superior           |  Vista Inferior
 :-------------------------:|:-------------------------:
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top.png" /></div> |<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom.png" /></div>
 
@@ -123,13 +123,13 @@ Vista Superior             |  Vista Inferior
   </table>
 </div>
 
-#### 💡 [B3_POE](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Base_Board/B3_POE/readme.md)
+### [B3_POE](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Base_Board/B3_POE/readme.md)
 
-Arriba             |  Abajo
+Superior             |  Inferior
 :-------------------------:|:-------------------------:
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom.png" /></div>
 
-##### ⚙️ Características:
+#### ⚙️ Características:
 
 - 1 x puerto RJ45 para **802.3af PSE**.
 - 1 x puerto UART.
@@ -205,7 +205,7 @@ Puedes verificar la dirección IP del dispositivo en tu router para acceder a é
 
 En Linux, la forma más común de leer y escribir GPIO es usando la interfaz GPIO sysfs. Esto se implementa manipulando archivos como `export`, `unexport`, `gpio{N}/direction`, y `gpio{N}/value` (reemplaza `{N}` con el número de pin real) bajo el directorio `/sys/class/gpio`, y se usa frecuentemente en scripts de shell.
 
-La placa base POE de reCamera tiene 3 puertos IO disponibles. Cada puerto puede configurarse como entrada o salida. Los puertos IO están numerados de la siguiente manera:
+La placa base reCamera POE tiene 3 puertos IO disponibles. Cada puerto puede configurarse como entrada o salida. Los puertos IO están numerados como sigue:
 
 | Puerto IO | Número GPIO |
 | ---- | ---- |
