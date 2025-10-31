@@ -234,9 +234,9 @@ mkdir STM32
 cd STM32
 ```
 
-<!-- - **5.** Visit [this link](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases) and download **stm32flash** file and the **STM32G030F6_R2.bin** file from the **latest release** version.
+<!-- - **5.** [このリンク](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases)にアクセスし、**最新リリース**バージョンから**stm32flash**ファイルと**STM32G030F6_R2.bin**ファイルをダウンロードしてください。
 
-**Note:** You can click on them to start downloading -->
+**注意:** それらをクリックするとダウンロードが開始されます -->
 
 - **5.** **stm32flash**ファイルと**STM32G030F6_R2.bin**をダウンロードします
 
@@ -305,29 +305,29 @@ dtoverlay=reTerminal
 sudo reboot
 ```
 
-<!-- - **6.** Open command prompt on PC and navigate to the location of the downloaded files before
+<!-- - **6.** PCでコマンドプロンプトを開き、以前にダウンロードしたファイルの場所に移動する
 
 ```sh
 cd C:\Users\user\Downloads
 ```
 
-- **7.** Transfer the files to the **STM32** directory on the reTerminal we created before
+- **7.** ファイルを、以前作成したreTerminal上の**STM32**ディレクトリに転送する
 
 ```sh
 scp -r .\stm32flash .\STM32G030F6_R2.bin pi@192.168.x.xx:\home\pi\STM32
 ```
 
-**Note:** **pi** is the username and **192.168.x.xx** is the IP address of reTerminal. You can replace this with hostname of reTerminal as well.
+**注意:** **pi**はユーザー名で、**192.168.x.xx**はreTerminalのIPアドレスです。これをreTerminalのホスト名に置き換えることもできます。
 
-- **8.** Inside the terminal window of reTerminal, enter the **STM32** directory
+- **8.** reTerminalのターミナルウィンドウ内で、**STM32**ディレクトリに入る
 
 ```sh
 cd STM32
 ```
 
-Then you will see the files that we copied earlier
+その後、先ほどコピーしたファイルが表示されます
 
-- **9.** Make the flash tool **executable**
+- **9.** フラッシュツールを**実行可能**にする
 
 ```sh
 chmod +x stm32flash
@@ -339,13 +339,13 @@ chmod +x stm32flash
 i2ctransfer -y 1 w2@0x45 0x9b 0x01
 ```
 
-- **11.** Erase the flash in the STM32 chip using **stm32flash tool**
+- **11.** **stm32flash ツール**を使用してSTM32チップのフラッシュを消去する
 
 ```sh
 ./stm32flash -a 0x56 -o /dev/i2c-1
 ```
 
-- **12.** Flash the firmware to STM32 using stm32flash tool
+- **12.** stm32flashツールを使用してSTM32にファームウェアを書き込む
 
 ```sh
 ./stm32flash -a 0x56 -w STM32G030F6_R2.bin -v -g 0x0 /dev/i2c-1
@@ -470,7 +470,6 @@ openocd -f interface/sysfsgpio-raspberrypi.cfg -c "transport select swd" -f targ
 
 これでSTM32へのファームウェアの書き込みが正常に完了しました！
 
-
 ### インストールされたSTM32G030ファームウェアバージョンの確認
 
 次に、インストールされたSTM32ファームウェアバージョンを確認しましょう
@@ -535,7 +534,6 @@ Raspberry Pi公式の最新リリースである最新のBookworm OSのイメー
 | [2024-03-14-Raspbian-reTerminal-arm64](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-arm64.zip)              | 64bit Debian12(bookworm) Linux version 6.6.20 | lastest |
 | [2024-03-14-Raspbian-reTerminal-armhf](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-armhf.zip) |  32bit Debian12(bookworm) Linux version 6.6.20           | lastest |
 | [2023_11_15_bookworm_64.img.gz](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2023_11_15_bookworm_64_reTerminal/2023_11_15_bookworm_64.img.gz)               | 64bit Debian12(bookworm) Linux version 6.1  | release |
-
 
 - **2.** **.zipファイル**を展開します
 

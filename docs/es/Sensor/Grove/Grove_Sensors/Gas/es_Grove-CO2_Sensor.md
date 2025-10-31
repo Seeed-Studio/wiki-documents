@@ -16,7 +16,9 @@ last_update:
 
 El módulo Grove - Sensor de CO2 es un sensor de CO2 infrarrojo de alta sensibilidad y alta resolución. El sensor de CO2 infrarrojo MH-Z16 es un sensor pequeño de propósito general que utiliza el principio infrarrojo no dispersivo (NDIR) para detectar CO2 presente en el aire, con buena selectividad, independiente del oxígeno, larga vida útil, sensor de temperatura incorporado, compensación de temperatura, con salida UART, fácil de usar. Puede ser ampliamente utilizado en HVAC y monitoreo de calidad del aire interior, monitoreo de procesos industriales y seguridad, agricultura y monitoreo de procesos de producción ganadera.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-CO2-Sensor-p-1863.html)
 

@@ -404,6 +404,7 @@ if __name__ == '__main__':
   height: 0,
   overflow: 'hidden',
 }}>
+  <div class="video-container">
   <iframe
     style={{
       position: 'absolute',
@@ -418,6 +419,7 @@ if __name__ == '__main__':
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen>
   </iframe>
+  </div>
 </div>
 
 要运行此演示，您需要两个文件：用于浏览器界面的 `index.html` 和用于服务器端处理的 `backend.py`。

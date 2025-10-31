@@ -92,7 +92,7 @@ XIAO ESP32C3 にはオンボード LED が搭載されていないため、XIAO 
 
 ESP-IDF 開発フレームワークはより専門的なソフトウェア開発者を対象としているため、使用の敷居は Arduino よりも高くなります。関連する文書や情報は Arduino よりも少なくなります。XIAO ユーザーができるだけ早く ESP-IDF の使用を開始し、開発環境の設定で問題に遭遇する可能性を減らすために、環境の設定をビデオと図解の形で紹介します。このセクションはビデオ部分です。ビデオに沿って進めたい場合は、このビデオを参考にして ESP-IDF 環境をインストール・設定し、最終的に XIAO ESP32C6 のオンボード LED を点灯させることができます。
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="900" height="450" src="https://www.youtube.com/embed/QdPmsGDd7zs?si=5r_OO2EwZMX8D_HM?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
@@ -201,7 +201,7 @@ idf.py --version
 nano ~/.bashrc
 ```
 
-Add the following to the end of the `.bashrc` file.
+`.bashrc` ファイルの末尾に以下を追加してください。
 
 ```
 alias get_idf='. ~/esp/esp-idf/export.sh'

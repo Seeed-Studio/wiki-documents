@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/15/2025
+  date: 10/27/2025
   author: Frank
 ---
 
@@ -17,53 +17,35 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 15th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is October 27th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Seeed Studio BeagleBone® Green Eco](https://wiki.seeedstudio.com/getting_started_with_seeedstudio_beaglebone_green_eco/)
+### [AI Gun Detection Solution for Real-Time Edge Alerts](https://wiki.seeedstudio.com/solutions/frigate-on-jetson-nodered-gun-alerts/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/1-102111198-Seeed-Studio-BeagleBoneR-Green-Eco.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://www.seeed.cc/wp-content/uploads/2025/08/scene_3.png" alt="pir" width={800} height="auto" /></p>
 
-**The Seeed Studio BeagleBone® Green Eco** is an industrial-grade, open-source single-board computer, co-developed with the BeagleBoard.org® Foundation and powered by the robust **TI AM3358 SoC**. This "Eco" version is engineered for high efficiency, incorporating an advanced TI power management chip (TPS6521403) to ensure optimized energy consumption. It is well-equipped for demanding applications with a generous 16GB of onboard eMMC storage and a Gigabit Ethernet port for high-speed network connectivity.
+<div style={{ textAlign: "justify" }}>
 
-### [Getting started with AmazingHand](https://wiki.seeedstudio.com/hand_amazinghand/)
+The Frigate + Node-RED Gun Detection Solution is an edge AI video analytics stack that detects firearms in live camera streams and orchestrates alerting, review, and integrations. Built for privacy-preserving, low‑latency deployments on **AI Boxes**, the NVIDIA **Jetson** series and **reComputer R2000**, it combines an optimized detection engine (Frigate) with a visual automation layer (Node‑RED) and optional LLM‑assisted review.
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/pollen-robotics/AmazingHand/main/assets/Patterns_Overview.jpg" alt="pir" width={800} height="auto" /></p>
+</div>
 
-The **AmazingHand** is an open-source robotic hand project designed to make research and experimentation with humanoid manipulation accessible and affordable. Traditional robotic hands are often prohibitively expensive and rely on complex, bulky forearm actuators. The AmazingHand solves this by integrating all its motors directly into a compact, 3D-printable design.
+### [MCP Integration in SenseCAP Watcher](https://wiki.seeedstudio.com/mcp_endpoint/)
 
-### [Crowd Flow Heatmap with Home Assistant](https://wiki.seeedstudio.com/crowd-flow-monitoring/)
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Grove/Grove4.png" alt="pir" width={600} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/application/ha-heatmap/lovelace-heatmap-card-config.png" alt="pir" width={800} height="auto" /></p>
+<div style={{ textAlign: "justify" }}>
 
-Want a clear view of how people move through a space? With **Home Assistant** and a **Floorplan Heatmap**, you can do just that. This solution lets you overlay person-hour data onto your floor plan, making it easy to see how the space is being used at a glance.
+The [**MCP Endpoint (Model Context Protocol Endpoint)**](https://wiki.seeedstudio.com/mcp_endpoint/) documentation introduces its functionality in **SenseCAP Watcher**, explaining its role in AI systems, configuration methods, and usage examples to help developers quickly integrate and manage custom MCP services. Additionally, we’ve updated [**Extending Grove with MCP**](https://wiki.seeedstudio.com/extending_grove_with_mcp/), which demonstrates how to connect Grove sensors to AI systems through MCP for more flexible data interaction and application development.
 
-### [Using XIAO ESP32-C3 on MicroBlocks](https://wiki.seeedstudio.com/xiao_esp32c3_microblocks/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/microblocks.png" alt="pir" width={800} height="auto" /></p>
-
-MicroBlocks is a blocks-language that makes it easy for beginners (9 years to adults) to program microcontrollers. Yet in spite of its apparent simplicity, MicroBlocks is a powerful programming language with better performance than MicroPython; the ability to control GPIO pins and interface to peripherals via I2C, SPI, and serial; and nearly 200 extension libraries. This document explains how to use the Seeed Studio XIAO ESP32-C3 with MicroBlocks, including firmware installation, connection methods, and basic examples (such as blinking an LED), helping you get started quickly with block-based programming.
-
-In addition, we also provide tutorial documents for **[XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_microblocks/)**, **[XIAO RP2040](https://wiki.seeedstudio.com/xiao_rp2040_microblocks/)**, **[XIAO RP2350](https://wiki.seeedstudio.com/xiao_rp2350_microblocks/)**, **[XIAO SAMD21](https://wiki.seeedstudio.com/xiao_samd21_microblocks/)**, and **[XIAO nRF52840](https://wiki.seeedstudio.com/xiao_ble_microblocks/)**.
-
-### [Power Consumptions Example for XIAO nRF54L15 (PlatformIO)](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_power_consumptions/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/new/6.png" alt="pir" width={800} height="auto" /></p>
-
-This document presents the power consumption of the Seeed Studio XIAO nRF54L15 Sense in different operating modes, covering BLE advertising and ultra-low-power System Off mode, with code examples and test data based on PlatformIO.
-
-### [Use Zoneminder on reComputer](https://wiki.seeedstudio.com/zoneminder_on_recomputer/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/zoneminder/zone_m.png" alt="pir" width={600} height="auto" /></p>
-
-[Zoneminder](https://github.com/ZoneMinder/zoneminder) is an open-source video surveillance software that allows you to monitor and manage security cameras. It supports various types of cameras, including IP cameras, USB webcams, and analog cameras. ZoneMinder offers features like motion detection, video recording, alarm notifications, and remote viewing through a web interface. It's highly customizable, making it suitable for both personal and professional surveillance needs. Plus, being open-source, it’s free to use and can be adapted to different setups.
+</div>
 
 ## Existing Wiki Updated
 
-### [Grove Beginner Kit For Arduino](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/)
+### [reTerminal E Series ePaper Display Works with TRMNL](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/)
 
-We updated the examples for [SPA06-003](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/#for-spa06-003-new-version-after-october-2025).
+We have added an operation example on how to [flash via the SenseCraft HMI platform](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/#method-2-flash-via-sensecraft-hmi-platform).
 
 ## The Efforts of Contributor
 
@@ -150,12 +132,12 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2024.8.05th](/Seeed_Elderly/weekly_wiki/wiki240805)
 - [weekly wiki on 2024.8.12th](/Seeed_Elderly/weekly_wiki/wiki240812)
 - [weekly wiki on 2024.8.19th](/Seeed_Elderly/weekly_wiki/wiki240819)
-- [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/wiki240826) -->
+- [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/wiki240826)
 - [weekly wiki on 2024.9.02nd](/Seeed_Elderly/weekly_wiki/wiki240902)
 - [weekly wiki on 2024.9.09th](/Seeed_Elderly/weekly_wiki/wiki240909)
 - [weekly wiki on 2024.9.16th](/Seeed_Elderly/weekly_wiki/wiki240918)
 - [weekly wiki on 2024.9.23rd](/Seeed_Elderly/weekly_wiki/wiki240923)
-- [weekly wiki on 2024.9.30th](/Seeed_Elderly/weekly_wiki/wiki240930)
+- [weekly wiki on 2024.9.30th](/Seeed_Elderly/weekly_wiki/wiki240930) -->
 - [weekly wiki on 2024.10.07th](/Seeed_Elderly/weekly_wiki/wiki241007)
 - [weekly wiki on 2024.10.14th](/Seeed_Elderly/weekly_wiki/wiki241014)
 - [weekly wiki on 2024.10.21th](/Seeed_Elderly/weekly_wiki/wiki241021)
@@ -204,5 +186,10 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.8.25th](/Seeed_Elderly/weekly_wiki/wiki250825)
 - [weekly wiki on 2025.9.01st](/Seeed_Elderly/weekly_wiki/wiki250901)
 - [weekly wiki on 2025.9.08th](/Seeed_Elderly/weekly_wiki/wiki250908)
+- [weekly wiki on 2025.9.15th](/Seeed_Elderly/weekly_wiki/wiki250915)
+- [weekly wiki on 2025.9.22nd](/Seeed_Elderly/weekly_wiki/wiki250922)
+- [weekly wiki on 2025.9.29th](/Seeed_Elderly/weekly_wiki/wiki250929)
+- [weekly wiki on 2025.10.13th](/Seeed_Elderly/weekly_wiki/wiki251013)
+- [weekly wiki on 2025.10.20th](/Seeed_Elderly/weekly_wiki/wiki251020)
 
 </details>

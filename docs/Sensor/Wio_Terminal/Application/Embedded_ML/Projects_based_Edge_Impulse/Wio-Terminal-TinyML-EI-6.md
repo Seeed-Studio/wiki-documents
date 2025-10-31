@@ -22,7 +22,9 @@ Anomalies. Or specifically anomaly detection for predictive maintenance. We’re
 
 For full tutorial and video demonstration, have a look at the accompanying video:
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gXs-h3eeT1U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 That’s WHAT, now for HOW part, let’s start with an example that might be more familiar.
 

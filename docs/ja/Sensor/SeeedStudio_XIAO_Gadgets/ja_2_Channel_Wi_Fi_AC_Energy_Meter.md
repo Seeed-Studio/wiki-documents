@@ -198,7 +198,9 @@ FirefoxはESPデバイスでのファームウェアフラッシュをサポー�
 
 ESPHome Webを介してファームウェアをフラッシュする詳細な手順については、以下のビデオをご覧ください：
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Install firmware via ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 </TabItem>
 </Tabs>
@@ -300,7 +302,7 @@ ESPHome Webを介してファームウェアをフラッシュする詳細な手
 
 - **Dual Channel Energy Meter Schematic**: [Seeed_Studio_XIAO_2-Channel_Wi-Fi_AC_Energy_Meter_V1.0.pdf](https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/resource/Seeed_Studio_XIAO_2-Channel_Wi-Fi_AC_Energy_Meter_V1.0.pdf)
 
-## Tech Support & Product Discussion
+## 技術サポート・製品ディスカッション
 
 私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 

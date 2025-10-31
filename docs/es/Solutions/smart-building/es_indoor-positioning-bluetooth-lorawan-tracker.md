@@ -605,7 +605,7 @@ Puedes filtrar los rastreadores mostrados en el mapa según los UUID de baliza a
 
 ## Referencias y Recursos
 
-- **Página Principal**: [SenseCraft Indoor Positioning Solution](https://cc.seeedstudio.com/solutions/campus-safety-management)
+- **Página Principal**: [SenseCraft Indoor Positioning Solution](https://www.seeed.cc/solutions/campus-safety-management)
 - **Imagen de Docker**: [seeedcloud/sensecraft-indoor-positioning - Docker Hub](https://hub.docker.com/r/seeedcloud/sensecraft-indoor-positioning)
 - **Sitio de Demostración en Vivo**: [IndoorPositioning](https://indoorpositioning-demo.seeed.cc/)
 

@@ -303,6 +303,7 @@ Open VS Code and search for nRF Connect for VS Code Extension Pack in the Plugin
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn8.png" style={{width:600, height:'auto'}}/></div>
 <br />
 The nRF Connect for VS Code extension enables developers to utilize the popular Visual Studio Code Integrated Development Environment (VS Code IDE) to develop, build, debug and deploy embedded applications based on Nordic's nRF Connect SDK (Software Development Kit). The extension includes useful development tools such as a compiler interface, linker, complete build system, RTOS-enabled debugger, seamless interfacing with the nRF Connect SDK, device tree visualization editor, and an integrated serial terminal.
+
 The nRF Connect extension package for VS Code includes the following components:
 
 - nRF Connect for VS Code: The main extension contains the interface between the build system and the nRF Connect SDK, as well as an interface to manage the nRF Connect SDK version and toolchain.
@@ -592,6 +593,261 @@ If you want to have a deeper understanding of the internal principles of nRF Con
 - [**nRF Connect Vscode**](https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html)
 
 </Steppers>
+
+## Restore factory settings
+
+For XIAO nRF54L15 boards, a factory reset script is provided to recover the board from a bad state (e.g., when it's can not upload due to the internal NVM write protection). This script will perform a mass erase of the flash and program a factory firmware.
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="hhttps://github.com/Jasionf/platform-seeedboards/tree/main/scripts/factory_reset" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Factory Reset</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div><br />
+
+**Location**
+The scripts are located in the scripts/factory_reset/ directory.
+**Usage**
+The script will automatically create and manage a local Python virtual environment to install the necessary tools, so it can be run out-of-the-box.
+
+### Window
+
+- For Windows: Navigate to the scripts/factory_reset directory and run:
+
+```cpp
+.\factory_reset.bat
+```
+
+### Linux-MacOS
+- For Linux and macOS: Navigate to the scripts/factory_reset directory and run:
+
+```cpp
+bash factory_reset.sh
+```
+
+## Wireless Switching Mode
+
+This example demonstrates how to control the RF switch on the Seeed Studio XIAO nRF54L15 to toggle between the onboard 
+
+:::
+The following example works for both PlatformIO and nRF Connect SDK. It can be used directly in PlatformIO, while the SDK requires manually adding files. Refer to this [link](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/#battery-powered-board)
+:::
+
+<div style={{textAlign:'center'}}>
+    <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/IN_antenna.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:400, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>External antenna</em></p>
+</div>
+
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-rfsw" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div>
+
+- Ceramic antenna and an external antenna.
+
+- Press the user button (SW0) to switch between the ceramic and external antennas.
+
+- The user LED indicates the current antenna selection (LED ON for external, LED OFF for ceramic).
+
+- The default antenna at startup can be configured via prj.conf.
+
+```cpp
+/*
+ * Copyright (c) 2024 Seeed Technology Co.,Ltd
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <zephyr/kernel.h>
+#include <zephyr/device.h>
+#include <zephyr/drivers/gpio.h>
+#include <zephyr/logging/log.h>
+#include <zephyr/devicetree.h>
+
+LOG_MODULE_REGISTER(app, CONFIG_LOG_DEFAULT_LEVEL);
+
+/* Devicetree node identifiers */
+#define RFSW_REGULATOR_NODE DT_NODELABEL(rfsw_ctl)
+#define SW0_NODE            DT_ALIAS(sw0)
+#define LED0_NODE           DT_ALIAS(led0)
+
+/* State variables */
+static uint8_t onoff_flag = 0;
+#ifdef CONFIG_DEFAULT_ANTENNA_EXTERNAL
+static bool is_external_antenna = true;
+#else
+static bool is_external_antenna = false;
+#endif
+
+/* GPIO device specs */
+/* Manually build gpio_dt_spec for rfsw_ctl */
+static const struct gpio_dt_spec rfsw_gpio = {
+	.port = DEVICE_DT_GET(DT_GPIO_CTLR(RFSW_REGULATOR_NODE, enable_gpios)),
+	.pin = DT_GPIO_PIN(RFSW_REGULATOR_NODE, enable_gpios),
+	.dt_flags = DT_GPIO_FLAGS(RFSW_REGULATOR_NODE, enable_gpios),
+};
+static const struct gpio_dt_spec button = GPIO_DT_SPEC_GET(SW0_NODE, gpios);
+static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
+
+/* Button callback data */
+static struct gpio_callback button_cb_data;
+
+/* Forward declarations */
+void button_pressed(const struct device *dev, struct gpio_callback *cb, uint32_t pins);
+void update_antenna_switch(void);
+
+/* Function to update antenna switch and LED */
+void update_antenna_switch(void)
+{
+    int ret;
+    is_external_antenna = !is_external_antenna;
+
+    if (is_external_antenna) {
+        /* Switch to external antenna */
+        LOG_INF("Switching to External Antenna");
+
+        // To get a physical high level (Inactive state), we need to set the logic to '0'
+        ret = gpio_pin_set_dt(&rfsw_gpio, 0); 
+        if (ret < 0) {
+            LOG_ERR("Error setting rfsw-ctl to physical HIGH: %d\n", ret);
+        }
+
+        // Turn on the LED (set 0 for on)
+        ret = gpio_pin_set_dt(&led, 0); 
+        if (ret < 0) {
+            LOG_ERR("Error turning on LED: %d\n", ret);
+        }
+
+    } else {
+        /* Switch back to ceramic antenna */
+        LOG_INF("Switching to Ceramic Antenna");
+
+        // To get a physical low level (Active state), we need to set the logic to '1'
+        ret = gpio_pin_set_dt(&rfsw_gpio, 1); 
+        if (ret < 0) {
+            LOG_ERR("Error setting rfsw-ctl to physical LOW: %d\n", ret);
+        }
+
+        // Turn off the LED (set 1 for off)
+        ret = gpio_pin_set_dt(&led, 1);
+        if (ret < 0) {
+            LOG_ERR("Error turning off LED: %d\n", ret);
+        }
+    }
+}
+
+/* Button pressed callback function */
+void button_pressed(const struct device *dev, struct gpio_callback *cb,
+                    uint32_t pins)
+{
+    update_antenna_switch();
+}
+
+int main(void)
+{
+    int ret;
+    
+    /* Check if GPIO devices are ready */
+    if (!gpio_is_ready_dt(&rfsw_gpio)) {
+        LOG_ERR("RF switch control GPIO not ready\n");
+        return -1;
+    }
+    if (!gpio_is_ready_dt(&button)) {
+        LOG_ERR("Button GPIO not ready\n");
+        return -1;
+    }
+    if (!gpio_is_ready_dt(&led)) {
+        LOG_ERR("LED GPIO not ready\n");
+        return -1;
+    }
+    
+    /* Configure GPIO pins */
+    ret = gpio_pin_configure_dt(&rfsw_gpio, GPIO_OUTPUT);
+    if (ret < 0) {
+        LOG_ERR("Error configuring rfsw-ctl: %d\n", ret);
+        return ret;
+    }
+    
+    /* Configure LED as output, default off */
+    ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE);
+    if (ret < 0) {
+        LOG_ERR("Error configuring LED: %d\n", ret);
+        return ret;
+    }
+
+    /* Set initial LED state based on antenna selection */
+    if (is_external_antenna) {
+        // External antenna
+        LOG_INF("Initial state: External Antenna");
+        ret = gpio_pin_set_dt(&rfsw_gpio, 0);
+        if (ret < 0) {
+            LOG_ERR("Error setting rfsw-ctl to physical HIGH: %d\n", ret);
+        }
+        ret = gpio_pin_set_dt(&led, 0);  // Turn on LED
+        if (ret < 0) {
+            LOG_ERR("Error turning on LED: %d\n", ret);
+        }
+    } else {
+        // Ceramic antenna
+        LOG_INF("Initial state: Ceramic Antenna");
+        ret = gpio_pin_set_dt(&rfsw_gpio, 1);
+        if (ret < 0) {
+            LOG_ERR("Error setting rfsw-ctl to physical LOW: %d\n", ret);
+        }
+        ret = gpio_pin_set_dt(&led, 1);  // Turn off LED
+        if (ret < 0) {
+            LOG_ERR("Error turning off LED: %d\n", ret);
+        }
+    }
+
+    /* Configure button as input */
+    ret = gpio_pin_configure_dt(&button, GPIO_INPUT);
+    if (ret < 0) {
+        LOG_ERR("Error configuring button: %d\n", ret);
+        return ret;
+    }
+
+    /* Configure button interrupt */
+    ret = gpio_pin_interrupt_configure_dt(&button, GPIO_INT_EDGE_TO_ACTIVE);
+    if (ret < 0) {
+        LOG_ERR("Error configuring button interrupt: %d\n", ret);
+        return ret;
+    }
+
+    /* Initialize button callback */
+    gpio_init_callback(&button_cb_data, button_pressed, BIT(button.pin));
+    gpio_add_callback(button.port, &button_cb_data);
+
+    LOG_INF("Antenna switch example started. Press SW0 to switch.\n");
+    return 0;
+}
+```
+
+:::tip
+If you wish to switch between the external or internal antenna, you need to modify the zephyr/prj.conf file.,
+Uncomment # CONFIG_DEFAULT_ANTENNA_EXTERNAL=y to enable the external antenna. If using the internal antenna, comment out the line.
+:::
+
+```cpp
+CONFIG_GPIO=y
+CONFIG_SERIAL=y
+CONFIG_LOG=y
+CONFIG_CONSOLE=y
+CONFIG_UART_CONSOLE=y
+CONFIG_SHELL_BACKEND_SERIAL=y
+CONFIG_SHELL_BACKEND_DUMMY=n
+CONFIG_PM_DEVICE=y
+CONFIG_NRFX_POWER=y
+CONFIG_POWEROFF=y
+
+CONFIG_BT=y
+CONFIG_BT_PERIPHERAL=y
+CONFIG_BT_DEVICE_NAME="zephyr-ble"
+
+# Enable this option to default to external antenna
+# CONFIG_DEFAULT_ANTENNA_EXTERNAL=y
+```
+
+
 
 ## Acess The J-Link Pins For Burn a Program
 

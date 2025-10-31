@@ -248,7 +248,7 @@ M.2 Hat 支持 PCIe Gen 2 和 PCIe Gen 3 模式
 sudo nano /boot/firmware/config.txt
 ```
 
-**Step 2**:Add the following to the [all] section at the end of the `/boot/firmware/config.txt` file:
+**步骤 2**:在`/boot/firmware/config.txt`文件末尾的[all]部分添加以下内容：
 
 ```shell
 dtparam=pciex1_gen=3
@@ -267,7 +267,7 @@ PCIe2.0 M.2 dual Hat 支持 PCIe Gen 2，PCIe3.0 M.2 dual Hat 支持 PCIe Gen 2 
 sudo nano /boot/firmware/config.txt
 ```
 
-**Step 2**:Add the following to the [all] section at the end of the `/boot/firmware/config.txt` file:
+**步骤 2**:在`/boot/firmware/config.txt`文件末尾的[all]部分添加以下内容：
 
 ```shell
 dtparam=pciex1

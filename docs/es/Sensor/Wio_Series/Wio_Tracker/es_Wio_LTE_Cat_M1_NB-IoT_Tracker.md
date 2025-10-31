@@ -402,7 +402,7 @@ void loop() {
 
 ```
 
-- Step 7. Press **RST**, then you can see below info on screen.
+- Paso 7. Presiona **RST**, luego puedes ver la siguiente información en pantalla.
 
 ```cpp
 AT+CSQ
@@ -507,7 +507,7 @@ void loop() {
 
 ```
 
-- Step 7. Press **RST**, then you can see below info on screen.
+- Paso 7. Presiona **RST**, luego puedes ver la siguiente información en pantalla.
 
 ```cpp
 [INFO] Begin...
@@ -605,7 +605,7 @@ void loop() {
 
 ```
 
-- Step 7. Press **RST**, then you can see below info on screen.
+- Paso 7. Presiona **RST**, luego puedes ver la siguiente información en pantalla.
 
 ```
 [INFO] Waitting for module to alvie...

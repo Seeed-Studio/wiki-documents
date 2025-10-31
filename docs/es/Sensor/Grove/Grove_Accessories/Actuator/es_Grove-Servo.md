@@ -199,6 +199,7 @@ Para el paso 3 puedes conectar el módulo servo a **cualquier Puerto GPIO** pero
 :::tip
 Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usar esta línea de comandos **solo con Python3**.
 :::
+
 - **Paso 1**. Sigue [Setting Software](https://wiki.seeedstudio.com/es/Grove_Base_Hat_for_Raspberry_Pi/#installation) para configurar el entorno de desarrollo.
 - **Paso 2**. Descarga el archivo fuente clonando la biblioteca grove.py.
 
@@ -273,7 +274,7 @@ if __name__ == '__main__':
 ```
 
 :::tip
-    If everything goes well, you will be able to see the servo sweep.
+    Si todo va bien, podrás ver el barrido del servo.
 :::
 
 ```python
@@ -325,9 +326,13 @@ Puedes salir de este programa simplemente presionando ++ctrl+c++.
 
 **Módulo servomotor Grove**:
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XNPn7AUmgqU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8GTej6Lv8us" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Soporte Técnico y Discusión de Productos
 

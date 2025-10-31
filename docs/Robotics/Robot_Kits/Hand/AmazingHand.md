@@ -404,6 +404,7 @@ Control the robotic hand in real-time by mirroring the movements of your own han
   height: 0,
   overflow: 'hidden',
 }}>
+  <div class="video-container">
   <iframe
     style={{
       position: 'absolute',
@@ -418,6 +419,7 @@ Control the robotic hand in real-time by mirroring the movements of your own han
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen>
   </iframe>
+  </div>
 </div>
 
 To get this demo running, you will need two files: `index.html` for the browser interface and `backend.py` for the server-side processing.

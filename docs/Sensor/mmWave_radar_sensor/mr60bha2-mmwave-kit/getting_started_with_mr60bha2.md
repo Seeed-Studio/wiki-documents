@@ -515,6 +515,14 @@ Modifying the radar firmware is a risky operation, so be sure to read this secti
 **Special note, if you purchased the Fall Radar MR60FDA2, please do not flash the firmware illegally by the following way, it will surely brick your device!!!!**
 :::
 
+:::tip
+If you'd rather not read the text, you can also refer to **[the video](https://youtu.be/uic8__FFzos)** to update the firmware. Since the ESPHome firmware for XIAO will be overwritten below, you may need to reflash the ESPHome firmware for XIAO on this [webpage](https://limengdu.github.io/MR60BHA2_ESPHome_external_components/) after updating the radar's firmware.
+
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uic8__FFzos?si=ijBJOLMk9Z5szwSX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+:::
+
 First, connect the XIAO ESP32C6 and MR60BHA2 modules together. Then use the following code to program XIAO.
 
 ```cpp
@@ -679,14 +687,12 @@ The firmware and algorithms of the radar are not open source, and complex parame
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

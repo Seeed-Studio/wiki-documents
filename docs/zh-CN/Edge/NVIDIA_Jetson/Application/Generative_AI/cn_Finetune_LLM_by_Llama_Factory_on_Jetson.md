@@ -73,10 +73,9 @@ Llama-Factory 提供了一个高度便捷的大语言模型微调工具，支持
 pip3 install jetson-examples
 sudo reboot
 ```
+### 在 Jetson 上安装和运行 Llama-Factory
 
-### Install and Run Llama-Factory on Jetson
-
-Deploy `Llama-Factory` by jetson-examples in one-line:
+使用一行命令部署 jetson-examples 的 `Llama-Factory`：
 
 ```bash
 reComputer run llama-factory
@@ -145,7 +144,7 @@ http://127.0.0.1:7860
 
 ### 演示
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="450" src="https://www.youtube.com/embed/OaGEn7pVve0" title="Finetune LLM by Llama-Factory on Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

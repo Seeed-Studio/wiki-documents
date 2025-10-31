@@ -178,6 +178,7 @@ Crea un programa simple en C para demostrar comunicación EtherCAT básica:
 
 <details>
 <summary> ethercat_communication_test.c </summary>
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -478,13 +479,14 @@ void sleep_ms(int milliseconds)
 ```
 </details>
 
-Create a Makefile file to compile this program:
+Crea un archivo Makefile para compilar este programa:
 :::note
-Replace `SOEM_PATH` to your own installation path!
+¡Reemplaza `SOEM_PATH` con tu propia ruta de instalación!
 :::
 
 <details>
 <summary> Makefile </summary>
+
 ```Makefile
 # Makefile para Prueba de Comunicación EtherCAT con Biblioteca SOEM Local
 
@@ -600,12 +602,14 @@ help:
 
 </details>
 
-Compile and run the program:
+Compila y ejecuta el programa:
+
 ```bash
 make gcc -Wall -Wextra -std=c99 -O2 -I/home/seeed/ethercat/SOEM/build/install/include -c ethercat_simple_test.c -o ethercat_simple_test.o
 
 sudo ./ethercat_simple_test
 ```
+
 <div align="center">
     <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/software/ethercat/conmunicate.png" />
@@ -620,12 +624,13 @@ sudo ./ethercat_simple_test
 As shown above, successful EtherCat communication will modify the slave station's driving mode, and it will be able to normally read the status information of the slave station.
 </div>
 
-### Python Example
+### Ejemplo de Python
 
-For Python-based applications, you can use the pysoem library:
+Para aplicaciones basadas en Python, puedes usar la biblioteca pysoem:
 
 <details>
 <summary> conmunicate_test.py </summary>
+
 ```python
 import pysoem          
 import time           
@@ -762,7 +767,7 @@ print("Prueba de comunicación EtherCAT completada")
 
 
 :::info
-Before running the Python script, you need to install the pysoem library:
+Antes de ejecutar el script de Python, necesitas instalar la biblioteca pysoem:
 ```bash
 pip3 install pysoem
 
@@ -772,9 +777,9 @@ sudo python3 ethercat_python.py
 
 :::
 
-## Tech Support & Product Discussion
+## Soporte Técnico y Discusión de Productos
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte y garantizar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

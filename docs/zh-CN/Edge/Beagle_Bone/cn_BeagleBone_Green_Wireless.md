@@ -15,7 +15,9 @@ last_update:
 
 Seeed Studio BeagleBone® Green Wireless 是 [BeagleBoard.org](https://beagleboard.org) 和 Seeed Studio 的联合开发成果。它基于 [BeagleBone® Black](https://beagleboard.org/black) 的开源硬件设计，并开发成这一差异化版本。Seeed Studio BeagleBone® Green Wireless 集成了高性能的灵活 WiFi/Bluetooth 接口和两个 Grove 接口，使其更容易连接到庞大的 Grove 传感器家族。板载 HDMI 和以太网被移除，为这些无线功能和 Grove 接口腾出了空间。
 
+<div class="video-container">
 <iframe width="700" height="600" src="https://www.youtube.com/embed/tlA97rhKG10" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Wireless-p-2650.html" target="_blank">
@@ -323,14 +325,14 @@ connect 0C:xx:xx:xx:xx:0B
 
 在 **/boot/uEnv.txt** 中：
 
-  ##enable Generic eMMC Flasher:
-  ##make sure, these tools are installed: dosfstools rsync
+  ##启用通用 eMMC 刷写器：
+  ##确保已安装以下工具：dosfstools rsync
   #cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3.sh
 
 改为:
 
-  ##enable Generic eMMC Flasher:
-  ##make sure, these tools are installed: dosfstools rsync
+  ##启用通用 eMMC 刷写器：
+  ##确保已安装以下工具：dosfstools rsync
   cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3.sh
 
 然后你会看到 4 个用户 LED 灯如下所示：

@@ -339,13 +339,13 @@ reComputer AI Industrial R2135 配备了 3 个 LED 指示灯，用于显示设�
 echo 1 | sudo tee /sys/class/leds/led-red/brightness
 ```
 
-2. To turn off the red LED, please enter following command in the Terminal:
+2. 要关闭红色 LED，请在终端中输入以下命令：
 
 ```
 echo 0 | sudo tee /sys/class/leds/led-red/brightness
 ```
 
-3. You can turn on red and green LED at the same time, please enter following command in the Terminal:
+3. 您可以同时打开红色和绿色LED，请在终端中输入以下命令：
 
 ```
 echo 1 | sudo tee /sys/class/leds/led-red/brightness
@@ -755,8 +755,7 @@ sudo nano ./libloragw/inc/loragw_i2c.h
 # compile the code
 sudo make
 ```
-
-Then modify the configuration code:
+然后修改配置代码：
 
 ```bash
 sudo nano ./tools/reset_lgw.sh
@@ -826,8 +825,7 @@ sudo ip link set dev usb0 up
 # Request an IP address from the DHCP server on the network and assign it to the usb0 interface
 sudo dhclient usb0
 ```
-
-Then test if it can ping default router
+然后测试它是否能 ping 通默认路由器
 
 ```bash
 ping 192.168.225.1
@@ -888,7 +886,9 @@ sudo fdisk -l | grep sda
 
 Frigate 是一个开源的 NVR（网络视频录像机），专为使用 AI 进行实时目标检测而设计。它与现有摄像头集成，使用机器学习模型（如 TensorFlow 和 Coral）对视频流执行目标检测。Frigate 针对低延迟和高性能视频处理进行了优化，提供运动检测、实时视频流和自动警报等功能。
 
+<div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/thmI3dz9Ugs" title="Cost-Effective AI Surveillance: Frigate on Raspberry Pi 5 with Hailo8 on PCIe3.0 to Dual M.2 hat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 > **注意：**
 > **如果您想了解更多关于此项目的信息，请参考此[链接](https://wiki.seeedstudio.com/cn/frigate_nvr_with_raspberrypi_5/)。**
@@ -897,7 +897,9 @@ Frigate 是一个开源的 NVR（网络视频录像机），专为使用 AI 进�
 
 YOLO（You Only Look Once）系列模型是一系列专为速度和准确性而设计的实时目标检测模型。与传统的目标检测方法分别执行区域提议和分类不同，YOLO 在神经网络的单次前向传递中执行这两项任务，使其速度更快。YOLO 模型将图像分割成网格，并为每个网格单元预测边界框和类别概率。多年来，YOLO 通过各种版本不断发展，在准确性、速度和检测较小物体的能力方面都有所改进。YOLOv4、YOLOv5 以及最新的 YOLOv7 和 YOLOv8 模型广泛用于监控、自动驾驶汽车和机器人等应用。
 
+<div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/olaSVKmt9YI" title="Raspberry Pi AI: YOLOv8 Object Detection - 240fps Video Input, Pi 5 PCIe Gen2 vs Gen3 Benchmark" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 > **注意：**
 > **如果您想了解更多关于此项目的信息，请参考此[链接](https://wiki.seeedstudio.com/cn/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)**。
@@ -906,7 +908,9 @@ YOLO（You Only Look Once）系列模型是一系列专为速度和准确性而�
 
 CLIP（对比语言-图像预训练）是由 OpenAI 开发的机器学习模型，能够同时理解图像和文本。它经过训练，可以将图像与相应的文本描述关联起来，从而能够执行涉及两种模态的任务。CLIP 具有零样本学习能力，这意味着它可以识别图像中的物体和概念，而无需专门针对这些类别进行训练。它在各种任务中表现出色，如图像分类、目标检测，甚至生成图像的文本描述。
 
+<div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/JMHtqSmAGCA" title="CLIP Zero Shot Classification on Raspberry Pi 5 with Hailo AI Accelerator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 > **注意：**
 > **如果您想了解更多关于此项目的信息，请参考此[链接](https://wiki.seeedstudio.com/cn/clip_application_on_rpi5_with_ai_kit/)。**

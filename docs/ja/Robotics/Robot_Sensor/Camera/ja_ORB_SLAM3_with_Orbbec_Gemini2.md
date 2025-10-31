@@ -38,9 +38,9 @@ Orbbec Gemini 2は、デュアルアイ構造光深度センサーと統合さ�
 
 ## 前提条件
 
-- __[reComputer J30/40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)__ Jetpack 6.2がプリインストール済み
-- __Orbbec Gemini2 3D Camera__
-- __[ROS2 Humble](https://wiki.seeedstudio.com/ja/install_ros2_humble/)__ 環境がインストール済み
+- **[reComputer J30/40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)** Jetpack 6.2がプリインストール済み
+- **Orbbec Gemini2 3D Camera**
+- **[ROS2 Humble](https://wiki.seeedstudio.com/ja/install_ros2_humble/)** 環境がインストール済み
 
 <div align="center">
     <img width={700}
@@ -49,7 +49,7 @@ Orbbec Gemini 2は、デュアルアイ構造光深度センサーと統合さ�
 
 ## Orbbec SDKのインストール
 
-__ステップ 1.__ ARM64アーキテクチャ用のOrbbec SDKをダウンロードしてインストールします：
+**ステップ 1.** ARM64アーキテクチャ用のOrbbec SDKをダウンロードしてインストールします：
 
 ```bash
 # Download Orbbec SDK
@@ -59,7 +59,7 @@ wget https://github.com/orbbec/OrbbecSDK_v2/releases/download/v2.4.11/OrbbecSDK_
 unzip OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64.zip
 ```
 
-__ステップ 2.__ サンプルをビルドしてテストします：
+**ステップ 2.** サンプルをビルドしてテストします：
 
 ```bash
 # Install udev rules
@@ -80,7 +80,7 @@ cd ..
 
 ## ORB-SLAM3のビルド
 
-__ステップ 1.__ システム依存関係をインストールします：
+**ステップ 1.** システム依存関係をインストールします：
 
 ```bash
 sudo apt update && sudo apt install -y \
@@ -92,7 +92,7 @@ sudo apt update && sudo apt install -y \
     libepoxy-dev python3-dev libboost-serialization-dev
 ```
 
-__ステップ 2.__ ORB-SLAM3の可視化に必要なPangolinをインストールします：
+**ステップ 2.** ORB-SLAM3の可視化に必要なPangolinをインストールします：
 
 ```bash
 git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
@@ -136,7 +136,7 @@ OpenEXR関連のコンパイルエラーが発生した場合、ソースコー�
 
 :::
 
-__ステップ 3.__ ORB-SLAM3をコンパイルするための設定
+**ステップ 3.** ORB-SLAM3をコンパイルするための設定
 
 ```bash
 cd ~
@@ -164,7 +164,7 @@ std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
 
 :::
 
-__ステップ 4.__ Pangolinが正しくインストールされているかテストします：
+**ステップ 4.** Pangolinが正しくインストールされているかテストします：
 
 ```bash
 ./examples/SimpleDisplay/SimpleDisplay
@@ -177,7 +177,7 @@ __ステップ 4.__ Pangolinが正しくインストールされているかテ�
 
 インストールが正しく完了していれば、上記の画像に示されているようなウィンドウが正常に開くことができます。
 
-__ステップ 5.__ CMakeLists.txtを修正します
+**ステップ 5.** CMakeLists.txtを修正します
 
 プロジェクトをOrbbec SDKと互換性があるようにCMakeLists.txtファイルを修正します。以下の完全なCMakeList.txt設定を直接コピーしてください：
 :::info
@@ -745,11 +745,12 @@ endif()
 # target_link_libraries(stereo_inertial_realsense_D435i_old ${PROJECT_NAME})
 
 # endif()
+
 ```
 
 </details>
 
-__Step 6.__ ORB-SLAM3 RGB-D モード用の Orbbec Gemini2 アダプターを使用するスクリプトを作成する
+**ステップ 6.** ORB-SLAM3 RGB-D モード用の Orbbec Gemini2 アダプターを使用するスクリプトを作成する
 
 `Examples/RGB-D/` ディレクトリの下に `rgbd_orbbec_gemini2_cpp.cc` という名前のファイルを以下のように作成します：
 
@@ -1008,7 +1009,7 @@ int main(int argc, char **argv)
 
 </details>
 
-__Step 7.__ ORB-SLAM3 をビルドする
+**ステップ 7.** ORB-SLAM3 をビルドする
 
 ```bash
 chmod +x build.sh
@@ -1021,7 +1022,7 @@ chmod +x build.sh
 ORB-SLAM3 を実行する前に、カメラのパラメータ設定を取得するためにカメラをキャリブレーションする必要があります。ここでは、ROS が提供するカメラキャリブレーションツールを使用してカメラをキャリブレーションし、そのパラメータを取得する方法を説明します。
 </div>
 
-__Step 1.__ Orbbec ROS2 ドライバーをインストールする
+**ステップ 1.** Orbbec ROS2 ドライバーをインストールする
 
 ```bash
 mkdir -p ~/ros2_ws/src
@@ -1057,17 +1058,18 @@ ros2 launch orbbec_camera gemini2.launch.py
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/camera_topic.png" />
 </div>
 :::
-__ステップ 2.__ カメラキャリブレーションパッケージのインストール
+
+**ステップ 2.** カメラキャリブレーションパッケージのインストール
 
 ```bash
 sudo apt install ros-humble-camera-calibration
 ```
 
-__ステップ 3.__ キャリブレーションチェッカーボードのダウンロード
+**ステップ 3.** キャリブレーションチェッカーボードのダウンロード
 
 [Checkerboard Collection](https://markhedleyjones.com/media/calibration-checkerboard-collection/Checkerboard-A4-25mm-8x6.pdf)からキャリブレーションチェッカーボードをダウンロードして印刷してください。
 
-__ステップ 4.__ カメラキャリブレーションの実行
+**ステップ 4.** カメラキャリブレーションの実行
 
 ```bash
 # For 8x6 checkerboard with 25mm squares
@@ -1094,7 +1096,7 @@ ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/cal_save.png" />
 </div>
 
-__ステップ 5.__ カメラYAMLファイルの設定
+**ステップ 5.** カメラYAMLファイルの設定
 
 ORB-SLAM3プロジェクトの`Examples/RGB-D/`フォルダ下に、Orbbec Gemini2カメラ用の`Orbbec_Gemini2.yaml`という名前のパラメータ設定ファイルを作成します。
 

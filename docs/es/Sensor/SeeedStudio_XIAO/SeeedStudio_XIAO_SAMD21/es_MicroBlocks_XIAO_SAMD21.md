@@ -8,7 +8,7 @@ last_update:
   author: MicroBlocks
 ---
 
-# Usando XIAO SAMD21 en MicroBlocks
+# XIAO SAMD21 con MicroBlocks
 
 ## MicroBlocks
 
@@ -76,8 +76,8 @@ MicroBlocks es un entorno de codificación **en vivo** por lo que puedes probar 
 Haz clic en bloques y scripts para ejecutarlos.
 Arrastra bloques al panel de scripting y ensámblalos para crear scripts.
 
-Tu código se almacena en memoria flash persistente y puede ejecutarse incluso cuando la placa no está
-conectada al editor de MicroBlocks.
+Tu código se almacena en memoria flash persistente y puede ejecutarse incluso cuando la placa
+no está conectada al editor de MicroBlocks.
 Los scripts bajo un bloque **when started** se ejecutan cuando la placa se enciende.
 
 MicroBlocks soporta concurrencia. Hasta diez scripts pueden ejecutarse al mismo tiempo.

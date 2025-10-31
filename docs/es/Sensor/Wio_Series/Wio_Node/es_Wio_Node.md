@@ -24,7 +24,7 @@ Tal como el significado de su nombre, Wio Node es verdaderamente un nodo Wi-Fi q
 
 El ecosistema de Wio Node también consiste en Hardware Abierto **placa Wio Node**, **Aplicación Móvil Wio Link de Código Abierto** e **implementación de Servidor IoT de Código Abierto**. Así que la plataforma de software para Wio Link también está disponible para Wio Node.
 
-[![Get one now](https://files.seeedstudio.com/wiki/Wio_Node/pictures/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Node-p-2637.html)
+[![Obtener Uno Ahora](https://files.seeedstudio.com/wiki/Wio_Node/pictures/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Node-p-2637.html)
 
 :::caution
 La función Wio IFTTT está EOL. Pero la APP Wio está disponible. Puedes usar la API de la APP Wio para leer el estado del sensor y controlar el actuador.

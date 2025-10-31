@@ -111,7 +111,6 @@ CAN BUS 扩展板目前仅支持 Jetson Nano 开发者套件（SD 卡版本）�
 
 :bulb: **注意：** 树莓派 2 通道 CAN BUS FD 扩展板仅支持内核版本 6.6.42 及以下版本。
 
-
 我们还需要两根[公对公跳线](https://www.seeedstudio.com/Breadboard-Jumper-Wire-Pack-241mm-200mm-160mm-117m-p-234.html)和电源线来为这些开发板供电。
 
 ### 硬件连接
@@ -872,7 +871,7 @@ void loop() {
 }
 ```
 
-- **Wio Terminal + 2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD) 代码**
+- **Wio Terminal + 树莓派用2通道CAN-BUS(FD)扩展板(MCP2518FD)代码**
 
 ```cpp
 #include <SPI.h>
@@ -1257,15 +1256,14 @@ void loop() {
 
 ## 技术支持与产品讨论
 
-
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

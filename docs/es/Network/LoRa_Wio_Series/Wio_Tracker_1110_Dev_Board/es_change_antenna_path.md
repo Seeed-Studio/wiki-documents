@@ -21,6 +21,7 @@ La placa de desarrollo Wio Tracker 1110 utiliza la antena LoRa integrada por def
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/path.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: 'center' }}>
+  <div class="video-container">
   <iframe
       width="666"
       height="360"
@@ -30,4 +31,5 @@ La placa de desarrollo Wio Tracker 1110 utiliza la antena LoRa integrada por def
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
   ></iframe>
+  </div>
 </div>

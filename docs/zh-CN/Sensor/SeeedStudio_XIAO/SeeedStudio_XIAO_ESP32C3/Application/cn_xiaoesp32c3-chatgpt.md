@@ -144,7 +144,7 @@ void WiFiConnect(void){
 }
 ```
 
-The `ssid` and `password` variables hold the SSID and password of the network you want to connect to.
+`ssid`和`password`变量保存了你想要连接的网络的SSID和密码。
 
 ```c
 // Replace with your network credentials
@@ -378,8 +378,7 @@ HTTPClient https;
 const char* chatgpt_token = "YOUR_API_KEY";
 char chatgpt_server[] = "https://api.openai.com/v1/completions";
 ```
-
-We need to make an HTTP POST request using JSON object.
+我们需要使用JSON对象发起一个HTTP POST请求。
 
 ```c
 if (https.begin(chatgpt_server)) {  // HTTPS

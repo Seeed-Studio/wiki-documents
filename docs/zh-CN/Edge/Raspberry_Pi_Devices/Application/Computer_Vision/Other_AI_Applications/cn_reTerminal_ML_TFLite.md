@@ -46,7 +46,7 @@ wget www.files.seeedstudio.com/ml/TFLite/tflite_runtime-2.6.0-cp37-cp37m-linux_a
 pip3 install tflite_runtime-2.6.0-cp37-cp37m-linux_aarch64.whl
 ```
 
-After installation is complete, try importing tflite package:
+安装完成后，尝试导入 tflite 包：
 
 ```
 pi@raspberrypi:~ $ python3
@@ -70,10 +70,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 [Jupyter Notebook](https://github.com/Seeed-Studio/Seeed_Python_MachineLearning/blob/main/jupyter_notebooks/aXeleRate_multi_stage.ipynb)
 [示例脚本](https://github.com/AIWintermuteAI/aXeleRate/tree/master/example_scripts/tensorflow_lite/detector)
 
-- alpha 0.25 224x224 66.7 FPS (15 ms.)
-- alpha 0.5 224x224 40 FPS (25 ms.)
-- alpha 0.75 320x320 14.9 FPS (67 ms.)
-- alpha 1.0 320x320 10.4 FPS (96 ms.)
+- alpha 0.25 224x224 66.7 FPS (15 毫秒)
+- alpha 0.5 224x224 40 FPS (25 毫秒)
+- alpha 0.75 320x320 14.9 FPS (67 毫秒)
+- alpha 1.0 320x320 10.4 FPS (96 毫秒)
 
 ### 图像分类
 
@@ -133,7 +133,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 由于 reTerminal 基于 Raspberry Pi 4，它没有用于神经网络推理的额外硬件加速器，因此只能应用 CPU 推理的标准优化方法。
 此主题的视频概述在这里：
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/BEDEscDQFxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 以下是 CPU 推理优化方法的简要概述：
 

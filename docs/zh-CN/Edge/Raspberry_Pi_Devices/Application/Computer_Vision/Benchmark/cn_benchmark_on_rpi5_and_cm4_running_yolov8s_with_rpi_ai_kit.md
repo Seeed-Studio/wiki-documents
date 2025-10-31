@@ -99,8 +99,7 @@ import TabItem from '@theme/TabItem';
 sudo apt update
 sudo apt full-upgrade
 ```
-
-#### Set pcie to gen2/gen3(gen3 is faster than gen2)
+#### 将 pcie 设置为 gen2/gen3（gen3 比 gen2 更快）
 
 Add following text to ```/boot/firmware/config.txt```
 
@@ -174,7 +173,9 @@ bash run.sh pose-estimation
 
 #### 结果
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/Mo7AL7AjxwA" title="Raspberry Pi AI: YOLOv8 Pose Estimation - 240fps Video Input, Pi 5 PCIe Gen2 vs Gen3 Benchmark" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 </TabItem>
 
@@ -201,7 +202,9 @@ bash run.sh object-detection
 
 #### 结果
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/olaSVKmt9YI" title="Raspberry Pi AI: YOLOv8 Object Detection - 240fps Video Input, Pi 5 PCIe Gen2 vs Gen3 Benchmark" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 </TabItem>
 </Tabs>

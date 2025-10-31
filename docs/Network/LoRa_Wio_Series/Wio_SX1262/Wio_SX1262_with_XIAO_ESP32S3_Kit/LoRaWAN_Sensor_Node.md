@@ -73,7 +73,9 @@ This wiki provides a step-by-step guide on configuring the XIAO ESP32S3 & Wio-SX
 
 ## Video Instruction
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/7NptcHkVcpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Register & Setup on TTN
 

@@ -205,7 +205,7 @@ ID 0x07は、Wi-Fi Macアドレス、センサーデータ、バッテリー情�
 |40~41|光|uint16|0000|0000は0x0000 = 0(DEC)分、光=0=0%|
 |42|バッテリーレベル|uint8|57|<p>57は0x57 = 87(DEC)です</p><p>バッテリーレベルは87%です</p>|
 
-### Bluetooth Location and Sensor Packet-0x08
+### Bluetooth位置とセンサーパケット-0x08
 
 ID 0x08は、Bluetooth Beacon MACアドレス、センサーデータ、およびバッテリーをアップロードするために使用されます。
 
@@ -259,7 +259,7 @@ ID 0x08は、Bluetooth Beacon MACアドレス、センサーデータ、およ�
 |14~17|緯度|int32|01587e4c|01587e4cは0x01587E4C = 22576716 (DEC)で、緯度 = 22576716/1000000=22.576716|
 |18|バッテリーレベル|uint8|56|<p>56は0x56 = 86(DEC)です</p><p>バッテリーレベルは86%です</p>|
 
-### Wi-Fi Location Only Packet-0x0A
+### Wi-Fi位置情報専用パケット-0x0A
 
 |0x0A|Byte2~4|Byte5|Byte6~9|Byte10~15|Byte16|
 | - | :- | :- | :- | :- | :- |
@@ -289,7 +289,7 @@ ID 0x08は、Bluetooth Beacon MACアドレス、センサーデータ、およ�
 |37|MACアドレス4のRSSI、int8|int8|b9|<p>b9は0xA9 = -71(DEC)、タイプはint8です</p><p>RSSI = -71</p>|
 |38|バッテリーレベル|uint8|57|<p>57は0x57 = 87(DEC)です</p><p>バッテリーレベルは87%です</p>|
 
-### Bluetooth Location Only Packet-0x0B
+### Bluetooth位置専用パケット-0x0B
 
 |<a name="ole_link4"></a>0x0B|Byte2~4|Byte5|Byte6~9|Byte10~15|Byte16|
 | - | :- | :- | :- | :- | :- |

@@ -99,7 +99,7 @@ west build -p always -b xiao_ble samples/hello_world
 west build -p always -b xiao_ble/nrf52840/sense samples/hello_world
 ```
 
-After this completes enter uf2 bootloader mode and type:
+完成此操作后进入 uf2 引导加载程序模式并输入：
 
 ```
 west flash -r uf2
@@ -115,7 +115,7 @@ west flash -r uf2
 screen /dev/ttyACM0 115200
 ```
 
-You should see a response similar to the following:
+你应该看到类似以下的响应：
 
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
@@ -186,7 +186,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_ble samples/basic/blinky
 ```
 
-Double press the RESET button and then flash:
+双击RESET按钮，然后闪烁：
 
 ```
 west flash -r uf2
@@ -203,7 +203,7 @@ west flash -r uf2
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 ```
 
-This is defined in the Xiao nRF52840 devicetree code via an alias:
+这在 Xiao nRF52840 设备树代码中通过别名定义：
 
 ```
  aliases {
@@ -261,19 +261,19 @@ cd ~/zephyrproject/zephyr
 west build -p -b xiao_ble/nrf52840/sense samples/sensor/lsm6dsl
 ```
 
-Double press the RESET button and then flash:
+双击 RESET 按钮，然后闪烁：
 
 ```
 west flash -r uf2
 ```
 
-Next you'll need to connect to see the output:
+接下来你需要连接以查看输出：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-This should display something along these lines:
+这应该显示类似以下内容：
 
 ```
 3LSM6DSL sensor samples:
@@ -352,19 +352,19 @@ cd ~/zephyrproject/zephyr
 west build -p -b xiao_ble/nrf52840/sense samples/drivers/audio/dmic
 ```
 
-Double press the RESET button and then flash:
+双击 RESET 按钮，然后闪烁：
 
 ```
 west flash -r uf2
 ```
 
-Next you'll need to connect to see the output:
+接下来你需要连接以查看输出：
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-This should display something along these lines:
+这应该显示类似以下内容：
 
 ```
 [00:00:00.297,088] <inf> dmic_sample: PCM output rate: 16000, channels: 1
@@ -419,7 +419,7 @@ const struct device *const dmic_dev = DEVICE_DT_GET(DT_NODELABEL(dmic_dev));
 };
 ```
 
-In the sample project overlay this regulator is then enabled:
+在示例项目叠加层中，此调节器随后被启用：
 
 ```
 / {
@@ -457,13 +457,13 @@ Flash your board:
 west flash -r uf2
 ```
 
-Wait a moment for the MCU to reset after flashing and connect to monitor:
+闪烁后等待片刻让 MCU 重置并连接到显示器:
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-You will see a console available for sending commands to the board:
+你会看到一个可用于向开发板发送命令的控制台:
 
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
@@ -506,13 +506,13 @@ Flash your board:
 west flash -r uf2
 ```
 
-Wait a moment for the MCU to reset after flashing and connect to monitor:
+闪烁后等待片刻让 MCU 重置并连接到显示器:
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-You will see results returned from the console:
+你将看到从控制台返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
@@ -609,7 +609,7 @@ west build -p always -b xiao_ble samples/basic/button -- -DSHIELD=seeed_xiao_exp
 west flash -r uf2
 ```
 
-Wait a moment for the MCU to reset after flashing and connect to monitor:
+闪烁后等待片刻让 MCU 重置并连接到显示器:
 
 ```
 screen /dev/ttyACM0 115200
@@ -630,7 +630,7 @@ Button pressed at 883367
 Button pressed at 1001258
 ```
 
-Let's dive into this example a bit to see why it works:
+让我们深入探讨这个例子，看看为什么它能够起作用：
 
 ```
 / {
@@ -692,13 +692,13 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_ble samples/subsys/fs/fs_sample -- -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_expansion_board
 ```
 
-Now flash and monitor (first pressing RESET twice to enter uf2 bootloader mode):
+现在刷写并监控（首先按两次 RESET 进入 uf2 引导加载程序模式）：
 
 ```
 west flash -r uf2
 ```
 
-You should see a response similar to this:
+你应该看到类似这样的响应:
 
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
@@ -757,19 +757,19 @@ Xiao 扩展板屏蔽层的相关部分如下所示：
 west build -p always -b xiao_ble samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/sht31.overlay
 ```
 
-Flash your board after its in uf2 bootloader mode:
+在您的板子进入 uf2 引导加载程序模式后对其进行刷写：
 
 ```
 west flash -r uf2
 ```
 
-Wait a moment for the MCU to reset after flashing and connect to monitor:
+闪烁后等待片刻让 MCU 重置并连接到显示器:
 
 ```
 screen /dev/ttyACM0 115200
 ```
 
-You will see results returned from the console:
+你将看到从控制台返回的结果：
 
 ```
 *** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
@@ -781,7 +781,7 @@ SHT3XD: 25.84 Cel ; 56.07 %RH
 SHT3XD: 25.84 Cel ; 55.69 %RH
 ```
 
-Let's dive into this example a bit to see why it works:
+让我们深入探讨这个例子，看看为什么它能够起作用：
 
 ```
  &xiao_i2c {
@@ -921,13 +921,13 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_ble samples/subsys/fs/fs_sample -- -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_round_display
 ```
 
-Now flash and monitor (first pressing RESET twice to enter uf2 bootloader mode):
+现在刷写并监控（首先按两次 RESET 进入 uf2 引导加载程序模式）：
 
 ```
 west flash -r uf2
 ```
 
-Wait a moment for the MCU to reset after flashing and connect to monitor:
+闪烁后等待片刻让 MCU 重置并连接到显示器:
 
 ```
 screen /dev/ttyACM0 115200

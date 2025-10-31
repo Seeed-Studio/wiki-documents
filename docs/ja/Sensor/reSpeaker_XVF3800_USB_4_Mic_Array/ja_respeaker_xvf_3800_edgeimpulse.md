@@ -144,7 +144,7 @@ if __name__ == "__main__":
 
 ```
 
-### Folder Structure Example
+### フォルダ構造の例
 
 ```
 /PersonA

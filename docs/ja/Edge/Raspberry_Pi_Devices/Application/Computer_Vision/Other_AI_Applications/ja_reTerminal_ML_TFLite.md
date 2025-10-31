@@ -133,7 +133,9 @@ Example表のFPSと推論結果は、特に記載がない限り、Tensorflow Li
 reTerminalはRaspberry Pi 4ベースであるため、ニューラルネットワーク推論用の追加ハードウェアアクセラレータがなく、CPU推論用の標準的な最適化手法のみが適用可能です。
 このトピックのビデオ概要はこちらで紹介されています：
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/BEDEscDQFxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 以下はCPU推論最適化手法の簡単な概要です：
 

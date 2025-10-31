@@ -22,7 +22,9 @@ last_update:
 
 有关完整教程和视频演示，请查看配套视频：
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gXs-h3eeT1U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 这就是"是什么"，现在让我们从一个可能更熟悉的例子开始"如何做"的部分。
 

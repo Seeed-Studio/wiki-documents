@@ -162,7 +162,7 @@ torchvision>=0.8.1 --> # torchvision>=0.8.1
 # Press `ESC` to exit edit mode, and finally input `:wq` to save and exit the file.
 ```
 
-**Step 3**. Run the following commands to download the required dependencies for YOLO and install YOLOv8:
+**ステップ 3**. YOLOに必要な依存関係をダウンロードし、YOLOv8をインストールするために、以下のコマンドを実行してください：
 
 ```bash
 pip3 install -e .
@@ -187,7 +187,7 @@ python3 setup.py install --user
 cd ..
 ```
 
-**Step 6.** Use the following command to ensure that YOLO has been successfully installed:
+**ステップ 6.** 次のコマンドを使用して、YOLOが正常にインストールされたことを確認してください：
 
 ```bash
 yolo detect predict model=yolov8s.pt source='https://ultralytics.com/images/bus.jpg'

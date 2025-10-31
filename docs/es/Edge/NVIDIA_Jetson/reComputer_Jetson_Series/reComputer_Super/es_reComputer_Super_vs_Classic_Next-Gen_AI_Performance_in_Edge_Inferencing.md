@@ -47,7 +47,7 @@ Los pasos principales para desplegar este modelo son:
 **Paso 3.** Descargar el modelo deepseek-r1:7b desde Ollama.
 :::
 
-<div align="center">
+<div class="video-container">
 <iframe width="682" height="480" src="https://www.youtube.com/embed/nD1w-odV-ZU" title="Deepseek Inference on reComputer Classic and reComputer Super" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -78,7 +78,7 @@ Los pasos principales para desplegar este modelo son:
 **Paso 4.** Nos referimos al script yolo11_det_trt.py en [este repositorio](https://github.com/wang-xinyu/tensorrtx/tree/master/yolo11) para ejecutar la inferencia.
 :::
 
-<div align="center">
+<div class="video-container">
 <iframe width="682" height="480" src="https://www.youtube.com/embed/ELbltFieez4" title="Inferencia Yolo en reComputer Classic y reComputer Super" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

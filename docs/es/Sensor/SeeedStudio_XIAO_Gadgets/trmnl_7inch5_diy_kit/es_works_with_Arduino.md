@@ -13,25 +13,91 @@ last_update:
 ---
 
 
-# Primeros Pasos con el Kit DIY TRMNL 7.5" (OG) en Arduino
+# Comenzando con el Kit DIY TRMNL 7.5" (OG) en Arduino
 
 ## Introducción
 
 El Kit DIY TRMNL 7.5" (OG) es una plataforma de desarrollo versátil que cuenta con el potente XIAO ESP32-S3 Plus como su cerebro. Este Kit DIY combina el poder de procesamiento del ESP32-S3 con una hermosa pantalla ePaper de 7.5 pulgadas, creando la base perfecta para proyectos de visualización de información de bajo consumo. Esta guía se enfoca en programar el Kit DIY TRMNL usando el framework de Arduino, proporcionándote el conocimiento esencial para utilizar sus diversas características de hardware.
 
-## Primeros Pasos
+## Comenzando
 
 Antes de profundizar en las características específicas, configuremos nuestro entorno de desarrollo para el Kit DIY TRMNL 7.5" (OG).
+
+### Instalación del Equipo
+
+**Paso 1. Conectar la Pantalla a la Placa Controladora**  
+Alinea el cable FPC con el conector en la Placa de Pantalla ePaper XIAO, luego asegura el pestillo para garantizar una conexión firme.  
+
+:::tip
+El lado metálico del cable FPC debe estar hacia arriba, de lo contrario, no se mostrará contenido.
+
+Por favor sigue el tutorial de instalación a continuación, muchas personas se equivocan.
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/2.jpg" style={{width:600, height:'auto'}}/></div>
+
+**Paso 2. Conectar la Batería**  
+Conecta el cable de la batería al conector JST en la placa controladora, asegurando la polaridad correcta (cable rojo a +, negro a -).  
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/3.jpg" style={{width:600, height:'auto'}}/></div>
+
+**Paso 3. Ensamblaje de la Carcasa (Opcional)**  
+
+:::tip
+Ten en cuenta que el cable flexible de la pantalla es muy frágil. Ten cuidado al operar. Si se daña, toda la pantalla dejará de funcionar.
+:::
+Imprime las partes de la carcasa de código abierto desde la [sección de Recursos](#recursos) y ensambla los componentes en el interior.  
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/4.jpeg" style={{width:600, height:'auto'}}/></div>
+
+Primero, ensambla la placa controladora y la batería.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/base.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+Prueba el kit TRMNL para ver si funciona bien.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/test.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+Conecta la pantalla en la carcasa y haz que el FPC salga.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/cable.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+Conecta el cable de extensión FPC y ensambla toda la carcasa.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/assembly.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+La carcasa en forma de L es muy similar.
+
+<div class="table-center">
+<iframe width="300" height="500" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/Lshape.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+:::tip
+Si tu kit TRMNL está lejos de tu router, puedes mover la antena fuera de la carcasa. Tendría mejor rendimiento.
+:::
 
 ### Preparación del Entorno
 
 Para programar el Kit DIY TRMNL con Arduino, necesitarás configurar el IDE de Arduino con soporte para ESP32.
 
 :::tip
-Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Primeros Pasos con Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
+Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Comenzando con Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
-**Paso 1.** Descarga e instala el [IDE de Arduino](https://www.arduino.cc/en/software) e inicia la aplicación Arduino.
+**Paso 1.** Descarga e instala el [IDE de Arduino](https://www.arduino.cc/en/software) y ejecuta la aplicación Arduino.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -41,25 +107,25 @@ Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que co
     </a>
 </div><br />
 
-**Paso 2.** Añade soporte para placas ESP32 al IDE de Arduino.
+**Paso 2.** Agregar soporte para placas ESP32 al IDE de Arduino.
 
-En el IDE de Arduino, ve a **Archivo > Preferencias** y añade la siguiente URL al campo "URLs adicionales del Gestor de Tarjetas":
+En el IDE de Arduino, ve a **File > Preferences** y agrega la siguiente URL al campo "Additional Boards Manager URLs":
 
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
 
-**Paso 3.** Instalar el paquete de placa ESP32.
+**Paso 3.** Instalar el paquete de placas ESP32.
 
-Navega a **Herramientas > Placa > Gestor de Placas**, busca "esp32" e instala el paquete ESP32 de Espressif Systems.
+Navega a **Tools > Board > Boards Manager**, busca "esp32" e instala el paquete ESP32 de Espressif Systems.
 
 **Paso 4.** Seleccionar la placa correcta.
 
-Ve a **Herramientas > Placa > ESP32 Arduino** y selecciona "XIAO_ESP32S3_PLUS".
+Ve a **Tools > Board > ESP32 Arduino** y selecciona "XIAO_ESP32S3_PLUS".
 
 **Paso 5.** Conecta tu Kit DIY TRMNL a tu computadora usando un cable USB-C.
 
-**Paso 6.** Selecciona el puerto correcto desde **Herramientas > Puerto**.
+**Paso 6.** Selecciona el puerto correcto desde **Tools > Port**.
 
 ## Ejemplos de Arduino
 
@@ -67,7 +133,7 @@ Ahora exploremos las características principales del Kit DIY TRMNL con ejemplos
 
 ### Botones de Usuario
 
-El Kit DIY TRMNL cuenta con tres botones programables por el usuario (D1, D2, D4) y un botón de reinicio. Creemos un ejemplo simple para detectar pulsaciones de botones.
+El Kit DIY TRMNL cuenta con tres botones programables por el usuario (D1, D2, D4) y un botón de reset. Creemos un ejemplo simple para detectar pulsaciones de botones.
 
 #### Ejemplo de Prueba de Botones
 
@@ -87,9 +153,9 @@ void setup() {
   while (!Serial) {
     ; // Wait for serial port to connect
   }
-  
+
   Serial.println("TRMNL DIY Kit - Button Test");
-  
+
   // Configure button pins as inputs with internal pull-up resistors
   pinMode(BUTTON_D1, INPUT_PULLUP);
   pinMode(BUTTON_D2, INPUT_PULLUP);
@@ -101,7 +167,7 @@ void loop() {
   bool d1Pressed = !digitalRead(BUTTON_D1);
   bool d2Pressed = !digitalRead(BUTTON_D2);
   bool d4Pressed = !digitalRead(BUTTON_D4);
-  
+
   // Print button states if any button is pressed
   if (d1Pressed || d2Pressed || d4Pressed) {
     Serial.print("Button D1: ");
@@ -110,7 +176,7 @@ void loop() {
     Serial.print(d2Pressed ? "PRESSED" : "released");
     Serial.print(" | Button D4: ");
     Serial.println(d4Pressed ? "PRESSED" : "released");
-    
+
     // Add a small delay to avoid repeated readings
     delay(200);
   }
@@ -119,17 +185,17 @@ void loop() {
 
 **Cómo Funciona el Código:**
 
-1. Definimos constantes de pin para los tres botones de usuario (D1, D2, D4).
+1. Definimos constantes de pines para los tres botones de usuario (D1, D2, D4).
 
 2. En la función `setup()`, inicializamos la comunicación serie y configuramos los pines de los botones como entradas con resistencias pull-up internas.
 
-3. En la función `loop()`, leemos el estado de cada botón. Dado que estamos usando resistencias pull-up, los pines leen LOW cuando se presionan los botones.
+3. En la función `loop()`, leemos el estado de cada botón. Como estamos usando resistencias pull-up, los pines leen LOW cuando los botones están presionados.
 
 4. Invertimos las lecturas (con el operador `!`) para que `true` signifique "presionado" y `false` signifique "liberado".
 
-5. Si se presiona cualquier botón, imprimimos el estado de todos los botones en el Monitor Serie.
+5. Si cualquier botón está presionado, imprimimos el estado de todos los botones en el Monitor Serie.
 
-6. Un pequeño retraso previene lecturas repetidas rápidas cuando se mantiene presionado un botón.
+6. Un pequeño retraso previene lecturas repetidas rápidas cuando un botón se mantiene presionado.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/TRMNL_DIY_Kit/6_button_test_serial.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -153,13 +219,13 @@ void setup() {
   while (!Serial) {
     ; // Wait for serial port to connect
   }
-  
+
   Serial.println("TRMNL DIY Kit - Battery Voltage Monitoring Example");
-  
+
   // Configure ADC_EN
   pinMode(ADC_EN_PIN, OUTPUT);
   digitalWrite(ADC_EN_PIN, LOW);  // Start with ADC disabled to save power
-  
+
   // Configure ADC
   analogReadResolution(12);
   analogSetPinAttenuation(BATTERY_PIN, ADC_11db);
@@ -168,12 +234,12 @@ void setup() {
 void loop() {
   // Read battery voltage
   float voltage = readBatteryVoltage();
-  
+
   // Print the results
   Serial.print("Battery Voltage: ");
   Serial.print(voltage, 2);  // Print with 2 decimal places
   Serial.println("V");
-  
+
   // Determine battery level
   String batteryStatus;
   if (voltage >= 4.0) {
@@ -187,11 +253,11 @@ void loop() {
   } else {
     batteryStatus = "Critical";
   }
-  
+
   Serial.print("Battery Status: ");
   Serial.println(batteryStatus);
   Serial.println();
-  
+
   // Wait for a while before the next reading
   delay(5000);  // 5 seconds
 }
@@ -200,21 +266,21 @@ float readBatteryVoltage() {
   // Enable ADC
   digitalWrite(ADC_EN_PIN, HIGH);
   delay(10);  // Short delay to stabilize
-  
+
   // Read 30 times and average for more stable readings
   long sum = 0;
   for(int i = 0; i < 30; i++) {
     sum += analogRead(BATTERY_PIN);
     delayMicroseconds(100);
   }
-  
+
   // Disable ADC to save power
   digitalWrite(ADC_EN_PIN, LOW);
-  
+
   // Calculate voltage
   float adc_avg = sum / 30.0;
   float voltage = (adc_avg / 4095.0) * 3.6 * 2.0 * CALIBRATION_FACTOR;
-  
+
   return voltage;
 }
 ```
@@ -223,63 +289,63 @@ float readBatteryVoltage() {
 
 1. Definimos dos pines importantes:
 
-  - `BATTERY_PIN` (GPIO1/A0): Conectado al divisor de voltaje de la batería
+- `BATTERY_PIN` (GPIO1/A0): Conectado al divisor de voltaje de la batería
 
-  - `ADC_EN_PIN` (GPIO6/A5): Controla la alimentación del circuito de medición ADC
+- `ADC_EN_PIN` (GPIO6/A5): Controla la alimentación del circuito de medición ADC
 
 2. Definimos un `CALIBRATION_FACTOR` (0.968) para ajustar finamente la precisión de la lectura de voltaje.
 
 3. En la función `setup()`:
 
-  - Inicializamos la comunicación serie
+- Inicializamos la comunicación serie
 
-  - Configuramos el pin ADC_EN como salida y lo establecemos en LOW (deshabilitado) para ahorrar energía
+- Configuramos el pin ADC_EN como salida y lo establecemos en LOW (deshabilitado) para ahorrar energía
 
-  - Establecemos la resolución del ADC a 12 bits (0-4095)
+- Establecemos la resolución del ADC a 12 bits (0-4095)
 
-  - Configuramos la atenuación adecuada para el pin de la batería
+- Configuramos la atenuación adecuada para el pin de la batería
 
 4. En la función `loop()`:
 
-  - Llamamos a `readBatteryVoltage()` para obtener el voltaje actual de la batería
+- Llamamos a `readBatteryVoltage()` para obtener el voltaje actual de la batería
 
-  - Imprimimos el voltaje en el Monitor Serie
+- Imprimimos el voltaje en el Monitor Serie
 
-  - Determinamos y mostramos el estado de la batería basado en umbrales de voltaje
+- Determinamos y mostramos el estado de la batería basado en umbrales de voltaje
 
-  - Esperamos 5 segundos antes de tomar la siguiente lectura
+- Esperamos 5 segundos antes de tomar la siguiente lectura
 
 5. La función `readBatteryVoltage()`:
-  - Habilita el circuito ADC estableciendo ADC_EN_PIN en HIGH
 
-  - Espera brevemente para que el circuito se estabilice
+- Habilita el circuito ADC estableciendo ADC_EN_PIN en HIGH
 
-  - Toma 30 lecturas y las promedia para obtener resultados más estables
+- Espera brevemente para que el circuito se estabilice
 
-  - Deshabilita el circuito ADC para ahorrar energía
+- Toma 30 lecturas y las promedia para obtener resultados más estables
 
-  - Calcula el voltaje real de la batería usando:
+- Deshabilita el circuito ADC para ahorrar energía
 
-    * La lectura ADC promedio
-    * La resolución del ADC (4095)
-    * Voltaje de referencia (3.6V)
-    * Factor del divisor de voltaje (2.0)
-    * Factor de calibración (0.968)
+- Calcula el voltaje real de la batería usando:
+
+  - La lectura promedio del ADC
+  - La resolución del ADC (4095)
+  - Voltaje de referencia (3.6V)
+  - Factor del divisor de voltaje (2.0)
+  - Factor de calibración (0.968)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/TRMNL_DIY_Kit/7_battery_monitor_serial.png" style={{width:1000, height:'auto'}}/></div>
 
 **Diseño de Ahorro de Energía:**
 
-Una característica clave de esta implementación es la capacidad de deshabilitar el circuito de medición de batería cuando no está en uso. El Kit DIY TRMNL está diseñado para bajo consumo de energía, y este enfoque ayuda a extender la vida de la batería alimentando el circuito divisor de voltaje solo cuando se necesita una medición real.
+Una característica clave de esta implementación es la capacidad de deshabilitar el circuito de medición de batería cuando no está en uso. El TRMNL DIY Kit está diseñado para un bajo consumo de energía, y este enfoque ayuda a extender la vida útil de la batería alimentando el circuito divisor de voltaje solo cuando se necesita una medición real.
 
-El factor de calibración (0.968) compensa las tolerancias de los componentes en el divisor de voltaje y ayuda a asegurar lecturas precisas. Este valor puede necesitar un ligero ajuste para tu placa específica si encuentras que las lecturas están consistentemente desviadas comparadas con una medición de multímetro.
+El factor de calibración (0.968) compensa las tolerancias de los componentes en el divisor de voltaje y ayuda a asegurar lecturas precisas. Este valor puede necesitar un ligero ajuste para tu placa específica si encuentras que las lecturas son consistentemente diferentes comparadas con una medición de multímetro.
 
 Tomar múltiples lecturas y promediarlas ayuda a reducir el ruido y proporciona mediciones de voltaje más estables, lo cual es especialmente importante para el monitoreo de batería donde pequeños cambios de voltaje pueden ser significativos para determinar la capacidad restante.
 
-
 ## Pantalla ePaper
 
-El Kit DIY TRMNL 7.5" (OG) cuenta con una hermosa pantalla ePaper de 7.5 pulgadas en blanco y negro que proporciona visibilidad clara en varias condiciones de iluminación y consumo de energía ultra bajo. En esta sección, exploraremos cómo configurar y controlar la pantalla ePaper usando Arduino.
+El TRMNL 7.5" (OG) DIY Kit cuenta con una hermosa pantalla ePaper de 7.5 pulgadas en blanco y negro que proporciona visibilidad clara en varias condiciones de iluminación y consumo de energía ultra bajo. En esta sección, exploraremos cómo configurar y controlar la pantalla ePaper usando Arduino.
 
 ### Configuración de Hardware
 
@@ -301,24 +367,23 @@ El cable de cinta es frágil y puede dañarse fácilmente. Evita doblarlo latera
 
 ### Configuración de Software
 
-Para controlar la pantalla ePaper, usaremos la biblioteca Seeed_GFX, que proporciona soporte integral para varios dispositivos de pantalla de Seeed Studio.
+Para controlar la pantalla ePaper, usaremos la librería Seeed_GFX, que proporciona soporte integral para varios dispositivos de pantalla de Seeed Studio.
 
-**Paso 1.** Descarga la biblioteca Seeed_GFX desde GitHub:
+**Paso 1.** Descarga la librería Seeed_GFX desde GitHub:
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Descargar la Biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>Descargar la Librería</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-
-**Paso 2.** Instala la biblioteca agregando el archivo ZIP en Arduino IDE. Ve a **Sketch > Include Library > Add .ZIP Library** y selecciona el archivo ZIP descargado.
+**Paso 2.** Instala la librería agregando el archivo ZIP en Arduino IDE. Ve a **Sketch > Include Library > Add .ZIP Library** y selecciona el archivo ZIP descargado.
 
 :::note
-Si has instalado previamente la biblioteca TFT_eSPI, puede que necesites removerla temporalmente o renombrarla desde tu carpeta de bibliotecas de Arduino para evitar conflictos, ya que Seeed_GFX es un fork de TFT_eSPI con características adicionales.
+Si has instalado previamente la librería TFT_eSPI, puede que necesites removerla temporalmente o renombrarla desde tu carpeta de librerías de Arduino para evitar conflictos, ya que Seeed_GFX es un fork de TFT_eSPI con características adicionales.
 :::
 
-**Paso 3.** Abre el sketch de ejemplo de la biblioteca Seeed_GFX: **File > Seeed_GFX > Examples > ePaper > Basic > Clock**
+**Paso 3.** Abre el sketch de ejemplo de la librería Seeed_GFX: **File > Seeed_GFX > Examples > ePaper > Basic > Clock**
 
 **Paso 4.** Crea un nuevo archivo llamado `driver.h` en la misma carpeta que tu sketch de Arduino haciendo clic en la flecha junto a la pestaña del ejemplo y seleccionando "New Tab".
 
@@ -337,7 +402,7 @@ Si has instalado previamente la biblioteca TFT_eSPI, puede que necesites remover
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EE04
 ```
 
-Paso 8. ¡Ahora puedes subir el ejemplo a tu Kit DIY TRMNL y ver la pantalla ePaper en acción!
+Paso 8. ¡Ahora puedes subir el ejemplo a tu TRMNL DIY Kit y ver la pantalla ePaper en acción!
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/TRMNL_DIY_Kit/18_upload_sketch.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -506,11 +571,11 @@ Este elegante ejemplo crea un reloj analógico clásico en la pantalla ePaper. V
 2. **Función Setup:**
    - Inicializamos la pantalla e-paper con `epaper.begin()`.
    - La pantalla se llena de blanco como fondo usando `epaper.fillScreen(TFT_WHITE)`.
-   - Dibujamos la cara del reloj como un círculo negro con un interior blanco.
+   - Dibujamos la cara del reloj como un círculo negro con interior blanco.
    - Los marcadores de hora se dibujan como 12 líneas alrededor de la circunferencia.
    - Los marcadores de minuto se dibujan como 60 puntos con énfasis especial en las posiciones de cuarto de hora.
    - Se dibuja un pequeño círculo negro en el centro de la cara del reloj.
-   - El texto "Time flies" se añade en la parte inferior de la pantalla.
+   - Se añade el texto "Time flies" en la parte inferior de la pantalla.
    - Finalmente, se llama a `epaper.update()` para actualizar la pantalla física.
 
 3. **Función Loop:**
@@ -518,9 +583,9 @@ Este elegante ejemplo crea un reloj analógico clásico en la pantalla ePaper. V
    - Incrementamos los segundos, minutos y horas según sea necesario.
    - Calculamos los ángulos para cada manecilla basándose en la hora actual.
    - Las posiciones de las manecillas se calculan usando funciones trigonométricas:
-     * Manecilla de horas: 30 grados por hora (más ajuste por minutos)
-     * Manecilla de minutos: 6 grados por minuto (más ajuste por segundos)
-     * Manecilla de segundos: 6 grados por segundo
+     - Manecilla de horas: 30 grados por hora (más ajuste por minutos)
+     - Manecilla de minutos: 6 grados por minuto (más ajuste por segundos)
+     - Manecilla de segundos: 6 grados por segundo
    - Para reducir actualizaciones innecesarias y extender la vida útil de la pantalla, solo borramos y redibujamos las manecillas de hora y minuto una vez por minuto (cuando segundos = 0).
    - La manecilla de segundos se actualiza cada segundo borrando su posición anterior y dibujándola en la nueva posición.
    - Después de dibujar todas las manecillas, refrescamos el punto central y llamamos a `epaper.update()` para actualizar la pantalla física.
@@ -534,16 +599,15 @@ Este elegante ejemplo crea un reloj analógico clásico en la pantalla ePaper. V
 
 2. **Actualizaciones Parciales:** Este ejemplo demuestra actualizaciones parciales al solo borrar y redibujar las partes necesarias de la pantalla, lo cual es más eficiente que refrescar toda la pantalla.
 
-3. **Compilación Condicional:** Las directivas `#ifdef EPAPER_ENABLE` aseguran que el código solo se compile y ejecute si la pantalla e-paper está configurada correctamente en el sistema.
+3. **Compilación Condicional:** Las directivas `#ifdef EPAPER_ENABLE` aseguran que el código solo compile y se ejecute si la pantalla e-paper está configurada correctamente en el sistema.
 
 4. **Funciones de Dibujo:** El ejemplo muestra varias funciones de dibujo:
    - `fillCircle()` para crear la cara del reloj
-   - `drawLine()` para dibujar manecillas del reloj y marcadores de hora
+   - `drawLine()` para dibujar las manecillas del reloj y marcadores de hora
    - `drawPixel()` y `fillCircle()` para marcadores de minuto
    - `drawCentreString()` para texto centrado
 
 Este ejemplo de reloj analógico proporciona un excelente punto de partida para crear tus propias aplicaciones gráficas en la pantalla ePaper del TRMNL 7.5" (OG) DIY Kit.
-
 
 ### Funciones de Dibujo y Texto
 
@@ -564,25 +628,22 @@ La biblioteca Seeed_GFX proporciona muchas funciones para dibujar en la pantalla
 - `display.println("text")`: Imprime texto con una nueva línea
 
 Los colores disponibles para esta pantalla monocromática son:
+
 - `GxEPD_BLACK`: Píxeles negros
 - `GxEPD_WHITE`: Píxeles blancos
 
 Recuerda llamar a `display.update()` después de las operaciones de dibujo para actualizar la pantalla física.
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
-
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
-
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

@@ -402,7 +402,7 @@ Wio Terminal 是一款功能强大且易于使用的开发板，专为创客、�
 
 Wio Terminal 支持多种编程语言，包括 Arduino、MicroPython、CircuitPython 等，使开发者能够轻松上手。凭借其紧凑便携的设计，Wio Terminal 非常适合各种项目，从创建智能设备到构建工业应用原型。
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="960" height="500" src="https://www.youtube.com/embed/3Fp3W9VJUL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 

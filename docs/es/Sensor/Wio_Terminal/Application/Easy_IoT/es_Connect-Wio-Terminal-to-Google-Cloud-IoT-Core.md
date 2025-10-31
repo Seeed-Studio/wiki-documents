@@ -553,7 +553,7 @@ Navega al **Esp32-lwmqtt.ino** usado anteriormente y añade lo siguiente:
 DHT dht(DHTPIN, DHTTYPE); //Initializing DHT sensor  
 ```
 
-- **STEP 2:** Add the following inside the **setup** to start the DHT sensor
+- **PASO 2:** Añade lo siguiente dentro del **setup** para iniciar el sensor DHT
 
 ```cpp
 dht.begin(); 

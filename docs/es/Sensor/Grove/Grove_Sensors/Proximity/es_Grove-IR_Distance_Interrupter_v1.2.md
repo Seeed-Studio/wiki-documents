@@ -206,7 +206,7 @@ while True:
         print "Error"
 ```
 
-5.Run the demo, run following command in terminal.
+5.Ejecuta la demostración, ejecuta el siguiente comando en la terminal.
 
 ```
     sudo python grove_infrared_distance_interrupt.py
@@ -233,11 +233,11 @@ Este archivo Markdown fue creado desde [https://www.seeedstudio.com/wiki/Grove_-
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

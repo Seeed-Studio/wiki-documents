@@ -658,13 +658,13 @@ if __name__ == "__main__":
 
 我们的推理测试在一台搭载 RTX 4080 GPU 的笔记本上完成。虽然推理精度表现优秀，但由于 VLA 模型体量较大，仍可观察到一定的机械臂运动抖动。尽管如此，系统依然可以顺利完成所有目标任务。
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="480" src="https://www.youtube.com/embed/nOTwjHGjE_Q" title="AI-Powered Control of the Robotic Arm via GR00T" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## 参考资料
 
-- [https://wiki.seeedstudio.com/cn/lerobot_so100m/](https://wiki.seeedstudio.com/lerobot_so100m/)
+- [https://wiki.seeedstudio.com/cn/lerobot_so100m/](https://wiki.seeedstudio.com/cn/lerobot_so100m/)
 - [https://github.com/NVIDIA/Isaac-GR00T/tree/main](https://github.com/NVIDIA/Isaac-GR00T/tree/main)
 - [https://github.com/huggingface/lerobot](https://github.com/huggingface/lerobot)
 - [https://github.com/Dao-AILab/flash-attention](https://github.com/Dao-AILab/flash-attention])

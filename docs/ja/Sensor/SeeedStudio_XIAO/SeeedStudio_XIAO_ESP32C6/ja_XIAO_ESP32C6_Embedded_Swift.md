@@ -140,9 +140,9 @@ swift --version
 echo "Swift 6.0 installation complete."
 ```
 
-## Run your first Blink program with Swift
+## Swift で最初の Blink プログラムを実行する
 
-### Step 1. Get the example
+### ステップ 1. サンプルを取得します
 
 ```shell showLineNumbers
 get_idf #get idf enviorment
@@ -192,7 +192,7 @@ idf.py build
 
 `Project build complete.` のプロンプトが表示されたら、XIAO C6にファームウェアを書き込むことができます。
 
-### Step 3. ファームウェアの書き込み
+### ステップ 3. ファームウェアの書き込み
 
 <details>
 <summary>WSL2を使用する場合はusbipd が必要です</summary>
@@ -212,7 +212,7 @@ usbipd list #Check BUSID
 usbipd bind -b '<BUSID>'
 ```
 
-To attach the device from within WSL2:
+WSL2内からデバイスを接続するには：
 
 ```shell
 usbipd attach --wsl --busid=<BUSID>
@@ -240,9 +240,9 @@ idf.py -p /dev/ttyACM0 flash monitor
 
 ### デモンストレーション
 
-<center>
+<div class="video-container">
 <iframe width="407" height="724" src="https://www.youtube.com/embed/byqY2bYfVjA" title="Embedded Swift on XIAO ESP32C6 #Swift #Embedded #ESP32C6 #iot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</center>
+</div>
 
 ## 参考資料
 

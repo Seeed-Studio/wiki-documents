@@ -131,7 +131,7 @@ Matter 的价值主张很明确：它为更加互联、用户友好和安全的�
 
 ## 视频教程
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/g9hBp84xs1E?si=fzE--HA7v8H8R090?si=iH-oouOl_ItkG7vF?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
@@ -162,14 +162,14 @@ cd ~/esp
 git clone --depth 1 https://github.com/espressif/esp-matter.git
 ```
 
-Change into the `esp-matter` directory and initialize the required Git submodules:
+切换到 `esp-matter` 目录并初始化所需的 Git 子模块：
 
 ```bash
 cd esp-matter
 git submodule update --init --depth 1
 ```
 
-Navigate to the `connectedhomeip` directory and run a Python script to manage submodules for specific platforms:
+导航到 `connectedhomeip` 目录，并运行一个 Python 脚本来管理特定平台的子模块：
 
 ```bash
 cd ./connectedhomeip/connectedhomeip
@@ -211,7 +211,7 @@ source ./export.sh
 nano ~/.bashrc
 ```
 
-Scroll to the bottom of the `.bashrc` file and add the following lines:
+滚动到 `.bashrc` 文件的底部，并添加以下几行：
 
 ```bash
 # Alias for setting up the ESP-Matter environment
@@ -229,7 +229,7 @@ alias set_cache='export IDF_CCACHE_ENABLE=1'
 source ~/.bashrc
 ```
 
-Now you can run `get_matter` and `set_cache` to set up or refresh the esp-matter environment in any terminal session.
+现在您可以在任何终端会话中运行 `get_matter` 和 `set_cache` 来设置或刷新 esp-matter 环境。
 
 ```bash
 get_matter
@@ -248,19 +248,19 @@ set_cache
 cd examples/light                # Navigate to the light example directory
 ```
 
-Perform a clean operation to remove previous build files.
+执行清理操作以删除先前的构建文件。
 
 ```bash
 rm -rf build/                     # Clean previous build files
 ```
 
-Set the target to ESP32-C6.
+将目标设置为ESP32-C6。
 
 ```bash
 idf.py set-target esp32c6        # Set the build target to ESP32-C6
 ```
 
-Enter the configuration menu and make the necessary configurations.
+进入配置菜单并进行必要的配置。
 
 ```bash
 idf.py menuconfig                # Enter the configuration menu
@@ -337,13 +337,13 @@ sudo chmod 666 /dev/ttyACM0       # Grant permissions to the USB device file
  matter ble [start|stop|state]
  ```
 
-- Wi-Fi commands: Set and get the Wi-Fi mode:
+- Wi-Fi 命令：设置和获取 Wi-Fi 模式：
 
  ```
  matter wifi mode [disable|ap|sta]
  ```
 
-- Device configuration: Dump the device static configuration:
+- 设备配置：导出设备静态配置：
 
  ```
  matter config
@@ -373,13 +373,13 @@ sudo chmod 666 /dev/ttyACM0       # Grant permissions to the USB device file
   matter esp attribute get 0x1 0x6 0x0
   ```
 
-- Set attribute: (The IDs are in hex):
+- 设置属性：（ID 以十六进制表示）：
 
  ```
  matter esp attribute set <endpoint_id> <cluster_id> <attribute_id> <attribute value>
  ```
 
-  - Example: on_off::on_off:
+  - 示例：on_off::on_off:
 
   ```
   matter esp attribute set 0x1 0x6 0x0 1
@@ -450,7 +450,7 @@ sudo minicom -s
 minicom
 ```
 
-If you need to run it with sudo privileges (e.g., if you encounter permission issues), you can use:
+如果你需要以 sudo 权限运行它（例如，如果你遇到权限问题），你可以使用：
 
 ```bash
 sudo minicom
@@ -582,7 +582,7 @@ ESP-Matter 的环境要求比较高，如果您使用的是经常用于开发的
 rm -r connectedhomeip/connectedhomeip/.environment
 ```
 
-Then re-pull the appropriate version of the connectedhomeip branch again.
+然后再次重新拉取 connectedhomeip 分支的适当版本。
 
 ```
 git submodule update --init --depth 1

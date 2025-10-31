@@ -38,7 +38,7 @@ Al final de este tutorial, tendrás una comprensión sólida de cómo comunicar 
 
 ## SenseCAP Watcher Configuración Avanzada
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ono_v759R0Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 

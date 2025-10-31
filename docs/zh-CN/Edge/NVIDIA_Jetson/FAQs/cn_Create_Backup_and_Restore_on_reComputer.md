@@ -65,13 +65,13 @@ tar -xvzf jetson-linux-*.tbz2
 sudo cp -rn Linux_for_Tegra/* mfi_recomputer-orin
 ```
 
-**Step 5.** Navigate to your JetPack flashing package directory:
+**步骤 5.** 导航到你的 JetPack 刷机包目录：
 
 ```bash
 cd /path/to/mfi_recomputer-orin
 ```
 
-**Step 6.** Execute the backup script, specifying your storage device and desired backup name:
+**步骤 6.** 执行备份脚本，指定您的存储设备和所需的备份名称：
 
 ```bash
 sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -b recomputer-orin

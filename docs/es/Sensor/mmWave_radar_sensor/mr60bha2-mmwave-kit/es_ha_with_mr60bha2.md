@@ -135,7 +135,9 @@ Para este método, necesitarás descargar el archivo de firmware `bin` desde [aq
 
 Mira el siguiente video para un recorrido detallado de flashear el firmware vía ESPHome Web:
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Instalar firmware vía ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 </TabItem>
 </Tabs>
@@ -367,11 +369,11 @@ Esta parte detalla el tiempo, precisión y condiciones requeridas para los datos
 - **Descripción de la Función**:
     Detecta la presencia de un objetivo humano estacionario dentro de un área específica.
 - **Parámetro Clave**:
-  - **Rango de Detección Efectivo**: Hasta **6 metros**.
+  - **Rango de Detección Efectivo**: Hasta **4 metros**.
 - **Lógica de Reporte de Datos**:
   - Reporta un estado de "Presencia" cuando se detecta un objetivo humano en el área.
   - Reporta un estado de "Sin Presencia" cuando el área está libre de objetivos humanos.
-  - **Nota**: El rango de detección de 6 metros es exclusivo de la función de Presencia Estática Humana. No se aplica a otras características como Detección de Respiración y Latidos o Detección de Distancia del Objetivo, que tienen sus propios rangos efectivos más cortos. El único propósito de esta función es determinar presencia o ausencia, no proporcionar datos detallados.
+  - **Nota**: El rango de detección de 4 metros es exclusivo de la función de Presencia Estática Humana. No se aplica a otras características como Detección de Respiración y Latidos o Detección de Distancia del Objetivo, que tienen sus propios rangos efectivos más cortos. El único propósito de esta función es determinar presencia o ausencia, no proporcionar datos detallados.
 
 ---
 
@@ -433,14 +435,12 @@ Esta parte detalla el tiempo, precisión y condiciones requeridas para los datos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

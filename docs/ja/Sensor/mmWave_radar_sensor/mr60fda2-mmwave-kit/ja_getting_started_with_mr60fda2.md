@@ -193,7 +193,7 @@ if (mmWave.update(100)) {
 
 #### Fall Module
 
-This example shows how to use the **MR60FDA2** sensor for fall detection.
+この例では、転倒検知に**MR60FDA2**センサーを使用する方法を示しています。
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
@@ -488,30 +488,30 @@ Arduino シリアルモニターでの出力は以下のようになります：
 <!-- ## API Explanation -->
 
 <!-- 
-### Breath Module API
+### Breath モジュール API
 
-This example uses the `SEEED_MR60BHA2` class to interface with the MR60BHA2 sensor for heart and breath monitoring. Here's what each key function does:
+この例では、`SEEED_MR60BHA2`クラスを使用してMR60BHA2センサーとインターフェースし、心拍と呼吸のモニタリングを行います。各主要機能の動作は以下の通りです：
 
 - **`mmWave.begin(&mmWaveSerial)`**: 
-  - Initializes the sensor for communication using the specified serial interface. It sets up the connection between the XIAO board and the MR60BHA2 sensor.
+  - 指定されたシリアルインターフェースを使用して通信用にセンサーを初期化します。XIAOボードとMR60BHA2センサー間の接続を設定します。
 
 - **`mmWave.update(100)`**:
-  - Updates the sensor data. The parameter `100` is a timeout value in milliseconds, specifying how long to wait for the sensor to provide new data. If new data is available within this timeframe, the function returns `true`.
+  - センサーデータを更新します。パラメータ`100`はミリ秒単位のタイムアウト値で、センサーが新しいデータを提供するまでの待機時間を指定します。この時間内に新しいデータが利用可能な場合、関数は`true`を返します。
 
 - **`mmWave.getHeartBreathPhases(float &total_phase, float &breath_phase, float &heart_phase)`**:
-  - Retrieves the phase information related to heart and breath activities. 
-  - `total_phase` represents the overall phase shift, while `breath_phase` and `heart_phase` are specific to breathing and heartbeat activities, respectively.
+  - 心拍と呼吸活動に関連する位相情報を取得します。
+  - `total_phase`は全体的な位相シフトを表し、`breath_phase`と`heart_phase`はそれぞれ呼吸と心拍活動に特有のものです。
 
 - **`mmWave.getBreathRate(float &rate)`**:
-  - Fetches the current breath rate detected by the sensor. The rate is returned in the reference variable `rate`.
+  - センサーによって検出された現在の呼吸数を取得します。呼吸数は参照変数`rate`に返されます。
 
 - **`mmWave.getHeartRate(float &rate)`**:
-  - Retrieves the current heart rate detected by the sensor. The rate is returned in the reference variable `rate`.
+  - センサーによって検出された現在の心拍数を取得します。心拍数は参照変数`rate`に返されます。
 
 - **`mmWave.getDistance(float &distance)`**:
-  - Gets the distance from the sensor to the detected object (e.g., human body). This function is useful for understanding the range of the detected signal. -->
+  - センサーから検出されたオブジェクト（例：人体）までの距離を取得します。この関数は検出された信号の範囲を理解するのに役立ちます。 -->
 
-## Fall Module API
+## Fall モジュール API
 
 この例では、転倒検知のためにMR60FDA2センサーとインターフェースする`SEEED_MR60FDA2`クラスを使用します。各主要機能の動作は以下の通りです：
 
@@ -661,14 +661,12 @@ mmWaveモジュールをカスタマイズする際の3Dポイントクラウド
 
 私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -25,7 +25,9 @@ last_update:
 
 詳細やビジュアルについては、対応するビデオをご覧ください！
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CVq4cet5jgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 音声認識タスクにはさまざまな種類があり、大まかに以下の3つに分類できます：
 
@@ -239,7 +241,9 @@ ARM Math ライブラリ関数を使用して RFFT または [Real Fast Fourier 
 
 このトピックに関する TinyML の講演を見て、さらに詳しい情報や論文へのリンクを確認してください！
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YmJrr1D191k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 コードリポジトリをフォークし、自分のデータセットでトレーニングを試したり、より高度なアーキテクチャやモデルトレーニング手法を実装してみてください。もし実施した場合は、ぜひここで知らせていただくか、Github で PR を作成してください！
 

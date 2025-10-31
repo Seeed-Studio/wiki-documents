@@ -17,7 +17,7 @@ Este producto está basado en el principio ToF (Tiempo de Vuelo) e integrado con
 
 ToF es la abreviatura de la tecnología Time of Flight (Tiempo de Vuelo), y su principio de funcionamiento es el siguiente: se envía una luz infrarroja cercana modulada desde el sensor y se refleja en un objeto; la distancia al objeto a medir puede ser convertida por el sensor calculando la diferencia de tiempo o diferencia de fase entre el envío de luz y la reflexión de luz, para así producir la información de profundidad.
 
-[![Get one now](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/image/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html)
+[![Obtener Uno Ahora](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/image/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html)
 
 :::warning
     Evite que el polvo o cualquier otra materia extraña entre en la lente; de lo contrario puede afectar la transmisión de luz.
@@ -179,7 +179,7 @@ SERIAL.print(SeeedTFLidar.get_strength()); //output signal strength value
 
 #### Hardware
 
-| Wio Terminal |  Grove-TF-Mini-LiDAR | Jumper |
+| Wio Terminal |  Grove-TF-Mini-LiDAR | Puente |
 |--------------|-----------------|----------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Grove-TF-Mini-LiDAR_S.JPG)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Jumper.png)|
 |[Obtener UNO Ahora](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Obtener UNO Ahora](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html)|[Obtener UNO Ahora](https://www.seeedstudio.com/Breadboard-Jumper-Wire-Pack-200mm-100m-p-1032.html)|

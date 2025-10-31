@@ -97,7 +97,7 @@ Once the model has finished loading, you can enter your query in the terminal wi
 
 In the demonstration video, the Jetson device operates at just 20W yet achieves an impressive inference speed.
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/7EYq9Y8Jp8o" title="deploy deepseek on jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

@@ -21,9 +21,9 @@ last_update:
 
 - [**XIAO SAMD21**](/cn/noport_upload_fails/#for-xiao-samd21)
 - [**XIAO RP2040**](/cn/noport_upload_fails/#for-xiao-rp2040)
-- [**XIAO nRF52840(Sense)**](/cn/noport_upload_fails/#for-xiao-nrf52840-sense)
+- [**XIAO nRF52840（Sense）**](/cn/noport_upload_fails/#for-xiao-nrf52840-sense)
 - [**XIAO ESP32C3**](/cn/noport_upload_fails/#for-xiao-esp32c3)
-- [**XIAO ESP32S3(Sense)**](/cn/noport_upload_fails/#for-xiao-esp32s3-sense)
+- [**XIAO ESP32S3（Sense）**](/cn/noport_upload_fails/#for-xiao-esp32s3-sense)
 :::
 
 ## **针对 XIAO SAMD21**

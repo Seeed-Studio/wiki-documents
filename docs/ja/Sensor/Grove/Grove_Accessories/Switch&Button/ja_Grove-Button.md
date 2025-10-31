@@ -402,9 +402,13 @@ OVERWATCH にインスパイアされて、最近とてもクールな木製レ�
 
 **ボタンと LED Grove モジュール**:
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RCtsxwx4OaA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/78lVn_-oYaY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技術サポート & 製品ディスカッション
 

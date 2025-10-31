@@ -349,7 +349,7 @@ ls /dev/cu.usb* (Mac)
 ls /dev/ttyACM* (Linux)
 ```
 
-You should get back something like:
+你应该会得到类似这样的结果：
 
 ```
 /dev/cu.usbmodem14XX where XX will vary depending on which USB port you used (on Mac)
@@ -382,7 +382,7 @@ sudo nmtui              # respeaker user needs sudo
 ip address
 ```
 
-In the example below, we can see that this ReSpeaker's IP address is ```192.168.7.108```
+在下面的例子中，我们可以看到这个ReSpeaker的IP地址是```192.168.7.108```
 
 ```
 root@v2:/home/respeaker# ip address
@@ -603,7 +603,7 @@ aplay -r 16000 -c 2 hello.wav
 arecord -Dhw:0,0 -f S16_LE -r 16000 -c 8 hello_8ch.wav
 ```
 
-Besides you can record and play at the same time.
+此外，你可以同时录音和播放。
 
 ```
 arecord | aplay
@@ -611,14 +611,14 @@ arecord | aplay
 
 **2. Test via PulseAudio**
 
-First check whether the PulseAudio is running:
+首先检查 PulseAudio 是否正在运行：
 
 ```
 respeaker@v2:~$ ps aux|grep pulse|grep -v grep
 respeak+  1109  0.0  0.7 363272  7932 ?        S<l  01:01   0:00 /usr/bin/pulseaudio --start --log-target=syslog
 ```
 
-If it's not, please refer to PulseAudio's documentation to enable the auto-spawn of PulseAudio. Then test via:
+如果不是，请参考 PulseAudio 的文档来启用 PulseAudio 的自动生成。然后通过以下方式测试：
 
 ```
 parecord --channels=8 --rate=16000 --format=s16le hello2.wav
@@ -638,7 +638,9 @@ aplay hello3.wav
 
 请按照 [ReSpeaker Core V2 & Wio Link 教程](https://wiki.seeedstudio.com/cn/ReSpeaker_Core_V2_&_Wio_Link/) 来使用 ReSpeaker Core V2 通过 IFTTT 控制 Wio Link。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/OJ0i6QrZCSM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 与 GPIO 一起使用
 
@@ -652,7 +654,7 @@ aplay hello3.wav
 sudo apt install  python-mraa python-upm libmraa1 libupm1 mraa-tools
 ```
 
-- **Step 2. Check your platform information**
+- **步骤 2. 检查你的平台信息**
 
 ```
 #only have bus 0 and id=03(/dev/i2c-3), 0 is the i2c number for mraa and upm
@@ -833,7 +835,7 @@ if __name__ == '__main__':
     main()
 ```
 
-The result should be something like:
+结果应该类似于：
 
 ``` python
 respeaker@v2:~$ python tsl2561.py       
@@ -916,7 +918,7 @@ alsamixer
 sudo pip install evdev
 ```
 
-- **Step 2.** Copy the code below and save it as a python file, let's name it **usrer_button.py**.
+- **步骤 2.** 复制下面的代码并将其保存为一个 Python 文件，我们将其命名为 **usrer_button.py**。
 
 ```
 from evdev import InputDevice,categorize,ecodes
@@ -927,7 +929,7 @@ for event in key.read_loop():
         print(categorize(event))
 ```
 
-- **Step 3.** Tap the following command to run this demo.
+- **步骤 3.** 点击以下命令来运行此演示。
 
 ```
 sudo python usrer_button.py
@@ -1002,7 +1004,9 @@ sudo python usrer_button.py
 
 在这个演示中，我们使用ReSpeaker Core v2.0与Alexa对话。您可以提出任何问题，并像朋友一样与ReSpeaker Core v2.0交谈。此外，该产品还可以与Google Assistant和Bing配合使用。唤醒词是Snowboy，当然您也可以制作自己的唤醒词。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/q7b8iLqRiPY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 <br />
 
@@ -1012,7 +1016,9 @@ sudo python usrer_button.py
 
 凭借先进的算法和六个高质量麦克风，结果令人惊叹！我们可以在16米（52英尺）外唤醒ReSpeaker Core v2.0！
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/PpcwvOLlpEw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **ReSpeaker Core v2.0 - 语音接待系统**
 
@@ -1020,14 +1026,18 @@ sudo python usrer_button.py
 
 在您的房子或工作场所前面有这样一个语音接待系统怎么样？是不是很酷？
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/tdIsCRXKoVI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 <br />
 
 **ReSpeaker Core v2.0 - 简单语音接待系统**
 
 接待服务的基本功能是迎接访客，让他们感到受欢迎，并防止未经授权的人员进入办公室。我们利用ReSpeaker Core v2.0的功能来设计语音接待服务。该系统可以与访客互动，并向被访问的人传递消息。将来，我们可以设计一个小型办公室员工电话列表数据库，员工可以向系统发送消息，系统使用ReSpeaker Core v2.0的GPIO功能为访客开门。我们使用Microsoft Bing语音转文本服务和Twilio/腾讯消息API来编写python脚本。更多信息，请参考[ReSpeaker语音接待系统](https://project.seeedstudio.com/SeeedStudio/respeaker-voice-reception-system-209a6c)。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/-nTOa3LLpVo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技术支持与产品讨论
 

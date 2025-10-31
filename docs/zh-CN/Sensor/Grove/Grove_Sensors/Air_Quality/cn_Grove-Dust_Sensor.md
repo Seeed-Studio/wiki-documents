@@ -14,7 +14,9 @@ last_update:
 
 此灰尘传感器通过测量灰尘浓度，可以很好地指示环境中的空气质量。空气中的颗粒物浓度（PM浓度）通过计算单位时间内的低脉冲占空时间（LPO时间）来测量。LPO时间与PM浓度成正比。此传感器可以为空气净化系统提供可靠数据；它对直径为1μm的颗粒物具有良好的响应能力。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4df5kaaKa6I" title="YouTube视频播放器" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 :::caution
 

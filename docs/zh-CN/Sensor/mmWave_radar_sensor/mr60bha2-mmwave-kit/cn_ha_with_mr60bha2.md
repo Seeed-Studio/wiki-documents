@@ -135,7 +135,9 @@ Firefox 不支持在 ESP 设备上刷写固件。请改用 Google Chrome 或 Mic
 
 观看以下视频，了解通过 ESPHome Web 刷写固件的详细演练：
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Install firmware via ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 </TabItem>
 </Tabs>
@@ -351,7 +353,7 @@ Home Assistant 强大的自动化功能允许您基于从 MR60BHA2 传感器收�
 ## 资源
 
 - [ESPHome — ESPHome](https://esphome.io/)
-- [Installation - Home Assistant](https://www.home-assistant.io/installation/)
+- [安装 - Home Assistant](https://www.home-assistant.io/installation/)
 - [limengdu/MR60BHA2_ESPHome_external_components](https://github.com/limengdu/MR60BHA2_ESPHome_external_components)
 
 ## 故障排除
@@ -367,11 +369,11 @@ Home Assistant 强大的自动化功能允许您基于从 MR60BHA2 传感器收�
 - **功能描述**：
     检测指定区域内静止人体目标的存在。
 - **关键参数**：
-  - **有效检测范围**：最远 **6 米**。
+  - **有效检测范围**：最远 **4 米**。
 - **数据上报逻辑**：
   - 当在区域内检测到人体目标时，上报"存在"状态。
   - 当区域内没有人体目标时，上报"无存在"状态。
-  - **注意**：6 米检测范围专属于人体静态存在检测功能。它不适用于其他功能，如呼吸心跳检测或目标距离检测，这些功能有各自更短的有效范围。此功能的唯一目的是确定存在或不存在，而不是提供详细数据。
+  - **注意**：4 米检测范围专属于人体静态存在检测功能。它不适用于其他功能，如呼吸心跳检测或目标距离检测，这些功能有各自更短的有效范围。此功能的唯一目的是确定存在或不存在，而不是提供详细数据。
 
 ---
 
@@ -433,14 +435,12 @@ Home Assistant 强大的自动化功能允许您基于从 MR60BHA2 传感器收�
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

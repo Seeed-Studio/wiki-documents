@@ -183,7 +183,9 @@ clip_app --input /dev/video0
 
 在下面显示的视频中，您可以看到当我输入"banana"时，CLIP模型识别出了香蕉，当我输入"apple"时，模型识别出了苹果。您只需要输入不同的单词，CLIP模型就会识别不同的物体。
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/JMHtqSmAGCA" title="CLIP Zero Shot Classification on Raspberry Pi 5 with Hailo AI Accelerator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 技术支持与产品讨论
 

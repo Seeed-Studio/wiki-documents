@@ -63,7 +63,7 @@ last_update:
 
 ここでは、[jetson-examples](https://github.com/Seeed-Projects/jetson-examples)を使用してJetsonデバイス上にOllamaを迅速にデプロイすることを強く推奨します。
 
-**Step1.** jetsonデバイス上でターミナルを開き、以下のコマンドを実行して`jetson-examples`をインストールします：
+**ステップ1.** jetsonデバイス上でターミナルを開き、以下のコマンドを実行して`jetson-examples`をインストールします：
 
 ```bash
 sudo apt install python3-pip
@@ -107,7 +107,7 @@ docker run -d -p 3001:3001 --cap-add SYS_ADMIN \
     mintplexlabs/anythingllm
 ```
 
-**Step2.** 独自のローカル知識ベースを設定する。
+**ステップ2.** 独自のローカル知識ベースを設定する。
 
 完全なアプリケーションにアクセスするには、ブラウザで `http://<jetson-ip>:3001` にアクセスしてください。
 
@@ -199,7 +199,7 @@ And so, the village thrived, and Eliza’s adventures became the stuff of legend
 
 ここでは、設定したローカル個人アシスタントを使用して、必要な情報を照会します。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/JjPfXNqhO1g" title="Local AI Assistant : Deploy Ollama and AnytingLLM on Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

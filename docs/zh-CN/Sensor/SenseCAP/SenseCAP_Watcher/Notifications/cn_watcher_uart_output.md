@@ -25,7 +25,7 @@ last_update:
 
 ## SenseCAP Watcher 高级配置
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ono_v759R0Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -387,7 +387,7 @@ sudo apt install python3-pip
 pip3 install pyserial pillow
 ```
 
-Check the device name of the UART interface on the Raspberry Pi:
+检查 Raspberry Pi 上 UART 接口的设备名称：
 
 ```
 ls /dev/ttyAMA*
@@ -582,7 +582,7 @@ sudo apt-get install python3-serial
 sudo apt-get install python3-pillow
 ```
 
-If you do not intend to use the Serial Console on the UART, you should disable the Serial Console:
+如果您不打算在 UART 上使用串行控制台，您应该禁用串行控制台：
 
 ```
 systemctl stop nvgetty

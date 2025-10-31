@@ -21,7 +21,9 @@ Aparte de las tres actualizaciones principales, la versión LTE es casi igual qu
 
 El Wio LTE es muy adecuado para proyectos al aire libre donde el dispositivo puede conectarse a los satélites GPS y proporcionar una ubicación en tiempo real del elemento al que está conectado. El LTE proporciona un ancho de banda amplio que permite una interacción mucho más rápida entre el usuario y el dispositivo. Si vas a construir proyectos como un servicio de bicicletas compartidas, rastrear mascotas o ganado, localizar un vehículo, o incluso hacer seguimiento de un niño, el Wio LTE es la mejor solución.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/D6DX5P9ncrc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 :::caution
     Por favor, siempre conecta una batería Lipo de 3.7V en caso de que la alimentación USB no sea suficiente.

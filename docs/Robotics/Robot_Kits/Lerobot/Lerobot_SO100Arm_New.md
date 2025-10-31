@@ -9,8 +9,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
 last_update:
-  date: 9/15/2025
+  date: 9/26/2025
   author: LiShanghang
+translation:
+  skip: [ zh-CN ]
 ---
 
 # Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot
@@ -291,7 +293,7 @@ If you encounter an error like this, you can use this command too.
 cd ~/lerobot && pip install -e ".[feetech]"
 ```
 
-For Jetson Jetpack 6.0+ devices (please make sure to install [Pytorch-gpu and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) from step 5 before executing this step):
+For Jetson Jetpack 6.0+ devices (please make sure to install [Pytorch-gpu and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) from step 5 before executing this step):
 
 ```bash
 conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
@@ -351,7 +353,7 @@ Find USB ports associated to your arms
 To find the correct ports for each arm, run the utility script twice:
 
 ```bash
-python -m lerobot.find_port
+lerobot-find-port
 ```
 
 Example output:
@@ -371,9 +373,9 @@ Reconnect the USB cable.
 Remember to remove the usb, otherwise the interface will not be detected.
 :::
 
-Example output when identifying the leader arm's port (e.g., `/dev/tty.usbmodem575E0031751` on Mac, or possibly `/dev/ttyACM0` on Linux):
+Example output when identifying the follower arm's port (e.g., `/dev/tty.usbmodem575E0031751` on Mac, or possibly `/dev/ttyACM0` on Linux):
 
-Example output when identifying the follower arm's port (e.g., `/dev/tty.usbmodem575E0032081`, or possibly `/dev/ttyACM1` on Linux):
+Example output when identifying the leader arm's port (e.g., `/dev/tty.usbmodem575E0032081`, or possibly `/dev/ttyACM1` on Linux):
 
 You might need to give access to the USB ports by running:
 
@@ -407,7 +409,7 @@ Again, please make sure that the servo joint IDs and gear ratios strictly corres
 Connect the usb cable from your computer and the power supply to the follower arm’s controller board. Then, run the following command.
 
 ```bash
-python -m lerobot.setup_motors \
+lerobot-setup-motors \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0  # <- paste here the port found at previous step
 ```
@@ -438,14 +440,16 @@ You can disconnect the 3-pin cable from the controller board, but you can leave 
 Repeat the operation for each motor as instructed.
 :::
 
+:::tip
 Check your cabling at each step before pressing Enter. For instance, the power supply cable might disconnect as you manipulate the board.
+:::
 
 When you are done, the script will simply finish, at which point the motors are ready to be used. You can now plug the 3-pin cable from each motor to the next one, and the cable from the first motor (the ‘shoulder pan’ with id=1) to the controller board, which can now be attached to the base of the arm.
 
 Do the same steps for the leader arm.
 
 ```bash
-python -m lerobot.setup_motors \
+lerobot-setup-motors \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM0  # <- paste here the port found at previous step
 ```
@@ -532,10 +536,10 @@ sudo chmod 666 /dev/ttyACM*
 ***Then calibrate the follower arm***
 
 ```python
-python -m lerobot.calibrate \
+lerobot-calibrate \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm
+    --robot.port=/dev/ttyACM0 \# <- The port of your robot
+    --robot.id=my_awesome_follower_arm  # <- Give the robot a unique name
 ```
 
 The video below shows how to perform the calibration. First you need to move the robot to the position where all joints are in the middle of their ranges. Then after pressing enter you have to move each joint through its full range of motion.
@@ -545,10 +549,10 @@ The video below shows how to perform the calibration. First you need to move the
 Do the same steps to calibrate the leader arm, run the following command or API example:
 
 ```python
-python -m lerobot.calibrate \
+lerobot-calibrate \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
-    --teleop.id=my_awesome_leader_arm
+    --teleop.port=/dev/ttyACM1 \# <- The port of your robot
+    --teleop.id=my_awesome_leader_arm  # <- Give the robot a unique name
 ```
 
 <div class="video-container">
@@ -567,12 +571,12 @@ sudo chmod 666 /dev/ttyACM*
 ```
 
 ```bash
-python -m lerobot.teleoperate \
+lerobot-teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm
 ```
 
@@ -587,6 +591,118 @@ The teleoperate command will automatically:
 
 ## Add cameras
 
+<details>
+<summary> If using the Orbbec Gemini2 Depth Camera </summary>
+
+<div align="center">
+    <img width={800}
+    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" />
+</div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank" rel="noopener noreferrer" >
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
+
+- 🚀 Step 1: Install the Orbbec SDK Dependent Environment
+
+1. Clone the `pyorbbec` repository
+
+   ```bash
+   cd ~/
+   git clone https://github.com/orbbec/pyorbbecsdk.git
+   ```
+
+2. Download and install the corresponding **.whl file** for the SDK  
+   Go to [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases),  
+   select and install based on your Python version. For example:
+
+   ```bash
+   pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
+   ```
+
+3. Install dependencies in the `pyorbbec` directory
+
+   ```bash
+   cd ~/pyorbbecsdk
+   pip install -r requirements.txt
+   ```
+
+   Force downgrade the `numpy` version to `1.26.0`
+
+    ```bash
+    pip install numpy==1.26.0
+    ```
+
+  Red error messages can be ignored.
+
+4. Clone the Orbbec SDK into the `~/lerobot/src/cameras` directory
+
+  ```bash
+  cd ~/lerobot/src/cameras
+  git clone https://github.com/ZhuYaoHui1998/orbbec.git
+  ```
+
+5. Modify utils.py and **init**.py
+
+- Find `utils.py` in the `~/lerobot/src/lerobot/cameras` directory, and add the following code at line 40:
+
+```python
+elif cfg.type == "orbbec":
+            from .orbbec.camera_orbbec import OrbbecCamera
+
+            cameras[key] = OrbbecCamera(cfg)
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/utils.png" />
+</div>
+
+- Find `__init__.py` in the `~/lerobot/src/lerobot/cameras` directory, and add the following code at line 18:
+
+```python
+from .orbbec.configuration_orbbec import OrbbecCameraConfig
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
+</div>
+
+- 🚀 Step 2: Function Call and Examples
+
+In all the following examples, replace `so101_follower` with the actual model of the robotic arm you are using (e.g., `so100` / `so101`).
+
+We have added the `focus_area` hyperparameter. Since depth data that is too far away is meaningless for the robotic arm (it cannot reach or grasp objects), depth data less than or greater than the `focus_area` will be displayed in black. The default `focus_area` is (20, 600).  
+Currently, the only supported resolution is width: 640, height: 880.
+
+```bash
+lerobot-teleoperate \
+    --robot.type=so101_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=my_awesome_follower_arm \
+    --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+    --teleop.type=so101_leader \
+    --teleop.port=/dev/ttyACM1 \
+    --teleop.id=my_awesome_leader_arm \
+    --display_data=true
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/orbbec_result.png" />
+</div>
+
+For subsequent tasks such as data collection, training, and evaluation, the process is the same as that for regular RGB commands. You only need to replace the relevant part in the regular RGB command with:
+
+```bash
+  --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+```
+
+You can also add an additional monocular RGB camera afterward.
+
+</details>
+
 :::tip
 The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
 :::
@@ -596,7 +712,7 @@ To instantiate a camera, you need a camera identifier. This identifier might cha
 To find the camera indices of the cameras plugged into your system, run the following script:
 
 ```python
-python -m lerobot.find_cameras opencv # or realsense for Intel Realsense cameras
+lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
 ```
 
 The terminal will print out the following information.
@@ -626,32 +742,42 @@ When using Intel RealSense cameras in , you could get this error: , this can be 
 Then you will be able to display the cameras on your computer while you are teleoperating by running the following code. This is useful to prepare your setup before recording your first dataset.
 
 ```bash
-python -m lerobot.teleoperate \
+lerobot-teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true
 ```
 
 If you have more cameras, you can change `--robot.cameras` to add cameras. You should note the format of the index_or_path, which is determined by the last digit of the camera ID output by `python -m lerobot.find_cameras opencv`.
 
+:::tip
+Images in the `fourcc: "MJPG"` format are compressed. You can try higher resolutions, and you may also attempt the `YUYV` format. However, the latter will reduce the image resolution and FPS, leading to lag in the robotic arm's operation. Currently, under the `MJPG` format, it can support 3 cameras at a resolution of `1920*1080` while maintaining `30FPS`. That said, connecting 2 cameras to a computer via the same USB HUB is still not recommended.
+:::
+
+
 For example, you want to add a side camera:
 
 ```bash
-python -m lerobot.teleoperate \
+lerobot-teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true
 ```
+
+:::tip
+Images in the `fourcc: "MJPG"` format are compressed. You can try higher resolutions, and you may also attempt the `YUYV` format. However, the latter will reduce the image resolution and FPS, leading to lag in the robotic arm's operation. Currently, under the `MJPG` format, it can support 3 cameras at a resolution of `1920*1080` while maintaining `30FPS`. That said, connecting 2 cameras to a computer via the same USB HUB is still not recommended.
+:::
+
 
 :::tip
 If you find bug like this.
@@ -678,13 +804,13 @@ pip3 install rerun-sdk==0.23
 - If you want to save the dataset locally, you can run it directly:
 
 ```bash
-python -m lerobot.record \
+lerobot-record \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true \
     --dataset.repo_id=seeedstudio123/test \
@@ -713,13 +839,13 @@ echo $HF_USER
 Record 5 episodes and upload your dataset to the hub:
 
 ```bash
-python -m lerobot.record \
+lerobot-record \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true \
     --dataset.repo_id=${HF_USER}/record-test \
@@ -736,36 +862,77 @@ You will see a lot of lines appearing like this one:
 INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)
 ```
 
-**Parameter Explanations**
+**Record function**
 
-- episode-time-s: It represents the time for collecting data each time.
-- reset-time-s: It is the preparation time between each data collection.
-- num-episodes: It indicates how many groups of data are expected to be collected.
-- push-to-hub: It determines whether to upload the data to the HuggingFace Hub.
+The **record** function provides a suite of tools for capturing and managing data during robot operation.  
+
+**1. Data Storage**
+
+- Data is stored using the `LeRobotDataset` format and is stored on disk during recording.
+- By default, the dataset is pushed to your Hugging Face page after recording.  
+- To disable uploading, use: `--dataset.push_to_hub=False`
+
+**2. Checkpointing and Resuming**
+
+- Checkpoints are automatically created during recording.  
+- To resume after an interruption, re-run the same command with: `--resume=true`
+
+⚠️ Critical Note: When resuming, set `--dataset.num_episodes` to the number of additional episodes to record (not the targeted total number of episodes in the dataset).  
+
+- To start recording from scratch, **manually delete** the dataset directory.
+
+**3. Recording Parameters**
+
+Set the flow of data recording using command-line arguments:
+
+| Parameter | Description | Default |  
+|-----------|-------------|---------|  
+| --dataset.episode_time_s | Duration per data episode (seconds) | 60 |  
+| --dataset.reset_time_s | Environment reset time after each episode (seconds) | 60 |  
+| --dataset.num_episodes | Total episodes to record | 50 |  
+
+**4. Keyboard Controls During Recording**
+
+Control the data recording flow using keyboard shortcuts:
+
+| Key | Action |  
+|-----|--------|  
+| → (Right Arrow) | Early-stop current episode/reset; move to next. |  
+| ← (Left Arrow) | Cancel current episode; re-record it. |  
+| ESC | Stop session immediately, encode videos, and upload dataset. |  
 
 :::tip
 
-- "If you want to save the data locally (`--dataset.push_to_hub=false`), replace `--dataset.repo_id=${HF_USER}/so101_test` with a custom local folder name, such as `--dataset.repo_id=seeed_123/so101_test`. It will then be stored in the system's home directory at `~/.cache/huggingface/lerobot`."
+If keyboard not work, you may need install other version of pynput.
 
-- If you uploaded your dataset to the hub with `--dataset.push_to_hub=true`, you can [visualize your dataset online](https://huggingface.co/spaces/lerobot/visualize_dataset) by copy pasting your repo id given by:
-
-- Press right arrow → at any time during episode recording to early stop and go to resetting. Same during resetting, to early stop and to go to the next episode recording.
-
-- Press left arrow ← at any time during episode recording or resetting to early stop, cancel the current episode, and re-record it.
-
-- Press escape ESC at any time during episode recording to end the session early and go straight to video encoding and dataset uploading.
-
-- Note: Checkpoints are automatically created during recording. If an issue occurs, you can resume by re-running the same command with `--resume=true`. To start recording from scratch, manually delete the dataset directory.
-
-- Once you're comfortable with data recording, you can create a larger dataset for training. A good starting task is grasping an object at different locations and placing it in a bin. We suggest recording at least 50 episodes, with 10 episodes per location. Keep the cameras fixed and maintain consistent grasping behavior throughout the recordings. Also make sure the object you are manipulating is visible on the camera's. A good rule of thumb is you should be able to do the task yourself by only looking at the camera images.
-
-- In the following sections, you’ll train your neural network. After achieving reliable grasping performance, you can start introducing more variations during data collection, such as additional grasp locations, different grasping techniques, and altering camera positions.
-
-- Avoid adding too much variation too quickly, as it may hinder your results.
-
-- On Linux, if the left and right arrow keys and escape key don't have any effect during data recording, make sure you've set the $DISPLAY environment variable. See [pynput limitations](https://pynput.readthedocs.io/en/latest/limitations.html#linux).
+```bash
+pip install pynput==1.6.8
+```
 
 :::
+
+**Tips for Gathering Data**
+
+- Task Suggestion: Grasp objects at different locations and place them in a bin.  
+- Scale: Record ≥50 episodes (10 episodes per location).  
+- Consistency:  
+  - Keep cameras fixed.  
+  - Maintain identical grasping behavior.  
+  - Ensure manipulated objects are visible in camera feeds.  
+- Progression:  
+  - Start with reliable grasping before adding variations (new locations, techniques, camera adjustments).  
+  - Avoid rapid complexity increases to prevent failures.  
+
+💡 Rule of Thumb: You should be able to do the task yourself by only looking at the camera images.  
+
+If you want to dive deeper into this important topic, you can check out the [blog post](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) we wrote on what makes a good dataset.
+
+**Troubleshooting**
+
+Linux-specific Issue:  
+If Right Arrow/Left Arrow/ESC keys are unresponsive during recording:  
+
+- Verify the `$DISPLAY` environment variable is set (see [pynput limitations](https://pynput.readthedocs.io/en/latest/limitations.html)).  
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=-eDB73KgUksyJXa-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -777,6 +944,8 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
 :::
 
+If you uploaded your dataset to the hub with `--control.push_to_hub=true`, you can [visualize your dataset online](https://huggingface.co/spaces/lerobot/visualize_dataset) by copy pasting your repo id given by:
+
 ```bash
 echo ${HF_USER}/so101_test  
 ```
@@ -784,14 +953,14 @@ echo ${HF_USER}/so101_test
 If you didn't upload with `--dataset.push_to_hub=false`, you can also visualize it locally with:
 
 ```bash
-python -m lerobot.scripts.visualize_dataset_html \
+lerobot-dataset-viz \
   --repo-id ${HF_USER}/so101_test \
 ```
 
 If you upload with `--dataset.push_to_hub=false`, you can also visualize it locally with:
 
 ```bash
-python -m lerobot.scripts.visualize_dataset_html \
+lerobot-dataset-viz \
   --repo-id seeed_123/so101_test \
 ```
 
@@ -808,27 +977,37 @@ python -m lerobot.scripts.visualize_dataset_html \
 The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
 :::
 
-Now try to replay the first episode on your robot:
+A useful feature is the `replay` function, which allows you to replay any episode that you’ve recorded or episodes from any dataset out there. This function helps you test the repeatability of your robot’s actions and assess transferability across robots of the same model.
+
+You can replay the first episode on your robot with either the command below or with the API example:
 
 ```bash
-python -m lerobot.replay \
+lerobot-replay \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
     --dataset.repo_id=${HF_USER}/record-test \
     --dataset.episode=0
 ```
 
-## Train a policy
+Your robot should replicate movements similar to those you recorded.
 
-:::tip
-The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
-:::
+## Train And Evaluate
 
-To train a policy to control your robot, use the python -m lerobot.scripts.train script. A few arguments are required. Here is an example command:
+
+<details>
+
+<summary>[ACT](https://huggingface.co/docs/lerobot/act) </summary>
+
+Refer to[ACT](https://huggingface.co/docs/lerobot/act)
+
+To train a policy to control your robot, use the [lerobot-train](https://github.com/huggingface/lerobot/blob/main/src/lerobot/scripts/train.py) script. 
+
+**Train**
+
 
 ```bash
-python -m lerobot.scripts.train \
+lerobot-train \
   --dataset.repo_id=${HF_USER}/so101_test \
   --policy.type=act \
   --output_dir=outputs/train/act_so101_test \
@@ -841,7 +1020,7 @@ python -m lerobot.scripts.train \
 **If you want to train on a local dataset, make sure the `repo_id` matches the one used during data collection and add `--policy.push_to_hub=False`.**
 
 ```bash
-python -m lerobot.scripts.train \
+lerobot-train \
   --dataset.repo_id=seeedstudio123/test \
   --policy.type=act \
   --output_dir=outputs/train/act_so101_test \
@@ -856,9 +1035,303 @@ Let's explain it:
 
 - **Dataset specification**: We provide the dataset via the parameter `--dataset.repo_id=${HF_USER}/so101_test`.
 - **Training steps**: We modify the number of training steps using `--steps=300000`. The algorithm defaults to 800000 steps, and you can adjust it based on the difficulty of your task and by observing the loss during training.
-- **Policy type**: We provide the policy with `policy.type=act`. Similarly, you can switch between policies such as [act, diffusion, pi0, pi0fast, pi0fast, sac, smolvla]., which will load the configuration from `configuration_act.py`. Importantly, this policy will automatically adapt to your robot's (e.g., `laptop` and `phone`) motor states, motor actions, and the number of cameras, as this information is already stored in your dataset.
+- **Policy type**: We provide the policy with `policy.type=act`. Similarly, you can switch between policies such as [`act`, `diffusion`, `pi0`, `pi0fast`, `pi0fast`, `sac`, `smolvla`]., which will load the configuration from `configuration_act.py`. Importantly, this policy will automatically adapt to your robot's (e.g., `laptop` and `phone`) motor states, motor actions, and the number of cameras, as this information is already stored in your dataset.
 - **Device selection**: We provide `policy.device=cuda` because we are training on an Nvidia GPU, but you can use `policy.device=mps` for training on Apple Silicon.
 - **Visualization tool**: We provide `wandb.enable=true` to visualize training charts using [Weights and Biases](https://docs.wandb.ai/quickstart). This is optional, but if you use it, ensure you have logged in by running `wandb login`.
+
+
+**Evaluate**
+
+:::tip
+The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
+:::
+
+You can use the `record` function from [`lerobot/record.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/record.py) but with a policy checkpoint as input. For instance, run this command to record 10 evaluation episodes:
+
+```bash
+lerobot-record \
+  --robot.type=so100_follower \
+  --robot.port=/dev/ttyACM0 \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video10, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: intelrealsense, serial_number_or_name: 233522074606, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+  --robot.id=my_awesome_follower_arm \
+  --display_data=false \
+  --dataset.repo_id=${HF_USER}/eval_so100 \
+  --dataset.single_task="Put lego brick into the transparent box" \
+  --policy.path=${HF_USER}/my_policy
+```
+
+such as:
+
+```bash
+lerobot-record \
+  --robot.type=so101_follower \
+  --robot.port=/dev/ttyACM0 \
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+  --robot.id=my_awesome_follower_arm \
+  --display_data=false \
+  --dataset.repo_id=seeed/eval_test123 \
+  --dataset.single_task="Put lego brick into the transparent box" \
+  --policy.path=outputs/train/act_so101_test/checkpoints/last/pretrained_model
+```
+
+1. The `--policy.path` parameter indicates the path to the weight file of your policy training results (e.g., `outputs/train/act_so101_test/checkpoints/last/pretrained_model`). If you upload the model training result weight file to Hub, you can also use the model repository (e.g., `${HF_USER}/act_so100_test`).
+
+2. The dataset name `dataset.repo_id` starts with `eval_`. This operation will separately record videos and data during evaluation, which will be saved in the folder starting with `eval_`, such as `seeed/eval_test123`.
+
+3. If you encounter `File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'` during the evaluation phase, please delete the folder starting with `eval_` first and then run the program again.
+
+4. When encountering `mean is infinity. You should either initialize with stats as an argument or use a pretrained model`, please note that keywords like front and side in the `--robot.cameras` parameter must be strictly consistent with those used when collecting the dataset.
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=Y2SXU9T0DSmtz4ll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+</details>
+
+
+<details>
+<summary> SmolVLA </summary>
+
+[SmolVLA](https://huggingface.co/docs/lerobot/smolvla) is Hugging Face’s lightweight foundation model for robotics. Designed for easy fine-tuning on LeRobot datasets, it helps accelerate your development!
+
+**Set Up Your Environment**
+
+Install SmolVLA dependencies by running:
+
+```bash
+pip install -e ".[smolvla]"
+```
+
+**Finetune SmolVLA on your data**
+
+Use [smolvla_base](https://hf.co/lerobot/smolvla_base), our pretrained 450M model, and fine-tune it on your data. Training the model for 20k steps will roughly take ~4 hrs on a single A100 GPU. You should tune the number of steps based on performance and your use-case.
+
+If you don’t have a gpu device, you can train using our notebook on [Google Colab](https://colab.research.google.com/github/huggingface/notebooks/blob/main/lerobot/training-smolvla.ipynb).
+
+Pass your dataset to the training script using `--dataset.repo_id`. If you want to test your installation, run the following command where we use one of the datasets we collected for the [SmolVLA Paper](https://huggingface.co/papers/2506.01844).
+
+```bash
+lerobot-train \
+  --policy.path=lerobot/smolvla_base \
+  --dataset.repo_id=${HF_USER}/mydataset \
+  --batch_size=64 \
+  --steps=20000 \
+  --output_dir=outputs/train/my_smolvla \
+  --job_name=my_smolvla_training \
+  --policy.device=cuda \
+  --wandb.enable=true
+```
+
+:::tip
+You can start with a small batch size and increase it incrementally, if the GPU allows it, as long as loading times remain short.
+:::
+
+Fine-tuning is an art. For a complete overview of the options for finetuning, run
+
+```bash
+lerobot-train --help
+```
+
+**Evaluate the finetuned model and run it in real-time**
+
+Similarly for when recording an episode, it is recommended that you are logged in to the HuggingFace Hub. You can follow the corresponding steps: [Record a dataset](https://huggingface.co/docs/lerobot/il_robots). Once you are logged in, you can run inference in your setup by doing:
+
+```bash
+lerobot-record \
+  --robot.type=so101_follower \
+  --robot.port=/dev/ttyACM0 \ # <- Use your port
+  --robot.id=my_blue_follower_arm \ # <- Use your robot id
+  --robot.cameras="{ front: {type: opencv, index_or_path: 8, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \ # <- Use your cameras
+  --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
+  --dataset.repo_id=${HF_USER}/eval_DATASET_NAME_test \  # <- This will be the dataset name on HF Hub
+  --dataset.episode_time_s=50 \
+  --dataset.num_episodes=10 \
+  # <- Teleop optional if you want to teleoperate in between episodes \
+  # --teleop.type=so100_leader \
+  # --teleop.port=/dev/ttyACM0 \
+  # --teleop.id=my_red_leader_arm \
+  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
+```
+
+Depending on your evaluation setup, you can configure the duration and the number of episodes to record for your evaluation suite.
+
+</details>
+
+<details>
+<summary> LIBERO </summary>
+
+[LIBERO](https://huggingface.co/docs/lerobot/libero) is a benchmark designed to study lifelong robot learning. The idea is that robots won’t just be pretrained once in a factory, they’ll need to keep learning and adapting with their human users over time. This ongoing adaptation is called lifelong learning in decision making (LLDM), and it’s a key step toward building robots that become truly personalized helpers.
+
+- 📄 [LIBERO paper](https://arxiv.org/abs/2306.03310)
+- 💻 [Original LIBERO repo](https://github.com/Lifelong-Robot-Learning/LIBERO)
+
+**Evaluating with LIBERO**
+
+At **LeRobot**, we ported LIBERO into our framework and used it mainly to **evaluate** [SmolVLA](https://huggingface.co/docs/lerobot/en/smolvla), our lightweight Vision-Language-Action model.
+
+LIBERO is now part of our **multi-eval supported simulation**, meaning you can benchmark your policies either on a **single suite of tasks** or across **multiple suites at once** with just a flag.
+
+To Install LIBERO, after following LeRobot official instructions, just do: `pip install -e ".[libero]"`
+
+***Single-suite evaluation***
+
+Evaluate a policy on one LIBERO suite:
+
+```bash
+lerobot-eval \
+  --policy.path="your-policy-id" \
+  --env.type=libero \
+  --env.task=libero_object \
+  --eval.batch_size=2 \
+  --eval.n_episodes=3
+```
+
+- `--env.task` picks the suite (`libero_object`, `libero_spatial`, etc.).
+- `--eval.batch_size` controls how many environments run in parallel.
+- `--eval.n_episodes` sets how many episodes to run in total.
+
+***Multi-suite evaluation***
+
+Benchmark a policy across multiple suites at once:
+
+```bash
+lerobot-eval \
+  --policy.path="your-policy-id" \
+  --env.type=libero \
+  --env.task=libero_object,libero_spatial \
+  --eval.batch_size=1 \
+  --eval.n_episodes=2
+```
+
+- Pass a comma-separated list to `--env.task` for multi-suite evaluation.
+
+**Example training command**
+
+```bash
+lerobot-train \
+  --policy.type=smolvla \
+  --policy.repo_id=${HF_USER}/libero-test \
+  --dataset.repo_id=HuggingFaceVLA/libero \
+  --env.type=libero \
+  --env.task=libero_10 \
+  --output_dir=./outputs/ \
+  --steps=100000 \
+  --batch_size=4 \
+  --eval.batch_size=1 \
+  --eval.n_episodes=1 \
+  --eval_freq=1000 \
+```
+
+-----
+
+**Note on rendering**
+
+LeRobot uses MuJoCo for simulation. You need to set the rendering backend before training or evaluation:
+
+- `export MUJOCO_GL=egl` → for headless servers (e.g. HPC, cloud)
+
+</details>
+
+
+<details>
+<summary>[Pi0](https://huggingface.co/docs/lerobot/pi0) </summary>
+
+Refer to [Pi0](https://huggingface.co/docs/lerobot/pi0) 
+
+```bash
+pip install -e ".[pi]"
+```
+
+**Train**
+```bash
+lerobot-train \
+  --policy.type=pi0 \
+  --dataset.repo_id=seeed/eval_test123 \ 
+  --job_name=pi0_training \
+  --output_dir=outputs/pi0_training \
+  --policy.pretrained_path=lerobot/pi0_base \
+  --policy.compile_model=true \
+  --policy.gradient_checkpointing=true \
+  --policy.dtype=bfloat16 \
+  --steps=20000 \
+  --policy.device=cuda \
+  --batch_size=32 \
+  --wandb.enable=false 
+```
+
+**Evaluate**
+
+```bash
+lerobot-record \
+  --robot.type=so101_follower \
+  --robot.port=/dev/ttyACM0 \
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
+  --robot.id=my_awesome_follower_arm \
+  --display_data=false \
+  --dataset.repo_id=seeed/eval_test123 \
+  --dataset.single_task="Put lego brick into the transparent box" \
+  --policy.path=outputs/pi0_training/checkpoints/last/pretrained_model
+```
+
+
+</details>
+
+
+<details>
+<summary>[Pi0.5](https://huggingface.co/docs/lerobot/pi05) </summary>
+
+Refer to [Pi0.5](https://huggingface.co/docs/lerobot/pi05) 
+
+```bash
+pip install -e ".[pi]"
+```
+
+**Train**
+```bash
+lerobot-train \
+    --dataset.repo_id=seeed/eval_test123 \ 
+    --policy.type=pi05 \
+    --output_dir=outputs/pi05_training \
+    --job_name=pi05_training \
+    --policy.pretrained_path=lerobot/pi05_base \
+    --policy.compile_model=true \
+    --policy.gradient_checkpointing=true \
+    --wandb.enable=false \
+    --policy.dtype=bfloat16 \
+    --steps=3000 \
+    --policy.device=cuda \
+    --batch_size=32
+```
+
+**Evaluate**
+
+```bash
+lerobot-record \
+  --robot.type=so101_follower \
+  --robot.port=/dev/ttyACM0 \
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
+  --robot.id=my_awesome_follower_arm \
+  --display_data=false \
+  --dataset.repo_id=seeed/eval_test123 \
+  --dataset.single_task="Put lego brick into the transparent box" \
+  --policy.path=outputs/pi05_training/checkpoints/last/pretrained_model
+```
+
+
+</details>
+
+
+
+<details>
+<summary>[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) </summary>
+
+Refet to [GR00T N1.5](https://huggingface.co/docs/lerobot/groot) 
+
+
+</details>
+
+
 
 If you encounter the following error:
 
@@ -875,10 +1348,10 @@ pip install datasets==2.19
 
 Training should take several hours. You will find checkpoints in `outputs/train/act_so100_test/checkpoints`.
 
-To resume training from a checkpoint, below is an example command to resume from last checkpoint of the `act_so101_test` policy:
+To resume training from a checkpoint, below is an example command to resume from `last` checkpoint of the `act_so101_test` policy:
 
 ```bash
-python -m lerobot.scripts.train \
+lerobot-train \
   --config_path=outputs/train/act_so101_test/checkpoints/last/pretrained_model/train_config.json \
   --resume=true
 ```
@@ -900,51 +1373,7 @@ huggingface-cli upload ${HF_USER}/act_so101_test${CKPT} \
   outputs/train/act_so101_test/checkpoints/${CKPT}/pretrained_model
 ```
 
-## Evaluate your policy
 
-:::tip
-The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
-:::
-
-You can use the `record` function from [`lerobot/record.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/record.py) but with a policy checkpoint as input. For instance, run this command to record 10 evaluation episodes:
-
-```bash
-python -m lerobot.record  \
-  --robot.type=so100_follower \
-  --robot.port=/dev/ttyACM1 \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video10, width: 640, height: 480, fps: 30}, side: {type: intelrealsense, serial_number_or_name: 233522074606, width: 640, height: 480, fps: 30}}" \
-  --robot.id=my_awesome_follower_arm \
-  --display_data=false \
-  --dataset.repo_id=${HF_USER}/eval_so100 \
-  --dataset.single_task="Put lego brick into the transparent box" \
-  --policy.path=${HF_USER}/my_policy
-```
-
-such as:
-
-```bash
-python -m lerobot.record  \
-  --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM1 \
-  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
-  --robot.id=my_awesome_follower_arm \
-  --display_data=false \
-  --dataset.repo_id=seeed/eval_test123 \
-  --dataset.single_task="Put lego brick into the transparent box" \
-  --policy.path=outputs/train/act_so101_test/checkpoints/last/pretrained_model
-```
-
-1. The `--policy.path` parameter indicates the path to the weight file of your policy training results (e.g., `outputs/train/act_so101_test/checkpoints/last/pretrained_model`). If you upload the model training result weight file to Hub, you can also use the model repository (e.g., `${HF_USER}/act_so100_test`).
-
-2. The dataset name `dataset.repo_id` starts with `eval_`. This operation will separately record videos and data during evaluation, which will be saved in the folder starting with `eval_`, such as `seeed/eval_test123`.
-
-3. If you encounter `File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'` during the evaluation phase, please delete the folder starting with `eval_` first and then run the program again.
-
-4. When encountering `mean is infinity. You should either initialize with stats as an argument or use a pretrained model`, please note that keywords like front and side in the `--robot.cameras` parameter must be strictly consistent with those used when collecting the dataset.
-
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=Y2SXU9T0DSmtz4ll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 
 ## FAQ
 

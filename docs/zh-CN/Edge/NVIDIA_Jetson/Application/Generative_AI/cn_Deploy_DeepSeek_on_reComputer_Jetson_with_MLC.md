@@ -80,15 +80,14 @@ sudo nvidia-ctk runtime configure --runtime=docker
 
 :::
 
-step2. Restart the Docker service and add your user to the docker group.
+步骤2. 重启 Docker 服务并将您的用户添加到 docker 组。
 
 ```bash
 sudo systemctl restart docker
 sudo usermod -aG docker $USER
 newgrp docker
 ```
-
-step3. Add default runtime in `/etc/docker/daemon.json`.
+步骤3. 在 `/etc/docker/daemon.json` 中添加默认运行时。
 
 ```bash
 sudo apt install -y jq
@@ -97,7 +96,7 @@ sudo jq '. + {"default-runtime": "nvidia"}' /etc/docker/daemon.json | \
   sudo mv /etc/docker/daemon.json.tmp /etc/docker/daemon.json
 ```
 
-step4. Restart Docker.
+步骤4. 重启 Docker.
 
 ```bash
 sudo systemctl daemon-reload && sudo systemctl restart docker
@@ -253,7 +252,7 @@ print(f"Tokens per second: {tokens_per_second:.2f} tokens/second")
 
 在演示视频中，Jetson 设备的功耗仅略低于 20W，却实现了令人印象深刻的推理速度。
 
-<div align="center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/ohd_T95br90" title="deploy deepseek on jetson with mlc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

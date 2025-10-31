@@ -70,7 +70,6 @@ Cualquier aplicación que necesite Tiempo Real en Raspberry.
 |![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![](https://files.seeedstudio.com/wiki/High_Accuracy_Pi_RTC-DS3231/img/thumbnail.jpg)|
 |<a href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html" target="_blank">Obtener Uno Ahora</a>|<a href="https://www.seeedstudio.com/High-Accuracy-Pi-RTC-DS3231.html" target="_blank">Obtener Uno Ahora</a>|
 
-
 :::note
 Por favor conecta el cable USB con cuidado, de lo contrario podrías dañar el puerto. Por favor usa el cable USB con 4 cables internos, el cable de 2 cables no puede transferir datos. Si no estás seguro sobre el cable que tienes, puedes hacer clic [aquí](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) para comprar.
 :::
@@ -84,6 +83,7 @@ Por favor conecta el cable USB con cuidado, de lo contrario podrías dañar el p
 - El chip en sí mismo soporta la función de alarma, también reservamos la interfaz de hardware relevante, pero nuestra biblioteca de software no incluye esta función(pin S/INT), necesitas llevar a cabo el desarrollo de software relacionado.
 
 - RX/TX no se usa en este módulo, pero el conector 6x2 ocupa el pin RX/TX del Raspberry Pi, así que sacamos el RX/TX y viene con un conector de 2 pines.
+
 :::
 
 ### Instalación
@@ -145,7 +145,7 @@ Leer el reloj de hardware e imprimir el resultado
 sudo hwclock -r
 ```
 
-Set the system time from the hardware clock
+Establecer la hora del sistema desde el reloj de hardware
 
 ```
 sudo hwclock -s
@@ -178,19 +178,20 @@ hwclock --help
 
 Este es el video de introducción de este producto
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SKJ9iXhx0mc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Soporte Técnico y Discusión de Productos
-
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

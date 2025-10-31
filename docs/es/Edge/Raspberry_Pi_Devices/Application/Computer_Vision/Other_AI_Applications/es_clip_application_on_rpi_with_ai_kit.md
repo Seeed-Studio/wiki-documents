@@ -188,7 +188,9 @@ clip_app --input /dev/video0
 
 En el video que se muestra a continuación, puedes ver que cuando ingreso "banana," el modelo CLIP reconoce un plátano, y cuando ingreso "apple," el modelo reconoce una manzana. Solo necesitas ingresar diferentes palabras, y el modelo CLIP reconocerá diferentes objetos.
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/JMHtqSmAGCA" title="CLIP Zero Shot Classification on Raspberry Pi 5 with Hailo AI Accelerator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Soporte Técnico y Discusión de Productos
 

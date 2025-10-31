@@ -349,7 +349,7 @@ cp ~/Downloads/pink-flowers.v1i.yolov5pytorch.zip ~/yolov5
 unzip pink-flowers.v1i.yolov5pytorch.zip
 ```
 
-- **Step 3.** Open **data.yaml** file and edit **train** and **val** directories as follows
+- **ステップ 3.** **data.yaml**ファイルを開き、**train**と**val**ディレクトリを以下のように編集する
 
 ```sh
 train: train/images
@@ -418,7 +418,7 @@ numpy==1.19.4
 sudo apt install -y libfreetype6-dev
 ```
 
-- **Step 6.** Install the necessary packages
+- **ステップ 6.** 必要なパッケージをインストールする
 
 ```sh
 pip3 install -r requirements.txt
@@ -442,7 +442,7 @@ cd torchvision
 sudo python3 setup.py install 
 ```
 
-- **Step 9.** Clone the following repo
+- **ステップ 9.** 以下のリポジトリをクローンしてください
 
 ```sh
 cd ~
@@ -490,7 +490,7 @@ mkdir build
 cd build
 ```
 
-- **Step 17.** Copy the previously generated **best.wts** file into this **build** directory
+- **ステップ 17.** 以前に生成された**best.wts**ファイルをこの**build**ディレクトリにコピーする
 
 ```sh
 cp ~/yolov5/best.wts .
@@ -591,7 +591,7 @@ numpy==1.19.4
 sudo apt install -y libfreetype6-dev
 ```
 
-- **Step 7.** Install the necessary packages
+- **ステップ 7.** 必要なパッケージをインストールする
 
 ```sh
 pip3 install -r requirements.txt
@@ -615,7 +615,7 @@ cd torchvision
 sudo python3 setup.py install 
 ```
 
-- **Step 10.** Clone the following repo
+- **ステップ 10.** 以下のリポジトリをクローンしてください
 
 ```sh
 cd ~
@@ -672,7 +672,7 @@ CUDA_VER=11.4 make -C nvdsinfer_custom_impl_Yolo
 CUDA_VER=10.2 make -C nvdsinfer_custom_impl_Yolo
 ```
 
-- **Step 16.** Edit the **config_infer_primary_yoloV5.txt** file according to your model
+- **ステップ 16.** あなたのモデルに従って **config_infer_primary_yoloV5.txt** ファイルを編集してください
 
 ```sh
 [property]
@@ -682,7 +682,7 @@ model-file=yolov5s.wts
 ...
 ```
 
-- **Step 17.** Edit the **deepstream_app_config** file
+- **ステップ 17.** **deepstream_app_config**ファイルを編集する
 
 ```sh
 ...
@@ -705,7 +705,7 @@ deepstream-app -c deepstream_app_config.txt
 
 推論にINT8精度を使用したい場合は、以下の手順に従う必要があります
 
-- **Step 1.** OpenCVをインストール
+- **ステップ 1.** OpenCVをインストール
 
 ```sh
 sudo apt-get install libopencv-dev
@@ -721,9 +721,9 @@ CUDA_VER=11.4 OPENCV=1 make -C nvdsinfer_custom_impl_Yolo
 CUDA_VER=10.2 OPENCV=1 make -C nvdsinfer_custom_impl_Yolo
 ```
 
-- **Step 3.** COCOデータセットについて、[val2017](https://drive.google.com/file/d/1gbvfn7mcsGDRZ_luJwtITL-ru2kK99aK/view?usp=sharing)をダウンロードし、展開して**DeepStream-Yolo**フォルダに移動します
+- **ステップ 3.** COCOデータセットについて、[val2017](https://drive.google.com/file/d/1gbvfn7mcsGDRZ_luJwtITL-ru2kK99aK/view?usp=sharing)をダウンロードし、展開して**DeepStream-Yolo**フォルダに移動します
 
-- **Step 4.** キャリブレーション画像用の新しいディレクトリを作成します
+- **ステップ 4.** キャリブレーション画像用の新しいディレクトリを作成します
 
 ```sh
 mkdir calibration
@@ -989,11 +989,11 @@ deepstream-app -c deepstream_app_config.txt
 弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

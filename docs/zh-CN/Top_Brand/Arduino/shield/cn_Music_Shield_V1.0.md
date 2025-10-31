@@ -12,7 +12,7 @@ last_update:
 
 <!-- ---
 name:  Music Shield V1.0
-category: Discontinued
+category: 已停产
 bzurl:
 oldwikiname: Music_Shield_V1.0
 prodimagename:

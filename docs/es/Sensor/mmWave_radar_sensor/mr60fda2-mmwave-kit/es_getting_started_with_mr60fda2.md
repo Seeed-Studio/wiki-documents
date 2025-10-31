@@ -193,7 +193,7 @@ if (mmWave.update(100)) {
 
 #### Fall Module
 
-This example shows how to use the **MR60FDA2** sensor for fall detection.
+Este ejemplo muestra cómo usar el sensor **MR60FDA2** para la detección de caídas.
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
@@ -490,26 +490,26 @@ La salida será la siguiente en el Monitor Serie de Arduino:
 <!-- 
 ### Breath Module API
 
-This example uses the `SEEED_MR60BHA2` class to interface with the MR60BHA2 sensor for heart and breath monitoring. Here's what each key function does:
+Este ejemplo utiliza la clase `SEEED_MR60BHA2` para interactuar con el sensor MR60BHA2 para monitoreo cardíaco y respiratorio. Esto es lo que hace cada función clave:
 
 - **`mmWave.begin(&mmWaveSerial)`**: 
-  - Initializes the sensor for communication using the specified serial interface. It sets up the connection between the XIAO board and the MR60BHA2 sensor.
+  - Inicializa el sensor para comunicación usando la interfaz serial especificada. Establece la conexión entre la placa XIAO y el sensor MR60BHA2.
 
 - **`mmWave.update(100)`**:
-  - Updates the sensor data. The parameter `100` is a timeout value in milliseconds, specifying how long to wait for the sensor to provide new data. If new data is available within this timeframe, the function returns `true`.
+  - Actualiza los datos del sensor. El parámetro `100` es un valor de tiempo de espera en milisegundos, que especifica cuánto tiempo esperar a que el sensor proporcione nuevos datos. Si hay nuevos datos disponibles dentro de este período de tiempo, la función devuelve `true`.
 
 - **`mmWave.getHeartBreathPhases(float &total_phase, float &breath_phase, float &heart_phase)`**:
-  - Retrieves the phase information related to heart and breath activities. 
-  - `total_phase` represents the overall phase shift, while `breath_phase` and `heart_phase` are specific to breathing and heartbeat activities, respectively.
+  - Recupera la información de fase relacionada con las actividades cardíacas y respiratorias.
+  - `total_phase` representa el desplazamiento de fase general, mientras que `breath_phase` y `heart_phase` son específicos para las actividades de respiración y latido cardíaco, respectivamente.
 
 - **`mmWave.getBreathRate(float &rate)`**:
-  - Fetches the current breath rate detected by the sensor. The rate is returned in the reference variable `rate`.
+  - Obtiene la frecuencia respiratoria actual detectada por el sensor. La frecuencia se devuelve en la variable de referencia `rate`.
 
 - **`mmWave.getHeartRate(float &rate)`**:
-  - Retrieves the current heart rate detected by the sensor. The rate is returned in the reference variable `rate`.
+  - Obtiene la frecuencia cardíaca actual detectada por el sensor. La frecuencia se devuelve en la variable de referencia `rate`.
 
 - **`mmWave.getDistance(float &distance)`**:
-  - Gets the distance from the sensor to the detected object (e.g., human body). This function is useful for understanding the range of the detected signal. -->
+  - Obtiene la distancia desde el sensor hasta el objeto detectado (por ejemplo, cuerpo humano). Esta función es útil para entender el rango de la señal detectada. -->
 
 ## API del Módulo de Caídas
 
@@ -616,7 +616,7 @@ Luego necesitas descargar y descomprimir la herramienta OTA y el firmware aquí.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware-update/5-module-enter-upgrade-mode.png" style={{width:700, height:'auto'}}/></div>
 
-4. Selecciona el firmware a actualizar. Después de la selección, entrará automáticamente al estado de actualización. 
+4. Selecciona el firmware a actualizar. Después de la selección, entrará automáticamente al estado de actualización.
 
 Una vez completada la actualización, saltará automáticamente al modo normal. Si no salta, apaga y reinicia, y luego usa la herramienta OTA para ver los datos del puerto serie.
 
@@ -661,14 +661,12 @@ El firmware y los algoritmos del radar no son de código abierto, y parámetros 
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

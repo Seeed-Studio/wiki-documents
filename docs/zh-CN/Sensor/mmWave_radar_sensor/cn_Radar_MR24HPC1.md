@@ -902,7 +902,7 @@ SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
 HumanStaticLite radar = HumanStaticLite(&mySerial);
 ```
 
-Also, don't forget to set the baud rate for the soft serial port in the `Setup()` function.
+另外，不要忘记在 `Setup()` 函数中设置软串口的波特率。
 
 ```c
 void setup() {

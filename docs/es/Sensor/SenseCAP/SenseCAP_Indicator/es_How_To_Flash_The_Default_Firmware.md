@@ -1,5 +1,5 @@
 ---
-description: Flash The Native Firmware
+description: Flashear el Firmware Nativo
 title: Actualizar y Flashear Firmware  
 keywords:
 - SenseCAP Indicator
@@ -16,19 +16,19 @@ import TabItem from '@theme/TabItem';
 
 # **Cómo Flashear el Firmware Nativo**
 
-El indicador SenseCAP tiene dos MCUs, ESP32-S3 y RP2040. Este tutorial proporciona una guía completa para ayudar al desarrollador a comenzar, incluyendo el flasheo del firmware nativo de fábrica listo para usar y la actualización de dispositivos enviados temprano al firmware más reciente.
+El SenseCAP indicator tiene dos MCUs, ESP32-S3 y RP2040. Este tutorial proporciona una guía completa para ayudar a los desarrolladores a comenzar, incluyendo el flasheo del firmware nativo de fábrica listo para usar y la actualización de dispositivos enviados temprano al firmware más reciente.
 
-La actualización de firmware es particularmente aplicable en dos escenarios:
+La actualización del firmware es particularmente aplicable en dos escenarios:
 
 1. Si compraste un producto sin firmware OpenAI antes de junio de 2023, con versión de firmware `1.0.0`, puedes descargar y actualizar al firmware más reciente que incluye funcionalidad OpenAI. El firmware más reciente se puede descargar desde [aquí](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases).
 2. Si has desarrollado una aplicación y deseas flashear un firmware personalizado, puedes seguir [el tutorial proporcionado a continuación](#flash-esp32-s3-frimware-using-espressif-idf).
 
-En resumen, necesitas este tutorial porque:
+Brevemente, necesitas este tutorial porque:
 
 1. Tienes un firmware que necesitas flashear en el ESP32-S3 o RP2040.
 2. Has modificado el código y necesitas compilarlo y flashearlo al dispositivo.
 
-Vamos a comenzar con este tutorial.
+Vamos a sumergirnos en este tutorial.
 
 ## Preparación
 
@@ -43,8 +43,7 @@ El firmware de envío predeterminado del SenseCAP Indicator es completamente de 
 :::tip Tienes dos opciones para obtener el Firmware Listo para Usar:
 
 - **Código fuente:** Antes de flashearlo, tienes la opción de modificar el código según tus requisitos. Necesitarás una cadena de herramientas([ESP-IDF](#ESP-IDF), [Arduino](#RP_Arduino)) para **compilarlo**.
-- **Firmware:** Flashea directamente el archivo binario precompilado sin necesidad de modificación o compilación de código. Usando herramientas como [Esptool](#ESPTOOL) y
-[Flash Download Tools](#Flash_Tools).
+- **Firmware:** Flashea directamente el archivo binario precompilado sin necesidad de modificación o compilación de código. Usando herramientas como [Esptool](#ESPTOOL) y [Flash Download Tools](#Flash_Tools).
 :::
 
 **Código Fuente**
@@ -54,8 +53,8 @@ El firmware de envío predeterminado del SenseCAP Indicator es completamente de 
 
 **Firmware**
 
-- [🖱️Haz clic para descargar firmware ESP32-S3](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/tag/v1.0.0)
-- [🖱️Haz clic para descargar firmware RP2040](https://github.com/Seeed-Solution/SenseCAP_Indicator_RP2040/releases/tag/v1.0.0)
+- [🖱️Haz clic para descargar el firmware ESP32-S3](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/tag/v1.0.0)
+- [🖱️Haz clic para descargar el firmware RP2040](https://github.com/Seeed-Solution/SenseCAP_Indicator_RP2040/releases/tag/v1.0.0)
 
 ## Para **ESP32-S3**
 
@@ -66,14 +65,16 @@ El firmware de envío predeterminado del SenseCAP Indicator es completamente de 
 Si has optado por compilar el código fuente en firmware, necesitarás el ESP-IDF para realizar el proceso de compilación.
 
 :::note **Nota**:
-La versión ESP-IDF debe ser mayor que v5.0. Si estás usando una versión anterior, necesitarás actualizarla a la versión más reciente.
+La versión de ESP-IDF debe ser mayor que v5.0. Si estás usando una versión anterior, necesitarás actualizarla a la versión más reciente.
 :::
 
 Para usuarios nuevos, este video puede ayudarte a entender mejor los pasos a continuación:
 
+<div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/oqJz6zKfc4A?si=glzTFfR7m392eITb" title="Set Up the ESP-IDF Toolchain for SenseCAP Indicator on Windows" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
-#### **Instalación de Cadena de Herramientas**
+#### **Instalación de la Cadena de Herramientas**
 
 <Tabs
 groupId="operating-systems"
@@ -84,21 +85,21 @@ values={[
 ]}>
 <TabItem value="Win">
 
-  > Documentación Oficial de Espressif: [Configuración Estándar de Cadena de Herramientas para Windows](https://docs.espressif.com/projects/esp-idf/en/release-v5.1/esp32/get-started/windows-setup.html)
+  > Documentación Oficial de Espressif: [Configuración Estándar de la Cadena de Herramientas para Windows](https://docs.espressif.com/projects/esp-idf/en/release-v5.1/esp32/get-started/windows-setup.html)
 
   **Opción 1: Usando el Instalador Sin Conexión**
 
-  Para usuarios de Windows, tienes la opción de descargar el instalador sin conexión ESP-IDF directamente. Aquí tienes un enlace de descarga directa: [🖱️Descargar Instalador Sin Conexión v5.1.1](https://dl.espressif.com/dl/idf-installer/esp-idf-tools-setup-offline-5.1.1.exe)
+  Para usuarios de Windows, tienes la opción de descargar el instalador sin conexión de ESP-IDF directamente. Aquí tienes un enlace de descarga directa: [🖱️Descargar Instalador Sin Conexión v5.1.1](https://dl.espressif.com/dl/idf-installer/esp-idf-tools-setup-offline-5.1.1.exe)
 
   **Opción 2: Usando el Script Recomendado**
 
-Navega a [Usando el Símbolo del Sistema](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html#using-the-command-prompt)
+Navega a [Using the Command Promp](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html#using-the-command-prompt)
 
 </TabItem>
 
 <TabItem value="Unix">
 
-  > Documentación Oficial de Espressif: [Configuración Estándar de Cadena de Herramientas para Linux y macOS](https://docs.espressif.com/projects/esp-idf/en/release-v5.1/esp32/get-started/linux-macos-setup.html)
+  > Documentación Oficial de Espressif: [Configuración Estándar de la Cadena de Herramientas para Linux y macOS](https://docs.espressif.com/projects/esp-idf/en/release-v5.1/esp32/get-started/linux-macos-setup.html)
 
   Si estás en Linux o MacOS, puedes seguir esta guía para cambiar la versión del repositorio git.
 
@@ -108,27 +109,27 @@ Navega a [Usando el Símbolo del Sistema](https://docs.espressif.com/projects/es
 
 **Navegar al directorio esp-idf**:
 
-1. Ejecuta `./install.sh esp32s3`, para añadir soporte para ESP32-S3 (necesario para el indicador SenseCAP)
+1. Ejecuta `./install.sh esp32s3`, para agregar soporte ESP32-S3 (necesario para SenseCAP indicator)
 2. escribe `./export.sh` para configurar las variables PATH e IDF_PATH en la sesión de terminal actual.
 
-si quieres llamarlo en cualquier sesión de shell, puedes añadir la siguiente línea a tu archivo de configuración de shell (ej. ~/.bash_profile):
+si quieres llamarlo en cualquier sesión de shell, puedes agregar la siguiente línea a tu archivo de configuración de shell (ej. ~/.bash_profile):
 
 ```
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
 ```
 
-Luego puedes usar `get_idf` para activar el entorno.[^refer](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/linux-macos-setup.html#step-4-set-up-the-environment-variables)
+Entonces puedes usar `get_idf` para activar el entorno.[^refer](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/linux-macos-setup.html#step-4-set-up-the-environment-variables)
 
 </TabItem>
 </Tabs>
 
-#### Compilación del Proyecto y flasheo {#BUILD}
+#### Construir Proyecto y flashear {#BUILD}
 
 Si optas por compilar el código fuente en firmware, necesitarás el ESP-IDF para realizar el proceso de compilación.
 
 <!-- Please differentiate between flashing compiled firmware and directly downloading firmware using IDF! -->
 
-Para compilar, flashear y monitorear tu proyecto, ejecuta el siguiente comando:
+Para construir, flashear y monitorear tu proyecto, ejecuta el siguiente comando:
 
 ```
 cd  <your_sdk_path>/examples/indicator_basis/
@@ -149,9 +150,9 @@ Hasta este punto, escribiendo el comando `idf.py -p PORT flash`, el firmware ha 
 
 ### **Esptool** {#ESPTOOL}
 
-> [ESPtool - GitHub](https://github.com/espressif/esptool) es una utilidad de código abierto basada en Python que proporciona una forma independiente de la plataforma para comunicarse con el cargador de arranque ROM en los chips Espressif.
+> [ESPtool - GitHub](https://github.com/espressif/esptool) es una utilidad de código abierto basada en Python que proporciona una forma independiente de la plataforma para comunicarse con el bootloader ROM en chips Espressif.
 
-Esptool puede ser usado como parte de tu script de Python. En esta guía, usaremos el `software empaquetado` disponible en la [página de lanzamientos de Esptool](https://github.com/espressif/esptool/releases). Elige el software que corresponda al sistema operativo de tu computadora.
+Esptool puede ser usado como parte de tu script Python. En esta guía, usaremos el `software empaquetado` disponible en la [página de releases de Esptool](https://github.com/espressif/esptool/releases). Elige el software que corresponda al sistema operativo de tu computadora.
 
 #### Usando Esptool para Flashear
 
@@ -161,7 +162,7 @@ Se proporcionan dos scripts que muestran cómo utilizar efectivamente Esptool pa
 Ten en cuenta que los scripts proporcionados están adaptados para sistemas operativos Windows. Si estás usando un sistema operativo diferente, necesitarás adaptar los scripts para que se ajusten a tu entorno.
 :::
 
-El script merge.bat es particularmente útil ya que consolida inteligentemente el cargador de arranque, la tabla de particiones y los binarios base del indicador en un solo archivo de firmware. Una vez fusionado, este firmware puede ser flasheado sin problemas en el ESP32-S3 usando el script flash.bat. Cuando se te solicite, ingresa el puerto COM correspondiente a tu dispositivo, y el proceso de flasheo se iniciará. La operación completa puede resumirse de la siguiente manera:
+El script merge.bat es particularmente útil ya que consolida inteligentemente el bootloader, la tabla de particiones y los binarios base del indicator en un solo archivo de firmware. Una vez fusionado, este firmware puede ser flasheado sin problemas en el ESP32-S3 usando el script flash.bat. Cuando se te solicite, ingresa el puerto COM correspondiente a tu dispositivo, y el proceso de flasheo se iniciará. La operación completa se puede resumir de la siguiente manera:
 
 ```sh title="merge.bat"
 esptool.exe --chip esp32s3 ^
@@ -173,7 +174,7 @@ merge_bin -o sensecap_indicator_basis_v1.0.0.bin ^ # Target file name
 0x10000 ../../build/indicator_basis.bin
 ```
 
-Alternativamente, si prefieres flashear archivos binarios individuales en lugar de fusionar archivos antes de flashear, puedes usar directamente el script `just_flash.bat`:
+Alternativamente, si prefieres flashear archivos binarios individuales en lugar de fusionar archivos y luego flashear, puedes usar directamente el script `just_flash.bat`:
 
 ```sh title="just_flash.bat"
 esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z ^
@@ -188,7 +189,7 @@ Y para un proceso de flasheo directo usando el firmware fusionado:
 esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z 0x0 indicator_basis_v1.0.0.bin
 ```
 
-> Presta mucha atención a la dirección de inicio (0x0), especialmente cuando no se fusionen binarios. Para archivos binarios separados, consulta las instrucciones en [Herramientas de Descarga Flash para archivos binarios separados](#Address_Note). Seguir estas pautas asegura un flasheo sin errores.
+> Presta mucha atención a la dirección de inicio(0x0), especialmente cuando no fusiones binarios. Para archivos binarios separados, consulta las instrucciones en [Flash Download Tools para archivos binarios separados](#Address_Note). Seguir estas pautas asegura un flasheo sin errores.
 
 Para utilizar estos scripts, guarda el código en archivos de texto separados llamados `merge.bat` y `flash.bat` dentro de la carpeta del proyecto. Este enfoque organizacional simplifica el acceso y uso.
 
@@ -215,7 +216,7 @@ Al emplear estos scripts, optimizas tanto la preparación del firmware como las 
 Para flashear firmware, puedes usar el script `flash.bat` proporcionado. Este script está diseñado para simplificar el proceso de flashear tu firmware en el microcontrolador ESP32-S3.
 
 <details>
-   <summary>Mostrar código de flash.bat</summary>
+   <summary>Mostrar código flash.bat</summary>
    ```bat
    @echo off
    setlocal
@@ -264,7 +265,7 @@ Para flashear firmware, puedes usar el script `flash.bat` proporcionado. Este sc
 
 #### Fusión de Binarios
 
-El script `merge.bat` proporcionado puede usarse para fusionar los archivos binarios necesarios en un solo archivo de firmware. Este script simplifica el proceso y asegura una fusión correcta para un flasheo exitoso, lo que te permite flashear un solo archivo bin en lugar de [flashear archivos separados](#Address_Note).
+El script `merge.bat` proporcionado se puede usar para fusionar los archivos binarios necesarios en un solo archivo de firmware. Este script simplifica el proceso y asegura una fusión correcta para un flasheo exitoso, lo que te permite flashear un solo archivo bin en lugar de [flashear archivos separados](#Address_Note).
 
 <details>
    <summary>Mostrar código de merge.bat</summary>
@@ -339,11 +340,11 @@ Sigue los pasos para flashear un firmware precompilado:
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_59.png"/></div>
 
-- **Paso 3**: Conecta el SenseCAP Indicator a tu portátil con un cable USB tipo C.
+- **Paso 3**: Conecta el SenseCAP Indicator a tu laptop con un cable USB tipo-C.
 
-- **Paso 4**: En la pestaña de descarga SPI, haz clic en "..." y navega hasta el firmware que acabas de descargar.
+- **Paso 4**: En la pestaña SPI Download, haz clic en "..." y navega al firmware que acabas de descargar.
 
-- **Paso 5**: Configura el Flash SPI:
+- **Paso 5**: Configura SPI Flash:
 
 <div class="table-center">
   <table align="center">
@@ -353,7 +354,7 @@ Sigue los pasos para flashear un firmware precompilado:
     </tr>
     <tr>
         <td>
-            <div style={{textAlign: 'center'}}><strong>VELOCIDAD SPI</strong></div>
+            <div style={{textAlign: 'center'}}><strong>SPI SPEED</strong></div>
         </td>
         <td>
             <div style={{textAlign: 'center'}}>40MHz</div>
@@ -361,7 +362,7 @@ Sigue los pasos para flashear un firmware precompilado:
     </tr>
     <tr>
         <td>
-            <div style={{textAlign: 'center'}}><strong>MODO SPI</strong></div>
+            <div style={{textAlign: 'center'}}><strong>SPI MODE</strong></div>
         </td>
         <td>
             <div style={{textAlign: 'center'}}>DIO</div>
@@ -370,13 +371,13 @@ Sigue los pasos para flashear un firmware precompilado:
   </table>
 </div>
 
-- **Paso 6**: Configurar el Panel de Descarga:
+- **Paso 6**: Configura el Panel de Descarga:
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator23.png"/></div>
 
-- **COM**: Verifica los puertos en tu Administrador de Dispositivos, el USB-SERIAL es el correcto.
+- **COM**: Verifica los puertos en tu Device Manager, el USB-SERIAL es el correcto.
 (`Aquí elegimos COM4`)
-- **Baud**: 921600(valor recomendado)
+- **Baud**: 921600 (valor recomendado)
 
 <!-- Previous: Click `Start` Downloading -->
 
@@ -384,7 +385,7 @@ Luego haz clic en `START` para comenzar el flasheo.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/start.png"/></div>
 
-Cuando muestre `FINISH`, el flasheo del firmware se habrá completado.
+Cuando muestre `FINISH`, el flasheo del firmware habrá sido completado.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/finish.png"/></div>
 
@@ -402,7 +403,7 @@ Sin embargo, si estás usando ESP-IDF para construir firmware, flashear directam
 
 ## Para **RP2040**
 
-### Flashear por Arduino IDE {#RP_Arduino}
+### Flashear con Arduino IDE {#RP_Arduino}
 
 La Herramienta de Desarrollo RP2040 aprovecha Arduino para mejorar tu experiencia de codificación.
 
@@ -410,11 +411,11 @@ La Herramienta de Desarrollo RP2040 aprovecha Arduino para mejorar tu experienci
 
 **Descarga:**
 
-- **Paso 1**: Instalar [Arduino IDE](https://www.arduino.cc/en/software)
+- **Paso 1**: Instala [Arduino IDE](https://www.arduino.cc/en/software)
 
-- **Paso 2**: Agregar la Placa Raspberry Pi Pico
+- **Paso 2**: Agrega la Placa Raspberry Pi Pico
 
-Abre tu Arduino IDE, haz clic en **Arduino IDE** > **Preferences**, y copia la siguiente URL a **Additional Boards Manager URLs**:
+Abre tu Arduino IDE, haz clic en **Arduino IDE** > **Preferences**, y copia la siguiente URL en **Additional Boards Manager URLs**:
 
 `https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json`
 
@@ -439,9 +440,10 @@ Busca "indicator" e instala "Raspberry Pi Pico/RP2040" en el Board Manager
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator.png"/></div>
 
-- **Paso 3**: Añadir Librerías
+- **Paso 3**: Agregar Librerías
 
 :::note **Librerías de referencia**
+
 - Sensirion Core: [Librería Sensirion Arduino Core](https://github.com/Sensirion/arduino-core)
 - PacketSerial : [Protocolo de comunicación serial](https://github.com/bakercp/PacketSerial)
 - Sensirion I2C SGP40 : [Librería del sensor TVOC SGP40](https://github.com/Sensirion/arduino-i2c-sgp40)
@@ -450,18 +452,18 @@ Busca "indicator" e instala "Raspberry Pi Pico/RP2040" en el Board Manager
 - Seeed_Arduino_AHT20 : [Librería del sensor de temperatura y humedad AHT20](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20)
 :::
 
-En el IDE de Arduino, puedes buscarla en el `Library Manager`, por ejemplo `Seeed_Arduino_AHT20`, y luego instalarla.
+En el Arduino IDE, puedes buscarla en el `Library Manager`, por ejemplo `Seeed_Arduino_AHT20`, y luego instalarla.
 
 <details>
-<summary>Haz clic para previsualizar la instalación offline</summary>
+<summary>Haz clic para ver la instalación sin conexión</summary>
 
-Para instalarla *offline*, puedes **descargar el zip del repositorio** desde GitHub, navegar a **Sketch** -> **Include Library** -> **Add .ZIP Library**, luego seleccionar las librerías que descargaste.
+Para instalarla *sin conexión*, puedes **descargar el zip del repositorio** desde GitHub, navegar a **Sketch** -> **Include Library** -> **Add .ZIP Library**, luego seleccionar las librerías que descargaste.
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_32.png"/></div>
 
 </details>
 
-- **Paso 4**: Conecta el dispositivo a tu PC con el cable USB Type-C proporcionado.
+- **Paso 4**: Conecta el dispositivo a tu PC con el cable USB Tipo-C proporcionado.
 
 - **Paso 5**: Selecciona la placa y el puerto
 
@@ -480,15 +482,15 @@ Busca "Indicator" y selecciona la placa `Seeed INDICATOR RP2040` y selecciona el
   </table>
 </div>
 
-- **Paso 6**: Abrir el archivo de código de ejemplo
+- **Paso 6**: Abre el archivo de código de ejemplo
 
-**Archivo** -> **Abrir**, luego selecciona el archivo de código de ejemplo ([archivo .ino](https://github.com/Seeed-Solution/sensecap_indicator_rp2040/tree/main/examples/terminal_rp2040)).
+**File** -> **Open**, luego selecciona el archivo de código de ejemplo ([archivo .ino](https://github.com/Seeed-Solution/SenseCAP_Indicator_RP2040/tree/main/examples/indicator_rp2040)).
 
 Proporcionamos un archivo de código de ejemplo, puedes modificar el código según tus necesidades.
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_35.png"/></div>
 
-- **Paso 7**: Verificar y cargar el archivo.
+- **Paso 7**: Verifica y Sube el archivo.
 
 <div class="table-center">
   <table align="center">
@@ -520,7 +522,7 @@ Mantén presionado este botón interno usando una aguja, luego conecta el dispos
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_56.png"/></div>
 
-- **Paso 2**: Flasheo del Firmware
+- **Paso 2**: Flash del Firmware
 
 Después de que la conexión sea exitosa, tu PC mostrará un disco.
 
@@ -534,7 +536,7 @@ La actualización se ejecutará automáticamente.
 
 ## Protocolo de Comunicación ESP32 & RP2040
 
-ESP32 y RP2040 usan comunicación por puerto serie, utilizando el protocolo de comunicación [cobs](http://www.stuartcheshire.org/papers/COBSforToN.pdf). La lista de comandos utilizados en la demostración es la siguiente:
+ESP32 y RP2040 utilizan comunicación por puerto serie, usando el protocolo de comunicación [cobs](http://www.stuartcheshire.org/papers/COBSforToN.pdf). La lista de comandos utilizados en la demostración es la siguiente:
 
 El formato del comando consiste en el tipo de paquete y los parámetros del paquete.
 
@@ -542,9 +544,9 @@ El formato del comando consiste en el tipo de paquete y los parámetros del paqu
 
 ## Recursos
 
-[SDK ESP32 del SenseCAP Indicator](https://github.com/Seeed-Solution/sensecap_indicator_esp32.git)
+[SenseCAP Indicator ESP32 SDK](https://github.com/Seeed-Solution/sensecap_indicator_esp32.git)
 
-[Demo RP2040 del SenseCAP Indicator](https://github.com/Seeed-Solution/sensecap_indicator_rp2040/tree/main)
+[SenseCAP Indicator RP2040 Demo](https://github.com/Seeed-Solution/sensecap_indicator_rp2040/tree/main)
 
 ## FAQ
 
@@ -559,7 +561,7 @@ El formato del comando consiste en el tipo de paquete y los parámetros del paqu
     ]}
     >
     <TabItem value="Win" >
-      Verifica el puerto en tu Administrador de Dispositivos
+      Verifica el puerto en tu Device Manager
       - "USB Serial Device(COMx)" o "USB 串行设备" es para RP2040
       - "USB-SERIAL CH340" es para ESP32
       En resumen, el puerto CH340 es para ESP32.

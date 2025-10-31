@@ -72,7 +72,7 @@ cd nvstreamer
 sudo docker compose -f compose_nvstreamer.yaml up -d  --force-recreate
 ```
 
-To terminate the NVStreamer instance, use the following command:
+要终止 NVStreamer 实例，请使用以下命令：
 
 ```bash
 cd nvstreamer

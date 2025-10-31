@@ -17,7 +17,9 @@ last_update:
 In this project we will learn how to train and deploy an audio scene classifier with Wio Terminal and Edge Impulse.
 For more details and video tutorial, watch the corresponding video!
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2BISspenUng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Sound processing in computers
 

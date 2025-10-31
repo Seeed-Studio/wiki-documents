@@ -268,8 +268,8 @@ void loop() {
 
 同时，您可以在主要的移动应用商店中搜索并下载 **nRF Connect** 应用，该应用允许您的手机搜索并连接到蓝牙设备。
 
-- Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
-- IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
+- 安卓：[nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
+- IOS：[nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
 
 下载软件后，按照下面显示的步骤搜索并连接 XIAO ESP32S3，您将看到广播的"Hello World"。
 
@@ -872,7 +872,7 @@ pCharacteristic->registerForNotify([](BLERemoteCharacteristic* pBLERemoteCharact
 :::tip
 上述示例给出了单个传感器单个值的最简单示例。如果您想通过蓝牙广播多个传感器或多个传感器值，我们建议您阅读这里的教程示例。
 
-- [ESP32 BLE Server and Client (Bluetooth Low Energy)](https://randomnerdtutorials.com/esp32-ble-server-client/)
+- [ESP32 BLE 服务器和客户端（蓝牙低功耗）](https://randomnerdtutorials.com/esp32-ble-server-client/)
 
 :::
 

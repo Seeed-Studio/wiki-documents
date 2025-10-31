@@ -85,16 +85,16 @@ Aplicaciones
 
 1. Color Pixels, una tira LED colorida, puede ser controlada por teléfono móvil.
 
-    - Hardware
-        - Arch Link
-        - [Tira LED RGB Digital](https://www.seeedstudio.com/depot/Digital-RGB-LED-FlexiStrip-30-LED-1-Meter-p-1665.html)
-        - Dispositivo Android con BLE
+- Hardware
+  - Arch Link
+  - [Tira LED RGB Digital](https://www.seeedstudio.com/depot/Digital-RGB-LED-FlexiStrip-30-LED-1-Meter-p-1665.html)
+  - Dispositivo Android con BLE
 
     ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Ble_color_pixels_bb.png)
 
     ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Color_pixels_app.png)
 
-    - Hazlo funcionar
+  - Hazlo funcionar
 
         1. Descarga [BLE_Color_Pixels_Arch_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
         2. Copia el archivo hex al disco MBED de tu Arch BLE
@@ -135,12 +135,12 @@ Si quieres cambiar el programa, haz clic en [este enlace](https://mbed.org/compi
 Recursos
 --------
 
--   [Página de la plataforma de desarrollador mbed de Arch Link](https://developer.mbed.org/platforms/Seeed-Arch-Link/)
--   [Esquema en formato PDF](https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_pdf.pdf)
--   [Archivos de esquema y placa en formato EAGLE](https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_Eagle.zip)
--   [Firmware LPC11U35](https://files.seeedstudio.com/wiki/Arch_Link/res/Lpc11u35_nrf51822_if_mbed.bin.zip)
--   [App Seeed BLE Color Pixels para Android](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
--   [Código fuente de la App BLE Color Pixels](https://github.com/Seeed-Studio/ble_color_pixels)
+- [Página de la plataforma de desarrollador mbed de Arch Link](https://developer.mbed.org/platforms/Seeed-Arch-Link/)
+- [Esquema en formato PDF](https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_pdf.pdf)
+- [Archivos de esquema y placa en formato EAGLE](https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_Eagle.zip)
+- [Firmware LPC11U35](https://files.seeedstudio.com/wiki/Arch_Link/res/Lpc11u35_nrf51822_if_mbed.bin.zip)
+- [App Seeed BLE Color Pixels para Android](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
+- [Código fuente de la App BLE Color Pixels](https://github.com/Seeed-Studio/ble_color_pixels)
 
 <!-- Este archivo Markdown fue creado desde https://www.seeedstudio.com/wiki/Arch_Link -->
 
@@ -149,11 +149,11 @@ Recursos
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

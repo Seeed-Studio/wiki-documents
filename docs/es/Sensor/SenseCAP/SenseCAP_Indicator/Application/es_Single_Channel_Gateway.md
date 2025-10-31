@@ -168,7 +168,7 @@ Para linux y mac, puedes verificar el puerto serie mediante
 ls /dev/cu*
 ```
 
-then flash using `idf.py`, replace the **port**
+luego flashea usando `idf.py`, reemplaza el **puerto**
 
 ```
 idf.py -p port flash

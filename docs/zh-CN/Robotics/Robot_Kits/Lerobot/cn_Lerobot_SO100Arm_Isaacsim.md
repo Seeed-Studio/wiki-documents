@@ -22,7 +22,9 @@ last_update:
 
 本文档提供了将 SO100 Arm Kit 机械臂导入 NVIDIA 的 Isaac Sim 仿真平台并使用 ROS2 和 Python 脚本进行控制的说明。
 
+<div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/buiqdmNQKwY?si=CvovjaHNQy2nZsR2" title="YouTube 视频播放器" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 项目介绍
 
@@ -173,7 +175,9 @@ SO-ARM100 和 reComputer Jetson AI 智能机器人套件将高精度机械臂控
 
 **为了更清楚地理解这一部分，请根据视频内容执行动作连接和基本参数配置。**
 
+<div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/buiqdmNQKwY?si=sHjysqfqxPVz-r3T&amp;start=92" title="YouTube 视频播放器" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 **步骤 3. 播放**
 
@@ -306,7 +310,9 @@ if __name__ == "__main__":
 
 </details>
 
+<div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/buiqdmNQKwY?si=3CizpKK3Nhj4Vlp9&amp;start=232" title="YouTube 视频播放器" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 引用
 

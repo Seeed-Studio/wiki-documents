@@ -23,8 +23,8 @@ no_comments: false # for Disqus
 ## 产品列表
 
 1. [Micro:bit](https://www.seeedstudio.com/micro-bit-Telec-version-p-2946.html)
-2. [Grove Shield for micro:bit v2.0](https://www.seeedstudio.com/Grove-Shield-for-micro-bit-v2-0-p-3083.html)
-3. [Grove Inventor Kit for micro:bit](https://wiki.seeedstudio.com/cn/Grove_Inventor_Kit_for_microbit/)
+2. [Grove micro:bit v2.0 扩展板](https://www.seeedstudio.com/Grove-Shield-for-micro-bit-v2-0-p-3083.html)
+3. [Grove micro:bit 发明家套件](https://wiki.seeedstudio.com/cn/Grove_Inventor_Kit_for_microbit/)
 
 ## MakeCode 教程
 

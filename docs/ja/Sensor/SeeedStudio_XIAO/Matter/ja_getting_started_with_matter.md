@@ -117,7 +117,7 @@ XIAOに加えて、WS281xモデルのライトバーまたはライトビーズ�
 
 ## ビデオチュートリアル
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="750" height="450" src="https://www.youtube.com/embed/bhHVbRe_Gtw?si=iH-oouOl_ItkG7vF?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
@@ -163,7 +163,7 @@ Windowsコンピュータは使用しないでください。Windowsコンピュ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/23.png" style={{width:800, height:'auto'}}/></div>
 
-## Step 2. iPhone Home APPでコードをスキャンしてデバイスを追加する
+## ステップ 2. iPhone Home APPでコードをスキャンしてデバイスを追加する
 
 デバイス追加のセクションでは、Appleのデバイスを例に説明します（手元にあるのがそれだけなので）。もし[Googleのデバイス](https://support.google.com/googlenest/answer/12391458?hl=en&co=GENIE.Platform%3DAndroid)や[Amazonのデバイス](https://developer.amazon.com/en-US/alexa/matter)をお持ちの場合は、それらも使用できるかもしれません。
 

@@ -74,7 +74,7 @@ sudo apt update && sudo apt install ffmpeg
 arecord -D hw:2,0 --dump-hw-params #set microphone rate to 16000
 ```
 
-#### Step2. Test environment
+#### 步骤 2. 测试环境
 
 ```shell
 python test.py
@@ -94,9 +94,11 @@ python test.py
 python main.py
 ```
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/KR0GYqUuo5Y?si=uSGUkKmCSZmaq5f7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
-## Riva vs Whisper
+## Riva 与 Whisper 对比
 
 Riva 以其先进的 AI 驱动语音识别和自然语言处理而闻名，为用户提供实时转录、翻译和口语对话分析功能。
 
@@ -104,7 +106,9 @@ Whisper 是一个自动语音识别（ASR）系统，在从网络收集的 680,0
 
 在即将到来的对比视频中，我们将比较在 Nvidia Jetson 上开发的 [Riva](https://wiki.seeedstudio.com/cn/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson/) 和 Whisper 在语音转文本方面的能力。
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/2l7yus611DI?si=XdEjwzpZdJkLC8aB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 项目展望
 

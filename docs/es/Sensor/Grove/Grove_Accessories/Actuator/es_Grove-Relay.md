@@ -18,7 +18,9 @@ last_update:
 
 El módulo Grove-Relé es un interruptor digital normalmente abierto. A través de él, puedes controlar circuitos de alto voltaje con bajo voltaje, digamos 5V en el controlador. Hay un LED indicador en la placa, que se encenderá cuando los terminales controlados se cierren.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/MwLEawbP0ZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-Relay-p-769.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
@@ -424,9 +426,13 @@ Tenemos esta parte disponible en [geppetto](https://geppetto.seeedstudio.com/), 
 
 **Módulo relé Grove**:
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DnHqh_Rupb8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JOsjUOI9FU8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Soporte Técnico y Discusión de Productos
 

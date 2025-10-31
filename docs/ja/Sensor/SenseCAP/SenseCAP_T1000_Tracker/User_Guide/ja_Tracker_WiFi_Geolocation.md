@@ -28,7 +28,7 @@ last_update:
 
 **2. Baidu Map**
 
-## 2.1 Google Geolocation
+## 2.1 Google ジオロケーション
 
 Wi-Fiを通じて位置情報を取得するためにGoogle Geolocationを利用するには、[Google Geolocation API](https://developers.google.com/maps/documentation/geolocation/overview?hl=en)へのアクセスを取得する必要があります。Geolocation APIを利用するための様々な方法も上記で説明されています。
 
@@ -175,7 +175,7 @@ if __name__ == '__main__':
 
 ```
 
-Step 3. After completing the above steps, you will be able to obtain the Tracker's location information!
+ステップ3. 上記のステップを完了すると、トラッカーの位置情報を取得できるようになります！
 
 ```
 {'location': {'lat': 22.5769055, 'lng': 113.9222236}, 'accuracy': 20}
@@ -183,7 +183,7 @@ Step 3. After completing the above steps, you will be able to obtain the Tracker
 
 実行環境がない場合は、私たちが作成した[Colabノートブック](https://colab.research.google.com/drive/10iTGJ_W87b8e45d6DmohuRzMYevkWCmI?usp=sharing)を簡単に実行できます！
 
-## 2.2 Baidu Map
+## 2.2 百度地図
 
 このチュートリアルでは、取得したWi-Fi情報に対して位置解析を実行するために、**Baidu Map**オープンプラットフォームが提供するインテリジェントハードウェア測位サービスを使用することを選択しました。異なる位置サービスプロバイダーではアクセス方法が異なる場合があり、ここではIPホワイトリスト認証を使用しています。具体的なアクセスプロセスでは、解析する必要があるデータパッケージを定義し、その後APIサービスアドレスにPOSTリクエストを送信します。以下は私たちが定義したJSONデータパッケージです。
 

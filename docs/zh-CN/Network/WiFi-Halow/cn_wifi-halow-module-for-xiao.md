@@ -1,5 +1,5 @@
 ---
-description: XIAO ESP32S3 与 Wio-WM6180 Wi-Fi HaLow 模块教程
+description: XIAO ESP32S3 与 Wio-WM6108 Wi-Fi HaLow 模块教程
 title: XIAO Wi-Fi HaLow 模块入门指南
 image: https://files.seeedstudio.com/wiki/wifi_halow/pic/20.webp
 slug: /cn/getting_started_with_wifi_halow_module_for_xiao
@@ -15,14 +15,14 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/20.jpg" style={{width:600, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-Halow-Module-for-XIAO-p-6395.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6108-Wi-Fi-Halow-Module-for-XIAO-p-6395.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>
 
 ## 介绍
 
-本教程将指导您设置和使用 Wio-WM6180 Wi-Fi HaLow 模块与 XIAO ESP32S3 构建 Wi-Fi HaLow 客户端。Wi-Fi HaLow（IEEE 802.11ah）专为长距离、低功耗物联网应用而设计，工作在亚 1 GHz 频段。我们将详细介绍硬件设置、软件配置，并演示如何为您的物联网项目建立 Wi-Fi HaLow 连接。
+本教程将指导您设置和使用 Wio-WM6108 Wi-Fi HaLow 模块与 XIAO ESP32S3 构建 Wi-Fi HaLow 客户端。Wi-Fi HaLow（IEEE 802.11ah）专为长距离、低功耗物联网应用而设计，工作在亚 1 GHz 频段。我们将详细介绍硬件设置、软件配置，并演示如何为您的物联网项目建立 Wi-Fi HaLow 连接。
 
 ### 主要特性
 
@@ -34,7 +34,7 @@ last_update:
 
 ## 硬件概述
 
-下表概述了 Wio-WM6180 Wi-Fi HaLow 模块的主要规格：
+下表概述了 Wio-WM6108 Wi-Fi HaLow 模块的主要规格：
 
 | 特性 | 数值 | 单位 |
 |:-------------:|:-----:|:----:|
@@ -85,11 +85,11 @@ Wi-Fi HaLow 满足了物联网应用日益增长的需求，这些应用需要�
 
 3. **网关**：充当 Wi-Fi HaLow 网络与其他网络（如以太网或蜂窝网络）之间的桥梁。
 
-在本教程中，我们将配置 XIAO ESP32S3 作为连接到 Wi-Fi HaLow 接入点的站点（STA）客户端。XIAO 将使用 WM6180 模块建立和维护 HaLow 连接。
+在本教程中，我们将配置 XIAO ESP32S3 作为连接到 Wi-Fi HaLow 接入点的站点（STA）客户端。XIAO 将使用 WM6108 模块建立和维护 HaLow 连接。
 
 ## MM-IoT-SDK 框架
 
-WM6180 模块使用 [MorseMicro 的 MM-IoT-SDK](https://github.com/MorseMicro/mm-iot-esp32)，它提供：
+WM6108 模块使用 [MorseMicro 的 MM-IoT-SDK](https://github.com/MorseMicro/mm-iot-esp32)，它提供：
 
 - **多协议支持**：实现与各种物联网协议的无缝集成
 - **低功耗管理**：为电池供电设备优化功耗
@@ -114,7 +114,7 @@ MM-IoT-SDK 架构由几个层次组成：
             <th>XIAO ESP32S3 Sense</th>
             <th>XIAO ESP32C3</th>
             <th>XIAO ESP32C6</th>
-            <th>Wio-WM6180 Wi-Fi HaLow Module for XIAO</th>
+            <th>Wio-WM6108 Wi-Fi HaLow Module for XIAO</th>
         </tr>
         <tr>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -139,7 +139,7 @@ MM-IoT-SDK 架构由几个层次组成：
                 </a>
             </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-Halow-Module-for-XIAO-p-6395.html" target="_blank">
+                <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6108-Wi-Fi-Halow-Module-for-XIAO-p-6395.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
                 </a>
             </div></td>
@@ -256,7 +256,7 @@ Install the required packages:
 brew install cmake ninja dfu-util
 ```
 
-**Step 2.** Download and install ESP-IDF
+**步骤 2.** 下载并安装ESP-IDF
 
 ```bash
 mkdir -p ~/esp
@@ -266,7 +266,7 @@ cd esp-idf
 ./install.sh esp32s3
 ```
 
-**Step 3.** Set up the environment variables
+**步骤 3.** 设置环境变量
 
 ```bash
 . $HOME/esp/esp-idf/export.sh
@@ -286,9 +286,9 @@ cd esp-idf
 sudo apt-get install git wget flex bison gperf python3 python3-pip python3-setuptools cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
 ```
 
-For other distributions, please install equivalent packages.
+对于其他发行版，请安装相应的软件包。
 
-**Step 2.** Download and install ESP-IDF
+**步骤 2.** 下载并安装ESP-IDF
 
 ```bash
 mkdir -p ~/esp
@@ -298,7 +298,7 @@ cd esp-idf
 ./install.sh esp32s3
 ```
 
-**Step 3.** Set up the environment variables
+**步骤 3.** 设置环境变量
 
 ```bash
 . $HOME/esp/esp-idf/export.sh
@@ -334,7 +334,7 @@ cd %USERPROFILE%
 git clone https://github.com/Seeed-Studio/mm-iot-esp32.git
 ```
 
-**Step 2.** Export IDF variables
+**步骤 2.** 导出 IDF 变量
 
 ```bash
 cd %USERPROFILE%\mm-iot-esp32
@@ -369,14 +369,14 @@ cd ~
 git clone https://github.com/Seeed-Studio/mm-iot-esp32.git
 ```
 
-**Step 2.** Export IDF variables
+**步骤 2.** 导出 IDF 变量
 
 ```bash
 cd ~/mm-iot-esp32
 source export.sh
 ```
 
-**Step 3.** Set MMIOT_ROOT environment variable
+**步骤 3.** 设置 MMIOT_ROOT 环境变量
 
 For temporary use:
 
@@ -384,7 +384,7 @@ For temporary use:
 export MMIOT_ROOT=~/mm-iot-esp32
 ```
 
-For permanent use, add to your shell configuration file:
+对于永久使用，请添加到您的 shell 配置文件中：
 
 ```bash
 # For bash users (add to ~/.bash_profile or ~/.bashrc)
@@ -394,7 +394,7 @@ echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.bash_profile
 echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.zshrc
 ```
 
-Then reload your shell configuration:
+然后重新加载你的 shell 配置：
 
 ```bash
 # For bash
@@ -415,14 +415,14 @@ cd ~
 git clone https://github.com/Seeed-Studio/mm-iot-esp32.git
 ```
 
-**Step 2.** Export IDF variables
+**步骤 2.** 导出 IDF 变量
 
 ```bash
 cd ~/mm-iot-esp32
 source export.sh
 ```
 
-**Step 3.** Set MMIOT_ROOT environment variable
+**步骤 3.** 设置 MMIOT_ROOT 环境变量
 
 For temporary use:
 
@@ -430,7 +430,7 @@ For temporary use:
 export MMIOT_ROOT=~/mm-iot-esp32
 ```
 
-For permanent use, add to your shell configuration file:
+对于永久使用，请添加到您的 shell 配置文件中：
 
 ```bash
 # For bash users
@@ -440,7 +440,7 @@ echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.bashrc
 echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.zshrc
 ```
 
-Then reload your shell configuration:
+然后重新加载你的 shell 配置：
 
 ```bash
 # For bash
@@ -555,7 +555,7 @@ cd ~/mm-iot-esp32/example/scan
 nano main/src/mm_app_loadconfig.c
 ```
 
-2. Locate and modify the country code line:
+2. 定位并修改国家代码行：
 
 ```c
 #define COUNTRY_CODE "US"  // Must use "US" as the product is only available for North America
@@ -563,7 +563,7 @@ nano main/src/mm_app_loadconfig.c
 
 ### 步骤 3：硬件设置
 
-1. 将 Wio-WM6180 Wi-Fi HaLow 模块连接到您的 XIAO ESP32S3
+1. 将 Wio-WM6108 Wi-Fi HaLow 模块连接到您的 XIAO ESP32S3
 
 2. 通过 USB 将 XIAO ESP32S3 连接到您的计算机
 
@@ -617,15 +617,15 @@ idf.py flash monitor
 cd ~/mm-iot-esp32/example/iperf
 ```
 
-### Step 2: Configure Network Settings
+### 步骤 2：配置网络设置
 
-1. Open the configuration file:
+1. 打开配置文件：
 
 ```bash
 nano main/src/mm_app_loadconfig.c
 ```
 
-2. Modify the following parameters:
+2. 修改以下参数：
 
 ```cpp
 // Set country code (must be "US" for North America)
@@ -638,7 +638,7 @@ nano main/src/mm_app_loadconfig.c
 
 ### 步骤 3：硬件设置
 
-1. 将 Wio-WM6180 Wi-Fi HaLow 模块连接到您的 XIAO ESP32S3
+1. 将 Wio-WM6108 Wi-Fi HaLow 模块连接到您的 XIAO ESP32S3
 2. 通过 USB 将 XIAO ESP32S3 连接到您的计算机
 
 ### 步骤 4：构建和烧录
@@ -662,7 +662,7 @@ idf.py flash monitor
 iperf -c <device_ip> -p <port> -i 1 -u -b 20M
 ```
 
-For IPv6 testing, execute this command on your gateway:
+对于 IPv6 测试，在您的网关上执行以下命令：
 
 ```bash
 iperf -c <device_ip>%wlan0 -p <port> -i 1 -V -u -b 20M
@@ -706,15 +706,15 @@ iperf -c <device_ip>%wlan0 -p <port> -i 1 -V -u -b 20M
 cd ~/mm-iot-esp32/example/web_camera_serve
 ```
 
-### Step 2: Configure Network Settings
+### 步骤 2：配置网络设置
 
-1. Open the configuration file:
+1. 打开配置文件：
 
 ```bash
 nano main/src/mm_app_loadconfig.c
 ```
 
-2. Modify the Wi-Fi HaLow credentials:
+2. 修改 Wi-Fi HaLow 凭据：
 
 ```cpp
 // Set your Wi-Fi HaLow network credentials
@@ -724,7 +724,7 @@ nano main/src/mm_app_loadconfig.c
 
 ### 步骤 3：硬件设置
 
-1. 将 Wio-WM6180 Wi-Fi HaLow 模块连接到您的 XIAO ESP32S3 Sense
+1. 将 Wio-WM6108 Wi-Fi HaLow 模块连接到您的 XIAO ESP32S3 Sense
 2. 确保您的 XIAO ESP32S3 Sense 上的摄像头模块已正确连接
 3. 通过 USB 将 XIAO ESP32S3 Sense 连接到您的计算机
 

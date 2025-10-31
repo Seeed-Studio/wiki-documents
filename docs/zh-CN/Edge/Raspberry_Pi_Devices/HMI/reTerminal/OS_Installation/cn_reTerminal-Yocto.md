@@ -85,20 +85,20 @@ mkdir reterminal-yocto
 cd reterminal-yocto
 ```
 
-- **Step 3.** Create a new directory to add layers and enter it
+- **步骤 3.** 创建一个新目录来添加层并进入该目录
 
 ```sh
 mkdir layers 
 cd layers
 ```
 
-- **Step 4.** Clone the following GitHub repo
+- **步骤 4.** 克隆以下 GitHub 仓库
 
 ```sh
 git clone -b dunfell git://git.yoctoproject.org/poky
 ```
 
-- **Step 5.** Clone the following repos
+- **步骤 5.** 克隆以下仓库
 
 ```sh
 git clone -b dunfell https://github.com/Seeed-Studio/meta-seeed-cm4.git
@@ -107,7 +107,7 @@ git clone -b dunfell https://github.com/meta-qt5/meta-qt5.git
 git clone -b dunfell https://github.com/openembedded/meta-openembedded.git
 ```
 
-- **Step 6.** Change kernel version from 5.4 to 5.10 in meta-raspberrypi layer
+- **步骤 6.** 在 meta-raspberrypi 层中将内核版本从 5.4 更改为 5.10
 
 ```sh
 cd meta-raspberrypi/
@@ -118,13 +118,13 @@ mv -f ../linux/ recipes-kernel/
 cd ../../
 ```
 
-- **Step 7.** Initialize the build environment
+- **步骤 7.** 初始化构建环境
 
 ```sh
 source layers/poky/oe-init-build-env
 ```
 
-- **Step 8.** Add the layers to the build environment
+- **步骤 8.** 将图层添加到构建环境中
 
 ```sh
 bitbake-layers add-layer ../layers/meta-raspberrypi
@@ -134,7 +134,7 @@ bitbake-layers add-layer ../layers/meta-openembedded/meta-oe
 bitbake-layers add-layer ../layers/meta-openembedded/meta-python
 ```
 
-- **Step 9.** Move back to the **build** directory and execute the following to start compiling
+- **步骤 9.** 返回到 **build** 目录并执行以下命令开始编译
 
 ```sh
 MACHINE="seeed-reterminal" bitbake rpi-test-image
@@ -324,7 +324,7 @@ Toaster 是 OpenEmbedded 和 BitBake 的 Web 界面，BitBake 是 Yocto Project�
 sudo apt update
 ```
 
-- **Step 2.** Prepare the development environment on the host PC by installing the following packages
+- **步骤 2.** 在主机 PC 上准备开发环境，安装以下软件包
 
 ```sh
 sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
@@ -341,37 +341,37 @@ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 git clone -b master git://git.yoctoproject.org/poky
 ```
 
-- **Step 4.** Navigate to the **poky** directory
+- **步骤 4.** 导航到 **poky** 目录
 
 ```sh
 cd poky
 ```
 
-- **Step 5.** Install the following toaster packages
+- **步骤 5.** 安装以下烤面包机软件包
 
 ```sh
 pip3 install --user -r bitbake/toaster-requirements.txt
 ```
 
-- **Step 6.** Revert to the following commit for the poky directory
+- **步骤 6.** 将 poky 目录恢复到以下提交
 
 ```sh
 git reset --hard 7ade8346b3a09983257589d22aaada47e0eec010
 ```
 
-- **Step 7.** Source the build environment script
+- **步骤 7.** 获取构建环境脚本
 
 ```sh
 source oe-init-build-env
 ```
 
-- **Step 8.** From the **build** directory, start toaster
+- **步骤 8.** 从 **build** 目录启动 toaster
 
 ```sh
 source toaster start
 ```
 
-- **Step 9.** To access the Toaster web interface, open your favorite browser and enter the following
+- **步骤 9.** 要访问 Toaster 网页界面，请打开您喜欢的浏览器并输入以下内容
 
 ```sh
 http://127.0.0.1:8000
@@ -451,16 +451,16 @@ source toaster start webport=9000
 - Value: overlays/reTerminal.dtbo overlays/i2c3.dtbo
 ```
 
-**Note:** Make sure to add a space before **overlays/xxxx**
+**注意：** 确保在 **overlays/xxxx** 前添加一个空格
 
-- **Step 19.** Repeat the same to add the following
+- **步骤 19。** 重复相同步骤以添加以下内容
 
 ```sh
 - Variable:PACKAGECONFIG_append_pn-qtbase
 - Value: eglfs 
 ```
 
-**Note:** Make sure to add a space before **eglfs**
+**注意：** 确保在 **eglfs** 前添加一个空格
 
 ```sh
 - Variable:DISTRO_FEATURES_remove
@@ -545,7 +545,9 @@ source toaster start webport=9000
 
 这个演讲主要专注于解释如何使用 Yocto 项目轻松地为 CM4 载板、X86 和 STM32 开发板创建自定义 Linux 镜像。此外，在演讲的最后，还有两个基于 Qt、LVGL 的 HMI 演示，以及一个展示使用 Mender 对这些 SBC 进行安全可靠的 OTA 更新的演示。
 
-<p style={{textAlign: 'center'}}><iframe width="720" height="480" src="https://www.youtube.com/embed/OHT9f_NOEpA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<div class="video-container">
+<iframe width="720" height="480" src="https://www.youtube.com/embed/OHT9f_NOEpA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## 资源
 

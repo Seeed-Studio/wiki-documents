@@ -16,7 +16,9 @@ Seeed 的 ReSpeaker 4-Mic Linear Array Kit 是一款为树莓派设计的扩展�
 
 ReSpeaker 4-Mic Linear Array Kit for Raspberry Pi 由两块板组成，一块是语音配件 HAT，另一块是四麦克风线性阵列。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NxZx9nz67Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ReSpeaker 4-Mic Linear Array Kit for Raspberry Pi 在树莓派操作系统中支持 8 个输入和 8 个输出通道。前 6 个输入通道用于麦克风录音（只有前 4 个输入通道是有效的捕获数据），其余 2 个输入通道是播放的回声通道。前 2 个输出通道用于声音输出，其余 6 个输出通道是虚拟通道。
 
@@ -103,9 +105,9 @@ sudo reboot
 
 ```
 
-**Step 2. Check the Sound Card**
+**步骤 2. 检查声卡**
 
-Tap the command below to check the record device.
+点击下方的命令来检查录音设备。
 
 ```
 pi@raspberrypi:~ $ arecord -L
@@ -139,7 +141,7 @@ plughw:CARD=seeed8micvoicec,DEV=0
     Hardware device with all software conversions
 ```
 
-Use the following command to check the play device.
+使用以下命令检查播放设备。
 
 ```
 pi@raspberrypi:~ $ aplay -L
@@ -201,9 +203,9 @@ plughw:CARD=seeed8micvoicec,DEV=0
 
 ```
 
-**Step 3. Record and Play**
+**步骤 3. 录制并播放**
 
-You can record then play, or you can record and play at the same time.
+你可以先录制然后播放，或者可以同时录制和播放。
 
 ```
 #It will capture sound on AC108 and save as a.wav
@@ -266,7 +268,7 @@ pip3 install -r requirements.txt
 python3 recording_examples/get_device_index.py
 ```
 
-You will see the device ID as below.
+您将看到如下所示的设备 ID。
 
 ```
 Input Device id  2  -  seeed-8mic-voicecard: - (hw:1,0)
@@ -284,7 +286,7 @@ python3 recording_examples/record.py
 python3 recording_examples/record_one_channel.py
 ```
 
-To play the recorded samples you can either use aplay system utility, for example
+要播放录制的样本，您可以使用 aplay 系统实用程序，例如
 
 ```bash
 aplay -f cd -Dhw:0 output.wav #for Stereo sound

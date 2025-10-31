@@ -255,7 +255,7 @@ The Things Network V3 网络服务器要求您生成一个唯一的 MQTT 密码�
 npm install -g npm@2.x
 ```
 
-Once installed, open a command prompt and run the following command to ensure Node.js and npm are installed correctly.
+安装完成后，打开命令提示符并运行以下命令，以确保 Node.js 和 npm 已正确安装。
 
 ```cpp
 node --version && npm --version
@@ -278,7 +278,7 @@ node --version && npm --version
 npm install -g --unsafe-perm node-red
 ```
 
-If Node-RED is installed as a global npm package, then execute the command node-red directly:
+如果 Node-RED 被安装为全局 npm 包，那么直接执行命令 node-red：
 
 ```cpp
 node-red

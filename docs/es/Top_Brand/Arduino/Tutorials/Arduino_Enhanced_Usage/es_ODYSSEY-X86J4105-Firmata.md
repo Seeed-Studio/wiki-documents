@@ -165,7 +165,7 @@ npm init -y
 npm install --save firmata # Installing firmata.js
 ```
 
-### To blink an LED connected on D13
+### Para hacer parpadear un LED conectado en D13
 
 ```java
 const Board = require("firmata");

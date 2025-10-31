@@ -117,7 +117,9 @@ Mycroft Precise is Apache-2.0 License project, which means you can modify and di
 
 **Your personal home barista comes to life with this voice-enabled coffee machine**: An open-source, private-by-design coffee machine that keeps your favorite coffee and caffeination schedule private.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4gN1bvl24ZM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Tech Support & Product Discussion
 

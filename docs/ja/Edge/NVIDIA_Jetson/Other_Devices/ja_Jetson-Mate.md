@@ -237,7 +237,7 @@ Dockerデーモンを再起動します：
 sudo systemctl daemon-reload && sudo systemctl restart docker
 ```
 
-Validate the Docker default runtime as NVIDIA:
+Docker のデフォルトランタイムを NVIDIA として検証する：
 
 ```shell
 sudo docker info | grep -i runtime
@@ -266,7 +266,7 @@ sudo apt update && sudo apt install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-Disable the swap, You have to turn this off every time you reboot.
+スワップを無効にします。再起動するたびにこれをオフにする必要があります。
 
 ```
 sudo swapoff -a
@@ -415,7 +415,7 @@ sudo kubectl apply -f cuda-samples.yaml
 kubectl get pods
 ```
 
-Validate the sample pod logs to support CUDA libraries:
+サンプルポッドログを検証して CUDA ライブラリをサポートする：
 
 ```shell
 kubectl logs nvidia-l4t-base

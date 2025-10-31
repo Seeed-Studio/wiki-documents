@@ -357,7 +357,7 @@ void loop()
 }
 ```
 
-#### Demo2 : Deep Sleep Mode and wake-up
+#### Demo2 : Modo de Sueño Profundo y despertar
 
 ```cpp
 /*

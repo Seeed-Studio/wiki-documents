@@ -118,13 +118,13 @@ Conecta el sensor PIR con "D5" en el Grove Base Hat.
 sudo apt-get update
 ```
 
-- **Step 2** Install the wiringPi.
+- **Paso 2** Instala wiringPi.
 
 ```
 sudo pip install wiringPi
 ```
 
-If you use Pi 4, please select the version of wiringPi
+Si usas Pi 4, por favor selecciona la versión de wiringPi
 
 ```
 sudo pip install wiringPi==2.52.0

@@ -196,10 +196,10 @@ reComputer J401B 系列在随附的 NVMe SSD 上预装了 JetPack 5.1.3，因此
 
 ### 支持的模块
 
-- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
-- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
-- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
-- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
+- [NVIDIA® Jetson Orin™ Nano 模块 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
+- [NVIDIA® Jetson Orin™ Nano 模块 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
+- [NVIDIA® Jetson Orin™ NX 模块 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
+- [NVIDIA® Jetson Orin™ NX 模块 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
 
 ### 前提条件
 
@@ -375,7 +375,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例如（用户名："nvidia"，密码："nvidia"，设备名称："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
@@ -435,7 +435,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 cd Linux_for_Tegra/bootloader/t186ref/BCT
 ```
 
-**Step 4:** Open the file **"tegra234-mb2-bct-scr-p3767-0000.dts"** and add the following lines under  **tfc** section
+**步骤 4:** 打开文件 **"tegra234-mb2-bct-scr-p3767-0000.dts"** 并在 **tfc** 部分下添加以下行
 
 ```sh
 tfc {
@@ -452,13 +452,12 @@ cd Linux_for_Tegra
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+例如（用户名："nvidia"，密码："nvidia"，设备名称："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
 ```
-
-**Step 6:** Flash the system to the NVMe SSD
+**步骤 6:** 将系统刷写到 NVMe 固态硬盘
 
 ```bash
 

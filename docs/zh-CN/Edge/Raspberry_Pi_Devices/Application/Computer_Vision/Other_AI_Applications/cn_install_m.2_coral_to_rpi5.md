@@ -75,25 +75,25 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-### Step 2: Install requirements
+### 步骤 2：安装依赖
 
-Open a terminal and run the following commands to install the required packages:
+打开终端并运行以下命令来安装所需的软件包：
 
 ```
 sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev tar wget vim
 ```
 
-### Step 3: Download Python3.8
+### 步骤 3：下载 Python3.8
 
-Open a terminal and run the following commands to download Python3.8:
+打开终端并运行以下命令来下载 Python3.8:
 
 ```
 wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tgz
 ```
 
-### Step 4: Install Python3.8
+### 步骤 4：安装 Python3.8
 
-Open a terminal and run the following commands to install Python3.8:
+打开终端并运行以下命令来安装 Python3.8:
 
 ```
 sudo tar zxf Python-3.8.0.tgz
@@ -104,9 +104,9 @@ sudo make altinstall
 cd ..
 ```
 
-### Step 5: Check Python3.8
+### 步骤 5：检查 Python3.8
 
-Open a terminal and run the following commands to check Python3.8:
+打开终端并运行以下命令来检查 Python3.8:
 
 ```
 python3.8 -V
@@ -122,15 +122,15 @@ python3.8 -V
 python3.8 -m venv coral_venv
 ```
 
-## Configure Hardware Settings
+## 配置硬件设置
 
-Open a terminal and run the following commands to open ```config.txt```:
+打开终端并运行以下命令来打开 ```config.txt```：
 
 ```
 sudo nano /boot/firmware/config.txt
 ```
 
-And then add the following text to ```config.txt```:
+然后将以下文本添加到```config.txt```中：
 
 ```
 [all]
@@ -141,7 +141,7 @@ kernel=kernel8.img
 dtoverlay=pineboards-hat-ai
 ```
 
-Save and close the file by pressing CTRL+X, then Y to confirm. And then reboot the system.
+通过按 CTRL+X 保存并关闭文件，然后按 Y 确认。之后重启系统。
 
 ```
 sudo reboot
@@ -159,17 +159,17 @@ sudo reboot
 uname -a
 ```
 
-## Install the PCIe Driver and Edge TPU Runtime
+## 安装 PCIe 驱动程序和 Edge TPU 运行时
 
-### Step 1: Enter the virtual environment
+### 步骤 1: 进入虚拟环境
 
 ```
 source coral_venv/bin/activate
 ```
 
-### Step 2: Install Edge TPU Runtime
+### 步骤 2: 安装 Edge TPU 运行时
 
-Add the Google Coral Edge TPU package repository
+添加 Google Coral Edge TPU 软件包仓库
 
 ```
 echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
@@ -185,7 +185,7 @@ sudo apt-get update
 sudo apt-get install cmake libedgetpu1-std devscripts debhelper dkms dh-dkms
 ```
 
-### Step 3: Install the PCIe driver
+### 步骤 3: 安装 PCIe 驱动程序
 
 ```
 git clone https://github.com/google/gasket-driver.git
@@ -210,7 +210,7 @@ sudo reboot
 
 ```
 
-## Check Edge TPU
+## 检查 Edge TPU
 
 ```
 lspci -nn | grep 089a
@@ -236,9 +236,9 @@ pip install --upgrade pip
 python3 -m pip install --extra-index-url https://google-coral.github.io/py-repo/ pycoral~=2.0
 ```
 
-### Step 2: Test the Edge TPU
+### 步骤 2: 测试 Edge TPU
 
-Install resources for the example:
+为示例安装 retranslations：
 
 ```
 mkdir coral && cd coral
@@ -264,7 +264,9 @@ python3 examples/classify_image.py \
 
 我们已经成功在树莓派 5 上安装了 M.2 Coral 加速器并测试了 Edge TPU。我们还在 Coral M.2 加速器上运行了 YOLOv8s 模型，使用 int8 量化，输入尺寸为 640x640，批处理大小为 1。推理时间约为 800-1000ms，相当于大约 1.1 帧每秒（FPS）。
 
+<div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/4c8UX06d9Tg" title="Raspberry Pi AI: YOLOv8s Object Detection with Int8 Format Using M.2 Coral Accelerator on RPi 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 技术支持与产品讨论
 

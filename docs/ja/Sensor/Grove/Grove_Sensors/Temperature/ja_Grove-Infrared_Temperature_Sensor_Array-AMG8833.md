@@ -353,7 +353,9 @@ pi@raspberrypi:~/Seeed_AMG8833_Raspberry_Python $ python thermal_cam.py
 
 この製品の紹介動画と簡単なデモです。ぜひ試してみてください。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NG0E-qs8zgQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技術サポートと製品ディスカッション
 

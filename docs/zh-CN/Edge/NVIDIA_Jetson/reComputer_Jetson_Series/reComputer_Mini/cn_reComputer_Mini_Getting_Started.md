@@ -373,7 +373,7 @@ Jetpack6 镜像文件大小约为 **16.7GB**，下载时间大约需要 60 分�
 在我们进行安装步骤之前，需要确保开发板处于强制恢复模式。
 :::
 
-<div align="center">
+<div class="video-container">
   <iframe width="800" height="450" src="https://www.youtube.com/embed/HEIXFkizP5Y" title="Enter Force Recovery Mode (reComputer Mini)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -417,7 +417,9 @@ reComputer Jetson J30/40 Mini 已推出一键刷写脚本，支持刷写 Jetpack
 wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && sudo chmod 777 ./flashing.sh && ./flashing.sh
 ```
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFBzTlyOjhE?si=uNN-l5VVGbAyGnot" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::caution
 免责声明：一键刷写脚本旨在使 jetpack 刷写更快速。当前版本是测试版，可能存在许多问题。希望您能理解。如果出现刷写问题，请按照下面的`逐步刷写设备`进行操作，并在我们的 [Discord Jetson 频道](https://discord.com/channels/862602258452578314/930732339624026152)中提供反馈。我们将及时修复这些问题，并在不久的将来改进此功能。
@@ -435,7 +437,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**Step 2:** Execute the following command to flash jetpack system to the NVMe SSD:
+**步骤 2:** 执行以下命令将 jetpack 系统刷写到 NVMe SSD：
 
 ```bash
 cd mfi_xxxx
@@ -451,7 +453,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 刷写命令可能需要运行 2-10 分钟。
 :::
 
-**步骤 3：** 使用板上的 HDMI 连接器将 J501 连接到显示器，并完成初始配置设置：
+**步骤3：** 使用主板上的 **带有 DisplayPort 功能的 USB Type-C** 将 J401 连接到显示器，并完成初始配置设置。
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>

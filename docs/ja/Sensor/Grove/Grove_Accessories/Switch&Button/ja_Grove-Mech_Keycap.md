@@ -254,8 +254,8 @@ uint32_t Wheel(byte WheelPos) {
 |![画像を入力してください](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![画像を入力してください](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![画像を入力してください](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/thumbnail.jpg)|
 |[今すぐ購入](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[今すぐ購入](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[今すぐ購入](https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html)|
 
-- **Step 2**. Grove Base Hat を Raspberry に接続します。
-- **Step 3**. Grove - Mech Keycap を Base Hat の PWM ポート（ポート 12）に接続します。
+- **ステップ 2**. Grove Base Hat を Raspberry に接続します。
+- **ステップ 3**. Grove - Mech Keycap を Base Hat の PWM ポート（ポート 12）に接続します。
 
 :::note
 PWM 機能のピンは以下のピン列の値のいずれかを使用し、対応するスロットにデバイスを接続してください。
@@ -266,14 +266,14 @@ PWM 機能のピンは以下のピン列の値のいずれかを使用し、対�
 |18|D18|
 |12|PWM|
 
-- **Step 4**. Raspberry Pi を USB ケーブルを使用して PC に接続します。
+- **ステップ 4**. Raspberry Pi を USB ケーブルを使用して PC に接続します。
 
 ![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/Mech_Hat.jpg)
 
 #### ソフトウェア
 
-- **Step 1**. [Setting Software](https://wiki.seeedstudio.com/ja/Grove_Base_Hat_for_Raspberry_Pi/#installation) に従って開発環境を設定します。
-- **Step 2**. grove.py ライブラリをクローンしてソースファイルをダウンロードします。
+- **ステップ 1**. [Setting Software](https://wiki.seeedstudio.com/ja/Grove_Base_Hat_for_Raspberry_Pi/#installation) に従って開発環境を設定します。
+- **ステップ 2**. grove.py ライブラリをクローンしてソースファイルをダウンロードします。
 
 ```
 cd ~
@@ -281,7 +281,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 
-- **Step 3**. 以下のコマンドを実行してコードを実行します。
+- **ステップ 3**. 以下のコマンドを実行してコードを実行します。
 
 ```
 cd grove.py/grove
@@ -406,7 +406,9 @@ KeyboardInterrupt
 
 こちらはこの製品の紹介動画です。簡単なデモが含まれており、試してみることができます。
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wz1GzW2-VW4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技術サポートと製品ディスカッション
 

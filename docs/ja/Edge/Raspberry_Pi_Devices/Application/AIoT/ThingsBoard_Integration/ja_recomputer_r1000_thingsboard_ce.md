@@ -108,7 +108,7 @@ ThingsBoardの実行にはJava 17が必要です。ターミナルを開きま�
    sudo service postgresql start
    ```
 
-3. Set the password for the `postgres` user:
+3. `postgres` ユーザーのパスワードを設定する：
 
    ```bash
    sudo -u postgres psql
@@ -141,7 +141,7 @@ ThingsBoardの実行にはJava 17が必要です。ターミナルを開きま�
    export SQL_POSTGRES_TS_KV_PARTITIONING=MONTHS
    ```
 
-3. (Optional) Update memory settings for machines with 4GB of RAM:
+3. （オプション）4GBのRAMを搭載したマシンのメモリ設定を更新する：
 
    ```bash
    export JAVA_OPTS="$JAVA_OPTS -Xms2G -Xmx2G"

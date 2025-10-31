@@ -34,7 +34,9 @@ Este hat se comunica con Raspberry Pi a través de la interfaz I2C, también hem
 
 Qué módulo tan increíble, con su ayuda, puedes usar gestos para controlar luces, TV, altavoces... Solo libera tu imaginación y crea proyectos más mágicos.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/iLav34w77ns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130-p-4073.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
@@ -164,7 +166,9 @@ make clean && make
 - **Electrodo de toque**: Toca con tu dedo en el área específica, obtendrás Centro, Este, Oeste, Sur y Norte.  
 - **Electrodo de doble toque**: Toca dos veces con tu dedo en el área específica, obtendrás Centro, Este, Oeste, Sur y Norte.  
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/__9Vas2kGHw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Visor de Esquemas en Línea
 

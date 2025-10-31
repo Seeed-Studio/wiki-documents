@@ -203,12 +203,6 @@ display:
 <TabItem value="For E1002" label="For E1002">
 
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
 
 # define font to display words
 font:
@@ -222,9 +216,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -382,12 +376,6 @@ When you see the feedback like the following image, it means the code is running
 <TabItem value="For E1002" label="For E1002">
 
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
 
 # define font to display words
 font:
@@ -401,9 +389,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -570,12 +558,6 @@ display:
 <TabItem value="For E1002" label="For E1002">
 
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]  
 
 # Example ESPHome configuration to retrieve weather data
 # Get info from HA, as string format
@@ -609,9 +591,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -743,12 +725,6 @@ display:
 <TabItem value="For E1002" label="For E1002">
 
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
 
 # define font to display words
 font:
@@ -769,9 +745,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -886,7 +862,7 @@ Step 4. Upload the downloaded image to the **image** folder you created earlier 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-For best results on e-paper displays, use high-contrast images with clear black and white areas. JPG and PNG formats are both supported.
+If you want to display complex and beautiful landscape pictures, it's best to perform image dithering in advance [in our website](https://sensecraft.seeed.cc/hmi/tools/dither) for a better effect. JPG and PNG formats are both supported.
 :::
 
 #### Configuring ESPHome for Image Display
@@ -900,9 +876,9 @@ Step 5. Add the following code to your ESPHome configuration file after the `cap
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
-    type: BINARY                            # Binary mode works best for e-paper
+    type: BINARY                            # Binary works for monochrome, RGB565 works for colorful eink
     resize: 800x480                         # Resize to match display resolution
-    invert_alpha: true                      # Invert colors if needed
+    invert_alpha: true                      # Invert colors is needed
 
 spi:
   clk_pin: GPIO7
@@ -928,20 +904,18 @@ display:
 </TabItem>
 <TabItem value="For E1002" label="For E1002">
 
+:::tip
+Please update your ESPHome version to **2025.10.2** above.
+:::
+
 ```yaml
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
+
 
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
-    type: BINARY                            # Binary mode works best for e-paper
+    type: RGB565                            #  Binary works for monochrome, RGB565 works for colorful eink
     resize: 800x480                         # Resize to match display resolution
-    invert_alpha: true                      # Invert colors if needed
 
 # define SPI interface
 spi:
@@ -949,9 +923,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
+    model: 7.3in-spectra-e6
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -1055,14 +1029,12 @@ Try unplugging and replugging it several times, or just install the driver accor
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

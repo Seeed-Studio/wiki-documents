@@ -1,11 +1,11 @@
 ---
 description: This article mainly describes how to use the Lopaka website to create exquisite user interfaces and apply them in the reTerminal E series.
 title: reTerminal E Series ePaper Display Work with Lopaka
-image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.webp
 slug: /reterminal_e10xx_with_lopaka
 sidebar_position: 2
 last_update:
-  date: 12/9/2025
+  date: 9/12/2025
   author: Martin
 ---
 

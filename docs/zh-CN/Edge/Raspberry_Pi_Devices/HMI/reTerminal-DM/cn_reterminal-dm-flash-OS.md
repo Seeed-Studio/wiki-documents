@@ -135,25 +135,25 @@ git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-- **Step 2.** Install **libusb**
+- **步骤 2.** 安装 **libusb**
 
 ```sh
 brew install libusb
 ```
 
-- **Step 3.** Install **pkg-config**
+- **步骤 3.** 安装 **pkg-config**
 
 ```sh
 brew install pkg-config
 ```
 
-- **Step 4.** Build using make
+- **步骤 4.** 使用 make 构建
 
 ```sh
 make
 ```
 
-- **Step 5.** Run the binary
+- **步骤 5.** 运行二进制文件
 
 ```sh
 sudo ./rpiboot
@@ -209,13 +209,13 @@ sudo ./rpiboot
 sudo apt-get update
 ```
 
-- **Step 2.** Install **Git** by the following command
+- **步骤 2.** 通过以下命令安装 **Git**
 
 ```sh
 sudo apt install git libusb-1.0-0-dev pkg-config build-essential
 ```
 
-- **Step 3.** Git might produce an error if the date is not set properly. Type the following to correct this
+- **步骤 3.** 如果日期设置不正确，Git 可能会产生错误。输入以下内容来纠正这个问题
 
 ```sh
 sudo date MMDDhhmm
@@ -230,13 +230,13 @@ git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-- **Step 5.** Build and install the usbboot tool
+- **步骤 5.** 构建并安装 usbboot 工具
 
 ```sh
 make
 ```
 
-- **Step 6.** Run the usbboot tool and it will wait for a connection
+- **步骤 6.** 运行 usbboot 工具，它将等待连接
 
 ```sh
 sudo ./rpiboot
@@ -253,13 +253,13 @@ sudo ./rpiboot
 sudo apt install snap
 ```
 
-- **Step 9.** Download **rpi-imager**
+- **步骤 9.** 下载 **rpi-imager**
 
 ```sh
 snap install rpi-imager
 ```
 
-- **Step 10.** Open Raspberry Pi Imager software
+- **步骤 10。** 打开 Raspberry Pi Imager 软件
 
 ```sh
 rpi-imager
@@ -361,14 +361,14 @@ raspberry
 ssh pi@raspberrypi.local
 ```
 
-- **Step 2.** Type **yes** for the following message
+- **步骤 2.** 对以下消息输入 **yes**
 
 ```sh
 ECDSA key fingerprint is SHA256:XXXXXXX.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-- **Step 3.** When it asks for the password, type the following
+- **步骤 3.** 当它要求输入密码时，请输入以下内容
 
 ```sh
 raspberry
@@ -407,13 +407,13 @@ sudo apt install git -y
 git clone --depth 1 https://github.com/Seeed-Studio/seeed-linux-dtoverlays
 ```
 
-- **Step 2.** Enter the repo
+- **步骤 2.** 进入仓库
 
 ```sh
 cd seeed-linux-dtoverlays
 ```
 
-- **Step 3.** Type the following to install the drivers
+- **步骤 3.** 输入以下内容以安装驱动程序
 
 ```sh
 sudo ./scripts/reTerminal.sh --device reTerminal-DM

@@ -14,7 +14,7 @@ last_update:
 
 Bees_Shield hará que la interfaz con múltiples módulos estilo Bee (XBee, GPRS Bee, Bluetooth Bee y otros) sea más fácil que nunca. Además de dos conectores estilo Bee de 20 pines con paso de 2.0, también tiene una gran área de prototipado y un puerto serie por software personalizable para facilitar el prototipado.
 
-[![Get one now](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Bees-Shield-p-672.html)
+[![Obtener Uno Ahora](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Bees-Shield-p-672.html)
 
 ## Versiones
 ---------------

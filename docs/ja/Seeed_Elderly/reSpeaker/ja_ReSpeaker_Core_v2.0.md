@@ -349,7 +349,7 @@ ls /dev/cu.usb* (Mac)
 ls /dev/ttyACM* (Linux)
 ```
 
-You should get back something like:
+次のようなものが返ってくるはずです：
 
 ```
 /dev/cu.usbmodem14XX where XX will vary depending on which USB port you used (on Mac)
@@ -382,7 +382,7 @@ ReSpeaker v2.0用のWi-Fiを選択し、```Enter```キーを押してWi-Fiパス
 ip address
 ```
 
-In the example below, we can see that this ReSpeaker's IP address is ```192.168.7.108```
+以下の例では、このReSpeakerのIPアドレスが```192.168.7.108```であることがわかります
 
 ```
 root@v2:/home/respeaker# ip address
@@ -618,7 +618,7 @@ respeaker@v2:~$ ps aux|grep pulse|grep -v grep
 respeak+  1109  0.0  0.7 363272  7932 ?        S<l  01:01   0:00 /usr/bin/pulseaudio --start --log-target=syslog
 ```
 
-If it's not, please refer to PulseAudio's documentation to enable the auto-spawn of PulseAudio. Then test via:
+もしそうでなければ、PulseAudioの自動起動を有効にするためにPulseAudioのドキュメントを参照してください。その後、以下でテストしてください：
 
 ```
 parecord --channels=8 --rate=16000 --format=s16le hello2.wav
@@ -638,7 +638,9 @@ aplay hello3.wav
 
 [ReSpeaker Core V2 & Wio Link Tutorial](https://wiki.seeedstudio.com/ja/ReSpeaker_Core_V2_&_Wio_Link/)に従って、ReSpeaker Core V2を使用してIFTTT経由でWio Linkを制御してください。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/OJ0i6QrZCSM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## GPIOで遊ぶ
 
@@ -833,7 +835,7 @@ if __name__ == '__main__':
     main()
 ```
 
-The result should be something like:
+結果は次のようになるはずです：
 
 ``` python
 respeaker@v2:~$ python tsl2561.py       
@@ -873,7 +875,7 @@ Light value is 31
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Ap.png)
 
-- **ステップ1.** 以下のコマンドを実行してReSpeaker Core v2.0のApを有効化します。
+- **ステップ 1.** 以下のコマンドを実行してReSpeaker Core v2.0のApを有効化します。
 
 ```
 sudo systemctl enable re-wifi.service
@@ -881,21 +883,21 @@ sudo reboot -f
 
 ```
 
-- **Step 2.** ReSpeaker Core v2.0のAPにアクセスします。ReSpeaker Core v2.0が再起動した後、スマートフォンまたはコンピューターでWiFiを検索してください。AP名は
+- **ステップ 2.** ReSpeaker Core v2.0のAPにアクセスします。ReSpeaker Core v2.0が再起動した後、スマートフォンまたはコンピューターでWiFiを検索してください。AP名は
    **ReSpeaker_xxxx**のようなものが見つかります。ユーザー名は**respeaker**、パスワードも**respeaker**です。
 
-- **Step 3.** これで、Putty、SSHモードを使用してシリアルコンソールにアクセスできます。Wlan1のIPは**192.168.42.1**です。この IPを使用して接続を設定する必要があります。
+- **ステップ 3.** これで、Putty、SSHモードを使用してシリアルコンソールにアクセスできます。Wlan1のIPは**192.168.42.1**です。この IPを使用して接続を設定する必要があります。
 ReSpeaker Core v2.0のユーザー名は**respeaker**、パスワードは**respeaker**です。
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/AP2.png)
 
-- **Step 3.** シリアルコンソールにアクセスしたら、[WiFiの設定](https://wiki.seeedstudio.com/ja/ReSpeaker_Core_v2.0/#a-wi-fi-setting-up)を行うことができます。
+- **ステップ 3.** シリアルコンソールにアクセスしたら、[WiFiの設定](https://wiki.seeedstudio.com/ja/ReSpeaker_Core_v2.0/#a-wi-fi-setting-up)を行うことができます。
 
 **Q3: 音量を調整するにはどうすればよいですか？**
 
 **A3:** Alsamixerを使用して再生音量とキャプチャ感度を調整できます。
 
-- **Step 1.** 以下のコードを入力してAlsamixerを開きます：
+- **ステップ 1.** 以下のコードを入力してAlsamixerを開きます：
 
 ```
 alsamixer
@@ -1002,7 +1004,9 @@ ReSpeaker Core v2.0を再度接続してください。
 
 このデモでは、ReSpeaker Core v2.0を使用してAlexaと会話します。友達のようにReSpeaker Core v2.0に質問したり会話したりできます。さらに、この製品はGoogle AssistantやBingとも連携できます。ホットワードはSnowboyで、もちろん独自のウェイクアップワードを作成することもできます。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/q7b8iLqRiPY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 <br />
 
@@ -1012,7 +1016,9 @@ ReSpeaker Core v2.0を再度接続してください。
 
 高度なアルゴリズムと6つの高品質マイクロフォンにより、結果は驚くべきものです！16メートル（52フィート）離れた場所からReSpeaker Core v2.0をウェイクアップできます！
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/PpcwvOLlpEw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 **ReSpeaker Core v2.0 - 音声受付システム**
 
@@ -1020,14 +1026,18 @@ ReSpeaker Core v2.0を再度接続してください。
 
 あなたの家や職場の前にこのような音声受付システムがあったらどうでしょうか？クールではありませんか？
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/tdIsCRXKoVI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 <br />
 
 **ReSpeaker Core v2.0 - シンプル音声受付システム**
 
 受付サービスの基本機能は、訪問者を迎え、歓迎の気持ちを伝え、オフィスへの不正アクセスを防ぐことです。ReSpeaker Core v2.0の機能を活用して音声受付サービスを設計しました。このシステムは訪問者と対話し、訪問される人にメッセージを送ることができます。将来的には、小さなオフィス従業員の電話リストデータベースを設計し、従業員がシステムにメッセージを送ると、システムがReSpeaker Core v2.0のGPIO機能を使用して訪問者のためにドアを開けることができます。Microsoft Bing Speech to textサービスとTwilio/Tencentメッセージ APIを使用してPythonスクリプトを作成しました。詳細については、[ReSpeaker音声受付システム](https://project.seeedstudio.com/SeeedStudio/respeaker-voice-reception-system-209a6c)を参照してください。
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/-nTOa3LLpVo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 技術サポート & 製品ディスカッション
 

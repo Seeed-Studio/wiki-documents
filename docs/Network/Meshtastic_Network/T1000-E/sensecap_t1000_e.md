@@ -7,27 +7,35 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecap_t1000_e
 sidebar_position: 2
 last_update:
-  date: 7/1/2024
-  author: Jessie
+  date: 10/29/2025
+  author: Michelle
 ---
 
 ## Video Tutorial
 
 ### Part 1: Unboxing Setup
 
+<div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/9sCHpWPSPcw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Part 2: Status Indicators
 
+<div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/8p34S_9DDEQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Part 3: Flash New Firmware
 
+<div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/li6DTOeXK3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### Part 4: Troubleshooting Instruction
 
+<div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/iWahTuXwYnU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Get Started
 
@@ -41,7 +49,7 @@ Download `Meshtastic` App:
 Press once to power on the device, there will be a rising melody, and the LED light will stay on for about 1s.
 
 :::tip
-If the device doesn't respond when you press the button, please charge it first.
+If the device doesn't respond when you press the button, please charge it first. Do not use the fast-charging charger.
 :::
 
 ### Connect via App
@@ -441,9 +449,19 @@ When you have completed the above steps, then you can follow this [step](https:/
 
  Check if the port is correct, or try another port.
 
+### Signal Quality
+
+  - **SNR** reflects the quality of the communication link. Normal device usually operates above -7 dB. Device with a SNR lower than -10 dB indicates poor performance.
+
+  - **RSSI** is determined jointly by the device and its surrounding environment. Normal device usually operates above -110 dBm. Device with an RSSI lower than -115 dBm is considered to have poor performance. 
+
+      To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
+
 ## Resource
 
-[Meshtastic Doc](https://meshtastic.org/docs/introduction/)
+- [Meshtastic Doc](https://meshtastic.org/docs/introduction/)
+- [SenseCAP T1000 Tracker Datasheet](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
+
 
 ## Tech Support & Product Discussion
 

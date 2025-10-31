@@ -466,7 +466,7 @@ Grove - 16 x 2 LCDは、ArduinoやRaspberry Piに最適なI2C LCDディスプレ
     <a class="get_one_now_item" href="/ja/Grove-2-Channel_SPDT_Relay/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove - 4-Channel SPDT Relay
+#### Grove - 4チャンネルSPDTリレー
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -484,7 +484,7 @@ Grove - 16 x 2 LCDは、ArduinoやRaspberry Piに最適なI2C LCDディスプレ
     <a class="get_one_now_item" href="/ja/Grove-4-Channel_SPDT_Relay/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove - 8-Channel Solid State Relay
+#### Grove - 8チャンネルソリッドステートリレー
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -502,7 +502,7 @@ Grove - 16 x 2 LCDは、ArduinoやRaspberry Piに最適なI2C LCDディスプレ
     <a class="get_one_now_item" href="/ja/Grove-8-Channel_Solid_State_Relay/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove - Optocoupler Relay (M281)
+#### Grove - フォトカプラリレー (M281)
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -520,7 +520,7 @@ Grove - 16 x 2 LCDは、ArduinoやRaspberry Piに最適なI2C LCDディスプレ
     <a class="get_one_now_item" href="/ja/Grove-Optocoupler_Relay-M281/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove - Servo
+#### Grove - サーボ
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -538,7 +538,7 @@ Grove - 16 x 2 LCDは、ArduinoやRaspberry Piに最適なI2C LCDディスプレ
     <a class="get_one_now_item" href="/ja/Grove-Servo/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove - Speaker
+#### Grove - スピーカー
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -556,7 +556,7 @@ Grove - 16 x 2 LCDは、ArduinoやRaspberry Piに最適なI2C LCDディスプレ
     <a class="get_one_now_item" href="/ja/Grove-Speaker/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove - Speaker Plus
+#### Grove - スピーカープラス
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1055,7 +1055,7 @@ Grove - 16 x 2 LCDは、ArduinoやRaspberry Piに最適なI2C LCDディスプレ
 </div>
 
 
-#### Grove - Red LED Matrix w/Driver
+#### Grove - 赤色LEDマトリックス（ドライバー付き）
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1079,7 +1079,7 @@ Grove - 16 x 2 LCDは、ArduinoやRaspberry Piに最適なI2C LCDディスプレ
 
 ### スイッチ & ボタン
 
-#### Grove - Button
+#### Grove - ボタン
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1151,7 +1151,7 @@ Grove - LED Buttonは、Grove - Yellow Button、Grove - Blue LED Button、Grove 
 </div>
 
 
-#### Grove Dual Button
+#### Grove デュアルボタン
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1170,7 +1170,7 @@ Grove - LED Buttonは、Grove - Yellow Button、Grove - Blue LED Button、Grove 
     <a class="get_one_now_item" href="/ja/Grove-Dual-Button/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
-#### Grove-Mech keycap
+#### Grove-メカニカルキーキャップ
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1190,7 +1190,7 @@ Grove - LED Buttonは、Grove - Yellow Button、Grove - Blue LED Button、Grove 
 </div>
 
 
-#### Grove - Thumb Joystick
+#### Grove - サムジョイスティック
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1210,7 +1210,7 @@ Grove - LED Buttonは、Grove - Yellow Button、Grove - Blue LED Button、Grove 
 </div>
 
 
-#### Grove - Magnetic Switch
+#### Grove - 磁気スイッチ
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1233,7 +1233,7 @@ Grove - LED Buttonは、Grove - Yellow Button、Grove - Blue LED Button、Grove 
 ### 入出力
 
 
-#### Grove - I2C Hub
+#### Grove - I2C ハブ
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1254,7 +1254,7 @@ Grove - LED Buttonは、Grove - Yellow Button、Grove - Blue LED Button、Grove 
 
 
 
-#### Grove - I2C Hub(6 Port)
+#### Grove - I2C ハブ（6ポート）
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1274,7 +1274,7 @@ Grove - LED Buttonは、Grove - Yellow Button、Grove - Blue LED Button、Grove 
 </div>
 
 
-#### Grove - 8 Channel I2C Multiplexer/I2C Hub (TCA9548A)
+#### Grove - 8 チャンネル I2C マルチプレクサ/I2C ハブ (TCA9548A)
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -1316,7 +1316,7 @@ Grove - LED Buttonは、Grove - Yellow Button、Grove - Blue LED Button、Grove 
 
 ### ケース
 
-#### Grove - Wrapper
+#### Grove - ラッパー
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">

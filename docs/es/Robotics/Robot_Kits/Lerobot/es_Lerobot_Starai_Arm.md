@@ -1,5 +1,5 @@
 ---
-description: Este wiki proporciona el tutorial de depuración para el Brazo Robótico StarAI y realiza la recolección de datos y entrenamiento dentro del marco de trabajo Lerobot.
+description: Este wiki proporciona el tutorial de depuración para el Brazo Robótico StarAI y realiza la recolección de datos y entrenamiento dentro del framework Lerobot.
 title: Brazo StarAI en LeRobot
 keywords:
 - Lerobot
@@ -9,8 +9,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
 slug: /es/lerobot_starai_arm
 last_update:
-  date: 9/16/2025
+  date: 10/13/2025
   author: LiShanghang
+translation:
+  skip: [ zh-CN ]
 ---
 
 # Comenzando con el Brazo Robótico StarAI con LeRobot
@@ -25,15 +27,15 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Fashionstar-Star-Arm-Viola-Violin-p-6497.html" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> ¡Consigue Uno Ahora! 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> ¡Obtén Uno Ahora! 🖱️</font></span></strong>
 </a></div>
 
 ## Introducción de Productos
 
 1. **Código Abierto y Amigable para Desarrolladores**
-   Es una solución de brazo robótico de código abierto y amigable para desarrolladores de 6+1 DoF de [Fishion Star Technology Limited](https://fashionrobo.com/).
+   Es una solución de brazo robótico de 6+1 DoF de código abierto y amigable para desarrolladores de [Fishion Star Technology Limited](https://fashionrobo.com/).
 2. **Integración con LeRobot**
-   Diseñado para integración con [Plataforma LeRobot](https://github.com/huggingface/lerobot) , que proporciona modelos PyTorch, conjuntos de datos y herramientas para aprendizaje por imitación en tareas robóticas del mundo real — incluyendo recolección de datos, simulación, entrenamiento y despliegue.
+   Diseñado para integración con [Plataforma LeRobot](https://github.com/huggingface/lerobot), que proporciona modelos PyTorch, conjuntos de datos y herramientas para aprendizaje por imitación en tareas robóticas del mundo real — incluyendo recolección de datos, simulación, entrenamiento y despliegue.
 3. **Recursos de Aprendizaje Integrales**
    Proporciona recursos de aprendizaje de código abierto integrales como guías de ensamblaje y calibración, y ejemplos de tareas de agarre personalizadas para ayudar a los usuarios a comenzar rápidamente y desarrollar aplicaciones robóticas.
 4. **Compatible con Nvidia**
@@ -58,8 +60,7 @@ last_update:
 | -------------------- | ------------------------------------------------- | ------------------------------------------------- |-----------------|
 | Grados de Libertad   | 6+1                                               | 6+1                                               | 6+1             |
 | Alcance                | 470mm                                             | 470mm                                             | 670mm |
-| Envergadura                 | 940mm                                             | 940mm                                             | 1340mm |
-| Repetibilidad        | 2mm                                               | -                                                 | 1mm  |
+| Repetibilidad        | 2mm                                               | -                                                 | 2mm  |
 | Carga Útil de Trabajo      | 300g (con 70% de Alcance)                            | -                                                 |  750g (con 70% de Alcance)   |
 | Servos               | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 |RX18-U100H-M x3<br/> RX8-U50H-M x3<br/> RX8-U51H-M x1|
 | Kit de Pinza Paralela  | ✅                                                 | -                                                 | ✅   |
@@ -73,7 +74,7 @@ last_update:
 | Hub de Comunicación    | UC-01                                             | UC-01                                             | UC-01 |
 | Fuente de Alimentación         | 12V10A/120w XT30                                   | 12V10A/120w XT30                                 |12V25A/300w XT60  |
 
-Para más información sobre motores servo, por favor visita el siguiente enlace.
+Para más información sobre los motores servo, por favor visita el siguiente enlace.
 
 [RA8-U25H-M](https://fashionrobo.com/actuator-u25/23396/)
 
@@ -100,7 +101,7 @@ Para más información sobre motores servo, por favor visita el siguiente enlace
 
 ### Instalar LeRobot
 
-Entornos como pytorch y torchvision necesitan ser instalados basándose en tu CUDA.
+Los entornos como pytorch y torchvision necesitan ser instalados basándose en tu CUDA.
 
 1. Instalar Miniconda:
 Para Jetson:
@@ -133,13 +134,7 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 3. Clonar Lerobot:
 
 ```bash
-git clone https://github.com/servodevelop/lerobot.git
-```
-
-Cambiar a la rama starai-arm-develop.
-
-```bash
-git checkout starai-arm-develop
+git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
 ```
 
 4. Cuando uses miniconda, instala ffmpeg en tu entorno:
@@ -161,13 +156,17 @@ conda install ffmpeg=7.1.1 -c conda-forge
 
 :::
 
-5. Instalar LeRobot con dependencias para los motores feetech:
+5. Instalar LeRobot:
 
 ```bash
-cd ~/lerobot && pip install -e ".[starai]"
+cd ~/lerobot && pip install -e .
 ```
 
-Para dispositivos Jetson Jetpack (por favor asegúrate de instalar [Pytorch-gpu y Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) desde el paso 5 antes de ejecutar este paso):
+```bash
+sudo apt remove brltty
+```
+
+Para dispositivos Jetson Jetpack (por favor asegúrate de instalar [Pytorch-gpu y Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) desde el paso 5 antes de ejecutar este paso):
 
 ```bash
 conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
@@ -178,7 +177,14 @@ conda uninstall numpy
 pip3 install numpy==1.26.0  # This should match torchvision
 ```
 
-6. Verificar Pytorch y Torchvision
+6.Instalar Dependencias del Motor Fashionstar:
+
+```bash
+pip install lerobot_teleoperator_bimanual_leader
+pip install lerobot_robot_bimanual_follower
+```
+
+7. Verificar Pytorch y Torchvision
 
 Dado que instalar el entorno lerobot vía pip desinstalará el Pytorch y Torchvision originales e instalará las versiones CPU de Pytorch y Torchvision, necesitas realizar una verificación en Python.
 
@@ -200,8 +206,7 @@ El Kit de Brazo Robótico Incluye
 - Controlador (mango)
 - Pinza paralela
 - Herramientas de instalación (tornillos, llave hexagonal)
-- Fuente de alimentación ×2
-- Abrazadera en C ×2
+- Abrazadera C ×2
 - Placa de depuración UC-01 ×2
 
 Interruptor de la placa de depuración UC-01：
@@ -217,26 +222,26 @@ Interruptor de la placa de depuración UC-01：
 
 ### Configurar Puerto del Brazo
 
-Entrar al directorio `src`:
+Entra al directorio `~/lerobot`:
 
 ```bash
-cd src
+cd ~/lerobot
 ```
 
 Ejecuta el siguiente comando en la terminal para encontrar puertos USB asociados a tus brazos：
 
 ```bash
-python -m lerobot.find_port
+lerobot-find-port
 ```
 
 :::tip
-Recuerda remover el usb, de lo contrario la interfaz no será detectada.
+Recuerda quitar el usb, de lo contrario la interfaz no será detectada.
 :::
 
 Por ejemplo：
 
-1. Ejemplo de salida al identificar el puerto del brazo líder (por ejemplo, `/dev/tty.usbmodem575E0031751` en Mac, o posiblemente `/dev/ttyUSB0` en Linux):
-2. Ejemplo de salida al identificar el puerto del brazo seguidor (por ejemplo, `/dev/tty.usbmodem575E0032081` en Mac, o posiblemente `/dev/ttyUSB1` en Linux):
+1. Salida de ejemplo al identificar el puerto del brazo líder (ej., `/dev/tty.usbmodem575E0031751` en Mac, o posiblemente `/dev/ttyUSB0` en Linux):
+2. Salida de ejemplo al identificar el puerto del brazo seguidor (ej., `/dev/tty.usbmodem575E0032081`en Mac, o posiblemente `/dev/ttyUSB1` en Linux):
 
 :::tip
 Si no se puede identificar el puerto serie ttyUSB0, prueba las siguientes soluciones:
@@ -285,31 +290,32 @@ sudo chmod 777 /dev/ttyUSB*
 Es posible que necesites dar acceso a los puertos USB ejecutando:
 
 ```bash
-sudo chmod 666 /dev/ttyUSB0
-sudo chmod 666 /dev/ttyUSB1
+sudo chmod 666 /dev/ttyUSB*
 ```
 
 ## Calibrar
 
-### Para Calibración Inicial
+Para videos que cubren el Brazo Robótico StarAI desde el desempaquetado hasta la teleoperación, puedes consultar:
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/02lxxF9Cvy8?si=IGJda5nXkYEbm2N6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-Por favor, rota cada articulación hacia la izquierda y derecha a las posiciones correspondientes.
+Mueve el brazo robótico a la posición inicial del brazo robótico (como se muestra en la figura a continuación) y ponlo en modo de espera, luego reconecta la fuente de alimentación.
 
-### Para Re-Calibración
 
-Sigue la indicación en pantalla: ingresa la letra "c" y presiona la tecla Enter.
+Para la posición inicial de la nueva versión del brazo robótico, se debe prestar especial atención a asegurar que los servos de las Articulaciones 3, 4 y 5 se alineen estrictamente con las posiciones en la figura.
 
-A continuación se muestran los valores de referencia. En circunstancias normales, los valores de referencia de límite reales deberían estar dentro del rango de **±10°** de estas referencias.
 
-| ID del Servo | Límite de Ángulo Inferior (°) | Límite de Ángulo Superior (°) | Notas                                          |
-| ------------ | ------------------------------ | ------------------------------ | ---------------------------------------------- |
-| motor\_0     | -180°                          | 180°                           | Rotar a la posición límite                     |
-| motor\_1     | -90°                           | 90°                            | Rotar a la posición límite                     |
-| motor\_2     | -90°                           | 90°                            | Rotar a la posición límite                     |
-| motor\_3     | -180°                          | 180°                           | Sin límite; rotar a los límites de ángulo de referencia |
-| motor\_4     | -90°                           | 90°                            | Rotar a la posición límite                     |
-| motor\_5     | -180°                          | 180°                           | Sin límite; rotar a los límites de ángulo de referencia |
-| motor\_6     | 0°                             | 100°                           | Rotar a la posición límite                     |
+| **Brazo Líder Violin** | **Brazo Seguidor Viola** |
+|:---------:|:---------:|
+| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_rest.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_rest.jpg) |
+
+Posición inicial del brazo robótico de versión anterior (se debe prestar especial atención a asegurar que los servos de las Articulaciones 3, 4 y 5 se alineen estrictamente con las posiciones en la figura; la posición inicial del brazo robótico de nueva versión también puede usarse como referencia):
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png" />
+</div>
+
 
 :::tip
 Tomando PC (Linux) y placa Jetson como ejemplos, el `primer` dispositivo USB insertado se mapeará a `ttyUSB0`, y el `segundo` dispositivo USB insertado se mapeará a `ttyUSB1`.
@@ -322,18 +328,27 @@ Por favor, presta atención a las interfaces de mapeo del líder y seguidor ante
 Conecta el líder a `/dev/ttyUSB0`, o modifica el parámetro `--teleop.port`, y luego ejecuta:
 
 ```bash
-python -m lerobot.calibrate --teleop.type=starai_violin --teleop.port=/dev/ttyUSB0 --teleop.id=my_awesome_staraiviolin_arm
+lerobot-calibrate     --teleop.type=lerobot_teleoperator_violin --teleop.port=/dev/ttyUSB0 --teleop.id=my_awesome_staraiviolin_arm
 ```
+
+Después del inicio, verás los valores del codificador de cada articulación. Necesitas calibrar manualmente cada articulación una por una: rota cada articulación a sus posiciones máxima y mínima. Para articulaciones sin topes límite, el rango de rotación no debe exceder 180° en sentido horario o 180° en sentido antihorario. Después de calibrar todas las articulaciones, presiona Enter para guardar la configuración.
 
 #### Brazo Robótico Seguidor
 
 Conecta el seguidor a `/dev/ttyUSB1`, o modifica el parámetro `--teleop.port`, y luego ejecuta:
 
+Viola:
+
 ```bash
-python -m lerobot.calibrate --robot.type=starai_viola --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraiviola_arm
+lerobot-calibrate     --robot.type=lerobot_robot_viola --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraiviola_arm
 ```
 
-Después de ejecutar el comando, necesitas **mover manualmente el brazo robótico** para permitir que cada articulación alcance su **posición límite**. La terminal mostrará los datos de rango registrados. Una vez completada esta operación, presiona Enter.
+Cello:
+```bash
+lerobot-calibrate     --robot.type=lerobot_robot_cello --robot.port=/dev/ttyUSB1 --robot.id=my_awesome_staraicello_arm
+```
+
+Después del inicio, verás los valores del codificador de cada articulación. Necesitas calibrar manualmente cada articulación una por una: rota cada articulación a sus posiciones máxima y mínima. Para articulaciones sin topes límite, el rango de rotación no debe exceder 180° en sentido horario o 180° en sentido antihorario. Después de calibrar todas las articulaciones, presiona Enter para guardar la configuración.
 
 :::tip
 Los archivos de calibración se guardarán en las siguientes rutas: `~/.cache/huggingface/lerobot/calibration/robots` y `~/.cache/huggingface/lerobot/calibration/teleoperators`.
@@ -349,16 +364,28 @@ Los archivos de calibración se guardarán en las siguientes rutas: `~/.cache/hu
 Conecta `left_arm_port` a `/dev/ttyUSB0` y `right_arm_port` a `/dev/ttyUSB2`, o modifica los parámetros `--teleop.left_arm_port` y `--teleop.right_arm_port`, y luego ejecuta:
 
 ```bash
-python -m lerobot.calibrate --teleop.type=bi_starai_leader --teleop.left_arm_port=/dev/ttyUSB0 --teleop.right_arm_port=/dev/ttyUSB2 --teleop.id=bi_starai_leader
+lerobot-calibrate     --teleop.type=lerobot_teleoperator_bimanual_leader  --teleop.left_arm_port=/dev/ttyUSB0  --teleop.right_arm_port=/dev/ttyUSB2  --teleop.id=bi_starai_violin_leader
 ```
+
+Después del inicio, verás los valores del codificador de cada articulación. Necesitas calibrar manualmente cada articulación una por una: rota cada articulación a sus posiciones máxima y mínima. Para articulaciones sin topes límite, el rango de rotación no debe exceder 180° en sentido horario o 180° en sentido antihorario. Después de calibrar todas las articulaciones, presiona Enter para guardar la configuración.
 
 #### Brazo Robótico Seguidor
 
 Conecta `left_arm_port` a `/dev/ttyUSB1` y `right_arm_port` a `/dev/ttyUSB3`, o modifica los parámetros `--robot.left_arm_port` y `--robot.right_arm_port`, y luego ejecuta:
 
+Vioa:
+
 ```bash
-python -m lerobot.calibrate --robot.type=bi_starai_follower --robot.left_arm_port=/dev/ttyUSB1 --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_follower
+lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_name=starai_viola  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_viola_follower
 ```
+
+Cello:
+
+```bash
+lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_name=starai_cello  --robot.left_arm_port=/dev/ttyUSB1  --robot.right_arm_port=/dev/ttyUSB3 --robot.id=bi_starai_cello_follower
+```
+
+Después del inicio, verás los valores del codificador de cada articulación. Necesitas calibrar manualmente cada articulación una por una: rota cada articulación a sus posiciones máxima y mínima. Para articulaciones sin topes límite, el rango de rotación no debe exceder 180° en sentido horario o 180° en sentido antihorario. Después de calibrar todas las articulaciones, presiona Enter para guardar la configuración.
 
 :::tip
 
@@ -373,10 +400,14 @@ Si usas una configuración de brazo dual, necesitas modificar manualmente los ti
 ## Teleoperar
 
 <div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/Uz-x-2P2xaE?si=HJTjALt5yFntR6-s" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="https://www.youtube.com/embed/02lxxF9Cvy8?si=IGJda5nXkYEbm2N6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 Mueve el brazo a la posición mostrada en el diagrama y ponlo en espera.
+
+| **Brazo Líder Violin** | **Brazo Seguidor Viola** |
+|:---------:|:---------:|
+| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_rest.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_rest.jpg) |
 
 <div align="center">
     <img width={800}
@@ -385,12 +416,26 @@ Mueve el brazo a la posición mostrada en el diagrama y ponlo en espera.
 
 ¡Entonces estarás listo para teleoperar tu robot (No mostrará las cámaras)! Ejecuta este script simple:
 
+Violin&Viola:
+
 ```bash
-python -m lerobot.teleoperate \
-    --robot.type=starai_viola \
+lerobot-teleoperate \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --teleop.type=starai_violin \
+    --teleop.type=lerobot_teleoperator_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm
+```
+
+Violin&Cello:
+
+```bash
+lerobot-teleoperate \
+    --robot.type=lerobot_robot_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm
 ```
@@ -398,16 +443,34 @@ python -m lerobot.teleoperate \
 <details>
 <summary> Brazo Dual </summary>
 
+Violin&Viola:
+
 ```bash
-python -m lerobot.teleoperate \
-    --robot.type=bi_starai_follower \
+lerobot-teleoperate \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.id=bi_starai_follower \
-    --teleop.type=bi_starai_leader \
+    --robot.id=bi_starai_viola_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
-    --teleop.id=bi_starai_leader
+    --teleop.id=bi_starai_violin_leader
+```
+
+Violin&Cello:
+
+```bash
+lerobot-teleoperate \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.id=bi_starai_cello_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
+    --teleop.left_arm_port=/dev/ttyUSB0 \
+    --teleop.right_arm_port=/dev/ttyUSB2 \
+    --teleop.id=bi_starai_violin_leader
 ```
 
 </details>
@@ -417,9 +480,137 @@ El comando de operación remota detectará automáticamente los siguientes pará
 1. Identificar cualquier calibración faltante e iniciar el procedimiento de calibración.
 2. Conectar el robot y el dispositivo de operación remota e iniciar la operación remota.
 
-Después de que el programa inicie, la Tecnología de Bloqueo Flotante permanece funcional.
+Después de que el programa inicie, la Tecnología Hover Lock permanece funcional.
 
 ## Agregar cámaras
+
+<details>
+<summary> Si usas la Cámara de Profundidad Orbbec Gemini2 </summary>
+
+<div align="center">
+    <img width={800}
+    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" />
+</div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank" rel="noopener noreferrer" >
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+</a></div>
+
+- 🚀 Paso 1: Instalar el Entorno de Dependencias del SDK de Orbbec
+
+1. Clonar el repositorio `pyorbbec`
+
+   ```bash
+   cd ~/
+   git clone https://github.com/orbbec/pyorbbecsdk.git
+   ```
+
+2. Descargar e instalar el archivo **.whl** correspondiente para el SDK  
+   Ve a [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases),  
+   selecciona e instala según tu versión de Python. Por ejemplo:
+
+   ```bash
+   pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
+   ```
+
+3. Instalar dependencias en el directorio `pyorbbec`
+
+   ```bash
+   cd ~/pyorbbecsdk
+   pip install -r requirements.txt
+   ```
+
+   Forzar la degradación de la versión de `numpy` a `1.26.0`
+
+    ```bash
+    pip install numpy==1.26.0
+    ```
+
+  Los mensajes de error rojos pueden ser ignorados.
+
+4. Clonar el SDK de Orbbec en el directorio `~/lerobot/src/cameras`
+
+  ```bash
+  cd ~/lerobot/src/cameras
+  git clone https://github.com/ZhuYaoHui1998/orbbec.git
+  ```
+
+5. Modificar utils.py e **init**.py
+
+- Encuentra `utils.py` en el directorio `~/lerobot/src/lerobot/cameras`, y añade el siguiente código en la línea 40:
+
+```python
+elif cfg.type == "orbbec":
+            from .orbbec.camera_orbbec import OrbbecCamera
+
+            cameras[key] = OrbbecCamera(cfg)
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/utils.png" />
+</div>
+
+- Encuentra `__init__.py` en el directorio `~/lerobot/src/lerobot/cameras`, y añade el siguiente código en la línea 18:
+
+```python
+from .orbbec.configuration_orbbec import OrbbecCameraConfig
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
+</div>
+
+- 🚀 Paso 2: Llamada de Función y Ejemplos
+
+En todos los siguientes ejemplos, reemplaza `starai_viola` con el modelo real del brazo robótico que estés usando (ej., `so100` / `so101`).
+
+Hemos añadido el hiperparámetro `focus_area`. Dado que los datos de profundidad que están demasiado lejos no tienen sentido para el brazo robótico (no puede alcanzar o agarrar objetos), los datos de profundidad menores o mayores que el `focus_area` se mostrarán en negro. El `focus_area` predeterminado es (20, 600).  
+Actualmente, la única resolución soportada es ancho: 640, alto: 880.
+
+Violin&Viola:
+
+```bash
+lerobot-teleoperate \
+    --robot.type=lerobot_starai_viola \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraiviola_arm \
+    --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+    --teleop.type=starai_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm \
+    --display_data=true
+```
+
+Violin&Cello:
+
+```bash
+lerobot-teleoperate \
+    --robot.type=lerobot_starai_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+    --teleop.type=starai_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm \
+    --display_data=true
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/orbbec_result.png" />
+</div>
+
+Para tareas posteriores como recolección de datos, entrenamiento y evaluación, el proceso es el mismo que para comandos RGB regulares. Solo necesitas reemplazar la parte relevante en el comando RGB regular con:
+
+  ```
+  --robot.cameras="{ front: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:(20,600)}}" \
+  ```
+
+También puedes añadir una cámara RGB monocular adicional después.
+
+</details>
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/-p8K_-XxW8U?si=UmYWvEyKNPpTRxDC" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -428,7 +619,7 @@ Después de que el programa inicie, la Tecnología de Bloqueo Flotante permanece
 Después de insertar tus dos cámaras USB, ejecuta el siguiente script para verificar los números de puerto de las cámaras. Es importante recordar que la cámara no debe estar conectada a un Hub USB; en su lugar, debe estar conectada directamente al dispositivo. La velocidad más lenta de un Hub USB puede resultar en la incapacidad de leer datos de imagen.
 
 ```bash
-python -m lerobot.find_cameras opencv # or realsense for Intel Realsense cameras
+lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
 ```
 
 La terminal imprimirá la siguiente información. Por ejemplo, la cámara del portátil es `index 2`, y la cámara USB es `index 4`.
@@ -466,34 +657,88 @@ Puedes encontrar las imágenes capturadas por cada cámara en el directorio `out
 
 Después de confirmar las cámaras externas, reemplaza la información de la cámara a continuación con tu información real de la cámara, y podrás mostrar las cámaras en tu computadora durante la operación remota:
 
+Violin&Viola:
+
 ```bash
-python -m lerobot.teleoperate \
-    --robot.type=starai_viola \
+lerobot-teleoperate \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
-    --teleop.type=starai_violin \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true
 ```
 
+
+:::tip
+Las imágenes en formato `fourcc: "MJPG"` están comprimidas. Puedes probar resoluciones más altas, y también puedes intentar el formato `YUYV`. Sin embargo, este último reducirá la resolución de imagen y FPS, causando retraso en la operación del brazo robótico. Actualmente, bajo el formato `MJPG`, puede soportar 3 cámaras a una resolución de `1920*1080` manteniendo `30FPS`. Dicho esto, conectar 2 cámaras a una computadora a través del mismo USB HUB aún no se recomienda.
+:::
+
+
+Violin&Cello:
+
+```bash
+lerobot-teleoperate \
+    --robot.type=lerobot_robot_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --teleop.type=lerobot_teleoperator_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm \
+    --display_data=true
+```
+
+
+:::tip
+Las imágenes en formato `fourcc: "MJPG"` están comprimidas. Puedes probar resoluciones más altas, y también puedes intentar el formato `YUYV`. Sin embargo, este último reducirá la resolución de imagen y FPS, causando retraso en la operación del brazo robótico. Actualmente, bajo el formato `MJPG`, puede soportar 3 cámaras a una resolución de `1920*1080` manteniendo `30FPS`. Dicho esto, conectar 2 cámaras a una computadora a través del mismo USB HUB aún no se recomienda.
+:::
+
+
 <details>
 <summary> Brazo Dual </summary>
 
+Violin&Viola:
+
 ```bash
-python -m lerobot.teleoperate \
-    --robot.type=bi_starai_follower \
+lerobot-teleoperate \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.id=bi_starai_follower \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
-    --teleop.type=bi_starai_leader \
+    --robot.id=bi_starai_viola_follower \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
-    --teleop.id=bi_starai_leader \
+    --teleop.id=bi_starai_violin_leader \
     --display_data=true
 ```
+
+Violin&Cello:
+
+```bash
+lerobot-teleoperate \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.id=bi_starai_cello_follower \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
+    --teleop.left_arm_port=/dev/ttyUSB0 \
+    --teleop.right_arm_port=/dev/ttyUSB2 \
+    --teleop.id=bi_starai_violin_leader \
+    --display_data=true
+```
+
+
+:::tip
+Las imágenes en formato `fourcc: "MJPG"` están comprimidas. Puedes probar resoluciones más altas, y también puedes intentar el formato `YUYV`. Sin embargo, este último reducirá la resolución de imagen y FPS, causando retraso en la operación del brazo robótico. Actualmente, bajo el formato `MJPG`, puede soportar 3 cámaras a una resolución de `1920*1080` manteniendo `30FPS`. Dicho esto, conectar 2 cámaras a una computadora a través del mismo USB HUB aún no se recomienda.
+:::
+
 
 </details>
 
@@ -519,9 +764,9 @@ pip3 install rerun-sdk==0.23
 <iframe width="900" height="600" src="https://www.youtube.com/embed/OpaC0CA3-Mc?si=rbNhJJRkG9zngQB-" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-Una vez que estés familiarizado con la teleoperación, puedes grabar tu primer conjunto de datos.
+Una vez que te familiarices con la teleoperación, puedes grabar tu primer conjunto de datos.
 
-Si quieres usar las funciones del hub de Hugging Face para subir tu conjunto de datos y no lo has hecho anteriormente, asegúrate de haber iniciado sesión usando un token de acceso de escritura, que se puede generar desde la [configuración de Hugging Face](https://huggingface.co/settings/tokens):
+Si quieres usar las funciones del hub de Hugging Face para subir tu conjunto de datos y no lo has hecho anteriormente, asegúrate de haber iniciado sesión usando un token de acceso de escritura, que puede generarse desde la [configuración de Hugging Face](https://huggingface.co/settings/tokens):
 
 ```bash
 huggingface-cli login --token ${HUGGINGFACE_TOKEN} --add-to-git-credential
@@ -536,17 +781,39 @@ echo $HF_USER
 
 Graba 10 episodios y sube tu conjunto de datos al hub:
 
+Violin&Viola:
+
 ```bash
-python -m lerobot.record \
-    --robot.type=starai_viola \
+lerobot-record \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
-    --teleop.type=starai_violin \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true \
-    --dataset.repo_id=${HF_USER}/starai \
+    --dataset.repo_id=starai/record-test \
+    --dataset.episode_time_s=30 \
+    --dataset.reset_time_s=30 \
+    --dataset.num_episodes=10 \
+    --dataset.push_to_hub=True \
+    --dataset.single_task="Grab the black cube"
+```
+
+Violin&Cello:
+
+```bash
+lerobot-record \
+    --robot.type=lerobot_robot_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --teleop.type=lerobot_teleoperator_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm \
+    --display_data=true \
+    --dataset.repo_id=starai/record-test \
     --dataset.episode_time_s=30 \
     --dataset.reset_time_s=30 \
     --dataset.num_episodes=10 \
@@ -557,17 +824,43 @@ python -m lerobot.record \
 <details>
 <summary> Brazo Dual </summary>
 
+Violin&Viola:
+
 ```bash
-python -m lerobot.record \
-    --robot.type=bi_starai_follower \
+lerobot-record \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.id=bi_starai_follower \
-    --teleop.type=bi_starai_leader \
+    --robot.id=bi_starai_viola_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
-    --teleop.id=bi_starai_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.id=bi_starai_violin_leader \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --display_data=true \
+    --dataset.repo_id=starai/record-test_bi_arm \
+    --dataset.episode_time_s=30 \
+    --dataset.reset_time_s=30 \
+    --dataset.num_episodes=10 \
+    --dataset.push_to_hub=True \
+    --dataset.single_task="Grab the black cube"
+```
+
+Violin&Cello:
+
+```bash
+lerobot-record \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.id=bi_starai_cello_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
+    --teleop.left_arm_port=/dev/ttyUSB0 \
+    --teleop.right_arm_port=/dev/ttyUSB2 \
+    --teleop.id=bi_starai_violin_leader \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --display_data=true \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode_time_s=30 \
@@ -588,15 +881,16 @@ Si no quieres usar la función de subida de conjuntos de datos del Hub de Huggin
 :::
 
 Sin subir al Hub:
-**（Recomendado, los siguientes tutoriales se enfocarán en datos locales）**
+
+Violin&Viola:
 
 ```bash
-python -m lerobot.record \
-    --robot.type=starai_viola \
+lerobot-record \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
-    --teleop.type=starai_violin \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --teleop.type=lerobot_teleoperator_violin \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=my_awesome_staraiviolin_arm \
     --display_data=true \
@@ -604,30 +898,76 @@ python -m lerobot.record \
     --dataset.episode_time_s=30 \
     --dataset.reset_time_s=30 \
     --dataset.num_episodes=10 \
-    --dataset.push_to_hub=False \#修改push_to_hub为false
+    --dataset.push_to_hub=False \
+    --dataset.single_task="Grab the black cube"
+```
+
+Violin&Cello:
+
+```bash
+lerobot-record \
+    --robot.type=lerobot_robot_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --teleop.type=lerobot_teleoperator_violin \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=my_awesome_staraiviolin_arm \
+    --display_data=true \
+    --dataset.repo_id=starai/record-test \
+    --dataset.episode_time_s=30 \
+    --dataset.reset_time_s=30 \
+    --dataset.num_episodes=10 \
+    --dataset.push_to_hub=False \
     --dataset.single_task="Grab the black cube"
 ```
 
 <details>
 <summary> Brazo Dual </summary>
 
+Violin&Viola:
+
 ```bash
-python -m lerobot.record \
-    --robot.type=bi_starai_follower \
+lerobot-record \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.id=bi_starai_follower \
-    --teleop.type=bi_starai_leader \
+    --robot.id=bi_starai_viola_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
     --teleop.left_arm_port=/dev/ttyUSB0 \
     --teleop.right_arm_port=/dev/ttyUSB2 \
-    --teleop.id=bi_starai_leader \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+    --teleop.id=bi_starai_violin_leader \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --display_data=true \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode_time_s=30 \
     --dataset.reset_time_s=30 \
     --dataset.num_episodes=10 \
-    --dataset.push_to_hub=False \#修改push_to_hub为false
+    --dataset.push_to_hub=False \
+    --dataset.single_task="Grab the black cube"
+```
+
+Violin&Cello:
+
+```bash
+lerobot-record \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.id=bi_starai_cello_follower \
+    --teleop.type=lerobot_teleoperator_bimanual_leader \
+    --teleop.left_arm_port=/dev/ttyUSB0 \
+    --teleop.right_arm_port=/dev/ttyUSB2 \
+    --teleop.id=bi_starai_violin_leader \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --display_data=true \
+    --dataset.repo_id=starai/record-test_bi_arm \
+    --dataset.episode_time_s=30 \
+    --dataset.reset_time_s=30 \
+    --dataset.num_episodes=10 \
+    --dataset.push_to_hub=False \
     --dataset.single_task="Grab the black cube"
 ```
 
@@ -671,140 +1011,222 @@ Usa atajos de teclado para controlar el flujo de trabajo de grabación de datos:
 - Presiona **ESC**: Detener inmediatamente la sesión, codificar el video y subir el conjunto de datos.
 
 :::tip
-En Linux, si las teclas de flecha izquierda y derecha y la tecla escape no tienen efecto durante la grabación de datos, asegúrate de que la variable de entorno $DISPLAY esté configurada. Ver limitaciones de pynput.
 
-Una vez que estés familiarizado con la grabación de datos, puedes crear un conjunto de datos más grande para entrenamiento. Una buena tarea inicial es agarrar un objeto en diferentes posiciones y colocarlo en una caja pequeña. Recomendamos grabar al menos 50 episodios, con 10 episodios por ubicación. Mantén la cámara fija y mantén un comportamiento de agarre consistente durante toda la grabación. Además, asegúrate de que el objeto que estás manipulando sea visible en la cámara. Una buena regla general es que deberías poder completar la tarea mirando solo la imagen de la cámara.
+Si el teclado no funciona, es posible que necesites instalar otra versión de pynput.
+
+```bash
+pip install pynput==1.6.8
+```
+
 :::
-
-## Visualizar el conjunto de datos
-
-:::tip
-Inestable, se puede omitir, o se puede intentar.
-:::
-
-```bash
-echo ${HF_USER}/starai  
-```
-
-Si usaste `--dataset.push_to_hub=true` y subiste los datos, puedes visualizarlos localmente con el siguiente comando:
-
-```bash
-python -m lerobot.scripts.visualize_dataset_html \
-  --repo-id ${HF_USER}/starai
-```
-
-Si usaste `--dataset.push_to_hub=false` y no subiste los datos, puedes visualizarlos localmente con el siguiente comando:
-
-```bash
-python -m lerobot.scripts.visualize_dataset_html \
-  --repo-id starai/record-test
-```
-
-Aquí, `starai/record-test` es el nombre personalizado de `repo_id` que especificaste al recopilar los datos.
 
 ## Reproducir un episodio
 
 Ahora intenta reproducir el primer episodio en tu robot:
 
+Viola:
+
 ```bash
-python -m lerobot.replay \
-    --robot.type=starai_viola \
+lerobot-replay \
+    --robot.type=lerobot_robot_viola \
     --robot.port=/dev/ttyUSB1 \
     --robot.id=my_awesome_staraiviola_arm \
     --dataset.repo_id=starai/record-test \
-    --dataset.episode=0 # choose the episode you want to replay
+    --dataset.episode=1 # choose the episode you want to replay
+```
+
+Cello:
+
+```bash
+lerobot-replay \
+    --robot.type=lerobot_robot_cello \
+    --robot.port=/dev/ttyUSB1 \
+    --robot.id=my_awesome_staraicello_arm \
+    --dataset.repo_id=starai/record-test \
+    --dataset.episode=1 # choose the episode you want to replay
 ```
 
 <details>
 <summary> Brazo Dual </summary>
 
+Viola:
+
 ```bash
-python -m lerobot.replay \
-    --robot.type=bi_starai_follower \
+lerobot-replay \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.id=bi_starai_follower \
+    --robot.id=bi_starai_viola_follower \
+    --dataset.repo_id=starai/record-test_bi_arm \
+    --dataset.episode=0 # choose the episode you want to replay
+```
+
+Cello:
+
+```bash
+lerobot-replay \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.id=bi_starai_cello_follower \
     --dataset.repo_id=starai/record-test_bi_arm \
     --dataset.episode=0 # choose the episode you want to replay
 ```
 
 </details>
 
-## Entrenar política
+## Entrenar y Evaluar Política
 
-Para entrenar una política para controlar tu robot, aquí tienes un comando de ejemplo:
+<details>
+<summary>[ACT](https://huggingface.co/docs/lerobot/act) </summary>
+
+
+Consulta [ACT](https://huggingface.co/docs/lerobot/act)
+
+**Entrenar**
+
+Viola:
 
 ```bash
-python -m lerobot.scripts.train \
+lerobot-train \
   --dataset.repo_id=starai/record-test \
   --policy.type=act \
   --output_dir=outputs/train/act_viola_test \
   --job_name=act_viola_test \
   --policy.device=cuda \
   --wandb.enable=False \
-  --policy.repo_id=starai/my_policy
+  --policy.repo_id=starai/my_policy \
+  --steps=200000
+```
+
+Cello:
+
+```bash
+lerobot-train \
+  --dataset.repo_id=starai/record-test \
+  --policy.type=act \
+  --output_dir=outputs/train/act_cello_test \
+  --job_name=act_cello_test \
+  --policy.device=cuda \
+  --wandb.enable=False \
+  --policy.repo_id=starai/my_policy \
+  --steps=200000
 ```
 
 <details>
 <summary> Brazo Dual </summary>
 
+Viola:
+
 ```bash
-python -m lerobot.scripts.train \
+lerobot-train \
   --dataset.repo_id=starai/record-test_bi_arm \
   --policy.type=act \
   --output_dir=outputs/train/act_bi_viola_test \
   --job_name=act_bi_viola_test \
   --policy.device=cuda \
   --wandb.enable=False \
-  --policy.repo_id=starai/my_policy
+  --policy.repo_id=starai/my_policy \
+  --steps=200000
+```
+
+Cello:
+
+```bash
+lerobot-train \
+  --dataset.repo_id=starai/record-test_bi_arm \
+  --policy.type=act \
+  --output_dir=outputs/train/act_bi_cello_test \
+  --job_name=act_bi_cello_test \
+  --policy.device=cuda \
+  --wandb.enable=False \
+  --policy.repo_id=starai/my_policy \
+  --steps=200000
 ```
 
 </details>
 
+1. `policy.type` admite entrada `diffusion,pi0,pi0fast`
 1. Proporcionamos el conjunto de datos como parámetro: `dataset.repo_id=starai/record-test`.
-
-2. Cargaremos la configuración desde [`configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/src/lerobot/policies/act/configuration_act.py). Importante, esta política se adaptará automáticamente a los estados del motor del robot, las acciones del motor y el número de cámaras, y se guardará en tu conjunto de datos.
-
+2. Cargaremos la configuración desde [`configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/src/lerobot/policies/act/configuration_act.py). Importante: esta política se adaptará automáticamente a los estados del motor del robot, las acciones del motor y el número de cámaras, y se guardará en tu conjunto de datos.
 3. Proporcionamos `wandb.enable=true` para usar [Weights and Biases](https://docs.wandb.ai/quickstart) para visualizar gráficos de entrenamiento. Esto es opcional, pero si lo usas, asegúrate de haber iniciado sesión ejecutando `wandb login`.
 
-Reanudar el entrenamiento desde un checkpoint específico.
+**Evaluar**
 
-```bash
-python -m lerobot.scripts.train \
-  --config_path=outputs/train/act_viola_test/checkpoints/last/pretrained_model/train_config.json \
-  --resume=true
-```
-
-## Evalúa tu política
 
 Ejecuta el siguiente comando para grabar 10 episodios de evaluación:
 
+Viola:
+
 ```bash
-python -m lerobot.record  \
-  --robot.type=starai_viola \
+lerobot-record  \
+  --robot.type=lerobot_robot_viola \
   --robot.port=/dev/ttyUSB1 \
-  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30}}" \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
   --robot.id=my_awesome_staraiviola_arm \
   --display_data=false \
   --dataset.repo_id=starai/eval_record-test \
-  --dataset.single_task="Grab the black cube" \
+  --dataset.single_task="Put lego brick into the transparent box" \
   --policy.path=outputs/train/act_viola_test/checkpoints/last/pretrained_model
+  # <- Teleop optional if you want to teleoperate in between episodes \
+  # --teleop.type=lerobot_teleoperator_violin \
+  # --teleop.port=/dev/ttyUSB0 \
+  # --teleop.id=my_awesome_leader_arm \
+```
+
+Cello:
+
+```bash
+lerobot-record  \
+  --robot.type=lerobot_robot_cello \
+  --robot.port=/dev/ttyUSB1 \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+  --robot.id=my_awesome_staraicello_arm \
+  --display_data=false \
+  --dataset.repo_id=starai/eval_record-test \
+  --dataset.single_task="Put lego brick into the transparent box" \
+  --policy.path=outputs/train/act_viola_test/checkpoints/last/pretrained_model
+  # <- Teleop optional if you want to teleoperate in between episodes \
+  # --teleop.type=lerobot_teleoperator_violin \
+  # --teleop.port=/dev/ttyUSB0 \
+  # --teleop.id=my_awesome_leader_arm \
 ```
 
 <details>
 <summary> Brazo Dual </summary>
 
+Viola:
+
 ```bash
-python -m lerobot.record  \
-    --robot.type=bi_starai_follower \
+lerobot-record  \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_viola \
     --robot.left_arm_port=/dev/ttyUSB1 \
     --robot.right_arm_port=/dev/ttyUSB3 \
-    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30}}" \
-    --robot.id=bi_starai_follower \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --robot.id=bi_starai_viola_follower \
     --display_data=false \
     --dataset.repo_id=starai/eval_record-test_bi_arm \
     --dataset.single_task="test" \
     --policy.path=outputs/train/act_bi_viola_test/checkpoints/last/pretrained_model
+```
+
+Cello:
+
+```bash
+lerobot-record  \
+    --robot.type=lerobot_robot_bimanual_follower \
+    --robot.arm_name=starai_cello \
+    --robot.left_arm_port=/dev/ttyUSB1 \
+    --robot.right_arm_port=/dev/ttyUSB3 \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --robot.id=bi_starai_cello_follower \
+    --display_data=false \
+    --dataset.repo_id=starai/eval_record-test_bi_arm \
+    --dataset.single_task="test" \
+    --policy.path=outputs/train/act_bi_cello_test/checkpoints/last/pretrained_model
 ```
 
 </details>
@@ -819,13 +1241,263 @@ Como puedes ver, esto es casi lo mismo que el comando usado previamente para gra
 
 4. Cuando encuentres `mean is infinity. You should either initialize with stats as an argument or use a pretrained model`, por favor asegúrate de que las palabras clave como `up` y `front` en el parámetro `--robot.cameras` sean estrictamente consistentes con las usadas durante la fase de recolección de datos.
 
+</details>
+
+
+
+<details>
+<summary>[SmolVLA](https://huggingface.co/docs/lerobot/smolvla) </summary>
+
+Consulta [SmolVLA](https://huggingface.co/docs/lerobot/smolvla) 
+
+```bash
+pip install -e ".[smolvla]"
+```
+
+**Entrenar**
+
+```bash
+lerobot-train \
+  --policy.path=lerobot/smolvla_base \ # <- Use pretrained fine-tuned model
+  --dataset.repo_id=${HF_USER}/mydataset \
+  --batch_size=64 \
+  --steps=20000 \
+  --output_dir=outputs/train/my_smolvla \
+  --job_name=my_smolvla_training \
+  --policy.device=cuda \
+  --wandb.enable=true
+```
+
+**Evaluar**
+
+```bash
+lerobot-record \
+  --robot.type=starai_viola \
+  --robot.port=/dev/ttyUSB1 \
+  --robot.id=my_awesome_staraiviola_arm \
+  --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video2, width: 1280, height: 720, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video4, width: 1280, height: 720, fps: 30, fourcc: "MJPG"}}" \
+  --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
+  --dataset.repo_id=${HF_USER}/eval_DATASET_NAME_test \ 
+  --dataset.episode_time_s=50 \
+  --dataset.num_episodes=10 \
+  # <- Teleop optional if you want to teleoperate in between episodes \
+  # --teleop.type=so100_leader \
+  # --teleop.port=/dev/ttyACM0 \
+  # --teleop.id=my_red_leader_arm \
+  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
+```
+
+</details>
+
+<details>
+<summary>[Libero](https://huggingface.co/docs/lerobot/libero) </summary>
+
+Consulta [Libero](https://huggingface.co/docs/lerobot/libero) 
+
+LIBERO es un benchmark diseñado para estudiar el aprendizaje robótico de por vida. La idea es que los robots no solo serán preentrenados una vez en una fábrica, sino que necesitarán seguir aprendiendo y adaptándose con sus usuarios humanos a lo largo del tiempo. Esta adaptación continua se llama aprendizaje de por vida en la toma de decisiones (LLDM), y es un paso clave hacia la construcción de robots que se conviertan en verdaderos asistentes personalizados.
+
+- [Artículo de LIBERO](https://arxiv.org/abs/2306.03310)
+- [Repositorio original de LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO)
+
+LIBERO incluye cinco suites de tareas:
+
+- LIBERO-Spatial (libero_spatial) – tareas que requieren razonamiento sobre relaciones espaciales.
+
+- LIBERO-Object (libero_object) – tareas centradas en manipular diferentes objetos.
+
+- LIBERO-Goal (libero_goal) – tareas condicionadas por objetivos donde el robot debe adaptarse a objetivos cambiantes.
+
+- LIBERO-90 (libero_90) – 90 tareas de horizonte corto de la colección LIBERO-100.
+
+- LIBERO-Long (libero_10) – 10 tareas de horizonte largo de la colección LIBERO-100.
+
+En conjunto, estas suites cubren 130 tareas, que van desde manipulaciones simples de objetos hasta escenarios complejos de múltiples pasos. LIBERO está destinado a crecer con el tiempo y servir como un benchmark compartido donde la comunidad puede probar y mejorar algoritmos de aprendizaje permanente.
+
+**Entrenar**
+
+```bash
+lerobot-train \
+  --policy.type=smolvla \
+  --policy.repo_id=${HF_USER}/libero-test \
+  --dataset.repo_id=HuggingFaceVLA/libero \
+  --env.type=libero \
+  --env.task=libero_10 \
+  --output_dir=./outputs/ \
+  --steps=100000 \
+  --batch_size=4 \
+  --eval.batch_size=1 \
+  --eval.n_episodes=1 \
+  --eval_freq=1000 \
+```
+
+**Evaluando**
+
+Para instalar LIBERO, después de seguir las instrucciones oficiales de LeRobot, simplemente haz: `pip install -e ".[libero]"`
+
+**Evaluación de suite única**
+
+```bash
+lerobot-eval \
+  --policy.path="your-policy-id" \
+  --env.type=libero \
+  --env.task=libero_object \
+  --eval.batch_size=2 \
+  --eval.n_episodes=3
+```
+
+- `--env.task` selecciona la suite (libero_object, libero_spatial, etc.).
+
+- `--eval.batch_size` controla cuántos entornos se ejecutan en paralelo.
+
+- `--eval.n_episodes` establece cuántos episodios ejecutar en total.
+
+**Evaluación multi-suite**
+
+```bash
+lerobot-eval \
+  --policy.path="your-policy-id" \
+  --env.type=libero \
+  --env.task=libero_object,libero_spatial \
+  --eval.batch_size=1 \
+  --eval.n_episodes=2
+```
+
+- Pasa una lista separada por comas a `--env.task` para evaluación multi-suite.
+
+</details>
+
+
+
+<details>
+<summary>[Pi0](https://huggingface.co/docs/lerobot/pi0) </summary>
+
+Consulta [Pi0](https://huggingface.co/docs/lerobot/pi0) 
+
+```bash
+pip install -e ".[pi]"
+```
+
+**Entrenar**
+```bash
+lerobot-train \
+  --policy.type=pi0 \
+  --dataset.repo_id=seeed/eval_test123 \ 
+  --job_name=pi0_training \
+  --output_dir=outputs/pi0_training \
+  --policy.pretrained_path=lerobot/pi0_base \
+  --policy.compile_model=true \
+  --policy.gradient_checkpointing=true \
+  --policy.dtype=bfloat16 \
+  --steps=20000 \
+  --policy.device=cuda \
+  --batch_size=32 \
+  --wandb.enable=false 
+```
+
+**Evaluar**
+
+```bash
+lerobot-record \
+  --robot.type=starai_viola \
+  --robot.port=/dev/ttyUSB1 \
+  --robot.id=my_awesome_staraiviola_arm \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+  --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
+  --robot.id=my_awesome_staraiviola_arm \
+  --display_data=false \
+  --dataset.repo_id=seeed/eval_test123 \
+  --policy.path=outputs/pi0_training/checkpoints/last/pretrained_model
+```
+
+
+</details>
+
+
+<details>
+<summary>[Pi0.5](https://huggingface.co/docs/lerobot/pi05) </summary>
+
+Consulta [Pi0.5](https://huggingface.co/docs/lerobot/pi05) 
+
+```bash
+pip install -e ".[pi]"
+```
+
+**Entrenar**
+```bash
+lerobot-train \
+    --dataset.repo_id=seeed/eval_test123 \ 
+    --policy.type=pi05 \
+    --output_dir=outputs/pi05_training \
+    --job_name=pi05_training \
+    --policy.pretrained_path=lerobot/pi05_base \
+    --policy.compile_model=true \
+    --policy.gradient_checkpointing=true \
+    --wandb.enable=false \
+    --policy.dtype=bfloat16 \
+    --steps=3000 \
+    --policy.device=cuda \
+    --batch_size=32
+```
+
+**Evaluar**
+
+```bash
+lerobot-record \
+  --robot.type=starai_viola \
+  --robot.port=/dev/ttyUSB1 \
+  --robot.id=my_awesome_staraiviola_arm \
+    --robot.cameras="{ up: {type: opencv, index_or_path: /dev/video0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},front: {type: opencv, index_or_path: /dev/video2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+  --dataset.single_task="Grasp a lego block and put it in the bin." \ # <- Use the same task description you used in your dataset recording
+  --robot.id=my_awesome_staraiviola_arm \
+  --display_data=false \
+  --dataset.repo_id=seeed/eval_test123 \
+  --policy.path=outputs/pi05_training/checkpoints/last/pretrained_model
+```
+
+
+</details>
+
+
+<details>
+<summary>[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) </summary>
+
+Consulta [GR00T N1.5](https://huggingface.co/docs/lerobot/groot) 
+
+
+</details>
+
+
+
+
+Reanudar el entrenamiento desde un checkpoint específico.
+
+Viola:
+
+```bash
+lerobot-train \
+  --config_path=outputs/train/act_viola_test/checkpoints/last/pretrained_model/train_config.json \
+  --resume=true \
+  --steps=400000
+```
+
+Cello:
+
+```bash
+lerobot-train \
+  --config_path=outputs/train/act_cello_test/checkpoints/last/pretrained_model/train_config.json \
+  --resume=true \
+  --steps=400000
+```
+
+
+
 ## FAQ
 
-- Si estás usando el tutorial en este documento, por favor haz `git clone` del repositorio de GitHub recomendado: `https://github.com/servodevelop/lerobot.git`.
+- Si estás usando el tutorial en este documento, por favor `git clone` el repositorio de GitHub recomendado: `https://github.com/servodevelop/lerobot.git`.
 
-- Si la teleoperación funciona normalmente pero la teleoperación con una Cámara no muestra la interfaz de imagen, por favor consulta [aquí](https://github.com/huggingface/lerobot/pull/757/files).
+- Si la teleoperación funciona normalmente pero la teleoperación con una cámara no muestra la interfaz de imagen, por favor consulta [aquí](https://github.com/huggingface/lerobot/pull/757/files).
 
-- Si encuentras un problema con libtiff durante la teleoperación del conjunto de datos, por favor actualiza la versión de libtiff.
+- Si encuentras un problema con libtiff durante la teleoperación del dataset, por favor actualiza la versión de libtiff.
 
   ```bash
   conda install libtiff==4.5.0  # for Ubuntu 22.04, use libtiff==4.5.1
@@ -843,27 +1515,27 @@ Como puedes ver, esto es casi lo mismo que el comando usado previamente para gra
 
 - Si el programa indica que no puede leer los datos de imagen de la cámara USB, por favor asegúrate de que la cámara USB no esté conectada a través de un Hub. La cámara USB debe estar conectada directamente al dispositivo para asegurar velocidades rápidas de transmisión de imagen.
 
-## Cita
+## Citas
 
-Brazo Robótico StarAI ROS2 Moveit2: [star-arm-moveit2](https://wiki.seeedstudio.com/es/starai_arm_ros_moveit/)
+StarAI Robot Arm ROS2 Moveit2: [star-arm-moveit2](https://wiki.seeedstudio.com/es/starai_arm_ros_moveit/)
 
 lerobot-starai github: [lerobot-starai](https://github.com/servodevelop/lerobot.git)
 
-PASO: [STEP](https://github.com/Welt-liu/star-arm-moveit2/tree/main/hardware)
+STEP: [STEP](https://github.com/Welt-liu/star-arm-moveit2/tree/main/hardware)
 
 URDF: [URDF](https://github.com/Welt-liu/star-arm-moveit2/tree/main/src/cello_description)
 
 Proyecto Huggingface: [Lerobot](https://github.com/huggingface/lerobot/tree/main)
 
-ACT o ALOHA: [Aprendiendo manipulación bimano fina con hardware de bajo costo](https://tonyzhaozh.github.io/aloha/)
+ACT o ALOHA: [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](https://tonyzhaozh.github.io/aloha/)
 
-VQ-BeT: [VQ-BeT: Generación de comportamiento con acciones latentes](https://sjlee.cc/vq-bet/)
+VQ-BeT: [VQ-BeT: Behavior Generation with Latent Actions](https://sjlee.cc/vq-bet/)
 
 Diffusion Policy: [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)
 
 TD-MPC: [TD-MPC](https://www.nicklashansen.com/td-mpc/)
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

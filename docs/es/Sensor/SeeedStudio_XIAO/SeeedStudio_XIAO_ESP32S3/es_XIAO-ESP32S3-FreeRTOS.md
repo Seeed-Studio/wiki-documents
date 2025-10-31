@@ -130,7 +130,7 @@ Si todo se hace correctamente, el siguiente comando :
 idf.py
 ```
 
-should show the following output :
+debería mostrar la siguiente salida:
 
 ```shell
 Usage: idf.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...

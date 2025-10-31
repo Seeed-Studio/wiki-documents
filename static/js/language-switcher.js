@@ -1,12 +1,12 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-09-18 15:22:18 (北京时间)
-// 多语言页面: 2001 个
+// 生成时间: 2025-10-29 11:02:26 (北京时间)
+// 多语言页面: 2032 个
 
 (function() {
   'use strict';
 
   const DEBUG = false; // 生产环境关闭调试
-  
+
   function log(...args) {
     if (DEBUG) {
       console.log('🔄 [生产优化版]', new Date().toISOString().slice(11, 23), ...args);
@@ -341,37 +341,7 @@
     "es",
     "ja"
   ],
-  "/sensecraft_hmi_ai_generation": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/sensecraft_hmi_canvas": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/sensecraft_hmi_gallery": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/sensecraft_hmi_overview": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/sensecraft_hmi_rss": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/sensecraft_hmi_web": [
     "cn",
     "en",
     "es",
@@ -564,6 +534,12 @@
     "ja"
   ],
   "/deploy_frigate_on_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/deploy_visual_perception_engine_recomputer": [
     "cn",
     "en",
     "es",
@@ -869,6 +845,12 @@
     "es",
     "ja"
   ],
+  "/vlm": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/reComputer_A203_Flash_System": [
     "cn",
     "en",
@@ -935,6 +917,12 @@
     "es",
     "ja"
   ],
+  "/recomputer_j501_mini_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/j401_mini_carrierboard_hardware_interfaces_usage": [
     "cn",
     "en",
@@ -977,7 +965,19 @@
     "es",
     "ja"
   ],
+  "/how_to_build_the_ko_module_for_seeed_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/how_to_build_the_source_code_project_for_seeed_jetson_bsp": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/how_to_encrypt_the_disk_for_jetson": [
     "cn",
     "en",
     "es",
@@ -1481,6 +1481,12 @@
     "es",
     "ja"
   ],
+  "/chirpstack_lora_gateway_r1x00": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/recomputer_r1000_aws": [
     "cn",
     "en",
@@ -1859,6 +1865,12 @@
     "es",
     "ja"
   ],
+  "/openremote_r1x00": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/Mender-Client-reTerminal": [
     "cn",
     "en",
@@ -1943,12 +1955,6 @@
     "es",
     "ja"
   ],
-  "/firearm_detection_with_frigate_nvr_on_r2000": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/r2000_series_frigate_and_home_assistant": [
     "cn",
     "en",
@@ -1956,6 +1962,12 @@
     "ja"
   ],
   "/frigate_nvr_with_raspberrypi_5": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/gun_detection_with_frigate_nvr_on_r2000": [
     "cn",
     "en",
     "es",
@@ -2093,6 +2105,12 @@
     "es",
     "ja"
   ],
+  "/use_sqlite_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/use_uv_to_build_package_on_recomputer": [
     "cn",
     "en",
@@ -2124,6 +2142,54 @@
     "ja"
   ],
   "/r2000_series_getting_start": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_r20xx_assembly_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_r20xx_configure_system": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_r2000_flash_os": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_r20xx_getting_start": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_R21xx_assembly_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_R21xx_configure_system": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_r21xx_flash_os": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_R21xx_getting_start": [
     "cn",
     "en",
     "es",
@@ -2369,6 +2435,12 @@
     "es",
     "ja"
   ],
+  "/model_conversion_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/recamera_on_device_models": [
     "cn",
     "en",
@@ -2424,6 +2496,18 @@
     "ja"
   ],
   "/recamera_pid_adjustment": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recamera_hd_poe_hardware": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recamera_hd_poe_getting_started": [
     "cn",
     "en",
     "es",
@@ -2513,6 +2597,12 @@
     "es",
     "ja"
   ],
+  "/reterminal_e10xx_with_lopaka": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/reterminal_e10xx_trmnl": [
     "cn",
     "en",
@@ -2526,12 +2616,6 @@
     "ja"
   ],
   "/getting_started_with_reterminal_e1002": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/reterminal_e10xx_firmware": [
     "cn",
     "en",
     "es",
@@ -3071,18 +3155,6 @@
     "es",
     "ja"
   ],
-  "/get_started_with_meshtastic_wio_tracker_l1": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/wio_tracker_l1_node": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/flash_meshtastic_kit": [
     "cn",
     "en",
@@ -3090,6 +3162,18 @@
     "ja"
   ],
   "/meshtastic_kit_wio_tracker_1110": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/get_started_with_meshtastic_wio_tracker_l1": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/wio_tracker_l1_node": [
     "cn",
     "en",
     "es",
@@ -3881,6 +3965,12 @@
     "es",
     "ja"
   ],
+  "/ac1": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/orbbec_gemini2": [
     "cn",
     "en",
@@ -3900,6 +3990,12 @@
     "ja"
   ],
   "/orb_slam3_orbbec_gemini2": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/pycuvslam_recomputer_robotics": [
     "cn",
     "en",
     "es",
@@ -4271,12 +4367,6 @@
     "es",
     "ja"
   ],
-  "/Grove Maker Kit for Intel Joule": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/Grove-Base_Shield_for_IOIO-OTG": [
     "cn",
     "en",
@@ -4296,6 +4386,12 @@
     "ja"
   ],
   "/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Grove Maker Kit for Intel Joule": [
     "cn",
     "en",
     "es",
@@ -5652,6 +5748,24 @@
     "ja"
   ],
   "/Wireless_Sensor_Node-Solar_Kit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/EE04_with_esphome_advanced": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/epaper_ee04": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ee04_with_platformio": [
     "cn",
     "en",
     "es",
@@ -7906,6 +8020,18 @@
     "es",
     "ja"
   ],
+  "/respeaker_xvf3800_ros2": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/respeaker_xvf3800_xiao_tensorflow": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/respeaker_xvf3800_xiao_udp_audio_stream": [
     "cn",
     "en",
@@ -8320,6 +8446,18 @@
     "es",
     "ja"
   ],
+  "/epaper_breakout_board_with_oepl": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/XIAO-eInk-Expansion-Board": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/gnss_for_xiao": [
     "cn",
     "en",
@@ -8388,11 +8526,6 @@
   ],
   "/xiao-can-bus-expansion": [
     "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/XIAO-eInk-Expansion-Board": [
     "en",
     "es",
     "ja"
@@ -8584,6 +8717,18 @@
     "ja"
   ],
   "/xiao_nrf54l15_sense_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_nrf54l15_sense_matter": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_nrf54l15_sense_micropython": [
     "cn",
     "en",
     "es",
@@ -9027,48 +9172,6 @@
     "es",
     "ja"
   ],
-  "/Seeeduino-Stalker_v3": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Seeeduino_Stalker": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Seeeduino_Stalker_v1.0": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Seeeduino_Stalker_v2.3": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Seeeduino_Stalker_V3-Waterproof_Solar_Kit": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Seeeduino_Stalker_V3.1": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Seeeduino_Stalker_v3_enclosure": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/Seeeduino-Cortex-M0": [
     "cn",
     "en",
@@ -9160,6 +9263,48 @@
     "ja"
   ],
   "/Seeeduino_Mega_Protoshield_Kit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Seeeduino-Stalker_v3": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Seeeduino_Stalker": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Seeeduino_Stalker_v1.0": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Seeeduino_Stalker_v2.3": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Seeeduino_Stalker_V3-Waterproof_Solar_Kit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Seeeduino_Stalker_V3.1": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Seeeduino_Stalker_v3_enclosure": [
     "cn",
     "en",
     "es",
@@ -9759,13 +9904,13 @@
     "es",
     "ja"
   ],
-  "/SenseCAP_T1000_tracker_Ubidots_Helium": [
+  "/SenseCAP_T1000_tracker_Ubidots_TTS": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/SenseCAP_T1000_tracker_Ubidots_TTS": [
+  "/SenseCAP_T1000_tracker_Ubidots_Helium": [
     "cn",
     "en",
     "es",
@@ -9825,13 +9970,13 @@
     "es",
     "ja"
   ],
-  "/use_case": [
+  "/device_network_setup": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/device_network_setup": [
+  "/extending_grove_with_mcp": [
     "cn",
     "en",
     "es",
@@ -9843,13 +9988,25 @@
     "es",
     "ja"
   ],
-  "/hello_watcher_llms": [
+  "/mcp_endpoint": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/visual_trigger_and_ai_flash": [
     "cn",
     "en",
     "es",
     "ja"
   ],
   "/watcher_web_control_panel": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/use_case": [
     "cn",
     "en",
     "es",
@@ -10826,6 +10983,12 @@
     "es",
     "ja"
   ],
+  "/solutions/hello_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/solutions/indoor-positioning-bluetooth-lorawan-tracker": [
     "cn",
     "en",
@@ -11006,6 +11169,24 @@
     "es",
     "ja"
   ],
+  "/Grove-Creator-Kit-1": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Grove-Mixer_Pack_V2": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Grove-Toy_Kit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/Grove-Beginner-Kit-for-Arduino-education-pack": [
     "cn",
     "en",
@@ -11025,24 +11206,6 @@
     "ja"
   ],
   "/Grove_Beginner_Kit_for_Arduino": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Grove-Creator-Kit-1": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Grove-Mixer_Pack_V2": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/Grove-Toy_Kit": [
     "cn",
     "en",
     "es",
@@ -12024,6 +12187,30 @@
     "cn",
     "es",
     "ja"
+  ],
+  "/": [
+    "en",
+    "cn",
+    "ja",
+    "es"
+  ],
+  "": [
+    "en",
+    "cn",
+    "ja",
+    "es"
+  ],
+  "/knowledgebase/": [
+    "en",
+    "cn",
+    "ja",
+    "es"
+  ],
+  "/knowledgebase": [
+    "en",
+    "cn",
+    "ja",
+    "es"
   ]
 };
 
@@ -12031,7 +12218,7 @@
   let isInitialized = false;
   let currentPageInfo = null;
   let observerConnected = false;
-  
+
   // 监控间隔ID
   let primaryCheckInterval = null;
   let backupCheckInterval = null;
@@ -12040,7 +12227,7 @@
     const currentPath = window.location.pathname;
     let detectedLanguage = 'en';
     let basePath = currentPath;
-    
+
     if (currentPath.startsWith('/cn/')) {
       detectedLanguage = 'cn';
       basePath = currentPath.replace('/cn', '') || '/';
@@ -12051,11 +12238,11 @@
       detectedLanguage = 'es';
       basePath = currentPath.replace('/es', '') || '/';
     }
-    
+
     if (!basePath.startsWith('/')) {
       basePath = '/' + basePath;
     }
-    
+
     return { currentLanguage: detectedLanguage, basePath };
   }
 
@@ -12065,7 +12252,7 @@
       basePath.replace(/\/$/, ''),
       basePath + (basePath.endsWith('/') ? '' : '/'),
     ];
-    
+
     for (const tryPath of pathsToTry) {
       if (languageMapping[tryPath]) {
         const availableLanguages = languageMapping[tryPath];
@@ -12073,7 +12260,7 @@
         return availableLanguages;
       }
     }
-    
+
     log('ℹ️ 单语言页面: ' + basePath);
     return [currentLanguage];
   }
@@ -12090,7 +12277,7 @@
       if (b === currentLanguage) return 1;
       return (priority[a] || 999) - (priority[b] || 999);
     });
-    
+
     const switcherHTML = [
       '<div class="navbar__item dropdown dropdown--hoverable navbar-language-switcher navbar_dorp_items" data-page-path="' + basePath + '" data-current-lang="' + currentLanguage + '">',
       '  <a href="#" class="navbar__link" aria-haspopup="true" aria-expanded="false" role="button">',
@@ -12102,7 +12289,7 @@
         const lang = languages[langCode];
         const langPath = lang.prefix + basePath;
         const isActive = langCode === currentLanguage;
-        
+
         return [
           '    <li>',
           '      <a class="dropdown__link ' + (isActive ? 'dropdown__link--active' : '') + '"',
@@ -12119,15 +12306,15 @@
       '  </ul>',
       '</div>'
     ].join('\n');
-    
+
     return switcherHTML;
   }
 
   function injectOrUpdateSwitcher() {
-    const navbar = document.querySelector('.navbar__items--right') || 
+    const navbar = document.querySelector('.navbar__items--right') ||
                    document.querySelector('.navbar__items') ||
                    document.querySelector('.navbar');
-    
+
     if (!navbar) {
       log('⏳ 导航栏未找到');
       return false;
@@ -12136,7 +12323,7 @@
     const { currentLanguage, basePath } = getCurrentLanguageAndPath();
     const availableLanguages = findAvailableLanguages(basePath, currentLanguage);
     const existingSwitcher = document.querySelector('.navbar-language-switcher');
-    
+
     // 更新当前页面信息
     currentPageInfo = {
       basePath: basePath,
@@ -12144,7 +12331,7 @@
       availableLanguages: availableLanguages,
       timestamp: Date.now()
     };
-    
+
     // 情况1：不需要切换器
     if (availableLanguages.length <= 1) {
       if (existingSwitcher) {
@@ -12153,18 +12340,18 @@
       }
       return true;
     }
-    
-    // 情况2：需要切换器但不存在 - 创建
+
+    // 情况2：需要切换器但不存在 - 创建（⚠️ 桌面端逻辑保持不变）
     if (!existingSwitcher) {
       const switcherHTML = createLanguageSwitcher(availableLanguages, currentLanguage, basePath);
       if (switcherHTML) {
         let insertPosition = null;
         const positionSelectors = [
           'a[href*="seeedstudio.com"]',
-          '.header-github-link', 
+          '.header-github-link',
           '.navbar__item:last-child'
         ];
-        
+
         for (const selector of positionSelectors) {
           const element = navbar.querySelector(selector);
           if (element) {
@@ -12172,13 +12359,13 @@
             break;
           }
         }
-        
+
         if (insertPosition) {
           insertPosition.insertAdjacentHTML('beforebegin', switcherHTML);
         } else {
           navbar.insertAdjacentHTML('beforeend', switcherHTML);
         }
-        
+
         const switcherElement = navbar.querySelector('.navbar-language-switcher');
         if (switcherElement) {
           const switcherButton = switcherElement.querySelector('.navbar__link');
@@ -12188,117 +12375,380 @@
             });
           }
         }
-        
+
         log('✅ 创建新的语言切换器');
         return true;
       }
     }
-    
+
     // 情况3：切换器存在 - 检查是否需要更新
     if (existingSwitcher) {
       const currentPagePath = existingSwitcher.getAttribute('data-page-path');
       const currentLang = existingSwitcher.getAttribute('data-current-lang');
-      
-      // 如果页面路径或当前语言发生变化，则更新
+
       if (currentPagePath !== basePath || currentLang !== currentLanguage) {
         log('🔄 检测到页面变化，更新切换器');
         log('   从: ' + (currentPagePath || '未知') + ' (' + (currentLang || '未知') + ')');
         log('   到: ' + basePath + ' (' + currentLanguage + ')');
-        
+
         existingSwitcher.remove();
         return injectOrUpdateSwitcher(); // 递归调用重新创建
       }
     }
-    
+
+    return true;
+  }
+
+  // 移动端支持
+
+  function createMobileLanguageSwitcher(availableLanguages, currentLanguage, basePath) {
+    if (availableLanguages.length <= 1) return null;
+
+    const currentLangConfig = languages[currentLanguage];
+    const priority = { en: 0, cn: 1, ja: 2, es: 3 };
+    const sortedLanguages = [...availableLanguages].sort((a, b) => {
+      if (a === currentLanguage) return -1;
+      if (b === currentLanguage) return 1;
+      return (priority[a] || 999) - (priority[b] || 999);
+    });
+
+    const header =
+      '<button class="menu__link menu__link--sublist" aria-expanded="false" type="button">' +
+      '<span class="lang-flag">' + currentLangConfig.flag + '</span>' +
+      '<span class="lang-label" style="margin-left: .5rem;">' + currentLangConfig.label + '</span>' +
+      '</button>';
+
+    const listItems = sortedLanguages.map((code) => {
+      const lang = languages[code];
+      const langPath = lang.prefix + basePath;
+      const isActive = code === currentLanguage;
+      return (
+        '<li class="menu__list-item">' +
+        '  <a class="menu__link' + (isActive ? ' menu__link--active' : '') + '" href="' + langPath + '" data-lang="' + code + '">' +
+        '    <span class="lang-flag">' + lang.flag + '</span>' +
+        '    <span class="lang-label" style="margin-left: .5rem;">' + lang.label + '</span>' +
+        (isActive ? '<span class="lang-check" style="margin-left:auto;">✓</span>' : '') +
+        '  </a>' +
+        '</li>'
+      );
+    }).join('');
+
+    const html =
+      '<li class="menu__list-item mobile-language-switcher" data-page-path="' + basePath + '" data-current-lang="' + currentLanguage + '">' +
+      '  <div class="menu__list-item-collapsible">' +
+      header +
+      '    <ul class="menu__list" hidden>' + listItems + '</ul>' +
+      '  </div>' +
+      '</li>';
+
+    return html;
+  }
+
+  function getSidebarMenuList() {
+    const container = document.querySelector('.navbar-sidebar__items .menu__list');
+    return container || null;
+  }
+
+  function bindMobileSwitcherBehavior(li) {
+    const toggle = li.querySelector('.menu__link--sublist');
+    const sublist = li.querySelector('.menu__list');
+    if (toggle && sublist) {
+      toggle.addEventListener('click', function () {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        if (expanded) {
+          sublist.setAttribute('hidden', '');
+        } else {
+          sublist.removeAttribute('hidden');
+        }
+      });
+    }
+
+    li.querySelectorAll('a.menu__link').forEach((a) => {
+      a.addEventListener('click', function () {
+        setTimeout(() => {
+          const body = document.querySelector('body');
+          body && body.classList.remove('navbar-sidebar--show');
+          const backdrop = document.querySelector('.navbar-sidebar__backdrop');
+          backdrop && backdrop.click();
+        }, 50);
+      });
+    });
+  }
+
+  function injectOrUpdateMobileSwitcher() {
+    const sidebarList = getSidebarMenuList();
+    if (!sidebarList) return false;
+
+    const { currentLanguage, basePath } = getCurrentLanguageAndPath();
+    const availableLanguages = findAvailableLanguages(basePath, currentLanguage);
+    const existing = sidebarList.querySelector('.mobile-language-switcher');
+
+    if (availableLanguages.length <= 1) {
+      if (existing) existing.remove();
+      return true;
+    }
+
+    if (!existing) {
+      const html = createMobileLanguageSwitcher(availableLanguages, currentLanguage, basePath);
+      if (html) {
+        sidebarList.insertAdjacentHTML('beforeend', html);
+        const li = sidebarList.querySelector('.mobile-language-switcher');
+        if (li) bindMobileSwitcherBehavior(li);
+        log('✅ 移动端语言切换器已插入（侧边栏）');
+        return true;
+      }
+    }
+
+    if (existing) {
+      const curPath = existing.getAttribute('data-page-path');
+      const curLang = existing.getAttribute('data-current-lang');
+      if (curPath !== basePath || curLang !== currentLanguage) {
+        existing.remove();
+        return injectOrUpdateMobileSwitcher();
+      }
+    }
+
+    return true;
+  }
+
+  function isMobileViewport() {
+    return window.matchMedia && window.matchMedia('(max-width: 996px)').matches;
+  }
+
+  // 与 PC 端一致的 dropdown 结构（dropdown / dropdown__menu / dropdown__link / navbar__link）
+  // 注意：容器不上 .navbar__item，避免被移动端样式隐藏；增加 position:relative 以定位菜单
+  function createMobileTopbarLanguageSwitcher(availableLanguages, currentLanguage, basePath) {
+    if (availableLanguages.length <= 1) return null;
+
+    const currentLangConfig = languages[currentLanguage];
+    const priority = { en: 0, cn: 1, ja: 2, es: 3 };
+    const sorted = [...availableLanguages].sort((a, b) => {
+      if (a === currentLanguage) return -1;
+      if (b === currentLanguage) return 1;
+      return (priority[a] || 999) - (priority[b] || 999);
+    });
+
+    const itemsHTML = sorted
+      .map((code) => {
+        const lang = languages[code];
+        const langPath = lang.prefix + basePath;
+        const isActive = code === currentLanguage;
+        return [
+          '<li>',
+          '  <a class="dropdown__link ' + (isActive ? 'dropdown__link--active' : '') + '"',
+          '     href="' + langPath + '"',
+          '     data-lang="' + code + '"',
+          '     title="切换到 ' + lang.label + '"' + (isActive ? ' aria-current="page"' : '') + '>',
+          '    <span class="lang-flag">' + lang.flag + '</span>',
+          '    <span class="lang-label" style="margin-left:.35rem;">' + lang.label + '</span>',
+          (isActive ? '    <span class="lang-check" style="margin-left:auto;">✓</span>' : ''),
+          '  </a>',
+          '</li>',
+        ].join('\n');
+      })
+      .join('\n');
+
+    const switcherHTML = [
+      '<div class="dropdown navbar_dorp_items lang-switcher-inline-mobile" data-page-path="' + basePath + '" data-current-lang="' + currentLanguage + '"',
+      '     style="display:flex;align-items:center;margin-left:8px;position:relative;">',
+      '  <a href="#" class="navbar__link lang-switcher-btn" role="button" aria-haspopup="true" aria-expanded="false"',
+      '     style="display:flex;align-items:center;">',
+      '    <span class="lang-flag">' + currentLangConfig.flag + '</span>',
+      '    <span class="lang-label" style="margin-left:.35rem;">' + currentLangConfig.label + '</span>',
+      '  </a>',
+      '  <ul class="dropdown__menu" style="min-width: 180px;">',
+           itemsHTML,
+      '  </ul>',
+      '</div>',
+    ].join('\n');
+
+    return switcherHTML;
+  }
+
+  // 点击展开/收起（移动端无 hover）：通过切换父容器类名 dropdown--show 来控制显示
+  function bindMobileTopbarDropdown(container) {
+    const btn = container.querySelector('.lang-switcher-btn');
+    const menu = container.querySelector('.dropdown__menu');
+    if (!btn || !menu) return;
+
+    function closeMenu() {
+      btn.setAttribute('aria-expanded', 'false');
+      container.classList.remove('dropdown--show');
+    }
+
+    function openMenu() {
+      btn.setAttribute('aria-expanded', 'true');
+      container.classList.add('dropdown--show');
+    }
+
+    function toggleMenu(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      if (expanded) closeMenu(); else openMenu();
+    }
+
+    // 点击/触摸触发
+    btn.addEventListener('click', toggleMenu);
+    btn.addEventListener('touchstart', function(e){ toggleMenu(e); }, {passive:false});
+
+    // 外击关闭
+    function outside(e) {
+      if (!container.contains(e.target)) closeMenu();
+    }
+    document.addEventListener('click', outside);
+    document.addEventListener('touchstart', outside, {passive:true});
+
+    // 路由或尺寸变化关闭
+    window.addEventListener('resize', closeMenu);
+    window.addEventListener('orientationchange', closeMenu);
+  }
+
+  function injectOrUpdateMobileTopbarSwitcherLogo() {
+    // 仅在移动端视口处理；切回桌面时自动移除
+    const existing = document.querySelector('.lang-switcher-inline-mobile');
+    if (!isMobileViewport()) {
+      if (existing) existing.remove();
+      return false;
+    }
+
+    // 找到 Logo 区域
+    const brand = document.querySelector('.navbar__brand');
+    if (!brand) return false;
+
+    const { currentLanguage, basePath } = getCurrentLanguageAndPath();
+    const availableLanguages = findAvailableLanguages(basePath, currentLanguage);
+
+    // 不需要切换器
+    if (availableLanguages.length <= 1) {
+      if (existing) existing.remove();
+      return true;
+    }
+
+    // 顶部栏优先显示，避免与侧边栏重复
+    const sidebarList = (typeof getSidebarMenuList === 'function') && getSidebarMenuList();
+    const mobileSidebarItem = sidebarList && sidebarList.querySelector('.mobile-language-switcher');
+    if (mobileSidebarItem) mobileSidebarItem.remove();
+
+    // 新建或更新
+    if (!existing) {
+      const html = createMobileTopbarLanguageSwitcher(availableLanguages, currentLanguage, basePath);
+      if (html) {
+        // 插到 Logo 的右侧
+        brand.insertAdjacentHTML('afterend', html);
+        const container = document.querySelector('.lang-switcher-inline-mobile');
+        if (container) {
+          bindMobileTopbarDropdown(container);
+        }
+        log('✅ 移动端顶部栏语言切换器已插入（Logo 右侧，PC 同款样式）');
+        return true;
+      }
+    } else {
+      const curPath = existing.getAttribute('data-page-path');
+      const curLang = existing.getAttribute('data-current-lang');
+      if (curPath !== basePath || curLang !== currentLanguage) {
+        existing.remove();
+        return injectOrUpdateMobileTopbarSwitcherLogo();
+      }
+    }
     return true;
   }
 
   // 生产环境优化的监控策略
   function startProductionMonitoring() {
-    // 清除可能存在的监控
     if (primaryCheckInterval) clearInterval(primaryCheckInterval);
     if (backupCheckInterval) clearInterval(backupCheckInterval);
-    
-    // 主要监控：每200ms检查一次（针对生产环境优化）
+
     primaryCheckInterval = setInterval(function() {
       const { currentLanguage, basePath } = getCurrentLanguageAndPath();
-      
-      // 检查页面是否发生变化
-      if (!currentPageInfo || 
-          currentPageInfo.basePath !== basePath || 
+
+      if (!currentPageInfo ||
+          currentPageInfo.basePath !== basePath ||
           currentPageInfo.currentLanguage !== currentLanguage) {
-        
+
         log('🔄 检测到页面变化，执行更新');
-        injectOrUpdateSwitcher();
+        injectOrUpdateSwitcher();                 // 桌面端（保持原样）
+        injectOrUpdateMobileTopbarSwitcherLogo(); // 移动端顶部栏（Logo 右侧）
+        // injectOrUpdateMobileSwitcher();        // 如需侧边栏也显示，可另行开启
       }
     }, 200);
-    
-    // 备用监控：每2秒进行完整检查
+
     backupCheckInterval = setInterval(function() {
       const { currentLanguage, basePath } = getCurrentLanguageAndPath();
       const availableLanguages = findAvailableLanguages(basePath, currentLanguage);
       const existingSwitcher = document.querySelector('.navbar-language-switcher');
-      
-      // 完整性检查
-      if (availableLanguages.length > 1 && !existingSwitcher) {
-        log('🚨 备用监控发现切换器丢失，重新创建');
-        injectOrUpdateSwitcher();
-      } else if (availableLanguages.length <= 1 && existingSwitcher) {
-        log('🚨 备用监控发现多余切换器，移除');
-        existingSwitcher.remove();
+      const existingMobileTopbar = document.querySelector('.lang-switcher-inline-mobile');
+
+      if (availableLanguages.length > 1) {
+        if (!existingSwitcher) injectOrUpdateSwitcher();
+        if (!existingMobileTopbar) injectOrUpdateMobileTopbarSwitcherLogo();
+      } else {
+        if (existingSwitcher) existingSwitcher.remove();
+        if (existingMobileTopbar) existingMobileTopbar.remove();
+        const sidebarList = (typeof getSidebarMenuList === 'function') && getSidebarMenuList();
+        const mobileExists = sidebarList && sidebarList.querySelector('.mobile-language-switcher');
+        if (mobileExists) mobileExists.remove();
         currentPageInfo = null;
       }
     }, 2000);
-    
+
     log('🔧 启动生产环境监控机制');
+
+    // 监听视口变化（横竖屏/缩放）
+    let resizeTimer = null;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        injectOrUpdateMobileTopbarSwitcherLogo();
+      }, 150);
+    });
   }
 
   // 强化的路由变化检测（专为生产环境设计）
   function setupProductionRouteDetection() {
     let lastPathname = location.pathname;
     let lastHref = location.href;
-    
-    // 方法1：历史记录变化
+
     function handleHistoryChange(source) {
       setTimeout(function() {
         if (location.pathname !== lastPathname || location.href !== lastHref) {
           log('🔄 路由变化 [' + source + ']: ' + lastPathname + ' -> ' + location.pathname);
           lastPathname = location.pathname;
           lastHref = location.href;
-          
-          // 强制更新
+
           setTimeout(function() {
             injectOrUpdateSwitcher();
+            injectOrUpdateMobileTopbarSwitcherLogo();
+            // setTimeout(injectOrUpdateMobileSwitcher, 50); // 若要侧边栏也显示，可开启
           }, 100);
         }
       }, 50);
     }
-    
+
     window.addEventListener('popstate', function() {
       handleHistoryChange('popstate');
     });
-    
-    // 拦截pushState和replaceState
+
     const originalPushState = history.pushState;
     const originalReplaceState = history.replaceState;
-    
+
     history.pushState = function() {
       originalPushState.apply(this, arguments);
       handleHistoryChange('pushState');
     };
-    
+
     history.replaceState = function() {
       originalReplaceState.apply(this, arguments);
       handleHistoryChange('replaceState');
     };
-    
-    // 方法2：全局点击监听（捕获所有内部链接）
+
     document.addEventListener('click', function(e) {
       const link = e.target.closest('a[href]');
       if (link && link.href) {
         try {
           const url = new URL(link.href);
-          if (url.origin === window.location.origin && url.pathname !== lastPathname) {
+        if (url.origin === window.location.origin && url.pathname !== lastPathname) {
             setTimeout(function() {
               handleHistoryChange('click');
             }, 150);
@@ -12308,43 +12758,43 @@
         }
       }
     }, true);
-    
-    // 方法3：定期URL检查（生产环境备用方案）
+
     setInterval(function() {
       if (location.pathname !== lastPathname || location.href !== lastHref) {
         handleHistoryChange('periodic');
       }
     }, 1000);
-    
+
     log('🔧 启动生产环境路由检测');
   }
 
   function productionInitialization() {
     log('🚀 初始化生产环境优化版语言切换器');
-    
-    // 等待DOM完全稳定
+
     function attemptInitialization() {
-      const navbar = document.querySelector('.navbar__items--right') || 
+      const navbar = document.querySelector('.navbar__items--right') ||
                      document.querySelector('.navbar__items');
-      
+
       if (navbar) {
         log('✅ 导航栏就绪，开始初始化');
-        
+
         // 立即执行一次注入
-        injectOrUpdateSwitcher();
-        
+        injectOrUpdateSwitcher();                  // 桌面端（保持原样）
+        injectOrUpdateMobileTopbarSwitcherLogo();  // 移动端顶部栏（Logo 右侧）
+        // injectOrUpdateMobileSwitcher();          // 如需侧边栏也显示，可开启
+
         // 启动监控机制
         setTimeout(function() {
           startProductionMonitoring();
           setupProductionRouteDetection();
         }, 500);
-        
+
       } else {
         log('⏳ 等待导航栏加载...');
         setTimeout(attemptInitialization, 300);
       }
     }
-    
+
     attemptInitialization();
   }
 
@@ -12352,24 +12802,21 @@
     if (isInitialized) {
       return;
     }
-    
+
     log('🚀 启动生产环境优化版语言切换器');
     log('📊 映射数据包含 ' + Object.keys(languageMapping).length + ' 个多语言页面');
-    
+
     isInitialized = true;
-    
-    // 延迟初始化以确保生产环境稳定性
+
     setTimeout(productionInitialization, 800);
   }
 
-  // 多重初始化策略
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
     setTimeout(init, 100);
   }
-  
-  // 确保初始化的备用机制
+
   setTimeout(function() {
     if (!isInitialized) {
       log('🔄 备用初始化触发');

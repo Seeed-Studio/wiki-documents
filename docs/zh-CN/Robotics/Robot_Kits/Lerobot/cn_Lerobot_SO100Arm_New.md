@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /cn/lerobot_so100m_new
 last_update:
-  date: 7/29/2025
+  date: 9/26/2025
   author: LiShanghang
 ---
 
@@ -254,7 +254,6 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
 ```
 
-
 4. 使用 miniconda 时，在环境中安装 ffmpeg：
  
 ```bash
@@ -284,7 +283,7 @@ conda install ffmpeg=7.1.1 -c conda-forge
 cd ~/lerobot && pip install -e ".[feetech]"
 ```
 
-6. (电脑端可跳过这一步) 对于 Jetson Jetpack 6.0+ 设备（请确保在执行此步骤前按照[此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)的第 5 步安装了 Pytorch-gpu 和 Torchvision）：
+6. (电脑端可跳过这一步) 对于 Jetson Jetpack 6.0+ 设备（请确保在执行此步骤前按照[此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch)的第 5 步安装了 Pytorch-gpu 和 Torchvision）：
 
 ```bash
 conda install -y -c conda-forge "opencv>=4.10.0.84"  # 通过 conda 安装 OpenCV 和其他依赖，仅适用于 Jetson Jetpack 6.0+
@@ -349,7 +348,7 @@ SO101的舵机校准初始化与SO100方法和代码一致的，这里只是需�
 查找机械臂对应的 USB 端口
 为了找到每个机械臂正确的端口，请运行实用脚本两次：
 ```bash
-python -m lerobot.find_port
+lerobot-find-port
 ```
 
 示例输出:
@@ -368,8 +367,8 @@ Reconnect the USB cable.
 请记住要拔出 USB 接头，否则将无法检测到接口。
 :::
 
-识别领导臂端口时的示例输出（例如，在 Mac 上为 `/dev/tty.usbmodem575E0031751`，或在 Linux 上可能为 `/dev/ttyACM0`）：
-识别跟从懂端口时的示例输出（例如，在 Mac 上为 `/dev/tty.usbmodem575E0032081`，或在 Linux 上可能为 `/dev/ttyACM1`）：
+识别从动臂端口时的示例输出（例如，在 Mac 上为 `/dev/tty.usbmodem575E0031751`，或在 Linux 上可能为 `/dev/ttyACM0`）：
+识别领导臂端口时的示例输出（例如，在 Mac 上为 `/dev/tty.usbmodem575E0032081`，或在 Linux 上可能为 `/dev/ttyACM1`）：
 
 故障排除：在 Linux 上，你可能需要通过运行以下命令来赋予 USB 端口访问权限：
 
@@ -405,7 +404,7 @@ sudo chmod 666 /dev/ttyACM1
 将 USB 线从电脑连接到从动臂的舵机驱动板，并接通电源。然后，运行以下命令。
 
 ```bash
-python -m lerobot.setup_motors \
+lerobot-setup-motors \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0
 ```
@@ -443,7 +442,7 @@ Connect the controller board to the 'wrist_roll' motor only and press enter.
 对领导臂重复相同的步骤。
 
 ```bash
-python -m lerobot.setup_motors \
+lerobot-setup-motors \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM0
 ```    
@@ -484,14 +483,14 @@ python -m lerobot.setup_motors \
 
 **组装领导臂**
 
-| **Step 1** | **Step 2** | **Step 3** | **Step 4** | **Step 5** | **Step 6** |
+| **步骤 1** | **步骤 2** | **步骤 3** | **步骤 4** | **步骤 5** | **步骤 6** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L1.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L2.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L3.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L4.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L5.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L6.jpg) |
-| **Step 7** | **Step 8** | **Step 9** | **Step 10** | **Step 11** | **Step 12** |
+| **步骤 7** | **步骤 8** | **步骤 9** | **步骤 10** | **步骤 11** | **步骤 12** |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L7.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L8.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L9.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L10.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L11.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L12.jpg) |
-| **Step 13** | **Step 14** | **Step 15** | **Step 16** | **Step 17** | **Step 18** |
+| **步骤 13** | **步骤 14** | **步骤 15** | **步骤 16** | **步骤 17** | **步骤 18** |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L13.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L14.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L15.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L16.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L18.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L21.jpg) |
-| **Step 19** | **Step 20** | 
+| **步骤 19** | **步骤 20** | 
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L22.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L23.jpg) |
 
 **组装从动臂**
@@ -500,12 +499,12 @@ python -m lerobot.setup_motors \
 - 从动臂的组装步骤与领导臂基本相同。唯一的区别在于第12步之后，末端执行器（夹爪和手柄）的安装方式有所不同。
 :::
 
-| **Step 1** | **Step 2** | **Step 3** | **Step 4** | **Step 5** | **Step 6** |
+| **步骤 1** | **步骤 2** | **步骤 3** | **步骤 4** | **步骤 5** | **步骤 6** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F1.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F2.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F3.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F3.5.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F4.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F5.jpg) |
-| **Step 7** | **Step 8** | **Step 9** | **Step 10** | **Step 11** | **Step 12** |
+| **步骤 7** | **步骤 8** | **步骤 9** | **步骤 10** | **步骤 11** | **步骤 12** |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F7.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F8.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F9.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F11.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F12.jpg) |
-| **Step 13** | **Step 14** | **Step 15** | **Step 16** | **Step 17** | 
+| **步骤 13** | **步骤 14** | **步骤 15** | **步骤 16** | **步骤 17** | 
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F13.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F14.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F15.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F16.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F17.jpg) |
 
 
@@ -515,8 +514,6 @@ python -m lerobot.setup_motors \
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115020482480174&bvid=BV1i2bazGEHo&cid=31664966705&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
-
 
 :::tip
 SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的参数和代码进行操作。
@@ -528,12 +525,13 @@ SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的
 
 接下来，你需要对你的 SO-10x 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。这个校准过程至关重要，因为它可以让在一个 SO-10x 机器人上训练的神经网络在另一个机器人上也能正常工作。如果需要重新校准机械臂，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
 
-## 从动臂手动校准
-
 请通过 3 针接口连接 6 个机器人舵机的接口，并将底盘舵机连接到舵机驱动板，然后运行以下命令或 API 示例来校准机械臂：
 
+:::tip
+以PC(linux)和jetson板卡为例，`第一个`插入usb接口会映射为`ttyACM0`，`第二个`插入usb接口会映射为`ttyACM1`。
 
-### 接口授权
+在运行代码前请注意leader和follower的映射接口。
+:::
 
 首先，您需要授予接口权限，运行以下命令：
 
@@ -541,12 +539,12 @@ SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的
 sudo chmod 666 /dev/ttyACM*
 ```
 
-### 然后校准从动臂
+### 校准从动臂
 
 接下来，通过运行以下 Python 命令来校准从动臂：
 
 ```python
-python -m lerobot.calibrate \
+lerobot-calibrate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm
@@ -555,14 +553,14 @@ python -m lerobot.calibrate \
 下面的视频演示了如何执行校准。首先，您需要将机器人移动到所有关节都位于其活动范围中间的位置。然后，按下回车键后，您必须将每个关节在其完整的运动范围内移动。
 
 
-**领导臂手动校准**
+###  校准领导臂
 
 对主机械臂进行校准的步骤与上述相同，请运行以下命令或 API 示例：
 
 ```python
-python -m lerobot.calibrate \
+lerobot-calibrate \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm
 ```
 
@@ -586,12 +584,12 @@ sudo chmod 666 /dev/ttyACM*
 运行遥操作：
 
 ```bash
-python -m lerobot.teleoperate \
+lerobot-teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm
 ```
 
@@ -602,6 +600,129 @@ python -m lerobot.teleoperate \
 
 
 ## 添加摄像头
+
+<details>
+
+<summary> 如果是Orbbec Gemini2深度相机 </summary>
+
+<div align="center">
+    <img width={800}
+    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" />
+</div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?abbucket=16&id=877820346195&mi_id=0000Ou_lIzqedYPuPAA8fpFm7RLR5dXIVA-SAX_AOiJab6M&ns=1&skuId=6069820106496&spm=a21n57.1.hoverItem.5&utparam=%7B%22aplus_abtest%22%3A%2275f755ae980dafcddefac00fe2ec6540%22%7D&xxc=taobaoSearch" target="_blank" rel="noopener noreferrer" >
+            <strong><span><font color={'FFFFFF'} size={"4"}> 淘宝来一单 🖱️</font></span></strong>
+</a></div>
+
+
+- 🚀 步骤 1：安装 Orbbec SDK 依赖环境
+
+1. 拉取 `pyorbbec` 仓库
+   ```bash
+   cd ~/
+   git clone https://github.com/orbbec/pyorbbecsdk.git
+   ```
+
+2. 下载并安装 SDK 对应的 **.whl 文件**  
+   前往 [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases)，  
+   根据 Python 版本选择并安装，例如：
+   ```bash
+   pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
+   ```
+
+3. 在 `pyorbbec` 目录下安装依赖
+   ```bash
+   cd ~/pyorbbecsdk
+   pip install -r requirements.txt
+   ```
+
+  强制降低`numpy`版本到`1.26.0`
+    ```bash
+    pip install numpy==1.26.0
+    ```
+  可以忽略红色报错。
+
+4.将orbbec sdk克隆到`~/lerobot/src/cameras`目录下
+
+  ```bash
+  cd ~/lerobot/src/cameras
+  git clone https://github.com/ZhuYaoHui1998/orbbec.git
+  ```
+
+5.修改utils.py和__init__.py
+- 在`~/lerobot/src/lerobot/cameras`目录下找到`utils.py`，在`40`行处添加如下代码：
+
+```python
+elif cfg.type == "orbbec":
+            from .orbbec.camera_orbbec import OrbbecCamera
+
+            cameras[key] = OrbbecCamera(cfg)
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/utils.png" />
+</div>
+
+- 在`~/lerobot/src/lerobot/cameras`目录下找到`__init__.py`，在`18`行处添加如下代码：
+
+```python
+from .orbbec.configuration_orbbec import OrbbecCameraConfig
+```
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
+</div>
+
+
+
+
+-  🚀 步骤 2：函数调用与示例
+
+以下示例均需将 `so101_follower` 替换为你所使用实际机械臂型号（如 `so100` / `so101`）。
+
+
+我们加入了focus_area超参数，因为过远的深度数据对于机械臂没有意义（抓取不到），因此小于或者大于focus_area的深度数据将会变为黑色,默认的focus_area是(20,600)
+目前支持的分辨率只限于 width: 640, height: 880
+
+```bash
+
+lerobot-teleoperate \
+    --robot.type=so101_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=my_awesome_follower_arm \
+    --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+    --teleop.type=so101_leader \
+    --teleop.port=/dev/ttyACM1 \
+    --teleop.id=my_awesome_leader_arm \
+    --display_data=true
+
+```
+
+
+<div align="center">
+    <img width={800}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/orbbec_result.png" />
+</div>
+
+
+后续采集数据、训练及评估任务与常规RGB命令一样，只需要把:
+
+```bash
+  --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+```
+
+替换到常规rgb命令中即可，你也可以再后面添加额外的单目RGB相机。
+
+
+
+**💡 作者与贡献**
+
+- 作者: 张家铨，王文钊 - 华南师范大学   
+
+
+</details>
 
 
 <div class="video-container">
@@ -614,7 +735,7 @@ python -m lerobot.teleoperate \
 要查找连接到您系统的摄像头的**摄像头索引**，请运行以下脚本：
 
 ```python
-python -m lerobot.find_cameras opencv # or realsense for Intel Realsense cameras
+lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
 ```
 
 终端会打印相关摄像头信息。
@@ -644,31 +765,40 @@ Camera #0:
 之后，您就可以在遥控操作时在电脑上显示摄像头画面了，只需运行以下代码即可。这对于在录制第一个数据集之前准备您的设置非常有用。
 
 ```bash
-python -m lerobot.teleoperate \
+lerobot-teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true
 ```
+
+:::tip
+`fourcc: "MJPG"`格式图像是经过压缩后的图像，你可以尝试更高分辨率，当然你可以尝试`YUYV`格式图像，但是这会导致图像的分辨率和FPS降低导致机械臂运行卡顿。目前`MJPG`格式下可支持`3`个摄像头`1920*1080`分辨率并且保持`30FPS`, 但是依然不推荐2个摄像头通过同一个USB HUB接入电脑
+:::
 
 如果您有更多摄像头，可以通过更改 `--robot.cameras` 参数来添加。您应该注意`index_or_path` 的格式，它由 `python -m lerobot.find_cameras opencv` 命令输出的摄像头 ID 的最后一位数字决定。
 
 例如，如果你想添加摄像头:  
 ```bash
-python -m lerobot.teleoperate \
+lerobot-teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true
 ```
+
+:::tip
+`fourcc: "MJPG"`格式图像是经过压缩后的图像，你可以尝试更高分辨率，当然你可以尝试`YUYV`格式图像，但是这会导致图像的分辨率和FPS降低导致机械臂运行卡顿。目前`MJPG`格式下可支持`3`个摄像头`1920*1080`分辨率并且保持`30FPS`, 但是依然不推荐2个摄像头通过同一个USB HUB接入电脑
+:::
+
 
 
 ## 数据集制作采集
@@ -683,13 +813,13 @@ python -m lerobot.teleoperate \
 - 如果你想数据集保存在本地，可以直接运行：
 
 ```bash
-python -m lerobot.record \
+lerobot-record \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true \
     --dataset.repo_id=seeedstudio123/test \
@@ -718,13 +848,13 @@ echo $HF_USER
 记录 5 个回合并将您的数据集上传到 Hub：
 
 ```bash
-python -m lerobot.record \
+lerobot-record \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true \
     --dataset.repo_id=${HF_USER}/record-test \
@@ -740,37 +870,72 @@ python -m lerobot.record \
 INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)
 ```
 
+**记录功能**
 
-**参数说明**
+**record**功能提供了一套工具，用于在机器人运行期间捕获和管理数据。
 
-- episode-time-s: 表示每次收集数据的时间。
-- reset-time-s: 是每次数据收集之间的准备时间。
-- num-episodes: 表示预期收集多少组数据。
-- push-to-hub: 决定是否将数据上传到 HuggingFace Hub。
+**1. 数据存储**
+
+- 数据以 `LeRobotDataset` 格式存储，并在记录过程中保存到磁盘中。
+- 默认情况下，数据集在记录完成后会推送到你的 Hugging Face 页面。
+- 若要禁用上传，请使用：`--dataset.push_to_hub=False`。
+
+**2. 检查点与恢复**
+
+- 在记录过程中会自动创建检查点。
+- 如果记录过程中断，可以通过重新运行相同的命令并添加 `--resume=true` 来恢复记录。
+
+⚠️ **重要提示**：在恢复时，需将 `--dataset.num_episodes` 设置为要额外记录的剧集数量（而不是数据集中目标的总剧集数量）。
+- 若要从头开始记录，请**手动删除**数据集目录。
+
+**3. 记录参数**
+
+通过命令行参数设置数据记录的流程：
+
+| 参数 | 描述 | 默认值 |
+|------|------|--------|
+| --dataset.episode_time_s | 每个数据剧集的持续时间（秒） | 60 |
+| --dataset.reset_time_s | 每个剧集后环境重置时间（秒） | 60 |
+| --dataset.num_episodes | 要记录的总剧集数量 | 50 |
+
+**4. 记录过程中的键盘控制**
+
+使用键盘快捷键控制数据记录流程：
+
+| 键 | 动作 |
+|----|------|
+| →（右箭头） | 提前终止当前剧集/重置；进入下一个。 |
+| ←（左箭头） | 取消当前剧集；重新录制。 |
+| ESC | 立即停止会话，编码视频，并上传数据集。 |
 
 :::tip
-
-- "如果你希望将数据保存在本地 (`--dataset.push_to_hub=false`)，请将 `--dataset.repo_id=${HF_USER}/so101_test` 替换为一个自定义的本地文件夹名称，例如 `--dataset.repo_id=seeed_123/so101_test`。数据将存储在系统主目录下的 `~/.cache/huggingface/lerobot`."
-
-- 如果你通过 `--dataset.push_to_hub=true` 将数据集上传到了 Hugging Face Hub，可以通过 [在线可视化你的数据集](https://huggingface.co/spaces/lerobot/visualize_dataset)，只需复制粘贴你的 repo id。
-
-- 在回合记录过程中任何时候按下右箭头 → 可提前停止并进入重置状态。重置过程中同样，可提前停止并进入下一个回合记录。
-
-- 在录制或重置到早期阶段时，随时按左箭头 ← 可提前停止当前剧集，并重新录制。
-
-- 在录制过程中随时按 ESCAPE ESC 可提前结束会话，直接进入视频编码和数据集上传。
-
-- 可以通过重新运行相同的命令并添加 `--resume=true` 来恢复录制。如果要从头开始录制，请手动删除数据集目录。
-
-- 一旦你熟悉了数据记录，你就可以创建一个更大的数据集进行训练。一个不错的起始任务是在不同的位置抓取物体并将其放入箱子中。我们建议至少记录 50 个场景，每个位置 10 个场景。保持相机固定，并在整个录制过程中保持一致的抓取行为。同时确保你正在操作的物体在相机视野中可见。一个很好的经验法则是，你应该仅通过查看相机图像就能完成这项任务。
-
-- 在接下来的章节中，你将训练你的神经网络。在实现可靠的抓取性能后，你可以在数据收集过程中引入更多变化，例如增加抓取位置、不同的抓取技巧以及改变相机位置。
-
-- 避免快速添加过多变化，因为这可能会阻碍您的结果。
-
-- 在 Linux 上，如果在数据记录期间左右箭头键和 Esc 键没有效果，请确保您已设置 $DISPLAY 环境变量。参见 [pynput 限制](https://pynput.readthedocs.io/en/latest/limitations.html#linux)。
-
+如果你的键盘按下后没有反应，可能你需要降低你pynput的版本，例如安装个1.6.8版本的。
+```bash
+pip install pynput==1.6.8
+```
 :::
+
+**数据收集技巧**
+
+- **任务建议**：在不同位置抓取物体并将其放入箱子中。
+- **规模**：记录 ≥50 个剧集（每个位置 10 个剧集）。
+- **一致性**：
+  - 保持摄像头固定。
+  - 保持相同的抓取行为。
+  - 确保操作的物体在摄像头画面中可见。
+- **逐步推进**：
+  - 先从可靠的抓取开始，然后再增加变化（新位置、抓取技巧、摄像头调整）。
+  - 避免复杂性急剧增加，以防止失败。
+
+💡 **经验法则**：仅使用摄像头画面作为指导，只根据屏幕反馈的视频图像，来控制机械臂完成任务。
+
+如果你想要深入了解这个重要主题，可以查看我们撰写的关于什么是好的数据集的[博客文章](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset)。
+
+**故障排除**
+
+Linux 问题：
+如果在记录过程中右箭头/左箭头/ESC 键无响应：
+- 验证 `$DISPLAY` 环境变量是否已设置（参见 [pynput 限制](https://pynput.readthedocs.io/en/latest/limitations.html )）。
 
 ## 可视化数据集
 
@@ -785,14 +950,14 @@ echo ${HF_USER}/so101_test
 如果您没有使用 `--dataset.push_to_hub=false` ，并上传了数据，您也可以在本地通过以下命令进行可视化：
 
 ```bash
-python -m lerobot.scripts.visualize_dataset_html \
+lerobot-dataset-viz \
   --repo-id ${HF_USER}/so101_test \
 ```
 
 如果您使用了 `--dataset.push_to_hub=false` ，没有上传数据，您也可以通过以下命令在本地进行可视化：
 
 ```bash
-python -m lerobot.scripts.visualize_dataset_html \
+lerobot-dataset-viz \
   --repo-id seeedstudio123/test \
 ```
 
@@ -804,7 +969,6 @@ python -m lerobot.scripts.visualize_dataset_html \
   </div>
 
 
-
 ## 回放一个数据集
 
 :::tip
@@ -814,27 +978,34 @@ python -m lerobot.scripts.visualize_dataset_html \
 现在，尝试在您的机器人上重播第一个数据集：
 
 ```bash
-python -m lerobot.replay \
+lerobot-replay \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
     --dataset.repo_id=${HF_USER}/record-test \
     --dataset.episode=0
 ```
 
-## 训练
+此时，机器人应该做出与你遥操记录时一样的动作。
 
+## 训练及评估
 
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115025515646433&bvid=BV1g2bqzmEJP&cid=31684297895&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 
+<details>
+<summary>[ACT](https://huggingface.co/docs/lerobot/act) </summary>
+
+参考官方教程[ACT](https://huggingface.co/docs/lerobot/act)
+
+**训练**
 
 要训练一个控制您机器人策略，使用 `python -m lerobot.scripts.train` 脚本。需要一些参数。以下是一个示例命令：
 
 ```bash
-python -m lerobot.scripts.train \
+lerobot-train \
   --dataset.repo_id=${HF_USER}/so101_test \
   --policy.type=act \
   --output_dir=outputs/train/act_so101_test \
@@ -847,7 +1018,7 @@ python -m lerobot.scripts.train \
 **如果您想在本地数据集上进行训练，请确保 `repo_id` 与数据收集时使用的名称匹配，并添加 `--policy.push_to_hub=false`。**
 
 ```bash
-python -m lerobot.scripts.train \
+lerobot-train \
   --dataset.repo_id=seeedstudio123/test \
   --policy.type=act \
   --output_dir=outputs/train/act_so101_test \
@@ -865,6 +1036,179 @@ python -m lerobot.scripts.train \
 * **策略类型**：我们使用 `policy.type=act` 提供了策略，同样你可以更换[act,diffusion,pi0,pi0fast,pi0fast,sac,smolvla]等策略，这将从 `configuration_act.py` 加载配置。重要的是，这个策略会自动适应您机器人（例如 `laptop` 和 `phone`）的电机状态、电机动作和摄像头数量，这些信息已保存在您的数据集中。
 * **设备选择**：我们提供了 `policy.device=cuda`，因为我们正在 Nvidia GPU 上进行训练，但您可以使用 `policy.device=mps` 在 Apple Silicon 上进行训练。
 * **可视化工具**：我们提供了 `wandb.enable=true` 来使用 [Weights and Biases](https://docs.wandb.ai/quickstart) 可视化训练图表。这是可选的，但如果您使用它，请确保您已通过运行 `wandb login` 登录。
+
+
+**评估**
+
+
+您可以使用 [`lerobot/record.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/record.py) 中的 `record` 功能，但需要将策略训练结果训练结果权重文件作为输入。例如，运行以下命令记录 10 个评估回合：
+
+
+```bash
+lerobot-record \
+  --robot.type=so101_follower \
+  --robot.port=/dev/ttyACM0 \
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
+  --robot.id=my_awesome_follower_arm \
+  --display_data=false \
+  --dataset.repo_id=seeed/eval_test123 \
+  --dataset.single_task="Put lego brick into the transparent box" \
+  --policy.path=outputs/train/act_so101_test/checkpoints/last/pretrained_model
+``` 
+ 
+  
+1.  `--policy.path` 参数，指示您的策略训练结果权重文件的路径（例如 `outputs/train/act_so101_test/checkpoints/last/pretrained_model`）。如果您将模型训练结果权重文件上传到 Hub，也可以使用模型仓库（例如 `${HF_USER}/act_so100_test`）。
+2. 数据集的名称`dataset.repo_id`以 `eval_` 开头，这个操作会在你评估的时候为你单独录制评估时候的视频和数据，将保存在eval_开头的文件夹下，例如`seeed/eval_test123`。
+3. 如果评估阶段遇到`File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'`请先删除`eval_`开头的这个文件夹再次运行程序。
+4. 当遇到`mean is infinity. You should either initialize with stats as an argument or use a pretrained model`请注意--robot.cameras这个参数中的front和side等关键词必须和采集数据集的时候保持严格一致。
+
+
+</details>
+
+
+<details>
+<summary>[SmolVLA](https://huggingface.co/docs/lerobot/smolvla) </summary>
+
+参考官方教程[SmolVLA](https://huggingface.co/docs/lerobot/smolvla)
+
+```bash
+pip install -e ".[smolvla]"
+```
+
+**训练**
+```bash
+lerobot-train \
+  --policy.path=lerobot/smolvla_base \ # <- Use pretrained fine-tuned model
+  --dataset.repo_id=${HF_USER}/mydataset \
+  --batch_size=64 \
+  --steps=20000 \
+  --output_dir=outputs/train/my_smolvla \
+  --job_name=my_smolvla_training \
+  --policy.device=cuda \
+  --wandb.enable=true
+```
+
+**验证**
+
+```bash
+lerobot-record \
+  --robot.type=so101_follower \
+  --robot.port=/dev/ttyACM0 \
+  --robot.id=my_blue_follower_arm \ # <- Use your robot id
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
+  --dataset.single_task="Put lego brick into the transparent box" \
+  --dataset.repo_id=seeed/eval_test123 \ 
+  --dataset.episode_time_s=50 \
+  --dataset.num_episodes=10 \
+  # <- Teleop optional if you want to teleoperate in between episodes \
+  # --teleop.type=so100_leader \
+  # --teleop.port=/dev/ttyACM0 \
+  # --teleop.id=my_red_leader_arm \
+  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
+```
+
+
+</details>
+
+
+<details>
+<summary>[Pi0](https://huggingface.co/docs/lerobot/pi0) </summary>
+
+参考官方教程[Pi0](https://huggingface.co/docs/lerobot/pi0) 
+
+```bash
+pip install -e ".[pi]"
+```
+
+**训练**
+```bash
+lerobot-train \
+  --policy.type=pi0 \
+  --dataset.repo_id=seeed/eval_test123 \ 
+  --job_name=pi0_training \
+  --output_dir=outputs/pi0_training \
+  --policy.pretrained_path=lerobot/pi0_base \
+  --policy.compile_model=true \
+  --policy.gradient_checkpointing=true \
+  --policy.dtype=bfloat16 \
+  --steps=20000 \
+  --policy.device=cuda \
+  --batch_size=32 \
+  --wandb.enable=false 
+```
+
+**验证**
+
+```bash
+lerobot-record \
+  --robot.type=so101_follower \
+  --robot.port=/dev/ttyACM0 \
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
+  --robot.id=my_awesome_follower_arm \
+  --display_data=false \
+  --dataset.repo_id=seeed/eval_test123 \
+  --dataset.single_task="Put lego brick into the transparent box" \
+  --policy.path=outputs/pi0_training/checkpoints/last/pretrained_model
+```
+
+
+</details>
+
+
+<details>
+<summary>[Pi0.5](https://huggingface.co/docs/lerobot/pi05) </summary>
+
+参考官方教程[Pi0.5](https://huggingface.co/docs/lerobot/pi05) 
+
+```bash
+pip install -e ".[pi]"
+```
+
+**训练**
+```bash
+lerobot-train \
+    --dataset.repo_id=seeed/eval_test123 \ 
+    --policy.type=pi05 \
+    --output_dir=outputs/pi05_training \
+    --job_name=pi05_training \
+    --policy.pretrained_path=lerobot/pi05_base \
+    --policy.compile_model=true \
+    --policy.gradient_checkpointing=true \
+    --wandb.enable=false \
+    --policy.dtype=bfloat16 \
+    --steps=3000 \
+    --policy.device=cuda \
+    --batch_size=32
+```
+
+**验证**
+
+```bash
+lerobot-record \
+  --robot.type=so101_follower \
+  --robot.port=/dev/ttyACM0 \
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
+  --robot.id=my_awesome_follower_arm \
+  --display_data=false \
+  --dataset.repo_id=seeed/eval_test123 \
+  --dataset.single_task="Put lego brick into the transparent box" \
+  --policy.path=outputs/pi05_training/checkpoints/last/pretrained_model
+```
+
+
+</details>
+
+
+
+<details>
+<summary>[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) </summary>
+
+请参考官方教程[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) 
+
+
+</details>
+
+
 
 
 如果你遇到了以下报错：
@@ -885,36 +1229,12 @@ pip install datasets==2.19
 
 要从某个训练结果权重文件恢复训练，下面是一个从 `act_so101_test` 策略的最后一个训练结果权重文件恢复训练的示例命令：
 ```bash
-python -m lerobot.scripts.train \
+lerobot-train \
   --config_path=outputs/train/act_so101_test/checkpoints/last/pretrained_model/train_config.json \
   --resume=true
 ```
 
-## 评估
-:::tip
-SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的参数和代码进行操作。
-:::
 
-您可以使用 [`lerobot/record.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/record.py) 中的 `record` 功能，但需要将策略训练结果训练结果权重文件作为输入。例如，运行以下命令记录 10 个评估回合：
-
-
-```bash
-python -m lerobot.record  \
-  --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM1 \
-  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
-  --robot.id=my_awesome_follower_arm \
-  --display_data=false \
-  --dataset.repo_id=seeed/eval_test123 \
-  --dataset.single_task="Put lego brick into the transparent box" \
-  --policy.path=outputs/train/act_so101_test/checkpoints/last/pretrained_model
-``` 
- 
-  
-1.  `--policy.path` 参数，指示您的策略训练结果权重文件的路径（例如 `outputs/train/act_so101_test/checkpoints/last/pretrained_model`）。如果您将模型训练结果权重文件上传到 Hub，也可以使用模型仓库（例如 `${HF_USER}/act_so100_test`）。
-2. 数据集的名称`dataset.repo_id`以 `eval_` 开头，这个操作会在你评估的时候为你单独录制评估时候的视频和数据，将保存在eval_开头的文件夹下，例如`seeed/eval_test123`。
-3. 如果评估阶段遇到`File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'`请先删除`eval_`开头的这个文件夹再次运行程序。
-4. 当遇到`mean is infinity. You should either initialize with stats as an argument or use a pretrained model`请注意--robot.cameras这个参数中的front和side等关键词必须和采集数据集的时候保持严格一致。
 
 <div class="video-container ">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=Y2SXU9T0DSmtz4ll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

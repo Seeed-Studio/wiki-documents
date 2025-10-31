@@ -17,7 +17,9 @@ ReSpeaker 4-Mic Array para Raspberry Pi es una placa de expansión de cuatro mic
 
 A diferencia del [ReSpeaker 2-Mics Pi HAT](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html), esta placa está desarrollada basándose en AC108, un ADC de cuatro canales altamente integrado con transición de salida I2S/TDM para captura de voz de alta definición, que permite al dispositivo captar sonidos en un radio de 3 metros. Adicionalmente, esta versión de 4 micrófonos cuenta con un anillo LED con 12 LEDs programables APA102. Con esos 4 micrófonos y el anillo LED, Raspberry Pi tendría la capacidad de hacer VAD(Detección de Actividad de Voz), estimar DOA(Dirección de Llegada), hacer KWS(Búsqueda de Palabras Clave) y mostrar la dirección a través del anillo LED, justo como Amazon Echo o Google Home.
 
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/IkSfBSf1IRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong></a>

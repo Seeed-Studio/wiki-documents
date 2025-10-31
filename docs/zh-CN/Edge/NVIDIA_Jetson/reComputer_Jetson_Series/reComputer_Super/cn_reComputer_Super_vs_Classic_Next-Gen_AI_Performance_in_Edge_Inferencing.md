@@ -47,7 +47,7 @@ reComputer Super 系列为 reComputer Classic 提供了强大的性能提升，�
 **步骤 3.** 从 Ollama 拉取 deepseek-r1:7b 模型。
 :::
 
-<div align="center">
+<div class="video-container">
 <iframe width="682" height="480" src="https://www.youtube.com/embed/nD1w-odV-ZU" title="Deepseek Inference on reComputer Classic and reComputer Super" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
@@ -78,7 +78,7 @@ reComputer Super 系列为 reComputer Classic 提供了强大的性能提升，�
 **步骤 4.** 我们参考[此仓库](https://github.com/wang-xinyu/tensorrtx/tree/master/yolo11)中的 yolo11_det_trt.py 脚本来运行推理。
 :::
 
-<div align="center">
+<div class="video-container">
 <iframe width="682" height="480" src="https://www.youtube.com/embed/ELbltFieez4" title="Yolo Inference on reComputer Classic and reComputer Super" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

@@ -605,7 +605,7 @@ You can filter the displayed trackers on the map by their associated beacon UUID
 
 ## Reference & Resource
 
-- **Landing Page**: [SenseCraft Indoor Positioning Solution](https://cc.seeedstudio.com/solutions/campus-safety-management)
+- **Landing Page**: [SenseCraft Indoor Positioning Solution](https://www.seeed.cc/solutions/campus-safety-management)
 - **Docker Image**: [seeedcloud/sensecraft-indoor-positioning - Docker Hub](https://hub.docker.com/r/seeedcloud/sensecraft-indoor-positioning)
 - **Live Demo Site**: [IndoorPositioning](https://indoorpositioning-demo.seeed.cc/)
 

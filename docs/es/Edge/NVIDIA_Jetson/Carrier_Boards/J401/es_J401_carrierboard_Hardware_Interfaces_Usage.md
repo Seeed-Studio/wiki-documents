@@ -44,7 +44,8 @@ Si la conexión es correcta, cuando conecte su adaptador de corriente, verá el 
 
 M.2 Key M es una especificación para el diseño físico y eléctrico de un conector M.2 que soporta transferencia de datos de alta velocidad usando la interfaz PCIe (Peripheral Component Interconnect Express). Los conectores M.2 Key M se usan comúnmente para conectar unidades de estado sólido (SSD) y otras tarjetas de expansión de alto rendimiento a una placa madre u otro dispositivo host. La designación "Key M" se refiere a la configuración específica de pines y codificación del conector M.2, que determina el tipo de dispositivos que pueden conectarse a él.
 
-### Los SSD soportados son los siguientes:
+### Los SSD soportados son los siguientes
+
 - [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
 - [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
 - [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
@@ -113,7 +114,7 @@ paired-devices #show all paired devices
 
 CSI significa Interfaz Serial de Cámara. Es una especificación que describe una interfaz de comunicación serial para transferir datos de video desde sensores de imagen a un procesador host. CSI se usa comúnmente en dispositivos móviles, cámaras y sistemas embebidos para permitir la transferencia de alta velocidad y eficiente de datos de imagen y video para procesamiento y análisis.
 
-### Las cámaras compatibles son las siguientes:
+### Las cámaras compatibles son las siguientes
 
 - Cámaras IMX219
 
@@ -123,17 +124,17 @@ CSI significa Interfaz Serial de Cámara. Es una especificación que describe un
   - [IMX219-160 8MP Camera with 160° FOV](https://www.seeedstudio.com/IMX219-160-Camera-160-FOV-Applicable-for-Jetson-Nano-p-4603.html)
   - [IMX219-200 8MP Camera with 200° FOV](https://www.seeedstudio.com/IMX219-200-Camera-200-FOV-Applicable-for-Jetson-Nano-p-4609.html) -->
   
-  - [IMX219-77 8MP Camera with 77° FOV](https://www.seeedstudio.com/IMX219-77-Camera-77-FOV-Applicable-for-Jetson-Nano-p-4608.html)
-  - [IMX219 M12/CS mount CMOS Camera Module](https://www.seeedstudio.com/IMX-219-CMOS-camera-module-M12-and-CS-camera-available-p-5372.html)
-  - [IMX219-83 8MP 3D Stereo Camera Module](https://www.seeedstudio.com/IMX219-83-Stereo-Camera-8MP-Binocular-Camera-Module-Depth-Vision-Applicable-for-Jetson-Nano-p-4610.html)
-  - [IMX219-77IR 8MP IR Night Vision Camera with 77° FOV](https://www.seeedstudio.com/IMX219-77IR-Camera-77-FOV-Infrared-Applicable-for-Jetson-Nano-p-4607.html)
-  - [IMX219-160IR 8MP Camera with 160° FOV](https://www.seeedstudio.com/IMX219-160IR-Camera160-FOV-Infrared-Applicable-for-Jetson-Nano-p-4602.html)
+  - [IMX219-77 8MP Cámara con 77° FOV](https://www.seeedstudio.com/IMX219-77-Camera-77-FOV-Applicable-for-Jetson-Nano-p-4608.html)
+  - [IMX219 M12/CS mount CMOS Módulo de Cámara](https://www.seeedstudio.com/IMX-219-CMOS-camera-module-M12-and-CS-camera-available-p-5372.html)
+  - [IMX219-83 8MP 3D Módulo de Cámara Estéreo](https://www.seeedstudio.com/IMX219-83-Stereo-Camera-8MP-Binocular-Camera-Module-Depth-Vision-Applicable-for-Jetson-Nano-p-4610.html)
+  - [IMX219-77IR 8MP IR Cámara de Visión Nocturna con 77° FOV](https://www.seeedstudio.com/IMX219-77IR-Camera-77-FOV-Infrared-Applicable-for-Jetson-Nano-p-4607.html)
+  - [IMX219-160IR 8MP Cámara con 160° FOV](https://www.seeedstudio.com/IMX219-160IR-Camera160-FOV-Infrared-Applicable-for-Jetson-Nano-p-4602.html)
 
 - Cámaras IMX477
 
-  - [Raspberry Pi High Quality Camera](https://www.seeedstudio.com/Raspberry-Pi-High-Quality-Cam-p-4463.html)
-  - [Raspberry Pi HQ Camera - M12 mount](https://www.seeedstudio.com/Raspberry-Pi-HQ-Camera-M12-mount-p-5578.html)
-  - [High Quality Camera for Raspberry Pi](https://www.seeedstudio.com/High-Quality-Camera-For-Raspberry-Pi-Compute-Module-Jetson-Nano-p-4729.html)
+  - [Cámara de Alta Calidad Raspberry Pi](https://www.seeedstudio.com/Raspberry-Pi-High-Quality-Cam-p-4463.html)
+  - [Cámara Raspberry Pi HQ - montura M12](https://www.seeedstudio.com/Raspberry-Pi-HQ-Camera-M12-mount-p-5578.html)
+  - [Cámara de Alta Calidad para Raspberry Pi](https://www.seeedstudio.com/High-Quality-Camera-For-Raspberry-Pi-Compute-Module-Jetson-Nano-p-4729.html)
 
 ### Descripción General de la Conexión
 
@@ -142,6 +143,7 @@ Aquí los 2 conectores de cámara CSI están marcados como **CAM0 y CAM1**. Pued
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/camera-connect-J401.gif"/></div>
 
 ### Uso
+
 Abre tu terminal (Ctrl+Alt+T) e ingresa un comando como el siguiente:
 
 ```sh
@@ -150,13 +152,11 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-cameral.gif" /></div>
 
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
 <TabItem value="Method 1" label="Método 1">
-
 
 Para el puerto CAM0
 
@@ -233,7 +233,7 @@ Conecta una **batería de celda tipo moneda CR2302 de 3V con conector JST** al s
 Si no te has conectado a internet mediante Ethernet, puedes configurar manualmente la fecha/hora aquí.
 :::
 
-- **Paso 4:** Abre una ventana de terminal y ejecuta el siguiente comando para verificar la hora del reloj de hardware. 
+- **Paso 4:** Abre una ventana de terminal y ejecuta el siguiente comando para verificar la hora del reloj de hardware.
 
 ```sh
 sudo hwclock
@@ -245,11 +245,11 @@ Verás una salida similar a la siguiente que no es la fecha/hora correcta.
 
 - **Paso 5:** Cambia la hora del reloj de hardware a la hora actual del reloj del sistema ingresando el siguiente comando.
 
-```sh 
+```sh
 sudo hwclock --systohc
 ```
 
-- **Paso 6:** Retire cualquier cable Ethernet conectado para asegurarse de que no obtenga la hora de internet y reinicie la placa. 
+- **Paso 6:** Retire cualquier cable Ethernet conectado para asegurarse de que no obtenga la hora de internet y reinicie la placa.
 
 ```sh
 sudo reboot
@@ -338,11 +338,12 @@ Si quieres cambiar nvfancontrol.conf asegúrate de haber leído [esto](https://d
 sudo systemctl stop nvfancontrol
 ```
 
-- **Paso 2:** Cambiar nvfancontrol.conf. 
+- **Paso 2:** Cambiar nvfancontrol.conf.
 
 ```
 vi /etc/nvfancontrol.conf 
 ```
+
 :::note
 Después de cambiar nvfancontrol.conf, escribe `Ese` y `:q` para salir
 :::
@@ -358,6 +359,7 @@ sudo rm /var/lib/nvfancontrol/status
 ```
 sudo systemctl restart nvfancontrol
 ```
+
 </TabItem>
 
 <TabItem value="Método 2" label="Método 2">
@@ -379,6 +381,7 @@ sudo systemctl stop nvfancontrol
 ```
 echo 100 > /sys/devices/platform/pwm-fan/hwmon/hwmon3/pwm1
 ```
+
 :::note
 Cuanto mayor sea el valor, mayor será la velocidad del ventilador. El valor PWM debe estar entre 0 y 255, tal vez **hwmon3** no sea tu ruta, así que verifica tu propia ruta
 :::
@@ -388,6 +391,7 @@ Cuanto mayor sea el valor, mayor será la velocidad del ventilador. El valor PWM
 ```
 cat /sys/class/hwmon/hwmon0/rpm
 ```
+
 </TabItem>
 </Tabs>
 
@@ -955,17 +959,16 @@ Verás el resultado como se muestra a continuación, antes de conectar al I2C, n
 Si quieres usar pines IO generales para control lógico, por favor consulta [este wiki](/es/reComputer_Jetson_GPIO).
 :::
 
-
 ## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

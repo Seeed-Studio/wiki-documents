@@ -357,7 +357,7 @@ void loop()
 }
 ```
 
-#### Demo2 : Deep Sleep Mode and wake-up
+#### Demo2 : ディープスリープモードとウェイクアップ
 
 ```cpp
 /*
@@ -616,7 +616,7 @@ XIAO MG24 は現在、シリアルポートチップを搭載した唯一の XIA
 
 ## Resources
 
-### For Seeed Studio XIAO MG24 Sense
+### Seeed Studio XIAO MG24 Sense用
 
 - 📄 **[PDF]** [Seeed Studio XIAO MG24 Sense データシート](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF)
 - 📄 **[PDF]** [Seeed Studio XIAO MG24 Sense 回路図](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf)
@@ -624,7 +624,7 @@ XIAO MG24 は現在、シリアルポートチップを搭載した唯一の XIA
 - 🔗 **[Kicad]** [Seeed Studio XIAO MG24 Sense フットプリント](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 - 📄 **[ZIP]** [Seeed Studio XIAO MG24 Sense PCB&SCH](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_Sense_v1.0_SCH&PCB.zip)
 
-### For Seeed Studio XIAO MG24
+### Seeed Studio XIAO MG24 用
 
 - 📄 **[PDF]** [Seeed Studio XIAO MG24 データシート](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF)
 - 📄 **[PDF]** [Seeed Studio XIAO MG24 回路図](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf)
@@ -632,7 +632,7 @@ XIAO MG24 は現在、シリアルポートチップを搭載した唯一の XIA
 - 🔗 **[Kicad]** [Seeed Studio XIAO MG24 フットプリント](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 - 📄 **[ZIP]** [Seeed Studio XIAO MG24 PCB&SCH](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_v1.0_SCH&PCB.zip)
 
-## Tech Support & Product Discussion
+## 技術サポート・製品ディスカッション
 
 私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
