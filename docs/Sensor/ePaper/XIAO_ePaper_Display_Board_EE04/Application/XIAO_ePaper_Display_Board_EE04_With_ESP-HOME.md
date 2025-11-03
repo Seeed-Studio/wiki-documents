@@ -1,6 +1,6 @@
 ---
 description: This article explains how to utilize the hardware features of the XIAO ePaper Display Board EE04 in ESPHome and integrate it with Home Assistant.
-title: XIAO ePaper Display Board EE04 with ESPHome
+title: XIAO ePaper Display Board(ESP32-S3) with ESPHome
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
 slug: /EE04_with_esphome_advanced
 sidebar_position: 2
@@ -12,66 +12,26 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# EE04 ePaper Display Work with ESPHome for Home Assistant
+# XIAO ePaper Display Board(ESP32-S3) - EE04 ePaper Display Work with ESPHome
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:700, height:'auto'}}/></div><br />
+## What is ESPHome?
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/reterminal_e10xx_with_esphome" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-</div>
+[ESPHome](https://esphome.io/) is an open-source firmware framework that simplifies the process of creating custom firmware for popular WiFi-enabled microcontrollers. With ESPHome, you can:
 
-## Introduction to [Home Assistant](https://www.home-assistant.io/)
-
-Home Assistant is a powerful open-source home automation platform that allows you to control and monitor your smart home devices from a single, unified interface. It acts as the central hub for your smart home, enabling you to automate routines, monitor sensors, and create a more intelligent living space.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/204.png" style={{width:700, height:'auto'}}/></div>
-
-### Why Home Assistant?
-
-- **Local Control**: Unlike many cloud-based solutions, Home Assistant runs locally on your network, ensuring your data stays private and your automations work even without internet access.
-
-- **Extensive Device Support**: Home Assistant integrates with thousands of different smart home devices and services, making it highly versatile and future-proof.
-
-- **Powerful Automation**: Create sophisticated automation rules that can respond to various triggers like time, device states, sensor readings, and more.
-
-- **Customizable Dashboard**: Design your own user interface to display the information that matters most to you.
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Learn More 🖱️</font></span></strong></a>
-</div>
-
-### Why EE04 Series ePaper Display with Home Assistant?
-
-The EE04 ePaper Display is an excellent companion for Home Assistant for several reasons:
-
-1. **Energy Efficiency**: The e-paper display only consumes power when updating content, making it perfect for displaying persistent information like weather forecasts, calendar events, or system status.
-
-2. **Clear Visibility**: Unlike LCD screens, e-paper displays are easily readable in any lighting condition, including direct sunlight, making them ideal for wall-mounted home control panels.
-
-3. **Long Battery Life**: Combined with deep sleep mode, the display can operate for months on a single battery charge while still providing valuable information at a glance.
-
-4. **Flexible Integration**: Through ESPHome, the display seamlessly integrates with Home Assistant, allowing you to show any data from your smart home system in an elegant, always-visible format.
-
-These advantages make the EE04 ePaper Display an ideal choice for creating an energy-efficient, always-on information display for your Home Assistant setup.
-
-### ESPHome Integration
-
-ESPHome is an open-source firmware creation tool specifically designed for ESP8266/ESP32 devices. It allows you to create custom firmware using simple YAML configuration files, which can then be flashed to your device. For the EE04 Series, ESPHome serves as the essential middleware that enables communication between the device and Home Assistant.
-
-The system works by converting your YAML configuration into fully-featured firmware that runs on your ESP device. This firmware handles all the complex tasks of connecting to your network, communicating with Home Assistant, and controlling the ePaper display. When combined with Home Assistant, ESPHome provides a robust platform for creating sophisticated home automation displays and controls.
-
-Let's explore how to set it up and make the most of this versatile display.
+- Create custom smart home devices using simple YAML configuration files
+- Integrate seamlessly with Home Assistant for a unified smart home experience
+- Control and monitor your devices through multiple interfaces (web, API, MQTT)
+- Automate your home with powerful on-device automations
+- Update your devices wirelessly “Over The Air” (OTA) updates without physical access
 
 ## Getting Started
 
-Before the tutorial content of this article begins, you may need to have the following hardware ready.
-
-### Materials Required
+### Hardware Overview
 
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>XIAO ePaper Display Board EE04</th>
+      <th>XIAO ePaper Display Board(ESP32-S3) - EE04</th>
       <th>Home Assistant Green</th>
     </tr>
     <tr>
@@ -95,26 +55,18 @@ Before the tutorial content of this article begins, you may need to have the fol
 
 Home Assistant Green is the easiest and most privacy-focused way to automate your home. It offers an effortless setup and allows you to control all the smart devices with just one system, where all the data is stored locally by default. This board benefits from the thriving Home Assistant ecosystem and it will be improved every month by open source.
 
-We recommend using Home Assistant Green as the Home Assistant host for this tutorial, or you can use any Home Assistant host with a Supervisor.
-
-:::tip install Home Assistant
 We have also written how to install Home Assistant for some of Seeed Studio products, please refer to them.
 
 - **[Getting Started with Home Assistant on ODYSSEY-X86](https://wiki.seeedstudio.com/ODYSSEY-X86-Home-Assistant/)**
 - **[Getting Started with Home Assistant on LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/h68k-ha-esphome/)**
 
+:::tip install Home Assistant
 If you are not using a Seeed Studio product, you can also check and learn how to install Home Assistant for other products on the official Home Assistant website.
 
 - **[Home Assistant Installation](https://www.home-assistant.io/installation/)**
 :::
 
 ### Step 1. Install ESPHome
-
-:::note
-If you have already installed ESPHome, you can skip this step.
-
-The following example demonstrates the process using a 7.5-inch screen. If using a different screen size, simply modify the screen size configuration in the code accordingly.
-:::
 
 Go to **Settings** -> **Add-ons** -> **ADD-ON STORE**
 
@@ -138,7 +90,7 @@ Go to ESPHome and click on **NEW DEVICE**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/31.png" style={{width:1000, height:'auto'}}/></div>
 
-Give the device a name you like and select **ESP32-S3** for chip type, then click on **SKIP**.
+Give the XIAO ePaper Display Board(ESP32-S3) - EE04 a name you like and select **ESP32-S3** for chip type, then click on **SKIP**.
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'80%', marginLeft:'10%'}}>
 
@@ -148,39 +100,69 @@ Give the device a name you like and select **ESP32-S3** for chip type, then clic
 
 After you create a new device, click **EDIT**.
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome6.png" style={{width:900, height:'auto'}}/></div><br />
 
 <!-- Inside the default generated code, the framework of esp32 may be `esp-idf`, which we need to change to `arduino`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_arduino.png" style={{width:600, height:'auto'}}/></div> -->
 
+
 ### Step 3. Install firmware
 
-This is a very basic example and will show "Hello World!" on the display.
+This is a basic example and will show "Hello World!" on the display.
 
 **The main purpose is to show you different ways to install firmware to the device.**
 
-You can use this example by copying the code below and pasting it after the `captive_portal` code line in your Yaml file.
+You can use this example by copying the code below and pasting it after the `captive_portal` code line in your YAML file.
 
-:::tip
-- 4.26 Inch Black/White  
-- 2.13 Inch 122*250 Black/White/Yellow/Red
-- 2.9 Inch 128*296 Black/White/Yellow/Red
-
-These types of e-ink displays are not supported yet. We will update the relevant information on the Wiki in future releases—stay tuned.
+:::note
+- Since the following routine requires fonts before downloading the firmware, please click this [link](https://wiki.seeedstudio.com/EE04_with_esphome_advanced/#drawing-truetype-fonts) to complete the configuration.
+- `ssid:`,`password:` Here you need to add the network name and password.
+- The **Quadruple Color 2.13** and **Quadruple Color 2.9** use external libraries, so the `board` names used in ESPHome differ.
 :::
 ***The following are 24-pin connector screen types:***
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
+<TabItem value="1.54 Inch" label="1.54 Inch Monochrome Color" default>
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
 # define font to display words
 font:
   - file: "gfonts://Inter@700"
     id: myFont
     size: 24
+
+captive_portal:
 
 # define SPI interface
 spi:
@@ -203,14 +185,46 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Inch">
+<TabItem value="2.13 Inch" label="2.13 Inch Monochrome Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
 # define font to display words
 font:
   - file: "gfonts://Inter@700"
     id: myFont
     size: 24
+
+captive_portal:
 
 # define SPI interface
 spi:
@@ -233,14 +247,123 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Inch">
+<TabItem value="2.13 Inch Quadruple Color" label="2.13 Inch Quadruple Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+  libraries:
+    - SPI
+
+
+esp32:
+  board: seeed_xiao_esp32s3
+  framework:
+    type: arduino
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "eg2Jyse0gE146lJ2mVaqAnwteb4U2GJ7d1sZc2BOOsc="
+
+ota:
+  - platform: esphome
+    password: "e2f184b95aac832509885f676abf5b73"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "ESPHome_Epaper"
+    password: "123456789"
+
+external_components:
+  - source: github://xcjk-tofuture/seeed_esphome
+    components: [ waveshare_epaper ]
+
+font:
+  - file: "gfonts://Inter@700"
+    id: font1
+    size: 24
+ 
+captive_portal:
+  
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: my_display
+    model: gdey0213f51
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    busy_pin: GPIO4
+    reset_pin:  GPIO38
+    rotation: 90
+    update_interval: 30s
+    full_update_every: 1
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      const auto RED     = Color(255, 0,   0,   0);
+      const auto YELLOW  = Color(255, 255, 0,   0);
+      const auto WHITE   = Color(255, 255, 255, 0);
+
+      it.fill(YELLOW); 
+      it.print(0, 0, id(font1), BLACK, "Hello World in BLACK!");
+      it.print(0, 30, id(font1), RED, "Hello World in RED!");
+      it.print(0, 60, id(font1), YELLOW, "Hello World in YELLOW!");
+```
+
+</TabItem>
+
+<TabItem value="2.9 Inch" label="2.9 Inch Monochrome Color">
+
+```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
 # define font to display words
 font:
   - file: "gfonts://Inter@700"
     id: myFont
     size: 24
+
+captive_portal:
 
 # define SPI interface
 spi:
@@ -264,14 +387,130 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Inch">
+<TabItem value="2.9 Inch Quadruple Color" label="2.9 Inch Quadruple Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+  libraries:
+    - SPI
+
+
+esp32:
+  board: seeed_xiao_esp32s3
+  framework:
+    type: arduino
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "eg2Jyse0gE146lJ2mVaqAnwteb4U2GJ7d1sZc2BOOsc="
+
+ota:
+  - platform: esphome
+    password: "e2f184b95aac832509885f676abf5b73"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "ESPHome_Epaper"
+    password: "123456789"
+
+external_components:
+  - source: github://xcjk-tofuture/seeed_esphome
+    components: [ waveshare_epaper ]
+
+
+# external_components:
+#   - source:
+#       type: local
+#       path: components_epaper
+#     components : [waveshare_epaper]
+
+font:
+  - file: "gfonts://Inter@700"
+    id: font1
+    size: 24
+ 
+captive_portal:
+  
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+display:
+  - platform: waveshare_epaper
+    id: my_display
+    model: gdey029f51h
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    busy_pin: GPIO4
+    reset_pin:  GPIO38
+    rotation: 90
+    update_interval: 30s
+    full_update_every: 1
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      const auto RED     = Color(255, 0,   0,   0);
+      const auto YELLOW  = Color(255, 255, 0,   0);
+      const auto WHITE   = Color(255, 255, 255, 0);
+
+      it.print(0, 0, id(font1), BLACK, "Hello World in BLACK!");
+      it.print(0, 30, id(font1), RED, "Hello World in RED!");
+      it.print(0, 60, id(font1), YELLOW, "Hello World in YELLOW!");
+      ESP_LOGD("epaper", "reflash......");
+```
+
+</TabItem>
+
+<TabItem value="4.2 Inch" label="4.2 Inch Monochrome Color">
+
+```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+
 # define font to display words
 font:
   - file: "gfonts://Inter@700"
     id: myFont
     size: 24
+
+captive_portal:
 
 # define SPI interface
 spi:
@@ -294,14 +533,114 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+  libraries:
+    - SPI
+
+
+esp32:
+  board: seeed_xiao_esp32s3
+  framework:
+    type: arduino
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "eg2Jyse0gE146lJ2mVaqAnwteb4U2GJ7d1sZc2BOOsc="
+
+ota:
+  - platform: esphome
+    password: "e2f184b95aac832509885f676abf5b73"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "ESPHome_Epaper"
+    password: "123456789"
+
+external_components:
+  - source: github://xcjk-tofuture/seeed_esphome
+    components: [ waveshare_epaper ]
+
+font:
+  - file: "gfonts://Inter@700"
+    id: font1
+    size: 24
+ 
+captive_portal:
+  
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: my_display
+    model: 4.26in
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    busy_pin: GPIO4
+    reset_pin:  GPIO38
+    rotation: 0
+    update_interval: 30s
+    lambda: |-
+      it.print(0, 150, id(font1), "Hello World!");
+```
+
+</TabItem>
+
+<TabItem value="5.83 Inch" label="5.83 Inc Monochrome Color">
+
+```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
 # define font to display words
 font:
   - file: "gfonts://Inter@700"
     id: myFont
     size: 24
+
+captive_portal:
 
 # define SPI interface
 spi:
@@ -323,14 +662,46 @@ display:
 ```
 </TabItem>
 
-<TabItem value="7.5 Inch" label="7.5 Inch" default>
+<TabItem value="7.5 Inch" label="7.5 Inch Monochrome Color" default>
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
 # define font to display words
 font:
   - file: "gfonts://Inter@700"
     id: myFont
     size: 24
+
+captive_portal:
 
 # define SPI interface
 spi:
@@ -360,17 +731,83 @@ display:
 ***The following are 50-pin connector screen types:***
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3 Inch spectra™ 6" default>
 
-:::tip
-The 7.3-inch e-paper display requires ESPHome v10.15 or later, as support for this display was added in that release. The detailed usage guide will be updated in the Wiki soon.
-:::
+```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+font:
+  - file: "gfonts://Inter@700"
+    id: font1
+    size: 24
+
+captive_portal:
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: epaper_spi
+    id: my_display
+    model: 7.3in-spectra-e6
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    busy_pin: GPIO4
+    reset_pin:  GPIO38
+    rotation: 0
+    update_interval: 30s
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      const auto RED     = Color(255, 0,   0,   0);
+      const auto BLUE     = Color(0, 0,   255,   0);
+      const auto GREEN     = Color(0, 255,   0,   0);
+      const auto YELLOW  = Color(255, 255, 0,   0);
+      const auto WHITE   = Color(255, 255, 255, 0);
+
+      it.fill(WHITE); 
+      it.print(0, 0, id(font1), BLACK, "Hello World in BLACK!");
+      it.print(0, 30, id(font1), RED, "Hello World in RED!");
+      it.print(0, 60, id(font1), YELLOW, "Hello World in YELLOW!");
+      it.print(0, 90, id(font1), GREEN, "Hello World in GREEN!");
+      it.print(0, 120, id(font1), BLUE, "Hello World in BLUE!");
+```
 
 </TabItem>
 </Tabs>
 
 
 Click **INSTALL** to install the code to the device and you will see the following image.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphome_ee042.png" style={{width:1000, height:'auto'}}/></div><br />
 
 <Tabs>
 <TabItem value='Install through browser'>
@@ -391,7 +828,7 @@ Go back to ESPHome to download the firmware.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/64.png" style={{width:800, height:'auto'}}/></div>
 
-Select Factory format.
+Select **Factory format**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/65.png" style={{width:500, height:'auto'}}/></div>
 
@@ -399,7 +836,7 @@ Use USB cable to **connect the ePaper panel to your computer** and click **CONNE
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
-Select usbmodemxxx(Windows is COMxxx) and click connect. [Encountered a problem? Click here.](#Q4)
+Select usbmodemxxx(Windows is COMxxx) and click connect.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
@@ -421,7 +858,7 @@ If your Home Assistant Host (Raspberry PI/Green/Yellow etc.) is nearby, we recom
 
 Before you install the code to the device, you need to use USB cable to **connect this device to your Raspberry Pi or HA Green(Yellow) etc** which is running Home Assistant.
 
-Click the options following the image to install the code to the device. [Haven't found port when device in deep sleep mode?](#port)
+Click the options following the image to install the code to the device.
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/6.png" style={{width:'70%', height:'auto'}}/></div>
@@ -446,7 +883,6 @@ Click the option and then the firmware will be installed to ePaper penal automat
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:800, height:'auto'}}/></div>
 
-Wait a moment and you will see the feedback like the following image. If it fails, it may be due to a weak signal. Please move the device closer to your router. [Encountered a problem? Click here.](#Q4)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -457,19 +893,51 @@ Wait a moment and you will see the feedback like the following image. If it fail
 
 ### Drawing Simple Graphics
 
-This example YAML code configures the SPI interface and the reTerminal E Series ePaper Display for an ESPHome project. The `lambda` section contains drawing commands that render simple shapes on the screen:
+This example YAML code configures the SPI interface and the XIAO ePaper Display Board(ESP32-S3) - EE04 for an ESPHome project. The `lambda` section contains drawing commands that render simple shapes on the screen:
 
 - Two rectangles (one at position (10, 10) with size 100x50, and another at (150, 10) with size 50x50)
 - One circle at (250, 35) with a radius of 25
 - Two filled rectangles (at (10, 80) and (150, 80))
 - One filled circle at (250, 105) with a radius of 25
 
-You can use this example by copying the code below and pasting it after the `captive_portal` code line in your Yaml file.
+You can use this example by copying the code below and pasting it after the `captive_portal` code line in your YAML file.
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
+<TabItem value="1.54 Inch Monochrome" label="1.54 Inch Monochrome Color" default>
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
@@ -495,9 +963,120 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Inch">
+<TabItem value="2.13 Inch Quadruple Color" label="2.13 Inch Quadruple Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+  libraries:
+    - SPI
+
+
+esp32:
+  board: seeed_xiao_esp32s3
+  framework:
+    type: arduino
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "eg2Jyse0gE146lJ2mVaqAnwteb4U2GJ7d1sZc2BOOsc="
+
+ota:
+  - platform: esphome
+    password: "e2f184b95aac832509885f676abf5b73"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "ESPHome_Epaper"
+    password: "123456789"
+
+external_components:
+  - source: github://xcjk-tofuture/seeed_esphome
+    components: [ waveshare_epaper ]
+
+font:
+  - file: "gfonts://Inter@700"
+    id: font1
+    size: 24
+ 
+captive_portal:
+  
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: my_display
+    model: gdey0213f51
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    busy_pin: GPIO4
+    reset_pin:  GPIO38
+    rotation: 90
+    update_interval: 30s
+    full_update_every: 1
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      const auto RED     = Color(255, 0,   0,   0);
+      const auto YELLOW  = Color(255, 255, 0,   0);
+      const auto WHITE   = Color(255, 255, 255, 0);
+
+      it.rectangle(10, 10, 100, 50,YELLOW);
+      it.rectangle(150, 10, 50, 50,YELLOW);
+      it.circle(250, 35, 25,YELLOW);
+      it.filled_rectangle(10, 80, 100, 50,YELLOW);
+      it.filled_rectangle(150, 80, 50, 50,YELLOW);
+      it.filled_circle(250, 105, 25,YELLOW);
+```
+
+</TabItem>
+
+<TabItem value="2.13 Inch" label="2.13 Inch Monochrome Color">
+
+```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
@@ -523,9 +1102,115 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Inch">
+<TabItem value="2.9 Inch Quadruple Color" label="2.9 Inch Quadruple Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+  libraries:
+    - SPI
+
+
+esp32:
+  board: seeed_xiao_esp32s3
+  framework:
+    type: arduino
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "eg2Jyse0gE146lJ2mVaqAnwteb4U2GJ7d1sZc2BOOsc="
+
+ota:
+  - platform: esphome
+    password: "e2f184b95aac832509885f676abf5b73"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "ESPHome_Epaper"
+    password: "123456789"
+
+external_components:
+  - source: github://xcjk-tofuture/seeed_esphome
+    components: [ waveshare_epaper ]
+
+captive_portal:
+  
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: my_display
+    model: gdey0213f51
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    busy_pin: GPIO4
+    reset_pin:  GPIO38
+    rotation: 90
+    update_interval: 30s
+    full_update_every: 1
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      const auto RED     = Color(255, 0,   0,   0);
+      const auto YELLOW  = Color(255, 255, 0,   0);
+      const auto WHITE   = Color(255, 255, 255, 0);
+
+      it.rectangle(10, 10, 100, 50,YELLOW);
+      it.rectangle(150, 10, 50, 50,YELLOW);
+      it.circle(250, 35, 25,YELLOW);
+      it.filled_rectangle(10, 80, 100, 50,YELLOW);
+      it.filled_rectangle(150, 80, 50, 50,YELLOW);
+      it.filled_circle(250, 105, 25,YELLOW);
+```
+
+</TabItem>
+
+<TabItem value="2.9 Inch" label="2.9 Inch Monochrome Color">
+
+```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
@@ -552,9 +1237,41 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Inch">
+<TabItem value="4.2 Inch" label="4.2 Inch Monochrome Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
@@ -580,9 +1297,110 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+  libraries:
+    - SPI
+
+
+esp32:
+  board: seeed_xiao_esp32s3
+  framework:
+    type: arduino
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "eg2Jyse0gE146lJ2mVaqAnwteb4U2GJ7d1sZc2BOOsc="
+
+ota:
+  - platform: esphome
+    password: "e2f184b95aac832509885f676abf5b73"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "ESPHome_Epaper"
+    password: "123456789"
+
+external_components:
+  - source: github://xcjk-tofuture/seeed_esphome
+    components: [ waveshare_epaper ]
+ 
+captive_portal:
+  
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: my_display
+    model: 4.26in
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    busy_pin: GPIO4
+    reset_pin:  GPIO38
+    rotation: 0
+    update_interval: 30s
+    lambda: |-
+      it.rectangle(10, 10, 100, 50);
+      it.rectangle(150, 10, 50, 50);
+      it.circle(250, 35, 25);
+      it.filled_rectangle(10, 80, 100, 50);
+      it.filled_rectangle(150, 80, 50, 50);
+      it.filled_circle(250, 105, 25);
+```
+
+</TabItem>
+
+
+<TabItem value="5.83 Inch" label="5.83 Inch Monochrome Color">
+
+```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
@@ -607,9 +1425,41 @@ display:
 ```
 </TabItem>
 
-<TabItem value="7.5 Inch-24Pin" label="7.5 Inch" default>
+<TabItem value="7.5 Inch-24Pin" label="7.5 Inch Monochrome Color" default>
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
@@ -637,498 +1487,90 @@ display:
 </Tabs>
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3 Inch spectra™ 6" default>
 
-:::tip
-The 7.3-inch e-paper display requires ESPHome v10.15 or later, as support for this display was added in that release. The detailed usage guide will be updated in the Wiki soon.
-:::
+```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: epaper_spi
+    id: my_display
+    model: 7.3in-spectra-e6
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    busy_pin: GPIO4
+    reset_pin:  GPIO38
+    rotation: 0
+    update_interval: 30s
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      const auto RED     = Color(255, 0,   0,   0);
+      const auto BLUE     = Color(0, 0,   255,   0);
+      const auto GREEN     = Color(0, 255,   0,   0);
+      const auto YELLOW  = Color(255, 255, 0,   0);
+      const auto WHITE   = Color(255, 255, 255, 0);
+
+      it.rectangle(10, 10, 100, 50,BLACK);
+      it.rectangle(150, 10, 50, 50,RED);
+      it.circle(250, 35, 25,BLUE);
+      it.filled_rectangle(10, 80, 100, 50,GREEN);
+      it.filled_rectangle(150, 80, 50, 50,YELLOW);
+      it.filled_circle(250, 105, 25,WHITE);
+```
 
 </TabItem>
 </Tabs>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome9.jpg" style={{width:500, height:'auto'}}/></div><br />
 
 When you see the feedback like the following image, it means the code is running successfully.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphomeee044.png" style={{width:1000, height:'auto'}}/></div><br />
 
 Due to space constraints, we will not elaborate too much on the drawing methods and principles of other patterns, if necessary, the reader is recommended to read [ESPHome in this part of the detailed examples](https://esphome.io/components/display/).
 
-### Getting values from Home Assistant for display
-
-To display weather data on your EE04 ePaper Display device, you'll need to access temperature, weather conditions, and wind speed data from Home Assistant. The Open-Meteo integration provides reliable weather data that can be accessed through Developer Tools.
-
-#### Installing Open-Meteo Integration
-
-Step 1. Open your Home Assistant dashboard and navigate to **Settings** → **Devices & Services**.
-
-Step 2. Click the **Add Integration** button in the bottom right corner.
-
-Step 3. Search for "Open-Meteo" and select it from the list.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_weather.png" style={{width:800, height:'auto'}}/></div>
-
-Step 4. Follow the configuration wizard to set up your location and preferred units.
-
-Step 5. Once installed, the Open-Meteo integration will create several weather-related entities in your Home Assistant instance.
-
-#### Accessing Weather Data in Developer Tools
-
-After installing the Open-Meteo integration, you can access the weather data through Developer Tools:
-
-Step 1. In your Home Assistant dashboard, navigate to **Developer Tools** → **States**.
-
-Step 2. In the filter box, type `weather` to find the main weather entity.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/39.png" style={{width:1000, height:'auto'}}/></div>
-
-Step 3. Click on the entity to view all available attributes. The key weather attributes include:
-
-- `temperature`: Current temperature (in your configured units)
-- `wind_bearing`: Wind Bearing
-- `wind_speed`: Wind speed
-
-#### Using Weather Data in ESPHome
-
-To use this weather data in your ESPHome configuration for the EE04 ePaper Display, you'll need to set up a Home Assistant API connection in your ESPHome YAML configuration:
-
-```yaml
-# Example ESPHome configuration to retrieve weather data
-# Get info from HA, as string format
-text_sensor:
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myWeather
-    internal: true
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myTemperature
-    attribute: "temperature"
-    internal: true
-
-# Get info from HA, as float format
-sensor:
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myWindBearing
-    attribute: "wind_bearing"
-    internal: true
-```
-
-This configuration creates sensor entities in your ESPHome device that pull data from the Home Assistant weather integration. You can then use these sensors to update your reTerminal E Series ePaper Display display with the current weather information.
-
-:::tip
-For forecast data, you'll need to use the `weather.open_meteo_forecast` entities which contain predicted values for future days.
-:::
-
-Finally, add the code for the display section to use these values above. The complete code is as follows:
-
-<Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
-
-```yaml
-# Example ESPHome configuration to retrieve weather data
-# Get info from HA, as string format
-text_sensor:
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myWeather
-    internal: true
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myTemperature
-    attribute: "temperature"
-    internal: true
-
-# Get info from HA, as float format
-sensor:
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myWindBearing
-    attribute: "wind_bearing"
-    internal: true
-
-font:
-  - file: "gfonts://Inter@700"
-    id: myFont
-    size: 24
-
-# define SPI interface
-spi:
-  clk_pin: GPIO7
-  mosi_pin: GPIO9
-
-display:
-  - platform: waveshare_epaper
-    id: epaper_display
-    model: 7.50inv2
-    cs_pin: GPIO44
-    dc_pin: GPIO10
-    reset_pin:
-      number: GPIO38
-      inverted: false
-    busy_pin:
-      number: GPIO4
-      inverted: true
-    update_interval: 300s
-    lambda: |-
-      //print info in log
-      ESP_LOGD("epaper", "weather: %s", id(myWeather).state.c_str());
-      ESP_LOGD("epaper", "temperature: %s", id(myTemperature).state.c_str());
-      ESP_LOGD("epaper", "pressure: %.1f", id(myWindBearing).state);
-      //display info in epaper screen
-      it.printf(100, 100, id(myFont), "%s", id(myWeather).state.c_str());
-      it.printf(100, 150, id(myFont), "%s", id(myTemperature).state.c_str());
-      it.printf(100, 200, id(myFont), "%.1f", id(myWindBearing).state);
-```
-
-</TabItem>
-
-<TabItem value="2.13 Inch" label="2.13 Inch">
-
-```yaml
-# Example ESPHome configuration to retrieve weather data
-# Get info from HA, as string format
-text_sensor:
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myWeather
-    internal: true
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myTemperature
-    attribute: "temperature"
-    internal: true
-
-# Get info from HA, as float format
-sensor:
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myWindBearing
-    attribute: "wind_bearing"
-    internal: true
-
-font:
-  - file: "gfonts://Inter@700"
-    id: myFont
-    size: 24
-
-# define SPI interface
-spi:
-  clk_pin: GPIO7
-  mosi_pin: GPIO9
-
-display:
-  - platform: waveshare_epaper
-    id: epaper_display
-    model: 7.50inv2
-    cs_pin: GPIO44
-    dc_pin: GPIO10
-    reset_pin:
-      number: GPIO38
-      inverted: false
-    busy_pin:
-      number: GPIO4
-      inverted: true
-    update_interval: 300s
-    lambda: |-
-      //print info in log
-      ESP_LOGD("epaper", "weather: %s", id(myWeather).state.c_str());
-      ESP_LOGD("epaper", "temperature: %s", id(myTemperature).state.c_str());
-      ESP_LOGD("epaper", "pressure: %.1f", id(myWindBearing).state);
-      //display info in epaper screen
-      it.printf(100, 100, id(myFont), "%s", id(myWeather).state.c_str());
-      it.printf(100, 150, id(myFont), "%s", id(myTemperature).state.c_str());
-      it.printf(100, 200, id(myFont), "%.1f", id(myWindBearing).state);
-```
-
-</TabItem>
-
-<TabItem value="2.9 Inch" label="2.9 Inch">
-
-```yaml
-# Example ESPHome configuration to retrieve weather data
-# Get info from HA, as string format
-text_sensor:
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myWeather
-    internal: true
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myTemperature
-    attribute: "temperature"
-    internal: true
-
-# Get info from HA, as float format
-sensor:
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myWindBearing
-    attribute: "wind_bearing"
-    internal: true
-
-font:
-  - file: "gfonts://Inter@700"
-    id: myFont
-    size: 24
-
-# define SPI interface
-spi:
-  clk_pin: GPIO7
-  mosi_pin: GPIO9
-
-display:
-  - platform: waveshare_epaper
-    id: epaper_display
-    model: 7.50inv2
-    cs_pin: GPIO44
-    dc_pin: GPIO10
-    reset_pin:
-      number: GPIO38
-      inverted: false
-    busy_pin:
-      number: GPIO4
-      inverted: true
-    update_interval: 300s
-    lambda: |-
-      //print info in log
-      ESP_LOGD("epaper", "weather: %s", id(myWeather).state.c_str());
-      ESP_LOGD("epaper", "temperature: %s", id(myTemperature).state.c_str());
-      ESP_LOGD("epaper", "pressure: %.1f", id(myWindBearing).state);
-      //display info in epaper screen
-      it.printf(100, 100, id(myFont), "%s", id(myWeather).state.c_str());
-      it.printf(100, 150, id(myFont), "%s", id(myTemperature).state.c_str());
-      it.printf(100, 200, id(myFont), "%.1f", id(myWindBearing).state);
-```
-
-
-</TabItem>
-
-<TabItem value="4.2 Inch" label="4.2 Inch">
-
-```yaml
-# Example ESPHome configuration to retrieve weather data
-# Get info from HA, as string format
-text_sensor:
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myWeather
-    internal: true
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myTemperature
-    attribute: "temperature"
-    internal: true
-
-# Get info from HA, as float format
-sensor:
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myWindBearing
-    attribute: "wind_bearing"
-    internal: true
-
-font:
-  - file: "gfonts://Inter@700"
-    id: myFont
-    size: 24
-
-# define SPI interface
-spi:
-  clk_pin: GPIO7
-  mosi_pin: GPIO9
-
-display:
-  - platform: waveshare_epaper
-    id: epaper_display
-    model: 7.50inv2
-    cs_pin: GPIO44
-    dc_pin: GPIO10
-    reset_pin:
-      number: GPIO38
-      inverted: false
-    busy_pin:
-      number: GPIO4
-      inverted: true
-    update_interval: 300s
-    lambda: |-
-      //print info in log
-      ESP_LOGD("epaper", "weather: %s", id(myWeather).state.c_str());
-      ESP_LOGD("epaper", "temperature: %s", id(myTemperature).state.c_str());
-      ESP_LOGD("epaper", "pressure: %.1f", id(myWindBearing).state);
-      //display info in epaper screen
-      it.printf(100, 100, id(myFont), "%s", id(myWeather).state.c_str());
-      it.printf(100, 150, id(myFont), "%s", id(myTemperature).state.c_str());
-      it.printf(100, 200, id(myFont), "%.1f", id(myWindBearing).state);
-```
-
-</TabItem>
-
-<TabItem value="5.83 Inch" label="5.83 Inch">
-
-```yaml
-# Example ESPHome configuration to retrieve weather data
-# Get info from HA, as string format
-text_sensor:
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myWeather
-    internal: true
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myTemperature
-    attribute: "temperature"
-    internal: true
-
-# Get info from HA, as float format
-sensor:
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myWindBearing
-    attribute: "wind_bearing"
-    internal: true
-
-font:
-  - file: "gfonts://Inter@700"
-    id: myFont
-    size: 24
-
-# define SPI interface
-spi:
-  clk_pin: GPIO7
-  mosi_pin: GPIO9
-
-display:
-  - platform: waveshare_epaper
-    id: epaper_display
-    model: 7.50inv2
-    cs_pin: GPIO44
-    dc_pin: GPIO10
-    reset_pin:
-      number: GPIO38
-      inverted: false
-    busy_pin:
-      number: GPIO4
-      inverted: true
-    update_interval: 300s
-    lambda: |-
-      //print info in log
-      ESP_LOGD("epaper", "weather: %s", id(myWeather).state.c_str());
-      ESP_LOGD("epaper", "temperature: %s", id(myTemperature).state.c_str());
-      ESP_LOGD("epaper", "pressure: %.1f", id(myWindBearing).state);
-      //display info in epaper screen
-      it.printf(100, 100, id(myFont), "%s", id(myWeather).state.c_str());
-      it.printf(100, 150, id(myFont), "%s", id(myTemperature).state.c_str());
-      it.printf(100, 200, id(myFont), "%.1f", id(myWindBearing).state);
-```
-</TabItem>
-
-<TabItem value="7.5 Inch" label="7.5 Inch" default>
-
-```yaml
-# Example ESPHome configuration to retrieve weather data
-# Get info from HA, as string format
-text_sensor:
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myWeather
-    internal: true
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myTemperature
-    attribute: "temperature"
-    internal: true
-
-# Get info from HA, as float format
-sensor:
-  - platform: homeassistant
-    entity_id: weather.home
-    id: myWindBearing
-    attribute: "wind_bearing"
-    internal: true
-
-font:
-  - file: "gfonts://Inter@700"
-    id: myFont
-    size: 24
-
-# define SPI interface
-spi:
-  clk_pin: GPIO7
-  mosi_pin: GPIO9
-
-display:
-  - platform: waveshare_epaper
-    id: epaper_display
-    model: 7.50inv2
-    cs_pin: GPIO44
-    dc_pin: GPIO10
-    reset_pin:
-      number: GPIO38
-      inverted: false
-    busy_pin:
-      number: GPIO4
-      inverted: true
-    update_interval: 300s
-    lambda: |-
-      //print info in log
-      ESP_LOGD("epaper", "weather: %s", id(myWeather).state.c_str());
-      ESP_LOGD("epaper", "temperature: %s", id(myTemperature).state.c_str());
-      ESP_LOGD("epaper", "pressure: %.1f", id(myWindBearing).state);
-      //display info in epaper screen
-      it.printf(100, 100, id(myFont), "%s", id(myWeather).state.c_str());
-      it.printf(100, 150, id(myFont), "%s", id(myTemperature).state.c_str());
-      it.printf(100, 200, id(myFont), "%.1f", id(myWindBearing).state);
-```
-
-</TabItem>
-</Tabs>
-
-<Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
-
-:::tip
-The 7.3-inch e-paper display requires ESPHome v10.15 or later, as support for this display was added in that release. The detailed usage guide will be updated in the Wiki soon.
-:::
-
-</TabItem>
-</Tabs>
-
-After compiling the above code and uploading it to your device, you may first see **NaN** displayed on the screen, please don't worry, this is normal. This is due to the fact that the device has not yet been added to the Home Assistant environment, so reTerminal has not yet been able to acquire Home Assistant data. We just need to follow the steps below to add the device.
-
-#### Adding EE04 ePaper Display to Home Assistant
-
-Step 1. After flashing your device, return to Home Assistant and navigate to **Settings → Devices & Services**.
-
-Step 3. Home Assistant should automatically discover your EE04 ePaper Display device via mDNS. If it appears in the discovered devices section, click Configure to add it.
-
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome7.png" style={{width:900, height:'auto'}}/></div><br />
-
-Step 4. If the device isn't automatically discovered, click Add Integration and search for "ESPHome".
-
-Step 5. Enter the IP address of your EE04 ePaper Display device and the API encryption key if you set one.
-
-Step 6. Once connected, your EE04 ePaper Display will appear as a device in Home Assistant with all its sensors and components available.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome1.jpg" style={{width:500, height:'auto'}}/></div><br />
-
-:::note
-The program may take 2~3 minutes from the completion of burning to the final display.
-
-:::
-
-Here's the enhanced Demo 3 content with improved formatting, image placement, and additional descriptions:
 
 ### Drawing TrueType fonts
 
-This example demonstrates how to display custom icons on your EE04 ePaper Display using TrueType fonts. Material Design Icons provide a wide range of scalable symbols perfect for e-paper displays.
+This example demonstrates how to display custom icons on your XIAO ePaper Display Board(ESP32-S3) - EE04 using TrueType fonts. Material Design Icons provide a wide range of scalable symbols perfect for ePaper displays.
 
 #### Installing Required Tools
 
-Step 1. First, we need to install the Studio Code Server add-on to manage files. Navigate to the Home Assistant Add-ons store, search for **Studio Code Server** and click on it.
+Step 1. First, we need to install the **Studio Code Server** add-on to manage files. Navigate to the Home Assistant Add-ons store, search for **Studio Code Server** and click on it.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/17.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphome00444.png" style={{width:1000, height:'auto'}}/></div>
 
 Step 2. Click on **INSTALL** and wait for the installation to complete. Once installed, click **START** to launch the editor.
 
@@ -1137,6 +1579,8 @@ Step 2. Click on **INSTALL** and wait for the installation to complete. Once ins
 #### Setting Up Icon Fonts
 
 Step 3. Create a new folder called **fonts** in your ESPHome configuration directory. This folder will store the TrueType font files needed for displaying icons.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphme_ee041.png" style={{width:800, height:'auto'}}/></div>
 
 Step 4. Download the Material Design Icons font file by clicking the button below and extract the contents.
 
@@ -1155,9 +1599,41 @@ Step 5. Upload the downloaded font file (`materialdesignicons-webfont.ttf`) to t
 Step 6. Add the following code to your ESPHome configuration file after the `captive_portal` section. This code defines two font sizes for icons and configures the display to show weather icons.
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
+<TabItem value="1.54 Inch" label="1.54 Inch Monochrome Color" default>
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 # define font to display words
 font:
   - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
@@ -1196,9 +1672,121 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Inch">
+<TabItem value="2.13 Inch Quadruple Color" label="2.13 Inch Quadruple Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+  libraries:
+    - SPI
+
+
+esp32:
+  board: seeed_xiao_esp32s3
+  framework:
+    type: arduino
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "eg2Jyse0gE146lJ2mVaqAnwteb4U2GJ7d1sZc2BOOsc="
+
+ota:
+  - platform: esphome
+    password: "e2f184b95aac832509885f676abf5b73"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "ESPHome_Epaper"
+    password: "123456789"
+
+external_components:
+  - source: github://xcjk-tofuture/seeed_esphome
+    components: [ waveshare_epaper ]
+
+
+# define font to display words
+font:
+  - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
+    id: font_mdi_large
+    size: 200        # Large icon size
+    glyphs: &mdi-weather-glyphs
+      - "\U000F0595" # weather-cloudy icon
+      - "\U000F0592" # weather-hail icon
+  - file: 'fonts/materialdesignicons-webfont.ttf'
+    id: font_mdi_medium   # Medium icon size
+    size: 40
+    glyphs: *mdi-weather-glyphs
+ 
+captive_portal:
+  
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: my_display
+    model: gdey0213f51
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    busy_pin: GPIO4
+    reset_pin:  GPIO38
+    rotation: 90
+    update_interval: 30s
+    full_update_every: 1
+    lambda: |-
+      it.printf(100, 200, id(font_mdi_medium), TextAlign::CENTER, "\U000F0595");
+      it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
+```
+
+</TabItem>
+
+
+<TabItem value="2.13 Inch" label="2.13 Inch Monochrome Color">
+
+```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 # define font to display words
 font:
   - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
@@ -1237,9 +1825,126 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Inch">
+<TabItem value="2.9 Inch Quadruple Color" label="2.9 Inch Quadruple Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+  libraries:
+    - SPI
+
+
+esp32:
+  board: seeed_xiao_esp32s3
+  framework:
+    type: arduino
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "eg2Jyse0gE146lJ2mVaqAnwteb4U2GJ7d1sZc2BOOsc="
+
+ota:
+  - platform: esphome
+    password: "e2f184b95aac832509885f676abf5b73"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "ESPHome_Epaper"
+    password: "123456789"
+
+external_components:
+  - source: github://xcjk-tofuture/seeed_esphome
+    components: [ waveshare_epaper ]
+
+
+# external_components:
+#   - source:
+#       type: local
+#       path: components_epaper
+#     components : [waveshare_epaper]
+
+ 
+captive_portal:
+
+# define font to display words
+font:
+  - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
+    id: font_mdi_large
+    size: 200        # Large icon size
+    glyphs: &mdi-weather-glyphs
+      - "\U000F0595" # weather-cloudy icon
+      - "\U000F0592" # weather-hail icon
+  - file: 'fonts/materialdesignicons-webfont.ttf'
+    id: font_mdi_medium   # Medium icon size
+    size: 40
+    glyphs: *mdi-weather-glyphs
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+display:
+  - platform: waveshare_epaper
+    id: my_display
+    model: gdey029f51h
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    busy_pin: GPIO4
+    reset_pin:  GPIO38
+    rotation: 90
+    update_interval: 30s
+    full_update_every: 1
+    lambda: |-
+      it.printf(100, 200, id(font_mdi_medium), TextAlign::CENTER, "\U000F0595");
+      it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
+```
+
+</TabItem>
+
+<TabItem value="2.9 Inch" label="2.9 Inch Monochrome Color">
+
+```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 # define font to display words
 font:
   - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
@@ -1279,9 +1984,41 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Inch">
+<TabItem value="4.2 Inch" label="4.2 Inch Monochrome Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 # define font to display words
 font:
   - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
@@ -1320,9 +2057,119 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+  libraries:
+    - SPI
+
+
+esp32:
+  board: seeed_xiao_esp32s3
+  framework:
+    type: arduino
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "eg2Jyse0gE146lJ2mVaqAnwteb4U2GJ7d1sZc2BOOsc="
+
+ota:
+  - platform: esphome
+    password: "e2f184b95aac832509885f676abf5b73"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "ESPHome_Epaper"
+    password: "123456789"
+
+external_components:
+  - source: github://xcjk-tofuture/seeed_esphome
+    components: [ waveshare_epaper ]
+ 
+captive_portal:
+
+# define font to display words
+font:
+  - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
+    id: font_mdi_large
+    size: 200        # Large icon size
+    glyphs: &mdi-weather-glyphs
+      - "\U000F0595" # weather-cloudy icon
+      - "\U000F0592" # weather-hail icon
+  - file: 'fonts/materialdesignicons-webfont.ttf'
+    id: font_mdi_medium   # Medium icon size
+    size: 40
+    glyphs: *mdi-weather-glyphs
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: my_display
+    model: 4.26in
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    busy_pin: GPIO4
+    reset_pin:  GPIO38
+    rotation: 0
+    update_interval: 30s
+    lambda: |-
+      it.printf(100, 200, id(font_mdi_medium), TextAlign::CENTER, "\U000F0595");
+      it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
+```
+
+</TabItem>
+
+
+<TabItem value="5.83 Inch" label="5.83 Inch Monochrome Color">
+
+```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 # define font to display words
 font:
   - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
@@ -1360,9 +2207,41 @@ display:
 ```
 </TabItem>
 
-<TabItem value="24 Pin" label="7.5 Inch" default>
+<TabItem value="24 Pin" label="7.5 Inch Monochrome Color" default>
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 # define font to display words
 font:
   - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
@@ -1403,11 +2282,78 @@ display:
 </Tabs>
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3 Inch spectra™ 6" default>
 
-:::tip
-The 7.3-inch e-paper display requires ESPHome v10.15 or later, as support for this display was added in that release. The detailed usage guide will be updated in the Wiki soon.
-:::
+```yaml
+
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
+# define font to display words
+font:
+  - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
+    id: font_mdi_large
+    size: 200        # Large icon size
+    glyphs: &mdi-weather-glyphs
+      - "\U000F0595" # weather-cloudy icon
+      - "\U000F0592" # weather-hail icon
+  - file: 'fonts/materialdesignicons-webfont.ttf'
+    id: font_mdi_medium   # Medium icon size
+    size: 40
+    glyphs: *mdi-weather-glyphs
+
+# define SPI interface
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: epaper_display
+    model: 7.3in-spectra-e6
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    reset_pin:
+      number: GPIO38
+      inverted: false
+    busy_pin:
+      number: GPIO4
+      inverted: true
+    update_interval: 300s
+    lambda: |-
+      it.printf(100, 200, id(font_mdi_medium), TextAlign::CENTER, "\U000F0595");
+      it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
+
+```
 
 </TabItem>
 </Tabs>
@@ -1420,9 +2366,9 @@ The 7.3-inch e-paper display requires ESPHome v10.15 or later, as support for th
 
 :::
 
-Step 7. Save your configuration and upload it to your EE04 ePaper Display. When you see feedback like the following image, it means the code is running successfully.
+Step 7. Save your configuration and upload it to your XIAO ePaper Display Board(ESP32-S3) - EE04. When you see feedback like the following image, it means the code is running successfully.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome4.png" style={{width:500, height:'auto'}}/></div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphomeee045.png" style={{width:1000, height:'auto'}}/></div><br />
 
 #### Customizing with Different Icons
 
@@ -1473,7 +2419,7 @@ By combining these icons with the weather data from Home Assistant that we set u
 
 ### Displaying Custom Images
 
-This example demonstrates how to display custom images on your EE04 ePaper Display e-paper display. You can use this feature to show logos, icons, or any graphics that enhance your dashboard experience.
+This example demonstrates how to display custom images on your XIAO ePaper Display Board(ESP32-S3) - EE04. You can use this feature to show logos, icons, or any graphics that enhance your dashboard experience.
 
 #### Preparation
 
@@ -1503,7 +2449,7 @@ Step 4. Upload the downloaded image to the **image** folder you created earlier 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-For best results on e-paper displays, use high-contrast images with clear black and white areas. JPG and PNG formats are both supported.
+For best results on ePaper displays, use high-contrast images with clear black and white areas. JPG and PNG formats are both supported.
 :::
 
 #### Configuring ESPHome for Image Display
@@ -1511,9 +2457,41 @@ For best results on e-paper displays, use high-contrast images with clear black 
 Step 5. Add the following code to your ESPHome configuration file after the `captive_portal` section. This code defines the image resource and configures the display to show it.
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
+<TabItem value="1.54 Inch" label="1.54 Inch Monochrome Color" default>
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
@@ -1544,9 +2522,41 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Inch">
+<TabItem value="2.13 Inch" label="2.13 Inch Monochrome Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
@@ -1577,9 +2587,183 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Inch">
+<TabItem value="2.13 Inch Quadruple Color" label="2.13 Inch Quadruple Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+  libraries:
+    - SPI
+
+
+esp32:
+  board: seeed_xiao_esp32s3
+  framework:
+    type: arduino
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "eg2Jyse0gE146lJ2mVaqAnwteb4U2GJ7d1sZc2BOOsc="
+
+ota:
+  - platform: esphome
+    password: "e2f184b95aac832509885f676abf5b73"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "ESPHome_Epaper"
+    password: "123456789"
+
+external_components:
+  - source: github://xcjk-tofuture/seeed_esphome
+    components: [ waveshare_epaper ]
+
+
+image:
+  - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
+    id: myImage
+    type: BINARY                            # Binary mode works best for e-paper
+    resize: 800x480                         # Resize to match display resolution
+    invert_alpha: true                      # Invert colors if needed
+ 
+captive_portal:
+  
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: my_display
+    model: gdey0213f51
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    busy_pin: GPIO4
+    reset_pin:  GPIO38
+    rotation: 90
+    update_interval: 30s
+    full_update_every: 1
+    lambda: |-
+      it.image(0, 0, id(myImage));          # Display image at position (0,0)
+```
+
+</TabItem>
+
+<TabItem value="2.9 Inch Quadruple Color" label="2.9 Inch Quadruple Color">
+
+```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+  libraries:
+    - SPI
+
+
+esp32:
+  board: seeed_xiao_esp32s3
+  framework:
+    type: arduino
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "eg2Jyse0gE146lJ2mVaqAnwteb4U2GJ7d1sZc2BOOsc="
+
+ota:
+  - platform: esphome
+    password: "e2f184b95aac832509885f676abf5b73"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "ESPHome_Epaper"
+    password: "123456789"
+
+external_components:
+  - source: github://xcjk-tofuture/seeed_esphome
+    components: [ waveshare_epaper ]
+ 
+captive_portal:
+
+image:
+  - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
+    id: myImage
+    type: BINARY                            # Binary mode works best for e-paper
+    resize: 800x480                         # Resize to match display resolution
+    invert_alpha: true                      # Invert colors if needed
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+display:
+  - platform: waveshare_epaper
+    id: my_display
+    model: gdey029f51h
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    busy_pin: GPIO4
+    reset_pin:  GPIO38
+    rotation: 90
+    update_interval: 30s
+    full_update_every: 1
+    lambda: |-
+      it.image(0, 0, id(myImage));          # Display image at position (0,0)
+```
+
+</TabItem>
+
+<TabItem value="2.9 Inch" label="2.9 Inch Monochrome Color">
+
+```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
@@ -1611,9 +2795,41 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Inch">
+<TabItem value="4.2 Inch" label="4.2 Inch Monochrome Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
@@ -1644,9 +2860,112 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+  libraries:
+    - SPI
+
+
+esp32:
+  board: seeed_xiao_esp32s3
+  framework:
+    type: arduino
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "eg2Jyse0gE146lJ2mVaqAnwteb4U2GJ7d1sZc2BOOsc="
+
+ota:
+  - platform: esphome
+    password: "e2f184b95aac832509885f676abf5b73"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "ESPHome_Epaper"
+    password: "123456789"
+
+external_components:
+  - source: github://xcjk-tofuture/seeed_esphome
+    components: [ waveshare_epaper ]
+ 
+captive_portal:
+
+image:
+  - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
+    id: myImage
+    type: BINARY                            # Binary mode works best for e-paper
+    resize: 800x480                         # Resize to match display resolution
+    invert_alpha: true                      # Invert colors if needed
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: my_display
+    model: 4.26in
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    busy_pin: GPIO4
+    reset_pin:  GPIO38
+    rotation: 0
+    update_interval: 30s
+    lambda: |-
+      it.image(0, 0, id(myImage));          # Display image at position (0,0)
+```
+
+</TabItem>
+
+
+<TabItem value="5.83 Inch" label="5.83 Inch Monochrome Color">
+
+```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
@@ -1676,9 +2995,41 @@ display:
 ```
 </TabItem>
 
-<TabItem value="7.5 Inch" label="7.5 Inch" default>
+<TabItem value="7.5 Inch" label="7.5 Inch Monochrome Color" default>
 
 ```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
@@ -1711,18 +3062,71 @@ display:
 </Tabs>
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3 Inch spectra™ 6" default>
 
-:::tip
-The 7.3-inch e-paper display requires ESPHome v10.15 or later, as support for this display was added in that release. The detailed usage guide will be updated in the Wiki soon.
-:::
+```yaml
+esphome:
+  name: ee04
+  friendly_name: EE04
 
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "b0AIbJ+kbeMayi1PgSGXtiD1yQCapUBF4A/7v7btys0="
+
+ota:
+  - platform: esphome
+    password: "5d7cca6f4b3f38aba559ab0d6aaf5926"
+
+wifi:
+  ssid: 
+  password: 
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Ee04 Fallback Hotspot"
+    password: "zxPMBtCEWonm"
+
+captive_portal:
+
+image:
+  - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
+    id: myImage
+    type: BINARY                            # Binary mode works best for e-paper
+    resize: 800x480                         # Resize to match display resolution
+    invert_alpha: true                      # Invert colors if needed
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: epaper_spi
+    id: my_display
+    model: 7.3in-spectra-e6
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    busy_pin: GPIO4
+    reset_pin:  GPIO38
+    rotation: 0
+    update_interval: 30s
+    lambda: |-
+      it.image(0, 0, id(myImage));          # Display image at position (0,0)
+```
 </TabItem>
 </Tabs>
 
-Step 6. Save your configuration and upload it to your EE04 ePaper Display. When the update completes, your e-paper display will show the image.
+Step 6. Save your configuration and upload it to your XIAO ePaper Display Board(ESP32-S3) - EE04. When the update completes, your ePaper display will show the image.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome2.jpg" style={{width:500, height:'auto'}}/></div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphomeee046.png" style={{width:1000, height:'auto'}}/></div><br />
 
 
 #### Advanced Image Techniques
@@ -1775,11 +3179,15 @@ lambda: |-
 ```
 
 :::caution
-Remember that e-paper displays have limited refresh rates. The `update_interval: 300s` setting means your display will refresh only every 5 minutes. Adjust this value according to your needs, but be aware that frequent refreshes can reduce the lifespan of e-paper displays.
+Remember that ePaper displays have limited refresh rates. The `update_interval: 300s` setting means your display will refresh only every 5 minutes. Adjust this value according to your needs, but be aware that frequent refreshes can reduce the lifespan of ePaper displays.
 :::
 
-By combining images with text and other display elements covered in previous examples, you can create rich, informative dashboards on your EE04
+By combining images with text and other display elements covered in previous examples, you can create rich, informative dashboards on your XIAO ePaper Display Board(ESP32-S3) - EE04.
 
+## Reference & Resources
+
+- [ESPHome](https://esphome.io/)
+- [ESPHome detailed examples](https://esphome.io/components/display/)
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
