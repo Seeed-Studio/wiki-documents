@@ -39,7 +39,7 @@ Entrar en modo bootloader en esta placa es complicado ya que no hay botón de ar
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif" style={{width:400, height:'auto'}}/></div>
 
-Cuando sea exitoso, la luz LED de usuario amarilla se desvanecerá encendiéndose y apagándose lentamente,
+Cuando sea exitoso, la luz LED amarilla del usuario se desvanecerá encendiéndose y apagándose lentamente,
 y aparecerá una unidad USB virtual llamada **Arduino**.
 
 Descarga el [archivo de firmware](https://microblocks.fun/downloads/latest/vm/vm_xiao_samd21.uf2),
@@ -54,15 +54,15 @@ Puedes ignorar cualquier advertencia de que el disco no fue expulsado correctame
 Conecta la placa a tu computadora con un cable USB de datos (**no** un cable solo de alimentación).
 
 Ejecuta el [editor de MicroBlocks](https://microblocks.fun/run/microblocks.html) en un navegador Chrome o Edge.
-Haz clic en el botón **conectar** (ícono de enchufe):
+Haz clic en el botón **connect** (ícono de enchufe):
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-button.png" style={{width:300, height:'auto'}}/></div>
 
-Selecciona **conectar (USB)** del menú:
+Selecciona **connect (USB)** del menú:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-menu.png" style={{width:300, height:'auto'}}/></div>
 
-Selecciona tu placa del diálogo y haz clic en el botón **conectar**:
+Selecciona tu placa del diálogo y haz clic en el botón **connect**:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-dialog-samd21.png" style={{width:400, height:'auto'}}/></div>
 
@@ -72,12 +72,12 @@ Un círculo verde y el nombre de la placa aparecerán cuando la placa esté cone
 
 ## Programando en MicroBlocks
 
-MicroBlocks es un entorno de codificación **en vivo** por lo que puedes probar mientras programas.
+MicroBlocks es un entorno de programación **en vivo** por lo que puedes probar mientras programas.
 Haz clic en bloques y scripts para ejecutarlos.
 Arrastra bloques al panel de scripting y ensámblalos para crear scripts.
 
-Tu código se almacena en memoria flash persistente y puede ejecutarse incluso cuando la placa
-no está conectada al editor de MicroBlocks.
+Tu código se almacena en memoria flash persistente y puede ejecutarse incluso cuando la placa no está
+conectada al editor de MicroBlocks.
 Los scripts bajo un bloque **when started** se ejecutan cuando la placa se enciende.
 
 MicroBlocks soporta concurrencia. Hasta diez scripts pueden ejecutarse al mismo tiempo.
@@ -88,22 +88,29 @@ Haz clic en el botón **Add Library** para agregar librerías.
 
 ## Ejemplo
 
-Este script hará parpadear el LED de usuario amarillo:
+Este script hará parpadear el LED amarillo del usuario:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-blink.png" style={{width:200, height:'auto'}}/></div>
 
 La [Referencia de Bloques](https://wiki.microblocks.fun/en/reference_manual)
 incluye muchos ejemplos adicionales.
 
+## Demo del Proyecto
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/main.png" style={{width:600, height:'auto'}}/></div>
+
+Para una demostración de proyecto más completa, el maker [Luis](https://www.hackster.io/luis_a_la_m) ha construido un dispositivo LED Neo-pixel de 8x8 usando XIAO SAMD21, Grove Shield para XIAO y una Matriz LED, que puedes usar con MicroBlocks para pintar patrones de píxeles impresionantes sin escribir código complejo. Un tutorial paso a paso se puede encontrar en [Hackster](https://www.hackster.io/luis_a_la_m/paint-with-pixels-8f3a15).
+
+
 ## Agradecimientos Especiales
 
-Agradecimientos especiales a John de MicroBlocks por escribir el artículo.
+Agradecimientos especiales a John en MicroBlocks por escribir el artículo.
 
 ## Recursos de MicroBlocks
 
 - [Sitio Web](https://microblocks.fun)
 
-- [Guía de Usuario](https://wiki.microblocks.fun/en/ide)
+- [Guía del Usuario](https://wiki.microblocks.fun/en/ide)
 
 - [Referencia de Bloques](https://wiki.microblocks.fun/en/reference_manual)
 

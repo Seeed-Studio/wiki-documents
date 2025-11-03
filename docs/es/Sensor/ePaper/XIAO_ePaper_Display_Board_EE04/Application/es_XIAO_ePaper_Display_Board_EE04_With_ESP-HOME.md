@@ -1,6 +1,6 @@
 ---
-description: Este artículo describe cómo utilizar las capacidades de hardware de la pantalla ePaper de la serie reTerminal E en ESPHome.
-title: Uso de ESPHome de la pantalla ePaper EE04 en Home Assistant
+description: Este artículo explica cómo utilizar las características de hardware de la XIAO ePaper Display Board EE04 en ESPHome e integrarla con Home Assistant.
+title: XIAO ePaper Display Board EE04 con ESPHome
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
 slug: /es/EE04_with_esphome_advanced
 sidebar_position: 2
@@ -12,7 +12,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Pantalla ePaper EE04 funcionando con ESPHome para Home Assistant
+# EE04 ePaper Display Funciona con ESPHome para Home Assistant
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:700, height:'auto'}}/></div><br />
 
@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 ## Introducción a [Home Assistant](https://www.home-assistant.io/)
 
-Home Assistant es una potente plataforma de automatización del hogar de código abierto que te permite controlar y monitorear tus dispositivos domésticos inteligentes desde una interfaz única y unificada. Actúa como el centro de control de tu hogar inteligente, permitiéndote automatizar rutinas, monitorear sensores y crear un espacio de vida más inteligente.
+Home Assistant es una poderosa plataforma de automatización del hogar de código abierto que te permite controlar y monitorear tus dispositivos domésticos inteligentes desde una interfaz única y unificada. Actúa como el centro de control de tu hogar inteligente, permitiéndote automatizar rutinas, monitorear sensores y crear un espacio de vida más inteligente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/204.png" style={{width:700, height:'auto'}}/></div>
 
@@ -32,7 +32,7 @@ Home Assistant es una potente plataforma de automatización del hogar de código
 
 - **Amplio Soporte de Dispositivos**: Home Assistant se integra con miles de diferentes dispositivos y servicios domésticos inteligentes, haciéndolo altamente versátil y preparado para el futuro.
 
-- **Automatización Potente**: Crea reglas de automatización sofisticadas que pueden responder a varios disparadores como tiempo, estados de dispositivos, lecturas de sensores y más.
+- **Automatización Poderosa**: Crea reglas de automatización sofisticadas que pueden responder a varios disparadores como tiempo, estados de dispositivos, lecturas de sensores y más.
 
 - **Panel de Control Personalizable**: Diseña tu propia interfaz de usuario para mostrar la información que más te importa.
 
@@ -40,11 +40,11 @@ Home Assistant es una potente plataforma de automatización del hogar de código
     <a class="get_one_now_item" href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Aprender Más 🖱️</font></span></strong></a>
 </div>
 
-### ¿Por qué la pantalla ePaper serie EE04 con Home Assistant?
+### ¿Por qué EE04 Series ePaper Display con Home Assistant?
 
-La pantalla ePaper EE04 es un excelente compañero para Home Assistant por varias razones:
+El EE04 ePaper Display es un excelente compañero para Home Assistant por varias razones:
 
-1. **Eficiencia Energética**: La pantalla de papel electrónico solo consume energía al actualizar el contenido, haciéndola perfecta para mostrar información persistente como pronósticos del tiempo, eventos del calendario o estado del sistema.
+1. **Eficiencia Energética**: La pantalla de papel electrónico solo consume energía al actualizar contenido, haciéndola perfecta para mostrar información persistente como pronósticos del tiempo, eventos del calendario o estado del sistema.
 
 2. **Visibilidad Clara**: A diferencia de las pantallas LCD, las pantallas de papel electrónico son fácilmente legibles en cualquier condición de iluminación, incluyendo luz solar directa, haciéndolas ideales para paneles de control doméstico montados en la pared.
 
@@ -52,17 +52,17 @@ La pantalla ePaper EE04 es un excelente compañero para Home Assistant por varia
 
 4. **Integración Flexible**: A través de ESPHome, la pantalla se integra perfectamente con Home Assistant, permitiéndote mostrar cualquier dato de tu sistema doméstico inteligente en un formato elegante y siempre visible.
 
-Estas ventajas hacen de la pantalla ePaper EE04 una opción ideal para crear una pantalla de información energéticamente eficiente y siempre encendida para tu configuración de Home Assistant.
+Estas ventajas hacen del EE04 ePaper Display una opción ideal para crear una pantalla de información energéticamente eficiente y siempre encendida para tu configuración de Home Assistant.
 
 ### Integración con ESPHome
 
-ESPHome es una herramienta de creación de firmware de código abierto específicamente diseñada para dispositivos ESP8266/ESP32. Te permite crear firmware personalizado usando archivos de configuración YAML simples, que luego pueden ser flasheados a tu dispositivo. Para la serie EE04, ESPHome sirve como el middleware esencial que permite la comunicación entre el dispositivo y Home Assistant.
+ESPHome es una herramienta de creación de firmware de código abierto específicamente diseñada para dispositivos ESP8266/ESP32. Te permite crear firmware personalizado usando archivos de configuración YAML simples, que luego pueden ser flasheados a tu dispositivo. Para la Serie EE04, ESPHome sirve como el middleware esencial que permite la comunicación entre el dispositivo y Home Assistant.
 
 El sistema funciona convirtiendo tu configuración YAML en firmware completamente funcional que se ejecuta en tu dispositivo ESP. Este firmware maneja todas las tareas complejas de conectarse a tu red, comunicarse con Home Assistant y controlar la pantalla ePaper. Cuando se combina con Home Assistant, ESPHome proporciona una plataforma robusta para crear pantallas y controles de automatización del hogar sofisticados.
 
 Exploremos cómo configurarlo y aprovechar al máximo esta pantalla versátil.
 
-## Comenzando
+## Primeros Pasos
 
 Antes de que comience el contenido del tutorial de este artículo, es posible que necesites tener el siguiente hardware listo.
 
@@ -71,7 +71,7 @@ Antes de que comience el contenido del tutorial de este artículo, es posible qu
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Placa de Pantalla ePaper XIAO EE04</th>
+      <th>XIAO ePaper Display Board EE04</th>
       <th>Home Assistant Green</th>
     </tr>
     <tr>
@@ -100,10 +100,10 @@ Recomendamos usar Home Assistant Green como el host de Home Assistant para este 
 :::tip instalar Home Assistant
 También hemos escrito cómo instalar Home Assistant para algunos productos de Seeed Studio, por favor consúltalos.
 
-- **[Comenzando con Home Assistant en ODYSSEY-X86](https://wiki.seeedstudio.com/es/ODYSSEY-X86-Home-Assistant/)**
-- **[Comenzando con Home Assistant en LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/es/h68k-ha-esphome/)**
+- **[Primeros Pasos con Home Assistant en ODYSSEY-X86](https://wiki.seeedstudio.com/es/ODYSSEY-X86-Home-Assistant/)**
+- **[Primeros Pasos con Home Assistant en LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/es/h68k-ha-esphome/)**
 
-Si no estás usando un producto de Seeed Studio, también puedes verificar y aprender cómo instalar Home Assistant para otros productos en el sitio web oficial de Home Assistant.
+Si no estás usando un producto de Seeed Studio, también puedes consultar y aprender cómo instalar Home Assistant para otros productos en el sitio web oficial de Home Assistant.
 
 - **[Instalación de Home Assistant](https://www.home-assistant.io/installation/)**
 :::
@@ -157,7 +157,7 @@ Después de crear un nuevo dispositivo, haz clic en **EDIT**.
 
 ### Paso 3. Instalar firmware
 
-Este es un ejemplo muy básico y mostrará "¡Hola Mundo!" en la pantalla.
+Este es un ejemplo muy básico y mostrará "Hello World!" en la pantalla.
 
 **El propósito principal es mostrarte diferentes formas de instalar firmware en el dispositivo.**
 
@@ -373,7 +373,7 @@ La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o post
 Haz clic en **INSTALL** para instalar el código en el dispositivo y verás la siguiente imagen.
 
 <Tabs>
-<TabItem value='Install through browser'>
+<TabItem value='Instalar a través del navegador'>
 
 :::tip
 Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está lejos de ti, recomendamos usar este método. Puedes instalarlo con la computadora que tengas a mano.
@@ -399,7 +399,7 @@ Usa un cable USB para **conectar el panel de papel electrónico a tu computadora
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
-Selecciona usbmodemxxx (en Windows es COMxxx) y haz clic en connect. [¿Encontraste un problema? Haz clic aquí.](#Q4)
+Selecciona usbmodemxxx (Windows es COMxxx) y haz clic en connect. [¿Encontraste un problema? Haz clic aquí.](#Q4)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
@@ -413,7 +413,7 @@ Espera un momento y verás '¡Hola mundo!' en la pantalla ～
 
 </TabItem>
 
-<TabItem value='Install through host'>
+<TabItem value='Instalar a través del host'>
 
 :::tip
 Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está cerca, recomendamos usar este método ya que es más simple.
@@ -434,10 +434,10 @@ Espera un momento y verás la retroalimentación como la siguiente imagen. Signi
 
 </TabItem>
 
-<TabItem value='Install through Wi-Fi'>
+<TabItem value='Instalar a través de Wi-Fi'>
 
 :::tip
-Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel de papel electrónico usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de cifrado válidas para que este método funcione.
+Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel de Papel Electrónico usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de cifrado válidas para que este método funcione.
 :::
 
 De esta manera, no necesitas conectar el panel de papel electrónico a nada, solo asegúrate de que esté en línea.
@@ -457,7 +457,7 @@ Espera un momento y verás la retroalimentación como la siguiente imagen. Si fa
 
 ### Dibujando Gráficos Simples
 
-Este código YAML de ejemplo configura la interfaz SPI y la pantalla de papel electrónico de la Serie reTerminal E para un proyecto ESPHome. La sección `lambda` contiene comandos de dibujo que renderizan formas simples en la pantalla:
+Este código YAML de ejemplo configura la interfaz SPI y la Pantalla de Papel Electrónico reTerminal E Series para un proyecto ESPHome. La sección `lambda` contiene comandos de dibujo que renderizan formas simples en la pantalla:
 
 - Dos rectángulos (uno en la posición (10, 10) con tamaño 100x50, y otro en (150, 10) con tamaño 50x50)
 - Un círculo en (250, 35) con un radio de 25
@@ -580,7 +580,7 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="5.83 Inch" label="5.83 Pulgadas">
 
 ```yaml
 spi:
@@ -607,7 +607,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="7.5 Inch-24Pin" label="7.5 Inch" default>
+<TabItem value="7.5 Inch-24Pin" label="7.5 Pulgadas" default>
 
 ```yaml
 spi:
@@ -637,7 +637,7 @@ display:
 </Tabs>
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3 Pulgadas" default>
 
 :::tip
 La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o posterior, ya que el soporte para esta pantalla se agregó en esa versión. La guía de uso detallada se actualizará en el Wiki pronto.
@@ -651,13 +651,13 @@ La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o post
 Cuando veas la retroalimentación como en la siguiente imagen, significa que el código se está ejecutando correctamente.
 
 
-Debido a las limitaciones de espacio, no elaboraremos demasiado sobre los métodos de dibujo y principios de otros patrones. Si es necesario, se recomienda al lector leer [ESPHome en esta parte de ejemplos detallados](https://esphome.io/components/display/).
+Debido a limitaciones de espacio, no elaboraremos demasiado sobre los métodos de dibujo y principios de otros patrones, si es necesario, se recomienda al lector leer [ESPHome en esta parte de ejemplos detallados](https://esphome.io/components/display/).
 
-### Obtener valores de Home Assistant para mostrar
+### Obteniendo valores de Home Assistant para mostrar
 
 Para mostrar datos meteorológicos en tu dispositivo EE04 ePaper Display, necesitarás acceder a datos de temperatura, condiciones meteorológicas y velocidad del viento desde Home Assistant. La integración Open-Meteo proporciona datos meteorológicos confiables que se pueden acceder a través de Developer Tools.
 
-#### Instalación de la integración Open-Meteo
+#### Instalando la Integración Open-Meteo
 
 Paso 1. Abre tu panel de Home Assistant y navega a **Settings** → **Devices & Services**.
 
@@ -671,23 +671,23 @@ Paso 4. Sigue el asistente de configuración para establecer tu ubicación y uni
 
 Paso 5. Una vez instalada, la integración Open-Meteo creará varias entidades relacionadas con el clima en tu instancia de Home Assistant.
 
-#### Acceso a datos meteorológicos en Developer Tools
+#### Accediendo a Datos Meteorológicos en Developer Tools
 
 Después de instalar la integración Open-Meteo, puedes acceder a los datos meteorológicos a través de Developer Tools:
 
 Paso 1. En tu panel de Home Assistant, navega a **Developer Tools** → **States**.
 
-Paso 2. En el cuadro de filtro, escribe `weather` para encontrar la entidad meteorológica principal.
+Paso 2. En el cuadro de filtro, escribe `weather` para encontrar la entidad principal del clima.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/39.png" style={{width:1000, height:'auto'}}/></div>
 
-Paso 3. Haz clic en la entidad para ver todos los atributos disponibles. Los atributos meteorológicos clave incluyen:
+Paso 3. Haz clic en la entidad para ver todos los atributos disponibles. Los atributos clave del clima incluyen:
 
 - `temperature`: Temperatura actual (en tus unidades configuradas)
-- `wind_bearing`: Dirección del viento
+- `wind_bearing`: Dirección del Viento
 - `wind_speed`: Velocidad del viento
 
-#### Uso de datos meteorológicos en ESPHome
+#### Usando Datos Meteorológicos en ESPHome
 
 Para usar estos datos meteorológicos en tu configuración ESPHome para el EE04 ePaper Display, necesitarás configurar una conexión API de Home Assistant en tu configuración YAML de ESPHome:
 
@@ -714,7 +714,7 @@ sensor:
     internal: true
 ```
 
-Esta configuración crea entidades de sensor en tu dispositivo ESPHome que extraen datos de la integración meteorológica de Home Assistant. Luego puedes usar estos sensores para actualizar tu pantalla reTerminal E Series ePaper Display con la información meteorológica actual.
+Esta configuración crea entidades de sensor en tu dispositivo ESPHome que extraen datos de la integración meteorológica de Home Assistant. Luego puedes usar estos sensores para actualizar tu pantalla ePaper Display de reTerminal E 系列 con la información meteorológica actual.
 
 :::tip
 Para datos de pronóstico, necesitarás usar las entidades `weather.open_meteo_forecast` que contienen valores predichos para días futuros.
@@ -723,7 +723,7 @@ Para datos de pronóstico, necesitarás usar las entidades `weather.open_meteo_f
 Finalmente, agrega el código para la sección de pantalla para usar estos valores anteriores. El código completo es el siguiente:
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
+<TabItem value="1.54 Inch" label="1.54 Pulgadas" default>
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -783,7 +783,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Inch">
+<TabItem value="2.13 Inch" label="2.13 Pulgadas">
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -843,7 +843,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Inch">
+<TabItem value="2.9 Inch" label="2.9 Pulgadas">
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -904,7 +904,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Inch">
+<TabItem value="4.2 Inch" label="4.2 Pulgadas">
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -964,7 +964,7 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="5.83 Inch" label="5.83 Pulgadas">
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -1023,7 +1023,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="7.5 Inch" label="7.5 Inch" default>
+<TabItem value="7.5 Inch" label="7.5 Pulgadas" default>
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -1085,10 +1085,10 @@ display:
 </Tabs>
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3 Pulgadas" default>
 
 :::tip
-La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o posterior, ya que el soporte para esta pantalla se agregó en esa versión. La guía de uso detallada se actualizará en el Wiki pronto.
+La pantalla e-paper de 7.3 pulgadas requiere ESPHome v10.15 o posterior, ya que el soporte para esta pantalla se agregó en esa versión. La guía de uso detallada se actualizará en el Wiki pronto.
 :::
 
 </TabItem>
@@ -1122,7 +1122,7 @@ Aquí está el contenido mejorado de la Demo 3 con formato mejorado, ubicación 
 
 ### Dibujando fuentes TrueType
 
-Este ejemplo demuestra cómo mostrar iconos personalizados en tu EE04 ePaper Display usando fuentes TrueType. Los iconos de Material Design proporcionan una amplia gama de símbolos escalables perfectos para pantallas de papel electrónico.
+Este ejemplo demuestra cómo mostrar iconos personalizados en tu EE04 ePaper Display usando fuentes TrueType. Los iconos de Material Design proporcionan una amplia gama de símbolos escalables perfectos para pantallas e-paper.
 
 #### Instalando Herramientas Requeridas
 
@@ -1155,7 +1155,7 @@ Paso 5. Sube el archivo de fuente descargado (`materialdesignicons-webfont.ttf`)
 Paso 6. Agrega el siguiente código a tu archivo de configuración de ESPHome después de la sección `captive_portal`. Este código define dos tamaños de fuente para iconos y configura la pantalla para mostrar iconos del clima.
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
+<TabItem value="1.54 Inch" label="1.54 Pulgadas" default>
 
 ```yaml
 # define font to display words
@@ -1196,7 +1196,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Inch">
+<TabItem value="2.13 Inch" label="2.13 Pulgadas">
 
 ```yaml
 # define font to display words
@@ -1237,7 +1237,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Inch">
+<TabItem value="2.9 Inch" label="2.9 Pulgadas">
 
 ```yaml
 # define font to display words
@@ -1279,7 +1279,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Inch">
+<TabItem value="4.2 Inch" label="4.2 Pulgadas">
 
 ```yaml
 # define font to display words
@@ -1320,7 +1320,7 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="5.83 Inch" label="5.83 Pulgadas">
 
 ```yaml
 # define font to display words
@@ -1360,7 +1360,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="24 Pin" label="7.5 Inch" default>
+<TabItem value="24 Pin" label="7.5 Pulgadas" default>
 
 ```yaml
 # define font to display words
@@ -1403,7 +1403,7 @@ display:
 </Tabs>
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3 Pulgadas" default>
 
 :::tip
 La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o posterior, ya que el soporte para esta pantalla se agregó en esa versión. La guía de uso detallada se actualizará en el Wiki pronto.
@@ -1420,7 +1420,7 @@ La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o post
 
 :::
 
-Paso 7. Guarda tu configuración y súbela a tu pantalla ePaper EE04. Cuando veas una respuesta como la siguiente imagen, significa que el código se está ejecutando correctamente.
+Paso 7. Guarda tu configuración y súbela a tu Pantalla ePaper EE04. Cuando veas una respuesta como la siguiente imagen, significa que el código se está ejecutando correctamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome4.png" style={{width:500, height:'auto'}}/></div><br />
 
@@ -1469,9 +1469,9 @@ Paso 5. Guarda tu configuración actualizada y súbela a tu dispositivo para ver
 Para paneles meteorológicos, considera usar iconos como `F0590` (soleado), `F0591` (parcialmente nublado), `F0593` (lluvioso) y `F059E` (ventoso).
 :::
 
-Al combinar estos iconos con los datos meteorológicos de Home Assistant que configuramos anteriormente, puedes crear una visualización meteorológica dinámica que muestre las condiciones actuales usando iconos apropiados.
+Al combinar estos iconos con los datos meteorológicos de Home Assistant que configuramos anteriormente, puedes crear una pantalla meteorológica dinámica que muestre las condiciones actuales usando iconos apropiados.
 
-### Visualización de Imágenes Personalizadas
+### Mostrar Imágenes Personalizadas
 
 Este ejemplo demuestra cómo mostrar imágenes personalizadas en tu pantalla de papel electrónico EE04 ePaper Display. Puedes usar esta función para mostrar logotipos, iconos o cualquier gráfico que mejore tu experiencia de panel.
 
@@ -1488,7 +1488,7 @@ config/
     └── image/         <- Create this folder
 ```
 
-#### Agregando Imágenes
+#### Agregar Imágenes
 
 Paso 3. Descarga una imagen de muestra para probar la funcionalidad. Puedes usar el icono WiFi proporcionado a continuación o usar tu propia imagen.
 
@@ -1503,15 +1503,15 @@ Paso 4. Sube la imagen descargada a la carpeta **image** que creaste anteriormen
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Para mejores resultados en pantallas de papel electrónico, usa imágenes de alto contraste con áreas claras en blanco y negro. Se admiten tanto formatos JPG como PNG.
+Para mejores resultados en pantallas de papel electrónico, usa imágenes de alto contraste con áreas claras en blanco y negro. Los formatos JPG y PNG son compatibles.
 :::
 
-#### Configurando ESPHome para Visualización de Imágenes
+#### Configurar ESPHome para Mostrar Imágenes
 
 Paso 5. Agrega el siguiente código a tu archivo de configuración de ESPHome después de la sección `captive_portal`. Este código define el recurso de imagen y configura la pantalla para mostrarlo.
 
 <Tabs>
-<TabItem value="1.54 Inch" label="1.54 Inch" default>
+<TabItem value="1.54 Inch" label="1.54 Pulgadas" default>
 
 ```yaml
 image:
@@ -1544,7 +1544,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Inch">
+<TabItem value="2.13 Inch" label="2.13 Pulgadas">
 
 ```yaml
 image:
@@ -1577,7 +1577,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Inch">
+<TabItem value="2.9 Inch" label="2.9 Pulgadas">
 
 ```yaml
 image:
@@ -1611,7 +1611,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Inch">
+<TabItem value="4.2 Inch" label="4.2 Pulgadas">
 
 ```yaml
 image:
@@ -1644,7 +1644,7 @@ display:
 
 </TabItem>
 
-<TabItem value="5.83 Inch" label="5.83 Inch">
+<TabItem value="5.83 Inch" label="5.83 Pulgadas">
 
 ```yaml
 image:
@@ -1676,7 +1676,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="7.5 Inch" label="7.5 Inch" default>
+<TabItem value="7.5 Inch" label="7.5 Pulgadas" default>
 
 ```yaml
 image:
@@ -1711,7 +1711,7 @@ display:
 </Tabs>
 
 <Tabs>
-<TabItem value="7.3 Inch" label="7.3 Inch" default>
+<TabItem value="7.3 Inch" label="7.3 Pulgadas" default>
 
 :::tip
 La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o posterior, ya que el soporte para esta pantalla se agregó en esa versión. La guía de uso detallada se actualizará en el Wiki pronto.
@@ -1720,7 +1720,7 @@ La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o post
 </TabItem>
 </Tabs>
 
-Paso 6. Guarda tu configuración y súbela a tu pantalla EE04 ePaper. Cuando se complete la actualización, tu pantalla de papel electrónico mostrará la imagen.
+Paso 6. Guarda tu configuración y súbela a tu Pantalla ePaper EE04. Cuando se complete la actualización, tu pantalla de papel electrónico mostrará la imagen.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome2.jpg" style={{width:500, height:'auto'}}/></div><br />
 
