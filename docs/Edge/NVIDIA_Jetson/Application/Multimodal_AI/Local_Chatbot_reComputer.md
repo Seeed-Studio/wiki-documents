@@ -1,13 +1,14 @@
 ---
 description: A fully local, voice-interactive AI assistant that combines Speech-to-Text (STT), Text-to-Speech (TTS), and local Large Language Models (LLMs) using Ollama and NVIDIA Riva.It runs entirely on edge devices like NVIDIA Jetson — enabling private, real-time, and natural voice conversations without relying on the cloud.
-title: Chatbot on Jetson 
+title: Chatbot on Jetson
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /local_chatbot_recomputer
 last_update:
-  date: 08/29/2024
+  date: 01/29/2025
   author: kourosh
 ---
 
-# 🗣️ Building a Voice-Interactive Chatbot with Local LLMs, STT, and TTS
+# Building a Voice-Interactive Chatbot with Local LLMs, STT, and TTS
 
 This project brings the dream of a **fully voice-interactive AI assistant** to life — running entirely **on local hardware**, without reliance on cloud services.  
 By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Large Language Models (LLMs)** using **Ollama**, the system enables natural, private, and real-time conversations between humans and machines.
@@ -16,9 +17,10 @@ The entire setup runs inside Docker containers and can be deployed on **NVIDIA J
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 
 The goal of this project is to create a **voice-driven chatbot** capable of:
+
 - Listening to your voice in real time.
 - Understanding your speech using local **ASR (Automatic Speech Recognition)**.
 - Generating intelligent responses using a **local LLM**.
@@ -28,39 +30,47 @@ All components are self-contained and run locally, giving you full control over 
 
 ---
 
-## 🔧 System Components
+## System Components
 
-### 1. 🧠 Speech-to-Text (STT) Module
+### 1. Speech-to-Text (STT) Module
+
 Transforms your spoken input into text in real time.  
 Key features:
+
 - Fast, accurate transcription using **NVIDIA Riva ASR**.  
 - Support for multiple languages.  
 - Optimized for edge devices.
 
-### 2. 🔊 Text-to-Speech (TTS) Module
+### 2. Text-to-Speech (TTS) Module
+
 Converts chatbot responses into natural-sounding voice output.  
 Highlights:
+
 - Multilingual, expressive, and realistic speech synthesis.  
 - Powered by **NVIDIA Riva TTS**.  
 - Low latency — perfect for interactive conversations.
 
-### 3. 🤖 Local LLM (Ollama)
+### 3. Local LLM (Ollama)
+
 At the heart of the chatbot is **Ollama**, a local inference engine for running modern LLMs efficiently.  
 Features:
+
 - Offline operation (no internet needed).  
 - Real-time responses even on Jetson devices.  
 - Context retention for smooth, coherent dialogue.  
 - Supports various models including Llama, Phi, Gemma, Mistral, and more.
 
-### 4. 🧩 User Interaction Layer
+### 4. User Interaction Layer
+
 A simple, intuitive interface allows users to:
+
 - Start or stop voice interaction via buttons or commands.  
 - See live transcriptions and chatbot responses.  
 - Enjoy smooth, low-latency communication from voice to voice.
 
 ---
 
-## 🐳 Setting Up Ollama Locally
+## Setting Up Ollama Locally
 
 We’ll start by installing [Jetson Containers](https://github.com/dusty-nv/jetson-containers) to easily manage and deploy our services inside Docker.
 
@@ -101,27 +111,30 @@ python3 ollama_run.py
 **Examples:**
 
 Terminal usage  
-<img src="docs/Contribution/Contributor_Files/terminal_ollama.gif" width="700"/>
+<img src="https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/local_voice_chatbot/terminal_ollama.gif" width="700"/>
 
 Python integration  
-<img src="docs/Contribution/Contributor_Files/ollama_python.gif" width="700"/>
+<img src="https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/local_voice_chatbot/ollama_python.gif" width="700"/>
 
 ---
 
-## 🧠 NVIDIA Riva: STT and TTS
+## NVIDIA Riva: STT and TTS
 
 To enable real voice interaction, we use **NVIDIA Riva**, a GPU-accelerated toolkit that provides:
+
 - **Automatic Speech Recognition (ASR)**  
 - **Text-to-Speech (TTS)**  
 - **Neural Machine Translation (NMT)** (optional)
 
 It can be deployed anywhere — from the cloud to embedded devices like the **Jetson series**.
 
-### 🧩 Step 1: Get Your NGC API Key
+### Step 1: Get Your NGC API Key
+
 1. Log in to [NVIDIA NGC](https://catalog.ngc.nvidia.com/).
 2. Create an **API key** and save it locally — you’ll need it to access Riva resources.
 
-### ⚙️ Step 2: Configure NGC on Jetson
+### Step 2: Configure NGC on Jetson
+
 ```bash
 cd ~ && mkdir ngc_setup && cd ngc_setup
 wget --content-disposition https://api.ngc.nvidia.com/v2/resources/nvidia/ngc-apps/ngc_cli/versions/3.36.0/files/ngccli_arm64.zip
@@ -130,9 +143,11 @@ chmod u+x ngc-cli/ngc
 echo "export PATH=\"$PATH:$(pwd)/ngc-cli\"" >> ~/.bash_profile && source ~/.bash_profile
 ngc config set
 ```
+
 Use your API key when prompted.
 
-### 🐳 Step 3: Install Riva on Jetson
+### Step 3: Install Riva on Jetson
+
 Ensure you’re running **JetPack 6.0** (or check compatibility in the [Support Matrix](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/support-matrix.html)).
 
 ```bash
@@ -142,6 +157,7 @@ cd riva_quickstart_v2.13.1
 ```
 
 In `config.sh`, disable unused services to save resources:
+
 ```bash
 service_enabled_nlp=false
 service_enabled_nmt=false
@@ -162,11 +178,13 @@ Then configure Docker to use the NVIDIA runtime by editing `/etc/docker/daemon.j
 ```
 
 Restart Docker:
+
 ```bash
 sudo systemctl restart docker
 ```
 
 Finally, initialize and start Riva:
+
 ```bash
 sudo bash riva_init.sh
 sudo bash riva_start.sh
@@ -174,7 +192,7 @@ sudo bash riva_start.sh
 
 ---
 
-## 💬 Running the Chatbot
+## Running the Chatbot
 
 Once everything is ready, run the main application:
 
@@ -188,7 +206,7 @@ You can now **speak to your assistant**, and it will **listen, think, and talk b
 
 ---
 
-## 🎯 Key Advantages
+## Key Advantages
 
 - 🔒 100% private – no data leaves your device  
 - ⚡ Real-time response – optimized for low latency  
@@ -198,19 +216,12 @@ You can now **speak to your assistant**, and it will **listen, think, and talk b
 
 ---
 
-## 🧭 Future Improvements
+## Future Improvements
 
 - Integration with **vision modules** for multimodal interaction  
 - Support for **custom voice cloning** in TTS  
 - **Memory persistence** across sessions for more natural dialogue  
-- Web or mobile interface  
-
----
-
-## 🤝 Contributing
-
-Contributions, bug reports, and ideas are always welcome!  
-If you’re passionate about **AI at the edge**, **local LLMs**, or **voice assistants**, feel free to fork this repo and experiment.
+- Web or mobile interface
 
 ---
 
@@ -221,7 +232,22 @@ Now sit back, talk to your robot, and have fun exploring the future of human-AI 
 
 > “HAVE A GOOD CONVERSATION WITH ROBOTS :)”
 
+---
 
+## References
+
+1. [Local RAG based on Jetson with LlamaIndex](https://wiki.seeedstudio.com/Local_RAG_based_on_Jetson_with_LlamaIndex/)
+2. [Local Voice Chatbot: Deploy Riva and Llama2 on reComputer](https://wiki.seeedstudio.com/Local_Voice_Chatbot/)
+3. [ChatTTS](https://github.com/2noise/ChatTTS)
+4. [Speech to Text (STT) and Text to Speech (TTS)](https://www.librechat.ai/docs/configuration/stt_tts)
+5. [Ollama](https://github.com/ollama/ollama)
+
+---
+
+## ✨ Contributor Project
+
+- This project is supported by the Seeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479).
+- A special thanks to [kourosh karimi](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=Building+a+Voice-Interactive+Chatbot+with+STT%2C+TTS%2C+and+Local+LLMs%21&pane=issue&itemId=74620249&issue=Seeed-Studio%7Cwiki-documents%7C1553) for his dedicated efforts. Your work will be [exhibited](https://wiki.seeedstudio.com/contributors/).
 
 ## Tech Support & Product Discussion
 
@@ -236,11 +262,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-## References
-
-1. [Local RAG based on Jetson with LlamaIndex](https://wiki.seeedstudio.com/Local_RAG_based_on_Jetson_with_LlamaIndex/)
-2. [Local Voice Chatbot: Deploy Riva and Llama2 on reComputer](https://wiki.seeedstudio.com/Local_Voice_Chatbot/)
-3. [ChatTTS](https://github.com/2noise/ChatTTS)
-4. [Speech to Text (STT) and Text to Speech (TTS)](https://www.librechat.ai/docs/configuration/stt_tts)
-5. [Ollama](https://github.com/ollama/ollama)
