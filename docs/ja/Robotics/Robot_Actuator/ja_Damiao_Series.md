@@ -13,9 +13,9 @@ last_update:
   author: ZhuYaoHui
 ---
 
-# Damiao 43シリーズモーター入門
+# Damiao 43シリーズモーター入門ガイド
 
-この記事では、Damiao 43シリーズモーターの使い方と、reComputer Mini Jetson OrinでC++とPythonを使用する方法を紹介します。
+この記事では、Damiao 43シリーズモーターの使い始め方と、reComputer Mini Jetson OrinでC++とPythonを使用する方法を紹介します。
 
 <div align="center">
     <img width={400}
@@ -30,42 +30,42 @@ last_update:
 
 以下は、すべてのモーターモデルのパラメータを記載した完成版の表です：
 
- Motor Model | Rated Torque (Nm) | Peak Torque (Nm) | No-load Speed (rpm) | Rated Speed (rpm) | Reduction Ratio | Size Diameter*Height (mm) | Weight (g) | Supply Voltage (V) | Recommended Voltage Range (V) | Rated Phase Current (A) | Peak Phase Current (A) | Rated Power (W) | Pole Pairs | Communication Method | Encoder Type | Installation | Phase Resistance (Ω) | Phase Inductance (uH) | Flux Linkage (Wb) | Rotational Inertia (Kg*m²) | Torque Constant (Nm/A) | Drive Max Current (A) | Speed Loop KP | Default PMAX (rad) | Default VMAX (rad/s) | Default TMAX (Nm) | Speed Constant |
+ モーターモデル | 定格トルク (Nm) | ピークトルク (Nm) | 無負荷速度 (rpm) | 定格速度 (rpm) | 減速比 | サイズ 直径*高さ (mm) | 重量 (g) | 供給電圧 (V) | 推奨電圧範囲 (V) | 定格相電流 (A) | ピーク相電流 (A) | 定格電力 (W) | 極対数 | 通信方式 | エンコーダタイプ | 設置 | 相抵抗 (Ω) | 相インダクタンス (uH) | 磁束鎖交 (Wb) | 回転慣性 (Kg*m²) | トルク定数 (Nm/A) | ドライブ最大電流 (A) | 速度ループKP | デフォルトPMAX (rad) | デフォルトVMAX (rad/s) | デフォルトTMAX (Nm) | 速度定数 |
 ------------|------------------|-----------------|---------------------|------------------|----------------|--------------------------|-----------|-------------------|-----------------------------|------------------------|----------------------|----------------|-----------|---------------------|-------------|-------------|----------------------|---------------------|------------------|--------------------------|----------------------|---------------------|--------------|------------------|------------------|----------------|---------------|
-J4310-2EC V1.1 | 3 | 7 | 200 | 120 | 10 | 57 * 46 | ~300 | 24 | 15-32 | 3.7 | 7.2 | 37.699112 | 14 | CAN, CANFD | Magnetic, Dual | Built-in | 0.85 | 345 | 0.0045 | 1.80E-05 | 0.945 | 10.261194 | 3.72E-04 | 12.5 | 30 | 10 | 87.512523 |
-J4310-2EC V1.1(48V) | 3 | 7 | 400 | 120 | 10 | 57 * 46 | ~300 | 48 | 15-52 | 3.7 | 7.2 | 37.699112 | 14 | CAN, CANFD | Magnetic, Dual | Built-in | 0.85 | 345 | 0.0045 | 1.80E-05 | 0.945 | 10.261194 | 3.72E-04 | 12.5 | 30 | 10 | 87.512523 |
-J4340-2EC | 9 | 27 | 52.5 | 36 | 40 | 57 * 53.3 | ~362 | 24 | 15-32 | 3 | 8 | 33.929201 | 14 | CAN, CANFD | Magnetic, Dual | Built-in | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
-J4340-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 53.3 | ~362 | 48 | 15-52 | 2.5 | 9 | 33.929201 | 14 | CAN, CANFD | Magnetic, Dual | Built-in | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
-J4340P-2EC | 9 | 27 | 52.5 | 36 | 40 | 57 * 56.5 | ~375 | 24 | 15-32 | 3 | 8 | 33.929201 | 14 | CAN, CANFD | Magnetic, Dual | Built-in | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
-J4340P-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 56.5 | ~375 | 48 | 15-52 | 2.5 | 9 | 33.929201 | 14 | CAN, CANFD | Magnetic, Dual | Built-in | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
+J4310-2EC V1.1 | 3 | 7 | 200 | 120 | 10 | 57 * 46 | ~300 | 24 | 15-32 | 3.7 | 7.2 | 37.699112 | 14 | CAN, CANFD | 磁気、デュアル | 内蔵 | 0.85 | 345 | 0.0045 | 1.80E-05 | 0.945 | 10.261194 | 3.72E-04 | 12.5 | 30 | 10 | 87.512523 |
+J4310-2EC V1.1(48V) | 3 | 7 | 400 | 120 | 10 | 57 * 46 | ~300 | 48 | 15-52 | 3.7 | 7.2 | 37.699112 | 14 | CAN, CANFD | 磁気、デュアル | 内蔵 | 0.85 | 345 | 0.0045 | 1.80E-05 | 0.945 | 10.261194 | 3.72E-04 | 12.5 | 30 | 10 | 87.512523 |
+J4340-2EC | 9 | 27 | 52.5 | 36 | 40 | 57 * 53.3 | ~362 | 24 | 15-32 | 3 | 8 | 33.929201 | 14 | CAN, CANFD | 磁気、デュアル | 内蔵 | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
+J4340-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 53.3 | ~362 | 48 | 15-52 | 2.5 | 9 | 33.929201 | 14 | CAN, CANFD | 磁気、デュアル | 内蔵 | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
+J4340P-2EC | 9 | 27 | 52.5 | 36 | 40 | 57 * 56.5 | ~375 | 24 | 15-32 | 3 | 8 | 33.929201 | 14 | CAN, CANFD | 磁気、デュアル | 内蔵 | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
+J4340P-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 56.5 | ~375 | 48 | 15-52 | 2.5 | 9 | 33.929201 | 14 | CAN, CANFD | 磁気、デュアル | 内蔵 | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
 
 ## 主な特徴
 
 1. **CAN BUS & CANFD**
-2. **デュアルエンコーダー**
+2. **デュアルエンコーダ**
 3. **高トルク密度**
 4. **高精度**
 5. **中空設計**
 
-## 入門
+## 入門ガイド
 
 ### 使用前の環境準備
 
 **PCのWindowsシステム**
 
-- [Damiaoデバッグツール](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/Debugging_Tools_v.1.6.8.8.exe)をダウンロードしてください。
-- [USB2CANツール](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/USB2CAN_2.0.0.3.exe)をダウンロードしてください。
+- [Damiaoデバッグツール](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/Debugging_Tools_v.1.6.8.8.exe)をダウンロードします。
+- [USB2CANツール](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/USB2CAN_2.0.0.3.exe)をダウンロードします
 
 ### 回路をPCに接続
 
-CAN通信方式を使用するため、WindowsのホストコンピューターでデバッグするためにUSB-CANインターフェースが追加で必要です。
+CAN通信方式を使用するため、WindowsのホストコンピュータでデバッグするためにUSB-CANインターフェースが追加で必要です。
 
 <div align="center">
     <img width={500}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/circcuit.jpg" />
 </div>
 
-ここでは、モーター用に別途24V電源を提供し、USBをコンピューターに接続する必要があります。
+ここでは、モーター用に別途24V電源を提供し、USBをコンピュータに接続する必要があります。
 
 ### `Debugging_Tools_v.1.6.8.8.exe`を使用してモーターをテスト
 
@@ -74,7 +74,7 @@ CAN通信方式を使用するため、Windowsのホストコンピューター�
 | **シリアルポート接続パラメータの設定** | **モーターに接続** | **パラメータ読み取り** | **CAN ID設定** |**パラメータ書き込み** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/1.png) | ![fig2](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/2.png) | ![fig3](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/3.png) | ![fig4](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/4.png) |![fig5](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/5.png) |
-| シリアルポートには、コンピューターが自動認識したポートを使用し、その他の設定はすべてデフォルトのままにします。 | 「ポートを開く」ボタンをクリックすると、ホストコンピューターに自動的に接続されます。初回接続の場合、ダイアログボックスにモーター情報が印刷されます。|「パラメータ設定」セクションで「パラメータ読み取り」をクリックすると、モーターの現在の詳細情報と動作モードが表示されます。|ここで、まずCAN IDを設定してください。 |設定後、「パラメータ書き込み」をクリックしてパラメータを更新します。 |
+| シリアルポートには、コンピュータが自動認識したポートを使用し、その他の設定はすべてデフォルトのままにします。 | "Open Port"ボタンをクリックすると、ホストコンピュータに自動接続されます。初回接続の場合、ダイアログボックスにモーター情報が表示されます|"Set Parameters"セクションで"Read Param"をクリックすると、モーターの現在の詳細情報と動作モードが表示されます。|ここで、まずCAN IDを設定してください。 |設定後、"Write Param"をクリックしてパラメータを更新します。 |
 
 :::tip
 
@@ -82,7 +82,7 @@ CAN通信方式を使用するため、Windowsのホストコンピューター�
 
 **​Master ID**: ドライブがフィードバックを送信するために使用するフレームID（16進数）。
 
-​Master IDはホストIDです。各モーターに​固有のMaster IDを設定することをお勧めします。
+​Master IDはホストIDです。各モーターに固有のMaster IDを設定することをお勧めします。
 
 良い慣行は、​Master IDを​CAN_IDより​0x10高く設定することです（例：CAN_ID = 0x01の場合、Master ID = 0x11）。
 
@@ -102,7 +102,7 @@ CAN通信方式を使用するため、Windowsのホストコンピューター�
 - **OV**: 上限電圧を設定します。ドライブは起動時に供給電圧をチェックし、超過した場合は動作を無効にします（起動時に一度だけチェック）。  
 - **Acc/Dec**: **非MITモード**で速度変化の割合を制限するために使用されます。  
 - **GR(Gear Ratio)**: 出力速度/位置に影響し、間接的にトルクフィードバックに影響します。浮動小数点値をサポートします。  
-- **OT**: コイル温度しきい値（**100°C**以下を推奨）。これを超えると故障モードがトリガーされます（モーターを無効にしてエラーを報告）。  
+- **OT**: コイル温度しきい値（推奨≤**100°C**）。これを超えると故障モードがトリガーされます（モーターを無効にしてエラーを報告）。  
 - **CAN_ID**: CANコマンドを受信するためのフレームID（16進数）。  
 - **Master ID**: ドライブフィードバック用のフレームID（16進数）。ベストプラクティス：`MasterID = CAN_ID + 0x10`に設定（例：`0x01` → `0x11`）。**`0x00`に設定しないでください。**  
 - **CAN Timeout**: タイムアウト期間を定義する32ビット整数（単位：50µsサイクル）。この間隔内にCANコマンドが検出されない場合、モーターは保護モードに入ります。  
@@ -115,9 +115,9 @@ CAN通信方式を使用するため、Windowsのホストコンピューター�
 
 #### **(3) コマンドスケーリング（振幅設定）**  
 
-- **PMAX**: **MITモード**ではコマンド入力をスケール、その他のモードではフィードバック出力をスケールします。マッピングルールについてはCANプロトコルを参照してください。  
-- **VMAX**: PMAXと同じ。  
-- **TMAX**: PMAXと同じ。  
+- **PMAX**: **MITモード**では、コマンド入力をスケーリングします；他のモードでは、フィードバック出力をスケーリングします。マッピングルールについてはCANプロトコルを参照してください。  
+- **VMAX**: PMAXと同じです。  
+- **TMAX**: PMAXと同じです。  
 - **KT_OUT**: モータートルク定数。モーターパラメータが正確に識別されている場合は**0**に設定します。  
 - **Gear Ratio Coefficient**: ギアのトルク伝達比。  
 
@@ -136,20 +136,20 @@ CAN通信方式を使用するため、Windowsのホストコンピューター�
 
 **1. MITトルク制御モード:**
 
-1. パラメータ設定セクションで、​パラメータ読み取りをクリックして現在のモーターパラメータを表示します。
-2. ​制御モードをMITモードに設定します。
+1. Set Parametersセクションで、​Read Paramをクリックして現在のモーターパラメータを表示します。
+2. ​Control ModeをMIT Modeに設定します。
 3. 設定された​CAN IDを確認します。
-4. ​パラメータ書き込みをクリックしてすべての設定を保存します。
+4. ​Write Paramをクリックしてすべての設定を保存します。
 
 <div align="center">
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/7.png" />
 </div>
 
-5. ​テストタブで、​**「モーター有効」**ボタン（Ente）をクリックします。
-6. ​MIT制御セクションで：
-    - ​トルク（Nm）を​1に設定します。
-    - ​更新 → ​送信をクリックします。
+5. ​Testタブで、​**"Enable Motor"**ボタン（Ente）をクリックします。
+6. ​MIT Controlセクションで:
+    - ​Torque (Nm)を​1に設定します。
+    - ​Update → ​Sendをクリックします。
 
 モーターが回転を開始します。
 
@@ -167,11 +167,11 @@ CANデータ（16進数形式）をコピーして、シリアルポートデバ
 
 **2. MIT速度制御モード:**
 
-1. ​テストタブで、​**「モーター有効」**ボタン（Ente）をクリックします。
-2. ​MIT制御セクションで：
-    - Vel（rad/s）を​5に設定します。
-    - KD（N*s/r）を​1に設定します。
-    - ​更新 → ​送信をクリックします。
+1. ​Testタブで、​**"Enable Motor"**ボタン（Ente）をクリックします。
+2. ​MIT Controlセクションで:
+    - Vel (rad/s)を​5に設定します。
+    - KD (N*s/r)を​1に設定します。
+    - ​Update → ​Sendをクリックします。
 
 <div align="center">
     <img width={800}
@@ -182,37 +182,37 @@ CANデータ（16進数形式）をコピーして、シリアルポートデバ
 
 **3. MIT位置制御モード:**
 
-1. ​テストタブで、​**「モーター有効」**ボタン（Ente）をクリックします。
-2. ​**「SaveZero」**を使用して現在の位置をゼロ点として設定できます。
-3. ​MIT制御セクションで：
-    - Pos（rad）を3.14に設定します。
-    - KP（N/r）を​2に設定します。
-    - KD（N*s/r）を​1に設定します。
-    - ​更新 → ​送信をクリックします。
+1. ​Testタブで、​**"Enable Motor"**ボタン（Ente）をクリックします。
+2. ​**"SaveZero"**を使用して現在の位置をゼロ点として設定できます。
+3. ​MIT Controlセクションで:
+    - Pos (rad)を3.14に設定します。
+    - KP (N/r)を​2に設定します。
+    - KD (N*s/r)を​1に設定します。
+    - Update → Send をクリックします。
 
 <div align="center">
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/10.png" />
 </div>
 
-モーターが回転を開始します。CANデータ（16進数形式）をコピーして、シリアルポートデバッグツールを使用してモーターを駆動することもできます。
+モーターが回転を開始します。CAN データ（16進形式）をコピーして、シリアルポートデバッグツールを使用してモーターを駆動することもできます。
 
 ### 速度制御モード
 
-1. パラメータ設定セクションで、​Read Param をクリックして現在のモーターパラメータを表示します。
-2. ​Control Mode を Vel Mode に設定します。
-3. 設定された ​CAN ID を確認します。
-4. ​Write Param をクリックしてすべての設定を保存します。
+1. Set Parameters セクションで、Read Param をクリックして現在のモーターパラメータを表示します。
+2. Control Mode を Vel Mode に設定します。
+3. 設定された CAN ID を確認します。
+4. Write Param をクリックしてすべての設定を保存します。
 
 <div align="center">
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/11.png" />
 </div>
 
-5. ​Test タブで、​**"Enable Motor"** ボタン（Ente）をクリックします。
+5. Test タブで、**"Enable Motor"** ボタン（Ente）をクリックします。
 6. Vel Control セクションで：
     - Vel (rad/s) を 5 に設定します。
-    - ​Update → ​Send をクリックします。
+    - Update → Send をクリックします。
 
 <div align="center">
     <img width={800}
@@ -223,21 +223,21 @@ CANデータ（16進数形式）をコピーして、シリアルポートデバ
 
 ### 位置制御モード
 
-1. パラメータ設定セクションで、​Read Param をクリックして現在のモーターパラメータを表示します。
-2. ​Control Mode を Pos Mode に設定します。
-3. 設定された ​CAN ID を確認します。
-4. ​Write Param をクリックしてすべての設定を保存します。
+1. Set Parameters セクションで、Read Param をクリックして現在のモーターパラメータを表示します。
+2. Control Mode を Pos Mode に設定します。
+3. 設定された CAN ID を確認します。
+4. Write Param をクリックしてすべての設定を保存します。
 
 <div align="center">
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/13.png" />
 </div>
 
-5. ​Test タブで、​**"Enable Motor"** ボタン（Ente）をクリックします。
+5. Test タブで、**"Enable Motor"** ボタン（Ente）をクリックします。
 6. Pos Control セクションで：
     - Pos を 3.14 に設定します。
     - Vel (rad/s) を 5 に設定します。
-    - ​Update → ​Send をクリックします。
+    - Update → Send をクリックします。
 
 <div align="center">
     <img width={800}
@@ -246,7 +246,7 @@ CANデータ（16進数形式）をコピーして、シリアルポートデバ
 
 モーターが回転を開始します。CAN データ（16進形式）をコピーして、シリアルポートデバッグツールを使用してモーターを駆動することもできます。
 
-## [​reComputer Mini Jetson Orin](/ja/recomputer_jetson_mini_getting_started) を使用したモーター制御
+## [reComputer Mini Jetson Orin](/ja/recomputer_jetson_mini_getting_started) を使用したモーター制御
 
 現在、市場でモーター用の最も一般的な CAN 通信インターフェースは **XT30 (2+2)** と **JST コネクタ** を使用しています。私たちの **reComputer Mini Jetson Orin** と **reComputer Robotics** デバイスは **デュアル XT30 (2+2) ポート** と **JST ベースの CAN インターフェース** を搭載しており、シームレスな互換性を提供します。
 
@@ -264,7 +264,7 @@ CAN の使用に関する詳細については、この [wiki](https://wiki.seee
 
 ### CAN インターフェースの有効化
 
-**ステップ1:** CAN0 と CAN1 を使用する前に、底面カバーを取り外し、両方の 120Ω 終端抵抗を ​ON 位置に設定してください。
+**ステップ1:** CAN0 と CAN1 を使用する前に、底面カバーを取り外し、両方の 120Ω 終端抵抗を ON 位置に設定してください。
 
 <div align="center">
     <img width={300}
@@ -312,7 +312,7 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-### C++ の例
+### C++ サンプル
 
 #### インストールとコンパイル
 
@@ -941,15 +941,12 @@ class MotorControl:
         return frames
 
 
-def LIMIT_MIN_MAX(x, min, max):
-    if x <= min:
-        x = min
-    elif x > max:
-        x = max
+def LIMIT_MIN_MAX(x, min_val, max_val):
+    return max(min_val, min(x, max_val))
 
 
 def float_to_uint(x: float, x_min: float, x_max: float, bits):
-    LIMIT_MIN_MAX(x, x_min, x_max)
+    x = LIMIT_MIN_MAX(x, x_min, x_max)
     span = x_max - x_min
     data_norm = (x - x_min) / span
     return np.uint16(data_norm * ((1 << bits) - 1))
@@ -1231,13 +1228,14 @@ class DamiaoPort:
     def controlMIT(self, motor, kp, kd, q, dq, tau):
         self.control.controlMIT(self.motors[motor], kp, kd, q, dq, tau)
 
+
 ```
 
 </details>
 
-- **damiao_test.pyファイルを作成する**
+- **damiao_test.py ファイルを作成する**
 
-以下のコードをdamiao_test.pyにコピーしてください
+以下のコードを damiao_test.py にコピーしてください
 
 <details>
 
@@ -1313,7 +1311,7 @@ if __name__ == "__main__":
 
 </details>
 
-- **damiao_test.pyを実行する**
+- **damiao_test.py を実行する**
 
 ```bash
 python damiao_test.py
@@ -1327,7 +1325,7 @@ python damiao_test.py
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

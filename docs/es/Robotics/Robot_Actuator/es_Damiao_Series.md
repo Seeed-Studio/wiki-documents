@@ -1,6 +1,6 @@
 ---
 description: Este wiki proporciona un tutorial para los motores de la serie Damiao.
-title: Motores de la Serie Damiao
+title: Motores Serie Damiao
 keywords:
 - actuator
 - motor
@@ -13,7 +13,7 @@ last_update:
   author: ZhuYaoHui
 ---
 
-# Introducción a los Motores de la Serie Damiao 43
+# Introducción a los Motores Serie Damiao 43
 
 Este artículo presentará cómo comenzar con los motores de la serie Damiao 43 y cómo usarlos con C++ y Python en el reComputer Mini Jetson Orin.
 
@@ -23,26 +23,26 @@ Este artículo presentará cómo comenzar con los motores de la serie Damiao 43 
 </div>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Gripper-01-p-6561.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
 </a></div>
 
 ## Especificaciones
 
 Aquí está la tabla completa con todos los parámetros completados para todos los modelos de motor:
 
- Motor Model | Rated Torque (Nm) | Peak Torque (Nm) | No-load Speed (rpm) | Rated Speed (rpm) | Reduction Ratio | Size Diameter*Height (mm) | Weight (g) | Supply Voltage (V) | Recommended Voltage Range (V) | Rated Phase Current (A) | Peak Phase Current (A) | Rated Power (W) | Pole Pairs | Communication Method | Encoder Type | Installation | Phase Resistance (Ω) | Phase Inductance (uH) | Flux Linkage (Wb) | Rotational Inertia (Kg*m²) | Torque Constant (Nm/A) | Drive Max Current (A) | Speed Loop KP | Default PMAX (rad) | Default VMAX (rad/s) | Default TMAX (Nm) | Speed Constant |
+ Modelo de Motor | Torque Nominal (Nm) | Torque Pico (Nm) | Velocidad Sin Carga (rpm) | Velocidad Nominal (rpm) | Relación de Reducción | Tamaño Diámetro*Altura (mm) | Peso (g) | Voltaje de Alimentación (V) | Rango de Voltaje Recomendado (V) | Corriente de Fase Nominal (A) | Corriente de Fase Pico (A) | Potencia Nominal (W) | Pares de Polos | Método de Comunicación | Tipo de Encoder | Instalación | Resistencia de Fase (Ω) | Inductancia de Fase (uH) | Enlace de Flujo (Wb) | Inercia Rotacional (Kg*m²) | Constante de Torque (Nm/A) | Corriente Máxima del Driver (A) | KP del Bucle de Velocidad | PMAX por Defecto (rad) | VMAX por Defecto (rad/s) | TMAX por Defecto (Nm) | Constante de Velocidad |
 ------------|------------------|-----------------|---------------------|------------------|----------------|--------------------------|-----------|-------------------|-----------------------------|------------------------|----------------------|----------------|-----------|---------------------|-------------|-------------|----------------------|---------------------|------------------|--------------------------|----------------------|---------------------|--------------|------------------|------------------|----------------|---------------|
-J4310-2EC V1.1 | 3 | 7 | 200 | 120 | 10 | 57 * 46 | ~300 | 24 | 15-32 | 3.7 | 7.2 | 37.699112 | 14 | CAN, CANFD | Magnetic, Dual | Built-in | 0.85 | 345 | 0.0045 | 1.80E-05 | 0.945 | 10.261194 | 3.72E-04 | 12.5 | 30 | 10 | 87.512523 |
-J4310-2EC V1.1(48V) | 3 | 7 | 400 | 120 | 10 | 57 * 46 | ~300 | 48 | 15-52 | 3.7 | 7.2 | 37.699112 | 14 | CAN, CANFD | Magnetic, Dual | Built-in | 0.85 | 345 | 0.0045 | 1.80E-05 | 0.945 | 10.261194 | 3.72E-04 | 12.5 | 30 | 10 | 87.512523 |
-J4340-2EC | 9 | 27 | 52.5 | 36 | 40 | 57 * 53.3 | ~362 | 24 | 15-32 | 3 | 8 | 33.929201 | 14 | CAN, CANFD | Magnetic, Dual | Built-in | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
-J4340-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 53.3 | ~362 | 48 | 15-52 | 2.5 | 9 | 33.929201 | 14 | CAN, CANFD | Magnetic, Dual | Built-in | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
-J4340P-2EC | 9 | 27 | 52.5 | 36 | 40 | 57 * 56.5 | ~375 | 24 | 15-32 | 3 | 8 | 33.929201 | 14 | CAN, CANFD | Magnetic, Dual | Built-in | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
-J4340P-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 56.5 | ~375 | 48 | 15-52 | 2.5 | 9 | 33.929201 | 14 | CAN, CANFD | Magnetic, Dual | Built-in | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
+J4310-2EC V1.1 | 3 | 7 | 200 | 120 | 10 | 57 * 46 | ~300 | 24 | 15-32 | 3.7 | 7.2 | 37.699112 | 14 | CAN, CANFD | Magnético, Dual | Integrado | 0.85 | 345 | 0.0045 | 1.80E-05 | 0.945 | 10.261194 | 3.72E-04 | 12.5 | 30 | 10 | 87.512523 |
+J4310-2EC V1.1(48V) | 3 | 7 | 400 | 120 | 10 | 57 * 46 | ~300 | 48 | 15-52 | 3.7 | 7.2 | 37.699112 | 14 | CAN, CANFD | Magnético, Dual | Integrado | 0.85 | 345 | 0.0045 | 1.80E-05 | 0.945 | 10.261194 | 3.72E-04 | 12.5 | 30 | 10 | 87.512523 |
+J4340-2EC | 9 | 27 | 52.5 | 36 | 40 | 57 * 53.3 | ~362 | 24 | 15-32 | 3 | 8 | 33.929201 | 14 | CAN, CANFD | Magnético, Dual | Integrado | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
+J4340-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 53.3 | ~362 | 48 | 15-52 | 2.5 | 9 | 33.929201 | 14 | CAN, CANFD | Magnético, Dual | Integrado | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
+J4340P-2EC | 9 | 27 | 52.5 | 36 | 40 | 57 * 56.5 | ~375 | 24 | 15-32 | 3 | 8 | 33.929201 | 14 | CAN, CANFD | Magnético, Dual | Integrado | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
+J4340P-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 56.5 | ~375 | 48 | 15-52 | 2.5 | 9 | 33.929201 | 14 | CAN, CANFD | Magnético, Dual | Integrado | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
 
 ## Características Principales
 
 1. **CAN BUS & CANFD**
-2. **Codificador Dual**
+2. **Encoder Dual**
 3. **Alta Densidad de Torque**
 4. **Alta Precisión**
 5. **Diseño Hueco**
@@ -74,13 +74,13 @@ Puedes cambiar entre chino e inglés en la parte inferior de la aplicación.
 | **Configurar parámetros de conexión del puerto serie** | **conectar al motor** | **Leer Parámetros** | **Establecer CAN ID** |**Escribir Parámetros** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/1.png) | ![fig2](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/2.png) | ![fig3](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/3.png) | ![fig4](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/4.png) |![fig5](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/5.png) |
-| Para el Puerto Serie, usa el puerto reconocido automáticamente por la computadora, con todas las demás configuraciones como predeterminadas. | Después de hacer clic en el botón 'Abrir Puerto', se conectará automáticamente a la computadora host. Si esta es la primera conexión, la información del motor se imprimirá en el cuadro de diálogo|En la sección 'Establecer Parámetros', hacer clic en 'Leer Parámetros' mostrará la información detallada actual del motor y el modo de movimiento.|Aquí, por favor primero configura el CAN ID. |Después de la configuración, haz clic en 'Escribir Parámetros' para actualizar los parámetros. |
+| Para el Puerto Serie, usa el puerto reconocido automáticamente por la computadora, con todas las demás configuraciones por defecto. | Después de hacer clic en el botón 'Open Port', se conectará automáticamente a la computadora host. Si esta es la primera conexión, la información del motor se imprimirá en el cuadro de diálogo|En la sección 'Set Parameters', hacer clic en 'Read Param' mostrará la información detallada actual del motor y el modo de movimiento.|Aquí, por favor primero configura el CAN ID. |Después de la configuración, haz clic en 'Write Param' para actualizar los parámetros. |
 
 :::tip
 
-**​CAN_ID**: El ID de trama utilizado por el controlador para recibir comandos CAN (hexadecimal).
+**​CAN_ID**: El ID de trama utilizado por el driver para recibir comandos CAN (hexadecimal).
 
-**​Master ID**: El ID de trama utilizado por el controlador para enviar retroalimentación (hexadecimal).
+**​Master ID**: El ID de trama utilizado por el driver para enviar retroalimentación (hexadecimal).
 
 El ​Master ID es el ID del host. Se recomienda establecer ​Master IDs únicos para cada motor.
 
@@ -92,36 +92,36 @@ Una buena práctica es establecer el ​Master ID más alto que el ​CAN_ID por
 
 ​Motor 2: CAN_ID = 0x02, Master ID = 0x12
 
-​¡No establezca Master ID en 0x00!
+​¡No establezcan Master ID a 0x00!
 :::
 
 #### **(1) Parámetros Básicos**  
 
 - **NPP**: El número de pares de polos del motor, determinado automáticamente a través de calibración.  
-- **UV**: Si el voltaje de suministro cae por debajo del umbral (mínimo **15V**), el controlador dejará de funcionar.  
-- **OV**: Establece el límite superior de voltaje. El controlador verifica el voltaje de suministro al encenderse y deshabilita la operación si se excede (verificado solo una vez al inicio).  
+- **UV**: Si el voltaje de alimentación cae por debajo del umbral (mínimo **15V**), el driver dejará de operar.  
+- **OV**: Establece el límite superior de voltaje. El driver verifica el voltaje de alimentación al encenderse y deshabilita la operación si se excede (verificado solo una vez al inicio).  
 - **Acc/Dec**: Utilizado en **modos no-MIT** para limitar la tasa de cambio de velocidad.  
 - **GR(Gear Ratio)**: Afecta la velocidad/posición de salida e influye indirectamente en la retroalimentación de torque. Soporta valores de punto flotante.  
-- **OT**: Umbral de temperatura de la bobina (recomendado ≤ **100°C**). Exceder esto activa el modo de falla (deshabilita el motor e informa error).  
+- **OT**: Umbral de temperatura de la bobina (recomendado ≤ **100°C**). Exceder esto activa el modo de falla (deshabilita el motor y reporta error).  
 - **CAN_ID**: ID de trama para recibir comandos CAN (hexadecimal).  
-- **Master ID**: ID de trama para retroalimentación del controlador (hexadecimal). Mejor práctica: Establecer `MasterID = CAN_ID + 0x10` (por ejemplo, `0x01` → `0x11`). **Nunca establecer en `0x00`.**  
-- **CAN Timeout**: Entero de 32 bits que define el período de tiempo de espera (unidades: ciclos de 50µs). El motor entra en modo de protección si no se detectan comandos CAN dentro de este intervalo.  
+- **Master ID**: ID de trama para retroalimentación del driver (hexadecimal). Mejor práctica: Establecer `MasterID = CAN_ID + 0x10` (por ejemplo, `0x01` → `0x11`). **Nunca establecer a `0x00`.**  
+- **CAN Timeout**: Entero de 32 bits que define el período de timeout (unidades: ciclos de 50µs). El motor entra en modo de protección si no se detectan comandos CAN dentro de este intervalo.  
 - **Speed Limit** (*Solo modo de velocidad*): Velocidad máxima antes de la desaceleración (unidades: **rad/s**).  
 - **Overcurrent**: Límite máximo de corriente de fase (porcentaje).  
 
 #### **(2) Parámetros del Motor**  
 
-- Identificados automáticamente por el controlador. **Recalibración requerida al reemplazar la placa del controlador**. Almacenados persistentemente en el controlador.  
+- Identificados automáticamente por el driver. **Se requiere recalibración al reemplazar la placa del driver**. Almacenados persistentemente en el driver.  
 
 #### **(3) Escalado de Comandos (Configuraciones de Amplitud)**  
 
-- **PMAX**: En **modo MIT**, escala la entrada de comando; en otros modos, escala la salida de retroalimentación. Consulte el protocolo CAN para las reglas de mapeo.  
+- **PMAX**: En **modo MIT**, escala la entrada de comando; en otros modos, escala la salida de retroalimentación. Consulta el protocolo CAN para las reglas de mapeo.  
 - **VMAX**: Igual que PMAX.  
 - **TMAX**: Igual que PMAX.  
-- **KT_OUT**: Constante de torque del motor. Establecer en **0** si los parámetros del motor están identificados con precisión.  
+- **KT_OUT**: Constante de torque del motor. Establecer a **0** si los parámetros del motor están identificados con precisión.  
 - **Gear Ratio Coefficient**: Relación de transmisión de torque para engranajes.  
 
-> **Nota**: El controlador utiliza el **formato de protocolo de comunicación MIT**.  
+> **Nota**: El driver utiliza el **formato de protocolo de comunicación MIT**.  
 
 #### **(4) Configuraciones de Control**  
 
@@ -129,27 +129,27 @@ Una buena práctica es establecer el ​Master ID más alto que el ​CAN_ID por
   - **Modo MIT**  
   - **Modo Posición-Velocidad** (aceleración/desaceleración trapezoidal)  
   - **Modo Velocidad**  
-- **Current Bandwidth**: Ganancia del bucle de corriente (predeterminado: `1000`).  
+- **Current Bandwidth**: Ganancia del bucle de corriente (por defecto: `1000`).  
 - **Speed KP/KI, Position KP/KI**: Parámetros PID para bucles de velocidad y posición.  
 
 ### Modo de Control MIT
 
 **1. Modo de Control de Torque MIT:**
 
-1. En la sección Establecer Parámetros, haz clic en ​Leer Parámetros para mostrar los parámetros actuales del motor.
-2. Establece el ​Modo de Control en Modo MIT.
+1. En la sección Set Parameters, haz clic en ​Read Param para mostrar los parámetros actuales del motor.
+2. Establece el ​Control Mode a MIT Mode.
 3. Verifica el ​CAN ID configurado.
-4. Haz clic en ​Escribir Parámetros para guardar todas las configuraciones.
+4. Haz clic en ​Write Param para guardar todas las configuraciones.
 
 <div align="center">
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/7.png" />
 </div>
 
-5. En la pestaña ​Prueba, haz clic en el botón ​**"Habilitar Motor"** (Ente).
-6. En la sección ​Control MIT:
-    - Establece ​Torque (Nm) en ​1.
-    - Haz clic en ​Actualizar → ​Enviar.
+5. En la pestaña ​Test, haz clic en el botón ​**"Enable Motor"** (Ente).
+6. En la sección ​MIT Control:
+    - Establece ​Torque (Nm) a ​1.
+    - Haz clic en ​Update → ​Send.
 
 El motor comenzará a girar.
 
@@ -167,11 +167,11 @@ También puedes copiar los datos CAN (en formato hexadecimal) y usar una herrami
 
 **2. Modo de Control de Velocidad MIT:**
 
-1. En la pestaña ​Prueba, haz clic en el botón ​**"Habilitar Motor"** (Ente).
-2. En la sección ​Control MIT:
-    - Establece Vel (rad/s) en ​5.
-    - Establece KD (N*s/r) en ​1.
-    - Haz clic en ​Actualizar → ​Enviar.
+1. En la pestaña ​Test, haz clic en el botón ​**"Enable Motor"** (Ente).
+2. En la sección ​MIT Control:
+    - Establece Vel (rad/s) a ​5.
+    - Establece KD (N*s/r) a ​1.
+    - Haz clic en ​Update → ​Send.
 
 <div align="center">
     <img width={800}
@@ -182,13 +182,13 @@ El motor comenzará a girar. También puedes copiar los datos CAN (en formato he
 
 **3. Modo de Control de Posición MIT:**
 
-1. En la pestaña ​Prueba, haz clic en el botón ​**"Habilitar Motor"** (Ente).
+1. En la pestaña ​Test, haz clic en el botón ​**"Enable Motor"** (Ente).
 2. Puedes usar ​**"SaveZero"** para establecer la posición actual como el punto cero.
-3. En la sección ​Control MIT:
-    - Establece Pos (rad) en 3.14.
-    - Establece KP (N/r) en ​2.
-    - Establece KD (N*s/r) en ​1.
-    - Haz clic en ​Actualizar → ​Enviar.
+3. En la sección ​MIT Control:
+    - Establece Pos (rad) a 3.14.
+    - Establece KP (N/r) a ​2.
+    - Establece KD (N*s/r) a ​1.
+    - Haz clic en ​Update → ​Send.
 
 <div align="center">
     <img width={800}
@@ -199,56 +199,56 @@ El motor comenzará a girar. También puedes copiar los datos CAN (en formato he
 
 ### Modo de Control de Velocidad
 
-1. En la sección Establecer Parámetros, haga clic en ​Leer Param para mostrar los parámetros actuales del motor.
-2. Establezca el ​Modo de Control en Modo Vel.
-3. Verifique el ​ID CAN configurado.
-4. Haga clic en ​Escribir Param para guardar todas las configuraciones.
+1. En la sección Set Parameters, haz clic en ​Read Param para mostrar los parámetros actuales del motor.
+2. Establece el ​Control Mode en Vel Mode.
+3. Verifica el ​CAN ID configurado.
+4. Haz clic en ​Write Param para guardar todas las configuraciones.
 
 <div align="center">
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/11.png" />
 </div>
 
-5. En la pestaña ​Prueba, haga clic en el botón ​**"Habilitar Motor"** (Ente).
-6. En la sección Control Vel:
-    - Establezca Vel (rad/s) en 5.
-    - Haga clic en ​Actualizar → ​Enviar.
+5. En la pestaña ​Test, haz clic en el botón ​**"Enable Motor"** (Ente).
+6. En la sección Vel Control:
+    - Establece Vel (rad/s) en 5.
+    - Haz clic en ​Update → ​Send.
 
 <div align="center">
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/12.png" />
 </div>
 
-El motor comenzará a girar. También puede copiar los datos CAN (en formato hexadecimal) y usar una herramienta de depuración de puerto serie para controlar el motor.
+El motor comenzará a girar. También puedes copiar los datos CAN (en formato hexadecimal) y usar una herramienta de depuración de puerto serie para controlar el motor.
 
 ### Modo de Control de Posición
 
-1. En la sección Establecer Parámetros, haga clic en ​Leer Param para mostrar los parámetros actuales del motor.
-2. Establezca el ​Modo de Control en Modo Pos.
-3. Verifique el ​ID CAN configurado.
-4. Haga clic en ​Escribir Param para guardar todas las configuraciones.
+1. En la sección Set Parameters, haz clic en ​Read Param para mostrar los parámetros actuales del motor.
+2. Establece el ​Control Mode en Pos Mode.
+3. Verifica el ​CAN ID configurado.
+4. Haz clic en ​Write Param para guardar todas las configuraciones.
 
 <div align="center">
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/13.png" />
 </div>
 
-5. En la pestaña ​Prueba, haga clic en el botón ​**"Habilitar Motor"** (Ente).
-6. En la sección Control Pos:
-    - Establezca Pos en 3.14.
-    - Establezca Vel (rad/s) en 5.
-    - Haga clic en ​Actualizar → ​Enviar.
+5. En la pestaña ​Test, haz clic en el botón ​**"Enable Motor"** (Ente).
+6. En la sección Pos Control:
+    - Establece Pos en 3.14.
+    - Establece Vel (rad/s) en 5.
+    - Haz clic en ​Update → ​Send.
 
 <div align="center">
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/14.png" />
 </div>
 
-El motor comenzará a girar. También puede copiar los datos CAN (en formato hexadecimal) y usar una herramienta de depuración de puerto serie para controlar el motor.
+El motor comenzará a girar. También puedes copiar los datos CAN (en formato hexadecimal) y usar una herramienta de depuración de puerto serie para controlar el motor.
 
 ## Controlar el Motor Usando el [​reComputer Mini Jetson Orin](/es/recomputer_jetson_mini_getting_started)
 
-Actualmente, las interfaces de comunicación CAN más comunes para motores en el mercado utilizan **XT30 (2+2)** y **conectores JST**. Nuestro **reComputer Mini Jetson Orin** y el dispositivo **reComputer Robotics** están equipados con **puertos duales XT30 (2+2)** e **interfaces CAN basadas en JST**, proporcionando compatibilidad perfecta.  
+Actualmente, las interfaces de comunicación CAN más comunes para motores en el mercado utilizan conectores **XT30 (2+2)** y **JST**. Nuestro dispositivo **reComputer Mini Jetson Orin** y **reComputer Robotics** está equipado con **puertos duales XT30 (2+2)** e **interfaces CAN basadas en JST**, proporcionando compatibilidad perfecta.  
 
 **reComputer Mini:**
 <div align="center">
@@ -260,21 +260,21 @@ Actualmente, las interfaces de comunicación CAN más comunes para motores en el
   <img width ="800" src="https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/hexfellow/fig5.jpg"/>  
 </div>
 
-Para más detalles sobre el uso de CAN, puede consultar esta [wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_mini_hardware_interfaces_usage/#can ).
+Para más detalles sobre el uso de CAN, puedes consultar esta [wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_mini_hardware_interfaces_usage/#can ).
 
 ### Habilitar Interfaces CAN
 
-**Paso1:** Antes de usar CAN0 y CAN1, retire la cubierta inferior y configure ambas resistencias de terminación de 120Ω en la posición ​ON.
+**Paso1:** Antes de usar CAN0 y CAN1, por favor retira la cubierta inferior y establece ambas resistencias de terminación de 120Ω en la posición ​ON.
 
 <div align="center">
     <img width={300}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/7.png" />
 </div>
 
-**Paso2:** Conecte el motor directamente al CAN0 del reComputer Mini a través de la interfaz XT30 (2+2).
+**Paso2:** Conecta el motor directamente al CAN0 del reComputer Mini a través de la interfaz XT30 (2+2).
 
 :::tip
-Para la interfaz CAN del reComputer Mini, los pines H/L están invertidos en comparación con los H/L del motor. Por lo tanto, necesita invertir las conexiones H/L en el arnés de cables XT30 2+2.
+Para la interfaz CAN del reComputer Mini, los pines H/L están invertidos en comparación con los H/L del motor. Por lo tanto, necesitas invertir las conexiones H/L en el arnés de cables XT30 2+2.
 :::
 
 <div align="center">
@@ -287,24 +287,24 @@ Para la interfaz CAN del reComputer Mini, los pines H/L están invertidos en com
 </div>
 
 :::danger
-Esta fuente de alimentación es solo para aprendizaje y pruebas de un solo motor. Para múltiples motores, diseñe una placa de alimentación separada y aísle la fuente de alimentación del Jetson de la fuente de alimentación del motor para evitar que pase alta corriente directamente a través del Jetson.
+Esta fuente de alimentación es solo para aprendizaje y pruebas de un solo motor. Para múltiples motores, por favor diseña una placa de alimentación separada y aísla la fuente de alimentación del Jetson de la fuente de alimentación del motor para evitar que pase alta corriente directamente a través del Jetson.
 :::
 
 #### Habilitar comunicación CAN del Jetson
 
-Abra una terminal e ingrese el siguiente comando para poner el pin GPIO en alto y activar CAN0:
+Abre una terminal e ingresa el siguiente comando para poner el pin GPIO en alto y activar CAN0:
 
 ```bash
 gpioset --mode=wait 0 43=0
 ```
 
-Si está usando la interfaz JST CAN1, ponga el pin 106 en alto.
+Si estás usando la interfaz JST CAN1, pon el pin 106 en alto.
 
 ```bash
 gpioset --mode=wait 0 106=0
 ```
 
-Mantenga esta terminal abierta, lance una nueva terminal y configure CAN0.
+Mantén esta terminal abierta, lanza una nueva terminal y configura CAN0.
 
 ```bash
 sudo modprobe mttcan
@@ -353,7 +353,7 @@ make
 
 1. **Verificar Dispositivos CAN**  
 
-Abra una terminal y ejecute:  
+Abre una terminal y ejecuta:  
 
 ```shell
 ip -brief link | grep can  
@@ -361,7 +361,7 @@ ip -brief link | grep can
 
 2. **Ejecutar el Programa**  
 
-En la carpeta `build`, ejecute:  
+En la carpeta `build`, ejecuta:  
 
 ```shell
 cd ~/orin_ws/src/orin-control/dm_hw/build  
@@ -391,7 +391,7 @@ cd ~/damiao/scripts
 touch damiao_motor.py
 ```
 
-Copie el siguiente código a damiao_motor.py
+Copia el siguiente código a damiao_motor.py
 
 <details>
 
@@ -941,15 +941,12 @@ class MotorControl:
         return frames
 
 
-def LIMIT_MIN_MAX(x, min, max):
-    if x <= min:
-        x = min
-    elif x > max:
-        x = max
+def LIMIT_MIN_MAX(x, min_val, max_val):
+    return max(min_val, min(x, max_val))
 
 
 def float_to_uint(x: float, x_min: float, x_max: float, bits):
-    LIMIT_MIN_MAX(x, x_min, x_max)
+    x = LIMIT_MIN_MAX(x, x_min, x_max)
     span = x_max - x_min
     data_norm = (x - x_min) / span
     return np.uint16(data_norm * ((1 << bits) - 1))
@@ -1231,6 +1228,7 @@ class DamiaoPort:
     def controlMIT(self, motor, kp, kd, q, dq, tau):
         self.control.controlMIT(self.motors[motor], kp, kd, q, dq, tau)
 
+
 ```
 
 </details>
@@ -1327,7 +1325,7 @@ El motor se iluminará en **verde** y rotará a una **velocidad sinusoidal**.
 
 ## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
