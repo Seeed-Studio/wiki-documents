@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-10-29 11:02:26 (北京时间)
-// 多语言页面: 2032 个
+// 生成时间: 2025-11-03 14:52:23 (北京时间)
+// 多语言页面: 2035 个
 
 (function() {
   'use strict';
@@ -834,6 +834,12 @@
     "ja"
   ],
   "/Update-Jetson-Linux-OTA-Using-Allxon": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/local_chatbot_recomputer": [
     "cn",
     "en",
     "es",
@@ -5753,7 +5759,19 @@
     "es",
     "ja"
   ],
+  "/epaper_ee04_eezstudio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/EE04_with_esphome_advanced": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/EE04_with_hmi": [
     "cn",
     "en",
     "es",
