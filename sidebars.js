@@ -3726,7 +3726,8 @@ const sidebars = {
               items: [
                 // Models
                 'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Speech_vlm',
-                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/use_vlm_guard_warehouse'
+                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/use_vlm_guard_warehouse',
+                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Local_Chatbot_reComputer',
               ]
             },
             // Managed Services
