@@ -220,5 +220,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.9.29th](/Seeed_Elderly/weekly_wiki/wiki250929)
 - [weekly wiki on 2025.10.13th](/Seeed_Elderly/weekly_wiki/wiki251013)
 - [weekly wiki on 2025.10.20th](/Seeed_Elderly/weekly_wiki/wiki251020)
+- [weekly wiki on 2025.10.27th](/Seeed_Elderly/weekly_wiki/wiki251027)
 
 </details>
