@@ -18,7 +18,7 @@ last_update:
 
 # reCamera HQ POE 概要
 
-reCamera 2002 HQ PoE は、より鮮明で明瞭な画像を提供する高度な CMOS センサーを搭載しています。M12 レンズマウントを採用しており、デフォルトレンズを任意の互換性のある 2MP M12 レンズに柔軟に交換できます。また、PoE（Power over Ethernet）をサポートしており、別途 USB/DC 電源は不要で、PoE スイッチへの 1 本のイーサネットケーブルで電源とデータの両方を供給できます。
+reCamera 2002 HQ PoE は、より鮮明でクリアな画像を提供する高度な CMOS センサーを搭載しています。M12 レンズマウントを採用しており、デフォルトレンズを任意の互換性のある 2MP M12 レンズに柔軟に交換できます。また、PoE（Power over Ethernet）をサポートしており、別途 USB/DC 電源は不要で、PoE スイッチへの 1 本のイーサネットケーブルで電源とデータの両方を供給できます。
 
 
 ## 特徴
@@ -42,25 +42,18 @@ reCamera 2002 HQ PoE は、より鮮明で明瞭な画像を提供する高度�
 | **メモリ**             | 256 MB                                                                  |
 | **ビデオエンコーダー**      | 5MP @ 30Fps                                                              |
 
-### 基本仕様
-
-| **パラメータ**          | **値**                                                                 |
-|------------------------|---------------------------------------------------------------------------|
-| **eMMC**               | 8GB / 64GB                                                               |
-| **電源供給**       | 12V DC ジャック to XT30 コネクタ                                             |
-| **消費電力**  | 12V, 185mA（静的）                                                      |
 
 
 | センサー                | GC2053                             |
 | --------------------- | ---------------------------------- |
-| 光学フォーマット        | 1/2.9インチ                          |
+| 光学フォーマット        | 1/2.9 インチ                          |
 | 解像度            | 1920x1080                          |
 | 最大フレームレート        | 30fps@フルサイズ                    |
 | レンズマウント            | M12                                |
 | FOV                   | 93°                                |
-| イーサネット              | 100Mbps with PoE                   |
-| USB                   | USB Type-C(2.0)                    |
-| 寸法             | 40x40x45.8mm40x40x53.1mm レンズ付き |
+| イーサネット              | 100Mbps（PoE 対応）                   |
+| USB                   | USB Type-C（2.0）                    |
+| 寸法             | 40x40x45.8mm（レンズ付き 40x40x53.1mm） |
 | 動作温度 | -20～50°C                          |
 | 動作湿度    | 95%                                |
 
@@ -74,16 +67,14 @@ reCamera 2002 HQ PoE は、より鮮明で明瞭な画像を提供する高度�
 
 上面図             |  底面図
 :-------------------------:|:-------------------------:
-
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
-### [センサーボード-S101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
-<!-- 搬运github说明和图 -->
+### [センサーボード-S4_GC2053](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
+
 
 上面図             |  底面図
 :-------------------------:|:-------------------------:
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/S1_ov5647_UP.png" /></div> | <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/S1_ov5647_Bottom.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top.png" /></div> |<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom.png" /></div>
 
 #### ⚙️ 機能
 
@@ -132,13 +123,28 @@ reCamera 2002 HQ PoE は、より鮮明で明瞭な画像を提供する高度�
   </table>
 </div>
 
+### [B3_POE](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Base_Board/B3_POE/readme.md)
+
+上面             |  底面
+:-------------------------:|:-------------------------:
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom.png" /></div>
+
+#### ⚙️ 機能：
+
+- 1 x **802.3af PSE** 対応 RJ45 ポート。
+- 1 x UART ポート。
+- 1 x デバッグポート。
+- 3 x IO ポート。
+
+ <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
+
 ## ハードウェアインターフェース
 
 - [ライト](#jump2)
 - [マイク & スピーカー](#jump3)
-- [WIFI](#jump4)
-- [SD カード](#jump5)
-- [Uart (デバッグ)](#jump6)
+- [POE](#jump4)
+- [IO](#jump5)
+- [Uart（デバッグ）](#jump6)
 - [ユーザーボタン](#jump7)
 
 ### <span id="jump2">ライト</span>
@@ -149,9 +155,9 @@ reCamera には 3 つのインジケーターがあります。**赤と青**の�
 
 | LED（色） | ステータス | 説明 |
 | ---- | ---- | ---- |
-| LED1 - 緑 | ON | 電源オン |
+| LED1 - 緑 | 点灯 | 電源オン |
 | LED2 - 赤 | 点滅 | CPU 動作中（ユーザー定義） |
-| LED3 - 青 | 点滅 | eMMC 読み取り/書き込み |
+| LED3 - 青 | 点滅 | eMMC 読み取り/書き込み中 |
 
 例 1：Linux コマンドを使用して**赤色 LED** の明度をゼロに変更
 
@@ -159,24 +165,17 @@ reCamera には 3 つのインジケーターがあります。**赤と青**の�
 echo 0 | sudo tee /sys/class/leds/red/brightness
 ```
 
-例 2：**赤色ライト**を完全にオフにする
+例 2：**赤色ライト**を完全に消灯
 
 ``` bash
 echo none | sudo tee /sys/class/leds/red/trigger
-```
-
-4 つの**白色**ライトがあり、これらはカメラの補助光です。補助光のスイッチは以下の指示で制御できます。
-
-``` bash
-echo 1 > /sys/devices/platform/leds/leds/white/brightness //light on
-echo 0 > /sys/devices/platform/leds/leds/white/brightness //light off
 ```
 
 ### <span id="jump3">マイク & スピーカー</span>
 
 reCamera にはマイクロフォンとスピーカーが搭載されています。以下のコマンドでマイクロフォンとスピーカーを呼び出すことができます。reCamera は **wav** 形式のオーディオファイルを再生できます。
 
-プレーヤーのデフォルト形式は：16bit ビットレート、サンプリングレートは 16,000 です
+プレーヤーのデフォルト形式：16 ビットビットレート、サンプリングレート 16,000
 
 ```bash
 sudo arecord -D hw:0,0 -r 16000 -f S16_LE -c 1 -d 5 /home/recamera/test.wav //Record five seconds of audio
@@ -184,78 +183,105 @@ sudo arecord -D hw:0,0 -r 16000 -f S16_LE -c 1 -d 5 /home/recamera/test.wav //Re
 sudo aplay -D hw:1,0 /home/recamera/test.wav //Playing audio
 ```
 
-### <span id="jump4">Wi-Fi</span>
+### <span id="jump4">POE</span>
 
-reCamera の 2002w バージョンには Wi-Fi モジュールがハードウェアに搭載されています。Wi-Fi は AP+STA デュアルモードで、デバイスネットワークの設定や AP モードでのデバイス設定に使用できます。
+POE モジュールは reCamera HQ POE バージョンのハードウェアに内蔵されています。WiFi モジュールは削除されています。ただし、SG2002w のコアボードを交換することで Wi-Fi 機能を復元できます。
 
-AP モードでの Wi-Fi の **SSID** は：`reCamera_+ MAC の下位 6 桁` です。
+**POE 802.3af** プロトコルをサポートするスイッチに reCamera を接続すると、reCamera デバイスが起動します。
 
-AP モードでの Wi-Fi の **パスワード** は：`12345678` です。
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/poe_connect_recamera.jpg" /></div>
 
-WiFi_AP の SSID とパスワードは、reCamera システムの `/etc/hostapd_2g4.conf` ファイルで設定できます。
+ルーターでデバイスの IP アドレスを確認してアクセスするか、USB 経由で reCamera に接続してターミナルにアクセスし、有線ネットワーク IP を照会できます。
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-2.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/router_search.png" /></div>
 
-reCamera STA 設定ファイルは **/etc/wpa_supplicant.conf** にあり、ここで接続する Wi-Fi アカウントとパスワードを設定します。
-STA モードでは、**5G** 帯域の Wi-Fi に接続してください。
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/terminal_ipv4_search.png" /></div>
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-3.png" /></div>
+### <span id="jump5">IO</span>
 
-ターミナルでは、以下のコマンドで Wi-Fi をスキャンして接続できます：
+**GPIO sysfs インターフェースを使用した I/O 制御**
 
-```bash
-wpa_cli -i wlan0 scan                           #Start a scan
+ <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
 
-wpa_cli -i wlan0 scan_results                   #Returns wifi scan results
+Linux では、GPIO の読み書きを行う最も一般的な方法は GPIO sysfs インターフェースを使用することです。これは `/sys/class/gpio` ディレクトリ下の `export`、`unexport`、`gpio{N}/direction`、`gpio{N}/value`（`{N}` を実際のピン番号に置き換える）などのファイルを操作することで実装され、シェルスクリプトでよく使用されます。
 
-wpa_cli add_network                             # Adding a new network,Returns a network ID
-wpa_cli set_network ID ssid "your_wifi_name"    # set network SSID
-wpa_cli set_network ID psk "your_wifi_password" # set network passwd
-wpa_cli enable_network ID                       # enable network and connect
-wpa_cli status                                  # Checking connection status
-```
+reCamera POE ベースプレートには 3 つの利用可能な IO ポートがあります。各ポートは入力または出力として設定できます。IO ポートの番号は以下の通りです：
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-4.png" /></div>
+| IO ポート | GPIO 番号 |
+| ---- | ---- |
+| D1 | 490 |
+| CLK（多重化 IO ピン） | 487 |
+| SMD（多重化 IO ピン） | 488 |
 
-### <span id="jump5">SD カード</span>
-
-SD カードスロットは reCamera のストレージ容量を拡張できます。SD カードを挿入後、`lsblk` コマンドを使用して SD カードの存在を確認できます。
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-5.png" /></div>
-
-mmcblk1p1 のようなストレージデバイスが見つかったら、以下のコマンドでシステムにマウントできます。
-<br/>
-
-reCamera は **ext4** ファイルシステムのみを認識することに注意してください。
 
 ```bash
-sudo blkid /dev/mmcblk1p1 #If TYPE is not ext4, the filesystem needs to be formatted
-/dev/mmcblk1p1: UUID="F080-C970" BLOCK_SIZE="512" TYPE="exfat" PARTUUID="04ec0085-01"
+echo "490" > /sys/class/gpio/export #Enable pin GPIO490
 
-sudo mkfs.ext4 /dev/mmcblk1p1 #Format the filesystem to ext4
-mkdir /userdata/mmcblk1 #Create a mount file
-sudo mount -t ext4 /dev/mmcblk1p1 /userdata/mmcblk1 #Mount the SD card to the /userdata/mmcblk1 path
+echo "out" > /sys/class/gpio/gpio490/direction #Enable the output mode
+echo 1 > /sys/class/gpio/gpio490/value # Set the pin to a high level
+echo 0 > /sys/class/gpio/gpio490/value # Set the pin to a low level
+
+echo "in" > /sys/class/gpio/gpio490/direction #Enable the input mode
+cat /sys/class/gpio/gpio490/value #Read the pin level
+
+echo "490" > /sys/class/gpio/unexport #Disable pin GPIO490
 ```
 
-`lsblk` でマウント結果を確認
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-6.png" /></div>
 
 ### <span id="jump6">Uart（デバッグ）</span>
 
-reCamera のベース回路基板には、tx、rx、gnd の 3 つの接点があり、reCamera のデバッグシリアルポートとして機能します。
+reCamera の POE ベースボードには 2 セットのシリアルポートがあります：/ttyS0（デバッグ用）と /ttyS3 です。
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/image-7.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-1.png" /></div>
 
-デバイスのシリアルポートボーレートは 115200 で、reCamera システムにログインできます。
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top_uart.png" /></div>
+
+このデバイスのデバッグシリアルポートのボーレートは 115200 で、リモート監視システムへの接続をサポートしています。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-8.png" /></div>
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-9.png" /></div>
+```bash
+#Use the stty tool to query its communication parameters.
+
+stty -F /dev/ttyS3
+```
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-2.png" /></div>
+
+```bash
+# Modify the serial port baud rate, where ispeed refers to the input speed and ospeed refers to the output speed.
+
+stty -F /dev/ttyS3 ispeed 115200 ospeed 115200
+```
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-3.png" /></div>
+
+デフォルトのシリアルポートはエコーが有効になっており、以下のコマンドを使用して無効にできます：
+
+```bash
+stty -F /dev/ttyS3 -echo
+```
+
+シリアル通信：
+
+```bash
+#Send data
+echo "hello world" > /dev/ttyS3
+echo Hello! > /dev/ttyS3
+#Receive data
+cat /dev/ttyS3
+```
+
+minicomツールを使用してシリアルポート経由で通信します：
+
+```bash
+minicom -D /dev/ttyS3 -b 115200
+```
+
 
 ### <span id="jump7">ユーザーボタン</span>
 
-reCamera の usr ボタンはユーザーがカスタマイズできます。
+reCameraのusrボタンはユーザーがカスタマイズできます。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/image-10.png" /></div>
 
@@ -275,12 +301,12 @@ cat /sys/class/gpio/gpio510/value #When the key is pressed, 0 is printed
 | USB Type-C ケーブル | x1 |
 | イーサネットケーブル | x1 |
 | ユーザーマニュアル | x1 |
-| 6 ピンケーブル | x1 |
+| 6ピンケーブル | x1 |
 
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社では、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

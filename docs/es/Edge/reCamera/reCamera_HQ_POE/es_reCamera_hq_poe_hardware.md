@@ -25,7 +25,7 @@ reCamera 2002 HQ PoE está equipada con un sensor CMOS avanzado para imágenes m
 
 - Alta Calidad: Equipada con un sensor CMOS GC2053 de 1/2.9 pulgadas, proporcionando calidad de imagen superior.
 - Montura de Lente M12: FOV predeterminado de 90°, fácilmente reemplazable con cualquier lente M12 estándar.
-- Ethernet con PoE (Power over Ethernet): Soporta datos y energía sobre un solo cable, solo Modo A de PoE.
+- Ethernet con PoE (Power over Ethernet): Soporta datos y energía sobre un solo cable, solo Modo A PoE.
 - Extensión IO/UART: Conector de 6 pines con 1×UART y 3×GPIO.
 
 ## Especificaciones
@@ -42,18 +42,11 @@ reCamera 2002 HQ PoE está equipada con un sensor CMOS avanzado para imágenes m
 | **Memoria**            | 256 MB                                                                    |
 | **Codificador de Video** | 5MP @ 30Fps                                                            |
 
-### Básico
-
-| **Parámetro**          | **Valor**                                                                 |
-|------------------------|---------------------------------------------------------------------------|
-| **eMMC**               | 8GB / 64GB                                                               |
-| **Fuente de Alimentación** | Conector DC de 12V a conector XT30                                   |
-| **Consumo de Energía** | 12V, 185mA (estático)                                                    |
 
 
 | Sensor                | GC2053                             |
 | --------------------- | ---------------------------------- |
-| Formato Óptico        | 1/2.9 pulgadas                    |
+| Formato Óptico        | 1/2.9inch                          |
 | Resolución            | 1920x1080                          |
 | Velocidad de Fotogramas Máx. | 30fps@tamaño completo       |
 | montura de lente      | M12                                |
@@ -74,16 +67,14 @@ reCamera 2002 HQ PoE está equipada con un sensor CMOS avanzado para imágenes m
 
 Vista Superior           |  Vista Inferior
 :-------------------------:|:-------------------------:
-
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
-### [Placa de Sensor-S101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
-<!-- 搬运github说明和图 -->
+### [Placa de Sensor-S4_GC2053](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
+
 
 Vista Superior           |  Vista Inferior
 :-------------------------:|:-------------------------:
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/S1_ov5647_UP.png" /></div> | <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/S1_ov5647_Bottom.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top.png" /></div> |<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom.png" /></div>
 
 #### ⚙️ características
 
@@ -132,18 +123,33 @@ Vista Superior           |  Vista Inferior
   </table>
 </div>
 
+### [B3_POE](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Base_Board/B3_POE/readme.md)
+
+Superior             |  Inferior
+:-------------------------:|:-------------------------:
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom.png" /></div>
+
+#### ⚙️ Características:
+
+- 1 x puerto RJ45 para **802.3af PSE**.
+- 1 x puerto UART.
+- 1 x puerto Debug.
+- 3 x puerto IO.
+
+ <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
+
 ## Interfaz de Hardware
 
 - [Luz](#jump2)
 - [Micrófono y Altavoz](#jump3)
-- [WIFI](#jump4)
-- [Tarjeta SD](#jump5)
+- [POE](#jump4)
+- [IO](#jump5)
 - [Uart (Debug)](#jump6)
 - [Botón de Usuario](#jump7)
 
 ### <span id="jump2">Luz</span>
 
-Hay 3 indicadores en la reCamera, las luces **roja y azul** son indicadores programables, y el indicador **verde** es el indicador de energía que no es programable. **Rojo** es el indicador de estado de la CPU y **azul** es el indicador de estado de lectura del eMMC del sistema.
+Hay 3 indicadores en la recamera, las luces **roja y azul** son indicadores programables, y el indicador **verde** es el indicador de energía que no es programable. **Rojo** es el indicador de estado de la CPU y **azul** es el indicador de estado de lectura del emmc del sistema.
 
 **Estado de los Indicadores de Luz**:
 
@@ -153,7 +159,7 @@ Hay 3 indicadores en la reCamera, las luces **roja y azul** son indicadores prog
 | LED2 - Rojo | Parpadeando | CPU Funcionando(definido por usuario) |
 | LED3 - Azul | Parpadeando | eMMC Leyendo/Escribiendo |
 
-Ejemplo 1: Usar comando de linux para cambiar el brillo del **led rojo** a cero
+Ejemplo 1: Usar comando linux para cambiar el brillo del **led rojo** a cero
 
 ``` bash
 echo 0 | sudo tee /sys/class/leds/red/brightness
@@ -165,16 +171,9 @@ Ejemplo 2: apagar completamente la **luz roja**
 echo none | sudo tee /sys/class/leds/red/trigger
 ```
 
-Hay cuatro luces **blancas**, que son las luces de relleno de la cámara. El interruptor de las luces de relleno puede ser controlado por las siguientes instrucciones.
-
-``` bash
-echo 1 > /sys/devices/platform/leds/leds/white/brightness //light on
-echo 0 > /sys/devices/platform/leds/leds/white/brightness //light off
-```
-
 ### <span id="jump3">Micrófono y Altavoz</span>
 
-La reCamera tiene un micrófono y un altavoz. Puedes invocar el micrófono y altavoz siguiendo el comando. La reCamera puede reproducir archivos de audio en formato **wav**.
+La recamera tiene un micrófono y un altavoz. Puedes invocar el micrófono y altavoz siguiendo el comando. La recamera puede reproducir archivos de audio en formato **wav**.
 
 El formato predeterminado del reproductor es: tasa de bits de 16bit; La frecuencia de muestreo es 16,000
 
@@ -184,74 +183,101 @@ sudo arecord -D hw:0,0 -r 16000 -f S16_LE -c 1 -d 5 /home/recamera/test.wav //Re
 sudo aplay -D hw:1,0 /home/recamera/test.wav //Playing audio
 ```
 
-### <span id="jump4">Wi-Fi</span>
+### <span id="jump4">POE</span>
 
-La versión 2002w de reCamera tiene el módulo Wi-Fi en hardware. El Wi-Fi es modo dual AP+STA, que puede ser usado para configurar la red del dispositivo o configurar el dispositivo en modo AP.
+El módulo POE está integrado en el hardware de la versión reCamera HQ POE. El módulo WiFi ha sido removido. Sin embargo, puedes restaurar la función Wi-Fi reemplazando la placa principal del SG2002w.
 
-El **SSID** del wifi en modo AP es: `reCamera_+ los últimos seis bits de MAC`.
+Conecta la reCamera a un switch que soporte el protocolo **POE 802.3af**, y el dispositivo reCamera se iniciará.
 
-La **Contraseña** del wifi en modo AP es: `12345678`.
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/poe_connect_recamera.jpg" /></div>
 
-El ssid y contraseña del WiFi_AP pueden ser configurados en el archivo `/etc/hostapd_2g4.conf` en el sistema reCamera.
+Puedes verificar la dirección IP del dispositivo en tu router para acceder a él, o conectar la reCamera vía USB y acceder al terminal para consultar la IP de red cableada.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-2.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/router_search.png" /></div>
 
-El archivo de configuración STA de reCamera está en **/etc/wpa_supplicant.conf**, donde configuras la cuenta y contraseña de Wi-Fi a la que conectarse.
-En modo STA, por favor conéctate a Wi-Fi en banda **5G**.
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/terminal_ipv4_search.png" /></div>
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-3.png" /></div>
+### <span id="jump5">IO</span>
 
-En la terminal, puedes escanear y conectarte a Wi-Fi con el siguiente comando:
+**Usando la interfaz GPIO sysfs para controlar I/O**
 
-```bash
-wpa_cli -i wlan0 scan                           #Start a scan
+ <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
 
-wpa_cli -i wlan0 scan_results                   #Returns wifi scan results
+En Linux, la forma más común de leer y escribir GPIO es usando la interfaz GPIO sysfs. Esto se implementa manipulando archivos como `export`, `unexport`, `gpio{N}/direction`, y `gpio{N}/value` (reemplaza `{N}` con el número de pin real) bajo el directorio `/sys/class/gpio`, y se usa frecuentemente en scripts de shell.
 
-wpa_cli add_network                             # Adding a new network,Returns a network ID
-wpa_cli set_network ID ssid "your_wifi_name"    # set network SSID
-wpa_cli set_network ID psk "your_wifi_password" # set network passwd
-wpa_cli enable_network ID                       # enable network and connect
-wpa_cli status                                  # Checking connection status
-```
+La placa base reCamera POE tiene 3 puertos IO disponibles. Cada puerto puede configurarse como entrada o salida. Los puertos IO están numerados como sigue:
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-4.png" /></div>
+| Puerto IO | Número GPIO |
+| ---- | ---- |
+| D1 | 490 |
+| CLK(Pines IO Multiplexados) | 487 |
+| SMD(Pines IO Multiplexados) | 488 |
 
-### <span id="jump5">Tarjeta SD</span>
-
-La ranura de tarjeta SD puede expandir el espacio de almacenamiento de la reCamera. Después de insertar la tarjeta SD, puedes encontrar la existencia de tu SD usando el comando `lsblk`.
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-5.png" /></div>
-
-Una vez que hayas encontrado un dispositivo de almacenamiento como mmcblk1p1, puedes montarlo a tu sistema usando el siguiente comando.
-<br/>
-
-Nota que reCamera solo reconoce sistemas de archivos **ext4**.
 
 ```bash
-sudo blkid /dev/mmcblk1p1 #If TYPE is not ext4, the filesystem needs to be formatted
-/dev/mmcblk1p1: UUID="F080-C970" BLOCK_SIZE="512" TYPE="exfat" PARTUUID="04ec0085-01"
+echo "490" > /sys/class/gpio/export #Enable pin GPIO490
 
-sudo mkfs.ext4 /dev/mmcblk1p1 #Format the filesystem to ext4
-mkdir /userdata/mmcblk1 #Create a mount file
-sudo mount -t ext4 /dev/mmcblk1p1 /userdata/mmcblk1 #Mount the SD card to the /userdata/mmcblk1 path
+echo "out" > /sys/class/gpio/gpio490/direction #Enable the output mode
+echo 1 > /sys/class/gpio/gpio490/value # Set the pin to a high level
+echo 0 > /sys/class/gpio/gpio490/value # Set the pin to a low level
+
+echo "in" > /sys/class/gpio/gpio490/direction #Enable the input mode
+cat /sys/class/gpio/gpio490/value #Read the pin level
+
+echo "490" > /sys/class/gpio/unexport #Disable pin GPIO490
 ```
 
-Verifica el resultado del montaje con `lsblk`
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-6.png" /></div>
 
 ### <span id="jump6">Uart (Debug)</span>
 
-La placa de circuito base de la reCamera tiene tres contactos tx, rx y gnd, que sirven como puerto serie de depuración de la reCamera.
+La placa base POE de reCamera tiene dos conjuntos de puertos serie, a saber /ttyS0 (para Debug) y /ttyS3.
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/image-7.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-1.png" /></div>
 
-El dispositivo tiene una velocidad de baudios del puerto serie de 115200 y puede iniciar sesión en el sistema reCamera.
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top_uart.png" /></div>
+
+El puerto serie de debug de este dispositivo tiene una velocidad de baudios de 115200 y soporta conexión a sistemas de monitoreo remoto.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-8.png" /></div>
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-9.png" /></div>
+```bash
+#Use the stty tool to query its communication parameters.
+
+stty -F /dev/ttyS3
+```
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-2.png" /></div>
+
+```bash
+# Modify the serial port baud rate, where ispeed refers to the input speed and ospeed refers to the output speed.
+
+stty -F /dev/ttyS3 ispeed 115200 ospeed 115200
+```
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-3.png" /></div>
+
+El puerto serie predeterminado tiene el eco habilitado, y puedes usar el siguiente comando para deshabilitarlo:
+
+```bash
+stty -F /dev/ttyS3 -echo
+```
+
+Comunicación serie:
+
+```bash
+#Send data
+echo "hello world" > /dev/ttyS3
+echo Hello! > /dev/ttyS3
+#Receive data
+cat /dev/ttyS3
+```
+
+Usa la herramienta minicom para comunicarte a través del puerto serie:
+
+```bash
+minicom -D /dev/ttyS3 -b 115200
+```
+
 
 ### <span id="jump7">Botón de Usuario</span>
 
@@ -280,7 +306,7 @@ cat /sys/class/gpio/gpio510/value #When the key is pressed, 0 is printed
 
 ## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -941,15 +941,12 @@ class MotorControl:
         return frames
 
 
-def LIMIT_MIN_MAX(x, min, max):
-    if x <= min:
-        x = min
-    elif x > max:
-        x = max
+def LIMIT_MIN_MAX(x, min_val, max_val):
+    return max(min_val, min(x, max_val))
 
 
 def float_to_uint(x: float, x_min: float, x_max: float, bits):
-    LIMIT_MIN_MAX(x, x_min, x_max)
+    x = LIMIT_MIN_MAX(x, x_min, x_max)
     span = x_max - x_min
     data_norm = (x - x_min) / span
     return np.uint16(data_norm * ((1 << bits) - 1))
