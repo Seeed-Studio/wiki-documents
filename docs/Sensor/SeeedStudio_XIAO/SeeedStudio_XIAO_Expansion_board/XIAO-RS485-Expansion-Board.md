@@ -80,6 +80,12 @@ When it is used as an input mode, you need to turn the switch to IN, and if it i
   </table>
 </div>
 
+:::tip
+In this project, the XIAO ESP32C3 communicates with the RS485 expansion board using D4 (GPIO6) and D5 (GPIO7).
+
+If using a different development board, modify the corresponding pin configurations as needed.
+:::
+
 ## Software Overview
 
 ### Sender Code

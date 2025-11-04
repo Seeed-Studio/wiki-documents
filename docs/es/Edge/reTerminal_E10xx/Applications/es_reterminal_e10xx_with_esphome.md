@@ -1,6 +1,6 @@
 ---
-description: Este artículo describe cómo hacer que la pantalla ePaper de la serie reTerminal E funcione con Home Assistant y ESPHome.
-title: Pantalla ePaper de la serie reTerminal E funciona con ESPHome para Home Assistant
+description: Este artículo describe cómo hacer que la pantalla ePaper de reTerminal E Series funcione con Home Assistant y ESPHome.
+title: Pantalla ePaper de reTerminal E Series funcionando con ESPHome para Home Assistant
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /es/reterminal_e10xx_with_esphome
 sidebar_position: 2
@@ -12,7 +12,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Pantalla ePaper de la serie reTerminal E funciona con ESPHome para Home Assistant
+# Pantalla ePaper de reTerminal E Series funcionando con ESPHome para Home Assistant
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.jpg" style={{width:700, height:'auto'}}/></div><br />
 
@@ -40,19 +40,19 @@ Home Assistant es una potente plataforma de automatización del hogar de código
     <a class="get_one_now_item" href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Aprender Más 🖱️</font></span></strong></a>
 </div>
 
-### ¿Por qué la pantalla ePaper de la serie reTerminal E con Home Assistant?
+### ¿Por qué la pantalla ePaper de reTerminal E Series con Home Assistant?
 
-La pantalla ePaper de la serie reTerminal E es un excelente compañero para Home Assistant por varias razones:
+La pantalla ePaper de reTerminal E Series es un excelente compañero para Home Assistant por varias razones:
 
-1. **Eficiencia Energética**: La pantalla de papel electrónico solo consume energía al actualizar el contenido, haciéndola perfecta para mostrar información persistente como pronósticos del tiempo, eventos del calendario o estado del sistema.
+1. **Eficiencia Energética**: La pantalla e-paper solo consume energía al actualizar contenido, haciéndola perfecta para mostrar información persistente como pronósticos del tiempo, eventos del calendario o estado del sistema.
 
-2. **Visibilidad Clara**: A diferencia de las pantallas LCD, las pantallas de papel electrónico son fácilmente legibles en cualquier condición de iluminación, incluyendo luz solar directa, haciéndolas ideales para paneles de control doméstico montados en la pared.
+2. **Visibilidad Clara**: A diferencia de las pantallas LCD, las pantallas e-paper son fácilmente legibles en cualquier condición de iluminación, incluyendo luz solar directa, haciéndolas ideales para paneles de control doméstico montados en la pared.
 
 3. **Larga Duración de Batería**: Combinada con el modo de sueño profundo, la pantalla puede operar durante meses con una sola carga de batería mientras proporciona información valiosa de un vistazo.
 
 4. **Integración Flexible**: A través de ESPHome, la pantalla se integra perfectamente con Home Assistant, permitiéndote mostrar cualquier dato de tu sistema doméstico inteligente en un formato elegante y siempre visible.
 
-Estas ventajas hacen que la pantalla ePaper de la serie reTerminal E sea una opción ideal para crear una pantalla de información energéticamente eficiente y siempre encendida para tu configuración de Home Assistant.
+Estas ventajas hacen que la pantalla ePaper de reTerminal E Series sea una opción ideal para crear una pantalla de información eficiente en energía y siempre encendida para tu configuración de Home Assistant.
 
 ### Integración con ESPHome
 
@@ -62,7 +62,7 @@ El sistema funciona convirtiendo tu configuración YAML en firmware completament
 
 Exploremos cómo configurarlo y aprovechar al máximo esta pantalla versátil.
 
-## Comenzando
+## Primeros Pasos
 
 Antes de que comience el contenido del tutorial de este artículo, es posible que necesites tener el siguiente hardware listo.
 
@@ -107,11 +107,11 @@ Recomendamos usar Home Assistant Green como el host de Home Assistant para este 
 :::tip instalar Home Assistant
 También hemos escrito cómo instalar Home Assistant para algunos de los productos de Seeed Studio, por favor consúltalos.
 
-- **[Comenzando con Home Assistant en ODYSSEY-X86](https://wiki.seeedstudio.com/es/ODYSSEY-X86-Home-Assistant/)**
-- **[Comenzando con Home Assistant en reTerminal](https://wiki.seeedstudio.com/es/reTerminal_Home_Assistant/)**
-- **[Comenzando con Home Assistant en LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/es/h68k-ha-esphome/)**
+- **[Primeros Pasos con Home Assistant en ODYSSEY-X86](https://wiki.seeedstudio.com/es/ODYSSEY-X86-Home-Assistant/)**
+- **[Primeros Pasos con Home Assistant en reTerminal](https://wiki.seeedstudio.com/es/reTerminal_Home_Assistant/)**
+- **[Primeros Pasos con Home Assistant en LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/es/h68k-ha-esphome/)**
 
-Si no estás usando un producto de Seeed Studio, también puedes verificar y aprender cómo instalar Home Assistant para otros productos en el sitio web oficial de Home Assistant.
+Si no estás usando un producto de Seeed Studio, también puedes consultar y aprender cómo instalar Home Assistant para otros productos en el sitio web oficial de Home Assistant.
 
 - **[Instalación de Home Assistant](https://www.home-assistant.io/installation/)**
 :::
@@ -329,7 +329,7 @@ Espera un momento y verás la retroalimentación como la siguiente imagen. Si fa
 
 ### Dibujando Gráficos Simples
 
-Este código YAML de ejemplo configura la interfaz SPI y la Pantalla ePaper de la Serie reTerminal E para un proyecto ESPHome. La sección `lambda` contiene comandos de dibujo que renderizan formas simples en la pantalla:
+Este código YAML de ejemplo configura la interfaz SPI y la Pantalla ePaper de reTerminal E Series para un proyecto ESPHome. La sección `lambda` contiene comandos de dibujo que renderizan formas simples en la pantalla:
 
 - Dos rectángulos (uno en la posición (10, 10) con tamaño 100x50, y otro en (150, 10) con tamaño 50x50)
 - Un círculo en (250, 35) con un radio de 25
@@ -428,7 +428,7 @@ Debido a limitaciones de espacio, no elaboraremos demasiado sobre los métodos d
 
 ### Obteniendo valores de Home Assistant para mostrar
 
-Para mostrar datos meteorológicos en tu dispositivo de Pantalla ePaper de la Serie reTerminal E, necesitarás acceder a datos de temperatura, condiciones meteorológicas y velocidad del viento desde Home Assistant. La integración Open-Meteo proporciona datos meteorológicos confiables que se pueden acceder a través de Developer Tools.
+Para mostrar datos meteorológicos en tu dispositivo de Pantalla ePaper de reTerminal E Series, necesitarás acceder a datos de temperatura, condiciones meteorológicas y velocidad del viento desde Home Assistant. La integración Open-Meteo proporciona datos meteorológicos confiables que pueden ser accedidos a través de Developer Tools.
 
 #### Instalando la Integración Open-Meteo
 
@@ -462,7 +462,7 @@ Paso 3. Haz clic en la entidad para ver todos los atributos disponibles. Los atr
 
 #### Usando Datos Meteorológicos en ESPHome
 
-Para usar estos datos meteorológicos en tu configuración de ESPHome para la serie reTerminal E, necesitarás configurar una conexión API de Home Assistant en tu configuración YAML de ESPHome:
+Para usar estos datos meteorológicos en tu configuración de ESPHome para la reTerminal E Series, necesitarás configurar una conexión API de Home Assistant en tu configuración YAML de ESPHome:
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -629,15 +629,15 @@ Después de compilar el código anterior y subirlo a tu dispositivo, es posible 
 
 Paso 1. Después de flashear tu dispositivo, regresa a Home Assistant y navega a **Settings → Devices & Services**.
 
-Paso 3. Home Assistant debería descubrir automáticamente tu dispositivo reTerminal E Series ePaper Display a través de mDNS. Si aparece en la sección de dispositivos descubiertos, haz clic en Configure para agregarlo.
+Paso 3. Home Assistant debería descubrir automáticamente tu dispositivo de Pantalla ePaper reTerminal E Series a través de mDNS. Si aparece en la sección de dispositivos descubiertos, haz clic en Configure para agregarlo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
 Paso 4. Si el dispositivo no se descubre automáticamente, haz clic en Add Integration y busca "ESPHome".
 
-Paso 5. Ingresa la dirección IP de tu dispositivo reTerminal E Series ePaper Display y la clave de cifrado API si configuraste una.
+Paso 5. Ingresa la dirección IP de tu dispositivo de Pantalla ePaper reTerminal E Series y la clave de cifrado API si configuraste una.
 
-Paso 6. Una vez conectado, tu reTerminal E Series ePaper Display aparecerá como un dispositivo en Home Assistant con todos sus sensores y componentes disponibles.
+Paso 6. Una vez conectado, tu Pantalla ePaper reTerminal E Series aparecerá como un dispositivo en Home Assistant con todos sus sensores y componentes disponibles.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/40.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -649,7 +649,7 @@ Aquí está el contenido mejorado de la Demo 3 con formato mejorado, ubicación 
 
 ### Dibujando fuentes TrueType
 
-Este ejemplo demuestra cómo mostrar iconos personalizados en tu reTerminal E Series ePaper Display usando fuentes TrueType. Los iconos de Material Design proporcionan una amplia gama de símbolos escalables perfectos para pantallas de papel electrónico.
+Este ejemplo demuestra cómo mostrar iconos personalizados en tu Pantalla ePaper reTerminal E Series usando fuentes TrueType. Los Iconos de Material Design proporcionan una amplia gama de símbolos escalables perfectos para pantallas de papel electrónico.
 
 #### Instalando Herramientas Requeridas
 
@@ -665,11 +665,11 @@ Paso 2. Haz clic en **INSTALL** y espera a que se complete la instalación. Una 
 
 Paso 3. Crea una nueva carpeta llamada **fonts** en tu directorio de configuración de ESPHome. Esta carpeta almacenará los archivos de fuente TrueType necesarios para mostrar iconos.
 
-Paso 4. Descarga el archivo de fuente de Material Design Icons haciendo clic en el botón de abajo y extrae el contenido.
+Paso 4. Descarga el archivo de fuente de Iconos de Material Design haciendo clic en el botón de abajo y extrae el contenido.
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/font_ttf.zip" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Descargar Fuente de Material Design Icons</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Descargar Fuente de Iconos de Material Design</button></p>
 </a>
 </div>
 
@@ -779,7 +779,7 @@ display:
 
 :::
 
-Paso 7. Guarda tu configuración y súbela a tu reTerminal E Series. Cuando veas una respuesta como la siguiente imagen, significa que el código se está ejecutando correctamente.
+Paso 7. Guarda tu configuración y súbela a tu reTerminal E 系列. Cuando veas una respuesta como la siguiente imagen, significa que el código se está ejecutando correctamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/42.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -815,7 +815,7 @@ glyphs:
   - "\U000F0123" # your new icon
 ```
 
-Y en la lambda de visualización:
+Y en el lambda de visualización:
 
 ```yaml
 lambda: |-
@@ -832,7 +832,7 @@ Al combinar estos iconos con los datos meteorológicos de Home Assistant que con
 
 ### Visualización de Imágenes Personalizadas
 
-Este ejemplo demuestra cómo mostrar imágenes personalizadas en tu pantalla e-paper del reTerminal E Series ePaper Display. Puedes usar esta función para mostrar logotipos, iconos o cualquier gráfico que mejore tu experiencia de panel de control.
+Este ejemplo demuestra cómo mostrar imágenes personalizadas en tu pantalla e-paper del reTerminal E 系列 ePaper Display. Puedes usar esta función para mostrar logotipos, iconos o cualquier gráfico que mejore tu experiencia de panel.
 
 #### Preparación
 
@@ -862,7 +862,7 @@ Paso 4. Sube la imagen descargada a la carpeta **image** que creaste anteriormen
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Para mejores resultados en pantallas e-paper, usa imágenes de alto contraste con áreas claras en blanco y negro. Se admiten tanto formatos JPG como PNG.
+Si quieres mostrar imágenes de paisajes complejas y hermosas, es mejor realizar el tramado de imagen por adelantado [en nuestro sitio web](https://sensecraft.seeed.cc/hmi/tools/dither) para un mejor efecto. Se admiten tanto formatos JPG como PNG.
 :::
 
 #### Configurando ESPHome para Visualización de Imágenes
@@ -876,9 +876,9 @@ Paso 5. Agrega el siguiente código a tu archivo de configuración de ESPHome de
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
-    type: BINARY                            # Binary mode works best for e-paper
+    type: BINARY                            # Binary works for monochrome, RGB565 works for colorful eink
     resize: 800x480                         # Resize to match display resolution
-    invert_alpha: true                      # Invert colors if needed
+    invert_alpha: true                      # Invert colors is needed
 
 spi:
   clk_pin: GPIO7
@@ -904,15 +904,18 @@ display:
 </TabItem>
 <TabItem value="For E1002" label="Para E1002">
 
+:::tip
+Por favor actualiza tu versión de ESPHome a **2025.10.2** o superior.
+:::
+
 ```yaml
 
 
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
-    type: BINARY                            # Binary mode works best for e-paper
+    type: RGB565                            #  Binary works for monochrome, RGB565 works for colorful eink
     resize: 800x480                         # Resize to match display resolution
-    invert_alpha: true                      # Invert colors if needed
 
 # define SPI interface
 spi:
@@ -939,7 +942,7 @@ display:
 </TabItem>
 </Tabs>
 
-Paso 6. Guarda tu configuración y súbela a tu reTerminal E Series. Cuando se complete la actualización, tu pantalla e-paper mostrará la imagen.
+Paso 6. Guarda tu configuración y súbela a tu reTerminal E 系列. Cuando se complete la actualización, tu pantalla e-paper mostrará la imagen.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/43.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -996,11 +999,11 @@ lambda: |-
 Recuerda que las pantallas e-paper tienen tasas de actualización limitadas. La configuración `update_interval: 300s` significa que tu pantalla se actualizará solo cada 5 minutos. Ajusta este valor según tus necesidades, pero ten en cuenta que las actualizaciones frecuentes pueden reducir la vida útil de las pantallas e-paper.
 :::
 
-Al combinar imágenes con texto y otros elementos de visualización cubiertos en ejemplos anteriores, puedes crear paneles de control ricos e informativos en tu reTerminal E Series.
+Al combinar imágenes con texto y otros elementos de visualización cubiertos en ejemplos anteriores, puedes crear paneles ricos e informativos en tu reTerminal E 系列.
 
 ## Continuar Leyendo
 
-Debido a limitaciones de espacio, este artículo solo cubre algunos casos de uso básicos y ejemplos de dibujo del dispositivo. Cubriremos el uso del hardware del reTerminal en ESPHome con más detalle en el Wiki [Uso Avanzado de ESPHome del reTerminal E Series ePaper Display en Home Assistant](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome_advanced), que puedes continuar leyendo.
+Debido a limitaciones de espacio, este artículo solo cubre algunos casos de uso básicos y ejemplos de dibujo del dispositivo. Cubriremos el uso del hardware del reTerminal en ESPHome con más detalle en el Wiki [Uso Avanzado de ESPHome del reTerminal E 系列 ePaper Display en Home Assistant](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome_advanced), que puedes continuar leyendo.
 
 ## FAQ
 
@@ -1010,19 +1013,19 @@ En este caso, debes ir a Settings -> Devices & Services -> Integrations para **R
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
-### P2: ¿Por qué no puedo obtener esos datos en Home Assistant? {#port}
+### P2: ¿Por qué no puedo obtener esos datos en Home Assistant? {#puerto}
 
 En este caso, debes ir a Settings -> Devices & Services -> Integrations para **AGREGAR** tu dispositivo a HA.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
-### P3: ¿El reTerminal E Series ePaper Display no puede conectarse a tu computadora?
+### P3: ¿El reTerminal E 系列 ePaper Display no puede conectarse a tu computadora?
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/68.png" style={{width:600, height:'auto'}}/></div>
 
 Intenta desconectarlo y volver a conectarlo varias veces, o simplemente instala el controlador según las indicaciones.
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

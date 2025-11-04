@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/sensecap_t1000_e
 sidebar_position: 2
 last_update:
-  date: 7/1/2024
-  author: Jessie
+  date: 10/29/2025
+  author: Michelle
 ---
 
 ## 视频教程
@@ -41,15 +41,15 @@ last_update:
 
 下载 `Meshtastic` 应用：
 
-- [IOS 应用](https://meshtastic.org/docs/category/apple-apps/)
-- [Android 应用](https://meshtastic.org/docs/category/android-app/)
+- [IOS App](https://meshtastic.org/docs/category/apple-apps/)
+- [Android App](https://meshtastic.org/docs/category/android-app/)
 
 ### 开启设备
 
 按一次按钮开启设备，会有上升的旋律声，LED 灯会保持亮起约 1 秒。
 
 :::tip
-如果按下按钮时设备没有响应，请先充电。
+如果按下按钮时设备没有响应，请先充电。请勿使用快充充电器。
 :::
 
 ### 通过应用连接
@@ -59,7 +59,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="IOS 应用">
 
 - 在蓝牙面板上选择目标设备。
 
@@ -71,7 +71,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="Android App">
+<TabItem value="android" label="Android 应用">
 
 - 点击 `+` 并选择目标设备。
 
@@ -89,13 +89,13 @@ import TabItem from '@theme/TabItem';
 为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的区域位置进行设置。
 
 <Tabs>
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="IOS 应用">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Android App">
+<TabItem value="android" label="Android 应用">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
@@ -112,7 +112,7 @@ import TabItem from '@theme/TabItem';
 参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时基础每分钟计算。如果达到限制，您的设备将停止传输，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，每分钟在滚动 1 小时基础上计算。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
 现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
@@ -128,7 +128,7 @@ import TabItem from '@theme/TabItem';
 **温度传感器配置**
 
 <Tabs>
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="IOS 应用">
 
 导航到 `Settings` -> `Telemetry(Sensors)` -> 启用传感器。
 
@@ -136,7 +136,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="Android App">
+<TabItem value="android" label="Android 应用">
 
 导航到 `Settings` -> `Telemetry(Sensors)` -> 启用传感器。
 
@@ -153,7 +153,7 @@ import TabItem from '@theme/TabItem';
 |LED|-|24|
 
 <Tabs>
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="IOS 应用">
 
 导航到 `Settings` -> `External Notification` -> 启用 `GPIO` -> 设置 `Output Pin GPIO`。
 
@@ -161,7 +161,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="Android App">
+<TabItem value="android" label="Android 应用">
 
 导航到 `Settings` -> `External Notification` -> 启用 `GPIO` -> 设置 `Output Pin GPIO`。
 
@@ -218,7 +218,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-2.png" alt="pir" width={800} height="auto" /></p>
 
-点击 `Enter DFU Mode`，会显示一个名为 `T1000-E xxx` 的串口，点击并连接它，绿色 LED 将常亮，应该会显示一个名为 `T1000-E` 的驱动器。
+点击 `Enter DFU Mode`，会显示一个名为 `T1000-E xxx` 的串口，点击并连接它，绿色 LED 会常亮，应该会显示一个名为 `T1000-E` 的驱动器。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-serial.png" alt="pir" width={800} height="auto" /></p>
 
@@ -226,7 +226,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="method2" label="方法 2">
 
-将 USB 线缆连接到您的 PC，按住设备按钮，然后**快速**连接充电线缆两次，绿色 LED 将常亮，应该会显示一个名为 `T1000-E` 的驱动器。
+将 USB 线缆连接到您的 PC，按住设备按钮，然后**快速**连接充电线缆两次，绿色 LED 会常亮，应该会显示一个名为 `T1000-E` 的驱动器。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
@@ -265,7 +265,7 @@ import TabItem from '@theme/TabItem';
 
  访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。<br/>
 
- 点击 `Open Serial Monitor`，将设备连接到您的 PC，查看串口日志，关键词 `using nodenum`。
+ 点击 `Open Serial Monitor`，将设备连接到您的 PC，检查串口日志，关键词 `using nodenum`。
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/monitor2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -283,11 +283,11 @@ import TabItem from '@theme/TabItem';
 
 - 更换充电线缆
 
-### 设备卡在启动循环中
+### 设备陷入启动循环
 
 **描述：**
 
-设备会反复重启，串口连接和断开反复进行。
+设备会反复重启，串口会反复连接和断开。
 
 **解决方案：**
 
@@ -307,7 +307,7 @@ import TabItem from '@theme/TabItem';
 
 **描述：**
 
-设备无响应，无 LED 显示，无法与您的应用配对。
+设备无响应，无 LED 指示，无法与您的应用配对。
 
 **1) 设备仍可进入 DFU 模式，则尝试刷写引导程序**。
 
@@ -320,7 +320,7 @@ import TabItem from '@theme/TabItem';
 </div>
 
 :::danger note
-当您刷写引导程序时，请确保电缆连接稳定，在刷写过程中**不要**断开连接。
+当您刷写引导程序时，请确保线缆连接稳定，在刷写过程中**不要**断开连接。
 :::
 
 **步骤 1：Adafruit-nrfutil 安装**
@@ -398,7 +398,7 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 
 **步骤 3：刷写引导程序**
 
-在终端或命令提示符中，导航到您下载引导程序 zip 包的目录并执行以下命令，替换为您设备的正确端口：
+在终端或命令提示符中，导航到您下载引导程序压缩包的目录并执行以下命令，将正确的端口替换为您的设备：
 
 - **对于 Windows**：
 
@@ -423,7 +423,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 - 将波特率设置为 `1200`。
 
 - 连接设备。
-   连接时灯会短暂闪烁。继续尝试直到灯保持常亮，这意味着设备可以回到 DFU 模式，然后[刷写引导程序](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#flash-the-bootloader) -> [擦除闪存](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-2-flash-erase) -> [刷写固件](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-3-flash-firmware)。
+   连接时指示灯会短暂闪烁。继续尝试直到指示灯保持常亮，这意味着设备可以回到 DFU 模式，然后[刷写引导程序](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#flash-the-bootloader) -> [擦除闪存](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-2-flash-erase) -> [刷写固件](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-3-flash-firmware)。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/reset%20via%20serial%20tool.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -431,13 +431,13 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 **3) 设备无法进入 DFU 模式且无串口显示**
 
-- 请断开充电线并让设备放置几天直到电池完全耗尽，然后连接充电线并尝试重新配对。
+- 请断开充电线并将设备放置几天直到电池完全耗尽，然后连接充电线并尝试重新配对。
 
 **4) 如果以上步骤都不起作用，请联系技术支持：support@sensecapmx.com**
 
 ### 固件刷写失败
 
-- **串口无数据接收**
+- **串口未接收到数据**
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
 
@@ -459,7 +459,9 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 ## 资源
 
-[Meshtastic 文档](https://meshtastic.org/docs/introduction/)
+- [Meshtastic 文档](https://meshtastic.org/docs/introduction/)
+- [SenseCAP T1000 追踪器数据手册](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
+
 
 ## 技术支持与产品讨论
 

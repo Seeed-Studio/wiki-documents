@@ -13,8 +13,10 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /visual_trigger_and_ai_flash
 last_update:
-  date: 10/17/2025
+  date: 10/30/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -46,7 +48,13 @@ For detailed instructions, please refer to [Watcher Agent Firmware Flashing Guid
 ## Firmware Flashing Process
 
 <Tabs>
-<TabItem value="sensecraft" label="SenseCraft AI">
+<TabItem value="sensecraft" label="SenseCraft AI" default>
+
+<!-- :::caution Note
+The following guide is for an internal testing website that has not yet been released.
+The official version will be available soon.
+Please use another method to flash the firmware for now.
+::: -->
 
 - Prerequisites
 
@@ -96,11 +104,11 @@ For detailed instructions, please refer to [Watcher Agent Firmware Flashing Guid
 
 </TabItem>
 
-<TabItem value="flasher1" label="Flash Download Tool" default>
+<TabItem value="flasher1" label="Flash Download Tool">
 
 - Prerequisites
 
-  - **Visual Trigger Firmware v1.8.8**: [Download Link](https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/v1.8.8_sensecap-watcher.zip)
+  - **Visual Trigger Firmware v2.0.4**: [Download Link](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 or later)
 
@@ -146,7 +154,7 @@ For detailed instructions, please refer to [Watcher Agent Firmware Flashing Guid
 
 - Prerequisites
 
-  - **Visual Trigger Firmware v1.8.8**: [Download Link](https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/v1.8.8_sensecap-watcher.zip)
+  - **Visual Trigger Firmware v2.0.4**: [Download Link](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [esptool.py](https://github.com/espressif/esptool)
 
@@ -172,7 +180,7 @@ For detailed instructions, please refer to [Watcher Agent Firmware Flashing Guid
 
   - [ESP-IDF v5.5.1](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#manual-installation)
 
-  - [Open-Source Repository (Xiaozhi AI Collaboration)](https://github.com/Wvirgil123/xiaozhi-esp32/tree/feat-sscma_invoke)
+  - [Open-Source Repository (Xiaozhi AI Collaboration)](https://github.com/Wvirgil123/xiaozhi-esp32/tree/main)
 
 - Step 1. Open ESP-IDF CMD and Navigate to the project folder
   ```shell
@@ -226,6 +234,10 @@ For detailed instructions, please refer to [Watcher Agent Firmware Flashing Guid
 
 </TabItem>
 </Tabs>
+
+:::note
+Firmware version above v2.0.3 requires saying “Turn on the inference switch” to Xiaozhi to enable visual detection.
+:::
 
 ## AI Model Flashing Process
 
@@ -283,6 +295,19 @@ For detailed instructions, please refer to [Watcher Agent Firmware Flashing Guid
 3. **Device Not Responding**
    - Use a pin to gently press the reset button
    - Try erasing before flashing
+
+4. **Device does not wake up with visual detection**
+   - Check if there are relevant log messages in the serial output.
+   - Firmware version v2.0.3 requires saying “Turn on inference switch” to Xiaozhi to enable this function.
+
+5. **Serial shows visual recognition logs but device still cannot wake up**
+   - Go to the SenseCraft AI Platform and flash the Person model to the AI chip.
+
+## FAQ
+
+**Q: Can I flash other AI models to Himax?**
+
+A: Currently, only Face and Person models are supported. Flashing other models is not yet supported and will be available in a future update.
 
 ## Technical Support
 

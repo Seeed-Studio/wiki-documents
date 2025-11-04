@@ -10,23 +10,25 @@ keywords:
 - Flash
 - Visual
 - Activate
-image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
+image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /es/visual_trigger_and_ai_flash
 last_update:
-  date: 10/17/2025
+  date: 10/30/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Flasheando modelos de IA en el SenseCAP Watcher
+# Flasheando Modelos de IA en el SenseCAP Watcher
 
 ## Descripción General
 
 Agradecimientos especiales a [XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) por sus contribuciones de código abierto que hicieron posible este proyecto.
 
-Esta guía se centra en cómo flashear el SenseCAP Watcher con el firmware de Conversación Activada por Reconocimiento Visual y cómo reemplazar o actualizar el modelo de IA en el dispositivo. Está destinada como una guía instructiva práctica para estas operaciones.
+Esta guía se enfoca en cómo flashear el SenseCAP Watcher con el firmware de Conversación Activada por Reconocimiento Visual y cómo reemplazar o actualizar el modelo de IA en el dispositivo. Está destinada como una guía instructiva práctica para estas operaciones.
 
 Para una introducción completa a las características, aplicaciones y casos de uso del Watcher, consulte: [SenseCAP Watcher - Asistente de IA que interactúa activamente con el mundo](https://wiki.seeedstudio.com/es/solutions/hello_watcher_llms/)
 
@@ -39,20 +41,26 @@ Para una introducción completa a las características, aplicaciones y casos de 
 - PC con Windows  
 
 :::note
-Si está flasheando el **Firmware de Activación Visual**, y su modelo de dispositivo Watcher **no es -EN**, también necesitará flashear manualmente el archivo de autenticación para uso normal (solo se requiere una vez).  
+Si está flasheando el **Firmware de Activación Visual**, y el modelo de su dispositivo Watcher **no es -EN**, también necesitará flashear manualmente el archivo de autenticación para uso normal (solo requerido una vez).  
 Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watcher Agent](https://wiki.seeedstudio.com/es/flash_watcher_agent_firmware/).
 :::
 
 ## Proceso de Flasheo de Firmware
 
 <Tabs>
-<TabItem value="sensecraft" label="SenseCraft AI">
+<TabItem value="sensecraft" label="SenseCraft AI" default>
+
+<!-- :::caution Note
+The following guide is for an internal testing website that has not yet been released.
+The official version will be available soon.
+Please use another method to flash the firmware for now.
+::: -->
 
 - Prerrequisitos
 
   - [Plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai/home)
 
-- Paso 1. Abra nuestra plataforma y seleccione SenseCAP Watcher en el Espacio de Trabajo
+- Paso 1. Abra nuestra plataforma y Seleccione SenseCAP Watcher en el Espacio de Trabajo
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -86,7 +94,7 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI11.png" style={{width:500, height:'auto'}}/></div>
 
-  - Seleccione la versión que desea flashear y haga clic en `Confirm`
+  - Seleccione la versión que desea flashear y Haga clic en `Confirm`
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI12.png" style={{width:500, height:'auto'}}/></div>
 
@@ -96,15 +104,15 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
 
 </TabItem>
 
-<TabItem value="flasher1" label="Flash Download Tool" default>
+<TabItem value="flasher1" label="Herramienta de Descarga Flash">
 
 - Prerrequisitos
 
-  - **Firmware de Activación Visual v1.8.8**: [Enlace de Descarga](https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/v1.8.8_sensecap-watcher.zip)
+  - **Firmware de Activación Visual v2.0.4**: [Enlace de Descarga](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
-  - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 o posterior)
+  - [Herramienta de Descarga Flash](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 o posterior)
 
-- Paso 1. Conéctese al dispositivo (puerto Type-C en la parte inferior del dispositivo) y abra su Flash Download Tool
+- Paso 1. Conéctese al dispositivo (puerto Type-C en la parte inferior del dispositivo) y Abra su Herramienta de Descarga Flash
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting1.jpg" style={{width:300, height:'auto'}}/></div>
 
@@ -112,7 +120,7 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting2.jpg" style={{width:600, height:'auto'}}/></div>
 
-- Paso 3. Seleccione el Puerto COM y las Configuraciones de Flash
+- Paso 3. Seleccione el Puerto COM y Configuraciones de Flash
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting4.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -146,7 +154,7 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
 
 - Prerrequisitos
 
-  - **Firmware de Activación Visual v1.8.8**: [Enlace de Descarga](https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/v1.8.8_sensecap-watcher.zip)
+  - **Firmware de Activación Visual v2.0.4**: [Enlace de Descarga](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [esptool.py](https://github.com/espressif/esptool)
 
@@ -155,7 +163,7 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
   ```shell
   esptool.py -p /dev/ttyACM0 -b 2000000 write_flash 0 merged-binary.bin
   ```
-  *(Nota: Ajuste el puerto `/dev/ttyACM0` según su sistema, por ejemplo, `COM3` en Windows)*
+  *(Nota: Ajuste el puerto `/dev/ttyACM0` según su sistema, ej., `COM3` en Windows)*
 
 - Paso 2. Reiniciar el Dispositivo
 
@@ -172,9 +180,9 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
 
   - [ESP-IDF v5.5.1](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#manual-installation)
 
-  - [Repositorio de Código Abierto (Colaboración Xiaozhi AI)](https://github.com/Wvirgil123/xiaozhi-esp32/tree/feat-sscma_invoke)
+  - [Repositorio de Código Abierto (Colaboración Xiaozhi AI)](https://github.com/Wvirgil123/xiaozhi-esp32/tree/main)
 
-- Paso 1. Abra ESP-IDF CMD y navegue a la carpeta del proyecto
+- Paso 1. Abra ESP-IDF CMD y Navegue a la carpeta del proyecto
   ```shell
   cd xiaozhi-esp32
   ```
@@ -227,12 +235,16 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
 </TabItem>
 </Tabs>
 
+:::note
+La versión de firmware superior a v2.0.3 requiere decir "Turn on the inference switch" a Xiaozhi para habilitar la detección visual.
+:::
+
 ## Proceso de Flasheo del Modelo de IA
 
 ### Prerrequisitos
 - [Plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai/home)
 
-### Paso 1. Abra nuestra plataforma y seleccione SenseCAP Watcher en el Espacio de Trabajo
+### Paso 1. Abra nuestra plataforma y Seleccione SenseCAP Watcher en el Espacio de Trabajo
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -244,12 +256,12 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
 - Seleccione el puerto serie correcto (que termine con "A")
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
 
-- Haga clic en `Connect`
+- Haz clic en `Connect`
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
 
 ### Paso 3. Ver el modelo existente y cambiar a un nuevo modelo
 
-- Ver nombre del modelo y versión del modelo
+- Ver el nombre del modelo y la versión del modelo
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI5.png" style={{width:500, height:'auto'}}/></div>
 
@@ -283,6 +295,19 @@ Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watche
 3. **El dispositivo no responde**
    - Usa un pin para presionar suavemente el botón de reset
    - Intenta borrar antes de flashear
+
+4. **El dispositivo no se activa con detección visual**
+   - Verifica si hay mensajes de registro relevantes en la salida serial.
+   - La versión de firmware v2.0.3 requiere decir "Turn on inference switch" a Xiaozhi para habilitar esta función.
+
+5. **El serial muestra registros de reconocimiento visual pero el dispositivo aún no puede activarse**
+   - Ve a la plataforma SenseCraft AI y flashea el modelo Person al chip AI.
+
+## FAQ
+
+**P: ¿Puedo flashear otros modelos AI a Himax?**
+
+R: Actualmente, solo se admiten los modelos Face y Person. El flasheo de otros modelos aún no está soportado y estará disponible en una actualización futura.
 
 ## Soporte técnico
 

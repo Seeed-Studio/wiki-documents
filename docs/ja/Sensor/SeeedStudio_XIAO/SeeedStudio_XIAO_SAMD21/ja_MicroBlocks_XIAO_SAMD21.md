@@ -12,9 +12,9 @@ last_update:
 
 ## MicroBlocks
 
-MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラミングできるブロック言語です。見た目のシンプルさにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語で、GPIOピンの制御やI2C、SPI、シリアル経由でのペリフェラルとのインターフェース機能、そして約200の拡張ライブラリを備えています。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、ラピッドプロトタイピングやテストにMicroBlocksを好んで使用しています。
+MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラムできるブロック言語です。見た目のシンプルさにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語で、GPIOピンの制御やI2C、SPI、シリアル経由での周辺機器とのインターフェース機能、そして約200の拡張ライブラリを備えています。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、迅速なプロトタイピングとテストにMicroBlocksを好んで使用しています。
 
-### XIAO SAMD21のピン配置とハードウェア機能
+### XIAO SAMD21 ピン配置とハードウェア機能
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-pinout-samd21.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -24,7 +24,7 @@ MicroBlocksは、初心者（9歳から大人まで）がマイクロコント�
 他のボードとは異なり、このボードのピン0は**10ビットデジタル-アナログコンバーター**（DAC）です。ピン0を0から1023の間の数値に設定すると、ピンは0から3.3ボルトの間の安定した電圧を出力します。（対照的に、PWMは数値がパルス幅を決定するデジタルパルスの連続を出力します。）DACピンは音声やその他のアナログ信号の生成に使用できます。
 
 このボードには黄色のユーザーLED（ピン13）と青色のRX/TX LED（ピン11と12）があります。
-すべてのLEDは反転しています：LEDを点灯させるには、関連するピンをLOWに設定します。
+すべてのLEDは反転しています：LEDを点灯させるには関連するピンをLOWに設定します。
 
 RX/TX LEDはMicroBlocksで使用できますが、注意点があります。
 MicroBlocksは常にボードとデータを交換しているため、
@@ -35,7 +35,7 @@ MicroBlocksエディターを使用している際にRX/TX LEDが明るく点滅
 
 ## MicroBlocksファームウェアのインストール
 
-このボードにはブートボタンがないため、ブートローダーモードに入るのは少し難しいです。USBポートの左側にある2つのRSTピンの接点をワイヤーで素早く2回ショートさせます：
+このボードにはブートボタンがないため、ブートローダーモードに入るのは少し難しいです。USBポートの左側にある2つのRSTピンの接点を素早く2回ショートさせるためにワイヤーを使用してください：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif" style={{width:400, height:'auto'}}/></div>
 
@@ -44,25 +44,25 @@ MicroBlocksエディターを使用している際にRX/TX LEDが明るく点滅
 
 MicroBlocksの[ファームウェアフォルダ](https://microblocks.fun/downloads/latest/vm)から
 [ファームウェアファイル](https://microblocks.fun/downloads/latest/vm/vm_xiao_samd21.uf2)をダウンロードし、
-そのファイルを仮想USBドライブにドラッグします。
+そのファイルを仮想USBドライブにドラッグしてください。
 
 ファームウェアがインストールされ、数秒後に仮想USBドライブが消えます。
-ディスクが適切に取り出されなかったという警告は無視できます。
+ディスクが適切に取り出されなかったという警告は無視してください。
 
 ## ボードをMicroBlocksに接続する
 
-データUSBケーブル（電源専用ケーブルでは**ない**）でボードをコンピューターに接続します。
+データ用USBケーブル（電源専用ケーブルでは**ない**）でボードをコンピューターに接続してください。
 
-ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microblocks.fun/run/microblocks.html)を実行します。
-**connect**（プラグアイコン）ボタンをクリックします：
+ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microblocks.fun/run/microblocks.html)を実行してください。
+**connect**（プラグアイコン）ボタンをクリックしてください：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-button.png" style={{width:300, height:'auto'}}/></div>
 
-メニューから**connect (USB)**を選択します：
+メニューから**connect (USB)**を選択してください：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-menu.png" style={{width:300, height:'auto'}}/></div>
 
-ダイアログからボードを選択し、**connect**ボタンをクリックします：
+ダイアログからボードを選択し、**connect**ボタンをクリックしてください：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-dialog-samd21.png" style={{width:400, height:'auto'}}/></div>
 
@@ -73,18 +73,18 @@ ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microbloc
 ## MicroBlocksでのコーディング
 
 MicroBlocksは**ライブ**コーディング環境なので、コーディングしながらテストできます。
-ブロックやスクリプトをクリックして実行します。
-ブロックをスクリプトペインにドラッグして組み立て、スクリプトを作成します。
+ブロックやスクリプトをクリックして実行してください。
+ブロックをスクリプトペインにドラッグして組み立て、スクリプトを作成してください。
 
 コードは永続的なフラッシュメモリに保存され、ボードが
-MicroBlocksエディターに接続されていなくても実行できます。
-**when started**ブロックの下にあるスクリプトは、ボードに電源が入ったときに実行されます。
+MicroBlocksエディターに接続されていない場合でも実行できます。
+**when started**ブロックの下にあるスクリプトは、ボードに電源が供給されたときに実行されます。
 
 MicroBlocksは並行処理をサポートしています。最大10個のスクリプトを同時に実行できます。
 
-多くの組み込みブロックに加えて、MicroBlocksには約200のライブラリがあり、
-追加機能やペリフェラルをサポートしています。
-**Add Library**ボタンをクリックしてライブラリを追加します。
+多くの組み込みブロックに加えて、MicroBlocksには追加機能と周辺機器をサポートする
+約200のライブラリがあります。
+ライブラリを追加するには**Add Library**ボタンをクリックしてください。
 
 ## 例
 
@@ -95,9 +95,16 @@ MicroBlocksは並行処理をサポートしています。最大10個のスク�
 [ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)には
 多くの追加例が含まれています。
 
+## プロジェクトデモ
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/main.png" style={{width:600, height:'auto'}}/></div>
+
+より包括的なプロジェクトデモとして、メーカーの[Luis](https://www.hackster.io/luis_a_la_m)がXIAO SAMD21、Grove Shield for XIAO、LEDマトリックスを使用して8x8 LED Neo-pixelデバイスを構築しました。これにより、複雑なコードを書くことなくMicroBlocksを使用して見事なピクセルパターンを描くことができます。ステップバイステップのチュートリアルは[Hackster](https://www.hackster.io/luis_a_la_m/paint-with-pixels-8f3a15)で見つけることができます。
+
+
 ## 特別な感謝
 
-この記事を執筆してくれたMicroBlocksのJohnに特別な感謝を。
+この記事を執筆してくれたMicroBlocksのJohnに特別な感謝を申し上げます。
 
 ## MicroBlocksリソース
 
