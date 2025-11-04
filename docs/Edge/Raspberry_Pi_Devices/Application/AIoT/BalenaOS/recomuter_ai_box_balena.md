@@ -6,7 +6,7 @@ keywords:
   - reComputer R2140
   - balena
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reComputer_ai_r2140_balena
+slug: /recomputer_ai_r2140_balena
 last_update:
   date: 11/4/2025
   author: JiahaoLi
