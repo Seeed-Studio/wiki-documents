@@ -8277,6 +8277,7 @@ const sidebars = {
                   items: [
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/cn_recomputer_r1000_build_seeed_balena_image',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/cn_recomputer_r1000_balena',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/cn_recomuter_ai_box_balena'
                   ]
                 },
                 {
@@ -13283,6 +13284,7 @@ const sidebars = {
                   items: [
                     'es/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/es_recomputer_r1000_build_seeed_balena_image',
                     'es/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/es_recomputer_r1000_balena',
+                    'es/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/es_recomuter_ai_box_balena'
                   ]
                 },
                 {
@@ -18289,6 +18291,7 @@ const sidebars = {
                   items: [
                     'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/ja_recomputer_r1000_build_seeed_balena_image',
                     'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/ja_recomputer_r1000_balena',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/ja_recomuter_ai_box_balena'
                   ]
                 },
                 {
