@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-03 14:52:23 (北京时间)
-// 多语言页面: 2035 个
+// 生成时间: 2025-11-04 10:38:25 (北京时间)
+// 多语言页面: 2036 个
 
 (function() {
   'use strict';
@@ -2604,6 +2604,12 @@
     "ja"
   ],
   "/reterminal_e10xx_with_lopaka": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reterminal_e10xx_with_squareline_vision": [
     "cn",
     "en",
     "es",

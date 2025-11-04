@@ -810,7 +810,7 @@ Haz clic en **INSTALL** para instalar el código en el dispositivo y verás la s
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphome_ee042.png" style={{width:1000, height:'auto'}}/></div><br />
 
 <Tabs>
-<TabItem value='Install through browser'>
+<TabItem value='Instalar a través del navegador'>
 
 :::tip
 Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está lejos de ti, recomendamos usar este método. Puedes instalarlo con la computadora que tengas a mano.
@@ -850,7 +850,7 @@ Espera un momento y verás '¡Hola mundo!' en la pantalla ～
 
 </TabItem>
 
-<TabItem value='Install through host'>
+<TabItem value='Instalar a través del host'>
 
 :::tip
 Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está cerca, recomendamos usar este método ya que es más simple.
