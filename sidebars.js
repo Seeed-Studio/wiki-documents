@@ -3178,6 +3178,7 @@ const sidebars = {
                   items: [
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/recomputer_r1000_build_seeed_balena_image',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/recomputer_r1000_balena',
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/recomuter_ai_box_balena'
                   ]
                 },
                 {
