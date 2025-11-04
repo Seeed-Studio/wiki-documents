@@ -1,6 +1,6 @@
 ---
-description: ネットワーク接続といくつかの潜在的なトラブルシューティング
-title: FAQ
+description: ネットワーク接続と潜在的なトラブルシューティング
+title: よくある質問
 keywords:
   - Edge
   - reCamera
@@ -8,7 +8,7 @@ keywords:
   - network troubleshoot
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/recamera_network_connection
-sidebar_position: 4
+sidebar_position: 6
 last_update:
   date: 04/08/2025
   author: Parker Hu
@@ -16,16 +16,16 @@ last_update:
 
 # よくある質問
 
-reCameraのネットワーク設定中にUSB接続デバイスがreCameraを認識できない状況や、ネットワーク設定後にネットワーク接続が失敗する問題が発生した場合は、この記事を参照してください。
+reCamera のネットワーク設定中に USB 接続デバイスが reCamera を認識しない状況や、ネットワーク設定後にネットワーク接続が失敗する問題が発生した場合は、この記事を参照してください。
 
-Windowsシステムでのドライバーのインストール、Linuxシステムでのネットワークカードの確認、Macシステムでのネットワーク優先度の設定など、コンピューターのネットワーク環境を変更・設定する必要があります。
+Windows システムでのドライバーのインストール、Linux システムでのネットワークカードの確認、Mac システムでのネットワーク優先度の設定など、コンピューターのネットワーク環境を変更・設定する必要があります。
 
 ## 作業環境の設定
 
-### USB NET設定
+### USB NET セットアップ
 
-USBネットワーキングを使用するために、システムでUsbNcmとDHCPをデフォルトで有効にしています。
-UsbNcmは、Linux、macOS、および最新のWindowsシステムでドライバー不要です。`ssh recamera@192.168.42.1`、`passwd = recamera`を使用してreCameraのターミナルに直接ログインできます。
+USB ネットワーキングを使用するため、システムでは UsbNcm と DHCP をデフォルトで有効にしています。
+UsbNcm は Linux、macOS、および最新の Windows システムでドライバー不要です。`ssh recamera@192.168.42.1`、`passwd = recamera` を使用して直接 recamera のターミナルにログインできます。
 
 - [Windows](#jump1)
 - [Linux](#jump2)
@@ -33,73 +33,73 @@ UsbNcmは、Linux、macOS、および最新のWindowsシステムでドライバ
 
 ### <span id="jump1"> Windows </span>
 
-Ncmドライバーがコンピューターに正しくインストールされていることを確認してください（画像のとおり）。これは、デバイスマネージャー -> ネットワークアダプターで確認できます。
+画像に示すように、Ncm ドライバーがコンピューターに正しくインストールされていることを確認してください。これは、デバイス マネージャー -> ネットワーク アダプターで確認できます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/002.png" /></div>
 
-お使いのマシンにこのドライバーがない場合は、以下の手順に従ってNcmをインストールしてください。
+お使いのマシンにこのドライバーがない場合は、以下の手順に従って Ncm をインストールしてください。
 
-#### Windows用NCMのインストール
+#### Windows 用 NCM のインストール
 
 **ステップ1**:
-`win+x`を押して`デバイスマネージャー`を選択します。
-`その他のデバイス`で認識されていないデバイスを見つけて、`ドライバーの更新`を選択します。
+`win+x` を押して `Device Manager` を選択します。
+`other devices` で認識されていないデバイスを見つけて、`Update driver` を選択します。
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/003.png" /></div>
 
 **ステップ2**:
-`コンピューターを参照してドライバーを検索`を選択します
+`Browse my computer for drivers` を選択します
 
 <br />
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/004.png" /></div>
 
 **ステップ3:**:
-`コンピューター上の利用可能なドライバーの一覧から選択します`を選択します
+`Let me pick from a list of available drivers on my computer` を選択します
 
 <br />
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/005.png" /></div>
 
 **ステップ4:**:
-`ネットワークアダプター`を選択して`次へ`をクリックします
+`Network adapters` を選択して、`next` をクリックします
 
 <br />
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/014.png" /></div>
 
-**ステップ5**:`Microsoft` -> `UsbNcm Host Device`を選択して次へをクリックします。
+**ステップ5**: `Microsoft` -> `UsbNcm Host Device` を選択して、Next をクリックします。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/006.png" /></div>
 
-**ステップ6**:アラートバーがポップアップしたら、`はい`を選択します
+**ステップ6**: アラートバーがポップアップしたら、`Yes` を選択します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/007.png" /></div>
 
-**ステップ7**:ターミナルウィンドウでping 192.168.42.1と入力します。
+**ステップ7**: ターミナルウィンドウで ping 192.168.42.1 と入力します。
 <br />
-以下の出力は、reCameraに正常に接続できたことを示しています。
+以下の出力は、reCamera への接続が成功したことを示しています。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/008.png" /></div>
 
 ### <span id="jump2"> Linux </span>
 
-追加の設定は不要で、USBケーブルを接続するだけです。`ifconfig`と入力すると、usb1ネットワークアダプターが表示されます。例：192.168.42.89。デバイスのIPは192.168.42.1です
+追加の設定は不要で、USB ケーブルを接続するだけです。`ifconfig` と入力すると、usb1 ネットワークアダプターが表示されます。例：192.168.42.89。デバイスの IP は 192.168.42.1 です
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/009.png" /></div>
 
 ### <span id="jump3"> MacOS </span>
 
-システム設定 -> ネットワークでUSBネットワークアダプターを確認してください。デバイスのIPは192.168.42.1です
+システム設定 -> ネットワークで USB ネットワークアダプターを確認してください。デバイスの IP は 192.168.42.1 です
 
 ## コンピューターネットワークエラー
 
 ### windows
 
-Windows 10システムのコンピューターでreCameraのUSBネットワークを使用した後にネットワークアクセスの問題が発生した場合。
-`win+x`を押してコントロールパネルをクリックします。すべてのコントロールパネル項目 -> ネットワーク接続を選択します。
+Windows 10 システムのコンピューターで reCamera の USB ネットワークを使用した後にネットワークアクセスの問題が発生した場合。
+`win+x` を押して Control Panel をクリックします。All Control Panel Items -> Network Connections を選択します。
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/010.png" /></div>
 
-UsbNcm Host Deviceを右クリックします。`プロパティ` -> `TCP/IPv4` -> `プロパティ` -> `詳細設定` -> `自動メトリック`のチェックを外す -> `インターフェースメトリック`フィールドに`255`を入力 -> `ok`をクリック
+UsbNcm Host Device を右クリックします。`Properties` -> `TCP/IPv4` -> `Properties` -> `Advanced` -> `Automatic metric` のチェックを外す -> `Interface metric` フィールドに `255` を入力 -> `ok` をクリック
 <br />
 
 これでネットワークが復旧します。
@@ -107,17 +107,17 @@ UsbNcm Host Deviceを右クリックします。`プロパティ` -> `TCP/IPv4` 
 
 ### MAC
 
-コンピューターがMacOSを実行している場合。コンピューターネットワークカードUsbNcmネットワークカードの優先度を最後に設定するだけです
+コンピューターが MacOS を実行している場合。コンピューターのネットワークカード UsbNcm ネットワークカードの優先度を最後に設定するだけです
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/012.png" /></div>
 
 具体的な設定は以下の通りです：
 
-**ステップ1**: `システム設定`を選択
+**ステップ1**: `System Settings` を選択します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/015.png" /></div>
 
-**ステップ2**: この順序が表示されます。これから変更します。
+**ステップ2**: この順序が表示されますが、これを変更します。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/016.png" /></div>
 
@@ -125,11 +125,11 @@ UsbNcm Host Deviceを右クリックします。`プロパティ` -> `TCP/IPv4` 
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/017.png" /></div>
 
-**ステップ4**: `サービスの順序を設定`を選択
+**ステップ4**: `Set Service Order` を選択します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/018.png" /></div>
 
-**ステップ5**: NCMをWi-Fiの下にドラッグして`ok`をクリック
+**ステップ5**: NCM を Wi-Fi の下にドラッグして、`ok` をクリックします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/019.png" /></div>
 
@@ -141,11 +141,11 @@ UsbNcm Host Deviceを右クリックします。`プロパティ` -> `TCP/IPv4` 
 
 [reCamera OS](https://github.com/Seeed-Studio/reCamera-OS)
 
-[reCamera Series](https://github.com/Seeed-Studio/OSHW-reCamera-Series)
+[reCamera シリーズ](https://github.com/Seeed-Studio/OSHW-reCamera-Series)
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

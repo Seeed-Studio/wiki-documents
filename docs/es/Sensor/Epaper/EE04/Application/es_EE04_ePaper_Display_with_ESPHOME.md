@@ -164,9 +164,9 @@ Este es un ejemplo muy básico y mostrará "¡Hola Mundo!" en la pantalla.
 Puedes usar este ejemplo copiando el código de abajo y pegándolo después de la línea de código `captive_portal` en tu archivo Yaml.
 
 :::tip
-- 4.26 Pulgadas Negro/Blanco  
-- 2.13 Pulgadas 122*250 Negro/Blanco/Amarillo/Rojo
-- 2.9 Pulgadas 128*296 Negro/Blanco/Amarillo/Rojo
+- 4.26 Pulgadas Blanco/Negro  
+- 2.13 Pulgadas 122*250 Blanco/Negro/Amarillo/Rojo
+- 2.9 Pulgadas 128*296 Blanco/Negro/Amarillo/Rojo
 
 Estos tipos de pantallas de tinta electrónica aún no son compatibles. Actualizaremos la información relevante en el Wiki en futuras versiones—mantente atento.
 :::
@@ -281,7 +281,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -311,7 +311,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -455,7 +455,7 @@ Espera un momento y verás la retroalimentación como la siguiente imagen. Si fa
 
 ## Conceptos básicos para dibujar en ESPHome
 
-### Dibujar gráficos simples
+### Dibujando Gráficos Simples
 
 Este código YAML de ejemplo configura la interfaz SPI y la pantalla de papel electrónico de la Serie reTerminal E para un proyecto ESPHome. La sección `lambda` contiene comandos de dibujo que renderizan formas simples en la pantalla:
 
@@ -562,7 +562,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -590,7 +590,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -653,11 +653,11 @@ Cuando veas la retroalimentación como en la siguiente imagen, significa que el 
 
 Debido a las limitaciones de espacio, no elaboraremos demasiado sobre los métodos de dibujo y principios de otros patrones. Si es necesario, se recomienda al lector leer [ESPHome en esta parte de ejemplos detallados](https://esphome.io/components/display/).
 
-### Obteniendo valores de Home Assistant para mostrar
+### Obtener valores de Home Assistant para mostrar
 
 Para mostrar datos meteorológicos en tu dispositivo EE04 ePaper Display, necesitarás acceder a datos de temperatura, condiciones meteorológicas y velocidad del viento desde Home Assistant. La integración Open-Meteo proporciona datos meteorológicos confiables que se pueden acceder a través de Developer Tools.
 
-#### Instalando la Integración Open-Meteo
+#### Instalación de la integración Open-Meteo
 
 Paso 1. Abre tu panel de Home Assistant y navega a **Settings** → **Devices & Services**.
 
@@ -671,23 +671,23 @@ Paso 4. Sigue el asistente de configuración para establecer tu ubicación y uni
 
 Paso 5. Una vez instalada, la integración Open-Meteo creará varias entidades relacionadas con el clima en tu instancia de Home Assistant.
 
-#### Accediendo a Datos Meteorológicos en Developer Tools
+#### Acceso a datos meteorológicos en Developer Tools
 
 Después de instalar la integración Open-Meteo, puedes acceder a los datos meteorológicos a través de Developer Tools:
 
 Paso 1. En tu panel de Home Assistant, navega a **Developer Tools** → **States**.
 
-Paso 2. En el cuadro de filtro, escribe `weather` para encontrar la entidad principal del clima.
+Paso 2. En el cuadro de filtro, escribe `weather` para encontrar la entidad meteorológica principal.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/39.png" style={{width:1000, height:'auto'}}/></div>
 
-Paso 3. Haz clic en la entidad para ver todos los atributos disponibles. Los atributos clave del clima incluyen:
+Paso 3. Haz clic en la entidad para ver todos los atributos disponibles. Los atributos meteorológicos clave incluyen:
 
 - `temperature`: Temperatura actual (en tus unidades configuradas)
 - `wind_bearing`: Dirección del viento
 - `wind_speed`: Velocidad del viento
 
-#### Usando Datos Meteorológicos en ESPHome
+#### Uso de datos meteorológicos en ESPHome
 
 Para usar estos datos meteorológicos en tu configuración ESPHome para el EE04 ePaper Display, necesitarás configurar una conexión API de Home Assistant en tu configuración YAML de ESPHome:
 
@@ -714,7 +714,7 @@ sensor:
     internal: true
 ```
 
-Esta configuración crea entidades de sensores en tu dispositivo ESPHome que extraen datos de la integración meteorológica de Home Assistant. Luego puedes usar estos sensores para actualizar tu pantalla reTerminal E Series ePaper Display con la información meteorológica actual.
+Esta configuración crea entidades de sensor en tu dispositivo ESPHome que extraen datos de la integración meteorológica de Home Assistant. Luego puedes usar estos sensores para actualizar tu pantalla reTerminal E Series ePaper Display con la información meteorológica actual.
 
 :::tip
 Para datos de pronóstico, necesitarás usar las entidades `weather.open_meteo_forecast` que contienen valores predichos para días futuros.
@@ -1303,7 +1303,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1344,7 +1344,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1420,7 +1420,7 @@ La pantalla de papel electrónico de 7.3 pulgadas requiere ESPHome v10.15 o post
 
 :::
 
-Paso 7. Guarda tu configuración y súbela a tu EE04 ePaper Display. Cuando veas una respuesta como la siguiente imagen, significa que el código se está ejecutando correctamente.
+Paso 7. Guarda tu configuración y súbela a tu pantalla ePaper EE04. Cuando veas una respuesta como la siguiente imagen, significa que el código se está ejecutando correctamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04_esphome4.png" style={{width:500, height:'auto'}}/></div><br />
 
@@ -1508,7 +1508,7 @@ Para mejores resultados en pantallas de papel electrónico, usa imágenes de alt
 
 #### Configurando ESPHome para Visualización de Imágenes
 
-Paso 5. Agrega el siguiente código a tu archivo de configuración de ESPHome después de la sección `captive_portal`. Este código define el recurso de imagen y configura la pantalla para mostrarla.
+Paso 5. Agrega el siguiente código a tu archivo de configuración de ESPHome después de la sección `captive_portal`. Este código define el recurso de imagen y configura la pantalla para mostrarlo.
 
 <Tabs>
 <TabItem value="1.54 Inch" label="1.54 Inch" default>
@@ -1628,7 +1628,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 4.20in
+    model: gdey042t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1661,7 +1661,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 5.83inv2
+    model: gdey0583t81
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1784,14 +1784,12 @@ Al combinar imágenes con texto y otros elementos de visualización cubiertos en
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

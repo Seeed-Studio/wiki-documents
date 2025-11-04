@@ -92,10 +92,6 @@ docker run hello-world
 sudo apt install docker-compose
 ```
 
-完璧です。**Packet Forwarderセットアップ**を同じ構造化されたwikiスタイルに再フォーマットします：
-
----
-
 ## Packet Forwarderの実行
 
 **WM1302 LoRaコンセントレーター**は、LoRaモジュールとChirpStack間でデータを中継するために**Semtech Packet Forwarder**が必要です。reComputer R11はLoRaモジュール用の事前構築されたセットアップガイドを提供しています。
@@ -142,10 +138,6 @@ nano global_conf.json.sx1250.US915
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
-同じwikiスタイルでの**「ゲートウェイの作成」セクション**は以下の通りです：
-
----
-
 ## ゲートウェイの開始
 
 docker Composeファイルをダウンロードするには、reComputerでこのページにアクセスしてダウンロードする必要があります。[リンク](https://www.chirpstack.io/docs/getting-started/docker.html)
@@ -168,7 +160,6 @@ docker Composeファイルをダウンロードするには、reComputerでこ�
       - mosquitto
 
 ```
-
 
 ChirpStackをインストールした後、**R11 LoRaゲートウェイ**を登録してデータ処理を開始できます。
 
@@ -508,7 +499,6 @@ function toBinary(arr) {
 5. **Application Key** を入力し、**Submit** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/chirpstack/image9.png" alt="pir" width={800} height="auto" /></p>
-
 
 ## デバイスステータスの確認
 

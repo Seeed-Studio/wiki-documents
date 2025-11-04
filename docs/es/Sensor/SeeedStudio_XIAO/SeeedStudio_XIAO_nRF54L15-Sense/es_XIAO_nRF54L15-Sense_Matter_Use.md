@@ -68,7 +68,7 @@ Para comenzar a desarrollar una aplicación Matter en el XIAO nRF54L15, asegúre
 Antes de ejecutar el ejemplo, asegúrese de que el XIAO nRF54L15 haya sido configurado en el nRF Connect SDK. Si no se ha completado, consulte esta guía [Wiki](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/).
 :::
 
-## Inicio Rápido con Ejemplo de Matter
+## Inicio Rápido con Ejemplo Matter
 
 ### Crear una rutina Matter
 En la extensión nRF Connect para VSCode, seleccione: Create New Application → Copy Example → Ingrese "matter" → Seleccione Matter Thermostat
@@ -116,6 +116,13 @@ Navegue al directorio `sysbuild/mcuboot/boards` y agregue los siguientes dos arc
 ### Habilitar Partición y DFU
 - [pm_static_xiao_nrf54l15_nrf54l15_cpuapp.yml](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/pm_static_xiao_nrf54l15_nrf54l15_cpuapp.yml)
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/5.png" style={{width:600, height:'auto'}}/></div>
+
+
+### Configuración Sysbuild
+
+- [sysbuild.conf](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/sysbuild.conf)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/00000.png" style={{width:600, height:'auto'}}/></div>
+
 
 ### Construir Proyecto
 - Abra la ventana Add Build Configuration.
@@ -171,9 +178,9 @@ Después de compilar y grabar el firmware en el XIAO nRF54L15, puede usar la her
     </tr>
 </table>
 
-- Rename Device：Después de la configuración, asigne un nombre a su dispositivo, como "Thermostat", luego toque Update Name.
-- Device Appears in List：Una vez agregado, verás el nuevo Termostato en la lista de Dispositivos.
-- Control Device：Abre la página de control del Termostato para ajustar la temperatura (ej., Enfriar a 79°F, Calentar a 68°F) y configurar el modo (ej., Auto).
+- Renombrar Dispositivo: Después de la configuración, dale un nombre a tu dispositivo, como "Thermostat", luego toca Update Name.
+- El Dispositivo Aparece en la Lista: Una vez agregado, verás el nuevo Thermostat en la lista de Devices.
+- Controlar Dispositivo: Abre la página de control del Thermostat para ajustar la temperatura (ej., Cool a 79°F, Heat a 68°F) y establecer el modo (ej., Auto).
 
 <table align="center">
     <tr>
@@ -240,14 +247,14 @@ Después de compilar y grabar el firmware en el XIAO nRF54L15, puede usar la her
 
 Si eres nuevo en Matter, los siguientes recursos proporcionan conocimiento fundamental y soporte de desarrollo para trabajar dentro del ecosistema Matter:
 
-- **[Quick-Start Guides](https://docs.silabs.com/matter/2.2.0/matter-fundamentals/)**: Un punto de partida ideal para aprender los fundamentos de Matter, cubriendo conceptos esenciales y componentes del ecosistema.
-- **[Matter Developer Journey](https://www.silabs.com/wireless/matter/matter-developer-journey)**: Una guía completa a través del proceso de desarrollo Matter, incluyendo herramientas necesarias, recursos y mejores prácticas para una implementación efectiva.
-- **[Matter Specifications](https://csa-iot.org/developer-resource/specifications-download-request/)**: Especificaciones técnicas para el protocolo Matter y sus componentes. Este es el recurso principal para entender las capacidades del protocolo y detalles operacionales.
-- **[The Device Data Model - Google Home Developers](https://developers.home.google.com/matter/primer/device-data-model)**: Una explicación detallada del modelo de datos del dispositivo, que estandariza cómo las características y capacidades del dispositivo se representan en el ecosistema Matter.
+- **[Guías de Inicio Rápido](https://docs.silabs.com/matter/2.2.0/matter-fundamentals/)**: Un punto de partida ideal para aprender los fundamentos de Matter, cubriendo conceptos esenciales y componentes del ecosistema.
+- **[Viaje del Desarrollador Matter](https://www.silabs.com/wireless/matter/matter-developer-journey)**: Una guía completa a través del proceso de desarrollo Matter, incluyendo herramientas necesarias, recursos y mejores prácticas para una implementación efectiva.
+- **[Especificaciones Matter](https://csa-iot.org/developer-resource/specifications-download-request/)**: Especificaciones técnicas para el protocolo Matter y sus componentes. Este es el recurso principal para entender las capacidades del protocolo y detalles operacionales.
+- **[El Modelo de Datos del Dispositivo - Google Home Developers](https://developers.home.google.com/matter/primer/device-data-model)**: Una explicación detallada del modelo de datos del dispositivo, que estandariza cómo las características y capacidades del dispositivo se representan en el ecosistema Matter.
 
 ## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

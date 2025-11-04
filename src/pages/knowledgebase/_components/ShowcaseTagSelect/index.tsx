@@ -15,9 +15,9 @@ import React, {
 } from 'react';
 import { useHistory, useLocation } from '@docusaurus/router';
 import { toggleListItem } from '@site/src/utils/jsUtils';
-import type { TagType } from '../../../define/knowledgebase'
-import clsx from 'clsx'
-import { prepareUserState } from '../../index';
+import type { TagType } from '../../../define/knowledgebase';
+import clsx from 'clsx';
+import { prepareUserState } from '../../KnowledgebasePage';
 import styles from './styles.module.css';
 
 interface Props extends ComponentProps<'input'> {

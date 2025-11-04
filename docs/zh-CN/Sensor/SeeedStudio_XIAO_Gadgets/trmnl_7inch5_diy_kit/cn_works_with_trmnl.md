@@ -26,16 +26,16 @@ last_update:
 
 ## 什么是 [TRMNL](https://trmnl.app/)？
 
-TRMNL 是一个创新平台，旨在帮助人们在日益分散注意力的数字世界中保持专注和冷静。TRMNL 成立于 2023 年，已迅速成为 E Ink® 仪表板管理的领先解决方案，提供了一种独特的信息显示方法，避免了传统屏幕的持续通知和干扰。
+TRMNL 是一个创新平台，旨在帮助人们在日益分散注意力的数字世界中保持专注和冷静。成立于 2023 年，TRMNL 迅速成为 E Ink® 仪表板管理的领先解决方案，为显示信息提供了一种独特的方法，避免了传统屏幕的持续通知和干扰。
 
-TRMNL 的核心理念是技术应该增强我们的生活，而不是要求持续的关注。该平台提供了一种优雅的方式，通过 E Ink® 显示屏一目了然地查看重要信息，创造了更加专注且不那么侵扰的技术体验。
+TRMNL 的核心理念是技术应该增强我们的生活，而不是要求持续的关注。该平台提供了一种优雅的方式，通过 E Ink® 显示屏一目了然地查看重要信息，创造了一种更加专注且不那么侵扰的技术体验。
 
 ### 为什么使用 TRMNL？
 
 集成 TRMNL 将带来几个引人注目的好处：
 
 - **简化仪表板创建**：TRMNL 不断增长的应用程序和集成库使得创建自定义信息显示变得容易，无需复杂的编程
-- **低功耗**：TRMNL 高效软件与我们 E Ink® 显示屏的最小功耗要求相结合，创造了极其节能的解决方案
+- **低功耗**：TRMNL 高效软件与我们 E Ink® 显示屏的最小功耗要求相结合，创造了一个极其节能的解决方案
 - **无干扰信息**：获取您需要的信息，而无需传统屏幕带来的持续通知和眼部疲劳
 - **定期更新**：TRMNL 的积极开发意味着每周都会添加新功能和集成，不断扩展您显示屏的可能性
 - **开发者友好**：通过 TRMNL 的开放 API 和开发者工具，您可以为特定需求创建自定义插件和集成
@@ -116,7 +116,7 @@ autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowful
 
 1. **购买 TRMNL 访问权限**
 
-   - 在以下网址购买 TRMNL Web 应用程序 + 设备功能的访问权限：[https://shop.usetrmnl.com/products/byod](https://shop.usetrmnl.com/products/byod)
+   - 在以下网址购买 TRMNL 网络应用 + 设备功能的访问权限：[https://shop.usetrmnl.com/products/byod](https://shop.usetrmnl.com/products/byod)
    - 这为您提供了使用 TRMNL 平台所需的凭据
    - 前往 [https://usetrmnl.com/claim-a-device](https://usetrmnl.com/claim-a-device) 激活虚拟设备（购买后可能需要最多 10 分钟）
 
@@ -139,18 +139,18 @@ autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowful
 ### 固件刷写
 
 :::tip
-如果您获得的是全新套件，它内部已经有固件。所以您可以跳过这一步。
+如果您得到的是全新套件，它内部会有固件。所以您可以跳过这一步。
 :::
 
 要让您的 TRMNL 7.5inch(OG) DIY 套件与 TRMNL 配合工作，您需要将适当的固件刷写到您的设备上。有三种推荐的方法：
 
-#### 方法 1：通过 TRMNL Web Flasher 刷写（最简单）
+#### 方法 1：通过 TRMNL 网络刷写器刷写（最简单）
 
 :::tip
 请使用 **FW 1.5.12** 或更新的固件以获得 Seeed 兼容性。
 :::
 
-1. **前往 TRMNL Web Flasher**
+1. **前往 TRMNL 网络刷写器**
 
    - 访问 [https://usetrmnl.com/flash](https://usetrmnl.com/flash)
    - 此工具允许您直接从浏览器刷写设备。
@@ -214,7 +214,7 @@ autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowful
 
 ## 配置 Wi-Fi 并向 TRMNL 发送播放列表
 
-要将您的 TRMNL 7.5inch(OG) DIY 套件与 TRMNL 一起使用并发送播放列表，您首先需要将设备连接到您的 Wi-Fi 网络。这个过程称为"WiFi 配对模式"，通过简单的强制门户完成。请按照以下步骤操作：
+要将您的 TRMNL 7.5inch(OG) DIY 套件与 TRMNL 一起使用并发送播放列表，您首先需要将设备连接到您的 Wi-Fi 网络。这个过程称为"WiFi 配对模式"，通过一个简单的强制门户完成。请按照以下步骤操作：
 
 > 💡 **Wi-Fi 故障排除？** 如果您在将设备连接到 Wi-Fi 时遇到问题，请参考 [TRMNL 设备 Wi-Fi 故障排除指南](https://help.usetrmnl.com/en/articles/10193157-device-wifi-troubleshooting)以获得常见网络和路由器兼容性问题的解决方案。
 
@@ -257,7 +257,7 @@ autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowful
 
 > ⚠️ **注意：** MAC 地址在强制门户中只显示 1-2 秒。如果您错过了，您也可以：
 >
-> - 从 VS Code > PlatformIO 构建/上传日志中检索它。
+> - 从 VS Code > PlatformIO 构建/上传日志中获取它。
 > - 使用 [usetrmnl.com/flash](https://usetrmnl.com/flash) 方法，并在刷写过程中检查 Chrome/Edge/Firefox 开发者控制台中的 MAC 地址。
 > - 在您的路由器或 Mesh 网络应用的已连接设备列表中找到它。
 >
@@ -270,11 +270,11 @@ autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowful
 1. **打开 TRMNL Web 界面**  
    - 在您的电脑或移动设备上，打开浏览器并访问 [TRMNL web interface](https://trmnl.app)。
 
-2. **转到 Devices 页面**  
+2. **转到设备页面**  
    - 在 TRMNL 界面中，导航到 **Devices** 部分。
 
 3. **添加新设备**  
-   - 点击 **Add new device** 按钮，通常位于右上角或 Devices 页面的中央。
+   - 点击 **Add new device** 按钮，通常位于设备页面的右上角或中央。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/220.png" style={{width:800, height:'auto'}}/></div>
 
@@ -290,7 +290,7 @@ autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowful
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/223.png" style={{width:900, height:'auto'}}/></div>
 
-   - 您可以在 PlatformIO 上传过程中检索 MAC 地址（检查上传日志），或从配置门户中获取（在 Wi-Fi 设置后会显示）。
+   - 您可以在 PlatformIO 上传过程中获取 MAC 地址（检查上传日志），或从配置门户获取（它将在 Wi-Fi 设置后显示）。
    - 提前添加您的 MAC 地址有助于确保顺畅的入门过程和设备管理。
 
    - 然后您可以为您的电子纸面板设置自定义名称并根据需要调整其他设置。
@@ -304,16 +304,16 @@ autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowful
 :::caution
 在 TRMNL web 界面中添加您的设备后，请转到设备的设置页面并**关闭** **Firmware Early Release** 和 **OTA Updates Enabled** 两个选项。  
 
-如果这些选项保持启用状态，您的设备在连接到互联网时可能会自动下载并安装来自 TRMNL 的固件更新。这些更新是为官方 TRMNL 硬件设计的，**与 TRMNL 7.5inch(OG) DIY 套件不兼容**。安装不兼容的固件可能导致您的设备故障或无响应。
+如果这些选项保持启用状态，您的设备在连接到互联网时可能会自动从 TRMNL 下载并安装固件更新。这些更新是为官方 TRMNL 硬件设计的，**与 TRMNL 7.5inch(OG) DIY 套件不兼容**。安装不兼容的固件可能导致您的设备故障或无响应。
 
 始终保持这两个选项禁用，以确保您的 XIAO 电子纸面板稳定运行。
 :::
 
 ### 按钮使用
 
-我们在这个开发板上有 4 个按钮。它们是 RESET、KEY1、KEY2、KEY3，**我们在 TRMNL 固件中只使用 RESET 和 KEY1 按钮。**
+我们在这个开发板上有 4 个按钮。它们是 RESET、KEY1、KEY2、KEY3，**我们在 TRMNL 固件中只使用 RESET 和 KEY3 按钮。**
 
-**KEY1 使用方法：**
+**KEY3 使用方法：**
 
 1. **单击：** 立即刷新页面。
 2. **双击：** 自定义功能，您可以在设置页面中找到它。
@@ -329,7 +329,7 @@ TRMNL 播放列表功能允许您精确控制在您的电子纸面板上显示�
 
 ### 播放列表概览
 
-- **播放列表标题**：在顶部，您可以看到您的 TRMNL 设备名称（例如，"MengDu's TRMNL"）。
+- **播放列表标题**：在顶部，您可以看到您的 TRMNL 设备的名称（例如，"MengDu's TRMNL"）。
 - **显示时间范围**：您可以设置播放列表活跃的时间范围（例如，从 00:00 到 23:45）。
 - **更新间隔**：选择显示更新的频率（例如，每 5 分钟）。
 - **Add a Group / Add a Plugin**：使用这些按钮将您的播放列表组织成组或添加新的内容插件（如天气、日历或自定义文本）。
@@ -357,7 +357,7 @@ TRMNL 播放列表功能允许您精确控制在您的电子纸面板上显示�
 
 ### 智能播放列表
 
-- **Smart Playlist Option**：在底部，您可以选择是否自动跳过内容未更改的屏幕（例如，"Never skip screens"）。
+- **智能播放列表选项**：在底部，您可以选择是否自动跳过内容未更改的屏幕（例如，"Never skip screens"）。
 
 > 📖 想了解更多？阅读 [Smart Playlists blog post](https://usetrmnl.com/blog/smart-playlists) 获取高级技巧和详细信息。
 
@@ -378,7 +378,7 @@ TRMNL 的插件系统是让您的电子纸面板真正强大和可定制的关�
 在插件页面的顶部，您将看到已连接到您的 TRMNL 账户的所有插件。这些插件已准备好添加到您的播放列表并在您的电子纸面板上显示。示例包括：
 
 - **Weather**：显示当前天气状况。
-- **Days Left This Year**：年末倒计时。
+- **Days Left This Year**：年底倒计时。
 - **Stock Price**：跟踪您喜爱的股票。
 - **RSS Feed**：显示新闻或博客更新。
 - **Reddit, Hacker News**：显示热门帖子。
@@ -386,10 +386,10 @@ TRMNL 的插件系统是让您的电子纸面板真正强大和可定制的关�
 
 ### 插件市场
 
-在您已连接的插件下方，您将找到插件市场。在这里您可以浏览、搜索和发现要添加到您设备的新插件。插件按类别和标签（如 #productivity、#news、#ecommerce 等）组织，便于找到您需要的内容。
+在您的已连接插件下方，您将找到插件市场。在这里您可以浏览、搜索和发现要添加到您设备的新插件。插件按类别和标签（如 #productivity、#news、#ecommerce 等）组织，便于找到您需要的内容。
 
-- **Browse & Search**：使用搜索栏或标签快速找到您感兴趣的插件。
-- **Add Plugins**：点击任何插件将其连接到您的账户并开始在播放列表中使用它。
+- **浏览和搜索**：使用搜索栏或标签快速找到您感兴趣的插件。
+- **添加插件**：点击任何插件将其连接到您的账户并开始在您的播放列表中使用它。
 
 开发者甚至可以创建和发布自己的插件供他人使用，使生态系统不断扩展新的可能性（[了解更多关于插件创建的信息](https://docs.usetrmnl.com/go/plugin-marketplace/introduction)）。
 
@@ -399,7 +399,7 @@ TRMNL 的插件系统是让您的电子纸面板真正强大和可定制的关�
 
 ## 故障排除
 
-### Q1：使用 Web 或 PlatformIO 时，遇到无法刷写固件的问题，应该怎么办？
+### Q1：使用网页或 PlatformIO 时，遇到无法刷写固件的问题，应该怎么办？
 
 有时，使用错误的程序可能会导致 XIAO 失去端口或无法正常工作。常见问题包括：
 
@@ -426,30 +426,28 @@ TRMNL 的插件系统是让您的电子纸面板真正强大和可定制的关�
 
 ## 资源
 
-- **[固件]** [TRMNL ePaper Library (GitHub)](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)
-- **[硬件]** [Driver Board SCH](https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/XIAO_ePaper_driver_board_sch.pdf)
-- **[可打印]** [triangular base](https://www.printables.com/model/1354873)  
-- **[可打印]** [protected triangular base](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)  
-- **[可打印]** [L-shaped base](https://www.printables.com/model/1354879)  
-- **[Thingiverse]** [triangular base](https://www.thingiverse.com/thing:7091094)
-- **[Thingiverse]** [protected triangular base](https://www.thingiverse.com/thing:7097231)
-- **[Thingiverse]** [L-shaped base](https://www.thingiverse.com/thing:7091096)
-- **[Makerworld]** [triangular base](https://makerworld.com/en/models/1625037-trmnl-7-5-og-diy-triangular-prism-shell-kit)
-- **[Makerworld]** [protected triangular base](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
-- **[Makerworld]** [L-shaped base](https://makerworld.com/en/models/1625065-trmnl-7-5-og-diy-l-shaped-case-kit)
+- **[固件]** [TRMNL ePaper 库 (GitHub)](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)
+- **[硬件]** [驱动板原理图](https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/XIAO_ePaper_driver_board_sch.pdf)
+- **[可打印]** [三角形底座](https://www.printables.com/model/1354873)  
+- **[可打印]** [保护型三角形底座](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)  
+- **[可打印]** [L 型底座](https://www.printables.com/model/1354879)  
+- **[Thingiverse]** [三角形底座](https://www.thingiverse.com/thing:7091094)
+- **[Thingiverse]** [保护型三角形底座](https://www.thingiverse.com/thing:7097231)
+- **[Thingiverse]** [L 型底座](https://www.thingiverse.com/thing:7091096)
+- **[Makerworld]** [三角形底座](https://makerworld.com/en/models/1625037-trmnl-7-5-og-diy-triangular-prism-shell-kit)
+- **[Makerworld]** [保护型三角形底座](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
+- **[Makerworld]** [L 型底座](https://makerworld.com/en/models/1625065-trmnl-7-5-og-diy-l-shaped-case-kit)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在此为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
