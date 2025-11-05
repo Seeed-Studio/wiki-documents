@@ -1,5 +1,5 @@
 ---
-description: 本 wiki 提供了 reComputer Jetson Robotics J401 载板的硬件特性和接口使用的全面介绍。涵盖详细规格、支持的模块、设置说明，以及使用各种接口（如 M.2、以太网、USB、CAN、UART、I2C 和 GMSL2 相机扩展）的实用指南，帮助用户快速开始在 J401 平台上进行机器人开发。
+description: 本 wiki 提供了 reComputer Jetson Robotics J401 载板硬件功能和接口使用的全面介绍。涵盖详细规格、支持的模块、设置说明，以及使用各种接口（如 M.2、以太网、USB、CAN、UART、I2C 和 GMSL2 相机扩展）的实用指南，帮助用户快速开始在 J401 平台上进行机器人开发。
 title: 接口使用
 tags:
   - J401-Robotics carrier board
@@ -17,7 +17,7 @@ last_update:
 
 # Robotics J401 载板硬件和入门指南
 
-reComputer Robotics J401 是一款紧凑、高性能的边缘 AI 载板，专为先进机器人设计。兼容 NVIDIA Jetson Orin Nano/Orin NX 模块的 Super/MAXN 模式，可提供高达 157 TOPS 的 AI 性能。配备丰富的连接选项——包括双千兆以太网端口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、6 个 USB 3.2 端口、CAN、GMSL2（通过可选扩展）、I2C 和 UART——它作为强大的机器人大脑，能够处理来自各种传感器的复杂数据。预装 JetPack 6 和 Linux BSP，确保无缝部署。
+reComputer Robotics J401 是一款紧凑、高性能的边缘 AI 载板，专为先进机器人技术设计。兼容 NVIDIA Jetson Orin Nano/Orin NX 模块的 Super/MAXN 模式，可提供高达 157 TOPS 的 AI 性能。配备广泛的连接选项——包括双千兆以太网端口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、6 个 USB 3.2 端口、CAN、GMSL2（通过可选扩展）、I2C 和 UART——它作为强大的机器人大脑，能够处理来自各种传感器的复杂数据。预装 JetPack 6 和 Linux BSP，确保无缝部署。
 
 支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 ROS 2/1 等框架，reComputer Robotics J401 将大语言模型驱动的决策制定与物理机器人控制（如运动规划和传感器融合）连接起来。非常适合自主机器人的快速开发，通过即用型接口和优化的 AI 框架加速产品上市时间。
 
@@ -57,7 +57,7 @@ reComputer Robotics J401 是一款紧凑、高性能的边缘 AI 载板，专为
 - 用户手册 x 1
 
 :::note
-1.在高电压供电和工作温度下，请根据热设计指南设计稳健的散热解决方案。
+1.在高电压电源和工作温度下，请根据热设计指南设计强大的散热解决方案。
 2.请为模块安装散热器以获得更好的性能。
 3.在高电压输入和高负载运行期间，请勿触摸散热器以防烫伤。
 4.验证用电源适配器推荐，请使用 Seeed 官方网站推荐的电源适配器。
@@ -178,7 +178,7 @@ reComputer Robotics J401 是一款紧凑、高性能的边缘 AI 载板，专为
     </tr>
     <tr>
       <th rowSpan="1">工作温度</th>
-      <td colSpan="2">-20℃~60℃ (25W 模式);<br />-20℃~55℃ (MAXN 模式);<br />(配备 reComputer Robotics 带风扇散热器)</td>
+      <td colSpan="2">-20℃~60℃ (25W 模式);<br />-20℃~55℃ (MAXN 模式);<br />(配备 reComputer Robotics 散热器和风扇)</td>
     </tr>
     <tr>
       <th rowSpan="1">保修</th>
@@ -307,11 +307,11 @@ Jetpack6 镜像文件大约 **14.2GB**，下载大约需要 60 分钟。请耐�
   <img width="{600}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/flash1.jpg" />
 </div>
 
-**步骤 2.** 通过连接电源线为载板供电。
+**步骤 2.** 连接电源线为载板供电。
 
 **步骤 3.** 使用 USB Type-C 数据传输线将载板连接到 Ubuntu 主机 PC。
 
-**步骤 4.** 在 Linux 主机 PC 上，打开终端窗口并输入命令 `lsusb`。如果返回的内容根据您使用的 Jetson SoM 包含以下输出之一，则载板处于强制恢复模式。
+**步骤 4.** 在 Linux 主机 PC 上，打开终端窗口并输入命令 `lsusb`。如果返回的内容根据您使用的 Jetson SoM 显示以下输出之一，则载板处于强制恢复模式。
 
 - 对于 Orin NX 16GB：**0955:7323 NVidia Corp**
 - 对于 Orin NX 8GB：**0955:7423 NVidia Corp**
@@ -386,7 +386,7 @@ M.2 Key M 专为高速 NVMe SSD 设计，为机器人应用提供超快的数据
 
 ### 使用说明
 
-在 Jetson 设备中打开终端并输入以下命令来测试 SSD 的读写速度。
+在 Jetson 设备上打开终端并输入以下命令来测试 SSD 的读写速度。
 
 ```bash
 #You need to create a blank test file first
@@ -933,7 +933,7 @@ python3 uart_test.py
 ## I2C
 
 Robotics J401 通过标准 JST 4 针接头提供两个 I2C 接口（IIC0 和 IIC1）。
-便于连接传感器和外设以扩展系统功能。
+便于连接传感器和外设以进行系统扩展。
 
 ### 硬件连接
 
@@ -950,7 +950,7 @@ Robotics J401 具有两个 4 针 GH-1.25 IIC 接口，IIC0 和 IIC1。
 
 这里的测试过程涉及扫描 IIC0/IIC1 上外部连接设备的地址。
 :::info
-请按照以下连接方式连接设备（IIC0/IIC1 ↔ 设备）：
+请根据以下连接方式连接设备（IIC0/IIC1 ↔ 设备）：
 
 - Power → Power
 
@@ -1126,7 +1126,7 @@ v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0 -d /dev/vide
 :::note
 `trig_mode = 1` 启用帧同步，而 `trig_mode = 0` 禁用帧同步。默认设置是禁用帧同步。
 
-`--set-fmt-video` 后面跟随的分辨率是根据连接的摄像头选择的。目前有三个 sensor_mode 选项，每个对应不同的分辨率。
+`--set-fmt-video` 后跟根据连接的摄像头选择的分辨率。目前有三个 sensor_mode 选项，每个对应不同的分辨率。
 - sensor_mode=0 -------> YUYV8_1X16/1920x1536
 - sensor_mode=1 -------> YUYV8_1X16/1920x1080
 - sensor_mode=2 -------> YUYV8_1X16/3840x2160
@@ -1176,6 +1176,12 @@ reComputer Jetson Robotics J401 配备了 DP1.4（包含在 Type-C Host 中）�
 
 - [reComputer Robotics J401 载板原理图](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Robotics%20J401_V1.0_SCH_250421.pdf)
 - [reComputer Robotics J401 载板数据手册](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)
+- [reComputer Robotics 3D 文件](https://files.seeedstudio.com/products/NVIDIA-Jetson/recomputer_robotics_j401.stp)
+- [机械文档-reComputer Robotics PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf)
+- [Seeed NVIDIA Jetson 产品目录](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed_NVIDIA_Jetson_Catalog_in_Robotics_and_Edge_AI.pdf)
+- [Nvidia Jetson 对比](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Seeed Nvidia Jetson 成功案例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Seeed Jetson 单页介绍](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 ## 技术支持与产品讨论
 
