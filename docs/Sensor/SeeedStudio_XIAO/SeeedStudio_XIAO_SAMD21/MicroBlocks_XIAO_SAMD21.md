@@ -95,6 +95,13 @@ This script will blink the yellow user LED:
 The [Blocks Reference](https://wiki.microblocks.fun/en/reference_manual)
 includes many additional examples.
 
+## Project Demo
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/main.png" style={{width:600, height:'auto'}}/></div>
+
+For a more comprehensive project demo, the maker [Luis](https://www.hackster.io/luis_a_la_m) has built a 8x8 LED Neo-pixel device using XIAO SAMD21, Grove Shield for XIAO and a LED Matrix, which you can use the MicroBlocks to paint stunning pixel patterns without writing complex code. A step by step tutorial can be found on [Hackster](https://www.hackster.io/luis_a_la_m/paint-with-pixels-8f3a15).
+
+
 ## Special Thanks
 
 Special thanks to John at MicroBlocks for writing the article.

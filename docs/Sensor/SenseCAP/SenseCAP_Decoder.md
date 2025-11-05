@@ -8273,6 +8273,7 @@ function dataSplit (bytes) {
   for (let i = 0; i < bytes.length; i++) {
     let remainingValue = bytes
     let dataId = remainingValue.substring(0, 2)
+    dataId = dataId.toLowerCase()
     let dataValue
     let dataObj = {}
     switch (dataId) {
@@ -8288,6 +8289,7 @@ function dataSplit (bytes) {
       case '43' :
       case '44' :
       case '45' :
+      case '4a' :
         dataValue = remainingValue.substring(2, 22)
         bytes = remainingValue.substring(22)
         dataObj = {
@@ -8295,10 +8297,11 @@ function dataSplit (bytes) {
         }
         break
       case '02':
+      case '4b':
         dataValue = remainingValue.substring(2, 18)
         bytes = remainingValue.substring(18)
         dataObj = {
-          'dataId': '02', 'dataValue': dataValue
+          'dataId': dataId, 'dataValue': dataValue
         }
         break
       case '03' :
@@ -8331,6 +8334,13 @@ function dataSplit (bytes) {
           'dataId': dataId, 'dataValue': dataValue
         }
         break
+      case '4c':
+        dataValue = bytes.substring(2, 14)
+        bytes = remainingValue.substring(14)
+        dataObj = {
+          'dataId': dataId, 'dataValue': dataValue
+        }
+        break
       default:
         dataValue = '9'
         break
@@ -8345,13 +8355,23 @@ function dataSplit (bytes) {
 
 function dataIdAndDataValueJudge (dataId, dataValue) {
   let messages = []
+  let temperature
+  let humidity
+  let illumination
+  let uv
+  let windSpeed
+  let windDirection
+  let rainfall
+  let airPressure
+  let peakWind
+  let rainAccumulation
   switch (dataId) {
     case '01':
-      let temperature = dataValue.substring(0, 4)
-      let humidity = dataValue.substring(4, 6)
-      let illumination = dataValue.substring(6, 14)
-      let uv = dataValue.substring(14, 16)
-      let windSpeed = dataValue.substring(16, 20)
+      temperature = dataValue.substring(0, 4)
+      humidity = dataValue.substring(4, 6)
+      illumination = dataValue.substring(6, 14)
+      uv = dataValue.substring(14, 16)
+      windSpeed = dataValue.substring(16, 20)
       messages = [{
         measurementValue: loraWANV2DataFormat(temperature, 10), measurementId: '4097', type: 'Air Temperature'
       }, {
@@ -8365,9 +8385,9 @@ function dataIdAndDataValueJudge (dataId, dataValue) {
       }]
       break
     case '02':
-      let windDirection = dataValue.substring(0, 4)
-      let rainfall = dataValue.substring(4, 12)
-      let airPressure = dataValue.substring(12, 16)
+      windDirection = dataValue.substring(0, 4)
+      rainfall = dataValue.substring(4, 12)
+      airPressure = dataValue.substring(12, 16)
       messages = [{
         measurementValue: loraWANV2DataFormat(windDirection), measurementId: '4104', type: 'Wind Direction Sensor'
       }, {
@@ -8494,6 +8514,46 @@ function dataIdAndDataValueJudge (dataId, dataValue) {
         status: status, channelType: type, sensorEui: sensecapId
       }]
       break
+    case '4a':
+      temperature = dataValue.substring(0, 4)
+      humidity = dataValue.substring(4, 6)
+      illumination = dataValue.substring(6, 14)
+      uv = dataValue.substring(14, 16)
+      windSpeed = dataValue.substring(16, 20)
+      messages = [{
+        measurementValue: loraWANV2DataFormat(temperature, 10), measurementId: '4097', type: 'Air Temperature'
+      }, {
+        measurementValue: loraWANV2DataFormat(humidity), measurementId: '4098', type: 'Air Humidity'
+      }, {
+        measurementValue: loraWANV2DataFormat(illumination), measurementId: '4099', type: 'Light Intensity'
+      }, {
+        measurementValue: loraWANV2DataFormat(uv, 10), measurementId: '4190', type: 'UV Index'
+      }, {
+        measurementValue: loraWANV2DataFormat(windSpeed, 10), measurementId: '4105', type: 'Wind Speed'
+      }]
+      break
+    case '4b':
+      windDirection = dataValue.substring(0, 4)
+      rainfall = dataValue.substring(4, 12)
+      airPressure = dataValue.substring(12, 16)
+      messages = [{
+        measurementValue: loraWANV2DataFormat(windDirection), measurementId: '4104', type: 'Wind Direction Sensor'
+      }, {
+        measurementValue: loraWANV2DataFormat(rainfall, 1000), measurementId: '4113', type: 'Rain Gauge'
+      }, {
+
+        measurementValue: loraWANV2DataFormat(airPressure, 0.1), measurementId: '4101', type: 'Barometric Pressure'
+      }]
+      break
+    case '4c':
+      peakWind = dataValue.substring(0, 4)
+      rainAccumulation = dataValue.substring(4, 12)
+      messages = [{
+        measurementValue: loraWANV2DataFormat(peakWind, 10), measurementId: '4191', type: ' Peak Wind Gust'
+      }, {
+        measurementValue: loraWANV2DataFormat(rainAccumulation, 1000), measurementId: '4213', type: 'Rain Accumulation'
+      }]
+      break
     default:
       break
   }
@@ -8520,7 +8580,7 @@ function loraWANV2DataFormat (str, divisor = 1) {
       }
     })
     str2 = parseInt(reverseArr.join(''), 2) + 1
-    return '-' + str2 / divisor
+    return parseFloat('-' + str2 / divisor)
   }
   return parseInt(str2, 2) / divisor
 }
