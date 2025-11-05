@@ -20,7 +20,7 @@ last_update:
 </div>
 
 <div style={{ textAlign: "justify" }}>
-Esta wiki introduce las diversas interfaces y hardware diferentes en la serie reComputer Robotics y cómo usarlos para expandir las ideas de tu proyecto.
+Esta wiki presenta los diversos hardware e interfaces diferentes en la serie reComputer Robotics y cómo usarlos para expandir las ideas de tu proyecto.
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -37,22 +37,24 @@ Esta wiki introduce las diversas interfaces y hardware diferentes en la serie re
 
 ## Uso de Interfaces de Hardware
 :::info
-El uso de interfaces del reComputer Robotics es el mismo que el de la Placa Portadora Robotics J401. Por favor consulta [esta wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage) para ejemplos detallados de uso de interfaces.
+El uso de interfaces del reComputer Robotics es el mismo que el de la Placa Portadora Robotics J401. Por favor consulta [esta wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_robotics_j401_getting_started/#uso-de-interfaces) para ejemplos detallados de uso de interfaces.
 :::
 
 
 ## Recursos
-- [Manual de Usuario de reComputer Robotics](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_user_manual.pdf)
-- [Esquemático de la Placa Portadora](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Robotics%20J401_V1.0_SCH_250421.pdf)
-- [Esquemático de la Placa de Alimentación](https://files.seeedstudio.com/products/NVIDIA-Jetson/Power%20board%20for%20reComputer%20Robotics_V1.0_SCH_250507.pdf)
-- [Archivo 3D](https://files.seeedstudio.com/products/NVIDIA-Jetson/recomputer_robotics_j401.stp)
-- [Documento Mecánico-reComputer Robotics PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf)
-- [Catálogo de Productos NVIDIA Jetson de Seeed](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Comparación de Nvidia Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+
+- [Esquemático de la Placa Portadora reComputer Robotics J401](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Robotics%20J401_V1.0_SCH_250421.pdf)
+- [Hoja de Datos de la Placa Portadora reComputer Robotics J401](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)
+- [Archivo 3D de reComputer Robotics](https://files.seeedstudio.com/products/NVIDIA-Jetson/recomputer_robotics_j401.stp)
+- [Documento Mecánico-PCBA reComputer Robotics](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf)
+- [Catálogo de Productos NVIDIA Jetson de Seeed](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed_NVIDIA_Jetson_Catalog_in_Robotics_and_Edge_AI.pdf)
+- [Comparación de Nvidia Jetson](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Casos de Éxito de Seeed Nvidia Jetson](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Hoja Informativa de Seeed Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
@@ -63,3 +65,5 @@ El uso de interfaces del reComputer Robotics es el mismo que el de la Placa Port
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+
+
