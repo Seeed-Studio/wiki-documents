@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /es/wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 10/29/2025
-  author: Michelle
+  date: 11/5/2025
+  author: Michelle Huang
 ---
 
 
@@ -48,18 +48,18 @@ La serie Wio Tracker L1 está disponible en 4 versiones—elige la que mejor se 
 Listo para usar desde el primer momento con firmware Meshtastic preinstalado para una configuración sin problemas.
 
 - **Tres Opciones de Alimentación**
-Soporta carga rápida Type-C, entrada solar y alimentación por batería Li-ion para despliegue flexible en varios entornos—ideal para aplicaciones exteriores y móviles.
+Soporta carga rápida Type-C, entrada solar y alimentación por batería de iones de litio para despliegue flexible en varios entornos—ideal para aplicaciones exteriores y móviles.
 
 - **Soporte de Pantalla Flexible**
 Pantallas opcionales OLED de 1.3 pulgadas y E-Ink de 2.13 pulgadas, ofreciendo opciones de visualización versátiles para diferentes necesidades de consumo de energía y retroalimentación visual.
 
 - **Alta Expandibilidad**
-Totalmente compatible con el ecosistema Grove, e incluye conectores PTH y una interfaz de depuración SWD para expansión de hardware personalizada y desarrollo avanzado.
+Totalmente compatible con el ecosistema Grove, e incluye cabeceras PTH y una interfaz de depuración SWD para expansión de hardware personalizada y desarrollo avanzado.
 
 ### Especificaciones
 
 :::tip
-Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador de batería, convirtiendo la interfaz de 1mm a una interfaz de 2mm. Esto te da más opciones para baterías.
+Los lotes más recientes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador de batería, convirtiendo la interfaz de 1mm a una interfaz de 2mm. Esto te da más opciones para baterías.
 :::
 
 <table>
@@ -91,7 +91,7 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
     <td colspan="1">Grove *1: UART/IIC/GPIO</td>
   </tr>
   <tr>
-    <td colspan="1">Orificio Pasante Chapado（PTH）: UART/IIC/GPIO/Analógico</td>
+    <td colspan="1">Orificio Pasante Chapado (PTH): UART/IIC/GPIO/Analógico</td>
   </tr>
   <tr>
     <td colspan="1">Pads de soldadura reservados para SWD</td>
@@ -145,4 +145,4 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
 
 **Diagrama**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/l1-diagram.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1%20Diagram.png" alt="pir" width={800} height="auto" /></p>

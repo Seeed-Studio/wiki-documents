@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /ja/wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 10/29/2025
-  author: Michelle
+  date: 11/5/2025
+  author: Michelle Huang
 ---
 
 
@@ -45,7 +45,7 @@ Wio Tracker L1 シリーズは4つのバージョンで利用可能です。ニ�
 ### 特徴
 
 - **Meshtasticファームウェアがプリインストール済み**
-Meshtasticファームウェアがプリインストールされており、箱から出してすぐにシームレスなセットアップで使用できます。
+Meshtasticファームウェアがプリインストールされており、シームレスなセットアップで開封後すぐに使用できます。
 
 - **3つの電源供給オプション**
 Type-C急速充電、ソーラー入力、リチウムイオンバッテリー電源をサポートし、様々な環境での柔軟な展開が可能で、屋外およびモバイルアプリケーションに最適です。
@@ -54,7 +54,7 @@ Type-C急速充電、ソーラー入力、リチウムイオンバッテリー�
 オプションの1.3インチOLEDおよび2.13インチE-Inkスクリーンにより、異なる消費電力と視覚的フィードバックのニーズに対応する多様なディスプレイオプションを提供します。
 
 - **高い拡張性**
-Groveエコシステムと完全に互換性があり、PTHヘッダーとSWDデバッグインターフェースを含み、カスタムハードウェア拡張と高度な開発に対応します。
+Grove エコシステムと完全に互換性があり、PTHヘッダーとSWDデバッグインターフェースを含み、カスタムハードウェア拡張と高度な開発に対応します。
 
 ### 仕様
 
@@ -145,4 +145,4 @@ L1、L1 Lite、L1 E-Inkの最新バッチには、1mmインターフェースを
 
 **図表**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/l1-diagram.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1%20Diagram.png" alt="pir" width={800} height="auto" /></p>
