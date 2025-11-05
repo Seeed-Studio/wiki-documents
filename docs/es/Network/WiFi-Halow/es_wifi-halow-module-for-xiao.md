@@ -1,6 +1,6 @@
 ---
-description: XIAO ESP32S3 con Tutorial del Módulo Wi-Fi HaLow Wio-WM6108
-title: Comenzando con el Módulo Wi-Fi HaLow para XIAO
+description: Tutorial del Módulo Wi-Fi HaLow Wio-WM6108 con XIAO ESP32S3
+title: Introducción al Módulo Wi-Fi HaLow para XIAO
 image: https://files.seeedstudio.com/wiki/wifi_halow/pic/20.webp
 slug: /es/getting_started_with_wifi_halow_module_for_xiao
 sidebar_class_name: hidden
@@ -10,7 +10,7 @@ last_update:
 ---
 
 
-# Comenzando con el Módulo Wi-Fi HaLow para XIAO
+# Introducción al Módulo Wi-Fi HaLow para XIAO
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/20.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -22,9 +22,9 @@ last_update:
 
 ## Introducción
 
-Este tutorial te guiará a través de la configuración y uso del Módulo Wi-Fi HaLow Wio-WM6108 con un XIAO ESP32S3 para construir un cliente Wi-Fi HaLow. Wi-Fi HaLow (IEEE 802.11ah) está diseñado para aplicaciones IoT de largo alcance y bajo consumo de energía, operando en la banda de frecuencia sub-1 GHz. Te guiaremos a través de la configuración del hardware, configuración del software, y demostraremos cómo establecer conectividad Wi-Fi HaLow para tus proyectos IoT.
+Este tutorial te guiará a través de la configuración y uso del Módulo Wi-Fi HaLow Wio-WM6108 con un XIAO ESP32S3 para construir un cliente Wi-Fi HaLow. Wi-Fi HaLow (IEEE 802.11ah) está diseñado para aplicaciones IoT de largo alcance y bajo consumo, operando en la banda de frecuencia sub-1 GHz. Te guiaremos a través de la configuración del hardware, configuración del software, y demostraremos cómo establecer conectividad Wi-Fi HaLow para tus proyectos IoT.
 
-### Características Clave
+### Características Principales
 
 - Conectividad Wi-Fi de largo alcance hasta 1km en línea de vista
 - Bajo consumo de energía ideal para dispositivos IoT
@@ -32,7 +32,7 @@ Este tutorial te guiará a través de la configuración y uso del Módulo Wi-Fi 
 - Compatible con la placa de desarrollo XIAO ESP32S3
 - Proceso de configuración y configuración fácil de seguir
 
-## Descripción General del Hardware
+## Descripción del Hardware
 
 La siguiente tabla describe las especificaciones clave del Módulo Wi-Fi HaLow Wio-WM6108:
 
@@ -52,7 +52,7 @@ Wi-Fi HaLow es un protocolo de red inalámbrica basado en el estándar IEEE 802.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/Wi-Fi_HaLow_frequency_band_graphic.png" style={{width:800, height:'auto'}}/></div>
 
-1. **Alcance Extendido**: Wi-Fi HaLow puede alcanzar distancias de hasta 1 kilómetro en condiciones de línea de vista, superando por mucho el alcance del Wi-Fi convencional.
+1. **Alcance Extendido**: Wi-Fi HaLow puede alcanzar distancias de hasta 1 kilómetro en condiciones de línea de vista, superando ampliamente el alcance del Wi-Fi convencional.
 
 2. **Penetración Mejorada**: Las señales de menor frecuencia pueden penetrar mejor a través de paredes y otros obstáculos, haciéndolo ideal para entornos desafiantes.
 
@@ -60,18 +60,18 @@ Wi-Fi HaLow es un protocolo de red inalámbrica basado en el estándar IEEE 802.
 
 4. **Escalabilidad**: Soporta miles de dispositivos conectados a un solo punto de acceso, perfecto para despliegues IoT a gran escala.
 
-5. **Seguridad**: Hereda las características de seguridad robustas de la familia Wi-Fi, incluyendo encriptación WPA3.
+5. **Seguridad**: Hereda las características de seguridad robustas de la familia Wi-Fi, incluyendo cifrado WPA3.
 
-### Por Qué Importa Wi-Fi HaLow
+### Por qué Importa Wi-Fi HaLow
 
 Wi-Fi HaLow aborda las necesidades crecientes de aplicaciones IoT que requieren conectividad de largo alcance, bajo consumo de energía, y la capacidad de manejar numerosos dispositivos simultáneamente. Cierra la brecha entre el Wi-Fi tradicional y las tecnologías LPWAN, ofreciendo:
 
-- **IoT Industrial**: Permite conectividad confiable en fábricas, almacenes, y entornos industriales.
+- **IoT Industrial**: Permite conectividad confiable en fábricas, almacenes y entornos industriales.
 - **Agricultura Inteligente**: Proporciona cobertura a través de grandes áreas agrícolas para redes de sensores.
 - **Ciudades Inteligentes**: Soporta extensas redes de dispositivos conectados en entornos urbanos.
 - **Seguimiento de Activos**: Permite el seguimiento de largo alcance de activos y equipos valiosos.
 
-Al combinar la familiaridad del Wi-Fi con los beneficios de conectividad de bajo consumo y largo alcance, Wi-Fi HaLow está preparado para desempeñar un papel crucial en la expansión de aplicaciones IoT a través de varias industrias.
+Al combinar la familiaridad del Wi-Fi con los beneficios de la conectividad de bajo consumo y largo alcance, Wi-Fi HaLow está preparado para desempeñar un papel crucial en la expansión de aplicaciones IoT a través de varias industrias.
 
 ### Arquitectura del Sistema Wi-Fi HaLow
 
@@ -79,7 +79,7 @@ Una red Wi-Fi HaLow típica consiste en varios componentes clave que trabajan ju
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/wifi-halow-architecture.png" style={{width:800, height:'auto'}}/></div>
 
-1. **Punto de Acceso (AP)**: El hub central de la red Wi-Fi HaLow, responsable de gestionar conexiones y enrutar datos entre dispositivos e internet.
+1. **Punto de Acceso (AP)**: El centro de la red Wi-Fi HaLow, responsable de gestionar conexiones y enrutar datos entre dispositivos e internet.
 
 2. **Estaciones (STA)**: Los dispositivos cliente que se conectan al Punto de Acceso. Estos pueden ser sensores, actuadores, u otros dispositivos IoT.
 
@@ -87,7 +87,7 @@ Una red Wi-Fi HaLow típica consiste en varios componentes clave que trabajan ju
 
 En este tutorial, configuraremos el XIAO ESP32S3 como un cliente Estación (STA) que se conecta a un Punto de Acceso Wi-Fi HaLow. El XIAO usará el módulo WM6108 para establecer y mantener la conexión HaLow.
 
-## Marco de Trabajo MM-IoT-SDK
+## Framework MM-IoT-SDK
 
 El módulo WM6108 utiliza [MM-IoT-SDK de MorseMicro](https://github.com/MorseMicro/mm-iot-esp32), que proporciona:
 
@@ -96,13 +96,13 @@ El módulo WM6108 utiliza [MM-IoT-SDK de MorseMicro](https://github.com/MorseMic
 - **Características de Seguridad**: Mecanismos de cifrado y autenticación integrados
 - **Configuración Fácil**: API simplificada para configuración y gestión de red
 
-La arquitectura MM-IoT-SDK consta de varias capas:
+La arquitectura MM-IoT-SDK consiste en varias capas:
 
 1. **Capa de Abstracción de Hardware (HAL)**: Proporciona una interfaz unificada para diferentes plataformas de hardware
 2. **Pila de Red**: Implementa la pila de protocolo Wi-Fi HaLow
 3. **Capa de Aplicación**: Ofrece APIs para desarrollo de aplicaciones y gestión de dispositivos
 
-Este marco de trabajo permite a los desarrolladores implementar rápidamente la funcionalidad Wi-Fi HaLow mientras mantiene flexibilidad para aplicaciones personalizadas.
+Este framework permite a los desarrolladores implementar rápidamente funcionalidad Wi-Fi HaLow mientras mantienen flexibilidad para aplicaciones personalizadas.
 
 ## Materiales Requeridos
 
@@ -112,29 +112,15 @@ Aquí están los materiales necesarios para ejecutar este tutorial.
     <table align="center">
         <tr>
             <th>XIAO ESP32S3 Sense</th>
-            <th>XIAO ESP32C3</th>
-            <th>XIAO ESP32C6</th>
-            <th>Módulo Wio-WM6108 Wi-Fi HaLow para XIAO</th>
+            <th>Módulo Wi-Fi HaLow Wio-WM6108 para XIAO</th>
         </tr>
         <tr>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
-            <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:90, height:'auto'}}/></div></td>
-            <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/20.jpg" style={{width:250, height:'auto'}}/></div></td>
         </tr>
         <tr>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
-                </a>
-            </div></td>
-            <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
-                </a>
-            </div></td>
-            <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
                 </a>
             </div></td>
@@ -148,10 +134,10 @@ Aquí están los materiales necesarios para ejecutar este tutorial.
 </div>
 
 :::note
-Este tutorial es aplicable a toda la serie XIAO ESP32. Usaremos XIAO ESP32S3 Sense como ejemplo en este tutorial.
+Este tutorial solo es aplicable a la serie XIAO ESP32-S3. Usaremos XIAO ESP32S3 Sense como ejemplo en este tutorial.
 :::
 
-Además de lo anterior, es posible que necesites preparar antenas adicionales adecuadas para el uso de WiFi-Halow. Aquí están los modelos de antena verificados y recomendados.
+Además de lo anterior, es posible que necesites preparar antenas adicionales adecuadas para uso WiFi-Halow. Aquí están los modelos de antena verificados y recomendados.
 
 <div class="table-center">
     <table align="center">
@@ -166,19 +152,19 @@ Además de lo anterior, es posible que necesites preparar antenas adicionales ad
         <tr>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/LoRa-Indoor-Antenna-Kit-860-930MHz-3dBi-295mm-p-5434.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
                 </a>
             </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/External-Antenna-915MHZ-2-6dBi-SMA-L195mm-p-5047.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
                 </a>
             </div></td>
         </tr>
     </table>
 </div>
 
-Para conectar la antena al módulo WiFi-Halow, también puede que necesites comprar el **Cable de Antena SMA a I-PEX**.
+Para conectar la antena al módulo WiFi-Halow, también es posible que necesites comprar el **Cable de Antena SMA a I-PEX**.
 
 <div class="table-center">
     <table align="center">
@@ -191,7 +177,7 @@ Para conectar la antena al módulo WiFi-Halow, también puede que necesites comp
         <tr>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/UF-L-SMA-K-1-13-120mm-p-5046.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
                 </a>
             </div></td>
         </tr>
@@ -206,7 +192,7 @@ Si lo estás usando por primera vez, puedes consultar el siguiente video para la
 
 ## Instalar ESP-IDF v5.1.1
 
-Antes de comenzar a programar, necesitamos instalar ESP-IDF v5.1.1 en tu computadora. ESP-IDF es el framework de desarrollo oficial para los chips de la serie ESP32.
+Antes de comenzar a programar, necesitamos instalar ESP-IDF v5.1.1 en tu computadora. ESP-IDF es el framework de desarrollo oficial para chips de la serie ESP32.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -244,7 +230,7 @@ Si la instalación fue exitosa, deberías ver el número de versión 5.1.1.
 
 **Paso 1.** Instalar prerrequisitos
 
-Abre Terminal e instala Homebrew si aún no lo has hecho:
+Abre Terminal e instala Homebrew si aún no lo tienes:
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -272,7 +258,7 @@ cd esp-idf
 . $HOME/esp/esp-idf/export.sh
 ```
 
-Añade esta línea a tu `~/.profile` o `~/.zshrc` para configurar automáticamente las variables de entorno al abrir una nueva terminal.
+Agrega esta línea a tu `~/.profile` o `~/.zshrc` para configurar automáticamente las variables de entorno al abrir una nueva terminal.
 
 </TabItem>
 
@@ -304,7 +290,7 @@ cd esp-idf
 . $HOME/esp/esp-idf/export.sh
 ```
 
-Añade esta línea a tu `~/.bashrc` para configurar automáticamente las variables de entorno al abrir una nueva terminal.
+Agrega esta línea a tu `~/.bashrc` para configurar automáticamente las variables de entorno al abrir una nueva terminal.
 
 </TabItem>
 </Tabs>
@@ -341,18 +327,18 @@ cd %USERPROFILE%\mm-iot-esp32
 export.bat
 ```
 
-**Paso 3.** Establecer la variable de entorno MMIOT_ROOT
+**Paso 3.** Configurar la variable de entorno MMIOT_ROOT
 
-Puedes establecer esto permanentemente a través de las Propiedades del Sistema de Windows:
+Puedes configurar esto permanentemente a través de las Propiedades del Sistema de Windows:
 
-1. Abrir Propiedades del Sistema (Win + R, escribir `sysdm.cpl`)
-2. Hacer clic en "Variables de entorno"
-3. Bajo "Variables de usuario", hacer clic en "Nuevo"
+1. Abre Propiedades del Sistema (Win + R, escribe `sysdm.cpl`)
+2. Haz clic en "Environment Variables"
+3. Bajo "User variables", haz clic en "New"
 4. Nombre de variable: `MMIOT_ROOT`
-5. Valor de variable: `C:\Users\TuNombreDeUsuario\mm-iot-esp32` (reemplazar con tu ruta actual)
-6. Hacer clic en "Aceptar" para guardar
+5. Valor de variable: `C:\Users\TuNombreDeUsuario\mm-iot-esp32` (reemplaza con tu ruta actual)
+6. Haz clic en "OK" para guardar
 
-Alternativamente, puedes establecerlo temporalmente en el Símbolo del sistema:
+Alternativamente, puedes configurarlo temporalmente en el Símbolo del sistema:
 
 ```bash
 set MMIOT_ROOT=C:\Users\YourUsername\mm-iot-esp32
@@ -376,7 +362,7 @@ cd ~/mm-iot-esp32
 source export.sh
 ```
 
-**Paso 3.** Establecer la variable de entorno MMIOT_ROOT
+**Paso 3.** Configurar la variable de entorno MMIOT_ROOT
 
 Para uso temporal:
 
@@ -384,7 +370,7 @@ Para uso temporal:
 export MMIOT_ROOT=~/mm-iot-esp32
 ```
 
-Para uso permanente, añade a tu archivo de configuración de shell:
+Para uso permanente, agrega a tu archivo de configuración del shell:
 
 ```bash
 # For bash users (add to ~/.bash_profile or ~/.bashrc)
@@ -394,7 +380,7 @@ echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.bash_profile
 echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.zshrc
 ```
 
-Luego recarga la configuración de tu shell:
+Luego recarga tu configuración del shell:
 
 ```bash
 # For bash
@@ -422,7 +408,7 @@ cd ~/mm-iot-esp32
 source export.sh
 ```
 
-**Paso 3.** Establecer la variable de entorno MMIOT_ROOT
+**Paso 3.** Configurar la variable de entorno MMIOT_ROOT
 
 Para uso temporal:
 
@@ -430,7 +416,7 @@ Para uso temporal:
 export MMIOT_ROOT=~/mm-iot-esp32
 ```
 
-Para uso permanente, añade a tu archivo de configuración de shell:
+Para uso permanente, agrega a tu archivo de configuración del shell:
 
 ```bash
 # For bash users
@@ -440,7 +426,7 @@ echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.bashrc
 echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.zshrc
 ```
 
-Luego recarga la configuración de tu shell:
+Luego recarga tu configuración del shell:
 
 ```bash
 # For bash
@@ -461,7 +447,7 @@ Asegúrate de usar rutas absolutas al configurar la variable de entorno MMIOT_RO
 Después de configurar las variables de entorno, es posible que necesites cerrar y reabrir tu terminal para que los cambios surtan efecto.
 :::
 
-## Compilando Firmware de Ejemplo
+## Compilar Firmware de Ejemplo
 
 El repositorio mm-iot-esp32 incluye varias aplicaciones de ejemplo que demuestran diferentes funcionalidades. Aquí te mostramos cómo compilar y configurar estos ejemplos:
 
@@ -495,22 +481,22 @@ nano src/mm_app_loadconfig.c
 
 3. En este archivo, puedes modificar:
 
-- Código de país (debe establecerse en **US** ya que el producto actualmente solo está disponible para América del Norte)
+- Código de país (debe configurarse como **US** ya que el producto actualmente solo está disponible para América del Norte)
 - Credenciales de red Wi-Fi HaLow
 - Otros parámetros relacionados con la red
 
 :::caution
 Nota Importante Sobre el Código de País:
 
-- El código de país debe establecerse en "US" ya que este producto actualmente solo está disponible para el mercado de América del Norte
+- El código de país debe configurarse como "US" ya que este producto actualmente solo está disponible para el mercado de América del Norte
 - El producto aún no está disponible para otras regiones debido a requisitos regulatorios
 - Usar el producto en regiones distintas a América del Norte puede violar las regulaciones locales
 
 :::
 
-### Proceso de Construcción
+### Proceso de Compilación
 
-Después de configurar los ajustes de red, puedes construir el firmware usando estos comandos:
+Después de configurar los ajustes de red, puedes compilar el firmware usando estos comandos:
 
 ```bash
 idf.py set-target esp32s3
@@ -537,9 +523,9 @@ idf.py -p (PORT) flash
 
 A continuación, demostraremos algunos ejemplos.
 
-## Ejemplo 1. escaneo
+## Ejemplo 1. scan
 
-Este ejemplo demuestra cómo escanear las redes Wi-Fi HaLow disponibles en tu área. Sigue estos pasos para compilar y ejecutar el ejemplo de escaneo:
+Este ejemplo demuestra cómo escanear las redes Wi-Fi HaLow disponibles en tu vecindario. Sigue estos pasos para compilar y ejecutar el ejemplo de escaneo:
 
 ### Paso 1: Navegar al Ejemplo de Escaneo
 
@@ -549,7 +535,7 @@ cd ~/mm-iot-esp32/example/scan
 
 ### Paso 2: Configurar el Código de País
 
-1. Abrir el archivo de configuración:
+1. Abre el archivo de configuración:
 
 ```bash
 nano main/src/mm_app_loadconfig.c
@@ -592,7 +578,7 @@ Ejemplo de salida en el monitor serie:
 
 :::tip
 
-- Asegúrate de que haya gateways Wi-Fi HaLow en tu proximidad para detectar redes
+- Asegúrate de que haya gateways Wi-Fi HaLow en tu vecindario para detectar redes
 - El proceso de escaneo se ejecuta continuamente, por lo que verás actualizaciones periódicas de las redes disponibles
 - Presiona Ctrl+C para detener el monitor y salir del programa
 
@@ -609,7 +595,7 @@ Si no ves ninguna red:
 
 ## Ejemplo 2. iperf
 
-Este ejemplo demuestra cómo probar el rendimiento de red de tu conexión Wi-Fi HaLow usando iPerf. Sigue estos pasos para construir y ejecutar el ejemplo de iPerf:
+Este ejemplo demuestra cómo probar el rendimiento de red de tu conexión Wi-Fi HaLow usando iPerf. Sigue estos pasos para compilar y ejecutar el ejemplo de iPerf:
 
 ### Paso 1: Navegar al Ejemplo de iPerf
 
@@ -617,9 +603,9 @@ Este ejemplo demuestra cómo probar el rendimiento de red de tu conexión Wi-Fi 
 cd ~/mm-iot-esp32/example/iperf
 ```
 
-### Paso 2: Configurar los Ajustes de Red
+### Paso 2: Configurar Ajustes de Red
 
-1. Abrir el archivo de configuración:
+1. Abre el archivo de configuración:
 
 ```bash
 nano main/src/mm_app_loadconfig.c
@@ -691,14 +677,14 @@ Los parámetros explicados:
 Problemas comunes y soluciones:
 
 - Si la conexión falla, verifica las credenciales de tu red
-- Si el servicio iPerf no inicia, revisa las conexiones de tu hardware
-- Si el rendimiento es pobre, asegúrate de estar dentro de un buen rango del gateway
+- Si el servicio iPerf no se inicia, revisa las conexiones de tu hardware
+- Si el rendimiento es pobre, asegúrate de estar dentro del buen rango del gateway
 
 :::
 
 ## Ejemplo 3. web_camera_server
 
-Este ejemplo demuestra cómo transmitir la alimentación de cámara desde XIAO ESP32S3 Sense a través de la red Wi-Fi HaLow. Sigue estos pasos para construir y ejecutar el servidor de cámara web:
+Este ejemplo demuestra cómo transmitir la alimentación de cámara desde XIAO ESP32S3 Sense a través de la red Wi-Fi HaLow. Sigue estos pasos para compilar y ejecutar el servidor de cámara web:
 
 ### Paso 1: Navegar al Ejemplo de Cámara Web
 
@@ -706,15 +692,15 @@ Este ejemplo demuestra cómo transmitir la alimentación de cámara desde XIAO E
 cd ~/mm-iot-esp32/example/web_camera_serve
 ```
 
-### Paso 2: Configurar los Ajustes de Red
+### Paso 2: Configurar Ajustes de Red
 
-1. Abrir el archivo de configuración:
+1. Abre el archivo de configuración:
 
 ```bash
 nano main/src/mm_app_loadconfig.c
 ```
 
-2. Modifica las credenciales de Wi-Fi HaLow:
+2. Modifica las credenciales Wi-Fi HaLow:
 
 ```cpp
 // Set your Wi-Fi HaLow network credentials
@@ -722,7 +708,7 @@ nano main/src/mm_app_loadconfig.c
 #define SAE_PASSPHRASE    Your_Password             // Replace with your network password
 ```
 
-### Paso 3: Configuración del Hardware
+### Paso 3: Configuración de Hardware
 
 1. Conecta el Módulo Wi-Fi HaLow Wio-WM6108 a tu XIAO ESP32S3 Sense
 2. Asegúrate de que el módulo de cámara en tu XIAO ESP32S3 Sense esté conectado correctamente
@@ -739,14 +725,14 @@ idf.py build
 idf.py flash monitor
 ```
 
-### Paso 5: Acceder al Feed de la Cámara
+### Paso 5: Acceder a la Alimentación de Cámara
 
-Una vez que el programa se esté ejecutando exitosamente:
+Una vez que el programa se ejecute exitosamente:
 
 1. Anota la dirección IP mostrada en el monitor serie
 2. Abre un navegador web en cualquier dispositivo conectado a la misma red que tu gateway Wi-Fi HaLow
 3. Ingresa la dirección IP en la barra de direcciones de tu navegador
-4. Ahora deberías ver el feed de cámara en vivo desde tu XIAO ESP32S3 Sense
+4. Ahora deberías ver la alimentación de cámara en vivo desde tu XIAO ESP32S3 Sense
 
 URL de ejemplo:
 
@@ -759,17 +745,17 @@ http://192.168.4.1
 :::tip
 Para la mejor experiencia de transmisión:
 
-- Asegúrate de tener buenas condiciones de iluminación para una mejor calidad de imagen
-- Mantén el XIAO ESP32S3 Sense dentro de un buen rango del gateway Wi-Fi HaLow
-- Usa un navegador web moderno para una compatibilidad óptima
+- Asegúrate de tener buenas condiciones de iluminación para mejor calidad de imagen
+- Mantén el XIAO ESP32S3 Sense dentro del buen rango del gateway Wi-Fi HaLow
+- Usa un navegador web moderno para compatibilidad óptima
 
 :::
 
 :::note
 Solución de problemas:
 
-- Si no puedes acceder a la transmisión de la cámara, verifica que tu dispositivo esté en la misma red que el gateway Wi-Fi HaLow
-- Si la imagen no se muestra, verifica que el módulo de la cámara esté conectado correctamente
+- Si no puedes acceder a la alimentación de cámara, verifica que tu dispositivo esté en la misma red que el gateway Wi-Fi HaLow
+- Si la imagen no se muestra, revisa que el módulo de cámara esté conectado correctamente
 - Si la transmisión está lenta, intenta acercarte más al gateway Wi-Fi HaLow
 
 :::
