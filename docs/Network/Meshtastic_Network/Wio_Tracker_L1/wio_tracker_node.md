@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 10/29/2025
-  author: Michelle
+  date: 11/5/2025
+  author: Michelle Huang
 ---
 
 
@@ -145,4 +145,4 @@ The latest batches of L1, L1 Lite and L1 E-Ink all come with a battery adapter c
 
 **Diagram**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/l1-diagram.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1%20Diagram.png" alt="pir" width={800} height="auto" /></p>
