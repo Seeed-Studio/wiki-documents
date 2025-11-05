@@ -1,6 +1,6 @@
 ---
-description: El reComputer Robotics J401 es una placa portadora de IA de borde de alto rendimiento diseñada para aplicaciones robóticas avanzadas. Soporta módulos NVIDIA Jetson Orin Nano y Orin NX en modo Super/MAXN, entregando hasta 157 TOPS de potencia de cómputo de IA. La placa ofrece amplias opciones de conectividad, incluyendo Ethernet Gigabit dual, múltiples puertos USB 3.2, CAN, ranuras M.2 para módulos 5G/Wi-Fi/BT, y soporte opcional para cámaras GMSL2. Pre-instalado con JetPack 6, asegura un despliegue sin problemas para el desarrollo robótico. El diseño robusto soporta amplias temperaturas de operación e incluye un disipador de calor pre-instalado con ventilador. La configuración involucra flashear el OS JetPack en un SSD NVMe usando una PC host Ubuntu compatible, seguido de configuración de hardware y uso de interfaces. Se proporcionan especificaciones detalladas de hardware, dibujos mecánicos y recursos técnicos para desarrolladores, junto con canales de soporte comunitario y técnico para resolución de problemas y discusión.
-title: Introducción al reComputer Robotics
+description: El reComputer Robotics J401 es una placa portadora de IA de borde de alto rendimiento diseñada para aplicaciones robóticas avanzadas. Soporta módulos NVIDIA Jetson Orin Nano y Orin NX en modo Super/MAXN, entregando hasta 157 TOPS de potencia de cómputo de IA. La placa ofrece amplias opciones de conectividad, incluyendo Ethernet Gigabit dual, múltiples puertos USB 3.2, CAN, ranuras M.2 para módulos 5G/Wi-Fi/BT, y soporte opcional para cámaras GMSL2. Pre-instalado con JetPack 6, asegura un despliegue sin problemas para el desarrollo robótico. El diseño robusto soporta amplias temperaturas de operación e incluye un disipador de calor pre-instalado con ventilador. La configuración involucra flashear el SO JetPack en un SSD NVMe usando una PC host Ubuntu compatible, seguido de configuración de hardware y uso de interfaces. Se proporcionan especificaciones detalladas de hardware, dibujos mecánicos y recursos técnicos para desarrolladores, junto con canales de soporte comunitario y técnico para resolución de problemas y discusión.
+title: Comenzando con reComputer Robotics
 tags:
   - J401-Robotics carrier board
   - Jetson
@@ -24,7 +24,7 @@ El reComputer Robotics J401 es una placa portadora de IA de borde compacta y de 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
 </a></div>
 
 <!-- Buy links -->
@@ -35,9 +35,9 @@ El reComputer Robotics J401 es una placa portadora de IA de borde compacta y de 
 - **Múltiples Interfaces para robótica**: Incluyendo RJ45 dual, ranuras M.2 para módulos 5G/Wi-Fi/BT, 6x USB 3.2, 2x CAN, GMSL2(compra adicional), I2C, y UART, funcionando como un cerebro robótico poderoso.
 - **Configuración de Software**: Pre-instalado con JetPack 6.2 y Linux BSP para despliegue sin problemas.
 - **Aplicación y Beneficio**: Ideal para desarrollo rápido de robots autónomos, acelerando el tiempo de comercialización con interfaces listas para usar y marcos de IA optimizados.
-- **Amplio Rango de Operación**: Opera de manera confiable en un rango de temperatura de -20°C a 60°C en modo 25W y -20°C a 50°C en modo 40W
+- **Amplio Rango de Operación**: Opera de manera confiable a través de un rango de temperatura de -20°C a 60°C en modo 25W y -20°C a 50°C en modo 40W
 
-## Especificaciones
+## Especificación
 
 ### Especificaciones de la Placa Portadora
 
@@ -79,7 +79,7 @@ El reComputer Robotics J401 es una placa portadora de IA de borde compacta y de 
     </tr>
     <tr>
       <td>CAN</td>
-      <td>2x CAN0 (XT30(2+2));<br />3x CAN1 (4-Pin GH 1.25 Header)</td>
+      <td>2x CAN0 (XT30(2+2));<br />3x CAN1 (Conector 4-Pin GH 1.25)</td>
     </tr>
     <tr>
       <td>Pantalla</td>
@@ -87,19 +87,19 @@ El reComputer Robotics J401 es una placa portadora de IA de borde compacta y de 
     </tr>
     <tr>
       <td>UART</td>
-      <td>1x UART 4-Pin GH 1.25 Header</td>
+      <td>1x UART Conector 4-Pin GH 1.25</td>
     </tr>
     <tr>
       <td>I2C</td>
-      <td>2x I2C 4-Pin GH 1.25 Header</td>
+      <td>2x I2C Conector 4-Pin GH 1.25</td>
     </tr>
     <tr>
       <td>Ventilador</td>
       <td>1x Conector de Ventilador 4-Pin (5V PWM);<br />1x Conector de Ventilador 4-Pin (12V PWM)</td>
     </tr>
     <tr>
-      <td>Puerto de Extensión</td>
-      <td>1x Header de Expansión de Cámara (para placa GMSL2)</td>
+      <td>Puerto de Expansión</td>
+      <td>1x Conector de Expansión de Cámara (para placa GMSL2)</td>
     </tr>
     <tr>
       <td>RTC</td>
@@ -143,8 +143,8 @@ El reComputer Robotics J401 es una placa portadora de IA de borde compacta y de 
       <td>Escritorio, Montaje en pared</td>
     </tr>
     <tr>
-      <th rowSpan="1">Temperatura de Operación</th>
-      <td colSpan="2">-20℃~55℃ (Modo 25W);<br />-20℃~50℃ (Modo MAXN);<br />(con disipador de calor reComputer Robotics con ventilador)</td>
+      <th rowSpan="1">Temperatura de Funcionamiento</th>
+      <td colSpan="2">-20℃~55℃ (Modo 25W);<br />-20℃~50℃ (Modo MAXN);<br />(con disipador térmico reComputer Robotics con ventilador)</td>
     </tr>
     <tr>
       <th rowSpan="1">Garantía</th>
@@ -171,14 +171,14 @@ El reComputer Robotics J401 es una placa portadora de IA de borde compacta y de 
   <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-robotic-2.jpeg"/>  
 </div>
 
-## Flashear OS JetPack
+## Flash JetPack OS
 
-### Módulo Soportado
+### Módulo Compatible
 
-- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
-- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
-- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
-- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
+- [Módulo NVIDIA® Jetson Orin™ Nano 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
+- [Módulo NVIDIA® Jetson Orin™ Nano 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
+- [Módulo NVIDIA® Jetson Orin™ NX 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
+- [Módulo NVIDIA® Jetson Orin™ NX 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
 
 ### Prerrequisitos
 
@@ -189,40 +189,40 @@ El reComputer Robotics J401 es una placa portadora de IA de borde compacta y de 
 
 :::info
 
-Recomendamos que uses dispositivos host ubuntu físicos en lugar de máquinas virtuales.
-Por favor consulta la tabla a continuación para preparar la máquina host.
+Recomendamos que uses dispositivos físicos con Ubuntu en lugar de máquinas virtuales.  
+Por favor, consulta la tabla a continuación para preparar la máquina anfitriona.
 
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-        <td  rowspan="2"> Versión JetPack </td>
-        <td class="dbon" colspan="3"> Versión Ubuntu (Computadora Host) </td>
+        <td rowspan="2"> Versión de JetPack </td>
+        <td class="dbon" colspan="3"> Versión de Ubuntu (Computadora Anfitriona) </td>
     </tr>
     <tr>
-        <td > 18.04 </td>
-        <td > 20.04 </td>
-        <td > 22.04 </td>
+        <td> 18.04 </td>
+        <td> 20.04 </td>
+        <td> 22.04 </td>
     </tr>
     <tr>
-        <td >JetPack 6.x</td>
-        <td > </td>
-        <td > ✅ </td>
-        <td > ✅ </td>
+        <td>JetPack 6.x</td>
+        <td> </td>
+        <td> ✅ </td>
+        <td> ✅ </td>
     </tr>
   </tbody>
 </table>
 
 :::
 
-### Preparar la Imagen Jetpack
+### Preparar la Imagen de Jetpack
 
-Aquí, necesitamos descargar la imagen del sistema a nuestra PC Ubuntu correspondiente al módulo Jetson que estamos usando:
+Aquí, necesitamos descargar la imagen del sistema a nuestro PC Ubuntu correspondiente al módulo Jetson que estamos usando:
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Versión Jetpack</th>
+      <th>Versión de Jetpack</th>
       <th>Módulo Jetson</th>
       <th> GMSL </th>
       <th>Enlace de Descarga1</th>
@@ -260,19 +260,19 @@ Aquí, necesitamos descargar la imagen del sistema a nuestra PC Ubuntu correspon
 </div>
 
 :::danger
-El archivo de imagen Jetpack6 tiene aproximadamente **14.2GB** de tamaño y debería tomar alrededor de 60 minutos para descargar. Por favor espera pacientemente a que se complete la descarga.
+El archivo de imagen de Jetpack6 tiene un tamaño aproximado de **14.2GB** y debería tardar alrededor de 60 minutos en descargarse. Por favor, espera a que la descarga se complete.
 :::
 
 :::info
 Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
 
-En una máquina host Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, confirma que el firmware que descargaste está completo e intacto.
+En una máquina anfitriona con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, se confirma que el firmware que descargaste está completo e intacto.
 :::
 
-### Entrar en Modo de Recuperación Forzada
+### Entrar al Modo de Recuperación Forzada
 
 :::info
-Antes de que podamos continuar con los pasos de instalación, necesitamos asegurarnos de que la placa esté en modo de recuperación forzada.
+Antes de poder continuar con los pasos de instalación, debemos asegurarnos de que la placa esté en modo de recuperación forzada.
 :::
 
 <details>
@@ -287,16 +287,16 @@ Antes de que podamos continuar con los pasos de instalación, necesitamos asegur
 
 **Paso 2.** Enciende la placa portadora conectando el cable de alimentación.
 
-**Paso 3.** Conecta la placa a la PC host Ubuntu con un cable de transmisión de datos USB Type-C.
+**Paso 3.** Conecta la placa al PC host Ubuntu con un cable de transmisión de datos USB Type-C.
 
-**Paso 4.** En la PC host Linux, abre una ventana de Terminal e ingresa el comando `lsusb`. Si el contenido devuelto tiene una de las siguientes salidas según el SoM Jetson que uses, entonces la placa está en modo de recuperación forzada.
+**Paso 4.** En el PC host Linux, abre una ventana de Terminal e ingresa el comando `lsusb`. Si el contenido devuelto tiene una de las siguientes salidas según el Jetson SoM que uses, entonces la placa está en modo de recuperación forzada.
 
 - Para Orin NX 16GB: **0955:7323 NVidia Corp**
 - Para Orin NX 8GB: **0955:7423 NVidia Corp**
 - Para Orin Nano 8GB: **0955:7523 NVidia Corp**
 - Para Orin Nano 4GB: **0955:7623 NVidia Corp**
 
-La imagen a continuación es para Orin Nano 8GB
+La imagen de abajo es para Orin Nano 8GB
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/lsusb_f.png"/>
@@ -306,7 +306,7 @@ La imagen a continuación es para Orin Nano 8GB
 
 ### Flashear a Jetson
 
-**Paso 1:** Extraer el archivo de imagen descargado:
+**Paso 1:** Extrae el archivo de imagen descargado:
 
 ```bash
 cd <path-to-image>
@@ -314,7 +314,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-robo-orin-nano-8g-j401-6.2-36.4.3-2025-05-23.tar.gz
 ```
 
-**Paso 2:** Ejecutar el siguiente comando para flashear el sistema jetpack al SSD NVMe:
+**Paso 2:** Ejecuta el siguiente comando para flashear el sistema jetpack al SSD NVMe:
 
 ```bash
 cd mfi_xxxx
@@ -327,39 +327,38 @@ Verás la siguiente salida si el proceso de flasheo es exitoso
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-El comando de flasheo puede ejecutarse durante 2-10 minutos.
+El comando de flasheo puede ejecutarse entre 2 y 10 minutos.
 :::
 
-**Paso 3:** Conectar el Robotics J401 a una pantalla usando el adaptador PD a HDMI para conectar a una pantalla que soporte entrada HDMI, o conectar directamente a una pantalla que soporte entrada PD usando el cable PD, y completar la configuración inicial:
+**Paso 3:** Conecta el Robotics J401 a una pantalla usando el adaptador PD a HDMI para conectar a una pantalla que soporte entrada HDMI, o conecta directamente a una pantalla que soporte entrada PD usando el cable PD, y completa la configuración inicial:
 
 <div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
+  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
-Por favor completa la **Configuración del Sistema** según tus necesidades.
+Por favor, completa la **Configuración del Sistema** según tus necesidades.
 :::
 
 ## Uso de Interfaces de Hardware
 
 :::info
-Si quieres aprender más sobre las especificaciones detalladas y el uso de la interfaz de hardware, por favor consulta [este wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage).
+Si deseas conocer más sobre las especificaciones detalladas y el uso de la interfaz de hardware, por favor consulta [esta wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage).
 :::
 
 ## Recursos
 
-- [Esquemático de la Placa Portadora reComputer Robotics J401](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Robotics%20J401_V1.0_SCH_250421.pdf)
-- [Hoja de Datos de la Placa Portadora reComputer Robotics J401](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)
-- [Archivo 3D de reComputer Robotics](https://files.seeedstudio.com/products/NVIDIA-Jetson/recomputer_robotics_j401.stp)
-- [Documento Mecánico-PCBA reComputer Robotics](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf)
-- [Catálogo de Productos NVIDIA Jetson de Seeed](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed_NVIDIA_Jetson_Catalog_in_Robotics_and_Edge_AI.pdf)
-- [Comparación de Nvidia Jetson](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Casos de Éxito de Seeed Nvidia Jetson](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Hoja Informativa de Seeed Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+- [Manual de Usuario de reComputer Robotics](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_user_manual.pdf)
+- [Esquemático de la Placa Portadora](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Robotics%20J401_V1.0_SCH_250421.pdf)
+- [Esquemático de la Placa de Alimentación](https://files.seeedstudio.com/products/NVIDIA-Jetson/Power%20board%20for%20reComputer%20Robotics_V1.0_SCH_250507.pdf)
+- [Archivo 3D](https://files.seeedstudio.com/products/NVIDIA-Jetson/recomputer_robotics_j401.stp)
+- [Documento Mecánico-reComputer Robotics PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf)
+- [Catálogo de Productos Seeed NVIDIA Jetson](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Comparación de Nvidia Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

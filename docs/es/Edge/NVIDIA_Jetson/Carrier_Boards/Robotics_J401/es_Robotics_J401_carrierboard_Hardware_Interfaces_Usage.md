@@ -50,11 +50,11 @@ Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1
 - Disipador de calor para placa de expansión x 1
 - Espárrago(M3*30) x 5
 - Tuerca hexagonal M3 x 5
-- Tornillo(CM2.5*L.4) para módulo Jetson y M.2 Key M x3
+- Tornillo(CM2.5*L.4) para Módulo Jetson y M.2 Key M x3
 - Tornillo(CM2*3.0) para M.2 Key E x1
 - Espárrago(M2*2.0) para M.2 Key B x1
 - Tornillo(CM3*4.0) para M.2 Key B x1
-- Manual de usuario x 1
+- Manual de Usuario x 1
 
 :::note
 1.Por favor diseñe una solución robusta de disipación de calor según la Guía de Diseño Térmico, cuando esté en fuente de alimentación de alto voltaje y temperatura de operación.
@@ -64,7 +64,7 @@ Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1
 
 - Adaptador de Energía 19V/4.74A 5525 Barrel Jack
 - Asegúrese de que se cumplan los requisitos máximos de consumo de energía.
-2.Compatibilidad del Cable de Alimentación AC
+2.Compatibilidad de Cable de Alimentación AC
 - Compre cables de alimentación AC trébol específicos de la región según su ubicación.
 3.Compatibilidad de Accesorios
 - Use solo accesorios oficialmente recomendados (ej., módulos inalámbricos, cámaras, periféricos) para rendimiento y compatibilidad óptimos.
@@ -195,17 +195,17 @@ Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1
 
 ### Módulo Compatible
 
-- [Módulo NVIDIA® Jetson Orin™ Nano 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5554.html)
-- [Módulo NVIDIA® Jetson Orin™ Nano 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5552.html)
-- [Módulo NVIDIA® Jetson Orin™ NX 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5523.html)
-- [Módulo NVIDIA® Jetson Orin™ NX 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5524.html)
+- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5554.html)
+- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5552.html)
+- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5523.html)
+- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5524.html)
 
 ### Prerrequisitos
 
 - PC host Ubuntu
 - Placa Portadora Robotics J401
 - Módulo NVIDIA® Jetson Orin™ Nano/NX
-- Ventilador Activo para módulo Nano/NX
+- Ventilador Activo para Módulo Nano/NX
 - SSD Interno NVMe M.2 2280
 - Cable de transmisión de datos USB Tipo-C
 
@@ -291,7 +291,7 @@ Para verificar la integridad del firmware descargado, puedes comparar el valor h
 En una máquina host Ubuntu, abre la terminal y ejecuta el comando `sha256sum <Archivo>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, confirma que el firmware que descargaste está completo e intacto.
 :::
 
-### Entrar al Modo de Recuperación Forzada
+### Entrar en Modo de Recuperación Forzada
 
 :::info
 Antes de que podamos continuar con los pasos de instalación, necesitamos asegurarnos de que la placa esté en modo de recuperación forzada.
@@ -372,11 +372,11 @@ M.2 Key M está diseñado para SSDs NVMe de alta velocidad, proporcionando trans
 
 ### Los SSDs soportados son los siguientes
 
-- [128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
-- [256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
-- [512GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
-- [1TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
-- [2TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
+- [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
+- [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
+- [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
+- [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
+- [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 2TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
 
 ### Conexión de Hardware
 
@@ -545,7 +545,7 @@ iperf3 -c <server_ip> -B <bind_ip>
 
 :::info
 `<server_ip>` es la dirección IP del servidor iperf3. El cliente se conectará a este servidor para realizar una prueba de ancho de banda.
-`<bind_ip>` vincula la dirección IP local especificada como fuente del tráfico de prueba.
+`<bind_ip>` vincula la dirección IP local especificada como la fuente del tráfico de prueba.
 :::
 
 <div align="center">
@@ -642,7 +642,7 @@ Usando este puerto serie, a través del cable de datos USB C, puedes monitorear 
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug.jpg"/>
 </div>
 
-**Paso 2.** Conecta el PC a través de un cable de datos USB, descarga el [Controlador CP210X](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) en tu PC.
+**Paso 2.** Conecta el PC a través de un cable de datos USB, descarga el [CP210X Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) en tu PC.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/download_driver.png"/>
@@ -686,7 +686,7 @@ Usando este puerto serie, a través del cable de datos USB C, puedes monitorear 
 
 ### Cámara USB
 
-Usando una cámara USB a través de los puertos USB 3.2 Type-A, instala y ejecuta `guvcview`:
+Usando cámara USB a través de puertos USB 3.2 Type-A, instala y ejecuta `guvcview`:
 
 ```bash
 sudo apt-get install guvcview
@@ -701,9 +701,9 @@ guvcview -d /dev/video0
 
 El reComputer Jetson Robotics J401 está equipado con dos tipos de conectores de ventilador para satisfacer diferentes necesidades de voltaje y refrigeración:
 
-- 1x Conector de Ventilador de 4 Pines (5V PWM): Diseñado para ventiladores silenciosos de bajo voltaje y baja potencia, este conector soporta control de velocidad PWM, permitiendo el ajuste inteligente de la velocidad del ventilador basado en la temperatura del sistema para mejorar la eficiencia energética y reducir el ruido.
+- 1x Conector de Ventilador de 4 Pines (5V PWM): Diseñado para ventiladores silenciosos de bajo voltaje y baja potencia, este conector soporta control de velocidad PWM, permitiendo ajuste inteligente de la velocidad del ventilador basado en la temperatura del sistema para mejorar la eficiencia energética y reducir el ruido.
 
-- 1x Conector de Ventilador de 4 Pines (12V PWM): Compatible con ventiladores PWM estándar de 12V, también soporta control de velocidad preciso, haciéndolo ideal para requisitos de refrigeración de alto rendimiento.
+- 1x Conector de Ventilador de 4 Pines (12V PWM): Compatible con ventiladores PWM estándar de 12V, también soporta control preciso de velocidad, haciéndolo ideal para requisitos de refrigeración de alto rendimiento.
 
 ### Conexión de Hardware
 
@@ -737,7 +737,7 @@ Adicionalmente, podemos establecer manualmente la velocidad del ventilador usand
 
 ## Botón de Orificio
 
-La placa portadora Robotics J401 cuenta con un Botón de Orificio para la interacción del usuario, incluyendo un botón de Encendido (PWR) y un botón de Reinicio (RESET). Estos botones son esenciales para encender/apagar el dispositivo y realizar reinicios del sistema, respectivamente.
+La placa portadora Robotics J401 cuenta con un Botón de Orificio para interacción del usuario, incluyendo un botón de Encendido (PWR) y un botón de Reinicio (RESET). Estos botones son esenciales para encender/apagar el dispositivo y realizar reinicios del sistema, respectivamente.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/pinhole_button.jpg"/>
@@ -745,8 +745,8 @@ La placa portadora Robotics J401 cuenta con un Botón de Orificio para la intera
 
 ## CAN
 
-CAN (Controller Area Network) es un estándar robusto de bus vehicular que permite a los microcontroladores y dispositivos comunicarse entre sí sin una computadora host.
-El Robotics J401 proporciona una interfaz CAN0 integrada en el conector de alimentación XT30 (2+2) para una transmisión conveniente de energía y datos. Adicionalmente, ofrece 3 interfaces CAN1 a través de dos conectores JST estándar de 4 pines para conectividad flexible del bus CAN.
+CAN (Controller Area Network) es un estándar robusto de bus vehicular que permite a microcontroladores y dispositivos comunicarse entre sí sin una computadora host.
+El Robotics J401 proporciona una interfaz CAN0 integrada en el conector de alimentación XT30 (2+2) para transmisión conveniente de energía y datos. Adicionalmente, ofrece 3 interfaces CAN1 a través de dos conectores JST estándar de 4 pines para conectividad flexible del bus CAN.
 
 ### Comunicación CAN
 
@@ -808,7 +808,7 @@ candump can1
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1.png"/>
 </div>
 
-Se puede ver que la terminal de Jetson ha recibido los datos enviados por el PC.
+Se puede ver que la terminal Jetson ha recibido los datos enviados por el PC.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_r.png"/>
@@ -861,7 +861,7 @@ cansend can0 123##011112233445566778899AABBCCDDEEFF112233445566778899AABBCCDDEEF
 
 :::info
 
-- `123` es el ID
+- `123` es ID
 - `##` Indica trama CAN FD
 - Lo siguiente son 64 bytes de datos (un total de 128 caracteres hexadecimales)
 
@@ -877,7 +877,7 @@ El Robotics J401 proporciona un conector JST estándar de 4 pines para comunicac
 
 ### Conexión de Hardware
 
-Para la comunicación UART, por favor sigue el siguiente cableado. Aquí, usamos la herramienta USB a TTL como ejemplo.
+Para comunicación UART, por favor sigue el siguiente cableado. Aquí, usamos la herramienta USB a TTL como ejemplo.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/uart_c.jpg"/>
@@ -1107,7 +1107,7 @@ Abriendo el flujo de datos, puedes ver el video de la cámara.
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/g_camera.png"/>
 </div>
 
-### Usar las cámaras de la Serie SGxxx
+### Usar las cámaras de la serie SGxxx
 
 **paso 1.** Configurar el modo de sincronización de fotogramas (¡No está habilitado por defecto!).
 
@@ -1176,16 +1176,10 @@ El reComputer Jetson Robotics J401 está equipado con un DP1.4 (incluido en Type
 
 - [Esquemático de la Placa Portadora reComputer Robotics J401](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Robotics%20J401_V1.0_SCH_250421.pdf)
 - [Hoja de Datos de la Placa Portadora reComputer Robotics J401](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)
-- [Archivo 3D de reComputer Robotics](https://files.seeedstudio.com/products/NVIDIA-Jetson/recomputer_robotics_j401.stp)
-- [Documento Mecánico-reComputer Robotics PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf)
-- [Catálogo de Productos Seeed NVIDIA Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed_NVIDIA_Jetson_Catalog_in_Robotics_and_Edge_AI.pdf)
-- [Comparación Nvidia Jetson](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Casos de Éxito Seeed Nvidia Jetson](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Seeed Jetson Una Página](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
