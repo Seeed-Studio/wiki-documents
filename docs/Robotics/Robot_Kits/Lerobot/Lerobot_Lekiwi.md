@@ -11,6 +11,8 @@ slug: /lerobot_lekiwi
 last_update:
   date: 8/8/2025
   author: LiShanghang
+translation:
+  skip: [ zh-CN ]
 ---
 
 # How to use the Lekiwi in Lerobot
