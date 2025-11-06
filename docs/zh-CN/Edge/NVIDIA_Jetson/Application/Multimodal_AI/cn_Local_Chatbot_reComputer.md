@@ -8,12 +8,12 @@ last_update:
   author: kourosh
 ---
 
-# 使用本地 LLMs、STT 和 TTS 构建语音交互聊天机器人
+# 使用本地 LLMs、STT 和 TTS 构建语音交互式聊天机器人
 
-这个项目将**完全语音交互式 AI 助手**的梦想变为现实——完全运行在**本地硬件**上，无需依赖云服务。  
+这个项目将**完全语音交互式 AI 助手**的梦想变为现实——完全**在本地硬件上运行**，无需依赖云服务。  
 通过结合**语音转文本（STT）**、**文本转语音（TTS）**和使用**Ollama**的**本地大语言模型（LLMs）**，该系统实现了人机之间自然、私密和实时的对话。
 
-整个设置运行在 Docker 容器内，可以部署在**NVIDIA Jetson 设备**、**边缘计算机**或任何具有 GPU 加速的基于 Linux 的系统上。
+整个设置在 Docker 容器内运行，可以部署在**NVIDIA Jetson 设备**、**边缘计算机**或任何具有 GPU 加速的基于 Linux 的系统上。
 
 ---
 
@@ -89,7 +89,7 @@ ollama run llama3.2:1b
 
 💡 **提示：**从较小的模型（如 `llama3.2:1b`）开始测试您的配置，然后再扩展。
 
-[ollama.com/library](https://ollama.com/library) 上的可用模型：
+在 [ollama.com/library](https://ollama.com/library) 上可用的模型：
 
 | 模型 | 参数 | 大小 | 命令 |
 |-------|-------------|------|----------|
@@ -100,7 +100,7 @@ ollama run llama3.2:1b
 | Gemma 2 | 9B | 5.5 GB | `ollama run gemma2` |
 | Mistral | 7B | 4.1 GB | `ollama run mistral` |
 
-如果您使用的是**NVIDIA Jetson AGX**，您可以轻松运行中型到大型模型。对于较小的 Jetson，请坚持使用轻量级模型（1B–3B）。
+如果您使用的是**NVIDIA Jetson AGX**，您可以舒适地运行中型到大型模型。对于较小的 Jetson，请坚持使用轻量级模型（1B–3B）。
 
 直接在终端中运行 Ollama 或通过提供的 Python 脚本 `ollama_run.py` 运行。
 
@@ -197,6 +197,8 @@ sudo bash riva_start.sh
 一切准备就绪后，运行主应用程序：
 
 ```bash
+git clone https://github.com/kouroshkarimi/local_chatbot_jetson.git
+cd local_chatbot_jetson
 python3 app.py --list-input-devices
 python3 app.py --list-output-devices
 python3 app.py --input-device <your_input_id> --output-device <your_output_id>
