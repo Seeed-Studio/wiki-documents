@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /cn/wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 10/29/2025
-  author: Michelle
+  date: 11/5/2025
+  author: Michelle Huang
 ---
 
 
@@ -45,7 +45,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
 ### 特性
 
 - **预装 Meshtastic 固件**
-开箱即用，预装 Meshtastic 固件，设置无缝。
+开箱即用，预装 Meshtastic 固件，设置简单无缝。
 
 - **三重电源供应选项**
 支持 Type-C 快充、太阳能输入和锂离子电池供电，可灵活部署在各种环境中——非常适合户外和移动应用。
@@ -54,7 +54,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
 可选 1.3 英寸 OLED 和 2.13 英寸 E-Ink 屏幕，为不同的功耗和视觉反馈需求提供多样化的显示选项。
 
 - **高扩展性**
-完全兼容 Grove 生态系统，并包含 PTH 接头和 SWD 调试接口，用于自定义硬件扩展和高级开发。
+完全兼容 Grove 生态系统，包含 PTH 接头和 SWD 调试接口，用于自定义硬件扩展和高级开发。
 
 ### 规格参数
 
@@ -94,7 +94,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
     <td colspan="1">镀通孔（PTH）：UART/IIC/GPIO/模拟</td>
   </tr>
   <tr>
-    <td colspan="1">为 SWD 预留的焊接焊盘</td>
+    <td colspan="1">为 SWD 预留焊接焊盘</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">电源输入</td>
@@ -145,4 +145,4 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
 
 **示意图**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/l1-diagram.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1%20Diagram.png" alt="pir" width={800} height="auto" /></p>

@@ -11,13 +11,15 @@ slug: /lerobot_lekiwi
 last_update:
   date: 8/8/2025
   author: LiShanghang
+translation:
+  skip: [ zh-CN ]
 ---
 
 # How to use the Lekiwi in Lerobot
 
 :::tip
 
-This tutorial repository maintains the verified stable release of Lerobot as of June 5, 2025. Currently, ​Hugging Face​ has rolled out a ​major upgrade​ to Lerobot, introducing many new features. If you want to experience the latest tutorials, please follow the [​official documentation​ for guidance](https://huggingface.co/docs/lerobot/index).
+This tutorial repository maintains the verified stable release of Lerobot as of June 5, 2025. Currently, ​Hugging Face​ has rolled out a ​major upgrade​ to Lerobot, introducing many new features. If you want to experience the latest tutorials, please follow the [​official documentation​ for guidance](https://huggingface.co/docs/lerobot/lekiwi).
 
 :::
 
@@ -180,7 +182,7 @@ conda install ffmpeg -c conda-forge
 ### 6. Install LeRobot with dependencies for the feetech motors
 
 ```bash
-cd ~/lerobot && pip install -e ".[feetech]"
+cd ~/lerobot && pip install -e ".[lekiwi]"
 ```
 
 ## Install LeRobot on laptop(PC)
@@ -214,7 +216,7 @@ conda activate lerobot
 ### 4. Clone LeRobot
 
 ```bash
-git clone https://github.com/ZhuYaoHui1998/lerobot ~/lerobot
+git clone https://github.com/huggingface/lerobot.git ~/lerobot
 ```
 
 ### 5. Install ffmpeg in your environment
@@ -228,7 +230,7 @@ conda install ffmpeg -c conda-forge
 ### 6. Install LeRobot with dependencies for the feetech motors
 
 ```bash
-cd ~/lerobot && pip install -e ".[feetech]"
+cd ~/lerobot && pip install -e ".[lekiwi]"
 ```
 
 ## Assembly
@@ -393,7 +395,7 @@ Check the circuit connections; after assembly, the Lekiwi should be connected to
 To find the port for each bus servo adapter, run this script:
 
 ```bash
-python -m lerobot.find_port
+lerobot-find-port
 ```
 
 Example output:
@@ -431,58 +433,17 @@ sudo chmod 666 /dev/ttyACM0
 sudo chmod 666 /dev/ttyACM1
 ```
 
-Connect the usb cable from your computer and the power supply to the leader arm’s controller board. Then, run the following command or run the API example with the port you got from the previous step. You’ll also need to give your leader arm a name with the `id` parameter.
-
-```bash
-python -m lerobot.setup_motors \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/tty.usbmodem575E0031751  # <- paste here the port found at previous step
-```
-
-You should see the following instruction.
-
-```bash
-Connect the controller board to the 'gripper' motor only and press enter.
-```
-
-As instructed, plug the gripper’s motor. Make sure it’s the only motor connected to the board, and that the motor itself is not yet daisy-chained to any other motor. As you press [Enter], the script will automatically set the id and baudrate for that motor.
-
-You should then see the following message:
-
-```bash
-'gripper' motor id set to 6
-```
-
-Followed by the next instruction:
-
-```bash
-Connect the controller board to the 'wrist_roll' motor only and press enter.
-```
-
-You can disconnect the 3-pin cable from the controller board, but you can leave it connected to the gripper motor on the other end, as it will already be in the right place. Now, plug in another 3-pin cable to the wrist roll motor and connect it to the controller board. As with the previous motor, make sure it is the only motor connected to the board and that the motor itself isn’t connected to any other one.
-
-:::caution
-Repeat the operation for each motor as instructed.
-:::
-
-Check your cabling at each step before pressing Enter. For instance, the power supply cable might disconnect as you manipulate the board.
-
-When you are done, the script will simply finish, at which point the motors are ready to be used. You can now plug the 3-pin cable from each motor to the next one, and the cable from the first motor (the ‘shoulder pan’ with id=1) to the controller board, which can now be attached to the base of the arm.
-
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/hbW6eFYkHTg?si=jKdpTyI8wRC-iHxO" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 
 ### Lekiwi
 
 You should follow the previous command to find the correct USB and setup motors.
 
-The instructions for configuring the motors can be found in the SO101 [docs](https://huggingface.co/docs/lerobot/so101#configure-the-motors) (Same as leader arm). Besides the ids for the arm motors, we also need to set the motor ids for the mobile base. These need to be in a specific order to work. Below an image of the motor ids and motor mounting positions for the mobile base. Note that we only use one Motor Control board on LeKiwi. This means the motor ids for the wheels are 7, 8 and 9.
+The instructions for configuring the motors can be found in the SO101 [docs](https://huggingface.co/docs/lerobot/lekiwi) (Same as leader arm). Besides the ids for the arm motors, we also need to set the motor ids for the mobile base. These need to be in a specific order to work. Below an image of the motor ids and motor mounting positions for the mobile base. Note that we only use one Motor Control board on LeKiwi. This means the motor ids for the wheels are 7, 8 and 9.
 
 You can run this command to setup motors for LeKiwi. It will first setup the motors for arm (id 6..1) and then setup motors for wheels (9,8,7).
 
 ```bash
-python -m lerobot.setup_motors \
+lerobot-setup-motors \
     --robot.type=lekiwi \
     --robot.port=/dev/tty.usbmodem58760431551 # <- paste here the port found at previous step
 ```
@@ -501,12 +462,12 @@ Now we have to calibrate the leader arm and the follower arm. The wheel motors d
 Make sure the arm is connected to the Raspberry Pi and run this script or API example (on the Raspberry Pi via SSH) to launch calibration of the follower arm:
 
 ```bash
-python -m lerobot.calibrate \
+lerobot-calibrate \
     --robot.type=lekiwi \
     --robot.id=my_awesome_kiwi # <- Give the robot a unique name
 ```
 
-We unified the calibration method for most robots, thus, the calibration steps for this SO100 arm are the same as the steps for the Koch and SO101. First, we have to move the robot to the position where each joint is in the middle of its range, then we press `Enter`. Secondly, we move all joints through their full range of motion. A video of this same process for the SO101 as reference can be found [here](https://huggingface.co/docs/lerobot/en/so101#calibration-video).
+We unified the calibration method for most robots, thus, the calibration steps for this SO100 arm are the same as the steps for the Koch and SO101. First, we have to move the robot to the position where each joint is in the middle of its range, then we press `Enter`. Secondly, we move all joints through their full range of motion. A video of this same process for the SO101 as reference can be found [here](https://huggingface.co/docs/lerobot/lekiwi).
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/22n6f5xH9Dk?si=2QTzn1CDbsSv6Y_H" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -521,7 +482,7 @@ If you have the wired LeKiwi version, please run all commands on your laptop.
 Then, to calibrate the leader arm (which is attached to the laptop/pc). Run the following command of API example on your laptop:
 
 ```bash
-python -m lerobot.calibrate \
+lerobot-calibrate \
     --teleop.type=so100_leader \
     --teleop.port=/dev/tty.usbmodem58760431551 \ # <- The port of your robot
     --teleop.id=my_awesome_leader_arm # <- Give the robot a unique name
@@ -688,21 +649,6 @@ On Linux, if the left and right arrow keys and escape key don’t have any effec
 
 If you have the **wired** LeKiwi version please run all commands including both these record dataset commands on your laptop.
 
-## Visualize the dataset
-
-If you uploaded your dataset to the hub with `--dataset.push_to_hub=true`, you can [visualize your dataset online](https://huggingface.co/spaces/lerobot/visualize_dataset) by copy pasting your repo id given by:
-
-```bash
-echo ${HF_USER}/lekiwi_test
-```
-
-If you didn't upload with `--dataset.push_to_hub=false`, you can also visualize it locally with (a window can be opened in the browser `http://127.0.0.1:9090` with the visualization tool):
-
-```bash
-python -m lerobot.scripts.visualize_dataset_html \
-  --repo-id ${HF_USER}/lekiwi_test \# <-change to your repo-id
-  --local-files-only 1
-```
 
 ## Replay an episode
 
@@ -724,7 +670,7 @@ python examples/lekiwi/replay.py
 To train a policy to control your robot, use the `python lerobot/scripts/train.py` script. A few arguments are required. Here is an example command:
 
 ```bash
-python lerobot/scripts/train.py \
+lerobot-train \
   --dataset.repo_id=${HF_USER}/lekiwi_test \
   --policy.type=act \
   --output_dir=outputs/train/act_lekiwi_test \

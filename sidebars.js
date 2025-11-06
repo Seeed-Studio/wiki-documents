@@ -3178,6 +3178,7 @@ const sidebars = {
                   items: [
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/recomputer_r1000_build_seeed_balena_image',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/recomputer_r1000_balena',
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/recomuter_ai_box_balena'
                   ]
                 },
                 {
@@ -3401,7 +3402,8 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/frigate_nvr_with_raspberrypi_5',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/reterminal_frigate',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/reterminal-DM-Frigate',
-                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/zoneminder_on_recomputer'
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/zoneminder_on_recomputer',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/go2rtc_on_recomputer'
                   ]
                 },
                 {
@@ -8276,6 +8278,7 @@ const sidebars = {
                   items: [
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/cn_recomputer_r1000_build_seeed_balena_image',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/cn_recomputer_r1000_balena',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/cn_recomuter_ai_box_balena'
                   ]
                 },
                 {
@@ -8500,6 +8503,7 @@ const sidebars = {
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_reterminal_frigate',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_reterminal-DM-Frigate',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_zoneminder_on_recomputer',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_go2rtc_on_recomputer'
                   ]
                 },
                 {
@@ -8824,7 +8828,8 @@ const sidebars = {
               items: [
                 // Models
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Speech_vlm',
-                'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_use_vlm_guard_warehouse'
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_use_vlm_guard_warehouse',
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Local_Chatbot_reComputer',
               ]
             },
             // Managed Services
@@ -13281,6 +13286,7 @@ const sidebars = {
                   items: [
                     'es/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/es_recomputer_r1000_build_seeed_balena_image',
                     'es/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/es_recomputer_r1000_balena',
+                    'es/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/es_recomuter_ai_box_balena'
                   ]
                 },
                 {
@@ -13505,6 +13511,7 @@ const sidebars = {
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_reterminal_frigate',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_reterminal-DM-Frigate',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_zoneminder_on_recomputer',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_go2rtc_on_recomputer'
                   ]
                 },
                 {
@@ -13829,7 +13836,8 @@ const sidebars = {
               items: [
                 // Models
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Speech_vlm',
-                'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_use_vlm_guard_warehouse'
+                'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_use_vlm_guard_warehouse',
+                'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Local_Chatbot_reComputer',
               ]
             },
             // Managed Services
@@ -18286,6 +18294,7 @@ const sidebars = {
                   items: [
                     'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/ja_recomputer_r1000_build_seeed_balena_image',
                     'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/ja_recomputer_r1000_balena',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/ja_recomuter_ai_box_balena'
                   ]
                 },
                 {
@@ -18510,6 +18519,7 @@ const sidebars = {
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_reterminal_frigate',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_reterminal-DM-Frigate',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_zoneminder_on_recomputer',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_go2rtc_on_recomputer'
                   ]
                 },
                 {
@@ -18834,7 +18844,8 @@ const sidebars = {
               items: [
                 // Models
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Speech_vlm',
-                'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_use_vlm_guard_warehouse'
+                'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_use_vlm_guard_warehouse',
+                'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Local_Chatbot_reComputer',
               ]
             },
             // Managed Services

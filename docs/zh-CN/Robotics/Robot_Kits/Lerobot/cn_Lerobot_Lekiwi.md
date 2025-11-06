@@ -16,7 +16,7 @@ last_update:
 # 如何在 Lerobot 中使用 Lekiwi
 
 :::tip
-本教程仓库代码保持为2025年6月5日之前的Lerobot经过测试的稳定版本，目前Huggingface对Lerobot进行了非常庞大的升级，增加了非常多的新功能，如果需要体验最新的教程请跟随[官方文档进行操作](https://huggingface.co/docs/lerobot/index)。
+本教程仓库代码保持为2025年6月5日之前的Lerobot经过测试的稳定版本，目前Huggingface对Lerobot进行了非常庞大的升级，增加了非常多的新功能，如果需要体验最新的教程请跟随[官方文档进行操作](https://huggingface.co/docs/lerobot/lekiwi)。
 :::
 
 
@@ -191,7 +191,7 @@ conda install ffmpeg -c conda-forge
 
 ### 6. 安装带有 feetech 电机依赖的 LeRobot：
 ```bash
-cd ~/lerobot && pip install -e ".[feetech]"
+cd ~/lerobot && pip install -e ".[lekiwi]"
 ```
 
 ## C. 在笔记本电脑上安装 LeRobot
@@ -220,7 +220,7 @@ conda activate lerobot
 
 ### 4. 克隆 LeRobot：
 ```bash
-git clone https://gitee.com/Marlboro1998/lerobot_seeed_version.git ~/lerobot
+git clone https://github.com/huggingface/lerobot.git ~/lerobot
 ```
 
 ### 5. 在您的环境中安装 ffmpeg：
@@ -231,7 +231,7 @@ conda install ffmpeg -c conda-forge
 
 ### 6. 安装带有 feetech 电机依赖的 LeRobot：
 ```bash
-cd ~/lerobot && pip install -e ".[feetech]"
+cd ~/lerobot && pip install -e ".[lekiwi]"
 ```
 
 ## 配置电机
@@ -245,7 +245,7 @@ cd ~/lerobot && pip install -e ".[feetech]"
 要找到单个电机的正确端口，请运行以下实用脚本两次：
 
 ```bash
-python lerobot/scripts/find_motors_bus_port.py
+lerobot-find-port
 ```
 
 示例输出（例如，在 Mac 上为 `/dev/tty.usbmodem575E0031751`，或在 Linux 上可能为 `/dev/ttyACM0`）：
@@ -261,28 +261,12 @@ sudo chmod 666 /dev/ttyACM1
 
 **配置您的电机**
 
-插入您的第一个电机并运行以下脚本，将其 ID 设置为 7-9。此脚本还会将当前位置设置为 2048，因此电机会旋转：
+依次插入您的底盘的每一个电机并运行以下脚本，他会先初始化机械臂舵机6-1，然后再初始化底盘舵机，将其 ID 设置为 9-7，如果你已经校准过机械臂，可以连续按回车不断覆盖和跳过：
 
 ```bash
-python lerobot/scripts/configure_motor.py \
-  --port /dev/ttyACM0 \
-  --brand feetech \
-  --model sts3215 \
-  --baudrate 1000000 \
-  --ID 7
-```
-
-注意：这些电机目前有一定限制。它们只能接受 0 到 4096 之间的值，这对应于一次完整的旋转。它们无法旋转超过这个范围。2048 是该范围的中间值，因此我们可以向负方向移动 -2048 步（逆时针 180 度）达到最大范围，或者向正方向移动 +2048 步（顺时针 180 度）达到最大范围。配置步骤还会将归位偏移设置为 0，因此如果您组装机械臂时出现偏差，您可以随时更新归位偏移以补偿最多 ±2048 步（±180 度）的偏移。
-
-然后拔下您的电机，插入第二个电机并将其 ID 设置为 8 和 9。
-
-```bash
-python lerobot/scripts/configure_motor.py \
-  --port /dev/ttyACM0 \
-  --brand feetech \
-  --model sts3215 \
-  --baudrate 1000000 \
-  --ID 8
+lerobot-setup-motors \
+    --robot.type=lekiwi \
+    --robot.port=/dev/tty.usbmodem58760431551 # <- paste here the port found at previous step
 ```
 
 ## 组装
