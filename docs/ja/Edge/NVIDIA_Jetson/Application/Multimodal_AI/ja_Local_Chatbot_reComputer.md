@@ -1,5 +1,5 @@
 ---
-description: Speech-to-Text（STT）、Text-to-Speech（TTS）、およびOllamaとNVIDIA Rivaを使用したローカル大規模言語モデル（LLM）を組み合わせた、完全にローカルな音声対話型AIアシスタント。NVIDIA Jetsonなどのエッジデバイス上で完全に動作し、クラウドに依存することなく、プライベートでリアルタイムな自然な音声会話を可能にします。
+description: Speech-to-Text（STT）、Text-to-Speech（TTS）、およびOllamaとNVIDIA Rivaを使用したローカル大規模言語モデル（LLM）を組み合わせた、完全にローカルで動作する音声対話型AIアシスタント。NVIDIA Jetsonなどのエッジデバイス上で完全に動作し、クラウドに依存することなく、プライベートでリアルタイムな自然な音声会話を可能にします。
 title: Jetson上のチャットボット
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/local_chatbot_recomputer
@@ -10,8 +10,8 @@ last_update:
 
 # ローカルLLM、STT、TTSを使用した音声対話型チャットボットの構築
 
-このプロジェクトは、**完全に音声対話型のAIアシスタント**の夢を実現します — クラウドサービスに依存することなく、完全に**ローカルハードウェア**上で動作します。  
-**Speech-to-Text（STT）**、**Text-to-Speech（TTS）**、および**Ollama**を使用した**ローカル大規模言語モデル（LLM）**を組み合わせることで、システムは人間と機械の間の自然で、プライベートで、リアルタイムな会話を可能にします。
+このプロジェクトは、**完全に音声対話型のAIアシスタント**の夢を実現します — **ローカルハードウェア**上で完全に動作し、クラウドサービスに依存しません。  
+**Speech-to-Text（STT）**、**Text-to-Speech（TTS）**、および**Ollama**を使用した**ローカル大規模言語モデル（LLM）**を組み合わせることで、人間と機械の間の自然でプライベートなリアルタイム会話を可能にします。
 
 全体のセットアップはDockerコンテナ内で動作し、**NVIDIA Jetsonデバイス**、**エッジコンピュータ**、またはGPUアクセラレーション付きの任意のLinuxベースシステムにデプロイできます。
 
@@ -21,12 +21,12 @@ last_update:
 
 このプロジェクトの目標は、以下の機能を持つ**音声駆動チャットボット**を作成することです：
 
-- リアルタイムであなたの声を聞く。
-- ローカル**ASR（自動音声認識）**を使用してあなたの音声を理解する。
-- **ローカルLLM**を使用してインテリジェントな応答を生成する。
-- **TTS（Text-to-Speech）**を使用してそれらの応答を自然に話す。
+- リアルタイムであなたの声を聞く
+- ローカル**ASR（自動音声認識）**を使用してあなたの音声を理解する
+- **ローカルLLM**を使用してインテリジェントな応答を生成する
+- **TTS（Text-to-Speech）**を使用してそれらの応答を自然に話す
 
-すべてのコンポーネントは自己完結型でローカルに動作し、データを完全にコントロールできます — クラウド依存なし、レイテンシなし、プライバシーの懸念なし。
+すべてのコンポーネントは自己完結型でローカルで動作し、データを完全にコントロールできます — クラウド依存なし、レイテンシなし、プライバシーの懸念なし。
 
 ---
 
@@ -37,42 +37,42 @@ last_update:
 話された入力をリアルタイムでテキストに変換します。  
 主な機能：
 
-- **NVIDIA Riva ASR**を使用した高速で正確な転写。  
-- 複数言語のサポート。  
-- エッジデバイス向けに最適化。
+- **NVIDIA Riva ASR**を使用した高速で正確な転写  
+- 複数言語のサポート  
+- エッジデバイス向けに最適化
 
 ### 2. Text-to-Speech（TTS）モジュール
 
 チャットボットの応答を自然な音声出力に変換します。  
 ハイライト：
 
-- 多言語、表現豊かで、リアルな音声合成。  
-- **NVIDIA Riva TTS**によって駆動。  
-- 低レイテンシ — インタラクティブな会話に最適。
+- 多言語、表現豊かで現実的な音声合成  
+- **NVIDIA Riva TTS**によって駆動  
+- 低レイテンシ — インタラクティブな会話に最適
 
 ### 3. ローカルLLM（Ollama）
 
 チャットボットの中核は**Ollama**で、現代のLLMを効率的に実行するローカル推論エンジンです。  
 機能：
 
-- オフライン動作（インターネット不要）。  
-- Jetsonデバイス上でもリアルタイム応答。  
-- スムーズで一貫した対話のためのコンテキスト保持。  
-- Llama、Phi、Gemma、Mistralなど、さまざまなモデルをサポート。
+- オフライン動作（インターネット不要）  
+- Jetsonデバイスでもリアルタイム応答  
+- スムーズで一貫した対話のためのコンテキスト保持  
+- Llama、Phi、Gemma、Mistralなど様々なモデルをサポート
 
 ### 4. ユーザーインタラクション層
 
-シンプルで直感的なインターフェースにより、ユーザーは以下のことができます：
+シンプルで直感的なインターフェースにより、ユーザーは以下が可能です：
 
-- ボタンやコマンドで音声インタラクションを開始または停止。  
-- ライブ転写とチャットボットの応答を確認。  
-- 音声から音声へのスムーズで低レイテンシなコミュニケーションを楽しむ。
+- ボタンやコマンドで音声インタラクションを開始または停止  
+- ライブ転写とチャットボットの応答を確認  
+- 音声から音声へのスムーズで低レイテンシなコミュニケーションを楽しむ
 
 ---
 
 ## Ollamaのローカルセットアップ
 
-まず、[Jetson Containers](https://github.com/dusty-nv/jetson-containers)をインストールして、Docker内でサービスを簡単に管理およびデプロイします。
+まず、[Jetson Containers](https://github.com/dusty-nv/jetson-containers)をインストールして、Docker内でサービスを簡単に管理・デプロイできるようにします。
 
 ```bash
 # Install Jetson Container tools
@@ -102,7 +102,7 @@ ollama run llama3.2:1b
 
 **NVIDIA Jetson AGX**を使用している場合、中型から大型のモデルを快適に実行できます。小型のJetsonの場合は、軽量モデル（1B–3B）を使用してください。
 
-Ollamaをターミナルで直接実行するか、提供されたPythonスクリプト`ollama_run.py`を通じて実行します。
+Ollamaをターミナルで直接実行するか、提供されているPythonスクリプト`ollama_run.py`を使用して実行します。
 
 ```bash
 python3 ollama_run.py
@@ -126,7 +126,7 @@ Python統合
 - **Text-to-Speech（TTS）**  
 - **ニューラル機械翻訳（NMT）**（オプション）
 
-クラウドから**Jetson シリーズ**などの組み込みデバイスまで、どこにでもデプロイできます。
+クラウドから**Jetson シリーズ**などの組み込みデバイスまで、どこでもデプロイできます。
 
 ### ステップ1：NGC APIキーの取得
 
@@ -197,6 +197,8 @@ sudo bash riva_start.sh
 すべての準備が整ったら、メインアプリケーションを実行します：
 
 ```bash
+git clone https://github.com/kouroshkarimi/local_chatbot_jetson.git
+cd local_chatbot_jetson
 python3 app.py --list-input-devices
 python3 app.py --list-output-devices
 python3 app.py --input-device <your_input_id> --output-device <your_output_id>
@@ -208,10 +210,10 @@ python3 app.py --input-device <your_input_id> --output-device <your_output_id>
 
 ## 主な利点
 
-- 🔒 100%プライベート – データはデバイスから出ません  
+- 🔒 100%プライベート – データがデバイスから出ることはありません  
 - ⚡ リアルタイム応答 – 低レイテンシ向けに最適化  
 - 🌐 多言語 – 複数の言語とアクセントをサポート  
-- 🧩 モジュラー – 各コンポーネントは交換または拡張可能  
+- 🧩 モジュラー – 各コンポーネントを置き換えまたは拡張可能  
 - 🖥️ エッジフレンドリー – JetsonまたはLinuxシステムにデプロイ可能
 
 ---
@@ -237,7 +239,7 @@ python3 app.py --input-device <your_input_id> --output-device <your_output_id>
 ## 参考文献
 
 1. [LlamaIndexを使用したJetsonベースのローカルRAG](https://wiki.seeedstudio.com/ja/Local_RAG_based_on_Jetson_with_LlamaIndex/)
-2. [ローカル音声チャットボット：reComputer上でRivaとLlama2をデプロイ](https://wiki.seeedstudio.com/ja/Local_Voice_Chatbot/)
+2. [ローカル音声チャットボット：reComputerでRivaとLlama2をデプロイ](https://wiki.seeedstudio.com/ja/Local_Voice_Chatbot/)
 3. [ChatTTS](https://github.com/2noise/ChatTTS)
 4. [Speech to Text（STT）とText to Speech（TTS）](https://www.librechat.ai/docs/configuration/stt_tts)
 5. [Ollama](https://github.com/ollama/ollama)
