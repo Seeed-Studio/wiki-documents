@@ -558,7 +558,7 @@ Save and reboot.
 
 **Configure the uncontrolled GPIO through the Overlay configuration:**
 
-**Step 1.** Download and extract the [overlay package](https://drive.weixin.qq.com/s?k=AGEAZwfLABEmqim3hXAXcApwZFAKM) to your jetson device.
+**Step 1.** Download and extract the [overlay package](https://files.seeedstudio.com/wiki/overlay.zip) to your jetson device.
 
 **Step 2.** Copy build.sh and gpio-overlay.dts to Jetson.
 
