@@ -12,13 +12,13 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Comenzando con la Pantalla ePaper de reTerminal E Series y EEZStudio
+# Comenzando con la Pantalla ePaper de reTerminal E Series y EEZ Studio
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez.jpg" style={{width:600, height:'auto'}}/></div>
 
 ## Introducción
 
-Esta guía te llevará a través del diseño de una interfaz de usuario profesional para la serie reTerminal E utilizando la herramienta de diseño visual (**EEZ Studio**)[https://www.envox.eu/studio/studio-introduction/]. Aprenderás cómo crear elementos de UI, generar el código necesario y finalmente desplegarlo en el dispositivo usando el IDE de Arduino. Este proceso te permite construir interfaces personalizadas con excelente visibilidad y consumo de energía ultra bajo, ideal para aplicaciones HMI.
+Esta guía te llevará a través del diseño de una interfaz de usuario profesional para la serie reTerminal E utilizando la herramienta de diseño visual [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/). Aprenderás cómo crear elementos de UI, generar el código necesario y finalmente desplegarlo en el dispositivo usando el IDE de Arduino. Este proceso te permite construir interfaces personalizadas con excelente visibilidad y consumo de energía ultra bajo, ideal para aplicaciones HMI.
 
 ### Materiales Requeridos
 
@@ -215,7 +215,7 @@ Paso 2. Agregar Panel
 
 Paso 3. Agregar Bitmaps
 
-- Haz clic en el icono Bitmaps en la barra lateral del extremo derecho para agregar una imagen.
+- Haz clic en el icono Bitmaps en la barra lateral derecha para agregar una imagen.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a3.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -239,7 +239,7 @@ Paso 5. Agregar Etiqueta
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a7.jpg" style={{width:900, height:'auto'}}/></div>
 
-- Haz clic en la caja Fonts en la columna del extremo derecho para agregar tus formatos de fuente.
+- Haz clic en la caja Fonts en la columna más a la derecha para agregar tus formatos de fuente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a8.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -310,13 +310,13 @@ Navega a **Tools > Board > Boards Manager**, busca "esp32" e instala el paquete 
 
 Ve a **Tools > Board > ESP32 Arduino** y selecciona **XIAO_ESP32S3**.
 
-**Paso 5.** Conecta tu Pantalla ePaper de reTerminal E Series a tu computadora usando un cable USB-C.
+**Paso 5.** Conecta tu Pantalla ePaper reTerminal E Series a tu computadora usando un cable USB-C.
 
 **Paso 6.** Selecciona el puerto correcto desde **Tools > Port**.
 
 ## Programación de la Pantalla ePaper
 
-El **reTerminal E1001 cuenta con una pantalla ePaper en blanco y negro de 7.5 pulgadas**, mientras que el **reTerminal E1002 está equipado con una pantalla ePaper a todo color de 7.3 pulgadas**. Ambas pantallas proporcionan excelente visibilidad en varias condiciones de iluminación con consumo de energía ultra bajo, haciéndolas ideales para aplicaciones industriales que requieren pantallas siempre encendidas con uso mínimo de energía.
+El **reTerminal E1001 cuenta con una pantalla ePaper en blanco y negro de 7.5 pulgadas**, mientras que el **reTerminal E1002 está equipado con una pantalla ePaper a todo color de 7.3 pulgadas**. Ambas pantallas proporcionan excelente visibilidad en diversas condiciones de iluminación con consumo de energía ultra bajo, haciéndolas ideales para aplicaciones industriales que requieren pantallas siempre encendidas con uso mínimo de energía.
 
 ### Usando la Librería Seeed_GFX
 
@@ -384,18 +384,22 @@ La pantalla ePaper a todo color soporta colores rojo, negro y blanco, permitiend
 </TabItem>
 </Tabs>
 
-## Desplegando el Proyecto de EEZ Studio a Arduino
+## Desplegando el Proyecto EEZ Studio a Arduino
 
-Estos dos archivos de controlador subyacentes deben agregarse a nuestro directorio del proyecto.
+Primero, localiza OPI PSRAM en la barra de menú 'Tools' y ábrelo.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/EEZSetting.png" style={{width:500, height:'auto'}}/></div>
+
+Estos dos archivos de controlador subyacentes necesitan ser añadidos a nuestro directorio del proyecto.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/00.png" style={{width:800, height:'auto'}}/></div>
 
 - [e1002_display.cpp](https://files.seeedstudio.com/wiki/EEZStudio/e1002_display.cpp)
 - [e1002_display.h](https://files.seeedstudio.com/wiki/EEZStudio/e1002_display.h)
 
-Porte los siguientes archivos del proyecto (incluyendo cuatro archivos) a la Biblioteca de Arduino para usar en proyectos de Arduino.
-El `archivo EEZ_UI` se genera durante el proceso de compilación en EEZStudio. Necesita localizar la ruta donde lo guardó.
+Porta los siguientes archivos del proyecto (incluyendo cuatro archivos) a la Librería de Arduino para usar en proyectos de Arduino.
+El `archivo EEZ_UI` se genera durante el proceso de construcción en EEZStudio. Necesitas localizar la ruta donde lo guardaste.
 
-- 🔗 **[ZIP]** [Código](https://files.seeedstudio.com/wiki/EEZStudio/E1002_EEZStudio.zip)
+- 🔗 **[ZIP]** [Código](https://files.seeedstudio.com/wiki/EEZStudio/E1002-EEZStudioCode.zip)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/7.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -471,7 +475,7 @@ void loop()
     }
 
     if (lastKey2State == HIGH && currentKey2State == LOW) {
-        page_index = SCREEN_ID_PHOTO;
+        page_index = SCREEN_ID_PLANT;
         loadScreen((ScreensEnum)page_index);
         Serial.println("Switched to Setting Screen");
         delay(50);
@@ -497,19 +501,19 @@ void loop()
 
 - `pinMode(..., INPUT_PULLUP):` Configura el pin del botón como modo de entrada y habilita la resistencia pull-up interna. Esto asegura que el pin permanezca en un nivel alto (HIGH) cuando el botón no está presionado y se conecte a tierra, volviéndose bajo (LOW), cuando se presiona.
 
-- `ui_init()` y `loadScreen():` Estas funciones inicializan la biblioteca de interfaz de usuario LVGL y cargan la pantalla especificada
+- `ui_init()` y `loadScreen():` Estas funciones inicializan la librería de interfaz de usuario LVGL y cargan la pantalla especificada
 
-- `lv_timer_handler():` Esta es una función esencial en la biblioteca LVGL que maneja eventos de temporizador dentro de LVGL, como animaciones y actualizaciones de pantalla.
+- `lv_timer_handler():` Esta es una función esencial en la librería LVGL que maneja eventos de temporizador dentro de LVGL, como animaciones y actualizaciones de pantalla.
 
 - `if (lastKey0State == HIGH && currentKey0State == LOW):` Esta línea es el núcleo de la detección de eventos de tecla. Verifica si el estado de una tecla ha cambiado de no presionada a presionada.
 
 - Cuando se cumple la condición, el programa actualiza `page_index` y llama a la función `loadScreen()` para cargar una nueva página.
 
-- Actualización de Estado: `lastKey0State = currentKey0State;` Esta línea es crucial. Guarda el estado actual de la tecla para usar en la siguiente iteración del `loop()`, habilitando la siguiente comparación de estado.
+- Actualización de Estado: `lastKey0State = currentKey0State;` Esta línea es crucial. Guarda el estado actual de la tecla para usar en la siguiente iteración de `loop()`, habilitando la siguiente comparación de estado.
 
-- Actualización E-ink: `e1002_display_should_refresh()` y `e1002_display_refresh()` gestionan la actualización de la pantalla E-ink. A diferencia de las pantallas LCD, E-ink no puede actualizarse en tiempo real. Típicamente requiere actualizaciones selectivas o de pantalla completa en intervalos específicos para conservar energía y extender la vida útil. Este código implementa ese mecanismo de actualización bajo demanda.
+- Refresco E-ink: `e1002_display_should_refresh()` y `e1002_display_refresh()` gestionan el refresco de la pantalla E-ink. A diferencia de las pantallas LCD, E-ink no puede refrescarse en tiempo real. Típicamente requiere refrescos selectivos o de pantalla completa en intervalos específicos para conservar energía y extender la vida útil. Este código implementa ese mecanismo de refresco bajo demanda.
 
-- `delay(10)`: Esta es una medida simple de anti-rebote por software para evitar que el programa malinterprete el rebote físico de la tecla como múltiples presiones.
+- `delay(10)`: Esta es una medida simple de debounce por software para prevenir que el programa malinterprete el rebote físico de la tecla como múltiples presiones.
 
 ## Diagrama de Visualización de Interfaz
 
@@ -530,16 +534,14 @@ void loop()
 
 ## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

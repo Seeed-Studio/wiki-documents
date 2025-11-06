@@ -1,5 +1,5 @@
 ---
-description: XIAO ESP32S3 with Wio-WM6180 Wi-Fi HaLow Module Tutorial
+description: XIAO ESP32S3 with Wio-WM6108 Wi-Fi HaLow Module Tutorial
 title: Getting Started with Wi-Fi HaLow Module for XIAO
 image: https://files.seeedstudio.com/wiki/wifi_halow/pic/20.webp
 slug: /getting_started_with_wifi_halow_module_for_xiao
@@ -15,14 +15,14 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/20.jpg" style={{width:600, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-Halow-Module-for-XIAO-p-6395.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-HaLow-Module-for-XIAO-p-6395.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
 ## Introduction
 
-This tutorial will guide you through setting up and using the Wio-WM6180 Wi-Fi HaLow Module with a XIAO ESP32S3 to build a Wi-Fi HaLow client. Wi-Fi HaLow (IEEE 802.11ah) is designed for long-range, low-power IoT applications, operating in the sub-1 GHz frequency band. We'll walk through the hardware setup, software configuration, and demonstrate how to establish Wi-Fi HaLow connectivity for your IoT projects.
+This tutorial will guide you through setting up and using the Wio-WM6108 Wi-Fi HaLow Module with a XIAO ESP32S3 to build a Wi-Fi HaLow client. Wi-Fi HaLow (IEEE 802.11ah) is designed for long-range, low-power IoT applications, operating in the sub-1 GHz frequency band. We'll walk through the hardware setup, software configuration, and demonstrate how to establish Wi-Fi HaLow connectivity for your IoT projects.
 
 ### Key Features
 
@@ -34,7 +34,7 @@ This tutorial will guide you through setting up and using the Wio-WM6180 Wi-Fi H
 
 ## Hardware Overview
 
-The following table outlines the key specifications of the Wio-WM6180 Wi-Fi HaLow Module:
+The following table outlines the key specifications of the Wio-WM6108 Wi-Fi HaLow Module:
 
 | Characteristic | Value | Unit |
 |:-------------:|:-----:|:----:|
@@ -85,11 +85,11 @@ A typical Wi-Fi HaLow network consists of several key components that work toget
 
 3. **Gateway**: Acts as a bridge between the Wi-Fi HaLow network and other networks (e.g., Ethernet or cellular).
 
-In this tutorial, we'll configure the XIAO ESP32S3 as a Station (STA) client that connects to a Wi-Fi HaLow Access Point. The XIAO will use the WM6180 module to establish and maintain the HaLow connection.
+In this tutorial, we'll configure the XIAO ESP32S3 as a Station (STA) client that connects to a Wi-Fi HaLow Access Point. The XIAO will use the WM6108 module to establish and maintain the HaLow connection.
 
 ## MM-IoT-SDK Framework
 
-The WM6180 module utilizes [MorseMicro's MM-IoT-SDK](https://github.com/MorseMicro/mm-iot-esp32), which provides:
+The WM6108 module utilizes [MorseMicro's MM-IoT-SDK](https://github.com/MorseMicro/mm-iot-esp32), which provides:
 
 - **Multi-protocol Support**: Enables seamless integration with various IoT protocols
 - **Low Power Management**: Optimized power consumption for battery-powered devices
@@ -112,14 +112,10 @@ Here are the materials needed to run this tutorial.
     <table align="center">
         <tr>
             <th>XIAO ESP32S3 Sense</th>
-            <th>XIAO ESP32C3</th>
-            <th>XIAO ESP32C6</th>
-            <th>Wio-WM6180 Wi-Fi HaLow Module for XIAO</th>
+            <th>Wio-WM6108 Wi-Fi HaLow Module for XIAO</th>
         </tr>
         <tr>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
-            <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:90, height:'auto'}}/></div></td>
-            <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/20.jpg" style={{width:250, height:'auto'}}/></div></td>
         </tr>
         <tr>
@@ -129,17 +125,7 @@ Here are the materials needed to run this tutorial.
                 </a>
             </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-                </a>
-            </div></td>
-            <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-                </a>
-            </div></td>
-            <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-Halow-Module-for-XIAO-p-6395.html" target="_blank">
+                <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-HaLow-Module-for-XIAO-p-6395.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
                 </a>
             </div></td>
@@ -148,7 +134,7 @@ Here are the materials needed to run this tutorial.
 </div>
 
 :::note
-This tutorial is applicable to all XIAO ESP32 series. We will use XIAO ESP32S3 Sense as an example in this tutorial.
+This tutorial is only applicable to XIAO ESP32-S3 series. We will use XIAO ESP32S3 Sense as an example in this tutorial.
 :::
 
 In addition to the above, you may need to prepare additional antennas suitable for WiFi-Halow use. Here are the verified, recommended antenna models.
@@ -563,7 +549,7 @@ nano main/src/mm_app_loadconfig.c
 
 ### Step 3: Hardware Setup
 
-1. Connect the Wio-WM6180 Wi-Fi HaLow Module to your XIAO ESP32S3
+1. Connect the Wio-WM6108 Wi-Fi HaLow Module to your XIAO ESP32S3
 
 2. Connect the XIAO ESP32S3 to your computer via USB
 
@@ -638,7 +624,7 @@ nano main/src/mm_app_loadconfig.c
 
 ### Step 3: Hardware Setup
 
-1. Connect the Wio-WM6180 Wi-Fi HaLow Module to your XIAO ESP32S3
+1. Connect the Wio-WM6108 Wi-Fi HaLow Module to your XIAO ESP32S3
 2. Connect the XIAO ESP32S3 to your computer via USB
 
 ### Step 4: Build and Flash
@@ -724,7 +710,7 @@ nano main/src/mm_app_loadconfig.c
 
 ### Step 3: Hardware Setup
 
-1. Connect the Wio-WM6180 Wi-Fi HaLow Module to your XIAO ESP32S3 Sense
+1. Connect the Wio-WM6108 Wi-Fi HaLow Module to your XIAO ESP32S3 Sense
 2. Ensure the camera module on your XIAO ESP32S3 Sense is properly connected
 3. Connect the XIAO ESP32S3 Sense to your computer via USB
 

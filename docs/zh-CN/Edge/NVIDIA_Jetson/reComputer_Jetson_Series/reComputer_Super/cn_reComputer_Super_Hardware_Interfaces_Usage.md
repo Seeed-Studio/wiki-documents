@@ -558,7 +558,7 @@ candump can0 &
 
 **通过覆盖层配置来配置不受控制的 GPIO：**
 
-**步骤 1.** 下载并解压[覆盖层包](https://drive.weixin.qq.com/s?k=AGEAZwfLABEmqim3hXAXcApwZFAKM)到您的 jetson 设备。
+**步骤 1.** 下载并解压[覆盖层包](https://files.seeedstudio.com/wiki/overlay.zip)到您的 jetson 设备。
 
 **步骤 2.** 将 build.sh 和 gpio-overlay.dts 复制到 Jetson。
 

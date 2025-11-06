@@ -605,7 +605,7 @@ docker run -p 5173:5173 -p 8022:8022 --name indoor-positioning --restart unless-
 
 ## 参考 & リソース
 
-- **ランディングページ**: [SenseCraft 室内位置決めソリューション](https://cc.seeedstudio.com/solutions/campus-safety-management)
+- **ランディングページ**: [SenseCraft 室内位置決めソリューション](https://www.seeed.cc/solutions/campus-safety-management)
 - **Docker イメージ**: [seeedcloud/sensecraft-indoor-positioning - Docker Hub](https://hub.docker.com/r/seeedcloud/sensecraft-indoor-positioning)
 - **ライブデモサイト**: [IndoorPositioning](https://indoorpositioning-demo.seeed.cc/)
 

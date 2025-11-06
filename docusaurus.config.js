@@ -663,7 +663,7 @@ module.exports = (async () => {
         },
         contextualSearch: true,
         typesense: {
-          typesenseCollectionName: 'wiki_platform_test_1743938099',
+          typesenseCollectionName: 'wiki_platform_1760422701',
           typesenseServerConfig: {
             nodes: [
               {
@@ -671,19 +671,19 @@ module.exports = (async () => {
                 protocol: 'https',
               },
             ],
-            apiKey: 'eCZrVYUXCKtGb3DTiSm5JkZSxhPUUPMH',
+            apiKey: 'YnYgTcnP0OsCToBc4QzqzSq3RXjx7sqE',
           },
           typesenseSearchParameters: {
-            query_by: 'hierarchy.lvl0,hierarchy.lvl2,content,sku',
+            query_by: 'hierarchy.lvl0,hierarchy.lvl2,content,sku_tag',
           },
           transformSearchParameters: (inputString, searchParameters) => {
             if (/^\d{5,}$/.test(inputString)) {
               console.log('检测到 SKU 搜索:', inputString);
               return {
                 ...searchParameters,
-                query_by: 'sku',
+                query_by: 'sku_tag',
                 query: inputString,
-                filter_by: 'doc_type:=gettingstarted && !doc_type:=project',
+                filter_by: 'doc_type_tag:=gettingstarted && !doc_type_tag:=project',
               };
             }
             return searchParameters;
@@ -691,8 +691,7 @@ module.exports = (async () => {
         },
         announcementBar: {
           id: 'support_us',
-          content:
-            'Collaborate with Seeed — <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">Creator</a>, <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Ranger</a>, or <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Contributor</a>, there is always a role ideal for you!',
+          content: '<span id="announcement-text">Collaborate with Seeed - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">Creator</a>, <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Ranger</a>, or <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Contributor</a>, there is always a role ideal for you!</span>',
           backgroundColor: '#013949',
           textColor: '#FFFFFF',
           isCloseable: false,

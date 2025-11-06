@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/29/2025
+  date: 10/27/2025
   author: Frank
 ---
 
@@ -17,67 +17,72 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is October 13th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is November 3rd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [XIAO ePaper Display Board EE04 with PlatfromIO](https://wiki.seeedstudio.com/e04_with_platformio/)
+### [reCamera HQ POE Getting Started Guide](https://wiki.seeedstudio.com/recamera_hd_poe_getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This document provides a guide on how to use the XIAO ePaper Display Board EE04 with PlatformIO, including hardware setup, project creation, code uploading, button control, and battery voltage detection examples.
-
-</div>
-
-### [PyCuVSLAM with reComputer](https://wiki.seeedstudio.com/pycuvslam_recomputer_robotics/)
-
-<p style={{textAlign: 'center'}}><img src="https://media.githubusercontent.com/media/NVlabs/PyCuVSLAM/main/pycuvslam.gif" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/1-100029708-reCamera-2002-HQ-PoE-8GB.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-[PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM) is NVIDIA's GPU-accelerated visual odometry and SLAM library cuVSLAM's Python wrapper. It supports monocular, stereo, RGB-D, multi-camera, and visual-inertial (IMU) modes, providing a simple Python API that can directly interface with camera streams and output real-time camera poses, map points, and loop closure information. The underlying CUDA optimization enables high-precision, low-latency SLAM inference on both PC and Jetson devices, making it suitable for robotic navigation, drone positioning, and 3D perception applications.This wiki will provide instructions on how to deploy pycuvslam on reComputer.
+Welcome to reCamera HQ PoE! Featuring an advanced CMOS sensor and an M12 lens mount for flexible lens replacement, reCamera 2002 HQ PoE delivers sharp, clear images. With PoE support, power and data run through a single Ethernet cable. This guide helps you set up and start using its powerful AI Vision features quickly.
 
 </div>
 
-### [How to use LLaVa on the reComputer Industrial J4012 to monitor your warehouse](https://wiki.seeedstudio.com/vlm/)
+### [YOLO11n Model Conversion for reCamera: Complete Guide](https://wiki.seeedstudio.com/model_conversion_guide/)
 
-<div class="video-container">
-<iframe width="800" height="450" src="https://www.youtube.com/embed/J0sS-1zQid8?list=PLpH_4mf13-A1EnNUgEMTsy2PxejFllSGM" title="Build a Local AI Watchdog for Industrial Safety with reComputer J4012 powered by NVIDIA Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/013.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki describes deploying a VLM (Visual Learning Model) on the [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html), using a USB camera as the input for the VLM. When the system detects a safe situation, the signal light will turn green via RS485 control. In dangerous situations, such as a fire or the presence of someone with a weapon, the signal light will turn yellow. When the light sensor detects the signal from the warehouse light being turned off via RS485, the signal light will turn red.
+In this tutorial, you’ll convert a YOLO11n ONNX model into an INT8 CV181x .cvimodel and deploy it on reCamera. We cover setup (cloud or local), calibration with 100 images, TPU-MLIR conversion, validation, deployment, and troubleshooting.
+
+</div>
+
+### [EE04 ePaper Display with EEZ Studio](https://wiki.seeedstudio.com/epaper_ee04_eezstudio/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_effect_2_2.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This tutorial uses the XIAO ePaper Display Board EE04, based on EEZ Studio and by compiling and uploading the program using the Arduino IDE.
+
+</div>
+
+### [XIAO ePaper Display Board EE04 with the SenseCraft HMI](https://wiki.seeedstudio.com/EE04_with_hmi/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hmi61.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) lets you create professional, no-code visual interfaces through an intuitive cloud editor. Paired with the ***XIAO ePaper Display Board (ESP32-S3) – EE04***, it brings seamless integration for low-power ePaper dashboards and smart displays. This tutorial walks you through a hands-on example using a 7.3" Spectra™ 6 E-Ink display.
+
+</div>
+
+### [Usage of the OpenEPaperLink and ePaper config builder](https://wiki.seeedstudio.com/epaper_breakout_board_with_oepl/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/seeed_logo_2.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+OpenEPaperLink (OEPL) is an open-source firmware and communication protocol for electronic shelf labels, supporting multiple displays via ESP32 or nRF52840 access points with 802.15.4 radio. In this tutorial, we use OPEL Config Builder to adjust e-paper parameters and OEPL Image Uploader to upload images.
 
 </div>
 
 ## Existing Wiki Updated
 
-### [Deploying OpenRemote on reComputer R1x Manage IoT Devices at the Edge](https://wiki.seeedstudio.com/openremote_r1x00/)
+### [Getting Started with XIAO ePaper Display EE04](https://wiki.seeedstudio.com/epaper_ee04/)
 
-We have added an operation example of [MQTT Agent with ChirpStack LoRaWAN Gateway Integration](https://wiki.seeedstudio.com/openremote_r1x00/#mqtt-agent-with-chirpstack-lorawan-gateway-integration).
-
-### [Seeed Studio XIAO nRF54L15 Matter](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_matter/)
-
-We have added an operation example of [Matter Hub Config](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_matter/#matter-hub-config).
-
-### [Getting Started with TRMNL 7.5" (OG) DIY Kit in Arduino](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino/)
-
-We have added an operation demo of [Equipment Installatio](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino/#equipment-installation).
-
-### [Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/)
-
-We have provided a tutorial on how to use the device with the [Orbbec Gemini2 Depth Camera](https://wiki.seeedstudio.com/lerobot_so100m_new/#add-cameras).
+We have added [instructions for using the User Buttons](https://wiki.seeedstudio.com/epaper_ee04/#user-buttons-on-xiao-epaper-display-boardesp32-s3---ee04) on the XIAO ePaper Display Board (ESP32-S3) - EE04.
 
 ## The Efforts of Contributor
 
-<!-- ### [Seeed Studio XIAO ESP32C6 with NuttX(RTOS)](https://wiki.seeedstudio.com/xiao_esp32c6_nuttx/)
+### [Building a Voice-Interactive Chatbot with Local LLMs, STT, and TTS](https://wiki.seeedstudio.com/local_chatbot_recomputer/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-ESP32C3-NuttX/nuttx.svg" style={{width:400, height:'auto'}}/></div>
-
-This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 board. NuttX is a lightweight, scalable real-time operating system known for its small footprint and broad hardware support. The guide walks through installing necessary tools, configuring the board, building the system, and flashing firmware. It includes examples for using NuttShell (NSH), USBNSH, and JUMBO applications, with a focus on practical tasks like GPIO and LED control. -->
+This project brings the dream of a **fully voice-interactive AI assistant** to life — running entirely **on local hardware**, without reliance on cloud services.  
+By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Large Language Models (LLMs)** using **Ollama**, the system enables natural, private, and real-time conversations between humans and machines. The entire setup runs inside Docker containers and can be deployed on **NVIDIA Jetson devices**, **edge computers**, or any Linux-based system with GPU acceleration.
 
 - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
 - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!
@@ -213,5 +218,8 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.9.15th](/Seeed_Elderly/weekly_wiki/wiki250915)
 - [weekly wiki on 2025.9.22nd](/Seeed_Elderly/weekly_wiki/wiki250922)
 - [weekly wiki on 2025.9.29th](/Seeed_Elderly/weekly_wiki/wiki250929)
+- [weekly wiki on 2025.10.13th](/Seeed_Elderly/weekly_wiki/wiki251013)
+- [weekly wiki on 2025.10.20th](/Seeed_Elderly/weekly_wiki/wiki251020)
+- [weekly wiki on 2025.10.27th](/Seeed_Elderly/weekly_wiki/wiki251027)
 
 </details>

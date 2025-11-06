@@ -12,17 +12,17 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# reTerminal E Series ePaper Display と EEZStudio の入門ガイド
+# reTerminal E Series ePaper Display と EEZ Studio の入門ガイド
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez.jpg" style={{width:600, height:'auto'}}/></div>
 
 ## はじめに
 
-このガイドでは、ビジュアルデザインツール（**EEZ Studio**）[https://www.envox.eu/studio/studio-introduction/]を使用してreTerminal E Seriesのプロフェッショナルなユーザーインターフェースを設計する方法を説明します。UI要素の作成、必要なコードの生成、そして最終的にArduino IDEを使用してデバイスにデプロイする方法を学習します。このプロセスにより、優れた視認性と超低消費電力を持つカスタムインターフェースを構築でき、HMIアプリケーションに最適です。
+このガイドでは、ビジュアルデザインツール [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/) を使用して reTerminal E Series 用のプロフェッショナルなユーザーインターフェースを設計する方法を説明します。UI要素の作成、必要なコードの生成、そして最終的に Arduino IDE を使用してデバイスにデプロイする方法を学習します。このプロセスにより、優れた視認性と超低消費電力を持つカスタムインターフェースを構築でき、HMIアプリケーションに最適です。
 
 ### 必要な材料
 
-このチュートリアルを完了するには、以下のreTerminal E Seriesデバイスのいずれかをご用意ください：
+このチュートリアルを完了するには、以下の reTerminal E Series デバイスのいずれかをご用意ください：
 
 <div class="table-center">
   <table align="center">
@@ -49,30 +49,30 @@ import TabItem from '@theme/TabItem';
   </table>
 </div>
 
-### EEZ Studioとは？
+### EEZ Studio とは？
 
-EEZ Studioは、主にテスト・測定機器、組み込みデバイス、その他のインタラクティブアプリケーション向けのユーザーインターフェース構築のために開発された、現代的なビジュアルプログラミングおよびUI設計環境です。ドラッグアンドドロップGUI設計、スクリプト機能、デバイス統合ツールを組み合わせ、開発者、エンジニア、メーカーがゼロから始めることなく、プロフェッショナルなインターフェースを迅速に作成できるようにします。
+EEZ Studio は、主にテスト・測定機器、組み込みデバイス、その他のインタラクティブアプリケーション用のユーザーインターフェース構築のために開発された、現代的なビジュアルプログラミングおよび UI デザイン環境です。ドラッグアンドドロップ GUI デザイン、スクリプト機能、デバイス統合ツールを組み合わせ、開発者、エンジニア、メーカーがゼロから始めることなく、プロフェッショナルなインターフェースを迅速に作成できるようにします。
 
-簡単に言えば、EEZ Studioはハードウェアとソフトウェアの橋渡しとして機能し、ユーザーエクスペリエンスをより効率的に設計、プロトタイプ、デプロイできるようにします。
+簡単に言えば、EEZ Studio はハードウェアとソフトウェアの橋渡しとして機能し、ユーザーエクスペリエンスをより効率的に設計、プロトタイプ、デプロイできるようにします。
 
-### なぜEEZ Studioを使用するのか？
+### なぜ EEZ Studio を使用するのか？
 
-- ビジュアルインターフェース設計 – WYSIWYGエディターで複雑なUIを作成し、手動コーディングの必要性を削減
-- 迅速なプロトタイピング – 設計アイデアを素早くテストし検証、開発時間とコストを節約
-- クロスプラットフォーム対応 – 複数のオペレーティングシステムと組み込みターゲットで動作するアプリケーションを構築
-- ハードウェアとの統合 – 実験機器、IoTデバイス、カスタムボードを直接接続・制御
+- ビジュアルインターフェースデザイン – WYSIWYG エディターで複雑な UI を作成し、手動コーディングの必要性を削減
+- 迅速なプロトタイピング – デザインアイデアを素早くテストし検証、開発時間とコストを節約
+- クロスプラットフォームサポート – 複数のオペレーティングシステムと組み込みターゲットで動作するアプリケーションを構築
+- ハードウェアとの統合 – ラボ機器、IoT デバイス、カスタムボードを直接接続・制御
 - オープンソースエコシステム – 透明性と柔軟性を持つコミュニティ主導のツールセットの恩恵
 
-EEZ Studioを使用することで、コンセプトから動作するプロトタイプまでの時間を大幅に短縮でき、設計がプロフェッショナルで将来の要件に適応可能であることを保証できます。
+EEZ Studio を使用することで、コンセプトから動作するプロトタイプまでの時間を大幅に短縮でき、同時にデザインがプロフェッショナルで将来の要件に適応可能であることを保証できます。
 
-### SquareLine Studioとの違い
+### SquareLine Studio との違い
 
-EEZ StudioとSquareLine Studioは両方ともGUI設計ツールですが、異なる目標とユーザーシナリオに焦点を当てています：
+EEZ Studio と SquareLine Studio はどちらも GUI デザインツールですが、異なる目標とユーザーシナリオに焦点を当てています：
 
 <table class="EEZStudio-table">
     <thead>
         <tr>
-            <th>項目</th>
+            <th>側面</th>
             <th>EEZ Studio</th>
             <th>SquareLine Studio</th>
         </tr>
@@ -81,17 +81,17 @@ EEZ StudioとSquareLine Studioは両方ともGUI設計ツールですが、異�
         <tr>
             <th>主な目的</th>
             <td>テスト・測定機器、組み込みシステム、ハードウェア/ソフトウェア統合向けに設計</td>
-            <td>組み込みシステム（特にLVGL）向けのGUI構築に焦点</td>
+            <td>組み込みシステム（特に LVGL）用 GUI 構築に焦点</td>
         </tr>
         <tr>
             <th>対象ユーザー</th>
-            <td>エンジニア、製品開発者、メーカー、実験/テスト機器設計者</td>
-            <td>組み込みUI開発者、愛好家、IoT製品設計者</td>
+            <td>エンジニア、製品開発者、メーカー、ラボ/テスト機器設計者</td>
+            <td>組み込み UI 開発者、愛好家、IoT 製品設計者</td>
         </tr>
         <tr>
             <th>ハードウェア統合</th>
             <td>機器、測定デバイス、自動化システムとの直接統合</td>
-            <td>主にディスプレイ/UI生成に焦点、外部デバイス統合は限定的</td>
+            <td>主にディスプレイ/UI 生成に焦点、外部デバイス統合は限定的</td>
         </tr>
         <tr>
             <th>オープンソース</th>
@@ -101,14 +101,14 @@ EEZ StudioとSquareLine Studioは両方ともGUI設計ツールですが、異�
         <tr>
             <th>ワークフロー</th>
             <td>一つの環境でプロトタイプ、シミュレーション、実デバイス制御が可能</td>
-            <td>主に組み込みプロジェクトにコンパイルするUIコードを生成</td>
+            <td>主に組み込みプロジェクトにコンパイルされる UI コードを生成</td>
         </tr>
     </tbody>
 </table>
 
-## EEZ Studioの入門
+## EEZ Studio の入門
 
-### EEZ Studioのインストール
+### EEZ Studio のインストール
 
 [EEZ Studio インストールリンク](https://www.envox.eu/studio/studio-introduction/) ダウンロードリンクにアクセス後、お使いのコンピューターと互換性のあるシステムバージョンを選択してダウンロードしてください。
 
@@ -118,56 +118,56 @@ EEZ StudioとSquareLine Studioは両方ともGUI設計ツールですが、異�
 
 ## プロジェクトの作成
 
-### 新しいLVGLプロジェクトの開始
+### 新しい LVGL プロジェクトの開始
 
-EEZ Studioインターフェースの上部にある "CREATE" ボタンをクリックします。
+EEZ Studio インターフェースの上部で、"CREATE" ボタンをクリックします。
 左側のプロジェクトテンプレートリストで、"LVGL" プロジェクトを見つけて選択します。
 
-- `Name:` プロジェクトファイルに名前を付けます。記事の後続内容の説明を便利にするため、ここではEEZ_UIと呼びます。
-- `LVGL Version:` プロジェクトで使用するLVGLライブラリのバージョンを指定します。ドロップダウンメニューから9.xを選択します。
-- `Location:` コンピューター上のプロジェクトファイルの保存パスを指定します。デフォルトパスは通常、EEZ Studioのダウンロードまたはインストールディレクトリ内のデフォルトプロジェクトフォルダーを指します（例：C:\Users\YourUser\Documents\EEZ Studio\Projects または類似のパス）。保存場所を変更する必要がある場合は、Locationテキストボックスの右側にあるフォルダーアイコン（または省略記号...）をクリックします。
+- `Name:` プロジェクトファイルに名前を付けます。記事の後続内容の説明を便利にするため、ここでは EEZ_UI と呼びます。
+- `LVGL Version:` プロジェクトで使用する LVGL ライブラリのバージョンを指定します。ドロップダウンメニューから 9.x を選択します。
+- `Location:` コンピューター上のプロジェクトファイルの保存パスを指定します。デフォルトパスは通常、EEZ Studio のダウンロードまたはインストールディレクトリ内のデフォルトプロジェクトフォルダーを指します（例：C:\Users\YourUser\Documents\EEZ Studio\Projects または類似のパス）。保存場所を変更する必要がある場合は、Location テキストボックスの右側にあるフォルダーアイコン（または省略記号 ...）をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/01.jpg" style={{width:900, height:'auto'}}/></div>
 
 ### プロジェクト設定の構成
 
-E-paper reTerminal用のLVGL UIプロジェクトを構築する際、生成されるUIファイルがArduinoまたは組み込み環境と互換性があることを確認するため、EEZ Studio Project Settingsを適切に構成する必要があります。
+E-paper reTerminal 用の LVGL UI プロジェクトを構築する際、生成される UI ファイルが Arduino または組み込み環境と互換性があることを確認するために、EEZ Studio プロジェクト設定を適切に構成する必要があります。
 
-ステップ1. プロジェクト設定を開く
+ステップ 1. プロジェクト設定を開く
 
-上部ツールバーの⚙️（Settings）アイコンをクリックします（下図参照）。
-これにより、ワークスペースの右側にProject Settingsパネルが開きます。
+下図に示すように、上部ツールバーの ⚙️（Settings）アイコンをクリックします。
+これにより、ワークスペースの右側にプロジェクト設定パネルが開きます。
 
-ステップ2. Build OutputとLVGL Includeを構成する
+ステップ 2. ビルド出力と LVGL インクルードの構成
 
-General → Buildの下で、以下のフィールドを見つけます：
+General → Build の下で、以下のフィールドを見つけます：
 
-- LVGL include: コンパイル時に正しいLVGLヘッダーをインクルードするため、lvgl.hを入力します。
+- LVGL include: コンパイル時に正しい LVGL ヘッダーをインクルードするために lvgl.h を入力します。
 
-💡 これにより、生成されたUIコードがビルド時にLVGLライブラリを正しく参照できるようになります。
+💡 これにより、生成された UI コードがビルド時に LVGL ライブラリを正しく参照できるようになります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez_setting2.png" style={{width:900, height:'auto'}}/></div>
 
 <br></br>
 
-ステップ3. ディスプレイ解像度を設定する
+ステップ 3. ディスプレイ解像度の設定
 
-次に、Settings → Generalの下で、ディスプレイの解像度を構成します：
+次に、Settings → General の下で、ディスプレイの解像度を構成します：
 - Display width: 800
 - Display height: 480
 
-🧩 これらのパラメーターは、UIレイアウトと座標マッピングのターゲットE-paperスクリーン解像度を定義します。
-値が特定のE-paperモデルと一致することを確認してください（例：7.5インチE-paper – 800×480）。
+🧩 これらのパラメーターは、UI レイアウトと座標マッピング用のターゲット E-paper スクリーン解像度を定義します。
+値が特定の E-paper モデルと一致することを確認してください（例：7.5インチ E-paper – 800×480）。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez_setting.png" style={{width:900, height:'auto'}}/></div>
 
-### プロジェクトパラメーター設定とUIインターフェース設計
+### プロジェクトパラメーター設定と UI インターフェースデザイン
 
-### UIインターフェース設計
+### UI インターフェースデザイン
 
-UI（ユーザーインターフェース）設計は組み込み製品開発において重要で、ユーザーエクスペリエンスを直接決定します。美しく、直感的で、レスポンシブなインターフェースは、製品の使いやすさを向上させるだけでなく、全体的な魅力も高めます。
+UI（ユーザーインターフェース）デザインは組み込み製品開発において重要であり、ユーザーエクスペリエンスを直接決定します。美しく、直感的で、レスポンシブなインターフェースは、製品の使いやすさを向上させるだけでなく、全体的な魅力も高めます。
 
-EEZ Studioでは、コンポーネントをドラッグアンドドロップすることで、インターフェースを迅速に組み立てることができます。Styles、Fonts、Bitmaps、Themesなどのツールを活用して視覚効果を精密に制御し、プロフェッショナルで独特なユーザーエクスペリエンスを作り上げます。
+EEZ Studio では、コンポーネントをドラッグアンドドロップすることでインターフェースを迅速に組み立てることができます。Styles、Fonts、Bitmaps、Themes などのツールを活用して視覚効果を正確に制御し、プロフェッショナルで独特なユーザーエクスペリエンスを作り上げます。
 
 以下は推奨ツールの紹介です：
 
@@ -186,7 +186,7 @@ EEZ Studioでは、コンポーネントをドラッグアンドドロップす�
 - Themes: 全体的なインターフェースの美学を定義し、ライト/ダークモードなどの迅速な切り替えを可能にします。
 - Groups: 複数のウィジェットを一緒に整理し、統一された管理とレイアウトを実現します。
 
-このチュートリアルでは、ウェブサイトやアプリのホームページ用UIの設計方法をガイドします。コア技術をマスターすれば、簡単に任意のインターフェースを作成できるようになります。
+このチュートリアルでは、ウェブサイトやアプリのホームページ用 UI の設計方法をガイドします。コア技術をマスターすれば、簡単に任意のインターフェースを作成できるようになります。
 
 このページは5つのコンポーネントで構成されています：
 
@@ -198,7 +198,7 @@ EEZ Studioでは、コンポーネントをドラッグアンドドロップす�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/15.jpg" style={{width:900, height:'auto'}}/></div>
 
-ステップ1. キャンバスの背景色を変更する
+ステップ 1. キャンバスの背景色を変更する
 
 - 背景色を変更したいキャンバスを選択します。
 - Color をチェックし、お好みの16進数カラーコードを選択します。
@@ -249,9 +249,9 @@ EEZ Studioでは、コンポーネントをドラッグアンドドロップす�
 
 以上が、これら5つのコンポーネントの基本的な使用方法です。参考図または独自に設計したUIインターフェースに従って配置することができます。
 
-### コード生成とデプロイ
+### コード生成とデプロイメント
 
-UI設計を完了した後、プロジェクトを保存してシミュレーターでプレビューする必要があります。確認後、ビルド操作を実行してターゲットハードウェアで実行可能なコードファイルを生成します。
+UI設計が完了したら、プロジェクトを保存してシミュレーターでプレビューする必要があります。確認後、ビルド操作を実行してターゲットハードウェアで実行可能なコードファイルを生成します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a20.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -386,23 +386,27 @@ ePaper ディスプレイを制御するために、様々な Seeed Studio デ�
 
 ## EEZ Studio プロジェクトの Arduino へのデプロイ
 
-これら2つの基盤ドライバファイルをプロジェクトディレクトリに追加する必要があります。
+まず、'Tools' メニューバーで OPI PSRAM を見つけて開きます。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/EEZSetting.png" style={{width:500, height:'auto'}}/></div>
+
+これら2つの基盤ドライバーファイルをプロジェクトディレクトリに追加する必要があります。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/00.png" style={{width:800, height:'auto'}}/></div>
 
 - [e1002_display.cpp](https://files.seeedstudio.com/wiki/EEZStudio/e1002_display.cpp)
 - [e1002_display.h](https://files.seeedstudio.com/wiki/EEZStudio/e1002_display.h)
 
 以下のプロジェクトファイル（4つのファイルを含む）をArduinoライブラリに移植して、Arduinoプロジェクトで使用します。
-`EEZ_UI file`はEEZStudioのビルドプロセス中に生成されます。保存したパスを見つける必要があります。
+`EEZ_UI file` は EEZStudio のビルドプロセス中に生成されます。保存したパスを見つける必要があります。
 
-- 🔗 **[ZIP]** [コード](https://files.seeedstudio.com/wiki/EEZStudio/E1002_EEZStudio.zip)
+- 🔗 **[ZIP]** [コード](https://files.seeedstudio.com/wiki/EEZStudio/E1002-EEZStudioCode.zip)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/7.jpg" style={{width:800, height:'auto'}}/></div>
 
 <br></br>
 
-以下はUIを実行するメインのArduinoスケッチです：
-3つのボタンは3つの異なる画面に対応し、緑から順番に：HOME\Workstation\Plantの順で開始します。
+以下は UI を実行するメインの Arduino スケッチです：
+3つのボタンが3つの異なる画面に対応し、緑から順番に HOME\Workstation\Plant で開始します。
 
 ```cpp
 #include <TFT_eSPI.h>
@@ -471,7 +475,7 @@ void loop()
     }
 
     if (lastKey2State == HIGH && currentKey2State == LOW) {
-        page_index = SCREEN_ID_PHOTO;
+        page_index = SCREEN_ID_PLANT;
         loadScreen((ScreensEnum)page_index);
         Serial.println("Switched to Setting Screen");
         delay(50);
@@ -493,21 +497,21 @@ void loop()
 
 ```
 
-- `e1002_display_init():` 電子インクディスプレイハードウェアを初期化し、動作パラメータを設定します。
+- `e1002_display_init():` e-inkディスプレイハードウェアを初期化し、動作パラメータを設定します。
 
 - `pinMode(..., INPUT_PULLUP):` ボタンピンを入力モードとして設定し、内部プルアップ抵抗を有効にします。これにより、ボタンが押されていない時はピンが高レベル（HIGH）を維持し、押されると接地に接続されて低レベル（LOW）になります。
 
-- `ui_init()` と `loadScreen():` これらの関数はLVGLユーザーインターフェースライブラリを初期化し、指定された画面を読み込みます。
+- `ui_init()` と `loadScreen():` これらの関数は LVGL ユーザーインターフェースライブラリを初期化し、指定された画面を読み込みます
 
-- `lv_timer_handler():` これはLVGLライブラリの重要な関数で、アニメーションや画面更新などのLVGL内のタイマーイベントを処理します。
+- `lv_timer_handler():` これは LVGL ライブラリの重要な関数で、アニメーションや画面更新などの LVGL 内のタイマーイベントを処理します。
 
 - `if (lastKey0State == HIGH && currentKey0State == LOW):` この行はキーイベント検出の核心です。キーの状態が未押下から押下に変化したかどうかをチェックします。
 
-- 条件が満たされると、プログラムは`page_index`を更新し、`loadScreen()`関数を呼び出して新しいページを読み込みます。
+- 条件が満たされると、プログラムは `page_index` を更新し、`loadScreen()` 関数を呼び出して新しいページを読み込みます。
 
-- 状態更新：`lastKey0State = currentKey0State;` この行は重要です。現在のキー状態を保存して次の`loop()`反復で使用し、次の状態比較を可能にします。
+- 状態更新：`lastKey0State = currentKey0State;` この行は重要です。現在のキー状態を保存して次の `loop()` 反復で使用し、次の状態比較を可能にします。
 
-- 電子インクリフレッシュ：`e1002_display_should_refresh()`と`e1002_display_refresh()`は電子インク画面のリフレッシュを管理します。LCDスクリーンとは異なり、電子インクはリアルタイムでリフレッシュできません。通常、電力を節約し寿命を延ばすために、特定の間隔で選択的または全画面リフレッシュが必要です。このコードはそのオンデマンドリフレッシュメカニズムを実装しています。
+- E-ink リフレッシュ：`e1002_display_should_refresh()` と `e1002_display_refresh()` は E-ink 画面のリフレッシュを管理します。LCD 画面とは異なり、E-ink はリアルタイムでリフレッシュできません。通常、電力を節約し寿命を延ばすために、特定の間隔で選択的または全画面リフレッシュが必要です。このコードはそのオンデマンドリフレッシュメカニズムを実装しています。
 
 - `delay(10)`: これは物理的なキーの振動を複数回の押下として誤解釈することを防ぐための簡単なソフトウェアデバウンス対策です。
 
@@ -528,18 +532,16 @@ void loop()
   </table>
 </div>
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
