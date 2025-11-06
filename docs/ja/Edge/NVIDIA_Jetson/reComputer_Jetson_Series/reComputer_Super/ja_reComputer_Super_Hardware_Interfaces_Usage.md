@@ -558,7 +558,7 @@ candump can0 &
 
 **オーバーレイ設定を通じて制御されていないGPIOを設定する：**
 
-**ステップ1.** [オーバーレイパッケージ](https://drive.weixin.qq.com/s?k=AGEAZwfLABEmqim3hXAXcApwZFAKM)をダウンロードし、Jetsonデバイスに展開します。
+**ステップ1.** [オーバーレイパッケージ](https://files.seeedstudio.com/wiki/overlay.zip)をダウンロードし、Jetsonデバイスに展開します。
 
 **ステップ2.** build.shとgpio-overlay.dtsをJetsonにコピーします。
 
