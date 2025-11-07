@@ -3403,7 +3403,9 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/reterminal_frigate',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/reterminal-DM-Frigate',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/zoneminder_on_recomputer',
-                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/go2rtc_on_recomputer'
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/go2rtc_on_recomputer',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/moonfire_nvr_on_recomputer'
+
                   ]
                 },
                 {
