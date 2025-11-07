@@ -558,7 +558,7 @@ Guarda y reinicia.
 
 **Configura el GPIO no controlado a través de la configuración de Overlay:**
 
-**Paso 1.** Descarga y extrae el [paquete de overlay](https://drive.weixin.qq.com/s?k=AGEAZwfLABEmqim3hXAXcApwZFAKM) a tu dispositivo jetson.
+**Paso 1.** Descarga y extrae el [paquete de overlay](https://files.seeedstudio.com/wiki/overlay.zip) a tu dispositivo jetson.
 
 **Paso 2.** Copia build.sh y gpio-overlay.dts al Jetson.
 

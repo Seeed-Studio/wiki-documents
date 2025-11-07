@@ -102,7 +102,7 @@ Modelos disponibles en [ollama.com/library](https://ollama.com/library):
 
 Si estás usando un **NVIDIA Jetson AGX**, puedes ejecutar cómodamente modelos medianos a grandes. Para Jetsons más pequeños, mantente con modelos ligeros (1B–3B).
 
-Ejecuta Ollama ya sea directamente en terminal o a través del script de Python proporcionado `ollama_run.py`.
+Ejecuta Ollama ya sea directamente en terminal o a través del script Python proporcionado `ollama_run.py`.
 
 ```bash
 python3 ollama_run.py
@@ -197,6 +197,8 @@ sudo bash riva_start.sh
 Una vez que todo esté listo, ejecuta la aplicación principal:
 
 ```bash
+git clone https://github.com/kouroshkarimi/local_chatbot_jetson.git
+cd local_chatbot_jetson
 python3 app.py --list-input-devices
 python3 app.py --list-output-devices
 python3 app.py --input-device <your_input_id> --output-device <your_output_id>
