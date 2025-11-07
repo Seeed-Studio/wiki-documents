@@ -8505,7 +8505,8 @@ const sidebars = {
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_reterminal_frigate',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_reterminal-DM-Frigate',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_zoneminder_on_recomputer',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_go2rtc_on_recomputer'
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_go2rtc_on_recomputer',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_moonfire_nvr_on_recomputer'
                   ]
                 },
                 {
@@ -13513,7 +13514,8 @@ const sidebars = {
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_reterminal_frigate',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_reterminal-DM-Frigate',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_zoneminder_on_recomputer',
-                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_go2rtc_on_recomputer'
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_go2rtc_on_recomputer',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_moonfire_nvr_on_recomputer',
                   ]
                 },
                 {
@@ -18521,7 +18523,8 @@ const sidebars = {
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_reterminal_frigate',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_reterminal-DM-Frigate',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_zoneminder_on_recomputer',
-                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_go2rtc_on_recomputer'
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_go2rtc_on_recomputer',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_moonfire_nvr_on_recomputer'
                   ]
                 },
                 {
