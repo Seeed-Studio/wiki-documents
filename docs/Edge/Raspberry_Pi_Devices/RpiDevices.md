@@ -65,17 +65,17 @@ DIN-rail or wall-mount ready, the reComputer R series slides effortlessly into *
       </tr>
       <tr>
         <td>Get One</td>
-        <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2045-12-p-6544.html">Get One Now 🖱️</a></td>
-        <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html">Get One Now 🖱️</a></td>
-        <td><a href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html">Get One Now 🖱️</a></td>
-        <td><a href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html">Get One Now 🖱️</a></td>
+        <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2045-12-p-6544.html"><strong>Get One Now 🖱️</strong></a></td>
+        <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html"><strong>Get One Now 🖱️</strong></a></td>
+        <td><a href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html"><strong>Get One Now 🖱️</strong></a></td>
+        <td><a href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html"><strong>Get One Now 🖱️</strong></a></td>
       </tr>
       <tr>
         <td>Wiki</td>
-        <td><a href="https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/">📚 Learn More</a></td>
-        <td ><a href="https://wiki.seeedstudio.com/recomputer_industrial_R21xx_getting_start/">📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/r2000_series_getting_start/">📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/recomputer_ai_industrial_r2135_getting_start/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/"><strong>📚 Learn More</strong></a></td>
+        <td ><a href="https://wiki.seeedstudio.com/recomputer_industrial_R21xx_getting_start/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/r2000_series_getting_start/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_ai_industrial_r2135_getting_start/"><strong>📚 Learn More</strong></a></td>
       </tr>
       <tr>
         <td>Chip</td>
@@ -153,19 +153,19 @@ Seeed Studio’s reComputer R and Edge Box families are rugged edge controllers 
       </tr>
       <tr>
         <td>Get One</td>
-        <td ><a href="https://www.seeedstudio.com/reComputer-Industrial-R2035-10-p-6543.html">Get One Now 🖱️</a></td>
-        <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2135-10-p-6546.html" >Get One Now 🖱️</a></td>
-        <td><a href="https://www.seeedstudio.com/reComputer-R1035-10-p-5925.html">Get One Now 🖱️</a></td>
-        <td><a href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html">Get One Now 🖱️</a></td>
-        <td><a href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4102008-With-UPS-p-5729.html">Get One Now 🖱️</a></td>
+        <td ><a href="https://www.seeedstudio.com/reComputer-Industrial-R2035-10-p-6543.html"><strong>Get One Now 🖱️</strong></a></td>
+        <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2135-10-p-6546.html" ><strong>Get One Now 🖱️</strong></a></td>
+        <td><a href="https://www.seeedstudio.com/reComputer-R1035-10-p-5925.html"><strong>Get One Now 🖱️</strong></a></td>
+        <td><a href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html"><strong>Get One Now 🖱️</strong></a></td>
+        <td><a href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4102008-With-UPS-p-5729.html"><strong>Get One Now 🖱️</strong></a></td>
       </tr>
       <tr>
         <td>Wiki</td>
-        <td><a href="https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/">📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/recomputer_industrial_R21xx_getting_start/">📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/recomputer_r1000_intro/">📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/recomputer_r1100_intro/">📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/Edge_Box_intro/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_industrial_R21xx_getting_start/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_r1000_intro/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_r1100_intro/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/Edge_Box_intro/"><strong>📚 Learn More</strong></a></td>
       </tr>
       <tr>
         <td>Chip</td>
@@ -227,13 +227,13 @@ reTerminal and reTerminal DM are advanced devices that integrate high-performanc
       </tr>
       <tr>
         <td>Get One</td>
-        <td><a href="https://www.seeedstudio.com/reTerminal-CM4108032-p-5712.html" target="_blank"> Get One Now 🖱️</a></td>
-        <td><a href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" >Get One Now 🖱️</a></td>
+        <td><a href="https://www.seeedstudio.com/reTerminal-CM4108032-p-5712.html" target="_blank"> <strong>Get One Now 🖱️</strong></a></td>
+        <td><a href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" ><strong>Get One Now 🖱️</strong></a></td>
       </tr>
       <tr>
         <td>Getting Start</td>
-        <td><a href="https://wiki.seeedstudio.com/reTerminal_Intro/" target="_blank">📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/reTerminal-dm_Intro/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/reTerminal_Intro/" target="_blank"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/reTerminal-dm_Intro/"><strong>📚 Learn More</strong></a></td>
       </tr>
       <tr>
         <td>Chip</td>
@@ -255,8 +255,8 @@ reRouter is equipped with dual Gigabit Ethernet ports and dual USB 3.0 ports, ma
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Dual-GbE-Carrier-Board-with-4GB-RAM-32GB-eMMC-RPi-CM4-Case-p-5029.html"target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-<a class="get_one_now_item" href="https://wiki.seeedstudio.com/reRouter_Intro/" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Dual-GbE-Carrier-Board-with-4GB-RAM-32GB-eMMC-RPi-CM4-Case-p-5029.html"target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> <strong>Get One Now 🖱️</strong></font></span></strong></a>
+<a class="get_one_now_item" href="https://wiki.seeedstudio.com/reRouter_Intro/" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}><strong>📚 Learn More</strong></font></span></strong></a>
 </div>
 
 ### Respberry Pi Original
@@ -264,8 +264,8 @@ reRouter is equipped with dual Gigabit Ethernet ports and dual USB 3.0 ports, ma
 Raspberry Pi (aka "RPi") was originally designed and created by a non-profit organization with the intention to promote teaching computer science at an affordable cost. Several generations and models of Raspberry Pis have now been released that have expanded their footprints, power and applications.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/respberrypi_original.jpg" style={{width:1000, height:'auto'}}/></div>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?bazaar4_retailer-products%5BrefinementList%5D%5Battribute_product_type%5D%5B0%5D=Dev+board&bazaar4_retailer-products%5BrefinementList%5D%5Bseries%5D%5B0%5D=Raspberry+Pi"target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-<a class="get_one_now_item" href="https://wiki.seeedstudio.com/Raspberry_Pi/#raspberry-pi-official-boards" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?bazaar4_retailer-products%5BrefinementList%5D%5Battribute_product_type%5D%5B0%5D=Dev+board&bazaar4_retailer-products%5BrefinementList%5D%5Bseries%5D%5B0%5D=Raspberry+Pi"target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> <strong>Get One Now 🖱️</strong></font></span></strong></a>
+<a class="get_one_now_item" href="https://wiki.seeedstudio.com/Raspberry_Pi/#raspberry-pi-official-boards" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}><strong>📚 Learn More</strong></font></span></strong></a>
 </div>
 
 ### Raspberry Pi Compatible
@@ -274,8 +274,8 @@ At Seeed Studio, we offer a comprehensive ecosystem of Raspberry Pi compatible b
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/Raspberry_Pi_Compatible.jpg" style={{width:1000, height:'auto'}}/></div>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?bazaar4_retailer-products%5BrefinementList%5D%5Bseries%5D%5B0%5D=Raspberry%20Pi"target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-<a class="get_one_now_item" href="https://wiki.seeedstudio.com/Raspberry_Pi/#hats-extension-boards" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?bazaar4_retailer-products%5BrefinementList%5D%5Bseries%5D%5B0%5D=Raspberry%20Pi"target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> <strong>Get One Now 🖱️</strong></font></span></strong></a>
+<a class="get_one_now_item" href="https://wiki.seeedstudio.com/Raspberry_Pi/#hats-extension-boards" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}><strong>📚 Learn More</strong></font></span></strong></a>
 </div>
 
 ## Supported Software
@@ -473,10 +473,10 @@ Flow-based programming tool for connecting hardware and online services.
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/AWS/mqtttest.PNG" style={{width:300, height:'auto'}}/></td>
       </tr>
       <tr>
-        <td><a href="https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/">📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/recomputer_r1000_home_automation/">📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/reComputer_r1000_fin_equip_gaphic/" >📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/recomputer_r1000_aws/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_r1000_home_automation/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/reComputer_r1000_fin_equip_gaphic/" ><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_r1000_aws/"><strong>📚 Learn More</strong></a></td>
       </tr>
     </tbody>
   </table>
@@ -500,10 +500,10 @@ Flow-based programming tool for connecting hardware and online services.
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/tb/openingwindow.PNG" style={{width:250, height:'auto'}}/></td>
       </tr>
       <tr>
-        <td><a href="https://wiki.seeedstudio.com/build_balenaOS_for_reComputer_r1000/">📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/edgebox_rpi_200_n3uron_bacnet/" >📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Ignition-Edge/">📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/recomputer_r1000_thingsboard_ce/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/build_balenaOS_for_reComputer_r1000/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/edgebox_rpi_200_n3uron_bacnet/" ><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Ignition-Edge/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_r1000_thingsboard_ce/"><strong>📚 Learn More</strong></a></td>
       </tr>
     </tbody>
   </table>
@@ -529,10 +529,10 @@ Flow-based programming tool for connecting hardware and online services.
         <td><img src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png" style={{width:250, height:'auto'}}/></td>
       </tr>
       <tr>
-        <td><a href="https://wiki.seeedstudio.com/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit/">📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/yolov8_on_ai_box_for_fall_climbing_tracking/">📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/reComputer_r1000_fin_equip_gaphic/">📚 Learn More</a></td>
-        <td ><a href="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_aws/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/yolov8_on_ai_box_for_fall_climbing_tracking/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/reComputer_r1000_fin_equip_gaphic/"><strong>📚 Learn More</strong></a></td>
+        <td ><a href="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_aws/"><strong>📚 Learn More</strong></a></td>
       </tr>
     </tbody>
   </table>
@@ -556,10 +556,10 @@ Flow-based programming tool for connecting hardware and online services.
         <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/detection.gif" style={{width:400, height:'auto'}}/></td>
       </tr>
       <tr>
-        <td><a href="https://wiki.seeedstudio.com/zoneminder_on_recomputer/">📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/clip_application_on_rpi5_with_ai_kit/" >📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/real-time-ocr/">📚 Learn More</a></td>
-        <td><a href="https://wiki.seeedstudio.com/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/" >📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/zoneminder_on_recomputer/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/clip_application_on_rpi5_with_ai_kit/" ><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/real-time-ocr/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/" ><strong>📚 Learn More</strong></a></td>
       </tr>
     </tbody>
   </table>
@@ -581,8 +581,8 @@ Flow-based programming tool for connecting hardware and online services.
         <td><img src="https://files.seeedstudio.com/wiki/distributed-inference/distributed_llama.gif" style={{width:500, height:'auto'}}/></td>
       </tr>
       <tr>
-        <td><a href="https://wiki.seeedstudio.com/deploy_deepseek_on_raspberry_pi_ai_box/" >📚 Learn More</a></td>
-        <td ><a href="https://wiki.seeedstudio.com/distributed_inference_of_deepseek_model_on_raspberrypi/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/deploy_deepseek_on_raspberry_pi_ai_box/" ><strong>📚 Learn More</strong></a></td>
+        <td ><a href="https://wiki.seeedstudio.com/distributed_inference_of_deepseek_model_on_raspberrypi/"><strong>📚 Learn More</strong></a></td>
       </tr>
     </tbody>
   </table>
