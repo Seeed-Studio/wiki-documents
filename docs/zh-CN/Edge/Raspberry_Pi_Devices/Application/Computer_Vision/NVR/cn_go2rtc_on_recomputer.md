@@ -5,7 +5,7 @@ keywords:
   - reComputer
   - go2rtc
   - NVR
-image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/zoneminder/zone_m.webp
+image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/result_go2rtc.webp
 slug: /cn/go2rtc_on_recomputer
 last_update:
   date: 11/05/2025
@@ -56,7 +56,7 @@ no_comments: false # for Disqus
   </tr>
 </table>
 
-## 下载 go2rtc
+## 下载并运行 go2rtc
 
 ### 更新系统
 
@@ -118,7 +118,7 @@ server:
 
 一旦我们配置好所有内容，就可以查看当前摄像头的实时画面。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/result_go2rtc.png" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/go2rtc.gif" alt="pir" width="1000" height="auto"/></p>
 
 ## 技术支持与产品讨论
 
