@@ -9,6 +9,8 @@ keywords:
 - reTerminal
 - reTerminal DM
 - reRouter
+- Raspberry Pi Compatible
+- Respberry Pi Original
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /raspberry-pi-devices
 last_update:
