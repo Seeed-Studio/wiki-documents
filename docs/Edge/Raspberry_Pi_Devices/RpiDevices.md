@@ -65,17 +65,17 @@ DIN-rail or wall-mount ready, the reComputer R series slides effortlessly into *
       </tr>
       <tr>
         <td>Get One</td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://www.seeedstudio.com/reComputer-Industrial-R2045-12-p-6544.html" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>Get One Now 🖱️</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>Get One Now 🖱️</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>Get One Now 🖱️</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>Get One Now 🖱️</a></td>
+        <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2045-12-p-6544.html">Get One Now 🖱️</a></td>
+        <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html">Get One Now 🖱️</a></td>
+        <td><a href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html">Get One Now 🖱️</a></td>
+        <td><a href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html">Get One Now 🖱️</a></td>
       </tr>
       <tr>
         <td>Wiki</td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/recomputer_industrial_R21xx_getting_start/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/r2000_series_getting_start/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_ai_industrial_r2135_getting_start/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/">📚 Learn More</a></td>
+        <td ><a href="https://wiki.seeedstudio.com/recomputer_industrial_R21xx_getting_start/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/r2000_series_getting_start/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_ai_industrial_r2135_getting_start/">📚 Learn More</a></td>
       </tr>
       <tr>
         <td>Chip</td>
@@ -153,19 +153,19 @@ Seeed Studio’s reComputer R and Edge Box families are rugged edge controllers 
       </tr>
       <tr>
         <td>Get One</td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://www.seeedstudio.com/reComputer-Industrial-R2035-10-p-6543.html" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>Get One Now 🖱️</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://www.seeedstudio.com/reComputer-Industrial-R2135-10-p-6546.html" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>Get One Now 🖱️</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://www.seeedstudio.com/reComputer-R1035-10-p-5925.html" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>Get One Now 🖱️</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>Get One Now 🖱️</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4102008-With-UPS-p-5729.html" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>Get One Now 🖱️</a></td>
+        <td ><a href="https://www.seeedstudio.com/reComputer-Industrial-R2035-10-p-6543.html">Get One Now 🖱️</a></td>
+        <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2135-10-p-6546.html" >Get One Now 🖱️</a></td>
+        <td><a href="https://www.seeedstudio.com/reComputer-R1035-10-p-5925.html">Get One Now 🖱️</a></td>
+        <td><a href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html">Get One Now 🖱️</a></td>
+        <td><a href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4102008-With-UPS-p-5729.html">Get One Now 🖱️</a></td>
       </tr>
       <tr>
         <td>Wiki</td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/recomputer_industrial_R21xx_getting_start/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/recomputer_r1000_intro/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1100_intro/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="get_one_now_item" href="https://wiki.seeedstudio.com/Edge_Box_intro/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_industrial_R21xx_getting_start/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_r1000_intro/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_r1100_intro/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/Edge_Box_intro/">📚 Learn More</a></td>
       </tr>
       <tr>
         <td>Chip</td>
@@ -222,18 +222,18 @@ reTerminal and reTerminal DM are advanced devices that integrate high-performanc
     <tbody>
       <tr>
         <td>Product</td>
-        <td><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/reterminal.png" style={{width:500, height:'auto'}}/></td>
+        <td><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/reterminal.png" style={{width:400, height:'auto'}}/></td>
         <td><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:500, height:'auto'}}/></td>
       </tr>
       <tr>
         <td>Get One</td>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-CM4108032-p-5712.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a></div></td>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a></div></td>
+        <td><a href="https://www.seeedstudio.com/reTerminal-CM4108032-p-5712.html" target="_blank"> Get One Now 🖱️</a></td>
+        <td><a href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" >Get One Now 🖱️</a></td>
       </tr>
       <tr>
         <td>Getting Start</td>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal_Intro/" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-dm_Intro/" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+        <td><a href="https://wiki.seeedstudio.com/reTerminal_Intro/" target="_blank">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/reTerminal-dm_Intro/">📚 Learn More</a></td>
       </tr>
       <tr>
         <td>Chip</td>
@@ -473,10 +473,10 @@ Flow-based programming tool for connecting hardware and online services.
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/AWS/mqtttest.PNG" style={{width:300, height:'auto'}}/></td>
       </tr>
       <tr>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/recomputer_r1000_home_automation/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/reComputer_r1000_fin_equip_gaphic/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_aws/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_r1000_home_automation/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/reComputer_r1000_fin_equip_gaphic/" >📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_r1000_aws/">📚 Learn More</a></td>
       </tr>
     </tbody>
   </table>
@@ -500,10 +500,10 @@ Flow-based programming tool for connecting hardware and online services.
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/tb/openingwindow.PNG" style={{width:250, height:'auto'}}/></td>
       </tr>
       <tr>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/build_balenaOS_for_reComputer_r1000/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/edgebox_rpi_200_n3uron_bacnet/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Ignition-Edge/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_thingsboard_ce/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/build_balenaOS_for_reComputer_r1000/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/edgebox_rpi_200_n3uron_bacnet/" >📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Ignition-Edge/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_r1000_thingsboard_ce/">📚 Learn More</a></td>
       </tr>
     </tbody>
   </table>
@@ -529,10 +529,10 @@ Flow-based programming tool for connecting hardware and online services.
         <td><img src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png" style={{width:250, height:'auto'}}/></td>
       </tr>
       <tr>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/yolov8_on_ai_box_for_fall_climbing_tracking/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/reComputer_r1000_fin_equip_gaphic/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_aws/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/yolov8_on_ai_box_for_fall_climbing_tracking/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/reComputer_r1000_fin_equip_gaphic/">📚 Learn More</a></td>
+        <td ><a href="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_aws/">📚 Learn More</a></td>
       </tr>
     </tbody>
   </table>
@@ -556,10 +556,10 @@ Flow-based programming tool for connecting hardware and online services.
         <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/detection.gif" style={{width:400, height:'auto'}}/></td>
       </tr>
       <tr>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/zoneminder_on_recomputer/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/clip_application_on_rpi5_with_ai_kit/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/real-time-ocr/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="get_one_now_item" href="https://wiki.seeedstudio.com/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/zoneminder_on_recomputer/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/clip_application_on_rpi5_with_ai_kit/" >📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/real-time-ocr/">📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/" >📚 Learn More</a></td>
       </tr>
     </tbody>
   </table>
@@ -581,8 +581,8 @@ Flow-based programming tool for connecting hardware and online services.
         <td><img src="https://files.seeedstudio.com/wiki/distributed-inference/distributed_llama.gif" style={{width:500, height:'auto'}}/></td>
       </tr>
       <tr>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/deploy_deepseek_on_raspberry_pi_ai_box/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
-        <td style={{textAlign: 'center', backgroundColor: '#4ec354', padding: '5px'}}><a href="https://wiki.seeedstudio.com/distributed_inference_of_deepseek_model_on_raspberrypi/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Learn More</a></td>
+        <td><a href="https://wiki.seeedstudio.com/deploy_deepseek_on_raspberry_pi_ai_box/" >📚 Learn More</a></td>
+        <td ><a href="https://wiki.seeedstudio.com/distributed_inference_of_deepseek_model_on_raspberrypi/">📚 Learn More</a></td>
       </tr>
     </tbody>
   </table>
