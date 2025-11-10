@@ -74,7 +74,7 @@ Top View             |  Bottom View
 
 Top View             |  Bottom View
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top.png" /></div> |<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top2.png" /></div> |<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom2.png" /></div>
 
 #### ⚙️ features
 
@@ -127,7 +127,7 @@ Top View             |  Bottom View
 
 Up             |  Bottom
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top2.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom2.png" /></div>
 
 #### ⚙️ Features:
 

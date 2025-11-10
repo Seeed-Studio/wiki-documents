@@ -16,14 +16,6 @@ const excludedPaths = [
 
 
   // 排除指定文档
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R20xx', 'reComputer_Industrial_R20xx_assembly_guide.md'), //9.28
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R20xx', 'reComputer_Industrial_R20xx_configure_system.md'), //9.28
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R20xx', 'reComputer_Industrial_R20xx_flash_os.md'), //9.28
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R21xx', 'reComputer_Industrial_R21xx_assembly_guide.md'), //9.28
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R21xx', 'reComputer_Industrial_R21xx_configure_system.md'), //9.28
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R21xx', 'reComputer_Industrial_R21xx_flash_os.md'), //9.28
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Application', 'Development_Tools', 'recomputer_use_sqlite.md'), //9.25
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_Build_the_ko_Module_for_Seeed_Jetson.md'), //9.25
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T1000_Tracker', 'SenseCAP_T1000_Tracker_Introduction.md'), //10.11
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Notifications', 'Http_Proxy_Application', 'smart_home', 'integrate_watcher_to_ha.md'), //10.11
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Other_Devices', 'Jetson_AGX_Orin_32GB_H01_Flash_Jetpack.md'), //10.14
@@ -39,6 +31,9 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'Extending_Grove_with_MCP.md'), //10.22
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'T1000-E', 'sensecap_t1000_e.md'), //10.29
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'get_started_with_wio_tracker_l1.md'), //10.29
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'RpiDevices.md'), //11.7
+  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'wio_tracker_node.md'), //11.5
+  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'XIAO_ESP32S3_&_SX1262_Kit', 'Get_Started_meshtastic.md'), //11.5
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）
