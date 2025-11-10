@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-04 10:38:25 (北京时间)
-// 多语言页面: 2036 个
+// 生成时间: 2025-11-07 15:23:06 (北京时间)
+// 多语言页面: 2040 个
 
 (function() {
   'use strict';
@@ -947,6 +947,12 @@
     "es",
     "ja"
   ],
+  "/recomputer_robotics_j501_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/create_backup_and_restore_on_recomputer": [
     "cn",
     "en",
@@ -1487,6 +1493,12 @@
     "es",
     "ja"
   ],
+  "/recomputer_ai_r2140_balena": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/chirpstack_lora_gateway_r1x00": [
     "cn",
     "en",
@@ -1973,7 +1985,19 @@
     "es",
     "ja"
   ],
+  "/go2rtc_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/gun_detection_with_frigate_nvr_on_r2000": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/moonfire_nvr_on_recomputer": [
     "cn",
     "en",
     "es",
