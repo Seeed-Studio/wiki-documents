@@ -5,7 +5,7 @@ keywords:
   - reComputer
   - go2rtc
   - NVR
-image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/zoneminder/zone_m.webp
+image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/go2rtc.gif
 slug: /go2rtc_on_recomputer
 last_update:
   date: 11/05/2025
@@ -56,7 +56,7 @@ no_comments: false # for Disqus
   </tr>
 </table>
 
-## Download go2rtc
+## Download and run go2rtc
 
 ### Update system
 
@@ -118,7 +118,7 @@ Open port `1984` on the host, and click the `Stream`button.
 
 Once we have configured everything, we can view the live feed from the current camera.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/result_go2rtc.png" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/go2rtc.gif" alt="pir" width="1000" height="auto"/></p>
 
 ## Tech Support & Product Discussion
 

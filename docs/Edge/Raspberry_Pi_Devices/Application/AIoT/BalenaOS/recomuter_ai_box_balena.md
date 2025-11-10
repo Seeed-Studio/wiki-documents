@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reComputer R2140
   - balena
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/balena/recomputer_ai_box/recomputer_ai_r2140.webp
 slug: /recomputer_ai_r2140_balena
 last_update:
   date: 11/4/2025
