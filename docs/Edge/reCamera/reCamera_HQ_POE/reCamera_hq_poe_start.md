@@ -34,6 +34,19 @@ This guide will help you quickly set up your device and start using it to unlock
 
 ## Unboxing
 
+Start by unpacking your reCamera. Inside the box, you should find:
+
+- reCamera PoE 64GB
+- Lens Cap
+- Type-C Cable
+- Instruction Manual
+- Ethernet Cable (RJ45 to MX1.25-5P)
+- Connection Cable (MX1.25-6P to jumper 6P)
+
+Make sure all parts are included.
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/part_list2.jpg" /></div>
+
 ### Setup device and login
 
 **Step1:** Connect the usb cable from reCamera HQ POE to your PC. Navigate to `192.168.42.1` on website and change the default password.  If you are using POE Ethernet, access by querying the assigned IP address from your router.
@@ -101,7 +114,7 @@ Please refer to the [OTA Upgrade Instruction](https://wiki.seeedstudio.com/recam
 
 ## Factory Reset
 
-
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/interface.jpg" /></div>
 
 If you would like to reset the device such as forgetting your device's passcode, you can long pressing the **User** button and then connecting the  device to power. When the `red light` of the device is **constantly on** instead of blinking, release the User button.
 
