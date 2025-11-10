@@ -303,15 +303,17 @@ sudo chmod 666 /dev/ttyUSB*
 
 将手臂移动至下图**机械臂初始位置**待机, 然后再重新接上电源。新版本机械臂初始位置，（需要特别关注3，4，5号关节舵机与图片需要严格对应）：
 
+| **New Violin Leader Arm初始位置** | **Old Violin Leader Arm初始位置** | **Viola Follower Arm初始位置** |**Cello Follower Arm初始位置** |
+|:---------:|:---------:|:---------:|:---------:|
+| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_init.png) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png) |![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_init.png) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello_init.png) |
+
+例如如下：
+
 | **Violin Leader Arm初始位置** | **Viola Follower Arm初始位置** |
 |:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_rest.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_rest.jpg) |
 
-老版本机械臂初始位置（需要特别关注3，4，5号关节舵机与图片需要严格对应，也可以参考新版本机械臂初始位置）：
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png" />
-</div>
+
 
 #### leader机械臂
 
