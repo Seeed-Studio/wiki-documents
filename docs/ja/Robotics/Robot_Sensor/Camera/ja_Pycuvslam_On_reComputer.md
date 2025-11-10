@@ -1,5 +1,5 @@
 ---
-description: このwikiでは、RGB-Dカメラを使用したGPU加速ビジュアルSLAMアプリケーション向けに、reComputer Jetsonシリーズ上でPyCuVSLAMをセットアップして実行するための包括的な手順を提供します。
+description: このwikiは、RGB-Dカメラを使用したGPU加速ビジュアルSLAMアプリケーション向けに、reComputer Jetsonシリーズ上でPyCuVSLAMをセットアップして実行するための包括的な手順を提供します。
 title: reComputerでのPyCuVSLAM
 keywords:
 - PyCuVSLAM
@@ -10,7 +10,7 @@ keywords:
 - Visual SLAM
 - RGB-D camera
 - Visual Odometry
-image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/image1.webp
+image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/rgb_homepage.gif
 slug: /ja/pycuvslam_recomputer_robotics
 last_update:
   date: 2025-10-10
@@ -125,7 +125,7 @@ sudo apt install ros-${ROS_DISTRO}-v4l2-camera
 ros2 run v4l2_camera v4l2_camera_node
 ```
 
-デフォルトで公開されるトピックは：
+デフォルトで公開されるトピック：
 
 - `/image_raw` - 生カメラ画像
 - `/camera` - カメラ情報
@@ -146,9 +146,9 @@ ros2 run camera_calibration cameracalibrator \
 
 :::note
 
-- `--size 8x6`は内側のコーナー数を指します（8×6 = 9×7グリッドの48コーナー）
+- `--size 8x6`は内側の角の数を指します（8×6 = 9×7グリッドの48角）
 - `--square 0.025`は正方形のサイズをメートル単位で指します（25mm）
-- `CALIBRATE`ボタンが点灯するまで、カメラを動かしてさまざまな角度から画像をキャプチャしてください
+- `CALIBRATE`ボタンが点灯するまで、カメラを動かして異なる角度から画像をキャプチャしてください
 
 :::
 
@@ -157,7 +157,7 @@ ros2 run camera_calibration cameracalibrator \
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal2.png" />
 </div>
 
-キャリブレーションが成功すると、ターミナルで次のようなカメラパラメータが取得できます：
+キャリブレーションが成功すると、ターミナルに以下のようなカメラパラメータが表示されます：
 
 <div align="center">
     <img width={1000}
@@ -785,10 +785,10 @@ python mono_slam.py --config /path/to/your/Camera parameters yaml file
 ```
 
 :::note
-`/path/to/your/Camera parameters yaml file` をカメラパラメータが保存されているyamlファイルのパスに変更する必要があります。yamlファイルの内容は以下の通りです：
+`/path/to/your/Camera parameters yaml file` をカメラパラメータが保存されている yaml ファイルに変更する必要があります。yaml ファイルの内容は以下の通りです：
 
 <details>
-<summary> gemini2_calibrated_config.yaml </summary>
+<summary> camera.yaml </summary>
 
 ```yaml
 # Monocular Camera Calibration Configuration File
@@ -844,10 +844,10 @@ slam_optimization:
 ### カメラキャリブレーション
 
 <div style={{ textAlign: "justify" }}>
-単眼深度ビジュアルオドメトリでは、カメラと深度画像間のピクセル対ピクセル対応が必要です。[Orbbec Gemini 2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html)は、深度とRGB（カラー）出力の両方を提供するステレオ構造光/アクティブステレオIR 3Dカメラです。その主要な機能の一つは、ハードウェア加速による深度からカラーへのアライメント（D2C、深度→カラー）で、これは深度マップとRGB画像がデータがホストコンピュータに到達する前にピクセルレベルで空間的に整列されることを意味します。これにより、ホストプロセッサの計算負荷が軽減され、3D再構成、SLAM、深度を使用したオブジェクト検出などのアプリケーションでの深度+カラーの融合が簡素化されます。
+単眼深度ビジュアルオドメトリでは、カメラと深度画像間のピクセル対ピクセル対応が必要です。[Orbbec Gemini 2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html) は、深度と RGB（カラー）出力の両方を提供するステレオ構造光/アクティブステレオ IR 3D カメラです。その主要な機能の一つは、ハードウェア加速による深度からカラーへのアライメント（D2C、深度 → カラー）で、これは深度マップと RGB 画像がデータがホストコンピュータに到達する前にピクセルレベルで空間的に整列されることを意味します。これにより、ホストプロセッサの計算負荷が軽減され、3D 再構成、SLAM、深度を使用した物体検出などのアプリケーションでの深度 + カラーの融合が簡素化されます。
 </div>
 
-**ステップ 1.** Orbbec ROS2 ドライバーをインストールします：
+**ステップ 1.** Orbbec ROS2 ドライバをインストールします：
 
 ```bash
 mkdir -p ~/ros2_ws/src
@@ -880,14 +880,14 @@ ros2 launch orbbec_camera gemini2.launch.py
 ```
 
 :::note
-カメラデータトピックが正常に公開されているかを観察することで、カメラノードが正常に起動できるかどうかを確認できます。
+カメラデータトピックが正常にパブリッシュされているかを観察することで、カメラノードが正常に起動できるかを確認できます。
 <div align="center">
     <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/camera_topic.png" />
 </div>
 :::
 
-**ステップ 2.** RGB-Dカメラキャリブレーションを実行します：
+**ステップ 2.** RGB-D カメラキャリブレーションを実行します：
 
 ```bash
 ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
@@ -899,7 +899,7 @@ ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal4.png" />
 </div>
 
-RGB-Dカメラの場合、カメラのパラメータを取得します：
+RGB-D カメラの場合、カメラのパラメータを取得します：
 
 ```yaml
 [image]
@@ -933,7 +933,7 @@ ros2 launch orbbec_camera gemini2.launch.py
 ros2 topic echo /camera/depth_to_color
 ```
 
-深度カメラ座標系からカラーカメラ座標系への回転行列と並進ベクトルをROS2トピックから読み取ります：
+深度カメラ座標系からカラーカメラ座標系への回転行列と並進ベクトルを ROS2 トピックから読み取ります：
 
 ```yaml
 # Depth camera to color camera coordinate system transformation
@@ -951,6 +951,37 @@ translation:
   - -0.013858354568481446
   - 0.0001548745185136795
   - -0.00187313711643219
+```
+
+**ステップ 4.** Gemini 2 Python SDK をセットアップします
+
+```bash
+#install pybind11
+pip install pybind11
+#clone the repository
+git clone https://github.com/orbbec/pyorbbecsdk.git
+#Install the necessary packages
+cd pyorbbecsdk
+pip install -r requirements.txt
+mkdir build && cd build
+#Build the project
+cmake \
+  -Dpybind11_DIR=`pybind11-config --cmakedir` \
+  -DPython3_EXECUTABLE=/usr/bin/python3.10 \
+  -DPython3_INCLUDE_DIR=/usr/include/python3.10 \
+  -DPython3_LIBRARY=/usr/lib/aarch64-linux-gnu/libpython3.10.so \
+  ..
+make -j4
+sudo make install
+cd ..
+#apply the python SDK
+pip install wheel
+python setup.py bdist_wheel
+pip install dist/*.whl
+#Configure udev_rules
+export PYTHONPATH=$PYTHONPATH:$(pwd)/install/lib/
+sudo bash ./scripts/install_udev_rules.sh
+sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
 ### サンプルを実行する
@@ -992,16 +1023,17 @@ import cuvslam as vslam
 
 # Add realsense folder to system path for importing visualizers
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'realsense')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'examples', 'realsense')))
+# Add cuvslam to system path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'bin', 'aarch64')))
 from visualizer import RerunVisualizer
-from opencv_visualizer import OpenCVVisualizer
 
 # ==================== Constant Definitions ====================
-WARMUP_FRAMES = 60  # Warmup frames - SLAM system needs some frames to initialize
-IMAGE_JITTER_THRESHOLD_MS = 100 * 1e6  # Image jitter threshold (nanoseconds) - frames beyond this interval are considered lost
+WARMUP_FRAMES = 30  # Warmup frames - SLAM system needs some frames to initialize (reduced for faster startup)
+IMAGE_JITTER_THRESHOLD_MS = 200 * 1e6  # Image jitter threshold (nanoseconds) - increased threshold for better tolerance
 NUM_VIZ_CAMERAS = 2  # Number of visualization cameras - for displaying color and depth images
 DEPTH_SCALE_FACTOR = 1000.0  # Depth scale factor - convert millimeters to meters (Gemini 2 depth unit is millimeters)
-FRAME_WAIT_TIMEOUT_MS = 200  # Frame wait timeout (milliseconds) - increase timeout to reduce frame loss
+FRAME_WAIT_TIMEOUT_MS = 100  # Frame wait timeout (milliseconds) - reduced timeout for better responsiveness
 
 
 def simple_frame_to_bgr(frame) -> Optional[np.ndarray]:
@@ -1043,8 +1075,9 @@ def create_depth_visualization(depth_data: np.ndarray) -> np.ndarray:
         np.ndarray: Colored depth visualization image
     """
     # Set depth range (millimeters) - filter out too close and too far points
-    min_depth = 150   # Minimum depth 150mm
-    max_depth = 2000  # Maximum depth 2000mm
+    # Adjusted range for better depth point coverage
+    min_depth = 100   # Minimum depth 100mm (reduced from 150mm)
+    max_depth = 3000  # Maximum depth 3000mm (increased from 2000mm)
 
     # Limit depth values to specified range
     depth_clipped = np.clip(depth_data, min_depth, max_depth)
@@ -1300,11 +1333,43 @@ def validate_depth_color_alignment(color_image: np.ndarray, depth_data: np.ndarr
 
     # Check validity of depth data
     valid_depth_ratio = np.sum(depth_data > 0) / depth_data.size
-    if valid_depth_ratio < 0.3:  # If valid depth points less than 30%
+    if valid_depth_ratio < 0.15:  # If valid depth points less than 15% (reduced threshold)
         print(f"Warning: Valid depth point ratio too low: {valid_depth_ratio:.2%}")
         return False
 
     return True
+
+
+def suggest_performance_optimizations(avg_fps: float, valid_depth_ratio: float, frame_interval_ms: float) -> List[str]:
+    """
+    Suggest performance optimizations based on current metrics
+
+    Args:
+        avg_fps: Average FPS
+        valid_depth_ratio: Ratio of valid depth points
+        frame_interval_ms: Average frame interval in milliseconds
+
+    Returns:
+        List[str]: List of optimization suggestions
+    """
+    suggestions = []
+
+    if avg_fps < 15:
+        suggestions.append("🚀 Try --resolution 640x480 for maximum FPS improvement")
+        suggestions.append("⚡ Use --fast-depth for faster depth processing")
+        suggestions.append("🔧 Use --viz-skip-frames 3 to reduce visualization overhead")
+
+    if valid_depth_ratio < 0.3:
+        suggestions.append("📏 Improve lighting conditions for better depth sensing")
+        suggestions.append("🎯 Ensure objects are within 0.5-5 meters range")
+        suggestions.append("💡 Avoid reflective surfaces that affect depth perception")
+
+    if frame_interval_ms > 100:
+        suggestions.append("⏱️  Use --use-hardware-timestamp for better timing accuracy")
+        suggestions.append("🔄 Try --disable-observations to reduce processing load")
+        suggestions.append("🖥️  Close other applications to free up system resources")
+
+    return suggestions
 
 
 def enhance_depth_quality(depth_data: np.ndarray, fast_mode: bool = True) -> np.ndarray:
@@ -1375,11 +1440,6 @@ def main() -> None:
         help='Enable depth data quality enhancement（Filtering and noise removal）'
     )
     parser.add_argument(
-        '--opencv-viz',
-        action='store_true',
-        help='Use OpenCV visualizer（Suitable for embedded GPU）'
-    )
-    parser.add_argument(
         '--viz-skip-frames',
         type=int,
         default=1,
@@ -1421,11 +1481,6 @@ def main() -> None:
         type=int,
         default=FRAME_WAIT_TIMEOUT_MS,
         help=f'Camera frame wait timeout（milliseconds），Default: {FRAME_WAIT_TIMEOUT_MS}ms'
-    )
-    parser.add_argument(
-        '--single-window',
-        action='store_true',
-        help='Use single window mode（Merge 3 views into 1 window, reduce window count）'
     )
     parser.add_argument(
         '--detect-stationary',
@@ -1617,33 +1672,17 @@ def main() -> None:
     # Initialize tracker and visualizer
     tracker = vslam.Tracker(rig, cfg)  # Create SLAM tracker
 
-    # Create visualizer（Optional, supports multiple visualization schemes）
+    # Create visualizer（Optional, only supports Rerun visualization）
     visualizer = None
     if not args.no_viz:
-        if args.opencv_viz:
-            # Use OpenCV visualizer（Suitable for embedded GPU）
-            try:
-                visualizer = OpenCVVisualizer("Gemini 2 RGBD SLAM", single_window=args.single_window)
-                print("✅ OpenCV visualizer initialization successful")
-            except Exception as e:
-                print(f"⚠️  OpenCV visualizer initialization failed: {e}")
-                print("Continue running, but no visualization interface...")
-                visualizer = None
-        else:
-            # TryUseRerunVisualizer
-            try:
-                visualizer = RerunVisualizer(num_viz_cameras=NUM_VIZ_CAMERAS)
-                print("✅ Rerun visualizer initialization successful")
-            except Exception as e:
-                print(f"⚠️  Rerun visualizer initialization failed: {e}")
-                print("TryUse OpenCV visualizer...")
-                try:
-                    visualizer = OpenCVVisualizer("Orbbec Gemini 2 RGBD SLAM")
-                    print("✅ OpenCV visualizer initialization successful (auto fallback)")
-                except Exception as e2:
-                    print(f"⚠️  OpenCV visualizer also failed: {e2}")
-                    print("Continue running, but no visualization interface...")
-                    visualizer = None
+        # Try to use Rerun visualizer
+        try:
+            visualizer = RerunVisualizer(num_viz_cameras=NUM_VIZ_CAMERAS)
+            print("✅ Rerun visualizer initialization successful")
+        except Exception as e:
+            print(f"⚠️  Rerun visualizer initialization failed: {e}")
+            print("Continue running, but no visualization interface...")
+            visualizer = None
 
     # Print tracker initialization information
     print(f"\ncuVSLAM tracker initialized, odometry mode: RGBD")
@@ -1662,13 +1701,7 @@ def main() -> None:
     else:
         print(f"  Depth enhancement: Disabled")
     print(f"  Distortion correction: {'Enabled' if (args.enable_distortion and distortion_coeffs) else 'Disabled'}")
-
-    if args.opencv_viz:
-        viz_mode = "Single window" if args.single_window else "3windows"
-        print(f"  Visualizer: OpenCV ({viz_mode})")
-    else:
-        print(f"  Visualizer: Rerun (Default)")
-
+    print(f"  Visualizer: Rerun")
     print(f"  Observation export: {'Disabled (maximum performance)' if args.disable_observations else 'Enabled'}")
     print(f"  Stationary detection: {'Enabled (suppress drift)' if args.detect_stationary else 'Disabled'}")
 
@@ -1678,7 +1711,6 @@ def main() -> None:
         print(f"  --resolution 640x480     # Reduce resolution (maximum improvement!)")
         print(f"  --viz-skip-frames 3      # Visualize every 3 frames (slight improvement)")
         print(f"  --fast-depth             # Use fast depth enhancement (medium improvement)")
-        print(f"  --opencv-viz             # Use OpenCV visualization (medium improvement)")
         print(f"  --disable-observations   # Disable feature point export（Significant improvement）")
         print(f"  --no-viz                 # Completely disable visualization (maximum improvement)")
         print(f"\n  💡 Use --list-resolutions to view all supported resolutions")
@@ -1701,6 +1733,14 @@ def main() -> None:
     stationary_count = 0  # Consecutive stationary frames
     last_position = None  # Previous frame position
     is_stationary = False  # Currently stationary
+
+    # Performance monitoring
+    performance_monitor = {
+        'frame_times': [],
+        'processing_times': [],
+        'fps_history': [],
+        'last_optimization': 0
+    }
 
     # Print start information and usage tips
     print("\n" + "="*60)
@@ -1892,34 +1932,23 @@ def main() -> None:
                 # Store current timestamp for next iteration
                 prev_timestamp = timestamp_ns
 
-                # Visualize results (if enabled, supports multiple visualizers)
+                # Visualize results (if enabled, only supports Rerun visualizer)
                 # Use frame skipping to reduce visualization overhead for better performance
                 if visualizer is not None and frame_id % args.viz_skip_frames == 0:
                     try:
-                        if isinstance(visualizer, OpenCVVisualizer):
-                            # OpenCV visualizer call
-                            visualizer.visualize_frame(
-                                frame_id=frame_id,
-                                color_image=images[0],
-                                depth_image=depth_data,
-                                pose=odom_pose,
-                                observations=observations,
-                                trajectory=trajectory
-                            )
-                        else:
-                            # Rerun visualizer call（Consistent with run_rgbd.py）
-                            # For RGBD, we only have one camera, so copy images and observation data
-                            # Create depth visualization for second view
-                            depth_vis = create_depth_visualization(depth_data)
+                        # Rerun visualizer call（Consistent with run_rgbd.py）
+                        # For RGBD, we only have one camera, so copy images and observation data
+                        # Create depth visualization for second view
+                        depth_vis = create_depth_visualization(depth_data)
 
-                            visualizer.visualize_frame(
-                                frame_id=frame_id,                    # framesID
-                                images=[images[0], depth_vis],        # Color image and depth visualization
-                                pose=odom_pose,                       # Current pose
-                                observations_main_cam=[observations, observations],  # Main camera observation data
-                                trajectory=trajectory,                # Trajectory
-                                timestamp=timestamp_ns                # Timestamp
-                            )
+                        visualizer.visualize_frame(
+                            frame_id=frame_id,                    # framesID
+                            images=[images[0], depth_vis],        # Color image and depth visualization
+                            pose=odom_pose,                       # Current pose
+                            observations_main_cam=[observations, observations],  # Main camera observation data
+                            trajectory=trajectory,                # Trajectory
+                            timestamp=timestamp_ns                # Timestamp
+                        )
                     except Exception as e:
                         # If visualization fails, silently continue running
                         if frame_id % 100 == 0:  # Print warning every 100 frames
@@ -1930,6 +1959,12 @@ def main() -> None:
                     elapsed = time.time() - start_time  # Elapsed time
                     fps = frame_id / elapsed if elapsed > 0 else 0  # Calculate FPS
                     num_features = len(observations)  # Number of feature points
+
+                    # Calculate valid depth ratio
+                    valid_depth_ratio = np.sum(depth_data > 0) / depth_data.size
+
+                    # Calculate average frame interval
+                    avg_interval_ms = np.mean(timestamp_intervals[-60:]) if len(timestamp_intervals) > 0 else 0
 
                     # Feature quality indicator
                     feature_status = "🔴 LOW" if num_features < 30 else "🟡 OK" if num_features < 80 else "🟢 GOOD"
@@ -1945,6 +1980,15 @@ def main() -> None:
                     print(f"   📍 Position (XYZ): [{position[0]:.3f}, {position[1]:.3f}, {position[2]:.3f}] meters")
                     print(f"   🔄 Rotation (RPY): Roll={roll_deg:.1f}°, Pitch={pitch_deg:.1f}°, Yaw={yaw_deg:.1f}°")
                     print(f"   🧭 Quaternion: w={w:.3f}, x={x:.3f}, y={y:.3f}, z={z:.3f}")
+                    print(f"   📏 Depth coverage: {valid_depth_ratio:.1%} | Avg interval: {avg_interval_ms:.1f}ms")
+
+                    # Show performance suggestions if needed
+                    if fps < 15 or valid_depth_ratio < 0.3 or avg_interval_ms > 100:
+                        suggestions = suggest_performance_optimizations(fps, valid_depth_ratio, avg_interval_ms)
+                        if suggestions:
+                            print(f"   💡 Performance tips:")
+                            for suggestion in suggestions[:3]:  # Show top 3 suggestions
+                                print(f"      {suggestion}")
                     print()
             else:
                 # During warmup, only show progress
@@ -2056,7 +2100,7 @@ if __name__ == "__main__":
 </details>
 
 ```bash
-python rgbd_slam.py --config examples/gemini2_calibrated_config.yaml --resolution 1280x720 --enable-distortion --enhance-depth
+python rgbd_slam.py --config ./gemini2_calibrated_config.yaml --resolution 1280x720 --enable-distortion --enhance-depth --fast-depth
 ```
 
 yamlファイルは以下の通りです：

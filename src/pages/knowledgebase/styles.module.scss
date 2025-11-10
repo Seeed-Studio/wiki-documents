@@ -52,7 +52,7 @@
 		margin-top: 24px;
 		grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 
-		.card_item {
+			.card_item {
 			// width: 33%
 			background-color: var(--ifm-card-background-color);
 			border-radius: var(--ifm-card-border-radius);
@@ -68,6 +68,30 @@
 					display: flex;
 					justify-content: space-between;
 					font-weight: bold;
+				}
+
+				.cardDescription {
+					margin-top: 0.5rem;
+					font-size: 0.9rem;
+					color: var(--ifm-color-emphasis-700);
+				}
+
+				.cardLinks {
+					display: flex;
+					flex-direction: column;
+					gap: 0.35rem;
+					margin-top: 0.75rem;
+				}
+
+				.cardLink {
+					color: var(--ifm-link-color);
+					text-decoration: none;
+					font-size: 0.9rem;
+					line-height: 1.4;
+				}
+
+				.cardLink:hover {
+					text-decoration: underline;
 				}
 
 				.source {

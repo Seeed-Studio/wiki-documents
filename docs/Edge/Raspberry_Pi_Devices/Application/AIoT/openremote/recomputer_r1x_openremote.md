@@ -335,7 +335,6 @@ This tutorial will guide you through the process of integrating an MQTT Agent wi
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/openremote/openremote11.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### Demo
 
 <div class="video-container">
@@ -362,4 +361,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

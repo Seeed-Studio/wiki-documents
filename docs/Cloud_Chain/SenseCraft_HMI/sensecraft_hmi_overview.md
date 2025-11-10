@@ -33,44 +33,6 @@ last_update:
 
 - **Device Sensor Integration**: Automatically display temperature, humidity, and battery data from your device
 
-
-## Compatible Devices
-
-SenseCraft HMI currently supports the following Seeed Studio devices:
-
-### [reTerminal E Series](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.jpg" style={{width:500, height:'auto'}}/></div>
-    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/25.jpg" style={{width:500, height:'auto'}}/></div>
-</div><br />
-
-The reTerminal E Series ePaper Display combines powerful computing capabilities with ePaper display technology, making it perfect for digital signage, information dashboards, and interactive displays. The series includes two models with different display capabilities:
-
-#### [reTerminal E1001](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1001/)
-
-The reTerminal E1001 features a 7.5-inch monochrome ePaper display with 4-level grayscale capability. With its 800×480 resolution, it delivers crisp text and clear images while consuming minimal power. The monochrome display is perfect for applications where text legibility and battery life are priorities.
-
-**Key Features**
-
-- **Beautiful, Ready-to-Use ePaper Display**
-- **Ultra-Low Power with 3-Month Battery Life**
-- **No-Code UI Design & Deployment with SenseCraft HMI**
-- **Works with Popular Software Platforms**
-- **Flexible Hardware & Software Customization**
-
-#### [reTerminal E1002](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002/)
-
-The reTerminal E1002 features a vibrant 7.3-inch six-color ePaper display with ACeP (Advanced Color ePaper) technology. This color display offers the same power efficiency benefits of ePaper technology while allowing for more visually engaging content with multiple colors, making it ideal for applications where visual distinction and aesthetic appeal are important.
-
-**Key Features**
-
-- **Beautiful, Ready-to-Use E Ink® Spectra™6 Color ePaper Display**
-- **Ultra-Low Power with 3-Month Battery Life**
-- **No-Code UI Design & Deployment with SenseCraft HMI**
-- **Works with Popular Software Platforms**
-- **Flexible Hardware & Software Customization**
-
 ## Getting Started
 
 To begin using SenseCraft HMI:
@@ -87,29 +49,74 @@ To begin using SenseCraft HMI:
 
 6. **Deploy to Device**: Send your design to your connected device with one click
 
+## Getting Started Guides
+
+### [Getting Started](https://sensecraft-hmi-docs.seeed.cc/en/guides/getting-started/)
+
+Learn how to create your SenseCraft HMI account and access the platform.
+
+### [Firmware Update and Flashing](https://sensecraft-hmi-docs.seeed.cc/en/guides/firmware-update/)
+
+Complete guide for updating and flashing firmware on your e-paper display devices.
+
+### [Workspace Interface Guide](https://sensecraft-hmi-docs.seeed.cc/en/guides/workspace-interface/)
+
+Comprehensive guide to understanding and using the core toolbars, device status bar, and page management features.
+
+### [Advanced Tools](https://sensecraft-hmi-docs.seeed.cc/en/guides/advanced-tools/)
+
+Learn how to use the Firmware Flasher and Image Dithering tools to optimize your device and content.
+
+### [Deploying to Your Device](https://sensecraft-hmi-docs.seeed.cc/en/guides/deploying-to-device/)
+
+Step-by-step guide for deploying your SenseCraft HMI projects to your e-paper display devices.
+
 ## Function Documentation
 
 SenseCraft HMI offers several specialized functions, each designed for different display needs:
 
-### [AI Generation Function](https://wiki.seeedstudio.com/sensecraft_hmi_ai_generation/)
+### [AI Generation Function](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-ai-generator/)
 
 Create beautiful layouts and images by simply describing what you want in natural language, eliminating the need for design skills.
 
-### [Gallery Function](https://wiki.seeedstudio.com/sensecraft_hmi_gallery/)
+### [Gallery Function](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-gallery/)
 
 Transform your device into a digital photo frame with customizable image displays, transitions, and visual effects.
 
-### [Canvas Function](https://wiki.seeedstudio.com/sensecraft_hmi_canvas/)
+### [Canvas Function](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-canvas/)
 
 Design custom interfaces and dashboards combining static elements with dynamic data from various sources.
 
-### [RSS Function](https://wiki.seeedstudio.com/sensecraft_hmi_rss/)
+### [RSS Function](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-rss/)
 
 Display automatically updating content from news outlets, blogs, and other information sources using RSS feeds.
 
-### [Web Function](https://wiki.seeedstudio.com/sensecraft_hmi_web/)
+### [Web Function](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-web/)
 
 Show web content directly on your device, perfect for dashboards, documentation, or monitoring systems.
+
+## Additional Resources
+
+### [Supported Hardware](https://sensecraft-hmi-docs.seeed.cc/en/supported-hardware/)
+
+Complete list of supported devices and hardware requirements.
+
+### [Video Guide](https://sensecraft-hmi-docs.seeed.cc/en/video-guide/)
+
+Step-by-step video tutorials for SenseCraft HMI platform.
+
+### [Pricing](https://sensecraft-hmi-docs.seeed.cc/en/pricing/)
+
+Current pricing information and plans.
+
+### [Release Notes](https://sensecraft-hmi-docs.seeed.cc/en/release-notes/)
+
+Latest updates and version history of the SenseCraft HMI platform.
+
+## Resources
+
+- [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi)
+- [Compatible Devices - reTerminal E Series](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
 
 ## Tech Support & Product Discussion
 

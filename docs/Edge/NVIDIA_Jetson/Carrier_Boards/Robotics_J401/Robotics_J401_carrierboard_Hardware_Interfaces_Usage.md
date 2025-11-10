@@ -195,10 +195,10 @@ Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1,
 
 ### Supported Module
 
-- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
-- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
-- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
-- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
+- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5554.html)
+- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5552.html)
+- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5523.html)
+- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5524.html)
 
 ### Prerequisites
 
@@ -1053,7 +1053,7 @@ The following are the GMSL camera models that we have already supported:
 - SG2-AR0233C-5200-G2A
 - SG2-IMX390C-5200-G2A
 - SG8S-AR0820C-5300-G2A
-- Orbbec Gemini 335Lg
+- [Orbbec Gemini 335Lg](https://www.seeedstudio.com/Orbbec-Gemini-335LG-3D-Camera-p-6541.html)
 
 ### Usage Instruction
 
@@ -1109,68 +1109,59 @@ Opening the data stream, you can view the video from the camera.
 
 ### Use the cameras of SGxxx Series
 
-**step 1.** Set the channel format for the serializer and deserializer.The interface number in the figure corresponds to the serializer/deserializer number.
-
-<div align="center">
-  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/interface.jpg"/>
-</div>
-
-```bash
-media-ctl -d /dev/media0 --set-v4l2 '"ser_0_ch_0":1[fmt:YUYV8_1X16/1920x1080]'
-media-ctl -d /dev/media0 --set-v4l2 '"des_ch_0":0[fmt:YUYV8_1X16/1920x1080]'
-media-ctl -d /dev/media0 --set-v4l2 '"ser_1_ch_0":1[fmt:YUYV8_1X16/1920x1080]'
-media-ctl -d /dev/media0 --set-v4l2 '"des_ch_1":0[fmt:YUYV8_1X16/1920x1080]'
-media-ctl -d /dev/media0 --set-v4l2 '"ser_2_ch_0":1[fmt:YUYV8_1X16/1920x1536]'
-media-ctl -d /dev/media0 --set-v4l2 '"des_ch_2":0[fmt:YUYV8_1X16/1920x1536]'
-media-ctl -d /dev/media0 --set-v4l2 '"ser_3_ch_0":1[fmt:YUYV8_1X16/3840x2160]'
-media-ctl -d /dev/media0 --set-v4l2 '"des_ch_3":0[fmt:YUYV8_1X16/3840x2160]' 
-```
-
-:::note
-`ser_0_ch_0` is the first channel of the decoder, `des_ch_0` is the serializer on the first camera, and the same applies to the others.If the connected camera has a different resolution, then the configuration here will be based on the actual format of the camera.
-We need to set the channel format for the serializer and deserializer every time the device restarts.
-:::
-
-**step 2.** Set the resolution of the camera.
+**step 1.** Set frame synchronization mode(It is not enabled by default!). 
 
 :::info
 Here we demonstrate how to configure cameras of different models and resolutions.
 :::
 
 ```bash
-v4l2-ctl -V --set-fmt-video=width=1920,height=1080 -c sensor_mode=1  -d /dev/video0
-v4l2-ctl -V --set-fmt-video=width=1920,height=1080 -c sensor_mode=1  -d /dev/video1
-v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0  -d /dev/video2
-v4l2-ctl -V --set-fmt-video=width=3840,height=2160 -c sensor_mode=2  -d /dev/video3 
+#enables frame synchronization
+v4l2-ctl -d /dev/video0 --set-ctrl=trig_mode=1
+#Set the frame rate of the camera
+v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0 --stream-mmap -d /dev/video0
+#Set the camera format
+v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0 -d /dev/video0
 ```
-
 :::note
-`--set-fmt-video` follows the resolution which is selected based on the camera being connected. The sensor_mode is also chosen accordingly. Currently, there are three sensor_mode options, each corresponding to a different resolution.
+`trig_mode = 1` enables frame synchronization, while `trig_mode = 0` disables frame synchronization. The default setting is to disable frame synchronization.
 
+`--set-fmt-video` follows the resolution which is selected based on the camera being connected. Currently, there are three sensor_mode options, each corresponding to a different resolution.
 - sensor_mode=0 -------> YUYV8_1X16/1920x1536
 - sensor_mode=1 -------> YUYV8_1X16/1920x1080
 - sensor_mode=2 -------> YUYV8_1X16/3840x2160
-
 :::
 
-**step 3.** Start the camera.
+**step 2.** Start the camera.
 
 ```bash
-gst-launch-1.0 v4l2src device=/dev/video0 ! \
-'video/x-raw,width=1920,height=1080,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+gst-launch-1.0 \
+    v4l2src device=/dev/video0 ! \
+    video/x-raw,format=YUY2,width=1920,height=1080,framerate=30/1 ! \
+    videoconvert ! \
+    videoscale ! \
+    xvimagesink
 
-gst-launch-1.0 v4l2src device=/dev/video1 ! \
-'video/x-raw,width=1920,height=1080,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+gst-launch-1.0 \
+    v4l2src device=/dev/video1 ! \
+    video/x-raw,format=YUY2,width=1920,height=1080,framerate=30/1 ! \
+    videoconvert ! \
+    videoscale ! \
+    xvimagesink
 
-gst-launch-1.0 v4l2src device=/dev/video2 ! \
-'video/x-raw,width=1920,height=1536,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+gst-launch-1.0 \
+    v4l2src device=/dev/video2 ! \
+    video/x-raw,format=YUY2,width=1536,height=1080,framerate=30/1 ! \
+    videoconvert ! \
+    videoscale ! \
+    xvimagesink
 
-gst-launch-1.0 v4l2src device=/dev/video3 ! \
-'video/x-raw,width=3840,height=2160,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+gst-launch-1.0 \
+    v4l2src device=/dev/video3 ! \
+    video/x-raw,format=YUY2,width=3840,height=2160,framerate=30/1 ! \
+    videoconvert ! \
+    videoscale ! \
+    xvimagesink
 ```
 
 <div align="center">
@@ -1185,6 +1176,12 @@ The reComputer Jetson Robotics J401  is equipped with an DP1.4 (included in Type
 
 - [reComputer Robotics J401 Carrier Board Schematic](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Robotics%20J401_V1.0_SCH_250421.pdf)
 - [reComputer Robotics J401 Carrier Board Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)
+- [reComputer Robotics 3D file](https://files.seeedstudio.com/products/NVIDIA-Jetson/recomputer_robotics_j401.stp)
+- [Mechanical Document-reComputer Robotics PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf)
+- [Seeed NVIDIA Jetson Product Catalog](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed_NVIDIA_Jetson_Catalog_in_Robotics_and_Edge_AI.pdf)
+- [Nvidia Jetson Comparison](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Seeed Nvidia Jetson Success Cases](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Seeed Jetson One Pager](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 ## Tech Support & Product Discussion
 

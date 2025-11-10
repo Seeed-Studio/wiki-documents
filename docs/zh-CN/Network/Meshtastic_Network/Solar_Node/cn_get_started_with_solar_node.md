@@ -1,6 +1,6 @@
 ---
-description: 开始使用 SenseCAP Solar Node for Meshtastic & LoRa
-title:  开始使用 SenseCAP Solar Node
+description: SenseCAP Solar Node for Meshtastic & LoRa 入门指南
+title: SenseCAP Solar Node 入门指南
 keywords:
 - Meshtastic
 - Solar
@@ -8,12 +8,12 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /cn/get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 09/11/2025
+  date: 10/29/2025
   author: Michelle
 ---
 
 
-## 开始使用
+## 入门指南
 
 在正式部署之前，请先测试和配置节点。
 
@@ -36,12 +36,14 @@ last_update:
 ### 安装电池和 GPS 模块（可选）
 
 :::tip
-推荐电池：18650 锂离子电池 3.6V（平头）。
+当您需要安装或更换电池时，请使用 `Button-top` 18650（3.6V）电池。
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
+P1-Pro 版本内置电池和 GPS 模块，对于 P1 版本，如果需要，用户需要手动安装电池和 GPS 模块。
 :::
 
-P1-Pro 版本内置电池和 GPS 模块，对于 P1 版本，如果需要，用户需要手动安装电池和 GPS 模块。
 
-- 步骤 1：拆下所有螺丝和外壳。
+
+- 步骤 1：拆下所有螺丝和盖子。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
@@ -59,9 +61,13 @@ P1-Pro 版本内置电池和 GPS 模块，对于 P1 版本，如果需要，用�
 确保外壳正确安装，螺丝牢固拧紧，以保持设备的防水完整性。
 :::
 
-### 设备上电
+### 设备开机
 
-连接 USB 线缆以激活设备。
+设备首次使用时需要通过连接 USB 线缆来激活。
+
+:::tip
+如果按下按钮时设备没有响应，请先充电。请勿使用快充充电器。
+:::
 
 ### 通过应用连接
 
@@ -70,7 +76,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="IOS 应用">
 
 - 在蓝牙面板上选择目标设备。
 
@@ -82,7 +88,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="Android App">
+<TabItem value="android" label="Android 应用">
 
 - 点击 `+` 并选择目标设备。
 
@@ -100,13 +106,13 @@ import TabItem from '@theme/TabItem';
 为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的区域位置进行设置。
 
 <Tabs>
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="IOS 应用">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Android App">
+<TabItem value="android" label="Android 应用">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
@@ -131,7 +137,7 @@ import TabItem from '@theme/TabItem';
 ## 安装
 
 :::danger note
-由于设备将在户外长期使用，请避免将面板水平安装。建议倾斜或对角安装以防止积水。此外，确保所有螺丝牢固拧紧，外壳正确安装。为了增强防水保护，您还可以考虑采用额外的密封措施。
+由于设备将在户外长期使用，请避免将面板水平安装。建议倾斜或对角安装以防止积水。此外，确保所有螺丝牢固拧紧，盖子正确安装。为了增强防水保护，您还可以考虑采用额外的密封措施。
 :::
 
 - **零件清单**
@@ -279,6 +285,7 @@ import TabItem from '@theme/TabItem';
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为了获得最佳信号效果，请在开阔、无遮挡、干扰最小的区域使用设备。
+      为了获得最佳信号效果，请在开阔、无遮挡且干扰最小的区域使用设备。
 
-更多详情请查看 [太阳能节点电池寿命计算表](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Solar%20Node%20Battery%20Life%20Calculation%20Table.xlsx)
+## 资源
+- [太阳能节点电池寿命计算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)

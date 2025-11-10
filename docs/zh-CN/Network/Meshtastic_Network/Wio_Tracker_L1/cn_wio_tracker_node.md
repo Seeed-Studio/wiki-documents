@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /cn/wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 5/19/2025
-  author: Jessie
+  date: 11/5/2025
+  author: Michelle Huang
 ---
 
 
@@ -58,11 +58,15 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
 
 ### 规格参数
 
+:::tip
+最新批次的 L1、L1 Lite 和 L1 E-Ink 都配有电池适配线，将 1mm 接口转换为 2mm 接口。这为您提供了更多的电池选择。
+:::
+
 <table>
   <tr>
     <th colspan="1">处理器</th>
     <th colspan="1">
-      Nordic nRF52840<br />ARM® Cortex®-M4 带 FPU，运行频率高达 64 MHz
+      Nordic nRF52840<br />ARM® Cortex®-M4 with FPU 运行频率高达 64 MHz
     </th>
   </tr>
   <tr>
@@ -97,10 +101,10 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
     <td colspan="1">USB Type-C：5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">太阳能电池板：5V — 1A</td>
+    <td colspan="1">太阳能电池板（2.0mm 2p）：5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">锂电池：3.7V — 1A</td>
+    <td colspan="1">锂电池（1mm 2p JST）：3.7V — 1A</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">OLED 屏幕</td>
@@ -110,7 +114,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
     <td colspan="1">分辨率：128 × 64 像素</td>
   </tr>
   <tr>
-    <td colspan="1">有效区域（毫米）：34.5 × 23.0</td>
+    <td colspan="1">有效区域（mm）：34.5 × 23.0</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">E-Ink 屏幕</td>
@@ -120,7 +124,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
     <td colspan="1">分辨率：122 × 250 像素</td>
   </tr>
   <tr>
-    <td colspan="1">有效区域（毫米）：48.55 × 23.7046</td>
+    <td colspan="1">有效区域（mm）：48.55 × 23.7046</td>
   </tr>
   <tr>
     <td colspan="1">认证</td>
@@ -141,4 +145,4 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
 
 **示意图**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/l1-diagram.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1%20Diagram.png" alt="pir" width={800} height="auto" /></p>
