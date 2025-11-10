@@ -18,7 +18,7 @@ Si tiene la intención de implementarlo en un entorno real, por favor **asegúre
 La Solución de Detección de Armas Frigate + Node-RED es una pila de análisis de video con IA en el borde que detecta armas de fuego en transmisiones de cámara en vivo y orquesta alertas, revisiones e integraciones. Construida para implementaciones que preservan la privacidad y de baja latencia en **AI Boxes**, la serie **Jetson** de NVIDIA y **reComputer R2000**, combina un motor de detección optimizado (Frigate) con una capa de automatización visual (Node‑RED) y revisión asistida por LLM opcional.
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://cc.seeedstudio.com/wp-content/uploads/2025/09/archi_2-1.png" alt="diagrama de solución"/>
+  <img class='img-responsive' width={680} src="https://www.seeed.cc/wp-content/uploads/2025/09/archi_2-1.png" alt="diagrama de solución"/>
 </div>
 
 Ofrece una experiencia completa de AI NVR[^nvr] que:
@@ -37,11 +37,11 @@ Siga esta guía para implementar la solución si su dispositivo no es del paquet
       <th>Gestión de Seguridad del Campus</th>
   </tr>
   <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://cc.seeedstudio.com/wp-content/uploads/2025/08/scene_3.png" style={{width:480, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://www.seeed.cc/wp-content/uploads/2025/08/scene_3.png" style={{width:480, height:'auto'}}/></div></td>
   </tr>
   <tr>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://cc.seeedstudio.com/solutions/campus-safety-management" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeed.cc/solutions/campus-safety-management" target="_blank">
           <strong><span><font color={'FFFFFF'} size={"4"}> Paquete de Solución 🖱️</font></span></strong>
       </a>
     </div></td>
@@ -511,7 +511,7 @@ Con MQTT habilitado, Frigate se convierte en parte de una red de eventos en tiem
 
 ## Recursos y Próximos Pasos
 
-- **Paquete de Solución:** [Frigate + Node-RED Gun Detection en Jetson](https://cc.seeedstudio.com/solutions/campus-safety-management)
+- **Paquete de Solución:** [Frigate + Node-RED Gun Detection en Jetson](https://www.seeed.cc/solutions/campus-safety-management)
 - **Documentación de Frigate:** [https://docs.frigate.video/](https://docs.frigate.video/)
 - **Repositorio GitHub:** [Seeed-Studio / frigate-on-jetson](https://github.com/Seeed-Studio/frigate-on-jetson)
 - **Complemento de Panel Node-RED:** [@flowfuse/node-red-dashboard](https://flows.nodered.org/node/@flowfuse/node-red-dashboard)

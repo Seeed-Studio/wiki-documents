@@ -1,5 +1,5 @@
 ---
-description: Comenzar con la Serie Wio Tracker L1
+description: Comenzar con Wio Tracker L1 Series
 title:  Comenzar con Wio Tracker L1
 keywords:
 - Meshtastic
@@ -7,11 +7,11 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.web
 slug: /es/get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 6/17/2025
-  author: Jessie
+  date: 10/29/2025
+  author: Michelle
 ---
 :::tip
-La Serie Wio Tracker L1 comparte el mismo marco de hardware. Aunque la guía en video fue para el L1 Pro, es aplicable a todos los demás productos de la serie L1.
+La Wio Tracker L1 Series comparte el mismo marco de hardware. Aunque la guía de video fue para el L1 Pro, es aplicable a todos los demás productos de la serie L1.
 :::
 ## Tutorial en Video
 
@@ -22,6 +22,8 @@ Al usar los modelos L1, L1 Lite o L1 E-Ink por primera vez, después de conectar
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Wi_YmE76YcY?si=Ad-pUhle5X9QppPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+
 
 ### Parte 2 Flasheo de Firmware
 
@@ -35,7 +37,7 @@ Al usar los modelos L1, L1 Lite o L1 E-Ink por primera vez, después de conectar
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Q97w2ompPtI?si=yLbAgE4cBbT6NbHS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### Parte 4 Conexión con Teléfono
+### Parte 4 Conexión del Teléfono
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/OFtUwN3z0tI?si=9zr3j-hLuoj0-CXi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -53,11 +55,18 @@ Al usar los modelos L1, L1 Lite o L1 E-Ink por primera vez, después de conectar
 
 Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
-Selecciona el dispositivo objetivo como `Seeed Wio Tracker L1` y elige el firmware más reciente, luego haz clic en `Flash`.
+Para L1, L1 Lite y L1 Pro, selecciona el dispositivo objetivo como `Seeed Wio Tracker L1` y elige el firmware más reciente, luego haz clic en `Flash`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
+
+Para L1 E-Ink, selecciona el dispositivo objetivo como `Seeed Wio Tracker L1 E-Ink` y elige el firmware más reciente, luego haz clic en `Flash`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%201.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
+
 
 Enciende el dispositivo, haz clic en `Enter DFU Mode`, aparecerá un puerto serie llamado `Tracker L1`, haz clic y conéctalo, y debería aparecer un controlador llamado `Tracker L1`.
 
@@ -69,6 +78,10 @@ Arrastra el archivo UF2 a la unidad DFU. El firmware debería flashearse despué
 
 Conecta el cable USB para activar el dispositivo. Levanta el interruptor de encendido hacia arriba para encenderlo.
 
+:::tip
+Si el dispositivo no responde cuando presionas el botón, por favor cárgalo primero. No uses el cargador de carga rápida.
+:::
+
 ### Conectar vía App
 
 import Tabs from '@theme/Tabs';
@@ -76,7 +89,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="App iOS">
+<TabItem value="ios" label="App IOS">
 
 - Selecciona el dispositivo objetivo en el panel de Bluetooth.
 
@@ -106,7 +119,7 @@ import TabItem from '@theme/TabItem';
 Para comenzar a comunicarse a través de la malla, debes establecer tu región. Esta configuración controla qué rango de frecuencia usa tu dispositivo y debe establecerse según tu ubicación regional.
 
 <Tabs>
-<TabItem value="ios" label="App iOS">
+<TabItem value="ios" label="App IOS">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
@@ -141,7 +154,7 @@ Puedes agregar sensores al dispositivo a través de la interfaz Grove. Los sigui
 <table>
   <tr>
     <th colspan="2">Tipo de sensor</th>
-    <th colspan="1">Modelo de Sensor</th>
+    <th colspan="1">Modelo de sensor</th>
   </tr>
   <tr>
     <td rowspan="4">Sensor Ambiental</td>
@@ -171,20 +184,26 @@ Puedes agregar sensores al dispositivo a través de la interfaz Grove. Los sigui
   </tr>
 </table>
 
-### FAQ
+## FAQ
 
-#### Entrar al Modo DFU Manualmente
+### Entrar al Modo DFU Manualmente
 
 Conecta el dispositivo a tu PC, presiona dos veces el botón `Reset`. El LED amarillo permanecerá sólido, y aparecerá una nueva unidad USB llamada `Tracker L1` en tu PC.
 
-#### Salir del Modo DFU
+### Salir del Modo DFU
 
 Presiona el botón `Reset` una vez para salir del modo DFU.
 
-#### Calidad de Señal
+### Calidad de Señal
 
-- **SNR** refleja la calidad del enlace de comunicación. Los dispositivos normales usualmente operan por encima de -7 dB. Un dispositivo con SNR menor a -10 dB indica un rendimiento deficiente.
+- **SNR** refleja la calidad del enlace de comunicación. Los dispositivos normales usualmente operan por encima de -7 dB. Un dispositivo con un SNR menor a -10 dB indica un rendimiento pobre.
 
-- **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. Los dispositivos normales usualmente operan por encima de -110 dBm. Un dispositivo con RSSI menor a -115 dBm se considera que tiene un rendimiento deficiente.
+- **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. Los dispositivos normales usualmente operan por encima de -110 dBm. Un dispositivo con un RSSI menor a -115 dBm se considera que tiene un rendimiento pobre.
 
       Para lograr el mejor efecto de señal, por favor usa el dispositivo en un área abierta y sin obstrucciones con interferencia mínima.
+## Recursos
+- [Archivo de referencia de impresión 3D](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
+- [Archivo de Contorno](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
+- [Certificación FCC](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
+- [Certificación CE](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
+- [Prueba de Consumo de Energía y Cálculo de Vida de Batería](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)

@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 10/20/2025
+  date: 10/27/2025
   author: Frank
 ---
 
@@ -17,57 +17,72 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is October 20th, and a brand new week has begun! Check out what Seeed Studio did last week!
-
-### [Efficient Multi-Task Vision Inference Engine Deployment on Jetson](https://wiki.seeedstudio.com/deploy_visual_perception_engine_recomputer/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/demo.gif" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-[Visual Perception Engine](https://github.com/nasa-jpl/visual-perception-engine) is a cutting-edge framework that revolutionizes robotic perception by eliminating redundant computations through shared backbone networks. Unlike traditional approaches where each visual task runs independently, VPEngine uses a unified base model backbone (e.g., DINOv2) to extract image features only once, which are then reused by multiple task heads. This approach significantly reduces memory overhead and CPU-GPU data transfer while supporting dynamic task scheduling and seamless ROS2 integration.This wiki will show you how to use reComputer Robotics in conjunction with GMSL cameras to deploy the Visual Perception Engine to the edge.
-
-</div>
-
-### [Flashing AI Models on the SenseCAP Watcher](https://wiki.seeedstudio.com/visual_trigger_and_ai_flash/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This guide focuses on how to flash the SenseCAP Watcher with the Visual Recognition Triggered Conversation firmware and how to replace or update the AI model on the device. It is intended as a hands-on instructional guide for these operations.
-
-</div>
+Today is November 3rd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [EE04 ePaper Display Work with ESPHome for Home Assistant](https://wiki.seeedstudio.com/EE04_with_esphome_advanced/)
+### [reCamera HQ POE Getting Started Guide](https://wiki.seeedstudio.com/recamera_hd_poe_getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/1-100029708-reCamera-2002-HQ-PoE-8GB.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document is a detailed tutorial on integrating the **EE04 ePaper Display** with **ESPHome** to create a smart home control panel in **Home Assistant**. It covers hardware preparation, firmware setup, and data display such as weather information. The guide also provides examples of configuring the SPI interface, fonts, graphics, and data retrieval from Home Assistant using **YAML** files.
+Welcome to reCamera HQ PoE! Featuring an advanced CMOS sensor and an M12 lens mount for flexible lens replacement, reCamera 2002 HQ PoE delivers sharp, clear images. With PoE support, power and data run through a single Ethernet cable. This guide helps you set up and start using its powerful AI Vision features quickly.
+
+</div>
+
+### [YOLO11n Model Conversion for reCamera: Complete Guide](https://wiki.seeedstudio.com/model_conversion_guide/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/013.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+In this tutorial, you’ll convert a YOLO11n ONNX model into an INT8 CV181x .cvimodel and deploy it on reCamera. We cover setup (cloud or local), calibration with 100 images, TPU-MLIR conversion, validation, deployment, and troubleshooting.
+
+</div>
+
+### [EE04 ePaper Display with EEZ Studio](https://wiki.seeedstudio.com/epaper_ee04_eezstudio/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_effect_2_2.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This tutorial uses the XIAO ePaper Display Board EE04, based on EEZ Studio and by compiling and uploading the program using the Arduino IDE.
+
+</div>
+
+### [XIAO ePaper Display Board EE04 with the SenseCraft HMI](https://wiki.seeedstudio.com/EE04_with_hmi/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hmi61.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) lets you create professional, no-code visual interfaces through an intuitive cloud editor. Paired with the ***XIAO ePaper Display Board (ESP32-S3) – EE04***, it brings seamless integration for low-power ePaper dashboards and smart displays. This tutorial walks you through a hands-on example using a 7.3" Spectra™ 6 E-Ink display.
+
+</div>
+
+### [Usage of the OpenEPaperLink and ePaper config builder](https://wiki.seeedstudio.com/epaper_breakout_board_with_oepl/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/seeed_logo_2.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+OpenEPaperLink (OEPL) is an open-source firmware and communication protocol for electronic shelf labels, supporting multiple displays via ESP32 or nRF52840 access points with 802.15.4 radio. In this tutorial, we use OPEL Config Builder to adjust e-paper parameters and OEPL Image Uploader to upload images.
 
 </div>
 
 ## Existing Wiki Updated
 
-### [Getting Started with reTerminal E Series ePaper Display and EEZ Studio](https://wiki.seeedstudio.com/reterminal_e10xx_with_eezstudio/)
+### [Getting Started with XIAO ePaper Display EE04](https://wiki.seeedstudio.com/epaper_ee04/)
 
-We have added an example showing how to [configure the Project Settings](https://wiki.seeedstudio.com/reterminal_e10xx_with_eezstudio/#project-settings-configuration).
-
-### [NVIDIA® Jetson AGX Orin 32GB H01 Kit](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/)
-
-We have added a tutorial on how to flash [**JP5.1.4** onto the **NVIDIA® Jetson AGX Orin 32GB H01 Kit**](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/#flash-to-jetson).
+We have added [instructions for using the User Buttons](https://wiki.seeedstudio.com/epaper_ee04/#user-buttons-on-xiao-epaper-display-boardesp32-s3---ee04) on the XIAO ePaper Display Board (ESP32-S3) - EE04.
 
 ## The Efforts of Contributor
 
-<!-- ### [Seeed Studio XIAO ESP32C6 with NuttX(RTOS)](https://wiki.seeedstudio.com/xiao_esp32c6_nuttx/)
+### [Building a Voice-Interactive Chatbot with Local LLMs, STT, and TTS](https://wiki.seeedstudio.com/local_chatbot_recomputer/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-ESP32C3-NuttX/nuttx.svg" style={{width:400, height:'auto'}}/></div>
-
-This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 board. NuttX is a lightweight, scalable real-time operating system known for its small footprint and broad hardware support. The guide walks through installing necessary tools, configuring the board, building the system, and flashing firmware. It includes examples for using NuttShell (NSH), USBNSH, and JUMBO applications, with a focus on practical tasks like GPIO and LED control. -->
+This project brings the dream of a **fully voice-interactive AI assistant** to life — running entirely **on local hardware**, without reliance on cloud services.  
+By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Large Language Models (LLMs)** using **Ollama**, the system enables natural, private, and real-time conversations between humans and machines. The entire setup runs inside Docker containers and can be deployed on **NVIDIA Jetson devices**, **edge computers**, or any Linux-based system with GPU acceleration.
 
 - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
 - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!
@@ -204,5 +219,7 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.9.22nd](/Seeed_Elderly/weekly_wiki/wiki250922)
 - [weekly wiki on 2025.9.29th](/Seeed_Elderly/weekly_wiki/wiki250929)
 - [weekly wiki on 2025.10.13th](/Seeed_Elderly/weekly_wiki/wiki251013)
+- [weekly wiki on 2025.10.20th](/Seeed_Elderly/weekly_wiki/wiki251020)
+- [weekly wiki on 2025.10.27th](/Seeed_Elderly/weekly_wiki/wiki251027)
 
 </details>

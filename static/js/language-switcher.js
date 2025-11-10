@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-10-23 14:36:50 (北京时间)
-// 多语言页面: 2028 个
+// 生成时间: 2025-11-07 15:23:06 (北京时间)
+// 多语言页面: 2040 个
 
 (function() {
   'use strict';
@@ -839,6 +839,12 @@
     "es",
     "ja"
   ],
+  "/local_chatbot_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/speech_vlm": [
     "cn",
     "en",
@@ -936,6 +942,12 @@
     "ja"
   ],
   "/recomputer_jetson_robotics_j401_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_robotics_j501_getting_started": [
     "cn",
     "en",
     "es",
@@ -1481,6 +1493,12 @@
     "es",
     "ja"
   ],
+  "/recomputer_ai_r2140_balena": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/chirpstack_lora_gateway_r1x00": [
     "cn",
     "en",
@@ -1967,7 +1985,19 @@
     "es",
     "ja"
   ],
+  "/go2rtc_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/gun_detection_with_frigate_nvr_on_r2000": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/moonfire_nvr_on_recomputer": [
     "cn",
     "en",
     "es",
@@ -2435,6 +2465,12 @@
     "es",
     "ja"
   ],
+  "/model_conversion_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/recamera_on_device_models": [
     "cn",
     "en",
@@ -2490,6 +2526,18 @@
     "ja"
   ],
   "/recamera_pid_adjustment": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recamera_hd_poe_hardware": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recamera_hd_poe_getting_started": [
     "cn",
     "en",
     "es",
@@ -2580,6 +2628,12 @@
     "ja"
   ],
   "/reterminal_e10xx_with_lopaka": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reterminal_e10xx_with_squareline_vision": [
     "cn",
     "en",
     "es",
@@ -5735,7 +5789,19 @@
     "es",
     "ja"
   ],
+  "/epaper_ee04_eezstudio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/EE04_with_esphome_advanced": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/EE04_with_hmi": [
     "cn",
     "en",
     "es",
@@ -8428,6 +8494,18 @@
     "es",
     "ja"
   ],
+  "/epaper_breakout_board_with_oepl": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/XIAO-eInk-Expansion-Board": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/gnss_for_xiao": [
     "cn",
     "en",
@@ -8496,11 +8574,6 @@
   ],
   "/xiao-can-bus-expansion": [
     "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/XIAO-eInk-Expansion-Board": [
     "en",
     "es",
     "ja"

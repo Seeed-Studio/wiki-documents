@@ -440,8 +440,9 @@ ${glossaryPairs}
 [LINE_7] Click "Settings" in the app (File > Preferences).
 [LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>
 [LINE_9] <TabItem value="For E1002" label="For E1002">
-[LINE_10] See more: [Intro](/Sensor/Guide/#hardware-overview)
-[LINE_11] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#getting-started">Open</a>
+[LINE_10] <TabItem value='Install through host'>
+[LINE_11] See more: [Intro](/Sensor/Guide/#hardware-overview)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#getting-started">Open</a>
 
 正确输出：
 [LINE_0] ## 入门指南
@@ -454,19 +455,127 @@ ${glossaryPairs}
 [LINE_7] 在应用中点击 "Settings"（File > Preferences）。
 [LINE_8] <a className="nav-item"><span className="text">开发者中心</span></a>
 [LINE_9] <TabItem value="For E1002" label="适用于 E1002">
-[LINE_10] 查看更多：[简介](/Sensor/Guide/#硬件概述)
-[LINE_11] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门指南">Open</a>
+[LINE_10] <TabItem value='通过主机安装'>
+[LINE_11] 查看更多：[简介](/Sensor/Guide/#硬件概述)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门指南">Open</a>
 
 错误输出（绝对禁止）：
 [LINE_3] - 第一项                                       ❌ 缩进丢失
-[LINE_4]   - [BLE 扫描器](#ble 扫描器)                   ❌ 锚点中出现空格
+[LINE_4]   - [BLE 扫描器](#BLE 扫描器)                   ❌ 锚点中出现空格
 [LINE_9] <TabItem value="适用于 E1002" label="适用于 E1002"> ❌ 有 label 时不应改动 value
-[LINE_10] [简介](#/Sensor/Guide/硬件-概述)                 ❌ 不能改动 \`#\` 之前的 URL 结构
-[LINE_11] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门-指南">Open</a> ❌ 未按“还原短语→翻译→空格转连字符”的流程，应为 #入门指南
+[LINE_10] <TabItem value='Install through host'>         ❌ 无 label 时 value 未翻译
+[LINE_11] [简介](#/Sensor/Guide/硬件-概述)                 ❌ 不能改动 \`#\` 之前的 URL 结构
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门-指南">Open</a> ❌ 未按“还原短语→翻译→空格转连字符”的流程，应为 #入门指南
 </example>
 </instruction>
 
 请直接翻译以下内容，保持所有标记、缩进和格式：`;
+
+  // === 新增 1：语言一致性硬约束（插入到 <translation_rules> 开头） ===
+  const LANGUAGE_GUARD =
+    '\n0. **语言一致性**：除代码、行内代码、保留术语与产品名外，所有可见文本必须使用 ' +
+    langName +
+    ' 输出；不得混用其它自然语言。若发生混用，改译为目标语言。\n';
+  prompt = prompt.replace('<translation_rules>', '<translation_rules>\n' + LANGUAGE_GUARD);
+
+  // === 新增 2：按目标语言替换 <example> 为本地化示例（仅 es / ja 覆盖；默认保留中文示例） ===
+  function getLocalizedExampleBlock(lang) {
+    if (lang === 'es') {
+      return (
+`<example>
+Entrada:
+[LINE_0] ## Getting Started
+[LINE_1][EMPTY_LINE]
+[LINE_2] This is a tutorial about:
+[LINE_3]   - First item
+[LINE_4]   - [BLE Scanner](#ble-scanner)
+[LINE_5]     - Nested item
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+[LINE_7] Click "Settings" in the app (File > Preferences).
+[LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>
+[LINE_9] <TabItem value="For E1002" label="For E1002">
+[LINE_10] <TabItem value='Install through host'>
+[LINE_11] See more: [Intro](/Sensor/Guide/#hardware-overview)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#getting-started">Open</a>
+
+Salida correcta:
+[LINE_0] ## Introducción
+[LINE_1][EMPTY_LINE]
+[LINE_2] Este es un tutorial sobre:
+[LINE_3]   - Primer elemento
+[LINE_4]   - [Escáner BLE](#BLE-escáner)
+[LINE_5]     - Elemento anidado
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+[LINE_7] Haz clic en "Settings" (File > Preferences) dentro de la app.
+[LINE_8] <a className="nav-item"><span className="text">Centro de Desarrolladores</span></a>
+[LINE_9] <TabItem value="For E1002" label="Para E1002">
+[LINE_10] <TabItem value='Instalar a través del host'>
+[LINE_11] Ver más: [Introducción](/Sensor/Guide/#visión-general-del-hardware)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#Primeros-pasos">Open</a>
+
+Salida incorrecta (prohibido):
+[LINE_3] - Primer elemento                           ❌ Se perdió la sangría
+[LINE_4]   - [Escáner BLE](#BLE escáner)              ❌ Espacio dentro del fragmento
+[LINE_9] <TabItem value="Para E1002" label="Para E1002"> ❌ Con label presente no se cambia value
+[LINE_10] <TabItem value='Install through host'>         ❌ Sin label, el value debe traducirse
+[LINE_11] [Introducción](#/Sensor/Guide/visión-general-del-hardware) ❌ No se modifica nada antes de "#"
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门指南">Open</a> ❌ No usar chino en salida española
+</example>`
+      );
+    }
+
+    if (lang === 'ja') {
+      return (
+`<example>
+入力:
+[LINE_0] ## Getting Started
+[LINE_1][EMPTY_LINE]
+[LINE_2] This is a tutorial about:
+[LINE_3]   - First item
+[LINE_4]   - [BLE Scanner](#ble-scanner)
+[LINE_5]     - Nested item
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+[LINE_7] Click "Settings" in the app (File > Preferences).
+[LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>
+[LINE_9] <TabItem value="For E1002" label="For E1002">
+[LINE_10] <TabItem value='Install through host'>
+[LINE_11] See more: [Intro](/Sensor/Guide/#hardware-overview)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#getting-started">Open</a>
+
+正しい出力:
+[LINE_0] ## 入門ガイド
+[LINE_1][EMPTY_LINE]
+[LINE_2] これは次の内容についてのチュートリアルです：
+[LINE_3]   - 最初の項目
+[LINE_4]   - [BLE スキャナ](#BLE-スキャナ)
+[LINE_5]     - ネストされた項目
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+[LINE_7] アプリ内で "Settings"（File > Preferences）をクリックします。
+[LINE_8] <a className="nav-item"><span className="text">開発者センター</span></a>
+[LINE_9] <TabItem value="For E1002" label="E1002 向け">
+[LINE_10] <TabItem value='ホスト経由でインストール'>
+[LINE_11] さらに見る：[イントロ](/Sensor/Guide/#ハードウェア概要)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入門ガイド">Open</a>
+
+誤った出力（禁止）:
+[LINE_3] - 最初の項目                           ❌ インデント欠落
+[LINE_4]   - [BLE スキャナ](#BLE スキャナ)          ❌ fragment 内に空白
+[LINE_9] <TabItem value="E1002 向け" label="E1002 向け"> ❌ label がある場合は value を変更しない
+[LINE_10] <TabItem value='Install through host'>        ❌ label がない場合、value は翻訳する必要がある
+[LINE_11] [イントロ](#/Sensor/Guide/ハードウェア概要)   ❌ 「#」より前の URL 構造を変更しない
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门指南">Open</a> ❌ 中国語混在
+</example>`
+      );
+    }
+
+    // 其它语言：保留中文示例，不做替换
+    return '';
+  }
+
+  const localizedExample = getLocalizedExampleBlock(targetLang);
+  if (localizedExample) {
+    prompt = prompt.replace(/<example>[\s\S]*?<\/example>/, localizedExample);
+  }
 
   if (isChunk && chunkInfo) {
     prompt += `\n\n注意：这是第${chunkInfo.index + 1}/${chunkInfo.total}块。`;

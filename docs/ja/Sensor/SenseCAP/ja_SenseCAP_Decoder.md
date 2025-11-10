@@ -6,21 +6,21 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/SenseCAP_Decoder
 last_update:
-  date: 05/15/2025
+  date: 8/24/2023
   author: Jessie
 ---
 
-SenseCAP decoderは、SenseCAP LoRaWAN®デバイスから送信されるLoRaWANメッセージをデコードするために使用されます。デコード後、ユーザーのアプリケーションはより親しみやすく、読みやすいメッセージを取得できます。
+SenseCAP デコーダーは、SenseCAP LoRaWAN® デバイスから送信される LoRaWAN メッセージをデコードするために使用されます。デコード後、ユーザーのアプリケーションはより親しみやすく読みやすいメッセージを取得できます。
 
-### SenseCAP T1000 トラッカー
+### SenseCAP T1000 Tracker
 
-[**SenseCAP T1000**](https://www.seeedstudio.com/sensecap-t1000-tracker?utm_source=emailsig&utm_medium=emailsig&utm_campaign=emailsig)は、GNSS/Wi-Fi/Bluetoothを利用して屋内外の精密な位置追跡を行うコンパクトなLoRaWAN®トラッカーです。自己地理適応機能、ローカルデータストレージ、そして数ヶ月間のバッテリー寿命を誇ります。さらに、温度、光、モーションセンサーを搭載しており、様々な位置ベースアプリケーションに最適です。
+[**SenseCAP T1000**](https://www.seeedstudio.com/sensecap-t1000-tracker?utm_source=emailsig&utm_medium=emailsig&utm_campaign=emailsig) は、GNSS/Wi-Fi/Bluetooth を利用して屋内外での正確な位置追跡を行うコンパクトな LoRaWAN® トラッカーです。自己地理適応機能、ローカルデータストレージ、そして数ヶ月間の印象的なバッテリー寿命を誇ります。さらに、温度、光、モーションセンサーを搭載しており、様々な位置ベースのアプリケーションに最適です。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker_1.png" alt="pir" width={800} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️ </font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️ </font></span></strong>
     </a>
 </div>
 
@@ -28,7 +28,7 @@ SenseCAP decoderは、SenseCAP LoRaWAN®デバイスから送信されるLoRaWAN
 
 <details>
 
-<summary>TTN(ChirpStack V4) 向け</summary>
+<summary>TTN（ChirpStack V4）向け</summary>
 
 ```cpp
 function decodeUplink (input) {
@@ -850,7 +850,7 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
 
 <details>
 
-<summary>Helium 向け</summary>
+<summary>Helium向け</summary>
 
 ```cpp
 function Decoder (bytes, port) {
@@ -1673,7 +1673,7 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
 
 <details>
 
-<summary>ChirpStack(V3) 向け</summary>
+<summary>ChirpStack(V3)の場合</summary>
 
 ```cpp
 // Decode decodes an array of bytes into an object.
@@ -2776,7 +2776,7 @@ function loraWANV2PositiveDataFormat(str) {
 
 <details>
 
-<summary>AWS 向け</summary>
+<summary>AWS向け</summary>
 
 ```cpp
 const AWS = require('aws-sdk');
@@ -3331,17 +3331,17 @@ exports.handler = async (event) => {
 
 </details>
 
-### Wio Tracker 1110 開発ボード
+### Wio Tracker 1110 Dev Board
 
-[Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html)は、[Wio-WM1110 Wireless Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html)をベースとし、位置測定用の多目的無線フロントエンドとSemtechの[LR1110](https://www.semtech.com/products/wireless-rf/lora-edge/lr1110) LoRa®トランシーバーを統合した、ユーザーフレンドリーなLoRaベースの追跡開発プラットフォームです。
+[Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html)は、[Wio-WM1110 Wireless Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html)をベースとし、位置情報取得用の[Semtech's LR1110](https://www.semtech.com/products/wireless-rf/lora-edge/lr1110) LoRa®トランシーバーと多目的無線フロントエンドを統合した、ユーザーフレンドリーなLoRaベースのトラッキング開発プラットフォームです。
 
-コンパクトサイズと豊富なインターフェースを備えたWio Tracker 1110 Dev Boardは、簡単な展開のためのオンボードアンテナを便利に装備しています。Arduino開発環境とLoRaWANプロトコルスタックをサポートし、追跡関連のIoTプロジェクトに最適です。
+コンパクトなサイズと豊富なインターフェースを備えたWio Tracker 1110 Dev Boardは、簡単な展開のためのオンボードアンテナを便利に装備しています。Arduino開発環境とLoRaWANプロトコルスタックをサポートしており、トラッキング関連のIoTプロジェクトに最適です。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio-tracker.png" alt="pir" width={700} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 </font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 </font></span></strong>
     </a>
 </div>
 
@@ -3349,7 +3349,7 @@ exports.handler = async (event) => {
 
 <details>
 
-<summary>TTN(ChirpStack V4) 向け</summary>
+<summary>TTN（ChirpStack V4）用</summary>
 
 ```cpp
 function decodeUplink (input) {
@@ -3953,7 +3953,7 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
 
 <details>
 
-<summary>Helium 向け</summary>
+<summary>Helium向け</summary>
 
 ```cpp
 function Decoder (bytes, port) {
@@ -5270,15 +5270,15 @@ function loraWANV2PositiveDataFormat(str) {
 
 </details>
 
-### SenseCAP S210X LoRaWANセンサー
+### SenseCAP S210X LoRaWAN センサー
 
-[SenseCAP S210X](https://www.seeedstudio.com/catalogsearch/result/?q=s210x)は、ワイヤレスLoRaWAN®センサーのシリーズです。都市部では2km、見通しの良い場所では10kmの伝送範囲をカバーしながら、伝送プロセス中の低消費電力を維持します。最大10年間の使用をサポートする交換可能なバッテリーと産業用IP66エンクロージャーを備えています。-40〜85℃の動作温度をサポートし、過酷な環境でも展開できます。SenseCAP S210XはLoRaWAN® V1.0.3プロトコルと互換性があり、LoRaWAN®ゲートウェイと連携できます。
+[SenseCAP S210X](https://www.seeedstudio.com/catalogsearch/result/?q=s210x) は、ワイヤレス LoRaWAN® センサーのシリーズです。都市部では 2km、見通しの良い場所では 10km の伝送範囲をカバーしながら、伝送プロセス中の消費電力を低く抑えることができます。最大 10 年間の使用をサポートする交換可能なバッテリーと、産業用 IP66 エンクロージャーを備えています。-40 ~ 85℃ の動作温度をサポートし、過酷な環境でも展開できます。SenseCAP S210X は LoRaWAN® V1.0.3 プロトコルと互換性があり、LoRaWAN® ゲートウェイと連携できます。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/111_1.png" alt="pir" width={800} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -5286,7 +5286,7 @@ function loraWANV2PositiveDataFormat(str) {
 
 <details>
 
-<summary>TTN(ChirpStack V4) 向け</summary>
+<summary>TTN（ChirpStack V4）用</summary>
 
 ```cpp
 /**
@@ -5367,25 +5367,25 @@ function decodeUplink (input) {
       payload: bytesString, // messages array
       messages: []
     }
-  
+
     // CRC check
     if (!crc16Check(bytesString)) {
       decoded['valid'] = false
       decoded['err'] = -1 // "crc check fail."
       return { data: decoded }
     }
-  
+
     // Length Check
     if ((((bytesString.length / 2) - 2) % 7) !== 0) {
       decoded['valid'] = false
       decoded['err'] = -2 // "length check fail."
       return { data: decoded }
     }
-  
+
     // Cache sensor id
     var sensorEuiLowBytes
     var sensorEuiHighBytes
-  
+
     // Handle each frame
     var frameArray = divideBy7Bytes(bytesString)
     for (var forFrame = 0; forFrame < frameArray.length; forFrame++) {
@@ -5395,7 +5395,7 @@ function decodeUplink (input) {
       var dataID = strTo10SysNub(frame.substring(2, 6))
       var dataValue = frame.substring(6, 14)
       var realDataValue = isSpecialDataId(dataID) ? ttnDataSpecialFormat(dataID, dataValue) : ttnDataFormat(dataValue)
-  
+
       if (checkDataIdIsMeasureUpload(dataID)) {
         // if telemetry.
         decoded.messages.push({
@@ -5452,9 +5452,9 @@ function decodeUplink (input) {
           type: 'unknown_message', dataID: dataID, dataValue: dataValue
         })
       }
-  
+
     }
-  
+
     // if the complete id received, as "upload_sensor_id"
     if (sensorEuiHighBytes && sensorEuiLowBytes) {
       decoded.messages.unshift({
@@ -5464,11 +5464,11 @@ function decodeUplink (input) {
     // return
     return { data: decoded }
   }
-  
+
   function crc16Check (data) {
     return true
   }
-  
+
   // util
   function bytes2HexString (arrBytes) {
     var str = ''
@@ -5487,7 +5487,7 @@ function decodeUplink (input) {
     }
     return str
   }
-  
+
   // util
   function divideBy7Bytes (str) {
     var frameArray = []
@@ -5497,7 +5497,7 @@ function decodeUplink (input) {
     }
     return frameArray
   }
-  
+
   // util
   function littleEndianTransform (data) {
     var dataArray = []
@@ -5507,19 +5507,19 @@ function decodeUplink (input) {
     dataArray.reverse()
     return dataArray
   }
-  
+
   // util
   function strTo10SysNub (str) {
     var arr = littleEndianTransform(str)
     return parseInt(arr.toString()
       .replace(/,/g, ''), 16)
   }
-  
+
   // util
   function checkDataIdIsMeasureUpload (dataId) {
     return parseInt(dataId) > 4096
   }
-  
+
   // configurable.
   function isSpecialDataId (dataID) {
     switch (dataID) {
@@ -5536,14 +5536,14 @@ function decodeUplink (input) {
         return false
     }
   }
-  
+
   // configurable
   function ttnDataSpecialFormat (dataId, str) {
     var strReverse = littleEndianTransform(str)
     if (dataId === 2 || dataId === 3) {
       return strReverse.join('')
     }
-  
+
     // handle unsigned number
     var str2 = toBinary(strReverse)
     var dataArray = []
@@ -5583,7 +5583,7 @@ function decodeUplink (input) {
         return dataValue
     }
   }
-  
+
   // util
   function ttnDataFormat (str) {
     var strReverse = littleEndianTransform(str)
@@ -5604,7 +5604,7 @@ function decodeUplink (input) {
     }
     return parseInt(str2, 2) / 1000
   }
-  
+
   // util
   function sensorAttrForVersion (dataValue) {
     var dataValueSplitArray = dataValue.split(',')
@@ -5612,7 +5612,7 @@ function decodeUplink (input) {
       ver_hardware: dataValueSplitArray[0], ver_software: dataValueSplitArray[1]
     }
   }
-  
+
   // util
   function toBinary (arr) {
     var binaryData = []
@@ -5631,7 +5631,7 @@ function decodeUplink (input) {
     return binaryData.toString()
       .replace(/,/g, '')
   }
-  
+
   // Samples
   // var sample = Decoder(["00", "00", "00", "01", "01", "00", "01", "00", "07", "00", "64", "00", "3C", "00", "01", "20", "01", "00", "00", "00", "00", "28", "90"], null);
   // var sample = Decoder(["01", "01", "10", "98", "53", "00", "00", "01", "02", "10", "A8", "7A", "00", "00", "AF", "51"], null);
@@ -6614,7 +6614,7 @@ function toBinary (arr) {
 
 <details>
 
-<summary>AWS 向け</summary>
+<summary>AWS向け</summary>
 
 ```cpp
 //Lambda function script
@@ -6946,13 +6946,13 @@ exports.handler = async (event) => {
 
 ### SenseCAP S2100 データロガー
 
-[SenseCAP S2100 Data Logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html)は、MODBUS-RTU RS485/アナログ/GPIOセンサーに接続でき、LoRaWANネットワークにデータを簡単に送信できる多機能デバイスです。LoRaとIP66設計により、印象的な安定性と信頼性を誇り、超低消費電力を維持しながら長距離伝送をカバーできます。屋外使用に最適で、バッテリー駆動または12V外部電源接続でさらなる柔軟性を提供します。12V電源に接続した場合、交換可能な内蔵バッテリーがバックアップ電源として機能します。さらに、S2100 Data Loggerは内蔵Bluetoothを備えたOTA用に最適化されており、セットアップとアップデートを迅速かつ簡単にします。最後に、S2110コンバーターにより、S2100 Data LoggerをGroveセンサーに接続でき、DIY産業レベルLoRaWANセンサーと小規模展開に優れた選択肢となります。
+[SenseCAP S2100 データロガー](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html)は、MODBUS-RTU RS485/アナログ/GPIOセンサーに接続でき、LoRaWANネットワークへのデータ送信を簡単に行える多機能デバイスです。LoRaとIP66設計により、このデバイスは優れた安定性と信頼性を誇り、超低消費電力を維持しながら長距離伝送をカバーできます。屋外使用に最適で、バッテリー駆動または12V外部電源接続により、さらなる柔軟性を提供します。12V電源に接続した場合、交換可能な内蔵バッテリーがバックアップ電源として機能します。さらに、S2100データロガーは内蔵Bluetoothを使用したOTAに最適化されており、セットアップとアップデートを迅速かつ簡単に行えます。さらに、S2110コンバーターによりS2100データロガーをGroveセンサーに接続できるため、DIY産業レベルLoRaWANセンサーや小規模展開に最適な選択肢となります。
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/Data_Logger/1.png"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -6964,11 +6964,11 @@ import Tabs2 from '@theme/Tabs';
 import TabItem2 from '@theme/TabItem';
 
 <Tabs2>
-<TabItem2 value="For TTN" label="For TTN">
+<TabItem2 value="For TTN" label="TTN 向け">
 
 <details>
 
-<summary>TTN(ChirpStack V4) 向け</summary>
+<summary>TTN（ChirpStack V4）向け</summary>
 
 ```cpp
 /**
@@ -6976,12 +6976,12 @@ import TabItem2 from '@theme/TabItem';
  */
 function decodeUplink (input, port) {
     // data split
-  
+
     var bytes = input['bytes']
     // init
     bytes = bytes2HexString(bytes)
       .toLocaleUpperCase()
-  
+
     let result = {
       'err': 0, 'payload': bytes, 'valid': true, messages: []
     }
@@ -6998,7 +6998,7 @@ function decodeUplink (input, port) {
     result.messages = decoderArray
     return { data: result }
   }
-  
+
   /**
    * data splits
    * @param bytes
@@ -7006,7 +7006,7 @@ function decodeUplink (input, port) {
    */
   function dataSplit (bytes) {
     let frameArray = []
-  
+
     for (let i = 0; i < bytes.length; i++) {
       let remainingValue = bytes
       let dataId = remainingValue.substring(0, 2)
@@ -7079,7 +7079,7 @@ function decodeUplink (input, port) {
     }
     return frameArray
   }
-  
+
   function dataIdAndDataValueJudge (dataId, dataValue) {
     let messages = []
     switch (dataId) {
@@ -7110,7 +7110,7 @@ function decodeUplink (input, port) {
         }, {
           measurementValue: loraWANV2DataFormat(rainfall, 1000), measurementId: '4113', type: 'Rain Gauge'
         }, {
-  
+
           measurementValue: loraWANV2DataFormat(airPressure, 0.1), measurementId: '4101', type: 'Barometric Pressure'
         }]
         break
@@ -7323,7 +7323,7 @@ function decodeUplink (input, port) {
         if (parseInt(channelInfoThree.two)) {
           messages.push(dataSix)
         }
-  
+
         break
       case '34':
         let model = loraWANV2DataFormat(dataValue.substring(0, 2))
@@ -7394,13 +7394,13 @@ function decodeUplink (input, port) {
         }, {
           measurementValue: loraWANV2DataFormat(loudness), measurementId: '4192', type: 'Sound Intensity'
         }, {
-  
+
           measurementValue: loraWANV2DataFormat(accelerateX, 100), measurementId: '4150', type: 'AccelerometerX'
         }, {
-  
+
           measurementValue: loraWANV2DataFormat(accelerateY, 100), measurementId: '4151', type: 'AccelerometerY'
         }, {
-  
+
           measurementValue: loraWANV2DataFormat(accelerateZ, 100), measurementId: '4152', type: 'AccelerometerZ'
         }]
         break
@@ -7454,7 +7454,7 @@ function decodeUplink (input, port) {
     }
     return messages
   }
-  
+
   /**
    *
    * data formatting
@@ -7479,7 +7479,7 @@ function decodeUplink (input, port) {
     }
     return parseInt(str2, 2) / divisor
   }
-  
+
   /**
    * Handling big-endian data formats
    * @param data
@@ -7493,7 +7493,7 @@ function decodeUplink (input, port) {
     // array of hex
     return dataArray
   }
-  
+
   /**
    * Convert to an 8-digit binary number with 0s in front of the number
    * @param arr
@@ -7515,7 +7515,7 @@ function decodeUplink (input, port) {
       .replace(/,/g, '')
     return ret
   }
-  
+
   /**
    * sensor
    * @param str
@@ -7529,7 +7529,7 @@ function decodeUplink (input, port) {
     let type = parseInt(str2.substring(5), 2)
     return { channel, status, type }
   }
-  
+
   /**
    * channel info
    * @param str
@@ -7545,7 +7545,7 @@ function decodeUplink (input, port) {
     }
     return resultInfo
   }
-  
+
   /**
    * data log status bit
    * @param str
@@ -7562,7 +7562,7 @@ function decodeUplink (input, port) {
     }
     return resultInfo
   }
-  
+
   function bytes2HexString (arrBytes) {
     var str = ''
     for (var i = 0; i < arrBytes.length; i++) {
@@ -7585,7 +7585,7 @@ function decodeUplink (input, port) {
 </details>
 
 </TabItem2>
-<TabItem2 value="For Helium" label="For Helium">
+<TabItem2 value="For Helium" label="Helium 向け">
 
 <details>
 
@@ -8209,13 +8209,13 @@ function bytes2HexString (arrBytes) {
 
 ### SenseCAP S2120 8-in-1 気象センサー
 
-[SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor](https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html)は、気温、湿度、風速、風向、降雨量、光強度、UV指数、気圧を測定します。超低消費電力、信頼性の高い性能、内蔵Bluetooth、OTA設定とリモートデバイス管理用のアプリサービスにより、低メンテナンスコストを実現します。裏庭、庭園、スマート農業、気象学、スマートシティなどの多シナリオアプリケーションをサポートします。
+[SenseCAP S2120 8-in-1 LoRaWAN 気象センサー](https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html)は、気温、湿度、風速、風向、降雨量、光強度、UV指数、気圧を測定します。超低消費電力、信頼性の高い性能、内蔵Bluetooth、OTA設定とリモートデバイス管理のためのアプリサービスにより、低メンテナンスコストを実現します。裏庭、庭園、スマート農業、気象学、スマートシティなどのマルチシナリオアプリケーションをサポートします。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/f/o/font_5.png" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -8227,11 +8227,11 @@ import Tabs3 from '@theme/Tabs';
 import TabItem3 from '@theme/TabItem';
 
 <Tabs3>
-<TabItem3 value="For TTN" label="For TTN">
+<TabItem3 value="For TTN" label="TTN 向け">
 
 <details>
 
-<summary>TTN(ChirpStack V4) 向け</summary>
+<summary>TTN（ChirpStack V4）向け</summary>
 
 ```cpp
 /**
@@ -8273,6 +8273,7 @@ function dataSplit (bytes) {
   for (let i = 0; i < bytes.length; i++) {
     let remainingValue = bytes
     let dataId = remainingValue.substring(0, 2)
+    dataId = dataId.toLowerCase()
     let dataValue
     let dataObj = {}
     switch (dataId) {
@@ -8288,6 +8289,7 @@ function dataSplit (bytes) {
       case '43' :
       case '44' :
       case '45' :
+      case '4a' :
         dataValue = remainingValue.substring(2, 22)
         bytes = remainingValue.substring(22)
         dataObj = {
@@ -8295,10 +8297,11 @@ function dataSplit (bytes) {
         }
         break
       case '02':
+      case '4b':
         dataValue = remainingValue.substring(2, 18)
         bytes = remainingValue.substring(18)
         dataObj = {
-          'dataId': '02', 'dataValue': dataValue
+          'dataId': dataId, 'dataValue': dataValue
         }
         break
       case '03' :
@@ -8331,6 +8334,13 @@ function dataSplit (bytes) {
           'dataId': dataId, 'dataValue': dataValue
         }
         break
+      case '4c':
+        dataValue = bytes.substring(2, 14)
+        bytes = remainingValue.substring(14)
+        dataObj = {
+          'dataId': dataId, 'dataValue': dataValue
+        }
+        break
       default:
         dataValue = '9'
         break
@@ -8345,13 +8355,23 @@ function dataSplit (bytes) {
 
 function dataIdAndDataValueJudge (dataId, dataValue) {
   let messages = []
+  let temperature
+  let humidity
+  let illumination
+  let uv
+  let windSpeed
+  let windDirection
+  let rainfall
+  let airPressure
+  let peakWind
+  let rainAccumulation
   switch (dataId) {
     case '01':
-      let temperature = dataValue.substring(0, 4)
-      let humidity = dataValue.substring(4, 6)
-      let illumination = dataValue.substring(6, 14)
-      let uv = dataValue.substring(14, 16)
-      let windSpeed = dataValue.substring(16, 20)
+      temperature = dataValue.substring(0, 4)
+      humidity = dataValue.substring(4, 6)
+      illumination = dataValue.substring(6, 14)
+      uv = dataValue.substring(14, 16)
+      windSpeed = dataValue.substring(16, 20)
       messages = [{
         measurementValue: loraWANV2DataFormat(temperature, 10), measurementId: '4097', type: 'Air Temperature'
       }, {
@@ -8365,9 +8385,9 @@ function dataIdAndDataValueJudge (dataId, dataValue) {
       }]
       break
     case '02':
-      let windDirection = dataValue.substring(0, 4)
-      let rainfall = dataValue.substring(4, 12)
-      let airPressure = dataValue.substring(12, 16)
+      windDirection = dataValue.substring(0, 4)
+      rainfall = dataValue.substring(4, 12)
+      airPressure = dataValue.substring(12, 16)
       messages = [{
         measurementValue: loraWANV2DataFormat(windDirection), measurementId: '4104', type: 'Wind Direction Sensor'
       }, {
@@ -8494,6 +8514,46 @@ function dataIdAndDataValueJudge (dataId, dataValue) {
         status: status, channelType: type, sensorEui: sensecapId
       }]
       break
+    case '4a':
+      temperature = dataValue.substring(0, 4)
+      humidity = dataValue.substring(4, 6)
+      illumination = dataValue.substring(6, 14)
+      uv = dataValue.substring(14, 16)
+      windSpeed = dataValue.substring(16, 20)
+      messages = [{
+        measurementValue: loraWANV2DataFormat(temperature, 10), measurementId: '4097', type: 'Air Temperature'
+      }, {
+        measurementValue: loraWANV2DataFormat(humidity), measurementId: '4098', type: 'Air Humidity'
+      }, {
+        measurementValue: loraWANV2DataFormat(illumination), measurementId: '4099', type: 'Light Intensity'
+      }, {
+        measurementValue: loraWANV2DataFormat(uv, 10), measurementId: '4190', type: 'UV Index'
+      }, {
+        measurementValue: loraWANV2DataFormat(windSpeed, 10), measurementId: '4105', type: 'Wind Speed'
+      }]
+      break
+    case '4b':
+      windDirection = dataValue.substring(0, 4)
+      rainfall = dataValue.substring(4, 12)
+      airPressure = dataValue.substring(12, 16)
+      messages = [{
+        measurementValue: loraWANV2DataFormat(windDirection), measurementId: '4104', type: 'Wind Direction Sensor'
+      }, {
+        measurementValue: loraWANV2DataFormat(rainfall, 1000), measurementId: '4113', type: 'Rain Gauge'
+      }, {
+
+        measurementValue: loraWANV2DataFormat(airPressure, 0.1), measurementId: '4101', type: 'Barometric Pressure'
+      }]
+      break
+    case '4c':
+      peakWind = dataValue.substring(0, 4)
+      rainAccumulation = dataValue.substring(4, 12)
+      messages = [{
+        measurementValue: loraWANV2DataFormat(peakWind, 10), measurementId: '4191', type: ' Peak Wind Gust'
+      }, {
+        measurementValue: loraWANV2DataFormat(rainAccumulation, 1000), measurementId: '4213', type: 'Rain Accumulation'
+      }]
+      break
     default:
       break
   }
@@ -8520,7 +8580,7 @@ function loraWANV2DataFormat (str, divisor = 1) {
       }
     })
     str2 = parseInt(reverseArr.join(''), 2) + 1
-    return '-' + str2 / divisor
+    return parseFloat('-' + str2 / divisor)
   }
   return parseInt(str2, 2) / divisor
 }
@@ -8630,7 +8690,7 @@ function bytes2HexString (arrBytes) {
 </details>
 
 </TabItem3>
-<TabItem3 value="For Helium" label="For Helium">
+<TabItem3 value="For Helium" label="Helium 向け">
 
 <details>
 
@@ -8642,10 +8702,10 @@ function bytes2HexString (arrBytes) {
  */
 function Decoder (bytes, port) {
     // data split
-  
+
     bytes = bytes2HexString(bytes)
       .toLocaleUpperCase()
-  
+
     let result = {
       'err': 0, 'payload': bytes, 'valid': true, messages: []
     }
@@ -8662,7 +8722,7 @@ function Decoder (bytes, port) {
     result.messages = decoderArray
     return { data: result }
   }
-  
+
   /**
    * data splits
    * @param bytes
@@ -8670,7 +8730,7 @@ function Decoder (bytes, port) {
    */
   function dataSplit (bytes) {
     let frameArray = []
-  
+
     for (let i = 0; i < bytes.length; i++) {
       let remainingValue = bytes
       let dataId = remainingValue.substring(0, 2)
@@ -8743,7 +8803,7 @@ function Decoder (bytes, port) {
     }
     return frameArray
   }
-  
+
   function dataIdAndDataValueJudge (dataId, dataValue) {
     let messages = []
     switch (dataId) {
@@ -8774,7 +8834,7 @@ function Decoder (bytes, port) {
         }, {
           measurementValue: loraWANV2DataFormat(rainfall, 1000), measurementId: '4113', type: 'Rain Gauge'
         }, {
-  
+
           measurementValue: loraWANV2DataFormat(airPressure, 0.1), measurementId: '4101', type: 'Barometric Pressure'
         }]
         break
@@ -8987,7 +9047,7 @@ function Decoder (bytes, port) {
         if (parseInt(channelInfoThree.two)) {
           messages.push(dataSix)
         }
-  
+
         break
       case '34':
         let model = loraWANV2DataFormat(dataValue.substring(0, 2))
@@ -9055,13 +9115,13 @@ function Decoder (bytes, port) {
         }, {
           measurementValue: loraWANV2DataFormat(loudness), measurementId: '4192', type: 'Sound Intensity'
         }, {
-  
+
           measurementValue: loraWANV2DataFormat(accelerateX, 100), measurementId: '4150', type: 'AccelerometerX'
         }, {
-  
+
           measurementValue: loraWANV2DataFormat(accelerateY, 100), measurementId: '4151', type: 'AccelerometerY'
         }, {
-  
+
           measurementValue: loraWANV2DataFormat(accelerateZ, 100), measurementId: '4152', type: 'AccelerometerZ'
         }]
         break
@@ -9115,7 +9175,7 @@ function Decoder (bytes, port) {
     }
     return messages
   }
-  
+
   /**
    *
    * data formatting
@@ -9140,7 +9200,7 @@ function Decoder (bytes, port) {
     }
     return parseInt(str2, 2) / divisor
   }
-  
+
   /**
    * Handling big-endian data formats
    * @param data
@@ -9154,7 +9214,7 @@ function Decoder (bytes, port) {
     // array of hex
     return dataArray
   }
-  
+
   /**
    * Convert to an 8-digit binary number with 0s in front of the number
    * @param arr
@@ -9176,7 +9236,7 @@ function Decoder (bytes, port) {
       .replace(/,/g, '')
     return ret
   }
-  
+
   /**
    * sensor
    * @param str
@@ -9190,7 +9250,7 @@ function Decoder (bytes, port) {
     let type = parseInt(str2.substring(5), 2)
     return { channel, status, type }
   }
-  
+
   /**
    * channel info
    * @param str
@@ -9206,7 +9266,7 @@ function Decoder (bytes, port) {
     }
     return resultInfo
   }
-  
+
   /**
    * data log status bit
    * @param str
@@ -9223,7 +9283,7 @@ function Decoder (bytes, port) {
     }
     return resultInfo
   }
-  
+
   function bytes2HexString (arrBytes) {
     var str = ''
     for (var i = 0; i < arrBytes.length; i++) {
@@ -9252,15 +9312,15 @@ function Decoder (bytes, port) {
 
 ---
 
-### SenseCAP A1101 - LoRaWAN ビジョン AI センサー
+### SenseCAP A1101 - LoRaWAN Vision AI センサー
 
-[SenseCAP A1101 - LoRaWAN Vision AI Sensor](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html)は、TinyML Edge AI対応のスマート画像センサーです。画像認識、人数カウント、対象検出、メーター認識などの様々なAIモデルをサポートします。TensorFlow Liteでのモデル訓練もサポートしています。
+[SenseCAP A1101 - LoRaWAN Vision AI センサー](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html)は、TinyML Edge AI対応のスマート画像センサーです。画像認識、人数カウント、ターゲット検出、メーター認識などの様々なAIモデルをサポートしています。また、TensorFlow Liteでのモデル訓練もサポートしています。
 
 <div align="center"><img width ={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/101990962-a1101-first-new-10.17.jpg"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -9272,11 +9332,11 @@ import Tabs4 from '@theme/Tabs';
 import TabItem4 from '@theme/TabItem';
 
 <Tabs4>
-<TabItem4 value="For TTN" label="For TTN">
+<TabItem4 value="For TTN" label="TTN向け">
 
 <details>
 
-<summary>TTN(ChirpStack V4) 向け</summary>
+<summary>TTN（ChirpStack V4）向け</summary>
 
 ```cpp
 /**
@@ -9357,25 +9417,25 @@ function decodeUplink (input) {
       payload: bytesString, // messages array
       messages: []
     }
-  
+
     // CRC check
     if (!crc16Check(bytesString)) {
       decoded['valid'] = false
       decoded['err'] = -1 // "crc check fail."
       return { data: decoded }
     }
-  
+
     // Length Check
     if ((((bytesString.length / 2) - 2) % 7) !== 0) {
       decoded['valid'] = false
       decoded['err'] = -2 // "length check fail."
       return { data: decoded }
     }
-  
+
     // Cache sensor id
     var sensorEuiLowBytes
     var sensorEuiHighBytes
-  
+
     // Handle each frame
     var frameArray = divideBy7Bytes(bytesString)
     for (var forFrame = 0; forFrame < frameArray.length; forFrame++) {
@@ -9385,7 +9445,7 @@ function decodeUplink (input) {
       var dataID = strTo10SysNub(frame.substring(2, 6))
       var dataValue = frame.substring(6, 14)
       var realDataValue = isSpecialDataId(dataID) ? ttnDataSpecialFormat(dataID, dataValue) : ttnDataFormat(dataValue)
-  
+
       if (checkDataIdIsMeasureUpload(dataID)) {
         // if telemetry.
         decoded.messages.push({
@@ -9442,9 +9502,9 @@ function decodeUplink (input) {
           type: 'unknown_message', dataID: dataID, dataValue: dataValue
         })
       }
-  
+
     }
-  
+
     // if the complete id received, as "upload_sensor_id"
     if (sensorEuiHighBytes && sensorEuiLowBytes) {
       decoded.messages.unshift({
@@ -9454,11 +9514,11 @@ function decodeUplink (input) {
     // return
     return { data: decoded }
   }
-  
+
   function crc16Check (data) {
     return true
   }
-  
+
   // util
   function bytes2HexString (arrBytes) {
     var str = ''
@@ -9477,7 +9537,7 @@ function decodeUplink (input) {
     }
     return str
   }
-  
+
   // util
   function divideBy7Bytes (str) {
     var frameArray = []
@@ -9487,7 +9547,7 @@ function decodeUplink (input) {
     }
     return frameArray
   }
-  
+
   // util
   function littleEndianTransform (data) {
     var dataArray = []
@@ -9497,19 +9557,19 @@ function decodeUplink (input) {
     dataArray.reverse()
     return dataArray
   }
-  
+
   // util
   function strTo10SysNub (str) {
     var arr = littleEndianTransform(str)
     return parseInt(arr.toString()
       .replace(/,/g, ''), 16)
   }
-  
+
   // util
   function checkDataIdIsMeasureUpload (dataId) {
     return parseInt(dataId) > 4096
   }
-  
+
   // configurable.
   function isSpecialDataId (dataID) {
     switch (dataID) {
@@ -9526,14 +9586,14 @@ function decodeUplink (input) {
         return false
     }
   }
-  
+
   // configurable
   function ttnDataSpecialFormat (dataId, str) {
     var strReverse = littleEndianTransform(str)
     if (dataId === 2 || dataId === 3) {
       return strReverse.join('')
     }
-  
+
     // handle unsigned number
     var str2 = toBinary(strReverse)
     var dataArray = []
@@ -9573,7 +9633,7 @@ function decodeUplink (input) {
         return dataValue
     }
   }
-  
+
   // util
   function ttnDataFormat (str) {
     var strReverse = littleEndianTransform(str)
@@ -9594,7 +9654,7 @@ function decodeUplink (input) {
     }
     return parseInt(str2, 2) / 1000
   }
-  
+
   // util
   function sensorAttrForVersion (dataValue) {
     var dataValueSplitArray = dataValue.split(',')
@@ -9602,7 +9662,7 @@ function decodeUplink (input) {
       ver_hardware: dataValueSplitArray[0], ver_software: dataValueSplitArray[1]
     }
   }
-  
+
   // util
   function toBinary (arr) {
     var binaryData = []
@@ -9621,7 +9681,7 @@ function decodeUplink (input) {
     return binaryData.toString()
       .replace(/,/g, '')
   }
-  
+
   // Samples
   // var sample = Decoder(["00", "00", "00", "01", "01", "00", "01", "00", "07", "00", "64", "00", "3C", "00", "01", "20", "01", "00", "00", "00", "00", "28", "90"], null);
   // var sample = Decoder(["01", "01", "10", "98", "53", "00", "00", "01", "02", "10", "A8", "7A", "00", "00", "AF", "51"], null);
@@ -9632,7 +9692,7 @@ function decodeUplink (input) {
 </details>
 
 </TabItem4>
-<TabItem4 value="For Helium" label="For Helium">
+<TabItem4 value="For Helium" label="Helium 向け">
 
 <details>
 
@@ -10318,26 +10378,26 @@ function toBinary (arr) {
 
 デコーダーを設定する前に、製品マニュアルに従ってセンサーとゲートウェイを正しく設定し、必要なLoRaWANネットワークサーバーに接続してください。
 
-The Things Stackを例として、以下の手順でデコーダーを設定してください：
+The Things Stackを例に、以下の手順に従ってデコーダーを設定してください：
 
 ##### ペイロードデコーダーの設定
 
 - デバイスの`Payload Formats`タブに移動します。
-- `Payload Format`で`Custom`を選択します。
-- `decoder.js`の全内容をコピーしてdecoderテキストエリアに貼り付けます。
-- `save payload functions`をクリックします。
+- `Payload Format`で`Custom`を選択します
+- `decoder.js`の全内容をコピーして`decoder`テキストエリアに貼り付けます。
+- `save payload functions`をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/decoder-use.png" alt="pir" width={800} height="auto" /></p>
 
 ##### デコードされたメッセージの確認
 
-まず、サンプルペイロードでデコードスクリプトをテストできます。
+まずサンプルペイロードでデコードスクリプトをテストすることができます。
 
-これを行うには、`01 01 10 98 53 00 00 01 02 10 A8 7A 00 00 AF 51`のような生データパケットを`Payload`テキスト入力にコピーし、デバイスマニュアルに従って`FPort`を選択し、`Test`ボタンをクリックします。以下に正常に解析されたJSON構造が表示されます。
+これを行うには、`01 01 10 98 53 00 00 01 02 10 A8 7A 00 00 AF 51`のような生データパケットを`Payload`テキスト入力にコピーし、デバイスマニュアルに従って`FPort`を選択してから、`Test`ボタンをクリックします。下に正常に解析されたJSON構造が表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/test-decoder.png" alt="pir" width={800} height="auto" /></p>
 
-次に、スクリプトの魔法を確認しましょう。`Live Data`タブに移動し、アップロードされたメッセージを展開してペイロード内の`Event Fields`を確認できます。これらのフィールドはスクリプトによって生成されたものです。
+次に、スクリプトの魔法を確認してみましょう。`Live Data`タブに移動すると、アップロードされたメッセージを展開してペイロード内の`Event Fields`を確認できます。これらのフィールドはスクリプトによって入力されたものです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/check-data.png" alt="pir" width={800} height="auto" /></p>
 

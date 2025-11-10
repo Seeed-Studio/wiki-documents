@@ -9,6 +9,7 @@ last_update:
   author: Citric
 ---
 
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -172,7 +173,7 @@ binary_sensor:
 - 配置按钮 1 在按下时播放短蜂鸣模式
 
 :::tip
-您可以调整 `frequency` 参数来改变蜂鸣器的音调。较高的值会产生更高音调的声音。
+您可以调整 `frequency` 参数来改变蜂鸣器的音调。较高的值会产生较高音调的声音。
 :::
 
 ### 电池监控
@@ -321,7 +322,7 @@ Puppet 插件在端口 10000 上启动一个服务器，可以生成任何 Home 
 http://homeassistant.local:10000/lovelace/0?viewport=800x480
 ```
 
-此 URL 将以 800x480 分辨率（完美适配 reTerminal E 系列）捕获您默认仪表板的截图。
+此 URL 将以 800x480 分辨率（完美适配 reTerminal E 系列）捕获默认仪表板的截图。
 
 #### 电子纸优化
 
@@ -335,7 +336,7 @@ http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2
 
 #### 颜色反转
 
-添加 `invert` 参数来反转黑白颜色：
+添加 `invert` 参数以反转黑白颜色：
 
 ```
 http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert
@@ -358,7 +359,7 @@ http://homeassistant.local:10000/todo?viewport=800x480&eink=2&invert
 步骤 11. 在 `captive_portal` 部分之后，将以下代码添加到您的 ESPHome 配置中：
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="适用于 E1001" default>
 
 ```yaml
 
@@ -408,7 +409,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="适用于 E1002">
 
 ```yaml
 
@@ -461,18 +462,18 @@ display:
 </Tabs>
 
 :::caution
-如果您的网络中本地 DNS 解析不起作用，请将 `homeassistant.local` 替换为您 Home Assistant 的实际 IP 地址。
+如果您的网络中本地 DNS 解析不起作用，请将 `homeassistant.local` 替换为您的 Home Assistant 的实际 IP 地址。
 :::
 
 当您的配置成功上传并运行时，您的 reTerminal E 系列电子纸显示器将显示 Home Assistant 仪表板的截图：
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="适用于 E1001" default>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/54.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="适用于 E1002">
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/166.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -487,10 +488,10 @@ display:
 
 此示例演示如何使用深度睡眠模式来显著降低功耗，使您的 reTerminal E 系列电子纸显示器适用于电池供电的应用。
 
-您可以通过复制下面的代码并将其粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用此示例。
+您可以通过复制下面的代码并将其粘贴到 Yaml 文件中的 `captive_portal` 代码行之后来使用此示例。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="适用于 E1001" default>
 
 ```yaml
 globals:
@@ -542,7 +543,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="适用于 E1002">
 
 ```yaml
 globals:
@@ -635,7 +636,7 @@ display:
 <summary>点击此处查看完整代码</summary>
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="适用于 E1001" default>
 
 ```yaml
 esphome:
@@ -957,7 +958,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="适用于 E1002">
 
 ```yaml
 esphome:
@@ -1317,7 +1318,7 @@ display:
 
 ### Q1: 为什么没有数据？
 
-在这种情况下，您应该前往 Settings -> Devices & Services -> Integrations 来**重新配置**设备。找不到您的 ePaper Panel？请尝试重启 Home Assistant。
+在这种情况下，您应该前往 Settings -> Devices & Services -> Integrations 来**重新配置**设备。没有找到您的 ePaper Panel？请尝试重启 Home Assistant。
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
@@ -1348,7 +1349,7 @@ Step 4. Finally, replug the cable and upload a new program. -->
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/74.png" style={{width:800, height:'auto'}}/></div>
 
-在这种情况下，您的设备要么离线，要么处于深度睡眠模式。请确保设备已连接到您的网络，或在尝试上传之前将其从睡眠模式中唤醒。
+在这种情况下，您的设备要么离线，要么处于深度睡眠模式。请确保它已连接到您的网络，或在尝试上传之前将其从睡眠模式中唤醒。
 
 ## 技术支持与产品讨论
 
