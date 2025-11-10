@@ -33,17 +33,20 @@ More application directions are yet to be explored by all of you.
 ## 📷Preview 
 
 
-<a href="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-2.png"><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-2.png" height="auto" width="auto" /></a>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-2.png" /></div>
 
-<a href="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-1.png"><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-1.png" height="auto" width="600" /></a>
 
-<a href="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-3.png"><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-3.png" height="auto" width="600" /></a>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-1.png" /></div>
 
-<a href="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-4.png"><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-4.png" height="auto" width="600" /></a>
+
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-3.png" /></div>
+
+
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-4.png" /></div>
 
 ## 🔧Hardware Composition of reCamera_Microscope
 
-<a href="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-5.png"><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-5.png" height="auto" width="600" /></a>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-5.png" /></div>
 
 1. reCamera POE
 2. 3D Printer x2
@@ -67,40 +70,39 @@ More application directions are yet to be explored by all of you.
 
 **As shown in the figure, assemble the bracket, connect it to the 12V power supply, and install the 3D printed part.**
 
-<a href="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-7.png"><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-7.png" height="auto" width="600" /></a>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-7.png" /></div>
 
 As shown in the figure, the microscope kit contains two lenses. You need to remove the wide-angle lens and replace it with the other two lenses.
 
-<a href="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-8.png"><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-8.png" height="auto" width="600" /></a>
-
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-8.png" /></div>
 
 ### 🎨Option1: Lens 1: Use of the microscope lens
 
 As shown in the figure, remove the microscope lens, install three lens extension adapters, and then install lens 1.
 
-<a href="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-9.png"><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-9.png" height="auto" width="600" /></a>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-9.png" /></div>
 
 As shown in the figure, **connect the computer using a USB cable.**
 
  Visit `192.168.42.1` to view the loading page for reCamera. The logged-in **user** is: `root` ; the **password** is: `recamera.1`
 
-<a href="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-10.png"><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-10.png" height="auto" width="600" /></a>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-10.png" /></div>
 
 You can purchase sample slices of plants, animals, or microorganisms and place them on the microscope stage. By adjusting the positions of the camera and the object, you will be able to see images of the microscopic world.
 
-<a href="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-11.png"><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-11.png" height="auto" width="600" /></a>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-11.png" /></div>
 
 ### 🎨Option2: Lens 2: Use PCB micro-lens
 
 As shown in the figure, remove the microscope lens, install one lens extension adapter, and then install lens 2.
 
-<a href="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-12.png"><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-12.png" height="auto" width="600" /></a>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-12.png" /></div>
 
 As shown in the figure, **connect the computer using a USB cable.**
 
  Visit `192.168.42.1` to view the loading page for reCamera. The logged-in **user** is: `root` ; the **password** is: `recamera.1`
 
-<a href="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-14.png"><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-14.png" height="auto" width="600" /></a>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-14.png" /></div>
 
 There are two pre-trained models available here, which can be used to identify electronic components on PCBs or detect defects in PCBs.
 
@@ -108,4 +110,4 @@ There are two pre-trained models available here, which can be used to identify e
 | ---------------------------------------- | ------------ |
 | [**PCB Defect Detection Model**](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/yolo11n_models/PCB_Defect_Detection/readme.md)          | [**Download**](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/yolo11n_models/PCB_Defect_Detection/yolo11n_PCB_Defect.cvimodel) |
 
-<a href="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-1.png"><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-1.png" height="auto" width="600" /></a>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-1.png" /></div>
