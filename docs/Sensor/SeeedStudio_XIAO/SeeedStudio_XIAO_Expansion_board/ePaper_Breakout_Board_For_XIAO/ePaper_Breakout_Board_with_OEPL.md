@@ -13,13 +13,13 @@ last_update:
   author: Zovey
 ---
 
-# Usage of the OpenEPaperLink and ePaper config builder
+# OpenEPaperLink and ePaper config builder
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/seeed_logo_2.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## Introduction
 
-OpenEPaperLink (The following text will refer to this project as "OEPL") is an alternative protocol and firmware implementation for electronic shelf labels. Multiple Displays are supported with ESP32-based access points and 802.15.4 radio communication.The application scenarios of Open EPaper Link are extensive, ranging from dynamic pricing in high-end retail stores to intelligent book management in libraries, as well as any electronic tag application scenarios where display information needs to be frequently updated.Now, this project is also compatible with nRF52840.
+[OpenEPaperLink](https://openepaperlink.de/) (The following text will refer to this project as "OEPL") is an alternative protocol and firmware implementation for electronic shelf labels. Multiple displays are supported with ESP32-based access points and 802.15.4 radio communication. This is an open-source electronic paper label communication system, which enables users to update the display content of the electronic ink screen wirelessly. The system consists of an access point (AP) and label devices, and supports various types of electronic ink screens. It provides a wide range of content generation and transmission functions. Now, this project is also compatible with Seeed Studio XIAO nRF52840 Sense Plus.
 
 After you purchase the ePaper Breakout Board, you may have the need to replace the electronic paper screen with a different specification. In this tutorial, we will use two tools for the process: OPEL Config Builder is used to modify the parameters of the electronic paper, and OEPL Image Uploader is used to upload images.
 
@@ -60,7 +60,7 @@ After you purchase the ePaper Breakout Board, you may have the need to replace t
 </table>
 
 :::tip
-The MCU of the nRF52840 series all support this tool, not limited to the nRF52840 Sense Plus. The ePaper screen only supports a 4.26-inch display. However, we will continue to update in the future to support more screen sizes.
+The MCU of the XIAO nRF52840 series all support this tool, not limited to the XIAO nRF52840 Sense Plus. The ePaper screen only supports a 4.26-inch display. However, we will continue to update in the future to support more screen sizes.
 :::
 
 ## Usage of OEPL Config Builder
@@ -82,7 +82,7 @@ After connecting Seeed Studio XIAO nRF52840 Sense Plus, the ePaper Breakout Boar
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/file_pic.png" style={{width:700, height:'auto'}}/></div>
 
-Then, copy the .uf2 file that was just obtained from the USB drive into the file manager of the nRF52840. The next time the MCU is powered on, it will automatically execute this.uf2 firmware.
+Then, copy the `.uf2` file that was just obtained from the USB drive into the file manager of the nRF52840. The next time the MCU is powered on, it will automatically execute this `.uf2` firmware.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/firmware.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -114,7 +114,7 @@ Just select the corresponding variables or input parameters on the panel to comp
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Builder_demo_1.png" style={{width:700, height:'auto'}}/></div>
 
-If you want to save the configuration you have set, you can export it as a.bin, Hex and JSON file within this panel. Conversely, this panel also supports importing JSON files for configuration purposes. The 4.26 screen configuration file can be obtained here.
+If you want to save the configuration you have set, you can export it as a `.bin`, `Hex` and `JSON` file within this panel. Conversely, this panel also supports importing `JSON` files for configuration purposes. The 4.26 screen configuration file can be obtained here.
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json" target="_blank">
@@ -124,7 +124,7 @@ If you want to save the configuration you have set, you can export it as a.bin, 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Package_import_1.png" style={{width:700, height:'auto'}}/></div>
 
-After setting the configuration, you can upload it to the MCU by using the "Write Config" function.
+After setting the configuration, you can upload it to the MCU by using the **Write Config" function.
 
 ## Usage of the OEPL Image Uploader
 
