@@ -304,7 +304,7 @@ void setup() {
 
 void loop() {
   int voltageValue = analogRead(PD4);
-  float voltage = voltageValue * (5.0 / 4095.0);
+  float voltage = voltageValue * (2 * 3.3 / 4095.0);
   
   Serial.print("Voltage: ");
   Serial.print(voltage, 2);
