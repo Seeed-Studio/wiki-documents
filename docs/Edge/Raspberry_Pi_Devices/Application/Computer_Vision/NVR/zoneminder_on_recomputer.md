@@ -1,6 +1,6 @@
 ---
 description: This wiki demonstrates how to deploy video surveillance system zoneminder to recomputer. 
-title: Use Zoneminder on reComputer
+title: Zoneminder on reComputer
 keywords:
   - reComputer
   - NVR
