@@ -1,7 +1,7 @@
 ---
 description: Habilita el diseño de interfaz visual para la Pantalla ePaper XIAO EE04 usando la plataforma SenseCraft HMI.
 title: Placa de Pantalla ePaper XIAO EE04 con SenseCraft HMI
-image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
+image: https://files.seeedstudio.com/wiki/Epaper/EE04/hmi61.webp
 slug: /es/EE04_with_hmi
 sidebar_position: 2
 last_update:
@@ -53,7 +53,7 @@ Este tutorial utiliza la Placa de Pantalla ePaper XIAO (ESP32-S3) - EE04 emparej
 
 ### Tipos de Pantalla ePaper Compatibles
 
-Esta Placa de Pantalla ePaper XIAO(ESP32-S3) - EE04 ofrece dos opciones de conector — 24 pines y 50 pines — compatible con varios tamaños de pantalla. Elige el que coincida con tu pantalla de la lista a continuación.
+Esta Placa de Pantalla ePaper XIAO(ESP32-S3) - EE04 ofrece dos opciones de conector — 24 pines y 50 pines — compatible con varios tamaños de pantalla. Elige la que coincida con tu pantalla de la lista a continuación.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi71.png" style={{width:800, height:'auto'}}/></div>
 
@@ -74,7 +74,7 @@ Esta Placa de Pantalla ePaper XIAO(ESP32-S3) - EE04 ofrece dos opciones de conec
 :::tip
 Al usar la Placa de Pantalla ePaper XIAO(ESP32-S3) - EE04, asegúrate de configurar el jumper según el tipo de pantalla ePaper:
 
-- Para pantallas ePaper de 24 Pines → configura el jumper a 24 Pines
+- Para pantallas ePaper de 24 Pines → configura el jumper a 24 Pin
 
 ⚠️ Usar la configuración incorrecta del jumper puede causar que el ePaper falle al mostrar o muestre contenido anormal. Siempre verifica la posición del jumper antes de encender.
 
@@ -87,7 +87,7 @@ Al usar la Placa de Pantalla ePaper XIAO(ESP32-S3) - EE04, asegúrate de configu
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
 :::tip
 Al usar la Placa de Pantalla ePaper XIAO(ESP32-S3) - EE04, asegúrate de configurar el jumper según el tipo de pantalla ePaper:
-- Para pantallas ePaper de 50 Pines → configura el jumper a 50 Pines
+- Para pantallas ePaper de 50 Pines → configura el jumper a 50 Pin
 
 ⚠️ Usar la configuración incorrecta del jumper puede causar que el ePaper falle al mostrar o muestre contenido anormal. Siempre verifica la posición del jumper antes de encender.
 
@@ -116,25 +116,29 @@ Primero, haz clic en el botón en la esquina superior derecha para registrar una
 
 ### Flasheo de Firmware de la Placa de Pantalla ePaper XIAO EE04
 
-Después de completar el registro, haz clic en **"Tools"** en la barra de menú para ingresar a la sección de flasheo de firmware.
+Después de completar el registro, haz clic en **"Tools"** en la barra de menú para entrar a la sección de flasheo de firmware.
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi62.png" style={{width:1000, height:'auto'}}/></div>
 
 
-En esta página, encontrarás firmware tutorial para dos modelos de pantalla ePaper: la **Pantalla a Todo Color de 7.3" (800×480)** y la **Pantalla Monocromática de 7.5" (800×480)**.
+En esta página, encontrarás firmware de tutorial para dos modelos de pantalla ePaper: la **Pantalla a Todo Color de 7.3" (800×480)** y la **Pantalla Monocromática de 7.5" (800×480)**.
+
+Si deseas usar una pantalla ePaper de un tamaño diferente, simplemente sigue los mismos pasos a continuación.
 
 :::tip
-Actualmente, la Placa de Pantalla ePaper XIAO(ESP32-S3) - EE04 solo ofrece firmware HMI para los modelos de 7.5 pulgadas y 7.3 pulgadas. Se proporcionarán actualizaciones en el futuro.
+Actualmente, la Placa de Pantalla ePaper XIAO(ESP32-S3) - EE04 no es compatible con las siguientes dos pantallas de tinta:
+- [ePaper de 4.2 pulgadas - Monocromático 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [ePaper de 5.83 pulgadas - Monocromático 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
 :::
 
 
 <Tabs>
-<TabItem value="7.3-Inch ePaper Display" label="Pantalla a Todo Color de 7.3 800*480" default>
+<TabItem value="7.3-Inch ePaper Display" label="Pantalla a Todo Color 7.3 800*480" default>
 
 ***Paso 1 .*** `Selecciona` la Pantalla a Todo Color de 7.3" 800*480
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi7.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi92.png" style={{width:1000, height:'auto'}}/></div>
 
 ***Paso 2 .*** Selecciona el firmware más reciente `EE04_7_3_color_1.0.5`
 
@@ -167,23 +171,23 @@ Verás dos códigos QR, cada uno llevando a una página diferente cuando se esca
 
 <br></br>
 
-La configuración aún no está completa. Por favor continúa siguiendo los pasos a continuación para **Configuración de Red** terminar la configuración.
+La configuración aún no está completa. Por favor continúa siguiendo los pasos a continuación para **Configuración de Red** y terminar la configuración.
 
 </TabItem>
 
-<TabItem value="7.5-Inch ePaper Display" label="Pantalla Monocromática de 7.5 800*480" default>
+<TabItem value="7.5-Inch ePaper Display" label="Pantalla Monocromática 7.5 800*480" default>
 
 ***Paso 1 .*** `Selecciona` la Pantalla Monocromática de 7.5" 800*480
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi8.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi91.png" style={{width:1000, height:'auto'}}/></div>
 
 ***Paso 2 .*** Selecciona el firmware más reciente `EE04_7_5_mono_1.0.5`
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi15.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi6.png" style={{width:1000, height:'auto'}}/></div>
 
-***Paso 3 .*** Haz clic en **Flash** para cargar el firmware de **Pantalla Monocromática de 7.5" 800*480** a la Placa de Pantalla ePaper XIAO (ESP32-S3) - EE04.
+***Paso 3 .*** Haz clic en **Flash** para cargar el firmware **7.5 "Monochrome Display 800*480** al XIAO ePaper Display Board (ESP32-S3) - EE04.
 
-Después de hacer clic en Flash, la plataforma mostrará una ventana de selección de puerto. Elige el puerto correspondiente a tu Placa de Pantalla ePaper XIAO (ESP32-S3) - EE04 para establecer la conexión.
+Después de hacer clic en Flash, la plataforma mostrará una ventana de selección de puerto. Elige el puerto correspondiente a tu XIAO ePaper Display Board (ESP32-S3) - EE04 para establecer la conexión.
 
 - Full Flash : Habilitar Full Flash borra toda la información almacenada en el dispositivo, incluyendo redes Wi-Fi y datos del panel de usuario.
 
@@ -196,10 +200,10 @@ Si no aparece ningún puerto, simplemente presiona el botón RESET en la placa p
 
 ***Paso 4 .*** Verificar la Salida de la Pantalla
 
-Después de que el firmware se haya flasheado exitosamente, la pantalla ePaper parpadeará brevemente y luego mostrará la siguiente pantalla.
-Verás dos códigos QR, cada uno llevando a una página diferente cuando se escanea.
+Después de que el firmware se haya cargado exitosamente, la pantalla ePaper parpadeará brevemente y luego mostrará la siguiente pantalla.
+Verás dos códigos QR, cada uno lleva a una página diferente cuando se escanea.
 
-- User Guide : Navegar a la sección HMI Basic Usage en el wiki (wiki)(https://wiki.seeedstudio.com/es/reterminal_e10xx_main_page/)
+- User Guide : Navegar a la sección HMI Basic Usage en la wiki (wiki)(https://wiki.seeedstudio.com/es/reterminal_e10xx_main_page/)
 
 - Wi-Fi Setup : Bajo Local Network Settings, configura tu dispositivo para conectarse con SenseCraft HMI.
 
@@ -216,7 +220,7 @@ La configuración aún no está completa. Por favor continúa siguiendo los paso
 
 ### Configuración de Red
 
-***Paso 1 .*** Conéctate al punto de acceso Wi-Fi del Kit DIY ePaper desde tu smartphone o computadora. El nombre del AP aparecerá en la pantalla (no se requiere contraseña). Las credenciales de red son XIAO ePaper Display Board(ESP32-S3) - EE04 
+***Paso 1 .*** Conéctate al punto de acceso Wi-Fi del ePaper DIY Kit desde tu smartphone o computadora. El nombre del AP aparecerá en la pantalla (no se requiere contraseña). Las credenciales de red son XIAO ePaper Display Board(ESP32-S3) - EE04 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi31.png" style={{width:500, height:'auto'}}/></div>
 
@@ -258,10 +262,10 @@ El XIAO ePaper Display Board(ESP32-S3) - EE04 se integra perfectamente con la pl
 :::note
 Esta demostración usa una pantalla de 7.3 pulgadas como ejemplo. Si reemplazas con un tamaño diferente, nota lo siguiente:
 
-- Confirma la orientación del cable flex de la pantalla (frente y atrás).
+- Confirma la orientación del cable flexible de la pantalla (frente y atrás).
 - Verifica que el número de pines coincida.
 - Usa la tapa de cubierta del tamaño correspondiente.
-- Evita doblar o plegar excesivamente al instalar el cable flex.
+- Evita doblar o plegar excesivamente al instalar el cable flexible.
 :::
 
 ### Características de SenseCraft HMI
@@ -386,7 +390,7 @@ Aprende más sobre [Web Content Display](https://sensecraft-hmi-docs.seeed.cc/en
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
