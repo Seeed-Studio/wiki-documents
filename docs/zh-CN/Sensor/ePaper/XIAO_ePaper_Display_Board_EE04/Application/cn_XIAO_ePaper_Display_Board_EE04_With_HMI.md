@@ -76,7 +76,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 - 对于 24 针 ePaper 显示屏 → 将跳线设置为 24 Pin
 
-⚠️ 使用错误的跳线设置可能导致 ePaper 无法显示或显示异常内容。开机前请务必仔细检查跳线位置。
+⚠️ 使用错误的跳线设置可能导致 ePaper 无法显示或显示异常内容。在通电前请务必仔细检查跳线位置。
 
 :::
 
@@ -89,7 +89,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 使用 XIAO ePaper Display Board(ESP32-S3) - EE04 时，请确保根据 ePaper 显示屏类型设置跳线：
 - 对于 50 针 ePaper 显示屏 → 将跳线设置为 50 Pin
 
-⚠️ 使用错误的跳线设置可能导致 ePaper 无法显示或显示异常内容。开机前请务必仔细检查跳线位置。
+⚠️ 使用错误的跳线设置可能导致 ePaper 无法显示或显示异常内容。在通电前请务必仔细检查跳线位置。
 
 :::
 
@@ -121,17 +121,23 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi62.png" style={{width:1000, height:'auto'}}/></div>
 
-
-在此页面上，您将找到两种 ePaper 显示屏型号的教程固件：**7.3" 全彩显示屏 (800×480)** 和 **7.5" 单色显示屏 (800×480)**。
-
-如果您想使用不同尺寸的 ePaper 显示屏，只需按照下面相同的步骤操作即可。
-
 :::tip
-目前，XIAO ePaper Display Board(ESP32-S3) - EE04 不支持以下两种墨水屏：
+目前，XIAO ePaper Display Board(ESP32-S3) - EE04 支持以下 ePaper 屏幕：
+- [1.54-inch ePaper - Monochrome 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [2.13-inch ePaper - Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [2.13-inch ePaper - Quadruple Color 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [2.9-inch ePaper - Monochrome 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [2.9-inch ePaper - Quadruple Color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
 - [4.2-inch ePaper - Monochrome 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [4.26-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
 - [5.83-inch ePaper - Monochrome 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [7.5-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [7.3-inch Spectra6 ePaper 800x480](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 :::
 
+在此页面上，您将找到两种 ePaper 显示屏型号的教程固件：**7.3" 全彩显示屏 (800×480)**
+
+如果您想使用不同尺寸的 ePaper 显示屏，只需按照下面相同的步骤操作即可。
 
 <Tabs>
 <TabItem value="7.3-Inch ePaper Display" label="7.3 全彩显示屏 800*480" default>
@@ -141,12 +147,17 @@ import Steppers from '@site/src/components/utils/Stepper';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi92.png" style={{width:1000, height:'auto'}}/></div>
 
 ***步骤 2 .*** 选择最新固件 `EE04_7_3_color_1.0.5`
+:::tip
+SenseCraft HMI 平台会定期更新，新的固件版本会不时发布。
+
+请务必选择并使用最新的固件版本，以确保最佳的兼容性和性能。
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi5.png" style={{width:1000, height:'auto'}}/></div>
 
 ***步骤 3 .*** 点击 **Flash** 将 **7.3" 全彩显示屏 (800×480)** 固件上传到 XIAO ePaper Display Board (ESP32-S3) - EE04。
 
-点击 Flash 后，平台将弹出端口选择窗口。选择与您的 XIAO ePaper Display Board (ESP32-S3) - EE04 对应的端口以建立连接。
+点击 Flash 后，平台会弹出端口选择窗口。选择与您的 XIAO ePaper Display Board (ESP32-S3) - EE04 对应的端口以建立连接。
 
 - Full Flash：启用 Full Flash 会清除设备存储的所有信息，包括 Wi-Fi 网络和用户面板数据。
 
@@ -160,24 +171,24 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ***步骤 4 .*** 检查显示输出
 
-固件成功烧录后，ePaper 显示屏会短暂闪烁，然后显示以下画面。
+固件成功刷写后，ePaper 显示屏会短暂闪烁，然后显示以下界面。
 您将看到两个二维码，扫描后分别跳转到不同的页面。
 
-- User Guide：导航到 [wiki](https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/) 中的 HMI 基本使用部分。
+- 用户指南：导航到 [wiki](https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/) 中的 HMI 基本使用部分。
 
-- Wi-Fi Setup：在本地网络设置下，设置您的设备与 SenseCraft HMI 连接。
+- Wi-Fi 设置：在本地网络设置下，设置您的设备连接到 SenseCraft HMI。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi67.png" style={{width:1000, height:'auto'}}/></div>
 
 <br></br>
 
-配置尚未完成。请继续按照下面的步骤进行 **网络设置** 以完成设置。
+配置尚未完成。请继续按照以下步骤进行 **网络设置** 以完成设置。
 
 </TabItem>
 
-<TabItem value="7.5-Inch ePaper Display" label="7.5 单色显示屏 800*480" default>
+<!-- <TabItem value="7.5-Inch ePaper Display" label="7.5 Monochrome Display 800*480 "default>
 
-***步骤 1 .*** `选择` 7.5" 单色显示屏 800*480
+***步骤 1 .*** `选择` 7.5 "Monochrome Display 800*480
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi91.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -185,7 +196,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi6.png" style={{width:1000, height:'auto'}}/></div>
 
-***步骤 3 .*** 点击 **Flash** 将 **7.5 "单色显示屏 800*480** 固件上传到 XIAO ePaper Display Board (ESP32-S3) - EE04。
+***步骤 3 .*** 点击 **Flash** 将 **7.5 "Monochrome Display 800*480** 固件上传到 XIAO ePaper Display Board (ESP32-S3) - EE04。
 
 点击 Flash 后，平台会弹出端口选择窗口。选择与您的 XIAO ePaper Display Board (ESP32-S3) - EE04 对应的端口以建立连接。
 
@@ -200,12 +211,12 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ***步骤 4 .*** 检查显示输出
 
-固件成功刷入后，ePaper 显示屏会短暂闪烁，然后显示以下界面。
+固件成功刷写后，ePaper 显示屏会短暂闪烁，然后显示以下界面。
 您将看到两个二维码，扫描后分别跳转到不同的页面。
 
-- User Guide：导航到 wiki 中的 HMI 基本使用部分 (wiki)(https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/)
+- 用户指南：导航到 wiki (wiki)(https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/) 中的 HMI 基本使用部分
 
-- Wi-Fi Setup：在本地网络设置下，设置您的设备以连接 SenseCraft HMI。
+- Wi-Fi 设置：在本地网络设置下，设置您的设备连接到 SenseCraft HMI。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi67.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -214,7 +225,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 配置尚未完成。请继续按照以下步骤进行 **网络设置** 以完成设置。
 
 
-</TabItem>
+</TabItem> -->
 
 </Tabs>
 
@@ -241,29 +252,29 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 仅支持 2.4GHz Wi-Fi 网络，不�
 
 ### 添加到 SenseCraft 平台
 
-***步骤 1 .*** 导航到 Workspace 部分并点击 `Add Device`。
+***步骤 1 .*** 导航到工作区部分并点击 `Add Device`。
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi12.png" style={{width:700, height:'auto'}}/></div>
 
-***步骤 2 .*** 为您的设备命名，输入设备屏幕上显示的配对代码，然后点击 `Create`。
+***步骤 2 .*** 为您的设备命名并输入设备屏幕上显示的配对代码，然后点击 `Create`。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi11.png" style={{width:700, height:'auto'}}/></div>
 
-***步骤 3 .*** 完成配对后，您可以在 Workspace 下看到您的设备名称。
+***步骤 3 .*** 完成配对后，您可以在工作区下看到您的设备名称。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi68.png" style={{width:700, height:'auto'}}/></div>
 
 现在我们已经成功将 XIAO ePaper Display Board (ESP32-S3) - EE04 连接到我们的设备，我们可以开始探索 SenseCraft HMI 的基本功能。
 
 ## 创建仪表板
 
-XIAO ePaper Display Board(ESP32-S3) - EE04 与 SenseCraft HMI 平台无缝集成，该平台提供强大的工具来为您的设备创建和自定义内容。我们不在这里详细介绍逐步操作，而是探索平台的关键功能，帮助您了解可能的应用。
+XIAO ePaper Display Board(ESP32-S3) - EE04 与 SenseCraft HMI 平台无缝集成，该平台为您的设备提供了强大的内容创建和自定义工具。我们不在这里详细介绍逐步操作，而是探索平台的关键功能，帮助您了解可能的应用。
 
 :::note
 此演示使用 7.3 英寸屏幕作为示例。如果更换为不同尺寸，请注意以下事项：
 
 - 确认屏幕排线的方向（正面和背面）。
-- 验证引脚头的数量是否匹配。
+- 验证引脚头数量是否匹配。
 - 使用相应尺寸的盖帽。
 - 安装排线时避免弯曲或过度折叠。
 :::
@@ -341,7 +352,7 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 与 SenseCraft HMI 平台无缝集成
 
 通过向您的仪表板添加 RSS 订阅，随时了解您喜爱的新闻来源或网站的最新动态。RSS 功能允许您显示来自多个来源的标题、摘要或完整文章。
 
-您需要在这里复制超链接。以下是两个推荐选项：
+您需要在此处复制超链接。以下是两个推荐选项：
 
 - [BBC News](http://feeds.bbci.co.uk/news/rss.xml)
 - [The New York Times](https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml)
@@ -368,7 +379,7 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 与 SenseCraft HMI 平台无缝集成
 
 让人工智能设计您的仪表板！只需描述您想要显示的信息，AI 生成器将自动创建一个美观、实用的布局。这非常适合快速生成天气显示、日历、待办事项列表或信息面板，无需手动设计工作。
 
-了解更多关于 [网页内容显示](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-web/)
+了解更多关于 [Web 内容显示](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-web/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi29.png" style={{width:700, height:'auto'}}/></div>
 
