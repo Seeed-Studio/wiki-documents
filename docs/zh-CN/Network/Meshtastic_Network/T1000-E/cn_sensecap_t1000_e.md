@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/sensecap_t1000_e
 sidebar_position: 2
 last_update:
-  date: 11/5/2025
+  date: 11/11/2025
   author: Michelle Huang
 ---
 
@@ -28,7 +28,7 @@ last_update:
 ### 第三部分：刷写新固件
 
 :::caution note
-在刷写固件之前，请确保您购买的是 T1000-E for Meshtastic。请不要将固件刷写到其他不支持 Meshtastic 的追踪器型号上。
+在刷写固件之前，请确保您购买的是 `T1000-E for Meshtastic`。请不要将固件刷写到其他不支持 Meshtastic 的追踪器型号上。请 `不要使用 NRF-OTA` 更新固件，这可能会导致设备完全损坏。
 :::
 
 <div class="video-container">
@@ -45,8 +45,8 @@ last_update:
 
 下载 `Meshtastic` 应用：
 
-- [IOS App](https://meshtastic.org/docs/category/apple-apps/)
-- [Android App](https://meshtastic.org/docs/category/android-app/)
+- [IOS 应用](https://meshtastic.org/docs/category/apple-apps/)
+- [Android 应用](https://meshtastic.org/docs/category/android-app/)
 
 ### 开启设备
 
@@ -113,13 +113,13 @@ import TabItem from '@theme/TabItem';
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
+参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，每分钟在滚动 1 小时基础上计算。如果达到限制，您的设备将停止传输，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时基础每分钟计算。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
-现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
+现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
 
 ### 传感器配置
 
@@ -174,7 +174,7 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-查看 [External Notification Config](https://meshtastic.org/docs/configuration/module/external-notification/) 了解更多详情。
+查看 [外部通知配置](https://meshtastic.org/docs/configuration/module/external-notification/) 了解更多详情。
 
 :::tip
 更新设备配置后，设备将重启，这可能需要一些时间。
@@ -191,10 +191,10 @@ import TabItem from '@theme/TabItem';
 ### <div class="danger">⚠️请勿刷写以下固件</div>
 
 :::danger
-请勿刷写除 T1000-E 固件以外的其他固件，这可能导致设备冻结。
+请勿刷写除 T1000-E 固件以外的其他固件，这可能会导致设备冻结。
 :::
 
-以下固件会使您的设备变砖：
+以下固件会损坏您的设备：
 
 - nrf52_promicro_diy_tcxo<br/>
 - nrf52_promicro_diy_xtal<br/>
@@ -211,7 +211,7 @@ import TabItem from '@theme/TabItem';
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Flash%20Firmware.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 :::caution note
-在刷写固件之前，请确保您购买的是 T1000-E for Meshtastic。请不要将固件刷写到其他不支持 Meshtastic 的追踪器型号上。
+在刷写固件之前，请确保您购买的是 `T1000-E for Meshtastic`。请不要将固件刷写到其他不支持 Meshtastic 的追踪器型号上。请 `不要使用 NRF-OTA` 更新固件，这可能会导致设备完全损坏。
 :::
 #### 步骤 1：进入 DFU 模式
 
@@ -232,7 +232,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="method2" label="方法 2">
 
-将 USB 线缆连接到您的 PC，按住设备按钮，然后**快速**连接充电线缆两次，绿色 LED 会常亮，应该会显示一个名为 `T1000-E` 的驱动器。
+将 USB 线缆连接到您的 PC，按住设备按钮，然后 **快速** 连接充电线缆两次，绿色 LED 会常亮，应该会显示一个名为 `T1000-E` 的驱动器。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
@@ -241,7 +241,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={800} height="auto" /></p>
 
-#### 步骤 2：擦除闪存
+#### 步骤 2：刷写擦除
 
 :::caution note
 在刷写固件之前，请先刷写擦除固件！
@@ -326,7 +326,7 @@ import TabItem from '@theme/TabItem';
 </div>
 
 :::danger note
-刷写引导程序时，请确保线缆连接稳定，在刷写过程中**请勿**断开连接。
+当您刷写引导程序时，请确保线缆连接稳定，在刷写过程中**不要**断开连接。
 :::
 
 **步骤 1：Adafruit-nrfutil 安装**
@@ -365,7 +365,7 @@ pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-如果运行 `pip3 install` 时出现权限错误，您的 `pip3` 版本较旧或设置为尝试安装到系统目录。在这种情况下使用 `--user` 标志：
+如果在运行 `pip3 install` 时遇到权限错误，您的 `pip3` 版本较旧或设置为尝试安装到系统目录。在这种情况下使用 `--user` 标志：
 
 ```
 pip3 install -r --user requirements.txt
@@ -390,7 +390,7 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 
 您将在 `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` 中找到 .exe 文件（如果您使用 Windows，则带有 `.exe` 扩展名）。
-为方便起见，将其复制或移动到其他地方，例如您的 %PATH% 中的目录。
+为了方便起见，将其复制或移动到其他地方，例如您的 %PATH% 中的目录。
 
 </TabItem>
 </Tabs>
@@ -404,7 +404,7 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 
 **步骤 3：刷写引导程序**
 
-在终端或命令提示符中，导航到您下载引导程序 zip 包的目录，并执行以下命令，将正确的端口替换为您的设备：
+在终端或命令提示符中，导航到您下载引导程序压缩包的目录，并执行以下命令，将端口替换为您设备的正确端口：
 
 - **对于 Windows**：
 
@@ -420,7 +420,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-完成上述步骤后，您可以按照此[步骤](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#flash-the-application-firmware)刷写应用固件。
+当您完成上述步骤后，您可以按照此[步骤](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#flash-the-application-firmware)刷写应用固件。
 
 **2) 设备无法进入 DFU 模式，但可以检测到串口**。
 
@@ -429,7 +429,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 - 将波特率设置为 `1200`。
 
 - 连接设备。
-   连接时指示灯会短暂闪烁。继续尝试此操作，直到指示灯保持常亮，表示设备可以回到 DFU 模式，然后[刷写引导程序](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#flash-the-bootloader) -> [擦除闪存](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-2-flash-erase) -> [刷写固件](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-3-flash-firmware)。
+   连接时指示灯会短暂闪烁。继续尝试此操作，直到指示灯保持常亮，这意味着设备可以回到 DFU 模式，然后[刷写引导程序](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#flash-the-bootloader) -> [擦除闪存](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-2-flash-erase) -> [刷写固件](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-3-flash-firmware)。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/reset%20via%20serial%20tool.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -447,7 +447,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
 
- 检查设备是否处于 DFU 模式，设备处于 DFU 模式时绿灯将常亮。
+ 检查设备是否处于 DFU 模式，当设备处于 DFU 模式时绿色指示灯将常亮。
 
 - **无法打开串口**
 

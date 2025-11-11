@@ -4,22 +4,26 @@ title: XIAO ESP32-S3&Wio SX1262 Kit
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /es/xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic
 last_update:
-  date: 11/5/2025
+  date: 11/11/2025
   author: Michelle Huang
 ---
 
 
-[Meshtastic®](https://meshtastic.org/) es una red de malla descentralizada, fuera de la red y de código abierto construida para funcionar en dispositivos asequibles y de bajo consumo. Seeed Studio proporciona una gama completa de dispositivos Meshtastic listos para usar para aficionados y usuarios industriales. El XIAO ESP32S3 & Wio-SX1262 Kit es una solución flexible para desarrolladores y makers de meshtastic.
-
+[Meshtastic®](https://meshtastic.org/) es una red de malla descentralizada, fuera de la red y de código abierto construida para funcionar en dispositivos asequibles y de bajo consumo. Seeed Studio proporciona una gama completa de dispositivos Meshtastic listos para usar para aficionados y usuarios industriales. XIAO ESP32S3 & Wio-SX1262 Kit es una solución flexible para desarrolladores y makers de meshtastic.
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora </font></span></strong>
+    </a>
+</div>
 ## Flashear Firmware
 
 :::note
-Por favor, flashea el firmware en tu dispositivo si compraste el XIAO ESP32S3 & Wio-SX1262 Kit antes del **24 de octubre de 2024** siguiendo este tutorial paso a paso.
+Por favor, flashea el firmware en tu dispositivo si compraste el XIAO ESP32S3 & Wio-SX1262 Kit antes del **24 de octubre de 2024** siguiendo este tutorial paso a paso. Por favor `no uses NRF-OTA` para actualizar el firmware, puede causar que el dispositivo quede completamente inoperativo.
 :::
 
 **Paso 1**: Primero, abre un navegador y visita https://flasher.meshtastic.org/# requiere navegador Chrome o Edge.
 
-**Paso 2**: Luego, usa un cable USB adecuado para conectar el dispositivo a la PC. Es posible que necesites apagar, luego **mantener presionado el botón BOOT** mientras conectas el cable USB.
+**Paso 2**: Luego, usa un cable USB adecuado para conectar el dispositivo a la PC. Puede que necesites apagar, luego **mantener presionado el botón BOOT** mientras conectas el cable USB.
 
 **Paso 3**: Sigue las siguientes instrucciones proporcionadas para realizar las operaciones de flasheo posteriores. Selecciona el Dispositivo como "**Seeed XIAO S3**", Firmware como **el más reciente**, y luego haz clic en "**Flash**". No olvides marcar "**Full Erase and Install**" si quieres sobrescribir el firmware anterior.
 
@@ -31,22 +35,22 @@ Meshtastic proporciona múltiples softwares de plataforma para que los usuarios 
 
 Para información específica, por favor consulta [el sitio web oficial de Meshtastic](https://meshtastic.org/docs/software/).
 
-- [Android App](https://meshtastic.org/docs/category/android-app/): La aplicación de Android está disponible en el repositorio F-Droid y Google Play Store. Esto te permite conectarte a tu dispositivo Meshtastic desde tu teléfono Android vía Bluetooth, Wi-Fi (si está en la misma red) o USB On-The-Go (OTG).
-- [Apple App](https://meshtastic.org/docs/category/apple-apps/): Está disponible en la app store. Por defecto, la app Meshtastic para iOS soporta el uso de Apple Maps nativo sin conexión.
-- [Web Client](https://meshtastic.org/docs/software/web-client/): Meshtastic Web es un cliente Meshtastic que se ejecuta directamente en tu navegador.
+- [App de Android](https://meshtastic.org/docs/category/android-app/): La aplicación de Android está disponible en el repositorio F-Droid y Google Play Store. Esto te permite conectarte a tu dispositivo Meshtastic desde tu teléfono Android vía Bluetooth, Wi-Fi (si está en la misma red) o USB On-The-Go (OTG).
+- [App de Apple](https://meshtastic.org/docs/category/apple-apps/): Está disponible en la app store. Por defecto, la app Meshtastic para iOS soporta el uso de Apple Maps nativo sin conexión.
+- [Cliente Web](https://meshtastic.org/docs/software/web-client/): Meshtastic Web es un cliente Meshtastic que se ejecuta directamente en tu navegador.
 - [Python CLI](https://meshtastic.org/docs/software/python/cli/): El paquete pip de python instala un ejecutable de línea de comandos "meshtastic", que muestra paquetes enviados a través de la red como JSON y te permite ver información de depuración serial de los dispositivos meshtastic.
 - [Linux Native](https://meshtastic.org/docs/software/linux-native/): El software del dispositivo también puede ejecutarse en una máquina Linux nativa gracias al framework Portduino.
-- [Meshtastic Integrations](https://meshtastic.org/docs/software/integrations/): El ecosistema Meshtastic es altamente extensible y permite una fácil integración con una serie de productos y proyectos de software existentes.
+- [Integraciones Meshtastic](https://meshtastic.org/docs/software/integrations/): El ecosistema Meshtastic es altamente extensible y permite una fácil integración con una serie de productos y proyectos de software existentes.
 
 ## Conexión del Dispositivo
 
-Antes de usar Meshtastic, el dispositivo necesita ser conectado primero. Hay dos métodos de conexión. El primero es usar una placa de expansión, y la información correspondiente se mostrará en la pantalla. Luego, la configuración se puede llevar a cabo en la plataforma correspondiente según la información reflejada. El segundo es conectar el XIAO y el módulo Wio-SX1262, y usar una herramienta de puerto serie para obtener el ID del nodo y la contraseña.
+Antes de usar Meshtastic, el dispositivo necesita ser conectado primero. Hay dos métodos de conexión. El primero es usar una placa de expansión, y la información correspondiente se mostrará en la pantalla. Luego, la configuración puede llevarse a cabo en la plataforma correspondiente según la información reflejada. El segundo es conectar el XIAO y el módulo Wio-SX1262, y usar una herramienta de puerto serie para obtener el ID del nodo y la contraseña.
 
 ### Método 1: Conectado a batería
 
 El XIAO ESP32S3 tiene un chip de gestión de energía integrado que permite que el XIAO ESP32S3 sea alimentado independientemente usando una batería o cargar la batería a través del puerto USB del XIAO ESP32S3.
 
-Si quieres conectar la batería para XIAO, te recomendamos que compres una batería recargable de `litio de 3.7V` calificada con `circuito de protección`. Al soldar la batería, por favor ten cuidado de distinguir entre los terminales positivo y negativo. El terminal negativo de la fuente de alimentación debe estar en el lado más cercano al puerto USB, y el terminal positivo de la fuente de alimentación es el lado alejado del puerto USB.
+Si quieres conectar la batería para XIAO, te recomendamos que compres una batería `de litio de 3.7V` recargable calificada con `circuito de protección`. Al soldar la batería, por favor ten cuidado de distinguir entre los terminales positivo y negativo. El terminal negativo de la fuente de alimentación debe estar en el lado más cercano al puerto USB, y el terminal positivo de la fuente de alimentación está en el lado alejado del puerto USB.
 
 
 
@@ -57,7 +61,7 @@ Si quieres conectar la batería para XIAO, te recomendamos que compres una bater
 
 ### Método 2: Conectado a placa de expansión
 
-Después de flashear el firmware y descargar la app Meshtastic, la placa de expansión sería una buena herramienta para la conexión y aplicaciones adicionales como agregar sensores y módulos Grove fácilmente.
+Después de flashear el firmware y descargar la app Meshtastic, la placa de expansión sería una buena herramienta para la conexión y aplicaciones adicionales como agregar sensores y módulos grove fácilmente.
 
 **Paso 1**: Asegúrate de que el dispositivo a conectar (como "device") esté encendido y en un estado detectable. Y abre la app Meshtastic en tu teléfono móvil.
 
@@ -73,7 +77,7 @@ Después de flashear el firmware y descargar la app Meshtastic, la placa de expa
 
 **Paso 4**: Configura la región Lora, luego el dispositivo se reiniciará.
 
-**Paso 5**: Termina el reinicio, el estado del dispositivo se puede verificar en la app Meshtastic y la pantalla OLED.
+**Paso 5**: Termina el reinicio, el estado del dispositivo puede verificarse en la app Meshtastic y la pantalla OLED.
 
 <div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/dzqx32lBJso" title="Configuring Wio-SX1262 with XIAO ESP32S3 kit as Meshtastic device" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -123,7 +127,7 @@ Una vez conectado, puedes comenzar a enviar y recibir mensajes a través de la r
 
 ## Conexión de Sensores
 
-En la aplicación meshtastic, el Wio-SX1262 con el kit XIAO esp32s3 es capaz de soportar una amplia gama de sensores. Cuando se usa en conjunto con la placa de expansión XIAO, puede soportar numerosos sensores Grove, por favor verifica [aquí](https://github.com/meshtastic/firmware/blob/3f1c86f9535279fd17eaaab6e10a06f09915b7e4/src/detect/ScanI2C.h#L10). Además, cuando se combina con el módulo complementario GNSS, forma el módulo más pequeño dentro de meshtastic que tiene funcionalidad GPS.
+En la aplicación meshtastic, el Wio-SX1262 con kit XIAO esp32s3 es capaz de soportar una amplia gama de sensores. Cuando se usa en conjunto con la placa de expansión XIAO, puede soportar numerosos sensores grove, por favor verifica [aquí](https://github.com/meshtastic/firmware/blob/3f1c86f9535279fd17eaaab6e10a06f09915b7e4/src/detect/ScanI2C.h#L10). Adicionalmente, cuando se combina con el módulo complementario GNSS, forma el módulo más pequeño dentro de meshtastic que tiene funcionalidad GPS.
 
 ### Sensor de Temperatura y Humedad
 
@@ -174,7 +178,7 @@ En la aplicación meshtastic, el Wio-SX1262 con el kit XIAO esp32s3 es capaz de 
 ## Configuración Inicial
 
 :::note
-Para más detalles, consulte [Meshtastic](https://meshtastic.org/docs).
+Para más detalles, consulta [Meshtastic](https://meshtastic.org/docs).
 :::
 
 ### Configuración de Radio
@@ -210,13 +214,13 @@ Los módulos están incluidos en el firmware y permiten a los usuarios extender 
 | [Range Test](https://meshtastic.org/docs/configuration/module/range-test/) | Enviar mensajes con ubicación GPS en un intervalo para probar la distancia que pueden comunicar tus dispositivos. Requiere (al menos) un dispositivo configurado como emisor y uno como receptor. El/los receptor(es) registrarán todos los mensajes entrantes en un CSV. |
 | [Remote Hardware](https://meshtastic.org/docs/configuration/module/remote-hardware/) | Establecer y leer un estado GPIO remotamente a través de la malla. |
 | [Serial Module](https://meshtastic.org/docs/configuration/module/serial/) | Enviar mensajes a través de la malla enviando cadenas por un puerto serie. |
-| [Store & Forward](https://meshtastic.org/docs/configuration/module/store-and-forward-module/) | Almacena mensajes en un dispositivo para entrega después de que clientes desconectados se reúnan a la malla. |
+| [Store & Forward](https://meshtastic.org/docs/configuration/module/store-and-forward-module/) | Almacena mensajes en un dispositivo para entrega después de que clientes desconectados se reúnan con la malla. |
 | [Telemetry](https://meshtastic.org/docs/configuration/module/telemetry/) | Conectar sensores al dispositivo y transmitir lecturas en un intervalo regular a la malla. |
 | [Traceroute](https://meshtastic.org/docs/configuration/module/traceroute/) | Rastrear qué nodos se usan para saltar un mensaje a cierto destino. |
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
