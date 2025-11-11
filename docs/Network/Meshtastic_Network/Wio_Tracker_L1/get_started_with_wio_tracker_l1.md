@@ -10,6 +10,7 @@ last_update:
   date: 10/29/2025
   author: Michelle
 ---
+
 :::tip
 The Wio Tracker L1 Series share the same hardware framework. Although the video guide was for the L1 Pro, it is applicable to all other products in the L1 series.
 :::
@@ -26,6 +27,10 @@ When using the L1, L1 Lite or L1 E-Ink models for the first time, after connecti
 
 
 ### Part 2 Firmware Flashing
+
+:::caution note
+Please `don't use NRF-OTA` to update the firmware, it may cause the device to be completely dead.
+:::
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/hcjai4J1894?si=S_jaEfXVThWXscVJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -52,6 +57,10 @@ When using the L1, L1 Lite or L1 E-Ink models for the first time, after connecti
 ## Get Started
 
 ### Flash Firmware
+
+:::caution note
+Please `don't use NRF-OTA` to update the firmware, it may cause the device to be completely dead.
+:::
 
 Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
