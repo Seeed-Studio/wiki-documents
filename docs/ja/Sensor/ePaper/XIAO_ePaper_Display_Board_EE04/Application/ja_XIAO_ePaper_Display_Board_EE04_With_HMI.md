@@ -231,37 +231,37 @@ The configuration is not yet complete. Please continue following the steps below
 
 ### ネットワーク設定
 
-***Setp 1 .*** スマートフォンまたはコンピューターからePaper DIY KitのWi-Fiアクセスポイントに接続します。AP名は画面に表示されます（パスワード不要）。ネットワーク認証情報はXIAO ePaper Display Board(ESP32-S3) - EE04です。
+***ステップ 1 .*** スマートフォンまたはコンピューターからePaper DIY KitのWi-Fiアクセスポイントに接続します。AP名は画面に表示されます（パスワード不要）。ネットワーク認証情報はXIAO ePaper Display Board(ESP32-S3) - EE04です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi31.png" style={{width:500, height:'auto'}}/></div>
 
-***Setp 2 .*** 接続後、インク画面上のQRコードをスキャンすると、お使いの携帯電話が自動的にWi-Fi設定ページにリダイレクトされます。リダイレクトされない場合は、ブラウザを開いて192.168.4.1に移動してください。
+***ステップ 2 .*** 接続後、インク画面上のQRコードをスキャンすると、お使いの携帯電話が自動的にWi-Fi設定ページにリダイレクトされます。リダイレクトされない場合は、ブラウザを開いて192.168.4.1に移動してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi32.png" style={{width:500, height:'auto'}}/></div>
 
-***Setp 3 .*** ローカルWi-Fiネットワークを選択してパスワードを入力し、`Connect`をクリックします。
+***ステップ 3 .*** ローカルWi-Fiネットワークを選択してパスワードを入力し、`Connect`をクリックします。
 
 :::tip
 XIAO ePaper Display Board(ESP32-S3) - EE04は2.4GHz Wi-Fiネットワークのみをサポートし、5GHzやその他の帯域はサポートしていません。
 :::
 
-***Setp 4 .*** 接続が完了すると、画面に対応するペアコードが表示されます。
+***ステップ 4 .*** 接続が完了すると、画面に対応するペアコードが表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi13.jpg" style={{width:700, height:'auto'}}/></div>
 
 
 ### SenseCraftプラットフォームに追加
 
-***Setp 1 .*** Workspaceセクションに移動し、`Add Device`をクリックします。
+***ステップ 1 .*** Workspaceセクションに移動し、`Add Device`をクリックします。
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi12.png" style={{width:700, height:'auto'}}/></div>
 
-***Setp 2 .*** デバイスに名前を付け、デバイス画面に表示されているペアコードを入力して`Create`をクリックします。
+***ステップ 2 .*** デバイスに名前を付け、デバイス画面に表示されているペアコードを入力して`Create`をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi11.png" style={{width:700, height:'auto'}}/></div>
 
-***Setp 3 .*** ペアリングが完了すると、Workspace下にデバイス名が表示されます。
+***ステップ 3 .*** ペアリングが完了すると、Workspace下にデバイス名が表示されます。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi68.png" style={{width:700, height:'auto'}}/></div>
 
 XIAO ePaper Display Board (ESP32-S3) - EE04をデバイスに正常に接続できたので、SenseCraft HMIの基本機能を探索し始めることができます。
