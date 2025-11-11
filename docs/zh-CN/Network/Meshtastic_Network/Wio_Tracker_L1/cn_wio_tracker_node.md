@@ -13,7 +13,11 @@ last_update:
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.jpg" alt="pir" width={600} height="auto" /></p>
-
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-L1-p-6453.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 </font></span></strong>
+    </a>
+</div>
 Wio Tracker L1 系列是一款低功耗、高度可扩展的 [Meshtastic®](https://meshtastic.org/) 节点，具有 LoRa（862–930 MHz）、用于高效处理的 nRF52840 和用于精确位置跟踪的 L76K GPS 模块。设计灵活，支持 OLED 和 E-Ink 显示屏，以及太阳能电池板和电池供电，使其成为各种物联网和离网应用的理想选择。
 
 ## L1 系列型号
@@ -48,7 +52,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
 开箱即用，预装 Meshtastic 固件，设置简单无缝。
 
 - **三重电源供应选项**
-支持 Type-C 快充、太阳能输入和锂离子电池供电，可灵活部署在各种环境中——非常适合户外和移动应用。
+支持 Type-C 快充、太阳能输入和锂离子电池供电，可在各种环境中灵活部署——非常适合户外和移动应用。
 
 - **灵活的显示支持**
 可选 1.3 英寸 OLED 和 2.13 英寸 E-Ink 屏幕，为不同的功耗和视觉反馈需求提供多样化的显示选项。

@@ -10,6 +10,7 @@ last_update:
   date: 10/29/2025
   author: Michelle
 ---
+
 :::tip
 Wio Tracker L1 シリーズは同じハードウェアフレームワークを共有しています。ビデオガイドは L1 Pro 向けでしたが、L1 シリーズの他のすべての製品にも適用できます。
 :::
@@ -26,6 +27,10 @@ L1、L1 Lite、または L1 E-Ink モデルを初めて使用する際は、USB 
 
 
 ### パート 2 ファームウェア書き込み
+
+:::caution note
+ファームウェアの更新に `NRF-OTA を使用しないでください`。デバイスが完全に動作しなくなる可能性があります。
+:::
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/hcjai4J1894?si=S_jaEfXVThWXscVJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -53,26 +58,30 @@ L1、L1 Lite、または L1 E-Ink モデルを初めて使用する際は、USB 
 
 ### ファームウェア書き込み
 
+:::caution note
+ファームウェアの更新に `NRF-OTA を使用しないでください`。デバイスが完全に動作しなくなる可能性があります。
+:::
+
 [Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスしてください。
 
-L1、L1 Lite、L1 Pro の場合、ターゲットデバイスを `Seeed Wio Tracker L1` に選択し、最新のファームウェアを選択してから `Flash` をクリックしてください。
+L1、L1 Lite、L1 Pro の場合、対象デバイスを `Seeed Wio Tracker L1` に選択し、最新のファームウェアを選択してから `Flash` をクリックしてください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
-L1 E-Ink の場合、ターゲットデバイスを `Seeed Wio Tracker L1 E-Ink` に選択し、最新のファームウェアを選択してから `Flash` をクリックしてください。
+L1 E-Ink の場合、対象デバイスを `Seeed Wio Tracker L1 E-Ink` に選択し、最新のファームウェアを選択してから `Flash` をクリックしてください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%201.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
 
 
-デバイスの電源を入れ、`Enter DFU Mode` をクリックすると、`Tracker L1` という名前のシリアルポートが表示されるので、それをクリックして接続すると、`Tracker L1` という名前のドライバが表示されます。
+デバイスの電源を入れ、`Enter DFU Mode` をクリックすると、`Tracker L1` という名前のシリアルポートが表示されます。それをクリックして接続すると、`Tracker L1` という名前のドライバが表示されるはずです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-UF2 ファイルを DFU ドライブにドラッグしてください。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアが書き込まれます。
+UF2 ファイルを DFU ドライブにドラッグしてください。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアが書き込まれるはずです。
 
 ### デバイスの電源投入
 
@@ -91,7 +100,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="ios" label="iOS アプリ">
 
-- Bluetooth パネルでターゲットデバイスを選択してください。
+- Bluetooth パネルで対象デバイスを選択してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
@@ -103,7 +112,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="android" label="Android アプリ">
 
-- `+` をクリックしてターゲットデバイスを選択してください。
+- `+` をクリックして対象デバイスを選択してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
@@ -142,10 +151,10 @@ import TabItem from '@theme/TabItem';
 より包括的なリストについては、[国別 LoRa 地域](https://meshtastic.org/docs/configuration/region-by-country/) を参照してください。
 
 :::info
-**EU_868** は、1時間のローリングベースで毎分計算される10%の時間デューティサイクル制限に従う必要があります。制限に達した場合、再び許可されるまでデバイスは送信を停止します。
+**EU_868** は、1時間のローリングベースで毎分計算される10%の時間あたりデューティサイクル制限に従う必要があります。制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスに LoRa 地域を設定したので、ニーズに合わせて [LoRa 設定](https://meshtastic.org/docs/configuration/radio/lora/) の設定を続けることができます。
+デバイスで LoRa 地域を設定したので、ニーズに合わせて [LoRa 設定](https://meshtastic.org/docs/configuration/radio/lora/) を構成することができます。
 
 ### センサー接続
 
@@ -158,7 +167,7 @@ Grove インターフェース経由でデバイスにセンサーを追加で�
   </tr>
   <tr>
     <td rowspan="4">環境センサー</td>
-    <td>圧力</td>
+    <td>気圧</td>
     <td>BMP085</td>
   </tr>
   <tr>
@@ -170,7 +179,7 @@ Grove インターフェース経由でデバイスにセンサーを追加で�
     <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
   </tr>
   <tr>
-    <td>温度・湿度・圧力</td>
+    <td>温度・湿度・気圧</td>
     <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
   </tr>
   <tr>
@@ -188,7 +197,7 @@ Grove インターフェース経由でデバイスにセンサーを追加で�
 
 ### DFU モードへの手動移行
 
-デバイスを PC に接続し、`Reset` ボタンをダブルクリックしてください。黄色の LED が点灯し続け、PC に `Tracker L1` という名前の新しい USB ドライブが表示されます。
+デバイスを PC に接続し、`Reset` ボタンをダブルクリックしてください。黄色の LED が点灯し続け、`Tracker L1` という名前の新しい USB ドライブが PC に表示されます。
 
 ### DFU モードの終了
 
@@ -200,7 +209,7 @@ Grove インターフェース経由でデバイスにセンサーを追加で�
 
 - **RSSI** はデバイスとその周辺環境によって共同で決定されます。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm より低いデバイスは性能が悪いと考えられます。
 
-      最良の信号効果を得るために、干渉が最小限の開放的で障害物のない場所でデバイスを使用してください。
+      最良の信号効果を得るために、干渉が最小限で障害物のない開放的な場所でデバイスを使用してください。
 ## リソース
 - [3D プリント参考ファイル](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
 - [アウトラインファイル](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)

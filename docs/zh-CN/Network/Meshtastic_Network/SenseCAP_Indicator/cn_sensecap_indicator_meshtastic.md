@@ -29,7 +29,7 @@ last_update:
 
 SenseCAP Indicator 是一款专为 [Meshtastic®](https://meshtastic.org/) 设计的 4 英寸触摸屏设备，由双 MCU（ESP32 和 RP2040）驱动，支持 Wi-Fi、BLE 和 LoRa®。它是一个开源、强大的物联网开发平台。
 
-## 介绍
+## 简介
 
 ### 特性
 
@@ -55,7 +55,7 @@ SenseCAP Indicator 是一款专为 [Meshtastic®](https://meshtastic.org/) 设�
 |**蜂鸣器（尚未开发）**|MLT-8530，谐振频率：2700Hz|
 |**认证**|CE/FCC|
 
-### 硬件概览
+### 硬件概述
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/HO-114993532.png" alt="pir" width={800} height="auto" /></p>
 
@@ -64,7 +64,7 @@ SenseCAP Indicator 是一款专为 [Meshtastic®](https://meshtastic.org/) 设�
 ### 刷写应用固件
 
 :::caution note
-在刷写固件之前，请确保您购买的指示器是 Meshtastic 版本。请勿将 Meshtastic 固件刷写到不兼容 Meshtastic 的指示器上。这可能会导致硬件损坏。
+在刷写固件之前，请确保您购买的指示器是 Meshtastic 版本。不要将 Meshtastic 固件刷写到不兼容 Meshtastic 的指示器上。这可能会导致硬件损坏。请`不要使用 NRF-OTA` 更新固件，这可能会导致设备完全损坏。
 :::
 
 **视频教程**
@@ -178,10 +178,10 @@ import TabItem from '@theme/TabItem';
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-参考 [各国 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
+参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时计算每分钟。如果达到限制，您的设备将停止传输，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时基础每分钟计算。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
 现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
@@ -215,7 +215,7 @@ RP2040 尚未开发完成，因此 `蜂鸣器`/`SD 卡`/`地图` 功能暂时不
 #### 角色选择
 
 :::caution
-请勿选择 `Repeater` 角色，这会导致设备反复重启。
+不要选择 `Repeater` 角色，这会导致设备反复重启。
 :::
 
 #### GPS 模块
