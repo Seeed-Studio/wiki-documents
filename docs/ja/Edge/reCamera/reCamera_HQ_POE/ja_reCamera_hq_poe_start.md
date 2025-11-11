@@ -9,7 +9,7 @@ keywords:
   - HQ
   - M12
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /ja/recamera_hd_poe_getting_started
+slug: /ja/recamera_hq_poe_getting_started
 sidebar_position: 1
 last_update:
   date: 09/25/2025
@@ -34,7 +34,7 @@ reCamera HQ POE へようこそ！reCamera 2002 HQ PoE は、より鮮明でク�
 
 ## 開封
 
-reCamera の開封から始めましょう。箱の中には以下が含まれているはずです：
+reCamera を開封することから始めましょう。箱の中には以下が含まれているはずです：
 
 - reCamera PoE 64GB
 - レンズキャップ
@@ -80,10 +80,10 @@ reCamera の開封から始めましょう。箱の中には以下が含まれ�
 
 ## クラウド管理とバックアップの適用
 
-新しいアプリケーションを作成したり、アプリケーションを SenseCraft クラウドサービスに保存したい場合は、左下で SenseCraft アカウントにログインし、+ アイコンをクリックして新しいアプリケーションを追加できます。その後、フローの作業を開始できます。
+新しいアプリケーションを作成したり、アプリケーションを SenseCraft クラウドサービスに保存したい場合は、左下で sensecraft アカウントにログインし、+ アイコンをクリックして新しいアプリケーションを追加できます。その後、フローの作業を開始できます。
 
 
-新しいアプリケーションを作成したり、アプリケーションを SenseCraft クラウドサービスに保存したい場合は、左下で SenseCraft アカウントにログインし、`+` アイコンをクリックして新しいアプリケーションを追加できます。その後、フローの作業を開始できます。
+新しいアプリケーションを作成したり、アプリケーションを SenseCraft クラウドサービスに保存したい場合は、左下で sensecraft アカウントにログインし、`+` アイコンをクリックして新しいアプリケーションを追加できます。その後、フローの作業を開始できます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/Gimbal_7.png" /></div>
 
@@ -114,7 +114,7 @@ reCamera の開封から始めましょう。箱の中には以下が含まれ�
 
 ## ファクトリーリセット
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/interface.jpg" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/interface2.png" /></div>
 
 デバイスのパスコードを忘れた場合などでデバイスをリセットしたい場合は、**User** ボタンを長押ししながらデバイスを電源に接続してください。デバイスの `赤いライト` が点滅ではなく **常時点灯** になったら、User ボタンを離してください。
 
@@ -124,7 +124,7 @@ reCamera の開封から始めましょう。箱の中には以下が含まれ�
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

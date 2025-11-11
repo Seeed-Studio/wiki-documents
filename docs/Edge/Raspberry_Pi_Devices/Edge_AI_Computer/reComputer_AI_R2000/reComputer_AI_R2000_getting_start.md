@@ -106,7 +106,15 @@ The Hailo AI Software Suite provides powerful tools to run AI models efficiently
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**NOTE:** You can select other OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
+**NOTE1:** We recommend flashing the **64-bit Raspberry Pi OS (Debian 12 Bookworm) image** for now. The newly released Raspberry Pi OS based on Debian 13 “Trixie” hasn’t updated the hailo-all package yet, so Bookworm will give you full Hailo support out of the box.
+Download [link](https://www.raspberrypi.com/software/operating-systems/).
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/OS.png" alt="pir" width="600" height="auto"/></p>
+Then write it to your SD card using the imager with the Use custom option.
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/img.png" alt="pir" width="600" height="auto"/></p>
+
+If you still want to try the latest image, **you’ll need to install the Hailo software manually instead of using the one-command hailo-all route;** please follow this [link](https://wiki.seeedstudio.com/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/#install-hailo-software).
+
+**NOTE2:** You can select other OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 

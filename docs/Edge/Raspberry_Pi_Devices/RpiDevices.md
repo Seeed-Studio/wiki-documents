@@ -528,13 +528,13 @@ Flow-based programming tool for connecting hardware and online services.
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/poes_estimation_batch8.png" style={{width:200, height:'auto'}}/></td>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/Object_detection.gif" style={{width:400, height:'auto'}}/></td>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/gun_detection_gif.gif" style={{width:350, height:'auto'}}/></td>
-        <td><img src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png" style={{width:250, height:'auto'}}/></td>
+        <td><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/HA_interface.PNG" style={{width:250, height:150}}/></td>
       </tr>
       <tr>
         <td><a href="https://wiki.seeedstudio.com/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit/"><strong>📚 Learn More</strong></a></td>
         <td><a href="https://wiki.seeedstudio.com/yolov8_on_ai_box_for_fall_climbing_tracking/"><strong>📚 Learn More</strong></a></td>
-        <td><a href="https://wiki.seeedstudio.com/reComputer_r1000_fin_equip_gaphic/"><strong>📚 Learn More</strong></a></td>
-        <td ><a href="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_aws/"><strong>📚 Learn More</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/gun_detection_with_frigate_nvr_on_r2000/"><strong>📚 Learn More</strong></a></td>
+        <td ><a href="https://wiki.seeedstudio.com/r2000_series_frigate_and_home_assistant/"><strong>📚 Learn More</strong></a></td>
       </tr>
     </tbody>
   </table>

@@ -10,7 +10,7 @@ keywords:
   - M12
   - Microscope
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /ja/recamera_hd_poe_microscope_demo
+slug: /ja/recamera_hq_poe_microscope_demo
 sidebar_position: 3
 last_update:
   date: 11/08/2025
@@ -33,20 +33,20 @@ reCamera Sg2002 シリーズには 1 TOPS の内蔵計算能力があり、YoloV
 ## 📷プレビュー 
 
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-2.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-2.png" /></div>
 
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-1.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-1.png" /></div>
 
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-3.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-3.png" /></div>
 
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-4.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-4.png" /></div>
 
 ## 🔧reCamera_Microscope のハードウェア構成
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-5.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-5.png" /></div>
 
 1. reCamera POE
 2. 3D プリンター x2
@@ -70,39 +70,39 @@ reCamera Sg2002 シリーズには 1 TOPS の内蔵計算能力があり、YoloV
 
 **図に示すように、ブラケットを組み立て、12V 電源に接続し、3D プリント部品を取り付けます。**
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-7.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-7.png" /></div>
 
 図に示すように、顕微鏡キットには2つのレンズが含まれています。広角レンズを取り外し、他の2つのレンズと交換する必要があります。
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-8.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-8.png" /></div>
 
 ### 🎨オプション1：レンズ1：顕微鏡レンズの使用
 
 図に示すように、顕微鏡レンズを取り外し、3つのレンズ延長アダプターを取り付け、その後レンズ1を取り付けます。
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-9.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-9.png" /></div>
 
 図に示すように、**USB ケーブルを使用してコンピューターに接続します。**
 
  `192.168.42.1` にアクセスして reCamera のローディングページを表示します。ログイン **ユーザー** は：`root`；**パスワード** は：`recamera.1`
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-10.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-10.png" /></div>
 
 植物、動物、または微生物のサンプルスライスを購入し、顕微鏡ステージに置くことができます。カメラと物体の位置を調整することで、微視的世界の画像を見ることができます。
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-11.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-11.png" /></div>
 
 ### 🎨オプション2：レンズ2：PCB マイクロレンズの使用
 
 図に示すように、顕微鏡レンズを取り外し、1つのレンズ延長アダプターを取り付け、その後レンズ2を取り付けます。
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-12.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-12.png" /></div>
 
 図に示すように、**USB ケーブルを使用してコンピューターに接続します。**
 
  `192.168.42.1` にアクセスして reCamera のローディングページを表示します。ログイン **ユーザー** は：`root`；**パスワード** は：`recamera.1`
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-14.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-14.png" /></div>
 
 ここには2つの事前訓練済みモデルが利用可能で、PCB 上の電子部品を識別したり、PCB の欠陥を検出したりするために使用できます。
 
@@ -110,7 +110,7 @@ reCamera Sg2002 シリーズには 1 TOPS の内蔵計算能力があり、YoloV
 | ---------------------------------------- | ------------ |
 | [**PCB 欠陥検出モデル**](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/yolo11n_models/PCB_Defect_Detection/readme.md)          | [**ダウンロード**](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/yolo11n_models/PCB_Defect_Detection/yolo11n_PCB_Defect.cvimodel) |
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-1.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-1.png" /></div>
 
 ## 技術サポート & 製品ディスカッション
 
