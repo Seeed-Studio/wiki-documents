@@ -9,7 +9,7 @@ keywords:
   - HQ
   - M12
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /es/recamera_hd_poe_getting_started
+slug: /es/recamera_hq_poe_getting_started
 sidebar_position: 1
 last_update:
   date: 09/25/2025
@@ -33,6 +33,19 @@ Esta guía te ayudará a configurar rápidamente tu dispositivo y comenzar a usa
 </div>
 
 ## Desempaquetado
+
+Comienza desempaquetando tu reCamera. Dentro de la caja, deberías encontrar:
+
+- reCamera PoE 64GB
+- Tapa de Lente
+- Cable Type-C
+- Manual de Instrucciones
+- Cable Ethernet (RJ45 a MX1.25-5P)
+- Cable de Conexión (MX1.25-6P a jumper 6P)
+
+Asegúrate de que todas las partes estén incluidas.
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/part_list2.jpg" /></div>
 
 ### Configurar dispositivo e iniciar sesión
 
@@ -101,7 +114,7 @@ Por favor consulta las [Instrucciones de Actualización OTA](https://wiki.seeeds
 
 ## Restablecimiento de Fábrica
 
-
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/interface2.png" /></div>
 
 Si deseas restablecer el dispositivo, como olvidar el código de acceso de tu dispositivo, puedes mantener presionado el botón **User** y luego conectar el dispositivo a la energía. Cuando la `luz roja` del dispositivo esté **constantemente encendida** en lugar de parpadeando, suelta el botón User.
 
