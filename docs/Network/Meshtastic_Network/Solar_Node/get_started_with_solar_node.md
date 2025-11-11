@@ -19,6 +19,10 @@ Before formal deployment, please test and configure the node first.
 
 ### Flash Firmware
 
+:::caution note
+Please `don't use NRF-OTA` to update the firmware, it may cause the device to be completely dead.
+:::
+
 Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
 Select the target device to `Seeed SenseCAP Solar Node` and choose the latest firmware, then click `Flash`.
