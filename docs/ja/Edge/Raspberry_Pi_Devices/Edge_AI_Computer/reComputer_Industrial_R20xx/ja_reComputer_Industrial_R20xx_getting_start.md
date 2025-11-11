@@ -6,7 +6,7 @@ keywords:
 - Raspberry pi
 - Edge Controller
 - reComputer Industrial R20xx
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
+image: https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/recomputer-industrail-r2000.webp
 slug: /ja/recomputer_industrial_r20xx_getting_start
 last_update:
   date: 09/28/2025
@@ -17,18 +17,18 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2045-12-p-6544.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
-Raspberry Pi CM5を搭載したreComputer Industrial R20xxは、AI機能を備えた適応性の高いエッジAI/IoTコントローラーです。包括的な産業用インターフェース**（2xイーサネット、4xUSB、3x RS485、1x RS232、8x DI、8x DO）**と柔軟なワイヤレス接続オプション**（4G/5G、LoRa®、Wi-Fi/BLE）**を搭載し、多様な産業用アプリケーションに最適です。
+Raspberry Pi CM5を搭載したreComputer Industrial R20xxは、AI機能を備えた適応性の高いエッジAI/IoTコントローラーです。包括的な産業用インターフェース**（2x イーサネット、4x USB、3x RS485、1x RS232、8x DI、8x DO）**と柔軟なワイヤレス接続オプション**（4G/5G、LoRa®、Wi-Fi/BLE）**を搭載し、多様な産業用アプリケーションに最適です。
 reComputer Industrial R20xxシリーズは、産業用AIアプリケーションでの使用に最適です。データ取得とプロセス監視、オートメーションとロボット制御、インテリジェント製造、産業通信とネットワーキングなどの分野で使用できます。小型サイズ、柔軟性、低コスト、プログラマビリティにより、オートメーション＆IoTシステムなどに強力なサポートを提供します。
 
 ## 特徴
 
 **産業グレードの信頼性**
 
-- -20°C～60°Cの広い温度範囲をサポートするファンレスコンパクトPC
+- 広い温度範囲（-20°C～60°C）をサポートするファンレスコンパクトPC
 - ハードウェアウォッチドッグ
 - UPSスーパーキャパシタ（オプション）
 - 高品質メタルケース、DINレール・壁面取り付け対応
@@ -37,9 +37,9 @@ reComputer Industrial R20xxシリーズは、産業用AIアプリケーション
 **高効率AIコンピューティング**
 
 - Raspberry Pi CM5搭載
-- Broadcom BCM2711クアッドコアCortex-A72（ARM v8）64ビットSoC @ 1.5GHz
+- Broadcom BCM2711 クアッドコア Cortex-A72（ARM v8）64ビット SoC @ 1.5GHz
 - 最大16GB RAMと64GB eMMC
-- 最大26 TOPSのHailo-8 AIアクセラレータ搭載（オプション）
+- Hailo-8 AIアクセラレータ搭載で最大26 TOPS（オプション）
 
 **豊富なワイヤレス機能**
 
@@ -50,9 +50,9 @@ reComputer Industrial R20xxシリーズは、産業用AIアプリケーション
 
 **豊富なインターフェース**
 
-- 3x RS485（絶縁）、1x RS232（絶縁）、8x絶縁DIポート、8x絶縁DOポート
-- 1x 10M/100M/1000Mイーサネット（PoE PD対応）
-- 1x 10M/100Mイーサネット
+- 3x RS485（絶縁）、1x RS232（絶縁）、8x 絶縁DIポート、8x 絶縁DOポート
+- 1x 10M/100M/1000M イーサネット（PoE PD対応）
+- 1x 10M/100M イーサネット
 - 2x HDMI 2.0
 - 3x Type-A USB3.0
 - 1x Type-A USB2.0
@@ -63,44 +63,44 @@ reComputer Industrial R20xxシリーズは、産業用AIアプリケーション
 
 | **カテゴリ**              | **パラメータ**                                                                  |
 |---------------------------|---------------------------------------------------------------------------------|
-| **ハードウェア仕様**      |                                                                                 |
-| **CPU**                   | Raspberry Pi Compute Module 5、2.4GHzクアッドコア64ビットArm Cortex-A76           |
-| **AIプロセッサ**          | プリインストール1x Hailo-8 M.2 AIアクセラレーション26TOPS                             |
+| **ハードウェア仕様**         |                                                                                 |
+| **CPU**                   | Raspberry Pi Compute Module 5、2.4GHz クアッドコア 64ビット Arm Cortex-A76           |
+| **AIプロセッサ**          | プリインストール 1x Hailo-8 M.2 AIアクセラレーション 26TOPS                             |
 | **RAM**                   | 2GB/4GB/8GB/16GB                                                                |
 | **eMMC**                  | 16GB/32GB/64GB                                                                  |
-| **オペレーティングシステム** | Raspbian、Debian                                                                |
-| **システム仕様**          |                                                                                 |
-| **電源入力**              | DC 9V~36V、2ピンターミナルブロック                                                 |
-| **インターフェース**      |                                                                                 |
-| **イーサネット**          | 1 x 10/100/1000 Mbps（PoE PD対応）                                           |
-| **USB**                   | 3 x USB-A 3.0ホスト；1 x USB-A 2.0ホスト                                          |
-| **M.2スロット**           | 1x 2280 M.2 NVMe SSD用；1x 2280 AIアクセラレータ用                             |
+| **オペレーティングシステム**      | Raspbian、Debian                                                                |
+| **システム仕様**           |                                                                                 |
+| **電源入力**           | DC 9V～36V、2ピン端子台                                                 |
+| **インターフェース**             |                                                                                 |
+| **イーサネット**              | 1 x 10/100/1000 Mbps（PoE PD対応）                                           |
+| **USB**                   | 3 x USB-A 3.0 ホスト；1 x USB-A 2.0 ホスト                                          |
+| **M.2スロット**              | 1x 2280 M.2 NVMe SSD用；1x 2280 AIアクセラレータ用                             |
 | **Mini-PCIe**             | 1x Mini-PCIe LoRaモジュール用                                                    |
-| **SIMカード**             | Nano SIMカード対応                                                          |
+| **SIMカード**              | Nano SIMカード対応                                                          |
 | **LED**                   | 4 x LEDインジケータ                                                              |
-| **ボタン/スイッチ**       | 1xリセットボタン；1xブートスイッチ                                                 |
-| **ワイヤレス通信**        |                                                                                 |
+| **ボタン/スイッチ**       | 1x リセットボタン；1x ブートスイッチ                                                 |
+| **ワイヤレス通信**|                                                                                 |
 | **Wi-Fi 2.4/5.0 GHz**     | オンチップWi-Fi                                                                   |
 | **BLE 5.0**               | オンチップBLE                                                                     |
-| **4G/5Gセルラー**         | 4G LTE/5G*                                                                      |
+| **4G/5Gセルラー**        | 4G LTE/5G*                                                                      |
 | **LoRa®**                 | USB LoRa®/SPI LoRa®                                                             |
-| **環境条件**              |                                                                                 |
-| **防塵防水等級**          | IP40                                                                            |
-| **動作温度**              | -20°C～65°C                                                                   |
-| **動作湿度**              | 10%～95% RH                                                                   |
+| **環境条件**    |                                                                                 |
+| **保護等級**    | IP40                                                                            |
+| **動作温度** | -20°C～65°C                                                                   |
+| **動作湿度**    | 10%～95% RH                                                                   |
 | **その他**                |                                                                                 |
-| **ウォッチドッグ**        | 1~255s                                                                          |
+| **ウォッチドッグ**              | 1～255秒                                                                          |
 | **RTC**                   | 高精度RTC                                                               |
-| **セキュリティ**          | 暗号化チップTPM2.0 / ATECC608A（オプション）                                   |
-| **放熱**                  | ファンレス                                                                         |
-| **保証**                  | 2年                                                                         |
-| **製品寿命**              | 2030年12月まで                                                             |
+| **セキュリティ**              | 暗号化チップ TPM2.0 / ATECC608A（オプション）                                   |
+| **放熱**      | ファンレス                                                                         |
+| **保証**              | 2年                                                                         |
+| **製品寿命**   | 2030年12月まで                                                             |
 | **機械的仕様**            |                                                                                 |
-| **寸法（W x H x D）**     | 197.5 mm x 155 mm x 67.5 mm                                                     |
-| **筐体**                  | PCサイドパネル付きアルミニウム合金ケーシング                                      |
+| **寸法（W x H x D）**| 197.5 mm x 155 mm x 67.5 mm                                                     |
+| **筐体**             | アルミニウム合金ケーシング、PCサイドパネル付き                                      |
 | **取り付け**              | DINレール/壁面取り付け                                                           |
 | **重量（正味）**          | 1280g                                                                            |
-| **注記**                  | *印のオプションは、アクセサリリストに従って別途購入が必要です。 |
+| **注記**             | *印のオプションは、アクセサリリストに従って別途購入が必要です。 |
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/1.4_dimension_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -108,7 +108,7 @@ reComputer Industrial R20xxシリーズは、産業用AIアプリケーション
 
 ### ハードウェア紹介
 
-[Hailo](https://hailo.ai/)は、エッジデバイス上での高性能ディープラーニングアプリケーション向けに独自に調整された最先端のAIプロセッサを提供しています。同社のソリューションは、高度なAIアクセラレータとビジョンプロセッサによって駆動される、知覚とビデオ強化と並んで、エッジでの次世代生成AIを可能にすることに焦点を当てています。そして、26 TOPSのAI性能を提供するHailo-8 NPUアクセラレータを搭載したreComputer_R2000は、YOLOv8sで200 FPS以上を達成することができます。
+[Hailo](https://hailo.ai/)は、エッジデバイス上での高性能ディープラーニングアプリケーション向けに独自に調整された最先端のAIプロセッサを提供しています。同社のソリューションは、高度なAIアクセラレータとビジョンプロセッサによって駆動される、知覚とビデオ強化と並んで、エッジでの次世代生成AIを可能にすることに焦点を当てています。そして、26 TOPsのAI性能を提供するHailo-8 NPUアクセラレータを搭載したreComputer_R2000は、YOLOv8sで200 FPS以上を達成することができます。
 
 ### ソフトウェア紹介
 
@@ -116,7 +116,7 @@ reComputer Industrial R20xxシリーズは、産業用AIアプリケーション
 
 Hailo AI Software Suiteは、ハードウェアアクセラレータ上でAIモデルを効率的に実行するための強力なツールを提供します。既存のディープラーニングフレームワークとシームレスに統合するように設計されており、開発者にスムーズなワークフローを提供します。このプロセスでは、Model Build EnvironmentでONNXファイルからHEF（Hailo Executable Binary File）を生成します。作成されたHEFファイルは推論マシン（Runtime Environment）に転送され、HailoRT APIを使用して推論を実行するために使用されます。提供されたスクリプトは、Model Build Environment内でONNXファイルをHEFファイルに変換することを容易にします。
 
-> **注意：**
+> **注記：**
 > **Hailo NPUの使用例についてさらに学びたい場合は、この[リンク](https://github.com/Seeed-Projects/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero)をクリックしてください。**
 
 ## ハードウェア概要
@@ -135,13 +135,13 @@ Hailo AI Software Suiteは、ハードウェアアクセラレータ上でAIモ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.1.3_power_diagram_1.png" style={{width:800, height:'auto'}}/></div>
 
-reComputer Industrial R20xxは、DCターミナルとPoEポートの2つの電源供給オプションをサポートしています。これにより電源供給の選択に柔軟性を提供し、様々な電源との簡単な統合を可能にします。
+reComputer Industrial R20xxは、DC端子とPoEポートの2つの電源供給オプションをサポートしています。これにより電源供給の選択に柔軟性を提供し、様々な電源との簡単な統合を可能にします。
 
-**2ピン電源ターミナル**
+**2ピン電源端子**
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/R1100/power_terminal.PNG" style={{width:100, height:'auto'}}/></div>
 
-reComputer Industrial R2000は、9~36VのターミナルDC電圧で供給されます。電源は2ピン電源ターミナルブロックコネクタを介して接続されます。
+reComputer Industrial R2000は、9～36VのDC電圧で端子に供給されます。電源は2ピン電源端子台コネクタを介して接続されます。
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2-pin_power_terminal_2.png" style={{width:100, height:'auto'}}/></div>
 
 reComputer Industrial R2000をアースするには、電源端子の右側にあるネジにアース線を固定できます。
@@ -173,23 +173,23 @@ reComputer Industrial R2000にはデフォルトで電源ボタンが付属し�
 | タイプ            | 説明                                                                           |
 |-----------------|---------------------------------------------------------------------------------------|
 | **Ethernet**    | 1 x 10/100/1000 Mbps（POE PD対応）; 1 x 10/100 Mbps IEEE802.3/802.3u             |
-| **USB**         | 3 x USB-A 3.0 ホスト; 1 x USB-C 2.0（OS書き込みとデバッグ用）                        |
+| **USB**         | 3 x USB-A 3.0 ホスト ; 1 x USB-C 2.0（OS書き込みとデバッグ用）                        |
 | **RS485**       | 3x RS485（絶縁）                                                                   |
 | **RS232**       | 1x RS232（絶縁）                                                                   |
 | **DI**          | 8 x 絶縁DIポート（入力電圧：5-24V DC）                                      |
 | **DO**          | 8 x 絶縁DOポート（出力電圧：60V DC）                                       |
 | **HDMI**        | 2 x HDMI 2.0                                                                          |
-| **LED**        | 4 x LEDインジケーター                                                                     |
-| **SIMカードスロット** | Nano SIMカード対応                                                              |
-| **M.2 M-KEYスロット**  | 1x 2280 M.2 NVMe SSD用; 1x 2280 AIアクセラレーター用                             |
-| **M.2 B-KEYスロット**  | 1x 5G/4G LTE用                                                                  |
-| **mini PCIeスロット**  | 1x 4G LTE/LoRa/Zigbee用                                                         |
-| **ブザー**          | 1                                                                                 |
-| **リセットボタン**    | 1                                                                                 |
+| **LED**        | 4 x LEDインジケータ                                                                     |
+| **SIM Card Slot** | Nano SIMカード対応                                                              |
+| **M.2 M-KEY Slot**  | 1x 2280（M.2 NVMe SSD用）; 1x 2280（AIアクセラレータ用）                             |
+| **M.2 B-KEY Slot**  | 1x（5G/4G LTE用）                                                                  |
+| **mini PCIe Slot**  | 1x（4G LTE/LoRa/Zigbee用）                                                         |
+| **Buzzer**          | 1                                                                                 |
+| **Reset Button**    | 1                                                                                 |
 
-### LEDインジケーターステータス
+### LEDインジケータステータス
 
-reComputer Industrial R2000には、マシンの動作状態を示す4つのLEDインジケーターが搭載されています。各LEDの具体的な機能とステータスについては、以下の表を参照してください：
+reComputer Industrial R2000には、マシンの動作状態を示す4つのLEDインジケータが搭載されています。各LEDの具体的な機能とステータスについては、以下の表を参照してください：
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
     <thead>
@@ -215,7 +215,7 @@ reComputer Industrial R2000には、マシンの動作状態を示す4つのLED�
         <td> **ACT** </td>
         <td>オレンジ</td>
         <td>点灯</td>
-        <td>Linux下では、このピンはeMMCアクセスを示すために点滅します。起動中にエラーが発生した場合、このLEDはエラーパターンで点滅し、Raspberry Piウェブサイトのルックアップテーブル（[Raspberry Pi Documentation - Configuration](https://www.raspberrypi.com/documentation/computers/configuration.html)）を使用してデコードできます。</td>
+        <td>Linux下では、このピンはeMMCアクセスを示すために点滅します。起動中にエラーが発生した場合、このLEDはエラーパターンで点滅し、Raspberry Piウェブサイトの参照表（[Raspberry Pi Documentation - Configuration](https://www.raspberrypi.com/documentation/computers/configuration.html)）を使用してデコードできます。</td>
       </tr>
       <tr>
         <td> **USER** </td>
@@ -250,21 +250,21 @@ reComputer Industrial R2000には、マシンの動作状態を示す4つのLED�
 | 2            | 1             | パーティションがFATではありません                    |
 | 2            | 2             | パーティションからの読み取りに失敗        |
 | 2            | 3             | 拡張パーティションがFATではありません           |
-| 2            | 4             | ファイル署名/ハッシュの不一致 - Pi 4  |
+| 2            | 4             | ファイル署名/ハッシュ不一致 - Pi 4  |
 | 4            | 4             | サポートされていないボードタイプ               |
 | 4            | 5             | 致命的なファームウェアエラー                 |
 | 4            | 6             | 電源障害タイプA                 |
 | 4            | 7             | 電源障害タイプB                 |
 
-ACT LEDが規則的な4回点滅パターンで点滅する場合、ブートコード（start.elf）が見つかりません。
+ACT LEDが規則的な4回点滅パターンで点滅する場合、bootcode（start.elf）が見つかりません。
 ACT LEDが不規則なパターンで点滅する場合、起動が開始されています。
 ACT LEDが点滅しない場合、EEPROMコードが破損している可能性があります。何も接続せずに再度試して確認してください。詳細については、Raspberry Piフォーラムを確認してください：
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums。
 詳細については、[Raspberry Piフォーラム](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151)を確認してください
 
-#### USERインジケーター
+#### USERインジケータ
 
-reComputer Industrial R2000にはUSERインジケーターが含まれており、ユーザーは実際のニーズに応じてステータスをカスタマイズできます。
+reComputer Industrial R2000にはUSERインジケータが含まれており、ユーザーは実際のニーズに応じてステータスをカスタマイズできます。
 
 ### ブザー
 
@@ -342,7 +342,7 @@ RS485配線の回路図は以下の通りです：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.3_rs485_1.png" style={{width:800, height:'auto'}}/></div>
 
-注意：製品パッケージには120Ω終端抵抗器がいくつか含まれています。RS485通信時に必要に応じて使用できます。
+注意：製品パッケージには120Ω終端抵抗器がいくつか含まれています。RS485通信時に必要に応じてご使用ください。
 
 ### RS232
 
@@ -468,7 +468,7 @@ reComputer Industrial R2000シリーズ機器には8つのDIポートが含ま�
         <td>5kV</td>
       </tr>
       <tr>
-        <td>DIからG_DI</td>
+        <td>DI to G_DI</td>
         <td>ON状態：5~30 VDC</td>
       </tr>
     </tbody>
@@ -602,7 +602,7 @@ reComputer Industrial R2000シリーズ機器には内部Nano SIMカードスロ
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.9_sim_slot(internal)_2.png" style={{width:900, height:'auto'}}/></div>
 
 > **注意**  
-> reComputer Industrial R2000の標準バージョンには5G/4Gモジュールは付属していません。
+> reComputer Industrial R2000の標準バージョンには5G/4Gモジュールが付属していないことにご注意ください。
 > 5G/4G機能が必要な場合は、追加の5G/4Gモジュールを別途購入する必要があります。
 
 ### M.2 M-KEYスロット
@@ -614,7 +614,7 @@ reComputer Industrial R2000シリーズ機器には内部Nano SIMカードスロ
 | **スロット**       | **サポートされるプロトコル**   |  
 |---------------|--------------------------|  
 | **M.2 M-KEY 2280** | M.2 NVMe SSD        |  
-| **M.2 M-KEY 2280** | M.2 AIアクセラレータ |  
+| **M.2 M-KEY 2280** | M.2 AI アクセラレータ |  
 
 reComputer Industrial R2000のM.2 M-KEY 2280スロットは、128GB、256GB、512GB、1TB、2TBの容量のNVMe M.2 2280 SSDに対応するよう設計されています。このスロットは高速ストレージ拡張を可能にし、ユーザーがシステムのパフォーマンスと容量を向上させることができます。
 
@@ -626,14 +626,14 @@ reComputer Industrial R2000のM.2 M-KEY 2280スロットは、128GB、256GB、51
 >  
 > 市場で入手可能なすべてのSSDカードが2番目の用途をサポートしているわけではないことに注意することが重要です。したがって、ブートドライブとして使用することを意図しており、どのモデルを購入すべきか不明な場合は、推奨する2TB SSD（SKU 114993467）を選択することをお勧めします。このモデルはブート機能についてテストおよび検証されており、互換性の問題のリスクを軽減し、試行錯誤のコストを最小限に抑えます。
 
-reComputer Industrial R2000のM.2 M-KEY 2280スロットは、PCIE M.2 AIアクセラレータに対応するよう設計されています。そして、R20xx-12シリーズには最大26TOPSのHailo-8 M.2 AIアクセラレーションが事前にインストールされています。
+reComputer Industrial R2000のM.2 M-KEY 2280スロットは、PCIE M.2 AI アクセラレータに対応するよう設計されています。そして、R20xx-12シリーズには最大26TOPSのHailo-8 M.2 AIアクセラレーションが事前にインストールされています。
 
 ### Mini-PCIeスロット
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.11_mini-pcie__slot_1.png" style={{width:800, height:'auto'}}/></div>
 reComputer Industrial R2000のMiniPCIeスロットは、4G LTE、USB LoRaWAN®、USB Zigbeeなどのデバイスに対応するよう設計されています。
 
-### リセットホール
+### リセット穴
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/reset.jpg" style={{width:200, height:'auto'}}/></div>
 
@@ -667,7 +667,7 @@ reComputer Industrial R2000には2つのEthernet RJ45ポートが搭載されて
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.15_hdmi_1.png" style={{width:200, height:'auto'}}/></div>
 
-reComputer Industrial R2000は、CM5からの2つのネイティブHDMIインターフェースを搭載し、最大4K @ 60 fpsのビデオ出力をサポートします。複数のディスプレイが必要なアプリケーションに最適で、ユーザーは外部の大型スクリーンにコンテンツを出力できます。
+reComputer Industrial R2000は、CM5からの2つのネイティブHDMIインターフェースを搭載し、最大4K @ 60 fpsの映像出力をサポートします。複数のディスプレイが必要なアプリケーションに最適で、ユーザーは外部の大型スクリーンにコンテンツを出力できます。
 
 ### RTC
 
@@ -697,38 +697,38 @@ reComputer Industrial R2000は豊富な拡張モジュールとアクセサリ�
       <tr>
         <td rowspan="7">LoRa®WAN機能には一緒に使用する必要があります</td>
         <td rowspan="6">LoRa®モジュール</td>
-        <td>地域オプション LoRaWANゲートウェイモジュール（USB）- US915</td>
+        <td>地域オプション LoRaWAN ゲートウェイモジュール（USB）- US915</td>
         <td>114992969</td>
       </tr>
       <tr>
-        <td>地域オプション LoRaWANゲートウェイモジュール（USB）-US915</td>
+        <td>地域オプション LoRaWAN ゲートウェイモジュール（USB）- US915</td>
         <td>114992629</td>
       </tr>
       <tr>
-        <td>地域オプション LoRaWANゲートウェイモジュール（USB）-US915</td>
+        <td>地域オプション LoRaWAN ゲートウェイモジュール（USB）- US915</td>
         <td>114992991</td>
       </tr>
       <tr>
-        <td>地域オプション LoRaWANゲートウェイモジュール（SPI）-EU868</td>
+        <td>地域オプション LoRaWAN ゲートウェイモジュール（SPI）- EU868</td>
         <td>114993268</td>
       </tr>
       <tr>
-        <td>地域オプション LoRaWANゲートウェイモジュール（SPI）-EU868</td>
+        <td>地域オプション LoRaWAN ゲートウェイモジュール（SPI）- EU868</td>
         <td>114992549</td>
       </tr>
       <tr>
-        <td>地域オプション LoRaWANゲートウェイモジュール（USB）-EU868</td>
+        <td>地域オプション LoRaWAN ゲートウェイモジュール（USB）- EU868</td>
         <td>114992628</td>
       </tr>
       <tr>
         <td>LoRa®アンテナ</td>
-        <td>LoRaアンテナキット - 868-915 MHz</td>
+        <td>LoRa アンテナキット - 868-915 MHz</td>
         <td>110061501</td>
       </tr>
       <tr>
         <td></td>
         <td>Zigbeeモジュール</td>
-        <td>Mini-PCIe USB Zigbeeモジュール</td>
+        <td>Mini-PCIe USB Zigbee モジュール</td>
         <td>110992005</td>
       </tr>
       <tr>
@@ -740,23 +740,23 @@ reComputer Industrial R2000は豊富な拡張モジュールとアクセサリ�
       <tr>
         <td rowspan="8">4G機能には4Gモジュール付き4Gアンテナ、GPS機能には4Gモジュール付きGPSアンテナが必要</td>
         <td rowspan="6">4Gモジュール</td>
-        <td>LTE Cat 4 EC25-AFXGA-Mini-PCIeモジュール - 北米向け</td>
+        <td>LTE Cat 4 EC25-AFXGA-Mini-PCIe モジュール - 北米向け</td>
         <td>113991134</td>
       </tr>
       <tr>
-        <td>LTE Cat 4 EC25-EUXGR-Mini-PCIeモジュール - EMEA・タイ向け</td>
+        <td>LTE Cat 4 EC25-EUXGR-Mini-PCIe モジュール - EMEA・タイ向け</td>
         <td>113991135</td>
       </tr>
       <tr>
-        <td>LTE Cat 4 EC25-AUXGR-Mini-PCIeモジュール - オーストラリア向け</td>
+        <td>LTE Cat 4 EC25-AUXGR-Mini-PCIe モジュール - オーストラリア向け</td>
         <td>113991174</td>
       </tr>
       <tr>
-        <td>LTE Cat 4 EC25-EFA-Mini-PCIeモジュール - タイ向け</td>
+        <td>LTE Cat 4 EC25-EFA-Mini-PCIe モジュール - タイ向け</td>
         <td>113991214</td>
       </tr>
       <tr>
-        <td>LTE Cat 4 EC25-EMGA-Mini-PCIeモジュール - マレーシア向け</td>
+        <td>LTE Cat 4 EC25-EMGA-Mini-PCIe モジュール - マレーシア向け</td>
         <td>113991234</td>
       </tr>
       <tr>
@@ -775,7 +775,7 @@ reComputer Industrial R2000は豊富な拡張モジュールとアクセサリ�
       </tr>
       <tr>
         <td></td>
-        <td>暗号化チップTPM 2.0</td>
+        <td>暗号化チップ TPM 2.0</td>
         <td>infineon SLB9670搭載TPM 2.0モジュール</td>
         <td>114993114</td>
       </tr>
@@ -790,15 +790,15 @@ reComputer Industrial R2000は豊富な拡張モジュールとアクセサリ�
         <td>114993467</td>
       </tr>
       <tr>
-        <td>512GB NVMe M.2 PCle Gen3x4 2280内蔵SSD</td>
+        <td>512GB NVMe M.2 PCle Gen3x4 2280 内蔵SSD</td>
         <td>112990247</td>
       </tr>
       <tr>
-        <td>256GB NVMe M.2 PCle Gen3x4 2280内蔵SSD</td>
+        <td>256GB NVMe M.2 PCle Gen3x4 2280 内蔵SSD</td>
         <td>112990246</td>
       </tr>
       <tr>
-        <td>128GB NVMe M.2 PCle Gen3x4 2280内蔵SSD</td>
+        <td>128GB NVMe M.2 PCle Gen3x4 2280 内蔵SSD</td>
         <td>112990226</td>
       </tr>
       <tr>
@@ -810,7 +810,7 @@ reComputer Industrial R2000は豊富な拡張モジュールとアクセサリ�
       <tr>
         <td></td>
         <td>UPS</td>
-        <td>SuperCAP UPS LTC3350モジュール</td>
+        <td>SuperCAP UPS LTC3350 モジュール</td>
         <td>110992004</td>
       </tr>
     </tbody>
@@ -846,7 +846,7 @@ Mini-PCIeスロットは、USBおよびSPIプロトコルを使用するLoRa®�
 
 ### Zigbeeモジュール
 
-Mini-PCIeスロットは、USBプロトコルを利用するZigbeeモジュールをサポートし、互換性のあるデバイスにZigbee機能をシームレスに統合できます。この機能により、Zigbeeネットワーク内での効率的な通信と制御が可能になり、システムの汎用性と接続性が向上します。ZigbeeモジュールにMini-PCIeスロットが利用できることで、ユーザーは信頼性を向上させるための多様なアプリケーションを実装する柔軟性を持てます。
+Mini-PCIeスロットは、USBプロトコルを利用するZigbeeモジュールをサポートし、互換性のあるデバイスへのZigbee機能のシームレスな統合を可能にします。この機能により、Zigbeeネットワーク内での効率的な通信と制御が可能になり、システムの汎用性と接続性が向上します。ZigbeeモジュールにMini-PCIeスロットが利用できることで、ユーザーは信頼性向上のための多様なアプリケーションを実装する柔軟性を持てます。
 
 > 注意  
 > Zigbee機能が必要な場合は、対応するZigbeeモジュールと外部アンテナを購入し、セクション4.5「4G/LoRa®/Zigbeeモジュールとアンテナの組み立て」の指示に従う必要があります。
@@ -863,8 +863,8 @@ reComputer Industrial R2000は、PCIeスロット（J7）を使用して2280 NVM
 > SSDカードには主に2つの用途があります：
 >
 > 1. **大容量ストレージ：** SSDカードは大容量ストレージのニーズに利用できます。
-> 2. **イメージ付きブートドライブ：** もう一つの用途は、SSDを大容量ストレージとシステムイメージの保存の両方に使用し、SSDカードから直接起動できるようにすることです。
-> 市場で入手可能なすべてのSSDカードが2番目の用途をサポートしているわけではないことに注意することが重要です。したがって、ブートドライブとして使用する予定で、どのモデルを購入すべきか不明な場合は、推奨する1TB SSD（SKU 112990267）を選択することをお勧めします。このモデルはブート機能についてテストおよび検証されており、互換性の問題のリスクを軽減し、試行錯誤のコストを最小限に抑えます。
+> 2. **イメージ付きブートドライブ：** もう一つの用途は、SSDを大容量ストレージとシステムイメージの保存の両方に使用し、SSDカードから直接ブートできるようにすることです。
+> 市場で入手可能なすべてのSSDカードが2番目の用途をサポートしているわけではないことに注意することが重要です。したがって、ブートドライブとして使用する予定で、どのモデルを購入すべきか不明な場合は、推奨する1TB SSD（SKU 112990267）を選択することをお勧めします。このモデルはブート機能についてテストおよび検証済みで、互換性の問題のリスクを軽減し、試行錯誤のコストを最小限に抑えます。
 
 ### 暗号化チップ TPM 2.0
 
@@ -880,7 +880,7 @@ UPSによって提供されるバックアップ時間は、システム負荷�
 | **動作モード** | **時間（秒）**  | **備考**          |
 |-----------------------|------------------------------|---------------------|
 | アイドル                  | 15           | 公式ドライバープログラムがロードされたアイドル状態でのテスト  |
-| CPUフル負荷      | 6            | stress -c 4 -t 10m -v &       |
+| CPU フル負荷      | 6            | stress -c 4 -t 10m -v &       |
 
 :::note
 UPS機能については詳細情報をお問い合わせください。アラーム信号はアクティブLOWです。
@@ -892,7 +892,7 @@ UPS機能については詳細情報をお問い合わせください。アラ�
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
