@@ -50,7 +50,7 @@ La placa portadora J401 es una potente placa de extensión que soporta módulos 
       <td>Jetson Orin NX 16GB</td>
     </tr>
     <tr>
-      <td>Rendimiento IA</td>
+      <td>Rendimiento de IA</td>
       <td>20 TOPS</td>
       <td>40 TOPS</td>
       <td>70 TOPS</td>
@@ -63,7 +63,7 @@ La placa portadora J401 es una potente placa de extensión que soporta módulos 
       <td colSpan={2}>GPU de arquitectura NVIDIA Ampere de 1024 núcleos con 32 Tensor Cores</td>
     </tr>
     <tr>
-      <td>Frecuencia Máxima GPU</td>
+      <td>Frecuencia Máxima de GPU</td>
       <td colSpan={2}>625 MHz</td>
       <td>765 MHz</td>
       <td>918 MHz</td>
@@ -75,7 +75,7 @@ La placa portadora J401 es una potente placa de extensión que soporta módulos 
       <td>CPU de 8 núcleos Arm® Cortex®-A78AE v8.2 de 64 bits 2MB L2 + 4MB L3</td>
     </tr>
     <tr>
-      <td>Frecuencia Máxima CPU</td>
+      <td>Frecuencia Máxima de CPU</td>
       <td colSpan={2}>1.5 GHz</td>
       <td colSpan={2}>2 GHz</td>
     </tr>
@@ -93,7 +93,7 @@ La placa portadora J401 es una potente placa de extensión que soporta módulos 
       <td>2x NVDLA v2</td>
     </tr>
     <tr>
-      <td>Frecuencia Máxima DLA</td>
+      <td>Frecuencia Máxima de DLA</td>
       <td colSpan={2}>/</td>
       <td colSpan={2}>614 MHz</td>
     </tr>
@@ -108,7 +108,7 @@ La placa portadora J401 es una potente placa de extensión que soporta módulos 
     </tr>
     <tr>
       <td>Codificador de Video</td>
-      <td colSpan={2}>1080p30 soportado por 1-2 núcleos CPU</td>
+      <td colSpan={2}>1080p30 soportado por 1-2 núcleos de CPU</td>
       <td colSpan={2}>1x 4K60 (H.265) | 3x 4K30 (H.265)<br />6x 1080p60 (H.265) | 12x 1080p30 (H.265)</td>
     </tr>
     <tr>
@@ -205,8 +205,8 @@ Por favor consulta la tabla a continuación para preparar la máquina host.
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-        <td  rowspan="2"> Versión JetPack </td>
-        <td class="dbon" colspan="3"> Versión Ubuntu (Computadora Host) </td>
+        <td  rowspan="2"> Versión de JetPack </td>
+        <td class="dbon" colspan="3"> Versión de Ubuntu (Computadora Host) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -407,7 +407,7 @@ Verás la siguiente salida si el proceso de flasheo es exitoso
 Ahora, puedes conectar el ratón, teclado y monitor al dispositivo Jetson. ¡Estará listo para usar!
 
 :::tip
-Si tu dispositivo Jetson tarda mucho tiempo en abrir el escritorio, por favor reconecta la fuente de alimentación.
+Si tu dispositivo Jetson toma mucho tiempo en abrir el escritorio, por favor reconecta la fuente de alimentación.
 :::
 
 **Paso 5 (Opcional):** Instalar Nvidia Jetpack SDK
@@ -457,7 +457,7 @@ tfc {
     };
 ```
 
-**Paso 5 (Opcional):** Navega al directorio **"Linux_for_Tegra"**, e ingresa el comando a continuación para configurar tu nombre de usuario, contraseña y nombre de host para que no necesites ingresar al asistente de instalación de Ubuntu después de que el dispositivo termine de arrancar
+**Paso 5 (Opcional):** Navega al directorio **"Linux_for_Tegra"**, e ingresa el comando de abajo para configurar tu nombre de usuario, contraseña y nombre de host para que no necesites ingresar al asistente de instalación de Ubuntu después de que el dispositivo termine de arrancar
 
 ```sh
 cd Linux_for_Tegra
@@ -486,7 +486,7 @@ Verás la siguiente salida si el proceso de flasheo es exitoso
 Ahora, puedes conectar el ratón, teclado y monitor al dispositivo Jetson. ¡Estará listo para usar!
 
 :::tip
-Si tu dispositivo Jetson tarda mucho tiempo en abrir el escritorio, por favor reconecta la fuente de alimentación.
+Si tu dispositivo Jetson toma mucho tiempo en abrir el escritorio, por favor reconecta la fuente de alimentación.
 :::
 
 **Paso 7 (Opcional):** Instalar Nvidia Jetpack SDK
@@ -712,30 +712,30 @@ Aquí usaremos NVIDIA L4T 36.4 para instalar Jetpack 6.1 en el reComputer
     <tr>
       <td>Orin NX 16GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWCZOBNb9C9AoZe-mt23jLABZk942Lf0yopVGFJFTeL5DA?e=o7epES" target="_blank" rel="noopener noreferrer">Descargar</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQBCmNhy0cVJrxa6JEeiNb8BEXIDh3sToFvsxPMxZAo_ag?e=DYdE5M" target="_blank" rel="noopener noreferrer">Descargar</a>
       </td>
-      <td> 3e53f484eb41a2d81f01ba2a0512a3c13d86d90f646207a488eaf77ae0cd5d69 </td>
+      <td> 202cc35f5d7586ea18b4a67ae0542b9bf023e6c4be7414a8447b112fa93f1c17 </td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcvDRK7qgWhGty_H-P7yHZ8Bob3v9AEs_vFVd-zOC3WX5w?e=FmlfjD" target="_blank" rel="noopener noreferrer">Descargar</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EbiJ_2X2oxdNlDolexNVBisBNjdcjGv6rChPuSzhyjvWmg?e=1prjU9" target="_blank" rel="noopener noreferrer">Descargar</a>
       </td>
-      <td> fc22a3d1669eb311cf237b8f4252896bfb71ff860c14f7a502c60fda5439d99d </td>
+      <td> 8b4d210a39db394c00862c008012059cf9d59cec17fc235d26623549b94645be </td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EeO8T8kNkpZGl9W2QfmnKYQBeXB8-M88aZWLMvPP7uARcA?e=fBuClA" target="_blank" rel="noopener noreferrer">Descargar</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EejFgIlZQ2xMjaEokzQKmmgBxjeYX6Xpj69I8_gMTa_lCw?e=3L00Lr" target="_blank" rel="noopener noreferrer">Descargar</a>
       </td>
-      <td> c2e48b41d284e4c98a2bc3409f1a1d09c61e4b60d6a5bdec3a33d084560a3bba </td>
+      <td> d3a4b0db20b373054e40814703b5f3a4b9565d28ebd59a5128b74f8d210e75b8 </td>
     </tr>
     <tr>
       <td>Orin Nano 4GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EY01pL5oq0FAmavoRY_p9DMBj4t-LHzRtEAh1UBQen3S3g?e=jUfauO" target="_blank" rel="noopener noreferrer">Descargar</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EbtcrNp6XlRPvznQVNOxqY0BHesCu5bUslUVzbaYCPd44g?e=EdPStQ" target="_blank" rel="noopener noreferrer">Descargar</a>
       </td>
-      <td> b9e4f5889a66d055d967884980aee6357316acb562c4d713ef2fdb21f4644788 </td>
+      <td> f0efee5f265dbaef49dc14d517b269e7f6582ff9977d9193d377966f36408ec3 </td>
     </tr>
   </tbody>
 </table>

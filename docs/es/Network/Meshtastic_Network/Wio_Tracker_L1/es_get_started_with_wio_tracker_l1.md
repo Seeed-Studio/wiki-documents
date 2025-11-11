@@ -10,6 +10,7 @@ last_update:
   date: 10/29/2025
   author: Michelle
 ---
+
 :::tip
 La Wio Tracker L1 Series comparte el mismo marco de hardware. Aunque la guía de video fue para el L1 Pro, es aplicable a todos los demás productos de la serie L1.
 :::
@@ -26,6 +27,10 @@ Al usar los modelos L1, L1 Lite o L1 E-Ink por primera vez, después de conectar
 
 
 ### Parte 2 Flasheo de Firmware
+
+:::caution note
+Por favor `no uses NRF-OTA` para actualizar el firmware, puede causar que el dispositivo quede completamente inoperativo.
+:::
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/hcjai4J1894?si=S_jaEfXVThWXscVJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -52,6 +57,10 @@ Al usar los modelos L1, L1 Lite o L1 E-Ink por primera vez, después de conectar
 ## Comenzar
 
 ### Flashear Firmware
+
+:::caution note
+Por favor `no uses NRF-OTA` para actualizar el firmware, puede causar que el dispositivo quede completamente inoperativo.
+:::
 
 Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
@@ -154,7 +163,7 @@ Puedes agregar sensores al dispositivo a través de la interfaz Grove. Los sigui
 <table>
   <tr>
     <th colspan="2">Tipo de sensor</th>
-    <th colspan="1">Modelo de sensor</th>
+    <th colspan="1">Modelo de Sensor</th>
   </tr>
   <tr>
     <td rowspan="4">Sensor Ambiental</td>
@@ -188,7 +197,7 @@ Puedes agregar sensores al dispositivo a través de la interfaz Grove. Los sigui
 
 ### Entrar al Modo DFU Manualmente
 
-Conecta el dispositivo a tu PC, presiona dos veces el botón `Reset`. El LED amarillo permanecerá sólido, y aparecerá una nueva unidad USB llamada `Tracker L1` en tu PC.
+Conecta el dispositivo a tu PC, presiona dos veces el botón `Reset`. El LED amarillo permanecerá encendido fijo, y aparecerá una nueva unidad USB llamada `Tracker L1` en tu PC.
 
 ### Salir del Modo DFU
 
@@ -196,9 +205,9 @@ Presiona el botón `Reset` una vez para salir del modo DFU.
 
 ### Calidad de Señal
 
-- **SNR** refleja la calidad del enlace de comunicación. Los dispositivos normales usualmente operan por encima de -7 dB. Un dispositivo con un SNR menor a -10 dB indica un rendimiento pobre.
+- **SNR** refleja la calidad del enlace de comunicación. Los dispositivos normales usualmente operan por encima de -7 dB. Un dispositivo con un SNR menor a -10 dB indica un rendimiento deficiente.
 
-- **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. Los dispositivos normales usualmente operan por encima de -110 dBm. Un dispositivo con un RSSI menor a -115 dBm se considera que tiene un rendimiento pobre.
+- **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. Los dispositivos normales usualmente operan por encima de -110 dBm. Un dispositivo con un RSSI menor a -115 dBm se considera que tiene un rendimiento deficiente.
 
       Para lograr el mejor efecto de señal, por favor usa el dispositivo en un área abierta y sin obstrucciones con interferencia mínima.
 ## Recursos
