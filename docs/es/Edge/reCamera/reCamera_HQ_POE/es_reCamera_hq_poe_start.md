@@ -34,6 +34,19 @@ Esta guía te ayudará a configurar rápidamente tu dispositivo y comenzar a usa
 
 ## Desempaquetado
 
+Comienza desempaquetando tu reCamera. Dentro de la caja, deberías encontrar:
+
+- reCamera PoE 64GB
+- Tapa de Lente
+- Cable Type-C
+- Manual de Instrucciones
+- Cable Ethernet (RJ45 a MX1.25-5P)
+- Cable de Conexión (MX1.25-6P a jumper 6P)
+
+Asegúrate de que todas las partes estén incluidas.
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/part_list2.jpg" /></div>
+
 ### Configurar dispositivo e iniciar sesión
 
 **Paso 1:** Conecta el cable USB desde reCamera HQ POE a tu PC. Navega a `192.168.42.1` en el sitio web y cambia la contraseña predeterminada. Si estás usando Ethernet POE, accede consultando la dirección IP asignada desde tu router.
@@ -92,8 +105,8 @@ Lo siguiente enumera los puertos utilizados por reCamera Gimbal:
 - **Puerto 53**: Asociado con la resolución de nombres de dominio DNS y es esencial para la redirección web. Está abierto por defecto.
 - **Puerto 80**: Sirve como la interfaz del panel web para la visualización HTTP de la Aplicación Node-RED.
 - **Puerto 554**: Empleado para transmisión de video RTSP.
-- **Puerto 9090**: Destinado para acceso de terminal web, que requiere una contraseña para iniciar sesión.
-- **Puerto 1880**: Dedicado a las operaciones de Node-RED.
+- **Puerto 9090**: Destinado para acceso a terminal web, que requiere una contraseña para iniciar sesión.
+- **Puerto 1880**: Dedicado a operaciones Node-RED.
 
 ## Actualización OTA del SO
 
@@ -101,7 +114,7 @@ Por favor consulta las [Instrucciones de Actualización OTA](https://wiki.seeeds
 
 ## Restablecimiento de Fábrica
 
-
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/interface.jpg" /></div>
 
 Si deseas restablecer el dispositivo, como olvidar el código de acceso de tu dispositivo, puedes mantener presionado el botón **User** y luego conectar el dispositivo a la energía. Cuando la `luz roja` del dispositivo esté **constantemente encendida** en lugar de parpadeando, suelta el botón User.
 
@@ -111,7 +124,7 @@ Si deseas restablecer el dispositivo, como olvidar el código de acceso de tu di
 
 ## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
