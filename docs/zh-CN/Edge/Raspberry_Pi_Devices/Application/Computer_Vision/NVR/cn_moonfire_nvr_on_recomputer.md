@@ -5,7 +5,7 @@ keywords:
   - reComputer
   - moonfire
   - NVR
-image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/result.webp
+image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/zoneminder/zone_m.webp
 slug: /cn/moonfire_nvr_on_recomputer
 last_update:
   date: 11/05/2025
