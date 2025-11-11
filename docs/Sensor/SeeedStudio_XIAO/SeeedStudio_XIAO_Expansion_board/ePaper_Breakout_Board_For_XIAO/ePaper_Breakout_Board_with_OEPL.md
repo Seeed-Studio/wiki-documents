@@ -124,7 +124,7 @@ If you want to save the configuration you have set, you can export it as a `.bin
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Package_import_1.png" style={{width:700, height:'auto'}}/></div>
 
-After setting the configuration, you can upload it to the MCU by using the **Write Config" function.
+After setting the configuration, you can upload it to the MCU by using the **Write Config** function.
 
 ## Usage of the OEPL Image Uploader
 
