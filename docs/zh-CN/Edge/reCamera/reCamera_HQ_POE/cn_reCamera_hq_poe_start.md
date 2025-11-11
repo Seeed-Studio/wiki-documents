@@ -9,7 +9,7 @@ keywords:
   - HQ
   - M12
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /cn/recamera_hd_poe_getting_started
+slug: /cn/recamera_hq_poe_getting_started
 sidebar_position: 1
 last_update:
   date: 09/25/2025
@@ -22,7 +22,7 @@ last_update:
 
 ## 简介
 
-欢迎使用 reCamera HQ POE！reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰、更锐利的图像。它具有 M12 镜头接口——可以灵活地将默认镜头替换为任何兼容的 2MP M12 镜头。还支持 PoE（以太网供电）：无需单独的 USB/DC 电源，只需一根以太网线连接到 PoE 交换机即可实现供电和数据传输。
+欢迎使用 reCamera HQ POE！reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰、更锐利的图像。它具有 M12 镜头接口——可以灵活地将默认镜头更换为任何兼容的 2MP M12 镜头。还支持 PoE（以太网供电）：无需单独的 USB/DC 电源，只需一根以太网线连接到 PoE 交换机即可同时提供电源和数据传输。
 
 本指南将帮助您快速设置设备并开始使用它来解锁强大的 AI 视觉功能。无论您是初学者还是经验丰富的用户，这个分步指南都将引导您完成安装、配置和首次使用。
 
@@ -33,6 +33,19 @@ last_update:
 </div>
 
 ## 开箱
+
+首先拆开您的 reCamera 包装。在包装盒内，您应该找到：
+
+- reCamera PoE 64GB
+- 镜头盖
+- Type-C 数据线
+- 说明手册
+- 以太网线（RJ45 转 MX1.25-5P）
+- 连接线（MX1.25-6P 转跳线 6P）
+
+确保所有部件都包含在内。
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/part_list2.jpg" /></div>
 
 ### 设置设备并登录
 
@@ -67,10 +80,10 @@ last_update:
 
 ## 应用云管理和备份
 
-如果您想创建新应用程序或将应用程序保存到 SenseCraft 云服务，您可以在左下角登录 sensecraft 账户，然后点击 + 图标来添加新应用程序。然后您就可以开始处理您的流程。
+如果您想创建新应用程序或将应用程序保存到 SenseCraft 云服务，您可以在左下角登录 sensecraft 账户，然后点击 + 图标来添加新应用程序。然后您就可以开始处理您的流程了。
 
 
-如果您想创建新应用程序或将应用程序保存到 SenseCraft 云服务，您可以在左下角登录 sensecraft 账户，然后点击 `+` 图标来添加新应用程序。然后您就可以开始处理您的流程。
+如果您想创建新应用程序或将应用程序保存到 SenseCraft 云服务，您可以在左下角登录 sensecraft 账户，然后点击 `+` 图标来添加新应用程序。然后您就可以开始处理您的流程了。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/Gimbal_7.png" /></div>
 
@@ -90,8 +103,8 @@ last_update:
 
 - **端口 22**：用于远程 SSH 登录，已关闭。
 - **端口 53**：与 DNS 域名解析相关，对网页重定向至关重要。默认开启。
-- **端口 80**：作为网页仪表板界面，用于 HTTP 显示 Node-RED 应用程序。
-- **端口 554**：用于 RTSP 视频流。
+- **端口 80**：作为 Node-RED 应用程序 HTTP 显示的网页仪表板界面。
+- **端口 554**：用于 RTSP 视频流传输。
 - **端口 9090**：用于网页终端访问，需要密码登录。
 - **端口 1880**：专用于 Node-RED 操作。
 
@@ -101,7 +114,7 @@ last_update:
 
 ## 恢复出厂设置
 
-
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/interface2.png" /></div>
 
 如果您想重置设备（例如忘记设备密码），您可以长按 **User** 按钮，然后将设备连接到电源。当设备的 `红灯` **常亮** 而不是闪烁时，松开 User 按钮。
 

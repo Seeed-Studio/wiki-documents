@@ -9,7 +9,7 @@ keywords:
   - HQ
   - M12
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /ja/recamera_hd_poe_getting_started
+slug: /ja/recamera_hq_poe_getting_started
 sidebar_position: 1
 last_update:
   date: 09/25/2025
@@ -24,7 +24,7 @@ last_update:
 
 reCamera HQ POE へようこそ！reCamera 2002 HQ PoE は、より鮮明でクリアな画像を実現する高度な CMOS センサーを搭載しています。M12 レンズマウントを採用しており、デフォルトレンズを互換性のある 2MP M12 レンズに柔軟に交換できます。また、PoE（Power over Ethernet）をサポートしており、別途 USB/DC 電源は不要で、PoE スイッチへの Ethernet ケーブル 1 本で電源とデータの両方を供給できます。
 
-このガイドでは、デバイスを素早くセットアップし、強力な AI-Vision 機能を活用するための使用方法をご案内します。初心者の方でも経験豊富なユーザーの方でも、このステップバイステップのウォークスルーが、インストール、設定、初回使用をガイドします。
+このガイドでは、デバイスを素早くセットアップし、強力な AI-Vision 機能を活用するための使用開始方法をご案内します。初心者の方でも経験豊富なユーザーの方でも、このステップバイステップのウォークスルーが、インストール、設定、初回使用をガイドします。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002-HQ-PoE-64GB-p-6557.html" target="_blank">
@@ -34,6 +34,19 @@ reCamera HQ POE へようこそ！reCamera 2002 HQ PoE は、より鮮明でク�
 
 ## 開封
 
+reCamera を開封することから始めましょう。箱の中には以下が含まれているはずです：
+
+- reCamera PoE 64GB
+- レンズキャップ
+- Type-C ケーブル
+- 取扱説明書
+- Ethernet ケーブル（RJ45 to MX1.25-5P）
+- 接続ケーブル（MX1.25-6P to ジャンパー 6P）
+
+すべての部品が含まれていることを確認してください。
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/part_list2.jpg" /></div>
+
 ### デバイスのセットアップとログイン
 
 **ステップ1:** reCamera HQ POE から PC に USB ケーブルを接続します。ウェブサイトで `192.168.42.1` にアクセスし、デフォルトパスワードを変更してください。POE Ethernet を使用している場合は、ルーターから割り当てられた IP アドレスを確認してアクセスしてください。
@@ -42,23 +55,23 @@ reCamera HQ POE へようこそ！reCamera 2002 HQ PoE は、より鮮明でク�
 
 ウェブ URL：
 
-- プレビューページ: ip_address/#/dashboard
+- プレビューページ：ip_address/#/dashboard
 
-- ホームページ: ip_address/#/init
+- ホームページ：ip_address/#/init
 
-- ワークスペース: ip_address/#/workspace
+- ワークスペース：ip_address/#/workspace
 
-- ネットワーク設定: ip_address/#/network
+- ネットワーク設定：ip_address/#/network
 
-- セキュリティ: ip_address/#/security
+- セキュリティ：ip_address/#/security
 
-- ターミナル: ip_address/#/terminal
+- ターミナル：ip_address/#/terminal
 
-- システム: ip_address/#/system
+- システム：ip_address/#/system
 
-- 電源: ip_address/#/power
+- 電源：ip_address/#/power
 
-- オリジナル Node-RED: ip_address:1880
+- オリジナル Node-RED：ip_address:1880
 
 ### reCamera HQ POE ダッシュボードでのクイックスタート
 
@@ -88,20 +101,20 @@ reCamera HQ POE へようこそ！reCamera 2002 HQ PoE は、より鮮明でク�
 
 以下は reCamera Gimbal で使用されるポートの一覧です：
 
-- **ポート 22**: リモート SSH ログインに使用され、閉じられています。
-- **ポート 53**: DNS ドメイン名解決に関連し、ウェブリダイレクションに必須です。デフォルトで開いています。
-- **ポート 80**: Node-RED アプリケーションの HTTP 表示用ウェブダッシュボードインターフェースとして機能します。
-- **ポート 554**: RTSP ビデオストリーミングに使用されます。
-- **ポート 9090**: ウェブターミナルアクセス用で、ログインにはパスワードが必要です。
-- **ポート 1880**: Node-RED 操作専用です。
+- **ポート 22**：リモート SSH ログインに使用され、閉じられています。
+- **ポート 53**：DNS ドメイン名解決に関連し、ウェブリダイレクションに必要です。デフォルトで開いています。
+- **ポート 80**：Node-RED アプリケーションの HTTP 表示用ウェブダッシュボードインターフェースとして機能します。
+- **ポート 554**：RTSP ビデオストリーミングに使用されます。
+- **ポート 9090**：ウェブターミナルアクセス用で、ログインにはパスワードが必要です。
+- **ポート 1880**：Node-RED 操作専用です。
 
 ## OTA OS アップグレード
 
 [OTA アップグレード手順](https://wiki.seeedstudio.com/ja/recamera_getting_started/#ota-upgrade-from-013-to-latest-version)を参照してください。
 
-## 工場出荷時リセット
+## ファクトリーリセット
 
-
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/interface2.png" /></div>
 
 デバイスのパスコードを忘れた場合などでデバイスをリセットしたい場合は、**User** ボタンを長押ししながらデバイスを電源に接続してください。デバイスの `赤いライト` が点滅ではなく **常時点灯** になったら、User ボタンを離してください。
 
@@ -111,7 +124,7 @@ reCamera HQ POE へようこそ！reCamera 2002 HQ PoE は、より鮮明でク�
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
