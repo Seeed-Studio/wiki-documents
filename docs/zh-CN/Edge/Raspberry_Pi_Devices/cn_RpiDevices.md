@@ -9,6 +9,8 @@ keywords:
 - reTerminal
 - reTerminal DM
 - reRouter
+- Raspberry Pi Compatible
+- Respberry Pi Original
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/raspberry-pi-devices
 last_update:
@@ -18,7 +20,7 @@ last_update:
 
 ## 简介
 
-欢迎来到 Edge Solution 基于 Raspberry Pi 的前沿设备世界。在这里，我们探索由 Seeed Studio 为边缘计算精心打造的创新解决方案，专门针对 Raspberry Pi CM4/CM5 和 Raspberry Pi 4/5 量身定制。这些可定制设备包括人机界面（HMI）单元、多功能边缘控制器和 AI 套件盒。加入我们，踏上探索这些强大设备复杂景观的旅程，它们旨在通过无缝高效的边缘计算能力增强您的项目。
+欢迎来到 Edge Solution 基于 Raspberry Pi 的设备前沿世界。在这里，我们探索由 Seeed Studio 为边缘计算精心打造的创新解决方案，专门为 Raspberry Pi CM4/CM5 和 Raspberry Pi 4/5 量身定制。这些可定制设备包括人机界面（HMI）单元、多功能边缘控制器和 AI 套件盒。加入我们，踏上探索这些强大设备复杂景观的旅程，它们旨在通过无缝高效的边缘计算能力增强您的项目。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/respberry_pi_all.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -31,7 +33,7 @@ Seeed Studio **reComputer Industrial R & AI R 系列** – 为 IIoT 和智能自
 
 由高性能 **Raspberry Pi 5 / Compute Module 5** 驱动，配备 **Hailo-8 AI 加速器**，reComputer Industrial R 和 AI R 产品线提供高达 **26 TOPS** 的计算能力，用于边缘实时多流视觉分析和深度学习推理。
 
-工业级连接性标配：双千兆以太网、隔离 **RS-485/RS-232、多通道 DI/DO，以及 M.2 和 mini-PCIe 插槽，让您可以在几秒钟内插入 4G/5G、LoRa® 或 NVMe SSD**。无风扇全金属机箱保证在 **–20 °C 至 60 °C** 范围内静音、防尘运行，而硬件看门狗和可选 UPS 超级电容器确保关键任务 24/7 持续运行。
+工业级连接标配：双千兆以太网、隔离 **RS-485/RS-232、多通道 DI/DO，以及 M.2 和 mini-PCIe 插槽，让您可以在几秒钟内插入 4G/5G、LoRa® 或 NVMe SSD**。无风扇全金属机箱保证在 **–20 °C 至 60 °C** 范围内静音、防尘运行，而硬件看门狗和可选 UPS 超级电容器确保关键任务 24/7 持续运行。
 
 支持 DIN 导轨或壁挂安装，reComputer R 系列可轻松集成到**智能建筑、工业 4.0 机器视觉单元、远程资产控制柜**和分布式视频分析网络中——在行动发生的地方转换协议、收集数据并运行 AI 模型。
 
@@ -118,7 +120,7 @@ Seeed Studio **reComputer Industrial R & AI R 系列** – 为 IIoT 和智能自
 
 ### 边缘控制器
 
-Seeed Studio 的 reComputer R 和 Edge Box 系列是为工业物联网和智能自动化设计的坚固边缘控制器。基于高性能 Raspberry Pi Compute Module（CM4/CM5）构建，它们提供四核 Arm 处理能力和高达 16 GB 内存。双千兆以太网（支持 PoE）、隔离 RS-485/RS-232，以及用于 4G/5G、LoRa® 或 NVMe SSD 的 M.2/mini-PCIe 插槽涵盖了所有 IIoT、协议网关和边缘 AI 需求。无风扇全金属外壳额定工作温度为 –30 °C 至 +70 °C，硬件看门狗和可选 UPS 超级电容器保证在恶劣环境中可靠的 24/7 运行。支持 DIN 导轨或壁挂安装，它们可轻松集成到智能建筑、能源管理系统和远程控制应用中。
+Seeed Studio 的 reComputer R 和 Edge Box 系列是为工业物联网和智能自动化设计的坚固边缘控制器。基于高性能 Raspberry Pi Compute Module（CM4/CM5）构建，它们提供四核 Arm 处理能力和高达 16 GB 内存。双千兆以太网（支持 PoE）、隔离 RS-485/RS-232，以及用于 4G/5G、LoRa® 或 NVMe SSD 的 M.2/mini-PCIe 插槽，满足所有 IIoT、协议网关和边缘 AI 需求。无风扇全金属外壳额定工作温度为 –30 °C 至 +70 °C，硬件看门狗和可选 UPS 超级电容器确保在恶劣环境中可靠的 24/7 运行。支持 DIN 导轨或壁挂安装，它们可轻松集成到智能建筑、能源管理系统和远程控制应用中。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/Edge_Controllers.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -270,7 +272,7 @@ Raspberry Pi（又称"RPi"）最初由一个非营利组织设计和创建，旨
 
 ### Raspberry Pi 兼容产品
 
-在 Seeed Studio，我们提供全面的 Raspberry Pi 兼容板生态系统、互补配件和入门套件，让您能够围绕这个平台创建多样化的项目。此外，我们在 Seeed 的 Raspberry Pi 社区中开发了众多教程，您可以轻松找到参考和指导来构建自己的电路或编写定制应用程序。
+在 Seeed Studio，我们提供全面的 Raspberry Pi 兼容板生态系统、互补配件和入门套件，让您能够创建以该平台为中心的多样化项目。此外，我们在 Seeed 的 Raspberry Pi 社区中开发了众多教程，您可以轻松找到参考和指导来构建自己的电路或编写定制应用程序。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/Raspberry_Pi_Compatible.jpg" style={{width:1000, height:'auto'}}/></div>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -526,13 +528,13 @@ Google 的轻量级框架，用于在移动设备和边缘设备上运行机器�
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/poes_estimation_batch8.png" style={{width:200, height:'auto'}}/></td>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/Object_detection.gif" style={{width:400, height:'auto'}}/></td>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/gun_detection_gif.gif" style={{width:350, height:'auto'}}/></td>
-        <td><img src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png" style={{width:250, height:'auto'}}/></td>
+        <td><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/HA_interface.PNG" style={{width:250, height:150}}/></td>
       </tr>
       <tr>
         <td><a href="https://wiki.seeedstudio.com/cn/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit/"><strong>📚 了解更多</strong></a></td>
         <td><a href="https://wiki.seeedstudio.com/cn/yolov8_on_ai_box_for_fall_climbing_tracking/"><strong>📚 了解更多</strong></a></td>
-        <td><a href="https://wiki.seeedstudio.com/cn/reComputer_r1000_fin_equip_gaphic/"><strong>📚 了解更多</strong></a></td>
-        <td ><a href="get_one_now_item" href="https://wiki.seeedstudio.com/cn/recomputer_r1000_aws/"><strong>📚 了解更多</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/cn/gun_detection_with_frigate_nvr_on_r2000/"><strong>📚 了解更多</strong></a></td>
+        <td ><a href="https://wiki.seeedstudio.com/cn/r2000_series_frigate_and_home_assistant/"><strong>📚 了解更多</strong></a></td>
       </tr>
     </tbody>
   </table>
@@ -543,7 +545,7 @@ Google 的轻量级框架，用于在移动设备和边缘设备上运行机器�
     <thead>
       <tr>
         <th>在 reComputer 上使用 Zoneminder</th>
-        <th>在带有 AI Kit 的 Raspberry Pi 上的 Clip 应用</th>
+        <th>在带有 AI Kit 的 Raspberry Pi 上使用 Clip 应用</th>
         <th>使用 reComputer AI box 进行实时 OCR</th>
         <th>AI Kit 与 Raspberry Pi 5 关于 YOLOv8n 目标检测的教程</th>
       </tr>

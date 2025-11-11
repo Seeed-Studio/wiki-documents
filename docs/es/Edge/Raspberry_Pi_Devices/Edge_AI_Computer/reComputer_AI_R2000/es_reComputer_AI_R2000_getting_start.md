@@ -1,6 +1,6 @@
 ---
-description: reComputer AI R2000 es una potente Computadora de IA de Borde basada en Raspberry Pi 5. Con procesador quad-core Arm Cortex-A76, 8GB de RAM, soporte para M.2 SSD, y un módulo de aceleración de IA Hailo-8 que proporciona hasta 26 TOPS, habilitando inferencia de IA en tiempo real, de baja latencia y alta eficiencia. Es la elección perfecta para una amplia gama de aplicaciones de IA, incluyendo análisis de video con IA, visión artificial y computación inteligente de borde.
-title: Comenzando con la Serie reComputer AI R2000
+description: reComputer AI R2000 es una potente computadora Edge AI basada en Raspberry Pi 5. Con procesador quad-core Arm Cortex-A76, 8GB de RAM, soporte para M.2 SSD, y un módulo de aceleración AI Hailo-8 que proporciona hasta 26 TOPS, habilitando inferencia AI en tiempo real, de baja latencia y alta eficiencia. Es la elección perfecta para una amplia gama de aplicaciones AI, incluyendo análisis de video con AI, visión artificial y computación inteligente en el borde.
+title: Introducción a la Serie reComputer AI R2000
 keywords:
 - Raspberry pi
 - Edge AI Computer
@@ -20,7 +20,7 @@ last_update:
     </a>
 </div>
 
-La serie reComputer AI R2000 es una potente Computadora de IA de Borde basada en Raspberry Pi 5. Con procesador quad-core Arm Cortex-A76, 8GB de RAM, soporte para M.2 SSD, y un módulo de aceleración de IA Hailo-8 que proporciona hasta 26 TOPS, habilitando inferencia de IA en tiempo real, de baja latencia y alta eficiencia. Es la elección perfecta para una amplia gama de aplicaciones de IA, incluyendo análisis de video con IA, visión artificial y computación inteligente de borde.
+La serie reComputer AI R2000 es una potente computadora Edge AI basada en Raspberry Pi 5. Con procesador quad-core Arm Cortex-A76, 8GB de RAM, soporte para M.2 SSD, y un módulo de aceleración AI Hailo-8 que proporciona hasta 26 TOPS, habilitando inferencia AI en tiempo real, de baja latencia y alta eficiencia. Es la elección perfecta para una amplia gama de aplicaciones AI, incluyendo análisis de video con AI, visión artificial y computación inteligente en el borde.
 
 ## Características
 
@@ -28,11 +28,11 @@ La serie reComputer AI R2000 es una potente Computadora de IA de Borde basada en
 
 - **Rendimiento Potente**: Alimentado por Raspberry Pi 5 con CPU quad-core Cortex-A76, hasta 8GB de RAM.
 
-- **26 Tera-Operaciones Por Segundo**: Alimentado por el Acelerador de IA Hailo que ofrece Potencia de Cómputo Integrada de hasta 26 Tops.
+- **26 Tera-Operaciones Por Segundo**: Alimentado por el Acelerador AI Hailo que ofrece potencia de cómputo integrada de hasta 26 Tops.
 Interfaces Extensas: 2x HDMI 4Kp60, 1x Puerto Ethernet, 2x USB 3.0, 2x USB 2.0.
 
 - **Conectividad Inalámbrica**: Wi-Fi de banda dual y Bluetooth 5.0/BLE.
-Opciones de Almacenamiento Flexibles: El Slot dual M.2 PCIe2.0 soporta tanto acelerador de IA como almacenamiento SSD.
+Opciones de Almacenamiento Flexibles: El slot dual M.2 PCIe2.0 soporta tanto acelerador AI como almacenamiento SSD.
 
 ## Especificaciones
 
@@ -41,7 +41,7 @@ Opciones de Almacenamiento Flexibles: El Slot dual M.2 PCIe2.0 soporta tanto ace
 | **Especificación de Hardware**      |                                                                          |
 | **CPU**                | Raspberry Pi 5, 2.4GHz quad-core 64-bit Arm Cortex-A76                    |
 | **GPU**                | Raspberry Pi 5, VideoCore VII                                             |
-| **Procesador de IA**       | Módulo de Aceleración M.2 Hailo-8, 26 Tera-Operaciones Por Segundo           |
+| **Procesador AI**       | Módulo de Aceleración Hailo-8 M.2, 26 Tera-Operaciones Por Segundo           |
 | **RAM**                | 8GB SDRAM                                                                |
 | **Sistema Operativo**   | Raspberry Pi OS, Ubuntu                                                  |
 | **Especificación del Sistema**        |                                                                          |
@@ -51,8 +51,8 @@ Opciones de Almacenamiento Flexibles: El Slot dual M.2 PCIe2.0 soporta tanto ace
 | **Bluetooth**          | Bluetooth 5.0/ BLE                                                       |
 | **Botón de Encendido**       | Encendido/Apagado incluido                                                          |
 | **Interfaz**          |                                                                          |
-| **Almacenamiento**            | 1 x ranura para tarjeta microSD, con soporte para modo SDR104 de alta velocidad           |
-| **Slot M.2**           | 2 x Slot M.2, soporta M.2 NVMe SSD/Módulo de Aceleración M.2 Hailo        |
+| **Almacenamiento**            | 1 x slot para tarjeta microSD, con soporte para modo SDR104 de alta velocidad           |
+| **Slot M.2**           | 2 x Slot M.2, soporta M.2 NVMe SSD/Módulo de Aceleración Hailo M.2        |
 | **Puertos USB**          | 2 × puertos USB 3.0                                                        |
 |                       | 2 × puertos USB 2.0                                                        |
 | **Ethernet**           | 1 x 10/100/1000 Mbps                                                     |
@@ -70,18 +70,18 @@ Opciones de Almacenamiento Flexibles: El Slot dual M.2 PCIe2.0 soporta tanto ace
 
 ### Introducción al hardware
 
-[Hailo](https://hailo.ai/) ofrece procesadores de IA de vanguardia especialmente diseñados para aplicaciones de aprendizaje profundo de alto rendimiento en dispositivos edge. Las soluciones de la empresa se enfocan en habilitar la próxima era de IA generativa en el edge, junto con percepción y mejora de video, impulsadas por aceleradores de IA avanzados y procesadores de visión. Y el reComputer_R2000, equipado con el acelerador NPU Hailo-8 que proporciona 26 TOPs de rendimiento de IA, es capaz de lograr más de 200 FPS con YOLOv8s.
+[Hailo](https://hailo.ai/) ofrece procesadores AI de vanguardia especialmente diseñados para aplicaciones de aprendizaje profundo de alto rendimiento en dispositivos de borde. Las soluciones de la empresa se enfocan en habilitar la próxima era de AI generativa en el borde, junto con percepción y mejora de video, impulsadas por aceleradores AI avanzados y procesadores de visión. Y el reComputer_R2000, equipado con el acelerador NPU Hailo-8 que proporciona 26 TOPs de rendimiento AI, es capaz de lograr más de 200 FPS con YOLOv8s.
 
 ### Introducción al software
 
 ![](https://seeed-projects.github.io/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero/assets/images/architecture-2bfc6ed440e1add56388738e87558050.png)
 
-La Suite de Software de IA Hailo proporciona herramientas poderosas para ejecutar modelos de IA de manera eficiente en aceleradores de hardware. Está diseñada para integrarse sin problemas con marcos de aprendizaje profundo existentes, ofreciendo flujos de trabajo fluidos para desarrolladores. El proceso involucra generar un HEF (Archivo Binario Ejecutable Hailo) desde un archivo ONNX en el Entorno de Construcción de Modelos. Una vez creado, el archivo HEF se transfiere a la máquina de inferencia (Entorno de Tiempo de Ejecución), donde se usa para ejecutar inferencia con la API HailoRT. El script proporcionado facilita la conversión de un archivo ONNX en un archivo HEF dentro del Entorno de Construcción de Modelos.
+La Suite de Software AI de Hailo proporciona herramientas poderosas para ejecutar modelos AI de manera eficiente en aceleradores de hardware. Está diseñada para integrarse perfectamente con marcos de aprendizaje profundo existentes, ofreciendo flujos de trabajo fluidos para desarrolladores. El proceso involucra generar un HEF (Archivo Binario Ejecutable de Hailo) desde un archivo ONNX en el Entorno de Construcción de Modelos. Una vez creado, el archivo HEF se transfiere a la máquina de inferencia (Entorno de Tiempo de Ejecución), donde se usa para ejecutar inferencia con la API HailoRT. El script proporcionado facilita la conversión de un archivo ONNX en un archivo HEF dentro del Entorno de Construcción de Modelos.
 
 > **Nota:**
-> **Si quieres aprender más sobre ejemplos de uso de Hailo NPU, por favor haz clic en este [enlace](https://github.com/Seeed-Projects/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero).**
+> **Si quieres aprender más sobre ejemplos de uso del NPU Hailo, por favor haz clic en este [enlace](https://github.com/Seeed-Projects/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero).**
 
-## Descripción general del hardware
+## Descripción General del Hardware
 
 ![image1](https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image3_1.jpeg)
 ![image2](https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image4_1.jpeg)
@@ -98,7 +98,7 @@ La Suite de Software de IA Hailo proporciona herramientas poderosas para ejecuta
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **Paso 3.** Presiona **CTRL + SHIFT + X** en el teclado para abrir la ventana de **Opciones avanzadas**
+- **Paso 3.** Presiona **CTRL + SHIFT + X** en el teclado para abrir la ventana de **Advanced options**
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
@@ -106,13 +106,21 @@ La Suite de Software de IA Hailo proporciona herramientas poderosas para ejecuta
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**NOTA:** Puedes seleccionar otro SO como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
+**NOTA1:** Recomendamos flashear la imagen de **Raspberry Pi OS de 64 bits (Debian 12 Bookworm)** por ahora. El Raspberry Pi OS recién lanzado basado en Debian 13 "Trixie" aún no ha actualizado el paquete hailo-all, por lo que Bookworm te dará soporte completo de Hailo desde el inicio.
+Enlace de descarga [link](https://www.raspberrypi.com/software/operating-systems/).
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/OS.png" alt="pir" width="600" height="auto"/></p>
+Luego escríbelo en tu tarjeta SD usando el imager con la opción Use custom.
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/img.png" alt="pir" width="600" height="auto"/></p>
+
+Si aún quieres probar la imagen más reciente, **necesitarás instalar el software Hailo manualmente en lugar de usar la ruta de un comando hailo-all;** por favor sigue este [enlace](https://wiki.seeedstudio.com/es/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/#install-hailo-software).
+
+**NOTA2:** Puedes seleccionar otros SO como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
 O puedes usar este enlace para descargar el archivo de imagen:
 
-[Ubuntu para raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
 - **Paso 5.** Haz clic en **CHOOSE STORAGE**
 
@@ -135,7 +143,7 @@ Por favor abre una terminal y escribe ```brew -V``` para verificar si has config
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **Paso 3.** Presiona **CTRL + SHIFT + X** en el teclado para abrir la ventana de **Opciones avanzadas**
+- **Paso 3.** Presiona **CTRL + SHIFT + X** en el teclado para abrir la ventana de **Advanced options**
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
@@ -145,13 +153,13 @@ Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contr
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**NOTA:** Puedes seleccionar otro SO como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
+**NOTA:** Puedes seleccionar otros SO como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
 O puedes usar este enlace para descargar el archivo de imagen:
 
-[Ubuntu para raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
 - **Paso 5.** Haz clic en **CHOOSE STORAGE**
 
@@ -161,7 +169,7 @@ O puedes usar este enlace para descargar el archivo de imagen:
 
 ### Para computadora host Linux
 
-- **Paso 1.** Descarga snap
+- **Paso 1.** Descargar snap
 
 ```sh
 sudo apt install snap
@@ -182,33 +190,33 @@ rpi-imager
 El resultado se muestra a continuación:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/linux_interface.png" alt="pir" width="1000" height="auto"/></p>
 
-- **Paso 4.** Presiona **CTRL + SHIFT + X** en el teclado para abrir la ventana de **Opciones avanzadas**
+- **Paso 4.** Presiona **CTRL + SHIFT + X** en el teclado para abrir la ventana de **Advanced options**
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
 Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones locales** y más
 
-- **Paso 5.** Haz clic en **ELEGIR SO** y selecciona tu SO preferido
+- **Paso 5.** Haz clic en **CHOOSE OS** y selecciona tu SO preferido
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/system.png" /></div>
 
 <!-- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p> -->
 
-**NOTA:** Puedes seleccionar otro SO como **Ubuntu de 64 bits** navegando a **Otros SO de propósito general**
+**NOTA:** Puedes seleccionar otros SO como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
 O puedes usar este enlace para descargar el archivo de imagen:
 
-[Ubuntu para raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **Paso 6.** Haz clic en **ELEGIR ALMACENAMIENTO** y selecciona la unidad eMMC conectada
+- **Paso 6.** Haz clic en **CHOOSE STORAGE** y selecciona la unidad eMMC conectada
 
-- **Paso 7.** Finalmente, haz clic en **SIGUIENTE** y **SÍ**
+- **Paso 7.** Finalmente, haz clic en **NEXT** y **YES**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/next-yes.png" alt="pir" width="600" height="auto"/></p>
 
-Por favor espera unos minutos hasta que el proceso de grabación esté completo.
+Por favor espera unos minutos hasta que el proceso de flasheo esté completo.
 El resultado se muestra a continuación:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="600" height="auto"/></p>
 
@@ -216,9 +224,9 @@ El resultado se muestra a continuación:
 
 ### Actualizar EEPROM
 
-*Este método funciona si tienes una tarjeta SD y has arrancado el dispositivo exitosamente. Por favor asegúrate de que tu sistema sea el último sistema Raspberry Pi (Bookworm o posterior) y que tu firmware de RPi 5 esté actualizado al 2023-12-06 (6 de diciembre) o más reciente, de lo contrario puede que no reconozca las configuraciones relacionadas con NVME.*
+*Este método funciona si tienes una tarjeta SD y has arrancado el dispositivo exitosamente. Por favor asegúrate de que tu sistema sea el último sistema Raspberry Pi (Bookworm o posterior) y que tu firmware RPi 5 esté actualizado al 2023-12-06 (6 de diciembre) o más reciente, de lo contrario puede que no reconozca las configuraciones relacionadas con NVME.*
 
-**Paso 1**: Asegúrate de que tu sistema Raspberry Pi esté actualizado (Bookworm o posterior), ingresa el siguiente comando para actualizar el firmware de RPi 5:
+**Paso 1**: Asegúrate de que tu sistema Raspberry Pi esté actualizado (Bookworm o posterior), ingresa el siguiente comando para actualizar el firmware RPi 5:
 
 ```shell
   sudo apt update && sudo apt upgrade -y
@@ -249,7 +257,7 @@ Si se te pide reiniciar, selecciona `Yes`.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_6.png" alt="pir" width="700" height="auto" /></div>
 
-**Paso 2**：Haz clic en **Applications** =>**Accessories** =>**SD Card Copier** en la pantalla principal, ejecuta el programa **SD Card Copier**, y copia el SO al SSD NVME como se muestra en la figura a continuación.
+**Paso 2**: Haz clic en **Applications** =>**Accessories** =>**SD Card Copier** en la pantalla principal, ejecuta el programa **SD Card Copier**, y copia el SO al SSD NVME como se muestra en la figura a continuación.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/copy.gif" alt="pir" width="700" height="auto" /></div>
 
@@ -257,7 +265,7 @@ Si se te pide reiniciar, selecciona `Yes`.
 
 Si tienes fácil acceso a tu ranura de tarjeta SD podrías apagar tu Pi, sacar la tarjeta SD y (si todo funciona como se espera) debería arrancar automágicamente desde tu unidad NVMe la próxima vez que la inicies. Sin embargo, si quieres dejar la tarjeta SD donde está y aún así arrancar desde NVMe, necesitarás cambiar el orden de arranque.
 
-**Paso 1**:Ingresa el siguiente comando:
+**Paso 1**: Ingresa el siguiente comando:
 
 ```shell
   sudo raspi-config
@@ -286,13 +294,13 @@ Se te preguntará si quieres reiniciar ahora. Haz clic en `Yes`:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="700" height="auto" /></div>
 
-## Flashear ubuntu al NVME
+## Flashear ubuntu a NVME
 
 ### Primero: Actualizar EEPROM con tarjeta SD
 
 Por favor consulta este [enlace](https://wiki.seeedstudio.com/es/r2000_series_getting_start/#update-eeprom).
 
-Para establecer el orden de arranque NVMe como la máxima prioridad, usa el siguiente comando:
+Para establecer el orden de arranque NVMe como la prioridad más alta, usa el siguiente comando:
 
 ```
 sudo rpi-eeprom-config --edit
@@ -307,38 +315,38 @@ NET_INSTALL_AT_POWER_ON=1
 PCIE_PROBE=1
 ```
 
-Usa `Ctrl+X` e ingresa `y` para almacenar el resultado. Y el resultado es el siguiente:
+Usa `Ctrl+X` e ingresa `y` para guardar el resultado. Y el resultado es el siguiente:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/chang_eeprom.png" alt="pir" width="700" height="auto" /></div>
 
 ### Segundo: Grabar Ubuntu en el NVMe
 
-Abre Raspberry Pi Imager:
+Abrir Raspberry Pi Imager:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/flashos1.png" alt="pir" width="700" height="auto" /></div>
 
-Elige el SO Ubuntu:
+Elegir SO Ubuntu:
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/flashos2.png" alt="pir" width="700" height="auto" /></div>
 
-Finalmente, haz clic en `Next` y espera a que se complete el proceso de grabación.
+Finalmente, haz clic en `Next` y espera a que el proceso de flasheo se complete.
 
 ### Tercero: Reemplazar el archivo del SO
 
-Instala `pcie-fix.dtbo` con este [enlace](https://files.seeedstudio.com/wiki/reComputer-R2000/pcie-fix.dtbo)
+Instalar `pcie-fix.dtbo` con este [enlace](https://files.seeedstudio.com/wiki/reComputer-R2000/pcie-fix.dtbo)
 
-Copia pcie-fix.dtbo al archivo /overlays como se muestra a continuación:
+Copiar pcie-fix.dtbo al archivo /overlays como se muestra a continuación:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file1.png" alt="pir" width="700" height="auto" /></div>
 
-Modifica el `config.txt`, añade `dtoverlay=pcie-fix` al final del archivo como se muestra a continuación:
+Modificar el `config.txt`, agregar `dtoverlay=pcie-fix` al final del archivo como se muestra a continuación:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file2.png" alt="pir" width="700" height="auto" /></div>
 
-Y luego usa `Ctrl+X` e ingresa `y` para almacenar este archivo.
+Y luego usa `Ctrl+X` e ingresa `y` para guardar este archivo.
 
 ## Consumo de energía y temperatura
 
-:warning: **Nota:** El estado de espera se probó bajo las siguientes condiciones: la interfaz gráfica estaba deshabilitada, el Bluetooth estaba apagado y el Wi-Fi estaba deshabilitado. El comando se muestra a continuación:
+:warning: **Nota:** El estado de espera fue probado bajo las siguientes condiciones: la interfaz gráfica estaba deshabilitada, Bluetooth estaba apagado, y Wi-Fi estaba deshabilitado. El comando se muestra a continuación:
 
 ```
 sudo ifconfig wlan0 down
@@ -348,7 +356,7 @@ sudo systemctl stop lightdm
 
 | **Condición**        | **Consumo de energía** | **Temperatura** |
 |----------------------|----------------------|----------------------|
-|**Standby**|5.9w   |   cpu:46°C|
+|**Espera**|5.9w   |   cpu:46°C|
 |**Operación Normal**|6.3w|cpu:53°C|
 |**Carga Máxima**|16.2w|cpu:75°C hailo8:81°C|
 
@@ -356,7 +364,7 @@ sudo systemctl stop lightdm
 
 ### Frigate
 
-Frigate es un NVR (Network Video Recorder) de código abierto diseñado para detección de objetos en tiempo real usando IA. Se integra con cámaras existentes y utiliza modelos de aprendizaje automático, como TensorFlow y Coral, para realizar detección de objetos en transmisiones de video. Frigate está optimizado para procesamiento de video de baja latencia y alto rendimiento, ofreciendo características como detección de movimiento, transmisiones de video en vivo y alertas automatizadas.
+Frigate es un NVR (Grabador de Video en Red) de código abierto diseñado para detección de objetos en tiempo real usando IA. Se integra con cámaras existentes y usa modelos de aprendizaje automático, como TensorFlow y Coral, para realizar detección de objetos en transmisiones de video. Frigate está optimizado para procesamiento de video de baja latencia y alto rendimiento, ofreciendo características como detección de movimiento, transmisiones de video en vivo y alertas automatizadas.
 
 <div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/thmI3dz9Ugs" title="Cost-Effective AI Surveillance: Frigate on Raspberry Pi 5 with Hailo8 on PCIe3.0 to Dual M.2 hat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -367,7 +375,7 @@ Frigate es un NVR (Network Video Recorder) de código abierto diseñado para det
 
 ### YOLO
 
-La serie de modelos YOLO (You Only Look Once) es una familia de modelos de detección de objetos en tiempo real diseñados para velocidad y precisión. A diferencia de los métodos tradicionales de detección de objetos que realizan propuesta de región y clasificación por separado, YOLO realiza ambas tareas en un solo paso hacia adelante de la red neuronal, haciéndolo mucho más rápido. Los modelos YOLO dividen la imagen en una cuadrícula y predicen cajas delimitadoras y probabilidades de clase para cada celda de la cuadrícula. A lo largo de los años, YOLO ha evolucionado a través de varias versiones, con mejoras en precisión, velocidad y la capacidad de detectar objetos más pequeños. Los modelos YOLOv4, YOLOv5, y los recientes YOLOv7 y YOLOv8 son ampliamente utilizados para aplicaciones como vigilancia, vehículos autónomos y robótica.
+La serie de modelos YOLO (You Only Look Once) es una familia de modelos de detección de objetos en tiempo real diseñados para velocidad y precisión. A diferencia de los métodos tradicionales de detección de objetos que realizan la propuesta de regiones y la clasificación por separado, YOLO realiza ambas tareas en una sola pasada hacia adelante de la red neuronal, haciéndolo mucho más rápido. Los modelos YOLO dividen la imagen en una cuadrícula y predicen cajas delimitadoras y probabilidades de clase para cada celda de la cuadrícula. A lo largo de los años, YOLO ha evolucionado a través de varias versiones, con mejoras en precisión, velocidad y la capacidad de detectar objetos más pequeños. Los modelos YOLOv4, YOLOv5, y los recientes YOLOv7 y YOLOv8 son ampliamente utilizados para aplicaciones como vigilancia, vehículos autónomos y robótica.
 
 <div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/olaSVKmt9YI" title="Raspberry Pi AI: YOLOv8 Object Detection - 240fps Video Input, Pi 5 PCIe Gen2 vs Gen3 Benchmark" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

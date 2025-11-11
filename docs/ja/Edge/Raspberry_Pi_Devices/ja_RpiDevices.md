@@ -9,6 +9,8 @@ keywords:
 - reTerminal
 - reTerminal DM
 - reRouter
+- Raspberry Pi Compatible
+- Respberry Pi Original
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/raspberry-pi-devices
 last_update:
@@ -18,7 +20,7 @@ last_update:
 
 ## はじめに
 
-Edge Solution の Raspberry Pi 搭載デバイスの最先端の世界へようこそ。ここでは、Raspberry Pi CM4/CM5 および Raspberry Pi 4/5 向けに特別に設計された、Seeed Studio によるエッジコンピューティングの革新的なソリューションを探求します。これらのカスタマイズ可能なデバイスには、ヒューマンマシンインターフェース（HMI）ユニット、多用途エッジコントローラー、AI スイートボックスが含まれます。シームレスで効率的なエッジコンピューティング機能でプロジェクトを強化するよう設計された、これらの強力なデバイスの複雑な世界を一緒に旅しましょう。
+Edge Solution における Raspberry Pi を搭載したデバイスの最先端の世界へようこそ。ここでは、Raspberry Pi CM4/CM5 および Raspberry Pi 4/5 向けに特別に設計された、エッジコンピューティング用の Seeed Studio による革新的なソリューションを探求します。これらのカスタマイズ可能なデバイスには、ヒューマンマシンインターフェース（HMI）ユニット、多用途エッジコントローラー、AI スイートボックスが含まれます。シームレスで効率的なエッジコンピューティング機能でプロジェクトを強化するよう設計された、これらの強力なデバイスの複雑な世界を巡る旅にご参加ください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/respberry_pi_all.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -31,9 +33,9 @@ Seeed Studio **reComputer Industrial R & AI R シリーズ** – IIoT とスマ�
 
 高性能な **Raspberry Pi 5 / Compute Module 5** を搭載し、**Hailo-8 AI アクセラレーター**と組み合わせた reComputer Industrial R および AI R ラインは、エッジでのリアルタイム、マルチストリーム映像解析と深層学習推論のために最大 **26 TOPS** の計算能力を提供します。
 
-産業グレードの接続性が標準装備：デュアルギガビットイーサネット、絶縁された **RS-485/RS-232、マルチチャンネル DI/DO、さらに M.2 および mini-PCIe スロットにより、4G/5G、LoRa®、または NVMe SSD を数秒で追加**できます。ファンレスの全金属シャーシが **–20 °C から 60 °C** での静音、防塵動作を保証し、ハードウェアウォッチドッグとオプションの UPS スーパーキャパシターがミッションクリティカルなタスクを 24/7 稼働させ続けます。
+産業グレードの接続性が標準装備：デュアルギガビットイーサネット、絶縁された **RS-485/RS-232、マルチチャンネル DI/DO、さらに 4G/5G、LoRa®、または NVMe SSD を数秒で挿入できる M.2 および mini-PCIe スロット**。ファンレスの全金属シャーシが **–20 °C から 60 °C** での静音、防塵動作を保証し、ハードウェアウォッチドッグとオプションの UPS スーパーキャパシターがミッションクリティカルなタスクを 24/7 稼働させ続けます。
 
-DIN レールまたは壁面取り付け対応の reComputer R シリーズは、**スマートビルディング、Industry 4.0 マシンビジョンセル、リモート資産制御キャビネット**、および分散映像解析ネットワークに簡単に統合でき、プロトコル変換、データ収集、AI モデル実行をアクションが発生する場所で行います。
+DIN レールまたは壁面取り付け対応の reComputer R シリーズは、**スマートビルディング、Industry 4.0 マシンビジョンセル、リモート資産制御キャビネット**、および分散映像解析ネットワークに簡単に組み込まれ、プロトコル変換、データ収集、AI モデルの実行をアクションが起こる場所で行います。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/Edge_AI_Computers.JPG" style={{width:1000, height:'auto'}}/></div>
 
@@ -118,7 +120,7 @@ DIN レールまたは壁面取り付け対応の reComputer R シリーズは�
 
 ### エッジコントローラー
 
-Seeed Studio の reComputer R および Edge Box ファミリーは、産業用 IoT とインテリジェントオートメーション向けに設計された堅牢なエッジコントローラーです。高性能な Raspberry Pi Compute Module（CM4/CM5）を中心に構築され、クアッドコア Arm パワーと最大 16 GB RAM を提供します。デュアルギガビットイーサネット（PoE 対応）、絶縁された RS-485/RS-232、さらに 4G/5G、LoRa®、または NVMe SSD 用の M.2/mini-PCIe ベイが、あらゆる IIoT、プロトコルゲートウェイ、エッジ AI 要件をカバーします。–30 °C から +70 °C 定格のファンレス全金属筐体、ハードウェアウォッチドッグ、オプションの UPS スーパーキャパシターが、過酷な環境での信頼性の高い 24/7 動作を保証します。DIN レールまたは壁面取り付け対応で、スマートビルディング、エネルギー管理システム、リモート制御アプリケーションに簡単に統合できます。
+Seeed Studio の reComputer R および Edge Box ファミリーは、産業用 IoT とインテリジェントオートメーション向けに設計された堅牢なエッジコントローラーです。高性能な Raspberry Pi Compute Module（CM4/CM5）を中心に構築され、クアッドコア Arm パワーと最大 16 GB RAM を提供します。デュアルギガビットイーサネット（PoE 対応）、絶縁された RS-485/RS-232、さらに 4G/5G、LoRa®、または NVMe SSD 用の M.2/mini-PCIe ベイが、あらゆる IIoT、プロトコルゲートウェイ、エッジ AI 要件をカバーします。–30 °C から +70 °C 定格のファンレス全金属筐体、ハードウェアウォッチドッグ、オプションの UPS スーパーキャパシターが、過酷な環境での信頼性の高い 24/7 動作を保証します。DIN レールまたは壁面取り付け対応で、スマートビルディング、エネルギー管理システム、リモート制御アプリケーションに簡単に組み込めます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/Edge_Controllers.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -197,7 +199,7 @@ Seeed Studio の reComputer R および Edge Box ファミリーは、産業用 
         <td>1x 10M/100M/1000M Ethernet (PoE), 1x 10M/100M Ethernet. 2x HDMI 2.0. 3x Type-A USB3.0, 1x Type-A USB2.0, 1x Type-C USB2.0 (OS更新用). 1x Nano SIMカードスロット.</td>
         <td>2x Mini-PCIe1, 1x Mini-PCIe2, 2x Ethernet, 1x HDMI 2.0, 3x USB (2× Type-A + 1× Type-C), 1x SIMカードスロット, 1x M.2スロット.</td>
         <td>1x HDMI 2.0, 2x Ethernet, 2x USB (1× Type-A 2.0 + 1× Type-C 2.0), 1x SIMカードスロット, 1x M.2 Key Eスロット, 1x Micro SDカードスロット, 1x DC電源入力.</td>
-        <td>1× ギガビットEthernet RJ45, 1× HDMI 2.0 (4K@60fps対応), 2× USB 2.0 Type-A, 1× M.2 2242スロット (NVMe SSD用), 1× Mini-PCIeスロット (4G LTE/LoRaWAN®対応).</td>
+        <td>1× Gigabit Ethernet RJ45, 1× HDMI 2.0 (4K@60fps対応), 2× USB 2.0 Type-A, 1× M.2 2242スロット (NVMe SSD用), 1× Mini-PCIeスロット (4G LTE/LoRaWAN®対応).</td>
       </tr>
     </tbody>
   </table>
@@ -250,7 +252,7 @@ reTerminalとreTerminal DMは、高性能エッジコンピューティングと
 </div>
 
 #### reRouter
-reRouterは、デュアルギガビットEthernetポートとデュアルUSB 3.0ポートを装備し、ソフトルーターアプリケーションに適しており、ハードウェアを最小限に抑えています。高速起動時間とスムーズな全体的な体験を実現するため、4GB RAMと32GB eMMCを搭載したRaspberry Pi Compute Module 4を事前にインストールしています。
+reRouterは、デュアルギガビットイーサネットポートとデュアルUSB 3.0ポートを装備し、ソフトルーターアプリケーションに適しており、ハードウェアを最小限に抑えています。高速起動時間とスムーズな全体的な体験を実現するため、4GB RAMと32GB eMMCを搭載したRaspberry Pi Compute Module 4を事前にインストールしています。
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/110110110-4_1.png" style={{width:1000, height:'auto'}}/></div>
 
 
@@ -261,7 +263,7 @@ reRouterは、デュアルギガビットEthernetポートとデュアルUSB 3.0
 
 ### Respberry Pi オリジナル
 
-Raspberry Pi（別名「RPi」）は、もともと手頃な価格でコンピュータサイエンスの教育を促進する意図で非営利組織によって設計・作成されました。現在、複数の世代とモデルのRaspberry Piがリリースされ、その足跡、パワー、アプリケーションを拡大しています。
+Raspberry Pi（通称「RPi」）は、もともと手頃な価格でコンピュータサイエンスの教育を促進することを目的として、非営利組織によって設計・作成されました。現在、複数の世代とモデルのRaspberry Piがリリースされ、その足跡、パワー、アプリケーションが拡大しています。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/respberrypi_original.jpg" style={{width:1000, height:'auto'}}/></div>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?bazaar4_retailer-products%5BrefinementList%5D%5Battribute_product_type%5D%5B0%5D=Dev+board&bazaar4_retailer-products%5BrefinementList%5D%5Bseries%5D%5B0%5D=Raspberry+Pi"target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> <strong>今すぐ入手 🖱️</strong></font></span></strong></a>
@@ -363,7 +365,7 @@ IoTデバイスの展開と管理のためのOSプラットフォーム。
         <td>
           <strong>FRIGATE</strong>  
 
-リアルタイムAI機能を備えたオープンソースネットワークビデオレコーダー（NVR）。
+リアルタイムAI搭載のオープンソースネットワークビデオレコーダー（NVR）。
         </td>
       </tr>
       <tr>
@@ -405,7 +407,7 @@ MLモデルの作成とデプロイのための主要なエッジAIプラット�
         <td>
           <strong>OpenCV</strong>  
 
-数百のアルゴリズムを備えたコンピュータビジョン用オープンソースライブラリ。
+数百のアルゴリズムを持つコンピュータビジョン用オープンソースライブラリ。
         </td>
       </tr>
       <tr>
@@ -526,13 +528,13 @@ MLモデルの作成とデプロイのための主要なエッジAIプラット�
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/poes_estimation_batch8.png" style={{width:200, height:'auto'}}/></td>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/Object_detection.gif" style={{width:400, height:'auto'}}/></td>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/gun_detection_gif.gif" style={{width:350, height:'auto'}}/></td>
-        <td><img src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png" style={{width:250, height:'auto'}}/></td>
+        <td><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/HA_interface.PNG" style={{width:250, height:150}}/></td>
       </tr>
       <tr>
         <td><a href="https://wiki.seeedstudio.com/ja/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit/"><strong>📚 詳細を見る</strong></a></td>
         <td><a href="https://wiki.seeedstudio.com/ja/yolov8_on_ai_box_for_fall_climbing_tracking/"><strong>📚 詳細を見る</strong></a></td>
-        <td><a href="https://wiki.seeedstudio.com/ja/reComputer_r1000_fin_equip_gaphic/"><strong>📚 詳細を見る</strong></a></td>
-        <td ><a href="get_one_now_item" href="https://wiki.seeedstudio.com/ja/recomputer_r1000_aws/"><strong>📚 詳細を見る</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/ja/gun_detection_with_frigate_nvr_on_r2000/"><strong>📚 詳細を見る</strong></a></td>
+        <td ><a href="https://wiki.seeedstudio.com/ja/r2000_series_frigate_and_home_assistant/"><strong>📚 詳細を見る</strong></a></td>
       </tr>
     </tbody>
   </table>
@@ -545,7 +547,7 @@ MLモデルの作成とデプロイのための主要なエッジAIプラット�
         <th>reComputer で Zoneminder を使用</th>
         <th>AI Kit 搭載 Raspberry Pi での Clip アプリケーション</th>
         <th>reComputer AI ボックスでのリアルタイム OCR</th>
-        <th>Raspberry Pi 5 用 AI キットでの YOLOv8n 物体検出チュートリアル</th>
+        <th>Raspberry Pi 5 用 AI キットの YOLOv8n 物体検出チュートリアル</th>
       </tr>
     </thead>
     <tbody>
@@ -598,7 +600,7 @@ Seeed Studio は 2013 年から Pi® コミュニティにサービスを提供�
 </div>
 
 <br />
-エッジ IoT デバイスに関する最新情報、特別オファー、実際のサクセスストーリー、専門家インタビュー、ウェビナーについて常に情報を得て、スマートビルディング、エネルギー管理、自動化などの垂直産業のシステムインテグレーターやソリューションプロバイダーとつながるために、専用ニュースレターの購読をお勧めします。
+エッジ IoT デバイスに関する最新情報、特別オファー、実際のサクセスストーリー、専門家インタビュー、ウェビナーの情報を入手し、スマートビルディング、エネルギー管理、自動化などの垂直産業のシステムインテグレーターやソリューションプロバイダーとつながるために、専用ニュースレターの購読をお勧めします。
 
 <br /><br />
 
@@ -608,7 +610,7 @@ Seeed Studio は 2013 年から Pi® コミュニティにサービスを提供�
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

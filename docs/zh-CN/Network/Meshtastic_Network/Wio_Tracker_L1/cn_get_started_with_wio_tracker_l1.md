@@ -10,6 +10,7 @@ last_update:
   date: 10/29/2025
   author: Michelle
 ---
+
 :::tip
 Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L1 Pro 的，但它适用于 L1 系列中的所有其他产品。
 :::
@@ -26,6 +27,10 @@ Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L
 
 
 ### 第二部分 固件刷写
+
+:::caution note
+请`不要使用 NRF-OTA` 更新固件，这可能会导致设备完全损坏。
+:::
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/hcjai4J1894?si=S_jaEfXVThWXscVJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -53,6 +58,10 @@ Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L
 
 ### 刷写固件
 
+:::caution note
+请`不要使用 NRF-OTA` 更新固件，这可能会导致设备完全损坏。
+:::
+
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
 
 对于 L1、L1 Lite 和 L1 Pro，选择目标设备为 `Seeed Wio Tracker L1` 并选择最新固件，然后点击 `Flash`。
@@ -72,14 +81,14 @@ Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-将 UF2 文件拖拽到 DFU 驱动器中。文件下载完成后固件应该会被刷写，设备会重启。
+将 UF2 文件拖拽到 DFU 驱动器。文件下载完成后固件应该会被刷写，设备会重启。
 
 ### 设备开机
 
 连接 USB 线缆激活设备。向上拨动电源开关以开机。
 
 :::tip
-如果按下按钮时设备没有响应，请先充电。请勿使用快充充电器。
+如果按下按钮时设备没有响应，请先充电。不要使用快充充电器。
 :::
 
 ### 通过应用连接
@@ -116,7 +125,7 @@ import TabItem from '@theme/TabItem';
 
 ### 配置参数
 
-为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的地理位置进行设置。
+为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的区域位置进行设置。
 
 <Tabs>
 <TabItem value="ios" label="IOS 应用">
@@ -188,7 +197,7 @@ import TabItem from '@theme/TabItem';
 
 ### 手动进入 DFU 模式
 
-将设备连接到您的电脑，双击 `Reset` 按钮。黄色 LED 将保持常亮，您的电脑上会出现一个名为 `Tracker L1` 的新 USB 驱动器。
+将设备连接到您的 PC，双击 `Reset` 按钮。黄色 LED 将保持常亮，您的 PC 上将出现一个名为 `Tracker L1` 的新 USB 驱动器。
 
 ### 退出 DFU 模式
 
@@ -196,9 +205,9 @@ import TabItem from '@theme/TabItem';
 
 ### 信号质量
 
-- **SNR** 反映通信链路的质量。正常设备通常在 -7 dB 以上运行。SNR 低于 -10 dB 的设备表示性能较差。
+- **SNR** 反映通信链路的质量。正常设备通常在 -7 dB 以上运行。SNR 低于 -10 dB 的设备表示性能不佳。
 
-- **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上运行。RSSI 低于 -115 dBm 的设备被认为性能较差。
+- **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上运行。RSSI 低于 -115 dBm 的设备被认为性能不佳。
 
       为了获得最佳信号效果，请在开阔、无遮挡、干扰最小的区域使用设备。
 ## 资源

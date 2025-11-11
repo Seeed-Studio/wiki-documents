@@ -18,6 +18,12 @@ last_update:
 
 Es un nodo de comunicaciones o repetidor económico alimentado por energía solar basado en [Meshtastic®](https://meshtastic.org/), que integra el controlador principal XIAO nRF52840 Plus y el módulo LoRa Wio-SX1262. Está específicamente diseñado para áreas sin cobertura de red. Soporta comunicación de larga distancia, posicionamiento preciso y operación de bajo consumo. Es adecuado para expandir la cobertura de red en áreas exteriores.
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora </font></span></strong>
+    </a>
+</div>
+
 ## Comparación de Versiones
 
 El Solar Node está disponible en dos variantes: [SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html) y [SenseCAP Solar Node P1-Pro](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html).

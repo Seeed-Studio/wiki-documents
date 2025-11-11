@@ -19,15 +19,19 @@ last_update:
 
 ### ファームウェアのフラッシュ
 
+:::caution note
+ファームウェアの更新に `NRF-OTA を使用しないでください`。デバイスが完全に動作しなくなる可能性があります。
+:::
+
 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)にアクセスしてください。
 
-対象デバイスを`Seeed SenseCAP Solar Node`に選択し、最新のファームウェアを選択してから、`Flash`をクリックします。
+対象デバイスを `Seeed SenseCAP Solar Node` に選択し、最新のファームウェアを選択してから `Flash` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-solar.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
 
-`Enter DFU Mode`をクリックすると、`XIAO-xxx`という名前のシリアルポートが表示されるので、それをクリックして接続すると、`XIAO-xxx`という名前のドライバが表示されるはずです。
+`Enter DFU Mode` をクリックすると、`XIAO-xxx` という名前のシリアルポートが表示されます。それをクリックして接続すると、`XIAO-xxx` という名前のドライバが表示されるはずです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
@@ -36,9 +40,9 @@ UF2ファイルをDFUドライブにドラッグします。ファイルがダ�
 ### バッテリーとGPSモジュールの取り付け（オプション）
 
 :::tip
-バッテリーを取り付けまたは交換する必要がある場合は、`Button-top`18650（3.6V）バッテリーを使用してください。
+バッテリーを取り付けまたは交換する必要がある場合は、`Button-top` 18650（3.6V）バッテリーを使用してください。
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
-P1-Proバージョンには内蔵バッテリーとGPSモジュールが搭載されており、P1バージョンの場合、必要に応じてユーザーが手動でバッテリーとGPSモジュールを取り付ける必要があります。
+P1-Proバージョンには内蔵バッテリーとGPSモジュールが搭載されています。P1バージョンの場合、必要に応じてユーザーがバッテリーとGPSモジュールを手動で取り付ける必要があります。
 :::
 
 
@@ -82,7 +86,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-- コードを入力し（デフォルトコードは`123456`）、`OK`をクリックしてデバイスに接続します。
+- コードを入力し（デフォルトコードは `123456`）、`OK` をクリックしてデバイスに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -90,11 +94,11 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="android" label="Android アプリ">
 
-- `+`をクリックして対象デバイスを選択します。
+- `+` をクリックして対象デバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-- コードを入力し（デフォルトコードは`123456`）、`OK`をクリックしてデバイスに接続します。
+- コードを入力し（デフォルトコードは `123456`）、`OK` をクリックしてデバイスに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -129,7 +133,7 @@ import TabItem from '@theme/TabItem';
 より包括的なリストについては、[国別LoRa地域](https://meshtastic.org/docs/configuration/region-by-country/)を参照してください。
 
 :::info
-**EU_868**は、1時間ごとのデューティサイクル制限10%を遵守する必要があり、これは1時間のローリングベースで毎分計算されます。制限に達した場合、再び許可されるまでデバイスは送信を停止します。
+**EU_868** は、1時間ごとのデューティサイクル制限10%を遵守する必要があり、これは1時間のローリングベースで毎分計算されます。制限に達した場合、再び許可されるまでデバイスは送信を停止します。
 :::
 
 デバイスでLoRa地域を設定したので、ニーズに合わせて[LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/)の設定を続けることができます。
@@ -137,14 +141,14 @@ import TabItem from '@theme/TabItem';
 ## 設置
 
 :::danger note
-デバイスは長期間屋外で使用されるため、パネルを水平位置に設置することは避けてください。水の蓄積を防ぐため、傾斜または斜めの設置をお勧めします。さらに、すべてのネジがしっかりと締められ、カバーが適切に取り付けられていることを確認してください。防水保護を強化するために、追加のシール対策を検討することもできます。
+デバイスは長期間屋外で使用されるため、パネルを水平位置に設置することは避けてください。水の蓄積を防ぐため、傾斜または斜めの設置をお勧めします。さらに、すべてのネジがしっかりと締められ、カバーが適切に取り付けられていることを確認してください。防水保護を強化するため、追加のシール対策を検討することもできます。
 :::
 
 - **部品リスト**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/part-list.png" alt="pir" width={800} height="auto" /></p>
 
-### ステップバイステップ設置ガイダンス
+### ステップバイステップ設置ガイド
 
 - ステップ1：ワッシャーとネジを使用して、パーツ1をデバイスの底部に接続します。
 
@@ -188,7 +192,7 @@ import TabItem from '@theme/TabItem';
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-### 完全な設置ガイダンス
+### 完全な設置ガイド
 
 - ビデオを通じて、設置と初期化プロセス全体を完了できます。
 
@@ -252,7 +256,7 @@ import TabItem from '@theme/TabItem';
 ### 消費電力
 
 消費電力は主にデータ送信頻度やGPS更新レートなどの要因に依存します。
-以下の数値は参考値であり、実際の使用条件によって実際の消費量は異なる場合があります。
+以下の数値は参考値のみであり、実際の使用条件によって実際の消費量は異なる場合があります。
 
 - **シャットダウンスリープモード消費電力**
 
