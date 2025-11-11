@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-10 11:19:35 (北京时间)
-// 多语言页面: 2040 个
+// 生成时间: 2025-11-11 15:29:07 (北京时间)
+// 多语言页面: 2042 个
 
 (function() {
   'use strict';
@@ -1997,6 +1997,12 @@
     "es",
     "ja"
   ],
+  "/ispy_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/moonfire_nvr_on_recomputer": [
     "cn",
     "en",
@@ -2531,13 +2537,19 @@
     "es",
     "ja"
   ],
-  "/recamera_hd_poe_hardware": [
+  "/recamera_hq_poe_hardware": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/recamera_hd_poe_getting_started": [
+  "/recamera_hq_poe_microscope_demo": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recamera_hq_poe_getting_started": [
     "cn",
     "en",
     "es",
