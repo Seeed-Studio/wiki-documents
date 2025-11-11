@@ -19,6 +19,10 @@ Antes del despliegue formal, por favor prueba y configura el nodo primero.
 
 ### Flashear Firmware
 
+:::caution note
+Por favor `no uses NRF-OTA` para actualizar el firmware, puede causar que el dispositivo quede completamente inoperativo.
+:::
+
 Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
 Selecciona el dispositivo objetivo como `Seeed SenseCAP Solar Node` y elige el firmware más reciente, luego haz clic en `Flash`.
@@ -276,14 +280,14 @@ Las cifras a continuación son solo de referencia; el consumo real puede variar 
 |Corriente Estática|10.65 mA|
 |Corriente de Transmisión EU868|157.74 mA|
 |Corriente de Transmisión US915|205.22 mA|
-|Corriente de Operación del GPS|50 mA|
-|Corriente de Operación del GPS_LED|1.02 mA|
+|Corriente de Operación GPS|50 mA|
+|Corriente de Operación GPS_LED|1.02 mA|
 
 ### Calidad de la Señal
 
-- **SNR** refleja la calidad del enlace de comunicación. Los dispositivos normales suelen operar por encima de -7 dB. Un dispositivo con un SNR inferior a -10 dB indica un rendimiento deficiente.
+- **SNR** refleja la calidad del enlace de comunicación. Los dispositivos normales usualmente operan por encima de -7 dB. Un dispositivo con un SNR menor a -10 dB indica un rendimiento deficiente.
 
-- **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. Los dispositivos normales suelen operar por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente.
+- **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. Los dispositivos normales usualmente operan por encima de -110 dBm. Un dispositivo con un RSSI menor a -115 dBm se considera que tiene un rendimiento deficiente.
 
       Para lograr el mejor efecto de señal, por favor usa el dispositivo en un área abierta y sin obstrucciones con interferencia mínima.
 
