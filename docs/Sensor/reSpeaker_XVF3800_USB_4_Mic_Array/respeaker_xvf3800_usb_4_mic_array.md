@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array.webp
 slug: /respeaker_xvf3800_introduction
 last_update:
-  date: 8/20/2025
+  date: 11/10/2025
   author: Kasun Thushara
 ---
 
@@ -941,6 +941,52 @@ if __name__ == "__main__":
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/led_2.gif" alt="pir" width={600} height="auto"/></p>
+
+## Troubleshooting
+
+### Does playback sound from speaker output not enough ?
+
+If the speaker output volume of the **ReSpeaker XVF3800** is too low on Linux, you may need to adjust the **ALSA mixer levels** for the XVF3800 sound card. Follow the steps below to increase the output volume.
+
+**Step 1: Open ALSA Mixer**
+
+1. Open a terminal.
+2. Type the following command and press **Enter**:
+
+   ```bash
+   alsamixer
+   ```
+**Step 2: Select the XVF3800 Sound Card**
+
+1. Press **F6** to open the sound card selection menu.
+2. Use the **up/down arrow keys** to highlight the **XVF3800** sound card.
+3. Press **Enter** to confirm the selection.
+
+**Step 3: Adjust the PCM-1 Volume**
+
+1. Use the **left/right arrow keys** to navigate to **PCM-1**.
+2. Use the **up arrow key** to increase the volume level up to **100%**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alexa.png" alt="pir" width={600} height="auto"/></p>
+
+**Step 4: Save ALSA Settings**
+
+1. Press **ESC** to exit `alsamixer`.
+2. Before unplugging the XVF3800, run the following command to save your settings:
+
+```bash
+   sudo alsactl store
+   ```
+
+**Step 5: Additional Option (Using PulseAudio)**
+
+If you still cannot hear sound clearly after adjusting ALSA levels, try installing **PulseAudio Volume Control** for more detailed volume adjustments:
+
+```bash
+sudo apt install pavucontrol -y
+```
+
+You can then open **pavucontrol** and increase the output volume beyond 100% if needed.
 
 ## Tech Support & Product Discussion
 

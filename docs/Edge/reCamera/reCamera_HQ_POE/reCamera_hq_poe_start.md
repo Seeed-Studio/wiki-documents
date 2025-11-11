@@ -9,7 +9,7 @@ keywords:
   - HQ
   - M12
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /recamera_hd_poe_getting_started
+slug: /recamera_hq_poe_getting_started
 sidebar_position: 1
 last_update:
   date: 09/25/2025
@@ -33,6 +33,19 @@ This guide will help you quickly set up your device and start using it to unlock
 </div>
 
 ## Unboxing
+
+Start by unpacking your reCamera. Inside the box, you should find:
+
+- reCamera PoE 64GB
+- Lens Cap
+- Type-C Cable
+- Instruction Manual
+- Ethernet Cable (RJ45 to MX1.25-5P)
+- Connection Cable (MX1.25-6P to jumper 6P)
+
+Make sure all parts are included.
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/part_list2.jpg" /></div>
 
 ### Setup device and login
 
@@ -101,7 +114,7 @@ Please refer to the [OTA Upgrade Instruction](https://wiki.seeedstudio.com/recam
 
 ## Factory Reset
 
-
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/interface2.png" /></div>
 
 If you would like to reset the device such as forgetting your device's passcode, you can long pressing the **User** button and then connecting the  device to power. When the `red light` of the device is **constantly on** instead of blinking, release the User button.
 
