@@ -13,7 +13,11 @@ last_update:
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.jpg" alt="pir" width={600} height="auto" /></p>
-
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-L1-p-6453.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora </font></span></strong>
+    </a>
+</div>
 La serie Wio Tracker L1 es un nodo [Meshtastic®](https://meshtastic.org/) de bajo consumo y altamente extensible que cuenta con LoRa (862–930 MHz), el nRF52840 para procesamiento eficiente, y un módulo GPS L76K para seguimiento preciso de ubicación. Diseñado para flexibilidad, soporta pantallas OLED y E-Ink, así como paneles solares y alimentación por batería, haciéndolo ideal para una amplia gama de aplicaciones IoT y fuera de la red.
 
 ## Modelo de la Serie L1
@@ -54,12 +58,12 @@ Soporta carga rápida Type-C, entrada solar y alimentación por batería de ione
 Pantallas opcionales OLED de 1.3 pulgadas y E-Ink de 2.13 pulgadas, ofreciendo opciones de visualización versátiles para diferentes necesidades de consumo de energía y retroalimentación visual.
 
 - **Alta Expandibilidad**
-Totalmente compatible con el ecosistema Grove, e incluye cabeceras PTH y una interfaz de depuración SWD para expansión de hardware personalizada y desarrollo avanzado.
+Totalmente compatible con el ecosistema Grove, e incluye conectores PTH y una interfaz de depuración SWD para expansión de hardware personalizada y desarrollo avanzado.
 
 ### Especificaciones
 
 :::tip
-Los lotes más recientes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador de batería, convirtiendo la interfaz de 1mm a una interfaz de 2mm. Esto te da más opciones para baterías.
+Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador de batería, convirtiendo la interfaz de 1mm a una interfaz de 2mm. Esto te da más opciones para baterías.
 :::
 
 <table>
@@ -91,7 +95,7 @@ Los lotes más recientes de L1, L1 Lite y L1 E-Ink vienen todos con un cable ada
     <td colspan="1">Grove *1: UART/IIC/GPIO</td>
   </tr>
   <tr>
-    <td colspan="1">Orificio Pasante Chapado (PTH): UART/IIC/GPIO/Analógico</td>
+    <td colspan="1">Orificio Pasante Chapado（PTH）: UART/IIC/GPIO/Analógico</td>
   </tr>
   <tr>
     <td colspan="1">Pads de soldadura reservados para SWD</td>

@@ -1,6 +1,6 @@
 ---
 description: SenseCAP Solar Node for Meshtastic & LoRa
-title: SenseCAP 太阳能节点
+title: SenseCAP Solar Node
 keywords:
 - Meshtastic
 - Solar
@@ -18,9 +18,15 @@ last_update:
 
 这是一个基于 [Meshtastic®](https://meshtastic.org/) 的经济型太阳能供电通信节点或中继器，集成了 XIAO nRF52840 Plus 主控制器和 Wio-SX1262 LoRa 模块。它专为没有网络覆盖的区域而设计。支持长距离通信、精确定位和低功耗运行。适用于扩展户外区域的网络覆盖。
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 </font></span></strong>
+    </a>
+</div>
+
 ## 版本对比
 
-太阳能节点有两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html) 和 [SenseCAP Solar Node P1-Pro](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html)。
+Solar Node 有两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html) 和 [SenseCAP Solar Node P1-Pro](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html)。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-1_1.jpeg" alt="pir" width={800} height="auto" /></p>
 

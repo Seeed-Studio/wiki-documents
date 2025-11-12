@@ -9,7 +9,7 @@ keywords:
   - HQ
   - M12
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /recamera_hd_poe_hardware
+slug: /recamera_hq_poe_hardware
 sidebar_position: 2
 last_update:
   date: 09/25/2025
@@ -67,14 +67,14 @@ reCamera 2002 HQ PoE is equipped with an advanced CMOS sensor for sharper, clear
 
 Top View             |  Bottom View
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
 ### [Sensor Board-S4_GC2053](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
 
 
 Top View             |  Bottom View
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top.png" /></div> |<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top2.png" /></div> |<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom2.png" /></div>
 
 #### ⚙️ features
 
@@ -127,7 +127,7 @@ Top View             |  Bottom View
 
 Up             |  Bottom
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top2.png" /></div>  |  <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom2.png" /></div>
 
 #### ⚙️ Features:
 
@@ -136,7 +136,7 @@ Up             |  Bottom
 - 1 x Debug port.
 - 3 x IO port.
 
- <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
 
 ## Hardware Interface
 
@@ -189,19 +189,19 @@ The POE module is built into the hardware of the reCamera HQ POE version. The Wi
 
 Connect the reCamera to a switch that supports the **POE 802.3af** protocol, and the reCamera device will start up.
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/poe_connect_recamera.jpg" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/poe_connect_recamera.jpg" /></div>
 
 You can check the device's IP address in your router to access it, or connect the reCamera via USB and access the terminal to query the wired network IP.
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/router_search.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/router_search.png" /></div>
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/terminal_ipv4_search.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/terminal_ipv4_search.png" /></div>
 
 ### <span id="jump5">IO</span>
 
 **Using the GPIO sysfs interface to control I/O**
 
- <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
 
 In Linux, the most common way to read and write GPIO is using the GPIO sysfs interface. This is implemented by manipulating files such as `export`, `unexport`, `gpio{N}/direction`, and `gpio{N}/value` (replace `{N}` with the actual pin number) under the `/sys/class/gpio` directory, and it is often used in shell scripts.
 
@@ -234,7 +234,7 @@ The POE baseboard of reCamera has two sets of serial ports, namely /ttyS0 (for D
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-1.png" /></div>
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top_uart.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_pinout.png" /></div>
 
 The debug serial port of this device has a baud rate of 115200 and supports connection to remote monitoring systems.
 
@@ -283,7 +283,7 @@ minicom -D /dev/ttyS3 -b 115200
 
 The reCamera's usr button can be customized by the user.
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/image-10.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/POE_user_button.png" /></div>
 
 ```bash
 echo "510" > /sys/class/gpio/export

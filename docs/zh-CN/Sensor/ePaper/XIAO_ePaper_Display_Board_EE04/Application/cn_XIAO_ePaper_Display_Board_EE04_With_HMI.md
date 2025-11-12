@@ -1,7 +1,7 @@
 ---
 description: 使用 SenseCraft HMI 平台为 XIAO EE04 ePaper 显示屏启用可视化界面设计。
 title: XIAO ePaper Display Board EE04 与 SenseCraft HMI
-image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
+image: https://files.seeedstudio.com/wiki/Epaper/EE04/hmi61.webp
 slug: /cn/EE04_with_hmi
 sidebar_position: 2
 last_update:
@@ -76,7 +76,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 - 对于 24 针 ePaper 显示屏 → 将跳线设置为 24 Pin
 
-⚠️ 使用错误的跳线设置可能导致 ePaper 无法显示或显示异常内容。上电前请务必仔细检查跳线位置。
+⚠️ 使用错误的跳线设置可能导致 ePaper 无法显示或显示异常内容。开机前请务必仔细检查跳线位置。
 
 :::
 
@@ -89,7 +89,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 使用 XIAO ePaper Display Board(ESP32-S3) - EE04 时，请确保根据 ePaper 显示屏类型设置跳线：
 - 对于 50 针 ePaper 显示屏 → 将跳线设置为 50 Pin
 
-⚠️ 使用错误的跳线设置可能导致 ePaper 无法显示或显示异常内容。上电前请务必仔细检查跳线位置。
+⚠️ 使用错误的跳线设置可能导致 ePaper 无法显示或显示异常内容。开机前请务必仔细检查跳线位置。
 
 :::
 
@@ -122,25 +122,29 @@ import Steppers from '@site/src/components/utils/Stepper';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi62.png" style={{width:1000, height:'auto'}}/></div>
 
 
-在此页面上，您将找到两种 ePaper 显示屏型号的教程固件：**7.3" Full-Color Display (800×480)** 和 **7.5" Monochrome Display (800×480)**。
+在此页面上，您将找到两种 ePaper 显示屏型号的教程固件：**7.3" 全彩显示屏 (800×480)** 和 **7.5" 单色显示屏 (800×480)**。
+
+如果您想使用不同尺寸的 ePaper 显示屏，只需按照下面相同的步骤操作即可。
 
 :::tip
-目前，XIAO ePaper Display Board(ESP32-S3) - EE04 仅提供 7.5 英寸和 7.3 英寸型号的 HMI 固件。未来将提供更新。
+目前，XIAO ePaper Display Board(ESP32-S3) - EE04 不支持以下两种墨水屏：
+- [4.2-inch ePaper - Monochrome 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [5.83-inch ePaper - Monochrome 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
 :::
 
 
 <Tabs>
 <TabItem value="7.3-Inch ePaper Display" label="7.3 全彩显示屏 800*480" default>
 
-***步骤 1 .*** `选择` 7.3 "Full Color Display 800*480
+***步骤 1 .*** `选择` 7.3" 全彩显示屏 800*480
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi7.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi92.png" style={{width:1000, height:'auto'}}/></div>
 
 ***步骤 2 .*** 选择最新固件 `EE04_7_3_color_1.0.5`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi5.png" style={{width:1000, height:'auto'}}/></div>
 
-***步骤 3 .*** 点击 **Flash** 将 **7.3" Full-Color Display (800×480)** 固件上传到 XIAO ePaper Display Board (ESP32-S3) - EE04。
+***步骤 3 .*** 点击 **Flash** 将 **7.3" 全彩显示屏 (800×480)** 固件上传到 XIAO ePaper Display Board (ESP32-S3) - EE04。
 
 点击 Flash 后，平台将弹出端口选择窗口。选择与您的 XIAO ePaper Display Board (ESP32-S3) - EE04 对应的端口以建立连接。
 
@@ -156,10 +160,10 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ***步骤 4 .*** 检查显示输出
 
-固件成功烧录后，ePaper 显示屏会短暂闪烁，然后显示以下屏幕。
+固件成功烧录后，ePaper 显示屏会短暂闪烁，然后显示以下画面。
 您将看到两个二维码，扫描后分别跳转到不同的页面。
 
-- User Guide：导航到 [wiki](https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/) 中的 HMI Basic Usage 部分。
+- User Guide：导航到 [wiki](https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/) 中的 HMI 基本使用部分。
 
 - Wi-Fi Setup：在本地网络设置下，设置您的设备与 SenseCraft HMI 连接。
 
@@ -167,23 +171,23 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 <br></br>
 
-配置尚未完成。请继续按照以下步骤进行 **网络设置** 以完成设置。
+配置尚未完成。请继续按照下面的步骤进行 **网络设置** 以完成设置。
 
 </TabItem>
 
 <TabItem value="7.5-Inch ePaper Display" label="7.5 单色显示屏 800*480" default>
 
-***步骤 1 .*** `选择` 7.5 "Monochrome Display 800*480
+***步骤 1 .*** `选择` 7.5" 单色显示屏 800*480
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi8.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi91.png" style={{width:1000, height:'auto'}}/></div>
 
 ***步骤 2 .*** 选择最新固件 `EE04_7_5_mono_1.0.5`
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi15.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi6.png" style={{width:1000, height:'auto'}}/></div>
 
-***步骤 3 .*** 点击 **Flash** 将 **7.5 "Monochrome Display 800*480** 固件上传到 XIAO ePaper Display Board (ESP32-S3) - EE04。
+***步骤 3 .*** 点击 **Flash** 将 **7.5 "单色显示屏 800*480** 固件上传到 XIAO ePaper Display Board (ESP32-S3) - EE04。
 
-点击 Flash 后，平台将弹出端口选择窗口。选择与您的 XIAO ePaper Display Board (ESP32-S3) - EE04 对应的端口以建立连接。
+点击 Flash 后，平台会弹出端口选择窗口。选择与您的 XIAO ePaper Display Board (ESP32-S3) - EE04 对应的端口以建立连接。
 
 - Full Flash：启用 Full Flash 会清除设备存储的所有信息，包括 Wi-Fi 网络和用户面板数据。
 
@@ -196,7 +200,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ***步骤 4 .*** 检查显示输出
 
-固件成功刷写后，ePaper 显示屏会短暂闪烁，然后显示以下界面。
+固件成功刷入后，ePaper 显示屏会短暂闪烁，然后显示以下界面。
 您将看到两个二维码，扫描后分别跳转到不同的页面。
 
 - User Guide：导航到 wiki 中的 HMI 基本使用部分 (wiki)(https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/)
@@ -207,7 +211,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 <br></br>
 
-配置尚未完成。请继续按照以下步骤进行 **Network Setup** 以完成设置。
+配置尚未完成。请继续按照以下步骤进行 **网络设置** 以完成设置。
 
 
 </TabItem>
@@ -266,13 +270,13 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 与 SenseCraft HMI 平台无缝集成
 
 ### SenseCraft HMI 功能
 
-接下来，我们将通过简单的使用示例探索 SenseCraft HMI 的五个基本功能。如需更深入的信息，请点击下方的 [SenseCraft HMI Overview](https://sensecraft-hmi-docs.seeed.cc/en/) 获取其他功能的详细说明。
+接下来，我们将通过简单的使用示例探索 SenseCraft HMI 的五个基本功能。如需更深入的信息，请点击下方的 [SenseCraft HMI 概述](https://sensecraft-hmi-docs.seeed.cc/en/) 获取其他功能的详细说明。
 
 #### AI 生成器
 
 让人工智能设计您的仪表板！只需描述您想要显示的信息，AI 生成器将自动创建一个美观、实用的布局。这非常适合快速生成天气显示、日历、待办事项列表或信息面板，无需手动设计工作。
 
-了解更多关于 [AI Generatorllery](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-ai-generator/)
+了解更多关于 [AI 生成器](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-ai-generator/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi25.png" style={{width:700, height:'auto'}}/></div>
 
@@ -291,7 +295,7 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 与 SenseCraft HMI 平台无缝集成
 
 使用图库功能将您的 XIAO ePaper Display Board(ESP32-S3) - EE04 转换为数字相框。上传您喜爱的图片，平台将为 ePaper 显示屏优化它们。创建具有自定义过渡时间的幻灯片。
 
-了解更多关于 [Gallery](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-gallery/)
+了解更多关于 [图库](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-gallery/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi27.png" style={{width:700, height:'auto'}}/></div>
 
@@ -307,17 +311,17 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 与 SenseCraft HMI 平台无缝集成
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3 英寸 ePaper 显示屏</em></p>
 </div>
 
-#### 画布
+#### 画布 
 
 使用画布从头开始设计您的仪表板，这是一个拖放界面，提供各种元素：
 
-- 具有可自定义字体和大小的文本块
+- 可自定义字体和大小的文本块
 - 图像占位符
 - 时间、日期和天气小部件
 - 数据可视化工具
 - 用于布局组织的形状和分隔符
 
-了解更多关于 [Canvas](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-canvas/)
+了解更多关于 [画布](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-canvas/)
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi30.png" style={{width:700, height:'auto'}}/></div>
@@ -342,7 +346,7 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 与 SenseCraft HMI 平台无缝集成
 - [BBC News](http://feeds.bbci.co.uk/news/rss.xml)
 - [The New York Times](https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml)
 
-了解更多关于 [RSS Feed Integration](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-rss/)
+了解更多关于 [RSS 订阅集成](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-rss/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/75hmi.png" style={{width:700, height:'auto'}}/></div>
 
@@ -364,7 +368,7 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 与 SenseCraft HMI 平台无缝集成
 
 让人工智能设计您的仪表板！只需描述您想要显示的信息，AI 生成器将自动创建一个美观、实用的布局。这非常适合快速生成天气显示、日历、待办事项列表或信息面板，无需手动设计工作。
 
-了解更多关于 [Web Content Display](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-web/)
+了解更多关于 [网页内容显示](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-web/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi29.png" style={{width:700, height:'auto'}}/></div>
 
@@ -382,7 +386,7 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 与 SenseCraft HMI 平台无缝集成
 
 ***SenseCraf HMI***
 
-- [Getting Started with SenseCraft HMI](https://sensecraft-hmi-docs.seeed.cc/en/)：深入了解如何使用 SenseCraft HMI，帮助您最大化其功能并增强您的项目。
+- [SenseCraft HMI 入门指南](https://sensecraft-hmi-docs.seeed.cc/en/)：深入了解如何使用 SenseCraft HMI，帮助您最大化其功能并增强您的项目。
 
 ## 技术支持与产品讨论
 

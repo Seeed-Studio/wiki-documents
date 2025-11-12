@@ -1,11 +1,11 @@
 ---
 description: This wiki demonstrates how to use go2rtc on recomputer. 
-title: Use go2rtc on reComputer
+title: go2rtc on reComputer
 keywords:
   - reComputer
   - go2rtc
   - NVR
-image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/result_go2rtc.webp
+image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/go2rtc.gif
 slug: /go2rtc_on_recomputer
 last_update:
   date: 11/05/2025

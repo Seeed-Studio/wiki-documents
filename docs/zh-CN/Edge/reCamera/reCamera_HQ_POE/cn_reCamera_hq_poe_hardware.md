@@ -9,7 +9,7 @@ keywords:
   - HQ
   - M12
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /cn/recamera_hd_poe_hardware
+slug: /cn/recamera_hq_poe_hardware
 sidebar_position: 2
 last_update:
   date: 09/25/2025
@@ -25,7 +25,7 @@ reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的�
 
 - 高质量：配备 1/2.9 英寸 GC2053 CMOS 传感器，提供卓越的图像质量。
 - M12 镜头接口：默认 90° 视场角，可轻松替换为任何标准 M12 镜头。
-- 以太网与 PoE（以太网供电）：支持通过单根电缆进行数据和电源传输，仅支持 PoE Mode A。
+- 以太网与 PoE（以太网供电）：支持通过单根电缆传输数据和电源，仅支持 PoE Mode A。
 - IO/UART 扩展：6 针接头，包含 1×UART 和 3×GPIO。
 
 ## 规格
@@ -67,14 +67,14 @@ reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的�
 
 顶视图             |  底视图
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
 ### [传感器板-S4_GC2053](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
 
 
 顶视图             |  底视图
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top.png" /></div> |<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top2.png" /></div> |<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom2.png" /></div>
 
 #### ⚙️ 特性
 
@@ -127,7 +127,7 @@ reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的�
 
 顶部             |  底部
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top2.png" /></div>  |  <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom2.png" /></div>
 
 #### ⚙️ 特性：
 
@@ -136,7 +136,7 @@ reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的�
 - 1 x Debug 端口。
 - 3 x IO 端口。
 
- <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
 
 ## 硬件接口
 
@@ -189,19 +189,19 @@ POE 模块内置于 reCamera HQ POE 版本的硬件中。WiFi 模块已被移除
 
 将 reCamera 连接到支持 **POE 802.3af** 协议的交换机，reCamera 设备将启动。
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/poe_connect_recamera.jpg" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/poe_connect_recamera.jpg" /></div>
 
 您可以在路由器中查看设备的 IP 地址来访问它，或者通过 USB 连接 reCamera 并访问终端来查询有线网络 IP。
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/router_search.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/router_search.png" /></div>
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/terminal_ipv4_search.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/terminal_ipv4_search.png" /></div>
 
 ### <span id="jump5">IO</span>
 
 **使用 GPIO sysfs 接口控制 I/O**
 
- <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
 
 在 Linux 中，读写 GPIO 最常见的方法是使用 GPIO sysfs 接口。这是通过操作 `/sys/class/gpio` 目录下的 `export`、`unexport`、`gpio{N}/direction` 和 `gpio{N}/value`（将 `{N}` 替换为实际引脚号）等文件来实现的，通常用于 shell 脚本中。
 
@@ -234,7 +234,7 @@ reCamera 的 POE 底板有两组串口，分别是 /ttyS0（用于 Debug）和 /
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-1.png" /></div>
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top_uart.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_pinout.png" /></div>
 
 该设备的调试串口波特率为 115200，支持连接到远程监控系统。
 
@@ -256,7 +256,7 @@ stty -F /dev/ttyS3 ispeed 115200 ospeed 115200
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-3.png" /></div>
 
-默认串口启用了回显功能，您可以使用以下命令来禁用它：
+默认串口启用了回显功能，您可以使用以下命令禁用它：
 
 ```bash
 stty -F /dev/ttyS3 -echo
@@ -283,7 +283,7 @@ minicom -D /dev/ttyS3 -b 115200
 
 reCamera 的用户按钮可以由用户自定义。
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/image-10.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/POE_user_button.png" /></div>
 
 ```bash
 echo "510" > /sys/class/gpio/export
