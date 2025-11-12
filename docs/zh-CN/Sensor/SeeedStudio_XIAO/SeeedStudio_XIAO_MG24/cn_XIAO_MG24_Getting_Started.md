@@ -117,13 +117,13 @@ sidebar_position: 0
 
 <table align="center">
  <tr>
-     <th>XIAO MG24 Sense 指示图</th>
+     <th>XIAO MG24 Sense 示意图</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24sense_pinlist.png" style={{width:700, height:'auto'}}/></div></td>
  </tr>
    <tr>
-     <th>XIAO MG24 指示图</th>
+     <th>XIAO MG24 示意图</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24_pinlist.png" style={{width:700, height:'auto'}}/></div></td>
@@ -495,17 +495,17 @@ void loop()
 
 **XIAO MG24** 是 Seeed Studio 推出的强大微控制器板，但用户报告了设备在进入深度睡眠模式后变得无响应（"变砖"）的问题。本教程解释了问题的原因，提供了详细的恢复方法，并提供了防止 XIAO MG24 变砖的预防措施。
 
-XIAO MG24 进入 **深度睡眠模式**（EM4）以节省电力，但在某些情况下，它无法正常唤醒，阻止上传新的程序。与其他 XIAO 板不同，MG24 没有专用的 **BOOT 按钮**或记录的进入引导模式的方法，使恢复变得困难。
+XIAO MG24 进入**深度睡眠模式**（EM4）以节省电力，但在某些情况下，它无法正常唤醒，阻止上传新的程序。与其他 XIAO 板不同，MG24 没有专用的 **BOOT 按钮**或记录的进入引导模式的方法，使恢复变得困难。
 
 #### 预防措施
 
 为了避免在使用深度睡眠模式时使您的 XIAO MG24 变砖，请遵循以下步骤：
 
-1. 使用逃逸引脚（PC0）
+1. 使用逃逸引脚（PC1）
 
-XIAO MG24 有一个内置的 **逃逸机制** 来防止变砖。如果在复位期间 **PC0** 被拉 **低电平**，设备将进入无限循环，允许您上传新的程序。
+XIAO MG24 内置**逃逸机制**以防止变砖。如果在复位期间 **PC1** 被拉**低**，设备将进入无限循环，允许您上传新程序。
 
-- 在复位设备之前将 **PC0** 连接到 **GND**。
+- 在复位设备之前将 **PC1** 连接到 **GND**。
 - 复位后，在设备处于循环状态时上传您的程序。
 
 2. 修改您的代码
@@ -541,7 +541,7 @@ void setup() {
 有关更多详细信息和讨论，请访问原始论坛帖子：
 [DeepSleep bricks XIAO_MG24 - Seeed Studio Forum](https://forum.seeedstudio.com/t/deepsleep-bricks-xiao-mg24/284889)
 
-## 解除变砖
+## 解砖
 
 XIAO MG24 是目前唯一配备串口芯片的 XIAO 型号。与其他 XIAO 型号不同，它没有 BOOT 按钮或 BOOT 恢复方法。这种设计疏忽可能会在设备进入休眠模式或遇到软件异常时造成问题，使得无法通过串口上传程序。为了解决这个问题，我们提供了一种唤醒串口并恢复功能的方法。
 
