@@ -6,16 +6,16 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/SenseCAP-ONE-Compact-Weather-Station-Introduction
 last_update:
-  date: 11/11/2025
+  date: 11/12/2025
   author: Michelle Huang
 ---
-# Estaciones Meteorológicas Compactas SenseCAP ONE 系列
+# Estaciones Meteorológicas Compactas SenseCAP ONE Series
 
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAPONE-S900-9in1-Compact-Weather-Sensor-p-4881.html?utm_source=wiki" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Whether%20Station%20Family.png" border="0" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAP-S1000-10-in-1-Compact-Weather-Station-p-5654.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Whether%20Station%20Family.png" border="0" /></a></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAPONE-S900-9in1-Compact-Weather-Sensor-p-4881.html?utm_source=wiki" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S1000-10-in-1-Compact-Weather-Station-p-5654.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora </font></span></strong>
     </a>
 </div>
@@ -33,7 +33,7 @@ Las estaciones meteorológicas compactas SenseCAP ONE consisten en varios sensor
 
 - **Integrado con brújula electrónica/magnetómetro**: permitiendo una instalación fácil y puedes elegir desactivar la brújula electrónica mientras te orientas al Norte manualmente.
 
-- **Componentes Potentes Incluidos**: Un cable de 3m para el montaje en poste; calentadores integrados que pueden encenderse en clima extremo; escudos de radiación están equipados para asegurar medición ambiental precisa; sensores ultrasónicos de velocidad y dirección del viento sin partes móviles; medidor de lluvia óptico que es compacto en tamaño y fácil de usar; cable de 3m está incluido en el paquete para el montaje en poste
+- **Componentes Potentes Incluidos**: Un cable de 3m para el montaje en poste; calentadores integrados que pueden encenderse en clima extremo; escudos de radiación están equipados para asegurar mediciones ambientales precisas; sensores ultrasónicos de velocidad y dirección del viento sin partes móviles; medidor de lluvia óptico que es compacto en tamaño y fácil de usar; cable de 3m está incluido en el paquete para el montaje en poste
 
 - **Diseño de nivel industrial: clasificación IP66**: resistente al agua y al polvo, adecuado para escenarios exteriores
 

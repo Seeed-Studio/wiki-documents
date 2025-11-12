@@ -6,16 +6,16 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/SenseCAP-ONE-Compact-Weather-Station-Introduction
 last_update:
-  date: 11/11/2025
+  date: 11/12/2025
   author: Michelle Huang
 ---
 # SenseCAP ONE 系列紧凑型气象站
 
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAPONE-S900-9in1-Compact-Weather-Sensor-p-4881.html?utm_source=wiki" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Whether%20Station%20Family.png" border="0" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAP-S1000-10-in-1-Compact-Weather-Station-p-5654.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Whether%20Station%20Family.png" border="0" /></a></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAPONE-S900-9in1-Compact-Weather-Sensor-p-4881.html?utm_source=wiki" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S1000-10-in-1-Compact-Weather-Station-p-5654.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 </font></span></strong>
     </a>
 </div>
@@ -33,11 +33,11 @@ SenseCAP ONE 紧凑型气象站由多个气象传感器组成，可测量以下�
 
 - **内置电子罗盘/磁力计**：便于安装，您可以选择在手动朝北定向时禁用电子罗盘。
 
-- **包含强大组件**：用于杆式安装的 3 米电缆；可在极端天气下开启的集成加热器；配备辐射屏蔽以确保准确的环境测量；无运动部件的超声波风速风向传感器；紧凑且用户友好的光学雨量计，包装中包含用于杆式安装的 3 米电缆
+- **包含强大组件**：用于杆式安装的 3 米电缆；可在极端天气下开启的集成加热器；配备辐射防护罩以确保准确的环境测量；无运动部件的超声波风速风向传感器；紧凑且用户友好的光学雨量计，包装中包含用于杆式安装的 3 米电缆
 
 - **工业级设计：IP66 防护等级**：防水、防尘，适用于户外场景
 
-- **支持接口**：RS485（MODBUS-RTU）/ SDI-12
+- **支持接口**：RS485 (MODBUS-RTU) / SDI-12
 符合国际标准：CE 和 FCC 认证。
 =
 这里有一个图表，清楚地展示了 SenseCAP ONE 的外观以及每个产品可以测量的参数。
@@ -113,7 +113,7 @@ SenseCAP ONE 紧凑型气象站由多个气象传感器组成，可测量以下�
     <td>1 ppm</td>
   </tr>
   <tr>
-    <td>噪音</td>
+    <td>噪声</td>
     <td>35-100dB</td>
     <td>±1.5dB</td>
     <td>0.1dB</td>
