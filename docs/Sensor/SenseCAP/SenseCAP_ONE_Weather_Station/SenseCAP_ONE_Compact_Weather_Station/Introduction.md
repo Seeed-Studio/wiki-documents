@@ -6,16 +6,16 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP-ONE-Compact-Weather-Station-Introduction
 last_update:
-  date: 11/11/2025
+  date: 11/12/2025
   author: Michelle Huang
 ---
 # SenseCAP ONE Series Compact Weather Stations
 
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAPONE-S900-9in1-Compact-Weather-Sensor-p-4881.html?utm_source=wiki" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Whether%20Station%20Family.png" border="0" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAP-S1000-10-in-1-Compact-Weather-Station-p-5654.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Whether%20Station%20Family.png" border="0" /></a></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAPONE-S900-9in1-Compact-Weather-Sensor-p-4881.html?utm_source=wiki" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S1000-10-in-1-Compact-Weather-Station-p-5654.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
     </a>
 </div>
