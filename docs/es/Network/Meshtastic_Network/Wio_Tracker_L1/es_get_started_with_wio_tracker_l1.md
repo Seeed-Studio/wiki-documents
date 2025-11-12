@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.web
 slug: /es/get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 10/29/2025
-  author: Michelle
+  date: 11/12/2025
+  author: Michelle Huang
 ---
 
 :::tip
@@ -41,6 +41,14 @@ Por favor `no uses NRF-OTA` para actualizar el firmware, puede causar que el dis
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Q97w2ompPtI?si=yLbAgE4cBbT6NbHS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+#### Joystick de Cuatro Direcciones
+El firmware L1 E-Ink actualmente no soporta el joystick de cuatro direcciones. Si quieres usar el joystick, por favor compra otros modelos.
+
+#### Barra de Menú
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
+Solo el firmware 2.7 soporta la barra de menú. Si quieres usar la barra de menú, sigue el [Tutorial de Flasheo de Firmware](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) para actualizar el firmware.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ### Parte 4 Conexión del Teléfono
 
@@ -77,11 +85,11 @@ Para L1 E-Ink, selecciona el dispositivo objetivo como `Seeed Wio Tracker L1 E-I
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
 
 
-Enciende el dispositivo, haz clic en `Enter DFU Mode`, aparecerá un puerto serie llamado `Tracker L1`, haz clic y conéctalo, y debería aparecer un controlador llamado `Tracker L1`.
+Enciende el dispositivo, haz clic en `Enter DFU Mode`, habrá un puerto serie llamado `Tracker L1`, haz clic y conéctalo, y debería aparecer un controlador llamado `Tracker L1`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-Arrastra el archivo UF2 a la unidad DFU. El firmware debería flashearse después de que el archivo se descargue y el dispositivo se reinicie.
+Arrastra el archivo UF2 a la unidad DFU. El firmware debería ser flasheado después de que el archivo se descargue y el dispositivo se reinicie.
 
 ### Encender el dispositivo
 
@@ -193,11 +201,17 @@ Puedes agregar sensores al dispositivo a través de la interfaz Grove. Los sigui
   </tr>
 </table>
 
+
+### Teclado Virtual
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
+¡El firmware versión 2.7 ahora soporta teclado virtual! Puedes escribir mensajes directamente en el dispositivo para comunicarte con otros dispositivos. Sigue el [Tutorial de Flasheo de Firmware](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) para actualizar el firmware.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
+
 ## FAQ
 
 ### Entrar al Modo DFU Manualmente
 
-Conecta el dispositivo a tu PC, presiona dos veces el botón `Reset`. El LED amarillo permanecerá encendido fijo, y aparecerá una nueva unidad USB llamada `Tracker L1` en tu PC.
+Conecta el dispositivo a tu PC, presiona dos veces el botón `Reset`. El LED amarillo permanecerá sólido, y aparecerá una nueva unidad USB llamada `Tracker L1` en tu PC.
 
 ### Salir del Modo DFU
 
@@ -205,14 +219,15 @@ Presiona el botón `Reset` una vez para salir del modo DFU.
 
 ### Calidad de Señal
 
-- **SNR** refleja la calidad del enlace de comunicación. Los dispositivos normales usualmente operan por encima de -7 dB. Un dispositivo con un SNR menor a -10 dB indica un rendimiento deficiente.
+- **SNR** refleja la calidad del enlace de comunicación. Los dispositivos normales usualmente operan por encima de -7 dB. Un dispositivo con SNR menor a -10 dB indica un rendimiento pobre.
 
-- **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. Los dispositivos normales usualmente operan por encima de -110 dBm. Un dispositivo con un RSSI menor a -115 dBm se considera que tiene un rendimiento deficiente.
+- **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. Los dispositivos normales usualmente operan por encima de -110 dBm. Un dispositivo con RSSI menor a -115 dBm se considera que tiene un rendimiento pobre.
 
-      Para lograr el mejor efecto de señal, por favor usa el dispositivo en un área abierta y sin obstrucciones con interferencia mínima.
+      Para lograr el mejor efecto de señal, utilice el dispositivo en un área abierta y sin obstrucciones con interferencia mínima.
 ## Recursos
-- [Archivo de referencia de impresión 3D](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
+- [(V1) Archivo de referencia para impresión 3D](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
+- [(V2 Nuevo Joystick de Cuatro Direcciones) Archivo de referencia para impresión 3D](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
 - [Archivo de Contorno](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
 - [Certificación FCC](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
 - [Certificación CE](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
-- [Prueba de Consumo de Energía y Cálculo de Vida de Batería](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+- [Prueba de Consumo de Energía y Cálculo de Vida Útil de la Batería](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
