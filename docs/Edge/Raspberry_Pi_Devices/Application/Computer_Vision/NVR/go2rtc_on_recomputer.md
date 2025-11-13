@@ -1,6 +1,6 @@
 ---
 description: This wiki demonstrates how to use go2rtc on recomputer. 
-title: Use go2rtc on reComputer
+title: go2rtc on reComputer
 keywords:
   - reComputer
   - go2rtc
