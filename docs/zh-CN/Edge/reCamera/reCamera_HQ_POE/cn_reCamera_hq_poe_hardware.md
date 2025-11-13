@@ -18,7 +18,7 @@ last_update:
 
 # reCamera HQ POE 概述
 
-reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的图像。它具有 M12 镜头接口——可灵活地将默认镜头替换为任何兼容的 2MP M12 镜头。还支持 PoE（以太网供电）：无需单独的 USB/DC 电源，只需一根以太网线连接到 PoE 交换机即可实现供电和数据传输。
+reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的图像。它具有 M12 镜头接口——可灵活地将默认镜头替换为任何兼容的 2MP M12 镜头。还支持 PoE（以太网供电）：无需单独的 USB/DC 电源，只需一根以太网电缆连接到 PoE 交换机即可实现供电和数据传输。
 
 
 ## 特性
@@ -46,14 +46,14 @@ reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的�
 
 | 传感器                | GC2053                             |
 | --------------------- | ---------------------------------- |
-| 光学格式        | 1/2.9inch                          |
+| 光学格式        | 1/2.9 英寸                          |
 | 分辨率            | 1920x1080                          |
-| 最大帧率        | 30fps@full size                    |
+| 最大帧率        | 30fps@全尺寸                    |
 | 镜头接口            | M12                                |
 | 视场角                   | 93°                                |
-| 以太网              | 100Mbps with PoE                   |
+| 以太网              | 100Mbps 带 PoE                   |
 | USB                   | USB Type-C(2.0)                    |
-| 尺寸             | 40x40x45.8mm40x40x53.1mm with lens |
+| 尺寸             | 40x40x45.8mm40x40x53.1mm 带镜头 |
 | 工作温度 | -20～50°C                          |
 | 工作湿度    | 95%                                |
 
@@ -63,7 +63,7 @@ reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的�
 | 板子         | 特性                           | 版本 |
 | ------------- | ---------------------------------- | ------------ |
 | C1_2002w    | - eMMC <br /> - WiFi/BLE 模块 <br /> - 板载天线 <br /> - 外部天线连接器| 1.2 |
-| C1_2002       | - eMMC <br /> - 额外的 SDIO 到基板 <br /> - 额外的 UART 到基板 | 1.2 |
+| C1_2002       | - eMMC <br /> - 额外 SDIO 到基板 <br /> - 额外 UART 到基板 | 1.2 |
 
 顶视图             |  底视图
 :-------------------------:|:-------------------------:
@@ -74,7 +74,7 @@ reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的�
 
 顶视图             |  底视图
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top.png" /></div> |<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top2.png" /></div> |<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom2.png" /></div>
 
 #### ⚙️ 特性
 
@@ -127,7 +127,7 @@ reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的�
 
 顶部             |  底部
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top2.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom2.png" /></div>
 
 #### ⚙️ 特性：
 
@@ -155,7 +155,7 @@ reCamera 上有 3 个指示灯，**红色和蓝色**指示灯是可编程指示�
 
 | LED（颜色） | 状态 | 说明 |
 | ---- | ---- | ---- |
-| LED1 - 绿色 | 常亮 | 电源开启 |
+| LED1 - 绿色 | 开启 | 电源开启 |
 | LED2 - 红色 | 闪烁 | CPU 工作中（用户定义） |
 | LED3 - 蓝色 | 闪烁 | eMMC 读取/写入 |
 
@@ -230,7 +230,7 @@ echo "490" > /sys/class/gpio/unexport #Disable pin GPIO490
 
 ### <span id="jump6">Uart (Debug)</span>
 
-reCamera 的 POE 底板有两组串口，分别是 /ttyS0（用于 Debug）和 /ttyS3。
+reCamera 的 POE 底板有两组串口，即 /ttyS0（用于 Debug）和 /ttyS3。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-1.png" /></div>
 
@@ -256,7 +256,7 @@ stty -F /dev/ttyS3 ispeed 115200 ospeed 115200
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-3.png" /></div>
 
-默认串口启用了回显功能，您可以使用以下命令来禁用它：
+默认串口启用了回显功能，您可以使用以下命令禁用它：
 
 ```bash
 stty -F /dev/ttyS3 -echo
