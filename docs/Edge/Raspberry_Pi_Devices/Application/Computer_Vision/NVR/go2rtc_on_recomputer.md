@@ -77,7 +77,7 @@ tar -xvzf go1.24.0.linux-arm64.tar.gz
 chmod +x go2rtc_linux_arm64
 ```
 
-### Creat go2rtc.yaml
+### Create go2rtc.yaml
 
 Please use the following command to run.
 
