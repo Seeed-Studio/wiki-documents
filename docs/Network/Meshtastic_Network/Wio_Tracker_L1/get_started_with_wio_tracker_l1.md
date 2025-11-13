@@ -7,9 +7,10 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.web
 slug: /get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 10/29/2025
-  author: Michelle
+  date: 11/12/2025
+  author: Michelle Huang
 ---
+
 :::tip
 The Wio Tracker L1 Series share the same hardware framework. Although the video guide was for the L1 Pro, it is applicable to all other products in the L1 series.
 :::
@@ -27,6 +28,10 @@ When using the L1, L1 Lite or L1 E-Ink models for the first time, after connecti
 
 ### Part 2 Firmware Flashing
 
+:::caution note
+Please `don't use NRF-OTA` to update the firmware, it may cause the device to be completely dead.
+:::
+
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/hcjai4J1894?si=S_jaEfXVThWXscVJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
@@ -36,6 +41,14 @@ When using the L1, L1 Lite or L1 E-Ink models for the first time, after connecti
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Q97w2ompPtI?si=yLbAgE4cBbT6NbHS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+#### Four-way Joystick
+L1 E-Ink firmware currently don't support the four-way joystick. If you want to use the joystick, please purchase other models. 
+
+#### Menu Bar
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
+Only the 2.7 firmware support the menu bar. If you want to use the menu bar, follow the [Flash Firmware Tutorial](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) to update firmware.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ### Part 4 Phone Connection
 
@@ -52,6 +65,10 @@ When using the L1, L1 Lite or L1 E-Ink models for the first time, after connecti
 ## Get Started
 
 ### Flash Firmware
+
+:::caution note
+Please `don't use NRF-OTA` to update the firmware, it may cause the device to be completely dead.
+:::
 
 Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
@@ -184,6 +201,12 @@ You can add sensor to the device via the grove interface. The following sensors 
   </tr>
 </table>
 
+
+### Virtuak Keyboard
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
+The 2.7 version firmwarw now support virtual keyboard! You can type message directly on the device to communicate with other device. Follow the [Flash Firmware Tutorial](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) to update firmware.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
+
 ## FAQ
 
 ### Entering DFU Mode Manually
@@ -202,7 +225,8 @@ Press the `Reset` button once to exit DFU mode.
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
 ## Resource
-- [3D printing reference file](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
+- [(V1) 3D printing reference file](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
+- [(V2 New Four-way Joystick) 3D printing reference file](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
 - [Outline File](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
 - [FCC Certification](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
 - [CE Certification](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)

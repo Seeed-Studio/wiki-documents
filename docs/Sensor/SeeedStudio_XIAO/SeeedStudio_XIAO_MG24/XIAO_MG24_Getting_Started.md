@@ -304,7 +304,7 @@ void setup() {
 
 void loop() {
   int voltageValue = analogRead(PD4);
-  float voltage = voltageValue * (5.0 / 4095.0);
+  float voltage = voltageValue * (2 * 3.3 / 4095.0);
   
   Serial.print("Voltage: ");
   Serial.print(voltage, 2);
@@ -501,11 +501,11 @@ The XIAO MG24 enters a **Deep Sleep mode** (EM4) to conserve power, but in some 
 
 To avoid bricking your XIAO MG24 while using Deep Sleep mode, follow these steps:
 
-1. Use the Escape Pin (PC0)
+1. Use the Escape Pin (PC1)
 
-The XIAO MG24 has a built-in **escape mechanism** to prevent bricking. If **PC0** is pulled **LOW** during reset, the device enters an infinite loop, allowing you to upload a new sketch.  
+The XIAO MG24 has a built-in **escape mechanism** to prevent bricking. If **PC1** is pulled **LOW** during reset, the device enters an infinite loop, allowing you to upload a new sketch.  
 
-- Connect **PC0** to **GND** before resetting the device.  
+- Connect **PC1** to **GND** before resetting the device.  
 - After resetting, upload your sketch while the device is in the loop.  
 
 2. Modify Your Sketch

@@ -1,6 +1,6 @@
 ---
 description: This wiki demonstrates how to use go2rtc on recomputer. 
-title: Use go2rtc on reComputer
+title: go2rtc on reComputer
 keywords:
   - reComputer
   - go2rtc
@@ -77,7 +77,7 @@ tar -xvzf go1.24.0.linux-arm64.tar.gz
 chmod +x go2rtc_linux_arm64
 ```
 
-### Creat go2rtc.yaml
+### Create go2rtc.yaml
 
 Please use the following command to run.
 

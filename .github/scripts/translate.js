@@ -92,7 +92,6 @@ const translationStatus = {
 };
 
 // 预处理文档，添加行号标记（保留缩进）
-// PATCH: 新增 startsInsideCodeBlock/endsInsideCodeBlock，用于跨分块延续代码块状态
 function preprocessDocument(content, startsInsideCodeBlock = false) {
   const lines = content.split('\n');
   const processedLines = [];
@@ -471,14 +470,14 @@ ${glossaryPairs}
 
 请直接翻译以下内容，保持所有标记、缩进和格式：`;
 
-  // === 新增 1：语言一致性硬约束（插入到 <translation_rules> 开头） ===
+  // === 语言一致性硬约束（插入到 <translation_rules> 开头） ===
   const LANGUAGE_GUARD =
     '\n0. **语言一致性**：除代码、行内代码、保留术语与产品名外，所有可见文本必须使用 ' +
     langName +
     ' 输出；不得混用其它自然语言。若发生混用，改译为目标语言。\n';
   prompt = prompt.replace('<translation_rules>', '<translation_rules>\n' + LANGUAGE_GUARD);
 
-  // === 新增 2：按目标语言替换 <example> 为本地化示例（仅 es / ja 覆盖；默认保留中文示例） ===
+  // === 按目标语言替换 <example> 为本地化示例（仅 es / ja 覆盖；默认保留中文示例） ===
   function getLocalizedExampleBlock(lang) {
     if (lang === 'es') {
       return (
@@ -567,8 +566,6 @@ Salida incorrecta (prohibido):
 </example>`
       );
     }
-
-    // 其它语言：保留中文示例，不做替换
     return '';
   }
 
@@ -584,8 +581,7 @@ Salida incorrecta (prohibido):
   return prompt;
 }
 
-// 验证翻译结果
-// ——改动点：自动识别原文中的代码块行，并在逐行校验时跳过这些行的格式检查
+// 验证翻译结果,自动识别原文中的代码块行，并在逐行校验时跳过这些行的格式检查
 function validateTranslation(original, translated) {
   const originalLines = original.split('\n');
   const translatedLines = translated.split('\n');
@@ -694,7 +690,6 @@ function validateTranslation(original, translated) {
 }
 
 // Claude翻译函数
-// PATCH: 新增 startsInsideCodeBlock 形参，并在 markdown 路径返回 { text, endsInsideCodeBlock }
 async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = false, chunkInfo = null, isCategory = false, startsInsideCodeBlock = false) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
   if (!langConfig) {
@@ -802,7 +797,7 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
   }
 }
 
-// Category翻译prompt（保持原有）
+// Category翻译prompt
 function generateCategoryPrompt(targetLang, pathPrefix) {
   const langName = LANGUAGE_CONFIG[targetLang].name;
   const termsList = Object.entries(PRESERVE_TERMS)
@@ -866,7 +861,7 @@ function fixAnchorLinks(content) {
   return content;
 }
 
-// 处理内部链接（保持原有）
+// 处理内部链接
 function processInternalLinks(content, targetLang) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
   if (!langConfig || !langConfig.pathPrefix) return content;
@@ -912,7 +907,7 @@ function processInternalLinks(content, targetLang) {
   return content;
 }
 
-// 中英文混排处理（保持原有，但避免影响锚点）
+// 中英文混排处理
 function addChineseEnglishSpacing(content) {
   // 先保存所有的锚点链接
   const anchorLinks = [];

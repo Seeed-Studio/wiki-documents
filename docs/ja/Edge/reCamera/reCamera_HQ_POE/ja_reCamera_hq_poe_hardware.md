@@ -9,7 +9,7 @@ keywords:
   - HQ
   - M12
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /ja/recamera_hd_poe_hardware
+slug: /ja/recamera_hq_poe_hardware
 sidebar_position: 2
 last_update:
   date: 09/25/2025
@@ -18,15 +18,15 @@ last_update:
 
 # reCamera HQ POE 概要
 
-reCamera 2002 HQ PoEは、より鮮明で明瞭な画像を提供する高度なCMOSセンサーを搭載しています。M12レンズマウントを採用しており、デフォルトレンズを任意の互換性のある2MP M12レンズに柔軟に交換できます。また、PoE（Power over Ethernet）をサポートしており、別途USB/DC電源は不要で、PoEスイッチへの1本のイーサネットケーブルで電源とデータの両方を供給できます。
+reCamera 2002 HQ PoE は、より鮮明で明瞭な画像を提供する高度な CMOS センサーを搭載しています。M12 レンズマウントを採用しており、デフォルトレンズを任意の互換性のある 2MP M12 レンズに柔軟に交換できます。また、PoE（Power over Ethernet）をサポートしており、別途 USB/DC 電源は不要で、PoE スイッチへの 1 本のイーサネットケーブルで電源とデータの両方を供給できます。
 
 
-## 特徴
+## 機能
 
-- 高品質：1/2.9インチGC2053 CMOSセンサーを搭載し、優れた画質を提供します。
-- M12レンズマウント：デフォルト90° FOV、標準M12レンズと簡単に交換可能。
-- PoE（Power over Ethernet）対応イーサネット：1本のケーブルでデータと電源を供給、PoE Mode Aのみ対応。
-- IO/UART拡張：1×UARTと3×GPIOを備えた6ピンヘッダー。
+- 高品質：1/2.9 インチ GC2053 CMOS センサーを搭載し、優れた画質を提供します。
+- M12 レンズマウント：デフォルト 90° FOV、標準 M12 レンズに簡単に交換可能。
+- PoE（Power over Ethernet）対応イーサネット：1 本のケーブルでデータと電源を供給、PoE Mode A のみ対応。
+- IO/UART 拡張：1×UART と 3×GPIO を備えた 6 ピンヘッダー。
 
 ## 仕様
 
@@ -36,7 +36,7 @@ reCamera 2002 HQ PoEは、より鮮明で明瞭な画像を提供する高度な
 |------------------------|---------------------------------------------------------------------------|
 | **SOC**                | SG2002                                                                    |
 | **CPU**                | C906@1GHz + C906@700MHz                                                  |
-| **AI性能**     | 1 Tops @ Int8                                                            |
+| **AI 性能**     | 1 Tops @ Int8                                                            |
 | **MCU**                | 8051 @ 8KB SRAM                                                          |
 | **オペレーティングシステム**   | Linux                                                                     |
 | **メモリ**             | 256 MB                                                                  |
@@ -46,14 +46,14 @@ reCamera 2002 HQ PoEは、より鮮明で明瞭な画像を提供する高度な
 
 | センサー                | GC2053                             |
 | --------------------- | ---------------------------------- |
-| 光学フォーマット        | 1/2.9インチ                          |
+| 光学フォーマット        | 1/2.9inch                          |
 | 解像度            | 1920x1080                          |
-| 最大フレームレート        | 30fps@フルサイズ                    |
+| 最大フレームレート        | 30fps@full size                    |
 | レンズマウント            | M12                                |
 | FOV                   | 93°                                |
-| イーサネット              | 100Mbps（PoE対応）                   |
-| USB                   | USB Type-C（2.0）                    |
-| 寸法             | 40x40x45.8mm（レンズ付き40x40x53.1mm） |
+| イーサネット              | 100Mbps with PoE                   |
+| USB                   | USB Type-C(2.0)                    |
+| 寸法             | 40x40x45.8mm40x40x53.1mm with lens |
 | 動作温度 | -20～50°C                          |
 | 動作湿度    | 95%                                |
 
@@ -62,19 +62,19 @@ reCamera 2002 HQ PoEは、より鮮明で明瞭な画像を提供する高度な
 <!-- 搬运github说明和图 -->
 | ボード         | 機能                           | バージョン |
 | ------------- | ---------------------------------- | ------------ |
-| C1_2002w    | - eMMC <br /> - WiFi/BLEモジュール <br /> - オンボードアンテナ <br /> - 外部アンテナコネクタ| 1.2 |
-| C1_2002       | - eMMC <br /> - ベースボードへの追加SDIO <br /> - ベースボードへの追加UART | 1.2 |
+| C1_2002w    | - eMMC <br /> - WiFi/BLE モジュール <br /> - オンボードアンテナ <br /> - 外部アンテナコネクタ| 1.2 |
+| C1_2002       | - eMMC <br /> - ベースボードへの追加 SDIO <br /> - ベースボードへの追加 UART | 1.2 |
 
 上面図             |  底面図
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
 ### [センサーボード-S4_GC2053](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
 
 
 上面図             |  底面図
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top2.png" /></div> |<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom2.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top2.png" /></div> |<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom2.png" /></div>
 
 #### ⚙️ 機能
 
@@ -84,7 +84,7 @@ reCamera 2002 HQ PoEは、より鮮明で明瞭な画像を提供する高度な
       <tr>
         <td style={{ fontWeight: 'bold' }}>センサー</td>
         <td className="dbon">GC2053</td>
-        <td style={{ fontWeight: 'bold' }}>CMOSサイズ</td>
+        <td style={{ fontWeight: 'bold' }}>CMOS サイズ</td>
         <td className="dbon">1/2.9"</td>
       </tr>
       <tr>
@@ -117,7 +117,7 @@ reCamera 2002 HQ PoEは、より鮮明で明瞭な画像を提供する高度な
       </tr>
       <tr>
         <td style={{ fontWeight: 'bold' }}>インターフェース</td>
-        <td colspan="3">- 1 x マイクロフォン<br />- 1 x スピーカー<br />- 3 x LEDインジケーター</td>
+        <td colspan="3">- 1 x マイクロフォン<br />- 1 x スピーカー<br />- 3 x LED インジケーター</td>
       </tr>
     </tbody>
   </table>
@@ -127,55 +127,55 @@ reCamera 2002 HQ PoEは、より鮮明で明瞭な画像を提供する高度な
 
 上面             |  底面
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top2.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom2.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top2.png" /></div>  |  <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom2.png" /></div>
 
 #### ⚙️ 機能：
 
-- 1 x **802.3af PSE**対応RJ45ポート。
-- 1 x UARTポート。
+- 1 x **802.3af PSE** 対応 RJ45 ポート。
+- 1 x UART ポート。
 - 1 x デバッグポート。
-- 3 x IOポート。
+- 3 x IO ポート。
 
- <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
 
 ## ハードウェアインターフェース
 
 - [ライト](#jump2)
-- [マイク＆スピーカー](#jump3)
+- [マイク & スピーカー](#jump3)
 - [POE](#jump4)
 - [IO](#jump5)
-- [Uart（デバッグ）](#jump6)
+- [Uart (デバッグ)](#jump6)
 - [ユーザーボタン](#jump7)
 
 ### <span id="jump2">ライト</span>
 
-reCameraには3つのインジケーターがあります。**赤と青**のライトはプログラム可能なインジケーターで、**緑**のインジケーターはプログラム不可能な電源インジケーターです。**赤**はCPUのステータスインジケーター、**青**はシステムeMMCの読み取りステータスインジケーターです。
+reCamera には 3 つのインジケーターがあり、**赤と青**のライトはプログラム可能なインジケーターで、**緑**のインジケーターはプログラム不可能な電源インジケーターです。**赤**は CPU のステータスインジケーター、**青**はシステム eMMC の読み取りステータスインジケーターです。
 
-**ライトインジケーターのステータス**：
+**ライトインジケーターステータス**：
 
 | LED（色） | ステータス | 説明 |
 | ---- | ---- | ---- |
-| LED1 - 緑 | 点灯 | 電源オン |
-| LED2 - 赤 | 点滅 | CPU動作中（ユーザー定義） |
-| LED3 - 青 | 点滅 | eMMC読み取り/書き込み中 |
+| LED1 - 緑 | ON | 電源オン |
+| LED2 - 赤 | 点滅 | CPU 動作中（ユーザー定義） |
+| LED3 - 青 | 点滅 | eMMC 読み取り/書き込み |
 
-例1：Linuxコマンドを使用して**赤色LED**の明度をゼロに変更
+例 1：Linux コマンドを使用して**赤色 LED** の明度をゼロに変更
 
 ``` bash
 echo 0 | sudo tee /sys/class/leds/red/brightness
 ```
 
-例2：**赤色ライト**を完全に消灯
+例 2：**赤色ライト**を完全にオフにする
 
 ``` bash
 echo none | sudo tee /sys/class/leds/red/trigger
 ```
 
-### <span id="jump3">マイク＆スピーカー</span>
+### <span id="jump3">マイク & スピーカー</span>
 
-reCameraにはマイクロフォンとスピーカーが搭載されています。以下のコマンドでマイクロフォンとスピーカーを呼び出すことができます。reCameraは**wav**形式のオーディオファイルを再生できます。
+reCamera にはマイクロフォンとスピーカーが搭載されています。以下のコマンドでマイクロフォンとスピーカーを呼び出すことができます。reCamera は **wav** 形式のオーディオファイルを再生できます。
 
-プレーヤーのデフォルト形式：16bitビットレート、サンプリングレート16,000
+プレーヤーのデフォルト形式：16bit ビットレート、サンプリングレート 16,000
 
 ```bash
 sudo arecord -D hw:0,0 -r 16000 -f S16_LE -c 1 -d 5 /home/recamera/test.wav //Record five seconds of audio
@@ -185,33 +185,33 @@ sudo aplay -D hw:1,0 /home/recamera/test.wav //Playing audio
 
 ### <span id="jump4">POE</span>
 
-POEモジュールはreCamera HQ POEバージョンのハードウェアに内蔵されています。WiFiモジュールは削除されています。ただし、SG2002wのコアボードを交換することでWi-Fi機能を復元できます。
+POE モジュールは reCamera HQ POE バージョンのハードウェアに内蔵されています。WiFi モジュールは削除されています。ただし、SG2002w のコアボードを交換することで Wi-Fi 機能を復元できます。
 
-**POE 802.3af**プロトコルをサポートするスイッチにreCameraを接続すると、reCameraデバイスが起動します。
+**POE 802.3af** プロトコルをサポートするスイッチに reCamera を接続すると、reCamera デバイスが起動します。
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/poe_connect_recamera.jpg" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/poe_connect_recamera.jpg" /></div>
 
-ルーターでデバイスのIPアドレスを確認してアクセスするか、USBでreCameraに接続してターミナルにアクセスし、有線ネットワークIPを照会できます。
+ルーターでデバイスの IP アドレスを確認してアクセスするか、USB 経由で reCamera に接続してターミナルにアクセスし、有線ネットワーク IP を照会できます。
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/router_search.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/router_search.png" /></div>
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/terminal_ipv4_search.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/terminal_ipv4_search.png" /></div>
 
 ### <span id="jump5">IO</span>
 
-**GPIO sysfsインターフェースを使用したI/O制御**
+**GPIO sysfs インターフェースを使用した I/O 制御**
 
- <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
 
-Linuxでは、GPIOの読み書きを行う最も一般的な方法は、GPIO sysfsインターフェースを使用することです。これは`/sys/class/gpio`ディレクトリ下の`export`、`unexport`、`gpio{N}/direction`、`gpio{N}/value`（`{N}`を実際のピン番号に置き換える）などのファイルを操作することで実装され、シェルスクリプトでよく使用されます。
+Linux では、GPIO の読み書きを行う最も一般的な方法は GPIO sysfs インターフェースを使用することです。これは `/sys/class/gpio` ディレクトリ下の `export`、`unexport`、`gpio{N}/direction`、`gpio{N}/value`（`{N}` を実際のピン番号に置き換える）などのファイルを操作することで実装され、シェルスクリプトでよく使用されます。
 
-reCamera POEベースプレートには3つの利用可能なIOポートがあります。各ポートは入力または出力として設定できます。IOポートの番号は以下の通りです：
+reCamera POE バックプレーンには 3 つの利用可能な IO ポートがあります。各ポートは入力または出力として設定できます。IO ポートの番号は以下の通りです：
 
-| IOポート | GPIO番号 |
+| IO ポート | GPIO 番号 |
 | ---- | ---- |
 | D1 | 490 |
-| CLK（多重化IOピン） | 487 |
-| SMD（多重化IOピン） | 488 |
+| CLK（多重化 IO ピン） | 487 |
+| SMD（多重化 IO ピン） | 488 |
 
 
 ```bash
@@ -230,13 +230,13 @@ echo "490" > /sys/class/gpio/unexport #Disable pin GPIO490
 
 ### <span id="jump6">Uart（デバッグ）</span>
 
-reCameraのPOEベースボードには2組のシリアルポートがあります：/ttyS0（デバッグ用）と/ttyS3です。
+reCamera の POE ベースボードには 2 組のシリアルポートがあり、それぞれ /ttyS0（デバッグ用）と /ttyS3 です。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-1.png" /></div>
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top_uart.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_pinout.png" /></div>
 
-このデバイスのデバッグシリアルポートのボーレートは115200で、リモート監視システムへの接続をサポートしています。
+このデバイスのデバッグシリアルポートのボーレートは 115200 で、リモート監視システムへの接続をサポートしています。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-8.png" /></div>
 
@@ -272,7 +272,7 @@ echo Hello! > /dev/ttyS3
 cat /dev/ttyS3
 ```
 
-minicomツールを使用してシリアルポート経由で通信する：
+minicomツールを使用してシリアルポート経由で通信します：
 
 ```bash
 minicom -D /dev/ttyS3 -b 115200
@@ -283,7 +283,7 @@ minicom -D /dev/ttyS3 -b 115200
 
 reCameraのusrボタンはユーザーがカスタマイズできます。
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/image-10.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/POE_user_button.png" /></div>
 
 ```bash
 echo "510" > /sys/class/gpio/export
@@ -306,7 +306,7 @@ cat /sys/class/gpio/gpio510/value #When the key is pressed, 0 is printed
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

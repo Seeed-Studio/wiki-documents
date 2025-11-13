@@ -1,6 +1,6 @@
 ---
 description: このwikiでは、reComputer上でgo2rtcを使用する方法を説明します。
-title: reComputer上でgo2rtcを使用する
+title: reComputer上のgo2rtc
 keywords:
   - reComputer
   - go2rtc
@@ -14,7 +14,7 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# reComputer上のgo2rtc
+# reComputer で go2rtc を使う
 
 ## はじめに
 

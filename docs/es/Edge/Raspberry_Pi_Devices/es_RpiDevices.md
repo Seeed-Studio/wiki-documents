@@ -9,6 +9,8 @@ keywords:
 - reTerminal
 - reTerminal DM
 - reRouter
+- Raspberry Pi Compatible
+- Respberry Pi Original
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/raspberry-pi-devices
 last_update:
@@ -18,7 +20,7 @@ last_update:
 
 ## Introducción
 
-Bienvenido al mundo de vanguardia de los dispositivos alimentados por Raspberry Pi en Edge Solution. Aquí exploramos las soluciones innovadoras creadas por Seeed Studio para computación edge, específicamente diseñadas para Raspberry Pi CM4/CM5 y Raspberry Pi 4/5. Estos dispositivos personalizables incluyen unidades de Interfaz Humano-Máquina (HMI), controladores edge versátiles y cajas de suite de IA. Únete a nosotros en un viaje a través del intrincado panorama de estos potentes dispositivos, diseñados para mejorar tus proyectos con capacidades de computación edge fluidas y eficientes.
+Bienvenido al mundo de vanguardia de dispositivos alimentados por Raspberry Pi en Edge Solution. Aquí exploramos las soluciones innovadoras creadas por Seeed Studio para computación edge, específicamente diseñadas para Raspberry Pi CM4/CM5 y Raspberry Pi 4/5. Estos dispositivos personalizables incluyen unidades de Interfaz Humano-Máquina (HMI), controladores edge versátiles y cajas de suite de IA. Únete a nosotros en un viaje a través del intrincado panorama de estos potentes dispositivos, diseñados para mejorar tus proyectos con capacidades de computación edge fluidas y eficientes.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/respberry_pi_all.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -29,7 +31,7 @@ Bienvenido al mundo de vanguardia de los dispositivos alimentados por Raspberry 
 ### Computadoras Edge AI
 Seeed Studio **reComputer Industrial R & AI R Series** – Controladores Edge AI Robustos del Tamaño de la Palma Construidos para IIoT y Automatización Inteligente
 
-Alimentados por el **Raspberry Pi 5 / Compute Module 5** de alto rendimiento y emparejados con un **acelerador AI Hailo-8**, las líneas reComputer Industrial R y AI R entregan hasta **26 TOPS** de potencia de cómputo para análisis de visión en tiempo real, multi-flujo e inferencia de aprendizaje profundo directamente en el edge.
+Alimentadas por el **Raspberry Pi 5 / Compute Module 5** de alto rendimiento y emparejadas con un **acelerador AI Hailo-8**, las líneas reComputer Industrial R y AI R entregan hasta **26 TOPS** de potencia de cómputo para análisis de visión en tiempo real, multi-flujo e inferencia de aprendizaje profundo directamente en el edge.
 
 La conectividad de grado industrial viene de serie: Ethernet Gigabit dual, **RS-485/RS-232 aislado, DI/DO multicanal, además de ranuras M.2 y mini-PCIe que te permiten insertar 4G/5G, LoRa®, o SSDs NVMe** en segundos. Un chasis completamente metálico sin ventilador garantiza operación silenciosa y a prueba de polvo desde **–20 °C a 60 °C**, mientras que el watchdog de hardware y el supercondensador UPS opcional mantienen las tareas críticas funcionando 24/7.
 
@@ -107,8 +109,8 @@ Listo para montaje en riel DIN o pared, la serie reComputer R se desliza sin esf
       </tr>
       <tr>
         <td>Otras interfaces</td>
-        <td> 1x 10M/100M/1000M Ethernet (PoE), <br/>1x 10M/100M Ethernet. <br/>2x HDMI 2.0. <br/>3x Type-A USB3.0, <br/>1x Type-A USB2.0,<br/> 1x Type-C USB2.0 (para actualización de SO). <br/>1x ranura para tarjeta Nano SIM.</td>
-        <td>1x 10M/100M/1000M Ethernet (PoE),<br/> 1x 10M/100M Ethernet. <br/>2x HDMI 2.0. <br/>3x Type-A USB3.0, <br/>1x Type-A USB2.0, <br/>1x Type-C USB2.0 (para actualización de SO). <br/>1x ranura para tarjeta Nano SIM.</td>
+        <td> 1x 10M/100M/1000M Ethernet (PoE), <br/>1x 10M/100M Ethernet. <br/>2x HDMI 2.0. <br/>3x Type-A USB3.0, <br/>1x Type-A USB2.0,<br/> 1x Type-C USB2.0 (para actualización de OS). <br/>1x ranura para tarjeta Nano SIM.</td>
+        <td>1x 10M/100M/1000M Ethernet (PoE),<br/> 1x 10M/100M Ethernet. <br/>2x HDMI 2.0. <br/>3x Type-A USB3.0, <br/>1x Type-A USB2.0, <br/>1x Type-C USB2.0 (para actualización de OS). <br/>1x ranura para tarjeta Nano SIM.</td>
         <td>1x 10/100/1000 Mbps Ethernet,<br/>2x USB 3.0(USB-A), <br/>2x USB 2.0(USB-A),<br/>2 x puertos micro HDMl(4Kp60),<br/> 2 × transceptores de cámara/pantalla MIPI de 4 carriles,<br/>1 x ranura para tarjeta microSD(con soporte para modo SDR104 de alta velocidad); <br/>2 x ranura M.2(soporta PCIe 3.0 M.2 NVMe SSD).</td>
         <td>2 x HDMI, <br/>1 x Gigabit Ethernet, <br/>2 x USB 3.2 Type-A, <br/>1 x USB 2.0 Type-C. <br/>2 ranuras para almacenamiento SSD y aceleración AI, <br/>decodificador H.265 4k 60fps.</td>
       </tr>
@@ -242,8 +244,8 @@ reTerminal y reTerminal DM son dispositivos avanzados que integran computación 
       </tr>
       <tr>
         <td>Introducción</td>
-        <td>Conoce reTerminal, la última incorporación a nuestra familia reThings: un dispositivo avanzado de Interfaz Humano-Máquina (HMI) que cuenta con una pantalla táctil capacitiva multi-táctil IPS de 5 pulgadas con una resolución de 1280 x 720. Este dispositivo preparado para el futuro se integra perfectamente con sistemas IoT y en la nube, permitiendo una colaboración eficiente para desbloquear escenarios infinitos en el borde. Con sus características de vanguardia, reTerminal está preparado para redefinir las experiencias interactivas y cerrar la brecha entre los ámbitos físico y digital.</td>
-        <td>Presentamos reTerminal DM, una Interfaz Humano-Máquina (HMI) industrial de código abierto de 10.1" que sirve como Maestro de Dispositivo Integrado. Este dispositivo todo-en-uno, basado en Raspberry Pi CM4, funciona como PC de Panel, HMI, PLC y Gateway IIoT. Con una pantalla grande de grado industrial IP65, reTerminal DM es un centro de detección interactivo de próxima generación, optimizando el flujo de datos y la gestión de dispositivos en el sitio.</td>
+        <td>Conoce reTerminal, la última incorporación a nuestra familia reThings: un dispositivo avanzado de Interfaz Humano-Máquina (HMI) que cuenta con una pantalla táctil capacitiva multi-táctil IPS de 5 pulgadas con una resolución de 1280 x 720. Este dispositivo preparado para el futuro se integra perfectamente con sistemas IoT y en la nube, permitiendo una colaboración eficiente para desbloquear escenarios infinitos en el borde. Con sus características de vanguardia, reTerminal está listo para redefinir las experiencias interactivas y cerrar la brecha entre los ámbitos físico y digital.</td>
+        <td>Presentamos reTerminal DM, una Interfaz Humano-Máquina (HMI) industrial de código abierto de 10.1" que sirve como un Maestro de Dispositivo Integrado. Este dispositivo todo-en-uno, basado en Raspberry Pi CM4, funciona como un Panel PC, HMI, PLC y Gateway IIoT. Con una pantalla grande de grado industrial IP65, reTerminal DM es un centro de detección interactivo de próxima generación, optimizando el flujo de datos y la gestión de dispositivos en el sitio.</td>
       </tr>
     </tbody>
   </table>
@@ -526,13 +528,13 @@ Herramienta de programación basada en flujos para conectar hardware y servicios
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/poes_estimation_batch8.png" style={{width:200, height:'auto'}}/></td>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/Object_detection.gif" style={{width:400, height:'auto'}}/></td>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/gun_detection_gif.gif" style={{width:350, height:'auto'}}/></td>
-        <td><img src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png" style={{width:250, height:'auto'}}/></td>
+        <td><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/HA_interface.PNG" style={{width:250, height:150}}/></td>
       </tr>
       <tr>
         <td><a href="https://wiki.seeedstudio.com/es/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit/"><strong>📚 Aprender Más</strong></a></td>
         <td><a href="https://wiki.seeedstudio.com/es/yolov8_on_ai_box_for_fall_climbing_tracking/"><strong>📚 Aprender Más</strong></a></td>
-        <td><a href="https://wiki.seeedstudio.com/es/reComputer_r1000_fin_equip_gaphic/"><strong>📚 Aprender Más</strong></a></td>
-        <td ><a href="get_one_now_item" href="https://wiki.seeedstudio.com/es/recomputer_r1000_aws/"><strong>📚 Aprender Más</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/es/gun_detection_with_frigate_nvr_on_r2000/"><strong>📚 Aprender Más</strong></a></td>
+        <td ><a href="https://wiki.seeedstudio.com/es/r2000_series_frigate_and_home_assistant/"><strong>📚 Aprender Más</strong></a></td>
       </tr>
     </tbody>
   </table>

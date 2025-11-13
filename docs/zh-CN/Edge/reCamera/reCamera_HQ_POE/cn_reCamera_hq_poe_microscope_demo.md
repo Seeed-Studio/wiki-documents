@@ -10,7 +10,7 @@ keywords:
   - M12
   - Microscope
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /cn/recamera_hd_poe_microscope_demo
+slug: /cn/recamera_hq_poe_microscope_demo
 sidebar_position: 3
 last_update:
   date: 11/08/2025
@@ -33,20 +33,20 @@ reCamera Sg2002 系列内置 1 TOPS 的计算能力，允许其运行 YoloV11 �
 ## 📷预览 
 
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-2.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-2.png" /></div>
 
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-1.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-1.png" /></div>
 
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-3.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-3.png" /></div>
 
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-4.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-4.png" /></div>
 
 ## 🔧reCamera_Microscope 的硬件组成
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-5.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-5.png" /></div>
 
 1. reCamera POE
 2. 3D 打印件 x2
@@ -70,39 +70,39 @@ reCamera Sg2002 系列内置 1 TOPS 的计算能力，允许其运行 YoloV11 �
 
 **如图所示，组装支架，连接 12V 电源，并安装 3D 打印部件。**
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-7.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-7.png" /></div>
 
 如图所示，显微镜套件包含两个镜头。您需要移除广角镜头并更换为另外两个镜头。
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-8.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-8.png" /></div>
 
 ### 🎨选项 1：镜头 1：显微镜镜头的使用
 
 如图所示，移除显微镜镜头，安装三个镜头延长适配器，然后安装镜头 1。
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-9.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-9.png" /></div>
 
 如图所示，**使用 USB 线缆连接计算机。**
 
  访问 `192.168.42.1` 查看 reCamera 的加载页面。登录的**用户名**是：`root`；**密码**是：`recamera.1`
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-10.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-10.png" /></div>
 
 您可以购买植物、动物或微生物的样本切片，并将它们放在显微镜载物台上。通过调整相机和物体的位置，您将能够看到微观世界的图像。
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-11.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-11.png" /></div>
 
 ### 🎨选项 2：镜头 2：使用 PCB 微距镜头
 
 如图所示，移除显微镜镜头，安装一个镜头延长适配器，然后安装镜头 2。
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-12.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-12.png" /></div>
 
 如图所示，**使用 USB 线缆连接计算机。**
 
  访问 `192.168.42.1` 查看 reCamera 的加载页面。登录的**用户名**是：`root`；**密码**是：`recamera.1`
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-14.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-14.png" /></div>
 
 这里有两个预训练模型可用，可以用来识别 PCB 上的电子元件或检测 PCB 中的缺陷。
 
@@ -110,7 +110,7 @@ reCamera Sg2002 系列内置 1 TOPS 的计算能力，允许其运行 YoloV11 �
 | ---------------------------------------- | ------------ |
 | [**PCB 缺陷检测模型**](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/yolo11n_models/PCB_Defect_Detection/readme.md)          | [**下载**](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/yolo11n_models/PCB_Defect_Detection/yolo11n_PCB_Defect.cvimodel) |
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-1.png" /></div>
+ <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/image-1.png" /></div>
 
 ## 技术支持与产品讨论
 
