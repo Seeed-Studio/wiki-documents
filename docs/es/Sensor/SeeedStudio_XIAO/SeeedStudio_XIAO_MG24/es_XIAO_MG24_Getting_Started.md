@@ -111,7 +111,7 @@ sidebar_position: 0
 - **Seguridad potente**: Características de seguridad potentes de Secure Vault, incluyendo arranque seguro, encriptación, generación de números aleatorios, a prueba de manipulación, depuración segura, etc.
 - **Tamaño ultra-pequeño**: 21 x 17.8mm.
 - **Recursos on-chip ricos**: Máximo 1536KB Flash y 256KB RAM, con amplio espacio de almacenamiento.
-- **Interfaces ricas**: Integrado con ADC de 12 bit 1Msps, sensor de temperatura, comparador analógico, DCDC y otros periféricos ricos, y hasta 22 Pin, 2 USART, 2 UART de bajo consumo, 1 IIC y otras interfaces.
+- **Interfaces ricas**: Integrado con ADC de 12 bits 1Msps, sensor de temperatura, comparador analógico, DCDC y otros periféricos ricos, y hasta 22 Pin, 2 USART, 2 UART de bajo consumo, 1 IIC y otras interfaces.
 
 ## Descripción general del hardware
 
@@ -196,7 +196,7 @@ Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que co
 
 - **Paso 2.** Inicia la aplicación Arduino.
 - **[Paso 3](#agregar-placa).**  Agrega el paquete de placa XIAO MG24 al Arduino IDE y haz clic en `OK`.
-- **Paso 4.** Cierra el Arduino IDE y ábrelo nuevamente.
+- **Paso 4.** Cierra el Arduino IDE y ábrelo de nuevo.
 
 #### Agregar la Placa XIAO MG24 {#agregar-placa}
 
@@ -266,7 +266,7 @@ Ten cuidado de no cortocircuitar los terminales positivo y negativo y quemar la 
 **Instrucciones sobre el uso de baterías:**
 
 1. Por favor usa baterías calificadas que cumplan con las especificaciones.
-2. XIAO puede conectarse a tu dispositivo informático a través de cable de datos mientras usa la batería, ten la seguridad de que XIAO tiene un chip de protección de circuito integrado, que es seguro.
+2. XIAO puede conectarse a tu dispositivo de computadora a través de cable de datos mientras usa la batería, ten la seguridad de que XIAO tiene un chip de protección de circuito integrado, que es seguro.
 3. El XIAO MG24 no tendrá ningún LED encendido cuando esté alimentado por batería (a menos que hayas escrito un programa específico), por favor no juzgues si el XIAO MG24 está funcionando o no por la condición del LED, por favor júzgalo razonablemente por tu programa.
 4. Lo sentimos, actualmente no tenemos forma de ayudarte a verificar el nivel de batería restante a través de software (porque no hay más pines de chip disponibles), necesitas cargar la batería regularmente o usar un multímetro para verificar el nivel de batería.
 
@@ -400,7 +400,7 @@ void loop()
 #### Demo3 : Modo de Sueño Profundo con flash y despertar
 
 :::tip
-Si quieres configurar el flash para sueño profundo, necesitas habilitar el registro 0xb9
+Si quieres configurar flash para sueño profundo, necesitas habilitar el registro 0xb9
 :::
 
 ```cpp
@@ -501,12 +501,12 @@ El XIAO MG24 entra en un **modo de Sueño Profundo** (EM4) para conservar energ�
 
 Para evitar bloquear tu XIAO MG24 mientras usas el modo de Sueño Profundo, sigue estos pasos:
 
-1. Usar el Pin de Escape (PC0)
+1. Usar el Pin de Escape (PC1)
 
-El XIAO MG24 tiene un **mecanismo de escape** integrado para prevenir el bloqueo. Si **PC0** se pone en **LOW** durante el reset, el dispositivo entra en un bucle infinito, permitiéndote cargar un nuevo sketch.
+El XIAO MG24 tiene un **mecanismo de escape** integrado para prevenir el bloqueo. Si **PC1** se pone en **LOW** durante el reset, el dispositivo entra en un bucle infinito, permitiéndote cargar un nuevo sketch.
 
-- Conecta **PC0** a **GND** antes de resetear el dispositivo.
-- Después del reset, carga tu sketch mientras el dispositivo está en el bucle.
+- Conecta **PC1** a **GND** antes de resetear el dispositivo.
+- Después de resetear, carga tu sketch mientras el dispositivo está en el bucle.
 
 2. Modifica tu Sketch
 Agrega el siguiente código a tu sketch para detectar un interruptor de usuario y entrar en un bucle infinito si se presiona. Esto te permite subir un nuevo sketch mientras el dispositivo está en bucle:

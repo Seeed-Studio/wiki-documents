@@ -13,17 +13,17 @@ last_update:
   author: Zovey
 ---
 
-# OpenEPaperLink 和电子纸配置构建器的使用
+# OpenEPaperLink 和电子纸配置构建器
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/seeed_logo_2.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## 简介
 
-OpenEPaperLink（以下文本将此项目简称为"OEPL"）是电子货架标签的替代协议和固件实现。通过基于 ESP32 的接入点和 802.15.4 无线电通信支持多个显示器。Open EPaper Link 的应用场景广泛，从高端零售店的动态定价到图书馆的智能图书管理，以及任何需要频繁更新显示信息的电子标签应用场景。现在，该项目也兼容 nRF52840。
+[OpenEPaperLink](https://openepaperlink.de/)（以下文本将此项目简称为"OEPL"）是电子货架标签的替代协议和固件实现。通过基于 ESP32 的接入点和 802.15.4 无线电通信支持多种显示器。这是一个开源的电子纸标签通信系统，使用户能够无线更新电子墨水屏的显示内容。该系统由接入点（AP）和标签设备组成，支持各种类型的电子墨水屏。它提供了广泛的内容生成和传输功能。现在，该项目也兼容 Seeed Studio XIAO nRF52840 Sense Plus。
 
 购买电子纸分线板后，您可能需要更换不同规格的电子纸屏幕。在本教程中，我们将使用两个工具来完成这个过程：OPEL Config Builder 用于修改电子纸的参数，OEPL Image Uploader 用于上传图像。
 
-[OEPL Config Builder](https://config.openepaperlink.org/) 是一个低代码电子纸参数配置工具，使用 BLE 协议进行无线传输。用户不再需要编写复杂的配置代码；只需在网站上操作鼠标即可完成配置。
+[OEPL Config Builder](https://config.openepaperlink.org/) 是一个低代码电子纸参数配置工具，使用 BLE 协议进行无线传输。用户不再需要编写复杂的配置代码；他们只需在网站上操作鼠标即可完成配置。
 
 [OEPL Image Uploader](https://atc1441.github.io/ATC_BLE_OEPL_Image_Upload.html) 也是一个通过 BLE 协议进行无线传输的工具。不同之处在于该工具传输照片。
 
@@ -60,14 +60,14 @@ OpenEPaperLink（以下文本将此项目简称为"OEPL"）是电子货架标签
 </table>
 
 :::tip
-nRF52840 系列的 MCU 都支持此工具，不限于 nRF52840 Sense Plus。电子纸屏幕仅支持 4.26 英寸显示屏。但是，我们将在未来继续更新以支持更多屏幕尺寸。
+XIAO nRF52840 系列的 MCU 都支持此工具，不限于 XIAO nRF52840 Sense Plus。电子纸屏幕仅支持 4.26 英寸显示屏。但是，我们将在未来继续更新以支持更多屏幕尺寸。
 :::
 
 ## OEPL Config Builder 的使用
 
 ### 步骤 1：烧录 BLE 固件
 
-第一步是您可以从 OEPL 官方仓库获取 OEPL_BLE 固件。
+第一步是您可以从 OEPL 的官方仓库获取 OEPL_BLE 固件。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/OpenEPaperLink/OEPL_BLE/releases/tag/test7" target="_blank" rel="noopener noreferrer">
@@ -82,7 +82,7 @@ nRF52840 系列的 MCU 都支持此工具，不限于 nRF52840 Sense Plus。电�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/file_pic.png" style={{width:700, height:'auto'}}/></div>
 
-然后，将刚刚从 USB 驱动器获取的 .uf2 文件复制到 nRF52840 的文件管理器中。下次 MCU 上电时，它将自动执行此 .uf2 固件。
+然后，将刚刚从 USB 驱动器获取的 `.uf2` 文件复制到 nRF52840 的文件管理器中。下次 MCU 上电时，它将自动执行此 `.uf2` 固件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/firmware.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -103,7 +103,7 @@ nRF52840 系列的 MCU 都支持此工具，不限于 nRF52840 Sense Plus。电�
 只需在面板上选择相应的变量或输入参数即可完成配置。
 
 - **Config Builder 的参数**
-  - **system_config**：保存主机 IC 和电源管理引脚的信息
+  - **system_config**：保存有关主机 IC 和电源管理引脚的信息
   - **manufacturer_data**：制造商标识符和板卡信息
   - **power_option**：电源和睡眠相关选项
   - **display**：显示器/面板信息（可选）。对于具有多个显示器的设备可以出现多次。
@@ -114,7 +114,7 @@ nRF52840 系列的 MCU 都支持此工具，不限于 nRF52840 Sense Plus。电�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Builder_demo_1.png" style={{width:700, height:'auto'}}/></div>
 
-如果您想保存已设置的配置，可以在此面板中将其导出为 .bin、Hex 和 JSON 文件。相反，此面板也支持导入 JSON 文件进行配置。4.26 屏幕配置文件可以在这里获取。
+如果您想保存已设置的配置，可以在此面板中将其导出为 `.bin`、`Hex` 和 `JSON` 文件。相反，此面板也支持导入 `JSON` 文件进行配置。4.26 屏幕配置文件可以在这里获取。
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json" target="_blank">
@@ -124,7 +124,7 @@ nRF52840 系列的 MCU 都支持此工具，不限于 nRF52840 Sense Plus。电�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Package_import_1.png" style={{width:700, height:'auto'}}/></div>
 
-设置配置后，您可以使用"Write Config"功能将其上传到 MCU。
+设置配置后，您可以使用 **Write Config** 功能将其上传到 MCU。
 
 ## OEPL Image Uploader 的使用
 

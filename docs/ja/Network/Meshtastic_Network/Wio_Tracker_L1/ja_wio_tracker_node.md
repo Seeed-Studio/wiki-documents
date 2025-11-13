@@ -13,8 +13,12 @@ last_update:
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.jpg" alt="pir" width={600} height="auto" /></p>
-
-Wio Tracker L1 シリーズは、LoRa（862–930 MHz）、効率的な処理のためのnRF52840、正確な位置追跡のためのL76K GPSモジュールを搭載した低消費電力で高い拡張性を持つ[Meshtastic®](https://meshtastic.org/)ノードです。柔軟性を重視して設計されており、OLEDおよびE-Inkディスプレイ、ソーラーパネルとバッテリー電源をサポートし、幅広いIoTおよびオフグリッドアプリケーションに最適です。
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-L1-p-6453.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 </font></span></strong>
+    </a>
+</div>
+Wio Tracker L1 シリーズは、LoRa（862–930 MHz）、効率的な処理のためのnRF52840、正確な位置追跡のためのL76K GPSモジュールを搭載した、低消費電力で高い拡張性を持つ[Meshtastic®](https://meshtastic.org/)ノードです。柔軟性を重視して設計されており、OLEDおよびE-Inkディスプレイ、ソーラーパネルとバッテリー電源をサポートし、幅広いIoTおよびオフグリッドアプリケーションに最適です。
 
 ## L1 シリーズモデル
 
@@ -44,17 +48,17 @@ Wio Tracker L1 シリーズは4つのバージョンで利用可能です。ニ�
 
 ### 特徴
 
-- **Meshtasticファームウェアがプリインストール済み**
-Meshtasticファームウェアがプリインストールされており、シームレスなセットアップで開封後すぐに使用できます。
+- **Meshtasticファームウェアがプリフラッシュ済み**
+Meshtasticファームウェアがプリインストールされており、開封後すぐに使用でき、シームレスなセットアップが可能です。
 
 - **3つの電源供給オプション**
-Type-C急速充電、ソーラー入力、リチウムイオンバッテリー電源をサポートし、様々な環境での柔軟な展開が可能で、屋外およびモバイルアプリケーションに最適です。
+Type-C急速充電、ソーラー入力、Li-ionバッテリー電源をサポートし、様々な環境での柔軟な展開が可能で、屋外およびモバイルアプリケーションに最適です。
 
 - **柔軟なディスプレイサポート**
 オプションの1.3インチOLEDおよび2.13インチE-Inkスクリーンにより、異なる消費電力と視覚的フィードバックのニーズに対応する多様なディスプレイオプションを提供します。
 
 - **高い拡張性**
-Grove エコシステムと完全に互換性があり、PTHヘッダーとSWDデバッグインターフェースを含み、カスタムハードウェア拡張と高度な開発に対応します。
+Groveエコシステムと完全に互換性があり、PTHヘッダーとSWDデバッグインターフェースを含み、カスタムハードウェア拡張と高度な開発に対応します。
 
 ### 仕様
 
@@ -66,7 +70,7 @@ L1、L1 Lite、L1 E-Inkの最新バッチには、1mmインターフェースを
   <tr>
     <th colspan="1">プロセッサ</th>
     <th colspan="1">
-      Nordic nRF52840<br />ARM® Cortex®-M4 with FPU 最大64 MHz動作
+      Nordic nRF52840<br />ARM® Cortex®-M4 with FPU 最大64 MHzで動作
     </th>
   </tr>
   <tr>
@@ -76,7 +80,7 @@ L1、L1 Lite、L1 E-Inkの最新バッチには、1mmインターフェースを
   <tr>
     <td colspan="1" rowspan="2">ワイヤレス</td>
     <td colspan="1">
-      LoRa：<a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>ベース、862-930MHzサポート
+      LoRa：<a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>ベース、862-930MHzをサポート
     </td>
   </tr>
   <tr>
