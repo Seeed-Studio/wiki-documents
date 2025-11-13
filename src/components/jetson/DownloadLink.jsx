@@ -32,86 +32,117 @@ const cmpVersions = (a, b) => {
     return 0;
   };
 
-export const OneDriveLink = ({ lang = 'en' }) => {
+  import Admonition from '@theme/Admonition';
+
+  
+  export const OneDriveLink = ({ lang = 'en' }) => {
     const product = useJetsonStore(state => state.product);
     const l4t = useJetsonStore(state => state.l4t);
-
+  
     const content = {
-        en: {
-            missingSelection: "Finish the selection first, or corresponding information is missing.",
-            link: "Link",
-            file: "File",
-            sha256: "SHA256",
-            dangerTitle: "Warning",
-            dangerBody: (
-                <>
-                    If you are using an <strong>Orin NX 16GB/8GB</strong> module,{" "}
-                    <strong>do not enable MAXN SUPER mode</strong>.<br />
-                    The cooling capacity of <strong>J4011/J4012</strong> is insufficient to support it, 
-                    and forcing this mode may result in <strong>permanent damage</strong> to the module.
-                </>
-            )
-        },
-        zh: {
-            missingSelection: "请先完成选择，否则缺失相关信息。",
-            link: "链接",
-            file: "文件",
-            sha256: "SHA256",
-            dangerTitle: "警告",
-            dangerBody: (
-                <>
-                    如果您使用的是 <strong>Orin NX 16GB/8GB</strong> 模块，请
-                    <strong>不要启用 MAXN SUPER 模式</strong>。<br />
-                    <strong>J4011/J4012</strong> 的散热能力不足以支撑此模式，强制启用可能导致
-                    <strong>模块永久损坏</strong>。
-                </>
-            )
-        }
+      en: {
+        missingSelection: "Finish the selection first, or corresponding information is missing.",
+        link: "Link",
+        file: "File",
+        sha256: "SHA256",
+        dangerTitle: "Warning",
+        dangerBody: (
+          <>
+            If you are using an <strong>Orin NX 16GB/8GB</strong> module,{" "}
+            <strong>do not enable MAXN SUPER mode</strong>.<br />
+            The cooling capacity of <strong>J4011/J4012</strong> is insufficient to support it,
+            and forcing this mode may result in <strong>permanent damage</strong> to the module.
+          </>
+        ),
+      },
+      zh: {
+        missingSelection: "请先完成选择，否则缺失相关信息。",
+        link: "链接",
+        file: "文件",
+        sha256: "SHA256",
+        dangerTitle: "警告",
+        dangerBody: (
+          <>
+            如果您使用的是 <strong>Orin NX 16GB/8GB</strong> 模块，请
+            <strong>不要启用 MAXN SUPER 模式</strong>。<br />
+            <strong>J4011/J4012</strong> 的散热能力不足以支撑此模式，强制启用可能导致
+            <strong>模块永久损坏</strong>。
+          </>
+        ),
+      },
+      ja: {
+        missingSelection: "まず選択を完了してください。対応する情報が不足しています。",
+        link: "リンク",
+        file: "ファイル",
+        sha256: "SHA256",
+        dangerTitle: "警告",
+        dangerBody: (
+          <>
+            <strong>Orin NX 16GB/8GB</strong> モジュールを使用している場合は、
+            <strong>MAXN SUPER モードを有効にしないでください</strong>。<br />
+            <strong>J4011/J4012</strong> の冷却能力ではこのモードを支えられず、
+            強制するとモジュールが<strong>恒久的に損傷</strong>する可能性があります。
+          </>
+        ),
+      },
+      es: {
+        missingSelection: "Primero complete la selección o falta la información correspondiente.",
+        link: "Enlace",
+        file: "Archivo",
+        sha256: "SHA256",
+        dangerTitle: "Advertencia",
+        dangerBody: (
+          <>
+            Si utiliza un módulo <strong>Orin NX 16GB/8GB</strong>,{" "}
+            <strong>no active el modo MAXN SUPER</strong>.<br />
+            La capacidad de refrigeración de <strong>J4011/J4012</strong> es insuficiente para soportarlo
+            y forzarlo puede causar <strong>daños permanentes</strong> al módulo.
+          </>
+        ),
+      },
     };
-
+  
     const texts = content[lang] || content.en;
-
+  
     const obj = getL4TData(product, l4t);
     if (!obj.product || !obj.l4t) {
-        return <p>{texts.missingSelection}</p>;
+      return <p>{texts.missingSelection}</p>;
     }
-
+  
     const warnProducts = ['j4012classic', 'j4011classic', 'j4012industrial', 'j4011industrial'];
-    const showDanger = cmpVersions(l4t, '36.4.0') > 0 && product && warnProducts.includes(product.toLowerCase());
-
+    // 如需阈值为 36.4.3 请改成 '36.4.3'
+    const showDanger =
+    cmpVersions(l4t, '36.4.0') > 0 && typeof product === 'string' && warnProducts.includes(product.toLowerCase());
+  
     return (
-        <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            marginLeft: 20,
-        }}>
-            {showDanger && (
-                <Admonition type="danger" title={texts.dangerTitle}>
-                    {texts.dangerBody}
-                </Admonition>
-            )}
-
-            <Row>
-                <Col span={3}><p style={{ fontWeight: 'bold' }}>{texts.link}</p></Col>
-                <Col span={4}><a href={obj.mainlink}>OneDrive1</a></Col>
-                {obj.mirrorlink && (
-                    <Col span={4}><a href={obj.mirrorlink}>OneDrive2</a></Col>
-                )}
-            </Row>
-
-            <Row>
-                <Col span={3}><p style={{ fontWeight: 'bold' }}>{texts.file}</p></Col>
-                <Col><span>{obj.filename}</span></Col>
-            </Row>
-
-            <Row>
-                <Col span={3}><p style={{ fontWeight: 'bold' }}>{texts.sha256}</p></Col>
-                <Col><span>{obj.sha256}</span></Col>
-            </Row>
-        </div>
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginLeft: 20 }}>
+        {showDanger && (
+          <Admonition type="danger" title={texts.dangerTitle}>
+            {texts.dangerBody}
+          </Admonition>
+        )}
+  
+        <Row>
+          <Col span={3}><p style={{ fontWeight: 'bold' }}>{texts.link}</p></Col>
+          <Col span={4}><a href={obj.mainlink}>OneDrive1</a></Col>
+          {obj.mirrorlink && (
+            <Col span={4}><a href={obj.mirrorlink}>OneDrive2</a></Col>
+          )}
+        </Row>
+  
+        <Row>
+          <Col span={3}><p style={{ fontWeight: 'bold' }}>{texts.file}</p></Col>
+          <Col><span>{obj.filename}</span></Col>
+        </Row>
+  
+        <Row>
+          <Col span={3}><p style={{ fontWeight: 'bold' }}>{texts.sha256}</p></Col>
+          <Col><span>{obj.sha256}</span></Col>
+        </Row>
+      </div>
     );
-};
+  };
+  
 
 
 /**
