@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.web
 slug: /cn/get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 10/29/2025
-  author: Michelle
+  date: 11/12/2025
+  author: Michelle Huang
 ---
 
 :::tip
@@ -41,6 +41,14 @@ Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Q97w2ompPtI?si=yLbAgE4cBbT6NbHS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+#### 四向摇杆
+L1 E-Ink 固件目前不支持四向摇杆。如果您想使用摇杆，请购买其他型号。
+
+#### 菜单栏
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
+只有 2.7 固件支持菜单栏。如果您想使用菜单栏，请按照[刷写固件教程](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)更新固件。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ### 第四部分 手机连接
 
@@ -125,7 +133,7 @@ import TabItem from '@theme/TabItem';
 
 ### 配置参数
 
-为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的区域位置进行设置。
+为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的地理位置进行设置。
 
 <Tabs>
 <TabItem value="ios" label="IOS 应用">
@@ -151,7 +159,7 @@ import TabItem from '@theme/TabItem';
 参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时基础每分钟计算。如果达到限制，您的设备将停止传输，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时计算每分钟。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
 现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
@@ -193,11 +201,17 @@ import TabItem from '@theme/TabItem';
   </tr>
 </table>
 
+
+### 虚拟键盘
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
+2.7 版本固件现在支持虚拟键盘！您可以直接在设备上输入消息与其他设备通信。按照[刷写固件教程](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)更新固件。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
+
 ## 常见问题
 
 ### 手动进入 DFU 模式
 
-将设备连接到您的 PC，双击 `Reset` 按钮。黄色 LED 将保持常亮，您的 PC 上将出现一个名为 `Tracker L1` 的新 USB 驱动器。
+将设备连接到您的电脑，双击 `Reset` 按钮。黄色 LED 将保持常亮，您的电脑上将出现一个名为 `Tracker L1` 的新 USB 驱动器。
 
 ### 退出 DFU 模式
 
@@ -205,13 +219,14 @@ import TabItem from '@theme/TabItem';
 
 ### 信号质量
 
-- **SNR** 反映通信链路的质量。正常设备通常在 -7 dB 以上运行。SNR 低于 -10 dB 的设备表示性能不佳。
+- **SNR** 反映通信链路的质量。正常设备通常在 -7 dB 以上运行。SNR 低于 -10 dB 的设备表示性能较差。
 
-- **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上运行。RSSI 低于 -115 dBm 的设备被认为性能不佳。
+- **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上运行。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为了获得最佳信号效果，请在开阔、无遮挡、干扰最小的区域使用设备。
+      为了获得最佳信号效果，请在开阔、无遮挡且干扰最小的区域使用设备。
 ## 资源
-- [3D 打印参考文件](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
+- [(V1) 3D 打印参考文件](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
+- [(V2 新四向摇杆) 3D 打印参考文件](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
 - [外形文件](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
 - [FCC 认证](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
 - [CE 认证](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
