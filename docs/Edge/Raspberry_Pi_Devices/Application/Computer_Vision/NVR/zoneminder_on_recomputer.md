@@ -115,7 +115,7 @@ sudo apt -t bookworm-backports install zoneminder
 
 ### Configure database
 
-Run the following commands, Use `zmpass` as passward.
+Run the following commands, Use `zmpass` as password.
 
 ```bash
 mariadb -u zmuser -p zm < /usr/share/zoneminder/db/zm_create.sql
