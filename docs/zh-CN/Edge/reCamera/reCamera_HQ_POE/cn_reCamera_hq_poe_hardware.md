@@ -283,7 +283,7 @@ minicom -D /dev/ttyS3 -b 115200
 
 reCamera 的用户按钮可以由用户自定义。
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/POE_user_button.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_user_button.png" /></div>
 
 ```bash
 echo "510" > /sys/class/gpio/export
