@@ -283,7 +283,7 @@ minicom -D /dev/ttyS3 -b 115200
 
 El botón usr de la reCamera puede ser personalizado por el usuario.
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/POE_user_button.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_user_button.png" /></div>
 
 ```bash
 echo "510" > /sys/class/gpio/export
