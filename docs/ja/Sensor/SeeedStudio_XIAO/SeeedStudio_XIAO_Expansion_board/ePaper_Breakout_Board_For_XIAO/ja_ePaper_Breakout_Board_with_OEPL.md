@@ -13,19 +13,19 @@ last_update:
   author: Zovey
 ---
 
-# OpenEPaperLinkとePaper設定ビルダーの使用方法
+# OpenEPaperLinkとePaper設定ビルダー
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/seeed_logo_2.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## はじめに
 
-OpenEPaperLink（以下、このプロジェクトを「OEPL」と呼びます）は、電子棚札の代替プロトコルとファームウェア実装です。ESP32ベースのアクセスポイントと802.15.4無線通信により、複数のディスプレイがサポートされています。Open EPaper Linkの応用シナリオは広範囲にわたり、高級小売店での動的価格設定から図書館でのインテリジェント書籍管理、さらに表示情報を頻繁に更新する必要があるあらゆる電子タグ応用シナリオまで含まれます。現在、このプロジェクトはnRF52840とも互換性があります。
+[OpenEPaperLink](https://openepaperlink.de/)（以下、このプロジェクトを「OEPL」と呼びます）は、電子棚札の代替プロトコルとファームウェア実装です。ESP32ベースのアクセスポイントと802.15.4無線通信により、複数のディスプレイがサポートされています。これはオープンソースの電子ペーパーラベル通信システムで、ユーザーが電子インクスクリーンの表示内容をワイヤレスで更新できるようにします。システムはアクセスポイント（AP）とラベルデバイスで構成され、さまざまなタイプの電子インクスクリーンをサポートしています。幅広いコンテンツ生成と送信機能を提供します。現在、このプロジェクトはSeeed Studio XIAO nRF52840 Sense Plusとも互換性があります。
 
 ePaper Breakout Boardを購入した後、電子ペーパースクリーンを異なる仕様のものに交換する必要がある場合があります。このチュートリアルでは、プロセスに2つのツールを使用します：OPEL Config Builderは電子ペーパーのパラメータを変更するために使用され、OEPL Image Uploaderは画像をアップロードするために使用されます。
 
-[OEPL Config Builder](https://config.openepaperlink.org/)は、BLEプロトコルを使用してワイヤレス伝送を行うローコード電子ペーパーパラメータ設定ツールです。ユーザーは複雑な設定コードを書く必要がなく、ウェブサイト上でマウス操作するだけで設定を完了できます。
+[OEPL Config Builder](https://config.openepaperlink.org/)は、BLEプロトコルを使用してワイヤレス送信を行うローコード電子ペーパーパラメータ設定ツールです。ユーザーは複雑な設定コードを書く必要がなく、ウェブサイト上でマウス操作するだけで設定を完了できます。
 
-[OEPL Image Uploader](https://atc1441.github.io/ATC_BLE_OEPL_Image_Upload.html)も、BLEプロトコルを介してワイヤレス伝送を行うツールです。違いは、このツールが写真を送信することです。
+[OEPL Image Uploader](https://atc1441.github.io/ATC_BLE_OEPL_Image_Upload.html)も、BLEプロトコルを介してワイヤレス送信を行うツールです。違いは、このツールが写真を送信することです。
 
 ## ハードウェアの準備
 
@@ -60,7 +60,7 @@ ePaper Breakout Boardを購入した後、電子ペーパースクリーンを�
 </table>
 
 :::tip
-nRF52840シリーズのMCUはすべてこのツールをサポートしており、nRF52840 Sense Plusに限定されません。ePaperスクリーンは4.26インチディスプレイのみをサポートしています。ただし、今後より多くのスクリーンサイズをサポートするために継続的に更新していく予定です。
+XIAO nRF52840 シリーズのMCUはすべてこのツールをサポートしており、XIAO nRF52840 Sense Plusに限定されません。ePaperスクリーンは4.26インチディスプレイのみをサポートしています。ただし、今後より多くのスクリーンサイズをサポートするために継続的に更新していく予定です。
 :::
 
 ## OEPL Config Builderの使用方法
@@ -78,11 +78,11 @@ nRF52840シリーズのMCUはすべてこのツールをサポートしており
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/hub_oepl.png" style={{width:700, height:'auto'}}/></div>
 
-Seeed Studio XIAO nRF52840 Sense Plus、ePaper Breakout Board、スクリーンを一緒に接続した後、USBデータケーブルを使用してコンピューターをnRF52840に接続し、リセットボタンを2回連続で押します。すると、PC側にファイルマネージャーがポップアップ表示されます。
+Seeed Studio XIAO nRF52840 Sense Plus、ePaper Breakout Board、スクリーンを接続した後、USBデータケーブルを使用してコンピューターをnRF52840に接続し、リセットボタンを2回連続で押します。すると、PC側にファイルマネージャーがポップアップ表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/file_pic.png" style={{width:700, height:'auto'}}/></div>
 
-次に、先ほどUSBドライブから取得した.uf2ファイルをnRF52840のファイルマネージャーにコピーします。MCUが次回電源投入されると、この.uf2ファームウェアが自動的に実行されます。
+次に、先ほど取得した`.uf2`ファイルをUSBドライブからnRF52840のファイルマネージャーにコピーします。MCUが次回電源投入されると、この`.uf2`ファームウェアが自動的に実行されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/firmware.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -106,7 +106,7 @@ Builderインターフェースで、BLEプロトコルを介してデバイス�
   - **system_config**：ホストICと電源管理ピンに関する情報を保持
   - **manufacturer_data**：メーカー識別子とボード情報
   - **power_option**：電源供給とスリープ関連オプション
-  - **display**：ディスプレイ/パネル情報（オプション）。複数のディスプレイを持つデバイスでは複数回出現可能。
+  - **display**：ディスプレイ/パネル情報（オプション）。複数のディスプレイを持つデバイスでは複数回表示可能。
   - **led**：オプションのLED設定（繰り返し可能）。
   - **sensor_data**：オプションのセンサー読み取り値/定義（繰り返し可能）。
   - **data_bus**：グローバルバス定義（I2C/SPIなど）。
@@ -114,7 +114,7 @@ Builderインターフェースで、BLEプロトコルを介してデバイス�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Builder_demo_1.png" style={{width:700, height:'auto'}}/></div>
 
-設定した設定を保存したい場合は、このパネル内で.bin、Hex、JSONファイルとしてエクスポートできます。逆に、このパネルは設定目的でJSONファイルのインポートもサポートしています。4.26スクリーン設定ファイルはこちらから取得できます。
+設定した構成を保存したい場合は、このパネル内で`.bin`、`Hex`、`JSON`ファイルとしてエクスポートできます。逆に、このパネルは設定目的で`JSON`ファイルのインポートもサポートしています。4.26スクリーン設定ファイルはこちらから取得できます。
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json" target="_blank">
@@ -124,7 +124,7 @@ Builderインターフェースで、BLEプロトコルを介してデバイス�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Package_import_1.png" style={{width:700, height:'auto'}}/></div>
 
-設定を設定した後、「Write Config」機能を使用してMCUにアップロードできます。
+設定を行った後、**Write Config**機能を使用してMCUにアップロードできます。
 
 ## OEPL Image Uploaderの使用方法
 
@@ -140,23 +140,23 @@ OEPL Image Uploaderはオンライン電子ペーパーアップロードツー�
 </a>
 </div>
 
-"E-Paper prefix filter(s)" セクションの変数を "OEPL" に変更する必要があります。そうしないと、デバイスを取得できません。
+「E-Paper prefix filter(s)」セクションの変数を「OEPL」に変更する必要があります。そうしないと、デバイスを取得できません。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_4.png" style={{width:350, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_6.png" style={{width:500, height:'auto'}}/></div>
 
-### ステップ 2: 画像のアップロード
+### ステップ 2：画像のアップロード
 
-次に "Select File" ボタンをクリックして、アップロード用のローカルファイルを選択します。
+次に「Select File」ボタンをクリックして、アップロード用のローカルファイルを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_2.png" style={{width:550, height:'auto'}}/></div>
 
-ファイル転送が完了したら、"Upload Image" ボタンをクリックして電子ペーパーにアップロードします。
+ファイル転送が完了したら、「Upload Image」ボタンをクリックして電子ペーパーにアップロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_5.png" style={{width:350, height:'auto'}}/></div>
 
-"Upload Complete" が表示されると、書き込みプロセスが成功したことを示します！その後、画面上の画像が変わったことを確認できます。
+「Upload Complete」が表示されると、書き込みプロセスが成功したことを示します！その後、画面上の画像が変わったことを確認できます。
 
 ## 技術サポート & 製品ディスカッション
 

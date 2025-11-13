@@ -99,10 +99,10 @@ The result is shown as below:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/docker_compose_version.png" alt="pir" width="800" height="auto"/></p>
 
 
-### Creat `docker-compose.yaml` 
+### Create `docker-compose.yaml` 
 
 
-Please use the following command to creat `docker-compose.yaml`.
+Please use the following command to create `docker-compose.yaml`.
 
 ```bash
 cd ~ && nano docker-compose.yaml
@@ -131,7 +131,7 @@ services:
       - /appdata/AgentDVR/commands:/AgentDVR/Commands/
 ```
 
-Please use the following command to creat necessary folder.
+Please use the following command to create necessary folder.
 
 ```bash
 sudo mkdir -p /appdata/AgentDVR/config /appdata/AgentDVR/media /appdata/AgentDVR/commands

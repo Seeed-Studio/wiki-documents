@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecap_t1000_e
 sidebar_position: 2
 last_update:
-  date: 11/5/2025
+  date: 11/11/2025
   author: Michelle Huang
 ---
 
@@ -28,7 +28,7 @@ last_update:
 ### Part 3: Flash New Firmware
 
 :::caution note
-Before flashing the firmware, please ensure you bought the T1000-E for Meshtastic. Please don't flash the firmware to other tracker model that doen't support Meshtastic.
+Before flashing the firmware, please ensure you bought the `T1000-E for Meshtastic`. Please don't flash the firmware to other tracker model that doen't support Meshtastic. Please `don't use NRF-OTA` to update the firmware, it may cause the device to be completely dead.
 :::
 
 <div class="video-container">
@@ -211,7 +211,7 @@ The following firmware will brick your device：
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Flash%20Firmware.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 :::caution note
-Before flashing the firmware, please ensure you bought the T1000-E for Meshtastic. Please don't flash the firmware to other tracker model that doen't support Meshtastic.
+Before flashing the firmware, please ensure you bought the `T1000-E for Meshtastic`. Please don't flash the firmware to other tracker model that doen't support Meshtastic. Please `don't use NRF-OTA` to update the firmware, it may cause the device to be completely dead.
 :::
 #### Step 1: Enter DFU mode
 

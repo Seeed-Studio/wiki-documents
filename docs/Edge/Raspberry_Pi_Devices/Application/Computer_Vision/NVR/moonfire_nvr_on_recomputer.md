@@ -95,7 +95,7 @@ The result is shown as below:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/docker_compose_version.png" alt="pir" width="800" height="auto"/></p>
 
 
-### Creat `docker-compose.yaml` 
+### Create `docker-compose.yaml` 
 
 Please use the following command identify your `ID`and `UID`.
 
@@ -108,7 +108,7 @@ The result is shown as below.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/id.png" alt="pir" width="800" height="auto"/></p>
 
 
-Please use the following command to creat `docker-compose.yaml`.
+Please use the following command to create `docker-compose.yaml`.
 
 ```bash
 cd ~ && nano docker-compose.yaml
@@ -188,9 +188,9 @@ Please use the following command to change the permissions.
 sudo chmod -R 777 /var/lib/moonfire-nvr
 ```
 
-### Creat `/etc/moonfire-nvr.toml`
+### Create `/etc/moonfire-nvr.toml`
 
-Please use the following command to creat `/etc/moonfire-nvr.toml`.
+Please use the following command to create `/etc/moonfire-nvr.toml`.
 
 ```bash
 sudo nano /etc/moonfire-nvr.toml 
@@ -223,9 +223,9 @@ The result is shown as below.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/database_init.png" alt="pir" width="800" height="auto"/></p>
 
 
-### Creat a floder
+### Create a folder
 
-Please creat a floder to save the video recorde:
+Please create a folder to save the video record:
 
 ```bash
 sudo mkdir -p /var/lib/moonfire-nvr/recordings

@@ -1,7 +1,7 @@
 ---
 description: SenseCraft HMI プラットフォームを使用して XIAO EE04 ePaper ディスプレイの視覚的インターフェース設計を可能にします。
-title: SenseCraft HMI を使用した XIAO ePaper ディスプレイボード EE04
-image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
+title: XIAO ePaper Display Board EE04 と SenseCraft HMI
+image: https://files.seeedstudio.com/wiki/Epaper/EE04/hmi61.webp
 slug: /ja/EE04_with_hmi
 sidebar_position: 2
 last_update:
@@ -13,7 +13,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# SenseCraft HMI を使用した XIAO ePaper ディスプレイボード EE04
+# XIAO ePaper Display Board EE04 と SenseCraft HMI
 
 ## はじめに
 
@@ -26,7 +26,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## ハードウェア概要
 
-このチュートリアルでは、XIAO ePaper Display Board (ESP32-S3) - EE04 と 7.3" Spectra™ 6 E-Ink ディスプレイを組み合わせて実習を完了します。
+このチュートリアルでは、XIAO ePaper Display Board (ESP32-S3) - EE04 と 7.3" Spectra™ 6 E-Ink ディスプレイを組み合わせて実習を行います。
 
 <div class="table-center">
 <table align="center">
@@ -51,45 +51,45 @@ import Steppers from '@site/src/components/utils/Stepper';
  </table>
 </div>
 
-### ePaper ディスプレイ対応タイプ
+### サポートされる ePaper ディスプレイタイプ
 
-この XIAO ePaper Display Board(ESP32-S3) - EE04 は、24 ピンと 50 ピンの 2 つのコネクタオプションを提供し、さまざまな画面サイズをサポートします。以下のリストからディスプレイに合うものを選択してください。
+この XIAO ePaper Display Board(ESP32-S3) - EE04 は、24ピンと50ピンの2つのコネクタオプションを提供し、さまざまな画面サイズをサポートします。以下のリストからディスプレイに合うものを選択してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi71.png" style={{width:800, height:'auto'}}/></div>
 
-#### 24 ピンコネクタ
+#### 24ピンコネクタ
 
-- [1.54-inch ePaper - Monochrome 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [2.13-inch ePaper - Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [2.13-inch ePaper - Quadruple Color 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [2.9-inch ePaper - Monochrome 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [2.9-inch ePaper - Quadruple Color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-- [4.2-inch ePaper - Monochrome 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [4.26-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [5.83-inch ePaper - Monochrome 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [7.5-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [1.54インチ ePaper - モノクロ 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [2.13インチ ePaper - フレキシブルモノクロ 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [2.13インチ ePaper - 4色 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [2.9インチ ePaper - モノクロ 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [2.9インチ ePaper - 4色 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
+- [4.2インチ ePaper - モノクロ 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [4.26インチ ePaper - モノクロ 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [5.83インチ ePaper - モノクロ 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [7.5インチ ePaper - モノクロ 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/37.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-XIAO ePaper Display Board(ESP32-S3) - EE04 を使用する際は、ePaper ディスプレイのタイプに応じてジャンパーを設定してください：
+XIAO ePaper Display Board(ESP32-S3) - EE04 を使用する際は、ePaper ディスプレイタイプに応じてジャンパーを設定してください：
 
-- 24 ピン ePaper ディスプレイの場合 → ジャンパーを 24 ピンに設定
+- 24ピン ePaper ディスプレイの場合 → ジャンパーを24ピンに設定
 
-⚠️ 間違ったジャンパー設定を使用すると、ePaper の表示が失敗したり、異常なコンテンツが表示される可能性があります。電源を入れる前に、必ずジャンパーの位置を再確認してください。
+⚠️ 間違ったジャンパー設定を使用すると、ePaper の表示が失敗したり、異常な内容が表示される可能性があります。電源を入れる前に、必ずジャンパーの位置を再確認してください。
 
 :::
 
-#### 50 ピンコネクタ
+#### 50ピンコネクタ
 
-- [7.3-Inch Spectra6 ePaper 800x480](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
+- [7.3インチ Spectra6 ePaper 800x480](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
 :::tip
-XIAO ePaper Display Board(ESP32-S3) - EE04 を使用する際は、ePaper ディスプレイのタイプに応じてジャンパーを設定してください：
-- 50 ピン ePaper ディスプレイの場合 → ジャンパーを 50 ピンに設定
+XIAO ePaper Display Board(ESP32-S3) - EE04 を使用する際は、ePaper ディスプレイタイプに応じてジャンパーを設定してください：
+- 50ピン ePaper ディスプレイの場合 → ジャンパーを50ピンに設定
 
-⚠️ 間違ったジャンパー設定を使用すると、ePaper の表示が失敗したり、異常なコンテンツが表示される可能性があります。電源を入れる前に、必ずジャンパーの位置を再確認してください。
+⚠️ 間違ったジャンパー設定を使用すると、ePaper の表示が失敗したり、異常な内容が表示される可能性があります。電源を入れる前に、必ずジャンパーの位置を再確認してください。
 
 :::
 
@@ -101,7 +101,7 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 を使用して、独自のインタ�
 
 ### SenseCraft HMI 登録
 
-まず、右上のボタンをクリックして [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) プラットフォームでアカウントを登録してください。
+まず、右上角のボタンをクリックして [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) プラットフォームでアカウントを登録してください。
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -121,22 +121,37 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 を使用して、独自のインタ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi62.png" style={{width:1000, height:'auto'}}/></div>
 
-
-このページでは、2 つの ePaper ディスプレイモデル用のチュートリアルファームウェアが見つかります：**7.3" フルカラーディスプレイ (800×480)** と **7.5" モノクロームディスプレイ (800×480)** です。
-
 :::tip
-現在、XIAO ePaper Display Board(ESP32-S3) - EE04 は 7.5 インチと 7.3 インチモデル用の HMI ファームウェアのみを提供しています。今後アップデートが提供される予定です。
+現在、XIAO ePaper Display Board(ESP32-S3) - EE04 では以下の ePaper 画面がサポートされています：
+- [1.54インチ ePaper - モノクロ 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [2.13インチ ePaper - フレキシブルモノクロ 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [2.13インチ ePaper - 4色 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [2.9インチ ePaper - モノクロ 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [2.9インチ ePaper - 4色 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
+- [4.2インチ ePaper - モノクロ 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [4.26インチ ePaper - モノクロ 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [5.83インチ ePaper - モノクロ 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [7.5インチ ePaper - モノクロ 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [7.3インチ Spectra6 ePaper 800x480](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 :::
 
+このページでは、2つの ePaper ディスプレイモデル用のチュートリアルファームウェアが見つかります：**7.3" フルカラーディスプレイ (800×480)**
+
+異なるサイズの ePaper ディスプレイを使用したい場合は、以下と同じ手順に従ってください。
 
 <Tabs>
 <TabItem value="7.3-Inch ePaper Display" label="7.3 フルカラーディスプレイ 800*480" default>
 
 ***ステップ 1 .*** 7.3 "フルカラーディスプレイ 800*480 を`選択`します
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi7.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi92.png" style={{width:1000, height:'auto'}}/></div>
 
 ***ステップ 2 .*** 最新のファームウェア `EE04_7_3_color_1.0.5` を選択します
+:::tip
+SenseCraft HMI プラットフォームは定期的に更新され、新しいファームウェアバージョンが随時リリースされます。
+
+最高の互換性とパフォーマンスを確保するため、必ず最新のファームウェアバージョンを選択して使用してください。
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi5.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -147,7 +162,7 @@ Flash をクリックすると、プラットフォームはポート選択ウ�
 - Full Flash : Full Flash を有効にすると、Wi-Fi ネットワークやユーザーパネルデータを含む、デバイスに保存されたすべての情報がクリアされます。
 
 :::tip
-ポートが表示されない場合は、ボードの RESET ボタンを押して接続を更新してください。
+ポートが表示されない場合は、ボード上の RESET ボタンを押して接続を更新してください。
 :::
 
 
@@ -156,78 +171,78 @@ Flash をクリックすると、プラットフォームはポート選択ウ�
 
 ***ステップ 4 .*** ディスプレイ出力を確認します
 
-ファームウェアが正常に書き込まれた後、ePaper ディスプレイは短時間点滅し、その後以下の画面を表示します。
-2 つの QR コードが表示され、それぞれスキャンすると異なるページに移動します。
+ファームウェアが正常にフラッシュされた後、ePaper ディスプレイが短時間点滅し、以下の画面が表示されます。
+2つのQRコードが表示され、それぞれをスキャンすると異なるページに移動します。
 
-- User Guide : [wiki](https://wiki.seeedstudio.com/ja/reterminal_e10xx_main_page/) の HMI 基本使用セクションに移動します。
+- User Guide : [wiki](https://wiki.seeedstudio.com/ja/reterminal_e10xx_main_page/)のHMI基本使用方法セクションに移動します。
 
-- Wi-Fi Setup : ローカルネットワーク設定で、デバイスを SenseCraft HMI に接続するよう設定します。
+- Wi-Fi Setup : ローカルネットワーク設定で、デバイスをSenseCraft HMIに接続するよう設定します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi67.png" style={{width:1000, height:'auto'}}/></div>
 
 <br></br>
 
-設定はまだ完了していません。以下の手順に従って **ネットワーク設定** を続行し、設定を完了してください。
+設定はまだ完了していません。以下の手順に従って**Network Setup**を続行し、設定を完了してください。
 
 </TabItem>
 
-<TabItem value="7.5-Inch ePaper Display" label="7.5 モノクロームディスプレイ 800*480" default>
+<!-- <TabItem value="7.5-Inch ePaper Display" label="7.5 Monochrome Display 800*480 "default>
 
-***ステップ 1 .*** 7.5 "モノクロームディスプレイ 800*480 を`選択`します
+***Setp 1 .*** `Select` the 7.5 "Monochrome Display 800*480
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi8.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi91.png" style={{width:1000, height:'auto'}}/></div>
 
-***ステップ 2 .*** 最新のファームウェア `EE04_7_5_mono_1.0.5` を選択します
+***Setp 2 .*** Select the latest firmware `EE04_7_5_mono_1.0.5`
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi15.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi6.png" style={{width:1000, height:'auto'}}/></div>
 
-***ステップ 3 .*** **Flash** をクリックして **7.5 "モノクロームディスプレイ 800*480** ファームウェアを XIAO ePaper Display Board (ESP32-S3) - EE04 にアップロードします。
+***Setp 3 .*** Click **Flash** to upload the **7.5 "Monochrome Display 800*480** firmware to the XIAO ePaper Display Board (ESP32-S3) - EE04.
 
-Flash をクリックすると、プラットフォームはポート選択ウィンドウを表示します。XIAO ePaper Display Board (ESP32-S3) - EE04 に対応するポートを選択して接続を確立してください。
+After clicking Flash, the platform will prompt a port selection window. Choose the port corresponding to your XIAO ePaper Display Board (ESP32-S3) - EE04 to establish the connection.
 
-- Full Flash : Full Flash を有効にすると、Wi-Fi ネットワークやユーザーパネルデータを含む、デバイスに保存されているすべての情報がクリアされます。
+- Full Flash : Enabling Full Flash clears all device stored information, including Wi-Fi networks and user panel datas.
 
 :::tip
-ポートが表示されない場合は、ボード上の RESET ボタンを押して接続を更新してください。
+If no port appears, simply press the RESET button on the board to refresh the connection.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi66.png" style={{width:1000, height:'auto'}}/></div>
 
 
-***ステップ 4 .*** ディスプレイ出力の確認
+***Setp 4 .*** Check the Display Output
 
-ファームウェアが正常にフラッシュされた後、ePaper ディスプレイが短時間点滅し、以下の画面が表示されます。
-2つの QR コードが表示され、それぞれスキャンすると異なるページに移動します。
+After the firmware has been successfully flashed, the ePaper display will briefly flicker and then show the following screen.
+You will see two QR codes, each leading to a different page when scanned.
 
-- User Guide : wiki の HMI 基本使用法セクションに移動します (wiki)(https://wiki.seeedstudio.com/ja/reterminal_e10xx_main_page/)
+- User Guide : Navigate to the HMI Basic Usage section in the wiki (wiki)(https://wiki.seeedstudio.com/ja/reterminal_e10xx_main_page/)
 
-- Wi-Fi Setup : ローカルネットワーク設定で、デバイスを SenseCraft HMI に接続するよう設定します。
+- Wi-Fi Setup : Under Local Network Settings, set up your device to connect with SenseCraft HMI.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi67.png" style={{width:1000, height:'auto'}}/></div>
 
 <br></br>
 
-設定はまだ完了していません。以下の手順に従って **Network Setup** を続行し、設定を完了してください。
+The configuration is not yet complete. Please continue following the steps below to **Network Setup** finish the setup.
 
 
-</TabItem>
+</TabItem> -->
 
 </Tabs>
 
 ### ネットワーク設定
 
-***ステップ 1 .*** スマートフォンまたはコンピューターから ePaper DIY Kit の Wi-Fi アクセスポイントに接続します。AP 名は画面に表示されます（パスワード不要）。ネットワーク認証情報は XIAO ePaper Display Board(ESP32-S3) - EE04 です
+***ステップ 1 .*** スマートフォンまたはコンピューターからePaper DIY KitのWi-Fiアクセスポイントに接続します。AP名は画面に表示されます（パスワード不要）。ネットワーク認証情報はXIAO ePaper Display Board(ESP32-S3) - EE04です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi31.png" style={{width:500, height:'auto'}}/></div>
 
-***ステップ 2 .*** 接続後、インク画面上の QR コードをスキャンすると、お使いの携帯電話が自動的に Wi-Fi 設定ページにリダイレクトされます。リダイレクトされない場合は、ブラウザを開いて 192.168.4.1 に移動してください。
+***ステップ 2 .*** 接続後、インク画面上のQRコードをスキャンすると、お使いの携帯電話が自動的にWi-Fi設定ページにリダイレクトされます。リダイレクトされない場合は、ブラウザを開いて192.168.4.1に移動してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi32.png" style={{width:500, height:'auto'}}/></div>
 
-***ステップ 3 .*** ローカル Wi-Fi ネットワークを選択してパスワードを入力し、`Connect` をクリックします。
+***ステップ 3 .*** ローカルWi-Fiネットワークを選択してパスワードを入力し、`Connect`をクリックします。
 
 :::tip
-XIAO ePaper Display Board(ESP32-S3) - EE04 は 2.4GHz Wi-Fi ネットワークのみをサポートし、5GHz やその他の帯域はサポートしていません。
+XIAO ePaper Display Board(ESP32-S3) - EE04は2.4GHz Wi-Fiネットワークのみをサポートし、5GHzやその他の帯域はサポートしていません。
 :::
 
 ***ステップ 4 .*** 接続が完了すると、画面に対応するペアコードが表示されます。
@@ -235,28 +250,28 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 は 2.4GHz Wi-Fi ネットワーク�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi13.jpg" style={{width:700, height:'auto'}}/></div>
 
 
-### SenseCraft プラットフォームへの追加
+### SenseCraftプラットフォームに追加
 
-***ステップ 1 .*** Workspace セクションに移動し、`Add Device` をクリックします。
+***ステップ 1 .*** Workspaceセクションに移動し、`Add Device`をクリックします。
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi12.png" style={{width:700, height:'auto'}}/></div>
 
-***ステップ 2 .*** デバイスに名前を付け、デバイス画面に表示されているペアコードを入力して `Create` をクリックします。
+***ステップ 2 .*** デバイスに名前を付け、デバイス画面に表示されているペアコードを入力して`Create`をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi11.png" style={{width:700, height:'auto'}}/></div>
 
-***ステップ 3 .*** ペアリングが完了すると、Workspace の下にデバイス名が表示されます。
+***ステップ 3 .*** ペアリングが完了すると、Workspace下にデバイス名が表示されます。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi68.png" style={{width:700, height:'auto'}}/></div>
 
-これで XIAO ePaper Display Board (ESP32-S3) - EE04 をデバイスに正常に接続できました。SenseCraft HMI の基本機能を探索し始めることができます。
+XIAO ePaper Display Board (ESP32-S3) - EE04をデバイスに正常に接続できたので、SenseCraft HMIの基本機能を探索し始めることができます。
 
 ## ダッシュボードの作成
 
-XIAO ePaper Display Board(ESP32-S3) - EE04 は SenseCraft HMI プラットフォームとシームレスに統合され、デバイス用のコンテンツを作成・カスタマイズするための強力なツールを提供します。ここでは段階的な操作を詳しく説明する代わりに、プラットフォームの主要機能を探索して、何が可能かを理解していただきます。
+XIAO ePaper Display Board(ESP32-S3) - EE04は、デバイス用のコンテンツを作成およびカスタマイズするための強力なツールを提供するSenseCraft HMIプラットフォームとシームレスに統合されます。ここでは段階的な操作を詳しく説明する代わりに、プラットフォームの主要機能を探索して、何が可能かを理解していただきます。
 
 :::note
-このデモンストレーションでは 7.3 インチ画面を例として使用しています。異なるサイズに交換する場合は、以下の点にご注意ください：
+このデモンストレーションでは7.3インチ画面を例として使用しています。異なるサイズに交換する場合は、以下の点にご注意ください：
 
 - 画面フレックスケーブルの向き（表と裏）を確認してください。
 - ピンヘッダーの数が一致することを確認してください。
@@ -264,15 +279,15 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 は SenseCraft HMI プラットフォ
 - フレックスケーブルを取り付ける際は、曲げすぎや過度な折り曲げを避けてください。
 :::
 
-### SenseCraft HMI の機能
+### SenseCraft HMI機能
 
-次に、簡単な使用例とともに SenseCraft HMI の 5 つの基本機能を探索します。より詳細な情報については、以下の [SenseCraft HMI 概要](https://sensecraft-hmi-docs.seeed.cc/en/) をクリックして、追加機能の詳細な説明をご覧ください。
+次に、簡単な使用例でSenseCraft HMIの5つの基本機能を探索します。より詳細な情報については、以下の[SenseCraft HMI概要](https://sensecraft-hmi-docs.seeed.cc/en/)をクリックして、追加機能の詳細な説明をご覧ください。
 
-#### AI ジェネレーター
+#### AIジェネレーター
 
-人工知能にダッシュボードをデザインしてもらいましょう！表示したい情報を簡単に説明するだけで、AI ジェネレーターが魅力的で機能的なレイアウトを自動的に作成します。これは、手動でデザイン作業を行うことなく、天気表示、カレンダー、To-Do リスト、情報パネルを素早く生成するのに最適です。
+人工知能にダッシュボードをデザインしてもらいましょう！表示したい情報を簡単に説明するだけで、AIジェネレーターが自動的に魅力的で機能的なレイアウトを作成します。これは、手動でデザイン作業を行うことなく、天気表示、カレンダー、ToDoリスト、または情報パネルを素早く生成するのに最適です。
 
-[AI ジェネレーター](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-ai-generator/) について詳しく学ぶ
+[AIジェネレーター](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-ai-generator/)について詳しく学ぶ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi25.png" style={{width:700, height:'auto'}}/></div>
 
@@ -284,14 +299,14 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 は SenseCraft HMI プラットフォ
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi42.png" alt="7.3-Inch ePaper Display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3 インチ ePaper ディスプレイ</em></p>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3インチ ePaper ディスプレイ</em></p>
 </div>
 
 #### ギャラリー
 
-XIAO ePaper Display Board(ESP32-S3) - EE04 をギャラリー機能でデジタルフォトフレームに変身させましょう。お気に入りの画像をアップロードすると、プラットフォームが ePaper ディスプレイ用に最適化します。カスタム遷移時間でスライドショーを作成できます。
+ギャラリー機能でXIAO ePaper Display Board(ESP32-S3) - EE04をデジタルフォトフレームに変身させましょう。お気に入りの画像をアップロードすると、プラットフォームがePaperディスプレイ用に最適化します。カスタム遷移時間でスライドショーを作成できます。
 
-[ギャラリー](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-gallery/) について詳しく学ぶ
+[ギャラリー](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-gallery/)について詳しく学ぶ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi27.png" style={{width:700, height:'auto'}}/></div>
 
@@ -304,7 +319,7 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 をギャラリー機能でデジタ�
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi50.png" alt="7.3-Inch ePaper Display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3 インチ ePaper ディスプレイ</em></p>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3インチ ePaper ディスプレイ</em></p>
 </div>
 
 #### キャンバス
@@ -317,7 +332,7 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 をギャラリー機能でデジタ�
 - データ可視化ツール
 - レイアウト整理用の図形と区切り線
 
-[キャンバス](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-canvas/) について詳しく学ぶ
+[キャンバス](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-canvas/)について詳しく学ぶ
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi30.png" style={{width:700, height:'auto'}}/></div>
@@ -329,20 +344,20 @@ XIAO ePaper Display Board(ESP32-S3) - EE04 をギャラリー機能でデジタ�
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi46.png" alt="7.3-Inch ePaper Display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3 インチ ePaper ディスプレイ</em></p>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3インチ ePaper ディスプレイ</em></p>
 </div>
 
-#### RSS フィード統合
+#### RSSフィード統合
 
 
-RSS フィードをダッシュボードに追加して、お気に入りのニュースソースやウェブサイトの最新情報を入手しましょう。RSS 機能により、複数のソースからヘッドライン、要約、または完全な記事を表示できます。
+RSSフィードをダッシュボードに追加することで、お気に入りのニュースソースやウェブサイトの最新情報を入手できます。RSS機能により、複数のソースからヘッドライン、要約、または完全な記事を表示できます。
 
-ここでハイパーリンクをコピーする必要があります。以下の 2 つの推奨オプションがあります：
+ここでハイパーリンクをコピーする必要があります。以下の2つの推奨オプションがあります：
 
 - [BBC News](http://feeds.bbci.co.uk/news/rss.xml)
 - [The New York Times](https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml)
 
-[RSS フィード統合](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-rss/) について詳しく学ぶ
+[RSSフィード統合](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-rss/)について詳しく学ぶ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/75hmi.png" style={{width:700, height:'auto'}}/></div>
 
@@ -357,14 +372,14 @@ RSS フィードをダッシュボードに追加して、お気に入りのニ�
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi51.png" alt="7.3-Inch ePaper Display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3 インチ ePaper ディスプレイ</em></p>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3インチ ePaper ディスプレイ</em></p>
 </div>
 
 #### ウェブコンテンツ表示
 
-人工知能にダッシュボードをデザインしてもらいましょう！表示したい情報を簡単に説明するだけで、AI ジェネレーターが魅力的で機能的なレイアウトを自動的に作成します。これは、手動でデザイン作業を行うことなく、天気表示、カレンダー、To-Do リスト、情報パネルを素早く生成するのに最適です。
+人工知能にダッシュボードをデザインしてもらいましょう！表示したい情報を簡単に説明するだけで、AI ジェネレーターが自動的に魅力的で機能的なレイアウトを作成します。これは、手動でのデザイン作業なしに、天気表示、カレンダー、To-Do リスト、または情報パネルを素早く生成するのに最適です。
 
-[ウェブコンテンツ表示](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-web/) について詳しく学ぶ
+[Web Content Display](https://sensecraft-hmi-docs.seeed.cc/en/guides/sensecraft-hmi-web/)について詳しく学ぶ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi29.png" style={{width:700, height:'auto'}}/></div>
 
@@ -374,7 +389,7 @@ RSS フィードをダッシュボードに追加して、お気に入りのニ�
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi53.png" alt="7.3-Inch ePaper Display" style={{width:700, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3 インチ ePaper ディスプレイ</em></p>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>7.3インチ ePaper ディスプレイ</em></p>
 </div>
 
 
@@ -382,11 +397,11 @@ RSS フィードをダッシュボードに追加して、お気に入りのニ�
 
 ***SenseCraf HMI***
 
-- [SenseCraft HMI 入門](https://sensecraft-hmi-docs.seeed.cc/en/)：SenseCraft HMI の使用方法をより深く理解し、その機能を最大限に活用してプロジェクトを向上させるのに役立ちます。
+- [SenseCraft HMI 入門ガイド](https://sensecraft-hmi-docs.seeed.cc/en/)：SenseCraft HMI の使用方法をより深く理解し、その機能を最大限に活用してプロジェクトを向上させるのに役立ちます。
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
