@@ -306,15 +306,15 @@ Move the robotic arm to the initial position of the robotic arm (as shown in the
 For the initial position of the new version of the robotic arm, special attention should be paid to ensuring that the servos of Joints 3, 4, and 5 strictly align with the positions in the figure.
 
 
+| **New Violin Leader Arm** | **Old Violin Leader Arm** | **Viola Follower Arm** |**Cello Follower Arm** |
+|:---------:|:---------:|:---------:|:---------:|
+| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_init.png) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png) |![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_init.png) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello_init.png) |
+
+For examples:
+
 | **Violin Leader Arm** | **Viola Follower Arm** |
 |:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_rest.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_rest.jpg) |
-
-Initial position of the old-version robotic arm (special attention should be paid to ensuring that the servos of Joints 3, 4, and 5 strictly align with the positions in the figure; the initial position of the new-version robotic arm can also be used as a reference):
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png" />
-</div>
 
 
 :::tip
@@ -1381,7 +1381,7 @@ pip install -e ".[pi]"
 ```bash
 lerobot-train \
   --policy.type=pi0 \
-  --dataset.repo_id=seeed/eval_test123 \ 
+  --dataset.repo_id=seeed/eval_test123 \
   --job_name=pi0_training \
   --output_dir=outputs/pi0_training \
   --policy.pretrained_path=lerobot/pi0_base \
@@ -1425,7 +1425,7 @@ pip install -e ".[pi]"
 **Train**
 ```bash
 lerobot-train \
-    --dataset.repo_id=seeed/eval_test123 \ 
+    --dataset.repo_id=seeed/eval_test123 \
     --policy.type=pi05 \
     --output_dir=outputs/pi05_training \
     --job_name=pi05_training \
