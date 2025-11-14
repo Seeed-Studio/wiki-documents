@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-14 10:24:30 (北京时间)
-// 多语言页面: 2043 个
+// 生成时间: 2025-11-14 16:46:09 (北京时间)
+// 多语言页面: 2044 个
 
 (function() {
   'use strict';
@@ -990,6 +990,12 @@
     "ja"
   ],
   "/how_to_encrypt_the_disk_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/how_to_establish_the_ethercat_on_jetson": [
     "cn",
     "en",
     "es",
