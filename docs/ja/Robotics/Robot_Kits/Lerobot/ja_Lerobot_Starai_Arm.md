@@ -306,15 +306,15 @@ StarAIロボットアームの開封からテレオペレーションまでを�
 新バージョンのロボットアームの初期位置については、ジョイント3、4、5のサーボが図の位置と厳密に一致するよう特に注意してください。
 
 
+| **新しいバイオリンリーダーアーム** | **旧バイオリンリーダーアーム** | **ビオラフォロワーアーム** | **チェロフォロワーアーム** |
+|:---------:|:---------:|:---------:|:---------:|
+| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_init.png) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_init.png) | ![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello_init.png) |
+
+例えば：
+
 | **Violin リーダーアーム** | **Viola フォロワーアーム** |
 |:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_rest.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_rest.jpg) |
-
-旧バージョンのロボットアームの初期位置（ジョイント3、4、5のサーボが図の位置と厳密に一致するよう特に注意してください。新バージョンのロボットアームの初期位置も参考として使用できます）：
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png" />
-</div>
 
 
 :::tip
@@ -1381,7 +1381,7 @@ pip install -e ".[pi]"
 ```bash
 lerobot-train \
   --policy.type=pi0 \
-  --dataset.repo_id=seeed/eval_test123 \ 
+  --dataset.repo_id=seeed/eval_test123 \
   --job_name=pi0_training \
   --output_dir=outputs/pi0_training \
   --policy.pretrained_path=lerobot/pi0_base \
@@ -1425,7 +1425,7 @@ pip install -e ".[pi]"
 **トレーニング**
 ```bash
 lerobot-train \
-    --dataset.repo_id=seeed/eval_test123 \ 
+    --dataset.repo_id=seeed/eval_test123 \
     --policy.type=pi05 \
     --output_dir=outputs/pi05_training \
     --job_name=pi05_training \
