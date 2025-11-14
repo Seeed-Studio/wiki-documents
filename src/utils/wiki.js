@@ -1,17 +1,37 @@
 const docList = [
   [
     {
+      "path": "/getting_started_for_home_assistant_with_recamera",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp",
+      "title": "Getting started for Home Assistant with reCamera",
+      "date": "11/11/2025",
+      "title_cn": "reCamera 的 Home Assistant 入门指南",
+      "title_ja": "reCamera を使用した Home Assistant の入門ガイド",
+      "title_es": "Introducción a Home Assistant con reCamera"
+    },
+    {
+      "path": "/ispy_on_recomputer",
+      "image": "https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/config_5.webp",
+      "title": "iSpy on reComputer",
+      "date": "11/10/2025",
+      "title_cn": "reComputer 上的 iSpy",
+      "title_ja": "reComputer上のiSpy",
+      "title_es": "iSpy en reComputer"
+    }
+  ],
+  [
+    {
       "path": "/go2rtc_on_recomputer",
       "image": "https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/go2rtc.gif",
       "title": "go2rtc on reComputer",
       "date": "11/05/2025",
       "title_cn": "在 reComputer 上使用 go2rtc",
-      "title_ja": "reComputer上のgo2rtc",
+      "title_ja": "reComputer で go2rtc を使う",
       "title_es": "go2rtc en reComputer"
     },
     {
       "path": "/moonfire_nvr_on_recomputer",
-      "image": "https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/zoneminder/zone_m.webp",
+      "image": "https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/result.webp",
       "title": "Moonfire NVR on reComputer",
       "date": "11/05/2025",
       "title_cn": "reComputer 上的 Moonfire NVR",
@@ -35,7 +55,7 @@ const docList = [
       "title": "XIAO ePaper Display Board EE04 with the SenseCraft HMI",
       "date": "10/30/2025",
       "title_cn": "XIAO ePaper Display Board EE04 与 SenseCraft HMI",
-      "title_ja": "SenseCraft HMI を使用した XIAO ePaper ディスプレイボード EE04",
+      "title_ja": "XIAO ePaper Display Board EE04 と SenseCraft HMI",
       "title_es": "Placa de Pantalla ePaper XIAO EE04 con SenseCraft HMI"
     }
   ],
@@ -83,11 +103,11 @@ const docList = [
     {
       "path": "/epaper_breakout_board_with_oepl",
       "image": "https://files.seeedstudio.com/wiki/eInk/xiao-expansion/OEPL_Config_img.webp",
-      "title": "Usage of the OpenEPaperLink and ePaper config builder",
+      "title": "OpenEPaperLink and ePaper config builder",
       "date": "10/23/2025",
-      "title_cn": "OpenEPaperLink 和电子纸配置构建器的使用",
-      "title_ja": "OpenEPaperLinkとePaper設定ビルダーの使用方法",
-      "title_es": "Uso del constructor de configuración OpenEPaperLink y ePaper"
+      "title_cn": "OpenEPaperLink 和电子纸配置构建器",
+      "title_ja": "OpenEPaperLinkとePaper設定ビルダー",
+      "title_es": "Constructor de configuración OpenEPaperLink y ePaper"
     },
     {
       "path": "/solutions/frigate-on-jetson-nodered-gun-alerts",
@@ -97,26 +117,6 @@ const docList = [
       "title_cn": "实时边缘警报的 AI 枪支检测解决方案",
       "title_ja": "リアルタイムエッジアラート用AI銃器検出ソリューション",
       "title_es": "Solución de Detección de Armas con IA para Alertas en Tiempo Real en el Borde"
-    }
-  ],
-  [
-    {
-      "path": "/deploy_visual_perception_engine_recomputer",
-      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/video_demo_preview.gif",
-      "title": "Efficient Multi-Task Vision Inference Engine Deployment on Jetson",
-      "date": "2025-10-13T00:00:00.000Z",
-      "title_cn": "在 Jetson 上部署高效多任务视觉推理引擎",
-      "title_ja": "Jetsonでの効率的なマルチタスクビジョン推論エンジンの展開",
-      "title_es": "Despliegue de Motor de Inferencia de Visión Multi-Tarea Eficiente en Jetson"
-    },
-    {
-      "path": "/pycuvslam_recomputer_robotics",
-      "image": "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/rgb_homepage.gif",
-      "title": "PyCuVSLAM with reComputer",
-      "date": "2025-10-10T00:00:00.000Z",
-      "title_cn": "PyCuVSLAM 与 reComputer",
-      "title_ja": "reComputerでのPyCuVSLAM",
-      "title_es": "PyCuVSLAM con reComputer"
     }
   ]
 ];
